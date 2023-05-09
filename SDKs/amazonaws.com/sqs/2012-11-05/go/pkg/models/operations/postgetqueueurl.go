@@ -15,17 +15,21 @@ const (
 	POSTGetQueueURLActionEnumGetQueueURL POSTGetQueueURLActionEnum = "GetQueueUrl"
 )
 
+func (e POSTGetQueueURLActionEnum) ToPointer() *POSTGetQueueURLActionEnum {
+	return &e
+}
+
 func (e *POSTGetQueueURLActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetQueueUrl":
-		*e = POSTGetQueueURLActionEnum(s)
+		*e = POSTGetQueueURLActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetQueueURLActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetQueueURLActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetQueueURLVersionEnumTwoThousandAndTwelve1105 POSTGetQueueURLVersionEnum = "2012-11-05"
 )
 
+func (e POSTGetQueueURLVersionEnum) ToPointer() *POSTGetQueueURLVersionEnum {
+	return &e
+}
+
 func (e *POSTGetQueueURLVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = POSTGetQueueURLVersionEnum(s)
+		*e = POSTGetQueueURLVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetQueueURLVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetQueueURLVersionEnum: %v", v)
 	}
 }
 

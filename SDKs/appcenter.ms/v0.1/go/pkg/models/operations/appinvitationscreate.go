@@ -21,21 +21,25 @@ const (
 	AppInvitationsCreateRequestBodyRoleEnumMember       AppInvitationsCreateRequestBodyRoleEnum = "member"
 )
 
+func (e AppInvitationsCreateRequestBodyRoleEnum) ToPointer() *AppInvitationsCreateRequestBodyRoleEnum {
+	return &e
+}
+
 func (e *AppInvitationsCreateRequestBodyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin":
 		fallthrough
 	case "collaborator":
 		fallthrough
 	case "member":
-		*e = AppInvitationsCreateRequestBodyRoleEnum(s)
+		*e = AppInvitationsCreateRequestBodyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppInvitationsCreateRequestBodyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for AppInvitationsCreateRequestBodyRoleEnum: %v", v)
 	}
 }
 
@@ -68,12 +72,16 @@ const (
 	AppInvitationsCreateDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppInvitationsCreateDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppInvitationsCreateDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppInvitationsCreateDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppInvitationsCreateDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -87,10 +95,10 @@ func (e *AppInvitationsCreateDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppInvitationsCreateDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppInvitationsCreateDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppInvitationsCreateDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppInvitationsCreateDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

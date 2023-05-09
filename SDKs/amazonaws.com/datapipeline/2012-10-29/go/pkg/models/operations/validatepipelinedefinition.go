@@ -16,17 +16,21 @@ const (
 	ValidatePipelineDefinitionXAmzTargetEnumDataPipelineValidatePipelineDefinition ValidatePipelineDefinitionXAmzTargetEnum = "DataPipeline.ValidatePipelineDefinition"
 )
 
+func (e ValidatePipelineDefinitionXAmzTargetEnum) ToPointer() *ValidatePipelineDefinitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *ValidatePipelineDefinitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DataPipeline.ValidatePipelineDefinition":
-		*e = ValidatePipelineDefinitionXAmzTargetEnum(s)
+		*e = ValidatePipelineDefinitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidatePipelineDefinitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidatePipelineDefinitionXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	AgentTaskIntendedStateEnumDeleted                  AgentTaskIntendedStateEnum = "DELETED"
 )
 
+func (e AgentTaskIntendedStateEnum) ToPointer() *AgentTaskIntendedStateEnum {
+	return &e
+}
+
 func (e *AgentTaskIntendedStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTENDED_STATE_UNSPECIFIED":
 		fallthrough
 	case "ASSIGNED":
@@ -30,10 +34,41 @@ func (e *AgentTaskIntendedStateEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLED":
 		fallthrough
 	case "DELETED":
-		*e = AgentTaskIntendedStateEnum(s)
+		*e = AgentTaskIntendedStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AgentTaskIntendedStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AgentTaskIntendedStateEnum: %v", v)
+	}
+}
+
+// AgentTaskTaskSourceEnum - TaskSource represents the source of the task.
+type AgentTaskTaskSourceEnum string
+
+const (
+	AgentTaskTaskSourceEnumTaskSourceUnspecified AgentTaskTaskSourceEnum = "TASK_SOURCE_UNSPECIFIED"
+	AgentTaskTaskSourceEnumBatchInternal         AgentTaskTaskSourceEnum = "BATCH_INTERNAL"
+	AgentTaskTaskSourceEnumUser                  AgentTaskTaskSourceEnum = "USER"
+)
+
+func (e AgentTaskTaskSourceEnum) ToPointer() *AgentTaskTaskSourceEnum {
+	return &e
+}
+
+func (e *AgentTaskTaskSourceEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "TASK_SOURCE_UNSPECIFIED":
+		fallthrough
+	case "BATCH_INTERNAL":
+		fallthrough
+	case "USER":
+		*e = AgentTaskTaskSourceEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for AgentTaskTaskSourceEnum: %v", v)
 	}
 }
 
@@ -49,4 +84,6 @@ type AgentTask struct {
 	Status *TaskStatus `json:"status,omitempty"`
 	// Task name.
 	Task *string `json:"task,omitempty"`
+	// TaskSource represents the source of the task.
+	TaskSource *AgentTaskTaskSourceEnum `json:"taskSource,omitempty"`
 }

@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,18 +16,16 @@ func main() {
         }),
     )
 
-    req := operations.GetWellKnownMercureRequest{
-        LastEventID: "corrupti",
-        LastEventIDQueryParameter: "provident",
+    ctx := context.Background()
+    res, err := s.GetWellKnownMercure(ctx, operations.GetWellKnownMercureRequest{
+        LastEventID: sdk.String("corrupti"),
+        LastEventIDQueryParameter: sdk.String("provident"),
         Topic: []string{
             "quibusdam",
             "unde",
             "nulla",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.GetWellKnownMercure(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

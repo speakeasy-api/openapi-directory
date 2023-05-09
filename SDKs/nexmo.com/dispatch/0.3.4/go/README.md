@@ -13,28 +13,28 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/dispatch/0.3.4/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/callbacks"
+	"net/http"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.CreateWorkflow{
-        Template: "failover",
+    ctx := context.Background()
+    res, err := s.CreateWorkflow(ctx, shared.CreateWorkflow{
+        Template: shared.CreateWorkflowTemplateEnumFailover.ToPointer(),
         Workflow: []shared.CreateWorkflowWorkflow{
             shared.CreateWorkflowWorkflow{},
             shared.CreateWorkflowWorkflow{},
             shared.CreateWorkflowWorkflow{},
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateWorkflow(ctx, req, operations.CreateWorkflowSecurity{
+    }, operations.CreateWorkflowSecurity{
         BasicAuth: &shared.SchemeBasicAuth{
             Password: "YOUR_PASSWORD_HERE",
             Username: "YOUR_USERNAME_HERE",
@@ -54,9 +54,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateWorkflow` - Create a workflow
+* [CreateWorkflow](docs/sdk/README.md#createworkflow) - Create a workflow
 <!-- End SDK Available Operations -->
 
 ### Maturity

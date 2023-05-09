@@ -14,18 +14,22 @@ const (
 	RestoreOpenZFSVolumeOptionEnumDeleteClonedVolumes         RestoreOpenZFSVolumeOptionEnum = "DELETE_CLONED_VOLUMES"
 )
 
+func (e RestoreOpenZFSVolumeOptionEnum) ToPointer() *RestoreOpenZFSVolumeOptionEnum {
+	return &e
+}
+
 func (e *RestoreOpenZFSVolumeOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELETE_INTERMEDIATE_SNAPSHOTS":
 		fallthrough
 	case "DELETE_CLONED_VOLUMES":
-		*e = RestoreOpenZFSVolumeOptionEnum(s)
+		*e = RestoreOpenZFSVolumeOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RestoreOpenZFSVolumeOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for RestoreOpenZFSVolumeOptionEnum: %v", v)
 	}
 }

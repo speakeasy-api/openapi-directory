@@ -14,19 +14,23 @@ const (
 	CreateTokenRequestDataAttributesGrantTypeEnumClientCredentials CreateTokenRequestDataAttributesGrantTypeEnum = "client_credentials"
 )
 
+func (e CreateTokenRequestDataAttributesGrantTypeEnum) ToPointer() *CreateTokenRequestDataAttributesGrantTypeEnum {
+	return &e
+}
+
 func (e *CreateTokenRequestDataAttributesGrantTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "refresh_token":
 		fallthrough
 	case "client_credentials":
-		*e = CreateTokenRequestDataAttributesGrantTypeEnum(s)
+		*e = CreateTokenRequestDataAttributesGrantTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTokenRequestDataAttributesGrantTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTokenRequestDataAttributesGrantTypeEnum: %v", v)
 	}
 }
 
@@ -46,17 +50,21 @@ const (
 	CreateTokenRequestDataTypeEnumToken CreateTokenRequestDataTypeEnum = "token"
 )
 
+func (e CreateTokenRequestDataTypeEnum) ToPointer() *CreateTokenRequestDataTypeEnum {
+	return &e
+}
+
 func (e *CreateTokenRequestDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "token":
-		*e = CreateTokenRequestDataTypeEnum(s)
+		*e = CreateTokenRequestDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTokenRequestDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTokenRequestDataTypeEnum: %v", v)
 	}
 }
 

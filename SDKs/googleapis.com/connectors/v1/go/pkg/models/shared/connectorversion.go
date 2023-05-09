@@ -18,12 +18,16 @@ const (
 	ConnectorVersionLaunchStageEnumPrivatePreview         ConnectorVersionLaunchStageEnum = "PRIVATE_PREVIEW"
 )
 
+func (e ConnectorVersionLaunchStageEnum) ToPointer() *ConnectorVersionLaunchStageEnum {
+	return &e
+}
+
 func (e *ConnectorVersionLaunchStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_STAGE_UNSPECIFIED":
 		fallthrough
 	case "PREVIEW":
@@ -33,10 +37,10 @@ func (e *ConnectorVersionLaunchStageEnum) UnmarshalJSON(data []byte) error {
 	case "DEPRECATED":
 		fallthrough
 	case "PRIVATE_PREVIEW":
-		*e = ConnectorVersionLaunchStageEnum(s)
+		*e = ConnectorVersionLaunchStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectorVersionLaunchStageEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectorVersionLaunchStageEnum: %v", v)
 	}
 }
 
@@ -48,6 +52,8 @@ type ConnectorVersion struct {
 	ConfigVariableTemplates []ConfigVariableTemplate `json:"configVariableTemplates,omitempty"`
 	// Output only. Created time.
 	CreateTime *string `json:"createTime,omitempty"`
+	// Output only. List of destination configs needed to create a connection.
+	DestinationConfigTemplates []DestinationConfigTemplate `json:"destinationConfigTemplates,omitempty"`
 	// Output only. Display name.
 	DisplayName *string `json:"displayName,omitempty"`
 	// Egress control config for connector runtime. These configurations define the rules to identify which outbound domains/hosts needs to be whitelisted. It may be a static information for a particular connector version or it is derived from the configurations provided by the customer in Connection resource.

@@ -24,19 +24,23 @@ const (
 	GetSpacesSpaceIDFoldersIDMessagesMessageID200ApplicationJSONLevelEnumRegular      GetSpacesSpaceIDFoldersIDMessagesMessageID200ApplicationJSONLevelEnum = "regular"
 )
 
+func (e GetSpacesSpaceIDFoldersIDMessagesMessageID200ApplicationJSONLevelEnum) ToPointer() *GetSpacesSpaceIDFoldersIDMessagesMessageID200ApplicationJSONLevelEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDFoldersIDMessagesMessageID200ApplicationJSONLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
-		*e = GetSpacesSpaceIDFoldersIDMessagesMessageID200ApplicationJSONLevelEnum(s)
+		*e = GetSpacesSpaceIDFoldersIDMessagesMessageID200ApplicationJSONLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDMessagesMessageID200ApplicationJSONLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDMessagesMessageID200ApplicationJSONLevelEnum: %v", v)
 	}
 }
 

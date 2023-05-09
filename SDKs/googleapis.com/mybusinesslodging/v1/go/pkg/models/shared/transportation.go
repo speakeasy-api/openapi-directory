@@ -17,12 +17,16 @@ const (
 	TransportationAirportShuttleExceptionEnumDependentOnDayOfWeek TransportationAirportShuttleExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e TransportationAirportShuttleExceptionEnum) ToPointer() *TransportationAirportShuttleExceptionEnum {
+	return &e
+}
+
 func (e *TransportationAirportShuttleExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *TransportationAirportShuttleExceptionEnum) UnmarshalJSON(data []byte) e
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = TransportationAirportShuttleExceptionEnum(s)
+		*e = TransportationAirportShuttleExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransportationAirportShuttleExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TransportationAirportShuttleExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	TransportationCarRentalOnPropertyExceptionEnumDependentOnDayOfWeek TransportationCarRentalOnPropertyExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e TransportationCarRentalOnPropertyExceptionEnum) ToPointer() *TransportationCarRentalOnPropertyExceptionEnum {
+	return &e
+}
+
 func (e *TransportationCarRentalOnPropertyExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *TransportationCarRentalOnPropertyExceptionEnum) UnmarshalJSON(data []by
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = TransportationCarRentalOnPropertyExceptionEnum(s)
+		*e = TransportationCarRentalOnPropertyExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransportationCarRentalOnPropertyExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TransportationCarRentalOnPropertyExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	TransportationFreeAirportShuttleExceptionEnumDependentOnDayOfWeek TransportationFreeAirportShuttleExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e TransportationFreeAirportShuttleExceptionEnum) ToPointer() *TransportationFreeAirportShuttleExceptionEnum {
+	return &e
+}
+
 func (e *TransportationFreeAirportShuttleExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *TransportationFreeAirportShuttleExceptionEnum) UnmarshalJSON(data []byt
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = TransportationFreeAirportShuttleExceptionEnum(s)
+		*e = TransportationFreeAirportShuttleExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransportationFreeAirportShuttleExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TransportationFreeAirportShuttleExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	TransportationFreePrivateCarServiceExceptionEnumDependentOnDayOfWeek TransportationFreePrivateCarServiceExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e TransportationFreePrivateCarServiceExceptionEnum) ToPointer() *TransportationFreePrivateCarServiceExceptionEnum {
+	return &e
+}
+
 func (e *TransportationFreePrivateCarServiceExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *TransportationFreePrivateCarServiceExceptionEnum) UnmarshalJSON(data []
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = TransportationFreePrivateCarServiceExceptionEnum(s)
+		*e = TransportationFreePrivateCarServiceExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransportationFreePrivateCarServiceExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TransportationFreePrivateCarServiceExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	TransportationLocalShuttleExceptionEnumDependentOnDayOfWeek TransportationLocalShuttleExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e TransportationLocalShuttleExceptionEnum) ToPointer() *TransportationLocalShuttleExceptionEnum {
+	return &e
+}
+
 func (e *TransportationLocalShuttleExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *TransportationLocalShuttleExceptionEnum) UnmarshalJSON(data []byte) err
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = TransportationLocalShuttleExceptionEnum(s)
+		*e = TransportationLocalShuttleExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransportationLocalShuttleExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TransportationLocalShuttleExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	TransportationPrivateCarServiceExceptionEnumDependentOnDayOfWeek TransportationPrivateCarServiceExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e TransportationPrivateCarServiceExceptionEnum) ToPointer() *TransportationPrivateCarServiceExceptionEnum {
+	return &e
+}
+
 func (e *TransportationPrivateCarServiceExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *TransportationPrivateCarServiceExceptionEnum) UnmarshalJSON(data []byte
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = TransportationPrivateCarServiceExceptionEnum(s)
+		*e = TransportationPrivateCarServiceExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransportationPrivateCarServiceExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TransportationPrivateCarServiceExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	TransportationTransferExceptionEnumDependentOnDayOfWeek TransportationTransferExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e TransportationTransferExceptionEnum) ToPointer() *TransportationTransferExceptionEnum {
+	return &e
+}
+
 func (e *TransportationTransferExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *TransportationTransferExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = TransportationTransferExceptionEnum(s)
+		*e = TransportationTransferExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransportationTransferExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TransportationTransferExceptionEnum: %v", v)
 	}
 }
 

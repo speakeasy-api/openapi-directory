@@ -17,12 +17,16 @@ const (
 	SetMuteRequestMuteEnumUndefined       SetMuteRequestMuteEnum = "UNDEFINED"
 )
 
+func (e SetMuteRequestMuteEnum) ToPointer() *SetMuteRequestMuteEnum {
+	return &e
+}
+
 func (e *SetMuteRequestMuteEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MUTE_UNSPECIFIED":
 		fallthrough
 	case "MUTED":
@@ -30,10 +34,10 @@ func (e *SetMuteRequestMuteEnum) UnmarshalJSON(data []byte) error {
 	case "UNMUTED":
 		fallthrough
 	case "UNDEFINED":
-		*e = SetMuteRequestMuteEnum(s)
+		*e = SetMuteRequestMuteEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetMuteRequestMuteEnum: %s", s)
+		return fmt.Errorf("invalid value for SetMuteRequestMuteEnum: %v", v)
 	}
 }
 

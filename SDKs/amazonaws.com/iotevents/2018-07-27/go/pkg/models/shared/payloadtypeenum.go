@@ -14,18 +14,22 @@ const (
 	PayloadTypeEnumJSON   PayloadTypeEnum = "JSON"
 )
 
+func (e PayloadTypeEnum) ToPointer() *PayloadTypeEnum {
+	return &e
+}
+
 func (e *PayloadTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRING":
 		fallthrough
 	case "JSON":
-		*e = PayloadTypeEnum(s)
+		*e = PayloadTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PayloadTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PayloadTypeEnum: %v", v)
 	}
 }

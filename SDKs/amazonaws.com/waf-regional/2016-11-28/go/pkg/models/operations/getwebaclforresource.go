@@ -16,17 +16,21 @@ const (
 	GetWebACLForResourceXAmzTargetEnumAwswafRegional20161128GetWebACLForResource GetWebACLForResourceXAmzTargetEnum = "AWSWAF_Regional_20161128.GetWebACLForResource"
 )
 
+func (e GetWebACLForResourceXAmzTargetEnum) ToPointer() *GetWebACLForResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetWebACLForResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.GetWebACLForResource":
-		*e = GetWebACLForResourceXAmzTargetEnum(s)
+		*e = GetWebACLForResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWebACLForResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWebACLForResourceXAmzTargetEnum: %v", v)
 	}
 }
 

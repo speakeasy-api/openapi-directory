@@ -2,27 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAPIV1DonationsCarbonCalculateRequest{
-        DestinationAddress: 5488.14,
-        DistanceMi: 5928.45,
-        OriginAddress: 7151.9,
-        TransportationMethod: "sea",
-        WeightLb: 6027.63,
-    }
-
     ctx := context.Background()
-    res, err := s.GetAPIV1DonationsCarbonCalculate(ctx, req, operations.GetAPIV1DonationsCarbonCalculateSecurity{
+    res, err := s.GetAPIV1DonationsCarbonCalculate(ctx, operations.GetAPIV1DonationsCarbonCalculateRequest{
+        DestinationAddress: sdk.Float64(5488.14),
+        DistanceMi: sdk.Float64(5928.45),
+        OriginAddress: sdk.Float64(7151.9),
+        TransportationMethod: operations.GetAPIV1DonationsCarbonCalculateTransportationMethodEnumSea.ToPointer(),
+        WeightLb: 6027.63,
+    }, operations.GetAPIV1DonationsCarbonCalculateSecurity{
         Password: "YOUR_PASSWORD_HERE",
         Username: "YOUR_USERNAME_HERE",
     })

@@ -40,7 +40,10 @@ func newApps(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // https://docs.github.com/enterprise-server@2.19/rest/reference/apps#add-a-repository-to-an-app-installation - API method documentation
 func (s *apps) AppsAddRepoToInstallation(ctx context.Context, request operations.AppsAddRepoToInstallationRequest) (*operations.AppsAddRepoToInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/installations/{installation_id}/repositories/{repository_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/installations/{installation_id}/repositories/{repository_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -95,7 +98,10 @@ func (s *apps) AppsAddRepoToInstallation(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.19/rest/reference/apps#create-a-content-attachment - API method documentation
 func (s *apps) AppsCreateContentAttachment(ctx context.Context, request operations.AppsCreateContentAttachmentRequest) (*operations.AppsCreateContentAttachmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/content_references/{content_reference_id}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/content_references/{content_reference_id}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -186,7 +192,10 @@ func (s *apps) AppsCreateContentAttachment(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@2.19/rest/reference/apps#create-a-github-app-from-a-manifest - API method documentation
 func (s *apps) AppsCreateFromManifest(ctx context.Context, request operations.AppsCreateFromManifestRequest) (*operations.AppsCreateFromManifestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app-manifests/{code}/conversions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app-manifests/{code}/conversions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -261,7 +270,10 @@ func (s *apps) AppsCreateFromManifest(ctx context.Context, request operations.Ap
 // https://docs.github.com/enterprise-server@2.19/rest/reference/apps/#create-an-installation-access-token-for-an-app - API method documentation
 func (s *apps) AppsCreateInstallationAccessToken(ctx context.Context, request operations.AppsCreateInstallationAccessTokenRequest) (*operations.AppsCreateInstallationAccessTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}/access_tokens", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}/access_tokens", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -350,7 +362,10 @@ func (s *apps) AppsCreateInstallationAccessToken(ctx context.Context, request op
 // https://docs.github.com/enterprise-server@2.19/rest/reference/apps#delete-an-installation-for-the-authenticated-app - API method documentation
 func (s *apps) AppsDeleteInstallation(ctx context.Context, request operations.AppsDeleteInstallationRequest) (*operations.AppsDeleteInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -449,7 +464,10 @@ func (s *apps) AppsGetAuthenticated(ctx context.Context) (*operations.AppsGetAut
 // https://docs.github.com/enterprise-server@2.19/rest/reference/apps/#get-an-app - API method documentation
 func (s *apps) AppsGetBySlug(ctx context.Context, request operations.AppsGetBySlugRequest) (*operations.AppsGetBySlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{app_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{app_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -519,7 +537,10 @@ func (s *apps) AppsGetBySlug(ctx context.Context, request operations.AppsGetBySl
 // https://docs.github.com/enterprise-server@2.19/rest/reference/apps#get-an-installation-for-the-authenticated-app - API method documentation
 func (s *apps) AppsGetInstallation(ctx context.Context, request operations.AppsGetInstallationRequest) (*operations.AppsGetInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/installations/{installation_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -589,7 +610,10 @@ func (s *apps) AppsGetInstallation(ctx context.Context, request operations.AppsG
 // https://docs.github.com/enterprise-server@2.19/rest/reference/apps#get-an-organization-installation-for-the-authenticated-app - API method documentation
 func (s *apps) AppsGetOrgInstallation(ctx context.Context, request operations.AppsGetOrgInstallationRequest) (*operations.AppsGetOrgInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/installation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/installation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -639,7 +663,10 @@ func (s *apps) AppsGetOrgInstallation(ctx context.Context, request operations.Ap
 // https://docs.github.com/enterprise-server@2.19/rest/reference/apps#get-a-repository-installation-for-the-authenticated-app - API method documentation
 func (s *apps) AppsGetRepoInstallation(ctx context.Context, request operations.AppsGetRepoInstallationRequest) (*operations.AppsGetRepoInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/installation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/installation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -701,7 +728,10 @@ func (s *apps) AppsGetRepoInstallation(ctx context.Context, request operations.A
 // https://docs.github.com/enterprise-server@2.19/rest/reference/apps#get-a-user-installation-for-the-authenticated-app - API method documentation
 func (s *apps) AppsGetUserInstallation(ctx context.Context, request operations.AppsGetUserInstallationRequest) (*operations.AppsGetUserInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/installation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/installation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -755,7 +785,10 @@ func (s *apps) AppsGetUserInstallation(ctx context.Context, request operations.A
 // https://docs.github.com/enterprise-server@2.19/rest/reference/apps#list-repositories-accessible-to-the-user-access-token - API method documentation
 func (s *apps) AppsListInstallationReposForAuthenticatedUser(ctx context.Context, request operations.AppsListInstallationReposForAuthenticatedUserRequest) (*operations.AppsListInstallationReposForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/installations/{installation_id}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/installations/{installation_id}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1032,7 +1065,10 @@ func (s *apps) AppsListReposAccessibleToInstallation(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@2.19/rest/reference/apps#remove-a-repository-from-an-app-installation - API method documentation
 func (s *apps) AppsRemoveRepoFromInstallation(ctx context.Context, request operations.AppsRemoveRepoFromInstallationRequest) (*operations.AppsRemoveRepoFromInstallationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/installations/{installation_id}/repositories/{repository_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/installations/{installation_id}/repositories/{repository_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

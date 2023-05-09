@@ -2,12 +2,26 @@
 
 package shared
 
+// CustomClassInput - A set of words or phrases that represents a common concept likely to appear in your audio, for example a list of passenger ship names. CustomClass items can be substituted into placeholders that you set in PhraseSet phrases.
+type CustomClassInput struct {
+	// If this custom class is a resource, the custom_class_id is the resource id of the CustomClass. Case sensitive.
+	CustomClassID *string `json:"customClassId,omitempty"`
+	// A collection of class items.
+	Items []ClassItem `json:"items,omitempty"`
+	// The resource name of the custom class.
+	Name *string `json:"name,omitempty"`
+}
+
 // CustomClass - A set of words or phrases that represents a common concept likely to appear in your audio, for example a list of passenger ship names. CustomClass items can be substituted into placeholders that you set in PhraseSet phrases.
 type CustomClass struct {
 	// If this custom class is a resource, the custom_class_id is the resource id of the CustomClass. Case sensitive.
 	CustomClassID *string `json:"customClassId,omitempty"`
 	// A collection of class items.
 	Items []ClassItem `json:"items,omitempty"`
+	// Output only. The [KMS key name](https://cloud.google.com/kms/docs/resource-hierarchy#keys) with which the content of the ClassItem is encrypted. The expected format is `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+	KmsKeyName *string `json:"kmsKeyName,omitempty"`
+	// Output only. The [KMS key version name](https://cloud.google.com/kms/docs/resource-hierarchy#key_versions) with which content of the ClassItem is encrypted. The expected format is `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}`.
+	KmsKeyVersionName *string `json:"kmsKeyVersionName,omitempty"`
 	// The resource name of the custom class.
 	Name *string `json:"name,omitempty"`
 }

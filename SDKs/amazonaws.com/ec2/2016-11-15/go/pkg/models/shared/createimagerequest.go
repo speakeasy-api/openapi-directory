@@ -20,12 +20,16 @@ const (
 	CreateImageRequestBlockDeviceMappingsEbsVolumeTypeEnumGp3      CreateImageRequestBlockDeviceMappingsEbsVolumeTypeEnum = "gp3"
 )
 
+func (e CreateImageRequestBlockDeviceMappingsEbsVolumeTypeEnum) ToPointer() *CreateImageRequestBlockDeviceMappingsEbsVolumeTypeEnum {
+	return &e
+}
+
 func (e *CreateImageRequestBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -39,10 +43,10 @@ func (e *CreateImageRequestBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON(d
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = CreateImageRequestBlockDeviceMappingsEbsVolumeTypeEnum(s)
+		*e = CreateImageRequestBlockDeviceMappingsEbsVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateImageRequestBlockDeviceMappingsEbsVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateImageRequestBlockDeviceMappingsEbsVolumeTypeEnum: %v", v)
 	}
 }
 
@@ -158,12 +162,16 @@ const (
 	CreateImageRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateImageRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateImageRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateImageRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateImageRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -333,10 +341,10 @@ func (e *CreateImageRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateImageRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateImageRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateImageRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateImageRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

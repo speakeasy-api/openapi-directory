@@ -16,17 +16,21 @@ const (
 	GetAccountConfigurationXAmzTargetEnumCertificateManagerGetAccountConfiguration GetAccountConfigurationXAmzTargetEnum = "CertificateManager.GetAccountConfiguration"
 )
 
+func (e GetAccountConfigurationXAmzTargetEnum) ToPointer() *GetAccountConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAccountConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CertificateManager.GetAccountConfiguration":
-		*e = GetAccountConfigurationXAmzTargetEnum(s)
+		*e = GetAccountConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAccountConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAccountConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

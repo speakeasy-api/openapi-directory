@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -15,4 +16,6 @@ pkg/utils/utils.go
 pkg/models/operations/deleteconnection.go
 pkg/models/operations/getconnections.go
 pkg/models/shared/connection.go
+docs/sdk/README.md
+docs/identity/README.md
 USAGE.md

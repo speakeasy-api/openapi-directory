@@ -15,17 +15,21 @@ const (
 	POSTDeleteGlobalClusterActionEnumDeleteGlobalCluster POSTDeleteGlobalClusterActionEnum = "DeleteGlobalCluster"
 )
 
+func (e POSTDeleteGlobalClusterActionEnum) ToPointer() *POSTDeleteGlobalClusterActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteGlobalClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteGlobalCluster":
-		*e = POSTDeleteGlobalClusterActionEnum(s)
+		*e = POSTDeleteGlobalClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteGlobalClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteGlobalClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteGlobalClusterVersionEnumTwoThousandAndFourteen1031 POSTDeleteGlobalClusterVersionEnum = "2014-10-31"
 )
 
+func (e POSTDeleteGlobalClusterVersionEnum) ToPointer() *POSTDeleteGlobalClusterVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTDeleteGlobalClusterVersionEnum(s)
+		*e = POSTDeleteGlobalClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteGlobalClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteGlobalClusterVersionEnum: %v", v)
 	}
 }
 

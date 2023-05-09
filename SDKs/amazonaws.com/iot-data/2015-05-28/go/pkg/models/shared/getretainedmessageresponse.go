@@ -8,4 +8,5 @@ type GetRetainedMessageResponse struct {
 	Payload          *string `json:"payload,omitempty"`
 	Qos              *int64  `json:"qos,omitempty"`
 	Topic            *string `json:"topic,omitempty"`
+	UserProperties   *string `json:"userProperties,omitempty"`
 }

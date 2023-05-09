@@ -19,12 +19,16 @@ const (
 	CertificateAuthorityStateEnumDeleted                CertificateAuthorityStateEnum = "DELETED"
 )
 
+func (e CertificateAuthorityStateEnum) ToPointer() *CertificateAuthorityStateEnum {
+	return &e
+}
+
 func (e *CertificateAuthorityStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ENABLED":
@@ -36,10 +40,10 @@ func (e *CertificateAuthorityStateEnum) UnmarshalJSON(data []byte) error {
 	case "AWAITING_USER_ACTIVATION":
 		fallthrough
 	case "DELETED":
-		*e = CertificateAuthorityStateEnum(s)
+		*e = CertificateAuthorityStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateAuthorityStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateAuthorityStateEnum: %v", v)
 	}
 }
 
@@ -52,21 +56,25 @@ const (
 	CertificateAuthorityTierEnumDevops          CertificateAuthorityTierEnum = "DEVOPS"
 )
 
+func (e CertificateAuthorityTierEnum) ToPointer() *CertificateAuthorityTierEnum {
+	return &e
+}
+
 func (e *CertificateAuthorityTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIER_UNSPECIFIED":
 		fallthrough
 	case "ENTERPRISE":
 		fallthrough
 	case "DEVOPS":
-		*e = CertificateAuthorityTierEnum(s)
+		*e = CertificateAuthorityTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateAuthorityTierEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateAuthorityTierEnum: %v", v)
 	}
 }
 
@@ -79,21 +87,25 @@ const (
 	CertificateAuthorityTypeEnumSubordinate     CertificateAuthorityTypeEnum = "SUBORDINATE"
 )
 
+func (e CertificateAuthorityTypeEnum) ToPointer() *CertificateAuthorityTypeEnum {
+	return &e
+}
+
 func (e *CertificateAuthorityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "SELF_SIGNED":
 		fallthrough
 	case "SUBORDINATE":
-		*e = CertificateAuthorityTypeEnum(s)
+		*e = CertificateAuthorityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateAuthorityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateAuthorityTypeEnum: %v", v)
 	}
 }
 

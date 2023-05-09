@@ -34,7 +34,10 @@ func newSites(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DfareportingSitesGet - Gets one site by ID.
 func (s *sites) DfareportingSitesGet(ctx context.Context, request operations.DfareportingSitesGetRequest, security operations.DfareportingSitesGetSecurity) (*operations.DfareportingSitesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sites/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sites/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *sites) DfareportingSitesGet(ctx context.Context, request operations.Dfa
 // DfareportingSitesInsert - Inserts a new site.
 func (s *sites) DfareportingSitesInsert(ctx context.Context, request operations.DfareportingSitesInsertRequest, security operations.DfareportingSitesInsertSecurity) (*operations.DfareportingSitesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Site", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *sites) DfareportingSitesInsert(ctx context.Context, request operations.
 // DfareportingSitesList - Retrieves a list of sites, possibly filtered. This method supports paging.
 func (s *sites) DfareportingSitesList(ctx context.Context, request operations.DfareportingSitesListRequest, security operations.DfareportingSitesListSecurity) (*operations.DfareportingSitesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *sites) DfareportingSitesList(ctx context.Context, request operations.Df
 // DfareportingSitesPatch - Updates an existing site. This method supports patch semantics.
 func (s *sites) DfareportingSitesPatch(ctx context.Context, request operations.DfareportingSitesPatchRequest, security operations.DfareportingSitesPatchSecurity) (*operations.DfareportingSitesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Site", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *sites) DfareportingSitesPatch(ctx context.Context, request operations.D
 // DfareportingSitesUpdate - Updates an existing site.
 func (s *sites) DfareportingSitesUpdate(ctx context.Context, request operations.DfareportingSitesUpdateRequest, security operations.DfareportingSitesUpdateSecurity) (*operations.DfareportingSitesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Site", "json")
 	if err != nil {

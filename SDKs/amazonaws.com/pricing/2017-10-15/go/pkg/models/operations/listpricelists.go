@@ -16,17 +16,21 @@ const (
 	ListPriceListsXAmzTargetEnumAwsPriceListServiceListPriceLists ListPriceListsXAmzTargetEnum = "AWSPriceListService.ListPriceLists"
 )
 
+func (e ListPriceListsXAmzTargetEnum) ToPointer() *ListPriceListsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListPriceListsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPriceListService.ListPriceLists":
-		*e = ListPriceListsXAmzTargetEnum(s)
+		*e = ListPriceListsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPriceListsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPriceListsXAmzTargetEnum: %v", v)
 	}
 }
 

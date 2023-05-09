@@ -35,7 +35,10 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ServicemanagementServicesConfigsCreate - Creates a new service configuration (version) for a managed service. This method only stores the service configuration. To roll out the service configuration to backend systems please call CreateServiceRollout. Only the 100 most recent service configurations and ones referenced by existing rollouts are kept for each service. The rest will be deleted eventually.
 func (s *services) ServicemanagementServicesConfigsCreate(ctx context.Context, request operations.ServicemanagementServicesConfigsCreateRequest, security operations.ServicemanagementServicesConfigsCreateSecurity) (*operations.ServicemanagementServicesConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/configs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/configs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Service", "json")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *services) ServicemanagementServicesConfigsCreate(ctx context.Context, r
 // ServicemanagementServicesConfigsGet - Gets a service configuration (version) for a managed service.
 func (s *services) ServicemanagementServicesConfigsGet(ctx context.Context, request operations.ServicemanagementServicesConfigsGetRequest, security operations.ServicemanagementServicesConfigsGetSecurity) (*operations.ServicemanagementServicesConfigsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/configs/{configId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/configs/{configId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +144,10 @@ func (s *services) ServicemanagementServicesConfigsGet(ctx context.Context, requ
 // ServicemanagementServicesConfigsList - Lists the history of the service configuration for a managed service, from the newest to the oldest.
 func (s *services) ServicemanagementServicesConfigsList(ctx context.Context, request operations.ServicemanagementServicesConfigsListRequest, security operations.ServicemanagementServicesConfigsListSecurity) (*operations.ServicemanagementServicesConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/configs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/configs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -186,7 +195,10 @@ func (s *services) ServicemanagementServicesConfigsList(ctx context.Context, req
 // ServicemanagementServicesConfigsSubmit - Creates a new service configuration (version) for a managed service based on user-supplied configuration source files (for example: OpenAPI Specification). This method stores the source configurations as well as the generated service configuration. To rollout the service configuration to other services, please call CreateServiceRollout. Only the 100 most recent configuration sources and ones referenced by existing service configurtions are kept for each service. The rest will be deleted eventually. Operation
 func (s *services) ServicemanagementServicesConfigsSubmit(ctx context.Context, request operations.ServicemanagementServicesConfigsSubmitRequest, security operations.ServicemanagementServicesConfigsSubmitSecurity) (*operations.ServicemanagementServicesConfigsSubmitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/configs:submit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/configs:submit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubmitConfigSourceRequest", "json")
 	if err != nil {
@@ -241,7 +253,10 @@ func (s *services) ServicemanagementServicesConfigsSubmit(ctx context.Context, r
 // ServicemanagementServicesConsumersGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *services) ServicemanagementServicesConsumersGetIamPolicy(ctx context.Context, request operations.ServicemanagementServicesConsumersGetIamPolicyRequest, security operations.ServicemanagementServicesConsumersGetIamPolicySecurity) (*operations.ServicemanagementServicesConsumersGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
@@ -296,7 +311,10 @@ func (s *services) ServicemanagementServicesConsumersGetIamPolicy(ctx context.Co
 // ServicemanagementServicesConsumersSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *services) ServicemanagementServicesConsumersSetIamPolicy(ctx context.Context, request operations.ServicemanagementServicesConsumersSetIamPolicyRequest, security operations.ServicemanagementServicesConsumersSetIamPolicySecurity) (*operations.ServicemanagementServicesConsumersSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -351,7 +369,10 @@ func (s *services) ServicemanagementServicesConsumersSetIamPolicy(ctx context.Co
 // ServicemanagementServicesConsumersTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *services) ServicemanagementServicesConsumersTestIamPermissions(ctx context.Context, request operations.ServicemanagementServicesConsumersTestIamPermissionsRequest, security operations.ServicemanagementServicesConsumersTestIamPermissionsSecurity) (*operations.ServicemanagementServicesConsumersTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -461,7 +482,10 @@ func (s *services) ServicemanagementServicesCreate(ctx context.Context, request 
 // ServicemanagementServicesDelete - Deletes a managed service. This method will change the service to the `Soft-Delete` state for 30 days. Within this period, service producers may call UndeleteService to restore the service. After 30 days, the service will be permanently deleted. Operation
 func (s *services) ServicemanagementServicesDelete(ctx context.Context, request operations.ServicemanagementServicesDeleteRequest, security operations.ServicemanagementServicesDeleteSecurity) (*operations.ServicemanagementServicesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -564,7 +588,10 @@ func (s *services) ServicemanagementServicesGenerateConfigReport(ctx context.Con
 // ServicemanagementServicesGet - Gets a managed service. Authentication is required unless the service is public.
 func (s *services) ServicemanagementServicesGet(ctx context.Context, request operations.ServicemanagementServicesGetRequest, security operations.ServicemanagementServicesGetSecurity) (*operations.ServicemanagementServicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -612,7 +639,10 @@ func (s *services) ServicemanagementServicesGet(ctx context.Context, request ope
 // ServicemanagementServicesGetConfig - Gets a service configuration (version) for a managed service.
 func (s *services) ServicemanagementServicesGetConfig(ctx context.Context, request operations.ServicemanagementServicesGetConfigRequest, security operations.ServicemanagementServicesGetConfigSecurity) (*operations.ServicemanagementServicesGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -708,7 +738,10 @@ func (s *services) ServicemanagementServicesList(ctx context.Context, request op
 // ServicemanagementServicesRolloutsCreate - Creates a new service configuration rollout. Based on rollout, the Google Service Management will roll out the service configurations to different backend services. For example, the logging configuration will be pushed to Google Cloud Logging. Please note that any previous pending and running Rollouts and associated Operations will be automatically cancelled so that the latest Rollout will not be blocked by previous Rollouts. Only the 100 most recent (in any state) and the last 10 successful (if not already part of the set of 100 most recent) rollouts are kept for each service. The rest will be deleted eventually. Operation
 func (s *services) ServicemanagementServicesRolloutsCreate(ctx context.Context, request operations.ServicemanagementServicesRolloutsCreateRequest, security operations.ServicemanagementServicesRolloutsCreateSecurity) (*operations.ServicemanagementServicesRolloutsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/rollouts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/rollouts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Rollout", "json")
 	if err != nil {
@@ -763,7 +796,10 @@ func (s *services) ServicemanagementServicesRolloutsCreate(ctx context.Context, 
 // ServicemanagementServicesRolloutsGet - Gets a service configuration rollout.
 func (s *services) ServicemanagementServicesRolloutsGet(ctx context.Context, request operations.ServicemanagementServicesRolloutsGetRequest, security operations.ServicemanagementServicesRolloutsGetSecurity) (*operations.ServicemanagementServicesRolloutsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/rollouts/{rolloutId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/rollouts/{rolloutId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -811,7 +847,10 @@ func (s *services) ServicemanagementServicesRolloutsGet(ctx context.Context, req
 // ServicemanagementServicesRolloutsList - Lists the history of the service configuration rollouts for a managed service, from the newest to the oldest.
 func (s *services) ServicemanagementServicesRolloutsList(ctx context.Context, request operations.ServicemanagementServicesRolloutsListRequest, security operations.ServicemanagementServicesRolloutsListSecurity) (*operations.ServicemanagementServicesRolloutsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/rollouts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}/rollouts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -859,7 +898,10 @@ func (s *services) ServicemanagementServicesRolloutsList(ctx context.Context, re
 // ServicemanagementServicesUndelete - Revives a previously deleted managed service. The method restores the service using the configuration at the time the service was deleted. The target service must exist and must have been deleted within the last 30 days. Operation
 func (s *services) ServicemanagementServicesUndelete(ctx context.Context, request operations.ServicemanagementServicesUndeleteRequest, security operations.ServicemanagementServicesUndeleteSecurity) (*operations.ServicemanagementServicesUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}:undelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/services/{serviceName}:undelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -27,6 +27,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - The Computer Vision API provides state-of-the-art algorithms to process images and return information. For example, it can be used to determine if an image contains mature content, or it can be used to find all the faces in an image.  It also has other features like estimating dominant and accent colors, categorizing the content of images, and describing an image with complete English sentences.  Additionally, it can also intelligently generate images thumbnails for displaying large images effectively.
 type SDK struct {
 
@@ -164,7 +179,10 @@ func (s *SDK) BatchReadFile(ctx context.Context, request shared.ImageURL) (*oper
 // GetReadOperationResult - This interface is used for getting OCR results of Read operation. The URL to this interface should be retrieved from 'Operation-Location' field returned from Batch Read File interface.
 func (s *SDK) GetReadOperationResult(ctx context.Context, request operations.GetReadOperationResultRequest) (*operations.GetReadOperationResultResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/read/operations/{operationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/read/operations/{operationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -218,7 +236,10 @@ func (s *SDK) GetReadOperationResult(ctx context.Context, request operations.Get
 // GetTextOperationResult - This interface is used for getting text operation result. The URL to this interface should be retrieved from 'Operation-Location' field returned from Recognize Text interface.
 func (s *SDK) GetTextOperationResult(ctx context.Context, request operations.GetTextOperationResultRequest) (*operations.GetTextOperationResultResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/textOperations/{operationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/textOperations/{operationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

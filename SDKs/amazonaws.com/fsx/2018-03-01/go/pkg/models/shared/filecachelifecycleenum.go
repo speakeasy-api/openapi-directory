@@ -17,12 +17,16 @@ const (
 	FileCacheLifecycleEnumFailed    FileCacheLifecycleEnum = "FAILED"
 )
 
+func (e FileCacheLifecycleEnum) ToPointer() *FileCacheLifecycleEnum {
+	return &e
+}
+
 func (e *FileCacheLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "CREATING":
@@ -32,9 +36,9 @@ func (e *FileCacheLifecycleEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATING":
 		fallthrough
 	case "FAILED":
-		*e = FileCacheLifecycleEnum(s)
+		*e = FileCacheLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileCacheLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for FileCacheLifecycleEnum: %v", v)
 	}
 }

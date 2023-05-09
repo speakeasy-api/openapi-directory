@@ -18,12 +18,16 @@ const (
 	InstanceOSPoliciesComplianceStateEnumNoOsPoliciesApplicable             InstanceOSPoliciesComplianceStateEnum = "NO_OS_POLICIES_APPLICABLE"
 )
 
+func (e InstanceOSPoliciesComplianceStateEnum) ToPointer() *InstanceOSPoliciesComplianceStateEnum {
+	return &e
+}
+
 func (e *InstanceOSPoliciesComplianceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED":
 		fallthrough
 	case "COMPLIANT":
@@ -33,10 +37,10 @@ func (e *InstanceOSPoliciesComplianceStateEnum) UnmarshalJSON(data []byte) error
 	case "UNKNOWN":
 		fallthrough
 	case "NO_OS_POLICIES_APPLICABLE":
-		*e = InstanceOSPoliciesComplianceStateEnum(s)
+		*e = InstanceOSPoliciesComplianceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceOSPoliciesComplianceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceOSPoliciesComplianceStateEnum: %v", v)
 	}
 }
 

@@ -30,12 +30,16 @@ const (
 	ConversionsGetStatisticsSingleTimeFrameEnumCustom        ConversionsGetStatisticsSingleTimeFrameEnum = "custom"
 )
 
+func (e ConversionsGetStatisticsSingleTimeFrameEnum) ToPointer() *ConversionsGetStatisticsSingleTimeFrameEnum {
+	return &e
+}
+
 func (e *ConversionsGetStatisticsSingleTimeFrameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "today":
 		fallthrough
 	case "yesterday":
@@ -65,10 +69,10 @@ func (e *ConversionsGetStatisticsSingleTimeFrameEnum) UnmarshalJSON(data []byte)
 	case "beginning":
 		fallthrough
 	case "custom":
-		*e = ConversionsGetStatisticsSingleTimeFrameEnum(s)
+		*e = ConversionsGetStatisticsSingleTimeFrameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConversionsGetStatisticsSingleTimeFrameEnum: %s", s)
+		return fmt.Errorf("invalid value for ConversionsGetStatisticsSingleTimeFrameEnum: %v", v)
 	}
 }
 

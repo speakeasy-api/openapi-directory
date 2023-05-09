@@ -34,7 +34,10 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DoubleclickbidmanagerReportsListreports - Retrieves stored reports.
 func (s *reports) DoubleclickbidmanagerReportsListreports(ctx context.Context, request operations.DoubleclickbidmanagerReportsListreportsRequest, security operations.DoubleclickbidmanagerReportsListreportsSecurity) (*operations.DoubleclickbidmanagerReportsListreportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}/reports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}/reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

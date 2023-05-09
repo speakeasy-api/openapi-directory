@@ -15,19 +15,23 @@ const (
 	BookDepreciationSettingAveragingMethodEnumActualDays BookDepreciationSettingAveragingMethodEnum = "ActualDays"
 )
 
+func (e BookDepreciationSettingAveragingMethodEnum) ToPointer() *BookDepreciationSettingAveragingMethodEnum {
+	return &e
+}
+
 func (e *BookDepreciationSettingAveragingMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FullMonth":
 		fallthrough
 	case "ActualDays":
-		*e = BookDepreciationSettingAveragingMethodEnum(s)
+		*e = BookDepreciationSettingAveragingMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BookDepreciationSettingAveragingMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for BookDepreciationSettingAveragingMethodEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	BookDepreciationSettingDepreciationCalculationMethodEnumNone BookDepreciationSettingDepreciationCalculationMethodEnum = "None"
 )
 
+func (e BookDepreciationSettingDepreciationCalculationMethodEnum) ToPointer() *BookDepreciationSettingDepreciationCalculationMethodEnum {
+	return &e
+}
+
 func (e *BookDepreciationSettingDepreciationCalculationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Rate":
 		fallthrough
 	case "Life":
 		fallthrough
 	case "None":
-		*e = BookDepreciationSettingDepreciationCalculationMethodEnum(s)
+		*e = BookDepreciationSettingDepreciationCalculationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BookDepreciationSettingDepreciationCalculationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for BookDepreciationSettingDepreciationCalculationMethodEnum: %v", v)
 	}
 }
 
@@ -70,12 +78,16 @@ const (
 	BookDepreciationSettingDepreciationMethodEnumFullDepreciation    BookDepreciationSettingDepreciationMethodEnum = "FullDepreciation"
 )
 
+func (e BookDepreciationSettingDepreciationMethodEnum) ToPointer() *BookDepreciationSettingDepreciationMethodEnum {
+	return &e
+}
+
 func (e *BookDepreciationSettingDepreciationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NoDepreciation":
 		fallthrough
 	case "StraightLine":
@@ -87,10 +99,10 @@ func (e *BookDepreciationSettingDepreciationMethodEnum) UnmarshalJSON(data []byt
 	case "DiminishingValue200":
 		fallthrough
 	case "FullDepreciation":
-		*e = BookDepreciationSettingDepreciationMethodEnum(s)
+		*e = BookDepreciationSettingDepreciationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BookDepreciationSettingDepreciationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for BookDepreciationSettingDepreciationMethodEnum: %v", v)
 	}
 }
 

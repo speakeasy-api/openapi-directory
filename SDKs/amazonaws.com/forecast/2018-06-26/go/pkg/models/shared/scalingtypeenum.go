@@ -16,12 +16,16 @@ const (
 	ScalingTypeEnumReverseLogarithmic ScalingTypeEnum = "ReverseLogarithmic"
 )
 
+func (e ScalingTypeEnum) ToPointer() *ScalingTypeEnum {
+	return &e
+}
+
 func (e *ScalingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Auto":
 		fallthrough
 	case "Linear":
@@ -29,9 +33,9 @@ func (e *ScalingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Logarithmic":
 		fallthrough
 	case "ReverseLogarithmic":
-		*e = ScalingTypeEnum(s)
+		*e = ScalingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScalingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScalingTypeEnum: %v", v)
 	}
 }

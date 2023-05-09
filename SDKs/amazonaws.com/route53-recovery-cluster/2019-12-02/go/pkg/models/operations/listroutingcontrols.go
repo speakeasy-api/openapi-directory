@@ -16,17 +16,21 @@ const (
 	ListRoutingControlsXAmzTargetEnumToggleCustomerAPIListRoutingControls ListRoutingControlsXAmzTargetEnum = "ToggleCustomerAPI.ListRoutingControls"
 )
 
+func (e ListRoutingControlsXAmzTargetEnum) ToPointer() *ListRoutingControlsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListRoutingControlsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ToggleCustomerAPI.ListRoutingControls":
-		*e = ListRoutingControlsXAmzTargetEnum(s)
+		*e = ListRoutingControlsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRoutingControlsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRoutingControlsXAmzTargetEnum: %v", v)
 	}
 }
 

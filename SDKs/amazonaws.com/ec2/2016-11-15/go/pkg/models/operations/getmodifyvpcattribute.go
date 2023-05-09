@@ -15,17 +15,21 @@ const (
 	GETModifyVpcAttributeActionEnumModifyVpcAttribute GETModifyVpcAttributeActionEnum = "ModifyVpcAttribute"
 )
 
+func (e GETModifyVpcAttributeActionEnum) ToPointer() *GETModifyVpcAttributeActionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVpcAttribute":
-		*e = GETModifyVpcAttributeActionEnum(s)
+		*e = GETModifyVpcAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcAttributeActionEnum: %v", v)
 	}
 }
 
@@ -51,17 +55,21 @@ const (
 	GETModifyVpcAttributeVersionEnumTwoThousandAndSixteen1115 GETModifyVpcAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVpcAttributeVersionEnum) ToPointer() *GETModifyVpcAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVpcAttributeVersionEnum(s)
+		*e = GETModifyVpcAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcAttributeVersionEnum: %v", v)
 	}
 }
 

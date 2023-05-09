@@ -16,19 +16,23 @@ const (
 	OauthConnectionStatusEnumInactive OauthConnectionStatusEnum = "inactive"
 )
 
+func (e OauthConnectionStatusEnum) ToPointer() *OauthConnectionStatusEnum {
+	return &e
+}
+
 func (e *OauthConnectionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = OauthConnectionStatusEnum(s)
+		*e = OauthConnectionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OauthConnectionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OauthConnectionStatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	OauthConnectionTypeEnumOauthConnection OauthConnectionTypeEnum = "oauth_connection"
 )
 
+func (e OauthConnectionTypeEnum) ToPointer() *OauthConnectionTypeEnum {
+	return &e
+}
+
 func (e *OauthConnectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "oauth_connection":
-		*e = OauthConnectionTypeEnum(s)
+		*e = OauthConnectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OauthConnectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OauthConnectionTypeEnum: %v", v)
 	}
 }
 

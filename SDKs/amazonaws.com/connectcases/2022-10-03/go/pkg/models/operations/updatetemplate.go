@@ -22,19 +22,23 @@ const (
 	UpdateTemplateRequestBodyStatusEnumInactive UpdateTemplateRequestBodyStatusEnum = "Inactive"
 )
 
+func (e UpdateTemplateRequestBodyStatusEnum) ToPointer() *UpdateTemplateRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *UpdateTemplateRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Inactive":
-		*e = UpdateTemplateRequestBodyStatusEnum(s)
+		*e = UpdateTemplateRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateTemplateRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateTemplateRequestBodyStatusEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	GetPlaylistsSortEnumNameZToA         GetPlaylistsSortEnum = "name_z_to_a"
 )
 
+func (e GetPlaylistsSortEnum) ToPointer() *GetPlaylistsSortEnum {
+	return &e
+}
+
 func (e *GetPlaylistsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "recent_added_first":
 		fallthrough
 	case "oldest_added_first":
@@ -32,10 +36,10 @@ func (e *GetPlaylistsSortEnum) UnmarshalJSON(data []byte) error {
 	case "name_a_to_z":
 		fallthrough
 	case "name_z_to_a":
-		*e = GetPlaylistsSortEnum(s)
+		*e = GetPlaylistsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPlaylistsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPlaylistsSortEnum: %v", v)
 	}
 }
 

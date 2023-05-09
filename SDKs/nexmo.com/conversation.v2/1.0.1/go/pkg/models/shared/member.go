@@ -22,17 +22,21 @@ const (
 	MemberChannelTypeEnumApp MemberChannelTypeEnum = "app"
 )
 
+func (e MemberChannelTypeEnum) ToPointer() *MemberChannelTypeEnum {
+	return &e
+}
+
 func (e *MemberChannelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "app":
-		*e = MemberChannelTypeEnum(s)
+		*e = MemberChannelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MemberChannelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MemberChannelTypeEnum: %v", v)
 	}
 }
 
@@ -78,19 +82,23 @@ const (
 	MemberStateEnumJoined  MemberStateEnum = "JOINED"
 )
 
+func (e MemberStateEnum) ToPointer() *MemberStateEnum {
+	return &e
+}
+
 func (e *MemberStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVITED":
 		fallthrough
 	case "JOINED":
-		*e = MemberStateEnum(s)
+		*e = MemberStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MemberStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MemberStateEnum: %v", v)
 	}
 }
 

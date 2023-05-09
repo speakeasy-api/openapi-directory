@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/kafkaconnec
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,7 +28,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateConnectorRequest{
+    ctx := context.Background()
+    res, err := s.CreateConnector(ctx, operations.CreateConnectorRequest{
         RequestBody: operations.CreateConnectorRequestBody{
             Capacity: operations.CreateConnectorRequestBodyCapacity{
                 AutoScaling: &shared.AutoScaling{
@@ -53,7 +54,7 @@ func main() {
                 "iure": "magnam",
                 "debitis": "ipsa",
             },
-            ConnectorDescription: "delectus",
+            ConnectorDescription: sdk.String("delectus"),
             ConnectorName: "tempora",
             KafkaCluster: operations.CreateConnectorRequestBodyKafkaCluster{
                 ApacheKafkaCluster: &shared.ApacheKafkaCluster{
@@ -72,26 +73,26 @@ func main() {
                 },
             },
             KafkaClusterClientAuthentication: operations.CreateConnectorRequestBodyKafkaClusterClientAuthentication{
-                AuthenticationType: "IAM",
+                AuthenticationType: shared.KafkaClusterClientAuthenticationTypeEnumIam.ToPointer(),
             },
             KafkaClusterEncryptionInTransit: operations.CreateConnectorRequestBodyKafkaClusterEncryptionInTransit{
-                EncryptionType: "TLS",
+                EncryptionType: shared.KafkaClusterEncryptionInTransitTypeEnumTLS.ToPointer(),
             },
             KafkaConnectVersion: "ab",
             LogDelivery: &operations.CreateConnectorRequestBodyLogDelivery{
                 WorkerLogDelivery: &shared.WorkerLogDelivery{
                     CloudWatchLogs: &shared.CloudWatchLogsLogDelivery{
                         Enabled: false,
-                        LogGroup: "quis",
+                        LogGroup: sdk.String("quis"),
                     },
                     Firehose: &shared.FirehoseLogDelivery{
-                        DeliveryStream: "veritatis",
+                        DeliveryStream: sdk.String("veritatis"),
                         Enabled: false,
                     },
                     S3: &shared.S3LogDelivery{
-                        Bucket: "deserunt",
+                        Bucket: sdk.String("deserunt"),
                         Enabled: false,
-                        Prefix: "perferendis",
+                        Prefix: sdk.String("perferendis"),
                     },
                 },
             },
@@ -111,21 +112,18 @@ func main() {
             },
             ServiceExecutionRoleArn: "at",
             WorkerConfiguration: &operations.CreateConnectorRequestBodyWorkerConfiguration{
-                Revision: 870088,
-                WorkerConfigurationArn: "maiores",
+                Revision: sdk.Int64(870088),
+                WorkerConfigurationArn: sdk.String("maiores"),
             },
         },
-        XAmzAlgorithm: "molestiae",
-        XAmzContentSha256: "quod",
-        XAmzCredential: "quod",
-        XAmzDate: "esse",
-        XAmzSecurityToken: "totam",
-        XAmzSignature: "porro",
-        XAmzSignedHeaders: "dolorum",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateConnector(ctx, req)
+        XAmzAlgorithm: sdk.String("molestiae"),
+        XAmzContentSha256: sdk.String("quod"),
+        XAmzCredential: sdk.String("quod"),
+        XAmzDate: sdk.String("esse"),
+        XAmzSecurityToken: sdk.String("totam"),
+        XAmzSignature: sdk.String("porro"),
+        XAmzSignedHeaders: sdk.String("dolorum"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -140,20 +138,20 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateConnector` - Creates a connector using the specified properties.
-* `CreateCustomPlugin` - Creates a custom plugin using the specified properties.
-* `CreateWorkerConfiguration` - Creates a worker configuration using the specified properties.
-* `DeleteConnector` - Deletes the specified connector.
-* `DeleteCustomPlugin` - Deletes a custom plugin.
-* `DescribeConnector` - Returns summary information about the connector.
-* `DescribeCustomPlugin` - A summary description of the custom plugin.
-* `DescribeWorkerConfiguration` - Returns information about a worker configuration.
-* `ListConnectors` - Returns a list of all the connectors in this account and Region. The list is limited to connectors whose name starts with the specified prefix. The response also includes a description of each of the listed connectors.
-* `ListCustomPlugins` - Returns a list of all of the custom plugins in this account and Region.
-* `ListWorkerConfigurations` - Returns a list of all of the worker configurations in this account and Region.
-* `UpdateConnector` - Updates the specified connector.
+* [CreateConnector](docs/sdk/README.md#createconnector) - Creates a connector using the specified properties.
+* [CreateCustomPlugin](docs/sdk/README.md#createcustomplugin) - Creates a custom plugin using the specified properties.
+* [CreateWorkerConfiguration](docs/sdk/README.md#createworkerconfiguration) - Creates a worker configuration using the specified properties.
+* [DeleteConnector](docs/sdk/README.md#deleteconnector) - Deletes the specified connector.
+* [DeleteCustomPlugin](docs/sdk/README.md#deletecustomplugin) - Deletes a custom plugin.
+* [DescribeConnector](docs/sdk/README.md#describeconnector) - Returns summary information about the connector.
+* [DescribeCustomPlugin](docs/sdk/README.md#describecustomplugin) - A summary description of the custom plugin.
+* [DescribeWorkerConfiguration](docs/sdk/README.md#describeworkerconfiguration) - Returns information about a worker configuration.
+* [ListConnectors](docs/sdk/README.md#listconnectors) - Returns a list of all the connectors in this account and Region. The list is limited to connectors whose name starts with the specified prefix. The response also includes a description of each of the listed connectors.
+* [ListCustomPlugins](docs/sdk/README.md#listcustomplugins) - Returns a list of all of the custom plugins in this account and Region.
+* [ListWorkerConfigurations](docs/sdk/README.md#listworkerconfigurations) - Returns a list of all of the worker configurations in this account and Region.
+* [UpdateConnector](docs/sdk/README.md#updateconnector) - Updates the specified connector.
 <!-- End SDK Available Operations -->
 
 ### Maturity

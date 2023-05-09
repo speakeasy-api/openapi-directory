@@ -33,21 +33,25 @@ const (
 	BloggerPostUserInfosListOrderByEnumUpdated            BloggerPostUserInfosListOrderByEnum = "UPDATED"
 )
 
+func (e BloggerPostUserInfosListOrderByEnum) ToPointer() *BloggerPostUserInfosListOrderByEnum {
+	return &e
+}
+
 func (e *BloggerPostUserInfosListOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORDER_BY_UNSPECIFIED":
 		fallthrough
 	case "PUBLISHED":
 		fallthrough
 	case "UPDATED":
-		*e = BloggerPostUserInfosListOrderByEnum(s)
+		*e = BloggerPostUserInfosListOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerPostUserInfosListOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerPostUserInfosListOrderByEnum: %v", v)
 	}
 }
 
@@ -60,12 +64,16 @@ const (
 	BloggerPostUserInfosListStatusEnumSoftTrashed BloggerPostUserInfosListStatusEnum = "SOFT_TRASHED"
 )
 
+func (e BloggerPostUserInfosListStatusEnum) ToPointer() *BloggerPostUserInfosListStatusEnum {
+	return &e
+}
+
 func (e *BloggerPostUserInfosListStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "DRAFT":
@@ -73,10 +81,10 @@ func (e *BloggerPostUserInfosListStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SCHEDULED":
 		fallthrough
 	case "SOFT_TRASHED":
-		*e = BloggerPostUserInfosListStatusEnum(s)
+		*e = BloggerPostUserInfosListStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerPostUserInfosListStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerPostUserInfosListStatusEnum: %v", v)
 	}
 }
 
@@ -90,12 +98,16 @@ const (
 	BloggerPostUserInfosListViewEnumAdmin               BloggerPostUserInfosListViewEnum = "ADMIN"
 )
 
+func (e BloggerPostUserInfosListViewEnum) ToPointer() *BloggerPostUserInfosListViewEnum {
+	return &e
+}
+
 func (e *BloggerPostUserInfosListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_TYPE_UNSPECIFIED":
 		fallthrough
 	case "READER":
@@ -103,10 +115,10 @@ func (e *BloggerPostUserInfosListViewEnum) UnmarshalJSON(data []byte) error {
 	case "AUTHOR":
 		fallthrough
 	case "ADMIN":
-		*e = BloggerPostUserInfosListViewEnum(s)
+		*e = BloggerPostUserInfosListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerPostUserInfosListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerPostUserInfosListViewEnum: %v", v)
 	}
 }
 

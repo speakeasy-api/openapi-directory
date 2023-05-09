@@ -24,12 +24,16 @@ const (
 	ObjectGroupEnumReceipt         ObjectGroupEnum = "Receipt"
 )
 
+func (e ObjectGroupEnum) ToPointer() *ObjectGroupEnum {
+	return &e
+}
+
 func (e *ObjectGroupEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Account":
 		fallthrough
 	case "BankTransaction":
@@ -51,9 +55,9 @@ func (e *ObjectGroupEnum) UnmarshalJSON(data []byte) error {
 	case "Prepayment":
 		fallthrough
 	case "Receipt":
-		*e = ObjectGroupEnum(s)
+		*e = ObjectGroupEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ObjectGroupEnum: %s", s)
+		return fmt.Errorf("invalid value for ObjectGroupEnum: %v", v)
 	}
 }

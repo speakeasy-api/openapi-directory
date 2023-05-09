@@ -16,20 +16,24 @@ const (
 	WindingnessEnumHigh   WindingnessEnum = "high"
 )
 
+func (e WindingnessEnum) ToPointer() *WindingnessEnum {
+	return &e
+}
+
 func (e *WindingnessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "low":
 		fallthrough
 	case "normal":
 		fallthrough
 	case "high":
-		*e = WindingnessEnum(s)
+		*e = WindingnessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WindingnessEnum: %s", s)
+		return fmt.Errorf("invalid value for WindingnessEnum: %v", v)
 	}
 }

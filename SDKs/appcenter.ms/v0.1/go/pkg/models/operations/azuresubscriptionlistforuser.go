@@ -8,6 +8,10 @@ import (
 	"net/http"
 )
 
+type AzureSubscriptionListForUserSecurity struct {
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
+}
+
 type AzureSubscriptionListForUserDefaultApplicationJSONErrorCodeEnum string
 
 const (
@@ -20,12 +24,16 @@ const (
 	AzureSubscriptionListForUserDefaultApplicationJSONErrorCodeEnumTooManyRequests     AzureSubscriptionListForUserDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AzureSubscriptionListForUserDefaultApplicationJSONErrorCodeEnum) ToPointer() *AzureSubscriptionListForUserDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AzureSubscriptionListForUserDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -39,10 +47,10 @@ func (e *AzureSubscriptionListForUserDefaultApplicationJSONErrorCodeEnum) Unmars
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AzureSubscriptionListForUserDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AzureSubscriptionListForUserDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AzureSubscriptionListForUserDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AzureSubscriptionListForUserDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

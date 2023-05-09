@@ -93,12 +93,16 @@ const (
 	PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnumWardLinkage     PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnum = "wardLinkage"
 )
 
+func (e PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnum) ToPointer() *PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnum {
+	return &e
+}
+
 func (e *PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "singleLinkage":
 		fallthrough
 	case "averageLinkage":
@@ -106,10 +110,10 @@ func (e *PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnum
 	case "completeLinkage":
 		fallthrough
 	case "wardLinkage":
-		*e = PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnum(s)
+		*e = PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAssetsCorrelationMatrixTheoryImpliedRequestBodyClusteringMethodEnum: %v", v)
 	}
 }
 

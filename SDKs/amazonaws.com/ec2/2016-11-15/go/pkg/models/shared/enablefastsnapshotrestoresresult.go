@@ -19,12 +19,16 @@ const (
 	EnableFastSnapshotRestoresResultSuccessfulStateEnumDisabled   EnableFastSnapshotRestoresResultSuccessfulStateEnum = "disabled"
 )
 
+func (e EnableFastSnapshotRestoresResultSuccessfulStateEnum) ToPointer() *EnableFastSnapshotRestoresResultSuccessfulStateEnum {
+	return &e
+}
+
 func (e *EnableFastSnapshotRestoresResultSuccessfulStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabling":
 		fallthrough
 	case "optimizing":
@@ -34,10 +38,10 @@ func (e *EnableFastSnapshotRestoresResultSuccessfulStateEnum) UnmarshalJSON(data
 	case "disabling":
 		fallthrough
 	case "disabled":
-		*e = EnableFastSnapshotRestoresResultSuccessfulStateEnum(s)
+		*e = EnableFastSnapshotRestoresResultSuccessfulStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnableFastSnapshotRestoresResultSuccessfulStateEnum: %s", s)
+		return fmt.Errorf("invalid value for EnableFastSnapshotRestoresResultSuccessfulStateEnum: %v", v)
 	}
 }
 

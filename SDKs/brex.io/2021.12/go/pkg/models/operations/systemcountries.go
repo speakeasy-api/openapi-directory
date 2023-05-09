@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type SystemCountriesSecurity struct {
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
+}
+
 // SystemCountriesDefaultApplicationJSON - Detailed information about the error
 type SystemCountriesDefaultApplicationJSON struct {
 	Code    int     `json:"code"`

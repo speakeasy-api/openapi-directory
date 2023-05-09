@@ -16,21 +16,25 @@ const (
 	GoogleFirestoreAdminV1beta2IndexQueryScopeEnumCollectionGroup       GoogleFirestoreAdminV1beta2IndexQueryScopeEnum = "COLLECTION_GROUP"
 )
 
+func (e GoogleFirestoreAdminV1beta2IndexQueryScopeEnum) ToPointer() *GoogleFirestoreAdminV1beta2IndexQueryScopeEnum {
+	return &e
+}
+
 func (e *GoogleFirestoreAdminV1beta2IndexQueryScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUERY_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "COLLECTION":
 		fallthrough
 	case "COLLECTION_GROUP":
-		*e = GoogleFirestoreAdminV1beta2IndexQueryScopeEnum(s)
+		*e = GoogleFirestoreAdminV1beta2IndexQueryScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1beta2IndexQueryScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1beta2IndexQueryScopeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	GoogleFirestoreAdminV1beta2IndexStateEnumNeedsRepair      GoogleFirestoreAdminV1beta2IndexStateEnum = "NEEDS_REPAIR"
 )
 
+func (e GoogleFirestoreAdminV1beta2IndexStateEnum) ToPointer() *GoogleFirestoreAdminV1beta2IndexStateEnum {
+	return &e
+}
+
 func (e *GoogleFirestoreAdminV1beta2IndexStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -57,10 +65,10 @@ func (e *GoogleFirestoreAdminV1beta2IndexStateEnum) UnmarshalJSON(data []byte) e
 	case "READY":
 		fallthrough
 	case "NEEDS_REPAIR":
-		*e = GoogleFirestoreAdminV1beta2IndexStateEnum(s)
+		*e = GoogleFirestoreAdminV1beta2IndexStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1beta2IndexStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1beta2IndexStateEnum: %v", v)
 	}
 }
 

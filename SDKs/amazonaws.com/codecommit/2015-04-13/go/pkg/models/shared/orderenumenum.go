@@ -14,18 +14,22 @@ const (
 	OrderEnumEnumDescending OrderEnumEnum = "descending"
 )
 
+func (e OrderEnumEnum) ToPointer() *OrderEnumEnum {
+	return &e
+}
+
 func (e *OrderEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ascending":
 		fallthrough
 	case "descending":
-		*e = OrderEnumEnum(s)
+		*e = OrderEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderEnumEnum: %v", v)
 	}
 }

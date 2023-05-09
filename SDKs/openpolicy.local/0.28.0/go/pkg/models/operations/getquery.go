@@ -68,12 +68,16 @@ const (
 	GetQuery200ApplicationJSONExplanationOpEnumRedo  GetQuery200ApplicationJSONExplanationOpEnum = "redo"
 )
 
+func (e GetQuery200ApplicationJSONExplanationOpEnum) ToPointer() *GetQuery200ApplicationJSONExplanationOpEnum {
+	return &e
+}
+
 func (e *GetQuery200ApplicationJSONExplanationOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enter":
 		fallthrough
 	case "exit":
@@ -83,10 +87,10 @@ func (e *GetQuery200ApplicationJSONExplanationOpEnum) UnmarshalJSON(data []byte)
 	case "fail":
 		fallthrough
 	case "redo":
-		*e = GetQuery200ApplicationJSONExplanationOpEnum(s)
+		*e = GetQuery200ApplicationJSONExplanationOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetQuery200ApplicationJSONExplanationOpEnum: %s", s)
+		return fmt.Errorf("invalid value for GetQuery200ApplicationJSONExplanationOpEnum: %v", v)
 	}
 }
 
@@ -99,21 +103,25 @@ const (
 	GetQuery200ApplicationJSONExplanationTypeEnumBody GetQuery200ApplicationJSONExplanationTypeEnum = "body"
 )
 
+func (e GetQuery200ApplicationJSONExplanationTypeEnum) ToPointer() *GetQuery200ApplicationJSONExplanationTypeEnum {
+	return &e
+}
+
 func (e *GetQuery200ApplicationJSONExplanationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "expr":
 		fallthrough
 	case "rule":
 		fallthrough
 	case "body":
-		*e = GetQuery200ApplicationJSONExplanationTypeEnum(s)
+		*e = GetQuery200ApplicationJSONExplanationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetQuery200ApplicationJSONExplanationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetQuery200ApplicationJSONExplanationTypeEnum: %v", v)
 	}
 }
 
@@ -196,19 +204,23 @@ const (
 	GetQuery200ApplicationJSONResultAstPackagePathTypeEnumPackage GetQuery200ApplicationJSONResultAstPackagePathTypeEnum = "package"
 )
 
+func (e GetQuery200ApplicationJSONResultAstPackagePathTypeEnum) ToPointer() *GetQuery200ApplicationJSONResultAstPackagePathTypeEnum {
+	return &e
+}
+
 func (e *GetQuery200ApplicationJSONResultAstPackagePathTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "import":
 		fallthrough
 	case "package":
-		*e = GetQuery200ApplicationJSONResultAstPackagePathTypeEnum(s)
+		*e = GetQuery200ApplicationJSONResultAstPackagePathTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetQuery200ApplicationJSONResultAstPackagePathTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetQuery200ApplicationJSONResultAstPackagePathTypeEnum: %v", v)
 	}
 }
 

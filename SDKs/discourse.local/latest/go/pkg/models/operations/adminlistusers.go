@@ -15,17 +15,21 @@ const (
 	AdminListUsersAscEnumTrue AdminListUsersAscEnum = "true"
 )
 
+func (e AdminListUsersAscEnum) ToPointer() *AdminListUsersAscEnum {
+	return &e
+}
+
 func (e *AdminListUsersAscEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
-		*e = AdminListUsersAscEnum(s)
+		*e = AdminListUsersAscEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminListUsersAscEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminListUsersAscEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	AdminListUsersFlagEnumSuspect   AdminListUsersFlagEnum = "suspect"
 )
 
+func (e AdminListUsersFlagEnum) ToPointer() *AdminListUsersFlagEnum {
+	return &e
+}
+
 func (e *AdminListUsersFlagEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "new":
@@ -58,10 +66,10 @@ func (e *AdminListUsersFlagEnum) UnmarshalJSON(data []byte) error {
 	case "blocked":
 		fallthrough
 	case "suspect":
-		*e = AdminListUsersFlagEnum(s)
+		*e = AdminListUsersFlagEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminListUsersFlagEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminListUsersFlagEnum: %v", v)
 	}
 }
 
@@ -82,12 +90,16 @@ const (
 	AdminListUsersOrderEnumReadTime     AdminListUsersOrderEnum = "read_time"
 )
 
+func (e AdminListUsersOrderEnum) ToPointer() *AdminListUsersOrderEnum {
+	return &e
+}
+
 func (e *AdminListUsersOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "last_emailed":
@@ -109,10 +121,10 @@ func (e *AdminListUsersOrderEnum) UnmarshalJSON(data []byte) error {
 	case "posts":
 		fallthrough
 	case "read_time":
-		*e = AdminListUsersOrderEnum(s)
+		*e = AdminListUsersOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminListUsersOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminListUsersOrderEnum: %v", v)
 	}
 }
 

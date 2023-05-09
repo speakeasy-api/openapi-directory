@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -127,4 +128,13 @@ pkg/models/shared/phoneviewmodel.go
 pkg/models/shared/repeatviewmodel.go
 pkg/models/shared/serviceallocationlistviewmodel.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/appointments/README.md
+docs/availability/README.md
+docs/customers/README.md
+docs/locations/README.md
+docs/resourcegroups/README.md
+docs/resources/README.md
+docs/servicegroups/README.md
+docs/services/README.md
 USAGE.md

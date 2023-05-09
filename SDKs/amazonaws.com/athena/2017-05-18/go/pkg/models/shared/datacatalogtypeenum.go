@@ -15,20 +15,24 @@ const (
 	DataCatalogTypeEnumHive   DataCatalogTypeEnum = "HIVE"
 )
 
+func (e DataCatalogTypeEnum) ToPointer() *DataCatalogTypeEnum {
+	return &e
+}
+
 func (e *DataCatalogTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAMBDA":
 		fallthrough
 	case "GLUE":
 		fallthrough
 	case "HIVE":
-		*e = DataCatalogTypeEnum(s)
+		*e = DataCatalogTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataCatalogTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataCatalogTypeEnum: %v", v)
 	}
 }

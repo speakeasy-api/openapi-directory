@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowCxV3ContinuousTestResultResultEnumFailed                          GoogleCloudDialogflowCxV3ContinuousTestResultResultEnum = "FAILED"
 )
 
+func (e GoogleCloudDialogflowCxV3ContinuousTestResultResultEnum) ToPointer() *GoogleCloudDialogflowCxV3ContinuousTestResultResultEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3ContinuousTestResultResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGGREGATED_TEST_RESULT_UNSPECIFIED":
 		fallthrough
 	case "PASSED":
 		fallthrough
 	case "FAILED":
-		*e = GoogleCloudDialogflowCxV3ContinuousTestResultResultEnum(s)
+		*e = GoogleCloudDialogflowCxV3ContinuousTestResultResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3ContinuousTestResultResultEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3ContinuousTestResultResultEnum: %v", v)
 	}
 }
 

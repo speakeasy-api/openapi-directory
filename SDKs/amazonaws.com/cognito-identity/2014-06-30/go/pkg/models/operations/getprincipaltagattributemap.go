@@ -16,17 +16,21 @@ const (
 	GetPrincipalTagAttributeMapXAmzTargetEnumAwsCognitoIdentityServiceGetPrincipalTagAttributeMap GetPrincipalTagAttributeMapXAmzTargetEnum = "AWSCognitoIdentityService.GetPrincipalTagAttributeMap"
 )
 
+func (e GetPrincipalTagAttributeMapXAmzTargetEnum) ToPointer() *GetPrincipalTagAttributeMapXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetPrincipalTagAttributeMapXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityService.GetPrincipalTagAttributeMap":
-		*e = GetPrincipalTagAttributeMapXAmzTargetEnum(s)
+		*e = GetPrincipalTagAttributeMapXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPrincipalTagAttributeMapXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPrincipalTagAttributeMapXAmzTargetEnum: %v", v)
 	}
 }
 

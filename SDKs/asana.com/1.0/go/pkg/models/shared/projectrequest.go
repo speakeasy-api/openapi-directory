@@ -33,12 +33,16 @@ const (
 	ProjectRequestColorEnumLightWarmGray ProjectRequestColorEnum = "light-warm-gray"
 )
 
+func (e ProjectRequestColorEnum) ToPointer() *ProjectRequestColorEnum {
+	return &e
+}
+
 func (e *ProjectRequestColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dark-pink":
 		fallthrough
 	case "dark-green":
@@ -74,10 +78,10 @@ func (e *ProjectRequestColorEnum) UnmarshalJSON(data []byte) error {
 	case "light-purple":
 		fallthrough
 	case "light-warm-gray":
-		*e = ProjectRequestColorEnum(s)
+		*e = ProjectRequestColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectRequestColorEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectRequestColorEnum: %v", v)
 	}
 }
 
@@ -91,12 +95,16 @@ const (
 	ProjectRequestCurrentStatusColorEnumBlue   ProjectRequestCurrentStatusColorEnum = "blue"
 )
 
+func (e ProjectRequestCurrentStatusColorEnum) ToPointer() *ProjectRequestCurrentStatusColorEnum {
+	return &e
+}
+
 func (e *ProjectRequestCurrentStatusColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "green":
 		fallthrough
 	case "yellow":
@@ -104,10 +112,10 @@ func (e *ProjectRequestCurrentStatusColorEnum) UnmarshalJSON(data []byte) error 
 	case "red":
 		fallthrough
 	case "blue":
-		*e = ProjectRequestCurrentStatusColorEnum(s)
+		*e = ProjectRequestCurrentStatusColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectRequestCurrentStatusColorEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectRequestCurrentStatusColorEnum: %v", v)
 	}
 }
 
@@ -142,12 +150,16 @@ const (
 	ProjectRequestDefaultViewEnumTimeline ProjectRequestDefaultViewEnum = "timeline"
 )
 
+func (e ProjectRequestDefaultViewEnum) ToPointer() *ProjectRequestDefaultViewEnum {
+	return &e
+}
+
 func (e *ProjectRequestDefaultViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "list":
 		fallthrough
 	case "board":
@@ -155,10 +167,10 @@ func (e *ProjectRequestDefaultViewEnum) UnmarshalJSON(data []byte) error {
 	case "calendar":
 		fallthrough
 	case "timeline":
-		*e = ProjectRequestDefaultViewEnum(s)
+		*e = ProjectRequestDefaultViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectRequestDefaultViewEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectRequestDefaultViewEnum: %v", v)
 	}
 }
 

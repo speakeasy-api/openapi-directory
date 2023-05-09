@@ -13,16 +13,20 @@ const (
 	FleetCapacityReservationUsageStrategyEnumUseCapacityReservationsFirst FleetCapacityReservationUsageStrategyEnum = "use-capacity-reservations-first"
 )
 
+func (e FleetCapacityReservationUsageStrategyEnum) ToPointer() *FleetCapacityReservationUsageStrategyEnum {
+	return &e
+}
+
 func (e *FleetCapacityReservationUsageStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "use-capacity-reservations-first":
-		*e = FleetCapacityReservationUsageStrategyEnum(s)
+		*e = FleetCapacityReservationUsageStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FleetCapacityReservationUsageStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for FleetCapacityReservationUsageStrategyEnum: %v", v)
 	}
 }

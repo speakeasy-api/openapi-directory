@@ -8,11 +8,10 @@ import (
 )
 
 type GetEndpointsResponse struct {
+	Body        []byte
 	ContentType string
 	// Authentication error
 	Error       *shared.Error
 	StatusCode  int
 	RawResponse *http.Response
-	// YAML representation of our OpenAPI definition.
-	GetEndpoints200ApplicationJSONObject map[string]interface{}
 }

@@ -20,12 +20,16 @@ const (
 	NodePoolStatusEnumError             NodePoolStatusEnum = "ERROR"
 )
 
+func (e NodePoolStatusEnum) ToPointer() *NodePoolStatusEnum {
+	return &e
+}
+
 func (e *NodePoolStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "PROVISIONING":
@@ -39,10 +43,10 @@ func (e *NodePoolStatusEnum) UnmarshalJSON(data []byte) error {
 	case "STOPPING":
 		fallthrough
 	case "ERROR":
-		*e = NodePoolStatusEnum(s)
+		*e = NodePoolStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodePoolStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for NodePoolStatusEnum: %v", v)
 	}
 }
 

@@ -29,12 +29,16 @@ const (
 	DataSubjectRightExportStatusRequestDefaultApplicationJSONErrorCodeEnumTooManyRequests     DataSubjectRightExportStatusRequestDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DataSubjectRightExportStatusRequestDefaultApplicationJSONErrorCodeEnum) ToPointer() *DataSubjectRightExportStatusRequestDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DataSubjectRightExportStatusRequestDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -48,10 +52,10 @@ func (e *DataSubjectRightExportStatusRequestDefaultApplicationJSONErrorCodeEnum)
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DataSubjectRightExportStatusRequestDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DataSubjectRightExportStatusRequestDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSubjectRightExportStatusRequestDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSubjectRightExportStatusRequestDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -77,12 +81,16 @@ const (
 	DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnumFailed     DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnum = "Failed"
 )
 
+func (e DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnum) ToPointer() *DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "Created":
@@ -94,10 +102,10 @@ func (e *DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnum) Unmars
 	case "Completed":
 		fallthrough
 	case "Failed":
-		*e = DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnum(s)
+		*e = DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

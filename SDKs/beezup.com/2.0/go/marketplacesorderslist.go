@@ -37,6 +37,8 @@ func newMarketplacesOrdersList(defaultClient, securityClient HTTPClient, serverU
 // The purpose of this operation is to reduce the amount of request to the API.\
 // \
 // Previous implmentation of this feature only returned a partial (light) version of the Orders. The purpose of this API is to reduce the number of incoming requests by returning the complete (full) Order and Order Item(s) properties.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersList) GetOrderListFull(ctx context.Context, request operations.GetOrderListFullRequest) (*operations.GetOrderListFullResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/list/full"
@@ -106,6 +108,8 @@ func (s *marketplacesOrdersList) GetOrderListFull(ctx context.Context, request o
 
 // GetOrderListLight - [DEPRECATED] Get a paginated list of all Orders without details
 // Use /orders/v3 instead
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersList) GetOrderListLight(ctx context.Context, request shared.OrderListRequest) (*operations.GetOrderListLightResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/list/light"

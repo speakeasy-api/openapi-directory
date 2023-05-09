@@ -18,12 +18,16 @@ const (
 	DataSetPlotTypeEnumHeatmap             DataSetPlotTypeEnum = "HEATMAP"
 )
 
+func (e DataSetPlotTypeEnum) ToPointer() *DataSetPlotTypeEnum {
+	return &e
+}
+
 func (e *DataSetPlotTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLOT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINE":
@@ -33,10 +37,10 @@ func (e *DataSetPlotTypeEnum) UnmarshalJSON(data []byte) error {
 	case "STACKED_BAR":
 		fallthrough
 	case "HEATMAP":
-		*e = DataSetPlotTypeEnum(s)
+		*e = DataSetPlotTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSetPlotTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSetPlotTypeEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	DataSetTargetAxisEnumY2                    DataSetTargetAxisEnum = "Y2"
 )
 
+func (e DataSetTargetAxisEnum) ToPointer() *DataSetTargetAxisEnum {
+	return &e
+}
+
 func (e *DataSetTargetAxisEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_AXIS_UNSPECIFIED":
 		fallthrough
 	case "Y1":
 		fallthrough
 	case "Y2":
-		*e = DataSetTargetAxisEnum(s)
+		*e = DataSetTargetAxisEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSetTargetAxisEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSetTargetAxisEnum: %v", v)
 	}
 }
 

@@ -7,7 +7,8 @@ import (
 	"fmt"
 )
 
-// CreditorAccountTypeEnum - Creditor account type
+// CreditorAccountTypeEnum - * `IBAN` - IBAN
+// * `SCAN` - SortCodeAccountNumber
 type CreditorAccountTypeEnum string
 
 const (
@@ -15,19 +16,23 @@ const (
 	CreditorAccountTypeEnumScan CreditorAccountTypeEnum = "SCAN"
 )
 
+func (e CreditorAccountTypeEnum) ToPointer() *CreditorAccountTypeEnum {
+	return &e
+}
+
 func (e *CreditorAccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IBAN":
 		fallthrough
 	case "SCAN":
-		*e = CreditorAccountTypeEnum(s)
+		*e = CreditorAccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreditorAccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreditorAccountTypeEnum: %v", v)
 	}
 }
 
@@ -44,5 +49,8 @@ type CreditorAccount struct {
 	// Creditor account name
 	Name string `json:"name"`
 	// Creditor account type
+	//
+	// * `IBAN` - IBAN
+	// * `SCAN` - SortCodeAccountNumber
 	Type *CreditorAccountTypeEnum `json:"type,omitempty"`
 }

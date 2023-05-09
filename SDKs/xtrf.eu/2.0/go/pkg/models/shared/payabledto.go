@@ -16,12 +16,16 @@ const (
 	PayableDTORateOriginEnumAutocalculated PayableDTORateOriginEnum = "AUTOCALCULATED"
 )
 
+func (e PayableDTORateOriginEnum) ToPointer() *PayableDTORateOriginEnum {
+	return &e
+}
+
 func (e *PayableDTORateOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICE_PROFILE":
 		fallthrough
 	case "PRICE_LIST":
@@ -29,10 +33,10 @@ func (e *PayableDTORateOriginEnum) UnmarshalJSON(data []byte) error {
 	case "FILLED_MANUALLY":
 		fallthrough
 	case "AUTOCALCULATED":
-		*e = PayableDTORateOriginEnum(s)
+		*e = PayableDTORateOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PayableDTORateOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for PayableDTORateOriginEnum: %v", v)
 	}
 }
 
@@ -43,19 +47,23 @@ const (
 	PayableDTOTypeEnumCat    PayableDTOTypeEnum = "CAT"
 )
 
+func (e PayableDTOTypeEnum) ToPointer() *PayableDTOTypeEnum {
+	return &e
+}
+
 func (e *PayableDTOTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIMPLE":
 		fallthrough
 	case "CAT":
-		*e = PayableDTOTypeEnum(s)
+		*e = PayableDTOTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PayableDTOTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PayableDTOTypeEnum: %v", v)
 	}
 }
 

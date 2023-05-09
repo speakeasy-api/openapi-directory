@@ -2,32 +2,30 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DriveAboutGetRequest{
-        Alt: "json",
-        Fields: "corrupti",
-        IncludeSubscribed: false,
-        Key: "provident",
-        MaxChangeIDCount: "distinctio",
-        OauthToken: "quibusdam",
-        PrettyPrint: false,
-        QuotaUser: "unde",
-        StartChangeID: "nulla",
-        UserIP: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.About.DriveAboutGet(ctx, req, operations.DriveAboutGetSecurity{
+    res, err := s.About.DriveAboutGet(ctx, operations.DriveAboutGetRequest{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("corrupti"),
+        IncludeSubscribed: sdk.Bool(false),
+        Key: sdk.String("provident"),
+        MaxChangeIDCount: sdk.String("distinctio"),
+        OauthToken: sdk.String("quibusdam"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("unde"),
+        StartChangeID: sdk.String("nulla"),
+        UserIP: sdk.String("corrupti"),
+    }, operations.DriveAboutGetSecurity{
         Option1: &operations.DriveAboutGetSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

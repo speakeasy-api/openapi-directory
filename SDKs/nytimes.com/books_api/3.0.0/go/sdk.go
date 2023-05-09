@@ -25,6 +25,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - The Books API provides information about book reviews and The New York Times bestsellers lists.
 // http://developer.nytimes.com/
 type SDK struct {
@@ -143,7 +158,10 @@ func (s *SDK) GETListsBestSellersHistoryJSON(ctx context.Context, request operat
 // GETListsDateListJSON - Best Seller List by Date
 func (s *SDK) GETListsDateListJSON(ctx context.Context, request operations.GETListsDateListJSONRequest, security operations.GETListsDateListJSONSecurity) (*operations.GETListsDateListJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lists/{date}/{list}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lists/{date}/{list}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +209,10 @@ func (s *SDK) GETListsDateListJSON(ctx context.Context, request operations.GETLi
 // GETListsFormat - Best Seller List
 func (s *SDK) GETListsFormat(ctx context.Context, request operations.GETListsFormatRequest, security operations.GETListsFormatSecurity) (*operations.GETListsFormatResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lists.{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lists.{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,7 +260,10 @@ func (s *SDK) GETListsFormat(ctx context.Context, request operations.GETListsFor
 // GETListsNamesFormat - Best Seller List Names
 func (s *SDK) GETListsNamesFormat(ctx context.Context, request operations.GETListsNamesFormatRequest, security operations.GETListsNamesFormatSecurity) (*operations.GETListsNamesFormatResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lists/names.{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lists/names.{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -287,7 +311,10 @@ func (s *SDK) GETListsNamesFormat(ctx context.Context, request operations.GETLis
 // GETListsOverviewFormat - Best Seller List Overview
 func (s *SDK) GETListsOverviewFormat(ctx context.Context, request operations.GETListsOverviewFormatRequest, security operations.GETListsOverviewFormatSecurity) (*operations.GETListsOverviewFormatResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lists/overview.{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lists/overview.{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -335,7 +362,10 @@ func (s *SDK) GETListsOverviewFormat(ctx context.Context, request operations.GET
 // GETReviewsFormat - Reviews
 func (s *SDK) GETReviewsFormat(ctx context.Context, request operations.GETReviewsFormatRequest, security operations.GETReviewsFormatSecurity) (*operations.GETReviewsFormatResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reviews.{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reviews.{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

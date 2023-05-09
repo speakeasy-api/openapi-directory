@@ -16,17 +16,21 @@ const (
 	ImportBackendStorageRequestBodyServiceNameEnumS3 ImportBackendStorageRequestBodyServiceNameEnum = "S3"
 )
 
+func (e ImportBackendStorageRequestBodyServiceNameEnum) ToPointer() *ImportBackendStorageRequestBodyServiceNameEnum {
+	return &e
+}
+
 func (e *ImportBackendStorageRequestBodyServiceNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "S3":
-		*e = ImportBackendStorageRequestBodyServiceNameEnum(s)
+		*e = ImportBackendStorageRequestBodyServiceNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportBackendStorageRequestBodyServiceNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportBackendStorageRequestBodyServiceNameEnum: %v", v)
 	}
 }
 

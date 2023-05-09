@@ -28,12 +28,16 @@ const (
 	GrantOperationEnumVerifyMac                           GrantOperationEnum = "VerifyMac"
 )
 
+func (e GrantOperationEnum) ToPointer() *GrantOperationEnum {
+	return &e
+}
+
 func (e *GrantOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Decrypt":
 		fallthrough
 	case "Encrypt":
@@ -65,9 +69,9 @@ func (e *GrantOperationEnum) UnmarshalJSON(data []byte) error {
 	case "GenerateMac":
 		fallthrough
 	case "VerifyMac":
-		*e = GrantOperationEnum(s)
+		*e = GrantOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GrantOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for GrantOperationEnum: %v", v)
 	}
 }

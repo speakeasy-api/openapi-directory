@@ -23,12 +23,16 @@ const (
 	ViewabilityAssignedTargetingOptionDetailsViewabilityEnumViewability90PercentOrMore ViewabilityAssignedTargetingOptionDetailsViewabilityEnum = "VIEWABILITY_90_PERCENT_OR_MORE"
 )
 
+func (e ViewabilityAssignedTargetingOptionDetailsViewabilityEnum) ToPointer() *ViewabilityAssignedTargetingOptionDetailsViewabilityEnum {
+	return &e
+}
+
 func (e *ViewabilityAssignedTargetingOptionDetailsViewabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEWABILITY_UNSPECIFIED":
 		fallthrough
 	case "VIEWABILITY_10_PERCENT_OR_MORE":
@@ -48,10 +52,10 @@ func (e *ViewabilityAssignedTargetingOptionDetailsViewabilityEnum) UnmarshalJSON
 	case "VIEWABILITY_80_PERCENT_OR_MORE":
 		fallthrough
 	case "VIEWABILITY_90_PERCENT_OR_MORE":
-		*e = ViewabilityAssignedTargetingOptionDetailsViewabilityEnum(s)
+		*e = ViewabilityAssignedTargetingOptionDetailsViewabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViewabilityAssignedTargetingOptionDetailsViewabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ViewabilityAssignedTargetingOptionDetailsViewabilityEnum: %v", v)
 	}
 }
 

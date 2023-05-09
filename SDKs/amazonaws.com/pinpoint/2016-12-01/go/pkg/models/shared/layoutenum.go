@@ -18,12 +18,16 @@ const (
 	LayoutEnumCarousel     LayoutEnum = "CAROUSEL"
 )
 
+func (e LayoutEnum) ToPointer() *LayoutEnum {
+	return &e
+}
+
 func (e *LayoutEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BOTTOM_BANNER":
 		fallthrough
 	case "TOP_BANNER":
@@ -35,9 +39,9 @@ func (e *LayoutEnum) UnmarshalJSON(data []byte) error {
 	case "MIDDLE_BANNER":
 		fallthrough
 	case "CAROUSEL":
-		*e = LayoutEnum(s)
+		*e = LayoutEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LayoutEnum: %s", s)
+		return fmt.Errorf("invalid value for LayoutEnum: %v", v)
 	}
 }

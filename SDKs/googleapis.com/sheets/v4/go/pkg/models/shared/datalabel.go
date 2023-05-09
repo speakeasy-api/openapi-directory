@@ -22,12 +22,16 @@ const (
 	DataLabelPlacementEnumOutsideEnd                    DataLabelPlacementEnum = "OUTSIDE_END"
 )
 
+func (e DataLabelPlacementEnum) ToPointer() *DataLabelPlacementEnum {
+	return &e
+}
+
 func (e *DataLabelPlacementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_LABEL_PLACEMENT_UNSPECIFIED":
 		fallthrough
 	case "CENTER":
@@ -45,10 +49,10 @@ func (e *DataLabelPlacementEnum) UnmarshalJSON(data []byte) error {
 	case "INSIDE_BASE":
 		fallthrough
 	case "OUTSIDE_END":
-		*e = DataLabelPlacementEnum(s)
+		*e = DataLabelPlacementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataLabelPlacementEnum: %s", s)
+		return fmt.Errorf("invalid value for DataLabelPlacementEnum: %v", v)
 	}
 }
 
@@ -62,12 +66,16 @@ const (
 	DataLabelTypeEnumCustom                   DataLabelTypeEnum = "CUSTOM"
 )
 
+func (e DataLabelTypeEnum) ToPointer() *DataLabelTypeEnum {
+	return &e
+}
+
 func (e *DataLabelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_LABEL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -75,10 +83,10 @@ func (e *DataLabelTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DATA":
 		fallthrough
 	case "CUSTOM":
-		*e = DataLabelTypeEnum(s)
+		*e = DataLabelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataLabelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataLabelTypeEnum: %v", v)
 	}
 }
 

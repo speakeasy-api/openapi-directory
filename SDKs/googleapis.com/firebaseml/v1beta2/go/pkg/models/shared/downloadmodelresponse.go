@@ -15,19 +15,23 @@ const (
 	DownloadModelResponseModelFormatEnumTflite                 DownloadModelResponseModelFormatEnum = "TFLITE"
 )
 
+func (e DownloadModelResponseModelFormatEnum) ToPointer() *DownloadModelResponseModelFormatEnum {
+	return &e
+}
+
 func (e *DownloadModelResponseModelFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODEL_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "TFLITE":
-		*e = DownloadModelResponseModelFormatEnum(s)
+		*e = DownloadModelResponseModelFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DownloadModelResponseModelFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for DownloadModelResponseModelFormatEnum: %v", v)
 	}
 }
 

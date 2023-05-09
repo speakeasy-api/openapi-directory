@@ -21,12 +21,16 @@ const (
 	GrantStatusEnumWorkflowCompleted GrantStatusEnum = "WORKFLOW_COMPLETED"
 )
 
+func (e GrantStatusEnum) ToPointer() *GrantStatusEnum {
+	return &e
+}
+
 func (e *GrantStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_WORKFLOW":
 		fallthrough
 	case "PENDING_ACCEPT":
@@ -44,9 +48,9 @@ func (e *GrantStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DISABLED":
 		fallthrough
 	case "WORKFLOW_COMPLETED":
-		*e = GrantStatusEnum(s)
+		*e = GrantStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GrantStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GrantStatusEnum: %v", v)
 	}
 }

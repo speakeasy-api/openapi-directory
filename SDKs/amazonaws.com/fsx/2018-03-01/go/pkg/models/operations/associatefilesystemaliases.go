@@ -16,17 +16,21 @@ const (
 	AssociateFileSystemAliasesXAmzTargetEnumAwsSimbaAPIServiceV20180301AssociateFileSystemAliases AssociateFileSystemAliasesXAmzTargetEnum = "AWSSimbaAPIService_v20180301.AssociateFileSystemAliases"
 )
 
+func (e AssociateFileSystemAliasesXAmzTargetEnum) ToPointer() *AssociateFileSystemAliasesXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateFileSystemAliasesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.AssociateFileSystemAliases":
-		*e = AssociateFileSystemAliasesXAmzTargetEnum(s)
+		*e = AssociateFileSystemAliasesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateFileSystemAliasesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateFileSystemAliasesXAmzTargetEnum: %v", v)
 	}
 }
 

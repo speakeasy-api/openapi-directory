@@ -23,21 +23,25 @@ const (
 	ContactcenterinsightsProjectsLocationsViewsGetViewEnumBasic                       ContactcenterinsightsProjectsLocationsViewsGetViewEnum = "BASIC"
 )
 
+func (e ContactcenterinsightsProjectsLocationsViewsGetViewEnum) ToPointer() *ContactcenterinsightsProjectsLocationsViewsGetViewEnum {
+	return &e
+}
+
 func (e *ContactcenterinsightsProjectsLocationsViewsGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONVERSATION_VIEW_UNSPECIFIED":
 		fallthrough
 	case "FULL":
 		fallthrough
 	case "BASIC":
-		*e = ContactcenterinsightsProjectsLocationsViewsGetViewEnum(s)
+		*e = ContactcenterinsightsProjectsLocationsViewsGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactcenterinsightsProjectsLocationsViewsGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactcenterinsightsProjectsLocationsViewsGetViewEnum: %v", v)
 	}
 }
 

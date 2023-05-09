@@ -16,12 +16,16 @@ const (
 	BatchUpdateContactsRequestSourcesEnumReadSourceTypeDomainContact BatchUpdateContactsRequestSourcesEnum = "READ_SOURCE_TYPE_DOMAIN_CONTACT"
 )
 
+func (e BatchUpdateContactsRequestSourcesEnum) ToPointer() *BatchUpdateContactsRequestSourcesEnum {
+	return &e
+}
+
 func (e *BatchUpdateContactsRequestSourcesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READ_SOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "READ_SOURCE_TYPE_PROFILE":
@@ -29,10 +33,10 @@ func (e *BatchUpdateContactsRequestSourcesEnum) UnmarshalJSON(data []byte) error
 	case "READ_SOURCE_TYPE_CONTACT":
 		fallthrough
 	case "READ_SOURCE_TYPE_DOMAIN_CONTACT":
-		*e = BatchUpdateContactsRequestSourcesEnum(s)
+		*e = BatchUpdateContactsRequestSourcesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchUpdateContactsRequestSourcesEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchUpdateContactsRequestSourcesEnum: %v", v)
 	}
 }
 

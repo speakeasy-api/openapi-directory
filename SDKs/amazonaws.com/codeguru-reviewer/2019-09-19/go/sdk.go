@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>This section provides documentation for the Amazon CodeGuru Reviewer API operations. CodeGuru Reviewer is a service that uses program analysis and machine learning to detect potential defects that are difficult for developers to find and recommends fixes in your Java and Python code.</p> <p>By proactively detecting and providing recommendations for addressing code defects and implementing best practices, CodeGuru Reviewer improves the overall quality and maintainability of your code base during the code review stage. For more information about CodeGuru Reviewer, see the <i> <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/welcome.html">Amazon CodeGuru Reviewer User Guide</a>.</i> </p> <p>To improve the security of your CodeGuru Reviewer API calls, you can establish a private connection between your VPC and CodeGuru Reviewer by creating an <i>interface VPC endpoint</i>. For more information, see <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/vpc-interface-endpoints.html">CodeGuru Reviewer and interface VPC endpoints (Amazon Web Services PrivateLink)</a> in the <i>Amazon CodeGuru Reviewer User Guide</i>.</p>
 // https://docs.aws.amazon.com/codeguru-reviewer/ - Amazon Web Services documentation
 type SDK struct {
@@ -336,7 +351,10 @@ func (s *SDK) CreateCodeReview(ctx context.Context, request operations.CreateCod
 // DescribeCodeReview - Returns the metadata associated with the code review along with its status.
 func (s *SDK) DescribeCodeReview(ctx context.Context, request operations.DescribeCodeReviewRequest) (*operations.DescribeCodeReviewResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/codereviews/{CodeReviewArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/codereviews/{CodeReviewArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -432,7 +450,10 @@ func (s *SDK) DescribeCodeReview(ctx context.Context, request operations.Describ
 // DescribeRecommendationFeedback - Describes the customer feedback for a CodeGuru Reviewer recommendation.
 func (s *SDK) DescribeRecommendationFeedback(ctx context.Context, request operations.DescribeRecommendationFeedbackRequest) (*operations.DescribeRecommendationFeedbackResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/feedback/{CodeReviewArn}#RecommendationId", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/feedback/{CodeReviewArn}#RecommendationId", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -532,7 +553,10 @@ func (s *SDK) DescribeRecommendationFeedback(ctx context.Context, request operat
 // DescribeRepositoryAssociation - Returns a <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html">RepositoryAssociation</a> object that contains information about the requested repository association.
 func (s *SDK) DescribeRepositoryAssociation(ctx context.Context, request operations.DescribeRepositoryAssociationRequest) (*operations.DescribeRepositoryAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/associations/{AssociationArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/associations/{AssociationArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -628,7 +652,10 @@ func (s *SDK) DescribeRepositoryAssociation(ctx context.Context, request operati
 // DisassociateRepository - Removes the association between Amazon CodeGuru Reviewer and a repository.
 func (s *SDK) DisassociateRepository(ctx context.Context, request operations.DisassociateRepositoryRequest) (*operations.DisassociateRepositoryResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/associations/{AssociationArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/associations/{AssociationArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -824,7 +851,10 @@ func (s *SDK) ListCodeReviews(ctx context.Context, request operations.ListCodeRe
 // ListRecommendationFeedback - Returns a list of <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RecommendationFeedbackSummary.html">RecommendationFeedbackSummary</a> objects that contain customer recommendation feedback for all CodeGuru Reviewer users.
 func (s *SDK) ListRecommendationFeedback(ctx context.Context, request operations.ListRecommendationFeedbackRequest) (*operations.ListRecommendationFeedbackResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/feedback/{CodeReviewArn}/RecommendationFeedback", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/feedback/{CodeReviewArn}/RecommendationFeedback", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -924,7 +954,10 @@ func (s *SDK) ListRecommendationFeedback(ctx context.Context, request operations
 // ListRecommendations - Returns the list of all recommendations for a completed code review.
 func (s *SDK) ListRecommendations(ctx context.Context, request operations.ListRecommendationsRequest) (*operations.ListRecommendationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/codereviews/{CodeReviewArn}/Recommendations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/codereviews/{CodeReviewArn}/Recommendations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1104,7 +1137,10 @@ func (s *SDK) ListRepositoryAssociations(ctx context.Context, request operations
 // ListTagsForResource - Returns the list of tags associated with an associated repository resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1286,7 +1322,10 @@ func (s *SDK) PutRecommendationFeedback(ctx context.Context, request operations.
 // TagResource - Adds one or more tags to an associated repository.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1372,7 +1411,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes a tag from an associated repository.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

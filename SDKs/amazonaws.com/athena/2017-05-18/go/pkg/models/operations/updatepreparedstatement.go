@@ -16,17 +16,21 @@ const (
 	UpdatePreparedStatementXAmzTargetEnumAmazonAthenaUpdatePreparedStatement UpdatePreparedStatementXAmzTargetEnum = "AmazonAthena.UpdatePreparedStatement"
 )
 
+func (e UpdatePreparedStatementXAmzTargetEnum) ToPointer() *UpdatePreparedStatementXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdatePreparedStatementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.UpdatePreparedStatement":
-		*e = UpdatePreparedStatementXAmzTargetEnum(s)
+		*e = UpdatePreparedStatementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePreparedStatementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePreparedStatementXAmzTargetEnum: %v", v)
 	}
 }
 

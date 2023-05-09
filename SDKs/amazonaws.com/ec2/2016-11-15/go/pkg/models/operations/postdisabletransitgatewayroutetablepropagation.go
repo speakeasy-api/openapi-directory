@@ -15,17 +15,21 @@ const (
 	POSTDisableTransitGatewayRouteTablePropagationActionEnumDisableTransitGatewayRouteTablePropagation POSTDisableTransitGatewayRouteTablePropagationActionEnum = "DisableTransitGatewayRouteTablePropagation"
 )
 
+func (e POSTDisableTransitGatewayRouteTablePropagationActionEnum) ToPointer() *POSTDisableTransitGatewayRouteTablePropagationActionEnum {
+	return &e
+}
+
 func (e *POSTDisableTransitGatewayRouteTablePropagationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableTransitGatewayRouteTablePropagation":
-		*e = POSTDisableTransitGatewayRouteTablePropagationActionEnum(s)
+		*e = POSTDisableTransitGatewayRouteTablePropagationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableTransitGatewayRouteTablePropagationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableTransitGatewayRouteTablePropagationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisableTransitGatewayRouteTablePropagationVersionEnumTwoThousandAndSixteen1115 POSTDisableTransitGatewayRouteTablePropagationVersionEnum = "2016-11-15"
 )
 
+func (e POSTDisableTransitGatewayRouteTablePropagationVersionEnum) ToPointer() *POSTDisableTransitGatewayRouteTablePropagationVersionEnum {
+	return &e
+}
+
 func (e *POSTDisableTransitGatewayRouteTablePropagationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDisableTransitGatewayRouteTablePropagationVersionEnum(s)
+		*e = POSTDisableTransitGatewayRouteTablePropagationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableTransitGatewayRouteTablePropagationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableTransitGatewayRouteTablePropagationVersionEnum: %v", v)
 	}
 }
 

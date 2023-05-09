@@ -17,19 +17,23 @@ const (
 	CreateEnvironmentRequestBodyFederationModeEnumLocal     CreateEnvironmentRequestBodyFederationModeEnum = "LOCAL"
 )
 
+func (e CreateEnvironmentRequestBodyFederationModeEnum) ToPointer() *CreateEnvironmentRequestBodyFederationModeEnum {
+	return &e
+}
+
 func (e *CreateEnvironmentRequestBodyFederationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEDERATED":
 		fallthrough
 	case "LOCAL":
-		*e = CreateEnvironmentRequestBodyFederationModeEnum(s)
+		*e = CreateEnvironmentRequestBodyFederationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateEnvironmentRequestBodyFederationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateEnvironmentRequestBodyFederationModeEnum: %v", v)
 	}
 }
 

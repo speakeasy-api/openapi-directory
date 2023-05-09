@@ -21,12 +21,16 @@ const (
 	TaxReportingClassificationBusinessTypeEnumFinancialInstitution            TaxReportingClassificationBusinessTypeEnum = "financialInstitution."
 )
 
+func (e TaxReportingClassificationBusinessTypeEnum) ToPointer() *TaxReportingClassificationBusinessTypeEnum {
+	return &e
+}
+
 func (e *TaxReportingClassificationBusinessTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "other":
 		fallthrough
 	case "listedPublicCompany":
@@ -38,10 +42,10 @@ func (e *TaxReportingClassificationBusinessTypeEnum) UnmarshalJSON(data []byte) 
 	case "internationalOrganization":
 		fallthrough
 	case "financialInstitution.":
-		*e = TaxReportingClassificationBusinessTypeEnum(s)
+		*e = TaxReportingClassificationBusinessTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaxReportingClassificationBusinessTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaxReportingClassificationBusinessTypeEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	TaxReportingClassificationMainSourceOfIncomeEnumOther                       TaxReportingClassificationMainSourceOfIncomeEnum = "other"
 )
 
+func (e TaxReportingClassificationMainSourceOfIncomeEnum) ToPointer() *TaxReportingClassificationMainSourceOfIncomeEnum {
+	return &e
+}
+
 func (e *TaxReportingClassificationMainSourceOfIncomeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "businessOperation":
 		fallthrough
 	case "realEstateSales":
@@ -73,10 +81,10 @@ func (e *TaxReportingClassificationMainSourceOfIncomeEnum) UnmarshalJSON(data []
 	case "propertyRental":
 		fallthrough
 	case "other":
-		*e = TaxReportingClassificationMainSourceOfIncomeEnum(s)
+		*e = TaxReportingClassificationMainSourceOfIncomeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaxReportingClassificationMainSourceOfIncomeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaxReportingClassificationMainSourceOfIncomeEnum: %v", v)
 	}
 }
 
@@ -92,12 +100,16 @@ const (
 	TaxReportingClassificationTypeEnumNonFinancialPassive       TaxReportingClassificationTypeEnum = "nonFinancialPassive"
 )
 
+func (e TaxReportingClassificationTypeEnum) ToPointer() *TaxReportingClassificationTypeEnum {
+	return &e
+}
+
 func (e *TaxReportingClassificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nonFinancialNonReportable":
 		fallthrough
 	case "financialNonReportable":
@@ -105,10 +117,10 @@ func (e *TaxReportingClassificationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "nonFinancialActive":
 		fallthrough
 	case "nonFinancialPassive":
-		*e = TaxReportingClassificationTypeEnum(s)
+		*e = TaxReportingClassificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaxReportingClassificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaxReportingClassificationTypeEnum: %v", v)
 	}
 }
 

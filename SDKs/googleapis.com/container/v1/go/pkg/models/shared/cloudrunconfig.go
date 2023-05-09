@@ -16,21 +16,25 @@ const (
 	CloudRunConfigLoadBalancerTypeEnumLoadBalancerTypeInternal    CloudRunConfigLoadBalancerTypeEnum = "LOAD_BALANCER_TYPE_INTERNAL"
 )
 
+func (e CloudRunConfigLoadBalancerTypeEnum) ToPointer() *CloudRunConfigLoadBalancerTypeEnum {
+	return &e
+}
+
 func (e *CloudRunConfigLoadBalancerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOAD_BALANCER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LOAD_BALANCER_TYPE_EXTERNAL":
 		fallthrough
 	case "LOAD_BALANCER_TYPE_INTERNAL":
-		*e = CloudRunConfigLoadBalancerTypeEnum(s)
+		*e = CloudRunConfigLoadBalancerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudRunConfigLoadBalancerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudRunConfigLoadBalancerTypeEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	UserMentionMetadataTypeEnumMention         UserMentionMetadataTypeEnum = "MENTION"
 )
 
+func (e UserMentionMetadataTypeEnum) ToPointer() *UserMentionMetadataTypeEnum {
+	return &e
+}
+
 func (e *UserMentionMetadataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "ADD":
 		fallthrough
 	case "MENTION":
-		*e = UserMentionMetadataTypeEnum(s)
+		*e = UserMentionMetadataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserMentionMetadataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserMentionMetadataTypeEnum: %v", v)
 	}
 }
 

@@ -23,12 +23,16 @@ const (
 	ThreatIntelIndicatorTypeEnumURL          ThreatIntelIndicatorTypeEnum = "URL"
 )
 
+func (e ThreatIntelIndicatorTypeEnum) ToPointer() *ThreatIntelIndicatorTypeEnum {
+	return &e
+}
+
 func (e *ThreatIntelIndicatorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOMAIN":
 		fallthrough
 	case "EMAIL_ADDRESS":
@@ -50,9 +54,9 @@ func (e *ThreatIntelIndicatorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PROCESS":
 		fallthrough
 	case "URL":
-		*e = ThreatIntelIndicatorTypeEnum(s)
+		*e = ThreatIntelIndicatorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThreatIntelIndicatorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ThreatIntelIndicatorTypeEnum: %v", v)
 	}
 }

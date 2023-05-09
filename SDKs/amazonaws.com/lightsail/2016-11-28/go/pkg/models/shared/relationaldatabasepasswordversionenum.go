@@ -15,20 +15,24 @@ const (
 	RelationalDatabasePasswordVersionEnumPending  RelationalDatabasePasswordVersionEnum = "PENDING"
 )
 
+func (e RelationalDatabasePasswordVersionEnum) ToPointer() *RelationalDatabasePasswordVersionEnum {
+	return &e
+}
+
 func (e *RelationalDatabasePasswordVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CURRENT":
 		fallthrough
 	case "PREVIOUS":
 		fallthrough
 	case "PENDING":
-		*e = RelationalDatabasePasswordVersionEnum(s)
+		*e = RelationalDatabasePasswordVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RelationalDatabasePasswordVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for RelationalDatabasePasswordVersionEnum: %v", v)
 	}
 }

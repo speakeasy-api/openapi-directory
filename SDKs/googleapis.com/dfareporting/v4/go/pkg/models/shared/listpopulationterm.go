@@ -20,12 +20,16 @@ const (
 	ListPopulationTermOperatorEnumStringContains      ListPopulationTermOperatorEnum = "STRING_CONTAINS"
 )
 
+func (e ListPopulationTermOperatorEnum) ToPointer() *ListPopulationTermOperatorEnum {
+	return &e
+}
+
 func (e *ListPopulationTermOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NUM_EQUALS":
 		fallthrough
 	case "NUM_LESS_THAN":
@@ -39,10 +43,10 @@ func (e *ListPopulationTermOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "STRING_EQUALS":
 		fallthrough
 	case "STRING_CONTAINS":
-		*e = ListPopulationTermOperatorEnum(s)
+		*e = ListPopulationTermOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPopulationTermOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPopulationTermOperatorEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	ListPopulationTermTypeEnumReferrerTerm       ListPopulationTermTypeEnum = "REFERRER_TERM"
 )
 
+func (e ListPopulationTermTypeEnum) ToPointer() *ListPopulationTermTypeEnum {
+	return &e
+}
+
 func (e *ListPopulationTermTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOM_VARIABLE_TERM":
 		fallthrough
 	case "LIST_MEMBERSHIP_TERM":
 		fallthrough
 	case "REFERRER_TERM":
-		*e = ListPopulationTermTypeEnum(s)
+		*e = ListPopulationTermTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPopulationTermTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPopulationTermTypeEnum: %v", v)
 	}
 }
 

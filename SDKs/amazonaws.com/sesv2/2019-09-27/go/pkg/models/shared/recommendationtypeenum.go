@@ -16,12 +16,16 @@ const (
 	RecommendationTypeEnumBimi  RecommendationTypeEnum = "BIMI"
 )
 
+func (e RecommendationTypeEnum) ToPointer() *RecommendationTypeEnum {
+	return &e
+}
+
 func (e *RecommendationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DKIM":
 		fallthrough
 	case "DMARC":
@@ -29,9 +33,9 @@ func (e *RecommendationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SPF":
 		fallthrough
 	case "BIMI":
-		*e = RecommendationTypeEnum(s)
+		*e = RecommendationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecommendationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RecommendationTypeEnum: %v", v)
 	}
 }

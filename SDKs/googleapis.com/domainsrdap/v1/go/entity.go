@@ -34,7 +34,10 @@ func newEntity(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DomainsrdapEntityGet - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
 func (s *entity) DomainsrdapEntityGet(ctx context.Context, request operations.DomainsrdapEntityGetRequest) (*operations.DomainsrdapEntityGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/entity/{entityId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/entity/{entityId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

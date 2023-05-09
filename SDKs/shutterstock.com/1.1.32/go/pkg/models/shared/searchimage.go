@@ -16,21 +16,25 @@ const (
 	SearchImageImageTypeEnumVector       SearchImageImageTypeEnum = "vector"
 )
 
+func (e SearchImageImageTypeEnum) ToPointer() *SearchImageImageTypeEnum {
+	return &e
+}
+
 func (e *SearchImageImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "photo":
 		fallthrough
 	case "illustration":
 		fallthrough
 	case "vector":
-		*e = SearchImageImageTypeEnum(s)
+		*e = SearchImageImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchImageImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchImageImageTypeEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	SearchImageLicenseEnumEnhanced   SearchImageLicenseEnum = "enhanced"
 )
 
+func (e SearchImageLicenseEnum) ToPointer() *SearchImageLicenseEnum {
+	return &e
+}
+
 func (e *SearchImageLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "commercial":
 		fallthrough
 	case "editorial":
 		fallthrough
 	case "enhanced":
-		*e = SearchImageLicenseEnum(s)
+		*e = SearchImageLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchImageLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchImageLicenseEnum: %v", v)
 	}
 }
 
@@ -68,19 +76,23 @@ const (
 	SearchImageOrientationEnumVertical   SearchImageOrientationEnum = "vertical"
 )
 
+func (e SearchImageOrientationEnum) ToPointer() *SearchImageOrientationEnum {
+	return &e
+}
+
 func (e *SearchImageOrientationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "horizontal":
 		fallthrough
 	case "vertical":
-		*e = SearchImageOrientationEnum(s)
+		*e = SearchImageOrientationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchImageOrientationEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchImageOrientationEnum: %v", v)
 	}
 }
 
@@ -99,12 +111,16 @@ const (
 	SearchImagePeopleAgeEnumOlder     SearchImagePeopleAgeEnum = "older"
 )
 
+func (e SearchImagePeopleAgeEnum) ToPointer() *SearchImagePeopleAgeEnum {
+	return &e
+}
+
 func (e *SearchImagePeopleAgeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "infants":
 		fallthrough
 	case "children":
@@ -122,10 +138,10 @@ func (e *SearchImagePeopleAgeEnum) UnmarshalJSON(data []byte) error {
 	case "60s":
 		fallthrough
 	case "older":
-		*e = SearchImagePeopleAgeEnum(s)
+		*e = SearchImagePeopleAgeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchImagePeopleAgeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchImagePeopleAgeEnum: %v", v)
 	}
 }
 
@@ -164,12 +180,16 @@ const (
 	SearchImagePeopleEthnicityEnumNotOther           SearchImagePeopleEthnicityEnum = "NOT other"
 )
 
+func (e SearchImagePeopleEthnicityEnum) ToPointer() *SearchImagePeopleEthnicityEnum {
+	return &e
+}
+
 func (e *SearchImagePeopleEthnicityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "african":
 		fallthrough
 	case "african_american":
@@ -229,10 +249,10 @@ func (e *SearchImagePeopleEthnicityEnum) UnmarshalJSON(data []byte) error {
 	case "NOT southeast_asian":
 		fallthrough
 	case "NOT other":
-		*e = SearchImagePeopleEthnicityEnum(s)
+		*e = SearchImagePeopleEthnicityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchImagePeopleEthnicityEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchImagePeopleEthnicityEnum: %v", v)
 	}
 }
 
@@ -245,21 +265,25 @@ const (
 	SearchImagePeopleGenderEnumBoth   SearchImagePeopleGenderEnum = "both"
 )
 
+func (e SearchImagePeopleGenderEnum) ToPointer() *SearchImagePeopleGenderEnum {
+	return &e
+}
+
 func (e *SearchImagePeopleGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
 		fallthrough
 	case "both":
-		*e = SearchImagePeopleGenderEnum(s)
+		*e = SearchImagePeopleGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchImagePeopleGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchImagePeopleGenderEnum: %v", v)
 	}
 }
 
@@ -273,12 +297,16 @@ const (
 	SearchImageSortEnumRandom    SearchImageSortEnum = "random"
 )
 
+func (e SearchImageSortEnum) ToPointer() *SearchImageSortEnum {
+	return &e
+}
+
 func (e *SearchImageSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "popular":
@@ -286,10 +314,10 @@ func (e *SearchImageSortEnum) UnmarshalJSON(data []byte) error {
 	case "relevance":
 		fallthrough
 	case "random":
-		*e = SearchImageSortEnum(s)
+		*e = SearchImageSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchImageSortEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchImageSortEnum: %v", v)
 	}
 }
 
@@ -301,19 +329,23 @@ const (
 	SearchImageViewEnumFull    SearchImageViewEnum = "full"
 )
 
+func (e SearchImageViewEnum) ToPointer() *SearchImageViewEnum {
+	return &e
+}
+
 func (e *SearchImageViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimal":
 		fallthrough
 	case "full":
-		*e = SearchImageViewEnum(s)
+		*e = SearchImageViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchImageViewEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchImageViewEnum: %v", v)
 	}
 }
 

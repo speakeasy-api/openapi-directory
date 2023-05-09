@@ -90,7 +90,10 @@ func (s *webhooks) AddWebhook(ctx context.Context, request operations.AddWebhook
 // Deleted the specified webhook. This will not affect logs or any resources the webhook is connected to.
 func (s *webhooks) DeleteWebhook(ctx context.Context, request operations.DeleteWebhookRequest) (*operations.DeleteWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +140,10 @@ func (s *webhooks) DeleteWebhook(ctx context.Context, request operations.DeleteW
 // Returns the metadata for a specific webhook. Webhook IDs can be retrieve from GET /webhooks
 func (s *webhooks) GetWebhookByID(ctx context.Context, request operations.GetWebhookByIDRequest) (*operations.GetWebhookByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,7 +245,10 @@ func (s *webhooks) GetWehooksList(ctx context.Context, request operations.GetWeh
 // This endpoint will allow you to regenerate the security token for a webhook if you believe it’s been compromised in any way.
 func (s *webhooks) RegenerateWebhookToken(ctx context.Context, request operations.RegenerateWebhookTokenRequest) (*operations.RegenerateWebhookTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/regenerate-token/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/regenerate-token/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -286,7 +295,10 @@ func (s *webhooks) RegenerateWebhookToken(ctx context.Context, request operation
 // This endpoint will allow you to resend a webhook that was previously sent. Resent webhooks will send exactly the same as the original webhook with the exception of the “sent” timestamp. Activity IDs can be retrieve from the webhook logs in your account or via GET /activity/webhooks
 func (s *webhooks) ResendWebhookActivityEntry(ctx context.Context, request operations.ResendWebhookActivityEntryRequest) (*operations.ResendWebhookActivityEntryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/resend/{activityId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/resend/{activityId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -335,7 +347,10 @@ func (s *webhooks) ResendWebhookActivityEntry(ctx context.Context, request opera
 // You only need to send the portions of the webhook configuration you wish to change, rather than the entire webhook object.
 func (s *webhooks) UpdateWebhook(ctx context.Context, request operations.UpdateWebhookRequest) (*operations.UpdateWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

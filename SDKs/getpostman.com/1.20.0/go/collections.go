@@ -90,7 +90,10 @@ func (s *collections) AllCollections(ctx context.Context) (*operations.AllCollec
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *collections) CreateAFork(ctx context.Context, request operations.CreateAForkRequest) (*operations.CreateAForkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/fork/{collection_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collections/fork/{collection_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -209,7 +212,10 @@ func (s *collections) CreateCollection(ctx context.Context, request operations.C
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *collections) DeleteCollection(ctx context.Context, request operations.DeleteCollectionRequest) (*operations.DeleteCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collections/{collection_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -324,7 +330,10 @@ func (s *collections) MergeAFork(ctx context.Context, request operations.MergeAF
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *collections) SingleCollection(ctx context.Context, request operations.SingleCollectionRequest) (*operations.SingleCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collections/{collection_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -375,7 +384,10 @@ func (s *collections) SingleCollection(ctx context.Context, request operations.S
 // Note: Please be careful when trying to update the collection, as the existing collection will be replaced by the request body.
 func (s *collections) UpdateCollection(ctx context.Context, request operations.UpdateCollectionRequest) (*operations.UpdateCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collections/{collection_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

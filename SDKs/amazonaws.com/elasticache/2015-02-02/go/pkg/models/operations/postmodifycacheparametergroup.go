@@ -15,17 +15,21 @@ const (
 	POSTModifyCacheParameterGroupActionEnumModifyCacheParameterGroup POSTModifyCacheParameterGroupActionEnum = "ModifyCacheParameterGroup"
 )
 
+func (e POSTModifyCacheParameterGroupActionEnum) ToPointer() *POSTModifyCacheParameterGroupActionEnum {
+	return &e
+}
+
 func (e *POSTModifyCacheParameterGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyCacheParameterGroup":
-		*e = POSTModifyCacheParameterGroupActionEnum(s)
+		*e = POSTModifyCacheParameterGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyCacheParameterGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyCacheParameterGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyCacheParameterGroupVersionEnumTwoThousandAndFifteen0202 POSTModifyCacheParameterGroupVersionEnum = "2015-02-02"
 )
 
+func (e POSTModifyCacheParameterGroupVersionEnum) ToPointer() *POSTModifyCacheParameterGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyCacheParameterGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTModifyCacheParameterGroupVersionEnum(s)
+		*e = POSTModifyCacheParameterGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyCacheParameterGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyCacheParameterGroupVersionEnum: %v", v)
 	}
 }
 

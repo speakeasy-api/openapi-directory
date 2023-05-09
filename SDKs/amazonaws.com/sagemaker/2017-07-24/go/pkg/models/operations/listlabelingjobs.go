@@ -16,17 +16,21 @@ const (
 	ListLabelingJobsXAmzTargetEnumSageMakerListLabelingJobs ListLabelingJobsXAmzTargetEnum = "SageMaker.ListLabelingJobs"
 )
 
+func (e ListLabelingJobsXAmzTargetEnum) ToPointer() *ListLabelingJobsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListLabelingJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.ListLabelingJobs":
-		*e = ListLabelingJobsXAmzTargetEnum(s)
+		*e = ListLabelingJobsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLabelingJobsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLabelingJobsXAmzTargetEnum: %v", v)
 	}
 }
 

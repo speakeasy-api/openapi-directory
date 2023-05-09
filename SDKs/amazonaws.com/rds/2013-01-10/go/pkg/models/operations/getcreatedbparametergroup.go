@@ -15,17 +15,21 @@ const (
 	GETCreateDBParameterGroupActionEnumCreateDbParameterGroup GETCreateDBParameterGroupActionEnum = "CreateDBParameterGroup"
 )
 
+func (e GETCreateDBParameterGroupActionEnum) ToPointer() *GETCreateDBParameterGroupActionEnum {
+	return &e
+}
+
 func (e *GETCreateDBParameterGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateDBParameterGroup":
-		*e = GETCreateDBParameterGroupActionEnum(s)
+		*e = GETCreateDBParameterGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateDBParameterGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateDBParameterGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateDBParameterGroupVersionEnumTwoThousandAndThirteen0110 GETCreateDBParameterGroupVersionEnum = "2013-01-10"
 )
 
+func (e GETCreateDBParameterGroupVersionEnum) ToPointer() *GETCreateDBParameterGroupVersionEnum {
+	return &e
+}
+
 func (e *GETCreateDBParameterGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-10":
-		*e = GETCreateDBParameterGroupVersionEnum(s)
+		*e = GETCreateDBParameterGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateDBParameterGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateDBParameterGroupVersionEnum: %v", v)
 	}
 }
 

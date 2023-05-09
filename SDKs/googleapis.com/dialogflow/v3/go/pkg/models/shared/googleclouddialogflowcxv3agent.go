@@ -30,7 +30,7 @@ type GoogleCloudDialogflowCxV3Agent struct {
 	StartFlow *string `json:"startFlow,omitempty"`
 	// The list of all languages supported by the agent (except for the `default_language_code`).
 	SupportedLanguageCodes []string `json:"supportedLanguageCodes,omitempty"`
-	// Settings related to speech generating.
+	// Settings related to speech synthesizing.
 	TextToSpeechSettings *GoogleCloudDialogflowCxV3TextToSpeechSettings `json:"textToSpeechSettings,omitempty"`
 	// Required. The time zone of the agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris.
 	TimeZone *string `json:"timeZone,omitempty"`

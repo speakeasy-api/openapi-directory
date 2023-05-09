@@ -16,21 +16,25 @@ const (
 	ShaCertificateCertTypeEnumSha256                        ShaCertificateCertTypeEnum = "SHA_256"
 )
 
+func (e ShaCertificateCertTypeEnum) ToPointer() *ShaCertificateCertTypeEnum {
+	return &e
+}
+
 func (e *ShaCertificateCertTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHA_CERTIFICATE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SHA_1":
 		fallthrough
 	case "SHA_256":
-		*e = ShaCertificateCertTypeEnum(s)
+		*e = ShaCertificateCertTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShaCertificateCertTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShaCertificateCertTypeEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	TagTypeEnumNegative TagTypeEnum = "Negative"
 )
 
+func (e TagTypeEnum) ToPointer() *TagTypeEnum {
+	return &e
+}
+
 func (e *TagTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Regular":
 		fallthrough
 	case "Negative":
-		*e = TagTypeEnum(s)
+		*e = TagTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TagTypeEnum: %v", v)
 	}
 }
 

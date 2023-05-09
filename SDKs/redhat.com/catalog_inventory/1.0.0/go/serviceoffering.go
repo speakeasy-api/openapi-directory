@@ -36,7 +36,10 @@ func newServiceOffering(defaultClient, securityClient HTTPClient, serverURL, lan
 // Returns an array of inventories tags
 func (s *serviceOffering) AppliedInventoriesTagsForServiceOffering(ctx context.Context, request operations.AppliedInventoriesTagsForServiceOfferingRequest) (*operations.AppliedInventoriesTagsForServiceOfferingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/applied_inventories_tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/applied_inventories_tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppliedInventoriesParametersServicePlan", "json")
 	if err != nil {
@@ -92,7 +95,10 @@ func (s *serviceOffering) AppliedInventoriesTagsForServiceOffering(ctx context.C
 // Returns an array of ServiceInstance objects
 func (s *serviceOffering) ListServiceOfferingServiceInstances(ctx context.Context, request operations.ListServiceOfferingServiceInstancesRequest) (*operations.ListServiceOfferingServiceInstancesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/service_instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/service_instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -151,7 +157,10 @@ func (s *serviceOffering) ListServiceOfferingServiceInstances(ctx context.Contex
 // Returns an array of ServiceOfferingNode objects
 func (s *serviceOffering) ListServiceOfferingServiceOfferingNodes(ctx context.Context, request operations.ListServiceOfferingServiceOfferingNodesRequest) (*operations.ListServiceOfferingServiceOfferingNodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/service_offering_nodes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/service_offering_nodes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -210,7 +219,10 @@ func (s *serviceOffering) ListServiceOfferingServiceOfferingNodes(ctx context.Co
 // Returns an array of ServicePlan objects
 func (s *serviceOffering) ListServiceOfferingServicePlans(ctx context.Context, request operations.ListServiceOfferingServicePlansRequest) (*operations.ListServiceOfferingServicePlansResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/service_plans", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/service_plans", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -318,7 +330,10 @@ func (s *serviceOffering) ListServiceOfferings(ctx context.Context, request oper
 // Returns a Task id
 func (s *serviceOffering) OrderServiceOffering(ctx context.Context, request operations.OrderServiceOfferingRequest) (*operations.OrderServiceOfferingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/order", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}/order", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderParametersServiceOfferingInput", "json")
 	if err != nil {
@@ -374,7 +389,10 @@ func (s *serviceOffering) OrderServiceOffering(ctx context.Context, request oper
 // Returns a ServiceOffering object
 func (s *serviceOffering) ShowServiceOffering(ctx context.Context, request operations.ShowServiceOfferingRequest) (*operations.ShowServiceOfferingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_offerings/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

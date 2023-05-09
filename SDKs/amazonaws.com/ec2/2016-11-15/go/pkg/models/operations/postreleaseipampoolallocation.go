@@ -15,17 +15,21 @@ const (
 	POSTReleaseIpamPoolAllocationActionEnumReleaseIpamPoolAllocation POSTReleaseIpamPoolAllocationActionEnum = "ReleaseIpamPoolAllocation"
 )
 
+func (e POSTReleaseIpamPoolAllocationActionEnum) ToPointer() *POSTReleaseIpamPoolAllocationActionEnum {
+	return &e
+}
+
 func (e *POSTReleaseIpamPoolAllocationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReleaseIpamPoolAllocation":
-		*e = POSTReleaseIpamPoolAllocationActionEnum(s)
+		*e = POSTReleaseIpamPoolAllocationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTReleaseIpamPoolAllocationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTReleaseIpamPoolAllocationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTReleaseIpamPoolAllocationVersionEnumTwoThousandAndSixteen1115 POSTReleaseIpamPoolAllocationVersionEnum = "2016-11-15"
 )
 
+func (e POSTReleaseIpamPoolAllocationVersionEnum) ToPointer() *POSTReleaseIpamPoolAllocationVersionEnum {
+	return &e
+}
+
 func (e *POSTReleaseIpamPoolAllocationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTReleaseIpamPoolAllocationVersionEnum(s)
+		*e = POSTReleaseIpamPoolAllocationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTReleaseIpamPoolAllocationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTReleaseIpamPoolAllocationVersionEnum: %v", v)
 	}
 }
 

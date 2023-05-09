@@ -16,17 +16,21 @@ const (
 	RegisterMailDomainXAmzTargetEnumWorkMailServiceRegisterMailDomain RegisterMailDomainXAmzTargetEnum = "WorkMailService.RegisterMailDomain"
 )
 
+func (e RegisterMailDomainXAmzTargetEnum) ToPointer() *RegisterMailDomainXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterMailDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.RegisterMailDomain":
-		*e = RegisterMailDomainXAmzTargetEnum(s)
+		*e = RegisterMailDomainXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterMailDomainXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterMailDomainXAmzTargetEnum: %v", v)
 	}
 }
 

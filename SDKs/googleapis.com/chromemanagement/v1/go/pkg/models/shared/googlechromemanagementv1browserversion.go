@@ -18,12 +18,16 @@ const (
 	GoogleChromeManagementV1BrowserVersionChannelEnumStable                    GoogleChromeManagementV1BrowserVersionChannelEnum = "STABLE"
 )
 
+func (e GoogleChromeManagementV1BrowserVersionChannelEnum) ToPointer() *GoogleChromeManagementV1BrowserVersionChannelEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1BrowserVersionChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELEASE_CHANNEL_UNSPECIFIED":
 		fallthrough
 	case "CANARY":
@@ -33,10 +37,10 @@ func (e *GoogleChromeManagementV1BrowserVersionChannelEnum) UnmarshalJSON(data [
 	case "BETA":
 		fallthrough
 	case "STABLE":
-		*e = GoogleChromeManagementV1BrowserVersionChannelEnum(s)
+		*e = GoogleChromeManagementV1BrowserVersionChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1BrowserVersionChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1BrowserVersionChannelEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	GoogleChromeManagementV1BrowserVersionSystemEnumSystemLinux             GoogleChromeManagementV1BrowserVersionSystemEnum = "SYSTEM_LINUX"
 )
 
+func (e GoogleChromeManagementV1BrowserVersionSystemEnum) ToPointer() *GoogleChromeManagementV1BrowserVersionSystemEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1BrowserVersionSystemEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_SYSTEM_UNSPECIFIED":
 		fallthrough
 	case "SYSTEM_OTHER":
@@ -75,10 +83,10 @@ func (e *GoogleChromeManagementV1BrowserVersionSystemEnum) UnmarshalJSON(data []
 	case "SYSTEM_MAC":
 		fallthrough
 	case "SYSTEM_LINUX":
-		*e = GoogleChromeManagementV1BrowserVersionSystemEnum(s)
+		*e = GoogleChromeManagementV1BrowserVersionSystemEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1BrowserVersionSystemEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1BrowserVersionSystemEnum: %v", v)
 	}
 }
 

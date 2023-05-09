@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ExtensionCtrlGetAccountExtensionByIDRequest{
+    ctx := context.Background()
+    res, err := s.ExtensionCtrlGetAccountExtensionByID(ctx, operations.ExtensionCtrlGetAccountExtensionByIDRequest{
         AccountID: "corrupti",
         ExtensionNumber: 5928.45,
-    }
-
-    ctx := context.Background()
-    res, err := s.ExtensionCtrlGetAccountExtensionByID(ctx, req, operations.ExtensionCtrlGetAccountExtensionByIDSecurity{
+    }, operations.ExtensionCtrlGetAccountExtensionByIDSecurity{
         BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {

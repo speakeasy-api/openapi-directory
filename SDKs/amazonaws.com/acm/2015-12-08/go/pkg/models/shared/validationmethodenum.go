@@ -14,18 +14,22 @@ const (
 	ValidationMethodEnumDNS   ValidationMethodEnum = "DNS"
 )
 
+func (e ValidationMethodEnum) ToPointer() *ValidationMethodEnum {
+	return &e
+}
+
 func (e *ValidationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EMAIL":
 		fallthrough
 	case "DNS":
-		*e = ValidationMethodEnum(s)
+		*e = ValidationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidationMethodEnum: %v", v)
 	}
 }

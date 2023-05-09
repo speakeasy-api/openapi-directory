@@ -18,12 +18,16 @@ const (
 	EphemerisStatusEnumExpired    EphemerisStatusEnum = "EXPIRED"
 )
 
+func (e EphemerisStatusEnum) ToPointer() *EphemerisStatusEnum {
+	return &e
+}
+
 func (e *EphemerisStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALIDATING":
 		fallthrough
 	case "INVALID":
@@ -35,9 +39,9 @@ func (e *EphemerisStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DISABLED":
 		fallthrough
 	case "EXPIRED":
-		*e = EphemerisStatusEnum(s)
+		*e = EphemerisStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EphemerisStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EphemerisStatusEnum: %v", v)
 	}
 }

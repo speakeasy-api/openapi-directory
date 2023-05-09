@@ -18,12 +18,16 @@ const (
 	StateEnumPaused    StateEnum = "PAUSED"
 )
 
+func (e StateEnum) ToPointer() *StateEnum {
+	return &e
+}
+
 func (e *StateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DRAFT":
 		fallthrough
 	case "ACTIVE":
@@ -35,9 +39,9 @@ func (e *StateEnum) UnmarshalJSON(data []byte) error {
 	case "CLOSED":
 		fallthrough
 	case "PAUSED":
-		*e = StateEnum(s)
+		*e = StateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StateEnum: %s", s)
+		return fmt.Errorf("invalid value for StateEnum: %v", v)
 	}
 }

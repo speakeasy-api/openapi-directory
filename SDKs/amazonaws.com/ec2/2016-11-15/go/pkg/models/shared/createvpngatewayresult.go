@@ -17,12 +17,16 @@ const (
 	CreateVpnGatewayResultVpnGatewayStateEnumDeleted   CreateVpnGatewayResultVpnGatewayStateEnum = "deleted"
 )
 
+func (e CreateVpnGatewayResultVpnGatewayStateEnum) ToPointer() *CreateVpnGatewayResultVpnGatewayStateEnum {
+	return &e
+}
+
 func (e *CreateVpnGatewayResultVpnGatewayStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
@@ -30,10 +34,10 @@ func (e *CreateVpnGatewayResultVpnGatewayStateEnum) UnmarshalJSON(data []byte) e
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = CreateVpnGatewayResultVpnGatewayStateEnum(s)
+		*e = CreateVpnGatewayResultVpnGatewayStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpnGatewayResultVpnGatewayStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpnGatewayResultVpnGatewayStateEnum: %v", v)
 	}
 }
 
@@ -50,17 +54,21 @@ const (
 	CreateVpnGatewayResultVpnGatewayTypeEnumIpsec1 CreateVpnGatewayResultVpnGatewayTypeEnum = "ipsec.1"
 )
 
+func (e CreateVpnGatewayResultVpnGatewayTypeEnum) ToPointer() *CreateVpnGatewayResultVpnGatewayTypeEnum {
+	return &e
+}
+
 func (e *CreateVpnGatewayResultVpnGatewayTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipsec.1":
-		*e = CreateVpnGatewayResultVpnGatewayTypeEnum(s)
+		*e = CreateVpnGatewayResultVpnGatewayTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpnGatewayResultVpnGatewayTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpnGatewayResultVpnGatewayTypeEnum: %v", v)
 	}
 }
 
@@ -74,12 +82,16 @@ const (
 	CreateVpnGatewayResultVpnGatewayVpcAttachmentsStateEnumDetached  CreateVpnGatewayResultVpnGatewayVpcAttachmentsStateEnum = "detached"
 )
 
+func (e CreateVpnGatewayResultVpnGatewayVpcAttachmentsStateEnum) ToPointer() *CreateVpnGatewayResultVpnGatewayVpcAttachmentsStateEnum {
+	return &e
+}
+
 func (e *CreateVpnGatewayResultVpnGatewayVpcAttachmentsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -87,10 +99,10 @@ func (e *CreateVpnGatewayResultVpnGatewayVpcAttachmentsStateEnum) UnmarshalJSON(
 	case "detaching":
 		fallthrough
 	case "detached":
-		*e = CreateVpnGatewayResultVpnGatewayVpcAttachmentsStateEnum(s)
+		*e = CreateVpnGatewayResultVpnGatewayVpcAttachmentsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpnGatewayResultVpnGatewayVpcAttachmentsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpnGatewayResultVpnGatewayVpcAttachmentsStateEnum: %v", v)
 	}
 }
 

@@ -14,8 +14,8 @@ type SpeechProjectsLocationsCustomClassesCreateSecurity struct {
 
 type SpeechProjectsLocationsCustomClassesCreateRequest struct {
 	// V1 error format.
-	DollarXgafv              *shared.XgafvEnum                `queryParam:"style=form,explode=true,name=$.xgafv"`
-	CreateCustomClassRequest *shared.CreateCustomClassRequest `request:"mediaType=application/json"`
+	DollarXgafv                   *shared.XgafvEnum                     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	CreateCustomClassRequestInput *shared.CreateCustomClassRequestInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.

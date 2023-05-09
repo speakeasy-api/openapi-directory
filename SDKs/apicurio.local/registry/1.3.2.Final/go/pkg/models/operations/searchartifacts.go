@@ -17,19 +17,23 @@ const (
 	SearchArtifactsOrderEnumDesc SearchArtifactsOrderEnum = "desc"
 )
 
+func (e SearchArtifactsOrderEnum) ToPointer() *SearchArtifactsOrderEnum {
+	return &e
+}
+
 func (e *SearchArtifactsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = SearchArtifactsOrderEnum(s)
+		*e = SearchArtifactsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchArtifactsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchArtifactsOrderEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	SearchArtifactsOverEnumLabels      SearchArtifactsOverEnum = "labels"
 )
 
+func (e SearchArtifactsOverEnum) ToPointer() *SearchArtifactsOverEnum {
+	return &e
+}
+
 func (e *SearchArtifactsOverEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "everything":
 		fallthrough
 	case "name":
@@ -56,10 +64,10 @@ func (e *SearchArtifactsOverEnum) UnmarshalJSON(data []byte) error {
 	case "description":
 		fallthrough
 	case "labels":
-		*e = SearchArtifactsOverEnum(s)
+		*e = SearchArtifactsOverEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchArtifactsOverEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchArtifactsOverEnum: %v", v)
 	}
 }
 

@@ -41,7 +41,10 @@ func newPackages(defaultClient, securityClient HTTPClient, serverURL, language, 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#delete-a-package-for-the-authenticated-user - API method documentation
 func (s *packages) PackagesDeletePackageForAuthenticatedUser(ctx context.Context, request operations.PackagesDeletePackageForAuthenticatedUserRequest) (*operations.PackagesDeletePackageForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *packages) PackagesDeletePackageForAuthenticatedUser(ctx context.Context
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#delete-a-package-for-an-organization - API method documentation
 func (s *packages) PackagesDeletePackageForOrg(ctx context.Context, request operations.PackagesDeletePackageForOrgRequest) (*operations.PackagesDeletePackageForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -151,7 +157,10 @@ func (s *packages) PackagesDeletePackageForOrg(ctx context.Context, request oper
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#delete-a-package-for-a-user - API method documentation
 func (s *packages) PackagesDeletePackageForUser(ctx context.Context, request operations.PackagesDeletePackageForUserRequest) (*operations.PackagesDeletePackageForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -205,7 +214,10 @@ func (s *packages) PackagesDeletePackageForUser(ctx context.Context, request ope
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#delete-a-package-version-for-the-authenticated-user - API method documentation
 func (s *packages) PackagesDeletePackageVersionForAuthenticatedUser(ctx context.Context, request operations.PackagesDeletePackageVersionForAuthenticatedUserRequest) (*operations.PackagesDeletePackageVersionForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}/versions/{package_version_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}/versions/{package_version_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -260,7 +272,10 @@ func (s *packages) PackagesDeletePackageVersionForAuthenticatedUser(ctx context.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#delete-a-package-version-for-an-organization - API method documentation
 func (s *packages) PackagesDeletePackageVersionForOrg(ctx context.Context, request operations.PackagesDeletePackageVersionForOrgRequest) (*operations.PackagesDeletePackageVersionForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -315,7 +330,10 @@ func (s *packages) PackagesDeletePackageVersionForOrg(ctx context.Context, reque
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#delete-a-package-version-for-a-user - API method documentation
 func (s *packages) PackagesDeletePackageVersionForUser(ctx context.Context, request operations.PackagesDeletePackageVersionForUserRequest) (*operations.PackagesDeletePackageVersionForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -368,7 +386,10 @@ func (s *packages) PackagesDeletePackageVersionForUser(ctx context.Context, requ
 // https://docs.github.com/enterprise-cloud@latest//rest/packages#get-all-package-versions-for-a-package-owned-by-the-authenticated-user - API method documentation
 func (s *packages) PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser(ctx context.Context, request operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserRequest) (*operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -434,7 +455,10 @@ func (s *packages) PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUs
 // https://docs.github.com/enterprise-cloud@latest//rest/packages#get-all-package-versions-for-a-package-owned-by-an-organization - API method documentation
 func (s *packages) PackagesGetAllPackageVersionsForPackageOwnedByOrg(ctx context.Context, request operations.PackagesGetAllPackageVersionsForPackageOwnedByOrgRequest) (*operations.PackagesGetAllPackageVersionsForPackageOwnedByOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -500,7 +524,10 @@ func (s *packages) PackagesGetAllPackageVersionsForPackageOwnedByOrg(ctx context
 // https://docs.github.com/enterprise-cloud@latest//rest/packages#get-all-package-versions-for-a-package-owned-by-a-user - API method documentation
 func (s *packages) PackagesGetAllPackageVersionsForPackageOwnedByUser(ctx context.Context, request operations.PackagesGetAllPackageVersionsForPackageOwnedByUserRequest) (*operations.PackagesGetAllPackageVersionsForPackageOwnedByUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -562,7 +589,10 @@ func (s *packages) PackagesGetAllPackageVersionsForPackageOwnedByUser(ctx contex
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#get-a-package-for-the-authenticated-user - API method documentation
 func (s *packages) PackagesGetPackageForAuthenticatedUser(ctx context.Context, request operations.PackagesGetPackageForAuthenticatedUserRequest) (*operations.PackagesGetPackageForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -610,7 +640,10 @@ func (s *packages) PackagesGetPackageForAuthenticatedUser(ctx context.Context, r
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#get-a-package-for-an-organization - API method documentation
 func (s *packages) PackagesGetPackageForOrganization(ctx context.Context, request operations.PackagesGetPackageForOrganizationRequest) (*operations.PackagesGetPackageForOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -658,7 +691,10 @@ func (s *packages) PackagesGetPackageForOrganization(ctx context.Context, reques
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#get-a-package-for-a-user - API method documentation
 func (s *packages) PackagesGetPackageForUser(ctx context.Context, request operations.PackagesGetPackageForUserRequest) (*operations.PackagesGetPackageForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -706,7 +742,10 @@ func (s *packages) PackagesGetPackageForUser(ctx context.Context, request operat
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#get-a-package-version-for-the-authenticated-user - API method documentation
 func (s *packages) PackagesGetPackageVersionForAuthenticatedUser(ctx context.Context, request operations.PackagesGetPackageVersionForAuthenticatedUserRequest) (*operations.PackagesGetPackageVersionForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}/versions/{package_version_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}/versions/{package_version_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -754,7 +793,10 @@ func (s *packages) PackagesGetPackageVersionForAuthenticatedUser(ctx context.Con
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#get-a-package-version-for-an-organization - API method documentation
 func (s *packages) PackagesGetPackageVersionForOrganization(ctx context.Context, request operations.PackagesGetPackageVersionForOrganizationRequest) (*operations.PackagesGetPackageVersionForOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -802,7 +844,10 @@ func (s *packages) PackagesGetPackageVersionForOrganization(ctx context.Context,
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#get-a-package-version-for-a-user - API method documentation
 func (s *packages) PackagesGetPackageVersionForUser(ctx context.Context, request operations.PackagesGetPackageVersionForUserRequest) (*operations.PackagesGetPackageVersionForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -902,7 +947,10 @@ func (s *packages) PackagesListPackagesForAuthenticatedUser(ctx context.Context,
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#list-packages-for-an-organization - API method documentation
 func (s *packages) PackagesListPackagesForOrganization(ctx context.Context, request operations.PackagesListPackagesForOrganizationRequest) (*operations.PackagesListPackagesForOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -966,7 +1014,10 @@ func (s *packages) PackagesListPackagesForOrganization(ctx context.Context, requ
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#list-packages-for-user - API method documentation
 func (s *packages) PackagesListPackagesForUser(ctx context.Context, request operations.PackagesListPackagesForUserRequest) (*operations.PackagesListPackagesForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1034,7 +1085,10 @@ func (s *packages) PackagesListPackagesForUser(ctx context.Context, request oper
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#restore-a-package-for-the-authenticated-user - API method documentation
 func (s *packages) PackagesRestorePackageForAuthenticatedUser(ctx context.Context, request operations.PackagesRestorePackageForAuthenticatedUserRequest) (*operations.PackagesRestorePackageForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}/restore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}/restore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1097,7 +1151,10 @@ func (s *packages) PackagesRestorePackageForAuthenticatedUser(ctx context.Contex
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#restore-a-package-for-an-organization - API method documentation
 func (s *packages) PackagesRestorePackageForOrg(ctx context.Context, request operations.PackagesRestorePackageForOrgRequest) (*operations.PackagesRestorePackageForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}/restore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}/restore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1160,7 +1217,10 @@ func (s *packages) PackagesRestorePackageForOrg(ctx context.Context, request ope
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#restore-a-package-for-a-user - API method documentation
 func (s *packages) PackagesRestorePackageForUser(ctx context.Context, request operations.PackagesRestorePackageForUserRequest) (*operations.PackagesRestorePackageForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}/restore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}/restore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1221,7 +1281,10 @@ func (s *packages) PackagesRestorePackageForUser(ctx context.Context, request op
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#restore-a-package-version-for-the-authenticated-user - API method documentation
 func (s *packages) PackagesRestorePackageVersionForAuthenticatedUser(ctx context.Context, request operations.PackagesRestorePackageVersionForAuthenticatedUserRequest) (*operations.PackagesRestorePackageVersionForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1280,7 +1343,10 @@ func (s *packages) PackagesRestorePackageVersionForAuthenticatedUser(ctx context
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#restore-a-package-version-for-an-organization - API method documentation
 func (s *packages) PackagesRestorePackageVersionForOrg(ctx context.Context, request operations.PackagesRestorePackageVersionForOrgRequest) (*operations.PackagesRestorePackageVersionForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1339,7 +1405,10 @@ func (s *packages) PackagesRestorePackageVersionForOrg(ctx context.Context, requ
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/packages#restore-a-package-version-for-a-user - API method documentation
 func (s *packages) PackagesRestorePackageVersionForUser(ctx context.Context, request operations.PackagesRestorePackageVersionForUserRequest) (*operations.PackagesRestorePackageVersionForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

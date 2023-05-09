@@ -9,9 +9,15 @@ import (
 type GetV2MeetingsJSONRequest struct {
 	// Filters meetings by account_id. Multiple account ids can be applied
 	AccountID *string `queryParam:"style=form,explode=true,name=account_id"`
-	// Filters meetings by event IDs
-	EventIds []int64 `queryParam:"style=form,explode=false,name=event_ids"`
-	// Filters meetings by UIDs provided by calendar provider
+	// Equality filters that are applied to the created_at field. A single filter can be used by itself or combined with other filters to create a range.
+	//
+	// ---CUSTOM---
+	// {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
+	//
+	CreatedAt []string `queryParam:"style=form,explode=false,name=created_at"`
+	// List of event IDs. If both event_ids and i_cal_uids params are passed, this filters will be ORed. If a record can't be found, that record won't be returned and your request will be successful
+	EventIds []string `queryParam:"style=form,explode=false,name=event_ids"`
+	// List of UIDs provided by calendar provider. If both event_ids and i_cal_uids params are passed, this filters will be ORed. If a record can't be found, that record won't be returned and your request will be successful
 	ICalUids []string `queryParam:"style=form,explode=false,name=i_cal_uids"`
 	// IDs of meetings to fetch. If a record can't be found, that record won't be returned and your request will be successful
 	Ids []int64 `queryParam:"style=form,explode=false,name=ids"`

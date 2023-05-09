@@ -16,17 +16,21 @@ const (
 	GetCommentReactionsXAmzTargetEnumCodeCommit20150413GetCommentReactions GetCommentReactionsXAmzTargetEnum = "CodeCommit_20150413.GetCommentReactions"
 )
 
+func (e GetCommentReactionsXAmzTargetEnum) ToPointer() *GetCommentReactionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCommentReactionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.GetCommentReactions":
-		*e = GetCommentReactionsXAmzTargetEnum(s)
+		*e = GetCommentReactionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommentReactionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommentReactionsXAmzTargetEnum: %v", v)
 	}
 }
 

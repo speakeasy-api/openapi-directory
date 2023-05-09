@@ -21,21 +21,25 @@ const (
 	OrgInvitationsCreateRequestBodyRoleEnumMember       OrgInvitationsCreateRequestBodyRoleEnum = "member"
 )
 
+func (e OrgInvitationsCreateRequestBodyRoleEnum) ToPointer() *OrgInvitationsCreateRequestBodyRoleEnum {
+	return &e
+}
+
 func (e *OrgInvitationsCreateRequestBodyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin":
 		fallthrough
 	case "collaborator":
 		fallthrough
 	case "member":
-		*e = OrgInvitationsCreateRequestBodyRoleEnum(s)
+		*e = OrgInvitationsCreateRequestBodyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgInvitationsCreateRequestBodyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgInvitationsCreateRequestBodyRoleEnum: %v", v)
 	}
 }
 
@@ -66,12 +70,16 @@ const (
 	OrgInvitationsCreateDefaultApplicationJSONErrorCodeEnumTooManyRequests     OrgInvitationsCreateDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e OrgInvitationsCreateDefaultApplicationJSONErrorCodeEnum) ToPointer() *OrgInvitationsCreateDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *OrgInvitationsCreateDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -85,10 +93,10 @@ func (e *OrgInvitationsCreateDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = OrgInvitationsCreateDefaultApplicationJSONErrorCodeEnum(s)
+		*e = OrgInvitationsCreateDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgInvitationsCreateDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgInvitationsCreateDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

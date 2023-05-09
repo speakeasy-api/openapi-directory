@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/iot-roborun
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,25 +27,23 @@ func main() {
         }),
     )
 
-    req := operations.CreateDestinationRequest{
-        RequestBody: operations.CreateDestinationRequestBody{
-            AdditionalFixedProperties: "corrupti",
-            ClientToken: "provident",
-            Name: "distinctio",
-            Site: "quibusdam",
-            State: "DISABLED",
-        },
-        XAmzAlgorithm: "nulla",
-        XAmzContentSha256: "corrupti",
-        XAmzCredential: "illum",
-        XAmzDate: "vel",
-        XAmzSecurityToken: "error",
-        XAmzSignature: "deserunt",
-        XAmzSignedHeaders: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.CreateDestination(ctx, req)
+    res, err := s.CreateDestination(ctx, operations.CreateDestinationRequest{
+        RequestBody: operations.CreateDestinationRequestBody{
+            AdditionalFixedProperties: sdk.String("corrupti"),
+            ClientToken: sdk.String("provident"),
+            Name: "Ellis Mitchell",
+            Site: "illum",
+            State: operations.CreateDestinationRequestBodyStateEnumDisabled.ToPointer(),
+        },
+        XAmzAlgorithm: sdk.String("error"),
+        XAmzContentSha256: sdk.String("deserunt"),
+        XAmzCredential: sdk.String("suscipit"),
+        XAmzDate: sdk.String("iure"),
+        XAmzSecurityToken: sdk.String("magnam"),
+        XAmzSignature: sdk.String("debitis"),
+        XAmzSignedHeaders: sdk.String("ipsa"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -61,28 +58,28 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateDestination` - Grants permission to create a destination
-* `CreateSite` - Grants permission to create a site
-* `CreateWorker` - Grants permission to create a worker
-* `CreateWorkerFleet` - Grants permission to create a worker fleet
-* `DeleteDestination` - Grants permission to delete a destination
-* `DeleteSite` - Grants permission to delete a site
-* `DeleteWorker` - Grants permission to delete a worker
-* `DeleteWorkerFleet` - Grants permission to delete a worker fleet
-* `GetDestination` - Grants permission to get a destination
-* `GetSite` - Grants permission to get a site
-* `GetWorker` - Grants permission to get a worker
-* `GetWorkerFleet` - Grants permission to get a worker fleet
-* `ListDestinations` - Grants permission to list destinations
-* `ListSites` - Grants permission to list sites
-* `ListWorkerFleets` - Grants permission to list worker fleets
-* `ListWorkers` - Grants permission to list workers
-* `UpdateDestination` - Grants permission to update a destination
-* `UpdateSite` - Grants permission to update a site
-* `UpdateWorker` - Grants permission to update a worker
-* `UpdateWorkerFleet` - Grants permission to update a worker fleet
+* [CreateDestination](docs/sdk/README.md#createdestination) - Grants permission to create a destination
+* [CreateSite](docs/sdk/README.md#createsite) - Grants permission to create a site
+* [CreateWorker](docs/sdk/README.md#createworker) - Grants permission to create a worker
+* [CreateWorkerFleet](docs/sdk/README.md#createworkerfleet) - Grants permission to create a worker fleet
+* [DeleteDestination](docs/sdk/README.md#deletedestination) - Grants permission to delete a destination
+* [DeleteSite](docs/sdk/README.md#deletesite) - Grants permission to delete a site
+* [DeleteWorker](docs/sdk/README.md#deleteworker) - Grants permission to delete a worker
+* [DeleteWorkerFleet](docs/sdk/README.md#deleteworkerfleet) - Grants permission to delete a worker fleet
+* [GetDestination](docs/sdk/README.md#getdestination) - Grants permission to get a destination
+* [GetSite](docs/sdk/README.md#getsite) - Grants permission to get a site
+* [GetWorker](docs/sdk/README.md#getworker) - Grants permission to get a worker
+* [GetWorkerFleet](docs/sdk/README.md#getworkerfleet) - Grants permission to get a worker fleet
+* [ListDestinations](docs/sdk/README.md#listdestinations) - Grants permission to list destinations
+* [ListSites](docs/sdk/README.md#listsites) - Grants permission to list sites
+* [ListWorkerFleets](docs/sdk/README.md#listworkerfleets) - Grants permission to list worker fleets
+* [ListWorkers](docs/sdk/README.md#listworkers) - Grants permission to list workers
+* [UpdateDestination](docs/sdk/README.md#updatedestination) - Grants permission to update a destination
+* [UpdateSite](docs/sdk/README.md#updatesite) - Grants permission to update a site
+* [UpdateWorker](docs/sdk/README.md#updateworker) - Grants permission to update a worker
+* [UpdateWorkerFleet](docs/sdk/README.md#updateworkerfleet) - Grants permission to update a worker fleet
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -35,7 +35,10 @@ func newLoadBalancers(defaultClient, securityClient HTTPClient, serverURL, langu
 // Deletes a Load Balancer.
 func (s *loadBalancers) DeleteLoadBalancersID(ctx context.Context, request operations.DeleteLoadBalancersIDRequest) (*operations.DeleteLoadBalancersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -120,7 +123,10 @@ func (s *loadBalancers) GetLoadBalancers(ctx context.Context, request operations
 // Gets a specific Load Balancer object.
 func (s *loadBalancers) GetLoadBalancersID(ctx context.Context, request operations.GetLoadBalancersIDRequest) (*operations.GetLoadBalancersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -181,7 +187,10 @@ func (s *loadBalancers) GetLoadBalancersID(ctx context.Context, request operatio
 // We limit the number of samples to a maximum of 500 and will adjust the step parameter accordingly.
 func (s *loadBalancers) GetLoadBalancersIDMetrics(ctx context.Context, request operations.GetLoadBalancersIDMetricsRequest) (*operations.GetLoadBalancersIDMetricsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/metrics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/metrics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -298,7 +307,10 @@ func (s *loadBalancers) PostLoadBalancers(ctx context.Context, request operation
 // Note: if the Load Balancer object changes during the request, the response will be a “conflict” error.
 func (s *loadBalancers) PutLoadBalancersID(ctx context.Context, request operations.PutLoadBalancersIDRequest) (*operations.PutLoadBalancersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

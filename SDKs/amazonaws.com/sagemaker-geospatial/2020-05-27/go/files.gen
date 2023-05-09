@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -65,7 +66,7 @@ pkg/models/shared/customindicesinput.go
 pkg/models/shared/operation.go
 pkg/models/shared/inputconfigoutput.go
 pkg/models/shared/rasterdatacollectionqueryoutput.go
-pkg/models/shared/timerangefilterinput.go
+pkg/models/shared/timerangefilteroutput.go
 pkg/models/shared/propertyfilters.go
 pkg/models/shared/propertyfilter.go
 pkg/models/shared/property.go
@@ -118,8 +119,10 @@ pkg/models/shared/itemsource.go
 pkg/models/shared/properties.go
 pkg/models/shared/geometry.go
 pkg/models/shared/assetvalue.go
+pkg/models/shared/timerangefilterinput.go
 pkg/models/shared/startearthobservationjoboutput.go
 pkg/models/shared/rasterdatacollectionqueryinput.go
 pkg/models/shared/startvectorenrichmentjoboutput.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

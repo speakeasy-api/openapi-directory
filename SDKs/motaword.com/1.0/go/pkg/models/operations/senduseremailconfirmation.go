@@ -24,17 +24,21 @@ const (
 	SendUserEmailConfirmation202ApplicationJSONStatusEnumAlreadyConfirmed SendUserEmailConfirmation202ApplicationJSONStatusEnum = "already_confirmed"
 )
 
+func (e SendUserEmailConfirmation202ApplicationJSONStatusEnum) ToPointer() *SendUserEmailConfirmation202ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *SendUserEmailConfirmation202ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "already_confirmed":
-		*e = SendUserEmailConfirmation202ApplicationJSONStatusEnum(s)
+		*e = SendUserEmailConfirmation202ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendUserEmailConfirmation202ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SendUserEmailConfirmation202ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -49,17 +53,21 @@ const (
 	SendUserEmailConfirmation200ApplicationJSONStatusEnumSuccess SendUserEmailConfirmation200ApplicationJSONStatusEnum = "success"
 )
 
+func (e SendUserEmailConfirmation200ApplicationJSONStatusEnum) ToPointer() *SendUserEmailConfirmation200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *SendUserEmailConfirmation200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
-		*e = SendUserEmailConfirmation200ApplicationJSONStatusEnum(s)
+		*e = SendUserEmailConfirmation200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendUserEmailConfirmation200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SendUserEmailConfirmation200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ContactProtocolEnumSms   ContactProtocolEnum = "SMS"
 )
 
+func (e ContactProtocolEnum) ToPointer() *ContactProtocolEnum {
+	return &e
+}
+
 func (e *ContactProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Email":
 		fallthrough
 	case "SMS":
-		*e = ContactProtocolEnum(s)
+		*e = ContactProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactProtocolEnum: %v", v)
 	}
 }

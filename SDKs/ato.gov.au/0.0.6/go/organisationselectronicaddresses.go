@@ -40,7 +40,10 @@ func newOrganisationsElectronicAddresses(defaultClient, securityClient HTTPClien
 // Delete an electronic address
 func (s *organisationsElectronicAddresses) DeleteOrganisationsPartyIDElectronicAddressesAddressID(ctx context.Context, request operations.DeleteOrganisationsPartyIDElectronicAddressesAddressIDRequest) (*operations.DeleteOrganisationsPartyIDElectronicAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses/{addressId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses/{addressId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -97,7 +100,10 @@ func (s *organisationsElectronicAddresses) DeleteOrganisationsPartyIDElectronicA
 // GetOrganisationsPartyIDElectronicAddresses - Retrieve a list of electronic addresses
 func (s *organisationsElectronicAddresses) GetOrganisationsPartyIDElectronicAddresses(ctx context.Context, request operations.GetOrganisationsPartyIDElectronicAddressesRequest) (*operations.GetOrganisationsPartyIDElectronicAddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -166,7 +172,10 @@ func (s *organisationsElectronicAddresses) GetOrganisationsPartyIDElectronicAddr
 // Retrieve an electronic address
 func (s *organisationsElectronicAddresses) GetOrganisationsPartyIDElectronicAddressesAddressID(ctx context.Context, request operations.GetOrganisationsPartyIDElectronicAddressesAddressIDRequest) (*operations.GetOrganisationsPartyIDElectronicAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses/{addressId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses/{addressId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +242,10 @@ func (s *organisationsElectronicAddresses) GetOrganisationsPartyIDElectronicAddr
 // Create an electronic address
 func (s *organisationsElectronicAddresses) PostOrganisationsPartyIDElectronicAddresses(ctx context.Context, request operations.PostOrganisationsPartyIDElectronicAddressesRequest) (*operations.PostOrganisationsPartyIDElectronicAddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ElectronicAddressInput", "json")
 	if err != nil {
@@ -312,7 +324,10 @@ func (s *organisationsElectronicAddresses) PostOrganisationsPartyIDElectronicAdd
 // Update an electronic address
 func (s *organisationsElectronicAddresses) PutOrganisationsPartyIDElectronicAddressesAddressID(ctx context.Context, request operations.PutOrganisationsPartyIDElectronicAddressesAddressIDRequest) (*operations.PutOrganisationsPartyIDElectronicAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses/{addressId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/electronic-addresses/{addressId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ElectronicAddressInput", "json")
 	if err != nil {

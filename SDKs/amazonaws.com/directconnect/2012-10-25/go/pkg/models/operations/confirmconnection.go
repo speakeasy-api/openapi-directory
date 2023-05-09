@@ -16,17 +16,21 @@ const (
 	ConfirmConnectionXAmzTargetEnumOvertureServiceConfirmConnection ConfirmConnectionXAmzTargetEnum = "OvertureService.ConfirmConnection"
 )
 
+func (e ConfirmConnectionXAmzTargetEnum) ToPointer() *ConfirmConnectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *ConfirmConnectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.ConfirmConnection":
-		*e = ConfirmConnectionXAmzTargetEnum(s)
+		*e = ConfirmConnectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfirmConnectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfirmConnectionXAmzTargetEnum: %v", v)
 	}
 }
 

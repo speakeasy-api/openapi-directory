@@ -16,19 +16,23 @@ const (
 	UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnumDeny  UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum = "deny"
 )
 
+func (e UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum) ToPointer() *UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum {
+	return &e
+}
+
 func (e *UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "allow":
 		fallthrough
 	case "deny":
-		*e = UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum(s)
+		*e = UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnumUDP   UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnum = "udp"
 )
 
+func (e UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnum) ToPointer() *UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnum {
+	return &e
+}
+
 func (e *UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "icmp":
@@ -58,10 +66,10 @@ func (e *UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnum) Unmarsh
 	case "tcp":
 		fallthrough
 	case "udp":
-		*e = UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnum(s)
+		*e = UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnum: %v", v)
 	}
 }
 

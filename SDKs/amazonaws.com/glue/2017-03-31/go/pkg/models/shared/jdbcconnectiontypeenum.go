@@ -17,12 +17,16 @@ const (
 	JDBCConnectionTypeEnumRedshift   JDBCConnectionTypeEnum = "redshift"
 )
 
+func (e JDBCConnectionTypeEnum) ToPointer() *JDBCConnectionTypeEnum {
+	return &e
+}
+
 func (e *JDBCConnectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sqlserver":
 		fallthrough
 	case "mysql":
@@ -32,9 +36,9 @@ func (e *JDBCConnectionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "postgresql":
 		fallthrough
 	case "redshift":
-		*e = JDBCConnectionTypeEnum(s)
+		*e = JDBCConnectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JDBCConnectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for JDBCConnectionTypeEnum: %v", v)
 	}
 }

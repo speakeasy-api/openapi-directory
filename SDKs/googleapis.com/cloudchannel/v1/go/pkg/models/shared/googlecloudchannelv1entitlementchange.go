@@ -18,12 +18,16 @@ const (
 	GoogleCloudChannelV1EntitlementChangeActivationReasonEnumOtherActivationReason       GoogleCloudChannelV1EntitlementChangeActivationReasonEnum = "OTHER_ACTIVATION_REASON"
 )
 
+func (e GoogleCloudChannelV1EntitlementChangeActivationReasonEnum) ToPointer() *GoogleCloudChannelV1EntitlementChangeActivationReasonEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1EntitlementChangeActivationReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVATION_REASON_UNSPECIFIED":
 		fallthrough
 	case "RESELLER_REVOKED_SUSPENSION":
@@ -33,10 +37,10 @@ func (e *GoogleCloudChannelV1EntitlementChangeActivationReasonEnum) UnmarshalJSO
 	case "RENEWAL_SETTINGS_CHANGED":
 		fallthrough
 	case "OTHER_ACTIVATION_REASON":
-		*e = GoogleCloudChannelV1EntitlementChangeActivationReasonEnum(s)
+		*e = GoogleCloudChannelV1EntitlementChangeActivationReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementChangeActivationReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementChangeActivationReasonEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	GoogleCloudChannelV1EntitlementChangeCancellationReasonEnumPartialTransfer               GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum = "PARTIAL_TRANSFER"
 )
 
+func (e GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum) ToPointer() *GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANCELLATION_REASON_UNSPECIFIED":
 		fallthrough
 	case "SERVICE_TERMINATED":
@@ -63,10 +71,10 @@ func (e *GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum) UnmarshalJ
 	case "RELATIONSHIP_ENDED":
 		fallthrough
 	case "PARTIAL_TRANSFER":
-		*e = GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum(s)
+		*e = GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementChangeCancellationReasonEnum: %v", v)
 	}
 }
 
@@ -91,12 +99,16 @@ const (
 	GoogleCloudChannelV1EntitlementChangeChangeTypeEnumTrialStarted             GoogleCloudChannelV1EntitlementChangeChangeTypeEnum = "TRIAL_STARTED"
 )
 
+func (e GoogleCloudChannelV1EntitlementChangeChangeTypeEnum) ToPointer() *GoogleCloudChannelV1EntitlementChangeChangeTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1EntitlementChangeChangeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHANGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CREATED":
@@ -126,10 +138,10 @@ func (e *GoogleCloudChannelV1EntitlementChangeChangeTypeEnum) UnmarshalJSON(data
 	case "TRIAL_END_DATE_EXTENDED":
 		fallthrough
 	case "TRIAL_STARTED":
-		*e = GoogleCloudChannelV1EntitlementChangeChangeTypeEnum(s)
+		*e = GoogleCloudChannelV1EntitlementChangeChangeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementChangeChangeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementChangeChangeTypeEnum: %v", v)
 	}
 }
 
@@ -144,12 +156,16 @@ const (
 	GoogleCloudChannelV1EntitlementChangeOperatorTypeEnumReseller                      GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum = "RESELLER"
 )
 
+func (e GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum) ToPointer() *GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATOR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CUSTOMER_SERVICE_REPRESENTATIVE":
@@ -159,10 +175,10 @@ func (e *GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum) UnmarshalJSON(da
 	case "CUSTOMER":
 		fallthrough
 	case "RESELLER":
-		*e = GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum(s)
+		*e = GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementChangeOperatorTypeEnum: %v", v)
 	}
 }
 
@@ -178,12 +194,16 @@ const (
 	GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnumOther                       GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum = "OTHER"
 )
 
+func (e GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum) ToPointer() *GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUSPENSION_REASON_UNSPECIFIED":
 		fallthrough
 	case "RESELLER_INITIATED":
@@ -195,10 +215,10 @@ func (e *GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum) UnmarshalJSO
 	case "PENDING_TOS_ACCEPTANCE":
 		fallthrough
 	case "OTHER":
-		*e = GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum(s)
+		*e = GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementChangeSuspensionReasonEnum: %v", v)
 	}
 }
 

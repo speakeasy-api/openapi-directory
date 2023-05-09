@@ -16,17 +16,21 @@ const (
 	UpdateFileCacheXAmzTargetEnumAwsSimbaAPIServiceV20180301UpdateFileCache UpdateFileCacheXAmzTargetEnum = "AWSSimbaAPIService_v20180301.UpdateFileCache"
 )
 
+func (e UpdateFileCacheXAmzTargetEnum) ToPointer() *UpdateFileCacheXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateFileCacheXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.UpdateFileCache":
-		*e = UpdateFileCacheXAmzTargetEnum(s)
+		*e = UpdateFileCacheXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateFileCacheXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateFileCacheXAmzTargetEnum: %v", v)
 	}
 }
 

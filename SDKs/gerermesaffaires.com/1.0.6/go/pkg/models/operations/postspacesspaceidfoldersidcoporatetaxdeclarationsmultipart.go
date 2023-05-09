@@ -26,12 +26,16 @@ const (
 	PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataAccountingWorkbookEnumPermanent   PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataAccountingWorkbookEnum = "permanent"
 )
 
+func (e PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataAccountingWorkbookEnum) ToPointer() *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataAccountingWorkbookEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataAccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -49,10 +53,10 @@ func (e *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataAccou
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataAccountingWorkbookEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataAccountingWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataAccountingWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataAccountingWorkbookEnum: %v", v)
 	}
 }
 
@@ -77,12 +81,16 @@ const (
 	PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataOrderEnumRegularization PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataOrderEnum = "regularization"
 )
 
+func (e PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataOrderEnum) ToPointer() *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataOrderEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1st advance":
 		fallthrough
 	case "2nd advance":
@@ -92,10 +100,10 @@ func (e *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataOrder
 	case "4th advance":
 		fallthrough
 	case "regularization":
-		*e = PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataOrderEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartFormDataOrderEnum: %v", v)
 	}
 }
 

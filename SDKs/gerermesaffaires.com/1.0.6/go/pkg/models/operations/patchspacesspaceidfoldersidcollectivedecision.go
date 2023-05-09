@@ -26,12 +26,16 @@ const (
 	PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyEventEnumPartnersMeeting     PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyEventEnum = "PartnersMeeting"
 )
 
+func (e PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyEventEnum) ToPointer() *PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyEventEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EGM":
 		fallthrough
 	case "CGM":
@@ -55,10 +59,10 @@ func (e *PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyEventEnum) Unma
 	case "Board":
 		fallthrough
 	case "PartnersMeeting":
-		*e = PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyEventEnum(s)
+		*e = PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyEventEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyEventEnum: %v", v)
 	}
 }
 
@@ -70,21 +74,25 @@ const (
 	PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyLevelEnumPublic       PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyLevelEnum = "public"
 )
 
+func (e PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyLevelEnum) ToPointer() *PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyLevelEnum(s)
+		*e = PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequestBodyLevelEnum: %v", v)
 	}
 }
 

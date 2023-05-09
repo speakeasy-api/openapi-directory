@@ -39,12 +39,16 @@ const (
 	BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageTypesEnumError                      BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageTypesEnum = "ERROR"
 )
 
+func (e BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageTypesEnum) ToPointer() *BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageTypesEnum {
+	return &e
+}
+
 func (e *BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MESSAGE_SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "INFO":
@@ -52,10 +56,10 @@ func (e *BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageT
 	case "WARNING":
 		fallthrough
 	case "ERROR":
-		*e = BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageTypesEnum(s)
+		*e = BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageTypesEnum: %v", v)
 	}
 }
 

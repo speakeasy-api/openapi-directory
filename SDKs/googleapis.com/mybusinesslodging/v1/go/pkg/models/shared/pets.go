@@ -17,12 +17,16 @@ const (
 	PetsCatsAllowedExceptionEnumDependentOnDayOfWeek PetsCatsAllowedExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PetsCatsAllowedExceptionEnum) ToPointer() *PetsCatsAllowedExceptionEnum {
+	return &e
+}
+
 func (e *PetsCatsAllowedExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *PetsCatsAllowedExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PetsCatsAllowedExceptionEnum(s)
+		*e = PetsCatsAllowedExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PetsCatsAllowedExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PetsCatsAllowedExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	PetsDogsAllowedExceptionEnumDependentOnDayOfWeek PetsDogsAllowedExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PetsDogsAllowedExceptionEnum) ToPointer() *PetsDogsAllowedExceptionEnum {
+	return &e
+}
+
 func (e *PetsDogsAllowedExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *PetsDogsAllowedExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PetsDogsAllowedExceptionEnum(s)
+		*e = PetsDogsAllowedExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PetsDogsAllowedExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PetsDogsAllowedExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	PetsPetsAllowedExceptionEnumDependentOnDayOfWeek PetsPetsAllowedExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PetsPetsAllowedExceptionEnum) ToPointer() *PetsPetsAllowedExceptionEnum {
+	return &e
+}
+
 func (e *PetsPetsAllowedExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *PetsPetsAllowedExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PetsPetsAllowedExceptionEnum(s)
+		*e = PetsPetsAllowedExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PetsPetsAllowedExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PetsPetsAllowedExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	PetsPetsAllowedFreeExceptionEnumDependentOnDayOfWeek PetsPetsAllowedFreeExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PetsPetsAllowedFreeExceptionEnum) ToPointer() *PetsPetsAllowedFreeExceptionEnum {
+	return &e
+}
+
 func (e *PetsPetsAllowedFreeExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *PetsPetsAllowedFreeExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PetsPetsAllowedFreeExceptionEnum(s)
+		*e = PetsPetsAllowedFreeExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PetsPetsAllowedFreeExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PetsPetsAllowedFreeExceptionEnum: %v", v)
 	}
 }
 

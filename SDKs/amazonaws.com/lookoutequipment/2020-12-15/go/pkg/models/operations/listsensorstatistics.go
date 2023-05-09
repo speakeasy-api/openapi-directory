@@ -16,17 +16,21 @@ const (
 	ListSensorStatisticsXAmzTargetEnumAwsLookoutEquipmentFrontendServiceListSensorStatistics ListSensorStatisticsXAmzTargetEnum = "AWSLookoutEquipmentFrontendService.ListSensorStatistics"
 )
 
+func (e ListSensorStatisticsXAmzTargetEnum) ToPointer() *ListSensorStatisticsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListSensorStatisticsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLookoutEquipmentFrontendService.ListSensorStatistics":
-		*e = ListSensorStatisticsXAmzTargetEnum(s)
+		*e = ListSensorStatisticsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSensorStatisticsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSensorStatisticsXAmzTargetEnum: %v", v)
 	}
 }
 

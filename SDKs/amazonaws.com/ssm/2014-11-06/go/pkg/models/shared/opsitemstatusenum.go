@@ -31,12 +31,16 @@ const (
 	OpsItemStatusEnumClosed                         OpsItemStatusEnum = "Closed"
 )
 
+func (e OpsItemStatusEnum) ToPointer() *OpsItemStatusEnum {
+	return &e
+}
+
 func (e *OpsItemStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Open":
 		fallthrough
 	case "InProgress":
@@ -74,9 +78,9 @@ func (e *OpsItemStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Rejected":
 		fallthrough
 	case "Closed":
-		*e = OpsItemStatusEnum(s)
+		*e = OpsItemStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpsItemStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OpsItemStatusEnum: %v", v)
 	}
 }

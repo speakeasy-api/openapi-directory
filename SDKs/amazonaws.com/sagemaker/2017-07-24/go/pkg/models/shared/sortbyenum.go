@@ -15,20 +15,24 @@ const (
 	SortByEnumStatus       SortByEnum = "Status"
 )
 
+func (e SortByEnum) ToPointer() *SortByEnum {
+	return &e
+}
+
 func (e *SortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "CreationTime":
 		fallthrough
 	case "Status":
-		*e = SortByEnum(s)
+		*e = SortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortByEnum: %s", s)
+		return fmt.Errorf("invalid value for SortByEnum: %v", v)
 	}
 }

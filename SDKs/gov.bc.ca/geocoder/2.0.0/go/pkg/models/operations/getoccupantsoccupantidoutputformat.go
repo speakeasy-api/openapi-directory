@@ -20,12 +20,16 @@ const (
 	GetOccupantsOccupantIDOutputFormatLocationDescriptorEnumRoutingPoint   GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum = "routingPoint"
 )
 
+func (e GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum) ToPointer() *GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum {
+	return &e
+}
+
 func (e *GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "accessPoint":
@@ -37,10 +41,10 @@ func (e *GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum) UnmarshalJSON
 	case "rooftopPoint":
 		fallthrough
 	case "routingPoint":
-		*e = GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum(s)
+		*e = GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	GetOccupantsOccupantIDOutputFormatOutputFormatEnumShpz    GetOccupantsOccupantIDOutputFormatOutputFormatEnum = "shpz"
 )
 
+func (e GetOccupantsOccupantIDOutputFormatOutputFormatEnum) ToPointer() *GetOccupantsOccupantIDOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetOccupantsOccupantIDOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "geojson":
@@ -78,52 +86,56 @@ func (e *GetOccupantsOccupantIDOutputFormatOutputFormatEnum) UnmarshalJSON(data 
 	case "csv":
 		fallthrough
 	case "shpz":
-		*e = GetOccupantsOccupantIDOutputFormatOutputFormatEnum(s)
+		*e = GetOccupantsOccupantIDOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOccupantsOccupantIDOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOccupantsOccupantIDOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 
 // GetOccupantsOccupantIDOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
-type GetOccupantsOccupantIDOutputFormatOutputSrsEnum string
+type GetOccupantsOccupantIDOutputFormatOutputSrsEnum int64
 
 const (
-	GetOccupantsOccupantIDOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetOccupantsOccupantIDOutputFormatOutputSrsEnum = "4326"
-	GetOccupantsOccupantIDOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetOccupantsOccupantIDOutputFormatOutputSrsEnum = "4269"
-	GetOccupantsOccupantIDOutputFormatOutputSrsEnumThreeThousandAndFive                  GetOccupantsOccupantIDOutputFormatOutputSrsEnum = "3005"
-	GetOccupantsOccupantIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetOccupantsOccupantIDOutputFormatOutputSrsEnum = "26907"
-	GetOccupantsOccupantIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetOccupantsOccupantIDOutputFormatOutputSrsEnum = "26908"
-	GetOccupantsOccupantIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetOccupantsOccupantIDOutputFormatOutputSrsEnum = "26909"
-	GetOccupantsOccupantIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetOccupantsOccupantIDOutputFormatOutputSrsEnum = "26910"
-	GetOccupantsOccupantIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetOccupantsOccupantIDOutputFormatOutputSrsEnum = "26911"
+	GetOccupantsOccupantIDOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetOccupantsOccupantIDOutputFormatOutputSrsEnum = 4326
+	GetOccupantsOccupantIDOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetOccupantsOccupantIDOutputFormatOutputSrsEnum = 4269
+	GetOccupantsOccupantIDOutputFormatOutputSrsEnumThreeThousandAndFive                  GetOccupantsOccupantIDOutputFormatOutputSrsEnum = 3005
+	GetOccupantsOccupantIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetOccupantsOccupantIDOutputFormatOutputSrsEnum = 26907
+	GetOccupantsOccupantIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetOccupantsOccupantIDOutputFormatOutputSrsEnum = 26908
+	GetOccupantsOccupantIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetOccupantsOccupantIDOutputFormatOutputSrsEnum = 26909
+	GetOccupantsOccupantIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetOccupantsOccupantIDOutputFormatOutputSrsEnum = 26910
+	GetOccupantsOccupantIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetOccupantsOccupantIDOutputFormatOutputSrsEnum = 26911
 )
 
+func (e GetOccupantsOccupantIDOutputFormatOutputSrsEnum) ToPointer() *GetOccupantsOccupantIDOutputFormatOutputSrsEnum {
+	return &e
+}
+
 func (e *GetOccupantsOccupantIDOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetOccupantsOccupantIDOutputFormatOutputSrsEnum(s)
+	case 26911:
+		*e = GetOccupantsOccupantIDOutputFormatOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOccupantsOccupantIDOutputFormatOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOccupantsOccupantIDOutputFormatOutputSrsEnum: %v", v)
 	}
 }
 

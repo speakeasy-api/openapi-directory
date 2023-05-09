@@ -21,12 +21,16 @@ const (
 	ErrorsCodeEnumServiceUnavailable ErrorsCodeEnum = "SERVICE_UNAVAILABLE"
 )
 
+func (e ErrorsCodeEnum) ToPointer() *ErrorsCodeEnum {
+	return &e
+}
+
 func (e *ErrorsCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BAD_REQUEST":
 		fallthrough
 	case "FORBIDDEN":
@@ -42,10 +46,10 @@ func (e *ErrorsCodeEnum) UnmarshalJSON(data []byte) error {
 	case "INTERNAL_ERROR":
 		fallthrough
 	case "SERVICE_UNAVAILABLE":
-		*e = ErrorsCodeEnum(s)
+		*e = ErrorsCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsCodeEnum: %v", v)
 	}
 }
 

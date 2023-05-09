@@ -15,20 +15,24 @@ const (
 	ImportFailureStatusEnumSucceeded ImportFailureStatusEnum = "SUCCEEDED"
 )
 
+func (e ImportFailureStatusEnum) ToPointer() *ImportFailureStatusEnum {
+	return &e
+}
+
 func (e *ImportFailureStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILED":
 		fallthrough
 	case "RETRY":
 		fallthrough
 	case "SUCCEEDED":
-		*e = ImportFailureStatusEnum(s)
+		*e = ImportFailureStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportFailureStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportFailureStatusEnum: %v", v)
 	}
 }

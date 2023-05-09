@@ -16,17 +16,21 @@ const (
 	DeleteActionXAmzTargetEnumSageMakerDeleteAction DeleteActionXAmzTargetEnum = "SageMaker.DeleteAction"
 )
 
+func (e DeleteActionXAmzTargetEnum) ToPointer() *DeleteActionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteActionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DeleteAction":
-		*e = DeleteActionXAmzTargetEnum(s)
+		*e = DeleteActionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteActionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteActionXAmzTargetEnum: %v", v)
 	}
 }
 

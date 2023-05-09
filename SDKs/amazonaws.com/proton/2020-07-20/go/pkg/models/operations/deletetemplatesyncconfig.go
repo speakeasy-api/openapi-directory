@@ -16,17 +16,21 @@ const (
 	DeleteTemplateSyncConfigXAmzTargetEnumAwsProton20200720DeleteTemplateSyncConfig DeleteTemplateSyncConfigXAmzTargetEnum = "AwsProton20200720.DeleteTemplateSyncConfig"
 )
 
+func (e DeleteTemplateSyncConfigXAmzTargetEnum) ToPointer() *DeleteTemplateSyncConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteTemplateSyncConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.DeleteTemplateSyncConfig":
-		*e = DeleteTemplateSyncConfigXAmzTargetEnum(s)
+		*e = DeleteTemplateSyncConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTemplateSyncConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTemplateSyncConfigXAmzTargetEnum: %v", v)
 	}
 }
 

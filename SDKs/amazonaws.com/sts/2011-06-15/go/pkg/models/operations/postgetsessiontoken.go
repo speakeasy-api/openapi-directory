@@ -15,17 +15,21 @@ const (
 	POSTGetSessionTokenActionEnumGetSessionToken POSTGetSessionTokenActionEnum = "GetSessionToken"
 )
 
+func (e POSTGetSessionTokenActionEnum) ToPointer() *POSTGetSessionTokenActionEnum {
+	return &e
+}
+
 func (e *POSTGetSessionTokenActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetSessionToken":
-		*e = POSTGetSessionTokenActionEnum(s)
+		*e = POSTGetSessionTokenActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetSessionTokenActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetSessionTokenActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetSessionTokenVersionEnumTwoThousandAndEleven0615 POSTGetSessionTokenVersionEnum = "2011-06-15"
 )
 
+func (e POSTGetSessionTokenVersionEnum) ToPointer() *POSTGetSessionTokenVersionEnum {
+	return &e
+}
+
 func (e *POSTGetSessionTokenVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-06-15":
-		*e = POSTGetSessionTokenVersionEnum(s)
+		*e = POSTGetSessionTokenVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetSessionTokenVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetSessionTokenVersionEnum: %v", v)
 	}
 }
 

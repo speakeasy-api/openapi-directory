@@ -2,33 +2,30 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ApplyYaraRulesRequestBody{
+    ctx := context.Background()
+    res, err := s.ApplyYaraRules(ctx, operations.ApplyYaraRulesRequestBody{
         File: operations.ApplyYaraRulesRequestBodyFile{
             Content: []byte("corrupti"),
             File: "provident",
         },
-        IsUnpackingRequired: "false",
+        IsUnpackingRequired: operations.ApplyYaraRulesRequestBodyIsUnpackingRequiredEnumFalse.ToPointer(),
         Rules: []string{
             "unde",
             "nulla",
             "corrupti",
             "illum",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.ApplyYaraRules(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

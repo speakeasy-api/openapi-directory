@@ -2,7 +2,7 @@
 
 package shared
 
-// OpenHours - The time when journey allow to send messages. QuietTime should be configured first and SendingSchedule should be set to true.
+// OpenHours - Specifies the times when message are allowed to be sent to endpoints.
 type OpenHours struct {
 	Custom map[string][]OpenHoursRule `json:"CUSTOM,omitempty"`
 	Email  map[string][]OpenHoursRule `json:"EMAIL,omitempty"`

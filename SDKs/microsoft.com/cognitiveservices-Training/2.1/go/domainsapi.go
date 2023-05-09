@@ -36,7 +36,10 @@ func newDomainsAPI(defaultClient, securityClient HTTPClient, serverURL, language
 // GetDomain - Get information about a specific domain
 func (s *domainsAPI) GetDomain(ctx context.Context, request operations.GetDomainRequest) (*operations.GetDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type SocialGetFriendListSecurity struct {
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 // SocialGetFriendList200Wildcard - Look at the Response property for more information about the nature of this response
 type SocialGetFriendList200Wildcard struct {
 	DetailedErrorTrace *string

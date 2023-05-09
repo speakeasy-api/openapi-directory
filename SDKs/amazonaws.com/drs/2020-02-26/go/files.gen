@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -12,13 +13,16 @@ pkg/utils/retries.go
 pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/createextendedsourceserver.go
+pkg/models/operations/createlaunchconfigurationtemplate.go
 pkg/models/operations/createreplicationconfigurationtemplate.go
 pkg/models/operations/deletejob.go
+pkg/models/operations/deletelaunchconfigurationtemplate.go
 pkg/models/operations/deleterecoveryinstance.go
 pkg/models/operations/deletereplicationconfigurationtemplate.go
 pkg/models/operations/deletesourceserver.go
 pkg/models/operations/describejoblogitems.go
 pkg/models/operations/describejobs.go
+pkg/models/operations/describelaunchconfigurationtemplates.go
 pkg/models/operations/describerecoveryinstances.go
 pkg/models/operations/describerecoverysnapshots.go
 pkg/models/operations/describereplicationconfigurationtemplates.go
@@ -44,6 +48,7 @@ pkg/models/operations/terminaterecoveryinstances.go
 pkg/models/operations/untagresource.go
 pkg/models/operations/updatefailbackreplicationconfiguration.go
 pkg/models/operations/updatelaunchconfiguration.go
+pkg/models/operations/updatelaunchconfigurationtemplate.go
 pkg/models/operations/updatereplicationconfiguration.go
 pkg/models/operations/updatereplicationconfigurationtemplate.go
 pkg/models/shared/createextendedsourceserverresponse.go
@@ -73,6 +78,11 @@ pkg/models/shared/datareplicationinitiationstepstatusenum.go
 pkg/models/shared/datareplicationinitiationstepnameenum.go
 pkg/models/shared/datareplicationerror.go
 pkg/models/shared/datareplicationerrorstringenum.go
+pkg/models/shared/createlaunchconfigurationtemplateresponse.go
+pkg/models/shared/launchconfigurationtemplate.go
+pkg/models/shared/targetinstancetyperightsizingmethodenum.go
+pkg/models/shared/licensing.go
+pkg/models/shared/launchdispositionenum.go
 pkg/models/shared/replicationconfigurationtemplate.go
 pkg/models/shared/pitpolicyrule.go
 pkg/models/shared/pitpolicyruleunitsenum.go
@@ -90,6 +100,7 @@ pkg/models/shared/jobtypeenum.go
 pkg/models/shared/jobstatusenum.go
 pkg/models/shared/participatingserver.go
 pkg/models/shared/initiatedbyenum.go
+pkg/models/shared/describelaunchconfigurationtemplatesresponse.go
 pkg/models/shared/describerecoveryinstancesresponse.go
 pkg/models/shared/recoveryinstance.go
 pkg/models/shared/recoveryinstanceproperties.go
@@ -114,9 +125,6 @@ pkg/models/shared/describereplicationconfigurationtemplatesresponse.go
 pkg/models/shared/describesourceserversresponse.go
 pkg/models/shared/getfailbackreplicationconfigurationresponse.go
 pkg/models/shared/launchconfiguration.go
-pkg/models/shared/targetinstancetyperightsizingmethodenum.go
-pkg/models/shared/licensing.go
-pkg/models/shared/launchdispositionenum.go
 pkg/models/shared/replicationconfiguration.go
 pkg/models/shared/replicationconfigurationreplicateddisk.go
 pkg/models/shared/replicationconfigurationreplicateddiskstagingdisktypeenum.go
@@ -132,5 +140,7 @@ pkg/models/shared/startrecoveryrequestsourceserver.go
 pkg/models/shared/startreplicationresponse.go
 pkg/models/shared/stopreplicationresponse.go
 pkg/models/shared/terminaterecoveryinstancesresponse.go
+pkg/models/shared/updatelaunchconfigurationtemplateresponse.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

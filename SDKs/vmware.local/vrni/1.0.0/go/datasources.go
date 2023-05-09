@@ -846,7 +846,10 @@ func (s *dataSources) AddVcenterDatasource(ctx context.Context, request shared.V
 // Delete an arista switch data source
 func (s *dataSources) DeleteAristaSwitch(ctx context.Context, request operations.DeleteAristaSwitchRequest, security operations.DeleteAristaSwitchSecurity) (*operations.DeleteAristaSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -888,7 +891,10 @@ func (s *dataSources) DeleteAristaSwitch(ctx context.Context, request operations
 // Delete a brocade switch data source
 func (s *dataSources) DeleteBrocadeSwitch(ctx context.Context, request operations.DeleteBrocadeSwitchRequest, security operations.DeleteBrocadeSwitchSecurity) (*operations.DeleteBrocadeSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -930,7 +936,10 @@ func (s *dataSources) DeleteBrocadeSwitch(ctx context.Context, request operation
 // Delete a checkpoint firewall data source
 func (s *dataSources) DeleteCheckpointFirewall(ctx context.Context, request operations.DeleteCheckpointFirewallRequest, security operations.DeleteCheckpointFirewallSecurity) (*operations.DeleteCheckpointFirewallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/checkpoint-firewalls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/checkpoint-firewalls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -972,7 +981,10 @@ func (s *dataSources) DeleteCheckpointFirewall(ctx context.Context, request oper
 // Delete a cisco switch data source
 func (s *dataSources) DeleteCiscoSwitch(ctx context.Context, request operations.DeleteCiscoSwitchRequest, security operations.DeleteCiscoSwitchSecurity) (*operations.DeleteCiscoSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1014,7 +1026,10 @@ func (s *dataSources) DeleteCiscoSwitch(ctx context.Context, request operations.
 // Delete a data source
 func (s *dataSources) DeleteDellSwitch(ctx context.Context, request operations.DeleteDellSwitchRequest, security operations.DeleteDellSwitchSecurity) (*operations.DeleteDellSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1056,7 +1071,10 @@ func (s *dataSources) DeleteDellSwitch(ctx context.Context, request operations.D
 // Delete a hp oneview data source
 func (s *dataSources) DeleteHpovManager(ctx context.Context, request operations.DeleteHpovManagerRequest, security operations.DeleteHpovManagerSecurity) (*operations.DeleteHpovManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/hpov-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/hpov-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1098,7 +1116,10 @@ func (s *dataSources) DeleteHpovManager(ctx context.Context, request operations.
 // Delete a hpvc manager data source
 func (s *dataSources) DeleteHpvcManager(ctx context.Context, request operations.DeleteHpvcManagerRequest, security operations.DeleteHpvcManagerSecurity) (*operations.DeleteHpvcManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/hpvc-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/hpvc-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1140,7 +1161,10 @@ func (s *dataSources) DeleteHpvcManager(ctx context.Context, request operations.
 // Delete a juniper switch data source
 func (s *dataSources) DeleteJuniperSwitch(ctx context.Context, request operations.DeleteJuniperSwitchRequest, security operations.DeleteJuniperSwitchSecurity) (*operations.DeleteJuniperSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1182,7 +1206,10 @@ func (s *dataSources) DeleteJuniperSwitch(ctx context.Context, request operation
 // Delete a nsx-v manager data source
 func (s *dataSources) DeleteNsxvManager(ctx context.Context, request operations.DeleteNsxvManagerRequest, security operations.DeleteNsxvManagerSecurity) (*operations.DeleteNsxvManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1224,7 +1251,10 @@ func (s *dataSources) DeleteNsxvManager(ctx context.Context, request operations.
 // Delete a panorama firewall data source
 func (s *dataSources) DeletePanoramaFirewall(ctx context.Context, request operations.DeletePanoramaFirewallRequest, security operations.DeletePanoramaFirewallSecurity) (*operations.DeletePanoramaFirewallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/panorama-firewalls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/panorama-firewalls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1266,7 +1296,10 @@ func (s *dataSources) DeletePanoramaFirewall(ctx context.Context, request operat
 // Delete an ucs manager data source
 func (s *dataSources) DeleteUcsManager(ctx context.Context, request operations.DeleteUcsManagerRequest, security operations.DeleteUcsManagerSecurity) (*operations.DeleteUcsManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1308,7 +1341,10 @@ func (s *dataSources) DeleteUcsManager(ctx context.Context, request operations.D
 // Delete a data source
 func (s *dataSources) DeleteVcenter(ctx context.Context, request operations.DeleteVcenterRequest, security operations.DeleteVcenterSecurity) (*operations.DeleteVcenterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/vcenters/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/vcenters/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1350,7 +1386,10 @@ func (s *dataSources) DeleteVcenter(ctx context.Context, request operations.Dele
 // Disable an arista switch data source
 func (s *dataSources) DisableAristaSwitch(ctx context.Context, request operations.DisableAristaSwitchRequest, security operations.DisableAristaSwitchSecurity) (*operations.DisableAristaSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1393,7 +1432,10 @@ func (s *dataSources) DisableAristaSwitch(ctx context.Context, request operation
 // DisableBrocadeSwitch - Disable a brocade switch data source
 func (s *dataSources) DisableBrocadeSwitch(ctx context.Context, request operations.DisableBrocadeSwitchRequest, security operations.DisableBrocadeSwitchSecurity) (*operations.DisableBrocadeSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1437,7 +1479,10 @@ func (s *dataSources) DisableBrocadeSwitch(ctx context.Context, request operatio
 // Disable a checkpoint firewall data source
 func (s *dataSources) DisableCheckpointFirewall(ctx context.Context, request operations.DisableCheckpointFirewallRequest, security operations.DisableCheckpointFirewallSecurity) (*operations.DisableCheckpointFirewallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/checkpoint-firewalls/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/checkpoint-firewalls/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1481,7 +1526,10 @@ func (s *dataSources) DisableCheckpointFirewall(ctx context.Context, request ope
 // Disable a cisco switch data source
 func (s *dataSources) DisableCiscoSwitch(ctx context.Context, request operations.DisableCiscoSwitchRequest, security operations.DisableCiscoSwitchSecurity) (*operations.DisableCiscoSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1525,7 +1573,10 @@ func (s *dataSources) DisableCiscoSwitch(ctx context.Context, request operations
 // Disable a dell switch data source
 func (s *dataSources) DisableDellSwitch(ctx context.Context, request operations.DisableDellSwitchRequest, security operations.DisableDellSwitchSecurity) (*operations.DisableDellSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1569,7 +1620,10 @@ func (s *dataSources) DisableDellSwitch(ctx context.Context, request operations.
 // Disable a hp oneview data source
 func (s *dataSources) DisableHpovManager(ctx context.Context, request operations.DisableHpovManagerRequest, security operations.DisableHpovManagerSecurity) (*operations.DisableHpovManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/hpov-managers/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/hpov-managers/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1613,7 +1667,10 @@ func (s *dataSources) DisableHpovManager(ctx context.Context, request operations
 // Disable a hpvc manager data source
 func (s *dataSources) DisableHpvcManager(ctx context.Context, request operations.DisableHpvcManagerRequest, security operations.DisableHpvcManagerSecurity) (*operations.DisableHpvcManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/hpvc-managers/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/hpvc-managers/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1657,7 +1714,10 @@ func (s *dataSources) DisableHpvcManager(ctx context.Context, request operations
 // Disable a juniper switch data source
 func (s *dataSources) DisableJuniperSwitch(ctx context.Context, request operations.DisableJuniperSwitchRequest, security operations.DisableJuniperSwitchSecurity) (*operations.DisableJuniperSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1701,7 +1761,10 @@ func (s *dataSources) DisableJuniperSwitch(ctx context.Context, request operatio
 // Disable a nsx-v manager data source
 func (s *dataSources) DisableNsxvManager(ctx context.Context, request operations.DisableNsxvManagerRequest, security operations.DisableNsxvManagerSecurity) (*operations.DisableNsxvManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1745,7 +1808,10 @@ func (s *dataSources) DisableNsxvManager(ctx context.Context, request operations
 // Disable a panorama firewall data source
 func (s *dataSources) DisablePanoramaFirewall(ctx context.Context, request operations.DisablePanoramaFirewallRequest, security operations.DisablePanoramaFirewallSecurity) (*operations.DisablePanoramaFirewallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/panorama-firewalls/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/panorama-firewalls/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1789,7 +1855,10 @@ func (s *dataSources) DisablePanoramaFirewall(ctx context.Context, request opera
 // Disable an ucs manager data source
 func (s *dataSources) DisableUcsManager(ctx context.Context, request operations.DisableUcsManagerRequest, security operations.DisableUcsManagerSecurity) (*operations.DisableUcsManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1833,7 +1902,10 @@ func (s *dataSources) DisableUcsManager(ctx context.Context, request operations.
 // Disable a vCenter data source
 func (s *dataSources) DisableVcenter(ctx context.Context, request operations.DisableVcenterRequest, security operations.DisableVcenterSecurity) (*operations.DisableVcenterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/vcenters/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/vcenters/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1877,7 +1949,10 @@ func (s *dataSources) DisableVcenter(ctx context.Context, request operations.Dis
 // Enable an arista switch data source
 func (s *dataSources) EnableAristaSwitch(ctx context.Context, request operations.EnableAristaSwitchRequest, security operations.EnableAristaSwitchSecurity) (*operations.EnableAristaSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1920,7 +1995,10 @@ func (s *dataSources) EnableAristaSwitch(ctx context.Context, request operations
 // EnableBrocadeSwitch - Enable a brocade switch data source
 func (s *dataSources) EnableBrocadeSwitch(ctx context.Context, request operations.EnableBrocadeSwitchRequest, security operations.EnableBrocadeSwitchSecurity) (*operations.EnableBrocadeSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1964,7 +2042,10 @@ func (s *dataSources) EnableBrocadeSwitch(ctx context.Context, request operation
 // Enable a checkpoint firewall data source
 func (s *dataSources) EnableCheckpointFirewall(ctx context.Context, request operations.EnableCheckpointFirewallRequest, security operations.EnableCheckpointFirewallSecurity) (*operations.EnableCheckpointFirewallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/checkpoint-firewalls/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/checkpoint-firewalls/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2008,7 +2089,10 @@ func (s *dataSources) EnableCheckpointFirewall(ctx context.Context, request oper
 // Enable a cisco switch data source
 func (s *dataSources) EnableCiscoSwitch(ctx context.Context, request operations.EnableCiscoSwitchRequest, security operations.EnableCiscoSwitchSecurity) (*operations.EnableCiscoSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2052,7 +2136,10 @@ func (s *dataSources) EnableCiscoSwitch(ctx context.Context, request operations.
 // Enable a dell switch data source
 func (s *dataSources) EnableDellSwitch(ctx context.Context, request operations.EnableDellSwitchRequest, security operations.EnableDellSwitchSecurity) (*operations.EnableDellSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2096,7 +2183,10 @@ func (s *dataSources) EnableDellSwitch(ctx context.Context, request operations.E
 // Enable a hp oneview data source
 func (s *dataSources) EnableHpovManager(ctx context.Context, request operations.EnableHpovManagerRequest, security operations.EnableHpovManagerSecurity) (*operations.EnableHpovManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/hpov-managers/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/hpov-managers/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2140,7 +2230,10 @@ func (s *dataSources) EnableHpovManager(ctx context.Context, request operations.
 // Enable a hpvc manager data source
 func (s *dataSources) EnableHpvcManager(ctx context.Context, request operations.EnableHpvcManagerRequest, security operations.EnableHpvcManagerSecurity) (*operations.EnableHpvcManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/hpvc-managers/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/hpvc-managers/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2184,7 +2277,10 @@ func (s *dataSources) EnableHpvcManager(ctx context.Context, request operations.
 // Enable a juniper switch data source
 func (s *dataSources) EnableJuniperSwitch(ctx context.Context, request operations.EnableJuniperSwitchRequest, security operations.EnableJuniperSwitchSecurity) (*operations.EnableJuniperSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2228,7 +2324,10 @@ func (s *dataSources) EnableJuniperSwitch(ctx context.Context, request operation
 // Enable a nsx-v manager data source
 func (s *dataSources) EnableNsxvManager(ctx context.Context, request operations.EnableNsxvManagerRequest, security operations.EnableNsxvManagerSecurity) (*operations.EnableNsxvManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2272,7 +2371,10 @@ func (s *dataSources) EnableNsxvManager(ctx context.Context, request operations.
 // Enable a panorama firewall data source
 func (s *dataSources) EnablePanoramaFirewall(ctx context.Context, request operations.EnablePanoramaFirewallRequest, security operations.EnablePanoramaFirewallSecurity) (*operations.EnablePanoramaFirewallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/panorama-firewalls/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/panorama-firewalls/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2316,7 +2418,10 @@ func (s *dataSources) EnablePanoramaFirewall(ctx context.Context, request operat
 // Enable an ucs manager data source
 func (s *dataSources) EnableUcsManager(ctx context.Context, request operations.EnableUcsManagerRequest, security operations.EnableUcsManagerSecurity) (*operations.EnableUcsManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2360,7 +2465,10 @@ func (s *dataSources) EnableUcsManager(ctx context.Context, request operations.E
 // Enable a vCenter data source
 func (s *dataSources) EnableVcenter(ctx context.Context, request operations.EnableVcenterRequest, security operations.EnableVcenterSecurity) (*operations.EnableVcenterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/vcenters/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/vcenters/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2404,7 +2512,10 @@ func (s *dataSources) EnableVcenter(ctx context.Context, request operations.Enab
 // Show arista switch data source details
 func (s *dataSources) GetAristaSwitch(ctx context.Context, request operations.GetAristaSwitchRequest, security operations.GetAristaSwitchSecurity) (*operations.GetAristaSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2456,7 +2567,10 @@ func (s *dataSources) GetAristaSwitch(ctx context.Context, request operations.Ge
 // Show snmp config for arista switch data source
 func (s *dataSources) GetAristaSwitchSnmpConfig(ctx context.Context, request operations.GetAristaSwitchSnmpConfigRequest, security operations.GetAristaSwitchSnmpConfigSecurity) (*operations.GetAristaSwitchSnmpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}/snmp-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}/snmp-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2508,7 +2622,10 @@ func (s *dataSources) GetAristaSwitchSnmpConfig(ctx context.Context, request ope
 // Show brocade switch data source details
 func (s *dataSources) GetBrocadeSwitch(ctx context.Context, request operations.GetBrocadeSwitchRequest, security operations.GetBrocadeSwitchSecurity) (*operations.GetBrocadeSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2560,7 +2677,10 @@ func (s *dataSources) GetBrocadeSwitch(ctx context.Context, request operations.G
 // Show snmp config for brocade switch data source
 func (s *dataSources) GetBrocadeSwitchSnmpConfig(ctx context.Context, request operations.GetBrocadeSwitchSnmpConfigRequest, security operations.GetBrocadeSwitchSnmpConfigSecurity) (*operations.GetBrocadeSwitchSnmpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}/snmp-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}/snmp-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2612,7 +2732,10 @@ func (s *dataSources) GetBrocadeSwitchSnmpConfig(ctx context.Context, request op
 // Show checkpoint firewall data source details
 func (s *dataSources) GetCheckpointFirewall(ctx context.Context, request operations.GetCheckpointFirewallRequest, security operations.GetCheckpointFirewallSecurity) (*operations.GetCheckpointFirewallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/checkpoint-firewalls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/checkpoint-firewalls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2664,7 +2787,10 @@ func (s *dataSources) GetCheckpointFirewall(ctx context.Context, request operati
 // Show cisco switch data source details
 func (s *dataSources) GetCiscoSwitch(ctx context.Context, request operations.GetCiscoSwitchRequest, security operations.GetCiscoSwitchSecurity) (*operations.GetCiscoSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2716,7 +2842,10 @@ func (s *dataSources) GetCiscoSwitch(ctx context.Context, request operations.Get
 // Show snmp config for cisco switch data source
 func (s *dataSources) GetCiscoSwitchSnmpConfig(ctx context.Context, request operations.GetCiscoSwitchSnmpConfigRequest, security operations.GetCiscoSwitchSnmpConfigSecurity) (*operations.GetCiscoSwitchSnmpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}/snmp-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}/snmp-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2768,7 +2897,10 @@ func (s *dataSources) GetCiscoSwitchSnmpConfig(ctx context.Context, request oper
 // Get a dell switch data source details
 func (s *dataSources) GetDellSwitch(ctx context.Context, request operations.GetDellSwitchRequest, security operations.GetDellSwitchSecurity) (*operations.GetDellSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2820,7 +2952,10 @@ func (s *dataSources) GetDellSwitch(ctx context.Context, request operations.GetD
 // Show snmp config for dell switch data source
 func (s *dataSources) GetDellSwitchSnmpConfig(ctx context.Context, request operations.GetDellSwitchSnmpConfigRequest, security operations.GetDellSwitchSnmpConfigSecurity) (*operations.GetDellSwitchSnmpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}/snmp-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}/snmp-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2870,7 +3005,10 @@ func (s *dataSources) GetDellSwitchSnmpConfig(ctx context.Context, request opera
 // Show hp oneview data source details
 func (s *dataSources) GetHpovManager(ctx context.Context, request operations.GetHpovManagerRequest, security operations.GetHpovManagerSecurity) (*operations.GetHpovManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/hpov-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/hpov-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2922,7 +3060,10 @@ func (s *dataSources) GetHpovManager(ctx context.Context, request operations.Get
 // Show hpvc data source details
 func (s *dataSources) GetHpvcManager(ctx context.Context, request operations.GetHpvcManagerRequest, security operations.GetHpvcManagerSecurity) (*operations.GetHpvcManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/hpvc-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/hpvc-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2974,7 +3115,10 @@ func (s *dataSources) GetHpvcManager(ctx context.Context, request operations.Get
 // Show juniper switch data source details
 func (s *dataSources) GetJuniperSwitch(ctx context.Context, request operations.GetJuniperSwitchRequest, security operations.GetJuniperSwitchSecurity) (*operations.GetJuniperSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3026,7 +3170,10 @@ func (s *dataSources) GetJuniperSwitch(ctx context.Context, request operations.G
 // Show snmp config for juniper switch data source
 func (s *dataSources) GetJuniperSwitchSnmpConfig(ctx context.Context, request operations.GetJuniperSwitchSnmpConfigRequest, security operations.GetJuniperSwitchSnmpConfigSecurity) (*operations.GetJuniperSwitchSnmpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}/snmp-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}/snmp-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3078,7 +3225,10 @@ func (s *dataSources) GetJuniperSwitchSnmpConfig(ctx context.Context, request op
 // Show nsx controller-cluster details
 func (s *dataSources) GetNsxvControllerCluster(ctx context.Context, request operations.GetNsxvControllerClusterRequest, security operations.GetNsxvControllerClusterSecurity) (*operations.GetNsxvControllerClusterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}/controller-cluster", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}/controller-cluster", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3130,7 +3280,10 @@ func (s *dataSources) GetNsxvControllerCluster(ctx context.Context, request oper
 // Show nsx-v manager data source details
 func (s *dataSources) GetNsxvManager(ctx context.Context, request operations.GetNsxvManagerRequest, security operations.GetNsxvManagerSecurity) (*operations.GetNsxvManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3182,7 +3335,10 @@ func (s *dataSources) GetNsxvManager(ctx context.Context, request operations.Get
 // Show panorama firewall data source details
 func (s *dataSources) GetPanoramaFirewall(ctx context.Context, request operations.GetPanoramaFirewallRequest, security operations.GetPanoramaFirewallSecurity) (*operations.GetPanoramaFirewallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/panorama-firewalls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/panorama-firewalls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3234,7 +3390,10 @@ func (s *dataSources) GetPanoramaFirewall(ctx context.Context, request operation
 // Show ucs manager data source details
 func (s *dataSources) GetUcsManager(ctx context.Context, request operations.GetUcsManagerRequest, security operations.GetUcsManagerSecurity) (*operations.GetUcsManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3286,7 +3445,10 @@ func (s *dataSources) GetUcsManager(ctx context.Context, request operations.GetU
 // Show snmp config for ucs fabric interconnects
 func (s *dataSources) GetUcsSnmpConfig(ctx context.Context, request operations.GetUcsSnmpConfigRequest, security operations.GetUcsSnmpConfigSecurity) (*operations.GetUcsSnmpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}/snmp-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}/snmp-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3338,7 +3500,10 @@ func (s *dataSources) GetUcsSnmpConfig(ctx context.Context, request operations.G
 // Show vCenter data source details
 func (s *dataSources) GetVcenter(ctx context.Context, request operations.GetVcenterRequest, security operations.GetVcenterSecurity) (*operations.GetVcenterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/vcenters/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/vcenters/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3388,7 +3553,7 @@ func (s *dataSources) GetVcenter(ctx context.Context, request operations.GetVcen
 
 // ListAristaSwitches - List arista switch data sources
 // List arista switch data sources
-func (s *dataSources) ListAristaSwitches(ctx context.Context) (*operations.ListAristaSwitchesResponse, error) {
+func (s *dataSources) ListAristaSwitches(ctx context.Context, security operations.ListAristaSwitchesSecurity) (*operations.ListAristaSwitchesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data-sources/arista-switches"
 
@@ -3397,7 +3562,7 @@ func (s *dataSources) ListAristaSwitches(ctx context.Context) (*operations.ListA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3438,7 +3603,7 @@ func (s *dataSources) ListAristaSwitches(ctx context.Context) (*operations.ListA
 
 // ListBrocadeSwitches - List brocade switch data sources
 // List brocade switch data sources
-func (s *dataSources) ListBrocadeSwitches(ctx context.Context) (*operations.ListBrocadeSwitchesResponse, error) {
+func (s *dataSources) ListBrocadeSwitches(ctx context.Context, security operations.ListBrocadeSwitchesSecurity) (*operations.ListBrocadeSwitchesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data-sources/brocade-switches"
 
@@ -3447,7 +3612,7 @@ func (s *dataSources) ListBrocadeSwitches(ctx context.Context) (*operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3488,7 +3653,7 @@ func (s *dataSources) ListBrocadeSwitches(ctx context.Context) (*operations.List
 
 // ListCheckpointFirewalls - List checkpoint firewall data sources
 // List checkpoint firewall data sources
-func (s *dataSources) ListCheckpointFirewalls(ctx context.Context) (*operations.ListCheckpointFirewallsResponse, error) {
+func (s *dataSources) ListCheckpointFirewalls(ctx context.Context, security operations.ListCheckpointFirewallsSecurity) (*operations.ListCheckpointFirewallsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data-sources/checkpoint-firewalls"
 
@@ -3497,7 +3662,7 @@ func (s *dataSources) ListCheckpointFirewalls(ctx context.Context) (*operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3538,7 +3703,7 @@ func (s *dataSources) ListCheckpointFirewalls(ctx context.Context) (*operations.
 
 // ListCiscoSwitches - List cisco switch data sources
 // List cisco switch data sources
-func (s *dataSources) ListCiscoSwitches(ctx context.Context) (*operations.ListCiscoSwitchesResponse, error) {
+func (s *dataSources) ListCiscoSwitches(ctx context.Context, security operations.ListCiscoSwitchesSecurity) (*operations.ListCiscoSwitchesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data-sources/cisco-switches"
 
@@ -3547,7 +3712,7 @@ func (s *dataSources) ListCiscoSwitches(ctx context.Context) (*operations.ListCi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3588,7 +3753,7 @@ func (s *dataSources) ListCiscoSwitches(ctx context.Context) (*operations.ListCi
 
 // ListDellSwitches - List dell switch data sources
 // List dell switch data sources
-func (s *dataSources) ListDellSwitches(ctx context.Context) (*operations.ListDellSwitchesResponse, error) {
+func (s *dataSources) ListDellSwitches(ctx context.Context, security operations.ListDellSwitchesSecurity) (*operations.ListDellSwitchesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data-sources/dell-switches"
 
@@ -3597,7 +3762,7 @@ func (s *dataSources) ListDellSwitches(ctx context.Context) (*operations.ListDel
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3638,7 +3803,7 @@ func (s *dataSources) ListDellSwitches(ctx context.Context) (*operations.ListDel
 
 // ListHpovManagers - List hp oneview manager data sources
 // List hp oneview manager data sources
-func (s *dataSources) ListHpovManagers(ctx context.Context) (*operations.ListHpovManagersResponse, error) {
+func (s *dataSources) ListHpovManagers(ctx context.Context, security operations.ListHpovManagersSecurity) (*operations.ListHpovManagersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data-sources/hpov-managers"
 
@@ -3647,7 +3812,7 @@ func (s *dataSources) ListHpovManagers(ctx context.Context) (*operations.ListHpo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3688,7 +3853,7 @@ func (s *dataSources) ListHpovManagers(ctx context.Context) (*operations.ListHpo
 
 // ListHpvcManagers - List hpvc manager data sources
 // List hpvc manager data sources
-func (s *dataSources) ListHpvcManagers(ctx context.Context) (*operations.ListHpvcManagersResponse, error) {
+func (s *dataSources) ListHpvcManagers(ctx context.Context, security operations.ListHpvcManagersSecurity) (*operations.ListHpvcManagersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data-sources/hpvc-managers"
 
@@ -3697,7 +3862,7 @@ func (s *dataSources) ListHpvcManagers(ctx context.Context) (*operations.ListHpv
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3738,7 +3903,7 @@ func (s *dataSources) ListHpvcManagers(ctx context.Context) (*operations.ListHpv
 
 // ListJuniperSwitches - List juniper switch data sources
 // List juniper switch data sources
-func (s *dataSources) ListJuniperSwitches(ctx context.Context) (*operations.ListJuniperSwitchesResponse, error) {
+func (s *dataSources) ListJuniperSwitches(ctx context.Context, security operations.ListJuniperSwitchesSecurity) (*operations.ListJuniperSwitchesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data-sources/juniper-switches"
 
@@ -3747,7 +3912,7 @@ func (s *dataSources) ListJuniperSwitches(ctx context.Context) (*operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3788,7 +3953,7 @@ func (s *dataSources) ListJuniperSwitches(ctx context.Context) (*operations.List
 
 // ListNsxvManagers - List nsx-v manager data sources
 // List nsx-v manager data sources
-func (s *dataSources) ListNsxvManagers(ctx context.Context) (*operations.ListNsxvManagersResponse, error) {
+func (s *dataSources) ListNsxvManagers(ctx context.Context, security operations.ListNsxvManagersSecurity) (*operations.ListNsxvManagersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data-sources/nsxv-managers"
 
@@ -3797,7 +3962,7 @@ func (s *dataSources) ListNsxvManagers(ctx context.Context) (*operations.ListNsx
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3838,7 +4003,7 @@ func (s *dataSources) ListNsxvManagers(ctx context.Context) (*operations.ListNsx
 
 // ListPanoramaFirewalls - List panorama firewall data sources
 // List panorama firewall data sources
-func (s *dataSources) ListPanoramaFirewalls(ctx context.Context) (*operations.ListPanoramaFirewallsResponse, error) {
+func (s *dataSources) ListPanoramaFirewalls(ctx context.Context, security operations.ListPanoramaFirewallsSecurity) (*operations.ListPanoramaFirewallsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data-sources/panorama-firewalls"
 
@@ -3847,7 +4012,7 @@ func (s *dataSources) ListPanoramaFirewalls(ctx context.Context) (*operations.Li
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3888,7 +4053,7 @@ func (s *dataSources) ListPanoramaFirewalls(ctx context.Context) (*operations.Li
 
 // ListUcsManagers - List ucs manager data sources
 // List ucs manager data sources
-func (s *dataSources) ListUcsManagers(ctx context.Context) (*operations.ListUcsManagersResponse, error) {
+func (s *dataSources) ListUcsManagers(ctx context.Context, security operations.ListUcsManagersSecurity) (*operations.ListUcsManagersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data-sources/ucs-managers"
 
@@ -3897,7 +4062,7 @@ func (s *dataSources) ListUcsManagers(ctx context.Context) (*operations.ListUcsM
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3938,7 +4103,7 @@ func (s *dataSources) ListUcsManagers(ctx context.Context) (*operations.ListUcsM
 
 // ListVcenters - List vCenter data sources
 // List vCenter data sources
-func (s *dataSources) ListVcenters(ctx context.Context) (*operations.ListVcentersResponse, error) {
+func (s *dataSources) ListVcenters(ctx context.Context, security operations.ListVcentersSecurity) (*operations.ListVcentersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/data-sources/vcenters"
 
@@ -3947,7 +4112,7 @@ func (s *dataSources) ListVcenters(ctx context.Context) (*operations.ListVcenter
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3990,7 +4155,10 @@ func (s *dataSources) ListVcenters(ctx context.Context) (*operations.ListVcenter
 // Update an switch data source
 func (s *dataSources) UpdateAristaSwitch(ctx context.Context, request operations.UpdateAristaSwitchRequest, security operations.UpdateAristaSwitchSecurity) (*operations.UpdateAristaSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SwitchDataSource", "json")
 	if err != nil {
@@ -4059,7 +4227,10 @@ func (s *dataSources) UpdateAristaSwitch(ctx context.Context, request operations
 // Update snmp config for arista switch data source
 func (s *dataSources) UpdateAristaSwitchSnmpConfig(ctx context.Context, request operations.UpdateAristaSwitchSnmpConfigRequest, security operations.UpdateAristaSwitchSnmpConfigSecurity) (*operations.UpdateAristaSwitchSnmpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}/snmp-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/arista-switches/{id}/snmp-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SNMPConfig", "json")
 	if err != nil {
@@ -4128,7 +4299,10 @@ func (s *dataSources) UpdateAristaSwitchSnmpConfig(ctx context.Context, request 
 // Update a brocade switch data source. Only credentials, nickname and notes can be updated.
 func (s *dataSources) UpdateBrocadeSwitch(ctx context.Context, request operations.UpdateBrocadeSwitchRequest, security operations.UpdateBrocadeSwitchSecurity) (*operations.UpdateBrocadeSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SwitchDataSource", "json")
 	if err != nil {
@@ -4197,7 +4371,10 @@ func (s *dataSources) UpdateBrocadeSwitch(ctx context.Context, request operation
 // Update snmp config for brocade switch data source
 func (s *dataSources) UpdateBrocadeSwitchSnmpConfig(ctx context.Context, request operations.UpdateBrocadeSwitchSnmpConfigRequest, security operations.UpdateBrocadeSwitchSnmpConfigSecurity) (*operations.UpdateBrocadeSwitchSnmpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}/snmp-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/brocade-switches/{id}/snmp-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SNMPConfig", "json")
 	if err != nil {
@@ -4266,7 +4443,10 @@ func (s *dataSources) UpdateBrocadeSwitchSnmpConfig(ctx context.Context, request
 // Update a checkpoint firewall data source
 func (s *dataSources) UpdateCheckpointFirewall(ctx context.Context, request operations.UpdateCheckpointFirewallRequest, security operations.UpdateCheckpointFirewallSecurity) (*operations.UpdateCheckpointFirewallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/checkpoint-firewalls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/checkpoint-firewalls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SwitchDataSource", "json")
 	if err != nil {
@@ -4335,7 +4515,10 @@ func (s *dataSources) UpdateCheckpointFirewall(ctx context.Context, request oper
 // Update a cisco switch data source. Only credentials, nickname and notes can be updated.
 func (s *dataSources) UpdateCiscoSwitch(ctx context.Context, request operations.UpdateCiscoSwitchRequest, security operations.UpdateCiscoSwitchSecurity) (*operations.UpdateCiscoSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CiscoSwitchDataSource", "json")
 	if err != nil {
@@ -4404,7 +4587,10 @@ func (s *dataSources) UpdateCiscoSwitch(ctx context.Context, request operations.
 // Update snmp config for cisco switch data source
 func (s *dataSources) UpdateCiscoSwitchSnmpConfig(ctx context.Context, request operations.UpdateCiscoSwitchSnmpConfigRequest, security operations.UpdateCiscoSwitchSnmpConfigSecurity) (*operations.UpdateCiscoSwitchSnmpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}/snmp-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/cisco-switches/{id}/snmp-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SNMPConfig", "json")
 	if err != nil {
@@ -4473,7 +4659,10 @@ func (s *dataSources) UpdateCiscoSwitchSnmpConfig(ctx context.Context, request o
 // Update a dell switch data source. Only credentials, nickname and notes can be updated
 func (s *dataSources) UpdateDellSwitch(ctx context.Context, request operations.UpdateDellSwitchRequest, security operations.UpdateDellSwitchSecurity) (*operations.UpdateDellSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DellSwitchDataSource", "json")
 	if err != nil {
@@ -4542,7 +4731,10 @@ func (s *dataSources) UpdateDellSwitch(ctx context.Context, request operations.U
 // Update snmp config for dell switch data source
 func (s *dataSources) UpdateDellSwitchSnmpConfig(ctx context.Context, request operations.UpdateDellSwitchSnmpConfigRequest, security operations.UpdateDellSwitchSnmpConfigSecurity) (*operations.UpdateDellSwitchSnmpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}/snmp-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/dell-switches/{id}/snmp-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SNMPConfig", "json")
 	if err != nil {
@@ -4611,7 +4803,10 @@ func (s *dataSources) UpdateDellSwitchSnmpConfig(ctx context.Context, request op
 // Update a hp oneview data source
 func (s *dataSources) UpdateHpovManager(ctx context.Context, request operations.UpdateHpovManagerRequest, security operations.UpdateHpovManagerSecurity) (*operations.UpdateHpovManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/hpov-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/hpov-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SwitchDataSource", "json")
 	if err != nil {
@@ -4680,7 +4875,10 @@ func (s *dataSources) UpdateHpovManager(ctx context.Context, request operations.
 // Update a hpvc manager data source
 func (s *dataSources) UpdateHpvcManager(ctx context.Context, request operations.UpdateHpvcManagerRequest, security operations.UpdateHpvcManagerSecurity) (*operations.UpdateHpvcManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/hpvc-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/hpvc-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SwitchDataSource", "json")
 	if err != nil {
@@ -4749,7 +4947,10 @@ func (s *dataSources) UpdateHpvcManager(ctx context.Context, request operations.
 // Update a juniper switch data source
 func (s *dataSources) UpdateJuniperSwitch(ctx context.Context, request operations.UpdateJuniperSwitchRequest, security operations.UpdateJuniperSwitchSecurity) (*operations.UpdateJuniperSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SwitchDataSource", "json")
 	if err != nil {
@@ -4818,7 +5019,10 @@ func (s *dataSources) UpdateJuniperSwitch(ctx context.Context, request operation
 // Update snmp config for a juniper switch data source
 func (s *dataSources) UpdateJuniperSwitchSnmpConfig(ctx context.Context, request operations.UpdateJuniperSwitchSnmpConfigRequest, security operations.UpdateJuniperSwitchSnmpConfigSecurity) (*operations.UpdateJuniperSwitchSnmpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}/snmp-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/juniper-switches/{id}/snmp-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SNMPConfig", "json")
 	if err != nil {
@@ -4887,7 +5091,10 @@ func (s *dataSources) UpdateJuniperSwitchSnmpConfig(ctx context.Context, request
 // Update nsx controller-cluster details
 func (s *dataSources) UpdateNsxvControllerCluster(ctx context.Context, request operations.UpdateNsxvControllerClusterRequest, security operations.UpdateNsxvControllerClusterSecurity) (*operations.UpdateNsxvControllerClusterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}/controller-cluster", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}/controller-cluster", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NSXControllerDataCollection", "json")
 	if err != nil {
@@ -4956,7 +5163,10 @@ func (s *dataSources) UpdateNsxvControllerCluster(ctx context.Context, request o
 // Update a nsx-v manager data source
 func (s *dataSources) UpdateNsxvManager(ctx context.Context, request operations.UpdateNsxvManagerRequest, security operations.UpdateNsxvManagerSecurity) (*operations.UpdateNsxvManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/nsxv-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NSXVManagerDataSource", "json")
 	if err != nil {
@@ -5015,7 +5225,10 @@ func (s *dataSources) UpdateNsxvManager(ctx context.Context, request operations.
 // Update a panorama firewall data source
 func (s *dataSources) UpdatePanoramaFirewall(ctx context.Context, request operations.UpdatePanoramaFirewallRequest, security operations.UpdatePanoramaFirewallSecurity) (*operations.UpdatePanoramaFirewallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/panorama-firewalls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/panorama-firewalls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SwitchDataSource", "json")
 	if err != nil {
@@ -5084,7 +5297,10 @@ func (s *dataSources) UpdatePanoramaFirewall(ctx context.Context, request operat
 // Update an ucs manager data source
 func (s *dataSources) UpdateUcsManager(ctx context.Context, request operations.UpdateUcsManagerRequest, security operations.UpdateUcsManagerSecurity) (*operations.UpdateUcsManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SwitchDataSource", "json")
 	if err != nil {
@@ -5153,7 +5369,10 @@ func (s *dataSources) UpdateUcsManager(ctx context.Context, request operations.U
 // Update snmp config for ucs fabric interconnects
 func (s *dataSources) UpdateUcsSnmpConfig(ctx context.Context, request operations.UpdateUcsSnmpConfigRequest, security operations.UpdateUcsSnmpConfigSecurity) (*operations.UpdateUcsSnmpConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}/snmp-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/ucs-managers/{id}/snmp-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SNMPConfig", "json")
 	if err != nil {
@@ -5222,7 +5441,10 @@ func (s *dataSources) UpdateUcsSnmpConfig(ctx context.Context, request operation
 // Update a vcenter data source. Only nickname, notes and credentials can be updated.
 func (s *dataSources) UpdateVcenter(ctx context.Context, request operations.UpdateVcenterRequest, security operations.UpdateVcenterSecurity) (*operations.UpdateVcenterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data-sources/vcenters/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data-sources/vcenters/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VCenterDataSource", "json")
 	if err != nil {

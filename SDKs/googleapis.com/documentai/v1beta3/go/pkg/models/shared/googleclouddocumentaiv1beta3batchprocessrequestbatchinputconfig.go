@@ -6,6 +6,6 @@ package shared
 type GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchInputConfig struct {
 	// The Cloud Storage location as the source of the document.
 	GcsSource *string `json:"gcsSource,omitempty"`
-	// Mimetype of the input. If the input is a raw document, the supported mimetypes are application/pdf, image/tiff, and image/gif. If the input is a [Document] proto, the type should be application/json.
+	// Media type (MIME type) of the input. If the input is a raw document, refer to [supported file types](https://cloud.google.com/document-ai/docs/file-types) for the list of media types. If the input is a Document, the type should be `application/json`.
 	MimeType *string `json:"mimeType,omitempty"`
 }

@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/balldontlie.io/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AllGamesExampleParametersRequest{
-        Seasons: "2018",
-        TeamIds: "1",
-    }
-
     ctx := context.Background()
-    res, err := s.Games.AllGamesExampleParameters(ctx, req)
+    res, err := s.Games.AllGamesExampleParameters(ctx, operations.AllGamesExampleParametersRequest{
+        Seasons: sdk.String("2018"),
+        TeamIds: sdk.String("1"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,24 +43,24 @@ func main() {
 ## Available Resources and Operations
 
 
-### Games
+### [Games](docs/games/README.md)
 
-* `AllGamesExampleParameters` - all games (example parameters)
-* `SpecificGame` - specific game
+* [AllGamesExampleParameters](docs/games/README.md#allgamesexampleparameters) - all games (example parameters)
+* [SpecificGame](docs/games/README.md#specificgame) - specific game
 
-### Players
+### [Players](docs/players/README.md)
 
-* `AllPlayersSearch` - all players (search)
-* `SpecificPlayer` - specific player
+* [AllPlayersSearch](docs/players/README.md#allplayerssearch) - all players (search)
+* [SpecificPlayer](docs/players/README.md#specificplayer) - specific player
 
-### Stats
+### [Stats](docs/stats/README.md)
 
-* `AllStatsExampleParameters` - all stats (example parameters)
+* [AllStatsExampleParameters](docs/stats/README.md#allstatsexampleparameters) - all stats (example parameters)
 
-### Teams
+### [Teams](docs/teams/README.md)
 
-* `AllTeams` - all teams
-* `SpecificTeam` - specific team
+* [AllTeams](docs/teams/README.md#allteams) - all teams
+* [SpecificTeam](docs/teams/README.md#specificteam) - specific team
 <!-- End SDK Available Operations -->
 
 ### Maturity

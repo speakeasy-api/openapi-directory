@@ -20,12 +20,16 @@ const (
 	ImportJobImportMethodEnumRsaOaep4096Sha256       ImportJobImportMethodEnum = "RSA_OAEP_4096_SHA256"
 )
 
+func (e ImportJobImportMethodEnum) ToPointer() *ImportJobImportMethodEnum {
+	return &e
+}
+
 func (e *ImportJobImportMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORT_METHOD_UNSPECIFIED":
 		fallthrough
 	case "RSA_OAEP_3072_SHA1_AES_256":
@@ -39,10 +43,10 @@ func (e *ImportJobImportMethodEnum) UnmarshalJSON(data []byte) error {
 	case "RSA_OAEP_3072_SHA256":
 		fallthrough
 	case "RSA_OAEP_4096_SHA256":
-		*e = ImportJobImportMethodEnum(s)
+		*e = ImportJobImportMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportJobImportMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportJobImportMethodEnum: %v", v)
 	}
 }
 
@@ -57,12 +61,16 @@ const (
 	ImportJobProtectionLevelEnumExternalVpc                ImportJobProtectionLevelEnum = "EXTERNAL_VPC"
 )
 
+func (e ImportJobProtectionLevelEnum) ToPointer() *ImportJobProtectionLevelEnum {
+	return &e
+}
+
 func (e *ImportJobProtectionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROTECTION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "SOFTWARE":
@@ -72,10 +80,10 @@ func (e *ImportJobProtectionLevelEnum) UnmarshalJSON(data []byte) error {
 	case "EXTERNAL":
 		fallthrough
 	case "EXTERNAL_VPC":
-		*e = ImportJobProtectionLevelEnum(s)
+		*e = ImportJobProtectionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportJobProtectionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportJobProtectionLevelEnum: %v", v)
 	}
 }
 
@@ -89,12 +97,16 @@ const (
 	ImportJobStateEnumExpired                   ImportJobStateEnum = "EXPIRED"
 )
 
+func (e ImportJobStateEnum) ToPointer() *ImportJobStateEnum {
+	return &e
+}
+
 func (e *ImportJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORT_JOB_STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING_GENERATION":
@@ -102,10 +114,10 @@ func (e *ImportJobStateEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE":
 		fallthrough
 	case "EXPIRED":
-		*e = ImportJobStateEnum(s)
+		*e = ImportJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportJobStateEnum: %v", v)
 	}
 }
 

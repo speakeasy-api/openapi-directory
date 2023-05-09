@@ -15,17 +15,21 @@ const (
 	GETModifyIDFormatActionEnumModifyIDFormat GETModifyIDFormatActionEnum = "ModifyIdFormat"
 )
 
+func (e GETModifyIDFormatActionEnum) ToPointer() *GETModifyIDFormatActionEnum {
+	return &e
+}
+
 func (e *GETModifyIDFormatActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyIdFormat":
-		*e = GETModifyIDFormatActionEnum(s)
+		*e = GETModifyIDFormatActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyIDFormatActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyIDFormatActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyIDFormatVersionEnumTwoThousandAndSixteen1115 GETModifyIDFormatVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyIDFormatVersionEnum) ToPointer() *GETModifyIDFormatVersionEnum {
+	return &e
+}
+
 func (e *GETModifyIDFormatVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyIDFormatVersionEnum(s)
+		*e = GETModifyIDFormatVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyIDFormatVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyIDFormatVersionEnum: %v", v)
 	}
 }
 

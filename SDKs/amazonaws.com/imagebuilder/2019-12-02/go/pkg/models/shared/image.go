@@ -11,6 +11,7 @@ type Image struct {
 	DistributionConfiguration    *DistributionConfiguration   `json:"distributionConfiguration,omitempty"`
 	EnhancedImageMetadataEnabled *bool                        `json:"enhancedImageMetadataEnabled,omitempty"`
 	ImageRecipe                  *ImageRecipe                 `json:"imageRecipe,omitempty"`
+	ImageScanningConfiguration   *ImageScanningConfiguration  `json:"imageScanningConfiguration,omitempty"`
 	ImageSource                  *ImageSourceEnum             `json:"imageSource,omitempty"`
 	ImageTestsConfiguration      *ImageTestsConfiguration     `json:"imageTestsConfiguration,omitempty"`
 	InfrastructureConfiguration  *InfrastructureConfiguration `json:"infrastructureConfiguration,omitempty"`
@@ -18,6 +19,7 @@ type Image struct {
 	OsVersion                    *string                      `json:"osVersion,omitempty"`
 	OutputResources              *OutputResources             `json:"outputResources,omitempty"`
 	Platform                     *PlatformEnum                `json:"platform,omitempty"`
+	ScanState                    *ImageScanState              `json:"scanState,omitempty"`
 	SourcePipelineArn            *string                      `json:"sourcePipelineArn,omitempty"`
 	SourcePipelineName           *string                      `json:"sourcePipelineName,omitempty"`
 	State                        *ImageState                  `json:"state,omitempty"`

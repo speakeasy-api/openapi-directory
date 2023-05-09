@@ -16,17 +16,21 @@ const (
 	GetFirewallDomainListXAmzTargetEnumRoute53ResolverGetFirewallDomainList GetFirewallDomainListXAmzTargetEnum = "Route53Resolver.GetFirewallDomainList"
 )
 
+func (e GetFirewallDomainListXAmzTargetEnum) ToPointer() *GetFirewallDomainListXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetFirewallDomainListXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.GetFirewallDomainList":
-		*e = GetFirewallDomainListXAmzTargetEnum(s)
+		*e = GetFirewallDomainListXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFirewallDomainListXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFirewallDomainListXAmzTargetEnum: %v", v)
 	}
 }
 

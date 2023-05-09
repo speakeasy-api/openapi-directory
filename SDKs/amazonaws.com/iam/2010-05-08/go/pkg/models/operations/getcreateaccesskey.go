@@ -15,17 +15,21 @@ const (
 	GETCreateAccessKeyActionEnumCreateAccessKey GETCreateAccessKeyActionEnum = "CreateAccessKey"
 )
 
+func (e GETCreateAccessKeyActionEnum) ToPointer() *GETCreateAccessKeyActionEnum {
+	return &e
+}
+
 func (e *GETCreateAccessKeyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateAccessKey":
-		*e = GETCreateAccessKeyActionEnum(s)
+		*e = GETCreateAccessKeyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateAccessKeyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateAccessKeyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateAccessKeyVersionEnumTwoThousandAndTen0508 GETCreateAccessKeyVersionEnum = "2010-05-08"
 )
 
+func (e GETCreateAccessKeyVersionEnum) ToPointer() *GETCreateAccessKeyVersionEnum {
+	return &e
+}
+
 func (e *GETCreateAccessKeyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETCreateAccessKeyVersionEnum(s)
+		*e = GETCreateAccessKeyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateAccessKeyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateAccessKeyVersionEnum: %v", v)
 	}
 }
 

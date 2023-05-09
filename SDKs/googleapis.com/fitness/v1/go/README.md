@@ -13,74 +13,66 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/fitness/v1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FitnessUsersDataSourcesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Users.FitnessUsersDataSourcesCreate(ctx, operations.FitnessUsersDataSourcesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         DataSource: &shared.DataSource{
             Application: &shared.Application{
-                DetailsURL: "provident",
-                Name: "distinctio",
-                PackageName: "quibusdam",
-                Version: "unde",
+                DetailsURL: sdk.String("provident"),
+                Name: sdk.String("Ellis Mitchell"),
+                PackageName: sdk.String("illum"),
+                Version: sdk.String("vel"),
             },
             DataQualityStandard: []shared.DataSourceDataQualityStandardEnum{
-                "dataQualityBloodPressureBhsAB",
-                "dataQualityBloodGlucoseIso151972003",
-                "dataQualityBloodPressureBhsAA",
-                "dataQualityBloodPressureBhsBA",
+                shared.DataSourceDataQualityStandardEnumDataQualityBloodPressureBhsBa,
+                shared.DataSourceDataQualityStandardEnumDataQualityBloodPressureAami,
+                shared.DataSourceDataQualityStandardEnumDataQualityBloodPressureBhsAa,
             },
-            DataStreamID: "deserunt",
-            DataStreamName: "suscipit",
+            DataStreamID: sdk.String("magnam"),
+            DataStreamName: sdk.String("debitis"),
             DataType: &shared.DataType{
                 Field: []shared.DataTypeField{
                     shared.DataTypeField{
-                        Format: "string",
-                        Name: "debitis",
-                        Optional: false,
-                    },
-                    shared.DataTypeField{
-                        Format: "integer",
-                        Name: "delectus",
-                        Optional: false,
+                        Format: shared.DataTypeFieldFormatEnumBlob.ToPointer(),
+                        Name: sdk.String("Laurie Kreiger"),
+                        Optional: sdk.Bool(false),
                     },
                 },
-                Name: "tempora",
+                Name: sdk.String("Ted Mante"),
             },
             Device: &shared.Device{
-                Manufacturer: "suscipit",
-                Model: "molestiae",
-                Type: "headMounted",
-                UID: "placeat",
-                Version: "voluptatum",
+                Manufacturer: sdk.String("temporibus"),
+                Model: sdk.String("ab"),
+                Type: shared.DeviceTypeEnumTablet.ToPointer(),
+                UID: sdk.String("veritatis"),
+                Version: sdk.String("deserunt"),
             },
-            Name: "iusto",
-            Type: "derived",
+            Name: sdk.String("Roberta Sipes"),
+            Type: shared.DataSourceTypeEnumRaw.ToPointer(),
         },
-        AccessToken: "nisi",
-        Alt: "proto",
-        Callback: "temporibus",
-        Fields: "ab",
-        Key: "quis",
-        OauthToken: "veritatis",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "perferendis",
-        UploadProtocol: "ipsam",
-        UserID: "repellendus",
-    }
-
-    ctx := context.Background()
-    res, err := s.Users.FitnessUsersDataSourcesCreate(ctx, req, operations.FitnessUsersDataSourcesCreateSecurity{
+        AccessToken: sdk.String("at"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("maiores"),
+        Fields: sdk.String("molestiae"),
+        Key: sdk.String("quod"),
+        OauthToken: sdk.String("quod"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("esse"),
+        UploadType: sdk.String("totam"),
+        UploadProtocol: sdk.String("porro"),
+        UserID: "dolorum",
+    }, operations.FitnessUsersDataSourcesCreateSecurity{
         Option1: &operations.FitnessUsersDataSourcesCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -101,21 +93,21 @@ func main() {
 ## Available Resources and Operations
 
 
-### Users
+### [Users](docs/users/README.md)
 
-* `FitnessUsersDataSourcesCreate` - Creates a new data source that is unique across all data sources belonging to this user. A data source is a unique source of sensor data. Data sources can expose raw data coming from hardware sensors on local or companion devices. They can also expose derived data, created by transforming or merging other data sources. Multiple data sources can exist for the same data type. Every data point in every dataset inserted into or read from the Fitness API has an associated data source. Each data source produces a unique stream of dataset updates, with a unique data source identifier. Not all changes to data source affect the data stream ID, so that data collected by updated versions of the same application/device can still be considered to belong to the same data source. Data sources are identified using a string generated by the server, based on the contents of the source being created. The dataStreamId field should not be set when invoking this method. It will be automatically generated by the server with the correct format. If a dataStreamId is set, it must match the format that the server would generate. This format is a combination of some fields from the data source, and has a specific order. If it doesn't match, the request will fail with an error. Specifying a DataType which is not a known type (beginning with "com.google.") will create a DataSource with a *custom data type*. Custom data types are only readable by the application that created them. Custom data types are *deprecated*; use standard data types instead. In addition to the data source fields included in the data source ID, the developer project number that is authenticated when creating the data source is included. This developer project number is obfuscated when read by any other developer reading public data types.
-* `FitnessUsersDataSourcesDataPointChangesList` - Queries for user's data point changes for a particular data source.
-* `FitnessUsersDataSourcesDatasetsDelete` - Performs an inclusive delete of all data points whose start and end times have any overlap with the time range specified by the dataset ID. For most data types, the entire data point will be deleted. For data types where the time span represents a consistent value (such as com.google.activity.segment), and a data point straddles either end point of the dataset, only the overlapping portion of the data point will be deleted.
-* `FitnessUsersDataSourcesDatasetsGet` - Returns a dataset containing all data points whose start and end times overlap with the specified range of the dataset minimum start time and maximum end time. Specifically, any data point whose start time is less than or equal to the dataset end time and whose end time is greater than or equal to the dataset start time.
-* `FitnessUsersDataSourcesDatasetsPatch` - Adds data points to a dataset. The dataset need not be previously created. All points within the given dataset will be returned with subsquent calls to retrieve this dataset. Data points can belong to more than one dataset. This method does not use patch semantics: the data points provided are merely inserted, with no existing data replaced.
-* `FitnessUsersDataSourcesDelete` - Deletes the specified data source. The request will fail if the data source contains any data points.
-* `FitnessUsersDataSourcesGet` - Returns the specified data source.
-* `FitnessUsersDataSourcesList` - Lists all data sources that are visible to the developer, using the OAuth scopes provided. The list is not exhaustive; the user may have private data sources that are only visible to other developers, or calls using other scopes.
-* `FitnessUsersDataSourcesUpdate` - Updates the specified data source. The dataStreamId, dataType, type, dataStreamName, and device properties with the exception of version, cannot be modified. Data sources are identified by their dataStreamId.
-* `FitnessUsersDatasetAggregate` - Aggregates data of a certain type or stream into buckets divided by a given type of boundary. Multiple data sets of multiple types and from multiple sources can be aggregated into exactly one bucket type per request.
-* `FitnessUsersSessionsDelete` - Deletes a session specified by the given session ID.
-* `FitnessUsersSessionsList` - Lists sessions previously created.
-* `FitnessUsersSessionsUpdate` - Updates or insert a given session.
+* [FitnessUsersDataSourcesCreate](docs/users/README.md#fitnessusersdatasourcescreate) - Creates a new data source that is unique across all data sources belonging to this user. A data source is a unique source of sensor data. Data sources can expose raw data coming from hardware sensors on local or companion devices. They can also expose derived data, created by transforming or merging other data sources. Multiple data sources can exist for the same data type. Every data point in every dataset inserted into or read from the Fitness API has an associated data source. Each data source produces a unique stream of dataset updates, with a unique data source identifier. Not all changes to data source affect the data stream ID, so that data collected by updated versions of the same application/device can still be considered to belong to the same data source. Data sources are identified using a string generated by the server, based on the contents of the source being created. The dataStreamId field should not be set when invoking this method. It will be automatically generated by the server with the correct format. If a dataStreamId is set, it must match the format that the server would generate. This format is a combination of some fields from the data source, and has a specific order. If it doesn't match, the request will fail with an error. Specifying a DataType which is not a known type (beginning with "com.google.") will create a DataSource with a *custom data type*. Custom data types are only readable by the application that created them. Custom data types are *deprecated*; use standard data types instead. In addition to the data source fields included in the data source ID, the developer project number that is authenticated when creating the data source is included. This developer project number is obfuscated when read by any other developer reading public data types.
+* [FitnessUsersDataSourcesDataPointChangesList](docs/users/README.md#fitnessusersdatasourcesdatapointchangeslist) - Queries for user's data point changes for a particular data source.
+* [FitnessUsersDataSourcesDatasetsDelete](docs/users/README.md#fitnessusersdatasourcesdatasetsdelete) - Performs an inclusive delete of all data points whose start and end times have any overlap with the time range specified by the dataset ID. For most data types, the entire data point will be deleted. For data types where the time span represents a consistent value (such as com.google.activity.segment), and a data point straddles either end point of the dataset, only the overlapping portion of the data point will be deleted.
+* [FitnessUsersDataSourcesDatasetsGet](docs/users/README.md#fitnessusersdatasourcesdatasetsget) - Returns a dataset containing all data points whose start and end times overlap with the specified range of the dataset minimum start time and maximum end time. Specifically, any data point whose start time is less than or equal to the dataset end time and whose end time is greater than or equal to the dataset start time.
+* [FitnessUsersDataSourcesDatasetsPatch](docs/users/README.md#fitnessusersdatasourcesdatasetspatch) - Adds data points to a dataset. The dataset need not be previously created. All points within the given dataset will be returned with subsquent calls to retrieve this dataset. Data points can belong to more than one dataset. This method does not use patch semantics: the data points provided are merely inserted, with no existing data replaced.
+* [FitnessUsersDataSourcesDelete](docs/users/README.md#fitnessusersdatasourcesdelete) - Deletes the specified data source. The request will fail if the data source contains any data points.
+* [FitnessUsersDataSourcesGet](docs/users/README.md#fitnessusersdatasourcesget) - Returns the specified data source.
+* [FitnessUsersDataSourcesList](docs/users/README.md#fitnessusersdatasourceslist) - Lists all data sources that are visible to the developer, using the OAuth scopes provided. The list is not exhaustive; the user may have private data sources that are only visible to other developers, or calls using other scopes.
+* [FitnessUsersDataSourcesUpdate](docs/users/README.md#fitnessusersdatasourcesupdate) - Updates the specified data source. The dataStreamId, dataType, type, dataStreamName, and device properties with the exception of version, cannot be modified. Data sources are identified by their dataStreamId.
+* [FitnessUsersDatasetAggregate](docs/users/README.md#fitnessusersdatasetaggregate) - Aggregates data of a certain type or stream into buckets divided by a given type of boundary. Multiple data sets of multiple types and from multiple sources can be aggregated into exactly one bucket type per request.
+* [FitnessUsersSessionsDelete](docs/users/README.md#fitnessuserssessionsdelete) - Deletes a session specified by the given session ID.
+* [FitnessUsersSessionsList](docs/users/README.md#fitnessuserssessionslist) - Lists sessions previously created.
+* [FitnessUsersSessionsUpdate](docs/users/README.md#fitnessuserssessionsupdate) - Updates or insert a given session.
 <!-- End SDK Available Operations -->
 
 ### Maturity

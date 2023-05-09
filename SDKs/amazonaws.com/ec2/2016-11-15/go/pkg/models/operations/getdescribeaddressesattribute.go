@@ -15,17 +15,21 @@ const (
 	GETDescribeAddressesAttributeActionEnumDescribeAddressesAttribute GETDescribeAddressesAttributeActionEnum = "DescribeAddressesAttribute"
 )
 
+func (e GETDescribeAddressesAttributeActionEnum) ToPointer() *GETDescribeAddressesAttributeActionEnum {
+	return &e
+}
+
 func (e *GETDescribeAddressesAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeAddressesAttribute":
-		*e = GETDescribeAddressesAttributeActionEnum(s)
+		*e = GETDescribeAddressesAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAddressesAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAddressesAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeAddressesAttributeAttributeEnumDomainName GETDescribeAddressesAttributeAttributeEnum = "domain-name"
 )
 
+func (e GETDescribeAddressesAttributeAttributeEnum) ToPointer() *GETDescribeAddressesAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETDescribeAddressesAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "domain-name":
-		*e = GETDescribeAddressesAttributeAttributeEnum(s)
+		*e = GETDescribeAddressesAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAddressesAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAddressesAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	GETDescribeAddressesAttributeVersionEnumTwoThousandAndSixteen1115 GETDescribeAddressesAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeAddressesAttributeVersionEnum) ToPointer() *GETDescribeAddressesAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeAddressesAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeAddressesAttributeVersionEnum(s)
+		*e = GETDescribeAddressesAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAddressesAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAddressesAttributeVersionEnum: %v", v)
 	}
 }
 

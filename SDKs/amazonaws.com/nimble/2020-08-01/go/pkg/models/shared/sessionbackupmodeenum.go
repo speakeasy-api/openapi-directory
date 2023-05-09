@@ -14,18 +14,22 @@ const (
 	SessionBackupModeEnumDeactivated SessionBackupModeEnum = "DEACTIVATED"
 )
 
+func (e SessionBackupModeEnum) ToPointer() *SessionBackupModeEnum {
+	return &e
+}
+
 func (e *SessionBackupModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTOMATIC":
 		fallthrough
 	case "DEACTIVATED":
-		*e = SessionBackupModeEnum(s)
+		*e = SessionBackupModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SessionBackupModeEnum: %s", s)
+		return fmt.Errorf("invalid value for SessionBackupModeEnum: %v", v)
 	}
 }

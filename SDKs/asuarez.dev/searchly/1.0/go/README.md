@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/asuarez.dev/searchly/1.0/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SrcSearchlyAPIV1ControllersSimilarityByContentRequestBody{
-        Content: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Similarity.SrcSearchlyAPIV1ControllersSimilarityByContent(ctx, req)
+    res, err := s.Similarity.SrcSearchlyAPIV1ControllersSimilarityByContent(ctx, operations.SrcSearchlyAPIV1ControllersSimilarityByContentRequestBody{
+        Content: sdk.String("corrupti"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,14 +42,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### Similarity
+### [Similarity](docs/similarity/README.md)
 
-* `SrcSearchlyAPIV1ControllersSimilarityByContent` - API endpoint to search similarity using content
-* `SrcSearchlyAPIV1ControllersSimilarityBySong` - API endpoint to search similarity using a song identifier
+* [SrcSearchlyAPIV1ControllersSimilarityByContent](docs/similarity/README.md#srcsearchlyapiv1controllerssimilaritybycontent) - API endpoint to search similarity using content
+* [SrcSearchlyAPIV1ControllersSimilarityBySong](docs/similarity/README.md#srcsearchlyapiv1controllerssimilaritybysong) - API endpoint to search similarity using a song identifier
 
-### Song
+### [Song](docs/song/README.md)
 
-* `SrcSearchlyAPIV1ControllersSongSearch` - API endpoint to search songs from the database given a query
+* [SrcSearchlyAPIV1ControllersSongSearch](docs/song/README.md#srcsearchlyapiv1controllerssongsearch) - API endpoint to search songs from the database given a query
 <!-- End SDK Available Operations -->
 
 ### Maturity

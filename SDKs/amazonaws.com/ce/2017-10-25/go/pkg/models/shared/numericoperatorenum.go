@@ -18,12 +18,16 @@ const (
 	NumericOperatorEnumBetween            NumericOperatorEnum = "BETWEEN"
 )
 
+func (e NumericOperatorEnum) ToPointer() *NumericOperatorEnum {
+	return &e
+}
+
 func (e *NumericOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUAL":
 		fallthrough
 	case "GREATER_THAN_OR_EQUAL":
@@ -35,9 +39,9 @@ func (e *NumericOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "LESS_THAN":
 		fallthrough
 	case "BETWEEN":
-		*e = NumericOperatorEnum(s)
+		*e = NumericOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NumericOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for NumericOperatorEnum: %v", v)
 	}
 }

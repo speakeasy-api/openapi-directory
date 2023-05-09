@@ -17,12 +17,16 @@ const (
 	RunReportRequestMetricAggregationsEnumCount                        RunReportRequestMetricAggregationsEnum = "COUNT"
 )
 
+func (e RunReportRequestMetricAggregationsEnum) ToPointer() *RunReportRequestMetricAggregationsEnum {
+	return &e
+}
+
 func (e *RunReportRequestMetricAggregationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_AGGREGATION_UNSPECIFIED":
 		fallthrough
 	case "TOTAL":
@@ -32,10 +36,10 @@ func (e *RunReportRequestMetricAggregationsEnum) UnmarshalJSON(data []byte) erro
 	case "MAXIMUM":
 		fallthrough
 	case "COUNT":
-		*e = RunReportRequestMetricAggregationsEnum(s)
+		*e = RunReportRequestMetricAggregationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunReportRequestMetricAggregationsEnum: %s", s)
+		return fmt.Errorf("invalid value for RunReportRequestMetricAggregationsEnum: %v", v)
 	}
 }
 
@@ -53,7 +57,7 @@ type RunReportRequest struct {
 	Dimensions []Dimension `json:"dimensions,omitempty"`
 	// If false or unspecified, each row with all metrics equal to 0 will not be returned. If true, these rows will be returned if they are not separately removed by a filter. Regardless of this `keep_empty_rows` setting, only data recorded by the Google Analytics (GA4) property can be displayed in a report. For example if a property never logs a `purchase` event, then a query for the `eventName` dimension and `eventCount` metric will not have a row eventName: "purchase" and eventCount: 0.
 	KeepEmptyRows *bool `json:"keepEmptyRows,omitempty"`
-	// The number of rows to return. If unspecified, 10,000 rows are returned. The API returns a maximum of 100,000 rows per request, no matter how many you ask for. `limit` must be positive. The API can also return fewer rows than the requested `limit`, if there aren't as many dimension values as the `limit`. For instance, there are fewer than 300 possible values for the dimension `country`, so when reporting on only `country`, you can't get more than 300 rows, even if you set `limit` to a higher value. To learn more about this pagination parameter, see [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
+	// The number of rows to return. If unspecified, 10,000 rows are returned. The API returns a maximum of 250,000 rows per request, no matter how many you ask for. `limit` must be positive. The API can also return fewer rows than the requested `limit`, if there aren't as many dimension values as the `limit`. For instance, there are fewer than 300 possible values for the dimension `country`, so when reporting on only `country`, you can't get more than 300 rows, even if you set `limit` to a higher value. To learn more about this pagination parameter, see [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
 	Limit *string `json:"limit,omitempty"`
 	// Aggregation of metrics. Aggregated metric values will be shown in rows where the dimension_values are set to "RESERVED_(MetricAggregation)".
 	MetricAggregations []RunReportRequestMetricAggregationsEnum `json:"metricAggregations,omitempty"`

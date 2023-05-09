@@ -15,17 +15,21 @@ const (
 	POSTDeleteNetworkACLActionEnumDeleteNetworkACL POSTDeleteNetworkACLActionEnum = "DeleteNetworkAcl"
 )
 
+func (e POSTDeleteNetworkACLActionEnum) ToPointer() *POSTDeleteNetworkACLActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteNetworkACLActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteNetworkAcl":
-		*e = POSTDeleteNetworkACLActionEnum(s)
+		*e = POSTDeleteNetworkACLActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteNetworkACLActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteNetworkACLActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteNetworkACLVersionEnumTwoThousandAndSixteen1115 POSTDeleteNetworkACLVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteNetworkACLVersionEnum) ToPointer() *POSTDeleteNetworkACLVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteNetworkACLVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteNetworkACLVersionEnum(s)
+		*e = POSTDeleteNetworkACLVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteNetworkACLVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteNetworkACLVersionEnum: %v", v)
 	}
 }
 

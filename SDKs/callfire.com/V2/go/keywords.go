@@ -237,7 +237,10 @@ func (s *keywords) FindKeywords(ctx context.Context, request operations.FindKeyw
 // Searches for all keywords owned by user
 func (s *keywords) GetKeywordLease(ctx context.Context, request operations.GetKeywordLeaseRequest, security operations.GetKeywordLeaseSecurity) (*operations.GetKeywordLeaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/{keyword}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/keywords/leases/{keyword}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -304,7 +307,10 @@ func (s *keywords) GetKeywordLease(ctx context.Context, request operations.GetKe
 // Get keyword by id
 func (s *keywords) GetKeywordLeaseByID(ctx context.Context, request operations.GetKeywordLeaseByIDRequest, security operations.GetKeywordLeaseByIDSecurity) (*operations.GetKeywordLeaseByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/id/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/keywords/leases/id/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -371,7 +377,10 @@ func (s *keywords) GetKeywordLeaseByID(ctx context.Context, request operations.G
 // Returns a single KeywordConfig instance for a given keyword lease
 func (s *keywords) GetKeywordLeaseConfig(ctx context.Context, request operations.GetKeywordLeaseConfigRequest, security operations.GetKeywordLeaseConfigSecurity) (*operations.GetKeywordLeaseConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/configs/{keyword}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/keywords/leases/configs/{keyword}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -438,7 +447,10 @@ func (s *keywords) GetKeywordLeaseConfig(ctx context.Context, request operations
 // Searches for the specific keyword to purchase on the CallFire platform. Returns 'true' if keyword is available. Keyword should only consist of uppercase and lowercase letters and numbers. Number of characters must be greater than 2, but less than 65.
 func (s *keywords) IsKeywordAvailable(ctx context.Context, request operations.IsKeywordAvailableRequest, security operations.IsKeywordAvailableSecurity) (*operations.IsKeywordAvailableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keywords/{keyword}/available", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/keywords/{keyword}/available", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -501,7 +513,10 @@ func (s *keywords) IsKeywordAvailable(ctx context.Context, request operations.Is
 // Updates a keyword lease. Turns the autoRenew on/off. Configure double opt in feature. Add/remove contact list from keyword.
 func (s *keywords) UpdateKeywordLease(ctx context.Context, request operations.UpdateKeywordLeaseRequest, security operations.UpdateKeywordLeaseSecurity) (*operations.UpdateKeywordLeaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/{keyword}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/keywords/leases/{keyword}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "KeywordLease", "json")
 	if err != nil {
@@ -561,7 +576,10 @@ func (s *keywords) UpdateKeywordLease(ctx context.Context, request operations.Up
 // Updates a keyword lease configuration. Use this API endpoint to enable/disable inbound SMS forwarding, set forward number. Forward number must be in E.164 format)
 func (s *keywords) UpdateKeywordLeaseConfig(ctx context.Context, request operations.UpdateKeywordLeaseConfigRequest, security operations.UpdateKeywordLeaseConfigSecurity) (*operations.UpdateKeywordLeaseConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/keywords/leases/configs/{keyword}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/keywords/leases/configs/{keyword}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "KeywordConfig", "json")
 	if err != nil {

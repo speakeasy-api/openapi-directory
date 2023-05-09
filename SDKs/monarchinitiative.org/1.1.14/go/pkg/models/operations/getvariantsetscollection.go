@@ -10,38 +10,42 @@ import (
 )
 
 // GetVariantSetsCollectionPerPageEnum - Results per page {error_msg}
-type GetVariantSetsCollectionPerPageEnum string
+type GetVariantSetsCollectionPerPageEnum int64
 
 const (
-	GetVariantSetsCollectionPerPageEnumTwo    GetVariantSetsCollectionPerPageEnum = "2"
-	GetVariantSetsCollectionPerPageEnumTen    GetVariantSetsCollectionPerPageEnum = "10"
-	GetVariantSetsCollectionPerPageEnumTwenty GetVariantSetsCollectionPerPageEnum = "20"
-	GetVariantSetsCollectionPerPageEnumThirty GetVariantSetsCollectionPerPageEnum = "30"
-	GetVariantSetsCollectionPerPageEnumForty  GetVariantSetsCollectionPerPageEnum = "40"
-	GetVariantSetsCollectionPerPageEnumFifty  GetVariantSetsCollectionPerPageEnum = "50"
+	GetVariantSetsCollectionPerPageEnumTwo    GetVariantSetsCollectionPerPageEnum = 2
+	GetVariantSetsCollectionPerPageEnumTen    GetVariantSetsCollectionPerPageEnum = 10
+	GetVariantSetsCollectionPerPageEnumTwenty GetVariantSetsCollectionPerPageEnum = 20
+	GetVariantSetsCollectionPerPageEnumThirty GetVariantSetsCollectionPerPageEnum = 30
+	GetVariantSetsCollectionPerPageEnumForty  GetVariantSetsCollectionPerPageEnum = 40
+	GetVariantSetsCollectionPerPageEnumFifty  GetVariantSetsCollectionPerPageEnum = 50
 )
 
+func (e GetVariantSetsCollectionPerPageEnum) ToPointer() *GetVariantSetsCollectionPerPageEnum {
+	return &e
+}
+
 func (e *GetVariantSetsCollectionPerPageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "2":
+	switch v {
+	case 2:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "20":
+	case 20:
 		fallthrough
-	case "30":
+	case 30:
 		fallthrough
-	case "40":
+	case 40:
 		fallthrough
-	case "50":
-		*e = GetVariantSetsCollectionPerPageEnum(s)
+	case 50:
+		*e = GetVariantSetsCollectionPerPageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVariantSetsCollectionPerPageEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVariantSetsCollectionPerPageEnum: %v", v)
 	}
 }
 

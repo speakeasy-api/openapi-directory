@@ -18,19 +18,23 @@ const (
 	AccountEventEventEnumRefundNotPaidOutTransfers AccountEventEventEnum = "RefundNotPaidOutTransfers"
 )
 
+func (e AccountEventEventEnum) ToPointer() *AccountEventEventEnum {
+	return &e
+}
+
 func (e *AccountEventEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InactivateAccount":
 		fallthrough
 	case "RefundNotPaidOutTransfers":
-		*e = AccountEventEventEnum(s)
+		*e = AccountEventEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountEventEventEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountEventEventEnum: %v", v)
 	}
 }
 

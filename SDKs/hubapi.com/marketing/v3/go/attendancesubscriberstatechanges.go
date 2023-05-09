@@ -37,7 +37,10 @@ func newAttendanceSubscriberStateChanges(defaultClient, securityClient HTTPClien
 // Record a subscription state between multiple HubSpot contacts and a marketing event, using HubSpot contact ids.
 func (s *attendanceSubscriberStateChanges) PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreate(ctx context.Context, request operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateRequest, security operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateSecurity) (*operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/attendance/{externalEventId}/{subscriberState}/create", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/attendance/{externalEventId}/{subscriberState}/create", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchInputMarketingEventSubscriber", "json")
 	if err != nil {
@@ -106,7 +109,10 @@ func (s *attendanceSubscriberStateChanges) PostMarketingV3MarketingEventsAttenda
 // Record a subscription state between multiple HubSpot contacts and a marketing event, using contact email addresses. If contact is not present it will be automatically created. If you set params
 func (s *attendanceSubscriberStateChanges) PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmail(ctx context.Context, request operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailRequest, security operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailSecurity) (*operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/attendance/{externalEventId}/{subscriberState}/email-create", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/attendance/{externalEventId}/{subscriberState}/email-create", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchInputMarketingEventEmailSubscriber", "json")
 	if err != nil {

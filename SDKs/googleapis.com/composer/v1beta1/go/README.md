@@ -13,37 +13,35 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/composer/v
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ComposerProjectsLocationsEnvironmentsCheckUpgradeRequest{
-        DollarXgafv: "2",
-        CheckUpgradeRequest: &shared.CheckUpgradeRequest{
-            ImageVersion: "provident",
-        },
-        AccessToken: "distinctio",
-        Alt: "proto",
-        Callback: "unde",
-        Environment: "nulla",
-        Fields: "corrupti",
-        Key: "illum",
-        OauthToken: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.ComposerProjectsLocationsEnvironmentsCheckUpgrade(ctx, req, operations.ComposerProjectsLocationsEnvironmentsCheckUpgradeSecurity{
+    res, err := s.Projects.ComposerProjectsLocationsEnvironmentsCheckUpgrade(ctx, operations.ComposerProjectsLocationsEnvironmentsCheckUpgradeRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        CheckUpgradeRequest: &shared.CheckUpgradeRequest{
+            ImageVersion: sdk.String("provident"),
+        },
+        AccessToken: sdk.String("distinctio"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("unde"),
+        Environment: "nulla",
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("illum"),
+        OauthToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.ComposerProjectsLocationsEnvironmentsCheckUpgradeSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -62,19 +60,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `ComposerProjectsLocationsEnvironmentsCheckUpgrade` - Check if an upgrade operation on the environment will succeed. In case of problems detailed info can be found in the returned Operation.
-* `ComposerProjectsLocationsEnvironmentsCreate` - Create a new environment.
-* `ComposerProjectsLocationsEnvironmentsList` - List environments.
-* `ComposerProjectsLocationsEnvironmentsLoadSnapshot` - Loads a snapshot of a Cloud Composer environment. As a result of this operation, a snapshot of environment's specified in LoadSnapshotRequest is loaded into the environment.
-* `ComposerProjectsLocationsEnvironmentsPatch` - Update an environment.
-* `ComposerProjectsLocationsEnvironmentsRestartWebServer` - Restart Airflow web server.
-* `ComposerProjectsLocationsEnvironmentsSaveSnapshot` - Creates a snapshots of a Cloud Composer environment. As a result of this operation, snapshot of environment's state is stored in a location specified in the SaveSnapshotRequest.
-* `ComposerProjectsLocationsImageVersionsList` - List ImageVersions for provided location.
-* `ComposerProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `ComposerProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `ComposerProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [ComposerProjectsLocationsEnvironmentsCheckUpgrade](docs/projects/README.md#composerprojectslocationsenvironmentscheckupgrade) - Check if an upgrade operation on the environment will succeed. In case of problems detailed info can be found in the returned Operation.
+* [ComposerProjectsLocationsEnvironmentsCreate](docs/projects/README.md#composerprojectslocationsenvironmentscreate) - Create a new environment.
+* [ComposerProjectsLocationsEnvironmentsList](docs/projects/README.md#composerprojectslocationsenvironmentslist) - List environments.
+* [ComposerProjectsLocationsEnvironmentsLoadSnapshot](docs/projects/README.md#composerprojectslocationsenvironmentsloadsnapshot) - Loads a snapshot of a Cloud Composer environment. As a result of this operation, a snapshot of environment's specified in LoadSnapshotRequest is loaded into the environment.
+* [ComposerProjectsLocationsEnvironmentsPatch](docs/projects/README.md#composerprojectslocationsenvironmentspatch) - Update an environment.
+* [ComposerProjectsLocationsEnvironmentsRestartWebServer](docs/projects/README.md#composerprojectslocationsenvironmentsrestartwebserver) - Restart Airflow web server.
+* [ComposerProjectsLocationsEnvironmentsSaveSnapshot](docs/projects/README.md#composerprojectslocationsenvironmentssavesnapshot) - Creates a snapshots of a Cloud Composer environment. As a result of this operation, snapshot of environment's state is stored in a location specified in the SaveSnapshotRequest.
+* [ComposerProjectsLocationsImageVersionsList](docs/projects/README.md#composerprojectslocationsimageversionslist) - List ImageVersions for provided location.
+* [ComposerProjectsLocationsOperationsDelete](docs/projects/README.md#composerprojectslocationsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [ComposerProjectsLocationsOperationsGet](docs/projects/README.md#composerprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [ComposerProjectsLocationsOperationsList](docs/projects/README.md#composerprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
 ### Maturity

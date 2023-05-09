@@ -35,7 +35,10 @@ func newUser(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // GerUserLikes - List liked scores
 func (s *user) GerUserLikes(ctx context.Context, request operations.GerUserLikesRequest, security operations.GerUserLikesSecurity) (*operations.GerUserLikesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user}/likes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{user}/likes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *user) GerUserLikes(ctx context.Context, request operations.GerUserLikes
 // Get a public profile of a Flat User.
 func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest, security operations.GetUserSecurity) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{user}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -153,7 +159,10 @@ func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest, s
 // If you want to access to private scores, please use the [Collections API](#tag/Collection) instead.
 func (s *user) GetUserScores(ctx context.Context, request operations.GetUserScoresRequest, security operations.GetUserScoresSecurity) (*operations.GetUserScoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user}/scores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{user}/scores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

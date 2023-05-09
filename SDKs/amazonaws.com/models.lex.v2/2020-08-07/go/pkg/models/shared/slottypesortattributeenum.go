@@ -14,18 +14,22 @@ const (
 	SlotTypeSortAttributeEnumLastUpdatedDateTime SlotTypeSortAttributeEnum = "LastUpdatedDateTime"
 )
 
+func (e SlotTypeSortAttributeEnum) ToPointer() *SlotTypeSortAttributeEnum {
+	return &e
+}
+
 func (e *SlotTypeSortAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SlotTypeName":
 		fallthrough
 	case "LastUpdatedDateTime":
-		*e = SlotTypeSortAttributeEnum(s)
+		*e = SlotTypeSortAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SlotTypeSortAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for SlotTypeSortAttributeEnum: %v", v)
 	}
 }

@@ -15,19 +15,23 @@ const (
 	GoogleCloudIntegrationsV1alphaIntegrationVersionDatabasePersistencePolicyEnumDatabasePersistenceDisabled          GoogleCloudIntegrationsV1alphaIntegrationVersionDatabasePersistencePolicyEnum = "DATABASE_PERSISTENCE_DISABLED"
 )
 
+func (e GoogleCloudIntegrationsV1alphaIntegrationVersionDatabasePersistencePolicyEnum) ToPointer() *GoogleCloudIntegrationsV1alphaIntegrationVersionDatabasePersistencePolicyEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaIntegrationVersionDatabasePersistencePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATABASE_PERSISTENCE_POLICY_UNSPECIFIED":
 		fallthrough
 	case "DATABASE_PERSISTENCE_DISABLED":
-		*e = GoogleCloudIntegrationsV1alphaIntegrationVersionDatabasePersistencePolicyEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaIntegrationVersionDatabasePersistencePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationVersionDatabasePersistencePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationVersionDatabasePersistencePolicyEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	GoogleCloudIntegrationsV1alphaIntegrationVersionOriginEnumApplicationIPProvisioning GoogleCloudIntegrationsV1alphaIntegrationVersionOriginEnum = "APPLICATION_IP_PROVISIONING"
 )
 
+func (e GoogleCloudIntegrationsV1alphaIntegrationVersionOriginEnum) ToPointer() *GoogleCloudIntegrationsV1alphaIntegrationVersionOriginEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaIntegrationVersionOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UI":
@@ -57,10 +65,10 @@ func (e *GoogleCloudIntegrationsV1alphaIntegrationVersionOriginEnum) UnmarshalJS
 	case "PIPER_V3":
 		fallthrough
 	case "APPLICATION_IP_PROVISIONING":
-		*e = GoogleCloudIntegrationsV1alphaIntegrationVersionOriginEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaIntegrationVersionOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationVersionOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationVersionOriginEnum: %v", v)
 	}
 }
 
@@ -75,12 +83,16 @@ const (
 	GoogleCloudIntegrationsV1alphaIntegrationVersionStateEnumSnapshot                    GoogleCloudIntegrationsV1alphaIntegrationVersionStateEnum = "SNAPSHOT"
 )
 
+func (e GoogleCloudIntegrationsV1alphaIntegrationVersionStateEnum) ToPointer() *GoogleCloudIntegrationsV1alphaIntegrationVersionStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaIntegrationVersionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTEGRATION_STATE_UNSPECIFIED":
 		fallthrough
 	case "DRAFT":
@@ -90,10 +102,10 @@ func (e *GoogleCloudIntegrationsV1alphaIntegrationVersionStateEnum) UnmarshalJSO
 	case "ARCHIVED":
 		fallthrough
 	case "SNAPSHOT":
-		*e = GoogleCloudIntegrationsV1alphaIntegrationVersionStateEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaIntegrationVersionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationVersionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationVersionStateEnum: %v", v)
 	}
 }
 
@@ -108,12 +120,16 @@ const (
 	GoogleCloudIntegrationsV1alphaIntegrationVersionStatusEnumSnapshot GoogleCloudIntegrationsV1alphaIntegrationVersionStatusEnum = "SNAPSHOT"
 )
 
+func (e GoogleCloudIntegrationsV1alphaIntegrationVersionStatusEnum) ToPointer() *GoogleCloudIntegrationsV1alphaIntegrationVersionStatusEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaIntegrationVersionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "DRAFT":
@@ -123,10 +139,10 @@ func (e *GoogleCloudIntegrationsV1alphaIntegrationVersionStatusEnum) UnmarshalJS
 	case "ARCHIVED":
 		fallthrough
 	case "SNAPSHOT":
-		*e = GoogleCloudIntegrationsV1alphaIntegrationVersionStatusEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaIntegrationVersionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationVersionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationVersionStatusEnum: %v", v)
 	}
 }
 

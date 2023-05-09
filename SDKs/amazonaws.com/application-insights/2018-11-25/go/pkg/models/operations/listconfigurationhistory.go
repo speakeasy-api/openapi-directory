@@ -16,17 +16,21 @@ const (
 	ListConfigurationHistoryXAmzTargetEnumEc2WindowsBarleyServiceListConfigurationHistory ListConfigurationHistoryXAmzTargetEnum = "EC2WindowsBarleyService.ListConfigurationHistory"
 )
 
+func (e ListConfigurationHistoryXAmzTargetEnum) ToPointer() *ListConfigurationHistoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListConfigurationHistoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2WindowsBarleyService.ListConfigurationHistory":
-		*e = ListConfigurationHistoryXAmzTargetEnum(s)
+		*e = ListConfigurationHistoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListConfigurationHistoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListConfigurationHistoryXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	GoogleFirestoreAdminV1beta1IndexFieldModeEnumArrayContains   GoogleFirestoreAdminV1beta1IndexFieldModeEnum = "ARRAY_CONTAINS"
 )
 
+func (e GoogleFirestoreAdminV1beta1IndexFieldModeEnum) ToPointer() *GoogleFirestoreAdminV1beta1IndexFieldModeEnum {
+	return &e
+}
+
 func (e *GoogleFirestoreAdminV1beta1IndexFieldModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODE_UNSPECIFIED":
 		fallthrough
 	case "ASCENDING":
@@ -30,10 +34,10 @@ func (e *GoogleFirestoreAdminV1beta1IndexFieldModeEnum) UnmarshalJSON(data []byt
 	case "DESCENDING":
 		fallthrough
 	case "ARRAY_CONTAINS":
-		*e = GoogleFirestoreAdminV1beta1IndexFieldModeEnum(s)
+		*e = GoogleFirestoreAdminV1beta1IndexFieldModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1beta1IndexFieldModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1beta1IndexFieldModeEnum: %v", v)
 	}
 }
 

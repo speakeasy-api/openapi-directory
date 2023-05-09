@@ -21,12 +21,16 @@ const (
 	AccountingAccountingWorkbookEnumPermanent   AccountingAccountingWorkbookEnum = "permanent"
 )
 
+func (e AccountingAccountingWorkbookEnum) ToPointer() *AccountingAccountingWorkbookEnum {
+	return &e
+}
+
 func (e *AccountingAccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -44,10 +48,10 @@ func (e *AccountingAccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = AccountingAccountingWorkbookEnum(s)
+		*e = AccountingAccountingWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountingAccountingWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountingAccountingWorkbookEnum: %v", v)
 	}
 }
 

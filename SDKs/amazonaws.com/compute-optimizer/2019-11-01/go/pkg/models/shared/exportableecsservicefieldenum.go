@@ -35,12 +35,16 @@ const (
 	ExportableECSServiceFieldEnumRecommendationOptionsProjectedUtilizationMetricsMemoryMaximum ExportableECSServiceFieldEnum = "RecommendationOptionsProjectedUtilizationMetricsMemoryMaximum"
 )
 
+func (e ExportableECSServiceFieldEnum) ToPointer() *ExportableECSServiceFieldEnum {
+	return &e
+}
+
 func (e *ExportableECSServiceFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AccountId":
 		fallthrough
 	case "ServiceArn":
@@ -86,9 +90,9 @@ func (e *ExportableECSServiceFieldEnum) UnmarshalJSON(data []byte) error {
 	case "RecommendationOptionsProjectedUtilizationMetricsCpuMaximum":
 		fallthrough
 	case "RecommendationOptionsProjectedUtilizationMetricsMemoryMaximum":
-		*e = ExportableECSServiceFieldEnum(s)
+		*e = ExportableECSServiceFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportableECSServiceFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportableECSServiceFieldEnum: %v", v)
 	}
 }

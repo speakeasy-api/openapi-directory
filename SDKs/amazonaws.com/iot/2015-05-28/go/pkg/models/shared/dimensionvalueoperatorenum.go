@@ -14,18 +14,22 @@ const (
 	DimensionValueOperatorEnumNotIn DimensionValueOperatorEnum = "NOT_IN"
 )
 
+func (e DimensionValueOperatorEnum) ToPointer() *DimensionValueOperatorEnum {
+	return &e
+}
+
 func (e *DimensionValueOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN":
 		fallthrough
 	case "NOT_IN":
-		*e = DimensionValueOperatorEnum(s)
+		*e = DimensionValueOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DimensionValueOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for DimensionValueOperatorEnum: %v", v)
 	}
 }

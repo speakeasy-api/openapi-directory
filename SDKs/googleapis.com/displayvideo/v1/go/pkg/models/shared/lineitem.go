@@ -19,12 +19,16 @@ const (
 	LineItemEntityStatusEnumEntityStatusScheduledForDeletion LineItemEntityStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
+func (e LineItemEntityStatusEnum) ToPointer() *LineItemEntityStatusEnum {
+	return &e
+}
+
 func (e *LineItemEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ENTITY_STATUS_ACTIVE":
@@ -36,10 +40,10 @@ func (e *LineItemEntityStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ENTITY_STATUS_PAUSED":
 		fallthrough
 	case "ENTITY_STATUS_SCHEDULED_FOR_DELETION":
-		*e = LineItemEntityStatusEnum(s)
+		*e = LineItemEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemEntityStatusEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	LineItemLineItemTypeEnumLineItemTypeVideoOverTheTop           LineItemLineItemTypeEnum = "LINE_ITEM_TYPE_VIDEO_OVER_THE_TOP"
 )
 
+func (e LineItemLineItemTypeEnum) ToPointer() *LineItemLineItemTypeEnum {
+	return &e
+}
+
 func (e *LineItemLineItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_ITEM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINE_ITEM_TYPE_DISPLAY_DEFAULT":
@@ -81,10 +89,10 @@ func (e *LineItemLineItemTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LINE_ITEM_TYPE_AUDIO_DEFAULT":
 		fallthrough
 	case "LINE_ITEM_TYPE_VIDEO_OVER_THE_TOP":
-		*e = LineItemLineItemTypeEnum(s)
+		*e = LineItemLineItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemLineItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemLineItemTypeEnum: %v", v)
 	}
 }
 
@@ -124,7 +132,7 @@ type LineItemInput struct {
 	PartnerCosts []PartnerCost `json:"partnerCosts,omitempty"`
 	// Settings that control how partner revenue is calculated.
 	PartnerRevenueModel *PartnerRevenueModel `json:"partnerRevenueModel,omitempty"`
-	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by mid-April 2023.
+	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by early May 2023.
 	TargetingExpansion *TargetingExpansionConfig `json:"targetingExpansion,omitempty"`
 }
 
@@ -138,12 +146,16 @@ const (
 	LineItemReservationTypeEnumReservationTypeTagGuaranteed          LineItemReservationTypeEnum = "RESERVATION_TYPE_TAG_GUARANTEED"
 )
 
+func (e LineItemReservationTypeEnum) ToPointer() *LineItemReservationTypeEnum {
+	return &e
+}
+
 func (e *LineItemReservationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESERVATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RESERVATION_TYPE_NOT_GUARANTEED":
@@ -151,10 +163,10 @@ func (e *LineItemReservationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "RESERVATION_TYPE_PROGRAMMATIC_GUARANTEED":
 		fallthrough
 	case "RESERVATION_TYPE_TAG_GUARANTEED":
-		*e = LineItemReservationTypeEnum(s)
+		*e = LineItemReservationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemReservationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemReservationTypeEnum: %v", v)
 	}
 }
 
@@ -182,12 +194,16 @@ const (
 	LineItemWarningMessagesEnumDeprecatedFirstPartyAudienceExclusion        LineItemWarningMessagesEnum = "DEPRECATED_FIRST_PARTY_AUDIENCE_EXCLUSION"
 )
 
+func (e LineItemWarningMessagesEnum) ToPointer() *LineItemWarningMessagesEnum {
+	return &e
+}
+
 func (e *LineItemWarningMessagesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_ITEM_WARNING_MESSAGE_UNSPECIFIED":
 		fallthrough
 	case "INVALID_FLIGHT_DATES":
@@ -225,10 +241,10 @@ func (e *LineItemWarningMessagesEnum) UnmarshalJSON(data []byte) error {
 	case "TARGETING_DEPRECATED_GEO_TARGET":
 		fallthrough
 	case "DEPRECATED_FIRST_PARTY_AUDIENCE_EXCLUSION":
-		*e = LineItemWarningMessagesEnum(s)
+		*e = LineItemWarningMessagesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemWarningMessagesEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemWarningMessagesEnum: %v", v)
 	}
 }
 
@@ -278,7 +294,7 @@ type LineItem struct {
 	PartnerRevenueModel *PartnerRevenueModel `json:"partnerRevenueModel,omitempty"`
 	// Output only. The reservation type of the line item.
 	ReservationType *LineItemReservationTypeEnum `json:"reservationType,omitempty"`
-	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by mid-April 2023.
+	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by early May 2023.
 	TargetingExpansion *TargetingExpansionConfig `json:"targetingExpansion,omitempty"`
 	// Output only. The timestamp when the line item was last updated. Assigned by the system.
 	UpdateTime *string `json:"updateTime,omitempty"`

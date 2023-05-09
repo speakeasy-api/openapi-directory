@@ -35,7 +35,10 @@ func newOfferingLearners(defaultClient, securityClient HTTPClient, serverURL, la
 // Removes an array of learners from coach's marking list.
 func (s *offeringLearners) DeleteOfferingsOfferingIDUsersMarkerEmailMarks(ctx context.Context, request operations.DeleteOfferingsOfferingIDUsersMarkerEmailMarksRequest) (*operations.DeleteOfferingsOfferingIDUsersMarkerEmailMarksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{markerEmail}/marks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{markerEmail}/marks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -106,7 +109,10 @@ func (s *offeringLearners) DeleteOfferingsOfferingIDUsersMarkerEmailMarks(ctx co
 // Removes a user from the offering.
 func (s *offeringLearners) DeleteOfferingsOfferingIDUsersUserEmail(ctx context.Context, request operations.DeleteOfferingsOfferingIDUsersUserEmailRequest) (*operations.DeleteOfferingsOfferingIDUsersUserEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{userEmail}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{userEmail}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -158,7 +164,10 @@ func (s *offeringLearners) DeleteOfferingsOfferingIDUsersUserEmail(ctx context.C
 // Responds with a list of users in the offering (facilitators, learners and markers.).
 func (s *offeringLearners) GetOfferingsOfferingIDUsers(ctx context.Context, request operations.GetOfferingsOfferingIDUsersRequest) (*operations.GetOfferingsOfferingIDUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -223,7 +232,10 @@ func (s *offeringLearners) GetOfferingsOfferingIDUsers(ctx context.Context, requ
 // Responds with all learners marked by the specified coach.
 func (s *offeringLearners) GetOfferingsOfferingIDUsersMarkerEmailMarks(ctx context.Context, request operations.GetOfferingsOfferingIDUsersMarkerEmailMarksRequest) (*operations.GetOfferingsOfferingIDUsersMarkerEmailMarksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{markerEmail}/marks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{markerEmail}/marks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -282,7 +294,10 @@ func (s *offeringLearners) GetOfferingsOfferingIDUsersMarkerEmailMarks(ctx conte
 // Moves the user's access and progress from one offering to another.
 func (s *offeringLearners) PatchUsersUserEmailTransfer(ctx context.Context, request operations.PatchUsersUserEmailTransferRequest) (*operations.PatchUsersUserEmailTransferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/transfer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/transfer", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferRequest", "json")
 	if err != nil {
@@ -344,7 +359,10 @@ func (s *offeringLearners) PatchUsersUserEmailTransfer(ctx context.Context, requ
 // Adds one or more users to the offering.
 func (s *offeringLearners) PostOfferingsOfferingIDUsers(ctx context.Context, request operations.PostOfferingsOfferingIDUsersRequest) (*operations.PostOfferingsOfferingIDUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -425,7 +443,10 @@ func (s *offeringLearners) PostOfferingsOfferingIDUsers(ctx context.Context, req
 // Adds an array of learners to be marked by the specified coach.
 func (s *offeringLearners) PostOfferingsOfferingIDUsersMarkerEmailMarks(ctx context.Context, request operations.PostOfferingsOfferingIDUsersMarkerEmailMarksRequest) (*operations.PostOfferingsOfferingIDUsersMarkerEmailMarksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{markerEmail}/marks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{markerEmail}/marks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

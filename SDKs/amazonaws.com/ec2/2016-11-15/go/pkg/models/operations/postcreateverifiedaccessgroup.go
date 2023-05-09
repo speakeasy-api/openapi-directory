@@ -15,17 +15,21 @@ const (
 	POSTCreateVerifiedAccessGroupActionEnumCreateVerifiedAccessGroup POSTCreateVerifiedAccessGroupActionEnum = "CreateVerifiedAccessGroup"
 )
 
+func (e POSTCreateVerifiedAccessGroupActionEnum) ToPointer() *POSTCreateVerifiedAccessGroupActionEnum {
+	return &e
+}
+
 func (e *POSTCreateVerifiedAccessGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateVerifiedAccessGroup":
-		*e = POSTCreateVerifiedAccessGroupActionEnum(s)
+		*e = POSTCreateVerifiedAccessGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateVerifiedAccessGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateVerifiedAccessGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateVerifiedAccessGroupVersionEnumTwoThousandAndSixteen1115 POSTCreateVerifiedAccessGroupVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateVerifiedAccessGroupVersionEnum) ToPointer() *POSTCreateVerifiedAccessGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateVerifiedAccessGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateVerifiedAccessGroupVersionEnum(s)
+		*e = POSTCreateVerifiedAccessGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateVerifiedAccessGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateVerifiedAccessGroupVersionEnum: %v", v)
 	}
 }
 

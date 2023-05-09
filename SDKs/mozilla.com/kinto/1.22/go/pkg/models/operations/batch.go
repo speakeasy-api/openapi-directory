@@ -20,12 +20,16 @@ const (
 	BatchBatchPayloadSchemaDefaultsMethodEnumPatch  BatchBatchPayloadSchemaDefaultsMethodEnum = "PATCH"
 )
 
+func (e BatchBatchPayloadSchemaDefaultsMethodEnum) ToPointer() *BatchBatchPayloadSchemaDefaultsMethodEnum {
+	return &e
+}
+
 func (e *BatchBatchPayloadSchemaDefaultsMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "HEAD":
@@ -39,10 +43,10 @@ func (e *BatchBatchPayloadSchemaDefaultsMethodEnum) UnmarshalJSON(data []byte) e
 	case "PUT":
 		fallthrough
 	case "PATCH":
-		*e = BatchBatchPayloadSchemaDefaultsMethodEnum(s)
+		*e = BatchBatchPayloadSchemaDefaultsMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchBatchPayloadSchemaDefaultsMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchBatchPayloadSchemaDefaultsMethodEnum: %v", v)
 	}
 }
 
@@ -65,12 +69,16 @@ const (
 	BatchBatchPayloadSchemaRequestsMethodEnumPatch  BatchBatchPayloadSchemaRequestsMethodEnum = "PATCH"
 )
 
+func (e BatchBatchPayloadSchemaRequestsMethodEnum) ToPointer() *BatchBatchPayloadSchemaRequestsMethodEnum {
+	return &e
+}
+
 func (e *BatchBatchPayloadSchemaRequestsMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "HEAD":
@@ -84,10 +92,10 @@ func (e *BatchBatchPayloadSchemaRequestsMethodEnum) UnmarshalJSON(data []byte) e
 	case "PUT":
 		fallthrough
 	case "PATCH":
-		*e = BatchBatchPayloadSchemaRequestsMethodEnum(s)
+		*e = BatchBatchPayloadSchemaRequestsMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchBatchPayloadSchemaRequestsMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchBatchPayloadSchemaRequestsMethodEnum: %v", v)
 	}
 }
 

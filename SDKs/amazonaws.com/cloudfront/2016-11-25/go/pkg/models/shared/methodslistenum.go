@@ -19,12 +19,16 @@ const (
 	MethodsListEnumDelete  MethodsListEnum = "DELETE"
 )
 
+func (e MethodsListEnum) ToPointer() *MethodsListEnum {
+	return &e
+}
+
 func (e *MethodsListEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "HEAD":
@@ -38,9 +42,9 @@ func (e *MethodsListEnum) UnmarshalJSON(data []byte) error {
 	case "OPTIONS":
 		fallthrough
 	case "DELETE":
-		*e = MethodsListEnum(s)
+		*e = MethodsListEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MethodsListEnum: %s", s)
+		return fmt.Errorf("invalid value for MethodsListEnum: %v", v)
 	}
 }

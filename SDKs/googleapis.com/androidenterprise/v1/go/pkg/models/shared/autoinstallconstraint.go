@@ -16,21 +16,25 @@ const (
 	AutoInstallConstraintChargingStateConstraintEnumChargingRequired                   AutoInstallConstraintChargingStateConstraintEnum = "chargingRequired"
 )
 
+func (e AutoInstallConstraintChargingStateConstraintEnum) ToPointer() *AutoInstallConstraintChargingStateConstraintEnum {
+	return &e
+}
+
 func (e *AutoInstallConstraintChargingStateConstraintEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "chargingStateConstraintUnspecified":
 		fallthrough
 	case "chargingNotRequired":
 		fallthrough
 	case "chargingRequired":
-		*e = AutoInstallConstraintChargingStateConstraintEnum(s)
+		*e = AutoInstallConstraintChargingStateConstraintEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoInstallConstraintChargingStateConstraintEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoInstallConstraintChargingStateConstraintEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	AutoInstallConstraintDeviceIdleStateConstraintEnumDeviceIdleRequired                   AutoInstallConstraintDeviceIdleStateConstraintEnum = "deviceIdleRequired"
 )
 
+func (e AutoInstallConstraintDeviceIdleStateConstraintEnum) ToPointer() *AutoInstallConstraintDeviceIdleStateConstraintEnum {
+	return &e
+}
+
 func (e *AutoInstallConstraintDeviceIdleStateConstraintEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deviceIdleStateConstraintUnspecified":
 		fallthrough
 	case "deviceIdleNotRequired":
 		fallthrough
 	case "deviceIdleRequired":
-		*e = AutoInstallConstraintDeviceIdleStateConstraintEnum(s)
+		*e = AutoInstallConstraintDeviceIdleStateConstraintEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoInstallConstraintDeviceIdleStateConstraintEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoInstallConstraintDeviceIdleStateConstraintEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	AutoInstallConstraintNetworkTypeConstraintEnumUnmeteredNetwork                 AutoInstallConstraintNetworkTypeConstraintEnum = "unmeteredNetwork"
 )
 
+func (e AutoInstallConstraintNetworkTypeConstraintEnum) ToPointer() *AutoInstallConstraintNetworkTypeConstraintEnum {
+	return &e
+}
+
 func (e *AutoInstallConstraintNetworkTypeConstraintEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "networkTypeConstraintUnspecified":
 		fallthrough
 	case "anyNetwork":
 		fallthrough
 	case "unmeteredNetwork":
-		*e = AutoInstallConstraintNetworkTypeConstraintEnum(s)
+		*e = AutoInstallConstraintNetworkTypeConstraintEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoInstallConstraintNetworkTypeConstraintEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoInstallConstraintNetworkTypeConstraintEnum: %v", v)
 	}
 }
 

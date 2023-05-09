@@ -14,18 +14,22 @@ const (
 	ReportVersioningEnumOverwriteReport ReportVersioningEnum = "OVERWRITE_REPORT"
 )
 
+func (e ReportVersioningEnum) ToPointer() *ReportVersioningEnum {
+	return &e
+}
+
 func (e *ReportVersioningEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE_NEW_REPORT":
 		fallthrough
 	case "OVERWRITE_REPORT":
-		*e = ReportVersioningEnum(s)
+		*e = ReportVersioningEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportVersioningEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportVersioningEnum: %v", v)
 	}
 }

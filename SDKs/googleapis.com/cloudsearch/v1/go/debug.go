@@ -34,7 +34,10 @@ func newDebug(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // CloudsearchDebugDatasourcesItemsCheckAccess - Checks whether an item is accessible by specified principal. Principal must be a user; groups and domain values aren't supported. **Note:** This API requires an admin account to execute.
 func (s *debug) CloudsearchDebugDatasourcesItemsCheckAccess(ctx context.Context, request operations.CloudsearchDebugDatasourcesItemsCheckAccessRequest, security operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurity) (*operations.CloudsearchDebugDatasourcesItemsCheckAccessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debug/{name}:checkAccess", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/debug/{name}:checkAccess", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Principal", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *debug) CloudsearchDebugDatasourcesItemsCheckAccess(ctx context.Context,
 // CloudsearchDebugDatasourcesItemsSearchByViewURL - Fetches the item whose viewUrl exactly matches that of the URL provided in the request. **Note:** This API requires an admin account to execute.
 func (s *debug) CloudsearchDebugDatasourcesItemsSearchByViewURL(ctx context.Context, request operations.CloudsearchDebugDatasourcesItemsSearchByViewURLRequest, security operations.CloudsearchDebugDatasourcesItemsSearchByViewURLSecurity) (*operations.CloudsearchDebugDatasourcesItemsSearchByViewURLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debug/{name}/items:searchByViewUrl", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/debug/{name}/items:searchByViewUrl", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchItemsByViewURLRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *debug) CloudsearchDebugDatasourcesItemsSearchByViewURL(ctx context.Cont
 // CloudsearchDebugIdentitysourcesItemsListForunmappedidentity - Lists names of items associated with an unmapped identity. **Note:** This API requires an admin account to execute.
 func (s *debug) CloudsearchDebugIdentitysourcesItemsListForunmappedidentity(ctx context.Context, request operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest, security operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentitySecurity) (*operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debug/{parent}/items:forunmappedidentity", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/debug/{parent}/items:forunmappedidentity", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *debug) CloudsearchDebugIdentitysourcesItemsListForunmappedidentity(ctx 
 // CloudsearchDebugIdentitysourcesUnmappedidsList - Lists unmapped user identities for an identity source. **Note:** This API requires an admin account to execute.
 func (s *debug) CloudsearchDebugIdentitysourcesUnmappedidsList(ctx context.Context, request operations.CloudsearchDebugIdentitysourcesUnmappedidsListRequest, security operations.CloudsearchDebugIdentitysourcesUnmappedidsListSecurity) (*operations.CloudsearchDebugIdentitysourcesUnmappedidsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/debug/{parent}/unmappedids", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/debug/{parent}/unmappedids", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

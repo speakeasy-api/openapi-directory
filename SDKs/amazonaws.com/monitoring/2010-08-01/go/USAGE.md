@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,25 +16,23 @@ func main() {
         }),
     )
 
-    req := operations.GETDeleteAlarmsRequest{
-        Action: "DeleteAlarms",
+    ctx := context.Background()
+    res, err := s.GETDeleteAlarms(ctx, operations.GETDeleteAlarmsRequest{
+        Action: operations.GETDeleteAlarmsActionEnumDeleteAlarms,
         AlarmNames: []string{
             "provident",
             "distinctio",
             "quibusdam",
         },
-        Version: "2010-08-01",
-        XAmzAlgorithm: "unde",
-        XAmzContentSha256: "nulla",
-        XAmzCredential: "corrupti",
-        XAmzDate: "illum",
-        XAmzSecurityToken: "vel",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "deserunt",
-    }
-
-    ctx := context.Background()
-    res, err := s.GETDeleteAlarms(ctx, req)
+        Version: operations.GETDeleteAlarmsVersionEnumTwoThousandAndTen0801,
+        XAmzAlgorithm: sdk.String("unde"),
+        XAmzContentSha256: sdk.String("nulla"),
+        XAmzCredential: sdk.String("corrupti"),
+        XAmzDate: sdk.String("illum"),
+        XAmzSecurityToken: sdk.String("vel"),
+        XAmzSignature: sdk.String("error"),
+        XAmzSignedHeaders: sdk.String("deserunt"),
+    })
     if err != nil {
         log.Fatal(err)
     }

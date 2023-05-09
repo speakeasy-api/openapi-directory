@@ -15,17 +15,21 @@ const (
 	POSTDetachInstancesActionEnumDetachInstances POSTDetachInstancesActionEnum = "DetachInstances"
 )
 
+func (e POSTDetachInstancesActionEnum) ToPointer() *POSTDetachInstancesActionEnum {
+	return &e
+}
+
 func (e *POSTDetachInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DetachInstances":
-		*e = POSTDetachInstancesActionEnum(s)
+		*e = POSTDetachInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDetachInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDetachInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDetachInstancesVersionEnumTwoThousandAndEleven0101 POSTDetachInstancesVersionEnum = "2011-01-01"
 )
 
+func (e POSTDetachInstancesVersionEnum) ToPointer() *POSTDetachInstancesVersionEnum {
+	return &e
+}
+
 func (e *POSTDetachInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTDetachInstancesVersionEnum(s)
+		*e = POSTDetachInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDetachInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDetachInstancesVersionEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	SubjectErasureResponseResultEnumSuccess                    SubjectErasureResponseResultEnum = "SUCCESS"
 )
 
+func (e SubjectErasureResponseResultEnum) ToPointer() *SubjectErasureResponseResultEnum {
+	return &e
+}
+
 func (e *SubjectErasureResponseResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE_RECURRING_TOKEN_EXISTS":
 		fallthrough
 	case "ALREADY_PROCESSED":
@@ -30,10 +34,10 @@ func (e *SubjectErasureResponseResultEnum) UnmarshalJSON(data []byte) error {
 	case "PAYMENT_NOT_FOUND":
 		fallthrough
 	case "SUCCESS":
-		*e = SubjectErasureResponseResultEnum(s)
+		*e = SubjectErasureResponseResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubjectErasureResponseResultEnum: %s", s)
+		return fmt.Errorf("invalid value for SubjectErasureResponseResultEnum: %v", v)
 	}
 }
 

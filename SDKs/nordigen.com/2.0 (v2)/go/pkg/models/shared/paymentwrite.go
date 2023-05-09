@@ -8,22 +8,41 @@ import (
 	"openapi/pkg/types"
 )
 
-// PaymentWritePaymentProductEnum - Payment product
+// PaymentWritePaymentProductEnum - * `T2P` - target-2-payments
+// * `SCT` - sepa-credit-transfers
+// * `ISCT` - instant-sepa-credit-transfer
+// * `CBCT` - cross-border-credit-transfers
+// * `BACS` - Back Payment Scheme
+// * `CHAPS` - CHAPS Payment Scheme
+// * `FPS` - Faster Payment Scheme
+// * `SWIFT` - Swift Payment Service
+// * `BT` - Balance Transfer
+// * `MT` - Money Transfer
 type PaymentWritePaymentProductEnum string
 
 const (
-	PaymentWritePaymentProductEnumT2P  PaymentWritePaymentProductEnum = "T2P"
-	PaymentWritePaymentProductEnumSct  PaymentWritePaymentProductEnum = "SCT"
-	PaymentWritePaymentProductEnumIsct PaymentWritePaymentProductEnum = "ISCT"
-	PaymentWritePaymentProductEnumCbct PaymentWritePaymentProductEnum = "CBCT"
+	PaymentWritePaymentProductEnumT2P   PaymentWritePaymentProductEnum = "T2P"
+	PaymentWritePaymentProductEnumSct   PaymentWritePaymentProductEnum = "SCT"
+	PaymentWritePaymentProductEnumIsct  PaymentWritePaymentProductEnum = "ISCT"
+	PaymentWritePaymentProductEnumCbct  PaymentWritePaymentProductEnum = "CBCT"
+	PaymentWritePaymentProductEnumBacs  PaymentWritePaymentProductEnum = "BACS"
+	PaymentWritePaymentProductEnumChaps PaymentWritePaymentProductEnum = "CHAPS"
+	PaymentWritePaymentProductEnumFps   PaymentWritePaymentProductEnum = "FPS"
+	PaymentWritePaymentProductEnumSwift PaymentWritePaymentProductEnum = "SWIFT"
+	PaymentWritePaymentProductEnumBt    PaymentWritePaymentProductEnum = "BT"
+	PaymentWritePaymentProductEnumMt    PaymentWritePaymentProductEnum = "MT"
 )
 
+func (e PaymentWritePaymentProductEnum) ToPointer() *PaymentWritePaymentProductEnum {
+	return &e
+}
+
 func (e *PaymentWritePaymentProductEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "T2P":
 		fallthrough
 	case "SCT":
@@ -31,14 +50,42 @@ func (e *PaymentWritePaymentProductEnum) UnmarshalJSON(data []byte) error {
 	case "ISCT":
 		fallthrough
 	case "CBCT":
-		*e = PaymentWritePaymentProductEnum(s)
+		fallthrough
+	case "BACS":
+		fallthrough
+	case "CHAPS":
+		fallthrough
+	case "FPS":
+		fallthrough
+	case "SWIFT":
+		fallthrough
+	case "BT":
+		fallthrough
+	case "MT":
+		*e = PaymentWritePaymentProductEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentWritePaymentProductEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentWritePaymentProductEnum: %v", v)
 	}
 }
 
-// PaymentWritePaymentStatusEnum - Payment end to end identification
+// PaymentWritePaymentStatusEnum - * `INIT` - Initiated. Payment has been initiated.
+// * `ERRE` - ExecutionError. We experienced error on payment execution.
+// * `ERRS` - StatusError. We experienced error retrieving payment status. Try again.
+// * `ACCC` - AcceptedSettlementCompleted. Settlement on the creditor's account has been completed
+// * `ACCP` - AcceptedCustomerProfile. Preceding check of technical validation was successful. Customer profile check was successful
+// * `ACSC` - AcceptedSettlementCompleted. Settlement on the debtor’s account has been completed
+// * `ACSP` - AcceptedSettlementInProcess. All preceding checks such as technical validation and customer profile were successful and therefore the payment initiation has been accepted for execution
+// * `ACTC` - AcceptedTechnicalValidation. Authentication and syntactical and semantical validation are successful
+// * `ACWC` - AcceptedWithChange. Instruction is accepted but a change will be made, such as date or remittance not sent
+// * `ACWP` - AcceptedWithoutPosting. Payment instruction included in the credit transfer is accepted without being posted to the creditor customer’s account
+// * `RCVD` - Received. Payment initiation has been received by the receiving agent
+// * `PDNG` - Pending. Payment initiation or individual transaction included in the payment initiation is pending. Further checks and status update will be performed
+// * `RJCT` - Rejected. Payment initiation or individual transaction included in the payment initiation has been rejected.
+// * `CANC` - Cancelled. Payment initiation has been cancelled before execution
+// * `ACFC` - AcceptedFundsChecked. Pre-ceeding check of technical validation and customer profile was successful and an automatic funds check was positive
+// * `PATC` - PartiallyAcceptedTechnicalCorrect. The payment initiation needs multiple authentications, where some but not yet all have been performed
+// * `PART` - PartiallyAccepted. A number of transactions have been accepted, whereas another number of transactions have not yet achieved 'accepted' status
 type PaymentWritePaymentStatusEnum string
 
 const (
@@ -61,12 +108,16 @@ const (
 	PaymentWritePaymentStatusEnumPart PaymentWritePaymentStatusEnum = "PART"
 )
 
+func (e PaymentWritePaymentStatusEnum) ToPointer() *PaymentWritePaymentStatusEnum {
+	return &e
+}
+
 func (e *PaymentWritePaymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INIT":
 		fallthrough
 	case "ERRE":
@@ -100,14 +151,16 @@ func (e *PaymentWritePaymentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PATC":
 		fallthrough
 	case "PART":
-		*e = PaymentWritePaymentStatusEnum(s)
+		*e = PaymentWritePaymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentWritePaymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentWritePaymentStatusEnum: %v", v)
 	}
 }
 
-// PaymentWritePaymentTypeEnum - Payment Type
+// PaymentWritePaymentTypeEnum - * `single-payment` - payment
+// * `bulk-payment` - bulk-payments
+// * `periodic-payment` - periodic-payments
 type PaymentWritePaymentTypeEnum string
 
 const (
@@ -116,28 +169,34 @@ const (
 	PaymentWritePaymentTypeEnumPeriodicPayment PaymentWritePaymentTypeEnum = "periodic-payment"
 )
 
+func (e PaymentWritePaymentTypeEnum) ToPointer() *PaymentWritePaymentTypeEnum {
+	return &e
+}
+
 func (e *PaymentWritePaymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "single-payment":
 		fallthrough
 	case "bulk-payment":
 		fallthrough
 	case "periodic-payment":
-		*e = PaymentWritePaymentTypeEnum(s)
+		*e = PaymentWritePaymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentWritePaymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentWritePaymentTypeEnum: %v", v)
 	}
 }
 
 // PaymentWrite - PaymentWriteSerializer.
 type PaymentWrite struct {
 	// Registered creditor account
-	CreditorAccount string `json:"creditor_account"`
+	CreditorAccount *string `json:"creditor_account,omitempty"`
+	// Creditor account
+	CreditorObject *CreditorAccountWrite `json:"creditor_object,omitempty"`
 	// Payment Custom Payment ID
 	CustomPaymentID *string `json:"custom_payment_id,omitempty"`
 	// Payment description
@@ -149,10 +208,43 @@ type PaymentWrite struct {
 	// Payment ID
 	PaymentID *string `json:"payment_id,omitempty"`
 	// Payment product
+	//
+	// * `T2P` - target-2-payments
+	// * `SCT` - sepa-credit-transfers
+	// * `ISCT` - instant-sepa-credit-transfer
+	// * `CBCT` - cross-border-credit-transfers
+	// * `BACS` - Back Payment Scheme
+	// * `CHAPS` - CHAPS Payment Scheme
+	// * `FPS` - Faster Payment Scheme
+	// * `SWIFT` - Swift Payment Service
+	// * `BT` - Balance Transfer
+	// * `MT` - Money Transfer
 	PaymentProduct *PaymentWritePaymentProductEnum `json:"payment_product,omitempty"`
 	// Payment end to end identification
+	//
+	// * `INIT` - Initiated. Payment has been initiated.
+	// * `ERRE` - ExecutionError. We experienced error on payment execution.
+	// * `ERRS` - StatusError. We experienced error retrieving payment status. Try again.
+	// * `ACCC` - AcceptedSettlementCompleted. Settlement on the creditor's account has been completed
+	// * `ACCP` - AcceptedCustomerProfile. Preceding check of technical validation was successful. Customer profile check was successful
+	// * `ACSC` - AcceptedSettlementCompleted. Settlement on the debtor’s account has been completed
+	// * `ACSP` - AcceptedSettlementInProcess. All preceding checks such as technical validation and customer profile were successful and therefore the payment initiation has been accepted for execution
+	// * `ACTC` - AcceptedTechnicalValidation. Authentication and syntactical and semantical validation are successful
+	// * `ACWC` - AcceptedWithChange. Instruction is accepted but a change will be made, such as date or remittance not sent
+	// * `ACWP` - AcceptedWithoutPosting. Payment instruction included in the credit transfer is accepted without being posted to the creditor customer’s account
+	// * `RCVD` - Received. Payment initiation has been received by the receiving agent
+	// * `PDNG` - Pending. Payment initiation or individual transaction included in the payment initiation is pending. Further checks and status update will be performed
+	// * `RJCT` - Rejected. Payment initiation or individual transaction included in the payment initiation has been rejected.
+	// * `CANC` - Cancelled. Payment initiation has been cancelled before execution
+	// * `ACFC` - AcceptedFundsChecked. Pre-ceeding check of technical validation and customer profile was successful and an automatic funds check was positive
+	// * `PATC` - PartiallyAcceptedTechnicalCorrect. The payment initiation needs multiple authentications, where some but not yet all have been performed
+	// * `PART` - PartiallyAccepted. A number of transactions have been accepted, whereas another number of transactions have not yet achieved 'accepted' status
 	PaymentStatus *PaymentWritePaymentStatusEnum `json:"payment_status,omitempty"`
 	// Payment Type
+	//
+	// * `single-payment` - payment
+	// * `bulk-payment` - bulk-payments
+	// * `periodic-payment` - periodic-payments
 	PaymentType *PaymentWritePaymentTypeEnum `json:"payment_type,omitempty"`
 	// Periodic Payment Serializer.
 	PeriodicPayment *PeriodicPayment `json:"periodic_payment,omitempty"`
@@ -160,4 +252,6 @@ type PaymentWrite struct {
 	Redirect string `json:"redirect"`
 	// Payment Execution date (for periodic payments)
 	RequestedExecutionDate *types.Date `json:"requested_execution_date,omitempty"`
+	// Indicates whether payment should be submitted separately
+	SubmitPayment *bool `json:"submit_payment,omitempty"`
 }

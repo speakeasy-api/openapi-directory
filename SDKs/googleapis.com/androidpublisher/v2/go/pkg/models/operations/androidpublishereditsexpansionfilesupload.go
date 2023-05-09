@@ -22,19 +22,23 @@ const (
 	AndroidpublisherEditsExpansionfilesUploadExpansionFileTypeEnumPatch AndroidpublisherEditsExpansionfilesUploadExpansionFileTypeEnum = "patch"
 )
 
+func (e AndroidpublisherEditsExpansionfilesUploadExpansionFileTypeEnum) ToPointer() *AndroidpublisherEditsExpansionfilesUploadExpansionFileTypeEnum {
+	return &e
+}
+
 func (e *AndroidpublisherEditsExpansionfilesUploadExpansionFileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "main":
 		fallthrough
 	case "patch":
-		*e = AndroidpublisherEditsExpansionfilesUploadExpansionFileTypeEnum(s)
+		*e = AndroidpublisherEditsExpansionfilesUploadExpansionFileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidpublisherEditsExpansionfilesUploadExpansionFileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidpublisherEditsExpansionfilesUploadExpansionFileTypeEnum: %v", v)
 	}
 }
 

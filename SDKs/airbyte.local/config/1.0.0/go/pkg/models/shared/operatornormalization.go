@@ -13,17 +13,21 @@ const (
 	OperatorNormalizationOptionEnumBasic OperatorNormalizationOptionEnum = "basic"
 )
 
+func (e OperatorNormalizationOptionEnum) ToPointer() *OperatorNormalizationOptionEnum {
+	return &e
+}
+
 func (e *OperatorNormalizationOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "basic":
-		*e = OperatorNormalizationOptionEnum(s)
+		*e = OperatorNormalizationOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperatorNormalizationOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for OperatorNormalizationOptionEnum: %v", v)
 	}
 }
 

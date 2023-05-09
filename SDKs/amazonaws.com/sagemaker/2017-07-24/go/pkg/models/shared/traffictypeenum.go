@@ -13,16 +13,20 @@ const (
 	TrafficTypeEnumPhases TrafficTypeEnum = "PHASES"
 )
 
+func (e TrafficTypeEnum) ToPointer() *TrafficTypeEnum {
+	return &e
+}
+
 func (e *TrafficTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PHASES":
-		*e = TrafficTypeEnum(s)
+		*e = TrafficTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrafficTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrafficTypeEnum: %v", v)
 	}
 }

@@ -17,19 +17,23 @@ const (
 	UpdateIntegrationRequestBodyConnectionTypeEnumVpcLink  UpdateIntegrationRequestBodyConnectionTypeEnum = "VPC_LINK"
 )
 
+func (e UpdateIntegrationRequestBodyConnectionTypeEnum) ToPointer() *UpdateIntegrationRequestBodyConnectionTypeEnum {
+	return &e
+}
+
 func (e *UpdateIntegrationRequestBodyConnectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNET":
 		fallthrough
 	case "VPC_LINK":
-		*e = UpdateIntegrationRequestBodyConnectionTypeEnum(s)
+		*e = UpdateIntegrationRequestBodyConnectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateIntegrationRequestBodyConnectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateIntegrationRequestBodyConnectionTypeEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	UpdateIntegrationRequestBodyContentHandlingStrategyEnumConvertToText   UpdateIntegrationRequestBodyContentHandlingStrategyEnum = "CONVERT_TO_TEXT"
 )
 
+func (e UpdateIntegrationRequestBodyContentHandlingStrategyEnum) ToPointer() *UpdateIntegrationRequestBodyContentHandlingStrategyEnum {
+	return &e
+}
+
 func (e *UpdateIntegrationRequestBodyContentHandlingStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONVERT_TO_BINARY":
 		fallthrough
 	case "CONVERT_TO_TEXT":
-		*e = UpdateIntegrationRequestBodyContentHandlingStrategyEnum(s)
+		*e = UpdateIntegrationRequestBodyContentHandlingStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateIntegrationRequestBodyContentHandlingStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateIntegrationRequestBodyContentHandlingStrategyEnum: %v", v)
 	}
 }
 
@@ -68,12 +76,16 @@ const (
 	UpdateIntegrationRequestBodyIntegrationTypeEnumAwsProxy  UpdateIntegrationRequestBodyIntegrationTypeEnum = "AWS_PROXY"
 )
 
+func (e UpdateIntegrationRequestBodyIntegrationTypeEnum) ToPointer() *UpdateIntegrationRequestBodyIntegrationTypeEnum {
+	return &e
+}
+
 func (e *UpdateIntegrationRequestBodyIntegrationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS":
 		fallthrough
 	case "HTTP":
@@ -83,10 +95,10 @@ func (e *UpdateIntegrationRequestBodyIntegrationTypeEnum) UnmarshalJSON(data []b
 	case "HTTP_PROXY":
 		fallthrough
 	case "AWS_PROXY":
-		*e = UpdateIntegrationRequestBodyIntegrationTypeEnum(s)
+		*e = UpdateIntegrationRequestBodyIntegrationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateIntegrationRequestBodyIntegrationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateIntegrationRequestBodyIntegrationTypeEnum: %v", v)
 	}
 }
 
@@ -99,21 +111,25 @@ const (
 	UpdateIntegrationRequestBodyPassthroughBehaviorEnumWhenNoTemplates UpdateIntegrationRequestBodyPassthroughBehaviorEnum = "WHEN_NO_TEMPLATES"
 )
 
+func (e UpdateIntegrationRequestBodyPassthroughBehaviorEnum) ToPointer() *UpdateIntegrationRequestBodyPassthroughBehaviorEnum {
+	return &e
+}
+
 func (e *UpdateIntegrationRequestBodyPassthroughBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WHEN_NO_MATCH":
 		fallthrough
 	case "NEVER":
 		fallthrough
 	case "WHEN_NO_TEMPLATES":
-		*e = UpdateIntegrationRequestBodyPassthroughBehaviorEnum(s)
+		*e = UpdateIntegrationRequestBodyPassthroughBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateIntegrationRequestBodyPassthroughBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateIntegrationRequestBodyPassthroughBehaviorEnum: %v", v)
 	}
 }
 

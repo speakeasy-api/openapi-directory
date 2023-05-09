@@ -34,7 +34,10 @@ func newMember(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GetMembers - List Members
 func (s *member) GetMembers(ctx context.Context, request operations.GetMembersRequest) (*operations.GetMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

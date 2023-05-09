@@ -16,17 +16,21 @@ const (
 	StartMatchBackfillXAmzTargetEnumGameLiftStartMatchBackfill StartMatchBackfillXAmzTargetEnum = "GameLift.StartMatchBackfill"
 )
 
+func (e StartMatchBackfillXAmzTargetEnum) ToPointer() *StartMatchBackfillXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartMatchBackfillXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.StartMatchBackfill":
-		*e = StartMatchBackfillXAmzTargetEnum(s)
+		*e = StartMatchBackfillXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartMatchBackfillXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartMatchBackfillXAmzTargetEnum: %v", v)
 	}
 }
 

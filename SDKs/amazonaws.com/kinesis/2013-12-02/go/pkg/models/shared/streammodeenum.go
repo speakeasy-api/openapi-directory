@@ -14,18 +14,22 @@ const (
 	StreamModeEnumOnDemand    StreamModeEnum = "ON_DEMAND"
 )
 
+func (e StreamModeEnum) ToPointer() *StreamModeEnum {
+	return &e
+}
+
 func (e *StreamModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROVISIONED":
 		fallthrough
 	case "ON_DEMAND":
-		*e = StreamModeEnum(s)
+		*e = StreamModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamModeEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamModeEnum: %v", v)
 	}
 }

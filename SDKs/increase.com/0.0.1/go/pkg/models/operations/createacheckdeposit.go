@@ -9,23 +9,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateACheckDepositDefaultApplicationJSON13StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON13StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CreateACheckDepositDefaultApplicationJSON13StatusEnum = "429"
+	CreateACheckDepositDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CreateACheckDepositDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON13StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = CreateACheckDepositDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = CreateACheckDepositDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	CreateACheckDepositDefaultApplicationJSON13TypeEnumRateLimitedError CreateACheckDepositDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON13TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = CreateACheckDepositDefaultApplicationJSON13TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -57,23 +65,27 @@ type CreateACheckDepositDefaultApplicationJSON13 struct {
 	Type       CreateACheckDepositDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type CreateACheckDepositDefaultApplicationJSON12StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON12StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON12StatusEnumFourHundredAndThree CreateACheckDepositDefaultApplicationJSON12StatusEnum = "403"
+	CreateACheckDepositDefaultApplicationJSON12StatusEnumFourHundredAndThree CreateACheckDepositDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON12StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateACheckDepositDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateACheckDepositDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -83,17 +95,21 @@ const (
 	CreateACheckDepositDefaultApplicationJSON12TypeEnumPrivateFeatureError CreateACheckDepositDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON12TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = CreateACheckDepositDefaultApplicationJSON12TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -104,23 +120,27 @@ type CreateACheckDepositDefaultApplicationJSON12 struct {
 	Type   CreateACheckDepositDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type CreateACheckDepositDefaultApplicationJSON11StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON11StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON11StatusEnumFourHundredAndFour CreateACheckDepositDefaultApplicationJSON11StatusEnum = "404"
+	CreateACheckDepositDefaultApplicationJSON11StatusEnumFourHundredAndFour CreateACheckDepositDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON11StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CreateACheckDepositDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CreateACheckDepositDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	CreateACheckDepositDefaultApplicationJSON11TypeEnumObjectNotFoundError CreateACheckDepositDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON11TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = CreateACheckDepositDefaultApplicationJSON11TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -151,23 +175,27 @@ type CreateACheckDepositDefaultApplicationJSON11 struct {
 	Type   CreateACheckDepositDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type CreateACheckDepositDefaultApplicationJSON10StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON10StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON10StatusEnumFourHundred CreateACheckDepositDefaultApplicationJSON10StatusEnum = "400"
+	CreateACheckDepositDefaultApplicationJSON10StatusEnumFourHundred CreateACheckDepositDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON10StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CreateACheckDepositDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CreateACheckDepositDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -177,17 +205,21 @@ const (
 	CreateACheckDepositDefaultApplicationJSON10TypeEnumMalformedRequestError CreateACheckDepositDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON10TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = CreateACheckDepositDefaultApplicationJSON10TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -198,23 +230,27 @@ type CreateACheckDepositDefaultApplicationJSON10 struct {
 	Type   CreateACheckDepositDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type CreateACheckDepositDefaultApplicationJSON9StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON9StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON9StatusEnumFourHundred CreateACheckDepositDefaultApplicationJSON9StatusEnum = "400"
+	CreateACheckDepositDefaultApplicationJSON9StatusEnumFourHundred CreateACheckDepositDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON9StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CreateACheckDepositDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CreateACheckDepositDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -224,46 +260,54 @@ const (
 	CreateACheckDepositDefaultApplicationJSON9TypeEnumInvalidParametersError CreateACheckDepositDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON9TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = CreateACheckDepositDefaultApplicationJSON9TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type CreateACheckDepositDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                             `json:"errors,omitempty"`
+	Errors []map[string]interface{}                             `json:"errors"`
 	Status CreateACheckDepositDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                               `json:"title"`
 	Type   CreateACheckDepositDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type CreateACheckDepositDefaultApplicationJSON8StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON8StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON8StatusEnumFourHundredAndNine CreateACheckDepositDefaultApplicationJSON8StatusEnum = "409"
+	CreateACheckDepositDefaultApplicationJSON8StatusEnumFourHundredAndNine CreateACheckDepositDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON8StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CreateACheckDepositDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CreateACheckDepositDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	CreateACheckDepositDefaultApplicationJSON8TypeEnumInvalidOperationError CreateACheckDepositDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON8TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = CreateACheckDepositDefaultApplicationJSON8TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -294,23 +342,27 @@ type CreateACheckDepositDefaultApplicationJSON8 struct {
 	Type   CreateACheckDepositDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type CreateACheckDepositDefaultApplicationJSON7StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON7StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON7StatusEnumFourHundredAndOne CreateACheckDepositDefaultApplicationJSON7StatusEnum = "401"
+	CreateACheckDepositDefaultApplicationJSON7StatusEnumFourHundredAndOne CreateACheckDepositDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON7StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = CreateACheckDepositDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = CreateACheckDepositDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	CreateACheckDepositDefaultApplicationJSON7TypeEnumInvalidAPIKeyError CreateACheckDepositDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON7TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = CreateACheckDepositDefaultApplicationJSON7TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -341,23 +397,27 @@ type CreateACheckDepositDefaultApplicationJSON7 struct {
 	Type   CreateACheckDepositDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type CreateACheckDepositDefaultApplicationJSON6StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON6StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON6StatusEnumFiveHundred CreateACheckDepositDefaultApplicationJSON6StatusEnum = "500"
+	CreateACheckDepositDefaultApplicationJSON6StatusEnumFiveHundred CreateACheckDepositDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON6StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = CreateACheckDepositDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = CreateACheckDepositDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -367,17 +427,21 @@ const (
 	CreateACheckDepositDefaultApplicationJSON6TypeEnumInternalServerError CreateACheckDepositDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON6TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = CreateACheckDepositDefaultApplicationJSON6TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -388,23 +452,27 @@ type CreateACheckDepositDefaultApplicationJSON6 struct {
 	Type   CreateACheckDepositDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type CreateACheckDepositDefaultApplicationJSON5StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON5StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON5StatusEnumFourHundredAndThree CreateACheckDepositDefaultApplicationJSON5StatusEnum = "403"
+	CreateACheckDepositDefaultApplicationJSON5StatusEnumFourHundredAndThree CreateACheckDepositDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON5StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateACheckDepositDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateACheckDepositDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -414,17 +482,21 @@ const (
 	CreateACheckDepositDefaultApplicationJSON5TypeEnumInsufficientPermissionsError CreateACheckDepositDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON5TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = CreateACheckDepositDefaultApplicationJSON5TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -435,23 +507,27 @@ type CreateACheckDepositDefaultApplicationJSON5 struct {
 	Type   CreateACheckDepositDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type CreateACheckDepositDefaultApplicationJSON4StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON4StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CreateACheckDepositDefaultApplicationJSON4StatusEnum = "422"
+	CreateACheckDepositDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CreateACheckDepositDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON4StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = CreateACheckDepositDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = CreateACheckDepositDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -461,17 +537,21 @@ const (
 	CreateACheckDepositDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError CreateACheckDepositDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON4TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = CreateACheckDepositDefaultApplicationJSON4TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -482,23 +562,27 @@ type CreateACheckDepositDefaultApplicationJSON4 struct {
 	Type   CreateACheckDepositDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type CreateACheckDepositDefaultApplicationJSON3StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON3StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON3StatusEnumFourHundredAndNine CreateACheckDepositDefaultApplicationJSON3StatusEnum = "409"
+	CreateACheckDepositDefaultApplicationJSON3StatusEnumFourHundredAndNine CreateACheckDepositDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON3StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CreateACheckDepositDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CreateACheckDepositDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -508,17 +592,21 @@ const (
 	CreateACheckDepositDefaultApplicationJSON3TypeEnumIdempotencyConflictError CreateACheckDepositDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON3TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = CreateACheckDepositDefaultApplicationJSON3TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -529,23 +617,27 @@ type CreateACheckDepositDefaultApplicationJSON3 struct {
 	Type   CreateACheckDepositDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type CreateACheckDepositDefaultApplicationJSON2StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON2StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON2StatusEnumFourHundredAndThree CreateACheckDepositDefaultApplicationJSON2StatusEnum = "403"
+	CreateACheckDepositDefaultApplicationJSON2StatusEnumFourHundredAndThree CreateACheckDepositDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON2StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateACheckDepositDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateACheckDepositDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -555,17 +647,21 @@ const (
 	CreateACheckDepositDefaultApplicationJSON2TypeEnumEnvironmentMismatchError CreateACheckDepositDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON2TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = CreateACheckDepositDefaultApplicationJSON2TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -576,23 +672,27 @@ type CreateACheckDepositDefaultApplicationJSON2 struct {
 	Type   CreateACheckDepositDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type CreateACheckDepositDefaultApplicationJSON1StatusEnum string
+type CreateACheckDepositDefaultApplicationJSON1StatusEnum int64
 
 const (
-	CreateACheckDepositDefaultApplicationJSON1StatusEnumFourHundredAndFour CreateACheckDepositDefaultApplicationJSON1StatusEnum = "404"
+	CreateACheckDepositDefaultApplicationJSON1StatusEnumFourHundredAndFour CreateACheckDepositDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON1StatusEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CreateACheckDepositDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CreateACheckDepositDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -602,17 +702,21 @@ const (
 	CreateACheckDepositDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError CreateACheckDepositDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e CreateACheckDepositDefaultApplicationJSON1TypeEnum) ToPointer() *CreateACheckDepositDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *CreateACheckDepositDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = CreateACheckDepositDefaultApplicationJSON1TypeEnum(s)
+		*e = CreateACheckDepositDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACheckDepositDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

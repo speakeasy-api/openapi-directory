@@ -16,17 +16,21 @@ const (
 	StopNotebookInstanceXAmzTargetEnumSageMakerStopNotebookInstance StopNotebookInstanceXAmzTargetEnum = "SageMaker.StopNotebookInstance"
 )
 
+func (e StopNotebookInstanceXAmzTargetEnum) ToPointer() *StopNotebookInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopNotebookInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.StopNotebookInstance":
-		*e = StopNotebookInstanceXAmzTargetEnum(s)
+		*e = StopNotebookInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopNotebookInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopNotebookInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

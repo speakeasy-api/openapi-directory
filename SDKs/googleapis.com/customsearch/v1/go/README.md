@@ -13,64 +13,62 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/customsear
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SearchCseListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        C2coff: "quibusdam",
-        Callback: "unde",
-        Cr: "nulla",
-        Cx: "corrupti",
-        DateRestrict: "illum",
-        ExactTerms: "vel",
-        ExcludeTerms: "error",
-        Fields: "deserunt",
-        FileType: "suscipit",
-        Filter: "iure",
-        Gl: "magnam",
-        Googlehost: "debitis",
-        HighRange: "ipsa",
-        Hl: "delectus",
-        Hq: "tempora",
-        ImgColorType: "mono",
-        ImgDominantColor: "orange",
-        ImgSize: "XLARGE",
-        ImgType: "photo",
-        Key: "voluptatum",
-        LinkSite: "iusto",
-        LowRange: "excepturi",
-        Lr: "nisi",
-        Num: 925597,
-        OauthToken: "temporibus",
-        OrTerms: "ab",
-        PrettyPrint: false,
-        Q: "quis",
-        QuotaUser: "veritatis",
-        RelatedSite: "deserunt",
-        Rights: "perferendis",
-        Safe: "active",
-        SearchType: "image",
-        SiteSearch: "sapiente",
-        SiteSearchFilter: "i",
-        Sort: "odit",
-        Start: 870013,
-        UploadType: "at",
-        UploadProtocol: "maiores",
-    }
-
     ctx := context.Background()
-    res, err := s.Cse.SearchCseList(ctx, req)
+    res, err := s.Cse.SearchCseList(ctx, operations.SearchCseListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        C2coff: sdk.String("quibusdam"),
+        Callback: sdk.String("unde"),
+        Cr: sdk.String("nulla"),
+        Cx: sdk.String("corrupti"),
+        DateRestrict: sdk.String("illum"),
+        ExactTerms: sdk.String("vel"),
+        ExcludeTerms: sdk.String("error"),
+        Fields: sdk.String("deserunt"),
+        FileType: sdk.String("suscipit"),
+        Filter: sdk.String("iure"),
+        Gl: sdk.String("magnam"),
+        Googlehost: sdk.String("debitis"),
+        HighRange: sdk.String("ipsa"),
+        Hl: sdk.String("delectus"),
+        Hq: sdk.String("tempora"),
+        ImgColorType: operations.SearchCseListImgColorTypeEnumMono.ToPointer(),
+        ImgDominantColor: operations.SearchCseListImgDominantColorEnumOrange.ToPointer(),
+        ImgSize: operations.SearchCseListImgSizeEnumXlarge.ToPointer(),
+        ImgType: operations.SearchCseListImgTypeEnumPhoto.ToPointer(),
+        Key: sdk.String("voluptatum"),
+        LinkSite: sdk.String("iusto"),
+        LowRange: sdk.String("excepturi"),
+        Lr: sdk.String("nisi"),
+        Num: sdk.Int64(925597),
+        OauthToken: sdk.String("temporibus"),
+        OrTerms: sdk.String("ab"),
+        PrettyPrint: sdk.Bool(false),
+        Q: sdk.String("quis"),
+        QuotaUser: sdk.String("veritatis"),
+        RelatedSite: sdk.String("deserunt"),
+        Rights: sdk.String("perferendis"),
+        Safe: operations.SearchCseListSafeEnumActive.ToPointer(),
+        SearchType: operations.SearchCseListSearchTypeEnumImage.ToPointer(),
+        SiteSearch: sdk.String("sapiente"),
+        SiteSearchFilter: operations.SearchCseListSiteSearchFilterEnumI.ToPointer(),
+        Sort: sdk.String("odit"),
+        Start: sdk.Int64(870013),
+        UploadType: sdk.String("at"),
+        UploadProtocol: sdk.String("maiores"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -86,10 +84,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### Cse
+### [Cse](docs/cse/README.md)
 
-* `SearchCseList` - Returns metadata about the search performed, metadata about the engine used for the search, and the search results.
-* `SearchCseSiterestrictList` - Returns metadata about the search performed, metadata about the engine used for the search, and the search results. Uses a small set of url patterns.
+* [SearchCseList](docs/cse/README.md#searchcselist) - Returns metadata about the search performed, metadata about the engine used for the search, and the search results.
+* [SearchCseSiterestrictList](docs/cse/README.md#searchcsesiterestrictlist) - Returns metadata about the search performed, metadata about the engine used for the search, and the search results. Uses a small set of url patterns.
 <!-- End SDK Available Operations -->
 
 ### Maturity

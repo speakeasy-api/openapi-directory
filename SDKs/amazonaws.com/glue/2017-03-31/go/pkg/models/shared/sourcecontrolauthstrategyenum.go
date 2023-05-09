@@ -14,18 +14,22 @@ const (
 	SourceControlAuthStrategyEnumAwsSecretsManager   SourceControlAuthStrategyEnum = "AWS_SECRETS_MANAGER"
 )
 
+func (e SourceControlAuthStrategyEnum) ToPointer() *SourceControlAuthStrategyEnum {
+	return &e
+}
+
 func (e *SourceControlAuthStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERSONAL_ACCESS_TOKEN":
 		fallthrough
 	case "AWS_SECRETS_MANAGER":
-		*e = SourceControlAuthStrategyEnum(s)
+		*e = SourceControlAuthStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceControlAuthStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceControlAuthStrategyEnum: %v", v)
 	}
 }

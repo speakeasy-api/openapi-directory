@@ -13,17 +13,21 @@ const (
 	SingleFieldDependencyDependencyTypeEnumSingleField SingleFieldDependencyDependencyTypeEnum = "SINGLE_FIELD"
 )
 
+func (e SingleFieldDependencyDependencyTypeEnum) ToPointer() *SingleFieldDependencyDependencyTypeEnum {
+	return &e
+}
+
 func (e *SingleFieldDependencyDependencyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SINGLE_FIELD":
-		*e = SingleFieldDependencyDependencyTypeEnum(s)
+		*e = SingleFieldDependencyDependencyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SingleFieldDependencyDependencyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SingleFieldDependencyDependencyTypeEnum: %v", v)
 	}
 }
 

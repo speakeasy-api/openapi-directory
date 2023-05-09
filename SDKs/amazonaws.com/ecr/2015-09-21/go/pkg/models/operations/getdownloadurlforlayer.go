@@ -16,17 +16,21 @@ const (
 	GetDownloadURLForLayerXAmzTargetEnumAmazonEc2ContainerRegistryV20150921GetDownloadURLForLayer GetDownloadURLForLayerXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.GetDownloadUrlForLayer"
 )
 
+func (e GetDownloadURLForLayerXAmzTargetEnum) ToPointer() *GetDownloadURLForLayerXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDownloadURLForLayerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.GetDownloadUrlForLayer":
-		*e = GetDownloadURLForLayerXAmzTargetEnum(s)
+		*e = GetDownloadURLForLayerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDownloadURLForLayerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDownloadURLForLayerXAmzTargetEnum: %v", v)
 	}
 }
 

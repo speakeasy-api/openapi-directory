@@ -2,52 +2,50 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ApigeeregistryProjectsLocationsApisCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.ApigeeregistryProjectsLocationsApisCreate(ctx, operations.ApigeeregistryProjectsLocationsApisCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         APIInput: &shared.APIInput{
             Annotations: map[string]string{
                 "distinctio": "quibusdam",
                 "unde": "nulla",
                 "corrupti": "illum",
             },
-            Availability: "vel",
-            Description: "error",
-            DisplayName: "deserunt",
+            Availability: sdk.String("vel"),
+            Description: sdk.String("error"),
+            DisplayName: sdk.String("deserunt"),
             Labels: map[string]string{
                 "iure": "magnam",
                 "debitis": "ipsa",
             },
-            Name: "delectus",
-            RecommendedDeployment: "tempora",
-            RecommendedVersion: "suscipit",
+            Name: sdk.String("Ricky Hoppe"),
+            RecommendedDeployment: sdk.String("placeat"),
+            RecommendedVersion: sdk.String("voluptatum"),
         },
-        AccessToken: "molestiae",
-        Alt: "proto",
-        APIID: "placeat",
-        Callback: "voluptatum",
-        Fields: "iusto",
-        Key: "excepturi",
-        OauthToken: "nisi",
-        Parent: "recusandae",
-        PrettyPrint: false,
-        QuotaUser: "temporibus",
-        UploadType: "ab",
-        UploadProtocol: "quis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.ApigeeregistryProjectsLocationsApisCreate(ctx, req, operations.ApigeeregistryProjectsLocationsApisCreateSecurity{
+        AccessToken: sdk.String("iusto"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        APIID: sdk.String("nisi"),
+        Callback: sdk.String("recusandae"),
+        Fields: sdk.String("temporibus"),
+        Key: sdk.String("ab"),
+        OauthToken: sdk.String("quis"),
+        Parent: "veritatis",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("perferendis"),
+        UploadProtocol: sdk.String("ipsam"),
+    }, operations.ApigeeregistryProjectsLocationsApisCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

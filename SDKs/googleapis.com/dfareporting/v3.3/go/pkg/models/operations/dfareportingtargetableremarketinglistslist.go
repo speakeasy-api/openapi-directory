@@ -22,19 +22,23 @@ const (
 	DfareportingTargetableRemarketingListsListSortFieldEnumName DfareportingTargetableRemarketingListsListSortFieldEnum = "NAME"
 )
 
+func (e DfareportingTargetableRemarketingListsListSortFieldEnum) ToPointer() *DfareportingTargetableRemarketingListsListSortFieldEnum {
+	return &e
+}
+
 func (e *DfareportingTargetableRemarketingListsListSortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID":
 		fallthrough
 	case "NAME":
-		*e = DfareportingTargetableRemarketingListsListSortFieldEnum(s)
+		*e = DfareportingTargetableRemarketingListsListSortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingTargetableRemarketingListsListSortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingTargetableRemarketingListsListSortFieldEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	DfareportingTargetableRemarketingListsListSortOrderEnumDescending DfareportingTargetableRemarketingListsListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingTargetableRemarketingListsListSortOrderEnum) ToPointer() *DfareportingTargetableRemarketingListsListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingTargetableRemarketingListsListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingTargetableRemarketingListsListSortOrderEnum(s)
+		*e = DfareportingTargetableRemarketingListsListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingTargetableRemarketingListsListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingTargetableRemarketingListsListSortOrderEnum: %v", v)
 	}
 }
 

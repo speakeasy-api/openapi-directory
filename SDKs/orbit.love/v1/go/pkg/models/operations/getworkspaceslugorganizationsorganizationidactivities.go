@@ -25,12 +25,16 @@ const (
 	GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnumTwitter   GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnum = "twitter"
 )
 
+func (e GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnum) ToPointer() *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "content":
 		fallthrough
 	case "custom":
@@ -44,10 +48,10 @@ func (e *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnum) 
 	case "slack":
 		fallthrough
 	case "twitter":
-		*e = GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnum(s)
+		*e = GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugOrganizationsOrganizationIDActivitiesActivityTypeEnum: %v", v)
 	}
 }
 
@@ -59,19 +63,23 @@ const (
 	GetWorkspaceSlugOrganizationsOrganizationIDActivitiesDirectionEnumDesc GetWorkspaceSlugOrganizationsOrganizationIDActivitiesDirectionEnum = "DESC"
 )
 
+func (e GetWorkspaceSlugOrganizationsOrganizationIDActivitiesDirectionEnum) ToPointer() *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesDirectionEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASC":
 		fallthrough
 	case "DESC":
-		*e = GetWorkspaceSlugOrganizationsOrganizationIDActivitiesDirectionEnum(s)
+		*e = GetWorkspaceSlugOrganizationsOrganizationIDActivitiesDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugOrganizationsOrganizationIDActivitiesDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugOrganizationsOrganizationIDActivitiesDirectionEnum: %v", v)
 	}
 }
 
@@ -84,21 +92,25 @@ const (
 	GetWorkspaceSlugOrganizationsOrganizationIDActivitiesItemsEnumOneHundred GetWorkspaceSlugOrganizationsOrganizationIDActivitiesItemsEnum = "100"
 )
 
+func (e GetWorkspaceSlugOrganizationsOrganizationIDActivitiesItemsEnum) ToPointer() *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesItemsEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesItemsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "10":
 		fallthrough
 	case "50":
 		fallthrough
 	case "100":
-		*e = GetWorkspaceSlugOrganizationsOrganizationIDActivitiesItemsEnum(s)
+		*e = GetWorkspaceSlugOrganizationsOrganizationIDActivitiesItemsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugOrganizationsOrganizationIDActivitiesItemsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugOrganizationsOrganizationIDActivitiesItemsEnum: %v", v)
 	}
 }
 
@@ -110,19 +122,23 @@ const (
 	GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSortEnumMember     GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSortEnum = "member"
 )
 
+func (e GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSortEnum) ToPointer() *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSortEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "occurred_at":
 		fallthrough
 	case "member":
-		*e = GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSortEnum(s)
+		*e = GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSortEnum: %v", v)
 	}
 }
 

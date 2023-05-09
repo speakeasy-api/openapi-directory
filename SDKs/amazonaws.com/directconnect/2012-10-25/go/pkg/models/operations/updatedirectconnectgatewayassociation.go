@@ -16,17 +16,21 @@ const (
 	UpdateDirectConnectGatewayAssociationXAmzTargetEnumOvertureServiceUpdateDirectConnectGatewayAssociation UpdateDirectConnectGatewayAssociationXAmzTargetEnum = "OvertureService.UpdateDirectConnectGatewayAssociation"
 )
 
+func (e UpdateDirectConnectGatewayAssociationXAmzTargetEnum) ToPointer() *UpdateDirectConnectGatewayAssociationXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDirectConnectGatewayAssociationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.UpdateDirectConnectGatewayAssociation":
-		*e = UpdateDirectConnectGatewayAssociationXAmzTargetEnum(s)
+		*e = UpdateDirectConnectGatewayAssociationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDirectConnectGatewayAssociationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDirectConnectGatewayAssociationXAmzTargetEnum: %v", v)
 	}
 }
 

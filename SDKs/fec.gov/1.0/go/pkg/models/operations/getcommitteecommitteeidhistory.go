@@ -21,12 +21,16 @@ const (
 	GetCommitteeCommitteeIDHistoryDesignationEnumD       GetCommitteeCommitteeIDHistoryDesignationEnum = "D"
 )
 
+func (e GetCommitteeCommitteeIDHistoryDesignationEnum) ToPointer() *GetCommitteeCommitteeIDHistoryDesignationEnum {
+	return &e
+}
+
 func (e *GetCommitteeCommitteeIDHistoryDesignationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "A":
@@ -40,10 +44,10 @@ func (e *GetCommitteeCommitteeIDHistoryDesignationEnum) UnmarshalJSON(data []byt
 	case "B":
 		fallthrough
 	case "D":
-		*e = GetCommitteeCommitteeIDHistoryDesignationEnum(s)
+		*e = GetCommitteeCommitteeIDHistoryDesignationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommitteeCommitteeIDHistoryDesignationEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommitteeCommitteeIDHistoryDesignationEnum: %v", v)
 	}
 }
 

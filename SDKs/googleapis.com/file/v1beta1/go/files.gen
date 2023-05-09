@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -38,6 +39,8 @@ pkg/models/shared/instance.go
 pkg/models/shared/networkconfig.go
 pkg/models/shared/fileshareconfig.go
 pkg/models/shared/nfsexportoptions.go
+pkg/models/shared/directoryservicesconfig.go
+pkg/models/shared/managedactivedirectoryconfig.go
 pkg/models/shared/listinstancesresponse.go
 pkg/models/shared/restoreinstancerequest.go
 pkg/models/shared/revertinstancerequest.go
@@ -48,4 +51,6 @@ pkg/models/shared/listsnapshotsresponse.go
 pkg/models/shared/listlocationsresponse.go
 pkg/models/shared/location.go
 pkg/models/shared/listoperationsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

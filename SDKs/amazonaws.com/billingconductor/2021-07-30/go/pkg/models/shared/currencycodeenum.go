@@ -14,18 +14,22 @@ const (
 	CurrencyCodeEnumCny CurrencyCodeEnum = "CNY"
 )
 
+func (e CurrencyCodeEnum) ToPointer() *CurrencyCodeEnum {
+	return &e
+}
+
 func (e *CurrencyCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
 		fallthrough
 	case "CNY":
-		*e = CurrencyCodeEnum(s)
+		*e = CurrencyCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CurrencyCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CurrencyCodeEnum: %v", v)
 	}
 }

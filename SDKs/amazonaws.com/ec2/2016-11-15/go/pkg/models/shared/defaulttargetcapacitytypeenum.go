@@ -14,18 +14,22 @@ const (
 	DefaultTargetCapacityTypeEnumOnDemand DefaultTargetCapacityTypeEnum = "on-demand"
 )
 
+func (e DefaultTargetCapacityTypeEnum) ToPointer() *DefaultTargetCapacityTypeEnum {
+	return &e
+}
+
 func (e *DefaultTargetCapacityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spot":
 		fallthrough
 	case "on-demand":
-		*e = DefaultTargetCapacityTypeEnum(s)
+		*e = DefaultTargetCapacityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DefaultTargetCapacityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DefaultTargetCapacityTypeEnum: %v", v)
 	}
 }

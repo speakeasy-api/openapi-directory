@@ -14,8 +14,8 @@ type RunNamespacesJobsRunSecurity struct {
 
 type RunNamespacesJobsRunRequest struct {
 	// V1 error format.
-	DollarXgafv *shared.XgafvEnum      `queryParam:"style=form,explode=true,name=$.xgafv"`
-	RequestBody map[string]interface{} `request:"mediaType=application/json"`
+	DollarXgafv   *shared.XgafvEnum     `queryParam:"style=form,explode=true,name=$.xgafv"`
+	RunJobRequest *shared.RunJobRequest `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.

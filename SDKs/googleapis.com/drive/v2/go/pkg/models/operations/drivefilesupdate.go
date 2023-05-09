@@ -60,12 +60,16 @@ const (
 	DriveFilesUpdateModifiedDateBehaviorEnumNowIfNeeded      DriveFilesUpdateModifiedDateBehaviorEnum = "nowIfNeeded"
 )
 
+func (e DriveFilesUpdateModifiedDateBehaviorEnum) ToPointer() *DriveFilesUpdateModifiedDateBehaviorEnum {
+	return &e
+}
+
 func (e *DriveFilesUpdateModifiedDateBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fromBody":
 		fallthrough
 	case "fromBodyIfNeeded":
@@ -77,10 +81,10 @@ func (e *DriveFilesUpdateModifiedDateBehaviorEnum) UnmarshalJSON(data []byte) er
 	case "now":
 		fallthrough
 	case "nowIfNeeded":
-		*e = DriveFilesUpdateModifiedDateBehaviorEnum(s)
+		*e = DriveFilesUpdateModifiedDateBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DriveFilesUpdateModifiedDateBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for DriveFilesUpdateModifiedDateBehaviorEnum: %v", v)
 	}
 }
 

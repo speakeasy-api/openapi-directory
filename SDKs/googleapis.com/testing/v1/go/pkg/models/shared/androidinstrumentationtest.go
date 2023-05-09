@@ -16,21 +16,25 @@ const (
 	AndroidInstrumentationTestOrchestratorOptionEnumDoNotUseOrchestrator          AndroidInstrumentationTestOrchestratorOptionEnum = "DO_NOT_USE_ORCHESTRATOR"
 )
 
+func (e AndroidInstrumentationTestOrchestratorOptionEnum) ToPointer() *AndroidInstrumentationTestOrchestratorOptionEnum {
+	return &e
+}
+
 func (e *AndroidInstrumentationTestOrchestratorOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORCHESTRATOR_OPTION_UNSPECIFIED":
 		fallthrough
 	case "USE_ORCHESTRATOR":
 		fallthrough
 	case "DO_NOT_USE_ORCHESTRATOR":
-		*e = AndroidInstrumentationTestOrchestratorOptionEnum(s)
+		*e = AndroidInstrumentationTestOrchestratorOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidInstrumentationTestOrchestratorOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidInstrumentationTestOrchestratorOptionEnum: %v", v)
 	}
 }
 

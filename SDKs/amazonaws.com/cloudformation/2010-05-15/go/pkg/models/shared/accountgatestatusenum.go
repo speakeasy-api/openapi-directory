@@ -15,20 +15,24 @@ const (
 	AccountGateStatusEnumSkipped   AccountGateStatusEnum = "SKIPPED"
 )
 
+func (e AccountGateStatusEnum) ToPointer() *AccountGateStatusEnum {
+	return &e
+}
+
 func (e *AccountGateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
 		fallthrough
 	case "SKIPPED":
-		*e = AccountGateStatusEnum(s)
+		*e = AccountGateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountGateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountGateStatusEnum: %v", v)
 	}
 }

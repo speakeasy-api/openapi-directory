@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,43 +17,41 @@ func main() {
         }),
     )
 
-    req := operations.CreatePodcastRequestBody{
+    ctx := context.Background()
+    res, err := s.APIV2.CreatePodcast(ctx, operations.CreatePodcastRequestBody{
         FileLogo: operations.CreatePodcastRequestBodyFileLogo{
             Content: []byte("corrupti"),
             FileLogo: "provident",
         },
         Podcast: shared.Podcast{
-            Author: "distinctio",
-            Block: false,
+            Author: sdk.String("distinctio"),
+            Block: sdk.Bool(false),
             Categories: []string{
                 "unde",
                 "nulla",
                 "corrupti",
                 "illum",
             },
-            Copyright: "vel",
-            Country: "Netherlands Antilles",
+            Copyright: sdk.String("vel"),
+            Country: sdk.String("Netherlands Antilles"),
             Description: "deserunt",
-            Explicit: false,
-            Image: "suscipit",
-            Key: "iure",
+            Explicit: sdk.Bool(false),
+            Image: sdk.String("suscipit"),
+            Key: sdk.String("iure"),
             Keywords: []string{
                 "debitis",
                 "ipsa",
             },
             Language: "delectus",
-            Link: "tempora",
-            OwnerEmail: "suscipit",
-            OwnerName: "molestiae",
-            ShowType: "minus",
-            Subtitle: "placeat",
+            Link: sdk.String("tempora"),
+            OwnerEmail: sdk.String("suscipit"),
+            OwnerName: sdk.String("molestiae"),
+            ShowType: sdk.String("minus"),
+            Subtitle: sdk.String("placeat"),
             Summary: "voluptatum",
             Title: "Ms.",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.APIV2.CreatePodcast(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -14,18 +14,22 @@ const (
 	AccessAdvisorUsageGranularityTypeEnumActionLevel  AccessAdvisorUsageGranularityTypeEnum = "ACTION_LEVEL"
 )
 
+func (e AccessAdvisorUsageGranularityTypeEnum) ToPointer() *AccessAdvisorUsageGranularityTypeEnum {
+	return &e
+}
+
 func (e *AccessAdvisorUsageGranularityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE_LEVEL":
 		fallthrough
 	case "ACTION_LEVEL":
-		*e = AccessAdvisorUsageGranularityTypeEnum(s)
+		*e = AccessAdvisorUsageGranularityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessAdvisorUsageGranularityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessAdvisorUsageGranularityTypeEnum: %v", v)
 	}
 }

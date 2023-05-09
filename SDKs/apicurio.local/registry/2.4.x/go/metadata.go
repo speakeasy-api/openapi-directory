@@ -45,7 +45,10 @@ func newMetadata(defaultClient, securityClient HTTPClient, serverURL, language, 
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) DeleteArtifactVersionMetaData(ctx context.Context, request operations.DeleteArtifactVersionMetaDataRequest) (*operations.DeleteArtifactVersionMetaDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/meta", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/meta", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -90,16 +93,19 @@ func (s *metadata) DeleteArtifactVersionMetaData(ctx context.Context, request op
 }
 
 // GetArtifactMetaData - Get artifact metadata
-// Gets the metadata for an artifact in the registry.  The returned metadata includes
+// Gets the metadata for an artifact in the registry, based on the latest version. If the latest version of the artifact is marked as `DISABLED`, the next available non-disabled version will be used. The returned metadata includes
 // both generated (read-only) and editable metadata (such as name and description).
 //
 // This operation can fail for the following reasons:
 //
-// * No artifact with this `artifactId` exists (HTTP error `404`)
+// * No artifact with this `artifactId` exists  or all versions are `DISABLED` (HTTP error `404`)
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) GetArtifactMetaData(ctx context.Context, request operations.GetArtifactMetaDataRequest) (*operations.GetArtifactMetaDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/meta", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/meta", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -161,7 +167,10 @@ func (s *metadata) GetArtifactMetaData(ctx context.Context, request operations.G
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) GetArtifactOwner(ctx context.Context, request operations.GetArtifactOwnerRequest) (*operations.GetArtifactOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/owner", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/owner", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -226,7 +235,10 @@ func (s *metadata) GetArtifactOwner(ctx context.Context, request operations.GetA
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) GetArtifactVersionMetaData(ctx context.Context, request operations.GetArtifactVersionMetaDataRequest) (*operations.GetArtifactVersionMetaDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/meta", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/meta", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -279,7 +291,7 @@ func (s *metadata) GetArtifactVersionMetaData(ctx context.Context, request opera
 	return res, nil
 }
 
-// GetArtifactVersionMetaDataByContent - Get artifact version metadata by content
+// GetArtifactVersionMetaDataByContentJSON - Get artifact version metadata by content
 // Gets the metadata for an artifact that matches the raw content.  Searches the registry
 // for a version of the given artifact matching the content provided in the body of the
 // POST.
@@ -290,9 +302,95 @@ func (s *metadata) GetArtifactVersionMetaData(ctx context.Context, request opera
 // * No artifact with the `artifactId` exists (HTTP error `404`)
 // * No artifact version matching the provided content exists (HTTP error `404`)
 // * A server error occurred (HTTP error `500`)
-func (s *metadata) GetArtifactVersionMetaDataByContent(ctx context.Context, request operations.GetArtifactVersionMetaDataByContentRequest) (*operations.GetArtifactVersionMetaDataByContentResponse, error) {
+func (s *metadata) GetArtifactVersionMetaDataByContentJSON(ctx context.Context, request operations.GetArtifactVersionMetaDataByContentJSONRequest) (*operations.GetArtifactVersionMetaDataByContentJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/meta", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/meta", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArtifactContent", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetArtifactVersionMetaDataByContentJSONResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.VersionMetaData
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.VersionMetaData = out
+		}
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetArtifactVersionMetaDataByContentRaw - Get artifact version metadata by content
+// Gets the metadata for an artifact that matches the raw content.  Searches the registry
+// for a version of the given artifact matching the content provided in the body of the
+// POST.
+//
+// This operation can fail for the following reasons:
+//
+// * Provided content (request body) was empty (HTTP error `400`)
+// * No artifact with the `artifactId` exists (HTTP error `404`)
+// * No artifact version matching the provided content exists (HTTP error `404`)
+// * A server error occurred (HTTP error `500`)
+func (s *metadata) GetArtifactVersionMetaDataByContentRaw(ctx context.Context, request operations.GetArtifactVersionMetaDataByContentRawRequest) (*operations.GetArtifactVersionMetaDataByContentRawResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/meta", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -326,7 +424,7 @@ func (s *metadata) GetArtifactVersionMetaDataByContent(ctx context.Context, requ
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetArtifactVersionMetaDataByContentResponse{
+	res := &operations.GetArtifactVersionMetaDataByContentRawResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -369,7 +467,10 @@ func (s *metadata) GetArtifactVersionMetaDataByContent(ctx context.Context, requ
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) UpdateArtifactMetaData(ctx context.Context, request operations.UpdateArtifactMetaDataRequest) (*operations.UpdateArtifactMetaDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/meta", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/meta", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditableMetaData", "json")
 	if err != nil {
@@ -432,7 +533,10 @@ func (s *metadata) UpdateArtifactMetaData(ctx context.Context, request operation
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) UpdateArtifactOwner(ctx context.Context, request operations.UpdateArtifactOwnerRequest) (*operations.UpdateArtifactOwnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/owner", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/owner", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArtifactOwner", "json")
 	if err != nil {
@@ -498,7 +602,10 @@ func (s *metadata) UpdateArtifactOwner(ctx context.Context, request operations.U
 // * A server error occurred (HTTP error `500`)
 func (s *metadata) UpdateArtifactVersionMetaData(ctx context.Context, request operations.UpdateArtifactVersionMetaDataRequest) (*operations.UpdateArtifactVersionMetaDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/meta", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/meta", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditableMetaData", "json")
 	if err != nil {

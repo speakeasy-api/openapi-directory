@@ -18,12 +18,16 @@ const (
 	MembershipRoleRestrictionEvaluationStateEnumEvaluating       MembershipRoleRestrictionEvaluationStateEnum = "EVALUATING"
 )
 
+func (e MembershipRoleRestrictionEvaluationStateEnum) ToPointer() *MembershipRoleRestrictionEvaluationStateEnum {
+	return &e
+}
+
 func (e *MembershipRoleRestrictionEvaluationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "COMPLIANT":
@@ -33,10 +37,10 @@ func (e *MembershipRoleRestrictionEvaluationStateEnum) UnmarshalJSON(data []byte
 	case "NON_COMPLIANT":
 		fallthrough
 	case "EVALUATING":
-		*e = MembershipRoleRestrictionEvaluationStateEnum(s)
+		*e = MembershipRoleRestrictionEvaluationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MembershipRoleRestrictionEvaluationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MembershipRoleRestrictionEvaluationStateEnum: %v", v)
 	}
 }
 

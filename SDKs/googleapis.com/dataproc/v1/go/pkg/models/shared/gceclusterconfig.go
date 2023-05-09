@@ -17,12 +17,16 @@ const (
 	GceClusterConfigPrivateIpv6GoogleAccessEnumBidirectional                      GceClusterConfigPrivateIpv6GoogleAccessEnum = "BIDIRECTIONAL"
 )
 
+func (e GceClusterConfigPrivateIpv6GoogleAccessEnum) ToPointer() *GceClusterConfigPrivateIpv6GoogleAccessEnum {
+	return &e
+}
+
 func (e *GceClusterConfigPrivateIpv6GoogleAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED":
 		fallthrough
 	case "INHERIT_FROM_SUBNETWORK":
@@ -30,10 +34,10 @@ func (e *GceClusterConfigPrivateIpv6GoogleAccessEnum) UnmarshalJSON(data []byte)
 	case "OUTBOUND":
 		fallthrough
 	case "BIDIRECTIONAL":
-		*e = GceClusterConfigPrivateIpv6GoogleAccessEnum(s)
+		*e = GceClusterConfigPrivateIpv6GoogleAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GceClusterConfigPrivateIpv6GoogleAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for GceClusterConfigPrivateIpv6GoogleAccessEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ContentEncodingEnumGzip ContentEncodingEnum = "GZIP"
 )
 
+func (e ContentEncodingEnum) ToPointer() *ContentEncodingEnum {
+	return &e
+}
+
 func (e *ContentEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "GZIP":
-		*e = ContentEncodingEnum(s)
+		*e = ContentEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentEncodingEnum: %v", v)
 	}
 }

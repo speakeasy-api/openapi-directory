@@ -102,7 +102,10 @@ func (s *users) AddUser(ctx context.Context, request operations.AddUserRequest) 
 // - The primary owner of the account cannot be deleted.
 func (s *users) DeleteUser(ctx context.Context, request operations.DeleteUserRequest) (*operations.DeleteUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -153,7 +156,10 @@ func (s *users) DeleteUser(ctx context.Context, request operations.DeleteUserReq
 // - You must have [admin or master](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions) access to use this.
 func (s *users) GetUserByID(ctx context.Context, request operations.GetUserByIDRequest) (*operations.GetUserByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,7 +277,10 @@ func (s *users) ListUsers(ctx context.Context, request operations.ListUsersReque
 // - You cannot edit a master user with this method.
 func (s *users) UpdateUser(ctx context.Context, request operations.UpdateUserRequest) (*operations.UpdateUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -15,20 +15,24 @@ const (
 	OpsItemRelatedItemsFilterKeyEnumResourceURI   OpsItemRelatedItemsFilterKeyEnum = "ResourceUri"
 )
 
+func (e OpsItemRelatedItemsFilterKeyEnum) ToPointer() *OpsItemRelatedItemsFilterKeyEnum {
+	return &e
+}
+
 func (e *OpsItemRelatedItemsFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResourceType":
 		fallthrough
 	case "AssociationId":
 		fallthrough
 	case "ResourceUri":
-		*e = OpsItemRelatedItemsFilterKeyEnum(s)
+		*e = OpsItemRelatedItemsFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpsItemRelatedItemsFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for OpsItemRelatedItemsFilterKeyEnum: %v", v)
 	}
 }

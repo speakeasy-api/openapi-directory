@@ -2,7 +2,7 @@
 
 package shared
 
-// TimeSeriesForecastingSettings - Time series forecast settings for the SageMaker Canvas app.
+// TimeSeriesForecastingSettings - Time series forecast settings for the SageMaker Canvas application.
 type TimeSeriesForecastingSettings struct {
 	AmazonForecastRoleArn *string            `json:"AmazonForecastRoleArn,omitempty"`
 	Status                *FeatureStatusEnum `json:"Status,omitempty"`

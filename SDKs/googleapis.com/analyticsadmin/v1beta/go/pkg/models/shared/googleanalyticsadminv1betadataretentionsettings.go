@@ -19,12 +19,16 @@ const (
 	GoogleAnalyticsAdminV1betaDataRetentionSettingsEventDataRetentionEnumFiftyMonths                  GoogleAnalyticsAdminV1betaDataRetentionSettingsEventDataRetentionEnum = "FIFTY_MONTHS"
 )
 
+func (e GoogleAnalyticsAdminV1betaDataRetentionSettingsEventDataRetentionEnum) ToPointer() *GoogleAnalyticsAdminV1betaDataRetentionSettingsEventDataRetentionEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1betaDataRetentionSettingsEventDataRetentionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETENTION_DURATION_UNSPECIFIED":
 		fallthrough
 	case "TWO_MONTHS":
@@ -36,10 +40,10 @@ func (e *GoogleAnalyticsAdminV1betaDataRetentionSettingsEventDataRetentionEnum) 
 	case "THIRTY_EIGHT_MONTHS":
 		fallthrough
 	case "FIFTY_MONTHS":
-		*e = GoogleAnalyticsAdminV1betaDataRetentionSettingsEventDataRetentionEnum(s)
+		*e = GoogleAnalyticsAdminV1betaDataRetentionSettingsEventDataRetentionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaDataRetentionSettingsEventDataRetentionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaDataRetentionSettingsEventDataRetentionEnum: %v", v)
 	}
 }
 

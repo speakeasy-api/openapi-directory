@@ -22,12 +22,16 @@ const (
 	APICoreDtoDatapointsTrackingLinkSpecificsDestinationModeEnumWeightedDestination   APICoreDtoDatapointsTrackingLinkSpecificsDestinationModeEnum = "WeightedDestination"
 )
 
+func (e APICoreDtoDatapointsTrackingLinkSpecificsDestinationModeEnum) ToPointer() *APICoreDtoDatapointsTrackingLinkSpecificsDestinationModeEnum {
+	return &e
+}
+
 func (e *APICoreDtoDatapointsTrackingLinkSpecificsDestinationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Simple":
 		fallthrough
 	case "RandomDestination":
@@ -47,10 +51,10 @@ func (e *APICoreDtoDatapointsTrackingLinkSpecificsDestinationModeEnum) Unmarshal
 	case "SequentialDestination":
 		fallthrough
 	case "WeightedDestination":
-		*e = APICoreDtoDatapointsTrackingLinkSpecificsDestinationModeEnum(s)
+		*e = APICoreDtoDatapointsTrackingLinkSpecificsDestinationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APICoreDtoDatapointsTrackingLinkSpecificsDestinationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for APICoreDtoDatapointsTrackingLinkSpecificsDestinationModeEnum: %v", v)
 	}
 }
 
@@ -61,19 +65,23 @@ const (
 	APICoreDtoDatapointsTrackingLinkSpecificsRedirectTypeEnumTemporaryRedirect APICoreDtoDatapointsTrackingLinkSpecificsRedirectTypeEnum = "TemporaryRedirect"
 )
 
+func (e APICoreDtoDatapointsTrackingLinkSpecificsRedirectTypeEnum) ToPointer() *APICoreDtoDatapointsTrackingLinkSpecificsRedirectTypeEnum {
+	return &e
+}
+
 func (e *APICoreDtoDatapointsTrackingLinkSpecificsRedirectTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PermanentRedirect":
 		fallthrough
 	case "TemporaryRedirect":
-		*e = APICoreDtoDatapointsTrackingLinkSpecificsRedirectTypeEnum(s)
+		*e = APICoreDtoDatapointsTrackingLinkSpecificsRedirectTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APICoreDtoDatapointsTrackingLinkSpecificsRedirectTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for APICoreDtoDatapointsTrackingLinkSpecificsRedirectTypeEnum: %v", v)
 	}
 }
 
@@ -85,21 +93,25 @@ const (
 	APICoreDtoDatapointsTrackingLinkSpecificsReferrerCleanEnumMyself APICoreDtoDatapointsTrackingLinkSpecificsReferrerCleanEnum = "Myself"
 )
 
+func (e APICoreDtoDatapointsTrackingLinkSpecificsReferrerCleanEnum) ToPointer() *APICoreDtoDatapointsTrackingLinkSpecificsReferrerCleanEnum {
+	return &e
+}
+
 func (e *APICoreDtoDatapointsTrackingLinkSpecificsReferrerCleanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "Clean":
 		fallthrough
 	case "Myself":
-		*e = APICoreDtoDatapointsTrackingLinkSpecificsReferrerCleanEnum(s)
+		*e = APICoreDtoDatapointsTrackingLinkSpecificsReferrerCleanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APICoreDtoDatapointsTrackingLinkSpecificsReferrerCleanEnum: %s", s)
+		return fmt.Errorf("invalid value for APICoreDtoDatapointsTrackingLinkSpecificsReferrerCleanEnum: %v", v)
 	}
 }
 

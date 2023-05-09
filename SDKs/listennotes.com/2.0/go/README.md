@@ -13,30 +13,28 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/listennotes.com/2.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetBestPodcastsRequest{
-        XListenAPIKey: "corrupti",
-        GenreID: "provident",
-        Language: "distinctio",
-        Page: 844266,
-        PublisherRegion: "unde",
-        Region: "nulla",
-        SafeMode: "1",
-        Sort: "listen_score",
-    }
-
     ctx := context.Background()
-    res, err := s.DirectoryAPI.GetBestPodcasts(ctx, req)
+    res, err := s.DirectoryAPI.GetBestPodcasts(ctx, operations.GetBestPodcastsRequest{
+        XListenAPIKey: "corrupti",
+        GenreID: sdk.String("provident"),
+        Language: sdk.String("distinctio"),
+        Page: sdk.Int64(844266),
+        PublisherRegion: sdk.String("unde"),
+        Region: sdk.String("nulla"),
+        SafeMode: shared.SafeModeParamEnumOne.ToPointer(),
+        Sort: operations.GetBestPodcastsSortEnumListenScore.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -52,43 +50,44 @@ func main() {
 ## Available Resources and Operations
 
 
-### DirectoryAPI
+### [DirectoryAPI](docs/directoryapi/README.md)
 
-* `GetBestPodcasts` - Fetch a list of best podcasts by genre
-* `GetCuratedPodcastByID` - Fetch a curated list of podcasts by id
-* `GetCuratedPodcasts` - Fetch curated lists of podcasts
-* `GetEpisodeByID` - Fetch detailed meta data for an episode by id
-* `GetEpisodeRecommendations` - Fetch recommendations for an episode
-* `GetEpisodesInBatch` - Batch fetch basic meta data for episodes
-* `GetGenres` - Fetch a list of podcast genres
-* `GetLanguages` - Fetch a list of supported languages for podcasts
-* `GetPodcastByID` - Fetch detailed meta data and episodes for a podcast by id
-* `GetPodcastRecommendations` - Fetch recommendations for a podcast
-* `GetPodcastsInBatch` - Batch fetch basic meta data for podcasts
-* `GetRegions` - Fetch a list of supported countries/regions for best podcasts
-* `JustListen` - Fetch a random podcast episode
+* [GetBestPodcasts](docs/directoryapi/README.md#getbestpodcasts) - Fetch a list of best podcasts by genre
+* [GetCuratedPodcastByID](docs/directoryapi/README.md#getcuratedpodcastbyid) - Fetch a curated list of podcasts by id
+* [GetCuratedPodcasts](docs/directoryapi/README.md#getcuratedpodcasts) - Fetch curated lists of podcasts
+* [GetEpisodeByID](docs/directoryapi/README.md#getepisodebyid) - Fetch detailed meta data for an episode by id
+* [GetEpisodeRecommendations](docs/directoryapi/README.md#getepisoderecommendations) - Fetch recommendations for an episode
+* [GetEpisodesInBatch](docs/directoryapi/README.md#getepisodesinbatch) - Batch fetch basic meta data for episodes
+* [GetGenres](docs/directoryapi/README.md#getgenres) - Fetch a list of podcast genres
+* [GetLanguages](docs/directoryapi/README.md#getlanguages) - Fetch a list of supported languages for podcasts
+* [GetPodcastByID](docs/directoryapi/README.md#getpodcastbyid) - Fetch detailed meta data and episodes for a podcast by id
+* [GetPodcastRecommendations](docs/directoryapi/README.md#getpodcastrecommendations) - Fetch recommendations for a podcast
+* [GetPodcastsInBatch](docs/directoryapi/README.md#getpodcastsinbatch) - Batch fetch basic meta data for podcasts
+* [GetRegions](docs/directoryapi/README.md#getregions) - Fetch a list of supported countries/regions for best podcasts
+* [JustListen](docs/directoryapi/README.md#justlisten) - Fetch a random podcast episode
 
-### InsightsAPI
+### [InsightsAPI](docs/insightsapi/README.md)
 
-* `GetPodcastAudience` - Fetch audience demographics for a podcast
+* [GetPodcastAudience](docs/insightsapi/README.md#getpodcastaudience) - Fetch audience demographics for a podcast
+* [GetPodcastsByDomainName](docs/insightsapi/README.md#getpodcastsbydomainname) - Fetch podcasts by a publisher's domain name
 
-### PlaylistAPI
+### [PlaylistAPI](docs/playlistapi/README.md)
 
-* `GetPlaylistByID` - Fetch a playlist's info and items (i.e., episodes or podcasts).
-* `GetPlaylists` - Fetch a list of your playlists.
+* [GetPlaylistByID](docs/playlistapi/README.md#getplaylistbyid) - Fetch a playlist's info and items (i.e., episodes or podcasts).
+* [GetPlaylists](docs/playlistapi/README.md#getplaylists) - Fetch a list of your playlists.
 
-### PodcasterAPI
+### [PodcasterAPI](docs/podcasterapi/README.md)
 
-* `DeletePodcastByID` - Request to delete a podcast
-* `SubmitPodcast` - Submit a podcast to Listen Notes database
+* [DeletePodcastByID](docs/podcasterapi/README.md#deletepodcastbyid) - Request to delete a podcast
+* [SubmitPodcast](docs/podcasterapi/README.md#submitpodcast) - Submit a podcast to Listen Notes database
 
-### SearchAPI
+### [SearchAPI](docs/searchapi/README.md)
 
-* `GetRelatedSearches` - Fetch related search terms
-* `GetTrendingSearches` - Fetch trending search terms
-* `Search` - Full-text search
-* `Spellcheck` - Spell check on a search term
-* `Typeahead` - Typeahead search
+* [GetRelatedSearches](docs/searchapi/README.md#getrelatedsearches) - Fetch related search terms
+* [GetTrendingSearches](docs/searchapi/README.md#gettrendingsearches) - Fetch trending search terms
+* [Search](docs/searchapi/README.md#search) - Full-text search
+* [Spellcheck](docs/searchapi/README.md#spellcheck) - Spell check on a search term
+* [Typeahead](docs/searchapi/README.md#typeahead) - Typeahead search
 <!-- End SDK Available Operations -->
 
 ### Maturity

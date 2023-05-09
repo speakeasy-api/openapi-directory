@@ -17,12 +17,16 @@ const (
 	DeleteCarrierGatewayResultCarrierGatewayStateEnumDeleted   DeleteCarrierGatewayResultCarrierGatewayStateEnum = "deleted"
 )
 
+func (e DeleteCarrierGatewayResultCarrierGatewayStateEnum) ToPointer() *DeleteCarrierGatewayResultCarrierGatewayStateEnum {
+	return &e
+}
+
 func (e *DeleteCarrierGatewayResultCarrierGatewayStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
@@ -30,10 +34,10 @@ func (e *DeleteCarrierGatewayResultCarrierGatewayStateEnum) UnmarshalJSON(data [
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = DeleteCarrierGatewayResultCarrierGatewayStateEnum(s)
+		*e = DeleteCarrierGatewayResultCarrierGatewayStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteCarrierGatewayResultCarrierGatewayStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteCarrierGatewayResultCarrierGatewayStateEnum: %v", v)
 	}
 }
 

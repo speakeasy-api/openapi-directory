@@ -15,17 +15,21 @@ const (
 	POSTDeleteUsageLimitActionEnumDeleteUsageLimit POSTDeleteUsageLimitActionEnum = "DeleteUsageLimit"
 )
 
+func (e POSTDeleteUsageLimitActionEnum) ToPointer() *POSTDeleteUsageLimitActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteUsageLimitActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteUsageLimit":
-		*e = POSTDeleteUsageLimitActionEnum(s)
+		*e = POSTDeleteUsageLimitActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteUsageLimitActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteUsageLimitActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteUsageLimitVersionEnumTwoThousandAndTwelve1201 POSTDeleteUsageLimitVersionEnum = "2012-12-01"
 )
 
+func (e POSTDeleteUsageLimitVersionEnum) ToPointer() *POSTDeleteUsageLimitVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteUsageLimitVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTDeleteUsageLimitVersionEnum(s)
+		*e = POSTDeleteUsageLimitVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteUsageLimitVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteUsageLimitVersionEnum: %v", v)
 	}
 }
 

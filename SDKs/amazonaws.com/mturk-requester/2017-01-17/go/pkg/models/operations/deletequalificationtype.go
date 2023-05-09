@@ -16,17 +16,21 @@ const (
 	DeleteQualificationTypeXAmzTargetEnumMTurkRequesterServiceV20170117DeleteQualificationType DeleteQualificationTypeXAmzTargetEnum = "MTurkRequesterServiceV20170117.DeleteQualificationType"
 )
 
+func (e DeleteQualificationTypeXAmzTargetEnum) ToPointer() *DeleteQualificationTypeXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteQualificationTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.DeleteQualificationType":
-		*e = DeleteQualificationTypeXAmzTargetEnum(s)
+		*e = DeleteQualificationTypeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteQualificationTypeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteQualificationTypeXAmzTargetEnum: %v", v)
 	}
 }
 

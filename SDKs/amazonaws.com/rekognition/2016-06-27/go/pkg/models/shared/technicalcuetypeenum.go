@@ -19,12 +19,16 @@ const (
 	TechnicalCueTypeEnumContent        TechnicalCueTypeEnum = "Content"
 )
 
+func (e TechnicalCueTypeEnum) ToPointer() *TechnicalCueTypeEnum {
+	return &e
+}
+
 func (e *TechnicalCueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ColorBars":
 		fallthrough
 	case "EndCredits":
@@ -38,9 +42,9 @@ func (e *TechnicalCueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Slate":
 		fallthrough
 	case "Content":
-		*e = TechnicalCueTypeEnum(s)
+		*e = TechnicalCueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TechnicalCueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TechnicalCueTypeEnum: %v", v)
 	}
 }

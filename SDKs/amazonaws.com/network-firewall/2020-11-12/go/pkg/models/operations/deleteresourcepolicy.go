@@ -16,17 +16,21 @@ const (
 	DeleteResourcePolicyXAmzTargetEnumNetworkFirewall20201112DeleteResourcePolicy DeleteResourcePolicyXAmzTargetEnum = "NetworkFirewall_20201112.DeleteResourcePolicy"
 )
 
+func (e DeleteResourcePolicyXAmzTargetEnum) ToPointer() *DeleteResourcePolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteResourcePolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NetworkFirewall_20201112.DeleteResourcePolicy":
-		*e = DeleteResourcePolicyXAmzTargetEnum(s)
+		*e = DeleteResourcePolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteResourcePolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteResourcePolicyXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETDescribeInstanceEventNotificationAttributesActionEnumDescribeInstanceEventNotificationAttributes GETDescribeInstanceEventNotificationAttributesActionEnum = "DescribeInstanceEventNotificationAttributes"
 )
 
+func (e GETDescribeInstanceEventNotificationAttributesActionEnum) ToPointer() *GETDescribeInstanceEventNotificationAttributesActionEnum {
+	return &e
+}
+
 func (e *GETDescribeInstanceEventNotificationAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeInstanceEventNotificationAttributes":
-		*e = GETDescribeInstanceEventNotificationAttributesActionEnum(s)
+		*e = GETDescribeInstanceEventNotificationAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeInstanceEventNotificationAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeInstanceEventNotificationAttributesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeInstanceEventNotificationAttributesVersionEnumTwoThousandAndSixteen1115 GETDescribeInstanceEventNotificationAttributesVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeInstanceEventNotificationAttributesVersionEnum) ToPointer() *GETDescribeInstanceEventNotificationAttributesVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeInstanceEventNotificationAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeInstanceEventNotificationAttributesVersionEnum(s)
+		*e = GETDescribeInstanceEventNotificationAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeInstanceEventNotificationAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeInstanceEventNotificationAttributesVersionEnum: %v", v)
 	}
 }
 

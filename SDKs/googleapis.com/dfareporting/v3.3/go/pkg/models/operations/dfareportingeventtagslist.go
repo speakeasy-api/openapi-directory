@@ -22,21 +22,25 @@ const (
 	DfareportingEventTagsListEventTagTypesEnumClickThroughEventTag         DfareportingEventTagsListEventTagTypesEnum = "CLICK_THROUGH_EVENT_TAG"
 )
 
+func (e DfareportingEventTagsListEventTagTypesEnum) ToPointer() *DfareportingEventTagsListEventTagTypesEnum {
+	return &e
+}
+
 func (e *DfareportingEventTagsListEventTagTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPRESSION_IMAGE_EVENT_TAG":
 		fallthrough
 	case "IMPRESSION_JAVASCRIPT_EVENT_TAG":
 		fallthrough
 	case "CLICK_THROUGH_EVENT_TAG":
-		*e = DfareportingEventTagsListEventTagTypesEnum(s)
+		*e = DfareportingEventTagsListEventTagTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingEventTagsListEventTagTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingEventTagsListEventTagTypesEnum: %v", v)
 	}
 }
 
@@ -48,19 +52,23 @@ const (
 	DfareportingEventTagsListSortFieldEnumName DfareportingEventTagsListSortFieldEnum = "NAME"
 )
 
+func (e DfareportingEventTagsListSortFieldEnum) ToPointer() *DfareportingEventTagsListSortFieldEnum {
+	return &e
+}
+
 func (e *DfareportingEventTagsListSortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID":
 		fallthrough
 	case "NAME":
-		*e = DfareportingEventTagsListSortFieldEnum(s)
+		*e = DfareportingEventTagsListSortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingEventTagsListSortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingEventTagsListSortFieldEnum: %v", v)
 	}
 }
 
@@ -72,19 +80,23 @@ const (
 	DfareportingEventTagsListSortOrderEnumDescending DfareportingEventTagsListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingEventTagsListSortOrderEnum) ToPointer() *DfareportingEventTagsListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingEventTagsListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingEventTagsListSortOrderEnum(s)
+		*e = DfareportingEventTagsListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingEventTagsListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingEventTagsListSortOrderEnum: %v", v)
 	}
 }
 

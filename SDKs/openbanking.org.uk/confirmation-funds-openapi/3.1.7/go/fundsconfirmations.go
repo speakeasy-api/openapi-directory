@@ -193,7 +193,10 @@ func (s *fundsConfirmations) CreateFundsConfirmations(ctx context.Context, reque
 // DeleteFundsConfirmationConsentsConsentID - Delete Funds Confirmation Consent
 func (s *fundsConfirmations) DeleteFundsConfirmationConsentsConsentID(ctx context.Context, request operations.DeleteFundsConfirmationConsentsConsentIDRequest, security operations.DeleteFundsConfirmationConsentsConsentIDSecurity) (*operations.DeleteFundsConfirmationConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/funds-confirmation-consents/{ConsentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/funds-confirmation-consents/{ConsentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -252,7 +255,10 @@ func (s *fundsConfirmations) DeleteFundsConfirmationConsentsConsentID(ctx contex
 // GetFundsConfirmationConsentsConsentID - Get Funds Confirmation Consent
 func (s *fundsConfirmations) GetFundsConfirmationConsentsConsentID(ctx context.Context, request operations.GetFundsConfirmationConsentsConsentIDRequest, security operations.GetFundsConfirmationConsentsConsentIDSecurity) (*operations.GetFundsConfirmationConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/funds-confirmation-consents/{ConsentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/funds-confirmation-consents/{ConsentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

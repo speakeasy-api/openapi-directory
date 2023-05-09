@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,20 +16,18 @@ func main() {
         }),
     )
 
-    req := operations.DeleteThingShadowRequest{
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "provident",
-        XAmzCredential: "distinctio",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "unde",
-        XAmzSignature: "nulla",
-        XAmzSignedHeaders: "corrupti",
-        Name: "illum",
-        ThingName: "vel",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteThingShadow(ctx, req)
+    res, err := s.DeleteThingShadow(ctx, operations.DeleteThingShadowRequest{
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("provident"),
+        XAmzCredential: sdk.String("distinctio"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("unde"),
+        XAmzSignature: sdk.String("nulla"),
+        XAmzSignedHeaders: sdk.String("corrupti"),
+        Name: sdk.String("Ben Mueller"),
+        ThingName: "iure",
+    })
     if err != nil {
         log.Fatal(err)
     }

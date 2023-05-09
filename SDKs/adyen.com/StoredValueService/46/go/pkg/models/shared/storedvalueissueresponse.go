@@ -22,12 +22,16 @@ const (
 	StoredValueIssueResponseResultCodeEnumNotEnoughBalance StoredValueIssueResponseResultCodeEnum = "NotEnoughBalance"
 )
 
+func (e StoredValueIssueResponseResultCodeEnum) ToPointer() *StoredValueIssueResponseResultCodeEnum {
+	return &e
+}
+
 func (e *StoredValueIssueResponseResultCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Success":
 		fallthrough
 	case "Refused":
@@ -35,10 +39,10 @@ func (e *StoredValueIssueResponseResultCodeEnum) UnmarshalJSON(data []byte) erro
 	case "Error":
 		fallthrough
 	case "NotEnoughBalance":
-		*e = StoredValueIssueResponseResultCodeEnum(s)
+		*e = StoredValueIssueResponseResultCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoredValueIssueResponseResultCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoredValueIssueResponseResultCodeEnum: %v", v)
 	}
 }
 

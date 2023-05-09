@@ -16,17 +16,21 @@ const (
 	CreateRelationalDatabaseSnapshotXAmzTargetEnumLightsail20161128CreateRelationalDatabaseSnapshot CreateRelationalDatabaseSnapshotXAmzTargetEnum = "Lightsail_20161128.CreateRelationalDatabaseSnapshot"
 )
 
+func (e CreateRelationalDatabaseSnapshotXAmzTargetEnum) ToPointer() *CreateRelationalDatabaseSnapshotXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateRelationalDatabaseSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.CreateRelationalDatabaseSnapshot":
-		*e = CreateRelationalDatabaseSnapshotXAmzTargetEnum(s)
+		*e = CreateRelationalDatabaseSnapshotXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRelationalDatabaseSnapshotXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRelationalDatabaseSnapshotXAmzTargetEnum: %v", v)
 	}
 }
 

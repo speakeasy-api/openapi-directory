@@ -15,20 +15,24 @@ const (
 	ActionOwnerEnumCustom     ActionOwnerEnum = "Custom"
 )
 
+func (e ActionOwnerEnum) ToPointer() *ActionOwnerEnum {
+	return &e
+}
+
 func (e *ActionOwnerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS":
 		fallthrough
 	case "ThirdParty":
 		fallthrough
 	case "Custom":
-		*e = ActionOwnerEnum(s)
+		*e = ActionOwnerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionOwnerEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionOwnerEnum: %v", v)
 	}
 }

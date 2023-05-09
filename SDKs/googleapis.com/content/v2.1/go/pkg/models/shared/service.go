@@ -19,6 +19,8 @@ type Service struct {
 	PickupService *PickupCarrierService `json:"pickupService,omitempty"`
 	// Shipping rate group definitions. Only the last one is allowed to have an empty `applicableShippingLabels`, which means "everything else". The other `applicableShippingLabels` must not overlap.
 	RateGroups []RateGroup `json:"rateGroups,omitempty"`
-	// Type of locations this service ships orders to. Acceptable values are: - "`delivery`" - "`pickup`"
+	// Type of locations this service ships orders to. Acceptable values are: - "`delivery`" - "`pickup`" - "`local_delivery`"
 	ShipmentType *string `json:"shipmentType,omitempty"`
+	// Stores that provide local delivery. Only valid with local delivery fulfillment.
+	StoreConfig *ServiceStoreConfig `json:"storeConfig,omitempty"`
 }

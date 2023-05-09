@@ -16,21 +16,25 @@ const (
 	SasPortalDeviceConfigCategoryEnumDeviceCategoryB           SasPortalDeviceConfigCategoryEnum = "DEVICE_CATEGORY_B"
 )
 
+func (e SasPortalDeviceConfigCategoryEnum) ToPointer() *SasPortalDeviceConfigCategoryEnum {
+	return &e
+}
+
 func (e *SasPortalDeviceConfigCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "DEVICE_CATEGORY_A":
 		fallthrough
 	case "DEVICE_CATEGORY_B":
-		*e = SasPortalDeviceConfigCategoryEnum(s)
+		*e = SasPortalDeviceConfigCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SasPortalDeviceConfigCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SasPortalDeviceConfigCategoryEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	SasPortalDeviceConfigMeasurementCapabilitiesEnumMeasurementCapabilityReceivedPowerWithoutGrant SasPortalDeviceConfigMeasurementCapabilitiesEnum = "MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT"
 )
 
+func (e SasPortalDeviceConfigMeasurementCapabilitiesEnum) ToPointer() *SasPortalDeviceConfigMeasurementCapabilitiesEnum {
+	return &e
+}
+
 func (e *SasPortalDeviceConfigMeasurementCapabilitiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEASUREMENT_CAPABILITY_UNSPECIFIED":
 		fallthrough
 	case "MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITH_GRANT":
 		fallthrough
 	case "MEASUREMENT_CAPABILITY_RECEIVED_POWER_WITHOUT_GRANT":
-		*e = SasPortalDeviceConfigMeasurementCapabilitiesEnum(s)
+		*e = SasPortalDeviceConfigMeasurementCapabilitiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SasPortalDeviceConfigMeasurementCapabilitiesEnum: %s", s)
+		return fmt.Errorf("invalid value for SasPortalDeviceConfigMeasurementCapabilitiesEnum: %v", v)
 	}
 }
 
@@ -69,21 +77,25 @@ const (
 	SasPortalDeviceConfigStateEnumFinal                        SasPortalDeviceConfigStateEnum = "FINAL"
 )
 
+func (e SasPortalDeviceConfigStateEnum) ToPointer() *SasPortalDeviceConfigStateEnum {
+	return &e
+}
+
 func (e *SasPortalDeviceConfigStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_CONFIG_STATE_UNSPECIFIED":
 		fallthrough
 	case "DRAFT":
 		fallthrough
 	case "FINAL":
-		*e = SasPortalDeviceConfigStateEnum(s)
+		*e = SasPortalDeviceConfigStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SasPortalDeviceConfigStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SasPortalDeviceConfigStateEnum: %v", v)
 	}
 }
 

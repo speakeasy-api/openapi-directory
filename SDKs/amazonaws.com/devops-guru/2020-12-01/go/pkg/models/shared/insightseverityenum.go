@@ -15,20 +15,24 @@ const (
 	InsightSeverityEnumHigh   InsightSeverityEnum = "HIGH"
 )
 
+func (e InsightSeverityEnum) ToPointer() *InsightSeverityEnum {
+	return &e
+}
+
 func (e *InsightSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOW":
 		fallthrough
 	case "MEDIUM":
 		fallthrough
 	case "HIGH":
-		*e = InsightSeverityEnum(s)
+		*e = InsightSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InsightSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for InsightSeverityEnum: %v", v)
 	}
 }

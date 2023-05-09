@@ -15,17 +15,21 @@ const (
 	POSTDeleteMessageActionEnumDeleteMessage POSTDeleteMessageActionEnum = "DeleteMessage"
 )
 
+func (e POSTDeleteMessageActionEnum) ToPointer() *POSTDeleteMessageActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteMessageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteMessage":
-		*e = POSTDeleteMessageActionEnum(s)
+		*e = POSTDeleteMessageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteMessageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteMessageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteMessageVersionEnumTwoThousandAndTwelve1105 POSTDeleteMessageVersionEnum = "2012-11-05"
 )
 
+func (e POSTDeleteMessageVersionEnum) ToPointer() *POSTDeleteMessageVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteMessageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = POSTDeleteMessageVersionEnum(s)
+		*e = POSTDeleteMessageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteMessageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteMessageVersionEnum: %v", v)
 	}
 }
 

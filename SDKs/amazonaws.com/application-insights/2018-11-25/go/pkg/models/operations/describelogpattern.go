@@ -16,17 +16,21 @@ const (
 	DescribeLogPatternXAmzTargetEnumEc2WindowsBarleyServiceDescribeLogPattern DescribeLogPatternXAmzTargetEnum = "EC2WindowsBarleyService.DescribeLogPattern"
 )
 
+func (e DescribeLogPatternXAmzTargetEnum) ToPointer() *DescribeLogPatternXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeLogPatternXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2WindowsBarleyService.DescribeLogPattern":
-		*e = DescribeLogPatternXAmzTargetEnum(s)
+		*e = DescribeLogPatternXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeLogPatternXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeLogPatternXAmzTargetEnum: %v", v)
 	}
 }
 

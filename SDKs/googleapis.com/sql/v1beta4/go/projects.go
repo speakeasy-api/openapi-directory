@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // SQLProjectsInstancesGetDiskShrinkConfig - Get Disk Shrink Config for a given instance.
 func (s *projects) SQLProjectsInstancesGetDiskShrinkConfig(ctx context.Context, request operations.SQLProjectsInstancesGetDiskShrinkConfigRequest, security operations.SQLProjectsInstancesGetDiskShrinkConfigSecurity) (*operations.SQLProjectsInstancesGetDiskShrinkConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/getDiskShrinkConfig", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/getDiskShrinkConfig", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) SQLProjectsInstancesGetDiskShrinkConfig(ctx context.Context, 
 // SQLProjectsInstancesPerformDiskShrink - Perform Disk Shrink on primary instance.
 func (s *projects) SQLProjectsInstancesPerformDiskShrink(ctx context.Context, request operations.SQLProjectsInstancesPerformDiskShrinkRequest, security operations.SQLProjectsInstancesPerformDiskShrinkSecurity) (*operations.SQLProjectsInstancesPerformDiskShrinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/performDiskShrink", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/performDiskShrink", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PerformDiskShrinkContext", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) SQLProjectsInstancesPerformDiskShrink(ctx context.Context, re
 // SQLProjectsInstancesRescheduleMaintenance - Reschedules the maintenance on the given instance.
 func (s *projects) SQLProjectsInstancesRescheduleMaintenance(ctx context.Context, request operations.SQLProjectsInstancesRescheduleMaintenanceRequest, security operations.SQLProjectsInstancesRescheduleMaintenanceSecurity) (*operations.SQLProjectsInstancesRescheduleMaintenanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/rescheduleMaintenance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/rescheduleMaintenance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SQLInstancesRescheduleMaintenanceRequestBody", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) SQLProjectsInstancesRescheduleMaintenance(ctx context.Context
 // SQLProjectsInstancesResetReplicaSize - Reset Replica Size to primary instance disk size.
 func (s *projects) SQLProjectsInstancesResetReplicaSize(ctx context.Context, request operations.SQLProjectsInstancesResetReplicaSizeRequest, security operations.SQLProjectsInstancesResetReplicaSizeSecurity) (*operations.SQLProjectsInstancesResetReplicaSizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/resetReplicaSize", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/resetReplicaSize", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) SQLProjectsInstancesResetReplicaSize(ctx context.Context, req
 // SQLProjectsInstancesStartExternalSync - Start External primary instance migration.
 func (s *projects) SQLProjectsInstancesStartExternalSync(ctx context.Context, request operations.SQLProjectsInstancesStartExternalSyncRequest, security operations.SQLProjectsInstancesStartExternalSyncSecurity) (*operations.SQLProjectsInstancesStartExternalSyncResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/startExternalSync", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/startExternalSync", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SQLInstancesStartExternalSyncRequest", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *projects) SQLProjectsInstancesStartExternalSync(ctx context.Context, re
 // SQLProjectsInstancesVerifyExternalSyncSettings - Verify External primary instance external sync settings.
 func (s *projects) SQLProjectsInstancesVerifyExternalSyncSettings(ctx context.Context, request operations.SQLProjectsInstancesVerifyExternalSyncSettingsRequest, security operations.SQLProjectsInstancesVerifyExternalSyncSettingsSecurity) (*operations.SQLProjectsInstancesVerifyExternalSyncSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/verifyExternalSyncSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/verifyExternalSyncSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SQLInstancesVerifyExternalSyncSettingsRequest", "json")
 	if err != nil {

@@ -36,7 +36,10 @@ func newAppsFindAndModifyApps(defaultClient, securityClient HTTPClient, serverUR
 // - This method is called on behalf of a developer.
 func (s *appsFindAndModifyApps) DeleteAppsAppID(ctx context.Context, request operations.DeleteAppsAppIDRequest) (*operations.DeleteAppsAppIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -76,7 +79,10 @@ func (s *appsFindAndModifyApps) DeleteAppsAppID(ctx context.Context, request ope
 // - This method is called on behalf of a developer.
 func (s *appsFindAndModifyApps) DeleteAppsAppIDVersionsVersion(ctx context.Context, request operations.DeleteAppsAppIDVersionsVersionRequest) (*operations.DeleteAppsAppIDVersionsVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/versions/{version}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/versions/{version}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -167,7 +173,10 @@ func (s *appsFindAndModifyApps) GetApps(ctx context.Context, request operations.
 // - A 'view' event is recorded when trackViews is set to true
 func (s *appsFindAndModifyApps) GetAppsBySafeNameSafeName(ctx context.Context, request operations.GetAppsBySafeNameSafeNameRequest) (*operations.GetAppsBySafeNameSafeNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/bySafeName/{safeName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/bySafeName/{safeName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -321,7 +330,10 @@ func (s *appsFindAndModifyApps) GetAppsVersions(ctx context.Context, request ope
 // - A 'view' event is recorded when trackViews is set to true
 func (s *appsFindAndModifyApps) GetAppsAppID(ctx context.Context, request operations.GetAppsAppIDRequest) (*operations.GetAppsAppIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -373,7 +385,10 @@ func (s *appsFindAndModifyApps) GetAppsAppID(ctx context.Context, request operat
 // - Only returns AppVersions owned by this developer
 func (s *appsFindAndModifyApps) GetAppsAppIDVersionsVersion(ctx context.Context, request operations.GetAppsAppIDVersionsVersionRequest) (*operations.GetAppsAppIDVersionsVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/versions/{version}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/versions/{version}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -428,7 +443,10 @@ func (s *appsFindAndModifyApps) GetAppsAppIDVersionsVersion(ctx context.Context,
 // - This endpoint updates only the fields provided in the request (relative update). In contrast, the POST version of this method replaces the entire object to match the request (absolute update).
 func (s *appsFindAndModifyApps) PatchAppsAppIDVersionsVersion(ctx context.Context, request operations.PatchAppsAppIDVersionsVersionRequest) (*operations.PatchAppsAppIDVersionsVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/versions/{version}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/versions/{version}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -536,7 +554,10 @@ func (s *appsFindAndModifyApps) PostApps(ctx context.Context, request operations
 // - This method is called on behalf of a developer.
 func (s *appsFindAndModifyApps) PostAppsAppIDLive(ctx context.Context, request operations.PostAppsAppIDLiveRequest) (*operations.PostAppsAppIDLiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/live", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/live", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -579,7 +600,10 @@ func (s *appsFindAndModifyApps) PostAppsAppIDLive(ctx context.Context, request o
 // - Only effects the current working version of the app.
 func (s *appsFindAndModifyApps) PostAppsAppIDPublish(ctx context.Context, request operations.PostAppsAppIDPublishRequest) (*operations.PostAppsAppIDPublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/publish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/publish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -628,7 +652,10 @@ func (s *appsFindAndModifyApps) PostAppsAppIDPublish(ctx context.Context, reques
 // - This endpoint replaces the entire object to match the request (absolute update). In contrast, the PATCH version of this endpoint updates only the fields provided in the request (relative update).
 func (s *appsFindAndModifyApps) PostAppsAppIDVersionsVersion(ctx context.Context, request operations.PostAppsAppIDVersionsVersionRequest) (*operations.PostAppsAppIDVersionsVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/versions/{version}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/versions/{version}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -682,7 +709,10 @@ func (s *appsFindAndModifyApps) PostAppsAppIDVersionsVersion(ctx context.Context
 // Only certain status changes are allowed. For instance, a developer is only able to suspend and unsuspend their app (which must already be approved). See here for a state change diagram of allowed status changes for administrators: https://support.openchannel.io/documentation/api/#415-apps-status-change
 func (s *appsFindAndModifyApps) PostAppsAppIDVersionsVersionStatus(ctx context.Context, request operations.PostAppsAppIDVersionsVersionStatusRequest) (*operations.PostAppsAppIDVersionsVersionStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/versions/{version}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/versions/{version}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	AggregationFindingTypeEnumPackageVulnerability AggregationFindingTypeEnum = "PACKAGE_VULNERABILITY"
 )
 
+func (e AggregationFindingTypeEnum) ToPointer() *AggregationFindingTypeEnum {
+	return &e
+}
+
 func (e *AggregationFindingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NETWORK_REACHABILITY":
 		fallthrough
 	case "PACKAGE_VULNERABILITY":
-		*e = AggregationFindingTypeEnum(s)
+		*e = AggregationFindingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregationFindingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregationFindingTypeEnum: %v", v)
 	}
 }

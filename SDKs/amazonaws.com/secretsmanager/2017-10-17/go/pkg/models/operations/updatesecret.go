@@ -16,17 +16,21 @@ const (
 	UpdateSecretXAmzTargetEnumSecretsmanagerUpdateSecret UpdateSecretXAmzTargetEnum = "secretsmanager.UpdateSecret"
 )
 
+func (e UpdateSecretXAmzTargetEnum) ToPointer() *UpdateSecretXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateSecretXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "secretsmanager.UpdateSecret":
-		*e = UpdateSecretXAmzTargetEnum(s)
+		*e = UpdateSecretXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSecretXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSecretXAmzTargetEnum: %v", v)
 	}
 }
 

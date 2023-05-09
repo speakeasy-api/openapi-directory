@@ -17,12 +17,16 @@ const (
 	GoogleCloudMlV1StudyConfigParameterSpecScaleTypeEnumUnitReverseLogScale  GoogleCloudMlV1StudyConfigParameterSpecScaleTypeEnum = "UNIT_REVERSE_LOG_SCALE"
 )
 
+func (e GoogleCloudMlV1StudyConfigParameterSpecScaleTypeEnum) ToPointer() *GoogleCloudMlV1StudyConfigParameterSpecScaleTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1StudyConfigParameterSpecScaleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCALE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "UNIT_LINEAR_SCALE":
@@ -30,10 +34,10 @@ func (e *GoogleCloudMlV1StudyConfigParameterSpecScaleTypeEnum) UnmarshalJSON(dat
 	case "UNIT_LOG_SCALE":
 		fallthrough
 	case "UNIT_REVERSE_LOG_SCALE":
-		*e = GoogleCloudMlV1StudyConfigParameterSpecScaleTypeEnum(s)
+		*e = GoogleCloudMlV1StudyConfigParameterSpecScaleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1StudyConfigParameterSpecScaleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1StudyConfigParameterSpecScaleTypeEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	GoogleCloudMlV1StudyConfigParameterSpecTypeEnumDiscrete                 GoogleCloudMlV1StudyConfigParameterSpecTypeEnum = "DISCRETE"
 )
 
+func (e GoogleCloudMlV1StudyConfigParameterSpecTypeEnum) ToPointer() *GoogleCloudMlV1StudyConfigParameterSpecTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1StudyConfigParameterSpecTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARAMETER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DOUBLE":
@@ -63,10 +71,10 @@ func (e *GoogleCloudMlV1StudyConfigParameterSpecTypeEnum) UnmarshalJSON(data []b
 	case "CATEGORICAL":
 		fallthrough
 	case "DISCRETE":
-		*e = GoogleCloudMlV1StudyConfigParameterSpecTypeEnum(s)
+		*e = GoogleCloudMlV1StudyConfigParameterSpecTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1StudyConfigParameterSpecTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1StudyConfigParameterSpecTypeEnum: %v", v)
 	}
 }
 

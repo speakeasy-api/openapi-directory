@@ -29,12 +29,16 @@ const (
 	GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnumCaProtectedB                GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum = "CA_PROTECTED_B"
 )
 
+func (e GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum) ToPointer() *GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLIANCE_REGIME_UNSPECIFIED":
 		fallthrough
 	case "IL4":
@@ -66,10 +70,10 @@ func (e *GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum) UnmarshalJSO
 	case "ISR_REGIONS_AND_SUPPORT":
 		fallthrough
 	case "CA_PROTECTED_B":
-		*e = GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum(s)
+		*e = GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum: %v", v)
 	}
 }
 
@@ -77,26 +81,36 @@ func (e *GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum) UnmarshalJSO
 type GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum string
 
 const (
-	GoogleCloudAssuredworkloadsV1WorkloadPartnerEnumPartnerUnspecified          GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum = "PARTNER_UNSPECIFIED"
-	GoogleCloudAssuredworkloadsV1WorkloadPartnerEnumLocalControlsByS3Ns         GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum = "LOCAL_CONTROLS_BY_S3NS"
-	GoogleCloudAssuredworkloadsV1WorkloadPartnerEnumSovereignControlsByTSystems GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum = "SOVEREIGN_CONTROLS_BY_T_SYSTEMS"
+	GoogleCloudAssuredworkloadsV1WorkloadPartnerEnumPartnerUnspecified            GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum = "PARTNER_UNSPECIFIED"
+	GoogleCloudAssuredworkloadsV1WorkloadPartnerEnumLocalControlsByS3Ns           GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum = "LOCAL_CONTROLS_BY_S3NS"
+	GoogleCloudAssuredworkloadsV1WorkloadPartnerEnumSovereignControlsByTSystems   GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum = "SOVEREIGN_CONTROLS_BY_T_SYSTEMS"
+	GoogleCloudAssuredworkloadsV1WorkloadPartnerEnumSovereignControlsBySiaMinsait GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum = "SOVEREIGN_CONTROLS_BY_SIA_MINSAIT"
+	GoogleCloudAssuredworkloadsV1WorkloadPartnerEnumSovereignControlsByPsn        GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum = "SOVEREIGN_CONTROLS_BY_PSN"
 )
 
+func (e GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum) ToPointer() *GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARTNER_UNSPECIFIED":
 		fallthrough
 	case "LOCAL_CONTROLS_BY_S3NS":
 		fallthrough
 	case "SOVEREIGN_CONTROLS_BY_T_SYSTEMS":
-		*e = GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum(s)
+		fallthrough
+	case "SOVEREIGN_CONTROLS_BY_SIA_MINSAIT":
+		fallthrough
+	case "SOVEREIGN_CONTROLS_BY_PSN":
+		*e = GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum: %v", v)
 	}
 }
 
@@ -130,6 +144,8 @@ type GoogleCloudAssuredworkloadsV1WorkloadInput struct {
 	ResourceSettings []GoogleCloudAssuredworkloadsV1WorkloadResourceSettings `json:"resourceSettings,omitempty"`
 	// Signed Access Approvals (SAA) enrollment response.
 	SaaEnrollmentResponse *GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse `json:"saaEnrollmentResponse,omitempty"`
+	// Optional. Indicates whether the e-mail notification for a violation is enabled for a workload. This value will be by default True, and if not present will be considered as true. This should only be updated via updateWorkload call. Any Changes to this field during the createWorkload call will not be honored.
+	ViolationNotificationsEnabled *bool `json:"violationNotificationsEnabled,omitempty"`
 }
 
 // GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum - Output only. Represents the KAJ enrollment state of the given workload.
@@ -141,21 +157,25 @@ const (
 	GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnumKajEnrollmentStateComplete    GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum = "KAJ_ENROLLMENT_STATE_COMPLETE"
 )
 
+func (e GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum) ToPointer() *GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KAJ_ENROLLMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "KAJ_ENROLLMENT_STATE_PENDING":
 		fallthrough
 	case "KAJ_ENROLLMENT_STATE_COMPLETE":
-		*e = GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum(s)
+		*e = GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum: %v", v)
 	}
 }
 
@@ -197,4 +217,6 @@ type GoogleCloudAssuredworkloadsV1Workload struct {
 	Resources []GoogleCloudAssuredworkloadsV1WorkloadResourceInfo `json:"resources,omitempty"`
 	// Signed Access Approvals (SAA) enrollment response.
 	SaaEnrollmentResponse *GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse `json:"saaEnrollmentResponse,omitempty"`
+	// Optional. Indicates whether the e-mail notification for a violation is enabled for a workload. This value will be by default True, and if not present will be considered as true. This should only be updated via updateWorkload call. Any Changes to this field during the createWorkload call will not be honored.
+	ViolationNotificationsEnabled *bool `json:"violationNotificationsEnabled,omitempty"`
 }

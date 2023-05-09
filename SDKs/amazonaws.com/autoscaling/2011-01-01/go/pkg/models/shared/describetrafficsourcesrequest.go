@@ -6,5 +6,5 @@ type DescribeTrafficSourcesRequest struct {
 	AutoScalingGroupName string
 	MaxRecords           *int64
 	NextToken            *string
-	TrafficSourceType    string
+	TrafficSourceType    *string
 }

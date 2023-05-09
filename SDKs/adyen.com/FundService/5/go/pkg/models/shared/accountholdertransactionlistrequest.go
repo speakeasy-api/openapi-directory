@@ -57,12 +57,16 @@ const (
 	AccountHolderTransactionListRequestTransactionStatusesEnumSecondChargebackReceived             AccountHolderTransactionListRequestTransactionStatusesEnum = "SecondChargebackReceived"
 )
 
+func (e AccountHolderTransactionListRequestTransactionStatusesEnum) ToPointer() *AccountHolderTransactionListRequestTransactionStatusesEnum {
+	return &e
+}
+
 func (e *AccountHolderTransactionListRequestTransactionStatusesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BalanceNotPaidOutTransfer":
 		fallthrough
 	case "BalancePlatformSweep":
@@ -152,10 +156,10 @@ func (e *AccountHolderTransactionListRequestTransactionStatusesEnum) UnmarshalJS
 	case "SecondChargebackCorrectionReceived":
 		fallthrough
 	case "SecondChargebackReceived":
-		*e = AccountHolderTransactionListRequestTransactionStatusesEnum(s)
+		*e = AccountHolderTransactionListRequestTransactionStatusesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountHolderTransactionListRequestTransactionStatusesEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountHolderTransactionListRequestTransactionStatusesEnum: %v", v)
 	}
 }
 

@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GroundhogRequest{
-        Slug: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Groundhogs.Groundhog(ctx, req)
+    res, err := s.Groundhogs.Groundhog(ctx, operations.GroundhogRequest{
+        Slug: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

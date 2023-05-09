@@ -34,7 +34,10 @@ func newAssets(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // CloudassetAssetsList - Lists assets with time and resource types and returns paged results in response.
 func (s *assets) CloudassetAssetsList(ctx context.Context, request operations.CloudassetAssetsListRequest, security operations.CloudassetAssetsListSecurity) (*operations.CloudassetAssetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p5beta1/{parent}/assets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1p5beta1/{parent}/assets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

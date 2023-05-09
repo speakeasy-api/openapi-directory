@@ -15,17 +15,21 @@ const (
 	POSTDescribeLocalGatewayRouteTableVpcAssociationsActionEnumDescribeLocalGatewayRouteTableVpcAssociations POSTDescribeLocalGatewayRouteTableVpcAssociationsActionEnum = "DescribeLocalGatewayRouteTableVpcAssociations"
 )
 
+func (e POSTDescribeLocalGatewayRouteTableVpcAssociationsActionEnum) ToPointer() *POSTDescribeLocalGatewayRouteTableVpcAssociationsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeLocalGatewayRouteTableVpcAssociationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeLocalGatewayRouteTableVpcAssociations":
-		*e = POSTDescribeLocalGatewayRouteTableVpcAssociationsActionEnum(s)
+		*e = POSTDescribeLocalGatewayRouteTableVpcAssociationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeLocalGatewayRouteTableVpcAssociationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeLocalGatewayRouteTableVpcAssociationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeLocalGatewayRouteTableVpcAssociationsVersionEnumTwoThousandAndSixteen1115 POSTDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum) ToPointer() *POSTDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum(s)
+		*e = POSTDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum: %v", v)
 	}
 }
 

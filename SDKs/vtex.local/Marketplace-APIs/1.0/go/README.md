@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Marketplace-AP
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,16 +28,14 @@ func main() {
         }),
     )
 
-    req := operations.GetProductoffersRequest{
+    ctx := context.Background()
+    res, err := s.MatchedOffers.GetProductoffers(ctx, operations.GetProductoffersRequest{
         Accept: "corrupti",
         ContentType: "provident",
         AccountName: "distinctio",
         Environment: "quibusdam",
         ProductID: "unde",
-    }
-
-    ctx := context.Background()
-    res, err := s.MatchedOffers.GetProductoffers(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -54,46 +51,46 @@ func main() {
 ## Available Resources and Operations
 
 
-### MatchedOffers
+### [MatchedOffers](docs/matchedoffers/README.md)
 
-* `GetProductoffers` - Get Matched Offer's Data by Product ID
-* `GetSKUoffers` - Get Matched Offer's Data by SKU ID
-* `Getofferslist` - Get Matched Offers List
+* [GetProductoffers](docs/matchedoffers/README.md#getproductoffers) - Get Matched Offer's Data by Product ID
+* [GetSKUoffers](docs/matchedoffers/README.md#getskuoffers) - Get Matched Offer's Data by SKU ID
+* [Getofferslist](docs/matchedoffers/README.md#getofferslist) - Get Matched Offers List
 
-### Notification
+### [Notification](docs/notification/README.md)
 
-* `InventoryNotification` - Notify marketplace of inventory update
-* `PriceNotification` - Notify marketplace of price update
+* [InventoryNotification](docs/notification/README.md#inventorynotification) - Notify marketplace of inventory update
+* [PriceNotification](docs/notification/README.md#pricenotification) - Notify marketplace of price update
 
-### SalesChannelMapping
+### [SalesChannelMapping](docs/saleschannelmapping/README.md)
 
-* `RetrieveMapping` - Get Sales Channel Mapping Data
-* `UpsertMapping` - Upsert Sales Channel Mapping
+* [RetrieveMapping](docs/saleschannelmapping/README.md#retrievemapping) - Get Sales Channel Mapping Data
+* [UpsertMapping](docs/saleschannelmapping/README.md#upsertmapping) - Upsert Sales Channel Mapping
 
-### SellerCommissions
+### [SellerCommissions](docs/sellercommissions/README.md)
 
-* `BulkUpsertSellerCommissions` - Upsert Seller Commissions in Bulk
-* `ListSellerCommissions` - List Seller Commissions by seller ID
-* `RemoveSellerCommissions` - Remove Seller Commissions by Category ID
-* `RetrieveSellerCommissions` - Get Seller Commissions by Category ID
-* `UpsertSellerCommissions` - Upsert Seller Commissions by Category ID
+* [BulkUpsertSellerCommissions](docs/sellercommissions/README.md#bulkupsertsellercommissions) - Upsert Seller Commissions in Bulk
+* [ListSellerCommissions](docs/sellercommissions/README.md#listsellercommissions) - List Seller Commissions by seller ID
+* [RemoveSellerCommissions](docs/sellercommissions/README.md#removesellercommissions) - Remove Seller Commissions by Category ID
+* [RetrieveSellerCommissions](docs/sellercommissions/README.md#retrievesellercommissions) - Get Seller Commissions by Category ID
+* [UpsertSellerCommissions](docs/sellercommissions/README.md#upsertsellercommissions) - Upsert Seller Commissions by Category ID
 
-### SellerInvite
+### [SellerInvite](docs/sellerinvite/README.md)
 
-* `AcceptSellerLead` - Accept Seller Lead
-* `CreateSellerFromSellerLead` - Create Seller From Lead
-* `CreateSellerLead` - Invite Seller Lead
-* `ListSellerLeads` - List Seller Leads
-* `RemoveSellerLead` - Delete Seller Lead
-* `ResendSellerLeadRequest` - Resend Seller Lead Invite
-* `RetrieveSellerLead` - Get Seller Lead's Data by Id
+* [AcceptSellerLead](docs/sellerinvite/README.md#acceptsellerlead) - Accept Seller Lead
+* [CreateSellerFromSellerLead](docs/sellerinvite/README.md#createsellerfromsellerlead) - Create Seller From Lead
+* [CreateSellerLead](docs/sellerinvite/README.md#createsellerlead) - Invite Seller Lead
+* [ListSellerLeads](docs/sellerinvite/README.md#listsellerleads) - List Seller Leads
+* [RemoveSellerLead](docs/sellerinvite/README.md#removesellerlead) - Delete Seller Lead
+* [ResendSellerLeadRequest](docs/sellerinvite/README.md#resendsellerleadrequest) - Resend Seller Lead Invite
+* [RetrieveSellerLead](docs/sellerinvite/README.md#retrievesellerlead) - Get Seller Lead's Data by Id
 
-### Sellers
+### [Sellers](docs/sellers/README.md)
 
-* `GetListSellers` - List Sellers
-* `GetRetrieveSeller` - Get Seller data by ID
-* `UpdateSeller` - Update Seller by Seller ID
-* `UpsertSellerRequest` - Configure Seller Account
+* [GetListSellers](docs/sellers/README.md#getlistsellers) - List Sellers
+* [GetRetrieveSeller](docs/sellers/README.md#getretrieveseller) - Get Seller data by ID
+* [UpdateSeller](docs/sellers/README.md#updateseller) - Update Seller by Seller ID
+* [UpsertSellerRequest](docs/sellers/README.md#upsertsellerrequest) - Configure Seller Account
 <!-- End SDK Available Operations -->
 
 ### Maturity

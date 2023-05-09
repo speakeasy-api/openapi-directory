@@ -18,12 +18,16 @@ const (
 	IdentityProviderTypeTypeEnumOidc            IdentityProviderTypeTypeEnum = "OIDC"
 )
 
+func (e IdentityProviderTypeTypeEnum) ToPointer() *IdentityProviderTypeTypeEnum {
+	return &e
+}
+
 func (e *IdentityProviderTypeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SAML":
 		fallthrough
 	case "Facebook":
@@ -35,9 +39,9 @@ func (e *IdentityProviderTypeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SignInWithApple":
 		fallthrough
 	case "OIDC":
-		*e = IdentityProviderTypeTypeEnum(s)
+		*e = IdentityProviderTypeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IdentityProviderTypeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IdentityProviderTypeTypeEnum: %v", v)
 	}
 }

@@ -19,12 +19,16 @@ const (
 	JustificationJustificationTypeEnumInlineMitigationsAlreadyExist               JustificationJustificationTypeEnum = "INLINE_MITIGATIONS_ALREADY_EXIST"
 )
 
+func (e JustificationJustificationTypeEnum) ToPointer() *JustificationJustificationTypeEnum {
+	return &e
+}
+
 func (e *JustificationJustificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JUSTIFICATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "COMPONENT_NOT_PRESENT":
@@ -36,10 +40,10 @@ func (e *JustificationJustificationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "VULNERABLE_CODE_CANNOT_BE_CONTROLLED_BY_ADVERSARY":
 		fallthrough
 	case "INLINE_MITIGATIONS_ALREADY_EXIST":
-		*e = JustificationJustificationTypeEnum(s)
+		*e = JustificationJustificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JustificationJustificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for JustificationJustificationTypeEnum: %v", v)
 	}
 }
 

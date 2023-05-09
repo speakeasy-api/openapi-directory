@@ -23,12 +23,16 @@ const (
 	LatestV1GetV1LatestLocationIDGetOrderByLocationsOrderEnumRandom       LatestV1GetV1LatestLocationIDGetOrderByLocationsOrderEnum = "random"
 )
 
+func (e LatestV1GetV1LatestLocationIDGetOrderByLocationsOrderEnum) ToPointer() *LatestV1GetV1LatestLocationIDGetOrderByLocationsOrderEnum {
+	return &e
+}
+
 func (e *LatestV1GetV1LatestLocationIDGetOrderByLocationsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "city":
 		fallthrough
 	case "country":
@@ -44,10 +48,10 @@ func (e *LatestV1GetV1LatestLocationIDGetOrderByLocationsOrderEnum) UnmarshalJSO
 	case "count":
 		fallthrough
 	case "random":
-		*e = LatestV1GetV1LatestLocationIDGetOrderByLocationsOrderEnum(s)
+		*e = LatestV1GetV1LatestLocationIDGetOrderByLocationsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LatestV1GetV1LatestLocationIDGetOrderByLocationsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for LatestV1GetV1LatestLocationIDGetOrderByLocationsOrderEnum: %v", v)
 	}
 }
 
@@ -59,19 +63,23 @@ const (
 	LatestV1GetV1LatestLocationIDGetSortSortEnumDesc LatestV1GetV1LatestLocationIDGetSortSortEnum = "desc"
 )
 
+func (e LatestV1GetV1LatestLocationIDGetSortSortEnum) ToPointer() *LatestV1GetV1LatestLocationIDGetSortSortEnum {
+	return &e
+}
+
 func (e *LatestV1GetV1LatestLocationIDGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = LatestV1GetV1LatestLocationIDGetSortSortEnum(s)
+		*e = LatestV1GetV1LatestLocationIDGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LatestV1GetV1LatestLocationIDGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for LatestV1GetV1LatestLocationIDGetSortSortEnum: %v", v)
 	}
 }
 

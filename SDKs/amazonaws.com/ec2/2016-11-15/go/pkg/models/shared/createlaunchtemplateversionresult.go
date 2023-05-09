@@ -21,12 +21,16 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnumGp3      CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnum = "gp3"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -40,10 +44,10 @@ func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDat
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnum: %v", v)
 	}
 }
 
@@ -75,19 +79,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceEnumNone CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceEnum = "none"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "none":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceEnum: %v", v)
 	}
 }
 
@@ -149,19 +157,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceInitiatedShutdownBehaviorEnumTerminate CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceInitiatedShutdownBehaviorEnum = "terminate"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceInitiatedShutdownBehaviorEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceInitiatedShutdownBehaviorEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceInitiatedShutdownBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stop":
 		fallthrough
 	case "terminate":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceInitiatedShutdownBehaviorEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceInitiatedShutdownBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceInitiatedShutdownBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceInitiatedShutdownBehaviorEnum: %v", v)
 	}
 }
 
@@ -172,17 +184,21 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsMarketTypeEnumSpot CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsMarketTypeEnum = "spot"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsMarketTypeEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsMarketTypeEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsMarketTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spot":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsMarketTypeEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsMarketTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsMarketTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsMarketTypeEnum: %v", v)
 	}
 }
 
@@ -195,21 +211,25 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnumTerminate CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnum = "terminate"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hibernate":
 		fallthrough
 	case "stop":
 		fallthrough
 	case "terminate":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorEnum: %v", v)
 	}
 }
 
@@ -221,19 +241,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnumPersistent CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnum = "persistent"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "one-time":
 		fallthrough
 	case "persistent":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -267,12 +291,16 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersEnumXilinx            CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersEnum = "xilinx"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nvidia":
 		fallthrough
 	case "amd":
@@ -280,10 +308,10 @@ func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDat
 	case "amazon-web-services":
 		fallthrough
 	case "xilinx":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersEnum: %v", v)
 	}
 }
 
@@ -301,12 +329,16 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorNamesEnumK520          CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorNamesEnum = "k520"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorNamesEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorNamesEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorNamesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a100":
 		fallthrough
 	case "v100":
@@ -324,10 +356,10 @@ func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDat
 	case "inferentia":
 		fallthrough
 	case "k520":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorNamesEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorNamesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorNamesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorNamesEnum: %v", v)
 	}
 }
 
@@ -345,21 +377,25 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorTypesEnumInference CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorTypesEnum = "inference"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorTypesEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorTypesEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gpu":
 		fallthrough
 	case "fpga":
 		fallthrough
 	case "inference":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorTypesEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsAcceleratorTypesEnum: %v", v)
 	}
 }
 
@@ -372,21 +408,25 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBareMetalEnumExcluded CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBareMetalEnum = "excluded"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBareMetalEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBareMetalEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBareMetalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBareMetalEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBareMetalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBareMetalEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBareMetalEnum: %v", v)
 	}
 }
 
@@ -405,21 +445,25 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBurstablePerformanceEnumExcluded CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBurstablePerformanceEnum = "excluded"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBurstablePerformanceEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBurstablePerformanceEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBurstablePerformanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBurstablePerformanceEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBurstablePerformanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBurstablePerformanceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsBurstablePerformanceEnum: %v", v)
 	}
 }
 
@@ -431,21 +475,25 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsCPUManufacturersEnumAmazonWebServices CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsCPUManufacturersEnum = "amazon-web-services"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsCPUManufacturersEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsCPUManufacturersEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsCPUManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intel":
 		fallthrough
 	case "amd":
 		fallthrough
 	case "amazon-web-services":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsCPUManufacturersEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsCPUManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsCPUManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsCPUManufacturersEnum: %v", v)
 	}
 }
 
@@ -456,19 +504,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsInstanceGenerationsEnumPrevious CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsInstanceGenerationsEnum = "previous"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsInstanceGenerationsEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsInstanceGenerationsEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsInstanceGenerationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "previous":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsInstanceGenerationsEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsInstanceGenerationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsInstanceGenerationsEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsInstanceGenerationsEnum: %v", v)
 	}
 }
 
@@ -481,21 +533,25 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageEnumExcluded CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageEnum = "excluded"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageEnum: %v", v)
 	}
 }
 
@@ -506,19 +562,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageTypesEnumSsd CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageTypesEnum = "ssd"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageTypesEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageTypesEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hdd":
 		fallthrough
 	case "ssd":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageTypesEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceRequirementsLocalStorageTypesEnum: %v", v)
 	}
 }
 
@@ -1227,14 +1287,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR7g12xlarge     CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r7g.12xlarge"
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR7g16xlarge     CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r7g.16xlarge"
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR7gMetal        CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r7g.metal"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumC6inMetal       CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "c6in.metal"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumM6inMetal       CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "m6in.metal"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumM6idnMetal      CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "m6idn.metal"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR6inMetal       CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r6in.metal"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR6idnMetal      CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -2510,10 +2579,20 @@ func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDat
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -2530,19 +2609,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptionsAutoRecoveryEnumDisabled CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptionsAutoRecoveryEnum = "disabled"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptionsAutoRecoveryEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptionsAutoRecoveryEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptionsAutoRecoveryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "disabled":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptionsAutoRecoveryEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptionsAutoRecoveryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptionsAutoRecoveryEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMaintenanceOptionsAutoRecoveryEnum: %v", v)
 	}
 }
 
@@ -2559,19 +2642,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPEndpointEnumEnabled  CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPEndpointEnum = "enabled"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPEndpointEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPEndpointEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPEndpointEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPEndpointEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPEndpointEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPEndpointEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPEndpointEnum: %v", v)
 	}
 }
 
@@ -2583,19 +2670,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPProtocolIpv6EnumEnabled  CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPProtocolIpv6Enum = "enabled"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPProtocolIpv6Enum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPProtocolIpv6Enum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPProtocolIpv6Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPProtocolIpv6Enum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPProtocolIpv6Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPProtocolIpv6Enum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPProtocolIpv6Enum: %v", v)
 	}
 }
 
@@ -2607,19 +2698,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPTokensEnumRequired CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPTokensEnum = "required"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPTokensEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPTokensEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPTokensEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "optional":
 		fallthrough
 	case "required":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPTokensEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPTokensEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPTokensEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsHTTPTokensEnum: %v", v)
 	}
 }
 
@@ -2631,19 +2726,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnumEnabled  CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnum = "enabled"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsInstanceMetadataTagsEnum: %v", v)
 	}
 }
 
@@ -2655,19 +2754,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsStateEnumApplied CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsStateEnum = "applied"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsStateEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsStateEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "applied":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsStateEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataMetadataOptionsStateEnum: %v", v)
 	}
 }
 
@@ -2739,21 +2842,25 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacementTenancyEnumHost      CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacementTenancyEnum = "host"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacementTenancyEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacementTenancyEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacementTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacementTenancyEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacementTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacementTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPlacementTenancyEnum: %v", v)
 	}
 }
 
@@ -2778,19 +2885,23 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPrivateDNSNameOptionsHostnameTypeEnumResourceName CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPrivateDNSNameOptionsHostnameTypeEnum = "resource-name"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPrivateDNSNameOptionsHostnameTypeEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPrivateDNSNameOptionsHostnameTypeEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPrivateDNSNameOptionsHostnameTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ip-name":
 		fallthrough
 	case "resource-name":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPrivateDNSNameOptionsHostnameTypeEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPrivateDNSNameOptionsHostnameTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPrivateDNSNameOptionsHostnameTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataPrivateDNSNameOptionsHostnameTypeEnum: %v", v)
 	}
 }
 
@@ -2892,12 +3003,16 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataTagSpecificationsResourceTypeEnum) ToPointer() *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -3067,10 +3182,10 @@ func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDat
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataTagSpecificationsResourceTypeEnum(s)
+		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

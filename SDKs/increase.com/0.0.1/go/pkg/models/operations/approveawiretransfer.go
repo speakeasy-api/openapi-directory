@@ -13,23 +13,27 @@ type ApproveAWireTransferRequest struct {
 	WireTransferID string `pathParam:"style=simple,explode=false,name=wire_transfer_id"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON13StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON13StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ApproveAWireTransferDefaultApplicationJSON13StatusEnum = "429"
+	ApproveAWireTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ApproveAWireTransferDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON13StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = ApproveAWireTransferDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = ApproveAWireTransferDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON13TypeEnumRateLimitedError ApproveAWireTransferDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON13TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON13TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type ApproveAWireTransferDefaultApplicationJSON13 struct {
 	Type       ApproveAWireTransferDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON12StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON12StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree ApproveAWireTransferDefaultApplicationJSON12StatusEnum = "403"
+	ApproveAWireTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree ApproveAWireTransferDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON12StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ApproveAWireTransferDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ApproveAWireTransferDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON12TypeEnumPrivateFeatureError ApproveAWireTransferDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON12TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON12TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type ApproveAWireTransferDefaultApplicationJSON12 struct {
 	Type   ApproveAWireTransferDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON11StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON11StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour ApproveAWireTransferDefaultApplicationJSON11StatusEnum = "404"
+	ApproveAWireTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour ApproveAWireTransferDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON11StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ApproveAWireTransferDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ApproveAWireTransferDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON11TypeEnumObjectNotFoundError ApproveAWireTransferDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON11TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON11TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type ApproveAWireTransferDefaultApplicationJSON11 struct {
 	Type   ApproveAWireTransferDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON10StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON10StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON10StatusEnumFourHundred ApproveAWireTransferDefaultApplicationJSON10StatusEnum = "400"
+	ApproveAWireTransferDefaultApplicationJSON10StatusEnumFourHundred ApproveAWireTransferDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON10StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ApproveAWireTransferDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ApproveAWireTransferDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON10TypeEnumMalformedRequestError ApproveAWireTransferDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON10TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON10TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type ApproveAWireTransferDefaultApplicationJSON10 struct {
 	Type   ApproveAWireTransferDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON9StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON9StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON9StatusEnumFourHundred ApproveAWireTransferDefaultApplicationJSON9StatusEnum = "400"
+	ApproveAWireTransferDefaultApplicationJSON9StatusEnumFourHundred ApproveAWireTransferDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON9StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ApproveAWireTransferDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ApproveAWireTransferDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON9TypeEnumInvalidParametersError ApproveAWireTransferDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON9TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON9TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type ApproveAWireTransferDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                              `json:"errors,omitempty"`
+	Errors []map[string]interface{}                              `json:"errors"`
 	Status ApproveAWireTransferDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                `json:"title"`
 	Type   ApproveAWireTransferDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON8StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON8StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine ApproveAWireTransferDefaultApplicationJSON8StatusEnum = "409"
+	ApproveAWireTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine ApproveAWireTransferDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON8StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ApproveAWireTransferDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ApproveAWireTransferDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON8TypeEnumInvalidOperationError ApproveAWireTransferDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON8TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON8TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type ApproveAWireTransferDefaultApplicationJSON8 struct {
 	Type   ApproveAWireTransferDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON7StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON7StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne ApproveAWireTransferDefaultApplicationJSON7StatusEnum = "401"
+	ApproveAWireTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne ApproveAWireTransferDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON7StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = ApproveAWireTransferDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = ApproveAWireTransferDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON7TypeEnumInvalidAPIKeyError ApproveAWireTransferDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON7TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON7TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type ApproveAWireTransferDefaultApplicationJSON7 struct {
 	Type   ApproveAWireTransferDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON6StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON6StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON6StatusEnumFiveHundred ApproveAWireTransferDefaultApplicationJSON6StatusEnum = "500"
+	ApproveAWireTransferDefaultApplicationJSON6StatusEnumFiveHundred ApproveAWireTransferDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON6StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = ApproveAWireTransferDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = ApproveAWireTransferDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON6TypeEnumInternalServerError ApproveAWireTransferDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON6TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON6TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type ApproveAWireTransferDefaultApplicationJSON6 struct {
 	Type   ApproveAWireTransferDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON5StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON5StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree ApproveAWireTransferDefaultApplicationJSON5StatusEnum = "403"
+	ApproveAWireTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree ApproveAWireTransferDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON5StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ApproveAWireTransferDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ApproveAWireTransferDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON5TypeEnumInsufficientPermissionsError ApproveAWireTransferDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON5TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON5TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type ApproveAWireTransferDefaultApplicationJSON5 struct {
 	Type   ApproveAWireTransferDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON4StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON4StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ApproveAWireTransferDefaultApplicationJSON4StatusEnum = "422"
+	ApproveAWireTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ApproveAWireTransferDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON4StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = ApproveAWireTransferDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = ApproveAWireTransferDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError ApproveAWireTransferDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON4TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON4TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type ApproveAWireTransferDefaultApplicationJSON4 struct {
 	Type   ApproveAWireTransferDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON3StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON3StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine ApproveAWireTransferDefaultApplicationJSON3StatusEnum = "409"
+	ApproveAWireTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine ApproveAWireTransferDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON3StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ApproveAWireTransferDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ApproveAWireTransferDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON3TypeEnumIdempotencyConflictError ApproveAWireTransferDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON3TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON3TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type ApproveAWireTransferDefaultApplicationJSON3 struct {
 	Type   ApproveAWireTransferDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON2StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON2StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree ApproveAWireTransferDefaultApplicationJSON2StatusEnum = "403"
+	ApproveAWireTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree ApproveAWireTransferDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON2StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ApproveAWireTransferDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ApproveAWireTransferDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON2TypeEnumEnvironmentMismatchError ApproveAWireTransferDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON2TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON2TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type ApproveAWireTransferDefaultApplicationJSON2 struct {
 	Type   ApproveAWireTransferDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type ApproveAWireTransferDefaultApplicationJSON1StatusEnum string
+type ApproveAWireTransferDefaultApplicationJSON1StatusEnum int64
 
 const (
-	ApproveAWireTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour ApproveAWireTransferDefaultApplicationJSON1StatusEnum = "404"
+	ApproveAWireTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour ApproveAWireTransferDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON1StatusEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ApproveAWireTransferDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ApproveAWireTransferDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	ApproveAWireTransferDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError ApproveAWireTransferDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e ApproveAWireTransferDefaultApplicationJSON1TypeEnum) ToPointer() *ApproveAWireTransferDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *ApproveAWireTransferDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = ApproveAWireTransferDefaultApplicationJSON1TypeEnum(s)
+		*e = ApproveAWireTransferDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAWireTransferDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

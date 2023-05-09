@@ -16,21 +16,25 @@ const (
 	MembershipSpecCertificateManagementEnumEnabled                          MembershipSpecCertificateManagementEnum = "ENABLED"
 )
 
+func (e MembershipSpecCertificateManagementEnum) ToPointer() *MembershipSpecCertificateManagementEnum {
+	return &e
+}
+
 func (e *MembershipSpecCertificateManagementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERTIFICATE_MANAGEMENT_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
-		*e = MembershipSpecCertificateManagementEnum(s)
+		*e = MembershipSpecCertificateManagementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MembershipSpecCertificateManagementEnum: %s", s)
+		return fmt.Errorf("invalid value for MembershipSpecCertificateManagementEnum: %v", v)
 	}
 }
 

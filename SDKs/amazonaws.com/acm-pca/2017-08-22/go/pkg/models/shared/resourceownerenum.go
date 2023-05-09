@@ -14,18 +14,22 @@ const (
 	ResourceOwnerEnumOtherAccounts ResourceOwnerEnum = "OTHER_ACCOUNTS"
 )
 
+func (e ResourceOwnerEnum) ToPointer() *ResourceOwnerEnum {
+	return &e
+}
+
 func (e *ResourceOwnerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SELF":
 		fallthrough
 	case "OTHER_ACCOUNTS":
-		*e = ResourceOwnerEnum(s)
+		*e = ResourceOwnerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceOwnerEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceOwnerEnum: %v", v)
 	}
 }

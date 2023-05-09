@@ -30,12 +30,16 @@ const (
 	StatusConditionCanonicalCodeEnumDataLoss           StatusConditionCanonicalCodeEnum = "DATA_LOSS"
 )
 
+func (e StatusConditionCanonicalCodeEnum) ToPointer() *StatusConditionCanonicalCodeEnum {
+	return &e
+}
+
 func (e *StatusConditionCanonicalCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "CANCELLED":
@@ -69,10 +73,10 @@ func (e *StatusConditionCanonicalCodeEnum) UnmarshalJSON(data []byte) error {
 	case "UNAVAILABLE":
 		fallthrough
 	case "DATA_LOSS":
-		*e = StatusConditionCanonicalCodeEnum(s)
+		*e = StatusConditionCanonicalCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusConditionCanonicalCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusConditionCanonicalCodeEnum: %v", v)
 	}
 }
 
@@ -89,12 +93,16 @@ const (
 	StatusConditionCodeEnumCaExpiring               StatusConditionCodeEnum = "CA_EXPIRING"
 )
 
+func (e StatusConditionCodeEnum) ToPointer() *StatusConditionCodeEnum {
+	return &e
+}
+
 func (e *StatusConditionCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "GCE_STOCKOUT":
@@ -108,10 +116,10 @@ func (e *StatusConditionCodeEnum) UnmarshalJSON(data []byte) error {
 	case "CLOUD_KMS_KEY_ERROR":
 		fallthrough
 	case "CA_EXPIRING":
-		*e = StatusConditionCodeEnum(s)
+		*e = StatusConditionCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusConditionCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusConditionCodeEnum: %v", v)
 	}
 }
 

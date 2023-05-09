@@ -16,21 +16,25 @@ const (
 	PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyLevelEnumPublic       PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyLevelEnum = "public"
 )
 
+func (e PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyLevelEnum) ToPointer() *PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyLevelEnum(s)
+		*e = PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyLevelEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyRightEnumNone  PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyRightEnum = "none"
 )
 
+func (e PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyRightEnum) ToPointer() *PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyRightEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyRightEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "write":
 		fallthrough
 	case "read":
 		fallthrough
 	case "none":
-		*e = PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyRightEnum(s)
+		*e = PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyRightEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyRightEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequestBodyRightEnum: %v", v)
 	}
 }
 

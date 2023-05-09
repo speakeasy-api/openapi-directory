@@ -71,12 +71,16 @@ const (
 	VoiceIDEnumZhiyu     VoiceIDEnum = "ZHIYU"
 )
 
+func (e VoiceIDEnum) ToPointer() *VoiceIDEnum {
+	return &e
+}
+
 func (e *VoiceIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AMY":
 		fallthrough
 	case "ASTRID":
@@ -194,9 +198,9 @@ func (e *VoiceIDEnum) UnmarshalJSON(data []byte) error {
 	case "ZEINA":
 		fallthrough
 	case "ZHIYU":
-		*e = VoiceIDEnum(s)
+		*e = VoiceIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VoiceIDEnum: %s", s)
+		return fmt.Errorf("invalid value for VoiceIDEnum: %v", v)
 	}
 }

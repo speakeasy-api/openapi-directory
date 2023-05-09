@@ -15,17 +15,21 @@ const (
 	GETListTypeRegistrationsActionEnumListTypeRegistrations GETListTypeRegistrationsActionEnum = "ListTypeRegistrations"
 )
 
+func (e GETListTypeRegistrationsActionEnum) ToPointer() *GETListTypeRegistrationsActionEnum {
+	return &e
+}
+
 func (e *GETListTypeRegistrationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListTypeRegistrations":
-		*e = GETListTypeRegistrationsActionEnum(s)
+		*e = GETListTypeRegistrationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypeRegistrationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypeRegistrationsActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETListTypeRegistrationsRegistrationStatusFilterEnumFailed     GETListTypeRegistrationsRegistrationStatusFilterEnum = "FAILED"
 )
 
+func (e GETListTypeRegistrationsRegistrationStatusFilterEnum) ToPointer() *GETListTypeRegistrationsRegistrationStatusFilterEnum {
+	return &e
+}
+
 func (e *GETListTypeRegistrationsRegistrationStatusFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETE":
 		fallthrough
 	case "IN_PROGRESS":
 		fallthrough
 	case "FAILED":
-		*e = GETListTypeRegistrationsRegistrationStatusFilterEnum(s)
+		*e = GETListTypeRegistrationsRegistrationStatusFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypeRegistrationsRegistrationStatusFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypeRegistrationsRegistrationStatusFilterEnum: %v", v)
 	}
 }
 
@@ -65,21 +73,25 @@ const (
 	GETListTypeRegistrationsTypeEnumHook     GETListTypeRegistrationsTypeEnum = "HOOK"
 )
 
+func (e GETListTypeRegistrationsTypeEnum) ToPointer() *GETListTypeRegistrationsTypeEnum {
+	return &e
+}
+
 func (e *GETListTypeRegistrationsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = GETListTypeRegistrationsTypeEnum(s)
+		*e = GETListTypeRegistrationsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypeRegistrationsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypeRegistrationsTypeEnum: %v", v)
 	}
 }
 
@@ -90,17 +102,21 @@ const (
 	GETListTypeRegistrationsVersionEnumTwoThousandAndTen0515 GETListTypeRegistrationsVersionEnum = "2010-05-15"
 )
 
+func (e GETListTypeRegistrationsVersionEnum) ToPointer() *GETListTypeRegistrationsVersionEnum {
+	return &e
+}
+
 func (e *GETListTypeRegistrationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETListTypeRegistrationsVersionEnum(s)
+		*e = GETListTypeRegistrationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypeRegistrationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypeRegistrationsVersionEnum: %v", v)
 	}
 }
 

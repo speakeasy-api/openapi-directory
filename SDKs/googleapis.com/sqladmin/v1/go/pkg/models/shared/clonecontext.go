@@ -18,4 +18,6 @@ type CloneContext struct {
 	PitrTimestampMs *string `json:"pitrTimestampMs,omitempty"`
 	// Timestamp, if specified, identifies the time to which the source instance is cloned.
 	PointInTime *string `json:"pointInTime,omitempty"`
+	// (Point-in-time recovery for PostgreSQL only) Clone to an instance in the specified zone. If no zone is specified, clone to the same zone as the source instance.
+	PreferredZone *string `json:"preferredZone,omitempty"`
 }

@@ -34,7 +34,10 @@ func newVideoFormats(defaultClient, securityClient HTTPClient, serverURL, langua
 // DfareportingVideoFormatsGet - Gets one video format by ID.
 func (s *videoFormats) DfareportingVideoFormatsGet(ctx context.Context, request operations.DfareportingVideoFormatsGetRequest, security operations.DfareportingVideoFormatsGetSecurity) (*operations.DfareportingVideoFormatsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/videoFormats/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/videoFormats/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *videoFormats) DfareportingVideoFormatsGet(ctx context.Context, request 
 // DfareportingVideoFormatsList - Lists available video formats.
 func (s *videoFormats) DfareportingVideoFormatsList(ctx context.Context, request operations.DfareportingVideoFormatsListRequest, security operations.DfareportingVideoFormatsListSecurity) (*operations.DfareportingVideoFormatsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/videoFormats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/videoFormats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

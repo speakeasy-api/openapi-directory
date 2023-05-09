@@ -37,12 +37,16 @@ const (
 	TestNotificationConfigurationResponseEventTypesEnumTransferNotPaidoutTransfers    TestNotificationConfigurationResponseEventTypesEnum = "TRANSFER_NOT_PAIDOUT_TRANSFERS"
 )
 
+func (e TestNotificationConfigurationResponseEventTypesEnum) ToPointer() *TestNotificationConfigurationResponseEventTypesEnum {
+	return &e
+}
+
 func (e *TestNotificationConfigurationResponseEventTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_CLOSED":
 		fallthrough
 	case "ACCOUNT_CREATED":
@@ -92,10 +96,10 @@ func (e *TestNotificationConfigurationResponseEventTypesEnum) UnmarshalJSON(data
 	case "TRANSFER_FUNDS":
 		fallthrough
 	case "TRANSFER_NOT_PAIDOUT_TRANSFERS":
-		*e = TestNotificationConfigurationResponseEventTypesEnum(s)
+		*e = TestNotificationConfigurationResponseEventTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestNotificationConfigurationResponseEventTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for TestNotificationConfigurationResponseEventTypesEnum: %v", v)
 	}
 }
 
@@ -107,7 +111,7 @@ type TestNotificationConfigurationResponse struct {
 	// >Permitted values: `ACCOUNT_HOLDER_CREATED`, `ACCOUNT_CREATED`, `ACCOUNT_UPDATED`, `ACCOUNT_HOLDER_UPDATED`, `ACCOUNT_HOLDER_STATUS_CHANGE`, `ACCOUNT_HOLDER_STORE_STATUS_CHANGE` `ACCOUNT_HOLDER_VERIFICATION`, `ACCOUNT_HOLDER_LIMIT_REACHED`, `ACCOUNT_HOLDER_PAYOUT`, `PAYMENT_FAILURE`, `SCHEDULED_REFUNDS`, `REPORT_AVAILABLE`, `TRANSFER_FUNDS`, `BENEFICIARY_SETUP`, `COMPENSATE_NEGATIVE_BALANCE`.
 	EventTypes []TestNotificationConfigurationResponseEventTypesEnum `json:"eventTypes,omitempty"`
 	// The notification message and related response messages.
-	ExchangeMessages []ExchangeMessage `json:"exchangeMessages,omitempty"`
+	ExchangeMessages []ExchangeMessageWrapper `json:"exchangeMessages,omitempty"`
 	// The ID of the notification subscription configuration.
 	NotificationID int64 `json:"notificationId"`
 	// A list of messages describing the testing steps.

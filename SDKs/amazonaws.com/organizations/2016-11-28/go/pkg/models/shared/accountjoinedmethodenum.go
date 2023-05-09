@@ -14,18 +14,22 @@ const (
 	AccountJoinedMethodEnumCreated AccountJoinedMethodEnum = "CREATED"
 )
 
+func (e AccountJoinedMethodEnum) ToPointer() *AccountJoinedMethodEnum {
+	return &e
+}
+
 func (e *AccountJoinedMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVITED":
 		fallthrough
 	case "CREATED":
-		*e = AccountJoinedMethodEnum(s)
+		*e = AccountJoinedMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountJoinedMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountJoinedMethodEnum: %v", v)
 	}
 }

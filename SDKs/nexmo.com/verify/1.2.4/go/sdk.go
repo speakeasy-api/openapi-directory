@@ -25,6 +25,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - The Verify API helps you to implement 2FA (two-factor authentication) in your applications. This is useful for:
 //
 // * Protecting against spam, by preventing spammers from creating multiple accounts
@@ -128,7 +143,10 @@ func New(opts ...SDKOption) *SDK {
 // *Note that this endpoint is available by `GET` request as well as `POST`.*
 func (s *SDK) VerifyCheck(ctx context.Context, request operations.VerifyCheckRequest) (*operations.VerifyCheckResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check/{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/check/{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckRequest", "form")
 	if err != nil {
@@ -196,7 +214,10 @@ func (s *SDK) VerifyCheck(ctx context.Context, request operations.VerifyCheckReq
 // *Note that this endpoint is available by `GET` request as well as `POST`.*
 func (s *SDK) VerifyControl(ctx context.Context, request operations.VerifyControlRequest) (*operations.VerifyControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/control/{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/control/{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ControlRequest", "form")
 	if err != nil {
@@ -262,7 +283,10 @@ func (s *SDK) VerifyControl(ctx context.Context, request operations.VerifyContro
 // (Please note that XML format is not supported for the Payment Services Directive endpoint at this time.)
 func (s *SDK) VerifyRequestWithPsd2(ctx context.Context, request operations.VerifyRequestWithPsd2Request) (*operations.VerifyRequestWithPsd2Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/psd2/{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/psd2/{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Psd2Request", "form")
 	if err != nil {
@@ -322,7 +346,10 @@ func (s *SDK) VerifyRequestWithPsd2(ctx context.Context, request operations.Veri
 // *Note that this endpoint is available by `POST` request as well as `GET`.*
 func (s *SDK) VerifySearch(ctx context.Context, request operations.VerifySearchRequest) (*operations.VerifySearchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/search/{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

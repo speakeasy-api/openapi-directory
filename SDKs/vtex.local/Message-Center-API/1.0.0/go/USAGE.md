@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,12 +17,10 @@ func main() {
         }),
     )
 
-    req := operations.CreateDKIMRequest{
-        EmailProvider: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.DKIMConfiguration.CreateDKIM(ctx, req)
+    res, err := s.DKIMConfiguration.CreateDKIM(ctx, operations.CreateDKIMRequest{
+        EmailProvider: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

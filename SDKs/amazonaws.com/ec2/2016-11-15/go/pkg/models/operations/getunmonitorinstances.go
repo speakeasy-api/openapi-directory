@@ -15,17 +15,21 @@ const (
 	GETUnmonitorInstancesActionEnumUnmonitorInstances GETUnmonitorInstancesActionEnum = "UnmonitorInstances"
 )
 
+func (e GETUnmonitorInstancesActionEnum) ToPointer() *GETUnmonitorInstancesActionEnum {
+	return &e
+}
+
 func (e *GETUnmonitorInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UnmonitorInstances":
-		*e = GETUnmonitorInstancesActionEnum(s)
+		*e = GETUnmonitorInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUnmonitorInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUnmonitorInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUnmonitorInstancesVersionEnumTwoThousandAndSixteen1115 GETUnmonitorInstancesVersionEnum = "2016-11-15"
 )
 
+func (e GETUnmonitorInstancesVersionEnum) ToPointer() *GETUnmonitorInstancesVersionEnum {
+	return &e
+}
+
 func (e *GETUnmonitorInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETUnmonitorInstancesVersionEnum(s)
+		*e = GETUnmonitorInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUnmonitorInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUnmonitorInstancesVersionEnum: %v", v)
 	}
 }
 

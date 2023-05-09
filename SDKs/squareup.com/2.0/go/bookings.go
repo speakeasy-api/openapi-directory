@@ -36,7 +36,10 @@ func newBookings(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Cancels an existing booking.
 func (s *bookings) CancelBooking(ctx context.Context, request operations.CancelBookingRequest, security operations.CancelBookingSecurity) (*operations.CancelBookingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bookings/{booking_id}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/bookings/{booking_id}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CancelBookingRequest", "json")
 	if err != nil {
@@ -195,7 +198,10 @@ func (s *bookings) ListTeamMemberBookingProfiles(ctx context.Context, request op
 // Retrieves a booking.
 func (s *bookings) RetrieveBooking(ctx context.Context, request operations.RetrieveBookingRequest, security operations.RetrieveBookingSecurity) (*operations.RetrieveBookingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bookings/{booking_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/bookings/{booking_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -238,7 +244,7 @@ func (s *bookings) RetrieveBooking(ctx context.Context, request operations.Retri
 
 // RetrieveBusinessBookingProfile - RetrieveBusinessBookingProfile
 // Retrieves a seller's booking profile.
-func (s *bookings) RetrieveBusinessBookingProfile(ctx context.Context) (*operations.RetrieveBusinessBookingProfileResponse, error) {
+func (s *bookings) RetrieveBusinessBookingProfile(ctx context.Context, security operations.RetrieveBusinessBookingProfileSecurity) (*operations.RetrieveBusinessBookingProfileResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/bookings/business-booking-profile"
 
@@ -247,7 +253,7 @@ func (s *bookings) RetrieveBusinessBookingProfile(ctx context.Context) (*operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -285,7 +291,10 @@ func (s *bookings) RetrieveBusinessBookingProfile(ctx context.Context) (*operati
 // Retrieves a team member's booking profile.
 func (s *bookings) RetrieveTeamMemberBookingProfile(ctx context.Context, request operations.RetrieveTeamMemberBookingProfileRequest, security operations.RetrieveTeamMemberBookingProfileSecurity) (*operations.RetrieveTeamMemberBookingProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bookings/team-member-booking-profiles/{team_member_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/bookings/team-member-booking-profiles/{team_member_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -385,7 +394,10 @@ func (s *bookings) SearchAvailability(ctx context.Context, request shared.Search
 // Updates a booking.
 func (s *bookings) UpdateBooking(ctx context.Context, request operations.UpdateBookingRequest, security operations.UpdateBookingSecurity) (*operations.UpdateBookingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bookings/{booking_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/bookings/{booking_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateBookingRequest", "json")
 	if err != nil {

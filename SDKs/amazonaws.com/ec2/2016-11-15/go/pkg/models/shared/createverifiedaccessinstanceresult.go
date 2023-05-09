@@ -21,19 +21,23 @@ const (
 	CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnumCrowdstrike CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum = "crowdstrike"
 )
 
+func (e CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum) ToPointer() *CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "jamf":
 		fallthrough
 	case "crowdstrike":
-		*e = CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum(s)
+		*e = CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnumDevice CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum = "device"
 )
 
+func (e CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum) ToPointer() *CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "device":
-		*e = CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum(s)
+		*e = CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -69,19 +77,23 @@ const (
 	CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnumOidc              CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum = "oidc"
 )
 
+func (e CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum) ToPointer() *CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iam-identity-center":
 		fallthrough
 	case "oidc":
-		*e = CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum(s)
+		*e = CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -94,7 +106,7 @@ type CreateVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrust
 	VerifiedAccessTrustProviderID *string
 }
 
-// CreateVerifiedAccessInstanceResultVerifiedAccessInstance - The ID of the Amazon Web Services Verified Access instance.
+// CreateVerifiedAccessInstanceResultVerifiedAccessInstance - The ID of the Verified Access instance.
 type CreateVerifiedAccessInstanceResultVerifiedAccessInstance struct {
 	CreationTime                 *string
 	Description                  *string

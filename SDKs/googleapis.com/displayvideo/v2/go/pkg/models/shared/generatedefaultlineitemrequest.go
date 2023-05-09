@@ -32,12 +32,16 @@ const (
 	GenerateDefaultLineItemRequestLineItemTypeEnumLineItemTypeYoutubeAndPartnersTargetFrequency        GenerateDefaultLineItemRequestLineItemTypeEnum = "LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_TARGET_FREQUENCY"
 )
 
+func (e GenerateDefaultLineItemRequestLineItemTypeEnum) ToPointer() *GenerateDefaultLineItemRequestLineItemTypeEnum {
+	return &e
+}
+
 func (e *GenerateDefaultLineItemRequestLineItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_ITEM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINE_ITEM_TYPE_DISPLAY_DEFAULT":
@@ -75,10 +79,10 @@ func (e *GenerateDefaultLineItemRequestLineItemTypeEnum) UnmarshalJSON(data []by
 	case "LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_SIMPLE_OVER_THE_TOP":
 		fallthrough
 	case "LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_TARGET_FREQUENCY":
-		*e = GenerateDefaultLineItemRequestLineItemTypeEnum(s)
+		*e = GenerateDefaultLineItemRequestLineItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GenerateDefaultLineItemRequestLineItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GenerateDefaultLineItemRequestLineItemTypeEnum: %v", v)
 	}
 }
 

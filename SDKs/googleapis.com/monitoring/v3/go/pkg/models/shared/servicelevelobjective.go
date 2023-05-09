@@ -21,12 +21,16 @@ const (
 	ServiceLevelObjectiveCalendarPeriodEnumYear                      ServiceLevelObjectiveCalendarPeriodEnum = "YEAR"
 )
 
+func (e ServiceLevelObjectiveCalendarPeriodEnum) ToPointer() *ServiceLevelObjectiveCalendarPeriodEnum {
+	return &e
+}
+
 func (e *ServiceLevelObjectiveCalendarPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CALENDAR_PERIOD_UNSPECIFIED":
 		fallthrough
 	case "DAY":
@@ -42,10 +46,10 @@ func (e *ServiceLevelObjectiveCalendarPeriodEnum) UnmarshalJSON(data []byte) err
 	case "HALF":
 		fallthrough
 	case "YEAR":
-		*e = ServiceLevelObjectiveCalendarPeriodEnum(s)
+		*e = ServiceLevelObjectiveCalendarPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceLevelObjectiveCalendarPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceLevelObjectiveCalendarPeriodEnum: %v", v)
 	}
 }
 

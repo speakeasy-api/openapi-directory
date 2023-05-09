@@ -13,19 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudprofi
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudprofilerProjectsProfilesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.CloudprofilerProjectsProfilesCreate(ctx, operations.CloudprofilerProjectsProfilesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         CreateProfileRequest: &shared.CreateProfileRequest{
             Deployment: &shared.Deployment{
                 Labels: map[string]string{
@@ -33,30 +34,27 @@ func main() {
                     "unde": "nulla",
                     "corrupti": "illum",
                 },
-                ProjectID: "vel",
-                Target: "error",
+                ProjectID: sdk.String("vel"),
+                Target: sdk.String("error"),
             },
             ProfileType: []shared.CreateProfileRequestProfileTypeEnum{
-                "HEAP",
-                "HEAP",
-                "WALL",
+                shared.CreateProfileRequestProfileTypeEnumHeap,
+                shared.CreateProfileRequestProfileTypeEnumHeap,
+                shared.CreateProfileRequestProfileTypeEnumWall,
             },
         },
-        AccessToken: "debitis",
-        Alt: "json",
-        Callback: "delectus",
-        Fields: "tempora",
-        Key: "suscipit",
-        OauthToken: "molestiae",
+        AccessToken: sdk.String("debitis"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("delectus"),
+        Fields: sdk.String("tempora"),
+        Key: sdk.String("suscipit"),
+        OauthToken: sdk.String("molestiae"),
         Parent: "minus",
-        PrettyPrint: false,
-        QuotaUser: "placeat",
-        UploadType: "voluptatum",
-        UploadProtocol: "iusto",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.CloudprofilerProjectsProfilesCreate(ctx, req, operations.CloudprofilerProjectsProfilesCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("placeat"),
+        UploadType: sdk.String("voluptatum"),
+        UploadProtocol: sdk.String("iusto"),
+    }, operations.CloudprofilerProjectsProfilesCreateSecurity{
         Option1: &operations.CloudprofilerProjectsProfilesCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -77,11 +75,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `CloudprofilerProjectsProfilesCreate` - CreateProfile creates a new profile resource in the online mode. The server ensures that the new profiles are created at a constant rate per deployment, so the creation request may hang for some time until the next profile session is available. The request may fail with ABORTED error if the creation is not available within ~1m, the response will indicate the duration of the backoff the client should take before attempting creating a profile again. The backoff duration is returned in google.rpc.RetryInfo extension on the response status. To a gRPC client, the extension will be return as a binary-serialized proto in the trailing metadata item named "google.rpc.retryinfo-bin". 
-* `CloudprofilerProjectsProfilesCreateOffline` - CreateOfflineProfile creates a new profile resource in the offline mode. The client provides the profile to create along with the profile bytes, the server records it.
-* `CloudprofilerProjectsProfilesPatch` - UpdateProfile updates the profile bytes and labels on the profile resource created in the online mode. Updating the bytes for profiles created in the offline mode is currently not supported: the profile content must be provided at the time of the profile creation.
+* [CloudprofilerProjectsProfilesCreate](docs/projects/README.md#cloudprofilerprojectsprofilescreate) - CreateProfile creates a new profile resource in the online mode. The server ensures that the new profiles are created at a constant rate per deployment, so the creation request may hang for some time until the next profile session is available. The request may fail with ABORTED error if the creation is not available within ~1m, the response will indicate the duration of the backoff the client should take before attempting creating a profile again. The backoff duration is returned in google.rpc.RetryInfo extension on the response status. To a gRPC client, the extension will be return as a binary-serialized proto in the trailing metadata item named "google.rpc.retryinfo-bin". 
+* [CloudprofilerProjectsProfilesCreateOffline](docs/projects/README.md#cloudprofilerprojectsprofilescreateoffline) - CreateOfflineProfile creates a new profile resource in the offline mode. The client provides the profile to create along with the profile bytes, the server records it.
+* [CloudprofilerProjectsProfilesPatch](docs/projects/README.md#cloudprofilerprojectsprofilespatch) - UpdateProfile updates the profile bytes and labels on the profile resource created in the online mode. Updating the bytes for profiles created in the offline mode is currently not supported: the profile content must be provided at the time of the profile creation.
 <!-- End SDK Available Operations -->
 
 ### Maturity

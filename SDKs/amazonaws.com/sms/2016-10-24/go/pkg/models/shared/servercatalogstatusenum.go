@@ -17,12 +17,16 @@ const (
 	ServerCatalogStatusEnumExpired     ServerCatalogStatusEnum = "EXPIRED"
 )
 
+func (e ServerCatalogStatusEnum) ToPointer() *ServerCatalogStatusEnum {
+	return &e
+}
+
 func (e *ServerCatalogStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_IMPORTED":
 		fallthrough
 	case "IMPORTING":
@@ -32,9 +36,9 @@ func (e *ServerCatalogStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETED":
 		fallthrough
 	case "EXPIRED":
-		*e = ServerCatalogStatusEnum(s)
+		*e = ServerCatalogStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServerCatalogStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ServerCatalogStatusEnum: %v", v)
 	}
 }

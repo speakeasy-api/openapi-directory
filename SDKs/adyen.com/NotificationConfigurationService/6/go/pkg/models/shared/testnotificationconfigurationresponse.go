@@ -37,12 +37,16 @@ const (
 	TestNotificationConfigurationResponseEventTypesEnumTransferNotPaidoutTransfers    TestNotificationConfigurationResponseEventTypesEnum = "TRANSFER_NOT_PAIDOUT_TRANSFERS"
 )
 
+func (e TestNotificationConfigurationResponseEventTypesEnum) ToPointer() *TestNotificationConfigurationResponseEventTypesEnum {
+	return &e
+}
+
 func (e *TestNotificationConfigurationResponseEventTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_CLOSED":
 		fallthrough
 	case "ACCOUNT_CREATED":
@@ -92,10 +96,10 @@ func (e *TestNotificationConfigurationResponseEventTypesEnum) UnmarshalJSON(data
 	case "TRANSFER_FUNDS":
 		fallthrough
 	case "TRANSFER_NOT_PAIDOUT_TRANSFERS":
-		*e = TestNotificationConfigurationResponseEventTypesEnum(s)
+		*e = TestNotificationConfigurationResponseEventTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestNotificationConfigurationResponseEventTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for TestNotificationConfigurationResponseEventTypesEnum: %v", v)
 	}
 }
 

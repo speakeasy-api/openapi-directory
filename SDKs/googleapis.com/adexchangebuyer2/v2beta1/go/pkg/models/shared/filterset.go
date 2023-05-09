@@ -14,19 +14,23 @@ const (
 	FilterSetBreakdownDimensionsEnumPublisherIdentifier           FilterSetBreakdownDimensionsEnum = "PUBLISHER_IDENTIFIER"
 )
 
+func (e FilterSetBreakdownDimensionsEnum) ToPointer() *FilterSetBreakdownDimensionsEnum {
+	return &e
+}
+
 func (e *FilterSetBreakdownDimensionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BREAKDOWN_DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "PUBLISHER_IDENTIFIER":
-		*e = FilterSetBreakdownDimensionsEnum(s)
+		*e = FilterSetBreakdownDimensionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterSetBreakdownDimensionsEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterSetBreakdownDimensionsEnum: %v", v)
 	}
 }
 
@@ -39,21 +43,25 @@ const (
 	FilterSetEnvironmentEnumApp                    FilterSetEnvironmentEnum = "APP"
 )
 
+func (e FilterSetEnvironmentEnum) ToPointer() *FilterSetEnvironmentEnum {
+	return &e
+}
+
 func (e *FilterSetEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENVIRONMENT_UNSPECIFIED":
 		fallthrough
 	case "WEB":
 		fallthrough
 	case "APP":
-		*e = FilterSetEnvironmentEnum(s)
+		*e = FilterSetEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterSetEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterSetEnvironmentEnum: %v", v)
 	}
 }
 
@@ -68,12 +76,16 @@ const (
 	FilterSetFormatEnumNonNativeVideo    FilterSetFormatEnum = "NON_NATIVE_VIDEO"
 )
 
+func (e FilterSetFormatEnum) ToPointer() *FilterSetFormatEnum {
+	return &e
+}
+
 func (e *FilterSetFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMAT_UNSPECIFIED":
 		fallthrough
 	case "NATIVE_DISPLAY":
@@ -83,10 +95,10 @@ func (e *FilterSetFormatEnum) UnmarshalJSON(data []byte) error {
 	case "NON_NATIVE_DISPLAY":
 		fallthrough
 	case "NON_NATIVE_VIDEO":
-		*e = FilterSetFormatEnum(s)
+		*e = FilterSetFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterSetFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterSetFormatEnum: %v", v)
 	}
 }
 
@@ -100,12 +112,16 @@ const (
 	FilterSetFormatsEnumNonNativeVideo    FilterSetFormatsEnum = "NON_NATIVE_VIDEO"
 )
 
+func (e FilterSetFormatsEnum) ToPointer() *FilterSetFormatsEnum {
+	return &e
+}
+
 func (e *FilterSetFormatsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMAT_UNSPECIFIED":
 		fallthrough
 	case "NATIVE_DISPLAY":
@@ -115,10 +131,10 @@ func (e *FilterSetFormatsEnum) UnmarshalJSON(data []byte) error {
 	case "NON_NATIVE_DISPLAY":
 		fallthrough
 	case "NON_NATIVE_VIDEO":
-		*e = FilterSetFormatsEnum(s)
+		*e = FilterSetFormatsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterSetFormatsEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterSetFormatsEnum: %v", v)
 	}
 }
 
@@ -131,12 +147,16 @@ const (
 	FilterSetPlatformsEnumMobile              FilterSetPlatformsEnum = "MOBILE"
 )
 
+func (e FilterSetPlatformsEnum) ToPointer() *FilterSetPlatformsEnum {
+	return &e
+}
+
 func (e *FilterSetPlatformsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_UNSPECIFIED":
 		fallthrough
 	case "DESKTOP":
@@ -144,10 +164,10 @@ func (e *FilterSetPlatformsEnum) UnmarshalJSON(data []byte) error {
 	case "TABLET":
 		fallthrough
 	case "MOBILE":
-		*e = FilterSetPlatformsEnum(s)
+		*e = FilterSetPlatformsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterSetPlatformsEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterSetPlatformsEnum: %v", v)
 	}
 }
 
@@ -160,21 +180,25 @@ const (
 	FilterSetTimeSeriesGranularityEnumDaily                            FilterSetTimeSeriesGranularityEnum = "DAILY"
 )
 
+func (e FilterSetTimeSeriesGranularityEnum) ToPointer() *FilterSetTimeSeriesGranularityEnum {
+	return &e
+}
+
 func (e *FilterSetTimeSeriesGranularityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIME_SERIES_GRANULARITY_UNSPECIFIED":
 		fallthrough
 	case "HOURLY":
 		fallthrough
 	case "DAILY":
-		*e = FilterSetTimeSeriesGranularityEnum(s)
+		*e = FilterSetTimeSeriesGranularityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterSetTimeSeriesGranularityEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterSetTimeSeriesGranularityEnum: %v", v)
 	}
 }
 

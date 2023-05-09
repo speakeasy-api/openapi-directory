@@ -16,17 +16,21 @@ const (
 	GETPutConfigurationSetDeliveryOptionsActionEnumPutConfigurationSetDeliveryOptions GETPutConfigurationSetDeliveryOptionsActionEnum = "PutConfigurationSetDeliveryOptions"
 )
 
+func (e GETPutConfigurationSetDeliveryOptionsActionEnum) ToPointer() *GETPutConfigurationSetDeliveryOptionsActionEnum {
+	return &e
+}
+
 func (e *GETPutConfigurationSetDeliveryOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PutConfigurationSetDeliveryOptions":
-		*e = GETPutConfigurationSetDeliveryOptionsActionEnum(s)
+		*e = GETPutConfigurationSetDeliveryOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutConfigurationSetDeliveryOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutConfigurationSetDeliveryOptionsActionEnum: %v", v)
 	}
 }
 
@@ -42,17 +46,21 @@ const (
 	GETPutConfigurationSetDeliveryOptionsVersionEnumTwoThousandAndTen1201 GETPutConfigurationSetDeliveryOptionsVersionEnum = "2010-12-01"
 )
 
+func (e GETPutConfigurationSetDeliveryOptionsVersionEnum) ToPointer() *GETPutConfigurationSetDeliveryOptionsVersionEnum {
+	return &e
+}
+
 func (e *GETPutConfigurationSetDeliveryOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETPutConfigurationSetDeliveryOptionsVersionEnum(s)
+		*e = GETPutConfigurationSetDeliveryOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutConfigurationSetDeliveryOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutConfigurationSetDeliveryOptionsVersionEnum: %v", v)
 	}
 }
 

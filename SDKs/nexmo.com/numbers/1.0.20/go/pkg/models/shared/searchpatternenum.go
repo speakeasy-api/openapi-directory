@@ -12,28 +12,32 @@ import (
 // * `0` - Search for numbers that start with `pattern` (Note: all numbers are in E.164 format, so the starting pattern includes the country code, such as 1 for USA)
 // * `1` - Search for numbers that contain `pattern`
 // * `2` - Search for numbers that end with `pattern`
-type SearchPatternEnum string
+type SearchPatternEnum int64
 
 const (
-	SearchPatternEnumZero SearchPatternEnum = "0"
-	SearchPatternEnumOne  SearchPatternEnum = "1"
-	SearchPatternEnumTwo  SearchPatternEnum = "2"
+	SearchPatternEnumZero SearchPatternEnum = 0
+	SearchPatternEnumOne  SearchPatternEnum = 1
+	SearchPatternEnumTwo  SearchPatternEnum = 2
 )
 
+func (e SearchPatternEnum) ToPointer() *SearchPatternEnum {
+	return &e
+}
+
 func (e *SearchPatternEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
-		*e = SearchPatternEnum(s)
+	case 2:
+		*e = SearchPatternEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchPatternEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchPatternEnum: %v", v)
 	}
 }

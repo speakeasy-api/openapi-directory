@@ -16,21 +16,25 @@ const (
 	ApplicationReadV1StatusEnumSubmitted  ApplicationReadV1StatusEnum = "submitted"
 )
 
+func (e ApplicationReadV1StatusEnum) ToPointer() *ApplicationReadV1StatusEnum {
+	return &e
+}
+
 func (e *ApplicationReadV1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "incomplete":
 		fallthrough
 	case "complete":
 		fallthrough
 	case "submitted":
-		*e = ApplicationReadV1StatusEnum(s)
+		*e = ApplicationReadV1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationReadV1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationReadV1StatusEnum: %v", v)
 	}
 }
 

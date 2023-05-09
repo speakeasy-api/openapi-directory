@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig - The message for output config in batch process.
+// GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig - The output configuration in the BatchProcessDocuments method.
 type GoogleCloudDocumentaiV1beta3BatchProcessRequestBatchOutputConfig struct {
 	// The output Cloud Storage directory to put the processed documents.
 	GcsDestination *string `json:"gcsDestination,omitempty"`

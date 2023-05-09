@@ -13,16 +13,20 @@ const (
 	WarningCodeEnumQueryLanguageInvalidSyntax WarningCodeEnum = "QUERY_LANGUAGE_INVALID_SYNTAX"
 )
 
+func (e WarningCodeEnum) ToPointer() *WarningCodeEnum {
+	return &e
+}
+
 func (e *WarningCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUERY_LANGUAGE_INVALID_SYNTAX":
-		*e = WarningCodeEnum(s)
+		*e = WarningCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WarningCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for WarningCodeEnum: %v", v)
 	}
 }

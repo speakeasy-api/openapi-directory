@@ -50,12 +50,16 @@ const (
 	SectionEnumAllSections                         SectionEnum = "all-sections"
 )
 
+func (e SectionEnum) ToPointer() *SectionEnum {
+	return &e
+}
+
 func (e *SectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Arts":
 		fallthrough
 	case "Automobiles":
@@ -127,9 +131,9 @@ func (e *SectionEnum) UnmarshalJSON(data []byte) error {
 	case "Your Money":
 		fallthrough
 	case "all-sections":
-		*e = SectionEnum(s)
+		*e = SectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SectionEnum: %s", s)
+		return fmt.Errorf("invalid value for SectionEnum: %v", v)
 	}
 }

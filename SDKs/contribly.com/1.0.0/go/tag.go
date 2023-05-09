@@ -87,7 +87,10 @@ func (s *tag) GetTags(ctx context.Context, request operations.GetTagsRequest) (*
 // GetTagsID - Retrieve a single tag by id
 func (s *tag) GetTagsID(ctx context.Context, request operations.GetTagsIDRequest) (*operations.GetTagsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -183,7 +186,10 @@ func (s *tag) GetTagsets(ctx context.Context, request operations.GetTagsetsReque
 // GetTagsetsID - Retrieve a single tag set by id
 func (s *tag) GetTagsetsID(ctx context.Context, request operations.GetTagsetsIDRequest) (*operations.GetTagsetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagsets/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagsets/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

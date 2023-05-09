@@ -17,12 +17,16 @@ const (
 	TransformSortColumnTypeEnumLastModified  TransformSortColumnTypeEnum = "LAST_MODIFIED"
 )
 
+func (e TransformSortColumnTypeEnum) ToPointer() *TransformSortColumnTypeEnum {
+	return &e
+}
+
 func (e *TransformSortColumnTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NAME":
 		fallthrough
 	case "TRANSFORM_TYPE":
@@ -32,9 +36,9 @@ func (e *TransformSortColumnTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CREATED":
 		fallthrough
 	case "LAST_MODIFIED":
-		*e = TransformSortColumnTypeEnum(s)
+		*e = TransformSortColumnTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransformSortColumnTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TransformSortColumnTypeEnum: %v", v)
 	}
 }

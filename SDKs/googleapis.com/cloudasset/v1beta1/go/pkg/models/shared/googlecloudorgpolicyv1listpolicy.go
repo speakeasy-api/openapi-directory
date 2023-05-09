@@ -16,21 +16,25 @@ const (
 	GoogleCloudOrgpolicyV1ListPolicyAllValuesEnumDeny                 GoogleCloudOrgpolicyV1ListPolicyAllValuesEnum = "DENY"
 )
 
+func (e GoogleCloudOrgpolicyV1ListPolicyAllValuesEnum) ToPointer() *GoogleCloudOrgpolicyV1ListPolicyAllValuesEnum {
+	return &e
+}
+
 func (e *GoogleCloudOrgpolicyV1ListPolicyAllValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL_VALUES_UNSPECIFIED":
 		fallthrough
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = GoogleCloudOrgpolicyV1ListPolicyAllValuesEnum(s)
+		*e = GoogleCloudOrgpolicyV1ListPolicyAllValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudOrgpolicyV1ListPolicyAllValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudOrgpolicyV1ListPolicyAllValuesEnum: %v", v)
 	}
 }
 

@@ -22,21 +22,25 @@ const (
 	ReposUpdateRequestBodyMergeCommitMessageEnumBlank   ReposUpdateRequestBodyMergeCommitMessageEnum = "BLANK"
 )
 
+func (e ReposUpdateRequestBodyMergeCommitMessageEnum) ToPointer() *ReposUpdateRequestBodyMergeCommitMessageEnum {
+	return &e
+}
+
 func (e *ReposUpdateRequestBodyMergeCommitMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_BODY":
 		fallthrough
 	case "PR_TITLE":
 		fallthrough
 	case "BLANK":
-		*e = ReposUpdateRequestBodyMergeCommitMessageEnum(s)
+		*e = ReposUpdateRequestBodyMergeCommitMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateRequestBodyMergeCommitMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateRequestBodyMergeCommitMessageEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	ReposUpdateRequestBodyMergeCommitTitleEnumMergeMessage ReposUpdateRequestBodyMergeCommitTitleEnum = "MERGE_MESSAGE"
 )
 
+func (e ReposUpdateRequestBodyMergeCommitTitleEnum) ToPointer() *ReposUpdateRequestBodyMergeCommitTitleEnum {
+	return &e
+}
+
 func (e *ReposUpdateRequestBodyMergeCommitTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_TITLE":
 		fallthrough
 	case "MERGE_MESSAGE":
-		*e = ReposUpdateRequestBodyMergeCommitTitleEnum(s)
+		*e = ReposUpdateRequestBodyMergeCommitTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateRequestBodyMergeCommitTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateRequestBodyMergeCommitTitleEnum: %v", v)
 	}
 }
 
@@ -115,21 +123,25 @@ const (
 	ReposUpdateRequestBodySquashMergeCommitMessageEnumBlank          ReposUpdateRequestBodySquashMergeCommitMessageEnum = "BLANK"
 )
 
+func (e ReposUpdateRequestBodySquashMergeCommitMessageEnum) ToPointer() *ReposUpdateRequestBodySquashMergeCommitMessageEnum {
+	return &e
+}
+
 func (e *ReposUpdateRequestBodySquashMergeCommitMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_BODY":
 		fallthrough
 	case "COMMIT_MESSAGES":
 		fallthrough
 	case "BLANK":
-		*e = ReposUpdateRequestBodySquashMergeCommitMessageEnum(s)
+		*e = ReposUpdateRequestBodySquashMergeCommitMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateRequestBodySquashMergeCommitMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateRequestBodySquashMergeCommitMessageEnum: %v", v)
 	}
 }
 
@@ -144,19 +156,23 @@ const (
 	ReposUpdateRequestBodySquashMergeCommitTitleEnumCommitOrPrTitle ReposUpdateRequestBodySquashMergeCommitTitleEnum = "COMMIT_OR_PR_TITLE"
 )
 
+func (e ReposUpdateRequestBodySquashMergeCommitTitleEnum) ToPointer() *ReposUpdateRequestBodySquashMergeCommitTitleEnum {
+	return &e
+}
+
 func (e *ReposUpdateRequestBodySquashMergeCommitTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_TITLE":
 		fallthrough
 	case "COMMIT_OR_PR_TITLE":
-		*e = ReposUpdateRequestBodySquashMergeCommitTitleEnum(s)
+		*e = ReposUpdateRequestBodySquashMergeCommitTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateRequestBodySquashMergeCommitTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateRequestBodySquashMergeCommitTitleEnum: %v", v)
 	}
 }
 
@@ -168,19 +184,23 @@ const (
 	ReposUpdateRequestBodyVisibilityEnumPrivate ReposUpdateRequestBodyVisibilityEnum = "private"
 )
 
+func (e ReposUpdateRequestBodyVisibilityEnum) ToPointer() *ReposUpdateRequestBodyVisibilityEnum {
+	return &e
+}
+
 func (e *ReposUpdateRequestBodyVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = ReposUpdateRequestBodyVisibilityEnum(s)
+		*e = ReposUpdateRequestBodyVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateRequestBodyVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateRequestBodyVisibilityEnum: %v", v)
 	}
 }
 

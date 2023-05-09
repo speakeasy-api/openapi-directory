@@ -37,7 +37,10 @@ func newCalls(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // The 'add batch' API allows user to add additional batches to an already created voice broadcast campaign. The added batch will go through the CallFire validation process, unlike in the recipients version of this API. That is why you can use the scrubDuplicates flag to remove duplicates from your batch. Batches may be added as a contact list id, a list of contact ids, or a list of numbers
 func (s *calls) AddCallBroadcastBatch(ctx context.Context, request operations.AddCallBroadcastBatchRequest, security operations.AddCallBroadcastBatchSecurity) (*operations.AddCallBroadcastBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/batches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/batches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchRequest", "json")
 	if err != nil {
@@ -111,7 +114,10 @@ func (s *calls) AddCallBroadcastBatch(ctx context.Context, request operations.Ad
 // Use this API to add the recipients to an existing voice broadcast. Post a list of Recipient objects to be added to the voice broadcast campaign. These contacts will not go through validation process, and will be acted upon as they are added. Recipients may be added as a list of contact ids, or list of numbers
 func (s *calls) AddCallBroadcastRecipients(ctx context.Context, request operations.AddCallBroadcastRecipientsRequest, security operations.AddCallBroadcastRecipientsSecurity) (*operations.AddCallBroadcastRecipientsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/recipients", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/recipients", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -185,7 +191,10 @@ func (s *calls) AddCallBroadcastRecipients(ctx context.Context, request operatio
 // Archives a voice broadcast (voice broadcast will be hidden in search results)
 func (s *calls) ArchiveVoiceBroadcast(ctx context.Context, request operations.ArchiveVoiceBroadcastRequest, security operations.ArchiveVoiceBroadcastSecurity) (*operations.ArchiveVoiceBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/archive", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/archive", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -446,7 +455,10 @@ func (s *calls) FindCalls(ctx context.Context, request operations.FindCallsReque
 // Returns a single Call instance for a given call id.
 func (s *calls) GetCall(ctx context.Context, request operations.GetCallRequest, security operations.GetCallSecurity) (*operations.GetCallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -513,7 +525,10 @@ func (s *calls) GetCall(ctx context.Context, request operations.GetCallRequest, 
 // Returns a single CallBroadcast instance for a given call broadcast campaign id
 func (s *calls) GetCallBroadcast(ctx context.Context, request operations.GetCallBroadcastRequest, security operations.GetCallBroadcastSecurity) (*operations.GetCallBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -580,7 +595,10 @@ func (s *calls) GetCallBroadcast(ctx context.Context, request operations.GetCall
 // This endpoint will enable the user to page through all of the batches for a particular voice broadcast campaign
 func (s *calls) GetCallBroadcastBatches(ctx context.Context, request operations.GetCallBroadcastBatchesRequest, security operations.GetCallBroadcastBatchesSecurity) (*operations.GetCallBroadcastBatchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/batches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/batches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -647,7 +665,10 @@ func (s *calls) GetCallBroadcastBatches(ctx context.Context, request operations.
 // This endpoint will enable the user to page through all calls for a particular call broadcast campaign
 func (s *calls) GetCallBroadcastCalls(ctx context.Context, request operations.GetCallBroadcastCallsRequest, security operations.GetCallBroadcastCallsSecurity) (*operations.GetCallBroadcastCallsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/calls", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/calls", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -714,7 +735,10 @@ func (s *calls) GetCallBroadcastCalls(ctx context.Context, request operations.Ge
 // Returns broadcast statistics like total number of sent/received actions, total cost, number of remaining outbound actions, error count, etc
 func (s *calls) GetCallBroadcastStats(ctx context.Context, request operations.GetCallBroadcastStatsRequest, security operations.GetCallBroadcastStatsSecurity) (*operations.GetCallBroadcastStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/stats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/stats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -781,7 +805,10 @@ func (s *calls) GetCallBroadcastStats(ctx context.Context, request operations.Ge
 // Returns metadata of recording of a particular call. Metadata contains a link to a MP3 recording
 func (s *calls) GetCallRecording(ctx context.Context, request operations.GetCallRecordingRequest, security operations.GetCallRecordingSecurity) (*operations.GetCallRecordingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/recordings/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/recordings/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -848,7 +875,10 @@ func (s *calls) GetCallRecording(ctx context.Context, request operations.GetCall
 // Returns recording metadata of particular call. Metadata contains link to a MP3 recording
 func (s *calls) GetCallRecordingByName(ctx context.Context, request operations.GetCallRecordingByNameRequest, security operations.GetCallRecordingByNameSecurity) (*operations.GetCallRecordingByNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/{id}/recordings/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/{id}/recordings/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -915,7 +945,10 @@ func (s *calls) GetCallRecordingByName(ctx context.Context, request operations.G
 // Returns an MP3 recording of particular call, response contains binary data, content type is 'audio/mpeg'
 func (s *calls) GetCallRecordingMp3(ctx context.Context, request operations.GetCallRecordingMp3Request, security operations.GetCallRecordingMp3Security) (*operations.GetCallRecordingMp3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/recordings/{id}.mp3", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/recordings/{id}.mp3", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -978,7 +1011,10 @@ func (s *calls) GetCallRecordingMp3(ctx context.Context, request operations.GetC
 // Returns a MP3 recording of a particular call, response contains binary data, content type is 'audio/mpeg'
 func (s *calls) GetCallRecordingMp3ByName(ctx context.Context, request operations.GetCallRecordingMp3ByNameRequest, security operations.GetCallRecordingMp3ByNameSecurity) (*operations.GetCallRecordingMp3ByNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/{id}/recordings/{name}.mp3", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/{id}/recordings/{name}.mp3", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1033,7 +1069,10 @@ func (s *calls) GetCallRecordingMp3ByName(ctx context.Context, request operation
 // Returns a list of recordings metadata of particular call. Metadata contains link to a MP3 recording
 func (s *calls) GetCallRecordings(ctx context.Context, request operations.GetCallRecordingsRequest, security operations.GetCallRecordingsSecurity) (*operations.GetCallRecordingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/{id}/recordings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/{id}/recordings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1174,7 +1213,10 @@ func (s *calls) SendCalls(ctx context.Context, request operations.SendCallsReque
 // Start a voice broadcast
 func (s *calls) StartVoiceBroadcast(ctx context.Context, request operations.StartVoiceBroadcastRequest, security operations.StartVoiceBroadcastSecurity) (*operations.StartVoiceBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1227,7 +1269,10 @@ func (s *calls) StartVoiceBroadcast(ctx context.Context, request operations.Star
 // Stop a voice broadcast
 func (s *calls) StopVoiceBroadcast(ctx context.Context, request operations.StopVoiceBroadcastRequest, security operations.StopVoiceBroadcastSecurity) (*operations.StopVoiceBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1280,7 +1325,10 @@ func (s *calls) StopVoiceBroadcast(ctx context.Context, request operations.StopV
 // This operation lets the user to disable/enable undialed recipients in created broadcast
 func (s *calls) ToggleCallBroadcastRecipientsStatus(ctx context.Context, request operations.ToggleCallBroadcastRecipientsStatusRequest, security operations.ToggleCallBroadcastRecipientsStatusSecurity) (*operations.ToggleCallBroadcastRecipientsStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/toggleRecipientsStatus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}/toggleRecipientsStatus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1344,7 +1392,10 @@ func (s *calls) ToggleCallBroadcastRecipientsStatus(ctx context.Context, request
 // This operation lets the user modify the configuration of a voice broadcast campaign after call broadcast campaign is created. See CallBroadcast for more information on what can/can't be updated on this API
 func (s *calls) UpdateCallBroadcast(ctx context.Context, request operations.UpdateCallBroadcastRequest, security operations.UpdateCallBroadcastSecurity) (*operations.UpdateCallBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calls/broadcasts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CallBroadcastInput", "json")
 	if err != nil {

@@ -2,7 +2,7 @@
 
 package shared
 
-// AssetValue - <p/>
+// AssetValue - The structure containing the asset properties.
 type AssetValue struct {
 	Href *string `json:"Href,omitempty"`
 }

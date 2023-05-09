@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DatafusionProjectsLocationsInstancesCreate - Creates a new Data Fusion instance in the specified project and location.
 func (s *projects) DatafusionProjectsLocationsInstancesCreate(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesCreateRequest, security operations.DatafusionProjectsLocationsInstancesCreateSecurity) (*operations.DatafusionProjectsLocationsInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstanceInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) DatafusionProjectsLocationsInstancesCreate(ctx context.Contex
 // DatafusionProjectsLocationsInstancesDNSPeeringsCreate - Creates DNS peering on the given resource.
 func (s *projects) DatafusionProjectsLocationsInstancesDNSPeeringsCreate(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesDNSPeeringsCreateRequest, security operations.DatafusionProjectsLocationsInstancesDNSPeeringsCreateSecurity) (*operations.DatafusionProjectsLocationsInstancesDNSPeeringsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsPeerings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsPeerings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DNSPeering", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) DatafusionProjectsLocationsInstancesDNSPeeringsCreate(ctx con
 // DatafusionProjectsLocationsInstancesDNSPeeringsList - Lists DNS peerings for a given resource.
 func (s *projects) DatafusionProjectsLocationsInstancesDNSPeeringsList(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesDNSPeeringsListRequest, security operations.DatafusionProjectsLocationsInstancesDNSPeeringsListSecurity) (*operations.DatafusionProjectsLocationsInstancesDNSPeeringsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsPeerings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dnsPeerings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) DatafusionProjectsLocationsInstancesDNSPeeringsList(ctx conte
 // DatafusionProjectsLocationsInstancesGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) DatafusionProjectsLocationsInstancesGetIamPolicy(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesGetIamPolicyRequest, security operations.DatafusionProjectsLocationsInstancesGetIamPolicySecurity) (*operations.DatafusionProjectsLocationsInstancesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) DatafusionProjectsLocationsInstancesGetIamPolicy(ctx context.
 // DatafusionProjectsLocationsInstancesList - Lists Data Fusion instances in the specified project and location.
 func (s *projects) DatafusionProjectsLocationsInstancesList(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesListRequest, security operations.DatafusionProjectsLocationsInstancesListSecurity) (*operations.DatafusionProjectsLocationsInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) DatafusionProjectsLocationsInstancesList(ctx context.Context,
 // DatafusionProjectsLocationsInstancesPatch - Updates a single Data Fusion instance.
 func (s *projects) DatafusionProjectsLocationsInstancesPatch(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesPatchRequest, security operations.DatafusionProjectsLocationsInstancesPatchSecurity) (*operations.DatafusionProjectsLocationsInstancesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstanceInput", "json")
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) DatafusionProjectsLocationsInstancesPatch(ctx context.Context
 // DatafusionProjectsLocationsInstancesRestart - Restart a single Data Fusion instance. At the end of an operation instance is fully restarted.
 func (s *projects) DatafusionProjectsLocationsInstancesRestart(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesRestartRequest, security operations.DatafusionProjectsLocationsInstancesRestartSecurity) (*operations.DatafusionProjectsLocationsInstancesRestartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:restart", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:restart", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) DatafusionProjectsLocationsInstancesRestart(ctx context.Conte
 // DatafusionProjectsLocationsInstancesSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) DatafusionProjectsLocationsInstancesSetIamPolicy(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesSetIamPolicyRequest, security operations.DatafusionProjectsLocationsInstancesSetIamPolicySecurity) (*operations.DatafusionProjectsLocationsInstancesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *projects) DatafusionProjectsLocationsInstancesSetIamPolicy(ctx context.
 // DatafusionProjectsLocationsInstancesTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) DatafusionProjectsLocationsInstancesTestIamPermissions(ctx context.Context, request operations.DatafusionProjectsLocationsInstancesTestIamPermissionsRequest, security operations.DatafusionProjectsLocationsInstancesTestIamPermissionsSecurity) (*operations.DatafusionProjectsLocationsInstancesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -508,7 +535,10 @@ func (s *projects) DatafusionProjectsLocationsInstancesTestIamPermissions(ctx co
 // DatafusionProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) DatafusionProjectsLocationsList(ctx context.Context, request operations.DatafusionProjectsLocationsListRequest, security operations.DatafusionProjectsLocationsListSecurity) (*operations.DatafusionProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -556,7 +586,10 @@ func (s *projects) DatafusionProjectsLocationsList(ctx context.Context, request 
 // DatafusionProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) DatafusionProjectsLocationsOperationsCancel(ctx context.Context, request operations.DatafusionProjectsLocationsOperationsCancelRequest, security operations.DatafusionProjectsLocationsOperationsCancelSecurity) (*operations.DatafusionProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -611,7 +644,10 @@ func (s *projects) DatafusionProjectsLocationsOperationsCancel(ctx context.Conte
 // DatafusionProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) DatafusionProjectsLocationsOperationsDelete(ctx context.Context, request operations.DatafusionProjectsLocationsOperationsDeleteRequest, security operations.DatafusionProjectsLocationsOperationsDeleteSecurity) (*operations.DatafusionProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *projects) DatafusionProjectsLocationsOperationsDelete(ctx context.Conte
 // DatafusionProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) DatafusionProjectsLocationsOperationsGet(ctx context.Context, request operations.DatafusionProjectsLocationsOperationsGetRequest, security operations.DatafusionProjectsLocationsOperationsGetSecurity) (*operations.DatafusionProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *projects) DatafusionProjectsLocationsOperationsGet(ctx context.Context,
 // DatafusionProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) DatafusionProjectsLocationsOperationsList(ctx context.Context, request operations.DatafusionProjectsLocationsOperationsListRequest, security operations.DatafusionProjectsLocationsOperationsListSecurity) (*operations.DatafusionProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -755,7 +797,10 @@ func (s *projects) DatafusionProjectsLocationsOperationsList(ctx context.Context
 // DatafusionProjectsLocationsVersionsList - Lists possible versions for Data Fusion instances in the specified project and location.
 func (s *projects) DatafusionProjectsLocationsVersionsList(ctx context.Context, request operations.DatafusionProjectsLocationsVersionsListRequest, security operations.DatafusionProjectsLocationsVersionsListSecurity) (*operations.DatafusionProjectsLocationsVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	StartVirtualMachinesMetadataSyncXAmzTargetEnumBackupOnPremisesV20210101StartVirtualMachinesMetadataSync StartVirtualMachinesMetadataSyncXAmzTargetEnum = "BackupOnPremises_v20210101.StartVirtualMachinesMetadataSync"
 )
 
+func (e StartVirtualMachinesMetadataSyncXAmzTargetEnum) ToPointer() *StartVirtualMachinesMetadataSyncXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartVirtualMachinesMetadataSyncXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.StartVirtualMachinesMetadataSync":
-		*e = StartVirtualMachinesMetadataSyncXAmzTargetEnum(s)
+		*e = StartVirtualMachinesMetadataSyncXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartVirtualMachinesMetadataSyncXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartVirtualMachinesMetadataSyncXAmzTargetEnum: %v", v)
 	}
 }
 

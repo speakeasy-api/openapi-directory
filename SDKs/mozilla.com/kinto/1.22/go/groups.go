@@ -32,7 +32,10 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 func (s *groups) GetGroup(ctx context.Context, request operations.GetGroupRequest) (*operations.GetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -105,9 +108,13 @@ func (s *groups) GetGroup(ctx context.Context, request operations.GetGroupReques
 
 	return res, nil
 }
+
 func (s *groups) GetGroups(ctx context.Context, request operations.GetGroupsRequest) (*operations.GetGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	ImportKeyPairXAmzTargetEnumLightsail20161128ImportKeyPair ImportKeyPairXAmzTargetEnum = "Lightsail_20161128.ImportKeyPair"
 )
 
+func (e ImportKeyPairXAmzTargetEnum) ToPointer() *ImportKeyPairXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportKeyPairXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.ImportKeyPair":
-		*e = ImportKeyPairXAmzTargetEnum(s)
+		*e = ImportKeyPairXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportKeyPairXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportKeyPairXAmzTargetEnum: %v", v)
 	}
 }
 

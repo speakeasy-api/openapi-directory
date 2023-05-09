@@ -14,18 +14,22 @@ const (
 	EntityRecognizerDataFormatEnumAugmentedManifest EntityRecognizerDataFormatEnum = "AUGMENTED_MANIFEST"
 )
 
+func (e EntityRecognizerDataFormatEnum) ToPointer() *EntityRecognizerDataFormatEnum {
+	return &e
+}
+
 func (e *EntityRecognizerDataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPREHEND_CSV":
 		fallthrough
 	case "AUGMENTED_MANIFEST":
-		*e = EntityRecognizerDataFormatEnum(s)
+		*e = EntityRecognizerDataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityRecognizerDataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityRecognizerDataFormatEnum: %v", v)
 	}
 }

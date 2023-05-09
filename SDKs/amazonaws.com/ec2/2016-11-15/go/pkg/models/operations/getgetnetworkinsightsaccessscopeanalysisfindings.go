@@ -15,17 +15,21 @@ const (
 	GETGETNetworkInsightsAccessScopeAnalysisFindingsActionEnumGetNetworkInsightsAccessScopeAnalysisFindings GETGETNetworkInsightsAccessScopeAnalysisFindingsActionEnum = "GetNetworkInsightsAccessScopeAnalysisFindings"
 )
 
+func (e GETGETNetworkInsightsAccessScopeAnalysisFindingsActionEnum) ToPointer() *GETGETNetworkInsightsAccessScopeAnalysisFindingsActionEnum {
+	return &e
+}
+
 func (e *GETGETNetworkInsightsAccessScopeAnalysisFindingsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetNetworkInsightsAccessScopeAnalysisFindings":
-		*e = GETGETNetworkInsightsAccessScopeAnalysisFindingsActionEnum(s)
+		*e = GETGETNetworkInsightsAccessScopeAnalysisFindingsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETNetworkInsightsAccessScopeAnalysisFindingsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETNetworkInsightsAccessScopeAnalysisFindingsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETNetworkInsightsAccessScopeAnalysisFindingsVersionEnumTwoThousandAndSixteen1115 GETGETNetworkInsightsAccessScopeAnalysisFindingsVersionEnum = "2016-11-15"
 )
 
+func (e GETGETNetworkInsightsAccessScopeAnalysisFindingsVersionEnum) ToPointer() *GETGETNetworkInsightsAccessScopeAnalysisFindingsVersionEnum {
+	return &e
+}
+
 func (e *GETGETNetworkInsightsAccessScopeAnalysisFindingsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETNetworkInsightsAccessScopeAnalysisFindingsVersionEnum(s)
+		*e = GETGETNetworkInsightsAccessScopeAnalysisFindingsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETNetworkInsightsAccessScopeAnalysisFindingsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETNetworkInsightsAccessScopeAnalysisFindingsVersionEnum: %v", v)
 	}
 }
 

@@ -20,21 +20,25 @@ const (
 	AppsUpdateUserPermissionsRequestBodyPermissionsEnumViewer    AppsUpdateUserPermissionsRequestBodyPermissionsEnum = "viewer"
 )
 
+func (e AppsUpdateUserPermissionsRequestBodyPermissionsEnum) ToPointer() *AppsUpdateUserPermissionsRequestBodyPermissionsEnum {
+	return &e
+}
+
 func (e *AppsUpdateUserPermissionsRequestBodyPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
 		fallthrough
 	case "viewer":
-		*e = AppsUpdateUserPermissionsRequestBodyPermissionsEnum(s)
+		*e = AppsUpdateUserPermissionsRequestBodyPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsUpdateUserPermissionsRequestBodyPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsUpdateUserPermissionsRequestBodyPermissionsEnum: %v", v)
 	}
 }
 
@@ -67,12 +71,16 @@ const (
 	AppsUpdateUserPermissionsDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppsUpdateUserPermissionsDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppsUpdateUserPermissionsDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppsUpdateUserPermissionsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppsUpdateUserPermissionsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -86,10 +94,10 @@ func (e *AppsUpdateUserPermissionsDefaultApplicationJSONErrorCodeEnum) Unmarshal
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppsUpdateUserPermissionsDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppsUpdateUserPermissionsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsUpdateUserPermissionsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsUpdateUserPermissionsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

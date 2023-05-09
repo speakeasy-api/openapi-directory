@@ -36,7 +36,10 @@ func newPromotionsAndTaxes(defaultClient, securityClient HTTPClient, serverURL, 
 // Archives a Promotion or Tax by its ID.
 func (s *promotionsAndTaxes) ArchivePromotion(ctx context.Context, request operations.ArchivePromotionRequest) (*operations.ArchivePromotionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/archive/calculatorConfiguration/{idCalculatorConfiguration}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/archive/calculatorConfiguration/{idCalculatorConfiguration}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -323,7 +326,10 @@ func (s *promotionsAndTaxes) GetArchivedTaxes(ctx context.Context, request opera
 // Retrieves a specific promotion by its Promotion ID or a specific tax by its Tax ID.
 func (s *promotionsAndTaxes) GetCalculatorConfigurationByID(ctx context.Context, request operations.GetCalculatorConfigurationByIDRequest) (*operations.GetCalculatorConfigurationByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/calculatorconfiguration/{idCalculatorConfiguration}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/calculatorconfiguration/{idCalculatorConfiguration}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -377,7 +383,10 @@ func (s *promotionsAndTaxes) GetCalculatorConfigurationByID(ctx context.Context,
 // Unarchives a Promotion or Tax by its ID.
 func (s *promotionsAndTaxes) UnarchivePromotion(ctx context.Context, request operations.UnarchivePromotionRequest) (*operations.UnarchivePromotionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/unarchive/calculatorConfiguration/{idCalculatorConfiguration}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/unarchive/calculatorConfiguration/{idCalculatorConfiguration}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -466,7 +475,10 @@ func (s *promotionsAndTaxes) PostAPIRnbPvtImportCalculatorConfiguration(ctx cont
 // > The limit of SKUs on a Multiple Effects promotion is 400.
 func (s *promotionsAndTaxes) PutAPIRnbPvtImportCalculatorConfigurationPromotionID(ctx context.Context, request operations.PutAPIRnbPvtImportCalculatorConfigurationPromotionIDRequest) (*operations.PutAPIRnbPvtImportCalculatorConfigurationPromotionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/import/calculatorConfiguration/{promotionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/import/calculatorConfiguration/{promotionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

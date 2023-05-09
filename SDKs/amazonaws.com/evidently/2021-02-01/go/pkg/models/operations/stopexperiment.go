@@ -17,19 +17,23 @@ const (
 	StopExperimentRequestBodyDesiredStateEnumCancelled StopExperimentRequestBodyDesiredStateEnum = "CANCELLED"
 )
 
+func (e StopExperimentRequestBodyDesiredStateEnum) ToPointer() *StopExperimentRequestBodyDesiredStateEnum {
+	return &e
+}
+
 func (e *StopExperimentRequestBodyDesiredStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETED":
 		fallthrough
 	case "CANCELLED":
-		*e = StopExperimentRequestBodyDesiredStateEnum(s)
+		*e = StopExperimentRequestBodyDesiredStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopExperimentRequestBodyDesiredStateEnum: %s", s)
+		return fmt.Errorf("invalid value for StopExperimentRequestBodyDesiredStateEnum: %v", v)
 	}
 }
 

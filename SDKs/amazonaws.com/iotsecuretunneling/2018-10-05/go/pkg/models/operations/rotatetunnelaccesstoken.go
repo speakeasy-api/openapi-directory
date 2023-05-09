@@ -16,17 +16,21 @@ const (
 	RotateTunnelAccessTokenXAmzTargetEnumIoTSecuredTunnelingRotateTunnelAccessToken RotateTunnelAccessTokenXAmzTargetEnum = "IoTSecuredTunneling.RotateTunnelAccessToken"
 )
 
+func (e RotateTunnelAccessTokenXAmzTargetEnum) ToPointer() *RotateTunnelAccessTokenXAmzTargetEnum {
+	return &e
+}
+
 func (e *RotateTunnelAccessTokenXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IoTSecuredTunneling.RotateTunnelAccessToken":
-		*e = RotateTunnelAccessTokenXAmzTargetEnum(s)
+		*e = RotateTunnelAccessTokenXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RotateTunnelAccessTokenXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RotateTunnelAccessTokenXAmzTargetEnum: %v", v)
 	}
 }
 

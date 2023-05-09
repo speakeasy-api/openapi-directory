@@ -15,20 +15,24 @@ const (
 	ConfigFileStateEnumPresentWithErrors ConfigFileStateEnum = "PresentWithErrors"
 )
 
+func (e ConfigFileStateEnum) ToPointer() *ConfigFileStateEnum {
+	return &e
+}
+
 func (e *ConfigFileStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Present":
 		fallthrough
 	case "Absent":
 		fallthrough
 	case "PresentWithErrors":
-		*e = ConfigFileStateEnum(s)
+		*e = ConfigFileStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigFileStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigFileStateEnum: %v", v)
 	}
 }

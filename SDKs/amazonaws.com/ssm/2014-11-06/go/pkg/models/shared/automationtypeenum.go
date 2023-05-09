@@ -14,18 +14,22 @@ const (
 	AutomationTypeEnumLocal        AutomationTypeEnum = "Local"
 )
 
+func (e AutomationTypeEnum) ToPointer() *AutomationTypeEnum {
+	return &e
+}
+
 func (e *AutomationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CrossAccount":
 		fallthrough
 	case "Local":
-		*e = AutomationTypeEnum(s)
+		*e = AutomationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutomationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutomationTypeEnum: %v", v)
 	}
 }

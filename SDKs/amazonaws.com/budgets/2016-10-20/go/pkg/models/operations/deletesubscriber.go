@@ -16,17 +16,21 @@ const (
 	DeleteSubscriberXAmzTargetEnumAwsBudgetServiceGatewayDeleteSubscriber DeleteSubscriberXAmzTargetEnum = "AWSBudgetServiceGateway.DeleteSubscriber"
 )
 
+func (e DeleteSubscriberXAmzTargetEnum) ToPointer() *DeleteSubscriberXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteSubscriberXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSBudgetServiceGateway.DeleteSubscriber":
-		*e = DeleteSubscriberXAmzTargetEnum(s)
+		*e = DeleteSubscriberXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSubscriberXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSubscriberXAmzTargetEnum: %v", v)
 	}
 }
 

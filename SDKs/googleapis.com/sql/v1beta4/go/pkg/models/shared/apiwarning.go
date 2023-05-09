@@ -16,21 +16,25 @@ const (
 	APIWarningCodeEnumMaxResultsExceedsLimit       APIWarningCodeEnum = "MAX_RESULTS_EXCEEDS_LIMIT"
 )
 
+func (e APIWarningCodeEnum) ToPointer() *APIWarningCodeEnum {
+	return &e
+}
+
 func (e *APIWarningCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_API_WARNING_CODE_UNSPECIFIED":
 		fallthrough
 	case "REGION_UNREACHABLE":
 		fallthrough
 	case "MAX_RESULTS_EXCEEDS_LIMIT":
-		*e = APIWarningCodeEnum(s)
+		*e = APIWarningCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIWarningCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for APIWarningCodeEnum: %v", v)
 	}
 }
 

@@ -36,7 +36,10 @@ func newLegalEntities(defaultClient, securityClient HTTPClient, serverURL, langu
 // Returns a legal entity.
 func (s *legalEntities) GetLegalEntitiesID(ctx context.Context, request operations.GetLegalEntitiesIDRequest, security operations.GetLegalEntitiesIDSecurity) (*operations.GetLegalEntitiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,7 +104,10 @@ func (s *legalEntities) GetLegalEntitiesID(ctx context.Context, request operatio
 //	>To change the legal entity type, include only the new `type` in your request. To update the `entityAssociations` array, you need to replace the entire array. For example, if the array has 3 entries and you want to remove 1 entry, you need to PATCH the resource with the remaining 2 entries.
 func (s *legalEntities) PatchLegalEntitiesID(ctx context.Context, request operations.PatchLegalEntitiesIDRequest, security operations.PatchLegalEntitiesIDSecurity) (*operations.PatchLegalEntitiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LegalEntityInfoInput", "json")
 	if err != nil {

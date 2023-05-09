@@ -22,12 +22,16 @@ const (
 	ListBulkImportJobsFilterEnumCompleted             ListBulkImportJobsFilterEnum = "COMPLETED"
 )
 
+func (e ListBulkImportJobsFilterEnum) ToPointer() *ListBulkImportJobsFilterEnum {
+	return &e
+}
+
 func (e *ListBulkImportJobsFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "PENDING":
@@ -41,10 +45,10 @@ func (e *ListBulkImportJobsFilterEnum) UnmarshalJSON(data []byte) error {
 	case "COMPLETED_WITH_FAILURES":
 		fallthrough
 	case "COMPLETED":
-		*e = ListBulkImportJobsFilterEnum(s)
+		*e = ListBulkImportJobsFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListBulkImportJobsFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for ListBulkImportJobsFilterEnum: %v", v)
 	}
 }
 

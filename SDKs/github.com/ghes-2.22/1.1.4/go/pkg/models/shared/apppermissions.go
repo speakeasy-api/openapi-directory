@@ -15,19 +15,23 @@ const (
 	AppPermissionsActionsEnumWrite AppPermissionsActionsEnum = "write"
 )
 
+func (e AppPermissionsActionsEnum) ToPointer() *AppPermissionsActionsEnum {
+	return &e
+}
+
 func (e *AppPermissionsActionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsActionsEnum(s)
+		*e = AppPermissionsActionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsActionsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsActionsEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	AppPermissionsAdministrationEnumWrite AppPermissionsAdministrationEnum = "write"
 )
 
+func (e AppPermissionsAdministrationEnum) ToPointer() *AppPermissionsAdministrationEnum {
+	return &e
+}
+
 func (e *AppPermissionsAdministrationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsAdministrationEnum(s)
+		*e = AppPermissionsAdministrationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsAdministrationEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsAdministrationEnum: %v", v)
 	}
 }
 
@@ -63,19 +71,23 @@ const (
 	AppPermissionsChecksEnumWrite AppPermissionsChecksEnum = "write"
 )
 
+func (e AppPermissionsChecksEnum) ToPointer() *AppPermissionsChecksEnum {
+	return &e
+}
+
 func (e *AppPermissionsChecksEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsChecksEnum(s)
+		*e = AppPermissionsChecksEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsChecksEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsChecksEnum: %v", v)
 	}
 }
 
@@ -87,19 +99,23 @@ const (
 	AppPermissionsContentReferencesEnumWrite AppPermissionsContentReferencesEnum = "write"
 )
 
+func (e AppPermissionsContentReferencesEnum) ToPointer() *AppPermissionsContentReferencesEnum {
+	return &e
+}
+
 func (e *AppPermissionsContentReferencesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsContentReferencesEnum(s)
+		*e = AppPermissionsContentReferencesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsContentReferencesEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsContentReferencesEnum: %v", v)
 	}
 }
 
@@ -111,19 +127,23 @@ const (
 	AppPermissionsContentsEnumWrite AppPermissionsContentsEnum = "write"
 )
 
+func (e AppPermissionsContentsEnum) ToPointer() *AppPermissionsContentsEnum {
+	return &e
+}
+
 func (e *AppPermissionsContentsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsContentsEnum(s)
+		*e = AppPermissionsContentsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsContentsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsContentsEnum: %v", v)
 	}
 }
 
@@ -135,19 +155,23 @@ const (
 	AppPermissionsDeploymentsEnumWrite AppPermissionsDeploymentsEnum = "write"
 )
 
+func (e AppPermissionsDeploymentsEnum) ToPointer() *AppPermissionsDeploymentsEnum {
+	return &e
+}
+
 func (e *AppPermissionsDeploymentsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsDeploymentsEnum(s)
+		*e = AppPermissionsDeploymentsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsDeploymentsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsDeploymentsEnum: %v", v)
 	}
 }
 
@@ -159,19 +183,23 @@ const (
 	AppPermissionsEnvironmentsEnumWrite AppPermissionsEnvironmentsEnum = "write"
 )
 
+func (e AppPermissionsEnvironmentsEnum) ToPointer() *AppPermissionsEnvironmentsEnum {
+	return &e
+}
+
 func (e *AppPermissionsEnvironmentsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsEnvironmentsEnum(s)
+		*e = AppPermissionsEnvironmentsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsEnvironmentsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsEnvironmentsEnum: %v", v)
 	}
 }
 
@@ -183,19 +211,23 @@ const (
 	AppPermissionsIssuesEnumWrite AppPermissionsIssuesEnum = "write"
 )
 
+func (e AppPermissionsIssuesEnum) ToPointer() *AppPermissionsIssuesEnum {
+	return &e
+}
+
 func (e *AppPermissionsIssuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsIssuesEnum(s)
+		*e = AppPermissionsIssuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsIssuesEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsIssuesEnum: %v", v)
 	}
 }
 
@@ -207,19 +239,23 @@ const (
 	AppPermissionsMembersEnumWrite AppPermissionsMembersEnum = "write"
 )
 
+func (e AppPermissionsMembersEnum) ToPointer() *AppPermissionsMembersEnum {
+	return &e
+}
+
 func (e *AppPermissionsMembersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsMembersEnum(s)
+		*e = AppPermissionsMembersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsMembersEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsMembersEnum: %v", v)
 	}
 }
 
@@ -231,19 +267,23 @@ const (
 	AppPermissionsMetadataEnumWrite AppPermissionsMetadataEnum = "write"
 )
 
+func (e AppPermissionsMetadataEnum) ToPointer() *AppPermissionsMetadataEnum {
+	return &e
+}
+
 func (e *AppPermissionsMetadataEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsMetadataEnum(s)
+		*e = AppPermissionsMetadataEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsMetadataEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsMetadataEnum: %v", v)
 	}
 }
 
@@ -255,19 +295,23 @@ const (
 	AppPermissionsOrganizationAdministrationEnumWrite AppPermissionsOrganizationAdministrationEnum = "write"
 )
 
+func (e AppPermissionsOrganizationAdministrationEnum) ToPointer() *AppPermissionsOrganizationAdministrationEnum {
+	return &e
+}
+
 func (e *AppPermissionsOrganizationAdministrationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsOrganizationAdministrationEnum(s)
+		*e = AppPermissionsOrganizationAdministrationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsOrganizationAdministrationEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsOrganizationAdministrationEnum: %v", v)
 	}
 }
 
@@ -279,19 +323,23 @@ const (
 	AppPermissionsOrganizationHooksEnumWrite AppPermissionsOrganizationHooksEnum = "write"
 )
 
+func (e AppPermissionsOrganizationHooksEnum) ToPointer() *AppPermissionsOrganizationHooksEnum {
+	return &e
+}
+
 func (e *AppPermissionsOrganizationHooksEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsOrganizationHooksEnum(s)
+		*e = AppPermissionsOrganizationHooksEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsOrganizationHooksEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsOrganizationHooksEnum: %v", v)
 	}
 }
 
@@ -303,19 +351,23 @@ const (
 	AppPermissionsOrganizationPackagesEnumWrite AppPermissionsOrganizationPackagesEnum = "write"
 )
 
+func (e AppPermissionsOrganizationPackagesEnum) ToPointer() *AppPermissionsOrganizationPackagesEnum {
+	return &e
+}
+
 func (e *AppPermissionsOrganizationPackagesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsOrganizationPackagesEnum(s)
+		*e = AppPermissionsOrganizationPackagesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsOrganizationPackagesEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsOrganizationPackagesEnum: %v", v)
 	}
 }
 
@@ -326,17 +378,21 @@ const (
 	AppPermissionsOrganizationPlanEnumRead AppPermissionsOrganizationPlanEnum = "read"
 )
 
+func (e AppPermissionsOrganizationPlanEnum) ToPointer() *AppPermissionsOrganizationPlanEnum {
+	return &e
+}
+
 func (e *AppPermissionsOrganizationPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
-		*e = AppPermissionsOrganizationPlanEnum(s)
+		*e = AppPermissionsOrganizationPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsOrganizationPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsOrganizationPlanEnum: %v", v)
 	}
 }
 
@@ -349,21 +405,25 @@ const (
 	AppPermissionsOrganizationProjectsEnumAdmin AppPermissionsOrganizationProjectsEnum = "admin"
 )
 
+func (e AppPermissionsOrganizationProjectsEnum) ToPointer() *AppPermissionsOrganizationProjectsEnum {
+	return &e
+}
+
 func (e *AppPermissionsOrganizationProjectsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
 		fallthrough
 	case "admin":
-		*e = AppPermissionsOrganizationProjectsEnum(s)
+		*e = AppPermissionsOrganizationProjectsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsOrganizationProjectsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsOrganizationProjectsEnum: %v", v)
 	}
 }
 
@@ -375,19 +435,23 @@ const (
 	AppPermissionsOrganizationSecretsEnumWrite AppPermissionsOrganizationSecretsEnum = "write"
 )
 
+func (e AppPermissionsOrganizationSecretsEnum) ToPointer() *AppPermissionsOrganizationSecretsEnum {
+	return &e
+}
+
 func (e *AppPermissionsOrganizationSecretsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsOrganizationSecretsEnum(s)
+		*e = AppPermissionsOrganizationSecretsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsOrganizationSecretsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsOrganizationSecretsEnum: %v", v)
 	}
 }
 
@@ -399,19 +463,23 @@ const (
 	AppPermissionsOrganizationSelfHostedRunnersEnumWrite AppPermissionsOrganizationSelfHostedRunnersEnum = "write"
 )
 
+func (e AppPermissionsOrganizationSelfHostedRunnersEnum) ToPointer() *AppPermissionsOrganizationSelfHostedRunnersEnum {
+	return &e
+}
+
 func (e *AppPermissionsOrganizationSelfHostedRunnersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsOrganizationSelfHostedRunnersEnum(s)
+		*e = AppPermissionsOrganizationSelfHostedRunnersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsOrganizationSelfHostedRunnersEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsOrganizationSelfHostedRunnersEnum: %v", v)
 	}
 }
 
@@ -423,19 +491,23 @@ const (
 	AppPermissionsOrganizationUserBlockingEnumWrite AppPermissionsOrganizationUserBlockingEnum = "write"
 )
 
+func (e AppPermissionsOrganizationUserBlockingEnum) ToPointer() *AppPermissionsOrganizationUserBlockingEnum {
+	return &e
+}
+
 func (e *AppPermissionsOrganizationUserBlockingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsOrganizationUserBlockingEnum(s)
+		*e = AppPermissionsOrganizationUserBlockingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsOrganizationUserBlockingEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsOrganizationUserBlockingEnum: %v", v)
 	}
 }
 
@@ -447,19 +519,23 @@ const (
 	AppPermissionsPackagesEnumWrite AppPermissionsPackagesEnum = "write"
 )
 
+func (e AppPermissionsPackagesEnum) ToPointer() *AppPermissionsPackagesEnum {
+	return &e
+}
+
 func (e *AppPermissionsPackagesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsPackagesEnum(s)
+		*e = AppPermissionsPackagesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsPackagesEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsPackagesEnum: %v", v)
 	}
 }
 
@@ -471,19 +547,23 @@ const (
 	AppPermissionsPagesEnumWrite AppPermissionsPagesEnum = "write"
 )
 
+func (e AppPermissionsPagesEnum) ToPointer() *AppPermissionsPagesEnum {
+	return &e
+}
+
 func (e *AppPermissionsPagesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsPagesEnum(s)
+		*e = AppPermissionsPagesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsPagesEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsPagesEnum: %v", v)
 	}
 }
 
@@ -495,19 +575,23 @@ const (
 	AppPermissionsPullRequestsEnumWrite AppPermissionsPullRequestsEnum = "write"
 )
 
+func (e AppPermissionsPullRequestsEnum) ToPointer() *AppPermissionsPullRequestsEnum {
+	return &e
+}
+
 func (e *AppPermissionsPullRequestsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsPullRequestsEnum(s)
+		*e = AppPermissionsPullRequestsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsPullRequestsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsPullRequestsEnum: %v", v)
 	}
 }
 
@@ -519,19 +603,23 @@ const (
 	AppPermissionsRepositoryHooksEnumWrite AppPermissionsRepositoryHooksEnum = "write"
 )
 
+func (e AppPermissionsRepositoryHooksEnum) ToPointer() *AppPermissionsRepositoryHooksEnum {
+	return &e
+}
+
 func (e *AppPermissionsRepositoryHooksEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsRepositoryHooksEnum(s)
+		*e = AppPermissionsRepositoryHooksEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsRepositoryHooksEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsRepositoryHooksEnum: %v", v)
 	}
 }
 
@@ -544,21 +632,25 @@ const (
 	AppPermissionsRepositoryProjectsEnumAdmin AppPermissionsRepositoryProjectsEnum = "admin"
 )
 
+func (e AppPermissionsRepositoryProjectsEnum) ToPointer() *AppPermissionsRepositoryProjectsEnum {
+	return &e
+}
+
 func (e *AppPermissionsRepositoryProjectsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
 		fallthrough
 	case "admin":
-		*e = AppPermissionsRepositoryProjectsEnum(s)
+		*e = AppPermissionsRepositoryProjectsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsRepositoryProjectsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsRepositoryProjectsEnum: %v", v)
 	}
 }
 
@@ -570,19 +662,23 @@ const (
 	AppPermissionsSecretScanningAlertsEnumWrite AppPermissionsSecretScanningAlertsEnum = "write"
 )
 
+func (e AppPermissionsSecretScanningAlertsEnum) ToPointer() *AppPermissionsSecretScanningAlertsEnum {
+	return &e
+}
+
 func (e *AppPermissionsSecretScanningAlertsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsSecretScanningAlertsEnum(s)
+		*e = AppPermissionsSecretScanningAlertsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsSecretScanningAlertsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsSecretScanningAlertsEnum: %v", v)
 	}
 }
 
@@ -594,19 +690,23 @@ const (
 	AppPermissionsSecretsEnumWrite AppPermissionsSecretsEnum = "write"
 )
 
+func (e AppPermissionsSecretsEnum) ToPointer() *AppPermissionsSecretsEnum {
+	return &e
+}
+
 func (e *AppPermissionsSecretsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsSecretsEnum(s)
+		*e = AppPermissionsSecretsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsSecretsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsSecretsEnum: %v", v)
 	}
 }
 
@@ -618,19 +718,23 @@ const (
 	AppPermissionsSecurityEventsEnumWrite AppPermissionsSecurityEventsEnum = "write"
 )
 
+func (e AppPermissionsSecurityEventsEnum) ToPointer() *AppPermissionsSecurityEventsEnum {
+	return &e
+}
+
 func (e *AppPermissionsSecurityEventsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsSecurityEventsEnum(s)
+		*e = AppPermissionsSecurityEventsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsSecurityEventsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsSecurityEventsEnum: %v", v)
 	}
 }
 
@@ -642,19 +746,23 @@ const (
 	AppPermissionsSingleFileEnumWrite AppPermissionsSingleFileEnum = "write"
 )
 
+func (e AppPermissionsSingleFileEnum) ToPointer() *AppPermissionsSingleFileEnum {
+	return &e
+}
+
 func (e *AppPermissionsSingleFileEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsSingleFileEnum(s)
+		*e = AppPermissionsSingleFileEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsSingleFileEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsSingleFileEnum: %v", v)
 	}
 }
 
@@ -666,19 +774,23 @@ const (
 	AppPermissionsStatusesEnumWrite AppPermissionsStatusesEnum = "write"
 )
 
+func (e AppPermissionsStatusesEnum) ToPointer() *AppPermissionsStatusesEnum {
+	return &e
+}
+
 func (e *AppPermissionsStatusesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsStatusesEnum(s)
+		*e = AppPermissionsStatusesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsStatusesEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsStatusesEnum: %v", v)
 	}
 }
 
@@ -690,19 +802,23 @@ const (
 	AppPermissionsTeamDiscussionsEnumWrite AppPermissionsTeamDiscussionsEnum = "write"
 )
 
+func (e AppPermissionsTeamDiscussionsEnum) ToPointer() *AppPermissionsTeamDiscussionsEnum {
+	return &e
+}
+
 func (e *AppPermissionsTeamDiscussionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = AppPermissionsTeamDiscussionsEnum(s)
+		*e = AppPermissionsTeamDiscussionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsTeamDiscussionsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsTeamDiscussionsEnum: %v", v)
 	}
 }
 
@@ -713,17 +829,21 @@ const (
 	AppPermissionsVulnerabilityAlertsEnumRead AppPermissionsVulnerabilityAlertsEnum = "read"
 )
 
+func (e AppPermissionsVulnerabilityAlertsEnum) ToPointer() *AppPermissionsVulnerabilityAlertsEnum {
+	return &e
+}
+
 func (e *AppPermissionsVulnerabilityAlertsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
-		*e = AppPermissionsVulnerabilityAlertsEnum(s)
+		*e = AppPermissionsVulnerabilityAlertsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsVulnerabilityAlertsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsVulnerabilityAlertsEnum: %v", v)
 	}
 }
 
@@ -734,17 +854,21 @@ const (
 	AppPermissionsWorkflowsEnumWrite AppPermissionsWorkflowsEnum = "write"
 )
 
+func (e AppPermissionsWorkflowsEnum) ToPointer() *AppPermissionsWorkflowsEnum {
+	return &e
+}
+
 func (e *AppPermissionsWorkflowsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "write":
-		*e = AppPermissionsWorkflowsEnum(s)
+		*e = AppPermissionsWorkflowsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPermissionsWorkflowsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPermissionsWorkflowsEnum: %v", v)
 	}
 }
 

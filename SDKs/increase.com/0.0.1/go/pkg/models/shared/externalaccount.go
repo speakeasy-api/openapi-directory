@@ -17,21 +17,25 @@ const (
 	ExternalAccountFundingEnumOther    ExternalAccountFundingEnum = "other"
 )
 
+func (e ExternalAccountFundingEnum) ToPointer() *ExternalAccountFundingEnum {
+	return &e
+}
+
 func (e *ExternalAccountFundingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "checking":
 		fallthrough
 	case "savings":
 		fallthrough
 	case "other":
-		*e = ExternalAccountFundingEnum(s)
+		*e = ExternalAccountFundingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExternalAccountFundingEnum: %s", s)
+		return fmt.Errorf("invalid value for ExternalAccountFundingEnum: %v", v)
 	}
 }
 
@@ -43,19 +47,23 @@ const (
 	ExternalAccountStatusEnumArchived ExternalAccountStatusEnum = "archived"
 )
 
+func (e ExternalAccountStatusEnum) ToPointer() *ExternalAccountStatusEnum {
+	return &e
+}
+
 func (e *ExternalAccountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "archived":
-		*e = ExternalAccountStatusEnum(s)
+		*e = ExternalAccountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExternalAccountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExternalAccountStatusEnum: %v", v)
 	}
 }
 
@@ -66,17 +74,21 @@ const (
 	ExternalAccountTypeEnumExternalAccount ExternalAccountTypeEnum = "external_account"
 )
 
+func (e ExternalAccountTypeEnum) ToPointer() *ExternalAccountTypeEnum {
+	return &e
+}
+
 func (e *ExternalAccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "external_account":
-		*e = ExternalAccountTypeEnum(s)
+		*e = ExternalAccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExternalAccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExternalAccountTypeEnum: %v", v)
 	}
 }
 
@@ -89,21 +101,25 @@ const (
 	ExternalAccountVerificationStatusEnumVerified   ExternalAccountVerificationStatusEnum = "verified"
 )
 
+func (e ExternalAccountVerificationStatusEnum) ToPointer() *ExternalAccountVerificationStatusEnum {
+	return &e
+}
+
 func (e *ExternalAccountVerificationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unverified":
 		fallthrough
 	case "pending":
 		fallthrough
 	case "verified":
-		*e = ExternalAccountVerificationStatusEnum(s)
+		*e = ExternalAccountVerificationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExternalAccountVerificationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExternalAccountVerificationStatusEnum: %v", v)
 	}
 }
 

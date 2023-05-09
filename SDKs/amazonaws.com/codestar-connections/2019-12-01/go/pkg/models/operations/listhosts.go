@@ -16,17 +16,21 @@ const (
 	ListHostsXAmzTargetEnumComAmazonawsCodestarConnectionsCodeStarConnections20191201ListHosts ListHostsXAmzTargetEnum = "com.amazonaws.codestar.connections.CodeStar_connections_20191201.ListHosts"
 )
 
+func (e ListHostsXAmzTargetEnum) ToPointer() *ListHostsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListHostsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.codestar.connections.CodeStar_connections_20191201.ListHosts":
-		*e = ListHostsXAmzTargetEnum(s)
+		*e = ListHostsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListHostsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListHostsXAmzTargetEnum: %v", v)
 	}
 }
 

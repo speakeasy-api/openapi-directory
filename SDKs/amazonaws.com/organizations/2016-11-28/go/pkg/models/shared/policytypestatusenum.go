@@ -15,20 +15,24 @@ const (
 	PolicyTypeStatusEnumPendingDisable PolicyTypeStatusEnum = "PENDING_DISABLE"
 )
 
+func (e PolicyTypeStatusEnum) ToPointer() *PolicyTypeStatusEnum {
+	return &e
+}
+
 func (e *PolicyTypeStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "PENDING_ENABLE":
 		fallthrough
 	case "PENDING_DISABLE":
-		*e = PolicyTypeStatusEnum(s)
+		*e = PolicyTypeStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyTypeStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyTypeStatusEnum: %v", v)
 	}
 }

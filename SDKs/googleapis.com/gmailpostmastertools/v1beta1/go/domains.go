@@ -83,7 +83,10 @@ func (s *domains) GmailpostmastertoolsDomainsList(ctx context.Context, request o
 // GmailpostmastertoolsDomainsTrafficStatsGet - Get traffic statistics for a domain on a specific date. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
 func (s *domains) GmailpostmastertoolsDomainsTrafficStatsGet(ctx context.Context, request operations.GmailpostmastertoolsDomainsTrafficStatsGetRequest, security operations.GmailpostmastertoolsDomainsTrafficStatsGetSecurity) (*operations.GmailpostmastertoolsDomainsTrafficStatsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +134,10 @@ func (s *domains) GmailpostmastertoolsDomainsTrafficStatsGet(ctx context.Context
 // GmailpostmastertoolsDomainsTrafficStatsList - List traffic statistics for all available days. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
 func (s *domains) GmailpostmastertoolsDomainsTrafficStatsList(ctx context.Context, request operations.GmailpostmastertoolsDomainsTrafficStatsListRequest, security operations.GmailpostmastertoolsDomainsTrafficStatsListSecurity) (*operations.GmailpostmastertoolsDomainsTrafficStatsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/trafficStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/trafficStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

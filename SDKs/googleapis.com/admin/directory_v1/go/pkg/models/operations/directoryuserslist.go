@@ -41,12 +41,16 @@ const (
 	DirectoryUsersListEventEnumUpdate    DirectoryUsersListEventEnum = "update"
 )
 
+func (e DirectoryUsersListEventEnum) ToPointer() *DirectoryUsersListEventEnum {
+	return &e
+}
+
 func (e *DirectoryUsersListEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "add":
 		fallthrough
 	case "delete":
@@ -56,10 +60,10 @@ func (e *DirectoryUsersListEventEnum) UnmarshalJSON(data []byte) error {
 	case "undelete":
 		fallthrough
 	case "update":
-		*e = DirectoryUsersListEventEnum(s)
+		*e = DirectoryUsersListEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersListEventEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersListEventEnum: %v", v)
 	}
 }
 
@@ -72,21 +76,25 @@ const (
 	DirectoryUsersListOrderByEnumGivenName  DirectoryUsersListOrderByEnum = "givenName"
 )
 
+func (e DirectoryUsersListOrderByEnum) ToPointer() *DirectoryUsersListOrderByEnum {
+	return &e
+}
+
 func (e *DirectoryUsersListOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "email":
 		fallthrough
 	case "familyName":
 		fallthrough
 	case "givenName":
-		*e = DirectoryUsersListOrderByEnum(s)
+		*e = DirectoryUsersListOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersListOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersListOrderByEnum: %v", v)
 	}
 }
 
@@ -99,21 +107,25 @@ const (
 	DirectoryUsersListProjectionEnumFull   DirectoryUsersListProjectionEnum = "full"
 )
 
+func (e DirectoryUsersListProjectionEnum) ToPointer() *DirectoryUsersListProjectionEnum {
+	return &e
+}
+
 func (e *DirectoryUsersListProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "basic":
 		fallthrough
 	case "custom":
 		fallthrough
 	case "full":
-		*e = DirectoryUsersListProjectionEnum(s)
+		*e = DirectoryUsersListProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersListProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersListProjectionEnum: %v", v)
 	}
 }
 
@@ -125,19 +137,23 @@ const (
 	DirectoryUsersListSortOrderEnumDescending DirectoryUsersListSortOrderEnum = "DESCENDING"
 )
 
+func (e DirectoryUsersListSortOrderEnum) ToPointer() *DirectoryUsersListSortOrderEnum {
+	return &e
+}
+
 func (e *DirectoryUsersListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DirectoryUsersListSortOrderEnum(s)
+		*e = DirectoryUsersListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersListSortOrderEnum: %v", v)
 	}
 }
 
@@ -149,19 +165,23 @@ const (
 	DirectoryUsersListViewTypeEnumDomainPublic DirectoryUsersListViewTypeEnum = "domain_public"
 )
 
+func (e DirectoryUsersListViewTypeEnum) ToPointer() *DirectoryUsersListViewTypeEnum {
+	return &e
+}
+
 func (e *DirectoryUsersListViewTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin_view":
 		fallthrough
 	case "domain_public":
-		*e = DirectoryUsersListViewTypeEnum(s)
+		*e = DirectoryUsersListViewTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersListViewTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersListViewTypeEnum: %v", v)
 	}
 }
 

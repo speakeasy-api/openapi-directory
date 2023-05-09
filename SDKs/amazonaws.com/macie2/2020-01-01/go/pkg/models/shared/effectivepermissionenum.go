@@ -15,20 +15,24 @@ const (
 	EffectivePermissionEnumUnknown   EffectivePermissionEnum = "UNKNOWN"
 )
 
+func (e EffectivePermissionEnum) ToPointer() *EffectivePermissionEnum {
+	return &e
+}
+
 func (e *EffectivePermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLIC":
 		fallthrough
 	case "NOT_PUBLIC":
 		fallthrough
 	case "UNKNOWN":
-		*e = EffectivePermissionEnum(s)
+		*e = EffectivePermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EffectivePermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for EffectivePermissionEnum: %v", v)
 	}
 }

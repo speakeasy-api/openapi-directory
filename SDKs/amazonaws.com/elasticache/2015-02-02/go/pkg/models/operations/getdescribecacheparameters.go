@@ -15,17 +15,21 @@ const (
 	GETDescribeCacheParametersActionEnumDescribeCacheParameters GETDescribeCacheParametersActionEnum = "DescribeCacheParameters"
 )
 
+func (e GETDescribeCacheParametersActionEnum) ToPointer() *GETDescribeCacheParametersActionEnum {
+	return &e
+}
+
 func (e *GETDescribeCacheParametersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeCacheParameters":
-		*e = GETDescribeCacheParametersActionEnum(s)
+		*e = GETDescribeCacheParametersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeCacheParametersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeCacheParametersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeCacheParametersVersionEnumTwoThousandAndFifteen0202 GETDescribeCacheParametersVersionEnum = "2015-02-02"
 )
 
+func (e GETDescribeCacheParametersVersionEnum) ToPointer() *GETDescribeCacheParametersVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeCacheParametersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = GETDescribeCacheParametersVersionEnum(s)
+		*e = GETDescribeCacheParametersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeCacheParametersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeCacheParametersVersionEnum: %v", v)
 	}
 }
 

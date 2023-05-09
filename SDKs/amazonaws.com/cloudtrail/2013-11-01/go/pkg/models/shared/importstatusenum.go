@@ -17,12 +17,16 @@ const (
 	ImportStatusEnumCompleted    ImportStatusEnum = "COMPLETED"
 )
 
+func (e ImportStatusEnum) ToPointer() *ImportStatusEnum {
+	return &e
+}
+
 func (e *ImportStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIALIZING":
 		fallthrough
 	case "IN_PROGRESS":
@@ -32,9 +36,9 @@ func (e *ImportStatusEnum) UnmarshalJSON(data []byte) error {
 	case "STOPPED":
 		fallthrough
 	case "COMPLETED":
-		*e = ImportStatusEnum(s)
+		*e = ImportStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportStatusEnum: %v", v)
 	}
 }

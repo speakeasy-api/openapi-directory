@@ -19,12 +19,16 @@ const (
 	GetEditorURLLanguageEnumRu GetEditorURLLanguageEnum = "ru"
 )
 
+func (e GetEditorURLLanguageEnum) ToPointer() *GetEditorURLLanguageEnum {
+	return &e
+}
+
 func (e *GetEditorURLLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "en":
 		fallthrough
 	case "et":
@@ -34,10 +38,10 @@ func (e *GetEditorURLLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "sk":
 		fallthrough
 	case "ru":
-		*e = GetEditorURLLanguageEnum(s)
+		*e = GetEditorURLLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEditorURLLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEditorURLLanguageEnum: %v", v)
 	}
 }
 
@@ -68,12 +72,16 @@ const (
 	GetEditorURL422ApplicationJSONErrorEnumRequiredParameterMissingTemplateNotDefined           GetEditorURL422ApplicationJSONErrorEnum = "Required parameter missing: template not defined"
 )
 
+func (e GetEditorURL422ApplicationJSONErrorEnum) ToPointer() *GetEditorURL422ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *GetEditorURL422ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unable to parse JSON, please check formatting":
 		fallthrough
 	case "Required parameter missing":
@@ -81,10 +89,10 @@ func (e *GetEditorURL422ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) err
 	case "Required parameter missing: template definition not defined":
 		fallthrough
 	case "Required parameter missing: template not defined":
-		*e = GetEditorURL422ApplicationJSONErrorEnum(s)
+		*e = GetEditorURL422ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEditorURL422ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEditorURL422ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -105,21 +113,25 @@ const (
 	GetEditorURL404ApplicationJSONErrorEnumNoneOfTheTemplatesIsAvailableForTheWorkspace GetEditorURL404ApplicationJSONErrorEnum = "None of the templates is available for the workspace."
 )
 
+func (e GetEditorURL404ApplicationJSONErrorEnum) ToPointer() *GetEditorURL404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *GetEditorURL404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Entity not found":
 		fallthrough
 	case "Resource not found":
 		fallthrough
 	case "None of the templates is available for the workspace.":
-		*e = GetEditorURL404ApplicationJSONErrorEnum(s)
+		*e = GetEditorURL404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEditorURL404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEditorURL404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -138,17 +150,21 @@ const (
 	GetEditorURL403ApplicationJSONErrorEnumYourAccountHasExceededTheMonthlyDocumentGenerationLimit GetEditorURL403ApplicationJSONErrorEnum = "Your account has exceeded the monthly document generation limit."
 )
 
+func (e GetEditorURL403ApplicationJSONErrorEnum) ToPointer() *GetEditorURL403ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *GetEditorURL403ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Your account has exceeded the monthly document generation limit.":
-		*e = GetEditorURL403ApplicationJSONErrorEnum(s)
+		*e = GetEditorURL403ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEditorURL403ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEditorURL403ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -176,12 +192,16 @@ const (
 	GetEditorURL401ApplicationJSONErrorEnumAuthenticationFailed                                      GetEditorURL401ApplicationJSONErrorEnum = "Authentication failed"
 )
 
+func (e GetEditorURL401ApplicationJSONErrorEnum) ToPointer() *GetEditorURL401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *GetEditorURL401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed: request expired":
 		fallthrough
 	case "Authentication failed: signature or secret missing":
@@ -201,10 +221,10 @@ func (e *GetEditorURL401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) err
 	case "Authentication failed: incorrect signature":
 		fallthrough
 	case "Authentication failed":
-		*e = GetEditorURL401ApplicationJSONErrorEnum(s)
+		*e = GetEditorURL401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEditorURL401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEditorURL401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 

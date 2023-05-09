@@ -35,7 +35,10 @@ func newUtil(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Retrieves the API v3 ID.
 func (s *util) GetID(ctx context.Context, request operations.GetIDRequest) (*operations.GetIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/utils/convert-legacy-id/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/utils/convert-legacy-id/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

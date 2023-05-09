@@ -17,12 +17,16 @@ const (
 	LoadBalancerTLSCertificateFailureReasonEnumOther                          LoadBalancerTLSCertificateFailureReasonEnum = "OTHER"
 )
 
+func (e LoadBalancerTLSCertificateFailureReasonEnum) ToPointer() *LoadBalancerTLSCertificateFailureReasonEnum {
+	return &e
+}
+
 func (e *LoadBalancerTLSCertificateFailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_AVAILABLE_CONTACTS":
 		fallthrough
 	case "ADDITIONAL_VERIFICATION_REQUIRED":
@@ -32,9 +36,9 @@ func (e *LoadBalancerTLSCertificateFailureReasonEnum) UnmarshalJSON(data []byte)
 	case "INVALID_PUBLIC_DOMAIN":
 		fallthrough
 	case "OTHER":
-		*e = LoadBalancerTLSCertificateFailureReasonEnum(s)
+		*e = LoadBalancerTLSCertificateFailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoadBalancerTLSCertificateFailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for LoadBalancerTLSCertificateFailureReasonEnum: %v", v)
 	}
 }

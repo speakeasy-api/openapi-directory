@@ -16,17 +16,21 @@ const (
 	DescribeInstanceAccessControlAttributeConfigurationXAmzTargetEnumSwbExternalServiceDescribeInstanceAccessControlAttributeConfiguration DescribeInstanceAccessControlAttributeConfigurationXAmzTargetEnum = "SWBExternalService.DescribeInstanceAccessControlAttributeConfiguration"
 )
 
+func (e DescribeInstanceAccessControlAttributeConfigurationXAmzTargetEnum) ToPointer() *DescribeInstanceAccessControlAttributeConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeInstanceAccessControlAttributeConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.DescribeInstanceAccessControlAttributeConfiguration":
-		*e = DescribeInstanceAccessControlAttributeConfigurationXAmzTargetEnum(s)
+		*e = DescribeInstanceAccessControlAttributeConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceAccessControlAttributeConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceAccessControlAttributeConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

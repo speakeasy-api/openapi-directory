@@ -20,12 +20,16 @@ const (
 	CreateProfileRequestProfileTypeEnumHeapAlloc              CreateProfileRequestProfileTypeEnum = "HEAP_ALLOC"
 )
 
+func (e CreateProfileRequestProfileTypeEnum) ToPointer() *CreateProfileRequestProfileTypeEnum {
+	return &e
+}
+
 func (e *CreateProfileRequestProfileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROFILE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CPU":
@@ -41,10 +45,10 @@ func (e *CreateProfileRequestProfileTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PEAK_HEAP":
 		fallthrough
 	case "HEAP_ALLOC":
-		*e = CreateProfileRequestProfileTypeEnum(s)
+		*e = CreateProfileRequestProfileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProfileRequestProfileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProfileRequestProfileTypeEnum: %v", v)
 	}
 }
 
@@ -52,6 +56,6 @@ func (e *CreateProfileRequestProfileTypeEnum) UnmarshalJSON(data []byte) error {
 type CreateProfileRequest struct {
 	// Deployment contains the deployment identification information.
 	Deployment *Deployment `json:"deployment,omitempty"`
-	// Required. One or more profile types that the agent is capable of providing.
+	// One or more profile types that the agent is capable of providing.
 	ProfileType []CreateProfileRequestProfileTypeEnum `json:"profileType,omitempty"`
 }

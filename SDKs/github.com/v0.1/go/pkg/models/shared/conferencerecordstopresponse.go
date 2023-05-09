@@ -18,12 +18,16 @@ const (
 	ConferenceRecordStopResponseMessageEnumConferenceRecordStopFailedConferenceNotFound ConferenceRecordStopResponseMessageEnum = "Conference RecordStop Failed -- Conference not found"
 )
 
+func (e ConferenceRecordStopResponseMessageEnum) ToPointer() *ConferenceRecordStopResponseMessageEnum {
+	return &e
+}
+
 func (e *ConferenceRecordStopResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Conference RecordStop Executed":
 		fallthrough
 	case "ConferenceName Parameter must be present":
@@ -33,10 +37,10 @@ func (e *ConferenceRecordStopResponseMessageEnum) UnmarshalJSON(data []byte) err
 	case "Conference RecordStop Failed":
 		fallthrough
 	case "Conference RecordStop Failed -- Conference not found":
-		*e = ConferenceRecordStopResponseMessageEnum(s)
+		*e = ConferenceRecordStopResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConferenceRecordStopResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ConferenceRecordStopResponseMessageEnum: %v", v)
 	}
 }
 

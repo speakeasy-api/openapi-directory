@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -484,6 +485,7 @@ pkg/models/shared/coderepository.go
 pkg/models/shared/canvasappsettings.go
 pkg/models/shared/timeseriesforecastingsettings.go
 pkg/models/shared/featurestatusenum.go
+pkg/models/shared/modelregistersettings.go
 pkg/models/shared/defaultspacesettings.go
 pkg/models/shared/authmodeenum.go
 pkg/models/shared/appsecuritygroupmanagementenum.go
@@ -530,6 +532,7 @@ pkg/models/shared/capturecontenttypeheader.go
 pkg/models/shared/asyncinferenceconfig.go
 pkg/models/shared/asyncinferenceoutputconfig.go
 pkg/models/shared/asyncinferencenotificationconfig.go
+pkg/models/shared/asyncnotificationtopictypesenum.go
 pkg/models/shared/asyncinferenceclientconfig.go
 pkg/models/shared/createexperimentresponse.go
 pkg/models/shared/createexperimentrequest.go
@@ -1560,4 +1563,5 @@ pkg/models/shared/updateworkforcerequest.go
 pkg/models/shared/updateworkteamresponse.go
 pkg/models/shared/updateworkteamrequest.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

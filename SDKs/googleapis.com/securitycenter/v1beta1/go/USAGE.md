@@ -2,42 +2,40 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SecuritycenterOrganizationsAssetsGroupRequest{
-        DollarXgafv: "2",
-        GroupAssetsRequest: &shared.GroupAssetsRequest{
-            CompareDuration: "provident",
-            Filter: "distinctio",
-            GroupBy: "quibusdam",
-            PageSize: 602763,
-            PageToken: "nulla",
-            ReadTime: "corrupti",
-        },
-        AccessToken: "illum",
-        Alt: "media",
-        Callback: "error",
-        Fields: "deserunt",
-        Key: "suscipit",
-        OauthToken: "iure",
-        Parent: "magnam",
-        PrettyPrint: false,
-        QuotaUser: "debitis",
-        UploadType: "ipsa",
-        UploadProtocol: "delectus",
-    }
-
     ctx := context.Background()
-    res, err := s.Organizations.SecuritycenterOrganizationsAssetsGroup(ctx, req, operations.SecuritycenterOrganizationsAssetsGroupSecurity{
+    res, err := s.Organizations.SecuritycenterOrganizationsAssetsGroup(ctx, operations.SecuritycenterOrganizationsAssetsGroupRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        GroupAssetsRequest: &shared.GroupAssetsRequest{
+            CompareDuration: sdk.String("provident"),
+            Filter: sdk.String("distinctio"),
+            GroupBy: sdk.String("quibusdam"),
+            PageSize: sdk.Int(602763),
+            PageToken: sdk.String("nulla"),
+            ReadTime: sdk.String("corrupti"),
+        },
+        AccessToken: sdk.String("illum"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("error"),
+        Fields: sdk.String("deserunt"),
+        Key: sdk.String("suscipit"),
+        OauthToken: sdk.String("iure"),
+        Parent: "magnam",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("debitis"),
+        UploadType: sdk.String("ipsa"),
+        UploadProtocol: sdk.String("delectus"),
+    }, operations.SecuritycenterOrganizationsAssetsGroupSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

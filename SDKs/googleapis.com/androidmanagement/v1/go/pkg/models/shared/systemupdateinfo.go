@@ -18,12 +18,16 @@ const (
 	SystemUpdateInfoUpdateStatusEnumOsUpdateAvailable       SystemUpdateInfoUpdateStatusEnum = "OS_UPDATE_AVAILABLE"
 )
 
+func (e SystemUpdateInfoUpdateStatusEnum) ToPointer() *SystemUpdateInfoUpdateStatusEnum {
+	return &e
+}
+
 func (e *SystemUpdateInfoUpdateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPDATE_STATUS_UNKNOWN":
 		fallthrough
 	case "UP_TO_DATE":
@@ -33,10 +37,10 @@ func (e *SystemUpdateInfoUpdateStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SECURITY_UPDATE_AVAILABLE":
 		fallthrough
 	case "OS_UPDATE_AVAILABLE":
-		*e = SystemUpdateInfoUpdateStatusEnum(s)
+		*e = SystemUpdateInfoUpdateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SystemUpdateInfoUpdateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SystemUpdateInfoUpdateStatusEnum: %v", v)
 	}
 }
 

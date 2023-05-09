@@ -18,12 +18,16 @@ const (
 	CollectdValueDataSourceTypeEnumAbsolute                  CollectdValueDataSourceTypeEnum = "ABSOLUTE"
 )
 
+func (e CollectdValueDataSourceTypeEnum) ToPointer() *CollectdValueDataSourceTypeEnum {
+	return &e
+}
+
 func (e *CollectdValueDataSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_DATA_SOURCE_TYPE":
 		fallthrough
 	case "GAUGE":
@@ -33,10 +37,10 @@ func (e *CollectdValueDataSourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DERIVE":
 		fallthrough
 	case "ABSOLUTE":
-		*e = CollectdValueDataSourceTypeEnum(s)
+		*e = CollectdValueDataSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CollectdValueDataSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CollectdValueDataSourceTypeEnum: %v", v)
 	}
 }
 

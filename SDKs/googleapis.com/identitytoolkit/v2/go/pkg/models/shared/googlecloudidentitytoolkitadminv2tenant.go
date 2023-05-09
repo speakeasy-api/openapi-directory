@@ -30,6 +30,8 @@ type GoogleCloudIdentitytoolkitAdminV2Tenant struct {
 	Monitoring *GoogleCloudIdentitytoolkitAdminV2MonitoringConfig `json:"monitoring,omitempty"`
 	// Output only. Resource name of a tenant. For example: "projects/{project-id}/tenants/{tenant-id}"
 	Name *string `json:"name,omitempty"`
+	// The reCAPTCHA Enterprise integration config.
+	RecaptchaConfig *GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig `json:"recaptchaConfig,omitempty"`
 	// Configures the regions where users are allowed to send verification SMS for the project or tenant. This is based on the calling code of the destination phone number.
 	SmsRegionConfig *GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig `json:"smsRegionConfig,omitempty"`
 	// A map of pairs that can be used for MFA. The phone number should be in E.164 format (https://www.itu.int/rec/T-REC-E.164/) and a maximum of 10 pairs can be added (error will be thrown once exceeded).
@@ -60,6 +62,8 @@ type GoogleCloudIdentitytoolkitAdminV2TenantInput struct {
 	MfaConfig *GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig `json:"mfaConfig,omitempty"`
 	// Configuration related to monitoring project activity.
 	Monitoring *GoogleCloudIdentitytoolkitAdminV2MonitoringConfig `json:"monitoring,omitempty"`
+	// The reCAPTCHA Enterprise integration config.
+	RecaptchaConfig *GoogleCloudIdentitytoolkitAdminV2RecaptchaConfigInput `json:"recaptchaConfig,omitempty"`
 	// Configures the regions where users are allowed to send verification SMS for the project or tenant. This is based on the calling code of the destination phone number.
 	SmsRegionConfig *GoogleCloudIdentitytoolkitAdminV2SmsRegionConfig `json:"smsRegionConfig,omitempty"`
 	// A map of pairs that can be used for MFA. The phone number should be in E.164 format (https://www.itu.int/rec/T-REC-E.164/) and a maximum of 10 pairs can be added (error will be thrown once exceeded).

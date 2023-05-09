@@ -21,19 +21,23 @@ const (
 	DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnumCrowdstrike DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum = "crowdstrike"
 )
 
+func (e DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum) ToPointer() *DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "jamf":
 		fallthrough
 	case "crowdstrike":
-		*e = DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum(s)
+		*e = DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnumDevice DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum = "device"
 )
 
+func (e DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum) ToPointer() *DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "device":
-		*e = DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum(s)
+		*e = DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -69,19 +77,23 @@ const (
 	DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnumOidc              DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum = "oidc"
 )
 
+func (e DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum) ToPointer() *DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iam-identity-center":
 		fallthrough
 	case "oidc":
-		*e = DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum(s)
+		*e = DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -94,7 +106,7 @@ type DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrust
 	VerifiedAccessTrustProviderID *string
 }
 
-// DeleteVerifiedAccessInstanceResultVerifiedAccessInstance - The ID of the Amazon Web Services Verified Access instance.
+// DeleteVerifiedAccessInstanceResultVerifiedAccessInstance - The ID of the Verified Access instance.
 type DeleteVerifiedAccessInstanceResultVerifiedAccessInstance struct {
 	CreationTime                 *string
 	Description                  *string

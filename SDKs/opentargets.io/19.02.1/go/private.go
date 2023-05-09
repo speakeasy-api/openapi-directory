@@ -148,7 +148,10 @@ func (s *private) GetAutocomplete(ctx context.Context, request operations.GetAut
 // Get `disease` objects.
 func (s *private) GetDiseaseByID(ctx context.Context, request operations.GetDiseaseByIDRequest) (*operations.GetDiseaseByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/private/disease/{disease}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/platform/private/disease/{disease}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -184,7 +187,10 @@ func (s *private) GetDiseaseByID(ctx context.Context, request operations.GetDise
 // Get `drug` objects.
 func (s *private) GetDrugByID(ctx context.Context, request operations.GetDrugByIDRequest) (*operations.GetDrugByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/private/drug/{DRUG_ID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/platform/private/drug/{DRUG_ID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +230,10 @@ func (s *private) GetDrugByID(ctx context.Context, request operations.GetDrugByI
 // Get `ECO` objects.
 func (s *private) GetECObyID(ctx context.Context, request operations.GetECObyIDRequest) (*operations.GetECObyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/private/eco/{ECO_ID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/platform/private/eco/{ECO_ID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -300,7 +309,10 @@ func (s *private) GetQuickSearch(ctx context.Context, request operations.GetQuic
 // Get `relation` objects starting from diseases.
 func (s *private) GetRelationByEFOID(ctx context.Context, request operations.GetRelationByEFOIDRequest) (*operations.GetRelationByEFOIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/private/relation/disease/{disease}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/platform/private/relation/disease/{disease}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -336,7 +348,10 @@ func (s *private) GetRelationByEFOID(ctx context.Context, request operations.Get
 // Get `relation` objects starting from diseases.
 func (s *private) GetRelationByENSGID(ctx context.Context, request operations.GetRelationByENSGIDRequest) (*operations.GetRelationByENSGIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/private/relation/target/{target}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/platform/private/relation/target/{target}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +423,10 @@ func (s *private) GetSwagger(ctx context.Context) (*operations.GetSwaggerRespons
 // Get `target` objects.
 func (s *private) GetTargetByENSGID(ctx context.Context, request operations.GetTargetByENSGIDRequest) (*operations.GetTargetByENSGIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/private/target/{target}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/platform/private/target/{target}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

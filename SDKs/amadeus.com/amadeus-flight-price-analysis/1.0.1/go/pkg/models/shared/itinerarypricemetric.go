@@ -23,12 +23,16 @@ const (
 	ItineraryPriceMetricPriceMetricsQuartileRankingEnumMaximum ItineraryPriceMetricPriceMetricsQuartileRankingEnum = "MAXIMUM"
 )
 
+func (e ItineraryPriceMetricPriceMetricsQuartileRankingEnum) ToPointer() *ItineraryPriceMetricPriceMetricsQuartileRankingEnum {
+	return &e
+}
+
 func (e *ItineraryPriceMetricPriceMetricsQuartileRankingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MINIMUM":
 		fallthrough
 	case "FIRST":
@@ -38,10 +42,10 @@ func (e *ItineraryPriceMetricPriceMetricsQuartileRankingEnum) UnmarshalJSON(data
 	case "THIRD":
 		fallthrough
 	case "MAXIMUM":
-		*e = ItineraryPriceMetricPriceMetricsQuartileRankingEnum(s)
+		*e = ItineraryPriceMetricPriceMetricsQuartileRankingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItineraryPriceMetricPriceMetricsQuartileRankingEnum: %s", s)
+		return fmt.Errorf("invalid value for ItineraryPriceMetricPriceMetricsQuartileRankingEnum: %v", v)
 	}
 }
 
@@ -58,17 +62,21 @@ const (
 	ItineraryPriceMetricTransportTypeEnumFlight ItineraryPriceMetricTransportTypeEnum = "FLIGHT"
 )
 
+func (e ItineraryPriceMetricTransportTypeEnum) ToPointer() *ItineraryPriceMetricTransportTypeEnum {
+	return &e
+}
+
 func (e *ItineraryPriceMetricTransportTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FLIGHT":
-		*e = ItineraryPriceMetricTransportTypeEnum(s)
+		*e = ItineraryPriceMetricTransportTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItineraryPriceMetricTransportTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ItineraryPriceMetricTransportTypeEnum: %v", v)
 	}
 }
 

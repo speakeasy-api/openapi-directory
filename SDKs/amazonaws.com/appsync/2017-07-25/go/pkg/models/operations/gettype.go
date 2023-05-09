@@ -17,19 +17,23 @@ const (
 	GetTypeFormatEnumJSON GetTypeFormatEnum = "JSON"
 )
 
+func (e GetTypeFormatEnum) ToPointer() *GetTypeFormatEnum {
+	return &e
+}
+
 func (e *GetTypeFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SDL":
 		fallthrough
 	case "JSON":
-		*e = GetTypeFormatEnum(s)
+		*e = GetTypeFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTypeFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTypeFormatEnum: %v", v)
 	}
 }
 

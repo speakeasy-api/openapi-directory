@@ -15,17 +15,21 @@ const (
 	POSTDeleteGroupPolicyActionEnumDeleteGroupPolicy POSTDeleteGroupPolicyActionEnum = "DeleteGroupPolicy"
 )
 
+func (e POSTDeleteGroupPolicyActionEnum) ToPointer() *POSTDeleteGroupPolicyActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteGroupPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteGroupPolicy":
-		*e = POSTDeleteGroupPolicyActionEnum(s)
+		*e = POSTDeleteGroupPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteGroupPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteGroupPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteGroupPolicyVersionEnumTwoThousandAndTen0508 POSTDeleteGroupPolicyVersionEnum = "2010-05-08"
 )
 
+func (e POSTDeleteGroupPolicyVersionEnum) ToPointer() *POSTDeleteGroupPolicyVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteGroupPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTDeleteGroupPolicyVersionEnum(s)
+		*e = POSTDeleteGroupPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteGroupPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteGroupPolicyVersionEnum: %v", v)
 	}
 }
 

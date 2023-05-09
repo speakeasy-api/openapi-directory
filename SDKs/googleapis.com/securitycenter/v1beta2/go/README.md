@@ -13,34 +13,32 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/securityce
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        Name: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettings(ctx, req, operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity{
+    res, err := s.Projects.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettings(ctx, operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        Name: "Dallas Kassulke",
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -59,11 +57,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettings` - Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing field only indicates that it was not explicitly set, so no assumption should be made about these fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective service settings for the resource, which accounts for inherited settings and defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
-* `SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettings` - Update the ContainerThreatDetectionSettings resource.
-* `SecuritycenterProjectsWebSecurityScannerSettingsCalculate` - Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings. Settings provided closer to the target resource take precedence over those further away (e.g. folder will override organization level settings). The default SCC setting for the detector service defaults can be overridden at organization, folder and project levels. No assumptions should be made about the SCC defaults as it is considered an internal implementation detail.
+* [SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettings](docs/projects/README.md#securitycenterprojectslocationsclustersgetcontainerthreatdetectionsettings) - Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing field only indicates that it was not explicitly set, so no assumption should be made about these fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective service settings for the resource, which accounts for inherited settings and defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
+* [SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettings](docs/projects/README.md#securitycenterprojectslocationsclustersupdatecontainerthreatdetectionsettings) - Update the ContainerThreatDetectionSettings resource.
+* [SecuritycenterProjectsWebSecurityScannerSettingsCalculate](docs/projects/README.md#securitycenterprojectswebsecurityscannersettingscalculate) - Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings. Settings provided closer to the target resource take precedence over those further away (e.g. folder will override organization level settings). The default SCC setting for the detector service defaults can be overridden at organization, folder and project levels. No assumptions should be made about the SCC defaults as it is considered an internal implementation detail.
 <!-- End SDK Available Operations -->
 
 ### Maturity

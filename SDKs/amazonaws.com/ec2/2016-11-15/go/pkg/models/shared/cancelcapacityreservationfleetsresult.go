@@ -34,12 +34,16 @@ const (
 	CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsCurrentFleetStateEnumFailed             CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsCurrentFleetStateEnum = "failed"
 )
 
+func (e CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsCurrentFleetStateEnum) ToPointer() *CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsCurrentFleetStateEnum {
+	return &e
+}
+
 func (e *CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsCurrentFleetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "modifying":
@@ -57,10 +61,10 @@ func (e *CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsCurren
 	case "cancelled":
 		fallthrough
 	case "failed":
-		*e = CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsCurrentFleetStateEnum(s)
+		*e = CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsCurrentFleetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsCurrentFleetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsCurrentFleetStateEnum: %v", v)
 	}
 }
 
@@ -79,12 +83,16 @@ const (
 	CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsPreviousFleetStateEnumFailed             CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsPreviousFleetStateEnum = "failed"
 )
 
+func (e CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsPreviousFleetStateEnum) ToPointer() *CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsPreviousFleetStateEnum {
+	return &e
+}
+
 func (e *CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsPreviousFleetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "modifying":
@@ -102,10 +110,10 @@ func (e *CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsPrevio
 	case "cancelled":
 		fallthrough
 	case "failed":
-		*e = CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsPreviousFleetStateEnum(s)
+		*e = CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsPreviousFleetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsPreviousFleetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelCapacityReservationFleetsResultSuccessfulFleetCancellationsPreviousFleetStateEnum: %v", v)
 	}
 }
 

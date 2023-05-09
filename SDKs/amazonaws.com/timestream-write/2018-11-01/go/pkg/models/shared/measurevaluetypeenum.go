@@ -18,12 +18,16 @@ const (
 	MeasureValueTypeEnumMulti     MeasureValueTypeEnum = "MULTI"
 )
 
+func (e MeasureValueTypeEnum) ToPointer() *MeasureValueTypeEnum {
+	return &e
+}
+
 func (e *MeasureValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOUBLE":
 		fallthrough
 	case "BIGINT":
@@ -35,9 +39,9 @@ func (e *MeasureValueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TIMESTAMP":
 		fallthrough
 	case "MULTI":
-		*e = MeasureValueTypeEnum(s)
+		*e = MeasureValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MeasureValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MeasureValueTypeEnum: %v", v)
 	}
 }

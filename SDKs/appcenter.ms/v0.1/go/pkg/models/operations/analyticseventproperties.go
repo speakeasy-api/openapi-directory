@@ -22,29 +22,33 @@ type AnalyticsEventPropertiesRequest struct {
 }
 
 // AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.
-type AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum string
+type AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum int64
 
 const (
-	AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnumFourHundred         AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum = "400"
-	AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnumFourHundredAndThree AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum = "403"
-	AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnumFiveHundred         AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum = "500"
+	AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnumFourHundred         AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum = 400
+	AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnumFourHundredAndThree AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum = 403
+	AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnumFiveHundred         AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum = 500
 )
 
+func (e AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum) ToPointer() *AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
+	switch v {
+	case 400:
 		fallthrough
-	case "403":
+	case 403:
 		fallthrough
-	case "500":
-		*e = AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum(s)
+	case 500:
+		*e = AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

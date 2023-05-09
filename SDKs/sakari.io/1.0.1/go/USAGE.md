@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.TokenRequest{
-        ClientID: "00000000-0000-0000-0000-00000000000",
-        ClientSecret: "00000000-0000-0000-0000-00000000000",
-        GrantType: "client_credentials",
-    }
-
     ctx := context.Background()
-    res, err := s.Authentication.AuthToken(ctx, req)
+    res, err := s.Authentication.AuthToken(ctx, shared.TokenRequest{
+        ClientID: sdk.String("00000000-0000-0000-0000-00000000000"),
+        ClientSecret: sdk.String("00000000-0000-0000-0000-00000000000"),
+        GrantType: sdk.String("client_credentials"),
+    })
     if err != nil {
         log.Fatal(err)
     }

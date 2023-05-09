@@ -9,4 +9,6 @@ type SimulateAnAuthorizationOnACardParameters struct {
 	CardID *string `json:"card_id,omitempty"`
 	// The identifier of the Digital Wallet Token to be authorized.
 	DigitalWalletTokenID *string `json:"digital_wallet_token_id,omitempty"`
+	// The identifier of the Event Subscription to use. If provided, will override the default real time event subscription. Because you can only create one real time decision event subscription, you can use this field to route events to any specified event subscription for testing purposes.
+	EventSubscriptionID *string `json:"event_subscription_id,omitempty"`
 }

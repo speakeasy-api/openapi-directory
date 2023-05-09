@@ -16,17 +16,21 @@ const (
 	IssueCertificateXAmzTargetEnumAcmPrivateCaIssueCertificate IssueCertificateXAmzTargetEnum = "ACMPrivateCA.IssueCertificate"
 )
 
+func (e IssueCertificateXAmzTargetEnum) ToPointer() *IssueCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *IssueCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACMPrivateCA.IssueCertificate":
-		*e = IssueCertificateXAmzTargetEnum(s)
+		*e = IssueCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssueCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for IssueCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

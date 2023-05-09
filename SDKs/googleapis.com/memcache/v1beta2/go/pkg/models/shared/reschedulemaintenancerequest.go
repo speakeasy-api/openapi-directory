@@ -17,12 +17,16 @@ const (
 	RescheduleMaintenanceRequestRescheduleTypeEnumSpecificTime              RescheduleMaintenanceRequestRescheduleTypeEnum = "SPECIFIC_TIME"
 )
 
+func (e RescheduleMaintenanceRequestRescheduleTypeEnum) ToPointer() *RescheduleMaintenanceRequestRescheduleTypeEnum {
+	return &e
+}
+
 func (e *RescheduleMaintenanceRequestRescheduleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESCHEDULE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IMMEDIATE":
@@ -30,10 +34,10 @@ func (e *RescheduleMaintenanceRequestRescheduleTypeEnum) UnmarshalJSON(data []by
 	case "NEXT_AVAILABLE_WINDOW":
 		fallthrough
 	case "SPECIFIC_TIME":
-		*e = RescheduleMaintenanceRequestRescheduleTypeEnum(s)
+		*e = RescheduleMaintenanceRequestRescheduleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RescheduleMaintenanceRequestRescheduleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RescheduleMaintenanceRequestRescheduleTypeEnum: %v", v)
 	}
 }
 

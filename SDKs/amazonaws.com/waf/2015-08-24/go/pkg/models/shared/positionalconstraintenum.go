@@ -17,12 +17,16 @@ const (
 	PositionalConstraintEnumContainsWord PositionalConstraintEnum = "CONTAINS_WORD"
 )
 
+func (e PositionalConstraintEnum) ToPointer() *PositionalConstraintEnum {
+	return &e
+}
+
 func (e *PositionalConstraintEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXACTLY":
 		fallthrough
 	case "STARTS_WITH":
@@ -32,9 +36,9 @@ func (e *PositionalConstraintEnum) UnmarshalJSON(data []byte) error {
 	case "CONTAINS":
 		fallthrough
 	case "CONTAINS_WORD":
-		*e = PositionalConstraintEnum(s)
+		*e = PositionalConstraintEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PositionalConstraintEnum: %s", s)
+		return fmt.Errorf("invalid value for PositionalConstraintEnum: %v", v)
 	}
 }

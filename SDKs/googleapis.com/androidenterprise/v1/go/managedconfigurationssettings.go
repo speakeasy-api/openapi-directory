@@ -34,7 +34,10 @@ func newManagedconfigurationssettings(defaultClient, securityClient HTTPClient, 
 // AndroidenterpriseManagedconfigurationssettingsList - Lists all the managed configurations settings for the specified app.
 func (s *managedconfigurationssettings) AndroidenterpriseManagedconfigurationssettingsList(ctx context.Context, request operations.AndroidenterpriseManagedconfigurationssettingsListRequest, security operations.AndroidenterpriseManagedconfigurationssettingsListSecurity) (*operations.AndroidenterpriseManagedconfigurationssettingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/managedConfigurationsSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/managedConfigurationsSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

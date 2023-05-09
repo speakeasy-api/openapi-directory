@@ -14,18 +14,22 @@ const (
 	HostRecoveryEnumOff HostRecoveryEnum = "off"
 )
 
+func (e HostRecoveryEnum) ToPointer() *HostRecoveryEnum {
+	return &e
+}
+
 func (e *HostRecoveryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on":
 		fallthrough
 	case "off":
-		*e = HostRecoveryEnum(s)
+		*e = HostRecoveryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HostRecoveryEnum: %s", s)
+		return fmt.Errorf("invalid value for HostRecoveryEnum: %v", v)
 	}
 }

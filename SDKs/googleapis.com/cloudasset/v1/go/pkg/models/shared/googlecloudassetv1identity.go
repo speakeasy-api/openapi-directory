@@ -6,6 +6,6 @@ package shared
 type GoogleCloudAssetV1Identity struct {
 	// Represents the detailed state of an entity under analysis, such as a resource, an identity or an access.
 	AnalysisState *IamPolicyAnalysisState `json:"analysisState,omitempty"`
-	// The identity name in any form of members appear in [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding), such as: - user:foo@google.com - group:group1@google.com - serviceAccount:s1@prj1.iam.gserviceaccount.com - projectOwner:some_project_id - domain:google.com - allUsers - etc.
+	// The identity of members, formatted as appear in an [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding). For example, they might be formatted like the following: - user:foo@google.com - group:group1@google.com - serviceAccount:s1@prj1.iam.gserviceaccount.com - projectOwner:some_project_id - domain:google.com - allUsers
 	Name *string `json:"name,omitempty"`
 }

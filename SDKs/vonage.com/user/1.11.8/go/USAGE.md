@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.UserCtrlGetUserByIDRequest{
+    ctx := context.Background()
+    res, err := s.UserCtrlGetUserByID(ctx, operations.UserCtrlGetUserByIDRequest{
         AccountID: "corrupti",
         UserID: 5928.45,
-    }
-
-    ctx := context.Background()
-    res, err := s.UserCtrlGetUserByID(ctx, req, operations.UserCtrlGetUserByIDSecurity{
+    }, operations.UserCtrlGetUserByIDSecurity{
         BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {

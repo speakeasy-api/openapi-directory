@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/rev.ai/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -45,25 +43,25 @@ func main() {
 ## Available Resources and Operations
 
 
-### Account
+### [Account](docs/account/README.md)
 
-* `GetAccount` - Get Account
+* [GetAccount](docs/account/README.md#getaccount) - Get Account
 
-### Captions
+### [Captions](docs/captions/README.md)
 
-* `GetCaptions` - Get Captions
+* [GetCaptions](docs/captions/README.md#getcaptions) - Get Captions
 
-### Jobs
+### [Jobs](docs/jobs/README.md)
 
-* `DeleteJobByID` - Delete Job by Id
-* `GetJobByID` - Get Job By Id
-* `GetListOfJobs` - Get List of Jobs
-* `SubmitTranscriptionJobJSON` - Submit Transcription Job
-* `SubmitTranscriptionJobMultipart` - Submit Transcription Job
+* [DeleteJobByID](docs/jobs/README.md#deletejobbyid) - Delete Job by Id
+* [GetJobByID](docs/jobs/README.md#getjobbyid) - Get Job By Id
+* [GetListOfJobs](docs/jobs/README.md#getlistofjobs) - Get List of Jobs
+* [SubmitTranscriptionJobJSON](docs/jobs/README.md#submittranscriptionjobjson) - Submit Transcription Job
+* [SubmitTranscriptionJobMultipart](docs/jobs/README.md#submittranscriptionjobmultipart) - Submit Transcription Job
 
-### Transcript
+### [Transcript](docs/transcript/README.md)
 
-* `GetTranscriptByID` - Get Transcript By Id
+* [GetTranscriptByID](docs/transcript/README.md#gettranscriptbyid) - Get Transcript By Id
 <!-- End SDK Available Operations -->
 
 ### Maturity

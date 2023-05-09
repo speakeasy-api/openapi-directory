@@ -16,21 +16,25 @@ const (
 	WaterfallChartSpecStackedTypeEnumSequential                      WaterfallChartSpecStackedTypeEnum = "SEQUENTIAL"
 )
 
+func (e WaterfallChartSpecStackedTypeEnum) ToPointer() *WaterfallChartSpecStackedTypeEnum {
+	return &e
+}
+
 func (e *WaterfallChartSpecStackedTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WATERFALL_STACKED_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STACKED":
 		fallthrough
 	case "SEQUENTIAL":
-		*e = WaterfallChartSpecStackedTypeEnum(s)
+		*e = WaterfallChartSpecStackedTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WaterfallChartSpecStackedTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WaterfallChartSpecStackedTypeEnum: %v", v)
 	}
 }
 

@@ -17,42 +17,50 @@ const (
 	GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnumXML   GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum = "xml"
 )
 
+func (e GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum) ToPointer() *GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "jsonp":
 		fallthrough
 	case "xml":
-		*e = GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum(s)
+		*e = GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum: %v", v)
 	}
 }
 
 // GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum - Version of the service to call. The current version is 1
-type GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum string
+type GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum int64
 
 const (
-	GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnumOne GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum = "1"
+	GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnumOne GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum = 1
 )
 
+func (e GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum) ToPointer() *GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
-		*e = GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum(s)
+	switch v {
+	case 1:
+		*e = GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum: %v", v)
 	}
 }
 

@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -132,6 +133,7 @@ pkg/models/shared/clustertimeline.go
 pkg/models/shared/clusterstatechangereason.go
 pkg/models/shared/clusterstatechangereasoncodeenum.go
 pkg/models/shared/clusterstateenum.go
+pkg/models/shared/errordetail.go
 pkg/models/shared/scaledownbehaviorenum.go
 pkg/models/shared/repoupgradeonbootenum.go
 pkg/models/shared/placementgroupconfig.go
@@ -287,4 +289,5 @@ pkg/models/shared/terminatejobflowsinput.go
 pkg/models/shared/updatestudioinput.go
 pkg/models/shared/updatestudiosessionmappinginput.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

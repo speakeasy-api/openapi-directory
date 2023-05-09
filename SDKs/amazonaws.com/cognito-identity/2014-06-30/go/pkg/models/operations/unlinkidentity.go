@@ -16,17 +16,21 @@ const (
 	UnlinkIdentityXAmzTargetEnumAwsCognitoIdentityServiceUnlinkIdentity UnlinkIdentityXAmzTargetEnum = "AWSCognitoIdentityService.UnlinkIdentity"
 )
 
+func (e UnlinkIdentityXAmzTargetEnum) ToPointer() *UnlinkIdentityXAmzTargetEnum {
+	return &e
+}
+
 func (e *UnlinkIdentityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityService.UnlinkIdentity":
-		*e = UnlinkIdentityXAmzTargetEnum(s)
+		*e = UnlinkIdentityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UnlinkIdentityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UnlinkIdentityXAmzTargetEnum: %v", v)
 	}
 }
 

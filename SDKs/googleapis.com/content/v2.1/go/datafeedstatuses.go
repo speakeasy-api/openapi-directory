@@ -90,7 +90,10 @@ func (s *datafeedstatuses) ContentDatafeedstatusesCustombatch(ctx context.Contex
 // ContentDatafeedstatusesGet - Retrieves the status of a datafeed from your Merchant Center account.
 func (s *datafeedstatuses) ContentDatafeedstatusesGet(ctx context.Context, request operations.ContentDatafeedstatusesGetRequest, security operations.ContentDatafeedstatusesGetSecurity) (*operations.ContentDatafeedstatusesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeedstatuses/{datafeedId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeedstatuses/{datafeedId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *datafeedstatuses) ContentDatafeedstatusesGet(ctx context.Context, reque
 // ContentDatafeedstatusesList - Lists the statuses of the datafeeds in your Merchant Center account.
 func (s *datafeedstatuses) ContentDatafeedstatusesList(ctx context.Context, request operations.ContentDatafeedstatusesListRequest, security operations.ContentDatafeedstatusesListSecurity) (*operations.ContentDatafeedstatusesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeedstatuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/datafeedstatuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,12 +16,16 @@ const (
 	UplinkGbpsEnumUplink100G UplinkGbpsEnum = "UPLINK_100G"
 )
 
+func (e UplinkGbpsEnum) ToPointer() *UplinkGbpsEnum {
+	return &e
+}
+
 func (e *UplinkGbpsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPLINK_1G":
 		fallthrough
 	case "UPLINK_10G":
@@ -29,9 +33,9 @@ func (e *UplinkGbpsEnum) UnmarshalJSON(data []byte) error {
 	case "UPLINK_40G":
 		fallthrough
 	case "UPLINK_100G":
-		*e = UplinkGbpsEnum(s)
+		*e = UplinkGbpsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UplinkGbpsEnum: %s", s)
+		return fmt.Errorf("invalid value for UplinkGbpsEnum: %v", v)
 	}
 }

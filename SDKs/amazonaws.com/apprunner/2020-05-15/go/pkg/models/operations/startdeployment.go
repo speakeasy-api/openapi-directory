@@ -16,17 +16,21 @@ const (
 	StartDeploymentXAmzTargetEnumAppRunnerStartDeployment StartDeploymentXAmzTargetEnum = "AppRunner.StartDeployment"
 )
 
+func (e StartDeploymentXAmzTargetEnum) ToPointer() *StartDeploymentXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartDeploymentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppRunner.StartDeployment":
-		*e = StartDeploymentXAmzTargetEnum(s)
+		*e = StartDeploymentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartDeploymentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartDeploymentXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -2,35 +2,36 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ServicecontrolServicesAllocateQuotaRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Services.ServicecontrolServicesAllocateQuota(ctx, operations.ServicecontrolServicesAllocateQuotaRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AllocateQuotaRequest: &shared.AllocateQuotaRequest{
             AllocateOperation: &shared.QuotaOperation{
-                ConsumerID: "provident",
+                ConsumerID: sdk.String("provident"),
                 Labels: map[string]string{
                     "quibusdam": "unde",
                     "nulla": "corrupti",
                     "illum": "vel",
                 },
-                MethodName: "error",
-                OperationID: "deserunt",
+                MethodName: sdk.String("error"),
+                OperationID: sdk.String("deserunt"),
                 QuotaMetrics: []shared.MetricValueSet{
                     shared.MetricValueSet{
-                        MetricName: "iure",
+                        MetricName: sdk.String("iure"),
                         MetricValues: []shared.MetricValue{
                             shared.MetricValue{
-                                BoolValue: false,
+                                BoolValue: sdk.Bool(false),
                                 DistributionValue: &shared.Distribution{
                                     BucketCounts: []string{
                                         "ipsa",
@@ -38,7 +39,7 @@ func main() {
                                         "tempora",
                                         "suscipit",
                                     },
-                                    Count: "molestiae",
+                                    Count: sdk.String("molestiae"),
                                     Exemplars: []shared.Exemplar{
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -64,8 +65,8 @@ func main() {
                                                     "officia": "occaecati",
                                                 },
                                             },
-                                            Timestamp: "fugit",
-                                            Value: 5373.73,
+                                            Timestamp: sdk.String("fugit"),
+                                            Value: sdk.Float64(5373.73),
                                         },
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -89,8 +90,8 @@ func main() {
                                                     "in": "corporis",
                                                 },
                                             },
-                                            Timestamp: "iste",
-                                            Value: 4370.32,
+                                            Timestamp: sdk.String("iste"),
+                                            Value: sdk.Float64(4370.32),
                                         },
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -111,8 +112,8 @@ func main() {
                                                     "iure": "culpa",
                                                 },
                                             },
-                                            Timestamp: "doloribus",
-                                            Value: 9589.5,
+                                            Timestamp: sdk.String("doloribus"),
+                                            Value: sdk.Float64(9589.5),
                                         },
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -122,8 +123,8 @@ func main() {
                                                     "mollitia": "occaecati",
                                                 },
                                             },
-                                            Timestamp: "numquam",
-                                            Value: 4143.69,
+                                            Timestamp: sdk.String("numquam"),
+                                            Value: sdk.Float64(4143.69),
                                         },
                                     },
                                     ExplicitBuckets: &shared.ExplicitBuckets{
@@ -133,23 +134,23 @@ func main() {
                                         },
                                     },
                                     ExponentialBuckets: &shared.ExponentialBuckets{
-                                        GrowthFactor: 6235.1,
-                                        NumFiniteBuckets: 158969,
-                                        Scale: 3380.07,
+                                        GrowthFactor: sdk.Float64(6235.1),
+                                        NumFiniteBuckets: sdk.Int(158969),
+                                        Scale: sdk.Float64(3380.07),
                                     },
                                     LinearBuckets: &shared.LinearBuckets{
-                                        NumFiniteBuckets: 110375,
-                                        Offset: 6747.52,
-                                        Width: 6563.3,
+                                        NumFiniteBuckets: sdk.Int(110375),
+                                        Offset: sdk.Float64(6747.52),
+                                        Width: sdk.Float64(6563.3),
                                     },
-                                    Maximum: 3172.02,
-                                    Mean: 1381.83,
-                                    Minimum: 7783.46,
-                                    SumOfSquaredDeviation: 1965.82,
+                                    Maximum: sdk.Float64(3172.02),
+                                    Mean: sdk.Float64(1381.83),
+                                    Minimum: sdk.Float64(7783.46),
+                                    SumOfSquaredDeviation: sdk.Float64(1965.82),
                                 },
-                                DoubleValue: 9495.72,
-                                EndTime: "ipsam",
-                                Int64Value: "id",
+                                DoubleValue: sdk.Float64(9495.72),
+                                EndTime: sdk.String("ipsam"),
+                                Int64Value: sdk.String("id"),
                                 Labels: map[string]string{
                                     "aut": "quasi",
                                     "error": "temporibus",
@@ -157,22 +158,22 @@ func main() {
                                     "reiciendis": "voluptatibus",
                                 },
                                 MoneyValue: &shared.Money{
-                                    CurrencyCode: "vero",
-                                    Nanos: 468651,
-                                    Units: "praesentium",
+                                    CurrencyCode: sdk.String("vero"),
+                                    Nanos: sdk.Int(468651),
+                                    Units: sdk.String("praesentium"),
                                 },
-                                StartTime: "voluptatibus",
-                                StringValue: "ipsa",
+                                StartTime: sdk.String("voluptatibus"),
+                                StringValue: sdk.String("ipsa"),
                             },
                             shared.MetricValue{
-                                BoolValue: false,
+                                BoolValue: sdk.Bool(false),
                                 DistributionValue: &shared.Distribution{
                                     BucketCounts: []string{
                                         "voluptate",
                                         "cum",
                                         "perferendis",
                                     },
-                                    Count: "doloremque",
+                                    Count: sdk.String("doloremque"),
                                     Exemplars: []shared.Exemplar{
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -187,8 +188,8 @@ func main() {
                                                     "ipsum": "quidem",
                                                 },
                                             },
-                                            Timestamp: "molestias",
-                                            Value: 5666.02,
+                                            Timestamp: sdk.String("molestias"),
+                                            Value: sdk.Float64(5666.02),
                                         },
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -212,8 +213,8 @@ func main() {
                                                     "perferendis": "magni",
                                                 },
                                             },
-                                            Timestamp: "assumenda",
-                                            Value: 3698.08,
+                                            Timestamp: sdk.String("assumenda"),
+                                            Value: sdk.Float64(3698.08),
                                         },
                                     },
                                     ExplicitBuckets: &shared.ExplicitBuckets{
@@ -222,23 +223,23 @@ func main() {
                                         },
                                     },
                                     ExponentialBuckets: &shared.ExponentialBuckets{
-                                        GrowthFactor: 6778.17,
-                                        NumFiniteBuckets: 569618,
-                                        Scale: 2700.08,
+                                        GrowthFactor: sdk.Float64(6778.17),
+                                        NumFiniteBuckets: sdk.Int(569618),
+                                        Scale: sdk.Float64(2700.08),
                                     },
                                     LinearBuckets: &shared.LinearBuckets{
-                                        NumFiniteBuckets: 703737,
-                                        Offset: 7351.94,
-                                        Width: 2884.76,
+                                        NumFiniteBuckets: sdk.Int(703737),
+                                        Offset: sdk.Float64(7351.94),
+                                        Width: sdk.Float64(2884.76),
                                     },
-                                    Maximum: 9621.89,
-                                    Mean: 4332.88,
-                                    Minimum: 2487.53,
-                                    SumOfSquaredDeviation: 7561.07,
+                                    Maximum: sdk.Float64(9621.89),
+                                    Mean: sdk.Float64(4332.88),
+                                    Minimum: sdk.Float64(2487.53),
+                                    SumOfSquaredDeviation: sdk.Float64(7561.07),
                                 },
-                                DoubleValue: 5761.57,
-                                EndTime: "aliquid",
-                                Int64Value: "provident",
+                                DoubleValue: sdk.Float64(5761.57),
+                                EndTime: sdk.String("aliquid"),
+                                Int64Value: sdk.String("provident"),
                                 Labels: map[string]string{
                                     "sint": "officia",
                                     "dolor": "debitis",
@@ -246,26 +247,26 @@ func main() {
                                     "in": "in",
                                 },
                                 MoneyValue: &shared.Money{
-                                    CurrencyCode: "illum",
-                                    Nanos: 978571,
-                                    Units: "rerum",
+                                    CurrencyCode: sdk.String("illum"),
+                                    Nanos: sdk.Int(978571),
+                                    Units: sdk.String("rerum"),
                                 },
-                                StartTime: "dicta",
-                                StringValue: "magnam",
+                                StartTime: sdk.String("dicta"),
+                                StringValue: sdk.String("magnam"),
                             },
                         },
                     },
                     shared.MetricValueSet{
-                        MetricName: "cumque",
+                        MetricName: sdk.String("cumque"),
                         MetricValues: []shared.MetricValue{
                             shared.MetricValue{
-                                BoolValue: false,
+                                BoolValue: sdk.Bool(false),
                                 DistributionValue: &shared.Distribution{
                                     BucketCounts: []string{
                                         "aliquid",
                                         "laborum",
                                     },
-                                    Count: "accusamus",
+                                    Count: sdk.String("accusamus"),
                                     Exemplars: []shared.Exemplar{
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -283,8 +284,8 @@ func main() {
                                                     "omnis": "molestiae",
                                                 },
                                             },
-                                            Timestamp: "perferendis",
-                                            Value: 4701.32,
+                                            Timestamp: sdk.String("perferendis"),
+                                            Value: sdk.Float64(4701.32),
                                         },
                                     },
                                     ExplicitBuckets: &shared.ExplicitBuckets{
@@ -294,44 +295,44 @@ func main() {
                                         },
                                     },
                                     ExponentialBuckets: &shared.ExponentialBuckets{
-                                        GrowthFactor: 2879.91,
-                                        NumFiniteBuckets: 290077,
-                                        Scale: 3834.62,
+                                        GrowthFactor: sdk.Float64(2879.91),
+                                        NumFiniteBuckets: sdk.Int(290077),
+                                        Scale: sdk.Float64(3834.62),
                                     },
                                     LinearBuckets: &shared.LinearBuckets{
-                                        NumFiniteBuckets: 618016,
-                                        Offset: 7491.7,
-                                        Width: 4287.69,
+                                        NumFiniteBuckets: sdk.Int(618016),
+                                        Offset: sdk.Float64(7491.7),
+                                        Width: sdk.Float64(4287.69),
                                     },
-                                    Maximum: 8784.53,
-                                    Mean: 1354.74,
-                                    Minimum: 1028.63,
-                                    SumOfSquaredDeviation: 2982.82,
+                                    Maximum: sdk.Float64(8784.53),
+                                    Mean: sdk.Float64(1354.74),
+                                    Minimum: sdk.Float64(1028.63),
+                                    SumOfSquaredDeviation: sdk.Float64(2982.82),
                                 },
-                                DoubleValue: 923.73,
-                                EndTime: "excepturi",
-                                Int64Value: "ullam",
+                                DoubleValue: sdk.Float64(923.73),
+                                EndTime: sdk.String("excepturi"),
+                                Int64Value: sdk.String("ullam"),
                                 Labels: map[string]string{
                                     "quos": "sint",
                                     "accusantium": "mollitia",
                                     "reiciendis": "mollitia",
                                 },
                                 MoneyValue: &shared.Money{
-                                    CurrencyCode: "ad",
-                                    Nanos: 431418,
-                                    Units: "dolor",
+                                    CurrencyCode: sdk.String("ad"),
+                                    Nanos: sdk.Int(431418),
+                                    Units: sdk.String("dolor"),
                                 },
-                                StartTime: "necessitatibus",
-                                StringValue: "odit",
+                                StartTime: sdk.String("necessitatibus"),
+                                StringValue: sdk.String("odit"),
                             },
                             shared.MetricValue{
-                                BoolValue: false,
+                                BoolValue: sdk.Bool(false),
                                 DistributionValue: &shared.Distribution{
                                     BucketCounts: []string{
                                         "quasi",
                                         "iure",
                                     },
-                                    Count: "doloribus",
+                                    Count: sdk.String("doloribus"),
                                     Exemplars: []shared.Exemplar{
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -346,8 +347,8 @@ func main() {
                                                     "sed": "saepe",
                                                 },
                                             },
-                                            Timestamp: "pariatur",
-                                            Value: 375.59,
+                                            Timestamp: sdk.String("pariatur"),
+                                            Value: sdk.Float64(375.59),
                                         },
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -357,8 +358,8 @@ func main() {
                                                     "illum": "pariatur",
                                                 },
                                             },
-                                            Timestamp: "maxime",
-                                            Value: 4113.97,
+                                            Timestamp: sdk.String("maxime"),
+                                            Value: sdk.Float64(4113.97),
                                         },
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -373,8 +374,8 @@ func main() {
                                                     "nam": "eaque",
                                                 },
                                             },
-                                            Timestamp: "pariatur",
-                                            Value: 3654.96,
+                                            Timestamp: sdk.String("pariatur"),
+                                            Value: sdk.Float64(3654.96),
                                         },
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -394,8 +395,8 @@ func main() {
                                                     "eos": "perferendis",
                                                 },
                                             },
-                                            Timestamp: "dolores",
-                                            Value: 7936.98,
+                                            Timestamp: sdk.String("dolores"),
+                                            Value: sdk.Float64(7936.98),
                                         },
                                     },
                                     ExplicitBuckets: &shared.ExplicitBuckets{
@@ -405,38 +406,38 @@ func main() {
                                         },
                                     },
                                     ExponentialBuckets: &shared.ExponentialBuckets{
-                                        GrowthFactor: 3453.52,
-                                        NumFiniteBuckets: 944120,
-                                        Scale: 9280.82,
+                                        GrowthFactor: sdk.Float64(3453.52),
+                                        NumFiniteBuckets: sdk.Int(944120),
+                                        Scale: sdk.Float64(9280.82),
                                     },
                                     LinearBuckets: &shared.LinearBuckets{
-                                        NumFiniteBuckets: 608253,
-                                        Offset: 7044.15,
-                                        Width: 5966.56,
+                                        NumFiniteBuckets: sdk.Int(608253),
+                                        Offset: sdk.Float64(7044.15),
+                                        Width: sdk.Float64(5966.56),
                                     },
-                                    Maximum: 318.38,
-                                    Mean: 7836.45,
-                                    Minimum: 1646.94,
-                                    SumOfSquaredDeviation: 5000.26,
+                                    Maximum: sdk.Float64(318.38),
+                                    Mean: sdk.Float64(7836.45),
+                                    Minimum: sdk.Float64(1646.94),
+                                    SumOfSquaredDeviation: sdk.Float64(5000.26),
                                 },
-                                DoubleValue: 6214.79,
-                                EndTime: "eaque",
-                                Int64Value: "occaecati",
+                                DoubleValue: sdk.Float64(6214.79),
+                                EndTime: sdk.String("eaque"),
+                                Int64Value: sdk.String("occaecati"),
                                 Labels: map[string]string{
                                     "adipisci": "asperiores",
                                     "earum": "modi",
                                     "iste": "dolorum",
                                 },
                                 MoneyValue: &shared.Money{
-                                    CurrencyCode: "deleniti",
-                                    Nanos: 864282,
-                                    Units: "provident",
+                                    CurrencyCode: sdk.String("deleniti"),
+                                    Nanos: sdk.Int(864282),
+                                    Units: sdk.String("provident"),
                                 },
-                                StartTime: "nobis",
-                                StringValue: "libero",
+                                StartTime: sdk.String("nobis"),
+                                StringValue: sdk.String("libero"),
                             },
                             shared.MetricValue{
-                                BoolValue: false,
+                                BoolValue: sdk.Bool(false),
                                 DistributionValue: &shared.Distribution{
                                     BucketCounts: []string{
                                         "quaerat",
@@ -444,7 +445,7 @@ func main() {
                                         "aliquid",
                                         "dolorem",
                                     },
-                                    Count: "dolorem",
+                                    Count: sdk.String("dolorem"),
                                     Exemplars: []shared.Exemplar{
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -452,8 +453,8 @@ func main() {
                                                     "hic": "excepturi",
                                                 },
                                             },
-                                            Timestamp: "cum",
-                                            Value: 4521.09,
+                                            Timestamp: sdk.String("cum"),
+                                            Value: sdk.Float64(4521.09),
                                         },
                                     },
                                     ExplicitBuckets: &shared.ExplicitBuckets{
@@ -463,42 +464,42 @@ func main() {
                                         },
                                     },
                                     ExponentialBuckets: &shared.ExponentialBuckets{
-                                        GrowthFactor: 6805.45,
-                                        NumFiniteBuckets: 254356,
-                                        Scale: 852.95,
+                                        GrowthFactor: sdk.Float64(6805.45),
+                                        NumFiniteBuckets: sdk.Int(254356),
+                                        Scale: sdk.Float64(852.95),
                                     },
                                     LinearBuckets: &shared.LinearBuckets{
-                                        NumFiniteBuckets: 58029,
-                                        Offset: 564.18,
-                                        Width: 4344.17,
+                                        NumFiniteBuckets: sdk.Int(58029),
+                                        Offset: sdk.Float64(564.18),
+                                        Width: sdk.Float64(4344.17),
                                     },
-                                    Maximum: 4878.38,
-                                    Mean: 3117.96,
-                                    Minimum: 8810.05,
-                                    SumOfSquaredDeviation: 6963.44,
+                                    Maximum: sdk.Float64(4878.38),
+                                    Mean: sdk.Float64(3117.96),
+                                    Minimum: sdk.Float64(8810.05),
+                                    SumOfSquaredDeviation: sdk.Float64(6963.44),
                                 },
-                                DoubleValue: 9764.05,
-                                EndTime: "voluptas",
-                                Int64Value: "natus",
+                                DoubleValue: sdk.Float64(9764.05),
+                                EndTime: sdk.String("voluptas"),
+                                Int64Value: sdk.String("natus"),
                                 Labels: map[string]string{
                                     "atque": "sit",
                                 },
                                 MoneyValue: &shared.Money{
-                                    CurrencyCode: "fugiat",
-                                    Nanos: 67249,
-                                    Units: "soluta",
+                                    CurrencyCode: sdk.String("fugiat"),
+                                    Nanos: sdk.Int(67249),
+                                    Units: sdk.String("soluta"),
                                 },
-                                StartTime: "dolorum",
-                                StringValue: "iusto",
+                                StartTime: sdk.String("dolorum"),
+                                StringValue: sdk.String("iusto"),
                             },
                             shared.MetricValue{
-                                BoolValue: false,
+                                BoolValue: sdk.Bool(false),
                                 DistributionValue: &shared.Distribution{
                                     BucketCounts: []string{
                                         "dolorum",
                                         "deleniti",
                                     },
-                                    Count: "omnis",
+                                    Count: sdk.String("omnis"),
                                     Exemplars: []shared.Exemplar{
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -516,8 +517,8 @@ func main() {
                                                     "deserunt": "provident",
                                                 },
                                             },
-                                            Timestamp: "minima",
-                                            Value: 8310.49,
+                                            Timestamp: sdk.String("minima"),
+                                            Value: sdk.Float64(8310.49),
                                         },
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -539,8 +540,8 @@ func main() {
                                                     "sapiente": "totam",
                                                 },
                                             },
-                                            Timestamp: "nihil",
-                                            Value: 256.62,
+                                            Timestamp: sdk.String("nihil"),
+                                            Value: sdk.Float64(256.62),
                                         },
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -558,8 +559,8 @@ func main() {
                                                     "laborum": "totam",
                                                 },
                                             },
-                                            Timestamp: "incidunt",
-                                            Value: 1320.68,
+                                            Timestamp: sdk.String("incidunt"),
+                                            Value: sdk.Float64(1320.68),
                                         },
                                         shared.Exemplar{
                                             Attachments: []map[string]interface{}{
@@ -569,8 +570,8 @@ func main() {
                                                     "temporibus": "qui",
                                                 },
                                             },
-                                            Timestamp: "neque",
-                                            Value: 1448.47,
+                                            Timestamp: sdk.String("neque"),
+                                            Value: sdk.Float64(1448.47),
                                         },
                                     },
                                     ExplicitBuckets: &shared.ExplicitBuckets{
@@ -579,58 +580,55 @@ func main() {
                                         },
                                     },
                                     ExponentialBuckets: &shared.ExponentialBuckets{
-                                        GrowthFactor: 1248.33,
-                                        NumFiniteBuckets: 355613,
-                                        Scale: 7220.81,
+                                        GrowthFactor: sdk.Float64(1248.33),
+                                        NumFiniteBuckets: sdk.Int(355613),
+                                        Scale: sdk.Float64(7220.81),
                                     },
                                     LinearBuckets: &shared.LinearBuckets{
-                                        NumFiniteBuckets: 940432,
-                                        Offset: 304.52,
-                                        Width: 7653.26,
+                                        NumFiniteBuckets: sdk.Int(940432),
+                                        Offset: sdk.Float64(304.52),
+                                        Width: sdk.Float64(7653.26),
                                     },
-                                    Maximum: 7469.94,
-                                    Mean: 7486.64,
-                                    Minimum: 925.96,
-                                    SumOfSquaredDeviation: 9037.2,
+                                    Maximum: sdk.Float64(7469.94),
+                                    Mean: sdk.Float64(7486.64),
+                                    Minimum: sdk.Float64(925.96),
+                                    SumOfSquaredDeviation: sdk.Float64(9037.2),
                                 },
-                                DoubleValue: 2174.5,
-                                EndTime: "veritatis",
-                                Int64Value: "nobis",
+                                DoubleValue: sdk.Float64(2174.5),
+                                EndTime: sdk.String("veritatis"),
+                                Int64Value: sdk.String("nobis"),
                                 Labels: map[string]string{
                                     "tempore": "cupiditate",
                                     "aperiam": "delectus",
                                     "dolorem": "dolore",
                                 },
                                 MoneyValue: &shared.Money{
-                                    CurrencyCode: "labore",
-                                    Nanos: 240829,
-                                    Units: "dolorum",
+                                    CurrencyCode: sdk.String("labore"),
+                                    Nanos: sdk.Int(240829),
+                                    Units: sdk.String("dolorum"),
                                 },
-                                StartTime: "architecto",
-                                StringValue: "quae",
+                                StartTime: sdk.String("architecto"),
+                                StringValue: sdk.String("quae"),
                             },
                         },
                     },
                 },
-                QuotaMode: "UNSPECIFIED",
+                QuotaMode: shared.QuotaOperationQuotaModeEnumUnspecified.ToPointer(),
             },
-            ServiceConfigID: "quas",
+            ServiceConfigID: sdk.String("quas"),
         },
-        AccessToken: "itaque",
-        Alt: "json",
-        Callback: "est",
-        Fields: "repellendus",
-        Key: "porro",
-        OauthToken: "doloribus",
-        PrettyPrint: false,
-        QuotaUser: "ut",
+        AccessToken: sdk.String("itaque"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("est"),
+        Fields: sdk.String("repellendus"),
+        Key: sdk.String("porro"),
+        OauthToken: sdk.String("doloribus"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("ut"),
         ServiceName: "facilis",
-        UploadType: "cupiditate",
-        UploadProtocol: "qui",
-    }
-
-    ctx := context.Background()
-    res, err := s.Services.ServicecontrolServicesAllocateQuota(ctx, req, operations.ServicecontrolServicesAllocateQuotaSecurity{
+        UploadType: sdk.String("cupiditate"),
+        UploadProtocol: sdk.String("qui"),
+    }, operations.ServicecontrolServicesAllocateQuotaSecurity{
         Option1: &operations.ServicecontrolServicesAllocateQuotaSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

@@ -32,21 +32,25 @@ const (
 	BloggerPagesListStatusEnumSoftTrashed BloggerPagesListStatusEnum = "SOFT_TRASHED"
 )
 
+func (e BloggerPagesListStatusEnum) ToPointer() *BloggerPagesListStatusEnum {
+	return &e
+}
+
 func (e *BloggerPagesListStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "DRAFT":
 		fallthrough
 	case "SOFT_TRASHED":
-		*e = BloggerPagesListStatusEnum(s)
+		*e = BloggerPagesListStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerPagesListStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerPagesListStatusEnum: %v", v)
 	}
 }
 
@@ -60,12 +64,16 @@ const (
 	BloggerPagesListViewEnumAdmin               BloggerPagesListViewEnum = "ADMIN"
 )
 
+func (e BloggerPagesListViewEnum) ToPointer() *BloggerPagesListViewEnum {
+	return &e
+}
+
 func (e *BloggerPagesListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_TYPE_UNSPECIFIED":
 		fallthrough
 	case "READER":
@@ -73,10 +81,10 @@ func (e *BloggerPagesListViewEnum) UnmarshalJSON(data []byte) error {
 	case "AUTHOR":
 		fallthrough
 	case "ADMIN":
-		*e = BloggerPagesListViewEnum(s)
+		*e = BloggerPagesListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerPagesListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerPagesListViewEnum: %v", v)
 	}
 }
 

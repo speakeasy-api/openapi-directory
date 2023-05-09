@@ -16,12 +16,16 @@ const (
 	ResourceRuntimePoliciesEnumUpdateAlways   ResourceRuntimePoliciesEnum = "UPDATE_ALWAYS"
 )
 
+func (e ResourceRuntimePoliciesEnum) ToPointer() *ResourceRuntimePoliciesEnum {
+	return &e
+}
+
 func (e *ResourceRuntimePoliciesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE":
 		fallthrough
 	case "DELETE":
@@ -29,10 +33,10 @@ func (e *ResourceRuntimePoliciesEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATE_ON_CHANGE":
 		fallthrough
 	case "UPDATE_ALWAYS":
-		*e = ResourceRuntimePoliciesEnum(s)
+		*e = ResourceRuntimePoliciesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceRuntimePoliciesEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceRuntimePoliciesEnum: %v", v)
 	}
 }
 
@@ -69,12 +73,16 @@ const (
 	ResourceWarningsCodeEnumInvalidHealthCheckForDynamicWieghtedLb ResourceWarningsCodeEnum = "INVALID_HEALTH_CHECK_FOR_DYNAMIC_WIEGHTED_LB"
 )
 
+func (e ResourceWarningsCodeEnum) ToPointer() *ResourceWarningsCodeEnum {
+	return &e
+}
+
 func (e *ResourceWarningsCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPRECATED_RESOURCE_USED":
 		fallthrough
 	case "NO_RESULTS_ON_PAGE":
@@ -128,10 +136,10 @@ func (e *ResourceWarningsCodeEnum) UnmarshalJSON(data []byte) error {
 	case "NEXT_HOP_INSTANCE_HAS_NO_IPV6_INTERFACE":
 		fallthrough
 	case "INVALID_HEALTH_CHECK_FOR_DYNAMIC_WIEGHTED_LB":
-		*e = ResourceWarningsCodeEnum(s)
+		*e = ResourceWarningsCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceWarningsCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceWarningsCodeEnum: %v", v)
 	}
 }
 

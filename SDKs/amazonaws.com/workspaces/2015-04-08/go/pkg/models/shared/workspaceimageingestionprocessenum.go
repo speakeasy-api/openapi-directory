@@ -19,12 +19,16 @@ const (
 	WorkspaceImageIngestionProcessEnumByolGraphicsG4DnByop WorkspaceImageIngestionProcessEnum = "BYOL_GRAPHICS_G4DN_BYOP"
 )
 
+func (e WorkspaceImageIngestionProcessEnum) ToPointer() *WorkspaceImageIngestionProcessEnum {
+	return &e
+}
+
 func (e *WorkspaceImageIngestionProcessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BYOL_REGULAR":
 		fallthrough
 	case "BYOL_GRAPHICS":
@@ -38,9 +42,9 @@ func (e *WorkspaceImageIngestionProcessEnum) UnmarshalJSON(data []byte) error {
 	case "BYOL_REGULAR_BYOP":
 		fallthrough
 	case "BYOL_GRAPHICS_G4DN_BYOP":
-		*e = WorkspaceImageIngestionProcessEnum(s)
+		*e = WorkspaceImageIngestionProcessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkspaceImageIngestionProcessEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkspaceImageIngestionProcessEnum: %v", v)
 	}
 }

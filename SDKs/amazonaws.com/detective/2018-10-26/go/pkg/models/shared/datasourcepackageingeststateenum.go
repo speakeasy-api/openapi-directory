@@ -15,20 +15,24 @@ const (
 	DatasourcePackageIngestStateEnumDisabled DatasourcePackageIngestStateEnum = "DISABLED"
 )
 
+func (e DatasourcePackageIngestStateEnum) ToPointer() *DatasourcePackageIngestStateEnum {
+	return &e
+}
+
 func (e *DatasourcePackageIngestStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STARTED":
 		fallthrough
 	case "STOPPED":
 		fallthrough
 	case "DISABLED":
-		*e = DatasourcePackageIngestStateEnum(s)
+		*e = DatasourcePackageIngestStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatasourcePackageIngestStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DatasourcePackageIngestStateEnum: %v", v)
 	}
 }

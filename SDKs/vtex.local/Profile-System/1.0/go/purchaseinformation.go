@@ -36,7 +36,10 @@ func newPurchaseInformation(defaultClient, securityClient HTTPClient, serverURL,
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *purchaseInformation) CreatePurchaseInformation(ctx context.Context, request operations.CreatePurchaseInformationRequest) (*operations.CreatePurchaseInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/purchase-info", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/purchase-info", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *purchaseInformation) CreatePurchaseInformation(ctx context.Context, req
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *purchaseInformation) DeletePurchaseInformation(ctx context.Context, request operations.DeletePurchaseInformationRequest) (*operations.DeletePurchaseInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/purchase-info", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/purchase-info", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -142,7 +148,10 @@ func (s *purchaseInformation) DeletePurchaseInformation(ctx context.Context, req
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *purchaseInformation) GetPurchaseInformation(ctx context.Context, request operations.GetPurchaseInformationRequest) (*operations.GetPurchaseInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/purchase-info", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/purchase-info", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -195,7 +204,10 @@ func (s *purchaseInformation) GetPurchaseInformation(ctx context.Context, reques
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *purchaseInformation) GetUnmaskedPurchaseInformation(ctx context.Context, request operations.GetUnmaskedPurchaseInformationRequest) (*operations.GetUnmaskedPurchaseInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/purchase-info/unmask", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/purchase-info/unmask", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -244,7 +256,10 @@ func (s *purchaseInformation) GetUnmaskedPurchaseInformation(ctx context.Context
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *purchaseInformation) UpdatePurchaseInformation(ctx context.Context, request operations.UpdatePurchaseInformationRequest) (*operations.UpdatePurchaseInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/purchase-info", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/purchase-info", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

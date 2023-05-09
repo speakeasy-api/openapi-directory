@@ -85,7 +85,10 @@ func (s *serviceGroups) GetConsumerV1Servicegroups(ctx context.Context, request 
 // <p>Use this endpoint to return a <b>Service Group</b> object. A valid <b>serviceGroup id</b> is required. Find serviceGroup id's by using the <i>GET /consumer/v1/serviceGroups</i> endpoint.</p>
 func (s *serviceGroups) GetConsumerV1ServicegroupsID(ctx context.Context, request operations.GetConsumerV1ServicegroupsIDRequest) (*operations.GetConsumerV1ServicegroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/servicegroups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/consumer/v1/servicegroups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

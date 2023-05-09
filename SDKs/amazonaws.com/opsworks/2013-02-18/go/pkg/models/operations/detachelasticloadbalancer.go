@@ -16,17 +16,21 @@ const (
 	DetachElasticLoadBalancerXAmzTargetEnumOpsWorks20130218DetachElasticLoadBalancer DetachElasticLoadBalancerXAmzTargetEnum = "OpsWorks_20130218.DetachElasticLoadBalancer"
 )
 
+func (e DetachElasticLoadBalancerXAmzTargetEnum) ToPointer() *DetachElasticLoadBalancerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetachElasticLoadBalancerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DetachElasticLoadBalancer":
-		*e = DetachElasticLoadBalancerXAmzTargetEnum(s)
+		*e = DetachElasticLoadBalancerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetachElasticLoadBalancerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetachElasticLoadBalancerXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -22,19 +22,23 @@ const (
 	AndroidpublisherEditsDeobfuscationfilesUploadDeobfuscationFileTypeEnumProguard   AndroidpublisherEditsDeobfuscationfilesUploadDeobfuscationFileTypeEnum = "proguard"
 )
 
+func (e AndroidpublisherEditsDeobfuscationfilesUploadDeobfuscationFileTypeEnum) ToPointer() *AndroidpublisherEditsDeobfuscationfilesUploadDeobfuscationFileTypeEnum {
+	return &e
+}
+
 func (e *AndroidpublisherEditsDeobfuscationfilesUploadDeobfuscationFileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nativeCode":
 		fallthrough
 	case "proguard":
-		*e = AndroidpublisherEditsDeobfuscationfilesUploadDeobfuscationFileTypeEnum(s)
+		*e = AndroidpublisherEditsDeobfuscationfilesUploadDeobfuscationFileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidpublisherEditsDeobfuscationfilesUploadDeobfuscationFileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidpublisherEditsDeobfuscationfilesUploadDeobfuscationFileTypeEnum: %v", v)
 	}
 }
 

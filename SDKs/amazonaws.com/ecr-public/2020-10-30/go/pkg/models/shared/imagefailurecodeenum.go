@@ -19,12 +19,16 @@ const (
 	ImageFailureCodeEnumKmsError                      ImageFailureCodeEnum = "KmsError"
 )
 
+func (e ImageFailureCodeEnum) ToPointer() *ImageFailureCodeEnum {
+	return &e
+}
+
 func (e *ImageFailureCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InvalidImageDigest":
 		fallthrough
 	case "InvalidImageTag":
@@ -38,9 +42,9 @@ func (e *ImageFailureCodeEnum) UnmarshalJSON(data []byte) error {
 	case "ImageReferencedByManifestList":
 		fallthrough
 	case "KmsError":
-		*e = ImageFailureCodeEnum(s)
+		*e = ImageFailureCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageFailureCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageFailureCodeEnum: %v", v)
 	}
 }

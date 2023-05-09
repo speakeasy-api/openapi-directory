@@ -23,19 +23,23 @@ const (
 	GetHookEventsSubjectTypeSubjectTypeEnumWorkspace  GetHookEventsSubjectTypeSubjectTypeEnum = "workspace"
 )
 
+func (e GetHookEventsSubjectTypeSubjectTypeEnum) ToPointer() *GetHookEventsSubjectTypeSubjectTypeEnum {
+	return &e
+}
+
 func (e *GetHookEventsSubjectTypeSubjectTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "repository":
 		fallthrough
 	case "workspace":
-		*e = GetHookEventsSubjectTypeSubjectTypeEnum(s)
+		*e = GetHookEventsSubjectTypeSubjectTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHookEventsSubjectTypeSubjectTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHookEventsSubjectTypeSubjectTypeEnum: %v", v)
 	}
 }
 

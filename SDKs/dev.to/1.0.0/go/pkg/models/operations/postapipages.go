@@ -18,12 +18,16 @@ const (
 	PostAPIPagesRequestBodyTemplateEnumJSON             PostAPIPagesRequestBodyTemplateEnum = "json"
 )
 
+func (e PostAPIPagesRequestBodyTemplateEnum) ToPointer() *PostAPIPagesRequestBodyTemplateEnum {
+	return &e
+}
+
 func (e *PostAPIPagesRequestBodyTemplateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "contained":
 		fallthrough
 	case "full_within_layout":
@@ -31,10 +35,10 @@ func (e *PostAPIPagesRequestBodyTemplateEnum) UnmarshalJSON(data []byte) error {
 	case "nav_bar_included":
 		fallthrough
 	case "json":
-		*e = PostAPIPagesRequestBodyTemplateEnum(s)
+		*e = PostAPIPagesRequestBodyTemplateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAPIPagesRequestBodyTemplateEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAPIPagesRequestBodyTemplateEnum: %v", v)
 	}
 }
 

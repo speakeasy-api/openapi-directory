@@ -16,17 +16,21 @@ const (
 	AssociateDRTLogBucketXAmzTargetEnumAwsShield20160616AssociateDrtLogBucket AssociateDRTLogBucketXAmzTargetEnum = "AWSShield_20160616.AssociateDRTLogBucket"
 )
 
+func (e AssociateDRTLogBucketXAmzTargetEnum) ToPointer() *AssociateDRTLogBucketXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateDRTLogBucketXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.AssociateDRTLogBucket":
-		*e = AssociateDRTLogBucketXAmzTargetEnum(s)
+		*e = AssociateDRTLogBucketXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateDRTLogBucketXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateDRTLogBucketXAmzTargetEnum: %v", v)
 	}
 }
 

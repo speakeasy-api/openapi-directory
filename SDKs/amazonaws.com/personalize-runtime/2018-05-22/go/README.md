@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/personalize
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,7 +27,8 @@ func main() {
         }),
     )
 
-    req := operations.GetPersonalizedRankingRequest{
+    ctx := context.Background()
+    res, err := s.GetPersonalizedRanking(ctx, operations.GetPersonalizedRankingRequest{
         RequestBody: operations.GetPersonalizedRankingRequestBody{
             CampaignArn: "corrupti",
             Context: map[string]string{
@@ -36,7 +36,7 @@ func main() {
                 "unde": "nulla",
                 "corrupti": "illum",
             },
-            FilterArn: "vel",
+            FilterArn: sdk.String("vel"),
             FilterValues: map[string]string{
                 "deserunt": "suscipit",
                 "iure": "magnam",
@@ -50,17 +50,14 @@ func main() {
             },
             UserID: "placeat",
         },
-        XAmzAlgorithm: "voluptatum",
-        XAmzContentSha256: "iusto",
-        XAmzCredential: "excepturi",
-        XAmzDate: "nisi",
-        XAmzSecurityToken: "recusandae",
-        XAmzSignature: "temporibus",
-        XAmzSignedHeaders: "ab",
-    }
-
-    ctx := context.Background()
-    res, err := s.GetPersonalizedRanking(ctx, req)
+        XAmzAlgorithm: sdk.String("voluptatum"),
+        XAmzContentSha256: sdk.String("iusto"),
+        XAmzCredential: sdk.String("excepturi"),
+        XAmzDate: sdk.String("nisi"),
+        XAmzSecurityToken: sdk.String("recusandae"),
+        XAmzSignature: sdk.String("temporibus"),
+        XAmzSignedHeaders: sdk.String("ab"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -75,10 +72,10 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetPersonalizedRanking` - <p>Re-ranks a list of recommended items for the given user. The first item in the list is deemed the most likely item to be of interest to the user.</p> <note> <p>The solution backing the campaign must have been created using a recipe of type PERSONALIZED_RANKING.</p> </note>
-* `GetRecommendations` - <p>Returns a list of recommended items. For campaigns, the campaign's Amazon Resource Name (ARN) is required and the required user and item input depends on the recipe type used to create the solution backing the campaign as follows:</p> <ul> <li> <p>USER_PERSONALIZATION - <code>userId</code> required, <code>itemId</code> not used</p> </li> <li> <p>RELATED_ITEMS - <code>itemId</code> required, <code>userId</code> not used</p> </li> </ul> <note> <p>Campaigns that are backed by a solution created using a recipe of type PERSONALIZED_RANKING use the API.</p> </note> <p> For recommenders, the recommender's ARN is required and the required item and user input depends on the use case (domain-based recipe) backing the recommender. For information on use case requirements see <a href="https://docs.aws.amazon.com/personalize/latest/dg/domain-use-cases.html">Choosing recommender use cases</a>. </p>
+* [GetPersonalizedRanking](docs/sdk/README.md#getpersonalizedranking) - <p>Re-ranks a list of recommended items for the given user. The first item in the list is deemed the most likely item to be of interest to the user.</p> <note> <p>The solution backing the campaign must have been created using a recipe of type PERSONALIZED_RANKING.</p> </note>
+* [GetRecommendations](docs/sdk/README.md#getrecommendations) - <p>Returns a list of recommended items. For campaigns, the campaign's Amazon Resource Name (ARN) is required and the required user and item input depends on the recipe type used to create the solution backing the campaign as follows:</p> <ul> <li> <p>USER_PERSONALIZATION - <code>userId</code> required, <code>itemId</code> not used</p> </li> <li> <p>RELATED_ITEMS - <code>itemId</code> required, <code>userId</code> not used</p> </li> </ul> <note> <p>Campaigns that are backed by a solution created using a recipe of type PERSONALIZED_RANKING use the API.</p> </note> <p> For recommenders, the recommender's ARN is required and the required item and user input depends on the use case (domain-based recipe) backing the recommender. For information on use case requirements see <a href="https://docs.aws.amazon.com/personalize/latest/dg/domain-use-cases.html">Choosing recommender use cases</a>. </p>
 <!-- End SDK Available Operations -->
 
 ### Maturity

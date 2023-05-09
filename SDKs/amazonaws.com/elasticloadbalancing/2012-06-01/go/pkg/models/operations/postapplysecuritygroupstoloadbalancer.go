@@ -15,17 +15,21 @@ const (
 	POSTApplySecurityGroupsToLoadBalancerActionEnumApplySecurityGroupsToLoadBalancer POSTApplySecurityGroupsToLoadBalancerActionEnum = "ApplySecurityGroupsToLoadBalancer"
 )
 
+func (e POSTApplySecurityGroupsToLoadBalancerActionEnum) ToPointer() *POSTApplySecurityGroupsToLoadBalancerActionEnum {
+	return &e
+}
+
 func (e *POSTApplySecurityGroupsToLoadBalancerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ApplySecurityGroupsToLoadBalancer":
-		*e = POSTApplySecurityGroupsToLoadBalancerActionEnum(s)
+		*e = POSTApplySecurityGroupsToLoadBalancerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTApplySecurityGroupsToLoadBalancerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTApplySecurityGroupsToLoadBalancerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTApplySecurityGroupsToLoadBalancerVersionEnumTwoThousandAndTwelve0601 POSTApplySecurityGroupsToLoadBalancerVersionEnum = "2012-06-01"
 )
 
+func (e POSTApplySecurityGroupsToLoadBalancerVersionEnum) ToPointer() *POSTApplySecurityGroupsToLoadBalancerVersionEnum {
+	return &e
+}
+
 func (e *POSTApplySecurityGroupsToLoadBalancerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = POSTApplySecurityGroupsToLoadBalancerVersionEnum(s)
+		*e = POSTApplySecurityGroupsToLoadBalancerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTApplySecurityGroupsToLoadBalancerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTApplySecurityGroupsToLoadBalancerVersionEnum: %v", v)
 	}
 }
 

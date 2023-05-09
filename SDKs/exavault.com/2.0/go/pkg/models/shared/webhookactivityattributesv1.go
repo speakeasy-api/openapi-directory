@@ -38,12 +38,16 @@ const (
 	WebhookActivityAttributesV1EventEnumSharesFormSubmit      WebhookActivityAttributesV1EventEnum = "shares.formSubmit"
 )
 
+func (e WebhookActivityAttributesV1EventEnum) ToPointer() *WebhookActivityAttributesV1EventEnum {
+	return &e
+}
+
 func (e *WebhookActivityAttributesV1EventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "resources.upload":
 		fallthrough
 	case "resources.download":
@@ -63,10 +67,10 @@ func (e *WebhookActivityAttributesV1EventEnum) UnmarshalJSON(data []byte) error 
 	case "resources.createFolder":
 		fallthrough
 	case "shares.formSubmit":
-		*e = WebhookActivityAttributesV1EventEnum(s)
+		*e = WebhookActivityAttributesV1EventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookActivityAttributesV1EventEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookActivityAttributesV1EventEnum: %v", v)
 	}
 }
 

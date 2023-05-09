@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type ListLocationsSecurity struct {
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type ListLocationsResponse struct {
 	ContentType string
 	// Success

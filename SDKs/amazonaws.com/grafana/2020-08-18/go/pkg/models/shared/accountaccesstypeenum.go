@@ -14,18 +14,22 @@ const (
 	AccountAccessTypeEnumOrganization   AccountAccessTypeEnum = "ORGANIZATION"
 )
 
+func (e AccountAccessTypeEnum) ToPointer() *AccountAccessTypeEnum {
+	return &e
+}
+
 func (e *AccountAccessTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CURRENT_ACCOUNT":
 		fallthrough
 	case "ORGANIZATION":
-		*e = AccountAccessTypeEnum(s)
+		*e = AccountAccessTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountAccessTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountAccessTypeEnum: %v", v)
 	}
 }

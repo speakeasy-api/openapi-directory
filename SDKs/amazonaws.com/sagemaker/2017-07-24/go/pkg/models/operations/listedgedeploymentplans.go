@@ -16,17 +16,21 @@ const (
 	ListEdgeDeploymentPlansXAmzTargetEnumSageMakerListEdgeDeploymentPlans ListEdgeDeploymentPlansXAmzTargetEnum = "SageMaker.ListEdgeDeploymentPlans"
 )
 
+func (e ListEdgeDeploymentPlansXAmzTargetEnum) ToPointer() *ListEdgeDeploymentPlansXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListEdgeDeploymentPlansXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.ListEdgeDeploymentPlans":
-		*e = ListEdgeDeploymentPlansXAmzTargetEnum(s)
+		*e = ListEdgeDeploymentPlansXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEdgeDeploymentPlansXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEdgeDeploymentPlansXAmzTargetEnum: %v", v)
 	}
 }
 

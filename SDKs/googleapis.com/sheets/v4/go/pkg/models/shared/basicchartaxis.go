@@ -17,12 +17,16 @@ const (
 	BasicChartAxisPositionEnumRightAxis                         BasicChartAxisPositionEnum = "RIGHT_AXIS"
 )
 
+func (e BasicChartAxisPositionEnum) ToPointer() *BasicChartAxisPositionEnum {
+	return &e
+}
+
 func (e *BasicChartAxisPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC_CHART_AXIS_POSITION_UNSPECIFIED":
 		fallthrough
 	case "BOTTOM_AXIS":
@@ -30,10 +34,10 @@ func (e *BasicChartAxisPositionEnum) UnmarshalJSON(data []byte) error {
 	case "LEFT_AXIS":
 		fallthrough
 	case "RIGHT_AXIS":
-		*e = BasicChartAxisPositionEnum(s)
+		*e = BasicChartAxisPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BasicChartAxisPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for BasicChartAxisPositionEnum: %v", v)
 	}
 }
 

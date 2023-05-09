@@ -17,12 +17,16 @@ const (
 	AssociateResourceErrorReasonEnumInvalidBillingPeriodRange AssociateResourceErrorReasonEnum = "INVALID_BILLING_PERIOD_RANGE"
 )
 
+func (e AssociateResourceErrorReasonEnum) ToPointer() *AssociateResourceErrorReasonEnum {
+	return &e
+}
+
 func (e *AssociateResourceErrorReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVALID_ARN":
 		fallthrough
 	case "SERVICE_LIMIT_EXCEEDED":
@@ -32,9 +36,9 @@ func (e *AssociateResourceErrorReasonEnum) UnmarshalJSON(data []byte) error {
 	case "INTERNAL_SERVER_EXCEPTION":
 		fallthrough
 	case "INVALID_BILLING_PERIOD_RANGE":
-		*e = AssociateResourceErrorReasonEnum(s)
+		*e = AssociateResourceErrorReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateResourceErrorReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateResourceErrorReasonEnum: %v", v)
 	}
 }

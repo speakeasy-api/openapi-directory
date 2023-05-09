@@ -17,19 +17,23 @@ const (
 	GenerateTokenV2RequestBodyGrantTypeEnumRefreshToken                         GenerateTokenV2RequestBodyGrantTypeEnum = "refresh_token"
 )
 
+func (e GenerateTokenV2RequestBodyGrantTypeEnum) ToPointer() *GenerateTokenV2RequestBodyGrantTypeEnum {
+	return &e
+}
+
 func (e *GenerateTokenV2RequestBodyGrantTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "urn:ietf:params:oauth:grant-type:jwt-bearer":
 		fallthrough
 	case "refresh_token":
-		*e = GenerateTokenV2RequestBodyGrantTypeEnum(s)
+		*e = GenerateTokenV2RequestBodyGrantTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GenerateTokenV2RequestBodyGrantTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GenerateTokenV2RequestBodyGrantTypeEnum: %v", v)
 	}
 }
 

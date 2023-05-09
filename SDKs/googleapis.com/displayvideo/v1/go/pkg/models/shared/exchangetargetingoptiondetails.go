@@ -88,12 +88,16 @@ const (
 	ExchangeTargetingOptionDetailsExchangeEnumExchangeHivestack         ExchangeTargetingOptionDetailsExchangeEnum = "EXCHANGE_HIVESTACK"
 )
 
+func (e ExchangeTargetingOptionDetailsExchangeEnum) ToPointer() *ExchangeTargetingOptionDetailsExchangeEnum {
+	return &e
+}
+
 func (e *ExchangeTargetingOptionDetailsExchangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCHANGE_UNSPECIFIED":
 		fallthrough
 	case "EXCHANGE_GOOGLE_AD_MANAGER":
@@ -243,10 +247,10 @@ func (e *ExchangeTargetingOptionDetailsExchangeEnum) UnmarshalJSON(data []byte) 
 	case "EXCHANGE_RESET_DIGITAL":
 		fallthrough
 	case "EXCHANGE_HIVESTACK":
-		*e = ExchangeTargetingOptionDetailsExchangeEnum(s)
+		*e = ExchangeTargetingOptionDetailsExchangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExchangeTargetingOptionDetailsExchangeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExchangeTargetingOptionDetailsExchangeEnum: %v", v)
 	}
 }
 

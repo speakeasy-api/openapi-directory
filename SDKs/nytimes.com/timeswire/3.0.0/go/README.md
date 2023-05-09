@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nytimes.com/timeswire/3.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.GetContentJSONRequest{
-        URL: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetContentJSON(ctx, req)
+    res, err := s.GetContentJSON(ctx, operations.GetContentJSONRequest{
+        URL: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,11 +45,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetContentJSON`
-* `GetContentSourceSectionJSON`
-* `GetContentSourceSectionTimePeriodJSON`
+* [GetContentJSON](docs/sdk/README.md#getcontentjson)
+* [GetContentSourceSectionJSON](docs/sdk/README.md#getcontentsourcesectionjson)
+* [GetContentSourceSectionTimePeriodJSON](docs/sdk/README.md#getcontentsourcesectiontimeperiodjson)
 <!-- End SDK Available Operations -->
 
 ### Maturity

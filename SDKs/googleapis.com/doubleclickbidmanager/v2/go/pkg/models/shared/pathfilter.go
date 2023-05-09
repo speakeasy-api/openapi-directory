@@ -17,12 +17,16 @@ const (
 	PathFilterPathMatchPositionEnumLast                         PathFilterPathMatchPositionEnum = "LAST"
 )
 
+func (e PathFilterPathMatchPositionEnum) ToPointer() *PathFilterPathMatchPositionEnum {
+	return &e
+}
+
 func (e *PathFilterPathMatchPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PATH_MATCH_POSITION_UNSPECIFIED":
 		fallthrough
 	case "ANY":
@@ -30,10 +34,10 @@ func (e *PathFilterPathMatchPositionEnum) UnmarshalJSON(data []byte) error {
 	case "FIRST":
 		fallthrough
 	case "LAST":
-		*e = PathFilterPathMatchPositionEnum(s)
+		*e = PathFilterPathMatchPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PathFilterPathMatchPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for PathFilterPathMatchPositionEnum: %v", v)
 	}
 }
 

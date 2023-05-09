@@ -15,20 +15,24 @@ const (
 	DeploymentLifecycleEnumFailed    DeploymentLifecycleEnum = "Failed"
 )
 
+func (e DeploymentLifecycleEnum) ToPointer() *DeploymentLifecycleEnum {
+	return &e
+}
+
 func (e *DeploymentLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Deploying":
 		fallthrough
 	case "Succeeded":
 		fallthrough
 	case "Failed":
-		*e = DeploymentLifecycleEnum(s)
+		*e = DeploymentLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentLifecycleEnum: %v", v)
 	}
 }

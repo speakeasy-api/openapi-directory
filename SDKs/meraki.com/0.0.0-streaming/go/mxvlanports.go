@@ -34,7 +34,10 @@ func newMXVLANPorts(defaultClient, securityClient HTTPClient, serverURL, languag
 // Return per-port VLAN settings for a single MX port.
 func (s *mxVLANPorts) GetNetworkAppliancePort(ctx context.Context, request operations.GetNetworkAppliancePortRequest) (*operations.GetNetworkAppliancePortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliancePorts/{appliancePortId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliancePorts/{appliancePortId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *mxVLANPorts) GetNetworkAppliancePort(ctx context.Context, request opera
 // List per-port VLAN settings for all ports of a MX.
 func (s *mxVLANPorts) GetNetworkAppliancePorts(ctx context.Context, request operations.GetNetworkAppliancePortsRequest) (*operations.GetNetworkAppliancePortsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliancePorts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliancePorts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,7 +130,10 @@ func (s *mxVLANPorts) GetNetworkAppliancePorts(ctx context.Context, request oper
 // Update the per-port VLAN settings for a single MX port.
 func (s *mxVLANPorts) UpdateNetworkAppliancePort(ctx context.Context, request operations.UpdateNetworkAppliancePortRequest) (*operations.UpdateNetworkAppliancePortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliancePorts/{appliancePortId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/appliancePorts/{appliancePortId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	TextFormatEnumRaw               TextFormatEnum = "RAW"
 )
 
+func (e TextFormatEnum) ToPointer() *TextFormatEnum {
+	return &e
+}
+
 func (e *TextFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMAT_UNSPECIFIED":
 		fallthrough
 	case "MARKDOWN":
 		fallthrough
 	case "RAW":
-		*e = TextFormatEnum(s)
+		*e = TextFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TextFormatEnum: %v", v)
 	}
 }
 

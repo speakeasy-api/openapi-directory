@@ -16,21 +16,25 @@ const (
 	ResourceRecordTypeEnumCname ResourceRecordTypeEnum = "CNAME"
 )
 
+func (e ResourceRecordTypeEnum) ToPointer() *ResourceRecordTypeEnum {
+	return &e
+}
+
 func (e *ResourceRecordTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "A":
 		fallthrough
 	case "AAAA":
 		fallthrough
 	case "CNAME":
-		*e = ResourceRecordTypeEnum(s)
+		*e = ResourceRecordTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceRecordTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceRecordTypeEnum: %v", v)
 	}
 }
 

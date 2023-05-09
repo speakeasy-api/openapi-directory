@@ -6,7 +6,7 @@ package shared
 type ListMeta struct {
 	// Continuation token is a value emitted when the count of items is larger than the user/system limit. To retrieve the next page of items, pass the value of `continue` as the next request's `page_token`.
 	Continue *string `json:"continue,omitempty"`
-	// Opaque string that identifies the server's internal version of this object. It can be used by clients to determine when objects have changed. If the message is passed back to the server, it must be left unmodified. https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
+	// Opaque string that identifies the server's internal version of this object. It can be used by clients to determine when objects have changed. If the message is passed back to the server, it must be left unmodified.
 	ResourceVersion *string `json:"resourceVersion,omitempty"`
 	// URL representing this object.
 	SelfLink *string `json:"selfLink,omitempty"`

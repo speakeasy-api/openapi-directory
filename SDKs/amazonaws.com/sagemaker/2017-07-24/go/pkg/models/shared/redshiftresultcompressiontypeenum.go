@@ -18,12 +18,16 @@ const (
 	RedshiftResultCompressionTypeEnumSnappy RedshiftResultCompressionTypeEnum = "SNAPPY"
 )
 
+func (e RedshiftResultCompressionTypeEnum) ToPointer() *RedshiftResultCompressionTypeEnum {
+	return &e
+}
+
 func (e *RedshiftResultCompressionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "GZIP":
@@ -33,9 +37,9 @@ func (e *RedshiftResultCompressionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ZSTD":
 		fallthrough
 	case "SNAPPY":
-		*e = RedshiftResultCompressionTypeEnum(s)
+		*e = RedshiftResultCompressionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RedshiftResultCompressionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RedshiftResultCompressionTypeEnum: %v", v)
 	}
 }

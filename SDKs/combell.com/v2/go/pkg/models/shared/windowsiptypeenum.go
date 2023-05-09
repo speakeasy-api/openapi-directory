@@ -15,18 +15,22 @@ const (
 	WindowsIPTypeEnumShared    WindowsIPTypeEnum = "shared"
 )
 
+func (e WindowsIPTypeEnum) ToPointer() *WindowsIPTypeEnum {
+	return &e
+}
+
 func (e *WindowsIPTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dedicated":
 		fallthrough
 	case "shared":
-		*e = WindowsIPTypeEnum(s)
+		*e = WindowsIPTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WindowsIPTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WindowsIPTypeEnum: %v", v)
 	}
 }

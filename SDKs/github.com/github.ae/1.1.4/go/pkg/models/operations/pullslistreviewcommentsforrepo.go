@@ -18,19 +18,23 @@ const (
 	PullsListReviewCommentsForRepoDirectionEnumDesc PullsListReviewCommentsForRepoDirectionEnum = "desc"
 )
 
+func (e PullsListReviewCommentsForRepoDirectionEnum) ToPointer() *PullsListReviewCommentsForRepoDirectionEnum {
+	return &e
+}
+
 func (e *PullsListReviewCommentsForRepoDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = PullsListReviewCommentsForRepoDirectionEnum(s)
+		*e = PullsListReviewCommentsForRepoDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullsListReviewCommentsForRepoDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for PullsListReviewCommentsForRepoDirectionEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	PullsListReviewCommentsForRepoSortEnumCreatedAt PullsListReviewCommentsForRepoSortEnum = "created_at"
 )
 
+func (e PullsListReviewCommentsForRepoSortEnum) ToPointer() *PullsListReviewCommentsForRepoSortEnum {
+	return &e
+}
+
 func (e *PullsListReviewCommentsForRepoSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
 		fallthrough
 	case "created_at":
-		*e = PullsListReviewCommentsForRepoSortEnum(s)
+		*e = PullsListReviewCommentsForRepoSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullsListReviewCommentsForRepoSortEnum: %s", s)
+		return fmt.Errorf("invalid value for PullsListReviewCommentsForRepoSortEnum: %v", v)
 	}
 }
 

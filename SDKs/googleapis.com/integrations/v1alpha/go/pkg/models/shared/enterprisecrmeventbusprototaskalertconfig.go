@@ -18,12 +18,16 @@ const (
 	EnterpriseCrmEventbusProtoTaskAlertConfigMetricTypeEnumTaskPercentileDuration EnterpriseCrmEventbusProtoTaskAlertConfigMetricTypeEnum = "TASK_PERCENTILE_DURATION"
 )
 
+func (e EnterpriseCrmEventbusProtoTaskAlertConfigMetricTypeEnum) ToPointer() *EnterpriseCrmEventbusProtoTaskAlertConfigMetricTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoTaskAlertConfigMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TASK_ERROR_RATE":
@@ -35,10 +39,10 @@ func (e *EnterpriseCrmEventbusProtoTaskAlertConfigMetricTypeEnum) UnmarshalJSON(
 	case "TASK_AVERAGE_DURATION":
 		fallthrough
 	case "TASK_PERCENTILE_DURATION":
-		*e = EnterpriseCrmEventbusProtoTaskAlertConfigMetricTypeEnum(s)
+		*e = EnterpriseCrmEventbusProtoTaskAlertConfigMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskAlertConfigMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskAlertConfigMetricTypeEnum: %v", v)
 	}
 }
 
@@ -51,21 +55,25 @@ const (
 	EnterpriseCrmEventbusProtoTaskAlertConfigThresholdTypeEnumExpectedMax              EnterpriseCrmEventbusProtoTaskAlertConfigThresholdTypeEnum = "EXPECTED_MAX"
 )
 
+func (e EnterpriseCrmEventbusProtoTaskAlertConfigThresholdTypeEnum) ToPointer() *EnterpriseCrmEventbusProtoTaskAlertConfigThresholdTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoTaskAlertConfigThresholdTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_THRESHOLD_TYPE":
 		fallthrough
 	case "EXPECTED_MIN":
 		fallthrough
 	case "EXPECTED_MAX":
-		*e = EnterpriseCrmEventbusProtoTaskAlertConfigThresholdTypeEnum(s)
+		*e = EnterpriseCrmEventbusProtoTaskAlertConfigThresholdTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskAlertConfigThresholdTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskAlertConfigThresholdTypeEnum: %v", v)
 	}
 }
 

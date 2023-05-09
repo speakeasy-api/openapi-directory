@@ -21,12 +21,16 @@ const (
 	AppRestrictionsSchemaRestrictionRestrictionValueTypeEnumBundleArray AppRestrictionsSchemaRestrictionRestrictionValueTypeEnum = "bundleArray"
 )
 
+func (e AppRestrictionsSchemaRestrictionRestrictionValueTypeEnum) ToPointer() *AppRestrictionsSchemaRestrictionRestrictionValueTypeEnum {
+	return &e
+}
+
 func (e *AppRestrictionsSchemaRestrictionRestrictionValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bool":
 		fallthrough
 	case "string":
@@ -42,10 +46,10 @@ func (e *AppRestrictionsSchemaRestrictionRestrictionValueTypeEnum) UnmarshalJSON
 	case "bundle":
 		fallthrough
 	case "bundleArray":
-		*e = AppRestrictionsSchemaRestrictionRestrictionValueTypeEnum(s)
+		*e = AppRestrictionsSchemaRestrictionRestrictionValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppRestrictionsSchemaRestrictionRestrictionValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppRestrictionsSchemaRestrictionRestrictionValueTypeEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTAssociateVpcCidrBlockActionEnumAssociateVpcCidrBlock POSTAssociateVpcCidrBlockActionEnum = "AssociateVpcCidrBlock"
 )
 
+func (e POSTAssociateVpcCidrBlockActionEnum) ToPointer() *POSTAssociateVpcCidrBlockActionEnum {
+	return &e
+}
+
 func (e *POSTAssociateVpcCidrBlockActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssociateVpcCidrBlock":
-		*e = POSTAssociateVpcCidrBlockActionEnum(s)
+		*e = POSTAssociateVpcCidrBlockActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssociateVpcCidrBlockActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssociateVpcCidrBlockActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAssociateVpcCidrBlockVersionEnumTwoThousandAndSixteen1115 POSTAssociateVpcCidrBlockVersionEnum = "2016-11-15"
 )
 
+func (e POSTAssociateVpcCidrBlockVersionEnum) ToPointer() *POSTAssociateVpcCidrBlockVersionEnum {
+	return &e
+}
+
 func (e *POSTAssociateVpcCidrBlockVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTAssociateVpcCidrBlockVersionEnum(s)
+		*e = POSTAssociateVpcCidrBlockVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssociateVpcCidrBlockVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssociateVpcCidrBlockVersionEnum: %v", v)
 	}
 }
 

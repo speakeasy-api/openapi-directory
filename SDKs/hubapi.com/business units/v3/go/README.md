@@ -13,18 +13,18 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/hubapi.com/business units
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetBusinessUnitsV3BusinessUnitsUserUserIDRequest{
+    ctx := context.Background()
+    res, err := s.BusinessUnit.GetBusinessUnitsV3BusinessUnitsUserUserID(ctx, operations.GetBusinessUnitsV3BusinessUnitsUserUserIDRequest{
         Name: []string{
             "provident",
             "distinctio",
@@ -36,10 +36,7 @@ func main() {
             "illum",
         },
         UserID: "vel",
-    }
-
-    ctx := context.Background()
-    res, err := s.BusinessUnit.GetBusinessUnitsV3BusinessUnitsUserUserID(ctx, req, operations.GetBusinessUnitsV3BusinessUnitsUserUserIDSecurity{
+    }, operations.GetBusinessUnitsV3BusinessUnitsUserUserIDSecurity{
         Oauth2Legacy: sdk.String("Bearer YOUR_ACCESS_TOKEN_HERE"),
     })
     if err != nil {
@@ -57,9 +54,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### BusinessUnit
+### [BusinessUnit](docs/businessunit/README.md)
 
-* `GetBusinessUnitsV3BusinessUnitsUserUserID` - Get Business Units for a user
+* [GetBusinessUnitsV3BusinessUnitsUserUserID](docs/businessunit/README.md#getbusinessunitsv3businessunitsuseruserid) - Get Business Units for a user
 <!-- End SDK Available Operations -->
 
 ### Maturity

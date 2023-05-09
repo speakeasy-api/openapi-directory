@@ -18,12 +18,16 @@ const (
 	GoogleCloudDataplexV1EnvironmentStateEnumActionRequired   GoogleCloudDataplexV1EnvironmentStateEnum = "ACTION_REQUIRED"
 )
 
+func (e GoogleCloudDataplexV1EnvironmentStateEnum) ToPointer() *GoogleCloudDataplexV1EnvironmentStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1EnvironmentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDataplexV1EnvironmentStateEnum) UnmarshalJSON(data []byte) e
 	case "DELETING":
 		fallthrough
 	case "ACTION_REQUIRED":
-		*e = GoogleCloudDataplexV1EnvironmentStateEnum(s)
+		*e = GoogleCloudDataplexV1EnvironmentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1EnvironmentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1EnvironmentStateEnum: %v", v)
 	}
 }
 

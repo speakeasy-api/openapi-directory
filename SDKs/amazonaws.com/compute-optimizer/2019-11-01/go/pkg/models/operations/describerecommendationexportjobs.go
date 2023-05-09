@@ -16,17 +16,21 @@ const (
 	DescribeRecommendationExportJobsXAmzTargetEnumComputeOptimizerServiceDescribeRecommendationExportJobs DescribeRecommendationExportJobsXAmzTargetEnum = "ComputeOptimizerService.DescribeRecommendationExportJobs"
 )
 
+func (e DescribeRecommendationExportJobsXAmzTargetEnum) ToPointer() *DescribeRecommendationExportJobsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeRecommendationExportJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComputeOptimizerService.DescribeRecommendationExportJobs":
-		*e = DescribeRecommendationExportJobsXAmzTargetEnum(s)
+		*e = DescribeRecommendationExportJobsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeRecommendationExportJobsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeRecommendationExportJobsXAmzTargetEnum: %v", v)
 	}
 }
 

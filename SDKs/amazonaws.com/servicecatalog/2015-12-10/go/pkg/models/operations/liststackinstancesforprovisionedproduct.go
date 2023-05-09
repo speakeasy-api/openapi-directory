@@ -16,17 +16,21 @@ const (
 	ListStackInstancesForProvisionedProductXAmzTargetEnumAws242ServiceCatalogServiceListStackInstancesForProvisionedProduct ListStackInstancesForProvisionedProductXAmzTargetEnum = "AWS242ServiceCatalogService.ListStackInstancesForProvisionedProduct"
 )
 
+func (e ListStackInstancesForProvisionedProductXAmzTargetEnum) ToPointer() *ListStackInstancesForProvisionedProductXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListStackInstancesForProvisionedProductXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.ListStackInstancesForProvisionedProduct":
-		*e = ListStackInstancesForProvisionedProductXAmzTargetEnum(s)
+		*e = ListStackInstancesForProvisionedProductXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListStackInstancesForProvisionedProductXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListStackInstancesForProvisionedProductXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,63 +17,75 @@ func main() {
         }),
     )
 
-    req := operations.AnalyzeDocumentRequest{
+    ctx := context.Background()
+    res, err := s.AnalyzeDocument(ctx, operations.AnalyzeDocumentRequest{
         AnalyzeDocumentRequest: shared.AnalyzeDocumentRequest{
             Document: shared.Document{
-                Bytes: "corrupti",
+                Bytes: sdk.String("corrupti"),
                 S3Object: &shared.S3Object{
-                    Bucket: "provident",
-                    Name: "distinctio",
-                    Version: "quibusdam",
+                    Bucket: sdk.String("provident"),
+                    Name: sdk.String("Ellis Mitchell"),
+                    Version: sdk.String("illum"),
                 },
             },
             FeatureTypes: []shared.FeatureTypeEnum{
-                "SIGNATURES",
-                "QUERIES",
-                "SIGNATURES",
+                shared.FeatureTypeEnumQueries,
+                shared.FeatureTypeEnumQueries,
             },
             HumanLoopConfig: &shared.HumanLoopConfig{
                 DataAttributes: &shared.HumanLoopDataAttributes{
                     ContentClassifiers: []shared.ContentClassifierEnum{
-                        "FreeOfAdultContent",
-                        "FreeOfAdultContent",
+                        shared.ContentClassifierEnumFreeOfPersonallyIdentifiableInformation,
+                        shared.ContentClassifierEnumFreeOfPersonallyIdentifiableInformation,
                     },
                 },
-                FlowDefinitionArn: "suscipit",
-                HumanLoopName: "iure",
+                FlowDefinitionArn: "debitis",
+                HumanLoopName: "ipsa",
             },
             QueriesConfig: &shared.QueriesConfig{
                 Queries: []shared.Query{
                     shared.Query{
-                        Alias: "debitis",
+                        Alias: sdk.String("tempora"),
                         Pages: []string{
-                            "delectus",
+                            "molestiae",
+                            "minus",
                         },
-                        Text: "tempora",
+                        Text: "placeat",
                     },
                     shared.Query{
-                        Alias: "suscipit",
+                        Alias: sdk.String("voluptatum"),
                         Pages: []string{
-                            "minus",
-                            "placeat",
+                            "excepturi",
+                            "nisi",
                         },
-                        Text: "voluptatum",
+                        Text: "recusandae",
+                    },
+                    shared.Query{
+                        Alias: sdk.String("temporibus"),
+                        Pages: []string{
+                            "quis",
+                        },
+                        Text: "veritatis",
+                    },
+                    shared.Query{
+                        Alias: sdk.String("deserunt"),
+                        Pages: []string{
+                            "ipsam",
+                        },
+                        Text: "repellendus",
                     },
                 },
             },
         },
-        XAmzAlgorithm: "iusto",
-        XAmzContentSha256: "excepturi",
-        XAmzCredential: "nisi",
-        XAmzDate: "recusandae",
-        XAmzSecurityToken: "temporibus",
-        XAmzSignature: "ab",
-        XAmzSignedHeaders: "quis",
-        XAmzTarget: "Textract.AnalyzeDocument",
-    }
-
-    ctx := context.Background()
-    res, err := s.AnalyzeDocument(ctx, req)
+        XAmzAlgorithm: sdk.String("sapiente"),
+        XAmzContentSha256: sdk.String("quo"),
+        XAmzCredential: sdk.String("odit"),
+        XAmzDate: sdk.String("at"),
+        XAmzSecurityToken: sdk.String("at"),
+        XAmzSignature: sdk.String("maiores"),
+        XAmzSignedHeaders: sdk.String("molestiae"),
+        XAmzTarget: operations.AnalyzeDocumentXAmzTargetEnumTextractAnalyzeDocument,
+    })
     if err != nil {
         log.Fatal(err)
     }

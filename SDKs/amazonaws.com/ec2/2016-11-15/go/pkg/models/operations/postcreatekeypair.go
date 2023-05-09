@@ -15,17 +15,21 @@ const (
 	POSTCreateKeyPairActionEnumCreateKeyPair POSTCreateKeyPairActionEnum = "CreateKeyPair"
 )
 
+func (e POSTCreateKeyPairActionEnum) ToPointer() *POSTCreateKeyPairActionEnum {
+	return &e
+}
+
 func (e *POSTCreateKeyPairActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateKeyPair":
-		*e = POSTCreateKeyPairActionEnum(s)
+		*e = POSTCreateKeyPairActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateKeyPairActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateKeyPairActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateKeyPairVersionEnumTwoThousandAndSixteen1115 POSTCreateKeyPairVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateKeyPairVersionEnum) ToPointer() *POSTCreateKeyPairVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateKeyPairVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateKeyPairVersionEnum(s)
+		*e = POSTCreateKeyPairVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateKeyPairVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateKeyPairVersionEnum: %v", v)
 	}
 }
 

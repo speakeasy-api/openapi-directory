@@ -91,7 +91,10 @@ func (s *persona) GetPersonas(ctx context.Context, request operations.GetPersona
 // GetPersonasID - Get Persona by id
 func (s *persona) GetPersonasID(ctx context.Context, request operations.GetPersonasIDRequest) (*operations.GetPersonasIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/personas/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/personas/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

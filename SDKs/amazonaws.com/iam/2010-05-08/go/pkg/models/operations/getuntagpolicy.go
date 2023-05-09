@@ -15,17 +15,21 @@ const (
 	GETUntagPolicyActionEnumUntagPolicy GETUntagPolicyActionEnum = "UntagPolicy"
 )
 
+func (e GETUntagPolicyActionEnum) ToPointer() *GETUntagPolicyActionEnum {
+	return &e
+}
+
 func (e *GETUntagPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UntagPolicy":
-		*e = GETUntagPolicyActionEnum(s)
+		*e = GETUntagPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUntagPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUntagPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUntagPolicyVersionEnumTwoThousandAndTen0508 GETUntagPolicyVersionEnum = "2010-05-08"
 )
 
+func (e GETUntagPolicyVersionEnum) ToPointer() *GETUntagPolicyVersionEnum {
+	return &e
+}
+
 func (e *GETUntagPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETUntagPolicyVersionEnum(s)
+		*e = GETUntagPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUntagPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUntagPolicyVersionEnum: %v", v)
 	}
 }
 

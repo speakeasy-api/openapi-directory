@@ -52,12 +52,16 @@ const (
 	TestMatrixInvalidMatrixDetailsEnumUnknownPermissionError                  TestMatrixInvalidMatrixDetailsEnum = "UNKNOWN_PERMISSION_ERROR"
 )
 
+func (e TestMatrixInvalidMatrixDetailsEnum) ToPointer() *TestMatrixInvalidMatrixDetailsEnum {
+	return &e
+}
+
 func (e *TestMatrixInvalidMatrixDetailsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVALID_MATRIX_DETAILS_UNSPECIFIED":
 		fallthrough
 	case "DETAILS_UNAVAILABLE":
@@ -135,10 +139,10 @@ func (e *TestMatrixInvalidMatrixDetailsEnum) UnmarshalJSON(data []byte) error {
 	case "SERVICE_NOT_ACTIVATED":
 		fallthrough
 	case "UNKNOWN_PERMISSION_ERROR":
-		*e = TestMatrixInvalidMatrixDetailsEnum(s)
+		*e = TestMatrixInvalidMatrixDetailsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestMatrixInvalidMatrixDetailsEnum: %s", s)
+		return fmt.Errorf("invalid value for TestMatrixInvalidMatrixDetailsEnum: %v", v)
 	}
 }
 
@@ -153,12 +157,16 @@ const (
 	TestMatrixOutcomeSummaryEnumSkipped                   TestMatrixOutcomeSummaryEnum = "SKIPPED"
 )
 
+func (e TestMatrixOutcomeSummaryEnum) ToPointer() *TestMatrixOutcomeSummaryEnum {
+	return &e
+}
+
 func (e *TestMatrixOutcomeSummaryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OUTCOME_SUMMARY_UNSPECIFIED":
 		fallthrough
 	case "SUCCESS":
@@ -168,10 +176,10 @@ func (e *TestMatrixOutcomeSummaryEnum) UnmarshalJSON(data []byte) error {
 	case "INCONCLUSIVE":
 		fallthrough
 	case "SKIPPED":
-		*e = TestMatrixOutcomeSummaryEnum(s)
+		*e = TestMatrixOutcomeSummaryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestMatrixOutcomeSummaryEnum: %s", s)
+		return fmt.Errorf("invalid value for TestMatrixOutcomeSummaryEnum: %v", v)
 	}
 }
 
@@ -192,12 +200,16 @@ const (
 	TestMatrixStateEnumInvalid                  TestMatrixStateEnum = "INVALID"
 )
 
+func (e TestMatrixStateEnum) ToPointer() *TestMatrixStateEnum {
+	return &e
+}
+
 func (e *TestMatrixStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEST_STATE_UNSPECIFIED":
 		fallthrough
 	case "VALIDATING":
@@ -219,10 +231,10 @@ func (e *TestMatrixStateEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLED":
 		fallthrough
 	case "INVALID":
-		*e = TestMatrixStateEnum(s)
+		*e = TestMatrixStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestMatrixStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TestMatrixStateEnum: %v", v)
 	}
 }
 

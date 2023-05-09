@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nytimes.com/archive/1.0.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,13 +27,11 @@ func main() {
         }),
     )
 
-    req := operations.GetYearMonthJSONRequest{
+    ctx := context.Background()
+    res, err := s.Archive.GetYearMonthJSON(ctx, operations.GetYearMonthJSONRequest{
         Month: 548814,
         Year: 592845,
-    }
-
-    ctx := context.Background()
-    res, err := s.Archive.GetYearMonthJSON(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -50,9 +47,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Archive
+### [Archive](docs/archive/README.md)
 
-* `GetYearMonthJSON` - Archive API
+* [GetYearMonthJSON](docs/archive/README.md#getyearmonthjson) - Archive API
 <!-- End SDK Available Operations -->
 
 ### Maturity

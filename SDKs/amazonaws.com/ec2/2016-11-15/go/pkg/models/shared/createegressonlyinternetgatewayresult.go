@@ -17,12 +17,16 @@ const (
 	CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachmentsStateEnumDetached  CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachmentsStateEnum = "detached"
 )
 
+func (e CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachmentsStateEnum) ToPointer() *CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachmentsStateEnum {
+	return &e
+}
+
 func (e *CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachmentsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -30,10 +34,10 @@ func (e *CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachmen
 	case "detaching":
 		fallthrough
 	case "detached":
-		*e = CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachmentsStateEnum(s)
+		*e = CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachmentsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachmentsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateEgressOnlyInternetGatewayResultEgressOnlyInternetGatewayAttachmentsStateEnum: %v", v)
 	}
 }
 

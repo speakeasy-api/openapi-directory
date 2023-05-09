@@ -2,11 +2,11 @@
 
 package shared
 
-// RasterDataCollectionQueryOutput - <p/>
+// RasterDataCollectionQueryOutput - The output structure contains the Raster Data Collection Query input along with some additional metadata.
 type RasterDataCollectionQueryOutput struct {
-	AreaOfInterest           *AreaOfInterest      `json:"AreaOfInterest,omitempty"`
-	PropertyFilters          *PropertyFilters     `json:"PropertyFilters,omitempty"`
-	RasterDataCollectionArn  string               `json:"RasterDataCollectionArn"`
-	RasterDataCollectionName string               `json:"RasterDataCollectionName"`
-	TimeRangeFilter          TimeRangeFilterInput `json:"TimeRangeFilter"`
+	AreaOfInterest           *AreaOfInterest       `json:"AreaOfInterest,omitempty"`
+	PropertyFilters          *PropertyFilters      `json:"PropertyFilters,omitempty"`
+	RasterDataCollectionArn  string                `json:"RasterDataCollectionArn"`
+	RasterDataCollectionName string                `json:"RasterDataCollectionName"`
+	TimeRangeFilter          TimeRangeFilterOutput `json:"TimeRangeFilter"`
 }

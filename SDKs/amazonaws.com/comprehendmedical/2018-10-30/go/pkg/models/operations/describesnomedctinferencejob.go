@@ -16,17 +16,21 @@ const (
 	DescribeSNOMEDCTInferenceJobXAmzTargetEnumComprehendMedical20181030DescribeSnomedctInferenceJob DescribeSNOMEDCTInferenceJobXAmzTargetEnum = "ComprehendMedical_20181030.DescribeSNOMEDCTInferenceJob"
 )
 
+func (e DescribeSNOMEDCTInferenceJobXAmzTargetEnum) ToPointer() *DescribeSNOMEDCTInferenceJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeSNOMEDCTInferenceJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComprehendMedical_20181030.DescribeSNOMEDCTInferenceJob":
-		*e = DescribeSNOMEDCTInferenceJobXAmzTargetEnum(s)
+		*e = DescribeSNOMEDCTInferenceJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSNOMEDCTInferenceJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSNOMEDCTInferenceJobXAmzTargetEnum: %v", v)
 	}
 }
 

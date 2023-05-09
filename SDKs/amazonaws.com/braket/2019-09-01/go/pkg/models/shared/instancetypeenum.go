@@ -51,12 +51,16 @@ const (
 	InstanceTypeEnumMlC5n18xlarge  InstanceTypeEnum = "ml.c5n.18xlarge"
 )
 
+func (e InstanceTypeEnum) ToPointer() *InstanceTypeEnum {
+	return &e
+}
+
 func (e *InstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ml.m4.xlarge":
 		fallthrough
 	case "ml.m4.2xlarge":
@@ -134,9 +138,9 @@ func (e *InstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ml.c5n.9xlarge":
 		fallthrough
 	case "ml.c5n.18xlarge":
-		*e = InstanceTypeEnum(s)
+		*e = InstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceTypeEnum: %v", v)
 	}
 }

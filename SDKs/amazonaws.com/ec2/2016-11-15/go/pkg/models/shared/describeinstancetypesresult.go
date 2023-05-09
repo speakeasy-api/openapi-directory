@@ -26,21 +26,25 @@ const (
 	DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedSupportEnumDefault     DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedSupportEnum = "default"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedSupportEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedSupportEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unsupported":
 		fallthrough
 	case "supported":
 		fallthrough
 	case "default":
-		*e = DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedSupportEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedSupportEnum: %v", v)
 	}
 }
 
@@ -52,19 +56,23 @@ const (
 	DescribeInstanceTypesResultInstanceTypesEbsInfoEncryptionSupportEnumSupported   DescribeInstanceTypesResultInstanceTypesEbsInfoEncryptionSupportEnum = "supported"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesEbsInfoEncryptionSupportEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesEbsInfoEncryptionSupportEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesEbsInfoEncryptionSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unsupported":
 		fallthrough
 	case "supported":
-		*e = DescribeInstanceTypesResultInstanceTypesEbsInfoEncryptionSupportEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesEbsInfoEncryptionSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesEbsInfoEncryptionSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesEbsInfoEncryptionSupportEnum: %v", v)
 	}
 }
 
@@ -77,21 +85,25 @@ const (
 	DescribeInstanceTypesResultInstanceTypesEbsInfoNvmeSupportEnumRequired    DescribeInstanceTypesResultInstanceTypesEbsInfoNvmeSupportEnum = "required"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesEbsInfoNvmeSupportEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesEbsInfoNvmeSupportEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesEbsInfoNvmeSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unsupported":
 		fallthrough
 	case "supported":
 		fallthrough
 	case "required":
-		*e = DescribeInstanceTypesResultInstanceTypesEbsInfoNvmeSupportEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesEbsInfoNvmeSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesEbsInfoNvmeSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesEbsInfoNvmeSupportEnum: %v", v)
 	}
 }
 
@@ -149,19 +161,23 @@ const (
 	DescribeInstanceTypesResultInstanceTypesHypervisorEnumXen   DescribeInstanceTypesResultInstanceTypesHypervisorEnum = "xen"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesHypervisorEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesHypervisorEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesHypervisorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nitro":
 		fallthrough
 	case "xen":
-		*e = DescribeInstanceTypesResultInstanceTypesHypervisorEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesHypervisorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesHypervisorEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesHypervisorEnum: %v", v)
 	}
 }
 
@@ -178,19 +194,23 @@ const (
 	DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisksTypeEnumSsd DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisksTypeEnum = "ssd"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisksTypeEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisksTypeEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisksTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hdd":
 		fallthrough
 	case "ssd":
-		*e = DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisksTypeEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisksTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisksTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoDisksTypeEnum: %v", v)
 	}
 }
 
@@ -209,19 +229,23 @@ const (
 	DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoEncryptionSupportEnumRequired    DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoEncryptionSupportEnum = "required"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoEncryptionSupportEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoEncryptionSupportEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoEncryptionSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unsupported":
 		fallthrough
 	case "required":
-		*e = DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoEncryptionSupportEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoEncryptionSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoEncryptionSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoEncryptionSupportEnum: %v", v)
 	}
 }
 
@@ -234,21 +258,25 @@ const (
 	DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoNvmeSupportEnumRequired    DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoNvmeSupportEnum = "required"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoNvmeSupportEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoNvmeSupportEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoNvmeSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unsupported":
 		fallthrough
 	case "supported":
 		fallthrough
 	case "required":
-		*e = DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoNvmeSupportEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoNvmeSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoNvmeSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesInstanceStorageInfoNvmeSupportEnum: %v", v)
 	}
 }
 
@@ -902,14 +930,23 @@ const (
 	DescribeInstanceTypesResultInstanceTypesInstanceTypeEnumR7g12xlarge     DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum = "r7g.12xlarge"
 	DescribeInstanceTypesResultInstanceTypesInstanceTypeEnumR7g16xlarge     DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum = "r7g.16xlarge"
 	DescribeInstanceTypesResultInstanceTypesInstanceTypeEnumR7gMetal        DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum = "r7g.metal"
+	DescribeInstanceTypesResultInstanceTypesInstanceTypeEnumC6inMetal       DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum = "c6in.metal"
+	DescribeInstanceTypesResultInstanceTypesInstanceTypeEnumM6inMetal       DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum = "m6in.metal"
+	DescribeInstanceTypesResultInstanceTypesInstanceTypeEnumM6idnMetal      DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum = "m6idn.metal"
+	DescribeInstanceTypesResultInstanceTypesInstanceTypeEnumR6inMetal       DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum = "r6in.metal"
+	DescribeInstanceTypesResultInstanceTypesInstanceTypeEnumR6idnMetal      DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -2185,10 +2222,20 @@ func (e *DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum) UnmarshalJSON
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -2211,21 +2258,25 @@ const (
 	DescribeInstanceTypesResultInstanceTypesNetworkInfoEnaSupportEnumRequired    DescribeInstanceTypesResultInstanceTypesNetworkInfoEnaSupportEnum = "required"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesNetworkInfoEnaSupportEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesNetworkInfoEnaSupportEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesNetworkInfoEnaSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unsupported":
 		fallthrough
 	case "supported":
 		fallthrough
 	case "required":
-		*e = DescribeInstanceTypesResultInstanceTypesNetworkInfoEnaSupportEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesNetworkInfoEnaSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesNetworkInfoEnaSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesNetworkInfoEnaSupportEnum: %v", v)
 	}
 }
 
@@ -2261,21 +2312,25 @@ const (
 	DescribeInstanceTypesResultInstanceTypesPlacementGroupInfoSupportedStrategiesEnumSpread    DescribeInstanceTypesResultInstanceTypesPlacementGroupInfoSupportedStrategiesEnum = "spread"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesPlacementGroupInfoSupportedStrategiesEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesPlacementGroupInfoSupportedStrategiesEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesPlacementGroupInfoSupportedStrategiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cluster":
 		fallthrough
 	case "partition":
 		fallthrough
 	case "spread":
-		*e = DescribeInstanceTypesResultInstanceTypesPlacementGroupInfoSupportedStrategiesEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesPlacementGroupInfoSupportedStrategiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesPlacementGroupInfoSupportedStrategiesEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesPlacementGroupInfoSupportedStrategiesEnum: %v", v)
 	}
 }
 
@@ -2294,12 +2349,16 @@ const (
 	DescribeInstanceTypesResultInstanceTypesProcessorInfoSupportedArchitecturesEnumArm64Mac DescribeInstanceTypesResultInstanceTypesProcessorInfoSupportedArchitecturesEnum = "arm64_mac"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesProcessorInfoSupportedArchitecturesEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesProcessorInfoSupportedArchitecturesEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesProcessorInfoSupportedArchitecturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "i386":
 		fallthrough
 	case "x86_64":
@@ -2309,10 +2368,10 @@ func (e *DescribeInstanceTypesResultInstanceTypesProcessorInfoSupportedArchitect
 	case "x86_64_mac":
 		fallthrough
 	case "arm64_mac":
-		*e = DescribeInstanceTypesResultInstanceTypesProcessorInfoSupportedArchitecturesEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesProcessorInfoSupportedArchitecturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesProcessorInfoSupportedArchitecturesEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesProcessorInfoSupportedArchitecturesEnum: %v", v)
 	}
 }
 
@@ -2329,19 +2388,23 @@ const (
 	DescribeInstanceTypesResultInstanceTypesSupportedBootModesEnumUefi       DescribeInstanceTypesResultInstanceTypesSupportedBootModesEnum = "uefi"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesSupportedBootModesEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesSupportedBootModesEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesSupportedBootModesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy-bios":
 		fallthrough
 	case "uefi":
-		*e = DescribeInstanceTypesResultInstanceTypesSupportedBootModesEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesSupportedBootModesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesSupportedBootModesEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesSupportedBootModesEnum: %v", v)
 	}
 }
 
@@ -2352,19 +2415,23 @@ const (
 	DescribeInstanceTypesResultInstanceTypesSupportedRootDeviceTypesEnumInstanceStore DescribeInstanceTypesResultInstanceTypesSupportedRootDeviceTypesEnum = "instance-store"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesSupportedRootDeviceTypesEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesSupportedRootDeviceTypesEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesSupportedRootDeviceTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ebs":
 		fallthrough
 	case "instance-store":
-		*e = DescribeInstanceTypesResultInstanceTypesSupportedRootDeviceTypesEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesSupportedRootDeviceTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesSupportedRootDeviceTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesSupportedRootDeviceTypesEnum: %v", v)
 	}
 }
 
@@ -2375,19 +2442,23 @@ const (
 	DescribeInstanceTypesResultInstanceTypesSupportedUsageClassesEnumOnDemand DescribeInstanceTypesResultInstanceTypesSupportedUsageClassesEnum = "on-demand"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesSupportedUsageClassesEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesSupportedUsageClassesEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesSupportedUsageClassesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spot":
 		fallthrough
 	case "on-demand":
-		*e = DescribeInstanceTypesResultInstanceTypesSupportedUsageClassesEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesSupportedUsageClassesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesSupportedUsageClassesEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesSupportedUsageClassesEnum: %v", v)
 	}
 }
 
@@ -2398,19 +2469,23 @@ const (
 	DescribeInstanceTypesResultInstanceTypesSupportedVirtualizationTypesEnumParavirtual DescribeInstanceTypesResultInstanceTypesSupportedVirtualizationTypesEnum = "paravirtual"
 )
 
+func (e DescribeInstanceTypesResultInstanceTypesSupportedVirtualizationTypesEnum) ToPointer() *DescribeInstanceTypesResultInstanceTypesSupportedVirtualizationTypesEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypesResultInstanceTypesSupportedVirtualizationTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hvm":
 		fallthrough
 	case "paravirtual":
-		*e = DescribeInstanceTypesResultInstanceTypesSupportedVirtualizationTypesEnum(s)
+		*e = DescribeInstanceTypesResultInstanceTypesSupportedVirtualizationTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesSupportedVirtualizationTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypesResultInstanceTypesSupportedVirtualizationTypesEnum: %v", v)
 	}
 }
 

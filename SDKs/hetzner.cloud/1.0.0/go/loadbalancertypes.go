@@ -87,7 +87,10 @@ func (s *loadBalancerTypes) GetLoadBalancerTypes(ctx context.Context, request op
 // Gets a specific Load Balancer type object.
 func (s *loadBalancerTypes) GetLoadBalancerTypesID(ctx context.Context, request operations.GetLoadBalancerTypesIDRequest) (*operations.GetLoadBalancerTypesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancer_types/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancer_types/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

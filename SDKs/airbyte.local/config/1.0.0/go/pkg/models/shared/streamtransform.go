@@ -15,21 +15,25 @@ const (
 	StreamTransformTransformTypeEnumUpdateStream StreamTransformTransformTypeEnum = "update_stream"
 )
 
+func (e StreamTransformTransformTypeEnum) ToPointer() *StreamTransformTransformTypeEnum {
+	return &e
+}
+
 func (e *StreamTransformTransformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "add_stream":
 		fallthrough
 	case "remove_stream":
 		fallthrough
 	case "update_stream":
-		*e = StreamTransformTransformTypeEnum(s)
+		*e = StreamTransformTransformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamTransformTransformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamTransformTransformTypeEnum: %v", v)
 	}
 }
 

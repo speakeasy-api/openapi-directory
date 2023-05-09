@@ -17,12 +17,16 @@ const (
 	ReturnPolicyOnlinePolicyTypeEnumLifetimeReturns           ReturnPolicyOnlinePolicyTypeEnum = "LIFETIME_RETURNS"
 )
 
+func (e ReturnPolicyOnlinePolicyTypeEnum) ToPointer() *ReturnPolicyOnlinePolicyTypeEnum {
+	return &e
+}
+
 func (e *ReturnPolicyOnlinePolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "NUMBER_OF_DAYS_AFTER_DELIVERY":
@@ -30,10 +34,10 @@ func (e *ReturnPolicyOnlinePolicyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NO_RETURNS":
 		fallthrough
 	case "LIFETIME_RETURNS":
-		*e = ReturnPolicyOnlinePolicyTypeEnum(s)
+		*e = ReturnPolicyOnlinePolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReturnPolicyOnlinePolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReturnPolicyOnlinePolicyTypeEnum: %v", v)
 	}
 }
 

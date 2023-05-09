@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <img src="https://cdn.zappy.app/945f9bf9e44126873952ec5113949c3f.png" width="100" />
 //
 // ## Hi, there!
@@ -541,7 +556,7 @@ func New(opts ...SDKOption) *SDK {
 
 // Check - Check
 // Test that the API and auth are working.
-func (s *SDK) Check(ctx context.Context) (*operations.CheckResponse, error) {
+func (s *SDK) Check(ctx context.Context, security operations.CheckSecurity) (*operations.CheckResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/check/"
 
@@ -550,7 +565,7 @@ func (s *SDK) Check(ctx context.Context) (*operations.CheckResponse, error) {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -576,12 +591,13 @@ func (s *SDK) Check(ctx context.Context) (*operations.CheckResponse, error) {
 }
 
 // ExecuteAppActionEndpoint - Execute App Action Endpoint
-// Give us a plain english description of exact action you want to do.
-// There should be dynamically generated documentation for this endpoint
-// for each action that is exposed.
+// Give us a plain english description of exact action you want to do. There should be dynamically generated documentation for this endpoint for each action that is exposed.
 func (s *SDK) ExecuteAppActionEndpoint(ctx context.Context, request operations.ExecuteAppActionEndpointRequest, security operations.ExecuteAppActionEndpointSecurity) (*operations.ExecuteAppActionEndpointResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/exposed/{exposed_app_action_id}/execute/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/exposed/{exposed_app_action_id}/execute/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExecuteRequest", "json")
 	if err != nil {
@@ -643,9 +659,8 @@ func (s *SDK) ExecuteAppActionEndpoint(ctx context.Context, request operations.E
 }
 
 // GetConfigurationLink - Get Configuration Link
-// If the user wants to execute actions that are not exposed, they can
-// go here to configure and expose more.
-func (s *SDK) GetConfigurationLink(ctx context.Context) (*operations.GetConfigurationLinkResponse, error) {
+// Provides a link to configure more actions. Alternatively, searching through apps and actions will provide more specific configuration links.
+func (s *SDK) GetConfigurationLink(ctx context.Context, security operations.GetConfigurationLinkSecurity) (*operations.GetConfigurationLinkResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/configuration-link/"
 
@@ -654,7 +669,7 @@ func (s *SDK) GetConfigurationLink(ctx context.Context) (*operations.GetConfigur
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -679,9 +694,67 @@ func (s *SDK) GetConfigurationLink(ctx context.Context) (*operations.GetConfigur
 	return res, nil
 }
 
+// GetExecutionLogEndpoint - Get Execution Log Endpoint
+// Get the execution log for a given execution log id.
+func (s *SDK) GetExecutionLogEndpoint(ctx context.Context, request operations.GetExecutionLogEndpointRequest, security operations.GetExecutionLogEndpointSecurity) (*operations.GetExecutionLogEndpointResponse, error) {
+	baseURL := s._serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/execution-log/{execution_log_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetExecutionLogEndpointResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ExecuteResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ExecuteResponse = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ErrorResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ErrorResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // ListExposedActions - List Exposed Actions
 // List all the currently exposed actions for the given account.
-func (s *SDK) ListExposedActions(ctx context.Context) (*operations.ListExposedActionsResponse, error) {
+func (s *SDK) ListExposedActions(ctx context.Context, security operations.ListExposedActionsSecurity) (*operations.ListExposedActionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/exposed/"
 
@@ -690,7 +763,7 @@ func (s *SDK) ListExposedActions(ctx context.Context) (*operations.ListExposedAc
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

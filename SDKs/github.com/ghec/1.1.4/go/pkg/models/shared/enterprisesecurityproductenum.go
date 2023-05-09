@@ -17,12 +17,16 @@ const (
 	EnterpriseSecurityProductEnumSecretScanningPushProtection EnterpriseSecurityProductEnum = "secret_scanning_push_protection"
 )
 
+func (e EnterpriseSecurityProductEnum) ToPointer() *EnterpriseSecurityProductEnum {
+	return &e
+}
+
 func (e *EnterpriseSecurityProductEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "advanced_security":
 		fallthrough
 	case "dependabot_alerts":
@@ -30,9 +34,9 @@ func (e *EnterpriseSecurityProductEnum) UnmarshalJSON(data []byte) error {
 	case "secret_scanning":
 		fallthrough
 	case "secret_scanning_push_protection":
-		*e = EnterpriseSecurityProductEnum(s)
+		*e = EnterpriseSecurityProductEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseSecurityProductEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseSecurityProductEnum: %v", v)
 	}
 }

@@ -20,12 +20,16 @@ const (
 	DownloadCatalogStrategyEnumLocal      DownloadCatalogStrategyEnum = "Local"
 )
 
+func (e DownloadCatalogStrategyEnum) ToPointer() *DownloadCatalogStrategyEnum {
+	return &e
+}
+
 func (e *DownloadCatalogStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleUri":
 		fallthrough
 	case "FtpLatest":
@@ -39,9 +43,9 @@ func (e *DownloadCatalogStrategyEnum) UnmarshalJSON(data []byte) error {
 	case "FtpsLatest":
 		fallthrough
 	case "Local":
-		*e = DownloadCatalogStrategyEnum(s)
+		*e = DownloadCatalogStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DownloadCatalogStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for DownloadCatalogStrategyEnum: %v", v)
 	}
 }

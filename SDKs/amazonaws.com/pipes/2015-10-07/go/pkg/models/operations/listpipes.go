@@ -26,12 +26,16 @@ const (
 	ListPipesCurrentStateEnumStopFailed   ListPipesCurrentStateEnum = "STOP_FAILED"
 )
 
+func (e ListPipesCurrentStateEnum) ToPointer() *ListPipesCurrentStateEnum {
+	return &e
+}
+
 func (e *ListPipesCurrentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "STOPPED":
@@ -53,10 +57,10 @@ func (e *ListPipesCurrentStateEnum) UnmarshalJSON(data []byte) error {
 	case "START_FAILED":
 		fallthrough
 	case "STOP_FAILED":
-		*e = ListPipesCurrentStateEnum(s)
+		*e = ListPipesCurrentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPipesCurrentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPipesCurrentStateEnum: %v", v)
 	}
 }
 
@@ -68,19 +72,23 @@ const (
 	ListPipesDesiredStateEnumStopped ListPipesDesiredStateEnum = "STOPPED"
 )
 
+func (e ListPipesDesiredStateEnum) ToPointer() *ListPipesDesiredStateEnum {
+	return &e
+}
+
 func (e *ListPipesDesiredStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "STOPPED":
-		*e = ListPipesDesiredStateEnum(s)
+		*e = ListPipesDesiredStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPipesDesiredStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPipesDesiredStateEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	BatchCheckLayerAvailabilityXAmzTargetEnumSpencerFrontendServiceBatchCheckLayerAvailability BatchCheckLayerAvailabilityXAmzTargetEnum = "SpencerFrontendService.BatchCheckLayerAvailability"
 )
 
+func (e BatchCheckLayerAvailabilityXAmzTargetEnum) ToPointer() *BatchCheckLayerAvailabilityXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchCheckLayerAvailabilityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SpencerFrontendService.BatchCheckLayerAvailability":
-		*e = BatchCheckLayerAvailabilityXAmzTargetEnum(s)
+		*e = BatchCheckLayerAvailabilityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchCheckLayerAvailabilityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchCheckLayerAvailabilityXAmzTargetEnum: %v", v)
 	}
 }
 

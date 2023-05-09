@@ -15,20 +15,24 @@ const (
 	AcknowledgmentStatusEnumUnacknowledged AcknowledgmentStatusEnum = "UNACKNOWLEDGED"
 )
 
+func (e AcknowledgmentStatusEnum) ToPointer() *AcknowledgmentStatusEnum {
+	return &e
+}
+
 func (e *AcknowledgmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACKNOWLEDGING":
 		fallthrough
 	case "ACKNOWLEDGED":
 		fallthrough
 	case "UNACKNOWLEDGED":
-		*e = AcknowledgmentStatusEnum(s)
+		*e = AcknowledgmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AcknowledgmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AcknowledgmentStatusEnum: %v", v)
 	}
 }

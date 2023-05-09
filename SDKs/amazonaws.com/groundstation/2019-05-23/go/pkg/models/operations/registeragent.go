@@ -9,6 +9,7 @@ import (
 
 // RegisterAgentRequestBodyAgentDetails - Detailed information about the agent.
 type RegisterAgentRequestBodyAgentDetails struct {
+	AgentCPUCores     []int64                   `json:"agentCpuCores,omitempty"`
 	AgentVersion      *string                   `json:"agentVersion,omitempty"`
 	ComponentVersions []shared.ComponentVersion `json:"componentVersions,omitempty"`
 	InstanceID        *string                   `json:"instanceId,omitempty"`

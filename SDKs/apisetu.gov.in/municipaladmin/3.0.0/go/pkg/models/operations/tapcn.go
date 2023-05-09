@@ -26,17 +26,21 @@ const (
 	TapcnRequestBodyFormatEnumPdf TapcnRequestBodyFormatEnum = "pdf"
 )
 
+func (e TapcnRequestBodyFormatEnum) ToPointer() *TapcnRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *TapcnRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = TapcnRequestBodyFormatEnum(s)
+		*e = TapcnRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TapcnRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TapcnRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -56,17 +60,21 @@ const (
 	Tapcn504ApplicationJSONErrorEnumGatewayTimeout Tapcn504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Tapcn504ApplicationJSONErrorEnum) ToPointer() *Tapcn504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tapcn504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Tapcn504ApplicationJSONErrorEnum(s)
+		*e = Tapcn504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -76,17 +84,21 @@ const (
 	Tapcn504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Tapcn504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Tapcn504ApplicationJSONErrorDescriptionEnum) ToPointer() *Tapcn504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tapcn504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Tapcn504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tapcn504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -102,17 +114,21 @@ const (
 	Tapcn503ApplicationJSONErrorEnumServiceUnavailable Tapcn503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Tapcn503ApplicationJSONErrorEnum) ToPointer() *Tapcn503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tapcn503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Tapcn503ApplicationJSONErrorEnum(s)
+		*e = Tapcn503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -122,17 +138,21 @@ const (
 	Tapcn503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Tapcn503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Tapcn503ApplicationJSONErrorDescriptionEnum) ToPointer() *Tapcn503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tapcn503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Tapcn503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tapcn503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -148,17 +168,21 @@ const (
 	Tapcn502ApplicationJSONErrorEnumBadGatewy Tapcn502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Tapcn502ApplicationJSONErrorEnum) ToPointer() *Tapcn502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tapcn502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Tapcn502ApplicationJSONErrorEnum(s)
+		*e = Tapcn502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -168,17 +192,21 @@ const (
 	Tapcn502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Tapcn502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Tapcn502ApplicationJSONErrorDescriptionEnum) ToPointer() *Tapcn502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tapcn502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Tapcn502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tapcn502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -194,17 +222,21 @@ const (
 	Tapcn500ApplicationJSONErrorEnumInternalServerError Tapcn500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Tapcn500ApplicationJSONErrorEnum) ToPointer() *Tapcn500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tapcn500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Tapcn500ApplicationJSONErrorEnum(s)
+		*e = Tapcn500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -214,17 +246,21 @@ const (
 	Tapcn500ApplicationJSONErrorDescriptionEnumInternalServerError Tapcn500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Tapcn500ApplicationJSONErrorDescriptionEnum) ToPointer() *Tapcn500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tapcn500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Tapcn500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tapcn500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -241,19 +277,23 @@ const (
 	Tapcn404ApplicationJSONErrorEnumURLNotFound    Tapcn404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Tapcn404ApplicationJSONErrorEnum) ToPointer() *Tapcn404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tapcn404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Tapcn404ApplicationJSONErrorEnum(s)
+		*e = Tapcn404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -264,19 +304,23 @@ const (
 	Tapcn404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Tapcn404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Tapcn404ApplicationJSONErrorDescriptionEnum) ToPointer() *Tapcn404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tapcn404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Tapcn404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tapcn404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -293,19 +337,23 @@ const (
 	Tapcn401ApplicationJSONErrorEnumInvalidAuthorization  Tapcn401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Tapcn401ApplicationJSONErrorEnum) ToPointer() *Tapcn401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tapcn401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Tapcn401ApplicationJSONErrorEnum(s)
+		*e = Tapcn401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -316,19 +364,23 @@ const (
 	Tapcn401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Tapcn401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Tapcn401ApplicationJSONErrorDescriptionEnum) ToPointer() *Tapcn401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tapcn401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Tapcn401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tapcn401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -348,12 +400,16 @@ const (
 	Tapcn400ApplicationJSONErrorEnumInvalidConsentid Tapcn400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Tapcn400ApplicationJSONErrorEnum) ToPointer() *Tapcn400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tapcn400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -363,10 +419,10 @@ func (e *Tapcn400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Tapcn400ApplicationJSONErrorEnum(s)
+		*e = Tapcn400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -380,12 +436,16 @@ const (
 	Tapcn400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Tapcn400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Tapcn400ApplicationJSONErrorDescriptionEnum) ToPointer() *Tapcn400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tapcn400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -395,10 +455,10 @@ func (e *Tapcn400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Tapcn400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tapcn400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tapcn400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tapcn400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

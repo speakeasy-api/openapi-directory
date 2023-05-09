@@ -29,12 +29,16 @@ const (
 	ReleasesGetLatestByPublicDistributionGroup404ApplicationJSONCodeEnumTooManyRequests     ReleasesGetLatestByPublicDistributionGroup404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesGetLatestByPublicDistributionGroup404ApplicationJSONCodeEnum) ToPointer() *ReleasesGetLatestByPublicDistributionGroup404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesGetLatestByPublicDistributionGroup404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -48,10 +52,10 @@ func (e *ReleasesGetLatestByPublicDistributionGroup404ApplicationJSONCodeEnum) U
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesGetLatestByPublicDistributionGroup404ApplicationJSONCodeEnum(s)
+		*e = ReleasesGetLatestByPublicDistributionGroup404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -75,12 +79,16 @@ const (
 	ReleasesGetLatestByPublicDistributionGroup403ApplicationJSONCodeEnumTooManyRequests     ReleasesGetLatestByPublicDistributionGroup403ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesGetLatestByPublicDistributionGroup403ApplicationJSONCodeEnum) ToPointer() *ReleasesGetLatestByPublicDistributionGroup403ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesGetLatestByPublicDistributionGroup403ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -94,10 +102,10 @@ func (e *ReleasesGetLatestByPublicDistributionGroup403ApplicationJSONCodeEnum) U
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesGetLatestByPublicDistributionGroup403ApplicationJSONCodeEnum(s)
+		*e = ReleasesGetLatestByPublicDistributionGroup403ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup403ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup403ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -130,21 +138,25 @@ const (
 	ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationTypeEnumTester ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationTypeEnum = "tester"
 )
 
+func (e ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationTypeEnum) ToPointer() *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationTypeEnum {
+	return &e
+}
+
 func (e *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "group":
 		fallthrough
 	case "store":
 		fallthrough
 	case "tester":
-		*e = ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationTypeEnum(s)
+		*e = ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationTypeEnum: %v", v)
 	}
 }
 
@@ -157,21 +169,25 @@ const (
 	ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsDestinationTypeEnumTester ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsDestinationTypeEnum = "tester"
 )
 
+func (e ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsDestinationTypeEnum) ToPointer() *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsDestinationTypeEnum {
+	return &e
+}
+
 func (e *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsDestinationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "group":
 		fallthrough
 	case "store":
 		fallthrough
 	case "tester":
-		*e = ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsDestinationTypeEnum(s)
+		*e = ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsDestinationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsDestinationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsDestinationTypeEnum: %v", v)
 	}
 }
 
@@ -185,12 +201,16 @@ const (
 	ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsTypeEnumNone       ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsTypeEnum = "none"
 )
 
+func (e ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsTypeEnum) ToPointer() *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsTypeEnum {
+	return &e
+}
+
 func (e *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intune":
 		fallthrough
 	case "googleplay":
@@ -198,10 +218,10 @@ func (e *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestination
 	case "apple":
 		fallthrough
 	case "none":
-		*e = ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsTypeEnum(s)
+		*e = ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDestinationsTypeEnum: %v", v)
 	}
 }
 
@@ -240,12 +260,16 @@ const (
 	ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDistributionStoresTypeEnumNone       ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDistributionStoresTypeEnum = "none"
 )
 
+func (e ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDistributionStoresTypeEnum) ToPointer() *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDistributionStoresTypeEnum {
+	return &e
+}
+
 func (e *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDistributionStoresTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intune":
 		fallthrough
 	case "googleplay":
@@ -253,10 +277,10 @@ func (e *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDistributio
 	case "apple":
 		fallthrough
 	case "none":
-		*e = ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDistributionStoresTypeEnum(s)
+		*e = ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDistributionStoresTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDistributionStoresTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONDistributionStoresTypeEnum: %v", v)
 	}
 }
 
@@ -279,19 +303,23 @@ const (
 	ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONOriginEnumAppcenter ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONOriginEnum = "appcenter"
 )
 
+func (e ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONOriginEnum) ToPointer() *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hockeyapp":
 		fallthrough
 	case "appcenter":
-		*e = ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONOriginEnum(s)
+		*e = ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -304,21 +332,25 @@ const (
 	ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONProvisioningProfileTypeEnumOther      ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONProvisioningProfileTypeEnum = "other"
 )
 
+func (e ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONProvisioningProfileTypeEnum) ToPointer() *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONProvisioningProfileTypeEnum {
+	return &e
+}
+
 func (e *ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONProvisioningProfileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "adhoc":
 		fallthrough
 	case "enterprise":
 		fallthrough
 	case "other":
-		*e = ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONProvisioningProfileTypeEnum(s)
+		*e = ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONProvisioningProfileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONProvisioningProfileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetLatestByPublicDistributionGroup200ApplicationJSONProvisioningProfileTypeEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	GoogleCloudDataplexV1ZoneStateEnumActionRequired   GoogleCloudDataplexV1ZoneStateEnum = "ACTION_REQUIRED"
 )
 
+func (e GoogleCloudDataplexV1ZoneStateEnum) ToPointer() *GoogleCloudDataplexV1ZoneStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1ZoneStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDataplexV1ZoneStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "ACTION_REQUIRED":
-		*e = GoogleCloudDataplexV1ZoneStateEnum(s)
+		*e = GoogleCloudDataplexV1ZoneStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ZoneStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ZoneStateEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	GoogleCloudDataplexV1ZoneTypeEnumCurated         GoogleCloudDataplexV1ZoneTypeEnum = "CURATED"
 )
 
+func (e GoogleCloudDataplexV1ZoneTypeEnum) ToPointer() *GoogleCloudDataplexV1ZoneTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1ZoneTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "CURATED":
-		*e = GoogleCloudDataplexV1ZoneTypeEnum(s)
+		*e = GoogleCloudDataplexV1ZoneTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ZoneTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ZoneTypeEnum: %v", v)
 	}
 }
 

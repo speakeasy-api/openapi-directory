@@ -6,12 +6,12 @@ package shared
 type GkeCluster struct {
 	// Output only. If cluster_missing is set then it denotes that the GKE cluster no longer exists in the GKE Control Plane.
 	ClusterMissing *bool `json:"clusterMissing,omitempty"`
-	// Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
+	// Immutable. Self-link of the Google Cloud resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
 	ResourceLink *string `json:"resourceLink,omitempty"`
 }
 
 // GkeClusterInput - GkeCluster contains information specific to GKE clusters.
 type GkeClusterInput struct {
-	// Immutable. Self-link of the GCP resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
+	// Immutable. Self-link of the Google Cloud resource for the GKE cluster. For example: //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal clusters are also supported.
 	ResourceLink *string `json:"resourceLink,omitempty"`
 }

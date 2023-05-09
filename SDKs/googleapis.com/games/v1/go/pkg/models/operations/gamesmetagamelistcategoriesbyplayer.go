@@ -22,19 +22,23 @@ const (
 	GamesMetagameListCategoriesByPlayerCollectionEnumAll                   GamesMetagameListCategoriesByPlayerCollectionEnum = "ALL"
 )
 
+func (e GamesMetagameListCategoriesByPlayerCollectionEnum) ToPointer() *GamesMetagameListCategoriesByPlayerCollectionEnum {
+	return &e
+}
+
 func (e *GamesMetagameListCategoriesByPlayerCollectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COLLECTION_UNSPECIFIED":
 		fallthrough
 	case "ALL":
-		*e = GamesMetagameListCategoriesByPlayerCollectionEnum(s)
+		*e = GamesMetagameListCategoriesByPlayerCollectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GamesMetagameListCategoriesByPlayerCollectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GamesMetagameListCategoriesByPlayerCollectionEnum: %v", v)
 	}
 }
 

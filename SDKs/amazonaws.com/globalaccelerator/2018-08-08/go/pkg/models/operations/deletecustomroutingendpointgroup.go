@@ -16,17 +16,21 @@ const (
 	DeleteCustomRoutingEndpointGroupXAmzTargetEnumGlobalAcceleratorV20180706DeleteCustomRoutingEndpointGroup DeleteCustomRoutingEndpointGroupXAmzTargetEnum = "GlobalAccelerator_V20180706.DeleteCustomRoutingEndpointGroup"
 )
 
+func (e DeleteCustomRoutingEndpointGroupXAmzTargetEnum) ToPointer() *DeleteCustomRoutingEndpointGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteCustomRoutingEndpointGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.DeleteCustomRoutingEndpointGroup":
-		*e = DeleteCustomRoutingEndpointGroupXAmzTargetEnum(s)
+		*e = DeleteCustomRoutingEndpointGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteCustomRoutingEndpointGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteCustomRoutingEndpointGroupXAmzTargetEnum: %v", v)
 	}
 }
 

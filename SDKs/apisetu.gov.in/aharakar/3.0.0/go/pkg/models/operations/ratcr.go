@@ -30,17 +30,21 @@ const (
 	RatcrRequestBodyFormatEnumPdf RatcrRequestBodyFormatEnum = "pdf"
 )
 
+func (e RatcrRequestBodyFormatEnum) ToPointer() *RatcrRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *RatcrRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = RatcrRequestBodyFormatEnum(s)
+		*e = RatcrRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RatcrRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RatcrRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -60,17 +64,21 @@ const (
 	Ratcr504ApplicationJSONErrorEnumGatewayTimeout Ratcr504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Ratcr504ApplicationJSONErrorEnum) ToPointer() *Ratcr504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ratcr504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Ratcr504ApplicationJSONErrorEnum(s)
+		*e = Ratcr504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -80,17 +88,21 @@ const (
 	Ratcr504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Ratcr504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Ratcr504ApplicationJSONErrorDescriptionEnum) ToPointer() *Ratcr504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ratcr504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Ratcr504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ratcr504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -106,17 +118,21 @@ const (
 	Ratcr503ApplicationJSONErrorEnumServiceUnavailable Ratcr503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Ratcr503ApplicationJSONErrorEnum) ToPointer() *Ratcr503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ratcr503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Ratcr503ApplicationJSONErrorEnum(s)
+		*e = Ratcr503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -126,17 +142,21 @@ const (
 	Ratcr503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Ratcr503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Ratcr503ApplicationJSONErrorDescriptionEnum) ToPointer() *Ratcr503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ratcr503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Ratcr503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ratcr503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -152,17 +172,21 @@ const (
 	Ratcr502ApplicationJSONErrorEnumBadGatewy Ratcr502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Ratcr502ApplicationJSONErrorEnum) ToPointer() *Ratcr502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ratcr502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Ratcr502ApplicationJSONErrorEnum(s)
+		*e = Ratcr502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -172,17 +196,21 @@ const (
 	Ratcr502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Ratcr502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Ratcr502ApplicationJSONErrorDescriptionEnum) ToPointer() *Ratcr502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ratcr502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Ratcr502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ratcr502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -198,17 +226,21 @@ const (
 	Ratcr500ApplicationJSONErrorEnumInternalServerError Ratcr500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Ratcr500ApplicationJSONErrorEnum) ToPointer() *Ratcr500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ratcr500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Ratcr500ApplicationJSONErrorEnum(s)
+		*e = Ratcr500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -218,17 +250,21 @@ const (
 	Ratcr500ApplicationJSONErrorDescriptionEnumInternalServerError Ratcr500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Ratcr500ApplicationJSONErrorDescriptionEnum) ToPointer() *Ratcr500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ratcr500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Ratcr500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ratcr500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -245,19 +281,23 @@ const (
 	Ratcr404ApplicationJSONErrorEnumURLNotFound    Ratcr404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Ratcr404ApplicationJSONErrorEnum) ToPointer() *Ratcr404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ratcr404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Ratcr404ApplicationJSONErrorEnum(s)
+		*e = Ratcr404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -268,19 +308,23 @@ const (
 	Ratcr404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Ratcr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Ratcr404ApplicationJSONErrorDescriptionEnum) ToPointer() *Ratcr404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ratcr404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Ratcr404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ratcr404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -297,19 +341,23 @@ const (
 	Ratcr401ApplicationJSONErrorEnumInvalidAuthorization  Ratcr401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Ratcr401ApplicationJSONErrorEnum) ToPointer() *Ratcr401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ratcr401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Ratcr401ApplicationJSONErrorEnum(s)
+		*e = Ratcr401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -320,19 +368,23 @@ const (
 	Ratcr401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Ratcr401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Ratcr401ApplicationJSONErrorDescriptionEnum) ToPointer() *Ratcr401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ratcr401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Ratcr401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ratcr401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -352,12 +404,16 @@ const (
 	Ratcr400ApplicationJSONErrorEnumInvalidConsentid Ratcr400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Ratcr400ApplicationJSONErrorEnum) ToPointer() *Ratcr400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ratcr400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -367,10 +423,10 @@ func (e *Ratcr400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Ratcr400ApplicationJSONErrorEnum(s)
+		*e = Ratcr400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -384,12 +440,16 @@ const (
 	Ratcr400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Ratcr400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Ratcr400ApplicationJSONErrorDescriptionEnum) ToPointer() *Ratcr400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ratcr400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -399,10 +459,10 @@ func (e *Ratcr400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Ratcr400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ratcr400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ratcr400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ratcr400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

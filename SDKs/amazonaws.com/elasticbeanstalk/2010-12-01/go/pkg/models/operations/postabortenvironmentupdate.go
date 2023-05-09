@@ -15,17 +15,21 @@ const (
 	POSTAbortEnvironmentUpdateActionEnumAbortEnvironmentUpdate POSTAbortEnvironmentUpdateActionEnum = "AbortEnvironmentUpdate"
 )
 
+func (e POSTAbortEnvironmentUpdateActionEnum) ToPointer() *POSTAbortEnvironmentUpdateActionEnum {
+	return &e
+}
+
 func (e *POSTAbortEnvironmentUpdateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AbortEnvironmentUpdate":
-		*e = POSTAbortEnvironmentUpdateActionEnum(s)
+		*e = POSTAbortEnvironmentUpdateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAbortEnvironmentUpdateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAbortEnvironmentUpdateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAbortEnvironmentUpdateVersionEnumTwoThousandAndTen1201 POSTAbortEnvironmentUpdateVersionEnum = "2010-12-01"
 )
 
+func (e POSTAbortEnvironmentUpdateVersionEnum) ToPointer() *POSTAbortEnvironmentUpdateVersionEnum {
+	return &e
+}
+
 func (e *POSTAbortEnvironmentUpdateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTAbortEnvironmentUpdateVersionEnum(s)
+		*e = POSTAbortEnvironmentUpdateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAbortEnvironmentUpdateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAbortEnvironmentUpdateVersionEnum: %v", v)
 	}
 }
 

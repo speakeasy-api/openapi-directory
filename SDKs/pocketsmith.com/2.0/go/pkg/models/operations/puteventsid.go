@@ -18,21 +18,25 @@ const (
 	PutEventsIDRequestBodyBehaviourEnumAll     PutEventsIDRequestBodyBehaviourEnum = "all"
 )
 
+func (e PutEventsIDRequestBodyBehaviourEnum) ToPointer() *PutEventsIDRequestBodyBehaviourEnum {
+	return &e
+}
+
 func (e *PutEventsIDRequestBodyBehaviourEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "one":
 		fallthrough
 	case "forward":
 		fallthrough
 	case "all":
-		*e = PutEventsIDRequestBodyBehaviourEnum(s)
+		*e = PutEventsIDRequestBodyBehaviourEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutEventsIDRequestBodyBehaviourEnum: %s", s)
+		return fmt.Errorf("invalid value for PutEventsIDRequestBodyBehaviourEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	PutEventsIDRequestBodyRepeatTypeEnumEachWeekday PutEventsIDRequestBodyRepeatTypeEnum = "each weekday"
 )
 
+func (e PutEventsIDRequestBodyRepeatTypeEnum) ToPointer() *PutEventsIDRequestBodyRepeatTypeEnum {
+	return &e
+}
+
 func (e *PutEventsIDRequestBodyRepeatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "once":
 		fallthrough
 	case "daily":
@@ -68,10 +76,10 @@ func (e *PutEventsIDRequestBodyRepeatTypeEnum) UnmarshalJSON(data []byte) error 
 	case "yearly":
 		fallthrough
 	case "each weekday":
-		*e = PutEventsIDRequestBodyRepeatTypeEnum(s)
+		*e = PutEventsIDRequestBodyRepeatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutEventsIDRequestBodyRepeatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutEventsIDRequestBodyRepeatTypeEnum: %v", v)
 	}
 }
 

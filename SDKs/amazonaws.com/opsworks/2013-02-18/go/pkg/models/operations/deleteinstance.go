@@ -16,17 +16,21 @@ const (
 	DeleteInstanceXAmzTargetEnumOpsWorks20130218DeleteInstance DeleteInstanceXAmzTargetEnum = "OpsWorks_20130218.DeleteInstance"
 )
 
+func (e DeleteInstanceXAmzTargetEnum) ToPointer() *DeleteInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DeleteInstance":
-		*e = DeleteInstanceXAmzTargetEnum(s)
+		*e = DeleteInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

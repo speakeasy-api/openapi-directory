@@ -7,6 +7,9 @@ import (
 )
 
 type GetV2CalendarEventsRequest struct {
+	// calendar_id of the user who created or included as a guest to the event.
+	//
+	CalendarID *string `queryParam:"style=form,explode=true,name=calendar_id"`
 	// Upper bound (exclusive) for a calendar event's start time to filter by.
 	// Must be in ISO 8601 format.
 	//

@@ -14,18 +14,22 @@ const (
 	DeploymentOptionEnumWithoutTrafficControl DeploymentOptionEnum = "WITHOUT_TRAFFIC_CONTROL"
 )
 
+func (e DeploymentOptionEnum) ToPointer() *DeploymentOptionEnum {
+	return &e
+}
+
 func (e *DeploymentOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WITH_TRAFFIC_CONTROL":
 		fallthrough
 	case "WITHOUT_TRAFFIC_CONTROL":
-		*e = DeploymentOptionEnum(s)
+		*e = DeploymentOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentOptionEnum: %v", v)
 	}
 }

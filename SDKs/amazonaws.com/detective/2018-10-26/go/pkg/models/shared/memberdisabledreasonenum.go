@@ -14,18 +14,22 @@ const (
 	MemberDisabledReasonEnumVolumeUnknown MemberDisabledReasonEnum = "VOLUME_UNKNOWN"
 )
 
+func (e MemberDisabledReasonEnum) ToPointer() *MemberDisabledReasonEnum {
+	return &e
+}
+
 func (e *MemberDisabledReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VOLUME_TOO_HIGH":
 		fallthrough
 	case "VOLUME_UNKNOWN":
-		*e = MemberDisabledReasonEnum(s)
+		*e = MemberDisabledReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MemberDisabledReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for MemberDisabledReasonEnum: %v", v)
 	}
 }

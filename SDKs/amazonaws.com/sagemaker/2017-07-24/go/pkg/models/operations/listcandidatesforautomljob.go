@@ -16,17 +16,21 @@ const (
 	ListCandidatesForAutoMLJobXAmzTargetEnumSageMakerListCandidatesForAutoMlJob ListCandidatesForAutoMLJobXAmzTargetEnum = "SageMaker.ListCandidatesForAutoMLJob"
 )
 
+func (e ListCandidatesForAutoMLJobXAmzTargetEnum) ToPointer() *ListCandidatesForAutoMLJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCandidatesForAutoMLJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.ListCandidatesForAutoMLJob":
-		*e = ListCandidatesForAutoMLJobXAmzTargetEnum(s)
+		*e = ListCandidatesForAutoMLJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCandidatesForAutoMLJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCandidatesForAutoMLJobXAmzTargetEnum: %v", v)
 	}
 }
 

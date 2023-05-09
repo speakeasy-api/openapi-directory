@@ -35,7 +35,10 @@ func newTasklists(defaultClient, securityClient HTTPClient, serverURL, language,
 // TasksTasklistsDelete - Deletes the authenticated user's specified task list.
 func (s *tasklists) TasksTasklistsDelete(ctx context.Context, request operations.TasksTasklistsDeleteRequest, security operations.TasksTasklistsDeleteSecurity) (*operations.TasksTasklistsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *tasklists) TasksTasklistsDelete(ctx context.Context, request operations
 // TasksTasklistsGet - Returns the authenticated user's specified task list.
 func (s *tasklists) TasksTasklistsGet(ctx context.Context, request operations.TasksTasklistsGetRequest, security operations.TasksTasklistsGetSecurity) (*operations.TasksTasklistsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *tasklists) TasksTasklistsList(ctx context.Context, request operations.T
 // TasksTasklistsPatch - Updates the authenticated user's specified task list. This method supports patch semantics.
 func (s *tasklists) TasksTasklistsPatch(ctx context.Context, request operations.TasksTasklistsPatchRequest, security operations.TasksTasklistsPatchSecurity) (*operations.TasksTasklistsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskList", "json")
 	if err != nil {
@@ -280,7 +289,10 @@ func (s *tasklists) TasksTasklistsPatch(ctx context.Context, request operations.
 // TasksTasklistsUpdate - Updates the authenticated user's specified task list.
 func (s *tasklists) TasksTasklistsUpdate(ctx context.Context, request operations.TasksTasklistsUpdateRequest, security operations.TasksTasklistsUpdateSecurity) (*operations.TasksTasklistsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/v1/users/@me/lists/{tasklist}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskList", "json")
 	if err != nil {

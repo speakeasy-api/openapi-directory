@@ -23,21 +23,25 @@ const (
 	BulkSearchImagesImageTypeEnumVector       BulkSearchImagesImageTypeEnum = "vector"
 )
 
+func (e BulkSearchImagesImageTypeEnum) ToPointer() *BulkSearchImagesImageTypeEnum {
+	return &e
+}
+
 func (e *BulkSearchImagesImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "photo":
 		fallthrough
 	case "illustration":
 		fallthrough
 	case "vector":
-		*e = BulkSearchImagesImageTypeEnum(s)
+		*e = BulkSearchImagesImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BulkSearchImagesImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BulkSearchImagesImageTypeEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	BulkSearchImagesLicenseEnumEnhanced   BulkSearchImagesLicenseEnum = "enhanced"
 )
 
+func (e BulkSearchImagesLicenseEnum) ToPointer() *BulkSearchImagesLicenseEnum {
+	return &e
+}
+
 func (e *BulkSearchImagesLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "commercial":
 		fallthrough
 	case "editorial":
 		fallthrough
 	case "enhanced":
-		*e = BulkSearchImagesLicenseEnum(s)
+		*e = BulkSearchImagesLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BulkSearchImagesLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for BulkSearchImagesLicenseEnum: %v", v)
 	}
 }
 
@@ -75,19 +83,23 @@ const (
 	BulkSearchImagesOrientationEnumVertical   BulkSearchImagesOrientationEnum = "vertical"
 )
 
+func (e BulkSearchImagesOrientationEnum) ToPointer() *BulkSearchImagesOrientationEnum {
+	return &e
+}
+
 func (e *BulkSearchImagesOrientationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "horizontal":
 		fallthrough
 	case "vertical":
-		*e = BulkSearchImagesOrientationEnum(s)
+		*e = BulkSearchImagesOrientationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BulkSearchImagesOrientationEnum: %s", s)
+		return fmt.Errorf("invalid value for BulkSearchImagesOrientationEnum: %v", v)
 	}
 }
 
@@ -106,12 +118,16 @@ const (
 	BulkSearchImagesPeopleAgeEnumOlder     BulkSearchImagesPeopleAgeEnum = "older"
 )
 
+func (e BulkSearchImagesPeopleAgeEnum) ToPointer() *BulkSearchImagesPeopleAgeEnum {
+	return &e
+}
+
 func (e *BulkSearchImagesPeopleAgeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "infants":
 		fallthrough
 	case "children":
@@ -129,10 +145,10 @@ func (e *BulkSearchImagesPeopleAgeEnum) UnmarshalJSON(data []byte) error {
 	case "60s":
 		fallthrough
 	case "older":
-		*e = BulkSearchImagesPeopleAgeEnum(s)
+		*e = BulkSearchImagesPeopleAgeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BulkSearchImagesPeopleAgeEnum: %s", s)
+		return fmt.Errorf("invalid value for BulkSearchImagesPeopleAgeEnum: %v", v)
 	}
 }
 
@@ -171,12 +187,16 @@ const (
 	BulkSearchImagesPeopleEthnicityEnumNotOther           BulkSearchImagesPeopleEthnicityEnum = "NOT other"
 )
 
+func (e BulkSearchImagesPeopleEthnicityEnum) ToPointer() *BulkSearchImagesPeopleEthnicityEnum {
+	return &e
+}
+
 func (e *BulkSearchImagesPeopleEthnicityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "african":
 		fallthrough
 	case "african_american":
@@ -236,10 +256,10 @@ func (e *BulkSearchImagesPeopleEthnicityEnum) UnmarshalJSON(data []byte) error {
 	case "NOT southeast_asian":
 		fallthrough
 	case "NOT other":
-		*e = BulkSearchImagesPeopleEthnicityEnum(s)
+		*e = BulkSearchImagesPeopleEthnicityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BulkSearchImagesPeopleEthnicityEnum: %s", s)
+		return fmt.Errorf("invalid value for BulkSearchImagesPeopleEthnicityEnum: %v", v)
 	}
 }
 
@@ -252,21 +272,25 @@ const (
 	BulkSearchImagesPeopleGenderEnumBoth   BulkSearchImagesPeopleGenderEnum = "both"
 )
 
+func (e BulkSearchImagesPeopleGenderEnum) ToPointer() *BulkSearchImagesPeopleGenderEnum {
+	return &e
+}
+
 func (e *BulkSearchImagesPeopleGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
 		fallthrough
 	case "both":
-		*e = BulkSearchImagesPeopleGenderEnum(s)
+		*e = BulkSearchImagesPeopleGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BulkSearchImagesPeopleGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for BulkSearchImagesPeopleGenderEnum: %v", v)
 	}
 }
 
@@ -280,12 +304,16 @@ const (
 	BulkSearchImagesSortEnumRandom    BulkSearchImagesSortEnum = "random"
 )
 
+func (e BulkSearchImagesSortEnum) ToPointer() *BulkSearchImagesSortEnum {
+	return &e
+}
+
 func (e *BulkSearchImagesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "popular":
@@ -293,10 +321,10 @@ func (e *BulkSearchImagesSortEnum) UnmarshalJSON(data []byte) error {
 	case "relevance":
 		fallthrough
 	case "random":
-		*e = BulkSearchImagesSortEnum(s)
+		*e = BulkSearchImagesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BulkSearchImagesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for BulkSearchImagesSortEnum: %v", v)
 	}
 }
 
@@ -308,19 +336,23 @@ const (
 	BulkSearchImagesViewEnumFull    BulkSearchImagesViewEnum = "full"
 )
 
+func (e BulkSearchImagesViewEnum) ToPointer() *BulkSearchImagesViewEnum {
+	return &e
+}
+
 func (e *BulkSearchImagesViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimal":
 		fallthrough
 	case "full":
-		*e = BulkSearchImagesViewEnum(s)
+		*e = BulkSearchImagesViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BulkSearchImagesViewEnum: %s", s)
+		return fmt.Errorf("invalid value for BulkSearchImagesViewEnum: %v", v)
 	}
 }
 
@@ -350,6 +382,8 @@ type BulkSearchImagesRequest struct {
 	// Fields to display in the response; see the documentation for the fields parameter in the overview section
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// (Deprecated; use height_from and height_to instead) Show images with the specified height
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Height *int64 `queryParam:"style=form,explode=true,name=height"`
 	// Show images with the specified height or larger, in pixels
 	HeightFrom *int64 `queryParam:"style=form,explode=true,name=height_from"`
@@ -392,6 +426,8 @@ type BulkSearchImagesRequest struct {
 	// Amount of detail to render in the response
 	View *BulkSearchImagesViewEnum `queryParam:"style=form,explode=true,name=view"`
 	// (Deprecated; use width_from and width_to instead) Show images with the specified width
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Width *int64 `queryParam:"style=form,explode=true,name=width"`
 	// Show images with the specified width or larger, in pixels
 	WidthFrom *int64 `queryParam:"style=form,explode=true,name=width_from"`

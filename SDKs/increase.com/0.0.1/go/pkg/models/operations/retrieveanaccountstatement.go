@@ -13,23 +13,27 @@ type RetrieveAnAccountStatementRequest struct {
 	AccountStatementID string `pathParam:"style=simple,explode=false,name=account_statement_id"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnum = "429"
+	RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON13TypeEnumRateLimitedError RetrieveAnAccountStatementDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON13TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON13TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type RetrieveAnAccountStatementDefaultApplicationJSON13 struct {
 	Type       RetrieveAnAccountStatementDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnum = "403"
+	RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON12TypeEnumPrivateFeatureError RetrieveAnAccountStatementDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON12TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON12TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type RetrieveAnAccountStatementDefaultApplicationJSON12 struct {
 	Type   RetrieveAnAccountStatementDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnum = "404"
+	RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON11TypeEnumObjectNotFoundError RetrieveAnAccountStatementDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON11TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON11TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type RetrieveAnAccountStatementDefaultApplicationJSON11 struct {
 	Type   RetrieveAnAccountStatementDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnumFourHundred RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnum = "400"
+	RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnumFourHundred RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON10TypeEnumMalformedRequestError RetrieveAnAccountStatementDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON10TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON10TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type RetrieveAnAccountStatementDefaultApplicationJSON10 struct {
 	Type   RetrieveAnAccountStatementDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnumFourHundred RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnum = "400"
+	RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnumFourHundred RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON9TypeEnumInvalidParametersError RetrieveAnAccountStatementDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON9TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON9TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type RetrieveAnAccountStatementDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                    `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                    `json:"errors"`
 	Status RetrieveAnAccountStatementDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                      `json:"title"`
 	Type   RetrieveAnAccountStatementDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnum = "409"
+	RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON8TypeEnumInvalidOperationError RetrieveAnAccountStatementDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON8TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON8TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type RetrieveAnAccountStatementDefaultApplicationJSON8 struct {
 	Type   RetrieveAnAccountStatementDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnum = "401"
+	RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON7TypeEnumInvalidAPIKeyError RetrieveAnAccountStatementDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON7TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON7TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type RetrieveAnAccountStatementDefaultApplicationJSON7 struct {
 	Type   RetrieveAnAccountStatementDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnumFiveHundred RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnum = "500"
+	RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnumFiveHundred RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON6TypeEnumInternalServerError RetrieveAnAccountStatementDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON6TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON6TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type RetrieveAnAccountStatementDefaultApplicationJSON6 struct {
 	Type   RetrieveAnAccountStatementDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnum = "403"
+	RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON5TypeEnumInsufficientPermissionsError RetrieveAnAccountStatementDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON5TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON5TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type RetrieveAnAccountStatementDefaultApplicationJSON5 struct {
 	Type   RetrieveAnAccountStatementDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnum = "422"
+	RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError RetrieveAnAccountStatementDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON4TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON4TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type RetrieveAnAccountStatementDefaultApplicationJSON4 struct {
 	Type   RetrieveAnAccountStatementDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnum = "409"
+	RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON3TypeEnumIdempotencyConflictError RetrieveAnAccountStatementDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON3TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON3TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type RetrieveAnAccountStatementDefaultApplicationJSON3 struct {
 	Type   RetrieveAnAccountStatementDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnum = "403"
+	RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON2TypeEnumEnvironmentMismatchError RetrieveAnAccountStatementDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON2TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON2TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type RetrieveAnAccountStatementDefaultApplicationJSON2 struct {
 	Type   RetrieveAnAccountStatementDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnum string
+type RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnum int64
 
 const (
-	RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnum = "404"
+	RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	RetrieveAnAccountStatementDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError RetrieveAnAccountStatementDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e RetrieveAnAccountStatementDefaultApplicationJSON1TypeEnum) ToPointer() *RetrieveAnAccountStatementDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAccountStatementDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = RetrieveAnAccountStatementDefaultApplicationJSON1TypeEnum(s)
+		*e = RetrieveAnAccountStatementDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAccountStatementDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

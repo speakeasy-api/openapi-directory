@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DomainsProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) DomainsProjectsLocationsList(ctx context.Context, request operations.DomainsProjectsLocationsListRequest, security operations.DomainsProjectsLocationsListSecurity) (*operations.DomainsProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) DomainsProjectsLocationsList(ctx context.Context, request ope
 // DomainsProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) DomainsProjectsLocationsOperationsList(ctx context.Context, request operations.DomainsProjectsLocationsOperationsListRequest, security operations.DomainsProjectsLocationsOperationsListSecurity) (*operations.DomainsProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *projects) DomainsProjectsLocationsOperationsList(ctx context.Context, r
 // DomainsProjectsLocationsRegistrationsConfigureContactSettings - Updates a `Registration`'s contact settings. Some changes require confirmation by the domain's registrant contact .
 func (s *projects) DomainsProjectsLocationsRegistrationsConfigureContactSettings(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsConfigureContactSettingsRequest, security operations.DomainsProjectsLocationsRegistrationsConfigureContactSettingsSecurity) (*operations.DomainsProjectsLocationsRegistrationsConfigureContactSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{registration}:configureContactSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{registration}:configureContactSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfigureContactSettingsRequest", "json")
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsConfigureContactSettings
 // DomainsProjectsLocationsRegistrationsConfigureDNSSettings - Updates a `Registration`'s DNS settings.
 func (s *projects) DomainsProjectsLocationsRegistrationsConfigureDNSSettings(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsConfigureDNSSettingsRequest, security operations.DomainsProjectsLocationsRegistrationsConfigureDNSSettingsSecurity) (*operations.DomainsProjectsLocationsRegistrationsConfigureDNSSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{registration}:configureDnsSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{registration}:configureDnsSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfigureDNSSettingsRequestInput", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsConfigureDNSSettings(ctx
 // DomainsProjectsLocationsRegistrationsConfigureManagementSettings - Updates a `Registration`'s management settings.
 func (s *projects) DomainsProjectsLocationsRegistrationsConfigureManagementSettings(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsConfigureManagementSettingsRequest, security operations.DomainsProjectsLocationsRegistrationsConfigureManagementSettingsSecurity) (*operations.DomainsProjectsLocationsRegistrationsConfigureManagementSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{registration}:configureManagementSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{registration}:configureManagementSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfigureManagementSettingsRequestInput", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsConfigureManagementSetti
 // DomainsProjectsLocationsRegistrationsDelete - Deletes a `Registration` resource. This method works on any `Registration` resource using [Subscription or Commitment billing](/domains/pricing#billing-models), provided that the resource was created at least 1 day in the past. For `Registration` resources using [Monthly billing](/domains/pricing#billing-models), this method works if: * `state` is `EXPORTED` with `expire_time` in the past * `state` is `REGISTRATION_FAILED` * `state` is `TRANSFER_FAILED` When an active registration is successfully deleted, you can continue to use the domain in [Google Domains](https://domains.google/) until it expires. The calling user becomes the domain's sole owner in Google Domains, and permissions for the domain are subsequently managed there. The domain does not renew automatically unless the new owner sets up billing in Google Domains.
 func (s *projects) DomainsProjectsLocationsRegistrationsDelete(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsDeleteRequest, security operations.DomainsProjectsLocationsRegistrationsDeleteSecurity) (*operations.DomainsProjectsLocationsRegistrationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsDelete(ctx context.Conte
 // DomainsProjectsLocationsRegistrationsExport - Exports a `Registration` resource, such that it is no longer managed by Cloud Domains. When an active domain is successfully exported, you can continue to use the domain in [Google Domains](https://domains.google/) until it expires. The calling user becomes the domain's sole owner in Google Domains, and permissions for the domain are subsequently managed there. The domain does not renew automatically unless the new owner sets up billing in Google Domains.
 func (s *projects) DomainsProjectsLocationsRegistrationsExport(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsExportRequest, security operations.DomainsProjectsLocationsRegistrationsExportSecurity) (*operations.DomainsProjectsLocationsRegistrationsExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}:export", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}:export", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsExport(ctx context.Conte
 // DomainsProjectsLocationsRegistrationsGet - Gets the details of a `Registration` resource.
 func (s *projects) DomainsProjectsLocationsRegistrationsGet(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsGetRequest, security operations.DomainsProjectsLocationsRegistrationsGetSecurity) (*operations.DomainsProjectsLocationsRegistrationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsGet(ctx context.Context,
 // DomainsProjectsLocationsRegistrationsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) DomainsProjectsLocationsRegistrationsGetIamPolicy(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsGetIamPolicyRequest, security operations.DomainsProjectsLocationsRegistrationsGetIamPolicySecurity) (*operations.DomainsProjectsLocationsRegistrationsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -494,7 +521,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsGetIamPolicy(ctx context
 // DomainsProjectsLocationsRegistrationsImport - Imports a domain name from [Google Domains](https://domains.google/) for use in Cloud Domains. To transfer a domain from another registrar, use the `TransferDomain` method instead. Since individual users can own domains in Google Domains, the calling user must have ownership permission on the domain.
 func (s *projects) DomainsProjectsLocationsRegistrationsImport(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsImportRequest, security operations.DomainsProjectsLocationsRegistrationsImportSecurity) (*operations.DomainsProjectsLocationsRegistrationsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{parent}/registrations:import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{parent}/registrations:import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportDomainRequest", "json")
 	if err != nil {
@@ -549,7 +579,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsImport(ctx context.Conte
 // DomainsProjectsLocationsRegistrationsList - Lists the `Registration` resources in a project.
 func (s *projects) DomainsProjectsLocationsRegistrationsList(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsListRequest, security operations.DomainsProjectsLocationsRegistrationsListSecurity) (*operations.DomainsProjectsLocationsRegistrationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{parent}/registrations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{parent}/registrations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -597,7 +630,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsList(ctx context.Context
 // DomainsProjectsLocationsRegistrationsPatch - Updates select fields of a `Registration` resource, notably `labels`. To update other fields, use the appropriate custom update method: * To update management settings, see `ConfigureManagementSettings` * To update DNS configuration, see `ConfigureDnsSettings` * To update contact information, see `ConfigureContactSettings`
 func (s *projects) DomainsProjectsLocationsRegistrationsPatch(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsPatchRequest, security operations.DomainsProjectsLocationsRegistrationsPatchSecurity) (*operations.DomainsProjectsLocationsRegistrationsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegistrationInput", "json")
 	if err != nil {
@@ -652,7 +688,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsPatch(ctx context.Contex
 // DomainsProjectsLocationsRegistrationsRegister - Registers a new domain name and creates a corresponding `Registration` resource. Call `RetrieveRegisterParameters` first to check availability of the domain name and determine parameters like price that are needed to build a call to this method. A successful call creates a `Registration` resource in state `REGISTRATION_PENDING`, which resolves to `ACTIVE` within 1-2 minutes, indicating that the domain was successfully registered. If the resource ends up in state `REGISTRATION_FAILED`, it indicates that the domain was not registered successfully, and you can safely delete the resource and retry registration.
 func (s *projects) DomainsProjectsLocationsRegistrationsRegister(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsRegisterRequest, security operations.DomainsProjectsLocationsRegistrationsRegisterSecurity) (*operations.DomainsProjectsLocationsRegistrationsRegisterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{parent}/registrations:register", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{parent}/registrations:register", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegisterDomainRequestInput", "json")
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsRegister(ctx context.Con
 // DomainsProjectsLocationsRegistrationsResetAuthorizationCode - Resets the authorization code of the `Registration` to a new random string. You can call this method only after 60 days have elapsed since the initial domain registration.
 func (s *projects) DomainsProjectsLocationsRegistrationsResetAuthorizationCode(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsResetAuthorizationCodeRequest, security operations.DomainsProjectsLocationsRegistrationsResetAuthorizationCodeSecurity) (*operations.DomainsProjectsLocationsRegistrationsResetAuthorizationCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{registration}:resetAuthorizationCode", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{registration}:resetAuthorizationCode", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -762,7 +804,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsResetAuthorizationCode(c
 // DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCode - Gets the authorization code of the `Registration` for the purpose of transferring the domain to another registrar. You can call this method only after 60 days have elapsed since the initial domain registration.
 func (s *projects) DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCode(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCodeRequest, security operations.DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCodeSecurity) (*operations.DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{registration}:retrieveAuthorizationCode", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{registration}:retrieveAuthorizationCode", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -810,7 +855,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCod
 // DomainsProjectsLocationsRegistrationsRetrieveImportableDomains - Lists domain names from [Google Domains](https://domains.google/) that can be imported to Cloud Domains using the `ImportDomain` method. Since individual users can own domains in Google Domains, the list of domains returned depends on the individual user making the call. Domains already managed by Cloud Domains are not returned.
 func (s *projects) DomainsProjectsLocationsRegistrationsRetrieveImportableDomains(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsRequest, security operations.DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsSecurity) (*operations.DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{location}/registrations:retrieveImportableDomains", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{location}/registrations:retrieveImportableDomains", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -858,7 +906,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsRetrieveImportableDomain
 // DomainsProjectsLocationsRegistrationsRetrieveRegisterParameters - Gets parameters needed to register a new domain name, including price and up-to-date availability. Use the returned values to call `RegisterDomain`.
 func (s *projects) DomainsProjectsLocationsRegistrationsRetrieveRegisterParameters(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersRequest, security operations.DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersSecurity) (*operations.DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{location}/registrations:retrieveRegisterParameters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{location}/registrations:retrieveRegisterParameters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -906,7 +957,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsRetrieveRegisterParamete
 // DomainsProjectsLocationsRegistrationsRetrieveTransferParameters - Gets parameters needed to transfer a domain name from another registrar to Cloud Domains. For domains already managed by [Google Domains](https://domains.google/), use `ImportDomain` instead. Use the returned values to call `TransferDomain`.
 func (s *projects) DomainsProjectsLocationsRegistrationsRetrieveTransferParameters(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsRetrieveTransferParametersRequest, security operations.DomainsProjectsLocationsRegistrationsRetrieveTransferParametersSecurity) (*operations.DomainsProjectsLocationsRegistrationsRetrieveTransferParametersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{location}/registrations:retrieveTransferParameters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{location}/registrations:retrieveTransferParameters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -954,7 +1008,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsRetrieveTransferParamete
 // DomainsProjectsLocationsRegistrationsSearchDomains - Searches for available domain names similar to the provided query. Availability results from this method are approximate; call `RetrieveRegisterParameters` on a domain before registering to confirm availability.
 func (s *projects) DomainsProjectsLocationsRegistrationsSearchDomains(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsSearchDomainsRequest, security operations.DomainsProjectsLocationsRegistrationsSearchDomainsSecurity) (*operations.DomainsProjectsLocationsRegistrationsSearchDomainsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{location}/registrations:searchDomains", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{location}/registrations:searchDomains", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1002,7 +1059,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsSearchDomains(ctx contex
 // DomainsProjectsLocationsRegistrationsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) DomainsProjectsLocationsRegistrationsSetIamPolicy(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsSetIamPolicyRequest, security operations.DomainsProjectsLocationsRegistrationsSetIamPolicySecurity) (*operations.DomainsProjectsLocationsRegistrationsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -1057,7 +1117,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsSetIamPolicy(ctx context
 // DomainsProjectsLocationsRegistrationsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) DomainsProjectsLocationsRegistrationsTestIamPermissions(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsTestIamPermissionsRequest, security operations.DomainsProjectsLocationsRegistrationsTestIamPermissionsSecurity) (*operations.DomainsProjectsLocationsRegistrationsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -1112,7 +1175,10 @@ func (s *projects) DomainsProjectsLocationsRegistrationsTestIamPermissions(ctx c
 // DomainsProjectsLocationsRegistrationsTransfer - Transfers a domain name from another registrar to Cloud Domains. For domains already managed by [Google Domains](https://domains.google/), use `ImportDomain` instead. Before calling this method, go to the domain's current registrar to unlock the domain for transfer and retrieve the domain's transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is unlocked and to get values needed to build a call to this method. A successful call creates a `Registration` resource in state `TRANSFER_PENDING`. It can take several days to complete the transfer process. The registrant can often speed up this process by approving the transfer through the current registrar, either by clicking a link in an email from the registrar or by visiting the registrar's website. A few minutes after transfer approval, the resource transitions to state `ACTIVE`, indicating that the transfer was successful. If the transfer is rejected or the request expires without being approved, the resource can end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete the resource and retry the transfer.
 func (s *projects) DomainsProjectsLocationsRegistrationsTransfer(ctx context.Context, request operations.DomainsProjectsLocationsRegistrationsTransferRequest, security operations.DomainsProjectsLocationsRegistrationsTransferSecurity) (*operations.DomainsProjectsLocationsRegistrationsTransferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{parent}/registrations:transfer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{parent}/registrations:transfer", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferDomainRequestInput", "json")
 	if err != nil {

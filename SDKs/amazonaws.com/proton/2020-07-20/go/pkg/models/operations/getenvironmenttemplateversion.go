@@ -16,17 +16,21 @@ const (
 	GetEnvironmentTemplateVersionXAmzTargetEnumAwsProton20200720GetEnvironmentTemplateVersion GetEnvironmentTemplateVersionXAmzTargetEnum = "AwsProton20200720.GetEnvironmentTemplateVersion"
 )
 
+func (e GetEnvironmentTemplateVersionXAmzTargetEnum) ToPointer() *GetEnvironmentTemplateVersionXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetEnvironmentTemplateVersionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.GetEnvironmentTemplateVersion":
-		*e = GetEnvironmentTemplateVersionXAmzTargetEnum(s)
+		*e = GetEnvironmentTemplateVersionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEnvironmentTemplateVersionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEnvironmentTemplateVersionXAmzTargetEnum: %v", v)
 	}
 }
 

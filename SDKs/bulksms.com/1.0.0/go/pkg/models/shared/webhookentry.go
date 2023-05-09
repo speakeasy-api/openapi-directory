@@ -22,19 +22,23 @@ const (
 	WebhookEntryInvokeOptionEnumMany WebhookEntryInvokeOptionEnum = "MANY"
 )
 
+func (e WebhookEntryInvokeOptionEnum) ToPointer() *WebhookEntryInvokeOptionEnum {
+	return &e
+}
+
 func (e *WebhookEntryInvokeOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONE":
 		fallthrough
 	case "MANY":
-		*e = WebhookEntryInvokeOptionEnum(s)
+		*e = WebhookEntryInvokeOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookEntryInvokeOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookEntryInvokeOptionEnum: %v", v)
 	}
 }
 
@@ -54,19 +58,23 @@ const (
 	WebhookEntryTriggerScopeEnumReceived WebhookEntryTriggerScopeEnum = "RECEIVED"
 )
 
+func (e WebhookEntryTriggerScopeEnum) ToPointer() *WebhookEntryTriggerScopeEnum {
+	return &e
+}
+
 func (e *WebhookEntryTriggerScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SENT":
 		fallthrough
 	case "RECEIVED":
-		*e = WebhookEntryTriggerScopeEnum(s)
+		*e = WebhookEntryTriggerScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookEntryTriggerScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookEntryTriggerScopeEnum: %v", v)
 	}
 }
 

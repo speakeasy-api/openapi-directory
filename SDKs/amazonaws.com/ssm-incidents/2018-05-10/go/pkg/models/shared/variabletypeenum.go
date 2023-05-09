@@ -14,18 +14,22 @@ const (
 	VariableTypeEnumInvolvedResources VariableTypeEnum = "INVOLVED_RESOURCES"
 )
 
+func (e VariableTypeEnum) ToPointer() *VariableTypeEnum {
+	return &e
+}
+
 func (e *VariableTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INCIDENT_RECORD_ARN":
 		fallthrough
 	case "INVOLVED_RESOURCES":
-		*e = VariableTypeEnum(s)
+		*e = VariableTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VariableTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VariableTypeEnum: %v", v)
 	}
 }

@@ -37,7 +37,10 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 // You need to provide a <b>Service ID</b> ID :<br>- use the <b>hardware/services</b> service to get all available service IDs.
 func (s *services) GetOneService(ctx context.Context, request operations.GetOneServiceRequest) (*operations.GetOneServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/services/{serviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hardware/services/{serviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

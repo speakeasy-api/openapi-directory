@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>This is the <i>Recycle Bin API Reference</i>. This documentation provides descriptions and syntax for each of the actions and data types in Recycle Bin.</p> <p>Recycle Bin is a resource recovery feature that enables you to restore accidentally deleted snapshots and EBS-backed AMIs. When using Recycle Bin, if your resources are deleted, they are retained in the Recycle Bin for a time period that you specify.</p> <p>You can restore a resource from the Recycle Bin at any time before its retention period expires. After you restore a resource from the Recycle Bin, the resource is removed from the Recycle Bin, and you can then use it in the same way you use any other resource of that type in your account. If the retention period expires and the resource is not restored, the resource is permanently deleted from the Recycle Bin and is no longer available for recovery. For more information about Recycle Bin, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-recycle-bin.html"> Recycle Bin</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
 // https://docs.aws.amazon.com/rbin/ - Amazon Web Services documentation
 type SDK struct {
@@ -200,7 +215,10 @@ func (s *SDK) CreateRule(ctx context.Context, request operations.CreateRuleReque
 // DeleteRule - Deletes a Recycle Bin retention rule. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-delete-rule"> Delete Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
 func (s *SDK) DeleteRule(ctx context.Context, request operations.DeleteRuleRequest) (*operations.DeleteRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{identifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/rules/{identifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -286,7 +304,10 @@ func (s *SDK) DeleteRule(ctx context.Context, request operations.DeleteRuleReque
 // GetRule - Gets information about a Recycle Bin retention rule.
 func (s *SDK) GetRule(ctx context.Context, request operations.GetRuleRequest) (*operations.GetRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{identifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/rules/{identifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -442,7 +463,10 @@ func (s *SDK) ListRules(ctx context.Context, request operations.ListRulesRequest
 // ListTagsForResource - Lists the tags assigned to a retention rule.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -518,7 +542,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // LockRule - Locks a retention rule. A locked retention rule can't be modified or deleted.
 func (s *SDK) LockRule(ctx context.Context, request operations.LockRuleRequest) (*operations.LockRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{identifier}/lock", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/rules/{identifier}/lock", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -614,7 +641,10 @@ func (s *SDK) LockRule(ctx context.Context, request operations.LockRuleRequest) 
 // TagResource - Assigns tags to the specified retention rule.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -710,7 +740,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UnlockRule - Unlocks a retention rule. After a retention rule is unlocked, it can be modified or deleted only after the unlock delay period expires.
 func (s *SDK) UnlockRule(ctx context.Context, request operations.UnlockRuleRequest) (*operations.UnlockRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{identifier}/unlock", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/rules/{identifier}/unlock", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -796,7 +829,10 @@ func (s *SDK) UnlockRule(ctx context.Context, request operations.UnlockRuleReque
 // UntagResource - Unassigns a tag from a retention rule.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -876,7 +912,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateRule - Updates an existing Recycle Bin retention rule. You can update a retention rule's description, resource tags, and retention period at any time after creation. You can't update a retention rule's resource type after creation. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-update-rule"> Update Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
 func (s *SDK) UpdateRule(ctx context.Context, request operations.UpdateRuleRequest) (*operations.UpdateRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{identifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/rules/{identifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

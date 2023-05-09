@@ -17,12 +17,16 @@ const (
 	AppliedLabelChangeDetailTypesEnumLabelAppliedByItemCreate AppliedLabelChangeDetailTypesEnum = "LABEL_APPLIED_BY_ITEM_CREATE"
 )
 
+func (e AppliedLabelChangeDetailTypesEnum) ToPointer() *AppliedLabelChangeDetailTypesEnum {
+	return &e
+}
+
 func (e *AppliedLabelChangeDetailTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "LABEL_ADDED":
@@ -32,10 +36,10 @@ func (e *AppliedLabelChangeDetailTypesEnum) UnmarshalJSON(data []byte) error {
 	case "LABEL_FIELD_VALUE_CHANGED":
 		fallthrough
 	case "LABEL_APPLIED_BY_ITEM_CREATE":
-		*e = AppliedLabelChangeDetailTypesEnum(s)
+		*e = AppliedLabelChangeDetailTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppliedLabelChangeDetailTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for AppliedLabelChangeDetailTypesEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	VeteranStatusConfirmationVeteranStatusEnumNotConfirmed VeteranStatusConfirmationVeteranStatusEnum = "not confirmed"
 )
 
+func (e VeteranStatusConfirmationVeteranStatusEnum) ToPointer() *VeteranStatusConfirmationVeteranStatusEnum {
+	return &e
+}
+
 func (e *VeteranStatusConfirmationVeteranStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confirmed":
 		fallthrough
 	case "not confirmed":
-		*e = VeteranStatusConfirmationVeteranStatusEnum(s)
+		*e = VeteranStatusConfirmationVeteranStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VeteranStatusConfirmationVeteranStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for VeteranStatusConfirmationVeteranStatusEnum: %v", v)
 	}
 }
 

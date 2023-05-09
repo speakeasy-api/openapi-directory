@@ -162,19 +162,23 @@ const (
 	IssuesUpdateRequestBodyStateEnumClosed IssuesUpdateRequestBodyStateEnum = "closed"
 )
 
+func (e IssuesUpdateRequestBodyStateEnum) ToPointer() *IssuesUpdateRequestBodyStateEnum {
+	return &e
+}
+
 func (e *IssuesUpdateRequestBodyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
-		*e = IssuesUpdateRequestBodyStateEnum(s)
+		*e = IssuesUpdateRequestBodyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesUpdateRequestBodyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesUpdateRequestBodyStateEnum: %v", v)
 	}
 }
 
@@ -187,21 +191,25 @@ const (
 	IssuesUpdateRequestBodyStateReasonEnumReopened   IssuesUpdateRequestBodyStateReasonEnum = "reopened"
 )
 
+func (e IssuesUpdateRequestBodyStateReasonEnum) ToPointer() *IssuesUpdateRequestBodyStateReasonEnum {
+	return &e
+}
+
 func (e *IssuesUpdateRequestBodyStateReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "completed":
 		fallthrough
 	case "not_planned":
 		fallthrough
 	case "reopened":
-		*e = IssuesUpdateRequestBodyStateReasonEnum(s)
+		*e = IssuesUpdateRequestBodyStateReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesUpdateRequestBodyStateReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesUpdateRequestBodyStateReasonEnum: %v", v)
 	}
 }
 

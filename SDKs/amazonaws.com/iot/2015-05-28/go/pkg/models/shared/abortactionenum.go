@@ -13,16 +13,20 @@ const (
 	AbortActionEnumCancel AbortActionEnum = "CANCEL"
 )
 
+func (e AbortActionEnum) ToPointer() *AbortActionEnum {
+	return &e
+}
+
 func (e *AbortActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANCEL":
-		*e = AbortActionEnum(s)
+		*e = AbortActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AbortActionEnum: %s", s)
+		return fmt.Errorf("invalid value for AbortActionEnum: %v", v)
 	}
 }

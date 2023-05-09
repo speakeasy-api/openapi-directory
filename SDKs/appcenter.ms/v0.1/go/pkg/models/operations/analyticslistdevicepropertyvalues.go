@@ -35,12 +35,16 @@ const (
 	AnalyticsListDevicePropertyValuesDefaultApplicationJSONErrorCodeEnumTooManyRequests     AnalyticsListDevicePropertyValuesDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AnalyticsListDevicePropertyValuesDefaultApplicationJSONErrorCodeEnum) ToPointer() *AnalyticsListDevicePropertyValuesDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AnalyticsListDevicePropertyValuesDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -54,10 +58,10 @@ func (e *AnalyticsListDevicePropertyValuesDefaultApplicationJSONErrorCodeEnum) U
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AnalyticsListDevicePropertyValuesDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AnalyticsListDevicePropertyValuesDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsListDevicePropertyValuesDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsListDevicePropertyValuesDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

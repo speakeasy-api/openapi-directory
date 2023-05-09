@@ -16,17 +16,21 @@ const (
 	GetOfferingStatusXAmzTargetEnumDeviceFarm20150623GetOfferingStatus GetOfferingStatusXAmzTargetEnum = "DeviceFarm_20150623.GetOfferingStatus"
 )
 
+func (e GetOfferingStatusXAmzTargetEnum) ToPointer() *GetOfferingStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetOfferingStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.GetOfferingStatus":
-		*e = GetOfferingStatusXAmzTargetEnum(s)
+		*e = GetOfferingStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOfferingStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOfferingStatusXAmzTargetEnum: %v", v)
 	}
 }
 

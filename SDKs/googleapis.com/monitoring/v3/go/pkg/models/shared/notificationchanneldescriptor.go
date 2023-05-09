@@ -21,12 +21,16 @@ const (
 	NotificationChannelDescriptorLaunchStageEnumDeprecated             NotificationChannelDescriptorLaunchStageEnum = "DEPRECATED"
 )
 
+func (e NotificationChannelDescriptorLaunchStageEnum) ToPointer() *NotificationChannelDescriptorLaunchStageEnum {
+	return &e
+}
+
 func (e *NotificationChannelDescriptorLaunchStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_STAGE_UNSPECIFIED":
 		fallthrough
 	case "UNIMPLEMENTED":
@@ -42,10 +46,10 @@ func (e *NotificationChannelDescriptorLaunchStageEnum) UnmarshalJSON(data []byte
 	case "GA":
 		fallthrough
 	case "DEPRECATED":
-		*e = NotificationChannelDescriptorLaunchStageEnum(s)
+		*e = NotificationChannelDescriptorLaunchStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationChannelDescriptorLaunchStageEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationChannelDescriptorLaunchStageEnum: %v", v)
 	}
 }
 
@@ -57,21 +61,25 @@ const (
 	NotificationChannelDescriptorSupportedTiersEnumServiceTierPremium     NotificationChannelDescriptorSupportedTiersEnum = "SERVICE_TIER_PREMIUM"
 )
 
+func (e NotificationChannelDescriptorSupportedTiersEnum) ToPointer() *NotificationChannelDescriptorSupportedTiersEnum {
+	return &e
+}
+
 func (e *NotificationChannelDescriptorSupportedTiersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE_TIER_UNSPECIFIED":
 		fallthrough
 	case "SERVICE_TIER_BASIC":
 		fallthrough
 	case "SERVICE_TIER_PREMIUM":
-		*e = NotificationChannelDescriptorSupportedTiersEnum(s)
+		*e = NotificationChannelDescriptorSupportedTiersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationChannelDescriptorSupportedTiersEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationChannelDescriptorSupportedTiersEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	SetDefaultSenderIDXAmzTargetEnumPinpointSmsVoiceV2SetDefaultSenderID SetDefaultSenderIDXAmzTargetEnum = "PinpointSMSVoiceV2.SetDefaultSenderId"
 )
 
+func (e SetDefaultSenderIDXAmzTargetEnum) ToPointer() *SetDefaultSenderIDXAmzTargetEnum {
+	return &e
+}
+
 func (e *SetDefaultSenderIDXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.SetDefaultSenderId":
-		*e = SetDefaultSenderIDXAmzTargetEnum(s)
+		*e = SetDefaultSenderIDXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetDefaultSenderIDXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SetDefaultSenderIDXAmzTargetEnum: %v", v)
 	}
 }
 

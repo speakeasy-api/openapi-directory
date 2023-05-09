@@ -16,17 +16,21 @@ const (
 	CreateLogStreamXAmzTargetEnumLogs20140328CreateLogStream CreateLogStreamXAmzTargetEnum = "Logs_20140328.CreateLogStream"
 )
 
+func (e CreateLogStreamXAmzTargetEnum) ToPointer() *CreateLogStreamXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateLogStreamXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.CreateLogStream":
-		*e = CreateLogStreamXAmzTargetEnum(s)
+		*e = CreateLogStreamXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLogStreamXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLogStreamXAmzTargetEnum: %v", v)
 	}
 }
 

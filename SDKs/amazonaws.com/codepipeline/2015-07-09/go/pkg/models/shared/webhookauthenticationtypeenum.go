@@ -15,20 +15,24 @@ const (
 	WebhookAuthenticationTypeEnumUnauthenticated WebhookAuthenticationTypeEnum = "UNAUTHENTICATED"
 )
 
+func (e WebhookAuthenticationTypeEnum) ToPointer() *WebhookAuthenticationTypeEnum {
+	return &e
+}
+
 func (e *WebhookAuthenticationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GITHUB_HMAC":
 		fallthrough
 	case "IP":
 		fallthrough
 	case "UNAUTHENTICATED":
-		*e = WebhookAuthenticationTypeEnum(s)
+		*e = WebhookAuthenticationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookAuthenticationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookAuthenticationTypeEnum: %v", v)
 	}
 }

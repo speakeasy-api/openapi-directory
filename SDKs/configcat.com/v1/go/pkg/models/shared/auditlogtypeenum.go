@@ -87,12 +87,16 @@ const (
 	AuditLogTypeEnumWebhookSigningKeyCreated                     AuditLogTypeEnum = "webhookSigningKeyCreated"
 )
 
+func (e AuditLogTypeEnum) ToPointer() *AuditLogTypeEnum {
+	return &e
+}
+
 func (e *AuditLogTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "productCreated":
 		fallthrough
 	case "productChanged":
@@ -242,9 +246,9 @@ func (e *AuditLogTypeEnum) UnmarshalJSON(data []byte) error {
 	case "webhookSigningKeyDeleted":
 		fallthrough
 	case "webhookSigningKeyCreated":
-		*e = AuditLogTypeEnum(s)
+		*e = AuditLogTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditLogTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditLogTypeEnum: %v", v)
 	}
 }

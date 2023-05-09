@@ -16,17 +16,21 @@ const (
 	DeleteHubXAmzTargetEnumSageMakerDeleteHub DeleteHubXAmzTargetEnum = "SageMaker.DeleteHub"
 )
 
+func (e DeleteHubXAmzTargetEnum) ToPointer() *DeleteHubXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteHubXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DeleteHub":
-		*e = DeleteHubXAmzTargetEnum(s)
+		*e = DeleteHubXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteHubXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteHubXAmzTargetEnum: %v", v)
 	}
 }
 

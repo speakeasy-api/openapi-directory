@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/bintable.com/1.0.0-oas3/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BalanceLookupRequest{
-        APIKey: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Balance.BalanceLookup(ctx, req)
+    res, err := s.Balance.BalanceLookup(ctx, operations.BalanceLookupRequest{
+        APIKey: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,13 +42,13 @@ func main() {
 ## Available Resources and Operations
 
 
-### Balance
+### [Balance](docs/balance/README.md)
 
-* `BalanceLookup` - Check Balance
+* [BalanceLookup](docs/balance/README.md#balancelookup) - Check Balance
 
-### Lookup
+### [Lookup](docs/lookup/README.md)
 
-* `BinLookup` - Lookup for bin
+* [BinLookup](docs/lookup/README.md#binlookup) - Lookup for bin
 <!-- End SDK Available Operations -->
 
 ### Maturity

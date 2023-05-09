@@ -16,17 +16,21 @@ const (
 	GetTemplateSyncStatusXAmzTargetEnumAwsProton20200720GetTemplateSyncStatus GetTemplateSyncStatusXAmzTargetEnum = "AwsProton20200720.GetTemplateSyncStatus"
 )
 
+func (e GetTemplateSyncStatusXAmzTargetEnum) ToPointer() *GetTemplateSyncStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetTemplateSyncStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.GetTemplateSyncStatus":
-		*e = GetTemplateSyncStatusXAmzTargetEnum(s)
+		*e = GetTemplateSyncStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTemplateSyncStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTemplateSyncStatusXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -37,12 +37,16 @@ const (
 	UpdateApplicationComponentConfigRequestBodyAppTypeEnumDotnet           UpdateApplicationComponentConfigRequestBodyAppTypeEnum = "Dotnet"
 )
 
+func (e UpdateApplicationComponentConfigRequestBodyAppTypeEnum) ToPointer() *UpdateApplicationComponentConfigRequestBodyAppTypeEnum {
+	return &e
+}
+
 func (e *UpdateApplicationComponentConfigRequestBodyAppTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DotNetFramework":
 		fallthrough
 	case "Java":
@@ -86,10 +90,10 @@ func (e *UpdateApplicationComponentConfigRequestBodyAppTypeEnum) UnmarshalJSON(d
 	case "DotnetCore":
 		fallthrough
 	case "Dotnet":
-		*e = UpdateApplicationComponentConfigRequestBodyAppTypeEnum(s)
+		*e = UpdateApplicationComponentConfigRequestBodyAppTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateApplicationComponentConfigRequestBodyAppTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateApplicationComponentConfigRequestBodyAppTypeEnum: %v", v)
 	}
 }
 
@@ -101,19 +105,23 @@ const (
 	UpdateApplicationComponentConfigRequestBodyInclusionStatusEnumIncludeInAssessment   UpdateApplicationComponentConfigRequestBodyInclusionStatusEnum = "includeInAssessment"
 )
 
+func (e UpdateApplicationComponentConfigRequestBodyInclusionStatusEnum) ToPointer() *UpdateApplicationComponentConfigRequestBodyInclusionStatusEnum {
+	return &e
+}
+
 func (e *UpdateApplicationComponentConfigRequestBodyInclusionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "excludeFromAssessment":
 		fallthrough
 	case "includeInAssessment":
-		*e = UpdateApplicationComponentConfigRequestBodyInclusionStatusEnum(s)
+		*e = UpdateApplicationComponentConfigRequestBodyInclusionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateApplicationComponentConfigRequestBodyInclusionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateApplicationComponentConfigRequestBodyInclusionStatusEnum: %v", v)
 	}
 }
 

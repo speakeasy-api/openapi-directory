@@ -22,17 +22,21 @@ const (
 	GetRepositoriesWorkspaceRepoSlugSrcFormatEnumMeta GetRepositoriesWorkspaceRepoSlugSrcFormatEnum = "meta"
 )
 
+func (e GetRepositoriesWorkspaceRepoSlugSrcFormatEnum) ToPointer() *GetRepositoriesWorkspaceRepoSlugSrcFormatEnum {
+	return &e
+}
+
 func (e *GetRepositoriesWorkspaceRepoSlugSrcFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "meta":
-		*e = GetRepositoriesWorkspaceRepoSlugSrcFormatEnum(s)
+		*e = GetRepositoriesWorkspaceRepoSlugSrcFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRepositoriesWorkspaceRepoSlugSrcFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRepositoriesWorkspaceRepoSlugSrcFormatEnum: %v", v)
 	}
 }
 

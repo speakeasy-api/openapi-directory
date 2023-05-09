@@ -42,12 +42,16 @@ const (
 	LandmarkTypeEnumUpperJawlineRight LandmarkTypeEnum = "upperJawlineRight"
 )
 
+func (e LandmarkTypeEnum) ToPointer() *LandmarkTypeEnum {
+	return &e
+}
+
 func (e *LandmarkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "eyeLeft":
 		fallthrough
 	case "eyeRight":
@@ -107,9 +111,9 @@ func (e *LandmarkTypeEnum) UnmarshalJSON(data []byte) error {
 	case "midJawlineRight":
 		fallthrough
 	case "upperJawlineRight":
-		*e = LandmarkTypeEnum(s)
+		*e = LandmarkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LandmarkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LandmarkTypeEnum: %v", v)
 	}
 }

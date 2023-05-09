@@ -15,17 +15,21 @@ const (
 	GETDisableAvailabilityZonesForLoadBalancerActionEnumDisableAvailabilityZonesForLoadBalancer GETDisableAvailabilityZonesForLoadBalancerActionEnum = "DisableAvailabilityZonesForLoadBalancer"
 )
 
+func (e GETDisableAvailabilityZonesForLoadBalancerActionEnum) ToPointer() *GETDisableAvailabilityZonesForLoadBalancerActionEnum {
+	return &e
+}
+
 func (e *GETDisableAvailabilityZonesForLoadBalancerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableAvailabilityZonesForLoadBalancer":
-		*e = GETDisableAvailabilityZonesForLoadBalancerActionEnum(s)
+		*e = GETDisableAvailabilityZonesForLoadBalancerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisableAvailabilityZonesForLoadBalancerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisableAvailabilityZonesForLoadBalancerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisableAvailabilityZonesForLoadBalancerVersionEnumTwoThousandAndTwelve0601 GETDisableAvailabilityZonesForLoadBalancerVersionEnum = "2012-06-01"
 )
 
+func (e GETDisableAvailabilityZonesForLoadBalancerVersionEnum) ToPointer() *GETDisableAvailabilityZonesForLoadBalancerVersionEnum {
+	return &e
+}
+
 func (e *GETDisableAvailabilityZonesForLoadBalancerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = GETDisableAvailabilityZonesForLoadBalancerVersionEnum(s)
+		*e = GETDisableAvailabilityZonesForLoadBalancerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisableAvailabilityZonesForLoadBalancerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisableAvailabilityZonesForLoadBalancerVersionEnum: %v", v)
 	}
 }
 

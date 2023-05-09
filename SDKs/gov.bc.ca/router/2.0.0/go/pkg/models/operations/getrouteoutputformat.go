@@ -17,19 +17,23 @@ const (
 	GetRouteOutputFormatCriteriaEnumFastest  GetRouteOutputFormatCriteriaEnum = "fastest"
 )
 
+func (e GetRouteOutputFormatCriteriaEnum) ToPointer() *GetRouteOutputFormatCriteriaEnum {
+	return &e
+}
+
 func (e *GetRouteOutputFormatCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shortest":
 		fallthrough
 	case "fastest":
-		*e = GetRouteOutputFormatCriteriaEnum(s)
+		*e = GetRouteOutputFormatCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRouteOutputFormatCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRouteOutputFormatCriteriaEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	GetRouteOutputFormatDistanceUnitEnumMi GetRouteOutputFormatDistanceUnitEnum = "mi"
 )
 
+func (e GetRouteOutputFormatDistanceUnitEnum) ToPointer() *GetRouteOutputFormatDistanceUnitEnum {
+	return &e
+}
+
 func (e *GetRouteOutputFormatDistanceUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "km":
 		fallthrough
 	case "mi":
-		*e = GetRouteOutputFormatDistanceUnitEnum(s)
+		*e = GetRouteOutputFormatDistanceUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRouteOutputFormatDistanceUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRouteOutputFormatDistanceUnitEnum: %v", v)
 	}
 }
 
@@ -66,63 +74,71 @@ const (
 	GetRouteOutputFormatOutputFormatEnumHTML GetRouteOutputFormatOutputFormatEnum = "html"
 )
 
+func (e GetRouteOutputFormatOutputFormatEnum) ToPointer() *GetRouteOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetRouteOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "kml":
 		fallthrough
 	case "html":
-		*e = GetRouteOutputFormatOutputFormatEnum(s)
+		*e = GetRouteOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRouteOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRouteOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 
 // GetRouteOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
-type GetRouteOutputFormatOutputSrsEnum string
+type GetRouteOutputFormatOutputSrsEnum int64
 
 const (
-	GetRouteOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetRouteOutputFormatOutputSrsEnum = "4326"
-	GetRouteOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetRouteOutputFormatOutputSrsEnum = "4269"
-	GetRouteOutputFormatOutputSrsEnumThreeThousandAndFive                  GetRouteOutputFormatOutputSrsEnum = "3005"
-	GetRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetRouteOutputFormatOutputSrsEnum = "26907"
-	GetRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetRouteOutputFormatOutputSrsEnum = "26908"
-	GetRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetRouteOutputFormatOutputSrsEnum = "26909"
-	GetRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetRouteOutputFormatOutputSrsEnum = "26910"
-	GetRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetRouteOutputFormatOutputSrsEnum = "26911"
+	GetRouteOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetRouteOutputFormatOutputSrsEnum = 4326
+	GetRouteOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetRouteOutputFormatOutputSrsEnum = 4269
+	GetRouteOutputFormatOutputSrsEnumThreeThousandAndFive                  GetRouteOutputFormatOutputSrsEnum = 3005
+	GetRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetRouteOutputFormatOutputSrsEnum = 26907
+	GetRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetRouteOutputFormatOutputSrsEnum = 26908
+	GetRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetRouteOutputFormatOutputSrsEnum = 26909
+	GetRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetRouteOutputFormatOutputSrsEnum = 26910
+	GetRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetRouteOutputFormatOutputSrsEnum = 26911
 )
 
+func (e GetRouteOutputFormatOutputSrsEnum) ToPointer() *GetRouteOutputFormatOutputSrsEnum {
+	return &e
+}
+
 func (e *GetRouteOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetRouteOutputFormatOutputSrsEnum(s)
+	case 26911:
+		*e = GetRouteOutputFormatOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRouteOutputFormatOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRouteOutputFormatOutputSrsEnum: %v", v)
 	}
 }
 

@@ -13,16 +13,20 @@ const (
 	TimeToLiveStatusEnumEnabled TimeToLiveStatusEnum = "ENABLED"
 )
 
+func (e TimeToLiveStatusEnum) ToPointer() *TimeToLiveStatusEnum {
+	return &e
+}
+
 func (e *TimeToLiveStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
-		*e = TimeToLiveStatusEnum(s)
+		*e = TimeToLiveStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimeToLiveStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TimeToLiveStatusEnum: %v", v)
 	}
 }

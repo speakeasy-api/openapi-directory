@@ -8,7 +8,8 @@ import (
 	"openapi/pkg/types"
 )
 
-// PaymentWriteRequestDebtorAccountTypeEnum - Debtor account type
+// PaymentWriteRequestDebtorAccountTypeEnum - * `IBAN` - IBAN
+// * `SCAN` - SortCodeAccountNumber
 type PaymentWriteRequestDebtorAccountTypeEnum string
 
 const (
@@ -16,19 +17,23 @@ const (
 	PaymentWriteRequestDebtorAccountTypeEnumScan PaymentWriteRequestDebtorAccountTypeEnum = "SCAN"
 )
 
+func (e PaymentWriteRequestDebtorAccountTypeEnum) ToPointer() *PaymentWriteRequestDebtorAccountTypeEnum {
+	return &e
+}
+
 func (e *PaymentWriteRequestDebtorAccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IBAN":
 		fallthrough
 	case "SCAN":
-		*e = PaymentWriteRequestDebtorAccountTypeEnum(s)
+		*e = PaymentWriteRequestDebtorAccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentWriteRequestDebtorAccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentWriteRequestDebtorAccountTypeEnum: %v", v)
 	}
 }
 
@@ -47,27 +52,49 @@ type PaymentWriteRequestDebtorAccount struct {
 	// Debtor account post code
 	PostCode *string `json:"post_code,omitempty"`
 	// Debtor account type
+	//
+	// * `IBAN` - IBAN
+	// * `SCAN` - SortCodeAccountNumber
 	Type *PaymentWriteRequestDebtorAccountTypeEnum `json:"type,omitempty"`
 	// Debtor account type identifier
 	TypeNumber *string `json:"type_number,omitempty"`
 }
 
-// PaymentWriteRequestPaymentProductEnum - Payment product
+// PaymentWriteRequestPaymentProductEnum - * `T2P` - target-2-payments
+// * `SCT` - sepa-credit-transfers
+// * `ISCT` - instant-sepa-credit-transfer
+// * `CBCT` - cross-border-credit-transfers
+// * `BACS` - Back Payment Scheme
+// * `CHAPS` - CHAPS Payment Scheme
+// * `FPS` - Faster Payment Scheme
+// * `SWIFT` - Swift Payment Service
+// * `BT` - Balance Transfer
+// * `MT` - Money Transfer
 type PaymentWriteRequestPaymentProductEnum string
 
 const (
-	PaymentWriteRequestPaymentProductEnumT2P  PaymentWriteRequestPaymentProductEnum = "T2P"
-	PaymentWriteRequestPaymentProductEnumSct  PaymentWriteRequestPaymentProductEnum = "SCT"
-	PaymentWriteRequestPaymentProductEnumIsct PaymentWriteRequestPaymentProductEnum = "ISCT"
-	PaymentWriteRequestPaymentProductEnumCbct PaymentWriteRequestPaymentProductEnum = "CBCT"
+	PaymentWriteRequestPaymentProductEnumT2P   PaymentWriteRequestPaymentProductEnum = "T2P"
+	PaymentWriteRequestPaymentProductEnumSct   PaymentWriteRequestPaymentProductEnum = "SCT"
+	PaymentWriteRequestPaymentProductEnumIsct  PaymentWriteRequestPaymentProductEnum = "ISCT"
+	PaymentWriteRequestPaymentProductEnumCbct  PaymentWriteRequestPaymentProductEnum = "CBCT"
+	PaymentWriteRequestPaymentProductEnumBacs  PaymentWriteRequestPaymentProductEnum = "BACS"
+	PaymentWriteRequestPaymentProductEnumChaps PaymentWriteRequestPaymentProductEnum = "CHAPS"
+	PaymentWriteRequestPaymentProductEnumFps   PaymentWriteRequestPaymentProductEnum = "FPS"
+	PaymentWriteRequestPaymentProductEnumSwift PaymentWriteRequestPaymentProductEnum = "SWIFT"
+	PaymentWriteRequestPaymentProductEnumBt    PaymentWriteRequestPaymentProductEnum = "BT"
+	PaymentWriteRequestPaymentProductEnumMt    PaymentWriteRequestPaymentProductEnum = "MT"
 )
 
+func (e PaymentWriteRequestPaymentProductEnum) ToPointer() *PaymentWriteRequestPaymentProductEnum {
+	return &e
+}
+
 func (e *PaymentWriteRequestPaymentProductEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "T2P":
 		fallthrough
 	case "SCT":
@@ -75,17 +102,31 @@ func (e *PaymentWriteRequestPaymentProductEnum) UnmarshalJSON(data []byte) error
 	case "ISCT":
 		fallthrough
 	case "CBCT":
-		*e = PaymentWriteRequestPaymentProductEnum(s)
+		fallthrough
+	case "BACS":
+		fallthrough
+	case "CHAPS":
+		fallthrough
+	case "FPS":
+		fallthrough
+	case "SWIFT":
+		fallthrough
+	case "BT":
+		fallthrough
+	case "MT":
+		*e = PaymentWriteRequestPaymentProductEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentWriteRequestPaymentProductEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentWriteRequestPaymentProductEnum: %v", v)
 	}
 }
 
 // PaymentWriteRequest - PaymentWriteSerializer.
 type PaymentWriteRequest struct {
 	// Registered creditor account
-	CreditorAccount string `json:"creditor_account"`
+	CreditorAccount *string `json:"creditor_account,omitempty"`
+	// Creditor account
+	CreditorObject *CreditorAccountWriteRequest `json:"creditor_object,omitempty"`
 	// Payment Custom Payment ID
 	CustomPaymentID *string `json:"custom_payment_id,omitempty"`
 	// Debtor account
@@ -97,6 +138,17 @@ type PaymentWriteRequest struct {
 	// Instructed amount
 	InstructedAmount InstructedAmountRequest `json:"instructed_amount"`
 	// Payment product
+	//
+	// * `T2P` - target-2-payments
+	// * `SCT` - sepa-credit-transfers
+	// * `ISCT` - instant-sepa-credit-transfer
+	// * `CBCT` - cross-border-credit-transfers
+	// * `BACS` - Back Payment Scheme
+	// * `CHAPS` - CHAPS Payment Scheme
+	// * `FPS` - Faster Payment Scheme
+	// * `SWIFT` - Swift Payment Service
+	// * `BT` - Balance Transfer
+	// * `MT` - Money Transfer
 	PaymentProduct *PaymentWriteRequestPaymentProductEnum `json:"payment_product,omitempty"`
 	// Periodic Payment Serializer.
 	PeriodicPayment *PeriodicPaymentRequest `json:"periodic_payment,omitempty"`
@@ -104,4 +156,6 @@ type PaymentWriteRequest struct {
 	Redirect string `json:"redirect"`
 	// Payment Execution date (for periodic payments)
 	RequestedExecutionDate *types.Date `json:"requested_execution_date,omitempty"`
+	// Indicates whether payment should be submitted separately
+	SubmitPayment *bool `json:"submit_payment,omitempty"`
 }

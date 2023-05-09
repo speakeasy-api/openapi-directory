@@ -49,17 +49,21 @@ const (
 	SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnumPng SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum = "PNG"
 )
 
+func (e SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum) ToPointer() *SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum {
+	return &e
+}
+
 func (e *SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PNG":
-		*e = SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum(s)
+		*e = SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum: %v", v)
 	}
 }
 
@@ -73,12 +77,16 @@ const (
 	SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnumSmall                    SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnum = "SMALL"
 )
 
+func (e SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnum) ToPointer() *SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnum {
+	return &e
+}
+
 func (e *SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THUMBNAIL_SIZE_UNSPECIFIED":
 		fallthrough
 	case "LARGE":
@@ -86,10 +94,10 @@ func (e *SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnu
 	case "MEDIUM":
 		fallthrough
 	case "SMALL":
-		*e = SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnum(s)
+		*e = SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnum: %v", v)
 	}
 }
 

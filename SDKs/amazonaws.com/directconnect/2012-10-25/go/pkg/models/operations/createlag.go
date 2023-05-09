@@ -16,17 +16,21 @@ const (
 	CreateLagXAmzTargetEnumOvertureServiceCreateLag CreateLagXAmzTargetEnum = "OvertureService.CreateLag"
 )
 
+func (e CreateLagXAmzTargetEnum) ToPointer() *CreateLagXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateLagXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.CreateLag":
-		*e = CreateLagXAmzTargetEnum(s)
+		*e = CreateLagXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLagXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLagXAmzTargetEnum: %v", v)
 	}
 }
 

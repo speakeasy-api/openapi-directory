@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAuthenticatedUserRequest{
-        OnlyID: false,
-    }
-
     ctx := context.Background()
-    res, err := s.Account.GetAuthenticatedUser(ctx, req, operations.GetAuthenticatedUserSecurity{
+    res, err := s.Account.GetAuthenticatedUser(ctx, operations.GetAuthenticatedUserRequest{
+        OnlyID: sdk.Bool(false),
+    }, operations.GetAuthenticatedUserSecurity{
         OAuth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

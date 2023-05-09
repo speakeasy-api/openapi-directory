@@ -16,12 +16,16 @@ const (
 	TFNExemptionTypeEnumUnder18   TFNExemptionTypeEnum = "UNDER18"
 )
 
+func (e TFNExemptionTypeEnum) ToPointer() *TFNExemptionTypeEnum {
+	return &e
+}
+
 func (e *TFNExemptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOTQUOTED":
 		fallthrough
 	case "PENDING":
@@ -29,9 +33,9 @@ func (e *TFNExemptionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PENSIONER":
 		fallthrough
 	case "UNDER18":
-		*e = TFNExemptionTypeEnum(s)
+		*e = TFNExemptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TFNExemptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TFNExemptionTypeEnum: %v", v)
 	}
 }

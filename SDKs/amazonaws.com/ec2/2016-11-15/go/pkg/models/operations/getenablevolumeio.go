@@ -15,17 +15,21 @@ const (
 	GETEnableVolumeIOActionEnumEnableVolumeIo GETEnableVolumeIOActionEnum = "EnableVolumeIO"
 )
 
+func (e GETEnableVolumeIOActionEnum) ToPointer() *GETEnableVolumeIOActionEnum {
+	return &e
+}
+
 func (e *GETEnableVolumeIOActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableVolumeIO":
-		*e = GETEnableVolumeIOActionEnum(s)
+		*e = GETEnableVolumeIOActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableVolumeIOActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableVolumeIOActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETEnableVolumeIOVersionEnumTwoThousandAndSixteen1115 GETEnableVolumeIOVersionEnum = "2016-11-15"
 )
 
+func (e GETEnableVolumeIOVersionEnum) ToPointer() *GETEnableVolumeIOVersionEnum {
+	return &e
+}
+
 func (e *GETEnableVolumeIOVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETEnableVolumeIOVersionEnum(s)
+		*e = GETEnableVolumeIOVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableVolumeIOVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableVolumeIOVersionEnum: %v", v)
 	}
 }
 

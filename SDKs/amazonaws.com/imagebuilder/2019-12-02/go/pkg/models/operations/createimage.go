@@ -7,6 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// CreateImageRequestBodyImageScanningConfiguration - Contains settings for Image Builder image resource and container image scans.
+type CreateImageRequestBodyImageScanningConfiguration struct {
+	EcrConfiguration     *shared.EcrConfiguration `json:"ecrConfiguration,omitempty"`
+	ImageScanningEnabled *bool                    `json:"imageScanningEnabled,omitempty"`
+}
+
 // CreateImageRequestBodyImageTestsConfiguration - Configure image tests for your pipeline build. Tests run after building the image, to verify that the AMI or container image is valid before distributing it.
 type CreateImageRequestBodyImageTestsConfiguration struct {
 	ImageTestsEnabled *bool  `json:"imageTestsEnabled,omitempty"`
@@ -14,21 +20,23 @@ type CreateImageRequestBodyImageTestsConfiguration struct {
 }
 
 type CreateImageRequestBody struct {
-	//  The idempotency token used to make this request idempotent.
+	// The idempotency token used to make this request idempotent.
 	ClientToken string `json:"clientToken"`
 	// The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
 	ContainerRecipeArn *string `json:"containerRecipeArn,omitempty"`
-	//  The Amazon Resource Name (ARN) of the distribution configuration that defines and configures the outputs of your pipeline.
+	// The Amazon Resource Name (ARN) of the distribution configuration that defines and configures the outputs of your pipeline.
 	DistributionConfigurationArn *string `json:"distributionConfigurationArn,omitempty"`
-	//  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+	// Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
 	EnhancedImageMetadataEnabled *bool `json:"enhancedImageMetadataEnabled,omitempty"`
-	//  The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+	// The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
 	ImageRecipeArn *string `json:"imageRecipeArn,omitempty"`
+	// Contains settings for Image Builder image resource and container image scans.
+	ImageScanningConfiguration *CreateImageRequestBodyImageScanningConfiguration `json:"imageScanningConfiguration,omitempty"`
 	// Configure image tests for your pipeline build. Tests run after building the image, to verify that the AMI or container image is valid before distributing it.
 	ImageTestsConfiguration *CreateImageRequestBodyImageTestsConfiguration `json:"imageTestsConfiguration,omitempty"`
-	//  The Amazon Resource Name (ARN) of the infrastructure configuration that defines the environment in which your image will be built and tested.
+	// The Amazon Resource Name (ARN) of the infrastructure configuration that defines the environment in which your image will be built and tested.
 	InfrastructureConfigurationArn string `json:"infrastructureConfigurationArn"`
-	//  The tags of the image.
+	// The tags of the image.
 	Tags map[string]string `json:"tags,omitempty"`
 }
 

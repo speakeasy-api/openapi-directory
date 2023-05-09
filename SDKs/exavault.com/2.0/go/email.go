@@ -91,7 +91,10 @@ func (s *email) SendReferralEmail(ctx context.Context, request operations.SendRe
 // Send a welcome email to a user. The contents of the welcome email can be set by [PATCH /accounts](#operation/updateAccount).
 func (s *email) SendWelcomeEmail(ctx context.Context, request operations.SendWelcomeEmailRequest) (*operations.SendWelcomeEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/email/welcome/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/email/welcome/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

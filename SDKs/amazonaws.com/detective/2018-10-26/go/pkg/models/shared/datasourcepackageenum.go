@@ -14,18 +14,22 @@ const (
 	DatasourcePackageEnumEksAudit      DatasourcePackageEnum = "EKS_AUDIT"
 )
 
+func (e DatasourcePackageEnum) ToPointer() *DatasourcePackageEnum {
+	return &e
+}
+
 func (e *DatasourcePackageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DETECTIVE_CORE":
 		fallthrough
 	case "EKS_AUDIT":
-		*e = DatasourcePackageEnum(s)
+		*e = DatasourcePackageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatasourcePackageEnum: %s", s)
+		return fmt.Errorf("invalid value for DatasourcePackageEnum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newPools(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // ReplicapoolPoolsDelete - Deletes a replica pool.
 func (s *pools) ReplicapoolPoolsDelete(ctx context.Context, request operations.ReplicapoolPoolsDeleteRequest, security operations.ReplicapoolPoolsDeleteSecurity) (*operations.ReplicapoolPoolsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PoolsDeleteRequest", "json")
 	if err != nil {
@@ -80,7 +83,10 @@ func (s *pools) ReplicapoolPoolsDelete(ctx context.Context, request operations.R
 // ReplicapoolPoolsGet - Gets information about a single replica pool.
 func (s *pools) ReplicapoolPoolsGet(ctx context.Context, request operations.ReplicapoolPoolsGetRequest, security operations.ReplicapoolPoolsGetSecurity) (*operations.ReplicapoolPoolsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *pools) ReplicapoolPoolsGet(ctx context.Context, request operations.Repl
 // ReplicapoolPoolsInsert - Inserts a new replica pool.
 func (s *pools) ReplicapoolPoolsInsert(ctx context.Context, request operations.ReplicapoolPoolsInsertRequest, security operations.ReplicapoolPoolsInsertSecurity) (*operations.ReplicapoolPoolsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Pool", "json")
 	if err != nil {
@@ -183,7 +192,10 @@ func (s *pools) ReplicapoolPoolsInsert(ctx context.Context, request operations.R
 // ReplicapoolPoolsList - List all replica pools.
 func (s *pools) ReplicapoolPoolsList(ctx context.Context, request operations.ReplicapoolPoolsListRequest, security operations.ReplicapoolPoolsListSecurity) (*operations.ReplicapoolPoolsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -231,7 +243,10 @@ func (s *pools) ReplicapoolPoolsList(ctx context.Context, request operations.Rep
 // ReplicapoolPoolsResize - Resize a pool. This is an asynchronous operation, and multiple overlapping resize requests can be made. Replica Pools will use the information from the last resize request.
 func (s *pools) ReplicapoolPoolsResize(ctx context.Context, request operations.ReplicapoolPoolsResizeRequest, security operations.ReplicapoolPoolsResizeSecurity) (*operations.ReplicapoolPoolsResizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/resize", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/resize", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *pools) ReplicapoolPoolsResize(ctx context.Context, request operations.R
 // ReplicapoolPoolsUpdatetemplate - Update the template used by the pool.
 func (s *pools) ReplicapoolPoolsUpdatetemplate(ctx context.Context, request operations.ReplicapoolPoolsUpdatetemplateRequest, security operations.ReplicapoolPoolsUpdatetemplateSecurity) (*operations.ReplicapoolPoolsUpdatetemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/updateTemplate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/updateTemplate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Template", "json")
 	if err != nil {

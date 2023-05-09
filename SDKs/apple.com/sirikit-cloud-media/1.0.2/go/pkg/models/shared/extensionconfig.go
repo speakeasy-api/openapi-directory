@@ -14,19 +14,23 @@ const (
 	ExtensionConfigIntentAddMediaOptEnumConfirm                 ExtensionConfigIntentAddMediaOptEnum = "confirm"
 )
 
+func (e ExtensionConfigIntentAddMediaOptEnum) ToPointer() *ExtensionConfigIntentAddMediaOptEnum {
+	return &e
+}
+
 func (e *ExtensionConfigIntentAddMediaOptEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "resolveMediaDestination":
 		fallthrough
 	case "confirm":
-		*e = ExtensionConfigIntentAddMediaOptEnum(s)
+		*e = ExtensionConfigIntentAddMediaOptEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExtensionConfigIntentAddMediaOptEnum: %s", s)
+		return fmt.Errorf("invalid value for ExtensionConfigIntentAddMediaOptEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	ExtensionConfigIntentPlayMediaOptEnumResolveResumePlayback        ExtensionConfigIntentPlayMediaOptEnum = "resolveResumePlayback"
 )
 
+func (e ExtensionConfigIntentPlayMediaOptEnum) ToPointer() *ExtensionConfigIntentPlayMediaOptEnum {
+	return &e
+}
+
 func (e *ExtensionConfigIntentPlayMediaOptEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "resolvePlayShuffled":
 		fallthrough
 	case "resolvePlaybackRepeatMode":
@@ -58,10 +66,10 @@ func (e *ExtensionConfigIntentPlayMediaOptEnum) UnmarshalJSON(data []byte) error
 	case "resolvePlaybackQueueLocation":
 		fallthrough
 	case "resolveResumePlayback":
-		*e = ExtensionConfigIntentPlayMediaOptEnum(s)
+		*e = ExtensionConfigIntentPlayMediaOptEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExtensionConfigIntentPlayMediaOptEnum: %s", s)
+		return fmt.Errorf("invalid value for ExtensionConfigIntentPlayMediaOptEnum: %v", v)
 	}
 }
 
@@ -77,17 +85,21 @@ const (
 	ExtensionConfigIntentUpdateMediaAffinityOptEnumResolveAffinityType ExtensionConfigIntentUpdateMediaAffinityOptEnum = "resolveAffinityType"
 )
 
+func (e ExtensionConfigIntentUpdateMediaAffinityOptEnum) ToPointer() *ExtensionConfigIntentUpdateMediaAffinityOptEnum {
+	return &e
+}
+
 func (e *ExtensionConfigIntentUpdateMediaAffinityOptEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "resolveAffinityType":
-		*e = ExtensionConfigIntentUpdateMediaAffinityOptEnum(s)
+		*e = ExtensionConfigIntentUpdateMediaAffinityOptEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExtensionConfigIntentUpdateMediaAffinityOptEnum: %s", s)
+		return fmt.Errorf("invalid value for ExtensionConfigIntentUpdateMediaAffinityOptEnum: %v", v)
 	}
 }
 

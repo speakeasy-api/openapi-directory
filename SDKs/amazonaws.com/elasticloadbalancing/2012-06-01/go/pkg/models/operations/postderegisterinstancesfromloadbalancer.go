@@ -15,17 +15,21 @@ const (
 	POSTDeregisterInstancesFromLoadBalancerActionEnumDeregisterInstancesFromLoadBalancer POSTDeregisterInstancesFromLoadBalancerActionEnum = "DeregisterInstancesFromLoadBalancer"
 )
 
+func (e POSTDeregisterInstancesFromLoadBalancerActionEnum) ToPointer() *POSTDeregisterInstancesFromLoadBalancerActionEnum {
+	return &e
+}
+
 func (e *POSTDeregisterInstancesFromLoadBalancerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeregisterInstancesFromLoadBalancer":
-		*e = POSTDeregisterInstancesFromLoadBalancerActionEnum(s)
+		*e = POSTDeregisterInstancesFromLoadBalancerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeregisterInstancesFromLoadBalancerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeregisterInstancesFromLoadBalancerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeregisterInstancesFromLoadBalancerVersionEnumTwoThousandAndTwelve0601 POSTDeregisterInstancesFromLoadBalancerVersionEnum = "2012-06-01"
 )
 
+func (e POSTDeregisterInstancesFromLoadBalancerVersionEnum) ToPointer() *POSTDeregisterInstancesFromLoadBalancerVersionEnum {
+	return &e
+}
+
 func (e *POSTDeregisterInstancesFromLoadBalancerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = POSTDeregisterInstancesFromLoadBalancerVersionEnum(s)
+		*e = POSTDeregisterInstancesFromLoadBalancerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeregisterInstancesFromLoadBalancerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeregisterInstancesFromLoadBalancerVersionEnum: %v", v)
 	}
 }
 

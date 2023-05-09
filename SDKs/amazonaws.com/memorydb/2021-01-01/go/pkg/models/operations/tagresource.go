@@ -16,17 +16,21 @@ const (
 	TagResourceXAmzTargetEnumAmazonMemoryDbTagResource TagResourceXAmzTargetEnum = "AmazonMemoryDB.TagResource"
 )
 
+func (e TagResourceXAmzTargetEnum) ToPointer() *TagResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *TagResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.TagResource":
-		*e = TagResourceXAmzTargetEnum(s)
+		*e = TagResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TagResourceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	AggregationPeriodEnumP1D  AggregationPeriodEnum = "P1D"
 )
 
+func (e AggregationPeriodEnum) ToPointer() *AggregationPeriodEnum {
+	return &e
+}
+
 func (e *AggregationPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PT5M":
 		fallthrough
 	case "PT1H":
 		fallthrough
 	case "P1D":
-		*e = AggregationPeriodEnum(s)
+		*e = AggregationPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregationPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregationPeriodEnum: %v", v)
 	}
 }

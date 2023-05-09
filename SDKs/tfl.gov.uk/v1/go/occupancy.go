@@ -36,7 +36,10 @@ func newOccupancy(defaultClient, securityClient HTTPClient, serverURL, language,
 // OccupancyGet - Gets the occupancy for a car park with a given id
 func (s *occupancy) OccupancyGet(ctx context.Context, request operations.OccupancyGetRequest) (*operations.OccupancyGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Occupancy/CarPark/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Occupancy/CarPark/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -166,7 +169,10 @@ func (s *occupancy) OccupancyGetAllChargeConnectorStatus(ctx context.Context) (*
 // OccupancyGetBikePointsOccupancies - Get the occupancy for bike points.
 func (s *occupancy) OccupancyGetBikePointsOccupancies(ctx context.Context, request operations.OccupancyGetBikePointsOccupanciesRequest) (*operations.OccupancyGetBikePointsOccupanciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Occupancy/BikePoints/{ids}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Occupancy/BikePoints/{ids}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -231,7 +237,10 @@ func (s *occupancy) OccupancyGetBikePointsOccupancies(ctx context.Context, reque
 // OccupancyGetChargeConnectorStatus - Gets the occupancy for a charge connectors with a given id (sourceSystemPlaceId)
 func (s *occupancy) OccupancyGetChargeConnectorStatus(ctx context.Context, request operations.OccupancyGetChargeConnectorStatusRequest) (*operations.OccupancyGetChargeConnectorStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Occupancy/ChargeConnector/{ids}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Occupancy/ChargeConnector/{ids}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,20 +15,24 @@ const (
 	FraudDetectionDecisionEnumNotEnoughSpeech FraudDetectionDecisionEnum = "NOT_ENOUGH_SPEECH"
 )
 
+func (e FraudDetectionDecisionEnum) ToPointer() *FraudDetectionDecisionEnum {
+	return &e
+}
+
 func (e *FraudDetectionDecisionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HIGH_RISK":
 		fallthrough
 	case "LOW_RISK":
 		fallthrough
 	case "NOT_ENOUGH_SPEECH":
-		*e = FraudDetectionDecisionEnum(s)
+		*e = FraudDetectionDecisionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FraudDetectionDecisionEnum: %s", s)
+		return fmt.Errorf("invalid value for FraudDetectionDecisionEnum: %v", v)
 	}
 }

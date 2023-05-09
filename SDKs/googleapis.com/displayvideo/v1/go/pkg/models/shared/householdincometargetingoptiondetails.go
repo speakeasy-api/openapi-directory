@@ -21,12 +21,16 @@ const (
 	HouseholdIncomeTargetingOptionDetailsHouseholdIncomeEnumHouseholdIncomeTop10Percent     HouseholdIncomeTargetingOptionDetailsHouseholdIncomeEnum = "HOUSEHOLD_INCOME_TOP_10_PERCENT"
 )
 
+func (e HouseholdIncomeTargetingOptionDetailsHouseholdIncomeEnum) ToPointer() *HouseholdIncomeTargetingOptionDetailsHouseholdIncomeEnum {
+	return &e
+}
+
 func (e *HouseholdIncomeTargetingOptionDetailsHouseholdIncomeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HOUSEHOLD_INCOME_UNSPECIFIED":
 		fallthrough
 	case "HOUSEHOLD_INCOME_UNKNOWN":
@@ -42,10 +46,10 @@ func (e *HouseholdIncomeTargetingOptionDetailsHouseholdIncomeEnum) UnmarshalJSON
 	case "HOUSEHOLD_INCOME_TOP_11_TO_20_PERCENT":
 		fallthrough
 	case "HOUSEHOLD_INCOME_TOP_10_PERCENT":
-		*e = HouseholdIncomeTargetingOptionDetailsHouseholdIncomeEnum(s)
+		*e = HouseholdIncomeTargetingOptionDetailsHouseholdIncomeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HouseholdIncomeTargetingOptionDetailsHouseholdIncomeEnum: %s", s)
+		return fmt.Errorf("invalid value for HouseholdIncomeTargetingOptionDetailsHouseholdIncomeEnum: %v", v)
 	}
 }
 

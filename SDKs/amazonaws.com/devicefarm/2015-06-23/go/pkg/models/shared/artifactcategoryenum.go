@@ -15,20 +15,24 @@ const (
 	ArtifactCategoryEnumLog        ArtifactCategoryEnum = "LOG"
 )
 
+func (e ArtifactCategoryEnum) ToPointer() *ArtifactCategoryEnum {
+	return &e
+}
+
 func (e *ArtifactCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCREENSHOT":
 		fallthrough
 	case "FILE":
 		fallthrough
 	case "LOG":
-		*e = ArtifactCategoryEnum(s)
+		*e = ArtifactCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArtifactCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for ArtifactCategoryEnum: %v", v)
 	}
 }

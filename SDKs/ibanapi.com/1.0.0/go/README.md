@@ -13,19 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ibanapi.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
     ctx := context.Background()
-    res, err := s.Ibanapi.GetBalance(ctx)
+    res, err := s.Ibanapi.GetBalance(ctx, operations.GetBalanceSecurity{
+        APIKeySecurity: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -41,11 +42,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### Ibanapi
+### [Ibanapi](docs/ibanapi/README.md)
 
-* `GetBalance` - Get Account Balance
-* `ValidateIBAN` - Validate IBAN
-* `ValidateIBANBasic` - Validate IBAN Basic
+* [GetBalance](docs/ibanapi/README.md#getbalance) - Get Account Balance
+* [ValidateIBAN](docs/ibanapi/README.md#validateiban) - Validate IBAN
+* [ValidateIBANBasic](docs/ibanapi/README.md#validateibanbasic) - Validate IBAN Basic
 <!-- End SDK Available Operations -->
 
 ### Maturity

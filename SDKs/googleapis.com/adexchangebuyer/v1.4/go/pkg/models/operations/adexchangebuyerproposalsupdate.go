@@ -26,12 +26,16 @@ const (
 	AdexchangebuyerProposalsUpdateUpdateActionEnumUpdateNonTerms   AdexchangebuyerProposalsUpdateUpdateActionEnum = "updateNonTerms"
 )
 
+func (e AdexchangebuyerProposalsUpdateUpdateActionEnum) ToPointer() *AdexchangebuyerProposalsUpdateUpdateActionEnum {
+	return &e
+}
+
 func (e *AdexchangebuyerProposalsUpdateUpdateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "accept":
 		fallthrough
 	case "cancel":
@@ -43,10 +47,10 @@ func (e *AdexchangebuyerProposalsUpdateUpdateActionEnum) UnmarshalJSON(data []by
 	case "unknownAction":
 		fallthrough
 	case "updateNonTerms":
-		*e = AdexchangebuyerProposalsUpdateUpdateActionEnum(s)
+		*e = AdexchangebuyerProposalsUpdateUpdateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdexchangebuyerProposalsUpdateUpdateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for AdexchangebuyerProposalsUpdateUpdateActionEnum: %v", v)
 	}
 }
 

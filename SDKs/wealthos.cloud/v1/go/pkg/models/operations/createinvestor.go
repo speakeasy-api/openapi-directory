@@ -31,19 +31,23 @@ const (
 	CreateInvestorRootTypeForInvestorCreationRequestBankAccountsAccountStatusEnumInactive CreateInvestorRootTypeForInvestorCreationRequestBankAccountsAccountStatusEnum = "inactive"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationRequestBankAccountsAccountStatusEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationRequestBankAccountsAccountStatusEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationRequestBankAccountsAccountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = CreateInvestorRootTypeForInvestorCreationRequestBankAccountsAccountStatusEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationRequestBankAccountsAccountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestBankAccountsAccountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestBankAccountsAccountStatusEnum: %v", v)
 	}
 }
 
@@ -55,19 +59,23 @@ const (
 	CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnumNo  CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnum = "no"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case "no":
-		*e = CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnum: %v", v)
 	}
 }
 
@@ -99,19 +107,23 @@ const (
 	CreateInvestorRootTypeForInvestorCreationRequestDealingStatusEnumActive   CreateInvestorRootTypeForInvestorCreationRequestDealingStatusEnum = "active"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationRequestDealingStatusEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationRequestDealingStatusEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationRequestDealingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inactive":
 		fallthrough
 	case "active":
-		*e = CreateInvestorRootTypeForInvestorCreationRequestDealingStatusEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationRequestDealingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestDealingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestDealingStatusEnum: %v", v)
 	}
 }
 
@@ -130,12 +142,16 @@ const (
 	CreateInvestorRootTypeForInvestorCreationRequestEmploymentStatusEnumOther                   CreateInvestorRootTypeForInvestorCreationRequestEmploymentStatusEnum = "other"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationRequestEmploymentStatusEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationRequestEmploymentStatusEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationRequestEmploymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "employed":
 		fallthrough
 	case "self_employed":
@@ -153,10 +169,10 @@ func (e *CreateInvestorRootTypeForInvestorCreationRequestEmploymentStatusEnum) U
 	case "caring_for_a_person_under_16":
 		fallthrough
 	case "other":
-		*e = CreateInvestorRootTypeForInvestorCreationRequestEmploymentStatusEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationRequestEmploymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestEmploymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestEmploymentStatusEnum: %v", v)
 	}
 }
 
@@ -207,12 +223,16 @@ const (
 	CreateInvestorRootTypeForInvestorCreationRequestKycAmlStatusEnumNotStarted     CreateInvestorRootTypeForInvestorCreationRequestKycAmlStatusEnum = "not_started"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationRequestKycAmlStatusEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationRequestKycAmlStatusEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationRequestKycAmlStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "kyc_failed_error":
@@ -222,10 +242,10 @@ func (e *CreateInvestorRootTypeForInvestorCreationRequestKycAmlStatusEnum) Unmar
 	case "clear":
 		fallthrough
 	case "not_started":
-		*e = CreateInvestorRootTypeForInvestorCreationRequestKycAmlStatusEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationRequestKycAmlStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestKycAmlStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestKycAmlStatusEnum: %v", v)
 	}
 }
 
@@ -242,12 +262,16 @@ const (
 	CreateInvestorRootTypeForInvestorCreationRequestLtaProtectionDetailsLtaProtectionTypeEnumIp16     CreateInvestorRootTypeForInvestorCreationRequestLtaProtectionDetailsLtaProtectionTypeEnum = "ip16"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationRequestLtaProtectionDetailsLtaProtectionTypeEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationRequestLtaProtectionDetailsLtaProtectionTypeEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationRequestLtaProtectionDetailsLtaProtectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "primary":
 		fallthrough
 	case "enhanced":
@@ -261,10 +285,10 @@ func (e *CreateInvestorRootTypeForInvestorCreationRequestLtaProtectionDetailsLta
 	case "fp16":
 		fallthrough
 	case "ip16":
-		*e = CreateInvestorRootTypeForInvestorCreationRequestLtaProtectionDetailsLtaProtectionTypeEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationRequestLtaProtectionDetailsLtaProtectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestLtaProtectionDetailsLtaProtectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestLtaProtectionDetailsLtaProtectionTypeEnum: %v", v)
 	}
 }
 
@@ -291,12 +315,16 @@ const (
 	CreateInvestorRootTypeForInvestorCreationRequestTaxResidenceEnumGbWls CreateInvestorRootTypeForInvestorCreationRequestTaxResidenceEnum = "GB-WLS"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationRequestTaxResidenceEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationRequestTaxResidenceEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationRequestTaxResidenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GB-ENG":
 		fallthrough
 	case "GB-NIR":
@@ -304,10 +332,10 @@ func (e *CreateInvestorRootTypeForInvestorCreationRequestTaxResidenceEnum) Unmar
 	case "GB-SCT":
 		fallthrough
 	case "GB-WLS":
-		*e = CreateInvestorRootTypeForInvestorCreationRequestTaxResidenceEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationRequestTaxResidenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestTaxResidenceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationRequestTaxResidenceEnum: %v", v)
 	}
 }
 
@@ -413,19 +441,23 @@ const (
 	CreateInvestorRootTypeForInvestorCreationResponseBankAccountsAccountStatusEnumInactive CreateInvestorRootTypeForInvestorCreationResponseBankAccountsAccountStatusEnum = "inactive"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationResponseBankAccountsAccountStatusEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationResponseBankAccountsAccountStatusEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationResponseBankAccountsAccountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = CreateInvestorRootTypeForInvestorCreationResponseBankAccountsAccountStatusEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationResponseBankAccountsAccountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseBankAccountsAccountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseBankAccountsAccountStatusEnum: %v", v)
 	}
 }
 
@@ -437,19 +469,23 @@ const (
 	CreateInvestorRootTypeForInvestorCreationResponseBankAccountsDefaultAccountEnumNo  CreateInvestorRootTypeForInvestorCreationResponseBankAccountsDefaultAccountEnum = "no"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationResponseBankAccountsDefaultAccountEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationResponseBankAccountsDefaultAccountEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationResponseBankAccountsDefaultAccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case "no":
-		*e = CreateInvestorRootTypeForInvestorCreationResponseBankAccountsDefaultAccountEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationResponseBankAccountsDefaultAccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseBankAccountsDefaultAccountEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseBankAccountsDefaultAccountEnum: %v", v)
 	}
 }
 
@@ -460,19 +496,23 @@ const (
 	CreateInvestorRootTypeForInvestorCreationResponseBankAccountsStatusEnumSuccess CreateInvestorRootTypeForInvestorCreationResponseBankAccountsStatusEnum = "success"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationResponseBankAccountsStatusEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationResponseBankAccountsStatusEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationResponseBankAccountsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "failed":
 		fallthrough
 	case "success":
-		*e = CreateInvestorRootTypeForInvestorCreationResponseBankAccountsStatusEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationResponseBankAccountsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseBankAccountsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseBankAccountsStatusEnum: %v", v)
 	}
 }
 
@@ -513,19 +553,23 @@ const (
 	CreateInvestorRootTypeForInvestorCreationResponseDealingStatusEnumActive   CreateInvestorRootTypeForInvestorCreationResponseDealingStatusEnum = "active"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationResponseDealingStatusEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationResponseDealingStatusEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationResponseDealingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inactive":
 		fallthrough
 	case "active":
-		*e = CreateInvestorRootTypeForInvestorCreationResponseDealingStatusEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationResponseDealingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseDealingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseDealingStatusEnum: %v", v)
 	}
 }
 
@@ -543,12 +587,16 @@ const (
 	CreateInvestorRootTypeForInvestorCreationResponseEmploymentStatusEnumOther                   CreateInvestorRootTypeForInvestorCreationResponseEmploymentStatusEnum = "other"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationResponseEmploymentStatusEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationResponseEmploymentStatusEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationResponseEmploymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "employed":
 		fallthrough
 	case "self_employed":
@@ -566,10 +614,10 @@ func (e *CreateInvestorRootTypeForInvestorCreationResponseEmploymentStatusEnum) 
 	case "caring_for_a_person_under_16":
 		fallthrough
 	case "other":
-		*e = CreateInvestorRootTypeForInvestorCreationResponseEmploymentStatusEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationResponseEmploymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseEmploymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseEmploymentStatusEnum: %v", v)
 	}
 }
 
@@ -615,12 +663,16 @@ const (
 	CreateInvestorRootTypeForInvestorCreationResponseKycAmlStatusEnumNotStarted     CreateInvestorRootTypeForInvestorCreationResponseKycAmlStatusEnum = "not_started"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationResponseKycAmlStatusEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationResponseKycAmlStatusEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationResponseKycAmlStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "kyc_failed_error":
@@ -630,10 +682,10 @@ func (e *CreateInvestorRootTypeForInvestorCreationResponseKycAmlStatusEnum) Unma
 	case "clear":
 		fallthrough
 	case "not_started":
-		*e = CreateInvestorRootTypeForInvestorCreationResponseKycAmlStatusEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationResponseKycAmlStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseKycAmlStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseKycAmlStatusEnum: %v", v)
 	}
 }
 
@@ -649,12 +701,16 @@ const (
 	CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLtaProtectionTypeEnumIp16     CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLtaProtectionTypeEnum = "ip16"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLtaProtectionTypeEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLtaProtectionTypeEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLtaProtectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "primary":
 		fallthrough
 	case "enhanced":
@@ -668,10 +724,10 @@ func (e *CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLt
 	case "fp16":
 		fallthrough
 	case "ip16":
-		*e = CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLtaProtectionTypeEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLtaProtectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLtaProtectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseLtaProtectionDetailsLtaProtectionTypeEnum: %v", v)
 	}
 }
 
@@ -696,12 +752,16 @@ const (
 	CreateInvestorRootTypeForInvestorCreationResponseStatusEnumActive     CreateInvestorRootTypeForInvestorCreationResponseStatusEnum = "active"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationResponseStatusEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationResponseStatusEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "kyc_pending":
 		fallthrough
 	case "kyc_failed":
@@ -709,10 +769,10 @@ func (e *CreateInvestorRootTypeForInvestorCreationResponseStatusEnum) UnmarshalJ
 	case "inactive":
 		fallthrough
 	case "active":
-		*e = CreateInvestorRootTypeForInvestorCreationResponseStatusEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseStatusEnum: %v", v)
 	}
 }
 
@@ -726,12 +786,16 @@ const (
 	CreateInvestorRootTypeForInvestorCreationResponseTaxResidenceEnumGbWls CreateInvestorRootTypeForInvestorCreationResponseTaxResidenceEnum = "GB-WLS"
 )
 
+func (e CreateInvestorRootTypeForInvestorCreationResponseTaxResidenceEnum) ToPointer() *CreateInvestorRootTypeForInvestorCreationResponseTaxResidenceEnum {
+	return &e
+}
+
 func (e *CreateInvestorRootTypeForInvestorCreationResponseTaxResidenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GB-ENG":
 		fallthrough
 	case "GB-NIR":
@@ -739,10 +803,10 @@ func (e *CreateInvestorRootTypeForInvestorCreationResponseTaxResidenceEnum) Unma
 	case "GB-SCT":
 		fallthrough
 	case "GB-WLS":
-		*e = CreateInvestorRootTypeForInvestorCreationResponseTaxResidenceEnum(s)
+		*e = CreateInvestorRootTypeForInvestorCreationResponseTaxResidenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseTaxResidenceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInvestorRootTypeForInvestorCreationResponseTaxResidenceEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	RevokeGrantXAmzTargetEnumTrentServiceRevokeGrant RevokeGrantXAmzTargetEnum = "TrentService.RevokeGrant"
 )
 
+func (e RevokeGrantXAmzTargetEnum) ToPointer() *RevokeGrantXAmzTargetEnum {
+	return &e
+}
+
 func (e *RevokeGrantXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.RevokeGrant":
-		*e = RevokeGrantXAmzTargetEnum(s)
+		*e = RevokeGrantXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RevokeGrantXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RevokeGrantXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DescribePrincipalMappingXAmzTargetEnumAwsKendraFrontendServiceDescribePrincipalMapping DescribePrincipalMappingXAmzTargetEnum = "AWSKendraFrontendService.DescribePrincipalMapping"
 )
 
+func (e DescribePrincipalMappingXAmzTargetEnum) ToPointer() *DescribePrincipalMappingXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribePrincipalMappingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.DescribePrincipalMapping":
-		*e = DescribePrincipalMappingXAmzTargetEnum(s)
+		*e = DescribePrincipalMappingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribePrincipalMappingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribePrincipalMappingXAmzTargetEnum: %v", v)
 	}
 }
 

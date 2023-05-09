@@ -17,19 +17,23 @@ const (
 	LegacyBoxScoresDeltaFormatEnumJSON LegacyBoxScoresDeltaFormatEnum = "JSON"
 )
 
+func (e LegacyBoxScoresDeltaFormatEnum) ToPointer() *LegacyBoxScoresDeltaFormatEnum {
+	return &e
+}
+
 func (e *LegacyBoxScoresDeltaFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = LegacyBoxScoresDeltaFormatEnum(s)
+		*e = LegacyBoxScoresDeltaFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LegacyBoxScoresDeltaFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LegacyBoxScoresDeltaFormatEnum: %v", v)
 	}
 }
 

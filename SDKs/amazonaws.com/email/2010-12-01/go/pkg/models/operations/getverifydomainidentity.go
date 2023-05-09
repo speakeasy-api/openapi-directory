@@ -15,17 +15,21 @@ const (
 	GETVerifyDomainIdentityActionEnumVerifyDomainIdentity GETVerifyDomainIdentityActionEnum = "VerifyDomainIdentity"
 )
 
+func (e GETVerifyDomainIdentityActionEnum) ToPointer() *GETVerifyDomainIdentityActionEnum {
+	return &e
+}
+
 func (e *GETVerifyDomainIdentityActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VerifyDomainIdentity":
-		*e = GETVerifyDomainIdentityActionEnum(s)
+		*e = GETVerifyDomainIdentityActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETVerifyDomainIdentityActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETVerifyDomainIdentityActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETVerifyDomainIdentityVersionEnumTwoThousandAndTen1201 GETVerifyDomainIdentityVersionEnum = "2010-12-01"
 )
 
+func (e GETVerifyDomainIdentityVersionEnum) ToPointer() *GETVerifyDomainIdentityVersionEnum {
+	return &e
+}
+
 func (e *GETVerifyDomainIdentityVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETVerifyDomainIdentityVersionEnum(s)
+		*e = GETVerifyDomainIdentityVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETVerifyDomainIdentityVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETVerifyDomainIdentityVersionEnum: %v", v)
 	}
 }
 

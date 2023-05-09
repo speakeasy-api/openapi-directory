@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getcitymatc
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetcitymatchRequest{
+    ctx := context.Background()
+    res, err := s.CityNameSimilarityKey.Getcitymatch(ctx, operations.GetcitymatchRequest{
         City: "Laruecester",
         License: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.CityNameSimilarityKey.Getcitymatch(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### CityNameSimilarityKey
+### [CityNameSimilarityKey](docs/citynamesimilaritykey/README.md)
 
-* `Getcitymatch` - Gets a similarity key for matching purposes for city name data
+* [Getcitymatch](docs/citynamesimilaritykey/README.md#getcitymatch) - Gets a similarity key for matching purposes for city name data
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,23 +16,21 @@ func main() {
         }),
     )
 
-    req := operations.GETAuthorizeCacheSecurityGroupIngressRequest{
-        Action: "AuthorizeCacheSecurityGroupIngress",
+    ctx := context.Background()
+    res, err := s.GETAuthorizeCacheSecurityGroupIngress(ctx, operations.GETAuthorizeCacheSecurityGroupIngressRequest{
+        Action: operations.GETAuthorizeCacheSecurityGroupIngressActionEnumAuthorizeCacheSecurityGroupIngress,
         CacheSecurityGroupName: "corrupti",
         Ec2SecurityGroupName: "provident",
         Ec2SecurityGroupOwnerID: "distinctio",
-        Version: "2015-02-02",
-        XAmzAlgorithm: "quibusdam",
-        XAmzContentSha256: "unde",
-        XAmzCredential: "nulla",
-        XAmzDate: "corrupti",
-        XAmzSecurityToken: "illum",
-        XAmzSignature: "vel",
-        XAmzSignedHeaders: "error",
-    }
-
-    ctx := context.Background()
-    res, err := s.GETAuthorizeCacheSecurityGroupIngress(ctx, req)
+        Version: operations.GETAuthorizeCacheSecurityGroupIngressVersionEnumTwoThousandAndFifteen0202,
+        XAmzAlgorithm: sdk.String("quibusdam"),
+        XAmzContentSha256: sdk.String("unde"),
+        XAmzCredential: sdk.String("nulla"),
+        XAmzDate: sdk.String("corrupti"),
+        XAmzSecurityToken: sdk.String("illum"),
+        XAmzSignature: sdk.String("vel"),
+        XAmzSignedHeaders: sdk.String("error"),
+    })
     if err != nil {
         log.Fatal(err)
     }

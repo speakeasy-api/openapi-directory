@@ -37,7 +37,10 @@ func newActions(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Gets all available Actions of a Device
 func (s *actions) ActionsGet(ctx context.Context, request operations.ActionsGetRequest) (*operations.ActionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/Actions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/Actions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

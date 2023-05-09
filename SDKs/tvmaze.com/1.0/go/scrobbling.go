@@ -36,7 +36,10 @@ func newScrobbling(defaultClient, securityClient HTTPClient, serverURL, language
 // This endpoint can be used by all users, even without premium
 func (s *scrobbling) GetScrobbleShowsShowID(ctx context.Context, request operations.GetScrobbleShowsShowIDRequest) (*operations.GetScrobbleShowsShowIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scrobble/shows/{show_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scrobble/shows/{show_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -203,7 +206,10 @@ func (s *scrobbling) PostScrobbleShows(ctx context.Context, request operations.P
 // This endpoint can be used by all users, even without premium
 func (s *scrobbling) PutScrobbleEpisodesEpisodeID(ctx context.Context, request operations.PutScrobbleEpisodesEpisodeIDRequest) (*operations.PutScrobbleEpisodesEpisodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scrobble/episodes/{episode_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scrobble/episodes/{episode_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MarkedEpisodeInput", "json")
 	if err != nil {

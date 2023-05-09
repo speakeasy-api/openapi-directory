@@ -14,18 +14,22 @@ const (
 	OAuth2CustomPropTypeEnumAuthURL  OAuth2CustomPropTypeEnum = "AUTH_URL"
 )
 
+func (e OAuth2CustomPropTypeEnum) ToPointer() *OAuth2CustomPropTypeEnum {
+	return &e
+}
+
 func (e *OAuth2CustomPropTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TOKEN_URL":
 		fallthrough
 	case "AUTH_URL":
-		*e = OAuth2CustomPropTypeEnum(s)
+		*e = OAuth2CustomPropTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OAuth2CustomPropTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OAuth2CustomPropTypeEnum: %v", v)
 	}
 }

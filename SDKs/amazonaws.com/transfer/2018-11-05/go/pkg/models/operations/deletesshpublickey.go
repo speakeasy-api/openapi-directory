@@ -16,17 +16,21 @@ const (
 	DeleteSSHPublicKeyXAmzTargetEnumTransferServiceDeleteSSHPublicKey DeleteSSHPublicKeyXAmzTargetEnum = "TransferService.DeleteSshPublicKey"
 )
 
+func (e DeleteSSHPublicKeyXAmzTargetEnum) ToPointer() *DeleteSSHPublicKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteSSHPublicKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.DeleteSshPublicKey":
-		*e = DeleteSSHPublicKeyXAmzTargetEnum(s)
+		*e = DeleteSSHPublicKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSSHPublicKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSSHPublicKeyXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -35,12 +35,16 @@ const (
 	DevicesList404ApplicationJSONCodeEnumTooManyRequests     DevicesList404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesList404ApplicationJSONCodeEnum) ToPointer() *DevicesList404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *DevicesList404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -54,10 +58,10 @@ func (e *DevicesList404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesList404ApplicationJSONCodeEnum(s)
+		*e = DevicesList404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesList404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesList404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -79,12 +83,16 @@ const (
 	DevicesList400ApplicationJSONCodeEnumTooManyRequests     DevicesList400ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesList400ApplicationJSONCodeEnum) ToPointer() *DevicesList400ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *DevicesList400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -98,10 +106,10 @@ func (e *DevicesList400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesList400ApplicationJSONCodeEnum(s)
+		*e = DevicesList400ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesList400ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesList400ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

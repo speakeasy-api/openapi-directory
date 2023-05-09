@@ -13,16 +13,20 @@ const (
 	VpcTenancyEnumDefault VpcTenancyEnum = "default"
 )
 
+func (e VpcTenancyEnum) ToPointer() *VpcTenancyEnum {
+	return &e
+}
+
 func (e *VpcTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
-		*e = VpcTenancyEnum(s)
+		*e = VpcTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VpcTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for VpcTenancyEnum: %v", v)
 	}
 }

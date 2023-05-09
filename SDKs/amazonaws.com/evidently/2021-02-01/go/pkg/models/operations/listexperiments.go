@@ -20,12 +20,16 @@ const (
 	ListExperimentsStatusEnumCancelled ListExperimentsStatusEnum = "CANCELLED"
 )
 
+func (e ListExperimentsStatusEnum) ToPointer() *ListExperimentsStatusEnum {
+	return &e
+}
+
 func (e *ListExperimentsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATED":
 		fallthrough
 	case "UPDATING":
@@ -35,10 +39,10 @@ func (e *ListExperimentsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "COMPLETED":
 		fallthrough
 	case "CANCELLED":
-		*e = ListExperimentsStatusEnum(s)
+		*e = ListExperimentsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListExperimentsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListExperimentsStatusEnum: %v", v)
 	}
 }
 

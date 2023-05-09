@@ -19,12 +19,16 @@ const (
 	GoogleCloudContactcenterinsightsV1IssueModelStateEnumDeleting         GoogleCloudContactcenterinsightsV1IssueModelStateEnum = "DELETING"
 )
 
+func (e GoogleCloudContactcenterinsightsV1IssueModelStateEnum) ToPointer() *GoogleCloudContactcenterinsightsV1IssueModelStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudContactcenterinsightsV1IssueModelStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "UNDEPLOYED":
@@ -36,10 +40,10 @@ func (e *GoogleCloudContactcenterinsightsV1IssueModelStateEnum) UnmarshalJSON(da
 	case "UNDEPLOYING":
 		fallthrough
 	case "DELETING":
-		*e = GoogleCloudContactcenterinsightsV1IssueModelStateEnum(s)
+		*e = GoogleCloudContactcenterinsightsV1IssueModelStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1IssueModelStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1IssueModelStateEnum: %v", v)
 	}
 }
 

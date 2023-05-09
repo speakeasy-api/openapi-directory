@@ -16,17 +16,21 @@ const (
 	GetCustomRulePolicyXAmzTargetEnumStarlingDoveServiceGetCustomRulePolicy GetCustomRulePolicyXAmzTargetEnum = "StarlingDoveService.GetCustomRulePolicy"
 )
 
+func (e GetCustomRulePolicyXAmzTargetEnum) ToPointer() *GetCustomRulePolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCustomRulePolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.GetCustomRulePolicy":
-		*e = GetCustomRulePolicyXAmzTargetEnum(s)
+		*e = GetCustomRulePolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCustomRulePolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCustomRulePolicyXAmzTargetEnum: %v", v)
 	}
 }
 

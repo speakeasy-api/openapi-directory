@@ -18,12 +18,16 @@ const (
 	AgentStatusEnumShutdown    AgentStatusEnum = "SHUTDOWN"
 )
 
+func (e AgentStatusEnum) ToPointer() *AgentStatusEnum {
+	return &e
+}
+
 func (e *AgentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEALTHY":
 		fallthrough
 	case "UNHEALTHY":
@@ -35,9 +39,9 @@ func (e *AgentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "BLACKLISTED":
 		fallthrough
 	case "SHUTDOWN":
-		*e = AgentStatusEnum(s)
+		*e = AgentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AgentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AgentStatusEnum: %v", v)
 	}
 }

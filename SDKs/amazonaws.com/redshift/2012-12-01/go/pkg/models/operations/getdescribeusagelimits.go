@@ -15,17 +15,21 @@ const (
 	GETDescribeUsageLimitsActionEnumDescribeUsageLimits GETDescribeUsageLimitsActionEnum = "DescribeUsageLimits"
 )
 
+func (e GETDescribeUsageLimitsActionEnum) ToPointer() *GETDescribeUsageLimitsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeUsageLimitsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeUsageLimits":
-		*e = GETDescribeUsageLimitsActionEnum(s)
+		*e = GETDescribeUsageLimitsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeUsageLimitsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeUsageLimitsActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETDescribeUsageLimitsFeatureTypeEnumCrossRegionDatasharing GETDescribeUsageLimitsFeatureTypeEnum = "cross-region-datasharing"
 )
 
+func (e GETDescribeUsageLimitsFeatureTypeEnum) ToPointer() *GETDescribeUsageLimitsFeatureTypeEnum {
+	return &e
+}
+
 func (e *GETDescribeUsageLimitsFeatureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spectrum":
 		fallthrough
 	case "concurrency-scaling":
 		fallthrough
 	case "cross-region-datasharing":
-		*e = GETDescribeUsageLimitsFeatureTypeEnum(s)
+		*e = GETDescribeUsageLimitsFeatureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeUsageLimitsFeatureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeUsageLimitsFeatureTypeEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETDescribeUsageLimitsVersionEnumTwoThousandAndTwelve1201 GETDescribeUsageLimitsVersionEnum = "2012-12-01"
 )
 
+func (e GETDescribeUsageLimitsVersionEnum) ToPointer() *GETDescribeUsageLimitsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeUsageLimitsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETDescribeUsageLimitsVersionEnum(s)
+		*e = GETDescribeUsageLimitsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeUsageLimitsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeUsageLimitsVersionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DeleteConnectClientAddInXAmzTargetEnumWorkspacesServiceDeleteConnectClientAddIn DeleteConnectClientAddInXAmzTargetEnum = "WorkspacesService.DeleteConnectClientAddIn"
 )
 
+func (e DeleteConnectClientAddInXAmzTargetEnum) ToPointer() *DeleteConnectClientAddInXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteConnectClientAddInXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.DeleteConnectClientAddIn":
-		*e = DeleteConnectClientAddInXAmzTargetEnum(s)
+		*e = DeleteConnectClientAddInXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteConnectClientAddInXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteConnectClientAddInXAmzTargetEnum: %v", v)
 	}
 }
 

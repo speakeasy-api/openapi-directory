@@ -16,21 +16,25 @@ const (
 	ReportStatusFormatEnumXlsx     ReportStatusFormatEnum = "XLSX"
 )
 
+func (e ReportStatusFormatEnum) ToPointer() *ReportStatusFormatEnum {
+	return &e
+}
+
 func (e *ReportStatusFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
 		fallthrough
 	case "EXCEL_CSV":
 		fallthrough
 	case "XLSX":
-		*e = ReportStatusFormatEnum(s)
+		*e = ReportStatusFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportStatusFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportStatusFormatEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	ReportStatusStateEnumFailed  ReportStatusStateEnum = "FAILED"
 )
 
+func (e ReportStatusStateEnum) ToPointer() *ReportStatusStateEnum {
+	return &e
+}
+
 func (e *ReportStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "DONE":
 		fallthrough
 	case "FAILED":
-		*e = ReportStatusStateEnum(s)
+		*e = ReportStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportStatusStateEnum: %v", v)
 	}
 }
 

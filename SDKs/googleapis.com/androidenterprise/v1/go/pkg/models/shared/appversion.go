@@ -17,12 +17,16 @@ const (
 	AppVersionTrackEnumAlpha               AppVersionTrackEnum = "alpha"
 )
 
+func (e AppVersionTrackEnum) ToPointer() *AppVersionTrackEnum {
+	return &e
+}
+
 func (e *AppVersionTrackEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appTrackUnspecified":
 		fallthrough
 	case "production":
@@ -30,10 +34,10 @@ func (e *AppVersionTrackEnum) UnmarshalJSON(data []byte) error {
 	case "beta":
 		fallthrough
 	case "alpha":
-		*e = AppVersionTrackEnum(s)
+		*e = AppVersionTrackEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppVersionTrackEnum: %s", s)
+		return fmt.Errorf("invalid value for AppVersionTrackEnum: %v", v)
 	}
 }
 

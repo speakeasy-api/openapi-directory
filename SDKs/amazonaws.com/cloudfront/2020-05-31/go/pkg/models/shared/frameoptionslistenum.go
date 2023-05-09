@@ -14,18 +14,22 @@ const (
 	FrameOptionsListEnumSameorigin FrameOptionsListEnum = "SAMEORIGIN"
 )
 
+func (e FrameOptionsListEnum) ToPointer() *FrameOptionsListEnum {
+	return &e
+}
+
 func (e *FrameOptionsListEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DENY":
 		fallthrough
 	case "SAMEORIGIN":
-		*e = FrameOptionsListEnum(s)
+		*e = FrameOptionsListEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FrameOptionsListEnum: %s", s)
+		return fmt.Errorf("invalid value for FrameOptionsListEnum: %v", v)
 	}
 }

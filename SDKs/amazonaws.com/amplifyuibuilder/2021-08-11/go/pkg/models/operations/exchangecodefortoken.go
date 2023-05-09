@@ -11,6 +11,7 @@ import (
 
 // ExchangeCodeForTokenRequestBodyRequest - Describes the configuration of a request to exchange an access code for a token.
 type ExchangeCodeForTokenRequestBodyRequest struct {
+	ClientID    *string `json:"clientId,omitempty"`
 	Code        *string `json:"code,omitempty"`
 	RedirectURI *string `json:"redirectUri,omitempty"`
 }
@@ -27,17 +28,21 @@ const (
 	ExchangeCodeForTokenProviderEnumFigma ExchangeCodeForTokenProviderEnum = "figma"
 )
 
+func (e ExchangeCodeForTokenProviderEnum) ToPointer() *ExchangeCodeForTokenProviderEnum {
+	return &e
+}
+
 func (e *ExchangeCodeForTokenProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "figma":
-		*e = ExchangeCodeForTokenProviderEnum(s)
+		*e = ExchangeCodeForTokenProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExchangeCodeForTokenProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for ExchangeCodeForTokenProviderEnum: %v", v)
 	}
 }
 

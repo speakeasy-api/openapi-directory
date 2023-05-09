@@ -33,12 +33,16 @@ const (
 	DistributionGroupsGetDefaultApplicationJSONErrorCodeEnumTooManyRequests     DistributionGroupsGetDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DistributionGroupsGetDefaultApplicationJSONErrorCodeEnum) ToPointer() *DistributionGroupsGetDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DistributionGroupsGetDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *DistributionGroupsGetDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DistributionGroupsGetDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DistributionGroupsGetDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsGetDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsGetDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -77,19 +81,23 @@ const (
 	DistributionGroupsGet200ApplicationJSONOriginEnumHockeyapp DistributionGroupsGet200ApplicationJSONOriginEnum = "hockeyapp"
 )
 
+func (e DistributionGroupsGet200ApplicationJSONOriginEnum) ToPointer() *DistributionGroupsGet200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *DistributionGroupsGet200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = DistributionGroupsGet200ApplicationJSONOriginEnum(s)
+		*e = DistributionGroupsGet200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsGet200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsGet200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

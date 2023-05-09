@@ -26,12 +26,16 @@ const (
 	DfareportingAdsListCompatibilityEnumInStreamAudio       DfareportingAdsListCompatibilityEnum = "IN_STREAM_AUDIO"
 )
 
+func (e DfareportingAdsListCompatibilityEnum) ToPointer() *DfareportingAdsListCompatibilityEnum {
+	return &e
+}
+
 func (e *DfareportingAdsListCompatibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISPLAY":
 		fallthrough
 	case "DISPLAY_INTERSTITIAL":
@@ -43,10 +47,10 @@ func (e *DfareportingAdsListCompatibilityEnum) UnmarshalJSON(data []byte) error 
 	case "IN_STREAM_VIDEO":
 		fallthrough
 	case "IN_STREAM_AUDIO":
-		*e = DfareportingAdsListCompatibilityEnum(s)
+		*e = DfareportingAdsListCompatibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingAdsListCompatibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingAdsListCompatibilityEnum: %v", v)
 	}
 }
 
@@ -58,19 +62,23 @@ const (
 	DfareportingAdsListSortFieldEnumName DfareportingAdsListSortFieldEnum = "NAME"
 )
 
+func (e DfareportingAdsListSortFieldEnum) ToPointer() *DfareportingAdsListSortFieldEnum {
+	return &e
+}
+
 func (e *DfareportingAdsListSortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID":
 		fallthrough
 	case "NAME":
-		*e = DfareportingAdsListSortFieldEnum(s)
+		*e = DfareportingAdsListSortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingAdsListSortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingAdsListSortFieldEnum: %v", v)
 	}
 }
 
@@ -82,19 +90,23 @@ const (
 	DfareportingAdsListSortOrderEnumDescending DfareportingAdsListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingAdsListSortOrderEnum) ToPointer() *DfareportingAdsListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingAdsListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingAdsListSortOrderEnum(s)
+		*e = DfareportingAdsListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingAdsListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingAdsListSortOrderEnum: %v", v)
 	}
 }
 
@@ -108,12 +120,16 @@ const (
 	DfareportingAdsListTypeEnumAdServingBrandSafeAd  DfareportingAdsListTypeEnum = "AD_SERVING_BRAND_SAFE_AD"
 )
 
+func (e DfareportingAdsListTypeEnum) ToPointer() *DfareportingAdsListTypeEnum {
+	return &e
+}
+
 func (e *DfareportingAdsListTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AD_SERVING_STANDARD_AD":
 		fallthrough
 	case "AD_SERVING_DEFAULT_AD":
@@ -123,10 +139,10 @@ func (e *DfareportingAdsListTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AD_SERVING_TRACKING":
 		fallthrough
 	case "AD_SERVING_BRAND_SAFE_AD":
-		*e = DfareportingAdsListTypeEnum(s)
+		*e = DfareportingAdsListTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingAdsListTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingAdsListTypeEnum: %v", v)
 	}
 }
 

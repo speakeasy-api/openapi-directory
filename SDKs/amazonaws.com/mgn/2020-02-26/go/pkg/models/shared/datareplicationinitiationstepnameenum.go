@@ -23,12 +23,16 @@ const (
 	DataReplicationInitiationStepNameEnumStartDataTransfer               DataReplicationInitiationStepNameEnum = "START_DATA_TRANSFER"
 )
 
+func (e DataReplicationInitiationStepNameEnum) ToPointer() *DataReplicationInitiationStepNameEnum {
+	return &e
+}
+
 func (e *DataReplicationInitiationStepNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WAIT":
 		fallthrough
 	case "CREATE_SECURITY_GROUP":
@@ -50,9 +54,9 @@ func (e *DataReplicationInitiationStepNameEnum) UnmarshalJSON(data []byte) error
 	case "CONNECT_AGENT_TO_REPLICATION_SERVER":
 		fallthrough
 	case "START_DATA_TRANSFER":
-		*e = DataReplicationInitiationStepNameEnum(s)
+		*e = DataReplicationInitiationStepNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataReplicationInitiationStepNameEnum: %s", s)
+		return fmt.Errorf("invalid value for DataReplicationInitiationStepNameEnum: %v", v)
 	}
 }

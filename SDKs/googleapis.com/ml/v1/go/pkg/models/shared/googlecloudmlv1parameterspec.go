@@ -17,12 +17,16 @@ const (
 	GoogleCloudMlV1ParameterSpecScaleTypeEnumUnitReverseLogScale GoogleCloudMlV1ParameterSpecScaleTypeEnum = "UNIT_REVERSE_LOG_SCALE"
 )
 
+func (e GoogleCloudMlV1ParameterSpecScaleTypeEnum) ToPointer() *GoogleCloudMlV1ParameterSpecScaleTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1ParameterSpecScaleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "UNIT_LINEAR_SCALE":
@@ -30,10 +34,10 @@ func (e *GoogleCloudMlV1ParameterSpecScaleTypeEnum) UnmarshalJSON(data []byte) e
 	case "UNIT_LOG_SCALE":
 		fallthrough
 	case "UNIT_REVERSE_LOG_SCALE":
-		*e = GoogleCloudMlV1ParameterSpecScaleTypeEnum(s)
+		*e = GoogleCloudMlV1ParameterSpecScaleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1ParameterSpecScaleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1ParameterSpecScaleTypeEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	GoogleCloudMlV1ParameterSpecTypeEnumDiscrete                 GoogleCloudMlV1ParameterSpecTypeEnum = "DISCRETE"
 )
 
+func (e GoogleCloudMlV1ParameterSpecTypeEnum) ToPointer() *GoogleCloudMlV1ParameterSpecTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1ParameterSpecTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARAMETER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DOUBLE":
@@ -63,10 +71,10 @@ func (e *GoogleCloudMlV1ParameterSpecTypeEnum) UnmarshalJSON(data []byte) error 
 	case "CATEGORICAL":
 		fallthrough
 	case "DISCRETE":
-		*e = GoogleCloudMlV1ParameterSpecTypeEnum(s)
+		*e = GoogleCloudMlV1ParameterSpecTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1ParameterSpecTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1ParameterSpecTypeEnum: %v", v)
 	}
 }
 

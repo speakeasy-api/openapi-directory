@@ -18,12 +18,16 @@ const (
 	RolloutApprovalStateEnumRejected                 RolloutApprovalStateEnum = "REJECTED"
 )
 
+func (e RolloutApprovalStateEnum) ToPointer() *RolloutApprovalStateEnum {
+	return &e
+}
+
 func (e *RolloutApprovalStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPROVAL_STATE_UNSPECIFIED":
 		fallthrough
 	case "NEEDS_APPROVAL":
@@ -33,10 +37,10 @@ func (e *RolloutApprovalStateEnum) UnmarshalJSON(data []byte) error {
 	case "APPROVED":
 		fallthrough
 	case "REJECTED":
-		*e = RolloutApprovalStateEnum(s)
+		*e = RolloutApprovalStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RolloutApprovalStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RolloutApprovalStateEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	RolloutDeployFailureCauseEnumCloudBuildRequestFailed    RolloutDeployFailureCauseEnum = "CLOUD_BUILD_REQUEST_FAILED"
 )
 
+func (e RolloutDeployFailureCauseEnum) ToPointer() *RolloutDeployFailureCauseEnum {
+	return &e
+}
+
 func (e *RolloutDeployFailureCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILURE_CAUSE_UNSPECIFIED":
 		fallthrough
 	case "CLOUD_BUILD_UNAVAILABLE":
@@ -75,10 +83,10 @@ func (e *RolloutDeployFailureCauseEnum) UnmarshalJSON(data []byte) error {
 	case "VERIFICATION_CONFIG_NOT_FOUND":
 		fallthrough
 	case "CLOUD_BUILD_REQUEST_FAILED":
-		*e = RolloutDeployFailureCauseEnum(s)
+		*e = RolloutDeployFailureCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RolloutDeployFailureCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for RolloutDeployFailureCauseEnum: %v", v)
 	}
 }
 
@@ -99,12 +107,16 @@ const (
 	RolloutStateEnumHalted           RolloutStateEnum = "HALTED"
 )
 
+func (e RolloutStateEnum) ToPointer() *RolloutStateEnum {
+	return &e
+}
+
 func (e *RolloutStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "SUCCEEDED":
@@ -126,10 +138,10 @@ func (e *RolloutStateEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLED":
 		fallthrough
 	case "HALTED":
-		*e = RolloutStateEnum(s)
+		*e = RolloutStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RolloutStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RolloutStateEnum: %v", v)
 	}
 }
 

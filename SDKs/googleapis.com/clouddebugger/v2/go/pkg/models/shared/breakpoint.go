@@ -15,19 +15,23 @@ const (
 	BreakpointActionEnumLog     BreakpointActionEnum = "LOG"
 )
 
+func (e BreakpointActionEnum) ToPointer() *BreakpointActionEnum {
+	return &e
+}
+
 func (e *BreakpointActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAPTURE":
 		fallthrough
 	case "LOG":
-		*e = BreakpointActionEnum(s)
+		*e = BreakpointActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BreakpointActionEnum: %s", s)
+		return fmt.Errorf("invalid value for BreakpointActionEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	BreakpointLogLevelEnumError   BreakpointLogLevelEnum = "ERROR"
 )
 
+func (e BreakpointLogLevelEnum) ToPointer() *BreakpointLogLevelEnum {
+	return &e
+}
+
 func (e *BreakpointLogLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INFO":
 		fallthrough
 	case "WARNING":
 		fallthrough
 	case "ERROR":
-		*e = BreakpointLogLevelEnum(s)
+		*e = BreakpointLogLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BreakpointLogLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for BreakpointLogLevelEnum: %v", v)
 	}
 }
 
@@ -69,12 +77,16 @@ const (
 	BreakpointStateEnumStateIsFinal             BreakpointStateEnum = "STATE_IS_FINAL"
 )
 
+func (e BreakpointStateEnum) ToPointer() *BreakpointStateEnum {
+	return &e
+}
+
 func (e *BreakpointStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "STATE_CANARY_PENDING_AGENTS":
@@ -84,10 +96,10 @@ func (e *BreakpointStateEnum) UnmarshalJSON(data []byte) error {
 	case "STATE_ROLLING_TO_ALL":
 		fallthrough
 	case "STATE_IS_FINAL":
-		*e = BreakpointStateEnum(s)
+		*e = BreakpointStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BreakpointStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BreakpointStateEnum: %v", v)
 	}
 }
 

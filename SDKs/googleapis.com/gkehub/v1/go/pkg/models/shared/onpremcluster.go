@@ -18,12 +18,16 @@ const (
 	OnPremClusterClusterTypeEnumUser                   OnPremClusterClusterTypeEnum = "USER"
 )
 
+func (e OnPremClusterClusterTypeEnum) ToPointer() *OnPremClusterClusterTypeEnum {
+	return &e
+}
+
 func (e *OnPremClusterClusterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLUSTERTYPE_UNSPECIFIED":
 		fallthrough
 	case "BOOTSTRAP":
@@ -33,10 +37,10 @@ func (e *OnPremClusterClusterTypeEnum) UnmarshalJSON(data []byte) error {
 	case "STANDALONE":
 		fallthrough
 	case "USER":
-		*e = OnPremClusterClusterTypeEnum(s)
+		*e = OnPremClusterClusterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OnPremClusterClusterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OnPremClusterClusterTypeEnum: %v", v)
 	}
 }
 
@@ -48,7 +52,7 @@ type OnPremCluster struct {
 	ClusterMissing *bool `json:"clusterMissing,omitempty"`
 	// Immutable. The on prem cluster's type.
 	ClusterType *OnPremClusterClusterTypeEnum `json:"clusterType,omitempty"`
-	// Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
+	// Immutable. Self-link of the Google Cloud resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
 	ResourceLink *string `json:"resourceLink,omitempty"`
 }
 
@@ -58,6 +62,6 @@ type OnPremClusterInput struct {
 	AdminCluster *bool `json:"adminCluster,omitempty"`
 	// Immutable. The on prem cluster's type.
 	ClusterType *OnPremClusterClusterTypeEnum `json:"clusterType,omitempty"`
-	// Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
+	// Immutable. Self-link of the Google Cloud resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
 	ResourceLink *string `json:"resourceLink,omitempty"`
 }

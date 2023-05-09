@@ -15,20 +15,24 @@ const (
 	DeviceStatusEnumRetired DeviceStatusEnum = "RETIRED"
 )
 
+func (e DeviceStatusEnum) ToPointer() *DeviceStatusEnum {
+	return &e
+}
+
 func (e *DeviceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONLINE":
 		fallthrough
 	case "OFFLINE":
 		fallthrough
 	case "RETIRED":
-		*e = DeviceStatusEnum(s)
+		*e = DeviceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceStatusEnum: %v", v)
 	}
 }

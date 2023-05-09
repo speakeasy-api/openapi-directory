@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,7 +16,8 @@ func main() {
         }),
     )
 
-    req := operations.AddProfileKeyRequest{
+    ctx := context.Background()
+    res, err := s.AddProfileKey(ctx, operations.AddProfileKeyRequest{
         DomainName: "corrupti",
         RequestBody: operations.AddProfileKeyRequestBody{
             KeyName: "provident",
@@ -29,17 +29,14 @@ func main() {
                 "illum",
             },
         },
-        XAmzAlgorithm: "vel",
-        XAmzContentSha256: "error",
-        XAmzCredential: "deserunt",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "iure",
-        XAmzSignature: "magnam",
-        XAmzSignedHeaders: "debitis",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddProfileKey(ctx, req)
+        XAmzAlgorithm: sdk.String("vel"),
+        XAmzContentSha256: sdk.String("error"),
+        XAmzCredential: sdk.String("deserunt"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("iure"),
+        XAmzSignature: sdk.String("magnam"),
+        XAmzSignedHeaders: sdk.String("debitis"),
+    })
     if err != nil {
         log.Fatal(err)
     }

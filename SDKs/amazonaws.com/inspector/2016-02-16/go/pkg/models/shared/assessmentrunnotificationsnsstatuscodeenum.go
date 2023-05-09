@@ -16,12 +16,16 @@ const (
 	AssessmentRunNotificationSnsStatusCodeEnumInternalError     AssessmentRunNotificationSnsStatusCodeEnum = "INTERNAL_ERROR"
 )
 
+func (e AssessmentRunNotificationSnsStatusCodeEnum) ToPointer() *AssessmentRunNotificationSnsStatusCodeEnum {
+	return &e
+}
+
 func (e *AssessmentRunNotificationSnsStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESS":
 		fallthrough
 	case "TOPIC_DOES_NOT_EXIST":
@@ -29,9 +33,9 @@ func (e *AssessmentRunNotificationSnsStatusCodeEnum) UnmarshalJSON(data []byte) 
 	case "ACCESS_DENIED":
 		fallthrough
 	case "INTERNAL_ERROR":
-		*e = AssessmentRunNotificationSnsStatusCodeEnum(s)
+		*e = AssessmentRunNotificationSnsStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssessmentRunNotificationSnsStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssessmentRunNotificationSnsStatusCodeEnum: %v", v)
 	}
 }

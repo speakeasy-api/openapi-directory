@@ -17,12 +17,16 @@ const (
 	UtilizationReportStateEnumFailed           UtilizationReportStateEnum = "FAILED"
 )
 
+func (e UtilizationReportStateEnum) ToPointer() *UtilizationReportStateEnum {
+	return &e
+}
+
 func (e *UtilizationReportStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -30,10 +34,10 @@ func (e *UtilizationReportStateEnum) UnmarshalJSON(data []byte) error {
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = UtilizationReportStateEnum(s)
+		*e = UtilizationReportStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UtilizationReportStateEnum: %s", s)
+		return fmt.Errorf("invalid value for UtilizationReportStateEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	UtilizationReportTimeFrameEnumYear                 UtilizationReportTimeFrameEnum = "YEAR"
 )
 
+func (e UtilizationReportTimeFrameEnum) ToPointer() *UtilizationReportTimeFrameEnum {
+	return &e
+}
+
 func (e *UtilizationReportTimeFrameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIME_FRAME_UNSPECIFIED":
 		fallthrough
 	case "WEEK":
@@ -60,10 +68,10 @@ func (e *UtilizationReportTimeFrameEnum) UnmarshalJSON(data []byte) error {
 	case "MONTH":
 		fallthrough
 	case "YEAR":
-		*e = UtilizationReportTimeFrameEnum(s)
+		*e = UtilizationReportTimeFrameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UtilizationReportTimeFrameEnum: %s", s)
+		return fmt.Errorf("invalid value for UtilizationReportTimeFrameEnum: %v", v)
 	}
 }
 

@@ -15,21 +15,25 @@ const (
 	GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnumRiskAnalysis        GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum = "RISK_ANALYSIS"
 )
 
+func (e GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum) ToPointer() *GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENUM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INSPECT":
 		fallthrough
 	case "RISK_ANALYSIS":
-		*e = GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum(s)
+		*e = GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum: %v", v)
 	}
 }
 

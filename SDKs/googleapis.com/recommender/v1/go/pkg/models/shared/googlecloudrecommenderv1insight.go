@@ -20,12 +20,16 @@ const (
 	GoogleCloudRecommenderV1InsightCategoryEnumReliability         GoogleCloudRecommenderV1InsightCategoryEnum = "RELIABILITY"
 )
 
+func (e GoogleCloudRecommenderV1InsightCategoryEnum) ToPointer() *GoogleCloudRecommenderV1InsightCategoryEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommenderV1InsightCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "COST":
@@ -39,10 +43,10 @@ func (e *GoogleCloudRecommenderV1InsightCategoryEnum) UnmarshalJSON(data []byte)
 	case "SUSTAINABILITY":
 		fallthrough
 	case "RELIABILITY":
-		*e = GoogleCloudRecommenderV1InsightCategoryEnum(s)
+		*e = GoogleCloudRecommenderV1InsightCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1InsightCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1InsightCategoryEnum: %v", v)
 	}
 }
 
@@ -57,12 +61,16 @@ const (
 	GoogleCloudRecommenderV1InsightSeverityEnumCritical            GoogleCloudRecommenderV1InsightSeverityEnum = "CRITICAL"
 )
 
+func (e GoogleCloudRecommenderV1InsightSeverityEnum) ToPointer() *GoogleCloudRecommenderV1InsightSeverityEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommenderV1InsightSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "LOW":
@@ -72,10 +80,10 @@ func (e *GoogleCloudRecommenderV1InsightSeverityEnum) UnmarshalJSON(data []byte)
 	case "HIGH":
 		fallthrough
 	case "CRITICAL":
-		*e = GoogleCloudRecommenderV1InsightSeverityEnum(s)
+		*e = GoogleCloudRecommenderV1InsightSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1InsightSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1InsightSeverityEnum: %v", v)
 	}
 }
 

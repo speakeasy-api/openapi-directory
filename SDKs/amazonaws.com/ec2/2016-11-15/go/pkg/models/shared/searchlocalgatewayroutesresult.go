@@ -18,12 +18,16 @@ const (
 	SearchLocalGatewayRoutesResultRoutesStateEnumDeleted   SearchLocalGatewayRoutesResultRoutesStateEnum = "deleted"
 )
 
+func (e SearchLocalGatewayRoutesResultRoutesStateEnum) ToPointer() *SearchLocalGatewayRoutesResultRoutesStateEnum {
+	return &e
+}
+
 func (e *SearchLocalGatewayRoutesResultRoutesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "active":
@@ -33,10 +37,10 @@ func (e *SearchLocalGatewayRoutesResultRoutesStateEnum) UnmarshalJSON(data []byt
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = SearchLocalGatewayRoutesResultRoutesStateEnum(s)
+		*e = SearchLocalGatewayRoutesResultRoutesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchLocalGatewayRoutesResultRoutesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchLocalGatewayRoutesResultRoutesStateEnum: %v", v)
 	}
 }
 
@@ -48,19 +52,23 @@ const (
 	SearchLocalGatewayRoutesResultRoutesTypeEnumPropagated SearchLocalGatewayRoutesResultRoutesTypeEnum = "propagated"
 )
 
+func (e SearchLocalGatewayRoutesResultRoutesTypeEnum) ToPointer() *SearchLocalGatewayRoutesResultRoutesTypeEnum {
+	return &e
+}
+
 func (e *SearchLocalGatewayRoutesResultRoutesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "static":
 		fallthrough
 	case "propagated":
-		*e = SearchLocalGatewayRoutesResultRoutesTypeEnum(s)
+		*e = SearchLocalGatewayRoutesResultRoutesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchLocalGatewayRoutesResultRoutesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchLocalGatewayRoutesResultRoutesTypeEnum: %v", v)
 	}
 }
 

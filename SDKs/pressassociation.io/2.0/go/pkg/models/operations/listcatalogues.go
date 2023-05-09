@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type ListCataloguesSecurity struct {
+	Apikey string `security:"scheme,type=apiKey,subtype=header,name=apikey"`
+}
+
 type ListCataloguesResponse struct {
 	ContentType                            string
 	StatusCode                             int

@@ -16,17 +16,21 @@ const (
 	DeleteEnvironmentAccountConnectionXAmzTargetEnumAwsProton20200720DeleteEnvironmentAccountConnection DeleteEnvironmentAccountConnectionXAmzTargetEnum = "AwsProton20200720.DeleteEnvironmentAccountConnection"
 )
 
+func (e DeleteEnvironmentAccountConnectionXAmzTargetEnum) ToPointer() *DeleteEnvironmentAccountConnectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteEnvironmentAccountConnectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.DeleteEnvironmentAccountConnection":
-		*e = DeleteEnvironmentAccountConnectionXAmzTargetEnum(s)
+		*e = DeleteEnvironmentAccountConnectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteEnvironmentAccountConnectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteEnvironmentAccountConnectionXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -17,6 +18,7 @@ pkg/models/operations/managedidentitiesprojectslocationsglobaldomainsbackupscrea
 pkg/models/operations/managedidentitiesprojectslocationsglobaldomainsbackupslist.go
 pkg/models/operations/managedidentitiesprojectslocationsglobaldomainscreate.go
 pkg/models/operations/managedidentitiesprojectslocationsglobaldomainsdetachtrust.go
+pkg/models/operations/managedidentitiesprojectslocationsglobaldomainsdomainjoinmachine.go
 pkg/models/operations/managedidentitiesprojectslocationsglobaldomainsextendschema.go
 pkg/models/operations/managedidentitiesprojectslocationsglobaldomainsgetldapssettings.go
 pkg/models/operations/managedidentitiesprojectslocationsglobaldomainslist.go
@@ -46,6 +48,8 @@ pkg/models/shared/backup.go
 pkg/models/shared/listbackupsresponse.go
 pkg/models/shared/domain.go
 pkg/models/shared/detachtrustrequest.go
+pkg/models/shared/domainjoinmachineresponse.go
+pkg/models/shared/domainjoinmachinerequest.go
 pkg/models/shared/extendschemarequest.go
 pkg/models/shared/ldapssettings.go
 pkg/models/shared/certificate.go
@@ -66,4 +70,6 @@ pkg/models/shared/testiampermissionsresponse.go
 pkg/models/shared/testiampermissionsrequest.go
 pkg/models/shared/listlocationsresponse.go
 pkg/models/shared/location.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

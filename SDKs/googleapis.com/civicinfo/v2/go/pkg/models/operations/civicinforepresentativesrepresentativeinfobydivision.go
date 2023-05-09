@@ -23,12 +23,16 @@ const (
 	CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnumSpecial             CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum = "special"
 )
 
+func (e CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum) ToPointer() *CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum {
+	return &e
+}
+
 func (e *CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "international":
 		fallthrough
 	case "country":
@@ -46,10 +50,10 @@ func (e *CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum) Unmarsh
 	case "subLocality2":
 		fallthrough
 	case "special":
-		*e = CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum(s)
+		*e = CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum: %s", s)
+		return fmt.Errorf("invalid value for CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum: %v", v)
 	}
 }
 
@@ -70,12 +74,16 @@ const (
 	CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnumOtherRole              CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum = "otherRole"
 )
 
+func (e CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum) ToPointer() *CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum {
+	return &e
+}
+
 func (e *CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "headOfState":
 		fallthrough
 	case "headOfGovernment":
@@ -99,10 +107,10 @@ func (e *CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum) Unmarsha
 	case "specialPurposeOfficer":
 		fallthrough
 	case "otherRole":
-		*e = CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum(s)
+		*e = CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum: %s", s)
+		return fmt.Errorf("invalid value for CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum: %v", v)
 	}
 }
 

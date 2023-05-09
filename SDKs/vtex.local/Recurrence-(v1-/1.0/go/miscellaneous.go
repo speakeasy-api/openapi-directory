@@ -35,7 +35,10 @@ func newMiscellaneous(defaultClient, securityClient HTTPClient, serverURL, langu
 // Adds an item to a Subscription (formerly Recurrence).
 func (s *miscellaneous) Addrecurrenceitem(ctx context.Context, request operations.AddrecurrenceitemRequest) (*operations.AddrecurrenceitemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -125,7 +128,10 @@ func (s *miscellaneous) GetRecurrencebyemail(ctx context.Context, request operat
 // Retrieves a given Subscription (formerly recurrence) by recurrenceId.
 func (s *miscellaneous) GetRecurrencebyrecurrenceID(ctx context.Context, request operations.GetRecurrencebyrecurrenceIDRequest) (*operations.GetRecurrencebyrecurrenceIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -163,7 +169,10 @@ func (s *miscellaneous) GetRecurrencebyrecurrenceID(ctx context.Context, request
 // Lists payment accounts of a given Subscription (formerly Recurrence) by recurrenceId.
 func (s *miscellaneous) Getpaymentaccounts(ctx context.Context, request operations.GetpaymentaccountsRequest) (*operations.GetpaymentaccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceid}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceid}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -201,7 +210,10 @@ func (s *miscellaneous) Getpaymentaccounts(ctx context.Context, request operatio
 // Retrieves the addresses attached to a given subscription (formerly recurrence) by recurrenceId.
 func (s *miscellaneous) Getrecurrenceaddresses(ctx context.Context, request operations.GetrecurrenceaddressesRequest) (*operations.GetrecurrenceaddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}/addresses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}/addresses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -315,7 +327,10 @@ func (s *miscellaneous) Getselfrecurrence(ctx context.Context, request operation
 // Alters the frequency of a given Subscription (formerly Recurrence) by changing period and interval.
 func (s *miscellaneous) Reindexrecurrence(ctx context.Context, request operations.ReindexrecurrenceRequest) (*operations.ReindexrecurrenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}/reindex", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}/reindex", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -363,7 +378,10 @@ func (s *miscellaneous) Reindexrecurrence(ctx context.Context, request operation
 // Updates partial information of a given subscription (formerly Recurrence).
 func (s *miscellaneous) Updatepartialrecurrence(ctx context.Context, request operations.UpdatepartialrecurrenceRequest) (*operations.UpdatepartialrecurrenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscriptions/{recurrenceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatepartialrecurrenceRequest", "json")
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	PutRemediationConfigurationsXAmzTargetEnumStarlingDoveServicePutRemediationConfigurations PutRemediationConfigurationsXAmzTargetEnum = "StarlingDoveService.PutRemediationConfigurations"
 )
 
+func (e PutRemediationConfigurationsXAmzTargetEnum) ToPointer() *PutRemediationConfigurationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutRemediationConfigurationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.PutRemediationConfigurations":
-		*e = PutRemediationConfigurationsXAmzTargetEnum(s)
+		*e = PutRemediationConfigurationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutRemediationConfigurationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutRemediationConfigurationsXAmzTargetEnum: %v", v)
 	}
 }
 

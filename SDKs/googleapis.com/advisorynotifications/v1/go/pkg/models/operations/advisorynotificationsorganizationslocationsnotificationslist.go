@@ -23,21 +23,25 @@ const (
 	AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnumFull                        AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum = "FULL"
 )
 
+func (e AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum) ToPointer() *AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum {
+	return &e
+}
+
 func (e *AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOTIFICATION_VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum(s)
+		*e = AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,10 +17,11 @@ func main() {
         }),
     )
 
-    req := operations.ConvertRecoveryPointToSnapshotRequest{
+    ctx := context.Background()
+    res, err := s.ConvertRecoveryPointToSnapshot(ctx, operations.ConvertRecoveryPointToSnapshotRequest{
         ConvertRecoveryPointToSnapshotRequest: shared.ConvertRecoveryPointToSnapshotRequest{
             RecoveryPointID: "corrupti",
-            RetentionPeriod: 592845,
+            RetentionPeriod: sdk.Int64(592845),
             SnapshotName: "distinctio",
             Tags: []shared.Tag{
                 shared.Tag{
@@ -41,18 +42,15 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "iure",
-        XAmzContentSha256: "magnam",
-        XAmzCredential: "debitis",
-        XAmzDate: "ipsa",
-        XAmzSecurityToken: "delectus",
-        XAmzSignature: "tempora",
-        XAmzSignedHeaders: "suscipit",
-        XAmzTarget: "RedshiftServerless.ConvertRecoveryPointToSnapshot",
-    }
-
-    ctx := context.Background()
-    res, err := s.ConvertRecoveryPointToSnapshot(ctx, req)
+        XAmzAlgorithm: sdk.String("iure"),
+        XAmzContentSha256: sdk.String("magnam"),
+        XAmzCredential: sdk.String("debitis"),
+        XAmzDate: sdk.String("ipsa"),
+        XAmzSecurityToken: sdk.String("delectus"),
+        XAmzSignature: sdk.String("tempora"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+        XAmzTarget: operations.ConvertRecoveryPointToSnapshotXAmzTargetEnumRedshiftServerlessConvertRecoveryPointToSnapshot,
+    })
     if err != nil {
         log.Fatal(err)
     }

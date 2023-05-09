@@ -20,12 +20,16 @@ const (
 	ClusterStatusEnumDegraded          ClusterStatusEnum = "DEGRADED"
 )
 
+func (e ClusterStatusEnum) ToPointer() *ClusterStatusEnum {
+	return &e
+}
+
 func (e *ClusterStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "PROVISIONING":
@@ -39,10 +43,10 @@ func (e *ClusterStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ERROR":
 		fallthrough
 	case "DEGRADED":
-		*e = ClusterStatusEnum(s)
+		*e = ClusterStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterStatusEnum: %v", v)
 	}
 }
 

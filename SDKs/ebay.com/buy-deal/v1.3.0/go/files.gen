@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -30,4 +31,8 @@ pkg/models/shared/coupon.go
 pkg/models/shared/eventsearchresponse.go
 pkg/models/shared/eventitemsearchresponse.go
 pkg/models/shared/eventitem.go
+docs/sdk/README.md
+docs/dealitem/README.md
+docs/event/README.md
+docs/eventitem/README.md
 USAGE.md

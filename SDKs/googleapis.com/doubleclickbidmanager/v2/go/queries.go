@@ -90,7 +90,10 @@ func (s *queries) DoubleclickbidmanagerQueriesCreate(ctx context.Context, reques
 // DoubleclickbidmanagerQueriesDelete - Deletes a query as well as the associated reports.
 func (s *queries) DoubleclickbidmanagerQueriesDelete(ctx context.Context, request operations.DoubleclickbidmanagerQueriesDeleteRequest, security operations.DoubleclickbidmanagerQueriesDeleteSecurity) (*operations.DoubleclickbidmanagerQueriesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +132,10 @@ func (s *queries) DoubleclickbidmanagerQueriesDelete(ctx context.Context, reques
 // DoubleclickbidmanagerQueriesGet - Retrieves a query.
 func (s *queries) DoubleclickbidmanagerQueriesGet(ctx context.Context, request operations.DoubleclickbidmanagerQueriesGetRequest, security operations.DoubleclickbidmanagerQueriesGetSecurity) (*operations.DoubleclickbidmanagerQueriesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *queries) DoubleclickbidmanagerQueriesList(ctx context.Context, request 
 // DoubleclickbidmanagerQueriesReportsGet - Retrieves a report.
 func (s *queries) DoubleclickbidmanagerQueriesReportsGet(ctx context.Context, request operations.DoubleclickbidmanagerQueriesReportsGetRequest, security operations.DoubleclickbidmanagerQueriesReportsGetSecurity) (*operations.DoubleclickbidmanagerQueriesReportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}/reports/{reportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}/reports/{reportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -273,7 +282,10 @@ func (s *queries) DoubleclickbidmanagerQueriesReportsGet(ctx context.Context, re
 // DoubleclickbidmanagerQueriesReportsList - Lists reports associated with a query.
 func (s *queries) DoubleclickbidmanagerQueriesReportsList(ctx context.Context, request operations.DoubleclickbidmanagerQueriesReportsListRequest, security operations.DoubleclickbidmanagerQueriesReportsListSecurity) (*operations.DoubleclickbidmanagerQueriesReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}/reports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}/reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -321,7 +333,10 @@ func (s *queries) DoubleclickbidmanagerQueriesReportsList(ctx context.Context, r
 // DoubleclickbidmanagerQueriesRun - Runs a stored query to generate a report.
 func (s *queries) DoubleclickbidmanagerQueriesRun(ctx context.Context, request operations.DoubleclickbidmanagerQueriesRunRequest, security operations.DoubleclickbidmanagerQueriesRunSecurity) (*operations.DoubleclickbidmanagerQueriesRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}:run", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queries/{queryId}:run", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunQueryRequest", "json")
 	if err != nil {

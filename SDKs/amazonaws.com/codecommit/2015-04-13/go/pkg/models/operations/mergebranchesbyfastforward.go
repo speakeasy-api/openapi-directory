@@ -16,17 +16,21 @@ const (
 	MergeBranchesByFastForwardXAmzTargetEnumCodeCommit20150413MergeBranchesByFastForward MergeBranchesByFastForwardXAmzTargetEnum = "CodeCommit_20150413.MergeBranchesByFastForward"
 )
 
+func (e MergeBranchesByFastForwardXAmzTargetEnum) ToPointer() *MergeBranchesByFastForwardXAmzTargetEnum {
+	return &e
+}
+
 func (e *MergeBranchesByFastForwardXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.MergeBranchesByFastForward":
-		*e = MergeBranchesByFastForwardXAmzTargetEnum(s)
+		*e = MergeBranchesByFastForwardXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MergeBranchesByFastForwardXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for MergeBranchesByFastForwardXAmzTargetEnum: %v", v)
 	}
 }
 

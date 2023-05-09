@@ -15,20 +15,24 @@ const (
 	FaultEnumUnknown FaultEnum = "Unknown"
 )
 
+func (e FaultEnum) ToPointer() *FaultEnum {
+	return &e
+}
+
 func (e *FaultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Client":
 		fallthrough
 	case "Server":
 		fallthrough
 	case "Unknown":
-		*e = FaultEnum(s)
+		*e = FaultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FaultEnum: %s", s)
+		return fmt.Errorf("invalid value for FaultEnum: %v", v)
 	}
 }

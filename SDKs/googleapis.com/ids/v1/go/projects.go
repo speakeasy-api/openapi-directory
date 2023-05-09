@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // IdsProjectsLocationsEndpointsCreate - Creates a new Endpoint in a given project and location.
 func (s *projects) IdsProjectsLocationsEndpointsCreate(ctx context.Context, request operations.IdsProjectsLocationsEndpointsCreateRequest, security operations.IdsProjectsLocationsEndpointsCreateSecurity) (*operations.IdsProjectsLocationsEndpointsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpoints", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpoints", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EndpointInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) IdsProjectsLocationsEndpointsCreate(ctx context.Context, requ
 // IdsProjectsLocationsEndpointsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) IdsProjectsLocationsEndpointsGetIamPolicy(ctx context.Context, request operations.IdsProjectsLocationsEndpointsGetIamPolicyRequest, security operations.IdsProjectsLocationsEndpointsGetIamPolicySecurity) (*operations.IdsProjectsLocationsEndpointsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) IdsProjectsLocationsEndpointsGetIamPolicy(ctx context.Context
 // IdsProjectsLocationsEndpointsList - Lists Endpoints in a given project and location.
 func (s *projects) IdsProjectsLocationsEndpointsList(ctx context.Context, request operations.IdsProjectsLocationsEndpointsListRequest, security operations.IdsProjectsLocationsEndpointsListSecurity) (*operations.IdsProjectsLocationsEndpointsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpoints", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpoints", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) IdsProjectsLocationsEndpointsList(ctx context.Context, reques
 // IdsProjectsLocationsEndpointsPatch - Updates the parameters of a single Endpoint.
 func (s *projects) IdsProjectsLocationsEndpointsPatch(ctx context.Context, request operations.IdsProjectsLocationsEndpointsPatchRequest, security operations.IdsProjectsLocationsEndpointsPatchSecurity) (*operations.IdsProjectsLocationsEndpointsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EndpointInput", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) IdsProjectsLocationsEndpointsPatch(ctx context.Context, reque
 // IdsProjectsLocationsEndpointsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) IdsProjectsLocationsEndpointsSetIamPolicy(ctx context.Context, request operations.IdsProjectsLocationsEndpointsSetIamPolicyRequest, security operations.IdsProjectsLocationsEndpointsSetIamPolicySecurity) (*operations.IdsProjectsLocationsEndpointsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) IdsProjectsLocationsEndpointsSetIamPolicy(ctx context.Context
 // IdsProjectsLocationsEndpointsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) IdsProjectsLocationsEndpointsTestIamPermissions(ctx context.Context, request operations.IdsProjectsLocationsEndpointsTestIamPermissionsRequest, security operations.IdsProjectsLocationsEndpointsTestIamPermissionsSecurity) (*operations.IdsProjectsLocationsEndpointsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *projects) IdsProjectsLocationsEndpointsTestIamPermissions(ctx context.C
 // IdsProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) IdsProjectsLocationsList(ctx context.Context, request operations.IdsProjectsLocationsListRequest, security operations.IdsProjectsLocationsListSecurity) (*operations.IdsProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) IdsProjectsLocationsList(ctx context.Context, request operati
 // IdsProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) IdsProjectsLocationsOperationsCancel(ctx context.Context, request operations.IdsProjectsLocationsOperationsCancelRequest, security operations.IdsProjectsLocationsOperationsCancelSecurity) (*operations.IdsProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *projects) IdsProjectsLocationsOperationsCancel(ctx context.Context, req
 // IdsProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) IdsProjectsLocationsOperationsDelete(ctx context.Context, request operations.IdsProjectsLocationsOperationsDeleteRequest, security operations.IdsProjectsLocationsOperationsDeleteSecurity) (*operations.IdsProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *projects) IdsProjectsLocationsOperationsDelete(ctx context.Context, req
 // IdsProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) IdsProjectsLocationsOperationsGet(ctx context.Context, request operations.IdsProjectsLocationsOperationsGetRequest, security operations.IdsProjectsLocationsOperationsGetSecurity) (*operations.IdsProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -546,10 +576,13 @@ func (s *projects) IdsProjectsLocationsOperationsGet(ctx context.Context, reques
 	return res, nil
 }
 
-// IdsProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+// IdsProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) IdsProjectsLocationsOperationsList(ctx context.Context, request operations.IdsProjectsLocationsOperationsListRequest, security operations.IdsProjectsLocationsOperationsListSecurity) (*operations.IdsProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

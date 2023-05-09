@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,10 +17,11 @@ func main() {
         }),
     )
 
-    req := operations.CreateNotificationRuleRequest{
+    ctx := context.Background()
+    res, err := s.CreateNotificationRule(ctx, operations.CreateNotificationRuleRequest{
         RequestBody: operations.CreateNotificationRuleRequestBody{
-            ClientRequestToken: "corrupti",
-            DetailType: "FULL",
+            ClientRequestToken: sdk.String("corrupti"),
+            DetailType: operations.CreateNotificationRuleRequestBodyDetailTypeEnumFull,
             EventTypeIds: []string{
                 "quibusdam",
                 "unde",
@@ -28,7 +29,7 @@ func main() {
             },
             Name: "corrupti",
             Resource: "illum",
-            Status: "ENABLED",
+            Status: operations.CreateNotificationRuleRequestBodyStatusEnumEnabled.ToPointer(),
             Tags: map[string]string{
                 "deserunt": "suscipit",
                 "iure": "magnam",
@@ -36,34 +37,31 @@ func main() {
             },
             Targets: []shared.Target{
                 shared.Target{
-                    TargetAddress: "tempora",
-                    TargetType: "suscipit",
+                    TargetAddress: sdk.String("tempora"),
+                    TargetType: sdk.String("suscipit"),
                 },
                 shared.Target{
-                    TargetAddress: "molestiae",
-                    TargetType: "minus",
+                    TargetAddress: sdk.String("molestiae"),
+                    TargetType: sdk.String("minus"),
                 },
                 shared.Target{
-                    TargetAddress: "placeat",
-                    TargetType: "voluptatum",
+                    TargetAddress: sdk.String("placeat"),
+                    TargetType: sdk.String("voluptatum"),
                 },
                 shared.Target{
-                    TargetAddress: "iusto",
-                    TargetType: "excepturi",
+                    TargetAddress: sdk.String("iusto"),
+                    TargetType: sdk.String("excepturi"),
                 },
             },
         },
-        XAmzAlgorithm: "nisi",
-        XAmzContentSha256: "recusandae",
-        XAmzCredential: "temporibus",
-        XAmzDate: "ab",
-        XAmzSecurityToken: "quis",
-        XAmzSignature: "veritatis",
-        XAmzSignedHeaders: "deserunt",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateNotificationRule(ctx, req)
+        XAmzAlgorithm: sdk.String("nisi"),
+        XAmzContentSha256: sdk.String("recusandae"),
+        XAmzCredential: sdk.String("temporibus"),
+        XAmzDate: sdk.String("ab"),
+        XAmzSecurityToken: sdk.String("quis"),
+        XAmzSignature: sdk.String("veritatis"),
+        XAmzSignedHeaders: sdk.String("deserunt"),
+    })
     if err != nil {
         log.Fatal(err)
     }

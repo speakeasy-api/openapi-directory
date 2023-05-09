@@ -38,7 +38,10 @@ func newCaptions(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Note: For streaming jobs, transient failure of our storage during a live session may prevent the final hypothesis elements from saving properly, resulting in an incomplete caption file. This is rare, but not impossible.
 func (s *captions) GetCaptions(ctx context.Context, request operations.GetCaptionsRequest) (*operations.GetCaptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{id}/captions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{id}/captions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

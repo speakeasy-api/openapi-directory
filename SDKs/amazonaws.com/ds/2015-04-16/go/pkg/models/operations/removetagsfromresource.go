@@ -16,17 +16,21 @@ const (
 	RemoveTagsFromResourceXAmzTargetEnumDirectoryService20150416RemoveTagsFromResource RemoveTagsFromResourceXAmzTargetEnum = "DirectoryService_20150416.RemoveTagsFromResource"
 )
 
+func (e RemoveTagsFromResourceXAmzTargetEnum) ToPointer() *RemoveTagsFromResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *RemoveTagsFromResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.RemoveTagsFromResource":
-		*e = RemoveTagsFromResourceXAmzTargetEnum(s)
+		*e = RemoveTagsFromResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveTagsFromResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveTagsFromResourceXAmzTargetEnum: %v", v)
 	}
 }
 

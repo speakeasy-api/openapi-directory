@@ -16,20 +16,24 @@ const (
 	ReturnConsumedCapacityEnumNone    ReturnConsumedCapacityEnum = "NONE"
 )
 
+func (e ReturnConsumedCapacityEnum) ToPointer() *ReturnConsumedCapacityEnum {
+	return &e
+}
+
 func (e *ReturnConsumedCapacityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INDEXES":
 		fallthrough
 	case "TOTAL":
 		fallthrough
 	case "NONE":
-		*e = ReturnConsumedCapacityEnum(s)
+		*e = ReturnConsumedCapacityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReturnConsumedCapacityEnum: %s", s)
+		return fmt.Errorf("invalid value for ReturnConsumedCapacityEnum: %v", v)
 	}
 }

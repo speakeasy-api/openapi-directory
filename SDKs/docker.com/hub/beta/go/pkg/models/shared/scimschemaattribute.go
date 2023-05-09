@@ -15,21 +15,25 @@ const (
 	ScimSchemaAttributeTypeEnumComplex ScimSchemaAttributeTypeEnum = "complex"
 )
 
+func (e ScimSchemaAttributeTypeEnum) ToPointer() *ScimSchemaAttributeTypeEnum {
+	return &e
+}
+
 func (e *ScimSchemaAttributeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "string":
 		fallthrough
 	case "boolean":
 		fallthrough
 	case "complex":
-		*e = ScimSchemaAttributeTypeEnum(s)
+		*e = ScimSchemaAttributeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScimSchemaAttributeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScimSchemaAttributeTypeEnum: %v", v)
 	}
 }
 

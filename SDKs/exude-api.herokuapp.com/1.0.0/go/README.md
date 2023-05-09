@@ -13,18 +13,18 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/exude-api.herokuapp.com/1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FilterFileDataStoppingsRequest{
+    ctx := context.Background()
+    res, err := s.Exude.FilterFileDataStoppings(ctx, operations.FilterFileDataStoppingsRequest{
         RequestBody: operations.FilterFileDataStoppingsRequestBody{
             File: &operations.FilterFileDataStoppingsRequestBodyFile{
                 Content: []byte("corrupti"),
@@ -32,10 +32,7 @@ func main() {
             },
         },
         Type: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.Exude.FilterFileDataStoppings(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,10 +48,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### Exude
+### [Exude](docs/exude/README.md)
 
-* `FilterFileDataStoppings` - Filter the stopping words from the provided input file
-* `FilterStoppings` - Filter the stopping words from the provided input data or links
+* [FilterFileDataStoppings](docs/exude/README.md#filterfiledatastoppings) - Filter the stopping words from the provided input file
+* [FilterStoppings](docs/exude/README.md#filterstoppings) - Filter the stopping words from the provided input data or links
 <!-- End SDK Available Operations -->
 
 ### Maturity

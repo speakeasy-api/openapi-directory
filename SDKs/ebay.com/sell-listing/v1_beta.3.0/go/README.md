@@ -13,76 +13,75 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ebay.com/sell-listing/v1_
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateItemDraftRequest{
-        ContentLanguage: "corrupti",
+    ctx := context.Background()
+    res, err := s.ItemDraft.CreateItemDraft(ctx, operations.CreateItemDraftRequest{
+        ContentLanguage: sdk.String("corrupti"),
         ItemDraft: &shared.ItemDraft{
-            CategoryID: "provident",
+            CategoryID: sdk.String("provident"),
             Charity: &shared.Charity{
-                CharityID: "distinctio",
-                DonationPercentage: "quibusdam",
+                CharityID: sdk.String("distinctio"),
+                DonationPercentage: sdk.String("quibusdam"),
             },
-            Condition: "unde",
-            Format: "nulla",
+            Condition: sdk.String("unde"),
+            Format: sdk.String("nulla"),
             PricingSummary: &shared.PricingSummary{
                 AuctionReservePrice: &shared.Amount{
-                    Currency: "corrupti",
-                    Value: "illum",
+                    Currency: sdk.String("corrupti"),
+                    Value: sdk.String("illum"),
                 },
                 AuctionStartPrice: &shared.Amount{
-                    Currency: "vel",
-                    Value: "error",
+                    Currency: sdk.String("vel"),
+                    Value: sdk.String("error"),
                 },
                 Price: &shared.Amount{
-                    Currency: "deserunt",
-                    Value: "suscipit",
+                    Currency: sdk.String("deserunt"),
+                    Value: sdk.String("suscipit"),
                 },
             },
             Product: &shared.Product{
                 Aspects: []shared.Aspect{
                     shared.Aspect{
-                        Name: "magnam",
+                        Name: sdk.String("Raquel Bednar"),
                         Values: []string{
-                            "ipsa",
-                            "delectus",
-                            "tempora",
-                            "suscipit",
+                            "molestiae",
+                            "minus",
                         },
                     },
                     shared.Aspect{
-                        Name: "molestiae",
+                        Name: sdk.String("Ken Kshlerin"),
                         Values: []string{
-                            "placeat",
-                            "voluptatum",
-                            "iusto",
-                            "excepturi",
+                            "temporibus",
+                            "ab",
+                            "quis",
+                            "veritatis",
                         },
                     },
                 },
-                Brand: "nisi",
-                Description: "recusandae",
-                Epid: "temporibus",
+                Brand: sdk.String("deserunt"),
+                Description: sdk.String("perferendis"),
+                Epid: sdk.String("ipsam"),
                 ImageUrls: []string{
-                    "quis",
+                    "sapiente",
+                    "quo",
+                    "odit",
+                    "at",
                 },
-                Title: "Mr.",
+                Title: sdk.String("Dr."),
             },
         },
-        XEbayCMarketplaceID: "deserunt",
-    }
-
-    ctx := context.Background()
-    res, err := s.ItemDraft.CreateItemDraft(ctx, req, operations.CreateItemDraftSecurity{
+        XEbayCMarketplaceID: "maiores",
+    }, operations.CreateItemDraftSecurity{
         APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -100,9 +99,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### ItemDraft
+### [ItemDraft](docs/itemdraft/README.md)
 
-* `CreateItemDraft` - This call gives Partners the ability to create an eBay draft of a item for their seller using information from their site. This lets the Partner increase the exposure of items on their site and leverage the eBay user listing experience seamlessly. This experience provides guidance on pricing, aspects, etc. and recommendations that help create a listing that is complete and improves the exposure of the listing in search results. After the listing draft is created, the seller logs into their eBay account and uses the listing experience to finish the listing and publish the item on eBay.
+* [CreateItemDraft](docs/itemdraft/README.md#createitemdraft) - This call gives Partners the ability to create an eBay draft of a item for their seller using information from their site. This lets the Partner increase the exposure of items on their site and leverage the eBay user listing experience seamlessly. This experience provides guidance on pricing, aspects, etc. and recommendations that help create a listing that is complete and improves the exposure of the listing in search results. After the listing draft is created, the seller logs into their eBay account and uses the listing experience to finish the listing and publish the item on eBay.
 <!-- End SDK Available Operations -->
 
 ### Maturity

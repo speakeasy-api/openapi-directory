@@ -16,17 +16,21 @@ const (
 	CreateAddressXAmzTargetEnumAwsieSnowballJobManagementServiceCreateAddress CreateAddressXAmzTargetEnum = "AWSIESnowballJobManagementService.CreateAddress"
 )
 
+func (e CreateAddressXAmzTargetEnum) ToPointer() *CreateAddressXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAddressXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSIESnowballJobManagementService.CreateAddress":
-		*e = CreateAddressXAmzTargetEnum(s)
+		*e = CreateAddressXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAddressXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAddressXAmzTargetEnum: %v", v)
 	}
 }
 

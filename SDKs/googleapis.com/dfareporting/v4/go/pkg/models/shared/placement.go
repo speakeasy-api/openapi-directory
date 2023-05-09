@@ -18,12 +18,16 @@ const (
 	PlacementActiveStatusEnumPlacementStatusPermanentlyArchived PlacementActiveStatusEnum = "PLACEMENT_STATUS_PERMANENTLY_ARCHIVED"
 )
 
+func (e PlacementActiveStatusEnum) ToPointer() *PlacementActiveStatusEnum {
+	return &e
+}
+
 func (e *PlacementActiveStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACEMENT_STATUS_UNKNOWN":
 		fallthrough
 	case "PLACEMENT_STATUS_ACTIVE":
@@ -33,10 +37,10 @@ func (e *PlacementActiveStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PLACEMENT_STATUS_ARCHIVED":
 		fallthrough
 	case "PLACEMENT_STATUS_PERMANENTLY_ARCHIVED":
-		*e = PlacementActiveStatusEnum(s)
+		*e = PlacementActiveStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlacementActiveStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PlacementActiveStatusEnum: %v", v)
 	}
 }
 
@@ -52,12 +56,16 @@ const (
 	PlacementCompatibilityEnumInStreamAudio       PlacementCompatibilityEnum = "IN_STREAM_AUDIO"
 )
 
+func (e PlacementCompatibilityEnum) ToPointer() *PlacementCompatibilityEnum {
+	return &e
+}
+
 func (e *PlacementCompatibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISPLAY":
 		fallthrough
 	case "DISPLAY_INTERSTITIAL":
@@ -69,10 +77,10 @@ func (e *PlacementCompatibilityEnum) UnmarshalJSON(data []byte) error {
 	case "IN_STREAM_VIDEO":
 		fallthrough
 	case "IN_STREAM_AUDIO":
-		*e = PlacementCompatibilityEnum(s)
+		*e = PlacementCompatibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlacementCompatibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for PlacementCompatibilityEnum: %v", v)
 	}
 }
 
@@ -84,19 +92,23 @@ const (
 	PlacementPaymentSourceEnumPlacementPublisherPaid PlacementPaymentSourceEnum = "PLACEMENT_PUBLISHER_PAID"
 )
 
+func (e PlacementPaymentSourceEnum) ToPointer() *PlacementPaymentSourceEnum {
+	return &e
+}
+
 func (e *PlacementPaymentSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACEMENT_AGENCY_PAID":
 		fallthrough
 	case "PLACEMENT_PUBLISHER_PAID":
-		*e = PlacementPaymentSourceEnum(s)
+		*e = PlacementPaymentSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlacementPaymentSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for PlacementPaymentSourceEnum: %v", v)
 	}
 }
 
@@ -112,12 +124,16 @@ const (
 	PlacementStatusEnumDraft                 PlacementStatusEnum = "DRAFT"
 )
 
+func (e PlacementStatusEnum) ToPointer() *PlacementStatusEnum {
+	return &e
+}
+
 func (e *PlacementStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_REVIEW":
 		fallthrough
 	case "PAYMENT_ACCEPTED":
@@ -129,10 +145,10 @@ func (e *PlacementStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ACKNOWLEDGE_ACCEPTANCE":
 		fallthrough
 	case "DRAFT":
-		*e = PlacementStatusEnum(s)
+		*e = PlacementStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlacementStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PlacementStatusEnum: %v", v)
 	}
 }
 
@@ -161,12 +177,16 @@ const (
 	PlacementTagFormatsEnumPlacementTagTrackingThirdPartyMeasurement      PlacementTagFormatsEnum = "PLACEMENT_TAG_TRACKING_THIRD_PARTY_MEASUREMENT"
 )
 
+func (e PlacementTagFormatsEnum) ToPointer() *PlacementTagFormatsEnum {
+	return &e
+}
+
 func (e *PlacementTagFormatsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACEMENT_TAG_STANDARD":
 		fallthrough
 	case "PLACEMENT_TAG_IFRAME_JAVASCRIPT":
@@ -206,10 +226,10 @@ func (e *PlacementTagFormatsEnum) UnmarshalJSON(data []byte) error {
 	case "PLACEMENT_TAG_INSTREAM_VIDEO_PREFETCH_VAST_4":
 		fallthrough
 	case "PLACEMENT_TAG_TRACKING_THIRD_PARTY_MEASUREMENT":
-		*e = PlacementTagFormatsEnum(s)
+		*e = PlacementTagFormatsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlacementTagFormatsEnum: %s", s)
+		return fmt.Errorf("invalid value for PlacementTagFormatsEnum: %v", v)
 	}
 }
 
@@ -223,12 +243,16 @@ const (
 	PlacementVpaidAdapterChoiceEnumBoth    PlacementVpaidAdapterChoiceEnum = "BOTH"
 )
 
+func (e PlacementVpaidAdapterChoiceEnum) ToPointer() *PlacementVpaidAdapterChoiceEnum {
+	return &e
+}
+
 func (e *PlacementVpaidAdapterChoiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "FLASH":
@@ -236,10 +260,10 @@ func (e *PlacementVpaidAdapterChoiceEnum) UnmarshalJSON(data []byte) error {
 	case "HTML5":
 		fallthrough
 	case "BOTH":
-		*e = PlacementVpaidAdapterChoiceEnum(s)
+		*e = PlacementVpaidAdapterChoiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlacementVpaidAdapterChoiceEnum: %s", s)
+		return fmt.Errorf("invalid value for PlacementVpaidAdapterChoiceEnum: %v", v)
 	}
 }
 

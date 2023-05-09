@@ -16,21 +16,25 @@ const (
 	NetworkInstanceIPModeEnumInternal                  NetworkInstanceIPModeEnum = "INTERNAL"
 )
 
+func (e NetworkInstanceIPModeEnum) ToPointer() *NetworkInstanceIPModeEnum {
+	return &e
+}
+
 func (e *NetworkInstanceIPModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTANCE_IP_MODE_UNSPECIFIED":
 		fallthrough
 	case "EXTERNAL":
 		fallthrough
 	case "INTERNAL":
-		*e = NetworkInstanceIPModeEnum(s)
+		*e = NetworkInstanceIPModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkInstanceIPModeEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkInstanceIPModeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdatePortfolioShareXAmzTargetEnumAws242ServiceCatalogServiceUpdatePortfolioShare UpdatePortfolioShareXAmzTargetEnum = "AWS242ServiceCatalogService.UpdatePortfolioShare"
 )
 
+func (e UpdatePortfolioShareXAmzTargetEnum) ToPointer() *UpdatePortfolioShareXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdatePortfolioShareXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.UpdatePortfolioShare":
-		*e = UpdatePortfolioShareXAmzTargetEnum(s)
+		*e = UpdatePortfolioShareXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePortfolioShareXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePortfolioShareXAmzTargetEnum: %v", v)
 	}
 }
 

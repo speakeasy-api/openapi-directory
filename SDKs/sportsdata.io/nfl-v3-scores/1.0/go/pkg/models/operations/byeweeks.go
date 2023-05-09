@@ -17,19 +17,23 @@ const (
 	ByeWeeksFormatEnumJSON ByeWeeksFormatEnum = "JSON"
 )
 
+func (e ByeWeeksFormatEnum) ToPointer() *ByeWeeksFormatEnum {
+	return &e
+}
+
 func (e *ByeWeeksFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = ByeWeeksFormatEnum(s)
+		*e = ByeWeeksFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ByeWeeksFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ByeWeeksFormatEnum: %v", v)
 	}
 }
 

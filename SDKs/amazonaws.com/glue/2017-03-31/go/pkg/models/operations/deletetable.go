@@ -16,17 +16,21 @@ const (
 	DeleteTableXAmzTargetEnumAwsGlueDeleteTable DeleteTableXAmzTargetEnum = "AWSGlue.DeleteTable"
 )
 
+func (e DeleteTableXAmzTargetEnum) ToPointer() *DeleteTableXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteTableXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.DeleteTable":
-		*e = DeleteTableXAmzTargetEnum(s)
+		*e = DeleteTableXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTableXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTableXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	PatchOpEnumTest    PatchOpEnum = "test"
 )
 
+func (e PatchOpEnum) ToPointer() *PatchOpEnum {
+	return &e
+}
+
 func (e *PatchOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "add":
 		fallthrough
 	case "replace":
@@ -32,10 +36,10 @@ func (e *PatchOpEnum) UnmarshalJSON(data []byte) error {
 	case "copy":
 		fallthrough
 	case "test":
-		*e = PatchOpEnum(s)
+		*e = PatchOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchOpEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchOpEnum: %v", v)
 	}
 }
 

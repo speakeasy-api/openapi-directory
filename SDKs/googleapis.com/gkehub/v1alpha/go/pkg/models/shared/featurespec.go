@@ -16,21 +16,25 @@ const (
 	FeatureSpecProvisionGoogleCaEnumEnabled                         FeatureSpecProvisionGoogleCaEnum = "ENABLED"
 )
 
+func (e FeatureSpecProvisionGoogleCaEnum) ToPointer() *FeatureSpecProvisionGoogleCaEnum {
+	return &e
+}
+
 func (e *FeatureSpecProvisionGoogleCaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GOOGLE_CA_PROVISIONING_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
-		*e = FeatureSpecProvisionGoogleCaEnum(s)
+		*e = FeatureSpecProvisionGoogleCaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeatureSpecProvisionGoogleCaEnum: %s", s)
+		return fmt.Errorf("invalid value for FeatureSpecProvisionGoogleCaEnum: %v", v)
 	}
 }
 

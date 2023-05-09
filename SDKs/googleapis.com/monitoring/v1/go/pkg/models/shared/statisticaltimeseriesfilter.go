@@ -15,19 +15,23 @@ const (
 	StatisticalTimeSeriesFilterRankingMethodEnumMethodClusterOutlier StatisticalTimeSeriesFilterRankingMethodEnum = "METHOD_CLUSTER_OUTLIER"
 )
 
+func (e StatisticalTimeSeriesFilterRankingMethodEnum) ToPointer() *StatisticalTimeSeriesFilterRankingMethodEnum {
+	return &e
+}
+
 func (e *StatisticalTimeSeriesFilterRankingMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METHOD_UNSPECIFIED":
 		fallthrough
 	case "METHOD_CLUSTER_OUTLIER":
-		*e = StatisticalTimeSeriesFilterRankingMethodEnum(s)
+		*e = StatisticalTimeSeriesFilterRankingMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatisticalTimeSeriesFilterRankingMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for StatisticalTimeSeriesFilterRankingMethodEnum: %v", v)
 	}
 }
 

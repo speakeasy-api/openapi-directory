@@ -2,61 +2,60 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AddCallBroadcastBatchRequest{
+    ctx := context.Background()
+    res, err := s.Calls.AddCallBroadcastBatch(ctx, operations.AddCallBroadcastBatchRequest{
         BatchRequest: &shared.BatchRequest{
-            ContactListID: 548814,
-            Name: "provident",
+            ContactListID: sdk.Int64(548814),
+            Name: sdk.String("Kelvin Sporer"),
             Recipients: []shared.Recipient{
                 shared.Recipient{
                     Attributes: map[string]string{
-                        "unde": "nulla",
-                        "corrupti": "illum",
                         "vel": "error",
                         "deserunt": "suscipit",
+                        "iure": "magnam",
+                        "debitis": "ipsa",
                     },
-                    ContactID: 437587,
-                    FromNumber: "magnam",
-                    PhoneNumber: "debitis",
+                    ContactID: sdk.Int64(963663),
+                    FromNumber: sdk.String("tempora"),
+                    PhoneNumber: sdk.String("suscipit"),
                 },
                 shared.Recipient{
                     Attributes: map[string]string{
-                        "delectus": "tempora",
-                    },
-                    ContactID: 383441,
-                    FromNumber: "molestiae",
-                    PhoneNumber: "minus",
-                },
-                shared.Recipient{
-                    Attributes: map[string]string{
+                        "minus": "placeat",
                         "voluptatum": "iusto",
-                        "excepturi": "nisi",
-                        "recusandae": "temporibus",
-                        "ab": "quis",
                     },
-                    ContactID: 87129,
-                    FromNumber: "deserunt",
-                    PhoneNumber: "perferendis",
+                    ContactID: sdk.Int64(568045),
+                    FromNumber: sdk.String("nisi"),
+                    PhoneNumber: sdk.String("recusandae"),
+                },
+                shared.Recipient{
+                    Attributes: map[string]string{
+                        "ab": "quis",
+                        "veritatis": "deserunt",
+                        "perferendis": "ipsam",
+                        "repellendus": "sapiente",
+                    },
+                    ContactID: sdk.Int64(778157),
+                    FromNumber: sdk.String("odit"),
+                    PhoneNumber: sdk.String("at"),
                 },
             },
-            ScrubDuplicates: false,
+            ScrubDuplicates: sdk.Bool(false),
         },
-        ID: 368241,
-        StrictValidation: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.Calls.AddCallBroadcastBatch(ctx, req, operations.AddCallBroadcastBatchSecurity{
+        ID: 870088,
+        StrictValidation: sdk.Bool(false),
+    }, operations.AddCallBroadcastBatchSecurity{
         Password: "YOUR_PASSWORD_HERE",
         Username: "YOUR_USERNAME_HERE",
     })

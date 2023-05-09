@@ -17,12 +17,16 @@ const (
 	InboundDigitalWalletTokenRequestSimulationResultDeclineReasonEnumWebhookDeclined      InboundDigitalWalletTokenRequestSimulationResultDeclineReasonEnum = "webhook_declined"
 )
 
+func (e InboundDigitalWalletTokenRequestSimulationResultDeclineReasonEnum) ToPointer() *InboundDigitalWalletTokenRequestSimulationResultDeclineReasonEnum {
+	return &e
+}
+
 func (e *InboundDigitalWalletTokenRequestSimulationResultDeclineReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card_not_active":
 		fallthrough
 	case "no_verification_method":
@@ -30,10 +34,10 @@ func (e *InboundDigitalWalletTokenRequestSimulationResultDeclineReasonEnum) Unma
 	case "webhook_timed_out":
 		fallthrough
 	case "webhook_declined":
-		*e = InboundDigitalWalletTokenRequestSimulationResultDeclineReasonEnum(s)
+		*e = InboundDigitalWalletTokenRequestSimulationResultDeclineReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundDigitalWalletTokenRequestSimulationResultDeclineReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundDigitalWalletTokenRequestSimulationResultDeclineReasonEnum: %v", v)
 	}
 }
 
@@ -44,17 +48,21 @@ const (
 	InboundDigitalWalletTokenRequestSimulationResultTypeEnumInboundDigitalWalletTokenRequestSimulationResult InboundDigitalWalletTokenRequestSimulationResultTypeEnum = "inbound_digital_wallet_token_request_simulation_result"
 )
 
+func (e InboundDigitalWalletTokenRequestSimulationResultTypeEnum) ToPointer() *InboundDigitalWalletTokenRequestSimulationResultTypeEnum {
+	return &e
+}
+
 func (e *InboundDigitalWalletTokenRequestSimulationResultTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inbound_digital_wallet_token_request_simulation_result":
-		*e = InboundDigitalWalletTokenRequestSimulationResultTypeEnum(s)
+		*e = InboundDigitalWalletTokenRequestSimulationResultTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundDigitalWalletTokenRequestSimulationResultTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundDigitalWalletTokenRequestSimulationResultTypeEnum: %v", v)
 	}
 }
 

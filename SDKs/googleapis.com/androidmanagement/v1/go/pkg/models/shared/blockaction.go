@@ -16,21 +16,25 @@ const (
 	BlockActionBlockScopeEnumBlockScopeDevice      BlockActionBlockScopeEnum = "BLOCK_SCOPE_DEVICE"
 )
 
+func (e BlockActionBlockScopeEnum) ToPointer() *BlockActionBlockScopeEnum {
+	return &e
+}
+
 func (e *BlockActionBlockScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BLOCK_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "BLOCK_SCOPE_WORK_PROFILE":
 		fallthrough
 	case "BLOCK_SCOPE_DEVICE":
-		*e = BlockActionBlockScopeEnum(s)
+		*e = BlockActionBlockScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BlockActionBlockScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for BlockActionBlockScopeEnum: %v", v)
 	}
 }
 

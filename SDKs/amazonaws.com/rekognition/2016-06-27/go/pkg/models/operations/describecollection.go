@@ -16,17 +16,21 @@ const (
 	DescribeCollectionXAmzTargetEnumRekognitionServiceDescribeCollection DescribeCollectionXAmzTargetEnum = "RekognitionService.DescribeCollection"
 )
 
+func (e DescribeCollectionXAmzTargetEnum) ToPointer() *DescribeCollectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeCollectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.DescribeCollection":
-		*e = DescribeCollectionXAmzTargetEnum(s)
+		*e = DescribeCollectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeCollectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeCollectionXAmzTargetEnum: %v", v)
 	}
 }
 

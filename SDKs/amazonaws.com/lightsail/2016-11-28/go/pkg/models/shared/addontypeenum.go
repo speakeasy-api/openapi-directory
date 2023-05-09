@@ -14,18 +14,22 @@ const (
 	AddOnTypeEnumStopInstanceOnIdle AddOnTypeEnum = "StopInstanceOnIdle"
 )
 
+func (e AddOnTypeEnum) ToPointer() *AddOnTypeEnum {
+	return &e
+}
+
 func (e *AddOnTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AutoSnapshot":
 		fallthrough
 	case "StopInstanceOnIdle":
-		*e = AddOnTypeEnum(s)
+		*e = AddOnTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddOnTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AddOnTypeEnum: %v", v)
 	}
 }

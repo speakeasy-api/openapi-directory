@@ -33,12 +33,16 @@ const (
 	BasePlanStateEnumInactive         BasePlanStateEnum = "INACTIVE"
 )
 
+func (e BasePlanStateEnum) ToPointer() *BasePlanStateEnum {
+	return &e
+}
+
 func (e *BasePlanStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "DRAFT":
@@ -46,10 +50,10 @@ func (e *BasePlanStateEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
-		*e = BasePlanStateEnum(s)
+		*e = BasePlanStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BasePlanStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BasePlanStateEnum: %v", v)
 	}
 }
 

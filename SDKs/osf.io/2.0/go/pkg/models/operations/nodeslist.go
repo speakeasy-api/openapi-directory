@@ -25,12 +25,16 @@ const (
 	NodesListNodeAttributesCategoryEnumOther              NodesListNodeAttributesCategoryEnum = "other"
 )
 
+func (e NodesListNodeAttributesCategoryEnum) ToPointer() *NodesListNodeAttributesCategoryEnum {
+	return &e
+}
+
 func (e *NodesListNodeAttributesCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "analysis":
 		fallthrough
 	case "communication":
@@ -50,10 +54,10 @@ func (e *NodesListNodeAttributesCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "software":
 		fallthrough
 	case "other":
-		*e = NodesListNodeAttributesCategoryEnum(s)
+		*e = NodesListNodeAttributesCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodesListNodeAttributesCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for NodesListNodeAttributesCategoryEnum: %v", v)
 	}
 }
 

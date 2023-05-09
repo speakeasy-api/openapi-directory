@@ -12,6 +12,6 @@ type TaskSpec struct {
 	ServiceAccountName *string `json:"serviceAccountName,omitempty"`
 	// Optional. Duration in seconds the task may be active before the system will actively try to mark it failed and kill associated containers. This applies per attempt of a task, meaning each retry can run for the full timeout. Defaults to 600 seconds.
 	TimeoutSeconds *string `json:"timeoutSeconds,omitempty"`
-	// Optional. List of volumes that can be mounted by containers belonging to the task. More info: https://kubernetes.io/docs/concepts/storage/volumes
+	// Optional. List of volumes that can be mounted by containers belonging to the task.
 	Volumes []Volume `json:"volumes,omitempty"`
 }

@@ -16,17 +16,21 @@ const (
 	DescribeNodeAssociationStatusXAmzTargetEnumOpsWorksCmV20161101DescribeNodeAssociationStatus DescribeNodeAssociationStatusXAmzTargetEnum = "OpsWorksCM_V2016_11_01.DescribeNodeAssociationStatus"
 )
 
+func (e DescribeNodeAssociationStatusXAmzTargetEnum) ToPointer() *DescribeNodeAssociationStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeNodeAssociationStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorksCM_V2016_11_01.DescribeNodeAssociationStatus":
-		*e = DescribeNodeAssociationStatusXAmzTargetEnum(s)
+		*e = DescribeNodeAssociationStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNodeAssociationStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNodeAssociationStatusXAmzTargetEnum: %v", v)
 	}
 }
 

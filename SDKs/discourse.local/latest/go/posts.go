@@ -85,7 +85,10 @@ func (s *posts) CreateTopicPostPM(ctx context.Context, request operations.Create
 // DeletePost - delete a single post
 func (s *posts) DeletePost(ctx context.Context, request operations.DeletePostRequest) (*operations.DeletePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/posts/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -125,16 +128,22 @@ func (s *posts) DeletePost(ctx context.Context, request operations.DeletePostReq
 }
 
 // GetPost - Retrieve a single post
+// This endpoint can be used to get the number of likes on a post using the
+// `actions_summary` property in the response. `actions_summary` responses
+// with the id of `2` signify a `like`. If there are no `actions_summary`
+// items with the id of `2`, that means there are 0 likes. Other ids likely
+// refer to various different flag types.
 func (s *posts) GetPost(ctx context.Context, request operations.GetPostRequest) (*operations.GetPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/posts/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-
-	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 
@@ -158,7 +167,7 @@ func (s *posts) GetPost(ctx context.Context, request operations.GetPostRequest) 
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.GetPost200ApplicationJSON
+			var out map[string]interface{}
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
@@ -223,7 +232,10 @@ func (s *posts) ListPosts(ctx context.Context, request operations.ListPostsReque
 // LockPost - Lock a post from being edited
 func (s *posts) LockPost(ctx context.Context, request operations.LockPostRequest) (*operations.LockPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}/locked.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/posts/{id}/locked.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -329,7 +341,10 @@ func (s *posts) PerformPostAction(ctx context.Context, request operations.Perfor
 // PostReplies - List replies to a post
 func (s *posts) PostReplies(ctx context.Context, request operations.PostRepliesRequest) (*operations.PostRepliesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}/replies.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/posts/{id}/replies.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -373,7 +388,10 @@ func (s *posts) PostReplies(ctx context.Context, request operations.PostRepliesR
 // UpdatePost - Update a single post
 func (s *posts) UpdatePost(ctx context.Context, request operations.UpdatePostRequest) (*operations.UpdatePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/posts/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/posts/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -386,8 +404,6 @@ func (s *posts) UpdatePost(ctx context.Context, request operations.UpdatePostReq
 	}
 
 	req.Header.Set("Content-Type", reqContentType)
-
-	utils.PopulateHeaders(ctx, req, request)
 
 	client := s.defaultClient
 

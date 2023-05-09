@@ -7,6 +7,46 @@ import (
 	"fmt"
 )
 
+// SapDiscoveryResourceResourceStateEnum - Indicates whether this is a new, updated, or missing resource.
+type SapDiscoveryResourceResourceStateEnum string
+
+const (
+	SapDiscoveryResourceResourceStateEnumResourceStateUnspecified SapDiscoveryResourceResourceStateEnum = "RESOURCE_STATE_UNSPECIFIED"
+	SapDiscoveryResourceResourceStateEnumAdded                    SapDiscoveryResourceResourceStateEnum = "ADDED"
+	SapDiscoveryResourceResourceStateEnumUpdated                  SapDiscoveryResourceResourceStateEnum = "UPDATED"
+	SapDiscoveryResourceResourceStateEnumRemoved                  SapDiscoveryResourceResourceStateEnum = "REMOVED"
+	SapDiscoveryResourceResourceStateEnumReplaced                 SapDiscoveryResourceResourceStateEnum = "REPLACED"
+	SapDiscoveryResourceResourceStateEnumMissing                  SapDiscoveryResourceResourceStateEnum = "MISSING"
+)
+
+func (e SapDiscoveryResourceResourceStateEnum) ToPointer() *SapDiscoveryResourceResourceStateEnum {
+	return &e
+}
+
+func (e *SapDiscoveryResourceResourceStateEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "RESOURCE_STATE_UNSPECIFIED":
+		fallthrough
+	case "ADDED":
+		fallthrough
+	case "UPDATED":
+		fallthrough
+	case "REMOVED":
+		fallthrough
+	case "REPLACED":
+		fallthrough
+	case "MISSING":
+		*e = SapDiscoveryResourceResourceStateEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SapDiscoveryResourceResourceStateEnum: %v", v)
+	}
+}
+
 // SapDiscoveryResourceResourceTypeEnum - The type of this resource.
 type SapDiscoveryResourceResourceTypeEnum string
 
@@ -17,12 +57,16 @@ const (
 	SapDiscoveryResourceResourceTypeEnumNetwork                 SapDiscoveryResourceResourceTypeEnum = "NETWORK"
 )
 
+func (e SapDiscoveryResourceResourceTypeEnum) ToPointer() *SapDiscoveryResourceResourceTypeEnum {
+	return &e
+}
+
 func (e *SapDiscoveryResourceResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "COMPUTE":
@@ -30,10 +74,10 @@ func (e *SapDiscoveryResourceResourceTypeEnum) UnmarshalJSON(data []byte) error 
 	case "STORAGE":
 		fallthrough
 	case "NETWORK":
-		*e = SapDiscoveryResourceResourceTypeEnum(s)
+		*e = SapDiscoveryResourceResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SapDiscoveryResourceResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SapDiscoveryResourceResourceTypeEnum: %v", v)
 	}
 }
 
@@ -43,6 +87,8 @@ type SapDiscoveryResource struct {
 	RelatedResources []string `json:"relatedResources,omitempty"`
 	// ComputeInstance, ComputeDisk, VPC, Bare Metal server, etc.
 	ResourceKind *string `json:"resourceKind,omitempty"`
+	// Indicates whether this is a new, updated, or missing resource.
+	ResourceState *SapDiscoveryResourceResourceStateEnum `json:"resourceState,omitempty"`
 	// The type of this resource.
 	ResourceType *SapDiscoveryResourceResourceTypeEnum `json:"resourceType,omitempty"`
 	// URI of the resource, includes project, location, and name.

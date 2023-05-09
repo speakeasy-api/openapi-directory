@@ -15,18 +15,22 @@ const (
 	FileSystemMaintenanceOperationEnumBackingUp FileSystemMaintenanceOperationEnum = "BACKING_UP"
 )
 
+func (e FileSystemMaintenanceOperationEnum) ToPointer() *FileSystemMaintenanceOperationEnum {
+	return &e
+}
+
 func (e *FileSystemMaintenanceOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PATCHING":
 		fallthrough
 	case "BACKING_UP":
-		*e = FileSystemMaintenanceOperationEnum(s)
+		*e = FileSystemMaintenanceOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileSystemMaintenanceOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for FileSystemMaintenanceOperationEnum: %v", v)
 	}
 }

@@ -16,35 +16,39 @@ type PostPostReviewRequestBody struct {
 }
 
 // PostPostReviewRatingEnum - The user's star rating, must be a single integer from [1, 2, 3, 4, 5]
-type PostPostReviewRatingEnum string
+type PostPostReviewRatingEnum int64
 
 const (
-	PostPostReviewRatingEnumOne   PostPostReviewRatingEnum = "1"
-	PostPostReviewRatingEnumTwo   PostPostReviewRatingEnum = "2"
-	PostPostReviewRatingEnumThree PostPostReviewRatingEnum = "3"
-	PostPostReviewRatingEnumFour  PostPostReviewRatingEnum = "4"
-	PostPostReviewRatingEnumFive  PostPostReviewRatingEnum = "5"
+	PostPostReviewRatingEnumOne   PostPostReviewRatingEnum = 1
+	PostPostReviewRatingEnumTwo   PostPostReviewRatingEnum = 2
+	PostPostReviewRatingEnumThree PostPostReviewRatingEnum = 3
+	PostPostReviewRatingEnumFour  PostPostReviewRatingEnum = 4
+	PostPostReviewRatingEnumFive  PostPostReviewRatingEnum = 5
 )
 
+func (e PostPostReviewRatingEnum) ToPointer() *PostPostReviewRatingEnum {
+	return &e
+}
+
 func (e *PostPostReviewRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
-		*e = PostPostReviewRatingEnum(s)
+	case 5:
+		*e = PostPostReviewRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostPostReviewRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for PostPostReviewRatingEnum: %v", v)
 	}
 }
 

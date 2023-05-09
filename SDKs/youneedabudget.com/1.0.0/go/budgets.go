@@ -36,7 +36,10 @@ func newBudgets(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Returns a single budget with all related entities.  This resource is effectively a full budget export.
 func (s *budgets) GetBudgetByID(ctx context.Context, request operations.GetBudgetByIDRequest) (*operations.GetBudgetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -97,7 +100,10 @@ func (s *budgets) GetBudgetByID(ctx context.Context, request operations.GetBudge
 // Returns settings for a budget
 func (s *budgets) GetBudgetSettingsByID(ctx context.Context, request operations.GetBudgetSettingsByIDRequest) (*operations.GetBudgetSettingsByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

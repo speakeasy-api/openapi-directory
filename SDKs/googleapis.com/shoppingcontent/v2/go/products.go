@@ -90,7 +90,10 @@ func (s *products) ContentProductsCustombatch(ctx context.Context, request opera
 // ContentProductsDelete - Deletes a product from your Merchant Center account.
 func (s *products) ContentProductsDelete(ctx context.Context, request operations.ContentProductsDeleteRequest, security operations.ContentProductsDeleteSecurity) (*operations.ContentProductsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +132,10 @@ func (s *products) ContentProductsDelete(ctx context.Context, request operations
 // ContentProductsGet - Retrieves a product from your Merchant Center account.
 func (s *products) ContentProductsGet(ctx context.Context, request operations.ContentProductsGetRequest, security operations.ContentProductsGetSecurity) (*operations.ContentProductsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,7 +183,10 @@ func (s *products) ContentProductsGet(ctx context.Context, request operations.Co
 // ContentProductsInsert - Uploads a product to your Merchant Center account. If an item with the same channel, contentLanguage, offerId, and targetCountry already exists, this method updates that entry.
 func (s *products) ContentProductsInsert(ctx context.Context, request operations.ContentProductsInsertRequest, security operations.ContentProductsInsertSecurity) (*operations.ContentProductsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Product", "json")
 	if err != nil {
@@ -232,7 +241,10 @@ func (s *products) ContentProductsInsert(ctx context.Context, request operations
 // ContentProductsList - Lists the products in your Merchant Center account. The response might contain fewer items than specified by maxResults. Rely on nextPageToken to determine if there are more items to be requested.
 func (s *products) ContentProductsList(ctx context.Context, request operations.ContentProductsListRequest, security operations.ContentProductsListSecurity) (*operations.ContentProductsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

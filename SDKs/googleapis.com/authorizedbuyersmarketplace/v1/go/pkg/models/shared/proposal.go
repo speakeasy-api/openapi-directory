@@ -17,12 +17,16 @@ const (
 	ProposalDealTypeEnumProgrammaticGuaranteed ProposalDealTypeEnum = "PROGRAMMATIC_GUARANTEED"
 )
 
+func (e ProposalDealTypeEnum) ToPointer() *ProposalDealTypeEnum {
+	return &e
+}
+
 func (e *ProposalDealTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEAL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PREFERRED_DEAL":
@@ -30,10 +34,10 @@ func (e *ProposalDealTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PRIVATE_AUCTION":
 		fallthrough
 	case "PROGRAMMATIC_GUARANTEED":
-		*e = ProposalDealTypeEnum(s)
+		*e = ProposalDealTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProposalDealTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProposalDealTypeEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	ProposalLastUpdaterOrCommentorRoleEnumSeller                     ProposalLastUpdaterOrCommentorRoleEnum = "SELLER"
 )
 
+func (e ProposalLastUpdaterOrCommentorRoleEnum) ToPointer() *ProposalLastUpdaterOrCommentorRoleEnum {
+	return &e
+}
+
 func (e *ProposalLastUpdaterOrCommentorRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUYER_SELLER_ROLE_UNSPECIFIED":
 		fallthrough
 	case "BUYER":
 		fallthrough
 	case "SELLER":
-		*e = ProposalLastUpdaterOrCommentorRoleEnum(s)
+		*e = ProposalLastUpdaterOrCommentorRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProposalLastUpdaterOrCommentorRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for ProposalLastUpdaterOrCommentorRoleEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	ProposalOriginatorRoleEnumSeller                     ProposalOriginatorRoleEnum = "SELLER"
 )
 
+func (e ProposalOriginatorRoleEnum) ToPointer() *ProposalOriginatorRoleEnum {
+	return &e
+}
+
 func (e *ProposalOriginatorRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUYER_SELLER_ROLE_UNSPECIFIED":
 		fallthrough
 	case "BUYER":
 		fallthrough
 	case "SELLER":
-		*e = ProposalOriginatorRoleEnum(s)
+		*e = ProposalOriginatorRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProposalOriginatorRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for ProposalOriginatorRoleEnum: %v", v)
 	}
 }
 
@@ -103,12 +115,16 @@ const (
 	ProposalStateEnumTerminated               ProposalStateEnum = "TERMINATED"
 )
 
+func (e ProposalStateEnum) ToPointer() *ProposalStateEnum {
+	return &e
+}
+
 func (e *ProposalStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "BUYER_REVIEW_REQUESTED":
@@ -120,10 +136,10 @@ func (e *ProposalStateEnum) UnmarshalJSON(data []byte) error {
 	case "FINALIZED":
 		fallthrough
 	case "TERMINATED":
-		*e = ProposalStateEnum(s)
+		*e = ProposalStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProposalStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ProposalStateEnum: %v", v)
 	}
 }
 

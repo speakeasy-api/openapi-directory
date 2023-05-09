@@ -34,12 +34,16 @@ const (
 	ProvisioningProfile400ApplicationJSONCodeEnumTooManyRequests     ProvisioningProfile400ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ProvisioningProfile400ApplicationJSONCodeEnum) ToPointer() *ProvisioningProfile400ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ProvisioningProfile400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -53,10 +57,10 @@ func (e *ProvisioningProfile400ApplicationJSONCodeEnum) UnmarshalJSON(data []byt
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ProvisioningProfile400ApplicationJSONCodeEnum(s)
+		*e = ProvisioningProfile400ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisioningProfile400ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisioningProfile400ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

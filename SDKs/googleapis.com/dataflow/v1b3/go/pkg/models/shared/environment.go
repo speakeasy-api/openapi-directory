@@ -16,21 +16,25 @@ const (
 	EnvironmentFlexResourceSchedulingGoalEnumFlexrsCostOptimized  EnvironmentFlexResourceSchedulingGoalEnum = "FLEXRS_COST_OPTIMIZED"
 )
 
+func (e EnvironmentFlexResourceSchedulingGoalEnum) ToPointer() *EnvironmentFlexResourceSchedulingGoalEnum {
+	return &e
+}
+
 func (e *EnvironmentFlexResourceSchedulingGoalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FLEXRS_UNSPECIFIED":
 		fallthrough
 	case "FLEXRS_SPEED_OPTIMIZED":
 		fallthrough
 	case "FLEXRS_COST_OPTIMIZED":
-		*e = EnvironmentFlexResourceSchedulingGoalEnum(s)
+		*e = EnvironmentFlexResourceSchedulingGoalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentFlexResourceSchedulingGoalEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentFlexResourceSchedulingGoalEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	EnvironmentShuffleModeEnumServiceBased           EnvironmentShuffleModeEnum = "SERVICE_BASED"
 )
 
+func (e EnvironmentShuffleModeEnum) ToPointer() *EnvironmentShuffleModeEnum {
+	return &e
+}
+
 func (e *EnvironmentShuffleModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHUFFLE_MODE_UNSPECIFIED":
 		fallthrough
 	case "VM_BASED":
 		fallthrough
 	case "SERVICE_BASED":
-		*e = EnvironmentShuffleModeEnum(s)
+		*e = EnvironmentShuffleModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentShuffleModeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentShuffleModeEnum: %v", v)
 	}
 }
 

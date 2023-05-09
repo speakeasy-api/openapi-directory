@@ -39,12 +39,16 @@ const (
 	PaymentMethodEnumWireTransfer   PaymentMethodEnum = "wire_transfer"
 )
 
+func (e PaymentMethodEnum) ToPointer() *PaymentMethodEnum {
+	return &e
+}
+
 func (e *PaymentMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "aruhitel":
 		fallthrough
 	case "bankcard":
@@ -96,9 +100,9 @@ func (e *PaymentMethodEnum) UnmarshalJSON(data []byte) error {
 	case "valto":
 		fallthrough
 	case "wire_transfer":
-		*e = PaymentMethodEnum(s)
+		*e = PaymentMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentMethodEnum: %v", v)
 	}
 }

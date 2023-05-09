@@ -16,21 +16,25 @@ const (
 	ExecutionTemplateJobTypeEnumDataproc           ExecutionTemplateJobTypeEnum = "DATAPROC"
 )
 
+func (e ExecutionTemplateJobTypeEnum) ToPointer() *ExecutionTemplateJobTypeEnum {
+	return &e
+}
+
 func (e *ExecutionTemplateJobTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_TYPE_UNSPECIFIED":
 		fallthrough
 	case "VERTEX_AI":
 		fallthrough
 	case "DATAPROC":
-		*e = ExecutionTemplateJobTypeEnum(s)
+		*e = ExecutionTemplateJobTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionTemplateJobTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionTemplateJobTypeEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ExecutionTemplateScaleTierEnumCustom               ExecutionTemplateScaleTierEnum = "CUSTOM"
 )
 
+func (e ExecutionTemplateScaleTierEnum) ToPointer() *ExecutionTemplateScaleTierEnum {
+	return &e
+}
+
 func (e *ExecutionTemplateScaleTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCALE_TIER_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
@@ -66,10 +74,10 @@ func (e *ExecutionTemplateScaleTierEnum) UnmarshalJSON(data []byte) error {
 	case "BASIC_TPU":
 		fallthrough
 	case "CUSTOM":
-		*e = ExecutionTemplateScaleTierEnum(s)
+		*e = ExecutionTemplateScaleTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionTemplateScaleTierEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionTemplateScaleTierEnum: %v", v)
 	}
 }
 

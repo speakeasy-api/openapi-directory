@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/versioneye.com/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAPIV1ScansRequest{
-        Name: "corrupti",
-        PerPage: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.Scans.GetAPIV1Scans(ctx, req, operations.GetAPIV1ScansSecurity{
+    res, err := s.Scans.GetAPIV1Scans(ctx, operations.GetAPIV1ScansRequest{
+        Name: sdk.String("Terrence Rau"),
+        PerPage: sdk.String("nulla"),
+    }, operations.GetAPIV1ScansSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -48,11 +45,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### Scans
+### [Scans](docs/scans/README.md)
 
-* `GetAPIV1Scans` - Retrieves all scans
-* `GetAPIV1ScansID` - Retrieves a project scan result
-* `GetAPIV1ScansIDFilesFileID` - Retrieves a file object, containing information about dependencies in the file
+* [GetAPIV1Scans](docs/scans/README.md#getapiv1scans) - Retrieves all scans
+* [GetAPIV1ScansID](docs/scans/README.md#getapiv1scansid) - Retrieves a project scan result
+* [GetAPIV1ScansIDFilesFileID](docs/scans/README.md#getapiv1scansidfilesfileid) - Retrieves a file object, containing information about dependencies in the file
 <!-- End SDK Available Operations -->
 
 ### Maturity

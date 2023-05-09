@@ -17,19 +17,23 @@ const (
 	GroupsCountStatusEnumActive  GroupsCountStatusEnum = "active"
 )
 
+func (e GroupsCountStatusEnum) ToPointer() *GroupsCountStatusEnum {
+	return &e
+}
+
 func (e *GroupsCountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "active":
-		*e = GroupsCountStatusEnum(s)
+		*e = GroupsCountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsCountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsCountStatusEnum: %v", v)
 	}
 }
 

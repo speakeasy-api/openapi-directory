@@ -21,12 +21,16 @@ const (
 	DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnumCaptureLogs            DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum = "CAPTURE_LOGS"
 )
 
+func (e DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum) ToPointer() *DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum {
+	return &e
+}
+
 func (e *DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMAND_TYPE_UNSPECIFIED":
 		fallthrough
 	case "REBOOT":
@@ -42,10 +46,10 @@ func (e *DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum) UnmarshalJS
 	case "DEVICE_START_CRD_SESSION":
 		fallthrough
 	case "CAPTURE_LOGS":
-		*e = DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum(s)
+		*e = DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum: %v", v)
 	}
 }
 

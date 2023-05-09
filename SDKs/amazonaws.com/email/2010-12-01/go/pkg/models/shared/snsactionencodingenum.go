@@ -14,18 +14,22 @@ const (
 	SNSActionEncodingEnumBase64 SNSActionEncodingEnum = "Base64"
 )
 
+func (e SNSActionEncodingEnum) ToPointer() *SNSActionEncodingEnum {
+	return &e
+}
+
 func (e *SNSActionEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UTF-8":
 		fallthrough
 	case "Base64":
-		*e = SNSActionEncodingEnum(s)
+		*e = SNSActionEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SNSActionEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for SNSActionEncodingEnum: %v", v)
 	}
 }

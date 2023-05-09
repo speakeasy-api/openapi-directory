@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -80,9 +81,9 @@ pkg/models/shared/ontapvolumetypeenum.go
 pkg/models/shared/flexcacheendpointtypeenum.go
 pkg/models/shared/lifecycletransitionreason.go
 pkg/models/shared/volumelifecycleenum.go
-pkg/models/shared/backuptypeenum.go
-pkg/models/shared/resourcetypeenum.go
-pkg/models/shared/backuplifecycleenum.go
+pkg/models/shared/administrativeaction.go
+pkg/models/shared/snapshot.go
+pkg/models/shared/snapshotlifecycleenum.go
 pkg/models/shared/filesystem.go
 pkg/models/shared/windowsfilesystemconfiguration.go
 pkg/models/shared/selfmanagedactivedirectoryattributes.go
@@ -113,12 +114,12 @@ pkg/models/shared/datacompressiontypeenum.go
 pkg/models/shared/filesystemlifecycleenum.go
 pkg/models/shared/filesystemtypeenum.go
 pkg/models/shared/filesystemfailuredetails.go
-pkg/models/shared/administrativeaction.go
-pkg/models/shared/snapshot.go
-pkg/models/shared/snapshotlifecycleenum.go
 pkg/models/shared/statusenum.go
 pkg/models/shared/administrativeactionfailuredetails.go
 pkg/models/shared/administrativeactiontypeenum.go
+pkg/models/shared/backuptypeenum.go
+pkg/models/shared/resourcetypeenum.go
+pkg/models/shared/backuplifecycleenum.go
 pkg/models/shared/backupfailuredetails.go
 pkg/models/shared/activedirectorybackupattributes.go
 pkg/models/shared/copybackuprequest.go
@@ -273,4 +274,5 @@ pkg/models/shared/updatevolumerequest.go
 pkg/models/shared/updateopenzfsvolumeconfiguration.go
 pkg/models/shared/updateontapvolumeconfiguration.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

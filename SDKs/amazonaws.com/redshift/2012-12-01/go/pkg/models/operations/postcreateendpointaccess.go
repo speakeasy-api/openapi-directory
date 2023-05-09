@@ -15,17 +15,21 @@ const (
 	POSTCreateEndpointAccessActionEnumCreateEndpointAccess POSTCreateEndpointAccessActionEnum = "CreateEndpointAccess"
 )
 
+func (e POSTCreateEndpointAccessActionEnum) ToPointer() *POSTCreateEndpointAccessActionEnum {
+	return &e
+}
+
 func (e *POSTCreateEndpointAccessActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateEndpointAccess":
-		*e = POSTCreateEndpointAccessActionEnum(s)
+		*e = POSTCreateEndpointAccessActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateEndpointAccessActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateEndpointAccessActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateEndpointAccessVersionEnumTwoThousandAndTwelve1201 POSTCreateEndpointAccessVersionEnum = "2012-12-01"
 )
 
+func (e POSTCreateEndpointAccessVersionEnum) ToPointer() *POSTCreateEndpointAccessVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateEndpointAccessVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTCreateEndpointAccessVersionEnum(s)
+		*e = POSTCreateEndpointAccessVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateEndpointAccessVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateEndpointAccessVersionEnum: %v", v)
 	}
 }
 

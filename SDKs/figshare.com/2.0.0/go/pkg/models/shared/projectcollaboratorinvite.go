@@ -15,19 +15,23 @@ const (
 	ProjectCollaboratorInviteRoleNameEnumCollaborator ProjectCollaboratorInviteRoleNameEnum = "collaborator"
 )
 
+func (e ProjectCollaboratorInviteRoleNameEnum) ToPointer() *ProjectCollaboratorInviteRoleNameEnum {
+	return &e
+}
+
 func (e *ProjectCollaboratorInviteRoleNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "viewer":
 		fallthrough
 	case "collaborator":
-		*e = ProjectCollaboratorInviteRoleNameEnum(s)
+		*e = ProjectCollaboratorInviteRoleNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectCollaboratorInviteRoleNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectCollaboratorInviteRoleNameEnum: %v", v)
 	}
 }
 

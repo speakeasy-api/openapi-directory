@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
 // https://docs.aws.amazon.com/directconnect/ - Amazon Web Services documentation
 type SDK struct {
@@ -188,6 +203,8 @@ func (s *SDK) AcceptDirectConnectGatewayAssociationProposal(ctx context.Context,
 }
 
 // AllocateConnectionOnInterconnect - <p>Deprecated. Use <a>AllocateHostedConnection</a> instead.</p> <p>Creates a hosted connection on an interconnect.</p> <p>Allocates a VLAN number and a specified amount of bandwidth for use by a hosted connection on the specified interconnect.</p> <note> <p>Intended for use by Direct Connect Partners only.</p> </note>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) AllocateConnectionOnInterconnect(ctx context.Context, request operations.AllocateConnectionOnInterconnectRequest) (*operations.AllocateConnectionOnInterconnectResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=OvertureService.AllocateConnectionOnInterconnect"
@@ -2820,6 +2837,8 @@ func (s *SDK) DeleteVirtualInterface(ctx context.Context, request operations.Del
 }
 
 // DescribeConnectionLoa - <p>Deprecated. Use <a>DescribeLoa</a> instead.</p> <p>Gets the LOA-CFA for a connection.</p> <p>The Letter of Authorization - Connecting Facility Assignment (LOA-CFA) is a document that your APN partner or service provider uses when establishing your cross connect to Amazon Web Services at the colocation facility. For more information, see <a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html">Requesting Cross Connects at Direct Connect Locations</a> in the <i>Direct Connect User Guide</i>.</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeConnectionLoa(ctx context.Context, request operations.DescribeConnectionLoaRequest) (*operations.DescribeConnectionLoaResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=OvertureService.DescribeConnectionLoa"
@@ -2972,6 +2991,8 @@ func (s *SDK) DescribeConnections(ctx context.Context, request operations.Descri
 }
 
 // DescribeConnectionsOnInterconnect - <p>Deprecated. Use <a>DescribeHostedConnections</a> instead.</p> <p>Lists the connections that have been provisioned on the specified interconnect.</p> <note> <p>Intended for use by Direct Connect Partners only.</p> </note>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeConnectionsOnInterconnect(ctx context.Context, request operations.DescribeConnectionsOnInterconnectRequest) (*operations.DescribeConnectionsOnInterconnectResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=OvertureService.DescribeConnectionsOnInterconnect"
@@ -3494,6 +3515,8 @@ func (s *SDK) DescribeHostedConnections(ctx context.Context, request operations.
 }
 
 // DescribeInterconnectLoa - <p>Deprecated. Use <a>DescribeLoa</a> instead.</p> <p>Gets the LOA-CFA for the specified interconnect.</p> <p>The Letter of Authorization - Connecting Facility Assignment (LOA-CFA) is a document that is used when establishing your cross connect to Amazon Web Services at the colocation facility. For more information, see <a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/Colocation.html">Requesting Cross Connects at Direct Connect Locations</a> in the <i>Direct Connect User Guide</i>.</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeInterconnectLoa(ctx context.Context, request operations.DescribeInterconnectLoaRequest) (*operations.DescribeInterconnectLoaResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=OvertureService.DescribeInterconnectLoa"

@@ -16,17 +16,21 @@ const (
 	StopInferenceSchedulerXAmzTargetEnumAwsLookoutEquipmentFrontendServiceStopInferenceScheduler StopInferenceSchedulerXAmzTargetEnum = "AWSLookoutEquipmentFrontendService.StopInferenceScheduler"
 )
 
+func (e StopInferenceSchedulerXAmzTargetEnum) ToPointer() *StopInferenceSchedulerXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopInferenceSchedulerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLookoutEquipmentFrontendService.StopInferenceScheduler":
-		*e = StopInferenceSchedulerXAmzTargetEnum(s)
+		*e = StopInferenceSchedulerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopInferenceSchedulerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopInferenceSchedulerXAmzTargetEnum: %v", v)
 	}
 }
 

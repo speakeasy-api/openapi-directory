@@ -13,23 +13,24 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/chromepoli
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Customers.ChromepolicyCustomersPoliciesGroupsBatchDelete(ctx, operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest: &shared.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest{
             Requests: []shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
                 shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
-                    PolicySchema: "distinctio",
+                    PolicySchema: sdk.String("distinctio"),
                     PolicyTargetKey: &shared.GoogleChromePolicyVersionsV1PolicyTargetKey{
                         AdditionalTargetKeys: map[string]string{
                             "unde": "nulla",
@@ -37,11 +38,11 @@ func main() {
                             "vel": "error",
                             "deserunt": "suscipit",
                         },
-                        TargetResource: "iure",
+                        TargetResource: sdk.String("iure"),
                     },
                 },
                 shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
-                    PolicySchema: "magnam",
+                    PolicySchema: sdk.String("magnam"),
                     PolicyTargetKey: &shared.GoogleChromePolicyVersionsV1PolicyTargetKey{
                         AdditionalTargetKeys: map[string]string{
                             "ipsa": "delectus",
@@ -49,36 +50,33 @@ func main() {
                             "molestiae": "minus",
                             "placeat": "voluptatum",
                         },
-                        TargetResource: "iusto",
+                        TargetResource: sdk.String("iusto"),
                     },
                 },
                 shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
-                    PolicySchema: "excepturi",
+                    PolicySchema: sdk.String("excepturi"),
                     PolicyTargetKey: &shared.GoogleChromePolicyVersionsV1PolicyTargetKey{
                         AdditionalTargetKeys: map[string]string{
                             "recusandae": "temporibus",
                             "ab": "quis",
                         },
-                        TargetResource: "veritatis",
+                        TargetResource: sdk.String("veritatis"),
                     },
                 },
             },
         },
-        AccessToken: "deserunt",
-        Alt: "json",
-        Callback: "ipsam",
+        AccessToken: sdk.String("deserunt"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("ipsam"),
         Customer: "repellendus",
-        Fields: "sapiente",
-        Key: "quo",
-        OauthToken: "odit",
-        PrettyPrint: false,
-        QuotaUser: "at",
-        UploadType: "at",
-        UploadProtocol: "maiores",
-    }
-
-    ctx := context.Background()
-    res, err := s.Customers.ChromepolicyCustomersPoliciesGroupsBatchDelete(ctx, req, operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity{
+        Fields: sdk.String("sapiente"),
+        Key: sdk.String("quo"),
+        OauthToken: sdk.String("odit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("at"),
+        UploadType: sdk.String("at"),
+        UploadProtocol: sdk.String("maiores"),
+    }, operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -97,25 +95,25 @@ func main() {
 ## Available Resources and Operations
 
 
-### Customers
+### [Customers](docs/customers/README.md)
 
-* `ChromepolicyCustomersPoliciesGroupsBatchDelete` - Delete multiple policy values that are applied to a specific group. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
-* `ChromepolicyCustomersPoliciesGroupsBatchModify` - Modify multiple policy values that are applied to a specific group. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
-* `ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrdering` - Retrieve a group priority ordering for an app. The target app must be supplied in `additionalTargetKeyNames` in the PolicyTargetKey. On failure the request will return the error details as part of the google.rpc.Status.
-* `ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrdering` - Update a group priority ordering for an app. The target app must be supplied in `additionalTargetKeyNames` in the PolicyTargetKey. On failure the request will return the error details as part of the google.rpc.Status.
-* `ChromepolicyCustomersPoliciesNetworksDefineCertificate` - Creates a certificate at a specified OU for a customer.
-* `ChromepolicyCustomersPoliciesNetworksDefineNetwork` - Define a new network.
-* `ChromepolicyCustomersPoliciesNetworksRemoveCertificate` - Remove an existing certificate by guid.
-* `ChromepolicyCustomersPoliciesNetworksRemoveNetwork` - Remove an existing network by guid.
-* `ChromepolicyCustomersPoliciesOrgunitsBatchInherit` - Modify multiple policy values that are applied to a specific org unit so that they now inherit the value from a parent (if applicable). All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
-* `ChromepolicyCustomersPoliciesOrgunitsBatchModify` - Modify multiple policy values that are applied to a specific org unit. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
-* `ChromepolicyCustomersPoliciesResolve` - Gets the resolved policy values for a list of policies that match a search query.
-* `ChromepolicyCustomersPolicySchemasGet` - Get a specific policy schema for a customer by its resource name.
-* `ChromepolicyCustomersPolicySchemasList` - Gets a list of policy schemas that match a specified filter value for a given customer.
+* [ChromepolicyCustomersPoliciesGroupsBatchDelete](docs/customers/README.md#chromepolicycustomerspoliciesgroupsbatchdelete) - Delete multiple policy values that are applied to a specific group. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
+* [ChromepolicyCustomersPoliciesGroupsBatchModify](docs/customers/README.md#chromepolicycustomerspoliciesgroupsbatchmodify) - Modify multiple policy values that are applied to a specific group. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
+* [ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrdering](docs/customers/README.md#chromepolicycustomerspoliciesgroupslistgrouppriorityordering) - Retrieve a group priority ordering for an app. The target app must be supplied in `additionalTargetKeyNames` in the PolicyTargetKey. On failure the request will return the error details as part of the google.rpc.Status.
+* [ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrdering](docs/customers/README.md#chromepolicycustomerspoliciesgroupsupdategrouppriorityordering) - Update a group priority ordering for an app. The target app must be supplied in `additionalTargetKeyNames` in the PolicyTargetKey. On failure the request will return the error details as part of the google.rpc.Status.
+* [ChromepolicyCustomersPoliciesNetworksDefineCertificate](docs/customers/README.md#chromepolicycustomerspoliciesnetworksdefinecertificate) - Creates a certificate at a specified OU for a customer.
+* [ChromepolicyCustomersPoliciesNetworksDefineNetwork](docs/customers/README.md#chromepolicycustomerspoliciesnetworksdefinenetwork) - Define a new network.
+* [ChromepolicyCustomersPoliciesNetworksRemoveCertificate](docs/customers/README.md#chromepolicycustomerspoliciesnetworksremovecertificate) - Remove an existing certificate by guid.
+* [ChromepolicyCustomersPoliciesNetworksRemoveNetwork](docs/customers/README.md#chromepolicycustomerspoliciesnetworksremovenetwork) - Remove an existing network by guid.
+* [ChromepolicyCustomersPoliciesOrgunitsBatchInherit](docs/customers/README.md#chromepolicycustomerspoliciesorgunitsbatchinherit) - Modify multiple policy values that are applied to a specific org unit so that they now inherit the value from a parent (if applicable). All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
+* [ChromepolicyCustomersPoliciesOrgunitsBatchModify](docs/customers/README.md#chromepolicycustomerspoliciesorgunitsbatchmodify) - Modify multiple policy values that are applied to a specific org unit. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
+* [ChromepolicyCustomersPoliciesResolve](docs/customers/README.md#chromepolicycustomerspoliciesresolve) - Gets the resolved policy values for a list of policies that match a search query.
+* [ChromepolicyCustomersPolicySchemasGet](docs/customers/README.md#chromepolicycustomerspolicyschemasget) - Get a specific policy schema for a customer by its resource name.
+* [ChromepolicyCustomersPolicySchemasList](docs/customers/README.md#chromepolicycustomerspolicyschemaslist) - Gets a list of policy schemas that match a specified filter value for a given customer.
 
-### Media
+### [Media](docs/media/README.md)
 
-* `ChromepolicyMediaUpload` - Creates an enterprise file from the content provided by user. Returns a public download url for end user.
+* [ChromepolicyMediaUpload](docs/media/README.md#chromepolicymediaupload) - Creates an enterprise file from the content provided by user. Returns a public download url for end user.
 <!-- End SDK Available Operations -->
 
 ### Maturity

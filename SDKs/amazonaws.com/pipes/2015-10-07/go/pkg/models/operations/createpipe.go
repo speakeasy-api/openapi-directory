@@ -17,19 +17,23 @@ const (
 	CreatePipeRequestBodyDesiredStateEnumStopped CreatePipeRequestBodyDesiredStateEnum = "STOPPED"
 )
 
+func (e CreatePipeRequestBodyDesiredStateEnum) ToPointer() *CreatePipeRequestBodyDesiredStateEnum {
+	return &e
+}
+
 func (e *CreatePipeRequestBodyDesiredStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "STOPPED":
-		*e = CreatePipeRequestBodyDesiredStateEnum(s)
+		*e = CreatePipeRequestBodyDesiredStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePipeRequestBodyDesiredStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePipeRequestBodyDesiredStateEnum: %v", v)
 	}
 }
 

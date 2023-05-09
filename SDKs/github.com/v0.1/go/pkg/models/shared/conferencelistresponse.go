@@ -15,19 +15,23 @@ const (
 	ConferenceListResponseMessageEnumConferenceListFailedToParseResult ConferenceListResponseMessageEnum = "Conference List Failed to parse result"
 )
 
+func (e ConferenceListResponseMessageEnum) ToPointer() *ConferenceListResponseMessageEnum {
+	return &e
+}
+
 func (e *ConferenceListResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Conference List Executed":
 		fallthrough
 	case "Conference List Failed to parse result":
-		*e = ConferenceListResponseMessageEnum(s)
+		*e = ConferenceListResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConferenceListResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ConferenceListResponseMessageEnum: %v", v)
 	}
 }
 

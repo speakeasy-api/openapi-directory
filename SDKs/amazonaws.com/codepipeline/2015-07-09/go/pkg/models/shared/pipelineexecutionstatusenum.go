@@ -19,12 +19,16 @@ const (
 	PipelineExecutionStatusEnumFailed     PipelineExecutionStatusEnum = "Failed"
 )
 
+func (e PipelineExecutionStatusEnum) ToPointer() *PipelineExecutionStatusEnum {
+	return &e
+}
+
 func (e *PipelineExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cancelled":
 		fallthrough
 	case "InProgress":
@@ -38,9 +42,9 @@ func (e *PipelineExecutionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Superseded":
 		fallthrough
 	case "Failed":
-		*e = PipelineExecutionStatusEnum(s)
+		*e = PipelineExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PipelineExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PipelineExecutionStatusEnum: %v", v)
 	}
 }

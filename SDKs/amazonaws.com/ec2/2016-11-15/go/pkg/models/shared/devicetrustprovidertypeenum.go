@@ -14,18 +14,22 @@ const (
 	DeviceTrustProviderTypeEnumCrowdstrike DeviceTrustProviderTypeEnum = "crowdstrike"
 )
 
+func (e DeviceTrustProviderTypeEnum) ToPointer() *DeviceTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *DeviceTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "jamf":
 		fallthrough
 	case "crowdstrike":
-		*e = DeviceTrustProviderTypeEnum(s)
+		*e = DeviceTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceTrustProviderTypeEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	GoogleCloudRunV2ServiceIngressEnumIngressTrafficInternalLoadBalancer GoogleCloudRunV2ServiceIngressEnum = "INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER"
 )
 
+func (e GoogleCloudRunV2ServiceIngressEnum) ToPointer() *GoogleCloudRunV2ServiceIngressEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2ServiceIngressEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INGRESS_TRAFFIC_UNSPECIFIED":
 		fallthrough
 	case "INGRESS_TRAFFIC_ALL":
@@ -30,10 +34,10 @@ func (e *GoogleCloudRunV2ServiceIngressEnum) UnmarshalJSON(data []byte) error {
 	case "INGRESS_TRAFFIC_INTERNAL_ONLY":
 		fallthrough
 	case "INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER":
-		*e = GoogleCloudRunV2ServiceIngressEnum(s)
+		*e = GoogleCloudRunV2ServiceIngressEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2ServiceIngressEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2ServiceIngressEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	GoogleCloudRunV2ServiceLaunchStageEnumDeprecated             GoogleCloudRunV2ServiceLaunchStageEnum = "DEPRECATED"
 )
 
+func (e GoogleCloudRunV2ServiceLaunchStageEnum) ToPointer() *GoogleCloudRunV2ServiceLaunchStageEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2ServiceLaunchStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_STAGE_UNSPECIFIED":
 		fallthrough
 	case "UNIMPLEMENTED":
@@ -72,16 +80,16 @@ func (e *GoogleCloudRunV2ServiceLaunchStageEnum) UnmarshalJSON(data []byte) erro
 	case "GA":
 		fallthrough
 	case "DEPRECATED":
-		*e = GoogleCloudRunV2ServiceLaunchStageEnum(s)
+		*e = GoogleCloudRunV2ServiceLaunchStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2ServiceLaunchStageEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2ServiceLaunchStageEnum: %v", v)
 	}
 }
 
 // GoogleCloudRunV2ServiceInput - Service acts as a top-level container that manages a set of configurations and revision templates which implement a network service. Service exists to provide a singular abstraction which can be access controlled, reasoned about, and which encapsulates software lifecycle decisions such as rollout policy and team resource ownership.
 type GoogleCloudRunV2ServiceInput struct {
-	// Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 Service. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
+	// Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected in new resources. All system annotations in v1 now have a corresponding field in v2 Service. This field follows Kubernetes annotations' namespacing, limits, and rules.
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// Settings for Binary Authorization feature.
 	BinaryAuthorization *GoogleCloudRunV2BinaryAuthorization `json:"binaryAuthorization,omitempty"`
@@ -93,7 +101,7 @@ type GoogleCloudRunV2ServiceInput struct {
 	Description *string `json:"description,omitempty"`
 	// Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
 	Ingress *GoogleCloudRunV2ServiceIngressEnum `json:"ingress,omitempty"`
-	// Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 Service.
+	// Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 Service.
 	Labels map[string]string `json:"labels,omitempty"`
 	// The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features. For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output.
 	LaunchStage *GoogleCloudRunV2ServiceLaunchStageEnum `json:"launchStage,omitempty"`
@@ -109,7 +117,7 @@ type GoogleCloudRunV2ServiceInput struct {
 
 // GoogleCloudRunV2Service - Service acts as a top-level container that manages a set of configurations and revision templates which implement a network service. Service exists to provide a singular abstraction which can be access controlled, reasoned about, and which encapsulates software lifecycle decisions such as rollout policy and team resource ownership.
 type GoogleCloudRunV2Service struct {
-	// Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 Service. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
+	// Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected in new resources. All system annotations in v1 now have a corresponding field in v2 Service. This field follows Kubernetes annotations' namespacing, limits, and rules.
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// Settings for Binary Authorization feature.
 	BinaryAuthorization *GoogleCloudRunV2BinaryAuthorization `json:"binaryAuthorization,omitempty"`
@@ -135,7 +143,7 @@ type GoogleCloudRunV2Service struct {
 	Generation *string `json:"generation,omitempty"`
 	// Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
 	Ingress *GoogleCloudRunV2ServiceIngressEnum `json:"ingress,omitempty"`
-	// Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 Service.
+	// Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 Service.
 	Labels map[string]string `json:"labels,omitempty"`
 	// Output only. Email address of the last authenticated modifier.
 	LastModifier *string `json:"lastModifier,omitempty"`

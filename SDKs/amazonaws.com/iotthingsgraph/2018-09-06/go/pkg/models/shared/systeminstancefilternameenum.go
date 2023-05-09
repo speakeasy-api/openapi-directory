@@ -15,20 +15,24 @@ const (
 	SystemInstanceFilterNameEnumGreengrassGroupName SystemInstanceFilterNameEnum = "GREENGRASS_GROUP_NAME"
 )
 
+func (e SystemInstanceFilterNameEnum) ToPointer() *SystemInstanceFilterNameEnum {
+	return &e
+}
+
 func (e *SystemInstanceFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYSTEM_TEMPLATE_ID":
 		fallthrough
 	case "STATUS":
 		fallthrough
 	case "GREENGRASS_GROUP_NAME":
-		*e = SystemInstanceFilterNameEnum(s)
+		*e = SystemInstanceFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SystemInstanceFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SystemInstanceFilterNameEnum: %v", v)
 	}
 }

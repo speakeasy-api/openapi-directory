@@ -17,12 +17,16 @@ const (
 	DsnActionEnumExpanded  DsnActionEnum = "expanded"
 )
 
+func (e DsnActionEnum) ToPointer() *DsnActionEnum {
+	return &e
+}
+
 func (e *DsnActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "failed":
 		fallthrough
 	case "delayed":
@@ -32,9 +36,9 @@ func (e *DsnActionEnum) UnmarshalJSON(data []byte) error {
 	case "relayed":
 		fallthrough
 	case "expanded":
-		*e = DsnActionEnum(s)
+		*e = DsnActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DsnActionEnum: %s", s)
+		return fmt.Errorf("invalid value for DsnActionEnum: %v", v)
 	}
 }

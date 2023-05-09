@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -111,4 +112,8 @@ pkg/models/shared/getuploadeddocumentsresponse.go
 pkg/models/shared/documentdetail.go
 pkg/models/shared/getuploadeddocumentsrequest.go
 pkg/models/shared/uploaddocumentrequest.go
+docs/sdk/README.md
+docs/accountholders/README.md
+docs/accounts/README.md
+docs/verification/README.md
 USAGE.md

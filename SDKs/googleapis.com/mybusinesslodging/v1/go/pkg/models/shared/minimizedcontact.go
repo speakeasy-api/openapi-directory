@@ -17,12 +17,16 @@ const (
 	MinimizedContactContactlessCheckinCheckoutExceptionEnumDependentOnDayOfWeek MinimizedContactContactlessCheckinCheckoutExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e MinimizedContactContactlessCheckinCheckoutExceptionEnum) ToPointer() *MinimizedContactContactlessCheckinCheckoutExceptionEnum {
+	return &e
+}
+
 func (e *MinimizedContactContactlessCheckinCheckoutExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *MinimizedContactContactlessCheckinCheckoutExceptionEnum) UnmarshalJSON(
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = MinimizedContactContactlessCheckinCheckoutExceptionEnum(s)
+		*e = MinimizedContactContactlessCheckinCheckoutExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MinimizedContactContactlessCheckinCheckoutExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for MinimizedContactContactlessCheckinCheckoutExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	MinimizedContactDigitalGuestRoomKeysExceptionEnumDependentOnDayOfWeek MinimizedContactDigitalGuestRoomKeysExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e MinimizedContactDigitalGuestRoomKeysExceptionEnum) ToPointer() *MinimizedContactDigitalGuestRoomKeysExceptionEnum {
+	return &e
+}
+
 func (e *MinimizedContactDigitalGuestRoomKeysExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *MinimizedContactDigitalGuestRoomKeysExceptionEnum) UnmarshalJSON(data [
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = MinimizedContactDigitalGuestRoomKeysExceptionEnum(s)
+		*e = MinimizedContactDigitalGuestRoomKeysExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MinimizedContactDigitalGuestRoomKeysExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for MinimizedContactDigitalGuestRoomKeysExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnumDependentOnDayOfWeek MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum) ToPointer() *MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum {
+	return &e
+}
+
 func (e *MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum) Unmarsha
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum(s)
+		*e = MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for MinimizedContactHousekeepingScheduledRequestOnlyExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	MinimizedContactNoHighTouchItemsCommonAreasExceptionEnumDependentOnDayOfWeek MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum) ToPointer() *MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum {
+	return &e
+}
+
 func (e *MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum) UnmarshalJSON
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum(s)
+		*e = MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for MinimizedContactNoHighTouchItemsCommonAreasExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnumDependentOnDayOfWeek MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum) ToPointer() *MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum {
+	return &e
+}
+
 func (e *MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum) UnmarshalJSON(
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum(s)
+		*e = MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for MinimizedContactNoHighTouchItemsGuestRoomsExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	MinimizedContactPlasticKeycardsDisinfectedExceptionEnumDependentOnDayOfWeek MinimizedContactPlasticKeycardsDisinfectedExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e MinimizedContactPlasticKeycardsDisinfectedExceptionEnum) ToPointer() *MinimizedContactPlasticKeycardsDisinfectedExceptionEnum {
+	return &e
+}
+
 func (e *MinimizedContactPlasticKeycardsDisinfectedExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *MinimizedContactPlasticKeycardsDisinfectedExceptionEnum) UnmarshalJSON(
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = MinimizedContactPlasticKeycardsDisinfectedExceptionEnum(s)
+		*e = MinimizedContactPlasticKeycardsDisinfectedExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MinimizedContactPlasticKeycardsDisinfectedExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for MinimizedContactPlasticKeycardsDisinfectedExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	MinimizedContactRoomBookingsBufferExceptionEnumDependentOnDayOfWeek MinimizedContactRoomBookingsBufferExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e MinimizedContactRoomBookingsBufferExceptionEnum) ToPointer() *MinimizedContactRoomBookingsBufferExceptionEnum {
+	return &e
+}
+
 func (e *MinimizedContactRoomBookingsBufferExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *MinimizedContactRoomBookingsBufferExceptionEnum) UnmarshalJSON(data []b
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = MinimizedContactRoomBookingsBufferExceptionEnum(s)
+		*e = MinimizedContactRoomBookingsBufferExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MinimizedContactRoomBookingsBufferExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for MinimizedContactRoomBookingsBufferExceptionEnum: %v", v)
 	}
 }
 

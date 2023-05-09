@@ -36,7 +36,10 @@ func newStreamAudio(defaultClient, securityClient HTTPClient, serverURL, languag
 // Play an audio file into a call
 func (s *streamAudio) StartStream(ctx context.Context, request operations.StartStreamRequest, security operations.StartStreamSecurity) (*operations.StartStreamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/stream", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{uuid}/stream", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartStreamRequest", "json")
 	if err != nil {
@@ -91,7 +94,10 @@ func (s *streamAudio) StartStream(ctx context.Context, request operations.StartS
 // Stop playing an audio file into a call
 func (s *streamAudio) StopStream(ctx context.Context, request operations.StopStreamRequest, security operations.StopStreamSecurity) (*operations.StopStreamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/stream", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{uuid}/stream", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

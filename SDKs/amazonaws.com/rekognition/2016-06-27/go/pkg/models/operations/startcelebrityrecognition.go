@@ -16,17 +16,21 @@ const (
 	StartCelebrityRecognitionXAmzTargetEnumRekognitionServiceStartCelebrityRecognition StartCelebrityRecognitionXAmzTargetEnum = "RekognitionService.StartCelebrityRecognition"
 )
 
+func (e StartCelebrityRecognitionXAmzTargetEnum) ToPointer() *StartCelebrityRecognitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartCelebrityRecognitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.StartCelebrityRecognition":
-		*e = StartCelebrityRecognitionXAmzTargetEnum(s)
+		*e = StartCelebrityRecognitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartCelebrityRecognitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartCelebrityRecognitionXAmzTargetEnum: %v", v)
 	}
 }
 

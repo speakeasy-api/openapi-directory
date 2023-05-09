@@ -20,12 +20,16 @@ const (
 	TCPFlagEnumCwr TCPFlagEnum = "CWR"
 )
 
+func (e TCPFlagEnum) ToPointer() *TCPFlagEnum {
+	return &e
+}
+
 func (e *TCPFlagEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIN":
 		fallthrough
 	case "SYN":
@@ -41,9 +45,9 @@ func (e *TCPFlagEnum) UnmarshalJSON(data []byte) error {
 	case "ECE":
 		fallthrough
 	case "CWR":
-		*e = TCPFlagEnum(s)
+		*e = TCPFlagEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TCPFlagEnum: %s", s)
+		return fmt.Errorf("invalid value for TCPFlagEnum: %v", v)
 	}
 }

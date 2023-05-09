@@ -16,17 +16,21 @@ const (
 	CreateLicenseConversionTaskForResourceXAmzTargetEnumAwsLicenseManagerCreateLicenseConversionTaskForResource CreateLicenseConversionTaskForResourceXAmzTargetEnum = "AWSLicenseManager.CreateLicenseConversionTaskForResource"
 )
 
+func (e CreateLicenseConversionTaskForResourceXAmzTargetEnum) ToPointer() *CreateLicenseConversionTaskForResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateLicenseConversionTaskForResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLicenseManager.CreateLicenseConversionTaskForResource":
-		*e = CreateLicenseConversionTaskForResourceXAmzTargetEnum(s)
+		*e = CreateLicenseConversionTaskForResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLicenseConversionTaskForResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLicenseConversionTaskForResourceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 // ServicemanagementOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *operationsT) ServicemanagementOperationsGet(ctx context.Context, request operations.ServicemanagementOperationsGetRequest, security operations.ServicemanagementOperationsGetSecurity) (*operations.ServicemanagementOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	POSTUpdateTemplateActionEnumUpdateTemplate POSTUpdateTemplateActionEnum = "UpdateTemplate"
 )
 
+func (e POSTUpdateTemplateActionEnum) ToPointer() *POSTUpdateTemplateActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateTemplate":
-		*e = POSTUpdateTemplateActionEnum(s)
+		*e = POSTUpdateTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateTemplateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateTemplateVersionEnumTwoThousandAndTen1201 POSTUpdateTemplateVersionEnum = "2010-12-01"
 )
 
+func (e POSTUpdateTemplateVersionEnum) ToPointer() *POSTUpdateTemplateVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTUpdateTemplateVersionEnum(s)
+		*e = POSTUpdateTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateTemplateVersionEnum: %v", v)
 	}
 }
 

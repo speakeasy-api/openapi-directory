@@ -16,17 +16,21 @@ const (
 	DescribeDimensionKeysXAmzTargetEnumPerformanceInsightsv20180227DescribeDimensionKeys DescribeDimensionKeysXAmzTargetEnum = "PerformanceInsightsv20180227.DescribeDimensionKeys"
 )
 
+func (e DescribeDimensionKeysXAmzTargetEnum) ToPointer() *DescribeDimensionKeysXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDimensionKeysXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PerformanceInsightsv20180227.DescribeDimensionKeys":
-		*e = DescribeDimensionKeysXAmzTargetEnum(s)
+		*e = DescribeDimensionKeysXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDimensionKeysXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDimensionKeysXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	DataSourceRefreshWeeklyScheduleDaysOfWeekEnumSunday               DataSourceRefreshWeeklyScheduleDaysOfWeekEnum = "SUNDAY"
 )
 
+func (e DataSourceRefreshWeeklyScheduleDaysOfWeekEnum) ToPointer() *DataSourceRefreshWeeklyScheduleDaysOfWeekEnum {
+	return &e
+}
+
 func (e *DataSourceRefreshWeeklyScheduleDaysOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAY_OF_WEEK_UNSPECIFIED":
 		fallthrough
 	case "MONDAY":
@@ -41,10 +45,10 @@ func (e *DataSourceRefreshWeeklyScheduleDaysOfWeekEnum) UnmarshalJSON(data []byt
 	case "SATURDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = DataSourceRefreshWeeklyScheduleDaysOfWeekEnum(s)
+		*e = DataSourceRefreshWeeklyScheduleDaysOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSourceRefreshWeeklyScheduleDaysOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSourceRefreshWeeklyScheduleDaysOfWeekEnum: %v", v)
 	}
 }
 

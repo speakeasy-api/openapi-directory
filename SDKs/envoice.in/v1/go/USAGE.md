@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ClientAPIAllRequest{
+    ctx := context.Background()
+    res, err := s.Client.ClientAPIAll(ctx, operations.ClientAPIAllRequest{
         XAuthKey: "corrupti",
         XAuthSecret: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.Client.ClientAPIAll(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -35,7 +35,10 @@ func newPreflight(defaultClient, securityClient HTTPClient, serverURL, language,
 // Trigger an automatic check-in given a ticket number. This service is only accessible for LH privileged partners
 func (s *preflight) AutoCheckIn(ctx context.Context, request operations.AutoCheckInRequest, security operations.AutoCheckInSecurity) (*operations.AutoCheckInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preflight/autocheckin/{ticketnumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/preflight/autocheckin/{ticketnumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

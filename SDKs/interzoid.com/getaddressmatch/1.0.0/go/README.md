@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getaddressm
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetaddressmatchRequest{
+    ctx := context.Background()
+    res, err := s.StreetAddressSimilarityKey.Getaddressmatch(ctx, operations.GetaddressmatchRequest{
         Address: "5786 Little Streets",
         License: "vel",
-    }
-
-    ctx := context.Background()
-    res, err := s.StreetAddressSimilarityKey.Getaddressmatch(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### StreetAddressSimilarityKey
+### [StreetAddressSimilarityKey](docs/streetaddresssimilaritykey/README.md)
 
-* `Getaddressmatch` - Gets a similarity key for matching purposes for address data
+* [Getaddressmatch](docs/streetaddresssimilaritykey/README.md#getaddressmatch) - Gets a similarity key for matching purposes for address data
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -35,7 +35,10 @@ func newContent(defaultClient, securityClient HTTPClient, serverURL, language, s
 // ContentGetContentByID - Returns a content item referenced by id
 func (s *content) ContentGetContentByID(ctx context.Context, request operations.ContentGetContentByIDRequest) (*operations.ContentGetContentByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Content/GetContentById/{id}/{locale}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Content/GetContentById/{id}/{locale}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *content) ContentGetContentByID(ctx context.Context, request operations.
 // ContentGetContentByTagAndType - Returns the newest item that matches a given tag and Content Type.
 func (s *content) ContentGetContentByTagAndType(ctx context.Context, request operations.ContentGetContentByTagAndTypeRequest) (*operations.ContentGetContentByTagAndTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Content/GetContentByTagAndType/{tag}/{type}/{locale}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Content/GetContentByTagAndType/{tag}/{type}/{locale}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *content) ContentGetContentByTagAndType(ctx context.Context, request ope
 // ContentGetContentType - Gets an object describing a particular variant of content.
 func (s *content) ContentGetContentType(ctx context.Context, request operations.ContentGetContentTypeRequest) (*operations.ContentGetContentTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Content/GetContentType/{type}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Content/GetContentType/{type}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -175,7 +184,10 @@ func (s *content) ContentGetContentType(ctx context.Context, request operations.
 // ContentRssNewsArticles - Returns a JSON string response that is the RSS feed for news articles.
 func (s *content) ContentRssNewsArticles(ctx context.Context, request operations.ContentRssNewsArticlesRequest) (*operations.ContentRssNewsArticlesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Content/Rss/NewsArticles/{pageToken}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Content/Rss/NewsArticles/{pageToken}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -223,7 +235,10 @@ func (s *content) ContentRssNewsArticles(ctx context.Context, request operations
 // ContentSearchContentByTagAndType - Searches for Content Items that match the given Tag and Content Type.
 func (s *content) ContentSearchContentByTagAndType(ctx context.Context, request operations.ContentSearchContentByTagAndTypeRequest) (*operations.ContentSearchContentByTagAndTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Content/SearchContentByTagAndType/{tag}/{type}/{locale}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Content/SearchContentByTagAndType/{tag}/{type}/{locale}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,7 +286,10 @@ func (s *content) ContentSearchContentByTagAndType(ctx context.Context, request 
 // ContentSearchContentWithText - Gets content based on querystring information passed in. Provides basic search and text search capabilities.
 func (s *content) ContentSearchContentWithText(ctx context.Context, request operations.ContentSearchContentWithTextRequest) (*operations.ContentSearchContentWithTextResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Content/Search/{locale}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Content/Search/{locale}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -319,7 +337,10 @@ func (s *content) ContentSearchContentWithText(ctx context.Context, request oper
 // ContentSearchHelpArticles - Search for Help Articles.
 func (s *content) ContentSearchHelpArticles(ctx context.Context, request operations.ContentSearchHelpArticlesRequest) (*operations.ContentSearchHelpArticlesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Content/SearchHelpArticles/{searchtext}/{size}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Content/SearchHelpArticles/{searchtext}/{size}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

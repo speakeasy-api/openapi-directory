@@ -16,19 +16,23 @@ const (
 	DescribeKeyPairsResultKeyPairsKeyTypeEnumEd25519 DescribeKeyPairsResultKeyPairsKeyTypeEnum = "ed25519"
 )
 
+func (e DescribeKeyPairsResultKeyPairsKeyTypeEnum) ToPointer() *DescribeKeyPairsResultKeyPairsKeyTypeEnum {
+	return &e
+}
+
 func (e *DescribeKeyPairsResultKeyPairsKeyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rsa":
 		fallthrough
 	case "ed25519":
-		*e = DescribeKeyPairsResultKeyPairsKeyTypeEnum(s)
+		*e = DescribeKeyPairsResultKeyPairsKeyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeKeyPairsResultKeyPairsKeyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeKeyPairsResultKeyPairsKeyTypeEnum: %v", v)
 	}
 }
 

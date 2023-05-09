@@ -2,25 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetCompaniesCompanyIDAPICredentialsRequest{
-        CompanyID: "corrupti",
-        PageNumber: 592845,
-        PageSize: 715190,
-    }
-
     ctx := context.Background()
-    res, err := s.APICredentialsCompanyLevel.GetCompaniesCompanyIDAPICredentials(ctx, req, operations.GetCompaniesCompanyIDAPICredentialsSecurity{
+    res, err := s.APICredentialsCompanyLevel.GetCompaniesCompanyIDAPICredentials(ctx, operations.GetCompaniesCompanyIDAPICredentialsRequest{
+        CompanyID: "corrupti",
+        PageNumber: sdk.Int(592845),
+        PageSize: sdk.Int(715190),
+    }, operations.GetCompaniesCompanyIDAPICredentialsSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {

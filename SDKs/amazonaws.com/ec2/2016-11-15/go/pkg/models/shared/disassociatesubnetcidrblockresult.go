@@ -19,12 +19,16 @@ const (
 	DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnumFailed         DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum = "failed"
 )
 
+func (e DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum) ToPointer() *DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum {
+	return &e
+}
+
 func (e *DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -36,10 +40,10 @@ func (e *DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockS
 	case "failing":
 		fallthrough
 	case "failed":
-		*e = DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum(s)
+		*e = DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum: %v", v)
 	}
 }
 

@@ -19,20 +19,24 @@ const (
 	PackageVisibilityEnumInternal PackageVisibilityEnum = "internal"
 )
 
+func (e PackageVisibilityEnum) ToPointer() *PackageVisibilityEnum {
+	return &e
+}
+
 func (e *PackageVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
 		fallthrough
 	case "internal":
-		*e = PackageVisibilityEnum(s)
+		*e = PackageVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PackageVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for PackageVisibilityEnum: %v", v)
 	}
 }

@@ -28,12 +28,16 @@ const (
 	CallRecordResultEnumSkipped          CallRecordResultEnum = "SKIPPED"
 )
 
+func (e CallRecordResultEnum) ToPointer() *CallRecordResultEnum {
+	return &e
+}
+
 func (e *CallRecordResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LA":
 		fallthrough
 	case "AM":
@@ -63,10 +67,10 @@ func (e *CallRecordResultEnum) UnmarshalJSON(data []byte) error {
 	case "ABANDONED":
 		fallthrough
 	case "SKIPPED":
-		*e = CallRecordResultEnum(s)
+		*e = CallRecordResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallRecordResultEnum: %s", s)
+		return fmt.Errorf("invalid value for CallRecordResultEnum: %v", v)
 	}
 }
 

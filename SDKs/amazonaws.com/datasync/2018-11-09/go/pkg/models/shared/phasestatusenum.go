@@ -15,20 +15,24 @@ const (
 	PhaseStatusEnumError   PhaseStatusEnum = "ERROR"
 )
 
+func (e PhaseStatusEnum) ToPointer() *PhaseStatusEnum {
+	return &e
+}
+
 func (e *PhaseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "SUCCESS":
 		fallthrough
 	case "ERROR":
-		*e = PhaseStatusEnum(s)
+		*e = PhaseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PhaseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PhaseStatusEnum: %v", v)
 	}
 }

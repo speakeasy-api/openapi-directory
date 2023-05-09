@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/microsoft.com/cognitivese
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,20 +27,18 @@ func main() {
         }),
     )
 
-    req := operations.ClassifyImageRequest{
+    ctx := context.Background()
+    res, err := s.ImagePredictionAPI.ClassifyImage(ctx, operations.ClassifyImageRequest{
         RequestBody: operations.ClassifyImageRequestBody{
             ImageData: operations.ClassifyImageRequestBodyImageData{
                 Content: []byte("corrupti"),
                 ImageData: "provident",
             },
         },
-        Application: "distinctio",
+        Application: sdk.String("distinctio"),
         ProjectID: "d9d8d69a-674e-40f4-a7cc-8796ed151a05",
         PublishedName: "repellendus",
-    }
-
-    ctx := context.Background()
-    res, err := s.ImagePredictionAPI.ClassifyImage(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -57,24 +54,24 @@ func main() {
 ## Available Resources and Operations
 
 
-### ImagePredictionAPI
+### [ImagePredictionAPI](docs/imagepredictionapi/README.md)
 
-* `ClassifyImage` - Classify an image and saves the result.
-* `ClassifyImageURLWithNoStoreForm` - Classify an image url without saving the result.
-* `ClassifyImageURLWithNoStoreJSON` - Classify an image url without saving the result.
-* `ClassifyImageURLWithNoStoreRaw` - Classify an image url without saving the result.
-* `ClassifyImageURLForm` - Classify an image url and saves the result.
-* `ClassifyImageURLJSON` - Classify an image url and saves the result.
-* `ClassifyImageURLRaw` - Classify an image url and saves the result.
-* `ClassifyImageWithNoStore` - Classify an image without saving the result.
-* `DetectImage` - Detect objects in an image and saves the result.
-* `DetectImageURLWithNoStoreForm` - Detect objects in an image url without saving the result.
-* `DetectImageURLWithNoStoreJSON` - Detect objects in an image url without saving the result.
-* `DetectImageURLWithNoStoreRaw` - Detect objects in an image url without saving the result.
-* `DetectImageURLForm` - Detect objects in an image url and saves the result.
-* `DetectImageURLJSON` - Detect objects in an image url and saves the result.
-* `DetectImageURLRaw` - Detect objects in an image url and saves the result.
-* `DetectImageWithNoStore` - Detect objects in an image without saving the result.
+* [ClassifyImage](docs/imagepredictionapi/README.md#classifyimage) - Classify an image and saves the result.
+* [ClassifyImageURLWithNoStoreForm](docs/imagepredictionapi/README.md#classifyimageurlwithnostoreform) - Classify an image url without saving the result.
+* [ClassifyImageURLWithNoStoreJSON](docs/imagepredictionapi/README.md#classifyimageurlwithnostorejson) - Classify an image url without saving the result.
+* [ClassifyImageURLWithNoStoreRaw](docs/imagepredictionapi/README.md#classifyimageurlwithnostoreraw) - Classify an image url without saving the result.
+* [ClassifyImageURLForm](docs/imagepredictionapi/README.md#classifyimageurlform) - Classify an image url and saves the result.
+* [ClassifyImageURLJSON](docs/imagepredictionapi/README.md#classifyimageurljson) - Classify an image url and saves the result.
+* [ClassifyImageURLRaw](docs/imagepredictionapi/README.md#classifyimageurlraw) - Classify an image url and saves the result.
+* [ClassifyImageWithNoStore](docs/imagepredictionapi/README.md#classifyimagewithnostore) - Classify an image without saving the result.
+* [DetectImage](docs/imagepredictionapi/README.md#detectimage) - Detect objects in an image and saves the result.
+* [DetectImageURLWithNoStoreForm](docs/imagepredictionapi/README.md#detectimageurlwithnostoreform) - Detect objects in an image url without saving the result.
+* [DetectImageURLWithNoStoreJSON](docs/imagepredictionapi/README.md#detectimageurlwithnostorejson) - Detect objects in an image url without saving the result.
+* [DetectImageURLWithNoStoreRaw](docs/imagepredictionapi/README.md#detectimageurlwithnostoreraw) - Detect objects in an image url without saving the result.
+* [DetectImageURLForm](docs/imagepredictionapi/README.md#detectimageurlform) - Detect objects in an image url and saves the result.
+* [DetectImageURLJSON](docs/imagepredictionapi/README.md#detectimageurljson) - Detect objects in an image url and saves the result.
+* [DetectImageURLRaw](docs/imagepredictionapi/README.md#detectimageurlraw) - Detect objects in an image url and saves the result.
+* [DetectImageWithNoStore](docs/imagepredictionapi/README.md#detectimagewithnostore) - Detect objects in an image without saving the result.
 <!-- End SDK Available Operations -->
 
 ### Maturity

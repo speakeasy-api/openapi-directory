@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>IoT Events monitors your equipment or device fleets for failures or changes in operation, and triggers actions when such events occur. You can use IoT Events Data API commands to send inputs to detectors, list detectors, and view or update a detector's status.</p> <p> For more information, see <a href="https://docs.aws.amazon.com/iotevents/latest/developerguide/what-is-iotevents.html">What is IoT Events?</a> in the <i>IoT Events Developer Guide</i>.</p>
 // https://docs.aws.amazon.com/iotevents/ - Amazon Web Services documentation
 type SDK struct {
@@ -882,7 +897,10 @@ func (s *SDK) BatchUpdateDetector(ctx context.Context, request operations.BatchU
 // DescribeAlarm - Retrieves information about an alarm.
 func (s *SDK) DescribeAlarm(ctx context.Context, request operations.DescribeAlarmRequest) (*operations.DescribeAlarmResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alarms/{alarmModelName}/keyValues/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/alarms/{alarmModelName}/keyValues/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -982,7 +1000,10 @@ func (s *SDK) DescribeAlarm(ctx context.Context, request operations.DescribeAlar
 // DescribeDetector - Returns information about the specified detector (instance).
 func (s *SDK) DescribeDetector(ctx context.Context, request operations.DescribeDetectorRequest) (*operations.DescribeDetectorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detectors/{detectorModelName}/keyValues/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/detectors/{detectorModelName}/keyValues/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1082,7 +1103,10 @@ func (s *SDK) DescribeDetector(ctx context.Context, request operations.DescribeD
 // ListAlarms - Lists one or more alarms. The operation returns only the metadata associated with each alarm.
 func (s *SDK) ListAlarms(ctx context.Context, request operations.ListAlarmsRequest) (*operations.ListAlarmsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alarms/{alarmModelName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/alarms/{alarmModelName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1182,7 +1206,10 @@ func (s *SDK) ListAlarms(ctx context.Context, request operations.ListAlarmsReque
 // ListDetectors - Lists detectors (the instances of a detector model).
 func (s *SDK) ListDetectors(ctx context.Context, request operations.ListDetectorsRequest) (*operations.ListDetectorsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detectors/{detectorModelName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/detectors/{detectorModelName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

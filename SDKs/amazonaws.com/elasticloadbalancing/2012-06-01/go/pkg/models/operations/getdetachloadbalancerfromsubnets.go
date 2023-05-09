@@ -15,17 +15,21 @@ const (
 	GETDetachLoadBalancerFromSubnetsActionEnumDetachLoadBalancerFromSubnets GETDetachLoadBalancerFromSubnetsActionEnum = "DetachLoadBalancerFromSubnets"
 )
 
+func (e GETDetachLoadBalancerFromSubnetsActionEnum) ToPointer() *GETDetachLoadBalancerFromSubnetsActionEnum {
+	return &e
+}
+
 func (e *GETDetachLoadBalancerFromSubnetsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DetachLoadBalancerFromSubnets":
-		*e = GETDetachLoadBalancerFromSubnetsActionEnum(s)
+		*e = GETDetachLoadBalancerFromSubnetsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetachLoadBalancerFromSubnetsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetachLoadBalancerFromSubnetsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDetachLoadBalancerFromSubnetsVersionEnumTwoThousandAndTwelve0601 GETDetachLoadBalancerFromSubnetsVersionEnum = "2012-06-01"
 )
 
+func (e GETDetachLoadBalancerFromSubnetsVersionEnum) ToPointer() *GETDetachLoadBalancerFromSubnetsVersionEnum {
+	return &e
+}
+
 func (e *GETDetachLoadBalancerFromSubnetsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = GETDetachLoadBalancerFromSubnetsVersionEnum(s)
+		*e = GETDetachLoadBalancerFromSubnetsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetachLoadBalancerFromSubnetsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetachLoadBalancerFromSubnetsVersionEnum: %v", v)
 	}
 }
 

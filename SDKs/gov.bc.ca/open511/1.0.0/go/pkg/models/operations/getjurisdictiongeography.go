@@ -16,19 +16,23 @@ const (
 	GetJurisdictiongeographyFormatEnumXML  GetJurisdictiongeographyFormatEnum = "xml"
 )
 
+func (e GetJurisdictiongeographyFormatEnum) ToPointer() *GetJurisdictiongeographyFormatEnum {
+	return &e
+}
+
 func (e *GetJurisdictiongeographyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = GetJurisdictiongeographyFormatEnum(s)
+		*e = GetJurisdictiongeographyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetJurisdictiongeographyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetJurisdictiongeographyFormatEnum: %v", v)
 	}
 }
 

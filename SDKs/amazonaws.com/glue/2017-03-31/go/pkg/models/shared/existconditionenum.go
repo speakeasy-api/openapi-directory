@@ -15,20 +15,24 @@ const (
 	ExistConditionEnumNone      ExistConditionEnum = "NONE"
 )
 
+func (e ExistConditionEnum) ToPointer() *ExistConditionEnum {
+	return &e
+}
+
 func (e *ExistConditionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MUST_EXIST":
 		fallthrough
 	case "NOT_EXIST":
 		fallthrough
 	case "NONE":
-		*e = ExistConditionEnum(s)
+		*e = ExistConditionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExistConditionEnum: %s", s)
+		return fmt.Errorf("invalid value for ExistConditionEnum: %v", v)
 	}
 }

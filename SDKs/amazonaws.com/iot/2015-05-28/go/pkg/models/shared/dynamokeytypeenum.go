@@ -14,18 +14,22 @@ const (
 	DynamoKeyTypeEnumNumber DynamoKeyTypeEnum = "NUMBER"
 )
 
+func (e DynamoKeyTypeEnum) ToPointer() *DynamoKeyTypeEnum {
+	return &e
+}
+
 func (e *DynamoKeyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRING":
 		fallthrough
 	case "NUMBER":
-		*e = DynamoKeyTypeEnum(s)
+		*e = DynamoKeyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DynamoKeyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DynamoKeyTypeEnum: %v", v)
 	}
 }

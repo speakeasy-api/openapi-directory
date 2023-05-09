@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,34 +16,32 @@ func main() {
         }),
     )
 
-    req := operations.SearchRequest{
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "provident",
-        XAmzCredential: "distinctio",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "unde",
-        XAmzSignature: "nulla",
-        XAmzSignedHeaders: "corrupti",
-        Cursor: "illum",
-        Expr: "vel",
-        Facet: "error",
-        Format: "sdk",
-        Fq: "deserunt",
-        Highlight: "suscipit",
-        Partial: false,
-        Pretty: "true",
-        Q: "iure",
-        QOptions: "magnam",
-        QParser: "dismax",
-        Return: "ipsa",
-        Size: 963663,
-        Sort: "tempora",
-        Start: 383441,
-        Stats: "molestiae",
-    }
-
     ctx := context.Background()
-    res, err := s.Search(ctx, req)
+    res, err := s.Search(ctx, operations.SearchRequest{
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("provident"),
+        XAmzCredential: sdk.String("distinctio"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("unde"),
+        XAmzSignature: sdk.String("nulla"),
+        XAmzSignedHeaders: sdk.String("corrupti"),
+        Cursor: sdk.String("illum"),
+        Expr: sdk.String("vel"),
+        Facet: sdk.String("error"),
+        Format: operations.SearchFormatEnumSDK,
+        Fq: sdk.String("deserunt"),
+        Highlight: sdk.String("suscipit"),
+        Partial: sdk.Bool(false),
+        Pretty: operations.SearchPrettyEnumTrue,
+        Q: "iure",
+        QOptions: sdk.String("magnam"),
+        QParser: operations.SearchQParserEnumDismax.ToPointer(),
+        Return: sdk.String("ipsa"),
+        Size: sdk.Int64(963663),
+        Sort: sdk.String("tempora"),
+        Start: sdk.Int64(383441),
+        Stats: sdk.String("molestiae"),
+    })
     if err != nil {
         log.Fatal(err)
     }

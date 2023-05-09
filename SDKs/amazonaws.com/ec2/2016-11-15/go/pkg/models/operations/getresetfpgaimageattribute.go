@@ -15,17 +15,21 @@ const (
 	GETResetFpgaImageAttributeActionEnumResetFpgaImageAttribute GETResetFpgaImageAttributeActionEnum = "ResetFpgaImageAttribute"
 )
 
+func (e GETResetFpgaImageAttributeActionEnum) ToPointer() *GETResetFpgaImageAttributeActionEnum {
+	return &e
+}
+
 func (e *GETResetFpgaImageAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetFpgaImageAttribute":
-		*e = GETResetFpgaImageAttributeActionEnum(s)
+		*e = GETResetFpgaImageAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetFpgaImageAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetFpgaImageAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETResetFpgaImageAttributeAttributeEnumLoadPermission GETResetFpgaImageAttributeAttributeEnum = "loadPermission"
 )
 
+func (e GETResetFpgaImageAttributeAttributeEnum) ToPointer() *GETResetFpgaImageAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETResetFpgaImageAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "loadPermission":
-		*e = GETResetFpgaImageAttributeAttributeEnum(s)
+		*e = GETResetFpgaImageAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetFpgaImageAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetFpgaImageAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	GETResetFpgaImageAttributeVersionEnumTwoThousandAndSixteen1115 GETResetFpgaImageAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETResetFpgaImageAttributeVersionEnum) ToPointer() *GETResetFpgaImageAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETResetFpgaImageAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETResetFpgaImageAttributeVersionEnum(s)
+		*e = GETResetFpgaImageAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetFpgaImageAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetFpgaImageAttributeVersionEnum: %v", v)
 	}
 }
 

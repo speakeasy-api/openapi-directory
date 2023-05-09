@@ -22,12 +22,16 @@ const (
 	VehicleProfileIDEnumSmallTruck VehicleProfileIDEnum = "small_truck"
 )
 
+func (e VehicleProfileIDEnum) ToPointer() *VehicleProfileIDEnum {
+	return &e
+}
+
 func (e *VehicleProfileIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "car":
 		fallthrough
 	case "bike":
@@ -45,9 +49,9 @@ func (e *VehicleProfileIDEnum) UnmarshalJSON(data []byte) error {
 	case "truck":
 		fallthrough
 	case "small_truck":
-		*e = VehicleProfileIDEnum(s)
+		*e = VehicleProfileIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VehicleProfileIDEnum: %s", s)
+		return fmt.Errorf("invalid value for VehicleProfileIDEnum: %v", v)
 	}
 }

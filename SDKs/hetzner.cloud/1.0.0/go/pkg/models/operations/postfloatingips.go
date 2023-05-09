@@ -16,19 +16,23 @@ const (
 	PostFloatingIpsCreateFloatingIPRequestTypeEnumIpv6 PostFloatingIpsCreateFloatingIPRequestTypeEnum = "ipv6"
 )
 
+func (e PostFloatingIpsCreateFloatingIPRequestTypeEnum) ToPointer() *PostFloatingIpsCreateFloatingIPRequestTypeEnum {
+	return &e
+}
+
 func (e *PostFloatingIpsCreateFloatingIPRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
-		*e = PostFloatingIpsCreateFloatingIPRequestTypeEnum(s)
+		*e = PostFloatingIpsCreateFloatingIPRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFloatingIpsCreateFloatingIPRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFloatingIpsCreateFloatingIPRequestTypeEnum: %v", v)
 	}
 }
 
@@ -70,21 +74,25 @@ const (
 	PostFloatingIps201ApplicationJSONActionStatusEnumError   PostFloatingIps201ApplicationJSONActionStatusEnum = "error"
 )
 
+func (e PostFloatingIps201ApplicationJSONActionStatusEnum) ToPointer() *PostFloatingIps201ApplicationJSONActionStatusEnum {
+	return &e
+}
+
 func (e *PostFloatingIps201ApplicationJSONActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostFloatingIps201ApplicationJSONActionStatusEnum(s)
+		*e = PostFloatingIps201ApplicationJSONActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFloatingIps201ApplicationJSONActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFloatingIps201ApplicationJSONActionStatusEnum: %v", v)
 	}
 }
 
@@ -148,19 +156,23 @@ const (
 	PostFloatingIps201ApplicationJSONFloatingIPTypeEnumIpv6 PostFloatingIps201ApplicationJSONFloatingIPTypeEnum = "ipv6"
 )
 
+func (e PostFloatingIps201ApplicationJSONFloatingIPTypeEnum) ToPointer() *PostFloatingIps201ApplicationJSONFloatingIPTypeEnum {
+	return &e
+}
+
 func (e *PostFloatingIps201ApplicationJSONFloatingIPTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
-		*e = PostFloatingIps201ApplicationJSONFloatingIPTypeEnum(s)
+		*e = PostFloatingIps201ApplicationJSONFloatingIPTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFloatingIps201ApplicationJSONFloatingIPTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFloatingIps201ApplicationJSONFloatingIPTypeEnum: %v", v)
 	}
 }
 

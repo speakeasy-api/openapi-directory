@@ -13,35 +13,33 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/gmailpostm
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GmailpostmastertoolsDomainsListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
-        PageSize: 847252,
-        PageToken: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.Domains.GmailpostmastertoolsDomainsList(ctx, req, operations.GmailpostmastertoolsDomainsListSecurity{
+    res, err := s.Domains.GmailpostmastertoolsDomainsList(ctx, operations.GmailpostmastertoolsDomainsListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
+        PageSize: sdk.Int64(847252),
+        PageToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.GmailpostmastertoolsDomainsListSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -60,11 +58,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### Domains
+### [Domains](docs/domains/README.md)
 
-* `GmailpostmastertoolsDomainsList` - Lists the domains that have been registered by the client. The order of domains in the response is unspecified and non-deterministic. Newly created domains will not necessarily be added to the end of this list.
-* `GmailpostmastertoolsDomainsTrafficStatsGet` - Get traffic statistics for a domain on a specific date. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
-* `GmailpostmastertoolsDomainsTrafficStatsList` - List traffic statistics for all available days. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
+* [GmailpostmastertoolsDomainsList](docs/domains/README.md#gmailpostmastertoolsdomainslist) - Lists the domains that have been registered by the client. The order of domains in the response is unspecified and non-deterministic. Newly created domains will not necessarily be added to the end of this list.
+* [GmailpostmastertoolsDomainsTrafficStatsGet](docs/domains/README.md#gmailpostmastertoolsdomainstrafficstatsget) - Get traffic statistics for a domain on a specific date. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
+* [GmailpostmastertoolsDomainsTrafficStatsList](docs/domains/README.md#gmailpostmastertoolsdomainstrafficstatslist) - List traffic statistics for all available days. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -17,12 +17,16 @@ const (
 	SettingsActivationPolicyEnumOnDemand                       SettingsActivationPolicyEnum = "ON_DEMAND"
 )
 
+func (e SettingsActivationPolicyEnum) ToPointer() *SettingsActivationPolicyEnum {
+	return &e
+}
+
 func (e *SettingsActivationPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_ACTIVATION_POLICY_UNSPECIFIED":
 		fallthrough
 	case "ALWAYS":
@@ -30,10 +34,10 @@ func (e *SettingsActivationPolicyEnum) UnmarshalJSON(data []byte) error {
 	case "NEVER":
 		fallthrough
 	case "ON_DEMAND":
-		*e = SettingsActivationPolicyEnum(s)
+		*e = SettingsActivationPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SettingsActivationPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for SettingsActivationPolicyEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	SettingsAvailabilityTypeEnumRegional                       SettingsAvailabilityTypeEnum = "REGIONAL"
 )
 
+func (e SettingsAvailabilityTypeEnum) ToPointer() *SettingsAvailabilityTypeEnum {
+	return &e
+}
+
 func (e *SettingsAvailabilityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_AVAILABILITY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ZONAL":
 		fallthrough
 	case "REGIONAL":
-		*e = SettingsAvailabilityTypeEnum(s)
+		*e = SettingsAvailabilityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SettingsAvailabilityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SettingsAvailabilityTypeEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	SettingsConnectorEnforcementEnumRequired                        SettingsConnectorEnforcementEnum = "REQUIRED"
 )
 
+func (e SettingsConnectorEnforcementEnum) ToPointer() *SettingsConnectorEnforcementEnum {
+	return &e
+}
+
 func (e *SettingsConnectorEnforcementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTOR_ENFORCEMENT_UNSPECIFIED":
 		fallthrough
 	case "NOT_REQUIRED":
 		fallthrough
 	case "REQUIRED":
-		*e = SettingsConnectorEnforcementEnum(s)
+		*e = SettingsConnectorEnforcementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SettingsConnectorEnforcementEnum: %s", s)
+		return fmt.Errorf("invalid value for SettingsConnectorEnforcementEnum: %v", v)
 	}
 }
 
@@ -101,12 +113,16 @@ const (
 	SettingsDataDiskTypeEnumObsoleteLocalSsd           SettingsDataDiskTypeEnum = "OBSOLETE_LOCAL_SSD"
 )
 
+func (e SettingsDataDiskTypeEnum) ToPointer() *SettingsDataDiskTypeEnum {
+	return &e
+}
+
 func (e *SettingsDataDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_DATA_DISK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PD_SSD":
@@ -114,10 +130,10 @@ func (e *SettingsDataDiskTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PD_HDD":
 		fallthrough
 	case "OBSOLETE_LOCAL_SSD":
-		*e = SettingsDataDiskTypeEnum(s)
+		*e = SettingsDataDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SettingsDataDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SettingsDataDiskTypeEnum: %v", v)
 	}
 }
 
@@ -130,21 +146,25 @@ const (
 	SettingsPricingPlanEnumPerUse                    SettingsPricingPlanEnum = "PER_USE"
 )
 
+func (e SettingsPricingPlanEnum) ToPointer() *SettingsPricingPlanEnum {
+	return &e
+}
+
 func (e *SettingsPricingPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_PRICING_PLAN_UNSPECIFIED":
 		fallthrough
 	case "PACKAGE":
 		fallthrough
 	case "PER_USE":
-		*e = SettingsPricingPlanEnum(s)
+		*e = SettingsPricingPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SettingsPricingPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for SettingsPricingPlanEnum: %v", v)
 	}
 }
 
@@ -157,21 +177,25 @@ const (
 	SettingsReplicationTypeEnumAsynchronous                  SettingsReplicationTypeEnum = "ASYNCHRONOUS"
 )
 
+func (e SettingsReplicationTypeEnum) ToPointer() *SettingsReplicationTypeEnum {
+	return &e
+}
+
 func (e *SettingsReplicationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_REPLICATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SYNCHRONOUS":
 		fallthrough
 	case "ASYNCHRONOUS":
-		*e = SettingsReplicationTypeEnum(s)
+		*e = SettingsReplicationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SettingsReplicationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SettingsReplicationTypeEnum: %v", v)
 	}
 }
 
@@ -181,6 +205,8 @@ type Settings struct {
 	ActivationPolicy *SettingsActivationPolicyEnum `json:"activationPolicy,omitempty"`
 	// Active Directory configuration, relevant only for Cloud SQL for SQL Server.
 	ActiveDirectoryConfig *SQLActiveDirectoryConfig `json:"activeDirectoryConfig,omitempty"`
+	// Specifies options for controlling advanced machine features.
+	AdvancedMachineFeatures *AdvancedMachineFeatures `json:"advancedMachineFeatures,omitempty"`
 	// The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
 	AuthorizedGaeApplications []string `json:"authorizedGaeApplications,omitempty"`
 	// Availability type. Potential values: * `ZONAL`: The instance serves data from only one zone. Outages in that zone affect data accessibility. * `REGIONAL`: The instance can serve data from more than one zone in a region (it is highly available)./ For more information, see [Overview of the High Availability Configuration](https://cloud.google.com/sql/docs/mysql/high-availability).

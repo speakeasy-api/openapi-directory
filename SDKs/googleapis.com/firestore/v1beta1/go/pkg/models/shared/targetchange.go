@@ -18,12 +18,16 @@ const (
 	TargetChangeTargetChangeTypeEnumReset    TargetChangeTargetChangeTypeEnum = "RESET"
 )
 
+func (e TargetChangeTargetChangeTypeEnum) ToPointer() *TargetChangeTargetChangeTypeEnum {
+	return &e
+}
+
 func (e *TargetChangeTargetChangeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_CHANGE":
 		fallthrough
 	case "ADD":
@@ -33,10 +37,10 @@ func (e *TargetChangeTargetChangeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CURRENT":
 		fallthrough
 	case "RESET":
-		*e = TargetChangeTargetChangeTypeEnum(s)
+		*e = TargetChangeTargetChangeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetChangeTargetChangeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetChangeTargetChangeTypeEnum: %v", v)
 	}
 }
 

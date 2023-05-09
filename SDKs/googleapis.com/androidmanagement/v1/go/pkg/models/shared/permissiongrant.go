@@ -17,12 +17,16 @@ const (
 	PermissionGrantPolicyEnumDeny                        PermissionGrantPolicyEnum = "DENY"
 )
 
+func (e PermissionGrantPolicyEnum) ToPointer() *PermissionGrantPolicyEnum {
+	return &e
+}
+
 func (e *PermissionGrantPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERMISSION_POLICY_UNSPECIFIED":
 		fallthrough
 	case "PROMPT":
@@ -30,10 +34,10 @@ func (e *PermissionGrantPolicyEnum) UnmarshalJSON(data []byte) error {
 	case "GRANT":
 		fallthrough
 	case "DENY":
-		*e = PermissionGrantPolicyEnum(s)
+		*e = PermissionGrantPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PermissionGrantPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for PermissionGrantPolicyEnum: %v", v)
 	}
 }
 

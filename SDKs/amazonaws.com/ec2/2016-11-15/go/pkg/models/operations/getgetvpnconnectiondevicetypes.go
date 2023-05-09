@@ -15,17 +15,21 @@ const (
 	GETGETVpnConnectionDeviceTypesActionEnumGetVpnConnectionDeviceTypes GETGETVpnConnectionDeviceTypesActionEnum = "GetVpnConnectionDeviceTypes"
 )
 
+func (e GETGETVpnConnectionDeviceTypesActionEnum) ToPointer() *GETGETVpnConnectionDeviceTypesActionEnum {
+	return &e
+}
+
 func (e *GETGETVpnConnectionDeviceTypesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetVpnConnectionDeviceTypes":
-		*e = GETGETVpnConnectionDeviceTypesActionEnum(s)
+		*e = GETGETVpnConnectionDeviceTypesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETVpnConnectionDeviceTypesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETVpnConnectionDeviceTypesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETVpnConnectionDeviceTypesVersionEnumTwoThousandAndSixteen1115 GETGETVpnConnectionDeviceTypesVersionEnum = "2016-11-15"
 )
 
+func (e GETGETVpnConnectionDeviceTypesVersionEnum) ToPointer() *GETGETVpnConnectionDeviceTypesVersionEnum {
+	return &e
+}
+
 func (e *GETGETVpnConnectionDeviceTypesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETVpnConnectionDeviceTypesVersionEnum(s)
+		*e = GETGETVpnConnectionDeviceTypesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETVpnConnectionDeviceTypesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETVpnConnectionDeviceTypesVersionEnum: %v", v)
 	}
 }
 

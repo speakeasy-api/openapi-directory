@@ -14,18 +14,22 @@ const (
 	MessageFormatEnumJSON MessageFormatEnum = "JSON"
 )
 
+func (e MessageFormatEnum) ToPointer() *MessageFormatEnum {
+	return &e
+}
+
 func (e *MessageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RAW":
 		fallthrough
 	case "JSON":
-		*e = MessageFormatEnum(s)
+		*e = MessageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageFormatEnum: %v", v)
 	}
 }

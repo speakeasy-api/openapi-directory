@@ -15,20 +15,24 @@ const (
 	RateTypeEnumRateperunit RateTypeEnum = "RATEPERUNIT"
 )
 
+func (e RateTypeEnum) ToPointer() *RateTypeEnum {
+	return &e
+}
+
 func (e *RateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIXEDAMOUNT":
 		fallthrough
 	case "MULTIPLE":
 		fallthrough
 	case "RATEPERUNIT":
-		*e = RateTypeEnum(s)
+		*e = RateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RateTypeEnum: %v", v)
 	}
 }

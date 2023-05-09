@@ -16,17 +16,21 @@ const (
 	DescribeVirtualGatewaysXAmzTargetEnumOvertureServiceDescribeVirtualGateways DescribeVirtualGatewaysXAmzTargetEnum = "OvertureService.DescribeVirtualGateways"
 )
 
+func (e DescribeVirtualGatewaysXAmzTargetEnum) ToPointer() *DescribeVirtualGatewaysXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeVirtualGatewaysXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.DescribeVirtualGateways":
-		*e = DescribeVirtualGatewaysXAmzTargetEnum(s)
+		*e = DescribeVirtualGatewaysXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVirtualGatewaysXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVirtualGatewaysXAmzTargetEnum: %v", v)
 	}
 }
 

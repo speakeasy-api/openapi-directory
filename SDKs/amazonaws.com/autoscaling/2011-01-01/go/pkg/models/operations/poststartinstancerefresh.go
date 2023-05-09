@@ -15,17 +15,21 @@ const (
 	POSTStartInstanceRefreshActionEnumStartInstanceRefresh POSTStartInstanceRefreshActionEnum = "StartInstanceRefresh"
 )
 
+func (e POSTStartInstanceRefreshActionEnum) ToPointer() *POSTStartInstanceRefreshActionEnum {
+	return &e
+}
+
 func (e *POSTStartInstanceRefreshActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartInstanceRefresh":
-		*e = POSTStartInstanceRefreshActionEnum(s)
+		*e = POSTStartInstanceRefreshActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartInstanceRefreshActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartInstanceRefreshActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTStartInstanceRefreshVersionEnumTwoThousandAndEleven0101 POSTStartInstanceRefreshVersionEnum = "2011-01-01"
 )
 
+func (e POSTStartInstanceRefreshVersionEnum) ToPointer() *POSTStartInstanceRefreshVersionEnum {
+	return &e
+}
+
 func (e *POSTStartInstanceRefreshVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTStartInstanceRefreshVersionEnum(s)
+		*e = POSTStartInstanceRefreshVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartInstanceRefreshVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartInstanceRefreshVersionEnum: %v", v)
 	}
 }
 

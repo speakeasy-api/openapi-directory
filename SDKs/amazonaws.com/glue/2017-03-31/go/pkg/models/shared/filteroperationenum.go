@@ -19,12 +19,16 @@ const (
 	FilterOperationEnumIsnull FilterOperationEnum = "ISNULL"
 )
 
+func (e FilterOperationEnum) ToPointer() *FilterOperationEnum {
+	return &e
+}
+
 func (e *FilterOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQ":
 		fallthrough
 	case "LT":
@@ -38,9 +42,9 @@ func (e *FilterOperationEnum) UnmarshalJSON(data []byte) error {
 	case "REGEX":
 		fallthrough
 	case "ISNULL":
-		*e = FilterOperationEnum(s)
+		*e = FilterOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterOperationEnum: %v", v)
 	}
 }

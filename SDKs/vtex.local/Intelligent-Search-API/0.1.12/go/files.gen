@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -28,4 +29,7 @@ pkg/models/shared/correction.go
 pkg/models/shared/facets.go
 pkg/models/shared/productsearch.go
 pkg/models/shared/searchsuggestions.go
+docs/sdk/README.md
+docs/autocomplete/README.md
+docs/productlistpage/README.md
 USAGE.md

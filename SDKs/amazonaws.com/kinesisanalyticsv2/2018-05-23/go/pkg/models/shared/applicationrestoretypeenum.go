@@ -15,20 +15,24 @@ const (
 	ApplicationRestoreTypeEnumRestoreFromCustomSnapshot ApplicationRestoreTypeEnum = "RESTORE_FROM_CUSTOM_SNAPSHOT"
 )
 
+func (e ApplicationRestoreTypeEnum) ToPointer() *ApplicationRestoreTypeEnum {
+	return &e
+}
+
 func (e *ApplicationRestoreTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SKIP_RESTORE_FROM_SNAPSHOT":
 		fallthrough
 	case "RESTORE_FROM_LATEST_SNAPSHOT":
 		fallthrough
 	case "RESTORE_FROM_CUSTOM_SNAPSHOT":
-		*e = ApplicationRestoreTypeEnum(s)
+		*e = ApplicationRestoreTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationRestoreTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationRestoreTypeEnum: %v", v)
 	}
 }

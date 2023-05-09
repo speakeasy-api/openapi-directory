@@ -4,9 +4,9 @@ package shared
 
 // GoogleCloudSecuritycenterV1Binding - Represents a Kubernetes RoleBinding or ClusterRoleBinding.
 type GoogleCloudSecuritycenterV1Binding struct {
-	// Name for binding.
+	// Name for the binding.
 	Name *string `json:"name,omitempty"`
-	// Namespace for binding.
+	// Namespace for the binding.
 	Ns *string `json:"ns,omitempty"`
 	// Kubernetes Role or ClusterRole.
 	Role *Role `json:"role,omitempty"`

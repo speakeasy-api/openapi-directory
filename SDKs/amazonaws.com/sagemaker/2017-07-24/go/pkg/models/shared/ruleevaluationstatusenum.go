@@ -18,12 +18,16 @@ const (
 	RuleEvaluationStatusEnumStopped       RuleEvaluationStatusEnum = "Stopped"
 )
 
+func (e RuleEvaluationStatusEnum) ToPointer() *RuleEvaluationStatusEnum {
+	return &e
+}
+
 func (e *RuleEvaluationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InProgress":
 		fallthrough
 	case "NoIssuesFound":
@@ -35,9 +39,9 @@ func (e *RuleEvaluationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Stopping":
 		fallthrough
 	case "Stopped":
-		*e = RuleEvaluationStatusEnum(s)
+		*e = RuleEvaluationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuleEvaluationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RuleEvaluationStatusEnum: %v", v)
 	}
 }

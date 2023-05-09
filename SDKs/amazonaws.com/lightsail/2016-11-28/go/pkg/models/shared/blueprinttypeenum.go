@@ -14,18 +14,22 @@ const (
 	BlueprintTypeEnumApp BlueprintTypeEnum = "app"
 )
 
+func (e BlueprintTypeEnum) ToPointer() *BlueprintTypeEnum {
+	return &e
+}
+
 func (e *BlueprintTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "os":
 		fallthrough
 	case "app":
-		*e = BlueprintTypeEnum(s)
+		*e = BlueprintTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BlueprintTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BlueprintTypeEnum: %v", v)
 	}
 }

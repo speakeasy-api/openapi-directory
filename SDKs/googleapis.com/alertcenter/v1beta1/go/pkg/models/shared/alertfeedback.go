@@ -17,12 +17,16 @@ const (
 	AlertFeedbackTypeEnumVeryUseful                   AlertFeedbackTypeEnum = "VERY_USEFUL"
 )
 
+func (e AlertFeedbackTypeEnum) ToPointer() *AlertFeedbackTypeEnum {
+	return &e
+}
+
 func (e *AlertFeedbackTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALERT_FEEDBACK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NOT_USEFUL":
@@ -30,10 +34,10 @@ func (e *AlertFeedbackTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SOMEWHAT_USEFUL":
 		fallthrough
 	case "VERY_USEFUL":
-		*e = AlertFeedbackTypeEnum(s)
+		*e = AlertFeedbackTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlertFeedbackTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AlertFeedbackTypeEnum: %v", v)
 	}
 }
 

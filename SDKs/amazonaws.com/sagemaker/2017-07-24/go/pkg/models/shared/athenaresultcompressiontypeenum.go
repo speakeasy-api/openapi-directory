@@ -16,20 +16,24 @@ const (
 	AthenaResultCompressionTypeEnumZlib   AthenaResultCompressionTypeEnum = "ZLIB"
 )
 
+func (e AthenaResultCompressionTypeEnum) ToPointer() *AthenaResultCompressionTypeEnum {
+	return &e
+}
+
 func (e *AthenaResultCompressionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GZIP":
 		fallthrough
 	case "SNAPPY":
 		fallthrough
 	case "ZLIB":
-		*e = AthenaResultCompressionTypeEnum(s)
+		*e = AthenaResultCompressionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AthenaResultCompressionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AthenaResultCompressionTypeEnum: %v", v)
 	}
 }

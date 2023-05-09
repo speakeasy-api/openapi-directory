@@ -22,12 +22,16 @@ const (
 	WindowsUpdateSettingsClassificationsEnumUpdate                    WindowsUpdateSettingsClassificationsEnum = "UPDATE"
 )
 
+func (e WindowsUpdateSettingsClassificationsEnum) ToPointer() *WindowsUpdateSettingsClassificationsEnum {
+	return &e
+}
+
 func (e *WindowsUpdateSettingsClassificationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLASSIFICATION_UNSPECIFIED":
 		fallthrough
 	case "CRITICAL":
@@ -47,10 +51,10 @@ func (e *WindowsUpdateSettingsClassificationsEnum) UnmarshalJSON(data []byte) er
 	case "UPDATE_ROLLUP":
 		fallthrough
 	case "UPDATE":
-		*e = WindowsUpdateSettingsClassificationsEnum(s)
+		*e = WindowsUpdateSettingsClassificationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WindowsUpdateSettingsClassificationsEnum: %s", s)
+		return fmt.Errorf("invalid value for WindowsUpdateSettingsClassificationsEnum: %v", v)
 	}
 }
 

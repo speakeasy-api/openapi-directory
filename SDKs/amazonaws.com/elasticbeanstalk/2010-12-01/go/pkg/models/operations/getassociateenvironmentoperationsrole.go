@@ -15,17 +15,21 @@ const (
 	GETAssociateEnvironmentOperationsRoleActionEnumAssociateEnvironmentOperationsRole GETAssociateEnvironmentOperationsRoleActionEnum = "AssociateEnvironmentOperationsRole"
 )
 
+func (e GETAssociateEnvironmentOperationsRoleActionEnum) ToPointer() *GETAssociateEnvironmentOperationsRoleActionEnum {
+	return &e
+}
+
 func (e *GETAssociateEnvironmentOperationsRoleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssociateEnvironmentOperationsRole":
-		*e = GETAssociateEnvironmentOperationsRoleActionEnum(s)
+		*e = GETAssociateEnvironmentOperationsRoleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssociateEnvironmentOperationsRoleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssociateEnvironmentOperationsRoleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAssociateEnvironmentOperationsRoleVersionEnumTwoThousandAndTen1201 GETAssociateEnvironmentOperationsRoleVersionEnum = "2010-12-01"
 )
 
+func (e GETAssociateEnvironmentOperationsRoleVersionEnum) ToPointer() *GETAssociateEnvironmentOperationsRoleVersionEnum {
+	return &e
+}
+
 func (e *GETAssociateEnvironmentOperationsRoleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETAssociateEnvironmentOperationsRoleVersionEnum(s)
+		*e = GETAssociateEnvironmentOperationsRoleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssociateEnvironmentOperationsRoleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssociateEnvironmentOperationsRoleVersionEnum: %v", v)
 	}
 }
 

@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -91,4 +92,13 @@ pkg/models/shared/freebusyrequest.go
 pkg/models/shared/freebusyrequestitem.go
 pkg/models/shared/setting.go
 pkg/models/shared/settings.go
+docs/sdk/README.md
+docs/acl/README.md
+docs/calendarlist/README.md
+docs/calendars/README.md
+docs/channels/README.md
+docs/colors/README.md
+docs/events/README.md
+docs/freebusy/README.md
+docs/settings/README.md
 USAGE.md

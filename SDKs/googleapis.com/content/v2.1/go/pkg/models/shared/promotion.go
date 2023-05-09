@@ -26,12 +26,16 @@ const (
 	PromotionCouponValueTypeEnumFreeShippingTwoDay         PromotionCouponValueTypeEnum = "FREE_SHIPPING_TWO_DAY"
 )
 
+func (e PromotionCouponValueTypeEnum) ToPointer() *PromotionCouponValueTypeEnum {
+	return &e
+}
+
 func (e *PromotionCouponValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COUPON_VALUE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MONEY_OFF":
@@ -57,10 +61,10 @@ func (e *PromotionCouponValueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FREE_SHIPPING_OVERNIGHT":
 		fallthrough
 	case "FREE_SHIPPING_TWO_DAY":
-		*e = PromotionCouponValueTypeEnum(s)
+		*e = PromotionCouponValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PromotionCouponValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PromotionCouponValueTypeEnum: %v", v)
 	}
 }
 
@@ -73,21 +77,25 @@ const (
 	PromotionOfferTypeEnumGenericCode          PromotionOfferTypeEnum = "GENERIC_CODE"
 )
 
+func (e PromotionOfferTypeEnum) ToPointer() *PromotionOfferTypeEnum {
+	return &e
+}
+
 func (e *PromotionOfferTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFFER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NO_CODE":
 		fallthrough
 	case "GENERIC_CODE":
-		*e = PromotionOfferTypeEnum(s)
+		*e = PromotionOfferTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PromotionOfferTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PromotionOfferTypeEnum: %v", v)
 	}
 }
 
@@ -100,21 +108,25 @@ const (
 	PromotionProductApplicabilityEnumSpecificProducts                PromotionProductApplicabilityEnum = "SPECIFIC_PRODUCTS"
 )
 
+func (e PromotionProductApplicabilityEnum) ToPointer() *PromotionProductApplicabilityEnum {
+	return &e
+}
+
 func (e *PromotionProductApplicabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCT_APPLICABILITY_UNSPECIFIED":
 		fallthrough
 	case "ALL_PRODUCTS":
 		fallthrough
 	case "SPECIFIC_PRODUCTS":
-		*e = PromotionProductApplicabilityEnum(s)
+		*e = PromotionProductApplicabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PromotionProductApplicabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for PromotionProductApplicabilityEnum: %v", v)
 	}
 }
 
@@ -126,21 +138,25 @@ const (
 	PromotionRedemptionChannelEnumOnline                       PromotionRedemptionChannelEnum = "ONLINE"
 )
 
+func (e PromotionRedemptionChannelEnum) ToPointer() *PromotionRedemptionChannelEnum {
+	return &e
+}
+
 func (e *PromotionRedemptionChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REDEMPTION_CHANNEL_UNSPECIFIED":
 		fallthrough
 	case "IN_STORE":
 		fallthrough
 	case "ONLINE":
-		*e = PromotionRedemptionChannelEnum(s)
+		*e = PromotionRedemptionChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PromotionRedemptionChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for PromotionRedemptionChannelEnum: %v", v)
 	}
 }
 
@@ -153,21 +169,25 @@ const (
 	PromotionStoreApplicabilityEnumSpecificStores                PromotionStoreApplicabilityEnum = "SPECIFIC_STORES"
 )
 
+func (e PromotionStoreApplicabilityEnum) ToPointer() *PromotionStoreApplicabilityEnum {
+	return &e
+}
+
 func (e *PromotionStoreApplicabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STORE_APPLICABILITY_UNSPECIFIED":
 		fallthrough
 	case "ALL_STORES":
 		fallthrough
 	case "SPECIFIC_STORES":
-		*e = PromotionStoreApplicabilityEnum(s)
+		*e = PromotionStoreApplicabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PromotionStoreApplicabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for PromotionStoreApplicabilityEnum: %v", v)
 	}
 }
 

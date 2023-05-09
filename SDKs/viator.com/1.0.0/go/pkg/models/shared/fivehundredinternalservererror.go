@@ -13,17 +13,21 @@ const (
 	FiveHundredINTERNALSERVERERRORCodeEnumInternalServerError FiveHundredINTERNALSERVERERRORCodeEnum = "INTERNAL_SERVER_ERROR"
 )
 
+func (e FiveHundredINTERNALSERVERERRORCodeEnum) ToPointer() *FiveHundredINTERNALSERVERERRORCodeEnum {
+	return &e
+}
+
 func (e *FiveHundredINTERNALSERVERERRORCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_SERVER_ERROR":
-		*e = FiveHundredINTERNALSERVERERRORCodeEnum(s)
+		*e = FiveHundredINTERNALSERVERERRORCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FiveHundredINTERNALSERVERERRORCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for FiveHundredINTERNALSERVERERRORCodeEnum: %v", v)
 	}
 }
 
@@ -33,17 +37,21 @@ const (
 	FiveHundredINTERNALSERVERERRORMessageEnumInternalServerError FiveHundredINTERNALSERVERERRORMessageEnum = "Internal server error"
 )
 
+func (e FiveHundredINTERNALSERVERERRORMessageEnum) ToPointer() *FiveHundredINTERNALSERVERERRORMessageEnum {
+	return &e
+}
+
 func (e *FiveHundredINTERNALSERVERERRORMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = FiveHundredINTERNALSERVERERRORMessageEnum(s)
+		*e = FiveHundredINTERNALSERVERERRORMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FiveHundredINTERNALSERVERERRORMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for FiveHundredINTERNALSERVERERRORMessageEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	AdSlotCompatibilityEnumInStreamAudio       AdSlotCompatibilityEnum = "IN_STREAM_AUDIO"
 )
 
+func (e AdSlotCompatibilityEnum) ToPointer() *AdSlotCompatibilityEnum {
+	return &e
+}
+
 func (e *AdSlotCompatibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISPLAY":
 		fallthrough
 	case "DISPLAY_INTERSTITIAL":
@@ -36,10 +40,10 @@ func (e *AdSlotCompatibilityEnum) UnmarshalJSON(data []byte) error {
 	case "IN_STREAM_VIDEO":
 		fallthrough
 	case "IN_STREAM_AUDIO":
-		*e = AdSlotCompatibilityEnum(s)
+		*e = AdSlotCompatibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdSlotCompatibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for AdSlotCompatibilityEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	AdSlotPaymentSourceTypeEnumPlanningPaymentSourceTypePublisherPaid AdSlotPaymentSourceTypeEnum = "PLANNING_PAYMENT_SOURCE_TYPE_PUBLISHER_PAID"
 )
 
+func (e AdSlotPaymentSourceTypeEnum) ToPointer() *AdSlotPaymentSourceTypeEnum {
+	return &e
+}
+
 func (e *AdSlotPaymentSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLANNING_PAYMENT_SOURCE_TYPE_AGENCY_PAID":
 		fallthrough
 	case "PLANNING_PAYMENT_SOURCE_TYPE_PUBLISHER_PAID":
-		*e = AdSlotPaymentSourceTypeEnum(s)
+		*e = AdSlotPaymentSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdSlotPaymentSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdSlotPaymentSourceTypeEnum: %v", v)
 	}
 }
 

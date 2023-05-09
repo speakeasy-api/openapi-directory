@@ -20,21 +20,25 @@ const (
 	BuildsDistributeRequestBodyDestinationsTypeEnumTester BuildsDistributeRequestBodyDestinationsTypeEnum = "tester"
 )
 
+func (e BuildsDistributeRequestBodyDestinationsTypeEnum) ToPointer() *BuildsDistributeRequestBodyDestinationsTypeEnum {
+	return &e
+}
+
 func (e *BuildsDistributeRequestBodyDestinationsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "store":
 		fallthrough
 	case "group":
 		fallthrough
 	case "tester":
-		*e = BuildsDistributeRequestBodyDestinationsTypeEnum(s)
+		*e = BuildsDistributeRequestBodyDestinationsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuildsDistributeRequestBodyDestinationsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BuildsDistributeRequestBodyDestinationsTypeEnum: %v", v)
 	}
 }
 

@@ -12,13 +12,13 @@ type Container struct {
 	Env []EnvVar `json:"env,omitempty"`
 	// Not supported by Cloud Run.
 	EnvFrom []EnvFromSource `json:"envFrom,omitempty"`
-	// Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google Container Registry. If the host is not provided, Dockerhub is assumed. More info: https://kubernetes.io/docs/concepts/containers/images
+	// Required. Name of the container image in Dockerhub, Google Artifact Registry, or Google Container Registry. If the host is not provided, Dockerhub is assumed.
 	Image *string `json:"image,omitempty"`
-	// Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
+	// Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise.
 	ImagePullPolicy *string `json:"imagePullPolicy,omitempty"`
 	// Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.
 	LivenessProbe *Probe `json:"livenessProbe,omitempty"`
-	// Name of the container specified as a DNS_LABEL (RFC 1123). More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
+	// Name of the container specified as a DNS_LABEL (RFC 1123).
 	Name *string `json:"name,omitempty"`
 	// List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.
 	Ports []ContainerPort `json:"ports,omitempty"`

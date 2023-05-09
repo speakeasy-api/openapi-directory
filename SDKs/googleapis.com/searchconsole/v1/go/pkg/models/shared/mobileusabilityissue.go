@@ -20,12 +20,16 @@ const (
 	MobileUsabilityIssueIssueTypeEnumTapTargetsTooClose                  MobileUsabilityIssueIssueTypeEnum = "TAP_TARGETS_TOO_CLOSE"
 )
 
+func (e MobileUsabilityIssueIssueTypeEnum) ToPointer() *MobileUsabilityIssueIssueTypeEnum {
+	return &e
+}
+
 func (e *MobileUsabilityIssueIssueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MOBILE_USABILITY_ISSUE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "USES_INCOMPATIBLE_PLUGINS":
@@ -39,10 +43,10 @@ func (e *MobileUsabilityIssueIssueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "USE_LEGIBLE_FONT_SIZES":
 		fallthrough
 	case "TAP_TARGETS_TOO_CLOSE":
-		*e = MobileUsabilityIssueIssueTypeEnum(s)
+		*e = MobileUsabilityIssueIssueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MobileUsabilityIssueIssueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MobileUsabilityIssueIssueTypeEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	MobileUsabilityIssueSeverityEnumError               MobileUsabilityIssueSeverityEnum = "ERROR"
 )
 
+func (e MobileUsabilityIssueSeverityEnum) ToPointer() *MobileUsabilityIssueSeverityEnum {
+	return &e
+}
+
 func (e *MobileUsabilityIssueSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "WARNING":
 		fallthrough
 	case "ERROR":
-		*e = MobileUsabilityIssueSeverityEnum(s)
+		*e = MobileUsabilityIssueSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MobileUsabilityIssueSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for MobileUsabilityIssueSeverityEnum: %v", v)
 	}
 }
 

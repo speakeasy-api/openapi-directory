@@ -16,21 +16,25 @@ const (
 	SegmentSequenceStepMatchTypeEnumImmediatelyPrecedes  SegmentSequenceStepMatchTypeEnum = "IMMEDIATELY_PRECEDES"
 )
 
+func (e SegmentSequenceStepMatchTypeEnum) ToPointer() *SegmentSequenceStepMatchTypeEnum {
+	return &e
+}
+
 func (e *SegmentSequenceStepMatchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_MATCH_TYPE":
 		fallthrough
 	case "PRECEDES":
 		fallthrough
 	case "IMMEDIATELY_PRECEDES":
-		*e = SegmentSequenceStepMatchTypeEnum(s)
+		*e = SegmentSequenceStepMatchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SegmentSequenceStepMatchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SegmentSequenceStepMatchTypeEnum: %v", v)
 	}
 }
 

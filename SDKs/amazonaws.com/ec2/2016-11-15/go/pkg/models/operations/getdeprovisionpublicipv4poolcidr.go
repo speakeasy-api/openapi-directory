@@ -15,17 +15,21 @@ const (
 	GETDeprovisionPublicIpv4PoolCidrActionEnumDeprovisionPublicIpv4PoolCidr GETDeprovisionPublicIpv4PoolCidrActionEnum = "DeprovisionPublicIpv4PoolCidr"
 )
 
+func (e GETDeprovisionPublicIpv4PoolCidrActionEnum) ToPointer() *GETDeprovisionPublicIpv4PoolCidrActionEnum {
+	return &e
+}
+
 func (e *GETDeprovisionPublicIpv4PoolCidrActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeprovisionPublicIpv4PoolCidr":
-		*e = GETDeprovisionPublicIpv4PoolCidrActionEnum(s)
+		*e = GETDeprovisionPublicIpv4PoolCidrActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeprovisionPublicIpv4PoolCidrActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeprovisionPublicIpv4PoolCidrActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeprovisionPublicIpv4PoolCidrVersionEnumTwoThousandAndSixteen1115 GETDeprovisionPublicIpv4PoolCidrVersionEnum = "2016-11-15"
 )
 
+func (e GETDeprovisionPublicIpv4PoolCidrVersionEnum) ToPointer() *GETDeprovisionPublicIpv4PoolCidrVersionEnum {
+	return &e
+}
+
 func (e *GETDeprovisionPublicIpv4PoolCidrVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeprovisionPublicIpv4PoolCidrVersionEnum(s)
+		*e = GETDeprovisionPublicIpv4PoolCidrVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeprovisionPublicIpv4PoolCidrVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeprovisionPublicIpv4PoolCidrVersionEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newProjectWebhooks(defaultClient, securityClient HTTPClient, serverURL, lan
 // Delete project webhooks. Projects currently support registering only 1 webhook. This endpoint deletes the previously registered webhook.
 func (s *projectWebhooks) DeleteProjectWebhook(ctx context.Context, request operations.DeleteProjectWebhookRequest) (*operations.DeleteProjectWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{id}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *projectWebhooks) DeleteProjectWebhook(ctx context.Context, request oper
 // This endpoint returns Project entity which contains `callback_url` field for webhook URL. Currently projects can have only 1 webhook registered.
 func (s *projectWebhooks) GetProjectWebhooks(ctx context.Context, request operations.GetProjectWebhooksRequest) (*operations.GetProjectWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{id}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -145,7 +151,10 @@ func (s *projectWebhooks) GetProjectWebhooks(ctx context.Context, request operat
 // Update project webhook URL
 func (s *projectWebhooks) PostProjectWebhook(ctx context.Context, request operations.PostProjectWebhookRequest) (*operations.PostProjectWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{id}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Webhook", "json")
 	if err != nil {
@@ -207,7 +216,10 @@ func (s *projectWebhooks) PostProjectWebhook(ctx context.Context, request operat
 // Update project webhook URL
 func (s *projectWebhooks) UpdateProjectWebhook(ctx context.Context, request operations.UpdateProjectWebhookRequest) (*operations.UpdateProjectWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{id}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Webhook", "json")
 	if err != nil {

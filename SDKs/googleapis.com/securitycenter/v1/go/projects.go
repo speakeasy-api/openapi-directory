@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // SecuritycenterProjectsAssetsGroup - Filters an organization's assets and groups them by their specified properties.
 func (s *projects) SecuritycenterProjectsAssetsGroup(ctx context.Context, request operations.SecuritycenterProjectsAssetsGroupRequest, security operations.SecuritycenterProjectsAssetsGroupSecurity) (*operations.SecuritycenterProjectsAssetsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets:group", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets:group", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupAssetsRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) SecuritycenterProjectsAssetsGroup(ctx context.Context, reques
 // SecuritycenterProjectsAssetsList - Lists an organization's assets.
 func (s *projects) SecuritycenterProjectsAssetsList(ctx context.Context, request operations.SecuritycenterProjectsAssetsListRequest, security operations.SecuritycenterProjectsAssetsListSecurity) (*operations.SecuritycenterProjectsAssetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) SecuritycenterProjectsAssetsList(ctx context.Context, request
 // SecuritycenterProjectsBigQueryExportsCreate - Creates a BigQuery export.
 func (s *projects) SecuritycenterProjectsBigQueryExportsCreate(ctx context.Context, request operations.SecuritycenterProjectsBigQueryExportsCreateRequest, security operations.SecuritycenterProjectsBigQueryExportsCreateSecurity) (*operations.SecuritycenterProjectsBigQueryExportsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bigQueryExports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bigQueryExports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudSecuritycenterV1BigQueryExportInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) SecuritycenterProjectsBigQueryExportsCreate(ctx context.Conte
 // SecuritycenterProjectsBigQueryExportsList - Lists BigQuery exports. Note that when requesting BigQuery exports at a given level all exports under that level are also returned e.g. if requesting BigQuery exports under a folder, then all BigQuery exports immediately under the folder plus the ones created under the projects within the folder are returned.
 func (s *projects) SecuritycenterProjectsBigQueryExportsList(ctx context.Context, request operations.SecuritycenterProjectsBigQueryExportsListRequest, security operations.SecuritycenterProjectsBigQueryExportsListSecurity) (*operations.SecuritycenterProjectsBigQueryExportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bigQueryExports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bigQueryExports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) SecuritycenterProjectsBigQueryExportsList(ctx context.Context
 // SecuritycenterProjectsFindingsBulkMute - Kicks off an LRO to bulk mute findings for a parent based on a filter. The parent can be either an organization, folder or project. The findings matched by the filter will be muted after the LRO is done.
 func (s *projects) SecuritycenterProjectsFindingsBulkMute(ctx context.Context, request operations.SecuritycenterProjectsFindingsBulkMuteRequest, security operations.SecuritycenterProjectsFindingsBulkMuteSecurity) (*operations.SecuritycenterProjectsFindingsBulkMuteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings:bulkMute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings:bulkMute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkMuteFindingsRequest", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) SecuritycenterProjectsFindingsBulkMute(ctx context.Context, r
 // SecuritycenterProjectsMuteConfigsCreate - Creates a mute config.
 func (s *projects) SecuritycenterProjectsMuteConfigsCreate(ctx context.Context, request operations.SecuritycenterProjectsMuteConfigsCreateRequest, security operations.SecuritycenterProjectsMuteConfigsCreateSecurity) (*operations.SecuritycenterProjectsMuteConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/muteConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/muteConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudSecuritycenterV1MuteConfigInput", "json")
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *projects) SecuritycenterProjectsMuteConfigsCreate(ctx context.Context, 
 // SecuritycenterProjectsMuteConfigsList - Lists mute configs.
 func (s *projects) SecuritycenterProjectsMuteConfigsList(ctx context.Context, request operations.SecuritycenterProjectsMuteConfigsListRequest, security operations.SecuritycenterProjectsMuteConfigsListSecurity) (*operations.SecuritycenterProjectsMuteConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/muteConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/muteConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) SecuritycenterProjectsMuteConfigsList(ctx context.Context, re
 // SecuritycenterProjectsNotificationConfigsCreate - Creates a notification config.
 func (s *projects) SecuritycenterProjectsNotificationConfigsCreate(ctx context.Context, request operations.SecuritycenterProjectsNotificationConfigsCreateRequest, security operations.SecuritycenterProjectsNotificationConfigsCreateSecurity) (*operations.SecuritycenterProjectsNotificationConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/notificationConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/notificationConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NotificationConfigInput", "json")
 	if err != nil {
@@ -450,106 +474,13 @@ func (s *projects) SecuritycenterProjectsNotificationConfigsCreate(ctx context.C
 	return res, nil
 }
 
-// SecuritycenterProjectsNotificationConfigsDelete - Deletes a notification config.
-func (s *projects) SecuritycenterProjectsNotificationConfigsDelete(ctx context.Context, request operations.SecuritycenterProjectsNotificationConfigsDeleteRequest, security operations.SecuritycenterProjectsNotificationConfigsDeleteSecurity) (*operations.SecuritycenterProjectsNotificationConfigsDeleteResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.SecuritycenterProjectsNotificationConfigsDeleteResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Empty = out
-		}
-	}
-
-	return res, nil
-}
-
-// SecuritycenterProjectsNotificationConfigsGet - Gets a notification config.
-func (s *projects) SecuritycenterProjectsNotificationConfigsGet(ctx context.Context, request operations.SecuritycenterProjectsNotificationConfigsGetRequest, security operations.SecuritycenterProjectsNotificationConfigsGetSecurity) (*operations.SecuritycenterProjectsNotificationConfigsGetResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.SecuritycenterProjectsNotificationConfigsGetResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.NotificationConfig
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.NotificationConfig = out
-		}
-	}
-
-	return res, nil
-}
-
 // SecuritycenterProjectsNotificationConfigsList - Lists notification configs.
 func (s *projects) SecuritycenterProjectsNotificationConfigsList(ctx context.Context, request operations.SecuritycenterProjectsNotificationConfigsListRequest, security operations.SecuritycenterProjectsNotificationConfigsListSecurity) (*operations.SecuritycenterProjectsNotificationConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/notificationConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/notificationConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -594,10 +525,326 @@ func (s *projects) SecuritycenterProjectsNotificationConfigsList(ctx context.Con
 	return res, nil
 }
 
+// SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreate - Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the given CRM parent, and also creates inherited SecurityHealthAnalyticsCustomModules for all CRM descendants of the given parent. These modules are enabled by default.
+func (s *projects) SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreate(ctx context.Context, request operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateRequest, security operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateSecurity) (*operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/customModules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModuleInput", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule = out
+		}
+	}
+
+	return res, nil
+}
+
+// SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDelete - Deletes the specified SecurityHealthAnalyticsCustomModule and all of its descendants in the CRM hierarchy. This method is only supported for resident custom modules.
+func (s *projects) SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDelete(ctx context.Context, request operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteRequest, security operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteSecurity) (*operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Empty = out
+		}
+	}
+
+	return res, nil
+}
+
+// SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesList - Returns a list of all SecurityHealthAnalyticsCustomModules for the given parent. This includes resident modules defined at the scope of the parent, and inherited modules, inherited from CRM ancestors.
+func (s *projects) SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesList(ctx context.Context, request operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListRequest, security operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListSecurity) (*operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/customModules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListSecurityHealthAnalyticsCustomModulesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListSecurityHealthAnalyticsCustomModulesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendant - Returns a list of all resident SecurityHealthAnalyticsCustomModules under the given CRM parent and all of the parent’s CRM descendants.
+func (s *projects) SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendant(ctx context.Context, request operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantRequest, security operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantSecurity) (*operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/customModules:listDescendant", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListDescendantSecurityHealthAnalyticsCustomModulesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListDescendantSecurityHealthAnalyticsCustomModulesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGet - Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+func (s *projects) SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGet(ctx context.Context, request operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetRequest, security operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetSecurity) (*operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule = out
+		}
+	}
+
+	return res, nil
+}
+
+// SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesList - Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the given parent. This includes resident modules defined at the scope of the parent, and inherited modules, inherited from CRM ancestors.
+func (s *projects) SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesList(ctx context.Context, request operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListRequest, security operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListSecurity) (*operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/effectiveCustomModules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // SecuritycenterProjectsSourcesFindingsExternalSystemsPatch - Updates external system. This is for a given finding.
 func (s *projects) SecuritycenterProjectsSourcesFindingsExternalSystemsPatch(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsExternalSystemsPatchRequest, security operations.SecuritycenterProjectsSourcesFindingsExternalSystemsPatchSecurity) (*operations.SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudSecuritycenterV1ExternalSystem", "json")
 	if err != nil {
@@ -652,7 +899,10 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsExternalSystemsPatch(ctx
 // SecuritycenterProjectsSourcesFindingsGroup - Filters an organization or source's findings and groups them by their specified properties. To group across all sources provide a `-` as the source id. Example: /v1/organizations/{organization_id}/sources/-/findings, /v1/folders/{folder_id}/sources/-/findings, /v1/projects/{project_id}/sources/-/findings
 func (s *projects) SecuritycenterProjectsSourcesFindingsGroup(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsGroupRequest, security operations.SecuritycenterProjectsSourcesFindingsGroupSecurity) (*operations.SecuritycenterProjectsSourcesFindingsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings:group", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings:group", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupFindingsRequest", "json")
 	if err != nil {
@@ -707,7 +957,10 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsGroup(ctx context.Contex
 // SecuritycenterProjectsSourcesFindingsList - Lists an organization or source's findings. To list across all sources provide a `-` as the source id. Example: /v1/organizations/{organization_id}/sources/-/findings
 func (s *projects) SecuritycenterProjectsSourcesFindingsList(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsListRequest, security operations.SecuritycenterProjectsSourcesFindingsListSecurity) (*operations.SecuritycenterProjectsSourcesFindingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/findings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -755,7 +1008,10 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsList(ctx context.Context
 // SecuritycenterProjectsSourcesFindingsSetMute - Updates the mute state of a finding.
 func (s *projects) SecuritycenterProjectsSourcesFindingsSetMute(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsSetMuteRequest, security operations.SecuritycenterProjectsSourcesFindingsSetMuteSecurity) (*operations.SecuritycenterProjectsSourcesFindingsSetMuteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setMute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setMute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetMuteRequest", "json")
 	if err != nil {
@@ -810,7 +1066,10 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsSetMute(ctx context.Cont
 // SecuritycenterProjectsSourcesFindingsSetState - Updates the state of a finding.
 func (s *projects) SecuritycenterProjectsSourcesFindingsSetState(ctx context.Context, request operations.SecuritycenterProjectsSourcesFindingsSetStateRequest, security operations.SecuritycenterProjectsSourcesFindingsSetStateSecurity) (*operations.SecuritycenterProjectsSourcesFindingsSetStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setState", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setState", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetFindingStateRequest", "json")
 	if err != nil {
@@ -865,7 +1124,10 @@ func (s *projects) SecuritycenterProjectsSourcesFindingsSetState(ctx context.Con
 // SecuritycenterProjectsSourcesList - Lists all sources belonging to an organization.
 func (s *projects) SecuritycenterProjectsSourcesList(ctx context.Context, request operations.SecuritycenterProjectsSourcesListRequest, security operations.SecuritycenterProjectsSourcesListSecurity) (*operations.SecuritycenterProjectsSourcesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

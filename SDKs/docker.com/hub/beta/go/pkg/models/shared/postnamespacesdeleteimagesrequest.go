@@ -15,19 +15,23 @@ const (
 	PostNamespacesDeleteImagesRequestIgnoreWarningsWarningEnumCurrentTag PostNamespacesDeleteImagesRequestIgnoreWarningsWarningEnum = "current_tag"
 )
 
+func (e PostNamespacesDeleteImagesRequestIgnoreWarningsWarningEnum) ToPointer() *PostNamespacesDeleteImagesRequestIgnoreWarningsWarningEnum {
+	return &e
+}
+
 func (e *PostNamespacesDeleteImagesRequestIgnoreWarningsWarningEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "is_active":
 		fallthrough
 	case "current_tag":
-		*e = PostNamespacesDeleteImagesRequestIgnoreWarningsWarningEnum(s)
+		*e = PostNamespacesDeleteImagesRequestIgnoreWarningsWarningEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostNamespacesDeleteImagesRequestIgnoreWarningsWarningEnum: %s", s)
+		return fmt.Errorf("invalid value for PostNamespacesDeleteImagesRequestIgnoreWarningsWarningEnum: %v", v)
 	}
 }
 

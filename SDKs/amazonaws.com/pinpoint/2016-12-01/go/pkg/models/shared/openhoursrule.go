@@ -2,7 +2,7 @@
 
 package shared
 
-// OpenHoursRule - List of OpenHours Rules.
+// OpenHoursRule - Specifies the start and end time for OpenHours.
 type OpenHoursRule struct {
 	EndTime   *string `json:"EndTime,omitempty"`
 	StartTime *string `json:"StartTime,omitempty"`

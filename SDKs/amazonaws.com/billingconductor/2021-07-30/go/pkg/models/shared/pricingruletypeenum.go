@@ -15,20 +15,24 @@ const (
 	PricingRuleTypeEnumTiering  PricingRuleTypeEnum = "TIERING"
 )
 
+func (e PricingRuleTypeEnum) ToPointer() *PricingRuleTypeEnum {
+	return &e
+}
+
 func (e *PricingRuleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MARKUP":
 		fallthrough
 	case "DISCOUNT":
 		fallthrough
 	case "TIERING":
-		*e = PricingRuleTypeEnum(s)
+		*e = PricingRuleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PricingRuleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PricingRuleTypeEnum: %v", v)
 	}
 }

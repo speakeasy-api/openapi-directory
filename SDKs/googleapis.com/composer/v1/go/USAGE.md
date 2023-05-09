@@ -2,98 +2,99 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ComposerProjectsLocationsEnvironmentsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.ComposerProjectsLocationsEnvironmentsCreate(ctx, operations.ComposerProjectsLocationsEnvironmentsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         EnvironmentInput: &shared.EnvironmentInput{
             Config: &shared.EnvironmentConfigInput{
-                AirflowURI: "provident",
-                DagGcsPrefix: "distinctio",
+                AirflowURI: sdk.String("provident"),
+                DagGcsPrefix: sdk.String("distinctio"),
                 DatabaseConfig: &shared.DatabaseConfig{
-                    MachineType: "quibusdam",
+                    MachineType: sdk.String("quibusdam"),
                 },
                 EncryptionConfig: &shared.EncryptionConfig{
-                    KmsKeyName: "unde",
+                    KmsKeyName: sdk.String("unde"),
                 },
-                EnvironmentSize: "ENVIRONMENT_SIZE_LARGE",
-                GkeCluster: "corrupti",
+                EnvironmentSize: shared.EnvironmentConfigEnvironmentSizeEnumEnvironmentSizeLarge.ToPointer(),
+                GkeCluster: sdk.String("corrupti"),
                 MaintenanceWindow: &shared.MaintenanceWindow{
-                    EndTime: "illum",
-                    Recurrence: "vel",
-                    StartTime: "error",
+                    EndTime: sdk.String("illum"),
+                    Recurrence: sdk.String("vel"),
+                    StartTime: sdk.String("error"),
                 },
                 MasterAuthorizedNetworksConfig: &shared.MasterAuthorizedNetworksConfig{
                     CidrBlocks: []shared.CidrBlock{
                         shared.CidrBlock{
-                            CidrBlock: "suscipit",
-                            DisplayName: "iure",
+                            CidrBlock: sdk.String("suscipit"),
+                            DisplayName: sdk.String("iure"),
                         },
                         shared.CidrBlock{
-                            CidrBlock: "magnam",
-                            DisplayName: "debitis",
+                            CidrBlock: sdk.String("magnam"),
+                            DisplayName: sdk.String("debitis"),
                         },
                         shared.CidrBlock{
-                            CidrBlock: "ipsa",
-                            DisplayName: "delectus",
+                            CidrBlock: sdk.String("ipsa"),
+                            DisplayName: sdk.String("delectus"),
                         },
                     },
-                    Enabled: false,
+                    Enabled: sdk.Bool(false),
                 },
                 NodeConfig: &shared.NodeConfig{
-                    DiskSizeGb: 272656,
-                    EnableIPMasqAgent: false,
+                    DiskSizeGb: sdk.Int(272656),
+                    EnableIPMasqAgent: sdk.Bool(false),
                     IPAllocationPolicy: &shared.IPAllocationPolicy{
-                        ClusterIpv4CidrBlock: "suscipit",
-                        ClusterSecondaryRangeName: "molestiae",
-                        ServicesIpv4CidrBlock: "minus",
-                        ServicesSecondaryRangeName: "placeat",
-                        UseIPAliases: false,
+                        ClusterIpv4CidrBlock: sdk.String("suscipit"),
+                        ClusterSecondaryRangeName: sdk.String("molestiae"),
+                        ServicesIpv4CidrBlock: sdk.String("minus"),
+                        ServicesSecondaryRangeName: sdk.String("placeat"),
+                        UseIPAliases: sdk.Bool(false),
                     },
-                    Location: "voluptatum",
-                    MachineType: "iusto",
-                    Network: "excepturi",
+                    Location: sdk.String("voluptatum"),
+                    MachineType: sdk.String("iusto"),
+                    Network: sdk.String("excepturi"),
                     OauthScopes: []string{
                         "recusandae",
                         "temporibus",
                     },
-                    ServiceAccount: "ab",
-                    Subnetwork: "quis",
+                    ServiceAccount: sdk.String("ab"),
+                    Subnetwork: sdk.String("quis"),
                     Tags: []string{
                         "deserunt",
                     },
                 },
-                NodeCount: 20218,
+                NodeCount: sdk.Int(20218),
                 PrivateEnvironmentConfig: &shared.PrivateEnvironmentConfigInput{
-                    CloudComposerConnectionSubnetwork: "ipsam",
-                    CloudComposerNetworkIpv4CidrBlock: "repellendus",
-                    CloudSQLIpv4CidrBlock: "sapiente",
-                    EnablePrivateEnvironment: false,
-                    EnablePrivatelyUsedPublicIps: false,
+                    CloudComposerConnectionSubnetwork: sdk.String("ipsam"),
+                    CloudComposerNetworkIpv4CidrBlock: sdk.String("repellendus"),
+                    CloudSQLIpv4CidrBlock: sdk.String("sapiente"),
+                    EnablePrivateEnvironment: sdk.Bool(false),
+                    EnablePrivatelyUsedPublicIps: sdk.Bool(false),
                     NetworkingConfig: &shared.NetworkingConfig{
-                        ConnectionType: "PRIVATE_SERVICE_CONNECT",
+                        ConnectionType: shared.NetworkingConfigConnectionTypeEnumPrivateServiceConnect.ToPointer(),
                     },
                     PrivateClusterConfig: &shared.PrivateClusterConfigInput{
-                        EnablePrivateEndpoint: false,
-                        MasterIpv4CidrBlock: "odit",
+                        EnablePrivateEndpoint: sdk.Bool(false),
+                        MasterIpv4CidrBlock: sdk.String("odit"),
                     },
-                    WebServerIpv4CidrBlock: "at",
+                    WebServerIpv4CidrBlock: sdk.String("at"),
                 },
                 RecoveryConfig: &shared.RecoveryConfig{
                     ScheduledSnapshotsConfig: &shared.ScheduledSnapshotsConfig{
-                        Enabled: false,
-                        SnapshotCreationSchedule: "at",
-                        SnapshotLocation: "maiores",
-                        TimeZone: "molestiae",
+                        Enabled: sdk.Bool(false),
+                        SnapshotCreationSchedule: sdk.String("at"),
+                        SnapshotLocation: sdk.String("maiores"),
+                        TimeZone: sdk.String("molestiae"),
                     },
                 },
                 SoftwareConfig: &shared.SoftwareConfig{
@@ -108,73 +109,70 @@ func main() {
                         "hic": "optio",
                         "totam": "beatae",
                     },
-                    ImageVersion: "commodi",
+                    ImageVersion: sdk.String("commodi"),
                     PypiPackages: map[string]string{
                         "modi": "qui",
                         "impedit": "cum",
                     },
-                    PythonVersion: "esse",
-                    SchedulerCount: 216550,
+                    PythonVersion: sdk.String("esse"),
+                    SchedulerCount: sdk.Int(216550),
                 },
                 WebServerConfig: &shared.WebServerConfig{
-                    MachineType: "excepturi",
+                    MachineType: sdk.String("excepturi"),
                 },
                 WebServerNetworkAccessControl: &shared.WebServerNetworkAccessControl{
                     AllowedIPRanges: []shared.AllowedIPRange{
                         shared.AllowedIPRange{
-                            Description: "perferendis",
-                            Value: "ad",
+                            Description: sdk.String("perferendis"),
+                            Value: sdk.String("ad"),
                         },
                     },
                 },
                 WorkloadsConfig: &shared.WorkloadsConfig{
                     Scheduler: &shared.SchedulerResource{
-                        Count: 617636,
-                        CPU: 1496.75,
-                        MemoryGb: 6120.96,
-                        StorageGb: 2223.21,
+                        Count: sdk.Int(617636),
+                        CPU: sdk.Float32(1496.75),
+                        MemoryGb: sdk.Float32(6120.96),
+                        StorageGb: sdk.Float32(2223.21),
                     },
                     WebServer: &shared.WebServerResource{
-                        CPU: 6169.34,
-                        MemoryGb: 3864.89,
-                        StorageGb: 9437.49,
+                        CPU: sdk.Float32(6169.34),
+                        MemoryGb: sdk.Float32(3864.89),
+                        StorageGb: sdk.Float32(9437.49),
                     },
                     Worker: &shared.WorkerResource{
-                        CPU: 9025.99,
-                        MaxCount: 681820,
-                        MemoryGb: 4499.5,
-                        MinCount: 359508,
-                        StorageGb: 6130.64,
+                        CPU: sdk.Float32(9025.99),
+                        MaxCount: sdk.Int(681820),
+                        MemoryGb: sdk.Float32(4499.5),
+                        MinCount: sdk.Int(359508),
+                        StorageGb: sdk.Float32(6130.64),
                     },
                 },
             },
-            CreateTime: "iure",
+            CreateTime: sdk.String("iure"),
             Labels: map[string]string{
                 "quidem": "architecto",
                 "ipsa": "reiciendis",
                 "est": "mollitia",
                 "laborum": "dolores",
             },
-            Name: "dolorem",
-            State: "RUNNING",
-            UpdateTime: "explicabo",
-            UUID: "c5955907-aff1-4a3a-afa9-467739251aa5",
+            Name: sdk.String("Stacy Champlin"),
+            State: shared.EnvironmentStateEnumUpdating.ToPointer(),
+            UpdateTime: sdk.String("nemo"),
+            UUID: sdk.String("5907aff1-a3a2-4fa9-8677-39251aa52c3f"),
         },
-        AccessToken: "odit",
-        Alt: "proto",
-        Callback: "sequi",
-        Fields: "tenetur",
-        Key: "ipsam",
-        OauthToken: "id",
-        Parent: "possimus",
-        PrettyPrint: false,
-        QuotaUser: "aut",
-        UploadType: "quasi",
-        UploadProtocol: "error",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.ComposerProjectsLocationsEnvironmentsCreate(ctx, req, operations.ComposerProjectsLocationsEnvironmentsCreateSecurity{
+        AccessToken: sdk.String("ipsam"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("possimus"),
+        Fields: sdk.String("aut"),
+        Key: sdk.String("quasi"),
+        OauthToken: sdk.String("error"),
+        Parent: "temporibus",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("laborum"),
+        UploadType: sdk.String("quasi"),
+        UploadProtocol: sdk.String("reiciendis"),
+    }, operations.ComposerProjectsLocationsEnvironmentsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

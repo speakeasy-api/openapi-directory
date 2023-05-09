@@ -13,33 +13,30 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/authentiq.io/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AuthorizeRequest{
+    ctx := context.Background()
+    res, err := s.Authentication.Authorize(ctx, operations.AuthorizeRequest{
         ClientID: "corrupti",
-        Display: "provident",
-        MaxAge: 715190,
-        Nonce: "quibusdam",
-        Prompt: "unde",
+        Display: sdk.String("provident"),
+        MaxAge: sdk.Int64(715190),
+        Nonce: sdk.String("quibusdam"),
+        Prompt: sdk.String("unde"),
         RedirectURI: "nulla",
-        ResponseMode: "corrupti",
+        ResponseMode: sdk.String("corrupti"),
         ResponseType: "illum",
         Scope: "vel",
         State: "error",
-        UILocales: "deserunt",
-    }
-
-    ctx := context.Background()
-    res, err := s.Authentication.Authorize(ctx, req)
+        UILocales: sdk.String("deserunt"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,23 +52,23 @@ func main() {
 ## Available Resources and Operations
 
 
-### Authentication
+### [Authentication](docs/authentication/README.md)
 
-* `Authorize` - Authenticate a user
-* `Token` - Obtain an ID Token
-* `UserInfo` - Retrieve a user profile
+* [Authorize](docs/authentication/README.md#authorize) - Authenticate a user
+* [Token](docs/authentication/README.md#token) - Obtain an ID Token
+* [UserInfo](docs/authentication/README.md#userinfo) - Retrieve a user profile
 
-### ClientManagement
+### [ClientManagement](docs/clientmanagement/README.md)
 
-* `Client` - List clients
-* `ClientClientID` - Delete a client
-* `CreateClient` - Register a client
-* `GetClient` - View a client
-* `UpdateClient` - Update a client
+* [Client](docs/clientmanagement/README.md#client) - List clients
+* [ClientClientID](docs/clientmanagement/README.md#clientclientid) - Delete a client
+* [CreateClient](docs/clientmanagement/README.md#createclient) - Register a client
+* [GetClient](docs/clientmanagement/README.md#getclient) - View a client
+* [UpdateClient](docs/clientmanagement/README.md#updateclient) - Update a client
 
-### SessionManagement
+### [SessionManagement](docs/sessionmanagement/README.md)
 
-* `AuthorizeIframe` - Include a session iframe
+* [AuthorizeIframe](docs/sessionmanagement/README.md#authorizeiframe) - Include a session iframe
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,17 +16,21 @@ const (
 	PutDataProtectionPolicyXAmzTargetEnumLogs20140328PutDataProtectionPolicy PutDataProtectionPolicyXAmzTargetEnum = "Logs_20140328.PutDataProtectionPolicy"
 )
 
+func (e PutDataProtectionPolicyXAmzTargetEnum) ToPointer() *PutDataProtectionPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutDataProtectionPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.PutDataProtectionPolicy":
-		*e = PutDataProtectionPolicyXAmzTargetEnum(s)
+		*e = PutDataProtectionPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutDataProtectionPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutDataProtectionPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GkehubProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) GkehubProjectsLocationsList(ctx context.Context, request operations.GkehubProjectsLocationsListRequest, security operations.GkehubProjectsLocationsListSecurity) (*operations.GkehubProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) GkehubProjectsLocationsList(ctx context.Context, request oper
 // GkehubProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) GkehubProjectsLocationsOperationsCancel(ctx context.Context, request operations.GkehubProjectsLocationsOperationsCancelRequest, security operations.GkehubProjectsLocationsOperationsCancelSecurity) (*operations.GkehubProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) GkehubProjectsLocationsOperationsCancel(ctx context.Context, 
 // GkehubProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) GkehubProjectsLocationsOperationsGet(ctx context.Context, request operations.GkehubProjectsLocationsOperationsGetRequest, security operations.GkehubProjectsLocationsOperationsGetSecurity) (*operations.GkehubProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) GkehubProjectsLocationsOperationsGet(ctx context.Context, req
 // GkehubProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) GkehubProjectsLocationsOperationsList(ctx context.Context, request operations.GkehubProjectsLocationsOperationsListRequest, security operations.GkehubProjectsLocationsOperationsListSecurity) (*operations.GkehubProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

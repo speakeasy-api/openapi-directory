@@ -18,12 +18,16 @@ const (
 	ExportTaskStatusCodeEnumRunning       ExportTaskStatusCodeEnum = "RUNNING"
 )
 
+func (e ExportTaskStatusCodeEnum) ToPointer() *ExportTaskStatusCodeEnum {
+	return &e
+}
+
 func (e *ExportTaskStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANCELLED":
 		fallthrough
 	case "COMPLETED":
@@ -35,9 +39,9 @@ func (e *ExportTaskStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING_CANCEL":
 		fallthrough
 	case "RUNNING":
-		*e = ExportTaskStatusCodeEnum(s)
+		*e = ExportTaskStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportTaskStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportTaskStatusCodeEnum: %v", v)
 	}
 }

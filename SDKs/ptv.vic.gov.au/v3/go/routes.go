@@ -124,7 +124,10 @@ func (s *routes) RoutesOneOrMoreRoutes(ctx context.Context, request operations.R
 // RoutesRouteFromID - View route name and number for specific route ID
 func (s *routes) RoutesRouteFromID(ctx context.Context, request operations.RoutesRouteFromIDRequest) (*operations.RoutesRouteFromIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/routes/{route_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/routes/{route_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

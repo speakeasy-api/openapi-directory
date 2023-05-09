@@ -28,17 +28,21 @@ const (
 	PfdawRequestBodyFormatEnumPdf PfdawRequestBodyFormatEnum = "pdf"
 )
 
+func (e PfdawRequestBodyFormatEnum) ToPointer() *PfdawRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *PfdawRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = PfdawRequestBodyFormatEnum(s)
+		*e = PfdawRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PfdawRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PfdawRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -58,17 +62,21 @@ const (
 	Pfdaw504ApplicationJSONErrorEnumGatewayTimeout Pfdaw504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Pfdaw504ApplicationJSONErrorEnum) ToPointer() *Pfdaw504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Pfdaw504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Pfdaw504ApplicationJSONErrorEnum(s)
+		*e = Pfdaw504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -78,17 +86,21 @@ const (
 	Pfdaw504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Pfdaw504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Pfdaw504ApplicationJSONErrorDescriptionEnum) ToPointer() *Pfdaw504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Pfdaw504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Pfdaw504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Pfdaw504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -104,17 +116,21 @@ const (
 	Pfdaw503ApplicationJSONErrorEnumServiceUnavailable Pfdaw503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Pfdaw503ApplicationJSONErrorEnum) ToPointer() *Pfdaw503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Pfdaw503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Pfdaw503ApplicationJSONErrorEnum(s)
+		*e = Pfdaw503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -124,17 +140,21 @@ const (
 	Pfdaw503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Pfdaw503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Pfdaw503ApplicationJSONErrorDescriptionEnum) ToPointer() *Pfdaw503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Pfdaw503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Pfdaw503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Pfdaw503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -150,17 +170,21 @@ const (
 	Pfdaw502ApplicationJSONErrorEnumBadGatewy Pfdaw502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Pfdaw502ApplicationJSONErrorEnum) ToPointer() *Pfdaw502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Pfdaw502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Pfdaw502ApplicationJSONErrorEnum(s)
+		*e = Pfdaw502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -170,17 +194,21 @@ const (
 	Pfdaw502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Pfdaw502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Pfdaw502ApplicationJSONErrorDescriptionEnum) ToPointer() *Pfdaw502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Pfdaw502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Pfdaw502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Pfdaw502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -196,17 +224,21 @@ const (
 	Pfdaw500ApplicationJSONErrorEnumInternalServerError Pfdaw500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Pfdaw500ApplicationJSONErrorEnum) ToPointer() *Pfdaw500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Pfdaw500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Pfdaw500ApplicationJSONErrorEnum(s)
+		*e = Pfdaw500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -216,17 +248,21 @@ const (
 	Pfdaw500ApplicationJSONErrorDescriptionEnumInternalServerError Pfdaw500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Pfdaw500ApplicationJSONErrorDescriptionEnum) ToPointer() *Pfdaw500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Pfdaw500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Pfdaw500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Pfdaw500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -243,19 +279,23 @@ const (
 	Pfdaw404ApplicationJSONErrorEnumURLNotFound    Pfdaw404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Pfdaw404ApplicationJSONErrorEnum) ToPointer() *Pfdaw404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Pfdaw404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Pfdaw404ApplicationJSONErrorEnum(s)
+		*e = Pfdaw404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -266,19 +306,23 @@ const (
 	Pfdaw404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Pfdaw404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Pfdaw404ApplicationJSONErrorDescriptionEnum) ToPointer() *Pfdaw404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Pfdaw404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Pfdaw404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Pfdaw404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -295,19 +339,23 @@ const (
 	Pfdaw401ApplicationJSONErrorEnumInvalidAuthorization  Pfdaw401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Pfdaw401ApplicationJSONErrorEnum) ToPointer() *Pfdaw401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Pfdaw401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Pfdaw401ApplicationJSONErrorEnum(s)
+		*e = Pfdaw401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -318,19 +366,23 @@ const (
 	Pfdaw401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Pfdaw401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Pfdaw401ApplicationJSONErrorDescriptionEnum) ToPointer() *Pfdaw401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Pfdaw401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Pfdaw401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Pfdaw401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -350,12 +402,16 @@ const (
 	Pfdaw400ApplicationJSONErrorEnumInvalidConsentid Pfdaw400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Pfdaw400ApplicationJSONErrorEnum) ToPointer() *Pfdaw400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Pfdaw400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -365,10 +421,10 @@ func (e *Pfdaw400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Pfdaw400ApplicationJSONErrorEnum(s)
+		*e = Pfdaw400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -382,12 +438,16 @@ const (
 	Pfdaw400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Pfdaw400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Pfdaw400ApplicationJSONErrorDescriptionEnum) ToPointer() *Pfdaw400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Pfdaw400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -397,10 +457,10 @@ func (e *Pfdaw400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Pfdaw400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Pfdaw400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Pfdaw400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Pfdaw400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

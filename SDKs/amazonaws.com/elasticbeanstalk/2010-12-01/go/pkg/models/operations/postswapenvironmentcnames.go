@@ -15,17 +15,21 @@ const (
 	POSTSwapEnvironmentCNAMEsActionEnumSwapEnvironmentCnamEs POSTSwapEnvironmentCNAMEsActionEnum = "SwapEnvironmentCNAMEs"
 )
 
+func (e POSTSwapEnvironmentCNAMEsActionEnum) ToPointer() *POSTSwapEnvironmentCNAMEsActionEnum {
+	return &e
+}
+
 func (e *POSTSwapEnvironmentCNAMEsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SwapEnvironmentCNAMEs":
-		*e = POSTSwapEnvironmentCNAMEsActionEnum(s)
+		*e = POSTSwapEnvironmentCNAMEsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSwapEnvironmentCNAMEsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSwapEnvironmentCNAMEsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSwapEnvironmentCNAMEsVersionEnumTwoThousandAndTen1201 POSTSwapEnvironmentCNAMEsVersionEnum = "2010-12-01"
 )
 
+func (e POSTSwapEnvironmentCNAMEsVersionEnum) ToPointer() *POSTSwapEnvironmentCNAMEsVersionEnum {
+	return &e
+}
+
 func (e *POSTSwapEnvironmentCNAMEsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTSwapEnvironmentCNAMEsVersionEnum(s)
+		*e = POSTSwapEnvironmentCNAMEsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSwapEnvironmentCNAMEsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSwapEnvironmentCNAMEsVersionEnum: %v", v)
 	}
 }
 

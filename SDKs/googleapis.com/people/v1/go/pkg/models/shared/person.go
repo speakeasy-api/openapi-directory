@@ -17,12 +17,16 @@ const (
 	PersonAgeRangeEnumTwentyOneOrOlder    PersonAgeRangeEnum = "TWENTY_ONE_OR_OLDER"
 )
 
+func (e PersonAgeRangeEnum) ToPointer() *PersonAgeRangeEnum {
+	return &e
+}
+
 func (e *PersonAgeRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGE_RANGE_UNSPECIFIED":
 		fallthrough
 	case "LESS_THAN_EIGHTEEN":
@@ -30,10 +34,10 @@ func (e *PersonAgeRangeEnum) UnmarshalJSON(data []byte) error {
 	case "EIGHTEEN_TO_TWENTY":
 		fallthrough
 	case "TWENTY_ONE_OR_OLDER":
-		*e = PersonAgeRangeEnum(s)
+		*e = PersonAgeRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PersonAgeRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for PersonAgeRangeEnum: %v", v)
 	}
 }
 

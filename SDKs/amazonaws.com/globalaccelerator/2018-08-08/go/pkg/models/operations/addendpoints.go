@@ -16,17 +16,21 @@ const (
 	AddEndpointsXAmzTargetEnumGlobalAcceleratorV20180706AddEndpoints AddEndpointsXAmzTargetEnum = "GlobalAccelerator_V20180706.AddEndpoints"
 )
 
+func (e AddEndpointsXAmzTargetEnum) ToPointer() *AddEndpointsXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddEndpointsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.AddEndpoints":
-		*e = AddEndpointsXAmzTargetEnum(s)
+		*e = AddEndpointsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddEndpointsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddEndpointsXAmzTargetEnum: %v", v)
 	}
 }
 

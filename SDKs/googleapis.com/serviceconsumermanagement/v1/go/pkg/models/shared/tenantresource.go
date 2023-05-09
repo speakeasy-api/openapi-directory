@@ -19,12 +19,16 @@ const (
 	TenantResourceStatusEnumDeleted           TenantResourceStatusEnum = "DELETED"
 )
 
+func (e TenantResourceStatusEnum) ToPointer() *TenantResourceStatusEnum {
+	return &e
+}
+
 func (e *TenantResourceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "PENDING_CREATE":
@@ -36,10 +40,10 @@ func (e *TenantResourceStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "DELETED":
-		*e = TenantResourceStatusEnum(s)
+		*e = TenantResourceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TenantResourceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TenantResourceStatusEnum: %v", v)
 	}
 }
 

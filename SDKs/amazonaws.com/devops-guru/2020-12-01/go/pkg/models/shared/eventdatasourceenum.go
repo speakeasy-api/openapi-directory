@@ -14,18 +14,22 @@ const (
 	EventDataSourceEnumAwsCodeDeploy EventDataSourceEnum = "AWS_CODE_DEPLOY"
 )
 
+func (e EventDataSourceEnum) ToPointer() *EventDataSourceEnum {
+	return &e
+}
+
 func (e *EventDataSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_CLOUD_TRAIL":
 		fallthrough
 	case "AWS_CODE_DEPLOY":
-		*e = EventDataSourceEnum(s)
+		*e = EventDataSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventDataSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for EventDataSourceEnum: %v", v)
 	}
 }

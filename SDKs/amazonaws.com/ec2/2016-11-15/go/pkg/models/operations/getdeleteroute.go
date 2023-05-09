@@ -15,17 +15,21 @@ const (
 	GETDeleteRouteActionEnumDeleteRoute GETDeleteRouteActionEnum = "DeleteRoute"
 )
 
+func (e GETDeleteRouteActionEnum) ToPointer() *GETDeleteRouteActionEnum {
+	return &e
+}
+
 func (e *GETDeleteRouteActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteRoute":
-		*e = GETDeleteRouteActionEnum(s)
+		*e = GETDeleteRouteActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteRouteActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteRouteActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteRouteVersionEnumTwoThousandAndSixteen1115 GETDeleteRouteVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteRouteVersionEnum) ToPointer() *GETDeleteRouteVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteRouteVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteRouteVersionEnum(s)
+		*e = GETDeleteRouteVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteRouteVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteRouteVersionEnum: %v", v)
 	}
 }
 

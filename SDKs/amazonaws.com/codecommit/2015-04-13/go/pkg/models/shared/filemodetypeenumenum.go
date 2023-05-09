@@ -15,20 +15,24 @@ const (
 	FileModeTypeEnumEnumSymlink    FileModeTypeEnumEnum = "SYMLINK"
 )
 
+func (e FileModeTypeEnumEnum) ToPointer() *FileModeTypeEnumEnum {
+	return &e
+}
+
 func (e *FileModeTypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXECUTABLE":
 		fallthrough
 	case "NORMAL":
 		fallthrough
 	case "SYMLINK":
-		*e = FileModeTypeEnumEnum(s)
+		*e = FileModeTypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileModeTypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for FileModeTypeEnumEnum: %v", v)
 	}
 }

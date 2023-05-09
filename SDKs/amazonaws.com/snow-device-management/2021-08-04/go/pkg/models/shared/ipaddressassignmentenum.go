@@ -14,18 +14,22 @@ const (
 	IPAddressAssignmentEnumStatic IPAddressAssignmentEnum = "STATIC"
 )
 
+func (e IPAddressAssignmentEnum) ToPointer() *IPAddressAssignmentEnum {
+	return &e
+}
+
 func (e *IPAddressAssignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DHCP":
 		fallthrough
 	case "STATIC":
-		*e = IPAddressAssignmentEnum(s)
+		*e = IPAddressAssignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IPAddressAssignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for IPAddressAssignmentEnum: %v", v)
 	}
 }

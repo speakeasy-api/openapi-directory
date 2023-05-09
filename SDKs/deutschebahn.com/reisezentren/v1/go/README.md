@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/deutschebahn.com/reisezen
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetReisezentrenRequest{
-        Name: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetReisezentren(ctx, req)
+    res, err := s.GetReisezentren(ctx, operations.GetReisezentrenRequest{
+        Name: sdk.String("Terrence Rau"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -44,12 +41,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetReisezentren` - Get all station infos
-* `GetReisezentrenLocLatLon` - Get information about a station near a location
-* `GetReisezentrenLocLatLonDist` - Get stations in a given radius
-* `GetReisezentrenID` - Get information about a specific station
+* [GetReisezentren](docs/sdk/README.md#getreisezentren) - Get all station infos
+* [GetReisezentrenLocLatLon](docs/sdk/README.md#getreisezentrenloclatlon) - Get information about a station near a location
+* [GetReisezentrenLocLatLonDist](docs/sdk/README.md#getreisezentrenloclatlondist) - Get stations in a given radius
+* [GetReisezentrenID](docs/sdk/README.md#getreisezentrenid) - Get information about a specific station
 <!-- End SDK Available Operations -->
 
 ### Maturity

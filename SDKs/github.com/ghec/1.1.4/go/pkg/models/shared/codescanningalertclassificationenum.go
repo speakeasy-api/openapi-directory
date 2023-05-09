@@ -17,12 +17,16 @@ const (
 	CodeScanningAlertClassificationEnumLibrary   CodeScanningAlertClassificationEnum = "library"
 )
 
+func (e CodeScanningAlertClassificationEnum) ToPointer() *CodeScanningAlertClassificationEnum {
+	return &e
+}
+
 func (e *CodeScanningAlertClassificationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "source":
 		fallthrough
 	case "generated":
@@ -30,9 +34,9 @@ func (e *CodeScanningAlertClassificationEnum) UnmarshalJSON(data []byte) error {
 	case "test":
 		fallthrough
 	case "library":
-		*e = CodeScanningAlertClassificationEnum(s)
+		*e = CodeScanningAlertClassificationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodeScanningAlertClassificationEnum: %s", s)
+		return fmt.Errorf("invalid value for CodeScanningAlertClassificationEnum: %v", v)
 	}
 }

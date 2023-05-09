@@ -15,20 +15,24 @@ const (
 	LastCrawlStatusEnumFailed    LastCrawlStatusEnum = "FAILED"
 )
 
+func (e LastCrawlStatusEnum) ToPointer() *LastCrawlStatusEnum {
+	return &e
+}
+
 func (e *LastCrawlStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCEEDED":
 		fallthrough
 	case "CANCELLED":
 		fallthrough
 	case "FAILED":
-		*e = LastCrawlStatusEnum(s)
+		*e = LastCrawlStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LastCrawlStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LastCrawlStatusEnum: %v", v)
 	}
 }

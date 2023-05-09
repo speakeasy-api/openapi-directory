@@ -14,18 +14,22 @@ const (
 	DiscoveryTypeEnumAccountBased       DiscoveryTypeEnum = "ACCOUNT_BASED"
 )
 
+func (e DiscoveryTypeEnum) ToPointer() *DiscoveryTypeEnum {
+	return &e
+}
+
 func (e *DiscoveryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE_GROUP_BASED":
 		fallthrough
 	case "ACCOUNT_BASED":
-		*e = DiscoveryTypeEnum(s)
+		*e = DiscoveryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiscoveryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DiscoveryTypeEnum: %v", v)
 	}
 }

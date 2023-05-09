@@ -18,12 +18,16 @@ const (
 	DomainNameConfigurationDomainNameStatusEnumPendingOwnershipVerification DomainNameConfigurationDomainNameStatusEnum = "PENDING_OWNERSHIP_VERIFICATION"
 )
 
+func (e DomainNameConfigurationDomainNameStatusEnum) ToPointer() *DomainNameConfigurationDomainNameStatusEnum {
+	return &e
+}
+
 func (e *DomainNameConfigurationDomainNameStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "UPDATING":
@@ -31,10 +35,10 @@ func (e *DomainNameConfigurationDomainNameStatusEnum) UnmarshalJSON(data []byte)
 	case "PENDING_CERTIFICATE_REIMPORT":
 		fallthrough
 	case "PENDING_OWNERSHIP_VERIFICATION":
-		*e = DomainNameConfigurationDomainNameStatusEnum(s)
+		*e = DomainNameConfigurationDomainNameStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainNameConfigurationDomainNameStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainNameConfigurationDomainNameStatusEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	DomainNameConfigurationEndpointTypeEnumEdge     DomainNameConfigurationEndpointTypeEnum = "EDGE"
 )
 
+func (e DomainNameConfigurationEndpointTypeEnum) ToPointer() *DomainNameConfigurationEndpointTypeEnum {
+	return &e
+}
+
 func (e *DomainNameConfigurationEndpointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGIONAL":
 		fallthrough
 	case "EDGE":
-		*e = DomainNameConfigurationEndpointTypeEnum(s)
+		*e = DomainNameConfigurationEndpointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainNameConfigurationEndpointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainNameConfigurationEndpointTypeEnum: %v", v)
 	}
 }
 
@@ -70,19 +78,23 @@ const (
 	DomainNameConfigurationSecurityPolicyEnumTls12 DomainNameConfigurationSecurityPolicyEnum = "TLS_1_2"
 )
 
+func (e DomainNameConfigurationSecurityPolicyEnum) ToPointer() *DomainNameConfigurationSecurityPolicyEnum {
+	return &e
+}
+
 func (e *DomainNameConfigurationSecurityPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TLS_1_0":
 		fallthrough
 	case "TLS_1_2":
-		*e = DomainNameConfigurationSecurityPolicyEnum(s)
+		*e = DomainNameConfigurationSecurityPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainNameConfigurationSecurityPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainNameConfigurationSecurityPolicyEnum: %v", v)
 	}
 }
 

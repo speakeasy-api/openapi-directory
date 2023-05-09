@@ -14,18 +14,22 @@ const (
 	MtimeEnumPreserve MtimeEnum = "PRESERVE"
 )
 
+func (e MtimeEnum) ToPointer() *MtimeEnum {
+	return &e
+}
+
 func (e *MtimeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "PRESERVE":
-		*e = MtimeEnum(s)
+		*e = MtimeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MtimeEnum: %s", s)
+		return fmt.Errorf("invalid value for MtimeEnum: %v", v)
 	}
 }

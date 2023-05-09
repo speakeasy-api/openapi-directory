@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type ListVcentersSecurity struct {
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+}
+
 type ListVcentersResponse struct {
 	ContentType string
 	// OK

@@ -16,17 +16,21 @@ const (
 	ReloadTablesXAmzTargetEnumAmazonDmSv20160101ReloadTables ReloadTablesXAmzTargetEnum = "AmazonDMSv20160101.ReloadTables"
 )
 
+func (e ReloadTablesXAmzTargetEnum) ToPointer() *ReloadTablesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ReloadTablesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.ReloadTables":
-		*e = ReloadTablesXAmzTargetEnum(s)
+		*e = ReloadTablesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReloadTablesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ReloadTablesXAmzTargetEnum: %v", v)
 	}
 }
 

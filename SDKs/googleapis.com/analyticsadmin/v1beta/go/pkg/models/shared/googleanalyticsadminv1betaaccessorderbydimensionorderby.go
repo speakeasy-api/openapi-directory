@@ -17,12 +17,16 @@ const (
 	GoogleAnalyticsAdminV1betaAccessOrderByDimensionOrderByOrderTypeEnumNumeric                     GoogleAnalyticsAdminV1betaAccessOrderByDimensionOrderByOrderTypeEnum = "NUMERIC"
 )
 
+func (e GoogleAnalyticsAdminV1betaAccessOrderByDimensionOrderByOrderTypeEnum) ToPointer() *GoogleAnalyticsAdminV1betaAccessOrderByDimensionOrderByOrderTypeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1betaAccessOrderByDimensionOrderByOrderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORDER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ALPHANUMERIC":
@@ -30,10 +34,10 @@ func (e *GoogleAnalyticsAdminV1betaAccessOrderByDimensionOrderByOrderTypeEnum) U
 	case "CASE_INSENSITIVE_ALPHANUMERIC":
 		fallthrough
 	case "NUMERIC":
-		*e = GoogleAnalyticsAdminV1betaAccessOrderByDimensionOrderByOrderTypeEnum(s)
+		*e = GoogleAnalyticsAdminV1betaAccessOrderByDimensionOrderByOrderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaAccessOrderByDimensionOrderByOrderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaAccessOrderByDimensionOrderByOrderTypeEnum: %v", v)
 	}
 }
 

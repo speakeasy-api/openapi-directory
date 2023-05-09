@@ -2,29 +2,26 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ExtensionConfigurationRequest{
+    ctx := context.Background()
+    res, err := s.Config.ExtensionConfiguration(ctx, operations.ExtensionConfigurationRequest{
         AcceptLanguage: "corrupti",
         CacheControl: "provident",
-        IfNoneMatch: "distinctio",
+        IfNoneMatch: sdk.String("distinctio"),
         RequestTimeout: 8442.66,
         UserAgent: "unde",
-        XApplecloudextensionRetryCount: 8579.46,
+        XApplecloudextensionRetryCount: sdk.Float64(8579.46),
         XApplecloudextensionSessionID: "corrupti",
-    }
-
-    ctx := context.Background()
-    res, err := s.Config.ExtensionConfiguration(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

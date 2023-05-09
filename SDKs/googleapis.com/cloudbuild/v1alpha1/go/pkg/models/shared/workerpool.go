@@ -17,12 +17,16 @@ const (
 	WorkerPoolRegionsEnumUsEast4           WorkerPoolRegionsEnum = "us-east4"
 )
 
+func (e WorkerPoolRegionsEnum) ToPointer() *WorkerPoolRegionsEnum {
+	return &e
+}
+
 func (e *WorkerPoolRegionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGION_UNSPECIFIED":
 		fallthrough
 	case "us-central1":
@@ -32,10 +36,10 @@ func (e *WorkerPoolRegionsEnum) UnmarshalJSON(data []byte) error {
 	case "us-east1":
 		fallthrough
 	case "us-east4":
-		*e = WorkerPoolRegionsEnum(s)
+		*e = WorkerPoolRegionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkerPoolRegionsEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkerPoolRegionsEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	WorkerPoolStatusEnumDeleted           WorkerPoolStatusEnum = "DELETED"
 )
 
+func (e WorkerPoolStatusEnum) ToPointer() *WorkerPoolStatusEnum {
+	return &e
+}
+
 func (e *WorkerPoolStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -65,10 +73,10 @@ func (e *WorkerPoolStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "DELETED":
-		*e = WorkerPoolStatusEnum(s)
+		*e = WorkerPoolStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkerPoolStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkerPoolStatusEnum: %v", v)
 	}
 }
 

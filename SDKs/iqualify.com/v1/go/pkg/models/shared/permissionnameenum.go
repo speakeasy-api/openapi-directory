@@ -15,18 +15,22 @@ const (
 	PermissionNameEnumManager PermissionNameEnum = "manager"
 )
 
+func (e PermissionNameEnum) ToPointer() *PermissionNameEnum {
+	return &e
+}
+
 func (e *PermissionNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "builder":
 		fallthrough
 	case "manager":
-		*e = PermissionNameEnum(s)
+		*e = PermissionNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PermissionNameEnum: %s", s)
+		return fmt.Errorf("invalid value for PermissionNameEnum: %v", v)
 	}
 }

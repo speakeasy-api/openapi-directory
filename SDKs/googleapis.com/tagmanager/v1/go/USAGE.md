@@ -2,22 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TagmanagerAccountsContainersCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Accounts.TagmanagerAccountsContainersCreate(ctx, operations.TagmanagerAccountsContainersCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         Container: &shared.Container{
-            AccountID: "provident",
-            ContainerID: "distinctio",
+            AccountID: sdk.String("provident"),
+            ContainerID: sdk.String("distinctio"),
             DomainName: []string{
                 "unde",
                 "nulla",
@@ -25,35 +26,33 @@ func main() {
                 "illum",
             },
             EnabledBuiltInVariable: []shared.ContainerEnabledBuiltInVariableEnum{
-                "ampGtmEvent",
-                "firebaseEventParameterCampaign",
+                shared.ContainerEnabledBuiltInVariableEnumAmpGtmEvent,
+                shared.ContainerEnabledBuiltInVariableEnumFirebaseEventParameterCampaign,
             },
-            Fingerprint: "suscipit",
-            Name: "iure",
-            Notes: "magnam",
-            PublicID: "debitis",
-            TimeZoneCountryID: "ipsa",
-            TimeZoneID: "delectus",
+            Fingerprint: sdk.String("suscipit"),
+            Name: sdk.String("Dr. Valerie Toy"),
+            Notes: sdk.String("suscipit"),
+            PublicID: sdk.String("molestiae"),
+            TimeZoneCountryID: sdk.String("minus"),
+            TimeZoneID: sdk.String("placeat"),
             UsageContext: []shared.ContainerUsageContextEnum{
-                "ios",
-                "ios",
+                shared.ContainerUsageContextEnumIos,
+                shared.ContainerUsageContextEnumAndroidSdk5,
+                shared.ContainerUsageContextEnumIos,
             },
         },
-        AccessToken: "minus",
-        AccountID: "placeat",
-        Alt: "media",
-        Callback: "iusto",
-        Fields: "excepturi",
-        Key: "nisi",
-        OauthToken: "recusandae",
-        PrettyPrint: false,
-        QuotaUser: "temporibus",
-        UploadType: "ab",
-        UploadProtocol: "quis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.TagmanagerAccountsContainersCreate(ctx, req, operations.TagmanagerAccountsContainersCreateSecurity{
+        AccessToken: sdk.String("recusandae"),
+        AccountID: "temporibus",
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("quis"),
+        Fields: sdk.String("veritatis"),
+        Key: sdk.String("deserunt"),
+        OauthToken: sdk.String("perferendis"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("ipsam"),
+        UploadType: sdk.String("repellendus"),
+        UploadProtocol: sdk.String("sapiente"),
+    }, operations.TagmanagerAccountsContainersCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

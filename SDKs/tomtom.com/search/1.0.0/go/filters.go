@@ -33,7 +33,10 @@ func newFilters(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GetSearchVersionNumberGeometryFilterExt - Geometry Filter
 func (s *filters) GetSearchVersionNumberGeometryFilterExt(ctx context.Context, request operations.GetSearchVersionNumberGeometryFilterExtRequest) (*operations.GetSearchVersionNumberGeometryFilterExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geometryFilter.{ext}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geometryFilter.{ext}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -80,9 +83,14 @@ func (s *filters) GetSearchVersionNumberGeometryFilterExt(ctx context.Context, r
 }
 
 // GetSearchVersionNumberRoutedFilterPositionHeadingExt - Routed Filter
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *filters) GetSearchVersionNumberRoutedFilterPositionHeadingExt(ctx context.Context, request operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest) (*operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +139,10 @@ func (s *filters) GetSearchVersionNumberRoutedFilterPositionHeadingExt(ctx conte
 // PostSearchVersionNumberGeometryFilterExt - Geometry Filter
 func (s *filters) PostSearchVersionNumberGeometryFilterExt(ctx context.Context, request operations.PostSearchVersionNumberGeometryFilterExtRequest) (*operations.PostSearchVersionNumberGeometryFilterExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geometryFilter.{ext}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/geometryFilter.{ext}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -181,9 +192,14 @@ func (s *filters) PostSearchVersionNumberGeometryFilterExt(ctx context.Context, 
 }
 
 // PostSearchVersionNumberRoutedFilterPositionHeadingExt - Routed Filter
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *filters) PostSearchVersionNumberRoutedFilterPositionHeadingExt(ctx context.Context, request operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest) (*operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

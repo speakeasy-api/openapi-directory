@@ -16,17 +16,21 @@ const (
 	DescribeStatementXAmzTargetEnumRedshiftDataDescribeStatement DescribeStatementXAmzTargetEnum = "RedshiftData.DescribeStatement"
 )
 
+func (e DescribeStatementXAmzTargetEnum) ToPointer() *DescribeStatementXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeStatementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftData.DescribeStatement":
-		*e = DescribeStatementXAmzTargetEnum(s)
+		*e = DescribeStatementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeStatementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeStatementXAmzTargetEnum: %v", v)
 	}
 }
 

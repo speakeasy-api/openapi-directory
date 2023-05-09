@@ -17,12 +17,16 @@ const (
 	OpenInfoStatusEnumClosedTemporarily          OpenInfoStatusEnum = "CLOSED_TEMPORARILY"
 )
 
+func (e OpenInfoStatusEnum) ToPointer() *OpenInfoStatusEnum {
+	return &e
+}
+
 func (e *OpenInfoStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPEN_FOR_BUSINESS_UNSPECIFIED":
 		fallthrough
 	case "OPEN":
@@ -30,10 +34,10 @@ func (e *OpenInfoStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CLOSED_PERMANENTLY":
 		fallthrough
 	case "CLOSED_TEMPORARILY":
-		*e = OpenInfoStatusEnum(s)
+		*e = OpenInfoStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpenInfoStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OpenInfoStatusEnum: %v", v)
 	}
 }
 

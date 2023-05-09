@@ -35,7 +35,10 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // FirebasedynamiclinksGetLinkStats - Fetches analytics stats of a short Dynamic Link for a given duration. Metrics include number of clicks, redirects, installs, app first opens, and app reopens.
 func (s *v1) FirebasedynamiclinksGetLinkStats(ctx context.Context, request operations.FirebasedynamiclinksGetLinkStatsRequest, security operations.FirebasedynamiclinksGetLinkStatsSecurity) (*operations.FirebasedynamiclinksGetLinkStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{dynamicLink}/linkStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{dynamicLink}/linkStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	ListDomainsAttributeNameEnumExpiry     ListDomainsAttributeNameEnum = "Expiry"
 )
 
+func (e ListDomainsAttributeNameEnum) ToPointer() *ListDomainsAttributeNameEnum {
+	return &e
+}
+
 func (e *ListDomainsAttributeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DomainName":
 		fallthrough
 	case "Expiry":
-		*e = ListDomainsAttributeNameEnum(s)
+		*e = ListDomainsAttributeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDomainsAttributeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDomainsAttributeNameEnum: %v", v)
 	}
 }

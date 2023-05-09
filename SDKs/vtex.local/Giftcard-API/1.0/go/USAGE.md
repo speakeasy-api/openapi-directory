@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -18,24 +18,22 @@ func main() {
         }),
     )
 
-    req := operations.CreateGiftCardRequest{
+    ctx := context.Background()
+    res, err := s.GiftCard.CreateGiftCard(ctx, operations.CreateGiftCardRequest{
         Accept: "corrupti",
         ContentType: "provident",
         CreateGiftCardRequest: shared.CreateGiftCardRequest{
             Caption: "rewards program",
             ExpiringDate: "2020-09-01T13:15:30Z",
-            MultipleCredits: false,
-            MultipleRedemptions: false,
+            MultipleCredits: sdk.Bool(false),
+            MultipleRedemptions: sdk.Bool(false),
             ProfileID: "1234",
             RelationName: "insert example here",
-            RestrictedToOwner: false,
+            RestrictedToOwner: sdk.Bool(false),
         },
         XVTEXAPIAppKey: "distinctio",
         XVTEXAPIAppToken: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.GiftCard.CreateGiftCard(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

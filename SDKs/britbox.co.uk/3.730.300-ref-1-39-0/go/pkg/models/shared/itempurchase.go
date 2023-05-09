@@ -18,12 +18,16 @@ const (
 	ItemPurchaseOwnershipEnumNone         ItemPurchaseOwnershipEnum = "None"
 )
 
+func (e ItemPurchaseOwnershipEnum) ToPointer() *ItemPurchaseOwnershipEnum {
+	return &e
+}
+
 func (e *ItemPurchaseOwnershipEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Subscription":
 		fallthrough
 	case "Free":
@@ -33,10 +37,10 @@ func (e *ItemPurchaseOwnershipEnum) UnmarshalJSON(data []byte) error {
 	case "Own":
 		fallthrough
 	case "None":
-		*e = ItemPurchaseOwnershipEnum(s)
+		*e = ItemPurchaseOwnershipEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItemPurchaseOwnershipEnum: %s", s)
+		return fmt.Errorf("invalid value for ItemPurchaseOwnershipEnum: %v", v)
 	}
 }
 
@@ -52,12 +56,16 @@ const (
 	ItemPurchaseResolutionEnumUnknown  ItemPurchaseResolutionEnum = "Unknown"
 )
 
+func (e ItemPurchaseResolutionEnum) ToPointer() *ItemPurchaseResolutionEnum {
+	return &e
+}
+
 func (e *ItemPurchaseResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SD":
 		fallthrough
 	case "HD-720":
@@ -69,10 +77,10 @@ func (e *ItemPurchaseResolutionEnum) UnmarshalJSON(data []byte) error {
 	case "External":
 		fallthrough
 	case "Unknown":
-		*e = ItemPurchaseResolutionEnum(s)
+		*e = ItemPurchaseResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItemPurchaseResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for ItemPurchaseResolutionEnum: %v", v)
 	}
 }
 
@@ -91,12 +99,16 @@ const (
 	ItemPurchaseTypeEnumCustomAsset ItemPurchaseTypeEnum = "customAsset"
 )
 
+func (e ItemPurchaseTypeEnum) ToPointer() *ItemPurchaseTypeEnum {
+	return &e
+}
+
 func (e *ItemPurchaseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "movie":
 		fallthrough
 	case "show":
@@ -114,10 +126,10 @@ func (e *ItemPurchaseTypeEnum) UnmarshalJSON(data []byte) error {
 	case "channel":
 		fallthrough
 	case "customAsset":
-		*e = ItemPurchaseTypeEnum(s)
+		*e = ItemPurchaseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItemPurchaseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ItemPurchaseTypeEnum: %v", v)
 	}
 }
 

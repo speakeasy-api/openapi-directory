@@ -18,21 +18,25 @@ const (
 	GetElectionDatesOfficeSoughtEnumP GetElectionDatesOfficeSoughtEnum = "P"
 )
 
+func (e GetElectionDatesOfficeSoughtEnum) ToPointer() *GetElectionDatesOfficeSoughtEnum {
+	return &e
+}
+
 func (e *GetElectionDatesOfficeSoughtEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "H":
 		fallthrough
 	case "S":
 		fallthrough
 	case "P":
-		*e = GetElectionDatesOfficeSoughtEnum(s)
+		*e = GetElectionDatesOfficeSoughtEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetElectionDatesOfficeSoughtEnum: %s", s)
+		return fmt.Errorf("invalid value for GetElectionDatesOfficeSoughtEnum: %v", v)
 	}
 }
 

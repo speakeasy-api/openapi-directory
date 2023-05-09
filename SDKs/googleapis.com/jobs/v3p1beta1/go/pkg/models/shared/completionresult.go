@@ -17,12 +17,16 @@ const (
 	CompletionResultTypeEnumCombined                  CompletionResultTypeEnum = "COMBINED"
 )
 
+func (e CompletionResultTypeEnum) ToPointer() *CompletionResultTypeEnum {
+	return &e
+}
+
 func (e *CompletionResultTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "JOB_TITLE":
@@ -30,10 +34,10 @@ func (e *CompletionResultTypeEnum) UnmarshalJSON(data []byte) error {
 	case "COMPANY_NAME":
 		fallthrough
 	case "COMBINED":
-		*e = CompletionResultTypeEnum(s)
+		*e = CompletionResultTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompletionResultTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompletionResultTypeEnum: %v", v)
 	}
 }
 

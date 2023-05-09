@@ -28,7 +28,7 @@ type StartVectorEnrichmentJobRequestBody struct {
 	InputConfig StartVectorEnrichmentJobRequestBodyInputConfig `json:"InputConfig"`
 	// It contains configs such as ReverseGeocodingConfig and MapMatchingConfig.
 	JobConfig StartVectorEnrichmentJobRequestBodyJobConfig `json:"JobConfig"`
-	// The Amazon Key Management Service (KMS) key ID for server-side encryption.
+	// The Key Management Service key ID for server-side encryption.
 	KmsKeyID *string `json:"KmsKeyId,omitempty"`
 	// The name of the Vector Enrichment job.
 	Name string `json:"Name"`

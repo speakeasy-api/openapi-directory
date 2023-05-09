@@ -15,17 +15,21 @@ const (
 	GETDeregisterInstanceEventNotificationAttributesActionEnumDeregisterInstanceEventNotificationAttributes GETDeregisterInstanceEventNotificationAttributesActionEnum = "DeregisterInstanceEventNotificationAttributes"
 )
 
+func (e GETDeregisterInstanceEventNotificationAttributesActionEnum) ToPointer() *GETDeregisterInstanceEventNotificationAttributesActionEnum {
+	return &e
+}
+
 func (e *GETDeregisterInstanceEventNotificationAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeregisterInstanceEventNotificationAttributes":
-		*e = GETDeregisterInstanceEventNotificationAttributesActionEnum(s)
+		*e = GETDeregisterInstanceEventNotificationAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeregisterInstanceEventNotificationAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeregisterInstanceEventNotificationAttributesActionEnum: %v", v)
 	}
 }
 
@@ -42,17 +46,21 @@ const (
 	GETDeregisterInstanceEventNotificationAttributesVersionEnumTwoThousandAndSixteen1115 GETDeregisterInstanceEventNotificationAttributesVersionEnum = "2016-11-15"
 )
 
+func (e GETDeregisterInstanceEventNotificationAttributesVersionEnum) ToPointer() *GETDeregisterInstanceEventNotificationAttributesVersionEnum {
+	return &e
+}
+
 func (e *GETDeregisterInstanceEventNotificationAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeregisterInstanceEventNotificationAttributesVersionEnum(s)
+		*e = GETDeregisterInstanceEventNotificationAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeregisterInstanceEventNotificationAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeregisterInstanceEventNotificationAttributesVersionEnum: %v", v)
 	}
 }
 

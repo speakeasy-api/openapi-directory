@@ -34,7 +34,10 @@ func newSiteTypes(defaultClient, securityClient HTTPClient, serverURL, language,
 // SiteTypesGetSitesForPublicFacingAPI - Returns the layer metadata for the LayerId specified.
 func (s *siteTypes) SiteTypesGetSitesForPublicFacingAPI(ctx context.Context, request operations.SiteTypesGetSitesForPublicFacingAPIRequest) (*operations.SiteTypesGetSitesForPublicFacingAPIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v{version}/sitetypes/{siteType_Id}/sites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v{version}/sitetypes/{siteType_Id}/sites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *siteTypes) SiteTypesGetSitesForPublicFacingAPI(ctx context.Context, req
 // SiteTypesIndex - Return list of site types
 func (s *siteTypes) SiteTypesIndex(ctx context.Context, request operations.SiteTypesIndexRequest) (*operations.SiteTypesIndexResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v{version}/sitetypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v{version}/sitetypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

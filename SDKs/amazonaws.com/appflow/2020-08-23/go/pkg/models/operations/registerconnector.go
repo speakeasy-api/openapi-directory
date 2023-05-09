@@ -21,21 +21,27 @@ const (
 	RegisterConnectorRequestBodyConnectorProvisioningTypeEnumLambda RegisterConnectorRequestBodyConnectorProvisioningTypeEnum = "LAMBDA"
 )
 
+func (e RegisterConnectorRequestBodyConnectorProvisioningTypeEnum) ToPointer() *RegisterConnectorRequestBodyConnectorProvisioningTypeEnum {
+	return &e
+}
+
 func (e *RegisterConnectorRequestBodyConnectorProvisioningTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAMBDA":
-		*e = RegisterConnectorRequestBodyConnectorProvisioningTypeEnum(s)
+		*e = RegisterConnectorRequestBodyConnectorProvisioningTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterConnectorRequestBodyConnectorProvisioningTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterConnectorRequestBodyConnectorProvisioningTypeEnum: %v", v)
 	}
 }
 
 type RegisterConnectorRequestBody struct {
+	// <p>The <code>clientToken</code> parameter is an idempotency token. It ensures that your <code>RegisterConnector</code> request completes only once. You choose the value to pass. For example, if you don't receive a response from your request, you can safely retry the request with the same <code>clientToken</code> parameter value.</p> <p>If you omit a <code>clientToken</code> value, the Amazon Web Services SDK that you are using inserts a value for you. This way, the SDK can safely retry requests multiple times after a network error. You must provide your own value for other use cases.</p> <p>If you specify input parameters that differ from your first request, an error occurs. If you use a different value for <code>clientToken</code>, Amazon AppFlow considers it a new call to <code>RegisterConnector</code>. The token is active for 8 hours.</p>
+	ClientToken *string `json:"clientToken,omitempty"`
 	//  The name of the connector. The name is unique for each <code>ConnectorRegistration</code> in your Amazon Web Services account.
 	ConnectorLabel *string `json:"connectorLabel,omitempty"`
 	// Contains information about the configuration of the connector being registered.

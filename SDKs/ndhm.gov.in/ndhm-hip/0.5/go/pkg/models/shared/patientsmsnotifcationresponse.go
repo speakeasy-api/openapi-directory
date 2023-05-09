@@ -15,19 +15,23 @@ const (
 	PatientSMSNotifcationResponseStatusEnumErrored      PatientSMSNotifcationResponseStatusEnum = "ERRORED"
 )
 
+func (e PatientSMSNotifcationResponseStatusEnum) ToPointer() *PatientSMSNotifcationResponseStatusEnum {
+	return &e
+}
+
 func (e *PatientSMSNotifcationResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACKNOWLEDGED":
 		fallthrough
 	case "ERRORED":
-		*e = PatientSMSNotifcationResponseStatusEnum(s)
+		*e = PatientSMSNotifcationResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientSMSNotifcationResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientSMSNotifcationResponseStatusEnum: %v", v)
 	}
 }
 

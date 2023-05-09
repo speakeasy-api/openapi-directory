@@ -34,7 +34,10 @@ func newMerakiAuthUsers(defaultClient, securityClient HTTPClient, serverURL, lan
 // Return the Meraki Auth splash or RADIUS user
 func (s *merakiAuthUsers) GetNetworkMerakiAuthUser(ctx context.Context, request operations.GetNetworkMerakiAuthUserRequest) (*operations.GetNetworkMerakiAuthUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *merakiAuthUsers) GetNetworkMerakiAuthUser(ctx context.Context, request 
 // List the splash or RADIUS users configured under Meraki Authentication for a network
 func (s *merakiAuthUsers) GetNetworkMerakiAuthUsers(ctx context.Context, request operations.GetNetworkMerakiAuthUsersRequest) (*operations.GetNetworkMerakiAuthUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/merakiAuthUsers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

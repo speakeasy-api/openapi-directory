@@ -35,6 +35,8 @@ func newAuthentication(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // AppkeyPatch - Compromise app key
 // Pass an app key to mark it as compromised. This may be submitted by the app owner or a concerned party that has optained the compromised app key.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *authentication) AppkeyPatch(ctx context.Context, request operations.AppkeyPatchRequest) (*operations.AppkeyPatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/appkey"
@@ -84,6 +86,8 @@ func (s *authentication) AppkeyPatch(ctx context.Context, request operations.App
 
 // AppkeyPost - Request app key
 // Request a new app key by passing username and password for app account
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *authentication) AppkeyPost(ctx context.Context, request operations.AppkeyPostRequest) (*operations.AppkeyPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/appkey"
@@ -133,6 +137,8 @@ func (s *authentication) AppkeyPost(ctx context.Context, request operations.Appk
 
 // AppkeyPut - Deactivate app key
 // Pass your app key to deactivate the key
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *authentication) AppkeyPut(ctx context.Context, request operations.AppkeyPutRequest, security operations.AppkeyPutSecurity) (*operations.AppkeyPutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/appkey"
@@ -621,6 +627,8 @@ func (s *authentication) AuthVerifyotpGet(ctx context.Context, request operation
 
 // AuthkeyGet - Request auth key for user (login user)
 // Obtain auth key for user that has provided their username and password to login to your app. (or to obtain an auth key for a script like IFTTT)
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *authentication) AuthkeyGet(ctx context.Context, request operations.AuthkeyGetRequest, security operations.AuthkeyGetSecurity) (*operations.AuthkeyGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authkey"
@@ -691,6 +699,8 @@ func (s *authentication) AuthkeyGet(ctx context.Context, request operations.Auth
 
 // AuthkeyPatch - Compromise auth key
 // Mark user auth key as compromised
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *authentication) AuthkeyPatch(ctx context.Context, request operations.AuthkeyPatchRequest) (*operations.AuthkeyPatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authkey"
@@ -741,6 +751,8 @@ func (s *authentication) AuthkeyPatch(ctx context.Context, request operations.Au
 
 // AuthkeyPost - Request auth key for user (login user)
 // Obtain auth key for user that has provided their username and password to login to your app. (or to obtain an auth key for a script like IFTTT)
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *authentication) AuthkeyPost(ctx context.Context, request operations.AuthkeyPostRequest, security operations.AuthkeyPostSecurity) (*operations.AuthkeyPostResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authkey"
@@ -811,6 +823,8 @@ func (s *authentication) AuthkeyPost(ctx context.Context, request operations.Aut
 
 // AuthkeyPut - Deactivate auth key (logout)
 // Deactivate auth key for user logging them out of your application
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *authentication) AuthkeyPut(ctx context.Context, request operations.AuthkeyPutRequest, security operations.AuthkeyPutSecurity) (*operations.AuthkeyPutResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authkey"

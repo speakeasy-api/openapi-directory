@@ -18,12 +18,16 @@ const (
 	DeleteLocalGatewayRouteResultRouteStateEnumDeleted   DeleteLocalGatewayRouteResultRouteStateEnum = "deleted"
 )
 
+func (e DeleteLocalGatewayRouteResultRouteStateEnum) ToPointer() *DeleteLocalGatewayRouteResultRouteStateEnum {
+	return &e
+}
+
 func (e *DeleteLocalGatewayRouteResultRouteStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "active":
@@ -33,10 +37,10 @@ func (e *DeleteLocalGatewayRouteResultRouteStateEnum) UnmarshalJSON(data []byte)
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = DeleteLocalGatewayRouteResultRouteStateEnum(s)
+		*e = DeleteLocalGatewayRouteResultRouteStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLocalGatewayRouteResultRouteStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLocalGatewayRouteResultRouteStateEnum: %v", v)
 	}
 }
 
@@ -48,19 +52,23 @@ const (
 	DeleteLocalGatewayRouteResultRouteTypeEnumPropagated DeleteLocalGatewayRouteResultRouteTypeEnum = "propagated"
 )
 
+func (e DeleteLocalGatewayRouteResultRouteTypeEnum) ToPointer() *DeleteLocalGatewayRouteResultRouteTypeEnum {
+	return &e
+}
+
 func (e *DeleteLocalGatewayRouteResultRouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "static":
 		fallthrough
 	case "propagated":
-		*e = DeleteLocalGatewayRouteResultRouteTypeEnum(s)
+		*e = DeleteLocalGatewayRouteResultRouteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLocalGatewayRouteResultRouteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLocalGatewayRouteResultRouteTypeEnum: %v", v)
 	}
 }
 

@@ -93,7 +93,10 @@ func (s *teams) TeamsCreate(ctx context.Context, request operations.TeamsCreateR
 // Please note that in order to avoid a [Redirect Attacks](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md) the only valid redirect URL's are the once from domains you have set when added your platforms in the console interface.
 func (s *teams) TeamsCreateMembership(ctx context.Context, request operations.TeamsCreateMembershipRequest, security operations.TeamsCreateMembershipSecurity) (*operations.TeamsCreateMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *teams) TeamsCreateMembership(ctx context.Context, request operations.Te
 // Delete a team by its unique ID. Only team owners have write access for this resource.
 func (s *teams) TeamsDelete(ctx context.Context, request operations.TeamsDeleteRequest, security operations.TeamsDeleteSecurity) (*operations.TeamsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -181,7 +187,10 @@ func (s *teams) TeamsDelete(ctx context.Context, request operations.TeamsDeleteR
 // This endpoint allows a user to leave a team or for a team owner to delete the membership of any other team member. You can also use this endpoint to delete a user membership even if it is not accepted.
 func (s *teams) TeamsDeleteMembership(ctx context.Context, request operations.TeamsDeleteMembershipRequest, security operations.TeamsDeleteMembershipSecurity) (*operations.TeamsDeleteMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships/{membershipId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships/{membershipId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -217,7 +226,10 @@ func (s *teams) TeamsDeleteMembership(ctx context.Context, request operations.Te
 // Get a team by its unique ID. All team members have read access for this resource.
 func (s *teams) TeamsGet(ctx context.Context, request operations.TeamsGetRequest, security operations.TeamsGetSecurity) (*operations.TeamsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -262,7 +274,10 @@ func (s *teams) TeamsGet(ctx context.Context, request operations.TeamsGetRequest
 // Get a team members by the team unique ID. All team members have read access for this list of resources.
 func (s *teams) TeamsGetMemberships(ctx context.Context, request operations.TeamsGetMembershipsRequest, security operations.TeamsGetMembershipsSecurity) (*operations.TeamsGetMembershipsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -360,7 +375,10 @@ func (s *teams) TeamsList(ctx context.Context, request operations.TeamsListReque
 // Update a team by its unique ID. Only team owners have write access for this resource.
 func (s *teams) TeamsUpdate(ctx context.Context, request operations.TeamsUpdateRequest, security operations.TeamsUpdateSecurity) (*operations.TeamsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -411,7 +429,10 @@ func (s *teams) TeamsUpdate(ctx context.Context, request operations.TeamsUpdateR
 // TeamsUpdateMembershipRoles - Update Membership Roles
 func (s *teams) TeamsUpdateMembershipRoles(ctx context.Context, request operations.TeamsUpdateMembershipRolesRequest, security operations.TeamsUpdateMembershipRolesSecurity) (*operations.TeamsUpdateMembershipRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships/{membershipId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships/{membershipId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -463,7 +484,10 @@ func (s *teams) TeamsUpdateMembershipRoles(ctx context.Context, request operatio
 // Use this endpoint to allow a user to accept an invitation to join a team after being redirected back to your app from the invitation email recieved by the user.
 func (s *teams) TeamsUpdateMembershipStatus(ctx context.Context, request operations.TeamsUpdateMembershipStatusRequest, security operations.TeamsUpdateMembershipStatusSecurity) (*operations.TeamsUpdateMembershipStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships/{membershipId}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{teamId}/memberships/{membershipId}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -15,19 +15,23 @@ const (
 	PlacementPolicyTypeEnumCompact         PlacementPolicyTypeEnum = "COMPACT"
 )
 
+func (e PlacementPolicyTypeEnum) ToPointer() *PlacementPolicyTypeEnum {
+	return &e
+}
+
 func (e *PlacementPolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "COMPACT":
-		*e = PlacementPolicyTypeEnum(s)
+		*e = PlacementPolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlacementPolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlacementPolicyTypeEnum: %v", v)
 	}
 }
 

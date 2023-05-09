@@ -19,19 +19,23 @@ const (
 	ActionsListJobsForWorkflowRunFilterEnumAll    ActionsListJobsForWorkflowRunFilterEnum = "all"
 )
 
+func (e ActionsListJobsForWorkflowRunFilterEnum) ToPointer() *ActionsListJobsForWorkflowRunFilterEnum {
+	return &e
+}
+
 func (e *ActionsListJobsForWorkflowRunFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "latest":
 		fallthrough
 	case "all":
-		*e = ActionsListJobsForWorkflowRunFilterEnum(s)
+		*e = ActionsListJobsForWorkflowRunFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionsListJobsForWorkflowRunFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionsListJobsForWorkflowRunFilterEnum: %v", v)
 	}
 }
 

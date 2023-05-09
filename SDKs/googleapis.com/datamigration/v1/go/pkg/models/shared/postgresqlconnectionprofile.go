@@ -16,21 +16,25 @@ const (
 	PostgreSQLConnectionProfileNetworkArchitectureEnumNetworkArchitectureNewCsqlProducer PostgreSQLConnectionProfileNetworkArchitectureEnum = "NETWORK_ARCHITECTURE_NEW_CSQL_PRODUCER"
 )
 
+func (e PostgreSQLConnectionProfileNetworkArchitectureEnum) ToPointer() *PostgreSQLConnectionProfileNetworkArchitectureEnum {
+	return &e
+}
+
 func (e *PostgreSQLConnectionProfileNetworkArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NETWORK_ARCHITECTURE_UNSPECIFIED":
 		fallthrough
 	case "NETWORK_ARCHITECTURE_OLD_CSQL_PRODUCER":
 		fallthrough
 	case "NETWORK_ARCHITECTURE_NEW_CSQL_PRODUCER":
-		*e = PostgreSQLConnectionProfileNetworkArchitectureEnum(s)
+		*e = PostgreSQLConnectionProfileNetworkArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostgreSQLConnectionProfileNetworkArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for PostgreSQLConnectionProfileNetworkArchitectureEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateAccessControlConfigurationXAmzTargetEnumAwsKendraFrontendServiceUpdateAccessControlConfiguration UpdateAccessControlConfigurationXAmzTargetEnum = "AWSKendraFrontendService.UpdateAccessControlConfiguration"
 )
 
+func (e UpdateAccessControlConfigurationXAmzTargetEnum) ToPointer() *UpdateAccessControlConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateAccessControlConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.UpdateAccessControlConfiguration":
-		*e = UpdateAccessControlConfigurationXAmzTargetEnum(s)
+		*e = UpdateAccessControlConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAccessControlConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAccessControlConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

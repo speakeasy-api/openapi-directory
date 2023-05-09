@@ -80,21 +80,25 @@ const (
 	OBWriteFileResponse3DataMultiAuthorisationStatusEnumRejected                     OBWriteFileResponse3DataMultiAuthorisationStatusEnum = "Rejected"
 )
 
+func (e OBWriteFileResponse3DataMultiAuthorisationStatusEnum) ToPointer() *OBWriteFileResponse3DataMultiAuthorisationStatusEnum {
+	return &e
+}
+
 func (e *OBWriteFileResponse3DataMultiAuthorisationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authorised":
 		fallthrough
 	case "AwaitingFurtherAuthorisation":
 		fallthrough
 	case "Rejected":
-		*e = OBWriteFileResponse3DataMultiAuthorisationStatusEnum(s)
+		*e = OBWriteFileResponse3DataMultiAuthorisationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteFileResponse3DataMultiAuthorisationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteFileResponse3DataMultiAuthorisationStatusEnum: %v", v)
 	}
 }
 
@@ -125,21 +129,25 @@ const (
 	OBWriteFileResponse3DataStatusEnumInitiationPending   OBWriteFileResponse3DataStatusEnum = "InitiationPending"
 )
 
+func (e OBWriteFileResponse3DataStatusEnum) ToPointer() *OBWriteFileResponse3DataStatusEnum {
+	return &e
+}
+
 func (e *OBWriteFileResponse3DataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InitiationCompleted":
 		fallthrough
 	case "InitiationFailed":
 		fallthrough
 	case "InitiationPending":
-		*e = OBWriteFileResponse3DataStatusEnum(s)
+		*e = OBWriteFileResponse3DataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteFileResponse3DataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteFileResponse3DataStatusEnum: %v", v)
 	}
 }
 

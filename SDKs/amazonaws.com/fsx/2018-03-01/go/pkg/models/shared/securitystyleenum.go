@@ -15,20 +15,24 @@ const (
 	SecurityStyleEnumMixed SecurityStyleEnum = "MIXED"
 )
 
+func (e SecurityStyleEnum) ToPointer() *SecurityStyleEnum {
+	return &e
+}
+
 func (e *SecurityStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNIX":
 		fallthrough
 	case "NTFS":
 		fallthrough
 	case "MIXED":
-		*e = SecurityStyleEnum(s)
+		*e = SecurityStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SecurityStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for SecurityStyleEnum: %v", v)
 	}
 }

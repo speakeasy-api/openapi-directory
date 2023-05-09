@@ -59,12 +59,16 @@ const (
 	DeleteAssignedTargetingOptionsRequestTargetingTypeEnumTargetingTypeContentGenre                 DeleteAssignedTargetingOptionsRequestTargetingTypeEnum = "TARGETING_TYPE_CONTENT_GENRE"
 )
 
+func (e DeleteAssignedTargetingOptionsRequestTargetingTypeEnum) ToPointer() *DeleteAssignedTargetingOptionsRequestTargetingTypeEnum {
+	return &e
+}
+
 func (e *DeleteAssignedTargetingOptionsRequestTargetingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGETING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TARGETING_TYPE_CHANNEL":
@@ -156,10 +160,10 @@ func (e *DeleteAssignedTargetingOptionsRequestTargetingTypeEnum) UnmarshalJSON(d
 	case "TARGETING_TYPE_AUDIO_CONTENT_TYPE":
 		fallthrough
 	case "TARGETING_TYPE_CONTENT_GENRE":
-		*e = DeleteAssignedTargetingOptionsRequestTargetingTypeEnum(s)
+		*e = DeleteAssignedTargetingOptionsRequestTargetingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAssignedTargetingOptionsRequestTargetingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAssignedTargetingOptionsRequestTargetingTypeEnum: %v", v)
 	}
 }
 

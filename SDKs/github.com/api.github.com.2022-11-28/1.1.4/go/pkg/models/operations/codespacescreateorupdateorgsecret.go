@@ -18,21 +18,25 @@ const (
 	CodespacesCreateOrUpdateOrgSecretRequestBodyVisibilityEnumSelected CodespacesCreateOrUpdateOrgSecretRequestBodyVisibilityEnum = "selected"
 )
 
+func (e CodespacesCreateOrUpdateOrgSecretRequestBodyVisibilityEnum) ToPointer() *CodespacesCreateOrUpdateOrgSecretRequestBodyVisibilityEnum {
+	return &e
+}
+
 func (e *CodespacesCreateOrUpdateOrgSecretRequestBodyVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "private":
 		fallthrough
 	case "selected":
-		*e = CodespacesCreateOrUpdateOrgSecretRequestBodyVisibilityEnum(s)
+		*e = CodespacesCreateOrUpdateOrgSecretRequestBodyVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodespacesCreateOrUpdateOrgSecretRequestBodyVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for CodespacesCreateOrUpdateOrgSecretRequestBodyVisibilityEnum: %v", v)
 	}
 }
 

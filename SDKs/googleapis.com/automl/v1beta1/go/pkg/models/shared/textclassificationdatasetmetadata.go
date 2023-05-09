@@ -16,21 +16,25 @@ const (
 	TextClassificationDatasetMetadataClassificationTypeEnumMultilabel                    TextClassificationDatasetMetadataClassificationTypeEnum = "MULTILABEL"
 )
 
+func (e TextClassificationDatasetMetadataClassificationTypeEnum) ToPointer() *TextClassificationDatasetMetadataClassificationTypeEnum {
+	return &e
+}
+
 func (e *TextClassificationDatasetMetadataClassificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLASSIFICATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MULTICLASS":
 		fallthrough
 	case "MULTILABEL":
-		*e = TextClassificationDatasetMetadataClassificationTypeEnum(s)
+		*e = TextClassificationDatasetMetadataClassificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextClassificationDatasetMetadataClassificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TextClassificationDatasetMetadataClassificationTypeEnum: %v", v)
 	}
 }
 

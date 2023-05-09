@@ -15,20 +15,24 @@ const (
 	ChangeSetHooksStatusEnumUnavailable ChangeSetHooksStatusEnum = "UNAVAILABLE"
 )
 
+func (e ChangeSetHooksStatusEnum) ToPointer() *ChangeSetHooksStatusEnum {
+	return &e
+}
+
 func (e *ChangeSetHooksStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLANNING":
 		fallthrough
 	case "PLANNED":
 		fallthrough
 	case "UNAVAILABLE":
-		*e = ChangeSetHooksStatusEnum(s)
+		*e = ChangeSetHooksStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChangeSetHooksStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ChangeSetHooksStatusEnum: %v", v)
 	}
 }

@@ -36,7 +36,10 @@ func newDocuments(defaultClient, securityClient HTTPClient, serverURL, language,
 // Deletes a document.
 func (s *documents) DeleteDocumentsID(ctx context.Context, request operations.DeleteDocumentsIDRequest, security operations.DeleteDocumentsIDSecurity) (*operations.DeleteDocumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -99,7 +102,10 @@ func (s *documents) DeleteDocumentsID(ctx context.Context, request operations.De
 // Returns a document.
 func (s *documents) GetDocumentsID(ctx context.Context, request operations.GetDocumentsIDRequest, security operations.GetDocumentsIDSecurity) (*operations.GetDocumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -162,7 +168,10 @@ func (s *documents) GetDocumentsID(ctx context.Context, request operations.GetDo
 // Updates a document.
 func (s *documents) PatchDocumentsID(ctx context.Context, request operations.PatchDocumentsIDRequest, security operations.PatchDocumentsIDSecurity) (*operations.PatchDocumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DocumentInput", "json")
 	if err != nil {

@@ -17,12 +17,16 @@ const (
 	ImportErrorSeverityEnumInfo                ImportErrorSeverityEnum = "INFO"
 )
 
+func (e ImportErrorSeverityEnum) ToPointer() *ImportErrorSeverityEnum {
+	return &e
+}
+
 func (e *ImportErrorSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "ERROR":
@@ -30,10 +34,10 @@ func (e *ImportErrorSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "WARNING":
 		fallthrough
 	case "INFO":
-		*e = ImportErrorSeverityEnum(s)
+		*e = ImportErrorSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportErrorSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportErrorSeverityEnum: %v", v)
 	}
 }
 

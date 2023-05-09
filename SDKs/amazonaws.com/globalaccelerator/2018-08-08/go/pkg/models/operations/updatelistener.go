@@ -16,17 +16,21 @@ const (
 	UpdateListenerXAmzTargetEnumGlobalAcceleratorV20180706UpdateListener UpdateListenerXAmzTargetEnum = "GlobalAccelerator_V20180706.UpdateListener"
 )
 
+func (e UpdateListenerXAmzTargetEnum) ToPointer() *UpdateListenerXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateListenerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.UpdateListener":
-		*e = UpdateListenerXAmzTargetEnum(s)
+		*e = UpdateListenerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateListenerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateListenerXAmzTargetEnum: %v", v)
 	}
 }
 

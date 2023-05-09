@@ -134,7 +134,10 @@ func (s *bankAccount) CreateBankAccount(ctx context.Context, request shared.Bank
 // Delete an existing bank account.
 func (s *bankAccount) DeleteBankAccount(ctx context.Context, request operations.DeleteBankAccountRequest) (*operations.DeleteBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bank-accounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bank-accounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -202,7 +205,10 @@ func (s *bankAccount) DeleteBankAccount(ctx context.Context, request operations.
 // Retrieves the details of an existing bank account.
 func (s *bankAccount) GetBankAccount(ctx context.Context, request operations.GetBankAccountRequest) (*operations.GetBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bank-accounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bank-accounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -378,7 +384,10 @@ func (s *bankAccount) ListBankAccount(ctx context.Context, request operations.Li
 // Update an existing bank accounts. Returns a bank account object if the update is succeded.
 func (s *bankAccount) UpdateBankAccount(ctx context.Context, request operations.UpdateBankAccountRequest) (*operations.UpdateBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bank-accounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bank-accounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BankAccountInput", "json")
 	if err != nil {

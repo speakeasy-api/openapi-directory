@@ -18,19 +18,23 @@ const (
 	UpdateCatalogCollectionVisibilityEnumPublic  UpdateCatalogCollectionVisibilityEnum = "public"
 )
 
+func (e UpdateCatalogCollectionVisibilityEnum) ToPointer() *UpdateCatalogCollectionVisibilityEnum {
+	return &e
+}
+
 func (e *UpdateCatalogCollectionVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private":
 		fallthrough
 	case "public":
-		*e = UpdateCatalogCollectionVisibilityEnum(s)
+		*e = UpdateCatalogCollectionVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateCatalogCollectionVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateCatalogCollectionVisibilityEnum: %v", v)
 	}
 }
 

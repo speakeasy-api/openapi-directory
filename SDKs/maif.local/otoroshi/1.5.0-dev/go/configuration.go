@@ -35,7 +35,7 @@ func newConfiguration(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // GlobalConfig - Get the full configuration of Otoroshi
 // Get the full configuration of Otoroshi
-func (s *configuration) GlobalConfig(ctx context.Context) (*operations.GlobalConfigResponse, error) {
+func (s *configuration) GlobalConfig(ctx context.Context, security operations.GlobalConfigSecurity) (*operations.GlobalConfigResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/globalconfig"
 
@@ -44,7 +44,7 @@ func (s *configuration) GlobalConfig(ctx context.Context) (*operations.GlobalCon
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

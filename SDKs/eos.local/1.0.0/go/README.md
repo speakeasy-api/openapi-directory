@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/eos.local/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ConnectRequestBody{
-        Endpoint: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Connect(ctx, req)
+    res, err := s.Connect(ctx, operations.ConnectRequestBody{
+        Endpoint: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -44,12 +41,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `Connect` - connect
-* `Connections` - connections
-* `Disconnect` - disconnect
-* `Status` - status
+* [Connect](docs/sdk/README.md#connect) - connect
+* [Connections](docs/sdk/README.md#connections) - connections
+* [Disconnect](docs/sdk/README.md#disconnect) - disconnect
+* [Status](docs/sdk/README.md#status) - status
 <!-- End SDK Available Operations -->
 
 ### Maturity

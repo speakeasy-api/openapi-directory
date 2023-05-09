@@ -15,20 +15,24 @@ const (
 	OrganizationConfigRuleTriggerTypeEnumScheduledNotification                        OrganizationConfigRuleTriggerTypeEnum = "ScheduledNotification"
 )
 
+func (e OrganizationConfigRuleTriggerTypeEnum) ToPointer() *OrganizationConfigRuleTriggerTypeEnum {
+	return &e
+}
+
 func (e *OrganizationConfigRuleTriggerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ConfigurationItemChangeNotification":
 		fallthrough
 	case "OversizedConfigurationItemChangeNotification":
 		fallthrough
 	case "ScheduledNotification":
-		*e = OrganizationConfigRuleTriggerTypeEnum(s)
+		*e = OrganizationConfigRuleTriggerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationConfigRuleTriggerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationConfigRuleTriggerTypeEnum: %v", v)
 	}
 }

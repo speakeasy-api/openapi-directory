@@ -94,7 +94,10 @@ func (s *jwtVerifiers) CreateGlobalJwtVerifier(ctx context.Context, request shar
 // Delete one global JWT verifiers
 func (s *jwtVerifiers) DeleteGlobalJwtVerifier(ctx context.Context, request operations.DeleteGlobalJwtVerifierRequest, security operations.DeleteGlobalJwtVerifierSecurity) (*operations.DeleteGlobalJwtVerifierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/verifiers/{verifierId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/verifiers/{verifierId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -142,7 +145,7 @@ func (s *jwtVerifiers) DeleteGlobalJwtVerifier(ctx context.Context, request oper
 
 // FindAllGlobalJwtVerifiers - Get all global JWT verifiers
 // Get all global JWT verifiers
-func (s *jwtVerifiers) FindAllGlobalJwtVerifiers(ctx context.Context) (*operations.FindAllGlobalJwtVerifiersResponse, error) {
+func (s *jwtVerifiers) FindAllGlobalJwtVerifiers(ctx context.Context, security operations.FindAllGlobalJwtVerifiersSecurity) (*operations.FindAllGlobalJwtVerifiersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/verifiers"
 
@@ -151,7 +154,7 @@ func (s *jwtVerifiers) FindAllGlobalJwtVerifiers(ctx context.Context) (*operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -194,7 +197,10 @@ func (s *jwtVerifiers) FindAllGlobalJwtVerifiers(ctx context.Context) (*operatio
 // Get one global JWT verifiers
 func (s *jwtVerifiers) FindGlobalJwtVerifiersByID(ctx context.Context, request operations.FindGlobalJwtVerifiersByIDRequest, security operations.FindGlobalJwtVerifiersByIDSecurity) (*operations.FindGlobalJwtVerifiersByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/verifiers/{verifierId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/verifiers/{verifierId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -244,7 +250,10 @@ func (s *jwtVerifiers) FindGlobalJwtVerifiersByID(ctx context.Context, request o
 // Update one global JWT verifiers
 func (s *jwtVerifiers) PatchGlobalJwtVerifier(ctx context.Context, request operations.PatchGlobalJwtVerifierRequest, security operations.PatchGlobalJwtVerifierSecurity) (*operations.PatchGlobalJwtVerifierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/verifiers/{verifierId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/verifiers/{verifierId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -301,7 +310,10 @@ func (s *jwtVerifiers) PatchGlobalJwtVerifier(ctx context.Context, request opera
 // Update one global JWT verifiers
 func (s *jwtVerifiers) UpdateGlobalJwtVerifier(ctx context.Context, request operations.UpdateGlobalJwtVerifierRequest, security operations.UpdateGlobalJwtVerifierSecurity) (*operations.UpdateGlobalJwtVerifierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/verifiers/{verifierId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/verifiers/{verifierId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GlobalJwtVerifier", "json")
 	if err != nil {

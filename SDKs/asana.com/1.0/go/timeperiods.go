@@ -37,7 +37,10 @@ func newTimePeriods(defaultClient, securityClient HTTPClient, serverURL, languag
 // Returns the full record for a single time period.
 func (s *timePeriods) GetTimePeriod(ctx context.Context, request operations.GetTimePeriodRequest) (*operations.GetTimePeriodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/time_periods/{time_period_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/time_periods/{time_period_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

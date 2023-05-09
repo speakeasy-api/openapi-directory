@@ -35,7 +35,7 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // AllServices - Get all services
 // Get all services
-func (s *services) AllServices(ctx context.Context) (*operations.AllServicesResponse, error) {
+func (s *services) AllServices(ctx context.Context, security operations.AllServicesSecurity) (*operations.AllServicesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/services"
 
@@ -44,7 +44,7 @@ func (s *services) AllServices(ctx context.Context) (*operations.AllServicesResp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,7 +144,10 @@ func (s *services) CreateService(ctx context.Context, request shared.Service, se
 // Update a service descriptor targets
 func (s *services) CreateServiceTemplate(ctx context.Context, request operations.CreateServiceTemplateRequest, security operations.CreateServiceTemplateSecurity) (*operations.CreateServiceTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/template", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/template", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ErrorTemplate", "json")
 	if err != nil {
@@ -201,7 +204,10 @@ func (s *services) CreateServiceTemplate(ctx context.Context, request operations
 // Delete a service descriptor
 func (s *services) DeleteService(ctx context.Context, request operations.DeleteServiceRequest, security operations.DeleteServiceSecurity) (*operations.DeleteServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -251,7 +257,10 @@ func (s *services) DeleteService(ctx context.Context, request operations.DeleteS
 // Delete a service descriptor error template
 func (s *services) DeleteServiceTemplate(ctx context.Context, request operations.DeleteServiceTemplateRequest, security operations.DeleteServiceTemplateSecurity) (*operations.DeleteServiceTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/template", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/template", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -301,7 +310,10 @@ func (s *services) DeleteServiceTemplate(ctx context.Context, request operations
 // Update a service descriptor with a diff
 func (s *services) PatchService(ctx context.Context, request operations.PatchServiceRequest, security operations.PatchServiceSecurity) (*operations.PatchServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -358,7 +370,10 @@ func (s *services) PatchService(ctx context.Context, request operations.PatchSer
 // Get a service descriptor
 func (s *services) Service(ctx context.Context, request operations.ServiceRequest, security operations.ServiceSecurity) (*operations.ServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +423,10 @@ func (s *services) Service(ctx context.Context, request operations.ServiceReques
 // Add a target to a service descriptor
 func (s *services) ServiceAddTarget(ctx context.Context, request operations.ServiceAddTargetRequest, security operations.ServiceAddTargetSecurity) (*operations.ServiceAddTargetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/targets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/targets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Target", "json")
 	if err != nil {
@@ -465,7 +483,10 @@ func (s *services) ServiceAddTarget(ctx context.Context, request operations.Serv
 // Delete a service descriptor target
 func (s *services) ServiceDeleteTarget(ctx context.Context, request operations.ServiceDeleteTargetRequest, security operations.ServiceDeleteTargetSecurity) (*operations.ServiceDeleteTargetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/targets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/targets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -515,7 +536,10 @@ func (s *services) ServiceDeleteTarget(ctx context.Context, request operations.S
 // Get all services descriptor for a group
 func (s *services) ServiceGroupServices(ctx context.Context, request operations.ServiceGroupServicesRequest, security operations.ServiceGroupServicesSecurity) (*operations.ServiceGroupServicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}/services", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}/services", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -565,7 +589,10 @@ func (s *services) ServiceGroupServices(ctx context.Context, request operations.
 // Get a service descriptor targets
 func (s *services) ServiceTargets(ctx context.Context, request operations.ServiceTargetsRequest, security operations.ServiceTargetsSecurity) (*operations.ServiceTargetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/targets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/targets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -615,7 +642,10 @@ func (s *services) ServiceTargets(ctx context.Context, request operations.Servic
 // Get a service descriptor error template
 func (s *services) ServiceTemplate(ctx context.Context, request operations.ServiceTemplateRequest, security operations.ServiceTemplateSecurity) (*operations.ServiceTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/template", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/template", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -665,7 +695,10 @@ func (s *services) ServiceTemplate(ctx context.Context, request operations.Servi
 // Update a service descriptor
 func (s *services) UpdateService(ctx context.Context, request operations.UpdateServiceRequest, security operations.UpdateServiceSecurity) (*operations.UpdateServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Service", "json")
 	if err != nil {
@@ -722,7 +755,10 @@ func (s *services) UpdateService(ctx context.Context, request operations.UpdateS
 // Update a service descriptor targets
 func (s *services) UpdateServiceTargets(ctx context.Context, request operations.UpdateServiceTargetsRequest, security operations.UpdateServiceTargetsSecurity) (*operations.UpdateServiceTargetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/targets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/targets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -779,7 +815,10 @@ func (s *services) UpdateServiceTargets(ctx context.Context, request operations.
 // Update an error template to a service descriptor
 func (s *services) UpdateServiceTemplate(ctx context.Context, request operations.UpdateServiceTemplateRequest, security operations.UpdateServiceTemplateSecurity) (*operations.UpdateServiceTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/template", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/template", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ErrorTemplate", "json")
 	if err != nil {

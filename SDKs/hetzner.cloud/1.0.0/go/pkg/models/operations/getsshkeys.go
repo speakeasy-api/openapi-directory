@@ -20,12 +20,16 @@ const (
 	GetSSHKeysSortEnumNameDesc GetSSHKeysSortEnum = "name:desc"
 )
 
+func (e GetSSHKeysSortEnum) ToPointer() *GetSSHKeysSortEnum {
+	return &e
+}
+
 func (e *GetSSHKeysSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -37,10 +41,10 @@ func (e *GetSSHKeysSortEnum) UnmarshalJSON(data []byte) error {
 	case "name:asc":
 		fallthrough
 	case "name:desc":
-		*e = GetSSHKeysSortEnum(s)
+		*e = GetSSHKeysSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSSHKeysSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSSHKeysSortEnum: %v", v)
 	}
 }
 

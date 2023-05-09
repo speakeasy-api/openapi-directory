@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,18 +17,16 @@ func main() {
         }),
     )
 
-    req := operations.AddClientPreferencesRequest{
+    ctx := context.Background()
+    res, err := s.CartAttachments.AddClientPreferences(ctx, operations.AddClientPreferencesRequest{
         Accept: "corrupti",
         ContentType: "provident",
         RequestBody: operations.AddClientPreferencesRequestBody{
-            Locale: "distinctio",
-            OptinNewsLetter: false,
+            Locale: sdk.String("distinctio"),
+            OptinNewsLetter: sdk.Bool(false),
         },
         OrderFormID: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.CartAttachments.AddClientPreferences(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

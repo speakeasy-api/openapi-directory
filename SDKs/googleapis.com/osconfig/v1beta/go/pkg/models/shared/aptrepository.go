@@ -16,21 +16,25 @@ const (
 	AptRepositoryArchiveTypeEnumDebSrc                 AptRepositoryArchiveTypeEnum = "DEB_SRC"
 )
 
+func (e AptRepositoryArchiveTypeEnum) ToPointer() *AptRepositoryArchiveTypeEnum {
+	return &e
+}
+
 func (e *AptRepositoryArchiveTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARCHIVE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DEB":
 		fallthrough
 	case "DEB_SRC":
-		*e = AptRepositoryArchiveTypeEnum(s)
+		*e = AptRepositoryArchiveTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AptRepositoryArchiveTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AptRepositoryArchiveTypeEnum: %v", v)
 	}
 }
 

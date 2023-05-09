@@ -14,17 +14,21 @@ const (
 	ShareShareRelationshipsShareRelationshipsMessageShareMessageDataTypeEnumMessage ShareShareRelationshipsShareRelationshipsMessageShareMessageDataTypeEnum = "message"
 )
 
+func (e ShareShareRelationshipsShareRelationshipsMessageShareMessageDataTypeEnum) ToPointer() *ShareShareRelationshipsShareRelationshipsMessageShareMessageDataTypeEnum {
+	return &e
+}
+
 func (e *ShareShareRelationshipsShareRelationshipsMessageShareMessageDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "message":
-		*e = ShareShareRelationshipsShareRelationshipsMessageShareMessageDataTypeEnum(s)
+		*e = ShareShareRelationshipsShareRelationshipsMessageShareMessageDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareShareRelationshipsShareRelationshipsMessageShareMessageDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareShareRelationshipsShareRelationshipsMessageShareMessageDataTypeEnum: %v", v)
 	}
 }
 
@@ -46,17 +50,21 @@ const (
 	ShareShareRelationshipsShareRelationshipsNotificationDataTypeEnumNotification ShareShareRelationshipsShareRelationshipsNotificationDataTypeEnum = "notification"
 )
 
+func (e ShareShareRelationshipsShareRelationshipsNotificationDataTypeEnum) ToPointer() *ShareShareRelationshipsShareRelationshipsNotificationDataTypeEnum {
+	return &e
+}
+
 func (e *ShareShareRelationshipsShareRelationshipsNotificationDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "notification":
-		*e = ShareShareRelationshipsShareRelationshipsNotificationDataTypeEnum(s)
+		*e = ShareShareRelationshipsShareRelationshipsNotificationDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareShareRelationshipsShareRelationshipsNotificationDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareShareRelationshipsShareRelationshipsNotificationDataTypeEnum: %v", v)
 	}
 }
 
@@ -89,17 +97,21 @@ const (
 	ShareShareRelationshipsShareRelationshipsResourceShareResourceDataTypeEnumResource ShareShareRelationshipsShareRelationshipsResourceShareResourceDataTypeEnum = "resource"
 )
 
+func (e ShareShareRelationshipsShareRelationshipsResourceShareResourceDataTypeEnum) ToPointer() *ShareShareRelationshipsShareRelationshipsResourceShareResourceDataTypeEnum {
+	return &e
+}
+
 func (e *ShareShareRelationshipsShareRelationshipsResourceShareResourceDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "resource":
-		*e = ShareShareRelationshipsShareRelationshipsResourceShareResourceDataTypeEnum(s)
+		*e = ShareShareRelationshipsShareRelationshipsResourceShareResourceDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareShareRelationshipsShareRelationshipsResourceShareResourceDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareShareRelationshipsShareRelationshipsResourceShareResourceDataTypeEnum: %v", v)
 	}
 }
 
@@ -129,17 +141,21 @@ const (
 	ShareTypeEnumShare ShareTypeEnum = "share"
 )
 
+func (e ShareTypeEnum) ToPointer() *ShareTypeEnum {
+	return &e
+}
+
 func (e *ShareTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "share":
-		*e = ShareTypeEnum(s)
+		*e = ShareTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareTypeEnum: %v", v)
 	}
 }
 

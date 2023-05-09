@@ -13,35 +13,33 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/servicebro
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ServicebrokerGetIamPolicyRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
-        OptionsRequestedPolicyVersion: 847252,
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        Resource: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.V1.ServicebrokerGetIamPolicy(ctx, req, operations.ServicebrokerGetIamPolicySecurity{
+    res, err := s.V1.ServicebrokerGetIamPolicy(ctx, operations.ServicebrokerGetIamPolicyRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
+        OptionsRequestedPolicyVersion: sdk.Int64(847252),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("vel"),
+        Resource: "error",
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.ServicebrokerGetIamPolicySecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -60,16 +58,16 @@ func main() {
 ## Available Resources and Operations
 
 
-### V1
+### [V1](docs/v1/README.md)
 
-* `ServicebrokerGetIamPolicy` - Gets the access control policy for a resource.
+* [ServicebrokerGetIamPolicy](docs/v1/README.md#servicebrokergetiampolicy) - Gets the access control policy for a resource.
 Returns an empty policy if the resource exists and does not have a policy
 set.
-* `ServicebrokerSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any
+* [ServicebrokerSetIamPolicy](docs/v1/README.md#servicebrokersetiampolicy) - Sets the access control policy on the specified resource. Replaces any
 existing policy.
 
 Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
-* `ServicebrokerTestIamPermissions` - Returns permissions that a caller has on the specified resource.
+* [ServicebrokerTestIamPermissions](docs/v1/README.md#servicebrokertestiampermissions) - Returns permissions that a caller has on the specified resource.
 If the resource does not exist, this will return an empty set of
 permissions, not a NOT_FOUND error.
 

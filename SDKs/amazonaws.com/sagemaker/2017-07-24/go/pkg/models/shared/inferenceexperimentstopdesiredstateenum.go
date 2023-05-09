@@ -14,18 +14,22 @@ const (
 	InferenceExperimentStopDesiredStateEnumCancelled InferenceExperimentStopDesiredStateEnum = "Cancelled"
 )
 
+func (e InferenceExperimentStopDesiredStateEnum) ToPointer() *InferenceExperimentStopDesiredStateEnum {
+	return &e
+}
+
 func (e *InferenceExperimentStopDesiredStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Completed":
 		fallthrough
 	case "Cancelled":
-		*e = InferenceExperimentStopDesiredStateEnum(s)
+		*e = InferenceExperimentStopDesiredStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InferenceExperimentStopDesiredStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InferenceExperimentStopDesiredStateEnum: %v", v)
 	}
 }

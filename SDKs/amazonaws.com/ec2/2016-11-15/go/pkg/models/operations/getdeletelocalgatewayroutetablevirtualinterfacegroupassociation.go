@@ -15,17 +15,21 @@ const (
 	GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnumDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum = "DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation"
 )
 
+func (e GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum) ToPointer() *GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum {
+	return &e
+}
+
 func (e *GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation":
-		*e = GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum(s)
+		*e = GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnumTwoThousandAndSixteen1115 GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum) ToPointer() *GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum(s)
+		*e = GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum: %v", v)
 	}
 }
 

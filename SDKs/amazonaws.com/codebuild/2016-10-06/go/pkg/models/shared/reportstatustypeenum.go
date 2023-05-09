@@ -17,12 +17,16 @@ const (
 	ReportStatusTypeEnumDeleting   ReportStatusTypeEnum = "DELETING"
 )
 
+func (e ReportStatusTypeEnum) ToPointer() *ReportStatusTypeEnum {
+	return &e
+}
+
 func (e *ReportStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GENERATING":
 		fallthrough
 	case "SUCCEEDED":
@@ -32,9 +36,9 @@ func (e *ReportStatusTypeEnum) UnmarshalJSON(data []byte) error {
 	case "INCOMPLETE":
 		fallthrough
 	case "DELETING":
-		*e = ReportStatusTypeEnum(s)
+		*e = ReportStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportStatusTypeEnum: %v", v)
 	}
 }

@@ -13,6 +13,34 @@ type GetIsosIDRequest struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
+// GetIsosID200ApplicationJSONIsoArchitectureEnum - Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+type GetIsosID200ApplicationJSONIsoArchitectureEnum string
+
+const (
+	GetIsosID200ApplicationJSONIsoArchitectureEnumX86 GetIsosID200ApplicationJSONIsoArchitectureEnum = "x86"
+	GetIsosID200ApplicationJSONIsoArchitectureEnumArm GetIsosID200ApplicationJSONIsoArchitectureEnum = "arm"
+)
+
+func (e GetIsosID200ApplicationJSONIsoArchitectureEnum) ToPointer() *GetIsosID200ApplicationJSONIsoArchitectureEnum {
+	return &e
+}
+
+func (e *GetIsosID200ApplicationJSONIsoArchitectureEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "x86":
+		fallthrough
+	case "arm":
+		*e = GetIsosID200ApplicationJSONIsoArchitectureEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetIsosID200ApplicationJSONIsoArchitectureEnum: %v", v)
+	}
+}
+
 // GetIsosID200ApplicationJSONIsoTypeEnum - Type of the ISO
 type GetIsosID200ApplicationJSONIsoTypeEnum string
 
@@ -21,23 +49,29 @@ const (
 	GetIsosID200ApplicationJSONIsoTypeEnumPrivate GetIsosID200ApplicationJSONIsoTypeEnum = "private"
 )
 
+func (e GetIsosID200ApplicationJSONIsoTypeEnum) ToPointer() *GetIsosID200ApplicationJSONIsoTypeEnum {
+	return &e
+}
+
 func (e *GetIsosID200ApplicationJSONIsoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = GetIsosID200ApplicationJSONIsoTypeEnum(s)
+		*e = GetIsosID200ApplicationJSONIsoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIsosID200ApplicationJSONIsoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIsosID200ApplicationJSONIsoTypeEnum: %v", v)
 	}
 }
 
 type GetIsosID200ApplicationJSONIso struct {
+	// Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+	Architecture GetIsosID200ApplicationJSONIsoArchitectureEnum `json:"architecture"`
 	// ISO 8601 timestamp of deprecation, null if ISO is still available. After the deprecation time it will no longer be possible to attach the ISO to Servers.
 	Deprecated string `json:"deprecated"`
 	// Description of the ISO

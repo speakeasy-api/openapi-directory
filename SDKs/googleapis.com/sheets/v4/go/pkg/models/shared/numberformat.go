@@ -22,12 +22,16 @@ const (
 	NumberFormatTypeEnumScientific                  NumberFormatTypeEnum = "SCIENTIFIC"
 )
 
+func (e NumberFormatTypeEnum) ToPointer() *NumberFormatTypeEnum {
+	return &e
+}
+
 func (e *NumberFormatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NUMBER_FORMAT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TEXT":
@@ -45,10 +49,10 @@ func (e *NumberFormatTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DATE_TIME":
 		fallthrough
 	case "SCIENTIFIC":
-		*e = NumberFormatTypeEnum(s)
+		*e = NumberFormatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NumberFormatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NumberFormatTypeEnum: %v", v)
 	}
 }
 

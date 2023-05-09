@@ -20,12 +20,16 @@ const (
 	ZoneOffsetTransitionRuleDayOfWeekEnumSunday    ZoneOffsetTransitionRuleDayOfWeekEnum = "SUNDAY"
 )
 
+func (e ZoneOffsetTransitionRuleDayOfWeekEnum) ToPointer() *ZoneOffsetTransitionRuleDayOfWeekEnum {
+	return &e
+}
+
 func (e *ZoneOffsetTransitionRuleDayOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MONDAY":
 		fallthrough
 	case "TUESDAY":
@@ -39,10 +43,10 @@ func (e *ZoneOffsetTransitionRuleDayOfWeekEnum) UnmarshalJSON(data []byte) error
 	case "SATURDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = ZoneOffsetTransitionRuleDayOfWeekEnum(s)
+		*e = ZoneOffsetTransitionRuleDayOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ZoneOffsetTransitionRuleDayOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for ZoneOffsetTransitionRuleDayOfWeekEnum: %v", v)
 	}
 }
 
@@ -64,12 +68,16 @@ const (
 	ZoneOffsetTransitionRuleMonthEnumDecember  ZoneOffsetTransitionRuleMonthEnum = "DECEMBER"
 )
 
+func (e ZoneOffsetTransitionRuleMonthEnum) ToPointer() *ZoneOffsetTransitionRuleMonthEnum {
+	return &e
+}
+
 func (e *ZoneOffsetTransitionRuleMonthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JANUARY":
 		fallthrough
 	case "FEBRUARY":
@@ -93,10 +101,10 @@ func (e *ZoneOffsetTransitionRuleMonthEnum) UnmarshalJSON(data []byte) error {
 	case "NOVEMBER":
 		fallthrough
 	case "DECEMBER":
-		*e = ZoneOffsetTransitionRuleMonthEnum(s)
+		*e = ZoneOffsetTransitionRuleMonthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ZoneOffsetTransitionRuleMonthEnum: %s", s)
+		return fmt.Errorf("invalid value for ZoneOffsetTransitionRuleMonthEnum: %v", v)
 	}
 }
 
@@ -109,21 +117,25 @@ const (
 	ZoneOffsetTransitionRuleTimeDefinitionEnumStandard ZoneOffsetTransitionRuleTimeDefinitionEnum = "STANDARD"
 )
 
+func (e ZoneOffsetTransitionRuleTimeDefinitionEnum) ToPointer() *ZoneOffsetTransitionRuleTimeDefinitionEnum {
+	return &e
+}
+
 func (e *ZoneOffsetTransitionRuleTimeDefinitionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UTC":
 		fallthrough
 	case "WALL":
 		fallthrough
 	case "STANDARD":
-		*e = ZoneOffsetTransitionRuleTimeDefinitionEnum(s)
+		*e = ZoneOffsetTransitionRuleTimeDefinitionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ZoneOffsetTransitionRuleTimeDefinitionEnum: %s", s)
+		return fmt.Errorf("invalid value for ZoneOffsetTransitionRuleTimeDefinitionEnum: %v", v)
 	}
 }
 

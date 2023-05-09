@@ -16,17 +16,21 @@ const (
 	GETModifyVerifiedAccessEndpointActionEnumModifyVerifiedAccessEndpoint GETModifyVerifiedAccessEndpointActionEnum = "ModifyVerifiedAccessEndpoint"
 )
 
+func (e GETModifyVerifiedAccessEndpointActionEnum) ToPointer() *GETModifyVerifiedAccessEndpointActionEnum {
+	return &e
+}
+
 func (e *GETModifyVerifiedAccessEndpointActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVerifiedAccessEndpoint":
-		*e = GETModifyVerifiedAccessEndpointActionEnum(s)
+		*e = GETModifyVerifiedAccessEndpointActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVerifiedAccessEndpointActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVerifiedAccessEndpointActionEnum: %v", v)
 	}
 }
 
@@ -37,7 +41,7 @@ type GETModifyVerifiedAccessEndpointLoadBalancerOptions struct {
 	SubnetIds []string                                   `queryParam:"name=SubnetIds"`
 }
 
-// GETModifyVerifiedAccessEndpointNetworkInterfaceOptions - Options for a network-interface type Verified Access endpoint.
+// GETModifyVerifiedAccessEndpointNetworkInterfaceOptions - Describes the options when modifying a Verified Access endpoint with the <code>network-interface</code> type.
 type GETModifyVerifiedAccessEndpointNetworkInterfaceOptions struct {
 	Port     *int64                                     `queryParam:"name=Port"`
 	Protocol *shared.VerifiedAccessEndpointProtocolEnum `queryParam:"name=Protocol"`
@@ -50,17 +54,21 @@ const (
 	GETModifyVerifiedAccessEndpointVersionEnumTwoThousandAndSixteen1115 GETModifyVerifiedAccessEndpointVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVerifiedAccessEndpointVersionEnum) ToPointer() *GETModifyVerifiedAccessEndpointVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVerifiedAccessEndpointVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVerifiedAccessEndpointVersionEnum(s)
+		*e = GETModifyVerifiedAccessEndpointVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVerifiedAccessEndpointVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVerifiedAccessEndpointVersionEnum: %v", v)
 	}
 }
 
@@ -68,17 +76,17 @@ type GETModifyVerifiedAccessEndpointRequest struct {
 	Action GETModifyVerifiedAccessEndpointActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring Idempotency</a>.
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
-	// A description for the Amazon Web Services Verified Access endpoint.
+	// A description for the Verified Access endpoint.
 	Description *string `queryParam:"style=form,explode=true,name=Description"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
-	// The load balancer details if creating the Amazon Web Services Verified Access endpoint as <code>load-balancer</code>type.
+	// The load balancer details if creating the Verified Access endpoint as <code>load-balancer</code>type.
 	LoadBalancerOptions *GETModifyVerifiedAccessEndpointLoadBalancerOptions `queryParam:"style=form,explode=true,name=LoadBalancerOptions"`
 	// The network interface options.
 	NetworkInterfaceOptions *GETModifyVerifiedAccessEndpointNetworkInterfaceOptions `queryParam:"style=form,explode=true,name=NetworkInterfaceOptions"`
-	// The ID of the Amazon Web Services Verified Access endpoint.
+	// The ID of the Verified Access endpoint.
 	VerifiedAccessEndpointID string `queryParam:"style=form,explode=true,name=VerifiedAccessEndpointId"`
-	// The ID of the Amazon Web Services Verified Access group.
+	// The ID of the Verified Access group.
 	VerifiedAccessGroupID *string                                    `queryParam:"style=form,explode=true,name=VerifiedAccessGroupId"`
 	Version               GETModifyVerifiedAccessEndpointVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	XAmzAlgorithm         *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`

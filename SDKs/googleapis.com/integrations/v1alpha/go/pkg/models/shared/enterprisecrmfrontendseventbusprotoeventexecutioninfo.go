@@ -19,12 +19,16 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoPostMethodEnumPostWithEventDetails EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoPostMethodEnum = "POST_WITH_EVENT_DETAILS"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoPostMethodEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoPostMethodEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoPostMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "POST":
@@ -36,10 +40,10 @@ func (e *EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoPostMethodEnum) Un
 	case "POST_BY_EVENT_CONFIG_ID":
 		fallthrough
 	case "POST_WITH_EVENT_DETAILS":
-		*e = EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoPostMethodEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoPostMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoPostMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoPostMethodEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoProductEnumSecurity           EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoProductEnum = "SECURITY"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoProductEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoProductEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoProductEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_PRODUCT":
 		fallthrough
 	case "IP":
@@ -66,10 +74,10 @@ func (e *EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoProductEnum) Unmar
 	case "APIGEE":
 		fallthrough
 	case "SECURITY":
-		*e = EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoProductEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoProductEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoProductEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoProductEnum: %v", v)
 	}
 }
 

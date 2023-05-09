@@ -13,27 +13,24 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nowpayments.io/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAllTransfersRequest{
-        ID: "111",
-        Limit: "10",
-        Offset: "0",
-        Order: "ASC",
-        Status: "CREATED",
-    }
-
     ctx := context.Background()
-    res, err := s.BillingSubPartnerAPI.GetAllTransfers(ctx, req)
+    res, err := s.BillingSubPartnerAPI.GetAllTransfers(ctx, operations.GetAllTransfersRequest{
+        ID: sdk.String("111"),
+        Limit: sdk.String("10"),
+        Offset: sdk.String("0"),
+        Order: sdk.String("ASC"),
+        Status: sdk.String("CREATED"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,33 +46,33 @@ func main() {
 ## Available Resources and Operations
 
 
-### BillingSubPartnerAPI
+### [BillingSubPartnerAPI](docs/billingsubpartnerapi/README.md)
 
-* `GetAllTransfers` - Get all transfers
-* `GetSubPartnerBalance` - Get sub-partner balance
-* `GetSubPartners` - Get sub-partners
-* `GetTransfer` - Get transfer
+* [GetAllTransfers](docs/billingsubpartnerapi/README.md#getalltransfers) - Get all transfers
+* [GetSubPartnerBalance](docs/billingsubpartnerapi/README.md#getsubpartnerbalance) - Get sub-partner balance
+* [GetSubPartners](docs/billingsubpartnerapi/README.md#getsubpartners) - Get sub-partners
+* [GetTransfer](docs/billingsubpartnerapi/README.md#gettransfer) - Get transfer
 
-### PaymentsAPI
+### [PaymentsAPI](docs/paymentsapi/README.md)
 
-* `GetEstimatedPrice` - Get estimated price
-* `GetListOfPayments` - Get list of payments
-* `GetPaymentStatus` - Get payment status
-* `GetTheMinimumPaymentAmount` - Get the minimum payment amount
-* `GetUpdatePaymentEstimate` - Get/Update payment estimate
+* [GetEstimatedPrice](docs/paymentsapi/README.md#getestimatedprice) - Get estimated price
+* [GetListOfPayments](docs/paymentsapi/README.md#getlistofpayments) - Get list of payments
+* [GetPaymentStatus](docs/paymentsapi/README.md#getpaymentstatus) - Get payment status
+* [GetTheMinimumPaymentAmount](docs/paymentsapi/README.md#gettheminimumpaymentamount) - Get the minimum payment amount
+* [GetUpdatePaymentEstimate](docs/paymentsapi/README.md#getupdatepaymentestimate) - Get/Update payment estimate
 
-### PayoutsAPI
+### [PayoutsAPI](docs/payoutsapi/README.md)
 
-* `VerifyPayout` - Verify payout
+* [VerifyPayout](docs/payoutsapi/README.md#verifypayout) - Verify payout
 
-### RecurringPaymentsAPIEmailSubscriptionsFeature
+### [RecurringPaymentsAPIEmailSubscriptionsFeature](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md)
 
-* `DeleteRecurringPayment` - Delete recurring payment
-* `GetManyPlans` - Get many plans
-* `GetManyRecurringPayments` - Get many recurring payments
-* `GetOnePlan` - Get one plan
-* `GetOneRecurringPayment` - Get one recurring payment
-* `UpdatePlan` - Update plan
+* [DeleteRecurringPayment](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md#deleterecurringpayment) - Delete recurring payment
+* [GetManyPlans](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md#getmanyplans) - Get many plans
+* [GetManyRecurringPayments](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md#getmanyrecurringpayments) - Get many recurring payments
+* [GetOnePlan](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md#getoneplan) - Get one plan
+* [GetOneRecurringPayment](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md#getonerecurringpayment) - Get one recurring payment
+* [UpdatePlan](docs/recurringpaymentsapiemailsubscriptionsfeature/README.md#updateplan) - Update plan
 <!-- End SDK Available Operations -->
 
 ### Maturity

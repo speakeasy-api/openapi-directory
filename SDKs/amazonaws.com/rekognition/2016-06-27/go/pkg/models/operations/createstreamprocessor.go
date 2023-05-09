@@ -16,17 +16,21 @@ const (
 	CreateStreamProcessorXAmzTargetEnumRekognitionServiceCreateStreamProcessor CreateStreamProcessorXAmzTargetEnum = "RekognitionService.CreateStreamProcessor"
 )
 
+func (e CreateStreamProcessorXAmzTargetEnum) ToPointer() *CreateStreamProcessorXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateStreamProcessorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.CreateStreamProcessor":
-		*e = CreateStreamProcessorXAmzTargetEnum(s)
+		*e = CreateStreamProcessorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateStreamProcessorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateStreamProcessorXAmzTargetEnum: %v", v)
 	}
 }
 

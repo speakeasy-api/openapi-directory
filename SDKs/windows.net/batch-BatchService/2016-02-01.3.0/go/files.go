@@ -5,6 +5,7 @@ package sdk
 import (
 	"context"
 	"fmt"
+	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
@@ -34,7 +35,10 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // FileDeleteFromComputeNode - Deletes the specified task file from the compute node.
 func (s *files) FileDeleteFromComputeNode(ctx context.Context, request operations.FileDeleteFromComputeNodeRequest) (*operations.FileDeleteFromComputeNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/files/{fileName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/files/{fileName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -87,7 +91,10 @@ func (s *files) FileDeleteFromComputeNode(ctx context.Context, request operation
 // FileDeleteFromTask - Deletes the specified task file from the compute node where the task ran.
 func (s *files) FileDeleteFromTask(ctx context.Context, request operations.FileDeleteFromTaskRequest) (*operations.FileDeleteFromTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/files/{fileName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/files/{fileName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -140,7 +147,10 @@ func (s *files) FileDeleteFromTask(ctx context.Context, request operations.FileD
 // FileGetFromComputeNode - Returns the content of the specified task file.
 func (s *files) FileGetFromComputeNode(ctx context.Context, request operations.FileGetFromComputeNodeRequest) (*operations.FileGetFromComputeNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/files/{fileName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/files/{fileName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,9 +187,9 @@ func (s *files) FileGetFromComputeNode(ctx context.Context, request operations.F
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []byte
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
 			res.FileGetFromComputeNode200ApplicationJSONBinaryString = out
@@ -202,7 +212,10 @@ func (s *files) FileGetFromComputeNode(ctx context.Context, request operations.F
 // FileGetFromTask - Returns the content of the specified task file.
 func (s *files) FileGetFromTask(ctx context.Context, request operations.FileGetFromTaskRequest) (*operations.FileGetFromTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/files/{fileName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/files/{fileName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,9 +252,9 @@ func (s *files) FileGetFromTask(ctx context.Context, request operations.FileGetF
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []byte
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
 			res.FileGetFromTask200ApplicationJSONBinaryString = out
@@ -264,7 +277,10 @@ func (s *files) FileGetFromTask(ctx context.Context, request operations.FileGetF
 // FileGetNodeFilePropertiesFromComputeNode - Gets the properties of the specified compute node file.
 func (s *files) FileGetNodeFilePropertiesFromComputeNode(ctx context.Context, request operations.FileGetNodeFilePropertiesFromComputeNodeRequest) (*operations.FileGetNodeFilePropertiesFromComputeNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/files/{fileName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/files/{fileName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
@@ -317,7 +333,10 @@ func (s *files) FileGetNodeFilePropertiesFromComputeNode(ctx context.Context, re
 // FileGetNodeFilePropertiesFromTask - Gets the properties of the specified task file.
 func (s *files) FileGetNodeFilePropertiesFromTask(ctx context.Context, request operations.FileGetNodeFilePropertiesFromTaskRequest) (*operations.FileGetNodeFilePropertiesFromTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/files/{fileName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/files/{fileName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
@@ -370,7 +389,10 @@ func (s *files) FileGetNodeFilePropertiesFromTask(ctx context.Context, request o
 // FileListFromComputeNode - Lists all of the files in task directories on the specified compute node.
 func (s *files) FileListFromComputeNode(ctx context.Context, request operations.FileListFromComputeNodeRequest) (*operations.FileListFromComputeNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pools/{poolId}/nodes/{nodeId}/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -432,7 +454,10 @@ func (s *files) FileListFromComputeNode(ctx context.Context, request operations.
 // FileListFromTask - Lists the files in a task's directory on its compute node.
 func (s *files) FileListFromTask(ctx context.Context, request operations.FileListFromTaskRequest) (*operations.FileListFromTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

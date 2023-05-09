@@ -26,12 +26,16 @@ const (
 	BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnumBusinessFoodMenuClicks           BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum = "BUSINESS_FOOD_MENU_CLICKS"
 )
 
+func (e BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum) ToPointer() *BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum {
+	return &e
+}
+
 func (e *BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAILY_METRIC_UNKNOWN":
 		fallthrough
 	case "BUSINESS_IMPRESSIONS_DESKTOP_MAPS":
@@ -55,10 +59,10 @@ func (e *BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDail
 	case "BUSINESS_FOOD_ORDERS":
 		fallthrough
 	case "BUSINESS_FOOD_MENU_CLICKS":
-		*e = BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum(s)
+		*e = BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum: %s", s)
+		return fmt.Errorf("invalid value for BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum: %v", v)
 	}
 }
 

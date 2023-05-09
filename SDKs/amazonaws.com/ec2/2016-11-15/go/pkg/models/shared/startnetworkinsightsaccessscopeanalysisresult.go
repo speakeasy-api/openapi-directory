@@ -17,21 +17,25 @@ const (
 	StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisFindingsFoundEnumUnknown StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisFindingsFoundEnum = "unknown"
 )
 
+func (e StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisFindingsFoundEnum) ToPointer() *StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisFindingsFoundEnum {
+	return &e
+}
+
 func (e *StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisFindingsFoundEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
 		fallthrough
 	case "unknown":
-		*e = StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisFindingsFoundEnum(s)
+		*e = StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisFindingsFoundEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisFindingsFoundEnum: %s", s)
+		return fmt.Errorf("invalid value for StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisFindingsFoundEnum: %v", v)
 	}
 }
 
@@ -44,21 +48,25 @@ const (
 	StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisStatusEnumFailed    StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisStatusEnum = "failed"
 )
 
+func (e StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisStatusEnum) ToPointer() *StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisStatusEnum {
+	return &e
+}
+
 func (e *StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "succeeded":
 		fallthrough
 	case "failed":
-		*e = StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisStatusEnum(s)
+		*e = StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StartNetworkInsightsAccessScopeAnalysisResultNetworkInsightsAccessScopeAnalysisStatusEnum: %v", v)
 	}
 }
 

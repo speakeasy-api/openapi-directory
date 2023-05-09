@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type LocaleGetLanguagesSecurity struct {
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
+}
+
 type LocaleGetLanguagesResponse struct {
 	ContentType string
 	StatusCode  int

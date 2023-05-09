@@ -17,12 +17,16 @@ const (
 	ReturnPolicyOnlineReturnReasonCategoryInfoReturnLabelSourceEnumCustomerResponsibility       ReturnPolicyOnlineReturnReasonCategoryInfoReturnLabelSourceEnum = "CUSTOMER_RESPONSIBILITY"
 )
 
+func (e ReturnPolicyOnlineReturnReasonCategoryInfoReturnLabelSourceEnum) ToPointer() *ReturnPolicyOnlineReturnReasonCategoryInfoReturnLabelSourceEnum {
+	return &e
+}
+
 func (e *ReturnPolicyOnlineReturnReasonCategoryInfoReturnLabelSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETURN_LABEL_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "DOWNLOAD_AND_PRINT":
@@ -30,10 +34,10 @@ func (e *ReturnPolicyOnlineReturnReasonCategoryInfoReturnLabelSourceEnum) Unmars
 	case "IN_THE_BOX":
 		fallthrough
 	case "CUSTOMER_RESPONSIBILITY":
-		*e = ReturnPolicyOnlineReturnReasonCategoryInfoReturnLabelSourceEnum(s)
+		*e = ReturnPolicyOnlineReturnReasonCategoryInfoReturnLabelSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReturnPolicyOnlineReturnReasonCategoryInfoReturnLabelSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ReturnPolicyOnlineReturnReasonCategoryInfoReturnLabelSourceEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	ReturnPolicyOnlineReturnReasonCategoryInfoReturnReasonCategoryEnumItemDefect                      ReturnPolicyOnlineReturnReasonCategoryInfoReturnReasonCategoryEnum = "ITEM_DEFECT"
 )
 
+func (e ReturnPolicyOnlineReturnReasonCategoryInfoReturnReasonCategoryEnum) ToPointer() *ReturnPolicyOnlineReturnReasonCategoryInfoReturnReasonCategoryEnum {
+	return &e
+}
+
 func (e *ReturnPolicyOnlineReturnReasonCategoryInfoReturnReasonCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETURN_REASON_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "BUYER_REMORSE":
 		fallthrough
 	case "ITEM_DEFECT":
-		*e = ReturnPolicyOnlineReturnReasonCategoryInfoReturnReasonCategoryEnum(s)
+		*e = ReturnPolicyOnlineReturnReasonCategoryInfoReturnReasonCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReturnPolicyOnlineReturnReasonCategoryInfoReturnReasonCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for ReturnPolicyOnlineReturnReasonCategoryInfoReturnReasonCategoryEnum: %v", v)
 	}
 }
 

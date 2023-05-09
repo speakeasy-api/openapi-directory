@@ -22,12 +22,16 @@ const (
 	LogEntrySeverityEnumEmergency LogEntrySeverityEnum = "EMERGENCY"
 )
 
+func (e LogEntrySeverityEnum) ToPointer() *LogEntrySeverityEnum {
+	return &e
+}
+
 func (e *LogEntrySeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "DEBUG":
@@ -45,10 +49,10 @@ func (e *LogEntrySeverityEnum) UnmarshalJSON(data []byte) error {
 	case "ALERT":
 		fallthrough
 	case "EMERGENCY":
-		*e = LogEntrySeverityEnum(s)
+		*e = LogEntrySeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LogEntrySeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for LogEntrySeverityEnum: %v", v)
 	}
 }
 

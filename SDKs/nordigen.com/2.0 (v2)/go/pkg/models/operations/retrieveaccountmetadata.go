@@ -13,12 +13,16 @@ type RetrieveAccountMetadataRequest struct {
 
 type RetrieveAccountMetadataResponse struct {
 	// sample account metadata
-	AccountV2                                       *shared.AccountV2
-	ContentType                                     string
-	StatusCode                                      int
-	RawResponse                                     *http.Response
+	Account     *shared.Account
+	ContentType string
+	StatusCode  int
+	RawResponse *http.Response
+	// Invalid token
 	RetrieveAccountMetadata401ApplicationJSONObject map[string]interface{}
+	// IP Access denied
 	RetrieveAccountMetadata403ApplicationJSONObject map[string]interface{}
-	// Account not found
+	// Account not found error
 	RetrieveAccountMetadata404ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	RetrieveAccountMetadata429ApplicationJSONObject map[string]interface{}
 }

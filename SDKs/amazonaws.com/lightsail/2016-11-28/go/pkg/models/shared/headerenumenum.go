@@ -27,12 +27,16 @@ const (
 	HeaderEnumEnumReferer                   HeaderEnumEnum = "Referer"
 )
 
+func (e HeaderEnumEnum) ToPointer() *HeaderEnumEnum {
+	return &e
+}
+
 func (e *HeaderEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Accept":
 		fallthrough
 	case "Accept-Charset":
@@ -62,9 +66,9 @@ func (e *HeaderEnumEnum) UnmarshalJSON(data []byte) error {
 	case "Origin":
 		fallthrough
 	case "Referer":
-		*e = HeaderEnumEnum(s)
+		*e = HeaderEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HeaderEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for HeaderEnumEnum: %v", v)
 	}
 }

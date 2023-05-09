@@ -13,16 +13,20 @@ const (
 	ReportFormatTypeEnumTextCsv ReportFormatTypeEnum = "text/csv"
 )
 
+func (e ReportFormatTypeEnum) ToPointer() *ReportFormatTypeEnum {
+	return &e
+}
+
 func (e *ReportFormatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text/csv":
-		*e = ReportFormatTypeEnum(s)
+		*e = ReportFormatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportFormatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportFormatTypeEnum: %v", v)
 	}
 }

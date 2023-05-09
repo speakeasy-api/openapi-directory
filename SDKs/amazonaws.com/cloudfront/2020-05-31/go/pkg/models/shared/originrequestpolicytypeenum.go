@@ -14,18 +14,22 @@ const (
 	OriginRequestPolicyTypeEnumCustom  OriginRequestPolicyTypeEnum = "custom"
 )
 
+func (e OriginRequestPolicyTypeEnum) ToPointer() *OriginRequestPolicyTypeEnum {
+	return &e
+}
+
 func (e *OriginRequestPolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "managed":
 		fallthrough
 	case "custom":
-		*e = OriginRequestPolicyTypeEnum(s)
+		*e = OriginRequestPolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OriginRequestPolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OriginRequestPolicyTypeEnum: %v", v)
 	}
 }

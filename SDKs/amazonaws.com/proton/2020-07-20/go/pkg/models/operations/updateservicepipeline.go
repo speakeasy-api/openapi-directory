@@ -16,17 +16,21 @@ const (
 	UpdateServicePipelineXAmzTargetEnumAwsProton20200720UpdateServicePipeline UpdateServicePipelineXAmzTargetEnum = "AwsProton20200720.UpdateServicePipeline"
 )
 
+func (e UpdateServicePipelineXAmzTargetEnum) ToPointer() *UpdateServicePipelineXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateServicePipelineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.UpdateServicePipeline":
-		*e = UpdateServicePipelineXAmzTargetEnum(s)
+		*e = UpdateServicePipelineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateServicePipelineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateServicePipelineXAmzTargetEnum: %v", v)
 	}
 }
 

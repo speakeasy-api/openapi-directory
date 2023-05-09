@@ -17,19 +17,23 @@ const (
 	UpdateReplicationConfigurationRequestBodyDataPlaneRoutingEnumPublicIP  UpdateReplicationConfigurationRequestBodyDataPlaneRoutingEnum = "PUBLIC_IP"
 )
 
+func (e UpdateReplicationConfigurationRequestBodyDataPlaneRoutingEnum) ToPointer() *UpdateReplicationConfigurationRequestBodyDataPlaneRoutingEnum {
+	return &e
+}
+
 func (e *UpdateReplicationConfigurationRequestBodyDataPlaneRoutingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE_IP":
 		fallthrough
 	case "PUBLIC_IP":
-		*e = UpdateReplicationConfigurationRequestBodyDataPlaneRoutingEnum(s)
+		*e = UpdateReplicationConfigurationRequestBodyDataPlaneRoutingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateReplicationConfigurationRequestBodyDataPlaneRoutingEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateReplicationConfigurationRequestBodyDataPlaneRoutingEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnumAuto UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnum = "AUTO"
 )
 
+func (e UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnum) ToPointer() *UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnum {
+	return &e
+}
+
 func (e *UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GP2":
 		fallthrough
 	case "GP3":
@@ -56,10 +64,10 @@ func (e *UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnu
 	case "ST1":
 		fallthrough
 	case "AUTO":
-		*e = UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnum(s)
+		*e = UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateReplicationConfigurationRequestBodyDefaultLargeStagingDiskTypeEnum: %v", v)
 	}
 }
 
@@ -71,25 +79,31 @@ const (
 	UpdateReplicationConfigurationRequestBodyEbsEncryptionEnumCustom  UpdateReplicationConfigurationRequestBodyEbsEncryptionEnum = "CUSTOM"
 )
 
+func (e UpdateReplicationConfigurationRequestBodyEbsEncryptionEnum) ToPointer() *UpdateReplicationConfigurationRequestBodyEbsEncryptionEnum {
+	return &e
+}
+
 func (e *UpdateReplicationConfigurationRequestBodyEbsEncryptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "CUSTOM":
-		*e = UpdateReplicationConfigurationRequestBodyEbsEncryptionEnum(s)
+		*e = UpdateReplicationConfigurationRequestBodyEbsEncryptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateReplicationConfigurationRequestBodyEbsEncryptionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateReplicationConfigurationRequestBodyEbsEncryptionEnum: %v", v)
 	}
 }
 
 type UpdateReplicationConfigurationRequestBody struct {
 	// Whether to associate the default Elastic Disaster Recovery Security group with the Replication Configuration.
 	AssociateDefaultSecurityGroup *bool `json:"associateDefaultSecurityGroup,omitempty"`
+	// Whether to allow the AWS replication agent to automatically replicate newly added disks.
+	AutoReplicateNewDisks *bool `json:"autoReplicateNewDisks,omitempty"`
 	// Configure bandwidth throttling for the outbound data transfer rate of the Source Server in Mbps.
 	BandwidthThrottling *int64 `json:"bandwidthThrottling,omitempty"`
 	// Whether to create a Public IP for the Recovery Instance by default.

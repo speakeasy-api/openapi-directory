@@ -23,12 +23,16 @@ const (
 	NotificationNotificationTypeEnumDeviceReportUpdate         NotificationNotificationTypeEnum = "deviceReportUpdate"
 )
 
+func (e NotificationNotificationTypeEnum) ToPointer() *NotificationNotificationTypeEnum {
+	return &e
+}
+
 func (e *NotificationNotificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "testNotification":
@@ -48,10 +52,10 @@ func (e *NotificationNotificationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "newDevice":
 		fallthrough
 	case "deviceReportUpdate":
-		*e = NotificationNotificationTypeEnum(s)
+		*e = NotificationNotificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationNotificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationNotificationTypeEnum: %v", v)
 	}
 }
 

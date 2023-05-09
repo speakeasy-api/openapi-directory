@@ -16,21 +16,61 @@ const (
 	NfsExportOptionsAccessModeEnumReadWrite             NfsExportOptionsAccessModeEnum = "READ_WRITE"
 )
 
+func (e NfsExportOptionsAccessModeEnum) ToPointer() *NfsExportOptionsAccessModeEnum {
+	return &e
+}
+
 func (e *NfsExportOptionsAccessModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_MODE_UNSPECIFIED":
 		fallthrough
 	case "READ_ONLY":
 		fallthrough
 	case "READ_WRITE":
-		*e = NfsExportOptionsAccessModeEnum(s)
+		*e = NfsExportOptionsAccessModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NfsExportOptionsAccessModeEnum: %s", s)
+		return fmt.Errorf("invalid value for NfsExportOptionsAccessModeEnum: %v", v)
+	}
+}
+
+type NfsExportOptionsSecurityFlavorsEnum string
+
+const (
+	NfsExportOptionsSecurityFlavorsEnumSecurityFlavorUnspecified NfsExportOptionsSecurityFlavorsEnum = "SECURITY_FLAVOR_UNSPECIFIED"
+	NfsExportOptionsSecurityFlavorsEnumAuthSys                   NfsExportOptionsSecurityFlavorsEnum = "AUTH_SYS"
+	NfsExportOptionsSecurityFlavorsEnumKrb5                      NfsExportOptionsSecurityFlavorsEnum = "KRB5"
+	NfsExportOptionsSecurityFlavorsEnumKrb5I                     NfsExportOptionsSecurityFlavorsEnum = "KRB5I"
+	NfsExportOptionsSecurityFlavorsEnumKrb5P                     NfsExportOptionsSecurityFlavorsEnum = "KRB5P"
+)
+
+func (e NfsExportOptionsSecurityFlavorsEnum) ToPointer() *NfsExportOptionsSecurityFlavorsEnum {
+	return &e
+}
+
+func (e *NfsExportOptionsSecurityFlavorsEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "SECURITY_FLAVOR_UNSPECIFIED":
+		fallthrough
+	case "AUTH_SYS":
+		fallthrough
+	case "KRB5":
+		fallthrough
+	case "KRB5I":
+		fallthrough
+	case "KRB5P":
+		*e = NfsExportOptionsSecurityFlavorsEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for NfsExportOptionsSecurityFlavorsEnum: %v", v)
 	}
 }
 
@@ -43,21 +83,25 @@ const (
 	NfsExportOptionsSquashModeEnumRootSquash            NfsExportOptionsSquashModeEnum = "ROOT_SQUASH"
 )
 
+func (e NfsExportOptionsSquashModeEnum) ToPointer() *NfsExportOptionsSquashModeEnum {
+	return &e
+}
+
 func (e *NfsExportOptionsSquashModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQUASH_MODE_UNSPECIFIED":
 		fallthrough
 	case "NO_ROOT_SQUASH":
 		fallthrough
 	case "ROOT_SQUASH":
-		*e = NfsExportOptionsSquashModeEnum(s)
+		*e = NfsExportOptionsSquashModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NfsExportOptionsSquashModeEnum: %s", s)
+		return fmt.Errorf("invalid value for NfsExportOptionsSquashModeEnum: %v", v)
 	}
 }
 
@@ -71,6 +115,8 @@ type NfsExportOptions struct {
 	AnonUID *string `json:"anonUid,omitempty"`
 	// List of either an IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or CIDR ranges in the format `{octet1}.{octet2}.{octet3}.{octet4}/{mask size}` which may mount the file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
 	IPRanges []string `json:"ipRanges,omitempty"`
+	// The security flavors allowed for mount operations. The default is AUTH_SYS.
+	SecurityFlavors []NfsExportOptionsSecurityFlavorsEnum `json:"securityFlavors,omitempty"`
 	// Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.
 	SquashMode *NfsExportOptionsSquashModeEnum `json:"squashMode,omitempty"`
 }

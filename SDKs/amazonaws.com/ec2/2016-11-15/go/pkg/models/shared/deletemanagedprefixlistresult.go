@@ -25,12 +25,16 @@ const (
 	DeleteManagedPrefixListResultPrefixListStateEnumDeleteFailed      DeleteManagedPrefixListResultPrefixListStateEnum = "delete-failed"
 )
 
+func (e DeleteManagedPrefixListResultPrefixListStateEnum) ToPointer() *DeleteManagedPrefixListResultPrefixListStateEnum {
+	return &e
+}
+
 func (e *DeleteManagedPrefixListResultPrefixListStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "create-in-progress":
 		fallthrough
 	case "create-complete":
@@ -54,10 +58,10 @@ func (e *DeleteManagedPrefixListResultPrefixListStateEnum) UnmarshalJSON(data []
 	case "delete-complete":
 		fallthrough
 	case "delete-failed":
-		*e = DeleteManagedPrefixListResultPrefixListStateEnum(s)
+		*e = DeleteManagedPrefixListResultPrefixListStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteManagedPrefixListResultPrefixListStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteManagedPrefixListResultPrefixListStateEnum: %v", v)
 	}
 }
 

@@ -98,12 +98,16 @@ const (
 	CreateLocalGatewayRouteTableVpcAssociationRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateLocalGatewayRouteTableVpcAssociationRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateLocalGatewayRouteTableVpcAssociationRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateLocalGatewayRouteTableVpcAssociationRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateLocalGatewayRouteTableVpcAssociationRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateLocalGatewayRouteTableVpcAssociationRequestTagSpecificationsResou
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateLocalGatewayRouteTableVpcAssociationRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateLocalGatewayRouteTableVpcAssociationRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLocalGatewayRouteTableVpcAssociationRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLocalGatewayRouteTableVpcAssociationRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

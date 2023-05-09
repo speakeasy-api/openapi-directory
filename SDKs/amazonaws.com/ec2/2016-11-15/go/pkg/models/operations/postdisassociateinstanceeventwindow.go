@@ -15,17 +15,21 @@ const (
 	POSTDisassociateInstanceEventWindowActionEnumDisassociateInstanceEventWindow POSTDisassociateInstanceEventWindowActionEnum = "DisassociateInstanceEventWindow"
 )
 
+func (e POSTDisassociateInstanceEventWindowActionEnum) ToPointer() *POSTDisassociateInstanceEventWindowActionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateInstanceEventWindowActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateInstanceEventWindow":
-		*e = POSTDisassociateInstanceEventWindowActionEnum(s)
+		*e = POSTDisassociateInstanceEventWindowActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateInstanceEventWindowActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateInstanceEventWindowActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisassociateInstanceEventWindowVersionEnumTwoThousandAndSixteen1115 POSTDisassociateInstanceEventWindowVersionEnum = "2016-11-15"
 )
 
+func (e POSTDisassociateInstanceEventWindowVersionEnum) ToPointer() *POSTDisassociateInstanceEventWindowVersionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateInstanceEventWindowVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDisassociateInstanceEventWindowVersionEnum(s)
+		*e = POSTDisassociateInstanceEventWindowVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateInstanceEventWindowVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateInstanceEventWindowVersionEnum: %v", v)
 	}
 }
 

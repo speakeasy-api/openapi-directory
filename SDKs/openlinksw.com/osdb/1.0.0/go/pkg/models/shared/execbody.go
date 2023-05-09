@@ -16,21 +16,25 @@ const (
 	ExecBodyOsdbOutputTypeEnumDisplayRdf  ExecBodyOsdbOutputTypeEnum = "display_rdf"
 )
 
+func (e ExecBodyOsdbOutputTypeEnum) ToPointer() *ExecBodyOsdbOutputTypeEnum {
+	return &e
+}
+
 func (e *ExecBodyOsdbOutputTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "url_only":
 		fallthrough
 	case "generate_rdf":
 		fallthrough
 	case "display_rdf":
-		*e = ExecBodyOsdbOutputTypeEnum(s)
+		*e = ExecBodyOsdbOutputTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecBodyOsdbOutputTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecBodyOsdbOutputTypeEnum: %v", v)
 	}
 }
 

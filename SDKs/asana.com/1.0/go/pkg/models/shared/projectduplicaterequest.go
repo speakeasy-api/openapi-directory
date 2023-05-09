@@ -25,12 +25,16 @@ const (
 	ProjectDuplicateRequestIncludeEnumTaskProjects     ProjectDuplicateRequestIncludeEnum = "task_projects"
 )
 
+func (e ProjectDuplicateRequestIncludeEnum) ToPointer() *ProjectDuplicateRequestIncludeEnum {
+	return &e
+}
+
 func (e *ProjectDuplicateRequestIncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "members":
 		fallthrough
 	case "notes":
@@ -54,10 +58,10 @@ func (e *ProjectDuplicateRequestIncludeEnum) UnmarshalJSON(data []byte) error {
 	case "task_tags":
 		fallthrough
 	case "task_projects":
-		*e = ProjectDuplicateRequestIncludeEnum(s)
+		*e = ProjectDuplicateRequestIncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectDuplicateRequestIncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectDuplicateRequestIncludeEnum: %v", v)
 	}
 }
 

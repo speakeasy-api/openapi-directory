@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// ItemSource - Structure representing the items in the response for SearchRasterDataCollection.
+// ItemSource - The structure representing the items in the response for SearchRasterDataCollection.
 type ItemSource struct {
 	Assets     map[string]AssetValue `json:"Assets,omitempty"`
 	DateTime   time.Time             `json:"DateTime"`

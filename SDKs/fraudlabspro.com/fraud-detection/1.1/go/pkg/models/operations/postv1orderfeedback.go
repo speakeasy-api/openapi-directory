@@ -17,21 +17,25 @@ const (
 	PostV1OrderFeedbackActionEnumRejectBlacklist PostV1OrderFeedbackActionEnum = "REJECT_BLACKLIST"
 )
 
+func (e PostV1OrderFeedbackActionEnum) ToPointer() *PostV1OrderFeedbackActionEnum {
+	return &e
+}
+
 func (e *PostV1OrderFeedbackActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPROVE":
 		fallthrough
 	case "REJECT":
 		fallthrough
 	case "REJECT_BLACKLIST":
-		*e = PostV1OrderFeedbackActionEnum(s)
+		*e = PostV1OrderFeedbackActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostV1OrderFeedbackActionEnum: %s", s)
+		return fmt.Errorf("invalid value for PostV1OrderFeedbackActionEnum: %v", v)
 	}
 }
 
@@ -43,19 +47,23 @@ const (
 	PostV1OrderFeedbackFormatEnumXML  PostV1OrderFeedbackFormatEnum = "xml"
 )
 
+func (e PostV1OrderFeedbackFormatEnum) ToPointer() *PostV1OrderFeedbackFormatEnum {
+	return &e
+}
+
 func (e *PostV1OrderFeedbackFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = PostV1OrderFeedbackFormatEnum(s)
+		*e = PostV1OrderFeedbackFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostV1OrderFeedbackFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PostV1OrderFeedbackFormatEnum: %v", v)
 	}
 }
 

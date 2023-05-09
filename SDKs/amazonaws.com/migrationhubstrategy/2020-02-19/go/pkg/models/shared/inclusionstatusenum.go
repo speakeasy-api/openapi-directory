@@ -14,18 +14,22 @@ const (
 	InclusionStatusEnumIncludeInAssessment   InclusionStatusEnum = "includeInAssessment"
 )
 
+func (e InclusionStatusEnum) ToPointer() *InclusionStatusEnum {
+	return &e
+}
+
 func (e *InclusionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "excludeFromAssessment":
 		fallthrough
 	case "includeInAssessment":
-		*e = InclusionStatusEnum(s)
+		*e = InclusionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InclusionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InclusionStatusEnum: %v", v)
 	}
 }

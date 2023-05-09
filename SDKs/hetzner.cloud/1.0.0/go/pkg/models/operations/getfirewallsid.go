@@ -25,17 +25,21 @@ const (
 	GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnumServer GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum = "server"
 )
 
+func (e GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum) ToPointer() *GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum {
+	return &e
+}
+
 func (e *GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "server":
-		*e = GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum(s)
+		*e = GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFirewallsIDFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum: %v", v)
 	}
 }
 
@@ -63,19 +67,23 @@ const (
 	GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnumLabelSelector GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnum = "label_selector"
 )
 
+func (e GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnum) ToPointer() *GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnum {
+	return &e
+}
+
 func (e *GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "server":
 		fallthrough
 	case "label_selector":
-		*e = GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnum(s)
+		*e = GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFirewallsIDFirewallResponseFirewallAppliedToTypeEnum: %v", v)
 	}
 }
 
@@ -95,19 +103,23 @@ const (
 	GetFirewallsIDFirewallResponseFirewallRuleDirectionEnumOut GetFirewallsIDFirewallResponseFirewallRuleDirectionEnum = "out"
 )
 
+func (e GetFirewallsIDFirewallResponseFirewallRuleDirectionEnum) ToPointer() *GetFirewallsIDFirewallResponseFirewallRuleDirectionEnum {
+	return &e
+}
+
 func (e *GetFirewallsIDFirewallResponseFirewallRuleDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "in":
 		fallthrough
 	case "out":
-		*e = GetFirewallsIDFirewallResponseFirewallRuleDirectionEnum(s)
+		*e = GetFirewallsIDFirewallResponseFirewallRuleDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFirewallsIDFirewallResponseFirewallRuleDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFirewallsIDFirewallResponseFirewallRuleDirectionEnum: %v", v)
 	}
 }
 
@@ -122,12 +134,16 @@ const (
 	GetFirewallsIDFirewallResponseFirewallRuleProtocolEnumGre  GetFirewallsIDFirewallResponseFirewallRuleProtocolEnum = "gre"
 )
 
+func (e GetFirewallsIDFirewallResponseFirewallRuleProtocolEnum) ToPointer() *GetFirewallsIDFirewallResponseFirewallRuleProtocolEnum {
+	return &e
+}
+
 func (e *GetFirewallsIDFirewallResponseFirewallRuleProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "udp":
@@ -137,10 +153,10 @@ func (e *GetFirewallsIDFirewallResponseFirewallRuleProtocolEnum) UnmarshalJSON(d
 	case "esp":
 		fallthrough
 	case "gre":
-		*e = GetFirewallsIDFirewallResponseFirewallRuleProtocolEnum(s)
+		*e = GetFirewallsIDFirewallResponseFirewallRuleProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFirewallsIDFirewallResponseFirewallRuleProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFirewallsIDFirewallResponseFirewallRuleProtocolEnum: %v", v)
 	}
 }
 

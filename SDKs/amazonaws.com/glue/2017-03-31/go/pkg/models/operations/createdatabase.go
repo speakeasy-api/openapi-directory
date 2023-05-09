@@ -16,17 +16,21 @@ const (
 	CreateDatabaseXAmzTargetEnumAwsGlueCreateDatabase CreateDatabaseXAmzTargetEnum = "AWSGlue.CreateDatabase"
 )
 
+func (e CreateDatabaseXAmzTargetEnum) ToPointer() *CreateDatabaseXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateDatabaseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.CreateDatabase":
-		*e = CreateDatabaseXAmzTargetEnum(s)
+		*e = CreateDatabaseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDatabaseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDatabaseXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -50,6 +54,8 @@ type CreateDatabaseResponse struct {
 	ContentType                     string
 	// Success
 	CreateDatabaseResponse map[string]interface{}
+	// FederatedResourceAlreadyExistsException
+	FederatedResourceAlreadyExistsException interface{}
 	// GlueEncryptionException
 	GlueEncryptionException interface{}
 	// InternalServiceException

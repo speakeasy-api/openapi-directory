@@ -34,7 +34,10 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // MirrorAccountsInsert - Inserts a new account for a user
 func (s *accounts) MirrorAccountsInsert(ctx context.Context, request operations.MirrorAccountsInsertRequest) (*operations.MirrorAccountsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{userToken}/{accountType}/{accountName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{userToken}/{accountType}/{accountName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Account", "json")
 	if err != nil {

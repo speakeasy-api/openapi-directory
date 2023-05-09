@@ -16,17 +16,21 @@ const (
 	DeleteInventoryXAmzTargetEnumAmazonSsmDeleteInventory DeleteInventoryXAmzTargetEnum = "AmazonSSM.DeleteInventory"
 )
 
+func (e DeleteInventoryXAmzTargetEnum) ToPointer() *DeleteInventoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteInventoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DeleteInventory":
-		*e = DeleteInventoryXAmzTargetEnum(s)
+		*e = DeleteInventoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteInventoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteInventoryXAmzTargetEnum: %v", v)
 	}
 }
 

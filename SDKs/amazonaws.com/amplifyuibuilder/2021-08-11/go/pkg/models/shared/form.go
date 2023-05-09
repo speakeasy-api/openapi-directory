@@ -11,6 +11,7 @@ type Form struct {
 	Fields            map[string]FieldConfig      `json:"fields"`
 	FormActionType    FormActionTypeEnum          `json:"formActionType"`
 	ID                string                      `json:"id"`
+	LabelDecorator    *LabelDecoratorEnum         `json:"labelDecorator,omitempty"`
 	Name              string                      `json:"name"`
 	SchemaVersion     string                      `json:"schemaVersion"`
 	SectionalElements map[string]SectionalElement `json:"sectionalElements"`

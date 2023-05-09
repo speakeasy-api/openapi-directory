@@ -13,28 +13,26 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/subaccounts/1.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateSubAccountRequest{
+    ctx := context.Background()
+    res, err := s.SubaccountManagement.CreateSubAccount(ctx, operations.CreateSubAccountRequest{
         NewSubaccountRequest: shared.NewSubaccountRequest{
             Name: "Subaccount department A",
-            Secret: "Password123",
-            UsePrimaryAccountBalance: false,
+            Secret: sdk.String("Password123"),
+            UsePrimaryAccountBalance: sdk.Bool(false),
         },
         APIKey: "corrupti",
-    }
-
-    ctx := context.Background()
-    res, err := s.SubaccountManagement.CreateSubAccount(ctx, req, operations.CreateSubAccountSecurity{
+    }, operations.CreateSubAccountSecurity{
         Password: "YOUR_PASSWORD_HERE",
         Username: "YOUR_USERNAME_HERE",
     })
@@ -53,20 +51,20 @@ func main() {
 ## Available Resources and Operations
 
 
-### SubaccountManagement
+### [SubaccountManagement](docs/subaccountmanagement/README.md)
 
-* `CreateSubAccount` - Create subaccount
-* `ModifySubaccount` - Modify a subaccount
-* `RetrieveSubaccount` - Retrieve a subaccount
-* `RetrieveSubaccountsList` - Retrieve list of subaccounts
+* [CreateSubAccount](docs/subaccountmanagement/README.md#createsubaccount) - Create subaccount
+* [ModifySubaccount](docs/subaccountmanagement/README.md#modifysubaccount) - Modify a subaccount
+* [RetrieveSubaccount](docs/subaccountmanagement/README.md#retrievesubaccount) - Retrieve a subaccount
+* [RetrieveSubaccountsList](docs/subaccountmanagement/README.md#retrievesubaccountslist) - Retrieve list of subaccounts
 
-### Transfers
+### [Transfers](docs/transfers/README.md)
 
-* `RetrieveBalanceTransfers` - Retrieve list of balance transfers
-* `RetrieveCreditTransfers` - Retrieve list of credit transfers
-* `TransferBalance` - Transfer balance
-* `TransferCredit` - Transfer credit
-* `TransferNumber` - Transfer number
+* [RetrieveBalanceTransfers](docs/transfers/README.md#retrievebalancetransfers) - Retrieve list of balance transfers
+* [RetrieveCreditTransfers](docs/transfers/README.md#retrievecredittransfers) - Retrieve list of credit transfers
+* [TransferBalance](docs/transfers/README.md#transferbalance) - Transfer balance
+* [TransferCredit](docs/transfers/README.md#transfercredit) - Transfer credit
+* [TransferNumber](docs/transfers/README.md#transfernumber) - Transfer number
 <!-- End SDK Available Operations -->
 
 ### Maturity

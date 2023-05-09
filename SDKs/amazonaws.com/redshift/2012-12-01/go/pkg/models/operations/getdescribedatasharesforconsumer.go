@@ -15,17 +15,21 @@ const (
 	GETDescribeDataSharesForConsumerActionEnumDescribeDataSharesForConsumer GETDescribeDataSharesForConsumerActionEnum = "DescribeDataSharesForConsumer"
 )
 
+func (e GETDescribeDataSharesForConsumerActionEnum) ToPointer() *GETDescribeDataSharesForConsumerActionEnum {
+	return &e
+}
+
 func (e *GETDescribeDataSharesForConsumerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeDataSharesForConsumer":
-		*e = GETDescribeDataSharesForConsumerActionEnum(s)
+		*e = GETDescribeDataSharesForConsumerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeDataSharesForConsumerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeDataSharesForConsumerActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETDescribeDataSharesForConsumerStatusEnumAvailable GETDescribeDataSharesForConsumerStatusEnum = "AVAILABLE"
 )
 
+func (e GETDescribeDataSharesForConsumerStatusEnum) ToPointer() *GETDescribeDataSharesForConsumerStatusEnum {
+	return &e
+}
+
 func (e *GETDescribeDataSharesForConsumerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "AVAILABLE":
-		*e = GETDescribeDataSharesForConsumerStatusEnum(s)
+		*e = GETDescribeDataSharesForConsumerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeDataSharesForConsumerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeDataSharesForConsumerStatusEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETDescribeDataSharesForConsumerVersionEnumTwoThousandAndTwelve1201 GETDescribeDataSharesForConsumerVersionEnum = "2012-12-01"
 )
 
+func (e GETDescribeDataSharesForConsumerVersionEnum) ToPointer() *GETDescribeDataSharesForConsumerVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeDataSharesForConsumerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETDescribeDataSharesForConsumerVersionEnum(s)
+		*e = GETDescribeDataSharesForConsumerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeDataSharesForConsumerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeDataSharesForConsumerVersionEnum: %v", v)
 	}
 }
 

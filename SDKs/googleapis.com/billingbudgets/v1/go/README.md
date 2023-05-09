@@ -13,19 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/billingbud
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BillingbudgetsBillingAccountsBudgetsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.BillingAccounts.BillingbudgetsBillingAccountsBudgetsCreate(ctx, operations.BillingbudgetsBillingAccountsBudgetsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudBillingBudgetsV1BudgetInput: &shared.GoogleCloudBillingBudgetsV1BudgetInput{
             Amount: &shared.GoogleCloudBillingBudgetsV1BudgetAmount{
                 LastPeriodAmount: map[string]interface{}{
@@ -34,28 +35,28 @@ func main() {
                     "corrupti": "illum",
                 },
                 SpecifiedAmount: &shared.GoogleTypeMoney{
-                    CurrencyCode: "vel",
-                    Nanos: 623564,
-                    Units: "deserunt",
+                    CurrencyCode: sdk.String("vel"),
+                    Nanos: sdk.Int(623564),
+                    Units: sdk.String("deserunt"),
                 },
             },
             BudgetFilter: &shared.GoogleCloudBillingBudgetsV1Filter{
-                CalendarPeriod: "MONTH",
+                CalendarPeriod: shared.GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnumMonth.ToPointer(),
                 CreditTypes: []string{
                     "magnam",
                     "debitis",
                 },
-                CreditTypesTreatment: "CREDIT_TYPES_TREATMENT_UNSPECIFIED",
+                CreditTypesTreatment: shared.GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnumCreditTypesTreatmentUnspecified.ToPointer(),
                 CustomPeriod: &shared.GoogleCloudBillingBudgetsV1CustomPeriod{
                     EndDate: &shared.GoogleTypeDate{
-                        Day: 963663,
-                        Month: 272656,
-                        Year: 383441,
+                        Day: sdk.Int(963663),
+                        Month: sdk.Int(272656),
+                        Year: sdk.Int(383441),
                     },
                     StartDate: &shared.GoogleTypeDate{
-                        Day: 477665,
-                        Month: 791725,
-                        Year: 812169,
+                        Day: sdk.Int(477665),
+                        Month: sdk.Int(791725),
+                        Year: sdk.Int(812169),
                     },
                 },
                 Labels: map[string][]interface{}{
@@ -88,52 +89,49 @@ func main() {
                     "porro",
                 },
             },
-            DisplayName: "dolorum",
-            Etag: "dicta",
+            DisplayName: sdk.String("dolorum"),
+            Etag: sdk.String("dicta"),
             NotificationsRule: &shared.GoogleCloudBillingBudgetsV1NotificationsRule{
-                DisableDefaultIamRecipients: false,
+                DisableDefaultIamRecipients: sdk.Bool(false),
                 MonitoringNotificationChannels: []string{
                     "officia",
                     "occaecati",
                     "fugit",
                 },
-                PubsubTopic: "deleniti",
-                SchemaVersion: "hic",
+                PubsubTopic: sdk.String("deleniti"),
+                SchemaVersion: sdk.String("hic"),
             },
             ThresholdRules: []shared.GoogleCloudBillingBudgetsV1ThresholdRule{
                 shared.GoogleCloudBillingBudgetsV1ThresholdRule{
-                    SpendBasis: "CURRENT_SPEND",
-                    ThresholdPercent: 1059.07,
+                    SpendBasis: shared.GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasisEnumCurrentSpend.ToPointer(),
+                    ThresholdPercent: sdk.Float64(1059.07),
                 },
                 shared.GoogleCloudBillingBudgetsV1ThresholdRule{
-                    SpendBasis: "CURRENT_SPEND",
-                    ThresholdPercent: 4736,
+                    SpendBasis: shared.GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasisEnumCurrentSpend.ToPointer(),
+                    ThresholdPercent: sdk.Float64(4736),
                 },
                 shared.GoogleCloudBillingBudgetsV1ThresholdRule{
-                    SpendBasis: "BASIS_UNSPECIFIED",
-                    ThresholdPercent: 1863.32,
+                    SpendBasis: shared.GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasisEnumBasisUnspecified.ToPointer(),
+                    ThresholdPercent: sdk.Float64(1863.32),
                 },
                 shared.GoogleCloudBillingBudgetsV1ThresholdRule{
-                    SpendBasis: "FORECASTED_SPEND",
-                    ThresholdPercent: 7369.18,
+                    SpendBasis: shared.GoogleCloudBillingBudgetsV1ThresholdRuleSpendBasisEnumForecastedSpend.ToPointer(),
+                    ThresholdPercent: sdk.Float64(7369.18),
                 },
             },
         },
-        AccessToken: "esse",
-        Alt: "json",
-        Callback: "excepturi",
-        Fields: "aspernatur",
-        Key: "perferendis",
-        OauthToken: "ad",
+        AccessToken: sdk.String("esse"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("excepturi"),
+        Fields: sdk.String("aspernatur"),
+        Key: sdk.String("perferendis"),
+        OauthToken: sdk.String("ad"),
         Parent: "natus",
-        PrettyPrint: false,
-        QuotaUser: "sed",
-        UploadType: "iste",
-        UploadProtocol: "dolor",
-    }
-
-    ctx := context.Background()
-    res, err := s.BillingAccounts.BillingbudgetsBillingAccountsBudgetsCreate(ctx, req, operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("sed"),
+        UploadType: sdk.String("iste"),
+        UploadProtocol: sdk.String("dolor"),
+    }, operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity{
         Option1: &operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -154,13 +152,13 @@ func main() {
 ## Available Resources and Operations
 
 
-### BillingAccounts
+### [BillingAccounts](docs/billingaccounts/README.md)
 
-* `BillingbudgetsBillingAccountsBudgetsCreate` - Creates a new budget. See [Quotas and limits](https://cloud.google.com/billing/quotas) for more information on the limits of the number of budgets you can create.
-* `BillingbudgetsBillingAccountsBudgetsDelete` - Deletes a budget. Returns successfully if already deleted.
-* `BillingbudgetsBillingAccountsBudgetsGet` - Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
-* `BillingbudgetsBillingAccountsBudgetsList` - Returns a list of budgets for a billing account. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
-* `BillingbudgetsBillingAccountsBudgetsPatch` - Updates a budget and returns the updated budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. Budget fields that are not exposed in this API will not be changed by this method.
+* [BillingbudgetsBillingAccountsBudgetsCreate](docs/billingaccounts/README.md#billingbudgetsbillingaccountsbudgetscreate) - Creates a new budget. See [Quotas and limits](https://cloud.google.com/billing/quotas) for more information on the limits of the number of budgets you can create.
+* [BillingbudgetsBillingAccountsBudgetsDelete](docs/billingaccounts/README.md#billingbudgetsbillingaccountsbudgetsdelete) - Deletes a budget. Returns successfully if already deleted.
+* [BillingbudgetsBillingAccountsBudgetsGet](docs/billingaccounts/README.md#billingbudgetsbillingaccountsbudgetsget) - Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
+* [BillingbudgetsBillingAccountsBudgetsList](docs/billingaccounts/README.md#billingbudgetsbillingaccountsbudgetslist) - Returns a list of budgets for a billing account. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
+* [BillingbudgetsBillingAccountsBudgetsPatch](docs/billingaccounts/README.md#billingbudgetsbillingaccountsbudgetspatch) - Updates a budget and returns the updated budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. Budget fields that are not exposed in this API will not be changed by this method.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetuserSecurity struct {
+	CodeOauth     *string `security:"scheme,type=oauth2,name=Authorization"`
+	PasswordOauth *string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetuserResponse struct {
 	ContentType string
 	// Successful response

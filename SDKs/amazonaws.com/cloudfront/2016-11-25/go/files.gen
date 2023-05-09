@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -124,4 +125,5 @@ pkg/models/shared/updatecloudfrontoriginaccessidentityresult.go
 pkg/models/shared/updatedistributionresult.go
 pkg/models/shared/updatestreamingdistributionresult.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

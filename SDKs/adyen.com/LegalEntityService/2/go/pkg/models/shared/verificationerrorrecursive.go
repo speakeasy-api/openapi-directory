@@ -62,12 +62,16 @@ const (
 	VerificationErrorRecursiveCapabilitiesEnumWithdrawFromAtmInRestrictedCountriesConsumer      VerificationErrorRecursiveCapabilitiesEnum = "withdrawFromAtmInRestrictedCountriesConsumer"
 )
 
+func (e VerificationErrorRecursiveCapabilitiesEnum) ToPointer() *VerificationErrorRecursiveCapabilitiesEnum {
+	return &e
+}
+
 func (e *VerificationErrorRecursiveCapabilitiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "acceptExternalFunding":
 		fallthrough
 	case "acceptPspFunding":
@@ -167,10 +171,10 @@ func (e *VerificationErrorRecursiveCapabilitiesEnum) UnmarshalJSON(data []byte) 
 	case "withdrawFromAtmInRestrictedCountriesCommercial":
 		fallthrough
 	case "withdrawFromAtmInRestrictedCountriesConsumer":
-		*e = VerificationErrorRecursiveCapabilitiesEnum(s)
+		*e = VerificationErrorRecursiveCapabilitiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerificationErrorRecursiveCapabilitiesEnum: %s", s)
+		return fmt.Errorf("invalid value for VerificationErrorRecursiveCapabilitiesEnum: %v", v)
 	}
 }
 
@@ -183,21 +187,25 @@ const (
 	VerificationErrorRecursiveTypeEnumPendingStatus VerificationErrorRecursiveTypeEnum = "pendingStatus"
 )
 
+func (e VerificationErrorRecursiveTypeEnum) ToPointer() *VerificationErrorRecursiveTypeEnum {
+	return &e
+}
+
 func (e *VerificationErrorRecursiveTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dataMissing":
 		fallthrough
 	case "invalidInput":
 		fallthrough
 	case "pendingStatus":
-		*e = VerificationErrorRecursiveTypeEnum(s)
+		*e = VerificationErrorRecursiveTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerificationErrorRecursiveTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VerificationErrorRecursiveTypeEnum: %v", v)
 	}
 }
 

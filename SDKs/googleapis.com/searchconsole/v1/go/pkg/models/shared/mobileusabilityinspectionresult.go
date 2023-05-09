@@ -18,12 +18,16 @@ const (
 	MobileUsabilityInspectionResultVerdictEnumNeutral            MobileUsabilityInspectionResultVerdictEnum = "NEUTRAL"
 )
 
+func (e MobileUsabilityInspectionResultVerdictEnum) ToPointer() *MobileUsabilityInspectionResultVerdictEnum {
+	return &e
+}
+
 func (e *MobileUsabilityInspectionResultVerdictEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERDICT_UNSPECIFIED":
 		fallthrough
 	case "PASS":
@@ -33,10 +37,10 @@ func (e *MobileUsabilityInspectionResultVerdictEnum) UnmarshalJSON(data []byte) 
 	case "FAIL":
 		fallthrough
 	case "NEUTRAL":
-		*e = MobileUsabilityInspectionResultVerdictEnum(s)
+		*e = MobileUsabilityInspectionResultVerdictEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MobileUsabilityInspectionResultVerdictEnum: %s", s)
+		return fmt.Errorf("invalid value for MobileUsabilityInspectionResultVerdictEnum: %v", v)
 	}
 }
 

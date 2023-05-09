@@ -19,12 +19,16 @@ const (
 	AutomationRunEntityStatusEnumSkipped        AutomationRunEntityStatusEnum = "skipped"
 )
 
+func (e AutomationRunEntityStatusEnum) ToPointer() *AutomationRunEntityStatusEnum {
+	return &e
+}
+
 func (e *AutomationRunEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "success":
@@ -34,10 +38,10 @@ func (e *AutomationRunEntityStatusEnum) UnmarshalJSON(data []byte) error {
 	case "failure":
 		fallthrough
 	case "skipped":
-		*e = AutomationRunEntityStatusEnum(s)
+		*e = AutomationRunEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutomationRunEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AutomationRunEntityStatusEnum: %v", v)
 	}
 }
 

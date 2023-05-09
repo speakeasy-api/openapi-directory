@@ -16,17 +16,21 @@ const (
 	DeleteCollectionXAmzTargetEnumOpenSearchServerlessDeleteCollection DeleteCollectionXAmzTargetEnum = "OpenSearchServerless.DeleteCollection"
 )
 
+func (e DeleteCollectionXAmzTargetEnum) ToPointer() *DeleteCollectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteCollectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpenSearchServerless.DeleteCollection":
-		*e = DeleteCollectionXAmzTargetEnum(s)
+		*e = DeleteCollectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteCollectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteCollectionXAmzTargetEnum: %v", v)
 	}
 }
 

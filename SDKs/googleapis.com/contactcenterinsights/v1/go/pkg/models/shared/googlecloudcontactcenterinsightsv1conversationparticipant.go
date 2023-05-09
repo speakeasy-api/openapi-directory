@@ -18,12 +18,16 @@ const (
 	GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnumAnyAgent        GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum = "ANY_AGENT"
 )
 
+func (e GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum) ToPointer() *GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum {
+	return &e
+}
+
 func (e *GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLE_UNSPECIFIED":
 		fallthrough
 	case "HUMAN_AGENT":
@@ -33,10 +37,10 @@ func (e *GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum) Unma
 	case "END_USER":
 		fallthrough
 	case "ANY_AGENT":
-		*e = GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum(s)
+		*e = GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1ConversationParticipantRoleEnum: %v", v)
 	}
 }
 

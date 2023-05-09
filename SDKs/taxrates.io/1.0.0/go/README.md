@@ -13,29 +13,26 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/taxrates.io/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TaxRatesByCountryCodeRequest{
-        CountryCode: "US",
-        Date: "2020-09-02",
-        Domain: "api.taxrates.io",
-        Filter: "corrupti",
-        ProductCodes: "C010",
-        Province: "provident",
-        Zip: "71642",
-    }
-
     ctx := context.Background()
-    res, err := s.V1Tax.TaxRatesByCountryCode(ctx, req)
+    res, err := s.V1Tax.TaxRatesByCountryCode(ctx, operations.TaxRatesByCountryCodeRequest{
+        CountryCode: sdk.String("US"),
+        Date: sdk.String("2020-09-02"),
+        Domain: sdk.String("api.taxrates.io"),
+        Filter: sdk.String("corrupti"),
+        ProductCodes: sdk.String("C010"),
+        Province: sdk.String("provident"),
+        Zip: sdk.String("71642"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,14 +48,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### V1Tax
+### [V1Tax](docs/v1tax/README.md)
 
-* `TaxRatesByCountryCode` - Tax rates by Country Code
-* `TaxRatesByIPAddress` - Tax rates by IP address
+* [TaxRatesByCountryCode](docs/v1tax/README.md#taxratesbycountrycode) - Tax rates by Country Code
+* [TaxRatesByIPAddress](docs/v1tax/README.md#taxratesbyipaddress) - Tax rates by IP address
 
-### V3Tax
+### [V3Tax](docs/v3tax/README.md)
 
-* `AllTaxRates` - All tax rates
+* [AllTaxRates](docs/v3tax/README.md#alltaxrates) - All tax rates
 <!-- End SDK Available Operations -->
 
 ### Maturity

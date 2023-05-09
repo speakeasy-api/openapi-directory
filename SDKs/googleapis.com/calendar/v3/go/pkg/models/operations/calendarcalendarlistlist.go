@@ -34,12 +34,16 @@ const (
 	CalendarCalendarListListMinAccessRoleEnumWriter         CalendarCalendarListListMinAccessRoleEnum = "writer"
 )
 
+func (e CalendarCalendarListListMinAccessRoleEnum) ToPointer() *CalendarCalendarListListMinAccessRoleEnum {
+	return &e
+}
+
 func (e *CalendarCalendarListListMinAccessRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "freeBusyReader":
 		fallthrough
 	case "owner":
@@ -47,10 +51,10 @@ func (e *CalendarCalendarListListMinAccessRoleEnum) UnmarshalJSON(data []byte) e
 	case "reader":
 		fallthrough
 	case "writer":
-		*e = CalendarCalendarListListMinAccessRoleEnum(s)
+		*e = CalendarCalendarListListMinAccessRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalendarCalendarListListMinAccessRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for CalendarCalendarListListMinAccessRoleEnum: %v", v)
 	}
 }
 

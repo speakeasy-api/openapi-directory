@@ -19,12 +19,16 @@ const (
 	AccessReasonTypeEnumGoogleResponseToProductionAlert AccessReasonTypeEnum = "GOOGLE_RESPONSE_TO_PRODUCTION_ALERT"
 )
 
+func (e AccessReasonTypeEnum) ToPointer() *AccessReasonTypeEnum {
+	return &e
+}
+
 func (e *AccessReasonTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "CUSTOMER_INITIATED_SUPPORT":
@@ -36,10 +40,10 @@ func (e *AccessReasonTypeEnum) UnmarshalJSON(data []byte) error {
 	case "THIRD_PARTY_DATA_REQUEST":
 		fallthrough
 	case "GOOGLE_RESPONSE_TO_PRODUCTION_ALERT":
-		*e = AccessReasonTypeEnum(s)
+		*e = AccessReasonTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessReasonTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessReasonTypeEnum: %v", v)
 	}
 }
 

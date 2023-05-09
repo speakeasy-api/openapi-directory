@@ -18,12 +18,16 @@ const (
 	EventStatusCodeEnumRescheduled EventStatusCodeEnum = "rescheduled"
 )
 
+func (e EventStatusCodeEnum) ToPointer() *EventStatusCodeEnum {
+	return &e
+}
+
 func (e *EventStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "onsale":
 		fallthrough
 	case "offsale":
@@ -33,10 +37,10 @@ func (e *EventStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "postponed":
 		fallthrough
 	case "rescheduled":
-		*e = EventStatusCodeEnum(s)
+		*e = EventStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventStatusCodeEnum: %v", v)
 	}
 }
 

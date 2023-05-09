@@ -23,21 +23,25 @@ const (
 	YoutubeCommentsListTextFormatEnumPlainText             YoutubeCommentsListTextFormatEnum = "plainText"
 )
 
+func (e YoutubeCommentsListTextFormatEnum) ToPointer() *YoutubeCommentsListTextFormatEnum {
+	return &e
+}
+
 func (e *YoutubeCommentsListTextFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "textFormatUnspecified":
 		fallthrough
 	case "html":
 		fallthrough
 	case "plainText":
-		*e = YoutubeCommentsListTextFormatEnum(s)
+		*e = YoutubeCommentsListTextFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeCommentsListTextFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeCommentsListTextFormatEnum: %v", v)
 	}
 }
 

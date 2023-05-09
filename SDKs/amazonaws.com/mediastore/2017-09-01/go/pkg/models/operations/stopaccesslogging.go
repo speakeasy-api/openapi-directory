@@ -16,17 +16,21 @@ const (
 	StopAccessLoggingXAmzTargetEnumMediaStore20170901StopAccessLogging StopAccessLoggingXAmzTargetEnum = "MediaStore_20170901.StopAccessLogging"
 )
 
+func (e StopAccessLoggingXAmzTargetEnum) ToPointer() *StopAccessLoggingXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopAccessLoggingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MediaStore_20170901.StopAccessLogging":
-		*e = StopAccessLoggingXAmzTargetEnum(s)
+		*e = StopAccessLoggingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopAccessLoggingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopAccessLoggingXAmzTargetEnum: %v", v)
 	}
 }
 

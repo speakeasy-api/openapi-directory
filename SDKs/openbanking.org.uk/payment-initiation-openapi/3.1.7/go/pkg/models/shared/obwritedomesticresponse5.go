@@ -103,21 +103,25 @@ const (
 	OBWriteDomesticResponse5DataMultiAuthorisationStatusEnumRejected                     OBWriteDomesticResponse5DataMultiAuthorisationStatusEnum = "Rejected"
 )
 
+func (e OBWriteDomesticResponse5DataMultiAuthorisationStatusEnum) ToPointer() *OBWriteDomesticResponse5DataMultiAuthorisationStatusEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticResponse5DataMultiAuthorisationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authorised":
 		fallthrough
 	case "AwaitingFurtherAuthorisation":
 		fallthrough
 	case "Rejected":
-		*e = OBWriteDomesticResponse5DataMultiAuthorisationStatusEnum(s)
+		*e = OBWriteDomesticResponse5DataMultiAuthorisationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticResponse5DataMultiAuthorisationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticResponse5DataMultiAuthorisationStatusEnum: %v", v)
 	}
 }
 
@@ -172,12 +176,16 @@ const (
 	OBWriteDomesticResponse5DataStatusEnumRejected                          OBWriteDomesticResponse5DataStatusEnum = "Rejected"
 )
 
+func (e OBWriteDomesticResponse5DataStatusEnum) ToPointer() *OBWriteDomesticResponse5DataStatusEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticResponse5DataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcceptedCreditSettlementCompleted":
 		fallthrough
 	case "AcceptedSettlementCompleted":
@@ -189,10 +197,10 @@ func (e *OBWriteDomesticResponse5DataStatusEnum) UnmarshalJSON(data []byte) erro
 	case "Pending":
 		fallthrough
 	case "Rejected":
-		*e = OBWriteDomesticResponse5DataStatusEnum(s)
+		*e = OBWriteDomesticResponse5DataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticResponse5DataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticResponse5DataStatusEnum: %v", v)
 	}
 }
 

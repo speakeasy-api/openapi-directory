@@ -15,19 +15,23 @@ const (
 	NodePoolRepairActionEnumDelete                  NodePoolRepairActionEnum = "DELETE"
 )
 
+func (e NodePoolRepairActionEnum) ToPointer() *NodePoolRepairActionEnum {
+	return &e
+}
+
 func (e *NodePoolRepairActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPAIR_ACTION_UNSPECIFIED":
 		fallthrough
 	case "DELETE":
-		*e = NodePoolRepairActionEnum(s)
+		*e = NodePoolRepairActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodePoolRepairActionEnum: %s", s)
+		return fmt.Errorf("invalid value for NodePoolRepairActionEnum: %v", v)
 	}
 }
 

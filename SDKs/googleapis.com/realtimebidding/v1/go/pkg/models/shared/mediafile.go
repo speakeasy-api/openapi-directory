@@ -31,12 +31,16 @@ const (
 	MediaFileMimeTypeEnumMimeAudioOgg               MediaFileMimeTypeEnum = "MIME_AUDIO_OGG"
 )
 
+func (e MediaFileMimeTypeEnum) ToPointer() *MediaFileMimeTypeEnum {
+	return &e
+}
+
 func (e *MediaFileMimeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIDEO_MIME_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MIME_VIDEO_XFLV":
@@ -72,10 +76,10 @@ func (e *MediaFileMimeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MIME_AUDIO_MP3":
 		fallthrough
 	case "MIME_AUDIO_OGG":
-		*e = MediaFileMimeTypeEnum(s)
+		*e = MediaFileMimeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaFileMimeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaFileMimeTypeEnum: %v", v)
 	}
 }
 

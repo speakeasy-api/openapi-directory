@@ -32,12 +32,16 @@ const (
 	S3ConnectorOperatorEnumNoOp                 S3ConnectorOperatorEnum = "NO_OP"
 )
 
+func (e S3ConnectorOperatorEnum) ToPointer() *S3ConnectorOperatorEnum {
+	return &e
+}
+
 func (e *S3ConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION":
 		fallthrough
 	case "LESS_THAN":
@@ -77,9 +81,9 @@ func (e *S3ConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATE_NUMERIC":
 		fallthrough
 	case "NO_OP":
-		*e = S3ConnectorOperatorEnum(s)
+		*e = S3ConnectorOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for S3ConnectorOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for S3ConnectorOperatorEnum: %v", v)
 	}
 }

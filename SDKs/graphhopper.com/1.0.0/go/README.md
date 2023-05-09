@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/graphhopper.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,53 +27,51 @@ func main() {
         }),
     )
 
-    req := shared.ClusterRequest{
+    ctx := context.Background()
+    res, err := s.ClusterAPI.AsyncClusteringProblem(ctx, shared.ClusterRequest{
         Configuration: &shared.ClusterConfiguration{
             Clustering: &shared.ClusterConfigurationClustering{
-                MaxQuantity: 50,
-                MinQuantity: 30,
-                NumClusters: 10,
+                MaxQuantity: sdk.Float64(50),
+                MinQuantity: sdk.Float64(30),
+                NumClusters: sdk.Float64(10),
             },
-            ResponseType: "json",
+            ResponseType: sdk.String("json"),
             Routing: &shared.ClusterConfigurationRouting{
-                CostPerMeter: 5488.14,
-                CostPerSecond: 1,
-                Profile: "car",
+                CostPerMeter: sdk.Float64(5488.14),
+                CostPerSecond: sdk.Float64(1),
+                Profile: sdk.String("car"),
             },
         },
         Customers: []shared.ClusterCustomer{
             shared.ClusterCustomer{
                 Address: &shared.ClusterCustomerAddress{
-                    Lat: 48.118434,
-                    Lon: 11.53941,
-                    StreetHint: "Lindenschmitstraße 52",
+                    Lat: sdk.Float64(48.118434),
+                    Lon: sdk.Float64(11.53941),
+                    StreetHint: sdk.String("Lindenschmitstraße 52"),
                 },
-                ID: "GraphHopper GmbH",
-                Quantity: 10,
+                ID: sdk.String("GraphHopper GmbH"),
+                Quantity: sdk.Float64(10),
             },
             shared.ClusterCustomer{
                 Address: &shared.ClusterCustomerAddress{
-                    Lat: 48.118434,
-                    Lon: 11.53941,
-                    StreetHint: "Lindenschmitstraße 52",
+                    Lat: sdk.Float64(48.118434),
+                    Lon: sdk.Float64(11.53941),
+                    StreetHint: sdk.String("Lindenschmitstraße 52"),
                 },
-                ID: "GraphHopper GmbH",
-                Quantity: 10,
+                ID: sdk.String("GraphHopper GmbH"),
+                Quantity: sdk.Float64(10),
             },
             shared.ClusterCustomer{
                 Address: &shared.ClusterCustomerAddress{
-                    Lat: 48.118434,
-                    Lon: 11.53941,
-                    StreetHint: "Lindenschmitstraße 52",
+                    Lat: sdk.Float64(48.118434),
+                    Lon: sdk.Float64(11.53941),
+                    StreetHint: sdk.String("Lindenschmitstraße 52"),
                 },
-                ID: "GraphHopper GmbH",
-                Quantity: 10,
+                ID: sdk.String("GraphHopper GmbH"),
+                Quantity: sdk.Float64(10),
             },
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.ClusterAPI.AsyncClusteringProblem(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -90,42 +87,42 @@ func main() {
 ## Available Resources and Operations
 
 
-### ClusterAPI
+### [ClusterAPI](docs/clusterapi/README.md)
 
-* `AsyncClusteringProblem` - Batch Cluster Endpoint
-* `GetClusterSolution` - GET Batch Solution Endpoint
-* `SolveClusteringProblem` - POST Cluster Endpoint
+* [AsyncClusteringProblem](docs/clusterapi/README.md#asyncclusteringproblem) - Batch Cluster Endpoint
+* [GetClusterSolution](docs/clusterapi/README.md#getclustersolution) - GET Batch Solution Endpoint
+* [SolveClusteringProblem](docs/clusterapi/README.md#solveclusteringproblem) - POST Cluster Endpoint
 
-### GeocodingAPI
+### [GeocodingAPI](docs/geocodingapi/README.md)
 
-* `GetGeocode` - Geocoding Endpoint
+* [GetGeocode](docs/geocodingapi/README.md#getgeocode) - Geocoding Endpoint
 
-### IsochroneAPI
+### [IsochroneAPI](docs/isochroneapi/README.md)
 
-* `GetIsochrone` - Isochrone Endpoint
+* [GetIsochrone](docs/isochroneapi/README.md#getisochrone) - Isochrone Endpoint
 
-### MapMatchingAPI
+### [MapMatchingAPI](docs/mapmatchingapi/README.md)
 
-* `PostGPX` - Map-match a GPX file
+* [PostGPX](docs/mapmatchingapi/README.md#postgpx) - Map-match a GPX file
 
-### MatrixAPI
+### [MatrixAPI](docs/matrixapi/README.md)
 
-* `CalculateMatrix` - Batch Matrix Endpoint
-* `GetMatrix` - GET Matrix Endpoint
-* `GetMatrixSolution` - GET Batch Matrix Endpoint
-* `PostMatrix` - POST Matrix Endpoint
+* [CalculateMatrix](docs/matrixapi/README.md#calculatematrix) - Batch Matrix Endpoint
+* [GetMatrix](docs/matrixapi/README.md#getmatrix) - GET Matrix Endpoint
+* [GetMatrixSolution](docs/matrixapi/README.md#getmatrixsolution) - GET Batch Matrix Endpoint
+* [PostMatrix](docs/matrixapi/README.md#postmatrix) - POST Matrix Endpoint
 
-### RouteOptimizationAPI
+### [RouteOptimizationAPI](docs/routeoptimizationapi/README.md)
 
-* `AsyncVRP` - POST route optimization problem (batch mode)
-* `GetSolution` - GET the solution (batch mode)
-* `SolveVRP` - POST route optimization problem
+* [AsyncVRP](docs/routeoptimizationapi/README.md#asyncvrp) - POST route optimization problem (batch mode)
+* [GetSolution](docs/routeoptimizationapi/README.md#getsolution) - GET the solution (batch mode)
+* [SolveVRP](docs/routeoptimizationapi/README.md#solvevrp) - POST route optimization problem
 
-### RoutingAPI
+### [RoutingAPI](docs/routingapi/README.md)
 
-* `GetRoute` - GET Route Endpoint
-* `GetRouteInfo` - Coverage information
-* `PostRoute` - POST Route Endpoint
+* [GetRoute](docs/routingapi/README.md#getroute) - GET Route Endpoint
+* [GetRouteInfo](docs/routingapi/README.md#getrouteinfo) - Coverage information
+* [PostRoute](docs/routingapi/README.md#postroute) - POST Route Endpoint
 <!-- End SDK Available Operations -->
 
 ### Maturity

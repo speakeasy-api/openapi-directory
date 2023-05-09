@@ -20,12 +20,16 @@ const (
 	PrivateConnectionStateEnumDeleted          PrivateConnectionStateEnum = "DELETED"
 )
 
+func (e PrivateConnectionStateEnum) ToPointer() *PrivateConnectionStateEnum {
+	return &e
+}
+
 func (e *PrivateConnectionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -39,10 +43,10 @@ func (e *PrivateConnectionStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED_TO_DELETE":
 		fallthrough
 	case "DELETED":
-		*e = PrivateConnectionStateEnum(s)
+		*e = PrivateConnectionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrivateConnectionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PrivateConnectionStateEnum: %v", v)
 	}
 }
 

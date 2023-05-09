@@ -16,17 +16,21 @@ const (
 	DeleteBatchPredictionXAmzTargetEnumAmazonMl20141212DeleteBatchPrediction DeleteBatchPredictionXAmzTargetEnum = "AmazonML_20141212.DeleteBatchPrediction"
 )
 
+func (e DeleteBatchPredictionXAmzTargetEnum) ToPointer() *DeleteBatchPredictionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteBatchPredictionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.DeleteBatchPrediction":
-		*e = DeleteBatchPredictionXAmzTargetEnum(s)
+		*e = DeleteBatchPredictionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteBatchPredictionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteBatchPredictionXAmzTargetEnum: %v", v)
 	}
 }
 

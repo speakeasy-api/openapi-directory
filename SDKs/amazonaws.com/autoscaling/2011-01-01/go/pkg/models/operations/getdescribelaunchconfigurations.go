@@ -15,17 +15,21 @@ const (
 	GETDescribeLaunchConfigurationsActionEnumDescribeLaunchConfigurations GETDescribeLaunchConfigurationsActionEnum = "DescribeLaunchConfigurations"
 )
 
+func (e GETDescribeLaunchConfigurationsActionEnum) ToPointer() *GETDescribeLaunchConfigurationsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeLaunchConfigurationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeLaunchConfigurations":
-		*e = GETDescribeLaunchConfigurationsActionEnum(s)
+		*e = GETDescribeLaunchConfigurationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeLaunchConfigurationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeLaunchConfigurationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeLaunchConfigurationsVersionEnumTwoThousandAndEleven0101 GETDescribeLaunchConfigurationsVersionEnum = "2011-01-01"
 )
 
+func (e GETDescribeLaunchConfigurationsVersionEnum) ToPointer() *GETDescribeLaunchConfigurationsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeLaunchConfigurationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETDescribeLaunchConfigurationsVersionEnum(s)
+		*e = GETDescribeLaunchConfigurationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeLaunchConfigurationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeLaunchConfigurationsVersionEnum: %v", v)
 	}
 }
 

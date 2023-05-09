@@ -24,21 +24,25 @@ const (
 	SearchEditorialImagesSortEnumOldest   SearchEditorialImagesSortEnum = "oldest"
 )
 
+func (e SearchEditorialImagesSortEnum) ToPointer() *SearchEditorialImagesSortEnum {
+	return &e
+}
+
 func (e *SearchEditorialImagesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "relevant":
 		fallthrough
 	case "newest":
 		fallthrough
 	case "oldest":
-		*e = SearchEditorialImagesSortEnum(s)
+		*e = SearchEditorialImagesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchEditorialImagesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchEditorialImagesSortEnum: %v", v)
 	}
 }
 

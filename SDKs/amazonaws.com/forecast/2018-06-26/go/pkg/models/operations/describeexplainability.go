@@ -16,17 +16,21 @@ const (
 	DescribeExplainabilityXAmzTargetEnumAmazonForecastDescribeExplainability DescribeExplainabilityXAmzTargetEnum = "AmazonForecast.DescribeExplainability"
 )
 
+func (e DescribeExplainabilityXAmzTargetEnum) ToPointer() *DescribeExplainabilityXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeExplainabilityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.DescribeExplainability":
-		*e = DescribeExplainabilityXAmzTargetEnum(s)
+		*e = DescribeExplainabilityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeExplainabilityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeExplainabilityXAmzTargetEnum: %v", v)
 	}
 }
 

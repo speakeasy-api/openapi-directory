@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ip2whois.com/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRequest{
-        Domain: "corrupti",
-        Format: "provident",
-        Key: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.Get(ctx, req)
+    res, err := s.Get(ctx, operations.GetRequest{
+        Domain: "corrupti",
+        Format: sdk.String("provident"),
+        Key: "distinctio",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `Get` - Lookup WHOIS information
+* [Get](docs/sdk/README.md#get) - Lookup WHOIS information
 <!-- End SDK Available Operations -->
 
 ### Maturity

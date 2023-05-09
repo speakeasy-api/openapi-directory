@@ -106,7 +106,10 @@ func (s *bundle) CreateBundle(ctx context.Context, request shared.CreateBundleRe
 // Get a bundle from a patient's plan.
 func (s *bundle) FetchBundle(ctx context.Context, request operations.FetchBundleRequest) (*operations.FetchBundleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bundle/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bundle/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -163,7 +166,10 @@ func (s *bundle) FetchBundle(ctx context.Context, request operations.FetchBundle
 // Updte a bundle from a patient's plan.
 func (s *bundle) UpdateBundle(ctx context.Context, request operations.UpdateBundleRequest) (*operations.UpdateBundleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bundle/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bundle/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateBundleRequest", "json")
 	if err != nil {

@@ -15,21 +15,25 @@ const (
 	ImportConsumerOverridesRequestForceOnlyEnumLimitDecreasePercentageTooHigh ImportConsumerOverridesRequestForceOnlyEnum = "LIMIT_DECREASE_PERCENTAGE_TOO_HIGH"
 )
 
+func (e ImportConsumerOverridesRequestForceOnlyEnum) ToPointer() *ImportConsumerOverridesRequestForceOnlyEnum {
+	return &e
+}
+
 func (e *ImportConsumerOverridesRequestForceOnlyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUOTA_SAFETY_CHECK_UNSPECIFIED":
 		fallthrough
 	case "LIMIT_DECREASE_BELOW_USAGE":
 		fallthrough
 	case "LIMIT_DECREASE_PERCENTAGE_TOO_HIGH":
-		*e = ImportConsumerOverridesRequestForceOnlyEnum(s)
+		*e = ImportConsumerOverridesRequestForceOnlyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportConsumerOverridesRequestForceOnlyEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportConsumerOverridesRequestForceOnlyEnum: %v", v)
 	}
 }
 

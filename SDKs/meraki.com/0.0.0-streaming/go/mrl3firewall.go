@@ -34,7 +34,10 @@ func newMRL3Firewall(defaultClient, securityClient HTTPClient, serverURL, langua
 // Return the L3 firewall rules for an SSID on an MR network
 func (s *mrL3Firewall) GetNetworkSsidL3FirewallRules(ctx context.Context, request operations.GetNetworkSsidL3FirewallRulesRequest) (*operations.GetNetworkSsidL3FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}/l3FirewallRules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}/l3FirewallRules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *mrL3Firewall) GetNetworkSsidL3FirewallRules(ctx context.Context, reques
 // Update the L3 firewall rules of an SSID on an MR network
 func (s *mrL3Firewall) UpdateNetworkSsidL3FirewallRules(ctx context.Context, request operations.UpdateNetworkSsidL3FirewallRulesRequest) (*operations.UpdateNetworkSsidL3FirewallRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}/l3FirewallRules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}/l3FirewallRules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

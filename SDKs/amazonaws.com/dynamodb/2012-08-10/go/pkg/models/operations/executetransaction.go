@@ -16,17 +16,21 @@ const (
 	ExecuteTransactionXAmzTargetEnumDynamoDb20120810ExecuteTransaction ExecuteTransactionXAmzTargetEnum = "DynamoDB_20120810.ExecuteTransaction"
 )
 
+func (e ExecuteTransactionXAmzTargetEnum) ToPointer() *ExecuteTransactionXAmzTargetEnum {
+	return &e
+}
+
 func (e *ExecuteTransactionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.ExecuteTransaction":
-		*e = ExecuteTransactionXAmzTargetEnum(s)
+		*e = ExecuteTransactionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteTransactionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteTransactionXAmzTargetEnum: %v", v)
 	}
 }
 

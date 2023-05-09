@@ -15,20 +15,24 @@ const (
 	VocabularyFilterMethodEnumTag    VocabularyFilterMethodEnum = "tag"
 )
 
+func (e VocabularyFilterMethodEnum) ToPointer() *VocabularyFilterMethodEnum {
+	return &e
+}
+
 func (e *VocabularyFilterMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "remove":
 		fallthrough
 	case "mask":
 		fallthrough
 	case "tag":
-		*e = VocabularyFilterMethodEnum(s)
+		*e = VocabularyFilterMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VocabularyFilterMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for VocabularyFilterMethodEnum: %v", v)
 	}
 }

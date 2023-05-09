@@ -14,18 +14,22 @@ const (
 	ReplicaModeEnumMounted      ReplicaModeEnum = "mounted"
 )
 
+func (e ReplicaModeEnum) ToPointer() *ReplicaModeEnum {
+	return &e
+}
+
 func (e *ReplicaModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open-read-only":
 		fallthrough
 	case "mounted":
-		*e = ReplicaModeEnum(s)
+		*e = ReplicaModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicaModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicaModeEnum: %v", v)
 	}
 }

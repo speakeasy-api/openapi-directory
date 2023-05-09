@@ -15,17 +15,21 @@ const (
 	GETDeleteCacheSubnetGroupActionEnumDeleteCacheSubnetGroup GETDeleteCacheSubnetGroupActionEnum = "DeleteCacheSubnetGroup"
 )
 
+func (e GETDeleteCacheSubnetGroupActionEnum) ToPointer() *GETDeleteCacheSubnetGroupActionEnum {
+	return &e
+}
+
 func (e *GETDeleteCacheSubnetGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteCacheSubnetGroup":
-		*e = GETDeleteCacheSubnetGroupActionEnum(s)
+		*e = GETDeleteCacheSubnetGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteCacheSubnetGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteCacheSubnetGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteCacheSubnetGroupVersionEnumTwoThousandAndFifteen0202 GETDeleteCacheSubnetGroupVersionEnum = "2015-02-02"
 )
 
+func (e GETDeleteCacheSubnetGroupVersionEnum) ToPointer() *GETDeleteCacheSubnetGroupVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteCacheSubnetGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = GETDeleteCacheSubnetGroupVersionEnum(s)
+		*e = GETDeleteCacheSubnetGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteCacheSubnetGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteCacheSubnetGroupVersionEnum: %v", v)
 	}
 }
 

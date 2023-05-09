@@ -2,38 +2,36 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest{
-        DollarXgafv: "2",
-        BindDeviceToGatewayRequest: &shared.BindDeviceToGatewayRequest{
-            DeviceID: "provident",
-            GatewayID: "distinctio",
-        },
-        AccessToken: "quibusdam",
-        Alt: "media",
-        Callback: "nulla",
-        Fields: "corrupti",
-        Key: "illum",
-        OauthToken: "vel",
-        Parent: "error",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.CloudiotProjectsLocationsRegistriesBindDeviceToGateway(ctx, req, operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurity{
+    res, err := s.Projects.CloudiotProjectsLocationsRegistriesBindDeviceToGateway(ctx, operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        BindDeviceToGatewayRequest: &shared.BindDeviceToGatewayRequest{
+            DeviceID: sdk.String("provident"),
+            GatewayID: sdk.String("distinctio"),
+        },
+        AccessToken: sdk.String("quibusdam"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("nulla"),
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("illum"),
+        OauthToken: sdk.String("vel"),
+        Parent: "error",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("iure"),
+    }, operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurity{
         Option1: &operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

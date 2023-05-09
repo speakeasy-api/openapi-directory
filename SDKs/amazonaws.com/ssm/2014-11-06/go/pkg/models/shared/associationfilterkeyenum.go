@@ -20,12 +20,16 @@ const (
 	AssociationFilterKeyEnumResourceGroupName     AssociationFilterKeyEnum = "ResourceGroupName"
 )
 
+func (e AssociationFilterKeyEnum) ToPointer() *AssociationFilterKeyEnum {
+	return &e
+}
+
 func (e *AssociationFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InstanceId":
 		fallthrough
 	case "Name":
@@ -41,9 +45,9 @@ func (e *AssociationFilterKeyEnum) UnmarshalJSON(data []byte) error {
 	case "AssociationName":
 		fallthrough
 	case "ResourceGroupName":
-		*e = AssociationFilterKeyEnum(s)
+		*e = AssociationFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociationFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociationFilterKeyEnum: %v", v)
 	}
 }

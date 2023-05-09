@@ -18,12 +18,16 @@ const (
 	NotificationAttributesActionEnumAll      NotificationAttributesActionEnum = "all"
 )
 
+func (e NotificationAttributesActionEnum) ToPointer() *NotificationAttributesActionEnum {
+	return &e
+}
+
 func (e *NotificationAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "upload":
 		fallthrough
 	case "download":
@@ -31,34 +35,10 @@ func (e *NotificationAttributesActionEnum) UnmarshalJSON(data []byte) error {
 	case "delete":
 		fallthrough
 	case "all":
-		*e = NotificationAttributesActionEnum(s)
+		*e = NotificationAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationAttributesActionEnum: %s", s)
-	}
-}
-
-// NotificationAttributesSendEmailEnum - Whether or not an email will send when the notification is triggered.
-type NotificationAttributesSendEmailEnum string
-
-const (
-	NotificationAttributesSendEmailEnumTrue  NotificationAttributesSendEmailEnum = "true"
-	NotificationAttributesSendEmailEnumFalse NotificationAttributesSendEmailEnum = "false"
-)
-
-func (e *NotificationAttributesSendEmailEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = NotificationAttributesSendEmailEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for NotificationAttributesSendEmailEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationAttributesActionEnum: %v", v)
 	}
 }
 
@@ -74,12 +54,16 @@ const (
 	NotificationAttributesTypeEnumFileDrop     NotificationAttributesTypeEnum = "file_drop"
 )
 
+func (e NotificationAttributesTypeEnum) ToPointer() *NotificationAttributesTypeEnum {
+	return &e
+}
+
 func (e *NotificationAttributesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "file":
 		fallthrough
 	case "folder":
@@ -91,10 +75,10 @@ func (e *NotificationAttributesTypeEnum) UnmarshalJSON(data []byte) error {
 	case "share_receipt":
 		fallthrough
 	case "file_drop":
-		*e = NotificationAttributesTypeEnum(s)
+		*e = NotificationAttributesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationAttributesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationAttributesTypeEnum: %v", v)
 	}
 }
 
@@ -119,7 +103,7 @@ type NotificationAttributes struct {
 	// Notification recipients.
 	Recipients []NotificationRecipient `json:"recipients,omitempty"`
 	// Whether or not an email will send when the notification is triggered.
-	SendEmail *NotificationAttributesSendEmailEnum `json:"sendEmail,omitempty"`
+	SendEmail *bool `json:"sendEmail,omitempty"`
 	// ID of the share that the notification belogns to.
 	ShareID *string `json:"shareId,omitempty"`
 	// Type of the resource the notification is attached to.

@@ -15,17 +15,21 @@ const (
 	PostProjectUsernameProjectSSHKeyContentTypeEnumApplicationJSON PostProjectUsernameProjectSSHKeyContentTypeEnum = "application/json"
 )
 
+func (e PostProjectUsernameProjectSSHKeyContentTypeEnum) ToPointer() *PostProjectUsernameProjectSSHKeyContentTypeEnum {
+	return &e
+}
+
 func (e *PostProjectUsernameProjectSSHKeyContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "application/json":
-		*e = PostProjectUsernameProjectSSHKeyContentTypeEnum(s)
+		*e = PostProjectUsernameProjectSSHKeyContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostProjectUsernameProjectSSHKeyContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostProjectUsernameProjectSSHKeyContentTypeEnum: %v", v)
 	}
 }
 

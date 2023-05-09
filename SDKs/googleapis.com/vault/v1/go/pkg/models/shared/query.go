@@ -19,12 +19,16 @@ const (
 	QueryCorpusEnumVoice                 QueryCorpusEnum = "VOICE"
 )
 
+func (e QueryCorpusEnum) ToPointer() *QueryCorpusEnum {
+	return &e
+}
+
 func (e *QueryCorpusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CORPUS_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DRIVE":
@@ -36,10 +40,10 @@ func (e *QueryCorpusEnum) UnmarshalJSON(data []byte) error {
 	case "HANGOUTS_CHAT":
 		fallthrough
 	case "VOICE":
-		*e = QueryCorpusEnum(s)
+		*e = QueryCorpusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryCorpusEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryCorpusEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	QueryDataScopeEnumUnprocessedData      QueryDataScopeEnum = "UNPROCESSED_DATA"
 )
 
+func (e QueryDataScopeEnum) ToPointer() *QueryDataScopeEnum {
+	return &e
+}
+
 func (e *QueryDataScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "ALL_DATA":
@@ -66,10 +74,10 @@ func (e *QueryDataScopeEnum) UnmarshalJSON(data []byte) error {
 	case "HELD_DATA":
 		fallthrough
 	case "UNPROCESSED_DATA":
-		*e = QueryDataScopeEnum(s)
+		*e = QueryDataScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryDataScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryDataScopeEnum: %v", v)
 	}
 }
 
@@ -87,12 +95,16 @@ const (
 	QueryMethodEnumSharedDrive             QueryMethodEnum = "SHARED_DRIVE"
 )
 
+func (e QueryMethodEnum) ToPointer() *QueryMethodEnum {
+	return &e
+}
+
 func (e *QueryMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEARCH_METHOD_UNSPECIFIED":
 		fallthrough
 	case "ACCOUNT":
@@ -108,10 +120,10 @@ func (e *QueryMethodEnum) UnmarshalJSON(data []byte) error {
 	case "SITES_URL":
 		fallthrough
 	case "SHARED_DRIVE":
-		*e = QueryMethodEnum(s)
+		*e = QueryMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryMethodEnum: %v", v)
 	}
 }
 
@@ -129,12 +141,16 @@ const (
 	QuerySearchMethodEnumSharedDrive             QuerySearchMethodEnum = "SHARED_DRIVE"
 )
 
+func (e QuerySearchMethodEnum) ToPointer() *QuerySearchMethodEnum {
+	return &e
+}
+
 func (e *QuerySearchMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEARCH_METHOD_UNSPECIFIED":
 		fallthrough
 	case "ACCOUNT":
@@ -150,10 +166,10 @@ func (e *QuerySearchMethodEnum) UnmarshalJSON(data []byte) error {
 	case "SITES_URL":
 		fallthrough
 	case "SHARED_DRIVE":
-		*e = QuerySearchMethodEnum(s)
+		*e = QuerySearchMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QuerySearchMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for QuerySearchMethodEnum: %v", v)
 	}
 }
 

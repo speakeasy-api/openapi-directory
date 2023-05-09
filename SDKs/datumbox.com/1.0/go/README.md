@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/datumbox.com/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AdultContentDetectionRequestBody{
-        APIKey: "corrupti",
-        Text: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.DocumentClassification.AdultContentDetection(ctx, req)
+    res, err := s.DocumentClassification.AdultContentDetection(ctx, operations.AdultContentDetectionRequestBody{
+        APIKey: "corrupti",
+        Text: sdk.String("provident"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,28 +43,28 @@ func main() {
 ## Available Resources and Operations
 
 
-### DocumentClassification
+### [DocumentClassification](docs/documentclassification/README.md)
 
-* `AdultContentDetection` - Classifies the Document as adult or noadult
-* `CommercialDetection` - Classifies the Document as commercial or nocommercial
-* `EducationalDetection` - Classifies the Document as educational or noeducational
-* `GenderDetection` - Gender Detection Service
-* `LanguageDetection` - Identifies the Language of the Document
-* `ReadabilityAssessment` - Evaluates the Readability of the Document
-* `SentimentAnalysis` - Identifies the Sentiment of the Document
-* `SpamDetection` - Classifies the Document as spam or nospam
-* `SubjectivityAnalysis` - Classifies Document as Subjective or Objective
-* `TopicClassification` - Identifies the Topic of the Document
-* `TwitterSentimentAnalysis` - Identifies the Sentiment of Twitter Messages
+* [AdultContentDetection](docs/documentclassification/README.md#adultcontentdetection) - Classifies the Document as adult or noadult
+* [CommercialDetection](docs/documentclassification/README.md#commercialdetection) - Classifies the Document as commercial or nocommercial
+* [EducationalDetection](docs/documentclassification/README.md#educationaldetection) - Classifies the Document as educational or noeducational
+* [GenderDetection](docs/documentclassification/README.md#genderdetection) - Gender Detection Service
+* [LanguageDetection](docs/documentclassification/README.md#languagedetection) - Identifies the Language of the Document
+* [ReadabilityAssessment](docs/documentclassification/README.md#readabilityassessment) - Evaluates the Readability of the Document
+* [SentimentAnalysis](docs/documentclassification/README.md#sentimentanalysis) - Identifies the Sentiment of the Document
+* [SpamDetection](docs/documentclassification/README.md#spamdetection) - Classifies the Document as spam or nospam
+* [SubjectivityAnalysis](docs/documentclassification/README.md#subjectivityanalysis) - Classifies Document as Subjective or Objective
+* [TopicClassification](docs/documentclassification/README.md#topicclassification) - Identifies the Topic of the Document
+* [TwitterSentimentAnalysis](docs/documentclassification/README.md#twittersentimentanalysis) - Identifies the Sentiment of Twitter Messages
 
-### InformationRetrieval
+### [InformationRetrieval](docs/informationretrieval/README.md)
 
-* `KeywordExtraction` - Extracts the Keywords of the Document
-* `TextExtraction` - Extracts the clear text from Webpage
+* [KeywordExtraction](docs/informationretrieval/README.md#keywordextraction) - Extracts the Keywords of the Document
+* [TextExtraction](docs/informationretrieval/README.md#textextraction) - Extracts the clear text from Webpage
 
-### Metrics
+### [Metrics](docs/metrics/README.md)
 
-* `DocumentSimilarity` - Estimates the similarity between 2 Documents
+* [DocumentSimilarity](docs/metrics/README.md#documentsimilarity) - Estimates the similarity between 2 Documents
 <!-- End SDK Available Operations -->
 
 ### Maturity

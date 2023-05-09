@@ -21,19 +21,23 @@ const (
 	ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnumReject ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnum = "reject"
 )
 
+func (e ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnum) ToPointer() *ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnum {
+	return &e
+}
+
 func (e *ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "accept":
 		fallthrough
 	case "reject":
-		*e = ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnum(s)
+		*e = ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleRuleActionEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnumEgress  ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnum = "egress"
 )
 
+func (e ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnum) ToPointer() *ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnum {
+	return &e
+}
+
 func (e *ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ingress":
 		fallthrough
 	case "egress":
-		*e = ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnum(s)
+		*e = ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterRuleResultTrafficMirrorFilterRuleTrafficDirectionEnum: %v", v)
 	}
 }
 

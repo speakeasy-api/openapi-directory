@@ -13,17 +13,21 @@ const (
 	ListServicesResponseStatusEnumSuccess ListServicesResponseStatusEnum = "success"
 )
 
+func (e ListServicesResponseStatusEnum) ToPointer() *ListServicesResponseStatusEnum {
+	return &e
+}
+
 func (e *ListServicesResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
-		*e = ListServicesResponseStatusEnum(s)
+		*e = ListServicesResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListServicesResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListServicesResponseStatusEnum: %v", v)
 	}
 }
 

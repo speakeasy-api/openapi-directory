@@ -18,12 +18,16 @@ const (
 	ReviewStatusInfoApprovalStatusEnumApprovalStatusRejectedNotServable ReviewStatusInfoApprovalStatusEnum = "APPROVAL_STATUS_REJECTED_NOT_SERVABLE"
 )
 
+func (e ReviewStatusInfoApprovalStatusEnum) ToPointer() *ReviewStatusInfoApprovalStatusEnum {
+	return &e
+}
+
 func (e *ReviewStatusInfoApprovalStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPROVAL_STATUS_UNSPECIFIED":
 		fallthrough
 	case "APPROVAL_STATUS_PENDING_NOT_SERVABLE":
@@ -33,10 +37,10 @@ func (e *ReviewStatusInfoApprovalStatusEnum) UnmarshalJSON(data []byte) error {
 	case "APPROVAL_STATUS_APPROVED_SERVABLE":
 		fallthrough
 	case "APPROVAL_STATUS_REJECTED_NOT_SERVABLE":
-		*e = ReviewStatusInfoApprovalStatusEnum(s)
+		*e = ReviewStatusInfoApprovalStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReviewStatusInfoApprovalStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReviewStatusInfoApprovalStatusEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	ReviewStatusInfoContentAndPolicyReviewStatusEnumReviewStatusPending     ReviewStatusInfoContentAndPolicyReviewStatusEnum = "REVIEW_STATUS_PENDING"
 )
 
+func (e ReviewStatusInfoContentAndPolicyReviewStatusEnum) ToPointer() *ReviewStatusInfoContentAndPolicyReviewStatusEnum {
+	return &e
+}
+
 func (e *ReviewStatusInfoContentAndPolicyReviewStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVIEW_STATUS_UNSPECIFIED":
 		fallthrough
 	case "REVIEW_STATUS_APPROVED":
@@ -63,10 +71,10 @@ func (e *ReviewStatusInfoContentAndPolicyReviewStatusEnum) UnmarshalJSON(data []
 	case "REVIEW_STATUS_REJECTED":
 		fallthrough
 	case "REVIEW_STATUS_PENDING":
-		*e = ReviewStatusInfoContentAndPolicyReviewStatusEnum(s)
+		*e = ReviewStatusInfoContentAndPolicyReviewStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReviewStatusInfoContentAndPolicyReviewStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReviewStatusInfoContentAndPolicyReviewStatusEnum: %v", v)
 	}
 }
 
@@ -80,12 +88,16 @@ const (
 	ReviewStatusInfoCreativeAndLandingPageReviewStatusEnumReviewStatusPending     ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum = "REVIEW_STATUS_PENDING"
 )
 
+func (e ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum) ToPointer() *ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum {
+	return &e
+}
+
 func (e *ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVIEW_STATUS_UNSPECIFIED":
 		fallthrough
 	case "REVIEW_STATUS_APPROVED":
@@ -93,10 +105,10 @@ func (e *ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum) UnmarshalJSON(d
 	case "REVIEW_STATUS_REJECTED":
 		fallthrough
 	case "REVIEW_STATUS_PENDING":
-		*e = ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum(s)
+		*e = ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReviewStatusInfoCreativeAndLandingPageReviewStatusEnum: %v", v)
 	}
 }
 

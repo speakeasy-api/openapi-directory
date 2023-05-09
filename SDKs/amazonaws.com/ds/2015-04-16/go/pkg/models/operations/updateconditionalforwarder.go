@@ -16,17 +16,21 @@ const (
 	UpdateConditionalForwarderXAmzTargetEnumDirectoryService20150416UpdateConditionalForwarder UpdateConditionalForwarderXAmzTargetEnum = "DirectoryService_20150416.UpdateConditionalForwarder"
 )
 
+func (e UpdateConditionalForwarderXAmzTargetEnum) ToPointer() *UpdateConditionalForwarderXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateConditionalForwarderXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.UpdateConditionalForwarder":
-		*e = UpdateConditionalForwarderXAmzTargetEnum(s)
+		*e = UpdateConditionalForwarderXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateConditionalForwarderXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateConditionalForwarderXAmzTargetEnum: %v", v)
 	}
 }
 

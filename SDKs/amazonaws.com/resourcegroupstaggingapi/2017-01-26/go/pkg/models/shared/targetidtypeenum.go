@@ -15,20 +15,24 @@ const (
 	TargetIDTypeEnumRoot    TargetIDTypeEnum = "ROOT"
 )
 
+func (e TargetIDTypeEnum) ToPointer() *TargetIDTypeEnum {
+	return &e
+}
+
 func (e *TargetIDTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT":
 		fallthrough
 	case "OU":
 		fallthrough
 	case "ROOT":
-		*e = TargetIDTypeEnum(s)
+		*e = TargetIDTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetIDTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetIDTypeEnum: %v", v)
 	}
 }

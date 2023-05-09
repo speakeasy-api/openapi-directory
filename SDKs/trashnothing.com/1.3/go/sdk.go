@@ -4,7 +4,6 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"time"
 )
@@ -22,6 +21,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - This is the REST API for [trashnothing.com](https://trashnothing.com).
 //
 // To learn more about the API or to register your app for use with the API
@@ -32,28 +46,19 @@ func String(s string) *string { return &s }
 type SDK struct {
 	// Groups - Search, subscribe and unsubscribe to groups.
 	Groups *groups
-	// Messages - Manage conversations and messages with other users. <br /><br /> It's important to note that messages are always sent by email to the users.   So it's possible to create a fully functional app using the trash nothing API without using any of the conversations or messages API endpoints.  These API endpoints are useful for developers who want to build a complete messaging interface into their app.
-	//
-	Messages *messages
-	// Misc - Miscellaneous functionality.
-	Misc *misc
-	// Photos - Upload, delete and rotate photos.
-	Photos *photos
 	// Posts - Retrieve and update posts.
 	Posts *posts
-	// Stories - Retrieve and submit stories.
-	Stories *stories
 	// Users - Retrieve and update user data.
 	Users *users
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
-	_security       *shared.Security
-	_serverURL      string
-	_language       string
-	_sdkVersion     string
-	_genVersion     string
+
+	_serverURL  string
+	_language   string
+	_sdkVersion string
+	_genVersion string
 }
 
 type SDKOption func(*SDK)
@@ -83,13 +88,6 @@ func WithClient(client HTTPClient) SDKOption {
 	}
 }
 
-// WithSecurity configures the SDK to use the provided security details
-func WithSecurity(security shared.Security) SDKOption {
-	return func(sdk *SDK) {
-		sdk._security = &security
-	}
-}
-
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
@@ -106,11 +104,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._defaultClient = &http.Client{Timeout: 60 * time.Second}
 	}
 	if sdk._securityClient == nil {
-		if sdk._security != nil {
-			sdk._securityClient = utils.ConfigureSecurityClient(sdk._defaultClient, sdk._security)
-		} else {
-			sdk._securityClient = sdk._defaultClient
-		}
+		sdk._securityClient = sdk._defaultClient
 	}
 
 	if sdk._serverURL == "" {
@@ -126,43 +120,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Messages = newMessages(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
-	sdk.Misc = newMisc(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
-	sdk.Photos = newPhotos(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
 	sdk.Posts = newPosts(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
-	sdk.Stories = newStories(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

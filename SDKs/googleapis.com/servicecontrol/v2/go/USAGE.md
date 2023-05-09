@@ -2,37 +2,38 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ServicecontrolServicesCheckRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Services.ServicecontrolServicesCheck(ctx, operations.ServicecontrolServicesCheckRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         CheckRequest: &shared.CheckRequest{
             Attributes: &shared.AttributeContext{
                 API: &shared.API{
-                    Operation: "provident",
-                    Protocol: "distinctio",
-                    Service: "quibusdam",
-                    Version: "unde",
+                    Operation: sdk.String("provident"),
+                    Protocol: sdk.String("distinctio"),
+                    Service: sdk.String("quibusdam"),
+                    Version: sdk.String("unde"),
                 },
                 Destination: &shared.Peer{
-                    IP: "nulla",
+                    IP: sdk.String("nulla"),
                     Labels: map[string]string{
                         "illum": "vel",
                         "error": "deserunt",
                         "suscipit": "iure",
                     },
-                    Port: "magnam",
-                    Principal: "debitis",
-                    RegionCode: "ipsa",
+                    Port: sdk.String("magnam"),
+                    Principal: sdk.String("debitis"),
+                    RegionCode: sdk.String("ipsa"),
                 },
                 Extensions: []map[string]interface{}{
                     map[string]interface{}{
@@ -56,14 +57,14 @@ func main() {
                     },
                 },
                 Origin: &shared.Peer{
-                    IP: "quod",
+                    IP: sdk.String("quod"),
                     Labels: map[string]string{
                         "totam": "porro",
                         "dolorum": "dicta",
                     },
-                    Port: "nam",
-                    Principal: "officia",
-                    RegionCode: "occaecati",
+                    Port: sdk.String("nam"),
+                    Principal: sdk.String("officia"),
+                    RegionCode: sdk.String("occaecati"),
                 },
                 Request: &shared.Request{
                     Auth: &shared.Auth{
@@ -80,104 +81,109 @@ func main() {
                             "modi": "qui",
                             "impedit": "cum",
                         },
-                        Presenter: "esse",
-                        Principal: "ipsum",
+                        Presenter: sdk.String("esse"),
+                        Principal: sdk.String("ipsum"),
                     },
                     Headers: map[string]string{
                         "aspernatur": "perferendis",
                         "ad": "natus",
                         "sed": "iste",
                     },
-                    Host: "dolor",
-                    ID: "natus",
-                    Method: "laboriosam",
-                    Path: "hic",
-                    Protocol: "saepe",
-                    Query: "fuga",
-                    Reason: "in",
-                    Scheme: "corporis",
-                    Size: "iste",
-                    Time: "iure",
+                    Host: sdk.String("dolor"),
+                    ID: sdk.String("96fea759-6eb1-40fa-aa23-52c5955907af"),
+                    Method: sdk.String("sapiente"),
+                    Path: sdk.String("architecto"),
+                    Protocol: sdk.String("mollitia"),
+                    Query: sdk.String("dolorem"),
+                    Reason: sdk.String("culpa"),
+                    Scheme: sdk.String("consequuntur"),
+                    Size: sdk.String("repellat"),
+                    Time: sdk.String("mollitia"),
                 },
                 Resource: &shared.Resource{
                     Annotations: map[string]string{
-                        "quidem": "architecto",
-                        "ipsa": "reiciendis",
-                        "est": "mollitia",
-                        "laborum": "dolores",
+                        "numquam": "commodi",
+                        "quam": "molestiae",
+                        "velit": "error",
                     },
-                    CreateTime: "dolorem",
-                    DeleteTime: "corporis",
-                    DisplayName: "explicabo",
-                    Etag: "nobis",
+                    CreateTime: sdk.String("quia"),
+                    DeleteTime: sdk.String("quis"),
+                    DisplayName: sdk.String("vitae"),
+                    Etag: sdk.String("laborum"),
                     Labels: map[string]string{
-                        "omnis": "nemo",
-                        "minima": "excepturi",
+                        "enim": "odit",
+                        "quo": "sequi",
+                        "tenetur": "ipsam",
                     },
-                    Location: "accusantium",
-                    Name: "iure",
-                    Service: "culpa",
-                    Type: "doloribus",
-                    UID: "sapiente",
-                    UpdateTime: "architecto",
+                    Location: sdk.String("id"),
+                    Name: sdk.String("Richard Boyer"),
+                    Service: sdk.String("laborum"),
+                    Type: sdk.String("quasi"),
+                    UID: sdk.String("reiciendis"),
+                    UpdateTime: sdk.String("voluptatibus"),
                 },
                 Response: &shared.Response{
-                    BackendLatency: "mollitia",
-                    Code: "dolorem",
+                    BackendLatency: sdk.String("vero"),
+                    Code: sdk.String("nihil"),
                     Headers: map[string]string{
-                        "consequuntur": "repellat",
-                        "mollitia": "occaecati",
-                        "numquam": "commodi",
+                        "voluptatibus": "ipsa",
+                        "omnis": "voluptate",
+                        "cum": "perferendis",
                     },
-                    Size: "quam",
-                    Time: "molestiae",
+                    Size: sdk.String("doloremque"),
+                    Time: sdk.String("reprehenderit"),
                 },
                 Source: &shared.Peer{
-                    IP: "velit",
+                    IP: sdk.String("ut"),
                     Labels: map[string]string{
-                        "quia": "quis",
-                        "vitae": "laborum",
-                        "animi": "enim",
+                        "dicta": "corporis",
+                        "dolore": "iusto",
+                        "dicta": "harum",
+                        "enim": "accusamus",
                     },
-                    Port: "odit",
-                    Principal: "quo",
-                    RegionCode: "sequi",
+                    Port: sdk.String("commodi"),
+                    Principal: sdk.String("repudiandae"),
+                    RegionCode: sdk.String("quae"),
                 },
             },
-            Flags: "tenetur",
+            Flags: sdk.String("ipsum"),
             Resources: []shared.ResourceInfo{
                 shared.ResourceInfo{
-                    Container: "id",
-                    Location: "possimus",
-                    Name: "aut",
-                    Permission: "quasi",
-                    Type: "error",
+                    Container: sdk.String("molestias"),
+                    Location: sdk.String("excepturi"),
+                    Name: sdk.String("Joel Lang"),
+                    Permission: sdk.String("quasi"),
+                    Type: sdk.String("repudiandae"),
                 },
                 shared.ResourceInfo{
-                    Container: "temporibus",
-                    Location: "laborum",
-                    Name: "quasi",
-                    Permission: "reiciendis",
-                    Type: "voluptatibus",
+                    Container: sdk.String("sint"),
+                    Location: sdk.String("veritatis"),
+                    Name: sdk.String("Miss Randall Hamill"),
+                    Permission: sdk.String("explicabo"),
+                    Type: sdk.String("deserunt"),
+                },
+                shared.ResourceInfo{
+                    Container: sdk.String("distinctio"),
+                    Location: sdk.String("quibusdam"),
+                    Name: sdk.String("Pauline Deckow"),
+                    Permission: sdk.String("quos"),
+                    Type: sdk.String("perferendis"),
                 },
             },
-            ServiceConfigID: "vero",
+            ServiceConfigID: sdk.String("magni"),
         },
-        AccessToken: "nihil",
-        Alt: "media",
-        Callback: "voluptatibus",
-        Fields: "ipsa",
-        Key: "omnis",
-        OauthToken: "voluptate",
-        PrettyPrint: false,
-        QuotaUser: "cum",
-        ServiceName: "perferendis",
-        UploadType: "doloremque",
-        UploadProtocol: "reprehenderit",
-    }
-
-    ctx := context.Background()
-    res, err := s.Services.ServicecontrolServicesCheck(ctx, req, operations.ServicecontrolServicesCheckSecurity{
+        AccessToken: sdk.String("assumenda"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("alias"),
+        Fields: sdk.String("fugit"),
+        Key: sdk.String("dolorum"),
+        OauthToken: sdk.String("excepturi"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("tempora"),
+        ServiceName: "facilis",
+        UploadType: sdk.String("tempore"),
+        UploadProtocol: sdk.String("labore"),
+    }, operations.ServicecontrolServicesCheckSecurity{
         Option1: &operations.ServicecontrolServicesCheckSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

@@ -16,21 +16,25 @@ const (
 	ExecutionCallLogLevelEnumLogErrorsOnly           ExecutionCallLogLevelEnum = "LOG_ERRORS_ONLY"
 )
 
+func (e ExecutionCallLogLevelEnum) ToPointer() *ExecutionCallLogLevelEnum {
+	return &e
+}
+
 func (e *ExecutionCallLogLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CALL_LOG_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "LOG_ALL_CALLS":
 		fallthrough
 	case "LOG_ERRORS_ONLY":
-		*e = ExecutionCallLogLevelEnum(s)
+		*e = ExecutionCallLogLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionCallLogLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionCallLogLevelEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	ExecutionStateEnumCancelled        ExecutionStateEnum = "CANCELLED"
 )
 
+func (e ExecutionStateEnum) ToPointer() *ExecutionStateEnum {
+	return &e
+}
+
 func (e *ExecutionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -60,10 +68,10 @@ func (e *ExecutionStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "CANCELLED":
-		*e = ExecutionStateEnum(s)
+		*e = ExecutionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionStateEnum: %v", v)
 	}
 }
 

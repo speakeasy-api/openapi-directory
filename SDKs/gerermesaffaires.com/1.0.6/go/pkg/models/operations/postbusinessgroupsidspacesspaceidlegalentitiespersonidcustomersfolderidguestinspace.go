@@ -12,32 +12,6 @@ type PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGues
 	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-type PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyGroupsEnum string
-
-const (
-	PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyGroupsEnumTax              PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyGroupsEnum = "tax"
-	PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyGroupsEnumWealthManagement PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyGroupsEnum = "wealth management"
-	PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyGroupsEnumLegal            PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyGroupsEnum = "legal"
-)
-
-func (e *PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyGroupsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "tax":
-		fallthrough
-	case "wealth management":
-		fallthrough
-	case "legal":
-		*e = PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyGroupsEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyGroupsEnum: %s", s)
-	}
-}
-
 type PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyRoleEnum string
 
 const (
@@ -45,26 +19,30 @@ const (
 	PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyRoleEnumManager      PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyRoleEnum = "manager"
 )
 
+func (e PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyRoleEnum) ToPointer() *PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyRoleEnum {
+	return &e
+}
+
 func (e *PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "collaborator":
 		fallthrough
 	case "manager":
-		*e = PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyRoleEnum(s)
+		*e = PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyRoleEnum: %v", v)
 	}
 }
 
 // PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBody - role and groups to apply to the managed private space
 type PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBody struct {
-	Groups *PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyGroupsEnum `json:"Groups,omitempty"`
-	Role   PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyRoleEnum    `json:"Role"`
+	Groups []string                                                                                               `json:"Groups,omitempty"`
+	Role   PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequestBodyRoleEnum `json:"Role"`
 }
 
 type PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequest struct {

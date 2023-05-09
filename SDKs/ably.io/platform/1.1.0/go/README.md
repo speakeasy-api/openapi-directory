@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ably.io/platform/1.1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -31,15 +31,13 @@ func main() {
         }),
     )
 
-    req := operations.RequestAccessTokenRequest{
-        RequestBody: &operations.RequestAccessTokenRequestBody{},
-        XAblyVersion: "corrupti",
-        Format: "msgpack",
-        KeyName: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.Authentication.RequestAccessToken(ctx, req)
+    res, err := s.Authentication.RequestAccessToken(ctx, operations.RequestAccessTokenRequest{
+        RequestBody: &operations.RequestAccessTokenRequestBody{},
+        XAblyVersion: sdk.String("corrupti"),
+        Format: shared.ResponseFormatEnumMsgpack.ToPointer(),
+        KeyName: "distinctio",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,53 +53,53 @@ func main() {
 ## Available Resources and Operations
 
 
-### Authentication
+### [Authentication](docs/authentication/README.md)
 
-* `RequestAccessToken` - Request an access token
+* [RequestAccessToken](docs/authentication/README.md#requestaccesstoken) - Request an access token
 
-### History
+### [History](docs/history/README.md)
 
-* `GetMessagesByChannel` - Get message history for a channel
-* `GetPresenceHistoryOfChannel` - Get presence history of a channel
+* [GetMessagesByChannel](docs/history/README.md#getmessagesbychannel) - Get message history for a channel
+* [GetPresenceHistoryOfChannel](docs/history/README.md#getpresencehistoryofchannel) - Get presence history of a channel
 
-### Publishing
+### [Publishing](docs/publishing/README.md)
 
-* `PublishMessagesToChannelForm` - Publish a message to a channel
-* `PublishMessagesToChannelJSON` - Publish a message to a channel
-* `PublishMessagesToChannelRaw` - Publish a message to a channel
+* [PublishMessagesToChannelForm](docs/publishing/README.md#publishmessagestochannelform) - Publish a message to a channel
+* [PublishMessagesToChannelJSON](docs/publishing/README.md#publishmessagestochanneljson) - Publish a message to a channel
+* [PublishMessagesToChannelRaw](docs/publishing/README.md#publishmessagestochannelraw) - Publish a message to a channel
 
-### Push
+### [Push](docs/push/README.md)
 
-* `DeletePushDeviceDetails` - Delete a registered device's update token
-* `GetChannelsWithPushSubscribers` - List all channels with at least one subscribed device
-* `GetPushDeviceDetails` - Get a device registration
-* `GetPushSubscriptionsOnChannels` - List channel subscriptions
-* `GetRegisteredPushDevices` - List devices registered for receiving push notifications
-* `PatchPushDeviceDetailsForm` - Update a device registration
-* `PatchPushDeviceDetailsJSON` - Update a device registration
-* `PatchPushDeviceDetailsRaw` - Update a device registration
-* `PublishPushNotificationToDevicesForm` - Publish a push notification to device(s)
-* `PublishPushNotificationToDevicesJSON` - Publish a push notification to device(s)
-* `PublishPushNotificationToDevicesRaw` - Publish a push notification to device(s)
-* `PutPushDeviceDetailsForm` - Update a device registration
-* `PutPushDeviceDetailsJSON` - Update a device registration
-* `PutPushDeviceDetailsRaw` - Update a device registration
-* `RegisterPushDeviceJSON` - Register a device for receiving push notifications
-* `RegisterPushDeviceRaw` - Register a device for receiving push notifications
-* `UnregisterAllPushDevices` - Unregister matching devices for push notifications
-* `UnregisterPushDevice` - Unregister a single device for push notifications
-* `UpdatePushDeviceDetails` - Reset a registered device's update token
+* [DeletePushDeviceDetails](docs/push/README.md#deletepushdevicedetails) - Delete a registered device's update token
+* [GetChannelsWithPushSubscribers](docs/push/README.md#getchannelswithpushsubscribers) - List all channels with at least one subscribed device
+* [GetPushDeviceDetails](docs/push/README.md#getpushdevicedetails) - Get a device registration
+* [GetPushSubscriptionsOnChannels](docs/push/README.md#getpushsubscriptionsonchannels) - List channel subscriptions
+* [GetRegisteredPushDevices](docs/push/README.md#getregisteredpushdevices) - List devices registered for receiving push notifications
+* [PatchPushDeviceDetailsForm](docs/push/README.md#patchpushdevicedetailsform) - Update a device registration
+* [PatchPushDeviceDetailsJSON](docs/push/README.md#patchpushdevicedetailsjson) - Update a device registration
+* [PatchPushDeviceDetailsRaw](docs/push/README.md#patchpushdevicedetailsraw) - Update a device registration
+* [PublishPushNotificationToDevicesForm](docs/push/README.md#publishpushnotificationtodevicesform) - Publish a push notification to device(s)
+* [PublishPushNotificationToDevicesJSON](docs/push/README.md#publishpushnotificationtodevicesjson) - Publish a push notification to device(s)
+* [PublishPushNotificationToDevicesRaw](docs/push/README.md#publishpushnotificationtodevicesraw) - Publish a push notification to device(s)
+* [PutPushDeviceDetailsForm](docs/push/README.md#putpushdevicedetailsform) - Update a device registration
+* [PutPushDeviceDetailsJSON](docs/push/README.md#putpushdevicedetailsjson) - Update a device registration
+* [PutPushDeviceDetailsRaw](docs/push/README.md#putpushdevicedetailsraw) - Update a device registration
+* [RegisterPushDeviceJSON](docs/push/README.md#registerpushdevicejson) - Register a device for receiving push notifications
+* [RegisterPushDeviceRaw](docs/push/README.md#registerpushdeviceraw) - Register a device for receiving push notifications
+* [UnregisterAllPushDevices](docs/push/README.md#unregisterallpushdevices) - Unregister matching devices for push notifications
+* [UnregisterPushDevice](docs/push/README.md#unregisterpushdevice) - Unregister a single device for push notifications
+* [UpdatePushDeviceDetails](docs/push/README.md#updatepushdevicedetails) - Reset a registered device's update token
 
-### Stats
+### [Stats](docs/stats/README.md)
 
-* `GetStats` - Retrieve usage statistics for an application
-* `GetTime` - Get the service time
+* [GetStats](docs/stats/README.md#getstats) - Retrieve usage statistics for an application
+* [GetTime](docs/stats/README.md#gettime) - Get the service time
 
-### Status
+### [Status](docs/status/README.md)
 
-* `GetMetadataOfAllChannels` - Enumerate all active channels of the application
-* `GetMetadataOfChannel` - Get metadata of a channel
-* `GetPresenceOfChannel` - Get presence of a channel
+* [GetMetadataOfAllChannels](docs/status/README.md#getmetadataofallchannels) - Enumerate all active channels of the application
+* [GetMetadataOfChannel](docs/status/README.md#getmetadataofchannel) - Get metadata of a channel
+* [GetPresenceOfChannel](docs/status/README.md#getpresenceofchannel) - Get presence of a channel
 <!-- End SDK Available Operations -->
 
 ### Maturity

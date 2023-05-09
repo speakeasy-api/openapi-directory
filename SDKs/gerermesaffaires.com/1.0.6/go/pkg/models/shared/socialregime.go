@@ -15,21 +15,25 @@ const (
 	SocialRegimeLevelEnumPublic       SocialRegimeLevelEnum = "public"
 )
 
+func (e SocialRegimeLevelEnum) ToPointer() *SocialRegimeLevelEnum {
+	return &e
+}
+
 func (e *SocialRegimeLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = SocialRegimeLevelEnum(s)
+		*e = SocialRegimeLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SocialRegimeLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for SocialRegimeLevelEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	SocialRegimePeriodicityEnumNull       SocialRegimePeriodicityEnum = "null"
 )
 
+func (e SocialRegimePeriodicityEnum) ToPointer() *SocialRegimePeriodicityEnum {
+	return &e
+}
+
 func (e *SocialRegimePeriodicityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "monthly":
 		fallthrough
 	case "quarterly":
@@ -58,10 +66,10 @@ func (e *SocialRegimePeriodicityEnum) UnmarshalJSON(data []byte) error {
 	case "annual":
 		fallthrough
 	case "null":
-		*e = SocialRegimePeriodicityEnum(s)
+		*e = SocialRegimePeriodicityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SocialRegimePeriodicityEnum: %s", s)
+		return fmt.Errorf("invalid value for SocialRegimePeriodicityEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	SocialRegimeTypeEnumNull      SocialRegimeTypeEnum = "null"
 )
 
+func (e SocialRegimeTypeEnum) ToPointer() *SocialRegimeTypeEnum {
+	return &e
+}
+
 func (e *SocialRegimeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mandatory":
 		fallthrough
 	case "optional":
 		fallthrough
 	case "null":
-		*e = SocialRegimeTypeEnum(s)
+		*e = SocialRegimeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SocialRegimeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SocialRegimeTypeEnum: %v", v)
 	}
 }
 

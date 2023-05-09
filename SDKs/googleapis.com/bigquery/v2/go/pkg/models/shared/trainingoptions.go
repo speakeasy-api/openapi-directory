@@ -16,21 +16,25 @@ const (
 	TrainingOptionsBoosterTypeEnumDart                   TrainingOptionsBoosterTypeEnum = "DART"
 )
 
+func (e TrainingOptionsBoosterTypeEnum) ToPointer() *TrainingOptionsBoosterTypeEnum {
+	return &e
+}
+
 func (e *TrainingOptionsBoosterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BOOSTER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GBTREE":
 		fallthrough
 	case "DART":
-		*e = TrainingOptionsBoosterTypeEnum(s)
+		*e = TrainingOptionsBoosterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsBoosterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsBoosterTypeEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	TrainingOptionsColorSpaceEnumGrayscale             TrainingOptionsColorSpaceEnum = "GRAYSCALE"
 )
 
+func (e TrainingOptionsColorSpaceEnum) ToPointer() *TrainingOptionsColorSpaceEnum {
+	return &e
+}
+
 func (e *TrainingOptionsColorSpaceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COLOR_SPACE_UNSPECIFIED":
 		fallthrough
 	case "RGB":
@@ -63,10 +71,10 @@ func (e *TrainingOptionsColorSpaceEnum) UnmarshalJSON(data []byte) error {
 	case "YUV":
 		fallthrough
 	case "GRAYSCALE":
-		*e = TrainingOptionsColorSpaceEnum(s)
+		*e = TrainingOptionsColorSpaceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsColorSpaceEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsColorSpaceEnum: %v", v)
 	}
 }
 
@@ -79,21 +87,25 @@ const (
 	TrainingOptionsDartNormalizeTypeEnumForest                       TrainingOptionsDartNormalizeTypeEnum = "FOREST"
 )
 
+func (e TrainingOptionsDartNormalizeTypeEnum) ToPointer() *TrainingOptionsDartNormalizeTypeEnum {
+	return &e
+}
+
 func (e *TrainingOptionsDartNormalizeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DART_NORMALIZE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TREE":
 		fallthrough
 	case "FOREST":
-		*e = TrainingOptionsDartNormalizeTypeEnum(s)
+		*e = TrainingOptionsDartNormalizeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsDartNormalizeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsDartNormalizeTypeEnum: %v", v)
 	}
 }
 
@@ -112,12 +124,16 @@ const (
 	TrainingOptionsDataFrequencyEnumPerMinute                TrainingOptionsDataFrequencyEnum = "PER_MINUTE"
 )
 
+func (e TrainingOptionsDataFrequencyEnum) ToPointer() *TrainingOptionsDataFrequencyEnum {
+	return &e
+}
+
 func (e *TrainingOptionsDataFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_FREQUENCY_UNSPECIFIED":
 		fallthrough
 	case "AUTO_FREQUENCY":
@@ -135,10 +151,10 @@ func (e *TrainingOptionsDataFrequencyEnum) UnmarshalJSON(data []byte) error {
 	case "HOURLY":
 		fallthrough
 	case "PER_MINUTE":
-		*e = TrainingOptionsDataFrequencyEnum(s)
+		*e = TrainingOptionsDataFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsDataFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsDataFrequencyEnum: %v", v)
 	}
 }
 
@@ -154,12 +170,16 @@ const (
 	TrainingOptionsDataSplitMethodEnumAutoSplit                  TrainingOptionsDataSplitMethodEnum = "AUTO_SPLIT"
 )
 
+func (e TrainingOptionsDataSplitMethodEnum) ToPointer() *TrainingOptionsDataSplitMethodEnum {
+	return &e
+}
+
 func (e *TrainingOptionsDataSplitMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_SPLIT_METHOD_UNSPECIFIED":
 		fallthrough
 	case "RANDOM":
@@ -171,10 +191,10 @@ func (e *TrainingOptionsDataSplitMethodEnum) UnmarshalJSON(data []byte) error {
 	case "NO_SPLIT":
 		fallthrough
 	case "AUTO_SPLIT":
-		*e = TrainingOptionsDataSplitMethodEnum(s)
+		*e = TrainingOptionsDataSplitMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsDataSplitMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsDataSplitMethodEnum: %v", v)
 	}
 }
 
@@ -187,21 +207,25 @@ const (
 	TrainingOptionsDistanceTypeEnumCosine                  TrainingOptionsDistanceTypeEnum = "COSINE"
 )
 
+func (e TrainingOptionsDistanceTypeEnum) ToPointer() *TrainingOptionsDistanceTypeEnum {
+	return &e
+}
+
 func (e *TrainingOptionsDistanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISTANCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EUCLIDEAN":
 		fallthrough
 	case "COSINE":
-		*e = TrainingOptionsDistanceTypeEnum(s)
+		*e = TrainingOptionsDistanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsDistanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsDistanceTypeEnum: %v", v)
 	}
 }
 
@@ -214,21 +238,25 @@ const (
 	TrainingOptionsFeedbackTypeEnumExplicit                TrainingOptionsFeedbackTypeEnum = "EXPLICIT"
 )
 
+func (e TrainingOptionsFeedbackTypeEnum) ToPointer() *TrainingOptionsFeedbackTypeEnum {
+	return &e
+}
+
 func (e *TrainingOptionsFeedbackTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEEDBACK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IMPLICIT":
 		fallthrough
 	case "EXPLICIT":
-		*e = TrainingOptionsFeedbackTypeEnum(s)
+		*e = TrainingOptionsFeedbackTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsFeedbackTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsFeedbackTypeEnum: %v", v)
 	}
 }
 
@@ -307,12 +335,16 @@ const (
 	TrainingOptionsHolidayRegionEnumZa                       TrainingOptionsHolidayRegionEnum = "ZA"
 )
 
+func (e TrainingOptionsHolidayRegionEnum) ToPointer() *TrainingOptionsHolidayRegionEnum {
+	return &e
+}
+
 func (e *TrainingOptionsHolidayRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HOLIDAY_REGION_UNSPECIFIED":
 		fallthrough
 	case "GLOBAL":
@@ -450,10 +482,10 @@ func (e *TrainingOptionsHolidayRegionEnum) UnmarshalJSON(data []byte) error {
 	case "VN":
 		fallthrough
 	case "ZA":
-		*e = TrainingOptionsHolidayRegionEnum(s)
+		*e = TrainingOptionsHolidayRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsHolidayRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsHolidayRegionEnum: %v", v)
 	}
 }
 
@@ -479,12 +511,16 @@ const (
 	TrainingOptionsHparamTuningObjectivesEnumAverageRank                        TrainingOptionsHparamTuningObjectivesEnum = "AVERAGE_RANK"
 )
 
+func (e TrainingOptionsHparamTuningObjectivesEnum) ToPointer() *TrainingOptionsHparamTuningObjectivesEnum {
+	return &e
+}
+
 func (e *TrainingOptionsHparamTuningObjectivesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HPARAM_TUNING_OBJECTIVE_UNSPECIFIED":
 		fallthrough
 	case "MEAN_ABSOLUTE_ERROR":
@@ -518,10 +554,10 @@ func (e *TrainingOptionsHparamTuningObjectivesEnum) UnmarshalJSON(data []byte) e
 	case "NORMALIZED_DISCOUNTED_CUMULATIVE_GAIN":
 		fallthrough
 	case "AVERAGE_RANK":
-		*e = TrainingOptionsHparamTuningObjectivesEnum(s)
+		*e = TrainingOptionsHparamTuningObjectivesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsHparamTuningObjectivesEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsHparamTuningObjectivesEnum: %v", v)
 	}
 }
 
@@ -535,12 +571,16 @@ const (
 	TrainingOptionsKmeansInitializationMethodEnumKmeansPlusPlus                        TrainingOptionsKmeansInitializationMethodEnum = "KMEANS_PLUS_PLUS"
 )
 
+func (e TrainingOptionsKmeansInitializationMethodEnum) ToPointer() *TrainingOptionsKmeansInitializationMethodEnum {
+	return &e
+}
+
 func (e *TrainingOptionsKmeansInitializationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KMEANS_INITIALIZATION_METHOD_UNSPECIFIED":
 		fallthrough
 	case "RANDOM":
@@ -548,10 +588,10 @@ func (e *TrainingOptionsKmeansInitializationMethodEnum) UnmarshalJSON(data []byt
 	case "CUSTOM":
 		fallthrough
 	case "KMEANS_PLUS_PLUS":
-		*e = TrainingOptionsKmeansInitializationMethodEnum(s)
+		*e = TrainingOptionsKmeansInitializationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsKmeansInitializationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsKmeansInitializationMethodEnum: %v", v)
 	}
 }
 
@@ -564,21 +604,25 @@ const (
 	TrainingOptionsLearnRateStrategyEnumConstant                     TrainingOptionsLearnRateStrategyEnum = "CONSTANT"
 )
 
+func (e TrainingOptionsLearnRateStrategyEnum) ToPointer() *TrainingOptionsLearnRateStrategyEnum {
+	return &e
+}
+
 func (e *TrainingOptionsLearnRateStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEARN_RATE_STRATEGY_UNSPECIFIED":
 		fallthrough
 	case "LINE_SEARCH":
 		fallthrough
 	case "CONSTANT":
-		*e = TrainingOptionsLearnRateStrategyEnum(s)
+		*e = TrainingOptionsLearnRateStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsLearnRateStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsLearnRateStrategyEnum: %v", v)
 	}
 }
 
@@ -591,21 +635,25 @@ const (
 	TrainingOptionsLossTypeEnumMeanLogLoss         TrainingOptionsLossTypeEnum = "MEAN_LOG_LOSS"
 )
 
+func (e TrainingOptionsLossTypeEnum) ToPointer() *TrainingOptionsLossTypeEnum {
+	return &e
+}
+
 func (e *TrainingOptionsLossTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOSS_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MEAN_SQUARED_LOSS":
 		fallthrough
 	case "MEAN_LOG_LOSS":
-		*e = TrainingOptionsLossTypeEnum(s)
+		*e = TrainingOptionsLossTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsLossTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsLossTypeEnum: %v", v)
 	}
 }
 
@@ -618,21 +666,25 @@ const (
 	TrainingOptionsOptimizationStrategyEnumNormalEquation                  TrainingOptionsOptimizationStrategyEnum = "NORMAL_EQUATION"
 )
 
+func (e TrainingOptionsOptimizationStrategyEnum) ToPointer() *TrainingOptionsOptimizationStrategyEnum {
+	return &e
+}
+
 func (e *TrainingOptionsOptimizationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPTIMIZATION_STRATEGY_UNSPECIFIED":
 		fallthrough
 	case "BATCH_GRADIENT_DESCENT":
 		fallthrough
 	case "NORMAL_EQUATION":
-		*e = TrainingOptionsOptimizationStrategyEnum(s)
+		*e = TrainingOptionsOptimizationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsOptimizationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsOptimizationStrategyEnum: %v", v)
 	}
 }
 
@@ -647,12 +699,16 @@ const (
 	TrainingOptionsTreeMethodEnumHist                  TrainingOptionsTreeMethodEnum = "HIST"
 )
 
+func (e TrainingOptionsTreeMethodEnum) ToPointer() *TrainingOptionsTreeMethodEnum {
+	return &e
+}
+
 func (e *TrainingOptionsTreeMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TREE_METHOD_UNSPECIFIED":
 		fallthrough
 	case "AUTO":
@@ -662,10 +718,10 @@ func (e *TrainingOptionsTreeMethodEnum) UnmarshalJSON(data []byte) error {
 	case "APPROX":
 		fallthrough
 	case "HIST":
-		*e = TrainingOptionsTreeMethodEnum(s)
+		*e = TrainingOptionsTreeMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingOptionsTreeMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingOptionsTreeMethodEnum: %v", v)
 	}
 }
 
@@ -675,8 +731,10 @@ type TrainingOptions struct {
 	AdjustStepChanges *bool `json:"adjustStepChanges,omitempty"`
 	// Whether to enable auto ARIMA or not.
 	AutoArima *bool `json:"autoArima,omitempty"`
-	// The max value of non-seasonal p and q.
+	// The max value of the sum of non-seasonal p and q.
 	AutoArimaMaxOrder *string `json:"autoArimaMaxOrder,omitempty"`
+	// The min value of the sum of non-seasonal p and q.
+	AutoArimaMinOrder *string `json:"autoArimaMinOrder,omitempty"`
 	// Batch size for dnn models.
 	BatchSize *string `json:"batchSize,omitempty"`
 	// Booster type for boosted tree models.
@@ -729,6 +787,8 @@ type TrainingOptions struct {
 	InitialLearnRate *float64 `json:"initialLearnRate,omitempty"`
 	// Name of input label columns in training data.
 	InputLabelColumns []string `json:"inputLabelColumns,omitempty"`
+	// Name of the instance weight column for training data. This column isn't be used as a feature.
+	InstanceWeightColumn *string `json:"instanceWeightColumn,omitempty"`
 	// Number of integral steps for the integrated gradients explain method.
 	IntegratedGradientsNumSteps *string `json:"integratedGradientsNumSteps,omitempty"`
 	// Item column specified for matrix factorization models.
@@ -785,6 +845,8 @@ type TrainingOptions struct {
 	SampledShapleyNumPaths *string `json:"sampledShapleyNumPaths,omitempty"`
 	// Subsample fraction of the training data to grow tree to prevent overfitting for boosted tree models.
 	Subsample *float64 `json:"subsample,omitempty"`
+	// Based on the selected TF version, the corresponding docker image is used to train external models.
+	TfVersion *string `json:"tfVersion,omitempty"`
 	// Column to be designated as time series data for ARIMA model.
 	TimeSeriesDataColumn *string `json:"timeSeriesDataColumn,omitempty"`
 	// The time series id column that was used during ARIMA model training.
@@ -805,4 +867,6 @@ type TrainingOptions struct {
 	WalsAlpha *float64 `json:"walsAlpha,omitempty"`
 	// Whether to train a model from the last checkpoint.
 	WarmStart *bool `json:"warmStart,omitempty"`
+	// User-selected XGBoost versions for training of XGBoost models.
+	XgboostVersion *string `json:"xgboostVersion,omitempty"`
 }

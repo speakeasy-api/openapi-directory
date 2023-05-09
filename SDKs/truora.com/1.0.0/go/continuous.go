@@ -36,7 +36,10 @@ func newContinuous(defaultClient, securityClient HTTPClient, serverURL, language
 // GetContinuousCheck - Lists history associated with a Check. It can be paginated
 func (s *continuous) GetContinuousCheck(ctx context.Context, request operations.GetContinuousCheckRequest, security operations.GetContinuousCheckSecurity) (*operations.GetContinuousCheckResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/continuous-checks/{continuous_check_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/continuous-checks/{continuous_check_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,7 +127,10 @@ func (s *continuous) ListContinuousChecks(ctx context.Context) (*operations.List
 // UpdateContinuousCheck - Updates a continuous check
 func (s *continuous) UpdateContinuousCheck(ctx context.Context, request operations.UpdateContinuousCheckRequest, security operations.UpdateContinuousCheckSecurity) (*operations.UpdateContinuousCheckResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/continuous-checks/{continuous_check_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/continuous-checks/{continuous_check_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateContinuousCheckInput", "form")
 	if err != nil {
@@ -242,7 +248,10 @@ func (s *continuous) CreateContinuousCheck(ctx context.Context, request shared.C
 // GetV1ContinuousChecksContinuousCheckIDHistory - Lists background check logs. It can be paginated
 func (s *continuous) GetV1ContinuousChecksContinuousCheckIDHistory(ctx context.Context, request operations.GetV1ContinuousChecksContinuousCheckIDHistoryRequest, security operations.GetV1ContinuousChecksContinuousCheckIDHistorySecurity) (*operations.GetV1ContinuousChecksContinuousCheckIDHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/continuous-checks/{continuous_check_id}/history", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/continuous-checks/{continuous_check_id}/history", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

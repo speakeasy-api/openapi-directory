@@ -14,17 +14,21 @@ const (
 	ResourceDeleteTypeEnumResource ResourceDeleteTypeEnum = "resource"
 )
 
+func (e ResourceDeleteTypeEnum) ToPointer() *ResourceDeleteTypeEnum {
+	return &e
+}
+
 func (e *ResourceDeleteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "resource":
-		*e = ResourceDeleteTypeEnum(s)
+		*e = ResourceDeleteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceDeleteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceDeleteTypeEnum: %v", v)
 	}
 }
 

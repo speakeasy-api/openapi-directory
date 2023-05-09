@@ -13,35 +13,33 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/playcustom
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PlaycustomappAccountsCustomAppsCreateRequest{
-        DollarXgafv: "2",
-        RequestBody: []byte("provident"),
-        AccessToken: "distinctio",
-        Account: "quibusdam",
-        Alt: "media",
-        Callback: "nulla",
-        Fields: "corrupti",
-        Key: "illum",
-        OauthToken: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.Accounts.PlaycustomappAccountsCustomAppsCreate(ctx, req, operations.PlaycustomappAccountsCustomAppsCreateSecurity{
+    res, err := s.Accounts.PlaycustomappAccountsCustomAppsCreate(ctx, operations.PlaycustomappAccountsCustomAppsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        RequestBody: []byte("provident"),
+        AccessToken: sdk.String("distinctio"),
+        Account: "quibusdam",
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("nulla"),
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("illum"),
+        OauthToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.PlaycustomappAccountsCustomAppsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -60,9 +58,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Accounts
+### [Accounts](docs/accounts/README.md)
 
-* `PlaycustomappAccountsCustomAppsCreate` - Creates a new custom app.
+* [PlaycustomappAccountsCustomAppsCreate](docs/accounts/README.md#playcustomappaccountscustomappscreate) - Creates a new custom app.
 <!-- End SDK Available Operations -->
 
 ### Maturity

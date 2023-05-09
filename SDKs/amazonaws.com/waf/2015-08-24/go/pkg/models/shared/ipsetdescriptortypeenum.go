@@ -14,18 +14,22 @@ const (
 	IPSetDescriptorTypeEnumIpv6 IPSetDescriptorTypeEnum = "IPV6"
 )
 
+func (e IPSetDescriptorTypeEnum) ToPointer() *IPSetDescriptorTypeEnum {
+	return &e
+}
+
 func (e *IPSetDescriptorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IPV4":
 		fallthrough
 	case "IPV6":
-		*e = IPSetDescriptorTypeEnum(s)
+		*e = IPSetDescriptorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IPSetDescriptorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IPSetDescriptorTypeEnum: %v", v)
 	}
 }

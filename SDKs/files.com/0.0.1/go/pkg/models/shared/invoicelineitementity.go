@@ -25,12 +25,16 @@ const (
 	InvoiceLineItemEntityTypeEnumCreditExpiration            InvoiceLineItemEntityTypeEnum = "credit_expiration"
 )
 
+func (e InvoiceLineItemEntityTypeEnum) ToPointer() *InvoiceLineItemEntityTypeEnum {
+	return &e
+}
+
 func (e *InvoiceLineItemEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invoice":
 		fallthrough
 	case "invoice_adjustment":
@@ -52,10 +56,10 @@ func (e *InvoiceLineItemEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "misc_fee_adjustment":
 		fallthrough
 	case "credit_expiration":
-		*e = InvoiceLineItemEntityTypeEnum(s)
+		*e = InvoiceLineItemEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvoiceLineItemEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvoiceLineItemEntityTypeEnum: %v", v)
 	}
 }
 

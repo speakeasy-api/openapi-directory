@@ -98,12 +98,16 @@ const (
 	PurchaseHostReservationRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       PurchaseHostReservationRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e PurchaseHostReservationRequestTagSpecificationsResourceTypeEnum) ToPointer() *PurchaseHostReservationRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *PurchaseHostReservationRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *PurchaseHostReservationRequestTagSpecificationsResourceTypeEnum) Unmars
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = PurchaseHostReservationRequestTagSpecificationsResourceTypeEnum(s)
+		*e = PurchaseHostReservationRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PurchaseHostReservationRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PurchaseHostReservationRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

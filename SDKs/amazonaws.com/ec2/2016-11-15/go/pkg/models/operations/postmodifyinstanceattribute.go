@@ -15,17 +15,21 @@ const (
 	POSTModifyInstanceAttributeActionEnumModifyInstanceAttribute POSTModifyInstanceAttributeActionEnum = "ModifyInstanceAttribute"
 )
 
+func (e POSTModifyInstanceAttributeActionEnum) ToPointer() *POSTModifyInstanceAttributeActionEnum {
+	return &e
+}
+
 func (e *POSTModifyInstanceAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyInstanceAttribute":
-		*e = POSTModifyInstanceAttributeActionEnum(s)
+		*e = POSTModifyInstanceAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyInstanceAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyInstanceAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyInstanceAttributeVersionEnumTwoThousandAndSixteen1115 POSTModifyInstanceAttributeVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyInstanceAttributeVersionEnum) ToPointer() *POSTModifyInstanceAttributeVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyInstanceAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyInstanceAttributeVersionEnum(s)
+		*e = POSTModifyInstanceAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyInstanceAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyInstanceAttributeVersionEnum: %v", v)
 	}
 }
 

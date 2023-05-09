@@ -25,6 +25,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - The Socrata OpenDataNetwork (ODN) REST API exposes public data, often continuosly updated and enhanced, from many thousands of public
 // government and non profit agencies.
 //
@@ -206,7 +221,10 @@ func (s *SDK) FindAllAvailableDataForSomeEntities(ctx context.Context, request o
 // FindTheRelativesOfAnEntity - Find the relatives of an entity
 func (s *SDK) FindTheRelativesOfAnEntity(ctx context.Context, request operations.FindTheRelativesOfAnEntityRequest) (*operations.FindTheRelativesOfAnEntityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entity/v1/{relation}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entity/v1/{relation}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +306,10 @@ func (s *SDK) GetEntities(ctx context.Context, request operations.GetEntitiesReq
 // GetConstraintPermutationsForEntities - Get constraint permutations for entities
 func (s *SDK) GetConstraintPermutationsForEntities(ctx context.Context, request operations.GetConstraintPermutationsForEntitiesRequest) (*operations.GetConstraintPermutationsForEntitiesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/data/v1/constraint/{variable}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/data/v1/constraint/{variable}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -411,7 +432,10 @@ func (s *SDK) GetQuestions(ctx context.Context, request operations.GetQuestionsR
 // GetSuggestions - Get suggestions
 func (s *SDK) GetSuggestions(ctx context.Context, request operations.GetSuggestionsRequest) (*operations.GetSuggestionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggest/v1/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suggest/v1/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

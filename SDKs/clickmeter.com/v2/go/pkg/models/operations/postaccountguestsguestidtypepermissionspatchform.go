@@ -17,19 +17,23 @@ const (
 	PostAccountGuestsGuestIDTypePermissionsPatchFormTypeEnumGroup     PostAccountGuestsGuestIDTypePermissionsPatchFormTypeEnum = "group"
 )
 
+func (e PostAccountGuestsGuestIDTypePermissionsPatchFormTypeEnum) ToPointer() *PostAccountGuestsGuestIDTypePermissionsPatchFormTypeEnum {
+	return &e
+}
+
 func (e *PostAccountGuestsGuestIDTypePermissionsPatchFormTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "datapoint":
 		fallthrough
 	case "group":
-		*e = PostAccountGuestsGuestIDTypePermissionsPatchFormTypeEnum(s)
+		*e = PostAccountGuestsGuestIDTypePermissionsPatchFormTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAccountGuestsGuestIDTypePermissionsPatchFormTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAccountGuestsGuestIDTypePermissionsPatchFormTypeEnum: %v", v)
 	}
 }
 

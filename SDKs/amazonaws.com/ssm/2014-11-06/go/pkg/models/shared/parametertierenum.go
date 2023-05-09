@@ -15,20 +15,24 @@ const (
 	ParameterTierEnumIntelligentTiering ParameterTierEnum = "Intelligent-Tiering"
 )
 
+func (e ParameterTierEnum) ToPointer() *ParameterTierEnum {
+	return &e
+}
+
 func (e *ParameterTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Standard":
 		fallthrough
 	case "Advanced":
 		fallthrough
 	case "Intelligent-Tiering":
-		*e = ParameterTierEnum(s)
+		*e = ParameterTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParameterTierEnum: %s", s)
+		return fmt.Errorf("invalid value for ParameterTierEnum: %v", v)
 	}
 }

@@ -18,12 +18,16 @@ const (
 	EntryPointParameterTypeEnumBody   EntryPointParameterTypeEnum = "body"
 )
 
+func (e EntryPointParameterTypeEnum) ToPointer() *EntryPointParameterTypeEnum {
+	return &e
+}
+
 func (e *EntryPointParameterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "query":
 		fallthrough
 	case "header":
@@ -33,10 +37,10 @@ func (e *EntryPointParameterTypeEnum) UnmarshalJSON(data []byte) error {
 	case "path":
 		fallthrough
 	case "body":
-		*e = EntryPointParameterTypeEnum(s)
+		*e = EntryPointParameterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntryPointParameterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EntryPointParameterTypeEnum: %v", v)
 	}
 }
 

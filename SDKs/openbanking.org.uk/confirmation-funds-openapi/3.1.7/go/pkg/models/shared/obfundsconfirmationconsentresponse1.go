@@ -32,12 +32,16 @@ const (
 	OBFundsConfirmationConsentResponse1DataStatusEnumRevoked               OBFundsConfirmationConsentResponse1DataStatusEnum = "Revoked"
 )
 
+func (e OBFundsConfirmationConsentResponse1DataStatusEnum) ToPointer() *OBFundsConfirmationConsentResponse1DataStatusEnum {
+	return &e
+}
+
 func (e *OBFundsConfirmationConsentResponse1DataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authorised":
 		fallthrough
 	case "AwaitingAuthorisation":
@@ -45,10 +49,10 @@ func (e *OBFundsConfirmationConsentResponse1DataStatusEnum) UnmarshalJSON(data [
 	case "Rejected":
 		fallthrough
 	case "Revoked":
-		*e = OBFundsConfirmationConsentResponse1DataStatusEnum(s)
+		*e = OBFundsConfirmationConsentResponse1DataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBFundsConfirmationConsentResponse1DataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBFundsConfirmationConsentResponse1DataStatusEnum: %v", v)
 	}
 }
 

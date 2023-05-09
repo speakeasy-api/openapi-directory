@@ -16,21 +16,25 @@ const (
 	CustomVoiceParamsReportedUsageEnumOffline                  CustomVoiceParamsReportedUsageEnum = "OFFLINE"
 )
 
+func (e CustomVoiceParamsReportedUsageEnum) ToPointer() *CustomVoiceParamsReportedUsageEnum {
+	return &e
+}
+
 func (e *CustomVoiceParamsReportedUsageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPORTED_USAGE_UNSPECIFIED":
 		fallthrough
 	case "REALTIME":
 		fallthrough
 	case "OFFLINE":
-		*e = CustomVoiceParamsReportedUsageEnum(s)
+		*e = CustomVoiceParamsReportedUsageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomVoiceParamsReportedUsageEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomVoiceParamsReportedUsageEnum: %v", v)
 	}
 }
 

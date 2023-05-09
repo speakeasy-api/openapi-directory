@@ -15,17 +15,21 @@ const (
 	POSTPurchaseScheduledInstancesActionEnumPurchaseScheduledInstances POSTPurchaseScheduledInstancesActionEnum = "PurchaseScheduledInstances"
 )
 
+func (e POSTPurchaseScheduledInstancesActionEnum) ToPointer() *POSTPurchaseScheduledInstancesActionEnum {
+	return &e
+}
+
 func (e *POSTPurchaseScheduledInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PurchaseScheduledInstances":
-		*e = POSTPurchaseScheduledInstancesActionEnum(s)
+		*e = POSTPurchaseScheduledInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPurchaseScheduledInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPurchaseScheduledInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTPurchaseScheduledInstancesVersionEnumTwoThousandAndSixteen1115 POSTPurchaseScheduledInstancesVersionEnum = "2016-11-15"
 )
 
+func (e POSTPurchaseScheduledInstancesVersionEnum) ToPointer() *POSTPurchaseScheduledInstancesVersionEnum {
+	return &e
+}
+
 func (e *POSTPurchaseScheduledInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTPurchaseScheduledInstancesVersionEnum(s)
+		*e = POSTPurchaseScheduledInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPurchaseScheduledInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPurchaseScheduledInstancesVersionEnum: %v", v)
 	}
 }
 

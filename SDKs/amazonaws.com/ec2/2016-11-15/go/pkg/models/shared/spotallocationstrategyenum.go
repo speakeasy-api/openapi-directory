@@ -17,12 +17,16 @@ const (
 	SpotAllocationStrategyEnumPriceCapacityOptimized       SpotAllocationStrategyEnum = "price-capacity-optimized"
 )
 
+func (e SpotAllocationStrategyEnum) ToPointer() *SpotAllocationStrategyEnum {
+	return &e
+}
+
 func (e *SpotAllocationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lowest-price":
 		fallthrough
 	case "diversified":
@@ -32,9 +36,9 @@ func (e *SpotAllocationStrategyEnum) UnmarshalJSON(data []byte) error {
 	case "capacity-optimized-prioritized":
 		fallthrough
 	case "price-capacity-optimized":
-		*e = SpotAllocationStrategyEnum(s)
+		*e = SpotAllocationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpotAllocationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for SpotAllocationStrategyEnum: %v", v)
 	}
 }

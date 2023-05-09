@@ -16,17 +16,21 @@ const (
 	GetRecordsXAmzTargetEnumDynamoDbStreams20120810GetRecords GetRecordsXAmzTargetEnum = "DynamoDBStreams_20120810.GetRecords"
 )
 
+func (e GetRecordsXAmzTargetEnum) ToPointer() *GetRecordsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRecordsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDBStreams_20120810.GetRecords":
-		*e = GetRecordsXAmzTargetEnum(s)
+		*e = GetRecordsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRecordsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRecordsXAmzTargetEnum: %v", v)
 	}
 }
 

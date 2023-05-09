@@ -16,6 +16,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -200,4 +201,19 @@ pkg/models/shared/tflapipresentationentitieslineservicetype.go
 pkg/models/shared/tflapipresentationentitieslinespecificservicetype.go
 pkg/models/shared/tflapipresentationentitiesstoppointcategory.go
 pkg/models/shared/tflapipresentationentitiesstoppointroutesection.go
+docs/sdk/README.md
+docs/accidentstats/README.md
+docs/airquality/README.md
+docs/bikepoint/README.md
+docs/cabwise/README.md
+docs/journey/README.md
+docs/line/README.md
+docs/mode/README.md
+docs/occupancy/README.md
+docs/place/README.md
+docs/road/README.md
+docs/search/README.md
+docs/stoppoint/README.md
+docs/traveltime/README.md
+docs/vehicle/README.md
 USAGE.md

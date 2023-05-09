@@ -27,6 +27,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 type SDK struct {
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
@@ -106,7 +121,10 @@ func New(opts ...SDKOption) *SDK {
 // ActionARealTimeDecision - Action a Real-Time Decision
 func (s *SDK) ActionARealTimeDecision(ctx context.Context, request operations.ActionARealTimeDecisionRequest) (*operations.ActionARealTimeDecisionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/real_time_decisions/{real_time_decision_id}/action", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/real_time_decisions/{real_time_decision_id}/action", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ActionARealTimeDecisionParameters", "json")
 	if err != nil {
@@ -170,7 +188,10 @@ func (s *SDK) ActionARealTimeDecision(ctx context.Context, request operations.Ac
 // ApproveACheckTransfer - Approve a Check Transfer
 func (s *SDK) ApproveACheckTransfer(ctx context.Context, request operations.ApproveACheckTransferRequest) (*operations.ApproveACheckTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}/approve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}/approve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -224,7 +245,10 @@ func (s *SDK) ApproveACheckTransfer(ctx context.Context, request operations.Appr
 // ApproveAWireTransfer - Approve a Wire Transfer
 func (s *SDK) ApproveAWireTransfer(ctx context.Context, request operations.ApproveAWireTransferRequest) (*operations.ApproveAWireTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wire_transfers/{wire_transfer_id}/approve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/wire_transfers/{wire_transfer_id}/approve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -278,7 +302,10 @@ func (s *SDK) ApproveAWireTransfer(ctx context.Context, request operations.Appro
 // ApproveAnAccountTransfer - Approve an Account Transfer
 func (s *SDK) ApproveAnAccountTransfer(ctx context.Context, request operations.ApproveAnAccountTransferRequest) (*operations.ApproveAnAccountTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_transfers/{account_transfer_id}/approve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account_transfers/{account_transfer_id}/approve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -333,7 +360,10 @@ func (s *SDK) ApproveAnAccountTransfer(ctx context.Context, request operations.A
 // Approves an ACH Transfer in a pending_approval state.
 func (s *SDK) ApproveAnAchTransfer(ctx context.Context, request operations.ApproveAnAchTransferRequest) (*operations.ApproveAnAchTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ach_transfers/{ach_transfer_id}/approve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ach_transfers/{ach_transfer_id}/approve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -388,7 +418,10 @@ func (s *SDK) ApproveAnAchTransfer(ctx context.Context, request operations.Appro
 // Cancels an ACH Transfer in a pending_approval state.
 func (s *SDK) CancelAPendingAchTransfer(ctx context.Context, request operations.CancelAPendingAchTransferRequest) (*operations.CancelAPendingAchTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ach_transfers/{ach_transfer_id}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ach_transfers/{ach_transfer_id}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -442,7 +475,10 @@ func (s *SDK) CancelAPendingAchTransfer(ctx context.Context, request operations.
 // CancelAPendingCheckTransfer - Cancel a pending Check Transfer
 func (s *SDK) CancelAPendingCheckTransfer(ctx context.Context, request operations.CancelAPendingCheckTransferRequest) (*operations.CancelAPendingCheckTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -496,7 +532,10 @@ func (s *SDK) CancelAPendingCheckTransfer(ctx context.Context, request operation
 // CancelAPendingWireTransfer - Cancel a pending Wire Transfer
 func (s *SDK) CancelAPendingWireTransfer(ctx context.Context, request operations.CancelAPendingWireTransferRequest) (*operations.CancelAPendingWireTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wire_transfers/{wire_transfer_id}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/wire_transfers/{wire_transfer_id}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -550,7 +589,10 @@ func (s *SDK) CancelAPendingWireTransfer(ctx context.Context, request operations
 // CancelAnAccountTransfer - Cancel an Account Transfer
 func (s *SDK) CancelAnAccountTransfer(ctx context.Context, request operations.CancelAnAccountTransferRequest) (*operations.CancelAnAccountTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_transfers/{account_transfer_id}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account_transfers/{account_transfer_id}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -604,7 +646,10 @@ func (s *SDK) CancelAnAccountTransfer(ctx context.Context, request operations.Ca
 // CloseAnAccount - Close an Account
 func (s *SDK) CloseAnAccount(ctx context.Context, request operations.CloseAnAccountRequest) (*operations.CloseAnAccountResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}/close", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}/close", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -659,7 +704,10 @@ func (s *SDK) CloseAnAccount(ctx context.Context, request operations.CloseAnAcco
 // If your account is configured to require approval for each transfer, this endpoint simulates the approval of an [Account Transfer](#account-transfers). You can also approve sandbox Account Transfers in the dashboard. This transfer must first have a `status` of `pending_approval`.
 func (s *SDK) CompleteASandboxAccountTransfer(ctx context.Context, request operations.CompleteASandboxAccountTransferRequest) (*operations.CompleteASandboxAccountTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/account_transfers/{account_transfer_id}/complete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/account_transfers/{account_transfer_id}/complete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -694,6 +742,202 @@ func (s *SDK) CompleteASandboxAccountTransfer(ctx context.Context, request opera
 			}
 
 			res.AccountTransfer = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// CompleteASandboxRealTimePaymentsTransfer - Complete a Sandbox Real Time Payments Transfer
+// Simulates submission of a Real Time Payments transfer and handling the response from the destination financial institution. This transfer must first have a `status` of `pending_submission`.
+func (s *SDK) CompleteASandboxRealTimePaymentsTransfer(ctx context.Context, request operations.CompleteASandboxRealTimePaymentsTransferRequest) (*operations.CompleteASandboxRealTimePaymentsTransferResponse, error) {
+	baseURL := s._serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/real_time_payments_transfers/{real_time_payments_transfer_id}/complete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompleteASandboxRealTimePaymentsTransferParameters", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CompleteASandboxRealTimePaymentsTransferResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RealTimePaymentsTransfer
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RealTimePaymentsTransfer = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// CreateABookkeepingAccount - Create a Bookkeeping Account
+func (s *SDK) CreateABookkeepingAccount(ctx context.Context, request shared.CreateABookkeepingAccountParameters) (*operations.CreateABookkeepingAccountResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/bookkeeping_accounts"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateABookkeepingAccountResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BookkeepingAccount
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BookkeepingAccount = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// CreateABookkeepingEntrySet - Create a Bookkeeping Entry Set
+func (s *SDK) CreateABookkeepingEntrySet(ctx context.Context, request shared.CreateABookkeepingEntrySetParameters) (*operations.CreateABookkeepingEntrySetResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/bookkeeping_entry_sets"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateABookkeepingEntrySetResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BookkeepingEntrySet
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BookkeepingEntrySet = out
 		}
 	default:
 		switch {
@@ -1159,10 +1403,77 @@ func (s *SDK) CreateALimit(ctx context.Context, request shared.CreateALimitParam
 	return res, nil
 }
 
+// CreateARealTimePaymentsTransfer - Create a Real Time Payments Transfer
+func (s *SDK) CreateARealTimePaymentsTransfer(ctx context.Context, request shared.CreateARealTimePaymentsTransferParameters) (*operations.CreateARealTimePaymentsTransferResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/real_time_payments_transfers"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateARealTimePaymentsTransferResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RealTimePaymentsTransfer
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RealTimePaymentsTransfer = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // CreateASupplementalDocumentForAnEntity - Create a supplemental document for an Entity
 func (s *SDK) CreateASupplementalDocumentForAnEntity(ctx context.Context, request operations.CreateASupplementalDocumentForAnEntityRequest) (*operations.CreateASupplementalDocumentForAnEntityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/{entity_id}/supplemental_documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/{entity_id}/supplemental_documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateASupplementalDocumentForAnEntityParameters", "json")
 	if err != nil {
@@ -1863,6 +2174,70 @@ func (s *SDK) CreateAnEventSubscription(ctx context.Context, request shared.Crea
 	return res, nil
 }
 
+// CreateAnExport - Create an Export
+func (s *SDK) CreateAnExport(ctx context.Context, request shared.CreateAnExportParameters) (*operations.CreateAnExportResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/exports"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateAnExportResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Export
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Export = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // CreateAnExternalAccount - Create an External Account
 func (s *SDK) CreateAnExternalAccount(ctx context.Context, request shared.CreateAnExternalAccountParameters) (*operations.CreateAnExternalAccountResponse, error) {
 	baseURL := s._serverURL
@@ -1931,7 +2306,10 @@ func (s *SDK) CreateAnExternalAccount(ctx context.Context, request shared.Create
 // Simulates a [Check Transfer](#check-transfers) being deposited at a bank. This transfer must first have a `status` of `mailed`.
 func (s *SDK) DepositASandboxCheckTransfer(ctx context.Context, request operations.DepositASandboxCheckTransferRequest) (*operations.DepositASandboxCheckTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_transfers/{check_transfer_id}/deposit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/check_transfers/{check_transfer_id}/deposit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2314,6 +2692,122 @@ func (s *SDK) ListAchTransfers(ctx context.Context, request operations.ListAchTr
 			}
 
 			res.AchTransferList = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListBookkeepingAccounts - List Bookkeeping Accounts
+func (s *SDK) ListBookkeepingAccounts(ctx context.Context, request operations.ListBookkeepingAccountsRequest) (*operations.ListBookkeepingAccountsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/bookkeeping_accounts"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListBookkeepingAccountsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BookkeepingAccountList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BookkeepingAccountList = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListBookkeepingEntries - List Bookkeeping Entries
+func (s *SDK) ListBookkeepingEntries(ctx context.Context, request operations.ListBookkeepingEntriesRequest) (*operations.ListBookkeepingEntriesResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/bookkeeping_entries"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListBookkeepingEntriesResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BookkeepingEntryList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BookkeepingEntryList = out
 		}
 	default:
 		switch {
@@ -2968,6 +3462,64 @@ func (s *SDK) ListEvents(ctx context.Context, request operations.ListEventsReque
 	return res, nil
 }
 
+// ListExports - List Exports
+func (s *SDK) ListExports(ctx context.Context, request operations.ListExportsRequest) (*operations.ListExportsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/exports"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListExportsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ExportList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ExportList = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // ListExternalAccounts - List External Accounts
 func (s *SDK) ListExternalAccounts(ctx context.Context, request operations.ListExternalAccountsRequest) (*operations.ListExternalAccountsResponse, error) {
 	baseURL := s._serverURL
@@ -3374,6 +3926,122 @@ func (s *SDK) ListPendingTransactions(ctx context.Context, request operations.Li
 	return res, nil
 }
 
+// ListPrograms - List Programs
+func (s *SDK) ListPrograms(ctx context.Context, request operations.ListProgramsRequest) (*operations.ListProgramsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/programs"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListProgramsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ProgramList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProgramList = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListRealTimePaymentsTransfers - List Real Time Payments Transfers
+func (s *SDK) ListRealTimePaymentsTransfers(ctx context.Context, request operations.ListRealTimePaymentsTransfersRequest) (*operations.ListRealTimePaymentsTransfersResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/real_time_payments_transfers"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListRealTimePaymentsTransfersResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RealTimePaymentsTransferList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RealTimePaymentsTransferList = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // ListRoutingNumbers - List Routing Numbers
 // You can use this API to confirm if a routing number is valid, such as when a user is providing you with bank account details. Since routing numbers uniquely identify a bank, this will always return 0 or 1 entry. In Sandbox, the only valid routing number for this method is 110000000.
 func (s *SDK) ListRoutingNumbers(ctx context.Context, request operations.ListRoutingNumbersRequest) (*operations.ListRoutingNumbersResponse, error) {
@@ -3607,11 +4275,78 @@ func (s *SDK) ListWireTransfers(ctx context.Context, request operations.ListWire
 	return res, nil
 }
 
+// LookUpTheBalanceForAnAccount - Look up the balance for an Account
+func (s *SDK) LookUpTheBalanceForAnAccount(ctx context.Context, request shared.LookUpTheBalanceForAnAccountParameters) (*operations.LookUpTheBalanceForAnAccountResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/balance_lookups"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.LookUpTheBalanceForAnAccountResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BalanceLookup
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BalanceLookup = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // MailASandboxCheckTransfer - Mail a Sandbox Check Transfer
 // Simulates the mailing of a [Check Transfer](#check-transfers), which happens once per weekday in production but can be sped up in sandbox. This transfer must first have a `status` of `pending_approval` or `pending_submission`.
 func (s *SDK) MailASandboxCheckTransfer(ctx context.Context, request operations.MailASandboxCheckTransferRequest) (*operations.MailASandboxCheckTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_transfers/{check_transfer_id}/mail", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/check_transfers/{check_transfer_id}/mail", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3666,7 +4401,10 @@ func (s *SDK) MailASandboxCheckTransfer(ctx context.Context, request operations.
 // Simulates the rejection of a [Check Deposit](#check-deposits) by Increase due to factors like poor image quality. This Check Deposit must first have a `status` of `pending`.
 func (s *SDK) RejectASandboxCheckDeposit(ctx context.Context, request operations.RejectASandboxCheckDepositRequest) (*operations.RejectASandboxCheckDepositResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_deposits/{check_deposit_id}/reject", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/check_deposits/{check_deposit_id}/reject", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3720,7 +4458,10 @@ func (s *SDK) RejectASandboxCheckDeposit(ctx context.Context, request operations
 // RequestAStopPaymentOnACheckTransfer - Request a stop payment on a Check Transfer
 func (s *SDK) RequestAStopPaymentOnACheckTransfer(ctx context.Context, request operations.RequestAStopPaymentOnACheckTransferRequest) (*operations.RequestAStopPaymentOnACheckTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}/stop_payment", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}/stop_payment", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3774,7 +4515,10 @@ func (s *SDK) RequestAStopPaymentOnACheckTransfer(ctx context.Context, request o
 // RetrieveACard - Retrieve a Card
 func (s *SDK) RetrieveACard(ctx context.Context, request operations.RetrieveACardRequest) (*operations.RetrieveACardResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cards/{card_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cards/{card_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3828,7 +4572,10 @@ func (s *SDK) RetrieveACard(ctx context.Context, request operations.RetrieveACar
 // RetrieveACardDispute - Retrieve a Card Dispute
 func (s *SDK) RetrieveACardDispute(ctx context.Context, request operations.RetrieveACardDisputeRequest) (*operations.RetrieveACardDisputeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/card_disputes/{card_dispute_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/card_disputes/{card_dispute_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3882,7 +4629,10 @@ func (s *SDK) RetrieveACardDispute(ctx context.Context, request operations.Retri
 // RetrieveACardProfile - Retrieve a Card Profile
 func (s *SDK) RetrieveACardProfile(ctx context.Context, request operations.RetrieveACardProfileRequest) (*operations.RetrieveACardProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/card_profiles/{card_profile_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/card_profiles/{card_profile_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3936,7 +4686,10 @@ func (s *SDK) RetrieveACardProfile(ctx context.Context, request operations.Retri
 // RetrieveACheckDeposit - Retrieve a Check Deposit
 func (s *SDK) RetrieveACheckDeposit(ctx context.Context, request operations.RetrieveACheckDepositRequest) (*operations.RetrieveACheckDepositResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check_deposits/{check_deposit_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/check_deposits/{check_deposit_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3990,7 +4743,10 @@ func (s *SDK) RetrieveACheckDeposit(ctx context.Context, request operations.Retr
 // RetrieveACheckTransfer - Retrieve a Check Transfer
 func (s *SDK) RetrieveACheckTransfer(ctx context.Context, request operations.RetrieveACheckTransferRequest) (*operations.RetrieveACheckTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/check_transfers/{check_transfer_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4044,7 +4800,10 @@ func (s *SDK) RetrieveACheckTransfer(ctx context.Context, request operations.Ret
 // RetrieveADeclinedTransaction - Retrieve a Declined Transaction
 func (s *SDK) RetrieveADeclinedTransaction(ctx context.Context, request operations.RetrieveADeclinedTransactionRequest) (*operations.RetrieveADeclinedTransactionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/declined_transactions/{declined_transaction_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/declined_transactions/{declined_transaction_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4098,7 +4857,10 @@ func (s *SDK) RetrieveADeclinedTransaction(ctx context.Context, request operatio
 // RetrieveADigitalWalletToken - Retrieve a Digital Wallet Token
 func (s *SDK) RetrieveADigitalWalletToken(ctx context.Context, request operations.RetrieveADigitalWalletTokenRequest) (*operations.RetrieveADigitalWalletTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/digital_wallet_tokens/{digital_wallet_token_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/digital_wallet_tokens/{digital_wallet_token_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4152,7 +4914,10 @@ func (s *SDK) RetrieveADigitalWalletToken(ctx context.Context, request operation
 // RetrieveADocument - Retrieve a Document
 func (s *SDK) RetrieveADocument(ctx context.Context, request operations.RetrieveADocumentRequest) (*operations.RetrieveADocumentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/documents/{document_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/documents/{document_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4206,7 +4971,10 @@ func (s *SDK) RetrieveADocument(ctx context.Context, request operations.Retrieve
 // RetrieveAFile - Retrieve a File
 func (s *SDK) RetrieveAFile(ctx context.Context, request operations.RetrieveAFileRequest) (*operations.RetrieveAFileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{file_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{file_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4260,7 +5028,10 @@ func (s *SDK) RetrieveAFile(ctx context.Context, request operations.RetrieveAFil
 // RetrieveALimit - Retrieve a Limit
 func (s *SDK) RetrieveALimit(ctx context.Context, request operations.RetrieveALimitRequest) (*operations.RetrieveALimitResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/limits/{limit_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/limits/{limit_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4314,7 +5085,10 @@ func (s *SDK) RetrieveALimit(ctx context.Context, request operations.RetrieveALi
 // RetrieveAPendingTransaction - Retrieve a Pending Transaction
 func (s *SDK) RetrieveAPendingTransaction(ctx context.Context, request operations.RetrieveAPendingTransactionRequest) (*operations.RetrieveAPendingTransactionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pending_transactions/{pending_transaction_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pending_transactions/{pending_transaction_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4365,10 +5139,70 @@ func (s *SDK) RetrieveAPendingTransaction(ctx context.Context, request operation
 	return res, nil
 }
 
+// RetrieveAProgram - Retrieve a Program
+func (s *SDK) RetrieveAProgram(ctx context.Context, request operations.RetrieveAProgramRequest) (*operations.RetrieveAProgramResponse, error) {
+	baseURL := s._serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/programs/{program_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrieveAProgramResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Program
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Program = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // RetrieveARealTimeDecision - Retrieve a Real-Time Decision
 func (s *SDK) RetrieveARealTimeDecision(ctx context.Context, request operations.RetrieveARealTimeDecisionRequest) (*operations.RetrieveARealTimeDecisionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/real_time_decisions/{real_time_decision_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/real_time_decisions/{real_time_decision_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4419,10 +5253,70 @@ func (s *SDK) RetrieveARealTimeDecision(ctx context.Context, request operations.
 	return res, nil
 }
 
+// RetrieveARealTimePaymentsTransfer - Retrieve a Real Time Payments Transfer
+func (s *SDK) RetrieveARealTimePaymentsTransfer(ctx context.Context, request operations.RetrieveARealTimePaymentsTransferRequest) (*operations.RetrieveARealTimePaymentsTransferResponse, error) {
+	baseURL := s._serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/real_time_payments_transfers/{real_time_payments_transfer_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrieveARealTimePaymentsTransferResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RealTimePaymentsTransfer
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RealTimePaymentsTransfer = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // RetrieveATransaction - Retrieve a Transaction
 func (s *SDK) RetrieveATransaction(ctx context.Context, request operations.RetrieveATransactionRequest) (*operations.RetrieveATransactionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactions/{transaction_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transactions/{transaction_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4476,7 +5370,10 @@ func (s *SDK) RetrieveATransaction(ctx context.Context, request operations.Retri
 // RetrieveAWireDrawdownRequest - Retrieve a Wire Drawdown Request
 func (s *SDK) RetrieveAWireDrawdownRequest(ctx context.Context, request operations.RetrieveAWireDrawdownRequestRequest) (*operations.RetrieveAWireDrawdownRequestResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wire_drawdown_requests/{wire_drawdown_request_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/wire_drawdown_requests/{wire_drawdown_request_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4530,7 +5427,10 @@ func (s *SDK) RetrieveAWireDrawdownRequest(ctx context.Context, request operatio
 // RetrieveAWireTransfer - Retrieve a Wire Transfer
 func (s *SDK) RetrieveAWireTransfer(ctx context.Context, request operations.RetrieveAWireTransferRequest) (*operations.RetrieveAWireTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/wire_transfers/{wire_transfer_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/wire_transfers/{wire_transfer_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4584,7 +5484,10 @@ func (s *SDK) RetrieveAWireTransfer(ctx context.Context, request operations.Retr
 // RetrieveAnAccount - Retrieve an Account
 func (s *SDK) RetrieveAnAccount(ctx context.Context, request operations.RetrieveAnAccountRequest) (*operations.RetrieveAnAccountResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4638,7 +5541,10 @@ func (s *SDK) RetrieveAnAccount(ctx context.Context, request operations.Retrieve
 // RetrieveAnAccountNumber - Retrieve an Account Number
 func (s *SDK) RetrieveAnAccountNumber(ctx context.Context, request operations.RetrieveAnAccountNumberRequest) (*operations.RetrieveAnAccountNumberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_numbers/{account_number_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account_numbers/{account_number_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4692,7 +5598,10 @@ func (s *SDK) RetrieveAnAccountNumber(ctx context.Context, request operations.Re
 // RetrieveAnAccountStatement - Retrieve an Account Statement
 func (s *SDK) RetrieveAnAccountStatement(ctx context.Context, request operations.RetrieveAnAccountStatementRequest) (*operations.RetrieveAnAccountStatementResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_statements/{account_statement_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account_statements/{account_statement_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4746,7 +5655,10 @@ func (s *SDK) RetrieveAnAccountStatement(ctx context.Context, request operations
 // RetrieveAnAccountTransfer - Retrieve an Account Transfer
 func (s *SDK) RetrieveAnAccountTransfer(ctx context.Context, request operations.RetrieveAnAccountTransferRequest) (*operations.RetrieveAnAccountTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_transfers/{account_transfer_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account_transfers/{account_transfer_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4800,7 +5712,10 @@ func (s *SDK) RetrieveAnAccountTransfer(ctx context.Context, request operations.
 // RetrieveAnAchPrenotification - Retrieve an ACH Prenotification
 func (s *SDK) RetrieveAnAchPrenotification(ctx context.Context, request operations.RetrieveAnAchPrenotificationRequest) (*operations.RetrieveAnAchPrenotificationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ach_prenotifications/{ach_prenotification_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ach_prenotifications/{ach_prenotification_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4854,7 +5769,10 @@ func (s *SDK) RetrieveAnAchPrenotification(ctx context.Context, request operatio
 // RetrieveAnAchTransfer - Retrieve an ACH Transfer
 func (s *SDK) RetrieveAnAchTransfer(ctx context.Context, request operations.RetrieveAnAchTransferRequest) (*operations.RetrieveAnAchTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ach_transfers/{ach_transfer_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ach_transfers/{ach_transfer_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4908,7 +5826,10 @@ func (s *SDK) RetrieveAnAchTransfer(ctx context.Context, request operations.Retr
 // RetrieveAnEntity - Retrieve an Entity
 func (s *SDK) RetrieveAnEntity(ctx context.Context, request operations.RetrieveAnEntityRequest) (*operations.RetrieveAnEntityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/{entity_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/{entity_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4962,7 +5883,10 @@ func (s *SDK) RetrieveAnEntity(ctx context.Context, request operations.RetrieveA
 // RetrieveAnEvent - Retrieve an Event
 func (s *SDK) RetrieveAnEvent(ctx context.Context, request operations.RetrieveAnEventRequest) (*operations.RetrieveAnEventResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{event_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/events/{event_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5016,7 +5940,10 @@ func (s *SDK) RetrieveAnEvent(ctx context.Context, request operations.RetrieveAn
 // RetrieveAnEventSubscription - Retrieve an Event Subscription
 func (s *SDK) RetrieveAnEventSubscription(ctx context.Context, request operations.RetrieveAnEventSubscriptionRequest) (*operations.RetrieveAnEventSubscriptionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event_subscriptions/{event_subscription_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/event_subscriptions/{event_subscription_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5067,10 +5994,70 @@ func (s *SDK) RetrieveAnEventSubscription(ctx context.Context, request operation
 	return res, nil
 }
 
+// RetrieveAnExport - Retrieve an Export
+func (s *SDK) RetrieveAnExport(ctx context.Context, request operations.RetrieveAnExportRequest) (*operations.RetrieveAnExportResponse, error) {
+	baseURL := s._serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/exports/{export_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrieveAnExportResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Export
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Export = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // RetrieveAnExternalAccount - Retrieve an External Account
 func (s *SDK) RetrieveAnExternalAccount(ctx context.Context, request operations.RetrieveAnExternalAccountRequest) (*operations.RetrieveAnExternalAccountResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/external_accounts/{external_account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/external_accounts/{external_account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5124,7 +6111,10 @@ func (s *SDK) RetrieveAnExternalAccount(ctx context.Context, request operations.
 // RetrieveAnInboundAchTransferReturn - Retrieve an Inbound ACH Transfer Return
 func (s *SDK) RetrieveAnInboundAchTransferReturn(ctx context.Context, request operations.RetrieveAnInboundAchTransferReturnRequest) (*operations.RetrieveAnInboundAchTransferReturnResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/inbound_ach_transfer_returns/{inbound_ach_transfer_return_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/inbound_ach_transfer_returns/{inbound_ach_transfer_return_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5178,7 +6168,10 @@ func (s *SDK) RetrieveAnInboundAchTransferReturn(ctx context.Context, request op
 // RetrieveAnInboundWireDrawdownRequest - Retrieve an Inbound Wire Drawdown Request
 func (s *SDK) RetrieveAnInboundWireDrawdownRequest(ctx context.Context, request operations.RetrieveAnInboundWireDrawdownRequestRequest) (*operations.RetrieveAnInboundWireDrawdownRequestResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/inbound_wire_drawdown_requests/{inbound_wire_drawdown_request_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/inbound_wire_drawdown_requests/{inbound_wire_drawdown_request_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5232,7 +6225,10 @@ func (s *SDK) RetrieveAnInboundWireDrawdownRequest(ctx context.Context, request 
 // RetrieveAnOauthConnection - Retrieve an OAuth Connection
 func (s *SDK) RetrieveAnOauthConnection(ctx context.Context, request operations.RetrieveAnOauthConnectionRequest) (*operations.RetrieveAnOauthConnectionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/oauth_connections/{oauth_connection_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/oauth_connections/{oauth_connection_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5341,7 +6337,10 @@ func (s *SDK) RetrieveGroupDetails(ctx context.Context) (*operations.RetrieveGro
 // RetrieveSensitiveDetailsForACard - Retrieve sensitive details for a Card
 func (s *SDK) RetrieveSensitiveDetailsForACard(ctx context.Context, request operations.RetrieveSensitiveDetailsForACardRequest) (*operations.RetrieveSensitiveDetailsForACardResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cards/{card_id}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cards/{card_id}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5396,7 +6395,10 @@ func (s *SDK) RetrieveSensitiveDetailsForACard(ctx context.Context, request oper
 // Simulates the return of an [ACH Transfer](#ach-transfers) by the Federal Reserve due to an error condition. This will also create a Transaction to account for the returned funds. This transfer must first have a `status` of `submitted`.
 func (s *SDK) ReturnASandboxAchTransfer(ctx context.Context, request operations.ReturnASandboxAchTransferRequest) (*operations.ReturnASandboxAchTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/ach_transfers/{ach_transfer_id}/return", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/ach_transfers/{ach_transfer_id}/return", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReturnASandboxAchTransferParameters", "json")
 	if err != nil {
@@ -5461,7 +6463,10 @@ func (s *SDK) ReturnASandboxAchTransfer(ctx context.Context, request operations.
 // Simulates the return of a [Check Deposit](#check-deposits). This Check Deposit must first have a `status` of `submitted`.
 func (s *SDK) ReturnASandboxCheckDeposit(ctx context.Context, request operations.ReturnASandboxCheckDepositRequest) (*operations.ReturnASandboxCheckDepositResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_deposits/{check_deposit_id}/return", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/check_deposits/{check_deposit_id}/return", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -5512,11 +6517,82 @@ func (s *SDK) ReturnASandboxCheckDeposit(ctx context.Context, request operations
 	return res, nil
 }
 
+// ReturnASandboxCheckTransfer - Return a Sandbox Check Transfer
+// Simulates a [Check Transfer](#check-transfers) being returned via USPS to Increase. This transfer must first have a `status` of `mailed`.
+func (s *SDK) ReturnASandboxCheckTransfer(ctx context.Context, request operations.ReturnASandboxCheckTransferRequest) (*operations.ReturnASandboxCheckTransferResponse, error) {
+	baseURL := s._serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/check_transfers/{check_transfer_id}/return", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReturnASandboxCheckTransferParameters", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ReturnASandboxCheckTransferResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CheckTransfer
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CheckTransfer = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // ReverseASandboxWireTransfer - Reverse a Sandbox Wire Transfer
 // Simulates the reversal of a [Wire Transfer](#wire-transfers) by the Federal Reserve due to error conditions. This will also create a [Transaction](#transaction) to account for the returned funds. This Wire Transfer must first have a `status` of `complete`.'
 func (s *SDK) ReverseASandboxWireTransfer(ctx context.Context, request operations.ReverseASandboxWireTransferRequest) (*operations.ReverseASandboxWireTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/wire_transfers/{wire_transfer_id}/reverse", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/wire_transfers/{wire_transfer_id}/reverse", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -6087,6 +7163,71 @@ func (s *SDK) SimulateAnInboundWireDrawdownRequestBeingCreated(ctx context.Conte
 	return res, nil
 }
 
+// SimulateAnInterestPaymentToYourAccount - Simulate an Interest Payment to your account
+// Simulates an interest payment to your account. In production, this happens automatically on the first of each month.
+func (s *SDK) SimulateAnInterestPaymentToYourAccount(ctx context.Context, request shared.SimulateAnInterestPaymentToYourAccountParameters) (*operations.SimulateAnInterestPaymentToYourAccountResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/simulations/interest_payment"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SimulateAnInterestPaymentToYourAccountResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.InterestPaymentSimulationResult
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InterestPaymentSimulationResult = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // SimulateDigitalWalletProvisioningForACard - Simulate digital wallet provisioning for a card
 // Simulates a user attempting add a [Card](#cards) to a digital wallet such as Apple Pay.
 func (s *SDK) SimulateDigitalWalletProvisioningForACard(ctx context.Context, request shared.SimulateDigitalWalletProvisioningForACardParameters) (*operations.SimulateDigitalWalletProvisioningForACardResponse, error) {
@@ -6221,7 +7362,10 @@ func (s *SDK) SimulateSettlingACardAuthorization(ctx context.Context, request sh
 // After a [Card Dispute](#card-disputes) is created in production, the dispute will be reviewed. Since no review happens in sandbox, this endpoint simulates moving a Card Dispute into a rejected or accepted state. A Card Dispute can only be actioned one time and must have a status of `pending_reviewing`.
 func (s *SDK) SimulatesAdvancingTheStateOfACardDispute(ctx context.Context, request operations.SimulatesAdvancingTheStateOfACardDisputeRequest) (*operations.SimulatesAdvancingTheStateOfACardDisputeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/card_disputes/{card_dispute_id}/action", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/card_disputes/{card_dispute_id}/action", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SimulatesAdvancingTheStateOfACardDisputeParameters", "json")
 	if err != nil {
@@ -6286,7 +7430,10 @@ func (s *SDK) SimulatesAdvancingTheStateOfACardDispute(ctx context.Context, requ
 // Simulates the submission of an [ACH Transfer](#ach-transfers) to the Federal Reserve. This transfer must first have a `status` of `pending_approval` or `pending_submission`. In production, Increase submits ACH Transfers to the Federal Reserve three times per day on weekdays. Since sandbox ACH Transfers are not submitted to the Federal Reserve, this endpoint allows you to skip that delay and transition the ACH Transfer to a status of `submitted`.
 func (s *SDK) SubmitASandboxAchTransfer(ctx context.Context, request operations.SubmitASandboxAchTransferRequest) (*operations.SubmitASandboxAchTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/ach_transfers/{ach_transfer_id}/submit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/ach_transfers/{ach_transfer_id}/submit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -6341,7 +7488,10 @@ func (s *SDK) SubmitASandboxAchTransfer(ctx context.Context, request operations.
 // Simulates the submission of a [Check Deposit](#check-deposits) to the Federal Reserve. This Check Deposit must first have a `status` of `pending`.
 func (s *SDK) SubmitASandboxCheckDeposit(ctx context.Context, request operations.SubmitASandboxCheckDepositRequest) (*operations.SubmitASandboxCheckDepositResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/check_deposits/{check_deposit_id}/submit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/check_deposits/{check_deposit_id}/submit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -6396,7 +7546,10 @@ func (s *SDK) SubmitASandboxCheckDeposit(ctx context.Context, request operations
 // Simulates the submission of a [Wire Transfer](#wire-transfers) to the Federal Reserve. This transfer must first have a `status` of `pending_approval` or `pending_creating`.
 func (s *SDK) SubmitASandboxWireTransfer(ctx context.Context, request operations.SubmitASandboxWireTransferRequest) (*operations.SubmitASandboxWireTransferResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/simulations/wire_transfers/{wire_transfer_id}/submit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/simulations/wire_transfers/{wire_transfer_id}/submit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -6450,7 +7603,10 @@ func (s *SDK) SubmitASandboxWireTransfer(ctx context.Context, request operations
 // UpdateACard - Update a Card
 func (s *SDK) UpdateACard(ctx context.Context, request operations.UpdateACardRequest) (*operations.UpdateACardResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cards/{card_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cards/{card_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateACardParameters", "json")
 	if err != nil {
@@ -6514,7 +7670,10 @@ func (s *SDK) UpdateACard(ctx context.Context, request operations.UpdateACardReq
 // UpdateALimit - Update a Limit
 func (s *SDK) UpdateALimit(ctx context.Context, request operations.UpdateALimitRequest) (*operations.UpdateALimitResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/limits/{limit_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/limits/{limit_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateALimitParameters", "json")
 	if err != nil {
@@ -6578,7 +7737,10 @@ func (s *SDK) UpdateALimit(ctx context.Context, request operations.UpdateALimitR
 // UpdateAnAccount - Update an Account
 func (s *SDK) UpdateAnAccount(ctx context.Context, request operations.UpdateAnAccountRequest) (*operations.UpdateAnAccountResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAnAccountParameters", "json")
 	if err != nil {
@@ -6642,7 +7804,10 @@ func (s *SDK) UpdateAnAccount(ctx context.Context, request operations.UpdateAnAc
 // UpdateAnAccountNumber - Update an Account Number
 func (s *SDK) UpdateAnAccountNumber(ctx context.Context, request operations.UpdateAnAccountNumberRequest) (*operations.UpdateAnAccountNumberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account_numbers/{account_number_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account_numbers/{account_number_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAnAccountNumberParameters", "json")
 	if err != nil {
@@ -6706,7 +7871,10 @@ func (s *SDK) UpdateAnAccountNumber(ctx context.Context, request operations.Upda
 // UpdateAnEventSubscription - Update an Event Subscription
 func (s *SDK) UpdateAnEventSubscription(ctx context.Context, request operations.UpdateAnEventSubscriptionRequest) (*operations.UpdateAnEventSubscriptionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/event_subscriptions/{event_subscription_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/event_subscriptions/{event_subscription_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAnEventSubscriptionParameters", "json")
 	if err != nil {
@@ -6770,7 +7938,10 @@ func (s *SDK) UpdateAnEventSubscription(ctx context.Context, request operations.
 // UpdateAnExternalAccount - Update an External Account
 func (s *SDK) UpdateAnExternalAccount(ctx context.Context, request operations.UpdateAnExternalAccountRequest) (*operations.UpdateAnExternalAccountResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/external_accounts/{external_account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/external_accounts/{external_account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAnExternalAccountParameters", "json")
 	if err != nil {

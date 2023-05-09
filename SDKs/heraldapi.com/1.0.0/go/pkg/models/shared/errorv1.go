@@ -20,12 +20,16 @@ const (
 	ErrorV1CodeEnumInternalServerError ErrorV1CodeEnum = "internal_server_error"
 )
 
+func (e ErrorV1CodeEnum) ToPointer() *ErrorV1CodeEnum {
+	return &e
+}
+
 func (e *ErrorV1CodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unauthorized":
 		fallthrough
 	case "not_found":
@@ -39,10 +43,10 @@ func (e *ErrorV1CodeEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_request":
 		fallthrough
 	case "internal_server_error":
-		*e = ErrorV1CodeEnum(s)
+		*e = ErrorV1CodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorV1CodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorV1CodeEnum: %v", v)
 	}
 }
 

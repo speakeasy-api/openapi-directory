@@ -16,21 +16,25 @@ const (
 	OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceComplianceStateEnumNonCompliant OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceComplianceStateEnum = "NON_COMPLIANT"
 )
 
+func (e OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceComplianceStateEnum) ToPointer() *OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceComplianceStateEnum {
+	return &e
+}
+
 func (e *OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceComplianceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "COMPLIANT":
 		fallthrough
 	case "NON_COMPLIANT":
-		*e = OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceComplianceStateEnum(s)
+		*e = OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceComplianceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceComplianceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceComplianceStateEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	GoogleAdsSearchads360V0CommonGenderInfoTypeEnumUndetermined GoogleAdsSearchads360V0CommonGenderInfoTypeEnum = "UNDETERMINED"
 )
 
+func (e GoogleAdsSearchads360V0CommonGenderInfoTypeEnum) ToPointer() *GoogleAdsSearchads360V0CommonGenderInfoTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonGenderInfoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -33,10 +37,10 @@ func (e *GoogleAdsSearchads360V0CommonGenderInfoTypeEnum) UnmarshalJSON(data []b
 	case "FEMALE":
 		fallthrough
 	case "UNDETERMINED":
-		*e = GoogleAdsSearchads360V0CommonGenderInfoTypeEnum(s)
+		*e = GoogleAdsSearchads360V0CommonGenderInfoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonGenderInfoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonGenderInfoTypeEnum: %v", v)
 	}
 }
 

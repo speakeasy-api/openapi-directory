@@ -16,17 +16,21 @@ const (
 	CountOpenWorkflowExecutionsXAmzTargetEnumSimpleWorkflowServiceCountOpenWorkflowExecutions CountOpenWorkflowExecutionsXAmzTargetEnum = "SimpleWorkflowService.CountOpenWorkflowExecutions"
 )
 
+func (e CountOpenWorkflowExecutionsXAmzTargetEnum) ToPointer() *CountOpenWorkflowExecutionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *CountOpenWorkflowExecutionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleWorkflowService.CountOpenWorkflowExecutions":
-		*e = CountOpenWorkflowExecutionsXAmzTargetEnum(s)
+		*e = CountOpenWorkflowExecutionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CountOpenWorkflowExecutionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CountOpenWorkflowExecutionsXAmzTargetEnum: %v", v)
 	}
 }
 

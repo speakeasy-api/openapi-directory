@@ -17,21 +17,25 @@ const (
 	SearchEverywhereIncludeEnumStrings   SearchEverywhereIncludeEnum = "strings"
 )
 
+func (e SearchEverywhereIncludeEnum) ToPointer() *SearchEverywhereIncludeEnum {
+	return &e
+}
+
 func (e *SearchEverywhereIncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "projects":
 		fallthrough
 	case "documents":
 		fallthrough
 	case "strings":
-		*e = SearchEverywhereIncludeEnum(s)
+		*e = SearchEverywhereIncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchEverywhereIncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchEverywhereIncludeEnum: %v", v)
 	}
 }
 

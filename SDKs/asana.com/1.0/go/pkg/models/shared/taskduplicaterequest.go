@@ -23,12 +23,16 @@ const (
 	TaskDuplicateRequestIncludeEnumParent       TaskDuplicateRequestIncludeEnum = "parent"
 )
 
+func (e TaskDuplicateRequestIncludeEnum) ToPointer() *TaskDuplicateRequestIncludeEnum {
+	return &e
+}
+
 func (e *TaskDuplicateRequestIncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "notes":
 		fallthrough
 	case "assignee":
@@ -48,10 +52,10 @@ func (e *TaskDuplicateRequestIncludeEnum) UnmarshalJSON(data []byte) error {
 	case "dependencies":
 		fallthrough
 	case "parent":
-		*e = TaskDuplicateRequestIncludeEnum(s)
+		*e = TaskDuplicateRequestIncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskDuplicateRequestIncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskDuplicateRequestIncludeEnum: %v", v)
 	}
 }
 

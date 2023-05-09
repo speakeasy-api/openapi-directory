@@ -15,20 +15,24 @@ const (
 	SourceFrequencyEnumMonthly SourceFrequencyEnum = "MONTHLY"
 )
 
+func (e SourceFrequencyEnum) ToPointer() *SourceFrequencyEnum {
+	return &e
+}
+
 func (e *SourceFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAILY":
 		fallthrough
 	case "WEEKLY":
 		fallthrough
 	case "MONTHLY":
-		*e = SourceFrequencyEnum(s)
+		*e = SourceFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceFrequencyEnum: %v", v)
 	}
 }

@@ -50,12 +50,16 @@ const (
 	MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnumReducePercentile05 MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum = "REDUCE_PERCENTILE_05"
 )
 
+func (e MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum) ToPointer() *MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum {
+	return &e
+}
+
 func (e *MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REDUCE_NONE":
 		fallthrough
 	case "REDUCE_MEAN":
@@ -83,10 +87,10 @@ func (e *MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum) Unma
 	case "REDUCE_PERCENTILE_50":
 		fallthrough
 	case "REDUCE_PERCENTILE_05":
-		*e = MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum(s)
+		*e = MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum: %v", v)
 	}
 }
 
@@ -115,12 +119,16 @@ const (
 	MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnumAlignPercentChange MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum = "ALIGN_PERCENT_CHANGE"
 )
 
+func (e MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum) ToPointer() *MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum {
+	return &e
+}
+
 func (e *MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALIGN_NONE":
 		fallthrough
 	case "ALIGN_DELTA":
@@ -158,10 +166,10 @@ func (e *MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum) Unmars
 	case "ALIGN_PERCENTILE_05":
 		fallthrough
 	case "ALIGN_PERCENT_CHANGE":
-		*e = MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum(s)
+		*e = MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum: %v", v)
 	}
 }
 
@@ -185,12 +193,16 @@ const (
 	MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnumReducePercentile05 MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnum = "REDUCE_PERCENTILE_05"
 )
 
+func (e MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnum) ToPointer() *MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnum {
+	return &e
+}
+
 func (e *MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REDUCE_NONE":
 		fallthrough
 	case "REDUCE_MEAN":
@@ -218,10 +230,10 @@ func (e *MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerE
 	case "REDUCE_PERCENTILE_50":
 		fallthrough
 	case "REDUCE_PERCENTILE_05":
-		*e = MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnum(s)
+		*e = MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnum: %v", v)
 	}
 }
 
@@ -250,12 +262,16 @@ const (
 	MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnumAlignPercentChange MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnum = "ALIGN_PERCENT_CHANGE"
 )
 
+func (e MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnum) ToPointer() *MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnum {
+	return &e
+}
+
 func (e *MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALIGN_NONE":
 		fallthrough
 	case "ALIGN_DELTA":
@@ -293,10 +309,10 @@ func (e *MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnu
 	case "ALIGN_PERCENTILE_05":
 		fallthrough
 	case "ALIGN_PERCENT_CHANGE":
-		*e = MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnum(s)
+		*e = MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnum: %v", v)
 	}
 }
 
@@ -308,19 +324,23 @@ const (
 	MonitoringProjectsTimeSeriesListViewEnumHeaders MonitoringProjectsTimeSeriesListViewEnum = "HEADERS"
 )
 
+func (e MonitoringProjectsTimeSeriesListViewEnum) ToPointer() *MonitoringProjectsTimeSeriesListViewEnum {
+	return &e
+}
+
 func (e *MonitoringProjectsTimeSeriesListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FULL":
 		fallthrough
 	case "HEADERS":
-		*e = MonitoringProjectsTimeSeriesListViewEnum(s)
+		*e = MonitoringProjectsTimeSeriesListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringProjectsTimeSeriesListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringProjectsTimeSeriesListViewEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetAttributeValuesXAmzTargetEnumAwsPriceListServiceGetAttributeValues GetAttributeValuesXAmzTargetEnum = "AWSPriceListService.GetAttributeValues"
 )
 
+func (e GetAttributeValuesXAmzTargetEnum) ToPointer() *GetAttributeValuesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAttributeValuesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPriceListService.GetAttributeValues":
-		*e = GetAttributeValuesXAmzTargetEnum(s)
+		*e = GetAttributeValuesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAttributeValuesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAttributeValuesXAmzTargetEnum: %v", v)
 	}
 }
 

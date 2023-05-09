@@ -16,19 +16,23 @@ const (
 	DependabotAlertWithRepositoryDependencyScopeEnumRuntime     DependabotAlertWithRepositoryDependencyScopeEnum = "runtime"
 )
 
+func (e DependabotAlertWithRepositoryDependencyScopeEnum) ToPointer() *DependabotAlertWithRepositoryDependencyScopeEnum {
+	return &e
+}
+
 func (e *DependabotAlertWithRepositoryDependencyScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "development":
 		fallthrough
 	case "runtime":
-		*e = DependabotAlertWithRepositoryDependencyScopeEnum(s)
+		*e = DependabotAlertWithRepositoryDependencyScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependabotAlertWithRepositoryDependencyScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for DependabotAlertWithRepositoryDependencyScopeEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	DependabotAlertWithRepositoryDismissedReasonEnumTolerableRisk DependabotAlertWithRepositoryDismissedReasonEnum = "tolerable_risk"
 )
 
+func (e DependabotAlertWithRepositoryDismissedReasonEnum) ToPointer() *DependabotAlertWithRepositoryDismissedReasonEnum {
+	return &e
+}
+
 func (e *DependabotAlertWithRepositoryDismissedReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fix_started":
 		fallthrough
 	case "inaccurate":
@@ -68,10 +76,10 @@ func (e *DependabotAlertWithRepositoryDismissedReasonEnum) UnmarshalJSON(data []
 	case "not_used":
 		fallthrough
 	case "tolerable_risk":
-		*e = DependabotAlertWithRepositoryDismissedReasonEnum(s)
+		*e = DependabotAlertWithRepositoryDismissedReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependabotAlertWithRepositoryDismissedReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for DependabotAlertWithRepositoryDismissedReasonEnum: %v", v)
 	}
 }
 
@@ -84,21 +92,25 @@ const (
 	DependabotAlertWithRepositoryStateEnumOpen      DependabotAlertWithRepositoryStateEnum = "open"
 )
 
+func (e DependabotAlertWithRepositoryStateEnum) ToPointer() *DependabotAlertWithRepositoryStateEnum {
+	return &e
+}
+
 func (e *DependabotAlertWithRepositoryStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dismissed":
 		fallthrough
 	case "fixed":
 		fallthrough
 	case "open":
-		*e = DependabotAlertWithRepositoryStateEnum(s)
+		*e = DependabotAlertWithRepositoryStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependabotAlertWithRepositoryStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DependabotAlertWithRepositoryStateEnum: %v", v)
 	}
 }
 

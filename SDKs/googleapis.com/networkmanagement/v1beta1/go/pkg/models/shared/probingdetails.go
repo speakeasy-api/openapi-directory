@@ -16,21 +16,25 @@ const (
 	ProbingDetailsAbortCauseEnumNoSourceLocation             ProbingDetailsAbortCauseEnum = "NO_SOURCE_LOCATION"
 )
 
+func (e ProbingDetailsAbortCauseEnum) ToPointer() *ProbingDetailsAbortCauseEnum {
+	return &e
+}
+
 func (e *ProbingDetailsAbortCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROBING_ABORT_CAUSE_UNSPECIFIED":
 		fallthrough
 	case "PERMISSION_DENIED":
 		fallthrough
 	case "NO_SOURCE_LOCATION":
-		*e = ProbingDetailsAbortCauseEnum(s)
+		*e = ProbingDetailsAbortCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProbingDetailsAbortCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for ProbingDetailsAbortCauseEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	ProbingDetailsResultEnumUndetermined             ProbingDetailsResultEnum = "UNDETERMINED"
 )
 
+func (e ProbingDetailsResultEnum) ToPointer() *ProbingDetailsResultEnum {
+	return &e
+}
+
 func (e *ProbingDetailsResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROBING_RESULT_UNSPECIFIED":
 		fallthrough
 	case "REACHABLE":
@@ -60,10 +68,10 @@ func (e *ProbingDetailsResultEnum) UnmarshalJSON(data []byte) error {
 	case "REACHABILITY_INCONSISTENT":
 		fallthrough
 	case "UNDETERMINED":
-		*e = ProbingDetailsResultEnum(s)
+		*e = ProbingDetailsResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProbingDetailsResultEnum: %s", s)
+		return fmt.Errorf("invalid value for ProbingDetailsResultEnum: %v", v)
 	}
 }
 

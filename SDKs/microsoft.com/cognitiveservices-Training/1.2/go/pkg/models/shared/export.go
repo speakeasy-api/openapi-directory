@@ -14,19 +14,23 @@ const (
 	ExportPlatformEnumTensorFlow ExportPlatformEnum = "TensorFlow"
 )
 
+func (e ExportPlatformEnum) ToPointer() *ExportPlatformEnum {
+	return &e
+}
+
 func (e *ExportPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CoreML":
 		fallthrough
 	case "TensorFlow":
-		*e = ExportPlatformEnum(s)
+		*e = ExportPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportPlatformEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	ExportStatusEnumDone      ExportStatusEnum = "Done"
 )
 
+func (e ExportStatusEnum) ToPointer() *ExportStatusEnum {
+	return &e
+}
+
 func (e *ExportStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Exporting":
 		fallthrough
 	case "Failed":
 		fallthrough
 	case "Done":
-		*e = ExportStatusEnum(s)
+		*e = ExportStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportStatusEnum: %v", v)
 	}
 }
 

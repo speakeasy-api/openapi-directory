@@ -26,4 +26,6 @@ type RetrieveEUAByIDV2Response struct {
 	RetrieveEUAByIDV2403ApplicationJSONObject map[string]interface{}
 	// Not found error
 	RetrieveEUAByIDV2404ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	RetrieveEUAByIDV2429ApplicationJSONObject map[string]interface{}
 }

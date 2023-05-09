@@ -16,17 +16,21 @@ const (
 	DeleteProgressUpdateStreamXAmzTargetEnumAwsMigrationHubDeleteProgressUpdateStream DeleteProgressUpdateStreamXAmzTargetEnum = "AWSMigrationHub.DeleteProgressUpdateStream"
 )
 
+func (e DeleteProgressUpdateStreamXAmzTargetEnum) ToPointer() *DeleteProgressUpdateStreamXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteProgressUpdateStreamXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHub.DeleteProgressUpdateStream":
-		*e = DeleteProgressUpdateStreamXAmzTargetEnum(s)
+		*e = DeleteProgressUpdateStreamXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteProgressUpdateStreamXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteProgressUpdateStreamXAmzTargetEnum: %v", v)
 	}
 }
 

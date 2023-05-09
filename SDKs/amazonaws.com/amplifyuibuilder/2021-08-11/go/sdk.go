@@ -32,6 +32,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>The Amplify UI Builder API provides a programmatic interface for creating and configuring user interface (UI) component libraries and themes for use in your Amplify applications. You can then connect these UI components to an application's backend Amazon Web Services resources.</p> <p>You can also use the Amplify Studio visual designer to create UI components and model data for an app. For more information, see <a href="https://docs.amplify.aws/console/adminui/intro">Introduction</a> in the <i>Amplify Docs</i>.</p> <p>The Amplify Framework is a comprehensive set of SDKs, libraries, tools, and documentation for client app development. For more information, see the <a href="https://docs.amplify.aws/">Amplify Framework</a>. For more information about deploying an Amplify application to Amazon Web Services, see the <a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">Amplify User Guide</a>.</p>
 // https://docs.aws.amazon.com/amplifyuibuilder/ - Amazon Web Services documentation
 type SDK struct {
@@ -113,7 +128,10 @@ func New(opts ...SDKOption) *SDK {
 // CreateComponent - Creates a new component for an Amplify app.
 func (s *SDK) CreateComponent(ctx context.Context, request operations.CreateComponentRequest) (*operations.CreateComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -213,7 +231,10 @@ func (s *SDK) CreateComponent(ctx context.Context, request operations.CreateComp
 // CreateForm - Creates a new form for an Amplify app.
 func (s *SDK) CreateForm(ctx context.Context, request operations.CreateFormRequest) (*operations.CreateFormResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -313,7 +334,10 @@ func (s *SDK) CreateForm(ctx context.Context, request operations.CreateFormReque
 // CreateTheme - Creates a theme to apply to the components in an Amplify app.
 func (s *SDK) CreateTheme(ctx context.Context, request operations.CreateThemeRequest) (*operations.CreateThemeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -413,7 +437,10 @@ func (s *SDK) CreateTheme(ctx context.Context, request operations.CreateThemeReq
 // DeleteComponent - Deletes a component from an Amplify app.
 func (s *SDK) DeleteComponent(ctx context.Context, request operations.DeleteComponentRequest) (*operations.DeleteComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -480,7 +507,10 @@ func (s *SDK) DeleteComponent(ctx context.Context, request operations.DeleteComp
 // DeleteForm - Deletes a form from an Amplify app.
 func (s *SDK) DeleteForm(ctx context.Context, request operations.DeleteFormRequest) (*operations.DeleteFormResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -547,7 +577,10 @@ func (s *SDK) DeleteForm(ctx context.Context, request operations.DeleteFormReque
 // DeleteTheme - Deletes a theme from an Amplify app.
 func (s *SDK) DeleteTheme(ctx context.Context, request operations.DeleteThemeRequest) (*operations.DeleteThemeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -614,7 +647,10 @@ func (s *SDK) DeleteTheme(ctx context.Context, request operations.DeleteThemeReq
 // ExchangeCodeForToken - Exchanges an access code for a token.
 func (s *SDK) ExchangeCodeForToken(ctx context.Context, request operations.ExchangeCodeForTokenRequest) (*operations.ExchangeCodeForTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tokens/{provider}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tokens/{provider}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -680,7 +716,10 @@ func (s *SDK) ExchangeCodeForToken(ctx context.Context, request operations.Excha
 // ExportComponents - Exports component configurations to code that is ready to integrate into an Amplify app.
 func (s *SDK) ExportComponents(ctx context.Context, request operations.ExportComponentsRequest) (*operations.ExportComponentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/app/{appId}/environment/{environmentName}/components", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/export/app/{appId}/environment/{environmentName}/components", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -750,7 +789,10 @@ func (s *SDK) ExportComponents(ctx context.Context, request operations.ExportCom
 // ExportForms - Exports form configurations to code that is ready to integrate into an Amplify app.
 func (s *SDK) ExportForms(ctx context.Context, request operations.ExportFormsRequest) (*operations.ExportFormsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/app/{appId}/environment/{environmentName}/forms", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/export/app/{appId}/environment/{environmentName}/forms", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -820,7 +862,10 @@ func (s *SDK) ExportForms(ctx context.Context, request operations.ExportFormsReq
 // ExportThemes - Exports theme configurations to code that is ready to integrate into an Amplify app.
 func (s *SDK) ExportThemes(ctx context.Context, request operations.ExportThemesRequest) (*operations.ExportThemesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/export/app/{appId}/environment/{environmentName}/themes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/export/app/{appId}/environment/{environmentName}/themes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -890,7 +935,10 @@ func (s *SDK) ExportThemes(ctx context.Context, request operations.ExportThemesR
 // GetComponent - Returns an existing component for an Amplify app.
 func (s *SDK) GetComponent(ctx context.Context, request operations.GetComponentRequest) (*operations.GetComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -966,7 +1014,10 @@ func (s *SDK) GetComponent(ctx context.Context, request operations.GetComponentR
 // GetForm - Returns an existing form for an Amplify app.
 func (s *SDK) GetForm(ctx context.Context, request operations.GetFormRequest) (*operations.GetFormResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1042,7 +1093,10 @@ func (s *SDK) GetForm(ctx context.Context, request operations.GetFormRequest) (*
 // GetMetadata - Returns existing metadata for an Amplify app.
 func (s *SDK) GetMetadata(ctx context.Context, request operations.GetMetadataRequest) (*operations.GetMetadataResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/metadata", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/metadata", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1108,7 +1162,10 @@ func (s *SDK) GetMetadata(ctx context.Context, request operations.GetMetadataReq
 // GetTheme - Returns an existing theme for an Amplify app.
 func (s *SDK) GetTheme(ctx context.Context, request operations.GetThemeRequest) (*operations.GetThemeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1184,7 +1241,10 @@ func (s *SDK) GetTheme(ctx context.Context, request operations.GetThemeRequest) 
 // ListComponents - Retrieves a list of components for a specified Amplify app and backend environment.
 func (s *SDK) ListComponents(ctx context.Context, request operations.ListComponentsRequest) (*operations.ListComponentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1254,7 +1314,10 @@ func (s *SDK) ListComponents(ctx context.Context, request operations.ListCompone
 // ListForms - Retrieves a list of forms for a specified Amplify app and backend environment.
 func (s *SDK) ListForms(ctx context.Context, request operations.ListFormsRequest) (*operations.ListFormsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1324,7 +1387,10 @@ func (s *SDK) ListForms(ctx context.Context, request operations.ListFormsRequest
 // ListThemes - Retrieves a list of themes for a specified Amplify app and backend environment.
 func (s *SDK) ListThemes(ctx context.Context, request operations.ListThemesRequest) (*operations.ListThemesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1391,10 +1457,13 @@ func (s *SDK) ListThemes(ctx context.Context, request operations.ListThemesReque
 	return res, nil
 }
 
-// PutMetadataFlag - Stores the metadata information about a feature on a form or view.
+// PutMetadataFlag - Stores the metadata information about a feature on a form.
 func (s *SDK) PutMetadataFlag(ctx context.Context, request operations.PutMetadataFlagRequest) (*operations.PutMetadataFlagResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/metadata/features/{featureName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/metadata/features/{featureName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1461,7 +1530,10 @@ func (s *SDK) PutMetadataFlag(ctx context.Context, request operations.PutMetadat
 // RefreshToken - Refreshes a previously issued access token that might have expired.
 func (s *SDK) RefreshToken(ctx context.Context, request operations.RefreshTokenRequest) (*operations.RefreshTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tokens/{provider}/refresh", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tokens/{provider}/refresh", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1527,7 +1599,10 @@ func (s *SDK) RefreshToken(ctx context.Context, request operations.RefreshTokenR
 // UpdateComponent - Updates an existing component.
 func (s *SDK) UpdateComponent(ctx context.Context, request operations.UpdateComponentRequest) (*operations.UpdateComponentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/components/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1617,7 +1692,10 @@ func (s *SDK) UpdateComponent(ctx context.Context, request operations.UpdateComp
 // UpdateForm - Updates an existing form.
 func (s *SDK) UpdateForm(ctx context.Context, request operations.UpdateFormRequest) (*operations.UpdateFormResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/forms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1707,7 +1785,10 @@ func (s *SDK) UpdateForm(ctx context.Context, request operations.UpdateFormReque
 // UpdateTheme - Updates an existing theme.
 func (s *SDK) UpdateTheme(ctx context.Context, request operations.UpdateThemeRequest) (*operations.UpdateThemeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app/{appId}/environment/{environmentName}/themes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

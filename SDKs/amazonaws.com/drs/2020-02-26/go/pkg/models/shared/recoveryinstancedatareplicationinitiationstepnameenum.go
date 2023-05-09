@@ -30,12 +30,16 @@ const (
 	RecoveryInstanceDataReplicationInitiationStepNameEnumStartDataTransfer                             RecoveryInstanceDataReplicationInitiationStepNameEnum = "START_DATA_TRANSFER"
 )
 
+func (e RecoveryInstanceDataReplicationInitiationStepNameEnum) ToPointer() *RecoveryInstanceDataReplicationInitiationStepNameEnum {
+	return &e
+}
+
 func (e *RecoveryInstanceDataReplicationInitiationStepNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINK_FAILBACK_CLIENT_WITH_RECOVERY_INSTANCE":
 		fallthrough
 	case "COMPLETE_VOLUME_MAPPING":
@@ -71,9 +75,9 @@ func (e *RecoveryInstanceDataReplicationInitiationStepNameEnum) UnmarshalJSON(da
 	case "CONNECT_AGENT_TO_REPLICATION_SERVER":
 		fallthrough
 	case "START_DATA_TRANSFER":
-		*e = RecoveryInstanceDataReplicationInitiationStepNameEnum(s)
+		*e = RecoveryInstanceDataReplicationInitiationStepNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecoveryInstanceDataReplicationInitiationStepNameEnum: %s", s)
+		return fmt.Errorf("invalid value for RecoveryInstanceDataReplicationInitiationStepNameEnum: %v", v)
 	}
 }

@@ -16,20 +16,24 @@ const (
 	InteractionGroupEnumCollaboratorsOnly InteractionGroupEnum = "collaborators_only"
 )
 
+func (e InteractionGroupEnum) ToPointer() *InteractionGroupEnum {
+	return &e
+}
+
 func (e *InteractionGroupEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "existing_users":
 		fallthrough
 	case "contributors_only":
 		fallthrough
 	case "collaborators_only":
-		*e = InteractionGroupEnum(s)
+		*e = InteractionGroupEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InteractionGroupEnum: %s", s)
+		return fmt.Errorf("invalid value for InteractionGroupEnum: %v", v)
 	}
 }

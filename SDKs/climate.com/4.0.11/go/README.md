@@ -13,27 +13,25 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/climate.com/4.0.11/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.BoundariesQuery{
+    ctx := context.Background()
+    res, err := s.Boundaries.FetchBoundaries(ctx, shared.BoundariesQuery{
         Ids: []string{
             "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
             "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
             "b7392059-2939-46fe-a759-6eb10faaa235",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.Boundaries.FetchBoundaries(ctx, req, operations.FetchBoundariesSecurity{
+    }, operations.FetchBoundariesSecurity{
         APIKey: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {
@@ -51,55 +49,55 @@ func main() {
 ## Available Resources and Operations
 
 
-### Boundaries
+### [Boundaries](docs/boundaries/README.md)
 
-* `FetchBoundaries` - Retrieve Boundaries in batch
-* `FetchBoundaryByID` - Retrieve a Boundary by ID
-* `UploadBoundary` - Upload a boundary
+* [FetchBoundaries](docs/boundaries/README.md#fetchboundaries) - Retrieve Boundaries in batch
+* [FetchBoundaryByID](docs/boundaries/README.md#fetchboundarybyid) - Retrieve a Boundary by ID
+* [UploadBoundary](docs/boundaries/README.md#uploadboundary) - Upload a boundary
 
-### Exports
+### [Exports](docs/exports/README.md)
 
-* `FetchExportContentsByID` - Retrieve the binary contents of a processed export request.
-* `FetchExportStatusByID` - Retrieve the status of an Export.
-* `PostExport` - Initiate a new export request.
+* [FetchExportContentsByID](docs/exports/README.md#fetchexportcontentsbyid) - Retrieve the binary contents of a processed export request.
+* [FetchExportStatusByID](docs/exports/README.md#fetchexportstatusbyid) - Retrieve the status of an Export.
+* [PostExport](docs/exports/README.md#postexport) - Initiate a new export request.
 
-### FarmOrganizations
+### [FarmOrganizations](docs/farmorganizations/README.md)
 
-* `FetchFarmOrganizationByTypeAndID` - Retrieve a specific farm organization by organization type and ID
+* [FetchFarmOrganizationByTypeAndID](docs/farmorganizations/README.md#fetchfarmorganizationbytypeandid) - Retrieve a specific farm organization by organization type and ID
 
-### Fields
+### [Fields](docs/fields/README.md)
 
-* `FetchAllFields` - Retrieve list of all Fields the user has access to.
-* `FetchFieldByID` - Retrieve a specific Field by ID
-* `FetchFields` - Retrieve list of Fields
+* [FetchAllFields](docs/fields/README.md#fetchallfields) - Retrieve list of all Fields the user has access to.
+* [FetchFieldByID](docs/fields/README.md#fetchfieldbyid) - Retrieve a specific Field by ID
+* [FetchFields](docs/fields/README.md#fetchfields) - Retrieve list of Fields
 
-### Layers
+### [Layers](docs/layers/README.md)
 
-* `GetV4LayersAsApplied` - Retrieve a list of application activities
-* `GetV4LayersAsAppliedActivityIDContents` - Retrieve the raw application activity
-* `GetV4LayersAsHarvested` - Retrieve a list of harvest activities
-* `GetV4LayersAsHarvestedActivityIDContents` - Retrieve the raw harvest activity
-* `GetV4LayersAsPlanted` - Retrieve a list of planting activities
-* `GetV4LayersAsPlantedActivityIDContents` - Retrieve the raw planting activity
-* `GetV4LayersScoutingObservations` - Retrieve a list of scouting observations
-* `GetV4LayersScoutingObservationsScoutingObservationID` - Retrieve individual scouting observation
-* `GetV4LayersScoutingObservationsScoutingObservationIDAttachments` - Retrieve attachments associated with a given scouting observation.
-* `GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContents` - Retrieve the binary contents of a scouting observation’s attachment.
+* [GetV4LayersAsApplied](docs/layers/README.md#getv4layersasapplied) - Retrieve a list of application activities
+* [GetV4LayersAsAppliedActivityIDContents](docs/layers/README.md#getv4layersasappliedactivityidcontents) - Retrieve the raw application activity
+* [GetV4LayersAsHarvested](docs/layers/README.md#getv4layersasharvested) - Retrieve a list of harvest activities
+* [GetV4LayersAsHarvestedActivityIDContents](docs/layers/README.md#getv4layersasharvestedactivityidcontents) - Retrieve the raw harvest activity
+* [GetV4LayersAsPlanted](docs/layers/README.md#getv4layersasplanted) - Retrieve a list of planting activities
+* [GetV4LayersAsPlantedActivityIDContents](docs/layers/README.md#getv4layersasplantedactivityidcontents) - Retrieve the raw planting activity
+* [GetV4LayersScoutingObservations](docs/layers/README.md#getv4layersscoutingobservations) - Retrieve a list of scouting observations
+* [GetV4LayersScoutingObservationsScoutingObservationID](docs/layers/README.md#getv4layersscoutingobservationsscoutingobservationid) - Retrieve individual scouting observation
+* [GetV4LayersScoutingObservationsScoutingObservationIDAttachments](docs/layers/README.md#getv4layersscoutingobservationsscoutingobservationidattachments) - Retrieve attachments associated with a given scouting observation.
+* [GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContents](docs/layers/README.md#getv4layersscoutingobservationsscoutingobservationidattachmentsattachmentidcontents) - Retrieve the binary contents of a scouting observation’s attachment.
 
-### Operations
+### [Operations](docs/operations/README.md)
 
-* `FetchOperations` - Retrieve the operations accessible to a a given user.
+* [FetchOperations](docs/operations/README.md#fetchoperations) - Retrieve the operations accessible to a a given user.
 
-### ResourceOwners
+### [ResourceOwners](docs/resourceowners/README.md)
 
-* `GetResourceOwner` - Retrieve a resource owner by ID
+* [GetResourceOwner](docs/resourceowners/README.md#getresourceowner) - Retrieve a resource owner by ID
 
-### Uploads
+### [Uploads](docs/uploads/README.md)
 
-* `ChunkedUpload` - Chunked upload of data
-* `FetchUploadStatusByID` - Retrieve Upload status
-* `FetchUploadStatuses` - Retrieve Upload statuses in batch
-* `PostUpload` - Initiate a new upload
+* [ChunkedUpload](docs/uploads/README.md#chunkedupload) - Chunked upload of data
+* [FetchUploadStatusByID](docs/uploads/README.md#fetchuploadstatusbyid) - Retrieve Upload status
+* [FetchUploadStatuses](docs/uploads/README.md#fetchuploadstatuses) - Retrieve Upload statuses in batch
+* [PostUpload](docs/uploads/README.md#postupload) - Initiate a new upload
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,21 +16,25 @@ const (
 	SparkChartViewSparkChartTypeEnumSparkBar                  SparkChartViewSparkChartTypeEnum = "SPARK_BAR"
 )
 
+func (e SparkChartViewSparkChartTypeEnum) ToPointer() *SparkChartViewSparkChartTypeEnum {
+	return &e
+}
+
 func (e *SparkChartViewSparkChartTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPARK_CHART_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SPARK_LINE":
 		fallthrough
 	case "SPARK_BAR":
-		*e = SparkChartViewSparkChartTypeEnum(s)
+		*e = SparkChartViewSparkChartTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SparkChartViewSparkChartTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SparkChartViewSparkChartTypeEnum: %v", v)
 	}
 }
 

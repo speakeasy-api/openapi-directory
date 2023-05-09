@@ -90,7 +90,10 @@ func (s *accountstatuses) ContentAccountstatusesCustombatch(ctx context.Context,
 // ContentAccountstatusesGet - Retrieves the status of a Merchant Center account. No itemLevelIssues are returned for multi-client accounts.
 func (s *accountstatuses) ContentAccountstatusesGet(ctx context.Context, request operations.ContentAccountstatusesGetRequest, security operations.ContentAccountstatusesGetSecurity) (*operations.ContentAccountstatusesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accountstatuses/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accountstatuses/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *accountstatuses) ContentAccountstatusesGet(ctx context.Context, request
 // ContentAccountstatusesList - Lists the statuses of the sub-accounts in your Merchant Center account.
 func (s *accountstatuses) ContentAccountstatusesList(ctx context.Context, request operations.ContentAccountstatusesListRequest, security operations.ContentAccountstatusesListSecurity) (*operations.ContentAccountstatusesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accountstatuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accountstatuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

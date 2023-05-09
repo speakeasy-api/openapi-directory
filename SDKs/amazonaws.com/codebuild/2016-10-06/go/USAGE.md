@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.BatchDeleteBuildsRequest{
+    ctx := context.Background()
+    res, err := s.BatchDeleteBuilds(ctx, operations.BatchDeleteBuildsRequest{
         BatchDeleteBuildsInput: shared.BatchDeleteBuildsInput{
             Ids: []string{
                 "provident",
@@ -25,18 +26,15 @@ func main() {
                 "quibusdam",
             },
         },
-        XAmzAlgorithm: "unde",
-        XAmzContentSha256: "nulla",
-        XAmzCredential: "corrupti",
-        XAmzDate: "illum",
-        XAmzSecurityToken: "vel",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "deserunt",
-        XAmzTarget: "CodeBuild_20161006.BatchDeleteBuilds",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchDeleteBuilds(ctx, req)
+        XAmzAlgorithm: sdk.String("unde"),
+        XAmzContentSha256: sdk.String("nulla"),
+        XAmzCredential: sdk.String("corrupti"),
+        XAmzDate: sdk.String("illum"),
+        XAmzSecurityToken: sdk.String("vel"),
+        XAmzSignature: sdk.String("error"),
+        XAmzSignedHeaders: sdk.String("deserunt"),
+        XAmzTarget: operations.BatchDeleteBuildsXAmzTargetEnumCodeBuild20161006BatchDeleteBuilds,
+    })
     if err != nil {
         log.Fatal(err)
     }

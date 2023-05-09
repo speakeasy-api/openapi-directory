@@ -17,19 +17,23 @@ const (
 	TeamScheduleFormatEnumJSON TeamScheduleFormatEnum = "JSON"
 )
 
+func (e TeamScheduleFormatEnum) ToPointer() *TeamScheduleFormatEnum {
+	return &e
+}
+
 func (e *TeamScheduleFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = TeamScheduleFormatEnum(s)
+		*e = TeamScheduleFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamScheduleFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamScheduleFormatEnum: %v", v)
 	}
 }
 

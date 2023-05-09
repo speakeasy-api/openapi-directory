@@ -18,21 +18,25 @@ const (
 	GetGotermGeneAssociationsRelationshipTypeEnumActsUpstreamOfOrWithin GetGotermGeneAssociationsRelationshipTypeEnum = "acts_upstream_of_or_within"
 )
 
+func (e GetGotermGeneAssociationsRelationshipTypeEnum) ToPointer() *GetGotermGeneAssociationsRelationshipTypeEnum {
+	return &e
+}
+
 func (e *GetGotermGeneAssociationsRelationshipTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "involved_in":
 		fallthrough
 	case "involved_in_regulation_of":
 		fallthrough
 	case "acts_upstream_of_or_within":
-		*e = GetGotermGeneAssociationsRelationshipTypeEnum(s)
+		*e = GetGotermGeneAssociationsRelationshipTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGotermGeneAssociationsRelationshipTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGotermGeneAssociationsRelationshipTypeEnum: %v", v)
 	}
 }
 

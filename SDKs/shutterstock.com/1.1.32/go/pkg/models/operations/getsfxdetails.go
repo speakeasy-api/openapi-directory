@@ -23,21 +23,25 @@ const (
 	GetSfxDetailsLibraryEnumPremiumbeat  GetSfxDetailsLibraryEnum = "premiumbeat"
 )
 
+func (e GetSfxDetailsLibraryEnum) ToPointer() *GetSfxDetailsLibraryEnum {
+	return &e
+}
+
 func (e *GetSfxDetailsLibraryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shutterstock":
 		fallthrough
 	case "premier":
 		fallthrough
 	case "premiumbeat":
-		*e = GetSfxDetailsLibraryEnum(s)
+		*e = GetSfxDetailsLibraryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSfxDetailsLibraryEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSfxDetailsLibraryEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	GetSfxDetailsViewEnumFull    GetSfxDetailsViewEnum = "full"
 )
 
+func (e GetSfxDetailsViewEnum) ToPointer() *GetSfxDetailsViewEnum {
+	return &e
+}
+
 func (e *GetSfxDetailsViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimal":
 		fallthrough
 	case "full":
-		*e = GetSfxDetailsViewEnum(s)
+		*e = GetSfxDetailsViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSfxDetailsViewEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSfxDetailsViewEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTGetMetricStreamActionEnumGetMetricStream POSTGetMetricStreamActionEnum = "GetMetricStream"
 )
 
+func (e POSTGetMetricStreamActionEnum) ToPointer() *POSTGetMetricStreamActionEnum {
+	return &e
+}
+
 func (e *POSTGetMetricStreamActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetMetricStream":
-		*e = POSTGetMetricStreamActionEnum(s)
+		*e = POSTGetMetricStreamActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetMetricStreamActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetMetricStreamActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetMetricStreamVersionEnumTwoThousandAndTen0801 POSTGetMetricStreamVersionEnum = "2010-08-01"
 )
 
+func (e POSTGetMetricStreamVersionEnum) ToPointer() *POSTGetMetricStreamVersionEnum {
+	return &e
+}
+
 func (e *POSTGetMetricStreamVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = POSTGetMetricStreamVersionEnum(s)
+		*e = POSTGetMetricStreamVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetMetricStreamVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetMetricStreamVersionEnum: %v", v)
 	}
 }
 

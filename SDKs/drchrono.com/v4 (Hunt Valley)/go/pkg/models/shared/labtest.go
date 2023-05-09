@@ -18,12 +18,16 @@ const (
 	LabTestStatusEnumX LabTestStatusEnum = "X"
 )
 
+func (e LabTestStatusEnum) ToPointer() *LabTestStatusEnum {
+	return &e
+}
+
 func (e *LabTestStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "P":
 		fallthrough
 	case "I":
@@ -33,10 +37,10 @@ func (e *LabTestStatusEnum) UnmarshalJSON(data []byte) error {
 	case "F":
 		fallthrough
 	case "X":
-		*e = LabTestStatusEnum(s)
+		*e = LabTestStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LabTestStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LabTestStatusEnum: %v", v)
 	}
 }
 

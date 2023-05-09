@@ -13,16 +13,20 @@ const (
 	StudioPersonaEnumAdministrator StudioPersonaEnum = "ADMINISTRATOR"
 )
 
+func (e StudioPersonaEnum) ToPointer() *StudioPersonaEnum {
+	return &e
+}
+
 func (e *StudioPersonaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADMINISTRATOR":
-		*e = StudioPersonaEnum(s)
+		*e = StudioPersonaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StudioPersonaEnum: %s", s)
+		return fmt.Errorf("invalid value for StudioPersonaEnum: %v", v)
 	}
 }

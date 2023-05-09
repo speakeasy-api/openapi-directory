@@ -2,7 +2,7 @@
 
 package shared
 
-// StackConfigInput - <p/>
+// StackConfigInput - The input structure for Stacking Operation.
 type StackConfigInput struct {
 	OutputResolution *OutputResolutionStackInput `json:"OutputResolution,omitempty"`
 	TargetBands      []string                    `json:"TargetBands,omitempty"`

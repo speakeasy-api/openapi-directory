@@ -23,12 +23,16 @@ const (
 	ManagedCredentialsStatusEnumFailedRemovalByOwner              ManagedCredentialsStatusEnum = "FAILED_REMOVAL_BY_OWNER"
 )
 
+func (e ManagedCredentialsStatusEnum) ToPointer() *ManagedCredentialsStatusEnum {
+	return &e
+}
+
 func (e *ManagedCredentialsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED_ON_CREATE":
 		fallthrough
 	case "ENABLED_BY_OWNER":
@@ -50,9 +54,9 @@ func (e *ManagedCredentialsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED_REMOVAL_BY_COLLABORATOR":
 		fallthrough
 	case "FAILED_REMOVAL_BY_OWNER":
-		*e = ManagedCredentialsStatusEnum(s)
+		*e = ManagedCredentialsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagedCredentialsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagedCredentialsStatusEnum: %v", v)
 	}
 }

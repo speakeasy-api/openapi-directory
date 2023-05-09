@@ -15,20 +15,24 @@ const (
 	BonusTypeEnumPreviousContractBonus       BonusTypeEnum = "PreviousContractBonus"
 )
 
+func (e BonusTypeEnum) ToPointer() *BonusTypeEnum {
+	return &e
+}
+
 func (e *BonusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OnlinePaymentMethodBonus":
 		fallthrough
 	case "PreviousInvoiceProrataBonus":
 		fallthrough
 	case "PreviousContractBonus":
-		*e = BonusTypeEnum(s)
+		*e = BonusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BonusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BonusTypeEnum: %v", v)
 	}
 }

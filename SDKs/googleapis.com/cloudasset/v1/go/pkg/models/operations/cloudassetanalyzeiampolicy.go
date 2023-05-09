@@ -35,6 +35,8 @@ type CloudassetAnalyzeIamPolicyRequest struct {
 	AnalysisQueryOptionsExpandResources *bool `queryParam:"style=form,explode=true,name=analysisQuery.options.expandResources"`
 	// Optional. If true, the access section of result will expand any roles appearing in IAM policy bindings to include their permissions. If IamPolicyAnalysisQuery.access_selector is specified, the access section of the result will be determined by the selector, and this flag is not allowed to set. Default is false.
 	AnalysisQueryOptionsExpandRoles *bool `queryParam:"style=form,explode=true,name=analysisQuery.options.expandRoles"`
+	// Optional. If true, the response includes deny policy analysis results, and you can see which access tuples are denied. Default is false.
+	AnalysisQueryOptionsIncludeDenyPolicyAnalysis *bool `queryParam:"style=form,explode=true,name=analysisQuery.options.includeDenyPolicyAnalysis"`
 	// Optional. If true, the result will output the relevant membership relationships between groups and other groups, and between groups and principals. Default is false.
 	AnalysisQueryOptionsOutputGroupEdges *bool `queryParam:"style=form,explode=true,name=analysisQuery.options.outputGroupEdges"`
 	// Optional. If true, the result will output the relevant parent/child relationships between resources. Default is false.

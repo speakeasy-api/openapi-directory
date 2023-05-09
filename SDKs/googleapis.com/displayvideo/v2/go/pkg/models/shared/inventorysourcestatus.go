@@ -19,12 +19,16 @@ const (
 	InventorySourceStatusEntityStatusEnumEntityStatusScheduledForDeletion InventorySourceStatusEntityStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
+func (e InventorySourceStatusEntityStatusEnum) ToPointer() *InventorySourceStatusEntityStatusEnum {
+	return &e
+}
+
 func (e *InventorySourceStatusEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ENTITY_STATUS_ACTIVE":
@@ -36,10 +40,10 @@ func (e *InventorySourceStatusEntityStatusEnum) UnmarshalJSON(data []byte) error
 	case "ENTITY_STATUS_PAUSED":
 		fallthrough
 	case "ENTITY_STATUS_SCHEDULED_FOR_DELETION":
-		*e = InventorySourceStatusEntityStatusEnum(s)
+		*e = InventorySourceStatusEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventorySourceStatusEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InventorySourceStatusEntityStatusEnum: %v", v)
 	}
 }
 
@@ -60,21 +64,25 @@ const (
 	InventorySourceStatusConfigStatusEnumInventorySourceConfigStatusCompleted   InventorySourceStatusConfigStatusEnum = "INVENTORY_SOURCE_CONFIG_STATUS_COMPLETED"
 )
 
+func (e InventorySourceStatusConfigStatusEnum) ToPointer() *InventorySourceStatusConfigStatusEnum {
+	return &e
+}
+
 func (e *InventorySourceStatusConfigStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVENTORY_SOURCE_CONFIG_STATUS_UNSPECIFIED":
 		fallthrough
 	case "INVENTORY_SOURCE_CONFIG_STATUS_PENDING":
 		fallthrough
 	case "INVENTORY_SOURCE_CONFIG_STATUS_COMPLETED":
-		*e = InventorySourceStatusConfigStatusEnum(s)
+		*e = InventorySourceStatusConfigStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventorySourceStatusConfigStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InventorySourceStatusConfigStatusEnum: %v", v)
 	}
 }
 
@@ -90,12 +98,16 @@ const (
 	InventorySourceStatusSellerStatusEnumEntityStatusScheduledForDeletion InventorySourceStatusSellerStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
+func (e InventorySourceStatusSellerStatusEnum) ToPointer() *InventorySourceStatusSellerStatusEnum {
+	return &e
+}
+
 func (e *InventorySourceStatusSellerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ENTITY_STATUS_ACTIVE":
@@ -107,10 +119,10 @@ func (e *InventorySourceStatusSellerStatusEnum) UnmarshalJSON(data []byte) error
 	case "ENTITY_STATUS_PAUSED":
 		fallthrough
 	case "ENTITY_STATUS_SCHEDULED_FOR_DELETION":
-		*e = InventorySourceStatusSellerStatusEnum(s)
+		*e = InventorySourceStatusSellerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventorySourceStatusSellerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InventorySourceStatusSellerStatusEnum: %v", v)
 	}
 }
 

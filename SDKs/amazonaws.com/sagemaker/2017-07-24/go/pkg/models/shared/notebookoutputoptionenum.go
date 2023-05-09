@@ -14,18 +14,22 @@ const (
 	NotebookOutputOptionEnumDisabled NotebookOutputOptionEnum = "Disabled"
 )
 
+func (e NotebookOutputOptionEnum) ToPointer() *NotebookOutputOptionEnum {
+	return &e
+}
+
 func (e *NotebookOutputOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Allowed":
 		fallthrough
 	case "Disabled":
-		*e = NotebookOutputOptionEnum(s)
+		*e = NotebookOutputOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotebookOutputOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for NotebookOutputOptionEnum: %v", v)
 	}
 }

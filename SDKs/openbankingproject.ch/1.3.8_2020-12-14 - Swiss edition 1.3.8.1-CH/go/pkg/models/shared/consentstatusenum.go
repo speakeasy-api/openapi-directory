@@ -33,12 +33,16 @@ const (
 	ConsentStatusEnumPartiallyAuthorised ConsentStatusEnum = "partiallyAuthorised"
 )
 
+func (e ConsentStatusEnum) ToPointer() *ConsentStatusEnum {
+	return &e
+}
+
 func (e *ConsentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "received":
 		fallthrough
 	case "rejected":
@@ -52,9 +56,9 @@ func (e *ConsentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "terminatedByTpp":
 		fallthrough
 	case "partiallyAuthorised":
-		*e = ConsentStatusEnum(s)
+		*e = ConsentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConsentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ConsentStatusEnum: %v", v)
 	}
 }

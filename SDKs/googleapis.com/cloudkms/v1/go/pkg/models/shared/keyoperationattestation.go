@@ -16,21 +16,25 @@ const (
 	KeyOperationAttestationFormatEnumCaviumV2Compressed           KeyOperationAttestationFormatEnum = "CAVIUM_V2_COMPRESSED"
 )
 
+func (e KeyOperationAttestationFormatEnum) ToPointer() *KeyOperationAttestationFormatEnum {
+	return &e
+}
+
 func (e *KeyOperationAttestationFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTESTATION_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "CAVIUM_V1_COMPRESSED":
 		fallthrough
 	case "CAVIUM_V2_COMPRESSED":
-		*e = KeyOperationAttestationFormatEnum(s)
+		*e = KeyOperationAttestationFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyOperationAttestationFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyOperationAttestationFormatEnum: %v", v)
 	}
 }
 

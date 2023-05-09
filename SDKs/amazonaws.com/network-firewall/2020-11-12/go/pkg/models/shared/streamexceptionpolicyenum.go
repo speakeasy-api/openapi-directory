@@ -14,18 +14,22 @@ const (
 	StreamExceptionPolicyEnumContinue StreamExceptionPolicyEnum = "CONTINUE"
 )
 
+func (e StreamExceptionPolicyEnum) ToPointer() *StreamExceptionPolicyEnum {
+	return &e
+}
+
 func (e *StreamExceptionPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DROP":
 		fallthrough
 	case "CONTINUE":
-		*e = StreamExceptionPolicyEnum(s)
+		*e = StreamExceptionPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamExceptionPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamExceptionPolicyEnum: %v", v)
 	}
 }

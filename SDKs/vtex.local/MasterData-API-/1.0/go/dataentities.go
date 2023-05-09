@@ -44,7 +44,10 @@ func newDataEntities(defaultClient, securityClient HTTPClient, serverURL, langua
 // > All headers listed below are required.
 func (s *dataEntities) Getdataentitystructure(ctx context.Context, request operations.GetdataentitystructureRequest) (*operations.GetdataentitystructureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

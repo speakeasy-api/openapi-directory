@@ -89,9 +89,12 @@ func newArtifacts(defaultClient, securityClient HTTPClient, serverURL, language,
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) CreateArtifactJSON(ctx context.Context, request operations.CreateArtifactJSONRequest) (*operations.CreateArtifactJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContentCreateRequest", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArtifactContent", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -222,7 +225,10 @@ func (s *artifacts) CreateArtifactJSON(ctx context.Context, request operations.C
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) CreateArtifactRaw(ctx context.Context, request operations.CreateArtifactRawRequest) (*operations.CreateArtifactRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -309,7 +315,10 @@ func (s *artifacts) CreateArtifactRaw(ctx context.Context, request operations.Cr
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) DeleteArtifact(ctx context.Context, request operations.DeleteArtifactRequest) (*operations.DeleteArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -357,7 +366,10 @@ func (s *artifacts) DeleteArtifact(ctx context.Context, request operations.Delet
 // Deletes all of the artifacts that exist in a given group.
 func (s *artifacts) DeleteArtifactsInGroup(ctx context.Context, request operations.DeleteArtifactsInGroupRequest) (*operations.DeleteArtifactsInGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -409,7 +421,10 @@ func (s *artifacts) DeleteArtifactsInGroup(ctx context.Context, request operatio
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) GetContentByGlobalID(ctx context.Context, request operations.GetContentByGlobalIDRequest) (*operations.GetContentByGlobalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ids/globalIds/{globalId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ids/globalIds/{globalId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -477,7 +492,10 @@ func (s *artifacts) GetContentByGlobalID(ctx context.Context, request operations
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) GetContentByHash(ctx context.Context, request operations.GetContentByHashRequest) (*operations.GetContentByHashResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ids/contentHashes/{contentHash}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ids/contentHashes/{contentHash}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -541,7 +559,10 @@ func (s *artifacts) GetContentByHash(ctx context.Context, request operations.Get
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) GetContentByID(ctx context.Context, request operations.GetContentByIDRequest) (*operations.GetContentByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ids/contentIds/{contentId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ids/contentIds/{contentId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -598,14 +619,18 @@ func (s *artifacts) GetContentByID(ctx context.Context, request operations.GetCo
 // Returns the latest version of the artifact in its raw form.  The `Content-Type` of the
 // response depends on the artifact type.  In most cases, this is `application/json`, but
 // for some types it may be different (for example, `PROTOBUF`).
+// If the latest version of the artifact is marked as `DISABLED`, the next available non-disabled version will be used.
 //
 // This operation may fail for one of the following reasons:
 //
-// * No artifact with this `artifactId` exists (HTTP error `404`)
+// * No artifact with this `artifactId` exists or all versions are `DISABLED` (HTTP error `404`)
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) GetLatestArtifact(ctx context.Context, request operations.GetLatestArtifactRequest) (*operations.GetLatestArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -666,7 +691,10 @@ func (s *artifacts) GetLatestArtifact(ctx context.Context, request operations.Ge
 // Returns a list of all artifacts in the group.  This list is paged.
 func (s *artifacts) ListArtifactsInGroup(ctx context.Context, request operations.ListArtifactsInGroupRequest) (*operations.ListArtifactsInGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -729,7 +757,10 @@ func (s *artifacts) ListArtifactsInGroup(ctx context.Context, request operations
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) ReferencesByContentHash(ctx context.Context, request operations.ReferencesByContentHashRequest) (*operations.ReferencesByContentHashResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ids/contentHashes/{contentHash}/references", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ids/contentHashes/{contentHash}/references", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -778,7 +809,10 @@ func (s *artifacts) ReferencesByContentHash(ctx context.Context, request operati
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) ReferencesByContentID(ctx context.Context, request operations.ReferencesByContentIDRequest) (*operations.ReferencesByContentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ids/contentIds/{contentId}/references", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ids/contentIds/{contentId}/references", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -827,7 +861,10 @@ func (s *artifacts) ReferencesByContentID(ctx context.Context, request operation
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) ReferencesByGlobalID(ctx context.Context, request operations.ReferencesByGlobalIDRequest) (*operations.ReferencesByGlobalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ids/globalIds/{globalId}/references", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ids/globalIds/{globalId}/references", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -998,9 +1035,7 @@ func (s *artifacts) SearchArtifactsByContent(ctx context.Context, request operat
 }
 
 // UpdateArtifactState - Update artifact state
-// Updates the state of the artifact.  For example, you can use this to mark the latest
-// version of an artifact as `DEPRECATED`.  The operation changes the state of the latest
-// version of the artifact.  If multiple versions exist, only the most recent is changed.
+// Updates the state of the artifact.  For example, you can use this to mark the latest version of an artifact as `DEPRECATED`. The operation changes the state of the latest version of the artifact, even if this version is `DISABLED`. If multiple versions exist, only the most recent is changed.
 //
 // This operation can fail for the following reasons:
 //
@@ -1008,7 +1043,10 @@ func (s *artifacts) SearchArtifactsByContent(ctx context.Context, request operat
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) UpdateArtifactState(ctx context.Context, request operations.UpdateArtifactStateRequest) (*operations.UpdateArtifactStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/state", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/state", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateState", "json")
 	if err != nil {
@@ -1083,9 +1121,12 @@ func (s *artifacts) UpdateArtifactState(ctx context.Context, request operations.
 // (and therefore official) version of the artifact.
 func (s *artifacts) UpdateArtifactJSON(ctx context.Context, request operations.UpdateArtifactJSONRequest) (*operations.UpdateArtifactJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContentCreateRequest", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArtifactContent", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1169,7 +1210,10 @@ func (s *artifacts) UpdateArtifactJSON(ctx context.Context, request operations.U
 // (and therefore official) version of the artifact.
 func (s *artifacts) UpdateArtifactRaw(ctx context.Context, request operations.UpdateArtifactRawRequest) (*operations.UpdateArtifactRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

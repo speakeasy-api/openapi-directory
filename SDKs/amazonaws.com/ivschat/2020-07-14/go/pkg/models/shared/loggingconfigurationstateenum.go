@@ -19,12 +19,16 @@ const (
 	LoggingConfigurationStateEnumActive       LoggingConfigurationStateEnum = "ACTIVE"
 )
 
+func (e LoggingConfigurationStateEnum) ToPointer() *LoggingConfigurationStateEnum {
+	return &e
+}
+
 func (e *LoggingConfigurationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATE_FAILED":
@@ -38,9 +42,9 @@ func (e *LoggingConfigurationStateEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATE_FAILED":
 		fallthrough
 	case "ACTIVE":
-		*e = LoggingConfigurationStateEnum(s)
+		*e = LoggingConfigurationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoggingConfigurationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LoggingConfigurationStateEnum: %v", v)
 	}
 }

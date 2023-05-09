@@ -16,17 +16,21 @@ const (
 	CreateAppBlockXAmzTargetEnumPhotonAdminProxyServiceCreateAppBlock CreateAppBlockXAmzTargetEnum = "PhotonAdminProxyService.CreateAppBlock"
 )
 
+func (e CreateAppBlockXAmzTargetEnum) ToPointer() *CreateAppBlockXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAppBlockXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.CreateAppBlock":
-		*e = CreateAppBlockXAmzTargetEnum(s)
+		*e = CreateAppBlockXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAppBlockXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAppBlockXAmzTargetEnum: %v", v)
 	}
 }
 

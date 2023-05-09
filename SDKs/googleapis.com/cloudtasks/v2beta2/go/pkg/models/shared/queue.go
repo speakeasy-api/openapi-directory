@@ -17,12 +17,16 @@ const (
 	QueueStateEnumDisabled         QueueStateEnum = "DISABLED"
 )
 
+func (e QueueStateEnum) ToPointer() *QueueStateEnum {
+	return &e
+}
+
 func (e *QueueStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "RUNNING":
@@ -30,10 +34,10 @@ func (e *QueueStateEnum) UnmarshalJSON(data []byte) error {
 	case "PAUSED":
 		fallthrough
 	case "DISABLED":
-		*e = QueueStateEnum(s)
+		*e = QueueStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueueStateEnum: %s", s)
+		return fmt.Errorf("invalid value for QueueStateEnum: %v", v)
 	}
 }
 

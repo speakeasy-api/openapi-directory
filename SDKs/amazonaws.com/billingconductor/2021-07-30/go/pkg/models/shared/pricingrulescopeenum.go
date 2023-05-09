@@ -16,12 +16,16 @@ const (
 	PricingRuleScopeEnumSku           PricingRuleScopeEnum = "SKU"
 )
 
+func (e PricingRuleScopeEnum) ToPointer() *PricingRuleScopeEnum {
+	return &e
+}
+
 func (e *PricingRuleScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GLOBAL":
 		fallthrough
 	case "SERVICE":
@@ -29,9 +33,9 @@ func (e *PricingRuleScopeEnum) UnmarshalJSON(data []byte) error {
 	case "BILLING_ENTITY":
 		fallthrough
 	case "SKU":
-		*e = PricingRuleScopeEnum(s)
+		*e = PricingRuleScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PricingRuleScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for PricingRuleScopeEnum: %v", v)
 	}
 }

@@ -35,7 +35,10 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // MirrorLocationsGet - Gets a single location by ID.
 func (s *locations) MirrorLocationsGet(ctx context.Context, request operations.MirrorLocationsGetRequest, security operations.MirrorLocationsGetSecurity) (*operations.MirrorLocationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

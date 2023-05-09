@@ -14,19 +14,23 @@ const (
 	GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigEnabledProvidersEnumPhoneSms            GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigEnabledProvidersEnum = "PHONE_SMS"
 )
 
+func (e GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigEnabledProvidersEnum) ToPointer() *GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigEnabledProvidersEnum {
+	return &e
+}
+
 func (e *GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigEnabledProvidersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROVIDER_UNSPECIFIED":
 		fallthrough
 	case "PHONE_SMS":
-		*e = GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigEnabledProvidersEnum(s)
+		*e = GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigEnabledProvidersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigEnabledProvidersEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigEnabledProvidersEnum: %v", v)
 	}
 }
 
@@ -40,12 +44,16 @@ const (
 	GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnumMandatory        GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum = "MANDATORY"
 )
 
+func (e GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum) ToPointer() *GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
@@ -53,10 +61,10 @@ func (e *GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum) Unmars
 	case "ENABLED":
 		fallthrough
 	case "MANDATORY":
-		*e = GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum(s)
+		*e = GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum: %v", v)
 	}
 }
 

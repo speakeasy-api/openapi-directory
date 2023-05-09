@@ -17,19 +17,23 @@ const (
 	CreateBackendAuthRequestBodyResourceConfigAuthResourcesEnumIdentityPoolAndUserPool CreateBackendAuthRequestBodyResourceConfigAuthResourcesEnum = "IDENTITY_POOL_AND_USER_POOL"
 )
 
+func (e CreateBackendAuthRequestBodyResourceConfigAuthResourcesEnum) ToPointer() *CreateBackendAuthRequestBodyResourceConfigAuthResourcesEnum {
+	return &e
+}
+
 func (e *CreateBackendAuthRequestBodyResourceConfigAuthResourcesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_POOL_ONLY":
 		fallthrough
 	case "IDENTITY_POOL_AND_USER_POOL":
-		*e = CreateBackendAuthRequestBodyResourceConfigAuthResourcesEnum(s)
+		*e = CreateBackendAuthRequestBodyResourceConfigAuthResourcesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBackendAuthRequestBodyResourceConfigAuthResourcesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBackendAuthRequestBodyResourceConfigAuthResourcesEnum: %v", v)
 	}
 }
 
@@ -46,17 +50,21 @@ const (
 	CreateBackendAuthRequestBodyResourceConfigServiceEnumCognito CreateBackendAuthRequestBodyResourceConfigServiceEnum = "COGNITO"
 )
 
+func (e CreateBackendAuthRequestBodyResourceConfigServiceEnum) ToPointer() *CreateBackendAuthRequestBodyResourceConfigServiceEnum {
+	return &e
+}
+
 func (e *CreateBackendAuthRequestBodyResourceConfigServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COGNITO":
-		*e = CreateBackendAuthRequestBodyResourceConfigServiceEnum(s)
+		*e = CreateBackendAuthRequestBodyResourceConfigServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBackendAuthRequestBodyResourceConfigServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBackendAuthRequestBodyResourceConfigServiceEnum: %v", v)
 	}
 }
 
@@ -68,19 +76,23 @@ const (
 	CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnumSms   CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum = "SMS"
 )
 
+func (e CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum) ToPointer() *CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum {
+	return &e
+}
+
 func (e *CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EMAIL":
 		fallthrough
 	case "SMS":
-		*e = CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum(s)
+		*e = CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum: %v", v)
 	}
 }
 
@@ -122,19 +134,23 @@ const (
 	CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnumImplicit CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum = "IMPLICIT"
 )
 
+func (e CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum) ToPointer() *CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum {
+	return &e
+}
+
 func (e *CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODE":
 		fallthrough
 	case "IMPLICIT":
-		*e = CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum(s)
+		*e = CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum: %v", v)
 	}
 }
 
@@ -176,12 +192,16 @@ const (
 	CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEnumUsername            CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEnum = "USERNAME"
 )
 
+func (e CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEnum) ToPointer() *CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEnum {
+	return &e
+}
+
 func (e *CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EMAIL":
 		fallthrough
 	case "EMAIL_AND_PHONE_NUMBER":
@@ -189,10 +209,10 @@ func (e *CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEn
 	case "PHONE_NUMBER":
 		fallthrough
 	case "USERNAME":
-		*e = CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEnum(s)
+		*e = CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsSignInMethodEnum: %v", v)
 	}
 }
 
@@ -204,19 +224,23 @@ const (
 	CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnumSms   CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum = "SMS"
 )
 
+func (e CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum) ToPointer() *CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum {
+	return &e
+}
+
 func (e *CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EMAIL":
 		fallthrough
 	case "SMS":
-		*e = CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum(s)
+		*e = CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum: %v", v)
 	}
 }
 

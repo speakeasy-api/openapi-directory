@@ -34,7 +34,10 @@ func newBillingAccounts(defaultClient, securityClient HTTPClient, serverURL, lan
 // BillingbudgetsBillingAccountsBudgetsCreate - Creates a new budget. See [Quotas and limits](https://cloud.google.com/billing/quotas) for more information on the limits of the number of budgets you can create.
 func (s *billingAccounts) BillingbudgetsBillingAccountsBudgetsCreate(ctx context.Context, request operations.BillingbudgetsBillingAccountsBudgetsCreateRequest, security operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity) (*operations.BillingbudgetsBillingAccountsBudgetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/budgets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/budgets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudBillingBudgetsV1BudgetInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *billingAccounts) BillingbudgetsBillingAccountsBudgetsCreate(ctx context
 // BillingbudgetsBillingAccountsBudgetsDelete - Deletes a budget. Returns successfully if already deleted.
 func (s *billingAccounts) BillingbudgetsBillingAccountsBudgetsDelete(ctx context.Context, request operations.BillingbudgetsBillingAccountsBudgetsDeleteRequest, security operations.BillingbudgetsBillingAccountsBudgetsDeleteSecurity) (*operations.BillingbudgetsBillingAccountsBudgetsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *billingAccounts) BillingbudgetsBillingAccountsBudgetsDelete(ctx context
 // BillingbudgetsBillingAccountsBudgetsGet - Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
 func (s *billingAccounts) BillingbudgetsBillingAccountsBudgetsGet(ctx context.Context, request operations.BillingbudgetsBillingAccountsBudgetsGetRequest, security operations.BillingbudgetsBillingAccountsBudgetsGetSecurity) (*operations.BillingbudgetsBillingAccountsBudgetsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *billingAccounts) BillingbudgetsBillingAccountsBudgetsGet(ctx context.Co
 // BillingbudgetsBillingAccountsBudgetsList - Returns a list of budgets for a billing account. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
 func (s *billingAccounts) BillingbudgetsBillingAccountsBudgetsList(ctx context.Context, request operations.BillingbudgetsBillingAccountsBudgetsListRequest, security operations.BillingbudgetsBillingAccountsBudgetsListSecurity) (*operations.BillingbudgetsBillingAccountsBudgetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/budgets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/budgets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *billingAccounts) BillingbudgetsBillingAccountsBudgetsList(ctx context.C
 // BillingbudgetsBillingAccountsBudgetsPatch - Updates a budget and returns the updated budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. Budget fields that are not exposed in this API will not be changed by this method.
 func (s *billingAccounts) BillingbudgetsBillingAccountsBudgetsPatch(ctx context.Context, request operations.BillingbudgetsBillingAccountsBudgetsPatchRequest, security operations.BillingbudgetsBillingAccountsBudgetsPatchSecurity) (*operations.BillingbudgetsBillingAccountsBudgetsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudBillingBudgetsV1BudgetInput", "json")
 	if err != nil {

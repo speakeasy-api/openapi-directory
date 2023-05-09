@@ -17,12 +17,16 @@ const (
 	ElasticsearchIndexRotationPeriodEnumOneMonth   ElasticsearchIndexRotationPeriodEnum = "OneMonth"
 )
 
+func (e ElasticsearchIndexRotationPeriodEnum) ToPointer() *ElasticsearchIndexRotationPeriodEnum {
+	return &e
+}
+
 func (e *ElasticsearchIndexRotationPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NoRotation":
 		fallthrough
 	case "OneHour":
@@ -32,9 +36,9 @@ func (e *ElasticsearchIndexRotationPeriodEnum) UnmarshalJSON(data []byte) error 
 	case "OneWeek":
 		fallthrough
 	case "OneMonth":
-		*e = ElasticsearchIndexRotationPeriodEnum(s)
+		*e = ElasticsearchIndexRotationPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ElasticsearchIndexRotationPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for ElasticsearchIndexRotationPeriodEnum: %v", v)
 	}
 }

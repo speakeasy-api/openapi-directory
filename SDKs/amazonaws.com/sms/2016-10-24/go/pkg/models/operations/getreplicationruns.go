@@ -16,17 +16,21 @@ const (
 	GetReplicationRunsXAmzTargetEnumAwsServerMigrationServiceV20161024GetReplicationRuns GetReplicationRunsXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.GetReplicationRuns"
 )
 
+func (e GetReplicationRunsXAmzTargetEnum) ToPointer() *GetReplicationRunsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetReplicationRunsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.GetReplicationRuns":
-		*e = GetReplicationRunsXAmzTargetEnum(s)
+		*e = GetReplicationRunsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetReplicationRunsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetReplicationRunsXAmzTargetEnum: %v", v)
 	}
 }
 

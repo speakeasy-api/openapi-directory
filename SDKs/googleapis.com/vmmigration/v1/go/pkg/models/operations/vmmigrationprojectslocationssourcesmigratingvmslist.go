@@ -23,21 +23,25 @@ const (
 	VmmigrationProjectsLocationsSourcesMigratingVmsListViewEnumMigratingVMViewFull        VmmigrationProjectsLocationsSourcesMigratingVmsListViewEnum = "MIGRATING_VM_VIEW_FULL"
 )
 
+func (e VmmigrationProjectsLocationsSourcesMigratingVmsListViewEnum) ToPointer() *VmmigrationProjectsLocationsSourcesMigratingVmsListViewEnum {
+	return &e
+}
+
 func (e *VmmigrationProjectsLocationsSourcesMigratingVmsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MIGRATING_VM_VIEW_UNSPECIFIED":
 		fallthrough
 	case "MIGRATING_VM_VIEW_BASIC":
 		fallthrough
 	case "MIGRATING_VM_VIEW_FULL":
-		*e = VmmigrationProjectsLocationsSourcesMigratingVmsListViewEnum(s)
+		*e = VmmigrationProjectsLocationsSourcesMigratingVmsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VmmigrationProjectsLocationsSourcesMigratingVmsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for VmmigrationProjectsLocationsSourcesMigratingVmsListViewEnum: %v", v)
 	}
 }
 

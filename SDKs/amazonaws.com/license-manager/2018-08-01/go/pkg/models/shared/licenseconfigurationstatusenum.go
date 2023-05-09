@@ -14,18 +14,22 @@ const (
 	LicenseConfigurationStatusEnumDisabled  LicenseConfigurationStatusEnum = "DISABLED"
 )
 
+func (e LicenseConfigurationStatusEnum) ToPointer() *LicenseConfigurationStatusEnum {
+	return &e
+}
+
 func (e *LicenseConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "DISABLED":
-		*e = LicenseConfigurationStatusEnum(s)
+		*e = LicenseConfigurationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseConfigurationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseConfigurationStatusEnum: %v", v)
 	}
 }

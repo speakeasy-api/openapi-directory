@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// ImportDataFileFormatEnum - The payload format.
+// ImportDataFileFormatEnum - Required. The payload format.
 type ImportDataFileFormatEnum string
 
 const (
@@ -20,12 +20,16 @@ const (
 	ImportDataFileFormatEnumImportJobFormatManualCsv        ImportDataFileFormatEnum = "IMPORT_JOB_FORMAT_MANUAL_CSV"
 )
 
+func (e ImportDataFileFormatEnum) ToPointer() *ImportDataFileFormatEnum {
+	return &e
+}
+
 func (e *ImportDataFileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORT_JOB_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "IMPORT_JOB_FORMAT_CMDB":
@@ -39,10 +43,10 @@ func (e *ImportDataFileFormatEnum) UnmarshalJSON(data []byte) error {
 	case "IMPORT_JOB_FORMAT_EXPORTED_AZURE_CSV":
 		fallthrough
 	case "IMPORT_JOB_FORMAT_MANUAL_CSV":
-		*e = ImportDataFileFormatEnum(s)
+		*e = ImportDataFileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportDataFileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportDataFileFormatEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	ImportDataFileStateEnumActive           ImportDataFileStateEnum = "ACTIVE"
 )
 
+func (e ImportDataFileStateEnum) ToPointer() *ImportDataFileStateEnum {
+	return &e
+}
+
 func (e *ImportDataFileStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
-		*e = ImportDataFileStateEnum(s)
+		*e = ImportDataFileStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportDataFileStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportDataFileStateEnum: %v", v)
 	}
 }
 
@@ -79,7 +87,7 @@ type ImportDataFile struct {
 	CreateTime *string `json:"createTime,omitempty"`
 	// User-friendly display name. Maximum length is 63 characters.
 	DisplayName *string `json:"displayName,omitempty"`
-	// The payload format.
+	// Required. The payload format.
 	Format *ImportDataFileFormatEnum `json:"format,omitempty"`
 	// Output only. The name of the file.
 	Name *string `json:"name,omitempty"`
@@ -93,6 +101,6 @@ type ImportDataFile struct {
 type ImportDataFileInput struct {
 	// User-friendly display name. Maximum length is 63 characters.
 	DisplayName *string `json:"displayName,omitempty"`
-	// The payload format.
+	// Required. The payload format.
 	Format *ImportDataFileFormatEnum `json:"format,omitempty"`
 }

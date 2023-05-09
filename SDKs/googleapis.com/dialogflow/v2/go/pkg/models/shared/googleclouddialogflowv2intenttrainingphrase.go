@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowV2IntentTrainingPhraseTypeEnumTemplate        GoogleCloudDialogflowV2IntentTrainingPhraseTypeEnum = "TEMPLATE"
 )
 
+func (e GoogleCloudDialogflowV2IntentTrainingPhraseTypeEnum) ToPointer() *GoogleCloudDialogflowV2IntentTrainingPhraseTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2IntentTrainingPhraseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "EXAMPLE":
 		fallthrough
 	case "TEMPLATE":
-		*e = GoogleCloudDialogflowV2IntentTrainingPhraseTypeEnum(s)
+		*e = GoogleCloudDialogflowV2IntentTrainingPhraseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2IntentTrainingPhraseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2IntentTrainingPhraseTypeEnum: %v", v)
 	}
 }
 

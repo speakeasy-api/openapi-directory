@@ -14,17 +14,21 @@ const (
 	WebDataExemptionReasonEnumNoOnlinePresence WebDataExemptionReasonEnum = "noOnlinePresence"
 )
 
+func (e WebDataExemptionReasonEnum) ToPointer() *WebDataExemptionReasonEnum {
+	return &e
+}
+
 func (e *WebDataExemptionReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "noOnlinePresence":
-		*e = WebDataExemptionReasonEnum(s)
+		*e = WebDataExemptionReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebDataExemptionReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for WebDataExemptionReasonEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	ChartOptionsModeEnumStats           ChartOptionsModeEnum = "STATS"
 )
 
+func (e ChartOptionsModeEnum) ToPointer() *ChartOptionsModeEnum {
+	return &e
+}
+
 func (e *ChartOptionsModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODE_UNSPECIFIED":
 		fallthrough
 	case "COLOR":
@@ -30,10 +34,10 @@ func (e *ChartOptionsModeEnum) UnmarshalJSON(data []byte) error {
 	case "X_RAY":
 		fallthrough
 	case "STATS":
-		*e = ChartOptionsModeEnum(s)
+		*e = ChartOptionsModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChartOptionsModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChartOptionsModeEnum: %v", v)
 	}
 }
 

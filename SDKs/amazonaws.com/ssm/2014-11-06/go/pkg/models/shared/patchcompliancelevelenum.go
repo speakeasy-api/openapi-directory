@@ -18,12 +18,16 @@ const (
 	PatchComplianceLevelEnumUnspecified   PatchComplianceLevelEnum = "UNSPECIFIED"
 )
 
+func (e PatchComplianceLevelEnum) ToPointer() *PatchComplianceLevelEnum {
+	return &e
+}
+
 func (e *PatchComplianceLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRITICAL":
 		fallthrough
 	case "HIGH":
@@ -35,9 +39,9 @@ func (e *PatchComplianceLevelEnum) UnmarshalJSON(data []byte) error {
 	case "INFORMATIONAL":
 		fallthrough
 	case "UNSPECIFIED":
-		*e = PatchComplianceLevelEnum(s)
+		*e = PatchComplianceLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchComplianceLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchComplianceLevelEnum: %v", v)
 	}
 }

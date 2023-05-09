@@ -16,17 +16,21 @@ const (
 	DescribeEffectivePolicyXAmzTargetEnumAwsOrganizationsV20161128DescribeEffectivePolicy DescribeEffectivePolicyXAmzTargetEnum = "AWSOrganizationsV20161128.DescribeEffectivePolicy"
 )
 
+func (e DescribeEffectivePolicyXAmzTargetEnum) ToPointer() *DescribeEffectivePolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeEffectivePolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.DescribeEffectivePolicy":
-		*e = DescribeEffectivePolicyXAmzTargetEnum(s)
+		*e = DescribeEffectivePolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeEffectivePolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeEffectivePolicyXAmzTargetEnum: %v", v)
 	}
 }
 

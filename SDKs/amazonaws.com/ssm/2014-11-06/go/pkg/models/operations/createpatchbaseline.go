@@ -16,17 +16,21 @@ const (
 	CreatePatchBaselineXAmzTargetEnumAmazonSsmCreatePatchBaseline CreatePatchBaselineXAmzTargetEnum = "AmazonSSM.CreatePatchBaseline"
 )
 
+func (e CreatePatchBaselineXAmzTargetEnum) ToPointer() *CreatePatchBaselineXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreatePatchBaselineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.CreatePatchBaseline":
-		*e = CreatePatchBaselineXAmzTargetEnum(s)
+		*e = CreatePatchBaselineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePatchBaselineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePatchBaselineXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -2,7 +2,7 @@
 
 package shared
 
-// ResamplingConfigInput - <p/>
+// ResamplingConfigInput - The structure representing input for resampling operation.
 type ResamplingConfigInput struct {
 	AlgorithmName    *AlgorithmNameResamplingEnum    `json:"AlgorithmName,omitempty"`
 	OutputResolution OutputResolutionResamplingInput `json:"OutputResolution"`

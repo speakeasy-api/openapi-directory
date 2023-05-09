@@ -16,17 +16,21 @@ const (
 	StartDocumentAnalysisXAmzTargetEnumTextractStartDocumentAnalysis StartDocumentAnalysisXAmzTargetEnum = "Textract.StartDocumentAnalysis"
 )
 
+func (e StartDocumentAnalysisXAmzTargetEnum) ToPointer() *StartDocumentAnalysisXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartDocumentAnalysisXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Textract.StartDocumentAnalysis":
-		*e = StartDocumentAnalysisXAmzTargetEnum(s)
+		*e = StartDocumentAnalysisXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartDocumentAnalysisXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartDocumentAnalysisXAmzTargetEnum: %v", v)
 	}
 }
 

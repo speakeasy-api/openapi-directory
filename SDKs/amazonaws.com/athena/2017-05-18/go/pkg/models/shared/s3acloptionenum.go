@@ -13,16 +13,20 @@ const (
 	S3ACLOptionEnumBucketOwnerFullControl S3ACLOptionEnum = "BUCKET_OWNER_FULL_CONTROL"
 )
 
+func (e S3ACLOptionEnum) ToPointer() *S3ACLOptionEnum {
+	return &e
+}
+
 func (e *S3ACLOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUCKET_OWNER_FULL_CONTROL":
-		*e = S3ACLOptionEnum(s)
+		*e = S3ACLOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for S3ACLOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for S3ACLOptionEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	TrustDirectionEnumTwoWay         TrustDirectionEnum = "Two-Way"
 )
 
+func (e TrustDirectionEnum) ToPointer() *TrustDirectionEnum {
+	return &e
+}
+
 func (e *TrustDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "One-Way: Outgoing":
 		fallthrough
 	case "One-Way: Incoming":
 		fallthrough
 	case "Two-Way":
-		*e = TrustDirectionEnum(s)
+		*e = TrustDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrustDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for TrustDirectionEnum: %v", v)
 	}
 }

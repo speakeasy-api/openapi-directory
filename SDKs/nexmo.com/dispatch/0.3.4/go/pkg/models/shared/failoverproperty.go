@@ -15,19 +15,23 @@ const (
 	FailoverPropertyConditionStatusEnumRead      FailoverPropertyConditionStatusEnum = "read"
 )
 
+func (e FailoverPropertyConditionStatusEnum) ToPointer() *FailoverPropertyConditionStatusEnum {
+	return &e
+}
+
 func (e *FailoverPropertyConditionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "delivered":
 		fallthrough
 	case "read":
-		*e = FailoverPropertyConditionStatusEnum(s)
+		*e = FailoverPropertyConditionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailoverPropertyConditionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FailoverPropertyConditionStatusEnum: %v", v)
 	}
 }
 

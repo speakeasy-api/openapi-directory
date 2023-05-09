@@ -15,17 +15,21 @@ const (
 	POSTRegisterTypeActionEnumRegisterType POSTRegisterTypeActionEnum = "RegisterType"
 )
 
+func (e POSTRegisterTypeActionEnum) ToPointer() *POSTRegisterTypeActionEnum {
+	return &e
+}
+
 func (e *POSTRegisterTypeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RegisterType":
-		*e = POSTRegisterTypeActionEnum(s)
+		*e = POSTRegisterTypeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRegisterTypeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRegisterTypeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRegisterTypeVersionEnumTwoThousandAndTen0515 POSTRegisterTypeVersionEnum = "2010-05-15"
 )
 
+func (e POSTRegisterTypeVersionEnum) ToPointer() *POSTRegisterTypeVersionEnum {
+	return &e
+}
+
 func (e *POSTRegisterTypeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTRegisterTypeVersionEnum(s)
+		*e = POSTRegisterTypeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRegisterTypeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRegisterTypeVersionEnum: %v", v)
 	}
 }
 

@@ -87,7 +87,10 @@ func (s *serverTypes) GetServerTypes(ctx context.Context, request operations.Get
 // Gets a specific Server type object.
 func (s *serverTypes) GetServerTypesID(ctx context.Context, request operations.GetServerTypesIDRequest) (*operations.GetServerTypesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/server_types/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/server_types/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

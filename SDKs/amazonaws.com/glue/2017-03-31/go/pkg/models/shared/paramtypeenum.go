@@ -19,12 +19,16 @@ const (
 	ParamTypeEnumNull    ParamTypeEnum = "null"
 )
 
+func (e ParamTypeEnum) ToPointer() *ParamTypeEnum {
+	return &e
+}
+
 func (e *ParamTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "str":
 		fallthrough
 	case "int":
@@ -38,9 +42,9 @@ func (e *ParamTypeEnum) UnmarshalJSON(data []byte) error {
 	case "list":
 		fallthrough
 	case "null":
-		*e = ParamTypeEnum(s)
+		*e = ParamTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParamTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParamTypeEnum: %v", v)
 	}
 }

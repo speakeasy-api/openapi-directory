@@ -24,12 +24,16 @@ const (
 	CreateAccountHolderRequestLegalEntityEnumPublicCompany CreateAccountHolderRequestLegalEntityEnum = "PublicCompany"
 )
 
+func (e CreateAccountHolderRequestLegalEntityEnum) ToPointer() *CreateAccountHolderRequestLegalEntityEnum {
+	return &e
+}
+
 func (e *CreateAccountHolderRequestLegalEntityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Business":
 		fallthrough
 	case "Individual":
@@ -39,10 +43,10 @@ func (e *CreateAccountHolderRequestLegalEntityEnum) UnmarshalJSON(data []byte) e
 	case "Partnership":
 		fallthrough
 	case "PublicCompany":
-		*e = CreateAccountHolderRequestLegalEntityEnum(s)
+		*e = CreateAccountHolderRequestLegalEntityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccountHolderRequestLegalEntityEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccountHolderRequestLegalEntityEnum: %v", v)
 	}
 }
 

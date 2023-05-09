@@ -36,7 +36,10 @@ func newUserMediaLists(defaultClient, securityClient HTTPClient, serverURL, lang
 // Get a specific user media list.
 func (s *userMediaLists) GetResourcesUserMediaListsIDJSON(ctx context.Context, request operations.GetResourcesUserMediaListsIDJSONRequest) (*operations.GetResourcesUserMediaListsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/userMediaLists/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/resources/userMediaLists/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

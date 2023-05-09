@@ -16,17 +16,21 @@ const (
 	UpdateProjectVisibilityXAmzTargetEnumCodeBuild20161006UpdateProjectVisibility UpdateProjectVisibilityXAmzTargetEnum = "CodeBuild_20161006.UpdateProjectVisibility"
 )
 
+func (e UpdateProjectVisibilityXAmzTargetEnum) ToPointer() *UpdateProjectVisibilityXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateProjectVisibilityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.UpdateProjectVisibility":
-		*e = UpdateProjectVisibilityXAmzTargetEnum(s)
+		*e = UpdateProjectVisibilityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateProjectVisibilityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateProjectVisibilityXAmzTargetEnum: %v", v)
 	}
 }
 

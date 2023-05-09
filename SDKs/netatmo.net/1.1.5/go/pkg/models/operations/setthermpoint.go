@@ -26,12 +26,16 @@ const (
 	SetthermpointSetpointModeEnumMax     SetthermpointSetpointModeEnum = "max"
 )
 
+func (e SetthermpointSetpointModeEnum) ToPointer() *SetthermpointSetpointModeEnum {
+	return &e
+}
+
 func (e *SetthermpointSetpointModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "program":
 		fallthrough
 	case "away":
@@ -43,10 +47,10 @@ func (e *SetthermpointSetpointModeEnum) UnmarshalJSON(data []byte) error {
 	case "off":
 		fallthrough
 	case "max":
-		*e = SetthermpointSetpointModeEnum(s)
+		*e = SetthermpointSetpointModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetthermpointSetpointModeEnum: %s", s)
+		return fmt.Errorf("invalid value for SetthermpointSetpointModeEnum: %v", v)
 	}
 }
 

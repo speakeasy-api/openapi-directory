@@ -14,18 +14,22 @@ const (
 	APICachingBehaviorEnumPerResolverCaching APICachingBehaviorEnum = "PER_RESOLVER_CACHING"
 )
 
+func (e APICachingBehaviorEnum) ToPointer() *APICachingBehaviorEnum {
+	return &e
+}
+
 func (e *APICachingBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FULL_REQUEST_CACHING":
 		fallthrough
 	case "PER_RESOLVER_CACHING":
-		*e = APICachingBehaviorEnum(s)
+		*e = APICachingBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APICachingBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for APICachingBehaviorEnum: %v", v)
 	}
 }

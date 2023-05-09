@@ -19,12 +19,16 @@ const (
 	RobotStatusEnumNoResponse           RobotStatusEnum = "NoResponse"
 )
 
+func (e RobotStatusEnum) ToPointer() *RobotStatusEnum {
+	return &e
+}
+
 func (e *RobotStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Available":
 		fallthrough
 	case "Registered":
@@ -38,9 +42,9 @@ func (e *RobotStatusEnum) UnmarshalJSON(data []byte) error {
 	case "InSync":
 		fallthrough
 	case "NoResponse":
-		*e = RobotStatusEnum(s)
+		*e = RobotStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RobotStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RobotStatusEnum: %v", v)
 	}
 }

@@ -35,7 +35,10 @@ func newMart(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // NOTE: this route has a limiter on it, you may be restricted in the number of downloads per hour. Use carefully.
 func (s *mart) GetMartCaseAssociationsResource(ctx context.Context, request operations.GetMartCaseAssociationsResourceRequest) (*operations.GetMartCaseAssociationsResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mart/case/{object_category}/{taxon}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mart/case/{object_category}/{taxon}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -75,7 +78,10 @@ func (s *mart) GetMartCaseAssociationsResource(ctx context.Context, request oper
 // NOTE: this route has a limiter on it, you may be restricted in the number of downloads per hour. Use carefully.
 func (s *mart) GetMartDiseaseAssociationsResource(ctx context.Context, request operations.GetMartDiseaseAssociationsResourceRequest) (*operations.GetMartDiseaseAssociationsResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mart/disease/{object_category}/{taxon}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mart/disease/{object_category}/{taxon}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -115,7 +121,10 @@ func (s *mart) GetMartDiseaseAssociationsResource(ctx context.Context, request o
 // NOTE: this route has a limiter on it, you may be restricted in the number of downloads per hour. Use carefully.
 func (s *mart) GetMartGeneAssociationsResource(ctx context.Context, request operations.GetMartGeneAssociationsResourceRequest) (*operations.GetMartGeneAssociationsResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mart/gene/{object_category}/{taxon}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mart/gene/{object_category}/{taxon}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -154,7 +163,10 @@ func (s *mart) GetMartGeneAssociationsResource(ctx context.Context, request oper
 // GetMartOrthologAssociationsResource - Bulk download of orthologs
 func (s *mart) GetMartOrthologAssociationsResource(ctx context.Context, request operations.GetMartOrthologAssociationsResourceRequest) (*operations.GetMartOrthologAssociationsResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mart/ortholog/{taxon1}/{taxon2}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mart/ortholog/{taxon1}/{taxon2}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -189,7 +201,10 @@ func (s *mart) GetMartOrthologAssociationsResource(ctx context.Context, request 
 // GetMartParalogAssociationsResource - Bulk download of paralogs
 func (s *mart) GetMartParalogAssociationsResource(ctx context.Context, request operations.GetMartParalogAssociationsResourceRequest) (*operations.GetMartParalogAssociationsResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mart/paralog/{taxon1}/{taxon2}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mart/paralog/{taxon1}/{taxon2}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

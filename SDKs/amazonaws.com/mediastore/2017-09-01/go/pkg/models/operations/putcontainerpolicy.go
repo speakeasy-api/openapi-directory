@@ -16,17 +16,21 @@ const (
 	PutContainerPolicyXAmzTargetEnumMediaStore20170901PutContainerPolicy PutContainerPolicyXAmzTargetEnum = "MediaStore_20170901.PutContainerPolicy"
 )
 
+func (e PutContainerPolicyXAmzTargetEnum) ToPointer() *PutContainerPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutContainerPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MediaStore_20170901.PutContainerPolicy":
-		*e = PutContainerPolicyXAmzTargetEnum(s)
+		*e = PutContainerPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutContainerPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutContainerPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

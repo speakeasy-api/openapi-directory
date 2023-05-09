@@ -44,12 +44,16 @@ const (
 	ImageButtonIconEnumVideoPlay              ImageButtonIconEnum = "VIDEO_PLAY"
 )
 
+func (e ImageButtonIconEnum) ToPointer() *ImageButtonIconEnum {
+	return &e
+}
+
 func (e *ImageButtonIconEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ICON_UNSPECIFIED":
 		fallthrough
 	case "AIRPLANE":
@@ -111,10 +115,10 @@ func (e *ImageButtonIconEnum) UnmarshalJSON(data []byte) error {
 	case "VIDEO_CAMERA":
 		fallthrough
 	case "VIDEO_PLAY":
-		*e = ImageButtonIconEnum(s)
+		*e = ImageButtonIconEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageButtonIconEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageButtonIconEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	ResolverAutodefinedReverseStatusEnumUseLocalResourceSetting           ResolverAutodefinedReverseStatusEnum = "USE_LOCAL_RESOURCE_SETTING"
 )
 
+func (e ResolverAutodefinedReverseStatusEnum) ToPointer() *ResolverAutodefinedReverseStatusEnum {
+	return &e
+}
+
 func (e *ResolverAutodefinedReverseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLING":
 		fallthrough
 	case "ENABLED":
@@ -35,9 +39,9 @@ func (e *ResolverAutodefinedReverseStatusEnum) UnmarshalJSON(data []byte) error 
 	case "UPDATING_TO_USE_LOCAL_RESOURCE_SETTING":
 		fallthrough
 	case "USE_LOCAL_RESOURCE_SETTING":
-		*e = ResolverAutodefinedReverseStatusEnum(s)
+		*e = ResolverAutodefinedReverseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResolverAutodefinedReverseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ResolverAutodefinedReverseStatusEnum: %v", v)
 	}
 }

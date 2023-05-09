@@ -16,12 +16,16 @@ const (
 	Ec2InstanceSortByEnumAll             Ec2InstanceSortByEnum = "ALL"
 )
 
+func (e Ec2InstanceSortByEnum) ToPointer() *Ec2InstanceSortByEnum {
+	return &e
+}
+
 func (e *Ec2InstanceSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NETWORK_FINDINGS":
 		fallthrough
 	case "CRITICAL":
@@ -29,9 +33,9 @@ func (e *Ec2InstanceSortByEnum) UnmarshalJSON(data []byte) error {
 	case "HIGH":
 		fallthrough
 	case "ALL":
-		*e = Ec2InstanceSortByEnum(s)
+		*e = Ec2InstanceSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ec2InstanceSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for Ec2InstanceSortByEnum: %v", v)
 	}
 }

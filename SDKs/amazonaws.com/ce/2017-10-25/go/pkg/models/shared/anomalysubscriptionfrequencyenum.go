@@ -15,20 +15,24 @@ const (
 	AnomalySubscriptionFrequencyEnumWeekly    AnomalySubscriptionFrequencyEnum = "WEEKLY"
 )
 
+func (e AnomalySubscriptionFrequencyEnum) ToPointer() *AnomalySubscriptionFrequencyEnum {
+	return &e
+}
+
 func (e *AnomalySubscriptionFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAILY":
 		fallthrough
 	case "IMMEDIATE":
 		fallthrough
 	case "WEEKLY":
-		*e = AnomalySubscriptionFrequencyEnum(s)
+		*e = AnomalySubscriptionFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnomalySubscriptionFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for AnomalySubscriptionFrequencyEnum: %v", v)
 	}
 }

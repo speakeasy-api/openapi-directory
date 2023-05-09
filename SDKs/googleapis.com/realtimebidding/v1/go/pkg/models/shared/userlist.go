@@ -28,21 +28,25 @@ const (
 	UserListStatusEnumClosed            UserListStatusEnum = "CLOSED"
 )
 
+func (e UserListStatusEnum) ToPointer() *UserListStatusEnum {
+	return &e
+}
+
 func (e *UserListStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "OPEN":
 		fallthrough
 	case "CLOSED":
-		*e = UserListStatusEnum(s)
+		*e = UserListStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserListStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UserListStatusEnum: %v", v)
 	}
 }
 

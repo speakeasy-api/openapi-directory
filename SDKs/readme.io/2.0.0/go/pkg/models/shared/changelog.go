@@ -18,12 +18,16 @@ const (
 	ChangelogTypeEnumRemoved    ChangelogTypeEnum = "removed"
 )
 
+func (e ChangelogTypeEnum) ToPointer() *ChangelogTypeEnum {
+	return &e
+}
+
 func (e *ChangelogTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "added":
@@ -35,10 +39,10 @@ func (e *ChangelogTypeEnum) UnmarshalJSON(data []byte) error {
 	case "deprecated":
 		fallthrough
 	case "removed":
-		*e = ChangelogTypeEnum(s)
+		*e = ChangelogTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChangelogTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChangelogTypeEnum: %v", v)
 	}
 }
 

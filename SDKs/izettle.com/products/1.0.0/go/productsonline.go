@@ -35,7 +35,10 @@ func newProductsOnline(defaultClient, securityClient HTTPClient, serverURL, lang
 // Creates a unique slug (identifier) for a product. The slug is used to create a product URL
 func (s *productsOnline) CreateProductSlug(ctx context.Context, request operations.CreateProductSlugRequest, security operations.CreateProductSlugSecurity) (*operations.CreateProductSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/online/slug", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/online/slug", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateSlugRequest", "json")
 	if err != nil {

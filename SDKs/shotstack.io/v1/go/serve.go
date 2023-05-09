@@ -37,7 +37,10 @@ func newServe(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // **base URL:** https://api.shotstack.io/serve/{version}
 func (s *serve) DeleteAsset(ctx context.Context, request operations.DeleteAssetRequest, security operations.DeleteAssetSecurity) (*operations.DeleteAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -75,7 +78,10 @@ func (s *serve) DeleteAsset(ctx context.Context, request operations.DeleteAssetR
 // **base URL:** https://api.shotstack.io/serve/{version}
 func (s *serve) GetAsset(ctx context.Context, request operations.GetAssetRequest, security operations.GetAssetSecurity) (*operations.GetAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -122,7 +128,10 @@ func (s *serve) GetAsset(ctx context.Context, request operations.GetAssetRequest
 // **base URL:** https://api.shotstack.io/serve/{version}
 func (s *serve) GetAssetByRenderID(ctx context.Context, request operations.GetAssetByRenderIDRequest, security operations.GetAssetByRenderIDSecurity) (*operations.GetAssetByRenderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/render/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/render/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

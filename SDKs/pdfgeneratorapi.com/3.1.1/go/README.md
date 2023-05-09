@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/pdfgeneratorapi.com/3.1.1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,19 +28,17 @@ func main() {
         }),
     )
 
-    req := operations.MergeTemplateRequest{
-        Data: shared.Data{
-            ID: 12312,
-            Name: "Sample Data",
-        },
-        Format: "pdf",
-        Name: "My document",
-        Output: "base64",
-        TemplateID: 19375,
-    }
-
     ctx := context.Background()
-    res, err := s.Documents.MergeTemplate(ctx, req)
+    res, err := s.Documents.MergeTemplate(ctx, operations.MergeTemplateRequest{
+        Data: shared.Data{
+            ID: sdk.Int64(12312),
+            Name: sdk.String("Sample Data"),
+        },
+        Format: shared.FormatEnumPdf.ToPointer(),
+        Name: sdk.String("My document"),
+        Output: shared.OutputEnumBase64.ToPointer(),
+        TemplateID: 19375,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -56,25 +54,25 @@ func main() {
 ## Available Resources and Operations
 
 
-### Documents
+### [Documents](docs/documents/README.md)
 
-* `MergeTemplate` - Generate document
-* `MergeTemplates` - Generate document (multiple templates)
+* [MergeTemplate](docs/documents/README.md#mergetemplate) - Generate document
+* [MergeTemplates](docs/documents/README.md#mergetemplates) - Generate document (multiple templates)
 
-### Templates
+### [Templates](docs/templates/README.md)
 
-* `CopyTemplate` - Copy template
-* `CreateTemplate` - Create template
-* `DeleteTemplate` - Delete template
-* `GetEditorURL` - Open editor
-* `GetTemplate` - Get template
-* `GetTemplates` - Get templates
-* `UpdateTemplate` - Update template
+* [CopyTemplate](docs/templates/README.md#copytemplate) - Copy template
+* [CreateTemplate](docs/templates/README.md#createtemplate) - Create template
+* [DeleteTemplate](docs/templates/README.md#deletetemplate) - Delete template
+* [GetEditorURL](docs/templates/README.md#geteditorurl) - Open editor
+* [GetTemplate](docs/templates/README.md#gettemplate) - Get template
+* [GetTemplates](docs/templates/README.md#gettemplates) - Get templates
+* [UpdateTemplate](docs/templates/README.md#updatetemplate) - Update template
 
-### Workspaces
+### [Workspaces](docs/workspaces/README.md)
 
-* `DeleteWorkspace` - Delete workspace
-* `GetWorkspace` - Get workspace
+* [DeleteWorkspace](docs/workspaces/README.md#deleteworkspace) - Delete workspace
+* [GetWorkspace](docs/workspaces/README.md#getworkspace) - Get workspace
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -18,12 +18,16 @@ const (
 	StatementStateEnumError      StatementStateEnum = "ERROR"
 )
 
+func (e StatementStateEnum) ToPointer() *StatementStateEnum {
+	return &e
+}
+
 func (e *StatementStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WAITING":
 		fallthrough
 	case "RUNNING":
@@ -35,9 +39,9 @@ func (e *StatementStateEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLED":
 		fallthrough
 	case "ERROR":
-		*e = StatementStateEnum(s)
+		*e = StatementStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatementStateEnum: %s", s)
+		return fmt.Errorf("invalid value for StatementStateEnum: %v", v)
 	}
 }

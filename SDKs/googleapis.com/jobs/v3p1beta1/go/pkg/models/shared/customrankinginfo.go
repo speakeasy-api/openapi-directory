@@ -20,12 +20,16 @@ const (
 	CustomRankingInfoImportanceLevelEnumExtreme                    CustomRankingInfoImportanceLevelEnum = "EXTREME"
 )
 
+func (e CustomRankingInfoImportanceLevelEnum) ToPointer() *CustomRankingInfoImportanceLevelEnum {
+	return &e
+}
+
 func (e *CustomRankingInfoImportanceLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORTANCE_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -39,10 +43,10 @@ func (e *CustomRankingInfoImportanceLevelEnum) UnmarshalJSON(data []byte) error 
 	case "HIGH":
 		fallthrough
 	case "EXTREME":
-		*e = CustomRankingInfoImportanceLevelEnum(s)
+		*e = CustomRankingInfoImportanceLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomRankingInfoImportanceLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomRankingInfoImportanceLevelEnum: %v", v)
 	}
 }
 

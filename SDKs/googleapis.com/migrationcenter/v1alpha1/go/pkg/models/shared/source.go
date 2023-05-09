@@ -18,12 +18,16 @@ const (
 	SourceTypeEnumSourceTypeCustom        SourceTypeEnum = "SOURCE_TYPE_CUSTOM"
 )
 
+func (e SourceTypeEnum) ToPointer() *SourceTypeEnum {
+	return &e
+}
+
 func (e *SourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOURCE_TYPE_UNKNOWN":
 		fallthrough
 	case "SOURCE_TYPE_UPLOAD":
@@ -33,10 +37,10 @@ func (e *SourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SOURCE_TYPE_INVENTORY_SCAN":
 		fallthrough
 	case "SOURCE_TYPE_CUSTOM":
-		*e = SourceTypeEnum(s)
+		*e = SourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceTypeEnum: %v", v)
 	}
 }
 
@@ -54,6 +58,40 @@ type SourceInput struct {
 	Type *SourceTypeEnum `json:"type,omitempty"`
 }
 
+// SourceStateEnum - Output only. The state of the source.
+type SourceStateEnum string
+
+const (
+	SourceStateEnumStateUnspecified SourceStateEnum = "STATE_UNSPECIFIED"
+	SourceStateEnumActive           SourceStateEnum = "ACTIVE"
+	SourceStateEnumDeleting         SourceStateEnum = "DELETING"
+	SourceStateEnumInvalid          SourceStateEnum = "INVALID"
+)
+
+func (e SourceStateEnum) ToPointer() *SourceStateEnum {
+	return &e
+}
+
+func (e *SourceStateEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "STATE_UNSPECIFIED":
+		fallthrough
+	case "ACTIVE":
+		fallthrough
+	case "DELETING":
+		fallthrough
+	case "INVALID":
+		*e = SourceStateEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SourceStateEnum: %v", v)
+	}
+}
+
 // Source - Source represents an object from which asset information is streamed to Migration Center.
 type Source struct {
 	// Output only. The timestamp when the source was created.
@@ -62,6 +100,8 @@ type Source struct {
 	Description *string `json:"description,omitempty"`
 	// User-friendly display name.
 	DisplayName *string `json:"displayName,omitempty"`
+	// Output only. The number of frames that were reported by the source and contained errors.
+	ErrorFrameCount *int `json:"errorFrameCount,omitempty"`
 	// If `true`, the source is managed by other service(s).
 	IsManaged *bool `json:"isManaged,omitempty"`
 	// Output only. The full name of the source.
@@ -70,6 +110,8 @@ type Source struct {
 	PendingFrameCount *int `json:"pendingFrameCount,omitempty"`
 	// The information confidence of the source. The higher the value, the higher the confidence.
 	Priority *int `json:"priority,omitempty"`
+	// Output only. The state of the source.
+	State *SourceStateEnum `json:"state,omitempty"`
 	// Data source type.
 	Type *SourceTypeEnum `json:"type,omitempty"`
 	// Output only. The timestamp when the source was last updated.

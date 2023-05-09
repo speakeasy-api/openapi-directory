@@ -26,6 +26,6 @@ type GoogleCloudDocumentaiV1beta3Document struct {
 	TextChanges []GoogleCloudDocumentaiV1beta3DocumentTextChange `json:"textChanges,omitempty"`
 	// Styles for the Document.text.
 	TextStyles []GoogleCloudDocumentaiV1beta3DocumentStyle `json:"textStyles,omitempty"`
-	// Optional. Currently supports Google Cloud Storage URI of the form `gs://bucket_name/object_name`. Object versioning is not supported. See [Google Cloud Storage Request URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
+	// Optional. Currently supports Google Cloud Storage URI of the form `gs://bucket_name/object_name`. Object versioning is not supported. For more information, refer to [Google Cloud Storage Request URIs](https://cloud.google.com/storage/docs/reference-uris).
 	URI *string `json:"uri,omitempty"`
 }

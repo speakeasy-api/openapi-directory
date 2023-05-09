@@ -14,18 +14,22 @@ const (
 	SubnetCidrReservationTypeEnumExplicit SubnetCidrReservationTypeEnum = "explicit"
 )
 
+func (e SubnetCidrReservationTypeEnum) ToPointer() *SubnetCidrReservationTypeEnum {
+	return &e
+}
+
 func (e *SubnetCidrReservationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "prefix":
 		fallthrough
 	case "explicit":
-		*e = SubnetCidrReservationTypeEnum(s)
+		*e = SubnetCidrReservationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubnetCidrReservationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubnetCidrReservationTypeEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	POSTDefineExpressionActionEnumDefineExpression POSTDefineExpressionActionEnum = "DefineExpression"
 )
 
+func (e POSTDefineExpressionActionEnum) ToPointer() *POSTDefineExpressionActionEnum {
+	return &e
+}
+
 func (e *POSTDefineExpressionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DefineExpression":
-		*e = POSTDefineExpressionActionEnum(s)
+		*e = POSTDefineExpressionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDefineExpressionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDefineExpressionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDefineExpressionVersionEnumTwoThousandAndThirteen0101 POSTDefineExpressionVersionEnum = "2013-01-01"
 )
 
+func (e POSTDefineExpressionVersionEnum) ToPointer() *POSTDefineExpressionVersionEnum {
+	return &e
+}
+
 func (e *POSTDefineExpressionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = POSTDefineExpressionVersionEnum(s)
+		*e = POSTDefineExpressionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDefineExpressionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDefineExpressionVersionEnum: %v", v)
 	}
 }
 

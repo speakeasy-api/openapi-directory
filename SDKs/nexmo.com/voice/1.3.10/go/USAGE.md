@@ -2,21 +2,19 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateCallRequestBody{}
-
     ctx := context.Background()
-    res, err := s.Calls.CreateCall(ctx, req, operations.CreateCallSecurity{
+    res, err := s.Calls.CreateCall(ctx, operations.CreateCallRequestBody{}, operations.CreateCallSecurity{
         BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {

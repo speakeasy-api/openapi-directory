@@ -17,19 +17,23 @@ const (
 	ListLFTagsRequestBodyResourceShareTypeEnumAll     ListLFTagsRequestBodyResourceShareTypeEnum = "ALL"
 )
 
+func (e ListLFTagsRequestBodyResourceShareTypeEnum) ToPointer() *ListLFTagsRequestBodyResourceShareTypeEnum {
+	return &e
+}
+
 func (e *ListLFTagsRequestBodyResourceShareTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FOREIGN":
 		fallthrough
 	case "ALL":
-		*e = ListLFTagsRequestBodyResourceShareTypeEnum(s)
+		*e = ListLFTagsRequestBodyResourceShareTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLFTagsRequestBodyResourceShareTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLFTagsRequestBodyResourceShareTypeEnum: %v", v)
 	}
 }
 

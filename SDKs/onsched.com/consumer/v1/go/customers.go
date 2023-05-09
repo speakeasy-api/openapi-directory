@@ -36,7 +36,10 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 // <p>Use this endpoint to permanently <b>Delete</b> a Customer object. A valid <b>customer id</b> is required.</p>
 func (s *customers) DeleteConsumerV1CustomersID(ctx context.Context, request operations.DeleteConsumerV1CustomersIDRequest) (*operations.DeleteConsumerV1CustomersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/customers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/consumer/v1/customers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -313,7 +316,10 @@ func (s *customers) GetConsumerV1CustomersStates(ctx context.Context, request op
 // <p>Use this endpoint to return a <b>Customer</b> object. A valid <b>customer id</b> is required. Find customer id's by using the <i>GET /consumer/v1/customers</i> endpoint.</p>
 func (s *customers) GetConsumerV1CustomersID(ctx context.Context, request operations.GetConsumerV1CustomersIDRequest) (*operations.GetConsumerV1CustomersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/customers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/consumer/v1/customers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -411,7 +417,10 @@ func (s *customers) PostConsumerV1Customers(ctx context.Context, request shared.
 // <p>Use this endpoint to <b>Update</b> a Customer object. A valid <b>customer id</b> is required. Note: Blank fields are not changed.</p>
 func (s *customers) PutConsumerV1CustomersID(ctx context.Context, request operations.PutConsumerV1CustomersIDRequest) (*operations.PutConsumerV1CustomersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/customers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/consumer/v1/customers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerUpdateModel", "json")
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	GetInstancePortStatesXAmzTargetEnumLightsail20161128GetInstancePortStates GetInstancePortStatesXAmzTargetEnum = "Lightsail_20161128.GetInstancePortStates"
 )
 
+func (e GetInstancePortStatesXAmzTargetEnum) ToPointer() *GetInstancePortStatesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetInstancePortStatesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetInstancePortStates":
-		*e = GetInstancePortStatesXAmzTargetEnum(s)
+		*e = GetInstancePortStatesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInstancePortStatesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInstancePortStatesXAmzTargetEnum: %v", v)
 	}
 }
 

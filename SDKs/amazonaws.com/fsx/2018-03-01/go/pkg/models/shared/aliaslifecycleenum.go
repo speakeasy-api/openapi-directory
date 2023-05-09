@@ -17,12 +17,16 @@ const (
 	AliasLifecycleEnumDeleteFailed AliasLifecycleEnum = "DELETE_FAILED"
 )
 
+func (e AliasLifecycleEnum) ToPointer() *AliasLifecycleEnum {
+	return &e
+}
+
 func (e *AliasLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "CREATING":
@@ -32,9 +36,9 @@ func (e *AliasLifecycleEnum) UnmarshalJSON(data []byte) error {
 	case "CREATE_FAILED":
 		fallthrough
 	case "DELETE_FAILED":
-		*e = AliasLifecycleEnum(s)
+		*e = AliasLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AliasLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for AliasLifecycleEnum: %v", v)
 	}
 }

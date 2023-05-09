@@ -15,20 +15,24 @@ const (
 	StandbyInstancesEnumWait      StandbyInstancesEnum = "Wait"
 )
 
+func (e StandbyInstancesEnum) ToPointer() *StandbyInstancesEnum {
+	return &e
+}
+
 func (e *StandbyInstancesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Terminate":
 		fallthrough
 	case "Ignore":
 		fallthrough
 	case "Wait":
-		*e = StandbyInstancesEnum(s)
+		*e = StandbyInstancesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StandbyInstancesEnum: %s", s)
+		return fmt.Errorf("invalid value for StandbyInstancesEnum: %v", v)
 	}
 }

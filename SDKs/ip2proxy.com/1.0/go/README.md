@@ -13,26 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ip2proxy.com/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRequest{
-        Format: "xml",
+    ctx := context.Background()
+    res, err := s.Get(ctx, operations.GetRequest{
+        Format: operations.GetFormatEnumXML.ToPointer(),
         IP: "provident",
         Key: "distinctio",
-        Package: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Get(ctx, req)
+        Package: sdk.String("quibusdam"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,9 +44,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `Get` - Check if an IP address is proxy
+* [Get](docs/sdk/README.md#get) - Check if an IP address is proxy
 <!-- End SDK Available Operations -->
 
 ### Maturity

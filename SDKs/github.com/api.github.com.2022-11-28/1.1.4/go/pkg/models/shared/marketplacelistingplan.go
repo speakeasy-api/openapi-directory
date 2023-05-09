@@ -15,21 +15,25 @@ const (
 	MarketplaceListingPlanPriceModelEnumPerUnit  MarketplaceListingPlanPriceModelEnum = "PER_UNIT"
 )
 
+func (e MarketplaceListingPlanPriceModelEnum) ToPointer() *MarketplaceListingPlanPriceModelEnum {
+	return &e
+}
+
 func (e *MarketplaceListingPlanPriceModelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FREE":
 		fallthrough
 	case "FLAT_RATE":
 		fallthrough
 	case "PER_UNIT":
-		*e = MarketplaceListingPlanPriceModelEnum(s)
+		*e = MarketplaceListingPlanPriceModelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MarketplaceListingPlanPriceModelEnum: %s", s)
+		return fmt.Errorf("invalid value for MarketplaceListingPlanPriceModelEnum: %v", v)
 	}
 }
 

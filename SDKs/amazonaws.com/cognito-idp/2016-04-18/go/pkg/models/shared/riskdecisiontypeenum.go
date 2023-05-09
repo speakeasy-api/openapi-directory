@@ -15,20 +15,24 @@ const (
 	RiskDecisionTypeEnumBlock           RiskDecisionTypeEnum = "Block"
 )
 
+func (e RiskDecisionTypeEnum) ToPointer() *RiskDecisionTypeEnum {
+	return &e
+}
+
 func (e *RiskDecisionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NoRisk":
 		fallthrough
 	case "AccountTakeover":
 		fallthrough
 	case "Block":
-		*e = RiskDecisionTypeEnum(s)
+		*e = RiskDecisionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RiskDecisionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RiskDecisionTypeEnum: %v", v)
 	}
 }

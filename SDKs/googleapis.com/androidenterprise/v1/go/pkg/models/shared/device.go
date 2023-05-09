@@ -17,12 +17,16 @@ const (
 	DeviceManagementTypeEnumUnmanagedProfile DeviceManagementTypeEnum = "unmanagedProfile"
 )
 
+func (e DeviceManagementTypeEnum) ToPointer() *DeviceManagementTypeEnum {
+	return &e
+}
+
 func (e *DeviceManagementTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "managedDevice":
 		fallthrough
 	case "managedProfile":
@@ -30,10 +34,10 @@ func (e *DeviceManagementTypeEnum) UnmarshalJSON(data []byte) error {
 	case "containerApp":
 		fallthrough
 	case "unmanagedProfile":
-		*e = DeviceManagementTypeEnum(s)
+		*e = DeviceManagementTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceManagementTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceManagementTypeEnum: %v", v)
 	}
 }
 

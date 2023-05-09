@@ -18,12 +18,16 @@ const (
 	GetExportThermalPrintBelegeBelegUUIDDialectEnumText       GetExportThermalPrintBelegeBelegUUIDDialectEnum = "text"
 )
 
+func (e GetExportThermalPrintBelegeBelegUUIDDialectEnum) ToPointer() *GetExportThermalPrintBelegeBelegUUIDDialectEnum {
+	return &e
+}
+
 func (e *GetExportThermalPrintBelegeBelegUUIDDialectEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "escpos":
 		fallthrough
 	case "escposlite":
@@ -31,10 +35,10 @@ func (e *GetExportThermalPrintBelegeBelegUUIDDialectEnum) UnmarshalJSON(data []b
 	case "star":
 		fallthrough
 	case "text":
-		*e = GetExportThermalPrintBelegeBelegUUIDDialectEnum(s)
+		*e = GetExportThermalPrintBelegeBelegUUIDDialectEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetExportThermalPrintBelegeBelegUUIDDialectEnum: %s", s)
+		return fmt.Errorf("invalid value for GetExportThermalPrintBelegeBelegUUIDDialectEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	GetExportThermalPrintBelegeBelegUUIDEncodingEnumBase64 GetExportThermalPrintBelegeBelegUUIDEncodingEnum = "base64"
 )
 
+func (e GetExportThermalPrintBelegeBelegUUIDEncodingEnum) ToPointer() *GetExportThermalPrintBelegeBelegUUIDEncodingEnum {
+	return &e
+}
+
 func (e *GetExportThermalPrintBelegeBelegUUIDEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "raw":
 		fallthrough
 	case "base64":
-		*e = GetExportThermalPrintBelegeBelegUUIDEncodingEnum(s)
+		*e = GetExportThermalPrintBelegeBelegUUIDEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetExportThermalPrintBelegeBelegUUIDEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for GetExportThermalPrintBelegeBelegUUIDEncodingEnum: %v", v)
 	}
 }
 

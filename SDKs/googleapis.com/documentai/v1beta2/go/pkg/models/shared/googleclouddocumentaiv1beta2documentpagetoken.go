@@ -12,4 +12,6 @@ type GoogleCloudDocumentaiV1beta2DocumentPageToken struct {
 	Layout *GoogleCloudDocumentaiV1beta2DocumentPageLayout `json:"layout,omitempty"`
 	// Structure to identify provenance relationships between annotations in different revisions.
 	Provenance *GoogleCloudDocumentaiV1beta2DocumentProvenance `json:"provenance,omitempty"`
+	// Font and other text style attributes.
+	StyleInfo *GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo `json:"styleInfo,omitempty"`
 }

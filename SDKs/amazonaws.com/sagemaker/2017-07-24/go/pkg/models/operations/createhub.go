@@ -16,17 +16,21 @@ const (
 	CreateHubXAmzTargetEnumSageMakerCreateHub CreateHubXAmzTargetEnum = "SageMaker.CreateHub"
 )
 
+func (e CreateHubXAmzTargetEnum) ToPointer() *CreateHubXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateHubXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreateHub":
-		*e = CreateHubXAmzTargetEnum(s)
+		*e = CreateHubXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateHubXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateHubXAmzTargetEnum: %v", v)
 	}
 }
 

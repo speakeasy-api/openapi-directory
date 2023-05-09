@@ -19,21 +19,25 @@ const (
 	IssuesListForRepoSortEnumComments IssuesListForRepoSortEnum = "comments"
 )
 
+func (e IssuesListForRepoSortEnum) ToPointer() *IssuesListForRepoSortEnum {
+	return &e
+}
+
 func (e *IssuesListForRepoSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
 		fallthrough
 	case "comments":
-		*e = IssuesListForRepoSortEnum(s)
+		*e = IssuesListForRepoSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListForRepoSortEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListForRepoSortEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	IssuesListForRepoStateEnumAll    IssuesListForRepoStateEnum = "all"
 )
 
+func (e IssuesListForRepoStateEnum) ToPointer() *IssuesListForRepoStateEnum {
+	return &e
+}
+
 func (e *IssuesListForRepoStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "all":
-		*e = IssuesListForRepoStateEnum(s)
+		*e = IssuesListForRepoStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListForRepoStateEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListForRepoStateEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DeletePipelineXAmzTargetEnumSageMakerDeletePipeline DeletePipelineXAmzTargetEnum = "SageMaker.DeletePipeline"
 )
 
+func (e DeletePipelineXAmzTargetEnum) ToPointer() *DeletePipelineXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeletePipelineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DeletePipeline":
-		*e = DeletePipelineXAmzTargetEnum(s)
+		*e = DeletePipelineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletePipelineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletePipelineXAmzTargetEnum: %v", v)
 	}
 }
 

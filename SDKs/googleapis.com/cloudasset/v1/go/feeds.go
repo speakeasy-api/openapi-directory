@@ -34,7 +34,10 @@ func newFeeds(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // CloudassetFeedsCreate - Creates a feed in a parent project/folder/organization to listen to its asset updates.
 func (s *feeds) CloudassetFeedsCreate(ctx context.Context, request operations.CloudassetFeedsCreateRequest, security operations.CloudassetFeedsCreateSecurity) (*operations.CloudassetFeedsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/feeds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/feeds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateFeedRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *feeds) CloudassetFeedsCreate(ctx context.Context, request operations.Cl
 // CloudassetFeedsList - Lists all asset feeds in a parent project/folder/organization.
 func (s *feeds) CloudassetFeedsList(ctx context.Context, request operations.CloudassetFeedsListRequest, security operations.CloudassetFeedsListSecurity) (*operations.CloudassetFeedsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/feeds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/feeds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	MonitoringJobDefinitionSortKeyEnumCreationTime MonitoringJobDefinitionSortKeyEnum = "CreationTime"
 )
 
+func (e MonitoringJobDefinitionSortKeyEnum) ToPointer() *MonitoringJobDefinitionSortKeyEnum {
+	return &e
+}
+
 func (e *MonitoringJobDefinitionSortKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "CreationTime":
-		*e = MonitoringJobDefinitionSortKeyEnum(s)
+		*e = MonitoringJobDefinitionSortKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringJobDefinitionSortKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringJobDefinitionSortKeyEnum: %v", v)
 	}
 }

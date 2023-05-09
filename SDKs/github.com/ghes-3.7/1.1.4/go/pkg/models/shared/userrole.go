@@ -27,12 +27,16 @@ const (
 	UserRoleValueEnumE6be2762E4ad4108B72d1bbe884a0f91                     UserRoleValueEnum = "e6be2762-e4ad-4108-b72d-1bbe884a0f91"
 )
 
+func (e UserRoleValueEnum) ToPointer() *UserRoleValueEnum {
+	return &e
+}
+
 func (e *UserRoleValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "User":
 		fallthrough
 	case "user":
@@ -60,10 +64,10 @@ func (e *UserRoleValueEnum) UnmarshalJSON(data []byte) error {
 	case "0e338b8c-cc7f-498a-928d-ea3470d7e7e3":
 		fallthrough
 	case "e6be2762-e4ad-4108-b72d-1bbe884a0f91":
-		*e = UserRoleValueEnum(s)
+		*e = UserRoleValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserRoleValueEnum: %s", s)
+		return fmt.Errorf("invalid value for UserRoleValueEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	DestinationSyncModeEnumAppendDedup DestinationSyncModeEnum = "append_dedup"
 )
 
+func (e DestinationSyncModeEnum) ToPointer() *DestinationSyncModeEnum {
+	return &e
+}
+
 func (e *DestinationSyncModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "append":
 		fallthrough
 	case "overwrite":
 		fallthrough
 	case "append_dedup":
-		*e = DestinationSyncModeEnum(s)
+		*e = DestinationSyncModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinationSyncModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinationSyncModeEnum: %v", v)
 	}
 }

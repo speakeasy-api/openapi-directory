@@ -35,7 +35,10 @@ func newSalesEntries(defaultClient, securityClient HTTPClient, serverURL, langua
 // SalesEntriesDelete - Removes an existing Sales Entry.
 func (s *salesEntries) SalesEntriesDelete(ctx context.Context, request operations.SalesEntriesDeleteRequest) (*operations.SalesEntriesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesEntries/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/salesEntries/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -237,7 +240,10 @@ func (s *salesEntries) SalesEntriesProcessBatch(ctx context.Context, request []s
 // SalesEntriesPut - Updates an existing Sales Entry.
 func (s *salesEntries) SalesEntriesPut(ctx context.Context, request operations.SalesEntriesPutRequest) (*operations.SalesEntriesPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesEntries/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/salesEntries/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SalesEntryDto", "json")
 	if err != nil {
@@ -291,7 +297,10 @@ func (s *salesEntries) SalesEntriesPut(ctx context.Context, request operations.S
 // GetV1SalesEntriesID - Returns information about a single Sales Entry.
 func (s *salesEntries) GetV1SalesEntriesID(ctx context.Context, request operations.GetV1SalesEntriesIDRequest) (*operations.GetV1SalesEntriesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesEntries/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/salesEntries/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	AssociateGatewayToServerXAmzTargetEnumBackupOnPremisesV20210101AssociateGatewayToServer AssociateGatewayToServerXAmzTargetEnum = "BackupOnPremises_v20210101.AssociateGatewayToServer"
 )
 
+func (e AssociateGatewayToServerXAmzTargetEnum) ToPointer() *AssociateGatewayToServerXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateGatewayToServerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.AssociateGatewayToServer":
-		*e = AssociateGatewayToServerXAmzTargetEnum(s)
+		*e = AssociateGatewayToServerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateGatewayToServerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateGatewayToServerXAmzTargetEnum: %v", v)
 	}
 }
 

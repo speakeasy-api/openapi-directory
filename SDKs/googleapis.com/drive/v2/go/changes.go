@@ -35,7 +35,10 @@ func newChanges(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DriveChangesGet - Deprecated - Use changes.getStartPageToken and changes.list to retrieve recent changes.
 func (s *changes) DriveChangesGet(ctx context.Context, request operations.DriveChangesGetRequest, security operations.DriveChangesGetSecurity) (*operations.DriveChangesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/changes/{changeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/changes/{changeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

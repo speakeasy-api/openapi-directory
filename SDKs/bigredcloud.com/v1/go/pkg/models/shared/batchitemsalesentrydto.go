@@ -10,29 +10,33 @@ import (
 // BatchItemSalesEntryDtoOpCodeEnum - 1 - Create
 // 2 - Update
 // 3 - Delete
-type BatchItemSalesEntryDtoOpCodeEnum string
+type BatchItemSalesEntryDtoOpCodeEnum int
 
 const (
-	BatchItemSalesEntryDtoOpCodeEnumOne   BatchItemSalesEntryDtoOpCodeEnum = "1"
-	BatchItemSalesEntryDtoOpCodeEnumTwo   BatchItemSalesEntryDtoOpCodeEnum = "2"
-	BatchItemSalesEntryDtoOpCodeEnumThree BatchItemSalesEntryDtoOpCodeEnum = "3"
+	BatchItemSalesEntryDtoOpCodeEnumOne   BatchItemSalesEntryDtoOpCodeEnum = 1
+	BatchItemSalesEntryDtoOpCodeEnumTwo   BatchItemSalesEntryDtoOpCodeEnum = 2
+	BatchItemSalesEntryDtoOpCodeEnumThree BatchItemSalesEntryDtoOpCodeEnum = 3
 )
 
+func (e BatchItemSalesEntryDtoOpCodeEnum) ToPointer() *BatchItemSalesEntryDtoOpCodeEnum {
+	return &e
+}
+
 func (e *BatchItemSalesEntryDtoOpCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
-		*e = BatchItemSalesEntryDtoOpCodeEnum(s)
+	case 3:
+		*e = BatchItemSalesEntryDtoOpCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchItemSalesEntryDtoOpCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchItemSalesEntryDtoOpCodeEnum: %v", v)
 	}
 }
 

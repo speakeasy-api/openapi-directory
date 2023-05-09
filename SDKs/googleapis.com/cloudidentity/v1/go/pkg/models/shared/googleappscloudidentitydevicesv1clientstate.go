@@ -16,21 +16,25 @@ const (
 	GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnumNonCompliant               GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum = "NON_COMPLIANT"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLIANCE_STATE_UNSPECIFIED":
 		fallthrough
 	case "COMPLIANT":
 		fallthrough
 	case "NON_COMPLIANT":
-		*e = GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1ClientStateComplianceStateEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnumVeryGood               GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum = "VERY_GOOD"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEALTH_SCORE_UNSPECIFIED":
 		fallthrough
 	case "VERY_POOR":
@@ -63,10 +71,10 @@ func (e *GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum) UnmarshalJS
 	case "GOOD":
 		fallthrough
 	case "VERY_GOOD":
-		*e = GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1ClientStateHealthScoreEnum: %v", v)
 	}
 }
 
@@ -79,21 +87,25 @@ const (
 	GoogleAppsCloudidentityDevicesV1ClientStateManagedEnumUnmanaged               GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum = "UNMANAGED"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANAGED_STATE_UNSPECIFIED":
 		fallthrough
 	case "MANAGED":
 		fallthrough
 	case "UNMANAGED":
-		*e = GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1ClientStateManagedEnum: %v", v)
 	}
 }
 
@@ -106,21 +118,25 @@ const (
 	GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnumOwnerTypePartner     GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum = "OWNER_TYPE_PARTNER"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OWNER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "OWNER_TYPE_CUSTOMER":
 		fallthrough
 	case "OWNER_TYPE_PARTNER":
-		*e = GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1ClientStateOwnerTypeEnum: %v", v)
 	}
 }
 

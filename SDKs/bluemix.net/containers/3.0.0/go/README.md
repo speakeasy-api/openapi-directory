@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/bluemix.net/containers/3.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetContainersMessagesRequest{
+    ctx := context.Background()
+    res, err := s.APIInfo.GetContainersMessages(ctx, operations.GetContainersMessagesRequest{
         XAuthProjectID: "corrupti",
         XAuthToken: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.APIInfo.GetContainersMessages(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,82 +43,82 @@ func main() {
 ## Available Resources and Operations
 
 
-### APIInfo
+### [APIInfo](docs/apiinfo/README.md)
 
-* `GetContainersMessages` - List messages for the user
-* `GetContainersVersion` - List latest API version
+* [GetContainersMessages](docs/apiinfo/README.md#getcontainersmessages) - List messages for the user
+* [GetContainersVersion](docs/apiinfo/README.md#getcontainersversion) - List latest API version
 
-### Authentication
+### [Authentication](docs/authentication/README.md)
 
-* `GetTlskey` - Retrieve the TLS Certificate
-* `PutTlskeyRefresh` - Refresh the TLS Certificate
+* [GetTlskey](docs/authentication/README.md#gettlskey) - Retrieve the TLS Certificate
+* [PutTlskeyRefresh](docs/authentication/README.md#puttlskeyrefresh) - Refresh the TLS Certificate
 
-### ContainerGroups
+### [ContainerGroups](docs/containergroups/README.md)
 
-* `DeleteContainersGroupsNameOrID` - Stop and delete all container instances in a container group.
-* `GetContainersGroups` - List all container groups in a space
-* `GetContainersGroupsNameOrID` - Inspect a container group.
-* `PatchContainersGroupsNameOrID` - Update a container group.
-* `PostContainersGroups` - Create and start a container group.
-* `PostContainersGroupsNameOrIDMaproute` - Map a public route to a container group.
-* `PostContainersGroupsNameOrIDUnmaproute` - Unmap a public route from a container group
+* [DeleteContainersGroupsNameOrID](docs/containergroups/README.md#deletecontainersgroupsnameorid) - Stop and delete all container instances in a container group.
+* [GetContainersGroups](docs/containergroups/README.md#getcontainersgroups) - List all container groups in a space
+* [GetContainersGroupsNameOrID](docs/containergroups/README.md#getcontainersgroupsnameorid) - Inspect a container group.
+* [PatchContainersGroupsNameOrID](docs/containergroups/README.md#patchcontainersgroupsnameorid) - Update a container group.
+* [PostContainersGroups](docs/containergroups/README.md#postcontainersgroups) - Create and start a container group.
+* [PostContainersGroupsNameOrIDMaproute](docs/containergroups/README.md#postcontainersgroupsnameoridmaproute) - Map a public route to a container group.
+* [PostContainersGroupsNameOrIDUnmaproute](docs/containergroups/README.md#postcontainersgroupsnameoridunmaproute) - Unmap a public route from a container group
 
-### FileShares
+### [FileShares](docs/fileshares/README.md)
 
-* `DeleteVolumesFsName` - Delete a file share
-* `GetVolumesFsFlavorsJSON` - List available file share sizes
-* `GetVolumesFsJSON` - List available file shares in a space
-* `GetVolumesFsNameJSON` - Inspect a file share
-* `PostVolumesFsCreate` - Create a file share in a space
+* [DeleteVolumesFsName](docs/fileshares/README.md#deletevolumesfsname) - Delete a file share
+* [GetVolumesFsFlavorsJSON](docs/fileshares/README.md#getvolumesfsflavorsjson) - List available file share sizes
+* [GetVolumesFsJSON](docs/fileshares/README.md#getvolumesfsjson) - List available file shares in a space
+* [GetVolumesFsNameJSON](docs/fileshares/README.md#getvolumesfsnamejson) - Inspect a file share
+* [PostVolumesFsCreate](docs/fileshares/README.md#postvolumesfscreate) - Create a file share in a space
 
-### Images
+### [Images](docs/images/README.md)
 
-* `DeleteImagesID` - Remove a Docker image.
-* `GetImagesJSON` - List all Docker images that are available in your private Bluemix registry.
-* `GetImagesNameOrIDJSON` - Inspect a Docker image in private Bluemix registry
-* `PostBuild` - Build a Docker image from a Dockerfile
+* [DeleteImagesID](docs/images/README.md#deleteimagesid) - Remove a Docker image.
+* [GetImagesJSON](docs/images/README.md#getimagesjson) - List all Docker images that are available in your private Bluemix registry.
+* [GetImagesNameOrIDJSON](docs/images/README.md#getimagesnameoridjson) - Inspect a Docker image in private Bluemix registry
+* [PostBuild](docs/images/README.md#postbuild) - Build a Docker image from a Dockerfile
 
-### PrivateDockerImagesRegistry
+### [PrivateDockerImagesRegistry](docs/privatedockerimagesregistry/README.md)
 
-* `GetRegistryNamespaces` - Retrieve the namespace of an organization.
-* `GetRegistryNamespacesNamespace` - Check the availability of a namespace
-* `PutRegistryNamespacesNamespace` - Set a namespace for your private Bluemix registry.
+* [GetRegistryNamespaces](docs/privatedockerimagesregistry/README.md#getregistrynamespaces) - Retrieve the namespace of an organization.
+* [GetRegistryNamespacesNamespace](docs/privatedockerimagesregistry/README.md#getregistrynamespacesnamespace) - Check the availability of a namespace
+* [PutRegistryNamespacesNamespace](docs/privatedockerimagesregistry/README.md#putregistrynamespacesnamespace) - Set a namespace for your private Bluemix registry.
 
-### PublicIPAddresses
+### [PublicIPAddresses](docs/publicipaddresses/README.md)
 
-* `GetContainersFloatingIps` - List available public IP addresses in a space
-* `PostContainersFloatingIpsRequest` - Request a public IP address for a space
-* `PostContainersFloatingIpsIPRelease` - Release public IP address
-* `PostContainersNameOrIDFloatingIpsIPBind` - Bind a public IP address to a single container
-* `PostContainersNameOrIDFloatingIpsIPUnbind` - Unbind a public IP address from a container
+* [GetContainersFloatingIps](docs/publicipaddresses/README.md#getcontainersfloatingips) - List available public IP addresses in a space
+* [PostContainersFloatingIpsRequest](docs/publicipaddresses/README.md#postcontainersfloatingipsrequest) - Request a public IP address for a space
+* [PostContainersFloatingIpsIPRelease](docs/publicipaddresses/README.md#postcontainersfloatingipsiprelease) - Release public IP address
+* [PostContainersNameOrIDFloatingIpsIPBind](docs/publicipaddresses/README.md#postcontainersnameoridfloatingipsipbind) - Bind a public IP address to a single container
+* [PostContainersNameOrIDFloatingIpsIPUnbind](docs/publicipaddresses/README.md#postcontainersnameoridfloatingipsipunbind) - Unbind a public IP address from a container
 
-### Quota
+### [Quota](docs/quota/README.md)
 
-* `GetContainersQuota` - Retrieve organization and space specific quota
-* `GetContainersUsage` - List container sizes and quota limits
-* `PutContainersQuota` - Update space quota
+* [GetContainersQuota](docs/quota/README.md#getcontainersquota) - Retrieve organization and space specific quota
+* [GetContainersUsage](docs/quota/README.md#getcontainersusage) - List container sizes and quota limits
+* [PutContainersQuota](docs/quota/README.md#putcontainersquota) - Update space quota
 
-### SingleContainers
+### [SingleContainers](docs/singlecontainers/README.md)
 
-* `DeleteContainersNameOrID` - Remove a single container
-* `GetContainersJSON` - List single containers in a space.
-* `GetContainersIDStatus` - List the current state of a container.
-* `GetContainersNameOrIDJSON` - Inspect a single container
-* `PostContainersCreate` - Create and start a single container
-* `PostContainersNameOrIDPause` - Pause a single container
-* `PostContainersNameOrIDRename` - Rename a single container
-* `PostContainersNameOrIDRestart` - Restart a single container
-* `PostContainersNameOrIDStart` - Start a single container
-* `PostContainersNameOrIDStop` - Stop a single container
-* `PostContainersNameOrIDUnpause` - Unpause a single container
+* [DeleteContainersNameOrID](docs/singlecontainers/README.md#deletecontainersnameorid) - Remove a single container
+* [GetContainersJSON](docs/singlecontainers/README.md#getcontainersjson) - List single containers in a space.
+* [GetContainersIDStatus](docs/singlecontainers/README.md#getcontainersidstatus) - List the current state of a container.
+* [GetContainersNameOrIDJSON](docs/singlecontainers/README.md#getcontainersnameoridjson) - Inspect a single container
+* [PostContainersCreate](docs/singlecontainers/README.md#postcontainerscreate) - Create and start a single container
+* [PostContainersNameOrIDPause](docs/singlecontainers/README.md#postcontainersnameoridpause) - Pause a single container
+* [PostContainersNameOrIDRename](docs/singlecontainers/README.md#postcontainersnameoridrename) - Rename a single container
+* [PostContainersNameOrIDRestart](docs/singlecontainers/README.md#postcontainersnameoridrestart) - Restart a single container
+* [PostContainersNameOrIDStart](docs/singlecontainers/README.md#postcontainersnameoridstart) - Start a single container
+* [PostContainersNameOrIDStop](docs/singlecontainers/README.md#postcontainersnameoridstop) - Stop a single container
+* [PostContainersNameOrIDUnpause](docs/singlecontainers/README.md#postcontainersnameoridunpause) - Unpause a single container
 
-### Volumes
+### [Volumes](docs/volumes/README.md)
 
-* `DeleteVolumesName` - Delete a volume
-* `GetVolumesJSON` - List all volumes for a space
-* `GetVolumesNameJSON` - Retrieve detailed information about a volume. 
-* `PostVolumesCreate` - Create a volume in a space
-* `PostVolumesName` - Share a volume with another space
+* [DeleteVolumesName](docs/volumes/README.md#deletevolumesname) - Delete a volume
+* [GetVolumesJSON](docs/volumes/README.md#getvolumesjson) - List all volumes for a space
+* [GetVolumesNameJSON](docs/volumes/README.md#getvolumesnamejson) - Retrieve detailed information about a volume. 
+* [PostVolumesCreate](docs/volumes/README.md#postvolumescreate) - Create a volume in a space
+* [PostVolumesName](docs/volumes/README.md#postvolumesname) - Share a volume with another space
 <!-- End SDK Available Operations -->
 
 ### Maturity

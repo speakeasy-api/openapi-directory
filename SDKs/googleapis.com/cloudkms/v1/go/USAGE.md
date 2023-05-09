@@ -2,90 +2,88 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudkmsProjectsLocationsEkmConnectionsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.CloudkmsProjectsLocationsEkmConnectionsCreate(ctx, operations.CloudkmsProjectsLocationsEkmConnectionsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         EkmConnectionInput: &shared.EkmConnectionInput{
-            CryptoSpacePath: "provident",
-            Etag: "distinctio",
-            KeyManagementMode: "CLOUD_KMS",
+            CryptoSpacePath: sdk.String("provident"),
+            Etag: sdk.String("distinctio"),
+            KeyManagementMode: shared.EkmConnectionKeyManagementModeEnumCloudKms.ToPointer(),
             ServiceResolvers: []shared.ServiceResolverInput{
                 shared.ServiceResolverInput{
-                    EndpointFilter: "nulla",
-                    Hostname: "moral-star.info",
+                    EndpointFilter: sdk.String("nulla"),
+                    Hostname: sdk.String("moral-star.info"),
                     ServerCertificates: []shared.CertificateInput{
                         shared.CertificateInput{
-                            RawDer: "deserunt",
+                            RawDer: sdk.String("deserunt"),
                         },
                         shared.CertificateInput{
-                            RawDer: "suscipit",
+                            RawDer: sdk.String("suscipit"),
                         },
                         shared.CertificateInput{
-                            RawDer: "iure",
+                            RawDer: sdk.String("iure"),
                         },
                     },
-                    ServiceDirectoryService: "magnam",
+                    ServiceDirectoryService: sdk.String("magnam"),
                 },
                 shared.ServiceResolverInput{
-                    EndpointFilter: "debitis",
-                    Hostname: "awesome-voter.biz",
+                    EndpointFilter: sdk.String("debitis"),
+                    Hostname: sdk.String("awesome-voter.biz"),
                     ServerCertificates: []shared.CertificateInput{
                         shared.CertificateInput{
-                            RawDer: "molestiae",
+                            RawDer: sdk.String("molestiae"),
                         },
                         shared.CertificateInput{
-                            RawDer: "minus",
+                            RawDer: sdk.String("minus"),
                         },
                     },
-                    ServiceDirectoryService: "placeat",
+                    ServiceDirectoryService: sdk.String("placeat"),
                 },
                 shared.ServiceResolverInput{
-                    EndpointFilter: "voluptatum",
-                    Hostname: "lawful-missionary.info",
+                    EndpointFilter: sdk.String("voluptatum"),
+                    Hostname: sdk.String("lawful-missionary.info"),
                     ServerCertificates: []shared.CertificateInput{
                         shared.CertificateInput{
-                            RawDer: "temporibus",
+                            RawDer: sdk.String("temporibus"),
                         },
                         shared.CertificateInput{
-                            RawDer: "ab",
+                            RawDer: sdk.String("ab"),
                         },
                         shared.CertificateInput{
-                            RawDer: "quis",
+                            RawDer: sdk.String("quis"),
                         },
                         shared.CertificateInput{
-                            RawDer: "veritatis",
+                            RawDer: sdk.String("veritatis"),
                         },
                     },
-                    ServiceDirectoryService: "deserunt",
+                    ServiceDirectoryService: sdk.String("deserunt"),
                 },
             },
         },
-        AccessToken: "perferendis",
-        Alt: "media",
-        Callback: "repellendus",
-        EkmConnectionID: "sapiente",
-        Fields: "quo",
-        Key: "odit",
-        OauthToken: "at",
+        AccessToken: sdk.String("perferendis"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("repellendus"),
+        EkmConnectionID: sdk.String("sapiente"),
+        Fields: sdk.String("quo"),
+        Key: sdk.String("odit"),
+        OauthToken: sdk.String("at"),
         Parent: "at",
-        PrettyPrint: false,
-        QuotaUser: "maiores",
-        UploadType: "molestiae",
-        UploadProtocol: "quod",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.CloudkmsProjectsLocationsEkmConnectionsCreate(ctx, req, operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("maiores"),
+        UploadType: sdk.String("molestiae"),
+        UploadProtocol: sdk.String("quod"),
+    }, operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurity{
         Option1: &operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

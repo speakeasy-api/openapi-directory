@@ -16,21 +16,25 @@ const (
 	OrderChangeMessageCtEnumHeartbeat  OrderChangeMessageCtEnum = "HEARTBEAT"
 )
 
+func (e OrderChangeMessageCtEnum) ToPointer() *OrderChangeMessageCtEnum {
+	return &e
+}
+
 func (e *OrderChangeMessageCtEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUB_IMAGE":
 		fallthrough
 	case "RESUB_DELTA":
 		fallthrough
 	case "HEARTBEAT":
-		*e = OrderChangeMessageCtEnum(s)
+		*e = OrderChangeMessageCtEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderChangeMessageCtEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderChangeMessageCtEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	OrderChangeMessageSegmentTypeEnumSegEnd   OrderChangeMessageSegmentTypeEnum = "SEG_END"
 )
 
+func (e OrderChangeMessageSegmentTypeEnum) ToPointer() *OrderChangeMessageSegmentTypeEnum {
+	return &e
+}
+
 func (e *OrderChangeMessageSegmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEG_START":
 		fallthrough
 	case "SEG":
 		fallthrough
 	case "SEG_END":
-		*e = OrderChangeMessageSegmentTypeEnum(s)
+		*e = OrderChangeMessageSegmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderChangeMessageSegmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderChangeMessageSegmentTypeEnum: %v", v)
 	}
 }
 

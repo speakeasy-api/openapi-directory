@@ -16,17 +16,21 @@ const (
 	DescribeUserProfileXAmzTargetEnumSageMakerDescribeUserProfile DescribeUserProfileXAmzTargetEnum = "SageMaker.DescribeUserProfile"
 )
 
+func (e DescribeUserProfileXAmzTargetEnum) ToPointer() *DescribeUserProfileXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeUserProfileXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DescribeUserProfile":
-		*e = DescribeUserProfileXAmzTargetEnum(s)
+		*e = DescribeUserProfileXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeUserProfileXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeUserProfileXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	GetSchedulesScheduleASubIDContributorTypeEnumCommittee  GetSchedulesScheduleASubIDContributorTypeEnum = "committee"
 )
 
+func (e GetSchedulesScheduleASubIDContributorTypeEnum) ToPointer() *GetSchedulesScheduleASubIDContributorTypeEnum {
+	return &e
+}
+
 func (e *GetSchedulesScheduleASubIDContributorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "individual":
 		fallthrough
 	case "committee":
-		*e = GetSchedulesScheduleASubIDContributorTypeEnum(s)
+		*e = GetSchedulesScheduleASubIDContributorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchedulesScheduleASubIDContributorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchedulesScheduleASubIDContributorTypeEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	GetSchedulesScheduleASubIDRecipientCommitteeDesignationEnumD       GetSchedulesScheduleASubIDRecipientCommitteeDesignationEnum = "D"
 )
 
+func (e GetSchedulesScheduleASubIDRecipientCommitteeDesignationEnum) ToPointer() *GetSchedulesScheduleASubIDRecipientCommitteeDesignationEnum {
+	return &e
+}
+
 func (e *GetSchedulesScheduleASubIDRecipientCommitteeDesignationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "A":
@@ -64,10 +72,10 @@ func (e *GetSchedulesScheduleASubIDRecipientCommitteeDesignationEnum) UnmarshalJ
 	case "B":
 		fallthrough
 	case "D":
-		*e = GetSchedulesScheduleASubIDRecipientCommitteeDesignationEnum(s)
+		*e = GetSchedulesScheduleASubIDRecipientCommitteeDesignationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchedulesScheduleASubIDRecipientCommitteeDesignationEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchedulesScheduleASubIDRecipientCommitteeDesignationEnum: %v", v)
 	}
 }
 
@@ -83,12 +91,16 @@ const (
 	GetSchedulesScheduleASubIDRecipientCommitteeOrgTypeEnumW       GetSchedulesScheduleASubIDRecipientCommitteeOrgTypeEnum = "W"
 )
 
+func (e GetSchedulesScheduleASubIDRecipientCommitteeOrgTypeEnum) ToPointer() *GetSchedulesScheduleASubIDRecipientCommitteeOrgTypeEnum {
+	return &e
+}
+
 func (e *GetSchedulesScheduleASubIDRecipientCommitteeOrgTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "C":
@@ -102,10 +114,10 @@ func (e *GetSchedulesScheduleASubIDRecipientCommitteeOrgTypeEnum) UnmarshalJSON(
 	case "V":
 		fallthrough
 	case "W":
-		*e = GetSchedulesScheduleASubIDRecipientCommitteeOrgTypeEnum(s)
+		*e = GetSchedulesScheduleASubIDRecipientCommitteeOrgTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchedulesScheduleASubIDRecipientCommitteeOrgTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchedulesScheduleASubIDRecipientCommitteeOrgTypeEnum: %v", v)
 	}
 }
 
@@ -131,12 +143,16 @@ const (
 	GetSchedulesScheduleASubIDRecipientCommitteeTypeEnumZ       GetSchedulesScheduleASubIDRecipientCommitteeTypeEnum = "Z"
 )
 
+func (e GetSchedulesScheduleASubIDRecipientCommitteeTypeEnum) ToPointer() *GetSchedulesScheduleASubIDRecipientCommitteeTypeEnum {
+	return &e
+}
+
 func (e *GetSchedulesScheduleASubIDRecipientCommitteeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "C":
@@ -170,10 +186,10 @@ func (e *GetSchedulesScheduleASubIDRecipientCommitteeTypeEnum) UnmarshalJSON(dat
 	case "Y":
 		fallthrough
 	case "Z":
-		*e = GetSchedulesScheduleASubIDRecipientCommitteeTypeEnum(s)
+		*e = GetSchedulesScheduleASubIDRecipientCommitteeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchedulesScheduleASubIDRecipientCommitteeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchedulesScheduleASubIDRecipientCommitteeTypeEnum: %v", v)
 	}
 }
 

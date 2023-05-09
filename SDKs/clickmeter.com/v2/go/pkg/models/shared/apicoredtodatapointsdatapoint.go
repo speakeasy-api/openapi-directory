@@ -16,12 +16,16 @@ const (
 	APICoreDtoDatapointsDatapointStatusEnumDeleted APICoreDtoDatapointsDatapointStatusEnum = "Deleted"
 )
 
+func (e APICoreDtoDatapointsDatapointStatusEnum) ToPointer() *APICoreDtoDatapointsDatapointStatusEnum {
+	return &e
+}
+
 func (e *APICoreDtoDatapointsDatapointStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Paused":
@@ -29,10 +33,10 @@ func (e *APICoreDtoDatapointsDatapointStatusEnum) UnmarshalJSON(data []byte) err
 	case "Abuse":
 		fallthrough
 	case "Deleted":
-		*e = APICoreDtoDatapointsDatapointStatusEnum(s)
+		*e = APICoreDtoDatapointsDatapointStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APICoreDtoDatapointsDatapointStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for APICoreDtoDatapointsDatapointStatusEnum: %v", v)
 	}
 }
 
@@ -43,19 +47,23 @@ const (
 	APICoreDtoDatapointsDatapointTypeEnumTrackingPixel APICoreDtoDatapointsDatapointTypeEnum = "TrackingPixel"
 )
 
+func (e APICoreDtoDatapointsDatapointTypeEnum) ToPointer() *APICoreDtoDatapointsDatapointTypeEnum {
+	return &e
+}
+
 func (e *APICoreDtoDatapointsDatapointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrackingLink":
 		fallthrough
 	case "TrackingPixel":
-		*e = APICoreDtoDatapointsDatapointTypeEnum(s)
+		*e = APICoreDtoDatapointsDatapointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APICoreDtoDatapointsDatapointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for APICoreDtoDatapointsDatapointTypeEnum: %v", v)
 	}
 }
 

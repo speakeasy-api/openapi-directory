@@ -34,7 +34,10 @@ func newCountries(defaultClient, securityClient HTTPClient, serverURL, language,
 // DfareportingCountriesGet - Gets one country by ID.
 func (s *countries) DfareportingCountriesGet(ctx context.Context, request operations.DfareportingCountriesGetRequest, security operations.DfareportingCountriesGetSecurity) (*operations.DfareportingCountriesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/countries/{dartId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/countries/{dartId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *countries) DfareportingCountriesGet(ctx context.Context, request operat
 // DfareportingCountriesList - Retrieves a list of countries.
 func (s *countries) DfareportingCountriesList(ctx context.Context, request operations.DfareportingCountriesListRequest, security operations.DfareportingCountriesListSecurity) (*operations.DfareportingCountriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/countries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/countries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

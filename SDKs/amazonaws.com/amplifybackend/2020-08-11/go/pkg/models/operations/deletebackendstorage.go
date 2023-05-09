@@ -16,17 +16,21 @@ const (
 	DeleteBackendStorageRequestBodyServiceNameEnumS3 DeleteBackendStorageRequestBodyServiceNameEnum = "S3"
 )
 
+func (e DeleteBackendStorageRequestBodyServiceNameEnum) ToPointer() *DeleteBackendStorageRequestBodyServiceNameEnum {
+	return &e
+}
+
 func (e *DeleteBackendStorageRequestBodyServiceNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "S3":
-		*e = DeleteBackendStorageRequestBodyServiceNameEnum(s)
+		*e = DeleteBackendStorageRequestBodyServiceNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteBackendStorageRequestBodyServiceNameEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteBackendStorageRequestBodyServiceNameEnum: %v", v)
 	}
 }
 

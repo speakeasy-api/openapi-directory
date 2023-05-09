@@ -15,19 +15,23 @@ const (
 	NetworkPerformanceConfigTotalEgressBandwidthTierEnumTier1           NetworkPerformanceConfigTotalEgressBandwidthTierEnum = "TIER_1"
 )
 
+func (e NetworkPerformanceConfigTotalEgressBandwidthTierEnum) ToPointer() *NetworkPerformanceConfigTotalEgressBandwidthTierEnum {
+	return &e
+}
+
 func (e *NetworkPerformanceConfigTotalEgressBandwidthTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIER_UNSPECIFIED":
 		fallthrough
 	case "TIER_1":
-		*e = NetworkPerformanceConfigTotalEgressBandwidthTierEnum(s)
+		*e = NetworkPerformanceConfigTotalEgressBandwidthTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkPerformanceConfigTotalEgressBandwidthTierEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkPerformanceConfigTotalEgressBandwidthTierEnum: %v", v)
 	}
 }
 

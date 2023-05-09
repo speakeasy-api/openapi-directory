@@ -139,7 +139,10 @@ func (s *logs) LogsActions(ctx context.Context) (*operations.LogsActionsResponse
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *logs) LogsRead(ctx context.Context, request operations.LogsReadRequest) (*operations.LogsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/logs/{log_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/logs/{log_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

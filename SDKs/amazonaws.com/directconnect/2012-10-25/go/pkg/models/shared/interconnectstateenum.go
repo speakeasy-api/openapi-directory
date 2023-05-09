@@ -19,12 +19,16 @@ const (
 	InterconnectStateEnumUnknown   InterconnectStateEnum = "unknown"
 )
 
+func (e InterconnectStateEnum) ToPointer() *InterconnectStateEnum {
+	return &e
+}
+
 func (e *InterconnectStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "requested":
 		fallthrough
 	case "pending":
@@ -38,9 +42,9 @@ func (e *InterconnectStateEnum) UnmarshalJSON(data []byte) error {
 	case "deleted":
 		fallthrough
 	case "unknown":
-		*e = InterconnectStateEnum(s)
+		*e = InterconnectStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InterconnectStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InterconnectStateEnum: %v", v)
 	}
 }

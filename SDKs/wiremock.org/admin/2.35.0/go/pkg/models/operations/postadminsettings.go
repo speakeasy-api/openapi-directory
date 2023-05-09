@@ -16,17 +16,21 @@ const (
 	PostAdminSettingsRequestBodyUniformTypeEnumUniform PostAdminSettingsRequestBodyUniformTypeEnum = "uniform"
 )
 
+func (e PostAdminSettingsRequestBodyUniformTypeEnum) ToPointer() *PostAdminSettingsRequestBodyUniformTypeEnum {
+	return &e
+}
+
 func (e *PostAdminSettingsRequestBodyUniformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uniform":
-		*e = PostAdminSettingsRequestBodyUniformTypeEnum(s)
+		*e = PostAdminSettingsRequestBodyUniformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminSettingsRequestBodyUniformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminSettingsRequestBodyUniformTypeEnum: %v", v)
 	}
 }
 
@@ -44,17 +48,21 @@ const (
 	PostAdminSettingsRequestBodyLogNormalTypeEnumLognormal PostAdminSettingsRequestBodyLogNormalTypeEnum = "lognormal"
 )
 
+func (e PostAdminSettingsRequestBodyLogNormalTypeEnum) ToPointer() *PostAdminSettingsRequestBodyLogNormalTypeEnum {
+	return &e
+}
+
 func (e *PostAdminSettingsRequestBodyLogNormalTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lognormal":
-		*e = PostAdminSettingsRequestBodyLogNormalTypeEnum(s)
+		*e = PostAdminSettingsRequestBodyLogNormalTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminSettingsRequestBodyLogNormalTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminSettingsRequestBodyLogNormalTypeEnum: %v", v)
 	}
 }
 

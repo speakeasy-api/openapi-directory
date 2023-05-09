@@ -16,21 +16,25 @@ const (
 	ReplaceImageRequestImageReplaceMethodEnumCenterCrop                    ReplaceImageRequestImageReplaceMethodEnum = "CENTER_CROP"
 )
 
+func (e ReplaceImageRequestImageReplaceMethodEnum) ToPointer() *ReplaceImageRequestImageReplaceMethodEnum {
+	return &e
+}
+
 func (e *ReplaceImageRequestImageReplaceMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMAGE_REPLACE_METHOD_UNSPECIFIED":
 		fallthrough
 	case "CENTER_INSIDE":
 		fallthrough
 	case "CENTER_CROP":
-		*e = ReplaceImageRequestImageReplaceMethodEnum(s)
+		*e = ReplaceImageRequestImageReplaceMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplaceImageRequestImageReplaceMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplaceImageRequestImageReplaceMethodEnum: %v", v)
 	}
 }
 

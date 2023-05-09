@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PostMakePdfRequestBody{
-        HTML: "corrupti",
-        Key: "provident",
-        URL: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.PostMakePdf(ctx, req)
+    res, err := s.PostMakePdf(ctx, operations.PostMakePdfRequestBody{
+        HTML: sdk.String("corrupti"),
+        Key: "provident",
+        URL: sdk.String("distinctio"),
+    })
     if err != nil {
         log.Fatal(err)
     }

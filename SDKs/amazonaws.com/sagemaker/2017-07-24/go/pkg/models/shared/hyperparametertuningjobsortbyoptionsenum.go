@@ -15,20 +15,24 @@ const (
 	HyperParameterTuningJobSortByOptionsEnumCreationTime HyperParameterTuningJobSortByOptionsEnum = "CreationTime"
 )
 
+func (e HyperParameterTuningJobSortByOptionsEnum) ToPointer() *HyperParameterTuningJobSortByOptionsEnum {
+	return &e
+}
+
 func (e *HyperParameterTuningJobSortByOptionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "Status":
 		fallthrough
 	case "CreationTime":
-		*e = HyperParameterTuningJobSortByOptionsEnum(s)
+		*e = HyperParameterTuningJobSortByOptionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HyperParameterTuningJobSortByOptionsEnum: %s", s)
+		return fmt.Errorf("invalid value for HyperParameterTuningJobSortByOptionsEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	CreativeAssetAlignmentEnumAlignmentLeft   CreativeAssetAlignmentEnum = "ALIGNMENT_LEFT"
 )
 
+func (e CreativeAssetAlignmentEnum) ToPointer() *CreativeAssetAlignmentEnum {
+	return &e
+}
+
 func (e *CreativeAssetAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALIGNMENT_TOP":
 		fallthrough
 	case "ALIGNMENT_RIGHT":
@@ -30,10 +34,10 @@ func (e *CreativeAssetAlignmentEnum) UnmarshalJSON(data []byte) error {
 	case "ALIGNMENT_BOTTOM":
 		fallthrough
 	case "ALIGNMENT_LEFT":
-		*e = CreativeAssetAlignmentEnum(s)
+		*e = CreativeAssetAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetAlignmentEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	CreativeAssetArtworkTypeEnumArtworkTypeImage CreativeAssetArtworkTypeEnum = "ARTWORK_TYPE_IMAGE"
 )
 
+func (e CreativeAssetArtworkTypeEnum) ToPointer() *CreativeAssetArtworkTypeEnum {
+	return &e
+}
+
 func (e *CreativeAssetArtworkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARTWORK_TYPE_FLASH":
 		fallthrough
 	case "ARTWORK_TYPE_HTML5":
@@ -60,10 +68,10 @@ func (e *CreativeAssetArtworkTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ARTWORK_TYPE_MIXED":
 		fallthrough
 	case "ARTWORK_TYPE_IMAGE":
-		*e = CreativeAssetArtworkTypeEnum(s)
+		*e = CreativeAssetArtworkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetArtworkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetArtworkTypeEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	CreativeAssetChildAssetTypeEnumChildAssetTypeData  CreativeAssetChildAssetTypeEnum = "CHILD_ASSET_TYPE_DATA"
 )
 
+func (e CreativeAssetChildAssetTypeEnum) ToPointer() *CreativeAssetChildAssetTypeEnum {
+	return &e
+}
+
 func (e *CreativeAssetChildAssetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHILD_ASSET_TYPE_FLASH":
 		fallthrough
 	case "CHILD_ASSET_TYPE_VIDEO":
@@ -90,10 +102,10 @@ func (e *CreativeAssetChildAssetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CHILD_ASSET_TYPE_IMAGE":
 		fallthrough
 	case "CHILD_ASSET_TYPE_DATA":
-		*e = CreativeAssetChildAssetTypeEnum(s)
+		*e = CreativeAssetChildAssetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetChildAssetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetChildAssetTypeEnum: %v", v)
 	}
 }
 
@@ -168,12 +180,16 @@ const (
 	CreativeAssetDetectedFeaturesEnumSvgFeImage             CreativeAssetDetectedFeaturesEnum = "SVG_FE_IMAGE"
 )
 
+func (e CreativeAssetDetectedFeaturesEnum) ToPointer() *CreativeAssetDetectedFeaturesEnum {
+	return &e
+}
+
 func (e *CreativeAssetDetectedFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSS_FONT_FACE":
 		fallthrough
 	case "CSS_BACKGROUND_SIZE":
@@ -305,10 +321,10 @@ func (e *CreativeAssetDetectedFeaturesEnum) UnmarshalJSON(data []byte) error {
 	case "SVG_FILTERS":
 		fallthrough
 	case "SVG_FE_IMAGE":
-		*e = CreativeAssetDetectedFeaturesEnum(s)
+		*e = CreativeAssetDetectedFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetDetectedFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetDetectedFeaturesEnum: %v", v)
 	}
 }
 
@@ -328,12 +344,16 @@ const (
 	CreativeAssetDisplayTypeEnumAssetDisplayTypeBackdrop              CreativeAssetDisplayTypeEnum = "ASSET_DISPLAY_TYPE_BACKDROP"
 )
 
+func (e CreativeAssetDisplayTypeEnum) ToPointer() *CreativeAssetDisplayTypeEnum {
+	return &e
+}
+
 func (e *CreativeAssetDisplayTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSET_DISPLAY_TYPE_INPAGE":
 		fallthrough
 	case "ASSET_DISPLAY_TYPE_FLOATING":
@@ -353,10 +373,10 @@ func (e *CreativeAssetDisplayTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ASSET_DISPLAY_TYPE_VPAID_NON_LINEAR":
 		fallthrough
 	case "ASSET_DISPLAY_TYPE_BACKDROP":
-		*e = CreativeAssetDisplayTypeEnum(s)
+		*e = CreativeAssetDisplayTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetDisplayTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetDisplayTypeEnum: %v", v)
 	}
 }
 
@@ -369,21 +389,25 @@ const (
 	CreativeAssetDurationTypeEnumAssetDurationTypeCustom CreativeAssetDurationTypeEnum = "ASSET_DURATION_TYPE_CUSTOM"
 )
 
+func (e CreativeAssetDurationTypeEnum) ToPointer() *CreativeAssetDurationTypeEnum {
+	return &e
+}
+
 func (e *CreativeAssetDurationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSET_DURATION_TYPE_AUTO":
 		fallthrough
 	case "ASSET_DURATION_TYPE_NONE":
 		fallthrough
 	case "ASSET_DURATION_TYPE_CUSTOM":
-		*e = CreativeAssetDurationTypeEnum(s)
+		*e = CreativeAssetDurationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetDurationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetDurationTypeEnum: %v", v)
 	}
 }
 
@@ -396,21 +420,25 @@ const (
 	CreativeAssetOrientationEnumSquare    CreativeAssetOrientationEnum = "SQUARE"
 )
 
+func (e CreativeAssetOrientationEnum) ToPointer() *CreativeAssetOrientationEnum {
+	return &e
+}
+
 func (e *CreativeAssetOrientationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LANDSCAPE":
 		fallthrough
 	case "PORTRAIT":
 		fallthrough
 	case "SQUARE":
-		*e = CreativeAssetOrientationEnum(s)
+		*e = CreativeAssetOrientationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetOrientationEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetOrientationEnum: %v", v)
 	}
 }
 
@@ -423,21 +451,25 @@ const (
 	CreativeAssetPositionLeftUnitEnumOffsetUnitPixelFromCenter CreativeAssetPositionLeftUnitEnum = "OFFSET_UNIT_PIXEL_FROM_CENTER"
 )
 
+func (e CreativeAssetPositionLeftUnitEnum) ToPointer() *CreativeAssetPositionLeftUnitEnum {
+	return &e
+}
+
 func (e *CreativeAssetPositionLeftUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFFSET_UNIT_PIXEL":
 		fallthrough
 	case "OFFSET_UNIT_PERCENT":
 		fallthrough
 	case "OFFSET_UNIT_PIXEL_FROM_CENTER":
-		*e = CreativeAssetPositionLeftUnitEnum(s)
+		*e = CreativeAssetPositionLeftUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetPositionLeftUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetPositionLeftUnitEnum: %v", v)
 	}
 }
 
@@ -450,21 +482,25 @@ const (
 	CreativeAssetPositionTopUnitEnumOffsetUnitPixelFromCenter CreativeAssetPositionTopUnitEnum = "OFFSET_UNIT_PIXEL_FROM_CENTER"
 )
 
+func (e CreativeAssetPositionTopUnitEnum) ToPointer() *CreativeAssetPositionTopUnitEnum {
+	return &e
+}
+
 func (e *CreativeAssetPositionTopUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFFSET_UNIT_PIXEL":
 		fallthrough
 	case "OFFSET_UNIT_PERCENT":
 		fallthrough
 	case "OFFSET_UNIT_PIXEL_FROM_CENTER":
-		*e = CreativeAssetPositionTopUnitEnum(s)
+		*e = CreativeAssetPositionTopUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetPositionTopUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetPositionTopUnitEnum: %v", v)
 	}
 }
 
@@ -484,12 +520,16 @@ const (
 	CreativeAssetRoleEnumTranscodedAudio CreativeAssetRoleEnum = "TRANSCODED_AUDIO"
 )
 
+func (e CreativeAssetRoleEnum) ToPointer() *CreativeAssetRoleEnum {
+	return &e
+}
+
 func (e *CreativeAssetRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIMARY":
 		fallthrough
 	case "BACKUP_IMAGE":
@@ -509,10 +549,10 @@ func (e *CreativeAssetRoleEnum) UnmarshalJSON(data []byte) error {
 	case "PARENT_AUDIO":
 		fallthrough
 	case "TRANSCODED_AUDIO":
-		*e = CreativeAssetRoleEnum(s)
+		*e = CreativeAssetRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetRoleEnum: %v", v)
 	}
 }
 
@@ -524,19 +564,23 @@ const (
 	CreativeAssetStartTimeTypeEnumAssetStartTimeTypeCustom CreativeAssetStartTimeTypeEnum = "ASSET_START_TIME_TYPE_CUSTOM"
 )
 
+func (e CreativeAssetStartTimeTypeEnum) ToPointer() *CreativeAssetStartTimeTypeEnum {
+	return &e
+}
+
 func (e *CreativeAssetStartTimeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSET_START_TIME_TYPE_NONE":
 		fallthrough
 	case "ASSET_START_TIME_TYPE_CUSTOM":
-		*e = CreativeAssetStartTimeTypeEnum(s)
+		*e = CreativeAssetStartTimeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetStartTimeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetStartTimeTypeEnum: %v", v)
 	}
 }
 
@@ -549,21 +593,25 @@ const (
 	CreativeAssetWindowModeEnumTransparent CreativeAssetWindowModeEnum = "TRANSPARENT"
 )
 
+func (e CreativeAssetWindowModeEnum) ToPointer() *CreativeAssetWindowModeEnum {
+	return &e
+}
+
 func (e *CreativeAssetWindowModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPAQUE":
 		fallthrough
 	case "WINDOW":
 		fallthrough
 	case "TRANSPARENT":
-		*e = CreativeAssetWindowModeEnum(s)
+		*e = CreativeAssetWindowModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetWindowModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetWindowModeEnum: %v", v)
 	}
 }
 

@@ -22,12 +22,16 @@ const (
 	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumLooker                      GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "LOOKER"
 )
 
+func (e GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum) ToPointer() *GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTEGRATED_SYSTEM_UNSPECIFIED":
 		fallthrough
 	case "BIGQUERY":
@@ -45,10 +49,10 @@ func (e *GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum) Unmars
 	case "CLOUD_SQL":
 		fallthrough
 	case "LOOKER":
-		*e = GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum(s)
+		*e = GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum: %v", v)
 	}
 }
 
@@ -62,12 +66,16 @@ const (
 	GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnumEntryGroup                  GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnum = "ENTRY_GROUP"
 )
 
+func (e GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnum) ToPointer() *GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEARCH_RESULT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ENTRY":
@@ -75,10 +83,10 @@ func (e *GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnum) Unmars
 	case "TAG_TEMPLATE":
 		fallthrough
 	case "ENTRY_GROUP":
-		*e = GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnum(s)
+		*e = GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnum: %v", v)
 	}
 }
 

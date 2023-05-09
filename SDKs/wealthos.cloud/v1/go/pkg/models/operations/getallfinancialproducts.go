@@ -76,19 +76,23 @@ const (
 	GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnumNo  GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnum = "NO"
 )
 
+func (e GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnum) ToPointer() *GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnum {
+	return &e
+}
+
 func (e *GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "YES":
 		fallthrough
 	case "NO":
-		*e = GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnum(s)
+		*e = GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnum: %v", v)
 	}
 }
 

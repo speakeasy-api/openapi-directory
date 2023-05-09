@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type ListCiscoSwitchesSecurity struct {
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+}
+
 type ListCiscoSwitchesResponse struct {
 	ContentType string
 	// OK

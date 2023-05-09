@@ -16,17 +16,21 @@ const (
 	DeleteFlowTemplateXAmzTargetEnumIotThingsGraphFrontEndServiceDeleteFlowTemplate DeleteFlowTemplateXAmzTargetEnum = "IotThingsGraphFrontEndService.DeleteFlowTemplate"
 )
 
+func (e DeleteFlowTemplateXAmzTargetEnum) ToPointer() *DeleteFlowTemplateXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteFlowTemplateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.DeleteFlowTemplate":
-		*e = DeleteFlowTemplateXAmzTargetEnum(s)
+		*e = DeleteFlowTemplateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteFlowTemplateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteFlowTemplateXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	FailedItemErrorCodeEnumInternalError    FailedItemErrorCodeEnum = "INTERNAL_ERROR"
 )
 
+func (e FailedItemErrorCodeEnum) ToPointer() *FailedItemErrorCodeEnum {
+	return &e
+}
+
 func (e *FailedItemErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVALID_ARN":
 		fallthrough
 	case "DUPLICATE_ARN":
@@ -35,9 +39,9 @@ func (e *FailedItemErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "LIMIT_EXCEEDED":
 		fallthrough
 	case "INTERNAL_ERROR":
-		*e = FailedItemErrorCodeEnum(s)
+		*e = FailedItemErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailedItemErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for FailedItemErrorCodeEnum: %v", v)
 	}
 }

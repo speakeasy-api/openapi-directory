@@ -27,12 +27,16 @@ const (
 	GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnumGeneralClassificationAnnotation    GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnum = "GENERAL_CLASSIFICATION_ANNOTATION"
 )
 
+func (e GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnum) ToPointer() *GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANNOTATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IMAGE_CLASSIFICATION_ANNOTATION":
@@ -60,10 +64,10 @@ func (e *GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnum) UnmarshalJ
 	case "TEXT_ENTITY_EXTRACTION_ANNOTATION":
 		fallthrough
 	case "GENERAL_CLASSIFICATION_ANNOTATION":
-		*e = GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1InputConfigAnnotationTypeEnum: %v", v)
 	}
 }
 
@@ -78,12 +82,16 @@ const (
 	GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnumGeneralData         GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnum = "GENERAL_DATA"
 )
 
+func (e GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnum) ToPointer() *GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IMAGE":
@@ -93,10 +101,10 @@ func (e *GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnum) UnmarshalJSON(da
 	case "TEXT":
 		fallthrough
 	case "GENERAL_DATA":
-		*e = GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1InputConfigDataTypeEnum: %v", v)
 	}
 }
 

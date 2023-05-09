@@ -19,12 +19,16 @@ const (
 	Ec2InstanceStateEnumNotFound     Ec2InstanceStateEnum = "NOT_FOUND"
 )
 
+func (e Ec2InstanceStateEnum) ToPointer() *Ec2InstanceStateEnum {
+	return &e
+}
+
 func (e *Ec2InstanceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "RUNNING":
@@ -38,9 +42,9 @@ func (e *Ec2InstanceStateEnum) UnmarshalJSON(data []byte) error {
 	case "TERMINATED":
 		fallthrough
 	case "NOT_FOUND":
-		*e = Ec2InstanceStateEnum(s)
+		*e = Ec2InstanceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ec2InstanceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for Ec2InstanceStateEnum: %v", v)
 	}
 }

@@ -13,17 +13,21 @@ const (
 	SourceAuthSpecificationAuthTypeEnumOauth20 SourceAuthSpecificationAuthTypeEnum = "oauth2.0"
 )
 
+func (e SourceAuthSpecificationAuthTypeEnum) ToPointer() *SourceAuthSpecificationAuthTypeEnum {
+	return &e
+}
+
 func (e *SourceAuthSpecificationAuthTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "oauth2.0":
-		*e = SourceAuthSpecificationAuthTypeEnum(s)
+		*e = SourceAuthSpecificationAuthTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceAuthSpecificationAuthTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceAuthSpecificationAuthTypeEnum: %v", v)
 	}
 }
 

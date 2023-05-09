@@ -16,17 +16,21 @@ const (
 	GetKeyRotationStatusXAmzTargetEnumTrentServiceGetKeyRotationStatus GetKeyRotationStatusXAmzTargetEnum = "TrentService.GetKeyRotationStatus"
 )
 
+func (e GetKeyRotationStatusXAmzTargetEnum) ToPointer() *GetKeyRotationStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetKeyRotationStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.GetKeyRotationStatus":
-		*e = GetKeyRotationStatusXAmzTargetEnum(s)
+		*e = GetKeyRotationStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetKeyRotationStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetKeyRotationStatusXAmzTargetEnum: %v", v)
 	}
 }
 

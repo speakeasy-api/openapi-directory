@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -38,6 +39,7 @@ pkg/models/operations/firebaseappcheckprojectsservicesbatchupdate.go
 pkg/models/operations/firebaseappcheckprojectsservicesget.go
 pkg/models/operations/firebaseappcheckprojectsserviceslist.go
 pkg/models/operations/firebaseappcheckprojectsservicespatch.go
+pkg/models/operations/firebaseappcheckprojectsverifyappchecktoken.go
 pkg/models/shared/googlefirebaseappcheckv1betabatchgetappattestconfigsresponse.go
 pkg/models/shared/googlefirebaseappcheckv1betaappattestconfig.go
 pkg/models/shared/altenum.go
@@ -76,4 +78,8 @@ pkg/models/shared/googlefirebaseappcheckv1betaservice.go
 pkg/models/shared/googlefirebaseappcheckv1betabatchupdateservicesrequest.go
 pkg/models/shared/googlefirebaseappcheckv1betaupdateservicerequest.go
 pkg/models/shared/googlefirebaseappcheckv1betalistservicesresponse.go
+pkg/models/shared/googlefirebaseappcheckv1betaverifyappchecktokenresponse.go
+pkg/models/shared/googlefirebaseappcheckv1betaverifyappchecktokenrequest.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

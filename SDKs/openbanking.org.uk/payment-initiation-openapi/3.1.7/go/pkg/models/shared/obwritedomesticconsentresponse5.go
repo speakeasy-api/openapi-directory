@@ -16,19 +16,23 @@ const (
 	OBWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnumSingle OBWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
+func (e OBWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum) ToPointer() *OBWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Any":
 		fallthrough
 	case "Single":
-		*e = OBWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum(s)
+		*e = OBWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticConsentResponse5DataAuthorisationAuthorisationTypeEnum: %v", v)
 	}
 }
 
@@ -136,19 +140,23 @@ const (
 	OBWriteDomesticConsentResponse5DataReadRefundAccountEnumYes OBWriteDomesticConsentResponse5DataReadRefundAccountEnum = "Yes"
 )
 
+func (e OBWriteDomesticConsentResponse5DataReadRefundAccountEnum) ToPointer() *OBWriteDomesticConsentResponse5DataReadRefundAccountEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticConsentResponse5DataReadRefundAccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No":
 		fallthrough
 	case "Yes":
-		*e = OBWriteDomesticConsentResponse5DataReadRefundAccountEnum(s)
+		*e = OBWriteDomesticConsentResponse5DataReadRefundAccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticConsentResponse5DataReadRefundAccountEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticConsentResponse5DataReadRefundAccountEnum: %v", v)
 	}
 }
 
@@ -162,12 +170,16 @@ const (
 	OBWriteDomesticConsentResponse5DataStatusEnumRejected              OBWriteDomesticConsentResponse5DataStatusEnum = "Rejected"
 )
 
+func (e OBWriteDomesticConsentResponse5DataStatusEnum) ToPointer() *OBWriteDomesticConsentResponse5DataStatusEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticConsentResponse5DataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authorised":
 		fallthrough
 	case "AwaitingAuthorisation":
@@ -175,10 +187,10 @@ func (e *OBWriteDomesticConsentResponse5DataStatusEnum) UnmarshalJSON(data []byt
 	case "Consumed":
 		fallthrough
 	case "Rejected":
-		*e = OBWriteDomesticConsentResponse5DataStatusEnum(s)
+		*e = OBWriteDomesticConsentResponse5DataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticConsentResponse5DataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticConsentResponse5DataStatusEnum: %v", v)
 	}
 }
 

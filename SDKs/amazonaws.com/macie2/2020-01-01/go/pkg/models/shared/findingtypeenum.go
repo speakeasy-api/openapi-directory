@@ -24,12 +24,16 @@ const (
 	FindingTypeEnumPolicyIamUserS3BucketSharedWithCloudFront FindingTypeEnum = "Policy:IAMUser/S3BucketSharedWithCloudFront"
 )
 
+func (e FindingTypeEnum) ToPointer() *FindingTypeEnum {
+	return &e
+}
+
 func (e *FindingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SensitiveData:S3Object/Multiple":
 		fallthrough
 	case "SensitiveData:S3Object/Financial":
@@ -51,9 +55,9 @@ func (e *FindingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Policy:IAMUser/S3BlockPublicAccessDisabled":
 		fallthrough
 	case "Policy:IAMUser/S3BucketSharedWithCloudFront":
-		*e = FindingTypeEnum(s)
+		*e = FindingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingTypeEnum: %v", v)
 	}
 }

@@ -16,21 +16,25 @@ const (
 	CreateVideoRequestSourceEnumDrive             CreateVideoRequestSourceEnum = "DRIVE"
 )
 
+func (e CreateVideoRequestSourceEnum) ToPointer() *CreateVideoRequestSourceEnum {
+	return &e
+}
+
 func (e *CreateVideoRequestSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOURCE_UNSPECIFIED":
 		fallthrough
 	case "YOUTUBE":
 		fallthrough
 	case "DRIVE":
-		*e = CreateVideoRequestSourceEnum(s)
+		*e = CreateVideoRequestSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVideoRequestSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVideoRequestSourceEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETDeleteDBInstanceActionEnumDeleteDbInstance GETDeleteDBInstanceActionEnum = "DeleteDBInstance"
 )
 
+func (e GETDeleteDBInstanceActionEnum) ToPointer() *GETDeleteDBInstanceActionEnum {
+	return &e
+}
+
 func (e *GETDeleteDBInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteDBInstance":
-		*e = GETDeleteDBInstanceActionEnum(s)
+		*e = GETDeleteDBInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteDBInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteDBInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteDBInstanceVersionEnumTwoThousandAndFourteen1031 GETDeleteDBInstanceVersionEnum = "2014-10-31"
 )
 
+func (e GETDeleteDBInstanceVersionEnum) ToPointer() *GETDeleteDBInstanceVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETDeleteDBInstanceVersionEnum(s)
+		*e = GETDeleteDBInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteDBInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteDBInstanceVersionEnum: %v", v)
 	}
 }
 

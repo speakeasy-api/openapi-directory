@@ -15,17 +15,21 @@ const (
 	GETCopyImageActionEnumCopyImage GETCopyImageActionEnum = "CopyImage"
 )
 
+func (e GETCopyImageActionEnum) ToPointer() *GETCopyImageActionEnum {
+	return &e
+}
+
 func (e *GETCopyImageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CopyImage":
-		*e = GETCopyImageActionEnum(s)
+		*e = GETCopyImageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCopyImageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCopyImageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCopyImageVersionEnumTwoThousandAndSixteen1115 GETCopyImageVersionEnum = "2016-11-15"
 )
 
+func (e GETCopyImageVersionEnum) ToPointer() *GETCopyImageVersionEnum {
+	return &e
+}
+
 func (e *GETCopyImageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCopyImageVersionEnum(s)
+		*e = GETCopyImageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCopyImageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCopyImageVersionEnum: %v", v)
 	}
 }
 

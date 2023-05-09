@@ -14,18 +14,22 @@ const (
 	CustomRoutingProtocolEnumUDP CustomRoutingProtocolEnum = "UDP"
 )
 
+func (e CustomRoutingProtocolEnum) ToPointer() *CustomRoutingProtocolEnum {
+	return &e
+}
+
 func (e *CustomRoutingProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TCP":
 		fallthrough
 	case "UDP":
-		*e = CustomRoutingProtocolEnum(s)
+		*e = CustomRoutingProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomRoutingProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomRoutingProtocolEnum: %v", v)
 	}
 }

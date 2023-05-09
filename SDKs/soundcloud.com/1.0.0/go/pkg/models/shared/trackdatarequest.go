@@ -26,21 +26,25 @@ const (
 	TrackDataRequestTrackEmbeddableByEnumNone TrackDataRequestTrackEmbeddableByEnum = "none"
 )
 
+func (e TrackDataRequestTrackEmbeddableByEnum) ToPointer() *TrackDataRequestTrackEmbeddableByEnum {
+	return &e
+}
+
 func (e *TrackDataRequestTrackEmbeddableByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "me":
 		fallthrough
 	case "none":
-		*e = TrackDataRequestTrackEmbeddableByEnum(s)
+		*e = TrackDataRequestTrackEmbeddableByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrackDataRequestTrackEmbeddableByEnum: %s", s)
+		return fmt.Errorf("invalid value for TrackDataRequestTrackEmbeddableByEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	TrackDataRequestTrackLicenseEnumCcByNcSa          TrackDataRequestTrackLicenseEnum = "cc-by-nc-sa"
 )
 
+func (e TrackDataRequestTrackLicenseEnum) ToPointer() *TrackDataRequestTrackLicenseEnum {
+	return &e
+}
+
 func (e *TrackDataRequestTrackLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no-rights-reserved":
 		fallthrough
 	case "all-rights-reserved":
@@ -79,10 +87,10 @@ func (e *TrackDataRequestTrackLicenseEnum) UnmarshalJSON(data []byte) error {
 	case "cc-by-nc-nd":
 		fallthrough
 	case "cc-by-nc-sa":
-		*e = TrackDataRequestTrackLicenseEnum(s)
+		*e = TrackDataRequestTrackLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrackDataRequestTrackLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for TrackDataRequestTrackLicenseEnum: %v", v)
 	}
 }
 
@@ -93,19 +101,23 @@ const (
 	TrackDataRequestTrackSharingEnumPrivate TrackDataRequestTrackSharingEnum = "private"
 )
 
+func (e TrackDataRequestTrackSharingEnum) ToPointer() *TrackDataRequestTrackSharingEnum {
+	return &e
+}
+
 func (e *TrackDataRequestTrackSharingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = TrackDataRequestTrackSharingEnum(s)
+		*e = TrackDataRequestTrackSharingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrackDataRequestTrackSharingEnum: %s", s)
+		return fmt.Errorf("invalid value for TrackDataRequestTrackSharingEnum: %v", v)
 	}
 }
 

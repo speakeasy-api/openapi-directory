@@ -14,18 +14,22 @@ const (
 	CrawlerLineageSettingsEnumDisable CrawlerLineageSettingsEnum = "DISABLE"
 )
 
+func (e CrawlerLineageSettingsEnum) ToPointer() *CrawlerLineageSettingsEnum {
+	return &e
+}
+
 func (e *CrawlerLineageSettingsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLE":
 		fallthrough
 	case "DISABLE":
-		*e = CrawlerLineageSettingsEnum(s)
+		*e = CrawlerLineageSettingsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrawlerLineageSettingsEnum: %s", s)
+		return fmt.Errorf("invalid value for CrawlerLineageSettingsEnum: %v", v)
 	}
 }

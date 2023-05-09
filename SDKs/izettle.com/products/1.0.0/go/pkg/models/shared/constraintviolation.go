@@ -29,12 +29,16 @@ const (
 	ConstraintViolationConstraintTypeEnumUnknown                ConstraintViolationConstraintTypeEnum = "UNKNOWN"
 )
 
+func (e ConstraintViolationConstraintTypeEnum) ToPointer() *ConstraintViolationConstraintTypeEnum {
+	return &e
+}
+
 func (e *ConstraintViolationConstraintTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MUST_BE_FALSE":
 		fallthrough
 	case "MUST_BE_TRUE":
@@ -68,10 +72,10 @@ func (e *ConstraintViolationConstraintTypeEnum) UnmarshalJSON(data []byte) error
 	case "INVALID_RANGE":
 		fallthrough
 	case "UNKNOWN":
-		*e = ConstraintViolationConstraintTypeEnum(s)
+		*e = ConstraintViolationConstraintTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConstraintViolationConstraintTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConstraintViolationConstraintTypeEnum: %v", v)
 	}
 }
 

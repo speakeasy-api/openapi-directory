@@ -16,17 +16,21 @@ const (
 	UpdateAgentXAmzTargetEnumFmrsServiceUpdateAgent UpdateAgentXAmzTargetEnum = "FmrsService.UpdateAgent"
 )
 
+func (e UpdateAgentXAmzTargetEnum) ToPointer() *UpdateAgentXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateAgentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FmrsService.UpdateAgent":
-		*e = UpdateAgentXAmzTargetEnum(s)
+		*e = UpdateAgentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAgentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAgentXAmzTargetEnum: %v", v)
 	}
 }
 

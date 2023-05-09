@@ -17,19 +17,23 @@ const (
 	PutDefaultEncryptionConfigurationRequestBodyEncryptionTypeEnumKmsBasedEncryption        PutDefaultEncryptionConfigurationRequestBodyEncryptionTypeEnum = "KMS_BASED_ENCRYPTION"
 )
 
+func (e PutDefaultEncryptionConfigurationRequestBodyEncryptionTypeEnum) ToPointer() *PutDefaultEncryptionConfigurationRequestBodyEncryptionTypeEnum {
+	return &e
+}
+
 func (e *PutDefaultEncryptionConfigurationRequestBodyEncryptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SITEWISE_DEFAULT_ENCRYPTION":
 		fallthrough
 	case "KMS_BASED_ENCRYPTION":
-		*e = PutDefaultEncryptionConfigurationRequestBodyEncryptionTypeEnum(s)
+		*e = PutDefaultEncryptionConfigurationRequestBodyEncryptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutDefaultEncryptionConfigurationRequestBodyEncryptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutDefaultEncryptionConfigurationRequestBodyEncryptionTypeEnum: %v", v)
 	}
 }
 

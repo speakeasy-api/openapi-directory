@@ -16,17 +16,21 @@ const (
 	TagResource20161125OperationEnumTag TagResource20161125OperationEnum = "Tag"
 )
 
+func (e TagResource20161125OperationEnum) ToPointer() *TagResource20161125OperationEnum {
+	return &e
+}
+
 func (e *TagResource20161125OperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Tag":
-		*e = TagResource20161125OperationEnum(s)
+		*e = TagResource20161125OperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagResource20161125OperationEnum: %s", s)
+		return fmt.Errorf("invalid value for TagResource20161125OperationEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	EvidenceFinderEnablementStatusEnumDisableInProgress EvidenceFinderEnablementStatusEnum = "DISABLE_IN_PROGRESS"
 )
 
+func (e EvidenceFinderEnablementStatusEnum) ToPointer() *EvidenceFinderEnablementStatusEnum {
+	return &e
+}
+
 func (e *EvidenceFinderEnablementStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
@@ -29,9 +33,9 @@ func (e *EvidenceFinderEnablementStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ENABLE_IN_PROGRESS":
 		fallthrough
 	case "DISABLE_IN_PROGRESS":
-		*e = EvidenceFinderEnablementStatusEnum(s)
+		*e = EvidenceFinderEnablementStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EvidenceFinderEnablementStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EvidenceFinderEnablementStatusEnum: %v", v)
 	}
 }

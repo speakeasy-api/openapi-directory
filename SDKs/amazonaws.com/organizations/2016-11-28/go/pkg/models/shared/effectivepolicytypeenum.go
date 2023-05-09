@@ -15,20 +15,24 @@ const (
 	EffectivePolicyTypeEnumAiservicesOptOutPolicy EffectivePolicyTypeEnum = "AISERVICES_OPT_OUT_POLICY"
 )
 
+func (e EffectivePolicyTypeEnum) ToPointer() *EffectivePolicyTypeEnum {
+	return &e
+}
+
 func (e *EffectivePolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TAG_POLICY":
 		fallthrough
 	case "BACKUP_POLICY":
 		fallthrough
 	case "AISERVICES_OPT_OUT_POLICY":
-		*e = EffectivePolicyTypeEnum(s)
+		*e = EffectivePolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EffectivePolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EffectivePolicyTypeEnum: %v", v)
 	}
 }

@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type ResolutionsSecurity struct {
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
+}
+
 type ResolutionsResponse struct {
 	// Access denied. Auth error.
 	AccessDenied *shared.AccessDenied

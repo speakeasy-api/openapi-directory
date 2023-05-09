@@ -16,12 +16,16 @@ const (
 	DirectConnectGatewayStateEnumDeleted   DirectConnectGatewayStateEnum = "deleted"
 )
 
+func (e DirectConnectGatewayStateEnum) ToPointer() *DirectConnectGatewayStateEnum {
+	return &e
+}
+
 func (e *DirectConnectGatewayStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
@@ -29,9 +33,9 @@ func (e *DirectConnectGatewayStateEnum) UnmarshalJSON(data []byte) error {
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = DirectConnectGatewayStateEnum(s)
+		*e = DirectConnectGatewayStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectConnectGatewayStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectConnectGatewayStateEnum: %v", v)
 	}
 }

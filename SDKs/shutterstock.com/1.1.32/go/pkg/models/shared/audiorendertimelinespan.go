@@ -15,19 +15,23 @@ const (
 	AudioRenderTimelineSpanSpanTypeEnumUnmetered AudioRenderTimelineSpanSpanTypeEnum = "unmetered"
 )
 
+func (e AudioRenderTimelineSpanSpanTypeEnum) ToPointer() *AudioRenderTimelineSpanSpanTypeEnum {
+	return &e
+}
+
 func (e *AudioRenderTimelineSpanSpanTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "metered":
 		fallthrough
 	case "unmetered":
-		*e = AudioRenderTimelineSpanSpanTypeEnum(s)
+		*e = AudioRenderTimelineSpanSpanTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AudioRenderTimelineSpanSpanTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AudioRenderTimelineSpanSpanTypeEnum: %v", v)
 	}
 }
 

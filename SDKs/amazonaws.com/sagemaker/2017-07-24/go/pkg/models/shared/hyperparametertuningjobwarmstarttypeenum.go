@@ -14,18 +14,22 @@ const (
 	HyperParameterTuningJobWarmStartTypeEnumTransferLearning          HyperParameterTuningJobWarmStartTypeEnum = "TransferLearning"
 )
 
+func (e HyperParameterTuningJobWarmStartTypeEnum) ToPointer() *HyperParameterTuningJobWarmStartTypeEnum {
+	return &e
+}
+
 func (e *HyperParameterTuningJobWarmStartTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IdenticalDataAndAlgorithm":
 		fallthrough
 	case "TransferLearning":
-		*e = HyperParameterTuningJobWarmStartTypeEnum(s)
+		*e = HyperParameterTuningJobWarmStartTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HyperParameterTuningJobWarmStartTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HyperParameterTuningJobWarmStartTypeEnum: %v", v)
 	}
 }

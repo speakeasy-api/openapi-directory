@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-// PostFloatingIpsIDActionsChangeDNSPtrChangeDNSPTRRequest - Select the IP address for which to change the DNS entry by passing `ip`. For a Floating IP of type `ipv4` this must exactly match the IP address of the Floating IP. For a Floating IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Floating IP.
+// PostFloatingIpsIDActionsChangeDNSPtrChangeDNSPTRRequest - Select the IP address for which to change the DNS entry by passing `ip`. For a Floating IP of type `ipv4` this must exactly match the IP address of the Floating IP. For a Floating IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Floating IP. You can add up to 100 IPv6 reverse DNS entries.
 //
 // The target hostname is set by passing `dns_ptr`.
 type PostFloatingIpsIDActionsChangeDNSPtrChangeDNSPTRRequest struct {
@@ -19,7 +19,7 @@ type PostFloatingIpsIDActionsChangeDNSPtrChangeDNSPTRRequest struct {
 }
 
 type PostFloatingIpsIDActionsChangeDNSPtrRequest struct {
-	// Select the IP address for which to change the DNS entry by passing `ip`. For a Floating IP of type `ipv4` this must exactly match the IP address of the Floating IP. For a Floating IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Floating IP.
+	// Select the IP address for which to change the DNS entry by passing `ip`. For a Floating IP of type `ipv4` this must exactly match the IP address of the Floating IP. For a Floating IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Floating IP. You can add up to 100 IPv6 reverse DNS entries.
 	//
 	// The target hostname is set by passing `dns_ptr`.
 	//
@@ -52,21 +52,25 @@ const (
 	PostFloatingIpsIDActionsChangeDNSPtrActionResponseActionStatusEnumError   PostFloatingIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum = "error"
 )
 
+func (e PostFloatingIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum) ToPointer() *PostFloatingIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostFloatingIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostFloatingIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum(s)
+		*e = PostFloatingIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFloatingIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFloatingIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum: %v", v)
 	}
 }
 

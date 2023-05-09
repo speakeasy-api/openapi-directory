@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vonage.com/user/1.11.8/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.UserCtrlGetUserByIDRequest{
+    ctx := context.Background()
+    res, err := s.UserCtrlGetUserByID(ctx, operations.UserCtrlGetUserByIDRequest{
         AccountID: "corrupti",
         UserID: 5928.45,
-    }
-
-    ctx := context.Background()
-    res, err := s.UserCtrlGetUserByID(ctx, req, operations.UserCtrlGetUserByIDSecurity{
+    }, operations.UserCtrlGetUserByIDSecurity{
         BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
@@ -47,10 +44,10 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `UserCtrlGetUserByID` - Get user data by account ID and user ID
-* `UserCtrlGetUsers` - Get account users data by account ID
+* [UserCtrlGetUserByID](docs/sdk/README.md#userctrlgetuserbyid) - Get user data by account ID and user ID
+* [UserCtrlGetUsers](docs/sdk/README.md#userctrlgetusers) - Get account users data by account ID
 <!-- End SDK Available Operations -->
 
 ### Maturity

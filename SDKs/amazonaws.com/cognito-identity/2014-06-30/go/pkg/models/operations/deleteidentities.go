@@ -16,17 +16,21 @@ const (
 	DeleteIdentitiesXAmzTargetEnumAwsCognitoIdentityServiceDeleteIdentities DeleteIdentitiesXAmzTargetEnum = "AWSCognitoIdentityService.DeleteIdentities"
 )
 
+func (e DeleteIdentitiesXAmzTargetEnum) ToPointer() *DeleteIdentitiesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteIdentitiesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityService.DeleteIdentities":
-		*e = DeleteIdentitiesXAmzTargetEnum(s)
+		*e = DeleteIdentitiesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteIdentitiesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteIdentitiesXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -50,19 +50,23 @@ const (
 	StorageBucketsGetProjectionEnumNoACL StorageBucketsGetProjectionEnum = "noAcl"
 )
 
+func (e StorageBucketsGetProjectionEnum) ToPointer() *StorageBucketsGetProjectionEnum {
+	return &e
+}
+
 func (e *StorageBucketsGetProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "full":
 		fallthrough
 	case "noAcl":
-		*e = StorageBucketsGetProjectionEnum(s)
+		*e = StorageBucketsGetProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageBucketsGetProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageBucketsGetProjectionEnum: %v", v)
 	}
 }
 

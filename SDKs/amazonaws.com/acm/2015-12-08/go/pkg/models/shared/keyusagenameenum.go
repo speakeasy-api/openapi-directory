@@ -23,12 +23,16 @@ const (
 	KeyUsageNameEnumCustom             KeyUsageNameEnum = "CUSTOM"
 )
 
+func (e KeyUsageNameEnum) ToPointer() *KeyUsageNameEnum {
+	return &e
+}
+
 func (e *KeyUsageNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIGITAL_SIGNATURE":
 		fallthrough
 	case "NON_REPUDIATION":
@@ -50,9 +54,9 @@ func (e *KeyUsageNameEnum) UnmarshalJSON(data []byte) error {
 	case "ANY":
 		fallthrough
 	case "CUSTOM":
-		*e = KeyUsageNameEnum(s)
+		*e = KeyUsageNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyUsageNameEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyUsageNameEnum: %v", v)
 	}
 }

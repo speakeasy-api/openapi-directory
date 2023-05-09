@@ -37,12 +37,16 @@ const (
 	GoogleAdsSearchads360V0CommonSegmentsConversionActionCategoryEnumConvertedLead   GoogleAdsSearchads360V0CommonSegmentsConversionActionCategoryEnum = "CONVERTED_LEAD"
 )
 
+func (e GoogleAdsSearchads360V0CommonSegmentsConversionActionCategoryEnum) ToPointer() *GoogleAdsSearchads360V0CommonSegmentsConversionActionCategoryEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonSegmentsConversionActionCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -90,10 +94,10 @@ func (e *GoogleAdsSearchads360V0CommonSegmentsConversionActionCategoryEnum) Unma
 	case "QUALIFIED_LEAD":
 		fallthrough
 	case "CONVERTED_LEAD":
-		*e = GoogleAdsSearchads360V0CommonSegmentsConversionActionCategoryEnum(s)
+		*e = GoogleAdsSearchads360V0CommonSegmentsConversionActionCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonSegmentsConversionActionCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonSegmentsConversionActionCategoryEnum: %v", v)
 	}
 }
 
@@ -112,12 +116,16 @@ const (
 	GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnumSunday      GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnum = "SUNDAY"
 )
 
+func (e GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnum) ToPointer() *GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -135,10 +143,10 @@ func (e *GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnum) UnmarshalJSON(data 
 	case "SATURDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnum(s)
+		*e = GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnum: %v", v)
 	}
 }
 
@@ -155,12 +163,16 @@ const (
 	GoogleAdsSearchads360V0CommonSegmentsDeviceEnumOther       GoogleAdsSearchads360V0CommonSegmentsDeviceEnum = "OTHER"
 )
 
+func (e GoogleAdsSearchads360V0CommonSegmentsDeviceEnum) ToPointer() *GoogleAdsSearchads360V0CommonSegmentsDeviceEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonSegmentsDeviceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -174,10 +186,10 @@ func (e *GoogleAdsSearchads360V0CommonSegmentsDeviceEnum) UnmarshalJSON(data []b
 	case "CONNECTED_TV":
 		fallthrough
 	case "OTHER":
-		*e = GoogleAdsSearchads360V0CommonSegmentsDeviceEnum(s)
+		*e = GoogleAdsSearchads360V0CommonSegmentsDeviceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonSegmentsDeviceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonSegmentsDeviceEnum: %v", v)
 	}
 }
 
@@ -195,6 +207,8 @@ type GoogleAdsSearchads360V0CommonSegments struct {
 	DayOfWeek *GoogleAdsSearchads360V0CommonSegmentsDayOfWeekEnum `json:"dayOfWeek,omitempty"`
 	// Device to which metrics apply.
 	Device *GoogleAdsSearchads360V0CommonSegmentsDeviceEnum `json:"device,omitempty"`
+	// A Keyword criterion segment.
+	Keyword *GoogleAdsSearchads360V0CommonKeyword `json:"keyword,omitempty"`
 	// Month as represented by the date of the first day of a month. Formatted as yyyy-MM-dd.
 	Month *string `json:"month,omitempty"`
 	// Quarter as represented by the date of the first day of a quarter. Uses the calendar year for quarters, for example, the second quarter of 2018 starts on 2018-04-01. Formatted as yyyy-MM-dd.

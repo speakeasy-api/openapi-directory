@@ -66,21 +66,25 @@ const (
 	OBWriteInternationalScheduled3DataInitiationExchangeRateInformationRateTypeEnumIndicative OBWriteInternationalScheduled3DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
 )
 
+func (e OBWriteInternationalScheduled3DataInitiationExchangeRateInformationRateTypeEnum) ToPointer() *OBWriteInternationalScheduled3DataInitiationExchangeRateInformationRateTypeEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalScheduled3DataInitiationExchangeRateInformationRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Actual":
 		fallthrough
 	case "Agreed":
 		fallthrough
 	case "Indicative":
-		*e = OBWriteInternationalScheduled3DataInitiationExchangeRateInformationRateTypeEnum(s)
+		*e = OBWriteInternationalScheduled3DataInitiationExchangeRateInformationRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalScheduled3DataInitiationExchangeRateInformationRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalScheduled3DataInitiationExchangeRateInformationRateTypeEnum: %v", v)
 	}
 }
 
@@ -113,19 +117,23 @@ const (
 	OBWriteInternationalScheduled3DataInitiationInstructionPriorityEnumUrgent OBWriteInternationalScheduled3DataInitiationInstructionPriorityEnum = "Urgent"
 )
 
+func (e OBWriteInternationalScheduled3DataInitiationInstructionPriorityEnum) ToPointer() *OBWriteInternationalScheduled3DataInitiationInstructionPriorityEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalScheduled3DataInitiationInstructionPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Normal":
 		fallthrough
 	case "Urgent":
-		*e = OBWriteInternationalScheduled3DataInitiationInstructionPriorityEnum(s)
+		*e = OBWriteInternationalScheduled3DataInitiationInstructionPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalScheduled3DataInitiationInstructionPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalScheduled3DataInitiationInstructionPriorityEnum: %v", v)
 	}
 }
 

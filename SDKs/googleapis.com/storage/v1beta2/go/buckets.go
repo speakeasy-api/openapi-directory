@@ -35,7 +35,10 @@ func newBuckets(defaultClient, securityClient HTTPClient, serverURL, language, s
 // StorageBucketsDelete - Permanently deletes an empty bucket.
 func (s *buckets) StorageBucketsDelete(ctx context.Context, request operations.StorageBucketsDeleteRequest, security operations.StorageBucketsDeleteSecurity) (*operations.StorageBucketsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *buckets) StorageBucketsDelete(ctx context.Context, request operations.S
 // StorageBucketsGet - Returns metadata for the specified bucket.
 func (s *buckets) StorageBucketsGet(ctx context.Context, request operations.StorageBucketsGetRequest, security operations.StorageBucketsGetSecurity) (*operations.StorageBucketsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *buckets) StorageBucketsList(ctx context.Context, request operations.Sto
 // StorageBucketsPatch - Updates a bucket. This method supports patch semantics.
 func (s *buckets) StorageBucketsPatch(ctx context.Context, request operations.StorageBucketsPatchRequest, security operations.StorageBucketsPatchSecurity) (*operations.StorageBucketsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Bucket1", "json")
 	if err != nil {
@@ -280,7 +289,10 @@ func (s *buckets) StorageBucketsPatch(ctx context.Context, request operations.St
 // StorageBucketsUpdate - Updates a bucket.
 func (s *buckets) StorageBucketsUpdate(ctx context.Context, request operations.StorageBucketsUpdateRequest, security operations.StorageBucketsUpdateSecurity) (*operations.StorageBucketsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Bucket1", "json")
 	if err != nil {

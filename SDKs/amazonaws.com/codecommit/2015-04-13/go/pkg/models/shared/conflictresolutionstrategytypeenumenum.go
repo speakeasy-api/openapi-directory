@@ -16,12 +16,16 @@ const (
 	ConflictResolutionStrategyTypeEnumEnumAutomerge         ConflictResolutionStrategyTypeEnumEnum = "AUTOMERGE"
 )
 
+func (e ConflictResolutionStrategyTypeEnumEnum) ToPointer() *ConflictResolutionStrategyTypeEnumEnum {
+	return &e
+}
+
 func (e *ConflictResolutionStrategyTypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "ACCEPT_SOURCE":
@@ -29,9 +33,9 @@ func (e *ConflictResolutionStrategyTypeEnumEnum) UnmarshalJSON(data []byte) erro
 	case "ACCEPT_DESTINATION":
 		fallthrough
 	case "AUTOMERGE":
-		*e = ConflictResolutionStrategyTypeEnumEnum(s)
+		*e = ConflictResolutionStrategyTypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConflictResolutionStrategyTypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ConflictResolutionStrategyTypeEnumEnum: %v", v)
 	}
 }

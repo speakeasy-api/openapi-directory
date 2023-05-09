@@ -15,17 +15,21 @@ const (
 	POSTCopySnapshotActionEnumCopySnapshot POSTCopySnapshotActionEnum = "CopySnapshot"
 )
 
+func (e POSTCopySnapshotActionEnum) ToPointer() *POSTCopySnapshotActionEnum {
+	return &e
+}
+
 func (e *POSTCopySnapshotActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CopySnapshot":
-		*e = POSTCopySnapshotActionEnum(s)
+		*e = POSTCopySnapshotActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCopySnapshotActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCopySnapshotActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCopySnapshotVersionEnumTwoThousandAndFifteen0202 POSTCopySnapshotVersionEnum = "2015-02-02"
 )
 
+func (e POSTCopySnapshotVersionEnum) ToPointer() *POSTCopySnapshotVersionEnum {
+	return &e
+}
+
 func (e *POSTCopySnapshotVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTCopySnapshotVersionEnum(s)
+		*e = POSTCopySnapshotVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCopySnapshotVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCopySnapshotVersionEnum: %v", v)
 	}
 }
 

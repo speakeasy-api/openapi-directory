@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/rapidapi.com/football-pre
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAPIV2ListFederationsRequest{
-        XRapidAPIKey: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-    }
-
     ctx := context.Background()
-    res, err := s.GetAPIV2ListFederations(ctx, req)
+    res, err := s.GetAPIV2ListFederations(ctx, operations.GetAPIV2ListFederationsRequest{
+        XRapidAPIKey: sdk.String("89bd9d8d-69a6-474e-8f46-7cc8796ed151"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -44,13 +41,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetAPIV2ListFederations` - Returns an array of all the available federations.
-* `GetAPIV2ListMarkets` - Returns an array of all the supported prediction markets
-* `GetAPIV2PerformanceStats` - Returns predictions accuracy in the last 1, 7, 14, 30 days.
-* `GetAPIV2Predictions` - This endpoint returns by default the next non-expired football predictions. URL parameters can be specified to show specific date in the past or future or to filter by federation and prediction market name.
-* `GetAPIV2PredictionsID` - Returns all predictions available for a match id.
+* [GetAPIV2ListFederations](docs/sdk/README.md#getapiv2listfederations) - Returns an array of all the available federations.
+* [GetAPIV2ListMarkets](docs/sdk/README.md#getapiv2listmarkets) - Returns an array of all the supported prediction markets
+* [GetAPIV2PerformanceStats](docs/sdk/README.md#getapiv2performancestats) - Returns predictions accuracy in the last 1, 7, 14, 30 days.
+* [GetAPIV2Predictions](docs/sdk/README.md#getapiv2predictions) - This endpoint returns by default the next non-expired football predictions. URL parameters can be specified to show specific date in the past or future or to filter by federation and prediction market name.
+* [GetAPIV2PredictionsID](docs/sdk/README.md#getapiv2predictionsid) - Returns all predictions available for a match id.
 <!-- End SDK Available Operations -->
 
 ### Maturity

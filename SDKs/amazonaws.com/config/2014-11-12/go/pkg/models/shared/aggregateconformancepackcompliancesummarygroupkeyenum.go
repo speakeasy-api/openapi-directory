@@ -14,18 +14,22 @@ const (
 	AggregateConformancePackComplianceSummaryGroupKeyEnumAwsRegion AggregateConformancePackComplianceSummaryGroupKeyEnum = "AWS_REGION"
 )
 
+func (e AggregateConformancePackComplianceSummaryGroupKeyEnum) ToPointer() *AggregateConformancePackComplianceSummaryGroupKeyEnum {
+	return &e
+}
+
 func (e *AggregateConformancePackComplianceSummaryGroupKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_ID":
 		fallthrough
 	case "AWS_REGION":
-		*e = AggregateConformancePackComplianceSummaryGroupKeyEnum(s)
+		*e = AggregateConformancePackComplianceSummaryGroupKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregateConformancePackComplianceSummaryGroupKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregateConformancePackComplianceSummaryGroupKeyEnum: %v", v)
 	}
 }

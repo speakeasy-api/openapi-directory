@@ -15,20 +15,24 @@ const (
 	EngineFamilyEnumSqlserver  EngineFamilyEnum = "SQLSERVER"
 )
 
+func (e EngineFamilyEnum) ToPointer() *EngineFamilyEnum {
+	return &e
+}
+
 func (e *EngineFamilyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MYSQL":
 		fallthrough
 	case "POSTGRESQL":
 		fallthrough
 	case "SQLSERVER":
-		*e = EngineFamilyEnum(s)
+		*e = EngineFamilyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EngineFamilyEnum: %s", s)
+		return fmt.Errorf("invalid value for EngineFamilyEnum: %v", v)
 	}
 }

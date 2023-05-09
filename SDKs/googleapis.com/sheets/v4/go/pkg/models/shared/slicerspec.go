@@ -17,12 +17,16 @@ const (
 	SlicerSpecHorizontalAlignmentEnumRight                      SlicerSpecHorizontalAlignmentEnum = "RIGHT"
 )
 
+func (e SlicerSpecHorizontalAlignmentEnum) ToPointer() *SlicerSpecHorizontalAlignmentEnum {
+	return &e
+}
+
 func (e *SlicerSpecHorizontalAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HORIZONTAL_ALIGN_UNSPECIFIED":
 		fallthrough
 	case "LEFT":
@@ -30,10 +34,10 @@ func (e *SlicerSpecHorizontalAlignmentEnum) UnmarshalJSON(data []byte) error {
 	case "CENTER":
 		fallthrough
 	case "RIGHT":
-		*e = SlicerSpecHorizontalAlignmentEnum(s)
+		*e = SlicerSpecHorizontalAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SlicerSpecHorizontalAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for SlicerSpecHorizontalAlignmentEnum: %v", v)
 	}
 }
 

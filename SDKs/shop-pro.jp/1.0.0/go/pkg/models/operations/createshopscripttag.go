@@ -22,19 +22,23 @@ const (
 	CreateShopScriptTagRequestBodyScriptTagDisplayScopeEnumThanksPage CreateShopScriptTagRequestBodyScriptTagDisplayScopeEnum = "thanks_page"
 )
 
+func (e CreateShopScriptTagRequestBodyScriptTagDisplayScopeEnum) ToPointer() *CreateShopScriptTagRequestBodyScriptTagDisplayScopeEnum {
+	return &e
+}
+
 func (e *CreateShopScriptTagRequestBodyScriptTagDisplayScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shop":
 		fallthrough
 	case "thanks_page":
-		*e = CreateShopScriptTagRequestBodyScriptTagDisplayScopeEnum(s)
+		*e = CreateShopScriptTagRequestBodyScriptTagDisplayScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateShopScriptTagRequestBodyScriptTagDisplayScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateShopScriptTagRequestBodyScriptTagDisplayScopeEnum: %v", v)
 	}
 }
 
@@ -68,19 +72,23 @@ const (
 	CreateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnumThanksPage CreateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum = "thanks_page"
 )
 
+func (e CreateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum) ToPointer() *CreateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum {
+	return &e
+}
+
 func (e *CreateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shop":
 		fallthrough
 	case "thanks_page":
-		*e = CreateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum(s)
+		*e = CreateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum: %v", v)
 	}
 }
 

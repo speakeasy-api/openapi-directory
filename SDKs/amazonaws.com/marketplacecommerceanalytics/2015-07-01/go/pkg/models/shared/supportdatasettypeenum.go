@@ -14,18 +14,22 @@ const (
 	SupportDataSetTypeEnumTestCustomerSupportContactsData SupportDataSetTypeEnum = "test_customer_support_contacts_data"
 )
 
+func (e SupportDataSetTypeEnum) ToPointer() *SupportDataSetTypeEnum {
+	return &e
+}
+
 func (e *SupportDataSetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer_support_contacts_data":
 		fallthrough
 	case "test_customer_support_contacts_data":
-		*e = SupportDataSetTypeEnum(s)
+		*e = SupportDataSetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SupportDataSetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SupportDataSetTypeEnum: %v", v)
 	}
 }

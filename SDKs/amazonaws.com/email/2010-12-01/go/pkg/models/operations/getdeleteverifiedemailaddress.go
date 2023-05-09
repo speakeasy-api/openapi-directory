@@ -15,17 +15,21 @@ const (
 	GETDeleteVerifiedEmailAddressActionEnumDeleteVerifiedEmailAddress GETDeleteVerifiedEmailAddressActionEnum = "DeleteVerifiedEmailAddress"
 )
 
+func (e GETDeleteVerifiedEmailAddressActionEnum) ToPointer() *GETDeleteVerifiedEmailAddressActionEnum {
+	return &e
+}
+
 func (e *GETDeleteVerifiedEmailAddressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteVerifiedEmailAddress":
-		*e = GETDeleteVerifiedEmailAddressActionEnum(s)
+		*e = GETDeleteVerifiedEmailAddressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVerifiedEmailAddressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVerifiedEmailAddressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteVerifiedEmailAddressVersionEnumTwoThousandAndTen1201 GETDeleteVerifiedEmailAddressVersionEnum = "2010-12-01"
 )
 
+func (e GETDeleteVerifiedEmailAddressVersionEnum) ToPointer() *GETDeleteVerifiedEmailAddressVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteVerifiedEmailAddressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETDeleteVerifiedEmailAddressVersionEnum(s)
+		*e = GETDeleteVerifiedEmailAddressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVerifiedEmailAddressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVerifiedEmailAddressVersionEnum: %v", v)
 	}
 }
 

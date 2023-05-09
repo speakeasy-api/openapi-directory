@@ -14,18 +14,22 @@ const (
 	KeyStorageSecurityStandardEnumFips1402Level3OrHigher KeyStorageSecurityStandardEnum = "FIPS_140_2_LEVEL_3_OR_HIGHER"
 )
 
+func (e KeyStorageSecurityStandardEnum) ToPointer() *KeyStorageSecurityStandardEnum {
+	return &e
+}
+
 func (e *KeyStorageSecurityStandardEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIPS_140_2_LEVEL_2_OR_HIGHER":
 		fallthrough
 	case "FIPS_140_2_LEVEL_3_OR_HIGHER":
-		*e = KeyStorageSecurityStandardEnum(s)
+		*e = KeyStorageSecurityStandardEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyStorageSecurityStandardEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyStorageSecurityStandardEnum: %v", v)
 	}
 }

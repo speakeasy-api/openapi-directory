@@ -20,12 +20,16 @@ const (
 	GetLoadBalancersIDMetricsTypeEnumBandwidth            GetLoadBalancersIDMetricsTypeEnum = "bandwidth"
 )
 
+func (e GetLoadBalancersIDMetricsTypeEnum) ToPointer() *GetLoadBalancersIDMetricsTypeEnum {
+	return &e
+}
+
 func (e *GetLoadBalancersIDMetricsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open_connections":
 		fallthrough
 	case "connections_per_second":
@@ -33,10 +37,10 @@ func (e *GetLoadBalancersIDMetricsTypeEnum) UnmarshalJSON(data []byte) error {
 	case "requests_per_second":
 		fallthrough
 	case "bandwidth":
-		*e = GetLoadBalancersIDMetricsTypeEnum(s)
+		*e = GetLoadBalancersIDMetricsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLoadBalancersIDMetricsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLoadBalancersIDMetricsTypeEnum: %v", v)
 	}
 }
 

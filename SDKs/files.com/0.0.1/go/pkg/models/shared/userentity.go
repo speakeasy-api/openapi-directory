@@ -20,12 +20,16 @@ const (
 	UserEntityAuthenticationMethodEnumPasswordWithImportedHash UserEntityAuthenticationMethodEnum = "password_with_imported_hash"
 )
 
+func (e UserEntityAuthenticationMethodEnum) ToPointer() *UserEntityAuthenticationMethodEnum {
+	return &e
+}
+
 func (e *UserEntityAuthenticationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "password":
 		fallthrough
 	case "unused_former_ldap":
@@ -37,10 +41,10 @@ func (e *UserEntityAuthenticationMethodEnum) UnmarshalJSON(data []byte) error {
 	case "email_signup":
 		fallthrough
 	case "password_with_imported_hash":
-		*e = UserEntityAuthenticationMethodEnum(s)
+		*e = UserEntityAuthenticationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserEntityAuthenticationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for UserEntityAuthenticationMethodEnum: %v", v)
 	}
 }
 
@@ -53,21 +57,25 @@ const (
 	UserEntityRequire2faEnumNeverRequire     UserEntityRequire2faEnum = "never_require"
 )
 
+func (e UserEntityRequire2faEnum) ToPointer() *UserEntityRequire2faEnum {
+	return &e
+}
+
 func (e *UserEntityRequire2faEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "use_system_setting":
 		fallthrough
 	case "always_require":
 		fallthrough
 	case "never_require":
-		*e = UserEntityRequire2faEnum(s)
+		*e = UserEntityRequire2faEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserEntityRequire2faEnum: %s", s)
+		return fmt.Errorf("invalid value for UserEntityRequire2faEnum: %v", v)
 	}
 }
 
@@ -80,21 +88,25 @@ const (
 	UserEntitySslRequiredEnumNeverRequire     UserEntitySslRequiredEnum = "never_require"
 )
 
+func (e UserEntitySslRequiredEnum) ToPointer() *UserEntitySslRequiredEnum {
+	return &e
+}
+
 func (e *UserEntitySslRequiredEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "use_system_setting":
 		fallthrough
 	case "always_require":
 		fallthrough
 	case "never_require":
-		*e = UserEntitySslRequiredEnum(s)
+		*e = UserEntitySslRequiredEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserEntitySslRequiredEnum: %s", s)
+		return fmt.Errorf("invalid value for UserEntitySslRequiredEnum: %v", v)
 	}
 }
 

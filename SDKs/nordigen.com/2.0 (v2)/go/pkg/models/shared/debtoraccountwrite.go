@@ -7,7 +7,8 @@ import (
 	"fmt"
 )
 
-// DebtorAccountWriteTypeEnum - Debtor account type
+// DebtorAccountWriteTypeEnum - * `IBAN` - IBAN
+// * `SCAN` - SortCodeAccountNumber
 type DebtorAccountWriteTypeEnum string
 
 const (
@@ -15,19 +16,23 @@ const (
 	DebtorAccountWriteTypeEnumScan DebtorAccountWriteTypeEnum = "SCAN"
 )
 
+func (e DebtorAccountWriteTypeEnum) ToPointer() *DebtorAccountWriteTypeEnum {
+	return &e
+}
+
 func (e *DebtorAccountWriteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IBAN":
 		fallthrough
 	case "SCAN":
-		*e = DebtorAccountWriteTypeEnum(s)
+		*e = DebtorAccountWriteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DebtorAccountWriteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DebtorAccountWriteTypeEnum: %v", v)
 	}
 }
 
@@ -46,6 +51,9 @@ type DebtorAccountWrite struct {
 	// Debtor account post code
 	PostCode *string `json:"post_code,omitempty"`
 	// Debtor account type
+	//
+	// * `IBAN` - IBAN
+	// * `SCAN` - SortCodeAccountNumber
 	Type *DebtorAccountWriteTypeEnum `json:"type,omitempty"`
 	// Debtor account type identifier
 	TypeNumber *string `json:"type_number,omitempty"`

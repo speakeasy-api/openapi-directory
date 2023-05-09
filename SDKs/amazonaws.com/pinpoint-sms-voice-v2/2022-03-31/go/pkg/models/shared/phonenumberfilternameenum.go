@@ -21,12 +21,16 @@ const (
 	PhoneNumberFilterNameEnumDeletionProtectionEnabled PhoneNumberFilterNameEnum = "deletion-protection-enabled"
 )
 
+func (e PhoneNumberFilterNameEnum) ToPointer() *PhoneNumberFilterNameEnum {
+	return &e
+}
+
 func (e *PhoneNumberFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "status":
 		fallthrough
 	case "iso-country-code":
@@ -44,9 +48,9 @@ func (e *PhoneNumberFilterNameEnum) UnmarshalJSON(data []byte) error {
 	case "opt-out-list-name":
 		fallthrough
 	case "deletion-protection-enabled":
-		*e = PhoneNumberFilterNameEnum(s)
+		*e = PhoneNumberFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PhoneNumberFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for PhoneNumberFilterNameEnum: %v", v)
 	}
 }

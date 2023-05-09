@@ -15,20 +15,24 @@ const (
 	ViolationEventTypeEnumAlarmInvalidated ViolationEventTypeEnum = "alarm-invalidated"
 )
 
+func (e ViolationEventTypeEnum) ToPointer() *ViolationEventTypeEnum {
+	return &e
+}
+
 func (e *ViolationEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "in-alarm":
 		fallthrough
 	case "alarm-cleared":
 		fallthrough
 	case "alarm-invalidated":
-		*e = ViolationEventTypeEnum(s)
+		*e = ViolationEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViolationEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ViolationEventTypeEnum: %v", v)
 	}
 }

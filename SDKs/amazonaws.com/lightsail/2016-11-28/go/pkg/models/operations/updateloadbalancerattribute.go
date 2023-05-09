@@ -16,17 +16,21 @@ const (
 	UpdateLoadBalancerAttributeXAmzTargetEnumLightsail20161128UpdateLoadBalancerAttribute UpdateLoadBalancerAttributeXAmzTargetEnum = "Lightsail_20161128.UpdateLoadBalancerAttribute"
 )
 
+func (e UpdateLoadBalancerAttributeXAmzTargetEnum) ToPointer() *UpdateLoadBalancerAttributeXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateLoadBalancerAttributeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.UpdateLoadBalancerAttribute":
-		*e = UpdateLoadBalancerAttributeXAmzTargetEnum(s)
+		*e = UpdateLoadBalancerAttributeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateLoadBalancerAttributeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateLoadBalancerAttributeXAmzTargetEnum: %v", v)
 	}
 }
 

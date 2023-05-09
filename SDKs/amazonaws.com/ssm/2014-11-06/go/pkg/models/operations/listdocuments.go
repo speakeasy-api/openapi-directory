@@ -16,17 +16,21 @@ const (
 	ListDocumentsXAmzTargetEnumAmazonSsmListDocuments ListDocumentsXAmzTargetEnum = "AmazonSSM.ListDocuments"
 )
 
+func (e ListDocumentsXAmzTargetEnum) ToPointer() *ListDocumentsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListDocumentsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.ListDocuments":
-		*e = ListDocumentsXAmzTargetEnum(s)
+		*e = ListDocumentsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsXAmzTargetEnum: %v", v)
 	}
 }
 

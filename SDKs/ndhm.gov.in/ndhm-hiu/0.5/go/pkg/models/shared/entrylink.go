@@ -14,17 +14,21 @@ const (
 	EntryLinkMediaEnumApplicationFhirPlusJSON EntryLinkMediaEnum = "application/fhir+json"
 )
 
+func (e EntryLinkMediaEnum) ToPointer() *EntryLinkMediaEnum {
+	return &e
+}
+
 func (e *EntryLinkMediaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "application/fhir+json":
-		*e = EntryLinkMediaEnum(s)
+		*e = EntryLinkMediaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntryLinkMediaEnum: %s", s)
+		return fmt.Errorf("invalid value for EntryLinkMediaEnum: %v", v)
 	}
 }
 

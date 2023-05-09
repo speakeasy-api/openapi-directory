@@ -21,19 +21,23 @@ const (
 	BooksMyconfigSyncVolumeLicensesFeaturesEnumRentals           BooksMyconfigSyncVolumeLicensesFeaturesEnum = "RENTALS"
 )
 
+func (e BooksMyconfigSyncVolumeLicensesFeaturesEnum) ToPointer() *BooksMyconfigSyncVolumeLicensesFeaturesEnum {
+	return &e
+}
+
 func (e *BooksMyconfigSyncVolumeLicensesFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEATURES_UNDEFINED":
 		fallthrough
 	case "RENTALS":
-		*e = BooksMyconfigSyncVolumeLicensesFeaturesEnum(s)
+		*e = BooksMyconfigSyncVolumeLicensesFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksMyconfigSyncVolumeLicensesFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksMyconfigSyncVolumeLicensesFeaturesEnum: %v", v)
 	}
 }
 

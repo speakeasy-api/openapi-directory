@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -59,6 +60,7 @@ pkg/models/shared/listjobsresponse.go
 pkg/models/shared/job.go
 pkg/models/shared/step.go
 pkg/models/shared/executionstagestate.go
+pkg/models/shared/runtimeupdatableparams.go
 pkg/models/shared/pipelinedescription.go
 pkg/models/shared/transformsummary.go
 pkg/models/shared/displaydata.go
@@ -219,4 +221,6 @@ pkg/models/shared/cputime.go
 pkg/models/shared/workermessagecode.go
 pkg/models/shared/workerlifecycleevent.go
 pkg/models/shared/workerhealthreport.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

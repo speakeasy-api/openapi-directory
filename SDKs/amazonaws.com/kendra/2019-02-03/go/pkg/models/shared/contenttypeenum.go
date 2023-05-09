@@ -24,12 +24,16 @@ const (
 	ContentTypeEnumMd        ContentTypeEnum = "MD"
 )
 
+func (e ContentTypeEnum) ToPointer() *ContentTypeEnum {
+	return &e
+}
+
 func (e *ContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PDF":
 		fallthrough
 	case "HTML":
@@ -53,9 +57,9 @@ func (e *ContentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "JSON":
 		fallthrough
 	case "MD":
-		*e = ContentTypeEnum(s)
+		*e = ContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentTypeEnum: %v", v)
 	}
 }

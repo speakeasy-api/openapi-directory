@@ -22,12 +22,16 @@ const (
 	GetNetworksAdDealStatusEnumPendingInactive GetNetworksAdDealStatusEnum = "pending_inactive"
 )
 
+func (e GetNetworksAdDealStatusEnum) ToPointer() *GetNetworksAdDealStatusEnum {
+	return &e
+}
+
 func (e *GetNetworksAdDealStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
@@ -35,10 +39,10 @@ func (e *GetNetworksAdDealStatusEnum) UnmarshalJSON(data []byte) error {
 	case "pending_active":
 		fallthrough
 	case "pending_inactive":
-		*e = GetNetworksAdDealStatusEnum(s)
+		*e = GetNetworksAdDealStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNetworksAdDealStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNetworksAdDealStatusEnum: %v", v)
 	}
 }
 
@@ -50,21 +54,25 @@ const (
 	GetNetworksSortEnumUpdatedAt GetNetworksSortEnum = "updated_at"
 )
 
+func (e GetNetworksSortEnum) ToPointer() *GetNetworksSortEnum {
+	return &e
+}
+
 func (e *GetNetworksSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created_at":
 		fallthrough
 	case "name":
 		fallthrough
 	case "updated_at":
-		*e = GetNetworksSortEnum(s)
+		*e = GetNetworksSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNetworksSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNetworksSortEnum: %v", v)
 	}
 }
 

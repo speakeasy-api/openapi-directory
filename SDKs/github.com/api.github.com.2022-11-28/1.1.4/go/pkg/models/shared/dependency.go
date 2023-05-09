@@ -15,19 +15,23 @@ const (
 	DependencyRelationshipEnumIndirect DependencyRelationshipEnum = "indirect"
 )
 
+func (e DependencyRelationshipEnum) ToPointer() *DependencyRelationshipEnum {
+	return &e
+}
+
 func (e *DependencyRelationshipEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "direct":
 		fallthrough
 	case "indirect":
-		*e = DependencyRelationshipEnum(s)
+		*e = DependencyRelationshipEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependencyRelationshipEnum: %s", s)
+		return fmt.Errorf("invalid value for DependencyRelationshipEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	DependencyScopeEnumDevelopment DependencyScopeEnum = "development"
 )
 
+func (e DependencyScopeEnum) ToPointer() *DependencyScopeEnum {
+	return &e
+}
+
 func (e *DependencyScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "runtime":
 		fallthrough
 	case "development":
-		*e = DependencyScopeEnum(s)
+		*e = DependencyScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependencyScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for DependencyScopeEnum: %v", v)
 	}
 }
 

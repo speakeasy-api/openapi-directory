@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAddressRequest{
-        Address: "5786 Little Streets",
-    }
-
     ctx := context.Background()
-    res, err := s.GetAddress(ctx, req)
+    res, err := s.GetAddress(ctx, operations.GetAddressRequest{
+        Address: "5786 Little Streets",
+    })
     if err != nil {
         log.Fatal(err)
     }

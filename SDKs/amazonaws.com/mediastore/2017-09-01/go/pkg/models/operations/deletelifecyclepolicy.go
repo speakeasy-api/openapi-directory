@@ -16,17 +16,21 @@ const (
 	DeleteLifecyclePolicyXAmzTargetEnumMediaStore20170901DeleteLifecyclePolicy DeleteLifecyclePolicyXAmzTargetEnum = "MediaStore_20170901.DeleteLifecyclePolicy"
 )
 
+func (e DeleteLifecyclePolicyXAmzTargetEnum) ToPointer() *DeleteLifecyclePolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteLifecyclePolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MediaStore_20170901.DeleteLifecyclePolicy":
-		*e = DeleteLifecyclePolicyXAmzTargetEnum(s)
+		*e = DeleteLifecyclePolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLifecyclePolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLifecyclePolicyXAmzTargetEnum: %v", v)
 	}
 }
 

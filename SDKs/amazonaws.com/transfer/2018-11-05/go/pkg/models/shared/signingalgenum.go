@@ -17,12 +17,16 @@ const (
 	SigningAlgEnumNone   SigningAlgEnum = "NONE"
 )
 
+func (e SigningAlgEnum) ToPointer() *SigningAlgEnum {
+	return &e
+}
+
 func (e *SigningAlgEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHA256":
 		fallthrough
 	case "SHA384":
@@ -32,9 +36,9 @@ func (e *SigningAlgEnum) UnmarshalJSON(data []byte) error {
 	case "SHA1":
 		fallthrough
 	case "NONE":
-		*e = SigningAlgEnum(s)
+		*e = SigningAlgEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SigningAlgEnum: %s", s)
+		return fmt.Errorf("invalid value for SigningAlgEnum: %v", v)
 	}
 }

@@ -18,12 +18,16 @@ const (
 	GoogleCloudRetailV2alphaModelPageOptimizationConfigRestrictionEnumUniqueModelTypeRestriction     GoogleCloudRetailV2alphaModelPageOptimizationConfigRestrictionEnum = "UNIQUE_MODEL_TYPE_RESTRICTION"
 )
 
+func (e GoogleCloudRetailV2alphaModelPageOptimizationConfigRestrictionEnum) ToPointer() *GoogleCloudRetailV2alphaModelPageOptimizationConfigRestrictionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaModelPageOptimizationConfigRestrictionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESTRICTION_UNSPECIFIED":
 		fallthrough
 	case "NO_RESTRICTION":
@@ -33,10 +37,10 @@ func (e *GoogleCloudRetailV2alphaModelPageOptimizationConfigRestrictionEnum) Unm
 	case "UNIQUE_MODEL_RESTRICTION":
 		fallthrough
 	case "UNIQUE_MODEL_TYPE_RESTRICTION":
-		*e = GoogleCloudRetailV2alphaModelPageOptimizationConfigRestrictionEnum(s)
+		*e = GoogleCloudRetailV2alphaModelPageOptimizationConfigRestrictionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaModelPageOptimizationConfigRestrictionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaModelPageOptimizationConfigRestrictionEnum: %v", v)
 	}
 }
 

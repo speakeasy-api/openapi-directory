@@ -14,18 +14,22 @@ const (
 	BootModeEnumUefi       BootModeEnum = "UEFI"
 )
 
+func (e BootModeEnum) ToPointer() *BootModeEnum {
+	return &e
+}
+
 func (e *BootModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEGACY_BIOS":
 		fallthrough
 	case "UEFI":
-		*e = BootModeEnum(s)
+		*e = BootModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BootModeEnum: %s", s)
+		return fmt.Errorf("invalid value for BootModeEnum: %v", v)
 	}
 }

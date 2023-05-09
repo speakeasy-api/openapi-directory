@@ -16,12 +16,16 @@ const (
 	EBSMetricNameEnumVolumeWriteBytesPerSecond EBSMetricNameEnum = "VolumeWriteBytesPerSecond"
 )
 
+func (e EBSMetricNameEnum) ToPointer() *EBSMetricNameEnum {
+	return &e
+}
+
 func (e *EBSMetricNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VolumeReadOpsPerSecond":
 		fallthrough
 	case "VolumeWriteOpsPerSecond":
@@ -29,9 +33,9 @@ func (e *EBSMetricNameEnum) UnmarshalJSON(data []byte) error {
 	case "VolumeReadBytesPerSecond":
 		fallthrough
 	case "VolumeWriteBytesPerSecond":
-		*e = EBSMetricNameEnum(s)
+		*e = EBSMetricNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EBSMetricNameEnum: %s", s)
+		return fmt.Errorf("invalid value for EBSMetricNameEnum: %v", v)
 	}
 }

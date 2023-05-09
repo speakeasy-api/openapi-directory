@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,13 +16,11 @@ func main() {
         }),
     )
 
-    req := operations.PlayByPlayRequest{
-        Format: "JSON",
-        Gameid: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.PlayByPlay(ctx, req)
+    res, err := s.PlayByPlay(ctx, operations.PlayByPlayRequest{
+        Format: operations.PlayByPlayFormatEnumJSON,
+        Gameid: "provident",
+    })
     if err != nil {
         log.Fatal(err)
     }

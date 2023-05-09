@@ -18,21 +18,25 @@ const (
 	ReposCreateReleaseRequestBodyMakeLatestEnumLegacy ReposCreateReleaseRequestBodyMakeLatestEnum = "legacy"
 )
 
+func (e ReposCreateReleaseRequestBodyMakeLatestEnum) ToPointer() *ReposCreateReleaseRequestBodyMakeLatestEnum {
+	return &e
+}
+
 func (e *ReposCreateReleaseRequestBodyMakeLatestEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
 		fallthrough
 	case "legacy":
-		*e = ReposCreateReleaseRequestBodyMakeLatestEnum(s)
+		*e = ReposCreateReleaseRequestBodyMakeLatestEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateReleaseRequestBodyMakeLatestEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateReleaseRequestBodyMakeLatestEnum: %v", v)
 	}
 }
 

@@ -13,17 +13,21 @@ const (
 	CatalogCollectionRoleTypeEnumUser CatalogCollectionRoleTypeEnum = "USER"
 )
 
+func (e CatalogCollectionRoleTypeEnum) ToPointer() *CatalogCollectionRoleTypeEnum {
+	return &e
+}
+
 func (e *CatalogCollectionRoleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER":
-		*e = CatalogCollectionRoleTypeEnum(s)
+		*e = CatalogCollectionRoleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CatalogCollectionRoleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CatalogCollectionRoleTypeEnum: %v", v)
 	}
 }
 

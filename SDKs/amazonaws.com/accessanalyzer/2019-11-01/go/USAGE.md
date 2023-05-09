@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,23 +16,21 @@ func main() {
         }),
     )
 
-    req := operations.ApplyArchiveRuleRequest{
+    ctx := context.Background()
+    res, err := s.ApplyArchiveRule(ctx, operations.ApplyArchiveRuleRequest{
         RequestBody: operations.ApplyArchiveRuleRequestBody{
             AnalyzerArn: "corrupti",
-            ClientToken: "provident",
+            ClientToken: sdk.String("provident"),
             RuleName: "distinctio",
         },
-        XAmzAlgorithm: "quibusdam",
-        XAmzContentSha256: "unde",
-        XAmzCredential: "nulla",
-        XAmzDate: "corrupti",
-        XAmzSecurityToken: "illum",
-        XAmzSignature: "vel",
-        XAmzSignedHeaders: "error",
-    }
-
-    ctx := context.Background()
-    res, err := s.ApplyArchiveRule(ctx, req)
+        XAmzAlgorithm: sdk.String("quibusdam"),
+        XAmzContentSha256: sdk.String("unde"),
+        XAmzCredential: sdk.String("nulla"),
+        XAmzDate: sdk.String("corrupti"),
+        XAmzSecurityToken: sdk.String("illum"),
+        XAmzSignature: sdk.String("vel"),
+        XAmzSignedHeaders: sdk.String("error"),
+    })
     if err != nil {
         log.Fatal(err)
     }

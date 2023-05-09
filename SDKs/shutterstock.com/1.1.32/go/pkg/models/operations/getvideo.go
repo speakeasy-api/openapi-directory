@@ -22,19 +22,23 @@ const (
 	GetVideoViewEnumFull    GetVideoViewEnum = "full"
 )
 
+func (e GetVideoViewEnum) ToPointer() *GetVideoViewEnum {
+	return &e
+}
+
 func (e *GetVideoViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimal":
 		fallthrough
 	case "full":
-		*e = GetVideoViewEnum(s)
+		*e = GetVideoViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVideoViewEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVideoViewEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DiscoverPollEndpointXAmzTargetEnumAmazonEc2ContainerServiceV20141113DiscoverPollEndpoint DiscoverPollEndpointXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.DiscoverPollEndpoint"
 )
 
+func (e DiscoverPollEndpointXAmzTargetEnum) ToPointer() *DiscoverPollEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *DiscoverPollEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.DiscoverPollEndpoint":
-		*e = DiscoverPollEndpointXAmzTargetEnum(s)
+		*e = DiscoverPollEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiscoverPollEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DiscoverPollEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

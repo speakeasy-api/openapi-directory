@@ -14,18 +14,22 @@ const (
 	EdgePresetDeploymentStatusEnumFailed    EdgePresetDeploymentStatusEnum = "FAILED"
 )
 
+func (e EdgePresetDeploymentStatusEnum) ToPointer() *EdgePresetDeploymentStatusEnum {
+	return &e
+}
+
 func (e *EdgePresetDeploymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETED":
 		fallthrough
 	case "FAILED":
-		*e = EdgePresetDeploymentStatusEnum(s)
+		*e = EdgePresetDeploymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EdgePresetDeploymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EdgePresetDeploymentStatusEnum: %v", v)
 	}
 }

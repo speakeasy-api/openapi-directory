@@ -35,7 +35,10 @@ func newChannelCatalogsLegacyTrackingGlobal(defaultClient, securityClient HTTPCl
 // GetLegacyTrackingChannelCatalog - Get the channel catalog configured to use legacy tracking format information
 func (s *channelCatalogsLegacyTrackingGlobal) GetLegacyTrackingChannelCatalog(ctx context.Context, request operations.GetLegacyTrackingChannelCatalogRequest) (*operations.GetLegacyTrackingChannelCatalogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/legacyTracking/channelCatalogs/{channelCatalogId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/legacyTracking/channelCatalogs/{channelCatalogId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +152,10 @@ func (s *channelCatalogsLegacyTrackingGlobal) GetLegacyTrackingChannelCatalogs(c
 // MigrateLegacyTrackingChannelCatalog - Migrate a channel catalog to current tracking format
 func (s *channelCatalogsLegacyTrackingGlobal) MigrateLegacyTrackingChannelCatalog(ctx context.Context, request operations.MigrateLegacyTrackingChannelCatalogRequest) (*operations.MigrateLegacyTrackingChannelCatalogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/legacyTracking/channelCatalogs/{channelCatalogId}/migrate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/legacyTracking/channelCatalogs/{channelCatalogId}/migrate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -15,20 +15,24 @@ const (
 	InferenceExecutionStatusEnumFailed     InferenceExecutionStatusEnum = "FAILED"
 )
 
+func (e InferenceExecutionStatusEnum) ToPointer() *InferenceExecutionStatusEnum {
+	return &e
+}
+
 func (e *InferenceExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "SUCCESS":
 		fallthrough
 	case "FAILED":
-		*e = InferenceExecutionStatusEnum(s)
+		*e = InferenceExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InferenceExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InferenceExecutionStatusEnum: %v", v)
 	}
 }

@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/api2pdf.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,18 +27,16 @@ func main() {
         }),
     )
 
-    req := shared.ChromeHTMLToPdfRequest{
-        FileName: "test.pdf",
-        HTML: "<p>Hello World</p>",
-        InlinePdf: true,
-        Options: &shared.ChromeAdvancedOptions{
-            Landscape: "true",
-            PrintBackground: false,
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.HeadlessChrome.ChromeFromHTMLPost(ctx, req)
+    res, err := s.HeadlessChrome.ChromeFromHTMLPost(ctx, shared.ChromeHTMLToPdfRequest{
+        FileName: sdk.String("test.pdf"),
+        HTML: "<p>Hello World</p>",
+        InlinePdf: sdk.Bool(true),
+        Options: &shared.ChromeAdvancedOptions{
+            Landscape: sdk.String("true"),
+            PrintBackground: sdk.Bool(false),
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,29 +52,29 @@ func main() {
 ## Available Resources and Operations
 
 
-### HeadlessChrome
+### [HeadlessChrome](docs/headlesschrome/README.md)
 
-* `ChromeFromHTMLPost` - Convert raw HTML to PDF
-* `ChromeFromURLGET` - Convert URL to PDF
-* `ChromeFromURLPost` - Convert URL to PDF
+* [ChromeFromHTMLPost](docs/headlesschrome/README.md#chromefromhtmlpost) - Convert raw HTML to PDF
+* [ChromeFromURLGET](docs/headlesschrome/README.md#chromefromurlget) - Convert URL to PDF
+* [ChromeFromURLPost](docs/headlesschrome/README.md#chromefromurlpost) - Convert URL to PDF
 
-### LibreOffice
+### [LibreOffice](docs/libreoffice/README.md)
 
-* `LibreConvertPost` - Convert office document or image to PDF
+* [LibreConvertPost](docs/libreoffice/README.md#libreconvertpost) - Convert office document or image to PDF
 
-### MergeCombinePdfs
+### [MergeCombinePdfs](docs/mergecombinepdfs/README.md)
 
-* `MergePost` - Merge multiple PDFs together
+* [MergePost](docs/mergecombinepdfs/README.md#mergepost) - Merge multiple PDFs together
 
-### ZXINGZebraCrossingBarCodes
+### [ZXINGZebraCrossingBarCodes](docs/zxingzebracrossingbarcodes/README.md)
 
-* `ZebraGET` - Generate bar codes and QR codes with ZXING.
+* [ZebraGET](docs/zxingzebracrossingbarcodes/README.md#zebraget) - Generate bar codes and QR codes with ZXING.
 
-### Wkhtmltopdf
+### [Wkhtmltopdf](docs/wkhtmltopdf/README.md)
 
-* `WkhtmltopdfFromHTMLPost` - Convert raw HTML to PDF
-* `WkhtmltopdfFromURLGET` - Convert URL to PDF
-* `WkhtmltopdfFromURLPost` - Convert URL to PDF
+* [WkhtmltopdfFromHTMLPost](docs/wkhtmltopdf/README.md#wkhtmltopdffromhtmlpost) - Convert raw HTML to PDF
+* [WkhtmltopdfFromURLGET](docs/wkhtmltopdf/README.md#wkhtmltopdffromurlget) - Convert URL to PDF
+* [WkhtmltopdfFromURLPost](docs/wkhtmltopdf/README.md#wkhtmltopdffromurlpost) - Convert URL to PDF
 <!-- End SDK Available Operations -->
 
 ### Maturity

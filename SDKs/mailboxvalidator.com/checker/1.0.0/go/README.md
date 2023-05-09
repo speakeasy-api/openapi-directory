@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/mailboxvalidator.com/chec
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetV1EmailFreeRequest{
-        Email: "Larue_Rau85@yahoo.com",
-        Format: "xml",
-        Key: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.GetV1EmailFree(ctx, req)
+    res, err := s.GetV1EmailFree(ctx, operations.GetV1EmailFreeRequest{
+        Email: "Larue_Rau85@yahoo.com",
+        Format: operations.GetV1EmailFreeFormatEnumXML.ToPointer(),
+        Key: "illum",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetV1EmailFree` - The Free Email Checker API does validation on a single email address and returns if it is from a free email provider in either JSON or XML format.
+* [GetV1EmailFree](docs/sdk/README.md#getv1emailfree) - The Free Email Checker API does validation on a single email address and returns if it is from a free email provider in either JSON or XML format.
 <!-- End SDK Available Operations -->
 
 ### Maturity

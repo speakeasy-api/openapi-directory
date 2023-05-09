@@ -23,12 +23,16 @@ const (
 	CounterMetadataKindEnumLatestValue  CounterMetadataKindEnum = "LATEST_VALUE"
 )
 
+func (e CounterMetadataKindEnum) ToPointer() *CounterMetadataKindEnum {
+	return &e
+}
+
 func (e *CounterMetadataKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVALID":
 		fallthrough
 	case "SUM":
@@ -48,10 +52,10 @@ func (e *CounterMetadataKindEnum) UnmarshalJSON(data []byte) error {
 	case "DISTRIBUTION":
 		fallthrough
 	case "LATEST_VALUE":
-		*e = CounterMetadataKindEnum(s)
+		*e = CounterMetadataKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CounterMetadataKindEnum: %s", s)
+		return fmt.Errorf("invalid value for CounterMetadataKindEnum: %v", v)
 	}
 }
 
@@ -69,12 +73,16 @@ const (
 	CounterMetadataStandardUnitsEnumTimestampNsec CounterMetadataStandardUnitsEnum = "TIMESTAMP_NSEC"
 )
 
+func (e CounterMetadataStandardUnitsEnum) ToPointer() *CounterMetadataStandardUnitsEnum {
+	return &e
+}
+
 func (e *CounterMetadataStandardUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BYTES":
 		fallthrough
 	case "BYTES_PER_SEC":
@@ -90,10 +98,10 @@ func (e *CounterMetadataStandardUnitsEnum) UnmarshalJSON(data []byte) error {
 	case "TIMESTAMP_USEC":
 		fallthrough
 	case "TIMESTAMP_NSEC":
-		*e = CounterMetadataStandardUnitsEnum(s)
+		*e = CounterMetadataStandardUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CounterMetadataStandardUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for CounterMetadataStandardUnitsEnum: %v", v)
 	}
 }
 

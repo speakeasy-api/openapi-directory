@@ -16,17 +16,21 @@ const (
 	UpdateDistributionXAmzTargetEnumLightsail20161128UpdateDistribution UpdateDistributionXAmzTargetEnum = "Lightsail_20161128.UpdateDistribution"
 )
 
+func (e UpdateDistributionXAmzTargetEnum) ToPointer() *UpdateDistributionXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDistributionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.UpdateDistribution":
-		*e = UpdateDistributionXAmzTargetEnum(s)
+		*e = UpdateDistributionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDistributionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDistributionXAmzTargetEnum: %v", v)
 	}
 }
 

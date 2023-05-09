@@ -37,7 +37,10 @@ func newRequests(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Delete Request
 func (s *requests) DeleteRequestsID(ctx context.Context, request operations.DeleteRequestsIDRequest) (*operations.DeleteRequestsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/requests/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/requests/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *requests) GetRequests(ctx context.Context, request operations.GetReques
 // List Requests
 func (s *requests) GetRequestsFoldersPath(ctx context.Context, request operations.GetRequestsFoldersPathRequest) (*operations.GetRequestsFoldersPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/requests/folders/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/requests/folders/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

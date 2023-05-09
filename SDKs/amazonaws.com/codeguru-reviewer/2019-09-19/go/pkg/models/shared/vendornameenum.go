@@ -15,20 +15,24 @@ const (
 	VendorNameEnumNativeS3 VendorNameEnum = "NativeS3"
 )
 
+func (e VendorNameEnum) ToPointer() *VendorNameEnum {
+	return &e
+}
+
 func (e *VendorNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GitHub":
 		fallthrough
 	case "GitLab":
 		fallthrough
 	case "NativeS3":
-		*e = VendorNameEnum(s)
+		*e = VendorNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VendorNameEnum: %s", s)
+		return fmt.Errorf("invalid value for VendorNameEnum: %v", v)
 	}
 }

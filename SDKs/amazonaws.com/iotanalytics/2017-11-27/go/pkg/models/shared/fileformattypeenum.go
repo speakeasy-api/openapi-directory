@@ -14,18 +14,22 @@ const (
 	FileFormatTypeEnumParquet FileFormatTypeEnum = "PARQUET"
 )
 
+func (e FileFormatTypeEnum) ToPointer() *FileFormatTypeEnum {
+	return &e
+}
+
 func (e *FileFormatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JSON":
 		fallthrough
 	case "PARQUET":
-		*e = FileFormatTypeEnum(s)
+		*e = FileFormatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileFormatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FileFormatTypeEnum: %v", v)
 	}
 }

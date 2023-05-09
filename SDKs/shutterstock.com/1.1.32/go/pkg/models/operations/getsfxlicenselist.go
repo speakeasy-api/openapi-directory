@@ -23,21 +23,25 @@ const (
 	GetSfxLicenseListDownloadAvailabilityEnumNonDownloadable GetSfxLicenseListDownloadAvailabilityEnum = "non_downloadable"
 )
 
+func (e GetSfxLicenseListDownloadAvailabilityEnum) ToPointer() *GetSfxLicenseListDownloadAvailabilityEnum {
+	return &e
+}
+
 func (e *GetSfxLicenseListDownloadAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "downloadable":
 		fallthrough
 	case "non_downloadable":
-		*e = GetSfxLicenseListDownloadAvailabilityEnum(s)
+		*e = GetSfxLicenseListDownloadAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSfxLicenseListDownloadAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSfxLicenseListDownloadAvailabilityEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	GetSfxLicenseListSortEnumOldest GetSfxLicenseListSortEnum = "oldest"
 )
 
+func (e GetSfxLicenseListSortEnum) ToPointer() *GetSfxLicenseListSortEnum {
+	return &e
+}
+
 func (e *GetSfxLicenseListSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "oldest":
-		*e = GetSfxLicenseListSortEnum(s)
+		*e = GetSfxLicenseListSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSfxLicenseListSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSfxLicenseListSortEnum: %v", v)
 	}
 }
 

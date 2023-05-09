@@ -24,12 +24,16 @@ const (
 	RemarketingListListSourceEnumRemarketingListSourcePlayStore RemarketingListListSourceEnum = "REMARKETING_LIST_SOURCE_PLAY_STORE"
 )
 
+func (e RemarketingListListSourceEnum) ToPointer() *RemarketingListListSourceEnum {
+	return &e
+}
+
 func (e *RemarketingListListSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REMARKETING_LIST_SOURCE_OTHER":
 		fallthrough
 	case "REMARKETING_LIST_SOURCE_ADX":
@@ -51,10 +55,10 @@ func (e *RemarketingListListSourceEnum) UnmarshalJSON(data []byte) error {
 	case "REMARKETING_LIST_SOURCE_DMP":
 		fallthrough
 	case "REMARKETING_LIST_SOURCE_PLAY_STORE":
-		*e = RemarketingListListSourceEnum(s)
+		*e = RemarketingListListSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemarketingListListSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for RemarketingListListSourceEnum: %v", v)
 	}
 }
 

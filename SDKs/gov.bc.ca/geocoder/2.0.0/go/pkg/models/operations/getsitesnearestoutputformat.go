@@ -20,12 +20,16 @@ const (
 	GetSitesNearestOutputFormatLocationDescriptorEnumRoutingPoint   GetSitesNearestOutputFormatLocationDescriptorEnum = "routingPoint"
 )
 
+func (e GetSitesNearestOutputFormatLocationDescriptorEnum) ToPointer() *GetSitesNearestOutputFormatLocationDescriptorEnum {
+	return &e
+}
+
 func (e *GetSitesNearestOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "accessPoint":
@@ -37,10 +41,10 @@ func (e *GetSitesNearestOutputFormatLocationDescriptorEnum) UnmarshalJSON(data [
 	case "rooftopPoint":
 		fallthrough
 	case "routingPoint":
-		*e = GetSitesNearestOutputFormatLocationDescriptorEnum(s)
+		*e = GetSitesNearestOutputFormatLocationDescriptorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSitesNearestOutputFormatLocationDescriptorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSitesNearestOutputFormatLocationDescriptorEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	GetSitesNearestOutputFormatOutputFormatEnumShpz    GetSitesNearestOutputFormatOutputFormatEnum = "shpz"
 )
 
+func (e GetSitesNearestOutputFormatOutputFormatEnum) ToPointer() *GetSitesNearestOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetSitesNearestOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "geojson":
@@ -78,52 +86,56 @@ func (e *GetSitesNearestOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte)
 	case "csv":
 		fallthrough
 	case "shpz":
-		*e = GetSitesNearestOutputFormatOutputFormatEnum(s)
+		*e = GetSitesNearestOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSitesNearestOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSitesNearestOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 
 // GetSitesNearestOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
-type GetSitesNearestOutputFormatOutputSrsEnum string
+type GetSitesNearestOutputFormatOutputSrsEnum int64
 
 const (
-	GetSitesNearestOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetSitesNearestOutputFormatOutputSrsEnum = "4326"
-	GetSitesNearestOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetSitesNearestOutputFormatOutputSrsEnum = "4269"
-	GetSitesNearestOutputFormatOutputSrsEnumThreeThousandAndFive                  GetSitesNearestOutputFormatOutputSrsEnum = "3005"
-	GetSitesNearestOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetSitesNearestOutputFormatOutputSrsEnum = "26907"
-	GetSitesNearestOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetSitesNearestOutputFormatOutputSrsEnum = "26908"
-	GetSitesNearestOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetSitesNearestOutputFormatOutputSrsEnum = "26909"
-	GetSitesNearestOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetSitesNearestOutputFormatOutputSrsEnum = "26910"
-	GetSitesNearestOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetSitesNearestOutputFormatOutputSrsEnum = "26911"
+	GetSitesNearestOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetSitesNearestOutputFormatOutputSrsEnum = 4326
+	GetSitesNearestOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetSitesNearestOutputFormatOutputSrsEnum = 4269
+	GetSitesNearestOutputFormatOutputSrsEnumThreeThousandAndFive                  GetSitesNearestOutputFormatOutputSrsEnum = 3005
+	GetSitesNearestOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetSitesNearestOutputFormatOutputSrsEnum = 26907
+	GetSitesNearestOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetSitesNearestOutputFormatOutputSrsEnum = 26908
+	GetSitesNearestOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetSitesNearestOutputFormatOutputSrsEnum = 26909
+	GetSitesNearestOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetSitesNearestOutputFormatOutputSrsEnum = 26910
+	GetSitesNearestOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetSitesNearestOutputFormatOutputSrsEnum = 26911
 )
 
+func (e GetSitesNearestOutputFormatOutputSrsEnum) ToPointer() *GetSitesNearestOutputFormatOutputSrsEnum {
+	return &e
+}
+
 func (e *GetSitesNearestOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetSitesNearestOutputFormatOutputSrsEnum(s)
+	case 26911:
+		*e = GetSitesNearestOutputFormatOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSitesNearestOutputFormatOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSitesNearestOutputFormatOutputSrsEnum: %v", v)
 	}
 }
 

@@ -2,7 +2,7 @@
 
 package shared
 
-// ModifyVerifiedAccessEndpointEniOptions - Options for a network-interface type Verified Access endpoint.
+// ModifyVerifiedAccessEndpointEniOptions - Describes the options when modifying a Verified Access endpoint with the <code>network-interface</code> type.
 type ModifyVerifiedAccessEndpointEniOptions struct {
 	Port     *int64
 	Protocol *VerifiedAccessEndpointProtocolEnum

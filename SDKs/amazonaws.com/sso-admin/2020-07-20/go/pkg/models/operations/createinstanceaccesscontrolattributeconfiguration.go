@@ -16,17 +16,21 @@ const (
 	CreateInstanceAccessControlAttributeConfigurationXAmzTargetEnumSwbExternalServiceCreateInstanceAccessControlAttributeConfiguration CreateInstanceAccessControlAttributeConfigurationXAmzTargetEnum = "SWBExternalService.CreateInstanceAccessControlAttributeConfiguration"
 )
 
+func (e CreateInstanceAccessControlAttributeConfigurationXAmzTargetEnum) ToPointer() *CreateInstanceAccessControlAttributeConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateInstanceAccessControlAttributeConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.CreateInstanceAccessControlAttributeConfiguration":
-		*e = CreateInstanceAccessControlAttributeConfigurationXAmzTargetEnum(s)
+		*e = CreateInstanceAccessControlAttributeConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInstanceAccessControlAttributeConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInstanceAccessControlAttributeConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

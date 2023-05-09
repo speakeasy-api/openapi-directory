@@ -2,12 +2,161 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// EntityMappingDraftTypeEnum - Type of draft entity.
+type EntityMappingDraftTypeEnum string
+
+const (
+	EntityMappingDraftTypeEnumDatabaseEntityTypeUnspecified      EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_UNSPECIFIED"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeSchema           EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_SCHEMA"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeTable            EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_TABLE"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeColumn           EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_COLUMN"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeConstraint       EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_CONSTRAINT"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeIndex            EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_INDEX"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeTrigger          EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_TRIGGER"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeView             EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_VIEW"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeSequence         EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_SEQUENCE"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeStoredProcedure  EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_STORED_PROCEDURE"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeFunction         EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_FUNCTION"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeSynonym          EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_SYNONYM"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeDatabasePackage  EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_DATABASE_PACKAGE"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeUdt              EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_UDT"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeMaterializedView EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW"
+	EntityMappingDraftTypeEnumDatabaseEntityTypeDatabase         EntityMappingDraftTypeEnum = "DATABASE_ENTITY_TYPE_DATABASE"
+)
+
+func (e EntityMappingDraftTypeEnum) ToPointer() *EntityMappingDraftTypeEnum {
+	return &e
+}
+
+func (e *EntityMappingDraftTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "DATABASE_ENTITY_TYPE_UNSPECIFIED":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_SCHEMA":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_TABLE":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_COLUMN":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_CONSTRAINT":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_INDEX":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_TRIGGER":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_VIEW":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_SEQUENCE":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_STORED_PROCEDURE":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_FUNCTION":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_SYNONYM":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_DATABASE_PACKAGE":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_UDT":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_DATABASE":
+		*e = EntityMappingDraftTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for EntityMappingDraftTypeEnum: %v", v)
+	}
+}
+
+// EntityMappingSourceTypeEnum - Type of source entity.
+type EntityMappingSourceTypeEnum string
+
+const (
+	EntityMappingSourceTypeEnumDatabaseEntityTypeUnspecified      EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_UNSPECIFIED"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeSchema           EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_SCHEMA"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeTable            EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_TABLE"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeColumn           EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_COLUMN"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeConstraint       EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_CONSTRAINT"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeIndex            EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_INDEX"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeTrigger          EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_TRIGGER"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeView             EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_VIEW"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeSequence         EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_SEQUENCE"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeStoredProcedure  EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_STORED_PROCEDURE"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeFunction         EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_FUNCTION"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeSynonym          EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_SYNONYM"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeDatabasePackage  EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_DATABASE_PACKAGE"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeUdt              EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_UDT"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeMaterializedView EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW"
+	EntityMappingSourceTypeEnumDatabaseEntityTypeDatabase         EntityMappingSourceTypeEnum = "DATABASE_ENTITY_TYPE_DATABASE"
+)
+
+func (e EntityMappingSourceTypeEnum) ToPointer() *EntityMappingSourceTypeEnum {
+	return &e
+}
+
+func (e *EntityMappingSourceTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "DATABASE_ENTITY_TYPE_UNSPECIFIED":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_SCHEMA":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_TABLE":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_COLUMN":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_CONSTRAINT":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_INDEX":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_TRIGGER":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_VIEW":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_SEQUENCE":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_STORED_PROCEDURE":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_FUNCTION":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_SYNONYM":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_DATABASE_PACKAGE":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_UDT":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_DATABASE":
+		*e = EntityMappingSourceTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for EntityMappingSourceTypeEnum: %v", v)
+	}
+}
+
 // EntityMapping - Details of the mappings of a database entity.
 type EntityMapping struct {
 	// Target entity full name. The draft entity can also include a column, index or constraint using the same naming notation schema.table.column.
 	DraftEntity *string `json:"draftEntity,omitempty"`
+	// Type of draft entity.
+	DraftType *EntityMappingDraftTypeEnum `json:"draftType,omitempty"`
 	// Entity mapping log entries. Multiple rules can be effective and contribute changes to a converted entity, such as a rule can handle the entity name, another rule can handle an entity type. In addition, rules which did not change the entity are also logged along with the reason preventing them to do so.
 	MappingLog []EntityMappingLogEntry `json:"mappingLog,omitempty"`
 	// Source entity full name. The source entity can also be a column, index or constraint using the same naming notation schema.table.column.
 	SourceEntity *string `json:"sourceEntity,omitempty"`
+	// Type of source entity.
+	SourceType *EntityMappingSourceTypeEnum `json:"sourceType,omitempty"`
 }

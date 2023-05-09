@@ -17,12 +17,16 @@ const (
 	HsmStateEnumDeleted          HsmStateEnum = "DELETED"
 )
 
+func (e HsmStateEnum) ToPointer() *HsmStateEnum {
+	return &e
+}
+
 func (e *HsmStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE_IN_PROGRESS":
 		fallthrough
 	case "ACTIVE":
@@ -32,9 +36,9 @@ func (e *HsmStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETE_IN_PROGRESS":
 		fallthrough
 	case "DELETED":
-		*e = HsmStateEnum(s)
+		*e = HsmStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HsmStateEnum: %s", s)
+		return fmt.Errorf("invalid value for HsmStateEnum: %v", v)
 	}
 }

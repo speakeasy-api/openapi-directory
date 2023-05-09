@@ -16,17 +16,21 @@ const (
 	DeleteRegistryPolicyXAmzTargetEnumAmazonEc2ContainerRegistryV20150921DeleteRegistryPolicy DeleteRegistryPolicyXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.DeleteRegistryPolicy"
 )
 
+func (e DeleteRegistryPolicyXAmzTargetEnum) ToPointer() *DeleteRegistryPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteRegistryPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.DeleteRegistryPolicy":
-		*e = DeleteRegistryPolicyXAmzTargetEnum(s)
+		*e = DeleteRegistryPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRegistryPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRegistryPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

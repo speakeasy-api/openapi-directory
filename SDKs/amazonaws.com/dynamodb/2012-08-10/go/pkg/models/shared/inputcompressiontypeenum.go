@@ -15,20 +15,24 @@ const (
 	InputCompressionTypeEnumNone InputCompressionTypeEnum = "NONE"
 )
 
+func (e InputCompressionTypeEnum) ToPointer() *InputCompressionTypeEnum {
+	return &e
+}
+
 func (e *InputCompressionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GZIP":
 		fallthrough
 	case "ZSTD":
 		fallthrough
 	case "NONE":
-		*e = InputCompressionTypeEnum(s)
+		*e = InputCompressionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InputCompressionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InputCompressionTypeEnum: %v", v)
 	}
 }

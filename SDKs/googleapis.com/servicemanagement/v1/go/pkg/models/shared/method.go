@@ -16,21 +16,25 @@ const (
 	MethodSyntaxEnumSyntaxEditions MethodSyntaxEnum = "SYNTAX_EDITIONS"
 )
 
+func (e MethodSyntaxEnum) ToPointer() *MethodSyntaxEnum {
+	return &e
+}
+
 func (e *MethodSyntaxEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYNTAX_PROTO2":
 		fallthrough
 	case "SYNTAX_PROTO3":
 		fallthrough
 	case "SYNTAX_EDITIONS":
-		*e = MethodSyntaxEnum(s)
+		*e = MethodSyntaxEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MethodSyntaxEnum: %s", s)
+		return fmt.Errorf("invalid value for MethodSyntaxEnum: %v", v)
 	}
 }
 

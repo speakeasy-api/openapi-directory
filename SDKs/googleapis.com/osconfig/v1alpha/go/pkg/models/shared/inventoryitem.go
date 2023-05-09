@@ -15,19 +15,23 @@ const (
 	InventoryItemOriginTypeEnumInventoryReport       InventoryItemOriginTypeEnum = "INVENTORY_REPORT"
 )
 
+func (e InventoryItemOriginTypeEnum) ToPointer() *InventoryItemOriginTypeEnum {
+	return &e
+}
+
 func (e *InventoryItemOriginTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORIGIN_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INVENTORY_REPORT":
-		*e = InventoryItemOriginTypeEnum(s)
+		*e = InventoryItemOriginTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventoryItemOriginTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InventoryItemOriginTypeEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	InventoryItemTypeEnumAvailablePackage InventoryItemTypeEnum = "AVAILABLE_PACKAGE"
 )
 
+func (e InventoryItemTypeEnum) ToPointer() *InventoryItemTypeEnum {
+	return &e
+}
+
 func (e *InventoryItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "INSTALLED_PACKAGE":
 		fallthrough
 	case "AVAILABLE_PACKAGE":
-		*e = InventoryItemTypeEnum(s)
+		*e = InventoryItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventoryItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InventoryItemTypeEnum: %v", v)
 	}
 }
 

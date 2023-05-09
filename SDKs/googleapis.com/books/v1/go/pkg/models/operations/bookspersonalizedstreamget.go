@@ -23,21 +23,25 @@ const (
 	BooksPersonalizedstreamGetMaxAllowedMaturityRatingEnumNotMature                         BooksPersonalizedstreamGetMaxAllowedMaturityRatingEnum = "not-mature"
 )
 
+func (e BooksPersonalizedstreamGetMaxAllowedMaturityRatingEnum) ToPointer() *BooksPersonalizedstreamGetMaxAllowedMaturityRatingEnum {
+	return &e
+}
+
 func (e *BooksPersonalizedstreamGetMaxAllowedMaturityRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MAX_ALLOWED_MATURITY_RATING_UNDEFINED":
 		fallthrough
 	case "MATURE":
 		fallthrough
 	case "not-mature":
-		*e = BooksPersonalizedstreamGetMaxAllowedMaturityRatingEnum(s)
+		*e = BooksPersonalizedstreamGetMaxAllowedMaturityRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksPersonalizedstreamGetMaxAllowedMaturityRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksPersonalizedstreamGetMaxAllowedMaturityRatingEnum: %v", v)
 	}
 }
 

@@ -125,12 +125,16 @@ const (
 	CustomVisionErrorCodeEnumErrorInvalid                                                CustomVisionErrorCodeEnum = "ErrorInvalid"
 )
 
+func (e CustomVisionErrorCodeEnum) ToPointer() *CustomVisionErrorCodeEnum {
+	return &e
+}
+
 func (e *CustomVisionErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NoError":
 		fallthrough
 	case "BadRequest":
@@ -354,10 +358,10 @@ func (e *CustomVisionErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "ErrorRegionProposal":
 		fallthrough
 	case "ErrorInvalid":
-		*e = CustomVisionErrorCodeEnum(s)
+		*e = CustomVisionErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomVisionErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomVisionErrorCodeEnum: %v", v)
 	}
 }
 

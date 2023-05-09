@@ -16,19 +16,23 @@ const (
 	DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurationsBgpStatusEnumDown DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurationsBgpStatusEnum = "down"
 )
 
+func (e DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurationsBgpStatusEnum) ToPointer() *DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurationsBgpStatusEnum {
+	return &e
+}
+
 func (e *DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurationsBgpStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "up":
 		fallthrough
 	case "down":
-		*e = DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurationsBgpStatusEnum(s)
+		*e = DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurationsBgpStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurationsBgpStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationBgpConfigurationsBgpStatusEnum: %v", v)
 	}
 }
 
@@ -48,17 +52,21 @@ const (
 	DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationProtocolEnumGre DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationProtocolEnum = "gre"
 )
 
+func (e DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationProtocolEnum) ToPointer() *DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationProtocolEnum {
+	return &e
+}
+
 func (e *DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gre":
-		*e = DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationProtocolEnum(s)
+		*e = DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersConnectPeerConfigurationProtocolEnum: %v", v)
 	}
 }
 
@@ -81,12 +89,16 @@ const (
 	DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersStateEnumDeleted   DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersStateEnum = "deleted"
 )
 
+func (e DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersStateEnum) ToPointer() *DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersStateEnum {
+	return &e
+}
+
 func (e *DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
@@ -94,10 +106,10 @@ func (e *DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersState
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersStateEnum(s)
+		*e = DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTransitGatewayConnectPeersResultTransitGatewayConnectPeersStateEnum: %v", v)
 	}
 }
 

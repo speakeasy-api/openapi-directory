@@ -16,17 +16,21 @@ const (
 	RestoreFromSnapshotXAmzTargetEnumDirectoryService20150416RestoreFromSnapshot RestoreFromSnapshotXAmzTargetEnum = "DirectoryService_20150416.RestoreFromSnapshot"
 )
 
+func (e RestoreFromSnapshotXAmzTargetEnum) ToPointer() *RestoreFromSnapshotXAmzTargetEnum {
+	return &e
+}
+
 func (e *RestoreFromSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.RestoreFromSnapshot":
-		*e = RestoreFromSnapshotXAmzTargetEnum(s)
+		*e = RestoreFromSnapshotXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RestoreFromSnapshotXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RestoreFromSnapshotXAmzTargetEnum: %v", v)
 	}
 }
 

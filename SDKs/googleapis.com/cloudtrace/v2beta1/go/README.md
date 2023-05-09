@@ -13,40 +13,38 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudtrace
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudtraceProjectsTraceSinksCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.CloudtraceProjectsTraceSinksCreate(ctx, operations.CloudtraceProjectsTraceSinksCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         TraceSinkInput: &shared.TraceSinkInput{
-            Name: "provident",
+            Name: sdk.String("Kelvin Sporer"),
             OutputConfig: &shared.OutputConfig{
-                Destination: "distinctio",
+                Destination: sdk.String("corrupti"),
             },
         },
-        AccessToken: "quibusdam",
-        Alt: "media",
-        Callback: "nulla",
-        Fields: "corrupti",
-        Key: "illum",
-        OauthToken: "vel",
-        Parent: "error",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.CloudtraceProjectsTraceSinksCreate(ctx, req, operations.CloudtraceProjectsTraceSinksCreateSecurity{
+        AccessToken: sdk.String("illum"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("error"),
+        Fields: sdk.String("deserunt"),
+        Key: sdk.String("suscipit"),
+        OauthToken: sdk.String("iure"),
+        Parent: "magnam",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("debitis"),
+        UploadType: sdk.String("ipsa"),
+        UploadProtocol: sdk.String("delectus"),
+    }, operations.CloudtraceProjectsTraceSinksCreateSecurity{
         Option1: &operations.CloudtraceProjectsTraceSinksCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -67,13 +65,13 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `CloudtraceProjectsTraceSinksCreate` - Creates a sink that exports trace spans to a destination. The export of newly-ingested traces begins immediately, unless the sink's `writer_identity` is not permitted to write to the destination. A sink can export traces only from the resource owning the sink (the 'parent').
-* `CloudtraceProjectsTraceSinksDelete` - Deletes a sink.
-* `CloudtraceProjectsTraceSinksGet` - Get a trace sink by name under the parent resource (GCP project).
-* `CloudtraceProjectsTraceSinksList` - List all sinks for the parent resource (GCP project).
-* `CloudtraceProjectsTraceSinksPatch` - Updates a sink. This method updates fields in the existing sink according to the provided update mask. The sink's name cannot be changed nor any output-only fields (e.g. the writer_identity).
+* [CloudtraceProjectsTraceSinksCreate](docs/projects/README.md#cloudtraceprojectstracesinkscreate) - Creates a sink that exports trace spans to a destination. The export of newly-ingested traces begins immediately, unless the sink's `writer_identity` is not permitted to write to the destination. A sink can export traces only from the resource owning the sink (the 'parent').
+* [CloudtraceProjectsTraceSinksDelete](docs/projects/README.md#cloudtraceprojectstracesinksdelete) - Deletes a sink.
+* [CloudtraceProjectsTraceSinksGet](docs/projects/README.md#cloudtraceprojectstracesinksget) - Get a trace sink by name under the parent resource (GCP project).
+* [CloudtraceProjectsTraceSinksList](docs/projects/README.md#cloudtraceprojectstracesinkslist) - List all sinks for the parent resource (GCP project).
+* [CloudtraceProjectsTraceSinksPatch](docs/projects/README.md#cloudtraceprojectstracesinkspatch) - Updates a sink. This method updates fields in the existing sink according to the provided update mask. The sink's name cannot be changed nor any output-only fields (e.g. the writer_identity).
 <!-- End SDK Available Operations -->
 
 ### Maturity

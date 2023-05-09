@@ -16,17 +16,21 @@ const (
 	StartLabelDetectionXAmzTargetEnumRekognitionServiceStartLabelDetection StartLabelDetectionXAmzTargetEnum = "RekognitionService.StartLabelDetection"
 )
 
+func (e StartLabelDetectionXAmzTargetEnum) ToPointer() *StartLabelDetectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartLabelDetectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.StartLabelDetection":
-		*e = StartLabelDetectionXAmzTargetEnum(s)
+		*e = StartLabelDetectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartLabelDetectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartLabelDetectionXAmzTargetEnum: %v", v)
 	}
 }
 

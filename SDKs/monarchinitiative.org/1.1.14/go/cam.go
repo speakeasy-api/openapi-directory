@@ -75,7 +75,10 @@ func (s *cam) GetActivityCollection(ctx context.Context, request operations.GetA
 // GetInstanceObject - Returns list of matches
 func (s *cam) GetInstanceObject(ctx context.Context, request operations.GetInstanceObjectRequest) (*operations.GetInstanceObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cam/instance/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cam/instance/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -228,7 +231,10 @@ func (s *cam) GetModelInstances(ctx context.Context) (*operations.GetModelInstan
 // GetModelObject - Returns a complete model
 func (s *cam) GetModelObject(ctx context.Context, request operations.GetModelObjectRequest) (*operations.GetModelObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cam/model/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cam/model/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

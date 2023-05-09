@@ -17,12 +17,16 @@ const (
 	VolumePerformanceTierEnumVolumePerformanceTierHt          VolumePerformanceTierEnum = "VOLUME_PERFORMANCE_TIER_HT"
 )
 
+func (e VolumePerformanceTierEnum) ToPointer() *VolumePerformanceTierEnum {
+	return &e
+}
+
 func (e *VolumePerformanceTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VOLUME_PERFORMANCE_TIER_UNSPECIFIED":
 		fallthrough
 	case "VOLUME_PERFORMANCE_TIER_SHARED":
@@ -30,10 +34,10 @@ func (e *VolumePerformanceTierEnum) UnmarshalJSON(data []byte) error {
 	case "VOLUME_PERFORMANCE_TIER_ASSIGNED":
 		fallthrough
 	case "VOLUME_PERFORMANCE_TIER_HT":
-		*e = VolumePerformanceTierEnum(s)
+		*e = VolumePerformanceTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumePerformanceTierEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumePerformanceTierEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	VolumeProtocolEnumNfs                 VolumeProtocolEnum = "NFS"
 )
 
+func (e VolumeProtocolEnum) ToPointer() *VolumeProtocolEnum {
+	return &e
+}
+
 func (e *VolumeProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROTOCOL_UNSPECIFIED":
 		fallthrough
 	case "FIBRE_CHANNEL":
 		fallthrough
 	case "NFS":
-		*e = VolumeProtocolEnum(s)
+		*e = VolumeProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeProtocolEnum: %v", v)
 	}
 }
 
@@ -74,12 +82,16 @@ const (
 	VolumeSnapshotAutoDeleteBehaviorEnumNewestFirst                           VolumeSnapshotAutoDeleteBehaviorEnum = "NEWEST_FIRST"
 )
 
+func (e VolumeSnapshotAutoDeleteBehaviorEnum) ToPointer() *VolumeSnapshotAutoDeleteBehaviorEnum {
+	return &e
+}
+
 func (e *VolumeSnapshotAutoDeleteBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SNAPSHOT_AUTO_DELETE_BEHAVIOR_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
@@ -87,10 +99,10 @@ func (e *VolumeSnapshotAutoDeleteBehaviorEnum) UnmarshalJSON(data []byte) error 
 	case "OLDEST_FIRST":
 		fallthrough
 	case "NEWEST_FIRST":
-		*e = VolumeSnapshotAutoDeleteBehaviorEnum(s)
+		*e = VolumeSnapshotAutoDeleteBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeSnapshotAutoDeleteBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeSnapshotAutoDeleteBehaviorEnum: %v", v)
 	}
 }
 
@@ -106,12 +118,16 @@ const (
 	VolumeStateEnumCoolOff          VolumeStateEnum = "COOL_OFF"
 )
 
+func (e VolumeStateEnum) ToPointer() *VolumeStateEnum {
+	return &e
+}
+
 func (e *VolumeStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -123,10 +139,10 @@ func (e *VolumeStateEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATING":
 		fallthrough
 	case "COOL_OFF":
-		*e = VolumeStateEnum(s)
+		*e = VolumeStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeStateEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeStateEnum: %v", v)
 	}
 }
 
@@ -139,21 +155,25 @@ const (
 	VolumeStorageTypeEnumHdd                    VolumeStorageTypeEnum = "HDD"
 )
 
+func (e VolumeStorageTypeEnum) ToPointer() *VolumeStorageTypeEnum {
+	return &e
+}
+
 func (e *VolumeStorageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STORAGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SSD":
 		fallthrough
 	case "HDD":
-		*e = VolumeStorageTypeEnum(s)
+		*e = VolumeStorageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeStorageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeStorageTypeEnum: %v", v)
 	}
 }
 
@@ -166,21 +186,25 @@ const (
 	VolumeWorkloadProfileEnumHana                       VolumeWorkloadProfileEnum = "HANA"
 )
 
+func (e VolumeWorkloadProfileEnum) ToPointer() *VolumeWorkloadProfileEnum {
+	return &e
+}
+
 func (e *VolumeWorkloadProfileEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORKLOAD_PROFILE_UNSPECIFIED":
 		fallthrough
 	case "GENERIC":
 		fallthrough
 	case "HANA":
-		*e = VolumeWorkloadProfileEnum(s)
+		*e = VolumeWorkloadProfileEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeWorkloadProfileEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeWorkloadProfileEnum: %v", v)
 	}
 }
 

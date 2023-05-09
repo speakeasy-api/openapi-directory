@@ -15,18 +15,22 @@ const (
 	LinuxIPTypeEnumShared    LinuxIPTypeEnum = "shared"
 )
 
+func (e LinuxIPTypeEnum) ToPointer() *LinuxIPTypeEnum {
+	return &e
+}
+
 func (e *LinuxIPTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dedicated":
 		fallthrough
 	case "shared":
-		*e = LinuxIPTypeEnum(s)
+		*e = LinuxIPTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LinuxIPTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LinuxIPTypeEnum: %v", v)
 	}
 }

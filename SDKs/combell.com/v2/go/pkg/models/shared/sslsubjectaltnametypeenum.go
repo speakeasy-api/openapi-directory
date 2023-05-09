@@ -16,18 +16,22 @@ const (
 	SslSubjectAltNameTypeEnumIP  SslSubjectAltNameTypeEnum = "ip"
 )
 
+func (e SslSubjectAltNameTypeEnum) ToPointer() *SslSubjectAltNameTypeEnum {
+	return &e
+}
+
 func (e *SslSubjectAltNameTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dns":
 		fallthrough
 	case "ip":
-		*e = SslSubjectAltNameTypeEnum(s)
+		*e = SslSubjectAltNameTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslSubjectAltNameTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SslSubjectAltNameTypeEnum: %v", v)
 	}
 }

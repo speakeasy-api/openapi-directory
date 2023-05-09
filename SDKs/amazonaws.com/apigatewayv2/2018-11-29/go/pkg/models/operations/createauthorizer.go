@@ -17,19 +17,23 @@ const (
 	CreateAuthorizerRequestBodyAuthorizerTypeEnumJwt     CreateAuthorizerRequestBodyAuthorizerTypeEnum = "JWT"
 )
 
+func (e CreateAuthorizerRequestBodyAuthorizerTypeEnum) ToPointer() *CreateAuthorizerRequestBodyAuthorizerTypeEnum {
+	return &e
+}
+
 func (e *CreateAuthorizerRequestBodyAuthorizerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUEST":
 		fallthrough
 	case "JWT":
-		*e = CreateAuthorizerRequestBodyAuthorizerTypeEnum(s)
+		*e = CreateAuthorizerRequestBodyAuthorizerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAuthorizerRequestBodyAuthorizerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAuthorizerRequestBodyAuthorizerTypeEnum: %v", v)
 	}
 }
 

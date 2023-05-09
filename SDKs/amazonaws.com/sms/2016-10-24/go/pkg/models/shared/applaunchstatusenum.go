@@ -27,12 +27,16 @@ const (
 	AppLaunchStatusEnumTerminated              AppLaunchStatusEnum = "TERMINATED"
 )
 
+func (e AppLaunchStatusEnum) ToPointer() *AppLaunchStatusEnum {
+	return &e
+}
+
 func (e *AppLaunchStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READY_FOR_CONFIGURATION":
 		fallthrough
 	case "CONFIGURATION_IN_PROGRESS":
@@ -62,9 +66,9 @@ func (e *AppLaunchStatusEnum) UnmarshalJSON(data []byte) error {
 	case "TERMINATE_FAILED":
 		fallthrough
 	case "TERMINATED":
-		*e = AppLaunchStatusEnum(s)
+		*e = AppLaunchStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppLaunchStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AppLaunchStatusEnum: %v", v)
 	}
 }

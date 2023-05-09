@@ -35,7 +35,10 @@ func newAlerts(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // AdsenseAlertsDelete - Dismiss (delete) the specified alert from the publisher's AdSense account.
 func (s *alerts) AdsenseAlertsDelete(ctx context.Context, request operations.AdsenseAlertsDeleteRequest, security operations.AdsenseAlertsDeleteSecurity) (*operations.AdsenseAlertsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alerts/{alertId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/alerts/{alertId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

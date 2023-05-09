@@ -22,12 +22,16 @@ const (
 	PutAPIV1FiltersIDRequestBodyContextEnumThread        PutAPIV1FiltersIDRequestBodyContextEnum = "thread"
 )
 
+func (e PutAPIV1FiltersIDRequestBodyContextEnum) ToPointer() *PutAPIV1FiltersIDRequestBodyContextEnum {
+	return &e
+}
+
 func (e *PutAPIV1FiltersIDRequestBodyContextEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "home":
 		fallthrough
 	case "notifications":
@@ -35,10 +39,10 @@ func (e *PutAPIV1FiltersIDRequestBodyContextEnum) UnmarshalJSON(data []byte) err
 	case "public":
 		fallthrough
 	case "thread":
-		*e = PutAPIV1FiltersIDRequestBodyContextEnum(s)
+		*e = PutAPIV1FiltersIDRequestBodyContextEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutAPIV1FiltersIDRequestBodyContextEnum: %s", s)
+		return fmt.Errorf("invalid value for PutAPIV1FiltersIDRequestBodyContextEnum: %v", v)
 	}
 }
 

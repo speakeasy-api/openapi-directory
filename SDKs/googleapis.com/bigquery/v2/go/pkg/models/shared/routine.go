@@ -16,21 +16,25 @@ const (
 	RoutineDeterminismLevelEnumNotDeterministic            RoutineDeterminismLevelEnum = "NOT_DETERMINISTIC"
 )
 
+func (e RoutineDeterminismLevelEnum) ToPointer() *RoutineDeterminismLevelEnum {
+	return &e
+}
+
 func (e *RoutineDeterminismLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DETERMINISM_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "DETERMINISTIC":
 		fallthrough
 	case "NOT_DETERMINISTIC":
-		*e = RoutineDeterminismLevelEnum(s)
+		*e = RoutineDeterminismLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoutineDeterminismLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for RoutineDeterminismLevelEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	RoutineLanguageEnumScala               RoutineLanguageEnum = "SCALA"
 )
 
+func (e RoutineLanguageEnum) ToPointer() *RoutineLanguageEnum {
+	return &e
+}
+
 func (e *RoutineLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LANGUAGE_UNSPECIFIED":
 		fallthrough
 	case "SQL":
@@ -63,10 +71,10 @@ func (e *RoutineLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "JAVA":
 		fallthrough
 	case "SCALA":
-		*e = RoutineLanguageEnum(s)
+		*e = RoutineLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoutineLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for RoutineLanguageEnum: %v", v)
 	}
 }
 
@@ -80,12 +88,16 @@ const (
 	RoutineRoutineTypeEnumTableValuedFunction    RoutineRoutineTypeEnum = "TABLE_VALUED_FUNCTION"
 )
 
+func (e RoutineRoutineTypeEnum) ToPointer() *RoutineRoutineTypeEnum {
+	return &e
+}
+
 func (e *RoutineRoutineTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROUTINE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SCALAR_FUNCTION":
@@ -93,10 +105,10 @@ func (e *RoutineRoutineTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PROCEDURE":
 		fallthrough
 	case "TABLE_VALUED_FUNCTION":
-		*e = RoutineRoutineTypeEnum(s)
+		*e = RoutineRoutineTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoutineRoutineTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RoutineRoutineTypeEnum: %v", v)
 	}
 }
 

@@ -80,7 +80,10 @@ func (s *trending) TrendingGetTrendingCategories(ctx context.Context) (*operatio
 // TrendingGetTrendingCategory - Returns paginated lists of trending items for a category.
 func (s *trending) TrendingGetTrendingCategory(ctx context.Context, request operations.TrendingGetTrendingCategoryRequest) (*operations.TrendingGetTrendingCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Trending/Categories/{categoryId}/{pageNumber}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Trending/Categories/{categoryId}/{pageNumber}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,7 +127,10 @@ func (s *trending) TrendingGetTrendingCategory(ctx context.Context, request oper
 // TrendingGetTrendingEntryDetail - Returns the detailed results for a specific trending entry. Note that trending entries are uniquely identified by a combination of *both* the TrendingEntryType *and* the identifier: the identifier alone is not guaranteed to be globally unique.
 func (s *trending) TrendingGetTrendingEntryDetail(ctx context.Context, request operations.TrendingGetTrendingEntryDetailRequest) (*operations.TrendingGetTrendingEntryDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Trending/Details/{trendingEntryType}/{identifier}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Trending/Details/{trendingEntryType}/{identifier}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

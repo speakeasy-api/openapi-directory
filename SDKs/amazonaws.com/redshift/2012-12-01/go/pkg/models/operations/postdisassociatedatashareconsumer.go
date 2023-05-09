@@ -15,17 +15,21 @@ const (
 	POSTDisassociateDataShareConsumerActionEnumDisassociateDataShareConsumer POSTDisassociateDataShareConsumerActionEnum = "DisassociateDataShareConsumer"
 )
 
+func (e POSTDisassociateDataShareConsumerActionEnum) ToPointer() *POSTDisassociateDataShareConsumerActionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateDataShareConsumerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateDataShareConsumer":
-		*e = POSTDisassociateDataShareConsumerActionEnum(s)
+		*e = POSTDisassociateDataShareConsumerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateDataShareConsumerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateDataShareConsumerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisassociateDataShareConsumerVersionEnumTwoThousandAndTwelve1201 POSTDisassociateDataShareConsumerVersionEnum = "2012-12-01"
 )
 
+func (e POSTDisassociateDataShareConsumerVersionEnum) ToPointer() *POSTDisassociateDataShareConsumerVersionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateDataShareConsumerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTDisassociateDataShareConsumerVersionEnum(s)
+		*e = POSTDisassociateDataShareConsumerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateDataShareConsumerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateDataShareConsumerVersionEnum: %v", v)
 	}
 }
 

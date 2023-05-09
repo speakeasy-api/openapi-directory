@@ -2,7 +2,7 @@
 
 package shared
 
-// AnywhereConfiguration - GameLift Anywhere configuration options for your Anywhere fleets.
+// AnywhereConfiguration - Amazon GameLift Anywhere configuration options for your Anywhere fleets.
 type AnywhereConfiguration struct {
 	Cost string `json:"Cost"`
 }

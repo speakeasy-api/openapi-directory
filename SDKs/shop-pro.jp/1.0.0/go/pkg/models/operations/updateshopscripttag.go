@@ -22,19 +22,23 @@ const (
 	UpdateShopScriptTagRequestBodyScriptTagDisplayScopeEnumThanksPage UpdateShopScriptTagRequestBodyScriptTagDisplayScopeEnum = "thanks_page"
 )
 
+func (e UpdateShopScriptTagRequestBodyScriptTagDisplayScopeEnum) ToPointer() *UpdateShopScriptTagRequestBodyScriptTagDisplayScopeEnum {
+	return &e
+}
+
 func (e *UpdateShopScriptTagRequestBodyScriptTagDisplayScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shop":
 		fallthrough
 	case "thanks_page":
-		*e = UpdateShopScriptTagRequestBodyScriptTagDisplayScopeEnum(s)
+		*e = UpdateShopScriptTagRequestBodyScriptTagDisplayScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateShopScriptTagRequestBodyScriptTagDisplayScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateShopScriptTagRequestBodyScriptTagDisplayScopeEnum: %v", v)
 	}
 }
 
@@ -75,19 +79,23 @@ const (
 	UpdateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnumThanksPage UpdateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum = "thanks_page"
 )
 
+func (e UpdateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum) ToPointer() *UpdateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum {
+	return &e
+}
+
 func (e *UpdateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shop":
 		fallthrough
 	case "thanks_page":
-		*e = UpdateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum(s)
+		*e = UpdateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateShopScriptTag200ApplicationJSONScriptTagDisplayScopeEnum: %v", v)
 	}
 }
 

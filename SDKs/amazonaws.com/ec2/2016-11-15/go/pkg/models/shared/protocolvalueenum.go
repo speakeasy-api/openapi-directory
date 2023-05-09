@@ -13,16 +13,20 @@ const (
 	ProtocolValueEnumGre ProtocolValueEnum = "gre"
 )
 
+func (e ProtocolValueEnum) ToPointer() *ProtocolValueEnum {
+	return &e
+}
+
 func (e *ProtocolValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gre":
-		*e = ProtocolValueEnum(s)
+		*e = ProtocolValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProtocolValueEnum: %s", s)
+		return fmt.Errorf("invalid value for ProtocolValueEnum: %v", v)
 	}
 }

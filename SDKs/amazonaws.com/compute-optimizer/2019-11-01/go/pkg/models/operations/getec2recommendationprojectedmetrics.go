@@ -16,17 +16,21 @@ const (
 	GetEc2RecommendationProjectedMetricsXAmzTargetEnumComputeOptimizerServiceGetEc2RecommendationProjectedMetrics GetEc2RecommendationProjectedMetricsXAmzTargetEnum = "ComputeOptimizerService.GetEC2RecommendationProjectedMetrics"
 )
 
+func (e GetEc2RecommendationProjectedMetricsXAmzTargetEnum) ToPointer() *GetEc2RecommendationProjectedMetricsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetEc2RecommendationProjectedMetricsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComputeOptimizerService.GetEC2RecommendationProjectedMetrics":
-		*e = GetEc2RecommendationProjectedMetricsXAmzTargetEnum(s)
+		*e = GetEc2RecommendationProjectedMetricsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEc2RecommendationProjectedMetricsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEc2RecommendationProjectedMetricsXAmzTargetEnum: %v", v)
 	}
 }
 

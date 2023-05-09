@@ -36,7 +36,10 @@ func newAPICalls(defaultClient, securityClient HTTPClient, serverURL, language, 
 // This is the main search endpoint allowing queries against the records database.
 func (s *apiCalls) GetRecordsFormat(ctx context.Context, request operations.GetRecordsFormatRequest) (*operations.GetRecordsFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/records.{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/records.{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +124,10 @@ func (s *apiCalls) GetRecordsFormat(ctx context.Context, request operations.GetR
 // If you know its `record_id` you can use this endpoint to view all metadata associated with that specific record.
 func (s *apiCalls) GetRecordsRecordIDFormat(ctx context.Context, request operations.GetRecordsRecordIDFormatRequest) (*operations.GetRecordsRecordIDFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/records/{record_id}.{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/records/{record_id}.{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -207,7 +213,10 @@ func (s *apiCalls) GetRecordsRecordIDFormat(ctx context.Context, request operati
 // This feature returns a set of search results that are similar (ie have similar metadata) to a specific record.
 func (s *apiCalls) GetRecordsRecordIDMoreLikeThisFormat(ctx context.Context, request operations.GetRecordsRecordIDMoreLikeThisFormatRequest) (*operations.GetRecordsRecordIDMoreLikeThisFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/records/{record_id}/more_like_this.{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/records/{record_id}/more_like_this.{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

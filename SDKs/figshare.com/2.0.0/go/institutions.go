@@ -36,7 +36,10 @@ func newInstitutions(defaultClient, securityClient HTTPClient, serverURL, langua
 // Retrieve a certain curation review by its ID
 func (s *institutions) AccountInstitutionCuration(ctx context.Context, request operations.AccountInstitutionCurationRequest, security operations.AccountInstitutionCurationSecurity) (*operations.AccountInstitutionCurationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/institution/review/{curation_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/institution/review/{curation_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *institutions) AccountInstitutionCuration(ctx context.Context, request o
 // Retrieve a certain curation review's comments.
 func (s *institutions) AccountInstitutionCurationComments(ctx context.Context, request operations.AccountInstitutionCurationCommentsRequest, security operations.AccountInstitutionCurationCommentsSecurity) (*operations.AccountInstitutionCurationCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/institution/review/{curation_id}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/institution/review/{curation_id}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -286,7 +292,10 @@ func (s *institutions) CustomFieldsList(ctx context.Context, request operations.
 // Uploads a CSV containing values for a specific custom field of type <b>dropdown_large_list</b>. More details in the <a href="#custom_fields">Custom Fields section</a>
 func (s *institutions) CustomFieldsUpload(ctx context.Context, request operations.CustomFieldsUploadRequest, security operations.CustomFieldsUploadSecurity) (*operations.CustomFieldsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/institution/custom_fields/{custom_field_id}/items/upload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/institution/custom_fields/{custom_field_id}/items/upload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -353,7 +362,10 @@ func (s *institutions) CustomFieldsUpload(ctx context.Context, request operation
 // Returns a list of articles belonging to the institution
 func (s *institutions) InstitutionArticles(ctx context.Context, request operations.InstitutionArticlesRequest) (*operations.InstitutionArticlesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/institutions/{institution_string_id}/articles/filter-by", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/institutions/{institution_string_id}/articles/filter-by", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -468,7 +480,10 @@ func (s *institutions) InstitutionHrfeedUpload(ctx context.Context, request oper
 // Add a new comment to the review.
 func (s *institutions) PostAccountInstitutionReviewCurationIDComments(ctx context.Context, request operations.PostAccountInstitutionReviewCurationIDCommentsRequest, security operations.PostAccountInstitutionReviewCurationIDCommentsSecurity) (*operations.PostAccountInstitutionReviewCurationIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/institution/review/{curation_id}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/institution/review/{curation_id}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CurationCommentCreate", "json")
 	if err != nil {
@@ -530,7 +545,10 @@ func (s *institutions) PostAccountInstitutionReviewCurationIDComments(ctx contex
 // Retrieve institution user information using the account_id
 func (s *institutions) PrivateAccountInstitutionUser(ctx context.Context, request operations.PrivateAccountInstitutionUserRequest, security operations.PrivateAccountInstitutionUserSecurity) (*operations.PrivateAccountInstitutionUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/institution/users/{account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/institution/users/{account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -588,7 +606,7 @@ func (s *institutions) PrivateAccountInstitutionUser(ctx context.Context, reques
 
 // PrivateCategoriesList - Private Account Categories
 // List institution categories (including parent Categories)
-func (s *institutions) PrivateCategoriesList(ctx context.Context) (*operations.PrivateCategoriesListResponse, error) {
+func (s *institutions) PrivateCategoriesList(ctx context.Context, security operations.PrivateCategoriesListSecurity) (*operations.PrivateCategoriesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/categories"
 
@@ -597,7 +615,7 @@ func (s *institutions) PrivateCategoriesList(ctx context.Context) (*operations.P
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -648,7 +666,10 @@ func (s *institutions) PrivateCategoriesList(ctx context.Context) (*operations.P
 // Account institution group embargo options details
 func (s *institutions) PrivateGroupEmbargoOptionsDetails(ctx context.Context, request operations.PrivateGroupEmbargoOptionsDetailsRequest, security operations.PrivateGroupEmbargoOptionsDetailsSecurity) (*operations.PrivateGroupEmbargoOptionsDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/institution/groups/{group_id}/embargo_options", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/institution/groups/{group_id}/embargo_options", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -706,7 +727,10 @@ func (s *institutions) PrivateGroupEmbargoOptionsDetails(ctx context.Context, re
 // Delete Institution Account Group Role
 func (s *institutions) PrivateInstitutionAccountGroupRoleDelete(ctx context.Context, request operations.PrivateInstitutionAccountGroupRoleDeleteRequest, security operations.PrivateInstitutionAccountGroupRoleDeleteSecurity) (*operations.PrivateInstitutionAccountGroupRoleDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/institution/roles/{account_id}/{group_id}/{role_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/institution/roles/{account_id}/{group_id}/{role_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -758,7 +782,10 @@ func (s *institutions) PrivateInstitutionAccountGroupRoleDelete(ctx context.Cont
 // List Institution Account Group Roles
 func (s *institutions) PrivateInstitutionAccountGroupRoles(ctx context.Context, request operations.PrivateInstitutionAccountGroupRolesRequest, security operations.PrivateInstitutionAccountGroupRolesSecurity) (*operations.PrivateInstitutionAccountGroupRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/institution/roles/{account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/institution/roles/{account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -818,7 +845,10 @@ func (s *institutions) PrivateInstitutionAccountGroupRoles(ctx context.Context, 
 // Add Institution Account Group Roles
 func (s *institutions) PrivateInstitutionAccountGroupRolesCreate(ctx context.Context, request operations.PrivateInstitutionAccountGroupRolesCreateRequest, security operations.PrivateInstitutionAccountGroupRolesCreateSecurity) (*operations.PrivateInstitutionAccountGroupRolesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/institution/roles/{account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/institution/roles/{account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1068,7 +1098,10 @@ func (s *institutions) PrivateInstitutionAccountsSearch(ctx context.Context, req
 // Update Institution Account
 func (s *institutions) PrivateInstitutionAccountsUpdate(ctx context.Context, request operations.PrivateInstitutionAccountsUpdateRequest, security operations.PrivateInstitutionAccountsUpdateSecurity) (*operations.PrivateInstitutionAccountsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/institution/accounts/{account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/institution/accounts/{account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountUpdate", "json")
 	if err != nil {
@@ -1191,7 +1224,7 @@ func (s *institutions) PrivateInstitutionArticles(ctx context.Context, request o
 
 // PrivateInstitutionDetails - Private Account Institutions
 // Account institution details
-func (s *institutions) PrivateInstitutionDetails(ctx context.Context) (*operations.PrivateInstitutionDetailsResponse, error) {
+func (s *institutions) PrivateInstitutionDetails(ctx context.Context, security operations.PrivateInstitutionDetailsSecurity) (*operations.PrivateInstitutionDetailsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/institution"
 
@@ -1200,7 +1233,7 @@ func (s *institutions) PrivateInstitutionDetails(ctx context.Context) (*operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1249,7 +1282,7 @@ func (s *institutions) PrivateInstitutionDetails(ctx context.Context) (*operatio
 
 // PrivateInstitutionEmbargoOptionsDetails - Private Account Institution embargo options
 // Account institution embargo options details
-func (s *institutions) PrivateInstitutionEmbargoOptionsDetails(ctx context.Context) (*operations.PrivateInstitutionEmbargoOptionsDetailsResponse, error) {
+func (s *institutions) PrivateInstitutionEmbargoOptionsDetails(ctx context.Context, security operations.PrivateInstitutionEmbargoOptionsDetailsSecurity) (*operations.PrivateInstitutionEmbargoOptionsDetailsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/institution/embargo_options"
 
@@ -1258,7 +1291,7 @@ func (s *institutions) PrivateInstitutionEmbargoOptionsDetails(ctx context.Conte
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1307,7 +1340,7 @@ func (s *institutions) PrivateInstitutionEmbargoOptionsDetails(ctx context.Conte
 
 // PrivateInstitutionGroupsList - Private Account Institution Groups
 // Returns the groups for which the account has administrative privileges (assigned and inherited).
-func (s *institutions) PrivateInstitutionGroupsList(ctx context.Context) (*operations.PrivateInstitutionGroupsListResponse, error) {
+func (s *institutions) PrivateInstitutionGroupsList(ctx context.Context, security operations.PrivateInstitutionGroupsListSecurity) (*operations.PrivateInstitutionGroupsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/institution/groups"
 
@@ -1316,7 +1349,7 @@ func (s *institutions) PrivateInstitutionGroupsList(ctx context.Context) (*opera
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1365,7 +1398,7 @@ func (s *institutions) PrivateInstitutionGroupsList(ctx context.Context) (*opera
 
 // PrivateInstitutionRolesList - Private Account Institution Roles
 // Returns the roles available for groups and the institution group.
-func (s *institutions) PrivateInstitutionRolesList(ctx context.Context) (*operations.PrivateInstitutionRolesListResponse, error) {
+func (s *institutions) PrivateInstitutionRolesList(ctx context.Context, security operations.PrivateInstitutionRolesListSecurity) (*operations.PrivateInstitutionRolesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/institution/roles"
 
@@ -1374,7 +1407,7 @@ func (s *institutions) PrivateInstitutionRolesList(ctx context.Context) (*operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

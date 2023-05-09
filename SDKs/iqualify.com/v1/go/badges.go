@@ -35,7 +35,10 @@ func newBadges(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Responds with the badge for an offering matching the offeringId.
 func (s *badges) GetOfferingsOfferingIDBadges(ctx context.Context, request operations.GetOfferingsOfferingIDBadgesRequest) (*operations.GetOfferingsOfferingIDBadgesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/badges", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/badges", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *badges) GetOfferingsOfferingIDBadges(ctx context.Context, request opera
 // Responds with all badges that the specified user has been awarded.
 func (s *badges) GetUsersUserEmailBadges(ctx context.Context, request operations.GetUsersUserEmailBadgesRequest) (*operations.GetUsersUserEmailBadgesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/badges", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/badges", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -155,7 +161,10 @@ func (s *badges) GetUsersUserEmailBadges(ctx context.Context, request operations
 // Awards a badge to a user in the offering.
 func (s *badges) PostOfferingsOfferingIDUsersUserEmailBadgesAward(ctx context.Context, request operations.PostOfferingsOfferingIDUsersUserEmailBadgesAwardRequest) (*operations.PostOfferingsOfferingIDUsersUserEmailBadgesAwardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{userEmail}/badges/award", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{userEmail}/badges/award", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -19,19 +19,23 @@ const (
 	SearchTasksForWorkspaceResourceSubtypeEnumMilestone   SearchTasksForWorkspaceResourceSubtypeEnum = "milestone"
 )
 
+func (e SearchTasksForWorkspaceResourceSubtypeEnum) ToPointer() *SearchTasksForWorkspaceResourceSubtypeEnum {
+	return &e
+}
+
 func (e *SearchTasksForWorkspaceResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default_task":
 		fallthrough
 	case "milestone":
-		*e = SearchTasksForWorkspaceResourceSubtypeEnum(s)
+		*e = SearchTasksForWorkspaceResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchTasksForWorkspaceResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchTasksForWorkspaceResourceSubtypeEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	SearchTasksForWorkspaceSortByEnumModifiedAt  SearchTasksForWorkspaceSortByEnum = "modified_at"
 )
 
+func (e SearchTasksForWorkspaceSortByEnum) ToPointer() *SearchTasksForWorkspaceSortByEnum {
+	return &e
+}
+
 func (e *SearchTasksForWorkspaceSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "due_date":
 		fallthrough
 	case "created_at":
@@ -61,10 +69,10 @@ func (e *SearchTasksForWorkspaceSortByEnum) UnmarshalJSON(data []byte) error {
 	case "likes":
 		fallthrough
 	case "modified_at":
-		*e = SearchTasksForWorkspaceSortByEnum(s)
+		*e = SearchTasksForWorkspaceSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchTasksForWorkspaceSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchTasksForWorkspaceSortByEnum: %v", v)
 	}
 }
 

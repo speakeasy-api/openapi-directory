@@ -14,18 +14,22 @@ const (
 	LoadBalancerSchemeEnumEnumInternal       LoadBalancerSchemeEnumEnum = "internal"
 )
 
+func (e LoadBalancerSchemeEnumEnum) ToPointer() *LoadBalancerSchemeEnumEnum {
+	return &e
+}
+
 func (e *LoadBalancerSchemeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internet-facing":
 		fallthrough
 	case "internal":
-		*e = LoadBalancerSchemeEnumEnum(s)
+		*e = LoadBalancerSchemeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoadBalancerSchemeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for LoadBalancerSchemeEnumEnum: %v", v)
 	}
 }

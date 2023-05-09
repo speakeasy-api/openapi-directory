@@ -16,21 +16,25 @@ const (
 	MergeCellsRequestMergeTypeEnumMergeRows    MergeCellsRequestMergeTypeEnum = "MERGE_ROWS"
 )
 
+func (e MergeCellsRequestMergeTypeEnum) ToPointer() *MergeCellsRequestMergeTypeEnum {
+	return &e
+}
+
 func (e *MergeCellsRequestMergeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MERGE_ALL":
 		fallthrough
 	case "MERGE_COLUMNS":
 		fallthrough
 	case "MERGE_ROWS":
-		*e = MergeCellsRequestMergeTypeEnum(s)
+		*e = MergeCellsRequestMergeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MergeCellsRequestMergeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MergeCellsRequestMergeTypeEnum: %v", v)
 	}
 }
 

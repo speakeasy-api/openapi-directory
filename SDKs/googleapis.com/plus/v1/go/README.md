@@ -13,30 +13,28 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/plus/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PlusActivitiesGetRequest{
-        ActivityID: "corrupti",
-        Alt: "json",
-        Fields: "provident",
-        Key: "distinctio",
-        OauthToken: "quibusdam",
-        PrettyPrint: false,
-        QuotaUser: "unde",
-        UserIP: "nulla",
-    }
-
     ctx := context.Background()
-    res, err := s.Activities.PlusActivitiesGet(ctx, req, operations.PlusActivitiesGetSecurity{
+    res, err := s.Activities.PlusActivitiesGet(ctx, operations.PlusActivitiesGetRequest{
+        ActivityID: "corrupti",
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("provident"),
+        Key: sdk.String("distinctio"),
+        OauthToken: sdk.String("quibusdam"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("unde"),
+        UserIP: sdk.String("nulla"),
+    }, operations.PlusActivitiesGetSecurity{
         Option1: &operations.PlusActivitiesGetSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -57,23 +55,23 @@ func main() {
 ## Available Resources and Operations
 
 
-### Activities
+### [Activities](docs/activities/README.md)
 
-* `PlusActivitiesGet` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-* `PlusActivitiesList` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-* `PlusActivitiesSearch` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [PlusActivitiesGet](docs/activities/README.md#plusactivitiesget) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [PlusActivitiesList](docs/activities/README.md#plusactivitieslist) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [PlusActivitiesSearch](docs/activities/README.md#plusactivitiessearch) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
 
-### Comments
+### [Comments](docs/comments/README.md)
 
-* `PlusCommentsGet` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-* `PlusCommentsList` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [PlusCommentsGet](docs/comments/README.md#pluscommentsget) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [PlusCommentsList](docs/comments/README.md#pluscommentslist) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
 
-### People
+### [People](docs/people/README.md)
 
-* `PlusPeopleGet` - Get a person's profile. If your app uses scope https://www.googleapis.com/auth/plus.login, this method is guaranteed to return ageRange and language.
-* `PlusPeopleList` - List all of the people in the specified collection.
-* `PlusPeopleListByActivity` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
-* `PlusPeopleSearch` - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [PlusPeopleGet](docs/people/README.md#pluspeopleget) - Get a person's profile. If your app uses scope https://www.googleapis.com/auth/plus.login, this method is guaranteed to return ageRange and language.
+* [PlusPeopleList](docs/people/README.md#pluspeoplelist) - List all of the people in the specified collection.
+* [PlusPeopleListByActivity](docs/people/README.md#pluspeoplelistbyactivity) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
+* [PlusPeopleSearch](docs/people/README.md#pluspeoplesearch) - Shut down. See https://developers.google.com/+/api-shutdown for more details.
 <!-- End SDK Available Operations -->
 
 ### Maturity

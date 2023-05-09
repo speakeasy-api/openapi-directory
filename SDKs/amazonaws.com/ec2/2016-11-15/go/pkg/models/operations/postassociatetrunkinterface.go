@@ -15,17 +15,21 @@ const (
 	POSTAssociateTrunkInterfaceActionEnumAssociateTrunkInterface POSTAssociateTrunkInterfaceActionEnum = "AssociateTrunkInterface"
 )
 
+func (e POSTAssociateTrunkInterfaceActionEnum) ToPointer() *POSTAssociateTrunkInterfaceActionEnum {
+	return &e
+}
+
 func (e *POSTAssociateTrunkInterfaceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssociateTrunkInterface":
-		*e = POSTAssociateTrunkInterfaceActionEnum(s)
+		*e = POSTAssociateTrunkInterfaceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssociateTrunkInterfaceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssociateTrunkInterfaceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAssociateTrunkInterfaceVersionEnumTwoThousandAndSixteen1115 POSTAssociateTrunkInterfaceVersionEnum = "2016-11-15"
 )
 
+func (e POSTAssociateTrunkInterfaceVersionEnum) ToPointer() *POSTAssociateTrunkInterfaceVersionEnum {
+	return &e
+}
+
 func (e *POSTAssociateTrunkInterfaceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTAssociateTrunkInterfaceVersionEnum(s)
+		*e = POSTAssociateTrunkInterfaceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssociateTrunkInterfaceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssociateTrunkInterfaceVersionEnum: %v", v)
 	}
 }
 

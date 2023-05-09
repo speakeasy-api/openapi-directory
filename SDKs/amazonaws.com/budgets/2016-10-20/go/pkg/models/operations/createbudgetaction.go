@@ -16,17 +16,21 @@ const (
 	CreateBudgetActionXAmzTargetEnumAwsBudgetServiceGatewayCreateBudgetAction CreateBudgetActionXAmzTargetEnum = "AWSBudgetServiceGateway.CreateBudgetAction"
 )
 
+func (e CreateBudgetActionXAmzTargetEnum) ToPointer() *CreateBudgetActionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateBudgetActionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSBudgetServiceGateway.CreateBudgetAction":
-		*e = CreateBudgetActionXAmzTargetEnum(s)
+		*e = CreateBudgetActionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBudgetActionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBudgetActionXAmzTargetEnum: %v", v)
 	}
 }
 

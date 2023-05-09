@@ -14,18 +14,22 @@ const (
 	DomainEnumVideoOnDemand DomainEnum = "VIDEO_ON_DEMAND"
 )
 
+func (e DomainEnum) ToPointer() *DomainEnum {
+	return &e
+}
+
 func (e *DomainEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ECOMMERCE":
 		fallthrough
 	case "VIDEO_ON_DEMAND":
-		*e = DomainEnum(s)
+		*e = DomainEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainEnum: %v", v)
 	}
 }

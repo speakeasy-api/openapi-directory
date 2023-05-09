@@ -35,7 +35,10 @@ func newAnalytics(defaultClient, securityClient HTTPClient, serverURL, language,
 // GETAnalyticsDataUsingGET - Returns the results of executed query defined by the parameters passed in
 func (s *analytics) GETAnalyticsDataUsingGET(ctx context.Context, request operations.GETAnalyticsDataUsingGETRequest) (*operations.GETAnalyticsDataUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/analytics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/analytics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *analytics) GETAnalyticsDataUsingGET(ctx context.Context, request operat
 // GETDataCountUsingGET - Returns the count of executed query
 func (s *analytics) GETDataCountUsingGET(ctx context.Context, request operations.GETDataCountUsingGETRequest) (*operations.GETDataCountUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/analytics/count", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/analytics/count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -157,7 +163,10 @@ func (s *analytics) GETDataCountUsingGET(ctx context.Context, request operations
 // GETRetentionUsingGET - Returns the percentage of user retention over the last 30 days
 func (s *analytics) GETRetentionUsingGET(ctx context.Context, request operations.GETRetentionUsingGETRequest) (*operations.GETRetentionUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/analytics/rollingRetention", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/analytics/rollingRetention", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

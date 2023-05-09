@@ -16,17 +16,21 @@ const (
 	ListFirewallRulesXAmzTargetEnumRoute53ResolverListFirewallRules ListFirewallRulesXAmzTargetEnum = "Route53Resolver.ListFirewallRules"
 )
 
+func (e ListFirewallRulesXAmzTargetEnum) ToPointer() *ListFirewallRulesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListFirewallRulesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.ListFirewallRules":
-		*e = ListFirewallRulesXAmzTargetEnum(s)
+		*e = ListFirewallRulesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFirewallRulesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFirewallRulesXAmzTargetEnum: %v", v)
 	}
 }
 

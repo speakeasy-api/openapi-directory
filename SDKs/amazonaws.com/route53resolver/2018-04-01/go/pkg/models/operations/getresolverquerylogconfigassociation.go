@@ -16,17 +16,21 @@ const (
 	GetResolverQueryLogConfigAssociationXAmzTargetEnumRoute53ResolverGetResolverQueryLogConfigAssociation GetResolverQueryLogConfigAssociationXAmzTargetEnum = "Route53Resolver.GetResolverQueryLogConfigAssociation"
 )
 
+func (e GetResolverQueryLogConfigAssociationXAmzTargetEnum) ToPointer() *GetResolverQueryLogConfigAssociationXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetResolverQueryLogConfigAssociationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.GetResolverQueryLogConfigAssociation":
-		*e = GetResolverQueryLogConfigAssociationXAmzTargetEnum(s)
+		*e = GetResolverQueryLogConfigAssociationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResolverQueryLogConfigAssociationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResolverQueryLogConfigAssociationXAmzTargetEnum: %v", v)
 	}
 }
 

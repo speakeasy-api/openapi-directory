@@ -17,12 +17,16 @@ const (
 	ApplicationReportApplicationSourceEnumInstalledFromPlayStore       ApplicationReportApplicationSourceEnum = "INSTALLED_FROM_PLAY_STORE"
 )
 
+func (e ApplicationReportApplicationSourceEnum) ToPointer() *ApplicationReportApplicationSourceEnum {
+	return &e
+}
+
 func (e *ApplicationReportApplicationSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPLICATION_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "SYSTEM_APP_FACTORY_VERSION":
@@ -30,10 +34,10 @@ func (e *ApplicationReportApplicationSourceEnum) UnmarshalJSON(data []byte) erro
 	case "SYSTEM_APP_UPDATED_VERSION":
 		fallthrough
 	case "INSTALLED_FROM_PLAY_STORE":
-		*e = ApplicationReportApplicationSourceEnum(s)
+		*e = ApplicationReportApplicationSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationReportApplicationSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationReportApplicationSourceEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	ApplicationReportStateEnumInstalled                   ApplicationReportStateEnum = "INSTALLED"
 )
 
+func (e ApplicationReportStateEnum) ToPointer() *ApplicationReportStateEnum {
+	return &e
+}
+
 func (e *ApplicationReportStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPLICATION_STATE_UNSPECIFIED":
 		fallthrough
 	case "REMOVED":
 		fallthrough
 	case "INSTALLED":
-		*e = ApplicationReportStateEnum(s)
+		*e = ApplicationReportStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationReportStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationReportStateEnum: %v", v)
 	}
 }
 

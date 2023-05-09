@@ -16,17 +16,21 @@ const (
 	DeauthorizeConnectionXAmzTargetEnumAwsEventsDeauthorizeConnection DeauthorizeConnectionXAmzTargetEnum = "AWSEvents.DeauthorizeConnection"
 )
 
+func (e DeauthorizeConnectionXAmzTargetEnum) ToPointer() *DeauthorizeConnectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeauthorizeConnectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.DeauthorizeConnection":
-		*e = DeauthorizeConnectionXAmzTargetEnum(s)
+		*e = DeauthorizeConnectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeauthorizeConnectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeauthorizeConnectionXAmzTargetEnum: %v", v)
 	}
 }
 

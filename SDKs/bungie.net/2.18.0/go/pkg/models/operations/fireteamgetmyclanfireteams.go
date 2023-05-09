@@ -21,6 +21,8 @@ type FireteamGetMyClanFireteamsRequest struct {
 	// An optional language filter.
 	LangFilter *string `queryParam:"style=form,explode=true,name=langFilter"`
 	// Deprecated parameter, ignored.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Page int `pathParam:"style=simple,explode=false,name=page"`
 	// The platform filter.
 	Platform int64 `pathParam:"style=simple,explode=false,name=platform"`

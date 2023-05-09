@@ -21,12 +21,16 @@ const (
 	MaintenanceWindowDayOfWeekEnumSunday               MaintenanceWindowDayOfWeekEnum = "SUNDAY"
 )
 
+func (e MaintenanceWindowDayOfWeekEnum) ToPointer() *MaintenanceWindowDayOfWeekEnum {
+	return &e
+}
+
 func (e *MaintenanceWindowDayOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAY_OF_WEEK_UNSPECIFIED":
 		fallthrough
 	case "MONDAY":
@@ -42,10 +46,10 @@ func (e *MaintenanceWindowDayOfWeekEnum) UnmarshalJSON(data []byte) error {
 	case "SATURDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = MaintenanceWindowDayOfWeekEnum(s)
+		*e = MaintenanceWindowDayOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MaintenanceWindowDayOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for MaintenanceWindowDayOfWeekEnum: %v", v)
 	}
 }
 

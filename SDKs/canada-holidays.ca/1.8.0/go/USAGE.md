@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.HolidayRequest{
-        HolidayID: 2,
-        Optional: "true",
-        Year: 592845,
-    }
-
     ctx := context.Background()
-    res, err := s.Holidays.Holiday(ctx, req)
+    res, err := s.Holidays.Holiday(ctx, operations.HolidayRequest{
+        HolidayID: 2,
+        Optional: operations.HolidayOptionalEnumTrue.ToPointer(),
+        Year: sdk.Int64(592845),
+    })
     if err != nil {
         log.Fatal(err)
     }

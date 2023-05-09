@@ -36,7 +36,10 @@ func newImages(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // This endpoint adds one or more images to a collection by image IDs.
 func (s *images) AddImageCollectionItems(ctx context.Context, request operations.AddImageCollectionItemsRequest, security operations.AddImageCollectionItemsSecurity) (*operations.AddImageCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionItemRequest", "json")
 	if err != nil {
@@ -214,7 +217,10 @@ func (s *images) CreateImageCollection(ctx context.Context, request shared.Colle
 // This endpoint deletes an image collection.
 func (s *images) DeleteImageCollection(ctx context.Context, request operations.DeleteImageCollectionRequest, security operations.DeleteImageCollectionSecurity) (*operations.DeleteImageCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -258,7 +264,10 @@ func (s *images) DeleteImageCollection(ctx context.Context, request operations.D
 // This endpoint removes one or more images from a collection.
 func (s *images) DeleteImageCollectionItems(ctx context.Context, request operations.DeleteImageCollectionItemsRequest, security operations.DeleteImageCollectionItemsSecurity) (*operations.DeleteImageCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -306,7 +315,10 @@ func (s *images) DeleteImageCollectionItems(ctx context.Context, request operati
 // This endpoint redownloads images that you have already received a license for. The download links in the response are valid for 8 hours.
 func (s *images) DownloadImage(ctx context.Context, request operations.DownloadImageRequest, security operations.DownloadImageSecurity) (*operations.DownloadImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/licenses/{id}/downloads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/images/licenses/{id}/downloads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RedownloadImage", "json")
 	if err != nil {
@@ -366,7 +378,10 @@ func (s *images) DownloadImage(ctx context.Context, request operations.DownloadI
 // This endpoint gets more detailed information about a featured collection, including its cover image and timestamps for its creation and most recent update. To get the images, use `GET /v2/images/collections/featured/{id}/items`.
 func (s *images) GetFeaturedImageCollection(ctx context.Context, request operations.GetFeaturedImageCollectionRequest, security operations.GetFeaturedImageCollectionSecurity) (*operations.GetFeaturedImageCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/featured/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/featured/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -422,7 +437,10 @@ func (s *images) GetFeaturedImageCollection(ctx context.Context, request operati
 // This endpoint lists the IDs of images in a featured collection and the date that each was added.
 func (s *images) GetFeaturedImageCollectionItems(ctx context.Context, request operations.GetFeaturedImageCollectionItemsRequest, security operations.GetFeaturedImageCollectionItemsSecurity) (*operations.GetFeaturedImageCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/featured/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/featured/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -532,7 +550,10 @@ func (s *images) GetFeaturedImageCollectionList(ctx context.Context, request ope
 // This endpoint shows information about an image, including a URL to a preview image and the sizes that it is available in.
 func (s *images) GetImage(ctx context.Context, request operations.GetImageRequest, security operations.GetImageSecurity) (*operations.GetImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/images/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -586,7 +607,10 @@ func (s *images) GetImage(ctx context.Context, request operations.GetImageReques
 // This endpoint gets more detailed information about a collection, including its cover image and timestamps for its creation and most recent update. To get the images in collections, use `GET /v2/images/collections/{id}/items`.
 func (s *images) GetImageCollection(ctx context.Context, request operations.GetImageCollectionRequest, security operations.GetImageCollectionSecurity) (*operations.GetImageCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -642,7 +666,10 @@ func (s *images) GetImageCollection(ctx context.Context, request operations.GetI
 // This endpoint lists the IDs of images in a collection and the date that each was added.
 func (s *images) GetImageCollectionItems(ctx context.Context, request operations.GetImageCollectionItemsRequest, security operations.GetImageCollectionItemsSecurity) (*operations.GetImageCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1195,7 +1222,10 @@ func (s *images) ListImageCategories(ctx context.Context, request operations.Lis
 // This endpoint returns images that are visually similar to an image that you specify.
 func (s *images) ListSimilarImages(ctx context.Context, request operations.ListSimilarImagesRequest, security operations.ListSimilarImagesSecurity) (*operations.ListSimilarImagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/{id}/similar", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/images/{id}/similar", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1249,7 +1279,10 @@ func (s *images) ListSimilarImages(ctx context.Context, request operations.ListS
 // This endpoint sets a new name for an image collection.
 func (s *images) RenameImageCollection(ctx context.Context, request operations.RenameImageCollectionRequest, security operations.RenameImageCollectionSecurity) (*operations.RenameImageCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/images/collections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionUpdateRequest", "json")
 	if err != nil {

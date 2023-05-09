@@ -85,7 +85,10 @@ func (s *actions) GetActions(ctx context.Context, request operations.GetActionsR
 // Returns a specific Action object.
 func (s *actions) GetActionsID(ctx context.Context, request operations.GetActionsIDRequest) (*operations.GetActionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/actions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/actions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

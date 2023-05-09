@@ -34,7 +34,10 @@ func newPretargetingConfig(defaultClient, securityClient HTTPClient, serverURL, 
 // AdexchangebuyerPretargetingConfigDelete - Deletes an existing pretargeting config.
 func (s *pretargetingConfig) AdexchangebuyerPretargetingConfigDelete(ctx context.Context, request operations.AdexchangebuyerPretargetingConfigDeleteRequest, security operations.AdexchangebuyerPretargetingConfigDeleteSecurity) (*operations.AdexchangebuyerPretargetingConfigDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pretargetingconfigs/{accountId}/{configId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pretargetingconfigs/{accountId}/{configId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *pretargetingConfig) AdexchangebuyerPretargetingConfigDelete(ctx context
 // AdexchangebuyerPretargetingConfigGet - Gets a specific pretargeting configuration
 func (s *pretargetingConfig) AdexchangebuyerPretargetingConfigGet(ctx context.Context, request operations.AdexchangebuyerPretargetingConfigGetRequest, security operations.AdexchangebuyerPretargetingConfigGetSecurity) (*operations.AdexchangebuyerPretargetingConfigGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pretargetingconfigs/{accountId}/{configId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pretargetingconfigs/{accountId}/{configId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *pretargetingConfig) AdexchangebuyerPretargetingConfigGet(ctx context.Co
 // AdexchangebuyerPretargetingConfigInsert - Inserts a new pretargeting configuration.
 func (s *pretargetingConfig) AdexchangebuyerPretargetingConfigInsert(ctx context.Context, request operations.AdexchangebuyerPretargetingConfigInsertRequest, security operations.AdexchangebuyerPretargetingConfigInsertSecurity) (*operations.AdexchangebuyerPretargetingConfigInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pretargetingconfigs/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pretargetingconfigs/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PretargetingConfig", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *pretargetingConfig) AdexchangebuyerPretargetingConfigInsert(ctx context
 // AdexchangebuyerPretargetingConfigList - Retrieves a list of the authenticated user's pretargeting configurations.
 func (s *pretargetingConfig) AdexchangebuyerPretargetingConfigList(ctx context.Context, request operations.AdexchangebuyerPretargetingConfigListRequest, security operations.AdexchangebuyerPretargetingConfigListSecurity) (*operations.AdexchangebuyerPretargetingConfigListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pretargetingconfigs/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pretargetingconfigs/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *pretargetingConfig) AdexchangebuyerPretargetingConfigList(ctx context.C
 // AdexchangebuyerPretargetingConfigPatch - Updates an existing pretargeting config. This method supports patch semantics.
 func (s *pretargetingConfig) AdexchangebuyerPretargetingConfigPatch(ctx context.Context, request operations.AdexchangebuyerPretargetingConfigPatchRequest, security operations.AdexchangebuyerPretargetingConfigPatchSecurity) (*operations.AdexchangebuyerPretargetingConfigPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pretargetingconfigs/{accountId}/{configId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pretargetingconfigs/{accountId}/{configId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PretargetingConfig", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *pretargetingConfig) AdexchangebuyerPretargetingConfigPatch(ctx context.
 // AdexchangebuyerPretargetingConfigUpdate - Updates an existing pretargeting config.
 func (s *pretargetingConfig) AdexchangebuyerPretargetingConfigUpdate(ctx context.Context, request operations.AdexchangebuyerPretargetingConfigUpdateRequest, security operations.AdexchangebuyerPretargetingConfigUpdateSecurity) (*operations.AdexchangebuyerPretargetingConfigUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pretargetingconfigs/{accountId}/{configId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pretargetingconfigs/{accountId}/{configId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PretargetingConfig", "json")
 	if err != nil {

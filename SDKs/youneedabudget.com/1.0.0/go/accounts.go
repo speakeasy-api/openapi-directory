@@ -36,7 +36,10 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Creates a new account
 func (s *accounts) CreateAccount(ctx context.Context, request operations.CreateAccountRequest) (*operations.CreateAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostAccountWrapper", "json")
 	if err != nil {
@@ -101,7 +104,10 @@ func (s *accounts) CreateAccount(ctx context.Context, request operations.CreateA
 // Returns a single account
 func (s *accounts) GetAccountByID(ctx context.Context, request operations.GetAccountByIDRequest) (*operations.GetAccountByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/accounts/{account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/accounts/{account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -158,7 +164,10 @@ func (s *accounts) GetAccountByID(ctx context.Context, request operations.GetAcc
 // Returns all accounts
 func (s *accounts) GetAccounts(ctx context.Context, request operations.GetAccountsRequest) (*operations.GetAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

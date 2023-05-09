@@ -13,17 +13,21 @@ const (
 	FourHundredAndSixNOTACCEPTABLECodeEnumInvalidHeaderValue FourHundredAndSixNOTACCEPTABLECodeEnum = "INVALID_HEADER_VALUE"
 )
 
+func (e FourHundredAndSixNOTACCEPTABLECodeEnum) ToPointer() *FourHundredAndSixNOTACCEPTABLECodeEnum {
+	return &e
+}
+
 func (e *FourHundredAndSixNOTACCEPTABLECodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVALID_HEADER_VALUE":
-		*e = FourHundredAndSixNOTACCEPTABLECodeEnum(s)
+		*e = FourHundredAndSixNOTACCEPTABLECodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FourHundredAndSixNOTACCEPTABLECodeEnum: %s", s)
+		return fmt.Errorf("invalid value for FourHundredAndSixNOTACCEPTABLECodeEnum: %v", v)
 	}
 }
 

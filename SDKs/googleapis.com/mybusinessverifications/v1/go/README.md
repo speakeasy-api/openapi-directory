@@ -13,19 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/mybusiness
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Locations.MybusinessverificationsLocationsFetchVerificationOptions(ctx, operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         FetchVerificationOptionsRequest: &shared.FetchVerificationOptionsRequest{
             Context: &shared.ServiceBusinessContext{
                 Address: &shared.PostalAddress{
@@ -34,38 +35,35 @@ func main() {
                         "quibusdam",
                         "unde",
                     },
-                    AdministrativeArea: "nulla",
-                    LanguageCode: "corrupti",
-                    Locality: "illum",
-                    Organization: "vel",
-                    PostalCode: "63428-0923",
+                    AdministrativeArea: sdk.String("nulla"),
+                    LanguageCode: sdk.String("corrupti"),
+                    Locality: sdk.String("illum"),
+                    Organization: sdk.String("vel"),
+                    PostalCode: sdk.String("63428-0923"),
                     Recipients: []string{
                         "minus",
                         "placeat",
                     },
-                    RegionCode: "voluptatum",
-                    Revision: 479977,
-                    SortingCode: "excepturi",
-                    Sublocality: "nisi",
+                    RegionCode: sdk.String("voluptatum"),
+                    Revision: sdk.Int(479977),
+                    SortingCode: sdk.String("excepturi"),
+                    Sublocality: sdk.String("nisi"),
                 },
             },
-            LanguageCode: "recusandae",
+            LanguageCode: sdk.String("recusandae"),
         },
-        AccessToken: "temporibus",
-        Alt: "json",
-        Callback: "quis",
-        Fields: "veritatis",
-        Key: "deserunt",
+        AccessToken: sdk.String("temporibus"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("quis"),
+        Fields: sdk.String("veritatis"),
+        Key: sdk.String("deserunt"),
         Location: "perferendis",
-        OauthToken: "ipsam",
-        PrettyPrint: false,
-        QuotaUser: "repellendus",
-        UploadType: "sapiente",
-        UploadProtocol: "quo",
-    }
-
-    ctx := context.Background()
-    res, err := s.Locations.MybusinessverificationsLocationsFetchVerificationOptions(ctx, req)
+        OauthToken: sdk.String("ipsam"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("repellendus"),
+        UploadType: sdk.String("sapiente"),
+        UploadProtocol: sdk.String("quo"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -81,17 +79,17 @@ func main() {
 ## Available Resources and Operations
 
 
-### Locations
+### [Locations](docs/locations/README.md)
 
-* `MybusinessverificationsLocationsFetchVerificationOptions` - Reports all eligible verification options for a location in a specific language.
-* `MybusinessverificationsLocationsGetVoiceOfMerchantState` - Gets the VoiceOfMerchant state.
-* `MybusinessverificationsLocationsVerificationsComplete` - Completes a `PENDING` verification. It is only necessary for non `AUTO` verification methods. `AUTO` verification request is instantly `VERIFIED` upon creation.
-* `MybusinessverificationsLocationsVerificationsList` - List verifications of a location, ordered by create time.
-* `MybusinessverificationsLocationsVerify` - Starts the verification process for a location.
+* [MybusinessverificationsLocationsFetchVerificationOptions](docs/locations/README.md#mybusinessverificationslocationsfetchverificationoptions) - Reports all eligible verification options for a location in a specific language.
+* [MybusinessverificationsLocationsGetVoiceOfMerchantState](docs/locations/README.md#mybusinessverificationslocationsgetvoiceofmerchantstate) - Gets the VoiceOfMerchant state.
+* [MybusinessverificationsLocationsVerificationsComplete](docs/locations/README.md#mybusinessverificationslocationsverificationscomplete) - Completes a `PENDING` verification. It is only necessary for non `AUTO` verification methods. `AUTO` verification request is instantly `VERIFIED` upon creation.
+* [MybusinessverificationsLocationsVerificationsList](docs/locations/README.md#mybusinessverificationslocationsverificationslist) - List verifications of a location, ordered by create time.
+* [MybusinessverificationsLocationsVerify](docs/locations/README.md#mybusinessverificationslocationsverify) - Starts the verification process for a location.
 
-### VerificationTokens
+### [VerificationTokens](docs/verificationtokens/README.md)
 
-* `MybusinessverificationsVerificationTokensGenerate` - Generates a token for the provided location data as a vetted [partner](https://support.google.com/business/answer/7674102). Throws PERMISSION_DENIED if the caller is not a vetted partner account. Throws FAILED_PRECONDITION if the caller's VettedStatus is INVALID.
+* [MybusinessverificationsVerificationTokensGenerate](docs/verificationtokens/README.md#mybusinessverificationsverificationtokensgenerate) - Generates a token for the provided location data as a vetted [partner](https://support.google.com/business/answer/7674102). Throws PERMISSION_DENIED if the caller is not a vetted partner account. Throws FAILED_PRECONDITION if the caller's VettedStatus is INVALID.
 <!-- End SDK Available Operations -->
 
 ### Maturity

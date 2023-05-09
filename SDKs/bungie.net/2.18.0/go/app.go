@@ -36,7 +36,10 @@ func newApp(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // AppGetApplicationAPIUsage - Get API usage by application for time frame specified. You can go as far back as 30 days ago, and can ask for up to a 48 hour window of time in a single request. You must be authenticated with at least the ReadUserData permission to access this endpoint.
 func (s *app) AppGetApplicationAPIUsage(ctx context.Context, request operations.AppGetApplicationAPIUsageRequest, security operations.AppGetApplicationAPIUsageSecurity) (*operations.AppGetApplicationAPIUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/App/ApiUsage/{applicationId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/App/ApiUsage/{applicationId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

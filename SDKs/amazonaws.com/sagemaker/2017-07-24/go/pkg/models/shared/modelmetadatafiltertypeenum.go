@@ -16,12 +16,16 @@ const (
 	ModelMetadataFilterTypeEnumFrameworkVersion ModelMetadataFilterTypeEnum = "FrameworkVersion"
 )
 
+func (e ModelMetadataFilterTypeEnum) ToPointer() *ModelMetadataFilterTypeEnum {
+	return &e
+}
+
 func (e *ModelMetadataFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Domain":
 		fallthrough
 	case "Framework":
@@ -29,9 +33,9 @@ func (e *ModelMetadataFilterTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Task":
 		fallthrough
 	case "FrameworkVersion":
-		*e = ModelMetadataFilterTypeEnum(s)
+		*e = ModelMetadataFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelMetadataFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelMetadataFilterTypeEnum: %v", v)
 	}
 }

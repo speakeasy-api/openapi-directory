@@ -17,21 +17,25 @@ const (
 	PutAlternateContactRequestBodyAlternateContactTypeEnumSecurity   PutAlternateContactRequestBodyAlternateContactTypeEnum = "SECURITY"
 )
 
+func (e PutAlternateContactRequestBodyAlternateContactTypeEnum) ToPointer() *PutAlternateContactRequestBodyAlternateContactTypeEnum {
+	return &e
+}
+
 func (e *PutAlternateContactRequestBodyAlternateContactTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BILLING":
 		fallthrough
 	case "OPERATIONS":
 		fallthrough
 	case "SECURITY":
-		*e = PutAlternateContactRequestBodyAlternateContactTypeEnum(s)
+		*e = PutAlternateContactRequestBodyAlternateContactTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutAlternateContactRequestBodyAlternateContactTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutAlternateContactRequestBodyAlternateContactTypeEnum: %v", v)
 	}
 }
 

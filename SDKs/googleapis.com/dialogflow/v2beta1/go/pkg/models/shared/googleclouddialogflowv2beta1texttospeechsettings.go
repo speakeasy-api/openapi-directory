@@ -19,12 +19,16 @@ const (
 	GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncodingEnumOutputAudioEncodingMulaw       GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncodingEnum = "OUTPUT_AUDIO_ENCODING_MULAW"
 )
 
+func (e GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncodingEnum) ToPointer() *GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncodingEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OUTPUT_AUDIO_ENCODING_UNSPECIFIED":
 		fallthrough
 	case "OUTPUT_AUDIO_ENCODING_LINEAR_16":
@@ -36,10 +40,10 @@ func (e *GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncodingEnum
 	case "OUTPUT_AUDIO_ENCODING_OGG_OPUS":
 		fallthrough
 	case "OUTPUT_AUDIO_ENCODING_MULAW":
-		*e = GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncodingEnum(s)
+		*e = GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1TextToSpeechSettingsOutputAudioEncodingEnum: %v", v)
 	}
 }
 

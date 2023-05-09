@@ -35,7 +35,10 @@ func newCollection(defaultClient, securityClient HTTPClient, serverURL, language
 // List collection listings
 func (s *collection) CollectionListingsAll(ctx context.Context, request operations.CollectionListingsAllRequest) (*operations.CollectionListingsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/collections/{id}/listings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/collections/{id}/listings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *collection) CollectionListingsAll(ctx context.Context, request operatio
 // List collections
 func (s *collection) CollectionsAll(ctx context.Context, request operations.CollectionsAllRequest) (*operations.CollectionsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/collections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/collections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -133,7 +139,10 @@ func (s *collection) CollectionsAll(ctx context.Context, request operations.Coll
 // Get collection
 func (s *collection) CollectionsOne(ctx context.Context, request operations.CollectionsOneRequest) (*operations.CollectionsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/collections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/collections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	GetReleaseExecutableResponseExecutableVersionEnumFirebaseRulesExecutableV2           GetReleaseExecutableResponseExecutableVersionEnum = "FIREBASE_RULES_EXECUTABLE_V2"
 )
 
+func (e GetReleaseExecutableResponseExecutableVersionEnum) ToPointer() *GetReleaseExecutableResponseExecutableVersionEnum {
+	return &e
+}
+
 func (e *GetReleaseExecutableResponseExecutableVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELEASE_EXECUTABLE_VERSION_UNSPECIFIED":
 		fallthrough
 	case "FIREBASE_RULES_EXECUTABLE_V1":
 		fallthrough
 	case "FIREBASE_RULES_EXECUTABLE_V2":
-		*e = GetReleaseExecutableResponseExecutableVersionEnum(s)
+		*e = GetReleaseExecutableResponseExecutableVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetReleaseExecutableResponseExecutableVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetReleaseExecutableResponseExecutableVersionEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GetReleaseExecutableResponseLanguageEnumEventFlowTriggers   GetReleaseExecutableResponseLanguageEnum = "EVENT_FLOW_TRIGGERS"
 )
 
+func (e GetReleaseExecutableResponseLanguageEnum) ToPointer() *GetReleaseExecutableResponseLanguageEnum {
+	return &e
+}
+
 func (e *GetReleaseExecutableResponseLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LANGUAGE_UNSPECIFIED":
 		fallthrough
 	case "FIREBASE_RULES":
 		fallthrough
 	case "EVENT_FLOW_TRIGGERS":
-		*e = GetReleaseExecutableResponseLanguageEnum(s)
+		*e = GetReleaseExecutableResponseLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetReleaseExecutableResponseLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for GetReleaseExecutableResponseLanguageEnum: %v", v)
 	}
 }
 

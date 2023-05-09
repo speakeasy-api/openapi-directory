@@ -8,26 +8,30 @@ import (
 )
 
 // GetPodcastsInBatchFormShowLatestEpisodesEnum - Whether or not to fetch up to 15 latest episodes from these podcasts, sorted by pub_date. 1 is yes, and 0 is no.
-type GetPodcastsInBatchFormShowLatestEpisodesEnum string
+type GetPodcastsInBatchFormShowLatestEpisodesEnum int64
 
 const (
-	GetPodcastsInBatchFormShowLatestEpisodesEnumZero GetPodcastsInBatchFormShowLatestEpisodesEnum = "0"
-	GetPodcastsInBatchFormShowLatestEpisodesEnumOne  GetPodcastsInBatchFormShowLatestEpisodesEnum = "1"
+	GetPodcastsInBatchFormShowLatestEpisodesEnumZero GetPodcastsInBatchFormShowLatestEpisodesEnum = 0
+	GetPodcastsInBatchFormShowLatestEpisodesEnumOne  GetPodcastsInBatchFormShowLatestEpisodesEnum = 1
 )
 
+func (e GetPodcastsInBatchFormShowLatestEpisodesEnum) ToPointer() *GetPodcastsInBatchFormShowLatestEpisodesEnum {
+	return &e
+}
+
 func (e *GetPodcastsInBatchFormShowLatestEpisodesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = GetPodcastsInBatchFormShowLatestEpisodesEnum(s)
+	case 1:
+		*e = GetPodcastsInBatchFormShowLatestEpisodesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPodcastsInBatchFormShowLatestEpisodesEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPodcastsInBatchFormShowLatestEpisodesEnum: %v", v)
 	}
 }
 

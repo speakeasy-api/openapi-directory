@@ -16,17 +16,21 @@ const (
 	ListAPIDestinationsXAmzTargetEnumAwsEventsListAPIDestinations ListAPIDestinationsXAmzTargetEnum = "AWSEvents.ListApiDestinations"
 )
 
+func (e ListAPIDestinationsXAmzTargetEnum) ToPointer() *ListAPIDestinationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListAPIDestinationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.ListApiDestinations":
-		*e = ListAPIDestinationsXAmzTargetEnum(s)
+		*e = ListAPIDestinationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAPIDestinationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAPIDestinationsXAmzTargetEnum: %v", v)
 	}
 }
 

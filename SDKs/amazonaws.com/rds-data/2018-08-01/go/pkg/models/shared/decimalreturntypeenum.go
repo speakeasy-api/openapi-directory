@@ -14,18 +14,22 @@ const (
 	DecimalReturnTypeEnumDoubleOrLong DecimalReturnTypeEnum = "DOUBLE_OR_LONG"
 )
 
+func (e DecimalReturnTypeEnum) ToPointer() *DecimalReturnTypeEnum {
+	return &e
+}
+
 func (e *DecimalReturnTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRING":
 		fallthrough
 	case "DOUBLE_OR_LONG":
-		*e = DecimalReturnTypeEnum(s)
+		*e = DecimalReturnTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DecimalReturnTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DecimalReturnTypeEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	DescribeWatchlistXAmzTargetEnumVoiceIDDescribeWatchlist DescribeWatchlistXAmzTargetEnum = "VoiceID.DescribeWatchlist"
 )
 
+func (e DescribeWatchlistXAmzTargetEnum) ToPointer() *DescribeWatchlistXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeWatchlistXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VoiceID.DescribeWatchlist":
-		*e = DescribeWatchlistXAmzTargetEnum(s)
+		*e = DescribeWatchlistXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeWatchlistXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeWatchlistXAmzTargetEnum: %v", v)
 	}
 }
 

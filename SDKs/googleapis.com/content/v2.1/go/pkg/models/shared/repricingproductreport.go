@@ -18,12 +18,16 @@ const (
 	RepricingProductReportTypeEnumTypeCompetitivePrice         RepricingProductReportTypeEnum = "TYPE_COMPETITIVE_PRICE"
 )
 
+func (e RepricingProductReportTypeEnum) ToPointer() *RepricingProductReportTypeEnum {
+	return &e
+}
+
 func (e *RepricingProductReportTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPRICING_RULE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TYPE_STATS_BASED":
@@ -33,10 +37,10 @@ func (e *RepricingProductReportTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TYPE_SALES_VOLUME_BASED":
 		fallthrough
 	case "TYPE_COMPETITIVE_PRICE":
-		*e = RepricingProductReportTypeEnum(s)
+		*e = RepricingProductReportTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepricingProductReportTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RepricingProductReportTypeEnum: %v", v)
 	}
 }
 

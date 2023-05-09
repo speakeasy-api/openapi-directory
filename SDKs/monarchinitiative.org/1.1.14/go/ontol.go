@@ -34,7 +34,10 @@ func newOntol(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // GetExtractOntologySubgraphResource - Extract a subgraph from an ontology
 func (s *ontol) GetExtractOntologySubgraphResource(ctx context.Context, request operations.GetExtractOntologySubgraphResourceRequest) (*operations.GetExtractOntologySubgraphResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontol/subgraph/{ontology}/{node}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ontol/subgraph/{ontology}/{node}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *ontol) GetExtractOntologySubgraphResource(ctx context.Context, request 
 // e.g. all human disease-phenotype associations
 func (s *ontol) GetInformationContentResource(ctx context.Context, request operations.GetInformationContentResourceRequest) (*operations.GetInformationContentResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontol/information_content/{subject_category}/{object_category}/{subject_taxon}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ontol/information_content/{subject_category}/{object_category}/{subject_taxon}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -118,7 +124,10 @@ func (s *ontol) GetInformationContentResource(ctx context.Context, request opera
 // PostExtractOntologySubgraphResource - Extract a subgraph from an ontology
 func (s *ontol) PostExtractOntologySubgraphResource(ctx context.Context, request operations.PostExtractOntologySubgraphResourceRequest) (*operations.PostExtractOntologySubgraphResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontol/subgraph/{ontology}/{node}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ontol/subgraph/{ontology}/{node}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

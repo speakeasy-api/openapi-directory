@@ -16,17 +16,21 @@ const (
 	CreateImageBuilderXAmzTargetEnumPhotonAdminProxyServiceCreateImageBuilder CreateImageBuilderXAmzTargetEnum = "PhotonAdminProxyService.CreateImageBuilder"
 )
 
+func (e CreateImageBuilderXAmzTargetEnum) ToPointer() *CreateImageBuilderXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateImageBuilderXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.CreateImageBuilder":
-		*e = CreateImageBuilderXAmzTargetEnum(s)
+		*e = CreateImageBuilderXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateImageBuilderXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateImageBuilderXAmzTargetEnum: %v", v)
 	}
 }
 

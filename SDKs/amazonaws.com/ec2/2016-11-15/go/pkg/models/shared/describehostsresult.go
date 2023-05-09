@@ -16,19 +16,23 @@ const (
 	DescribeHostsResultHostsAllowsMultipleInstanceTypesEnumOff DescribeHostsResultHostsAllowsMultipleInstanceTypesEnum = "off"
 )
 
+func (e DescribeHostsResultHostsAllowsMultipleInstanceTypesEnum) ToPointer() *DescribeHostsResultHostsAllowsMultipleInstanceTypesEnum {
+	return &e
+}
+
 func (e *DescribeHostsResultHostsAllowsMultipleInstanceTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on":
 		fallthrough
 	case "off":
-		*e = DescribeHostsResultHostsAllowsMultipleInstanceTypesEnum(s)
+		*e = DescribeHostsResultHostsAllowsMultipleInstanceTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHostsResultHostsAllowsMultipleInstanceTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHostsResultHostsAllowsMultipleInstanceTypesEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	DescribeHostsResultHostsAutoPlacementEnumOff DescribeHostsResultHostsAutoPlacementEnum = "off"
 )
 
+func (e DescribeHostsResultHostsAutoPlacementEnum) ToPointer() *DescribeHostsResultHostsAutoPlacementEnum {
+	return &e
+}
+
 func (e *DescribeHostsResultHostsAutoPlacementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on":
 		fallthrough
 	case "off":
-		*e = DescribeHostsResultHostsAutoPlacementEnum(s)
+		*e = DescribeHostsResultHostsAutoPlacementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHostsResultHostsAutoPlacementEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHostsResultHostsAutoPlacementEnum: %v", v)
 	}
 }
 
@@ -77,19 +85,23 @@ const (
 	DescribeHostsResultHostsHostMaintenanceEnumOff DescribeHostsResultHostsHostMaintenanceEnum = "off"
 )
 
+func (e DescribeHostsResultHostsHostMaintenanceEnum) ToPointer() *DescribeHostsResultHostsHostMaintenanceEnum {
+	return &e
+}
+
 func (e *DescribeHostsResultHostsHostMaintenanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on":
 		fallthrough
 	case "off":
-		*e = DescribeHostsResultHostsHostMaintenanceEnum(s)
+		*e = DescribeHostsResultHostsHostMaintenanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHostsResultHostsHostMaintenanceEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHostsResultHostsHostMaintenanceEnum: %v", v)
 	}
 }
 
@@ -110,19 +122,23 @@ const (
 	DescribeHostsResultHostsHostRecoveryEnumOff DescribeHostsResultHostsHostRecoveryEnum = "off"
 )
 
+func (e DescribeHostsResultHostsHostRecoveryEnum) ToPointer() *DescribeHostsResultHostsHostRecoveryEnum {
+	return &e
+}
+
 func (e *DescribeHostsResultHostsHostRecoveryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on":
 		fallthrough
 	case "off":
-		*e = DescribeHostsResultHostsHostRecoveryEnum(s)
+		*e = DescribeHostsResultHostsHostRecoveryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHostsResultHostsHostRecoveryEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHostsResultHostsHostRecoveryEnum: %v", v)
 	}
 }
 
@@ -145,12 +161,16 @@ const (
 	DescribeHostsResultHostsStateEnumPending                  DescribeHostsResultHostsStateEnum = "pending"
 )
 
+func (e DescribeHostsResultHostsStateEnum) ToPointer() *DescribeHostsResultHostsStateEnum {
+	return &e
+}
+
 func (e *DescribeHostsResultHostsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "under-assessment":
@@ -162,10 +182,10 @@ func (e *DescribeHostsResultHostsStateEnum) UnmarshalJSON(data []byte) error {
 	case "released-permanent-failure":
 		fallthrough
 	case "pending":
-		*e = DescribeHostsResultHostsStateEnum(s)
+		*e = DescribeHostsResultHostsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHostsResultHostsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHostsResultHostsStateEnum: %v", v)
 	}
 }
 

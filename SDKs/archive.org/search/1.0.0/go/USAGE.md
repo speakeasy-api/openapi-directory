@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetSearchV1FieldsRequest{
-        Callback: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetSearchV1Fields(ctx, req)
+    res, err := s.GetSearchV1Fields(ctx, operations.GetSearchV1FieldsRequest{
+        Callback: sdk.String("corrupti"),
+    })
     if err != nil {
         log.Fatal(err)
     }

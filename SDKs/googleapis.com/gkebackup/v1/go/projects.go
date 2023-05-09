@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GkebackupProjectsLocationsBackupPlansBackupsCreate - Creates a Backup for the given BackupPlan.
 func (s *projects) GkebackupProjectsLocationsBackupPlansBackupsCreate(ctx context.Context, request operations.GkebackupProjectsLocationsBackupPlansBackupsCreateRequest, security operations.GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity) (*operations.GkebackupProjectsLocationsBackupPlansBackupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/backups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/backups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BackupInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) GkebackupProjectsLocationsBackupPlansBackupsCreate(ctx contex
 // GkebackupProjectsLocationsBackupPlansBackupsList - Lists the Backups for a given BackupPlan.
 func (s *projects) GkebackupProjectsLocationsBackupPlansBackupsList(ctx context.Context, request operations.GkebackupProjectsLocationsBackupPlansBackupsListRequest, security operations.GkebackupProjectsLocationsBackupPlansBackupsListSecurity) (*operations.GkebackupProjectsLocationsBackupPlansBackupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/backups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/backups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) GkebackupProjectsLocationsBackupPlansBackupsList(ctx context.
 // GkebackupProjectsLocationsBackupPlansBackupsVolumeBackupsList - Lists the VolumeBackups for a given Backup.
 func (s *projects) GkebackupProjectsLocationsBackupPlansBackupsVolumeBackupsList(ctx context.Context, request operations.GkebackupProjectsLocationsBackupPlansBackupsVolumeBackupsListRequest, security operations.GkebackupProjectsLocationsBackupPlansBackupsVolumeBackupsListSecurity) (*operations.GkebackupProjectsLocationsBackupPlansBackupsVolumeBackupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/volumeBackups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/volumeBackups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) GkebackupProjectsLocationsBackupPlansBackupsVolumeBackupsList
 // GkebackupProjectsLocationsBackupPlansCreate - Creates a new BackupPlan in a given location.
 func (s *projects) GkebackupProjectsLocationsBackupPlansCreate(ctx context.Context, request operations.GkebackupProjectsLocationsBackupPlansCreateRequest, security operations.GkebackupProjectsLocationsBackupPlansCreateSecurity) (*operations.GkebackupProjectsLocationsBackupPlansCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/backupPlans", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/backupPlans", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BackupPlanInput", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) GkebackupProjectsLocationsBackupPlansCreate(ctx context.Conte
 // GkebackupProjectsLocationsBackupPlansList - Lists BackupPlans in a given location.
 func (s *projects) GkebackupProjectsLocationsBackupPlansList(ctx context.Context, request operations.GkebackupProjectsLocationsBackupPlansListRequest, security operations.GkebackupProjectsLocationsBackupPlansListSecurity) (*operations.GkebackupProjectsLocationsBackupPlansListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/backupPlans", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/backupPlans", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) GkebackupProjectsLocationsBackupPlansList(ctx context.Context
 // GkebackupProjectsLocationsDeleteOperations - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) GkebackupProjectsLocationsDeleteOperations(ctx context.Context, request operations.GkebackupProjectsLocationsDeleteOperationsRequest, security operations.GkebackupProjectsLocationsDeleteOperationsSecurity) (*operations.GkebackupProjectsLocationsDeleteOperationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *projects) GkebackupProjectsLocationsDeleteOperations(ctx context.Contex
 // GkebackupProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) GkebackupProjectsLocationsList(ctx context.Context, request operations.GkebackupProjectsLocationsListRequest, security operations.GkebackupProjectsLocationsListSecurity) (*operations.GkebackupProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -384,7 +405,10 @@ func (s *projects) GkebackupProjectsLocationsList(ctx context.Context, request o
 // GkebackupProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) GkebackupProjectsLocationsOperationsCancel(ctx context.Context, request operations.GkebackupProjectsLocationsOperationsCancelRequest, security operations.GkebackupProjectsLocationsOperationsCancelSecurity) (*operations.GkebackupProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -439,7 +463,10 @@ func (s *projects) GkebackupProjectsLocationsOperationsCancel(ctx context.Contex
 // GkebackupProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) GkebackupProjectsLocationsOperationsList(ctx context.Context, request operations.GkebackupProjectsLocationsOperationsListRequest, security operations.GkebackupProjectsLocationsOperationsListSecurity) (*operations.GkebackupProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -487,7 +514,10 @@ func (s *projects) GkebackupProjectsLocationsOperationsList(ctx context.Context,
 // GkebackupProjectsLocationsRestorePlansCreate - Creates a new RestorePlan in a given location.
 func (s *projects) GkebackupProjectsLocationsRestorePlansCreate(ctx context.Context, request operations.GkebackupProjectsLocationsRestorePlansCreateRequest, security operations.GkebackupProjectsLocationsRestorePlansCreateSecurity) (*operations.GkebackupProjectsLocationsRestorePlansCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/restorePlans", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/restorePlans", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RestorePlanInput", "json")
 	if err != nil {
@@ -542,7 +572,10 @@ func (s *projects) GkebackupProjectsLocationsRestorePlansCreate(ctx context.Cont
 // GkebackupProjectsLocationsRestorePlansList - Lists RestorePlans in a given location.
 func (s *projects) GkebackupProjectsLocationsRestorePlansList(ctx context.Context, request operations.GkebackupProjectsLocationsRestorePlansListRequest, security operations.GkebackupProjectsLocationsRestorePlansListSecurity) (*operations.GkebackupProjectsLocationsRestorePlansListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/restorePlans", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/restorePlans", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -590,7 +623,10 @@ func (s *projects) GkebackupProjectsLocationsRestorePlansList(ctx context.Contex
 // GkebackupProjectsLocationsRestorePlansRestoresCreate - Creates a new Restore for the given RestorePlan.
 func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresCreate(ctx context.Context, request operations.GkebackupProjectsLocationsRestorePlansRestoresCreateRequest, security operations.GkebackupProjectsLocationsRestorePlansRestoresCreateSecurity) (*operations.GkebackupProjectsLocationsRestorePlansRestoresCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/restores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/restores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RestoreInput", "json")
 	if err != nil {
@@ -645,7 +681,10 @@ func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresCreate(ctx cont
 // GkebackupProjectsLocationsRestorePlansRestoresDelete - Deletes an existing Restore.
 func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresDelete(ctx context.Context, request operations.GkebackupProjectsLocationsRestorePlansRestoresDeleteRequest, security operations.GkebackupProjectsLocationsRestorePlansRestoresDeleteSecurity) (*operations.GkebackupProjectsLocationsRestorePlansRestoresDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -693,7 +732,10 @@ func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresDelete(ctx cont
 // GkebackupProjectsLocationsRestorePlansRestoresList - Lists the Restores for a given RestorePlan.
 func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresList(ctx context.Context, request operations.GkebackupProjectsLocationsRestorePlansRestoresListRequest, security operations.GkebackupProjectsLocationsRestorePlansRestoresListSecurity) (*operations.GkebackupProjectsLocationsRestorePlansRestoresListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/restores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/restores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -741,7 +783,10 @@ func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresList(ctx contex
 // GkebackupProjectsLocationsRestorePlansRestoresPatch - Update a Restore.
 func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresPatch(ctx context.Context, request operations.GkebackupProjectsLocationsRestorePlansRestoresPatchRequest, security operations.GkebackupProjectsLocationsRestorePlansRestoresPatchSecurity) (*operations.GkebackupProjectsLocationsRestorePlansRestoresPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RestoreInput", "json")
 	if err != nil {
@@ -796,7 +841,10 @@ func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresPatch(ctx conte
 // GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGet - Retrieve the details of a single VolumeRestore.
 func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGet(ctx context.Context, request operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetRequest, security operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetSecurity) (*operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -844,7 +892,10 @@ func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresG
 // GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicy(ctx context.Context, request operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicyRequest, security operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicySecurity) (*operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -892,7 +943,10 @@ func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresG
 // GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresList - Lists the VolumeRestores for a given Restore.
 func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresList(ctx context.Context, request operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListRequest, security operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListSecurity) (*operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/volumeRestores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/volumeRestores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -940,7 +994,10 @@ func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresL
 // GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresSetIamPolicy(ctx context.Context, request operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresSetIamPolicyRequest, security operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresSetIamPolicySecurity) (*operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -995,7 +1052,10 @@ func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresS
 // GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissions(ctx context.Context, request operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsRequest, security operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsSecurity) (*operations.GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {

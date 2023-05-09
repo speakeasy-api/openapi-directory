@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,14 +17,12 @@ func main() {
         }),
     )
 
-    req := operations.GetProductRatingRequest{
+    ctx := context.Background()
+    res, err := s.Rating.GetProductRating(ctx, operations.GetProductRatingRequest{
         Accept: "corrupti",
         ContentType: "provident",
         ProductID: "1",
-    }
-
-    ctx := context.Background()
-    res, err := s.Rating.GetProductRating(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

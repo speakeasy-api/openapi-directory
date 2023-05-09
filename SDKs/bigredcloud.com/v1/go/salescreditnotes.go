@@ -35,7 +35,10 @@ func newSalesCreditNotes(defaultClient, securityClient HTTPClient, serverURL, la
 // SalesCreditNotesDelete - Removes an existing Sales Credit Note.
 func (s *salesCreditNotes) SalesCreditNotesDelete(ctx context.Context, request operations.SalesCreditNotesDeleteRequest) (*operations.SalesCreditNotesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesCreditNotes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/salesCreditNotes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -237,7 +240,10 @@ func (s *salesCreditNotes) SalesCreditNotesProcessBatch(ctx context.Context, req
 // SalesCreditNotesPut - Updates an existing Sales Credit Note.
 func (s *salesCreditNotes) SalesCreditNotesPut(ctx context.Context, request operations.SalesCreditNotesPutRequest) (*operations.SalesCreditNotesPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesCreditNotes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/salesCreditNotes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SalesInvoiceCreditNoteDto", "json")
 	if err != nil {
@@ -291,7 +297,10 @@ func (s *salesCreditNotes) SalesCreditNotesPut(ctx context.Context, request oper
 // GetV1SalesCreditNotesID - Returns information about a single Sales Credit Note.
 func (s *salesCreditNotes) GetV1SalesCreditNotesID(ctx context.Context, request operations.GetV1SalesCreditNotesIDRequest) (*operations.GetV1SalesCreditNotesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesCreditNotes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/salesCreditNotes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

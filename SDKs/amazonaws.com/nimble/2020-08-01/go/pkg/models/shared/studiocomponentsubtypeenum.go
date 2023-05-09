@@ -16,12 +16,16 @@ const (
 	StudioComponentSubtypeEnumCustom                StudioComponentSubtypeEnum = "CUSTOM"
 )
 
+func (e StudioComponentSubtypeEnum) ToPointer() *StudioComponentSubtypeEnum {
+	return &e
+}
+
 func (e *StudioComponentSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_MANAGED_MICROSOFT_AD":
 		fallthrough
 	case "AMAZON_FSX_FOR_WINDOWS":
@@ -29,9 +33,9 @@ func (e *StudioComponentSubtypeEnum) UnmarshalJSON(data []byte) error {
 	case "AMAZON_FSX_FOR_LUSTRE":
 		fallthrough
 	case "CUSTOM":
-		*e = StudioComponentSubtypeEnum(s)
+		*e = StudioComponentSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StudioComponentSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StudioComponentSubtypeEnum: %v", v)
 	}
 }

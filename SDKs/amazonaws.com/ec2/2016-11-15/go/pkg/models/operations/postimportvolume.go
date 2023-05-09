@@ -15,17 +15,21 @@ const (
 	POSTImportVolumeActionEnumImportVolume POSTImportVolumeActionEnum = "ImportVolume"
 )
 
+func (e POSTImportVolumeActionEnum) ToPointer() *POSTImportVolumeActionEnum {
+	return &e
+}
+
 func (e *POSTImportVolumeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ImportVolume":
-		*e = POSTImportVolumeActionEnum(s)
+		*e = POSTImportVolumeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTImportVolumeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTImportVolumeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTImportVolumeVersionEnumTwoThousandAndSixteen1115 POSTImportVolumeVersionEnum = "2016-11-15"
 )
 
+func (e POSTImportVolumeVersionEnum) ToPointer() *POSTImportVolumeVersionEnum {
+	return &e
+}
+
 func (e *POSTImportVolumeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTImportVolumeVersionEnum(s)
+		*e = POSTImportVolumeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTImportVolumeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTImportVolumeVersionEnum: %v", v)
 	}
 }
 

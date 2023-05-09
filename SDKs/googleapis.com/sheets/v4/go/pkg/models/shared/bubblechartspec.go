@@ -20,12 +20,16 @@ const (
 	BubbleChartSpecLegendPositionEnumInsideLegend                         BubbleChartSpecLegendPositionEnum = "INSIDE_LEGEND"
 )
 
+func (e BubbleChartSpecLegendPositionEnum) ToPointer() *BubbleChartSpecLegendPositionEnum {
+	return &e
+}
+
 func (e *BubbleChartSpecLegendPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUBBLE_CHART_LEGEND_POSITION_UNSPECIFIED":
 		fallthrough
 	case "BOTTOM_LEGEND":
@@ -39,10 +43,10 @@ func (e *BubbleChartSpecLegendPositionEnum) UnmarshalJSON(data []byte) error {
 	case "NO_LEGEND":
 		fallthrough
 	case "INSIDE_LEGEND":
-		*e = BubbleChartSpecLegendPositionEnum(s)
+		*e = BubbleChartSpecLegendPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BubbleChartSpecLegendPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for BubbleChartSpecLegendPositionEnum: %v", v)
 	}
 }
 

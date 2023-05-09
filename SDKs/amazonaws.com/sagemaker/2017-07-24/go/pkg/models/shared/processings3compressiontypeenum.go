@@ -14,18 +14,22 @@ const (
 	ProcessingS3CompressionTypeEnumGzip ProcessingS3CompressionTypeEnum = "Gzip"
 )
 
+func (e ProcessingS3CompressionTypeEnum) ToPointer() *ProcessingS3CompressionTypeEnum {
+	return &e
+}
+
 func (e *ProcessingS3CompressionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "Gzip":
-		*e = ProcessingS3CompressionTypeEnum(s)
+		*e = ProcessingS3CompressionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProcessingS3CompressionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProcessingS3CompressionTypeEnum: %v", v)
 	}
 }

@@ -20,21 +20,25 @@ const (
 	PostSpacesSpaceIDLegalEntitiesIDBanksRequestBodyLevelEnumPublic       PostSpacesSpaceIDLegalEntitiesIDBanksRequestBodyLevelEnum = "public"
 )
 
+func (e PostSpacesSpaceIDLegalEntitiesIDBanksRequestBodyLevelEnum) ToPointer() *PostSpacesSpaceIDLegalEntitiesIDBanksRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDLegalEntitiesIDBanksRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = PostSpacesSpaceIDLegalEntitiesIDBanksRequestBodyLevelEnum(s)
+		*e = PostSpacesSpaceIDLegalEntitiesIDBanksRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDLegalEntitiesIDBanksRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDLegalEntitiesIDBanksRequestBodyLevelEnum: %v", v)
 	}
 }
 

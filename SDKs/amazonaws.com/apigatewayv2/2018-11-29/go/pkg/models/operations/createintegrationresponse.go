@@ -17,19 +17,23 @@ const (
 	CreateIntegrationResponseRequestBodyContentHandlingStrategyEnumConvertToText   CreateIntegrationResponseRequestBodyContentHandlingStrategyEnum = "CONVERT_TO_TEXT"
 )
 
+func (e CreateIntegrationResponseRequestBodyContentHandlingStrategyEnum) ToPointer() *CreateIntegrationResponseRequestBodyContentHandlingStrategyEnum {
+	return &e
+}
+
 func (e *CreateIntegrationResponseRequestBodyContentHandlingStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONVERT_TO_BINARY":
 		fallthrough
 	case "CONVERT_TO_TEXT":
-		*e = CreateIntegrationResponseRequestBodyContentHandlingStrategyEnum(s)
+		*e = CreateIntegrationResponseRequestBodyContentHandlingStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIntegrationResponseRequestBodyContentHandlingStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIntegrationResponseRequestBodyContentHandlingStrategyEnum: %v", v)
 	}
 }
 

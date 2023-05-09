@@ -36,7 +36,10 @@ func newForum(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // ForumGetCoreTopicsPaged - Gets a listing of all topics marked as part of the core group.
 func (s *forum) ForumGetCoreTopicsPaged(ctx context.Context, request operations.ForumGetCoreTopicsPagedRequest) (*operations.ForumGetCoreTopicsPagedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Forum/GetCoreTopicsPaged/{page}/{sort}/{quickDate}/{categoryFilter}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Forum/GetCoreTopicsPaged/{page}/{sort}/{quickDate}/{categoryFilter}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -132,7 +135,10 @@ func (s *forum) ForumGetForumTagSuggestions(ctx context.Context, request operati
 // ForumGetPoll - Gets the specified forum poll.
 func (s *forum) ForumGetPoll(ctx context.Context, request operations.ForumGetPollRequest) (*operations.ForumGetPollResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Forum/Poll/{topicId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Forum/Poll/{topicId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +182,10 @@ func (s *forum) ForumGetPoll(ctx context.Context, request operations.ForumGetPol
 // ForumGetPostAndParent - Returns the post specified and its immediate parent.
 func (s *forum) ForumGetPostAndParent(ctx context.Context, request operations.ForumGetPostAndParentRequest) (*operations.ForumGetPostAndParentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Forum/GetPostAndParent/{childPostId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Forum/GetPostAndParent/{childPostId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +233,10 @@ func (s *forum) ForumGetPostAndParent(ctx context.Context, request operations.Fo
 // ForumGetPostAndParentAwaitingApproval - Returns the post specified and its immediate parent of posts that are awaiting approval.
 func (s *forum) ForumGetPostAndParentAwaitingApproval(ctx context.Context, request operations.ForumGetPostAndParentAwaitingApprovalRequest) (*operations.ForumGetPostAndParentAwaitingApprovalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Forum/GetPostAndParentAwaitingApproval/{childPostId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Forum/GetPostAndParentAwaitingApproval/{childPostId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -272,7 +284,10 @@ func (s *forum) ForumGetPostAndParentAwaitingApproval(ctx context.Context, reque
 // ForumGetPostsThreadedPaged - Returns a thread of posts at the given parent, optionally returning replies to those posts as well as the original parent.
 func (s *forum) ForumGetPostsThreadedPaged(ctx context.Context, request operations.ForumGetPostsThreadedPagedRequest) (*operations.ForumGetPostsThreadedPagedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Forum/GetPostsThreadedPaged/{parentPostId}/{page}/{pageSize}/{replySize}/{getParentPost}/{rootThreadMode}/{sortMode}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Forum/GetPostsThreadedPaged/{parentPostId}/{page}/{pageSize}/{replySize}/{getParentPost}/{rootThreadMode}/{sortMode}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -320,7 +335,10 @@ func (s *forum) ForumGetPostsThreadedPaged(ctx context.Context, request operatio
 // ForumGetPostsThreadedPagedFromChild - Returns a thread of posts starting at the topicId of the input childPostId, optionally returning replies to those posts as well as the original parent.
 func (s *forum) ForumGetPostsThreadedPagedFromChild(ctx context.Context, request operations.ForumGetPostsThreadedPagedFromChildRequest) (*operations.ForumGetPostsThreadedPagedFromChildResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Forum/GetPostsThreadedPagedFromChild/{childPostId}/{page}/{pageSize}/{replySize}/{rootThreadMode}/{sortMode}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Forum/GetPostsThreadedPagedFromChild/{childPostId}/{page}/{pageSize}/{replySize}/{rootThreadMode}/{sortMode}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -412,7 +430,10 @@ func (s *forum) ForumGetRecruitmentThreadSummaries(ctx context.Context) (*operat
 // ForumGetTopicForContent - Gets the post Id for the given content item's comments, if it exists.
 func (s *forum) ForumGetTopicForContent(ctx context.Context, request operations.ForumGetTopicForContentRequest) (*operations.ForumGetTopicForContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Forum/GetTopicForContent/{contentId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Forum/GetTopicForContent/{contentId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -456,7 +477,10 @@ func (s *forum) ForumGetTopicForContent(ctx context.Context, request operations.
 // ForumGetTopicsPaged - Get topics from any forum.
 func (s *forum) ForumGetTopicsPaged(ctx context.Context, request operations.ForumGetTopicsPagedRequest) (*operations.ForumGetTopicsPagedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

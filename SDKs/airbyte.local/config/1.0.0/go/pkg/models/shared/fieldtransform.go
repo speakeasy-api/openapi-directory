@@ -15,21 +15,25 @@ const (
 	FieldTransformTransformTypeEnumUpdateFieldSchema FieldTransformTransformTypeEnum = "update_field_schema"
 )
 
+func (e FieldTransformTransformTypeEnum) ToPointer() *FieldTransformTransformTypeEnum {
+	return &e
+}
+
 func (e *FieldTransformTransformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "add_field":
 		fallthrough
 	case "remove_field":
 		fallthrough
 	case "update_field_schema":
-		*e = FieldTransformTransformTypeEnum(s)
+		*e = FieldTransformTransformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldTransformTransformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldTransformTransformTypeEnum: %v", v)
 	}
 }
 

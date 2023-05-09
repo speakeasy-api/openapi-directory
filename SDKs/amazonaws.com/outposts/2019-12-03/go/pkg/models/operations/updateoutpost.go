@@ -17,19 +17,23 @@ const (
 	UpdateOutpostRequestBodySupportedHardwareTypeEnumServer UpdateOutpostRequestBodySupportedHardwareTypeEnum = "SERVER"
 )
 
+func (e UpdateOutpostRequestBodySupportedHardwareTypeEnum) ToPointer() *UpdateOutpostRequestBodySupportedHardwareTypeEnum {
+	return &e
+}
+
 func (e *UpdateOutpostRequestBodySupportedHardwareTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RACK":
 		fallthrough
 	case "SERVER":
-		*e = UpdateOutpostRequestBodySupportedHardwareTypeEnum(s)
+		*e = UpdateOutpostRequestBodySupportedHardwareTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateOutpostRequestBodySupportedHardwareTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateOutpostRequestBodySupportedHardwareTypeEnum: %v", v)
 	}
 }
 

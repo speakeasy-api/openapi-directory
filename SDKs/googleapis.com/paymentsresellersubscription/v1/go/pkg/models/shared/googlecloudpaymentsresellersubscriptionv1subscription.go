@@ -16,21 +16,25 @@ const (
 	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionProcessingStateEnumProcessingStateRecurring   GoogleCloudPaymentsResellerSubscriptionV1SubscriptionProcessingStateEnum = "PROCESSING_STATE_RECURRING"
 )
 
+func (e GoogleCloudPaymentsResellerSubscriptionV1SubscriptionProcessingStateEnum) ToPointer() *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionProcessingStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionProcessingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING_STATE_UNSPECIFIED":
 		fallthrough
 	case "PROCESSING_STATE_CANCELLING":
 		fallthrough
 	case "PROCESSING_STATE_RECURRING":
-		*e = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionProcessingStateEnum(s)
+		*e = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionProcessingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1SubscriptionProcessingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1SubscriptionProcessingStateEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnumStateSuspended          GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnum = "STATE_SUSPENDED"
 )
 
+func (e GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnum) ToPointer() *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "STATE_CREATED":
@@ -66,10 +74,10 @@ func (e *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnum) Unmarsh
 	case "STATE_CANCEL_AT_END_OF_CYCLE":
 		fallthrough
 	case "STATE_SUSPENDED":
-		*e = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnum(s)
+		*e = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1SubscriptionStateEnum: %v", v)
 	}
 }
 
@@ -93,7 +101,7 @@ type GoogleCloudPaymentsResellerSubscriptionV1Subscription struct {
 	PartnerUserToken *string `json:"partnerUserToken,omitempty"`
 	// Output only. Describes the processing state of the subscription. See more details at [the lifecycle of a subscription](/payments/reseller/subscription/reference/index/Receive.Notifications#payments-subscription-lifecycle).
 	ProcessingState *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionProcessingStateEnum `json:"processingState,omitempty"`
-	// Required. Deprecated: consider using `line_items` as the input. Required. Resource name that identifies the purchased products. The format will be 'partners/{partner_id}/products/{product_id}'.
+	// Optional. Deprecated: consider using `line_items` as the input. Required. Resource name that identifies the purchased products. The format will be 'partners/{partner_id}/products/{product_id}'.
 	Products []string `json:"products,omitempty"`
 	// Optional. Subscription-level promotions. Only free trial is supported on this level. It determines the first renewal time of the subscription to be the end of the free trial period. Specify the promotion resource name only when used as input.
 	PromotionSpecs []GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec `json:"promotionSpecs,omitempty"`
@@ -123,7 +131,7 @@ type GoogleCloudPaymentsResellerSubscriptionV1SubscriptionInput struct {
 	Name *string `json:"name,omitempty"`
 	// Required. Identifier of the end-user in partner’s system. The value is restricted to 63 ASCII characters at the maximum.
 	PartnerUserToken *string `json:"partnerUserToken,omitempty"`
-	// Required. Deprecated: consider using `line_items` as the input. Required. Resource name that identifies the purchased products. The format will be 'partners/{partner_id}/products/{product_id}'.
+	// Optional. Deprecated: consider using `line_items` as the input. Required. Resource name that identifies the purchased products. The format will be 'partners/{partner_id}/products/{product_id}'.
 	Products []string `json:"products,omitempty"`
 	// Optional. Subscription-level promotions. Only free trial is supported on this level. It determines the first renewal time of the subscription to be the end of the free trial period. Specify the promotion resource name only when used as input.
 	PromotionSpecs []GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecInput `json:"promotionSpecs,omitempty"`

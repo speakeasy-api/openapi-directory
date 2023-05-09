@@ -14,18 +14,22 @@ const (
 	RuleStatusEnumAvailable RuleStatusEnum = "available"
 )
 
+func (e RuleStatusEnum) ToPointer() *RuleStatusEnum {
+	return &e
+}
+
 func (e *RuleStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
-		*e = RuleStatusEnum(s)
+		*e = RuleStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuleStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RuleStatusEnum: %v", v)
 	}
 }

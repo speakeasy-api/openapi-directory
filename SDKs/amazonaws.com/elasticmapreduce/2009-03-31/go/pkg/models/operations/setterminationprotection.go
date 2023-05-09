@@ -16,17 +16,21 @@ const (
 	SetTerminationProtectionXAmzTargetEnumElasticMapReduceSetTerminationProtection SetTerminationProtectionXAmzTargetEnum = "ElasticMapReduce.SetTerminationProtection"
 )
 
+func (e SetTerminationProtectionXAmzTargetEnum) ToPointer() *SetTerminationProtectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *SetTerminationProtectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.SetTerminationProtection":
-		*e = SetTerminationProtectionXAmzTargetEnum(s)
+		*e = SetTerminationProtectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetTerminationProtectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SetTerminationProtectionXAmzTargetEnum: %v", v)
 	}
 }
 

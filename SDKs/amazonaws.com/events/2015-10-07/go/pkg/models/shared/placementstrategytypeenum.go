@@ -15,20 +15,24 @@ const (
 	PlacementStrategyTypeEnumBinpack PlacementStrategyTypeEnum = "binpack"
 )
 
+func (e PlacementStrategyTypeEnum) ToPointer() *PlacementStrategyTypeEnum {
+	return &e
+}
+
 func (e *PlacementStrategyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "random":
 		fallthrough
 	case "spread":
 		fallthrough
 	case "binpack":
-		*e = PlacementStrategyTypeEnum(s)
+		*e = PlacementStrategyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlacementStrategyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlacementStrategyTypeEnum: %v", v)
 	}
 }

@@ -15,19 +15,23 @@ const (
 	ExportContentTypeEnumApplicationVndClimateHarvestGeojson ExportContentTypeEnum = "application/vnd.climate.harvest.geojson"
 )
 
+func (e ExportContentTypeEnum) ToPointer() *ExportContentTypeEnum {
+	return &e
+}
+
 func (e *ExportContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "application/vnd.climate.acrsi.geojson":
 		fallthrough
 	case "application/vnd.climate.harvest.geojson":
-		*e = ExportContentTypeEnum(s)
+		*e = ExportContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportContentTypeEnum: %v", v)
 	}
 }
 

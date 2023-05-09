@@ -14,18 +14,22 @@ const (
 	EBSFindingEnumNotOptimized EBSFindingEnum = "NotOptimized"
 )
 
+func (e EBSFindingEnum) ToPointer() *EBSFindingEnum {
+	return &e
+}
+
 func (e *EBSFindingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Optimized":
 		fallthrough
 	case "NotOptimized":
-		*e = EBSFindingEnum(s)
+		*e = EBSFindingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EBSFindingEnum: %s", s)
+		return fmt.Errorf("invalid value for EBSFindingEnum: %v", v)
 	}
 }

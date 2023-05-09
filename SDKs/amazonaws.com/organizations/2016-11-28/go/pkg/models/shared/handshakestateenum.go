@@ -18,12 +18,16 @@ const (
 	HandshakeStateEnumExpired   HandshakeStateEnum = "EXPIRED"
 )
 
+func (e HandshakeStateEnum) ToPointer() *HandshakeStateEnum {
+	return &e
+}
+
 func (e *HandshakeStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUESTED":
 		fallthrough
 	case "OPEN":
@@ -35,9 +39,9 @@ func (e *HandshakeStateEnum) UnmarshalJSON(data []byte) error {
 	case "DECLINED":
 		fallthrough
 	case "EXPIRED":
-		*e = HandshakeStateEnum(s)
+		*e = HandshakeStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HandshakeStateEnum: %s", s)
+		return fmt.Errorf("invalid value for HandshakeStateEnum: %v", v)
 	}
 }

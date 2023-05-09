@@ -15,17 +15,21 @@ const (
 	GETDescribeVolumeAttributeActionEnumDescribeVolumeAttribute GETDescribeVolumeAttributeActionEnum = "DescribeVolumeAttribute"
 )
 
+func (e GETDescribeVolumeAttributeActionEnum) ToPointer() *GETDescribeVolumeAttributeActionEnum {
+	return &e
+}
+
 func (e *GETDescribeVolumeAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeVolumeAttribute":
-		*e = GETDescribeVolumeAttributeActionEnum(s)
+		*e = GETDescribeVolumeAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeVolumeAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeVolumeAttributeActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETDescribeVolumeAttributeAttributeEnumProductCodes GETDescribeVolumeAttributeAttributeEnum = "productCodes"
 )
 
+func (e GETDescribeVolumeAttributeAttributeEnum) ToPointer() *GETDescribeVolumeAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETDescribeVolumeAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "autoEnableIO":
 		fallthrough
 	case "productCodes":
-		*e = GETDescribeVolumeAttributeAttributeEnum(s)
+		*e = GETDescribeVolumeAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeVolumeAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeVolumeAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETDescribeVolumeAttributeVersionEnumTwoThousandAndSixteen1115 GETDescribeVolumeAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeVolumeAttributeVersionEnum) ToPointer() *GETDescribeVolumeAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeVolumeAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeVolumeAttributeVersionEnum(s)
+		*e = GETDescribeVolumeAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeVolumeAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeVolumeAttributeVersionEnum: %v", v)
 	}
 }
 

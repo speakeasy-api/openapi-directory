@@ -16,21 +16,25 @@ const (
 	RelevantLocationRelationTypeEnumIndependentEstablishmentIn RelevantLocationRelationTypeEnum = "INDEPENDENT_ESTABLISHMENT_IN"
 )
 
+func (e RelevantLocationRelationTypeEnum) ToPointer() *RelevantLocationRelationTypeEnum {
+	return &e
+}
+
 func (e *RelevantLocationRelationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DEPARTMENT_OF":
 		fallthrough
 	case "INDEPENDENT_ESTABLISHMENT_IN":
-		*e = RelevantLocationRelationTypeEnum(s)
+		*e = RelevantLocationRelationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RelevantLocationRelationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RelevantLocationRelationTypeEnum: %v", v)
 	}
 }
 

@@ -9,23 +9,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAnEntityDefaultApplicationJSON13StatusEnum string
+type CreateAnEntityDefaultApplicationJSON13StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CreateAnEntityDefaultApplicationJSON13StatusEnum = "429"
+	CreateAnEntityDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CreateAnEntityDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e CreateAnEntityDefaultApplicationJSON13StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = CreateAnEntityDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = CreateAnEntityDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	CreateAnEntityDefaultApplicationJSON13TypeEnumRateLimitedError CreateAnEntityDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON13TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = CreateAnEntityDefaultApplicationJSON13TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -57,23 +65,27 @@ type CreateAnEntityDefaultApplicationJSON13 struct {
 	Type       CreateAnEntityDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type CreateAnEntityDefaultApplicationJSON12StatusEnum string
+type CreateAnEntityDefaultApplicationJSON12StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON12StatusEnumFourHundredAndThree CreateAnEntityDefaultApplicationJSON12StatusEnum = "403"
+	CreateAnEntityDefaultApplicationJSON12StatusEnumFourHundredAndThree CreateAnEntityDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e CreateAnEntityDefaultApplicationJSON12StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateAnEntityDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateAnEntityDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -83,17 +95,21 @@ const (
 	CreateAnEntityDefaultApplicationJSON12TypeEnumPrivateFeatureError CreateAnEntityDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON12TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = CreateAnEntityDefaultApplicationJSON12TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -104,23 +120,27 @@ type CreateAnEntityDefaultApplicationJSON12 struct {
 	Type   CreateAnEntityDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type CreateAnEntityDefaultApplicationJSON11StatusEnum string
+type CreateAnEntityDefaultApplicationJSON11StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON11StatusEnumFourHundredAndFour CreateAnEntityDefaultApplicationJSON11StatusEnum = "404"
+	CreateAnEntityDefaultApplicationJSON11StatusEnumFourHundredAndFour CreateAnEntityDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e CreateAnEntityDefaultApplicationJSON11StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CreateAnEntityDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CreateAnEntityDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	CreateAnEntityDefaultApplicationJSON11TypeEnumObjectNotFoundError CreateAnEntityDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON11TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = CreateAnEntityDefaultApplicationJSON11TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -151,23 +175,27 @@ type CreateAnEntityDefaultApplicationJSON11 struct {
 	Type   CreateAnEntityDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type CreateAnEntityDefaultApplicationJSON10StatusEnum string
+type CreateAnEntityDefaultApplicationJSON10StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON10StatusEnumFourHundred CreateAnEntityDefaultApplicationJSON10StatusEnum = "400"
+	CreateAnEntityDefaultApplicationJSON10StatusEnumFourHundred CreateAnEntityDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e CreateAnEntityDefaultApplicationJSON10StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CreateAnEntityDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CreateAnEntityDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -177,17 +205,21 @@ const (
 	CreateAnEntityDefaultApplicationJSON10TypeEnumMalformedRequestError CreateAnEntityDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON10TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = CreateAnEntityDefaultApplicationJSON10TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -198,23 +230,27 @@ type CreateAnEntityDefaultApplicationJSON10 struct {
 	Type   CreateAnEntityDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type CreateAnEntityDefaultApplicationJSON9StatusEnum string
+type CreateAnEntityDefaultApplicationJSON9StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON9StatusEnumFourHundred CreateAnEntityDefaultApplicationJSON9StatusEnum = "400"
+	CreateAnEntityDefaultApplicationJSON9StatusEnumFourHundred CreateAnEntityDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e CreateAnEntityDefaultApplicationJSON9StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CreateAnEntityDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CreateAnEntityDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -224,46 +260,54 @@ const (
 	CreateAnEntityDefaultApplicationJSON9TypeEnumInvalidParametersError CreateAnEntityDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON9TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = CreateAnEntityDefaultApplicationJSON9TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type CreateAnEntityDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                        `json:"errors,omitempty"`
+	Errors []map[string]interface{}                        `json:"errors"`
 	Status CreateAnEntityDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                          `json:"title"`
 	Type   CreateAnEntityDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type CreateAnEntityDefaultApplicationJSON8StatusEnum string
+type CreateAnEntityDefaultApplicationJSON8StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON8StatusEnumFourHundredAndNine CreateAnEntityDefaultApplicationJSON8StatusEnum = "409"
+	CreateAnEntityDefaultApplicationJSON8StatusEnumFourHundredAndNine CreateAnEntityDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e CreateAnEntityDefaultApplicationJSON8StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CreateAnEntityDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CreateAnEntityDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	CreateAnEntityDefaultApplicationJSON8TypeEnumInvalidOperationError CreateAnEntityDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON8TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = CreateAnEntityDefaultApplicationJSON8TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -294,23 +342,27 @@ type CreateAnEntityDefaultApplicationJSON8 struct {
 	Type   CreateAnEntityDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type CreateAnEntityDefaultApplicationJSON7StatusEnum string
+type CreateAnEntityDefaultApplicationJSON7StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON7StatusEnumFourHundredAndOne CreateAnEntityDefaultApplicationJSON7StatusEnum = "401"
+	CreateAnEntityDefaultApplicationJSON7StatusEnumFourHundredAndOne CreateAnEntityDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e CreateAnEntityDefaultApplicationJSON7StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = CreateAnEntityDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = CreateAnEntityDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	CreateAnEntityDefaultApplicationJSON7TypeEnumInvalidAPIKeyError CreateAnEntityDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON7TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = CreateAnEntityDefaultApplicationJSON7TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -341,23 +397,27 @@ type CreateAnEntityDefaultApplicationJSON7 struct {
 	Type   CreateAnEntityDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type CreateAnEntityDefaultApplicationJSON6StatusEnum string
+type CreateAnEntityDefaultApplicationJSON6StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON6StatusEnumFiveHundred CreateAnEntityDefaultApplicationJSON6StatusEnum = "500"
+	CreateAnEntityDefaultApplicationJSON6StatusEnumFiveHundred CreateAnEntityDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e CreateAnEntityDefaultApplicationJSON6StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = CreateAnEntityDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = CreateAnEntityDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -367,17 +427,21 @@ const (
 	CreateAnEntityDefaultApplicationJSON6TypeEnumInternalServerError CreateAnEntityDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON6TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = CreateAnEntityDefaultApplicationJSON6TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -388,23 +452,27 @@ type CreateAnEntityDefaultApplicationJSON6 struct {
 	Type   CreateAnEntityDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type CreateAnEntityDefaultApplicationJSON5StatusEnum string
+type CreateAnEntityDefaultApplicationJSON5StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON5StatusEnumFourHundredAndThree CreateAnEntityDefaultApplicationJSON5StatusEnum = "403"
+	CreateAnEntityDefaultApplicationJSON5StatusEnumFourHundredAndThree CreateAnEntityDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e CreateAnEntityDefaultApplicationJSON5StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateAnEntityDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateAnEntityDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -414,17 +482,21 @@ const (
 	CreateAnEntityDefaultApplicationJSON5TypeEnumInsufficientPermissionsError CreateAnEntityDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON5TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = CreateAnEntityDefaultApplicationJSON5TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -435,23 +507,27 @@ type CreateAnEntityDefaultApplicationJSON5 struct {
 	Type   CreateAnEntityDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type CreateAnEntityDefaultApplicationJSON4StatusEnum string
+type CreateAnEntityDefaultApplicationJSON4StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CreateAnEntityDefaultApplicationJSON4StatusEnum = "422"
+	CreateAnEntityDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CreateAnEntityDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e CreateAnEntityDefaultApplicationJSON4StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = CreateAnEntityDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = CreateAnEntityDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -461,17 +537,21 @@ const (
 	CreateAnEntityDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError CreateAnEntityDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON4TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = CreateAnEntityDefaultApplicationJSON4TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -482,23 +562,27 @@ type CreateAnEntityDefaultApplicationJSON4 struct {
 	Type   CreateAnEntityDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type CreateAnEntityDefaultApplicationJSON3StatusEnum string
+type CreateAnEntityDefaultApplicationJSON3StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON3StatusEnumFourHundredAndNine CreateAnEntityDefaultApplicationJSON3StatusEnum = "409"
+	CreateAnEntityDefaultApplicationJSON3StatusEnumFourHundredAndNine CreateAnEntityDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e CreateAnEntityDefaultApplicationJSON3StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CreateAnEntityDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CreateAnEntityDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -508,17 +592,21 @@ const (
 	CreateAnEntityDefaultApplicationJSON3TypeEnumIdempotencyConflictError CreateAnEntityDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON3TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = CreateAnEntityDefaultApplicationJSON3TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -529,23 +617,27 @@ type CreateAnEntityDefaultApplicationJSON3 struct {
 	Type   CreateAnEntityDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type CreateAnEntityDefaultApplicationJSON2StatusEnum string
+type CreateAnEntityDefaultApplicationJSON2StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON2StatusEnumFourHundredAndThree CreateAnEntityDefaultApplicationJSON2StatusEnum = "403"
+	CreateAnEntityDefaultApplicationJSON2StatusEnumFourHundredAndThree CreateAnEntityDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e CreateAnEntityDefaultApplicationJSON2StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateAnEntityDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateAnEntityDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -555,17 +647,21 @@ const (
 	CreateAnEntityDefaultApplicationJSON2TypeEnumEnvironmentMismatchError CreateAnEntityDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON2TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = CreateAnEntityDefaultApplicationJSON2TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -576,23 +672,27 @@ type CreateAnEntityDefaultApplicationJSON2 struct {
 	Type   CreateAnEntityDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type CreateAnEntityDefaultApplicationJSON1StatusEnum string
+type CreateAnEntityDefaultApplicationJSON1StatusEnum int64
 
 const (
-	CreateAnEntityDefaultApplicationJSON1StatusEnumFourHundredAndFour CreateAnEntityDefaultApplicationJSON1StatusEnum = "404"
+	CreateAnEntityDefaultApplicationJSON1StatusEnumFourHundredAndFour CreateAnEntityDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e CreateAnEntityDefaultApplicationJSON1StatusEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CreateAnEntityDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CreateAnEntityDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -602,17 +702,21 @@ const (
 	CreateAnEntityDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError CreateAnEntityDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e CreateAnEntityDefaultApplicationJSON1TypeEnum) ToPointer() *CreateAnEntityDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *CreateAnEntityDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = CreateAnEntityDefaultApplicationJSON1TypeEnum(s)
+		*e = CreateAnEntityDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEntityDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

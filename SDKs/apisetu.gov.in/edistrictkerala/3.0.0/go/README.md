@@ -13,18 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/apisetu.gov.in/edistrictk
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CmcerRequestBody{
+    ctx := context.Background()
+    res, err := s.APIs.Cmcer(ctx, operations.CmcerRequestBody{
         CertificateParameters: &operations.CmcerRequestBodyCertificateParameters{
             Aplno: "564323",
             Certno: "342567",
@@ -34,47 +36,44 @@ func main() {
             Consent: shared.ConsentArtifactSchemaConsent{
                 ConsentID: "ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba",
                 Data: shared.ConsentArtifactSchemaConsentData{
-                    ID: "corrupti",
+                    ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
                 },
                 DataConsumer: shared.ConsentArtifactSchemaConsentDataConsumer{
-                    ID: "provident",
+                    ID: "a05dfc2d-df7c-4c78-8a1b-a928fc816742",
                 },
                 DataProvider: shared.ConsentArtifactSchemaConsentDataProvider{
-                    ID: "distinctio",
+                    ID: "cb739205-9293-496f-aa75-96eb10faaa23",
                 },
                 Permission: shared.ConsentArtifactSchemaConsentPermission{
-                    Access: "quibusdam",
+                    Access: "corporis",
                     DateRange: shared.ConsentArtifactSchemaConsentPermissionDateRange{
-                        From: "2021-04-14T16:47:33.722Z",
-                        To: "2021-04-22T12:08:58.275Z",
+                        From: types.MustTimeFromString("2022-04-01T23:59:21.675Z"),
+                        To: types.MustTimeFromString("2022-05-24T03:24:11.703Z"),
                     },
                     Frequency: shared.ConsentArtifactSchemaConsentPermissionFrequency{
-                        Repeats: 4236.55,
-                        Unit: "error",
-                        Value: 6458.94,
+                        Repeats: 3637.11,
+                        Unit: "minima",
+                        Value: 5701.97,
                     },
                 },
                 Purpose: shared.ConsentArtifactSchemaConsentPurpose{
-                    Description: "suscipit",
+                    Description: "accusantium",
                 },
-                Timestamp: "2022-09-14T09:35:47.986Z",
+                Timestamp: types.MustTimeFromString("2022-05-14T11:45:33.094Z"),
                 User: shared.ConsentArtifactSchemaConsentUser{
-                    Email: "Anahi38@hotmail.com",
-                    IDNumber: "molestiae",
-                    IDType: "minus",
-                    Mobile: "645-598-0306 x03897",
+                    Email: "Veronica.Brakus@hotmail.com",
+                    IDNumber: "culpa",
+                    IDType: "consequuntur",
+                    Mobile: "752.544.2613 x16631",
                 },
             },
             Signature: shared.ConsentArtifactSchemaSignature{
-                Signature: "odit",
+                Signature: "quo",
             },
         },
-        Format: "pdf",
+        Format: operations.CmcerRequestBodyFormatEnumPdf,
         TxnID: "f7f1469c-29b0-4325-9dfc-c567200a70f7",
-    }
-
-    ctx := context.Background()
-    res, err := s.APIs.Cmcer(ctx, req, operations.CmcerSecurity{
+    }, operations.CmcerSecurity{
         APIKey: "YOUR_API_KEY_HERE",
         ClientID: "YOUR_API_KEY_HERE",
     })
@@ -93,32 +92,32 @@ func main() {
 ## Available Resources and Operations
 
 
-### APIs
+### [APIs](docs/apis/README.md)
 
-* `Cmcer` - Community Certificate
-* `Cncer` - Conversion Certificate
-* `Ctcer` - Caste Certificate
-* `Dmcer` - Domicile Certificate
-* `Dpcer` - Dependency Certificate
-* `Dscer` - Destitute Certificate
-* `Fmcer` - Family Membership Certificate
-* `Idcer` - Identification Certificate
-* `Imcer` - Inter-Caste Marriage Certificate
-* `Incer` - Income Certificate
-* `Lfcer` - Life Certificate
-* `Lhcer` - Legal Heir Certificate
-* `Locer` - Location Certificate
-* `Mncer` - Minority Certificate
-* `Nrcer` - Non-Remarriage Certificate
-* `Ntcer` - Nativity Certificate
-* `Oscer` - One and the Same Certificate
-* `Pncer` - Possession and Non-Attachment Certificate
-* `Pscer` - Possession Certificate
-* `Rlcer` - Relationship Certificate
-* `Rscer` - Residence Certificate
-* `Slcer` - Solvency Certificate
-* `Vlcer` - Valuation Certificate
-* `Wwcer` - Widow-Widower Certificate
+* [Cmcer](docs/apis/README.md#cmcer) - Community Certificate
+* [Cncer](docs/apis/README.md#cncer) - Conversion Certificate
+* [Ctcer](docs/apis/README.md#ctcer) - Caste Certificate
+* [Dmcer](docs/apis/README.md#dmcer) - Domicile Certificate
+* [Dpcer](docs/apis/README.md#dpcer) - Dependency Certificate
+* [Dscer](docs/apis/README.md#dscer) - Destitute Certificate
+* [Fmcer](docs/apis/README.md#fmcer) - Family Membership Certificate
+* [Idcer](docs/apis/README.md#idcer) - Identification Certificate
+* [Imcer](docs/apis/README.md#imcer) - Inter-Caste Marriage Certificate
+* [Incer](docs/apis/README.md#incer) - Income Certificate
+* [Lfcer](docs/apis/README.md#lfcer) - Life Certificate
+* [Lhcer](docs/apis/README.md#lhcer) - Legal Heir Certificate
+* [Locer](docs/apis/README.md#locer) - Location Certificate
+* [Mncer](docs/apis/README.md#mncer) - Minority Certificate
+* [Nrcer](docs/apis/README.md#nrcer) - Non-Remarriage Certificate
+* [Ntcer](docs/apis/README.md#ntcer) - Nativity Certificate
+* [Oscer](docs/apis/README.md#oscer) - One and the Same Certificate
+* [Pncer](docs/apis/README.md#pncer) - Possession and Non-Attachment Certificate
+* [Pscer](docs/apis/README.md#pscer) - Possession Certificate
+* [Rlcer](docs/apis/README.md#rlcer) - Relationship Certificate
+* [Rscer](docs/apis/README.md#rscer) - Residence Certificate
+* [Slcer](docs/apis/README.md#slcer) - Solvency Certificate
+* [Vlcer](docs/apis/README.md#vlcer) - Valuation Certificate
+* [Wwcer](docs/apis/README.md#wwcer) - Widow-Widower Certificate
 <!-- End SDK Available Operations -->
 
 ### Maturity

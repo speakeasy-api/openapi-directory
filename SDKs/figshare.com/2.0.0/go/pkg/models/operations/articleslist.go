@@ -21,12 +21,16 @@ const (
 	ArticlesListOrderEnumCites         ArticlesListOrderEnum = "cites"
 )
 
+func (e ArticlesListOrderEnum) ToPointer() *ArticlesListOrderEnum {
+	return &e
+}
+
 func (e *ArticlesListOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "published_date":
 		fallthrough
 	case "modified_date":
@@ -38,10 +42,10 @@ func (e *ArticlesListOrderEnum) UnmarshalJSON(data []byte) error {
 	case "downloads":
 		fallthrough
 	case "cites":
-		*e = ArticlesListOrderEnum(s)
+		*e = ArticlesListOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArticlesListOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ArticlesListOrderEnum: %v", v)
 	}
 }
 
@@ -53,19 +57,23 @@ const (
 	ArticlesListOrderDirectionEnumDesc ArticlesListOrderDirectionEnum = "desc"
 )
 
+func (e ArticlesListOrderDirectionEnum) ToPointer() *ArticlesListOrderDirectionEnum {
+	return &e
+}
+
 func (e *ArticlesListOrderDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = ArticlesListOrderDirectionEnum(s)
+		*e = ArticlesListOrderDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArticlesListOrderDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ArticlesListOrderDirectionEnum: %v", v)
 	}
 }
 

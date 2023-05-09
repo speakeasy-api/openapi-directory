@@ -15,20 +15,24 @@ const (
 	ExecutorTypeEnumWorker      ExecutorTypeEnum = "WORKER"
 )
 
+func (e ExecutorTypeEnum) ToPointer() *ExecutorTypeEnum {
+	return &e
+}
+
 func (e *ExecutorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COORDINATOR":
 		fallthrough
 	case "GATEWAY":
 		fallthrough
 	case "WORKER":
-		*e = ExecutorTypeEnum(s)
+		*e = ExecutorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutorTypeEnum: %v", v)
 	}
 }

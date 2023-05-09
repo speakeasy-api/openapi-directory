@@ -14,18 +14,22 @@ const (
 	TrafficMirrorRuleActionEnumReject TrafficMirrorRuleActionEnum = "reject"
 )
 
+func (e TrafficMirrorRuleActionEnum) ToPointer() *TrafficMirrorRuleActionEnum {
+	return &e
+}
+
 func (e *TrafficMirrorRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "accept":
 		fallthrough
 	case "reject":
-		*e = TrafficMirrorRuleActionEnum(s)
+		*e = TrafficMirrorRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrafficMirrorRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for TrafficMirrorRuleActionEnum: %v", v)
 	}
 }

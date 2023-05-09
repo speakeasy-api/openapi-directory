@@ -16,12 +16,16 @@ const (
 	PricingTierEnumTier4 PricingTierEnum = "TIER_4"
 )
 
+func (e PricingTierEnum) ToPointer() *PricingTierEnum {
+	return &e
+}
+
 func (e *PricingTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIER_1":
 		fallthrough
 	case "TIER_2":
@@ -29,9 +33,9 @@ func (e *PricingTierEnum) UnmarshalJSON(data []byte) error {
 	case "TIER_3":
 		fallthrough
 	case "TIER_4":
-		*e = PricingTierEnum(s)
+		*e = PricingTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PricingTierEnum: %s", s)
+		return fmt.Errorf("invalid value for PricingTierEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	ListEventTrackersXAmzTargetEnumAmazonPersonalizeListEventTrackers ListEventTrackersXAmzTargetEnum = "AmazonPersonalize.ListEventTrackers"
 )
 
+func (e ListEventTrackersXAmzTargetEnum) ToPointer() *ListEventTrackersXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListEventTrackersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.ListEventTrackers":
-		*e = ListEventTrackersXAmzTargetEnum(s)
+		*e = ListEventTrackersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEventTrackersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEventTrackersXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ReservedNodeExchangeActionTypeEnumResizeCluster  ReservedNodeExchangeActionTypeEnum = "resize-cluster"
 )
 
+func (e ReservedNodeExchangeActionTypeEnum) ToPointer() *ReservedNodeExchangeActionTypeEnum {
+	return &e
+}
+
 func (e *ReservedNodeExchangeActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "restore-cluster":
 		fallthrough
 	case "resize-cluster":
-		*e = ReservedNodeExchangeActionTypeEnum(s)
+		*e = ReservedNodeExchangeActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservedNodeExchangeActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservedNodeExchangeActionTypeEnum: %v", v)
 	}
 }

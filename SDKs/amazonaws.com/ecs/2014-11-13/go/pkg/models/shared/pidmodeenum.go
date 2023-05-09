@@ -14,18 +14,22 @@ const (
 	PidModeEnumTask PidModeEnum = "task"
 )
 
+func (e PidModeEnum) ToPointer() *PidModeEnum {
+	return &e
+}
+
 func (e *PidModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "host":
 		fallthrough
 	case "task":
-		*e = PidModeEnum(s)
+		*e = PidModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PidModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PidModeEnum: %v", v)
 	}
 }

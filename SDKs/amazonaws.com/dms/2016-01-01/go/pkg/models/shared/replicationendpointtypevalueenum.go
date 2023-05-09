@@ -14,18 +14,22 @@ const (
 	ReplicationEndpointTypeValueEnumTarget ReplicationEndpointTypeValueEnum = "target"
 )
 
+func (e ReplicationEndpointTypeValueEnum) ToPointer() *ReplicationEndpointTypeValueEnum {
+	return &e
+}
+
 func (e *ReplicationEndpointTypeValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "source":
 		fallthrough
 	case "target":
-		*e = ReplicationEndpointTypeValueEnum(s)
+		*e = ReplicationEndpointTypeValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicationEndpointTypeValueEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicationEndpointTypeValueEnum: %v", v)
 	}
 }

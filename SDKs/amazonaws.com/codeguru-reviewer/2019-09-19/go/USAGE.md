@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,48 +17,45 @@ func main() {
         }),
     )
 
-    req := operations.AssociateRepositoryRequest{
+    ctx := context.Background()
+    res, err := s.AssociateRepository(ctx, operations.AssociateRepositoryRequest{
         RequestBody: operations.AssociateRepositoryRequestBody{
-            ClientRequestToken: "corrupti",
+            ClientRequestToken: sdk.String("corrupti"),
             KMSKeyDetails: &operations.AssociateRepositoryRequestBodyKMSKeyDetails{
-                EncryptionOption: "CUSTOMER_MANAGED_CMK",
-                KMSKeyID: "distinctio",
+                EncryptionOption: shared.EncryptionOptionEnumCustomerManagedCmk.ToPointer(),
+                KMSKeyID: sdk.String("distinctio"),
             },
             Repository: operations.AssociateRepositoryRequestBodyRepository{
                 Bitbucket: &shared.ThirdPartySourceRepository{
                     ConnectionArn: "quibusdam",
-                    Name: "unde",
-                    Owner: "nulla",
-                },
-                CodeCommit: &shared.CodeCommitRepository{
-                    Name: "corrupti",
-                },
-                GitHubEnterpriseServer: &shared.ThirdPartySourceRepository{
-                    ConnectionArn: "illum",
-                    Name: "vel",
+                    Name: "Ismael Little",
                     Owner: "error",
                 },
+                CodeCommit: &shared.CodeCommitRepository{
+                    Name: "Rick Kertzmann",
+                },
+                GitHubEnterpriseServer: &shared.ThirdPartySourceRepository{
+                    ConnectionArn: "ipsa",
+                    Name: "Ricky Hoppe",
+                    Owner: "placeat",
+                },
                 S3Bucket: &shared.S3Repository{
-                    BucketName: "deserunt",
-                    Name: "suscipit",
+                    BucketName: "voluptatum",
+                    Name: "Miriam Huel",
                 },
             },
             Tags: map[string]string{
-                "magnam": "debitis",
-                "ipsa": "delectus",
+                "quis": "veritatis",
             },
         },
-        XAmzAlgorithm: "tempora",
-        XAmzContentSha256: "suscipit",
-        XAmzCredential: "molestiae",
-        XAmzDate: "minus",
-        XAmzSecurityToken: "placeat",
-        XAmzSignature: "voluptatum",
-        XAmzSignedHeaders: "iusto",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateRepository(ctx, req)
+        XAmzAlgorithm: sdk.String("deserunt"),
+        XAmzContentSha256: sdk.String("perferendis"),
+        XAmzCredential: sdk.String("ipsam"),
+        XAmzDate: sdk.String("repellendus"),
+        XAmzSecurityToken: sdk.String("sapiente"),
+        XAmzSignature: sdk.String("quo"),
+        XAmzSignedHeaders: sdk.String("odit"),
+    })
     if err != nil {
         log.Fatal(err)
     }

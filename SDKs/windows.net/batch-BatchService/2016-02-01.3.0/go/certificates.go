@@ -98,7 +98,10 @@ func (s *certificates) CertificateAdd(ctx context.Context, request operations.Ce
 // CertificateCancelDeletion - Cancels a failed deletion of a certificate from the specified account.
 func (s *certificates) CertificateCancelDeletion(ctx context.Context, request operations.CertificateCancelDeletionRequest) (*operations.CertificateCancelDeletionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates(thumbprintAlgorithm={thumbprintAlgorithm},thumbprint={thumbprint})/canceldelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/certificates(thumbprintAlgorithm={thumbprintAlgorithm},thumbprint={thumbprint})/canceldelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -151,7 +154,10 @@ func (s *certificates) CertificateCancelDeletion(ctx context.Context, request op
 // CertificateDelete - Deletes a certificate from the specified account.
 func (s *certificates) CertificateDelete(ctx context.Context, request operations.CertificateDeleteRequest) (*operations.CertificateDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates(thumbprintAlgorithm={thumbprintAlgorithm},thumbprint={thumbprint})", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/certificates(thumbprintAlgorithm={thumbprintAlgorithm},thumbprint={thumbprint})", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -204,7 +210,10 @@ func (s *certificates) CertificateDelete(ctx context.Context, request operations
 // CertificateGet - Gets information about the specified certificate.
 func (s *certificates) CertificateGet(ctx context.Context, request operations.CertificateGetRequest) (*operations.CertificateGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates(thumbprintAlgorithm={thumbprintAlgorithm},thumbprint={thumbprint})", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/certificates(thumbprintAlgorithm={thumbprintAlgorithm},thumbprint={thumbprint})", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

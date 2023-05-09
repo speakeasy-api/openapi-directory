@@ -8,5 +8,5 @@ type AccountTransactionList struct {
 	// Indicates whether there is a next page of transactions available.
 	HasNextPage *bool `json:"hasNextPage,omitempty"`
 	// The list of transactions.
-	Transactions []Transaction `json:"transactions,omitempty"`
+	Transactions []TransactionWrapper `json:"transactions,omitempty"`
 }

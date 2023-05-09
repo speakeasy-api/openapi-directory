@@ -15,17 +15,21 @@ const (
 	GETDescribeStackSetActionEnumDescribeStackSet GETDescribeStackSetActionEnum = "DescribeStackSet"
 )
 
+func (e GETDescribeStackSetActionEnum) ToPointer() *GETDescribeStackSetActionEnum {
+	return &e
+}
+
 func (e *GETDescribeStackSetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeStackSet":
-		*e = GETDescribeStackSetActionEnum(s)
+		*e = GETDescribeStackSetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeStackSetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeStackSetActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETDescribeStackSetCallAsEnumDelegatedAdmin GETDescribeStackSetCallAsEnum = "DELEGATED_ADMIN"
 )
 
+func (e GETDescribeStackSetCallAsEnum) ToPointer() *GETDescribeStackSetCallAsEnum {
+	return &e
+}
+
 func (e *GETDescribeStackSetCallAsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SELF":
 		fallthrough
 	case "DELEGATED_ADMIN":
-		*e = GETDescribeStackSetCallAsEnum(s)
+		*e = GETDescribeStackSetCallAsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeStackSetCallAsEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeStackSetCallAsEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETDescribeStackSetVersionEnumTwoThousandAndTen0515 GETDescribeStackSetVersionEnum = "2010-05-15"
 )
 
+func (e GETDescribeStackSetVersionEnum) ToPointer() *GETDescribeStackSetVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeStackSetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETDescribeStackSetVersionEnum(s)
+		*e = GETDescribeStackSetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeStackSetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeStackSetVersionEnum: %v", v)
 	}
 }
 

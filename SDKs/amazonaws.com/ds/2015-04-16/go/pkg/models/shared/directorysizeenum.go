@@ -14,18 +14,22 @@ const (
 	DirectorySizeEnumLarge DirectorySizeEnum = "Large"
 )
 
+func (e DirectorySizeEnum) ToPointer() *DirectorySizeEnum {
+	return &e
+}
+
 func (e *DirectorySizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Small":
 		fallthrough
 	case "Large":
-		*e = DirectorySizeEnum(s)
+		*e = DirectorySizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectorySizeEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectorySizeEnum: %v", v)
 	}
 }

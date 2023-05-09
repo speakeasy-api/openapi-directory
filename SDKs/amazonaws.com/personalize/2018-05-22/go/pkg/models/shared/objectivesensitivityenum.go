@@ -16,12 +16,16 @@ const (
 	ObjectiveSensitivityEnumOff    ObjectiveSensitivityEnum = "OFF"
 )
 
+func (e ObjectiveSensitivityEnum) ToPointer() *ObjectiveSensitivityEnum {
+	return &e
+}
+
 func (e *ObjectiveSensitivityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOW":
 		fallthrough
 	case "MEDIUM":
@@ -29,9 +33,9 @@ func (e *ObjectiveSensitivityEnum) UnmarshalJSON(data []byte) error {
 	case "HIGH":
 		fallthrough
 	case "OFF":
-		*e = ObjectiveSensitivityEnum(s)
+		*e = ObjectiveSensitivityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ObjectiveSensitivityEnum: %s", s)
+		return fmt.Errorf("invalid value for ObjectiveSensitivityEnum: %v", v)
 	}
 }

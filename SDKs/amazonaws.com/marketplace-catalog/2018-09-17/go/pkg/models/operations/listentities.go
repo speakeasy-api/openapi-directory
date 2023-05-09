@@ -3,9 +3,38 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
+
+type ListEntitiesRequestBodyOwnershipTypeEnum string
+
+const (
+	ListEntitiesRequestBodyOwnershipTypeEnumSelf   ListEntitiesRequestBodyOwnershipTypeEnum = "SELF"
+	ListEntitiesRequestBodyOwnershipTypeEnumShared ListEntitiesRequestBodyOwnershipTypeEnum = "SHARED"
+)
+
+func (e ListEntitiesRequestBodyOwnershipTypeEnum) ToPointer() *ListEntitiesRequestBodyOwnershipTypeEnum {
+	return &e
+}
+
+func (e *ListEntitiesRequestBodyOwnershipTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "SELF":
+		fallthrough
+	case "SHARED":
+		*e = ListEntitiesRequestBodyOwnershipTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListEntitiesRequestBodyOwnershipTypeEnum: %v", v)
+	}
+}
 
 // ListEntitiesRequestBodySort - An object that contains two attributes, <code>SortBy</code> and <code>SortOrder</code>.
 type ListEntitiesRequestBodySort struct {
@@ -23,7 +52,8 @@ type ListEntitiesRequestBody struct {
 	// Specifies the upper limit of the elements on a single page. If a value isn't provided, the default value is 20.
 	MaxResults *int64 `json:"MaxResults,omitempty"`
 	// The value of the next token, if it exists. Null if there are no more results.
-	NextToken *string `json:"NextToken,omitempty"`
+	NextToken     *string                                   `json:"NextToken,omitempty"`
+	OwnershipType *ListEntitiesRequestBodyOwnershipTypeEnum `json:"OwnershipType,omitempty"`
 	// An object that contains two attributes, <code>SortBy</code> and <code>SortOrder</code>.
 	Sort *ListEntitiesRequestBodySort `json:"Sort,omitempty"`
 }

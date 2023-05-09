@@ -14,19 +14,23 @@ const (
 	ProblemEventAdminStateEnumDisabled ProblemEventAdminStateEnum = "DISABLED"
 )
 
+func (e ProblemEventAdminStateEnum) ToPointer() *ProblemEventAdminStateEnum {
+	return &e
+}
+
 func (e *ProblemEventAdminStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = ProblemEventAdminStateEnum(s)
+		*e = ProblemEventAdminStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProblemEventAdminStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ProblemEventAdminStateEnum: %v", v)
 	}
 }
 
@@ -39,12 +43,16 @@ const (
 	ProblemEventSeverityEnumInfo     ProblemEventSeverityEnum = "INFO"
 )
 
+func (e ProblemEventSeverityEnum) ToPointer() *ProblemEventSeverityEnum {
+	return &e
+}
+
 func (e *ProblemEventSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRITICAL":
 		fallthrough
 	case "MODERATE":
@@ -52,10 +60,10 @@ func (e *ProblemEventSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "WARNING":
 		fallthrough
 	case "INFO":
-		*e = ProblemEventSeverityEnum(s)
+		*e = ProblemEventSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProblemEventSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for ProblemEventSeverityEnum: %v", v)
 	}
 }
 

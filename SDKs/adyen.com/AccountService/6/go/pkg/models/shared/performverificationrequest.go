@@ -20,12 +20,16 @@ const (
 	PerformVerificationRequestAccountStateTypeEnumProcessing          PerformVerificationRequestAccountStateTypeEnum = "Processing"
 )
 
+func (e PerformVerificationRequestAccountStateTypeEnum) ToPointer() *PerformVerificationRequestAccountStateTypeEnum {
+	return &e
+}
+
 func (e *PerformVerificationRequestAccountStateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LimitedPayout":
 		fallthrough
 	case "LimitedProcessing":
@@ -37,10 +41,10 @@ func (e *PerformVerificationRequestAccountStateTypeEnum) UnmarshalJSON(data []by
 	case "Payout":
 		fallthrough
 	case "Processing":
-		*e = PerformVerificationRequestAccountStateTypeEnum(s)
+		*e = PerformVerificationRequestAccountStateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PerformVerificationRequestAccountStateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PerformVerificationRequestAccountStateTypeEnum: %v", v)
 	}
 }
 

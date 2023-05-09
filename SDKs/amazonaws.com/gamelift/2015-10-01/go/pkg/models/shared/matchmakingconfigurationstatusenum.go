@@ -20,12 +20,16 @@ const (
 	MatchmakingConfigurationStatusEnumTimedOut           MatchmakingConfigurationStatusEnum = "TIMED_OUT"
 )
 
+func (e MatchmakingConfigurationStatusEnum) ToPointer() *MatchmakingConfigurationStatusEnum {
+	return &e
+}
+
 func (e *MatchmakingConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANCELLED":
 		fallthrough
 	case "COMPLETED":
@@ -41,9 +45,9 @@ func (e *MatchmakingConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SEARCHING":
 		fallthrough
 	case "TIMED_OUT":
-		*e = MatchmakingConfigurationStatusEnum(s)
+		*e = MatchmakingConfigurationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MatchmakingConfigurationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MatchmakingConfigurationStatusEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETDescribeEventSubscriptionsActionEnumDescribeEventSubscriptions GETDescribeEventSubscriptionsActionEnum = "DescribeEventSubscriptions"
 )
 
+func (e GETDescribeEventSubscriptionsActionEnum) ToPointer() *GETDescribeEventSubscriptionsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeEventSubscriptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeEventSubscriptions":
-		*e = GETDescribeEventSubscriptionsActionEnum(s)
+		*e = GETDescribeEventSubscriptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEventSubscriptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEventSubscriptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeEventSubscriptionsVersionEnumTwoThousandAndThirteen0212 GETDescribeEventSubscriptionsVersionEnum = "2013-02-12"
 )
 
+func (e GETDescribeEventSubscriptionsVersionEnum) ToPointer() *GETDescribeEventSubscriptionsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeEventSubscriptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETDescribeEventSubscriptionsVersionEnum(s)
+		*e = GETDescribeEventSubscriptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEventSubscriptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEventSubscriptionsVersionEnum: %v", v)
 	}
 }
 

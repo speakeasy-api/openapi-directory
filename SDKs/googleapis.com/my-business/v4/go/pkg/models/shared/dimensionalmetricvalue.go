@@ -18,12 +18,16 @@ const (
 	DimensionalMetricValueMetricOptionEnumBreakdownHourOfDay      DimensionalMetricValueMetricOptionEnum = "BREAKDOWN_HOUR_OF_DAY"
 )
 
+func (e DimensionalMetricValueMetricOptionEnum) ToPointer() *DimensionalMetricValueMetricOptionEnum {
+	return &e
+}
+
 func (e *DimensionalMetricValueMetricOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_OPTION_UNSPECIFIED":
 		fallthrough
 	case "AGGREGATED_TOTAL":
@@ -33,10 +37,10 @@ func (e *DimensionalMetricValueMetricOptionEnum) UnmarshalJSON(data []byte) erro
 	case "BREAKDOWN_DAY_OF_WEEK":
 		fallthrough
 	case "BREAKDOWN_HOUR_OF_DAY":
-		*e = DimensionalMetricValueMetricOptionEnum(s)
+		*e = DimensionalMetricValueMetricOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DimensionalMetricValueMetricOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for DimensionalMetricValueMetricOptionEnum: %v", v)
 	}
 }
 

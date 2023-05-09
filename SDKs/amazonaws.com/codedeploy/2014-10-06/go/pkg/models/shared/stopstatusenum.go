@@ -14,18 +14,22 @@ const (
 	StopStatusEnumSucceeded StopStatusEnum = "Succeeded"
 )
 
+func (e StopStatusEnum) ToPointer() *StopStatusEnum {
+	return &e
+}
+
 func (e *StopStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "Succeeded":
-		*e = StopStatusEnum(s)
+		*e = StopStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StopStatusEnum: %v", v)
 	}
 }

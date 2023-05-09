@@ -13,16 +13,20 @@ const (
 	OriginAccessControlSigningProtocolsEnumSigv4 OriginAccessControlSigningProtocolsEnum = "sigv4"
 )
 
+func (e OriginAccessControlSigningProtocolsEnum) ToPointer() *OriginAccessControlSigningProtocolsEnum {
+	return &e
+}
+
 func (e *OriginAccessControlSigningProtocolsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sigv4":
-		*e = OriginAccessControlSigningProtocolsEnum(s)
+		*e = OriginAccessControlSigningProtocolsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OriginAccessControlSigningProtocolsEnum: %s", s)
+		return fmt.Errorf("invalid value for OriginAccessControlSigningProtocolsEnum: %v", v)
 	}
 }

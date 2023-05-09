@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignmentEnumTrailing                       GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignmentEnum = "TRAILING"
 )
 
+func (e GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignmentEnum) ToPointer() *GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignmentEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HORIZONTAL_ALIGNMENT_UNSPECIFIED":
 		fallthrough
 	case "LEADING":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment
 	case "CENTER":
 		fallthrough
 	case "TRAILING":
-		*e = GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignmentEnum(s)
+		*e = GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignmentEnum: %v", v)
 	}
 }
 

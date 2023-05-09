@@ -16,17 +16,21 @@ const (
 	AssociateVirtualInterfaceXAmzTargetEnumOvertureServiceAssociateVirtualInterface AssociateVirtualInterfaceXAmzTargetEnum = "OvertureService.AssociateVirtualInterface"
 )
 
+func (e AssociateVirtualInterfaceXAmzTargetEnum) ToPointer() *AssociateVirtualInterfaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateVirtualInterfaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.AssociateVirtualInterface":
-		*e = AssociateVirtualInterfaceXAmzTargetEnum(s)
+		*e = AssociateVirtualInterfaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateVirtualInterfaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateVirtualInterfaceXAmzTargetEnum: %v", v)
 	}
 }
 

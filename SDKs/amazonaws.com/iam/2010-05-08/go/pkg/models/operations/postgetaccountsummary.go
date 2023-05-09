@@ -15,17 +15,21 @@ const (
 	POSTGetAccountSummaryActionEnumGetAccountSummary POSTGetAccountSummaryActionEnum = "GetAccountSummary"
 )
 
+func (e POSTGetAccountSummaryActionEnum) ToPointer() *POSTGetAccountSummaryActionEnum {
+	return &e
+}
+
 func (e *POSTGetAccountSummaryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAccountSummary":
-		*e = POSTGetAccountSummaryActionEnum(s)
+		*e = POSTGetAccountSummaryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetAccountSummaryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetAccountSummaryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetAccountSummaryVersionEnumTwoThousandAndTen0508 POSTGetAccountSummaryVersionEnum = "2010-05-08"
 )
 
+func (e POSTGetAccountSummaryVersionEnum) ToPointer() *POSTGetAccountSummaryVersionEnum {
+	return &e
+}
+
 func (e *POSTGetAccountSummaryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTGetAccountSummaryVersionEnum(s)
+		*e = POSTGetAccountSummaryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetAccountSummaryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetAccountSummaryVersionEnum: %v", v)
 	}
 }
 

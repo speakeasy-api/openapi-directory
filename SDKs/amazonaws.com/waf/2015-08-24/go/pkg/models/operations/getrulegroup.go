@@ -16,17 +16,21 @@ const (
 	GetRuleGroupXAmzTargetEnumAwswaf20150824GetRuleGroup GetRuleGroupXAmzTargetEnum = "AWSWAF_20150824.GetRuleGroup"
 )
 
+func (e GetRuleGroupXAmzTargetEnum) ToPointer() *GetRuleGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRuleGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.GetRuleGroup":
-		*e = GetRuleGroupXAmzTargetEnum(s)
+		*e = GetRuleGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRuleGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRuleGroupXAmzTargetEnum: %v", v)
 	}
 }
 

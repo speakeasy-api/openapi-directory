@@ -15,17 +15,21 @@ const (
 	GETResetInstanceAttributeActionEnumResetInstanceAttribute GETResetInstanceAttributeActionEnum = "ResetInstanceAttribute"
 )
 
+func (e GETResetInstanceAttributeActionEnum) ToPointer() *GETResetInstanceAttributeActionEnum {
+	return &e
+}
+
 func (e *GETResetInstanceAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetInstanceAttribute":
-		*e = GETResetInstanceAttributeActionEnum(s)
+		*e = GETResetInstanceAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetInstanceAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetInstanceAttributeActionEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	GETResetInstanceAttributeAttributeEnumDisableAPIStop                    GETResetInstanceAttributeAttributeEnum = "disableApiStop"
 )
 
+func (e GETResetInstanceAttributeAttributeEnum) ToPointer() *GETResetInstanceAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETResetInstanceAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instanceType":
 		fallthrough
 	case "kernel":
@@ -88,10 +96,10 @@ func (e *GETResetInstanceAttributeAttributeEnum) UnmarshalJSON(data []byte) erro
 	case "enclaveOptions":
 		fallthrough
 	case "disableApiStop":
-		*e = GETResetInstanceAttributeAttributeEnum(s)
+		*e = GETResetInstanceAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetInstanceAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetInstanceAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -102,17 +110,21 @@ const (
 	GETResetInstanceAttributeVersionEnumTwoThousandAndSixteen1115 GETResetInstanceAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETResetInstanceAttributeVersionEnum) ToPointer() *GETResetInstanceAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETResetInstanceAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETResetInstanceAttributeVersionEnum(s)
+		*e = GETResetInstanceAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetInstanceAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetInstanceAttributeVersionEnum: %v", v)
 	}
 }
 

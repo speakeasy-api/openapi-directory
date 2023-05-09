@@ -33,12 +33,16 @@ const (
 	ReleasesListByDistributionGroup404ApplicationJSONCodeEnumTooManyRequests     ReleasesListByDistributionGroup404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesListByDistributionGroup404ApplicationJSONCodeEnum) ToPointer() *ReleasesListByDistributionGroup404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesListByDistributionGroup404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *ReleasesListByDistributionGroup404ApplicationJSONCodeEnum) UnmarshalJSO
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesListByDistributionGroup404ApplicationJSONCodeEnum(s)
+		*e = ReleasesListByDistributionGroup404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesListByDistributionGroup404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesListByDistributionGroup404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -73,19 +77,23 @@ const (
 	ReleasesListByDistributionGroup200ApplicationJSONOriginEnumAppcenter ReleasesListByDistributionGroup200ApplicationJSONOriginEnum = "appcenter"
 )
 
+func (e ReleasesListByDistributionGroup200ApplicationJSONOriginEnum) ToPointer() *ReleasesListByDistributionGroup200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *ReleasesListByDistributionGroup200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hockeyapp":
 		fallthrough
 	case "appcenter":
-		*e = ReleasesListByDistributionGroup200ApplicationJSONOriginEnum(s)
+		*e = ReleasesListByDistributionGroup200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesListByDistributionGroup200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesListByDistributionGroup200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

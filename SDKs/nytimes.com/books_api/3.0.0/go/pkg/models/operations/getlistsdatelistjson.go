@@ -21,19 +21,23 @@ const (
 	GETListsDateListJSONSortOrderEnumDesc GETListsDateListJSONSortOrderEnum = "DESC"
 )
 
+func (e GETListsDateListJSONSortOrderEnum) ToPointer() *GETListsDateListJSONSortOrderEnum {
+	return &e
+}
+
 func (e *GETListsDateListJSONSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASC":
 		fallthrough
 	case "DESC":
-		*e = GETListsDateListJSONSortOrderEnum(s)
+		*e = GETListsDateListJSONSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListsDateListJSONSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListsDateListJSONSortOrderEnum: %v", v)
 	}
 }
 

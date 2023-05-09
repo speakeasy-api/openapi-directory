@@ -17,12 +17,16 @@ const (
 	GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnumAppendCompliantResources   GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnum = "APPEND_COMPLIANT_RESOURCES"
 )
 
+func (e GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnum) ToPointer() *GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESTRICTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ALLOW_ALL_GCP_RESOURCES":
@@ -30,10 +34,10 @@ func (e *GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestriction
 	case "ALLOW_COMPLIANT_RESOURCES":
 		fallthrough
 	case "APPEND_COMPLIANT_RESOURCES":
-		*e = GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnum(s)
+		*e = GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequestRestrictionTypeEnum: %v", v)
 	}
 }
 

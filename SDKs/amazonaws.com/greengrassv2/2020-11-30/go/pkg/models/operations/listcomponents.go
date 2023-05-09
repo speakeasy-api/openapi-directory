@@ -17,19 +17,23 @@ const (
 	ListComponentsScopeEnumPublic  ListComponentsScopeEnum = "PUBLIC"
 )
 
+func (e ListComponentsScopeEnum) ToPointer() *ListComponentsScopeEnum {
+	return &e
+}
+
 func (e *ListComponentsScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE":
 		fallthrough
 	case "PUBLIC":
-		*e = ListComponentsScopeEnum(s)
+		*e = ListComponentsScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListComponentsScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListComponentsScopeEnum: %v", v)
 	}
 }
 

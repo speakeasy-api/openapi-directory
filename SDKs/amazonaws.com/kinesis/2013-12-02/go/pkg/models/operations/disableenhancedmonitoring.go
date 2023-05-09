@@ -16,17 +16,21 @@ const (
 	DisableEnhancedMonitoringXAmzTargetEnumKinesis20131202DisableEnhancedMonitoring DisableEnhancedMonitoringXAmzTargetEnum = "Kinesis_20131202.DisableEnhancedMonitoring"
 )
 
+func (e DisableEnhancedMonitoringXAmzTargetEnum) ToPointer() *DisableEnhancedMonitoringXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisableEnhancedMonitoringXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kinesis_20131202.DisableEnhancedMonitoring":
-		*e = DisableEnhancedMonitoringXAmzTargetEnum(s)
+		*e = DisableEnhancedMonitoringXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableEnhancedMonitoringXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableEnhancedMonitoringXAmzTargetEnum: %v", v)
 	}
 }
 

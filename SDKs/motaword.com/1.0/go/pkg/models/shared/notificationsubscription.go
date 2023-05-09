@@ -22,12 +22,16 @@ const (
 	NotificationSubscriptionDeviceEnumMacOs        NotificationSubscriptionDeviceEnum = "MacOS"
 )
 
+func (e NotificationSubscriptionDeviceEnum) ToPointer() *NotificationSubscriptionDeviceEnum {
+	return &e
+}
+
 func (e *NotificationSubscriptionDeviceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iOS":
 		fallthrough
 	case "Android":
@@ -47,10 +51,10 @@ func (e *NotificationSubscriptionDeviceEnum) UnmarshalJSON(data []byte) error {
 	case "Windows":
 		fallthrough
 	case "MacOS":
-		*e = NotificationSubscriptionDeviceEnum(s)
+		*e = NotificationSubscriptionDeviceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationSubscriptionDeviceEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationSubscriptionDeviceEnum: %v", v)
 	}
 }
 
@@ -60,17 +64,21 @@ const (
 	NotificationSubscriptionTypeEnumOneSignal NotificationSubscriptionTypeEnum = "OneSignal"
 )
 
+func (e NotificationSubscriptionTypeEnum) ToPointer() *NotificationSubscriptionTypeEnum {
+	return &e
+}
+
 func (e *NotificationSubscriptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OneSignal":
-		*e = NotificationSubscriptionTypeEnum(s)
+		*e = NotificationSubscriptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationSubscriptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationSubscriptionTypeEnum: %v", v)
 	}
 }
 

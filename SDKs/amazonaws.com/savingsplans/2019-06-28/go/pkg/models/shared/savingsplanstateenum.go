@@ -18,12 +18,16 @@ const (
 	SavingsPlanStateEnumQueuedDeleted  SavingsPlanStateEnum = "queued-deleted"
 )
 
+func (e SavingsPlanStateEnum) ToPointer() *SavingsPlanStateEnum {
+	return &e
+}
+
 func (e *SavingsPlanStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "payment-pending":
 		fallthrough
 	case "payment-failed":
@@ -35,9 +39,9 @@ func (e *SavingsPlanStateEnum) UnmarshalJSON(data []byte) error {
 	case "queued":
 		fallthrough
 	case "queued-deleted":
-		*e = SavingsPlanStateEnum(s)
+		*e = SavingsPlanStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SavingsPlanStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SavingsPlanStateEnum: %v", v)
 	}
 }

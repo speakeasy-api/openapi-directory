@@ -16,21 +16,25 @@ const (
 	MastheadAdVideoAspectRatioEnumVideoAspectRatioFixed169    MastheadAdVideoAspectRatioEnum = "VIDEO_ASPECT_RATIO_FIXED_16_9"
 )
 
+func (e MastheadAdVideoAspectRatioEnum) ToPointer() *MastheadAdVideoAspectRatioEnum {
+	return &e
+}
+
 func (e *MastheadAdVideoAspectRatioEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIDEO_ASPECT_RATIO_UNSPECIFIED":
 		fallthrough
 	case "VIDEO_ASPECT_RATIO_WIDESCREEN":
 		fallthrough
 	case "VIDEO_ASPECT_RATIO_FIXED_16_9":
-		*e = MastheadAdVideoAspectRatioEnum(s)
+		*e = MastheadAdVideoAspectRatioEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MastheadAdVideoAspectRatioEnum: %s", s)
+		return fmt.Errorf("invalid value for MastheadAdVideoAspectRatioEnum: %v", v)
 	}
 }
 

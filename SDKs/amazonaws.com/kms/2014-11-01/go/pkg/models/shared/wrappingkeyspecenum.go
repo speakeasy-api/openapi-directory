@@ -13,16 +13,20 @@ const (
 	WrappingKeySpecEnumRsa2048 WrappingKeySpecEnum = "RSA_2048"
 )
 
+func (e WrappingKeySpecEnum) ToPointer() *WrappingKeySpecEnum {
+	return &e
+}
+
 func (e *WrappingKeySpecEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RSA_2048":
-		*e = WrappingKeySpecEnum(s)
+		*e = WrappingKeySpecEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WrappingKeySpecEnum: %s", s)
+		return fmt.Errorf("invalid value for WrappingKeySpecEnum: %v", v)
 	}
 }

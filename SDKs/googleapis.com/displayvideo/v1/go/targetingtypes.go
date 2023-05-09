@@ -34,7 +34,10 @@ func newTargetingTypes(defaultClient, securityClient HTTPClient, serverURL, lang
 // DisplayvideoTargetingTypesTargetingOptionsGet - Gets a single targeting option.
 func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoTargetingTypesTargetingOptionsGetRequest, security operations.DisplayvideoTargetingTypesTargetingOptionsGetSecurity) (*operations.DisplayvideoTargetingTypesTargetingOptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/targetingTypes/{targetingType}/targetingOptions/{targetingOptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/targetingTypes/{targetingType}/targetingOptions/{targetingOptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsGet(ctx conte
 // DisplayvideoTargetingTypesTargetingOptionsList - Lists targeting options of a given type.
 func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsList(ctx context.Context, request operations.DisplayvideoTargetingTypesTargetingOptionsListRequest, security operations.DisplayvideoTargetingTypesTargetingOptionsListSecurity) (*operations.DisplayvideoTargetingTypesTargetingOptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/targetingTypes/{targetingType}/targetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/targetingTypes/{targetingType}/targetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsList(ctx cont
 // DisplayvideoTargetingTypesTargetingOptionsSearch - Searches for targeting options of a given type based on the given search terms.
 func (s *targetingTypes) DisplayvideoTargetingTypesTargetingOptionsSearch(ctx context.Context, request operations.DisplayvideoTargetingTypesTargetingOptionsSearchRequest, security operations.DisplayvideoTargetingTypesTargetingOptionsSearchSecurity) (*operations.DisplayvideoTargetingTypesTargetingOptionsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/targetingTypes/{targetingType}/targetingOptions:search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/targetingTypes/{targetingType}/targetingOptions:search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchTargetingOptionsRequest", "json")
 	if err != nil {

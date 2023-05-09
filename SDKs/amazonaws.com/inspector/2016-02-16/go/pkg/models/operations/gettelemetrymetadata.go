@@ -16,17 +16,21 @@ const (
 	GetTelemetryMetadataXAmzTargetEnumInspectorServiceGetTelemetryMetadata GetTelemetryMetadataXAmzTargetEnum = "InspectorService.GetTelemetryMetadata"
 )
 
+func (e GetTelemetryMetadataXAmzTargetEnum) ToPointer() *GetTelemetryMetadataXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetTelemetryMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InspectorService.GetTelemetryMetadata":
-		*e = GetTelemetryMetadataXAmzTargetEnum(s)
+		*e = GetTelemetryMetadataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTelemetryMetadataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTelemetryMetadataXAmzTargetEnum: %v", v)
 	}
 }
 

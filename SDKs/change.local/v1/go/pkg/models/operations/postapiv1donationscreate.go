@@ -21,19 +21,23 @@ const (
 	PostAPIV1DonationsCreateFundingSourceEnumCustomer PostAPIV1DonationsCreateFundingSourceEnum = "customer"
 )
 
+func (e PostAPIV1DonationsCreateFundingSourceEnum) ToPointer() *PostAPIV1DonationsCreateFundingSourceEnum {
+	return &e
+}
+
 func (e *PostAPIV1DonationsCreateFundingSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "merchant":
 		fallthrough
 	case "customer":
-		*e = PostAPIV1DonationsCreateFundingSourceEnum(s)
+		*e = PostAPIV1DonationsCreateFundingSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAPIV1DonationsCreateFundingSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAPIV1DonationsCreateFundingSourceEnum: %v", v)
 	}
 }
 

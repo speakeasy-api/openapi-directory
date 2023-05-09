@@ -22,12 +22,16 @@ const (
 	FileUploadQuestionTypesEnumAudio               FileUploadQuestionTypesEnum = "AUDIO"
 )
 
+func (e FileUploadQuestionTypesEnum) ToPointer() *FileUploadQuestionTypesEnum {
+	return &e
+}
+
 func (e *FileUploadQuestionTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ANY":
@@ -47,10 +51,10 @@ func (e *FileUploadQuestionTypesEnum) UnmarshalJSON(data []byte) error {
 	case "VIDEO":
 		fallthrough
 	case "AUDIO":
-		*e = FileUploadQuestionTypesEnum(s)
+		*e = FileUploadQuestionTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileUploadQuestionTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for FileUploadQuestionTypesEnum: %v", v)
 	}
 }
 

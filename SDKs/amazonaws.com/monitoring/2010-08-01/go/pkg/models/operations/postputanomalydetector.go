@@ -15,17 +15,21 @@ const (
 	POSTPutAnomalyDetectorActionEnumPutAnomalyDetector POSTPutAnomalyDetectorActionEnum = "PutAnomalyDetector"
 )
 
+func (e POSTPutAnomalyDetectorActionEnum) ToPointer() *POSTPutAnomalyDetectorActionEnum {
+	return &e
+}
+
 func (e *POSTPutAnomalyDetectorActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PutAnomalyDetector":
-		*e = POSTPutAnomalyDetectorActionEnum(s)
+		*e = POSTPutAnomalyDetectorActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPutAnomalyDetectorActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPutAnomalyDetectorActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTPutAnomalyDetectorVersionEnumTwoThousandAndTen0801 POSTPutAnomalyDetectorVersionEnum = "2010-08-01"
 )
 
+func (e POSTPutAnomalyDetectorVersionEnum) ToPointer() *POSTPutAnomalyDetectorVersionEnum {
+	return &e
+}
+
 func (e *POSTPutAnomalyDetectorVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = POSTPutAnomalyDetectorVersionEnum(s)
+		*e = POSTPutAnomalyDetectorVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPutAnomalyDetectorVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPutAnomalyDetectorVersionEnum: %v", v)
 	}
 }
 

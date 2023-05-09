@@ -17,21 +17,25 @@ const (
 	OrganizationDependabotSecretVisibilityEnumSelected OrganizationDependabotSecretVisibilityEnum = "selected"
 )
 
+func (e OrganizationDependabotSecretVisibilityEnum) ToPointer() *OrganizationDependabotSecretVisibilityEnum {
+	return &e
+}
+
 func (e *OrganizationDependabotSecretVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "private":
 		fallthrough
 	case "selected":
-		*e = OrganizationDependabotSecretVisibilityEnum(s)
+		*e = OrganizationDependabotSecretVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationDependabotSecretVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationDependabotSecretVisibilityEnum: %v", v)
 	}
 }
 

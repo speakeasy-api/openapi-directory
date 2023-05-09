@@ -19,12 +19,16 @@ const (
 	GoogleCloudConnectorsV1AuthConfigAuthTypeEnumOauth2AuthCodeFlow      GoogleCloudConnectorsV1AuthConfigAuthTypeEnum = "OAUTH2_AUTH_CODE_FLOW"
 )
 
+func (e GoogleCloudConnectorsV1AuthConfigAuthTypeEnum) ToPointer() *GoogleCloudConnectorsV1AuthConfigAuthTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudConnectorsV1AuthConfigAuthTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "USER_PASSWORD":
@@ -36,10 +40,10 @@ func (e *GoogleCloudConnectorsV1AuthConfigAuthTypeEnum) UnmarshalJSON(data []byt
 	case "SSH_PUBLIC_KEY":
 		fallthrough
 	case "OAUTH2_AUTH_CODE_FLOW":
-		*e = GoogleCloudConnectorsV1AuthConfigAuthTypeEnum(s)
+		*e = GoogleCloudConnectorsV1AuthConfigAuthTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1AuthConfigAuthTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1AuthConfigAuthTypeEnum: %v", v)
 	}
 }
 
@@ -47,8 +51,12 @@ func (e *GoogleCloudConnectorsV1AuthConfigAuthTypeEnum) UnmarshalJSON(data []byt
 type GoogleCloudConnectorsV1AuthConfig struct {
 	// List containing additional auth configs.
 	AdditionalVariables []GoogleCloudConnectorsV1ConfigVariable `json:"additionalVariables,omitempty"`
+	// Identifier key for auth config
+	AuthKey *string `json:"authKey,omitempty"`
 	// The type of authentication configured.
 	AuthType *GoogleCloudConnectorsV1AuthConfigAuthTypeEnum `json:"authType,omitempty"`
+	// Parameters to support Oauth 2.0 Auth Code Grant Authentication. See https://www.rfc-editor.org/rfc/rfc6749#section-1.3.1 for more details.
+	Oauth2AuthCodeFlow *GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow `json:"oauth2AuthCodeFlow,omitempty"`
 	// Parameters to support Oauth 2.0 Client Credentials Grant Authentication. See https://tools.ietf.org/html/rfc6749#section-1.3.4 for more details.
 	Oauth2ClientCredentials *GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials `json:"oauth2ClientCredentials,omitempty"`
 	// Parameters to support JSON Web Token (JWT) Profile for Oauth 2.0 Authorization Grant based authentication. See https://tools.ietf.org/html/rfc7523 for more details.

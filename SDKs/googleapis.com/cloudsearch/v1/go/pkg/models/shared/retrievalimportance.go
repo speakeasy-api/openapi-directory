@@ -18,12 +18,16 @@ const (
 	RetrievalImportanceImportanceEnumNone    RetrievalImportanceImportanceEnum = "NONE"
 )
 
+func (e RetrievalImportanceImportanceEnum) ToPointer() *RetrievalImportanceImportanceEnum {
+	return &e
+}
+
 func (e *RetrievalImportanceImportanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "HIGHEST":
@@ -33,10 +37,10 @@ func (e *RetrievalImportanceImportanceEnum) UnmarshalJSON(data []byte) error {
 	case "LOW":
 		fallthrough
 	case "NONE":
-		*e = RetrievalImportanceImportanceEnum(s)
+		*e = RetrievalImportanceImportanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrievalImportanceImportanceEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrievalImportanceImportanceEnum: %v", v)
 	}
 }
 

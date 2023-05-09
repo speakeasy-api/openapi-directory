@@ -16,17 +16,21 @@ const (
 	DeregisterOrganizationDelegatedAdminXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101DeregisterOrganizationDelegatedAdmin DeregisterOrganizationDelegatedAdminXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.DeregisterOrganizationDelegatedAdmin"
 )
 
+func (e DeregisterOrganizationDelegatedAdminXAmzTargetEnum) ToPointer() *DeregisterOrganizationDelegatedAdminXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeregisterOrganizationDelegatedAdminXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.DeregisterOrganizationDelegatedAdmin":
-		*e = DeregisterOrganizationDelegatedAdminXAmzTargetEnum(s)
+		*e = DeregisterOrganizationDelegatedAdminXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeregisterOrganizationDelegatedAdminXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeregisterOrganizationDelegatedAdminXAmzTargetEnum: %v", v)
 	}
 }
 

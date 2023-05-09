@@ -15,17 +15,21 @@ const (
 	POSTGetOrganizationsAccessReportActionEnumGetOrganizationsAccessReport POSTGetOrganizationsAccessReportActionEnum = "GetOrganizationsAccessReport"
 )
 
+func (e POSTGetOrganizationsAccessReportActionEnum) ToPointer() *POSTGetOrganizationsAccessReportActionEnum {
+	return &e
+}
+
 func (e *POSTGetOrganizationsAccessReportActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetOrganizationsAccessReport":
-		*e = POSTGetOrganizationsAccessReportActionEnum(s)
+		*e = POSTGetOrganizationsAccessReportActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetOrganizationsAccessReportActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetOrganizationsAccessReportActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetOrganizationsAccessReportVersionEnumTwoThousandAndTen0508 POSTGetOrganizationsAccessReportVersionEnum = "2010-05-08"
 )
 
+func (e POSTGetOrganizationsAccessReportVersionEnum) ToPointer() *POSTGetOrganizationsAccessReportVersionEnum {
+	return &e
+}
+
 func (e *POSTGetOrganizationsAccessReportVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTGetOrganizationsAccessReportVersionEnum(s)
+		*e = POSTGetOrganizationsAccessReportVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetOrganizationsAccessReportVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetOrganizationsAccessReportVersionEnum: %v", v)
 	}
 }
 

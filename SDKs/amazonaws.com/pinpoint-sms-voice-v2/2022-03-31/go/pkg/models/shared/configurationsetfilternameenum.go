@@ -16,12 +16,16 @@ const (
 	ConfigurationSetFilterNameEnumDefaultSenderID      ConfigurationSetFilterNameEnum = "default-sender-id"
 )
 
+func (e ConfigurationSetFilterNameEnum) ToPointer() *ConfigurationSetFilterNameEnum {
+	return &e
+}
+
 func (e *ConfigurationSetFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "event-destination-name":
 		fallthrough
 	case "matching-event-types":
@@ -29,9 +33,9 @@ func (e *ConfigurationSetFilterNameEnum) UnmarshalJSON(data []byte) error {
 	case "default-message-type":
 		fallthrough
 	case "default-sender-id":
-		*e = ConfigurationSetFilterNameEnum(s)
+		*e = ConfigurationSetFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigurationSetFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigurationSetFilterNameEnum: %v", v)
 	}
 }

@@ -16,12 +16,16 @@ const (
 	AttributePropagationSettingsOutputCredentialsEnumRctoken                      AttributePropagationSettingsOutputCredentialsEnum = "RCTOKEN"
 )
 
+func (e AttributePropagationSettingsOutputCredentialsEnum) ToPointer() *AttributePropagationSettingsOutputCredentialsEnum {
+	return &e
+}
+
 func (e *AttributePropagationSettingsOutputCredentialsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OUTPUT_CREDENTIALS_UNSPECIFIED":
 		fallthrough
 	case "HEADER":
@@ -29,10 +33,10 @@ func (e *AttributePropagationSettingsOutputCredentialsEnum) UnmarshalJSON(data [
 	case "JWT":
 		fallthrough
 	case "RCTOKEN":
-		*e = AttributePropagationSettingsOutputCredentialsEnum(s)
+		*e = AttributePropagationSettingsOutputCredentialsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttributePropagationSettingsOutputCredentialsEnum: %s", s)
+		return fmt.Errorf("invalid value for AttributePropagationSettingsOutputCredentialsEnum: %v", v)
 	}
 }
 

@@ -28,12 +28,16 @@ const (
 	KkidChorelistPostDayEnumToday     KkidChorelistPostDayEnum = "Today"
 )
 
+func (e KkidChorelistPostDayEnum) ToPointer() *KkidChorelistPostDayEnum {
+	return &e
+}
+
 func (e *KkidChorelistPostDayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Sunday":
 		fallthrough
 	case "Monday":
@@ -51,10 +55,10 @@ func (e *KkidChorelistPostDayEnum) UnmarshalJSON(data []byte) error {
 	case "Weekly":
 		fallthrough
 	case "Today":
-		*e = KkidChorelistPostDayEnum(s)
+		*e = KkidChorelistPostDayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KkidChorelistPostDayEnum: %s", s)
+		return fmt.Errorf("invalid value for KkidChorelistPostDayEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateMonitoringAlertXAmzTargetEnumSageMakerUpdateMonitoringAlert UpdateMonitoringAlertXAmzTargetEnum = "SageMaker.UpdateMonitoringAlert"
 )
 
+func (e UpdateMonitoringAlertXAmzTargetEnum) ToPointer() *UpdateMonitoringAlertXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateMonitoringAlertXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.UpdateMonitoringAlert":
-		*e = UpdateMonitoringAlertXAmzTargetEnum(s)
+		*e = UpdateMonitoringAlertXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMonitoringAlertXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMonitoringAlertXAmzTargetEnum: %v", v)
 	}
 }
 

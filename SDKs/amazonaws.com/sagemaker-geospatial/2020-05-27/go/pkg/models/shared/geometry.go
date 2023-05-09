@@ -2,7 +2,7 @@
 
 package shared
 
-// Geometry - <p/>
+// Geometry - The structure representing a Geometry in terms of Type and Coordinates as per GeoJson spec.
 type Geometry struct {
 	Coordinates [][][]float64 `json:"Coordinates"`
 	Type        string        `json:"Type"`

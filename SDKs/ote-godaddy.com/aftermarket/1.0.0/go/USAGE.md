@@ -2,43 +2,40 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := []shared.AftermarketListingExpiryCreate{
+    ctx := context.Background()
+    res, err := s.V1.AddExpiryListingsJSON(ctx, []shared.AftermarketListingExpiryCreate{
         shared.AftermarketListingExpiryCreate{
             Domain: "provident",
             ExpiresAt: "distinctio",
             LosingRegistrarID: 844266,
-            PageViewsMonthly: 602763,
-            RevenueMonthly: 857946,
+            PageViewsMonthly: sdk.Int64(602763),
+            RevenueMonthly: sdk.Int64(857946),
         },
         shared.AftermarketListingExpiryCreate{
             Domain: "corrupti",
             ExpiresAt: "illum",
             LosingRegistrarID: 423655,
-            PageViewsMonthly: 623564,
-            RevenueMonthly: 645894,
+            PageViewsMonthly: sdk.Int64(623564),
+            RevenueMonthly: sdk.Int64(645894),
         },
         shared.AftermarketListingExpiryCreate{
             Domain: "suscipit",
             ExpiresAt: "iure",
             LosingRegistrarID: 297534,
-            PageViewsMonthly: 891773,
-            RevenueMonthly: 56713,
+            PageViewsMonthly: sdk.Int64(891773),
+            RevenueMonthly: sdk.Int64(56713),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.V1.AddExpiryListingsJSON(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

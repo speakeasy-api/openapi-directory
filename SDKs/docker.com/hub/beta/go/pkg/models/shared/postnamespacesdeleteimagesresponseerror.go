@@ -16,21 +16,25 @@ const (
 	PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrorsErrorEnumChildManifest PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrorsErrorEnum = "child_manifest"
 )
 
+func (e PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrorsErrorEnum) ToPointer() *PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrorsErrorEnum {
+	return &e
+}
+
 func (e *PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrorsErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "not_found":
 		fallthrough
 	case "unauthorized":
 		fallthrough
 	case "child_manifest":
-		*e = PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrorsErrorEnum(s)
+		*e = PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrorsErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrorsErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrorsErrorEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarningsWarningEnumCurrentTag PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarningsWarningEnum = "current_tag"
 )
 
+func (e PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarningsWarningEnum) ToPointer() *PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarningsWarningEnum {
+	return &e
+}
+
 func (e *PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarningsWarningEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "is_active":
 		fallthrough
 	case "current_tag":
-		*e = PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarningsWarningEnum(s)
+		*e = PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarningsWarningEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarningsWarningEnum: %s", s)
+		return fmt.Errorf("invalid value for PostNamespacesDeleteImagesResponseErrorErrinfoDetailsWarningsWarningEnum: %v", v)
 	}
 }
 

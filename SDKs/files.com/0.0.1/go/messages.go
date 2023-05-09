@@ -37,7 +37,10 @@ func newMessages(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Delete Message
 func (s *messages) DeleteMessagesID(ctx context.Context, request operations.DeleteMessagesIDRequest) (*operations.DeleteMessagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *messages) GetMessages(ctx context.Context, request operations.GetMessag
 // Show Message
 func (s *messages) GetMessagesID(ctx context.Context, request operations.GetMessagesIDRequest) (*operations.GetMessagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *messages) GetMessagesID(ctx context.Context, request operations.GetMess
 // Update Message
 func (s *messages) PatchMessagesID(ctx context.Context, request operations.PatchMessagesIDRequest) (*operations.PatchMessagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

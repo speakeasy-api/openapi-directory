@@ -15,20 +15,24 @@ const (
 	ProtectiveEquipmentTypeEnumHeadCover ProtectiveEquipmentTypeEnum = "HEAD_COVER"
 )
 
+func (e ProtectiveEquipmentTypeEnum) ToPointer() *ProtectiveEquipmentTypeEnum {
+	return &e
+}
+
 func (e *ProtectiveEquipmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FACE_COVER":
 		fallthrough
 	case "HAND_COVER":
 		fallthrough
 	case "HEAD_COVER":
-		*e = ProtectiveEquipmentTypeEnum(s)
+		*e = ProtectiveEquipmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProtectiveEquipmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProtectiveEquipmentTypeEnum: %v", v)
 	}
 }

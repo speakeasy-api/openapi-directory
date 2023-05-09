@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/migrationhu
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,19 +27,17 @@ func main() {
         }),
     )
 
-    req := operations.GetApplicationComponentDetailsRequest{
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "provident",
-        XAmzCredential: "distinctio",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "unde",
-        XAmzSignature: "nulla",
-        XAmzSignedHeaders: "corrupti",
-        ApplicationComponentID: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.GetApplicationComponentDetails(ctx, req)
+    res, err := s.GetApplicationComponentDetails(ctx, operations.GetApplicationComponentDetailsRequest{
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("provident"),
+        XAmzCredential: sdk.String("distinctio"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("unde"),
+        XAmzSignature: sdk.String("nulla"),
+        XAmzSignedHeaders: sdk.String("corrupti"),
+        ApplicationComponentID: "illum",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,29 +52,29 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetApplicationComponentDetails` -  Retrieves details about an application component. 
-* `GetApplicationComponentStrategies` -  Retrieves a list of all the recommended strategies and tools for an application component running on a server. 
-* `GetAssessment` -  Retrieves the status of an on-going assessment. 
-* `GetImportFileTask` -  Retrieves the details about a specific import task. 
-* `GetLatestAssessmentID` - Retrieve the latest ID of a specific assessment task.
-* `GetPortfolioPreferences` -  Retrieves your migration and modernization preferences. 
-* `GetPortfolioSummary` -  Retrieves overall summary including the number of servers to rehost and the overall number of anti-patterns. 
-* `GetRecommendationReportDetails` -  Retrieves detailed information about the specified recommendation report. 
-* `GetServerDetails` -  Retrieves detailed information about a specified server. 
-* `GetServerStrategies` -  Retrieves recommended strategies and tools for the specified server. 
-* `ListApplicationComponents` -  Retrieves a list of all the application components (processes). 
-* `ListCollectors` -  Retrieves a list of all the installed collectors. 
-* `ListImportFileTask` -  Retrieves a list of all the imports performed. 
-* `ListServers` -  Returns a list of all the servers. 
-* `PutPortfolioPreferences` -  Saves the specified migration and modernization preferences. 
-* `StartAssessment` -  Starts the assessment of an on-premises environment. 
-* `StartImportFileTask` -  Starts a file import. 
-* `StartRecommendationReportGeneration` -  Starts generating a recommendation report. 
-* `StopAssessment` -  Stops the assessment of an on-premises environment. 
-* `UpdateApplicationComponentConfig` -  Updates the configuration of an application component. 
-* `UpdateServerConfig` -  Updates the configuration of the specified server. 
+* [GetApplicationComponentDetails](docs/sdk/README.md#getapplicationcomponentdetails) -  Retrieves details about an application component. 
+* [GetApplicationComponentStrategies](docs/sdk/README.md#getapplicationcomponentstrategies) -  Retrieves a list of all the recommended strategies and tools for an application component running on a server. 
+* [GetAssessment](docs/sdk/README.md#getassessment) -  Retrieves the status of an on-going assessment. 
+* [GetImportFileTask](docs/sdk/README.md#getimportfiletask) -  Retrieves the details about a specific import task. 
+* [GetLatestAssessmentID](docs/sdk/README.md#getlatestassessmentid) - Retrieve the latest ID of a specific assessment task.
+* [GetPortfolioPreferences](docs/sdk/README.md#getportfoliopreferences) -  Retrieves your migration and modernization preferences. 
+* [GetPortfolioSummary](docs/sdk/README.md#getportfoliosummary) -  Retrieves overall summary including the number of servers to rehost and the overall number of anti-patterns. 
+* [GetRecommendationReportDetails](docs/sdk/README.md#getrecommendationreportdetails) -  Retrieves detailed information about the specified recommendation report. 
+* [GetServerDetails](docs/sdk/README.md#getserverdetails) -  Retrieves detailed information about a specified server. 
+* [GetServerStrategies](docs/sdk/README.md#getserverstrategies) -  Retrieves recommended strategies and tools for the specified server. 
+* [ListApplicationComponents](docs/sdk/README.md#listapplicationcomponents) -  Retrieves a list of all the application components (processes). 
+* [ListCollectors](docs/sdk/README.md#listcollectors) -  Retrieves a list of all the installed collectors. 
+* [ListImportFileTask](docs/sdk/README.md#listimportfiletask) -  Retrieves a list of all the imports performed. 
+* [ListServers](docs/sdk/README.md#listservers) -  Returns a list of all the servers. 
+* [PutPortfolioPreferences](docs/sdk/README.md#putportfoliopreferences) -  Saves the specified migration and modernization preferences. 
+* [StartAssessment](docs/sdk/README.md#startassessment) -  Starts the assessment of an on-premises environment. 
+* [StartImportFileTask](docs/sdk/README.md#startimportfiletask) -  Starts a file import. 
+* [StartRecommendationReportGeneration](docs/sdk/README.md#startrecommendationreportgeneration) -  Starts generating a recommendation report. 
+* [StopAssessment](docs/sdk/README.md#stopassessment) -  Stops the assessment of an on-premises environment. 
+* [UpdateApplicationComponentConfig](docs/sdk/README.md#updateapplicationcomponentconfig) -  Updates the configuration of an application component. 
+* [UpdateServerConfig](docs/sdk/README.md#updateserverconfig) -  Updates the configuration of the specified server. 
 <!-- End SDK Available Operations -->
 
 ### Maturity

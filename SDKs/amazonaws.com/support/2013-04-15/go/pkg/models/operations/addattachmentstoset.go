@@ -16,17 +16,21 @@ const (
 	AddAttachmentsToSetXAmzTargetEnumAwsSupport20130415AddAttachmentsToSet AddAttachmentsToSetXAmzTargetEnum = "AWSSupport_20130415.AddAttachmentsToSet"
 )
 
+func (e AddAttachmentsToSetXAmzTargetEnum) ToPointer() *AddAttachmentsToSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddAttachmentsToSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSupport_20130415.AddAttachmentsToSet":
-		*e = AddAttachmentsToSetXAmzTargetEnum(s)
+		*e = AddAttachmentsToSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddAttachmentsToSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddAttachmentsToSetXAmzTargetEnum: %v", v)
 	}
 }
 

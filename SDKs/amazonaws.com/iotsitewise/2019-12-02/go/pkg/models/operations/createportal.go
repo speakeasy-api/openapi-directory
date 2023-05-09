@@ -23,19 +23,23 @@ const (
 	CreatePortalRequestBodyPortalAuthModeEnumSso CreatePortalRequestBodyPortalAuthModeEnum = "SSO"
 )
 
+func (e CreatePortalRequestBodyPortalAuthModeEnum) ToPointer() *CreatePortalRequestBodyPortalAuthModeEnum {
+	return &e
+}
+
 func (e *CreatePortalRequestBodyPortalAuthModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IAM":
 		fallthrough
 	case "SSO":
-		*e = CreatePortalRequestBodyPortalAuthModeEnum(s)
+		*e = CreatePortalRequestBodyPortalAuthModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePortalRequestBodyPortalAuthModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePortalRequestBodyPortalAuthModeEnum: %v", v)
 	}
 }
 

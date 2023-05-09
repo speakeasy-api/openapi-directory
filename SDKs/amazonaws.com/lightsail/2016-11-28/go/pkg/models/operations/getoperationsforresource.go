@@ -16,17 +16,21 @@ const (
 	GetOperationsForResourceXAmzTargetEnumLightsail20161128GetOperationsForResource GetOperationsForResourceXAmzTargetEnum = "Lightsail_20161128.GetOperationsForResource"
 )
 
+func (e GetOperationsForResourceXAmzTargetEnum) ToPointer() *GetOperationsForResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetOperationsForResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetOperationsForResource":
-		*e = GetOperationsForResourceXAmzTargetEnum(s)
+		*e = GetOperationsForResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOperationsForResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOperationsForResourceXAmzTargetEnum: %v", v)
 	}
 }
 

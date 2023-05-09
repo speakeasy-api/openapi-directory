@@ -21,12 +21,16 @@ const (
 	JobDegreeTypesEnumDoctoralOrEquivalent    JobDegreeTypesEnum = "DOCTORAL_OR_EQUIVALENT"
 )
 
+func (e JobDegreeTypesEnum) ToPointer() *JobDegreeTypesEnum {
+	return &e
+}
+
 func (e *JobDegreeTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEGREE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PRIMARY_EDUCATION":
@@ -44,10 +48,10 @@ func (e *JobDegreeTypesEnum) UnmarshalJSON(data []byte) error {
 	case "MASTERS_OR_EQUIVALENT":
 		fallthrough
 	case "DOCTORAL_OR_EQUIVALENT":
-		*e = JobDegreeTypesEnum(s)
+		*e = JobDegreeTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobDegreeTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for JobDegreeTypesEnum: %v", v)
 	}
 }
 
@@ -67,12 +71,16 @@ const (
 	JobEmploymentTypesEnumOtherEmploymentType       JobEmploymentTypesEnum = "OTHER_EMPLOYMENT_TYPE"
 )
 
+func (e JobEmploymentTypesEnum) ToPointer() *JobEmploymentTypesEnum {
+	return &e
+}
+
 func (e *JobEmploymentTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EMPLOYMENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FULL_TIME":
@@ -94,10 +102,10 @@ func (e *JobEmploymentTypesEnum) UnmarshalJSON(data []byte) error {
 	case "FLY_IN_FLY_OUT":
 		fallthrough
 	case "OTHER_EMPLOYMENT_TYPE":
-		*e = JobEmploymentTypesEnum(s)
+		*e = JobEmploymentTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobEmploymentTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for JobEmploymentTypesEnum: %v", v)
 	}
 }
 
@@ -118,12 +126,16 @@ const (
 	JobJobBenefitsEnumVision                JobJobBenefitsEnum = "VISION"
 )
 
+func (e JobJobBenefitsEnum) ToPointer() *JobJobBenefitsEnum {
+	return &e
+}
+
 func (e *JobJobBenefitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_BENEFIT_UNSPECIFIED":
 		fallthrough
 	case "CHILD_CARE":
@@ -147,10 +159,10 @@ func (e *JobJobBenefitsEnum) UnmarshalJSON(data []byte) error {
 	case "VACATION":
 		fallthrough
 	case "VISION":
-		*e = JobJobBenefitsEnum(s)
+		*e = JobJobBenefitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobJobBenefitsEnum: %s", s)
+		return fmt.Errorf("invalid value for JobJobBenefitsEnum: %v", v)
 	}
 }
 
@@ -166,12 +178,16 @@ const (
 	JobJobLevelEnumExecutive           JobJobLevelEnum = "EXECUTIVE"
 )
 
+func (e JobJobLevelEnum) ToPointer() *JobJobLevelEnum {
+	return &e
+}
+
 func (e *JobJobLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "ENTRY_LEVEL":
@@ -183,10 +199,10 @@ func (e *JobJobLevelEnum) UnmarshalJSON(data []byte) error {
 	case "DIRECTOR":
 		fallthrough
 	case "EXECUTIVE":
-		*e = JobJobLevelEnum(s)
+		*e = JobJobLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobJobLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for JobJobLevelEnum: %v", v)
 	}
 }
 
@@ -200,12 +216,16 @@ const (
 	JobPostingRegionEnumTelecommute              JobPostingRegionEnum = "TELECOMMUTE"
 )
 
+func (e JobPostingRegionEnum) ToPointer() *JobPostingRegionEnum {
+	return &e
+}
+
 func (e *JobPostingRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POSTING_REGION_UNSPECIFIED":
 		fallthrough
 	case "ADMINISTRATIVE_AREA":
@@ -213,10 +233,10 @@ func (e *JobPostingRegionEnum) UnmarshalJSON(data []byte) error {
 	case "NATION":
 		fallthrough
 	case "TELECOMMUTE":
-		*e = JobPostingRegionEnum(s)
+		*e = JobPostingRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobPostingRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for JobPostingRegionEnum: %v", v)
 	}
 }
 
@@ -230,12 +250,16 @@ const (
 	JobVisibilityEnumSharedWithPublic      JobVisibilityEnum = "SHARED_WITH_PUBLIC"
 )
 
+func (e JobVisibilityEnum) ToPointer() *JobVisibilityEnum {
+	return &e
+}
+
 func (e *JobVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VISIBILITY_UNSPECIFIED":
 		fallthrough
 	case "ACCOUNT_ONLY":
@@ -243,10 +267,10 @@ func (e *JobVisibilityEnum) UnmarshalJSON(data []byte) error {
 	case "SHARED_WITH_GOOGLE":
 		fallthrough
 	case "SHARED_WITH_PUBLIC":
-		*e = JobVisibilityEnum(s)
+		*e = JobVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for JobVisibilityEnum: %v", v)
 	}
 }
 

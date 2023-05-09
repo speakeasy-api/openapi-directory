@@ -14,18 +14,22 @@ const (
 	StageTransitionTypeEnumOutbound StageTransitionTypeEnum = "Outbound"
 )
 
+func (e StageTransitionTypeEnum) ToPointer() *StageTransitionTypeEnum {
+	return &e
+}
+
 func (e *StageTransitionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Inbound":
 		fallthrough
 	case "Outbound":
-		*e = StageTransitionTypeEnum(s)
+		*e = StageTransitionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StageTransitionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StageTransitionTypeEnum: %v", v)
 	}
 }

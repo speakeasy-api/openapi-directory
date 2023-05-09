@@ -58,12 +58,16 @@ const (
 	FieldDataTypeEnumDataTypeTimestampWithTimezone FieldDataTypeEnum = "DATA_TYPE_TIMESTAMP_WITH_TIMEZONE"
 )
 
+func (e FieldDataTypeEnum) ToPointer() *FieldDataTypeEnum {
+	return &e
+}
+
 func (e *FieldDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DATA_TYPE_INT":
@@ -153,10 +157,10 @@ func (e *FieldDataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DATA_TYPE_TIME_WITH_TIMEZONE":
 		fallthrough
 	case "DATA_TYPE_TIMESTAMP_WITH_TIMEZONE":
-		*e = FieldDataTypeEnum(s)
+		*e = FieldDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldDataTypeEnum: %v", v)
 	}
 }
 

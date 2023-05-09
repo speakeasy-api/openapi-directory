@@ -51,12 +51,16 @@ const (
 	DropInfoCauseEnumDroppedInsidePscServiceProducer                 DropInfoCauseEnum = "DROPPED_INSIDE_PSC_SERVICE_PRODUCER"
 )
 
+func (e DropInfoCauseEnum) ToPointer() *DropInfoCauseEnum {
+	return &e
+}
+
 func (e *DropInfoCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAUSE_UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN_EXTERNAL_ADDRESS":
@@ -132,10 +136,10 @@ func (e *DropInfoCauseEnum) UnmarshalJSON(data []byte) error {
 	case "CLOUD_RUN_REVISION_NOT_READY":
 		fallthrough
 	case "DROPPED_INSIDE_PSC_SERVICE_PRODUCER":
-		*e = DropInfoCauseEnum(s)
+		*e = DropInfoCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DropInfoCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for DropInfoCauseEnum: %v", v)
 	}
 }
 

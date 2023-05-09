@@ -18,12 +18,16 @@ const (
 	GoalMetricRequestProgressSourceEnumExternal                   GoalMetricRequestProgressSourceEnum = "external"
 )
 
+func (e GoalMetricRequestProgressSourceEnum) ToPointer() *GoalMetricRequestProgressSourceEnum {
+	return &e
+}
+
 func (e *GoalMetricRequestProgressSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manual":
 		fallthrough
 	case "subgoal_progress":
@@ -33,10 +37,10 @@ func (e *GoalMetricRequestProgressSourceEnum) UnmarshalJSON(data []byte) error {
 	case "project_milestone_completion":
 		fallthrough
 	case "external":
-		*e = GoalMetricRequestProgressSourceEnum(s)
+		*e = GoalMetricRequestProgressSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoalMetricRequestProgressSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoalMetricRequestProgressSourceEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	GoalMetricRequestUnitEnumPercentage GoalMetricRequestUnitEnum = "percentage"
 )
 
+func (e GoalMetricRequestUnitEnum) ToPointer() *GoalMetricRequestUnitEnum {
+	return &e
+}
+
 func (e *GoalMetricRequestUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "currency":
 		fallthrough
 	case "percentage":
-		*e = GoalMetricRequestUnitEnum(s)
+		*e = GoalMetricRequestUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoalMetricRequestUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GoalMetricRequestUnitEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	CreateSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnumFailed         CreateSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum = "failed"
 )
 
+func (e CreateSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum) ToPointer() *CreateSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum {
+	return &e
+}
+
 func (e *CreateSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -36,10 +40,10 @@ func (e *CreateSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockStateSt
 	case "failing":
 		fallthrough
 	case "failed":
-		*e = CreateSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum(s)
+		*e = CreateSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSubnetResultSubnetIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum: %v", v)
 	}
 }
 
@@ -64,19 +68,23 @@ const (
 	CreateSubnetResultSubnetPrivateDNSNameOptionsOnLaunchHostnameTypeEnumResourceName CreateSubnetResultSubnetPrivateDNSNameOptionsOnLaunchHostnameTypeEnum = "resource-name"
 )
 
+func (e CreateSubnetResultSubnetPrivateDNSNameOptionsOnLaunchHostnameTypeEnum) ToPointer() *CreateSubnetResultSubnetPrivateDNSNameOptionsOnLaunchHostnameTypeEnum {
+	return &e
+}
+
 func (e *CreateSubnetResultSubnetPrivateDNSNameOptionsOnLaunchHostnameTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ip-name":
 		fallthrough
 	case "resource-name":
-		*e = CreateSubnetResultSubnetPrivateDNSNameOptionsOnLaunchHostnameTypeEnum(s)
+		*e = CreateSubnetResultSubnetPrivateDNSNameOptionsOnLaunchHostnameTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSubnetResultSubnetPrivateDNSNameOptionsOnLaunchHostnameTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSubnetResultSubnetPrivateDNSNameOptionsOnLaunchHostnameTypeEnum: %v", v)
 	}
 }
 
@@ -95,19 +103,23 @@ const (
 	CreateSubnetResultSubnetStateEnumAvailable CreateSubnetResultSubnetStateEnum = "available"
 )
 
+func (e CreateSubnetResultSubnetStateEnum) ToPointer() *CreateSubnetResultSubnetStateEnum {
+	return &e
+}
+
 func (e *CreateSubnetResultSubnetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
-		*e = CreateSubnetResultSubnetStateEnum(s)
+		*e = CreateSubnetResultSubnetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSubnetResultSubnetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSubnetResultSubnetStateEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTCreateFpgaImageActionEnumCreateFpgaImage POSTCreateFpgaImageActionEnum = "CreateFpgaImage"
 )
 
+func (e POSTCreateFpgaImageActionEnum) ToPointer() *POSTCreateFpgaImageActionEnum {
+	return &e
+}
+
 func (e *POSTCreateFpgaImageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateFpgaImage":
-		*e = POSTCreateFpgaImageActionEnum(s)
+		*e = POSTCreateFpgaImageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateFpgaImageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateFpgaImageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateFpgaImageVersionEnumTwoThousandAndSixteen1115 POSTCreateFpgaImageVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateFpgaImageVersionEnum) ToPointer() *POSTCreateFpgaImageVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateFpgaImageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateFpgaImageVersionEnum(s)
+		*e = POSTCreateFpgaImageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateFpgaImageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateFpgaImageVersionEnum: %v", v)
 	}
 }
 

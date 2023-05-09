@@ -35,19 +35,23 @@ const (
 	BranchConfigurationsGet200ApplicationJSONArtifactVersioningBuildNumberFormatEnumTimestamp BranchConfigurationsGet200ApplicationJSONArtifactVersioningBuildNumberFormatEnum = "timestamp"
 )
 
+func (e BranchConfigurationsGet200ApplicationJSONArtifactVersioningBuildNumberFormatEnum) ToPointer() *BranchConfigurationsGet200ApplicationJSONArtifactVersioningBuildNumberFormatEnum {
+	return &e
+}
+
 func (e *BranchConfigurationsGet200ApplicationJSONArtifactVersioningBuildNumberFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "buildId":
 		fallthrough
 	case "timestamp":
-		*e = BranchConfigurationsGet200ApplicationJSONArtifactVersioningBuildNumberFormatEnum(s)
+		*e = BranchConfigurationsGet200ApplicationJSONArtifactVersioningBuildNumberFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BranchConfigurationsGet200ApplicationJSONArtifactVersioningBuildNumberFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for BranchConfigurationsGet200ApplicationJSONArtifactVersioningBuildNumberFormatEnum: %v", v)
 	}
 }
 
@@ -178,21 +182,25 @@ const (
 	BranchConfigurationsGet200ApplicationJSONTriggerEnumManual     BranchConfigurationsGet200ApplicationJSONTriggerEnum = "manual"
 )
 
+func (e BranchConfigurationsGet200ApplicationJSONTriggerEnum) ToPointer() *BranchConfigurationsGet200ApplicationJSONTriggerEnum {
+	return &e
+}
+
 func (e *BranchConfigurationsGet200ApplicationJSONTriggerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "continous":
 		fallthrough
 	case "continuous":
 		fallthrough
 	case "manual":
-		*e = BranchConfigurationsGet200ApplicationJSONTriggerEnum(s)
+		*e = BranchConfigurationsGet200ApplicationJSONTriggerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BranchConfigurationsGet200ApplicationJSONTriggerEnum: %s", s)
+		return fmt.Errorf("invalid value for BranchConfigurationsGet200ApplicationJSONTriggerEnum: %v", v)
 	}
 }
 

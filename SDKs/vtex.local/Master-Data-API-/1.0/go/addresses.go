@@ -99,7 +99,10 @@ func (s *addresses) CreateNewCustomerAddress(ctx context.Context, request operat
 // Deletes a customer address.
 func (s *addresses) DeleteCustomerAddress(ctx context.Context, request operations.DeleteCustomerAddressRequest) (*operations.DeleteCustomerAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/Address/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/Address/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -148,7 +151,10 @@ func (s *addresses) DeleteCustomerAddress(ctx context.Context, request operation
 // > You can use this request to update customer addresses according to any `AD` schema. Because of this, you are not restricted to using the fields exemplified below in your requests. But you should be aware of the fields allowed or required for the schemas you are using. Learn more about how to use [Master Data v2 schemas](https://developers.vtex.com/vtex-rest-api/docs/master-data-schema-lifecycle).
 func (s *addresses) UpdateCustomerAddress(ctx context.Context, request operations.UpdateCustomerAddressRequest) (*operations.UpdateCustomerAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/Address/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/Address/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateUpdateAddressRequests", "json")
 	if err != nil {

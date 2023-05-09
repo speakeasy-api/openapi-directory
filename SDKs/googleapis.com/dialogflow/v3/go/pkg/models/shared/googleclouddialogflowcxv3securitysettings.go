@@ -14,19 +14,23 @@ const (
 	GoogleCloudDialogflowCxV3SecuritySettingsPurgeDataTypesEnumDialogflowHistory        GoogleCloudDialogflowCxV3SecuritySettingsPurgeDataTypesEnum = "DIALOGFLOW_HISTORY"
 )
 
+func (e GoogleCloudDialogflowCxV3SecuritySettingsPurgeDataTypesEnum) ToPointer() *GoogleCloudDialogflowCxV3SecuritySettingsPurgeDataTypesEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3SecuritySettingsPurgeDataTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PURGE_DATA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DIALOGFLOW_HISTORY":
-		*e = GoogleCloudDialogflowCxV3SecuritySettingsPurgeDataTypesEnum(s)
+		*e = GoogleCloudDialogflowCxV3SecuritySettingsPurgeDataTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3SecuritySettingsPurgeDataTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3SecuritySettingsPurgeDataTypesEnum: %v", v)
 	}
 }
 
@@ -38,19 +42,23 @@ const (
 	GoogleCloudDialogflowCxV3SecuritySettingsRedactionScopeEnumRedactDiskStorage         GoogleCloudDialogflowCxV3SecuritySettingsRedactionScopeEnum = "REDACT_DISK_STORAGE"
 )
 
+func (e GoogleCloudDialogflowCxV3SecuritySettingsRedactionScopeEnum) ToPointer() *GoogleCloudDialogflowCxV3SecuritySettingsRedactionScopeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3SecuritySettingsRedactionScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REDACTION_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "REDACT_DISK_STORAGE":
-		*e = GoogleCloudDialogflowCxV3SecuritySettingsRedactionScopeEnum(s)
+		*e = GoogleCloudDialogflowCxV3SecuritySettingsRedactionScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3SecuritySettingsRedactionScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3SecuritySettingsRedactionScopeEnum: %v", v)
 	}
 }
 
@@ -62,19 +70,23 @@ const (
 	GoogleCloudDialogflowCxV3SecuritySettingsRedactionStrategyEnumRedactWithService            GoogleCloudDialogflowCxV3SecuritySettingsRedactionStrategyEnum = "REDACT_WITH_SERVICE"
 )
 
+func (e GoogleCloudDialogflowCxV3SecuritySettingsRedactionStrategyEnum) ToPointer() *GoogleCloudDialogflowCxV3SecuritySettingsRedactionStrategyEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3SecuritySettingsRedactionStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REDACTION_STRATEGY_UNSPECIFIED":
 		fallthrough
 	case "REDACT_WITH_SERVICE":
-		*e = GoogleCloudDialogflowCxV3SecuritySettingsRedactionStrategyEnum(s)
+		*e = GoogleCloudDialogflowCxV3SecuritySettingsRedactionStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3SecuritySettingsRedactionStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3SecuritySettingsRedactionStrategyEnum: %v", v)
 	}
 }
 

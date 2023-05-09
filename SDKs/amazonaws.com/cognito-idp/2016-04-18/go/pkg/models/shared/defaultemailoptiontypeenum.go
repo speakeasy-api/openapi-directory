@@ -14,18 +14,22 @@ const (
 	DefaultEmailOptionTypeEnumConfirmWithCode DefaultEmailOptionTypeEnum = "CONFIRM_WITH_CODE"
 )
 
+func (e DefaultEmailOptionTypeEnum) ToPointer() *DefaultEmailOptionTypeEnum {
+	return &e
+}
+
 func (e *DefaultEmailOptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONFIRM_WITH_LINK":
 		fallthrough
 	case "CONFIRM_WITH_CODE":
-		*e = DefaultEmailOptionTypeEnum(s)
+		*e = DefaultEmailOptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DefaultEmailOptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DefaultEmailOptionTypeEnum: %v", v)
 	}
 }

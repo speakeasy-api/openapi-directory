@@ -15,20 +15,24 @@ const (
 	NodeTypeEnumTrigger NodeTypeEnum = "TRIGGER"
 )
 
+func (e NodeTypeEnum) ToPointer() *NodeTypeEnum {
+	return &e
+}
+
 func (e *NodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRAWLER":
 		fallthrough
 	case "JOB":
 		fallthrough
 	case "TRIGGER":
-		*e = NodeTypeEnum(s)
+		*e = NodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NodeTypeEnum: %v", v)
 	}
 }

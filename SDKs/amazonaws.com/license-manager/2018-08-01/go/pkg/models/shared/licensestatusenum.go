@@ -19,12 +19,16 @@ const (
 	LicenseStatusEnumDeleted          LicenseStatusEnum = "DELETED"
 )
 
+func (e LicenseStatusEnum) ToPointer() *LicenseStatusEnum {
+	return &e
+}
+
 func (e *LicenseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "PENDING_AVAILABLE":
@@ -38,9 +42,9 @@ func (e *LicenseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING_DELETE":
 		fallthrough
 	case "DELETED":
-		*e = LicenseStatusEnum(s)
+		*e = LicenseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseStatusEnum: %v", v)
 	}
 }

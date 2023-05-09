@@ -90,7 +90,10 @@ func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesCreate(ctx c
 // CloudidentityInboundSamlSsoProfilesIdpCredentialsAdd - Adds an IdpCredential. Up to 2 credentials are allowed.
 func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesIdpCredentialsAdd(ctx context.Context, request operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddRequest, security operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddSecurity) (*operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/idpCredentials:add", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/idpCredentials:add", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddIdpCredentialRequest", "json")
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesIdpCredentia
 // CloudidentityInboundSamlSsoProfilesIdpCredentialsList - Returns a list of IdpCredentials in an InboundSamlSsoProfile.
 func (s *inboundSamlSsoProfiles) CloudidentityInboundSamlSsoProfilesIdpCredentialsList(ctx context.Context, request operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListRequest, security operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListSecurity) (*operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/idpCredentials", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/idpCredentials", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

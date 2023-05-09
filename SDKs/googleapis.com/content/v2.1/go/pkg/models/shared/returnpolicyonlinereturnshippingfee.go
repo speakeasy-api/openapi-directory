@@ -16,21 +16,25 @@ const (
 	ReturnPolicyOnlineReturnShippingFeeTypeEnumCustomerPayingActualFee ReturnPolicyOnlineReturnShippingFeeTypeEnum = "CUSTOMER_PAYING_ACTUAL_FEE"
 )
 
+func (e ReturnPolicyOnlineReturnShippingFeeTypeEnum) ToPointer() *ReturnPolicyOnlineReturnShippingFeeTypeEnum {
+	return &e
+}
+
 func (e *ReturnPolicyOnlineReturnShippingFeeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "FIXED":
 		fallthrough
 	case "CUSTOMER_PAYING_ACTUAL_FEE":
-		*e = ReturnPolicyOnlineReturnShippingFeeTypeEnum(s)
+		*e = ReturnPolicyOnlineReturnShippingFeeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReturnPolicyOnlineReturnShippingFeeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReturnPolicyOnlineReturnShippingFeeTypeEnum: %v", v)
 	}
 }
 

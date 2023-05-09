@@ -198,7 +198,10 @@ func (s *account) AuthorizeDevice(ctx context.Context, request operations.Author
 // expiry date or next renewal date.
 func (s *account) CancelSubscription(ctx context.Context, request operations.CancelSubscriptionRequest, security operations.CancelSubscriptionSecurity) (*operations.CancelSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/billing/subscriptions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/billing/subscriptions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -485,7 +488,10 @@ func (s *account) CreateProfile(ctx context.Context, request operations.CreatePr
 // Note that you cannot delete the primary profile.
 func (s *account) DeleteProfileWithID(ctx context.Context, request operations.DeleteProfileWithIDRequest, security operations.DeleteProfileWithIDSecurity) (*operations.DeleteProfileWithIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/profiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -546,7 +552,10 @@ func (s *account) DeleteProfileWithID(ctx context.Context, request operations.De
 // DeregisterDevice - Deregister a playback device from an account.
 func (s *account) DeregisterDevice(ctx context.Context, request operations.DeregisterDeviceRequest, security operations.DeregisterDeviceSecurity) (*operations.DeregisterDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/devices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/devices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -755,7 +764,10 @@ func (s *account) GetAccount(ctx context.Context, request operations.GetAccountR
 // GetDevice - Get a registered device.
 func (s *account) GetDevice(ctx context.Context, request operations.GetDeviceRequest, security operations.GetDeviceSecurity) (*operations.GetDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/devices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/devices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -994,7 +1006,10 @@ func (s *account) GetEntitlements(ctx context.Context, request operations.GetEnt
 // If no files are found a 404 is returned.
 func (s *account) GetItemMediaFiles(ctx context.Context, request operations.GetItemMediaFilesRequest, security operations.GetItemMediaFilesSecurity) (*operations.GetItemMediaFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/items/{id}/videos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/items/{id}/videos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1083,7 +1098,10 @@ func (s *account) GetItemMediaFiles(ctx context.Context, request operations.GetI
 // If no files are found a 404 is returned.
 func (s *account) GetItemMediaFilesGuarded(ctx context.Context, request operations.GetItemMediaFilesGuardedRequest, security operations.GetItemMediaFilesGuardedSecurity) (*operations.GetItemMediaFilesGuardedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/items/{id}/videos-guarded", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/items/{id}/videos-guarded", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1153,7 +1171,10 @@ func (s *account) GetItemMediaFilesGuarded(ctx context.Context, request operatio
 // GetPaymentMethod - Get a payment method under an account.
 func (s *account) GetPaymentMethod(ctx context.Context, request operations.GetPaymentMethodRequest, security operations.GetPaymentMethodSecurity) (*operations.GetPaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/billing/methods/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/billing/methods/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1293,7 +1314,10 @@ func (s *account) GetPaymentMethods(ctx context.Context, request operations.GetP
 // GetProfileWithID - Get the summary of a profile with a specific id under the active account.
 func (s *account) GetProfileWithID(ctx context.Context, request operations.GetProfileWithIDRequest, security operations.GetProfileWithIDSecurity) (*operations.GetProfileWithIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/profiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1598,7 +1622,10 @@ func (s *account) RegisterDevice(ctx context.Context, request operations.Registe
 // RemovePaymentMethod - Remove a payment method from an account.
 func (s *account) RemovePaymentMethod(ctx context.Context, request operations.RemovePaymentMethodRequest, security operations.RemovePaymentMethodSecurity) (*operations.RemovePaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/billing/methods/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/billing/methods/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1659,7 +1686,10 @@ func (s *account) RemovePaymentMethod(ctx context.Context, request operations.Re
 // RenameDevice - Rename a device
 func (s *account) RenameDevice(ctx context.Context, request operations.RenameDeviceRequest, security operations.RenameDeviceSecurity) (*operations.RenameDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/devices/{id}/name", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/devices/{id}/name", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1869,7 +1899,10 @@ func (s *account) UpdateAccount(ctx context.Context, request operations.UpdateAc
 // This supports partial updates so you can send just the properties you wish to update.
 func (s *account) UpdateProfileWithID(ctx context.Context, request operations.UpdateProfileWithIDRequest, security operations.UpdateProfileWithIDSecurity) (*operations.UpdateProfileWithIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/profiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfileUpdateRequest", "json")
 	if err != nil {
@@ -1946,7 +1979,10 @@ func (s *account) UpdateProfileWithID(ctx context.Context, request operations.Up
 // of the account, and in the query specify the id of the plan to switch to.
 func (s *account) UpdateSubscription(ctx context.Context, request operations.UpdateSubscriptionRequest, security operations.UpdateSubscriptionSecurity) (*operations.UpdateSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/billing/subscriptions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/billing/subscriptions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

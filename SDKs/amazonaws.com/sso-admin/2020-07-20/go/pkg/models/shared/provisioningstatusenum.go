@@ -14,18 +14,22 @@ const (
 	ProvisioningStatusEnumLatestPermissionSetNotProvisioned ProvisioningStatusEnum = "LATEST_PERMISSION_SET_NOT_PROVISIONED"
 )
 
+func (e ProvisioningStatusEnum) ToPointer() *ProvisioningStatusEnum {
+	return &e
+}
+
 func (e *ProvisioningStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LATEST_PERMISSION_SET_PROVISIONED":
 		fallthrough
 	case "LATEST_PERMISSION_SET_NOT_PROVISIONED":
-		*e = ProvisioningStatusEnum(s)
+		*e = ProvisioningStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisioningStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisioningStatusEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	BuildStatusEnumFailed      BuildStatusEnum = "FAILED"
 )
 
+func (e BuildStatusEnum) ToPointer() *BuildStatusEnum {
+	return &e
+}
+
 func (e *BuildStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIALIZED":
 		fallthrough
 	case "READY":
 		fallthrough
 	case "FAILED":
-		*e = BuildStatusEnum(s)
+		*e = BuildStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuildStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BuildStatusEnum: %v", v)
 	}
 }

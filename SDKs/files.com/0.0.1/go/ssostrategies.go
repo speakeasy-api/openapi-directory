@@ -105,7 +105,10 @@ func (s *ssoStrategies) GetSsoStrategies(ctx context.Context, request operations
 // Show Sso Strategy
 func (s *ssoStrategies) GetSsoStrategiesID(ctx context.Context, request operations.GetSsoStrategiesIDRequest) (*operations.GetSsoStrategiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sso_strategies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sso_strategies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +172,10 @@ func (s *ssoStrategies) GetSsoStrategiesID(ctx context.Context, request operatio
 // Synchronize provisioning data with the SSO remote server.
 func (s *ssoStrategies) PostSsoStrategiesIDSync(ctx context.Context, request operations.PostSsoStrategiesIDSyncRequest) (*operations.PostSsoStrategiesIDSyncResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sso_strategies/{id}/sync", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sso_strategies/{id}/sync", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

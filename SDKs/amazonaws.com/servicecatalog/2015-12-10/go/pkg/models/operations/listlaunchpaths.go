@@ -16,17 +16,21 @@ const (
 	ListLaunchPathsXAmzTargetEnumAws242ServiceCatalogServiceListLaunchPaths ListLaunchPathsXAmzTargetEnum = "AWS242ServiceCatalogService.ListLaunchPaths"
 )
 
+func (e ListLaunchPathsXAmzTargetEnum) ToPointer() *ListLaunchPathsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListLaunchPathsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.ListLaunchPaths":
-		*e = ListLaunchPathsXAmzTargetEnum(s)
+		*e = ListLaunchPathsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLaunchPathsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLaunchPathsXAmzTargetEnum: %v", v)
 	}
 }
 

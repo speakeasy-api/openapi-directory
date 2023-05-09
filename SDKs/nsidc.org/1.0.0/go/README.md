@@ -13,31 +13,29 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nsidc.org/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FacetsRequest{
-        Count: 548814,
-        EndDate: "2021-07-27",
-        FacetFilters: "quibusdam",
-        SearchTerms: "unde",
-        SortKeys: "updated,,desc",
-        Source: "ADE",
-        Spatial: "illum",
-        StartDate: "2022-05-18",
-        StartIndex: 645894,
-    }
-
     ctx := context.Background()
-    res, err := s.SwaggerDocs.Facets(ctx, req)
+    res, err := s.SwaggerDocs.Facets(ctx, operations.FacetsRequest{
+        Count: sdk.Int64(548814),
+        EndDate: types.MustDateFromString("2021-07-27"),
+        FacetFilters: sdk.String("quibusdam"),
+        SearchTerms: sdk.String("unde"),
+        SortKeys: operations.FacetsSortKeysEnumUpdatedDesc.ToPointer(),
+        Source: operations.FacetsSourceEnumAde.ToPointer(),
+        Spatial: sdk.String("illum"),
+        StartDate: types.MustDateFromString("2022-05-18"),
+        StartIndex: sdk.Int64(645894),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -53,12 +51,12 @@ func main() {
 ## Available Resources and Operations
 
 
-### SwaggerDocs
+### [SwaggerDocs](docs/swaggerdocs/README.md)
 
-* `Facets` - View the facet information corresponding to a search
-* `ID` - Suggest search terms based on a partial query
-* `OpenSearch` - Search documents using the OpenSearch 1.1 Specification
-* `OpensearchDescription` - Describes the web interface of NSIDC's data search engine
+* [Facets](docs/swaggerdocs/README.md#facets) - View the facet information corresponding to a search
+* [ID](docs/swaggerdocs/README.md#id) - Suggest search terms based on a partial query
+* [OpenSearch](docs/swaggerdocs/README.md#opensearch) - Search documents using the OpenSearch 1.1 Specification
+* [OpensearchDescription](docs/swaggerdocs/README.md#opensearchdescription) - Describes the web interface of NSIDC's data search engine
 <!-- End SDK Available Operations -->
 
 ### Maturity

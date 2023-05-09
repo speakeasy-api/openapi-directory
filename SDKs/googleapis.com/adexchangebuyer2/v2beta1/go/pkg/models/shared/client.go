@@ -18,12 +18,16 @@ const (
 	ClientEntityTypeEnumEntityTypeUnclassified ClientEntityTypeEnum = "ENTITY_TYPE_UNCLASSIFIED"
 )
 
+func (e ClientEntityTypeEnum) ToPointer() *ClientEntityTypeEnum {
+	return &e
+}
+
 func (e *ClientEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ADVERTISER":
@@ -33,10 +37,10 @@ func (e *ClientEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AGENCY":
 		fallthrough
 	case "ENTITY_TYPE_UNCLASSIFIED":
-		*e = ClientEntityTypeEnum(s)
+		*e = ClientEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClientEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClientEntityTypeEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	ClientRoleEnumClientDealApprover    ClientRoleEnum = "CLIENT_DEAL_APPROVER"
 )
 
+func (e ClientRoleEnum) ToPointer() *ClientRoleEnum {
+	return &e
+}
+
 func (e *ClientRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLIENT_ROLE_UNSPECIFIED":
 		fallthrough
 	case "CLIENT_DEAL_VIEWER":
@@ -63,10 +71,10 @@ func (e *ClientRoleEnum) UnmarshalJSON(data []byte) error {
 	case "CLIENT_DEAL_NEGOTIATOR":
 		fallthrough
 	case "CLIENT_DEAL_APPROVER":
-		*e = ClientRoleEnum(s)
+		*e = ClientRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClientRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for ClientRoleEnum: %v", v)
 	}
 }
 
@@ -79,21 +87,25 @@ const (
 	ClientStatusEnumActive                  ClientStatusEnum = "ACTIVE"
 )
 
+func (e ClientStatusEnum) ToPointer() *ClientStatusEnum {
+	return &e
+}
+
 func (e *ClientStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLIENT_STATUS_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "ACTIVE":
-		*e = ClientStatusEnum(s)
+		*e = ClientStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClientStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ClientStatusEnum: %v", v)
 	}
 }
 

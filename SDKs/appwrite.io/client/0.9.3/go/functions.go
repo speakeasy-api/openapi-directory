@@ -36,7 +36,10 @@ func newFunctions(defaultClient, securityClient HTTPClient, serverURL, language,
 // Trigger a function execution. The returned object will return you the current execution status. You can ping the `Get Execution` endpoint to get updates on the current execution status. Once this endpoint is called, your function execution process will start asynchronously.
 func (s *functions) FunctionsCreateExecution(ctx context.Context, request operations.FunctionsCreateExecutionRequest, security operations.FunctionsCreateExecutionSecurity) (*operations.FunctionsCreateExecutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -88,7 +91,10 @@ func (s *functions) FunctionsCreateExecution(ctx context.Context, request operat
 // Get a function execution log by its unique ID.
 func (s *functions) FunctionsGetExecution(ctx context.Context, request operations.FunctionsGetExecutionRequest, security operations.FunctionsGetExecutionSecurity) (*operations.FunctionsGetExecutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions/{executionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions/{executionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -133,7 +139,10 @@ func (s *functions) FunctionsGetExecution(ctx context.Context, request operation
 // Get a list of all the current user function execution logs. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's executions. [Learn more about different API modes](/docs/admin).
 func (s *functions) FunctionsListExecutions(ctx context.Context, request operations.FunctionsListExecutionsRequest, security operations.FunctionsListExecutionsSecurity) (*operations.FunctionsListExecutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

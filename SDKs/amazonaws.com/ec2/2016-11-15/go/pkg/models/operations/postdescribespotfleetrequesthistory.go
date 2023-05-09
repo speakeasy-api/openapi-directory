@@ -15,17 +15,21 @@ const (
 	POSTDescribeSpotFleetRequestHistoryActionEnumDescribeSpotFleetRequestHistory POSTDescribeSpotFleetRequestHistoryActionEnum = "DescribeSpotFleetRequestHistory"
 )
 
+func (e POSTDescribeSpotFleetRequestHistoryActionEnum) ToPointer() *POSTDescribeSpotFleetRequestHistoryActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeSpotFleetRequestHistoryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeSpotFleetRequestHistory":
-		*e = POSTDescribeSpotFleetRequestHistoryActionEnum(s)
+		*e = POSTDescribeSpotFleetRequestHistoryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeSpotFleetRequestHistoryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeSpotFleetRequestHistoryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeSpotFleetRequestHistoryVersionEnumTwoThousandAndSixteen1115 POSTDescribeSpotFleetRequestHistoryVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeSpotFleetRequestHistoryVersionEnum) ToPointer() *POSTDescribeSpotFleetRequestHistoryVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeSpotFleetRequestHistoryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeSpotFleetRequestHistoryVersionEnum(s)
+		*e = POSTDescribeSpotFleetRequestHistoryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeSpotFleetRequestHistoryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeSpotFleetRequestHistoryVersionEnum: %v", v)
 	}
 }
 

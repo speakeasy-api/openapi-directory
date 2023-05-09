@@ -13,18 +13,19 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/StoredValueServ
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.StoredValueStatusChangeRequest{
+    ctx := context.Background()
+    res, err := s.General.PostChangeStatus(ctx, shared.StoredValueStatusChangeRequest{
         Amount: &shared.Amount{
             Currency: "corrupti",
             Value: 592845,
@@ -36,16 +37,13 @@ func main() {
             "vel": "error",
             "deserunt": "suscipit",
         },
-        RecurringDetailReference: "iure",
+        RecurringDetailReference: sdk.String("iure"),
         Reference: "magnam",
-        ShopperInteraction: "POS",
-        ShopperReference: "ipsa",
-        Status: "inactive",
-        Store: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.General.PostChangeStatus(ctx, req, operations.PostChangeStatusSecurity{
+        ShopperInteraction: shared.StoredValueStatusChangeRequestShopperInteractionEnumPos.ToPointer(),
+        ShopperReference: sdk.String("ipsa"),
+        Status: shared.StoredValueStatusChangeRequestStatusEnumInactive,
+        Store: sdk.String("tempora"),
+    }, operations.PostChangeStatusSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {
@@ -63,14 +61,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### General
+### [General](docs/general/README.md)
 
-* `PostChangeStatus` - Changes the status of the payment method.
-* `PostCheckBalance` - Checks the balance.
-* `PostIssue` - Issues a new card.
-* `PostLoad` - Loads the payment method.
-* `PostMergeBalance` - Merge the balance of two cards.
-* `PostVoidTransaction` - Voids a transaction.
+* [PostChangeStatus](docs/general/README.md#postchangestatus) - Changes the status of the payment method.
+* [PostCheckBalance](docs/general/README.md#postcheckbalance) - Checks the balance.
+* [PostIssue](docs/general/README.md#postissue) - Issues a new card.
+* [PostLoad](docs/general/README.md#postload) - Loads the payment method.
+* [PostMergeBalance](docs/general/README.md#postmergebalance) - Merge the balance of two cards.
+* [PostVoidTransaction](docs/general/README.md#postvoidtransaction) - Voids a transaction.
 <!-- End SDK Available Operations -->
 
 ### Maturity

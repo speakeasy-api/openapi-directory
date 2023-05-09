@@ -16,21 +16,25 @@ const (
 	ShopperStatusBillingStateEnumActive    ShopperStatusBillingStateEnum = "ACTIVE"
 )
 
+func (e ShopperStatusBillingStateEnum) ToPointer() *ShopperStatusBillingStateEnum {
+	return &e
+}
+
 func (e *ShopperStatusBillingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ABANDONED":
 		fallthrough
 	case "INACTIVE":
 		fallthrough
 	case "ACTIVE":
-		*e = ShopperStatusBillingStateEnum(s)
+		*e = ShopperStatusBillingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShopperStatusBillingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ShopperStatusBillingStateEnum: %v", v)
 	}
 }
 

@@ -2,35 +2,32 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest{
-        AggregateHours: "corrupti",
-        AllowAsynch: false,
-        CollectStationContributions: false,
-        ContentType: "provident",
-        EndDateTime: "distinctio",
-        IncludeNormals: false,
-        Key: "quibusdam",
-        Locations: "unde",
-        MaxDistance: "nulla",
-        MaxStations: "corrupti",
-        ShortColumnNames: false,
-        StartDateTime: "illum",
-        UnitGroup: "vel",
-    }
-
     ctx := context.Background()
-    res, err := s.HistoricalWeather.GetVisualCrossingWebServicesRestServicesWeatherdataHistory(ctx, req)
+    res, err := s.HistoricalWeather.GetVisualCrossingWebServicesRestServicesWeatherdataHistory(ctx, operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest{
+        AggregateHours: sdk.String("corrupti"),
+        AllowAsynch: sdk.Bool(false),
+        CollectStationContributions: sdk.Bool(false),
+        ContentType: sdk.String("provident"),
+        EndDateTime: sdk.String("distinctio"),
+        IncludeNormals: sdk.Bool(false),
+        Key: sdk.String("quibusdam"),
+        Locations: sdk.String("unde"),
+        MaxDistance: sdk.String("nulla"),
+        MaxStations: sdk.String("corrupti"),
+        ShortColumnNames: sdk.Bool(false),
+        StartDateTime: sdk.String("illum"),
+        UnitGroup: sdk.String("vel"),
+    })
     if err != nil {
         log.Fatal(err)
     }

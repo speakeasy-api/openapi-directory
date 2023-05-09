@@ -16,17 +16,21 @@ const (
 	DeleteEventDataStoreXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101DeleteEventDataStore DeleteEventDataStoreXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.DeleteEventDataStore"
 )
 
+func (e DeleteEventDataStoreXAmzTargetEnum) ToPointer() *DeleteEventDataStoreXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteEventDataStoreXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.DeleteEventDataStore":
-		*e = DeleteEventDataStoreXAmzTargetEnum(s)
+		*e = DeleteEventDataStoreXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteEventDataStoreXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteEventDataStoreXAmzTargetEnum: %v", v)
 	}
 }
 

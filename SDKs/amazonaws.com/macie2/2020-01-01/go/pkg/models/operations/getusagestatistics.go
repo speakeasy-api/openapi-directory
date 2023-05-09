@@ -23,19 +23,23 @@ const (
 	GetUsageStatisticsRequestBodyTimeRangeEnumPast30Days  GetUsageStatisticsRequestBodyTimeRangeEnum = "PAST_30_DAYS"
 )
 
+func (e GetUsageStatisticsRequestBodyTimeRangeEnum) ToPointer() *GetUsageStatisticsRequestBodyTimeRangeEnum {
+	return &e
+}
+
 func (e *GetUsageStatisticsRequestBodyTimeRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MONTH_TO_DATE":
 		fallthrough
 	case "PAST_30_DAYS":
-		*e = GetUsageStatisticsRequestBodyTimeRangeEnum(s)
+		*e = GetUsageStatisticsRequestBodyTimeRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUsageStatisticsRequestBodyTimeRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUsageStatisticsRequestBodyTimeRangeEnum: %v", v)
 	}
 }
 

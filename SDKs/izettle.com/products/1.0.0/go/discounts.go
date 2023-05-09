@@ -35,7 +35,10 @@ func newDiscounts(defaultClient, securityClient HTTPClient, serverURL, language,
 // Creates a single discount entity. The location of the newly created discount will be available in the successful response as a HttpHeaders.LOCATION header
 func (s *discounts) CreateDiscount(ctx context.Context, request operations.CreateDiscountRequest, security operations.CreateDiscountSecurity) (*operations.CreateDiscountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/discounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/discounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DiscountRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *discounts) CreateDiscount(ctx context.Context, request operations.Creat
 // DeleteDiscount - Delete a single discount
 func (s *discounts) DeleteDiscount(ctx context.Context, request operations.DeleteDiscountRequest, security operations.DeleteDiscountSecurity) (*operations.DeleteDiscountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/discounts/{discountUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/discounts/{discountUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -126,7 +132,10 @@ func (s *discounts) DeleteDiscount(ctx context.Context, request operations.Delet
 // GetAllDiscounts - Retrieve all discounts
 func (s *discounts) GetAllDiscounts(ctx context.Context, request operations.GetAllDiscountsRequest, security operations.GetAllDiscountsSecurity) (*operations.GetAllDiscountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/discounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/discounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +180,10 @@ func (s *discounts) GetAllDiscounts(ctx context.Context, request operations.GetA
 // Get the full discount with the provided UUID. The method supports conditional GET through providing a HttpHeaders.IF_NONE_MATCH header. If the conditional prerequisite is fullfilled, the full discount is returned: otherwise a 304 not modified will be returned with an empty body.
 func (s *discounts) GetDiscount(ctx context.Context, request operations.GetDiscountRequest, security operations.GetDiscountSecurity) (*operations.GetDiscountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/discounts/{discountUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/discounts/{discountUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -223,7 +235,10 @@ func (s *discounts) GetDiscount(ctx context.Context, request operations.GetDisco
 // Updates a discount entity using JSON merge patch (https://tools.ietf.org/html/rfc7386). This means that only included fields will be changed: null values removes the field on the target entity, and other values updates the field. Conditional updates are supported through the HttpHeaders.IF_MATCH header. If the conditional prerequisite is fullfilled, the discount is updated: otherwise a 412 precondition failed will be returned with an empty body.
 func (s *discounts) UpdateDiscount(ctx context.Context, request operations.UpdateDiscountRequest, security operations.UpdateDiscountSecurity) (*operations.UpdateDiscountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/discounts/{discountUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/discounts/{discountUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DiscountRequest", "json")
 	if err != nil {

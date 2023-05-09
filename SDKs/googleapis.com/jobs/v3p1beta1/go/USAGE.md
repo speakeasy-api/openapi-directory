@@ -2,23 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.JobsProjectsClientEventsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.JobsProjectsClientEventsCreate(ctx, operations.JobsProjectsClientEventsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         CreateClientEventRequest: &shared.CreateClientEventRequest{
             ClientEvent: &shared.ClientEvent{
-                CreateTime: "provident",
-                EventID: "distinctio",
+                CreateTime: sdk.String("provident"),
+                EventID: sdk.String("distinctio"),
                 ExtraInfo: map[string]string{
                     "unde": "nulla",
                     "corrupti": "illum",
@@ -30,27 +31,24 @@ func main() {
                         "magnam",
                         "debitis",
                     },
-                    Type: "JOB_EVENT_TYPE_UNSPECIFIED",
+                    Type: shared.JobEventTypeEnumJobEventTypeUnspecified.ToPointer(),
                 },
-                ParentEventID: "delectus",
-                RequestID: "tempora",
+                ParentEventID: sdk.String("delectus"),
+                RequestID: sdk.String("tempora"),
             },
         },
-        AccessToken: "suscipit",
-        Alt: "media",
-        Callback: "minus",
-        Fields: "placeat",
-        Key: "voluptatum",
-        OauthToken: "iusto",
+        AccessToken: sdk.String("suscipit"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("minus"),
+        Fields: sdk.String("placeat"),
+        Key: sdk.String("voluptatum"),
+        OauthToken: sdk.String("iusto"),
         Parent: "excepturi",
-        PrettyPrint: false,
-        QuotaUser: "nisi",
-        UploadType: "recusandae",
-        UploadProtocol: "temporibus",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.JobsProjectsClientEventsCreate(ctx, req, operations.JobsProjectsClientEventsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("nisi"),
+        UploadType: sdk.String("recusandae"),
+        UploadProtocol: sdk.String("temporibus"),
+    }, operations.JobsProjectsClientEventsCreateSecurity{
         Option1: &operations.JobsProjectsClientEventsCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

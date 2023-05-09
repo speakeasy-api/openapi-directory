@@ -15,20 +15,24 @@ const (
 	PerObjectSyncStatusEnumCapacityConstrained PerObjectSyncStatusEnum = "CAPACITY_CONSTRAINED"
 )
 
+func (e PerObjectSyncStatusEnum) ToPointer() *PerObjectSyncStatusEnum {
+	return &e
+}
+
 func (e *PerObjectSyncStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "IN_SYNC":
 		fallthrough
 	case "CAPACITY_CONSTRAINED":
-		*e = PerObjectSyncStatusEnum(s)
+		*e = PerObjectSyncStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PerObjectSyncStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PerObjectSyncStatusEnum: %v", v)
 	}
 }

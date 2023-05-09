@@ -14,18 +14,22 @@ const (
 	FrameworkTypeEnumCustom   FrameworkTypeEnum = "Custom"
 )
 
+func (e FrameworkTypeEnum) ToPointer() *FrameworkTypeEnum {
+	return &e
+}
+
 func (e *FrameworkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Standard":
 		fallthrough
 	case "Custom":
-		*e = FrameworkTypeEnum(s)
+		*e = FrameworkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FrameworkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FrameworkTypeEnum: %v", v)
 	}
 }

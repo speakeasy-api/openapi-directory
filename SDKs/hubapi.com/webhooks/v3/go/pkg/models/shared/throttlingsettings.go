@@ -15,19 +15,23 @@ const (
 	ThrottlingSettingsPeriodEnumRollingMinute ThrottlingSettingsPeriodEnum = "ROLLING_MINUTE"
 )
 
+func (e ThrottlingSettingsPeriodEnum) ToPointer() *ThrottlingSettingsPeriodEnum {
+	return &e
+}
+
 func (e *ThrottlingSettingsPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECONDLY":
 		fallthrough
 	case "ROLLING_MINUTE":
-		*e = ThrottlingSettingsPeriodEnum(s)
+		*e = ThrottlingSettingsPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThrottlingSettingsPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for ThrottlingSettingsPeriodEnum: %v", v)
 	}
 }
 

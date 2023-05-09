@@ -13,16 +13,20 @@ const (
 	KeywordInputTypeEnumSelectFromList KeywordInputTypeEnum = "SELECT_FROM_LIST"
 )
 
+func (e KeywordInputTypeEnum) ToPointer() *KeywordInputTypeEnum {
+	return &e
+}
+
 func (e *KeywordInputTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SELECT_FROM_LIST":
-		*e = KeywordInputTypeEnum(s)
+		*e = KeywordInputTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeywordInputTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for KeywordInputTypeEnum: %v", v)
 	}
 }

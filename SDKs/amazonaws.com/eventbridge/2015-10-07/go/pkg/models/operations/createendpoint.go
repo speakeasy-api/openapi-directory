@@ -16,17 +16,21 @@ const (
 	CreateEndpointXAmzTargetEnumAwsEventsCreateEndpoint CreateEndpointXAmzTargetEnum = "AWSEvents.CreateEndpoint"
 )
 
+func (e CreateEndpointXAmzTargetEnum) ToPointer() *CreateEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.CreateEndpoint":
-		*e = CreateEndpointXAmzTargetEnum(s)
+		*e = CreateEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

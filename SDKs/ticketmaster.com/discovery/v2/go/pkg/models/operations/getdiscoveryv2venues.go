@@ -16,19 +16,23 @@ const (
 	GetDiscoveryV2VenuesIncludeLicensedContentEnumNo  GetDiscoveryV2VenuesIncludeLicensedContentEnum = " no"
 )
 
+func (e GetDiscoveryV2VenuesIncludeLicensedContentEnum) ToPointer() *GetDiscoveryV2VenuesIncludeLicensedContentEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2VenuesIncludeLicensedContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = GetDiscoveryV2VenuesIncludeLicensedContentEnum(s)
+		*e = GetDiscoveryV2VenuesIncludeLicensedContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2VenuesIncludeLicensedContentEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2VenuesIncludeLicensedContentEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	GetDiscoveryV2VenuesIncludeSpellcheckEnumNo  GetDiscoveryV2VenuesIncludeSpellcheckEnum = " no"
 )
 
+func (e GetDiscoveryV2VenuesIncludeSpellcheckEnum) ToPointer() *GetDiscoveryV2VenuesIncludeSpellcheckEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2VenuesIncludeSpellcheckEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = GetDiscoveryV2VenuesIncludeSpellcheckEnum(s)
+		*e = GetDiscoveryV2VenuesIncludeSpellcheckEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2VenuesIncludeSpellcheckEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2VenuesIncludeSpellcheckEnum: %v", v)
 	}
 }
 
@@ -65,21 +73,25 @@ const (
 	GetDiscoveryV2VenuesIncludeTestEnumOnly GetDiscoveryV2VenuesIncludeTestEnum = " only"
 )
 
+func (e GetDiscoveryV2VenuesIncludeTestEnum) ToPointer() *GetDiscoveryV2VenuesIncludeTestEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2VenuesIncludeTestEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
 		fallthrough
 	case " only":
-		*e = GetDiscoveryV2VenuesIncludeTestEnum(s)
+		*e = GetDiscoveryV2VenuesIncludeTestEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2VenuesIncludeTestEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2VenuesIncludeTestEnum: %v", v)
 	}
 }
 
@@ -93,12 +105,16 @@ const (
 	GetDiscoveryV2VenuesSourceEnumTmr          GetDiscoveryV2VenuesSourceEnum = " tmr"
 )
 
+func (e GetDiscoveryV2VenuesSourceEnum) ToPointer() *GetDiscoveryV2VenuesSourceEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2VenuesSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ticketmaster":
 		fallthrough
 	case " universe":
@@ -106,10 +122,10 @@ func (e *GetDiscoveryV2VenuesSourceEnum) UnmarshalJSON(data []byte) error {
 	case " frontgate":
 		fallthrough
 	case " tmr":
-		*e = GetDiscoveryV2VenuesSourceEnum(s)
+		*e = GetDiscoveryV2VenuesSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2VenuesSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2VenuesSourceEnum: %v", v)
 	}
 }
 
@@ -121,19 +137,23 @@ const (
 	GetDiscoveryV2VenuesUnitEnumKm    GetDiscoveryV2VenuesUnitEnum = "km"
 )
 
+func (e GetDiscoveryV2VenuesUnitEnum) ToPointer() *GetDiscoveryV2VenuesUnitEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2VenuesUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "miles":
 		fallthrough
 	case "km":
-		*e = GetDiscoveryV2VenuesUnitEnum(s)
+		*e = GetDiscoveryV2VenuesUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2VenuesUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2VenuesUnitEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	SpeechMarkTypeEnumWord     SpeechMarkTypeEnum = "word"
 )
 
+func (e SpeechMarkTypeEnum) ToPointer() *SpeechMarkTypeEnum {
+	return &e
+}
+
 func (e *SpeechMarkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sentence":
 		fallthrough
 	case "ssml":
@@ -29,9 +33,9 @@ func (e *SpeechMarkTypeEnum) UnmarshalJSON(data []byte) error {
 	case "viseme":
 		fallthrough
 	case "word":
-		*e = SpeechMarkTypeEnum(s)
+		*e = SpeechMarkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpeechMarkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SpeechMarkTypeEnum: %v", v)
 	}
 }

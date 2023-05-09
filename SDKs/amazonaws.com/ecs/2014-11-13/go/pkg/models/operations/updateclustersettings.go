@@ -16,17 +16,21 @@ const (
 	UpdateClusterSettingsXAmzTargetEnumAmazonEc2ContainerServiceV20141113UpdateClusterSettings UpdateClusterSettingsXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.UpdateClusterSettings"
 )
 
+func (e UpdateClusterSettingsXAmzTargetEnum) ToPointer() *UpdateClusterSettingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateClusterSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.UpdateClusterSettings":
-		*e = UpdateClusterSettingsXAmzTargetEnum(s)
+		*e = UpdateClusterSettingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateClusterSettingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateClusterSettingsXAmzTargetEnum: %v", v)
 	}
 }
 

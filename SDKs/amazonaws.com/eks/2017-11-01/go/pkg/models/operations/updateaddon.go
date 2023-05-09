@@ -18,21 +18,25 @@ const (
 	UpdateAddonRequestBodyResolveConflictsEnumPreserve  UpdateAddonRequestBodyResolveConflictsEnum = "PRESERVE"
 )
 
+func (e UpdateAddonRequestBodyResolveConflictsEnum) ToPointer() *UpdateAddonRequestBodyResolveConflictsEnum {
+	return &e
+}
+
 func (e *UpdateAddonRequestBodyResolveConflictsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OVERWRITE":
 		fallthrough
 	case "NONE":
 		fallthrough
 	case "PRESERVE":
-		*e = UpdateAddonRequestBodyResolveConflictsEnum(s)
+		*e = UpdateAddonRequestBodyResolveConflictsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAddonRequestBodyResolveConflictsEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAddonRequestBodyResolveConflictsEnum: %v", v)
 	}
 }
 

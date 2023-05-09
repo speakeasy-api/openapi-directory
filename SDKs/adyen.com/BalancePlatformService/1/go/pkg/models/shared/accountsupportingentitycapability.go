@@ -19,12 +19,16 @@ const (
 	AccountSupportingEntityCapabilityAllowedLevelEnumNotApplicable AccountSupportingEntityCapabilityAllowedLevelEnum = "notApplicable"
 )
 
+func (e AccountSupportingEntityCapabilityAllowedLevelEnum) ToPointer() *AccountSupportingEntityCapabilityAllowedLevelEnum {
+	return &e
+}
+
 func (e *AccountSupportingEntityCapabilityAllowedLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "high":
 		fallthrough
 	case "low":
@@ -32,10 +36,10 @@ func (e *AccountSupportingEntityCapabilityAllowedLevelEnum) UnmarshalJSON(data [
 	case "medium":
 		fallthrough
 	case "notApplicable":
-		*e = AccountSupportingEntityCapabilityAllowedLevelEnum(s)
+		*e = AccountSupportingEntityCapabilityAllowedLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountSupportingEntityCapabilityAllowedLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountSupportingEntityCapabilityAllowedLevelEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	AccountSupportingEntityCapabilityRequestedLevelEnumNotApplicable AccountSupportingEntityCapabilityRequestedLevelEnum = "notApplicable"
 )
 
+func (e AccountSupportingEntityCapabilityRequestedLevelEnum) ToPointer() *AccountSupportingEntityCapabilityRequestedLevelEnum {
+	return &e
+}
+
 func (e *AccountSupportingEntityCapabilityRequestedLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "high":
 		fallthrough
 	case "low":
@@ -64,10 +72,10 @@ func (e *AccountSupportingEntityCapabilityRequestedLevelEnum) UnmarshalJSON(data
 	case "medium":
 		fallthrough
 	case "notApplicable":
-		*e = AccountSupportingEntityCapabilityRequestedLevelEnum(s)
+		*e = AccountSupportingEntityCapabilityRequestedLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountSupportingEntityCapabilityRequestedLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountSupportingEntityCapabilityRequestedLevelEnum: %v", v)
 	}
 }
 
@@ -91,12 +99,16 @@ const (
 	AccountSupportingEntityCapabilityVerificationStatusEnumValid    AccountSupportingEntityCapabilityVerificationStatusEnum = "valid"
 )
 
+func (e AccountSupportingEntityCapabilityVerificationStatusEnum) ToPointer() *AccountSupportingEntityCapabilityVerificationStatusEnum {
+	return &e
+}
+
 func (e *AccountSupportingEntityCapabilityVerificationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid":
 		fallthrough
 	case "pending":
@@ -104,10 +116,10 @@ func (e *AccountSupportingEntityCapabilityVerificationStatusEnum) UnmarshalJSON(
 	case "rejected":
 		fallthrough
 	case "valid":
-		*e = AccountSupportingEntityCapabilityVerificationStatusEnum(s)
+		*e = AccountSupportingEntityCapabilityVerificationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountSupportingEntityCapabilityVerificationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountSupportingEntityCapabilityVerificationStatusEnum: %v", v)
 	}
 }
 

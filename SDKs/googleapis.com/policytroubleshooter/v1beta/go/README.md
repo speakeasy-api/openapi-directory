@@ -13,40 +13,38 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/policytrou
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PolicytroubleshooterIamTroubleshootRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Iam.PolicytroubleshooterIamTroubleshoot(ctx, operations.PolicytroubleshooterIamTroubleshootRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest: &shared.GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest{
             AccessTuple: &shared.GoogleCloudPolicytroubleshooterV1betaAccessTuple{
-                FullResourceName: "provident",
-                Permission: "distinctio",
-                Principal: "quibusdam",
+                FullResourceName: sdk.String("provident"),
+                Permission: sdk.String("distinctio"),
+                Principal: sdk.String("quibusdam"),
             },
         },
-        AccessToken: "unde",
-        Alt: "proto",
-        Callback: "corrupti",
-        Fields: "illum",
-        Key: "vel",
-        OauthToken: "error",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
-    ctx := context.Background()
-    res, err := s.Iam.PolicytroubleshooterIamTroubleshoot(ctx, req, operations.PolicytroubleshooterIamTroubleshootSecurity{
+        AccessToken: sdk.String("unde"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("corrupti"),
+        Fields: sdk.String("illum"),
+        Key: sdk.String("vel"),
+        OauthToken: sdk.String("error"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("iure"),
+    }, operations.PolicytroubleshooterIamTroubleshootSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -65,9 +63,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Iam
+### [Iam](docs/iam/README.md)
 
-* `PolicytroubleshooterIamTroubleshoot` - Checks whether a member has a specific permission for a specific resource, and explains why the member does or does not have that permission.
+* [PolicytroubleshooterIamTroubleshoot](docs/iam/README.md#policytroubleshooteriamtroubleshoot) - Checks whether a member has a specific permission for a specific resource, and explains why the member does or does not have that permission.
 <!-- End SDK Available Operations -->
 
 ### Maturity

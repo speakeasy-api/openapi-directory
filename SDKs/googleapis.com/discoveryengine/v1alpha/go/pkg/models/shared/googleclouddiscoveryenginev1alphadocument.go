@@ -6,7 +6,7 @@ package shared
 type GoogleCloudDiscoveryengineV1alphaDocument struct {
 	// Immutable. The identifier of the document. Id should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters.
 	ID *string `json:"id,omitempty"`
-	// The JSON string representation of the document. It should conform to the registered schema or an INVALID_ARGUMENT error is thrown.
+	// The JSON string representation of the document. It should conform to the registered Schema.schema or an `INVALID_ARGUMENT` error is thrown.
 	JSONData *string `json:"jsonData,omitempty"`
 	// Immutable. The full resource name of the document. Format: `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/branches/{branch}/documents/{document_id}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
 	Name *string `json:"name,omitempty"`
@@ -14,6 +14,6 @@ type GoogleCloudDiscoveryengineV1alphaDocument struct {
 	ParentDocumentID *string `json:"parentDocumentId,omitempty"`
 	// The identifier of the schema located in the same data store.
 	SchemaID *string `json:"schemaId,omitempty"`
-	// The structured JSON data for the document. It should conform to the registered schema or an INVALID_ARGUMENT error is thrown.
+	// The structured JSON data for the document. It should conform to the registered Schema.schema or an `INVALID_ARGUMENT` error is thrown.
 	StructData map[string]interface{} `json:"structData,omitempty"`
 }

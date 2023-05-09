@@ -17,12 +17,16 @@ const (
 	PoolResizeParameterNodeDeallocationOptionEnumRetaineddata   PoolResizeParameterNodeDeallocationOptionEnum = "retaineddata"
 )
 
+func (e PoolResizeParameterNodeDeallocationOptionEnum) ToPointer() *PoolResizeParameterNodeDeallocationOptionEnum {
+	return &e
+}
+
 func (e *PoolResizeParameterNodeDeallocationOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "requeue":
 		fallthrough
 	case "terminate":
@@ -30,10 +34,10 @@ func (e *PoolResizeParameterNodeDeallocationOptionEnum) UnmarshalJSON(data []byt
 	case "taskcompletion":
 		fallthrough
 	case "retaineddata":
-		*e = PoolResizeParameterNodeDeallocationOptionEnum(s)
+		*e = PoolResizeParameterNodeDeallocationOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolResizeParameterNodeDeallocationOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolResizeParameterNodeDeallocationOptionEnum: %v", v)
 	}
 }
 

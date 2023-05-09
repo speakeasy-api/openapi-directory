@@ -14,19 +14,23 @@ const (
 	CreativeSizeAllowedFormatsEnumAudio   CreativeSizeAllowedFormatsEnum = "AUDIO"
 )
 
+func (e CreativeSizeAllowedFormatsEnum) ToPointer() *CreativeSizeAllowedFormatsEnum {
+	return &e
+}
+
 func (e *CreativeSizeAllowedFormatsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "AUDIO":
-		*e = CreativeSizeAllowedFormatsEnum(s)
+		*e = CreativeSizeAllowedFormatsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeSizeAllowedFormatsEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeSizeAllowedFormatsEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	CreativeSizeCreativeSizeTypeEnumNative                      CreativeSizeCreativeSizeTypeEnum = "NATIVE"
 )
 
+func (e CreativeSizeCreativeSizeTypeEnum) ToPointer() *CreativeSizeCreativeSizeTypeEnum {
+	return &e
+}
+
 func (e *CreativeSizeCreativeSizeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_SIZE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "REGULAR":
@@ -56,10 +64,10 @@ func (e *CreativeSizeCreativeSizeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "VIDEO":
 		fallthrough
 	case "NATIVE":
-		*e = CreativeSizeCreativeSizeTypeEnum(s)
+		*e = CreativeSizeCreativeSizeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeSizeCreativeSizeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeSizeCreativeSizeTypeEnum: %v", v)
 	}
 }
 
@@ -74,12 +82,16 @@ const (
 	CreativeSizeNativeTemplateEnumNativeVideoAppInstallAd CreativeSizeNativeTemplateEnum = "NATIVE_VIDEO_APP_INSTALL_AD"
 )
 
+func (e CreativeSizeNativeTemplateEnum) ToPointer() *CreativeSizeNativeTemplateEnum {
+	return &e
+}
+
 func (e *CreativeSizeNativeTemplateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_NATIVE_TEMPLATE":
 		fallthrough
 	case "NATIVE_CONTENT_AD":
@@ -89,10 +101,10 @@ func (e *CreativeSizeNativeTemplateEnum) UnmarshalJSON(data []byte) error {
 	case "NATIVE_VIDEO_CONTENT_AD":
 		fallthrough
 	case "NATIVE_VIDEO_APP_INSTALL_AD":
-		*e = CreativeSizeNativeTemplateEnum(s)
+		*e = CreativeSizeNativeTemplateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeSizeNativeTemplateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeSizeNativeTemplateEnum: %v", v)
 	}
 }
 
@@ -106,12 +118,16 @@ const (
 	CreativeSizeSkippableAdTypeEnumNotSkippable               CreativeSizeSkippableAdTypeEnum = "NOT_SKIPPABLE"
 )
 
+func (e CreativeSizeSkippableAdTypeEnum) ToPointer() *CreativeSizeSkippableAdTypeEnum {
+	return &e
+}
+
 func (e *CreativeSizeSkippableAdTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SKIPPABLE_AD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GENERIC":
@@ -119,10 +135,10 @@ func (e *CreativeSizeSkippableAdTypeEnum) UnmarshalJSON(data []byte) error {
 	case "INSTREAM_SELECT":
 		fallthrough
 	case "NOT_SKIPPABLE":
-		*e = CreativeSizeSkippableAdTypeEnum(s)
+		*e = CreativeSizeSkippableAdTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeSizeSkippableAdTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeSizeSkippableAdTypeEnum: %v", v)
 	}
 }
 

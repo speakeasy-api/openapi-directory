@@ -19,12 +19,16 @@ const (
 	ActionResponseTypeEnumDialog                 ActionResponseTypeEnum = "DIALOG"
 )
 
+func (e ActionResponseTypeEnum) ToPointer() *ActionResponseTypeEnum {
+	return &e
+}
+
 func (e *ActionResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "NEW_MESSAGE":
@@ -36,10 +40,10 @@ func (e *ActionResponseTypeEnum) UnmarshalJSON(data []byte) error {
 	case "REQUEST_CONFIG":
 		fallthrough
 	case "DIALOG":
-		*e = ActionResponseTypeEnum(s)
+		*e = ActionResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionResponseTypeEnum: %v", v)
 	}
 }
 

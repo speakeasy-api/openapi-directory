@@ -16,21 +16,25 @@ const (
 	ViewerCertificateCertificateSourceEnumAcm        ViewerCertificateCertificateSourceEnum = "acm"
 )
 
+func (e ViewerCertificateCertificateSourceEnum) ToPointer() *ViewerCertificateCertificateSourceEnum {
+	return &e
+}
+
 func (e *ViewerCertificateCertificateSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cloudfront":
 		fallthrough
 	case "iam":
 		fallthrough
 	case "acm":
-		*e = ViewerCertificateCertificateSourceEnum(s)
+		*e = ViewerCertificateCertificateSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViewerCertificateCertificateSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ViewerCertificateCertificateSourceEnum: %v", v)
 	}
 }
 

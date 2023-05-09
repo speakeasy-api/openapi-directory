@@ -15,17 +15,21 @@ const (
 	GETDeleteTemplateActionEnumDeleteTemplate GETDeleteTemplateActionEnum = "DeleteTemplate"
 )
 
+func (e GETDeleteTemplateActionEnum) ToPointer() *GETDeleteTemplateActionEnum {
+	return &e
+}
+
 func (e *GETDeleteTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteTemplate":
-		*e = GETDeleteTemplateActionEnum(s)
+		*e = GETDeleteTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteTemplateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteTemplateVersionEnumTwoThousandAndTen1201 GETDeleteTemplateVersionEnum = "2010-12-01"
 )
 
+func (e GETDeleteTemplateVersionEnum) ToPointer() *GETDeleteTemplateVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETDeleteTemplateVersionEnum(s)
+		*e = GETDeleteTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteTemplateVersionEnum: %v", v)
 	}
 }
 

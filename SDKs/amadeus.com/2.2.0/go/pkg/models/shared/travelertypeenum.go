@@ -21,12 +21,16 @@ const (
 	TravelerTypeEnumStudent      TravelerTypeEnum = "STUDENT"
 )
 
+func (e TravelerTypeEnum) ToPointer() *TravelerTypeEnum {
+	return &e
+}
+
 func (e *TravelerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADULT":
 		fallthrough
 	case "CHILD":
@@ -40,9 +44,9 @@ func (e *TravelerTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SEATED_INFANT":
 		fallthrough
 	case "STUDENT":
-		*e = TravelerTypeEnum(s)
+		*e = TravelerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TravelerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TravelerTypeEnum: %v", v)
 	}
 }

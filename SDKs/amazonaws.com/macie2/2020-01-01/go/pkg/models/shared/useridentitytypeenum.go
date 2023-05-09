@@ -19,12 +19,16 @@ const (
 	UserIdentityTypeEnumAwsService    UserIdentityTypeEnum = "AWSService"
 )
 
+func (e UserIdentityTypeEnum) ToPointer() *UserIdentityTypeEnum {
+	return &e
+}
+
 func (e *UserIdentityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssumedRole":
 		fallthrough
 	case "IAMUser":
@@ -36,9 +40,9 @@ func (e *UserIdentityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AWSAccount":
 		fallthrough
 	case "AWSService":
-		*e = UserIdentityTypeEnum(s)
+		*e = UserIdentityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserIdentityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserIdentityTypeEnum: %v", v)
 	}
 }

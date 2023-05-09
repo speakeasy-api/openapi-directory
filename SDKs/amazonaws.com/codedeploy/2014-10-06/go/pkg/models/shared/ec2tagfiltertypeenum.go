@@ -15,20 +15,24 @@ const (
 	Ec2TagFilterTypeEnumKeyAndValue Ec2TagFilterTypeEnum = "KEY_AND_VALUE"
 )
 
+func (e Ec2TagFilterTypeEnum) ToPointer() *Ec2TagFilterTypeEnum {
+	return &e
+}
+
 func (e *Ec2TagFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KEY_ONLY":
 		fallthrough
 	case "VALUE_ONLY":
 		fallthrough
 	case "KEY_AND_VALUE":
-		*e = Ec2TagFilterTypeEnum(s)
+		*e = Ec2TagFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ec2TagFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for Ec2TagFilterTypeEnum: %v", v)
 	}
 }

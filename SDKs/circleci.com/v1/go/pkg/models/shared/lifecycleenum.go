@@ -18,12 +18,16 @@ const (
 	LifecycleEnumFinished   LifecycleEnum = "finished"
 )
 
+func (e LifecycleEnum) ToPointer() *LifecycleEnum {
+	return &e
+}
+
 func (e *LifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "queued":
 		fallthrough
 	case "scheduled":
@@ -35,9 +39,9 @@ func (e *LifecycleEnum) UnmarshalJSON(data []byte) error {
 	case "running":
 		fallthrough
 	case "finished":
-		*e = LifecycleEnum(s)
+		*e = LifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for LifecycleEnum: %v", v)
 	}
 }

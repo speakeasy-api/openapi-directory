@@ -12,6 +12,7 @@ type Database struct {
 	CreateTableDefaultPermissions []PrincipalPermissions `json:"CreateTableDefaultPermissions,omitempty"`
 	CreateTime                    *time.Time             `json:"CreateTime,omitempty"`
 	Description                   *string                `json:"Description,omitempty"`
+	FederatedDatabase             *FederatedDatabase     `json:"FederatedDatabase,omitempty"`
 	LocationURI                   *string                `json:"LocationUri,omitempty"`
 	Name                          string                 `json:"Name"`
 	Parameters                    map[string]string      `json:"Parameters,omitempty"`

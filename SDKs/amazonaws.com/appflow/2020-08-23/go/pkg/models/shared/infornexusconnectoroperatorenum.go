@@ -27,12 +27,16 @@ const (
 	InforNexusConnectorOperatorEnumNoOp                InforNexusConnectorOperatorEnum = "NO_OP"
 )
 
+func (e InforNexusConnectorOperatorEnum) ToPointer() *InforNexusConnectorOperatorEnum {
+	return &e
+}
+
 func (e *InforNexusConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION":
 		fallthrough
 	case "BETWEEN":
@@ -62,9 +66,9 @@ func (e *InforNexusConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATE_NUMERIC":
 		fallthrough
 	case "NO_OP":
-		*e = InforNexusConnectorOperatorEnum(s)
+		*e = InforNexusConnectorOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InforNexusConnectorOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for InforNexusConnectorOperatorEnum: %v", v)
 	}
 }

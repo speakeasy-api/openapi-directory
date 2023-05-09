@@ -14,18 +14,22 @@ const (
 	TextTypeEnumText TextTypeEnum = "text"
 )
 
+func (e TextTypeEnum) ToPointer() *TextTypeEnum {
+	return &e
+}
+
 func (e *TextTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ssml":
 		fallthrough
 	case "text":
-		*e = TextTypeEnum(s)
+		*e = TextTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TextTypeEnum: %v", v)
 	}
 }

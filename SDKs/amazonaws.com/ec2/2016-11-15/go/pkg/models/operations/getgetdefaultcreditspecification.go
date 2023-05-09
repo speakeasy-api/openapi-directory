@@ -15,17 +15,21 @@ const (
 	GETGETDefaultCreditSpecificationActionEnumGetDefaultCreditSpecification GETGETDefaultCreditSpecificationActionEnum = "GetDefaultCreditSpecification"
 )
 
+func (e GETGETDefaultCreditSpecificationActionEnum) ToPointer() *GETGETDefaultCreditSpecificationActionEnum {
+	return &e
+}
+
 func (e *GETGETDefaultCreditSpecificationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetDefaultCreditSpecification":
-		*e = GETGETDefaultCreditSpecificationActionEnum(s)
+		*e = GETGETDefaultCreditSpecificationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETDefaultCreditSpecificationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETDefaultCreditSpecificationActionEnum: %v", v)
 	}
 }
 
@@ -39,12 +43,16 @@ const (
 	GETGETDefaultCreditSpecificationInstanceFamilyEnumT4g GETGETDefaultCreditSpecificationInstanceFamilyEnum = "t4g"
 )
 
+func (e GETGETDefaultCreditSpecificationInstanceFamilyEnum) ToPointer() *GETGETDefaultCreditSpecificationInstanceFamilyEnum {
+	return &e
+}
+
 func (e *GETGETDefaultCreditSpecificationInstanceFamilyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "t2":
 		fallthrough
 	case "t3":
@@ -52,10 +60,10 @@ func (e *GETGETDefaultCreditSpecificationInstanceFamilyEnum) UnmarshalJSON(data 
 	case "t3a":
 		fallthrough
 	case "t4g":
-		*e = GETGETDefaultCreditSpecificationInstanceFamilyEnum(s)
+		*e = GETGETDefaultCreditSpecificationInstanceFamilyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETDefaultCreditSpecificationInstanceFamilyEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETDefaultCreditSpecificationInstanceFamilyEnum: %v", v)
 	}
 }
 
@@ -66,17 +74,21 @@ const (
 	GETGETDefaultCreditSpecificationVersionEnumTwoThousandAndSixteen1115 GETGETDefaultCreditSpecificationVersionEnum = "2016-11-15"
 )
 
+func (e GETGETDefaultCreditSpecificationVersionEnum) ToPointer() *GETGETDefaultCreditSpecificationVersionEnum {
+	return &e
+}
+
 func (e *GETGETDefaultCreditSpecificationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETDefaultCreditSpecificationVersionEnum(s)
+		*e = GETGETDefaultCreditSpecificationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETDefaultCreditSpecificationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETDefaultCreditSpecificationVersionEnum: %v", v)
 	}
 }
 

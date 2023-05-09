@@ -16,17 +16,21 @@ const (
 	GetMailDomainXAmzTargetEnumWorkMailServiceGetMailDomain GetMailDomainXAmzTargetEnum = "WorkMailService.GetMailDomain"
 )
 
+func (e GetMailDomainXAmzTargetEnum) ToPointer() *GetMailDomainXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetMailDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.GetMailDomain":
-		*e = GetMailDomainXAmzTargetEnum(s)
+		*e = GetMailDomainXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMailDomainXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMailDomainXAmzTargetEnum: %v", v)
 	}
 }
 

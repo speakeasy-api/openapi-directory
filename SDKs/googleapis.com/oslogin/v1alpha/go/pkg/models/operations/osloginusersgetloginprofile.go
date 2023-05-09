@@ -45,21 +45,25 @@ const (
 	OsloginUsersGetLoginProfileOperatingSystemTypeEnumWindows                        OsloginUsersGetLoginProfileOperatingSystemTypeEnum = "WINDOWS"
 )
 
+func (e OsloginUsersGetLoginProfileOperatingSystemTypeEnum) ToPointer() *OsloginUsersGetLoginProfileOperatingSystemTypeEnum {
+	return &e
+}
+
 func (e *OsloginUsersGetLoginProfileOperatingSystemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATING_SYSTEM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINUX":
 		fallthrough
 	case "WINDOWS":
-		*e = OsloginUsersGetLoginProfileOperatingSystemTypeEnum(s)
+		*e = OsloginUsersGetLoginProfileOperatingSystemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OsloginUsersGetLoginProfileOperatingSystemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OsloginUsersGetLoginProfileOperatingSystemTypeEnum: %v", v)
 	}
 }
 
@@ -72,21 +76,25 @@ const (
 	OsloginUsersGetLoginProfileViewEnumSecurityKey                 OsloginUsersGetLoginProfileViewEnum = "SECURITY_KEY"
 )
 
+func (e OsloginUsersGetLoginProfileViewEnum) ToPointer() *OsloginUsersGetLoginProfileViewEnum {
+	return &e
+}
+
 func (e *OsloginUsersGetLoginProfileViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOGIN_PROFILE_VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "SECURITY_KEY":
-		*e = OsloginUsersGetLoginProfileViewEnum(s)
+		*e = OsloginUsersGetLoginProfileViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OsloginUsersGetLoginProfileViewEnum: %s", s)
+		return fmt.Errorf("invalid value for OsloginUsersGetLoginProfileViewEnum: %v", v)
 	}
 }
 

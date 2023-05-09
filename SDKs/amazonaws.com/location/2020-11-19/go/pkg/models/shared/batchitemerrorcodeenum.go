@@ -18,12 +18,16 @@ const (
 	BatchItemErrorCodeEnumValidationError       BatchItemErrorCodeEnum = "ValidationError"
 )
 
+func (e BatchItemErrorCodeEnum) ToPointer() *BatchItemErrorCodeEnum {
+	return &e
+}
+
 func (e *BatchItemErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AccessDeniedError":
 		fallthrough
 	case "ConflictError":
@@ -35,9 +39,9 @@ func (e *BatchItemErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "ThrottlingError":
 		fallthrough
 	case "ValidationError":
-		*e = BatchItemErrorCodeEnum(s)
+		*e = BatchItemErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchItemErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchItemErrorCodeEnum: %v", v)
 	}
 }

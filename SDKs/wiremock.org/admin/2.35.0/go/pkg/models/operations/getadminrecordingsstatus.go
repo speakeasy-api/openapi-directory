@@ -16,21 +16,25 @@ const (
 	GetAdminRecordingsStatus200ApplicationJSONStatusEnumStopped      GetAdminRecordingsStatus200ApplicationJSONStatusEnum = "Stopped"
 )
 
+func (e GetAdminRecordingsStatus200ApplicationJSONStatusEnum) ToPointer() *GetAdminRecordingsStatus200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetAdminRecordingsStatus200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NeverStarted":
 		fallthrough
 	case "Recording":
 		fallthrough
 	case "Stopped":
-		*e = GetAdminRecordingsStatus200ApplicationJSONStatusEnum(s)
+		*e = GetAdminRecordingsStatus200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAdminRecordingsStatus200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAdminRecordingsStatus200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

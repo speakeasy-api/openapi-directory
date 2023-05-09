@@ -15,17 +15,21 @@ const (
 	GETDeleteCoipCidrActionEnumDeleteCoipCidr GETDeleteCoipCidrActionEnum = "DeleteCoipCidr"
 )
 
+func (e GETDeleteCoipCidrActionEnum) ToPointer() *GETDeleteCoipCidrActionEnum {
+	return &e
+}
+
 func (e *GETDeleteCoipCidrActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteCoipCidr":
-		*e = GETDeleteCoipCidrActionEnum(s)
+		*e = GETDeleteCoipCidrActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteCoipCidrActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteCoipCidrActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteCoipCidrVersionEnumTwoThousandAndSixteen1115 GETDeleteCoipCidrVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteCoipCidrVersionEnum) ToPointer() *GETDeleteCoipCidrVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteCoipCidrVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteCoipCidrVersionEnum(s)
+		*e = GETDeleteCoipCidrVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteCoipCidrVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteCoipCidrVersionEnum: %v", v)
 	}
 }
 

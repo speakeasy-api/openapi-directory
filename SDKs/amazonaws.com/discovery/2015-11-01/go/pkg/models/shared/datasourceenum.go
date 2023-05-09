@@ -13,16 +13,20 @@ const (
 	DataSourceEnumAgent DataSourceEnum = "AGENT"
 )
 
+func (e DataSourceEnum) ToPointer() *DataSourceEnum {
+	return &e
+}
+
 func (e *DataSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGENT":
-		*e = DataSourceEnum(s)
+		*e = DataSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSourceEnum: %v", v)
 	}
 }

@@ -30,12 +30,16 @@ const (
 	TierEnumActiveDirectory                    TierEnum = "ACTIVE_DIRECTORY"
 )
 
+func (e TierEnum) ToPointer() *TierEnum {
+	return &e
+}
+
 func (e *TierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOM":
 		fallthrough
 	case "DEFAULT":
@@ -71,9 +75,9 @@ func (e *TierEnum) UnmarshalJSON(data []byte) error {
 	case "SHAREPOINT":
 		fallthrough
 	case "ACTIVE_DIRECTORY":
-		*e = TierEnum(s)
+		*e = TierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TierEnum: %s", s)
+		return fmt.Errorf("invalid value for TierEnum: %v", v)
 	}
 }

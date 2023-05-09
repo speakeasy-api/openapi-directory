@@ -15,21 +15,25 @@ const (
 	CapabilitySettingsFundingSourceEnumPrepaid CapabilitySettingsFundingSourceEnum = "prepaid"
 )
 
+func (e CapabilitySettingsFundingSourceEnum) ToPointer() *CapabilitySettingsFundingSourceEnum {
+	return &e
+}
+
 func (e *CapabilitySettingsFundingSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "credit":
 		fallthrough
 	case "debit":
 		fallthrough
 	case "prepaid":
-		*e = CapabilitySettingsFundingSourceEnum(s)
+		*e = CapabilitySettingsFundingSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapabilitySettingsFundingSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for CapabilitySettingsFundingSourceEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	CapabilitySettingsIntervalEnumWeekly  CapabilitySettingsIntervalEnum = "weekly"
 )
 
+func (e CapabilitySettingsIntervalEnum) ToPointer() *CapabilitySettingsIntervalEnum {
+	return &e
+}
+
 func (e *CapabilitySettingsIntervalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "daily":
 		fallthrough
 	case "monthly":
 		fallthrough
 	case "weekly":
-		*e = CapabilitySettingsIntervalEnum(s)
+		*e = CapabilitySettingsIntervalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapabilitySettingsIntervalEnum: %s", s)
+		return fmt.Errorf("invalid value for CapabilitySettingsIntervalEnum: %v", v)
 	}
 }
 

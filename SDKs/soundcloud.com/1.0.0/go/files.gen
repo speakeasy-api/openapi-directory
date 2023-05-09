@@ -11,6 +11,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -106,4 +107,14 @@ pkg/models/shared/streams.go
 pkg/models/shared/trackdatarequest.go
 pkg/models/shared/trackmetadatarequest.go
 pkg/models/shared/webprofiles.go
+docs/sdk/README.md
+docs/likes/README.md
+docs/me/README.md
+docs/miscellaneous/README.md
+docs/oauth/README.md
+docs/playlists/README.md
+docs/reposts/README.md
+docs/search/README.md
+docs/tracks/README.md
+docs/users/README.md
 USAGE.md

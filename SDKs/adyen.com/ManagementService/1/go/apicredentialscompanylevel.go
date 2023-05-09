@@ -38,7 +38,10 @@ func newAPICredentialsCompanyLevel(defaultClient, securityClient HTTPClient, ser
 // * Management API—API credentials read and write
 func (s *apiCredentialsCompanyLevel) GetCompaniesCompanyIDAPICredentials(ctx context.Context, request operations.GetCompaniesCompanyIDAPICredentialsRequest, security operations.GetCompaniesCompanyIDAPICredentialsSecurity) (*operations.GetCompaniesCompanyIDAPICredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -108,7 +111,10 @@ func (s *apiCredentialsCompanyLevel) GetCompaniesCompanyIDAPICredentials(ctx con
 // * Management API—API credentials read and write
 func (s *apiCredentialsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICredentialID(ctx context.Context, request operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDRequest, security operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDSecurity) (*operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -174,7 +180,10 @@ func (s *apiCredentialsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICrede
 // * Management API—API credentials read and write
 func (s *apiCredentialsCompanyLevel) PatchCompaniesCompanyIDAPICredentialsAPICredentialID(ctx context.Context, request operations.PatchCompaniesCompanyIDAPICredentialsAPICredentialIDRequest, security operations.PatchCompaniesCompanyIDAPICredentialsAPICredentialIDSecurity) (*operations.PatchCompaniesCompanyIDAPICredentialsAPICredentialIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCompanyAPICredentialRequest", "json")
 	if err != nil {
@@ -256,7 +265,10 @@ func (s *apiCredentialsCompanyLevel) PatchCompaniesCompanyIDAPICredentialsAPICre
 // * Management API—API credentials read and write
 func (s *apiCredentialsCompanyLevel) PostCompaniesCompanyIDAPICredentials(ctx context.Context, request operations.PostCompaniesCompanyIDAPICredentialsRequest, security operations.PostCompaniesCompanyIDAPICredentialsSecurity) (*operations.PostCompaniesCompanyIDAPICredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCompanyAPICredentialRequest", "json")
 	if err != nil {

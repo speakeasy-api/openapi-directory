@@ -16,17 +16,21 @@ const (
 	ExportAutoScalingGroupRecommendationsXAmzTargetEnumComputeOptimizerServiceExportAutoScalingGroupRecommendations ExportAutoScalingGroupRecommendationsXAmzTargetEnum = "ComputeOptimizerService.ExportAutoScalingGroupRecommendations"
 )
 
+func (e ExportAutoScalingGroupRecommendationsXAmzTargetEnum) ToPointer() *ExportAutoScalingGroupRecommendationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ExportAutoScalingGroupRecommendationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComputeOptimizerService.ExportAutoScalingGroupRecommendations":
-		*e = ExportAutoScalingGroupRecommendationsXAmzTargetEnum(s)
+		*e = ExportAutoScalingGroupRecommendationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportAutoScalingGroupRecommendationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportAutoScalingGroupRecommendationsXAmzTargetEnum: %v", v)
 	}
 }
 

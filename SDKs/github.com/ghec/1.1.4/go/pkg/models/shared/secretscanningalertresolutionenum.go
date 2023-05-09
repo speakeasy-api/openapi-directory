@@ -11,20 +11,24 @@ import (
 type SecretScanningAlertResolutionEnum string
 
 const (
-	SecretScanningAlertResolutionEnumNull          SecretScanningAlertResolutionEnum = "null"
-	SecretScanningAlertResolutionEnumFalsePositive SecretScanningAlertResolutionEnum = "false_positive"
-	SecretScanningAlertResolutionEnumWontFix       SecretScanningAlertResolutionEnum = "wont_fix"
-	SecretScanningAlertResolutionEnumRevoked       SecretScanningAlertResolutionEnum = "revoked"
-	SecretScanningAlertResolutionEnumUsedInTests   SecretScanningAlertResolutionEnum = "used_in_tests"
+	SecretScanningAlertResolutionEnumLessThanNilGreaterThan SecretScanningAlertResolutionEnum = "<nil>"
+	SecretScanningAlertResolutionEnumFalsePositive          SecretScanningAlertResolutionEnum = "false_positive"
+	SecretScanningAlertResolutionEnumWontFix                SecretScanningAlertResolutionEnum = "wont_fix"
+	SecretScanningAlertResolutionEnumRevoked                SecretScanningAlertResolutionEnum = "revoked"
+	SecretScanningAlertResolutionEnumUsedInTests            SecretScanningAlertResolutionEnum = "used_in_tests"
 )
 
+func (e SecretScanningAlertResolutionEnum) ToPointer() *SecretScanningAlertResolutionEnum {
+	return &e
+}
+
 func (e *SecretScanningAlertResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "null":
+	switch v {
+	case "<nil>":
 		fallthrough
 	case "false_positive":
 		fallthrough
@@ -33,9 +37,9 @@ func (e *SecretScanningAlertResolutionEnum) UnmarshalJSON(data []byte) error {
 	case "revoked":
 		fallthrough
 	case "used_in_tests":
-		*e = SecretScanningAlertResolutionEnum(s)
+		*e = SecretScanningAlertResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SecretScanningAlertResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for SecretScanningAlertResolutionEnum: %v", v)
 	}
 }

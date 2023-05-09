@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Intelligent-Se
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAutocompleteSuggestionsRequest{
-        Locale: "corrupti",
-        Query: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.Autocomplete.GetAutocompleteSuggestions(ctx, req)
+    res, err := s.Autocomplete.GetAutocompleteSuggestions(ctx, operations.GetAutocompleteSuggestionsRequest{
+        Locale: sdk.String("corrupti"),
+        Query: sdk.String("provident"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,18 +43,18 @@ func main() {
 ## Available Resources and Operations
 
 
-### Autocomplete
+### [Autocomplete](docs/autocomplete/README.md)
 
-* `GetAutocompleteSuggestions` - Get list of suggested terms and attributes similar to the search term
-* `GetTopSearches` - Get list of the 10 most searched terms
+* [GetAutocompleteSuggestions](docs/autocomplete/README.md#getautocompletesuggestions) - Get list of suggested terms and attributes similar to the search term
+* [GetTopSearches](docs/autocomplete/README.md#gettopsearches) - Get list of the 10 most searched terms
 
-### ProductListPage
+### [ProductListPage](docs/productlistpage/README.md)
 
-* `GetBannersFacets` - Get list of banners registered for query
-* `GetCorrectionSearch` - Get attempt of correction of a misspelled term
-* `GetFacetsFacets` - Get list of the possible facets for a given query
-* `GetProductSearchFacets` - Get list of products for a query
-* `GetSearchSuggestions` - Get list of suggested terms similar to the search term
+* [GetBannersFacets](docs/productlistpage/README.md#getbannersfacets) - Get list of banners registered for query
+* [GetCorrectionSearch](docs/productlistpage/README.md#getcorrectionsearch) - Get attempt of correction of a misspelled term
+* [GetFacetsFacets](docs/productlistpage/README.md#getfacetsfacets) - Get list of the possible facets for a given query
+* [GetProductSearchFacets](docs/productlistpage/README.md#getproductsearchfacets) - Get list of products for a query
+* [GetSearchSuggestions](docs/productlistpage/README.md#getsearchsuggestions) - Get list of suggested terms similar to the search term
 <!-- End SDK Available Operations -->
 
 ### Maturity

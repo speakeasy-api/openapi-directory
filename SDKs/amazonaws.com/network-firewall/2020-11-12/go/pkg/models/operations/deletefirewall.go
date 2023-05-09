@@ -16,17 +16,21 @@ const (
 	DeleteFirewallXAmzTargetEnumNetworkFirewall20201112DeleteFirewall DeleteFirewallXAmzTargetEnum = "NetworkFirewall_20201112.DeleteFirewall"
 )
 
+func (e DeleteFirewallXAmzTargetEnum) ToPointer() *DeleteFirewallXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteFirewallXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NetworkFirewall_20201112.DeleteFirewall":
-		*e = DeleteFirewallXAmzTargetEnum(s)
+		*e = DeleteFirewallXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteFirewallXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteFirewallXAmzTargetEnum: %v", v)
 	}
 }
 

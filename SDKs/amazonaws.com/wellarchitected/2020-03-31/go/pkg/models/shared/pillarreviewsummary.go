@@ -10,6 +10,6 @@ type PillarReviewSummary struct {
 	PillarID *string `json:"PillarId,omitempty"`
 	// The name of the pillar.
 	PillarName *string `json:"PillarName,omitempty"`
-	// A map from risk names to the count of how questions have that rating.
+	// A map from risk names to the count of how many questions have that rating.
 	RiskCounts map[string]int64 `json:"RiskCounts,omitempty"`
 }

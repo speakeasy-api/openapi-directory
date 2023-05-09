@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateAttachmentRequest{
+    ctx := context.Background()
+    res, err := s.Attachment.CreateAttachment(ctx, operations.CreateAttachmentRequest{
         BucketID: "corrupti",
         CollectionID: "provident",
-        ID: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.Attachment.CreateAttachment(ctx, req)
+        ID: "bd9d8d69-a674-4e0f-867c-c8796ed151a0",
+    })
     if err != nil {
         log.Fatal(err)
     }

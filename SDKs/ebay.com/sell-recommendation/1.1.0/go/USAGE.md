@@ -2,18 +2,19 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FindListingRecommendationsRequest{
+    ctx := context.Background()
+    res, err := s.ListingRecommendation.FindListingRecommendations(ctx, operations.FindListingRecommendationsRequest{
         FindListingRecommendationRequest: &shared.FindListingRecommendationRequest{
             ListingIds: []string{
                 "provident",
@@ -22,13 +23,10 @@ func main() {
             },
         },
         XEbayCMarketplaceID: "unde",
-        Filter: "nulla",
-        Limit: "corrupti",
-        Offset: "illum",
-    }
-
-    ctx := context.Background()
-    res, err := s.ListingRecommendation.FindListingRecommendations(ctx, req, operations.FindListingRecommendationsSecurity{
+        Filter: sdk.String("nulla"),
+        Limit: sdk.String("corrupti"),
+        Offset: sdk.String("illum"),
+    }, operations.FindListingRecommendationsSecurity{
         APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

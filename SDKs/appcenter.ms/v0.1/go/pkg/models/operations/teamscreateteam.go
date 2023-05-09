@@ -41,12 +41,16 @@ const (
 	TeamsCreateTeamDefaultApplicationJSONErrorCodeEnumTooManyRequests     TeamsCreateTeamDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e TeamsCreateTeamDefaultApplicationJSONErrorCodeEnum) ToPointer() *TeamsCreateTeamDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *TeamsCreateTeamDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -60,10 +64,10 @@ func (e *TeamsCreateTeamDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data 
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = TeamsCreateTeamDefaultApplicationJSONErrorCodeEnum(s)
+		*e = TeamsCreateTeamDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsCreateTeamDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsCreateTeamDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

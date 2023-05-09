@@ -14,18 +14,22 @@ const (
 	GeneratedRulesTypeEnumDenylist  GeneratedRulesTypeEnum = "DENYLIST"
 )
 
+func (e GeneratedRulesTypeEnum) ToPointer() *GeneratedRulesTypeEnum {
+	return &e
+}
+
 func (e *GeneratedRulesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOWLIST":
 		fallthrough
 	case "DENYLIST":
-		*e = GeneratedRulesTypeEnum(s)
+		*e = GeneratedRulesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GeneratedRulesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GeneratedRulesTypeEnum: %v", v)
 	}
 }

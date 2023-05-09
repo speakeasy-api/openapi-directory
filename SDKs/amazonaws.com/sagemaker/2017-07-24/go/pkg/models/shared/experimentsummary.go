@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// ExperimentSummary - A summary of the properties of an experiment. To get the complete set of properties, call the <a>DescribeExperiment</a> API and provide the <code>ExperimentName</code>.
+// ExperimentSummary - A summary of the properties of an experiment. To get the complete set of properties, call the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeExperiment.html">DescribeExperiment</a> API and provide the <code>ExperimentName</code>.
 type ExperimentSummary struct {
 	CreationTime   *time.Time `json:"CreationTime,omitempty"`
 	DisplayName    *string    `json:"DisplayName,omitempty"`

@@ -15,17 +15,21 @@ const (
 	POSTGetSendQuotaActionEnumGetSendQuota POSTGetSendQuotaActionEnum = "GetSendQuota"
 )
 
+func (e POSTGetSendQuotaActionEnum) ToPointer() *POSTGetSendQuotaActionEnum {
+	return &e
+}
+
 func (e *POSTGetSendQuotaActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetSendQuota":
-		*e = POSTGetSendQuotaActionEnum(s)
+		*e = POSTGetSendQuotaActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetSendQuotaActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetSendQuotaActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetSendQuotaVersionEnumTwoThousandAndTen1201 POSTGetSendQuotaVersionEnum = "2010-12-01"
 )
 
+func (e POSTGetSendQuotaVersionEnum) ToPointer() *POSTGetSendQuotaVersionEnum {
+	return &e
+}
+
 func (e *POSTGetSendQuotaVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTGetSendQuotaVersionEnum(s)
+		*e = POSTGetSendQuotaVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetSendQuotaVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetSendQuotaVersionEnum: %v", v)
 	}
 }
 

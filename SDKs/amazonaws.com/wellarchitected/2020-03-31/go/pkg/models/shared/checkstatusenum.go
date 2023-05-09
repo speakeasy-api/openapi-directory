@@ -17,12 +17,16 @@ const (
 	CheckStatusEnumFetchFailed  CheckStatusEnum = "FETCH_FAILED"
 )
 
+func (e CheckStatusEnum) ToPointer() *CheckStatusEnum {
+	return &e
+}
+
 func (e *CheckStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OKAY":
 		fallthrough
 	case "WARNING":
@@ -32,9 +36,9 @@ func (e *CheckStatusEnum) UnmarshalJSON(data []byte) error {
 	case "NOT_AVAILABLE":
 		fallthrough
 	case "FETCH_FAILED":
-		*e = CheckStatusEnum(s)
+		*e = CheckStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckStatusEnum: %v", v)
 	}
 }

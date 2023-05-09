@@ -16,17 +16,21 @@ const (
 	UpdateParameterGroupXAmzTargetEnumAmazonDaxv3UpdateParameterGroup UpdateParameterGroupXAmzTargetEnum = "AmazonDAXV3.UpdateParameterGroup"
 )
 
+func (e UpdateParameterGroupXAmzTargetEnum) ToPointer() *UpdateParameterGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateParameterGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDAXV3.UpdateParameterGroup":
-		*e = UpdateParameterGroupXAmzTargetEnum(s)
+		*e = UpdateParameterGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateParameterGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateParameterGroupXAmzTargetEnum: %v", v)
 	}
 }
 

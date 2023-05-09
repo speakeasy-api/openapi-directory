@@ -34,7 +34,10 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // KmsinventoryOrganizationsProtectedResourcesSearch - Returns metadata about the resources protected by the given Cloud KMS CryptoKey in the given Cloud organization.
 func (s *organizations) KmsinventoryOrganizationsProtectedResourcesSearch(ctx context.Context, request operations.KmsinventoryOrganizationsProtectedResourcesSearchRequest, security operations.KmsinventoryOrganizationsProtectedResourcesSearchSecurity) (*operations.KmsinventoryOrganizationsProtectedResourcesSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}/protectedResources:search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{scope}/protectedResources:search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

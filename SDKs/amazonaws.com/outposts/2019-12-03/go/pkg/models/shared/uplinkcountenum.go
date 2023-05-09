@@ -22,12 +22,16 @@ const (
 	UplinkCountEnumUplinkCount16 UplinkCountEnum = "UPLINK_COUNT_16"
 )
 
+func (e UplinkCountEnum) ToPointer() *UplinkCountEnum {
+	return &e
+}
+
 func (e *UplinkCountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPLINK_COUNT_1":
 		fallthrough
 	case "UPLINK_COUNT_2":
@@ -47,9 +51,9 @@ func (e *UplinkCountEnum) UnmarshalJSON(data []byte) error {
 	case "UPLINK_COUNT_12":
 		fallthrough
 	case "UPLINK_COUNT_16":
-		*e = UplinkCountEnum(s)
+		*e = UplinkCountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UplinkCountEnum: %s", s)
+		return fmt.Errorf("invalid value for UplinkCountEnum: %v", v)
 	}
 }

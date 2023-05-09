@@ -90,7 +90,10 @@ func (s *enterprises) AndroidmanagementEnterprisesCreate(ctx context.Context, re
 // AndroidmanagementEnterprisesDevicesIssueCommand - Issues a command to a device. The Operation resource returned contains a Command in its metadata field. Use the get operation method to get the status of the command.
 func (s *enterprises) AndroidmanagementEnterprisesDevicesIssueCommand(ctx context.Context, request operations.AndroidmanagementEnterprisesDevicesIssueCommandRequest, security operations.AndroidmanagementEnterprisesDevicesIssueCommandSecurity) (*operations.AndroidmanagementEnterprisesDevicesIssueCommandResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:issueCommand", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:issueCommand", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Command", "json")
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *enterprises) AndroidmanagementEnterprisesDevicesIssueCommand(ctx contex
 // AndroidmanagementEnterprisesDevicesList - Lists devices for a given enterprise. Deleted devices are not returned in the response.
 func (s *enterprises) AndroidmanagementEnterprisesDevicesList(ctx context.Context, request operations.AndroidmanagementEnterprisesDevicesListRequest, security operations.AndroidmanagementEnterprisesDevicesListSecurity) (*operations.AndroidmanagementEnterprisesDevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +199,10 @@ func (s *enterprises) AndroidmanagementEnterprisesDevicesList(ctx context.Contex
 // AndroidmanagementEnterprisesDevicesOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
 func (s *enterprises) AndroidmanagementEnterprisesDevicesOperationsCancel(ctx context.Context, request operations.AndroidmanagementEnterprisesDevicesOperationsCancelRequest, security operations.AndroidmanagementEnterprisesDevicesOperationsCancelSecurity) (*operations.AndroidmanagementEnterprisesDevicesOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -241,7 +250,10 @@ func (s *enterprises) AndroidmanagementEnterprisesDevicesOperationsCancel(ctx co
 // AndroidmanagementEnterprisesEnrollmentTokensCreate - Creates an enrollment token for a given enterprise. It's up to the caller's responsibility to manage the lifecycle of newly created tokens and deleting them when they're not intended to be used anymore. Once an enrollment token has been created, it's not possible to retrieve the token's content anymore using AM API. It is recommended for EMMs to securely store the token if it's intended to be reused.
 func (s *enterprises) AndroidmanagementEnterprisesEnrollmentTokensCreate(ctx context.Context, request operations.AndroidmanagementEnterprisesEnrollmentTokensCreateRequest, security operations.AndroidmanagementEnterprisesEnrollmentTokensCreateSecurity) (*operations.AndroidmanagementEnterprisesEnrollmentTokensCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/enrollmentTokens", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/enrollmentTokens", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnrollmentToken", "json")
 	if err != nil {
@@ -296,7 +308,10 @@ func (s *enterprises) AndroidmanagementEnterprisesEnrollmentTokensCreate(ctx con
 // AndroidmanagementEnterprisesEnrollmentTokensList - Lists active, unexpired enrollment tokens for a given enterprise. The list items contain only a partial view of EnrollmentToken: all the fields but name and expiration_timestamp are empty. This method is meant to help manage active enrollment tokens lifecycle. For security reasons, it's recommended to delete active enrollment tokens as soon as they're not intended to be used anymore.
 func (s *enterprises) AndroidmanagementEnterprisesEnrollmentTokensList(ctx context.Context, request operations.AndroidmanagementEnterprisesEnrollmentTokensListRequest, security operations.AndroidmanagementEnterprisesEnrollmentTokensListSecurity) (*operations.AndroidmanagementEnterprisesEnrollmentTokensListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/enrollmentTokens", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/enrollmentTokens", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -392,7 +407,10 @@ func (s *enterprises) AndroidmanagementEnterprisesList(ctx context.Context, requ
 // AndroidmanagementEnterprisesPoliciesList - Lists policies for a given enterprise.
 func (s *enterprises) AndroidmanagementEnterprisesPoliciesList(ctx context.Context, request operations.AndroidmanagementEnterprisesPoliciesListRequest, security operations.AndroidmanagementEnterprisesPoliciesListSecurity) (*operations.AndroidmanagementEnterprisesPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/policies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/policies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -440,7 +458,10 @@ func (s *enterprises) AndroidmanagementEnterprisesPoliciesList(ctx context.Conte
 // AndroidmanagementEnterprisesWebAppsCreate - Creates a web app.
 func (s *enterprises) AndroidmanagementEnterprisesWebAppsCreate(ctx context.Context, request operations.AndroidmanagementEnterprisesWebAppsCreateRequest, security operations.AndroidmanagementEnterprisesWebAppsCreateSecurity) (*operations.AndroidmanagementEnterprisesWebAppsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/webApps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/webApps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebApp", "json")
 	if err != nil {
@@ -495,7 +516,10 @@ func (s *enterprises) AndroidmanagementEnterprisesWebAppsCreate(ctx context.Cont
 // AndroidmanagementEnterprisesWebAppsDelete - Deletes a web app.
 func (s *enterprises) AndroidmanagementEnterprisesWebAppsDelete(ctx context.Context, request operations.AndroidmanagementEnterprisesWebAppsDeleteRequest, security operations.AndroidmanagementEnterprisesWebAppsDeleteSecurity) (*operations.AndroidmanagementEnterprisesWebAppsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -543,7 +567,10 @@ func (s *enterprises) AndroidmanagementEnterprisesWebAppsDelete(ctx context.Cont
 // AndroidmanagementEnterprisesWebAppsGet - Gets a web app.
 func (s *enterprises) AndroidmanagementEnterprisesWebAppsGet(ctx context.Context, request operations.AndroidmanagementEnterprisesWebAppsGetRequest, security operations.AndroidmanagementEnterprisesWebAppsGetSecurity) (*operations.AndroidmanagementEnterprisesWebAppsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -591,7 +618,10 @@ func (s *enterprises) AndroidmanagementEnterprisesWebAppsGet(ctx context.Context
 // AndroidmanagementEnterprisesWebAppsList - Lists web apps for a given enterprise.
 func (s *enterprises) AndroidmanagementEnterprisesWebAppsList(ctx context.Context, request operations.AndroidmanagementEnterprisesWebAppsListRequest, security operations.AndroidmanagementEnterprisesWebAppsListSecurity) (*operations.AndroidmanagementEnterprisesWebAppsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/webApps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/webApps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -639,7 +669,10 @@ func (s *enterprises) AndroidmanagementEnterprisesWebAppsList(ctx context.Contex
 // AndroidmanagementEnterprisesWebAppsPatch - Updates a web app.
 func (s *enterprises) AndroidmanagementEnterprisesWebAppsPatch(ctx context.Context, request operations.AndroidmanagementEnterprisesWebAppsPatchRequest, security operations.AndroidmanagementEnterprisesWebAppsPatchSecurity) (*operations.AndroidmanagementEnterprisesWebAppsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebApp", "json")
 	if err != nil {
@@ -694,7 +727,10 @@ func (s *enterprises) AndroidmanagementEnterprisesWebAppsPatch(ctx context.Conte
 // AndroidmanagementEnterprisesWebTokensCreate - Creates a web token to access an embeddable managed Google Play web UI for a given enterprise.
 func (s *enterprises) AndroidmanagementEnterprisesWebTokensCreate(ctx context.Context, request operations.AndroidmanagementEnterprisesWebTokensCreateRequest, security operations.AndroidmanagementEnterprisesWebTokensCreateSecurity) (*operations.AndroidmanagementEnterprisesWebTokensCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/webTokens", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/webTokens", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebToken", "json")
 	if err != nil {

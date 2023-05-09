@@ -16,17 +16,21 @@ const (
 	ExportCertificateXAmzTargetEnumCertificateManagerExportCertificate ExportCertificateXAmzTargetEnum = "CertificateManager.ExportCertificate"
 )
 
+func (e ExportCertificateXAmzTargetEnum) ToPointer() *ExportCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *ExportCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CertificateManager.ExportCertificate":
-		*e = ExportCertificateXAmzTargetEnum(s)
+		*e = ExportCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

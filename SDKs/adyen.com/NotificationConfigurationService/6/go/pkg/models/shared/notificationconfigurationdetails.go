@@ -16,19 +16,23 @@ const (
 	NotificationConfigurationDetailsSslProtocolEnumTlSv13 NotificationConfigurationDetailsSslProtocolEnum = "TLSv13"
 )
 
+func (e NotificationConfigurationDetailsSslProtocolEnum) ToPointer() *NotificationConfigurationDetailsSslProtocolEnum {
+	return &e
+}
+
 func (e *NotificationConfigurationDetailsSslProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TLSv12":
 		fallthrough
 	case "TLSv13":
-		*e = NotificationConfigurationDetailsSslProtocolEnum(s)
+		*e = NotificationConfigurationDetailsSslProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationConfigurationDetailsSslProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationConfigurationDetailsSslProtocolEnum: %v", v)
 	}
 }
 

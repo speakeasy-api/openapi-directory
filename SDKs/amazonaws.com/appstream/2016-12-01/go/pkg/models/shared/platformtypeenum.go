@@ -16,12 +16,16 @@ const (
 	PlatformTypeEnumAmazonLinux2      PlatformTypeEnum = "AMAZON_LINUX2"
 )
 
+func (e PlatformTypeEnum) ToPointer() *PlatformTypeEnum {
+	return &e
+}
+
 func (e *PlatformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WINDOWS":
 		fallthrough
 	case "WINDOWS_SERVER_2016":
@@ -29,9 +33,9 @@ func (e *PlatformTypeEnum) UnmarshalJSON(data []byte) error {
 	case "WINDOWS_SERVER_2019":
 		fallthrough
 	case "AMAZON_LINUX2":
-		*e = PlatformTypeEnum(s)
+		*e = PlatformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlatformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlatformTypeEnum: %v", v)
 	}
 }

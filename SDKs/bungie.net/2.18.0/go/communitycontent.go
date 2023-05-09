@@ -35,7 +35,10 @@ func newCommunityContent(defaultClient, securityClient HTTPClient, serverURL, la
 // CommunityContentGetCommunityContent - Returns community content.
 func (s *communityContent) CommunityContentGetCommunityContent(ctx context.Context, request operations.CommunityContentGetCommunityContentRequest) (*operations.CommunityContentGetCommunityContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/CommunityContent/Get/{sort}/{mediaFilter}/{page}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/CommunityContent/Get/{sort}/{mediaFilter}/{page}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

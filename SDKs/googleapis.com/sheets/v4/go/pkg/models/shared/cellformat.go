@@ -17,12 +17,16 @@ const (
 	CellFormatHorizontalAlignmentEnumRight                      CellFormatHorizontalAlignmentEnum = "RIGHT"
 )
 
+func (e CellFormatHorizontalAlignmentEnum) ToPointer() *CellFormatHorizontalAlignmentEnum {
+	return &e
+}
+
 func (e *CellFormatHorizontalAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HORIZONTAL_ALIGN_UNSPECIFIED":
 		fallthrough
 	case "LEFT":
@@ -30,10 +34,10 @@ func (e *CellFormatHorizontalAlignmentEnum) UnmarshalJSON(data []byte) error {
 	case "CENTER":
 		fallthrough
 	case "RIGHT":
-		*e = CellFormatHorizontalAlignmentEnum(s)
+		*e = CellFormatHorizontalAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CellFormatHorizontalAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for CellFormatHorizontalAlignmentEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	CellFormatHyperlinkDisplayTypeEnumPlainText                       CellFormatHyperlinkDisplayTypeEnum = "PLAIN_TEXT"
 )
 
+func (e CellFormatHyperlinkDisplayTypeEnum) ToPointer() *CellFormatHyperlinkDisplayTypeEnum {
+	return &e
+}
+
 func (e *CellFormatHyperlinkDisplayTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HYPERLINK_DISPLAY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINKED":
 		fallthrough
 	case "PLAIN_TEXT":
-		*e = CellFormatHyperlinkDisplayTypeEnum(s)
+		*e = CellFormatHyperlinkDisplayTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CellFormatHyperlinkDisplayTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CellFormatHyperlinkDisplayTypeEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	CellFormatTextDirectionEnumRightToLeft              CellFormatTextDirectionEnum = "RIGHT_TO_LEFT"
 )
 
+func (e CellFormatTextDirectionEnum) ToPointer() *CellFormatTextDirectionEnum {
+	return &e
+}
+
 func (e *CellFormatTextDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEXT_DIRECTION_UNSPECIFIED":
 		fallthrough
 	case "LEFT_TO_RIGHT":
 		fallthrough
 	case "RIGHT_TO_LEFT":
-		*e = CellFormatTextDirectionEnum(s)
+		*e = CellFormatTextDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CellFormatTextDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CellFormatTextDirectionEnum: %v", v)
 	}
 }
 
@@ -101,12 +113,16 @@ const (
 	CellFormatVerticalAlignmentEnumBottom                   CellFormatVerticalAlignmentEnum = "BOTTOM"
 )
 
+func (e CellFormatVerticalAlignmentEnum) ToPointer() *CellFormatVerticalAlignmentEnum {
+	return &e
+}
+
 func (e *CellFormatVerticalAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERTICAL_ALIGN_UNSPECIFIED":
 		fallthrough
 	case "TOP":
@@ -114,10 +130,10 @@ func (e *CellFormatVerticalAlignmentEnum) UnmarshalJSON(data []byte) error {
 	case "MIDDLE":
 		fallthrough
 	case "BOTTOM":
-		*e = CellFormatVerticalAlignmentEnum(s)
+		*e = CellFormatVerticalAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CellFormatVerticalAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for CellFormatVerticalAlignmentEnum: %v", v)
 	}
 }
 
@@ -132,12 +148,16 @@ const (
 	CellFormatWrapStrategyEnumWrap                    CellFormatWrapStrategyEnum = "WRAP"
 )
 
+func (e CellFormatWrapStrategyEnum) ToPointer() *CellFormatWrapStrategyEnum {
+	return &e
+}
+
 func (e *CellFormatWrapStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WRAP_STRATEGY_UNSPECIFIED":
 		fallthrough
 	case "OVERFLOW_CELL":
@@ -147,10 +167,10 @@ func (e *CellFormatWrapStrategyEnum) UnmarshalJSON(data []byte) error {
 	case "CLIP":
 		fallthrough
 	case "WRAP":
-		*e = CellFormatWrapStrategyEnum(s)
+		*e = CellFormatWrapStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CellFormatWrapStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for CellFormatWrapStrategyEnum: %v", v)
 	}
 }
 

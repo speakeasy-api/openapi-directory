@@ -37,21 +37,25 @@ const (
 	PostLoadBalancersIDActionsDisablePublicInterfaceActionResponseActionStatusEnumError   PostLoadBalancersIDActionsDisablePublicInterfaceActionResponseActionStatusEnum = "error"
 )
 
+func (e PostLoadBalancersIDActionsDisablePublicInterfaceActionResponseActionStatusEnum) ToPointer() *PostLoadBalancersIDActionsDisablePublicInterfaceActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostLoadBalancersIDActionsDisablePublicInterfaceActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostLoadBalancersIDActionsDisablePublicInterfaceActionResponseActionStatusEnum(s)
+		*e = PostLoadBalancersIDActionsDisablePublicInterfaceActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsDisablePublicInterfaceActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsDisablePublicInterfaceActionResponseActionStatusEnum: %v", v)
 	}
 }
 

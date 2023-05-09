@@ -15,20 +15,24 @@ const (
 	ContactTypeEnumOncallSchedule ContactTypeEnum = "ONCALL_SCHEDULE"
 )
 
+func (e ContactTypeEnum) ToPointer() *ContactTypeEnum {
+	return &e
+}
+
 func (e *ContactTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERSONAL":
 		fallthrough
 	case "ESCALATION":
 		fallthrough
 	case "ONCALL_SCHEDULE":
-		*e = ContactTypeEnum(s)
+		*e = ContactTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactTypeEnum: %v", v)
 	}
 }

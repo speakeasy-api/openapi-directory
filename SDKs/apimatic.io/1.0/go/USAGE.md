@@ -2,26 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ConvertAPIRequest{
-        RequestBody: &operations.ConvertAPIRequestBody{
-            URL: "corrupti",
-        },
-        Format: "wadl2009",
-    }
-
     ctx := context.Background()
-    res, err := s.ConvertAPI(ctx, req)
+    res, err := s.ConvertAPI(ctx, operations.ConvertAPIRequest{
+        RequestBody: &operations.ConvertAPIRequestBody{
+            URL: sdk.String("corrupti"),
+        },
+        Format: operations.ConvertAPIFormatEnumWadl2009,
+    })
     if err != nil {
         log.Fatal(err)
     }

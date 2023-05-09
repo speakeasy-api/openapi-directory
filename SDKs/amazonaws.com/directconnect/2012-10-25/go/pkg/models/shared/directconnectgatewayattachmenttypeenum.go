@@ -14,18 +14,22 @@ const (
 	DirectConnectGatewayAttachmentTypeEnumPrivateVirtualInterface DirectConnectGatewayAttachmentTypeEnum = "PrivateVirtualInterface"
 )
 
+func (e DirectConnectGatewayAttachmentTypeEnum) ToPointer() *DirectConnectGatewayAttachmentTypeEnum {
+	return &e
+}
+
 func (e *DirectConnectGatewayAttachmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransitVirtualInterface":
 		fallthrough
 	case "PrivateVirtualInterface":
-		*e = DirectConnectGatewayAttachmentTypeEnum(s)
+		*e = DirectConnectGatewayAttachmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectConnectGatewayAttachmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectConnectGatewayAttachmentTypeEnum: %v", v)
 	}
 }

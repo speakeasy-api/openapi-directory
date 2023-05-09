@@ -18,12 +18,16 @@ const (
 	AdminRoleEnumCommunityManager     AdminRoleEnum = "COMMUNITY_MANAGER"
 )
 
+func (e AdminRoleEnum) ToPointer() *AdminRoleEnum {
+	return &e
+}
+
 func (e *AdminRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADMIN_ROLE_UNSPECIFIED":
 		fallthrough
 	case "OWNER":
@@ -33,10 +37,10 @@ func (e *AdminRoleEnum) UnmarshalJSON(data []byte) error {
 	case "MANAGER":
 		fallthrough
 	case "COMMUNITY_MANAGER":
-		*e = AdminRoleEnum(s)
+		*e = AdminRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminRoleEnum: %v", v)
 	}
 }
 

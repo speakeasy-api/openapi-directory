@@ -19,12 +19,16 @@ const (
 	UniversalAdIDRegistryEnumUniversalAdRegistryCm          UniversalAdIDRegistryEnum = "UNIVERSAL_AD_REGISTRY_CM"
 )
 
+func (e UniversalAdIDRegistryEnum) ToPointer() *UniversalAdIDRegistryEnum {
+	return &e
+}
+
 func (e *UniversalAdIDRegistryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNIVERSAL_AD_REGISTRY_UNSPECIFIED":
 		fallthrough
 	case "UNIVERSAL_AD_REGISTRY_OTHER":
@@ -36,10 +40,10 @@ func (e *UniversalAdIDRegistryEnum) UnmarshalJSON(data []byte) error {
 	case "UNIVERSAL_AD_REGISTRY_DV360":
 		fallthrough
 	case "UNIVERSAL_AD_REGISTRY_CM":
-		*e = UniversalAdIDRegistryEnum(s)
+		*e = UniversalAdIDRegistryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UniversalAdIDRegistryEnum: %s", s)
+		return fmt.Errorf("invalid value for UniversalAdIDRegistryEnum: %v", v)
 	}
 }
 

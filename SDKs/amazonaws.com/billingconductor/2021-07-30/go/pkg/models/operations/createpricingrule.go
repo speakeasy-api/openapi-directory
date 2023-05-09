@@ -19,12 +19,16 @@ const (
 	CreatePricingRuleRequestBodyScopeEnumSku           CreatePricingRuleRequestBodyScopeEnum = "SKU"
 )
 
+func (e CreatePricingRuleRequestBodyScopeEnum) ToPointer() *CreatePricingRuleRequestBodyScopeEnum {
+	return &e
+}
+
 func (e *CreatePricingRuleRequestBodyScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GLOBAL":
 		fallthrough
 	case "SERVICE":
@@ -32,10 +36,10 @@ func (e *CreatePricingRuleRequestBodyScopeEnum) UnmarshalJSON(data []byte) error
 	case "BILLING_ENTITY":
 		fallthrough
 	case "SKU":
-		*e = CreatePricingRuleRequestBodyScopeEnum(s)
+		*e = CreatePricingRuleRequestBodyScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePricingRuleRequestBodyScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePricingRuleRequestBodyScopeEnum: %v", v)
 	}
 }
 
@@ -53,21 +57,25 @@ const (
 	CreatePricingRuleRequestBodyTypeEnumTiering  CreatePricingRuleRequestBodyTypeEnum = "TIERING"
 )
 
+func (e CreatePricingRuleRequestBodyTypeEnum) ToPointer() *CreatePricingRuleRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *CreatePricingRuleRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MARKUP":
 		fallthrough
 	case "DISCOUNT":
 		fallthrough
 	case "TIERING":
-		*e = CreatePricingRuleRequestBodyTypeEnum(s)
+		*e = CreatePricingRuleRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePricingRuleRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePricingRuleRequestBodyTypeEnum: %v", v)
 	}
 }
 

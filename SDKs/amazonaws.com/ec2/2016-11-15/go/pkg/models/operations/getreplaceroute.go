@@ -15,17 +15,21 @@ const (
 	GETReplaceRouteActionEnumReplaceRoute GETReplaceRouteActionEnum = "ReplaceRoute"
 )
 
+func (e GETReplaceRouteActionEnum) ToPointer() *GETReplaceRouteActionEnum {
+	return &e
+}
+
 func (e *GETReplaceRouteActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReplaceRoute":
-		*e = GETReplaceRouteActionEnum(s)
+		*e = GETReplaceRouteActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReplaceRouteActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReplaceRouteActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETReplaceRouteVersionEnumTwoThousandAndSixteen1115 GETReplaceRouteVersionEnum = "2016-11-15"
 )
 
+func (e GETReplaceRouteVersionEnum) ToPointer() *GETReplaceRouteVersionEnum {
+	return &e
+}
+
 func (e *GETReplaceRouteVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETReplaceRouteVersionEnum(s)
+		*e = GETReplaceRouteVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReplaceRouteVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReplaceRouteVersionEnum: %v", v)
 	}
 }
 

@@ -21,12 +21,16 @@ const (
 	GoogleCloudMlV1JobStateEnumCancelled        GoogleCloudMlV1JobStateEnum = "CANCELLED"
 )
 
+func (e GoogleCloudMlV1JobStateEnum) ToPointer() *GoogleCloudMlV1JobStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1JobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "QUEUED":
@@ -42,10 +46,10 @@ func (e *GoogleCloudMlV1JobStateEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLING":
 		fallthrough
 	case "CANCELLED":
-		*e = GoogleCloudMlV1JobStateEnum(s)
+		*e = GoogleCloudMlV1JobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1JobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1JobStateEnum: %v", v)
 	}
 }
 

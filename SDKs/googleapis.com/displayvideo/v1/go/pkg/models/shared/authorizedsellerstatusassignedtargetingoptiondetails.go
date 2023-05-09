@@ -16,25 +16,29 @@ const (
 	AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnumAuthorizedSellerStatusAuthorizedAndNonParticipatingPublishers AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum = "AUTHORIZED_SELLER_STATUS_AUTHORIZED_AND_NON_PARTICIPATING_PUBLISHERS"
 )
 
+func (e AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum) ToPointer() *AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum {
+	return &e
+}
+
 func (e *AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTHORIZED_SELLER_STATUS_UNSPECIFIED":
 		fallthrough
 	case "AUTHORIZED_SELLER_STATUS_AUTHORIZED_DIRECT_SELLERS_ONLY":
 		fallthrough
 	case "AUTHORIZED_SELLER_STATUS_AUTHORIZED_AND_NON_PARTICIPATING_PUBLISHERS":
-		*e = AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum(s)
+		*e = AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum: %v", v)
 	}
 }
 
-// AuthorizedSellerStatusAssignedTargetingOptionDetails - Represents an assigned authorized seller status. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`.
+// AuthorizedSellerStatusAssignedTargetingOptionDetails - Represents an assigned authorized seller status. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. If a resource does not have an `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` assigned targeting option, it is using the "Authorized Direct Sellers and Resellers" option.
 type AuthorizedSellerStatusAssignedTargetingOptionDetails struct {
 	// Output only. The authorized seller status to target.
 	AuthorizedSellerStatus *AuthorizedSellerStatusAssignedTargetingOptionDetailsAuthorizedSellerStatusEnum `json:"authorizedSellerStatus,omitempty"`
@@ -42,7 +46,7 @@ type AuthorizedSellerStatusAssignedTargetingOptionDetails struct {
 	TargetingOptionID *string `json:"targetingOptionId,omitempty"`
 }
 
-// AuthorizedSellerStatusAssignedTargetingOptionDetailsInput - Represents an assigned authorized seller status. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`.
+// AuthorizedSellerStatusAssignedTargetingOptionDetailsInput - Represents an assigned authorized seller status. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. If a resource does not have an `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` assigned targeting option, it is using the "Authorized Direct Sellers and Resellers" option.
 type AuthorizedSellerStatusAssignedTargetingOptionDetailsInput struct {
 	// Required. The targeting_option_id of a TargetingOption of type `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`.
 	TargetingOptionID *string `json:"targetingOptionId,omitempty"`

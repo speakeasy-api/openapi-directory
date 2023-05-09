@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -242,6 +243,7 @@ pkg/models/operations/getgetverifiedaccessendpointpolicy.go
 pkg/models/operations/getgetverifiedaccessgrouppolicy.go
 pkg/models/operations/getgetvpnconnectiondevicesampleconfiguration.go
 pkg/models/operations/getgetvpnconnectiondevicetypes.go
+pkg/models/operations/getgetvpntunnelreplacementstatus.go
 pkg/models/operations/getimportclientvpnclientcertificaterevocationlist.go
 pkg/models/operations/getimportvolume.go
 pkg/models/operations/getlistimagesinrecyclebin.go
@@ -316,6 +318,7 @@ pkg/models/operations/getreplacenetworkaclentry.go
 pkg/models/operations/getreplaceroute.go
 pkg/models/operations/getreplaceroutetableassociation.go
 pkg/models/operations/getreplacetransitgatewayroute.go
+pkg/models/operations/getreplacevpntunnel.go
 pkg/models/operations/getreportinstancestatus.go
 pkg/models/operations/getresetaddressattribute.go
 pkg/models/operations/getresetebsdefaultkmskeyid.go
@@ -792,6 +795,7 @@ pkg/models/operations/postgetverifiedaccessendpointpolicy.go
 pkg/models/operations/postgetverifiedaccessgrouppolicy.go
 pkg/models/operations/postgetvpnconnectiondevicesampleconfiguration.go
 pkg/models/operations/postgetvpnconnectiondevicetypes.go
+pkg/models/operations/postgetvpntunnelreplacementstatus.go
 pkg/models/operations/postimportclientvpnclientcertificaterevocationlist.go
 pkg/models/operations/postimportimage.go
 pkg/models/operations/postimportinstance.go
@@ -892,6 +896,7 @@ pkg/models/operations/postreplacenetworkaclentry.go
 pkg/models/operations/postreplaceroute.go
 pkg/models/operations/postreplaceroutetableassociation.go
 pkg/models/operations/postreplacetransitgatewayroute.go
+pkg/models/operations/postreplacevpntunnel.go
 pkg/models/operations/postreportinstancestatus.go
 pkg/models/operations/postrequestspotfleet.go
 pkg/models/operations/postrequestspotinstances.go
@@ -1127,6 +1132,7 @@ pkg/models/shared/getverifiedaccessendpointpolicyresult.go
 pkg/models/shared/getverifiedaccessgrouppolicyresult.go
 pkg/models/shared/getvpnconnectiondevicesampleconfigurationresult.go
 pkg/models/shared/getvpnconnectiondevicetypesresult.go
+pkg/models/shared/getvpntunnelreplacementstatusresult.go
 pkg/models/shared/importclientvpnclientcertificaterevocationlistresult.go
 pkg/models/shared/importvolumeresult.go
 pkg/models/shared/listimagesinrecyclebinresult.go
@@ -1203,6 +1209,7 @@ pkg/models/shared/replaceiaminstanceprofileassociationresult.go
 pkg/models/shared/replacenetworkaclassociationresult.go
 pkg/models/shared/replaceroutetableassociationresult.go
 pkg/models/shared/replacetransitgatewayrouteresult.go
+pkg/models/shared/replacevpntunnelresult.go
 pkg/models/shared/resetaddressattributeresult.go
 pkg/models/shared/resetebsdefaultkmskeyidresult.go
 pkg/models/shared/resetfpgaimageattributeresult.go
@@ -2073,6 +2080,7 @@ pkg/models/shared/getverifiedaccessendpointpolicyrequest.go
 pkg/models/shared/getverifiedaccessgrouppolicyrequest.go
 pkg/models/shared/getvpnconnectiondevicesampleconfigurationrequest.go
 pkg/models/shared/getvpnconnectiondevicetypesrequest.go
+pkg/models/shared/getvpntunnelreplacementstatusrequest.go
 pkg/models/shared/importclientvpnclientcertificaterevocationlistrequest.go
 pkg/models/shared/importimageresult.go
 pkg/models/shared/importimagerequest.go
@@ -2244,6 +2252,7 @@ pkg/models/shared/replacenetworkaclentryrequest.go
 pkg/models/shared/replacerouterequest.go
 pkg/models/shared/replaceroutetableassociationrequest.go
 pkg/models/shared/replacetransitgatewayrouterequest.go
+pkg/models/shared/replacevpntunnelrequest.go
 pkg/models/shared/reportinstancestatusrequest.go
 pkg/models/shared/requestspotfleetresponse.go
 pkg/models/shared/requestspotfleetrequest.go
@@ -2315,4 +2324,5 @@ pkg/models/shared/updatesecuritygroupruledescriptionsingressresult.go
 pkg/models/shared/updatesecuritygroupruledescriptionsingressrequest.go
 pkg/models/shared/withdrawbyoipcidrrequest.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

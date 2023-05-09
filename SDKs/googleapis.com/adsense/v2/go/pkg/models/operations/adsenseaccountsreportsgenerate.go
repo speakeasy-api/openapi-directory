@@ -38,12 +38,16 @@ const (
 	AdsenseAccountsReportsGenerateDateRangeEnumLast30Days                    AdsenseAccountsReportsGenerateDateRangeEnum = "LAST_30_DAYS"
 )
 
+func (e AdsenseAccountsReportsGenerateDateRangeEnum) ToPointer() *AdsenseAccountsReportsGenerateDateRangeEnum {
+	return &e
+}
+
 func (e *AdsenseAccountsReportsGenerateDateRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPORTING_DATE_RANGE_UNSPECIFIED":
 		fallthrough
 	case "CUSTOM":
@@ -59,10 +63,10 @@ func (e *AdsenseAccountsReportsGenerateDateRangeEnum) UnmarshalJSON(data []byte)
 	case "LAST_7_DAYS":
 		fallthrough
 	case "LAST_30_DAYS":
-		*e = AdsenseAccountsReportsGenerateDateRangeEnum(s)
+		*e = AdsenseAccountsReportsGenerateDateRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdsenseAccountsReportsGenerateDateRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdsenseAccountsReportsGenerateDateRangeEnum: %v", v)
 	}
 }
 
@@ -86,6 +90,7 @@ const (
 	AdsenseAccountsReportsGenerateDimensionsEnumCustomChannelID       AdsenseAccountsReportsGenerateDimensionsEnum = "CUSTOM_CHANNEL_ID"
 	AdsenseAccountsReportsGenerateDimensionsEnumOwnedSiteDomainName   AdsenseAccountsReportsGenerateDimensionsEnum = "OWNED_SITE_DOMAIN_NAME"
 	AdsenseAccountsReportsGenerateDimensionsEnumOwnedSiteID           AdsenseAccountsReportsGenerateDimensionsEnum = "OWNED_SITE_ID"
+	AdsenseAccountsReportsGenerateDimensionsEnumPageURL               AdsenseAccountsReportsGenerateDimensionsEnum = "PAGE_URL"
 	AdsenseAccountsReportsGenerateDimensionsEnumURLChannelName        AdsenseAccountsReportsGenerateDimensionsEnum = "URL_CHANNEL_NAME"
 	AdsenseAccountsReportsGenerateDimensionsEnumURLChannelID          AdsenseAccountsReportsGenerateDimensionsEnum = "URL_CHANNEL_ID"
 	AdsenseAccountsReportsGenerateDimensionsEnumBuyerNetworkName      AdsenseAccountsReportsGenerateDimensionsEnum = "BUYER_NETWORK_NAME"
@@ -118,12 +123,16 @@ const (
 	AdsenseAccountsReportsGenerateDimensionsEnumWebsearchQueryString  AdsenseAccountsReportsGenerateDimensionsEnum = "WEBSEARCH_QUERY_STRING"
 )
 
+func (e AdsenseAccountsReportsGenerateDimensionsEnum) ToPointer() *AdsenseAccountsReportsGenerateDimensionsEnum {
+	return &e
+}
+
 func (e *AdsenseAccountsReportsGenerateDimensionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "DATE":
@@ -157,6 +166,8 @@ func (e *AdsenseAccountsReportsGenerateDimensionsEnum) UnmarshalJSON(data []byte
 	case "OWNED_SITE_DOMAIN_NAME":
 		fallthrough
 	case "OWNED_SITE_ID":
+		fallthrough
+	case "PAGE_URL":
 		fallthrough
 	case "URL_CHANNEL_NAME":
 		fallthrough
@@ -217,10 +228,10 @@ func (e *AdsenseAccountsReportsGenerateDimensionsEnum) UnmarshalJSON(data []byte
 	case "DOMAIN_REGISTRANT":
 		fallthrough
 	case "WEBSEARCH_QUERY_STRING":
-		*e = AdsenseAccountsReportsGenerateDimensionsEnum(s)
+		*e = AdsenseAccountsReportsGenerateDimensionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdsenseAccountsReportsGenerateDimensionsEnum: %s", s)
+		return fmt.Errorf("invalid value for AdsenseAccountsReportsGenerateDimensionsEnum: %v", v)
 	}
 }
 
@@ -262,12 +273,16 @@ const (
 	AdsenseAccountsReportsGenerateMetricsEnumWebsearchResultPages             AdsenseAccountsReportsGenerateMetricsEnum = "WEBSEARCH_RESULT_PAGES"
 )
 
+func (e AdsenseAccountsReportsGenerateMetricsEnum) ToPointer() *AdsenseAccountsReportsGenerateMetricsEnum {
+	return &e
+}
+
 func (e *AdsenseAccountsReportsGenerateMetricsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_UNSPECIFIED":
 		fallthrough
 	case "PAGE_VIEWS":
@@ -333,10 +348,10 @@ func (e *AdsenseAccountsReportsGenerateMetricsEnum) UnmarshalJSON(data []byte) e
 	case "TOTAL_EARNINGS":
 		fallthrough
 	case "WEBSEARCH_RESULT_PAGES":
-		*e = AdsenseAccountsReportsGenerateMetricsEnum(s)
+		*e = AdsenseAccountsReportsGenerateMetricsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdsenseAccountsReportsGenerateMetricsEnum: %s", s)
+		return fmt.Errorf("invalid value for AdsenseAccountsReportsGenerateMetricsEnum: %v", v)
 	}
 }
 
@@ -349,21 +364,25 @@ const (
 	AdsenseAccountsReportsGenerateReportingTimeZoneEnumGoogleTimeZone               AdsenseAccountsReportsGenerateReportingTimeZoneEnum = "GOOGLE_TIME_ZONE"
 )
 
+func (e AdsenseAccountsReportsGenerateReportingTimeZoneEnum) ToPointer() *AdsenseAccountsReportsGenerateReportingTimeZoneEnum {
+	return &e
+}
+
 func (e *AdsenseAccountsReportsGenerateReportingTimeZoneEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPORTING_TIME_ZONE_UNSPECIFIED":
 		fallthrough
 	case "ACCOUNT_TIME_ZONE":
 		fallthrough
 	case "GOOGLE_TIME_ZONE":
-		*e = AdsenseAccountsReportsGenerateReportingTimeZoneEnum(s)
+		*e = AdsenseAccountsReportsGenerateReportingTimeZoneEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdsenseAccountsReportsGenerateReportingTimeZoneEnum: %s", s)
+		return fmt.Errorf("invalid value for AdsenseAccountsReportsGenerateReportingTimeZoneEnum: %v", v)
 	}
 }
 

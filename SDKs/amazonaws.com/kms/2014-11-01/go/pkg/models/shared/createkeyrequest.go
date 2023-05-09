@@ -26,12 +26,16 @@ const (
 	CreateKeyRequestCustomerMasterKeySpecEnumSm2              CreateKeyRequestCustomerMasterKeySpecEnum = "SM2"
 )
 
+func (e CreateKeyRequestCustomerMasterKeySpecEnum) ToPointer() *CreateKeyRequestCustomerMasterKeySpecEnum {
+	return &e
+}
+
 func (e *CreateKeyRequestCustomerMasterKeySpecEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RSA_2048":
 		fallthrough
 	case "RSA_3072":
@@ -57,10 +61,10 @@ func (e *CreateKeyRequestCustomerMasterKeySpecEnum) UnmarshalJSON(data []byte) e
 	case "HMAC_512":
 		fallthrough
 	case "SM2":
-		*e = CreateKeyRequestCustomerMasterKeySpecEnum(s)
+		*e = CreateKeyRequestCustomerMasterKeySpecEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateKeyRequestCustomerMasterKeySpecEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateKeyRequestCustomerMasterKeySpecEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,29 +17,27 @@ func main() {
         }),
     )
 
-    req := operations.CommunicationRequest{
+    ctx := context.Background()
+    res, err := s.TextAnalysis.Communication(ctx, operations.CommunicationRequest{
         RequestBody: []shared.Post{
             shared.Post{
-                ID: "1",
+                ID: sdk.String("1"),
                 Language: "en",
                 Text: "I love the service",
             },
             shared.Post{
-                ID: "1",
+                ID: sdk.String("1"),
                 Language: "en",
                 Text: "I love the service",
             },
             shared.Post{
-                ID: "1",
+                ID: sdk.String("1"),
                 Language: "en",
                 Text: "I love the service",
             },
         },
-        All: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.TextAnalysis.Communication(ctx, req)
+        All: sdk.Bool(false),
+    })
     if err != nil {
         log.Fatal(err)
     }

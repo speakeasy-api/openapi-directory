@@ -33,12 +33,16 @@ const (
 	BloggerBlogsListByUserRoleEnumAdmin               BloggerBlogsListByUserRoleEnum = "ADMIN"
 )
 
+func (e BloggerBlogsListByUserRoleEnum) ToPointer() *BloggerBlogsListByUserRoleEnum {
+	return &e
+}
+
 func (e *BloggerBlogsListByUserRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_TYPE_UNSPECIFIED":
 		fallthrough
 	case "READER":
@@ -46,10 +50,10 @@ func (e *BloggerBlogsListByUserRoleEnum) UnmarshalJSON(data []byte) error {
 	case "AUTHOR":
 		fallthrough
 	case "ADMIN":
-		*e = BloggerBlogsListByUserRoleEnum(s)
+		*e = BloggerBlogsListByUserRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerBlogsListByUserRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerBlogsListByUserRoleEnum: %v", v)
 	}
 }
 
@@ -60,19 +64,23 @@ const (
 	BloggerBlogsListByUserStatusEnumDeleted BloggerBlogsListByUserStatusEnum = "DELETED"
 )
 
+func (e BloggerBlogsListByUserStatusEnum) ToPointer() *BloggerBlogsListByUserStatusEnum {
+	return &e
+}
+
 func (e *BloggerBlogsListByUserStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "DELETED":
-		*e = BloggerBlogsListByUserStatusEnum(s)
+		*e = BloggerBlogsListByUserStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerBlogsListByUserStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerBlogsListByUserStatusEnum: %v", v)
 	}
 }
 
@@ -86,12 +94,16 @@ const (
 	BloggerBlogsListByUserViewEnumAdmin               BloggerBlogsListByUserViewEnum = "ADMIN"
 )
 
+func (e BloggerBlogsListByUserViewEnum) ToPointer() *BloggerBlogsListByUserViewEnum {
+	return &e
+}
+
 func (e *BloggerBlogsListByUserViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_TYPE_UNSPECIFIED":
 		fallthrough
 	case "READER":
@@ -99,10 +111,10 @@ func (e *BloggerBlogsListByUserViewEnum) UnmarshalJSON(data []byte) error {
 	case "AUTHOR":
 		fallthrough
 	case "ADMIN":
-		*e = BloggerBlogsListByUserViewEnum(s)
+		*e = BloggerBlogsListByUserViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerBlogsListByUserViewEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerBlogsListByUserViewEnum: %v", v)
 	}
 }
 

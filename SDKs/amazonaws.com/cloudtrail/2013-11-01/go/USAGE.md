@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,36 +17,34 @@ func main() {
         }),
     )
 
-    req := operations.AddTagsRequest{
+    ctx := context.Background()
+    res, err := s.AddTags(ctx, operations.AddTagsRequest{
         AddTagsRequest: shared.AddTagsRequest{
             ResourceID: "corrupti",
             TagsList: []shared.Tag{
                 shared.Tag{
                     Key: "distinctio",
-                    Value: "quibusdam",
+                    Value: sdk.String("quibusdam"),
                 },
                 shared.Tag{
                     Key: "unde",
-                    Value: "nulla",
+                    Value: sdk.String("nulla"),
                 },
                 shared.Tag{
                     Key: "corrupti",
-                    Value: "illum",
+                    Value: sdk.String("illum"),
                 },
             },
         },
-        XAmzAlgorithm: "vel",
-        XAmzContentSha256: "error",
-        XAmzCredential: "deserunt",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "iure",
-        XAmzSignature: "magnam",
-        XAmzSignedHeaders: "debitis",
-        XAmzTarget: "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.AddTags",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddTags(ctx, req)
+        XAmzAlgorithm: sdk.String("vel"),
+        XAmzContentSha256: sdk.String("error"),
+        XAmzCredential: sdk.String("deserunt"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("iure"),
+        XAmzSignature: sdk.String("magnam"),
+        XAmzSignedHeaders: sdk.String("debitis"),
+        XAmzTarget: operations.AddTagsXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101AddTags,
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -23,12 +23,16 @@ const (
 	ConditionOperatorEnumBeginsWith          ConditionOperatorEnum = "BeginsWith"
 )
 
+func (e ConditionOperatorEnum) ToPointer() *ConditionOperatorEnum {
+	return &e
+}
+
 func (e *ConditionOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GreaterThan":
 		fallthrough
 	case "GreaterThanOrEquals":
@@ -50,9 +54,9 @@ func (e *ConditionOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "NotExists":
 		fallthrough
 	case "BeginsWith":
-		*e = ConditionOperatorEnum(s)
+		*e = ConditionOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConditionOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for ConditionOperatorEnum: %v", v)
 	}
 }

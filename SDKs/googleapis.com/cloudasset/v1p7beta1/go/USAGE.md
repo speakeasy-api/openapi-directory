@@ -2,34 +2,32 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudassetOperationsGetRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        Name: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.Operations.CloudassetOperationsGet(ctx, req, operations.CloudassetOperationsGetSecurity{
+    res, err := s.Operations.CloudassetOperationsGet(ctx, operations.CloudassetOperationsGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        Name: "Dallas Kassulke",
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.CloudassetOperationsGetSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

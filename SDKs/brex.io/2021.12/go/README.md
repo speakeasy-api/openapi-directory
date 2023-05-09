@@ -13,31 +13,28 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/brex.io/2021.12/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CompanyAlternativeSearchRequest{
-        RequestBody: &operations.CompanyAlternativeSearchRequestBody{
-            Address: "5786 Little Streets",
-            Name: "vel",
-            Number: "error",
-            Phone: "1-542-909-2347 x8545",
-            URL: "nisi",
-            Vat: "recusandae",
-        },
-        Country: "temporibus",
-    }
-
     ctx := context.Background()
-    res, err := s.V1Company.CompanyAlternativeSearch(ctx, req, operations.CompanyAlternativeSearchSecurity{
+    res, err := s.V1Company.CompanyAlternativeSearch(ctx, operations.CompanyAlternativeSearchRequest{
+        RequestBody: &operations.CompanyAlternativeSearchRequestBody{
+            Address: sdk.String("5786 Little Streets"),
+            Name: sdk.String("Sabrina Oberbrunner"),
+            Number: sdk.String("magnam"),
+            Phone: sdk.String("1-292-547-8545 x39803"),
+            URL: sdk.String("veritatis"),
+            Vat: sdk.String("deserunt"),
+        },
+        Country: "perferendis",
+    }, operations.CompanyAlternativeSearchSecurity{
         UserKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -55,86 +52,86 @@ func main() {
 ## Available Resources and Operations
 
 
-### V1Company
+### [V1Company](docs/v1company/README.md)
 
-* `CompanyAlternativeSearch` - Retrieves a list of companies from the KYC API company index
-* `CompanyAnnouncement` - Retrieves announcement data
-* `CompanyDeepsearchISIN` - Retrieves a list of stock exchange listings
-* `CompanyDeepsearchLEI` - Retrieves a list of companies
-* `CompanyDeepsearchName` - Retrieves a list of companies from the official business register
-* `CompanyDeepsearchNumber` - Retrieves a list of companies from the official business register
-* `CompanyIDAnnouncements` - Retrieves company announcements
-* `CompanyIDDataset` - Retrieves company details
-* `CompanyIDSuper` - Retrieves structured data extracted from a company document
-* `CompanyMonitorChangeTypesList` - Get available ChangeTypes
-* `CompanyMonitorID` - Get monitor status for specific company id
-* `CompanyMonitorList` - Retrieves a list of registered monitors
-* `CompanyMonitorRegister` - Register a Company for monitoring
-* `CompanyMonitorUnregister` - Deactivates an active notification
-* `CompanyNotificationID` - Retrieves a list of registered notifications
-* `CompanyNotificationList` - Retrieves a list of registered notifications
-* `CompanyNotificationRegister` - Creates a new notification
-* `CompanyNotificationUnregister` - Unregister a company from Monitoring
-* `CompanySearchName` - Retrieves a list of companies from the KYC API company index
-* `CompanySearchNumber` - Retrieves a list of companies from the KYC API company index
+* [CompanyAlternativeSearch](docs/v1company/README.md#companyalternativesearch) - Retrieves a list of companies from the KYC API company index
+* [CompanyAnnouncement](docs/v1company/README.md#companyannouncement) - Retrieves announcement data
+* [CompanyDeepsearchISIN](docs/v1company/README.md#companydeepsearchisin) - Retrieves a list of stock exchange listings
+* [CompanyDeepsearchLEI](docs/v1company/README.md#companydeepsearchlei) - Retrieves a list of companies
+* [CompanyDeepsearchName](docs/v1company/README.md#companydeepsearchname) - Retrieves a list of companies from the official business register
+* [CompanyDeepsearchNumber](docs/v1company/README.md#companydeepsearchnumber) - Retrieves a list of companies from the official business register
+* [CompanyIDAnnouncements](docs/v1company/README.md#companyidannouncements) - Retrieves company announcements
+* [CompanyIDDataset](docs/v1company/README.md#companyiddataset) - Retrieves company details
+* [CompanyIDSuper](docs/v1company/README.md#companyidsuper) - Retrieves structured data extracted from a company document
+* [CompanyMonitorChangeTypesList](docs/v1company/README.md#companymonitorchangetypeslist) - Get available ChangeTypes
+* [CompanyMonitorID](docs/v1company/README.md#companymonitorid) - Get monitor status for specific company id
+* [CompanyMonitorList](docs/v1company/README.md#companymonitorlist) - Retrieves a list of registered monitors
+* [CompanyMonitorRegister](docs/v1company/README.md#companymonitorregister) - Register a Company for monitoring
+* [CompanyMonitorUnregister](docs/v1company/README.md#companymonitorunregister) - Deactivates an active notification
+* [CompanyNotificationID](docs/v1company/README.md#companynotificationid) - Retrieves a list of registered notifications
+* [CompanyNotificationList](docs/v1company/README.md#companynotificationlist) - Retrieves a list of registered notifications
+* [CompanyNotificationRegister](docs/v1company/README.md#companynotificationregister) - Creates a new notification
+* [CompanyNotificationUnregister](docs/v1company/README.md#companynotificationunregister) - Unregister a company from Monitoring
+* [CompanySearchName](docs/v1company/README.md#companysearchname) - Retrieves a list of companies from the KYC API company index
+* [CompanySearchNumber](docs/v1company/README.md#companysearchnumber) - Retrieves a list of companies from the KYC API company index
 
-### V1EinVerification
+### [V1EinVerification](docs/v1einverification/README.md)
 
-* `EinVerificationBasic` - Verifies an EIN number
-* `EinVerificationComprehensive` - Verifies EIN number and retrieves company data
-* `EinVerificationLookup` - Retrieves a list of EIN numbers
+* [EinVerificationBasic](docs/v1einverification/README.md#einverificationbasic) - Verifies an EIN number
+* [EinVerificationComprehensive](docs/v1einverification/README.md#einverificationcomprehensive) - Verifies EIN number and retrieves company data
+* [EinVerificationLookup](docs/v1einverification/README.md#einverificationlookup) - Retrieves a list of EIN numbers
 
-### V1IbanVerification
+### [V1IbanVerification](docs/v1ibanverification/README.md)
 
-* `IbanBasic` - Checks validity of an IBAN number
-* `IbanComprehensive` - Checks validity of an IBAN number
+* [IbanBasic](docs/v1ibanverification/README.md#ibanbasic) - Checks validity of an IBAN number
+* [IbanComprehensive](docs/v1ibanverification/README.md#ibancomprehensive) - Checks validity of an IBAN number
 
-### V1NifVerification
+### [V1NifVerification](docs/v1nifverification/README.md)
 
-* `NifBasic` - Verifies a NIF number
-* `NifComprehensive` - Verifies a NIF number and retrieves company data
+* [NifBasic](docs/v1nifverification/README.md#nifbasic) - Verifies a NIF number
+* [NifComprehensive](docs/v1nifverification/README.md#nifcomprehensive) - Verifies a NIF number and retrieves company data
 
-### V1Pepsanction
+### [V1Pepsanction](docs/v1pepsanction/README.md)
 
-* `PepMonitorList` - Retrieves a list of monitor entries
-* `PepMonitorUnregister` - Deactive a pep sanction monitor
-* `PepMonitorUpdate` - Update details of active Pep Sanction monitor
-* `PepOrder` - Orders a new Pep Sanction Check Report
-* `PepRetrieve` - Returns a json or pdf report
+* [PepMonitorList](docs/v1pepsanction/README.md#pepmonitorlist) - Retrieves a list of monitor entries
+* [PepMonitorUnregister](docs/v1pepsanction/README.md#pepmonitorunregister) - Deactive a pep sanction monitor
+* [PepMonitorUpdate](docs/v1pepsanction/README.md#pepmonitorupdate) - Update details of active Pep Sanction monitor
+* [PepOrder](docs/v1pepsanction/README.md#peporder) - Orders a new Pep Sanction Check Report
+* [PepRetrieve](docs/v1pepsanction/README.md#pepretrieve) - Returns a json or pdf report
 
-### V1Product
+### [V1Product](docs/v1product/README.md)
 
-* `ProductAvailability` - Retrieves a document availability result
-* `ProductCatalog` - Returns a catalog of products
-* `ProductNotifier` - Returns metadata for a notifier
-* `ProductNotifierCreate` - Creates a notifier for an order
-* `ProductOrder` - Places a product order
-* `ProductOrderConcierge` - Places a concierge order
-* `ProductOrderUbo` - Places a UBO order
-* `ProductOrderWithOption` - Places a product order
-* `ProductRetrieve` - Retrieves the result of an order
-* `ProductSearch` - Returns a list of products
-* `ProductStatus` - Returns metadata for a order
-* `ProductUpdateAction` - Updates metadata of an order
+* [ProductAvailability](docs/v1product/README.md#productavailability) - Retrieves a document availability result
+* [ProductCatalog](docs/v1product/README.md#productcatalog) - Returns a catalog of products
+* [ProductNotifier](docs/v1product/README.md#productnotifier) - Returns metadata for a notifier
+* [ProductNotifierCreate](docs/v1product/README.md#productnotifiercreate) - Creates a notifier for an order
+* [ProductOrder](docs/v1product/README.md#productorder) - Places a product order
+* [ProductOrderConcierge](docs/v1product/README.md#productorderconcierge) - Places a concierge order
+* [ProductOrderUbo](docs/v1product/README.md#productorderubo) - Places a UBO order
+* [ProductOrderWithOption](docs/v1product/README.md#productorderwithoption) - Places a product order
+* [ProductRetrieve](docs/v1product/README.md#productretrieve) - Retrieves the result of an order
+* [ProductSearch](docs/v1product/README.md#productsearch) - Returns a list of products
+* [ProductStatus](docs/v1product/README.md#productstatus) - Returns metadata for a order
+* [ProductUpdateAction](docs/v1product/README.md#productupdateaction) - Updates metadata of an order
 
-### V1System
+### [V1System](docs/v1system/README.md)
 
-* `HealthCheck` - Returns the health information for the official business registers based on usage.
-* `SystemCountries` - Returns a list of countries
-* `SystemPricelist` - Returns a list of products with prices
+* [HealthCheck](docs/v1system/README.md#healthcheck) - Returns the health information for the official business registers based on usage.
+* [SystemCountries](docs/v1system/README.md#systemcountries) - Returns a list of countries
+* [SystemPricelist](docs/v1system/README.md#systempricelist) - Returns a list of products with prices
 
-### V1TinVerification
+### [V1TinVerification](docs/v1tinverification/README.md)
 
-* `TinVerificationBasicCheck` - Verifies a TIN number
-* `TinVerificationComprehensiveCheck` - EIN Name Lookup with TIN number and retrieves company data
-* `TinVerificationNameLookup` - EIN Name Lookup with TIN number
+* [TinVerificationBasicCheck](docs/v1tinverification/README.md#tinverificationbasiccheck) - Verifies a TIN number
+* [TinVerificationComprehensiveCheck](docs/v1tinverification/README.md#tinverificationcomprehensivecheck) - EIN Name Lookup with TIN number and retrieves company data
+* [TinVerificationNameLookup](docs/v1tinverification/README.md#tinverificationnamelookup) - EIN Name Lookup with TIN number
 
-### V1VatVerification
+### [V1VatVerification](docs/v1vatverification/README.md)
 
-* `VatBasic` - Returns a verification result
-* `VatComprehensive` - Returns a verification result and company data
-* `VatLevelTwo` - Returns a level two verification result
-* `VatLookup` - Returns a list of vat numbers with additional data
+* [VatBasic](docs/v1vatverification/README.md#vatbasic) - Returns a verification result
+* [VatComprehensive](docs/v1vatverification/README.md#vatcomprehensive) - Returns a verification result and company data
+* [VatLevelTwo](docs/v1vatverification/README.md#vatleveltwo) - Returns a level two verification result
+* [VatLookup](docs/v1vatverification/README.md#vatlookup) - Returns a list of vat numbers with additional data
 <!-- End SDK Available Operations -->
 
 ### Maturity

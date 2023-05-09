@@ -25,19 +25,23 @@ const (
 	CreateAccessPolicyRequestBodyAccessPolicyPermissionEnumViewer        CreateAccessPolicyRequestBodyAccessPolicyPermissionEnum = "VIEWER"
 )
 
+func (e CreateAccessPolicyRequestBodyAccessPolicyPermissionEnum) ToPointer() *CreateAccessPolicyRequestBodyAccessPolicyPermissionEnum {
+	return &e
+}
+
 func (e *CreateAccessPolicyRequestBodyAccessPolicyPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADMINISTRATOR":
 		fallthrough
 	case "VIEWER":
-		*e = CreateAccessPolicyRequestBodyAccessPolicyPermissionEnum(s)
+		*e = CreateAccessPolicyRequestBodyAccessPolicyPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccessPolicyRequestBodyAccessPolicyPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccessPolicyRequestBodyAccessPolicyPermissionEnum: %v", v)
 	}
 }
 

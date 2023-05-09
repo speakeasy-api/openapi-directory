@@ -2,33 +2,31 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AddPaymentMethodRequest{
+    ctx := context.Background()
+    res, err := s.Account.AddPaymentMethod(ctx, operations.AddPaymentMethodRequest{
         AddPaymentMethodRequest: shared.AddPaymentMethodRequest{
-            MakeDefault: false,
+            MakeDefault: sdk.Bool(false),
             Token: "corrupti",
-            Type: "Card",
+            Type: shared.AddPaymentMethodRequestTypeEnumCard,
         },
         Ff: []shared.FeatureFlagsEnum{
-            "cas",
-            "lrl",
-            "rpt",
+            shared.FeatureFlagsEnumCas,
+            shared.FeatureFlagsEnumLrl,
+            shared.FeatureFlagsEnumRpt,
         },
-        Lang: "nulla",
-    }
-
-    ctx := context.Background()
-    res, err := s.Account.AddPaymentMethod(ctx, req, operations.AddPaymentMethodSecurity{
+        Lang: sdk.String("nulla"),
+    }, operations.AddPaymentMethodSecurity{
         AccountAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

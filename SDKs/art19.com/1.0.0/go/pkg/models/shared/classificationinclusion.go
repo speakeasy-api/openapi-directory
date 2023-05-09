@@ -19,12 +19,16 @@ const (
 	ClassificationInclusionAttributesClassificationTypeEnumMediaRating       ClassificationInclusionAttributesClassificationTypeEnum = "MediaRating"
 )
 
+func (e ClassificationInclusionAttributesClassificationTypeEnum) ToPointer() *ClassificationInclusionAttributesClassificationTypeEnum {
+	return &e
+}
+
 func (e *ClassificationInclusionAttributesClassificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AlternateFeedType":
 		fallthrough
 	case "Genre":
@@ -34,10 +38,10 @@ func (e *ClassificationInclusionAttributesClassificationTypeEnum) UnmarshalJSON(
 	case "Language":
 		fallthrough
 	case "MediaRating":
-		*e = ClassificationInclusionAttributesClassificationTypeEnum(s)
+		*e = ClassificationInclusionAttributesClassificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassificationInclusionAttributesClassificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassificationInclusionAttributesClassificationTypeEnum: %v", v)
 	}
 }
 
@@ -50,21 +54,25 @@ const (
 	ClassificationInclusionAttributesClassifiedTypeEnumEpisode ClassificationInclusionAttributesClassifiedTypeEnum = "Episode"
 )
 
+func (e ClassificationInclusionAttributesClassifiedTypeEnum) ToPointer() *ClassificationInclusionAttributesClassifiedTypeEnum {
+	return &e
+}
+
 func (e *ClassificationInclusionAttributesClassifiedTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Series":
 		fallthrough
 	case "Season":
 		fallthrough
 	case "Episode":
-		*e = ClassificationInclusionAttributesClassifiedTypeEnum(s)
+		*e = ClassificationInclusionAttributesClassifiedTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassificationInclusionAttributesClassifiedTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassificationInclusionAttributesClassifiedTypeEnum: %v", v)
 	}
 }
 

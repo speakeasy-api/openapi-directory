@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAllContentTypesRequest{
-        BuilderID: "faststore",
-    }
-
     ctx := context.Background()
-    res, err := s.Pages.GetAllContentTypes(ctx, req)
+    res, err := s.Pages.GetAllContentTypes(ctx, operations.GetAllContentTypesRequest{
+        BuilderID: "faststore",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -16,17 +16,21 @@ const (
 	StopWorkspacesXAmzTargetEnumWorkspacesServiceStopWorkspaces StopWorkspacesXAmzTargetEnum = "WorkspacesService.StopWorkspaces"
 )
 
+func (e StopWorkspacesXAmzTargetEnum) ToPointer() *StopWorkspacesXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopWorkspacesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.StopWorkspaces":
-		*e = StopWorkspacesXAmzTargetEnum(s)
+		*e = StopWorkspacesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopWorkspacesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopWorkspacesXAmzTargetEnum: %v", v)
 	}
 }
 

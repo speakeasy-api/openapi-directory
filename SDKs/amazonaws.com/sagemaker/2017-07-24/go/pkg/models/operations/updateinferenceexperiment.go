@@ -16,17 +16,21 @@ const (
 	UpdateInferenceExperimentXAmzTargetEnumSageMakerUpdateInferenceExperiment UpdateInferenceExperimentXAmzTargetEnum = "SageMaker.UpdateInferenceExperiment"
 )
 
+func (e UpdateInferenceExperimentXAmzTargetEnum) ToPointer() *UpdateInferenceExperimentXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateInferenceExperimentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.UpdateInferenceExperiment":
-		*e = UpdateInferenceExperimentXAmzTargetEnum(s)
+		*e = UpdateInferenceExperimentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInferenceExperimentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInferenceExperimentXAmzTargetEnum: %v", v)
 	}
 }
 

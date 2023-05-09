@@ -9,26 +9,30 @@ import (
 )
 
 // GetNamesNearEmbedEnum - A flag to indicate whether to embed the corresponding 'feature' into each matching name
-type GetNamesNearEmbedEnum string
+type GetNamesNearEmbedEnum int64
 
 const (
-	GetNamesNearEmbedEnumZero GetNamesNearEmbedEnum = "0"
-	GetNamesNearEmbedEnumOne  GetNamesNearEmbedEnum = "1"
+	GetNamesNearEmbedEnumZero GetNamesNearEmbedEnum = 0
+	GetNamesNearEmbedEnumOne  GetNamesNearEmbedEnum = 1
 )
 
+func (e GetNamesNearEmbedEnum) ToPointer() *GetNamesNearEmbedEnum {
+	return &e
+}
+
 func (e *GetNamesNearEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = GetNamesNearEmbedEnum(s)
+	case 1:
+		*e = GetNamesNearEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesNearEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesNearEmbedEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	GetNamesNearOutputFormatEnumCsv  GetNamesNearOutputFormatEnum = "csv"
 )
 
+func (e GetNamesNearOutputFormatEnum) ToPointer() *GetNamesNearOutputFormatEnum {
+	return &e
+}
+
 func (e *GetNamesNearOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -55,55 +63,59 @@ func (e *GetNamesNearOutputFormatEnum) UnmarshalJSON(data []byte) error {
 	case "kml":
 		fallthrough
 	case "csv":
-		*e = GetNamesNearOutputFormatEnum(s)
+		*e = GetNamesNearOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesNearOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesNearOutputFormatEnum: %v", v)
 	}
 }
 
 // GetNamesNearOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries.
-type GetNamesNearOutputSrsEnum string
+type GetNamesNearOutputSrsEnum int64
 
 const (
-	GetNamesNearOutputSrsEnumFourThousandThreeHundredAndTwentySix   GetNamesNearOutputSrsEnum = "4326"
-	GetNamesNearOutputSrsEnumFourThousandTwoHundredAndSixtyNine     GetNamesNearOutputSrsEnum = "4269"
-	GetNamesNearOutputSrsEnumThreeThousandAndFive                   GetNamesNearOutputSrsEnum = "3005"
-	GetNamesNearOutputSrsEnumThreeThousandEightHundredAndFiftySeven GetNamesNearOutputSrsEnum = "3857"
-	GetNamesNearOutputSrsEnumTwentySixThousandNineHundredAndSeven   GetNamesNearOutputSrsEnum = "26907"
-	GetNamesNearOutputSrsEnumTwentySixThousandNineHundredAndEight   GetNamesNearOutputSrsEnum = "26908"
-	GetNamesNearOutputSrsEnumTwentySixThousandNineHundredAndNine    GetNamesNearOutputSrsEnum = "26909"
-	GetNamesNearOutputSrsEnumTwentySixThousandNineHundredAndTen     GetNamesNearOutputSrsEnum = "26910"
-	GetNamesNearOutputSrsEnumTwentySixThousandNineHundredAndEleven  GetNamesNearOutputSrsEnum = "26911"
+	GetNamesNearOutputSrsEnumFourThousandThreeHundredAndTwentySix   GetNamesNearOutputSrsEnum = 4326
+	GetNamesNearOutputSrsEnumFourThousandTwoHundredAndSixtyNine     GetNamesNearOutputSrsEnum = 4269
+	GetNamesNearOutputSrsEnumThreeThousandAndFive                   GetNamesNearOutputSrsEnum = 3005
+	GetNamesNearOutputSrsEnumThreeThousandEightHundredAndFiftySeven GetNamesNearOutputSrsEnum = 3857
+	GetNamesNearOutputSrsEnumTwentySixThousandNineHundredAndSeven   GetNamesNearOutputSrsEnum = 26907
+	GetNamesNearOutputSrsEnumTwentySixThousandNineHundredAndEight   GetNamesNearOutputSrsEnum = 26908
+	GetNamesNearOutputSrsEnumTwentySixThousandNineHundredAndNine    GetNamesNearOutputSrsEnum = 26909
+	GetNamesNearOutputSrsEnumTwentySixThousandNineHundredAndTen     GetNamesNearOutputSrsEnum = 26910
+	GetNamesNearOutputSrsEnumTwentySixThousandNineHundredAndEleven  GetNamesNearOutputSrsEnum = 26911
 )
 
+func (e GetNamesNearOutputSrsEnum) ToPointer() *GetNamesNearOutputSrsEnum {
+	return &e
+}
+
 func (e *GetNamesNearOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "3857":
+	case 3857:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetNamesNearOutputSrsEnum(s)
+	case 26911:
+		*e = GetNamesNearOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesNearOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesNearOutputSrsEnum: %v", v)
 	}
 }
 
@@ -115,19 +127,23 @@ const (
 	GetNamesNearOutputStyleEnumDetail  GetNamesNearOutputStyleEnum = "detail"
 )
 
+func (e GetNamesNearOutputStyleEnum) ToPointer() *GetNamesNearOutputStyleEnum {
+	return &e
+}
+
 func (e *GetNamesNearOutputStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "summary":
 		fallthrough
 	case "detail":
-		*e = GetNamesNearOutputStyleEnum(s)
+		*e = GetNamesNearOutputStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesNearOutputStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesNearOutputStyleEnum: %v", v)
 	}
 }
 
@@ -140,21 +156,25 @@ const (
 	GetNamesNearSortByEnumDecisionDate GetNamesNearSortByEnum = "decisionDate"
 )
 
+func (e GetNamesNearSortByEnum) ToPointer() *GetNamesNearSortByEnum {
+	return &e
+}
+
 func (e *GetNamesNearSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "name":
 		fallthrough
 	case "featureType":
 		fallthrough
 	case "decisionDate":
-		*e = GetNamesNearSortByEnum(s)
+		*e = GetNamesNearSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesNearSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesNearSortByEnum: %v", v)
 	}
 }
 

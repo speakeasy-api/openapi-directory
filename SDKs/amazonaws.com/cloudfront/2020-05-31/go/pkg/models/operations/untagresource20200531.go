@@ -15,17 +15,21 @@ const (
 	UntagResource20200531OperationEnumUntag UntagResource20200531OperationEnum = "Untag"
 )
 
+func (e UntagResource20200531OperationEnum) ToPointer() *UntagResource20200531OperationEnum {
+	return &e
+}
+
 func (e *UntagResource20200531OperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Untag":
-		*e = UntagResource20200531OperationEnum(s)
+		*e = UntagResource20200531OperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UntagResource20200531OperationEnum: %s", s)
+		return fmt.Errorf("invalid value for UntagResource20200531OperationEnum: %v", v)
 	}
 }
 

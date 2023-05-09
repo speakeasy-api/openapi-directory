@@ -17,19 +17,23 @@ const (
 	PlayByPlaySimulationFormatEnumJSON PlayByPlaySimulationFormatEnum = "JSON"
 )
 
+func (e PlayByPlaySimulationFormatEnum) ToPointer() *PlayByPlaySimulationFormatEnum {
+	return &e
+}
+
 func (e *PlayByPlaySimulationFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = PlayByPlaySimulationFormatEnum(s)
+		*e = PlayByPlaySimulationFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlayByPlaySimulationFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PlayByPlaySimulationFormatEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	PutPipelineDefinitionXAmzTargetEnumDataPipelinePutPipelineDefinition PutPipelineDefinitionXAmzTargetEnum = "DataPipeline.PutPipelineDefinition"
 )
 
+func (e PutPipelineDefinitionXAmzTargetEnum) ToPointer() *PutPipelineDefinitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutPipelineDefinitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DataPipeline.PutPipelineDefinition":
-		*e = PutPipelineDefinitionXAmzTargetEnum(s)
+		*e = PutPipelineDefinitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutPipelineDefinitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutPipelineDefinitionXAmzTargetEnum: %v", v)
 	}
 }
 

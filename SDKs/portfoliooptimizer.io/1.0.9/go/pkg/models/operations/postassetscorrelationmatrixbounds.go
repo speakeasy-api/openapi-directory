@@ -10,7 +10,7 @@ type PostAssetsCorrelationMatrixBoundsRequestBody struct {
 	Assets int64 `json:"assets"`
 	// assetsCorrelationMatrix[i][j] is the correlation between the asset i and the asset j
 	AssetsCorrelationMatrix [][]float64 `json:"assetsCorrelationMatrix"`
-	// assetsGroup[k] is the indexes of the assets belonging to the assets group
+	// assetsGroup[k] is the indexes of the assets belonging to the assets group k
 	AssetsGroup []int64 `json:"assetsGroup"`
 }
 

@@ -15,19 +15,23 @@ const (
 	AutoTextTypeEnumSlideNumber     AutoTextTypeEnum = "SLIDE_NUMBER"
 )
 
+func (e AutoTextTypeEnum) ToPointer() *AutoTextTypeEnum {
+	return &e
+}
+
 func (e *AutoTextTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "SLIDE_NUMBER":
-		*e = AutoTextTypeEnum(s)
+		*e = AutoTextTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoTextTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoTextTypeEnum: %v", v)
 	}
 }
 

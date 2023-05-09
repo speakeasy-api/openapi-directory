@@ -15,17 +15,21 @@ const (
 	POSTCreatePolicyVersionActionEnumCreatePolicyVersion POSTCreatePolicyVersionActionEnum = "CreatePolicyVersion"
 )
 
+func (e POSTCreatePolicyVersionActionEnum) ToPointer() *POSTCreatePolicyVersionActionEnum {
+	return &e
+}
+
 func (e *POSTCreatePolicyVersionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreatePolicyVersion":
-		*e = POSTCreatePolicyVersionActionEnum(s)
+		*e = POSTCreatePolicyVersionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreatePolicyVersionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreatePolicyVersionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreatePolicyVersionVersionEnumTwoThousandAndTen0508 POSTCreatePolicyVersionVersionEnum = "2010-05-08"
 )
 
+func (e POSTCreatePolicyVersionVersionEnum) ToPointer() *POSTCreatePolicyVersionVersionEnum {
+	return &e
+}
+
 func (e *POSTCreatePolicyVersionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTCreatePolicyVersionVersionEnum(s)
+		*e = POSTCreatePolicyVersionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreatePolicyVersionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreatePolicyVersionVersionEnum: %v", v)
 	}
 }
 

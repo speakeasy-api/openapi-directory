@@ -14,6 +14,7 @@ type Component struct {
 	DeploymentStatusMessage   *string              `json:"deploymentStatusMessage,omitempty"`
 	Description               *string              `json:"description,omitempty"`
 	EnvironmentName           string               `json:"environmentName"`
+	LastClientRequestToken    *string              `json:"lastClientRequestToken,omitempty"`
 	LastDeploymentAttemptedAt *time.Time           `json:"lastDeploymentAttemptedAt,omitempty"`
 	LastDeploymentSucceededAt *time.Time           `json:"lastDeploymentSucceededAt,omitempty"`
 	LastModifiedAt            time.Time            `json:"lastModifiedAt"`

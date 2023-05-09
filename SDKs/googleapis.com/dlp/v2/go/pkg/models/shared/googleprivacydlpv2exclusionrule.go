@@ -17,12 +17,16 @@ const (
 	GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnumMatchingTypeInverseMatch GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum = "MATCHING_TYPE_INVERSE_MATCH"
 )
 
+func (e GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum) ToPointer() *GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MATCHING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MATCHING_TYPE_FULL_MATCH":
@@ -30,10 +34,10 @@ func (e *GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum) UnmarshalJSON(data []b
 	case "MATCHING_TYPE_PARTIAL_MATCH":
 		fallthrough
 	case "MATCHING_TYPE_INVERSE_MATCH":
-		*e = GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum(s)
+		*e = GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2ExclusionRuleMatchingTypeEnum: %v", v)
 	}
 }
 

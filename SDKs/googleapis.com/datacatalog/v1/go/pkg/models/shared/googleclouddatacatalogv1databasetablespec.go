@@ -16,21 +16,25 @@ const (
 	GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnumExternal             GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnum = "EXTERNAL"
 )
 
+func (e GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnum) ToPointer() *GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TABLE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NATIVE":
 		fallthrough
 	case "EXTERNAL":
-		*e = GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnum(s)
+		*e = GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnum: %v", v)
 	}
 }
 

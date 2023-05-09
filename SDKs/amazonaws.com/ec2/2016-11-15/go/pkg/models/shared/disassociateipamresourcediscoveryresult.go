@@ -15,19 +15,23 @@ const (
 	DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationResourceDiscoveryStatusEnumNotFound DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationResourceDiscoveryStatusEnum = "not-found"
 )
 
+func (e DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationResourceDiscoveryStatusEnum) ToPointer() *DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationResourceDiscoveryStatusEnum {
+	return &e
+}
+
 func (e *DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationResourceDiscoveryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "not-found":
-		*e = DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationResourceDiscoveryStatusEnum(s)
+		*e = DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationResourceDiscoveryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationResourceDiscoveryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationResourceDiscoveryStatusEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationStateEnumRestoreInProgress      DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationStateEnum = "restore-in-progress"
 )
 
+func (e DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationStateEnum) ToPointer() *DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationStateEnum {
+	return &e
+}
+
 func (e *DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associate-in-progress":
 		fallthrough
 	case "associate-complete":
@@ -69,10 +77,10 @@ func (e *DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation
 	case "isolate-complete":
 		fallthrough
 	case "restore-in-progress":
-		*e = DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationStateEnum(s)
+		*e = DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationStateEnum: %v", v)
 	}
 }
 

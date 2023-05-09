@@ -14,18 +14,22 @@ const (
 	InstanceMetadataTagsStateEnumEnabled  InstanceMetadataTagsStateEnum = "enabled"
 )
 
+func (e InstanceMetadataTagsStateEnum) ToPointer() *InstanceMetadataTagsStateEnum {
+	return &e
+}
+
 func (e *InstanceMetadataTagsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = InstanceMetadataTagsStateEnum(s)
+		*e = InstanceMetadataTagsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceMetadataTagsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceMetadataTagsStateEnum: %v", v)
 	}
 }

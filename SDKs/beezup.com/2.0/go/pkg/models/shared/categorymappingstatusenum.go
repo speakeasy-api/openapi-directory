@@ -15,20 +15,24 @@ const (
 	CategoryMappingStatusEnumFailed  CategoryMappingStatusEnum = "failed"
 )
 
+func (e CategoryMappingStatusEnum) ToPointer() *CategoryMappingStatusEnum {
+	return &e
+}
+
 func (e *CategoryMappingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "warning":
 		fallthrough
 	case "success":
 		fallthrough
 	case "failed":
-		*e = CategoryMappingStatusEnum(s)
+		*e = CategoryMappingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CategoryMappingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CategoryMappingStatusEnum: %v", v)
 	}
 }

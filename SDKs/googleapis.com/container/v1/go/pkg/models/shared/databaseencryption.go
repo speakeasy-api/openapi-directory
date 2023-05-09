@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// DatabaseEncryptionStateEnum - Denotes the state of etcd encryption.
+// DatabaseEncryptionStateEnum - The desired state of etcd encryption.
 type DatabaseEncryptionStateEnum string
 
 const (
@@ -16,21 +16,25 @@ const (
 	DatabaseEncryptionStateEnumDecrypted DatabaseEncryptionStateEnum = "DECRYPTED"
 )
 
+func (e DatabaseEncryptionStateEnum) ToPointer() *DatabaseEncryptionStateEnum {
+	return &e
+}
+
 func (e *DatabaseEncryptionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "ENCRYPTED":
 		fallthrough
 	case "DECRYPTED":
-		*e = DatabaseEncryptionStateEnum(s)
+		*e = DatabaseEncryptionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseEncryptionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseEncryptionStateEnum: %v", v)
 	}
 }
 
@@ -38,6 +42,6 @@ func (e *DatabaseEncryptionStateEnum) UnmarshalJSON(data []byte) error {
 type DatabaseEncryption struct {
 	// Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
 	KeyName *string `json:"keyName,omitempty"`
-	// Denotes the state of etcd encryption.
+	// The desired state of etcd encryption.
 	State *DatabaseEncryptionStateEnum `json:"state,omitempty"`
 }

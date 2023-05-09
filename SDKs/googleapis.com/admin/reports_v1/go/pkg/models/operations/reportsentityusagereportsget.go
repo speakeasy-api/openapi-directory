@@ -21,17 +21,21 @@ const (
 	ReportsEntityUsageReportsGetEntityTypeEnumGplusCommunities ReportsEntityUsageReportsGetEntityTypeEnum = "gplus_communities"
 )
 
+func (e ReportsEntityUsageReportsGetEntityTypeEnum) ToPointer() *ReportsEntityUsageReportsGetEntityTypeEnum {
+	return &e
+}
+
 func (e *ReportsEntityUsageReportsGetEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gplus_communities":
-		*e = ReportsEntityUsageReportsGetEntityTypeEnum(s)
+		*e = ReportsEntityUsageReportsGetEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportsEntityUsageReportsGetEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportsEntityUsageReportsGetEntityTypeEnum: %v", v)
 	}
 }
 

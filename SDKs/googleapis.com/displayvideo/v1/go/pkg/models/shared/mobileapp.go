@@ -22,21 +22,25 @@ const (
 	MobileAppPlatformEnumAndroid             MobileAppPlatformEnum = "ANDROID"
 )
 
+func (e MobileAppPlatformEnum) ToPointer() *MobileAppPlatformEnum {
+	return &e
+}
+
 func (e *MobileAppPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_UNSPECIFIED":
 		fallthrough
 	case "IOS":
 		fallthrough
 	case "ANDROID":
-		*e = MobileAppPlatformEnum(s)
+		*e = MobileAppPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MobileAppPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for MobileAppPlatformEnum: %v", v)
 	}
 }
 

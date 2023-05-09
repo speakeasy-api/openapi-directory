@@ -36,21 +36,25 @@ const (
 	PutCertificatesIDCertificateResponseCertificateStatusIssuanceEnumFailed    PutCertificatesIDCertificateResponseCertificateStatusIssuanceEnum = "failed"
 )
 
+func (e PutCertificatesIDCertificateResponseCertificateStatusIssuanceEnum) ToPointer() *PutCertificatesIDCertificateResponseCertificateStatusIssuanceEnum {
+	return &e
+}
+
 func (e *PutCertificatesIDCertificateResponseCertificateStatusIssuanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "completed":
 		fallthrough
 	case "failed":
-		*e = PutCertificatesIDCertificateResponseCertificateStatusIssuanceEnum(s)
+		*e = PutCertificatesIDCertificateResponseCertificateStatusIssuanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutCertificatesIDCertificateResponseCertificateStatusIssuanceEnum: %s", s)
+		return fmt.Errorf("invalid value for PutCertificatesIDCertificateResponseCertificateStatusIssuanceEnum: %v", v)
 	}
 }
 
@@ -64,12 +68,16 @@ const (
 	PutCertificatesIDCertificateResponseCertificateStatusRenewalEnumUnavailable PutCertificatesIDCertificateResponseCertificateStatusRenewalEnum = "unavailable"
 )
 
+func (e PutCertificatesIDCertificateResponseCertificateStatusRenewalEnum) ToPointer() *PutCertificatesIDCertificateResponseCertificateStatusRenewalEnum {
+	return &e
+}
+
 func (e *PutCertificatesIDCertificateResponseCertificateStatusRenewalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "scheduled":
 		fallthrough
 	case "pending":
@@ -77,10 +85,10 @@ func (e *PutCertificatesIDCertificateResponseCertificateStatusRenewalEnum) Unmar
 	case "failed":
 		fallthrough
 	case "unavailable":
-		*e = PutCertificatesIDCertificateResponseCertificateStatusRenewalEnum(s)
+		*e = PutCertificatesIDCertificateResponseCertificateStatusRenewalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutCertificatesIDCertificateResponseCertificateStatusRenewalEnum: %s", s)
+		return fmt.Errorf("invalid value for PutCertificatesIDCertificateResponseCertificateStatusRenewalEnum: %v", v)
 	}
 }
 
@@ -102,19 +110,23 @@ const (
 	PutCertificatesIDCertificateResponseCertificateTypeEnumManaged  PutCertificatesIDCertificateResponseCertificateTypeEnum = "managed"
 )
 
+func (e PutCertificatesIDCertificateResponseCertificateTypeEnum) ToPointer() *PutCertificatesIDCertificateResponseCertificateTypeEnum {
+	return &e
+}
+
 func (e *PutCertificatesIDCertificateResponseCertificateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uploaded":
 		fallthrough
 	case "managed":
-		*e = PutCertificatesIDCertificateResponseCertificateTypeEnum(s)
+		*e = PutCertificatesIDCertificateResponseCertificateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutCertificatesIDCertificateResponseCertificateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutCertificatesIDCertificateResponseCertificateTypeEnum: %v", v)
 	}
 }
 

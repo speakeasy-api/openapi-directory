@@ -13,23 +13,27 @@ type CancelAPendingCheckTransferRequest struct {
 	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum = "429"
+	CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnumRateLimitedError CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type CancelAPendingCheckTransferDefaultApplicationJSON13 struct {
 	Type       CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnum = "403"
+	CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON12TypeEnumPrivateFeatureError CancelAPendingCheckTransferDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON12TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON12TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type CancelAPendingCheckTransferDefaultApplicationJSON12 struct {
 	Type   CancelAPendingCheckTransferDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnum = "404"
+	CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON11TypeEnumObjectNotFoundError CancelAPendingCheckTransferDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON11TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON11TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type CancelAPendingCheckTransferDefaultApplicationJSON11 struct {
 	Type   CancelAPendingCheckTransferDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnumFourHundred CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum = "400"
+	CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnumFourHundred CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnumMalformedRequestError CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type CancelAPendingCheckTransferDefaultApplicationJSON10 struct {
 	Type   CancelAPendingCheckTransferDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnumFourHundred CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnum = "400"
+	CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnumFourHundred CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON9TypeEnumInvalidParametersError CancelAPendingCheckTransferDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON9TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON9TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type CancelAPendingCheckTransferDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                     `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                     `json:"errors"`
 	Status CancelAPendingCheckTransferDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                       `json:"title"`
 	Type   CancelAPendingCheckTransferDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnum = "409"
+	CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON8TypeEnumInvalidOperationError CancelAPendingCheckTransferDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON8TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON8TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type CancelAPendingCheckTransferDefaultApplicationJSON8 struct {
 	Type   CancelAPendingCheckTransferDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnum = "401"
+	CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON7TypeEnumInvalidAPIKeyError CancelAPendingCheckTransferDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON7TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON7TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type CancelAPendingCheckTransferDefaultApplicationJSON7 struct {
 	Type   CancelAPendingCheckTransferDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnumFiveHundred CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnum = "500"
+	CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnumFiveHundred CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON6TypeEnumInternalServerError CancelAPendingCheckTransferDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON6TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON6TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type CancelAPendingCheckTransferDefaultApplicationJSON6 struct {
 	Type   CancelAPendingCheckTransferDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnum = "403"
+	CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON5TypeEnumInsufficientPermissionsError CancelAPendingCheckTransferDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON5TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON5TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type CancelAPendingCheckTransferDefaultApplicationJSON5 struct {
 	Type   CancelAPendingCheckTransferDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum = "422"
+	CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError CancelAPendingCheckTransferDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON4TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON4TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type CancelAPendingCheckTransferDefaultApplicationJSON4 struct {
 	Type   CancelAPendingCheckTransferDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnum = "409"
+	CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON3TypeEnumIdempotencyConflictError CancelAPendingCheckTransferDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON3TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON3TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type CancelAPendingCheckTransferDefaultApplicationJSON3 struct {
 	Type   CancelAPendingCheckTransferDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnum = "403"
+	CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON2TypeEnumEnvironmentMismatchError CancelAPendingCheckTransferDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON2TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON2TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type CancelAPendingCheckTransferDefaultApplicationJSON2 struct {
 	Type   CancelAPendingCheckTransferDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnum string
+type CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnum int64
 
 const (
-	CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnum = "404"
+	CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	CancelAPendingCheckTransferDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError CancelAPendingCheckTransferDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e CancelAPendingCheckTransferDefaultApplicationJSON1TypeEnum) ToPointer() *CancelAPendingCheckTransferDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *CancelAPendingCheckTransferDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = CancelAPendingCheckTransferDefaultApplicationJSON1TypeEnum(s)
+		*e = CancelAPendingCheckTransferDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelAPendingCheckTransferDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

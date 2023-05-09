@@ -16,19 +16,23 @@ const (
 	CreateAnAchPrenotificationParametersCreditDebitIndicatorEnumDebit  CreateAnAchPrenotificationParametersCreditDebitIndicatorEnum = "debit"
 )
 
+func (e CreateAnAchPrenotificationParametersCreditDebitIndicatorEnum) ToPointer() *CreateAnAchPrenotificationParametersCreditDebitIndicatorEnum {
+	return &e
+}
+
 func (e *CreateAnAchPrenotificationParametersCreditDebitIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "credit":
 		fallthrough
 	case "debit":
-		*e = CreateAnAchPrenotificationParametersCreditDebitIndicatorEnum(s)
+		*e = CreateAnAchPrenotificationParametersCreditDebitIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAchPrenotificationParametersCreditDebitIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAchPrenotificationParametersCreditDebitIndicatorEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	CreateAnAchPrenotificationParametersStandardEntryClassCodeEnumInternetInitiated             CreateAnAchPrenotificationParametersStandardEntryClassCodeEnum = "internet_initiated"
 )
 
+func (e CreateAnAchPrenotificationParametersStandardEntryClassCodeEnum) ToPointer() *CreateAnAchPrenotificationParametersStandardEntryClassCodeEnum {
+	return &e
+}
+
 func (e *CreateAnAchPrenotificationParametersStandardEntryClassCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "corporate_credit_or_debit":
 		fallthrough
 	case "prearranged_payments_and_deposit":
 		fallthrough
 	case "internet_initiated":
-		*e = CreateAnAchPrenotificationParametersStandardEntryClassCodeEnum(s)
+		*e = CreateAnAchPrenotificationParametersStandardEntryClassCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAchPrenotificationParametersStandardEntryClassCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAchPrenotificationParametersStandardEntryClassCodeEnum: %v", v)
 	}
 }
 

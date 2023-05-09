@@ -16,17 +16,21 @@ const (
 	BatchGetCommitsXAmzTargetEnumCodeCommit20150413BatchGetCommits BatchGetCommitsXAmzTargetEnum = "CodeCommit_20150413.BatchGetCommits"
 )
 
+func (e BatchGetCommitsXAmzTargetEnum) ToPointer() *BatchGetCommitsXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchGetCommitsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.BatchGetCommits":
-		*e = BatchGetCommitsXAmzTargetEnum(s)
+		*e = BatchGetCommitsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetCommitsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetCommitsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -98,7 +98,10 @@ func (s *jobs) JobAdd(ctx context.Context, request operations.JobAddRequest) (*o
 // JobDelete - Deletes a job.
 func (s *jobs) JobDelete(ctx context.Context, request operations.JobDeleteRequest) (*operations.JobDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -151,7 +154,10 @@ func (s *jobs) JobDelete(ctx context.Context, request operations.JobDeleteReques
 // JobDisable - Disables the specified job, preventing new tasks from running.
 func (s *jobs) JobDisable(ctx context.Context, request operations.JobDisableRequest) (*operations.JobDisableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobDisableParameter", "json")
 	if err != nil {
@@ -214,7 +220,10 @@ func (s *jobs) JobDisable(ctx context.Context, request operations.JobDisableRequ
 // JobEnable - Enables the specified job, allowing new tasks to run.
 func (s *jobs) JobEnable(ctx context.Context, request operations.JobEnableRequest) (*operations.JobEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -267,7 +276,10 @@ func (s *jobs) JobEnable(ctx context.Context, request operations.JobEnableReques
 // JobGet - Gets information about the specified job.
 func (s *jobs) JobGet(ctx context.Context, request operations.JobGetRequest) (*operations.JobGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -453,7 +465,10 @@ func (s *jobs) JobList(ctx context.Context, request operations.JobListRequest) (
 // JobListFromJobSchedule - Lists the jobs that have been created under the specified job schedule.
 func (s *jobs) JobListFromJobSchedule(ctx context.Context, request operations.JobListFromJobScheduleRequest) (*operations.JobListFromJobScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -515,7 +530,10 @@ func (s *jobs) JobListFromJobSchedule(ctx context.Context, request operations.Jo
 // JobListPreparationAndReleaseTaskStatus - Lists the execution status of the Job Preparation and Job Release task for the specified job across the compute nodes where the job has run.
 func (s *jobs) JobListPreparationAndReleaseTaskStatus(ctx context.Context, request operations.JobListPreparationAndReleaseTaskStatusRequest) (*operations.JobListPreparationAndReleaseTaskStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/jobpreparationandreleasetaskstatus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/jobpreparationandreleasetaskstatus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -577,7 +595,10 @@ func (s *jobs) JobListPreparationAndReleaseTaskStatus(ctx context.Context, reque
 // JobPatch - Updates the properties of a job.
 func (s *jobs) JobPatch(ctx context.Context, request operations.JobPatchRequest) (*operations.JobPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobPatchParameter", "json")
 	if err != nil {
@@ -640,7 +661,10 @@ func (s *jobs) JobPatch(ctx context.Context, request operations.JobPatchRequest)
 // JobTerminate - Terminates the specified job, marking it as completed.
 func (s *jobs) JobTerminate(ctx context.Context, request operations.JobTerminateRequest) (*operations.JobTerminateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/terminate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/terminate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobTerminateParameter", "json")
 	if err != nil {
@@ -700,7 +724,10 @@ func (s *jobs) JobTerminate(ctx context.Context, request operations.JobTerminate
 // JobUpdate - Updates the properties of a job.
 func (s *jobs) JobUpdate(ctx context.Context, request operations.JobUpdateRequest) (*operations.JobUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobUpdateParameter", "json")
 	if err != nil {

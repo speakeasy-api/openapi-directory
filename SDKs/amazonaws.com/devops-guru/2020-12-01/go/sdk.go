@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p> Amazon DevOps Guru is a fully managed service that helps you identify anomalous behavior in business critical operational applications. You specify the Amazon Web Services resources that you want DevOps Guru to cover, then the Amazon CloudWatch metrics and Amazon Web Services CloudTrail events related to those resources are analyzed. When anomalous behavior is detected, DevOps Guru creates an <i>insight</i> that includes recommendations, related events, and related metrics that can help you improve your operational applications. For more information, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/welcome.html">What is Amazon DevOps Guru</a>. </p> <p> You can specify 1 or 2 Amazon Simple Notification Service topics so you are notified every time a new insight is created. You can also enable DevOps Guru to generate an OpsItem in Amazon Web Services Systems Manager for each insight to help you manage and track your work addressing insights. </p> <p> To learn about the DevOps Guru workflow, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/welcome.html#how-it-works">How DevOps Guru works</a>. To learn about DevOps Guru concepts, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/concepts.html">Concepts in DevOps Guru</a>. </p>
 // https://docs.aws.amazon.com/devops-guru/ - Amazon Web Services documentation
 type SDK struct {
@@ -240,7 +255,10 @@ func (s *SDK) AddNotificationChannel(ctx context.Context, request operations.Add
 // DeleteInsight - Deletes the insight along with the associated anomalies, events and recommendations.
 func (s *SDK) DeleteInsight(ctx context.Context, request operations.DeleteInsightRequest) (*operations.DeleteInsightResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/insights/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/insights/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -528,7 +546,10 @@ func (s *SDK) DescribeAccountOverview(ctx context.Context, request operations.De
 // DescribeAnomaly -  Returns details about an anomaly that you specify using its ID.
 func (s *SDK) DescribeAnomaly(ctx context.Context, request operations.DescribeAnomalyRequest) (*operations.DescribeAnomalyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/anomalies/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/anomalies/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -820,7 +841,10 @@ func (s *SDK) DescribeFeedback(ctx context.Context, request operations.DescribeF
 // DescribeInsight -  Returns details about an insight that you specify using its ID.
 func (s *SDK) DescribeInsight(ctx context.Context, request operations.DescribeInsightRequest) (*operations.DescribeInsightResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/insights/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/insights/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1212,7 +1236,10 @@ func (s *SDK) DescribeOrganizationResourceCollectionHealth(ctx context.Context, 
 // DescribeResourceCollectionHealth -  Returns the number of open proactive insights, open reactive insights, and the Mean Time to Recover (MTTR) for all closed insights in resource collections in your account. You specify the type of Amazon Web Services resources collection. The two types of Amazon Web Services resource collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services resources that are defined in the stacks or that are tagged using the same tag <i>key</i>. You can specify up to 500 Amazon Web Services CloudFormation stacks.
 func (s *SDK) DescribeResourceCollectionHealth(ctx context.Context, request operations.DescribeResourceCollectionHealthRequest) (*operations.DescribeResourceCollectionHealthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/health/resource-collection/{ResourceCollectionType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/health/resource-collection/{ResourceCollectionType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1498,7 +1525,10 @@ func (s *SDK) GetCostEstimation(ctx context.Context, request operations.GetCostE
 // GetResourceCollection -  Returns lists Amazon Web Services resources that are of the specified resource collection type. The two types of Amazon Web Services resource collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services resources that are defined in the stacks or that are tagged using the same tag <i>key</i>. You can specify up to 500 Amazon Web Services CloudFormation stacks.
 func (s *SDK) GetResourceCollection(ctx context.Context, request operations.GetResourceCollectionRequest) (*operations.GetResourceCollectionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resource-collections/{ResourceCollectionType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/resource-collections/{ResourceCollectionType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1598,7 +1628,10 @@ func (s *SDK) GetResourceCollection(ctx context.Context, request operations.GetR
 // ListAnomaliesForInsight -  Returns a list of the anomalies that belong to an insight that you specify using its ID.
 func (s *SDK) ListAnomaliesForInsight(ctx context.Context, request operations.ListAnomaliesForInsightRequest) (*operations.ListAnomaliesForInsightResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/anomalies/insight/{InsightId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/anomalies/insight/{InsightId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2554,7 +2587,10 @@ func (s *SDK) PutFeedback(ctx context.Context, request operations.PutFeedbackReq
 // RemoveNotificationChannel -  Removes a notification channel from DevOps Guru. A notification channel is used to notify you when DevOps Guru generates an insight that contains information about how to improve your operations.
 func (s *SDK) RemoveNotificationChannel(ctx context.Context, request operations.RemoveNotificationChannelRequest) (*operations.RemoveNotificationChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/channels/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

@@ -15,21 +15,25 @@ const (
 	LicenseSFXAudioLayoutEnumStereo    LicenseSFXAudioLayoutEnum = "stereo"
 )
 
+func (e LicenseSFXAudioLayoutEnum) ToPointer() *LicenseSFXAudioLayoutEnum {
+	return &e
+}
+
 func (e *LicenseSFXAudioLayoutEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ambisonic":
 		fallthrough
 	case "5.1":
 		fallthrough
 	case "stereo":
-		*e = LicenseSFXAudioLayoutEnum(s)
+		*e = LicenseSFXAudioLayoutEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseSFXAudioLayoutEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseSFXAudioLayoutEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	LicenseSFXFormatEnumMp3 LicenseSFXFormatEnum = "mp3"
 )
 
+func (e LicenseSFXFormatEnum) ToPointer() *LicenseSFXFormatEnum {
+	return &e
+}
+
 func (e *LicenseSFXFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "wav":
 		fallthrough
 	case "mp3":
-		*e = LicenseSFXFormatEnum(s)
+		*e = LicenseSFXFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseSFXFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseSFXFormatEnum: %v", v)
 	}
 }
 

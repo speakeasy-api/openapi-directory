@@ -15,19 +15,23 @@ const (
 	InputConfigurationContainerTypeEnumDigitalInput InputConfigurationContainerTypeEnum = "DigitalInput"
 )
 
+func (e InputConfigurationContainerTypeEnum) ToPointer() *InputConfigurationContainerTypeEnum {
+	return &e
+}
+
 func (e *InputConfigurationContainerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TariffInput":
 		fallthrough
 	case "DigitalInput":
-		*e = InputConfigurationContainerTypeEnum(s)
+		*e = InputConfigurationContainerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InputConfigurationContainerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InputConfigurationContainerTypeEnum: %v", v)
 	}
 }
 

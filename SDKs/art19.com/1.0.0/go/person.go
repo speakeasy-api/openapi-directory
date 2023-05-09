@@ -105,7 +105,10 @@ func (s *person) GetPeople(ctx context.Context, request operations.GetPeopleRequ
 // Each Person added will have no additional access or permissions granted as a result of being included in the Credits section.
 func (s *person) GetPeopleID(ctx context.Context, request operations.GetPeopleIDRequest, security operations.GetPeopleIDSecurity) (*operations.GetPeopleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/people/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/people/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

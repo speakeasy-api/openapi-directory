@@ -15,17 +15,21 @@ const (
 	GETDeleteAutoScalingGroupActionEnumDeleteAutoScalingGroup GETDeleteAutoScalingGroupActionEnum = "DeleteAutoScalingGroup"
 )
 
+func (e GETDeleteAutoScalingGroupActionEnum) ToPointer() *GETDeleteAutoScalingGroupActionEnum {
+	return &e
+}
+
 func (e *GETDeleteAutoScalingGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteAutoScalingGroup":
-		*e = GETDeleteAutoScalingGroupActionEnum(s)
+		*e = GETDeleteAutoScalingGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteAutoScalingGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteAutoScalingGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteAutoScalingGroupVersionEnumTwoThousandAndEleven0101 GETDeleteAutoScalingGroupVersionEnum = "2011-01-01"
 )
 
+func (e GETDeleteAutoScalingGroupVersionEnum) ToPointer() *GETDeleteAutoScalingGroupVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteAutoScalingGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETDeleteAutoScalingGroupVersionEnum(s)
+		*e = GETDeleteAutoScalingGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteAutoScalingGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteAutoScalingGroupVersionEnum: %v", v)
 	}
 }
 

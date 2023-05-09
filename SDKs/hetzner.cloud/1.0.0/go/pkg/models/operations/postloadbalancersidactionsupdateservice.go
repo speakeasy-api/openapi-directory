@@ -30,19 +30,23 @@ const (
 	PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnumHTTP PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum = "http"
 )
 
+func (e PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum) ToPointer() *PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum {
+	return &e
+}
+
 func (e *PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "http":
-		*e = PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum(s)
+		*e = PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum: %v", v)
 	}
 }
 
@@ -85,21 +89,25 @@ const (
 	PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceProtocolEnumHTTPS PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceProtocolEnum = "https"
 )
 
+func (e PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceProtocolEnum) ToPointer() *PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceProtocolEnum {
+	return &e
+}
+
 func (e *PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "http":
 		fallthrough
 	case "https":
-		*e = PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceProtocolEnum(s)
+		*e = PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceProtocolEnum: %v", v)
 	}
 }
 
@@ -148,21 +156,25 @@ const (
 	PostLoadBalancersIDActionsUpdateServiceActionResponseActionStatusEnumError   PostLoadBalancersIDActionsUpdateServiceActionResponseActionStatusEnum = "error"
 )
 
+func (e PostLoadBalancersIDActionsUpdateServiceActionResponseActionStatusEnum) ToPointer() *PostLoadBalancersIDActionsUpdateServiceActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostLoadBalancersIDActionsUpdateServiceActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostLoadBalancersIDActionsUpdateServiceActionResponseActionStatusEnum(s)
+		*e = PostLoadBalancersIDActionsUpdateServiceActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsUpdateServiceActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsUpdateServiceActionResponseActionStatusEnum: %v", v)
 	}
 }
 

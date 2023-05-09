@@ -15,17 +15,21 @@ const (
 	POSTSearchTransitGatewayMulticastGroupsActionEnumSearchTransitGatewayMulticastGroups POSTSearchTransitGatewayMulticastGroupsActionEnum = "SearchTransitGatewayMulticastGroups"
 )
 
+func (e POSTSearchTransitGatewayMulticastGroupsActionEnum) ToPointer() *POSTSearchTransitGatewayMulticastGroupsActionEnum {
+	return &e
+}
+
 func (e *POSTSearchTransitGatewayMulticastGroupsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SearchTransitGatewayMulticastGroups":
-		*e = POSTSearchTransitGatewayMulticastGroupsActionEnum(s)
+		*e = POSTSearchTransitGatewayMulticastGroupsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSearchTransitGatewayMulticastGroupsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSearchTransitGatewayMulticastGroupsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSearchTransitGatewayMulticastGroupsVersionEnumTwoThousandAndSixteen1115 POSTSearchTransitGatewayMulticastGroupsVersionEnum = "2016-11-15"
 )
 
+func (e POSTSearchTransitGatewayMulticastGroupsVersionEnum) ToPointer() *POSTSearchTransitGatewayMulticastGroupsVersionEnum {
+	return &e
+}
+
 func (e *POSTSearchTransitGatewayMulticastGroupsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTSearchTransitGatewayMulticastGroupsVersionEnum(s)
+		*e = POSTSearchTransitGatewayMulticastGroupsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSearchTransitGatewayMulticastGroupsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSearchTransitGatewayMulticastGroupsVersionEnum: %v", v)
 	}
 }
 

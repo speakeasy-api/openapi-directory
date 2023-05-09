@@ -9,35 +9,39 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetSchedulesScheduleABySizeSizeEnum string
+type GetSchedulesScheduleABySizeSizeEnum int
 
 const (
-	GetSchedulesScheduleABySizeSizeEnumZero        GetSchedulesScheduleABySizeSizeEnum = "0"
-	GetSchedulesScheduleABySizeSizeEnumTwoHundred  GetSchedulesScheduleABySizeSizeEnum = "200"
-	GetSchedulesScheduleABySizeSizeEnumFiveHundred GetSchedulesScheduleABySizeSizeEnum = "500"
-	GetSchedulesScheduleABySizeSizeEnumOneThousand GetSchedulesScheduleABySizeSizeEnum = "1000"
-	GetSchedulesScheduleABySizeSizeEnumTwoThousand GetSchedulesScheduleABySizeSizeEnum = "2000"
+	GetSchedulesScheduleABySizeSizeEnumZero        GetSchedulesScheduleABySizeSizeEnum = 0
+	GetSchedulesScheduleABySizeSizeEnumTwoHundred  GetSchedulesScheduleABySizeSizeEnum = 200
+	GetSchedulesScheduleABySizeSizeEnumFiveHundred GetSchedulesScheduleABySizeSizeEnum = 500
+	GetSchedulesScheduleABySizeSizeEnumOneThousand GetSchedulesScheduleABySizeSizeEnum = 1000
+	GetSchedulesScheduleABySizeSizeEnumTwoThousand GetSchedulesScheduleABySizeSizeEnum = 2000
 )
 
+func (e GetSchedulesScheduleABySizeSizeEnum) ToPointer() *GetSchedulesScheduleABySizeSizeEnum {
+	return &e
+}
+
 func (e *GetSchedulesScheduleABySizeSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "200":
+	case 200:
 		fallthrough
-	case "500":
+	case 500:
 		fallthrough
-	case "1000":
+	case 1000:
 		fallthrough
-	case "2000":
-		*e = GetSchedulesScheduleABySizeSizeEnum(s)
+	case 2000:
+		*e = GetSchedulesScheduleABySizeSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchedulesScheduleABySizeSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchedulesScheduleABySizeSizeEnum: %v", v)
 	}
 }
 

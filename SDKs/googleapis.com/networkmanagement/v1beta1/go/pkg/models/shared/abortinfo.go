@@ -31,12 +31,16 @@ const (
 	AbortInfoCauseEnumGkeKonnectivityProxyUnsupported AbortInfoCauseEnum = "GKE_KONNECTIVITY_PROXY_UNSUPPORTED"
 )
 
+func (e AbortInfoCauseEnum) ToPointer() *AbortInfoCauseEnum {
+	return &e
+}
+
 func (e *AbortInfoCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAUSE_UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN_NETWORK":
@@ -72,10 +76,10 @@ func (e *AbortInfoCauseEnum) UnmarshalJSON(data []byte) error {
 	case "MISMATCHED_IP_VERSION":
 		fallthrough
 	case "GKE_KONNECTIVITY_PROXY_UNSUPPORTED":
-		*e = AbortInfoCauseEnum(s)
+		*e = AbortInfoCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AbortInfoCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for AbortInfoCauseEnum: %v", v)
 	}
 }
 

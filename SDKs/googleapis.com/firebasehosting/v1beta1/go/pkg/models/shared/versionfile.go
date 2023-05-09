@@ -16,21 +16,25 @@ const (
 	VersionFileStatusEnumActive            VersionFileStatusEnum = "ACTIVE"
 )
 
+func (e VersionFileStatusEnum) ToPointer() *VersionFileStatusEnum {
+	return &e
+}
+
 func (e *VersionFileStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "EXPECTED":
 		fallthrough
 	case "ACTIVE":
-		*e = VersionFileStatusEnum(s)
+		*e = VersionFileStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VersionFileStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for VersionFileStatusEnum: %v", v)
 	}
 }
 

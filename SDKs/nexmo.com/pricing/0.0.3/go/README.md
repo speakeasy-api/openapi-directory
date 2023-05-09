@@ -13,26 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/pricing/0.0.3/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.RetrievePrefixPricingRequest{
+    ctx := context.Background()
+    res, err := s.Pricing.RetrievePrefixPricing(ctx, operations.RetrievePrefixPricingRequest{
         APIKey: "corrupti",
         APISecret: "provident",
         Prefix: "distinctio",
         Type: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Pricing.RetrievePrefixPricing(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,11 +45,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### Pricing
+### [Pricing](docs/pricing/README.md)
 
-* `RetrievePrefixPricing` - Retrieve outbound pricing for a specific dialing prefix.
-* `RetrievePricingAllCountries` - Retrieve outbound pricing for all countries.
-* `RetrievePricingCountry` - Retrieve outbound pricing for a specific country.
+* [RetrievePrefixPricing](docs/pricing/README.md#retrieveprefixpricing) - Retrieve outbound pricing for a specific dialing prefix.
+* [RetrievePricingAllCountries](docs/pricing/README.md#retrievepricingallcountries) - Retrieve outbound pricing for all countries.
+* [RetrievePricingCountry](docs/pricing/README.md#retrievepricingcountry) - Retrieve outbound pricing for a specific country.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -197,12 +197,16 @@ const (
 	PriceCurrencyIDEnumZwl PriceCurrencyIDEnum = "ZWL"
 )
 
+func (e PriceCurrencyIDEnum) ToPointer() *PriceCurrencyIDEnum {
+	return &e
+}
+
 func (e *PriceCurrencyIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AED":
 		fallthrough
 	case "AFA":
@@ -572,10 +576,10 @@ func (e *PriceCurrencyIDEnum) UnmarshalJSON(data []byte) error {
 	case "ZWD":
 		fallthrough
 	case "ZWL":
-		*e = PriceCurrencyIDEnum(s)
+		*e = PriceCurrencyIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PriceCurrencyIDEnum: %s", s)
+		return fmt.Errorf("invalid value for PriceCurrencyIDEnum: %v", v)
 	}
 }
 

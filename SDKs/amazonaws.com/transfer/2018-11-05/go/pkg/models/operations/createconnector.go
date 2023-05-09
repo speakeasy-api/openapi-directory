@@ -16,17 +16,21 @@ const (
 	CreateConnectorXAmzTargetEnumTransferServiceCreateConnector CreateConnectorXAmzTargetEnum = "TransferService.CreateConnector"
 )
 
+func (e CreateConnectorXAmzTargetEnum) ToPointer() *CreateConnectorXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateConnectorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.CreateConnector":
-		*e = CreateConnectorXAmzTargetEnum(s)
+		*e = CreateConnectorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateConnectorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateConnectorXAmzTargetEnum: %v", v)
 	}
 }
 

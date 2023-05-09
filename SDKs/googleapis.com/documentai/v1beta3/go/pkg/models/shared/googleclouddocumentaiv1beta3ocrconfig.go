@@ -4,8 +4,10 @@ package shared
 
 // GoogleCloudDocumentaiV1beta3OcrConfig - Config for Document OCR.
 type GoogleCloudDocumentaiV1beta3OcrConfig struct {
-	// A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: - "legacy_layout": a heuristics layout detection algorithm, which serves as an alternative to the current ML-based layout detection algorithm. Customers can choose the best suitable layout algorithm based on their situation.
+	// A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: - `legacy_layout`: a heuristics layout detection algorithm, which serves as an alternative to the current ML-based layout detection algorithm. Customers can choose the best suitable layout algorithm based on their situation.
 	AdvancedOcrOptions []string `json:"advancedOcrOptions,omitempty"`
+	// Turn on font id model and returns font style information.
+	ComputeStyleInfo *bool `json:"computeStyleInfo,omitempty"`
 	// Enables intelligent document quality scores after OCR. Can help with diagnosing why OCR responses are of poor quality for a given input. Adds additional latency comparable to regular OCR to the process call.
 	EnableImageQualityScores *bool `json:"enableImageQualityScores,omitempty"`
 	// Enables special handling for PDFs with existing text information. Results in better text extraction quality in such PDF inputs.

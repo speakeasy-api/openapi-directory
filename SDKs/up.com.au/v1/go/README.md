@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/up.com.au/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,14 +28,12 @@ func main() {
         }),
     )
 
-    req := operations.GetAccountsRequest{
-        FilterAccountType: "TRANSACTIONAL",
-        FilterOwnershipType: "JOINT",
-        PageSize: 715190,
-    }
-
     ctx := context.Background()
-    res, err := s.Accounts.GetAccounts(ctx, req)
+    res, err := s.Accounts.GetAccounts(ctx, operations.GetAccountsRequest{
+        FilterAccountType: shared.AccountTypeEnumEnumTransactional.ToPointer(),
+        FilterOwnershipType: shared.OwnershipTypeEnumEnumJoint.ToPointer(),
+        PageSize: sdk.Int64(715190),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,41 +49,41 @@ func main() {
 ## Available Resources and Operations
 
 
-### Accounts
+### [Accounts](docs/accounts/README.md)
 
-* `GetAccounts` - List accounts
-* `GetAccountsID` - Retrieve account
+* [GetAccounts](docs/accounts/README.md#getaccounts) - List accounts
+* [GetAccountsID](docs/accounts/README.md#getaccountsid) - Retrieve account
 
-### Categories
+### [Categories](docs/categories/README.md)
 
-* `GetCategories` - List categories
-* `GetCategoriesID` - Retrieve category
-* `PatchTransactionsTransactionIDRelationshipsCategory` - Categorize transaction
+* [GetCategories](docs/categories/README.md#getcategories) - List categories
+* [GetCategoriesID](docs/categories/README.md#getcategoriesid) - Retrieve category
+* [PatchTransactionsTransactionIDRelationshipsCategory](docs/categories/README.md#patchtransactionstransactionidrelationshipscategory) - Categorize transaction
 
-### Tags
+### [Tags](docs/tags/README.md)
 
-* `DeleteTransactionsTransactionIDRelationshipsTags` - Remove tags from transaction
-* `GetTags` - List tags
-* `PostTransactionsTransactionIDRelationshipsTags` - Add tags to transaction
+* [DeleteTransactionsTransactionIDRelationshipsTags](docs/tags/README.md#deletetransactionstransactionidrelationshipstags) - Remove tags from transaction
+* [GetTags](docs/tags/README.md#gettags) - List tags
+* [PostTransactionsTransactionIDRelationshipsTags](docs/tags/README.md#posttransactionstransactionidrelationshipstags) - Add tags to transaction
 
-### Transactions
+### [Transactions](docs/transactions/README.md)
 
-* `GetAccountsAccountIDTransactions` - List transactions by account
-* `GetTransactions` - List transactions
-* `GetTransactionsID` - Retrieve transaction
+* [GetAccountsAccountIDTransactions](docs/transactions/README.md#getaccountsaccountidtransactions) - List transactions by account
+* [GetTransactions](docs/transactions/README.md#gettransactions) - List transactions
+* [GetTransactionsID](docs/transactions/README.md#gettransactionsid) - Retrieve transaction
 
-### UtilityEndpoints
+### [UtilityEndpoints](docs/utilityendpoints/README.md)
 
-* `GetUtilPing` - Ping
+* [GetUtilPing](docs/utilityendpoints/README.md#getutilping) - Ping
 
-### Webhooks
+### [Webhooks](docs/webhooks/README.md)
 
-* `DeleteWebhooksID` - Delete webhook
-* `GetWebhooks` - List webhooks
-* `GetWebhooksID` - Retrieve webhook
-* `GetWebhooksWebhookIDLogs` - List webhook logs
-* `PostWebhooks` - Create webhook
-* `PostWebhooksWebhookIDPing` - Ping webhook
+* [DeleteWebhooksID](docs/webhooks/README.md#deletewebhooksid) - Delete webhook
+* [GetWebhooks](docs/webhooks/README.md#getwebhooks) - List webhooks
+* [GetWebhooksID](docs/webhooks/README.md#getwebhooksid) - Retrieve webhook
+* [GetWebhooksWebhookIDLogs](docs/webhooks/README.md#getwebhookswebhookidlogs) - List webhook logs
+* [PostWebhooks](docs/webhooks/README.md#postwebhooks) - Create webhook
+* [PostWebhooksWebhookIDPing](docs/webhooks/README.md#postwebhookswebhookidping) - Ping webhook
 <!-- End SDK Available Operations -->
 
 ### Maturity

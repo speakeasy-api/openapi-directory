@@ -32,6 +32,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download and install application or firmware updates, reboot, rotate certificates, or perform remote troubleshooting operations.</p> <p> To create a job, you make a job document which is a description of the remote operations to be performed, and you specify a list of targets that should perform the operations. The targets can be individual things, thing groups or both.</p> <p> AWS IoT Jobs sends a message to inform the targets that a job is available. The target starts the execution of the job by downloading the job document, performing the operations it specifies, and reporting its progress to AWS IoT. The Jobs service provides commands to track the progress of a job on a specific target and for all the targets of the job</p>
 // https://docs.aws.amazon.com/iot/ - Amazon Web Services documentation
 type SDK struct {
@@ -113,7 +128,10 @@ func New(opts ...SDKOption) *SDK {
 // DescribeJobExecution - Gets details of a job execution.
 func (s *SDK) DescribeJobExecution(ctx context.Context, request operations.DescribeJobExecutionRequest) (*operations.DescribeJobExecutionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -223,7 +241,10 @@ func (s *SDK) DescribeJobExecution(ctx context.Context, request operations.Descr
 // GetPendingJobExecutions - Gets the list of all jobs for a thing that are not in a terminal status.
 func (s *SDK) GetPendingJobExecutions(ctx context.Context, request operations.GetPendingJobExecutionsRequest) (*operations.GetPendingJobExecutionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -319,7 +340,10 @@ func (s *SDK) GetPendingJobExecutions(ctx context.Context, request operations.Ge
 // StartNextPendingJobExecution - Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a thing.
 func (s *SDK) StartNextPendingJobExecution(ctx context.Context, request operations.StartNextPendingJobExecutionRequest) (*operations.StartNextPendingJobExecutionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/$next", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/$next", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -425,7 +449,10 @@ func (s *SDK) StartNextPendingJobExecution(ctx context.Context, request operatio
 // UpdateJobExecution - Updates the status of a job execution.
 func (s *SDK) UpdateJobExecution(ctx context.Context, request operations.UpdateJobExecutionRequest) (*operations.UpdateJobExecutionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/things/{thingName}/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

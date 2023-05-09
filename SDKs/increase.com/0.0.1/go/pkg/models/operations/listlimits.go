@@ -16,23 +16,27 @@ type ListLimitsRequest struct {
 	Status  *string `queryParam:"style=form,explode=true,name=status"`
 }
 
-type ListLimitsDefaultApplicationJSON13StatusEnum string
+type ListLimitsDefaultApplicationJSON13StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ListLimitsDefaultApplicationJSON13StatusEnum = "429"
+	ListLimitsDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ListLimitsDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e ListLimitsDefaultApplicationJSON13StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = ListLimitsDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = ListLimitsDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -42,17 +46,21 @@ const (
 	ListLimitsDefaultApplicationJSON13TypeEnumRateLimitedError ListLimitsDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON13TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = ListLimitsDefaultApplicationJSON13TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -64,23 +72,27 @@ type ListLimitsDefaultApplicationJSON13 struct {
 	Type       ListLimitsDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type ListLimitsDefaultApplicationJSON12StatusEnum string
+type ListLimitsDefaultApplicationJSON12StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON12StatusEnumFourHundredAndThree ListLimitsDefaultApplicationJSON12StatusEnum = "403"
+	ListLimitsDefaultApplicationJSON12StatusEnumFourHundredAndThree ListLimitsDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e ListLimitsDefaultApplicationJSON12StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListLimitsDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListLimitsDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -90,17 +102,21 @@ const (
 	ListLimitsDefaultApplicationJSON12TypeEnumPrivateFeatureError ListLimitsDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON12TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = ListLimitsDefaultApplicationJSON12TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -111,23 +127,27 @@ type ListLimitsDefaultApplicationJSON12 struct {
 	Type   ListLimitsDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type ListLimitsDefaultApplicationJSON11StatusEnum string
+type ListLimitsDefaultApplicationJSON11StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON11StatusEnumFourHundredAndFour ListLimitsDefaultApplicationJSON11StatusEnum = "404"
+	ListLimitsDefaultApplicationJSON11StatusEnumFourHundredAndFour ListLimitsDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e ListLimitsDefaultApplicationJSON11StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ListLimitsDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ListLimitsDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -137,17 +157,21 @@ const (
 	ListLimitsDefaultApplicationJSON11TypeEnumObjectNotFoundError ListLimitsDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON11TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = ListLimitsDefaultApplicationJSON11TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -158,23 +182,27 @@ type ListLimitsDefaultApplicationJSON11 struct {
 	Type   ListLimitsDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type ListLimitsDefaultApplicationJSON10StatusEnum string
+type ListLimitsDefaultApplicationJSON10StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON10StatusEnumFourHundred ListLimitsDefaultApplicationJSON10StatusEnum = "400"
+	ListLimitsDefaultApplicationJSON10StatusEnumFourHundred ListLimitsDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e ListLimitsDefaultApplicationJSON10StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ListLimitsDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ListLimitsDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -184,17 +212,21 @@ const (
 	ListLimitsDefaultApplicationJSON10TypeEnumMalformedRequestError ListLimitsDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON10TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = ListLimitsDefaultApplicationJSON10TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -205,23 +237,27 @@ type ListLimitsDefaultApplicationJSON10 struct {
 	Type   ListLimitsDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type ListLimitsDefaultApplicationJSON9StatusEnum string
+type ListLimitsDefaultApplicationJSON9StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON9StatusEnumFourHundred ListLimitsDefaultApplicationJSON9StatusEnum = "400"
+	ListLimitsDefaultApplicationJSON9StatusEnumFourHundred ListLimitsDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e ListLimitsDefaultApplicationJSON9StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ListLimitsDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ListLimitsDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -231,46 +267,54 @@ const (
 	ListLimitsDefaultApplicationJSON9TypeEnumInvalidParametersError ListLimitsDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON9TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = ListLimitsDefaultApplicationJSON9TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type ListLimitsDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                    `json:"errors,omitempty"`
+	Errors []map[string]interface{}                    `json:"errors"`
 	Status ListLimitsDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                      `json:"title"`
 	Type   ListLimitsDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type ListLimitsDefaultApplicationJSON8StatusEnum string
+type ListLimitsDefaultApplicationJSON8StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON8StatusEnumFourHundredAndNine ListLimitsDefaultApplicationJSON8StatusEnum = "409"
+	ListLimitsDefaultApplicationJSON8StatusEnumFourHundredAndNine ListLimitsDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e ListLimitsDefaultApplicationJSON8StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ListLimitsDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ListLimitsDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -280,17 +324,21 @@ const (
 	ListLimitsDefaultApplicationJSON8TypeEnumInvalidOperationError ListLimitsDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON8TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = ListLimitsDefaultApplicationJSON8TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -301,23 +349,27 @@ type ListLimitsDefaultApplicationJSON8 struct {
 	Type   ListLimitsDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type ListLimitsDefaultApplicationJSON7StatusEnum string
+type ListLimitsDefaultApplicationJSON7StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON7StatusEnumFourHundredAndOne ListLimitsDefaultApplicationJSON7StatusEnum = "401"
+	ListLimitsDefaultApplicationJSON7StatusEnumFourHundredAndOne ListLimitsDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e ListLimitsDefaultApplicationJSON7StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = ListLimitsDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = ListLimitsDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -327,17 +379,21 @@ const (
 	ListLimitsDefaultApplicationJSON7TypeEnumInvalidAPIKeyError ListLimitsDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON7TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = ListLimitsDefaultApplicationJSON7TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -348,23 +404,27 @@ type ListLimitsDefaultApplicationJSON7 struct {
 	Type   ListLimitsDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type ListLimitsDefaultApplicationJSON6StatusEnum string
+type ListLimitsDefaultApplicationJSON6StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON6StatusEnumFiveHundred ListLimitsDefaultApplicationJSON6StatusEnum = "500"
+	ListLimitsDefaultApplicationJSON6StatusEnumFiveHundred ListLimitsDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e ListLimitsDefaultApplicationJSON6StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = ListLimitsDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = ListLimitsDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -374,17 +434,21 @@ const (
 	ListLimitsDefaultApplicationJSON6TypeEnumInternalServerError ListLimitsDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON6TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = ListLimitsDefaultApplicationJSON6TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -395,23 +459,27 @@ type ListLimitsDefaultApplicationJSON6 struct {
 	Type   ListLimitsDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type ListLimitsDefaultApplicationJSON5StatusEnum string
+type ListLimitsDefaultApplicationJSON5StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON5StatusEnumFourHundredAndThree ListLimitsDefaultApplicationJSON5StatusEnum = "403"
+	ListLimitsDefaultApplicationJSON5StatusEnumFourHundredAndThree ListLimitsDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e ListLimitsDefaultApplicationJSON5StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListLimitsDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListLimitsDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -421,17 +489,21 @@ const (
 	ListLimitsDefaultApplicationJSON5TypeEnumInsufficientPermissionsError ListLimitsDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON5TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = ListLimitsDefaultApplicationJSON5TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -442,23 +514,27 @@ type ListLimitsDefaultApplicationJSON5 struct {
 	Type   ListLimitsDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type ListLimitsDefaultApplicationJSON4StatusEnum string
+type ListLimitsDefaultApplicationJSON4StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ListLimitsDefaultApplicationJSON4StatusEnum = "422"
+	ListLimitsDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ListLimitsDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e ListLimitsDefaultApplicationJSON4StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = ListLimitsDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = ListLimitsDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -468,17 +544,21 @@ const (
 	ListLimitsDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError ListLimitsDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON4TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = ListLimitsDefaultApplicationJSON4TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -489,23 +569,27 @@ type ListLimitsDefaultApplicationJSON4 struct {
 	Type   ListLimitsDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type ListLimitsDefaultApplicationJSON3StatusEnum string
+type ListLimitsDefaultApplicationJSON3StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON3StatusEnumFourHundredAndNine ListLimitsDefaultApplicationJSON3StatusEnum = "409"
+	ListLimitsDefaultApplicationJSON3StatusEnumFourHundredAndNine ListLimitsDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e ListLimitsDefaultApplicationJSON3StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ListLimitsDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ListLimitsDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -515,17 +599,21 @@ const (
 	ListLimitsDefaultApplicationJSON3TypeEnumIdempotencyConflictError ListLimitsDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON3TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = ListLimitsDefaultApplicationJSON3TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -536,23 +624,27 @@ type ListLimitsDefaultApplicationJSON3 struct {
 	Type   ListLimitsDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type ListLimitsDefaultApplicationJSON2StatusEnum string
+type ListLimitsDefaultApplicationJSON2StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON2StatusEnumFourHundredAndThree ListLimitsDefaultApplicationJSON2StatusEnum = "403"
+	ListLimitsDefaultApplicationJSON2StatusEnumFourHundredAndThree ListLimitsDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e ListLimitsDefaultApplicationJSON2StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListLimitsDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListLimitsDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -562,17 +654,21 @@ const (
 	ListLimitsDefaultApplicationJSON2TypeEnumEnvironmentMismatchError ListLimitsDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON2TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = ListLimitsDefaultApplicationJSON2TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -583,23 +679,27 @@ type ListLimitsDefaultApplicationJSON2 struct {
 	Type   ListLimitsDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type ListLimitsDefaultApplicationJSON1StatusEnum string
+type ListLimitsDefaultApplicationJSON1StatusEnum int64
 
 const (
-	ListLimitsDefaultApplicationJSON1StatusEnumFourHundredAndFour ListLimitsDefaultApplicationJSON1StatusEnum = "404"
+	ListLimitsDefaultApplicationJSON1StatusEnumFourHundredAndFour ListLimitsDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e ListLimitsDefaultApplicationJSON1StatusEnum) ToPointer() *ListLimitsDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ListLimitsDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ListLimitsDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -609,17 +709,21 @@ const (
 	ListLimitsDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError ListLimitsDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e ListLimitsDefaultApplicationJSON1TypeEnum) ToPointer() *ListLimitsDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *ListLimitsDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = ListLimitsDefaultApplicationJSON1TypeEnum(s)
+		*e = ListLimitsDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLimitsDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

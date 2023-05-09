@@ -13,16 +13,20 @@ const (
 	WarmPoolStatusEnumPendingDelete WarmPoolStatusEnum = "PendingDelete"
 )
 
+func (e WarmPoolStatusEnum) ToPointer() *WarmPoolStatusEnum {
+	return &e
+}
+
 func (e *WarmPoolStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PendingDelete":
-		*e = WarmPoolStatusEnum(s)
+		*e = WarmPoolStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WarmPoolStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WarmPoolStatusEnum: %v", v)
 	}
 }

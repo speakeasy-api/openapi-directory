@@ -126,12 +126,16 @@ const (
 	VectaraStatusCodeEnumIdxPermanentPartialDeletionFailure  VectaraStatusCodeEnum = "IDX__PERMANENT_PARTIAL_DELETION_FAILURE"
 )
 
+func (e VectaraStatusCodeEnum) ToPointer() *VectaraStatusCodeEnum {
+	return &e
+}
+
 func (e *VectaraStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "FAILURE":
@@ -359,9 +363,9 @@ func (e *VectaraStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "IDX__TRANSIENT_PARTIAL_DELETION_FAILURE":
 		fallthrough
 	case "IDX__PERMANENT_PARTIAL_DELETION_FAILURE":
-		*e = VectaraStatusCodeEnum(s)
+		*e = VectaraStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VectaraStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for VectaraStatusCodeEnum: %v", v)
 	}
 }

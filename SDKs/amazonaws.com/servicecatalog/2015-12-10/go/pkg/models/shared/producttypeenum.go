@@ -12,20 +12,27 @@ type ProductTypeEnum string
 const (
 	ProductTypeEnumCloudFormationTemplate ProductTypeEnum = "CLOUD_FORMATION_TEMPLATE"
 	ProductTypeEnumMarketplace            ProductTypeEnum = "MARKETPLACE"
+	ProductTypeEnumTerraformOpenSource    ProductTypeEnum = "TERRAFORM_OPEN_SOURCE"
 )
 
+func (e ProductTypeEnum) ToPointer() *ProductTypeEnum {
+	return &e
+}
+
 func (e *ProductTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLOUD_FORMATION_TEMPLATE":
 		fallthrough
 	case "MARKETPLACE":
-		*e = ProductTypeEnum(s)
+		fallthrough
+	case "TERRAFORM_OPEN_SOURCE":
+		*e = ProductTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductTypeEnum: %v", v)
 	}
 }

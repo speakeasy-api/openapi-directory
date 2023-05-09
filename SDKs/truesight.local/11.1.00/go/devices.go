@@ -37,7 +37,10 @@ func newDevices(defaultClient, securityClient HTTPClient, serverURL, language, s
 // You need to provide the <b>Device ID</b> of a device to retrieve any other devices monitored by the same Agent:<br>-use the <b>hardware/devices</b> service to get all available device IDs.
 func (s *devices) GetAgentDevices(ctx context.Context, request operations.GetAgentDevicesRequest) (*operations.GetAgentDevicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/devices/{deviceId}/agent-devices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hardware/devices/{deviceId}/agent-devices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *devices) GetAgentDevices(ctx context.Context, request operations.GetAge
 // You need to provide a <b>Device ID</b>:<br>-use the <b>hardware/devices</b> service to get all available device IDs.
 func (s *devices) GetDevice(ctx context.Context, request operations.GetDeviceRequest) (*operations.GetDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/devices/{deviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hardware/devices/{deviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -133,7 +139,10 @@ func (s *devices) GetDevice(ctx context.Context, request operations.GetDeviceReq
 // You need to provide a <b>Device ID</b> to retrieve detailed information about the Agent that Monitors the device:<br>-use the <b>hardware/devices</b> service to get all available device IDs.
 func (s *devices) GetDeviceAgent(ctx context.Context, request operations.GetDeviceAgentRequest) (*operations.GetDeviceAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/devices/{deviceId}/agent", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hardware/devices/{deviceId}/agent", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -180,7 +189,10 @@ func (s *devices) GetDeviceAgent(ctx context.Context, request operations.GetDevi
 // You need to provide the device ID:<br>- use the <b>hardware/devices</b> service to get all available device IDs.
 func (s *devices) GetDeviceEnergyUsage(ctx context.Context, request operations.GetDeviceEnergyUsageRequest) (*operations.GetDeviceEnergyUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/energy-usage/{deviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hardware/energy-usage/{deviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -231,7 +243,10 @@ func (s *devices) GetDeviceEnergyUsage(ctx context.Context, request operations.G
 // You need to provide a <b>Device ID</b>:<br>- use the <b>hardware/devices</b> service to get all available device IDs.
 func (s *devices) GetDeviceMonitors(ctx context.Context, request operations.GetDeviceMonitorsRequest) (*operations.GetDeviceMonitorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/device-monitors/{deviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hardware/device-monitors/{deviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -277,7 +292,10 @@ func (s *devices) GetDeviceMonitors(ctx context.Context, request operations.GetD
 // You need to provide the <b>Device ID</b>, <b>Parameter Name</b>, <b>Monitor Type</b> and <b>Monitor SID</b>:<br>- use the <b>hardware/devices</b> service to get all available device IDs<br>- use the <b>/hardware/device-monitors/{deviceId}</b> to get the parameter name, the Monitor type and the Monitor SID.<br><br>Finally, define the period for which you wish to retrieve data history.
 func (s *devices) GetDeviceParameterHistory(ctx context.Context, request operations.GetDeviceParameterHistoryRequest) (*operations.GetDeviceParameterHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/devices/{deviceId}/parameter-history", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hardware/devices/{deviceId}/parameter-history", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

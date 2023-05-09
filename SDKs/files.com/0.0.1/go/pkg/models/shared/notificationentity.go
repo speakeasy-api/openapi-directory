@@ -17,12 +17,16 @@ const (
 	NotificationEntitySendIntervalEnumDaily          NotificationEntitySendIntervalEnum = "daily"
 )
 
+func (e NotificationEntitySendIntervalEnum) ToPointer() *NotificationEntitySendIntervalEnum {
+	return &e
+}
+
 func (e *NotificationEntitySendIntervalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "five_minutes":
 		fallthrough
 	case "fifteen_minutes":
@@ -30,10 +34,10 @@ func (e *NotificationEntitySendIntervalEnum) UnmarshalJSON(data []byte) error {
 	case "hourly":
 		fallthrough
 	case "daily":
-		*e = NotificationEntitySendIntervalEnum(s)
+		*e = NotificationEntitySendIntervalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationEntitySendIntervalEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationEntitySendIntervalEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	NotificationEntityUnsubscribedReasonEnumMailMarkedAsSpam       NotificationEntityUnsubscribedReasonEnum = "mail_marked_as_spam"
 )
 
+func (e NotificationEntityUnsubscribedReasonEnum) ToPointer() *NotificationEntityUnsubscribedReasonEnum {
+	return &e
+}
+
 func (e *NotificationEntityUnsubscribedReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "unsubscribe_link_clicked":
@@ -60,10 +68,10 @@ func (e *NotificationEntityUnsubscribedReasonEnum) UnmarshalJSON(data []byte) er
 	case "mail_bounced":
 		fallthrough
 	case "mail_marked_as_spam":
-		*e = NotificationEntityUnsubscribedReasonEnum(s)
+		*e = NotificationEntityUnsubscribedReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationEntityUnsubscribedReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationEntityUnsubscribedReasonEnum: %v", v)
 	}
 }
 

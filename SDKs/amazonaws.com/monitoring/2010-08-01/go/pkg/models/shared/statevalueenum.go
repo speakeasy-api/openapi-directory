@@ -15,20 +15,24 @@ const (
 	StateValueEnumInsufficientData StateValueEnum = "INSUFFICIENT_DATA"
 )
 
+func (e StateValueEnum) ToPointer() *StateValueEnum {
+	return &e
+}
+
 func (e *StateValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "ALARM":
 		fallthrough
 	case "INSUFFICIENT_DATA":
-		*e = StateValueEnum(s)
+		*e = StateValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StateValueEnum: %s", s)
+		return fmt.Errorf("invalid value for StateValueEnum: %v", v)
 	}
 }

@@ -17,19 +17,23 @@ const (
 	CreateLaunchConfigurationTemplateRequestBodyBootModeEnumUefi       CreateLaunchConfigurationTemplateRequestBodyBootModeEnum = "UEFI"
 )
 
+func (e CreateLaunchConfigurationTemplateRequestBodyBootModeEnum) ToPointer() *CreateLaunchConfigurationTemplateRequestBodyBootModeEnum {
+	return &e
+}
+
 func (e *CreateLaunchConfigurationTemplateRequestBodyBootModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEGACY_BIOS":
 		fallthrough
 	case "UEFI":
-		*e = CreateLaunchConfigurationTemplateRequestBodyBootModeEnum(s)
+		*e = CreateLaunchConfigurationTemplateRequestBodyBootModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchConfigurationTemplateRequestBodyBootModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchConfigurationTemplateRequestBodyBootModeEnum: %v", v)
 	}
 }
 
@@ -48,19 +52,23 @@ const (
 	CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnumStarted CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum = "STARTED"
 )
 
+func (e CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum) ToPointer() *CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum {
+	return &e
+}
+
 func (e *CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STOPPED":
 		fallthrough
 	case "STARTED":
-		*e = CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum(s)
+		*e = CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum: %v", v)
 	}
 }
 
@@ -93,19 +101,23 @@ const (
 	CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnumBasic CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum = "BASIC"
 )
 
+func (e CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum) ToPointer() *CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum {
+	return &e
+}
+
 func (e *CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "BASIC":
-		*e = CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum(s)
+		*e = CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum: %v", v)
 	}
 }
 

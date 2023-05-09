@@ -16,17 +16,21 @@ const (
 	DisassociateConnectionFromLagXAmzTargetEnumOvertureServiceDisassociateConnectionFromLag DisassociateConnectionFromLagXAmzTargetEnum = "OvertureService.DisassociateConnectionFromLag"
 )
 
+func (e DisassociateConnectionFromLagXAmzTargetEnum) ToPointer() *DisassociateConnectionFromLagXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateConnectionFromLagXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.DisassociateConnectionFromLag":
-		*e = DisassociateConnectionFromLagXAmzTargetEnum(s)
+		*e = DisassociateConnectionFromLagXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateConnectionFromLagXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateConnectionFromLagXAmzTargetEnum: %v", v)
 	}
 }
 

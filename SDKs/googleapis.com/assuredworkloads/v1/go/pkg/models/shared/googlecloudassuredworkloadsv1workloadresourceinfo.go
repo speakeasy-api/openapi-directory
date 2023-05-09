@@ -18,12 +18,16 @@ const (
 	GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResourceTypeEnumKeyring                 GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResourceTypeEnum = "KEYRING"
 )
 
+func (e GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResourceTypeEnum) ToPointer() *GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResourceTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CONSUMER_PROJECT":
@@ -33,10 +37,10 @@ func (e *GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResourceTypeEnum) Unma
 	case "ENCRYPTION_KEYS_PROJECT":
 		fallthrough
 	case "KEYRING":
-		*e = GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResourceTypeEnum(s)
+		*e = GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResourceTypeEnum: %v", v)
 	}
 }
 

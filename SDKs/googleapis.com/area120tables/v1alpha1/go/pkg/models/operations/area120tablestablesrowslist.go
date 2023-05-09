@@ -56,19 +56,23 @@ const (
 	Area120tablesTablesRowsListViewEnumColumnIDView    Area120tablesTablesRowsListViewEnum = "COLUMN_ID_VIEW"
 )
 
+func (e Area120tablesTablesRowsListViewEnum) ToPointer() *Area120tablesTablesRowsListViewEnum {
+	return &e
+}
+
 func (e *Area120tablesTablesRowsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_UNSPECIFIED":
 		fallthrough
 	case "COLUMN_ID_VIEW":
-		*e = Area120tablesTablesRowsListViewEnum(s)
+		*e = Area120tablesTablesRowsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Area120tablesTablesRowsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for Area120tablesTablesRowsListViewEnum: %v", v)
 	}
 }
 

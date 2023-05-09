@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetcompanymatchRequest{
+    ctx := context.Background()
+    res, err := s.CompanyNameSimilarityKey.Getcompanymatch(ctx, operations.GetcompanymatchRequest{
         Company: "Medhurst - Rau",
         License: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.CompanyNameSimilarityKey.Getcompanymatch(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

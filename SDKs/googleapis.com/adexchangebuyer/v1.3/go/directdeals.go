@@ -35,7 +35,10 @@ func newDirectDeals(defaultClient, securityClient HTTPClient, serverURL, languag
 // AdexchangebuyerDirectDealsGet - Gets one direct deal by ID.
 func (s *directDeals) AdexchangebuyerDirectDealsGet(ctx context.Context, request operations.AdexchangebuyerDirectDealsGetRequest, security operations.AdexchangebuyerDirectDealsGetSecurity) (*operations.AdexchangebuyerDirectDealsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/directdeals/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/directdeals/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

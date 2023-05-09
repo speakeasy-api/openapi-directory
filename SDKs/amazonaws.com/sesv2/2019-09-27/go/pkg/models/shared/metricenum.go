@@ -22,12 +22,16 @@ const (
 	MetricEnumDeliveryComplaint MetricEnum = "DELIVERY_COMPLAINT"
 )
 
+func (e MetricEnum) ToPointer() *MetricEnum {
+	return &e
+}
+
 func (e *MetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEND":
 		fallthrough
 	case "COMPLAINT":
@@ -47,9 +51,9 @@ func (e *MetricEnum) UnmarshalJSON(data []byte) error {
 	case "DELIVERY_CLICK":
 		fallthrough
 	case "DELIVERY_COMPLAINT":
-		*e = MetricEnum(s)
+		*e = MetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricEnum: %v", v)
 	}
 }

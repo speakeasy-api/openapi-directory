@@ -13,16 +13,20 @@ const (
 	BackupRetentionTypeEnumDays BackupRetentionTypeEnum = "DAYS"
 )
 
+func (e BackupRetentionTypeEnum) ToPointer() *BackupRetentionTypeEnum {
+	return &e
+}
+
 func (e *BackupRetentionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAYS":
-		*e = BackupRetentionTypeEnum(s)
+		*e = BackupRetentionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupRetentionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupRetentionTypeEnum: %v", v)
 	}
 }

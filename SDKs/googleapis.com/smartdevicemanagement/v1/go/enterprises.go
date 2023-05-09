@@ -34,7 +34,10 @@ func newEnterprises(defaultClient, securityClient HTTPClient, serverURL, languag
 // SmartdevicemanagementEnterprisesDevicesExecuteCommand - Executes a command to device managed by the enterprise.
 func (s *enterprises) SmartdevicemanagementEnterprisesDevicesExecuteCommand(ctx context.Context, request operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest, security operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity) (*operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:executeCommand", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:executeCommand", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *enterprises) SmartdevicemanagementEnterprisesDevicesExecuteCommand(ctx 
 // SmartdevicemanagementEnterprisesDevicesList - Lists devices managed by the enterprise.
 func (s *enterprises) SmartdevicemanagementEnterprisesDevicesList(ctx context.Context, request operations.SmartdevicemanagementEnterprisesDevicesListRequest, security operations.SmartdevicemanagementEnterprisesDevicesListSecurity) (*operations.SmartdevicemanagementEnterprisesDevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *enterprises) SmartdevicemanagementEnterprisesDevicesList(ctx context.Co
 // SmartdevicemanagementEnterprisesStructuresList - Lists structures managed by the enterprise.
 func (s *enterprises) SmartdevicemanagementEnterprisesStructuresList(ctx context.Context, request operations.SmartdevicemanagementEnterprisesStructuresListRequest, security operations.SmartdevicemanagementEnterprisesStructuresListSecurity) (*operations.SmartdevicemanagementEnterprisesStructuresListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/structures", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/structures", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *enterprises) SmartdevicemanagementEnterprisesStructuresList(ctx context
 // SmartdevicemanagementEnterprisesStructuresRoomsGet - Gets a room managed by the enterprise.
 func (s *enterprises) SmartdevicemanagementEnterprisesStructuresRoomsGet(ctx context.Context, request operations.SmartdevicemanagementEnterprisesStructuresRoomsGetRequest, security operations.SmartdevicemanagementEnterprisesStructuresRoomsGetSecurity) (*operations.SmartdevicemanagementEnterprisesStructuresRoomsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *enterprises) SmartdevicemanagementEnterprisesStructuresRoomsGet(ctx con
 // SmartdevicemanagementEnterprisesStructuresRoomsList - Lists rooms managed by the enterprise.
 func (s *enterprises) SmartdevicemanagementEnterprisesStructuresRoomsList(ctx context.Context, request operations.SmartdevicemanagementEnterprisesStructuresRoomsListRequest, security operations.SmartdevicemanagementEnterprisesStructuresRoomsListSecurity) (*operations.SmartdevicemanagementEnterprisesStructuresRoomsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/rooms", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/rooms", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

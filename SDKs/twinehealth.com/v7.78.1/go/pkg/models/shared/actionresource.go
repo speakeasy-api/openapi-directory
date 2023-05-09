@@ -8,41 +8,45 @@ import (
 )
 
 // ActionResourceAttributesFrequencyGoalWeeksDaysEnum - Days of week that the action is scheduled for. Zero-indexed, ex 0 represents Sunday, etc.
-type ActionResourceAttributesFrequencyGoalWeeksDaysEnum string
+type ActionResourceAttributesFrequencyGoalWeeksDaysEnum int64
 
 const (
-	ActionResourceAttributesFrequencyGoalWeeksDaysEnumZero  ActionResourceAttributesFrequencyGoalWeeksDaysEnum = "0"
-	ActionResourceAttributesFrequencyGoalWeeksDaysEnumOne   ActionResourceAttributesFrequencyGoalWeeksDaysEnum = "1"
-	ActionResourceAttributesFrequencyGoalWeeksDaysEnumTwo   ActionResourceAttributesFrequencyGoalWeeksDaysEnum = "2"
-	ActionResourceAttributesFrequencyGoalWeeksDaysEnumThree ActionResourceAttributesFrequencyGoalWeeksDaysEnum = "3"
-	ActionResourceAttributesFrequencyGoalWeeksDaysEnumFour  ActionResourceAttributesFrequencyGoalWeeksDaysEnum = "4"
-	ActionResourceAttributesFrequencyGoalWeeksDaysEnumFive  ActionResourceAttributesFrequencyGoalWeeksDaysEnum = "5"
-	ActionResourceAttributesFrequencyGoalWeeksDaysEnumSix   ActionResourceAttributesFrequencyGoalWeeksDaysEnum = "6"
+	ActionResourceAttributesFrequencyGoalWeeksDaysEnumZero  ActionResourceAttributesFrequencyGoalWeeksDaysEnum = 0
+	ActionResourceAttributesFrequencyGoalWeeksDaysEnumOne   ActionResourceAttributesFrequencyGoalWeeksDaysEnum = 1
+	ActionResourceAttributesFrequencyGoalWeeksDaysEnumTwo   ActionResourceAttributesFrequencyGoalWeeksDaysEnum = 2
+	ActionResourceAttributesFrequencyGoalWeeksDaysEnumThree ActionResourceAttributesFrequencyGoalWeeksDaysEnum = 3
+	ActionResourceAttributesFrequencyGoalWeeksDaysEnumFour  ActionResourceAttributesFrequencyGoalWeeksDaysEnum = 4
+	ActionResourceAttributesFrequencyGoalWeeksDaysEnumFive  ActionResourceAttributesFrequencyGoalWeeksDaysEnum = 5
+	ActionResourceAttributesFrequencyGoalWeeksDaysEnumSix   ActionResourceAttributesFrequencyGoalWeeksDaysEnum = 6
 )
 
+func (e ActionResourceAttributesFrequencyGoalWeeksDaysEnum) ToPointer() *ActionResourceAttributesFrequencyGoalWeeksDaysEnum {
+	return &e
+}
+
 func (e *ActionResourceAttributesFrequencyGoalWeeksDaysEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
-		*e = ActionResourceAttributesFrequencyGoalWeeksDaysEnum(s)
+	case 6:
+		*e = ActionResourceAttributesFrequencyGoalWeeksDaysEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionResourceAttributesFrequencyGoalWeeksDaysEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionResourceAttributesFrequencyGoalWeeksDaysEnum: %v", v)
 	}
 }
 
@@ -60,17 +64,21 @@ const (
 	ActionResourceAttributesTypeEnumOtherLifestyle ActionResourceAttributesTypeEnum = "other_lifestyle"
 )
 
+func (e ActionResourceAttributesTypeEnum) ToPointer() *ActionResourceAttributesTypeEnum {
+	return &e
+}
+
 func (e *ActionResourceAttributesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "other_lifestyle":
-		*e = ActionResourceAttributesTypeEnum(s)
+		*e = ActionResourceAttributesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionResourceAttributesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionResourceAttributesTypeEnum: %v", v)
 	}
 }
 

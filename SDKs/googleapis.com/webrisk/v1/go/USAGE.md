@@ -2,39 +2,37 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.WebriskHashesSearchRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        HashPrefix: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        ThreatTypes: []WebriskHashesSearchThreatTypesEnum{
-            "UNWANTED_SOFTWARE",
-            "MALWARE",
-            "SOCIAL_ENGINEERING",
-        },
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
     ctx := context.Background()
-    res, err := s.Hashes.WebriskHashesSearch(ctx, req, operations.WebriskHashesSearchSecurity{
+    res, err := s.Hashes.WebriskHashesSearch(ctx, operations.WebriskHashesSearchRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        HashPrefix: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("vel"),
+        ThreatTypes: []WebriskHashesSearchThreatTypesEnum{
+            operations.WebriskHashesSearchThreatTypesEnumUnwantedSoftware,
+            operations.WebriskHashesSearchThreatTypesEnumMalware,
+            operations.WebriskHashesSearchThreatTypesEnumSocialEngineering,
+        },
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.WebriskHashesSearchSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

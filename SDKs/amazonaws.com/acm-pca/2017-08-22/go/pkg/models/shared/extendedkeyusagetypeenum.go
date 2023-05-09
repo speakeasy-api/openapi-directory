@@ -21,12 +21,16 @@ const (
 	ExtendedKeyUsageTypeEnumCertificateTransparency ExtendedKeyUsageTypeEnum = "CERTIFICATE_TRANSPARENCY"
 )
 
+func (e ExtendedKeyUsageTypeEnum) ToPointer() *ExtendedKeyUsageTypeEnum {
+	return &e
+}
+
 func (e *ExtendedKeyUsageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVER_AUTH":
 		fallthrough
 	case "CLIENT_AUTH":
@@ -44,9 +48,9 @@ func (e *ExtendedKeyUsageTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DOCUMENT_SIGNING":
 		fallthrough
 	case "CERTIFICATE_TRANSPARENCY":
-		*e = ExtendedKeyUsageTypeEnum(s)
+		*e = ExtendedKeyUsageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExtendedKeyUsageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExtendedKeyUsageTypeEnum: %v", v)
 	}
 }

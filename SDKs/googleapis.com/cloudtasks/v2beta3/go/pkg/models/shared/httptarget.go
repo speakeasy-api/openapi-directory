@@ -21,12 +21,16 @@ const (
 	HTTPTargetHTTPMethodEnumOptions               HTTPTargetHTTPMethodEnum = "OPTIONS"
 )
 
+func (e HTTPTargetHTTPMethodEnum) ToPointer() *HTTPTargetHTTPMethodEnum {
+	return &e
+}
+
 func (e *HTTPTargetHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP_METHOD_UNSPECIFIED":
 		fallthrough
 	case "POST":
@@ -42,10 +46,10 @@ func (e *HTTPTargetHTTPMethodEnum) UnmarshalJSON(data []byte) error {
 	case "PATCH":
 		fallthrough
 	case "OPTIONS":
-		*e = HTTPTargetHTTPMethodEnum(s)
+		*e = HTTPTargetHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HTTPTargetHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for HTTPTargetHTTPMethodEnum: %v", v)
 	}
 }
 
@@ -55,6 +59,10 @@ type HTTPTarget struct {
 	HeaderOverrides []HeaderOverride `json:"headerOverrides,omitempty"`
 	// The HTTP method to use for the request. When specified, it overrides HttpRequest for the task. Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored at execution time.
 	HTTPMethod *HTTPTargetHTTPMethodEnum `json:"httpMethod,omitempty"`
+	// Contains information needed for generating an [OAuth token](https://developers.google.com/identity/protocols/OAuth2). This type of authorization should generally only be used when calling Google APIs hosted on *.googleapis.com.
+	OauthToken *OAuthToken `json:"oauthToken,omitempty"`
+	// Contains information needed for generating an [OpenID Connect token](https://developers.google.com/identity/protocols/OpenIDConnect). This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.
+	OidcToken *OidcToken `json:"oidcToken,omitempty"`
 	// URI Override. When specified, all the HTTP tasks inside the queue will be partially or fully overridden depending on the configured values.
 	URIOverride *URIOverride `json:"uriOverride,omitempty"`
 }

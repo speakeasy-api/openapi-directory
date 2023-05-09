@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DfareportingProjectsGet - Gets one project by ID.
 func (s *projects) DfareportingProjectsGet(ctx context.Context, request operations.DfareportingProjectsGetRequest, security operations.DfareportingProjectsGetSecurity) (*operations.DfareportingProjectsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) DfareportingProjectsGet(ctx context.Context, request operatio
 // DfareportingProjectsList - Retrieves a list of projects, possibly filtered. This method supports paging .
 func (s *projects) DfareportingProjectsList(ctx context.Context, request operations.DfareportingProjectsListRequest, security operations.DfareportingProjectsListSecurity) (*operations.DfareportingProjectsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

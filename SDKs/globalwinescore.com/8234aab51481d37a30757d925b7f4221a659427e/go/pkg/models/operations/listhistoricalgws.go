@@ -17,21 +17,25 @@ const (
 	ListHistoricalGWSColorEnumPink  ListHistoricalGWSColorEnum = "pink"
 )
 
+func (e ListHistoricalGWSColorEnum) ToPointer() *ListHistoricalGWSColorEnum {
+	return &e
+}
+
 func (e *ListHistoricalGWSColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "red":
 		fallthrough
 	case "white":
 		fallthrough
 	case "pink":
-		*e = ListHistoricalGWSColorEnum(s)
+		*e = ListHistoricalGWSColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListHistoricalGWSColorEnum: %s", s)
+		return fmt.Errorf("invalid value for ListHistoricalGWSColorEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	ListHistoricalGWSOrderingEnumMinusScore ListHistoricalGWSOrderingEnum = "-score"
 )
 
+func (e ListHistoricalGWSOrderingEnum) ToPointer() *ListHistoricalGWSOrderingEnum {
+	return &e
+}
+
 func (e *ListHistoricalGWSOrderingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "date":
 		fallthrough
 	case "-date":
@@ -58,10 +66,10 @@ func (e *ListHistoricalGWSOrderingEnum) UnmarshalJSON(data []byte) error {
 	case "score":
 		fallthrough
 	case "-score":
-		*e = ListHistoricalGWSOrderingEnum(s)
+		*e = ListHistoricalGWSOrderingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListHistoricalGWSOrderingEnum: %s", s)
+		return fmt.Errorf("invalid value for ListHistoricalGWSOrderingEnum: %v", v)
 	}
 }
 

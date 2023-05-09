@@ -41,7 +41,10 @@ func newSSH(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // ```
 func (s *ssh) DeleteUsersSelectedUserSSHKeysKeyID(ctx context.Context, request operations.DeleteUsersSelectedUserSSHKeysKeyIDRequest, security operations.DeleteUsersSelectedUserSSHKeysKeyIDSecurity) (*operations.DeleteUsersSelectedUserSSHKeysKeyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *ssh) DeleteUsersSelectedUserSSHKeysKeyID(ctx context.Context, request o
 // ```
 func (s *ssh) GetUsersSelectedUserSSHKeys(ctx context.Context, request operations.GetUsersSelectedUserSSHKeysRequest, security operations.GetUsersSelectedUserSSHKeysSecurity) (*operations.GetUsersSelectedUserSSHKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +239,10 @@ func (s *ssh) GetUsersSelectedUserSSHKeys(ctx context.Context, request operation
 // ```
 func (s *ssh) GetUsersSelectedUserSSHKeysKeyID(ctx context.Context, request operations.GetUsersSelectedUserSSHKeysKeyIDRequest, security operations.GetUsersSelectedUserSSHKeysKeyIDSecurity) (*operations.GetUsersSelectedUserSSHKeysKeyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -328,7 +337,10 @@ func (s *ssh) GetUsersSelectedUserSSHKeysKeyID(ctx context.Context, request oper
 // ```
 func (s *ssh) PostUsersSelectedUserSSHKeys(ctx context.Context, request operations.PostUsersSelectedUserSSHKeysRequest, security operations.PostUsersSelectedUserSSHKeysSecurity) (*operations.PostUsersSelectedUserSSHKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -434,7 +446,10 @@ func (s *ssh) PostUsersSelectedUserSSHKeys(ctx context.Context, request operatio
 // ```
 func (s *ssh) PutUsersSelectedUserSSHKeysKeyID(ctx context.Context, request operations.PutUsersSelectedUserSSHKeysKeyIDRequest, security operations.PutUsersSelectedUserSSHKeysKeyIDSecurity) (*operations.PutUsersSelectedUserSSHKeysKeyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/ssh-keys/{key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

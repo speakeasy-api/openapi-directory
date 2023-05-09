@@ -17,19 +17,23 @@ const (
 	SearchAssociatedTranscriptsRequestBodySearchOrderEnumDescending SearchAssociatedTranscriptsRequestBodySearchOrderEnum = "Descending"
 )
 
+func (e SearchAssociatedTranscriptsRequestBodySearchOrderEnum) ToPointer() *SearchAssociatedTranscriptsRequestBodySearchOrderEnum {
+	return &e
+}
+
 func (e *SearchAssociatedTranscriptsRequestBodySearchOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ascending":
 		fallthrough
 	case "Descending":
-		*e = SearchAssociatedTranscriptsRequestBodySearchOrderEnum(s)
+		*e = SearchAssociatedTranscriptsRequestBodySearchOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchAssociatedTranscriptsRequestBodySearchOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchAssociatedTranscriptsRequestBodySearchOrderEnum: %v", v)
 	}
 }
 

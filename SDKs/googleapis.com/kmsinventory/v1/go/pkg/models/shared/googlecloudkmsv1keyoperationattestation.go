@@ -16,21 +16,25 @@ const (
 	GoogleCloudKmsV1KeyOperationAttestationFormatEnumCaviumV2Compressed           GoogleCloudKmsV1KeyOperationAttestationFormatEnum = "CAVIUM_V2_COMPRESSED"
 )
 
+func (e GoogleCloudKmsV1KeyOperationAttestationFormatEnum) ToPointer() *GoogleCloudKmsV1KeyOperationAttestationFormatEnum {
+	return &e
+}
+
 func (e *GoogleCloudKmsV1KeyOperationAttestationFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTESTATION_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "CAVIUM_V1_COMPRESSED":
 		fallthrough
 	case "CAVIUM_V2_COMPRESSED":
-		*e = GoogleCloudKmsV1KeyOperationAttestationFormatEnum(s)
+		*e = GoogleCloudKmsV1KeyOperationAttestationFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudKmsV1KeyOperationAttestationFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudKmsV1KeyOperationAttestationFormatEnum: %v", v)
 	}
 }
 

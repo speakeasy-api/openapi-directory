@@ -19,12 +19,16 @@ const (
 	AcceleratorNameEnumVu9p          AcceleratorNameEnum = "vu9p"
 )
 
+func (e AcceleratorNameEnum) ToPointer() *AcceleratorNameEnum {
+	return &e
+}
+
 func (e *AcceleratorNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a100":
 		fallthrough
 	case "v100":
@@ -38,9 +42,9 @@ func (e *AcceleratorNameEnum) UnmarshalJSON(data []byte) error {
 	case "radeon-pro-v520":
 		fallthrough
 	case "vu9p":
-		*e = AcceleratorNameEnum(s)
+		*e = AcceleratorNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AcceleratorNameEnum: %s", s)
+		return fmt.Errorf("invalid value for AcceleratorNameEnum: %v", v)
 	}
 }

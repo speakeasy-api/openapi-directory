@@ -15,20 +15,24 @@ const (
 	WorkspaceImageStateEnumError     WorkspaceImageStateEnum = "ERROR"
 )
 
+func (e WorkspaceImageStateEnum) ToPointer() *WorkspaceImageStateEnum {
+	return &e
+}
+
 func (e *WorkspaceImageStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "PENDING":
 		fallthrough
 	case "ERROR":
-		*e = WorkspaceImageStateEnum(s)
+		*e = WorkspaceImageStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkspaceImageStateEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkspaceImageStateEnum: %v", v)
 	}
 }

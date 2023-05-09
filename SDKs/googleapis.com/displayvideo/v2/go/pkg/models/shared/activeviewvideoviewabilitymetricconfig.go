@@ -34,12 +34,16 @@ const (
 	ActiveViewVideoViewabilityMetricConfigMinimumDurationEnumVideoDurationSeconds60   ActiveViewVideoViewabilityMetricConfigMinimumDurationEnum = "VIDEO_DURATION_SECONDS_60"
 )
 
+func (e ActiveViewVideoViewabilityMetricConfigMinimumDurationEnum) ToPointer() *ActiveViewVideoViewabilityMetricConfigMinimumDurationEnum {
+	return &e
+}
+
 func (e *ActiveViewVideoViewabilityMetricConfigMinimumDurationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIDEO_DURATION_UNSPECIFIED":
 		fallthrough
 	case "VIDEO_DURATION_SECONDS_NONE":
@@ -81,10 +85,10 @@ func (e *ActiveViewVideoViewabilityMetricConfigMinimumDurationEnum) UnmarshalJSO
 	case "VIDEO_DURATION_SECONDS_45":
 		fallthrough
 	case "VIDEO_DURATION_SECONDS_60":
-		*e = ActiveViewVideoViewabilityMetricConfigMinimumDurationEnum(s)
+		*e = ActiveViewVideoViewabilityMetricConfigMinimumDurationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActiveViewVideoViewabilityMetricConfigMinimumDurationEnum: %s", s)
+		return fmt.Errorf("invalid value for ActiveViewVideoViewabilityMetricConfigMinimumDurationEnum: %v", v)
 	}
 }
 
@@ -100,12 +104,16 @@ const (
 	ActiveViewVideoViewabilityMetricConfigMinimumQuartileEnumVideoDurationQuartileFourth      ActiveViewVideoViewabilityMetricConfigMinimumQuartileEnum = "VIDEO_DURATION_QUARTILE_FOURTH"
 )
 
+func (e ActiveViewVideoViewabilityMetricConfigMinimumQuartileEnum) ToPointer() *ActiveViewVideoViewabilityMetricConfigMinimumQuartileEnum {
+	return &e
+}
+
 func (e *ActiveViewVideoViewabilityMetricConfigMinimumQuartileEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIDEO_DURATION_QUARTILE_UNSPECIFIED":
 		fallthrough
 	case "VIDEO_DURATION_QUARTILE_NONE":
@@ -117,10 +125,10 @@ func (e *ActiveViewVideoViewabilityMetricConfigMinimumQuartileEnum) UnmarshalJSO
 	case "VIDEO_DURATION_QUARTILE_THIRD":
 		fallthrough
 	case "VIDEO_DURATION_QUARTILE_FOURTH":
-		*e = ActiveViewVideoViewabilityMetricConfigMinimumQuartileEnum(s)
+		*e = ActiveViewVideoViewabilityMetricConfigMinimumQuartileEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActiveViewVideoViewabilityMetricConfigMinimumQuartileEnum: %s", s)
+		return fmt.Errorf("invalid value for ActiveViewVideoViewabilityMetricConfigMinimumQuartileEnum: %v", v)
 	}
 }
 
@@ -136,12 +144,16 @@ const (
 	ActiveViewVideoViewabilityMetricConfigMinimumViewabilityEnumViewabilityPercent100         ActiveViewVideoViewabilityMetricConfigMinimumViewabilityEnum = "VIEWABILITY_PERCENT_100"
 )
 
+func (e ActiveViewVideoViewabilityMetricConfigMinimumViewabilityEnum) ToPointer() *ActiveViewVideoViewabilityMetricConfigMinimumViewabilityEnum {
+	return &e
+}
+
 func (e *ActiveViewVideoViewabilityMetricConfigMinimumViewabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEWABILITY_PERCENT_UNSPECIFIED":
 		fallthrough
 	case "VIEWABILITY_PERCENT_0":
@@ -153,10 +165,10 @@ func (e *ActiveViewVideoViewabilityMetricConfigMinimumViewabilityEnum) Unmarshal
 	case "VIEWABILITY_PERCENT_75":
 		fallthrough
 	case "VIEWABILITY_PERCENT_100":
-		*e = ActiveViewVideoViewabilityMetricConfigMinimumViewabilityEnum(s)
+		*e = ActiveViewVideoViewabilityMetricConfigMinimumViewabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActiveViewVideoViewabilityMetricConfigMinimumViewabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ActiveViewVideoViewabilityMetricConfigMinimumViewabilityEnum: %v", v)
 	}
 }
 
@@ -169,21 +181,25 @@ const (
 	ActiveViewVideoViewabilityMetricConfigMinimumVolumeEnumVideoVolumePercent10          ActiveViewVideoViewabilityMetricConfigMinimumVolumeEnum = "VIDEO_VOLUME_PERCENT_10"
 )
 
+func (e ActiveViewVideoViewabilityMetricConfigMinimumVolumeEnum) ToPointer() *ActiveViewVideoViewabilityMetricConfigMinimumVolumeEnum {
+	return &e
+}
+
 func (e *ActiveViewVideoViewabilityMetricConfigMinimumVolumeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIDEO_VOLUME_PERCENT_UNSPECIFIED":
 		fallthrough
 	case "VIDEO_VOLUME_PERCENT_0":
 		fallthrough
 	case "VIDEO_VOLUME_PERCENT_10":
-		*e = ActiveViewVideoViewabilityMetricConfigMinimumVolumeEnum(s)
+		*e = ActiveViewVideoViewabilityMetricConfigMinimumVolumeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActiveViewVideoViewabilityMetricConfigMinimumVolumeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActiveViewVideoViewabilityMetricConfigMinimumVolumeEnum: %v", v)
 	}
 }
 

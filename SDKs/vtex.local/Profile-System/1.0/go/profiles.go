@@ -101,7 +101,10 @@ func (s *profiles) CreateClientProfile(ctx context.Context, request operations.C
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *profiles) DeleteClientProfile(ctx context.Context, request operations.DeleteClientProfileRequest) (*operations.DeleteClientProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *profiles) DeleteClientProfile(ctx context.Context, request operations.D
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *profiles) GetProfile(ctx context.Context, request operations.GetProfileRequest) (*operations.GetProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -202,7 +208,10 @@ func (s *profiles) GetProfile(ctx context.Context, request operations.GetProfile
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *profiles) GetProfileByVersion(ctx context.Context, request operations.GetProfileByVersionRequest) (*operations.GetProfileByVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/versions/{profileVersionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/versions/{profileVersionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -253,7 +262,10 @@ func (s *profiles) GetProfileByVersion(ctx context.Context, request operations.G
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *profiles) GetUnmaskedProfile(ctx context.Context, request operations.GetUnmaskedProfileRequest) (*operations.GetUnmaskedProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/unmask", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/unmask", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -308,7 +320,10 @@ func (s *profiles) GetUnmaskedProfile(ctx context.Context, request operations.Ge
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *profiles) GetUnmaskedProfileByVersion(ctx context.Context, request operations.GetUnmaskedProfileByVersionRequest) (*operations.GetUnmaskedProfileByVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/versions/{profileVersionId}/unmask", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}/versions/{profileVersionId}/unmask", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -363,7 +378,10 @@ func (s *profiles) GetUnmaskedProfileByVersion(ctx context.Context, request oper
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *profiles) UpdateClientProfile(ctx context.Context, request operations.UpdateClientProfileRequest) (*operations.UpdateClientProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/profiles/{profileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

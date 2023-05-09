@@ -16,19 +16,23 @@ const (
 	UpdateNetworkWirelessSettingsRequestBodyUpgradeStrategyEnumMinimizeUpgradeTime    UpdateNetworkWirelessSettingsRequestBodyUpgradeStrategyEnum = "minimizeUpgradeTime"
 )
 
+func (e UpdateNetworkWirelessSettingsRequestBodyUpgradeStrategyEnum) ToPointer() *UpdateNetworkWirelessSettingsRequestBodyUpgradeStrategyEnum {
+	return &e
+}
+
 func (e *UpdateNetworkWirelessSettingsRequestBodyUpgradeStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimizeClientDowntime":
 		fallthrough
 	case "minimizeUpgradeTime":
-		*e = UpdateNetworkWirelessSettingsRequestBodyUpgradeStrategyEnum(s)
+		*e = UpdateNetworkWirelessSettingsRequestBodyUpgradeStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkWirelessSettingsRequestBodyUpgradeStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkWirelessSettingsRequestBodyUpgradeStrategyEnum: %v", v)
 	}
 }
 

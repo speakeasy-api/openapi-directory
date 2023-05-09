@@ -16,17 +16,21 @@ const (
 	UpdateLongTermPricingXAmzTargetEnumAwsieSnowballJobManagementServiceUpdateLongTermPricing UpdateLongTermPricingXAmzTargetEnum = "AWSIESnowballJobManagementService.UpdateLongTermPricing"
 )
 
+func (e UpdateLongTermPricingXAmzTargetEnum) ToPointer() *UpdateLongTermPricingXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateLongTermPricingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSIESnowballJobManagementService.UpdateLongTermPricing":
-		*e = UpdateLongTermPricingXAmzTargetEnum(s)
+		*e = UpdateLongTermPricingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateLongTermPricingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateLongTermPricingXAmzTargetEnum: %v", v)
 	}
 }
 

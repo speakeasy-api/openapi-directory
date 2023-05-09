@@ -20,12 +20,16 @@ const (
 	LinePropertiesDashStyleEnumLongDashDot          LinePropertiesDashStyleEnum = "LONG_DASH_DOT"
 )
 
+func (e LinePropertiesDashStyleEnum) ToPointer() *LinePropertiesDashStyleEnum {
+	return &e
+}
+
 func (e *LinePropertiesDashStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DASH_STYLE_UNSPECIFIED":
 		fallthrough
 	case "SOLID":
@@ -39,10 +43,10 @@ func (e *LinePropertiesDashStyleEnum) UnmarshalJSON(data []byte) error {
 	case "LONG_DASH":
 		fallthrough
 	case "LONG_DASH_DOT":
-		*e = LinePropertiesDashStyleEnum(s)
+		*e = LinePropertiesDashStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LinePropertiesDashStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for LinePropertiesDashStyleEnum: %v", v)
 	}
 }
 
@@ -63,12 +67,16 @@ const (
 	LinePropertiesEndArrowEnumOpenDiamond           LinePropertiesEndArrowEnum = "OPEN_DIAMOND"
 )
 
+func (e LinePropertiesEndArrowEnum) ToPointer() *LinePropertiesEndArrowEnum {
+	return &e
+}
+
 func (e *LinePropertiesEndArrowEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARROW_STYLE_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -90,10 +98,10 @@ func (e *LinePropertiesEndArrowEnum) UnmarshalJSON(data []byte) error {
 	case "OPEN_SQUARE":
 		fallthrough
 	case "OPEN_DIAMOND":
-		*e = LinePropertiesEndArrowEnum(s)
+		*e = LinePropertiesEndArrowEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LinePropertiesEndArrowEnum: %s", s)
+		return fmt.Errorf("invalid value for LinePropertiesEndArrowEnum: %v", v)
 	}
 }
 
@@ -114,12 +122,16 @@ const (
 	LinePropertiesStartArrowEnumOpenDiamond           LinePropertiesStartArrowEnum = "OPEN_DIAMOND"
 )
 
+func (e LinePropertiesStartArrowEnum) ToPointer() *LinePropertiesStartArrowEnum {
+	return &e
+}
+
 func (e *LinePropertiesStartArrowEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARROW_STYLE_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -141,10 +153,10 @@ func (e *LinePropertiesStartArrowEnum) UnmarshalJSON(data []byte) error {
 	case "OPEN_SQUARE":
 		fallthrough
 	case "OPEN_DIAMOND":
-		*e = LinePropertiesStartArrowEnum(s)
+		*e = LinePropertiesStartArrowEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LinePropertiesStartArrowEnum: %s", s)
+		return fmt.Errorf("invalid value for LinePropertiesStartArrowEnum: %v", v)
 	}
 }
 

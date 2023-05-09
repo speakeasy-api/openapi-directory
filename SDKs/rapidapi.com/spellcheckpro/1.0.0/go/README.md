@@ -13,27 +13,24 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/rapidapi.com/spellcheckpr
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CheckSpellingRussianRequest{
-        RequestBody: &operations.CheckSpellingRussianRequestBody{
-            LangCode: "ru",
-            Text: "Добрый вее!",
-        },
-        XRapidAPIKey: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.CheckSpellingRussian(ctx, req)
+    res, err := s.CheckSpellingRussian(ctx, operations.CheckSpellingRussianRequest{
+        RequestBody: &operations.CheckSpellingRussianRequestBody{
+            LangCode: sdk.String("ru"),
+            Text: sdk.String("Добрый вее!"),
+        },
+        XRapidAPIKey: sdk.String("corrupti"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,9 +45,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CheckSpellingRussian` - Check Spelling (Russian)
+* [CheckSpellingRussian](docs/sdk/README.md#checkspellingrussian) - Check Spelling (Russian)
 <!-- End SDK Available Operations -->
 
 ### Maturity

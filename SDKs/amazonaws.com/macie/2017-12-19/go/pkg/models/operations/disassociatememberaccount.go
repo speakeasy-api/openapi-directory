@@ -16,17 +16,21 @@ const (
 	DisassociateMemberAccountXAmzTargetEnumMacieServiceDisassociateMemberAccount DisassociateMemberAccountXAmzTargetEnum = "MacieService.DisassociateMemberAccount"
 )
 
+func (e DisassociateMemberAccountXAmzTargetEnum) ToPointer() *DisassociateMemberAccountXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateMemberAccountXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MacieService.DisassociateMemberAccount":
-		*e = DisassociateMemberAccountXAmzTargetEnum(s)
+		*e = DisassociateMemberAccountXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateMemberAccountXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateMemberAccountXAmzTargetEnum: %v", v)
 	}
 }
 

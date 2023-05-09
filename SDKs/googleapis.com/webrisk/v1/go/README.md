@@ -13,39 +13,37 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/webrisk/v1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.WebriskHashesSearchRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        HashPrefix: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        ThreatTypes: []WebriskHashesSearchThreatTypesEnum{
-            "UNWANTED_SOFTWARE",
-            "MALWARE",
-            "SOCIAL_ENGINEERING",
-        },
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
     ctx := context.Background()
-    res, err := s.Hashes.WebriskHashesSearch(ctx, req, operations.WebriskHashesSearchSecurity{
+    res, err := s.Hashes.WebriskHashesSearch(ctx, operations.WebriskHashesSearchRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        HashPrefix: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("vel"),
+        ThreatTypes: []WebriskHashesSearchThreatTypesEnum{
+            operations.WebriskHashesSearchThreatTypesEnumUnwantedSoftware,
+            operations.WebriskHashesSearchThreatTypesEnumMalware,
+            operations.WebriskHashesSearchThreatTypesEnumSocialEngineering,
+        },
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.WebriskHashesSearchSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -64,25 +62,25 @@ func main() {
 ## Available Resources and Operations
 
 
-### Hashes
+### [Hashes](docs/hashes/README.md)
 
-* `WebriskHashesSearch` - Gets the full hashes that match the requested hash prefix. This is used after a hash prefix is looked up in a threatList and there is a match. The client side threatList only holds partial hashes so the client must query this method to determine if there is a full hash match of a threat.
+* [WebriskHashesSearch](docs/hashes/README.md#webriskhashessearch) - Gets the full hashes that match the requested hash prefix. This is used after a hash prefix is looked up in a threatList and there is a match. The client side threatList only holds partial hashes so the client must query this method to determine if there is a full hash match of a threat.
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `WebriskProjectsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `WebriskProjectsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `WebriskProjectsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `WebriskProjectsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `WebriskProjectsSubmissionsCreate` - Creates a Submission of a URI suspected of containing phishing content to be reviewed. If the result verifies the existence of malicious phishing content, the site will be added to the [Google's Social Engineering lists](https://support.google.com/webmasters/answer/6350487/) in order to protect users that could get exposed to this threat in the future. Only allowlisted projects can use this method during Early Access. Please reach out to Sales or your customer engineer to obtain access.
+* [WebriskProjectsOperationsCancel](docs/projects/README.md#webriskprojectsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [WebriskProjectsOperationsDelete](docs/projects/README.md#webriskprojectsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [WebriskProjectsOperationsGet](docs/projects/README.md#webriskprojectsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [WebriskProjectsOperationsList](docs/projects/README.md#webriskprojectsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [WebriskProjectsSubmissionsCreate](docs/projects/README.md#webriskprojectssubmissionscreate) - Creates a Submission of a URI suspected of containing phishing content to be reviewed. If the result verifies the existence of malicious phishing content, the site will be added to the [Google's Social Engineering lists](https://support.google.com/webmasters/answer/6350487/) in order to protect users that could get exposed to this threat in the future. Only allowlisted projects can use this method during Early Access. Please reach out to Sales or your customer engineer to obtain access.
 
-### ThreatLists
+### [ThreatLists](docs/threatlists/README.md)
 
-* `WebriskThreatListsComputeDiff` - Gets the most recent threat list diffs. These diffs should be applied to a local database of hashes to keep it up-to-date. If the local database is empty or excessively out-of-date, a complete snapshot of the database will be returned. This Method only updates a single ThreatList at a time. To update multiple ThreatList databases, this method needs to be called once for each list.
+* [WebriskThreatListsComputeDiff](docs/threatlists/README.md#webriskthreatlistscomputediff) - Gets the most recent threat list diffs. These diffs should be applied to a local database of hashes to keep it up-to-date. If the local database is empty or excessively out-of-date, a complete snapshot of the database will be returned. This Method only updates a single ThreatList at a time. To update multiple ThreatList databases, this method needs to be called once for each list.
 
-### Uris
+### [Uris](docs/uris/README.md)
 
-* `WebriskUrisSearch` - This method is used to check whether a URI is on a given threatList. Multiple threatLists may be searched in a single query. The response will list all requested threatLists the URI was found to match. If the URI is not found on any of the requested ThreatList an empty response will be returned.
+* [WebriskUrisSearch](docs/uris/README.md#webriskurissearch) - This method is used to check whether a URI is on a given threatList. Multiple threatLists may be searched in a single query. The response will list all requested threatLists the URI was found to match. If the URI is not found on any of the requested ThreatList an empty response will be returned.
 <!-- End SDK Available Operations -->
 
 ### Maturity

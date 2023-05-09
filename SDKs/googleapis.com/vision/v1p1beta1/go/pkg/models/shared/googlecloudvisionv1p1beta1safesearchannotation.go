@@ -19,12 +19,16 @@ const (
 	GoogleCloudVisionV1p1beta1SafeSearchAnnotationAdultEnumVeryLikely   GoogleCloudVisionV1p1beta1SafeSearchAnnotationAdultEnum = "VERY_LIKELY"
 )
 
+func (e GoogleCloudVisionV1p1beta1SafeSearchAnnotationAdultEnum) ToPointer() *GoogleCloudVisionV1p1beta1SafeSearchAnnotationAdultEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p1beta1SafeSearchAnnotationAdultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -36,10 +40,10 @@ func (e *GoogleCloudVisionV1p1beta1SafeSearchAnnotationAdultEnum) UnmarshalJSON(
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GoogleCloudVisionV1p1beta1SafeSearchAnnotationAdultEnum(s)
+		*e = GoogleCloudVisionV1p1beta1SafeSearchAnnotationAdultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p1beta1SafeSearchAnnotationAdultEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p1beta1SafeSearchAnnotationAdultEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	GoogleCloudVisionV1p1beta1SafeSearchAnnotationMedicalEnumVeryLikely   GoogleCloudVisionV1p1beta1SafeSearchAnnotationMedicalEnum = "VERY_LIKELY"
 )
 
+func (e GoogleCloudVisionV1p1beta1SafeSearchAnnotationMedicalEnum) ToPointer() *GoogleCloudVisionV1p1beta1SafeSearchAnnotationMedicalEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p1beta1SafeSearchAnnotationMedicalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -72,10 +80,10 @@ func (e *GoogleCloudVisionV1p1beta1SafeSearchAnnotationMedicalEnum) UnmarshalJSO
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GoogleCloudVisionV1p1beta1SafeSearchAnnotationMedicalEnum(s)
+		*e = GoogleCloudVisionV1p1beta1SafeSearchAnnotationMedicalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p1beta1SafeSearchAnnotationMedicalEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p1beta1SafeSearchAnnotationMedicalEnum: %v", v)
 	}
 }
 
@@ -91,12 +99,16 @@ const (
 	GoogleCloudVisionV1p1beta1SafeSearchAnnotationRacyEnumVeryLikely   GoogleCloudVisionV1p1beta1SafeSearchAnnotationRacyEnum = "VERY_LIKELY"
 )
 
+func (e GoogleCloudVisionV1p1beta1SafeSearchAnnotationRacyEnum) ToPointer() *GoogleCloudVisionV1p1beta1SafeSearchAnnotationRacyEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p1beta1SafeSearchAnnotationRacyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -108,10 +120,10 @@ func (e *GoogleCloudVisionV1p1beta1SafeSearchAnnotationRacyEnum) UnmarshalJSON(d
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GoogleCloudVisionV1p1beta1SafeSearchAnnotationRacyEnum(s)
+		*e = GoogleCloudVisionV1p1beta1SafeSearchAnnotationRacyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p1beta1SafeSearchAnnotationRacyEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p1beta1SafeSearchAnnotationRacyEnum: %v", v)
 	}
 }
 
@@ -127,12 +139,16 @@ const (
 	GoogleCloudVisionV1p1beta1SafeSearchAnnotationSpoofEnumVeryLikely   GoogleCloudVisionV1p1beta1SafeSearchAnnotationSpoofEnum = "VERY_LIKELY"
 )
 
+func (e GoogleCloudVisionV1p1beta1SafeSearchAnnotationSpoofEnum) ToPointer() *GoogleCloudVisionV1p1beta1SafeSearchAnnotationSpoofEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p1beta1SafeSearchAnnotationSpoofEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -144,10 +160,10 @@ func (e *GoogleCloudVisionV1p1beta1SafeSearchAnnotationSpoofEnum) UnmarshalJSON(
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GoogleCloudVisionV1p1beta1SafeSearchAnnotationSpoofEnum(s)
+		*e = GoogleCloudVisionV1p1beta1SafeSearchAnnotationSpoofEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p1beta1SafeSearchAnnotationSpoofEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p1beta1SafeSearchAnnotationSpoofEnum: %v", v)
 	}
 }
 
@@ -163,12 +179,16 @@ const (
 	GoogleCloudVisionV1p1beta1SafeSearchAnnotationViolenceEnumVeryLikely   GoogleCloudVisionV1p1beta1SafeSearchAnnotationViolenceEnum = "VERY_LIKELY"
 )
 
+func (e GoogleCloudVisionV1p1beta1SafeSearchAnnotationViolenceEnum) ToPointer() *GoogleCloudVisionV1p1beta1SafeSearchAnnotationViolenceEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p1beta1SafeSearchAnnotationViolenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -180,10 +200,10 @@ func (e *GoogleCloudVisionV1p1beta1SafeSearchAnnotationViolenceEnum) UnmarshalJS
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GoogleCloudVisionV1p1beta1SafeSearchAnnotationViolenceEnum(s)
+		*e = GoogleCloudVisionV1p1beta1SafeSearchAnnotationViolenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p1beta1SafeSearchAnnotationViolenceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p1beta1SafeSearchAnnotationViolenceEnum: %v", v)
 	}
 }
 

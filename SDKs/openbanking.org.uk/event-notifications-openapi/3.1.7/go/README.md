@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/openbanking.org.uk/event-
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateEventNotificationRequest{
+    ctx := context.Background()
+    res, err := s.EventNotification.CreateEventNotification(ctx, operations.CreateEventNotificationRequest{
         RequestBody: "corrupti",
         XFapiFinancialID: "provident",
-        XFapiInteractionID: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.EventNotification.CreateEventNotification(ctx, req)
+        XFapiInteractionID: sdk.String("distinctio"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,9 +44,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### EventNotification
+### [EventNotification](docs/eventnotification/README.md)
 
-* `CreateEventNotification` - Send an event notification
+* [CreateEventNotification](docs/eventnotification/README.md#createeventnotification) - Send an event notification
 <!-- End SDK Available Operations -->
 
 ### Maturity

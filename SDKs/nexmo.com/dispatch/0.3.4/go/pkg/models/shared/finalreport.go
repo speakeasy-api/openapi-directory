@@ -17,12 +17,16 @@ const (
 	FinalReportLinksMessagesChannelEnumMms            FinalReportLinksMessagesChannelEnum = "mms"
 )
 
+func (e FinalReportLinksMessagesChannelEnum) ToPointer() *FinalReportLinksMessagesChannelEnum {
+	return &e
+}
+
 func (e *FinalReportLinksMessagesChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "messenger":
 		fallthrough
 	case "viber_sevice_msg":
@@ -32,10 +36,10 @@ func (e *FinalReportLinksMessagesChannelEnum) UnmarshalJSON(data []byte) error {
 	case "whatsapp":
 		fallthrough
 	case "mms":
-		*e = FinalReportLinksMessagesChannelEnum(s)
+		*e = FinalReportLinksMessagesChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FinalReportLinksMessagesChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for FinalReportLinksMessagesChannelEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	FinalReportLinksMessagesStatusEnumUndeliverable FinalReportLinksMessagesStatusEnum = "undeliverable"
 )
 
+func (e FinalReportLinksMessagesStatusEnum) ToPointer() *FinalReportLinksMessagesStatusEnum {
+	return &e
+}
+
 func (e *FinalReportLinksMessagesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "delivered":
@@ -64,10 +72,10 @@ func (e *FinalReportLinksMessagesStatusEnum) UnmarshalJSON(data []byte) error {
 	case "rejected":
 		fallthrough
 	case "undeliverable":
-		*e = FinalReportLinksMessagesStatusEnum(s)
+		*e = FinalReportLinksMessagesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FinalReportLinksMessagesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FinalReportLinksMessagesStatusEnum: %v", v)
 	}
 }
 
@@ -78,17 +86,21 @@ const (
 	FinalReportLinksMessagesUsageCurrencyEnumEur FinalReportLinksMessagesUsageCurrencyEnum = "EUR"
 )
 
+func (e FinalReportLinksMessagesUsageCurrencyEnum) ToPointer() *FinalReportLinksMessagesUsageCurrencyEnum {
+	return &e
+}
+
 func (e *FinalReportLinksMessagesUsageCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EUR":
-		*e = FinalReportLinksMessagesUsageCurrencyEnum(s)
+		*e = FinalReportLinksMessagesUsageCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FinalReportLinksMessagesUsageCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for FinalReportLinksMessagesUsageCurrencyEnum: %v", v)
 	}
 }
 
@@ -119,19 +131,23 @@ const (
 	FinalReportStatusEnumError     FinalReportStatusEnum = "error"
 )
 
+func (e FinalReportStatusEnum) ToPointer() *FinalReportStatusEnum {
+	return &e
+}
+
 func (e *FinalReportStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "completed":
 		fallthrough
 	case "error":
-		*e = FinalReportStatusEnum(s)
+		*e = FinalReportStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FinalReportStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FinalReportStatusEnum: %v", v)
 	}
 }
 
@@ -141,17 +157,21 @@ const (
 	FinalReportTemplateEnumFailover FinalReportTemplateEnum = "failover"
 )
 
+func (e FinalReportTemplateEnum) ToPointer() *FinalReportTemplateEnum {
+	return &e
+}
+
 func (e *FinalReportTemplateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "failover":
-		*e = FinalReportTemplateEnum(s)
+		*e = FinalReportTemplateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FinalReportTemplateEnum: %s", s)
+		return fmt.Errorf("invalid value for FinalReportTemplateEnum: %v", v)
 	}
 }
 
@@ -162,17 +182,21 @@ const (
 	FinalReportUsageCurrencyEnumEur FinalReportUsageCurrencyEnum = "EUR"
 )
 
+func (e FinalReportUsageCurrencyEnum) ToPointer() *FinalReportUsageCurrencyEnum {
+	return &e
+}
+
 func (e *FinalReportUsageCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EUR":
-		*e = FinalReportUsageCurrencyEnum(s)
+		*e = FinalReportUsageCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FinalReportUsageCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for FinalReportUsageCurrencyEnum: %v", v)
 	}
 }
 

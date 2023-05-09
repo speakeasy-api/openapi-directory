@@ -36,7 +36,10 @@ func newMaintenance(defaultClient, securityClient HTTPClient, serverURL, languag
 // DeleteMaintenanceID - Delete a Maintenance
 func (s *maintenance) DeleteMaintenanceID(ctx context.Context, request operations.DeleteMaintenanceIDRequest) (*operations.DeleteMaintenanceIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/maintenance/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/maintenance/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -174,7 +177,10 @@ func (s *maintenance) PostMaintenance(ctx context.Context, request shared.Mainte
 // PutMaintenanceID - Update a Maintenance
 func (s *maintenance) PutMaintenanceID(ctx context.Context, request operations.PutMaintenanceIDRequest) (*operations.PutMaintenanceIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/maintenance/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/maintenance/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Maintenance", "json")
 	if err != nil {

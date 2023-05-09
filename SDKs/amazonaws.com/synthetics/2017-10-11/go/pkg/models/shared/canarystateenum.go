@@ -21,12 +21,16 @@ const (
 	CanaryStateEnumDeleting CanaryStateEnum = "DELETING"
 )
 
+func (e CanaryStateEnum) ToPointer() *CanaryStateEnum {
+	return &e
+}
+
 func (e *CanaryStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "READY":
@@ -44,9 +48,9 @@ func (e *CanaryStateEnum) UnmarshalJSON(data []byte) error {
 	case "ERROR":
 		fallthrough
 	case "DELETING":
-		*e = CanaryStateEnum(s)
+		*e = CanaryStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CanaryStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CanaryStateEnum: %v", v)
 	}
 }

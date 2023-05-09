@@ -15,18 +15,22 @@ const (
 	ResponseFormatEnumB64JSON ResponseFormatEnum = "b64_json"
 )
 
+func (e ResponseFormatEnum) ToPointer() *ResponseFormatEnum {
+	return &e
+}
+
 func (e *ResponseFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "url":
 		fallthrough
 	case "b64_json":
-		*e = ResponseFormatEnum(s)
+		*e = ResponseFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResponseFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ResponseFormatEnum: %v", v)
 	}
 }

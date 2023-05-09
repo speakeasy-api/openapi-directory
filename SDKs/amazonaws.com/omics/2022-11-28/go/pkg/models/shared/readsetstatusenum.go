@@ -17,12 +17,16 @@ const (
 	ReadSetStatusEnumDeleted    ReadSetStatusEnum = "DELETED"
 )
 
+func (e ReadSetStatusEnum) ToPointer() *ReadSetStatusEnum {
+	return &e
+}
+
 func (e *ReadSetStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARCHIVED":
 		fallthrough
 	case "ACTIVATING":
@@ -32,9 +36,9 @@ func (e *ReadSetStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "DELETED":
-		*e = ReadSetStatusEnum(s)
+		*e = ReadSetStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReadSetStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReadSetStatusEnum: %v", v)
 	}
 }

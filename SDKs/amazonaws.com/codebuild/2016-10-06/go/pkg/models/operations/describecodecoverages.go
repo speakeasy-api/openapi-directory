@@ -16,17 +16,21 @@ const (
 	DescribeCodeCoveragesXAmzTargetEnumCodeBuild20161006DescribeCodeCoverages DescribeCodeCoveragesXAmzTargetEnum = "CodeBuild_20161006.DescribeCodeCoverages"
 )
 
+func (e DescribeCodeCoveragesXAmzTargetEnum) ToPointer() *DescribeCodeCoveragesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeCodeCoveragesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.DescribeCodeCoverages":
-		*e = DescribeCodeCoveragesXAmzTargetEnum(s)
+		*e = DescribeCodeCoveragesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeCodeCoveragesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeCodeCoveragesXAmzTargetEnum: %v", v)
 	}
 }
 

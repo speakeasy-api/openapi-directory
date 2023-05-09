@@ -92,7 +92,10 @@ func (s *spin) GetSpins(ctx context.Context, request operations.GetSpinsRequest)
 // GetSpinsID - Get a Spin by id
 func (s *spin) GetSpinsID(ctx context.Context, request operations.GetSpinsIDRequest) (*operations.GetSpinsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spins/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spins/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

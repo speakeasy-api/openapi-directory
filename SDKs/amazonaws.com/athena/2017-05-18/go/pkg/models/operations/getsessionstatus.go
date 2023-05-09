@@ -16,17 +16,21 @@ const (
 	GetSessionStatusXAmzTargetEnumAmazonAthenaGetSessionStatus GetSessionStatusXAmzTargetEnum = "AmazonAthena.GetSessionStatus"
 )
 
+func (e GetSessionStatusXAmzTargetEnum) ToPointer() *GetSessionStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSessionStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.GetSessionStatus":
-		*e = GetSessionStatusXAmzTargetEnum(s)
+		*e = GetSessionStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSessionStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSessionStatusXAmzTargetEnum: %v", v)
 	}
 }
 

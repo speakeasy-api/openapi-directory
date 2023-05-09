@@ -16,17 +16,21 @@ const (
 	StartContentModerationXAmzTargetEnumRekognitionServiceStartContentModeration StartContentModerationXAmzTargetEnum = "RekognitionService.StartContentModeration"
 )
 
+func (e StartContentModerationXAmzTargetEnum) ToPointer() *StartContentModerationXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartContentModerationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.StartContentModeration":
-		*e = StartContentModerationXAmzTargetEnum(s)
+		*e = StartContentModerationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartContentModerationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartContentModerationXAmzTargetEnum: %v", v)
 	}
 }
 

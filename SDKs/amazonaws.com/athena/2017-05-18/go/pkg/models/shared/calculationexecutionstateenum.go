@@ -20,12 +20,16 @@ const (
 	CalculationExecutionStateEnumFailed    CalculationExecutionStateEnum = "FAILED"
 )
 
+func (e CalculationExecutionStateEnum) ToPointer() *CalculationExecutionStateEnum {
+	return &e
+}
+
 func (e *CalculationExecutionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATED":
@@ -41,9 +45,9 @@ func (e *CalculationExecutionStateEnum) UnmarshalJSON(data []byte) error {
 	case "COMPLETED":
 		fallthrough
 	case "FAILED":
-		*e = CalculationExecutionStateEnum(s)
+		*e = CalculationExecutionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalculationExecutionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CalculationExecutionStateEnum: %v", v)
 	}
 }

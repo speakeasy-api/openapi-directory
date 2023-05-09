@@ -17,12 +17,16 @@ const (
 	BidResponseWithoutBidsStatusRowStatusEnumResponsesWithoutBidsForDeal    BidResponseWithoutBidsStatusRowStatusEnum = "RESPONSES_WITHOUT_BIDS_FOR_DEAL"
 )
 
+func (e BidResponseWithoutBidsStatusRowStatusEnum) ToPointer() *BidResponseWithoutBidsStatusRowStatusEnum {
+	return &e
+}
+
 func (e *BidResponseWithoutBidsStatusRowStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "RESPONSES_WITHOUT_BIDS":
@@ -30,10 +34,10 @@ func (e *BidResponseWithoutBidsStatusRowStatusEnum) UnmarshalJSON(data []byte) e
 	case "RESPONSES_WITHOUT_BIDS_FOR_ACCOUNT":
 		fallthrough
 	case "RESPONSES_WITHOUT_BIDS_FOR_DEAL":
-		*e = BidResponseWithoutBidsStatusRowStatusEnum(s)
+		*e = BidResponseWithoutBidsStatusRowStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BidResponseWithoutBidsStatusRowStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BidResponseWithoutBidsStatusRowStatusEnum: %v", v)
 	}
 }
 

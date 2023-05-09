@@ -16,17 +16,21 @@ const (
 	PutLogEventsXAmzTargetEnumLogs20140328PutLogEvents PutLogEventsXAmzTargetEnum = "Logs_20140328.PutLogEvents"
 )
 
+func (e PutLogEventsXAmzTargetEnum) ToPointer() *PutLogEventsXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutLogEventsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.PutLogEvents":
-		*e = PutLogEventsXAmzTargetEnum(s)
+		*e = PutLogEventsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutLogEventsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutLogEventsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DeleteConfigRuleXAmzTargetEnumStarlingDoveServiceDeleteConfigRule DeleteConfigRuleXAmzTargetEnum = "StarlingDoveService.DeleteConfigRule"
 )
 
+func (e DeleteConfigRuleXAmzTargetEnum) ToPointer() *DeleteConfigRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteConfigRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DeleteConfigRule":
-		*e = DeleteConfigRuleXAmzTargetEnum(s)
+		*e = DeleteConfigRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteConfigRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteConfigRuleXAmzTargetEnum: %v", v)
 	}
 }
 

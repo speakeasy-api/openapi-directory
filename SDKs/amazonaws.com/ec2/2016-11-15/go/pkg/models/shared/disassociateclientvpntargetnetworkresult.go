@@ -18,12 +18,16 @@ const (
 	DisassociateClientVpnTargetNetworkResultStatusCodeEnumDisassociated     DisassociateClientVpnTargetNetworkResultStatusCodeEnum = "disassociated"
 )
 
+func (e DisassociateClientVpnTargetNetworkResultStatusCodeEnum) ToPointer() *DisassociateClientVpnTargetNetworkResultStatusCodeEnum {
+	return &e
+}
+
 func (e *DisassociateClientVpnTargetNetworkResultStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -33,10 +37,10 @@ func (e *DisassociateClientVpnTargetNetworkResultStatusCodeEnum) UnmarshalJSON(d
 	case "disassociating":
 		fallthrough
 	case "disassociated":
-		*e = DisassociateClientVpnTargetNetworkResultStatusCodeEnum(s)
+		*e = DisassociateClientVpnTargetNetworkResultStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateClientVpnTargetNetworkResultStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateClientVpnTargetNetworkResultStatusCodeEnum: %v", v)
 	}
 }
 

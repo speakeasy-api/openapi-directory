@@ -19,15 +19,20 @@ const (
 	GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnumCancellationReasonAccountClosed      GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum = "CANCELLATION_REASON_ACCOUNT_CLOSED"
 	GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnumCancellationReasonUpgradeDowngrade   GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum = "CANCELLATION_REASON_UPGRADE_DOWNGRADE"
 	GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnumCancellationReasonUserDelinquency    GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum = "CANCELLATION_REASON_USER_DELINQUENCY"
+	GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnumCancellationReasonSystemError        GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum = "CANCELLATION_REASON_SYSTEM_ERROR"
 	GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnumCancellationReasonOther              GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum = "CANCELLATION_REASON_OTHER"
 )
 
+func (e GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum) ToPointer() *GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum {
+	return &e
+}
+
 func (e *GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANCELLATION_REASON_UNSPECIFIED":
 		fallthrough
 	case "CANCELLATION_REASON_FRAUD":
@@ -44,11 +49,13 @@ func (e *GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCance
 		fallthrough
 	case "CANCELLATION_REASON_USER_DELINQUENCY":
 		fallthrough
+	case "CANCELLATION_REASON_SYSTEM_ERROR":
+		fallthrough
 	case "CANCELLATION_REASON_OTHER":
-		*e = GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum(s)
+		*e = GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequestCancellationReasonEnum: %v", v)
 	}
 }
 

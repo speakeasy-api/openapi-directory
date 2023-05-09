@@ -16,21 +16,25 @@ const (
 	InvoiceInvoiceTypeEnumInvoiceTypeInvoice     InvoiceInvoiceTypeEnum = "INVOICE_TYPE_INVOICE"
 )
 
+func (e InvoiceInvoiceTypeEnum) ToPointer() *InvoiceInvoiceTypeEnum {
+	return &e
+}
+
 func (e *InvoiceInvoiceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVOICE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INVOICE_TYPE_CREDIT":
 		fallthrough
 	case "INVOICE_TYPE_INVOICE":
-		*e = InvoiceInvoiceTypeEnum(s)
+		*e = InvoiceInvoiceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvoiceInvoiceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvoiceInvoiceTypeEnum: %v", v)
 	}
 }
 

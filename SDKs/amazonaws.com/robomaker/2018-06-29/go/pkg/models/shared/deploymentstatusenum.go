@@ -18,12 +18,16 @@ const (
 	DeploymentStatusEnumCanceled   DeploymentStatusEnum = "Canceled"
 )
 
+func (e DeploymentStatusEnum) ToPointer() *DeploymentStatusEnum {
+	return &e
+}
+
 func (e *DeploymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "Preparing":
@@ -35,9 +39,9 @@ func (e *DeploymentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Succeeded":
 		fallthrough
 	case "Canceled":
-		*e = DeploymentStatusEnum(s)
+		*e = DeploymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentStatusEnum: %v", v)
 	}
 }

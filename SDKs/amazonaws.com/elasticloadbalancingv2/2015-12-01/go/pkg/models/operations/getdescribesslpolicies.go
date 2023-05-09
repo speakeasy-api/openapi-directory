@@ -15,17 +15,21 @@ const (
 	GETDescribeSSLPoliciesActionEnumDescribeSslPolicies GETDescribeSSLPoliciesActionEnum = "DescribeSSLPolicies"
 )
 
+func (e GETDescribeSSLPoliciesActionEnum) ToPointer() *GETDescribeSSLPoliciesActionEnum {
+	return &e
+}
+
 func (e *GETDescribeSSLPoliciesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeSSLPolicies":
-		*e = GETDescribeSSLPoliciesActionEnum(s)
+		*e = GETDescribeSSLPoliciesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSSLPoliciesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSSLPoliciesActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETDescribeSSLPoliciesLoadBalancerTypeEnumGateway     GETDescribeSSLPoliciesLoadBalancerTypeEnum = "gateway"
 )
 
+func (e GETDescribeSSLPoliciesLoadBalancerTypeEnum) ToPointer() *GETDescribeSSLPoliciesLoadBalancerTypeEnum {
+	return &e
+}
+
 func (e *GETDescribeSSLPoliciesLoadBalancerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "application":
 		fallthrough
 	case "network":
 		fallthrough
 	case "gateway":
-		*e = GETDescribeSSLPoliciesLoadBalancerTypeEnum(s)
+		*e = GETDescribeSSLPoliciesLoadBalancerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSSLPoliciesLoadBalancerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSSLPoliciesLoadBalancerTypeEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETDescribeSSLPoliciesVersionEnumTwoThousandAndFifteen1201 GETDescribeSSLPoliciesVersionEnum = "2015-12-01"
 )
 
+func (e GETDescribeSSLPoliciesVersionEnum) ToPointer() *GETDescribeSSLPoliciesVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeSSLPoliciesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = GETDescribeSSLPoliciesVersionEnum(s)
+		*e = GETDescribeSSLPoliciesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSSLPoliciesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSSLPoliciesVersionEnum: %v", v)
 	}
 }
 

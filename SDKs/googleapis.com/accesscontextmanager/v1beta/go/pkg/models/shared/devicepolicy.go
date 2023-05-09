@@ -16,12 +16,16 @@ const (
 	DevicePolicyAllowedDeviceManagementLevelsEnumComplete              DevicePolicyAllowedDeviceManagementLevelsEnum = "COMPLETE"
 )
 
+func (e DevicePolicyAllowedDeviceManagementLevelsEnum) ToPointer() *DevicePolicyAllowedDeviceManagementLevelsEnum {
+	return &e
+}
+
 func (e *DevicePolicyAllowedDeviceManagementLevelsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANAGEMENT_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -29,10 +33,10 @@ func (e *DevicePolicyAllowedDeviceManagementLevelsEnum) UnmarshalJSON(data []byt
 	case "BASIC":
 		fallthrough
 	case "COMPLETE":
-		*e = DevicePolicyAllowedDeviceManagementLevelsEnum(s)
+		*e = DevicePolicyAllowedDeviceManagementLevelsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicePolicyAllowedDeviceManagementLevelsEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicePolicyAllowedDeviceManagementLevelsEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	DevicePolicyAllowedEncryptionStatusesEnumEncrypted             DevicePolicyAllowedEncryptionStatusesEnum = "ENCRYPTED"
 )
 
+func (e DevicePolicyAllowedEncryptionStatusesEnum) ToPointer() *DevicePolicyAllowedEncryptionStatusesEnum {
+	return &e
+}
+
 func (e *DevicePolicyAllowedEncryptionStatusesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENCRYPTION_UNSPECIFIED":
 		fallthrough
 	case "ENCRYPTION_UNSUPPORTED":
@@ -58,10 +66,10 @@ func (e *DevicePolicyAllowedEncryptionStatusesEnum) UnmarshalJSON(data []byte) e
 	case "UNENCRYPTED":
 		fallthrough
 	case "ENCRYPTED":
-		*e = DevicePolicyAllowedEncryptionStatusesEnum(s)
+		*e = DevicePolicyAllowedEncryptionStatusesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicePolicyAllowedEncryptionStatusesEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicePolicyAllowedEncryptionStatusesEnum: %v", v)
 	}
 }
 

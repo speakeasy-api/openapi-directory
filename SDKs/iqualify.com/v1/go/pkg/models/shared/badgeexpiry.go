@@ -15,19 +15,23 @@ const (
 	BadgeExpiryExpiryTypeEnumTimeframe BadgeExpiryExpiryTypeEnum = "timeframe"
 )
 
+func (e BadgeExpiryExpiryTypeEnum) ToPointer() *BadgeExpiryExpiryTypeEnum {
+	return &e
+}
+
 func (e *BadgeExpiryExpiryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "date":
 		fallthrough
 	case "timeframe":
-		*e = BadgeExpiryExpiryTypeEnum(s)
+		*e = BadgeExpiryExpiryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BadgeExpiryExpiryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BadgeExpiryExpiryTypeEnum: %v", v)
 	}
 }
 
@@ -39,21 +43,25 @@ const (
 	BadgeExpiryTimeframeUnitEnumYears  BadgeExpiryTimeframeUnitEnum = "years"
 )
 
+func (e BadgeExpiryTimeframeUnitEnum) ToPointer() *BadgeExpiryTimeframeUnitEnum {
+	return &e
+}
+
 func (e *BadgeExpiryTimeframeUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "days":
 		fallthrough
 	case "months":
 		fallthrough
 	case "years":
-		*e = BadgeExpiryTimeframeUnitEnum(s)
+		*e = BadgeExpiryTimeframeUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BadgeExpiryTimeframeUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for BadgeExpiryTimeframeUnitEnum: %v", v)
 	}
 }
 

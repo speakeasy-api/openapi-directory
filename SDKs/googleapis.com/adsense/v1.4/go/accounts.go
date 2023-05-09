@@ -35,7 +35,10 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AdsenseAccountsAdclientsGetAdCode - Get Auto ad code for a given ad client.
 func (s *accounts) AdsenseAccountsAdclientsGetAdCode(ctx context.Context, request operations.AdsenseAccountsAdclientsGetAdCodeRequest, security operations.AdsenseAccountsAdclientsGetAdCodeSecurity) (*operations.AdsenseAccountsAdclientsGetAdCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adcode", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adcode", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *accounts) AdsenseAccountsAdclientsGetAdCode(ctx context.Context, reques
 // AdsenseAccountsAdclientsList - List all ad clients in the specified account.
 func (s *accounts) AdsenseAccountsAdclientsList(ctx context.Context, request operations.AdsenseAccountsAdclientsListRequest, security operations.AdsenseAccountsAdclientsListSecurity) (*operations.AdsenseAccountsAdclientsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *accounts) AdsenseAccountsAdclientsList(ctx context.Context, request ope
 // AdsenseAccountsAdunitsCustomchannelsList - List all custom channels which the specified ad unit belongs to.
 func (s *accounts) AdsenseAccountsAdunitsCustomchannelsList(ctx context.Context, request operations.AdsenseAccountsAdunitsCustomchannelsListRequest, security operations.AdsenseAccountsAdunitsCustomchannelsListSecurity) (*operations.AdsenseAccountsAdunitsCustomchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/customchannels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/customchannels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -179,7 +188,10 @@ func (s *accounts) AdsenseAccountsAdunitsCustomchannelsList(ctx context.Context,
 // AdsenseAccountsAdunitsGet - Gets the specified ad unit in the specified ad client for the specified account.
 func (s *accounts) AdsenseAccountsAdunitsGet(ctx context.Context, request operations.AdsenseAccountsAdunitsGetRequest, security operations.AdsenseAccountsAdunitsGetSecurity) (*operations.AdsenseAccountsAdunitsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -227,7 +239,10 @@ func (s *accounts) AdsenseAccountsAdunitsGet(ctx context.Context, request operat
 // AdsenseAccountsAdunitsGetAdCode - Get ad code for the specified ad unit.
 func (s *accounts) AdsenseAccountsAdunitsGetAdCode(ctx context.Context, request operations.AdsenseAccountsAdunitsGetAdCodeRequest, security operations.AdsenseAccountsAdunitsGetAdCodeSecurity) (*operations.AdsenseAccountsAdunitsGetAdCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/adcode", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/adcode", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -275,7 +290,10 @@ func (s *accounts) AdsenseAccountsAdunitsGetAdCode(ctx context.Context, request 
 // AdsenseAccountsAdunitsList - List all ad units in the specified ad client for the specified account.
 func (s *accounts) AdsenseAccountsAdunitsList(ctx context.Context, request operations.AdsenseAccountsAdunitsListRequest, security operations.AdsenseAccountsAdunitsListSecurity) (*operations.AdsenseAccountsAdunitsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -323,7 +341,10 @@ func (s *accounts) AdsenseAccountsAdunitsList(ctx context.Context, request opera
 // AdsenseAccountsAlertsDelete - Dismiss (delete) the specified alert from the specified publisher AdSense account.
 func (s *accounts) AdsenseAccountsAlertsDelete(ctx context.Context, request operations.AdsenseAccountsAlertsDeleteRequest, security operations.AdsenseAccountsAlertsDeleteSecurity) (*operations.AdsenseAccountsAlertsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/alerts/{alertId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/alerts/{alertId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -362,7 +383,10 @@ func (s *accounts) AdsenseAccountsAlertsDelete(ctx context.Context, request oper
 // AdsenseAccountsAlertsList - List the alerts for the specified AdSense account.
 func (s *accounts) AdsenseAccountsAlertsList(ctx context.Context, request operations.AdsenseAccountsAlertsListRequest, security operations.AdsenseAccountsAlertsListSecurity) (*operations.AdsenseAccountsAlertsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/alerts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/alerts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -410,7 +434,10 @@ func (s *accounts) AdsenseAccountsAlertsList(ctx context.Context, request operat
 // AdsenseAccountsCustomchannelsAdunitsList - List all ad units in the specified custom channel.
 func (s *accounts) AdsenseAccountsCustomchannelsAdunitsList(ctx context.Context, request operations.AdsenseAccountsCustomchannelsAdunitsListRequest, security operations.AdsenseAccountsCustomchannelsAdunitsListSecurity) (*operations.AdsenseAccountsCustomchannelsAdunitsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}/adunits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}/adunits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -458,7 +485,10 @@ func (s *accounts) AdsenseAccountsCustomchannelsAdunitsList(ctx context.Context,
 // AdsenseAccountsCustomchannelsGet - Get the specified custom channel from the specified ad client for the specified account.
 func (s *accounts) AdsenseAccountsCustomchannelsGet(ctx context.Context, request operations.AdsenseAccountsCustomchannelsGetRequest, security operations.AdsenseAccountsCustomchannelsGetSecurity) (*operations.AdsenseAccountsCustomchannelsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -506,7 +536,10 @@ func (s *accounts) AdsenseAccountsCustomchannelsGet(ctx context.Context, request
 // AdsenseAccountsCustomchannelsList - List all custom channels in the specified ad client for the specified account.
 func (s *accounts) AdsenseAccountsCustomchannelsList(ctx context.Context, request operations.AdsenseAccountsCustomchannelsListRequest, security operations.AdsenseAccountsCustomchannelsListSecurity) (*operations.AdsenseAccountsCustomchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/customchannels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/customchannels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -554,7 +587,10 @@ func (s *accounts) AdsenseAccountsCustomchannelsList(ctx context.Context, reques
 // AdsenseAccountsGet - Get information about the selected AdSense account.
 func (s *accounts) AdsenseAccountsGet(ctx context.Context, request operations.AdsenseAccountsGetRequest, security operations.AdsenseAccountsGetSecurity) (*operations.AdsenseAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -650,7 +686,10 @@ func (s *accounts) AdsenseAccountsList(ctx context.Context, request operations.A
 // AdsenseAccountsPaymentsList - List the payments for the specified AdSense account.
 func (s *accounts) AdsenseAccountsPaymentsList(ctx context.Context, request operations.AdsenseAccountsPaymentsListRequest, security operations.AdsenseAccountsPaymentsListSecurity) (*operations.AdsenseAccountsPaymentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/payments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/payments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -698,7 +737,10 @@ func (s *accounts) AdsenseAccountsPaymentsList(ctx context.Context, request oper
 // AdsenseAccountsReportsGenerate - Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
 func (s *accounts) AdsenseAccountsReportsGenerate(ctx context.Context, request operations.AdsenseAccountsReportsGenerateRequest, security operations.AdsenseAccountsReportsGenerateSecurity) (*operations.AdsenseAccountsReportsGenerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/reports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -746,7 +788,10 @@ func (s *accounts) AdsenseAccountsReportsGenerate(ctx context.Context, request o
 // AdsenseAccountsReportsSavedGenerate - Generate an AdSense report based on the saved report ID sent in the query parameters.
 func (s *accounts) AdsenseAccountsReportsSavedGenerate(ctx context.Context, request operations.AdsenseAccountsReportsSavedGenerateRequest, security operations.AdsenseAccountsReportsSavedGenerateSecurity) (*operations.AdsenseAccountsReportsSavedGenerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/reports/{savedReportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/reports/{savedReportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -794,7 +839,10 @@ func (s *accounts) AdsenseAccountsReportsSavedGenerate(ctx context.Context, requ
 // AdsenseAccountsReportsSavedList - List all saved reports in the specified AdSense account.
 func (s *accounts) AdsenseAccountsReportsSavedList(ctx context.Context, request operations.AdsenseAccountsReportsSavedListRequest, security operations.AdsenseAccountsReportsSavedListSecurity) (*operations.AdsenseAccountsReportsSavedListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/reports/saved", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/reports/saved", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -842,7 +890,10 @@ func (s *accounts) AdsenseAccountsReportsSavedList(ctx context.Context, request 
 // AdsenseAccountsSavedadstylesGet - List a specific saved ad style for the specified account.
 func (s *accounts) AdsenseAccountsSavedadstylesGet(ctx context.Context, request operations.AdsenseAccountsSavedadstylesGetRequest, security operations.AdsenseAccountsSavedadstylesGetSecurity) (*operations.AdsenseAccountsSavedadstylesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/savedadstyles/{savedAdStyleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/savedadstyles/{savedAdStyleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -890,7 +941,10 @@ func (s *accounts) AdsenseAccountsSavedadstylesGet(ctx context.Context, request 
 // AdsenseAccountsSavedadstylesList - List all saved ad styles in the specified account.
 func (s *accounts) AdsenseAccountsSavedadstylesList(ctx context.Context, request operations.AdsenseAccountsSavedadstylesListRequest, security operations.AdsenseAccountsSavedadstylesListSecurity) (*operations.AdsenseAccountsSavedadstylesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/savedadstyles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/savedadstyles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -938,7 +992,10 @@ func (s *accounts) AdsenseAccountsSavedadstylesList(ctx context.Context, request
 // AdsenseAccountsUrlchannelsList - List all URL channels in the specified ad client for the specified account.
 func (s *accounts) AdsenseAccountsUrlchannelsList(ctx context.Context, request operations.AdsenseAccountsUrlchannelsListRequest, security operations.AdsenseAccountsUrlchannelsListSecurity) (*operations.AdsenseAccountsUrlchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/urlchannels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/urlchannels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

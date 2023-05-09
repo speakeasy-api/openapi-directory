@@ -15,17 +15,21 @@ const (
 	GETUntagUserActionEnumUntagUser GETUntagUserActionEnum = "UntagUser"
 )
 
+func (e GETUntagUserActionEnum) ToPointer() *GETUntagUserActionEnum {
+	return &e
+}
+
 func (e *GETUntagUserActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UntagUser":
-		*e = GETUntagUserActionEnum(s)
+		*e = GETUntagUserActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUntagUserActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUntagUserActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUntagUserVersionEnumTwoThousandAndTen0508 GETUntagUserVersionEnum = "2010-05-08"
 )
 
+func (e GETUntagUserVersionEnum) ToPointer() *GETUntagUserVersionEnum {
+	return &e
+}
+
 func (e *GETUntagUserVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETUntagUserVersionEnum(s)
+		*e = GETUntagUserVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUntagUserVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUntagUserVersionEnum: %v", v)
 	}
 }
 

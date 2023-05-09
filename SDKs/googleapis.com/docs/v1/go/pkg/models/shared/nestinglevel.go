@@ -17,12 +17,16 @@ const (
 	NestingLevelBulletAlignmentEnumEnd                        NestingLevelBulletAlignmentEnum = "END"
 )
 
+func (e NestingLevelBulletAlignmentEnum) ToPointer() *NestingLevelBulletAlignmentEnum {
+	return &e
+}
+
 func (e *NestingLevelBulletAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BULLET_ALIGNMENT_UNSPECIFIED":
 		fallthrough
 	case "START":
@@ -30,10 +34,10 @@ func (e *NestingLevelBulletAlignmentEnum) UnmarshalJSON(data []byte) error {
 	case "CENTER":
 		fallthrough
 	case "END":
-		*e = NestingLevelBulletAlignmentEnum(s)
+		*e = NestingLevelBulletAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NestingLevelBulletAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for NestingLevelBulletAlignmentEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	NestingLevelGlyphTypeEnumRoman                NestingLevelGlyphTypeEnum = "ROMAN"
 )
 
+func (e NestingLevelGlyphTypeEnum) ToPointer() *NestingLevelGlyphTypeEnum {
+	return &e
+}
+
 func (e *NestingLevelGlyphTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GLYPH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -72,10 +80,10 @@ func (e *NestingLevelGlyphTypeEnum) UnmarshalJSON(data []byte) error {
 	case "UPPER_ROMAN":
 		fallthrough
 	case "ROMAN":
-		*e = NestingLevelGlyphTypeEnum(s)
+		*e = NestingLevelGlyphTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NestingLevelGlyphTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NestingLevelGlyphTypeEnum: %v", v)
 	}
 }
 

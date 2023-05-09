@@ -15,17 +15,21 @@ const (
 	POSTCreateUserActionEnumCreateUser POSTCreateUserActionEnum = "CreateUser"
 )
 
+func (e POSTCreateUserActionEnum) ToPointer() *POSTCreateUserActionEnum {
+	return &e
+}
+
 func (e *POSTCreateUserActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateUser":
-		*e = POSTCreateUserActionEnum(s)
+		*e = POSTCreateUserActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateUserActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateUserActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateUserVersionEnumTwoThousandAndFifteen0202 POSTCreateUserVersionEnum = "2015-02-02"
 )
 
+func (e POSTCreateUserVersionEnum) ToPointer() *POSTCreateUserVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateUserVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTCreateUserVersionEnum(s)
+		*e = POSTCreateUserVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateUserVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateUserVersionEnum: %v", v)
 	}
 }
 

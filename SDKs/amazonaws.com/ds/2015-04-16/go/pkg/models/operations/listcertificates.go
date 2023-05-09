@@ -16,17 +16,21 @@ const (
 	ListCertificatesXAmzTargetEnumDirectoryService20150416ListCertificates ListCertificatesXAmzTargetEnum = "DirectoryService_20150416.ListCertificates"
 )
 
+func (e ListCertificatesXAmzTargetEnum) ToPointer() *ListCertificatesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCertificatesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.ListCertificates":
-		*e = ListCertificatesXAmzTargetEnum(s)
+		*e = ListCertificatesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCertificatesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCertificatesXAmzTargetEnum: %v", v)
 	}
 }
 

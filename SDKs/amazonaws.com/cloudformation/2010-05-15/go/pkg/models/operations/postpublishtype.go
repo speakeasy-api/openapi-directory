@@ -15,17 +15,21 @@ const (
 	POSTPublishTypeActionEnumPublishType POSTPublishTypeActionEnum = "PublishType"
 )
 
+func (e POSTPublishTypeActionEnum) ToPointer() *POSTPublishTypeActionEnum {
+	return &e
+}
+
 func (e *POSTPublishTypeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PublishType":
-		*e = POSTPublishTypeActionEnum(s)
+		*e = POSTPublishTypeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPublishTypeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPublishTypeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTPublishTypeVersionEnumTwoThousandAndTen0515 POSTPublishTypeVersionEnum = "2010-05-15"
 )
 
+func (e POSTPublishTypeVersionEnum) ToPointer() *POSTPublishTypeVersionEnum {
+	return &e
+}
+
 func (e *POSTPublishTypeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTPublishTypeVersionEnum(s)
+		*e = POSTPublishTypeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPublishTypeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPublishTypeVersionEnum: %v", v)
 	}
 }
 

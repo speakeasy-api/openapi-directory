@@ -20,12 +20,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCustomerAccountStatusEnumDraft       GoogleAdsSearchads360V0ResourcesCustomerAccountStatusEnum = "DRAFT"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCustomerAccountStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCustomerAccountStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCustomerAccountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -39,10 +43,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCustomerAccountStatusEnum) UnmarshalJSO
 	case "REMOVED":
 		fallthrough
 	case "DRAFT":
-		*e = GoogleAdsSearchads360V0ResourcesCustomerAccountStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCustomerAccountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCustomerAccountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCustomerAccountStatusEnum: %v", v)
 	}
 }
 
@@ -62,12 +66,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCustomerAccountTypeEnumYahooJapan      GoogleAdsSearchads360V0ResourcesCustomerAccountTypeEnum = "YAHOO_JAPAN"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCustomerAccountTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCustomerAccountTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCustomerAccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -87,10 +95,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCustomerAccountTypeEnum) UnmarshalJSON(
 	case "SEARCH_ADS_360":
 		fallthrough
 	case "YAHOO_JAPAN":
-		*e = GoogleAdsSearchads360V0ResourcesCustomerAccountTypeEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCustomerAccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCustomerAccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCustomerAccountTypeEnum: %v", v)
 	}
 }
 
@@ -106,12 +114,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCustomerStatusEnumClosed      GoogleAdsSearchads360V0ResourcesCustomerStatusEnum = "CLOSED"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCustomerStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCustomerStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCustomerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -123,10 +135,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCustomerStatusEnum) UnmarshalJSON(data 
 	case "SUSPENDED":
 		fallthrough
 	case "CLOSED":
-		*e = GoogleAdsSearchads360V0ResourcesCustomerStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCustomerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCustomerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCustomerStatusEnum: %v", v)
 	}
 }
 
@@ -140,6 +152,8 @@ type GoogleAdsSearchads360V0ResourcesCustomer struct {
 	AutoTaggingEnabled *bool `json:"autoTaggingEnabled,omitempty"`
 	// A collection of customer-wide settings related to Search Ads 360 Conversion Tracking.
 	ConversionTrackingSetting *GoogleAdsSearchads360V0ResourcesConversionTrackingSetting `json:"conversionTrackingSetting,omitempty"`
+	// Output only. The timestamp when this customer was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+	CreationTime *string `json:"creationTime,omitempty"`
 	// Immutable. The currency in which the account operates. A subset of the currency codes from the ISO 4217 standard is supported.
 	CurrencyCode *string `json:"currencyCode,omitempty"`
 	// Optional, non-unique descriptive name of the customer.
@@ -148,7 +162,7 @@ type GoogleAdsSearchads360V0ResourcesCustomer struct {
 	DoubleClickCampaignManagerSetting *GoogleAdsSearchads360V0ResourcesDoubleClickCampaignManagerSetting `json:"doubleClickCampaignManagerSetting,omitempty"`
 	// Output only. ID of the account in the external engine account.
 	EngineID *string `json:"engineId,omitempty"`
-	// The URL template for appending params to the final URL
+	// The URL template for appending params to the final URL.
 	FinalURLSuffix *string `json:"finalUrlSuffix,omitempty"`
 	// Output only. The ID of the customer.
 	ID *string `json:"id,omitempty"`

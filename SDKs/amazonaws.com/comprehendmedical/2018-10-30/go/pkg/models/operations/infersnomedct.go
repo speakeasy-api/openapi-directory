@@ -16,17 +16,21 @@ const (
 	InferSNOMEDCTXAmzTargetEnumComprehendMedical20181030InferSnomedct InferSNOMEDCTXAmzTargetEnum = "ComprehendMedical_20181030.InferSNOMEDCT"
 )
 
+func (e InferSNOMEDCTXAmzTargetEnum) ToPointer() *InferSNOMEDCTXAmzTargetEnum {
+	return &e
+}
+
 func (e *InferSNOMEDCTXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComprehendMedical_20181030.InferSNOMEDCT":
-		*e = InferSNOMEDCTXAmzTargetEnum(s)
+		*e = InferSNOMEDCTXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InferSNOMEDCTXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for InferSNOMEDCTXAmzTargetEnum: %v", v)
 	}
 }
 

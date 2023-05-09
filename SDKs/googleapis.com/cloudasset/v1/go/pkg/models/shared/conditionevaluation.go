@@ -17,12 +17,16 @@ const (
 	ConditionEvaluationEvaluationValueEnumConditional                ConditionEvaluationEvaluationValueEnum = "CONDITIONAL"
 )
 
+func (e ConditionEvaluationEvaluationValueEnum) ToPointer() *ConditionEvaluationEvaluationValueEnum {
+	return &e
+}
+
 func (e *ConditionEvaluationEvaluationValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVALUATION_VALUE_UNSPECIFIED":
 		fallthrough
 	case "TRUE":
@@ -30,10 +34,10 @@ func (e *ConditionEvaluationEvaluationValueEnum) UnmarshalJSON(data []byte) erro
 	case "FALSE":
 		fallthrough
 	case "CONDITIONAL":
-		*e = ConditionEvaluationEvaluationValueEnum(s)
+		*e = ConditionEvaluationEvaluationValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConditionEvaluationEvaluationValueEnum: %s", s)
+		return fmt.Errorf("invalid value for ConditionEvaluationEvaluationValueEnum: %v", v)
 	}
 }
 

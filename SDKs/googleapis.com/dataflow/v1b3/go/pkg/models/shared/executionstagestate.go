@@ -26,12 +26,16 @@ const (
 	ExecutionStageStateExecutionStageStateEnumJobStateResourceCleaningUp ExecutionStageStateExecutionStageStateEnum = "JOB_STATE_RESOURCE_CLEANING_UP"
 )
 
+func (e ExecutionStageStateExecutionStageStateEnum) ToPointer() *ExecutionStageStateExecutionStageStateEnum {
+	return &e
+}
+
 func (e *ExecutionStageStateExecutionStageStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_STATE_UNKNOWN":
 		fallthrough
 	case "JOB_STATE_STOPPED":
@@ -57,10 +61,10 @@ func (e *ExecutionStageStateExecutionStageStateEnum) UnmarshalJSON(data []byte) 
 	case "JOB_STATE_QUEUED":
 		fallthrough
 	case "JOB_STATE_RESOURCE_CLEANING_UP":
-		*e = ExecutionStageStateExecutionStageStateEnum(s)
+		*e = ExecutionStageStateExecutionStageStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionStageStateExecutionStageStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionStageStateExecutionStageStateEnum: %v", v)
 	}
 }
 

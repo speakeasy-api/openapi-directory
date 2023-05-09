@@ -15,17 +15,21 @@ const (
 	GETDeleteVerifiedAccessInstanceActionEnumDeleteVerifiedAccessInstance GETDeleteVerifiedAccessInstanceActionEnum = "DeleteVerifiedAccessInstance"
 )
 
+func (e GETDeleteVerifiedAccessInstanceActionEnum) ToPointer() *GETDeleteVerifiedAccessInstanceActionEnum {
+	return &e
+}
+
 func (e *GETDeleteVerifiedAccessInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteVerifiedAccessInstance":
-		*e = GETDeleteVerifiedAccessInstanceActionEnum(s)
+		*e = GETDeleteVerifiedAccessInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVerifiedAccessInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVerifiedAccessInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteVerifiedAccessInstanceVersionEnumTwoThousandAndSixteen1115 GETDeleteVerifiedAccessInstanceVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteVerifiedAccessInstanceVersionEnum) ToPointer() *GETDeleteVerifiedAccessInstanceVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteVerifiedAccessInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteVerifiedAccessInstanceVersionEnum(s)
+		*e = GETDeleteVerifiedAccessInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVerifiedAccessInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVerifiedAccessInstanceVersionEnum: %v", v)
 	}
 }
 
@@ -56,7 +64,7 @@ type GETDeleteVerifiedAccessInstanceRequest struct {
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
-	// The ID of the Amazon Web Services Verified Access instance.
+	// The ID of the Verified Access instance.
 	VerifiedAccessInstanceID string                                     `queryParam:"style=form,explode=true,name=VerifiedAccessInstanceId"`
 	Version                  GETDeleteVerifiedAccessInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	XAmzAlgorithm            *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`

@@ -59,19 +59,23 @@ const (
 	CreateFindingsReportRequestBodyReportFormatEnumJSON CreateFindingsReportRequestBodyReportFormatEnum = "JSON"
 )
 
+func (e CreateFindingsReportRequestBodyReportFormatEnum) ToPointer() *CreateFindingsReportRequestBodyReportFormatEnum {
+	return &e
+}
+
 func (e *CreateFindingsReportRequestBodyReportFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
 		fallthrough
 	case "JSON":
-		*e = CreateFindingsReportRequestBodyReportFormatEnum(s)
+		*e = CreateFindingsReportRequestBodyReportFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFindingsReportRequestBodyReportFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFindingsReportRequestBodyReportFormatEnum: %v", v)
 	}
 }
 

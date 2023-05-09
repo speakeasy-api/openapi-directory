@@ -19,12 +19,16 @@ const (
 	DeploymentCreatorEnumCloudFormationRollback DeploymentCreatorEnum = "CloudFormationRollback"
 )
 
+func (e DeploymentCreatorEnum) ToPointer() *DeploymentCreatorEnum {
+	return &e
+}
+
 func (e *DeploymentCreatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "autoscaling":
@@ -38,9 +42,9 @@ func (e *DeploymentCreatorEnum) UnmarshalJSON(data []byte) error {
 	case "CloudFormation":
 		fallthrough
 	case "CloudFormationRollback":
-		*e = DeploymentCreatorEnum(s)
+		*e = DeploymentCreatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentCreatorEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentCreatorEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	ListPermissionSetsProvisionedToAccountXAmzTargetEnumSwbExternalServiceListPermissionSetsProvisionedToAccount ListPermissionSetsProvisionedToAccountXAmzTargetEnum = "SWBExternalService.ListPermissionSetsProvisionedToAccount"
 )
 
+func (e ListPermissionSetsProvisionedToAccountXAmzTargetEnum) ToPointer() *ListPermissionSetsProvisionedToAccountXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListPermissionSetsProvisionedToAccountXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.ListPermissionSetsProvisionedToAccount":
-		*e = ListPermissionSetsProvisionedToAccountXAmzTargetEnum(s)
+		*e = ListPermissionSetsProvisionedToAccountXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPermissionSetsProvisionedToAccountXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPermissionSetsProvisionedToAccountXAmzTargetEnum: %v", v)
 	}
 }
 

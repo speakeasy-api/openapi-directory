@@ -13,16 +13,20 @@ const (
 	MetricTypeEnumAggregateLatency MetricTypeEnum = "aggregate-latency"
 )
 
+func (e MetricTypeEnum) ToPointer() *MetricTypeEnum {
+	return &e
+}
+
 func (e *MetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "aggregate-latency":
-		*e = MetricTypeEnum(s)
+		*e = MetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricTypeEnum: %v", v)
 	}
 }

@@ -16,19 +16,23 @@ const (
 	SubmitFeedbackRequestBodyTypeEnumNegative SubmitFeedbackRequestBodyTypeEnum = "Negative"
 )
 
+func (e SubmitFeedbackRequestBodyTypeEnum) ToPointer() *SubmitFeedbackRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *SubmitFeedbackRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Positive":
 		fallthrough
 	case "Negative":
-		*e = SubmitFeedbackRequestBodyTypeEnum(s)
+		*e = SubmitFeedbackRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitFeedbackRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitFeedbackRequestBodyTypeEnum: %v", v)
 	}
 }
 

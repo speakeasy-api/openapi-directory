@@ -15,17 +15,21 @@ const (
 	POSTCreateDBSubnetGroupActionEnumCreateDbSubnetGroup POSTCreateDBSubnetGroupActionEnum = "CreateDBSubnetGroup"
 )
 
+func (e POSTCreateDBSubnetGroupActionEnum) ToPointer() *POSTCreateDBSubnetGroupActionEnum {
+	return &e
+}
+
 func (e *POSTCreateDBSubnetGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateDBSubnetGroup":
-		*e = POSTCreateDBSubnetGroupActionEnum(s)
+		*e = POSTCreateDBSubnetGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateDBSubnetGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateDBSubnetGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateDBSubnetGroupVersionEnumTwoThousandAndThirteen0110 POSTCreateDBSubnetGroupVersionEnum = "2013-01-10"
 )
 
+func (e POSTCreateDBSubnetGroupVersionEnum) ToPointer() *POSTCreateDBSubnetGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateDBSubnetGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-10":
-		*e = POSTCreateDBSubnetGroupVersionEnum(s)
+		*e = POSTCreateDBSubnetGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateDBSubnetGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateDBSubnetGroupVersionEnum: %v", v)
 	}
 }
 

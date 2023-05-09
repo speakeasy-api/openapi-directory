@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateChatTokenRequest{
+    ctx := context.Background()
+    res, err := s.CreateChatToken(ctx, operations.CreateChatTokenRequest{
         RequestBody: operations.CreateChatTokenRequestBody{
             Attributes: map[string]string{
                 "provident": "distinctio",
@@ -25,26 +26,23 @@ func main() {
                 "nulla": "corrupti",
             },
             Capabilities: []shared.ChatTokenCapabilityEnum{
-                "DISCONNECT_USER",
-                "DISCONNECT_USER",
-                "DISCONNECT_USER",
-                "DISCONNECT_USER",
+                shared.ChatTokenCapabilityEnumDisconnectUser,
+                shared.ChatTokenCapabilityEnumDisconnectUser,
+                shared.ChatTokenCapabilityEnumDisconnectUser,
+                shared.ChatTokenCapabilityEnumDisconnectUser,
             },
             RoomIdentifier: "iure",
-            SessionDurationInMinutes: 297534,
+            SessionDurationInMinutes: sdk.Int64(297534),
             UserID: "debitis",
         },
-        XAmzAlgorithm: "ipsa",
-        XAmzContentSha256: "delectus",
-        XAmzCredential: "tempora",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "molestiae",
-        XAmzSignature: "minus",
-        XAmzSignedHeaders: "placeat",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateChatToken(ctx, req)
+        XAmzAlgorithm: sdk.String("ipsa"),
+        XAmzContentSha256: sdk.String("delectus"),
+        XAmzCredential: sdk.String("tempora"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("molestiae"),
+        XAmzSignature: sdk.String("minus"),
+        XAmzSignedHeaders: sdk.String("placeat"),
+    })
     if err != nil {
         log.Fatal(err)
     }

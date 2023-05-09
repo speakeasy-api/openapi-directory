@@ -16,17 +16,21 @@ const (
 	DeleteNetworkProfileXAmzTargetEnumDeviceFarm20150623DeleteNetworkProfile DeleteNetworkProfileXAmzTargetEnum = "DeviceFarm_20150623.DeleteNetworkProfile"
 )
 
+func (e DeleteNetworkProfileXAmzTargetEnum) ToPointer() *DeleteNetworkProfileXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteNetworkProfileXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.DeleteNetworkProfile":
-		*e = DeleteNetworkProfileXAmzTargetEnum(s)
+		*e = DeleteNetworkProfileXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteNetworkProfileXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteNetworkProfileXAmzTargetEnum: %v", v)
 	}
 }
 

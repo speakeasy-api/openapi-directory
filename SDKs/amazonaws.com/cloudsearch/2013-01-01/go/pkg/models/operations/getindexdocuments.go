@@ -15,17 +15,21 @@ const (
 	GETIndexDocumentsActionEnumIndexDocuments GETIndexDocumentsActionEnum = "IndexDocuments"
 )
 
+func (e GETIndexDocumentsActionEnum) ToPointer() *GETIndexDocumentsActionEnum {
+	return &e
+}
+
 func (e *GETIndexDocumentsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IndexDocuments":
-		*e = GETIndexDocumentsActionEnum(s)
+		*e = GETIndexDocumentsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETIndexDocumentsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETIndexDocumentsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETIndexDocumentsVersionEnumTwoThousandAndThirteen0101 GETIndexDocumentsVersionEnum = "2013-01-01"
 )
 
+func (e GETIndexDocumentsVersionEnum) ToPointer() *GETIndexDocumentsVersionEnum {
+	return &e
+}
+
 func (e *GETIndexDocumentsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = GETIndexDocumentsVersionEnum(s)
+		*e = GETIndexDocumentsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETIndexDocumentsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETIndexDocumentsVersionEnum: %v", v)
 	}
 }
 

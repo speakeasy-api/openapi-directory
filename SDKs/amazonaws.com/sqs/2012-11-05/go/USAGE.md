@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,14 +16,15 @@ func main() {
         }),
     )
 
-    req := operations.GETAddPermissionRequest{
+    ctx := context.Background()
+    res, err := s.GETAddPermission(ctx, operations.GETAddPermissionRequest{
         AWSAccountIds: []string{
             "provident",
             "distinctio",
             "quibusdam",
         },
         AccountNumber: 602763,
-        Action: "AddPermission",
+        Action: operations.GETAddPermissionActionEnumAddPermission,
         Actions: []string{
             "corrupti",
             "illum",
@@ -33,18 +33,15 @@ func main() {
         },
         Label: "deserunt",
         QueueName: "suscipit",
-        Version: "2012-11-05",
-        XAmzAlgorithm: "iure",
-        XAmzContentSha256: "magnam",
-        XAmzCredential: "debitis",
-        XAmzDate: "ipsa",
-        XAmzSecurityToken: "delectus",
-        XAmzSignature: "tempora",
-        XAmzSignedHeaders: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.GETAddPermission(ctx, req)
+        Version: operations.GETAddPermissionVersionEnumTwoThousandAndTwelve1105,
+        XAmzAlgorithm: sdk.String("iure"),
+        XAmzContentSha256: sdk.String("magnam"),
+        XAmzCredential: sdk.String("debitis"),
+        XAmzDate: sdk.String("ipsa"),
+        XAmzSecurityToken: sdk.String("delectus"),
+        XAmzSignature: sdk.String("tempora"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+    })
     if err != nil {
         log.Fatal(err)
     }

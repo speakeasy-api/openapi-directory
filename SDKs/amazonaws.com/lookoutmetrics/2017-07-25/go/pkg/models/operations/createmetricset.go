@@ -19,12 +19,16 @@ const (
 	CreateMetricSetRequestBodyMetricSetFrequencyEnumPt5M  CreateMetricSetRequestBodyMetricSetFrequencyEnum = "PT5M"
 )
 
+func (e CreateMetricSetRequestBodyMetricSetFrequencyEnum) ToPointer() *CreateMetricSetRequestBodyMetricSetFrequencyEnum {
+	return &e
+}
+
 func (e *CreateMetricSetRequestBodyMetricSetFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "P1D":
 		fallthrough
 	case "PT1H":
@@ -32,10 +36,10 @@ func (e *CreateMetricSetRequestBodyMetricSetFrequencyEnum) UnmarshalJSON(data []
 	case "PT10M":
 		fallthrough
 	case "PT5M":
-		*e = CreateMetricSetRequestBodyMetricSetFrequencyEnum(s)
+		*e = CreateMetricSetRequestBodyMetricSetFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateMetricSetRequestBodyMetricSetFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateMetricSetRequestBodyMetricSetFrequencyEnum: %v", v)
 	}
 }
 

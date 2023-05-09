@@ -29,19 +29,23 @@ const (
 	PutLoadBalancersID200ApplicationJSONLoadBalancerAlgorithmTypeEnumLeastConnections PutLoadBalancersID200ApplicationJSONLoadBalancerAlgorithmTypeEnum = "least_connections"
 )
 
+func (e PutLoadBalancersID200ApplicationJSONLoadBalancerAlgorithmTypeEnum) ToPointer() *PutLoadBalancersID200ApplicationJSONLoadBalancerAlgorithmTypeEnum {
+	return &e
+}
+
 func (e *PutLoadBalancersID200ApplicationJSONLoadBalancerAlgorithmTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "round_robin":
 		fallthrough
 	case "least_connections":
-		*e = PutLoadBalancersID200ApplicationJSONLoadBalancerAlgorithmTypeEnum(s)
+		*e = PutLoadBalancersID200ApplicationJSONLoadBalancerAlgorithmTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutLoadBalancersID200ApplicationJSONLoadBalancerAlgorithmTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutLoadBalancersID200ApplicationJSONLoadBalancerAlgorithmTypeEnum: %v", v)
 	}
 }
 
@@ -175,19 +179,23 @@ const (
 	PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnumHTTP PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum = "http"
 )
 
+func (e PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum) ToPointer() *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum {
+	return &e
+}
+
 func (e *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "http":
-		*e = PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum(s)
+		*e = PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum: %v", v)
 	}
 }
 
@@ -230,21 +238,25 @@ const (
 	PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceProtocolEnumHTTPS PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceProtocolEnum = "https"
 )
 
+func (e PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceProtocolEnum) ToPointer() *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceProtocolEnum {
+	return &e
+}
+
 func (e *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "http":
 		fallthrough
 	case "https":
-		*e = PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceProtocolEnum(s)
+		*e = PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerServiceProtocolEnum: %v", v)
 	}
 }
 
@@ -271,21 +283,25 @@ const (
 	PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnumUnknown   PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum = "unknown"
 )
 
+func (e PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum) ToPointer() *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum {
+	return &e
+}
+
 func (e *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "healthy":
 		fallthrough
 	case "unhealthy":
 		fallthrough
 	case "unknown":
-		*e = PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum(s)
+		*e = PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum: %v", v)
 	}
 }
 
@@ -294,65 +310,74 @@ type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetHealthSta
 	Status     *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum `json:"status,omitempty"`
 }
 
-// PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetIP - IP targets where the traffic should be routed through. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well.
-type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetIP struct {
+// PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetIP - IP targets where the traffic should be routed to. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well. Only present for target type "ip".
+type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetIP struct {
 	// IP of a server that belongs to the same customer (public IPv4/IPv6) or private IP in a Subnetwork type vswitch.
 	IP string `json:"ip"`
 }
 
-// PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLabelSelector - Label selector and a list of selected targets
-type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLabelSelector struct {
+// PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetLabelSelector - Label selector used to determine targets. Only present for target type "label_selector".
+type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetLabelSelector struct {
 	// Label selector
 	Selector string `json:"selector"`
 }
 
-// PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetServer - Server where the traffic should be routed through
+// PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetServer - Server where the traffic should be routed to. Only present for target type "server".
 type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetServer struct {
 	// ID of the Server
 	ID int64 `json:"id"`
 }
 
-type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum string
+type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnum string
 
 const (
-	PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnumHealthy   PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum = "healthy"
-	PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnumUnhealthy PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum = "unhealthy"
-	PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnumUnknown   PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum = "unknown"
+	PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnumHealthy   PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnum = "healthy"
+	PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnumUnhealthy PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnum = "unhealthy"
+	PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnumUnknown   PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnum = "unknown"
 )
 
-func (e *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+func (e PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnum) ToPointer() *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnum {
+	return &e
+}
+
+func (e *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "healthy":
 		fallthrough
 	case "unhealthy":
 		fallthrough
 	case "unknown":
-		*e = PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum(s)
+		*e = PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnum: %v", v)
 	}
 }
 
-type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatus struct {
-	ListenPort *int64                                                                                           `json:"listen_port,omitempty"`
-	Status     *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum `json:"status,omitempty"`
+type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatus struct {
+	ListenPort *int64                                                                                                            `json:"listen_port,omitempty"`
+	Status     *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatusStatusEnum `json:"status,omitempty"`
 }
 
-type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsServer struct {
+// PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetLoadBalancerTargetServer - Server where the traffic should be routed to. Only present for target type "server".
+type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetLoadBalancerTargetServer struct {
 	// ID of the Server
 	ID int64 `json:"id"`
 }
 
-type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargets struct {
-	HealthStatus []PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatus `json:"health_status,omitempty"`
-	Server       *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargetsServer        `json:"server,omitempty"`
-	Type         *string                                                                                 `json:"type,omitempty"`
-	UsePrivateIP *bool                                                                                   `json:"use_private_ip,omitempty"`
+type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTarget struct {
+	// List of health statuses of the services on this target. Only present for target types "server" and "ip".
+	HealthStatus []PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetHealthStatus `json:"health_status,omitempty"`
+	// Server where the traffic should be routed to. Only present for target type "server".
+	Server *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTargetLoadBalancerTargetServer `json:"server,omitempty"`
+	// Type of the resource. Here always "server".
+	Type *string `json:"type,omitempty"`
+	// Use the private network IP instead of the public IP. Default value is false. Only present for target types "server" and "label_selector".
+	UsePrivateIP *bool `json:"use_private_ip,omitempty"`
 }
 
 // PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTypeEnum - Type of the resource
@@ -364,38 +389,42 @@ const (
 	PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTypeEnumIP            PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTypeEnum = "ip"
 )
 
+func (e PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTypeEnum) ToPointer() *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTypeEnum {
+	return &e
+}
+
 func (e *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "server":
 		fallthrough
 	case "label_selector":
 		fallthrough
 	case "ip":
-		*e = PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTypeEnum(s)
+		*e = PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTypeEnum: %v", v)
 	}
 }
 
 type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTarget struct {
-	// List of health statuses of the services on this target
+	// List of health statuses of the services on this target. Only present for target types "server" and "ip".
 	HealthStatus []PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatus `json:"health_status,omitempty"`
-	// IP targets where the traffic should be routed through. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well.
-	IP *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetIP `json:"ip,omitempty"`
-	// Label selector and a list of selected targets
-	LabelSelector *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLabelSelector `json:"label_selector,omitempty"`
-	// Server where the traffic should be routed through
+	// IP targets where the traffic should be routed to. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well. Only present for target type "ip".
+	IP *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetIP `json:"ip,omitempty"`
+	// Label selector used to determine targets. Only present for target type "label_selector".
+	LabelSelector *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetLabelSelector `json:"label_selector,omitempty"`
+	// Server where the traffic should be routed to. Only present for target type "server".
 	Server *PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetServer `json:"server,omitempty"`
-	// List of selected targets
-	Targets []PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTargets `json:"targets,omitempty"`
+	// List of resolved label selector target Servers. Only present for type "label_selector".
+	Targets []PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetTarget `json:"targets,omitempty"`
 	// Type of the resource
 	Type PutLoadBalancersID200ApplicationJSONLoadBalancerLoadBalancerTargetTypeEnum `json:"type"`
-	// Use the private network IP instead of the public IP. Default value is false.
+	// Use the private network IP instead of the public IP. Default value is false. Only present for target types "server" and "label_selector".
 	UsePrivateIP *bool `json:"use_private_ip,omitempty"`
 }
 

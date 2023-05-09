@@ -15,17 +15,21 @@ const (
 	POSTPromoteReadReplicaDBClusterActionEnumPromoteReadReplicaDbCluster POSTPromoteReadReplicaDBClusterActionEnum = "PromoteReadReplicaDBCluster"
 )
 
+func (e POSTPromoteReadReplicaDBClusterActionEnum) ToPointer() *POSTPromoteReadReplicaDBClusterActionEnum {
+	return &e
+}
+
 func (e *POSTPromoteReadReplicaDBClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PromoteReadReplicaDBCluster":
-		*e = POSTPromoteReadReplicaDBClusterActionEnum(s)
+		*e = POSTPromoteReadReplicaDBClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPromoteReadReplicaDBClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPromoteReadReplicaDBClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTPromoteReadReplicaDBClusterVersionEnumTwoThousandAndFourteen1031 POSTPromoteReadReplicaDBClusterVersionEnum = "2014-10-31"
 )
 
+func (e POSTPromoteReadReplicaDBClusterVersionEnum) ToPointer() *POSTPromoteReadReplicaDBClusterVersionEnum {
+	return &e
+}
+
 func (e *POSTPromoteReadReplicaDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTPromoteReadReplicaDBClusterVersionEnum(s)
+		*e = POSTPromoteReadReplicaDBClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPromoteReadReplicaDBClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPromoteReadReplicaDBClusterVersionEnum: %v", v)
 	}
 }
 

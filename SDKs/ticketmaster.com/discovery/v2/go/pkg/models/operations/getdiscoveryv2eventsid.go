@@ -16,19 +16,23 @@ const (
 	GetDiscoveryV2EventsIDIncludeLicensedContentEnumNo  GetDiscoveryV2EventsIDIncludeLicensedContentEnum = " no"
 )
 
+func (e GetDiscoveryV2EventsIDIncludeLicensedContentEnum) ToPointer() *GetDiscoveryV2EventsIDIncludeLicensedContentEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2EventsIDIncludeLicensedContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = GetDiscoveryV2EventsIDIncludeLicensedContentEnum(s)
+		*e = GetDiscoveryV2EventsIDIncludeLicensedContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2EventsIDIncludeLicensedContentEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2EventsIDIncludeLicensedContentEnum: %v", v)
 	}
 }
 

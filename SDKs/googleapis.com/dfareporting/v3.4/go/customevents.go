@@ -34,7 +34,10 @@ func newCustomEvents(defaultClient, securityClient HTTPClient, serverURL, langua
 // DfareportingCustomEventsBatchinsert - Inserts custom events.
 func (s *customEvents) DfareportingCustomEventsBatchinsert(ctx context.Context, request operations.DfareportingCustomEventsBatchinsertRequest, security operations.DfareportingCustomEventsBatchinsertSecurity) (*operations.DfareportingCustomEventsBatchinsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/customEvents/batchinsert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/customEvents/batchinsert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomEventsBatchInsertRequest", "json")
 	if err != nil {

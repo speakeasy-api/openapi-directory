@@ -15,17 +15,21 @@ const (
 	GETStartVpcEndpointServicePrivateDNSVerificationActionEnumStartVpcEndpointServicePrivateDNSVerification GETStartVpcEndpointServicePrivateDNSVerificationActionEnum = "StartVpcEndpointServicePrivateDnsVerification"
 )
 
+func (e GETStartVpcEndpointServicePrivateDNSVerificationActionEnum) ToPointer() *GETStartVpcEndpointServicePrivateDNSVerificationActionEnum {
+	return &e
+}
+
 func (e *GETStartVpcEndpointServicePrivateDNSVerificationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartVpcEndpointServicePrivateDnsVerification":
-		*e = GETStartVpcEndpointServicePrivateDNSVerificationActionEnum(s)
+		*e = GETStartVpcEndpointServicePrivateDNSVerificationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartVpcEndpointServicePrivateDNSVerificationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartVpcEndpointServicePrivateDNSVerificationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETStartVpcEndpointServicePrivateDNSVerificationVersionEnumTwoThousandAndSixteen1115 GETStartVpcEndpointServicePrivateDNSVerificationVersionEnum = "2016-11-15"
 )
 
+func (e GETStartVpcEndpointServicePrivateDNSVerificationVersionEnum) ToPointer() *GETStartVpcEndpointServicePrivateDNSVerificationVersionEnum {
+	return &e
+}
+
 func (e *GETStartVpcEndpointServicePrivateDNSVerificationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETStartVpcEndpointServicePrivateDNSVerificationVersionEnum(s)
+		*e = GETStartVpcEndpointServicePrivateDNSVerificationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartVpcEndpointServicePrivateDNSVerificationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartVpcEndpointServicePrivateDNSVerificationVersionEnum: %v", v)
 	}
 }
 

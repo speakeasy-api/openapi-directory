@@ -2,43 +2,41 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FirebasehostingProjectsSitesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.FirebasehostingProjectsSitesCreate(ctx, operations.FirebasehostingProjectsSitesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         SiteInput: &shared.SiteInput{
-            AppID: "provident",
+            AppID: sdk.String("provident"),
             Labels: map[string]string{
                 "quibusdam": "unde",
                 "nulla": "corrupti",
                 "illum": "vel",
             },
         },
-        AccessToken: "error",
-        Alt: "media",
-        Callback: "suscipit",
-        Fields: "iure",
-        Key: "magnam",
-        OauthToken: "debitis",
+        AccessToken: sdk.String("error"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("suscipit"),
+        Fields: sdk.String("iure"),
+        Key: sdk.String("magnam"),
+        OauthToken: sdk.String("debitis"),
         Parent: "ipsa",
-        PrettyPrint: false,
-        QuotaUser: "delectus",
-        SiteID: "tempora",
-        UploadType: "suscipit",
-        UploadProtocol: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.FirebasehostingProjectsSitesCreate(ctx, req, operations.FirebasehostingProjectsSitesCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("delectus"),
+        SiteID: sdk.String("tempora"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("molestiae"),
+    }, operations.FirebasehostingProjectsSitesCreateSecurity{
         Option1: &operations.FirebasehostingProjectsSitesCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

@@ -21,12 +21,16 @@ const (
 	OrganizationResourceDetailedStatusEnumUpdateFailed     OrganizationResourceDetailedStatusEnum = "UPDATE_FAILED"
 )
 
+func (e OrganizationResourceDetailedStatusEnum) ToPointer() *OrganizationResourceDetailedStatusEnum {
+	return &e
+}
+
 func (e *OrganizationResourceDetailedStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE_SUCCESSFUL":
 		fallthrough
 	case "CREATE_IN_PROGRESS":
@@ -44,9 +48,9 @@ func (e *OrganizationResourceDetailedStatusEnum) UnmarshalJSON(data []byte) erro
 	case "UPDATE_IN_PROGRESS":
 		fallthrough
 	case "UPDATE_FAILED":
-		*e = OrganizationResourceDetailedStatusEnum(s)
+		*e = OrganizationResourceDetailedStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationResourceDetailedStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationResourceDetailedStatusEnum: %v", v)
 	}
 }

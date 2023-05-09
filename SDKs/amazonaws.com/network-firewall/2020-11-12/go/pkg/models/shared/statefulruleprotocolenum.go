@@ -31,12 +31,16 @@ const (
 	StatefulRuleProtocolEnumDhcp   StatefulRuleProtocolEnum = "DHCP"
 )
 
+func (e StatefulRuleProtocolEnum) ToPointer() *StatefulRuleProtocolEnum {
+	return &e
+}
+
 func (e *StatefulRuleProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IP":
 		fallthrough
 	case "TCP":
@@ -74,9 +78,9 @@ func (e *StatefulRuleProtocolEnum) UnmarshalJSON(data []byte) error {
 	case "NTP":
 		fallthrough
 	case "DHCP":
-		*e = StatefulRuleProtocolEnum(s)
+		*e = StatefulRuleProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatefulRuleProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for StatefulRuleProtocolEnum: %v", v)
 	}
 }

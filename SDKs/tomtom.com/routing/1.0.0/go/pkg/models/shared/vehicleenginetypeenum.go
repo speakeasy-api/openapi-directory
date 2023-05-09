@@ -15,18 +15,22 @@ const (
 	VehicleEngineTypeEnumElectric   VehicleEngineTypeEnum = "electric"
 )
 
+func (e VehicleEngineTypeEnum) ToPointer() *VehicleEngineTypeEnum {
+	return &e
+}
+
 func (e *VehicleEngineTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "combustion":
 		fallthrough
 	case "electric":
-		*e = VehicleEngineTypeEnum(s)
+		*e = VehicleEngineTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VehicleEngineTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VehicleEngineTypeEnum: %v", v)
 	}
 }

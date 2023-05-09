@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type PostAPIV1NotificationsClearSecurity struct {
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type PostAPIV1NotificationsClearResponse struct {
 	ContentType string
 	// Invalid or missing Authorization header

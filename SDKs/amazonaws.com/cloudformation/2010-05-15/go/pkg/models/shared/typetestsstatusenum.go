@@ -16,12 +16,16 @@ const (
 	TypeTestsStatusEnumNotTested  TypeTestsStatusEnum = "NOT_TESTED"
 )
 
+func (e TypeTestsStatusEnum) ToPointer() *TypeTestsStatusEnum {
+	return &e
+}
+
 func (e *TypeTestsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PASSED":
 		fallthrough
 	case "FAILED":
@@ -29,9 +33,9 @@ func (e *TypeTestsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "IN_PROGRESS":
 		fallthrough
 	case "NOT_TESTED":
-		*e = TypeTestsStatusEnum(s)
+		*e = TypeTestsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TypeTestsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TypeTestsStatusEnum: %v", v)
 	}
 }

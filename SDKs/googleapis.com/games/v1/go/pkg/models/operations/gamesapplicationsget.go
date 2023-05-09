@@ -24,12 +24,16 @@ const (
 	GamesApplicationsGetPlatformTypeEnumWebApp                  GamesApplicationsGetPlatformTypeEnum = "WEB_APP"
 )
 
+func (e GamesApplicationsGetPlatformTypeEnum) ToPointer() *GamesApplicationsGetPlatformTypeEnum {
+	return &e
+}
+
 func (e *GamesApplicationsGetPlatformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ANDROID":
@@ -37,10 +41,10 @@ func (e *GamesApplicationsGetPlatformTypeEnum) UnmarshalJSON(data []byte) error 
 	case "IOS":
 		fallthrough
 	case "WEB_APP":
-		*e = GamesApplicationsGetPlatformTypeEnum(s)
+		*e = GamesApplicationsGetPlatformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GamesApplicationsGetPlatformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GamesApplicationsGetPlatformTypeEnum: %v", v)
 	}
 }
 

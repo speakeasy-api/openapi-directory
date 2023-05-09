@@ -19,12 +19,16 @@ const (
 	DisassociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnumTgwPeering           DisassociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum = "tgw-peering"
 )
 
+func (e DisassociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum) ToPointer() *DisassociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum {
+	return &e
+}
+
 func (e *DisassociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "vpn":
@@ -36,10 +40,10 @@ func (e *DisassociateTransitGatewayMulticastDomainResultAssociationsResourceType
 	case "peering":
 		fallthrough
 	case "tgw-peering":
-		*e = DisassociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum(s)
+		*e = DisassociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	DisassociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnumFailed            DisassociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum = "failed"
 )
 
+func (e DisassociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum) ToPointer() *DisassociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum {
+	return &e
+}
+
 func (e *DisassociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pendingAcceptance":
 		fallthrough
 	case "associating":
@@ -75,10 +83,10 @@ func (e *DisassociateTransitGatewayMulticastDomainResultAssociationsSubnetsState
 	case "rejected":
 		fallthrough
 	case "failed":
-		*e = DisassociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum(s)
+		*e = DisassociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum: %v", v)
 	}
 }
 

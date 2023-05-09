@@ -42,12 +42,16 @@ const (
 	CryptoKeyVersionAlgorithmEnumExternalSymmetricEncryption          CryptoKeyVersionAlgorithmEnum = "EXTERNAL_SYMMETRIC_ENCRYPTION"
 )
 
+func (e CryptoKeyVersionAlgorithmEnum) ToPointer() *CryptoKeyVersionAlgorithmEnum {
+	return &e
+}
+
 func (e *CryptoKeyVersionAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_SYMMETRIC_ENCRYPTION":
@@ -105,10 +109,10 @@ func (e *CryptoKeyVersionAlgorithmEnum) UnmarshalJSON(data []byte) error {
 	case "HMAC_SHA224":
 		fallthrough
 	case "EXTERNAL_SYMMETRIC_ENCRYPTION":
-		*e = CryptoKeyVersionAlgorithmEnum(s)
+		*e = CryptoKeyVersionAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CryptoKeyVersionAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for CryptoKeyVersionAlgorithmEnum: %v", v)
 	}
 }
 
@@ -123,12 +127,16 @@ const (
 	CryptoKeyVersionProtectionLevelEnumExternalVpc                CryptoKeyVersionProtectionLevelEnum = "EXTERNAL_VPC"
 )
 
+func (e CryptoKeyVersionProtectionLevelEnum) ToPointer() *CryptoKeyVersionProtectionLevelEnum {
+	return &e
+}
+
 func (e *CryptoKeyVersionProtectionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROTECTION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "SOFTWARE":
@@ -138,10 +146,10 @@ func (e *CryptoKeyVersionProtectionLevelEnum) UnmarshalJSON(data []byte) error {
 	case "EXTERNAL":
 		fallthrough
 	case "EXTERNAL_VPC":
-		*e = CryptoKeyVersionProtectionLevelEnum(s)
+		*e = CryptoKeyVersionProtectionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CryptoKeyVersionProtectionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for CryptoKeyVersionProtectionLevelEnum: %v", v)
 	}
 }
 
@@ -162,12 +170,16 @@ const (
 	CryptoKeyVersionStateEnumExternalDestructionFailed        CryptoKeyVersionStateEnum = "EXTERNAL_DESTRUCTION_FAILED"
 )
 
+func (e CryptoKeyVersionStateEnum) ToPointer() *CryptoKeyVersionStateEnum {
+	return &e
+}
+
 func (e *CryptoKeyVersionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRYPTO_KEY_VERSION_STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING_GENERATION":
@@ -189,10 +201,10 @@ func (e *CryptoKeyVersionStateEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING_EXTERNAL_DESTRUCTION":
 		fallthrough
 	case "EXTERNAL_DESTRUCTION_FAILED":
-		*e = CryptoKeyVersionStateEnum(s)
+		*e = CryptoKeyVersionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CryptoKeyVersionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CryptoKeyVersionStateEnum: %v", v)
 	}
 }
 

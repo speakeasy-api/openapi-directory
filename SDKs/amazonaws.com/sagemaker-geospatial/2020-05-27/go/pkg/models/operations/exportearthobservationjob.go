@@ -15,6 +15,8 @@ type ExportEarthObservationJobRequestBodyOutputConfig struct {
 type ExportEarthObservationJobRequestBody struct {
 	// The input Amazon Resource Name (ARN) of the Earth Observation job being exported.
 	Arn string `json:"Arn"`
+	// A unique token that guarantees that the call to this API is idempotent.
+	ClientToken *string `json:"ClientToken,omitempty"`
 	// The Amazon Resource Name (ARN) of the IAM role that you specified for the job.
 	ExecutionRoleArn string `json:"ExecutionRoleArn"`
 	// The source images provided to the Earth Observation job being exported.

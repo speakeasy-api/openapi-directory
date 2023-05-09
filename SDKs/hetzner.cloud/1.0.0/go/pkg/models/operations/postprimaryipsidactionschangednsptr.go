@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-// PostPrimaryIpsIDActionsChangeDNSPtrChangeDNSPTRRequest - Select the IP address for which to change the DNS entry by passing `ip`. For a Primary IP of type `ipv4` this must exactly match the IP address of the Primary IP. For a Primary IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Primary IP.
+// PostPrimaryIpsIDActionsChangeDNSPtrChangeDNSPTRRequest - Select the IP address for which to change the DNS entry by passing `ip`. For a Primary IP of type `ipv4` this must exactly match the IP address of the Primary IP. For a Primary IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Primary IP. You can add up to 100 IPv6 reverse DNS entries.
 //
 // The target hostname is set by passing `dns_ptr`.
 type PostPrimaryIpsIDActionsChangeDNSPtrChangeDNSPTRRequest struct {
@@ -19,7 +19,7 @@ type PostPrimaryIpsIDActionsChangeDNSPtrChangeDNSPTRRequest struct {
 }
 
 type PostPrimaryIpsIDActionsChangeDNSPtrRequest struct {
-	// Select the IP address for which to change the DNS entry by passing `ip`. For a Primary IP of type `ipv4` this must exactly match the IP address of the Primary IP. For a Primary IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Primary IP.
+	// Select the IP address for which to change the DNS entry by passing `ip`. For a Primary IP of type `ipv4` this must exactly match the IP address of the Primary IP. For a Primary IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Primary IP. You can add up to 100 IPv6 reverse DNS entries.
 	//
 	// The target hostname is set by passing `dns_ptr`.
 	//
@@ -52,21 +52,25 @@ const (
 	PostPrimaryIpsIDActionsChangeDNSPtrActionResponseActionStatusEnumError   PostPrimaryIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum = "error"
 )
 
+func (e PostPrimaryIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum) ToPointer() *PostPrimaryIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostPrimaryIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostPrimaryIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum(s)
+		*e = PostPrimaryIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostPrimaryIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostPrimaryIpsIDActionsChangeDNSPtrActionResponseActionStatusEnum: %v", v)
 	}
 }
 

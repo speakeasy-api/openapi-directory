@@ -58,12 +58,16 @@ const (
 	ResultMetadataDataTypeEnumDataTypeTimestampWithTimezone ResultMetadataDataTypeEnum = "DATA_TYPE_TIMESTAMP_WITH_TIMEZONE"
 )
 
+func (e ResultMetadataDataTypeEnum) ToPointer() *ResultMetadataDataTypeEnum {
+	return &e
+}
+
 func (e *ResultMetadataDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DATA_TYPE_INT":
@@ -153,10 +157,10 @@ func (e *ResultMetadataDataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DATA_TYPE_TIME_WITH_TIMEZONE":
 		fallthrough
 	case "DATA_TYPE_TIMESTAMP_WITH_TIMEZONE":
-		*e = ResultMetadataDataTypeEnum(s)
+		*e = ResultMetadataDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResultMetadataDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResultMetadataDataTypeEnum: %v", v)
 	}
 }
 

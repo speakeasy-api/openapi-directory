@@ -34,7 +34,10 @@ func newReviews(defaultClient, securityClient HTTPClient, serverURL, language, s
 // AndroidpublisherReviewsGet - Returns a single review.
 func (s *reviews) AndroidpublisherReviewsGet(ctx context.Context, request operations.AndroidpublisherReviewsGetRequest, security operations.AndroidpublisherReviewsGetSecurity) (*operations.AndroidpublisherReviewsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/reviews/{reviewId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/reviews/{reviewId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *reviews) AndroidpublisherReviewsGet(ctx context.Context, request operat
 // AndroidpublisherReviewsList - Returns a list of reviews. Only reviews from last week will be returned.
 func (s *reviews) AndroidpublisherReviewsList(ctx context.Context, request operations.AndroidpublisherReviewsListRequest, security operations.AndroidpublisherReviewsListSecurity) (*operations.AndroidpublisherReviewsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/reviews", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/reviews", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *reviews) AndroidpublisherReviewsList(ctx context.Context, request opera
 // AndroidpublisherReviewsReply - Reply to a single review, or update an existing reply.
 func (s *reviews) AndroidpublisherReviewsReply(ctx context.Context, request operations.AndroidpublisherReviewsReplyRequest, security operations.AndroidpublisherReviewsReplySecurity) (*operations.AndroidpublisherReviewsReplyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/reviews/{reviewId}:reply", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/reviews/{reviewId}:reply", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReviewsReplyRequest", "json")
 	if err != nil {

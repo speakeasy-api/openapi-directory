@@ -29,12 +29,16 @@ const (
 	DeviceToPostDeviceEnergyTypeEnumMeterTypeWmBusGateway  DeviceToPostDeviceEnergyTypeEnum = "MeterTypeWMBusGateway"
 )
 
+func (e DeviceToPostDeviceEnergyTypeEnum) ToPointer() *DeviceToPostDeviceEnergyTypeEnum {
+	return &e
+}
+
 func (e *DeviceToPostDeviceEnergyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MeterTypeUnknown":
 		fallthrough
 	case "MeterTypeElectricity":
@@ -64,10 +68,10 @@ func (e *DeviceToPostDeviceEnergyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MeterTypeVirtualMeter":
 		fallthrough
 	case "MeterTypeWMBusGateway":
-		*e = DeviceToPostDeviceEnergyTypeEnum(s)
+		*e = DeviceToPostDeviceEnergyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceToPostDeviceEnergyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceToPostDeviceEnergyTypeEnum: %v", v)
 	}
 }
 
@@ -87,12 +91,16 @@ const (
 	DeviceToPostMeterSubTypeEnumMeterSubTypeVirtualBattery  DeviceToPostMeterSubTypeEnum = "MeterSubTypeVirtualBattery"
 )
 
+func (e DeviceToPostMeterSubTypeEnum) ToPointer() *DeviceToPostMeterSubTypeEnum {
+	return &e
+}
+
 func (e *DeviceToPostMeterSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MeterSubTypeUnknown":
 		fallthrough
 	case "MeterSubTypeCold":
@@ -112,10 +120,10 @@ func (e *DeviceToPostMeterSubTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MeterSubTypeTemperature":
 		fallthrough
 	case "MeterSubTypeVirtualBattery":
-		*e = DeviceToPostMeterSubTypeEnum(s)
+		*e = DeviceToPostMeterSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceToPostMeterSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceToPostMeterSubTypeEnum: %v", v)
 	}
 }
 

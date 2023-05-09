@@ -19,12 +19,16 @@ const (
 	TerminateInstancesResultTerminatingInstancesCurrentStateNameEnumStopped      TerminateInstancesResultTerminatingInstancesCurrentStateNameEnum = "stopped"
 )
 
+func (e TerminateInstancesResultTerminatingInstancesCurrentStateNameEnum) ToPointer() *TerminateInstancesResultTerminatingInstancesCurrentStateNameEnum {
+	return &e
+}
+
 func (e *TerminateInstancesResultTerminatingInstancesCurrentStateNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "running":
@@ -36,10 +40,10 @@ func (e *TerminateInstancesResultTerminatingInstancesCurrentStateNameEnum) Unmar
 	case "stopping":
 		fallthrough
 	case "stopped":
-		*e = TerminateInstancesResultTerminatingInstancesCurrentStateNameEnum(s)
+		*e = TerminateInstancesResultTerminatingInstancesCurrentStateNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TerminateInstancesResultTerminatingInstancesCurrentStateNameEnum: %s", s)
+		return fmt.Errorf("invalid value for TerminateInstancesResultTerminatingInstancesCurrentStateNameEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	TerminateInstancesResultTerminatingInstancesPreviousStateNameEnumStopped      TerminateInstancesResultTerminatingInstancesPreviousStateNameEnum = "stopped"
 )
 
+func (e TerminateInstancesResultTerminatingInstancesPreviousStateNameEnum) ToPointer() *TerminateInstancesResultTerminatingInstancesPreviousStateNameEnum {
+	return &e
+}
+
 func (e *TerminateInstancesResultTerminatingInstancesPreviousStateNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "running":
@@ -78,10 +86,10 @@ func (e *TerminateInstancesResultTerminatingInstancesPreviousStateNameEnum) Unma
 	case "stopping":
 		fallthrough
 	case "stopped":
-		*e = TerminateInstancesResultTerminatingInstancesPreviousStateNameEnum(s)
+		*e = TerminateInstancesResultTerminatingInstancesPreviousStateNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TerminateInstancesResultTerminatingInstancesPreviousStateNameEnum: %s", s)
+		return fmt.Errorf("invalid value for TerminateInstancesResultTerminatingInstancesPreviousStateNameEnum: %v", v)
 	}
 }
 

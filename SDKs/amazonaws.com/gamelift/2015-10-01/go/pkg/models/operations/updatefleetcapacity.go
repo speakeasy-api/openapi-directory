@@ -16,17 +16,21 @@ const (
 	UpdateFleetCapacityXAmzTargetEnumGameLiftUpdateFleetCapacity UpdateFleetCapacityXAmzTargetEnum = "GameLift.UpdateFleetCapacity"
 )
 
+func (e UpdateFleetCapacityXAmzTargetEnum) ToPointer() *UpdateFleetCapacityXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateFleetCapacityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.UpdateFleetCapacity":
-		*e = UpdateFleetCapacityXAmzTargetEnum(s)
+		*e = UpdateFleetCapacityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateFleetCapacityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateFleetCapacityXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	CrawlStateEnumError      CrawlStateEnum = "ERROR"
 )
 
+func (e CrawlStateEnum) ToPointer() *CrawlStateEnum {
+	return &e
+}
+
 func (e *CrawlStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "CANCELLING":
@@ -35,9 +39,9 @@ func (e *CrawlStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "ERROR":
-		*e = CrawlStateEnum(s)
+		*e = CrawlStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrawlStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CrawlStateEnum: %v", v)
 	}
 }

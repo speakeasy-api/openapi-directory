@@ -44,12 +44,16 @@ const (
 	KeyValueIconEnumVideoPlay              KeyValueIconEnum = "VIDEO_PLAY"
 )
 
+func (e KeyValueIconEnum) ToPointer() *KeyValueIconEnum {
+	return &e
+}
+
 func (e *KeyValueIconEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ICON_UNSPECIFIED":
 		fallthrough
 	case "AIRPLANE":
@@ -111,20 +115,20 @@ func (e *KeyValueIconEnum) UnmarshalJSON(data []byte) error {
 	case "VIDEO_CAMERA":
 		fallthrough
 	case "VIDEO_PLAY":
-		*e = KeyValueIconEnum(s)
+		*e = KeyValueIconEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyValueIconEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyValueIconEnum: %v", v)
 	}
 }
 
 // KeyValue - A UI element contains a key (label) and a value (content). And this element may also contain some actions such as onclick button.
 type KeyValue struct {
-	// The text of the bottom label. Formatted text supported.
+	// The text of the bottom label. Formatted text supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
 	BottomLabel *string `json:"bottomLabel,omitempty"`
 	// A button. Can be a text button or an image button.
 	Button *Button `json:"button,omitempty"`
-	// The text of the content. Formatted text supported and always required.
+	// The text of the content. Formatted text supported and always required. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
 	Content *string `json:"content,omitempty"`
 	// If the content should be multiline.
 	ContentMultiline *bool `json:"contentMultiline,omitempty"`
@@ -134,6 +138,6 @@ type KeyValue struct {
 	IconURL *string `json:"iconUrl,omitempty"`
 	// An onclick action (e.g. open a link).
 	OnClick *OnClick `json:"onClick,omitempty"`
-	// The text of the top label. Formatted text supported.
+	// The text of the top label. Formatted text supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
 	TopLabel *string `json:"topLabel,omitempty"`
 }

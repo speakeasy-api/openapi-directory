@@ -18,12 +18,16 @@ const (
 	RegisterParametersAvailabilityEnumUnknown                 RegisterParametersAvailabilityEnum = "UNKNOWN"
 )
 
+func (e RegisterParametersAvailabilityEnum) ToPointer() *RegisterParametersAvailabilityEnum {
+	return &e
+}
+
 func (e *RegisterParametersAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABILITY_UNSPECIFIED":
 		fallthrough
 	case "AVAILABLE":
@@ -33,10 +37,10 @@ func (e *RegisterParametersAvailabilityEnum) UnmarshalJSON(data []byte) error {
 	case "UNSUPPORTED":
 		fallthrough
 	case "UNKNOWN":
-		*e = RegisterParametersAvailabilityEnum(s)
+		*e = RegisterParametersAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterParametersAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterParametersAvailabilityEnum: %v", v)
 	}
 }
 
@@ -47,19 +51,23 @@ const (
 	RegisterParametersDomainNoticesEnumHstsPreloaded           RegisterParametersDomainNoticesEnum = "HSTS_PRELOADED"
 )
 
+func (e RegisterParametersDomainNoticesEnum) ToPointer() *RegisterParametersDomainNoticesEnum {
+	return &e
+}
+
 func (e *RegisterParametersDomainNoticesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOMAIN_NOTICE_UNSPECIFIED":
 		fallthrough
 	case "HSTS_PRELOADED":
-		*e = RegisterParametersDomainNoticesEnum(s)
+		*e = RegisterParametersDomainNoticesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterParametersDomainNoticesEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterParametersDomainNoticesEnum: %v", v)
 	}
 }
 
@@ -72,12 +80,16 @@ const (
 	RegisterParametersSupportedPrivacyEnumRedactedContactData       RegisterParametersSupportedPrivacyEnum = "REDACTED_CONTACT_DATA"
 )
 
+func (e RegisterParametersSupportedPrivacyEnum) ToPointer() *RegisterParametersSupportedPrivacyEnum {
+	return &e
+}
+
 func (e *RegisterParametersSupportedPrivacyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTACT_PRIVACY_UNSPECIFIED":
 		fallthrough
 	case "PUBLIC_CONTACT_DATA":
@@ -85,10 +97,10 @@ func (e *RegisterParametersSupportedPrivacyEnum) UnmarshalJSON(data []byte) erro
 	case "PRIVATE_CONTACT_DATA":
 		fallthrough
 	case "REDACTED_CONTACT_DATA":
-		*e = RegisterParametersSupportedPrivacyEnum(s)
+		*e = RegisterParametersSupportedPrivacyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterParametersSupportedPrivacyEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterParametersSupportedPrivacyEnum: %v", v)
 	}
 }
 

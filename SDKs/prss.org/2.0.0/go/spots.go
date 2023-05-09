@@ -36,7 +36,10 @@ func newSpots(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DeleteAPIV2SpotsID - Deletes the spot with the given ID.
 func (s *spots) DeleteAPIV2SpotsID(ctx context.Context, request operations.DeleteAPIV2SpotsIDRequest, security operations.DeleteAPIV2SpotsIDSecurity) (*operations.DeleteAPIV2SpotsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/spots/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/spots/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -143,7 +146,10 @@ func (s *spots) GetAPIV2Spots(ctx context.Context, request operations.GetAPIV2Sp
 // GetAPIV2SpotsID - Returns the spot matching the given ID.
 func (s *spots) GetAPIV2SpotsID(ctx context.Context, request operations.GetAPIV2SpotsIDRequest, security operations.GetAPIV2SpotsIDSecurity) (*operations.GetAPIV2SpotsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/spots/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/spots/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

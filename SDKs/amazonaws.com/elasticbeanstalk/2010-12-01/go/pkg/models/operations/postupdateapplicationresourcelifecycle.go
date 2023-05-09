@@ -15,17 +15,21 @@ const (
 	POSTUpdateApplicationResourceLifecycleActionEnumUpdateApplicationResourceLifecycle POSTUpdateApplicationResourceLifecycleActionEnum = "UpdateApplicationResourceLifecycle"
 )
 
+func (e POSTUpdateApplicationResourceLifecycleActionEnum) ToPointer() *POSTUpdateApplicationResourceLifecycleActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateApplicationResourceLifecycleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateApplicationResourceLifecycle":
-		*e = POSTUpdateApplicationResourceLifecycleActionEnum(s)
+		*e = POSTUpdateApplicationResourceLifecycleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateApplicationResourceLifecycleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateApplicationResourceLifecycleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateApplicationResourceLifecycleVersionEnumTwoThousandAndTen1201 POSTUpdateApplicationResourceLifecycleVersionEnum = "2010-12-01"
 )
 
+func (e POSTUpdateApplicationResourceLifecycleVersionEnum) ToPointer() *POSTUpdateApplicationResourceLifecycleVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateApplicationResourceLifecycleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTUpdateApplicationResourceLifecycleVersionEnum(s)
+		*e = POSTUpdateApplicationResourceLifecycleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateApplicationResourceLifecycleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateApplicationResourceLifecycleVersionEnum: %v", v)
 	}
 }
 

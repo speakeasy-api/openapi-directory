@@ -15,20 +15,24 @@ const (
 	StatementTypeEnumUtility StatementTypeEnum = "UTILITY"
 )
 
+func (e StatementTypeEnum) ToPointer() *StatementTypeEnum {
+	return &e
+}
+
 func (e *StatementTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DDL":
 		fallthrough
 	case "DML":
 		fallthrough
 	case "UTILITY":
-		*e = StatementTypeEnum(s)
+		*e = StatementTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatementTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StatementTypeEnum: %v", v)
 	}
 }

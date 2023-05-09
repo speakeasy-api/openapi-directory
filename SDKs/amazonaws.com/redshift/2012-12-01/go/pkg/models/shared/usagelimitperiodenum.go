@@ -15,20 +15,24 @@ const (
 	UsageLimitPeriodEnumMonthly UsageLimitPeriodEnum = "monthly"
 )
 
+func (e UsageLimitPeriodEnum) ToPointer() *UsageLimitPeriodEnum {
+	return &e
+}
+
 func (e *UsageLimitPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "daily":
 		fallthrough
 	case "weekly":
 		fallthrough
 	case "monthly":
-		*e = UsageLimitPeriodEnum(s)
+		*e = UsageLimitPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageLimitPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageLimitPeriodEnum: %v", v)
 	}
 }

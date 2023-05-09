@@ -15,17 +15,21 @@ const (
 	POSTPauseClusterActionEnumPauseCluster POSTPauseClusterActionEnum = "PauseCluster"
 )
 
+func (e POSTPauseClusterActionEnum) ToPointer() *POSTPauseClusterActionEnum {
+	return &e
+}
+
 func (e *POSTPauseClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PauseCluster":
-		*e = POSTPauseClusterActionEnum(s)
+		*e = POSTPauseClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPauseClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPauseClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTPauseClusterVersionEnumTwoThousandAndTwelve1201 POSTPauseClusterVersionEnum = "2012-12-01"
 )
 
+func (e POSTPauseClusterVersionEnum) ToPointer() *POSTPauseClusterVersionEnum {
+	return &e
+}
+
 func (e *POSTPauseClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTPauseClusterVersionEnum(s)
+		*e = POSTPauseClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPauseClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPauseClusterVersionEnum: %v", v)
 	}
 }
 

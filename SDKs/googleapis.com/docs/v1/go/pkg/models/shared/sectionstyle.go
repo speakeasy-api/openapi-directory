@@ -16,21 +16,25 @@ const (
 	SectionStyleColumnSeparatorStyleEnumBetweenEachColumn               SectionStyleColumnSeparatorStyleEnum = "BETWEEN_EACH_COLUMN"
 )
 
+func (e SectionStyleColumnSeparatorStyleEnum) ToPointer() *SectionStyleColumnSeparatorStyleEnum {
+	return &e
+}
+
 func (e *SectionStyleColumnSeparatorStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COLUMN_SEPARATOR_STYLE_UNSPECIFIED":
 		fallthrough
 	case "NONE":
 		fallthrough
 	case "BETWEEN_EACH_COLUMN":
-		*e = SectionStyleColumnSeparatorStyleEnum(s)
+		*e = SectionStyleColumnSeparatorStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SectionStyleColumnSeparatorStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for SectionStyleColumnSeparatorStyleEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	SectionStyleContentDirectionEnumRightToLeft                 SectionStyleContentDirectionEnum = "RIGHT_TO_LEFT"
 )
 
+func (e SectionStyleContentDirectionEnum) ToPointer() *SectionStyleContentDirectionEnum {
+	return &e
+}
+
 func (e *SectionStyleContentDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_DIRECTION_UNSPECIFIED":
 		fallthrough
 	case "LEFT_TO_RIGHT":
 		fallthrough
 	case "RIGHT_TO_LEFT":
-		*e = SectionStyleContentDirectionEnum(s)
+		*e = SectionStyleContentDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SectionStyleContentDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for SectionStyleContentDirectionEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	SectionStyleSectionTypeEnumNextPage               SectionStyleSectionTypeEnum = "NEXT_PAGE"
 )
 
+func (e SectionStyleSectionTypeEnum) ToPointer() *SectionStyleSectionTypeEnum {
+	return &e
+}
+
 func (e *SectionStyleSectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CONTINUOUS":
 		fallthrough
 	case "NEXT_PAGE":
-		*e = SectionStyleSectionTypeEnum(s)
+		*e = SectionStyleSectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SectionStyleSectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SectionStyleSectionTypeEnum: %v", v)
 	}
 }
 

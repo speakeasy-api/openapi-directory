@@ -34,7 +34,10 @@ func newPlacementGroups(defaultClient, securityClient HTTPClient, serverURL, lan
 // DfareportingPlacementGroupsGet - Gets one placement group by ID.
 func (s *placementGroups) DfareportingPlacementGroupsGet(ctx context.Context, request operations.DfareportingPlacementGroupsGetRequest, security operations.DfareportingPlacementGroupsGetSecurity) (*operations.DfareportingPlacementGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *placementGroups) DfareportingPlacementGroupsGet(ctx context.Context, re
 // DfareportingPlacementGroupsInsert - Inserts a new placement group.
 func (s *placementGroups) DfareportingPlacementGroupsInsert(ctx context.Context, request operations.DfareportingPlacementGroupsInsertRequest, security operations.DfareportingPlacementGroupsInsertSecurity) (*operations.DfareportingPlacementGroupsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlacementGroup", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *placementGroups) DfareportingPlacementGroupsInsert(ctx context.Context,
 // DfareportingPlacementGroupsList - Retrieves a list of placement groups, possibly filtered. This method supports paging.
 func (s *placementGroups) DfareportingPlacementGroupsList(ctx context.Context, request operations.DfareportingPlacementGroupsListRequest, security operations.DfareportingPlacementGroupsListSecurity) (*operations.DfareportingPlacementGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *placementGroups) DfareportingPlacementGroupsList(ctx context.Context, r
 // DfareportingPlacementGroupsPatch - Updates an existing placement group. This method supports patch semantics.
 func (s *placementGroups) DfareportingPlacementGroupsPatch(ctx context.Context, request operations.DfareportingPlacementGroupsPatchRequest, security operations.DfareportingPlacementGroupsPatchSecurity) (*operations.DfareportingPlacementGroupsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlacementGroup", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *placementGroups) DfareportingPlacementGroupsPatch(ctx context.Context, 
 // DfareportingPlacementGroupsUpdate - Updates an existing placement group.
 func (s *placementGroups) DfareportingPlacementGroupsUpdate(ctx context.Context, request operations.DfareportingPlacementGroupsUpdateRequest, security operations.DfareportingPlacementGroupsUpdateSecurity) (*operations.DfareportingPlacementGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlacementGroup", "json")
 	if err != nil {

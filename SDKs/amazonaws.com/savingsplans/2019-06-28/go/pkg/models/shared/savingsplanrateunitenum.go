@@ -15,20 +15,24 @@ const (
 	SavingsPlanRateUnitEnumRequest        SavingsPlanRateUnitEnum = "Request"
 )
 
+func (e SavingsPlanRateUnitEnum) ToPointer() *SavingsPlanRateUnitEnum {
+	return &e
+}
+
 func (e *SavingsPlanRateUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Hrs":
 		fallthrough
 	case "Lambda-GB-Second":
 		fallthrough
 	case "Request":
-		*e = SavingsPlanRateUnitEnum(s)
+		*e = SavingsPlanRateUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SavingsPlanRateUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for SavingsPlanRateUnitEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	EvaluationTypeEnumComputed EvaluationTypeEnum = "COMPUTED"
 )
 
+func (e EvaluationTypeEnum) ToPointer() *EvaluationTypeEnum {
+	return &e
+}
+
 func (e *EvaluationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUMMARY":
 		fallthrough
 	case "COMPUTED":
-		*e = EvaluationTypeEnum(s)
+		*e = EvaluationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EvaluationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EvaluationTypeEnum: %v", v)
 	}
 }

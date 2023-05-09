@@ -14,18 +14,22 @@ const (
 	DirectInternetAccessEnumDisabled DirectInternetAccessEnum = "Disabled"
 )
 
+func (e DirectInternetAccessEnum) ToPointer() *DirectInternetAccessEnum {
+	return &e
+}
+
 func (e *DirectInternetAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
-		*e = DirectInternetAccessEnum(s)
+		*e = DirectInternetAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectInternetAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectInternetAccessEnum: %v", v)
 	}
 }

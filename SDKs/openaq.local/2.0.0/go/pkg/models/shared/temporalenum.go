@@ -20,12 +20,16 @@ const (
 	TemporalEnumHod   TemporalEnum = "hod"
 )
 
+func (e TemporalEnum) ToPointer() *TemporalEnum {
+	return &e
+}
+
 func (e *TemporalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "day":
 		fallthrough
 	case "month":
@@ -39,9 +43,9 @@ func (e *TemporalEnum) UnmarshalJSON(data []byte) error {
 	case "hour":
 		fallthrough
 	case "hod":
-		*e = TemporalEnum(s)
+		*e = TemporalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemporalEnum: %s", s)
+		return fmt.Errorf("invalid value for TemporalEnum: %v", v)
 	}
 }

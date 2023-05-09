@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Get lists of NYT Articles based on shares, emails, and views.
 // http://developer.nytimes.com/
 type SDK struct {
@@ -96,7 +111,10 @@ func New(opts ...SDKOption) *SDK {
 // GETMostemailedSectionTimePeriodJSON - Most Emailed by Section & Time Period
 func (s *SDK) GETMostemailedSectionTimePeriodJSON(ctx context.Context, request operations.GETMostemailedSectionTimePeriodJSONRequest, security operations.GETMostemailedSectionTimePeriodJSONSecurity) (*operations.GETMostemailedSectionTimePeriodJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mostemailed/{section}/{time-period}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mostemailed/{section}/{time-period}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -181,7 +199,10 @@ func (s *SDK) GETMostemailedSectionTimePeriodJSON(ctx context.Context, request o
 // GETMostsharedSectionTimePeriodJSON - Most Shared by Section & Time Period
 func (s *SDK) GETMostsharedSectionTimePeriodJSON(ctx context.Context, request operations.GETMostsharedSectionTimePeriodJSONRequest, security operations.GETMostsharedSectionTimePeriodJSONSecurity) (*operations.GETMostsharedSectionTimePeriodJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mostshared/{section}/{time-period}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mostshared/{section}/{time-period}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -235,7 +256,10 @@ func (s *SDK) GETMostsharedSectionTimePeriodJSON(ctx context.Context, request op
 // GETMostviewedSectionTimePeriodJSON - Most Viewed by Section & Time Period
 func (s *SDK) GETMostviewedSectionTimePeriodJSON(ctx context.Context, request operations.GETMostviewedSectionTimePeriodJSONRequest, security operations.GETMostviewedSectionTimePeriodJSONSecurity) (*operations.GETMostviewedSectionTimePeriodJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mostviewed/{section}/{time-period}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mostviewed/{section}/{time-period}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

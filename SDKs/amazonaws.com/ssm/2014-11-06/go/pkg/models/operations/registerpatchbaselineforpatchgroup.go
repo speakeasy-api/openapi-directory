@@ -16,17 +16,21 @@ const (
 	RegisterPatchBaselineForPatchGroupXAmzTargetEnumAmazonSsmRegisterPatchBaselineForPatchGroup RegisterPatchBaselineForPatchGroupXAmzTargetEnum = "AmazonSSM.RegisterPatchBaselineForPatchGroup"
 )
 
+func (e RegisterPatchBaselineForPatchGroupXAmzTargetEnum) ToPointer() *RegisterPatchBaselineForPatchGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterPatchBaselineForPatchGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.RegisterPatchBaselineForPatchGroup":
-		*e = RegisterPatchBaselineForPatchGroupXAmzTargetEnum(s)
+		*e = RegisterPatchBaselineForPatchGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterPatchBaselineForPatchGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterPatchBaselineForPatchGroupXAmzTargetEnum: %v", v)
 	}
 }
 

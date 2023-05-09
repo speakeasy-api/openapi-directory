@@ -36,7 +36,10 @@ func newPublishing(defaultClient, securityClient HTTPClient, serverURL, language
 // Publish a message to the specified channel
 func (s *publishing) PublishMessagesToChannelForm(ctx context.Context, request operations.PublishMessagesToChannelFormRequest) (*operations.PublishMessagesToChannelFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MessageInput", "form")
 	if err != nil {
@@ -132,7 +135,10 @@ func (s *publishing) PublishMessagesToChannelForm(ctx context.Context, request o
 // Publish a message to the specified channel
 func (s *publishing) PublishMessagesToChannelJSON(ctx context.Context, request operations.PublishMessagesToChannelJSONRequest) (*operations.PublishMessagesToChannelJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MessageInput", "json")
 	if err != nil {
@@ -228,7 +234,10 @@ func (s *publishing) PublishMessagesToChannelJSON(ctx context.Context, request o
 // Publish a message to the specified channel
 func (s *publishing) PublishMessagesToChannelRaw(ctx context.Context, request operations.PublishMessagesToChannelRawRequest) (*operations.PublishMessagesToChannelRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/messages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

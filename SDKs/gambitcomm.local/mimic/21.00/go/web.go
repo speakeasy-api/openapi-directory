@@ -37,7 +37,10 @@ func newWeb(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Agent's WEB configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *web) ProtocolWebGetArgs(ctx context.Context, request operations.ProtocolWebGetArgsRequest) (*operations.ProtocolWebGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/get/args", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/get/args", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *web) ProtocolWebGetArgs(ctx context.Context, request operations.Protoco
 // Agent's WEB configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *web) ProtocolWebGetConfig(ctx context.Context, request operations.ProtocolWebGetConfigRequest) (*operations.ProtocolWebGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/get/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/get/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *web) ProtocolWebGetConfig(ctx context.Context, request operations.Proto
 // Statistics of fields indicated in the headers
 func (s *web) ProtocolWebGetStatistics(ctx context.Context, request operations.ProtocolWebGetStatisticsRequest) (*operations.ProtocolWebGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/get/statistics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/get/statistics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +230,10 @@ func (s *web) ProtocolWebGetStatsHdr(ctx context.Context) (*operations.ProtocolW
 // Trace 1 means enabled, 0 means not
 func (s *web) ProtocolWebGetTrace(ctx context.Context, request operations.ProtocolWebGetTraceRequest) (*operations.ProtocolWebGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/get/trace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/get/trace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +279,10 @@ func (s *web) ProtocolWebGetTrace(ctx context.Context, request operations.Protoc
 // Add port
 func (s *web) ProtocolWebPortAdd(ctx context.Context, request operations.ProtocolWebPortAddRequest) (*operations.ProtocolWebPortAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/port/add/{port}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/port/add/{port}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -314,7 +329,10 @@ func (s *web) ProtocolWebPortAdd(ctx context.Context, request operations.Protoco
 // Check the port. 1 means existing, 0 means not
 func (s *web) ProtocolWebPortExists(ctx context.Context, request operations.ProtocolWebPortExistsRequest) (*operations.ProtocolWebPortExistsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/port/exists/{port}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/port/exists/{port}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -360,7 +378,10 @@ func (s *web) ProtocolWebPortExists(ctx context.Context, request operations.Prot
 // Remove port
 func (s *web) ProtocolWebPortRemove(ctx context.Context, request operations.ProtocolWebPortRemoveRequest) (*operations.ProtocolWebPortRemoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/port/remove/{port}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/port/remove/{port}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -407,7 +428,10 @@ func (s *web) ProtocolWebPortRemove(ctx context.Context, request operations.Prot
 // Set port
 func (s *web) ProtocolWebPortSet(ctx context.Context, request operations.ProtocolWebPortSetRequest) (*operations.ProtocolWebPortSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/port/set/{port}/{protocol}/{version}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/port/set/{port}/{protocol}/{version}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -454,7 +478,10 @@ func (s *web) ProtocolWebPortSet(ctx context.Context, request operations.Protoco
 // Start port
 func (s *web) ProtocolWebPortStart(ctx context.Context, request operations.ProtocolWebPortStartRequest) (*operations.ProtocolWebPortStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/port/start/{port}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/port/start/{port}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *web) ProtocolWebPortStart(ctx context.Context, request operations.Proto
 // Stop port
 func (s *web) ProtocolWebPortStop(ctx context.Context, request operations.ProtocolWebPortStopRequest) (*operations.ProtocolWebPortStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/port/stop/{port}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/port/stop/{port}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -548,7 +578,10 @@ func (s *web) ProtocolWebPortStop(ctx context.Context, request operations.Protoc
 // Agent's WEB configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *web) ProtocolWebSetConfig(ctx context.Context, request operations.ProtocolWebSetConfigRequest) (*operations.ProtocolWebSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/set/config/{argument}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/set/config/{argument}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -595,7 +628,10 @@ func (s *web) ProtocolWebSetConfig(ctx context.Context, request operations.Proto
 // 1 to enable, 0 to disable
 func (s *web) ProtocolWebSetTrace(ctx context.Context, request operations.ProtocolWebSetTraceRequest) (*operations.ProtocolWebSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/set/trace/{enableOrNot}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/web/set/trace/{enableOrNot}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

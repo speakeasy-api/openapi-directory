@@ -15,18 +15,22 @@ const (
 	XgafvEnumTwo XgafvEnum = "2"
 )
 
+func (e XgafvEnum) ToPointer() *XgafvEnum {
+	return &e
+}
+
 func (e *XgafvEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "2":
-		*e = XgafvEnum(s)
+		*e = XgafvEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for XgafvEnum: %s", s)
+		return fmt.Errorf("invalid value for XgafvEnum: %v", v)
 	}
 }

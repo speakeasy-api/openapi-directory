@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivate - Activate a CertificateAuthority that is in state AWAITING_USER_ACTIVATION and is of type SUBORDINATE. After the parent Certificate Authority signs a certificate signing request from FetchCertificateAuthorityCsr, this method can complete the activation process.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivate(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateRequest, security operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:activate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:activate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ActivateCertificateAuthorityRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActiva
 // PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCertificateRevocationListsList - Lists CertificateRevocationLists.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCertificateRevocationListsList(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCertificateRevocationListsListRequest, security operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCertificateRevocationListsListSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCertificateRevocationListsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateRevocationLists", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateRevocationLists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCertif
 // PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreate - Create a new CertificateAuthority in a given Project and Location.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreate(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateRequest, security operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateAuthorities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateAuthorities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CertificateAuthorityInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesCreate
 // PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesDisable - Disable a CertificateAuthority.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesDisable(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesDisableRequest, security operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesDisableSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesDisableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DisableCertificateAuthorityRequest", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesDisabl
 // PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnable - Enable a CertificateAuthority.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnable(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnableRequest, security operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnableSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnableCertificateAuthorityRequest", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesEnable
 // PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesFetch - Fetch a certificate signing request (CSR) from a CertificateAuthority that is in state AWAITING_USER_ACTIVATION and is of type SUBORDINATE. The CSR must then be signed by the desired parent Certificate Authority, which could be another CertificateAuthority resource, or could be an on-prem certificate authority. See also ActivateCertificateAuthority.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesFetch(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesFetchRequest, security operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesFetchSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesFetchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:fetch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:fetch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesFetch(
 // PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesList - Lists CertificateAuthorities.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesList(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesListRequest, security operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesListSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateAuthorities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateAuthorities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesList(c
 // PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesUndelete - Undelete a CertificateAuthority that has been deleted.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesUndelete(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesUndeleteRequest, security operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesUndeleteSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:undelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:undelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UndeleteCertificateAuthorityRequest", "json")
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesUndele
 // PrivatecaProjectsLocationsCaPoolsCertificatesCreate - Create a new Certificate in a given Project, Location from a particular CaPool.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificatesCreate(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest, security operations.PrivatecaProjectsLocationsCaPoolsCertificatesCreateSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsCertificatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CertificateInput", "json")
 	if err != nil {
@@ -508,7 +535,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificatesCreate(ctx conte
 // PrivatecaProjectsLocationsCaPoolsCertificatesList - Lists Certificates.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificatesList(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsCertificatesListRequest, security operations.PrivatecaProjectsLocationsCaPoolsCertificatesListSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsCertificatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -556,7 +586,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificatesList(ctx context
 // PrivatecaProjectsLocationsCaPoolsCertificatesRevoke - Revoke a Certificate.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificatesRevoke(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsCertificatesRevokeRequest, security operations.PrivatecaProjectsLocationsCaPoolsCertificatesRevokeSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:revoke", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:revoke", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RevokeCertificateRequest", "json")
 	if err != nil {
@@ -611,7 +644,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsCertificatesRevoke(ctx conte
 // PrivatecaProjectsLocationsCaPoolsCreate - Create a CaPool.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsCreate(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsCreateRequest, security operations.PrivatecaProjectsLocationsCaPoolsCreateSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/caPools", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/caPools", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CaPoolInput", "json")
 	if err != nil {
@@ -666,7 +702,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsCreate(ctx context.Context, 
 // PrivatecaProjectsLocationsCaPoolsFetchCaCerts - FetchCaCerts returns the current trust anchor for the CaPool. This will include CA certificate chains for all ACTIVE CertificateAuthority resources in the CaPool.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsFetchCaCerts(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsFetchCaCertsRequest, security operations.PrivatecaProjectsLocationsCaPoolsFetchCaCertsSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsFetchCaCertsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{caPool}:fetchCaCerts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{caPool}:fetchCaCerts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FetchCaCertsRequest", "json")
 	if err != nil {
@@ -721,7 +760,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsFetchCaCerts(ctx context.Con
 // PrivatecaProjectsLocationsCaPoolsList - Lists CaPools.
 func (s *projects) PrivatecaProjectsLocationsCaPoolsList(ctx context.Context, request operations.PrivatecaProjectsLocationsCaPoolsListRequest, security operations.PrivatecaProjectsLocationsCaPoolsListSecurity) (*operations.PrivatecaProjectsLocationsCaPoolsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/caPools", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/caPools", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -769,7 +811,10 @@ func (s *projects) PrivatecaProjectsLocationsCaPoolsList(ctx context.Context, re
 // PrivatecaProjectsLocationsCertificateTemplatesCreate - Create a new CertificateTemplate in a given Project and Location.
 func (s *projects) PrivatecaProjectsLocationsCertificateTemplatesCreate(ctx context.Context, request operations.PrivatecaProjectsLocationsCertificateTemplatesCreateRequest, security operations.PrivatecaProjectsLocationsCertificateTemplatesCreateSecurity) (*operations.PrivatecaProjectsLocationsCertificateTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateTemplates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateTemplates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CertificateTemplateInput", "json")
 	if err != nil {
@@ -824,7 +869,10 @@ func (s *projects) PrivatecaProjectsLocationsCertificateTemplatesCreate(ctx cont
 // PrivatecaProjectsLocationsCertificateTemplatesGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) PrivatecaProjectsLocationsCertificateTemplatesGetIamPolicy(ctx context.Context, request operations.PrivatecaProjectsLocationsCertificateTemplatesGetIamPolicyRequest, security operations.PrivatecaProjectsLocationsCertificateTemplatesGetIamPolicySecurity) (*operations.PrivatecaProjectsLocationsCertificateTemplatesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -872,7 +920,10 @@ func (s *projects) PrivatecaProjectsLocationsCertificateTemplatesGetIamPolicy(ct
 // PrivatecaProjectsLocationsCertificateTemplatesList - Lists CertificateTemplates.
 func (s *projects) PrivatecaProjectsLocationsCertificateTemplatesList(ctx context.Context, request operations.PrivatecaProjectsLocationsCertificateTemplatesListRequest, security operations.PrivatecaProjectsLocationsCertificateTemplatesListSecurity) (*operations.PrivatecaProjectsLocationsCertificateTemplatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateTemplates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/certificateTemplates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -920,7 +971,10 @@ func (s *projects) PrivatecaProjectsLocationsCertificateTemplatesList(ctx contex
 // PrivatecaProjectsLocationsCertificateTemplatesPatch - Update a CertificateTemplate.
 func (s *projects) PrivatecaProjectsLocationsCertificateTemplatesPatch(ctx context.Context, request operations.PrivatecaProjectsLocationsCertificateTemplatesPatchRequest, security operations.PrivatecaProjectsLocationsCertificateTemplatesPatchSecurity) (*operations.PrivatecaProjectsLocationsCertificateTemplatesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CertificateTemplateInput", "json")
 	if err != nil {
@@ -975,7 +1029,10 @@ func (s *projects) PrivatecaProjectsLocationsCertificateTemplatesPatch(ctx conte
 // PrivatecaProjectsLocationsCertificateTemplatesSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) PrivatecaProjectsLocationsCertificateTemplatesSetIamPolicy(ctx context.Context, request operations.PrivatecaProjectsLocationsCertificateTemplatesSetIamPolicyRequest, security operations.PrivatecaProjectsLocationsCertificateTemplatesSetIamPolicySecurity) (*operations.PrivatecaProjectsLocationsCertificateTemplatesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -1030,7 +1087,10 @@ func (s *projects) PrivatecaProjectsLocationsCertificateTemplatesSetIamPolicy(ct
 // PrivatecaProjectsLocationsCertificateTemplatesTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) PrivatecaProjectsLocationsCertificateTemplatesTestIamPermissions(ctx context.Context, request operations.PrivatecaProjectsLocationsCertificateTemplatesTestIamPermissionsRequest, security operations.PrivatecaProjectsLocationsCertificateTemplatesTestIamPermissionsSecurity) (*operations.PrivatecaProjectsLocationsCertificateTemplatesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -1085,7 +1145,10 @@ func (s *projects) PrivatecaProjectsLocationsCertificateTemplatesTestIamPermissi
 // PrivatecaProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) PrivatecaProjectsLocationsList(ctx context.Context, request operations.PrivatecaProjectsLocationsListRequest, security operations.PrivatecaProjectsLocationsListSecurity) (*operations.PrivatecaProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1133,7 +1196,10 @@ func (s *projects) PrivatecaProjectsLocationsList(ctx context.Context, request o
 // PrivatecaProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) PrivatecaProjectsLocationsOperationsCancel(ctx context.Context, request operations.PrivatecaProjectsLocationsOperationsCancelRequest, security operations.PrivatecaProjectsLocationsOperationsCancelSecurity) (*operations.PrivatecaProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1188,7 +1254,10 @@ func (s *projects) PrivatecaProjectsLocationsOperationsCancel(ctx context.Contex
 // PrivatecaProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) PrivatecaProjectsLocationsOperationsDelete(ctx context.Context, request operations.PrivatecaProjectsLocationsOperationsDeleteRequest, security operations.PrivatecaProjectsLocationsOperationsDeleteSecurity) (*operations.PrivatecaProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1236,7 +1305,10 @@ func (s *projects) PrivatecaProjectsLocationsOperationsDelete(ctx context.Contex
 // PrivatecaProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) PrivatecaProjectsLocationsOperationsGet(ctx context.Context, request operations.PrivatecaProjectsLocationsOperationsGetRequest, security operations.PrivatecaProjectsLocationsOperationsGetSecurity) (*operations.PrivatecaProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1284,7 +1356,10 @@ func (s *projects) PrivatecaProjectsLocationsOperationsGet(ctx context.Context, 
 // PrivatecaProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) PrivatecaProjectsLocationsOperationsList(ctx context.Context, request operations.PrivatecaProjectsLocationsOperationsListRequest, security operations.PrivatecaProjectsLocationsOperationsListSecurity) (*operations.PrivatecaProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

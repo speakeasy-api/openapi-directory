@@ -35,12 +35,16 @@ const (
 	OBRisk1PaymentContextCodeEnumPartyToParty      OBRisk1PaymentContextCodeEnum = "PartyToParty"
 )
 
+func (e OBRisk1PaymentContextCodeEnum) ToPointer() *OBRisk1PaymentContextCodeEnum {
+	return &e
+}
+
 func (e *OBRisk1PaymentContextCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BillPayment":
 		fallthrough
 	case "EcommerceGoods":
@@ -50,10 +54,10 @@ func (e *OBRisk1PaymentContextCodeEnum) UnmarshalJSON(data []byte) error {
 	case "Other":
 		fallthrough
 	case "PartyToParty":
-		*e = OBRisk1PaymentContextCodeEnum(s)
+		*e = OBRisk1PaymentContextCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBRisk1PaymentContextCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBRisk1PaymentContextCodeEnum: %v", v)
 	}
 }
 

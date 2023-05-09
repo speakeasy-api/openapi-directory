@@ -15,19 +15,23 @@ const (
 	BackupRetentionSettingsRetentionUnitEnumCount                    BackupRetentionSettingsRetentionUnitEnum = "COUNT"
 )
 
+func (e BackupRetentionSettingsRetentionUnitEnum) ToPointer() *BackupRetentionSettingsRetentionUnitEnum {
+	return &e
+}
+
 func (e *BackupRetentionSettingsRetentionUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETENTION_UNIT_UNSPECIFIED":
 		fallthrough
 	case "COUNT":
-		*e = BackupRetentionSettingsRetentionUnitEnum(s)
+		*e = BackupRetentionSettingsRetentionUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupRetentionSettingsRetentionUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupRetentionSettingsRetentionUnitEnum: %v", v)
 	}
 }
 

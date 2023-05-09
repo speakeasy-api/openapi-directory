@@ -19,12 +19,16 @@ const (
 	MetricHeaderEntryTypeEnumTime                  MetricHeaderEntryTypeEnum = "TIME"
 )
 
+func (e MetricHeaderEntryTypeEnum) ToPointer() *MetricHeaderEntryTypeEnum {
+	return &e
+}
+
 func (e *MetricHeaderEntryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INTEGER":
@@ -36,10 +40,10 @@ func (e *MetricHeaderEntryTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PERCENT":
 		fallthrough
 	case "TIME":
-		*e = MetricHeaderEntryTypeEnum(s)
+		*e = MetricHeaderEntryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricHeaderEntryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricHeaderEntryTypeEnum: %v", v)
 	}
 }
 

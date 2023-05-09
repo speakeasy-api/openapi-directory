@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleCloudDocumentaiV1BatchProcessRequest - Request message for batch process document method.
+// GoogleCloudDocumentaiV1BatchProcessRequest - Request message for BatchProcessDocuments.
 type GoogleCloudDocumentaiV1BatchProcessRequest struct {
 	// Config that controls the output of documents. All documents will be written as a JSON file.
 	DocumentOutputConfig *GoogleCloudDocumentaiV1DocumentOutputConfig `json:"documentOutputConfig,omitempty"`

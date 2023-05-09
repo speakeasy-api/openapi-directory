@@ -13,16 +13,20 @@ const (
 	WorkflowTypeEnumAppflowIntegration WorkflowTypeEnum = "APPFLOW_INTEGRATION"
 )
 
+func (e WorkflowTypeEnum) ToPointer() *WorkflowTypeEnum {
+	return &e
+}
+
 func (e *WorkflowTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPFLOW_INTEGRATION":
-		*e = WorkflowTypeEnum(s)
+		*e = WorkflowTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkflowTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkflowTypeEnum: %v", v)
 	}
 }

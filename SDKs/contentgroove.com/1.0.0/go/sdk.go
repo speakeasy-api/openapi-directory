@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 	"time"
@@ -14,8 +15,8 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
-	// API server
-	"https://api.contentgroove.com",
+	// V1 API server
+	"https://api.contentgroove.com/api/v1",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -25,6 +26,21 @@ type HTTPClient interface {
 
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
+
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
 
 // SDK - # Overview
 //
@@ -215,424 +231,10 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-// DeleteAPIV1ClipsID - delete clip
-func (s *SDK) DeleteAPIV1ClipsID(ctx context.Context, request operations.DeleteAPIV1ClipsIDRequest, security operations.DeleteAPIV1ClipsIDSecurity) (*operations.DeleteAPIV1ClipsIDResponse, error) {
+// CreateClip - create clip
+func (s *SDK) CreateClip(ctx context.Context, request operations.CreateClipRequestBody, security operations.CreateClipSecurity) (*operations.CreateClipResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/clips/{id}", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.DeleteAPIV1ClipsIDResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 204:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		fallthrough
-	case httpRes.StatusCode == 429:
-	}
-
-	return res, nil
-}
-
-// DeleteAPIV1MediasID - delete media
-func (s *SDK) DeleteAPIV1MediasID(ctx context.Context, request operations.DeleteAPIV1MediasIDRequest, security operations.DeleteAPIV1MediasIDSecurity) (*operations.DeleteAPIV1MediasIDResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/medias/{id}", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.DeleteAPIV1MediasIDResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 204:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		fallthrough
-	case httpRes.StatusCode == 429:
-	}
-
-	return res, nil
-}
-
-// DeleteAPIV1WebhookSubscriptionsID - delete webhook subscription
-func (s *SDK) DeleteAPIV1WebhookSubscriptionsID(ctx context.Context, request operations.DeleteAPIV1WebhookSubscriptionsIDRequest, security operations.DeleteAPIV1WebhookSubscriptionsIDSecurity) (*operations.DeleteAPIV1WebhookSubscriptionsIDResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/webhook_subscriptions/{id}", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.DeleteAPIV1WebhookSubscriptionsIDResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 204:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		fallthrough
-	case httpRes.StatusCode == 429:
-	}
-
-	return res, nil
-}
-
-// GetAPIV1Clips - list clips
-func (s *SDK) GetAPIV1Clips(ctx context.Context, request operations.GetAPIV1ClipsRequest, security operations.GetAPIV1ClipsSecurity) (*operations.GetAPIV1ClipsResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/clips"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetAPIV1ClipsResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 429:
-	}
-
-	return res, nil
-}
-
-// GetAPIV1ClipsID - show clip
-func (s *SDK) GetAPIV1ClipsID(ctx context.Context, request operations.GetAPIV1ClipsIDRequest, security operations.GetAPIV1ClipsIDSecurity) (*operations.GetAPIV1ClipsIDResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/clips/{id}", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetAPIV1ClipsIDResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		fallthrough
-	case httpRes.StatusCode == 429:
-	}
-
-	return res, nil
-}
-
-// GetAPIV1DirectUploads - prepare presigned upload url
-func (s *SDK) GetAPIV1DirectUploads(ctx context.Context) (*operations.GetAPIV1DirectUploadsResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/direct_uploads"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetAPIV1DirectUploadsResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 429:
-	}
-
-	return res, nil
-}
-
-// GetAPIV1Medias - list medias
-func (s *SDK) GetAPIV1Medias(ctx context.Context, request operations.GetAPIV1MediasRequest, security operations.GetAPIV1MediasSecurity) (*operations.GetAPIV1MediasResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/medias"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetAPIV1MediasResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 429:
-	}
-
-	return res, nil
-}
-
-// GetAPIV1MediasID - show media
-func (s *SDK) GetAPIV1MediasID(ctx context.Context, request operations.GetAPIV1MediasIDRequest, security operations.GetAPIV1MediasIDSecurity) (*operations.GetAPIV1MediasIDResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/medias/{id}", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetAPIV1MediasIDResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		fallthrough
-	case httpRes.StatusCode == 429:
-	}
-
-	return res, nil
-}
-
-// GetAPIV1WebhookSubscriptions - list webhook subscriptions
-func (s *SDK) GetAPIV1WebhookSubscriptions(ctx context.Context, request operations.GetAPIV1WebhookSubscriptionsRequest, security operations.GetAPIV1WebhookSubscriptionsSecurity) (*operations.GetAPIV1WebhookSubscriptionsResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/webhook_subscriptions"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetAPIV1WebhookSubscriptionsResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 429:
-	}
-
-	return res, nil
-}
-
-// GetAPIV1WebhookSubscriptionsID - show webhook subscription
-func (s *SDK) GetAPIV1WebhookSubscriptionsID(ctx context.Context, request operations.GetAPIV1WebhookSubscriptionsIDRequest, security operations.GetAPIV1WebhookSubscriptionsIDSecurity) (*operations.GetAPIV1WebhookSubscriptionsIDResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/webhook_subscriptions/{id}", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetAPIV1WebhookSubscriptionsIDResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		fallthrough
-	case httpRes.StatusCode == 429:
-	}
-
-	return res, nil
-}
-
-// PostAPIV1Clips - create clip
-func (s *SDK) PostAPIV1Clips(ctx context.Context, request operations.PostAPIV1ClipsRequestBody, security operations.PostAPIV1ClipsSecurity) (*operations.PostAPIV1ClipsResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/clips"
+	url := strings.TrimSuffix(baseURL, "/") + "/clips"
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -662,28 +264,128 @@ func (s *SDK) PostAPIV1Clips(ctx context.Context, request operations.PostAPIV1Cl
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostAPIV1ClipsResponse{
+	res := &operations.CreateClipResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
-		fallthrough
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ClipResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ClipResponseObject = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UnauthorizedErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UnauthorizedErrorResponseObject = out
+		}
+	case httpRes.StatusCode == 402:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaymentRequiredErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaymentRequiredErrorResponseObject = out
+		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TooManyRequestsErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TooManyRequestsErrorResponseObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// CreateMedia - create media
+func (s *SDK) CreateMedia(ctx context.Context, request operations.CreateMediaRequestBody, security operations.CreateMediaSecurity) (*operations.CreateMediaResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/medias"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateMediaResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.MediaResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.MediaResponseObject = out
+		}
 	case httpRes.StatusCode == 401:
 		fallthrough
 	case httpRes.StatusCode == 402:
-		fallthrough
 	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TooManyRequestsErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TooManyRequestsErrorResponseObject = out
+		}
 	}
 
 	return res, nil
 }
 
-// PostAPIV1Medias - create media
-func (s *SDK) PostAPIV1Medias(ctx context.Context, request operations.PostAPIV1MediasRequestBody, security operations.PostAPIV1MediasSecurity) (*operations.PostAPIV1MediasResponse, error) {
+// CreateWebhookSubscription - create webhook subscription
+func (s *SDK) CreateWebhookSubscription(ctx context.Context, request operations.CreateWebhookSubscriptionRequestBody, security operations.CreateWebhookSubscriptionSecurity) (*operations.CreateWebhookSubscriptionResponse, error) {
 	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/medias"
+	url := strings.TrimSuffix(baseURL, "/") + "/webhook_subscriptions"
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -713,43 +415,50 @@ func (s *SDK) PostAPIV1Medias(ctx context.Context, request operations.PostAPIV1M
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostAPIV1MediasResponse{
+	res := &operations.CreateWebhookSubscriptionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
-		fallthrough
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.WebhookSubscriptionResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.WebhookSubscriptionResponseObject = out
+		}
 	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 402:
-		fallthrough
 	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TooManyRequestsErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TooManyRequestsErrorResponseObject = out
+		}
 	}
 
 	return res, nil
 }
 
-// PostAPIV1WebhookSubscriptions - create webhook subscription
-func (s *SDK) PostAPIV1WebhookSubscriptions(ctx context.Context, request operations.PostAPIV1WebhookSubscriptionsRequestBody, security operations.PostAPIV1WebhookSubscriptionsSecurity) (*operations.PostAPIV1WebhookSubscriptionsResponse, error) {
+// DeleteClipByID - delete clip
+func (s *SDK) DeleteClipByID(ctx context.Context, request operations.DeleteClipByIDRequest, security operations.DeleteClipByIDSecurity) (*operations.DeleteClipByIDResponse, error) {
 	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/webhook_subscriptions"
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	url, err := utils.GenerateURL(ctx, baseURL, "/clips/{id}", request, nil)
 	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
+		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-
-	req.Header.Set("Content-Type", reqContentType)
 
 	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
@@ -764,15 +473,17 @@ func (s *SDK) PostAPIV1WebhookSubscriptions(ctx context.Context, request operati
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostAPIV1WebhookSubscriptionsResponse{
+	res := &operations.DeleteClipByIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
-	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 204:
 		fallthrough
 	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 404:
 		fallthrough
 	case httpRes.StatusCode == 429:
 	}
@@ -780,10 +491,522 @@ func (s *SDK) PostAPIV1WebhookSubscriptions(ctx context.Context, request operati
 	return res, nil
 }
 
-// PutAPIV1ClipsID - update clip
-func (s *SDK) PutAPIV1ClipsID(ctx context.Context, request operations.PutAPIV1ClipsIDRequest, security operations.PutAPIV1ClipsIDSecurity) (*operations.PutAPIV1ClipsIDResponse, error) {
+// DeleteMediaByID - delete media
+func (s *SDK) DeleteMediaByID(ctx context.Context, request operations.DeleteMediaByIDRequest, security operations.DeleteMediaByIDSecurity) (*operations.DeleteMediaByIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/clips/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/medias/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteMediaByIDResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 429:
+	}
+
+	return res, nil
+}
+
+// DeleteWebhookSubscriptionByID - delete webhook subscription
+func (s *SDK) DeleteWebhookSubscriptionByID(ctx context.Context, request operations.DeleteWebhookSubscriptionByIDRequest, security operations.DeleteWebhookSubscriptionByIDSecurity) (*operations.DeleteWebhookSubscriptionByIDResponse, error) {
+	baseURL := s._serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhook_subscriptions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteWebhookSubscriptionByIDResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 429:
+	}
+
+	return res, nil
+}
+
+// GetClipByID - show clip
+func (s *SDK) GetClipByID(ctx context.Context, request operations.GetClipByIDRequest, security operations.GetClipByIDSecurity) (*operations.GetClipByIDResponse, error) {
+	baseURL := s._serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/clips/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetClipByIDResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ClipResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ClipResponseObject = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TooManyRequestsErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TooManyRequestsErrorResponseObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetClips - list clips
+func (s *SDK) GetClips(ctx context.Context, request operations.GetClipsRequest, security operations.GetClipsSecurity) (*operations.GetClipsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/clips"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetClipsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ClipsResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ClipsResponseObject = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UnauthorizedErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UnauthorizedErrorResponseObject = out
+		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TooManyRequestsErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TooManyRequestsErrorResponseObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetMediaByID - show media
+func (s *SDK) GetMediaByID(ctx context.Context, request operations.GetMediaByIDRequest, security operations.GetMediaByIDSecurity) (*operations.GetMediaByIDResponse, error) {
+	baseURL := s._serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/medias/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetMediaByIDResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.MediaResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.MediaResponseObject = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TooManyRequestsErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TooManyRequestsErrorResponseObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetMedias - list medias
+func (s *SDK) GetMedias(ctx context.Context, request operations.GetMediasRequest, security operations.GetMediasSecurity) (*operations.GetMediasResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/medias"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetMediasResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.MediasResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.MediasResponseObject = out
+		}
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TooManyRequestsErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TooManyRequestsErrorResponseObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetUploadURL - prepare presigned upload url
+func (s *SDK) GetUploadURL(ctx context.Context, security operations.GetUploadURLSecurity) (*operations.GetUploadURLResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/direct_uploads"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetUploadURLResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.DirectUploadResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DirectUploadResponseObject = out
+		}
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TooManyRequestsErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TooManyRequestsErrorResponseObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWebhookSubscriptionByID - show webhook subscription
+func (s *SDK) GetWebhookSubscriptionByID(ctx context.Context, request operations.GetWebhookSubscriptionByIDRequest, security operations.GetWebhookSubscriptionByIDSecurity) (*operations.GetWebhookSubscriptionByIDResponse, error) {
+	baseURL := s._serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhook_subscriptions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWebhookSubscriptionByIDResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.WebhookSubscriptionResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.WebhookSubscriptionResponseObject = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 404:
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TooManyRequestsErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TooManyRequestsErrorResponseObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWebhookSubscriptions - list webhook subscriptions
+func (s *SDK) GetWebhookSubscriptions(ctx context.Context, request operations.GetWebhookSubscriptionsRequest, security operations.GetWebhookSubscriptionsSecurity) (*operations.GetWebhookSubscriptionsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/webhook_subscriptions"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWebhookSubscriptionsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.WebhookSubscriptionsResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.WebhookSubscriptionsResponseObject = out
+		}
+	case httpRes.StatusCode == 401:
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TooManyRequestsErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TooManyRequestsErrorResponseObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateClipByID - update clip
+func (s *SDK) UpdateClipByID(ctx context.Context, request operations.UpdateClipByIDRequest, security operations.UpdateClipByIDSecurity) (*operations.UpdateClipByIDResponse, error) {
+	baseURL := s._serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/clips/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -813,26 +1036,45 @@ func (s *SDK) PutAPIV1ClipsID(ctx context.Context, request operations.PutAPIV1Cl
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PutAPIV1ClipsIDResponse{
+	res := &operations.UpdateClipByIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
-		fallthrough
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ClipResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ClipResponseObject = out
+		}
 	case httpRes.StatusCode == 401:
-		fallthrough
 	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TooManyRequestsErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TooManyRequestsErrorResponseObject = out
+		}
 	}
 
 	return res, nil
 }
 
-// PutAPIV1MediasID - update media
-func (s *SDK) PutAPIV1MediasID(ctx context.Context, request operations.PutAPIV1MediasIDRequest, security operations.PutAPIV1MediasIDSecurity) (*operations.PutAPIV1MediasIDResponse, error) {
+// UpdateMediaByID - update media
+func (s *SDK) UpdateMediaByID(ctx context.Context, request operations.UpdateMediaByIDRequest, security operations.UpdateMediaByIDSecurity) (*operations.UpdateMediaByIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/medias/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/medias/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -862,17 +1104,33 @@ func (s *SDK) PutAPIV1MediasID(ctx context.Context, request operations.PutAPIV1M
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PutAPIV1MediasIDResponse{
+	res := &operations.UpdateMediaByIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 200:
-		fallthrough
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.MediaResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.MediaResponseObject = out
+		}
 	case httpRes.StatusCode == 401:
-		fallthrough
 	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TooManyRequestsErrorResponseObject
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TooManyRequestsErrorResponseObject = out
+		}
 	}
 
 	return res, nil

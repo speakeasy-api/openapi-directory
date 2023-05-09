@@ -17,12 +17,16 @@ const (
 	AccessibilityMobilityAccessibleElevatorExceptionEnumDependentOnDayOfWeek AccessibilityMobilityAccessibleElevatorExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e AccessibilityMobilityAccessibleElevatorExceptionEnum) ToPointer() *AccessibilityMobilityAccessibleElevatorExceptionEnum {
+	return &e
+}
+
 func (e *AccessibilityMobilityAccessibleElevatorExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *AccessibilityMobilityAccessibleElevatorExceptionEnum) UnmarshalJSON(dat
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = AccessibilityMobilityAccessibleElevatorExceptionEnum(s)
+		*e = AccessibilityMobilityAccessibleElevatorExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessibilityMobilityAccessibleElevatorExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessibilityMobilityAccessibleElevatorExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	AccessibilityMobilityAccessibleExceptionEnumDependentOnDayOfWeek AccessibilityMobilityAccessibleExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e AccessibilityMobilityAccessibleExceptionEnum) ToPointer() *AccessibilityMobilityAccessibleExceptionEnum {
+	return &e
+}
+
 func (e *AccessibilityMobilityAccessibleExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *AccessibilityMobilityAccessibleExceptionEnum) UnmarshalJSON(data []byte
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = AccessibilityMobilityAccessibleExceptionEnum(s)
+		*e = AccessibilityMobilityAccessibleExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessibilityMobilityAccessibleExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessibilityMobilityAccessibleExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	AccessibilityMobilityAccessibleParkingExceptionEnumDependentOnDayOfWeek AccessibilityMobilityAccessibleParkingExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e AccessibilityMobilityAccessibleParkingExceptionEnum) ToPointer() *AccessibilityMobilityAccessibleParkingExceptionEnum {
+	return &e
+}
+
 func (e *AccessibilityMobilityAccessibleParkingExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *AccessibilityMobilityAccessibleParkingExceptionEnum) UnmarshalJSON(data
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = AccessibilityMobilityAccessibleParkingExceptionEnum(s)
+		*e = AccessibilityMobilityAccessibleParkingExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessibilityMobilityAccessibleParkingExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessibilityMobilityAccessibleParkingExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	AccessibilityMobilityAccessiblePoolExceptionEnumDependentOnDayOfWeek AccessibilityMobilityAccessiblePoolExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e AccessibilityMobilityAccessiblePoolExceptionEnum) ToPointer() *AccessibilityMobilityAccessiblePoolExceptionEnum {
+	return &e
+}
+
 func (e *AccessibilityMobilityAccessiblePoolExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *AccessibilityMobilityAccessiblePoolExceptionEnum) UnmarshalJSON(data []
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = AccessibilityMobilityAccessiblePoolExceptionEnum(s)
+		*e = AccessibilityMobilityAccessiblePoolExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessibilityMobilityAccessiblePoolExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessibilityMobilityAccessiblePoolExceptionEnum: %v", v)
 	}
 }
 

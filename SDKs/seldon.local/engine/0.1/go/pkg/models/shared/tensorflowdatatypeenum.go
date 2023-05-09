@@ -60,12 +60,16 @@ const (
 	TensorflowDataTypeEnumDtUint64Ref     TensorflowDataTypeEnum = "DT_UINT64_REF"
 )
 
+func (e TensorflowDataTypeEnum) ToPointer() *TensorflowDataTypeEnum {
+	return &e
+}
+
 func (e *TensorflowDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DT_INVALID":
 		fallthrough
 	case "DT_FLOAT":
@@ -159,9 +163,9 @@ func (e *TensorflowDataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DT_UINT32_REF":
 		fallthrough
 	case "DT_UINT64_REF":
-		*e = TensorflowDataTypeEnum(s)
+		*e = TensorflowDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TensorflowDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TensorflowDataTypeEnum: %v", v)
 	}
 }

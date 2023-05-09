@@ -33,21 +33,25 @@ const (
 	DeploymentmanagerDeploymentsPatchCreatePolicyEnumCreate          DeploymentmanagerDeploymentsPatchCreatePolicyEnum = "CREATE"
 )
 
+func (e DeploymentmanagerDeploymentsPatchCreatePolicyEnum) ToPointer() *DeploymentmanagerDeploymentsPatchCreatePolicyEnum {
+	return &e
+}
+
 func (e *DeploymentmanagerDeploymentsPatchCreatePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE_OR_ACQUIRE":
 		fallthrough
 	case "ACQUIRE":
 		fallthrough
 	case "CREATE":
-		*e = DeploymentmanagerDeploymentsPatchCreatePolicyEnum(s)
+		*e = DeploymentmanagerDeploymentsPatchCreatePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentmanagerDeploymentsPatchCreatePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentmanagerDeploymentsPatchCreatePolicyEnum: %v", v)
 	}
 }
 
@@ -59,19 +63,23 @@ const (
 	DeploymentmanagerDeploymentsPatchDeletePolicyEnumAbandon DeploymentmanagerDeploymentsPatchDeletePolicyEnum = "ABANDON"
 )
 
+func (e DeploymentmanagerDeploymentsPatchDeletePolicyEnum) ToPointer() *DeploymentmanagerDeploymentsPatchDeletePolicyEnum {
+	return &e
+}
+
 func (e *DeploymentmanagerDeploymentsPatchDeletePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELETE":
 		fallthrough
 	case "ABANDON":
-		*e = DeploymentmanagerDeploymentsPatchDeletePolicyEnum(s)
+		*e = DeploymentmanagerDeploymentsPatchDeletePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentmanagerDeploymentsPatchDeletePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentmanagerDeploymentsPatchDeletePolicyEnum: %v", v)
 	}
 }
 

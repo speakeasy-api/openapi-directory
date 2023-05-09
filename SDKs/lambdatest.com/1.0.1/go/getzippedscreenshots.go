@@ -35,7 +35,10 @@ func newGetZippedScreenshots(defaultClient, securityClient HTTPClient, serverURL
 // Fetch Zipped Screenshots
 func (s *getZippedScreenshots) ZippedScreenshots(ctx context.Context, request operations.ZippedScreenshotsRequest, security operations.ZippedScreenshotsSecurity) (*operations.ZippedScreenshotsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{test_id}/zip", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{test_id}/zip", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

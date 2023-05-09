@@ -15,17 +15,21 @@ const (
 	POSTDeleteSubnetActionEnumDeleteSubnet POSTDeleteSubnetActionEnum = "DeleteSubnet"
 )
 
+func (e POSTDeleteSubnetActionEnum) ToPointer() *POSTDeleteSubnetActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteSubnetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteSubnet":
-		*e = POSTDeleteSubnetActionEnum(s)
+		*e = POSTDeleteSubnetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteSubnetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteSubnetActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteSubnetVersionEnumTwoThousandAndSixteen1115 POSTDeleteSubnetVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteSubnetVersionEnum) ToPointer() *POSTDeleteSubnetVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteSubnetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteSubnetVersionEnum(s)
+		*e = POSTDeleteSubnetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteSubnetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteSubnetVersionEnum: %v", v)
 	}
 }
 

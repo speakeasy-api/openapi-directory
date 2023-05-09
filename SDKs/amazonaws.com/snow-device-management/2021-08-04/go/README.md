@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/snow-device
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,19 +27,17 @@ func main() {
         }),
     )
 
-    req := operations.CancelTaskRequest{
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "provident",
-        XAmzCredential: "distinctio",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "unde",
-        XAmzSignature: "nulla",
-        XAmzSignedHeaders: "corrupti",
-        TaskID: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.CancelTask(ctx, req)
+    res, err := s.CancelTask(ctx, operations.CancelTaskRequest{
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("provident"),
+        XAmzCredential: sdk.String("distinctio"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("unde"),
+        XAmzSignature: sdk.String("nulla"),
+        XAmzSignedHeaders: sdk.String("corrupti"),
+        TaskID: "illum",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,21 +52,21 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CancelTask` - <p>Sends a cancel request for a specified task. You can cancel a task only if it's still in a <code>QUEUED</code> state. Tasks that are already running can't be cancelled.</p> <note> <p>A task might still run if it's processed from the queue before the <code>CancelTask</code> operation changes the task's state.</p> </note>
-* `CreateTask` - Instructs one or more devices to start a task, such as unlocking or rebooting.
-* `DescribeDevice` - Checks device-specific information, such as the device type, software version, IP addresses, and lock status.
-* `DescribeDeviceEc2Instances` - Checks the current state of the Amazon EC2 instances. The output is similar to <code>describeDevice</code>, but the results are sourced from the device cache in the Amazon Web Services Cloud and include a subset of the available fields. 
-* `DescribeExecution` - Checks the status of a remote task running on one or more target devices.
-* `DescribeTask` - Checks the metadata for a given task on a device. 
-* `ListDeviceResources` - Returns a list of the Amazon Web Services resources available for a device. Currently, Amazon EC2 instances are the only supported resource type.
-* `ListDevices` - Returns a list of all devices on your Amazon Web Services account that have Amazon Web Services Snow Device Management enabled in the Amazon Web Services Region where the command is run.
-* `ListExecutions` - Returns the status of tasks for one or more target devices.
-* `ListTagsForResource` - Returns a list of tags for a managed device or task.
-* `ListTasks` - Returns a list of tasks that can be filtered by state.
-* `TagResource` - Adds or replaces tags on a device or task.
-* `UntagResource` - Removes a tag from a device or task.
+* [CancelTask](docs/sdk/README.md#canceltask) - <p>Sends a cancel request for a specified task. You can cancel a task only if it's still in a <code>QUEUED</code> state. Tasks that are already running can't be cancelled.</p> <note> <p>A task might still run if it's processed from the queue before the <code>CancelTask</code> operation changes the task's state.</p> </note>
+* [CreateTask](docs/sdk/README.md#createtask) - Instructs one or more devices to start a task, such as unlocking or rebooting.
+* [DescribeDevice](docs/sdk/README.md#describedevice) - Checks device-specific information, such as the device type, software version, IP addresses, and lock status.
+* [DescribeDeviceEc2Instances](docs/sdk/README.md#describedeviceec2instances) - Checks the current state of the Amazon EC2 instances. The output is similar to <code>describeDevice</code>, but the results are sourced from the device cache in the Amazon Web Services Cloud and include a subset of the available fields. 
+* [DescribeExecution](docs/sdk/README.md#describeexecution) - Checks the status of a remote task running on one or more target devices.
+* [DescribeTask](docs/sdk/README.md#describetask) - Checks the metadata for a given task on a device. 
+* [ListDeviceResources](docs/sdk/README.md#listdeviceresources) - Returns a list of the Amazon Web Services resources available for a device. Currently, Amazon EC2 instances are the only supported resource type.
+* [ListDevices](docs/sdk/README.md#listdevices) - Returns a list of all devices on your Amazon Web Services account that have Amazon Web Services Snow Device Management enabled in the Amazon Web Services Region where the command is run.
+* [ListExecutions](docs/sdk/README.md#listexecutions) - Returns the status of tasks for one or more target devices.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Returns a list of tags for a managed device or task.
+* [ListTasks](docs/sdk/README.md#listtasks) - Returns a list of tasks that can be filtered by state.
+* [TagResource](docs/sdk/README.md#tagresource) - Adds or replaces tags on a device or task.
+* [UntagResource](docs/sdk/README.md#untagresource) - Removes a tag from a device or task.
 <!-- End SDK Available Operations -->
 
 ### Maturity

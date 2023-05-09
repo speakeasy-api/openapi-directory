@@ -18,12 +18,16 @@ const (
 	VideoAdSequenceStepInteractionTypeEnumInteractionTypeEngagedImpression VideoAdSequenceStepInteractionTypeEnum = "INTERACTION_TYPE_ENGAGED_IMPRESSION"
 )
 
+func (e VideoAdSequenceStepInteractionTypeEnum) ToPointer() *VideoAdSequenceStepInteractionTypeEnum {
+	return &e
+}
+
 func (e *VideoAdSequenceStepInteractionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERACTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INTERACTION_TYPE_PAID_VIEW":
@@ -33,10 +37,10 @@ func (e *VideoAdSequenceStepInteractionTypeEnum) UnmarshalJSON(data []byte) erro
 	case "INTERACTION_TYPE_IMPRESSION":
 		fallthrough
 	case "INTERACTION_TYPE_ENGAGED_IMPRESSION":
-		*e = VideoAdSequenceStepInteractionTypeEnum(s)
+		*e = VideoAdSequenceStepInteractionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoAdSequenceStepInteractionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoAdSequenceStepInteractionTypeEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	AddressCurbsideEnumAny   AddressCurbsideEnum = "any"
 )
 
+func (e AddressCurbsideEnum) ToPointer() *AddressCurbsideEnum {
+	return &e
+}
+
 func (e *AddressCurbsideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "right":
 		fallthrough
 	case "left":
 		fallthrough
 	case "any":
-		*e = AddressCurbsideEnum(s)
+		*e = AddressCurbsideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddressCurbsideEnum: %s", s)
+		return fmt.Errorf("invalid value for AddressCurbsideEnum: %v", v)
 	}
 }
 

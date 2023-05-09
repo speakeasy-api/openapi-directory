@@ -17,12 +17,16 @@ const (
 	TrafficSplitShardByEnumRandom      TrafficSplitShardByEnum = "RANDOM"
 )
 
+func (e TrafficSplitShardByEnum) ToPointer() *TrafficSplitShardByEnum {
+	return &e
+}
+
 func (e *TrafficSplitShardByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "COOKIE":
@@ -30,10 +34,10 @@ func (e *TrafficSplitShardByEnum) UnmarshalJSON(data []byte) error {
 	case "IP":
 		fallthrough
 	case "RANDOM":
-		*e = TrafficSplitShardByEnum(s)
+		*e = TrafficSplitShardByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrafficSplitShardByEnum: %s", s)
+		return fmt.Errorf("invalid value for TrafficSplitShardByEnum: %v", v)
 	}
 }
 

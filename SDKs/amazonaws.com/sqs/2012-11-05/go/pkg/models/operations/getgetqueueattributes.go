@@ -15,17 +15,21 @@ const (
 	GETGETQueueAttributesActionEnumGetQueueAttributes GETGETQueueAttributesActionEnum = "GetQueueAttributes"
 )
 
+func (e GETGETQueueAttributesActionEnum) ToPointer() *GETGETQueueAttributesActionEnum {
+	return &e
+}
+
 func (e *GETGETQueueAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetQueueAttributes":
-		*e = GETGETQueueAttributesActionEnum(s)
+		*e = GETGETQueueAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETQueueAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETQueueAttributesActionEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	GETGETQueueAttributesAttributeNamesEnumSqsManagedSseEnabled                  GETGETQueueAttributesAttributeNamesEnum = "SqsManagedSseEnabled"
 )
 
+func (e GETGETQueueAttributesAttributeNamesEnum) ToPointer() *GETGETQueueAttributesAttributeNamesEnum {
+	return &e
+}
+
 func (e *GETGETQueueAttributesAttributeNamesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All":
 		fallthrough
 	case "Policy":
@@ -105,10 +113,10 @@ func (e *GETGETQueueAttributesAttributeNamesEnum) UnmarshalJSON(data []byte) err
 	case "RedriveAllowPolicy":
 		fallthrough
 	case "SqsManagedSseEnabled":
-		*e = GETGETQueueAttributesAttributeNamesEnum(s)
+		*e = GETGETQueueAttributesAttributeNamesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETQueueAttributesAttributeNamesEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETQueueAttributesAttributeNamesEnum: %v", v)
 	}
 }
 
@@ -119,17 +127,21 @@ const (
 	GETGETQueueAttributesVersionEnumTwoThousandAndTwelve1105 GETGETQueueAttributesVersionEnum = "2012-11-05"
 )
 
+func (e GETGETQueueAttributesVersionEnum) ToPointer() *GETGETQueueAttributesVersionEnum {
+	return &e
+}
+
 func (e *GETGETQueueAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = GETGETQueueAttributesVersionEnum(s)
+		*e = GETGETQueueAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETQueueAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETQueueAttributesVersionEnum: %v", v)
 	}
 }
 

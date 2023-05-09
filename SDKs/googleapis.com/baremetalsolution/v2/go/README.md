@@ -13,34 +13,32 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/baremetals
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        Location: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetch(ctx, req, operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchSecurity{
+    res, err := s.Projects.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetch(ctx, operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        Location: "corrupti",
+        OauthToken: sdk.String("illum"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("vel"),
+        UploadType: sdk.String("error"),
+        UploadProtocol: sdk.String("deserunt"),
+    }, operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -59,38 +57,38 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetch` - Get instance provisioning settings for a given project. This is hidden method used by UI only.
-* `BaremetalsolutionProjectsLocationsInstancesCreate` - Create an Instance.
-* `BaremetalsolutionProjectsLocationsInstancesDetachLun` - Detach LUN from Instance.
-* `BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsole` - Disable the interactive serial console feature on an instance.
-* `BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsole` - Enable the interactive serial console feature on an instance.
-* `BaremetalsolutionProjectsLocationsInstancesList` - List servers in a given project and location.
-* `BaremetalsolutionProjectsLocationsInstancesReset` - Perform an ungraceful, hard reset on a server. Equivalent to shutting the power off and then turning it back on.
-* `BaremetalsolutionProjectsLocationsInstancesStart` - Starts a server that was shutdown.
-* `BaremetalsolutionProjectsLocationsInstancesStop` - Stop a running server.
-* `BaremetalsolutionProjectsLocationsList` - Lists information about the supported locations for this service.
-* `BaremetalsolutionProjectsLocationsNetworksList` - List network in a given project and location.
-* `BaremetalsolutionProjectsLocationsNetworksListNetworkUsage` - List all Networks (and used IPs for each Network) in the vendor account associated with the specified project.
-* `BaremetalsolutionProjectsLocationsNfsSharesCreate` - Create an NFS share.
-* `BaremetalsolutionProjectsLocationsNfsSharesList` - List NFS shares.
-* `BaremetalsolutionProjectsLocationsProvisioningConfigsCreate` - Create new ProvisioningConfig.
-* `BaremetalsolutionProjectsLocationsProvisioningConfigsSubmit` - Submit a provisiong configuration for a given project.
-* `BaremetalsolutionProjectsLocationsProvisioningQuotasList` - List the budget details to provision resources on a given project.
-* `BaremetalsolutionProjectsLocationsSSHKeysCreate` - Register a public SSH key in the specified project for use with the interactive serial console feature.
-* `BaremetalsolutionProjectsLocationsSSHKeysList` - Lists the public SSH keys registered for the specified project. These SSH keys are used only for the interactive serial console feature.
-* `BaremetalsolutionProjectsLocationsVolumesList` - List storage volumes in a given project and location.
-* `BaremetalsolutionProjectsLocationsVolumesLunsEvict` - Skips lun's cooloff and deletes it now. Lun must be in cooloff state.
-* `BaremetalsolutionProjectsLocationsVolumesLunsList` - List storage volume luns for given storage volume.
-* `BaremetalsolutionProjectsLocationsVolumesPatch` - Update details of a single storage volume.
-* `BaremetalsolutionProjectsLocationsVolumesRename` - RenameVolume sets a new name for a volume. Use with caution, previous names become immediately invalidated.
-* `BaremetalsolutionProjectsLocationsVolumesResize` - Emergency Volume resize.
-* `BaremetalsolutionProjectsLocationsVolumesSnapshotsCreate` - Takes a snapshot of a boot volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
-* `BaremetalsolutionProjectsLocationsVolumesSnapshotsDelete` - Deletes a volume snapshot. Returns INVALID_ARGUMENT if called for a non-boot volume.
-* `BaremetalsolutionProjectsLocationsVolumesSnapshotsGet` - Returns the specified snapshot resource. Returns INVALID_ARGUMENT if called for a non-boot volume.
-* `BaremetalsolutionProjectsLocationsVolumesSnapshotsList` - Retrieves the list of snapshots for the specified volume. Returns a response with an empty list of snapshots if called for a non-boot volume.
-* `BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshot` - Uses the specified snapshot to restore its parent volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
+* [BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetch](docs/projects/README.md#baremetalsolutionprojectslocationsinstanceprovisioningsettingsfetch) - Get instance provisioning settings for a given project. This is hidden method used by UI only.
+* [BaremetalsolutionProjectsLocationsInstancesCreate](docs/projects/README.md#baremetalsolutionprojectslocationsinstancescreate) - Create an Instance.
+* [BaremetalsolutionProjectsLocationsInstancesDetachLun](docs/projects/README.md#baremetalsolutionprojectslocationsinstancesdetachlun) - Detach LUN from Instance.
+* [BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsole](docs/projects/README.md#baremetalsolutionprojectslocationsinstancesdisableinteractiveserialconsole) - Disable the interactive serial console feature on an instance.
+* [BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsole](docs/projects/README.md#baremetalsolutionprojectslocationsinstancesenableinteractiveserialconsole) - Enable the interactive serial console feature on an instance.
+* [BaremetalsolutionProjectsLocationsInstancesList](docs/projects/README.md#baremetalsolutionprojectslocationsinstanceslist) - List servers in a given project and location.
+* [BaremetalsolutionProjectsLocationsInstancesReset](docs/projects/README.md#baremetalsolutionprojectslocationsinstancesreset) - Perform an ungraceful, hard reset on a server. Equivalent to shutting the power off and then turning it back on.
+* [BaremetalsolutionProjectsLocationsInstancesStart](docs/projects/README.md#baremetalsolutionprojectslocationsinstancesstart) - Starts a server that was shutdown.
+* [BaremetalsolutionProjectsLocationsInstancesStop](docs/projects/README.md#baremetalsolutionprojectslocationsinstancesstop) - Stop a running server.
+* [BaremetalsolutionProjectsLocationsList](docs/projects/README.md#baremetalsolutionprojectslocationslist) - Lists information about the supported locations for this service.
+* [BaremetalsolutionProjectsLocationsNetworksList](docs/projects/README.md#baremetalsolutionprojectslocationsnetworkslist) - List network in a given project and location.
+* [BaremetalsolutionProjectsLocationsNetworksListNetworkUsage](docs/projects/README.md#baremetalsolutionprojectslocationsnetworkslistnetworkusage) - List all Networks (and used IPs for each Network) in the vendor account associated with the specified project.
+* [BaremetalsolutionProjectsLocationsNfsSharesCreate](docs/projects/README.md#baremetalsolutionprojectslocationsnfssharescreate) - Create an NFS share.
+* [BaremetalsolutionProjectsLocationsNfsSharesList](docs/projects/README.md#baremetalsolutionprojectslocationsnfsshareslist) - List NFS shares.
+* [BaremetalsolutionProjectsLocationsProvisioningConfigsCreate](docs/projects/README.md#baremetalsolutionprojectslocationsprovisioningconfigscreate) - Create new ProvisioningConfig.
+* [BaremetalsolutionProjectsLocationsProvisioningConfigsSubmit](docs/projects/README.md#baremetalsolutionprojectslocationsprovisioningconfigssubmit) - Submit a provisiong configuration for a given project.
+* [BaremetalsolutionProjectsLocationsProvisioningQuotasList](docs/projects/README.md#baremetalsolutionprojectslocationsprovisioningquotaslist) - List the budget details to provision resources on a given project.
+* [BaremetalsolutionProjectsLocationsSSHKeysCreate](docs/projects/README.md#baremetalsolutionprojectslocationssshkeyscreate) - Register a public SSH key in the specified project for use with the interactive serial console feature.
+* [BaremetalsolutionProjectsLocationsSSHKeysList](docs/projects/README.md#baremetalsolutionprojectslocationssshkeyslist) - Lists the public SSH keys registered for the specified project. These SSH keys are used only for the interactive serial console feature.
+* [BaremetalsolutionProjectsLocationsVolumesList](docs/projects/README.md#baremetalsolutionprojectslocationsvolumeslist) - List storage volumes in a given project and location.
+* [BaremetalsolutionProjectsLocationsVolumesLunsEvict](docs/projects/README.md#baremetalsolutionprojectslocationsvolumeslunsevict) - Skips lun's cooloff and deletes it now. Lun must be in cooloff state.
+* [BaremetalsolutionProjectsLocationsVolumesLunsList](docs/projects/README.md#baremetalsolutionprojectslocationsvolumeslunslist) - List storage volume luns for given storage volume.
+* [BaremetalsolutionProjectsLocationsVolumesPatch](docs/projects/README.md#baremetalsolutionprojectslocationsvolumespatch) - Update details of a single storage volume.
+* [BaremetalsolutionProjectsLocationsVolumesRename](docs/projects/README.md#baremetalsolutionprojectslocationsvolumesrename) - RenameVolume sets a new name for a volume. Use with caution, previous names become immediately invalidated.
+* [BaremetalsolutionProjectsLocationsVolumesResize](docs/projects/README.md#baremetalsolutionprojectslocationsvolumesresize) - Emergency Volume resize.
+* [BaremetalsolutionProjectsLocationsVolumesSnapshotsCreate](docs/projects/README.md#baremetalsolutionprojectslocationsvolumessnapshotscreate) - Takes a snapshot of a boot volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
+* [BaremetalsolutionProjectsLocationsVolumesSnapshotsDelete](docs/projects/README.md#baremetalsolutionprojectslocationsvolumessnapshotsdelete) - Deletes a volume snapshot. Returns INVALID_ARGUMENT if called for a non-boot volume.
+* [BaremetalsolutionProjectsLocationsVolumesSnapshotsGet](docs/projects/README.md#baremetalsolutionprojectslocationsvolumessnapshotsget) - Returns the specified snapshot resource. Returns INVALID_ARGUMENT if called for a non-boot volume.
+* [BaremetalsolutionProjectsLocationsVolumesSnapshotsList](docs/projects/README.md#baremetalsolutionprojectslocationsvolumessnapshotslist) - Retrieves the list of snapshots for the specified volume. Returns a response with an empty list of snapshots if called for a non-boot volume.
+* [BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshot](docs/projects/README.md#baremetalsolutionprojectslocationsvolumessnapshotsrestorevolumesnapshot) - Uses the specified snapshot to restore its parent volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
 <!-- End SDK Available Operations -->
 
 ### Maturity

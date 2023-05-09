@@ -2,26 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ChangePasswordRequest{
+    ctx := context.Background()
+    res, err := s.V1.ChangePassword(ctx, operations.ChangePasswordRequest{
         Secret: shared.Secret{
-            Secret: "P@55w0rd+",
+            Secret: sdk.String("P@55w0rd+"),
         },
         ShopperID: "corrupti",
-    }
-
-    ctx := context.Background()
-    res, err := s.V1.ChangePassword(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

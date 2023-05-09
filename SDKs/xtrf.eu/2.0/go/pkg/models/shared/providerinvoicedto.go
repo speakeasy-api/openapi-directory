@@ -16,12 +16,16 @@ const (
 	ProviderInvoiceDTOPaymentStatusEnumPartiallyPaid ProviderInvoiceDTOPaymentStatusEnum = "PARTIALLY_PAID"
 )
 
+func (e ProviderInvoiceDTOPaymentStatusEnum) ToPointer() *ProviderInvoiceDTOPaymentStatusEnum {
+	return &e
+}
+
 func (e *ProviderInvoiceDTOPaymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_PAID":
 		fallthrough
 	case "FULLY_PAID":
@@ -29,10 +33,10 @@ func (e *ProviderInvoiceDTOPaymentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "IRRECOVERABLE":
 		fallthrough
 	case "PARTIALLY_PAID":
-		*e = ProviderInvoiceDTOPaymentStatusEnum(s)
+		*e = ProviderInvoiceDTOPaymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProviderInvoiceDTOPaymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProviderInvoiceDTOPaymentStatusEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	ProviderInvoiceDTOStatusEnumBillCreated ProviderInvoiceDTOStatusEnum = "BILL_CREATED"
 )
 
+func (e ProviderInvoiceDTOStatusEnum) ToPointer() *ProviderInvoiceDTOStatusEnum {
+	return &e
+}
+
 func (e *ProviderInvoiceDTOStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POSTPONED":
 		fallthrough
 	case "TO_BE_SENT":
@@ -61,10 +69,10 @@ func (e *ProviderInvoiceDTOStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CONFIRMED":
 		fallthrough
 	case "BILL_CREATED":
-		*e = ProviderInvoiceDTOStatusEnum(s)
+		*e = ProviderInvoiceDTOStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProviderInvoiceDTOStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProviderInvoiceDTOStatusEnum: %v", v)
 	}
 }
 

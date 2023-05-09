@@ -34,9 +34,14 @@ func newDistribute(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // AppleMappingTestFlightGroups - Fetch all apple test flight groups
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *distribute) AppleMappingTestFlightGroups(ctx context.Context, request operations.AppleMappingTestFlightGroupsRequest, security operations.AppleMappingTestFlightGroupsSecurity) (*operations.AppleMappingTestFlightGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_test_flight_groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_test_flight_groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -90,7 +95,10 @@ func (s *distribute) AppleMappingTestFlightGroups(ctx context.Context, request o
 // AppleMappingCreate - Create a mapping for an existing app in apple store for the specified application.
 func (s *distribute) AppleMappingCreate(ctx context.Context, request operations.AppleMappingCreateRequest, security operations.AppleMappingCreateSecurity) (*operations.AppleMappingCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -154,7 +162,10 @@ func (s *distribute) AppleMappingCreate(ctx context.Context, request operations.
 // AppleMappingDelete - Delete mapping of apple app to an existing app in apple store.
 func (s *distribute) AppleMappingDelete(ctx context.Context, request operations.AppleMappingDeleteRequest, security operations.AppleMappingDeleteSecurity) (*operations.AppleMappingDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
@@ -206,7 +217,10 @@ func (s *distribute) AppleMappingDelete(ctx context.Context, request operations.
 // AppleMappingGet - Get mapping of apple app to an existing app in apple store.
 func (s *distribute) AppleMappingGet(ctx context.Context, request operations.AppleMappingGetRequest, security operations.AppleMappingGetSecurity) (*operations.AppleMappingGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -260,7 +274,10 @@ func (s *distribute) AppleMappingGet(ctx context.Context, request operations.App
 // DevicesDeviceDetails - Returns the device details.
 func (s *distribute) DevicesDeviceDetails(ctx context.Context, request operations.DevicesDeviceDetailsRequest, security operations.DevicesDeviceDetailsSecurity) (*operations.DevicesDeviceDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/devices/{device_udid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/user/devices/{device_udid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -334,7 +351,10 @@ func (s *distribute) DevicesDeviceDetails(ctx context.Context, request operation
 // DevicesGetReleaseUpdateDevicesStatus - Returns the resign status to the caller
 func (s *distribute) DevicesGetReleaseUpdateDevicesStatus(ctx context.Context, request operations.DevicesGetReleaseUpdateDevicesStatusRequest, security operations.DevicesGetReleaseUpdateDevicesStatusSecurity) (*operations.DevicesGetReleaseUpdateDevicesStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/update_devices/{resign_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/update_devices/{resign_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -402,7 +422,10 @@ func (s *distribute) DevicesGetReleaseUpdateDevicesStatus(ctx context.Context, r
 // DevicesList - Returns all devices associated with the given distribution group
 func (s *distribute) DevicesList(ctx context.Context, request operations.DevicesListRequest, security operations.DevicesListSecurity) (*operations.DevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/devices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/devices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -470,7 +493,10 @@ func (s *distribute) DevicesList(ctx context.Context, request operations.Devices
 // DevicesListCsvFormat - Returns all devices associated with the given distribution group.
 func (s *distribute) DevicesListCsvFormat(ctx context.Context, request operations.DevicesListCsvFormatRequest, security operations.DevicesListCsvFormatSecurity) (*operations.DevicesListCsvFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/devices/download_devices_list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/devices/download_devices_list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -523,7 +549,10 @@ func (s *distribute) DevicesListCsvFormat(ctx context.Context, request operation
 // DevicesRegisterUserForDevice - Registers a user for an existing device
 func (s *distribute) DevicesRegisterUserForDevice(ctx context.Context, request operations.DevicesRegisterUserForDeviceRequest, security operations.DevicesRegisterUserForDeviceSecurity) (*operations.DevicesRegisterUserForDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/users/{user_id}/devices/register", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/users/{user_id}/devices/register", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -587,7 +616,10 @@ func (s *distribute) DevicesRegisterUserForDevice(ctx context.Context, request o
 // DevicesRemoveUserDevice - Removes an existing device from a user
 func (s *distribute) DevicesRemoveUserDevice(ctx context.Context, request operations.DevicesRemoveUserDeviceRequest, security operations.DevicesRemoveUserDeviceSecurity) (*operations.DevicesRemoveUserDeviceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/devices/{device_udid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/user/devices/{device_udid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -640,7 +672,7 @@ func (s *distribute) DevicesRemoveUserDevice(ctx context.Context, request operat
 }
 
 // DevicesUserDevicesList - Returns all devices associated with the given user.
-func (s *distribute) DevicesUserDevicesList(ctx context.Context) (*operations.DevicesUserDevicesListResponse, error) {
+func (s *distribute) DevicesUserDevicesList(ctx context.Context, security operations.DevicesUserDevicesListSecurity) (*operations.DevicesUserDevicesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user/devices"
 
@@ -649,7 +681,7 @@ func (s *distribute) DevicesUserDevicesList(ctx context.Context) (*operations.De
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -706,7 +738,10 @@ func (s *distribute) DevicesUserDevicesList(ctx context.Context) (*operations.De
 // DistibutionReleasesInstallAnalytics - Notify download(s) for the provided distribution release(s).
 func (s *distribute) DistibutionReleasesInstallAnalytics(ctx context.Context, request operations.DistibutionReleasesInstallAnalyticsRequest) (*operations.DistibutionReleasesInstallAnalyticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/apps/{owner_name}/{app_name}/install_analytics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/public/apps/{owner_name}/{app_name}/install_analytics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -751,7 +786,10 @@ func (s *distribute) DistibutionReleasesInstallAnalytics(ctx context.Context, re
 // ProvisioningProfile - Return information about the provisioning profile. Only available for iOS.
 func (s *distribute) ProvisioningProfile(ctx context.Context, request operations.ProvisioningProfileRequest, security operations.ProvisioningProfileSecurity) (*operations.ProvisioningProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/provisioning_profile", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/provisioning_profile", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -805,7 +843,10 @@ func (s *distribute) ProvisioningProfile(ctx context.Context, request operations
 // ReleasesAddDistributionGroup - Distributes a release to a group
 func (s *distribute) ReleasesAddDistributionGroup(ctx context.Context, request operations.ReleasesAddDistributionGroupRequest, security operations.ReleasesAddDistributionGroupSecurity) (*operations.ReleasesAddDistributionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -879,7 +920,10 @@ func (s *distribute) ReleasesAddDistributionGroup(ctx context.Context, request o
 // ReleasesAddStore - Distributes a release to a store
 func (s *distribute) ReleasesAddStore(ctx context.Context, request operations.ReleasesAddStoreRequest, security operations.ReleasesAddStoreSecurity) (*operations.ReleasesAddStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -953,7 +997,10 @@ func (s *distribute) ReleasesAddStore(ctx context.Context, request operations.Re
 // ReleasesAddTesters - Distributes a release to a user
 func (s *distribute) ReleasesAddTesters(ctx context.Context, request operations.ReleasesAddTestersRequest, security operations.ReleasesAddTestersSecurity) (*operations.ReleasesAddTestersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1025,9 +1072,14 @@ func (s *distribute) ReleasesAddTesters(ctx context.Context, request operations.
 }
 
 // ReleasesAvailableToTester - Return detailed information about releases avaiable to a tester.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *distribute) ReleasesAvailableToTester(ctx context.Context, request operations.ReleasesAvailableToTesterRequest, security operations.ReleasesAvailableToTesterSecurity) (*operations.ReleasesAvailableToTesterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/filter_by_tester", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/filter_by_tester", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1075,7 +1127,10 @@ func (s *distribute) ReleasesAvailableToTester(ctx context.Context, request oper
 // ReleasesCreateReleaseUpload - Initiate a new release upload. This API is part of multi-step upload process.
 func (s *distribute) ReleasesCreateReleaseUpload(ctx context.Context, request operations.ReleasesCreateReleaseUploadRequest, security operations.ReleasesCreateReleaseUploadSecurity) (*operations.ReleasesCreateReleaseUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1146,7 +1201,10 @@ func (s *distribute) ReleasesCreateReleaseUpload(ctx context.Context, request op
 // ReleasesDelete - Deletes a release.
 func (s *distribute) ReleasesDelete(ctx context.Context, request operations.ReleasesDeleteRequest, security operations.ReleasesDeleteSecurity) (*operations.ReleasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1201,7 +1259,10 @@ func (s *distribute) ReleasesDelete(ctx context.Context, request operations.Rele
 // ReleasesDeleteDistributionGroup - Delete the given distribution group from the release
 func (s *distribute) ReleasesDeleteDistributionGroup(ctx context.Context, request operations.ReleasesDeleteDistributionGroupRequest, security operations.ReleasesDeleteDistributionGroupSecurity) (*operations.ReleasesDeleteDistributionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups/{group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups/{group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1246,7 +1307,10 @@ func (s *distribute) ReleasesDeleteDistributionGroup(ctx context.Context, reques
 // ReleasesDeleteDistributionStore - Delete the given distribution store from the release
 func (s *distribute) ReleasesDeleteDistributionStore(ctx context.Context, request operations.ReleasesDeleteDistributionStoreRequest, security operations.ReleasesDeleteDistributionStoreSecurity) (*operations.ReleasesDeleteDistributionStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores/{store_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores/{store_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1291,7 +1355,10 @@ func (s *distribute) ReleasesDeleteDistributionStore(ctx context.Context, reques
 // ReleasesDeleteDistributionTester - Delete the given tester from the release
 func (s *distribute) ReleasesDeleteDistributionTester(ctx context.Context, request operations.ReleasesDeleteDistributionTesterRequest, security operations.ReleasesDeleteDistributionTesterSecurity) (*operations.ReleasesDeleteDistributionTesterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers/{tester_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers/{tester_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1336,7 +1403,10 @@ func (s *distribute) ReleasesDeleteDistributionTester(ctx context.Context, reque
 // ReleasesDeleteTesterFromDestinations - Delete the given tester from the all releases
 func (s *distribute) ReleasesDeleteTesterFromDestinations(ctx context.Context, request operations.ReleasesDeleteTesterFromDestinationsRequest, security operations.ReleasesDeleteTesterFromDestinationsSecurity) (*operations.ReleasesDeleteTesterFromDestinationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/testers/{tester_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/testers/{tester_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1381,7 +1451,10 @@ func (s *distribute) ReleasesDeleteTesterFromDestinations(ctx context.Context, r
 // ReleasesDeleteWithDistributionGroupID - Deletes a release with id 'release_id' in a given distribution group.
 func (s *distribute) ReleasesDeleteWithDistributionGroupID(ctx context.Context, request operations.ReleasesDeleteWithDistributionGroupIDRequest, security operations.ReleasesDeleteWithDistributionGroupIDSecurity) (*operations.ReleasesDeleteWithDistributionGroupIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases/{release_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases/{release_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1418,7 +1491,10 @@ func (s *distribute) ReleasesDeleteWithDistributionGroupID(ctx context.Context, 
 // ReleasesGetIosManifest - Returns the manifest.plist in XML format for installing the release on a device. Only available for iOS.
 func (s *distribute) ReleasesGetIosManifest(ctx context.Context, request operations.ReleasesGetIosManifestRequest) (*operations.ReleasesGetIosManifestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/apps/{app_id}/releases/{release_id}/ios_manifest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/public/apps/{app_id}/releases/{release_id}/ios_manifest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1487,7 +1563,10 @@ func (s *distribute) ReleasesGetIosManifest(ctx context.Context, request operati
 // ReleasesGetLatestByDistributionGroup - Return detailed information about a distributed release in a given distribution group.
 func (s *distribute) ReleasesGetLatestByDistributionGroup(ctx context.Context, request operations.ReleasesGetLatestByDistributionGroupRequest, security operations.ReleasesGetLatestByDistributionGroupSecurity) (*operations.ReleasesGetLatestByDistributionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases/{release_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases/{release_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1555,7 +1634,10 @@ func (s *distribute) ReleasesGetLatestByDistributionGroup(ctx context.Context, r
 // ReleasesGetLatestByHash - If 'latest' is not specified then it will return the specified release if it's enabled. If 'latest' is specified, regardless of whether a release hash is provided, the latest enabled release is returned.
 func (s *distribute) ReleasesGetLatestByHash(ctx context.Context, request operations.ReleasesGetLatestByHashRequest, security operations.ReleasesGetLatestByHashSecurity) (*operations.ReleasesGetLatestByHashResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/sdk/apps/{app_secret}/releases/{release_hash}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/sdk/apps/{app_secret}/releases/{release_hash}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1613,7 +1695,10 @@ func (s *distribute) ReleasesGetLatestByHash(ctx context.Context, request operat
 // ReleasesGetLatestByPublicDistributionGroup - Get a release with 'latest' for the given public group.
 func (s *distribute) ReleasesGetLatestByPublicDistributionGroup(ctx context.Context, request operations.ReleasesGetLatestByPublicDistributionGroupRequest) (*operations.ReleasesGetLatestByPublicDistributionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sdk/apps/{app_secret}/distribution_groups/{distribution_group_id}/releases/latest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sdk/apps/{app_secret}/distribution_groups/{distribution_group_id}/releases/latest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1681,7 +1766,10 @@ func (s *distribute) ReleasesGetLatestByPublicDistributionGroup(ctx context.Cont
 // ReleasesGetLatestByUser - Get a release with id `release_id`. If `release_id` is `latest`, return the latest release that was distributed to the current user (from all the distribution groups).
 func (s *distribute) ReleasesGetLatestByUser(ctx context.Context, request operations.ReleasesGetLatestByUserRequest, security operations.ReleasesGetLatestByUserSecurity) (*operations.ReleasesGetLatestByUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1749,7 +1837,10 @@ func (s *distribute) ReleasesGetLatestByUser(ctx context.Context, request operat
 // ReleasesGetLatestPrivateRelease - Get the latest release distributed to a private group the given user is a member of for the given app.
 func (s *distribute) ReleasesGetLatestPrivateRelease(ctx context.Context, request operations.ReleasesGetLatestPrivateReleaseRequest, security operations.ReleasesGetLatestPrivateReleaseSecurity) (*operations.ReleasesGetLatestPrivateReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/sdk/apps/{app_secret}/releases/private/latest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/sdk/apps/{app_secret}/releases/private/latest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1805,9 +1896,14 @@ func (s *distribute) ReleasesGetLatestPrivateRelease(ctx context.Context, reques
 }
 
 // ReleasesGetLatestPublicRelease - Get the latest public release for the given app.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *distribute) ReleasesGetLatestPublicRelease(ctx context.Context, request operations.ReleasesGetLatestPublicReleaseRequest) (*operations.ReleasesGetLatestPublicReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sdk/apps/{app_secret}/releases/latest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sdk/apps/{app_secret}/releases/latest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1861,7 +1957,10 @@ func (s *distribute) ReleasesGetLatestPublicRelease(ctx context.Context, request
 // ReleasesGetPublicGroupsForReleaseByHash - Get all public distribution groups that a given release has been distributed to
 func (s *distribute) ReleasesGetPublicGroupsForReleaseByHash(ctx context.Context, request operations.ReleasesGetPublicGroupsForReleaseByHashRequest) (*operations.ReleasesGetPublicGroupsForReleaseByHashResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sdk/apps/{app_secret}/releases/{release_hash}/public_distribution_groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sdk/apps/{app_secret}/releases/{release_hash}/public_distribution_groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1915,7 +2014,10 @@ func (s *distribute) ReleasesGetPublicGroupsForReleaseByHash(ctx context.Context
 // ReleasesGetReleaseUploadStatus - Get the current status of the release upload.
 func (s *distribute) ReleasesGetReleaseUploadStatus(ctx context.Context, request operations.ReleasesGetReleaseUploadStatusRequest, security operations.ReleasesGetReleaseUploadStatusSecurity) (*operations.ReleasesGetReleaseUploadStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1979,7 +2081,10 @@ func (s *distribute) ReleasesGetReleaseUploadStatus(ctx context.Context, request
 // ReleasesGetSparkleFeed - Gets the sparkle feed of the releases that are distributed to all the public distribution groups.
 func (s *distribute) ReleasesGetSparkleFeed(ctx context.Context, request operations.ReleasesGetSparkleFeedRequest) (*operations.ReleasesGetSparkleFeedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sparkle/apps/{app_secret}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/public/sparkle/apps/{app_secret}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2024,7 +2129,10 @@ func (s *distribute) ReleasesGetSparkleFeed(ctx context.Context, request operati
 // ReleasesList - Return basic information about releases.
 func (s *distribute) ReleasesList(ctx context.Context, request operations.ReleasesListRequest, security operations.ReleasesListSecurity) (*operations.ReleasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2072,7 +2180,10 @@ func (s *distribute) ReleasesList(ctx context.Context, request operations.Releas
 // ReleasesListByDistributionGroup - Return basic information about distributed releases in a given distribution group.
 func (s *distribute) ReleasesListByDistributionGroup(ctx context.Context, request operations.ReleasesListByDistributionGroupRequest, security operations.ReleasesListByDistributionGroupSecurity) (*operations.ReleasesListByDistributionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2126,7 +2237,10 @@ func (s *distribute) ReleasesListByDistributionGroup(ctx context.Context, reques
 // ReleasesListLatest - Get the latest release from every distribution group associated with an application.
 func (s *distribute) ReleasesListLatest(ctx context.Context, request operations.ReleasesListLatestRequest, security operations.ReleasesListLatestSecurity) (*operations.ReleasesListLatestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/recent_releases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/recent_releases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2170,7 +2284,10 @@ func (s *distribute) ReleasesListLatest(ctx context.Context, request operations.
 // ReleasesPutDistributionGroup - Update details about the specified distribution group associated with the release
 func (s *distribute) ReleasesPutDistributionGroup(ctx context.Context, request operations.ReleasesPutDistributionGroupRequest, security operations.ReleasesPutDistributionGroupSecurity) (*operations.ReleasesPutDistributionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups/{group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups/{group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2222,7 +2339,10 @@ func (s *distribute) ReleasesPutDistributionGroup(ctx context.Context, request o
 // ReleasesPutDistributionTester - Update details about the specified tester associated with the release
 func (s *distribute) ReleasesPutDistributionTester(ctx context.Context, request operations.ReleasesPutDistributionTesterRequest, security operations.ReleasesPutDistributionTesterSecurity) (*operations.ReleasesPutDistributionTesterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers/{tester_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers/{tester_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2274,7 +2394,10 @@ func (s *distribute) ReleasesPutDistributionTester(ctx context.Context, request 
 // ReleasesUpdate - Updates a release.
 func (s *distribute) ReleasesUpdate(ctx context.Context, request operations.ReleasesUpdateRequest, security operations.ReleasesUpdateSecurity) (*operations.ReleasesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -2348,7 +2471,10 @@ func (s *distribute) ReleasesUpdate(ctx context.Context, request operations.Rele
 // ReleasesUpdateDetails - Update details of a release.
 func (s *distribute) ReleasesUpdateDetails(ctx context.Context, request operations.ReleasesUpdateDetailsRequest, security operations.ReleasesUpdateDetailsSecurity) (*operations.ReleasesUpdateDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2422,7 +2548,10 @@ func (s *distribute) ReleasesUpdateDetails(ctx context.Context, request operatio
 // ReleasesUpdateReleaseUploadStatus - Update the current status of the release upload.
 func (s *distribute) ReleasesUpdateReleaseUploadStatus(ctx context.Context, request operations.ReleasesUpdateReleaseUploadStatusRequest, security operations.ReleasesUpdateReleaseUploadStatusSecurity) (*operations.ReleasesUpdateReleaseUploadStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2500,7 +2629,10 @@ func (s *distribute) ReleasesUpdateReleaseUploadStatus(ctx context.Context, requ
 // StoreNotificationsGetNotificationByAppID - Application specific store service status
 func (s *distribute) StoreNotificationsGetNotificationByAppID(ctx context.Context, request operations.StoreNotificationsGetNotificationByAppIDRequest, security operations.StoreNotificationsGetNotificationByAppIDSecurity) (*operations.StoreNotificationsGetNotificationByAppIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/store_service_status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/store_service_status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2554,7 +2686,10 @@ func (s *distribute) StoreNotificationsGetNotificationByAppID(ctx context.Contex
 // StoreReleasePublishLogsGet - Returns publish logs for a particular release published to a particular store
 func (s *distribute) StoreReleasePublishLogsGet(ctx context.Context, request operations.StoreReleasePublishLogsGetRequest, security operations.StoreReleasePublishLogsGetSecurity) (*operations.StoreReleasePublishLogsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/publish_logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/publish_logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2599,7 +2734,10 @@ func (s *distribute) StoreReleasePublishLogsGet(ctx context.Context, request ope
 // StoreReleasesDelete - delete the release with release Id
 func (s *distribute) StoreReleasesDelete(ctx context.Context, request operations.StoreReleasesDeleteRequest, security operations.StoreReleasesDeleteSecurity) (*operations.StoreReleasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
@@ -2651,7 +2789,10 @@ func (s *distribute) StoreReleasesDelete(ctx context.Context, request operations
 // StoreReleasesGet - Return releases published in a store for releaseId and storeId
 func (s *distribute) StoreReleasesGet(ctx context.Context, request operations.StoreReleasesGetRequest, security operations.StoreReleasesGetSecurity) (*operations.StoreReleasesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2705,7 +2846,10 @@ func (s *distribute) StoreReleasesGet(ctx context.Context, request operations.St
 // StoreReleasesGetLatest - Returns the latest release published in a store.
 func (s *distribute) StoreReleasesGetLatest(ctx context.Context, request operations.StoreReleasesGetLatestRequest, security operations.StoreReleasesGetLatestSecurity) (*operations.StoreReleasesGetLatestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/latest_release", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/latest_release", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2759,7 +2903,10 @@ func (s *distribute) StoreReleasesGetLatest(ctx context.Context, request operati
 // StoreReleasesGetPublishError - Return the Error Details of release which failed in publishing.
 func (s *distribute) StoreReleasesGetPublishError(ctx context.Context, request operations.StoreReleasesGetPublishErrorRequest, security operations.StoreReleasesGetPublishErrorSecurity) (*operations.StoreReleasesGetPublishErrorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/publish_error_details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/publish_error_details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2813,7 +2960,10 @@ func (s *distribute) StoreReleasesGetPublishError(ctx context.Context, request o
 // StoreReleasesGetRealTimeStatusByReleaseID - Return the Real time Status publishing of release from store.
 func (s *distribute) StoreReleasesGetRealTimeStatusByReleaseID(ctx context.Context, request operations.StoreReleasesGetRealTimeStatusByReleaseIDRequest, security operations.StoreReleasesGetRealTimeStatusByReleaseIDSecurity) (*operations.StoreReleasesGetRealTimeStatusByReleaseIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/realtimestatus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/realtimestatus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2867,7 +3017,10 @@ func (s *distribute) StoreReleasesGetRealTimeStatusByReleaseID(ctx context.Conte
 // StoreReleasesList - Return all releases published  in a store
 func (s *distribute) StoreReleasesList(ctx context.Context, request operations.StoreReleasesListRequest, security operations.StoreReleasesListSecurity) (*operations.StoreReleasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2921,7 +3074,10 @@ func (s *distribute) StoreReleasesList(ctx context.Context, request operations.S
 // StoresCreate - Create a new external store for the specified application.
 func (s *distribute) StoresCreate(ctx context.Context, request operations.StoresCreateRequest, security operations.StoresCreateSecurity) (*operations.StoresCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2985,7 +3141,10 @@ func (s *distribute) StoresCreate(ctx context.Context, request operations.Stores
 // StoresDelete - delete the store based on specific store name.
 func (s *distribute) StoresDelete(ctx context.Context, request operations.StoresDeleteRequest, security operations.StoresDeleteSecurity) (*operations.StoresDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
@@ -3037,7 +3196,10 @@ func (s *distribute) StoresDelete(ctx context.Context, request operations.Stores
 // StoresGet - Return the store details for specified store name.
 func (s *distribute) StoresGet(ctx context.Context, request operations.StoresGetRequest, security operations.StoresGetSecurity) (*operations.StoresGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3091,7 +3253,10 @@ func (s *distribute) StoresGet(ctx context.Context, request operations.StoresGet
 // StoresList - Get all the store details from Storage store table for a particular application.
 func (s *distribute) StoresList(ctx context.Context, request operations.StoresListRequest, security operations.StoresListSecurity) (*operations.StoresListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3135,7 +3300,10 @@ func (s *distribute) StoresList(ctx context.Context, request operations.StoresLi
 // StoresPatch - Update the store.
 func (s *distribute) StoresPatch(ctx context.Context, request operations.StoresPatchRequest, security operations.StoresPatchSecurity) (*operations.StoresPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

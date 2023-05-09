@@ -18,12 +18,16 @@ const (
 	MarketDefinitionBettingTypeEnumAsianHandicapSingleLine MarketDefinitionBettingTypeEnum = "ASIAN_HANDICAP_SINGLE_LINE"
 )
 
+func (e MarketDefinitionBettingTypeEnum) ToPointer() *MarketDefinitionBettingTypeEnum {
+	return &e
+}
+
 func (e *MarketDefinitionBettingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ODDS":
 		fallthrough
 	case "LINE":
@@ -33,10 +37,10 @@ func (e *MarketDefinitionBettingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ASIAN_HANDICAP_DOUBLE_LINE":
 		fallthrough
 	case "ASIAN_HANDICAP_SINGLE_LINE":
-		*e = MarketDefinitionBettingTypeEnum(s)
+		*e = MarketDefinitionBettingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MarketDefinitionBettingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MarketDefinitionBettingTypeEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	MarketDefinitionStatusEnumClosed    MarketDefinitionStatusEnum = "CLOSED"
 )
 
+func (e MarketDefinitionStatusEnum) ToPointer() *MarketDefinitionStatusEnum {
+	return &e
+}
+
 func (e *MarketDefinitionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INACTIVE":
 		fallthrough
 	case "OPEN":
@@ -62,10 +70,10 @@ func (e *MarketDefinitionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SUSPENDED":
 		fallthrough
 	case "CLOSED":
-		*e = MarketDefinitionStatusEnum(s)
+		*e = MarketDefinitionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MarketDefinitionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MarketDefinitionStatusEnum: %v", v)
 	}
 }
 

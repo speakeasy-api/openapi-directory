@@ -18,12 +18,16 @@ const (
 	GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponseAccessEnumUnknownInfoDenied      GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponseAccessEnum = "UNKNOWN_INFO_DENIED"
 )
 
+func (e GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponseAccessEnum) ToPointer() *GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponseAccessEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponseAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_STATE_UNSPECIFIED":
 		fallthrough
 	case "GRANTED":
@@ -33,10 +37,10 @@ func (e *GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponseAccessEnu
 	case "UNKNOWN_CONDITIONAL":
 		fallthrough
 	case "UNKNOWN_INFO_DENIED":
-		*e = GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponseAccessEnum(s)
+		*e = GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponseAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponseAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponseAccessEnum: %v", v)
 	}
 }
 

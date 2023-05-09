@@ -34,7 +34,10 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // PolyUsersAssetsList - Lists assets authored by the given user. Only the value 'me', representing the currently-authenticated user, is supported. May include assets with an access level of PRIVATE or UNLISTED and assets which are All Rights Reserved for the currently-authenticated user.
 func (s *users) PolyUsersAssetsList(ctx context.Context, request operations.PolyUsersAssetsListRequest) (*operations.PolyUsersAssetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/assets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/assets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *users) PolyUsersAssetsList(ctx context.Context, request operations.Poly
 // PolyUsersLikedassetsList - Lists assets that the user has liked. Only the value 'me', representing the currently-authenticated user, is supported. May include assets with an access level of UNLISTED.
 func (s *users) PolyUsersLikedassetsList(ctx context.Context, request operations.PolyUsersLikedassetsListRequest) (*operations.PolyUsersLikedassetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/likedassets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/likedassets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

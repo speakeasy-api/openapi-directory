@@ -8,8 +8,10 @@ import (
 )
 
 type TagResourceRequestBody struct {
-	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share that you want to add tags to.
-	ResourceShareArn string `json:"resourceShareArn"`
+	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of the managed permission that you want to add tags to. You must specify <i>either</i> <code>resourceArn</code>, or <code>resourceShareArn</code>, but not both.
+	ResourceArn *string `json:"resourceArn,omitempty"`
+	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of the resource share that you want to add tags to. You must specify <i>either</i> <code>resourceShareArn</code>, or <code>resourceArn</code>, but not both.
+	ResourceShareArn *string `json:"resourceShareArn,omitempty"`
 	// A list of one or more tag key and value pairs. The tag key must be present and not be an empty string. The tag value must be present but can be an empty string.
 	Tags []shared.Tag `json:"tags"`
 }

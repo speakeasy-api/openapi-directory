@@ -16,17 +16,21 @@ const (
 	RestoreVolumeFromSnapshotXAmzTargetEnumAwsSimbaAPIServiceV20180301RestoreVolumeFromSnapshot RestoreVolumeFromSnapshotXAmzTargetEnum = "AWSSimbaAPIService_v20180301.RestoreVolumeFromSnapshot"
 )
 
+func (e RestoreVolumeFromSnapshotXAmzTargetEnum) ToPointer() *RestoreVolumeFromSnapshotXAmzTargetEnum {
+	return &e
+}
+
 func (e *RestoreVolumeFromSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.RestoreVolumeFromSnapshot":
-		*e = RestoreVolumeFromSnapshotXAmzTargetEnum(s)
+		*e = RestoreVolumeFromSnapshotXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RestoreVolumeFromSnapshotXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RestoreVolumeFromSnapshotXAmzTargetEnum: %v", v)
 	}
 }
 

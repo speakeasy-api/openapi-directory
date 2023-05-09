@@ -22,12 +22,16 @@ const (
 	MLModelFilterVariableEnumTrainingDataURI        MLModelFilterVariableEnum = "TrainingDataURI"
 )
 
+func (e MLModelFilterVariableEnum) ToPointer() *MLModelFilterVariableEnum {
+	return &e
+}
+
 func (e *MLModelFilterVariableEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreatedAt":
 		fallthrough
 	case "LastUpdatedAt":
@@ -47,9 +51,9 @@ func (e *MLModelFilterVariableEnum) UnmarshalJSON(data []byte) error {
 	case "Algorithm":
 		fallthrough
 	case "TrainingDataURI":
-		*e = MLModelFilterVariableEnum(s)
+		*e = MLModelFilterVariableEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MLModelFilterVariableEnum: %s", s)
+		return fmt.Errorf("invalid value for MLModelFilterVariableEnum: %v", v)
 	}
 }

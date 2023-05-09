@@ -17,12 +17,16 @@ const (
 	EcoCertificationAwardedExceptionEnumDependentOnDayOfWeek EcoCertificationAwardedExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EcoCertificationAwardedExceptionEnum) ToPointer() *EcoCertificationAwardedExceptionEnum {
+	return &e
+}
+
 func (e *EcoCertificationAwardedExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *EcoCertificationAwardedExceptionEnum) UnmarshalJSON(data []byte) error 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EcoCertificationAwardedExceptionEnum(s)
+		*e = EcoCertificationAwardedExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EcoCertificationAwardedExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EcoCertificationAwardedExceptionEnum: %v", v)
 	}
 }
 
@@ -71,12 +75,16 @@ const (
 	EcoCertificationEcoCertificateEnumVireoSrl                                         EcoCertificationEcoCertificateEnum = "VIREO_SRL"
 )
 
+func (e EcoCertificationEcoCertificateEnum) ToPointer() *EcoCertificationEcoCertificateEnum {
+	return &e
+}
+
 func (e *EcoCertificationEcoCertificateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ECO_CERTIFICATE_UNSPECIFIED":
 		fallthrough
 	case "ISO14001":
@@ -132,10 +140,10 @@ func (e *EcoCertificationEcoCertificateEnum) UnmarshalJSON(data []byte) error {
 	case "UNITED_CERTIFICATION_SYSTEMS_LIMITED":
 		fallthrough
 	case "VIREO_SRL":
-		*e = EcoCertificationEcoCertificateEnum(s)
+		*e = EcoCertificationEcoCertificateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EcoCertificationEcoCertificateEnum: %s", s)
+		return fmt.Errorf("invalid value for EcoCertificationEcoCertificateEnum: %v", v)
 	}
 }
 

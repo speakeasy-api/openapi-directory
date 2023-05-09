@@ -19,12 +19,16 @@ const (
 	AuthConfigAuthTypeEnumOauth2AuthCodeFlow      AuthConfigAuthTypeEnum = "OAUTH2_AUTH_CODE_FLOW"
 )
 
+func (e AuthConfigAuthTypeEnum) ToPointer() *AuthConfigAuthTypeEnum {
+	return &e
+}
+
 func (e *AuthConfigAuthTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "USER_PASSWORD":
@@ -36,10 +40,10 @@ func (e *AuthConfigAuthTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SSH_PUBLIC_KEY":
 		fallthrough
 	case "OAUTH2_AUTH_CODE_FLOW":
-		*e = AuthConfigAuthTypeEnum(s)
+		*e = AuthConfigAuthTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthConfigAuthTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthConfigAuthTypeEnum: %v", v)
 	}
 }
 
@@ -47,8 +51,12 @@ func (e *AuthConfigAuthTypeEnum) UnmarshalJSON(data []byte) error {
 type AuthConfig struct {
 	// List containing additional auth configs.
 	AdditionalVariables []ConfigVariable `json:"additionalVariables,omitempty"`
+	// Identifier key for auth config
+	AuthKey *string `json:"authKey,omitempty"`
 	// The type of authentication configured.
 	AuthType *AuthConfigAuthTypeEnum `json:"authType,omitempty"`
+	// Parameters to support Oauth 2.0 Auth Code Grant Authentication. See https://www.rfc-editor.org/rfc/rfc6749#section-1.3.1 for more details.
+	Oauth2AuthCodeFlow *Oauth2AuthCodeFlow `json:"oauth2AuthCodeFlow,omitempty"`
 	// Parameters to support Oauth 2.0 Client Credentials Grant Authentication. See https://tools.ietf.org/html/rfc6749#section-1.3.4 for more details.
 	Oauth2ClientCredentials *Oauth2ClientCredentials `json:"oauth2ClientCredentials,omitempty"`
 	// Parameters to support JSON Web Token (JWT) Profile for Oauth 2.0 Authorization Grant based authentication. See https://tools.ietf.org/html/rfc7523 for more details.

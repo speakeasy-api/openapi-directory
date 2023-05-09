@@ -41,12 +41,16 @@ const (
 	ReleasesAddStore404ApplicationJSONCodeEnumTooManyRequests     ReleasesAddStore404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesAddStore404ApplicationJSONCodeEnum) ToPointer() *ReleasesAddStore404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesAddStore404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -60,10 +64,10 @@ func (e *ReleasesAddStore404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) 
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesAddStore404ApplicationJSONCodeEnum(s)
+		*e = ReleasesAddStore404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesAddStore404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesAddStore404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -85,12 +89,16 @@ const (
 	ReleasesAddStore400ApplicationJSONCodeEnumTooManyRequests     ReleasesAddStore400ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesAddStore400ApplicationJSONCodeEnum) ToPointer() *ReleasesAddStore400ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesAddStore400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -104,10 +112,10 @@ func (e *ReleasesAddStore400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) 
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesAddStore400ApplicationJSONCodeEnum(s)
+		*e = ReleasesAddStore400ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesAddStore400ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesAddStore400ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	SortOptionsSortOrderEnumDescending SortOptionsSortOrderEnum = "DESCENDING"
 )
 
+func (e SortOptionsSortOrderEnum) ToPointer() *SortOptionsSortOrderEnum {
+	return &e
+}
+
 func (e *SortOptionsSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = SortOptionsSortOrderEnum(s)
+		*e = SortOptionsSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortOptionsSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for SortOptionsSortOrderEnum: %v", v)
 	}
 }
 

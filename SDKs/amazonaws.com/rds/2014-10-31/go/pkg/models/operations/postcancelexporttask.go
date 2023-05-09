@@ -15,17 +15,21 @@ const (
 	POSTCancelExportTaskActionEnumCancelExportTask POSTCancelExportTaskActionEnum = "CancelExportTask"
 )
 
+func (e POSTCancelExportTaskActionEnum) ToPointer() *POSTCancelExportTaskActionEnum {
+	return &e
+}
+
 func (e *POSTCancelExportTaskActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CancelExportTask":
-		*e = POSTCancelExportTaskActionEnum(s)
+		*e = POSTCancelExportTaskActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCancelExportTaskActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCancelExportTaskActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCancelExportTaskVersionEnumTwoThousandAndFourteen1031 POSTCancelExportTaskVersionEnum = "2014-10-31"
 )
 
+func (e POSTCancelExportTaskVersionEnum) ToPointer() *POSTCancelExportTaskVersionEnum {
+	return &e
+}
+
 func (e *POSTCancelExportTaskVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTCancelExportTaskVersionEnum(s)
+		*e = POSTCancelExportTaskVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCancelExportTaskVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCancelExportTaskVersionEnum: %v", v)
 	}
 }
 

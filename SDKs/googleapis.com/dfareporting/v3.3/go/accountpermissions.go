@@ -34,7 +34,10 @@ func newAccountPermissions(defaultClient, securityClient HTTPClient, serverURL, 
 // DfareportingAccountPermissionsGet - Gets one account permission by ID.
 func (s *accountPermissions) DfareportingAccountPermissionsGet(ctx context.Context, request operations.DfareportingAccountPermissionsGetRequest, security operations.DfareportingAccountPermissionsGetSecurity) (*operations.DfareportingAccountPermissionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountPermissions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountPermissions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *accountPermissions) DfareportingAccountPermissionsGet(ctx context.Conte
 // DfareportingAccountPermissionsList - Retrieves the list of account permissions.
 func (s *accountPermissions) DfareportingAccountPermissionsList(ctx context.Context, request operations.DfareportingAccountPermissionsListRequest, security operations.DfareportingAccountPermissionsListSecurity) (*operations.DfareportingAccountPermissionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -17,12 +17,16 @@ const (
 	GoogleCloudVideointelligenceV1beta2LabelDetectionConfigLabelDetectionModeEnumShotAndFrameMode              GoogleCloudVideointelligenceV1beta2LabelDetectionConfigLabelDetectionModeEnum = "SHOT_AND_FRAME_MODE"
 )
 
+func (e GoogleCloudVideointelligenceV1beta2LabelDetectionConfigLabelDetectionModeEnum) ToPointer() *GoogleCloudVideointelligenceV1beta2LabelDetectionConfigLabelDetectionModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudVideointelligenceV1beta2LabelDetectionConfigLabelDetectionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LABEL_DETECTION_MODE_UNSPECIFIED":
 		fallthrough
 	case "SHOT_MODE":
@@ -30,10 +34,10 @@ func (e *GoogleCloudVideointelligenceV1beta2LabelDetectionConfigLabelDetectionMo
 	case "FRAME_MODE":
 		fallthrough
 	case "SHOT_AND_FRAME_MODE":
-		*e = GoogleCloudVideointelligenceV1beta2LabelDetectionConfigLabelDetectionModeEnum(s)
+		*e = GoogleCloudVideointelligenceV1beta2LabelDetectionConfigLabelDetectionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVideointelligenceV1beta2LabelDetectionConfigLabelDetectionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVideointelligenceV1beta2LabelDetectionConfigLabelDetectionModeEnum: %v", v)
 	}
 }
 

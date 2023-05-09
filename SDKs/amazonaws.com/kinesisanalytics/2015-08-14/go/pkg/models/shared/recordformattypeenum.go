@@ -14,18 +14,22 @@ const (
 	RecordFormatTypeEnumCsv  RecordFormatTypeEnum = "CSV"
 )
 
+func (e RecordFormatTypeEnum) ToPointer() *RecordFormatTypeEnum {
+	return &e
+}
+
 func (e *RecordFormatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JSON":
 		fallthrough
 	case "CSV":
-		*e = RecordFormatTypeEnum(s)
+		*e = RecordFormatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecordFormatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RecordFormatTypeEnum: %v", v)
 	}
 }

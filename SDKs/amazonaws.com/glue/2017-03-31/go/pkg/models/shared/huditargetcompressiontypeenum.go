@@ -16,12 +16,16 @@ const (
 	HudiTargetCompressionTypeEnumSnappy       HudiTargetCompressionTypeEnum = "snappy"
 )
 
+func (e HudiTargetCompressionTypeEnum) ToPointer() *HudiTargetCompressionTypeEnum {
+	return &e
+}
+
 func (e *HudiTargetCompressionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gzip":
 		fallthrough
 	case "lzo":
@@ -29,9 +33,9 @@ func (e *HudiTargetCompressionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "uncompressed":
 		fallthrough
 	case "snappy":
-		*e = HudiTargetCompressionTypeEnum(s)
+		*e = HudiTargetCompressionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HudiTargetCompressionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HudiTargetCompressionTypeEnum: %v", v)
 	}
 }

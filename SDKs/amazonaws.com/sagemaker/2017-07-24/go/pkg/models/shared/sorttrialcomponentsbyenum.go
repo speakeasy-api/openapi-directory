@@ -14,18 +14,22 @@ const (
 	SortTrialComponentsByEnumCreationTime SortTrialComponentsByEnum = "CreationTime"
 )
 
+func (e SortTrialComponentsByEnum) ToPointer() *SortTrialComponentsByEnum {
+	return &e
+}
+
 func (e *SortTrialComponentsByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "CreationTime":
-		*e = SortTrialComponentsByEnum(s)
+		*e = SortTrialComponentsByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortTrialComponentsByEnum: %s", s)
+		return fmt.Errorf("invalid value for SortTrialComponentsByEnum: %v", v)
 	}
 }

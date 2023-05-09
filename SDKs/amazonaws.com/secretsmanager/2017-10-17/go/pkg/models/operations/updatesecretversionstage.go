@@ -16,17 +16,21 @@ const (
 	UpdateSecretVersionStageXAmzTargetEnumSecretsmanagerUpdateSecretVersionStage UpdateSecretVersionStageXAmzTargetEnum = "secretsmanager.UpdateSecretVersionStage"
 )
 
+func (e UpdateSecretVersionStageXAmzTargetEnum) ToPointer() *UpdateSecretVersionStageXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateSecretVersionStageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "secretsmanager.UpdateSecretVersionStage":
-		*e = UpdateSecretVersionStageXAmzTargetEnum(s)
+		*e = UpdateSecretVersionStageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSecretVersionStageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSecretVersionStageXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -26,12 +26,16 @@ const (
 	SearchProductsRequestBodySortOrderEnumPriceFromD       SearchProductsRequestBodySortOrderEnum = "PRICE_FROM_D"
 )
 
+func (e SearchProductsRequestBodySortOrderEnum) ToPointer() *SearchProductsRequestBodySortOrderEnum {
+	return &e
+}
+
 func (e *SearchProductsRequestBodySortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TOP_SELLERS":
 		fallthrough
 	case "REVIEW_AVG_RATING_A":
@@ -41,10 +45,10 @@ func (e *SearchProductsRequestBodySortOrderEnum) UnmarshalJSON(data []byte) erro
 	case "PRICE_FROM_A":
 		fallthrough
 	case "PRICE_FROM_D":
-		*e = SearchProductsRequestBodySortOrderEnum(s)
+		*e = SearchProductsRequestBodySortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchProductsRequestBodySortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchProductsRequestBodySortOrderEnum: %v", v)
 	}
 }
 

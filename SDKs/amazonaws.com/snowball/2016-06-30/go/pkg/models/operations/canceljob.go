@@ -16,17 +16,21 @@ const (
 	CancelJobXAmzTargetEnumAwsieSnowballJobManagementServiceCancelJob CancelJobXAmzTargetEnum = "AWSIESnowballJobManagementService.CancelJob"
 )
 
+func (e CancelJobXAmzTargetEnum) ToPointer() *CancelJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *CancelJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSIESnowballJobManagementService.CancelJob":
-		*e = CancelJobXAmzTargetEnum(s)
+		*e = CancelJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelJobXAmzTargetEnum: %v", v)
 	}
 }
 

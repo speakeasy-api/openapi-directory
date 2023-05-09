@@ -24,12 +24,16 @@ const (
 	TaxonomyAttractionsRequestBodySortOrderEnumSeoAlphabetical     TaxonomyAttractionsRequestBodySortOrderEnum = "SEO_ALPHABETICAL"
 )
 
+func (e TaxonomyAttractionsRequestBodySortOrderEnum) ToPointer() *TaxonomyAttractionsRequestBodySortOrderEnum {
+	return &e
+}
+
 func (e *TaxonomyAttractionsRequestBodySortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEO_PUBLISHED_DATE_D":
 		fallthrough
 	case "SEO_PUBLISHED_DATE_A":
@@ -39,10 +43,10 @@ func (e *TaxonomyAttractionsRequestBodySortOrderEnum) UnmarshalJSON(data []byte)
 	case "SEO_REVIEW_AVG_RATING_A":
 		fallthrough
 	case "SEO_ALPHABETICAL":
-		*e = TaxonomyAttractionsRequestBodySortOrderEnum(s)
+		*e = TaxonomyAttractionsRequestBodySortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaxonomyAttractionsRequestBodySortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for TaxonomyAttractionsRequestBodySortOrderEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,11 +17,12 @@ func main() {
         }),
     )
 
-    req := operations.CreateConnectionRequest{
+    ctx := context.Background()
+    res, err := s.CreateConnection(ctx, operations.CreateConnectionRequest{
         CreateConnectionInput: shared.CreateConnectionInput{
             ConnectionName: "corrupti",
-            HostArn: "provident",
-            ProviderType: "GitHubEnterpriseServer",
+            HostArn: sdk.String("provident"),
+            ProviderType: shared.ProviderTypeEnumGitHubEnterpriseServer.ToPointer(),
             Tags: []shared.Tag{
                 shared.Tag{
                     Key: "unde",
@@ -41,18 +42,15 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "iure",
-        XAmzContentSha256: "magnam",
-        XAmzCredential: "debitis",
-        XAmzDate: "ipsa",
-        XAmzSecurityToken: "delectus",
-        XAmzSignature: "tempora",
-        XAmzSignedHeaders: "suscipit",
-        XAmzTarget: "com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateConnection(ctx, req)
+        XAmzAlgorithm: sdk.String("iure"),
+        XAmzContentSha256: sdk.String("magnam"),
+        XAmzCredential: sdk.String("debitis"),
+        XAmzDate: sdk.String("ipsa"),
+        XAmzSecurityToken: sdk.String("delectus"),
+        XAmzSignature: sdk.String("tempora"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+        XAmzTarget: operations.CreateConnectionXAmzTargetEnumComAmazonawsCodestarConnectionsCodeStarConnections20191201CreateConnection,
+    })
     if err != nil {
         log.Fatal(err)
     }

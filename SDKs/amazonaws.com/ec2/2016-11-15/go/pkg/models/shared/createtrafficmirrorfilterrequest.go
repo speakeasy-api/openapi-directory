@@ -98,12 +98,16 @@ const (
 	CreateTrafficMirrorFilterRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateTrafficMirrorFilterRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateTrafficMirrorFilterRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateTrafficMirrorFilterRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateTrafficMirrorFilterRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateTrafficMirrorFilterRequestTagSpecificationsResourceTypeEnum) Unma
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateTrafficMirrorFilterRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateTrafficMirrorFilterRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTrafficMirrorFilterRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTrafficMirrorFilterRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

@@ -8,7 +8,7 @@ type GoogleCloudDialogflowCxV3beta1ConversationTurnUserInput struct {
 	EnableSentimentAnalysis *bool `json:"enableSentimentAnalysis,omitempty"`
 	// Parameters that need to be injected into the conversation during intent detection.
 	InjectedParameters map[string]interface{} `json:"injectedParameters,omitempty"`
-	// Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered.
+	// Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered. 5. DTMF digits to invoke an intent and fill in parameter value.
 	Input *GoogleCloudDialogflowCxV3beta1QueryInput `json:"input,omitempty"`
 	// If webhooks should be allowed to trigger in response to the user utterance. Often if parameters are injected, webhooks should not be enabled.
 	IsWebhookEnabled *bool `json:"isWebhookEnabled,omitempty"`

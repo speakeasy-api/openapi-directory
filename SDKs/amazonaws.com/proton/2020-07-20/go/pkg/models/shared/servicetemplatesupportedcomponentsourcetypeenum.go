@@ -13,16 +13,20 @@ const (
 	ServiceTemplateSupportedComponentSourceTypeEnumDirectlyDefined ServiceTemplateSupportedComponentSourceTypeEnum = "DIRECTLY_DEFINED"
 )
 
+func (e ServiceTemplateSupportedComponentSourceTypeEnum) ToPointer() *ServiceTemplateSupportedComponentSourceTypeEnum {
+	return &e
+}
+
 func (e *ServiceTemplateSupportedComponentSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIRECTLY_DEFINED":
-		*e = ServiceTemplateSupportedComponentSourceTypeEnum(s)
+		*e = ServiceTemplateSupportedComponentSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceTemplateSupportedComponentSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceTemplateSupportedComponentSourceTypeEnum: %v", v)
 	}
 }

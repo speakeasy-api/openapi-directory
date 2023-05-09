@@ -16,17 +16,21 @@ const (
 	AssociateS3ResourcesXAmzTargetEnumMacieServiceAssociateS3Resources AssociateS3ResourcesXAmzTargetEnum = "MacieService.AssociateS3Resources"
 )
 
+func (e AssociateS3ResourcesXAmzTargetEnum) ToPointer() *AssociateS3ResourcesXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateS3ResourcesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MacieService.AssociateS3Resources":
-		*e = AssociateS3ResourcesXAmzTargetEnum(s)
+		*e = AssociateS3ResourcesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateS3ResourcesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateS3ResourcesXAmzTargetEnum: %v", v)
 	}
 }
 

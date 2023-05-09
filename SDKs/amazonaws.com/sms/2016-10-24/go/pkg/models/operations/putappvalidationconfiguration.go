@@ -16,17 +16,21 @@ const (
 	PutAppValidationConfigurationXAmzTargetEnumAwsServerMigrationServiceV20161024PutAppValidationConfiguration PutAppValidationConfigurationXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.PutAppValidationConfiguration"
 )
 
+func (e PutAppValidationConfigurationXAmzTargetEnum) ToPointer() *PutAppValidationConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutAppValidationConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.PutAppValidationConfiguration":
-		*e = PutAppValidationConfigurationXAmzTargetEnum(s)
+		*e = PutAppValidationConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutAppValidationConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutAppValidationConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

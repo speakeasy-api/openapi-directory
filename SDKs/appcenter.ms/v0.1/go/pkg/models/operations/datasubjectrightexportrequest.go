@@ -9,6 +9,10 @@ import (
 	"time"
 )
 
+type DataSubjectRightExportRequestSecurity struct {
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
+}
+
 type DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum string
 
 const (
@@ -21,12 +25,16 @@ const (
 	DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnumTooManyRequests     DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum) ToPointer() *DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -40,10 +48,10 @@ func (e *DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum) Unmar
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSubjectRightExportRequestDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

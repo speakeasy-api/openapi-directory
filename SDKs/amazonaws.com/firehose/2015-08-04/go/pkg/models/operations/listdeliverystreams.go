@@ -16,17 +16,21 @@ const (
 	ListDeliveryStreamsXAmzTargetEnumFirehose20150804ListDeliveryStreams ListDeliveryStreamsXAmzTargetEnum = "Firehose_20150804.ListDeliveryStreams"
 )
 
+func (e ListDeliveryStreamsXAmzTargetEnum) ToPointer() *ListDeliveryStreamsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListDeliveryStreamsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Firehose_20150804.ListDeliveryStreams":
-		*e = ListDeliveryStreamsXAmzTargetEnum(s)
+		*e = ListDeliveryStreamsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDeliveryStreamsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDeliveryStreamsXAmzTargetEnum: %v", v)
 	}
 }
 

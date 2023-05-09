@@ -16,21 +16,25 @@ const (
 	ProjectEntityGlobalAccessEnumAnyoneWithFull ProjectEntityGlobalAccessEnum = "anyone_with_full"
 )
 
+func (e ProjectEntityGlobalAccessEnum) ToPointer() *ProjectEntityGlobalAccessEnum {
+	return &e
+}
+
 func (e *ProjectEntityGlobalAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "anyone_with_read":
 		fallthrough
 	case "anyone_with_full":
-		*e = ProjectEntityGlobalAccessEnum(s)
+		*e = ProjectEntityGlobalAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectEntityGlobalAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectEntityGlobalAccessEnum: %v", v)
 	}
 }
 

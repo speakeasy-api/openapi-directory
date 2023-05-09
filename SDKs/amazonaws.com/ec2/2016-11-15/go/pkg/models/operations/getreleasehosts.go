@@ -15,17 +15,21 @@ const (
 	GETReleaseHostsActionEnumReleaseHosts GETReleaseHostsActionEnum = "ReleaseHosts"
 )
 
+func (e GETReleaseHostsActionEnum) ToPointer() *GETReleaseHostsActionEnum {
+	return &e
+}
+
 func (e *GETReleaseHostsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReleaseHosts":
-		*e = GETReleaseHostsActionEnum(s)
+		*e = GETReleaseHostsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReleaseHostsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReleaseHostsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETReleaseHostsVersionEnumTwoThousandAndSixteen1115 GETReleaseHostsVersionEnum = "2016-11-15"
 )
 
+func (e GETReleaseHostsVersionEnum) ToPointer() *GETReleaseHostsVersionEnum {
+	return &e
+}
+
 func (e *GETReleaseHostsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETReleaseHostsVersionEnum(s)
+		*e = GETReleaseHostsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReleaseHostsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReleaseHostsVersionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CancelTaskExecutionXAmzTargetEnumFmrsServiceCancelTaskExecution CancelTaskExecutionXAmzTargetEnum = "FmrsService.CancelTaskExecution"
 )
 
+func (e CancelTaskExecutionXAmzTargetEnum) ToPointer() *CancelTaskExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CancelTaskExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FmrsService.CancelTaskExecution":
-		*e = CancelTaskExecutionXAmzTargetEnum(s)
+		*e = CancelTaskExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelTaskExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelTaskExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

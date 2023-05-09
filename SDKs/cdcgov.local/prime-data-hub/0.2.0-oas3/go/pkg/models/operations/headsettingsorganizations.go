@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type HeadSettingsOrganizationsSecurity struct {
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type HeadSettingsOrganizationsResponse struct {
 	ContentType string
 	Headers     map[string][]string

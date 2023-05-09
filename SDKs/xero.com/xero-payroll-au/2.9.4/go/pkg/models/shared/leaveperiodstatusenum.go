@@ -14,18 +14,22 @@ const (
 	LeavePeriodStatusEnumProcessed LeavePeriodStatusEnum = "PROCESSED"
 )
 
+func (e LeavePeriodStatusEnum) ToPointer() *LeavePeriodStatusEnum {
+	return &e
+}
+
 func (e *LeavePeriodStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCHEDULED":
 		fallthrough
 	case "PROCESSED":
-		*e = LeavePeriodStatusEnum(s)
+		*e = LeavePeriodStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LeavePeriodStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LeavePeriodStatusEnum: %v", v)
 	}
 }

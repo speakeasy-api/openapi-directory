@@ -16,17 +16,21 @@ const (
 	DeleteModelPackageXAmzTargetEnumSageMakerDeleteModelPackage DeleteModelPackageXAmzTargetEnum = "SageMaker.DeleteModelPackage"
 )
 
+func (e DeleteModelPackageXAmzTargetEnum) ToPointer() *DeleteModelPackageXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteModelPackageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DeleteModelPackage":
-		*e = DeleteModelPackageXAmzTargetEnum(s)
+		*e = DeleteModelPackageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteModelPackageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteModelPackageXAmzTargetEnum: %v", v)
 	}
 }
 

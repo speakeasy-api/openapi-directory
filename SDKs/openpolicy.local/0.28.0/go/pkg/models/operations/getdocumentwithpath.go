@@ -76,12 +76,16 @@ const (
 	GetDocumentWithPath200ApplicationJSONExplanationOpEnumRedo  GetDocumentWithPath200ApplicationJSONExplanationOpEnum = "redo"
 )
 
+func (e GetDocumentWithPath200ApplicationJSONExplanationOpEnum) ToPointer() *GetDocumentWithPath200ApplicationJSONExplanationOpEnum {
+	return &e
+}
+
 func (e *GetDocumentWithPath200ApplicationJSONExplanationOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enter":
 		fallthrough
 	case "exit":
@@ -91,10 +95,10 @@ func (e *GetDocumentWithPath200ApplicationJSONExplanationOpEnum) UnmarshalJSON(d
 	case "fail":
 		fallthrough
 	case "redo":
-		*e = GetDocumentWithPath200ApplicationJSONExplanationOpEnum(s)
+		*e = GetDocumentWithPath200ApplicationJSONExplanationOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDocumentWithPath200ApplicationJSONExplanationOpEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDocumentWithPath200ApplicationJSONExplanationOpEnum: %v", v)
 	}
 }
 
@@ -107,21 +111,25 @@ const (
 	GetDocumentWithPath200ApplicationJSONExplanationTypeEnumBody GetDocumentWithPath200ApplicationJSONExplanationTypeEnum = "body"
 )
 
+func (e GetDocumentWithPath200ApplicationJSONExplanationTypeEnum) ToPointer() *GetDocumentWithPath200ApplicationJSONExplanationTypeEnum {
+	return &e
+}
+
 func (e *GetDocumentWithPath200ApplicationJSONExplanationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "expr":
 		fallthrough
 	case "rule":
 		fallthrough
 	case "body":
-		*e = GetDocumentWithPath200ApplicationJSONExplanationTypeEnum(s)
+		*e = GetDocumentWithPath200ApplicationJSONExplanationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDocumentWithPath200ApplicationJSONExplanationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDocumentWithPath200ApplicationJSONExplanationTypeEnum: %v", v)
 	}
 }
 
@@ -217,19 +225,23 @@ const (
 	GetDocumentWithPath200ApplicationJSONResultAstPackagePathTypeEnumPackage GetDocumentWithPath200ApplicationJSONResultAstPackagePathTypeEnum = "package"
 )
 
+func (e GetDocumentWithPath200ApplicationJSONResultAstPackagePathTypeEnum) ToPointer() *GetDocumentWithPath200ApplicationJSONResultAstPackagePathTypeEnum {
+	return &e
+}
+
 func (e *GetDocumentWithPath200ApplicationJSONResultAstPackagePathTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "import":
 		fallthrough
 	case "package":
-		*e = GetDocumentWithPath200ApplicationJSONResultAstPackagePathTypeEnum(s)
+		*e = GetDocumentWithPath200ApplicationJSONResultAstPackagePathTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDocumentWithPath200ApplicationJSONResultAstPackagePathTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDocumentWithPath200ApplicationJSONResultAstPackagePathTypeEnum: %v", v)
 	}
 }
 

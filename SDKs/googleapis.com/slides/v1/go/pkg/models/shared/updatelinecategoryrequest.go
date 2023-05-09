@@ -17,12 +17,16 @@ const (
 	UpdateLineCategoryRequestLineCategoryEnumCurved                  UpdateLineCategoryRequestLineCategoryEnum = "CURVED"
 )
 
+func (e UpdateLineCategoryRequestLineCategoryEnum) ToPointer() *UpdateLineCategoryRequestLineCategoryEnum {
+	return &e
+}
+
 func (e *UpdateLineCategoryRequestLineCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "STRAIGHT":
@@ -30,10 +34,10 @@ func (e *UpdateLineCategoryRequestLineCategoryEnum) UnmarshalJSON(data []byte) e
 	case "BENT":
 		fallthrough
 	case "CURVED":
-		*e = UpdateLineCategoryRequestLineCategoryEnum(s)
+		*e = UpdateLineCategoryRequestLineCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateLineCategoryRequestLineCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateLineCategoryRequestLineCategoryEnum: %v", v)
 	}
 }
 

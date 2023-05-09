@@ -19,12 +19,16 @@ const (
 	ContainerAccessPermissionEnumPublish                        ContainerAccessPermissionEnum = "publish"
 )
 
+func (e ContainerAccessPermissionEnum) ToPointer() *ContainerAccessPermissionEnum {
+	return &e
+}
+
 func (e *ContainerAccessPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "containerPermissionUnspecified":
 		fallthrough
 	case "noAccess":
@@ -36,10 +40,10 @@ func (e *ContainerAccessPermissionEnum) UnmarshalJSON(data []byte) error {
 	case "approve":
 		fallthrough
 	case "publish":
-		*e = ContainerAccessPermissionEnum(s)
+		*e = ContainerAccessPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerAccessPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerAccessPermissionEnum: %v", v)
 	}
 }
 

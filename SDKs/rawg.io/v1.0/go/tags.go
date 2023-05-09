@@ -83,7 +83,10 @@ func (s *tags) TagsList(ctx context.Context, request operations.TagsListRequest)
 // TagsRead - Get details of the tag.
 func (s *tags) TagsRead(ctx context.Context, request operations.TagsReadRequest) (*operations.TagsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

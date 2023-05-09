@@ -21,12 +21,16 @@ const (
 	EmotionNameEnumFear      EmotionNameEnum = "FEAR"
 )
 
+func (e EmotionNameEnum) ToPointer() *EmotionNameEnum {
+	return &e
+}
+
 func (e *EmotionNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HAPPY":
 		fallthrough
 	case "SAD":
@@ -44,9 +48,9 @@ func (e *EmotionNameEnum) UnmarshalJSON(data []byte) error {
 	case "UNKNOWN":
 		fallthrough
 	case "FEAR":
-		*e = EmotionNameEnum(s)
+		*e = EmotionNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EmotionNameEnum: %s", s)
+		return fmt.Errorf("invalid value for EmotionNameEnum: %v", v)
 	}
 }

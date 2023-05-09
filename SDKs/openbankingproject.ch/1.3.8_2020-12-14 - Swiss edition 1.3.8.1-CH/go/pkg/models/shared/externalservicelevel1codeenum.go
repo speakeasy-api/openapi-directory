@@ -17,12 +17,16 @@ const (
 	ExternalServiceLevel1CodeEnumUrgp ExternalServiceLevel1CodeEnum = "URGP"
 )
 
+func (e ExternalServiceLevel1CodeEnum) ToPointer() *ExternalServiceLevel1CodeEnum {
+	return &e
+}
+
 func (e *ExternalServiceLevel1CodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEPA":
 		fallthrough
 	case "PRPT":
@@ -30,9 +34,9 @@ func (e *ExternalServiceLevel1CodeEnum) UnmarshalJSON(data []byte) error {
 	case "SDVA":
 		fallthrough
 	case "URGP":
-		*e = ExternalServiceLevel1CodeEnum(s)
+		*e = ExternalServiceLevel1CodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExternalServiceLevel1CodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExternalServiceLevel1CodeEnum: %v", v)
 	}
 }

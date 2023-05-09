@@ -22,12 +22,16 @@ const (
 	SasPortalDeviceAirInterfaceRadioTechnologyEnumTaranaWireless             SasPortalDeviceAirInterfaceRadioTechnologyEnum = "TARANA_WIRELESS"
 )
 
+func (e SasPortalDeviceAirInterfaceRadioTechnologyEnum) ToPointer() *SasPortalDeviceAirInterfaceRadioTechnologyEnum {
+	return &e
+}
+
 func (e *SasPortalDeviceAirInterfaceRadioTechnologyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RADIO_TECHNOLOGY_UNSPECIFIED":
 		fallthrough
 	case "E_UTRA":
@@ -45,10 +49,10 @@ func (e *SasPortalDeviceAirInterfaceRadioTechnologyEnum) UnmarshalJSON(data []by
 	case "REDLINE":
 		fallthrough
 	case "TARANA_WIRELESS":
-		*e = SasPortalDeviceAirInterfaceRadioTechnologyEnum(s)
+		*e = SasPortalDeviceAirInterfaceRadioTechnologyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SasPortalDeviceAirInterfaceRadioTechnologyEnum: %s", s)
+		return fmt.Errorf("invalid value for SasPortalDeviceAirInterfaceRadioTechnologyEnum: %v", v)
 	}
 }
 

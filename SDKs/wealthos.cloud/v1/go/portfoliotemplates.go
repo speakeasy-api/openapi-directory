@@ -272,7 +272,10 @@ func (s *portfolioTemplates) GetAllPortfolioTemplates(ctx context.Context, reque
 // GetPortfolioTemplate - Retrive existing Portfolio template
 func (s *portfolioTemplates) GetPortfolioTemplate(ctx context.Context, request operations.GetPortfolioTemplateRequest, security operations.GetPortfolioTemplateSecurity) (*operations.GetPortfolioTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/portfolio-templates/v1/{portfolio_template_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/portfolio-templates/v1/{portfolio_template_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -368,7 +371,10 @@ func (s *portfolioTemplates) GetPortfolioTemplate(ctx context.Context, request o
 // UpdatePortfolioTemplate - Update existing Portfolio template
 func (s *portfolioTemplates) UpdatePortfolioTemplate(ctx context.Context, request operations.UpdatePortfolioTemplateRequest, security operations.UpdatePortfolioTemplateSecurity) (*operations.UpdatePortfolioTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/portfolio-templates/v1/{portfolio_template_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/portfolio-templates/v1/{portfolio_template_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	AccountPermissionLevelEnumMemberLevel                AccountPermissionLevelEnum = "MEMBER_LEVEL"
 )
 
+func (e AccountPermissionLevelEnum) ToPointer() *AccountPermissionLevelEnum {
+	return &e
+}
+
 func (e *AccountPermissionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERMISSION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "OWNER_LEVEL":
 		fallthrough
 	case "MEMBER_LEVEL":
-		*e = AccountPermissionLevelEnum(s)
+		*e = AccountPermissionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountPermissionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountPermissionLevelEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	AccountRoleEnumSiteManager            AccountRoleEnum = "SITE_MANAGER"
 )
 
+func (e AccountRoleEnum) ToPointer() *AccountRoleEnum {
+	return &e
+}
+
 func (e *AccountRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_ROLE_UNSPECIFIED":
 		fallthrough
 	case "PRIMARY_OWNER":
@@ -60,10 +68,10 @@ func (e *AccountRoleEnum) UnmarshalJSON(data []byte) error {
 	case "MANAGER":
 		fallthrough
 	case "SITE_MANAGER":
-		*e = AccountRoleEnum(s)
+		*e = AccountRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountRoleEnum: %v", v)
 	}
 }
 
@@ -78,12 +86,16 @@ const (
 	AccountTypeEnumOrganization           AccountTypeEnum = "ORGANIZATION"
 )
 
+func (e AccountTypeEnum) ToPointer() *AccountTypeEnum {
+	return &e
+}
+
 func (e *AccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PERSONAL":
@@ -93,10 +105,10 @@ func (e *AccountTypeEnum) UnmarshalJSON(data []byte) error {
 	case "USER_GROUP":
 		fallthrough
 	case "ORGANIZATION":
-		*e = AccountTypeEnum(s)
+		*e = AccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTypeEnum: %v", v)
 	}
 }
 
@@ -110,12 +122,16 @@ const (
 	AccountVerificationStateEnumVerificationRequested        AccountVerificationStateEnum = "VERIFICATION_REQUESTED"
 )
 
+func (e AccountVerificationStateEnum) ToPointer() *AccountVerificationStateEnum {
+	return &e
+}
+
 func (e *AccountVerificationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERIFICATION_STATE_UNSPECIFIED":
 		fallthrough
 	case "VERIFIED":
@@ -123,10 +139,10 @@ func (e *AccountVerificationStateEnum) UnmarshalJSON(data []byte) error {
 	case "UNVERIFIED":
 		fallthrough
 	case "VERIFICATION_REQUESTED":
-		*e = AccountVerificationStateEnum(s)
+		*e = AccountVerificationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountVerificationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountVerificationStateEnum: %v", v)
 	}
 }
 
@@ -140,12 +156,16 @@ const (
 	AccountVettedStateEnumInvalid                AccountVettedStateEnum = "INVALID"
 )
 
+func (e AccountVettedStateEnum) ToPointer() *AccountVettedStateEnum {
+	return &e
+}
+
 func (e *AccountVettedStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VETTED_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_VETTED":
@@ -153,10 +173,10 @@ func (e *AccountVettedStateEnum) UnmarshalJSON(data []byte) error {
 	case "VETTED":
 		fallthrough
 	case "INVALID":
-		*e = AccountVettedStateEnum(s)
+		*e = AccountVettedStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountVettedStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountVettedStateEnum: %v", v)
 	}
 }
 

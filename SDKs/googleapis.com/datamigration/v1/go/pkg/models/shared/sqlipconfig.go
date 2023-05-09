@@ -4,6 +4,8 @@ package shared
 
 // SQLIPConfig - IP Management configuration.
 type SQLIPConfig struct {
+	// Optional. The name of the allocated IP address range for the private IP Cloud SQL instance. This name refers to an already allocated IP range address. If set, the instance IP address will be created in the allocated range. Note that this IP address range can't be modified after the instance is created. If you change the VPC when configuring connectivity settings for the migration job, this field is not relevant.
+	AllocatedIPRange *string `json:"allocatedIpRange,omitempty"`
 	// The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).
 	AuthorizedNetworks []SQLACLEntry `json:"authorizedNetworks,omitempty"`
 	// Whether the instance should be assigned an IPv4 address or not.

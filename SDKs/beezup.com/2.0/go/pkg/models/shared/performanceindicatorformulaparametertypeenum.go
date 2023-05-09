@@ -22,12 +22,16 @@ const (
 	PerformanceIndicatorFormulaParameterTypeEnumOne                 PerformanceIndicatorFormulaParameterTypeEnum = "One"
 )
 
+func (e PerformanceIndicatorFormulaParameterTypeEnum) ToPointer() *PerformanceIndicatorFormulaParameterTypeEnum {
+	return &e
+}
+
 func (e *PerformanceIndicatorFormulaParameterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cost":
 		fallthrough
 	case "TotalSales":
@@ -45,9 +49,9 @@ func (e *PerformanceIndicatorFormulaParameterTypeEnum) UnmarshalJSON(data []byte
 	case "SoldProductCount":
 		fallthrough
 	case "One":
-		*e = PerformanceIndicatorFormulaParameterTypeEnum(s)
+		*e = PerformanceIndicatorFormulaParameterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PerformanceIndicatorFormulaParameterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PerformanceIndicatorFormulaParameterTypeEnum: %v", v)
 	}
 }

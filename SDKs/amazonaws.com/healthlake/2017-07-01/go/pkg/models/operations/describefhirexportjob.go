@@ -16,17 +16,21 @@ const (
 	DescribeFHIRExportJobXAmzTargetEnumHealthLakeDescribeFhirExportJob DescribeFHIRExportJobXAmzTargetEnum = "HealthLake.DescribeFHIRExportJob"
 )
 
+func (e DescribeFHIRExportJobXAmzTargetEnum) ToPointer() *DescribeFHIRExportJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeFHIRExportJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HealthLake.DescribeFHIRExportJob":
-		*e = DescribeFHIRExportJobXAmzTargetEnum(s)
+		*e = DescribeFHIRExportJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFHIRExportJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFHIRExportJobXAmzTargetEnum: %v", v)
 	}
 }
 

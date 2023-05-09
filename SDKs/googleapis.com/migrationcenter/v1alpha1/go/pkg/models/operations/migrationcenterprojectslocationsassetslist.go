@@ -24,12 +24,16 @@ const (
 	MigrationcenterProjectsLocationsAssetsListViewEnumAssetViewStandard    MigrationcenterProjectsLocationsAssetsListViewEnum = "ASSET_VIEW_STANDARD"
 )
 
+func (e MigrationcenterProjectsLocationsAssetsListViewEnum) ToPointer() *MigrationcenterProjectsLocationsAssetsListViewEnum {
+	return &e
+}
+
 func (e *MigrationcenterProjectsLocationsAssetsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSET_VIEW_UNSPECIFIED":
 		fallthrough
 	case "ASSET_VIEW_BASIC":
@@ -37,10 +41,10 @@ func (e *MigrationcenterProjectsLocationsAssetsListViewEnum) UnmarshalJSON(data 
 	case "ASSET_VIEW_FULL":
 		fallthrough
 	case "ASSET_VIEW_STANDARD":
-		*e = MigrationcenterProjectsLocationsAssetsListViewEnum(s)
+		*e = MigrationcenterProjectsLocationsAssetsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationcenterProjectsLocationsAssetsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationcenterProjectsLocationsAssetsListViewEnum: %v", v)
 	}
 }
 

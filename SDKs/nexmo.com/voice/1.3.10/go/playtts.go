@@ -36,7 +36,10 @@ func newPlayTTS(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Play text to speech into a call
 func (s *playTTS) StartTalk(ctx context.Context, request operations.StartTalkRequest, security operations.StartTalkSecurity) (*operations.StartTalkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/talk", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{uuid}/talk", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartTalkRequest", "json")
 	if err != nil {
@@ -88,7 +91,10 @@ func (s *playTTS) StartTalk(ctx context.Context, request operations.StartTalkReq
 // Stop text to speech in a call
 func (s *playTTS) StopTalk(ctx context.Context, request operations.StopTalkRequest, security operations.StopTalkSecurity) (*operations.StopTalkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/talk", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{uuid}/talk", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

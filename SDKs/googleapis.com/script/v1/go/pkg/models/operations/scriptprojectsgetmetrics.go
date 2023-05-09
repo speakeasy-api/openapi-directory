@@ -23,21 +23,25 @@ const (
 	ScriptProjectsGetMetricsMetricsGranularityEnumDaily                  ScriptProjectsGetMetricsMetricsGranularityEnum = "DAILY"
 )
 
+func (e ScriptProjectsGetMetricsMetricsGranularityEnum) ToPointer() *ScriptProjectsGetMetricsMetricsGranularityEnum {
+	return &e
+}
+
 func (e *ScriptProjectsGetMetricsMetricsGranularityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_GRANULARITY":
 		fallthrough
 	case "WEEKLY":
 		fallthrough
 	case "DAILY":
-		*e = ScriptProjectsGetMetricsMetricsGranularityEnum(s)
+		*e = ScriptProjectsGetMetricsMetricsGranularityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScriptProjectsGetMetricsMetricsGranularityEnum: %s", s)
+		return fmt.Errorf("invalid value for ScriptProjectsGetMetricsMetricsGranularityEnum: %v", v)
 	}
 }
 

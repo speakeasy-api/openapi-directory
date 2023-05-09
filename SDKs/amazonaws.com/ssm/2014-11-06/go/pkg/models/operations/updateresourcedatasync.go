@@ -16,17 +16,21 @@ const (
 	UpdateResourceDataSyncXAmzTargetEnumAmazonSsmUpdateResourceDataSync UpdateResourceDataSyncXAmzTargetEnum = "AmazonSSM.UpdateResourceDataSync"
 )
 
+func (e UpdateResourceDataSyncXAmzTargetEnum) ToPointer() *UpdateResourceDataSyncXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateResourceDataSyncXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.UpdateResourceDataSync":
-		*e = UpdateResourceDataSyncXAmzTargetEnum(s)
+		*e = UpdateResourceDataSyncXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateResourceDataSyncXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateResourceDataSyncXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -34,13 +34,16 @@ func newMarketplacesOrdersSubscriptionsSubscriptions(defaultClient, securityClie
 
 // ActivateSubscription - Activate a subscription to the orders
 // At this moment, BeezUP will ensure that your callback url is respecting this specification:
-// - https://app.swaggerhub.com/apis/BeezUP/public_marketplaces_orders_subscriptions_consumer-dev/1.0#/Subscriptions/Verification
+// - https://api.beezup.com/swaggerhub/apis/BeezUP/public_marketplaces_orders_subscriptions_consumer-dev/1.0#/Subscriptions/Verification
 //
 // After that we will send you the orders related to your subscription, respecting this specification:
-// - https://app.swaggerhub.com/apis/BeezUP/public_marketplaces_orders_subscriptions_consumer-dev/1.0#/Subscriptions/PushOrders
+// - https://api.beezup.com/swaggerhub/apis/BeezUP/public_marketplaces_orders_subscriptions_consumer-dev/1.0#/Subscriptions/PushOrders
 func (s *marketplacesOrdersSubscriptionsSubscriptions) ActivateSubscription(ctx context.Context, request operations.ActivateSubscriptionRequest) (*operations.ActivateSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}/activate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}/activate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ActivateSubscriptionRequest", "json")
 	if err != nil {
@@ -107,7 +110,10 @@ func (s *marketplacesOrdersSubscriptionsSubscriptions) ActivateSubscription(ctx 
 // Please take a look at this sequence diagram to understand the subscription process to follow [here](https://www.websequencediagrams.com/files/render?link=SBYbeIc8NGshk6ooCbmjoBLIMl4fIGO1xjJbPBQAglBo0n6BwEReh7NXQiPSjOTX)
 func (s *marketplacesOrdersSubscriptionsSubscriptions) CreateSubscription(ctx context.Context, request operations.CreateSubscriptionRequest) (*operations.CreateSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateSubscriptionRequest", "json")
 	if err != nil {
@@ -176,7 +182,10 @@ func (s *marketplacesOrdersSubscriptionsSubscriptions) CreateSubscription(ctx co
 // DeactivateSubscription - Deactivate a subscription to the orders
 func (s *marketplacesOrdersSubscriptionsSubscriptions) DeactivateSubscription(ctx context.Context, request operations.DeactivateSubscriptionRequest) (*operations.DeactivateSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}/deactivate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}/deactivate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -231,7 +240,10 @@ func (s *marketplacesOrdersSubscriptionsSubscriptions) DeactivateSubscription(ct
 // DeleteSubscription - Delete a subscription to the orders
 func (s *marketplacesOrdersSubscriptionsSubscriptions) DeleteSubscription(ctx context.Context, request operations.DeleteSubscriptionRequest) (*operations.DeleteSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -286,7 +298,10 @@ func (s *marketplacesOrdersSubscriptionsSubscriptions) DeleteSubscription(ctx co
 // GetSubscription - Get a subscription to the orders
 func (s *marketplacesOrdersSubscriptionsSubscriptions) GetSubscription(ctx context.Context, request operations.GetSubscriptionRequest) (*operations.GetSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -404,7 +419,10 @@ func (s *marketplacesOrdersSubscriptionsSubscriptions) GetSubscriptionList(ctx c
 // GetSubscriptionPushReporting - Get the push reporting related to this subscription
 func (s *marketplacesOrdersSubscriptionsSubscriptions) GetSubscriptionPushReporting(ctx context.Context, request operations.GetSubscriptionPushReportingRequest) (*operations.GetSubscriptionPushReportingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}/reporting", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}/reporting", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -475,7 +493,10 @@ func (s *marketplacesOrdersSubscriptionsSubscriptions) GetSubscriptionPushReport
 // In case your subscription consumption is unavailable and your subscription is still active you can ask to retry immediatly to push orders instead of waiting the next scheduled retry date
 func (s *marketplacesOrdersSubscriptionsSubscriptions) RetryPushOrders(ctx context.Context, request operations.RetryPushOrdersRequest) (*operations.RetryPushOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}/retry", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/subscriptions/{id}/retry", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

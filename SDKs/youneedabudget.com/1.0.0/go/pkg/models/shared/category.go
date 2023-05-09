@@ -12,20 +12,24 @@ import (
 type CategoryGoalTypeEnum string
 
 const (
-	CategoryGoalTypeEnumTb   CategoryGoalTypeEnum = "TB"
-	CategoryGoalTypeEnumTbd  CategoryGoalTypeEnum = "TBD"
-	CategoryGoalTypeEnumMf   CategoryGoalTypeEnum = "MF"
-	CategoryGoalTypeEnumNeed CategoryGoalTypeEnum = "NEED"
-	CategoryGoalTypeEnumDebt CategoryGoalTypeEnum = "DEBT"
-	CategoryGoalTypeEnumNull CategoryGoalTypeEnum = "null"
+	CategoryGoalTypeEnumTb                     CategoryGoalTypeEnum = "TB"
+	CategoryGoalTypeEnumTbd                    CategoryGoalTypeEnum = "TBD"
+	CategoryGoalTypeEnumMf                     CategoryGoalTypeEnum = "MF"
+	CategoryGoalTypeEnumNeed                   CategoryGoalTypeEnum = "NEED"
+	CategoryGoalTypeEnumDebt                   CategoryGoalTypeEnum = "DEBT"
+	CategoryGoalTypeEnumLessThanNilGreaterThan CategoryGoalTypeEnum = "<nil>"
 )
 
+func (e CategoryGoalTypeEnum) ToPointer() *CategoryGoalTypeEnum {
+	return &e
+}
+
 func (e *CategoryGoalTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TB":
 		fallthrough
 	case "TBD":
@@ -36,11 +40,11 @@ func (e *CategoryGoalTypeEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "DEBT":
 		fallthrough
-	case "null":
-		*e = CategoryGoalTypeEnum(s)
+	case "<nil>":
+		*e = CategoryGoalTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CategoryGoalTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CategoryGoalTypeEnum: %v", v)
 	}
 }
 
@@ -83,6 +87,6 @@ type Category struct {
 	ID     string  `json:"id"`
 	Name   string  `json:"name"`
 	Note   *string `json:"note,omitempty"`
-	// If category is hidden this is the id of the category group it originally belonged to before it was hidden.
+	// DEPRECATED: No longer used.  Value will always be null.
 	OriginalCategoryGroupID *string `json:"original_category_group_id,omitempty"`
 }

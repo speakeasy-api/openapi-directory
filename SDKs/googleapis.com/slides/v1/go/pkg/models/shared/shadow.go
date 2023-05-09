@@ -23,12 +23,16 @@ const (
 	ShadowAlignmentEnumBottomRight                  ShadowAlignmentEnum = "BOTTOM_RIGHT"
 )
 
+func (e ShadowAlignmentEnum) ToPointer() *ShadowAlignmentEnum {
+	return &e
+}
+
 func (e *ShadowAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECTANGLE_POSITION_UNSPECIFIED":
 		fallthrough
 	case "TOP_LEFT":
@@ -48,10 +52,10 @@ func (e *ShadowAlignmentEnum) UnmarshalJSON(data []byte) error {
 	case "BOTTOM_CENTER":
 		fallthrough
 	case "BOTTOM_RIGHT":
-		*e = ShadowAlignmentEnum(s)
+		*e = ShadowAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShadowAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for ShadowAlignmentEnum: %v", v)
 	}
 }
 
@@ -64,21 +68,25 @@ const (
 	ShadowPropertyStateEnumInherit     ShadowPropertyStateEnum = "INHERIT"
 )
 
+func (e ShadowPropertyStateEnum) ToPointer() *ShadowPropertyStateEnum {
+	return &e
+}
+
 func (e *ShadowPropertyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RENDERED":
 		fallthrough
 	case "NOT_RENDERED":
 		fallthrough
 	case "INHERIT":
-		*e = ShadowPropertyStateEnum(s)
+		*e = ShadowPropertyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShadowPropertyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ShadowPropertyStateEnum: %v", v)
 	}
 }
 
@@ -90,19 +98,23 @@ const (
 	ShadowTypeEnumOuter                 ShadowTypeEnum = "OUTER"
 )
 
+func (e ShadowTypeEnum) ToPointer() *ShadowTypeEnum {
+	return &e
+}
+
 func (e *ShadowTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHADOW_TYPE_UNSPECIFIED":
 		fallthrough
 	case "OUTER":
-		*e = ShadowTypeEnum(s)
+		*e = ShadowTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShadowTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShadowTypeEnum: %v", v)
 	}
 }
 

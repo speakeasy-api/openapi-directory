@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type Destiny2AwaInitializeRequestSecurity struct {
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 // Destiny2AwaInitializeRequest200Wildcard - Look at the Response property for more information about the nature of this response
 type Destiny2AwaInitializeRequest200Wildcard struct {
 	DetailedErrorTrace *string

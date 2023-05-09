@@ -16,17 +16,21 @@ const (
 	RequestCancelWorkflowExecutionXAmzTargetEnumSimpleWorkflowServiceRequestCancelWorkflowExecution RequestCancelWorkflowExecutionXAmzTargetEnum = "SimpleWorkflowService.RequestCancelWorkflowExecution"
 )
 
+func (e RequestCancelWorkflowExecutionXAmzTargetEnum) ToPointer() *RequestCancelWorkflowExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *RequestCancelWorkflowExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleWorkflowService.RequestCancelWorkflowExecution":
-		*e = RequestCancelWorkflowExecutionXAmzTargetEnum(s)
+		*e = RequestCancelWorkflowExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestCancelWorkflowExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestCancelWorkflowExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

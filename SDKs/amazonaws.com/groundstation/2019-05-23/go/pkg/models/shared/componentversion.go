@@ -4,6 +4,6 @@ package shared
 
 // ComponentVersion - Version information for agent components.
 type ComponentVersion struct {
-	ComponentType ComponentTypeEnum `json:"componentType"`
-	Versions      []string          `json:"versions"`
+	ComponentType string   `json:"componentType"`
+	Versions      []string `json:"versions"`
 }

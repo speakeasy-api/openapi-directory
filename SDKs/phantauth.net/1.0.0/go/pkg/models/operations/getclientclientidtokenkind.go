@@ -17,21 +17,25 @@ const (
 	GetClientClientIDTokenKindKindEnumPlain        GetClientClientIDTokenKindKindEnum = "'plain'"
 )
 
+func (e GetClientClientIDTokenKindKindEnum) ToPointer() *GetClientClientIDTokenKindKindEnum {
+	return &e
+}
+
 func (e *GetClientClientIDTokenKindKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "'registration'":
 		fallthrough
 	case "'selfie'":
 		fallthrough
 	case "'plain'":
-		*e = GetClientClientIDTokenKindKindEnum(s)
+		*e = GetClientClientIDTokenKindKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetClientClientIDTokenKindKindEnum: %s", s)
+		return fmt.Errorf("invalid value for GetClientClientIDTokenKindKindEnum: %v", v)
 	}
 }
 

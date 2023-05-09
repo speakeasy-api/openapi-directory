@@ -16,17 +16,21 @@ const (
 	ImportHostKeyXAmzTargetEnumTransferServiceImportHostKey ImportHostKeyXAmzTargetEnum = "TransferService.ImportHostKey"
 )
 
+func (e ImportHostKeyXAmzTargetEnum) ToPointer() *ImportHostKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportHostKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.ImportHostKey":
-		*e = ImportHostKeyXAmzTargetEnum(s)
+		*e = ImportHostKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportHostKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportHostKeyXAmzTargetEnum: %v", v)
 	}
 }
 

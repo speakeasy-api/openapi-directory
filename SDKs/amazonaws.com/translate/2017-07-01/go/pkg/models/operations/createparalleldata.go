@@ -16,17 +16,21 @@ const (
 	CreateParallelDataXAmzTargetEnumAwsShineFrontendService20170701CreateParallelData CreateParallelDataXAmzTargetEnum = "AWSShineFrontendService_20170701.CreateParallelData"
 )
 
+func (e CreateParallelDataXAmzTargetEnum) ToPointer() *CreateParallelDataXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateParallelDataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShineFrontendService_20170701.CreateParallelData":
-		*e = CreateParallelDataXAmzTargetEnum(s)
+		*e = CreateParallelDataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateParallelDataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateParallelDataXAmzTargetEnum: %v", v)
 	}
 }
 

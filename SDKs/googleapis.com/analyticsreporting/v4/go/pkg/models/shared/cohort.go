@@ -15,19 +15,23 @@ const (
 	CohortTypeEnumFirstVisitDate        CohortTypeEnum = "FIRST_VISIT_DATE"
 )
 
+func (e CohortTypeEnum) ToPointer() *CohortTypeEnum {
+	return &e
+}
+
 func (e *CohortTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_COHORT_TYPE":
 		fallthrough
 	case "FIRST_VISIT_DATE":
-		*e = CohortTypeEnum(s)
+		*e = CohortTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CohortTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CohortTypeEnum: %v", v)
 	}
 }
 

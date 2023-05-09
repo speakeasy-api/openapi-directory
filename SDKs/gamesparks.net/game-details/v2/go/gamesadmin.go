@@ -36,7 +36,10 @@ func newGamesAdmin(defaultClient, securityClient HTTPClient, serverURL, language
 // GETGamesEndpointsUsingGET - getGamesEndpoints
 func (s *gamesAdmin) GETGamesEndpointsUsingGET(ctx context.Context, request operations.GETGamesEndpointsUsingGETRequest) (*operations.GETGamesEndpointsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/endpoints", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/endpoints", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -207,7 +210,10 @@ func (s *gamesAdmin) ListUsingGET(ctx context.Context) (*operations.ListUsingGET
 // RestoreDeletedGameUsingPOST - restoreDeletedGame
 func (s *gamesAdmin) RestoreDeletedGameUsingPOST(ctx context.Context, request operations.RestoreDeletedGameUsingPOSTRequest) (*operations.RestoreDeletedGameUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/restore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/restore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

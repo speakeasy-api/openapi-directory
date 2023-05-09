@@ -20,12 +20,16 @@ const (
 	ListV2LoggingLevelsTargetTypeEnumPrincipalID ListV2LoggingLevelsTargetTypeEnum = "PRINCIPAL_ID"
 )
 
+func (e ListV2LoggingLevelsTargetTypeEnum) ToPointer() *ListV2LoggingLevelsTargetTypeEnum {
+	return &e
+}
+
 func (e *ListV2LoggingLevelsTargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "THING_GROUP":
@@ -35,10 +39,10 @@ func (e *ListV2LoggingLevelsTargetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SOURCE_IP":
 		fallthrough
 	case "PRINCIPAL_ID":
-		*e = ListV2LoggingLevelsTargetTypeEnum(s)
+		*e = ListV2LoggingLevelsTargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListV2LoggingLevelsTargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListV2LoggingLevelsTargetTypeEnum: %v", v)
 	}
 }
 

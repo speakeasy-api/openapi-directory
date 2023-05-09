@@ -2,36 +2,34 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BloggerBlogUserInfosGetRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        BlogID: "quibusdam",
-        Callback: "unde",
-        Fields: "nulla",
-        Key: "corrupti",
-        MaxPosts: 847252,
-        OauthToken: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-        UserID: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.BlogUserInfos.BloggerBlogUserInfosGet(ctx, req, operations.BloggerBlogUserInfosGetSecurity{
+    res, err := s.BlogUserInfos.BloggerBlogUserInfosGet(ctx, operations.BloggerBlogUserInfosGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        BlogID: "quibusdam",
+        Callback: sdk.String("unde"),
+        Fields: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        MaxPosts: sdk.Int64(847252),
+        OauthToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+        UserID: "iure",
+    }, operations.BloggerBlogUserInfosGetSecurity{
         Option1: &operations.BloggerBlogUserInfosGetSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

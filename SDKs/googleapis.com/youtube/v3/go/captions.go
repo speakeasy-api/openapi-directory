@@ -74,7 +74,10 @@ func (s *captions) YoutubeCaptionsDelete(ctx context.Context, request operations
 // YoutubeCaptionsDownload - Downloads a caption track.
 func (s *captions) YoutubeCaptionsDownload(ctx context.Context, request operations.YoutubeCaptionsDownloadRequest, security operations.YoutubeCaptionsDownloadSecurity) (*operations.YoutubeCaptionsDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/youtube/v3/captions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/youtube/v3/captions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

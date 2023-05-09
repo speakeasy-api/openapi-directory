@@ -16,12 +16,16 @@ const (
 	ShipmentCarrierEnumUps   ShipmentCarrierEnum = "UPS"
 )
 
+func (e ShipmentCarrierEnum) ToPointer() *ShipmentCarrierEnum {
+	return &e
+}
+
 func (e *ShipmentCarrierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DHL":
 		fallthrough
 	case "DBS":
@@ -29,9 +33,9 @@ func (e *ShipmentCarrierEnum) UnmarshalJSON(data []byte) error {
 	case "FEDEX":
 		fallthrough
 	case "UPS":
-		*e = ShipmentCarrierEnum(s)
+		*e = ShipmentCarrierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShipmentCarrierEnum: %s", s)
+		return fmt.Errorf("invalid value for ShipmentCarrierEnum: %v", v)
 	}
 }

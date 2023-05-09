@@ -7,6 +7,14 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetCommunicationPreferencesV3DefinitionsGetPageSecurity struct {
+	Hapikey            *string `security:"scheme,type=apiKey,subtype=query,name=hapikey"`
+	Oauth2Legacy       *string `security:"scheme,type=oauth2,name=Authorization"`
+	Oauth2Legacy1      *string `security:"scheme,type=oauth2,name=Authorization"`
+	PrivateAppsLegacy  *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
+	PrivateAppsLegacy1 *string `security:"scheme,type=apiKey,subtype=header,name=private-app-legacy"`
+}
+
 type GetCommunicationPreferencesV3DefinitionsGetPageResponse struct {
 	Body        []byte
 	ContentType string

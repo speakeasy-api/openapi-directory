@@ -2,27 +2,28 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AutomlProjectsLocationsDatasetsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.AutomlProjectsLocationsDatasetsCreate(ctx, operations.AutomlProjectsLocationsDatasetsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         Dataset: &shared.Dataset{
-            CreateTime: "provident",
-            Description: "distinctio",
-            DisplayName: "quibusdam",
-            Etag: "unde",
-            ExampleCount: 857946,
+            CreateTime: sdk.String("provident"),
+            Description: sdk.String("distinctio"),
+            DisplayName: sdk.String("quibusdam"),
+            Etag: sdk.String("unde"),
+            ExampleCount: sdk.Int(857946),
             ImageClassificationDatasetMetadata: &shared.ImageClassificationDatasetMetadata{
-                ClassificationType: "MULTICLASS",
+                ClassificationType: shared.ImageClassificationDatasetMetadataClassificationTypeEnumMulticlass.ToPointer(),
             },
             ImageObjectDetectionDatasetMetadata: map[string]interface{}{
                 "vel": "error",
@@ -30,68 +31,66 @@ func main() {
                 "iure": "magnam",
                 "debitis": "ipsa",
             },
-            Name: "delectus",
+            Name: sdk.String("Ricky Hoppe"),
             TablesDatasetMetadata: &shared.TablesDatasetMetadata{
-                MlUseColumnSpecID: "tempora",
-                PrimaryTableSpecID: "suscipit",
-                StatsUpdateTime: "molestiae",
+                MlUseColumnSpecID: sdk.String("placeat"),
+                PrimaryTableSpecID: sdk.String("voluptatum"),
+                StatsUpdateTime: sdk.String("iusto"),
                 TargetColumnCorrelations: map[string]shared.CorrelationStats{
-                    "placeat": shared.CorrelationStats{
-                        CramersV: 5288.95,
-                    },
-                    "iusto": shared.CorrelationStats{
-                        CramersV: 5680.45,
-                    },
                     "nisi": shared.CorrelationStats{
-                        CramersV: 9255.97,
+                        CramersV: sdk.Float64(9255.97),
                     },
                     "temporibus": shared.CorrelationStats{
-                        CramersV: 710.36,
+                        CramersV: sdk.Float64(710.36),
+                    },
+                    "quis": shared.CorrelationStats{
+                        CramersV: sdk.Float64(871.29),
                     },
                 },
-                TargetColumnSpecID: "quis",
-                WeightColumnSpecID: "veritatis",
+                TargetColumnSpecID: sdk.String("deserunt"),
+                WeightColumnSpecID: sdk.String("perferendis"),
             },
             TextClassificationDatasetMetadata: &shared.TextClassificationDatasetMetadata{
-                ClassificationType: "MULTICLASS",
+                ClassificationType: shared.TextClassificationDatasetMetadataClassificationTypeEnumMulticlass.ToPointer(),
             },
             TextExtractionDatasetMetadata: map[string]interface{}{
-                "ipsam": "repellendus",
-            },
-            TextSentimentDatasetMetadata: &shared.TextSentimentDatasetMetadata{
-                SentimentMax: 957156,
-            },
-            TranslationDatasetMetadata: &shared.TranslationDatasetMetadata{
-                SourceLanguageCode: "quo",
-                TargetLanguageCode: "odit",
-            },
-            VideoClassificationDatasetMetadata: map[string]interface{}{
+                "sapiente": "quo",
+                "odit": "at",
                 "at": "maiores",
                 "molestiae": "quod",
-                "quod": "esse",
-                "totam": "porro",
+            },
+            TextSentimentDatasetMetadata: &shared.TextSentimentDatasetMetadata{
+                SentimentMax: sdk.Int(800911),
+            },
+            TranslationDatasetMetadata: &shared.TranslationDatasetMetadata{
+                SourceLanguageCode: sdk.String("esse"),
+                TargetLanguageCode: sdk.String("totam"),
+            },
+            VideoClassificationDatasetMetadata: map[string]interface{}{
+                "dolorum": "dicta",
+                "nam": "officia",
+                "occaecati": "fugit",
+                "deleniti": "hic",
             },
             VideoObjectTrackingDatasetMetadata: map[string]interface{}{
-                "dicta": "nam",
-                "officia": "occaecati",
-                "fugit": "deleniti",
+                "totam": "beatae",
+                "commodi": "molestiae",
+                "modi": "qui",
+                "impedit": "cum",
             },
         },
-        AccessToken: "hic",
-        Alt: "proto",
-        Callback: "totam",
-        Fields: "beatae",
-        Key: "commodi",
-        OauthToken: "molestiae",
-        Parent: "modi",
-        PrettyPrint: false,
-        QuotaUser: "qui",
-        UploadType: "impedit",
-        UploadProtocol: "cum",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.AutomlProjectsLocationsDatasetsCreate(ctx, req, operations.AutomlProjectsLocationsDatasetsCreateSecurity{
+        AccessToken: sdk.String("esse"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("excepturi"),
+        Fields: sdk.String("aspernatur"),
+        Key: sdk.String("perferendis"),
+        OauthToken: sdk.String("ad"),
+        Parent: "natus",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("sed"),
+        UploadType: sdk.String("iste"),
+        UploadProtocol: sdk.String("dolor"),
+    }, operations.AutomlProjectsLocationsDatasetsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -18,12 +18,16 @@ const (
 	ModelCardProcessingStatusEnumDeleteFailed      ModelCardProcessingStatusEnum = "DeleteFailed"
 )
 
+func (e ModelCardProcessingStatusEnum) ToPointer() *ModelCardProcessingStatusEnum {
+	return &e
+}
+
 func (e *ModelCardProcessingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteInProgress":
 		fallthrough
 	case "DeletePending":
@@ -35,9 +39,9 @@ func (e *ModelCardProcessingStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DeleteCompleted":
 		fallthrough
 	case "DeleteFailed":
-		*e = ModelCardProcessingStatusEnum(s)
+		*e = ModelCardProcessingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelCardProcessingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelCardProcessingStatusEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	JobEndBehaviorEnumForceCancel JobEndBehaviorEnum = "FORCE_CANCEL"
 )
 
+func (e JobEndBehaviorEnum) ToPointer() *JobEndBehaviorEnum {
+	return &e
+}
+
 func (e *JobEndBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STOP_ROLLOUT":
 		fallthrough
 	case "CANCEL":
 		fallthrough
 	case "FORCE_CANCEL":
-		*e = JobEndBehaviorEnum(s)
+		*e = JobEndBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobEndBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for JobEndBehaviorEnum: %v", v)
 	}
 }

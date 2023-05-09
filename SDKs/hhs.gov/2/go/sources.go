@@ -89,7 +89,10 @@ func (s *sources) GetResourcesSourcesJSON(ctx context.Context, request operation
 // Information about a specific source.
 func (s *sources) GetResourcesSourcesIDJSON(ctx context.Context, request operations.GetResourcesSourcesIDJSONRequest) (*operations.GetResourcesSourcesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/sources/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/resources/sources/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +140,10 @@ func (s *sources) GetResourcesSourcesIDJSON(ctx context.Context, request operati
 // MediaItem
 func (s *sources) GetResourcesSourcesIDSyndicateFormat(ctx context.Context, request operations.GetResourcesSourcesIDSyndicateFormatRequest) (*operations.GetResourcesSourcesIDSyndicateFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/sources/{id}/syndicate.{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/resources/sources/{id}/syndicate.{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,18 +15,22 @@ const (
 	GetCampaignStateBatchFailureCodeEnumUnknownError     GetCampaignStateBatchFailureCodeEnum = "UnknownError"
 )
 
+func (e GetCampaignStateBatchFailureCodeEnum) ToPointer() *GetCampaignStateBatchFailureCodeEnum {
+	return &e
+}
+
 func (e *GetCampaignStateBatchFailureCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResourceNotFound":
 		fallthrough
 	case "UnknownError":
-		*e = GetCampaignStateBatchFailureCodeEnum(s)
+		*e = GetCampaignStateBatchFailureCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCampaignStateBatchFailureCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCampaignStateBatchFailureCodeEnum: %v", v)
 	}
 }

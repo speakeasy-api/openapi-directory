@@ -206,7 +206,10 @@ func (s *radioDNS) GetRadiodnsSpi31IDFqdnSidDatePIXML(ctx context.Context, reque
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/radiodns/spi/3.1/id/{fqdn}/{sid}/{date}_PI.xml", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/radiodns/spi/3.1/id/{fqdn}/{sid}/{date}_PI.xml", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

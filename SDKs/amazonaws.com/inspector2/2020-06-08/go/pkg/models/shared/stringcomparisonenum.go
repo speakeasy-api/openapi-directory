@@ -15,20 +15,24 @@ const (
 	StringComparisonEnumNotEquals StringComparisonEnum = "NOT_EQUALS"
 )
 
+func (e StringComparisonEnum) ToPointer() *StringComparisonEnum {
+	return &e
+}
+
 func (e *StringComparisonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUALS":
 		fallthrough
 	case "PREFIX":
 		fallthrough
 	case "NOT_EQUALS":
-		*e = StringComparisonEnum(s)
+		*e = StringComparisonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StringComparisonEnum: %s", s)
+		return fmt.Errorf("invalid value for StringComparisonEnum: %v", v)
 	}
 }

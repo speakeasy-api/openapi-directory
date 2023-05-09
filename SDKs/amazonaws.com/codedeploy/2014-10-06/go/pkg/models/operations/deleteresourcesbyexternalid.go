@@ -16,17 +16,21 @@ const (
 	DeleteResourcesByExternalIDXAmzTargetEnumCodeDeploy20141006DeleteResourcesByExternalID DeleteResourcesByExternalIDXAmzTargetEnum = "CodeDeploy_20141006.DeleteResourcesByExternalId"
 )
 
+func (e DeleteResourcesByExternalIDXAmzTargetEnum) ToPointer() *DeleteResourcesByExternalIDXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteResourcesByExternalIDXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.DeleteResourcesByExternalId":
-		*e = DeleteResourcesByExternalIDXAmzTargetEnum(s)
+		*e = DeleteResourcesByExternalIDXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteResourcesByExternalIDXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteResourcesByExternalIDXAmzTargetEnum: %v", v)
 	}
 }
 

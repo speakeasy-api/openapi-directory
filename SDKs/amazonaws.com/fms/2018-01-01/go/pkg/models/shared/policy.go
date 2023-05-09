@@ -11,6 +11,7 @@ type Policy struct {
 	PolicyDescription              *string                   `json:"PolicyDescription,omitempty"`
 	PolicyID                       *string                   `json:"PolicyId,omitempty"`
 	PolicyName                     string                    `json:"PolicyName"`
+	PolicyStatus                   *CustomerPolicyStatusEnum `json:"PolicyStatus,omitempty"`
 	PolicyUpdateToken              *string                   `json:"PolicyUpdateToken,omitempty"`
 	RemediationEnabled             bool                      `json:"RemediationEnabled"`
 	ResourceSetIds                 []string                  `json:"ResourceSetIds,omitempty"`

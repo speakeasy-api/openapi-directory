@@ -20,12 +20,16 @@ const (
 	SystemInstanceDeploymentStatusEnumDeletedInTarget    SystemInstanceDeploymentStatusEnum = "DELETED_IN_TARGET"
 )
 
+func (e SystemInstanceDeploymentStatusEnum) ToPointer() *SystemInstanceDeploymentStatusEnum {
+	return &e
+}
+
 func (e *SystemInstanceDeploymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_DEPLOYED":
 		fallthrough
 	case "BOOTSTRAP":
@@ -41,9 +45,9 @@ func (e *SystemInstanceDeploymentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING_DELETE":
 		fallthrough
 	case "DELETED_IN_TARGET":
-		*e = SystemInstanceDeploymentStatusEnum(s)
+		*e = SystemInstanceDeploymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SystemInstanceDeploymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SystemInstanceDeploymentStatusEnum: %v", v)
 	}
 }

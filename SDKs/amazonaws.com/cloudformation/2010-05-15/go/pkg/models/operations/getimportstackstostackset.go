@@ -16,17 +16,21 @@ const (
 	GETImportStacksToStackSetActionEnumImportStacksToStackSet GETImportStacksToStackSetActionEnum = "ImportStacksToStackSet"
 )
 
+func (e GETImportStacksToStackSetActionEnum) ToPointer() *GETImportStacksToStackSetActionEnum {
+	return &e
+}
+
 func (e *GETImportStacksToStackSetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ImportStacksToStackSet":
-		*e = GETImportStacksToStackSetActionEnum(s)
+		*e = GETImportStacksToStackSetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETImportStacksToStackSetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETImportStacksToStackSetActionEnum: %v", v)
 	}
 }
 
@@ -38,19 +42,23 @@ const (
 	GETImportStacksToStackSetCallAsEnumDelegatedAdmin GETImportStacksToStackSetCallAsEnum = "DELEGATED_ADMIN"
 )
 
+func (e GETImportStacksToStackSetCallAsEnum) ToPointer() *GETImportStacksToStackSetCallAsEnum {
+	return &e
+}
+
 func (e *GETImportStacksToStackSetCallAsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SELF":
 		fallthrough
 	case "DELEGATED_ADMIN":
-		*e = GETImportStacksToStackSetCallAsEnum(s)
+		*e = GETImportStacksToStackSetCallAsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETImportStacksToStackSetCallAsEnum: %s", s)
+		return fmt.Errorf("invalid value for GETImportStacksToStackSetCallAsEnum: %v", v)
 	}
 }
 
@@ -71,17 +79,21 @@ const (
 	GETImportStacksToStackSetVersionEnumTwoThousandAndTen0515 GETImportStacksToStackSetVersionEnum = "2010-05-15"
 )
 
+func (e GETImportStacksToStackSetVersionEnum) ToPointer() *GETImportStacksToStackSetVersionEnum {
+	return &e
+}
+
 func (e *GETImportStacksToStackSetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETImportStacksToStackSetVersionEnum(s)
+		*e = GETImportStacksToStackSetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETImportStacksToStackSetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETImportStacksToStackSetVersionEnum: %v", v)
 	}
 }
 

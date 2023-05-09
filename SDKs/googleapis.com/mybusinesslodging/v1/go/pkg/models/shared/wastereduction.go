@@ -17,12 +17,16 @@ const (
 	WasteReductionCompostableFoodContainersAndCutleryExceptionEnumDependentOnDayOfWeek WasteReductionCompostableFoodContainersAndCutleryExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionCompostableFoodContainersAndCutleryExceptionEnum) ToPointer() *WasteReductionCompostableFoodContainersAndCutleryExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionCompostableFoodContainersAndCutleryExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *WasteReductionCompostableFoodContainersAndCutleryExceptionEnum) Unmarsh
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionCompostableFoodContainersAndCutleryExceptionEnum(s)
+		*e = WasteReductionCompostableFoodContainersAndCutleryExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionCompostableFoodContainersAndCutleryExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionCompostableFoodContainersAndCutleryExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	WasteReductionCompostsExcessFoodExceptionEnumDependentOnDayOfWeek WasteReductionCompostsExcessFoodExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionCompostsExcessFoodExceptionEnum) ToPointer() *WasteReductionCompostsExcessFoodExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionCompostsExcessFoodExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *WasteReductionCompostsExcessFoodExceptionEnum) UnmarshalJSON(data []byt
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionCompostsExcessFoodExceptionEnum(s)
+		*e = WasteReductionCompostsExcessFoodExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionCompostsExcessFoodExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionCompostsExcessFoodExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	WasteReductionDonatesExcessFoodExceptionEnumDependentOnDayOfWeek WasteReductionDonatesExcessFoodExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionDonatesExcessFoodExceptionEnum) ToPointer() *WasteReductionDonatesExcessFoodExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionDonatesExcessFoodExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *WasteReductionDonatesExcessFoodExceptionEnum) UnmarshalJSON(data []byte
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionDonatesExcessFoodExceptionEnum(s)
+		*e = WasteReductionDonatesExcessFoodExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionDonatesExcessFoodExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionDonatesExcessFoodExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	WasteReductionFoodWasteReductionProgramExceptionEnumDependentOnDayOfWeek WasteReductionFoodWasteReductionProgramExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionFoodWasteReductionProgramExceptionEnum) ToPointer() *WasteReductionFoodWasteReductionProgramExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionFoodWasteReductionProgramExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *WasteReductionFoodWasteReductionProgramExceptionEnum) UnmarshalJSON(dat
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionFoodWasteReductionProgramExceptionEnum(s)
+		*e = WasteReductionFoodWasteReductionProgramExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionFoodWasteReductionProgramExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionFoodWasteReductionProgramExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	WasteReductionNoSingleUsePlasticStrawsExceptionEnumDependentOnDayOfWeek WasteReductionNoSingleUsePlasticStrawsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionNoSingleUsePlasticStrawsExceptionEnum) ToPointer() *WasteReductionNoSingleUsePlasticStrawsExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionNoSingleUsePlasticStrawsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *WasteReductionNoSingleUsePlasticStrawsExceptionEnum) UnmarshalJSON(data
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionNoSingleUsePlasticStrawsExceptionEnum(s)
+		*e = WasteReductionNoSingleUsePlasticStrawsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionNoSingleUsePlasticStrawsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionNoSingleUsePlasticStrawsExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	WasteReductionNoSingleUsePlasticWaterBottlesExceptionEnumDependentOnDayOfWeek WasteReductionNoSingleUsePlasticWaterBottlesExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionNoSingleUsePlasticWaterBottlesExceptionEnum) ToPointer() *WasteReductionNoSingleUsePlasticWaterBottlesExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionNoSingleUsePlasticWaterBottlesExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *WasteReductionNoSingleUsePlasticWaterBottlesExceptionEnum) UnmarshalJSO
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionNoSingleUsePlasticWaterBottlesExceptionEnum(s)
+		*e = WasteReductionNoSingleUsePlasticWaterBottlesExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionNoSingleUsePlasticWaterBottlesExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionNoSingleUsePlasticWaterBottlesExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	WasteReductionNoStyrofoamFoodContainersExceptionEnumDependentOnDayOfWeek WasteReductionNoStyrofoamFoodContainersExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionNoStyrofoamFoodContainersExceptionEnum) ToPointer() *WasteReductionNoStyrofoamFoodContainersExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionNoStyrofoamFoodContainersExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *WasteReductionNoStyrofoamFoodContainersExceptionEnum) UnmarshalJSON(dat
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionNoStyrofoamFoodContainersExceptionEnum(s)
+		*e = WasteReductionNoStyrofoamFoodContainersExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionNoStyrofoamFoodContainersExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionNoStyrofoamFoodContainersExceptionEnum: %v", v)
 	}
 }
 
@@ -227,12 +255,16 @@ const (
 	WasteReductionRecyclingProgramExceptionEnumDependentOnDayOfWeek WasteReductionRecyclingProgramExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionRecyclingProgramExceptionEnum) ToPointer() *WasteReductionRecyclingProgramExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionRecyclingProgramExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -240,10 +272,10 @@ func (e *WasteReductionRecyclingProgramExceptionEnum) UnmarshalJSON(data []byte)
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionRecyclingProgramExceptionEnum(s)
+		*e = WasteReductionRecyclingProgramExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionRecyclingProgramExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionRecyclingProgramExceptionEnum: %v", v)
 	}
 }
 
@@ -257,12 +289,16 @@ const (
 	WasteReductionRefillableToiletryContainersExceptionEnumDependentOnDayOfWeek WasteReductionRefillableToiletryContainersExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionRefillableToiletryContainersExceptionEnum) ToPointer() *WasteReductionRefillableToiletryContainersExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionRefillableToiletryContainersExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -270,10 +306,10 @@ func (e *WasteReductionRefillableToiletryContainersExceptionEnum) UnmarshalJSON(
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionRefillableToiletryContainersExceptionEnum(s)
+		*e = WasteReductionRefillableToiletryContainersExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionRefillableToiletryContainersExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionRefillableToiletryContainersExceptionEnum: %v", v)
 	}
 }
 
@@ -287,12 +323,16 @@ const (
 	WasteReductionSafelyDisposesBatteriesExceptionEnumDependentOnDayOfWeek WasteReductionSafelyDisposesBatteriesExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionSafelyDisposesBatteriesExceptionEnum) ToPointer() *WasteReductionSafelyDisposesBatteriesExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionSafelyDisposesBatteriesExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -300,10 +340,10 @@ func (e *WasteReductionSafelyDisposesBatteriesExceptionEnum) UnmarshalJSON(data 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionSafelyDisposesBatteriesExceptionEnum(s)
+		*e = WasteReductionSafelyDisposesBatteriesExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionSafelyDisposesBatteriesExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionSafelyDisposesBatteriesExceptionEnum: %v", v)
 	}
 }
 
@@ -317,12 +357,16 @@ const (
 	WasteReductionSafelyDisposesElectronicsExceptionEnumDependentOnDayOfWeek WasteReductionSafelyDisposesElectronicsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionSafelyDisposesElectronicsExceptionEnum) ToPointer() *WasteReductionSafelyDisposesElectronicsExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionSafelyDisposesElectronicsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -330,10 +374,10 @@ func (e *WasteReductionSafelyDisposesElectronicsExceptionEnum) UnmarshalJSON(dat
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionSafelyDisposesElectronicsExceptionEnum(s)
+		*e = WasteReductionSafelyDisposesElectronicsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionSafelyDisposesElectronicsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionSafelyDisposesElectronicsExceptionEnum: %v", v)
 	}
 }
 
@@ -347,12 +391,16 @@ const (
 	WasteReductionSafelyDisposesLightbulbsExceptionEnumDependentOnDayOfWeek WasteReductionSafelyDisposesLightbulbsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionSafelyDisposesLightbulbsExceptionEnum) ToPointer() *WasteReductionSafelyDisposesLightbulbsExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionSafelyDisposesLightbulbsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -360,10 +408,10 @@ func (e *WasteReductionSafelyDisposesLightbulbsExceptionEnum) UnmarshalJSON(data
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionSafelyDisposesLightbulbsExceptionEnum(s)
+		*e = WasteReductionSafelyDisposesLightbulbsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionSafelyDisposesLightbulbsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionSafelyDisposesLightbulbsExceptionEnum: %v", v)
 	}
 }
 
@@ -377,12 +425,16 @@ const (
 	WasteReductionSafelyHandlesHazardousSubstancesExceptionEnumDependentOnDayOfWeek WasteReductionSafelyHandlesHazardousSubstancesExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionSafelyHandlesHazardousSubstancesExceptionEnum) ToPointer() *WasteReductionSafelyHandlesHazardousSubstancesExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionSafelyHandlesHazardousSubstancesExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -390,10 +442,10 @@ func (e *WasteReductionSafelyHandlesHazardousSubstancesExceptionEnum) UnmarshalJ
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionSafelyHandlesHazardousSubstancesExceptionEnum(s)
+		*e = WasteReductionSafelyHandlesHazardousSubstancesExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionSafelyHandlesHazardousSubstancesExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionSafelyHandlesHazardousSubstancesExceptionEnum: %v", v)
 	}
 }
 
@@ -407,12 +459,16 @@ const (
 	WasteReductionSoapDonationProgramExceptionEnumDependentOnDayOfWeek WasteReductionSoapDonationProgramExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionSoapDonationProgramExceptionEnum) ToPointer() *WasteReductionSoapDonationProgramExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionSoapDonationProgramExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -420,10 +476,10 @@ func (e *WasteReductionSoapDonationProgramExceptionEnum) UnmarshalJSON(data []by
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionSoapDonationProgramExceptionEnum(s)
+		*e = WasteReductionSoapDonationProgramExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionSoapDonationProgramExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionSoapDonationProgramExceptionEnum: %v", v)
 	}
 }
 
@@ -437,12 +493,16 @@ const (
 	WasteReductionToiletryDonationProgramExceptionEnumDependentOnDayOfWeek WasteReductionToiletryDonationProgramExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionToiletryDonationProgramExceptionEnum) ToPointer() *WasteReductionToiletryDonationProgramExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionToiletryDonationProgramExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -450,10 +510,10 @@ func (e *WasteReductionToiletryDonationProgramExceptionEnum) UnmarshalJSON(data 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionToiletryDonationProgramExceptionEnum(s)
+		*e = WasteReductionToiletryDonationProgramExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionToiletryDonationProgramExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionToiletryDonationProgramExceptionEnum: %v", v)
 	}
 }
 
@@ -467,12 +527,16 @@ const (
 	WasteReductionWaterBottleFillingStationsExceptionEnumDependentOnDayOfWeek WasteReductionWaterBottleFillingStationsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WasteReductionWaterBottleFillingStationsExceptionEnum) ToPointer() *WasteReductionWaterBottleFillingStationsExceptionEnum {
+	return &e
+}
+
 func (e *WasteReductionWaterBottleFillingStationsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -480,10 +544,10 @@ func (e *WasteReductionWaterBottleFillingStationsExceptionEnum) UnmarshalJSON(da
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WasteReductionWaterBottleFillingStationsExceptionEnum(s)
+		*e = WasteReductionWaterBottleFillingStationsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WasteReductionWaterBottleFillingStationsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WasteReductionWaterBottleFillingStationsExceptionEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newEvent(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // CreateEvent - Create an event
 func (s *event) CreateEvent(ctx context.Context, request operations.CreateEventRequest) (*operations.CreateEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -86,7 +89,10 @@ func (s *event) CreateEvent(ctx context.Context, request operations.CreateEventR
 // DeleteEvent - Delete an event
 func (s *event) DeleteEvent(ctx context.Context, request operations.DeleteEventRequest) (*operations.DeleteEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events/{event_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events/{event_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *event) DeleteEvent(ctx context.Context, request operations.DeleteEventR
 // GetEvent - Retrieve an event
 func (s *event) GetEvent(ctx context.Context, request operations.GetEventRequest) (*operations.GetEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events/{event_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events/{event_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -173,9 +182,14 @@ func (s *event) GetEvent(ctx context.Context, request operations.GetEventRequest
 
 // GetEvents - List events
 // This endpoint is **DEPRECATED**. Please use [/v0.2/events](/api/conversation.v2#get-events).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *event) GetEvents(ctx context.Context, request operations.GetEventsRequest) (*operations.GetEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

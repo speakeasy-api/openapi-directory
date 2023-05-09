@@ -15,20 +15,24 @@ const (
 	ProtectionGroupAggregationEnumMax  ProtectionGroupAggregationEnum = "MAX"
 )
 
+func (e ProtectionGroupAggregationEnum) ToPointer() *ProtectionGroupAggregationEnum {
+	return &e
+}
+
 func (e *ProtectionGroupAggregationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUM":
 		fallthrough
 	case "MEAN":
 		fallthrough
 	case "MAX":
-		*e = ProtectionGroupAggregationEnum(s)
+		*e = ProtectionGroupAggregationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProtectionGroupAggregationEnum: %s", s)
+		return fmt.Errorf("invalid value for ProtectionGroupAggregationEnum: %v", v)
 	}
 }

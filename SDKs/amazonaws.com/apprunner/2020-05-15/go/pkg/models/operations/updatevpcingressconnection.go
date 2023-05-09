@@ -16,17 +16,21 @@ const (
 	UpdateVpcIngressConnectionXAmzTargetEnumAppRunnerUpdateVpcIngressConnection UpdateVpcIngressConnectionXAmzTargetEnum = "AppRunner.UpdateVpcIngressConnection"
 )
 
+func (e UpdateVpcIngressConnectionXAmzTargetEnum) ToPointer() *UpdateVpcIngressConnectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateVpcIngressConnectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppRunner.UpdateVpcIngressConnection":
-		*e = UpdateVpcIngressConnectionXAmzTargetEnum(s)
+		*e = UpdateVpcIngressConnectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateVpcIngressConnectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateVpcIngressConnectionXAmzTargetEnum: %v", v)
 	}
 }
 

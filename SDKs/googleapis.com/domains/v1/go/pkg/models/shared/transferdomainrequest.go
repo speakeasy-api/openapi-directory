@@ -14,19 +14,23 @@ const (
 	TransferDomainRequestContactNoticesEnumPublicContactDataAcknowledgement TransferDomainRequestContactNoticesEnum = "PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT"
 )
 
+func (e TransferDomainRequestContactNoticesEnum) ToPointer() *TransferDomainRequestContactNoticesEnum {
+	return &e
+}
+
 func (e *TransferDomainRequestContactNoticesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTACT_NOTICE_UNSPECIFIED":
 		fallthrough
 	case "PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT":
-		*e = TransferDomainRequestContactNoticesEnum(s)
+		*e = TransferDomainRequestContactNoticesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferDomainRequestContactNoticesEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferDomainRequestContactNoticesEnum: %v", v)
 	}
 }
 

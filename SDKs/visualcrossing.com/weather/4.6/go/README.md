@@ -13,35 +13,32 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/visualcrossing.com/weathe
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest{
-        AggregateHours: "corrupti",
-        AllowAsynch: false,
-        CollectStationContributions: false,
-        ContentType: "provident",
-        EndDateTime: "distinctio",
-        IncludeNormals: false,
-        Key: "quibusdam",
-        Locations: "unde",
-        MaxDistance: "nulla",
-        MaxStations: "corrupti",
-        ShortColumnNames: false,
-        StartDateTime: "illum",
-        UnitGroup: "vel",
-    }
-
     ctx := context.Background()
-    res, err := s.HistoricalWeather.GetVisualCrossingWebServicesRestServicesWeatherdataHistory(ctx, req)
+    res, err := s.HistoricalWeather.GetVisualCrossingWebServicesRestServicesWeatherdataHistory(ctx, operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest{
+        AggregateHours: sdk.String("corrupti"),
+        AllowAsynch: sdk.Bool(false),
+        CollectStationContributions: sdk.Bool(false),
+        ContentType: sdk.String("provident"),
+        EndDateTime: sdk.String("distinctio"),
+        IncludeNormals: sdk.Bool(false),
+        Key: sdk.String("quibusdam"),
+        Locations: sdk.String("unde"),
+        MaxDistance: sdk.String("nulla"),
+        MaxStations: sdk.String("corrupti"),
+        ShortColumnNames: sdk.Bool(false),
+        StartDateTime: sdk.String("illum"),
+        UnitGroup: sdk.String("vel"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -57,25 +54,25 @@ func main() {
 ## Available Resources and Operations
 
 
-### HistoricalWeather
+### [HistoricalWeather](docs/historicalweather/README.md)
 
-* `GetVisualCrossingWebServicesRestServicesWeatherdataHistory` - Retrieves hourly or daily historical weather records.
+* [GetVisualCrossingWebServicesRestServicesWeatherdataHistory](docs/historicalweather/README.md#getvisualcrossingwebservicesrestservicesweatherdatahistory) - Retrieves hourly or daily historical weather records.
 
-### TimelineWeatherAPI15DayForecastRequest
+### [TimelineWeatherAPI15DayForecastRequest](docs/timelineweatherapi15dayforecastrequest/README.md)
 
-* `GetVisualCrossingWebServicesRestServicesTimelineLocation` - Historical and Forecast Weather API
+* [GetVisualCrossingWebServicesRestServicesTimelineLocation](docs/timelineweatherapi15dayforecastrequest/README.md#getvisualcrossingwebservicesrestservicestimelinelocation) - Historical and Forecast Weather API
 
-### TimelineWeatherAPIDateRangeRequest
+### [TimelineWeatherAPIDateRangeRequest](docs/timelineweatherapidaterangerequest/README.md)
 
-* `GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddate` - Historical and Forecast Weather API
+* [GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddate](docs/timelineweatherapidaterangerequest/README.md#getvisualcrossingwebservicesrestservicestimelinelocationstartdateenddate) - Historical and Forecast Weather API
 
-### TimelineWeatherAPISingleDateRequest
+### [TimelineWeatherAPISingleDateRequest](docs/timelineweatherapisingledaterequest/README.md)
 
-* `GetVisualCrossingWebServicesRestServicesTimelineLocationStartdate` - Historical and Forecast Weather API
+* [GetVisualCrossingWebServicesRestServicesTimelineLocationStartdate](docs/timelineweatherapisingledaterequest/README.md#getvisualcrossingwebservicesrestservicestimelinelocationstartdate) - Historical and Forecast Weather API
 
-### WeatherForecast
+### [WeatherForecast](docs/weatherforecast/README.md)
 
-* `GetVisualCrossingWebServicesRestServicesWeatherdataForecast` - Weather Forecast API
+* [GetVisualCrossingWebServicesRestServicesWeatherdataForecast](docs/weatherforecast/README.md#getvisualcrossingwebservicesrestservicesweatherdataforecast) - Weather Forecast API
 <!-- End SDK Available Operations -->
 
 ### Maturity

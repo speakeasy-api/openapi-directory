@@ -21,21 +21,25 @@ const (
 	UsersUpdateOrgRoleRequestBodyRoleEnumMember       UsersUpdateOrgRoleRequestBodyRoleEnum = "member"
 )
 
+func (e UsersUpdateOrgRoleRequestBodyRoleEnum) ToPointer() *UsersUpdateOrgRoleRequestBodyRoleEnum {
+	return &e
+}
+
 func (e *UsersUpdateOrgRoleRequestBodyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin":
 		fallthrough
 	case "collaborator":
 		fallthrough
 	case "member":
-		*e = UsersUpdateOrgRoleRequestBodyRoleEnum(s)
+		*e = UsersUpdateOrgRoleRequestBodyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsersUpdateOrgRoleRequestBodyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for UsersUpdateOrgRoleRequestBodyRoleEnum: %v", v)
 	}
 }
 
@@ -64,12 +68,16 @@ const (
 	UsersUpdateOrgRoleDefaultApplicationJSONErrorCodeEnumTooManyRequests     UsersUpdateOrgRoleDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e UsersUpdateOrgRoleDefaultApplicationJSONErrorCodeEnum) ToPointer() *UsersUpdateOrgRoleDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *UsersUpdateOrgRoleDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -83,10 +91,10 @@ func (e *UsersUpdateOrgRoleDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(da
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = UsersUpdateOrgRoleDefaultApplicationJSONErrorCodeEnum(s)
+		*e = UsersUpdateOrgRoleDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsersUpdateOrgRoleDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for UsersUpdateOrgRoleDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

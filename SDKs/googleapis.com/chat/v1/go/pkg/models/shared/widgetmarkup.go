@@ -4,12 +4,12 @@ package shared
 
 // WidgetMarkup - A widget is a UI element that presents texts, images, etc.
 type WidgetMarkup struct {
-	// A list of buttons. Buttons is also oneof data and only one of these fields should be set.
+	// A list of buttons. Buttons is also `oneof data` and only one of these fields should be set.
 	Buttons []Button `json:"buttons,omitempty"`
 	// An image that is specified by a URL and can have an onclick action.
 	Image *Image `json:"image,omitempty"`
 	// A UI element contains a key (label) and a value (content). And this element may also contain some actions such as onclick button.
 	KeyValue *KeyValue `json:"keyValue,omitempty"`
-	// A paragraph of text. Formatted text supported.
+	// A paragraph of text. Formatted text supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
 	TextParagraph *TextParagraph `json:"textParagraph,omitempty"`
 }

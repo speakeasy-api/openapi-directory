@@ -14,18 +14,22 @@ const (
 	ScopeEnumShared ScopeEnum = "shared"
 )
 
+func (e ScopeEnum) ToPointer() *ScopeEnum {
+	return &e
+}
+
 func (e *ScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "task":
 		fallthrough
 	case "shared":
-		*e = ScopeEnum(s)
+		*e = ScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScopeEnum: %v", v)
 	}
 }

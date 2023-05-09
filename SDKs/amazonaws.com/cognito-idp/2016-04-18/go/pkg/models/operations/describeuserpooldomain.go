@@ -16,17 +16,21 @@ const (
 	DescribeUserPoolDomainXAmzTargetEnumAwsCognitoIdentityProviderServiceDescribeUserPoolDomain DescribeUserPoolDomainXAmzTargetEnum = "AWSCognitoIdentityProviderService.DescribeUserPoolDomain"
 )
 
+func (e DescribeUserPoolDomainXAmzTargetEnum) ToPointer() *DescribeUserPoolDomainXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeUserPoolDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.DescribeUserPoolDomain":
-		*e = DescribeUserPoolDomainXAmzTargetEnum(s)
+		*e = DescribeUserPoolDomainXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeUserPoolDomainXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeUserPoolDomainXAmzTargetEnum: %v", v)
 	}
 }
 

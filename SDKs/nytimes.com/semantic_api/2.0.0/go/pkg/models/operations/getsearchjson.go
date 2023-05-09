@@ -37,12 +37,16 @@ const (
 	GetSearchJSONFieldsEnumSearchAPIQuery GetSearchJSONFieldsEnum = "search_api_query"
 )
 
+func (e GetSearchJSONFieldsEnum) ToPointer() *GetSearchJSONFieldsEnum {
+	return &e
+}
+
 func (e *GetSearchJSONFieldsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "pages":
@@ -62,10 +66,10 @@ func (e *GetSearchJSONFieldsEnum) UnmarshalJSON(data []byte) error {
 	case "scope_notes":
 		fallthrough
 	case "search_api_query":
-		*e = GetSearchJSONFieldsEnum(s)
+		*e = GetSearchJSONFieldsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSearchJSONFieldsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSearchJSONFieldsEnum: %v", v)
 	}
 }
 

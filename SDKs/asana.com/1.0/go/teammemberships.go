@@ -37,7 +37,10 @@ func newTeamMemberships(defaultClient, securityClient HTTPClient, serverURL, lan
 // Returns the complete team membership record for a single team membership.
 func (s *teamMemberships) GetTeamMembership(ctx context.Context, request operations.GetTeamMembershipRequest) (*operations.GetTeamMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/team_memberships/{team_membership_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/team_memberships/{team_membership_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +174,10 @@ func (s *teamMemberships) GetTeamMemberships(ctx context.Context, request operat
 // Returns the compact team memberships for the team.
 func (s *teamMemberships) GetTeamMembershipsForTeam(ctx context.Context, request operations.GetTeamMembershipsForTeamRequest) (*operations.GetTeamMembershipsForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/team_memberships", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/team_memberships", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -238,7 +244,10 @@ func (s *teamMemberships) GetTeamMembershipsForTeam(ctx context.Context, request
 // Returns the compact team membership records for the user.
 func (s *teamMemberships) GetTeamMembershipsForUser(ctx context.Context, request operations.GetTeamMembershipsForUserRequest) (*operations.GetTeamMembershipsForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/team_memberships", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/team_memberships", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

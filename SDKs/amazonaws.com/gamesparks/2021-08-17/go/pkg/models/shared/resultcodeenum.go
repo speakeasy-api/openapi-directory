@@ -15,20 +15,24 @@ const (
 	ResultCodeEnumUnspecifiedFailure ResultCodeEnum = "UNSPECIFIED_FAILURE"
 )
 
+func (e ResultCodeEnum) ToPointer() *ResultCodeEnum {
+	return &e
+}
+
 func (e *ResultCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESS":
 		fallthrough
 	case "INVALID_ROLE_FAILURE":
 		fallthrough
 	case "UNSPECIFIED_FAILURE":
-		*e = ResultCodeEnum(s)
+		*e = ResultCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResultCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResultCodeEnum: %v", v)
 	}
 }

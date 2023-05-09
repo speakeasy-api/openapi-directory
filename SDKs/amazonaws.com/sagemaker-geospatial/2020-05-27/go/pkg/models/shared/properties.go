@@ -2,7 +2,7 @@
 
 package shared
 
-// Properties - <p/>
+// Properties - Properties associated with the Item.
 type Properties struct {
 	EoCloudCover          *float32 `json:"EoCloudCover,omitempty"`
 	LandsatCloudCoverLand *float32 `json:"LandsatCloudCoverLand,omitempty"`

@@ -17,12 +17,16 @@ const (
 	LiveBroadcastContentDetailsClosedCaptionsTypeEnumClosedCaptionsEmbedded        LiveBroadcastContentDetailsClosedCaptionsTypeEnum = "closedCaptionsEmbedded"
 )
 
+func (e LiveBroadcastContentDetailsClosedCaptionsTypeEnum) ToPointer() *LiveBroadcastContentDetailsClosedCaptionsTypeEnum {
+	return &e
+}
+
 func (e *LiveBroadcastContentDetailsClosedCaptionsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "closedCaptionsTypeUnspecified":
 		fallthrough
 	case "closedCaptionsDisabled":
@@ -30,10 +34,10 @@ func (e *LiveBroadcastContentDetailsClosedCaptionsTypeEnum) UnmarshalJSON(data [
 	case "closedCaptionsHttpPost":
 		fallthrough
 	case "closedCaptionsEmbedded":
-		*e = LiveBroadcastContentDetailsClosedCaptionsTypeEnum(s)
+		*e = LiveBroadcastContentDetailsClosedCaptionsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveBroadcastContentDetailsClosedCaptionsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveBroadcastContentDetailsClosedCaptionsTypeEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	LiveBroadcastContentDetailsLatencyPreferenceEnumUltraLow                     LiveBroadcastContentDetailsLatencyPreferenceEnum = "ultraLow"
 )
 
+func (e LiveBroadcastContentDetailsLatencyPreferenceEnum) ToPointer() *LiveBroadcastContentDetailsLatencyPreferenceEnum {
+	return &e
+}
+
 func (e *LiveBroadcastContentDetailsLatencyPreferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "latencyPreferenceUnspecified":
 		fallthrough
 	case "normal":
@@ -60,10 +68,10 @@ func (e *LiveBroadcastContentDetailsLatencyPreferenceEnum) UnmarshalJSON(data []
 	case "low":
 		fallthrough
 	case "ultraLow":
-		*e = LiveBroadcastContentDetailsLatencyPreferenceEnum(s)
+		*e = LiveBroadcastContentDetailsLatencyPreferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveBroadcastContentDetailsLatencyPreferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveBroadcastContentDetailsLatencyPreferenceEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	LiveBroadcastContentDetailsProjectionEnumMesh                  LiveBroadcastContentDetailsProjectionEnum = "mesh"
 )
 
+func (e LiveBroadcastContentDetailsProjectionEnum) ToPointer() *LiveBroadcastContentDetailsProjectionEnum {
+	return &e
+}
+
 func (e *LiveBroadcastContentDetailsProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "projectionUnspecified":
 		fallthrough
 	case "rectangular":
@@ -90,10 +102,10 @@ func (e *LiveBroadcastContentDetailsProjectionEnum) UnmarshalJSON(data []byte) e
 	case "360":
 		fallthrough
 	case "mesh":
-		*e = LiveBroadcastContentDetailsProjectionEnum(s)
+		*e = LiveBroadcastContentDetailsProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveBroadcastContentDetailsProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveBroadcastContentDetailsProjectionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	LiveBroadcastContentDetailsStereoLayoutEnumTopBottom               LiveBroadcastContentDetailsStereoLayoutEnum = "topBottom"
 )
 
+func (e LiveBroadcastContentDetailsStereoLayoutEnum) ToPointer() *LiveBroadcastContentDetailsStereoLayoutEnum {
+	return &e
+}
+
 func (e *LiveBroadcastContentDetailsStereoLayoutEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stereoLayoutUnspecified":
 		fallthrough
 	case "mono":
@@ -120,10 +136,10 @@ func (e *LiveBroadcastContentDetailsStereoLayoutEnum) UnmarshalJSON(data []byte)
 	case "leftRight":
 		fallthrough
 	case "topBottom":
-		*e = LiveBroadcastContentDetailsStereoLayoutEnum(s)
+		*e = LiveBroadcastContentDetailsStereoLayoutEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveBroadcastContentDetailsStereoLayoutEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveBroadcastContentDetailsStereoLayoutEnum: %v", v)
 	}
 }
 

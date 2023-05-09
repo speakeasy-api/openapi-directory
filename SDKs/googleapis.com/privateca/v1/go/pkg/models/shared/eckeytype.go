@@ -17,12 +17,16 @@ const (
 	EcKeyTypeSignatureAlgorithmEnumEddsa25519                      EcKeyTypeSignatureAlgorithmEnum = "EDDSA_25519"
 )
 
+func (e EcKeyTypeSignatureAlgorithmEnum) ToPointer() *EcKeyTypeSignatureAlgorithmEnum {
+	return &e
+}
+
 func (e *EcKeyTypeSignatureAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC_SIGNATURE_ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "ECDSA_P256":
@@ -30,10 +34,10 @@ func (e *EcKeyTypeSignatureAlgorithmEnum) UnmarshalJSON(data []byte) error {
 	case "ECDSA_P384":
 		fallthrough
 	case "EDDSA_25519":
-		*e = EcKeyTypeSignatureAlgorithmEnum(s)
+		*e = EcKeyTypeSignatureAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EcKeyTypeSignatureAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for EcKeyTypeSignatureAlgorithmEnum: %v", v)
 	}
 }
 

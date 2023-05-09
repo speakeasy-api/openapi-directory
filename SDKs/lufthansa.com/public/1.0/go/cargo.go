@@ -34,7 +34,10 @@ func newCargo(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Retrieve a list of all possible flights (both direct and connecting) between two airports on a given date. Routes are available for today and up to days in the future.
 func (s *cargo) CargoGetRouteFromDateProductCodeByOriginAndDestinationGet(ctx context.Context, request operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest, security operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity) (*operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cargo/getRoute/{origin}-{destination}/{fromDate}/{productCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cargo/getRoute/{origin}-{destination}/{fromDate}/{productCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *cargo) CargoGetRouteFromDateProductCodeByOriginAndDestinationGet(ctx co
 // With this tracking service you can easily retrieve your shipment or flight status information.
 func (s *cargo) CargoShipmentTrackingByAWBPrefixAndAWBNumberGet(ctx context.Context, request operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest, security operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetSecurity) (*operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cargo/shipmentTracking/{aWBPrefix}-{aWBNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cargo/shipmentTracking/{aWBPrefix}-{aWBNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

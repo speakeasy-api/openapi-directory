@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/pressassociation.io/2.0/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAssetRequest{
-        Aliases: false,
-        AssetID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Asset.GetAsset(ctx, req, operations.GetAssetSecurity{
+    res, err := s.Asset.GetAsset(ctx, operations.GetAssetRequest{
+        Aliases: sdk.Bool(false),
+        AssetID: "corrupti",
+    }, operations.GetAssetSecurity{
         Apikey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -48,44 +45,44 @@ func main() {
 ## Available Resources and Operations
 
 
-### Asset
+### [Asset](docs/asset/README.md)
 
-* `GetAsset` - Asset Detail
-* `GetAssetContributors` - Asset Contributors
-* `ListAssets` - Asset Collection
+* [GetAsset](docs/asset/README.md#getasset) - Asset Detail
+* [GetAssetContributors](docs/asset/README.md#getassetcontributors) - Asset Contributors
+* [ListAssets](docs/asset/README.md#listassets) - Asset Collection
 
-### Catalogue
+### [Catalogue](docs/catalogue/README.md)
 
-* `GetCatalogue` - Catalogue Detail
-* `GetCatalogueAsset` - Catalogue Asset Collection
-* `GetCatalogueAssetDetail` - Catalogue Asset Detail
-* `ListCatalogues` - Catalogue Collection
+* [GetCatalogue](docs/catalogue/README.md#getcatalogue) - Catalogue Detail
+* [GetCatalogueAsset](docs/catalogue/README.md#getcatalogueasset) - Catalogue Asset Collection
+* [GetCatalogueAssetDetail](docs/catalogue/README.md#getcatalogueassetdetail) - Catalogue Asset Detail
+* [ListCatalogues](docs/catalogue/README.md#listcatalogues) - Catalogue Collection
 
-### Channel
+### [Channel](docs/channel/README.md)
 
-* `GetChannel` - Channel Detail
-* `ListChannels` - Channel Collection
+* [GetChannel](docs/channel/README.md#getchannel) - Channel Detail
+* [ListChannels](docs/channel/README.md#listchannels) - Channel Collection
 
-### Contributor
+### [Contributor](docs/contributor/README.md)
 
-* `GetContributor` - Contributor Detail
-* `ListContributor` - Contributor Collection
+* [GetContributor](docs/contributor/README.md#getcontributor) - Contributor Detail
+* [ListContributor](docs/contributor/README.md#listcontributor) - Contributor Collection
 
-### Feature
+### [Feature](docs/feature/README.md)
 
-* `GetFeature` - Feature Detail
-* `ListFeatureTypes` - Feature Type Collection
-* `ListFeatures` - Feature Collection
+* [GetFeature](docs/feature/README.md#getfeature) - Feature Detail
+* [ListFeatureTypes](docs/feature/README.md#listfeaturetypes) - Feature Type Collection
+* [ListFeatures](docs/feature/README.md#listfeatures) - Feature Collection
 
-### Platform
+### [Platform](docs/platform/README.md)
 
-* `GetPlatform` - Platform Detail
-* `ListPlatformRegions` - Platform Region Collection
-* `ListPlatforms` - Platform Collection
+* [GetPlatform](docs/platform/README.md#getplatform) - Platform Detail
+* [ListPlatformRegions](docs/platform/README.md#listplatformregions) - Platform Region Collection
+* [ListPlatforms](docs/platform/README.md#listplatforms) - Platform Collection
 
-### Schedule
+### [Schedule](docs/schedule/README.md)
 
-* `ListSchedule` - Schedule Collection
+* [ListSchedule](docs/schedule/README.md#listschedule) - Schedule Collection
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // VpcaccessProjectsLocationsConnectorsCreate - Creates a Serverless VPC Access connector, returns an operation.
 func (s *projects) VpcaccessProjectsLocationsConnectorsCreate(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsCreateRequest, security operations.VpcaccessProjectsLocationsConnectorsCreateSecurity) (*operations.VpcaccessProjectsLocationsConnectorsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectorInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) VpcaccessProjectsLocationsConnectorsCreate(ctx context.Contex
 // VpcaccessProjectsLocationsConnectorsDelete - Deletes a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
 func (s *projects) VpcaccessProjectsLocationsConnectorsDelete(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsDeleteRequest, security operations.VpcaccessProjectsLocationsConnectorsDeleteSecurity) (*operations.VpcaccessProjectsLocationsConnectorsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) VpcaccessProjectsLocationsConnectorsDelete(ctx context.Contex
 // VpcaccessProjectsLocationsConnectorsList - Lists Serverless VPC Access connectors.
 func (s *projects) VpcaccessProjectsLocationsConnectorsList(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsListRequest, security operations.VpcaccessProjectsLocationsConnectorsListSecurity) (*operations.VpcaccessProjectsLocationsConnectorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) VpcaccessProjectsLocationsConnectorsList(ctx context.Context,
 // VpcaccessProjectsLocationsConnectorsPatch - Updates a Serverless VPC Access connector, returns an operation.
 func (s *projects) VpcaccessProjectsLocationsConnectorsPatch(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsPatchRequest, security operations.VpcaccessProjectsLocationsConnectorsPatchSecurity) (*operations.VpcaccessProjectsLocationsConnectorsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectorInput", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) VpcaccessProjectsLocationsConnectorsPatch(ctx context.Context
 // VpcaccessProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) VpcaccessProjectsLocationsList(ctx context.Context, request operations.VpcaccessProjectsLocationsListRequest, security operations.VpcaccessProjectsLocationsListSecurity) (*operations.VpcaccessProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) VpcaccessProjectsLocationsList(ctx context.Context, request o
 // VpcaccessProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) VpcaccessProjectsLocationsOperationsGet(ctx context.Context, request operations.VpcaccessProjectsLocationsOperationsGetRequest, security operations.VpcaccessProjectsLocationsOperationsGetSecurity) (*operations.VpcaccessProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *projects) VpcaccessProjectsLocationsOperationsGet(ctx context.Context, 
 // VpcaccessProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) VpcaccessProjectsLocationsOperationsList(ctx context.Context, request operations.VpcaccessProjectsLocationsOperationsListRequest, security operations.VpcaccessProjectsLocationsOperationsListSecurity) (*operations.VpcaccessProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

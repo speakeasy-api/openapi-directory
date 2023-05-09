@@ -17,12 +17,16 @@ const (
 	ComplianceQueryOperatorTypeEnumGreaterThan ComplianceQueryOperatorTypeEnum = "GREATER_THAN"
 )
 
+func (e ComplianceQueryOperatorTypeEnum) ToPointer() *ComplianceQueryOperatorTypeEnum {
+	return &e
+}
+
 func (e *ComplianceQueryOperatorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUAL":
 		fallthrough
 	case "NOT_EQUAL":
@@ -32,9 +36,9 @@ func (e *ComplianceQueryOperatorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LESS_THAN":
 		fallthrough
 	case "GREATER_THAN":
-		*e = ComplianceQueryOperatorTypeEnum(s)
+		*e = ComplianceQueryOperatorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComplianceQueryOperatorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComplianceQueryOperatorTypeEnum: %v", v)
 	}
 }

@@ -13,23 +13,27 @@ type RetrieveAnInboundWireDrawdownRequestRequest struct {
 	InboundWireDrawdownRequestID string `pathParam:"style=simple,explode=false,name=inbound_wire_drawdown_request_id"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum = "429"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13TypeEnumRateLimitedError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13 struct {
 	Type       RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnum = "403"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12TypeEnumPrivateFeatureError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12 struct {
 	Type   RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnum = "404"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11TypeEnumObjectNotFoundError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11 struct {
 	Type   RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnumFourHundred RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnum = "400"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnumFourHundred RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10TypeEnumMalformedRequestError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10 struct {
 	Type   RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnumFourHundred RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnum = "400"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnumFourHundred RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9TypeEnumInvalidParametersError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                              `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                              `json:"errors"`
 	Status RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                                `json:"title"`
 	Type   RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnum = "409"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8TypeEnumInvalidOperationError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8 struct {
 	Type   RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnum = "401"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7TypeEnumInvalidAPIKeyError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7 struct {
 	Type   RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnumFiveHundred RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnum = "500"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnumFiveHundred RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6TypeEnumInternalServerError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6 struct {
 	Type   RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnum = "403"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5TypeEnumInsufficientPermissionsError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5 struct {
 	Type   RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnum = "422"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4 struct {
 	Type   RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnum = "409"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3TypeEnumIdempotencyConflictError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3 struct {
 	Type   RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnum = "403"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2TypeEnumEnvironmentMismatchError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2 struct {
 	Type   RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnum string
+type RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnum int64
 
 const (
-	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnum = "404"
+	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1TypeEnum) ToPointer() *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1TypeEnum(s)
+		*e = RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

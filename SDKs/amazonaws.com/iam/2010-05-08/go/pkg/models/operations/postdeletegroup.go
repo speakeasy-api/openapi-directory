@@ -15,17 +15,21 @@ const (
 	POSTDeleteGroupActionEnumDeleteGroup POSTDeleteGroupActionEnum = "DeleteGroup"
 )
 
+func (e POSTDeleteGroupActionEnum) ToPointer() *POSTDeleteGroupActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteGroup":
-		*e = POSTDeleteGroupActionEnum(s)
+		*e = POSTDeleteGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteGroupVersionEnumTwoThousandAndTen0508 POSTDeleteGroupVersionEnum = "2010-05-08"
 )
 
+func (e POSTDeleteGroupVersionEnum) ToPointer() *POSTDeleteGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTDeleteGroupVersionEnum(s)
+		*e = POSTDeleteGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteGroupVersionEnum: %v", v)
 	}
 }
 

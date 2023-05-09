@@ -15,17 +15,21 @@ const (
 	GETConfigureHealthCheckActionEnumConfigureHealthCheck GETConfigureHealthCheckActionEnum = "ConfigureHealthCheck"
 )
 
+func (e GETConfigureHealthCheckActionEnum) ToPointer() *GETConfigureHealthCheckActionEnum {
+	return &e
+}
+
 func (e *GETConfigureHealthCheckActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ConfigureHealthCheck":
-		*e = GETConfigureHealthCheckActionEnum(s)
+		*e = GETConfigureHealthCheckActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETConfigureHealthCheckActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETConfigureHealthCheckActionEnum: %v", v)
 	}
 }
 
@@ -45,17 +49,21 @@ const (
 	GETConfigureHealthCheckVersionEnumTwoThousandAndTwelve0601 GETConfigureHealthCheckVersionEnum = "2012-06-01"
 )
 
+func (e GETConfigureHealthCheckVersionEnum) ToPointer() *GETConfigureHealthCheckVersionEnum {
+	return &e
+}
+
 func (e *GETConfigureHealthCheckVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = GETConfigureHealthCheckVersionEnum(s)
+		*e = GETConfigureHealthCheckVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETConfigureHealthCheckVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETConfigureHealthCheckVersionEnum: %v", v)
 	}
 }
 

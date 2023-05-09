@@ -17,12 +17,16 @@ const (
 	GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnumNoAggregation                    GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnum = "NO_AGGREGATION"
 )
 
+func (e GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnum) ToPointer() *GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRING_AGGREGATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MAJORITY_VOTE":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregatio
 	case "UNANIMOUS_VOTE":
 		fallthrough
 	case "NO_AGGREGATION":
-		*e = GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationTypeEnum: %v", v)
 	}
 }
 

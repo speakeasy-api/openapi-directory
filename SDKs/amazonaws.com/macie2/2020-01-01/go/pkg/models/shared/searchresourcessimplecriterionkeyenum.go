@@ -17,12 +17,16 @@ const (
 	SearchResourcesSimpleCriterionKeyEnumS3BucketSharedAccess        SearchResourcesSimpleCriterionKeyEnum = "S3_BUCKET_SHARED_ACCESS"
 )
 
+func (e SearchResourcesSimpleCriterionKeyEnum) ToPointer() *SearchResourcesSimpleCriterionKeyEnum {
+	return &e
+}
+
 func (e *SearchResourcesSimpleCriterionKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_ID":
 		fallthrough
 	case "S3_BUCKET_NAME":
@@ -30,9 +34,9 @@ func (e *SearchResourcesSimpleCriterionKeyEnum) UnmarshalJSON(data []byte) error
 	case "S3_BUCKET_EFFECTIVE_PERMISSION":
 		fallthrough
 	case "S3_BUCKET_SHARED_ACCESS":
-		*e = SearchResourcesSimpleCriterionKeyEnum(s)
+		*e = SearchResourcesSimpleCriterionKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchResourcesSimpleCriterionKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchResourcesSimpleCriterionKeyEnum: %v", v)
 	}
 }

@@ -16,21 +16,25 @@ const (
 	EndpointsAPIServiceRolloutStrategyEnumManaged                    EndpointsAPIServiceRolloutStrategyEnum = "MANAGED"
 )
 
+func (e EndpointsAPIServiceRolloutStrategyEnum) ToPointer() *EndpointsAPIServiceRolloutStrategyEnum {
+	return &e
+}
+
 func (e *EndpointsAPIServiceRolloutStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_ROLLOUT_STRATEGY":
 		fallthrough
 	case "FIXED":
 		fallthrough
 	case "MANAGED":
-		*e = EndpointsAPIServiceRolloutStrategyEnum(s)
+		*e = EndpointsAPIServiceRolloutStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointsAPIServiceRolloutStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointsAPIServiceRolloutStrategyEnum: %v", v)
 	}
 }
 

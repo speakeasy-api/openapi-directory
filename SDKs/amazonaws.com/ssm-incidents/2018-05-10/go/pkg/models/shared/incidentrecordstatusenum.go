@@ -14,18 +14,22 @@ const (
 	IncidentRecordStatusEnumResolved IncidentRecordStatusEnum = "RESOLVED"
 )
 
+func (e IncidentRecordStatusEnum) ToPointer() *IncidentRecordStatusEnum {
+	return &e
+}
+
 func (e *IncidentRecordStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPEN":
 		fallthrough
 	case "RESOLVED":
-		*e = IncidentRecordStatusEnum(s)
+		*e = IncidentRecordStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IncidentRecordStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for IncidentRecordStatusEnum: %v", v)
 	}
 }

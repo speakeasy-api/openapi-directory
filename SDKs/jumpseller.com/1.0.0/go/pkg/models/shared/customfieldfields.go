@@ -16,21 +16,25 @@ const (
 	CustomFieldFieldsTypeEnumInput     CustomFieldFieldsTypeEnum = "input"
 )
 
+func (e CustomFieldFieldsTypeEnum) ToPointer() *CustomFieldFieldsTypeEnum {
+	return &e
+}
+
 func (e *CustomFieldFieldsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "selection":
 		fallthrough
 	case "input":
-		*e = CustomFieldFieldsTypeEnum(s)
+		*e = CustomFieldFieldsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldFieldsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldFieldsTypeEnum: %v", v)
 	}
 }
 

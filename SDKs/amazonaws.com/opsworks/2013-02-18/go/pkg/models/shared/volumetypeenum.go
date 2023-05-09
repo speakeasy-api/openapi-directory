@@ -15,20 +15,24 @@ const (
 	VolumeTypeEnumStandard VolumeTypeEnum = "standard"
 )
 
+func (e VolumeTypeEnum) ToPointer() *VolumeTypeEnum {
+	return &e
+}
+
 func (e *VolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gp2":
 		fallthrough
 	case "io1":
 		fallthrough
 	case "standard":
-		*e = VolumeTypeEnum(s)
+		*e = VolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeTypeEnum: %v", v)
 	}
 }

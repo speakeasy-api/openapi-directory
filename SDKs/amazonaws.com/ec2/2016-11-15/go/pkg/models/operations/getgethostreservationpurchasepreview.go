@@ -15,17 +15,21 @@ const (
 	GETGETHostReservationPurchasePreviewActionEnumGetHostReservationPurchasePreview GETGETHostReservationPurchasePreviewActionEnum = "GetHostReservationPurchasePreview"
 )
 
+func (e GETGETHostReservationPurchasePreviewActionEnum) ToPointer() *GETGETHostReservationPurchasePreviewActionEnum {
+	return &e
+}
+
 func (e *GETGETHostReservationPurchasePreviewActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetHostReservationPurchasePreview":
-		*e = GETGETHostReservationPurchasePreviewActionEnum(s)
+		*e = GETGETHostReservationPurchasePreviewActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETHostReservationPurchasePreviewActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETHostReservationPurchasePreviewActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETHostReservationPurchasePreviewVersionEnumTwoThousandAndSixteen1115 GETGETHostReservationPurchasePreviewVersionEnum = "2016-11-15"
 )
 
+func (e GETGETHostReservationPurchasePreviewVersionEnum) ToPointer() *GETGETHostReservationPurchasePreviewVersionEnum {
+	return &e
+}
+
 func (e *GETGETHostReservationPurchasePreviewVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETHostReservationPurchasePreviewVersionEnum(s)
+		*e = GETGETHostReservationPurchasePreviewVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETHostReservationPurchasePreviewVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETHostReservationPurchasePreviewVersionEnum: %v", v)
 	}
 }
 

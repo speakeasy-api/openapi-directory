@@ -2,18 +2,18 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FilterFileDataStoppingsRequest{
+    ctx := context.Background()
+    res, err := s.Exude.FilterFileDataStoppings(ctx, operations.FilterFileDataStoppingsRequest{
         RequestBody: operations.FilterFileDataStoppingsRequestBody{
             File: &operations.FilterFileDataStoppingsRequestBodyFile{
                 Content: []byte("corrupti"),
@@ -21,10 +21,7 @@ func main() {
             },
         },
         Type: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.Exude.FilterFileDataStoppings(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

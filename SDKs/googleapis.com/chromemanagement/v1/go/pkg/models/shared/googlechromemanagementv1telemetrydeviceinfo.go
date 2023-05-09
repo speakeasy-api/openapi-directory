@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleChromeManagementV1TelemetryDeviceInfo - Information about a device associated with telemetry data.
+// GoogleChromeManagementV1TelemetryDeviceInfo - Information about a device associated with telemetry data. * Granular Permission needed: TELEMETRY_API_DEVICE
 type GoogleChromeManagementV1TelemetryDeviceInfo struct {
 	// Output only. The unique Directory API ID of the device. This value is the same as the Admin Console's Directory API ID in the ChromeOS Devices tab.
 	DeviceID *string `json:"deviceId,omitempty"`

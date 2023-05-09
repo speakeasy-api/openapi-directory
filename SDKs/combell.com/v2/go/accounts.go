@@ -88,7 +88,10 @@ func (s *accounts) CreateAccount(ctx context.Context, request shared.CreateAccou
 // GetAccount - Get a specific account
 func (s *accounts) GetAccount(ctx context.Context, request operations.GetAccountRequest) (*operations.GetAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

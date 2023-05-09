@@ -9,62 +9,66 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type DisruptionsGetAllDisruptionsDisruptionModesEnum string
+type DisruptionsGetAllDisruptionsDisruptionModesEnum int
 
 const (
-	DisruptionsGetAllDisruptionsDisruptionModesEnumOne        DisruptionsGetAllDisruptionsDisruptionModesEnum = "1"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumTwo        DisruptionsGetAllDisruptionsDisruptionModesEnum = "2"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumThree      DisruptionsGetAllDisruptionsDisruptionModesEnum = "3"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumFour       DisruptionsGetAllDisruptionsDisruptionModesEnum = "4"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumFive       DisruptionsGetAllDisruptionsDisruptionModesEnum = "5"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumSeven      DisruptionsGetAllDisruptionsDisruptionModesEnum = "7"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumEight      DisruptionsGetAllDisruptionsDisruptionModesEnum = "8"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumNine       DisruptionsGetAllDisruptionsDisruptionModesEnum = "9"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumTen        DisruptionsGetAllDisruptionsDisruptionModesEnum = "10"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumEleven     DisruptionsGetAllDisruptionsDisruptionModesEnum = "11"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumTwelve     DisruptionsGetAllDisruptionsDisruptionModesEnum = "12"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumThirteen   DisruptionsGetAllDisruptionsDisruptionModesEnum = "13"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumFourteen   DisruptionsGetAllDisruptionsDisruptionModesEnum = "14"
-	DisruptionsGetAllDisruptionsDisruptionModesEnumOneHundred DisruptionsGetAllDisruptionsDisruptionModesEnum = "100"
+	DisruptionsGetAllDisruptionsDisruptionModesEnumOne        DisruptionsGetAllDisruptionsDisruptionModesEnum = 1
+	DisruptionsGetAllDisruptionsDisruptionModesEnumTwo        DisruptionsGetAllDisruptionsDisruptionModesEnum = 2
+	DisruptionsGetAllDisruptionsDisruptionModesEnumThree      DisruptionsGetAllDisruptionsDisruptionModesEnum = 3
+	DisruptionsGetAllDisruptionsDisruptionModesEnumFour       DisruptionsGetAllDisruptionsDisruptionModesEnum = 4
+	DisruptionsGetAllDisruptionsDisruptionModesEnumFive       DisruptionsGetAllDisruptionsDisruptionModesEnum = 5
+	DisruptionsGetAllDisruptionsDisruptionModesEnumSeven      DisruptionsGetAllDisruptionsDisruptionModesEnum = 7
+	DisruptionsGetAllDisruptionsDisruptionModesEnumEight      DisruptionsGetAllDisruptionsDisruptionModesEnum = 8
+	DisruptionsGetAllDisruptionsDisruptionModesEnumNine       DisruptionsGetAllDisruptionsDisruptionModesEnum = 9
+	DisruptionsGetAllDisruptionsDisruptionModesEnumTen        DisruptionsGetAllDisruptionsDisruptionModesEnum = 10
+	DisruptionsGetAllDisruptionsDisruptionModesEnumEleven     DisruptionsGetAllDisruptionsDisruptionModesEnum = 11
+	DisruptionsGetAllDisruptionsDisruptionModesEnumTwelve     DisruptionsGetAllDisruptionsDisruptionModesEnum = 12
+	DisruptionsGetAllDisruptionsDisruptionModesEnumThirteen   DisruptionsGetAllDisruptionsDisruptionModesEnum = 13
+	DisruptionsGetAllDisruptionsDisruptionModesEnumFourteen   DisruptionsGetAllDisruptionsDisruptionModesEnum = 14
+	DisruptionsGetAllDisruptionsDisruptionModesEnumOneHundred DisruptionsGetAllDisruptionsDisruptionModesEnum = 100
 )
 
+func (e DisruptionsGetAllDisruptionsDisruptionModesEnum) ToPointer() *DisruptionsGetAllDisruptionsDisruptionModesEnum {
+	return &e
+}
+
 func (e *DisruptionsGetAllDisruptionsDisruptionModesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "7":
+	case 7:
 		fallthrough
-	case "8":
+	case 8:
 		fallthrough
-	case "9":
+	case 9:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "11":
+	case 11:
 		fallthrough
-	case "12":
+	case 12:
 		fallthrough
-	case "13":
+	case 13:
 		fallthrough
-	case "14":
+	case 14:
 		fallthrough
-	case "100":
-		*e = DisruptionsGetAllDisruptionsDisruptionModesEnum(s)
+	case 100:
+		*e = DisruptionsGetAllDisruptionsDisruptionModesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisruptionsGetAllDisruptionsDisruptionModesEnum: %s", s)
+		return fmt.Errorf("invalid value for DisruptionsGetAllDisruptionsDisruptionModesEnum: %v", v)
 	}
 }
 
@@ -76,51 +80,59 @@ const (
 	DisruptionsGetAllDisruptionsDisruptionStatusEnumPlanned DisruptionsGetAllDisruptionsDisruptionStatusEnum = "planned"
 )
 
+func (e DisruptionsGetAllDisruptionsDisruptionStatusEnum) ToPointer() *DisruptionsGetAllDisruptionsDisruptionStatusEnum {
+	return &e
+}
+
 func (e *DisruptionsGetAllDisruptionsDisruptionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "planned":
-		*e = DisruptionsGetAllDisruptionsDisruptionStatusEnum(s)
+		*e = DisruptionsGetAllDisruptionsDisruptionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisruptionsGetAllDisruptionsDisruptionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DisruptionsGetAllDisruptionsDisruptionStatusEnum: %v", v)
 	}
 }
 
-type DisruptionsGetAllDisruptionsRouteTypesEnum string
+type DisruptionsGetAllDisruptionsRouteTypesEnum int
 
 const (
-	DisruptionsGetAllDisruptionsRouteTypesEnumZero  DisruptionsGetAllDisruptionsRouteTypesEnum = "0"
-	DisruptionsGetAllDisruptionsRouteTypesEnumOne   DisruptionsGetAllDisruptionsRouteTypesEnum = "1"
-	DisruptionsGetAllDisruptionsRouteTypesEnumTwo   DisruptionsGetAllDisruptionsRouteTypesEnum = "2"
-	DisruptionsGetAllDisruptionsRouteTypesEnumThree DisruptionsGetAllDisruptionsRouteTypesEnum = "3"
-	DisruptionsGetAllDisruptionsRouteTypesEnumFour  DisruptionsGetAllDisruptionsRouteTypesEnum = "4"
+	DisruptionsGetAllDisruptionsRouteTypesEnumZero  DisruptionsGetAllDisruptionsRouteTypesEnum = 0
+	DisruptionsGetAllDisruptionsRouteTypesEnumOne   DisruptionsGetAllDisruptionsRouteTypesEnum = 1
+	DisruptionsGetAllDisruptionsRouteTypesEnumTwo   DisruptionsGetAllDisruptionsRouteTypesEnum = 2
+	DisruptionsGetAllDisruptionsRouteTypesEnumThree DisruptionsGetAllDisruptionsRouteTypesEnum = 3
+	DisruptionsGetAllDisruptionsRouteTypesEnumFour  DisruptionsGetAllDisruptionsRouteTypesEnum = 4
 )
 
+func (e DisruptionsGetAllDisruptionsRouteTypesEnum) ToPointer() *DisruptionsGetAllDisruptionsRouteTypesEnum {
+	return &e
+}
+
 func (e *DisruptionsGetAllDisruptionsRouteTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
-		*e = DisruptionsGetAllDisruptionsRouteTypesEnum(s)
+	case 4:
+		*e = DisruptionsGetAllDisruptionsRouteTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisruptionsGetAllDisruptionsRouteTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for DisruptionsGetAllDisruptionsRouteTypesEnum: %v", v)
 	}
 }
 

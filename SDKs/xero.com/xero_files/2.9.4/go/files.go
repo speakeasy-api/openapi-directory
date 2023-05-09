@@ -38,7 +38,10 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // By passing in the appropriate options, you can create a new folder
 func (s *files) CreateFileAssociation(ctx context.Context, request operations.CreateFileAssociationRequest, security operations.CreateFileAssociationSecurity) (*operations.CreateFileAssociationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Associations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Associations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Association", "json")
 	if err != nil {
@@ -148,7 +151,10 @@ func (s *files) CreateFolder(ctx context.Context, request operations.CreateFolde
 // Delete a specific file
 func (s *files) DeleteFile(ctx context.Context, request operations.DeleteFileRequest, security operations.DeleteFileSecurity) (*operations.DeleteFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -186,7 +192,10 @@ func (s *files) DeleteFile(ctx context.Context, request operations.DeleteFileReq
 // By passing in the appropriate options, you can create a new folder
 func (s *files) DeleteFileAssociation(ctx context.Context, request operations.DeleteFileAssociationRequest, security operations.DeleteFileAssociationSecurity) (*operations.DeleteFileAssociationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Associations/{ObjectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Associations/{ObjectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -224,7 +233,10 @@ func (s *files) DeleteFileAssociation(ctx context.Context, request operations.De
 // By passing in the appropriate ID, you can delete a folder
 func (s *files) DeleteFolder(ctx context.Context, request operations.DeleteFolderRequest, security operations.DeleteFolderSecurity) (*operations.DeleteFolderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Folders/{FolderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Folders/{FolderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -262,7 +274,10 @@ func (s *files) DeleteFolder(ctx context.Context, request operations.DeleteFolde
 // By passing in the appropriate options,
 func (s *files) GetAssociationsByObject(ctx context.Context, request operations.GetAssociationsByObjectRequest, security operations.GetAssociationsByObjectSecurity) (*operations.GetAssociationsByObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Associations/{ObjectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Associations/{ObjectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -308,7 +323,10 @@ func (s *files) GetAssociationsByObject(ctx context.Context, request operations.
 // GetFile - Retrieves a file by a unique file ID
 func (s *files) GetFile(ctx context.Context, request operations.GetFileRequest, security operations.GetFileSecurity) (*operations.GetFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -355,7 +373,10 @@ func (s *files) GetFile(ctx context.Context, request operations.GetFileRequest, 
 // By passing in the appropriate options,
 func (s *files) GetFileAssociations(ctx context.Context, request operations.GetFileAssociationsRequest, security operations.GetFileAssociationsSecurity) (*operations.GetFileAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Associations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Associations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -402,7 +423,10 @@ func (s *files) GetFileAssociations(ctx context.Context, request operations.GetF
 // By passing in the appropriate options, retrieve data for specific file
 func (s *files) GetFileContent(ctx context.Context, request operations.GetFileContentRequest, security operations.GetFileContentSecurity) (*operations.GetFileContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}/Content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -499,7 +523,10 @@ func (s *files) GetFiles(ctx context.Context, request operations.GetFilesRequest
 // By passing in the appropriate ID, you can search for specific folder
 func (s *files) GetFolder(ctx context.Context, request operations.GetFolderRequest, security operations.GetFolderSecurity) (*operations.GetFolderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Folders/{FolderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Folders/{FolderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -644,7 +671,10 @@ func (s *files) GetInbox(ctx context.Context, request operations.GetInboxRequest
 // Updates file properties of a single file
 func (s *files) UpdateFile(ctx context.Context, request operations.UpdateFileRequest, security operations.UpdateFileSecurity) (*operations.UpdateFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Files/{FileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileObject", "json")
 	if err != nil {
@@ -699,7 +729,10 @@ func (s *files) UpdateFile(ctx context.Context, request operations.UpdateFileReq
 // By passing in the appropriate ID and properties, you can update a folder
 func (s *files) UpdateFolder(ctx context.Context, request operations.UpdateFolderRequest, security operations.UpdateFolderSecurity) (*operations.UpdateFolderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Folders/{FolderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Folders/{FolderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Folder", "json")
 	if err != nil {

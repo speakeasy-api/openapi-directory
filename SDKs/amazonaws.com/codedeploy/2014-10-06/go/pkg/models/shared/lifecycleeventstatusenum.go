@@ -18,12 +18,16 @@ const (
 	LifecycleEventStatusEnumUnknown    LifecycleEventStatusEnum = "Unknown"
 )
 
+func (e LifecycleEventStatusEnum) ToPointer() *LifecycleEventStatusEnum {
+	return &e
+}
+
 func (e *LifecycleEventStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "InProgress":
@@ -35,9 +39,9 @@ func (e *LifecycleEventStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Skipped":
 		fallthrough
 	case "Unknown":
-		*e = LifecycleEventStatusEnum(s)
+		*e = LifecycleEventStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LifecycleEventStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LifecycleEventStatusEnum: %v", v)
 	}
 }

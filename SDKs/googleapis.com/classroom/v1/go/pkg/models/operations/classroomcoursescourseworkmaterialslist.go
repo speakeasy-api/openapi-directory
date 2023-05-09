@@ -33,12 +33,16 @@ const (
 	ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnumDeleted                            ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum = "DELETED"
 )
 
+func (e ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum) ToPointer() *ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum {
+	return &e
+}
+
 func (e *ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COURSEWORK_MATERIAL_STATE_UNSPECIFIED":
 		fallthrough
 	case "PUBLISHED":
@@ -46,10 +50,10 @@ func (e *ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum) Un
 	case "DRAFT":
 		fallthrough
 	case "DELETED":
-		*e = ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum(s)
+		*e = ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassroomCoursesCourseWorkMaterialsListCourseWorkMaterialStatesEnum: %v", v)
 	}
 }
 

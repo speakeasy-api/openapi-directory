@@ -16,17 +16,21 @@ const (
 	DescribeHostedConnectionsXAmzTargetEnumOvertureServiceDescribeHostedConnections DescribeHostedConnectionsXAmzTargetEnum = "OvertureService.DescribeHostedConnections"
 )
 
+func (e DescribeHostedConnectionsXAmzTargetEnum) ToPointer() *DescribeHostedConnectionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeHostedConnectionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.DescribeHostedConnections":
-		*e = DescribeHostedConnectionsXAmzTargetEnum(s)
+		*e = DescribeHostedConnectionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHostedConnectionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHostedConnectionsXAmzTargetEnum: %v", v)
 	}
 }
 

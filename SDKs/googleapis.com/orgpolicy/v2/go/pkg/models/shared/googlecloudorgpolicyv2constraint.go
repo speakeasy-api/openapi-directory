@@ -16,21 +16,25 @@ const (
 	GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnumDeny                         GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnum = "DENY"
 )
 
+func (e GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnum) ToPointer() *GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnum {
+	return &e
+}
+
 func (e *GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONSTRAINT_DEFAULT_UNSPECIFIED":
 		fallthrough
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnum(s)
+		*e = GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnum: %v", v)
 	}
 }
 

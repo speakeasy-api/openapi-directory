@@ -38,19 +38,23 @@ const (
 	AppengineAppsAuthorizedCertificatesGetViewEnumFullCertificate  AppengineAppsAuthorizedCertificatesGetViewEnum = "FULL_CERTIFICATE"
 )
 
+func (e AppengineAppsAuthorizedCertificatesGetViewEnum) ToPointer() *AppengineAppsAuthorizedCertificatesGetViewEnum {
+	return &e
+}
+
 func (e *AppengineAppsAuthorizedCertificatesGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC_CERTIFICATE":
 		fallthrough
 	case "FULL_CERTIFICATE":
-		*e = AppengineAppsAuthorizedCertificatesGetViewEnum(s)
+		*e = AppengineAppsAuthorizedCertificatesGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppengineAppsAuthorizedCertificatesGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for AppengineAppsAuthorizedCertificatesGetViewEnum: %v", v)
 	}
 }
 

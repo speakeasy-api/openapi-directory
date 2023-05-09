@@ -29,12 +29,16 @@ const (
 	ResetInstanceAttributeRequestAttributeEnumDisableAPIStop                    ResetInstanceAttributeRequestAttributeEnum = "disableApiStop"
 )
 
+func (e ResetInstanceAttributeRequestAttributeEnum) ToPointer() *ResetInstanceAttributeRequestAttributeEnum {
+	return &e
+}
+
 func (e *ResetInstanceAttributeRequestAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instanceType":
 		fallthrough
 	case "kernel":
@@ -66,10 +70,10 @@ func (e *ResetInstanceAttributeRequestAttributeEnum) UnmarshalJSON(data []byte) 
 	case "enclaveOptions":
 		fallthrough
 	case "disableApiStop":
-		*e = ResetInstanceAttributeRequestAttributeEnum(s)
+		*e = ResetInstanceAttributeRequestAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResetInstanceAttributeRequestAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResetInstanceAttributeRequestAttributeEnum: %v", v)
 	}
 }
 

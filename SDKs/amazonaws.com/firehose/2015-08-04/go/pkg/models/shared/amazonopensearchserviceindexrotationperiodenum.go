@@ -17,12 +17,16 @@ const (
 	AmazonopensearchserviceIndexRotationPeriodEnumOneMonth   AmazonopensearchserviceIndexRotationPeriodEnum = "OneMonth"
 )
 
+func (e AmazonopensearchserviceIndexRotationPeriodEnum) ToPointer() *AmazonopensearchserviceIndexRotationPeriodEnum {
+	return &e
+}
+
 func (e *AmazonopensearchserviceIndexRotationPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NoRotation":
 		fallthrough
 	case "OneHour":
@@ -32,9 +36,9 @@ func (e *AmazonopensearchserviceIndexRotationPeriodEnum) UnmarshalJSON(data []by
 	case "OneWeek":
 		fallthrough
 	case "OneMonth":
-		*e = AmazonopensearchserviceIndexRotationPeriodEnum(s)
+		*e = AmazonopensearchserviceIndexRotationPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AmazonopensearchserviceIndexRotationPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for AmazonopensearchserviceIndexRotationPeriodEnum: %v", v)
 	}
 }

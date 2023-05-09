@@ -16,19 +16,23 @@ const (
 	PostV1OrderScreenFormatEnumXML  PostV1OrderScreenFormatEnum = "xml"
 )
 
+func (e PostV1OrderScreenFormatEnum) ToPointer() *PostV1OrderScreenFormatEnum {
+	return &e
+}
+
 func (e *PostV1OrderScreenFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = PostV1OrderScreenFormatEnum(s)
+		*e = PostV1OrderScreenFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostV1OrderScreenFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PostV1OrderScreenFormatEnum: %v", v)
 	}
 }
 

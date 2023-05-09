@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetAgentsSecurity struct {
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type GetAgentsResponse struct {
 	// array of agents
 	Agents      []shared.Agent

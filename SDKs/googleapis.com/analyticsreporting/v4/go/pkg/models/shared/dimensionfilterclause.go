@@ -16,21 +16,25 @@ const (
 	DimensionFilterClauseOperatorEnumAnd                 DimensionFilterClauseOperatorEnum = "AND"
 )
 
+func (e DimensionFilterClauseOperatorEnum) ToPointer() *DimensionFilterClauseOperatorEnum {
+	return &e
+}
+
 func (e *DimensionFilterClauseOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATOR_UNSPECIFIED":
 		fallthrough
 	case "OR":
 		fallthrough
 	case "AND":
-		*e = DimensionFilterClauseOperatorEnum(s)
+		*e = DimensionFilterClauseOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DimensionFilterClauseOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for DimensionFilterClauseOperatorEnum: %v", v)
 	}
 }
 

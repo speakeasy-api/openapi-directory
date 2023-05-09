@@ -16,17 +16,21 @@ const (
 	ListApplicationVersionsXAmzTargetEnumKinesisAnalytics20180523ListApplicationVersions ListApplicationVersionsXAmzTargetEnum = "KinesisAnalytics_20180523.ListApplicationVersions"
 )
 
+func (e ListApplicationVersionsXAmzTargetEnum) ToPointer() *ListApplicationVersionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListApplicationVersionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20180523.ListApplicationVersions":
-		*e = ListApplicationVersionsXAmzTargetEnum(s)
+		*e = ListApplicationVersionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListApplicationVersionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListApplicationVersionsXAmzTargetEnum: %v", v)
 	}
 }
 

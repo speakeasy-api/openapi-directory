@@ -19,12 +19,16 @@ const (
 	BelegBelegTypenEnumTraining                  BelegBelegTypenEnum = "Training"
 )
 
+func (e BelegBelegTypenEnum) ToPointer() *BelegBelegTypenEnum {
+	return &e
+}
+
 func (e *BelegBelegTypenEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Belegkreisinitialisierung":
 		fallthrough
 	case "Kassenbericht":
@@ -38,10 +42,10 @@ func (e *BelegBelegTypenEnum) UnmarshalJSON(data []byte) error {
 	case "Systembeleg":
 		fallthrough
 	case "Training":
-		*e = BelegBelegTypenEnum(s)
+		*e = BelegBelegTypenEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BelegBelegTypenEnum: %s", s)
+		return fmt.Errorf("invalid value for BelegBelegTypenEnum: %v", v)
 	}
 }
 

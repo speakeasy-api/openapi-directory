@@ -49,12 +49,16 @@ const (
 	DevicesRegisterUserForDevice404ApplicationJSONCodeEnumTooManyRequests     DevicesRegisterUserForDevice404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesRegisterUserForDevice404ApplicationJSONCodeEnum) ToPointer() *DevicesRegisterUserForDevice404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *DevicesRegisterUserForDevice404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -68,10 +72,10 @@ func (e *DevicesRegisterUserForDevice404ApplicationJSONCodeEnum) UnmarshalJSON(d
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesRegisterUserForDevice404ApplicationJSONCodeEnum(s)
+		*e = DevicesRegisterUserForDevice404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesRegisterUserForDevice404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesRegisterUserForDevice404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

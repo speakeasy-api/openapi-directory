@@ -14,18 +14,22 @@ const (
 	ThirdPartyFirewallEnumFortigateCloudNativeFirewall ThirdPartyFirewallEnum = "FORTIGATE_CLOUD_NATIVE_FIREWALL"
 )
 
+func (e ThirdPartyFirewallEnum) ToPointer() *ThirdPartyFirewallEnum {
+	return &e
+}
+
 func (e *ThirdPartyFirewallEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PALO_ALTO_NETWORKS_CLOUD_NGFW":
 		fallthrough
 	case "FORTIGATE_CLOUD_NATIVE_FIREWALL":
-		*e = ThirdPartyFirewallEnum(s)
+		*e = ThirdPartyFirewallEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThirdPartyFirewallEnum: %s", s)
+		return fmt.Errorf("invalid value for ThirdPartyFirewallEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	ListServiceInstanceOutputsXAmzTargetEnumAwsProton20200720ListServiceInstanceOutputs ListServiceInstanceOutputsXAmzTargetEnum = "AwsProton20200720.ListServiceInstanceOutputs"
 )
 
+func (e ListServiceInstanceOutputsXAmzTargetEnum) ToPointer() *ListServiceInstanceOutputsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListServiceInstanceOutputsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.ListServiceInstanceOutputs":
-		*e = ListServiceInstanceOutputsXAmzTargetEnum(s)
+		*e = ListServiceInstanceOutputsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListServiceInstanceOutputsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListServiceInstanceOutputsXAmzTargetEnum: %v", v)
 	}
 }
 

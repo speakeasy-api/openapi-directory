@@ -18,21 +18,25 @@ const (
 	UpdateAssessmentControlSetStatusRequestBodyStatusEnumReviewed    UpdateAssessmentControlSetStatusRequestBodyStatusEnum = "REVIEWED"
 )
 
+func (e UpdateAssessmentControlSetStatusRequestBodyStatusEnum) ToPointer() *UpdateAssessmentControlSetStatusRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *UpdateAssessmentControlSetStatusRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "UNDER_REVIEW":
 		fallthrough
 	case "REVIEWED":
-		*e = UpdateAssessmentControlSetStatusRequestBodyStatusEnum(s)
+		*e = UpdateAssessmentControlSetStatusRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAssessmentControlSetStatusRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAssessmentControlSetStatusRequestBodyStatusEnum: %v", v)
 	}
 }
 

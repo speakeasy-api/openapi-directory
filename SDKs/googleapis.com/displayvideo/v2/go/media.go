@@ -34,7 +34,10 @@ func newMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DisplayvideoMediaDownload - Downloads media. Download is supported on the URI `/download/{resource_name=**}?alt=media.` **Note**: Download requests will not be successful without including `alt=media` query string.
 func (s *media) DisplayvideoMediaDownload(ctx context.Context, request operations.DisplayvideoMediaDownloadRequest, security operations.DisplayvideoMediaDownloadSecurity) (*operations.DisplayvideoMediaDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/download/{resourceName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/download/{resourceName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *media) DisplayvideoMediaDownload(ctx context.Context, request operation
 // DisplayvideoMediaUpload - Uploads media. Upload is supported on the URI `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be successful without including `upload_type=media` query string.
 func (s *media) DisplayvideoMediaUpload(ctx context.Context, request operations.DisplayvideoMediaUploadRequest, security operations.DisplayvideoMediaUploadSecurity) (*operations.DisplayvideoMediaUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/media/{resourceName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/media/{resourceName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

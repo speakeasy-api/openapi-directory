@@ -18,12 +18,16 @@ const (
 	CompilationJobStatusEnumStopped    CompilationJobStatusEnum = "STOPPED"
 )
 
+func (e CompilationJobStatusEnum) ToPointer() *CompilationJobStatusEnum {
+	return &e
+}
+
 func (e *CompilationJobStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INPROGRESS":
 		fallthrough
 	case "COMPLETED":
@@ -35,9 +39,9 @@ func (e *CompilationJobStatusEnum) UnmarshalJSON(data []byte) error {
 	case "STOPPING":
 		fallthrough
 	case "STOPPED":
-		*e = CompilationJobStatusEnum(s)
+		*e = CompilationJobStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompilationJobStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompilationJobStatusEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	MediaStorageConfigurationStatusEnumDisabled MediaStorageConfigurationStatusEnum = "DISABLED"
 )
 
+func (e MediaStorageConfigurationStatusEnum) ToPointer() *MediaStorageConfigurationStatusEnum {
+	return &e
+}
+
 func (e *MediaStorageConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = MediaStorageConfigurationStatusEnum(s)
+		*e = MediaStorageConfigurationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaStorageConfigurationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaStorageConfigurationStatusEnum: %v", v)
 	}
 }

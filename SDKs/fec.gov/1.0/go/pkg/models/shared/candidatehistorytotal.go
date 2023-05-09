@@ -24,6 +24,12 @@ type CandidateHistoryTotal struct {
 	CandidateElectionYear *int `json:"candidate_election_year,omitempty"`
 	// A unique identifier assigned to each candidate registered with the FEC.
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
+	// First character indicates office - [P]residential, [H]ouse, [S]enate].
+	// Second character is the last digit of the two-year period the ID was created.
+	// Third and fourth is the candidate state. Presidential IDs don't have state.
+	// Fifth and sixth is the district when the candidate first ran. This does not change if the
+	// candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+	// The rest is sequence.
 	//
 	CandidateID string `json:"candidate_id"`
 	// True indicates that a candidate is inactive.
@@ -115,6 +121,8 @@ type CandidateHistoryTotal struct {
 	RoundedElectionYears []int `json:"rounded_election_years,omitempty"`
 	// US state or territory where a candidate runs for office
 	State *string `json:"state,omitempty"`
+	// US state or territory where a candidate runs for office
+	StateFull *string `json:"state_full,omitempty"`
 	// Transfers from authorized committees
 	TransfersFromOtherAuthorizedCommittee *float64 `json:"transfers_from_other_authorized_committee,omitempty"`
 	// Two-year election cycle in which a candidate runs for office.

@@ -16,17 +16,21 @@ const (
 	ImportFirewallDomainsXAmzTargetEnumRoute53ResolverImportFirewallDomains ImportFirewallDomainsXAmzTargetEnum = "Route53Resolver.ImportFirewallDomains"
 )
 
+func (e ImportFirewallDomainsXAmzTargetEnum) ToPointer() *ImportFirewallDomainsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportFirewallDomainsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.ImportFirewallDomains":
-		*e = ImportFirewallDomainsXAmzTargetEnum(s)
+		*e = ImportFirewallDomainsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportFirewallDomainsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportFirewallDomainsXAmzTargetEnum: %v", v)
 	}
 }
 

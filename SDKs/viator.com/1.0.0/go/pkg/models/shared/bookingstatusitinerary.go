@@ -15,19 +15,23 @@ const (
 	BookingStatusItineraryLevelEnumItinerary BookingStatusItineraryLevelEnum = "ITINERARY"
 )
 
+func (e BookingStatusItineraryLevelEnum) ToPointer() *BookingStatusItineraryLevelEnum {
+	return &e
+}
+
 func (e *BookingStatusItineraryLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ITEM":
 		fallthrough
 	case "ITINERARY":
-		*e = BookingStatusItineraryLevelEnum(s)
+		*e = BookingStatusItineraryLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BookingStatusItineraryLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for BookingStatusItineraryLevelEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	BookingStatusItineraryTypeEnumPendingAmend BookingStatusItineraryTypeEnum = "PENDING_AMEND"
 )
 
+func (e BookingStatusItineraryTypeEnum) ToPointer() *BookingStatusItineraryTypeEnum {
+	return &e
+}
+
 func (e *BookingStatusItineraryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WAITING":
 		fallthrough
 	case "CONFIRMED":
@@ -64,10 +72,10 @@ func (e *BookingStatusItineraryTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AMENDED":
 		fallthrough
 	case "PENDING_AMEND":
-		*e = BookingStatusItineraryTypeEnum(s)
+		*e = BookingStatusItineraryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BookingStatusItineraryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BookingStatusItineraryTypeEnum: %v", v)
 	}
 }
 

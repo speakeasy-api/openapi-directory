@@ -22,12 +22,16 @@ const (
 	TriggerEventTypeEnumInstanceReady      TriggerEventTypeEnum = "InstanceReady"
 )
 
+func (e TriggerEventTypeEnum) ToPointer() *TriggerEventTypeEnum {
+	return &e
+}
+
 func (e *TriggerEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeploymentStart":
 		fallthrough
 	case "DeploymentSuccess":
@@ -47,9 +51,9 @@ func (e *TriggerEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "InstanceFailure":
 		fallthrough
 	case "InstanceReady":
-		*e = TriggerEventTypeEnum(s)
+		*e = TriggerEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TriggerEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TriggerEventTypeEnum: %v", v)
 	}
 }

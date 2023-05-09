@@ -34,7 +34,10 @@ func newDomain(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DomainsrdapDomainGet - Look up RDAP information for a domain by name.
 func (s *domain) DomainsrdapDomainGet(ctx context.Context, request operations.DomainsrdapDomainGetRequest) (*operations.DomainsrdapDomainGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/domain/{domainName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/domain/{domainName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

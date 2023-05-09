@@ -16,17 +16,21 @@ const (
 	PutAlarmXAmzTargetEnumLightsail20161128PutAlarm PutAlarmXAmzTargetEnum = "Lightsail_20161128.PutAlarm"
 )
 
+func (e PutAlarmXAmzTargetEnum) ToPointer() *PutAlarmXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutAlarmXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.PutAlarm":
-		*e = PutAlarmXAmzTargetEnum(s)
+		*e = PutAlarmXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutAlarmXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutAlarmXAmzTargetEnum: %v", v)
 	}
 }
 

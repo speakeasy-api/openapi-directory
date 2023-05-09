@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -14,6 +15,7 @@ pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/cloudkmsprojectslocationsekmconnectionscreate.go
 pkg/models/operations/cloudkmsprojectslocationsekmconnectionslist.go
+pkg/models/operations/cloudkmsprojectslocationsekmconnectionsverifyconnectivity.go
 pkg/models/operations/cloudkmsprojectslocationsgeneraterandombytes.go
 pkg/models/operations/cloudkmsprojectslocationskeyringscreate.go
 pkg/models/operations/cloudkmsprojectslocationskeyringscryptokeyscreate.go
@@ -87,4 +89,6 @@ pkg/models/shared/testiampermissionsrequest.go
 pkg/models/shared/listkeyringsresponse.go
 pkg/models/shared/listlocationsresponse.go
 pkg/models/shared/location.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

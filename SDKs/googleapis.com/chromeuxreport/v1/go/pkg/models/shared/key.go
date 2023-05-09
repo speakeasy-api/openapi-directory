@@ -17,12 +17,16 @@ const (
 	KeyFormFactorEnumTablet         KeyFormFactorEnum = "TABLET"
 )
 
+func (e KeyFormFactorEnum) ToPointer() *KeyFormFactorEnum {
+	return &e
+}
+
 func (e *KeyFormFactorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL_FORM_FACTORS":
 		fallthrough
 	case "PHONE":
@@ -30,10 +34,10 @@ func (e *KeyFormFactorEnum) UnmarshalJSON(data []byte) error {
 	case "DESKTOP":
 		fallthrough
 	case "TABLET":
-		*e = KeyFormFactorEnum(s)
+		*e = KeyFormFactorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyFormFactorEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyFormFactorEnum: %v", v)
 	}
 }
 

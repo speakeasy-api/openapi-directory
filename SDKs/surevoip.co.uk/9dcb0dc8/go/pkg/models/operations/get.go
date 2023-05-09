@@ -18,12 +18,16 @@ const (
 	GetContentTypeEnumApplicationXML  GetContentTypeEnum = "application/xml"
 )
 
+func (e GetContentTypeEnum) ToPointer() *GetContentTypeEnum {
+	return &e
+}
+
 func (e *GetContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "application/json":
 		fallthrough
 	case "text/html":
@@ -31,10 +35,10 @@ func (e *GetContentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "text/xml":
 		fallthrough
 	case "application/xml":
-		*e = GetContentTypeEnum(s)
+		*e = GetContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetContentTypeEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	GetHypermediaEnumNo  GetHypermediaEnum = "no"
 )
 
+func (e GetHypermediaEnum) ToPointer() *GetHypermediaEnum {
+	return &e
+}
+
 func (e *GetHypermediaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case "no":
-		*e = GetHypermediaEnum(s)
+		*e = GetHypermediaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHypermediaEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHypermediaEnum: %v", v)
 	}
 }
 
@@ -75,17 +83,21 @@ const (
 	Get200ApplicationJSONStatusEnumOk Get200ApplicationJSONStatusEnum = "OK"
 )
 
+func (e Get200ApplicationJSONStatusEnum) ToPointer() *Get200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *Get200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
-		*e = Get200ApplicationJSONStatusEnum(s)
+		*e = Get200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Get200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for Get200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

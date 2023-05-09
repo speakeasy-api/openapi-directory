@@ -14,18 +14,22 @@ const (
 	StreamViewEnumDesktop StreamViewEnum = "DESKTOP"
 )
 
+func (e StreamViewEnum) ToPointer() *StreamViewEnum {
+	return &e
+}
+
 func (e *StreamViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP":
 		fallthrough
 	case "DESKTOP":
-		*e = StreamViewEnum(s)
+		*e = StreamViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamViewEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamViewEnum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newGrants(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // AndroidpublisherGrantsCreate - Grant access for a user to the given package.
 func (s *grants) AndroidpublisherGrantsCreate(ctx context.Context, request operations.AndroidpublisherGrantsCreateRequest, security operations.AndroidpublisherGrantsCreateSecurity) (*operations.AndroidpublisherGrantsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{parent}/grants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{parent}/grants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Grant", "json")
 	if err != nil {

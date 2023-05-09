@@ -17,12 +17,16 @@ const (
 	LivingAreaSleepingBedsCountExceptionEnumDependentOnDayOfWeek LivingAreaSleepingBedsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingBedsCountExceptionEnum) ToPointer() *LivingAreaSleepingBedsCountExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingBedsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *LivingAreaSleepingBedsCountExceptionEnum) UnmarshalJSON(data []byte) er
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingBedsCountExceptionEnum(s)
+		*e = LivingAreaSleepingBedsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingBedsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingBedsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	LivingAreaSleepingBunkBedsCountExceptionEnumDependentOnDayOfWeek LivingAreaSleepingBunkBedsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingBunkBedsCountExceptionEnum) ToPointer() *LivingAreaSleepingBunkBedsCountExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingBunkBedsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *LivingAreaSleepingBunkBedsCountExceptionEnum) UnmarshalJSON(data []byte
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingBunkBedsCountExceptionEnum(s)
+		*e = LivingAreaSleepingBunkBedsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingBunkBedsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingBunkBedsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	LivingAreaSleepingCribsCountExceptionEnumDependentOnDayOfWeek LivingAreaSleepingCribsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingCribsCountExceptionEnum) ToPointer() *LivingAreaSleepingCribsCountExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingCribsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *LivingAreaSleepingCribsCountExceptionEnum) UnmarshalJSON(data []byte) e
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingCribsCountExceptionEnum(s)
+		*e = LivingAreaSleepingCribsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingCribsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingCribsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	LivingAreaSleepingDoubleBedsCountExceptionEnumDependentOnDayOfWeek LivingAreaSleepingDoubleBedsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingDoubleBedsCountExceptionEnum) ToPointer() *LivingAreaSleepingDoubleBedsCountExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingDoubleBedsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *LivingAreaSleepingDoubleBedsCountExceptionEnum) UnmarshalJSON(data []by
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingDoubleBedsCountExceptionEnum(s)
+		*e = LivingAreaSleepingDoubleBedsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingDoubleBedsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingDoubleBedsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	LivingAreaSleepingFeatherPillowsExceptionEnumDependentOnDayOfWeek LivingAreaSleepingFeatherPillowsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingFeatherPillowsExceptionEnum) ToPointer() *LivingAreaSleepingFeatherPillowsExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingFeatherPillowsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *LivingAreaSleepingFeatherPillowsExceptionEnum) UnmarshalJSON(data []byt
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingFeatherPillowsExceptionEnum(s)
+		*e = LivingAreaSleepingFeatherPillowsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingFeatherPillowsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingFeatherPillowsExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	LivingAreaSleepingHypoallergenicBeddingExceptionEnumDependentOnDayOfWeek LivingAreaSleepingHypoallergenicBeddingExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingHypoallergenicBeddingExceptionEnum) ToPointer() *LivingAreaSleepingHypoallergenicBeddingExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingHypoallergenicBeddingExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *LivingAreaSleepingHypoallergenicBeddingExceptionEnum) UnmarshalJSON(dat
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingHypoallergenicBeddingExceptionEnum(s)
+		*e = LivingAreaSleepingHypoallergenicBeddingExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingHypoallergenicBeddingExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingHypoallergenicBeddingExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	LivingAreaSleepingKingBedsCountExceptionEnumDependentOnDayOfWeek LivingAreaSleepingKingBedsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingKingBedsCountExceptionEnum) ToPointer() *LivingAreaSleepingKingBedsCountExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingKingBedsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *LivingAreaSleepingKingBedsCountExceptionEnum) UnmarshalJSON(data []byte
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingKingBedsCountExceptionEnum(s)
+		*e = LivingAreaSleepingKingBedsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingKingBedsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingKingBedsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -227,12 +255,16 @@ const (
 	LivingAreaSleepingMemoryFoamPillowsExceptionEnumDependentOnDayOfWeek LivingAreaSleepingMemoryFoamPillowsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingMemoryFoamPillowsExceptionEnum) ToPointer() *LivingAreaSleepingMemoryFoamPillowsExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingMemoryFoamPillowsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -240,10 +272,10 @@ func (e *LivingAreaSleepingMemoryFoamPillowsExceptionEnum) UnmarshalJSON(data []
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingMemoryFoamPillowsExceptionEnum(s)
+		*e = LivingAreaSleepingMemoryFoamPillowsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingMemoryFoamPillowsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingMemoryFoamPillowsExceptionEnum: %v", v)
 	}
 }
 
@@ -257,12 +289,16 @@ const (
 	LivingAreaSleepingOtherBedsCountExceptionEnumDependentOnDayOfWeek LivingAreaSleepingOtherBedsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingOtherBedsCountExceptionEnum) ToPointer() *LivingAreaSleepingOtherBedsCountExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingOtherBedsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -270,10 +306,10 @@ func (e *LivingAreaSleepingOtherBedsCountExceptionEnum) UnmarshalJSON(data []byt
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingOtherBedsCountExceptionEnum(s)
+		*e = LivingAreaSleepingOtherBedsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingOtherBedsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingOtherBedsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -287,12 +323,16 @@ const (
 	LivingAreaSleepingQueenBedsCountExceptionEnumDependentOnDayOfWeek LivingAreaSleepingQueenBedsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingQueenBedsCountExceptionEnum) ToPointer() *LivingAreaSleepingQueenBedsCountExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingQueenBedsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -300,10 +340,10 @@ func (e *LivingAreaSleepingQueenBedsCountExceptionEnum) UnmarshalJSON(data []byt
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingQueenBedsCountExceptionEnum(s)
+		*e = LivingAreaSleepingQueenBedsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingQueenBedsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingQueenBedsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -317,12 +357,16 @@ const (
 	LivingAreaSleepingRollAwayBedsCountExceptionEnumDependentOnDayOfWeek LivingAreaSleepingRollAwayBedsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingRollAwayBedsCountExceptionEnum) ToPointer() *LivingAreaSleepingRollAwayBedsCountExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingRollAwayBedsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -330,10 +374,10 @@ func (e *LivingAreaSleepingRollAwayBedsCountExceptionEnum) UnmarshalJSON(data []
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingRollAwayBedsCountExceptionEnum(s)
+		*e = LivingAreaSleepingRollAwayBedsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingRollAwayBedsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingRollAwayBedsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -347,12 +391,16 @@ const (
 	LivingAreaSleepingSingleOrTwinBedsCountExceptionEnumDependentOnDayOfWeek LivingAreaSleepingSingleOrTwinBedsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingSingleOrTwinBedsCountExceptionEnum) ToPointer() *LivingAreaSleepingSingleOrTwinBedsCountExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingSingleOrTwinBedsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -360,10 +408,10 @@ func (e *LivingAreaSleepingSingleOrTwinBedsCountExceptionEnum) UnmarshalJSON(dat
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingSingleOrTwinBedsCountExceptionEnum(s)
+		*e = LivingAreaSleepingSingleOrTwinBedsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingSingleOrTwinBedsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingSingleOrTwinBedsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -377,12 +425,16 @@ const (
 	LivingAreaSleepingSofaBedsCountExceptionEnumDependentOnDayOfWeek LivingAreaSleepingSofaBedsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingSofaBedsCountExceptionEnum) ToPointer() *LivingAreaSleepingSofaBedsCountExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingSofaBedsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -390,10 +442,10 @@ func (e *LivingAreaSleepingSofaBedsCountExceptionEnum) UnmarshalJSON(data []byte
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingSofaBedsCountExceptionEnum(s)
+		*e = LivingAreaSleepingSofaBedsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingSofaBedsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingSofaBedsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -407,12 +459,16 @@ const (
 	LivingAreaSleepingSyntheticPillowsExceptionEnumDependentOnDayOfWeek LivingAreaSleepingSyntheticPillowsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaSleepingSyntheticPillowsExceptionEnum) ToPointer() *LivingAreaSleepingSyntheticPillowsExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaSleepingSyntheticPillowsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -420,10 +476,10 @@ func (e *LivingAreaSleepingSyntheticPillowsExceptionEnum) UnmarshalJSON(data []b
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaSleepingSyntheticPillowsExceptionEnum(s)
+		*e = LivingAreaSleepingSyntheticPillowsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaSleepingSyntheticPillowsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaSleepingSyntheticPillowsExceptionEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTDeleteDBProxyActionEnumDeleteDbProxy POSTDeleteDBProxyActionEnum = "DeleteDBProxy"
 )
 
+func (e POSTDeleteDBProxyActionEnum) ToPointer() *POSTDeleteDBProxyActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteDBProxyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteDBProxy":
-		*e = POSTDeleteDBProxyActionEnum(s)
+		*e = POSTDeleteDBProxyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteDBProxyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteDBProxyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteDBProxyVersionEnumTwoThousandAndFourteen1031 POSTDeleteDBProxyVersionEnum = "2014-10-31"
 )
 
+func (e POSTDeleteDBProxyVersionEnum) ToPointer() *POSTDeleteDBProxyVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteDBProxyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTDeleteDBProxyVersionEnum(s)
+		*e = POSTDeleteDBProxyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteDBProxyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteDBProxyVersionEnum: %v", v)
 	}
 }
 

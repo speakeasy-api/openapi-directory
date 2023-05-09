@@ -35,12 +35,16 @@ const (
 	AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -54,10 +58,10 @@ func (e *AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum) UnmarshalJ
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsTransferOwnershipRawDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -95,12 +99,16 @@ const (
 	AppsTransferOwnershipRaw200ApplicationJSONMemberPermissionsEnumTester    AppsTransferOwnershipRaw200ApplicationJSONMemberPermissionsEnum = "tester"
 )
 
+func (e AppsTransferOwnershipRaw200ApplicationJSONMemberPermissionsEnum) ToPointer() *AppsTransferOwnershipRaw200ApplicationJSONMemberPermissionsEnum {
+	return &e
+}
+
 func (e *AppsTransferOwnershipRaw200ApplicationJSONMemberPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
@@ -108,10 +116,10 @@ func (e *AppsTransferOwnershipRaw200ApplicationJSONMemberPermissionsEnum) Unmars
 	case "viewer":
 		fallthrough
 	case "tester":
-		*e = AppsTransferOwnershipRaw200ApplicationJSONMemberPermissionsEnum(s)
+		*e = AppsTransferOwnershipRaw200ApplicationJSONMemberPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsTransferOwnershipRaw200ApplicationJSONMemberPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsTransferOwnershipRaw200ApplicationJSONMemberPermissionsEnum: %v", v)
 	}
 }
 
@@ -124,21 +132,25 @@ const (
 	AppsTransferOwnershipRaw200ApplicationJSONOriginEnumCodepush  AppsTransferOwnershipRaw200ApplicationJSONOriginEnum = "codepush"
 )
 
+func (e AppsTransferOwnershipRaw200ApplicationJSONOriginEnum) ToPointer() *AppsTransferOwnershipRaw200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *AppsTransferOwnershipRaw200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
 		fallthrough
 	case "codepush":
-		*e = AppsTransferOwnershipRaw200ApplicationJSONOriginEnum(s)
+		*e = AppsTransferOwnershipRaw200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsTransferOwnershipRaw200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsTransferOwnershipRaw200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -156,12 +168,16 @@ const (
 	AppsTransferOwnershipRaw200ApplicationJSONOsEnumCustom  AppsTransferOwnershipRaw200ApplicationJSONOsEnum = "Custom"
 )
 
+func (e AppsTransferOwnershipRaw200ApplicationJSONOsEnum) ToPointer() *AppsTransferOwnershipRaw200ApplicationJSONOsEnum {
+	return &e
+}
+
 func (e *AppsTransferOwnershipRaw200ApplicationJSONOsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Android":
 		fallthrough
 	case "iOS":
@@ -177,10 +193,10 @@ func (e *AppsTransferOwnershipRaw200ApplicationJSONOsEnum) UnmarshalJSON(data []
 	case "Linux":
 		fallthrough
 	case "Custom":
-		*e = AppsTransferOwnershipRaw200ApplicationJSONOsEnum(s)
+		*e = AppsTransferOwnershipRaw200ApplicationJSONOsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsTransferOwnershipRaw200ApplicationJSONOsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsTransferOwnershipRaw200ApplicationJSONOsEnum: %v", v)
 	}
 }
 
@@ -192,19 +208,23 @@ const (
 	AppsTransferOwnershipRaw200ApplicationJSONOwnerTypeEnumUser AppsTransferOwnershipRaw200ApplicationJSONOwnerTypeEnum = "user"
 )
 
+func (e AppsTransferOwnershipRaw200ApplicationJSONOwnerTypeEnum) ToPointer() *AppsTransferOwnershipRaw200ApplicationJSONOwnerTypeEnum {
+	return &e
+}
+
 func (e *AppsTransferOwnershipRaw200ApplicationJSONOwnerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "org":
 		fallthrough
 	case "user":
-		*e = AppsTransferOwnershipRaw200ApplicationJSONOwnerTypeEnum(s)
+		*e = AppsTransferOwnershipRaw200ApplicationJSONOwnerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsTransferOwnershipRaw200ApplicationJSONOwnerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsTransferOwnershipRaw200ApplicationJSONOwnerTypeEnum: %v", v)
 	}
 }
 
@@ -242,12 +262,16 @@ const (
 	AppsTransferOwnershipRaw200ApplicationJSONPlatformEnumCustom          AppsTransferOwnershipRaw200ApplicationJSONPlatformEnum = "Custom"
 )
 
+func (e AppsTransferOwnershipRaw200ApplicationJSONPlatformEnum) ToPointer() *AppsTransferOwnershipRaw200ApplicationJSONPlatformEnum {
+	return &e
+}
+
 func (e *AppsTransferOwnershipRaw200ApplicationJSONPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Java":
 		fallthrough
 	case "Objective-C-Swift":
@@ -271,10 +295,10 @@ func (e *AppsTransferOwnershipRaw200ApplicationJSONPlatformEnum) UnmarshalJSON(d
 	case "Unknown":
 		fallthrough
 	case "Custom":
-		*e = AppsTransferOwnershipRaw200ApplicationJSONPlatformEnum(s)
+		*e = AppsTransferOwnershipRaw200ApplicationJSONPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsTransferOwnershipRaw200ApplicationJSONPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsTransferOwnershipRaw200ApplicationJSONPlatformEnum: %v", v)
 	}
 }
 

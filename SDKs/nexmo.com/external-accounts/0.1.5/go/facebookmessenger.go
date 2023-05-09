@@ -120,7 +120,10 @@ func (s *facebookMessenger) CreateMessengerAccount(ctx context.Context, request 
 // DeleteMessengerAccount - Delete a Messenger account
 func (s *facebookMessenger) DeleteMessengerAccount(ctx context.Context, request operations.DeleteMessengerAccountRequest, security operations.DeleteMessengerAccountSecurity) (*operations.DeleteMessengerAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messenger/{external_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/messenger/{external_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -177,7 +180,10 @@ func (s *facebookMessenger) DeleteMessengerAccount(ctx context.Context, request 
 // GetMessengerAccount - Retrieve a Messenger account
 func (s *facebookMessenger) GetMessengerAccount(ctx context.Context, request operations.GetMessengerAccountRequest, security operations.GetMessengerAccountSecurity) (*operations.GetMessengerAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messenger/{external_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/messenger/{external_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -232,7 +238,10 @@ func (s *facebookMessenger) GetMessengerAccount(ctx context.Context, request ope
 // UpdateMessengerAccount - Update a Messenger account
 func (s *facebookMessenger) UpdateMessengerAccount(ctx context.Context, request operations.UpdateMessengerAccountRequest, security operations.UpdateMessengerAccountSecurity) (*operations.UpdateMessengerAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messenger/{external_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/messenger/{external_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

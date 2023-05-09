@@ -45,6 +45,8 @@ type MeetingSetting struct {
 	PrimaryCalendarID *string
 	// Display name of the primary calendar
 	PrimaryCalendarName *string
+	// Determines if a user enabled reschedule meetings feature
+	RescheduleMeetingsEnabled *bool
 	// Determines if meetings are scheduled with a 15 minute buffer between them
 	ScheduleBufferEnabled *bool
 	// The number of hours in advance a user requires someone to a book a meeting with them

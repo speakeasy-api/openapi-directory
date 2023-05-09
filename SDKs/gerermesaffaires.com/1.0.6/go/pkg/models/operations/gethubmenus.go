@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type GetHubMenusSecurity struct {
+	GmaAuth string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetHubMenus200ApplicationJSONMenus struct {
 	Class *string `json:"Class,omitempty"`
 	ID    *string `json:"Id,omitempty"`

@@ -14,18 +14,22 @@ const (
 	LatestInferenceResultEnumNormal    LatestInferenceResultEnum = "NORMAL"
 )
 
+func (e LatestInferenceResultEnum) ToPointer() *LatestInferenceResultEnum {
+	return &e
+}
+
 func (e *LatestInferenceResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANOMALOUS":
 		fallthrough
 	case "NORMAL":
-		*e = LatestInferenceResultEnum(s)
+		*e = LatestInferenceResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LatestInferenceResultEnum: %s", s)
+		return fmt.Errorf("invalid value for LatestInferenceResultEnum: %v", v)
 	}
 }

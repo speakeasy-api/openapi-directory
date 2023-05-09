@@ -14,17 +14,21 @@ const (
 	CreateInstanceExportTaskResultExportTaskExportToS3TaskContainerFormatEnumOva CreateInstanceExportTaskResultExportTaskExportToS3TaskContainerFormatEnum = "ova"
 )
 
+func (e CreateInstanceExportTaskResultExportTaskExportToS3TaskContainerFormatEnum) ToPointer() *CreateInstanceExportTaskResultExportTaskExportToS3TaskContainerFormatEnum {
+	return &e
+}
+
 func (e *CreateInstanceExportTaskResultExportTaskExportToS3TaskContainerFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ova":
-		*e = CreateInstanceExportTaskResultExportTaskExportToS3TaskContainerFormatEnum(s)
+		*e = CreateInstanceExportTaskResultExportTaskExportToS3TaskContainerFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInstanceExportTaskResultExportTaskExportToS3TaskContainerFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInstanceExportTaskResultExportTaskExportToS3TaskContainerFormatEnum: %v", v)
 	}
 }
 
@@ -37,21 +41,25 @@ const (
 	CreateInstanceExportTaskResultExportTaskExportToS3TaskDiskImageFormatEnumVhd  CreateInstanceExportTaskResultExportTaskExportToS3TaskDiskImageFormatEnum = "VHD"
 )
 
+func (e CreateInstanceExportTaskResultExportTaskExportToS3TaskDiskImageFormatEnum) ToPointer() *CreateInstanceExportTaskResultExportTaskExportToS3TaskDiskImageFormatEnum {
+	return &e
+}
+
 func (e *CreateInstanceExportTaskResultExportTaskExportToS3TaskDiskImageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VMDK":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "VHD":
-		*e = CreateInstanceExportTaskResultExportTaskExportToS3TaskDiskImageFormatEnum(s)
+		*e = CreateInstanceExportTaskResultExportTaskExportToS3TaskDiskImageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInstanceExportTaskResultExportTaskExportToS3TaskDiskImageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInstanceExportTaskResultExportTaskExportToS3TaskDiskImageFormatEnum: %v", v)
 	}
 }
 
@@ -72,21 +80,25 @@ const (
 	CreateInstanceExportTaskResultExportTaskInstanceExportDetailsTargetEnvironmentEnumMicrosoft CreateInstanceExportTaskResultExportTaskInstanceExportDetailsTargetEnvironmentEnum = "microsoft"
 )
 
+func (e CreateInstanceExportTaskResultExportTaskInstanceExportDetailsTargetEnvironmentEnum) ToPointer() *CreateInstanceExportTaskResultExportTaskInstanceExportDetailsTargetEnvironmentEnum {
+	return &e
+}
+
 func (e *CreateInstanceExportTaskResultExportTaskInstanceExportDetailsTargetEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "citrix":
 		fallthrough
 	case "vmware":
 		fallthrough
 	case "microsoft":
-		*e = CreateInstanceExportTaskResultExportTaskInstanceExportDetailsTargetEnvironmentEnum(s)
+		*e = CreateInstanceExportTaskResultExportTaskInstanceExportDetailsTargetEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInstanceExportTaskResultExportTaskInstanceExportDetailsTargetEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInstanceExportTaskResultExportTaskInstanceExportDetailsTargetEnvironmentEnum: %v", v)
 	}
 }
 
@@ -106,12 +118,16 @@ const (
 	CreateInstanceExportTaskResultExportTaskStateEnumCompleted  CreateInstanceExportTaskResultExportTaskStateEnum = "completed"
 )
 
+func (e CreateInstanceExportTaskResultExportTaskStateEnum) ToPointer() *CreateInstanceExportTaskResultExportTaskStateEnum {
+	return &e
+}
+
 func (e *CreateInstanceExportTaskResultExportTaskStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "cancelling":
@@ -119,10 +135,10 @@ func (e *CreateInstanceExportTaskResultExportTaskStateEnum) UnmarshalJSON(data [
 	case "cancelled":
 		fallthrough
 	case "completed":
-		*e = CreateInstanceExportTaskResultExportTaskStateEnum(s)
+		*e = CreateInstanceExportTaskResultExportTaskStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInstanceExportTaskResultExportTaskStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInstanceExportTaskResultExportTaskStateEnum: %v", v)
 	}
 }
 

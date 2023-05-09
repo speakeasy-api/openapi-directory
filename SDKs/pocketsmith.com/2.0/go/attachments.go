@@ -35,7 +35,10 @@ func newAttachments(defaultClient, securityClient HTTPClient, serverURL, languag
 // Deletes a particular attachment by its ID.
 func (s *attachments) DeleteAttachmentsID(ctx context.Context, request operations.DeleteAttachmentsIDRequest) (*operations.DeleteAttachmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attachments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/attachments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *attachments) DeleteAttachmentsID(ctx context.Context, request operation
 // Unassigns a particular attachment by its ID from the transaction ID. This does not delete the attachment, it only removes its association from the transaction.
 func (s *attachments) DeleteTransactionsTransactionIDAttachmentsAttachmentID(ctx context.Context, request operations.DeleteTransactionsTransactionIDAttachmentsAttachmentIDRequest) (*operations.DeleteTransactionsTransactionIDAttachmentsAttachmentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactions/{transaction_id}/attachments/{attachment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transactions/{transaction_id}/attachments/{attachment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *attachments) DeleteTransactionsTransactionIDAttachmentsAttachmentID(ctx
 // Gets a particular attachment by its ID.
 func (s *attachments) GetAttachmentsID(ctx context.Context, request operations.GetAttachmentsIDRequest) (*operations.GetAttachmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attachments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/attachments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -188,7 +197,10 @@ func (s *attachments) GetAttachmentsID(ctx context.Context, request operations.G
 // Lists attachments belonging to a transaction by their ID.
 func (s *attachments) GetTransactionsIDAttachments(ctx context.Context, request operations.GetTransactionsIDAttachmentsRequest) (*operations.GetTransactionsIDAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactions/{id}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transactions/{id}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -245,7 +257,10 @@ func (s *attachments) GetTransactionsIDAttachments(ctx context.Context, request 
 // Lists attachments belonging to a user by their ID.
 func (s *attachments) GetUsersIDAttachments(ctx context.Context, request operations.GetUsersIDAttachmentsRequest) (*operations.GetUsersIDAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -306,7 +321,10 @@ func (s *attachments) GetUsersIDAttachments(ctx context.Context, request operati
 // Assigns an attachment to the transaction by their ID.
 func (s *attachments) PostTransactionsIDAttachments(ctx context.Context, request operations.PostTransactionsIDAttachmentsRequest) (*operations.PostTransactionsIDAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactions/{id}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transactions/{id}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -370,7 +388,10 @@ func (s *attachments) PostTransactionsIDAttachments(ctx context.Context, request
 // Creates an attachment belonging to the user by their ID.
 func (s *attachments) PostUsersIDAttachments(ctx context.Context, request operations.PostUsersIDAttachmentsRequest) (*operations.PostUsersIDAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -436,7 +457,10 @@ func (s *attachments) PostUsersIDAttachments(ctx context.Context, request operat
 // Updates the title of the attachment.
 func (s *attachments) PutAttachmentsID(ctx context.Context, request operations.PutAttachmentsIDRequest) (*operations.PutAttachmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attachments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/attachments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

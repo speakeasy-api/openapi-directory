@@ -14,18 +14,22 @@ const (
 	AutoMLOverrideStrategyEnumAccuracyOptimized AutoMLOverrideStrategyEnum = "AccuracyOptimized"
 )
 
+func (e AutoMLOverrideStrategyEnum) ToPointer() *AutoMLOverrideStrategyEnum {
+	return &e
+}
+
 func (e *AutoMLOverrideStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LatencyOptimized":
 		fallthrough
 	case "AccuracyOptimized":
-		*e = AutoMLOverrideStrategyEnum(s)
+		*e = AutoMLOverrideStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoMLOverrideStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoMLOverrideStrategyEnum: %v", v)
 	}
 }

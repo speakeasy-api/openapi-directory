@@ -15,19 +15,23 @@ const (
 	ItvVoucherOfferTypeEnumTalonOne ItvVoucherOfferTypeEnum = "talon one"
 )
 
+func (e ItvVoucherOfferTypeEnum) ToPointer() *ItvVoucherOfferTypeEnum {
+	return &e
+}
+
 func (e *ItvVoucherOfferTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stripe":
 		fallthrough
 	case "talon one":
-		*e = ItvVoucherOfferTypeEnum(s)
+		*e = ItvVoucherOfferTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItvVoucherOfferTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ItvVoucherOfferTypeEnum: %v", v)
 	}
 }
 

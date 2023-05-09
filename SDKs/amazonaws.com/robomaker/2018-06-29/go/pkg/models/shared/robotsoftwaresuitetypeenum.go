@@ -15,20 +15,24 @@ const (
 	RobotSoftwareSuiteTypeEnumGeneral RobotSoftwareSuiteTypeEnum = "General"
 )
 
+func (e RobotSoftwareSuiteTypeEnum) ToPointer() *RobotSoftwareSuiteTypeEnum {
+	return &e
+}
+
 func (e *RobotSoftwareSuiteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROS":
 		fallthrough
 	case "ROS2":
 		fallthrough
 	case "General":
-		*e = RobotSoftwareSuiteTypeEnum(s)
+		*e = RobotSoftwareSuiteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RobotSoftwareSuiteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RobotSoftwareSuiteTypeEnum: %v", v)
 	}
 }

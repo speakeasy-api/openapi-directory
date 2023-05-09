@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,37 +18,35 @@ func main() {
         }),
     )
 
-    req := operations.ActivatePipelineRequest{
+    ctx := context.Background()
+    res, err := s.ActivatePipeline(ctx, operations.ActivatePipelineRequest{
         ActivatePipelineInput: shared.ActivatePipelineInput{
             ParameterValues: []shared.ParameterValue{
                 shared.ParameterValue{
-                    ID: "provident",
-                    StringValue: "distinctio",
+                    ID: "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
+                    StringValue: "perferendis",
                 },
                 shared.ParameterValue{
-                    ID: "quibusdam",
-                    StringValue: "unde",
+                    ID: "5dfc2ddf-7cc7-48ca-9ba9-28fc816742cb",
+                    StringValue: "esse",
                 },
                 shared.ParameterValue{
-                    ID: "nulla",
-                    StringValue: "corrupti",
+                    ID: "39205929-396f-4ea7-996e-b10faaa2352c",
+                    StringValue: "enim",
                 },
             },
-            PipelineID: "illum",
-            StartTimestamp: "2022-05-18T09:34:54.894Z",
+            PipelineID: "omnis",
+            StartTimestamp: types.MustTimeFromString("2022-09-04T08:35:09.957Z"),
         },
-        XAmzAlgorithm: "deserunt",
-        XAmzContentSha256: "suscipit",
-        XAmzCredential: "iure",
-        XAmzDate: "magnam",
-        XAmzSecurityToken: "debitis",
-        XAmzSignature: "ipsa",
-        XAmzSignedHeaders: "delectus",
-        XAmzTarget: "DataPipeline.ActivatePipeline",
-    }
-
-    ctx := context.Background()
-    res, err := s.ActivatePipeline(ctx, req)
+        XAmzAlgorithm: sdk.String("excepturi"),
+        XAmzContentSha256: sdk.String("accusantium"),
+        XAmzCredential: sdk.String("iure"),
+        XAmzDate: sdk.String("culpa"),
+        XAmzSecurityToken: sdk.String("doloribus"),
+        XAmzSignature: sdk.String("sapiente"),
+        XAmzSignedHeaders: sdk.String("architecto"),
+        XAmzTarget: operations.ActivatePipelineXAmzTargetEnumDataPipelineActivatePipeline,
+    })
     if err != nil {
         log.Fatal(err)
     }

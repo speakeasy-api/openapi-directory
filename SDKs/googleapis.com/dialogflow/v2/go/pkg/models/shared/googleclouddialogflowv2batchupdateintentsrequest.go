@@ -15,19 +15,23 @@ const (
 	GoogleCloudDialogflowV2BatchUpdateIntentsRequestIntentViewEnumIntentViewFull        GoogleCloudDialogflowV2BatchUpdateIntentsRequestIntentViewEnum = "INTENT_VIEW_FULL"
 )
 
+func (e GoogleCloudDialogflowV2BatchUpdateIntentsRequestIntentViewEnum) ToPointer() *GoogleCloudDialogflowV2BatchUpdateIntentsRequestIntentViewEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2BatchUpdateIntentsRequestIntentViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTENT_VIEW_UNSPECIFIED":
 		fallthrough
 	case "INTENT_VIEW_FULL":
-		*e = GoogleCloudDialogflowV2BatchUpdateIntentsRequestIntentViewEnum(s)
+		*e = GoogleCloudDialogflowV2BatchUpdateIntentsRequestIntentViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2BatchUpdateIntentsRequestIntentViewEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2BatchUpdateIntentsRequestIntentViewEnum: %v", v)
 	}
 }
 

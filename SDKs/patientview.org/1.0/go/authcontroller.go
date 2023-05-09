@@ -38,7 +38,10 @@ func newAuthController(defaultClient, securityClient HTTPClient, serverURL, lang
 // Once logged in and have a token, get basic user information including group role membership
 func (s *authController) GetBasicUserInformation(ctx context.Context, request operations.GetBasicUserInformationRequest) (*operations.GetBasicUserInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/auth/{token}/basicuserinformation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/auth/{token}/basicuserinformation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -147,7 +150,10 @@ func (s *authController) LogIn(ctx context.Context, request shared.Credentials) 
 // Log Out
 func (s *authController) LogOut(ctx context.Context, request operations.LogOutRequest) (*operations.LogOutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/auth/logout/{token}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/auth/logout/{token}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

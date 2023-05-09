@@ -16,17 +16,21 @@ const (
 	DeletePartitionIndexXAmzTargetEnumAwsGlueDeletePartitionIndex DeletePartitionIndexXAmzTargetEnum = "AWSGlue.DeletePartitionIndex"
 )
 
+func (e DeletePartitionIndexXAmzTargetEnum) ToPointer() *DeletePartitionIndexXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeletePartitionIndexXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.DeletePartitionIndex":
-		*e = DeletePartitionIndexXAmzTargetEnum(s)
+		*e = DeletePartitionIndexXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletePartitionIndexXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletePartitionIndexXAmzTargetEnum: %v", v)
 	}
 }
 

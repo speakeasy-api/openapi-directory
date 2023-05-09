@@ -35,7 +35,10 @@ func newDNSRecords(defaultClient, securityClient HTTPClient, serverURL, language
 // DeleteDNSDomainNameRecordsRecordID - Delete a record
 func (s *dnsRecords) DeleteDNSDomainNameRecordsRecordID(ctx context.Context, request operations.DeleteDNSDomainNameRecordsRecordIDRequest) (*operations.DeleteDNSDomainNameRecordsRecordIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records/{recordId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records/{recordId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *dnsRecords) DeleteDNSDomainNameRecordsRecordID(ctx context.Context, req
 // GetDNSDomainNameRecords - Get records
 func (s *dnsRecords) GetDNSDomainNameRecords(ctx context.Context, request operations.GetDNSDomainNameRecordsRequest) (*operations.GetDNSDomainNameRecordsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,7 +130,10 @@ func (s *dnsRecords) GetDNSDomainNameRecords(ctx context.Context, request operat
 // GetDNSDomainNameRecordsRecordID - Get specific record
 func (s *dnsRecords) GetDNSDomainNameRecordsRecordID(ctx context.Context, request operations.GetDNSDomainNameRecordsRecordIDRequest) (*operations.GetDNSDomainNameRecordsRecordIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records/{recordId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records/{recordId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -172,7 +181,10 @@ func (s *dnsRecords) GetDNSDomainNameRecordsRecordID(ctx context.Context, reques
 // PostDNSDomainNameRecords - Create a record
 func (s *dnsRecords) PostDNSDomainNameRecords(ctx context.Context, request operations.PostDNSDomainNameRecordsRequest) (*operations.PostDNSDomainNameRecordsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DNSRecord", "json")
 	if err != nil {
@@ -219,7 +231,10 @@ func (s *dnsRecords) PostDNSDomainNameRecords(ctx context.Context, request opera
 // PutDNSDomainNameRecordsRecordID - Edit a record
 func (s *dnsRecords) PutDNSDomainNameRecordsRecordID(ctx context.Context, request operations.PutDNSDomainNameRecordsRecordIDRequest) (*operations.PutDNSDomainNameRecordsRecordIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records/{recordId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/{domainName}/records/{recordId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DNSRecord", "json")
 	if err != nil {

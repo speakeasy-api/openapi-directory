@@ -14,19 +14,23 @@ const (
 	TaxSettingsResponseTaxationModeEnumInclusive TaxSettingsResponseTaxationModeEnum = "INCLUSIVE"
 )
 
+func (e TaxSettingsResponseTaxationModeEnum) ToPointer() *TaxSettingsResponseTaxationModeEnum {
+	return &e
+}
+
 func (e *TaxSettingsResponseTaxationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCLUSIVE":
 		fallthrough
 	case "INCLUSIVE":
-		*e = TaxSettingsResponseTaxationModeEnum(s)
+		*e = TaxSettingsResponseTaxationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaxSettingsResponseTaxationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaxSettingsResponseTaxationModeEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	TaxSettingsResponseTaxationTypeEnumVat      TaxSettingsResponseTaxationTypeEnum = "VAT"
 )
 
+func (e TaxSettingsResponseTaxationTypeEnum) ToPointer() *TaxSettingsResponseTaxationTypeEnum {
+	return &e
+}
+
 func (e *TaxSettingsResponseTaxationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "SALES_TAX":
 		fallthrough
 	case "VAT":
-		*e = TaxSettingsResponseTaxationTypeEnum(s)
+		*e = TaxSettingsResponseTaxationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaxSettingsResponseTaxationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaxSettingsResponseTaxationTypeEnum: %v", v)
 	}
 }
 

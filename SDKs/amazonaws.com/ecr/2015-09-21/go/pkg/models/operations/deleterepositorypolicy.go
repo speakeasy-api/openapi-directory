@@ -16,17 +16,21 @@ const (
 	DeleteRepositoryPolicyXAmzTargetEnumAmazonEc2ContainerRegistryV20150921DeleteRepositoryPolicy DeleteRepositoryPolicyXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.DeleteRepositoryPolicy"
 )
 
+func (e DeleteRepositoryPolicyXAmzTargetEnum) ToPointer() *DeleteRepositoryPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteRepositoryPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.DeleteRepositoryPolicy":
-		*e = DeleteRepositoryPolicyXAmzTargetEnum(s)
+		*e = DeleteRepositoryPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRepositoryPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRepositoryPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

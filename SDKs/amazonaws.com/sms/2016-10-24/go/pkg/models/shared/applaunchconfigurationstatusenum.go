@@ -14,18 +14,22 @@ const (
 	AppLaunchConfigurationStatusEnumConfigured    AppLaunchConfigurationStatusEnum = "CONFIGURED"
 )
 
+func (e AppLaunchConfigurationStatusEnum) ToPointer() *AppLaunchConfigurationStatusEnum {
+	return &e
+}
+
 func (e *AppLaunchConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_CONFIGURED":
 		fallthrough
 	case "CONFIGURED":
-		*e = AppLaunchConfigurationStatusEnum(s)
+		*e = AppLaunchConfigurationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppLaunchConfigurationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AppLaunchConfigurationStatusEnum: %v", v)
 	}
 }

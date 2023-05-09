@@ -137,7 +137,10 @@ func (s *patient) CreatePatient(ctx context.Context, request shared.CreatePatien
 // Gets a patient record by id.
 func (s *patient) FetchPatient(ctx context.Context, request operations.FetchPatientRequest) (*operations.FetchPatientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/patient/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -194,7 +197,10 @@ func (s *patient) FetchPatient(ctx context.Context, request operations.FetchPati
 // Get the list of coaches for a patient.
 func (s *patient) FetchPatientCoaches(ctx context.Context, request operations.FetchPatientCoachesRequest) (*operations.FetchPatientCoachesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient/{id}/coaches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/patient/{id}/coaches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -251,7 +257,10 @@ func (s *patient) FetchPatientCoaches(ctx context.Context, request operations.Fe
 // Get the list of groups for a patient.
 func (s *patient) FetchPatientGroups(ctx context.Context, request operations.FetchPatientGroupsRequest) (*operations.FetchPatientGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient/{id}/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/patient/{id}/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -371,7 +380,10 @@ func (s *patient) FetchPatients(ctx context.Context, request operations.FetchPat
 // Update a patient record.
 func (s *patient) UpdatePatient(ctx context.Context, request operations.UpdatePatientRequest) (*operations.UpdatePatientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/patient/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePatientRequestInput", "json")
 	if err != nil {

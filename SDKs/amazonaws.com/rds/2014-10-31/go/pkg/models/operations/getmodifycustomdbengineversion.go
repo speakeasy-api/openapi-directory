@@ -15,17 +15,21 @@ const (
 	GETModifyCustomDBEngineVersionActionEnumModifyCustomDbEngineVersion GETModifyCustomDBEngineVersionActionEnum = "ModifyCustomDBEngineVersion"
 )
 
+func (e GETModifyCustomDBEngineVersionActionEnum) ToPointer() *GETModifyCustomDBEngineVersionActionEnum {
+	return &e
+}
+
 func (e *GETModifyCustomDBEngineVersionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyCustomDBEngineVersion":
-		*e = GETModifyCustomDBEngineVersionActionEnum(s)
+		*e = GETModifyCustomDBEngineVersionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyCustomDBEngineVersionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyCustomDBEngineVersionActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETModifyCustomDBEngineVersionStatusEnumInactiveExceptRestore GETModifyCustomDBEngineVersionStatusEnum = "inactive-except-restore"
 )
 
+func (e GETModifyCustomDBEngineVersionStatusEnum) ToPointer() *GETModifyCustomDBEngineVersionStatusEnum {
+	return &e
+}
+
 func (e *GETModifyCustomDBEngineVersionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "inactive":
 		fallthrough
 	case "inactive-except-restore":
-		*e = GETModifyCustomDBEngineVersionStatusEnum(s)
+		*e = GETModifyCustomDBEngineVersionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyCustomDBEngineVersionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyCustomDBEngineVersionStatusEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETModifyCustomDBEngineVersionVersionEnumTwoThousandAndFourteen1031 GETModifyCustomDBEngineVersionVersionEnum = "2014-10-31"
 )
 
+func (e GETModifyCustomDBEngineVersionVersionEnum) ToPointer() *GETModifyCustomDBEngineVersionVersionEnum {
+	return &e
+}
+
 func (e *GETModifyCustomDBEngineVersionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETModifyCustomDBEngineVersionVersionEnum(s)
+		*e = GETModifyCustomDBEngineVersionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyCustomDBEngineVersionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyCustomDBEngineVersionVersionEnum: %v", v)
 	}
 }
 
@@ -81,7 +93,7 @@ type GETModifyCustomDBEngineVersionRequest struct {
 	Action GETModifyCustomDBEngineVersionActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// An optional description of your CEV.
 	Description *string `queryParam:"style=form,explode=true,name=Description"`
-	// The DB engine. The only supported value is <code>custom-oracle-ee</code>.
+	// The DB engine. The only supported values are <code>custom-oracle-ee</code> and <code>custom-oracle-ee-cdb</code>.
 	Engine string `queryParam:"style=form,explode=true,name=Engine"`
 	// The custom engine version (CEV) that you want to modify. This option is required for RDS Custom for Oracle, but optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique per customer per Amazon Web Services Region.
 	EngineVersion string `queryParam:"style=form,explode=true,name=EngineVersion"`

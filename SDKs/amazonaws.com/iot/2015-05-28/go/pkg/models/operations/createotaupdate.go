@@ -38,19 +38,23 @@ const (
 	CreateOTAUpdateRequestBodyTargetSelectionEnumSnapshot   CreateOTAUpdateRequestBodyTargetSelectionEnum = "SNAPSHOT"
 )
 
+func (e CreateOTAUpdateRequestBodyTargetSelectionEnum) ToPointer() *CreateOTAUpdateRequestBodyTargetSelectionEnum {
+	return &e
+}
+
 func (e *CreateOTAUpdateRequestBodyTargetSelectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTINUOUS":
 		fallthrough
 	case "SNAPSHOT":
-		*e = CreateOTAUpdateRequestBodyTargetSelectionEnum(s)
+		*e = CreateOTAUpdateRequestBodyTargetSelectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateOTAUpdateRequestBodyTargetSelectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateOTAUpdateRequestBodyTargetSelectionEnum: %v", v)
 	}
 }
 

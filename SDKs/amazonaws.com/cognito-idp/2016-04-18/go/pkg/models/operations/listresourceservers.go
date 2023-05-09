@@ -16,17 +16,21 @@ const (
 	ListResourceServersXAmzTargetEnumAwsCognitoIdentityProviderServiceListResourceServers ListResourceServersXAmzTargetEnum = "AWSCognitoIdentityProviderService.ListResourceServers"
 )
 
+func (e ListResourceServersXAmzTargetEnum) ToPointer() *ListResourceServersXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListResourceServersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.ListResourceServers":
-		*e = ListResourceServersXAmzTargetEnum(s)
+		*e = ListResourceServersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListResourceServersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListResourceServersXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETEnableAddressTransferActionEnumEnableAddressTransfer GETEnableAddressTransferActionEnum = "EnableAddressTransfer"
 )
 
+func (e GETEnableAddressTransferActionEnum) ToPointer() *GETEnableAddressTransferActionEnum {
+	return &e
+}
+
 func (e *GETEnableAddressTransferActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableAddressTransfer":
-		*e = GETEnableAddressTransferActionEnum(s)
+		*e = GETEnableAddressTransferActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableAddressTransferActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableAddressTransferActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETEnableAddressTransferVersionEnumTwoThousandAndSixteen1115 GETEnableAddressTransferVersionEnum = "2016-11-15"
 )
 
+func (e GETEnableAddressTransferVersionEnum) ToPointer() *GETEnableAddressTransferVersionEnum {
+	return &e
+}
+
 func (e *GETEnableAddressTransferVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETEnableAddressTransferVersionEnum(s)
+		*e = GETEnableAddressTransferVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableAddressTransferVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableAddressTransferVersionEnum: %v", v)
 	}
 }
 

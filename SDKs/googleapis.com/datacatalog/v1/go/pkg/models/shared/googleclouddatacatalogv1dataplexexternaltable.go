@@ -22,12 +22,16 @@ const (
 	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumLooker                      GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "LOOKER"
 )
 
+func (e GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum) ToPointer() *GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTEGRATED_SYSTEM_UNSPECIFIED":
 		fallthrough
 	case "BIGQUERY":
@@ -45,10 +49,10 @@ func (e *GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum) UnmarshalJSON(
 	case "CLOUD_SQL":
 		fallthrough
 	case "LOOKER":
-		*e = GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum(s)
+		*e = GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum: %v", v)
 	}
 }
 

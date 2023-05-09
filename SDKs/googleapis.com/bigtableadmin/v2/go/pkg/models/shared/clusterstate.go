@@ -19,12 +19,16 @@ const (
 	ClusterStateReplicationStateEnumReadyOptimizing      ClusterStateReplicationStateEnum = "READY_OPTIMIZING"
 )
 
+func (e ClusterStateReplicationStateEnum) ToPointer() *ClusterStateReplicationStateEnum {
+	return &e
+}
+
 func (e *ClusterStateReplicationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_NOT_KNOWN":
 		fallthrough
 	case "INITIALIZING":
@@ -36,10 +40,10 @@ func (e *ClusterStateReplicationStateEnum) UnmarshalJSON(data []byte) error {
 	case "READY":
 		fallthrough
 	case "READY_OPTIMIZING":
-		*e = ClusterStateReplicationStateEnum(s)
+		*e = ClusterStateReplicationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterStateReplicationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterStateReplicationStateEnum: %v", v)
 	}
 }
 

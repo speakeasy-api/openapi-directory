@@ -16,21 +16,25 @@ const (
 	VideoAdSequenceSettingsMinimumDurationEnumVideoAdSequenceMinimumDurationMonth       VideoAdSequenceSettingsMinimumDurationEnum = "VIDEO_AD_SEQUENCE_MINIMUM_DURATION_MONTH"
 )
 
+func (e VideoAdSequenceSettingsMinimumDurationEnum) ToPointer() *VideoAdSequenceSettingsMinimumDurationEnum {
+	return &e
+}
+
 func (e *VideoAdSequenceSettingsMinimumDurationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIDEO_AD_SEQUENCE_MINIMUM_DURATION_UNSPECIFIED":
 		fallthrough
 	case "VIDEO_AD_SEQUENCE_MINIMUM_DURATION_WEEK":
 		fallthrough
 	case "VIDEO_AD_SEQUENCE_MINIMUM_DURATION_MONTH":
-		*e = VideoAdSequenceSettingsMinimumDurationEnum(s)
+		*e = VideoAdSequenceSettingsMinimumDurationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoAdSequenceSettingsMinimumDurationEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoAdSequenceSettingsMinimumDurationEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	TextToColumnsRequestDelimiterTypeEnumAutodetect               TextToColumnsRequestDelimiterTypeEnum = "AUTODETECT"
 )
 
+func (e TextToColumnsRequestDelimiterTypeEnum) ToPointer() *TextToColumnsRequestDelimiterTypeEnum {
+	return &e
+}
+
 func (e *TextToColumnsRequestDelimiterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELIMITER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "COMMA":
@@ -39,10 +43,10 @@ func (e *TextToColumnsRequestDelimiterTypeEnum) UnmarshalJSON(data []byte) error
 	case "CUSTOM":
 		fallthrough
 	case "AUTODETECT":
-		*e = TextToColumnsRequestDelimiterTypeEnum(s)
+		*e = TextToColumnsRequestDelimiterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextToColumnsRequestDelimiterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TextToColumnsRequestDelimiterTypeEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	InstanceMatchCriteriaEnumTargeted InstanceMatchCriteriaEnum = "targeted"
 )
 
+func (e InstanceMatchCriteriaEnum) ToPointer() *InstanceMatchCriteriaEnum {
+	return &e
+}
+
 func (e *InstanceMatchCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "targeted":
-		*e = InstanceMatchCriteriaEnum(s)
+		*e = InstanceMatchCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceMatchCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceMatchCriteriaEnum: %v", v)
 	}
 }

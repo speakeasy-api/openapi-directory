@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,24 +16,22 @@ func main() {
         }),
     )
 
-    req := operations.GetGlobalwinescoresLatestRequest{
-        Authorization: "corrupti",
-        Color: "white",
-        IsPrimeurs: false,
-        Limit: 715190,
-        Lwin: "quibusdam",
-        Lwin11: "unde",
-        Offset: 857946,
-        Ordering: "score",
-        Vintage: "illum",
+    ctx := context.Background()
+    res, err := s.GlobalWineScore.GetGlobalwinescoresLatest(ctx, operations.GetGlobalwinescoresLatestRequest{
+        Authorization: sdk.String("corrupti"),
+        Color: operations.GetGlobalwinescoresLatestColorEnumWhite.ToPointer(),
+        IsPrimeurs: sdk.Bool(false),
+        Limit: sdk.Int64(715190),
+        Lwin: sdk.String("quibusdam"),
+        Lwin11: sdk.String("unde"),
+        Offset: sdk.Int64(857946),
+        Ordering: operations.GetGlobalwinescoresLatestOrderingEnumScore.ToPointer(),
+        Vintage: sdk.String("illum"),
         WineID: []int64{
             623564,
             645894,
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.GlobalWineScore.GetGlobalwinescoresLatest(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -14,8 +14,8 @@ type SpeechProjectsLocationsPhraseSetsCreateSecurity struct {
 
 type SpeechProjectsLocationsPhraseSetsCreateRequest struct {
 	// V1 error format.
-	DollarXgafv            *shared.XgafvEnum              `queryParam:"style=form,explode=true,name=$.xgafv"`
-	CreatePhraseSetRequest *shared.CreatePhraseSetRequest `request:"mediaType=application/json"`
+	DollarXgafv                 *shared.XgafvEnum                   `queryParam:"style=form,explode=true,name=$.xgafv"`
+	CreatePhraseSetRequestInput *shared.CreatePhraseSetRequestInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.

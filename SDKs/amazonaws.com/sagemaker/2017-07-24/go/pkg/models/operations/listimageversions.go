@@ -16,17 +16,21 @@ const (
 	ListImageVersionsXAmzTargetEnumSageMakerListImageVersions ListImageVersionsXAmzTargetEnum = "SageMaker.ListImageVersions"
 )
 
+func (e ListImageVersionsXAmzTargetEnum) ToPointer() *ListImageVersionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListImageVersionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.ListImageVersions":
-		*e = ListImageVersionsXAmzTargetEnum(s)
+		*e = ListImageVersionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListImageVersionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListImageVersionsXAmzTargetEnum: %v", v)
 	}
 }
 

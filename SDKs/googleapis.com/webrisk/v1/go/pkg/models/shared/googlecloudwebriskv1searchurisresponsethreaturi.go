@@ -17,12 +17,16 @@ const (
 	GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnumSocialEngineeringExtendedCoverage GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnum = "SOCIAL_ENGINEERING_EXTENDED_COVERAGE"
 )
 
+func (e GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnum) ToPointer() *GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnum {
+	return &e
+}
+
 func (e *GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THREAT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MALWARE":
@@ -32,10 +36,10 @@ func (e *GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnum) Unmarsh
 	case "UNWANTED_SOFTWARE":
 		fallthrough
 	case "SOCIAL_ENGINEERING_EXTENDED_COVERAGE":
-		*e = GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnum(s)
+		*e = GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudWebriskV1SearchUrisResponseThreatURIThreatTypesEnum: %v", v)
 	}
 }
 

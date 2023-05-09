@@ -26,12 +26,16 @@ const (
 	PardotConnectorOperatorEnumValidateNumeric     PardotConnectorOperatorEnum = "VALIDATE_NUMERIC"
 )
 
+func (e PardotConnectorOperatorEnum) ToPointer() *PardotConnectorOperatorEnum {
+	return &e
+}
+
 func (e *PardotConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION":
 		fallthrough
 	case "EQUAL_TO":
@@ -59,9 +63,9 @@ func (e *PardotConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATE_NON_NEGATIVE":
 		fallthrough
 	case "VALIDATE_NUMERIC":
-		*e = PardotConnectorOperatorEnum(s)
+		*e = PardotConnectorOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PardotConnectorOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for PardotConnectorOperatorEnum: %v", v)
 	}
 }

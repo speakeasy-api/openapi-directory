@@ -22,12 +22,16 @@ const (
 	PostSiteAPIKeysRequestBodyPermissionSetEnumMobileApp         PostSiteAPIKeysRequestBodyPermissionSetEnum = "mobile_app"
 )
 
+func (e PostSiteAPIKeysRequestBodyPermissionSetEnum) ToPointer() *PostSiteAPIKeysRequestBodyPermissionSetEnum {
+	return &e
+}
+
 func (e *PostSiteAPIKeysRequestBodyPermissionSetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "full":
@@ -39,10 +43,10 @@ func (e *PostSiteAPIKeysRequestBodyPermissionSetEnum) UnmarshalJSON(data []byte)
 	case "office_integration":
 		fallthrough
 	case "mobile_app":
-		*e = PostSiteAPIKeysRequestBodyPermissionSetEnum(s)
+		*e = PostSiteAPIKeysRequestBodyPermissionSetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSiteAPIKeysRequestBodyPermissionSetEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSiteAPIKeysRequestBodyPermissionSetEnum: %v", v)
 	}
 }
 

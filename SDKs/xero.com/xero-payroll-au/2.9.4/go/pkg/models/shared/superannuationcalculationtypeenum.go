@@ -15,20 +15,24 @@ const (
 	SuperannuationCalculationTypeEnumStatutory            SuperannuationCalculationTypeEnum = "STATUTORY"
 )
 
+func (e SuperannuationCalculationTypeEnum) ToPointer() *SuperannuationCalculationTypeEnum {
+	return &e
+}
+
 func (e *SuperannuationCalculationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIXEDAMOUNT":
 		fallthrough
 	case "PERCENTAGEOFEARNINGS":
 		fallthrough
 	case "STATUTORY":
-		*e = SuperannuationCalculationTypeEnum(s)
+		*e = SuperannuationCalculationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SuperannuationCalculationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SuperannuationCalculationTypeEnum: %v", v)
 	}
 }

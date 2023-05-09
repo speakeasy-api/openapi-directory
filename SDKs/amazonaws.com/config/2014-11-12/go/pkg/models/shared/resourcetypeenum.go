@@ -261,14 +261,41 @@ const (
 	ResourceTypeEnumAwsEventsConnection                               ResourceTypeEnum = "AWS::Events::Connection"
 	ResourceTypeEnumAwsEventSchemasSchema                             ResourceTypeEnum = "AWS::EventSchemas::Schema"
 	ResourceTypeEnumAwsMediaPackagePackagingConfiguration             ResourceTypeEnum = "AWS::MediaPackage::PackagingConfiguration"
+	ResourceTypeEnumAwsKinesisVideoSignalingChannel                   ResourceTypeEnum = "AWS::KinesisVideo::SignalingChannel"
+	ResourceTypeEnumAwsAppStreamDirectoryConfig                       ResourceTypeEnum = "AWS::AppStream::DirectoryConfig"
+	ResourceTypeEnumAwsLookoutVisionProject                           ResourceTypeEnum = "AWS::LookoutVision::Project"
+	ResourceTypeEnumAwsRoute53RecoveryControlCluster                  ResourceTypeEnum = "AWS::Route53RecoveryControl::Cluster"
+	ResourceTypeEnumAwsRoute53RecoveryControlSafetyRule               ResourceTypeEnum = "AWS::Route53RecoveryControl::SafetyRule"
+	ResourceTypeEnumAwsRoute53RecoveryControlControlPanel             ResourceTypeEnum = "AWS::Route53RecoveryControl::ControlPanel"
+	ResourceTypeEnumAwsRoute53RecoveryControlRoutingControl           ResourceTypeEnum = "AWS::Route53RecoveryControl::RoutingControl"
+	ResourceTypeEnumAwsRoute53RecoveryReadinessResourceSet            ResourceTypeEnum = "AWS::Route53RecoveryReadiness::ResourceSet"
+	ResourceTypeEnumAwsRoboMakerSimulationApplication                 ResourceTypeEnum = "AWS::RoboMaker::SimulationApplication"
+	ResourceTypeEnumAwsRoboMakerRobotApplication                      ResourceTypeEnum = "AWS::RoboMaker::RobotApplication"
+	ResourceTypeEnumAwsHealthLakeFhirDatastore                        ResourceTypeEnum = "AWS::HealthLake::FHIRDatastore"
+	ResourceTypeEnumAwsPinpointSegment                                ResourceTypeEnum = "AWS::Pinpoint::Segment"
+	ResourceTypeEnumAwsPinpointApplicationSettings                    ResourceTypeEnum = "AWS::Pinpoint::ApplicationSettings"
+	ResourceTypeEnumAwsEventsRule                                     ResourceTypeEnum = "AWS::Events::Rule"
+	ResourceTypeEnumAwsEc2DhcpOptions                                 ResourceTypeEnum = "AWS::EC2::DHCPOptions"
+	ResourceTypeEnumAwsEc2NetworkInsightsPath                         ResourceTypeEnum = "AWS::EC2::NetworkInsightsPath"
+	ResourceTypeEnumAwsEc2TrafficMirrorFilter                         ResourceTypeEnum = "AWS::EC2::TrafficMirrorFilter"
+	ResourceTypeEnumAwsEc2Ipam                                        ResourceTypeEnum = "AWS::EC2::IPAM"
+	ResourceTypeEnumAwsIoTTwinMakerScene                              ResourceTypeEnum = "AWS::IoTTwinMaker::Scene"
+	ResourceTypeEnumAwsNetworkManagerTransitGatewayRegistration       ResourceTypeEnum = "AWS::NetworkManager::TransitGatewayRegistration"
+	ResourceTypeEnumAwsCustomerProfilesDomain                         ResourceTypeEnum = "AWS::CustomerProfiles::Domain"
+	ResourceTypeEnumAwsAutoScalingWarmPool                            ResourceTypeEnum = "AWS::AutoScaling::WarmPool"
+	ResourceTypeEnumAwsConnectPhoneNumber                             ResourceTypeEnum = "AWS::Connect::PhoneNumber"
 )
 
+func (e ResourceTypeEnum) ToPointer() *ResourceTypeEnum {
+	return &e
+}
+
 func (e *ResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS::EC2::CustomerGateway":
 		fallthrough
 	case "AWS::EC2::EIP":
@@ -770,9 +797,55 @@ func (e *ResourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AWS::EventSchemas::Schema":
 		fallthrough
 	case "AWS::MediaPackage::PackagingConfiguration":
-		*e = ResourceTypeEnum(s)
+		fallthrough
+	case "AWS::KinesisVideo::SignalingChannel":
+		fallthrough
+	case "AWS::AppStream::DirectoryConfig":
+		fallthrough
+	case "AWS::LookoutVision::Project":
+		fallthrough
+	case "AWS::Route53RecoveryControl::Cluster":
+		fallthrough
+	case "AWS::Route53RecoveryControl::SafetyRule":
+		fallthrough
+	case "AWS::Route53RecoveryControl::ControlPanel":
+		fallthrough
+	case "AWS::Route53RecoveryControl::RoutingControl":
+		fallthrough
+	case "AWS::Route53RecoveryReadiness::ResourceSet":
+		fallthrough
+	case "AWS::RoboMaker::SimulationApplication":
+		fallthrough
+	case "AWS::RoboMaker::RobotApplication":
+		fallthrough
+	case "AWS::HealthLake::FHIRDatastore":
+		fallthrough
+	case "AWS::Pinpoint::Segment":
+		fallthrough
+	case "AWS::Pinpoint::ApplicationSettings":
+		fallthrough
+	case "AWS::Events::Rule":
+		fallthrough
+	case "AWS::EC2::DHCPOptions":
+		fallthrough
+	case "AWS::EC2::NetworkInsightsPath":
+		fallthrough
+	case "AWS::EC2::TrafficMirrorFilter":
+		fallthrough
+	case "AWS::EC2::IPAM":
+		fallthrough
+	case "AWS::IoTTwinMaker::Scene":
+		fallthrough
+	case "AWS::NetworkManager::TransitGatewayRegistration":
+		fallthrough
+	case "AWS::CustomerProfiles::Domain":
+		fallthrough
+	case "AWS::AutoScaling::WarmPool":
+		fallthrough
+	case "AWS::Connect::PhoneNumber":
+		*e = ResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceTypeEnum: %v", v)
 	}
 }

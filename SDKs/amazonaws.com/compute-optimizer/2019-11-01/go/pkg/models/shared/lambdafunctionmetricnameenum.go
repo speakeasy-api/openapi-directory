@@ -14,18 +14,22 @@ const (
 	LambdaFunctionMetricNameEnumMemory   LambdaFunctionMetricNameEnum = "Memory"
 )
 
+func (e LambdaFunctionMetricNameEnum) ToPointer() *LambdaFunctionMetricNameEnum {
+	return &e
+}
+
 func (e *LambdaFunctionMetricNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Duration":
 		fallthrough
 	case "Memory":
-		*e = LambdaFunctionMetricNameEnum(s)
+		*e = LambdaFunctionMetricNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LambdaFunctionMetricNameEnum: %s", s)
+		return fmt.Errorf("invalid value for LambdaFunctionMetricNameEnum: %v", v)
 	}
 }

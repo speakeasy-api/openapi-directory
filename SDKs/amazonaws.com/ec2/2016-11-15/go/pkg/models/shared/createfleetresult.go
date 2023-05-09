@@ -29,12 +29,16 @@ const (
 	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnumXilinx            CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum = "xilinx"
 )
 
+func (e CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum) ToPointer() *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum {
+	return &e
+}
+
 func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nvidia":
 		fallthrough
 	case "amd":
@@ -42,10 +46,10 @@ func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequi
 	case "amazon-web-services":
 		fallthrough
 	case "xilinx":
-		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum(s)
+		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum: %v", v)
 	}
 }
 
@@ -63,12 +67,16 @@ const (
 	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnumK520          CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum = "k520"
 )
 
+func (e CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum) ToPointer() *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum {
+	return &e
+}
+
 func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a100":
 		fallthrough
 	case "v100":
@@ -86,10 +94,10 @@ func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequi
 	case "inferentia":
 		fallthrough
 	case "k520":
-		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum(s)
+		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum: %v", v)
 	}
 }
 
@@ -107,21 +115,25 @@ const (
 	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnumInference CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum = "inference"
 )
 
+func (e CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum) ToPointer() *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum {
+	return &e
+}
+
 func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gpu":
 		fallthrough
 	case "fpga":
 		fallthrough
 	case "inference":
-		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum(s)
+		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum: %v", v)
 	}
 }
 
@@ -134,21 +146,25 @@ const (
 	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnumExcluded CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum = "excluded"
 )
 
+func (e CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum) ToPointer() *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum {
+	return &e
+}
+
 func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum(s)
+		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum: %v", v)
 	}
 }
 
@@ -167,21 +183,25 @@ const (
 	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnumExcluded CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum = "excluded"
 )
 
+func (e CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum) ToPointer() *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum {
+	return &e
+}
+
 func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum(s)
+		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum: %v", v)
 	}
 }
 
@@ -193,21 +213,25 @@ const (
 	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnumAmazonWebServices CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum = "amazon-web-services"
 )
 
+func (e CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum) ToPointer() *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum {
+	return &e
+}
+
 func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intel":
 		fallthrough
 	case "amd":
 		fallthrough
 	case "amazon-web-services":
-		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum(s)
+		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum: %v", v)
 	}
 }
 
@@ -218,19 +242,23 @@ const (
 	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnumPrevious CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum = "previous"
 )
 
+func (e CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum) ToPointer() *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum {
+	return &e
+}
+
 func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "previous":
-		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum(s)
+		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum: %v", v)
 	}
 }
 
@@ -243,21 +271,25 @@ const (
 	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnumExcluded CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum = "excluded"
 )
 
+func (e CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum) ToPointer() *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum {
+	return &e
+}
+
 func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum(s)
+		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum: %v", v)
 	}
 }
 
@@ -268,19 +300,23 @@ const (
 	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnumSsd CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum = "ssd"
 )
 
+func (e CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum) ToPointer() *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum {
+	return &e
+}
+
 func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hdd":
 		fallthrough
 	case "ssd":
-		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum(s)
+		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum: %v", v)
 	}
 }
 
@@ -989,14 +1025,23 @@ const (
 	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g12xlarge     CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.12xlarge"
 	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g16xlarge     CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.16xlarge"
 	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7gMetal        CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.metal"
+	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumC6inMetal       CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "c6in.metal"
+	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumM6inMetal       CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m6in.metal"
+	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumM6idnMetal      CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m6idn.metal"
+	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR6inMetal       CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r6in.metal"
+	CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR6idnMetal      CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum) ToPointer() *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum {
+	return &e
+}
+
 func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -2272,10 +2317,20 @@ func (e *CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeE
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -2311,19 +2366,23 @@ const (
 	CreateFleetResultErrorsLifecycleEnumOnDemand CreateFleetResultErrorsLifecycleEnum = "on-demand"
 )
 
+func (e CreateFleetResultErrorsLifecycleEnum) ToPointer() *CreateFleetResultErrorsLifecycleEnum {
+	return &e
+}
+
 func (e *CreateFleetResultErrorsLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spot":
 		fallthrough
 	case "on-demand":
-		*e = CreateFleetResultErrorsLifecycleEnum(s)
+		*e = CreateFleetResultErrorsLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultErrorsLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultErrorsLifecycleEnum: %v", v)
 	}
 }
 
@@ -2977,14 +3036,23 @@ const (
 	CreateFleetResultInstancesInstanceTypeEnumR7g12xlarge     CreateFleetResultInstancesInstanceTypeEnum = "r7g.12xlarge"
 	CreateFleetResultInstancesInstanceTypeEnumR7g16xlarge     CreateFleetResultInstancesInstanceTypeEnum = "r7g.16xlarge"
 	CreateFleetResultInstancesInstanceTypeEnumR7gMetal        CreateFleetResultInstancesInstanceTypeEnum = "r7g.metal"
+	CreateFleetResultInstancesInstanceTypeEnumC6inMetal       CreateFleetResultInstancesInstanceTypeEnum = "c6in.metal"
+	CreateFleetResultInstancesInstanceTypeEnumM6inMetal       CreateFleetResultInstancesInstanceTypeEnum = "m6in.metal"
+	CreateFleetResultInstancesInstanceTypeEnumM6idnMetal      CreateFleetResultInstancesInstanceTypeEnum = "m6idn.metal"
+	CreateFleetResultInstancesInstanceTypeEnumR6inMetal       CreateFleetResultInstancesInstanceTypeEnum = "r6in.metal"
+	CreateFleetResultInstancesInstanceTypeEnumR6idnMetal      CreateFleetResultInstancesInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e CreateFleetResultInstancesInstanceTypeEnum) ToPointer() *CreateFleetResultInstancesInstanceTypeEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -4260,10 +4328,20 @@ func (e *CreateFleetResultInstancesInstanceTypeEnum) UnmarshalJSON(data []byte) 
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = CreateFleetResultInstancesInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = CreateFleetResultInstancesInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -4289,12 +4367,16 @@ const (
 	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnumXilinx            CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum = "xilinx"
 )
 
+func (e CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum) ToPointer() *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nvidia":
 		fallthrough
 	case "amd":
@@ -4302,10 +4384,10 @@ func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRe
 	case "amazon-web-services":
 		fallthrough
 	case "xilinx":
-		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum(s)
+		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorManufacturersEnum: %v", v)
 	}
 }
 
@@ -4323,12 +4405,16 @@ const (
 	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnumK520          CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum = "k520"
 )
 
+func (e CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum) ToPointer() *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a100":
 		fallthrough
 	case "v100":
@@ -4346,10 +4432,10 @@ func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRe
 	case "inferentia":
 		fallthrough
 	case "k520":
-		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum(s)
+		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorNamesEnum: %v", v)
 	}
 }
 
@@ -4367,21 +4453,25 @@ const (
 	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnumInference CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum = "inference"
 )
 
+func (e CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum) ToPointer() *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gpu":
 		fallthrough
 	case "fpga":
 		fallthrough
 	case "inference":
-		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum(s)
+		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsAcceleratorTypesEnum: %v", v)
 	}
 }
 
@@ -4394,21 +4484,25 @@ const (
 	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnumExcluded CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum = "excluded"
 )
 
+func (e CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum) ToPointer() *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum(s)
+		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBareMetalEnum: %v", v)
 	}
 }
 
@@ -4427,21 +4521,25 @@ const (
 	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnumExcluded CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum = "excluded"
 )
 
+func (e CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum) ToPointer() *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum(s)
+		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsBurstablePerformanceEnum: %v", v)
 	}
 }
 
@@ -4453,21 +4551,25 @@ const (
 	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnumAmazonWebServices CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum = "amazon-web-services"
 )
 
+func (e CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum) ToPointer() *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intel":
 		fallthrough
 	case "amd":
 		fallthrough
 	case "amazon-web-services":
-		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum(s)
+		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsCPUManufacturersEnum: %v", v)
 	}
 }
 
@@ -4478,19 +4580,23 @@ const (
 	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnumPrevious CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum = "previous"
 )
 
+func (e CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum) ToPointer() *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "previous":
-		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum(s)
+		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsInstanceGenerationsEnum: %v", v)
 	}
 }
 
@@ -4503,21 +4609,25 @@ const (
 	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnumExcluded CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum = "excluded"
 )
 
+func (e CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum) ToPointer() *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum(s)
+		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageEnum: %v", v)
 	}
 }
 
@@ -4528,19 +4638,23 @@ const (
 	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnumSsd CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum = "ssd"
 )
 
+func (e CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum) ToPointer() *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hdd":
 		fallthrough
 	case "ssd":
-		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum(s)
+		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceRequirementsLocalStorageTypesEnum: %v", v)
 	}
 }
 
@@ -5249,14 +5363,23 @@ const (
 	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g12xlarge     CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.12xlarge"
 	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g16xlarge     CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.16xlarge"
 	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7gMetal        CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.metal"
+	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumC6inMetal       CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "c6in.metal"
+	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumM6inMetal       CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m6in.metal"
+	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumM6idnMetal      CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m6idn.metal"
+	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR6inMetal       CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r6in.metal"
+	CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR6idnMetal      CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum) ToPointer() *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -6532,10 +6655,20 @@ func (e *CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTy
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -6571,19 +6704,23 @@ const (
 	CreateFleetResultInstancesLifecycleEnumOnDemand CreateFleetResultInstancesLifecycleEnum = "on-demand"
 )
 
+func (e CreateFleetResultInstancesLifecycleEnum) ToPointer() *CreateFleetResultInstancesLifecycleEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spot":
 		fallthrough
 	case "on-demand":
-		*e = CreateFleetResultInstancesLifecycleEnum(s)
+		*e = CreateFleetResultInstancesLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesLifecycleEnum: %v", v)
 	}
 }
 
@@ -6594,17 +6731,21 @@ const (
 	CreateFleetResultInstancesPlatformEnumWindows CreateFleetResultInstancesPlatformEnum = "Windows"
 )
 
+func (e CreateFleetResultInstancesPlatformEnum) ToPointer() *CreateFleetResultInstancesPlatformEnum {
+	return &e
+}
+
 func (e *CreateFleetResultInstancesPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Windows":
-		*e = CreateFleetResultInstancesPlatformEnum(s)
+		*e = CreateFleetResultInstancesPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetResultInstancesPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetResultInstancesPlatformEnum: %v", v)
 	}
 }
 

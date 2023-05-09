@@ -16,17 +16,21 @@ const (
 	DescribeCommunicationsXAmzTargetEnumAwsSupport20130415DescribeCommunications DescribeCommunicationsXAmzTargetEnum = "AWSSupport_20130415.DescribeCommunications"
 )
 
+func (e DescribeCommunicationsXAmzTargetEnum) ToPointer() *DescribeCommunicationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeCommunicationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSupport_20130415.DescribeCommunications":
-		*e = DescribeCommunicationsXAmzTargetEnum(s)
+		*e = DescribeCommunicationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeCommunicationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeCommunicationsXAmzTargetEnum: %v", v)
 	}
 }
 

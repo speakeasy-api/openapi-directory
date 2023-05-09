@@ -20,12 +20,16 @@ const (
 	OutlineDashStyleEnumLongDashDot          OutlineDashStyleEnum = "LONG_DASH_DOT"
 )
 
+func (e OutlineDashStyleEnum) ToPointer() *OutlineDashStyleEnum {
+	return &e
+}
+
 func (e *OutlineDashStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DASH_STYLE_UNSPECIFIED":
 		fallthrough
 	case "SOLID":
@@ -39,10 +43,10 @@ func (e *OutlineDashStyleEnum) UnmarshalJSON(data []byte) error {
 	case "LONG_DASH":
 		fallthrough
 	case "LONG_DASH_DOT":
-		*e = OutlineDashStyleEnum(s)
+		*e = OutlineDashStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutlineDashStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for OutlineDashStyleEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	OutlinePropertyStateEnumInherit     OutlinePropertyStateEnum = "INHERIT"
 )
 
+func (e OutlinePropertyStateEnum) ToPointer() *OutlinePropertyStateEnum {
+	return &e
+}
+
 func (e *OutlinePropertyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RENDERED":
 		fallthrough
 	case "NOT_RENDERED":
 		fallthrough
 	case "INHERIT":
-		*e = OutlinePropertyStateEnum(s)
+		*e = OutlinePropertyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutlinePropertyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OutlinePropertyStateEnum: %v", v)
 	}
 }
 

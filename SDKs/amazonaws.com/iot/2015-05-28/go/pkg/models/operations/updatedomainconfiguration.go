@@ -23,19 +23,23 @@ const (
 	UpdateDomainConfigurationRequestBodyDomainConfigurationStatusEnumDisabled UpdateDomainConfigurationRequestBodyDomainConfigurationStatusEnum = "DISABLED"
 )
 
+func (e UpdateDomainConfigurationRequestBodyDomainConfigurationStatusEnum) ToPointer() *UpdateDomainConfigurationRequestBodyDomainConfigurationStatusEnum {
+	return &e
+}
+
 func (e *UpdateDomainConfigurationRequestBodyDomainConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = UpdateDomainConfigurationRequestBodyDomainConfigurationStatusEnum(s)
+		*e = UpdateDomainConfigurationRequestBodyDomainConfigurationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDomainConfigurationRequestBodyDomainConfigurationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDomainConfigurationRequestBodyDomainConfigurationStatusEnum: %v", v)
 	}
 }
 

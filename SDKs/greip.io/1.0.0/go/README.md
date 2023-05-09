@@ -13,27 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/greip.io/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetBulkLookupRequest{
-        Format: "XML",
-        Ips: "1.1.1.1,2.2.2.2",
-        Key: "2517bc4fc3f790e8f09bc808bb63b899",
-        Lang: "AR",
-        Params: "currency",
-    }
-
     ctx := context.Background()
-    res, err := s.GetBulkLookup(ctx, req)
+    res, err := s.GetASNLookup(ctx, operations.GetASNLookupRequest{
+        Asn: "15169",
+        Format: sdk.String("JSON"),
+        IsList: sdk.String("no"),
+        Key: "2517bc4fc3f790e8f09bc808bb63b899",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,13 +44,17 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetBulkLookup` - BulkLookup endpoint: Returns the geolocation data of multiple IP Addresses.
-* `GetCountry` - Country endpoint: Returns the information of a specific country by passing the `countrCode`.
-* `GetGeoIP` - GeoIP endpoint: Returns the geolocation data of the visitor.
-* `GetIPLookup` - IPLookup endpoint: Returns the geolocation data of a specific IP Address.
-* `GetBadWords` - badWords endpoint: Detects whether user inputs contain profanity or not.
+* [GetASNLookup](docs/sdk/README.md#getasnlookup) - ASNLookup endpoint: This method helps you lookup any AS Number. It returns the type, organisation details, routes, etc.
+* [GetBINLookup](docs/sdk/README.md#getbinlookup) - This method helps you validate any BIN/IIN number and retrieve the full details related to the bank, brand, type, scheme, country, etc.
+* [GetBulkLookup](docs/sdk/README.md#getbulklookup) - BulkLookup endpoint: Returns the geolocation data of multiple IP Addresses.
+* [GetCountry](docs/sdk/README.md#getcountry) - Country endpoint: Returns the information of a specific country by passing the `countrCode`.
+* [GetGeoIP](docs/sdk/README.md#getgeoip) - Returns the geolocation data of the visitor.
+* [GetIPLookup](docs/sdk/README.md#getiplookup) - Returns the geolocation data of a specific IP Address.
+* [GetBadWords](docs/sdk/README.md#getbadwords) - badWords endpoint: Detects whether user inputs contain profanity or not.
+* [GetValidateEmail](docs/sdk/README.md#getvalidateemail) - This method can be used as an extra-layer of your system for validating email addresses.
+* [GetValidatePhone](docs/sdk/README.md#getvalidatephone) - This method can be used as an extra-layer of your system for validating phone numbers.
 <!-- End SDK Available Operations -->
 
 ### Maturity

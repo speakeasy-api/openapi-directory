@@ -16,20 +16,24 @@ const (
 	BucketOwnerAccessEnumFull     BucketOwnerAccessEnum = "FULL"
 )
 
+func (e BucketOwnerAccessEnum) ToPointer() *BucketOwnerAccessEnum {
+	return &e
+}
+
 func (e *BucketOwnerAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "READ_ONLY":
 		fallthrough
 	case "FULL":
-		*e = BucketOwnerAccessEnum(s)
+		*e = BucketOwnerAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BucketOwnerAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for BucketOwnerAccessEnum: %v", v)
 	}
 }

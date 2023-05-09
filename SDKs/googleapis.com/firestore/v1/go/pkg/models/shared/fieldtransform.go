@@ -15,19 +15,23 @@ const (
 	FieldTransformSetToServerValueEnumRequestTime            FieldTransformSetToServerValueEnum = "REQUEST_TIME"
 )
 
+func (e FieldTransformSetToServerValueEnum) ToPointer() *FieldTransformSetToServerValueEnum {
+	return &e
+}
+
 func (e *FieldTransformSetToServerValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVER_VALUE_UNSPECIFIED":
 		fallthrough
 	case "REQUEST_TIME":
-		*e = FieldTransformSetToServerValueEnum(s)
+		*e = FieldTransformSetToServerValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldTransformSetToServerValueEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldTransformSetToServerValueEnum: %v", v)
 	}
 }
 

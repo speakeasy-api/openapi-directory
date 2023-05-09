@@ -19,12 +19,16 @@ const (
 	DetectorModelVersionStatusEnumFailed     DetectorModelVersionStatusEnum = "FAILED"
 )
 
+func (e DetectorModelVersionStatusEnum) ToPointer() *DetectorModelVersionStatusEnum {
+	return &e
+}
+
 func (e *DetectorModelVersionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "ACTIVATING":
@@ -38,9 +42,9 @@ func (e *DetectorModelVersionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PAUSED":
 		fallthrough
 	case "FAILED":
-		*e = DetectorModelVersionStatusEnum(s)
+		*e = DetectorModelVersionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetectorModelVersionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DetectorModelVersionStatusEnum: %v", v)
 	}
 }

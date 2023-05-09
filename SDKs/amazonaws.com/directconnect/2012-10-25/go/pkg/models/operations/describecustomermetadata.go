@@ -16,17 +16,21 @@ const (
 	DescribeCustomerMetadataXAmzTargetEnumOvertureServiceDescribeCustomerMetadata DescribeCustomerMetadataXAmzTargetEnum = "OvertureService.DescribeCustomerMetadata"
 )
 
+func (e DescribeCustomerMetadataXAmzTargetEnum) ToPointer() *DescribeCustomerMetadataXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeCustomerMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.DescribeCustomerMetadata":
-		*e = DescribeCustomerMetadataXAmzTargetEnum(s)
+		*e = DescribeCustomerMetadataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeCustomerMetadataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeCustomerMetadataXAmzTargetEnum: %v", v)
 	}
 }
 

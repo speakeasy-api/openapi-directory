@@ -15,17 +15,21 @@ const (
 	GETDeleteQueueActionEnumDeleteQueue GETDeleteQueueActionEnum = "DeleteQueue"
 )
 
+func (e GETDeleteQueueActionEnum) ToPointer() *GETDeleteQueueActionEnum {
+	return &e
+}
+
 func (e *GETDeleteQueueActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteQueue":
-		*e = GETDeleteQueueActionEnum(s)
+		*e = GETDeleteQueueActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteQueueActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteQueueActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteQueueVersionEnumTwoThousandAndTwelve1105 GETDeleteQueueVersionEnum = "2012-11-05"
 )
 
+func (e GETDeleteQueueVersionEnum) ToPointer() *GETDeleteQueueVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteQueueVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = GETDeleteQueueVersionEnum(s)
+		*e = GETDeleteQueueVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteQueueVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteQueueVersionEnum: %v", v)
 	}
 }
 

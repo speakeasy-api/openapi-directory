@@ -16,17 +16,21 @@ const (
 	DescribeGlobalTableSettingsXAmzTargetEnumDynamoDb20120810DescribeGlobalTableSettings DescribeGlobalTableSettingsXAmzTargetEnum = "DynamoDB_20120810.DescribeGlobalTableSettings"
 )
 
+func (e DescribeGlobalTableSettingsXAmzTargetEnum) ToPointer() *DescribeGlobalTableSettingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeGlobalTableSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.DescribeGlobalTableSettings":
-		*e = DescribeGlobalTableSettingsXAmzTargetEnum(s)
+		*e = DescribeGlobalTableSettingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeGlobalTableSettingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeGlobalTableSettingsXAmzTargetEnum: %v", v)
 	}
 }
 

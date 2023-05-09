@@ -13,40 +13,38 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/eventarc/v
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.EventarcProjectsLocationsChannelConnectionsCreateRequest{
-        DollarXgafv: "2",
-        ChannelConnectionInput: &shared.ChannelConnectionInput{
-            ActivationToken: "provident",
-            Channel: "distinctio",
-            Name: "quibusdam",
-        },
-        AccessToken: "unde",
-        Alt: "proto",
-        Callback: "corrupti",
-        ChannelConnectionID: "illum",
-        Fields: "vel",
-        Key: "error",
-        OauthToken: "deserunt",
-        Parent: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.EventarcProjectsLocationsChannelConnectionsCreate(ctx, req, operations.EventarcProjectsLocationsChannelConnectionsCreateSecurity{
+    res, err := s.Projects.EventarcProjectsLocationsChannelConnectionsCreate(ctx, operations.EventarcProjectsLocationsChannelConnectionsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        ChannelConnectionInput: &shared.ChannelConnectionInput{
+            ActivationToken: sdk.String("provident"),
+            Channel: sdk.String("distinctio"),
+            Name: sdk.String("Stuart Stiedemann"),
+        },
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("deserunt"),
+        ChannelConnectionID: sdk.String("suscipit"),
+        Fields: sdk.String("iure"),
+        Key: sdk.String("magnam"),
+        OauthToken: sdk.String("debitis"),
+        Parent: "ipsa",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("delectus"),
+        UploadType: sdk.String("tempora"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.EventarcProjectsLocationsChannelConnectionsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -65,24 +63,24 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `EventarcProjectsLocationsChannelConnectionsCreate` - Create a new ChannelConnection in a particular project and location.
-* `EventarcProjectsLocationsChannelConnectionsList` - List channel connections.
-* `EventarcProjectsLocationsChannelsCreate` - Create a new channel in a particular project and location.
-* `EventarcProjectsLocationsChannelsList` - List channels.
-* `EventarcProjectsLocationsList` - Lists information about the supported locations for this service.
-* `EventarcProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `EventarcProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `EventarcProjectsLocationsProvidersList` - List providers.
-* `EventarcProjectsLocationsTriggersCreate` - Create a new trigger in a particular project and location.
-* `EventarcProjectsLocationsTriggersDelete` - Delete a single trigger.
-* `EventarcProjectsLocationsTriggersGet` - Get a single trigger.
-* `EventarcProjectsLocationsTriggersGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `EventarcProjectsLocationsTriggersList` - List triggers.
-* `EventarcProjectsLocationsTriggersPatch` - Update a single trigger.
-* `EventarcProjectsLocationsTriggersSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-* `EventarcProjectsLocationsTriggersTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+* [EventarcProjectsLocationsChannelConnectionsCreate](docs/projects/README.md#eventarcprojectslocationschannelconnectionscreate) - Create a new ChannelConnection in a particular project and location.
+* [EventarcProjectsLocationsChannelConnectionsList](docs/projects/README.md#eventarcprojectslocationschannelconnectionslist) - List channel connections.
+* [EventarcProjectsLocationsChannelsCreate](docs/projects/README.md#eventarcprojectslocationschannelscreate) - Create a new channel in a particular project and location.
+* [EventarcProjectsLocationsChannelsList](docs/projects/README.md#eventarcprojectslocationschannelslist) - List channels.
+* [EventarcProjectsLocationsList](docs/projects/README.md#eventarcprojectslocationslist) - Lists information about the supported locations for this service.
+* [EventarcProjectsLocationsOperationsCancel](docs/projects/README.md#eventarcprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [EventarcProjectsLocationsOperationsList](docs/projects/README.md#eventarcprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [EventarcProjectsLocationsProvidersList](docs/projects/README.md#eventarcprojectslocationsproviderslist) - List providers.
+* [EventarcProjectsLocationsTriggersCreate](docs/projects/README.md#eventarcprojectslocationstriggerscreate) - Create a new trigger in a particular project and location.
+* [EventarcProjectsLocationsTriggersDelete](docs/projects/README.md#eventarcprojectslocationstriggersdelete) - Delete a single trigger.
+* [EventarcProjectsLocationsTriggersGet](docs/projects/README.md#eventarcprojectslocationstriggersget) - Get a single trigger.
+* [EventarcProjectsLocationsTriggersGetIamPolicy](docs/projects/README.md#eventarcprojectslocationstriggersgetiampolicy) - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* [EventarcProjectsLocationsTriggersList](docs/projects/README.md#eventarcprojectslocationstriggerslist) - List triggers.
+* [EventarcProjectsLocationsTriggersPatch](docs/projects/README.md#eventarcprojectslocationstriggerspatch) - Update a single trigger.
+* [EventarcProjectsLocationsTriggersSetIamPolicy](docs/projects/README.md#eventarcprojectslocationstriggerssetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+* [EventarcProjectsLocationsTriggersTestIamPermissions](docs/projects/README.md#eventarcprojectslocationstriggerstestiampermissions) - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 <!-- End SDK Available Operations -->
 
 ### Maturity

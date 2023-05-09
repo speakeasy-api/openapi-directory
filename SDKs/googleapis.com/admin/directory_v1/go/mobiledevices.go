@@ -34,7 +34,10 @@ func newMobiledevices(defaultClient, securityClient HTTPClient, serverURL, langu
 // DirectoryMobiledevicesAction - Takes an action that affects a mobile device. For example, remotely wiping a device.
 func (s *mobiledevices) DirectoryMobiledevicesAction(ctx context.Context, request operations.DirectoryMobiledevicesActionRequest, security operations.DirectoryMobiledevicesActionSecurity) (*operations.DirectoryMobiledevicesActionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}/action", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}/action", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MobileDeviceAction", "json")
 	if err != nil {
@@ -80,7 +83,10 @@ func (s *mobiledevices) DirectoryMobiledevicesAction(ctx context.Context, reques
 // DirectoryMobiledevicesDelete - Removes a mobile device.
 func (s *mobiledevices) DirectoryMobiledevicesDelete(ctx context.Context, request operations.DirectoryMobiledevicesDeleteRequest, security operations.DirectoryMobiledevicesDeleteSecurity) (*operations.DirectoryMobiledevicesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -119,7 +125,10 @@ func (s *mobiledevices) DirectoryMobiledevicesDelete(ctx context.Context, reques
 // DirectoryMobiledevicesGet - Retrieves a mobile device's properties.
 func (s *mobiledevices) DirectoryMobiledevicesGet(ctx context.Context, request operations.DirectoryMobiledevicesGetRequest, security operations.DirectoryMobiledevicesGetSecurity) (*operations.DirectoryMobiledevicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -167,7 +176,10 @@ func (s *mobiledevices) DirectoryMobiledevicesGet(ctx context.Context, request o
 // DirectoryMobiledevicesList - Retrieves a paginated list of all user-owned mobile devices for an account. To retrieve a list that includes company-owned devices, use the Cloud Identity [Devices API](https://cloud.google.com/identity/docs/concepts/overview-devices) instead. This method times out after 60 minutes. For more information, see [Troubleshoot error codes](https://developers.google.com/admin-sdk/directory/v1/guides/troubleshoot-error-codes).
 func (s *mobiledevices) DirectoryMobiledevicesList(ctx context.Context, request operations.DirectoryMobiledevicesListRequest, security operations.DirectoryMobiledevicesListSecurity) (*operations.DirectoryMobiledevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/mobile", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

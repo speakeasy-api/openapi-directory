@@ -2,18 +2,19 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.BatchInputCallbackCompletionBatchRequest{
+    ctx := context.Background()
+    res, err := s.Callbacks.PostAutomationV4ActionsCallbacksCompleteCompleteBatch(ctx, shared.BatchInputCallbackCompletionBatchRequest{
         Inputs: []shared.CallbackCompletionBatchRequest{
             shared.CallbackCompletionBatchRequest{
                 CallbackID: "provident",
@@ -39,10 +40,7 @@ func main() {
                 },
             },
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.Callbacks.PostAutomationV4ActionsCallbacksCompleteCompleteBatch(ctx, req, operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity{
+    }, operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity{
         Hapikey: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {

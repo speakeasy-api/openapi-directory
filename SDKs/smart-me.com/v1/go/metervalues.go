@@ -39,7 +39,10 @@ func newMeterValues(defaultClient, securityClient HTTPClient, serverURL, languag
 // Gets the Values for a Meter at a given Date. The first Value found before the given Date is returned.
 func (s *meterValues) MeterValuesGet(ctx context.Context, request operations.MeterValuesGetRequest) (*operations.MeterValuesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/MeterValues/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/MeterValues/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

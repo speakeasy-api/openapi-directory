@@ -15,20 +15,24 @@ const (
 	ScaleInProtectedInstancesEnumWait    ScaleInProtectedInstancesEnum = "Wait"
 )
 
+func (e ScaleInProtectedInstancesEnum) ToPointer() *ScaleInProtectedInstancesEnum {
+	return &e
+}
+
 func (e *ScaleInProtectedInstancesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Refresh":
 		fallthrough
 	case "Ignore":
 		fallthrough
 	case "Wait":
-		*e = ScaleInProtectedInstancesEnum(s)
+		*e = ScaleInProtectedInstancesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScaleInProtectedInstancesEnum: %s", s)
+		return fmt.Errorf("invalid value for ScaleInProtectedInstancesEnum: %v", v)
 	}
 }

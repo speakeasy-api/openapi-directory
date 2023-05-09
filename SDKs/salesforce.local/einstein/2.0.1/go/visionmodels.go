@@ -36,7 +36,10 @@ func newVisionModels(defaultClient, securityClient HTTPClient, serverURL, langua
 // Deletes the specified model.
 func (s *visionModels) DeleteModel1(ctx context.Context, request operations.DeleteModel1Request, security operations.DeleteModel1Security) (*operations.DeleteModel1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/models/{modelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vision/models/{modelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *visionModels) DeleteModel1(ctx context.Context, request operations.Dele
 // Returns the metrics for each epoch in a model.
 func (s *visionModels) GetTrainedModelLearningCurve1(ctx context.Context, request operations.GetTrainedModelLearningCurve1Request, security operations.GetTrainedModelLearningCurve1Security) (*operations.GetTrainedModelLearningCurve1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/models/{modelId}/lc", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vision/models/{modelId}/lc", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *visionModels) GetTrainedModelLearningCurve1(ctx context.Context, reques
 // Returns the metrics for a model
 func (s *visionModels) GetTrainedModelMetrics1(ctx context.Context, request operations.GetTrainedModelMetrics1Request, security operations.GetTrainedModelMetrics1Security) (*operations.GetTrainedModelMetrics1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/models/{modelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vision/models/{modelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -175,7 +184,10 @@ func (s *visionModels) GetTrainedModelMetrics1(ctx context.Context, request oper
 // Returns all models for the specified dataset.
 func (s *visionModels) GetTrainedModels1(ctx context.Context, request operations.GetTrainedModels1Request, security operations.GetTrainedModels1Security) (*operations.GetTrainedModels1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

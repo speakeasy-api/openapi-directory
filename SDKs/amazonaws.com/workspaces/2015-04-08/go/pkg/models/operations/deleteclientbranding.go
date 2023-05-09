@@ -16,17 +16,21 @@ const (
 	DeleteClientBrandingXAmzTargetEnumWorkspacesServiceDeleteClientBranding DeleteClientBrandingXAmzTargetEnum = "WorkspacesService.DeleteClientBranding"
 )
 
+func (e DeleteClientBrandingXAmzTargetEnum) ToPointer() *DeleteClientBrandingXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteClientBrandingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.DeleteClientBranding":
-		*e = DeleteClientBrandingXAmzTargetEnum(s)
+		*e = DeleteClientBrandingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteClientBrandingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteClientBrandingXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	CertificateReissueRootTypeEnumStarfieldSha2 CertificateReissueRootTypeEnum = "STARFIELD_SHA_2"
 )
 
+func (e CertificateReissueRootTypeEnum) ToPointer() *CertificateReissueRootTypeEnum {
+	return &e
+}
+
 func (e *CertificateReissueRootTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GODADDY_SHA_1":
 		fallthrough
 	case "GODADDY_SHA_2":
@@ -30,10 +34,10 @@ func (e *CertificateReissueRootTypeEnum) UnmarshalJSON(data []byte) error {
 	case "STARFIELD_SHA_1":
 		fallthrough
 	case "STARFIELD_SHA_2":
-		*e = CertificateReissueRootTypeEnum(s)
+		*e = CertificateReissueRootTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateReissueRootTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateReissueRootTypeEnum: %v", v)
 	}
 }
 

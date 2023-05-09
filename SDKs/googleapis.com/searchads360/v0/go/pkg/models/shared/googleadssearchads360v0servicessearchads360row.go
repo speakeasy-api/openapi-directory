@@ -6,18 +6,34 @@ package shared
 type GoogleAdsSearchads360V0ServicesSearchAds360Row struct {
 	// An ad group.
 	AdGroup *GoogleAdsSearchads360V0ResourcesAdGroup `json:"adGroup,omitempty"`
+	// An ad group ad.
+	AdGroupAd *GoogleAdsSearchads360V0ResourcesAdGroupAd `json:"adGroupAd,omitempty"`
+	// A relationship between an ad group ad and a label.
+	AdGroupAdLabel *GoogleAdsSearchads360V0ResourcesAdGroupAdLabel `json:"adGroupAdLabel,omitempty"`
+	// An ad group audience view. Includes performance data from interests and remarketing lists for Display Network and YouTube Network ads, and remarketing lists for search ads (RLSA), aggregated at the audience level.
+	AdGroupAudienceView *GoogleAdsSearchads360V0ResourcesAdGroupAudienceView `json:"adGroupAudienceView,omitempty"`
 	// Represents an ad group bid modifier.
 	AdGroupBidModifier *GoogleAdsSearchads360V0ResourcesAdGroupBidModifier `json:"adGroupBidModifier,omitempty"`
 	// An ad group criterion.
 	AdGroupCriterion *GoogleAdsSearchads360V0ResourcesAdGroupCriterion `json:"adGroupCriterion,omitempty"`
+	// A relationship between an ad group criterion and a label.
+	AdGroupCriterionLabel *GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel `json:"adGroupCriterionLabel,omitempty"`
+	// A relationship between an ad group and a label.
+	AdGroupLabel *GoogleAdsSearchads360V0ResourcesAdGroupLabel `json:"adGroupLabel,omitempty"`
+	// An age range view.
+	AgeRangeView *GoogleAdsSearchads360V0ResourcesAgeRangeView `json:"ageRangeView,omitempty"`
 	// A bidding strategy.
 	BiddingStrategy *GoogleAdsSearchads360V0ResourcesBiddingStrategy `json:"biddingStrategy,omitempty"`
 	// A campaign.
 	Campaign *GoogleAdsSearchads360V0ResourcesCampaign `json:"campaign,omitempty"`
+	// A campaign audience view. Includes performance data from interests and remarketing lists for Display Network and YouTube Network ads, and remarketing lists for search ads (RLSA), aggregated by campaign and audience criterion. This view only includes audiences attached at the campaign level.
+	CampaignAudienceView *GoogleAdsSearchads360V0ResourcesCampaignAudienceView `json:"campaignAudienceView,omitempty"`
 	// A campaign budget.
 	CampaignBudget *GoogleAdsSearchads360V0ResourcesCampaignBudget `json:"campaignBudget,omitempty"`
 	// A campaign criterion.
 	CampaignCriterion *GoogleAdsSearchads360V0ResourcesCampaignCriterion `json:"campaignCriterion,omitempty"`
+	// Represents a relationship between a campaign and a label.
+	CampaignLabel *GoogleAdsSearchads360V0ResourcesCampaignLabel `json:"campaignLabel,omitempty"`
 	// A conversion action.
 	ConversionAction *GoogleAdsSearchads360V0ResourcesConversionAction `json:"conversionAction,omitempty"`
 	// The custom columns.
@@ -28,12 +44,24 @@ type GoogleAdsSearchads360V0ServicesSearchAds360Row struct {
 	CustomerClient *GoogleAdsSearchads360V0ResourcesCustomerClient `json:"customerClient,omitempty"`
 	// Represents customer-manager link relationship.
 	CustomerManagerLink *GoogleAdsSearchads360V0ResourcesCustomerManagerLink `json:"customerManagerLink,omitempty"`
+	// A dynamic search ads search term view.
+	DynamicSearchAdsSearchTermView *GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView `json:"dynamicSearchAdsSearchTermView,omitempty"`
+	// A gender view.
+	GenderView *GoogleAdsSearchads360V0ResourcesGenderView `json:"genderView,omitempty"`
 	// A keyword view.
 	KeywordView *GoogleAdsSearchads360V0ResourcesKeywordView `json:"keywordView,omitempty"`
+	// A label.
+	Label *GoogleAdsSearchads360V0ResourcesLabel `json:"label,omitempty"`
+	// A location view summarizes the performance of campaigns by Location criteria.
+	LocationView *GoogleAdsSearchads360V0ResourcesLocationView `json:"locationView,omitempty"`
 	// Metrics data.
 	Metrics *GoogleAdsSearchads360V0CommonMetrics `json:"metrics,omitempty"`
 	// A product group view.
 	ProductGroupView *GoogleAdsSearchads360V0ResourcesProductGroupView `json:"productGroupView,omitempty"`
 	// Segment only fields.
 	Segments *GoogleAdsSearchads360V0CommonSegments `json:"segments,omitempty"`
+	// A user list. This is a list of users a customer may target.
+	UserList *GoogleAdsSearchads360V0ResourcesUserList `json:"userList,omitempty"`
+	// A webpage view.
+	WebpageView *GoogleAdsSearchads360V0ResourcesWebpageView `json:"webpageView,omitempty"`
 }

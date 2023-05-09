@@ -15,17 +15,21 @@ const (
 	POSTDeleteCustomDBEngineVersionActionEnumDeleteCustomDbEngineVersion POSTDeleteCustomDBEngineVersionActionEnum = "DeleteCustomDBEngineVersion"
 )
 
+func (e POSTDeleteCustomDBEngineVersionActionEnum) ToPointer() *POSTDeleteCustomDBEngineVersionActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteCustomDBEngineVersionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteCustomDBEngineVersion":
-		*e = POSTDeleteCustomDBEngineVersionActionEnum(s)
+		*e = POSTDeleteCustomDBEngineVersionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteCustomDBEngineVersionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteCustomDBEngineVersionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteCustomDBEngineVersionVersionEnumTwoThousandAndFourteen1031 POSTDeleteCustomDBEngineVersionVersionEnum = "2014-10-31"
 )
 
+func (e POSTDeleteCustomDBEngineVersionVersionEnum) ToPointer() *POSTDeleteCustomDBEngineVersionVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteCustomDBEngineVersionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTDeleteCustomDBEngineVersionVersionEnum(s)
+		*e = POSTDeleteCustomDBEngineVersionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteCustomDBEngineVersionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteCustomDBEngineVersionVersionEnum: %v", v)
 	}
 }
 

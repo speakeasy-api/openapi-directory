@@ -16,17 +16,21 @@ const (
 	UpdateSizeConstraintSetXAmzTargetEnumAwswaf20150824UpdateSizeConstraintSet UpdateSizeConstraintSetXAmzTargetEnum = "AWSWAF_20150824.UpdateSizeConstraintSet"
 )
 
+func (e UpdateSizeConstraintSetXAmzTargetEnum) ToPointer() *UpdateSizeConstraintSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateSizeConstraintSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.UpdateSizeConstraintSet":
-		*e = UpdateSizeConstraintSetXAmzTargetEnum(s)
+		*e = UpdateSizeConstraintSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSizeConstraintSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSizeConstraintSetXAmzTargetEnum: %v", v)
 	}
 }
 

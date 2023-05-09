@@ -16,21 +16,25 @@ const (
 	GoogleCloudDatapipelinesV1RuntimeEnvironmentIPConfigurationEnumWorkerIPPrivate     GoogleCloudDatapipelinesV1RuntimeEnvironmentIPConfigurationEnum = "WORKER_IP_PRIVATE"
 )
 
+func (e GoogleCloudDatapipelinesV1RuntimeEnvironmentIPConfigurationEnum) ToPointer() *GoogleCloudDatapipelinesV1RuntimeEnvironmentIPConfigurationEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatapipelinesV1RuntimeEnvironmentIPConfigurationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORKER_IP_UNSPECIFIED":
 		fallthrough
 	case "WORKER_IP_PUBLIC":
 		fallthrough
 	case "WORKER_IP_PRIVATE":
-		*e = GoogleCloudDatapipelinesV1RuntimeEnvironmentIPConfigurationEnum(s)
+		*e = GoogleCloudDatapipelinesV1RuntimeEnvironmentIPConfigurationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatapipelinesV1RuntimeEnvironmentIPConfigurationEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatapipelinesV1RuntimeEnvironmentIPConfigurationEnum: %v", v)
 	}
 }
 

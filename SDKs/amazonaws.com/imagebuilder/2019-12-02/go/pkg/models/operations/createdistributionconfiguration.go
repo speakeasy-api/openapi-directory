@@ -8,15 +8,15 @@ import (
 )
 
 type CreateDistributionConfigurationRequestBody struct {
-	//  The idempotency token of the distribution configuration.
+	// The idempotency token of the distribution configuration.
 	ClientToken string `json:"clientToken"`
-	//  The description of the distribution configuration.
+	// The description of the distribution configuration.
 	Description *string `json:"description,omitempty"`
-	//  The distributions of the distribution configuration.
+	// The distributions of the distribution configuration.
 	Distributions []shared.Distribution `json:"distributions"`
-	//  The name of the distribution configuration.
+	// The name of the distribution configuration.
 	Name string `json:"name"`
-	//  The tags of the distribution configuration.
+	// The tags of the distribution configuration.
 	Tags map[string]string `json:"tags,omitempty"`
 }
 

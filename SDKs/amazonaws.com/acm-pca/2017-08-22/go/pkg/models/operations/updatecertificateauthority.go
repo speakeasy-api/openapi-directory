@@ -16,17 +16,21 @@ const (
 	UpdateCertificateAuthorityXAmzTargetEnumAcmPrivateCaUpdateCertificateAuthority UpdateCertificateAuthorityXAmzTargetEnum = "ACMPrivateCA.UpdateCertificateAuthority"
 )
 
+func (e UpdateCertificateAuthorityXAmzTargetEnum) ToPointer() *UpdateCertificateAuthorityXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateCertificateAuthorityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACMPrivateCA.UpdateCertificateAuthority":
-		*e = UpdateCertificateAuthorityXAmzTargetEnum(s)
+		*e = UpdateCertificateAuthorityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateCertificateAuthorityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateCertificateAuthorityXAmzTargetEnum: %v", v)
 	}
 }
 

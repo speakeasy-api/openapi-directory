@@ -15,17 +15,21 @@ const (
 	POSTStopDBInstanceActionEnumStopDbInstance POSTStopDBInstanceActionEnum = "StopDBInstance"
 )
 
+func (e POSTStopDBInstanceActionEnum) ToPointer() *POSTStopDBInstanceActionEnum {
+	return &e
+}
+
 func (e *POSTStopDBInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StopDBInstance":
-		*e = POSTStopDBInstanceActionEnum(s)
+		*e = POSTStopDBInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStopDBInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStopDBInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTStopDBInstanceVersionEnumTwoThousandAndFourteen1031 POSTStopDBInstanceVersionEnum = "2014-10-31"
 )
 
+func (e POSTStopDBInstanceVersionEnum) ToPointer() *POSTStopDBInstanceVersionEnum {
+	return &e
+}
+
 func (e *POSTStopDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTStopDBInstanceVersionEnum(s)
+		*e = POSTStopDBInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStopDBInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStopDBInstanceVersionEnum: %v", v)
 	}
 }
 

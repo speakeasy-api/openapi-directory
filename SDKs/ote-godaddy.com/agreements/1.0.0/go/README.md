@@ -13,29 +13,26 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ote-godaddy.com/agreement
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRequest{
-        XMarketID: "corrupti",
-        XPrivateLabelID: 592845,
+    ctx := context.Background()
+    res, err := s.V1.Get(ctx, operations.GetRequest{
+        XMarketID: sdk.String("corrupti"),
+        XPrivateLabelID: sdk.Int64(592845),
         Keys: []string{
             "quibusdam",
             "unde",
             "nulla",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.V1.Get(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,9 +48,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### V1
+### [V1](docs/v1/README.md)
 
-* `Get` - Retrieve Legal Agreements for provided agreements keys
+* [Get](docs/v1/README.md#get) - Retrieve Legal Agreements for provided agreements keys
 <!-- End SDK Available Operations -->
 
 ### Maturity

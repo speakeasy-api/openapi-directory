@@ -17,19 +17,23 @@ const (
 	UpdateResourceCollectionRequestBodyActionEnumRemove UpdateResourceCollectionRequestBodyActionEnum = "REMOVE"
 )
 
+func (e UpdateResourceCollectionRequestBodyActionEnum) ToPointer() *UpdateResourceCollectionRequestBodyActionEnum {
+	return &e
+}
+
 func (e *UpdateResourceCollectionRequestBodyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADD":
 		fallthrough
 	case "REMOVE":
-		*e = UpdateResourceCollectionRequestBodyActionEnum(s)
+		*e = UpdateResourceCollectionRequestBodyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateResourceCollectionRequestBodyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateResourceCollectionRequestBodyActionEnum: %v", v)
 	}
 }
 

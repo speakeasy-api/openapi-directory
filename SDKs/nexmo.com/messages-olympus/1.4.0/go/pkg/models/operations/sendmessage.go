@@ -23,17 +23,21 @@ const (
 	SendMessageRequestBodyViberFileChannelEnumViberService SendMessageRequestBodyViberFileChannelEnum = "viber_service"
 )
 
+func (e SendMessageRequestBodyViberFileChannelEnum) ToPointer() *SendMessageRequestBodyViberFileChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyViberFileChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "viber_service":
-		*e = SendMessageRequestBodyViberFileChannelEnum(s)
+		*e = SendMessageRequestBodyViberFileChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyViberFileChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyViberFileChannelEnum: %v", v)
 	}
 }
 
@@ -48,17 +52,21 @@ const (
 	SendMessageRequestBodyViberFileMessageTypeEnumFile SendMessageRequestBodyViberFileMessageTypeEnum = "file"
 )
 
+func (e SendMessageRequestBodyViberFileMessageTypeEnum) ToPointer() *SendMessageRequestBodyViberFileMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyViberFileMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "file":
-		*e = SendMessageRequestBodyViberFileMessageTypeEnum(s)
+		*e = SendMessageRequestBodyViberFileMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyViberFileMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyViberFileMessageTypeEnum: %v", v)
 	}
 }
 
@@ -70,19 +78,23 @@ const (
 	SendMessageRequestBodyViberFileViberServiceCategoryEnumPromotion   SendMessageRequestBodyViberFileViberServiceCategoryEnum = "promotion"
 )
 
+func (e SendMessageRequestBodyViberFileViberServiceCategoryEnum) ToPointer() *SendMessageRequestBodyViberFileViberServiceCategoryEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyViberFileViberServiceCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "transaction":
 		fallthrough
 	case "promotion":
-		*e = SendMessageRequestBodyViberFileViberServiceCategoryEnum(s)
+		*e = SendMessageRequestBodyViberFileViberServiceCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyViberFileViberServiceCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyViberFileViberServiceCategoryEnum: %v", v)
 	}
 }
 
@@ -119,17 +131,21 @@ const (
 	SendMessageRequestBodyViberVideoChannelEnumViberService SendMessageRequestBodyViberVideoChannelEnum = "viber_service"
 )
 
+func (e SendMessageRequestBodyViberVideoChannelEnum) ToPointer() *SendMessageRequestBodyViberVideoChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyViberVideoChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "viber_service":
-		*e = SendMessageRequestBodyViberVideoChannelEnum(s)
+		*e = SendMessageRequestBodyViberVideoChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyViberVideoChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyViberVideoChannelEnum: %v", v)
 	}
 }
 
@@ -140,17 +156,21 @@ const (
 	SendMessageRequestBodyViberVideoMessageTypeEnumVideo SendMessageRequestBodyViberVideoMessageTypeEnum = "video"
 )
 
+func (e SendMessageRequestBodyViberVideoMessageTypeEnum) ToPointer() *SendMessageRequestBodyViberVideoMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyViberVideoMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "video":
-		*e = SendMessageRequestBodyViberVideoMessageTypeEnum(s)
+		*e = SendMessageRequestBodyViberVideoMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyViberVideoMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyViberVideoMessageTypeEnum: %v", v)
 	}
 }
 
@@ -162,19 +182,23 @@ const (
 	SendMessageRequestBodyViberVideoViberServiceCategoryEnumPromotion   SendMessageRequestBodyViberVideoViberServiceCategoryEnum = "promotion"
 )
 
+func (e SendMessageRequestBodyViberVideoViberServiceCategoryEnum) ToPointer() *SendMessageRequestBodyViberVideoViberServiceCategoryEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyViberVideoViberServiceCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "transaction":
 		fallthrough
 	case "promotion":
-		*e = SendMessageRequestBodyViberVideoViberServiceCategoryEnum(s)
+		*e = SendMessageRequestBodyViberVideoViberServiceCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyViberVideoViberServiceCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyViberVideoViberServiceCategoryEnum: %v", v)
 	}
 }
 
@@ -222,17 +246,21 @@ const (
 	SendMessageRequestBodyViberImageChannelEnumViberService SendMessageRequestBodyViberImageChannelEnum = "viber_service"
 )
 
+func (e SendMessageRequestBodyViberImageChannelEnum) ToPointer() *SendMessageRequestBodyViberImageChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyViberImageChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "viber_service":
-		*e = SendMessageRequestBodyViberImageChannelEnum(s)
+		*e = SendMessageRequestBodyViberImageChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyViberImageChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyViberImageChannelEnum: %v", v)
 	}
 }
 
@@ -248,17 +276,21 @@ const (
 	SendMessageRequestBodyViberImageMessageTypeEnumImage SendMessageRequestBodyViberImageMessageTypeEnum = "image"
 )
 
+func (e SendMessageRequestBodyViberImageMessageTypeEnum) ToPointer() *SendMessageRequestBodyViberImageMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyViberImageMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "image":
-		*e = SendMessageRequestBodyViberImageMessageTypeEnum(s)
+		*e = SendMessageRequestBodyViberImageMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyViberImageMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyViberImageMessageTypeEnum: %v", v)
 	}
 }
 
@@ -278,19 +310,23 @@ const (
 	SendMessageRequestBodyViberImageViberServiceCategoryEnumPromotion   SendMessageRequestBodyViberImageViberServiceCategoryEnum = "promotion"
 )
 
+func (e SendMessageRequestBodyViberImageViberServiceCategoryEnum) ToPointer() *SendMessageRequestBodyViberImageViberServiceCategoryEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyViberImageViberServiceCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "transaction":
 		fallthrough
 	case "promotion":
-		*e = SendMessageRequestBodyViberImageViberServiceCategoryEnum(s)
+		*e = SendMessageRequestBodyViberImageViberServiceCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyViberImageViberServiceCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyViberImageViberServiceCategoryEnum: %v", v)
 	}
 }
 
@@ -329,17 +365,21 @@ const (
 	SendMessageRequestBodyViberTextChannelEnumViberService SendMessageRequestBodyViberTextChannelEnum = "viber_service"
 )
 
+func (e SendMessageRequestBodyViberTextChannelEnum) ToPointer() *SendMessageRequestBodyViberTextChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyViberTextChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "viber_service":
-		*e = SendMessageRequestBodyViberTextChannelEnum(s)
+		*e = SendMessageRequestBodyViberTextChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyViberTextChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyViberTextChannelEnum: %v", v)
 	}
 }
 
@@ -350,17 +390,21 @@ const (
 	SendMessageRequestBodyViberTextMessageTypeEnumText SendMessageRequestBodyViberTextMessageTypeEnum = "text"
 )
 
+func (e SendMessageRequestBodyViberTextMessageTypeEnum) ToPointer() *SendMessageRequestBodyViberTextMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyViberTextMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
-		*e = SendMessageRequestBodyViberTextMessageTypeEnum(s)
+		*e = SendMessageRequestBodyViberTextMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyViberTextMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyViberTextMessageTypeEnum: %v", v)
 	}
 }
 
@@ -380,19 +424,23 @@ const (
 	SendMessageRequestBodyViberTextViberServiceCategoryEnumPromotion   SendMessageRequestBodyViberTextViberServiceCategoryEnum = "promotion"
 )
 
+func (e SendMessageRequestBodyViberTextViberServiceCategoryEnum) ToPointer() *SendMessageRequestBodyViberTextViberServiceCategoryEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyViberTextViberServiceCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "transaction":
 		fallthrough
 	case "promotion":
-		*e = SendMessageRequestBodyViberTextViberServiceCategoryEnum(s)
+		*e = SendMessageRequestBodyViberTextViberServiceCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyViberTextViberServiceCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyViberTextViberServiceCategoryEnum: %v", v)
 	}
 }
 
@@ -548,17 +596,21 @@ const (
 	SendMessageRequestBodyMessengerFileChannelEnumMessenger SendMessageRequestBodyMessengerFileChannelEnum = "messenger"
 )
 
+func (e SendMessageRequestBodyMessengerFileChannelEnum) ToPointer() *SendMessageRequestBodyMessengerFileChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerFileChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "messenger":
-		*e = SendMessageRequestBodyMessengerFileChannelEnum(s)
+		*e = SendMessageRequestBodyMessengerFileChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerFileChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerFileChannelEnum: %v", v)
 	}
 }
 
@@ -573,17 +625,21 @@ const (
 	SendMessageRequestBodyMessengerFileMessageTypeEnumFile SendMessageRequestBodyMessengerFileMessageTypeEnum = "file"
 )
 
+func (e SendMessageRequestBodyMessengerFileMessageTypeEnum) ToPointer() *SendMessageRequestBodyMessengerFileMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerFileMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "file":
-		*e = SendMessageRequestBodyMessengerFileMessageTypeEnum(s)
+		*e = SendMessageRequestBodyMessengerFileMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerFileMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerFileMessageTypeEnum: %v", v)
 	}
 }
 
@@ -596,21 +652,25 @@ const (
 	SendMessageRequestBodyMessengerFileMessengerCategoryEnumMessageTag SendMessageRequestBodyMessengerFileMessengerCategoryEnum = "message_tag"
 )
 
+func (e SendMessageRequestBodyMessengerFileMessengerCategoryEnum) ToPointer() *SendMessageRequestBodyMessengerFileMessengerCategoryEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerFileMessengerCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "response":
 		fallthrough
 	case "update":
 		fallthrough
 	case "message_tag":
-		*e = SendMessageRequestBodyMessengerFileMessengerCategoryEnum(s)
+		*e = SendMessageRequestBodyMessengerFileMessengerCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerFileMessengerCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerFileMessengerCategoryEnum: %v", v)
 	}
 }
 
@@ -645,17 +705,21 @@ const (
 	SendMessageRequestBodyMessengerVideoChannelEnumMessenger SendMessageRequestBodyMessengerVideoChannelEnum = "messenger"
 )
 
+func (e SendMessageRequestBodyMessengerVideoChannelEnum) ToPointer() *SendMessageRequestBodyMessengerVideoChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerVideoChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "messenger":
-		*e = SendMessageRequestBodyMessengerVideoChannelEnum(s)
+		*e = SendMessageRequestBodyMessengerVideoChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerVideoChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerVideoChannelEnum: %v", v)
 	}
 }
 
@@ -666,17 +730,21 @@ const (
 	SendMessageRequestBodyMessengerVideoMessageTypeEnumVideo SendMessageRequestBodyMessengerVideoMessageTypeEnum = "video"
 )
 
+func (e SendMessageRequestBodyMessengerVideoMessageTypeEnum) ToPointer() *SendMessageRequestBodyMessengerVideoMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerVideoMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "video":
-		*e = SendMessageRequestBodyMessengerVideoMessageTypeEnum(s)
+		*e = SendMessageRequestBodyMessengerVideoMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerVideoMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerVideoMessageTypeEnum: %v", v)
 	}
 }
 
@@ -689,21 +757,25 @@ const (
 	SendMessageRequestBodyMessengerVideoMessengerCategoryEnumMessageTag SendMessageRequestBodyMessengerVideoMessengerCategoryEnum = "message_tag"
 )
 
+func (e SendMessageRequestBodyMessengerVideoMessengerCategoryEnum) ToPointer() *SendMessageRequestBodyMessengerVideoMessengerCategoryEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerVideoMessengerCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "response":
 		fallthrough
 	case "update":
 		fallthrough
 	case "message_tag":
-		*e = SendMessageRequestBodyMessengerVideoMessengerCategoryEnum(s)
+		*e = SendMessageRequestBodyMessengerVideoMessengerCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerVideoMessengerCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerVideoMessengerCategoryEnum: %v", v)
 	}
 }
 
@@ -749,17 +821,21 @@ const (
 	SendMessageRequestBodyMessengerAudioChannelEnumMessenger SendMessageRequestBodyMessengerAudioChannelEnum = "messenger"
 )
 
+func (e SendMessageRequestBodyMessengerAudioChannelEnum) ToPointer() *SendMessageRequestBodyMessengerAudioChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerAudioChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "messenger":
-		*e = SendMessageRequestBodyMessengerAudioChannelEnum(s)
+		*e = SendMessageRequestBodyMessengerAudioChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerAudioChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerAudioChannelEnum: %v", v)
 	}
 }
 
@@ -770,17 +846,21 @@ const (
 	SendMessageRequestBodyMessengerAudioMessageTypeEnumAudio SendMessageRequestBodyMessengerAudioMessageTypeEnum = "audio"
 )
 
+func (e SendMessageRequestBodyMessengerAudioMessageTypeEnum) ToPointer() *SendMessageRequestBodyMessengerAudioMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerAudioMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "audio":
-		*e = SendMessageRequestBodyMessengerAudioMessageTypeEnum(s)
+		*e = SendMessageRequestBodyMessengerAudioMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerAudioMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerAudioMessageTypeEnum: %v", v)
 	}
 }
 
@@ -793,21 +873,25 @@ const (
 	SendMessageRequestBodyMessengerAudioMessengerCategoryEnumMessageTag SendMessageRequestBodyMessengerAudioMessengerCategoryEnum = "message_tag"
 )
 
+func (e SendMessageRequestBodyMessengerAudioMessengerCategoryEnum) ToPointer() *SendMessageRequestBodyMessengerAudioMessengerCategoryEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerAudioMessengerCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "response":
 		fallthrough
 	case "update":
 		fallthrough
 	case "message_tag":
-		*e = SendMessageRequestBodyMessengerAudioMessengerCategoryEnum(s)
+		*e = SendMessageRequestBodyMessengerAudioMessengerCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerAudioMessengerCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerAudioMessengerCategoryEnum: %v", v)
 	}
 }
 
@@ -842,17 +926,21 @@ const (
 	SendMessageRequestBodyMessengerImageChannelEnumMessenger SendMessageRequestBodyMessengerImageChannelEnum = "messenger"
 )
 
+func (e SendMessageRequestBodyMessengerImageChannelEnum) ToPointer() *SendMessageRequestBodyMessengerImageChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerImageChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "messenger":
-		*e = SendMessageRequestBodyMessengerImageChannelEnum(s)
+		*e = SendMessageRequestBodyMessengerImageChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerImageChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerImageChannelEnum: %v", v)
 	}
 }
 
@@ -868,17 +956,21 @@ const (
 	SendMessageRequestBodyMessengerImageMessageTypeEnumImage SendMessageRequestBodyMessengerImageMessageTypeEnum = "image"
 )
 
+func (e SendMessageRequestBodyMessengerImageMessageTypeEnum) ToPointer() *SendMessageRequestBodyMessengerImageMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerImageMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "image":
-		*e = SendMessageRequestBodyMessengerImageMessageTypeEnum(s)
+		*e = SendMessageRequestBodyMessengerImageMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerImageMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerImageMessageTypeEnum: %v", v)
 	}
 }
 
@@ -891,21 +983,25 @@ const (
 	SendMessageRequestBodyMessengerImageMessengerCategoryEnumMessageTag SendMessageRequestBodyMessengerImageMessengerCategoryEnum = "message_tag"
 )
 
+func (e SendMessageRequestBodyMessengerImageMessengerCategoryEnum) ToPointer() *SendMessageRequestBodyMessengerImageMessengerCategoryEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerImageMessengerCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "response":
 		fallthrough
 	case "update":
 		fallthrough
 	case "message_tag":
-		*e = SendMessageRequestBodyMessengerImageMessengerCategoryEnum(s)
+		*e = SendMessageRequestBodyMessengerImageMessengerCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerImageMessengerCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerImageMessengerCategoryEnum: %v", v)
 	}
 }
 
@@ -940,17 +1036,21 @@ const (
 	SendMessageRequestBodyMessengerTextChannelEnumMessenger SendMessageRequestBodyMessengerTextChannelEnum = "messenger"
 )
 
+func (e SendMessageRequestBodyMessengerTextChannelEnum) ToPointer() *SendMessageRequestBodyMessengerTextChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerTextChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "messenger":
-		*e = SendMessageRequestBodyMessengerTextChannelEnum(s)
+		*e = SendMessageRequestBodyMessengerTextChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerTextChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerTextChannelEnum: %v", v)
 	}
 }
 
@@ -961,17 +1061,21 @@ const (
 	SendMessageRequestBodyMessengerTextMessageTypeEnumText SendMessageRequestBodyMessengerTextMessageTypeEnum = "text"
 )
 
+func (e SendMessageRequestBodyMessengerTextMessageTypeEnum) ToPointer() *SendMessageRequestBodyMessengerTextMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerTextMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
-		*e = SendMessageRequestBodyMessengerTextMessageTypeEnum(s)
+		*e = SendMessageRequestBodyMessengerTextMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerTextMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerTextMessageTypeEnum: %v", v)
 	}
 }
 
@@ -984,21 +1088,25 @@ const (
 	SendMessageRequestBodyMessengerTextMessengerCategoryEnumMessageTag SendMessageRequestBodyMessengerTextMessengerCategoryEnum = "message_tag"
 )
 
+func (e SendMessageRequestBodyMessengerTextMessengerCategoryEnum) ToPointer() *SendMessageRequestBodyMessengerTextMessengerCategoryEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMessengerTextMessengerCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "response":
 		fallthrough
 	case "update":
 		fallthrough
 	case "message_tag":
-		*e = SendMessageRequestBodyMessengerTextMessengerCategoryEnum(s)
+		*e = SendMessageRequestBodyMessengerTextMessengerCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerTextMessengerCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMessengerTextMessengerCategoryEnum: %v", v)
 	}
 }
 
@@ -1174,17 +1282,21 @@ const (
 	SendMessageRequestBodyWhatsAppCustomChannelEnumWhatsapp SendMessageRequestBodyWhatsAppCustomChannelEnum = "whatsapp"
 )
 
+func (e SendMessageRequestBodyWhatsAppCustomChannelEnum) ToPointer() *SendMessageRequestBodyWhatsAppCustomChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppCustomChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "whatsapp":
-		*e = SendMessageRequestBodyWhatsAppCustomChannelEnum(s)
+		*e = SendMessageRequestBodyWhatsAppCustomChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppCustomChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppCustomChannelEnum: %v", v)
 	}
 }
 
@@ -1195,17 +1307,21 @@ const (
 	SendMessageRequestBodyWhatsAppCustomMessageTypeEnumCustom SendMessageRequestBodyWhatsAppCustomMessageTypeEnum = "custom"
 )
 
+func (e SendMessageRequestBodyWhatsAppCustomMessageTypeEnum) ToPointer() *SendMessageRequestBodyWhatsAppCustomMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppCustomMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "custom":
-		*e = SendMessageRequestBodyWhatsAppCustomMessageTypeEnum(s)
+		*e = SendMessageRequestBodyWhatsAppCustomMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppCustomMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppCustomMessageTypeEnum: %v", v)
 	}
 }
 
@@ -1233,17 +1349,21 @@ const (
 	SendMessageRequestBodyWhatsAppTemplateChannelEnumWhatsapp SendMessageRequestBodyWhatsAppTemplateChannelEnum = "whatsapp"
 )
 
+func (e SendMessageRequestBodyWhatsAppTemplateChannelEnum) ToPointer() *SendMessageRequestBodyWhatsAppTemplateChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppTemplateChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "whatsapp":
-		*e = SendMessageRequestBodyWhatsAppTemplateChannelEnum(s)
+		*e = SendMessageRequestBodyWhatsAppTemplateChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppTemplateChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppTemplateChannelEnum: %v", v)
 	}
 }
 
@@ -1254,17 +1374,21 @@ const (
 	SendMessageRequestBodyWhatsAppTemplateMessageTypeEnumTemplate SendMessageRequestBodyWhatsAppTemplateMessageTypeEnum = "template"
 )
 
+func (e SendMessageRequestBodyWhatsAppTemplateMessageTypeEnum) ToPointer() *SendMessageRequestBodyWhatsAppTemplateMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppTemplateMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "template":
-		*e = SendMessageRequestBodyWhatsAppTemplateMessageTypeEnum(s)
+		*e = SendMessageRequestBodyWhatsAppTemplateMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppTemplateMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppTemplateMessageTypeEnum: %v", v)
 	}
 }
 
@@ -1282,17 +1406,21 @@ const (
 	SendMessageRequestBodyWhatsAppTemplateWhatsappPolicyEnumDeterministic SendMessageRequestBodyWhatsAppTemplateWhatsappPolicyEnum = "deterministic"
 )
 
+func (e SendMessageRequestBodyWhatsAppTemplateWhatsappPolicyEnum) ToPointer() *SendMessageRequestBodyWhatsAppTemplateWhatsappPolicyEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppTemplateWhatsappPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deterministic":
-		*e = SendMessageRequestBodyWhatsAppTemplateWhatsappPolicyEnum(s)
+		*e = SendMessageRequestBodyWhatsAppTemplateWhatsappPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppTemplateWhatsappPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppTemplateWhatsappPolicyEnum: %v", v)
 	}
 }
 
@@ -1327,17 +1455,21 @@ const (
 	SendMessageRequestBodyWhatsAppFileChannelEnumWhatsapp SendMessageRequestBodyWhatsAppFileChannelEnum = "whatsapp"
 )
 
+func (e SendMessageRequestBodyWhatsAppFileChannelEnum) ToPointer() *SendMessageRequestBodyWhatsAppFileChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppFileChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "whatsapp":
-		*e = SendMessageRequestBodyWhatsAppFileChannelEnum(s)
+		*e = SendMessageRequestBodyWhatsAppFileChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppFileChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppFileChannelEnum: %v", v)
 	}
 }
 
@@ -1352,17 +1484,21 @@ const (
 	SendMessageRequestBodyWhatsAppFileMessageTypeEnumFile SendMessageRequestBodyWhatsAppFileMessageTypeEnum = "file"
 )
 
+func (e SendMessageRequestBodyWhatsAppFileMessageTypeEnum) ToPointer() *SendMessageRequestBodyWhatsAppFileMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppFileMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "file":
-		*e = SendMessageRequestBodyWhatsAppFileMessageTypeEnum(s)
+		*e = SendMessageRequestBodyWhatsAppFileMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppFileMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppFileMessageTypeEnum: %v", v)
 	}
 }
 
@@ -1389,17 +1525,21 @@ const (
 	SendMessageRequestBodyWhatsAppVideoChannelEnumWhatsapp SendMessageRequestBodyWhatsAppVideoChannelEnum = "whatsapp"
 )
 
+func (e SendMessageRequestBodyWhatsAppVideoChannelEnum) ToPointer() *SendMessageRequestBodyWhatsAppVideoChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppVideoChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "whatsapp":
-		*e = SendMessageRequestBodyWhatsAppVideoChannelEnum(s)
+		*e = SendMessageRequestBodyWhatsAppVideoChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppVideoChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppVideoChannelEnum: %v", v)
 	}
 }
 
@@ -1410,17 +1550,21 @@ const (
 	SendMessageRequestBodyWhatsAppVideoMessageTypeEnumVideo SendMessageRequestBodyWhatsAppVideoMessageTypeEnum = "video"
 )
 
+func (e SendMessageRequestBodyWhatsAppVideoMessageTypeEnum) ToPointer() *SendMessageRequestBodyWhatsAppVideoMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppVideoMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "video":
-		*e = SendMessageRequestBodyWhatsAppVideoMessageTypeEnum(s)
+		*e = SendMessageRequestBodyWhatsAppVideoMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppVideoMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppVideoMessageTypeEnum: %v", v)
 	}
 }
 
@@ -1458,17 +1602,21 @@ const (
 	SendMessageRequestBodyWhatsAppAudioChannelEnumWhatsapp SendMessageRequestBodyWhatsAppAudioChannelEnum = "whatsapp"
 )
 
+func (e SendMessageRequestBodyWhatsAppAudioChannelEnum) ToPointer() *SendMessageRequestBodyWhatsAppAudioChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppAudioChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "whatsapp":
-		*e = SendMessageRequestBodyWhatsAppAudioChannelEnum(s)
+		*e = SendMessageRequestBodyWhatsAppAudioChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppAudioChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppAudioChannelEnum: %v", v)
 	}
 }
 
@@ -1479,17 +1627,21 @@ const (
 	SendMessageRequestBodyWhatsAppAudioMessageTypeEnumAudio SendMessageRequestBodyWhatsAppAudioMessageTypeEnum = "audio"
 )
 
+func (e SendMessageRequestBodyWhatsAppAudioMessageTypeEnum) ToPointer() *SendMessageRequestBodyWhatsAppAudioMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppAudioMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "audio":
-		*e = SendMessageRequestBodyWhatsAppAudioMessageTypeEnum(s)
+		*e = SendMessageRequestBodyWhatsAppAudioMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppAudioMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppAudioMessageTypeEnum: %v", v)
 	}
 }
 
@@ -1516,17 +1668,21 @@ const (
 	SendMessageRequestBodyWhatsAppImageChannelEnumWhatsapp SendMessageRequestBodyWhatsAppImageChannelEnum = "whatsapp"
 )
 
+func (e SendMessageRequestBodyWhatsAppImageChannelEnum) ToPointer() *SendMessageRequestBodyWhatsAppImageChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppImageChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "whatsapp":
-		*e = SendMessageRequestBodyWhatsAppImageChannelEnum(s)
+		*e = SendMessageRequestBodyWhatsAppImageChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppImageChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppImageChannelEnum: %v", v)
 	}
 }
 
@@ -1542,17 +1698,21 @@ const (
 	SendMessageRequestBodyWhatsAppImageMessageTypeEnumImage SendMessageRequestBodyWhatsAppImageMessageTypeEnum = "image"
 )
 
+func (e SendMessageRequestBodyWhatsAppImageMessageTypeEnum) ToPointer() *SendMessageRequestBodyWhatsAppImageMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppImageMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "image":
-		*e = SendMessageRequestBodyWhatsAppImageMessageTypeEnum(s)
+		*e = SendMessageRequestBodyWhatsAppImageMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppImageMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppImageMessageTypeEnum: %v", v)
 	}
 }
 
@@ -1579,17 +1739,21 @@ const (
 	SendMessageRequestBodyWhatsAppLocationChannelEnumWhatsapp SendMessageRequestBodyWhatsAppLocationChannelEnum = "whatsapp"
 )
 
+func (e SendMessageRequestBodyWhatsAppLocationChannelEnum) ToPointer() *SendMessageRequestBodyWhatsAppLocationChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppLocationChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "whatsapp":
-		*e = SendMessageRequestBodyWhatsAppLocationChannelEnum(s)
+		*e = SendMessageRequestBodyWhatsAppLocationChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppLocationChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppLocationChannelEnum: %v", v)
 	}
 }
 
@@ -1611,17 +1775,21 @@ const (
 	SendMessageRequestBodyWhatsAppLocationMessageTypeEnumLocation SendMessageRequestBodyWhatsAppLocationMessageTypeEnum = "location"
 )
 
+func (e SendMessageRequestBodyWhatsAppLocationMessageTypeEnum) ToPointer() *SendMessageRequestBodyWhatsAppLocationMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppLocationMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "location":
-		*e = SendMessageRequestBodyWhatsAppLocationMessageTypeEnum(s)
+		*e = SendMessageRequestBodyWhatsAppLocationMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppLocationMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppLocationMessageTypeEnum: %v", v)
 	}
 }
 
@@ -1651,17 +1819,21 @@ const (
 	SendMessageRequestBodyWhatsAppTextChannelEnumWhatsapp SendMessageRequestBodyWhatsAppTextChannelEnum = "whatsapp"
 )
 
+func (e SendMessageRequestBodyWhatsAppTextChannelEnum) ToPointer() *SendMessageRequestBodyWhatsAppTextChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppTextChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "whatsapp":
-		*e = SendMessageRequestBodyWhatsAppTextChannelEnum(s)
+		*e = SendMessageRequestBodyWhatsAppTextChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppTextChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppTextChannelEnum: %v", v)
 	}
 }
 
@@ -1672,17 +1844,21 @@ const (
 	SendMessageRequestBodyWhatsAppTextMessageTypeEnumText SendMessageRequestBodyWhatsAppTextMessageTypeEnum = "text"
 )
 
+func (e SendMessageRequestBodyWhatsAppTextMessageTypeEnum) ToPointer() *SendMessageRequestBodyWhatsAppTextMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyWhatsAppTextMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
-		*e = SendMessageRequestBodyWhatsAppTextMessageTypeEnum(s)
+		*e = SendMessageRequestBodyWhatsAppTextMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppTextMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyWhatsAppTextMessageTypeEnum: %v", v)
 	}
 }
 
@@ -1922,17 +2098,21 @@ const (
 	SendMessageRequestBodyMMSVideoChannelEnumMms SendMessageRequestBodyMMSVideoChannelEnum = "mms"
 )
 
+func (e SendMessageRequestBodyMMSVideoChannelEnum) ToPointer() *SendMessageRequestBodyMMSVideoChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMMSVideoChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mms":
-		*e = SendMessageRequestBodyMMSVideoChannelEnum(s)
+		*e = SendMessageRequestBodyMMSVideoChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSVideoChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSVideoChannelEnum: %v", v)
 	}
 }
 
@@ -1943,17 +2123,21 @@ const (
 	SendMessageRequestBodyMMSVideoMessageTypeEnumVideo SendMessageRequestBodyMMSVideoMessageTypeEnum = "video"
 )
 
+func (e SendMessageRequestBodyMMSVideoMessageTypeEnum) ToPointer() *SendMessageRequestBodyMMSVideoMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMMSVideoMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "video":
-		*e = SendMessageRequestBodyMMSVideoMessageTypeEnum(s)
+		*e = SendMessageRequestBodyMMSVideoMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSVideoMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSVideoMessageTypeEnum: %v", v)
 	}
 }
 
@@ -1991,17 +2175,21 @@ const (
 	SendMessageRequestBodyMMSAudioChannelEnumMms SendMessageRequestBodyMMSAudioChannelEnum = "mms"
 )
 
+func (e SendMessageRequestBodyMMSAudioChannelEnum) ToPointer() *SendMessageRequestBodyMMSAudioChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMMSAudioChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mms":
-		*e = SendMessageRequestBodyMMSAudioChannelEnum(s)
+		*e = SendMessageRequestBodyMMSAudioChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSAudioChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSAudioChannelEnum: %v", v)
 	}
 }
 
@@ -2012,17 +2200,21 @@ const (
 	SendMessageRequestBodyMMSAudioMessageTypeEnumAudio SendMessageRequestBodyMMSAudioMessageTypeEnum = "audio"
 )
 
+func (e SendMessageRequestBodyMMSAudioMessageTypeEnum) ToPointer() *SendMessageRequestBodyMMSAudioMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMMSAudioMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "audio":
-		*e = SendMessageRequestBodyMMSAudioMessageTypeEnum(s)
+		*e = SendMessageRequestBodyMMSAudioMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSAudioMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSAudioMessageTypeEnum: %v", v)
 	}
 }
 
@@ -2049,17 +2241,21 @@ const (
 	SendMessageRequestBodyMMSVCardChannelEnumMms SendMessageRequestBodyMMSVCardChannelEnum = "mms"
 )
 
+func (e SendMessageRequestBodyMMSVCardChannelEnum) ToPointer() *SendMessageRequestBodyMMSVCardChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMMSVCardChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mms":
-		*e = SendMessageRequestBodyMMSVCardChannelEnum(s)
+		*e = SendMessageRequestBodyMMSVCardChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSVCardChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSVCardChannelEnum: %v", v)
 	}
 }
 
@@ -2070,17 +2266,21 @@ const (
 	SendMessageRequestBodyMMSVCardMessageTypeEnumVcard SendMessageRequestBodyMMSVCardMessageTypeEnum = "vcard"
 )
 
+func (e SendMessageRequestBodyMMSVCardMessageTypeEnum) ToPointer() *SendMessageRequestBodyMMSVCardMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMMSVCardMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vcard":
-		*e = SendMessageRequestBodyMMSVCardMessageTypeEnum(s)
+		*e = SendMessageRequestBodyMMSVCardMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSVCardMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSVCardMessageTypeEnum: %v", v)
 	}
 }
 
@@ -2112,17 +2312,21 @@ const (
 	SendMessageRequestBodyMMSImageChannelEnumMms SendMessageRequestBodyMMSImageChannelEnum = "mms"
 )
 
+func (e SendMessageRequestBodyMMSImageChannelEnum) ToPointer() *SendMessageRequestBodyMMSImageChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMMSImageChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mms":
-		*e = SendMessageRequestBodyMMSImageChannelEnum(s)
+		*e = SendMessageRequestBodyMMSImageChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSImageChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSImageChannelEnum: %v", v)
 	}
 }
 
@@ -2138,17 +2342,21 @@ const (
 	SendMessageRequestBodyMMSImageMessageTypeEnumImage SendMessageRequestBodyMMSImageMessageTypeEnum = "image"
 )
 
+func (e SendMessageRequestBodyMMSImageMessageTypeEnum) ToPointer() *SendMessageRequestBodyMMSImageMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodyMMSImageMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "image":
-		*e = SendMessageRequestBodyMMSImageMessageTypeEnum(s)
+		*e = SendMessageRequestBodyMMSImageMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSImageMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodyMMSImageMessageTypeEnum: %v", v)
 	}
 }
 
@@ -2291,17 +2499,21 @@ const (
 	SendMessageRequestBodySMSTextChannelEnumSms SendMessageRequestBodySMSTextChannelEnum = "sms"
 )
 
+func (e SendMessageRequestBodySMSTextChannelEnum) ToPointer() *SendMessageRequestBodySMSTextChannelEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodySMSTextChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sms":
-		*e = SendMessageRequestBodySMSTextChannelEnum(s)
+		*e = SendMessageRequestBodySMSTextChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodySMSTextChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodySMSTextChannelEnum: %v", v)
 	}
 }
 
@@ -2312,17 +2524,21 @@ const (
 	SendMessageRequestBodySMSTextMessageTypeEnumText SendMessageRequestBodySMSTextMessageTypeEnum = "text"
 )
 
+func (e SendMessageRequestBodySMSTextMessageTypeEnum) ToPointer() *SendMessageRequestBodySMSTextMessageTypeEnum {
+	return &e
+}
+
 func (e *SendMessageRequestBodySMSTextMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
-		*e = SendMessageRequestBodySMSTextMessageTypeEnum(s)
+		*e = SendMessageRequestBodySMSTextMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessageRequestBodySMSTextMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessageRequestBodySMSTextMessageTypeEnum: %v", v)
 	}
 }
 

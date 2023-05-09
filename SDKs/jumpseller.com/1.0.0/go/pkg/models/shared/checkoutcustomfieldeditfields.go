@@ -16,21 +16,25 @@ const (
 	CheckoutCustomFieldEditFieldsAreaEnumOther           CheckoutCustomFieldEditFieldsAreaEnum = "other"
 )
 
+func (e CheckoutCustomFieldEditFieldsAreaEnum) ToPointer() *CheckoutCustomFieldEditFieldsAreaEnum {
+	return &e
+}
+
 func (e *CheckoutCustomFieldEditFieldsAreaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "contact":
 		fallthrough
 	case "billing_shipping":
 		fallthrough
 	case "other":
-		*e = CheckoutCustomFieldEditFieldsAreaEnum(s)
+		*e = CheckoutCustomFieldEditFieldsAreaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckoutCustomFieldEditFieldsAreaEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckoutCustomFieldEditFieldsAreaEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	CheckoutCustomFieldEditFieldsTypeEnumDate     CheckoutCustomFieldEditFieldsTypeEnum = "date"
 )
 
+func (e CheckoutCustomFieldEditFieldsTypeEnum) ToPointer() *CheckoutCustomFieldEditFieldsTypeEnum {
+	return &e
+}
+
 func (e *CheckoutCustomFieldEditFieldsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "select":
@@ -60,10 +68,10 @@ func (e *CheckoutCustomFieldEditFieldsTypeEnum) UnmarshalJSON(data []byte) error
 	case "checkbox":
 		fallthrough
 	case "date":
-		*e = CheckoutCustomFieldEditFieldsTypeEnum(s)
+		*e = CheckoutCustomFieldEditFieldsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckoutCustomFieldEditFieldsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckoutCustomFieldEditFieldsTypeEnum: %v", v)
 	}
 }
 

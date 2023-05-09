@@ -18,12 +18,16 @@ const (
 	InventoryQueryOperatorTypeEnumExists      InventoryQueryOperatorTypeEnum = "Exists"
 )
 
+func (e InventoryQueryOperatorTypeEnum) ToPointer() *InventoryQueryOperatorTypeEnum {
+	return &e
+}
+
 func (e *InventoryQueryOperatorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Equal":
 		fallthrough
 	case "NotEqual":
@@ -35,9 +39,9 @@ func (e *InventoryQueryOperatorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "GreaterThan":
 		fallthrough
 	case "Exists":
-		*e = InventoryQueryOperatorTypeEnum(s)
+		*e = InventoryQueryOperatorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventoryQueryOperatorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InventoryQueryOperatorTypeEnum: %v", v)
 	}
 }

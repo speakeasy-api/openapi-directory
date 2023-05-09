@@ -14,18 +14,22 @@ const (
 	FirelensConfigurationTypeEnumFluentbit FirelensConfigurationTypeEnum = "fluentbit"
 )
 
+func (e FirelensConfigurationTypeEnum) ToPointer() *FirelensConfigurationTypeEnum {
+	return &e
+}
+
 func (e *FirelensConfigurationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fluentd":
 		fallthrough
 	case "fluentbit":
-		*e = FirelensConfigurationTypeEnum(s)
+		*e = FirelensConfigurationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirelensConfigurationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FirelensConfigurationTypeEnum: %v", v)
 	}
 }

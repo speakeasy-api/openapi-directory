@@ -16,17 +16,21 @@ const (
 	GetComplianceSummaryByResourceTypeXAmzTargetEnumStarlingDoveServiceGetComplianceSummaryByResourceType GetComplianceSummaryByResourceTypeXAmzTargetEnum = "StarlingDoveService.GetComplianceSummaryByResourceType"
 )
 
+func (e GetComplianceSummaryByResourceTypeXAmzTargetEnum) ToPointer() *GetComplianceSummaryByResourceTypeXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetComplianceSummaryByResourceTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.GetComplianceSummaryByResourceType":
-		*e = GetComplianceSummaryByResourceTypeXAmzTargetEnum(s)
+		*e = GetComplianceSummaryByResourceTypeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetComplianceSummaryByResourceTypeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetComplianceSummaryByResourceTypeXAmzTargetEnum: %v", v)
 	}
 }
 

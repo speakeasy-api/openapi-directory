@@ -34,7 +34,10 @@ func newAlertSettings(defaultClient, securityClient HTTPClient, serverURL, langu
 // Return the alert configuration for this network
 func (s *alertSettings) GetNetworkAlertSettings(ctx context.Context, request operations.GetNetworkAlertSettingsRequest) (*operations.GetNetworkAlertSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/alertSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/alertSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *alertSettings) GetNetworkAlertSettings(ctx context.Context, request ope
 // Update the alert configuration for this network
 func (s *alertSettings) UpdateNetworkAlertSettings(ctx context.Context, request operations.UpdateNetworkAlertSettingsRequest) (*operations.UpdateNetworkAlertSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/alertSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/alertSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

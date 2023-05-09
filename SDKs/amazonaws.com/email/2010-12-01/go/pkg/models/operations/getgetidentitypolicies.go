@@ -15,17 +15,21 @@ const (
 	GETGETIdentityPoliciesActionEnumGetIdentityPolicies GETGETIdentityPoliciesActionEnum = "GetIdentityPolicies"
 )
 
+func (e GETGETIdentityPoliciesActionEnum) ToPointer() *GETGETIdentityPoliciesActionEnum {
+	return &e
+}
+
 func (e *GETGETIdentityPoliciesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetIdentityPolicies":
-		*e = GETGETIdentityPoliciesActionEnum(s)
+		*e = GETGETIdentityPoliciesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETIdentityPoliciesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETIdentityPoliciesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETIdentityPoliciesVersionEnumTwoThousandAndTen1201 GETGETIdentityPoliciesVersionEnum = "2010-12-01"
 )
 
+func (e GETGETIdentityPoliciesVersionEnum) ToPointer() *GETGETIdentityPoliciesVersionEnum {
+	return &e
+}
+
 func (e *GETGETIdentityPoliciesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETGETIdentityPoliciesVersionEnum(s)
+		*e = GETGETIdentityPoliciesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETIdentityPoliciesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETIdentityPoliciesVersionEnum: %v", v)
 	}
 }
 

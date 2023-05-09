@@ -35,7 +35,10 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // TagmanagerAccountsContainersCreate - Creates a Container.
 func (s *accounts) TagmanagerAccountsContainersCreate(ctx context.Context, request operations.TagmanagerAccountsContainersCreateRequest, security operations.TagmanagerAccountsContainersCreateSecurity) (*operations.TagmanagerAccountsContainersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Container", "json")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *accounts) TagmanagerAccountsContainersCreate(ctx context.Context, reque
 // TagmanagerAccountsContainersDelete - Deletes a Container.
 func (s *accounts) TagmanagerAccountsContainersDelete(ctx context.Context, request operations.TagmanagerAccountsContainersDeleteRequest, security operations.TagmanagerAccountsContainersDeleteSecurity) (*operations.TagmanagerAccountsContainersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *accounts) TagmanagerAccountsContainersDelete(ctx context.Context, reque
 // TagmanagerAccountsContainersEnvironmentsCreate - Creates a GTM Environment.
 func (s *accounts) TagmanagerAccountsContainersEnvironmentsCreate(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsCreateRequest, security operations.TagmanagerAccountsContainersEnvironmentsCreateSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Environment", "json")
 	if err != nil {
@@ -184,7 +193,10 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsCreate(ctx context.Co
 // TagmanagerAccountsContainersEnvironmentsDelete - Deletes a GTM Environment.
 func (s *accounts) TagmanagerAccountsContainersEnvironmentsDelete(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsDeleteRequest, security operations.TagmanagerAccountsContainersEnvironmentsDeleteSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -223,7 +235,10 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsDelete(ctx context.Co
 // TagmanagerAccountsContainersEnvironmentsGet - Gets a GTM Environment.
 func (s *accounts) TagmanagerAccountsContainersEnvironmentsGet(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsGetRequest, security operations.TagmanagerAccountsContainersEnvironmentsGetSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,7 +286,10 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsGet(ctx context.Conte
 // TagmanagerAccountsContainersEnvironmentsList - Lists all GTM Environments of a GTM Container.
 func (s *accounts) TagmanagerAccountsContainersEnvironmentsList(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsListRequest, security operations.TagmanagerAccountsContainersEnvironmentsListSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -319,7 +337,10 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsList(ctx context.Cont
 // TagmanagerAccountsContainersEnvironmentsUpdate - Updates a GTM Environment.
 func (s *accounts) TagmanagerAccountsContainersEnvironmentsUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsUpdateRequest, security operations.TagmanagerAccountsContainersEnvironmentsUpdateSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/environments/{environmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Environment", "json")
 	if err != nil {
@@ -374,7 +395,10 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsUpdate(ctx context.Co
 // TagmanagerAccountsContainersFoldersCreate - Creates a GTM Folder.
 func (s *accounts) TagmanagerAccountsContainersFoldersCreate(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersCreateRequest, security operations.TagmanagerAccountsContainersFoldersCreateSecurity) (*operations.TagmanagerAccountsContainersFoldersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Folder", "json")
 	if err != nil {
@@ -429,7 +453,10 @@ func (s *accounts) TagmanagerAccountsContainersFoldersCreate(ctx context.Context
 // TagmanagerAccountsContainersFoldersDelete - Deletes a GTM Folder.
 func (s *accounts) TagmanagerAccountsContainersFoldersDelete(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersDeleteRequest, security operations.TagmanagerAccountsContainersFoldersDeleteSecurity) (*operations.TagmanagerAccountsContainersFoldersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -468,7 +495,10 @@ func (s *accounts) TagmanagerAccountsContainersFoldersDelete(ctx context.Context
 // TagmanagerAccountsContainersFoldersEntitiesList - List all entities in a GTM Folder.
 func (s *accounts) TagmanagerAccountsContainersFoldersEntitiesList(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersEntitiesListRequest, security operations.TagmanagerAccountsContainersFoldersEntitiesListSecurity) (*operations.TagmanagerAccountsContainersFoldersEntitiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}/entities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}/entities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -516,7 +546,10 @@ func (s *accounts) TagmanagerAccountsContainersFoldersEntitiesList(ctx context.C
 // TagmanagerAccountsContainersFoldersGet - Gets a GTM Folder.
 func (s *accounts) TagmanagerAccountsContainersFoldersGet(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersGetRequest, security operations.TagmanagerAccountsContainersFoldersGetSecurity) (*operations.TagmanagerAccountsContainersFoldersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -564,7 +597,10 @@ func (s *accounts) TagmanagerAccountsContainersFoldersGet(ctx context.Context, r
 // TagmanagerAccountsContainersFoldersList - Lists all GTM Folders of a Container.
 func (s *accounts) TagmanagerAccountsContainersFoldersList(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersListRequest, security operations.TagmanagerAccountsContainersFoldersListSecurity) (*operations.TagmanagerAccountsContainersFoldersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -612,7 +648,10 @@ func (s *accounts) TagmanagerAccountsContainersFoldersList(ctx context.Context, 
 // TagmanagerAccountsContainersFoldersUpdate - Updates a GTM Folder.
 func (s *accounts) TagmanagerAccountsContainersFoldersUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersFoldersUpdateRequest, security operations.TagmanagerAccountsContainersFoldersUpdateSecurity) (*operations.TagmanagerAccountsContainersFoldersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/folders/{folderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Folder", "json")
 	if err != nil {
@@ -667,7 +706,10 @@ func (s *accounts) TagmanagerAccountsContainersFoldersUpdate(ctx context.Context
 // TagmanagerAccountsContainersGet - Gets a Container.
 func (s *accounts) TagmanagerAccountsContainersGet(ctx context.Context, request operations.TagmanagerAccountsContainersGetRequest, security operations.TagmanagerAccountsContainersGetSecurity) (*operations.TagmanagerAccountsContainersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -715,7 +757,10 @@ func (s *accounts) TagmanagerAccountsContainersGet(ctx context.Context, request 
 // TagmanagerAccountsContainersList - Lists all Containers that belongs to a GTM Account.
 func (s *accounts) TagmanagerAccountsContainersList(ctx context.Context, request operations.TagmanagerAccountsContainersListRequest, security operations.TagmanagerAccountsContainersListSecurity) (*operations.TagmanagerAccountsContainersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -763,7 +808,10 @@ func (s *accounts) TagmanagerAccountsContainersList(ctx context.Context, request
 // TagmanagerAccountsContainersMoveFoldersUpdate - Moves entities to a GTM Folder.
 func (s *accounts) TagmanagerAccountsContainersMoveFoldersUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersMoveFoldersUpdateRequest, security operations.TagmanagerAccountsContainersMoveFoldersUpdateSecurity) (*operations.TagmanagerAccountsContainersMoveFoldersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/move_folders/{folderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/move_folders/{folderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Folder", "json")
 	if err != nil {
@@ -809,7 +857,10 @@ func (s *accounts) TagmanagerAccountsContainersMoveFoldersUpdate(ctx context.Con
 // TagmanagerAccountsContainersReauthorizeEnvironmentsUpdate - Re-generates the authorization code for a GTM Environment.
 func (s *accounts) TagmanagerAccountsContainersReauthorizeEnvironmentsUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersReauthorizeEnvironmentsUpdateRequest, security operations.TagmanagerAccountsContainersReauthorizeEnvironmentsUpdateSecurity) (*operations.TagmanagerAccountsContainersReauthorizeEnvironmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/reauthorize_environments/{environmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/reauthorize_environments/{environmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Environment", "json")
 	if err != nil {
@@ -864,7 +915,10 @@ func (s *accounts) TagmanagerAccountsContainersReauthorizeEnvironmentsUpdate(ctx
 // TagmanagerAccountsContainersTagsCreate - Creates a GTM Tag.
 func (s *accounts) TagmanagerAccountsContainersTagsCreate(ctx context.Context, request operations.TagmanagerAccountsContainersTagsCreateRequest, security operations.TagmanagerAccountsContainersTagsCreateSecurity) (*operations.TagmanagerAccountsContainersTagsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Tag", "json")
 	if err != nil {
@@ -919,7 +973,10 @@ func (s *accounts) TagmanagerAccountsContainersTagsCreate(ctx context.Context, r
 // TagmanagerAccountsContainersTagsDelete - Deletes a GTM Tag.
 func (s *accounts) TagmanagerAccountsContainersTagsDelete(ctx context.Context, request operations.TagmanagerAccountsContainersTagsDeleteRequest, security operations.TagmanagerAccountsContainersTagsDeleteSecurity) (*operations.TagmanagerAccountsContainersTagsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -958,7 +1015,10 @@ func (s *accounts) TagmanagerAccountsContainersTagsDelete(ctx context.Context, r
 // TagmanagerAccountsContainersTagsGet - Gets a GTM Tag.
 func (s *accounts) TagmanagerAccountsContainersTagsGet(ctx context.Context, request operations.TagmanagerAccountsContainersTagsGetRequest, security operations.TagmanagerAccountsContainersTagsGetSecurity) (*operations.TagmanagerAccountsContainersTagsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1006,7 +1066,10 @@ func (s *accounts) TagmanagerAccountsContainersTagsGet(ctx context.Context, requ
 // TagmanagerAccountsContainersTagsList - Lists all GTM Tags of a Container.
 func (s *accounts) TagmanagerAccountsContainersTagsList(ctx context.Context, request operations.TagmanagerAccountsContainersTagsListRequest, security operations.TagmanagerAccountsContainersTagsListSecurity) (*operations.TagmanagerAccountsContainersTagsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1054,7 +1117,10 @@ func (s *accounts) TagmanagerAccountsContainersTagsList(ctx context.Context, req
 // TagmanagerAccountsContainersTagsUpdate - Updates a GTM Tag.
 func (s *accounts) TagmanagerAccountsContainersTagsUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersTagsUpdateRequest, security operations.TagmanagerAccountsContainersTagsUpdateSecurity) (*operations.TagmanagerAccountsContainersTagsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/tags/{tagId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Tag", "json")
 	if err != nil {
@@ -1109,7 +1175,10 @@ func (s *accounts) TagmanagerAccountsContainersTagsUpdate(ctx context.Context, r
 // TagmanagerAccountsContainersTriggersCreate - Creates a GTM Trigger.
 func (s *accounts) TagmanagerAccountsContainersTriggersCreate(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersCreateRequest, security operations.TagmanagerAccountsContainersTriggersCreateSecurity) (*operations.TagmanagerAccountsContainersTriggersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Trigger", "json")
 	if err != nil {
@@ -1164,7 +1233,10 @@ func (s *accounts) TagmanagerAccountsContainersTriggersCreate(ctx context.Contex
 // TagmanagerAccountsContainersTriggersDelete - Deletes a GTM Trigger.
 func (s *accounts) TagmanagerAccountsContainersTriggersDelete(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersDeleteRequest, security operations.TagmanagerAccountsContainersTriggersDeleteSecurity) (*operations.TagmanagerAccountsContainersTriggersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1203,7 +1275,10 @@ func (s *accounts) TagmanagerAccountsContainersTriggersDelete(ctx context.Contex
 // TagmanagerAccountsContainersTriggersGet - Gets a GTM Trigger.
 func (s *accounts) TagmanagerAccountsContainersTriggersGet(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersGetRequest, security operations.TagmanagerAccountsContainersTriggersGetSecurity) (*operations.TagmanagerAccountsContainersTriggersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1251,7 +1326,10 @@ func (s *accounts) TagmanagerAccountsContainersTriggersGet(ctx context.Context, 
 // TagmanagerAccountsContainersTriggersList - Lists all GTM Triggers of a Container.
 func (s *accounts) TagmanagerAccountsContainersTriggersList(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersListRequest, security operations.TagmanagerAccountsContainersTriggersListSecurity) (*operations.TagmanagerAccountsContainersTriggersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1299,7 +1377,10 @@ func (s *accounts) TagmanagerAccountsContainersTriggersList(ctx context.Context,
 // TagmanagerAccountsContainersTriggersUpdate - Updates a GTM Trigger.
 func (s *accounts) TagmanagerAccountsContainersTriggersUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersTriggersUpdateRequest, security operations.TagmanagerAccountsContainersTriggersUpdateSecurity) (*operations.TagmanagerAccountsContainersTriggersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/triggers/{triggerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Trigger", "json")
 	if err != nil {
@@ -1354,7 +1435,10 @@ func (s *accounts) TagmanagerAccountsContainersTriggersUpdate(ctx context.Contex
 // TagmanagerAccountsContainersUpdate - Updates a Container.
 func (s *accounts) TagmanagerAccountsContainersUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersUpdateRequest, security operations.TagmanagerAccountsContainersUpdateSecurity) (*operations.TagmanagerAccountsContainersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Container", "json")
 	if err != nil {
@@ -1409,7 +1493,10 @@ func (s *accounts) TagmanagerAccountsContainersUpdate(ctx context.Context, reque
 // TagmanagerAccountsContainersVariablesCreate - Creates a GTM Variable.
 func (s *accounts) TagmanagerAccountsContainersVariablesCreate(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesCreateRequest, security operations.TagmanagerAccountsContainersVariablesCreateSecurity) (*operations.TagmanagerAccountsContainersVariablesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Variable", "json")
 	if err != nil {
@@ -1464,7 +1551,10 @@ func (s *accounts) TagmanagerAccountsContainersVariablesCreate(ctx context.Conte
 // TagmanagerAccountsContainersVariablesDelete - Deletes a GTM Variable.
 func (s *accounts) TagmanagerAccountsContainersVariablesDelete(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesDeleteRequest, security operations.TagmanagerAccountsContainersVariablesDeleteSecurity) (*operations.TagmanagerAccountsContainersVariablesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1503,7 +1593,10 @@ func (s *accounts) TagmanagerAccountsContainersVariablesDelete(ctx context.Conte
 // TagmanagerAccountsContainersVariablesGet - Gets a GTM Variable.
 func (s *accounts) TagmanagerAccountsContainersVariablesGet(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesGetRequest, security operations.TagmanagerAccountsContainersVariablesGetSecurity) (*operations.TagmanagerAccountsContainersVariablesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1551,7 +1644,10 @@ func (s *accounts) TagmanagerAccountsContainersVariablesGet(ctx context.Context,
 // TagmanagerAccountsContainersVariablesList - Lists all GTM Variables of a Container.
 func (s *accounts) TagmanagerAccountsContainersVariablesList(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesListRequest, security operations.TagmanagerAccountsContainersVariablesListSecurity) (*operations.TagmanagerAccountsContainersVariablesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1599,7 +1695,10 @@ func (s *accounts) TagmanagerAccountsContainersVariablesList(ctx context.Context
 // TagmanagerAccountsContainersVariablesUpdate - Updates a GTM Variable.
 func (s *accounts) TagmanagerAccountsContainersVariablesUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersVariablesUpdateRequest, security operations.TagmanagerAccountsContainersVariablesUpdateSecurity) (*operations.TagmanagerAccountsContainersVariablesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/variables/{variableId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Variable", "json")
 	if err != nil {
@@ -1654,7 +1753,10 @@ func (s *accounts) TagmanagerAccountsContainersVariablesUpdate(ctx context.Conte
 // TagmanagerAccountsContainersVersionsCreate - Creates a Container Version.
 func (s *accounts) TagmanagerAccountsContainersVersionsCreate(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsCreateRequest, security operations.TagmanagerAccountsContainersVersionsCreateSecurity) (*operations.TagmanagerAccountsContainersVersionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateContainerVersionRequestVersionOptions", "json")
 	if err != nil {
@@ -1709,7 +1811,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionsCreate(ctx context.Contex
 // TagmanagerAccountsContainersVersionsDelete - Deletes a Container Version.
 func (s *accounts) TagmanagerAccountsContainersVersionsDelete(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsDeleteRequest, security operations.TagmanagerAccountsContainersVersionsDeleteSecurity) (*operations.TagmanagerAccountsContainersVersionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1748,7 +1853,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionsDelete(ctx context.Contex
 // TagmanagerAccountsContainersVersionsGet - Gets a Container Version.
 func (s *accounts) TagmanagerAccountsContainersVersionsGet(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsGetRequest, security operations.TagmanagerAccountsContainersVersionsGetSecurity) (*operations.TagmanagerAccountsContainersVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1796,7 +1904,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionsGet(ctx context.Context, 
 // TagmanagerAccountsContainersVersionsList - Lists all Container Versions of a GTM Container.
 func (s *accounts) TagmanagerAccountsContainersVersionsList(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsListRequest, security operations.TagmanagerAccountsContainersVersionsListSecurity) (*operations.TagmanagerAccountsContainersVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1844,7 +1955,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionsList(ctx context.Context,
 // TagmanagerAccountsContainersVersionsPublish - Publishes a Container Version.
 func (s *accounts) TagmanagerAccountsContainersVersionsPublish(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsPublishRequest, security operations.TagmanagerAccountsContainersVersionsPublishSecurity) (*operations.TagmanagerAccountsContainersVersionsPublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/publish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/publish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1892,7 +2006,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionsPublish(ctx context.Conte
 // TagmanagerAccountsContainersVersionsRestore - Restores a Container Version. This will overwrite the container's current configuration (including its variables, triggers and tags). The operation will not have any effect on the version that is being served (i.e. the published version).
 func (s *accounts) TagmanagerAccountsContainersVersionsRestore(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsRestoreRequest, security operations.TagmanagerAccountsContainersVersionsRestoreSecurity) (*operations.TagmanagerAccountsContainersVersionsRestoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/restore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/restore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1940,7 +2057,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionsRestore(ctx context.Conte
 // TagmanagerAccountsContainersVersionsUndelete - Undeletes a Container Version.
 func (s *accounts) TagmanagerAccountsContainersVersionsUndelete(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsUndeleteRequest, security operations.TagmanagerAccountsContainersVersionsUndeleteSecurity) (*operations.TagmanagerAccountsContainersVersionsUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/undelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}/undelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1988,7 +2108,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionsUndelete(ctx context.Cont
 // TagmanagerAccountsContainersVersionsUpdate - Updates a Container Version.
 func (s *accounts) TagmanagerAccountsContainersVersionsUpdate(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsUpdateRequest, security operations.TagmanagerAccountsContainersVersionsUpdateSecurity) (*operations.TagmanagerAccountsContainersVersionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/containers/{containerId}/versions/{containerVersionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContainerVersion", "json")
 	if err != nil {
@@ -2043,7 +2166,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionsUpdate(ctx context.Contex
 // TagmanagerAccountsGet - Gets a GTM Account.
 func (s *accounts) TagmanagerAccountsGet(ctx context.Context, request operations.TagmanagerAccountsGetRequest, security operations.TagmanagerAccountsGetSecurity) (*operations.TagmanagerAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2139,7 +2265,10 @@ func (s *accounts) TagmanagerAccountsList(ctx context.Context, request operation
 // TagmanagerAccountsPermissionsCreate - Creates a user's Account & Container Permissions.
 func (s *accounts) TagmanagerAccountsPermissionsCreate(ctx context.Context, request operations.TagmanagerAccountsPermissionsCreateRequest, security operations.TagmanagerAccountsPermissionsCreateSecurity) (*operations.TagmanagerAccountsPermissionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserAccess", "json")
 	if err != nil {
@@ -2194,7 +2323,10 @@ func (s *accounts) TagmanagerAccountsPermissionsCreate(ctx context.Context, requ
 // TagmanagerAccountsPermissionsDelete - Removes a user from the account, revoking access to it and all of its containers.
 func (s *accounts) TagmanagerAccountsPermissionsDelete(ctx context.Context, request operations.TagmanagerAccountsPermissionsDeleteRequest, security operations.TagmanagerAccountsPermissionsDeleteSecurity) (*operations.TagmanagerAccountsPermissionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions/{permissionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions/{permissionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2233,7 +2365,10 @@ func (s *accounts) TagmanagerAccountsPermissionsDelete(ctx context.Context, requ
 // TagmanagerAccountsPermissionsGet - Gets a user's Account & Container Permissions.
 func (s *accounts) TagmanagerAccountsPermissionsGet(ctx context.Context, request operations.TagmanagerAccountsPermissionsGetRequest, security operations.TagmanagerAccountsPermissionsGetSecurity) (*operations.TagmanagerAccountsPermissionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions/{permissionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions/{permissionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2281,7 +2416,10 @@ func (s *accounts) TagmanagerAccountsPermissionsGet(ctx context.Context, request
 // TagmanagerAccountsPermissionsList - List all users that have access to the account along with Account and Container Permissions granted to each of them.
 func (s *accounts) TagmanagerAccountsPermissionsList(ctx context.Context, request operations.TagmanagerAccountsPermissionsListRequest, security operations.TagmanagerAccountsPermissionsListSecurity) (*operations.TagmanagerAccountsPermissionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2329,7 +2467,10 @@ func (s *accounts) TagmanagerAccountsPermissionsList(ctx context.Context, reques
 // TagmanagerAccountsPermissionsUpdate - Updates a user's Account & Container Permissions.
 func (s *accounts) TagmanagerAccountsPermissionsUpdate(ctx context.Context, request operations.TagmanagerAccountsPermissionsUpdateRequest, security operations.TagmanagerAccountsPermissionsUpdateSecurity) (*operations.TagmanagerAccountsPermissionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions/{permissionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}/permissions/{permissionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserAccess", "json")
 	if err != nil {
@@ -2384,7 +2525,10 @@ func (s *accounts) TagmanagerAccountsPermissionsUpdate(ctx context.Context, requ
 // TagmanagerAccountsUpdate - Updates a GTM Account.
 func (s *accounts) TagmanagerAccountsUpdate(ctx context.Context, request operations.TagmanagerAccountsUpdateRequest, security operations.TagmanagerAccountsUpdateSecurity) (*operations.TagmanagerAccountsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v1/accounts/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Account", "json")
 	if err != nil {

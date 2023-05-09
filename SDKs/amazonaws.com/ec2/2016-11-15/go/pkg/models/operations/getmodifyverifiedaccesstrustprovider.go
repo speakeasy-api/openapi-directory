@@ -15,23 +15,33 @@ const (
 	GETModifyVerifiedAccessTrustProviderActionEnumModifyVerifiedAccessTrustProvider GETModifyVerifiedAccessTrustProviderActionEnum = "ModifyVerifiedAccessTrustProvider"
 )
 
+func (e GETModifyVerifiedAccessTrustProviderActionEnum) ToPointer() *GETModifyVerifiedAccessTrustProviderActionEnum {
+	return &e
+}
+
 func (e *GETModifyVerifiedAccessTrustProviderActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVerifiedAccessTrustProvider":
-		*e = GETModifyVerifiedAccessTrustProviderActionEnum(s)
+		*e = GETModifyVerifiedAccessTrustProviderActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVerifiedAccessTrustProviderActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVerifiedAccessTrustProviderActionEnum: %v", v)
 	}
 }
 
-// GETModifyVerifiedAccessTrustProviderOidcOptions - OpenID Connect options for an <code>oidc</code>-type, user-identity based trust provider.
+// GETModifyVerifiedAccessTrustProviderOidcOptions - Options for an OpenID Connect-compatible user-identity trust provider.
 type GETModifyVerifiedAccessTrustProviderOidcOptions struct {
-	Scope *string `queryParam:"name=Scope"`
+	AuthorizationEndpoint *string `queryParam:"name=AuthorizationEndpoint"`
+	ClientID              *string `queryParam:"name=ClientId"`
+	ClientSecret          *string `queryParam:"name=ClientSecret"`
+	Issuer                *string `queryParam:"name=Issuer"`
+	Scope                 *string `queryParam:"name=Scope"`
+	TokenEndpoint         *string `queryParam:"name=TokenEndpoint"`
+	UserInfoEndpoint      *string `queryParam:"name=UserInfoEndpoint"`
 }
 
 // GETModifyVerifiedAccessTrustProviderVersionEnum
@@ -41,17 +51,21 @@ const (
 	GETModifyVerifiedAccessTrustProviderVersionEnumTwoThousandAndSixteen1115 GETModifyVerifiedAccessTrustProviderVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVerifiedAccessTrustProviderVersionEnum) ToPointer() *GETModifyVerifiedAccessTrustProviderVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVerifiedAccessTrustProviderVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVerifiedAccessTrustProviderVersionEnum(s)
+		*e = GETModifyVerifiedAccessTrustProviderVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVerifiedAccessTrustProviderVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVerifiedAccessTrustProviderVersionEnum: %v", v)
 	}
 }
 
@@ -59,13 +73,13 @@ type GETModifyVerifiedAccessTrustProviderRequest struct {
 	Action GETModifyVerifiedAccessTrustProviderActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring Idempotency</a>.
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
-	// A description for the Amazon Web Services Verified Access trust provider.
+	// A description for the Verified Access trust provider.
 	Description *string `queryParam:"style=form,explode=true,name=Description"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
-	// The OpenID Connect details for an <code>oidc</code>-type, user-identity based trust provider.
+	// The options for an OpenID Connect-compatible user-identity trust provider.
 	OidcOptions *GETModifyVerifiedAccessTrustProviderOidcOptions `queryParam:"style=form,explode=true,name=OidcOptions"`
-	// The ID of the Amazon Web Services Verified Access trust provider.
+	// The ID of the Verified Access trust provider.
 	VerifiedAccessTrustProviderID string                                          `queryParam:"style=form,explode=true,name=VerifiedAccessTrustProviderId"`
 	Version                       GETModifyVerifiedAccessTrustProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	XAmzAlgorithm                 *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`

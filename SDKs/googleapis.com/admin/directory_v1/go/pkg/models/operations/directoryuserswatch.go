@@ -41,12 +41,16 @@ const (
 	DirectoryUsersWatchEventEnumUpdate    DirectoryUsersWatchEventEnum = "update"
 )
 
+func (e DirectoryUsersWatchEventEnum) ToPointer() *DirectoryUsersWatchEventEnum {
+	return &e
+}
+
 func (e *DirectoryUsersWatchEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "add":
 		fallthrough
 	case "delete":
@@ -56,10 +60,10 @@ func (e *DirectoryUsersWatchEventEnum) UnmarshalJSON(data []byte) error {
 	case "undelete":
 		fallthrough
 	case "update":
-		*e = DirectoryUsersWatchEventEnum(s)
+		*e = DirectoryUsersWatchEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersWatchEventEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersWatchEventEnum: %v", v)
 	}
 }
 
@@ -72,21 +76,25 @@ const (
 	DirectoryUsersWatchOrderByEnumGivenName  DirectoryUsersWatchOrderByEnum = "givenName"
 )
 
+func (e DirectoryUsersWatchOrderByEnum) ToPointer() *DirectoryUsersWatchOrderByEnum {
+	return &e
+}
+
 func (e *DirectoryUsersWatchOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "email":
 		fallthrough
 	case "familyName":
 		fallthrough
 	case "givenName":
-		*e = DirectoryUsersWatchOrderByEnum(s)
+		*e = DirectoryUsersWatchOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersWatchOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersWatchOrderByEnum: %v", v)
 	}
 }
 
@@ -99,21 +107,25 @@ const (
 	DirectoryUsersWatchProjectionEnumFull   DirectoryUsersWatchProjectionEnum = "full"
 )
 
+func (e DirectoryUsersWatchProjectionEnum) ToPointer() *DirectoryUsersWatchProjectionEnum {
+	return &e
+}
+
 func (e *DirectoryUsersWatchProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "basic":
 		fallthrough
 	case "custom":
 		fallthrough
 	case "full":
-		*e = DirectoryUsersWatchProjectionEnum(s)
+		*e = DirectoryUsersWatchProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersWatchProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersWatchProjectionEnum: %v", v)
 	}
 }
 
@@ -125,19 +137,23 @@ const (
 	DirectoryUsersWatchSortOrderEnumDescending DirectoryUsersWatchSortOrderEnum = "DESCENDING"
 )
 
+func (e DirectoryUsersWatchSortOrderEnum) ToPointer() *DirectoryUsersWatchSortOrderEnum {
+	return &e
+}
+
 func (e *DirectoryUsersWatchSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DirectoryUsersWatchSortOrderEnum(s)
+		*e = DirectoryUsersWatchSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersWatchSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersWatchSortOrderEnum: %v", v)
 	}
 }
 
@@ -149,19 +165,23 @@ const (
 	DirectoryUsersWatchViewTypeEnumDomainPublic DirectoryUsersWatchViewTypeEnum = "domain_public"
 )
 
+func (e DirectoryUsersWatchViewTypeEnum) ToPointer() *DirectoryUsersWatchViewTypeEnum {
+	return &e
+}
+
 func (e *DirectoryUsersWatchViewTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin_view":
 		fallthrough
 	case "domain_public":
-		*e = DirectoryUsersWatchViewTypeEnum(s)
+		*e = DirectoryUsersWatchViewTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersWatchViewTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersWatchViewTypeEnum: %v", v)
 	}
 }
 

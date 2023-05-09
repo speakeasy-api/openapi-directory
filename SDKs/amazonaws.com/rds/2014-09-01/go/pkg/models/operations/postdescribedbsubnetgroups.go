@@ -15,17 +15,21 @@ const (
 	POSTDescribeDBSubnetGroupsActionEnumDescribeDbSubnetGroups POSTDescribeDBSubnetGroupsActionEnum = "DescribeDBSubnetGroups"
 )
 
+func (e POSTDescribeDBSubnetGroupsActionEnum) ToPointer() *POSTDescribeDBSubnetGroupsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeDBSubnetGroupsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeDBSubnetGroups":
-		*e = POSTDescribeDBSubnetGroupsActionEnum(s)
+		*e = POSTDescribeDBSubnetGroupsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeDBSubnetGroupsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeDBSubnetGroupsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeDBSubnetGroupsVersionEnumTwoThousandAndFourteen0901 POSTDescribeDBSubnetGroupsVersionEnum = "2014-09-01"
 )
 
+func (e POSTDescribeDBSubnetGroupsVersionEnum) ToPointer() *POSTDescribeDBSubnetGroupsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeDBSubnetGroupsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-09-01":
-		*e = POSTDescribeDBSubnetGroupsVersionEnum(s)
+		*e = POSTDescribeDBSubnetGroupsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeDBSubnetGroupsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeDBSubnetGroupsVersionEnum: %v", v)
 	}
 }
 

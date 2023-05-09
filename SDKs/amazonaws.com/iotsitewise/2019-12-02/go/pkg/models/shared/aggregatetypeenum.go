@@ -18,12 +18,16 @@ const (
 	AggregateTypeEnumStandardDeviation AggregateTypeEnum = "STANDARD_DEVIATION"
 )
 
+func (e AggregateTypeEnum) ToPointer() *AggregateTypeEnum {
+	return &e
+}
+
 func (e *AggregateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVERAGE":
 		fallthrough
 	case "COUNT":
@@ -35,9 +39,9 @@ func (e *AggregateTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SUM":
 		fallthrough
 	case "STANDARD_DEVIATION":
-		*e = AggregateTypeEnum(s)
+		*e = AggregateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregateTypeEnum: %v", v)
 	}
 }

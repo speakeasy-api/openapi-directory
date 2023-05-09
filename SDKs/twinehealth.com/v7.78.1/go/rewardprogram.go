@@ -106,7 +106,10 @@ func (s *rewardProgram) CreateRewardProgram(ctx context.Context, request shared.
 // Get a reward program record by id.
 func (s *rewardProgram) FetchRewardProgram(ctx context.Context, request operations.FetchRewardProgramRequest) (*operations.FetchRewardProgramResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reward_program/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reward_program/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -163,7 +166,10 @@ func (s *rewardProgram) FetchRewardProgram(ctx context.Context, request operatio
 // Get the group related to a reward program.
 func (s *rewardProgram) FetchRewardProgramGroup(ctx context.Context, request operations.FetchRewardProgramGroupRequest) (*operations.FetchRewardProgramGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reward_program/{id}/group", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reward_program/{id}/group", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

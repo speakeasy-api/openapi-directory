@@ -16,21 +16,25 @@ const (
 	ManagementSettingsTransferLockStateEnumLocked                       ManagementSettingsTransferLockStateEnum = "LOCKED"
 )
 
+func (e ManagementSettingsTransferLockStateEnum) ToPointer() *ManagementSettingsTransferLockStateEnum {
+	return &e
+}
+
 func (e *ManagementSettingsTransferLockStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRANSFER_LOCK_STATE_UNSPECIFIED":
 		fallthrough
 	case "UNLOCKED":
 		fallthrough
 	case "LOCKED":
-		*e = ManagementSettingsTransferLockStateEnum(s)
+		*e = ManagementSettingsTransferLockStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagementSettingsTransferLockStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagementSettingsTransferLockStateEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	ManagementSettingsRenewalMethodEnumManualRenewal            ManagementSettingsRenewalMethodEnum = "MANUAL_RENEWAL"
 )
 
+func (e ManagementSettingsRenewalMethodEnum) ToPointer() *ManagementSettingsRenewalMethodEnum {
+	return &e
+}
+
 func (e *ManagementSettingsRenewalMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RENEWAL_METHOD_UNSPECIFIED":
 		fallthrough
 	case "AUTOMATIC_RENEWAL":
 		fallthrough
 	case "MANUAL_RENEWAL":
-		*e = ManagementSettingsRenewalMethodEnum(s)
+		*e = ManagementSettingsRenewalMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagementSettingsRenewalMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagementSettingsRenewalMethodEnum: %v", v)
 	}
 }
 

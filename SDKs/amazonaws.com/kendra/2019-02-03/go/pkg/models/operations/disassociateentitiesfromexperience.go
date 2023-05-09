@@ -16,17 +16,21 @@ const (
 	DisassociateEntitiesFromExperienceXAmzTargetEnumAwsKendraFrontendServiceDisassociateEntitiesFromExperience DisassociateEntitiesFromExperienceXAmzTargetEnum = "AWSKendraFrontendService.DisassociateEntitiesFromExperience"
 )
 
+func (e DisassociateEntitiesFromExperienceXAmzTargetEnum) ToPointer() *DisassociateEntitiesFromExperienceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateEntitiesFromExperienceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.DisassociateEntitiesFromExperience":
-		*e = DisassociateEntitiesFromExperienceXAmzTargetEnum(s)
+		*e = DisassociateEntitiesFromExperienceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateEntitiesFromExperienceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateEntitiesFromExperienceXAmzTargetEnum: %v", v)
 	}
 }
 

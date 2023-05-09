@@ -17,12 +17,16 @@ const (
 	LivingAreaEatingCoffeeMakerExceptionEnumDependentOnDayOfWeek LivingAreaEatingCoffeeMakerExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingCoffeeMakerExceptionEnum) ToPointer() *LivingAreaEatingCoffeeMakerExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingCoffeeMakerExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *LivingAreaEatingCoffeeMakerExceptionEnum) UnmarshalJSON(data []byte) er
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingCoffeeMakerExceptionEnum(s)
+		*e = LivingAreaEatingCoffeeMakerExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingCoffeeMakerExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingCoffeeMakerExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	LivingAreaEatingCookwareExceptionEnumDependentOnDayOfWeek LivingAreaEatingCookwareExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingCookwareExceptionEnum) ToPointer() *LivingAreaEatingCookwareExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingCookwareExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *LivingAreaEatingCookwareExceptionEnum) UnmarshalJSON(data []byte) error
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingCookwareExceptionEnum(s)
+		*e = LivingAreaEatingCookwareExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingCookwareExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingCookwareExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	LivingAreaEatingDishwasherExceptionEnumDependentOnDayOfWeek LivingAreaEatingDishwasherExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingDishwasherExceptionEnum) ToPointer() *LivingAreaEatingDishwasherExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingDishwasherExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *LivingAreaEatingDishwasherExceptionEnum) UnmarshalJSON(data []byte) err
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingDishwasherExceptionEnum(s)
+		*e = LivingAreaEatingDishwasherExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingDishwasherExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingDishwasherExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	LivingAreaEatingIndoorGrillExceptionEnumDependentOnDayOfWeek LivingAreaEatingIndoorGrillExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingIndoorGrillExceptionEnum) ToPointer() *LivingAreaEatingIndoorGrillExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingIndoorGrillExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *LivingAreaEatingIndoorGrillExceptionEnum) UnmarshalJSON(data []byte) er
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingIndoorGrillExceptionEnum(s)
+		*e = LivingAreaEatingIndoorGrillExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingIndoorGrillExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingIndoorGrillExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	LivingAreaEatingKettleExceptionEnumDependentOnDayOfWeek LivingAreaEatingKettleExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingKettleExceptionEnum) ToPointer() *LivingAreaEatingKettleExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingKettleExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *LivingAreaEatingKettleExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingKettleExceptionEnum(s)
+		*e = LivingAreaEatingKettleExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingKettleExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingKettleExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	LivingAreaEatingKitchenAvailableExceptionEnumDependentOnDayOfWeek LivingAreaEatingKitchenAvailableExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingKitchenAvailableExceptionEnum) ToPointer() *LivingAreaEatingKitchenAvailableExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingKitchenAvailableExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *LivingAreaEatingKitchenAvailableExceptionEnum) UnmarshalJSON(data []byt
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingKitchenAvailableExceptionEnum(s)
+		*e = LivingAreaEatingKitchenAvailableExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingKitchenAvailableExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingKitchenAvailableExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	LivingAreaEatingMicrowaveExceptionEnumDependentOnDayOfWeek LivingAreaEatingMicrowaveExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingMicrowaveExceptionEnum) ToPointer() *LivingAreaEatingMicrowaveExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingMicrowaveExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *LivingAreaEatingMicrowaveExceptionEnum) UnmarshalJSON(data []byte) erro
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingMicrowaveExceptionEnum(s)
+		*e = LivingAreaEatingMicrowaveExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingMicrowaveExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingMicrowaveExceptionEnum: %v", v)
 	}
 }
 
@@ -227,12 +255,16 @@ const (
 	LivingAreaEatingMinibarExceptionEnumDependentOnDayOfWeek LivingAreaEatingMinibarExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingMinibarExceptionEnum) ToPointer() *LivingAreaEatingMinibarExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingMinibarExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -240,10 +272,10 @@ func (e *LivingAreaEatingMinibarExceptionEnum) UnmarshalJSON(data []byte) error 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingMinibarExceptionEnum(s)
+		*e = LivingAreaEatingMinibarExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingMinibarExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingMinibarExceptionEnum: %v", v)
 	}
 }
 
@@ -257,12 +289,16 @@ const (
 	LivingAreaEatingOutdoorGrillExceptionEnumDependentOnDayOfWeek LivingAreaEatingOutdoorGrillExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingOutdoorGrillExceptionEnum) ToPointer() *LivingAreaEatingOutdoorGrillExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingOutdoorGrillExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -270,10 +306,10 @@ func (e *LivingAreaEatingOutdoorGrillExceptionEnum) UnmarshalJSON(data []byte) e
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingOutdoorGrillExceptionEnum(s)
+		*e = LivingAreaEatingOutdoorGrillExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingOutdoorGrillExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingOutdoorGrillExceptionEnum: %v", v)
 	}
 }
 
@@ -287,12 +323,16 @@ const (
 	LivingAreaEatingOvenExceptionEnumDependentOnDayOfWeek LivingAreaEatingOvenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingOvenExceptionEnum) ToPointer() *LivingAreaEatingOvenExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingOvenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -300,10 +340,10 @@ func (e *LivingAreaEatingOvenExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingOvenExceptionEnum(s)
+		*e = LivingAreaEatingOvenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingOvenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingOvenExceptionEnum: %v", v)
 	}
 }
 
@@ -317,12 +357,16 @@ const (
 	LivingAreaEatingRefrigeratorExceptionEnumDependentOnDayOfWeek LivingAreaEatingRefrigeratorExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingRefrigeratorExceptionEnum) ToPointer() *LivingAreaEatingRefrigeratorExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingRefrigeratorExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -330,10 +374,10 @@ func (e *LivingAreaEatingRefrigeratorExceptionEnum) UnmarshalJSON(data []byte) e
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingRefrigeratorExceptionEnum(s)
+		*e = LivingAreaEatingRefrigeratorExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingRefrigeratorExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingRefrigeratorExceptionEnum: %v", v)
 	}
 }
 
@@ -347,12 +391,16 @@ const (
 	LivingAreaEatingSinkExceptionEnumDependentOnDayOfWeek LivingAreaEatingSinkExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingSinkExceptionEnum) ToPointer() *LivingAreaEatingSinkExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingSinkExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -360,10 +408,10 @@ func (e *LivingAreaEatingSinkExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingSinkExceptionEnum(s)
+		*e = LivingAreaEatingSinkExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingSinkExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingSinkExceptionEnum: %v", v)
 	}
 }
 
@@ -377,12 +425,16 @@ const (
 	LivingAreaEatingSnackbarExceptionEnumDependentOnDayOfWeek LivingAreaEatingSnackbarExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingSnackbarExceptionEnum) ToPointer() *LivingAreaEatingSnackbarExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingSnackbarExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -390,10 +442,10 @@ func (e *LivingAreaEatingSnackbarExceptionEnum) UnmarshalJSON(data []byte) error
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingSnackbarExceptionEnum(s)
+		*e = LivingAreaEatingSnackbarExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingSnackbarExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingSnackbarExceptionEnum: %v", v)
 	}
 }
 
@@ -407,12 +459,16 @@ const (
 	LivingAreaEatingStoveExceptionEnumDependentOnDayOfWeek LivingAreaEatingStoveExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingStoveExceptionEnum) ToPointer() *LivingAreaEatingStoveExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingStoveExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -420,10 +476,10 @@ func (e *LivingAreaEatingStoveExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingStoveExceptionEnum(s)
+		*e = LivingAreaEatingStoveExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingStoveExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingStoveExceptionEnum: %v", v)
 	}
 }
 
@@ -437,12 +493,16 @@ const (
 	LivingAreaEatingTeaStationExceptionEnumDependentOnDayOfWeek LivingAreaEatingTeaStationExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingTeaStationExceptionEnum) ToPointer() *LivingAreaEatingTeaStationExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingTeaStationExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -450,10 +510,10 @@ func (e *LivingAreaEatingTeaStationExceptionEnum) UnmarshalJSON(data []byte) err
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingTeaStationExceptionEnum(s)
+		*e = LivingAreaEatingTeaStationExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingTeaStationExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingTeaStationExceptionEnum: %v", v)
 	}
 }
 
@@ -467,12 +527,16 @@ const (
 	LivingAreaEatingToasterExceptionEnumDependentOnDayOfWeek LivingAreaEatingToasterExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaEatingToasterExceptionEnum) ToPointer() *LivingAreaEatingToasterExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaEatingToasterExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -480,10 +544,10 @@ func (e *LivingAreaEatingToasterExceptionEnum) UnmarshalJSON(data []byte) error 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaEatingToasterExceptionEnum(s)
+		*e = LivingAreaEatingToasterExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaEatingToasterExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaEatingToasterExceptionEnum: %v", v)
 	}
 }
 

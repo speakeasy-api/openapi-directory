@@ -18,9 +18,11 @@ type WorkstationConfig struct {
 	DeleteTime *string `json:"deleteTime,omitempty"`
 	// Human-readable name for this resource.
 	DisplayName *string `json:"displayName,omitempty"`
+	// Whether to enable linux auditd logging on the workstation. When enabled, a service account must also be specified that has logging.buckets.write permission on the project. Operating system audit logging is distinct from [Cloud Audit Logs](https://cloud.google.com/workstations/docs/audit-logging).
+	EnableAuditAgent *bool `json:"enableAuditAgent,omitempty"`
 	// A customer-managed encryption key for the Compute Engine resources of this workstation configuration.
 	EncryptionKey *CustomerEncryptionKey `json:"encryptionKey,omitempty"`
-	// Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+	// Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
 	Etag *string `json:"etag,omitempty"`
 	// Runtime host for a workstation.
 	Host *Host `json:"host,omitempty"`
@@ -32,6 +34,8 @@ type WorkstationConfig struct {
 	Name *string `json:"name,omitempty"`
 	// Directories to persist across workstation sessions.
 	PersistentDirectories []PersistentDirectory `json:"persistentDirectories,omitempty"`
+	// Readiness checks to perform when starting a workstation using this workstation configuration. Mark a workstation as running only after all specified readiness checks return 200 status codes.
+	ReadinessChecks []ReadinessCheck `json:"readinessChecks,omitempty"`
 	// Output only. Indicates whether this resource is currently being updated to match its intended state.
 	Reconciling *bool `json:"reconciling,omitempty"`
 	// How long to wait before automatically stopping a workstation after it started. A value of 0 indicates that workstations using this configuration should never time out. Must be greater than 0 and less than 24 hours if encryption_key is set. Defaults to 12 hours.
@@ -50,12 +54,14 @@ type WorkstationConfigInput struct {
 	Container *Container `json:"container,omitempty"`
 	// Human-readable name for this resource.
 	DisplayName *string `json:"displayName,omitempty"`
+	// Whether to enable linux auditd logging on the workstation. When enabled, a service account must also be specified that has logging.buckets.write permission on the project. Operating system audit logging is distinct from [Cloud Audit Logs](https://cloud.google.com/workstations/docs/audit-logging).
+	EnableAuditAgent *bool `json:"enableAuditAgent,omitempty"`
 	// A customer-managed encryption key for the Compute Engine resources of this workstation configuration.
 	EncryptionKey *CustomerEncryptionKey `json:"encryptionKey,omitempty"`
-	// Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+	// Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
 	Etag *string `json:"etag,omitempty"`
 	// Runtime host for a workstation.
-	Host *Host `json:"host,omitempty"`
+	Host *HostInput `json:"host,omitempty"`
 	// How long to wait before automatically stopping an instance that hasn't received any user traffic. A value of 0 indicates that this instance should never time out due to idleness. Defaults to 20 minutes.
 	IdleTimeout *string `json:"idleTimeout,omitempty"`
 	// Client-specified labels that are applied to the resource and that are also propagated to the underlying Compute Engine resources.
@@ -64,6 +70,8 @@ type WorkstationConfigInput struct {
 	Name *string `json:"name,omitempty"`
 	// Directories to persist across workstation sessions.
 	PersistentDirectories []PersistentDirectory `json:"persistentDirectories,omitempty"`
+	// Readiness checks to perform when starting a workstation using this workstation configuration. Mark a workstation as running only after all specified readiness checks return 200 status codes.
+	ReadinessChecks []ReadinessCheck `json:"readinessChecks,omitempty"`
 	// How long to wait before automatically stopping a workstation after it started. A value of 0 indicates that workstations using this configuration should never time out. Must be greater than 0 and less than 24 hours if encryption_key is set. Defaults to 12 hours.
 	RunningTimeout *string `json:"runningTimeout,omitempty"`
 }

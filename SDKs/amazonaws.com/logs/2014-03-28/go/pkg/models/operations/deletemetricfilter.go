@@ -16,17 +16,21 @@ const (
 	DeleteMetricFilterXAmzTargetEnumLogs20140328DeleteMetricFilter DeleteMetricFilterXAmzTargetEnum = "Logs_20140328.DeleteMetricFilter"
 )
 
+func (e DeleteMetricFilterXAmzTargetEnum) ToPointer() *DeleteMetricFilterXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteMetricFilterXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.DeleteMetricFilter":
-		*e = DeleteMetricFilterXAmzTargetEnum(s)
+		*e = DeleteMetricFilterXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteMetricFilterXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteMetricFilterXAmzTargetEnum: %v", v)
 	}
 }
 

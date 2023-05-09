@@ -19,12 +19,16 @@ const (
 	GetAccountHolderResponseLegalEntityEnumPublicCompany GetAccountHolderResponseLegalEntityEnum = "PublicCompany"
 )
 
+func (e GetAccountHolderResponseLegalEntityEnum) ToPointer() *GetAccountHolderResponseLegalEntityEnum {
+	return &e
+}
+
 func (e *GetAccountHolderResponseLegalEntityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Business":
 		fallthrough
 	case "Individual":
@@ -34,10 +38,10 @@ func (e *GetAccountHolderResponseLegalEntityEnum) UnmarshalJSON(data []byte) err
 	case "Partnership":
 		fallthrough
 	case "PublicCompany":
-		*e = GetAccountHolderResponseLegalEntityEnum(s)
+		*e = GetAccountHolderResponseLegalEntityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAccountHolderResponseLegalEntityEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAccountHolderResponseLegalEntityEnum: %v", v)
 	}
 }
 

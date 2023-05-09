@@ -14,18 +14,22 @@ const (
 	HLSFragmentSelectorTypeEnumServerTimestamp   HLSFragmentSelectorTypeEnum = "SERVER_TIMESTAMP"
 )
 
+func (e HLSFragmentSelectorTypeEnum) ToPointer() *HLSFragmentSelectorTypeEnum {
+	return &e
+}
+
 func (e *HLSFragmentSelectorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCER_TIMESTAMP":
 		fallthrough
 	case "SERVER_TIMESTAMP":
-		*e = HLSFragmentSelectorTypeEnum(s)
+		*e = HLSFragmentSelectorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HLSFragmentSelectorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HLSFragmentSelectorTypeEnum: %v", v)
 	}
 }

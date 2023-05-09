@@ -17,12 +17,16 @@ const (
 	SpreadsheetPropertiesAutoRecalcEnumHour                             SpreadsheetPropertiesAutoRecalcEnum = "HOUR"
 )
 
+func (e SpreadsheetPropertiesAutoRecalcEnum) ToPointer() *SpreadsheetPropertiesAutoRecalcEnum {
+	return &e
+}
+
 func (e *SpreadsheetPropertiesAutoRecalcEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECALCULATION_INTERVAL_UNSPECIFIED":
 		fallthrough
 	case "ON_CHANGE":
@@ -30,10 +34,10 @@ func (e *SpreadsheetPropertiesAutoRecalcEnum) UnmarshalJSON(data []byte) error {
 	case "MINUTE":
 		fallthrough
 	case "HOUR":
-		*e = SpreadsheetPropertiesAutoRecalcEnum(s)
+		*e = SpreadsheetPropertiesAutoRecalcEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpreadsheetPropertiesAutoRecalcEnum: %s", s)
+		return fmt.Errorf("invalid value for SpreadsheetPropertiesAutoRecalcEnum: %v", v)
 	}
 }
 

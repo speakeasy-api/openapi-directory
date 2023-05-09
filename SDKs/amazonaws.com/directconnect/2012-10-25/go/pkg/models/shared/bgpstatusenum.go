@@ -15,20 +15,24 @@ const (
 	BGPStatusEnumUnknown BGPStatusEnum = "unknown"
 )
 
+func (e BGPStatusEnum) ToPointer() *BGPStatusEnum {
+	return &e
+}
+
 func (e *BGPStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "up":
 		fallthrough
 	case "down":
 		fallthrough
 	case "unknown":
-		*e = BGPStatusEnum(s)
+		*e = BGPStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BGPStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BGPStatusEnum: %v", v)
 	}
 }

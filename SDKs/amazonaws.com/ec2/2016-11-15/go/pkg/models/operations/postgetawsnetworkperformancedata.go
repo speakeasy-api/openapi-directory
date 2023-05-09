@@ -15,17 +15,21 @@ const (
 	POSTGetAwsNetworkPerformanceDataActionEnumGetAwsNetworkPerformanceData POSTGetAwsNetworkPerformanceDataActionEnum = "GetAwsNetworkPerformanceData"
 )
 
+func (e POSTGetAwsNetworkPerformanceDataActionEnum) ToPointer() *POSTGetAwsNetworkPerformanceDataActionEnum {
+	return &e
+}
+
 func (e *POSTGetAwsNetworkPerformanceDataActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAwsNetworkPerformanceData":
-		*e = POSTGetAwsNetworkPerformanceDataActionEnum(s)
+		*e = POSTGetAwsNetworkPerformanceDataActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetAwsNetworkPerformanceDataActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetAwsNetworkPerformanceDataActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetAwsNetworkPerformanceDataVersionEnumTwoThousandAndSixteen1115 POSTGetAwsNetworkPerformanceDataVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetAwsNetworkPerformanceDataVersionEnum) ToPointer() *POSTGetAwsNetworkPerformanceDataVersionEnum {
+	return &e
+}
+
 func (e *POSTGetAwsNetworkPerformanceDataVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetAwsNetworkPerformanceDataVersionEnum(s)
+		*e = POSTGetAwsNetworkPerformanceDataVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetAwsNetworkPerformanceDataVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetAwsNetworkPerformanceDataVersionEnum: %v", v)
 	}
 }
 

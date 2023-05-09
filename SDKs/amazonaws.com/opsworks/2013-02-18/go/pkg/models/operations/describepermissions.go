@@ -16,17 +16,21 @@ const (
 	DescribePermissionsXAmzTargetEnumOpsWorks20130218DescribePermissions DescribePermissionsXAmzTargetEnum = "OpsWorks_20130218.DescribePermissions"
 )
 
+func (e DescribePermissionsXAmzTargetEnum) ToPointer() *DescribePermissionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribePermissionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DescribePermissions":
-		*e = DescribePermissionsXAmzTargetEnum(s)
+		*e = DescribePermissionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribePermissionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribePermissionsXAmzTargetEnum: %v", v)
 	}
 }
 

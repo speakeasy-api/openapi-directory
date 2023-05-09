@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateEventNotificationRequest{
+    ctx := context.Background()
+    res, err := s.EventNotification.CreateEventNotification(ctx, operations.CreateEventNotificationRequest{
         RequestBody: "corrupti",
         XFapiFinancialID: "provident",
-        XFapiInteractionID: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.EventNotification.CreateEventNotification(ctx, req)
+        XFapiInteractionID: sdk.String("distinctio"),
+    })
     if err != nil {
         log.Fatal(err)
     }

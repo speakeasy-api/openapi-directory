@@ -17,12 +17,16 @@ const (
 	YoutubeAndPartnersSettingsContentCategoryEnumYoutubeAndPartnersContentCategoryLimited     YoutubeAndPartnersSettingsContentCategoryEnum = "YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_LIMITED"
 )
 
+func (e YoutubeAndPartnersSettingsContentCategoryEnum) ToPointer() *YoutubeAndPartnersSettingsContentCategoryEnum {
+	return &e
+}
+
 func (e *YoutubeAndPartnersSettingsContentCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_STANDARD":
@@ -30,10 +34,10 @@ func (e *YoutubeAndPartnersSettingsContentCategoryEnum) UnmarshalJSON(data []byt
 	case "YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_EXPANDED":
 		fallthrough
 	case "YOUTUBE_AND_PARTNERS_CONTENT_CATEGORY_LIMITED":
-		*e = YoutubeAndPartnersSettingsContentCategoryEnum(s)
+		*e = YoutubeAndPartnersSettingsContentCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeAndPartnersSettingsContentCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeAndPartnersSettingsContentCategoryEnum: %v", v)
 	}
 }
 

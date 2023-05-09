@@ -13,16 +13,20 @@ const (
 	WorkflowExportEnumDefinition WorkflowExportEnum = "DEFINITION"
 )
 
+func (e WorkflowExportEnum) ToPointer() *WorkflowExportEnum {
+	return &e
+}
+
 func (e *WorkflowExportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFINITION":
-		*e = WorkflowExportEnum(s)
+		*e = WorkflowExportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkflowExportEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkflowExportEnum: %v", v)
 	}
 }

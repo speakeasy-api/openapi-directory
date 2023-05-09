@@ -83,7 +83,10 @@ func (s *reports) AdsenseReportsGenerate(ctx context.Context, request operations
 // AdsenseReportsSavedGenerate - Generate an AdSense report based on the saved report ID sent in the query parameters.
 func (s *reports) AdsenseReportsSavedGenerate(ctx context.Context, request operations.AdsenseReportsSavedGenerateRequest, security operations.AdsenseReportsSavedGenerateSecurity) (*operations.AdsenseReportsSavedGenerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{savedReportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reports/{savedReportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

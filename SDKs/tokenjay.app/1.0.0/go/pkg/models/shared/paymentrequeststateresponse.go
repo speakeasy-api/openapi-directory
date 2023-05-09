@@ -16,12 +16,16 @@ const (
 	PaymentRequestStateResponsePaymentRequestStateEnumInvalid  PaymentRequestStateResponsePaymentRequestStateEnum = "INVALID"
 )
 
+func (e PaymentRequestStateResponsePaymentRequestStateEnum) ToPointer() *PaymentRequestStateResponsePaymentRequestStateEnum {
+	return &e
+}
+
 func (e *PaymentRequestStateResponsePaymentRequestStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATED":
 		fallthrough
 	case "WAITING":
@@ -29,10 +33,10 @@ func (e *PaymentRequestStateResponsePaymentRequestStateEnum) UnmarshalJSON(data 
 	case "EXECUTED":
 		fallthrough
 	case "INVALID":
-		*e = PaymentRequestStateResponsePaymentRequestStateEnum(s)
+		*e = PaymentRequestStateResponsePaymentRequestStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentRequestStateResponsePaymentRequestStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentRequestStateResponsePaymentRequestStateEnum: %v", v)
 	}
 }
 

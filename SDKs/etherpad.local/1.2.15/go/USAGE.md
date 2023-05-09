@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,13 +16,11 @@ func main() {
         }),
     )
 
-    req := operations.AppendTextUsingGETRequest{
-        PadID: "corrupti",
-        Text: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.AppendTextUsingGET(ctx, req)
+    res, err := s.AppendTextUsingGET(ctx, operations.AppendTextUsingGETRequest{
+        PadID: sdk.String("corrupti"),
+        Text: sdk.String("provident"),
+    })
     if err != nil {
         log.Fatal(err)
     }

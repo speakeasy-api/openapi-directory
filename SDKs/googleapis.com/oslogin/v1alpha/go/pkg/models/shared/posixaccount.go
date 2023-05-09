@@ -16,21 +16,25 @@ const (
 	PosixAccountOperatingSystemTypeEnumWindows                        PosixAccountOperatingSystemTypeEnum = "WINDOWS"
 )
 
+func (e PosixAccountOperatingSystemTypeEnum) ToPointer() *PosixAccountOperatingSystemTypeEnum {
+	return &e
+}
+
 func (e *PosixAccountOperatingSystemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATING_SYSTEM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINUX":
 		fallthrough
 	case "WINDOWS":
-		*e = PosixAccountOperatingSystemTypeEnum(s)
+		*e = PosixAccountOperatingSystemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PosixAccountOperatingSystemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PosixAccountOperatingSystemTypeEnum: %v", v)
 	}
 }
 

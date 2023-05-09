@@ -16,17 +16,21 @@ const (
 	ListTablesXAmzTargetEnumKeyspacesServiceListTables ListTablesXAmzTargetEnum = "KeyspacesService.ListTables"
 )
 
+func (e ListTablesXAmzTargetEnum) ToPointer() *ListTablesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListTablesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KeyspacesService.ListTables":
-		*e = ListTablesXAmzTargetEnum(s)
+		*e = ListTablesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTablesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTablesXAmzTargetEnum: %v", v)
 	}
 }
 

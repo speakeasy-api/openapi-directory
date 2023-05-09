@@ -21,12 +21,16 @@ const (
 	VersionInboundServicesEnumInboundServiceWarmup          VersionInboundServicesEnum = "INBOUND_SERVICE_WARMUP"
 )
 
+func (e VersionInboundServicesEnum) ToPointer() *VersionInboundServicesEnum {
+	return &e
+}
+
 func (e *VersionInboundServicesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INBOUND_SERVICE_UNSPECIFIED":
 		fallthrough
 	case "INBOUND_SERVICE_MAIL":
@@ -44,10 +48,10 @@ func (e *VersionInboundServicesEnum) UnmarshalJSON(data []byte) error {
 	case "INBOUND_SERVICE_CHANNEL_PRESENCE":
 		fallthrough
 	case "INBOUND_SERVICE_WARMUP":
-		*e = VersionInboundServicesEnum(s)
+		*e = VersionInboundServicesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VersionInboundServicesEnum: %s", s)
+		return fmt.Errorf("invalid value for VersionInboundServicesEnum: %v", v)
 	}
 }
 
@@ -60,21 +64,25 @@ const (
 	VersionServingStatusEnumStopped                  VersionServingStatusEnum = "STOPPED"
 )
 
+func (e VersionServingStatusEnum) ToPointer() *VersionServingStatusEnum {
+	return &e
+}
+
 func (e *VersionServingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVING_STATUS_UNSPECIFIED":
 		fallthrough
 	case "SERVING":
 		fallthrough
 	case "STOPPED":
-		*e = VersionServingStatusEnum(s)
+		*e = VersionServingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VersionServingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for VersionServingStatusEnum: %v", v)
 	}
 }
 

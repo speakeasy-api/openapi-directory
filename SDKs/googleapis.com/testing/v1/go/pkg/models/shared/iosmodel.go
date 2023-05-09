@@ -17,12 +17,16 @@ const (
 	IosModelFormFactorEnumWearable                    IosModelFormFactorEnum = "WEARABLE"
 )
 
+func (e IosModelFormFactorEnum) ToPointer() *IosModelFormFactorEnum {
+	return &e
+}
+
 func (e *IosModelFormFactorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_FORM_FACTOR_UNSPECIFIED":
 		fallthrough
 	case "PHONE":
@@ -30,10 +34,10 @@ func (e *IosModelFormFactorEnum) UnmarshalJSON(data []byte) error {
 	case "TABLET":
 		fallthrough
 	case "WEARABLE":
-		*e = IosModelFormFactorEnum(s)
+		*e = IosModelFormFactorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IosModelFormFactorEnum: %s", s)
+		return fmt.Errorf("invalid value for IosModelFormFactorEnum: %v", v)
 	}
 }
 

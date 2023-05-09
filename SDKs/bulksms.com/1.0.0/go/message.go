@@ -210,7 +210,10 @@ func (s *message) GetMessagesSend(ctx context.Context, request operations.GetMes
 // ```
 func (s *message) GetMessagesID(ctx context.Context, request operations.GetMessagesIDRequest) (*operations.GetMessagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/messages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -269,7 +272,10 @@ func (s *message) GetMessagesID(ctx context.Context, request operations.GetMessa
 // For more information how this work, see the `relatedSentMessageId` field in the message.
 func (s *message) GetMessagesIDRelatedReceivedMessages(ctx context.Context, request operations.GetMessagesIDRelatedReceivedMessagesRequest, security operations.GetMessagesIDRelatedReceivedMessagesSecurity) (*operations.GetMessagesIDRelatedReceivedMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/messages/{id}/relatedReceivedMessages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/messages/{id}/relatedReceivedMessages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

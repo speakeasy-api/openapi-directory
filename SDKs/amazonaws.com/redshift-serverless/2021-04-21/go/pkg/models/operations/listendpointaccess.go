@@ -16,17 +16,21 @@ const (
 	ListEndpointAccessXAmzTargetEnumRedshiftServerlessListEndpointAccess ListEndpointAccessXAmzTargetEnum = "RedshiftServerless.ListEndpointAccess"
 )
 
+func (e ListEndpointAccessXAmzTargetEnum) ToPointer() *ListEndpointAccessXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListEndpointAccessXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.ListEndpointAccess":
-		*e = ListEndpointAccessXAmzTargetEnum(s)
+		*e = ListEndpointAccessXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEndpointAccessXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEndpointAccessXAmzTargetEnum: %v", v)
 	}
 }
 

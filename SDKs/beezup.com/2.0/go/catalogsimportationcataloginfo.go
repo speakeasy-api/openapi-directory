@@ -35,7 +35,10 @@ func newCatalogsImportationCatalogInfo(defaultClient, securityClient HTTPClient,
 // ImportationConfigureCatalogColumn - Configure catalog column
 func (s *catalogsImportationCatalogInfo) ImportationConfigureCatalogColumn(ctx context.Context, request operations.ImportationConfigureCatalogColumnRequest) (*operations.ImportationConfigureCatalogColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfigureCatalogColumnCatalogRequest", "json")
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *catalogsImportationCatalogInfo) ImportationConfigureCatalogColumn(ctx c
 // ImportationDeleteCustomColumn - Delete Custom Column
 func (s *catalogsImportationCatalogInfo) ImportationDeleteCustomColumn(ctx context.Context, request operations.ImportationDeleteCustomColumnRequest) (*operations.ImportationDeleteCustomColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -143,7 +149,10 @@ func (s *catalogsImportationCatalogInfo) ImportationDeleteCustomColumn(ctx conte
 // ImportationGetCustomColumnExpression - Get the encrypted custom column expression in this importation
 func (s *catalogsImportationCatalogInfo) ImportationGetCustomColumnExpression(ctx context.Context, request operations.ImportationGetCustomColumnExpressionRequest) (*operations.ImportationGetCustomColumnExpressionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/expression", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/expression", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -202,7 +211,10 @@ func (s *catalogsImportationCatalogInfo) ImportationGetCustomColumnExpression(ct
 // ImportationGetCustomColumns - Get custom columns currently place in this importation
 func (s *catalogsImportationCatalogInfo) ImportationGetCustomColumns(ctx context.Context, request operations.ImportationGetCustomColumnsRequest) (*operations.ImportationGetCustomColumnsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -260,7 +272,10 @@ func (s *catalogsImportationCatalogInfo) ImportationGetCustomColumns(ctx context
 // ImportationGetDetectedCatalogColumns - Get detected catalog columns during this importation.
 func (s *catalogsImportationCatalogInfo) ImportationGetDetectedCatalogColumns(ctx context.Context, request operations.ImportationGetDetectedCatalogColumnsRequest) (*operations.ImportationGetDetectedCatalogColumnsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -318,7 +333,10 @@ func (s *catalogsImportationCatalogInfo) ImportationGetDetectedCatalogColumns(ct
 // ImportationGetProductSample - Get the product sample related to this importation with all columns (catalog and custom)
 func (s *catalogsImportationCatalogInfo) ImportationGetProductSample(ctx context.Context, request operations.ImportationGetProductSampleRequest) (*operations.ImportationGetProductSampleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/productSamples/{productSampleIndex}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/productSamples/{productSampleIndex}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -376,7 +394,10 @@ func (s *catalogsImportationCatalogInfo) ImportationGetProductSample(ctx context
 // /!\ Use this operation only when you just changed the custom column expression and you want to get a precise the property value. Otherwise use the operation Importation_GetProductSample which will give you all property values
 func (s *catalogsImportationCatalogInfo) ImportationGetProductSampleCustomColumnValue(ctx context.Context, request operations.ImportationGetProductSampleCustomColumnValueRequest) (*operations.ImportationGetProductSampleCustomColumnValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/productSamples/{productSampleIndex}/customColumns/{columnId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/productSamples/{productSampleIndex}/customColumns/{columnId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -445,7 +466,10 @@ func (s *catalogsImportationCatalogInfo) ImportationGetProductSampleCustomColumn
 // ImportationIgnoreColumn - Ignore Column
 func (s *catalogsImportationCatalogInfo) ImportationIgnoreColumn(ctx context.Context, request operations.ImportationIgnoreColumnRequest) (*operations.ImportationIgnoreColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/ignore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/ignore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -494,7 +518,10 @@ func (s *catalogsImportationCatalogInfo) ImportationIgnoreColumn(ctx context.Con
 // ImportationMapCatalogColumn - Map catalog column to a BeezUP column
 func (s *catalogsImportationCatalogInfo) ImportationMapCatalogColumn(ctx context.Context, request operations.ImportationMapCatalogColumnRequest) (*operations.ImportationMapCatalogColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/map", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/map", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MapBeezUPColumnRequest", "json")
 	if err != nil {
@@ -553,7 +580,10 @@ func (s *catalogsImportationCatalogInfo) ImportationMapCatalogColumn(ctx context
 // ImportationMapCustomColumn - Map custom column to a BeezUP column
 func (s *catalogsImportationCatalogInfo) ImportationMapCustomColumn(ctx context.Context, request operations.ImportationMapCustomColumnRequest) (*operations.ImportationMapCustomColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/map", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/map", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MapBeezUPColumnRequest", "json")
 	if err != nil {
@@ -612,7 +642,10 @@ func (s *catalogsImportationCatalogInfo) ImportationMapCustomColumn(ctx context.
 // ImportationReattendColumn - Reattend Column
 func (s *catalogsImportationCatalogInfo) ImportationReattendColumn(ctx context.Context, request operations.ImportationReattendColumnRequest) (*operations.ImportationReattendColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/reattend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/reattend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -661,7 +694,10 @@ func (s *catalogsImportationCatalogInfo) ImportationReattendColumn(ctx context.C
 // ImportationSaveCustomColumn - Create or replace a custom column
 func (s *catalogsImportationCatalogInfo) ImportationSaveCustomColumn(ctx context.Context, request operations.ImportationSaveCustomColumnRequest) (*operations.ImportationSaveCustomColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangeCustomColumnRequest", "json")
 	if err != nil {
@@ -720,7 +756,10 @@ func (s *catalogsImportationCatalogInfo) ImportationSaveCustomColumn(ctx context
 // ImportationUnmapCatalogColumn - Unmap catalog column
 func (s *catalogsImportationCatalogInfo) ImportationUnmapCatalogColumn(ctx context.Context, request operations.ImportationUnmapCatalogColumnRequest) (*operations.ImportationUnmapCatalogColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/unmap", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/unmap", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -769,7 +808,10 @@ func (s *catalogsImportationCatalogInfo) ImportationUnmapCatalogColumn(ctx conte
 // ImportationUnmapCustomColumn - Unmap custom column
 func (s *catalogsImportationCatalogInfo) ImportationUnmapCustomColumn(ctx context.Context, request operations.ImportationUnmapCustomColumnRequest) (*operations.ImportationUnmapCustomColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/unmap", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/unmap", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

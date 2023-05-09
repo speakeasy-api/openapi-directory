@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// Event - Log entry describing an event that involves GameLift resources (such as a fleet). In addition to tracking activity, event codes and messages can provide additional information for troubleshooting and debugging problems.
+// Event - Log entry describing an event that involves Amazon GameLift resources (such as a fleet). In addition to tracking activity, event codes and messages can provide additional information for troubleshooting and debugging problems.
 type Event struct {
 	EventCode       *EventCodeEnum `json:"EventCode,omitempty"`
 	EventID         *string        `json:"EventId,omitempty"`

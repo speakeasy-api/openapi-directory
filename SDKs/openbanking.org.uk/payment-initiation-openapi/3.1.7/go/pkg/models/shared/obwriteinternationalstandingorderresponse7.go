@@ -157,21 +157,25 @@ const (
 	OBWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnumRejected                     OBWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum = "Rejected"
 )
 
+func (e OBWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum) ToPointer() *OBWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authorised":
 		fallthrough
 	case "AwaitingFurtherAuthorisation":
 		fallthrough
 	case "Rejected":
-		*e = OBWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum(s)
+		*e = OBWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalStandingOrderResponse7DataMultiAuthorisationStatusEnum: %v", v)
 	}
 }
 
@@ -247,12 +251,16 @@ const (
 	OBWriteInternationalStandingOrderResponse7DataStatusEnumInitiationPending   OBWriteInternationalStandingOrderResponse7DataStatusEnum = "InitiationPending"
 )
 
+func (e OBWriteInternationalStandingOrderResponse7DataStatusEnum) ToPointer() *OBWriteInternationalStandingOrderResponse7DataStatusEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalStandingOrderResponse7DataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cancelled":
 		fallthrough
 	case "InitiationCompleted":
@@ -260,10 +268,10 @@ func (e *OBWriteInternationalStandingOrderResponse7DataStatusEnum) UnmarshalJSON
 	case "InitiationFailed":
 		fallthrough
 	case "InitiationPending":
-		*e = OBWriteInternationalStandingOrderResponse7DataStatusEnum(s)
+		*e = OBWriteInternationalStandingOrderResponse7DataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalStandingOrderResponse7DataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalStandingOrderResponse7DataStatusEnum: %v", v)
 	}
 }
 

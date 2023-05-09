@@ -17,19 +17,23 @@ const (
 	CreateTypeRequestBodyFormatEnumJSON CreateTypeRequestBodyFormatEnum = "JSON"
 )
 
+func (e CreateTypeRequestBodyFormatEnum) ToPointer() *CreateTypeRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *CreateTypeRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SDL":
 		fallthrough
 	case "JSON":
-		*e = CreateTypeRequestBodyFormatEnum(s)
+		*e = CreateTypeRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTypeRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTypeRequestBodyFormatEnum: %v", v)
 	}
 }
 

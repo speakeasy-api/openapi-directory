@@ -15,20 +15,24 @@ const (
 	VirtualRouterStatusCodeEnumDeleted  VirtualRouterStatusCodeEnum = "DELETED"
 )
 
+func (e VirtualRouterStatusCodeEnum) ToPointer() *VirtualRouterStatusCodeEnum {
+	return &e
+}
+
 func (e *VirtualRouterStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
 		fallthrough
 	case "DELETED":
-		*e = VirtualRouterStatusCodeEnum(s)
+		*e = VirtualRouterStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VirtualRouterStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for VirtualRouterStatusCodeEnum: %v", v)
 	}
 }

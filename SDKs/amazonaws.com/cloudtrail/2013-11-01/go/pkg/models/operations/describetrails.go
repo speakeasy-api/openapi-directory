@@ -16,17 +16,21 @@ const (
 	DescribeTrailsXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101DescribeTrails DescribeTrailsXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.DescribeTrails"
 )
 
+func (e DescribeTrailsXAmzTargetEnum) ToPointer() *DescribeTrailsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTrailsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.DescribeTrails":
-		*e = DescribeTrailsXAmzTargetEnum(s)
+		*e = DescribeTrailsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTrailsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTrailsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -13,34 +13,32 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/poly/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PolyAssetsGetRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        Name: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.Assets.PolyAssetsGet(ctx, req)
+    res, err := s.Assets.PolyAssetsGet(ctx, operations.PolyAssetsGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        Name: "Dallas Kassulke",
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -56,15 +54,15 @@ func main() {
 ## Available Resources and Operations
 
 
-### Assets
+### [Assets](docs/assets/README.md)
 
-* `PolyAssetsGet` - Returns detailed information about an asset given its name. PRIVATE assets are returned only if the currently authenticated user (via OAuth token) is the author of the asset.
-* `PolyAssetsList` - Lists all public, remixable assets. These are assets with an access level of PUBLIC and published under the CC-By license.
+* [PolyAssetsGet](docs/assets/README.md#polyassetsget) - Returns detailed information about an asset given its name. PRIVATE assets are returned only if the currently authenticated user (via OAuth token) is the author of the asset.
+* [PolyAssetsList](docs/assets/README.md#polyassetslist) - Lists all public, remixable assets. These are assets with an access level of PUBLIC and published under the CC-By license.
 
-### Users
+### [Users](docs/users/README.md)
 
-* `PolyUsersAssetsList` - Lists assets authored by the given user. Only the value 'me', representing the currently-authenticated user, is supported. May include assets with an access level of PRIVATE or UNLISTED and assets which are All Rights Reserved for the currently-authenticated user.
-* `PolyUsersLikedassetsList` - Lists assets that the user has liked. Only the value 'me', representing the currently-authenticated user, is supported. May include assets with an access level of UNLISTED.
+* [PolyUsersAssetsList](docs/users/README.md#polyusersassetslist) - Lists assets authored by the given user. Only the value 'me', representing the currently-authenticated user, is supported. May include assets with an access level of PRIVATE or UNLISTED and assets which are All Rights Reserved for the currently-authenticated user.
+* [PolyUsersLikedassetsList](docs/users/README.md#polyuserslikedassetslist) - Lists assets that the user has liked. Only the value 'me', representing the currently-authenticated user, is supported. May include assets with an access level of UNLISTED.
 <!-- End SDK Available Operations -->
 
 ### Maturity

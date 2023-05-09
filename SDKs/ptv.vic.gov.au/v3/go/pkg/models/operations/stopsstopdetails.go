@@ -10,35 +10,39 @@ import (
 )
 
 // StopsStopDetailsRouteTypeEnum - Number identifying transport mode; values returned via RouteTypes API
-type StopsStopDetailsRouteTypeEnum string
+type StopsStopDetailsRouteTypeEnum int
 
 const (
-	StopsStopDetailsRouteTypeEnumZero  StopsStopDetailsRouteTypeEnum = "0"
-	StopsStopDetailsRouteTypeEnumOne   StopsStopDetailsRouteTypeEnum = "1"
-	StopsStopDetailsRouteTypeEnumTwo   StopsStopDetailsRouteTypeEnum = "2"
-	StopsStopDetailsRouteTypeEnumThree StopsStopDetailsRouteTypeEnum = "3"
-	StopsStopDetailsRouteTypeEnumFour  StopsStopDetailsRouteTypeEnum = "4"
+	StopsStopDetailsRouteTypeEnumZero  StopsStopDetailsRouteTypeEnum = 0
+	StopsStopDetailsRouteTypeEnumOne   StopsStopDetailsRouteTypeEnum = 1
+	StopsStopDetailsRouteTypeEnumTwo   StopsStopDetailsRouteTypeEnum = 2
+	StopsStopDetailsRouteTypeEnumThree StopsStopDetailsRouteTypeEnum = 3
+	StopsStopDetailsRouteTypeEnumFour  StopsStopDetailsRouteTypeEnum = 4
 )
 
+func (e StopsStopDetailsRouteTypeEnum) ToPointer() *StopsStopDetailsRouteTypeEnum {
+	return &e
+}
+
 func (e *StopsStopDetailsRouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
-		*e = StopsStopDetailsRouteTypeEnum(s)
+	case 4:
+		*e = StopsStopDetailsRouteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopsStopDetailsRouteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StopsStopDetailsRouteTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	SetIdentityPoolRolesXAmzTargetEnumAwsCognitoIdentityServiceSetIdentityPoolRoles SetIdentityPoolRolesXAmzTargetEnum = "AWSCognitoIdentityService.SetIdentityPoolRoles"
 )
 
+func (e SetIdentityPoolRolesXAmzTargetEnum) ToPointer() *SetIdentityPoolRolesXAmzTargetEnum {
+	return &e
+}
+
 func (e *SetIdentityPoolRolesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityService.SetIdentityPoolRoles":
-		*e = SetIdentityPoolRolesXAmzTargetEnum(s)
+		*e = SetIdentityPoolRolesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetIdentityPoolRolesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SetIdentityPoolRolesXAmzTargetEnum: %v", v)
 	}
 }
 

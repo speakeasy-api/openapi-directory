@@ -16,21 +16,25 @@ const (
 	CloudSQLPropertiesTypeEnumMysql                   CloudSQLPropertiesTypeEnum = "MYSQL"
 )
 
+func (e CloudSQLPropertiesTypeEnum) ToPointer() *CloudSQLPropertiesTypeEnum {
+	return &e
+}
+
 func (e *CloudSQLPropertiesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATABASE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "POSTGRES":
 		fallthrough
 	case "MYSQL":
-		*e = CloudSQLPropertiesTypeEnum(s)
+		*e = CloudSQLPropertiesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudSQLPropertiesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudSQLPropertiesTypeEnum: %v", v)
 	}
 }
 

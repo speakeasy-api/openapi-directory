@@ -17,12 +17,16 @@ const (
 	DiskStateEnumUnknown   DiskStateEnum = "unknown"
 )
 
+func (e DiskStateEnum) ToPointer() *DiskStateEnum {
+	return &e
+}
+
 func (e *DiskStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "error":
@@ -32,9 +36,9 @@ func (e *DiskStateEnum) UnmarshalJSON(data []byte) error {
 	case "in-use":
 		fallthrough
 	case "unknown":
-		*e = DiskStateEnum(s)
+		*e = DiskStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiskStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DiskStateEnum: %v", v)
 	}
 }

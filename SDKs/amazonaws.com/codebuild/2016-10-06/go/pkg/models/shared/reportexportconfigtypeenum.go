@@ -14,18 +14,22 @@ const (
 	ReportExportConfigTypeEnumNoExport ReportExportConfigTypeEnum = "NO_EXPORT"
 )
 
+func (e ReportExportConfigTypeEnum) ToPointer() *ReportExportConfigTypeEnum {
+	return &e
+}
+
 func (e *ReportExportConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "S3":
 		fallthrough
 	case "NO_EXPORT":
-		*e = ReportExportConfigTypeEnum(s)
+		*e = ReportExportConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportExportConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportExportConfigTypeEnum: %v", v)
 	}
 }

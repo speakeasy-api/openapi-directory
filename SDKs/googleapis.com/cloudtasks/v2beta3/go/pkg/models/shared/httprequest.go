@@ -21,12 +21,16 @@ const (
 	HTTPRequestHTTPMethodEnumOptions               HTTPRequestHTTPMethodEnum = "OPTIONS"
 )
 
+func (e HTTPRequestHTTPMethodEnum) ToPointer() *HTTPRequestHTTPMethodEnum {
+	return &e
+}
+
 func (e *HTTPRequestHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP_METHOD_UNSPECIFIED":
 		fallthrough
 	case "POST":
@@ -42,10 +46,10 @@ func (e *HTTPRequestHTTPMethodEnum) UnmarshalJSON(data []byte) error {
 	case "PATCH":
 		fallthrough
 	case "OPTIONS":
-		*e = HTTPRequestHTTPMethodEnum(s)
+		*e = HTTPRequestHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HTTPRequestHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for HTTPRequestHTTPMethodEnum: %v", v)
 	}
 }
 

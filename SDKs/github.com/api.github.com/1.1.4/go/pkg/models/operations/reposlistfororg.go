@@ -17,19 +17,23 @@ const (
 	ReposListForOrgDirectionEnumDesc ReposListForOrgDirectionEnum = "desc"
 )
 
+func (e ReposListForOrgDirectionEnum) ToPointer() *ReposListForOrgDirectionEnum {
+	return &e
+}
+
 func (e *ReposListForOrgDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = ReposListForOrgDirectionEnum(s)
+		*e = ReposListForOrgDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListForOrgDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListForOrgDirectionEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	ReposListForOrgSortEnumFullName ReposListForOrgSortEnum = "full_name"
 )
 
+func (e ReposListForOrgSortEnum) ToPointer() *ReposListForOrgSortEnum {
+	return &e
+}
+
 func (e *ReposListForOrgSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
@@ -56,10 +64,10 @@ func (e *ReposListForOrgSortEnum) UnmarshalJSON(data []byte) error {
 	case "pushed":
 		fallthrough
 	case "full_name":
-		*e = ReposListForOrgSortEnum(s)
+		*e = ReposListForOrgSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListForOrgSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListForOrgSortEnum: %v", v)
 	}
 }
 
@@ -75,12 +83,16 @@ const (
 	ReposListForOrgTypeEnumMember  ReposListForOrgTypeEnum = "member"
 )
 
+func (e ReposListForOrgTypeEnum) ToPointer() *ReposListForOrgTypeEnum {
+	return &e
+}
+
 func (e *ReposListForOrgTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "public":
@@ -92,10 +104,10 @@ func (e *ReposListForOrgTypeEnum) UnmarshalJSON(data []byte) error {
 	case "sources":
 		fallthrough
 	case "member":
-		*e = ReposListForOrgTypeEnum(s)
+		*e = ReposListForOrgTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListForOrgTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListForOrgTypeEnum: %v", v)
 	}
 }
 

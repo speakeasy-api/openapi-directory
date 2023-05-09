@@ -14,19 +14,23 @@ const (
 	SecurityContextSecuritiesEnumSsl      SecurityContextSecuritiesEnum = "SSL"
 )
 
+func (e SecurityContextSecuritiesEnum) ToPointer() *SecurityContextSecuritiesEnum {
+	return &e
+}
+
 func (e *SecurityContextSecuritiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSECURE":
 		fallthrough
 	case "SSL":
-		*e = SecurityContextSecuritiesEnum(s)
+		*e = SecurityContextSecuritiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SecurityContextSecuritiesEnum: %s", s)
+		return fmt.Errorf("invalid value for SecurityContextSecuritiesEnum: %v", v)
 	}
 }
 

@@ -23,12 +23,16 @@ const (
 	GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnumPersonDetection          GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum = "PERSON_DETECTION"
 )
 
+func (e GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum) ToPointer() *GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum {
+	return &e
+}
+
 func (e *GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEATURE_UNSPECIFIED":
 		fallthrough
 	case "LABEL_DETECTION":
@@ -50,10 +54,10 @@ func (e *GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum) 
 	case "CELEBRITY_RECOGNITION":
 		fallthrough
 	case "PERSON_DETECTION":
-		*e = GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum(s)
+		*e = GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVideointelligenceV1p3beta1AnnotateVideoRequestFeaturesEnum: %v", v)
 	}
 }
 

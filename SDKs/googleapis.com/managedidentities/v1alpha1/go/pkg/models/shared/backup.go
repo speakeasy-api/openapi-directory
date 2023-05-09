@@ -18,12 +18,16 @@ const (
 	BackupStateEnumDeleting         BackupStateEnum = "DELETING"
 )
 
+func (e BackupStateEnum) ToPointer() *BackupStateEnum {
+	return &e
+}
+
 func (e *BackupStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -33,10 +37,10 @@ func (e *BackupStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "DELETING":
-		*e = BackupStateEnum(s)
+		*e = BackupStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupStateEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	BackupTypeEnumSchemaExtension BackupTypeEnum = "SCHEMA_EXTENSION"
 )
 
+func (e BackupTypeEnum) ToPointer() *BackupTypeEnum {
+	return &e
+}
+
 func (e *BackupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "ON_DEMAND":
@@ -63,10 +71,10 @@ func (e *BackupTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SCHEDULED":
 		fallthrough
 	case "SCHEMA_EXTENSION":
-		*e = BackupTypeEnum(s)
+		*e = BackupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupTypeEnum: %v", v)
 	}
 }
 

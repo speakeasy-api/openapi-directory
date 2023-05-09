@@ -15,17 +15,21 @@ const (
 	GETPutGroupPolicyActionEnumPutGroupPolicy GETPutGroupPolicyActionEnum = "PutGroupPolicy"
 )
 
+func (e GETPutGroupPolicyActionEnum) ToPointer() *GETPutGroupPolicyActionEnum {
+	return &e
+}
+
 func (e *GETPutGroupPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PutGroupPolicy":
-		*e = GETPutGroupPolicyActionEnum(s)
+		*e = GETPutGroupPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutGroupPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutGroupPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETPutGroupPolicyVersionEnumTwoThousandAndTen0508 GETPutGroupPolicyVersionEnum = "2010-05-08"
 )
 
+func (e GETPutGroupPolicyVersionEnum) ToPointer() *GETPutGroupPolicyVersionEnum {
+	return &e
+}
+
 func (e *GETPutGroupPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETPutGroupPolicyVersionEnum(s)
+		*e = GETPutGroupPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutGroupPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutGroupPolicyVersionEnum: %v", v)
 	}
 }
 

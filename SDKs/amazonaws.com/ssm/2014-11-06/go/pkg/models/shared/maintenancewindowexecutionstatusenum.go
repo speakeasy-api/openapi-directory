@@ -20,12 +20,16 @@ const (
 	MaintenanceWindowExecutionStatusEnumSkippedOverlapping MaintenanceWindowExecutionStatusEnum = "SKIPPED_OVERLAPPING"
 )
 
+func (e MaintenanceWindowExecutionStatusEnum) ToPointer() *MaintenanceWindowExecutionStatusEnum {
+	return &e
+}
+
 func (e *MaintenanceWindowExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "IN_PROGRESS":
@@ -41,9 +45,9 @@ func (e *MaintenanceWindowExecutionStatusEnum) UnmarshalJSON(data []byte) error 
 	case "CANCELLED":
 		fallthrough
 	case "SKIPPED_OVERLAPPING":
-		*e = MaintenanceWindowExecutionStatusEnum(s)
+		*e = MaintenanceWindowExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MaintenanceWindowExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MaintenanceWindowExecutionStatusEnum: %v", v)
 	}
 }

@@ -47,7 +47,10 @@ func newLoyalty(defaultClient, securityClient HTTPClient, serverURL, language, s
 // For more information, see [Availability of Square Loyalty](https://developer.squareup.com/docs/loyalty-api/overview#loyalty-market-availability).
 func (s *loyalty) AccumulateLoyaltyPoints(ctx context.Context, request operations.AccumulateLoyaltyPointsRequest, security operations.AccumulateLoyaltyPointsSecurity) (*operations.AccumulateLoyaltyPointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}/accumulate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}/accumulate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccumulateLoyaltyPointsRequest", "json")
 	if err != nil {
@@ -106,7 +109,10 @@ func (s *loyalty) AccumulateLoyaltyPoints(ctx context.Context, request operation
 // to add points when a buyer pays for the purchase.
 func (s *loyalty) AdjustLoyaltyPoints(ctx context.Context, request operations.AdjustLoyaltyPointsRequest, security operations.AdjustLoyaltyPointsSecurity) (*operations.AdjustLoyaltyPointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}/adjust", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}/adjust", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdjustLoyaltyPointsRequest", "json")
 	if err != nil {
@@ -172,7 +178,10 @@ func (s *loyalty) AdjustLoyaltyPoints(ctx context.Context, request operations.Ad
 // For more information, see [Availability of Square Loyalty](https://developer.squareup.com/docs/loyalty-api/overview#loyalty-market-availability).
 func (s *loyalty) CalculateLoyaltyPoints(ctx context.Context, request operations.CalculateLoyaltyPointsRequest, security operations.CalculateLoyaltyPointsSecurity) (*operations.CalculateLoyaltyPointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/programs/{program_id}/calculate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/programs/{program_id}/calculate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CalculateLoyaltyPointsRequest", "json")
 	if err != nil {
@@ -352,7 +361,10 @@ func (s *loyalty) CreateLoyaltyReward(ctx context.Context, request shared.Create
 // You cannot delete a reward that has reached the terminal state (REDEEMED).
 func (s *loyalty) DeleteLoyaltyReward(ctx context.Context, request operations.DeleteLoyaltyRewardRequest, security operations.DeleteLoyaltyRewardSecurity) (*operations.DeleteLoyaltyRewardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -398,7 +410,7 @@ func (s *loyalty) DeleteLoyaltyReward(ctx context.Context, request operations.De
 // Loyalty programs define how buyers can earn points and redeem points for rewards. Square sellers can have only one loyalty program, which is created and managed from the Seller Dashboard. For more information, see [Loyalty Program Overview](https://developer.squareup.com/docs/loyalty/overview).
 //
 // Replaced with [RetrieveLoyaltyProgram](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/retrieve-loyalty-program) when used with the keyword `main`.
-func (s *loyalty) ListLoyaltyPrograms(ctx context.Context) (*operations.ListLoyaltyProgramsResponse, error) {
+func (s *loyalty) ListLoyaltyPrograms(ctx context.Context, security operations.ListLoyaltyProgramsSecurity) (*operations.ListLoyaltyProgramsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/loyalty/programs"
 
@@ -407,7 +419,7 @@ func (s *loyalty) ListLoyaltyPrograms(ctx context.Context) (*operations.ListLoya
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -455,7 +467,10 @@ func (s *loyalty) ListLoyaltyPrograms(ctx context.Context) (*operations.ListLoya
 // to the account.
 func (s *loyalty) RedeemLoyaltyReward(ctx context.Context, request operations.RedeemLoyaltyRewardRequest, security operations.RedeemLoyaltyRewardSecurity) (*operations.RedeemLoyaltyRewardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}/redeem", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}/redeem", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RedeemLoyaltyRewardRequest", "json")
 	if err != nil {
@@ -510,7 +525,10 @@ func (s *loyalty) RedeemLoyaltyReward(ctx context.Context, request operations.Re
 // Retrieves a loyalty account.
 func (s *loyalty) RetrieveLoyaltyAccount(ctx context.Context, request operations.RetrieveLoyaltyAccountRequest, security operations.RetrieveLoyaltyAccountSecurity) (*operations.RetrieveLoyaltyAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/accounts/{account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -557,7 +575,10 @@ func (s *loyalty) RetrieveLoyaltyAccount(ctx context.Context, request operations
 // Loyalty programs define how buyers can earn points and redeem points for rewards. Square sellers can have only one loyalty program, which is created and managed from the Seller Dashboard. For more information, see [Loyalty Program Overview](https://developer.squareup.com/docs/loyalty/overview).
 func (s *loyalty) RetrieveLoyaltyProgram(ctx context.Context, request operations.RetrieveLoyaltyProgramRequest, security operations.RetrieveLoyaltyProgramSecurity) (*operations.RetrieveLoyaltyProgramResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/programs/{program_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/programs/{program_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -602,7 +623,10 @@ func (s *loyalty) RetrieveLoyaltyProgram(ctx context.Context, request operations
 // Retrieves a loyalty reward.
 func (s *loyalty) RetrieveLoyaltyReward(ctx context.Context, request operations.RetrieveLoyaltyRewardRequest, security operations.RetrieveLoyaltyRewardSecurity) (*operations.RetrieveLoyaltyRewardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/loyalty/rewards/{reward_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

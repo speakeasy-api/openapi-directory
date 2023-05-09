@@ -20,12 +20,16 @@ const (
 	DirectoryChromeosdevicesCommandStateEnumExecutedByClient DirectoryChromeosdevicesCommandStateEnum = "EXECUTED_BY_CLIENT"
 )
 
+func (e DirectoryChromeosdevicesCommandStateEnum) ToPointer() *DirectoryChromeosdevicesCommandStateEnum {
+	return &e
+}
+
 func (e *DirectoryChromeosdevicesCommandStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -39,10 +43,10 @@ func (e *DirectoryChromeosdevicesCommandStateEnum) UnmarshalJSON(data []byte) er
 	case "ACKED_BY_CLIENT":
 		fallthrough
 	case "EXECUTED_BY_CLIENT":
-		*e = DirectoryChromeosdevicesCommandStateEnum(s)
+		*e = DirectoryChromeosdevicesCommandStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryChromeosdevicesCommandStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryChromeosdevicesCommandStateEnum: %v", v)
 	}
 }
 
@@ -60,12 +64,16 @@ const (
 	DirectoryChromeosdevicesCommandTypeEnumCaptureLogs            DirectoryChromeosdevicesCommandTypeEnum = "CAPTURE_LOGS"
 )
 
+func (e DirectoryChromeosdevicesCommandTypeEnum) ToPointer() *DirectoryChromeosdevicesCommandTypeEnum {
+	return &e
+}
+
 func (e *DirectoryChromeosdevicesCommandTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMAND_TYPE_UNSPECIFIED":
 		fallthrough
 	case "REBOOT":
@@ -81,10 +89,10 @@ func (e *DirectoryChromeosdevicesCommandTypeEnum) UnmarshalJSON(data []byte) err
 	case "DEVICE_START_CRD_SESSION":
 		fallthrough
 	case "CAPTURE_LOGS":
-		*e = DirectoryChromeosdevicesCommandTypeEnum(s)
+		*e = DirectoryChromeosdevicesCommandTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryChromeosdevicesCommandTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryChromeosdevicesCommandTypeEnum: %v", v)
 	}
 }
 

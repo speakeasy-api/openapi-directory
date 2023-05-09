@@ -27,12 +27,16 @@ const (
 	StatusMessageErrorCodeEnumTooManyRequests            StatusMessageErrorCodeEnum = "TOO_MANY_REQUESTS"
 )
 
+func (e StatusMessageErrorCodeEnum) ToPointer() *StatusMessageErrorCodeEnum {
+	return &e
+}
+
 func (e *StatusMessageErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_APP_KEY":
 		fallthrough
 	case "INVALID_APP_KEY":
@@ -60,10 +64,10 @@ func (e *StatusMessageErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "MAX_CONNECTION_LIMIT_EXCEEDED":
 		fallthrough
 	case "TOO_MANY_REQUESTS":
-		*e = StatusMessageErrorCodeEnum(s)
+		*e = StatusMessageErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusMessageErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusMessageErrorCodeEnum: %v", v)
 	}
 }
 
@@ -75,19 +79,23 @@ const (
 	StatusMessageStatusCodeEnumFailure StatusMessageStatusCodeEnum = "FAILURE"
 )
 
+func (e StatusMessageStatusCodeEnum) ToPointer() *StatusMessageStatusCodeEnum {
+	return &e
+}
+
 func (e *StatusMessageStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESS":
 		fallthrough
 	case "FAILURE":
-		*e = StatusMessageStatusCodeEnum(s)
+		*e = StatusMessageStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusMessageStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusMessageStatusCodeEnum: %v", v)
 	}
 }
 

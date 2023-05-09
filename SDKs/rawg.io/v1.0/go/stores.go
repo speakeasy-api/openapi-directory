@@ -83,7 +83,10 @@ func (s *stores) StoresList(ctx context.Context, request operations.StoresListRe
 // StoresRead - Get details of the store.
 func (s *stores) StoresRead(ctx context.Context, request operations.StoresReadRequest) (*operations.StoresReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stores/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/stores/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

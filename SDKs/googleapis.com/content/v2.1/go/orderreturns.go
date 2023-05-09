@@ -34,7 +34,10 @@ func newOrderreturns(defaultClient, securityClient HTTPClient, serverURL, langua
 // ContentOrderreturnsAcknowledge - Acks an order return in your Merchant Center account.
 func (s *orderreturns) ContentOrderreturnsAcknowledge(ctx context.Context, request operations.ContentOrderreturnsAcknowledgeRequest, security operations.ContentOrderreturnsAcknowledgeSecurity) (*operations.ContentOrderreturnsAcknowledgeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/{returnId}/acknowledge", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/{returnId}/acknowledge", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderreturnsAcknowledgeRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *orderreturns) ContentOrderreturnsAcknowledge(ctx context.Context, reque
 // ContentOrderreturnsCreateorderreturn - Create return in your Merchant Center account.
 func (s *orderreturns) ContentOrderreturnsCreateorderreturn(ctx context.Context, request operations.ContentOrderreturnsCreateorderreturnRequest, security operations.ContentOrderreturnsCreateorderreturnSecurity) (*operations.ContentOrderreturnsCreateorderreturnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/createOrderReturn", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/createOrderReturn", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderreturnsCreateOrderReturnRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *orderreturns) ContentOrderreturnsCreateorderreturn(ctx context.Context,
 // ContentOrderreturnsGet - Retrieves an order return from your Merchant Center account.
 func (s *orderreturns) ContentOrderreturnsGet(ctx context.Context, request operations.ContentOrderreturnsGetRequest, security operations.ContentOrderreturnsGetSecurity) (*operations.ContentOrderreturnsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/{returnId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/{returnId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *orderreturns) ContentOrderreturnsGet(ctx context.Context, request opera
 // ContentOrderreturnsLabelsCreate - Links a return shipping label to a return id. You can only create one return label per return id. Since the label is sent to the buyer, the linked return label cannot be updated or deleted. If you try to create multiple return shipping labels for a single return id, every create request except the first will fail.
 func (s *orderreturns) ContentOrderreturnsLabelsCreate(ctx context.Context, request operations.ContentOrderreturnsLabelsCreateRequest, security operations.ContentOrderreturnsLabelsCreateSecurity) (*operations.ContentOrderreturnsLabelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/{returnId}/labels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/{returnId}/labels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReturnShippingLabel", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *orderreturns) ContentOrderreturnsLabelsCreate(ctx context.Context, requ
 // ContentOrderreturnsList - Lists order returns in your Merchant Center account.
 func (s *orderreturns) ContentOrderreturnsList(ctx context.Context, request operations.ContentOrderreturnsListRequest, security operations.ContentOrderreturnsListSecurity) (*operations.ContentOrderreturnsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *orderreturns) ContentOrderreturnsList(ctx context.Context, request oper
 // ContentOrderreturnsProcess - Processes return in your Merchant Center account.
 func (s *orderreturns) ContentOrderreturnsProcess(ctx context.Context, request operations.ContentOrderreturnsProcessRequest, security operations.ContentOrderreturnsProcessSecurity) (*operations.ContentOrderreturnsProcessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/{returnId}/process", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/{returnId}/process", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderreturnsProcessRequest", "json")
 	if err != nil {

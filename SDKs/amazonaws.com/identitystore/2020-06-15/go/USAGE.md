@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,24 +17,22 @@ func main() {
         }),
     )
 
-    req := operations.CreateGroupRequest{
+    ctx := context.Background()
+    res, err := s.CreateGroup(ctx, operations.CreateGroupRequest{
         CreateGroupRequest: shared.CreateGroupRequest{
-            Description: "corrupti",
-            DisplayName: "provident",
+            Description: sdk.String("corrupti"),
+            DisplayName: sdk.String("provident"),
             IdentityStoreID: "distinctio",
         },
-        XAmzAlgorithm: "quibusdam",
-        XAmzContentSha256: "unde",
-        XAmzCredential: "nulla",
-        XAmzDate: "corrupti",
-        XAmzSecurityToken: "illum",
-        XAmzSignature: "vel",
-        XAmzSignedHeaders: "error",
-        XAmzTarget: "AWSIdentityStore.CreateGroup",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateGroup(ctx, req)
+        XAmzAlgorithm: sdk.String("quibusdam"),
+        XAmzContentSha256: sdk.String("unde"),
+        XAmzCredential: sdk.String("nulla"),
+        XAmzDate: sdk.String("corrupti"),
+        XAmzSecurityToken: sdk.String("illum"),
+        XAmzSignature: sdk.String("vel"),
+        XAmzSignedHeaders: sdk.String("error"),
+        XAmzTarget: operations.CreateGroupXAmzTargetEnumAwsIdentityStoreCreateGroup,
+    })
     if err != nil {
         log.Fatal(err)
     }

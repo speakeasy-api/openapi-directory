@@ -35,7 +35,10 @@ func newSellerCommissions(defaultClient, securityClient HTTPClient, serverURL, l
 // This endpoint is used by marketplace operators to define comissions for multiple categories.
 func (s *sellerCommissions) BulkUpsertSellerCommissions(ctx context.Context, request operations.BulkUpsertSellerCommissionsRequest) (*operations.BulkUpsertSellerCommissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/commissions/categories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/commissions/categories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -87,7 +90,10 @@ func (s *sellerCommissions) BulkUpsertSellerCommissions(ctx context.Context, req
 // This endpoint retrieves all comissions configured for a specific seller.
 func (s *sellerCommissions) ListSellerCommissions(ctx context.Context, request operations.ListSellerCommissionsRequest) (*operations.ListSellerCommissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/commissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/commissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *sellerCommissions) ListSellerCommissions(ctx context.Context, request o
 // This endpoint removes a seller comission on the selected category.
 func (s *sellerCommissions) RemoveSellerCommissions(ctx context.Context, request operations.RemoveSellerCommissionsRequest) (*operations.RemoveSellerCommissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/commissions/{categoryId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/commissions/{categoryId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -171,7 +180,10 @@ func (s *sellerCommissions) RemoveSellerCommissions(ctx context.Context, request
 // This endpoint retrieves seller comissions applied to the selected category.
 func (s *sellerCommissions) RetrieveSellerCommissions(ctx context.Context, request operations.RetrieveSellerCommissionsRequest) (*operations.RetrieveSellerCommissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/commissions/{categoryId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/commissions/{categoryId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -213,7 +225,10 @@ func (s *sellerCommissions) RetrieveSellerCommissions(ctx context.Context, reque
 // This endpoint is used by marketplace operators to define comissions for a single category, by ID.
 func (s *sellerCommissions) UpsertSellerCommissions(ctx context.Context, request operations.UpsertSellerCommissionsRequest) (*operations.UpsertSellerCommissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/commissions/{categoryId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/commissions/{categoryId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpsertSellerCommissionsRequest", "json")
 	if err != nil {

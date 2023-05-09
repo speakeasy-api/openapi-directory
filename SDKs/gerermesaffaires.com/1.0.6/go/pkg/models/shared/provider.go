@@ -15,21 +15,25 @@ const (
 	ProviderLevelEnumPublic       ProviderLevelEnum = "public"
 )
 
+func (e ProviderLevelEnum) ToPointer() *ProviderLevelEnum {
+	return &e
+}
+
 func (e *ProviderLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = ProviderLevelEnum(s)
+		*e = ProviderLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProviderLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ProviderLevelEnum: %v", v)
 	}
 }
 

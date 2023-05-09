@@ -90,7 +90,10 @@ func (s *returnpolicy) ContentReturnpolicyCustombatch(ctx context.Context, reque
 // ContentReturnpolicyDelete - Deletes a return policy for the given Merchant Center account.
 func (s *returnpolicy) ContentReturnpolicyDelete(ctx context.Context, request operations.ContentReturnpolicyDeleteRequest, security operations.ContentReturnpolicyDeleteSecurity) (*operations.ContentReturnpolicyDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicy/{returnPolicyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicy/{returnPolicyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +132,10 @@ func (s *returnpolicy) ContentReturnpolicyDelete(ctx context.Context, request op
 // ContentReturnpolicyGet - Gets a return policy of the Merchant Center account.
 func (s *returnpolicy) ContentReturnpolicyGet(ctx context.Context, request operations.ContentReturnpolicyGetRequest, security operations.ContentReturnpolicyGetSecurity) (*operations.ContentReturnpolicyGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicy/{returnPolicyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicy/{returnPolicyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,7 +183,10 @@ func (s *returnpolicy) ContentReturnpolicyGet(ctx context.Context, request opera
 // ContentReturnpolicyInsert - Inserts a return policy for the Merchant Center account.
 func (s *returnpolicy) ContentReturnpolicyInsert(ctx context.Context, request operations.ContentReturnpolicyInsertRequest, security operations.ContentReturnpolicyInsertSecurity) (*operations.ContentReturnpolicyInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReturnPolicy", "json")
 	if err != nil {
@@ -232,7 +241,10 @@ func (s *returnpolicy) ContentReturnpolicyInsert(ctx context.Context, request op
 // ContentReturnpolicyList - Lists the return policies of the Merchant Center account.
 func (s *returnpolicy) ContentReturnpolicyList(ctx context.Context, request operations.ContentReturnpolicyListRequest, security operations.ContentReturnpolicyListSecurity) (*operations.ContentReturnpolicyListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnpolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

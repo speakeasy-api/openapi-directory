@@ -16,17 +16,21 @@ const (
 	CreateFileSystemFromBackupXAmzTargetEnumAwsSimbaAPIServiceV20180301CreateFileSystemFromBackup CreateFileSystemFromBackupXAmzTargetEnum = "AWSSimbaAPIService_v20180301.CreateFileSystemFromBackup"
 )
 
+func (e CreateFileSystemFromBackupXAmzTargetEnum) ToPointer() *CreateFileSystemFromBackupXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateFileSystemFromBackupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.CreateFileSystemFromBackup":
-		*e = CreateFileSystemFromBackupXAmzTargetEnum(s)
+		*e = CreateFileSystemFromBackupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFileSystemFromBackupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFileSystemFromBackupXAmzTargetEnum: %v", v)
 	}
 }
 

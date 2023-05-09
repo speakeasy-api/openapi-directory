@@ -16,17 +16,21 @@ const (
 	ModifyLunaClientXAmzTargetEnumCloudHsmFrontendServiceModifyLunaClient ModifyLunaClientXAmzTargetEnum = "CloudHsmFrontendService.ModifyLunaClient"
 )
 
+func (e ModifyLunaClientXAmzTargetEnum) ToPointer() *ModifyLunaClientXAmzTargetEnum {
+	return &e
+}
+
 func (e *ModifyLunaClientXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CloudHsmFrontendService.ModifyLunaClient":
-		*e = ModifyLunaClientXAmzTargetEnum(s)
+		*e = ModifyLunaClientXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyLunaClientXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyLunaClientXAmzTargetEnum: %v", v)
 	}
 }
 

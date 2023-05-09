@@ -27,12 +27,16 @@ const (
 	GoogleCloudDialogflowCxV3beta1ValidationMessageResourceTypeEnumTransitionRouteGroup    GoogleCloudDialogflowCxV3beta1ValidationMessageResourceTypeEnum = "TRANSITION_ROUTE_GROUP"
 )
 
+func (e GoogleCloudDialogflowCxV3beta1ValidationMessageResourceTypeEnum) ToPointer() *GoogleCloudDialogflowCxV3beta1ValidationMessageResourceTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3beta1ValidationMessageResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AGENT":
@@ -60,10 +64,10 @@ func (e *GoogleCloudDialogflowCxV3beta1ValidationMessageResourceTypeEnum) Unmars
 	case "PAGES":
 		fallthrough
 	case "TRANSITION_ROUTE_GROUP":
-		*e = GoogleCloudDialogflowCxV3beta1ValidationMessageResourceTypeEnum(s)
+		*e = GoogleCloudDialogflowCxV3beta1ValidationMessageResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ValidationMessageResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ValidationMessageResourceTypeEnum: %v", v)
 	}
 }
 
@@ -77,12 +81,16 @@ const (
 	GoogleCloudDialogflowCxV3beta1ValidationMessageSeverityEnumError               GoogleCloudDialogflowCxV3beta1ValidationMessageSeverityEnum = "ERROR"
 )
 
+func (e GoogleCloudDialogflowCxV3beta1ValidationMessageSeverityEnum) ToPointer() *GoogleCloudDialogflowCxV3beta1ValidationMessageSeverityEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3beta1ValidationMessageSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "INFO":
@@ -90,10 +98,10 @@ func (e *GoogleCloudDialogflowCxV3beta1ValidationMessageSeverityEnum) UnmarshalJ
 	case "WARNING":
 		fallthrough
 	case "ERROR":
-		*e = GoogleCloudDialogflowCxV3beta1ValidationMessageSeverityEnum(s)
+		*e = GoogleCloudDialogflowCxV3beta1ValidationMessageSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ValidationMessageSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ValidationMessageSeverityEnum: %v", v)
 	}
 }
 

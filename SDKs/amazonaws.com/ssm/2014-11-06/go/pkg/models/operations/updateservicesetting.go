@@ -16,17 +16,21 @@ const (
 	UpdateServiceSettingXAmzTargetEnumAmazonSsmUpdateServiceSetting UpdateServiceSettingXAmzTargetEnum = "AmazonSSM.UpdateServiceSetting"
 )
 
+func (e UpdateServiceSettingXAmzTargetEnum) ToPointer() *UpdateServiceSettingXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateServiceSettingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.UpdateServiceSetting":
-		*e = UpdateServiceSettingXAmzTargetEnum(s)
+		*e = UpdateServiceSettingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateServiceSettingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateServiceSettingXAmzTargetEnum: %v", v)
 	}
 }
 

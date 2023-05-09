@@ -16,20 +16,24 @@ const (
 	InterfaceTypeEnumIP     InterfaceTypeEnum = "IP"
 )
 
+func (e InterfaceTypeEnum) ToPointer() *InterfaceTypeEnum {
+	return &e
+}
+
 func (e *InterfaceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TUNNEL":
 		fallthrough
 	case "MAC":
 		fallthrough
 	case "IP":
-		*e = InterfaceTypeEnum(s)
+		*e = InterfaceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InterfaceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InterfaceTypeEnum: %v", v)
 	}
 }

@@ -22,12 +22,16 @@ const (
 	YoutubeAdGroupAdGroupFormatEnumYoutubeAndPartnersAdGroupFormatMasthead             YoutubeAdGroupAdGroupFormatEnum = "YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_MASTHEAD"
 )
 
+func (e YoutubeAdGroupAdGroupFormatEnum) ToPointer() *YoutubeAdGroupAdGroupFormatEnum {
+	return &e
+}
+
 func (e *YoutubeAdGroupAdGroupFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_IN_STREAM":
@@ -45,10 +49,10 @@ func (e *YoutubeAdGroupAdGroupFormatEnum) UnmarshalJSON(data []byte) error {
 	case "YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_REACH":
 		fallthrough
 	case "YOUTUBE_AND_PARTNERS_AD_GROUP_FORMAT_MASTHEAD":
-		*e = YoutubeAdGroupAdGroupFormatEnum(s)
+		*e = YoutubeAdGroupAdGroupFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeAdGroupAdGroupFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeAdGroupAdGroupFormatEnum: %v", v)
 	}
 }
 
@@ -64,12 +68,16 @@ const (
 	YoutubeAdGroupEntityStatusEnumEntityStatusScheduledForDeletion YoutubeAdGroupEntityStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
+func (e YoutubeAdGroupEntityStatusEnum) ToPointer() *YoutubeAdGroupEntityStatusEnum {
+	return &e
+}
+
 func (e *YoutubeAdGroupEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ENTITY_STATUS_ACTIVE":
@@ -81,10 +89,10 @@ func (e *YoutubeAdGroupEntityStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ENTITY_STATUS_PAUSED":
 		fallthrough
 	case "ENTITY_STATUS_SCHEDULED_FOR_DELETION":
-		*e = YoutubeAdGroupEntityStatusEnum(s)
+		*e = YoutubeAdGroupEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeAdGroupEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeAdGroupEntityStatusEnum: %v", v)
 	}
 }
 
@@ -108,7 +116,7 @@ type YoutubeAdGroup struct {
 	Name *string `json:"name,omitempty"`
 	// The details of product feed.
 	ProductFeedData *ProductFeedData `json:"productFeedData,omitempty"`
-	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by mid-April 2023.
+	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by early May 2023.
 	TargetingExpansion *TargetingExpansionConfig `json:"targetingExpansion,omitempty"`
 	// The IDs of the youtube_ad_group_ad resources associated with the ad group.
 	YoutubeAdIds []string `json:"youtubeAdIds,omitempty"`

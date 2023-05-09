@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type Destiny2EquipItemsSecurity struct {
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 // Destiny2EquipItems200Wildcard - The results of a bulk Equipping operation performed through the Destiny API.
 type Destiny2EquipItems200Wildcard struct {
 	DetailedErrorTrace *string

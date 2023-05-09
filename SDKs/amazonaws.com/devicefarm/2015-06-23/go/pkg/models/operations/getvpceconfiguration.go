@@ -16,17 +16,21 @@ const (
 	GetVPCEConfigurationXAmzTargetEnumDeviceFarm20150623GetVpceConfiguration GetVPCEConfigurationXAmzTargetEnum = "DeviceFarm_20150623.GetVPCEConfiguration"
 )
 
+func (e GetVPCEConfigurationXAmzTargetEnum) ToPointer() *GetVPCEConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetVPCEConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.GetVPCEConfiguration":
-		*e = GetVPCEConfigurationXAmzTargetEnum(s)
+		*e = GetVPCEConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVPCEConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVPCEConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

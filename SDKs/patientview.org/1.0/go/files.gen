@@ -7,6 +7,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -70,4 +71,10 @@ pkg/models/shared/codeexternalstandard.go
 pkg/models/shared/codecategory.go
 pkg/models/shared/category.go
 pkg/models/shared/patientmanagement.go
+docs/sdk/README.md
+docs/authcontroller/README.md
+docs/observationcontroller/README.md
+docs/observationheadingcontroller/README.md
+docs/patientcontroller/README.md
+docs/patientmanagementcontroller/README.md
 USAGE.md

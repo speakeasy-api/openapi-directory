@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,14 +18,15 @@ func main() {
         }),
     )
 
-    req := operations.DescribeDimensionKeysRequest{
+    ctx := context.Background()
+    res, err := s.DescribeDimensionKeys(ctx, operations.DescribeDimensionKeysRequest{
         DescribeDimensionKeysRequest: shared.DescribeDimensionKeysRequest{
             AdditionalMetrics: []string{
                 "provident",
                 "distinctio",
                 "quibusdam",
             },
-            EndTime: "2021-04-14T16:47:33.722Z",
+            EndTime: types.MustTimeFromString("2021-04-14T16:47:33.722Z"),
             Filter: map[string]string{
                 "illum": "vel",
                 "error": "deserunt",
@@ -36,12 +38,12 @@ func main() {
                     "ipsa",
                 },
                 Group: "delectus",
-                Limit: 272656,
+                Limit: sdk.Int64(272656),
             },
             Identifier: "suscipit",
-            MaxResults: 477665,
+            MaxResults: sdk.Int64(477665),
             Metric: "minus",
-            NextToken: "placeat",
+            NextToken: sdk.String("placeat"),
             PartitionBy: &shared.DimensionGroup{
                 Dimensions: []string{
                     "iusto",
@@ -49,26 +51,23 @@ func main() {
                     "nisi",
                 },
                 Group: "recusandae",
-                Limit: 836079,
+                Limit: sdk.Int64(836079),
             },
-            PeriodInSeconds: 71036,
-            ServiceType: "RDS",
-            StartTime: "2022-05-09T10:00:51.349Z",
+            PeriodInSeconds: sdk.Int64(71036),
+            ServiceType: shared.ServiceTypeEnumRds,
+            StartTime: types.MustTimeFromString("2022-05-09T10:00:51.349Z"),
         },
-        MaxResults: "perferendis",
-        NextToken: "ipsam",
-        XAmzAlgorithm: "repellendus",
-        XAmzContentSha256: "sapiente",
-        XAmzCredential: "quo",
-        XAmzDate: "odit",
-        XAmzSecurityToken: "at",
-        XAmzSignature: "at",
-        XAmzSignedHeaders: "maiores",
-        XAmzTarget: "PerformanceInsightsv20180227.DescribeDimensionKeys",
-    }
-
-    ctx := context.Background()
-    res, err := s.DescribeDimensionKeys(ctx, req)
+        MaxResults: sdk.String("perferendis"),
+        NextToken: sdk.String("ipsam"),
+        XAmzAlgorithm: sdk.String("repellendus"),
+        XAmzContentSha256: sdk.String("sapiente"),
+        XAmzCredential: sdk.String("quo"),
+        XAmzDate: sdk.String("odit"),
+        XAmzSecurityToken: sdk.String("at"),
+        XAmzSignature: sdk.String("at"),
+        XAmzSignedHeaders: sdk.String("maiores"),
+        XAmzTarget: operations.DescribeDimensionKeysXAmzTargetEnumPerformanceInsightsv20180227DescribeDimensionKeys,
+    })
     if err != nil {
         log.Fatal(err)
     }

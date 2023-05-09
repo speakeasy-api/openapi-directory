@@ -13,41 +13,39 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/alertcente
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AlertcenterAlertsBatchDeleteRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Alerts.AlertcenterAlertsBatchDelete(ctx, operations.AlertcenterAlertsBatchDeleteRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         BatchDeleteAlertsRequest: &shared.BatchDeleteAlertsRequest{
             AlertID: []string{
                 "distinctio",
                 "quibusdam",
                 "unde",
             },
-            CustomerID: "nulla",
+            CustomerID: sdk.String("nulla"),
         },
-        AccessToken: "corrupti",
-        Alt: "proto",
-        Callback: "vel",
-        Fields: "error",
-        Key: "deserunt",
-        OauthToken: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Alerts.AlertcenterAlertsBatchDelete(ctx, req, operations.AlertcenterAlertsBatchDeleteSecurity{
+        AccessToken: sdk.String("corrupti"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("vel"),
+        Fields: sdk.String("error"),
+        Key: sdk.String("deserunt"),
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.AlertcenterAlertsBatchDeleteSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -66,22 +64,22 @@ func main() {
 ## Available Resources and Operations
 
 
-### Alerts
+### [Alerts](docs/alerts/README.md)
 
-* `AlertcenterAlertsBatchDelete` - Performs batch delete operation on alerts.
-* `AlertcenterAlertsBatchUndelete` - Performs batch undelete operation on alerts.
-* `AlertcenterAlertsDelete` - Marks the specified alert for deletion. An alert that has been marked for deletion is removed from Alert Center after 30 days. Marking an alert for deletion has no effect on an alert which has already been marked for deletion. Attempting to mark a nonexistent alert for deletion results in a `NOT_FOUND` error.
-* `AlertcenterAlertsFeedbackCreate` - Creates new feedback for an alert. Attempting to create a feedback for a non-existent alert returns `NOT_FOUND` error. Attempting to create a feedback for an alert that is marked for deletion returns `FAILED_PRECONDITION' error.
-* `AlertcenterAlertsFeedbackList` - Lists all the feedback for an alert. Attempting to list feedbacks for a non-existent alert returns `NOT_FOUND` error.
-* `AlertcenterAlertsGet` - Gets the specified alert. Attempting to get a nonexistent alert returns `NOT_FOUND` error.
-* `AlertcenterAlertsGetMetadata` - Returns the metadata of an alert. Attempting to get metadata for a non-existent alert returns `NOT_FOUND` error.
-* `AlertcenterAlertsList` - Lists the alerts.
-* `AlertcenterAlertsUndelete` - Restores, or "undeletes", an alert that was marked for deletion within the past 30 days. Attempting to undelete an alert which was marked for deletion over 30 days ago (which has been removed from the Alert Center database) or a nonexistent alert returns a `NOT_FOUND` error. Attempting to undelete an alert which has not been marked for deletion has no effect.
+* [AlertcenterAlertsBatchDelete](docs/alerts/README.md#alertcenteralertsbatchdelete) - Performs batch delete operation on alerts.
+* [AlertcenterAlertsBatchUndelete](docs/alerts/README.md#alertcenteralertsbatchundelete) - Performs batch undelete operation on alerts.
+* [AlertcenterAlertsDelete](docs/alerts/README.md#alertcenteralertsdelete) - Marks the specified alert for deletion. An alert that has been marked for deletion is removed from Alert Center after 30 days. Marking an alert for deletion has no effect on an alert which has already been marked for deletion. Attempting to mark a nonexistent alert for deletion results in a `NOT_FOUND` error.
+* [AlertcenterAlertsFeedbackCreate](docs/alerts/README.md#alertcenteralertsfeedbackcreate) - Creates new feedback for an alert. Attempting to create a feedback for a non-existent alert returns `NOT_FOUND` error. Attempting to create a feedback for an alert that is marked for deletion returns `FAILED_PRECONDITION' error.
+* [AlertcenterAlertsFeedbackList](docs/alerts/README.md#alertcenteralertsfeedbacklist) - Lists all the feedback for an alert. Attempting to list feedbacks for a non-existent alert returns `NOT_FOUND` error.
+* [AlertcenterAlertsGet](docs/alerts/README.md#alertcenteralertsget) - Gets the specified alert. Attempting to get a nonexistent alert returns `NOT_FOUND` error.
+* [AlertcenterAlertsGetMetadata](docs/alerts/README.md#alertcenteralertsgetmetadata) - Returns the metadata of an alert. Attempting to get metadata for a non-existent alert returns `NOT_FOUND` error.
+* [AlertcenterAlertsList](docs/alerts/README.md#alertcenteralertslist) - Lists the alerts.
+* [AlertcenterAlertsUndelete](docs/alerts/README.md#alertcenteralertsundelete) - Restores, or "undeletes", an alert that was marked for deletion within the past 30 days. Attempting to undelete an alert which was marked for deletion over 30 days ago (which has been removed from the Alert Center database) or a nonexistent alert returns a `NOT_FOUND` error. Attempting to undelete an alert which has not been marked for deletion has no effect.
 
-### V1beta1
+### [V1beta1](docs/v1beta1/README.md)
 
-* `AlertcenterGetSettings` - Returns customer-level settings.
-* `AlertcenterUpdateSettings` - Updates the customer-level settings.
+* [AlertcenterGetSettings](docs/v1beta1/README.md#alertcentergetsettings) - Returns customer-level settings.
+* [AlertcenterUpdateSettings](docs/v1beta1/README.md#alertcenterupdatesettings) - Updates the customer-level settings.
 <!-- End SDK Available Operations -->
 
 ### Maturity

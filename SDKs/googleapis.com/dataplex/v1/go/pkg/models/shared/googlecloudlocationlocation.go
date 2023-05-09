@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleCloudLocationLocation - A resource that represents Google Cloud Platform location.
+// GoogleCloudLocationLocation - A resource that represents a Google Cloud location.
 type GoogleCloudLocationLocation struct {
 	// The friendly name for this location, typically a nearby city name. For example, "Tokyo".
 	DisplayName *string `json:"displayName,omitempty"`

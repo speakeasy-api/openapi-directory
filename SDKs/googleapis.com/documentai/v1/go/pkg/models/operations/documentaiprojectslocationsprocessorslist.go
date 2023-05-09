@@ -27,7 +27,7 @@ type DocumentaiProjectsLocationsProcessorsListRequest struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
-	// The maximum number of processors to return. If unspecified, at most 50 processors will be returned. The maximum value is 100; values above 100 will be coerced to 100.
+	// The maximum number of processors to return. If unspecified, at most `50` processors will be returned. The maximum value is `100`. Values above `100` will be coerced to `100`.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// We will return the processors sorted by creation time. The page token will point to the next processor.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`

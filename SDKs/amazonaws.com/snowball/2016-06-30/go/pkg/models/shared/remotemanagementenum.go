@@ -14,18 +14,22 @@ const (
 	RemoteManagementEnumInstalledAutostart RemoteManagementEnum = "INSTALLED_AUTOSTART"
 )
 
+func (e RemoteManagementEnum) ToPointer() *RemoteManagementEnum {
+	return &e
+}
+
 func (e *RemoteManagementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTALLED_ONLY":
 		fallthrough
 	case "INSTALLED_AUTOSTART":
-		*e = RemoteManagementEnum(s)
+		*e = RemoteManagementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoteManagementEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoteManagementEnum: %v", v)
 	}
 }

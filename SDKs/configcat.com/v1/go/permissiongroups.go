@@ -39,7 +39,10 @@ func newPermissionGroups(defaultClient, securityClient HTTPClient, serverURL, la
 // identified by the `productId` parameter, which can be obtained from the [List Products](#operation/get-products) endpoint.
 func (s *permissionGroups) CreatePermissionGroup(ctx context.Context, request operations.CreatePermissionGroupRequest) (*operations.CreatePermissionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreatePermissionGroupRequest", "json")
 	if err != nil {
@@ -108,7 +111,10 @@ func (s *permissionGroups) CreatePermissionGroup(ctx context.Context, request op
 // This endpoint removes a Permission Group identified by the `permissionGroupId` parameter.
 func (s *permissionGroups) DeletePermissionGroup(ctx context.Context, request operations.DeletePermissionGroupRequest) (*operations.DeletePermissionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/permissions/{permissionGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/permissions/{permissionGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -153,7 +159,10 @@ func (s *permissionGroups) DeletePermissionGroup(ctx context.Context, request op
 // identified by the `permissionGroupId`.
 func (s *permissionGroups) GetPermissionGroup(ctx context.Context, request operations.GetPermissionGroupRequest) (*operations.GetPermissionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/permissions/{permissionGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/permissions/{permissionGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -213,7 +222,10 @@ func (s *permissionGroups) GetPermissionGroup(ctx context.Context, request opera
 // `productId` parameter, which can be obtained from the [List Products](#operation/get-products) endpoint.
 func (s *permissionGroups) GetPermissionGroups(ctx context.Context, request operations.GetPermissionGroupsRequest) (*operations.GetPermissionGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -272,7 +284,10 @@ func (s *permissionGroups) GetPermissionGroups(ctx context.Context, request oper
 // This endpoint updates a Permission Group identified by the `permissionGroupId` parameter.
 func (s *permissionGroups) UpdatePermissionGroup(ctx context.Context, request operations.UpdatePermissionGroupRequest) (*operations.UpdatePermissionGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/permissions/{permissionGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/permissions/{permissionGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePermissionGroupRequest", "json")
 	if err != nil {

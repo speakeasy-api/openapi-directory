@@ -82,12 +82,16 @@ const (
 	PutServersID200ApplicationJSONServerImageOsFlavorEnumUnknown PutServersID200ApplicationJSONServerImageOsFlavorEnum = "unknown"
 )
 
+func (e PutServersID200ApplicationJSONServerImageOsFlavorEnum) ToPointer() *PutServersID200ApplicationJSONServerImageOsFlavorEnum {
+	return &e
+}
+
 func (e *PutServersID200ApplicationJSONServerImageOsFlavorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ubuntu":
 		fallthrough
 	case "centos":
@@ -97,10 +101,10 @@ func (e *PutServersID200ApplicationJSONServerImageOsFlavorEnum) UnmarshalJSON(da
 	case "fedora":
 		fallthrough
 	case "unknown":
-		*e = PutServersID200ApplicationJSONServerImageOsFlavorEnum(s)
+		*e = PutServersID200ApplicationJSONServerImageOsFlavorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerImageOsFlavorEnum: %s", s)
+		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerImageOsFlavorEnum: %v", v)
 	}
 }
 
@@ -119,21 +123,25 @@ const (
 	PutServersID200ApplicationJSONServerImageStatusEnumUnavailable PutServersID200ApplicationJSONServerImageStatusEnum = "unavailable"
 )
 
+func (e PutServersID200ApplicationJSONServerImageStatusEnum) ToPointer() *PutServersID200ApplicationJSONServerImageStatusEnum {
+	return &e
+}
+
 func (e *PutServersID200ApplicationJSONServerImageStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "creating":
 		fallthrough
 	case "unavailable":
-		*e = PutServersID200ApplicationJSONServerImageStatusEnum(s)
+		*e = PutServersID200ApplicationJSONServerImageStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerImageStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerImageStatusEnum: %v", v)
 	}
 }
 
@@ -148,12 +156,16 @@ const (
 	PutServersID200ApplicationJSONServerImageTypeEnumTemporary PutServersID200ApplicationJSONServerImageTypeEnum = "temporary"
 )
 
+func (e PutServersID200ApplicationJSONServerImageTypeEnum) ToPointer() *PutServersID200ApplicationJSONServerImageTypeEnum {
+	return &e
+}
+
 func (e *PutServersID200ApplicationJSONServerImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "system":
 		fallthrough
 	case "app":
@@ -163,10 +175,10 @@ func (e *PutServersID200ApplicationJSONServerImageTypeEnum) UnmarshalJSON(data [
 	case "backup":
 		fallthrough
 	case "temporary":
-		*e = PutServersID200ApplicationJSONServerImageTypeEnum(s)
+		*e = PutServersID200ApplicationJSONServerImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerImageTypeEnum: %v", v)
 	}
 }
 
@@ -207,6 +219,34 @@ type PutServersID200ApplicationJSONServerImage struct {
 	Type PutServersID200ApplicationJSONServerImageTypeEnum `json:"type"`
 }
 
+// PutServersID200ApplicationJSONServerIsoArchitectureEnum - Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+type PutServersID200ApplicationJSONServerIsoArchitectureEnum string
+
+const (
+	PutServersID200ApplicationJSONServerIsoArchitectureEnumX86 PutServersID200ApplicationJSONServerIsoArchitectureEnum = "x86"
+	PutServersID200ApplicationJSONServerIsoArchitectureEnumArm PutServersID200ApplicationJSONServerIsoArchitectureEnum = "arm"
+)
+
+func (e PutServersID200ApplicationJSONServerIsoArchitectureEnum) ToPointer() *PutServersID200ApplicationJSONServerIsoArchitectureEnum {
+	return &e
+}
+
+func (e *PutServersID200ApplicationJSONServerIsoArchitectureEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "x86":
+		fallthrough
+	case "arm":
+		*e = PutServersID200ApplicationJSONServerIsoArchitectureEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerIsoArchitectureEnum: %v", v)
+	}
+}
+
 // PutServersID200ApplicationJSONServerIsoTypeEnum - Type of the ISO
 type PutServersID200ApplicationJSONServerIsoTypeEnum string
 
@@ -215,24 +255,30 @@ const (
 	PutServersID200ApplicationJSONServerIsoTypeEnumPrivate PutServersID200ApplicationJSONServerIsoTypeEnum = "private"
 )
 
+func (e PutServersID200ApplicationJSONServerIsoTypeEnum) ToPointer() *PutServersID200ApplicationJSONServerIsoTypeEnum {
+	return &e
+}
+
 func (e *PutServersID200ApplicationJSONServerIsoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = PutServersID200ApplicationJSONServerIsoTypeEnum(s)
+		*e = PutServersID200ApplicationJSONServerIsoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerIsoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerIsoTypeEnum: %v", v)
 	}
 }
 
 // PutServersID200ApplicationJSONServerIso - ISO Image that is attached to this Server. Null if no ISO is attached.
 type PutServersID200ApplicationJSONServerIso struct {
+	// Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+	Architecture PutServersID200ApplicationJSONServerIsoArchitectureEnum `json:"architecture"`
 	// ISO 8601 timestamp of deprecation, null if ISO is still available. After the deprecation time it will no longer be possible to attach the ISO to Servers.
 	Deprecated string `json:"deprecated"`
 	// Description of the ISO
@@ -252,17 +298,21 @@ const (
 	PutServersID200ApplicationJSONServerPlacementGroupNullableTypeEnumSpread PutServersID200ApplicationJSONServerPlacementGroupNullableTypeEnum = "spread"
 )
 
+func (e PutServersID200ApplicationJSONServerPlacementGroupNullableTypeEnum) ToPointer() *PutServersID200ApplicationJSONServerPlacementGroupNullableTypeEnum {
+	return &e
+}
+
 func (e *PutServersID200ApplicationJSONServerPlacementGroupNullableTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spread":
-		*e = PutServersID200ApplicationJSONServerPlacementGroupNullableTypeEnum(s)
+		*e = PutServersID200ApplicationJSONServerPlacementGroupNullableTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerPlacementGroupNullableTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerPlacementGroupNullableTypeEnum: %v", v)
 	}
 }
 
@@ -304,19 +354,23 @@ const (
 	PutServersID200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnumPending PutServersID200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnum = "pending"
 )
 
+func (e PutServersID200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnum) ToPointer() *PutServersID200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnum {
+	return &e
+}
+
 func (e *PutServersID200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "applied":
 		fallthrough
 	case "pending":
-		*e = PutServersID200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnum(s)
+		*e = PutServersID200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerPublicNetServerPublicNetFirewallStatusEnum: %v", v)
 	}
 }
 
@@ -378,19 +432,23 @@ const (
 	PutServersID200ApplicationJSONServerServerTypeCPUTypeEnumDedicated PutServersID200ApplicationJSONServerServerTypeCPUTypeEnum = "dedicated"
 )
 
+func (e PutServersID200ApplicationJSONServerServerTypeCPUTypeEnum) ToPointer() *PutServersID200ApplicationJSONServerServerTypeCPUTypeEnum {
+	return &e
+}
+
 func (e *PutServersID200ApplicationJSONServerServerTypeCPUTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shared":
 		fallthrough
 	case "dedicated":
-		*e = PutServersID200ApplicationJSONServerServerTypeCPUTypeEnum(s)
+		*e = PutServersID200ApplicationJSONServerServerTypeCPUTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerServerTypeCPUTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerServerTypeCPUTypeEnum: %v", v)
 	}
 }
 
@@ -427,19 +485,23 @@ const (
 	PutServersID200ApplicationJSONServerServerTypeStorageTypeEnumNetwork PutServersID200ApplicationJSONServerServerTypeStorageTypeEnum = "network"
 )
 
+func (e PutServersID200ApplicationJSONServerServerTypeStorageTypeEnum) ToPointer() *PutServersID200ApplicationJSONServerServerTypeStorageTypeEnum {
+	return &e
+}
+
 func (e *PutServersID200ApplicationJSONServerServerTypeStorageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "local":
 		fallthrough
 	case "network":
-		*e = PutServersID200ApplicationJSONServerServerTypeStorageTypeEnum(s)
+		*e = PutServersID200ApplicationJSONServerServerTypeStorageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerServerTypeStorageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerServerTypeStorageTypeEnum: %v", v)
 	}
 }
 
@@ -482,12 +544,16 @@ const (
 	PutServersID200ApplicationJSONServerStatusEnumUnknown      PutServersID200ApplicationJSONServerStatusEnum = "unknown"
 )
 
+func (e PutServersID200ApplicationJSONServerStatusEnum) ToPointer() *PutServersID200ApplicationJSONServerStatusEnum {
+	return &e
+}
+
 func (e *PutServersID200ApplicationJSONServerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "initializing":
@@ -505,10 +571,10 @@ func (e *PutServersID200ApplicationJSONServerStatusEnum) UnmarshalJSON(data []by
 	case "rebuilding":
 		fallthrough
 	case "unknown":
-		*e = PutServersID200ApplicationJSONServerStatusEnum(s)
+		*e = PutServersID200ApplicationJSONServerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PutServersID200ApplicationJSONServerStatusEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	ParentEntityFilterFileTypeEnumFileTypeAd             ParentEntityFilterFileTypeEnum = "FILE_TYPE_AD"
 )
 
+func (e ParentEntityFilterFileTypeEnum) ToPointer() *ParentEntityFilterFileTypeEnum {
+	return &e
+}
+
 func (e *ParentEntityFilterFileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FILE_TYPE_CAMPAIGN":
@@ -38,10 +42,10 @@ func (e *ParentEntityFilterFileTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FILE_TYPE_AD_GROUP":
 		fallthrough
 	case "FILE_TYPE_AD":
-		*e = ParentEntityFilterFileTypeEnum(s)
+		*e = ParentEntityFilterFileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParentEntityFilterFileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParentEntityFilterFileTypeEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	ParentEntityFilterFilterTypeEnumFilterTypeLineItemID       ParentEntityFilterFilterTypeEnum = "FILTER_TYPE_LINE_ITEM_ID"
 )
 
+func (e ParentEntityFilterFilterTypeEnum) ToPointer() *ParentEntityFilterFilterTypeEnum {
+	return &e
+}
+
 func (e *ParentEntityFilterFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILTER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FILTER_TYPE_NONE":
@@ -77,10 +85,10 @@ func (e *ParentEntityFilterFilterTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FILTER_TYPE_INSERTION_ORDER_ID":
 		fallthrough
 	case "FILTER_TYPE_LINE_ITEM_ID":
-		*e = ParentEntityFilterFilterTypeEnum(s)
+		*e = ParentEntityFilterFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParentEntityFilterFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParentEntityFilterFilterTypeEnum: %v", v)
 	}
 }
 

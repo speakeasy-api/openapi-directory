@@ -30,17 +30,21 @@ const (
 	TetcrRequestBodyFormatEnumPdf TetcrRequestBodyFormatEnum = "pdf"
 )
 
+func (e TetcrRequestBodyFormatEnum) ToPointer() *TetcrRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *TetcrRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = TetcrRequestBodyFormatEnum(s)
+		*e = TetcrRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TetcrRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TetcrRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -60,17 +64,21 @@ const (
 	Tetcr504ApplicationJSONErrorEnumGatewayTimeout Tetcr504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Tetcr504ApplicationJSONErrorEnum) ToPointer() *Tetcr504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tetcr504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Tetcr504ApplicationJSONErrorEnum(s)
+		*e = Tetcr504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -80,17 +88,21 @@ const (
 	Tetcr504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Tetcr504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Tetcr504ApplicationJSONErrorDescriptionEnum) ToPointer() *Tetcr504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tetcr504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Tetcr504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tetcr504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -106,17 +118,21 @@ const (
 	Tetcr503ApplicationJSONErrorEnumServiceUnavailable Tetcr503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Tetcr503ApplicationJSONErrorEnum) ToPointer() *Tetcr503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tetcr503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Tetcr503ApplicationJSONErrorEnum(s)
+		*e = Tetcr503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -126,17 +142,21 @@ const (
 	Tetcr503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Tetcr503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Tetcr503ApplicationJSONErrorDescriptionEnum) ToPointer() *Tetcr503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tetcr503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Tetcr503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tetcr503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -152,17 +172,21 @@ const (
 	Tetcr502ApplicationJSONErrorEnumBadGatewy Tetcr502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Tetcr502ApplicationJSONErrorEnum) ToPointer() *Tetcr502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tetcr502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Tetcr502ApplicationJSONErrorEnum(s)
+		*e = Tetcr502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -172,17 +196,21 @@ const (
 	Tetcr502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Tetcr502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Tetcr502ApplicationJSONErrorDescriptionEnum) ToPointer() *Tetcr502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tetcr502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Tetcr502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tetcr502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -198,17 +226,21 @@ const (
 	Tetcr500ApplicationJSONErrorEnumInternalServerError Tetcr500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Tetcr500ApplicationJSONErrorEnum) ToPointer() *Tetcr500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tetcr500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Tetcr500ApplicationJSONErrorEnum(s)
+		*e = Tetcr500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -218,17 +250,21 @@ const (
 	Tetcr500ApplicationJSONErrorDescriptionEnumInternalServerError Tetcr500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Tetcr500ApplicationJSONErrorDescriptionEnum) ToPointer() *Tetcr500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tetcr500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Tetcr500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tetcr500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -245,19 +281,23 @@ const (
 	Tetcr404ApplicationJSONErrorEnumURLNotFound    Tetcr404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Tetcr404ApplicationJSONErrorEnum) ToPointer() *Tetcr404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tetcr404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Tetcr404ApplicationJSONErrorEnum(s)
+		*e = Tetcr404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -268,19 +308,23 @@ const (
 	Tetcr404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Tetcr404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Tetcr404ApplicationJSONErrorDescriptionEnum) ToPointer() *Tetcr404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tetcr404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Tetcr404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tetcr404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -297,19 +341,23 @@ const (
 	Tetcr401ApplicationJSONErrorEnumInvalidAuthorization  Tetcr401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Tetcr401ApplicationJSONErrorEnum) ToPointer() *Tetcr401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tetcr401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Tetcr401ApplicationJSONErrorEnum(s)
+		*e = Tetcr401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -320,19 +368,23 @@ const (
 	Tetcr401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Tetcr401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Tetcr401ApplicationJSONErrorDescriptionEnum) ToPointer() *Tetcr401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tetcr401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Tetcr401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tetcr401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -352,12 +404,16 @@ const (
 	Tetcr400ApplicationJSONErrorEnumInvalidConsentid Tetcr400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Tetcr400ApplicationJSONErrorEnum) ToPointer() *Tetcr400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Tetcr400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -367,10 +423,10 @@ func (e *Tetcr400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Tetcr400ApplicationJSONErrorEnum(s)
+		*e = Tetcr400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -384,12 +440,16 @@ const (
 	Tetcr400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Tetcr400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Tetcr400ApplicationJSONErrorDescriptionEnum) ToPointer() *Tetcr400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Tetcr400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -399,10 +459,10 @@ func (e *Tetcr400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Tetcr400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Tetcr400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Tetcr400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Tetcr400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

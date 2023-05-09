@@ -16,12 +16,16 @@ const (
 	LicenseCountingTypeEnumSocket   LicenseCountingTypeEnum = "Socket"
 )
 
+func (e LicenseCountingTypeEnum) ToPointer() *LicenseCountingTypeEnum {
+	return &e
+}
+
 func (e *LicenseCountingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vCPU":
 		fallthrough
 	case "Instance":
@@ -29,9 +33,9 @@ func (e *LicenseCountingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Core":
 		fallthrough
 	case "Socket":
-		*e = LicenseCountingTypeEnum(s)
+		*e = LicenseCountingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseCountingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseCountingTypeEnum: %v", v)
 	}
 }

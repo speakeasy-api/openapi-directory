@@ -16,17 +16,21 @@ const (
 	CreateOpsItemXAmzTargetEnumAmazonSsmCreateOpsItem CreateOpsItemXAmzTargetEnum = "AmazonSSM.CreateOpsItem"
 )
 
+func (e CreateOpsItemXAmzTargetEnum) ToPointer() *CreateOpsItemXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateOpsItemXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.CreateOpsItem":
-		*e = CreateOpsItemXAmzTargetEnum(s)
+		*e = CreateOpsItemXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateOpsItemXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateOpsItemXAmzTargetEnum: %v", v)
 	}
 }
 

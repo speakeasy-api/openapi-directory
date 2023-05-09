@@ -34,7 +34,10 @@ func newLanguages(defaultClient, securityClient HTTPClient, serverURL, language,
 // DfareportingLanguagesList - Retrieves a list of languages.
 func (s *languages) DfareportingLanguagesList(ctx context.Context, request operations.DfareportingLanguagesListRequest, security operations.DfareportingLanguagesListSecurity) (*operations.DfareportingLanguagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/languages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/languages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

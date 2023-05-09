@@ -15,18 +15,22 @@ const (
 	PodcastTypeFieldEnumSerial   PodcastTypeFieldEnum = "serial"
 )
 
+func (e PodcastTypeFieldEnum) ToPointer() *PodcastTypeFieldEnum {
+	return &e
+}
+
 func (e *PodcastTypeFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "episodic":
 		fallthrough
 	case "serial":
-		*e = PodcastTypeFieldEnum(s)
+		*e = PodcastTypeFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PodcastTypeFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for PodcastTypeFieldEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	UploadCategoryEnumPrivate UploadCategoryEnum = "PRIVATE"
 )
 
+func (e UploadCategoryEnum) ToPointer() *UploadCategoryEnum {
+	return &e
+}
+
 func (e *UploadCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CURATED":
 		fallthrough
 	case "PRIVATE":
-		*e = UploadCategoryEnum(s)
+		*e = UploadCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UploadCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for UploadCategoryEnum: %v", v)
 	}
 }

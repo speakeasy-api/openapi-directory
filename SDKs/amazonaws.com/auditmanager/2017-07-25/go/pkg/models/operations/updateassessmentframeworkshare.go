@@ -18,21 +18,25 @@ const (
 	UpdateAssessmentFrameworkShareRequestBodyActionEnumRevoke  UpdateAssessmentFrameworkShareRequestBodyActionEnum = "REVOKE"
 )
 
+func (e UpdateAssessmentFrameworkShareRequestBodyActionEnum) ToPointer() *UpdateAssessmentFrameworkShareRequestBodyActionEnum {
+	return &e
+}
+
 func (e *UpdateAssessmentFrameworkShareRequestBodyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCEPT":
 		fallthrough
 	case "DECLINE":
 		fallthrough
 	case "REVOKE":
-		*e = UpdateAssessmentFrameworkShareRequestBodyActionEnum(s)
+		*e = UpdateAssessmentFrameworkShareRequestBodyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAssessmentFrameworkShareRequestBodyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAssessmentFrameworkShareRequestBodyActionEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	UpdateAssessmentFrameworkShareRequestBodyRequestTypeEnumReceived UpdateAssessmentFrameworkShareRequestBodyRequestTypeEnum = "RECEIVED"
 )
 
+func (e UpdateAssessmentFrameworkShareRequestBodyRequestTypeEnum) ToPointer() *UpdateAssessmentFrameworkShareRequestBodyRequestTypeEnum {
+	return &e
+}
+
 func (e *UpdateAssessmentFrameworkShareRequestBodyRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SENT":
 		fallthrough
 	case "RECEIVED":
-		*e = UpdateAssessmentFrameworkShareRequestBodyRequestTypeEnum(s)
+		*e = UpdateAssessmentFrameworkShareRequestBodyRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAssessmentFrameworkShareRequestBodyRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAssessmentFrameworkShareRequestBodyRequestTypeEnum: %v", v)
 	}
 }
 

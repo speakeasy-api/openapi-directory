@@ -2,7 +2,7 @@
 
 package shared
 
-// Operation - <p/>
+// Operation - Represents an arithmetic operation to compute spectral index.
 type Operation struct {
 	Equation   string          `json:"Equation"`
 	Name       string          `json:"Name"`

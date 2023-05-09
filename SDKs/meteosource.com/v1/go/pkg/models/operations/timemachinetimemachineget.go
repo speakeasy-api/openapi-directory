@@ -25,12 +25,16 @@ const (
 	TimeMachineTimeMachineGetUnitsUnitsEnumCa     TimeMachineTimeMachineGetUnitsUnitsEnum = "ca"
 )
 
+func (e TimeMachineTimeMachineGetUnitsUnitsEnum) ToPointer() *TimeMachineTimeMachineGetUnitsUnitsEnum {
+	return &e
+}
+
 func (e *TimeMachineTimeMachineGetUnitsUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "auto":
 		fallthrough
 	case "metric":
@@ -40,15 +44,15 @@ func (e *TimeMachineTimeMachineGetUnitsUnitsEnum) UnmarshalJSON(data []byte) err
 	case "uk":
 		fallthrough
 	case "ca":
-		*e = TimeMachineTimeMachineGetUnitsUnitsEnum(s)
+		*e = TimeMachineTimeMachineGetUnitsUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimeMachineTimeMachineGetUnitsUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for TimeMachineTimeMachineGetUnitsUnitsEnum: %v", v)
 	}
 }
 
 type TimeMachineTimeMachineGetRequest struct {
-	// The UTC day of the data in the past. Specify in `YYYY-MM-DD` format, e.g. `2021-08-24`.
+	// The day of the data in the past. Specify in `YYYY-MM-DD` format, e.g. `2021-08-24`.
 	//
 	Date types.Date `queryParam:"style=form,explode=true,name=date"`
 	// Your unique API key. You can either specify it in this parameter, or set it in `X-API-Key` header.

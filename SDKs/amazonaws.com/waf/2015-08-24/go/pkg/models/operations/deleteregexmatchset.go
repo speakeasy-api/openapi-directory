@@ -16,17 +16,21 @@ const (
 	DeleteRegexMatchSetXAmzTargetEnumAwswaf20150824DeleteRegexMatchSet DeleteRegexMatchSetXAmzTargetEnum = "AWSWAF_20150824.DeleteRegexMatchSet"
 )
 
+func (e DeleteRegexMatchSetXAmzTargetEnum) ToPointer() *DeleteRegexMatchSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteRegexMatchSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.DeleteRegexMatchSet":
-		*e = DeleteRegexMatchSetXAmzTargetEnum(s)
+		*e = DeleteRegexMatchSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRegexMatchSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRegexMatchSetXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	MigrationsUpdateImportRequestBodyVcsEnumMercurial  MigrationsUpdateImportRequestBodyVcsEnum = "mercurial"
 )
 
+func (e MigrationsUpdateImportRequestBodyVcsEnum) ToPointer() *MigrationsUpdateImportRequestBodyVcsEnum {
+	return &e
+}
+
 func (e *MigrationsUpdateImportRequestBodyVcsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "subversion":
 		fallthrough
 	case "tfvc":
@@ -32,10 +36,10 @@ func (e *MigrationsUpdateImportRequestBodyVcsEnum) UnmarshalJSON(data []byte) er
 	case "git":
 		fallthrough
 	case "mercurial":
-		*e = MigrationsUpdateImportRequestBodyVcsEnum(s)
+		*e = MigrationsUpdateImportRequestBodyVcsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationsUpdateImportRequestBodyVcsEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationsUpdateImportRequestBodyVcsEnum: %v", v)
 	}
 }
 

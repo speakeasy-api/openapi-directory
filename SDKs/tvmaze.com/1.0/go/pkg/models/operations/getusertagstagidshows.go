@@ -16,17 +16,21 @@ const (
 	GetUserTagsTagIDShowsEmbedEnumShow GetUserTagsTagIDShowsEmbedEnum = "show"
 )
 
+func (e GetUserTagsTagIDShowsEmbedEnum) ToPointer() *GetUserTagsTagIDShowsEmbedEnum {
+	return &e
+}
+
 func (e *GetUserTagsTagIDShowsEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "show":
-		*e = GetUserTagsTagIDShowsEmbedEnum(s)
+		*e = GetUserTagsTagIDShowsEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUserTagsTagIDShowsEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUserTagsTagIDShowsEmbedEnum: %v", v)
 	}
 }
 

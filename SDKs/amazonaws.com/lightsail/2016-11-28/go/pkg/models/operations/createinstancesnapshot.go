@@ -16,17 +16,21 @@ const (
 	CreateInstanceSnapshotXAmzTargetEnumLightsail20161128CreateInstanceSnapshot CreateInstanceSnapshotXAmzTargetEnum = "Lightsail_20161128.CreateInstanceSnapshot"
 )
 
+func (e CreateInstanceSnapshotXAmzTargetEnum) ToPointer() *CreateInstanceSnapshotXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateInstanceSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.CreateInstanceSnapshot":
-		*e = CreateInstanceSnapshotXAmzTargetEnum(s)
+		*e = CreateInstanceSnapshotXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInstanceSnapshotXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInstanceSnapshotXAmzTargetEnum: %v", v)
 	}
 }
 

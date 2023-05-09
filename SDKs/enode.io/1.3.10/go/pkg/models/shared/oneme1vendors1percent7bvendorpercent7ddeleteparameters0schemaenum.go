@@ -20,12 +20,16 @@ const (
 	Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnumNissan     Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum = "NISSAN"
 )
 
+func (e Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum) ToPointer() *Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum {
+	return &e
+}
+
 func (e *Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TESLA":
 		fallthrough
 	case "BMW":
@@ -39,9 +43,9 @@ func (e *Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum) Unma
 	case "PEUGEOT":
 		fallthrough
 	case "NISSAN":
-		*e = Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum(s)
+		*e = Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum: %s", s)
+		return fmt.Errorf("invalid value for Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum: %v", v)
 	}
 }

@@ -15,21 +15,25 @@ const (
 	InteractionTypeEnumEdit        InteractionTypeEnum = "EDIT"
 )
 
+func (e InteractionTypeEnum) ToPointer() *InteractionTypeEnum {
+	return &e
+}
+
 func (e *InteractionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "VIEW":
 		fallthrough
 	case "EDIT":
-		*e = InteractionTypeEnum(s)
+		*e = InteractionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InteractionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InteractionTypeEnum: %v", v)
 	}
 }
 

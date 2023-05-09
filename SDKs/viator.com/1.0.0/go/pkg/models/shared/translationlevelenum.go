@@ -13,28 +13,32 @@ import (
 // - `100`: full human translation
 //
 // See: [Working with human and machine translations](#section/Appendices/Working-with-human-and-machine-translations) for more information
-type TranslationLevelEnum string
+type TranslationLevelEnum int64
 
 const (
-	TranslationLevelEnumZero       TranslationLevelEnum = "0"
-	TranslationLevelEnumEighty     TranslationLevelEnum = "80"
-	TranslationLevelEnumOneHundred TranslationLevelEnum = "100"
+	TranslationLevelEnumZero       TranslationLevelEnum = 0
+	TranslationLevelEnumEighty     TranslationLevelEnum = 80
+	TranslationLevelEnumOneHundred TranslationLevelEnum = 100
 )
 
+func (e TranslationLevelEnum) ToPointer() *TranslationLevelEnum {
+	return &e
+}
+
 func (e *TranslationLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "80":
+	case 80:
 		fallthrough
-	case "100":
-		*e = TranslationLevelEnum(s)
+	case 100:
+		*e = TranslationLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TranslationLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for TranslationLevelEnum: %v", v)
 	}
 }

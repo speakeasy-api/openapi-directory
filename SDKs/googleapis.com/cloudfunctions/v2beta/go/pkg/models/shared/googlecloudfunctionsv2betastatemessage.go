@@ -17,12 +17,16 @@ const (
 	GoogleCloudFunctionsV2betaStateMessageSeverityEnumInfo                GoogleCloudFunctionsV2betaStateMessageSeverityEnum = "INFO"
 )
 
+func (e GoogleCloudFunctionsV2betaStateMessageSeverityEnum) ToPointer() *GoogleCloudFunctionsV2betaStateMessageSeverityEnum {
+	return &e
+}
+
 func (e *GoogleCloudFunctionsV2betaStateMessageSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "ERROR":
@@ -30,10 +34,10 @@ func (e *GoogleCloudFunctionsV2betaStateMessageSeverityEnum) UnmarshalJSON(data 
 	case "WARNING":
 		fallthrough
 	case "INFO":
-		*e = GoogleCloudFunctionsV2betaStateMessageSeverityEnum(s)
+		*e = GoogleCloudFunctionsV2betaStateMessageSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudFunctionsV2betaStateMessageSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudFunctionsV2betaStateMessageSeverityEnum: %v", v)
 	}
 }
 

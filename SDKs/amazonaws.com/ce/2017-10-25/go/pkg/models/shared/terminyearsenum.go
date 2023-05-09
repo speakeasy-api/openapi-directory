@@ -14,18 +14,22 @@ const (
 	TermInYearsEnumThreeYears TermInYearsEnum = "THREE_YEARS"
 )
 
+func (e TermInYearsEnum) ToPointer() *TermInYearsEnum {
+	return &e
+}
+
 func (e *TermInYearsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONE_YEAR":
 		fallthrough
 	case "THREE_YEARS":
-		*e = TermInYearsEnum(s)
+		*e = TermInYearsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TermInYearsEnum: %s", s)
+		return fmt.Errorf("invalid value for TermInYearsEnum: %v", v)
 	}
 }

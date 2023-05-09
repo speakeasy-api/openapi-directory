@@ -20,12 +20,16 @@ const (
 	ShoppingAdsProgramStatusRegionStatusEligibilityStatusEnumOnboarding       ShoppingAdsProgramStatusRegionStatusEligibilityStatusEnum = "ONBOARDING"
 )
 
+func (e ShoppingAdsProgramStatusRegionStatusEligibilityStatusEnum) ToPointer() *ShoppingAdsProgramStatusRegionStatusEligibilityStatusEnum {
+	return &e
+}
+
 func (e *ShoppingAdsProgramStatusRegionStatusEligibilityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "APPROVED":
@@ -39,10 +43,10 @@ func (e *ShoppingAdsProgramStatusRegionStatusEligibilityStatusEnum) UnmarshalJSO
 	case "PENDING_REVIEW":
 		fallthrough
 	case "ONBOARDING":
-		*e = ShoppingAdsProgramStatusRegionStatusEligibilityStatusEnum(s)
+		*e = ShoppingAdsProgramStatusRegionStatusEligibilityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShoppingAdsProgramStatusRegionStatusEligibilityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ShoppingAdsProgramStatusRegionStatusEligibilityStatusEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	ShoppingAdsProgramStatusRegionStatusReviewEligibilityStatusEnumIneligible                   ShoppingAdsProgramStatusRegionStatusReviewEligibilityStatusEnum = "INELIGIBLE"
 )
 
+func (e ShoppingAdsProgramStatusRegionStatusReviewEligibilityStatusEnum) ToPointer() *ShoppingAdsProgramStatusRegionStatusReviewEligibilityStatusEnum {
+	return &e
+}
+
 func (e *ShoppingAdsProgramStatusRegionStatusReviewEligibilityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVIEW_ELIGIBILITY_UNSPECIFIED":
 		fallthrough
 	case "ELIGIBLE":
 		fallthrough
 	case "INELIGIBLE":
-		*e = ShoppingAdsProgramStatusRegionStatusReviewEligibilityStatusEnum(s)
+		*e = ShoppingAdsProgramStatusRegionStatusReviewEligibilityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShoppingAdsProgramStatusRegionStatusReviewEligibilityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ShoppingAdsProgramStatusRegionStatusReviewEligibilityStatusEnum: %v", v)
 	}
 }
 
@@ -88,12 +96,16 @@ const (
 	ShoppingAdsProgramStatusRegionStatusReviewIneligibilityReasonEnumAlreadyReviewed                      ShoppingAdsProgramStatusRegionStatusReviewIneligibilityReasonEnum = "ALREADY_REVIEWED"
 )
 
+func (e ShoppingAdsProgramStatusRegionStatusReviewIneligibilityReasonEnum) ToPointer() *ShoppingAdsProgramStatusRegionStatusReviewIneligibilityReasonEnum {
+	return &e
+}
+
 func (e *ShoppingAdsProgramStatusRegionStatusReviewIneligibilityReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVIEW_INELIGIBILITY_REASON_UNSPECIFIED":
 		fallthrough
 	case "ONBOARDING_ISSUES":
@@ -111,10 +123,10 @@ func (e *ShoppingAdsProgramStatusRegionStatusReviewIneligibilityReasonEnum) Unma
 	case "IS_RETIRED":
 		fallthrough
 	case "ALREADY_REVIEWED":
-		*e = ShoppingAdsProgramStatusRegionStatusReviewIneligibilityReasonEnum(s)
+		*e = ShoppingAdsProgramStatusRegionStatusReviewIneligibilityReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShoppingAdsProgramStatusRegionStatusReviewIneligibilityReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for ShoppingAdsProgramStatusRegionStatusReviewIneligibilityReasonEnum: %v", v)
 	}
 }
 

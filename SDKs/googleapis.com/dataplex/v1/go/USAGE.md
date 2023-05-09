@@ -2,28 +2,29 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DataplexProjectsLocationsDataAttributeBindingsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.DataplexProjectsLocationsDataAttributeBindingsCreate(ctx, operations.DataplexProjectsLocationsDataAttributeBindingsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudDataplexV1DataAttributeBindingInput: &shared.GoogleCloudDataplexV1DataAttributeBindingInput{
             Attributes: []string{
                 "distinctio",
                 "quibusdam",
                 "unde",
             },
-            Description: "nulla",
-            DisplayName: "corrupti",
-            Etag: "illum",
+            Description: sdk.String("nulla"),
+            DisplayName: sdk.String("corrupti"),
+            Etag: sdk.String("illum"),
             Labels: map[string]string{
                 "error": "deserunt",
                 "suscipit": "iure",
@@ -36,37 +37,33 @@ func main() {
                         "tempora",
                         "suscipit",
                     },
-                    Name: "molestiae",
+                    Name: sdk.String("Alexandra Schulist"),
                 },
                 shared.GoogleCloudDataplexV1DataAttributeBindingPath{
                     Attributes: []string{
-                        "placeat",
-                        "voluptatum",
-                        "iusto",
-                        "excepturi",
+                        "nisi",
+                        "recusandae",
+                        "temporibus",
                     },
-                    Name: "nisi",
+                    Name: sdk.String("Erica Bogisich III"),
                 },
             },
-            Resource: "recusandae",
+            Resource: sdk.String("repellendus"),
         },
-        AccessToken: "temporibus",
-        Alt: "json",
-        Callback: "quis",
-        DataAttributeBindingID: "veritatis",
-        Fields: "deserunt",
-        Key: "perferendis",
-        OauthToken: "ipsam",
-        Parent: "repellendus",
-        PrettyPrint: false,
-        QuotaUser: "sapiente",
-        UploadType: "quo",
-        UploadProtocol: "odit",
-        ValidateOnly: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.DataplexProjectsLocationsDataAttributeBindingsCreate(ctx, req, operations.DataplexProjectsLocationsDataAttributeBindingsCreateSecurity{
+        AccessToken: sdk.String("sapiente"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("odit"),
+        DataAttributeBindingID: sdk.String("at"),
+        Fields: sdk.String("at"),
+        Key: sdk.String("maiores"),
+        OauthToken: sdk.String("molestiae"),
+        Parent: "quod",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("quod"),
+        UploadType: sdk.String("esse"),
+        UploadProtocol: sdk.String("totam"),
+        ValidateOnly: sdk.Bool(false),
+    }, operations.DataplexProjectsLocationsDataAttributeBindingsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

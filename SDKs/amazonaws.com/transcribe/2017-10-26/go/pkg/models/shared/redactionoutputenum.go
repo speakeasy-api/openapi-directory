@@ -14,18 +14,22 @@ const (
 	RedactionOutputEnumRedactedAndUnredacted RedactionOutputEnum = "redacted_and_unredacted"
 )
 
+func (e RedactionOutputEnum) ToPointer() *RedactionOutputEnum {
+	return &e
+}
+
 func (e *RedactionOutputEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "redacted":
 		fallthrough
 	case "redacted_and_unredacted":
-		*e = RedactionOutputEnum(s)
+		*e = RedactionOutputEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RedactionOutputEnum: %s", s)
+		return fmt.Errorf("invalid value for RedactionOutputEnum: %v", v)
 	}
 }

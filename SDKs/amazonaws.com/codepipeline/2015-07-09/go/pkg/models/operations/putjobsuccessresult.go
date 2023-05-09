@@ -16,17 +16,21 @@ const (
 	PutJobSuccessResultXAmzTargetEnumCodePipeline20150709PutJobSuccessResult PutJobSuccessResultXAmzTargetEnum = "CodePipeline_20150709.PutJobSuccessResult"
 )
 
+func (e PutJobSuccessResultXAmzTargetEnum) ToPointer() *PutJobSuccessResultXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutJobSuccessResultXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.PutJobSuccessResult":
-		*e = PutJobSuccessResultXAmzTargetEnum(s)
+		*e = PutJobSuccessResultXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutJobSuccessResultXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutJobSuccessResultXAmzTargetEnum: %v", v)
 	}
 }
 

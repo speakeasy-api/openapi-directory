@@ -15,6 +15,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -134,4 +135,18 @@ pkg/models/shared/segmentqueryfilterlistmodel.go
 pkg/models/shared/snapshotcreationsuccessmodel.go
 pkg/models/shared/snapshotmodel.go
 pkg/models/shared/testharnessscenariomodel.go
+docs/sdk/README.md
+docs/analytics/README.md
+docs/billingdetails/README.md
+docs/credentials/README.md
+docs/experiments/README.md
+docs/gamesadmin/README.md
+docs/manage/README.md
+docs/notifications/README.md
+docs/pushnotificationtest/README.md
+docs/region/README.md
+docs/scripts/README.md
+docs/segmentqueryfilters/README.md
+docs/snapshots/README.md
+docs/testharness/README.md
 USAGE.md

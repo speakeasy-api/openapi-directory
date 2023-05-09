@@ -16,19 +16,23 @@ const (
 	AnalyzeImageDetailsEnumLandmarks   AnalyzeImageDetailsEnum = "Landmarks"
 )
 
+func (e AnalyzeImageDetailsEnum) ToPointer() *AnalyzeImageDetailsEnum {
+	return &e
+}
+
 func (e *AnalyzeImageDetailsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Celebrities":
 		fallthrough
 	case "Landmarks":
-		*e = AnalyzeImageDetailsEnum(s)
+		*e = AnalyzeImageDetailsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyzeImageDetailsEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyzeImageDetailsEnum: %v", v)
 	}
 }
 

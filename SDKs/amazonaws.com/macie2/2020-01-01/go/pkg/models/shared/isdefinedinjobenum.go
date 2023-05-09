@@ -15,20 +15,24 @@ const (
 	IsDefinedInJobEnumUnknown IsDefinedInJobEnum = "UNKNOWN"
 )
 
+func (e IsDefinedInJobEnum) ToPointer() *IsDefinedInJobEnum {
+	return &e
+}
+
 func (e *IsDefinedInJobEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRUE":
 		fallthrough
 	case "FALSE":
 		fallthrough
 	case "UNKNOWN":
-		*e = IsDefinedInJobEnum(s)
+		*e = IsDefinedInJobEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IsDefinedInJobEnum: %s", s)
+		return fmt.Errorf("invalid value for IsDefinedInJobEnum: %v", v)
 	}
 }

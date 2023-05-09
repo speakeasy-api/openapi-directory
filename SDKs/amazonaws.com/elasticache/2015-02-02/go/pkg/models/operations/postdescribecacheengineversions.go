@@ -15,17 +15,21 @@ const (
 	POSTDescribeCacheEngineVersionsActionEnumDescribeCacheEngineVersions POSTDescribeCacheEngineVersionsActionEnum = "DescribeCacheEngineVersions"
 )
 
+func (e POSTDescribeCacheEngineVersionsActionEnum) ToPointer() *POSTDescribeCacheEngineVersionsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeCacheEngineVersionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeCacheEngineVersions":
-		*e = POSTDescribeCacheEngineVersionsActionEnum(s)
+		*e = POSTDescribeCacheEngineVersionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeCacheEngineVersionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeCacheEngineVersionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeCacheEngineVersionsVersionEnumTwoThousandAndFifteen0202 POSTDescribeCacheEngineVersionsVersionEnum = "2015-02-02"
 )
 
+func (e POSTDescribeCacheEngineVersionsVersionEnum) ToPointer() *POSTDescribeCacheEngineVersionsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeCacheEngineVersionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTDescribeCacheEngineVersionsVersionEnum(s)
+		*e = POSTDescribeCacheEngineVersionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeCacheEngineVersionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeCacheEngineVersionsVersionEnum: %v", v)
 	}
 }
 

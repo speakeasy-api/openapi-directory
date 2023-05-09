@@ -15,20 +15,24 @@ const (
 	CertificateDomainValidationStatusEnumSuccess           CertificateDomainValidationStatusEnum = "SUCCESS"
 )
 
+func (e CertificateDomainValidationStatusEnum) ToPointer() *CertificateDomainValidationStatusEnum {
+	return &e
+}
+
 func (e *CertificateDomainValidationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_VALIDATION":
 		fallthrough
 	case "FAILED":
 		fallthrough
 	case "SUCCESS":
-		*e = CertificateDomainValidationStatusEnum(s)
+		*e = CertificateDomainValidationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateDomainValidationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateDomainValidationStatusEnum: %v", v)
 	}
 }

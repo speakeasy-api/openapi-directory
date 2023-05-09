@@ -16,17 +16,21 @@ const (
 	GetResourcePolicyXAmzTargetEnumCodeBuild20161006GetResourcePolicy GetResourcePolicyXAmzTargetEnum = "CodeBuild_20161006.GetResourcePolicy"
 )
 
+func (e GetResourcePolicyXAmzTargetEnum) ToPointer() *GetResourcePolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetResourcePolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.GetResourcePolicy":
-		*e = GetResourcePolicyXAmzTargetEnum(s)
+		*e = GetResourcePolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResourcePolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResourcePolicyXAmzTargetEnum: %v", v)
 	}
 }
 

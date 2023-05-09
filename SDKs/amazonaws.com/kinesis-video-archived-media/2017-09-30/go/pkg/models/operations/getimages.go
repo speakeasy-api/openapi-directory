@@ -18,19 +18,23 @@ const (
 	GetImagesRequestBodyFormatEnumPng  GetImagesRequestBodyFormatEnum = "PNG"
 )
 
+func (e GetImagesRequestBodyFormatEnum) ToPointer() *GetImagesRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *GetImagesRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JPEG":
 		fallthrough
 	case "PNG":
-		*e = GetImagesRequestBodyFormatEnum(s)
+		*e = GetImagesRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImagesRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImagesRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -42,19 +46,23 @@ const (
 	GetImagesRequestBodyImageSelectorTypeEnumServerTimestamp   GetImagesRequestBodyImageSelectorTypeEnum = "SERVER_TIMESTAMP"
 )
 
+func (e GetImagesRequestBodyImageSelectorTypeEnum) ToPointer() *GetImagesRequestBodyImageSelectorTypeEnum {
+	return &e
+}
+
 func (e *GetImagesRequestBodyImageSelectorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCER_TIMESTAMP":
 		fallthrough
 	case "SERVER_TIMESTAMP":
-		*e = GetImagesRequestBodyImageSelectorTypeEnum(s)
+		*e = GetImagesRequestBodyImageSelectorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImagesRequestBodyImageSelectorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImagesRequestBodyImageSelectorTypeEnum: %v", v)
 	}
 }
 

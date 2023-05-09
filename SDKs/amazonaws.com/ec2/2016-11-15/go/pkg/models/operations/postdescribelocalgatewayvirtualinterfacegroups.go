@@ -15,17 +15,21 @@ const (
 	POSTDescribeLocalGatewayVirtualInterfaceGroupsActionEnumDescribeLocalGatewayVirtualInterfaceGroups POSTDescribeLocalGatewayVirtualInterfaceGroupsActionEnum = "DescribeLocalGatewayVirtualInterfaceGroups"
 )
 
+func (e POSTDescribeLocalGatewayVirtualInterfaceGroupsActionEnum) ToPointer() *POSTDescribeLocalGatewayVirtualInterfaceGroupsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeLocalGatewayVirtualInterfaceGroupsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeLocalGatewayVirtualInterfaceGroups":
-		*e = POSTDescribeLocalGatewayVirtualInterfaceGroupsActionEnum(s)
+		*e = POSTDescribeLocalGatewayVirtualInterfaceGroupsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeLocalGatewayVirtualInterfaceGroupsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeLocalGatewayVirtualInterfaceGroupsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeLocalGatewayVirtualInterfaceGroupsVersionEnumTwoThousandAndSixteen1115 POSTDescribeLocalGatewayVirtualInterfaceGroupsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeLocalGatewayVirtualInterfaceGroupsVersionEnum) ToPointer() *POSTDescribeLocalGatewayVirtualInterfaceGroupsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeLocalGatewayVirtualInterfaceGroupsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeLocalGatewayVirtualInterfaceGroupsVersionEnum(s)
+		*e = POSTDescribeLocalGatewayVirtualInterfaceGroupsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeLocalGatewayVirtualInterfaceGroupsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeLocalGatewayVirtualInterfaceGroupsVersionEnum: %v", v)
 	}
 }
 

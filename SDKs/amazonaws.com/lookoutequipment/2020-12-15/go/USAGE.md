@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,14 +17,15 @@ func main() {
         }),
     )
 
-    req := operations.CreateDatasetRequest{
+    ctx := context.Background()
+    res, err := s.CreateDataset(ctx, operations.CreateDatasetRequest{
         CreateDatasetRequest: shared.CreateDatasetRequest{
             ClientToken: "corrupti",
             DatasetName: "provident",
             DatasetSchema: &shared.DatasetSchema{
-                InlineDataSchema: "distinctio",
+                InlineDataSchema: sdk.String("distinctio"),
             },
-            ServerSideKmsKeyID: "quibusdam",
+            ServerSideKmsKeyID: sdk.String("quibusdam"),
             Tags: []shared.Tag{
                 shared.Tag{
                     Key: "nulla",
@@ -40,18 +41,15 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "suscipit",
-        XAmzContentSha256: "iure",
-        XAmzCredential: "magnam",
-        XAmzDate: "debitis",
-        XAmzSecurityToken: "ipsa",
-        XAmzSignature: "delectus",
-        XAmzSignedHeaders: "tempora",
-        XAmzTarget: "AWSLookoutEquipmentFrontendService.CreateDataset",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateDataset(ctx, req)
+        XAmzAlgorithm: sdk.String("suscipit"),
+        XAmzContentSha256: sdk.String("iure"),
+        XAmzCredential: sdk.String("magnam"),
+        XAmzDate: sdk.String("debitis"),
+        XAmzSecurityToken: sdk.String("ipsa"),
+        XAmzSignature: sdk.String("delectus"),
+        XAmzSignedHeaders: sdk.String("tempora"),
+        XAmzTarget: operations.CreateDatasetXAmzTargetEnumAwsLookoutEquipmentFrontendServiceCreateDataset,
+    })
     if err != nil {
         log.Fatal(err)
     }

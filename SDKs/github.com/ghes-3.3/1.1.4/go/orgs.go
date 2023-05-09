@@ -38,7 +38,10 @@ func newOrgs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#check-organization-membership-for-a-user - API method documentation
 func (s *orgs) OrgsCheckMembershipForUser(ctx context.Context, request operations.OrgsCheckMembershipForUserRequest) (*operations.OrgsCheckMembershipForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/members/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/members/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -78,7 +81,10 @@ func (s *orgs) OrgsCheckMembershipForUser(ctx context.Context, request operation
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#check-public-organization-membership-for-a-user - API method documentation
 func (s *orgs) OrgsCheckPublicMembershipForUser(ctx context.Context, request operations.OrgsCheckPublicMembershipForUserRequest) (*operations.OrgsCheckPublicMembershipForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/public_members/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/public_members/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -117,7 +123,10 @@ func (s *orgs) OrgsCheckPublicMembershipForUser(ctx context.Context, request ope
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#convert-an-organization-member-to-outside-collaborator - API method documentation
 func (s *orgs) OrgsConvertMemberToOutsideCollaborator(ctx context.Context, request operations.OrgsConvertMemberToOutsideCollaboratorRequest) (*operations.OrgsConvertMemberToOutsideCollaboratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/outside_collaborators/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/outside_collaborators/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -183,7 +192,10 @@ func (s *orgs) OrgsConvertMemberToOutsideCollaborator(ctx context.Context, reque
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#create-an-organization-webhook - API method documentation
 func (s *orgs) OrgsCreateWebhook(ctx context.Context, request operations.OrgsCreateWebhookRequest) (*operations.OrgsCreateWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -260,7 +272,10 @@ func (s *orgs) OrgsCreateWebhook(ctx context.Context, request operations.OrgsCre
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#delete-an-organization-webhook - API method documentation
 func (s *orgs) OrgsDeleteWebhook(ctx context.Context, request operations.OrgsDeleteWebhookRequest) (*operations.OrgsDeleteWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -309,7 +324,10 @@ func (s *orgs) OrgsDeleteWebhook(ctx context.Context, request operations.OrgsDel
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#get-an-organization - API method documentation
 func (s *orgs) OrgsGet(ctx context.Context, request operations.OrgsGetRequest) (*operations.OrgsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -371,7 +389,10 @@ func (s *orgs) OrgsGet(ctx context.Context, request operations.OrgsGetRequest) (
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#get-audit-log - API method documentation
 func (s *orgs) OrgsGetAuditLog(ctx context.Context, request operations.OrgsGetAuditLogRequest) (*operations.OrgsGetAuditLogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/audit-log", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/audit-log", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -420,7 +441,10 @@ func (s *orgs) OrgsGetAuditLog(ctx context.Context, request operations.OrgsGetAu
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#get-an-organization-membership-for-the-authenticated-user - API method documentation
 func (s *orgs) OrgsGetMembershipForAuthenticatedUser(ctx context.Context, request operations.OrgsGetMembershipForAuthenticatedUserRequest) (*operations.OrgsGetMembershipForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/memberships/orgs/{org}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/memberships/orgs/{org}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -478,7 +502,10 @@ func (s *orgs) OrgsGetMembershipForAuthenticatedUser(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#get-organization-membership-for-a-user - API method documentation
 func (s *orgs) OrgsGetMembershipForUser(ctx context.Context, request operations.OrgsGetMembershipForUserRequest) (*operations.OrgsGetMembershipForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/memberships/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/memberships/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -536,7 +563,10 @@ func (s *orgs) OrgsGetMembershipForUser(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#get-an-organization-webhook - API method documentation
 func (s *orgs) OrgsGetWebhook(ctx context.Context, request operations.OrgsGetWebhookRequest) (*operations.OrgsGetWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -594,7 +624,10 @@ func (s *orgs) OrgsGetWebhook(ctx context.Context, request operations.OrgsGetWeb
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#get-a-webhook-configuration-for-an-organization - API method documentation
 func (s *orgs) OrgsGetWebhookConfigForOrg(ctx context.Context, request operations.OrgsGetWebhookConfigForOrgRequest) (*operations.OrgsGetWebhookConfigForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -640,7 +673,10 @@ func (s *orgs) OrgsGetWebhookConfigForOrg(ctx context.Context, request operation
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#get-a-webhook-delivery-for-an-organization-webhook - API method documentation
 func (s *orgs) OrgsGetWebhookDelivery(ctx context.Context, request operations.OrgsGetWebhookDeliveryRequest) (*operations.OrgsGetWebhookDeliveryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -768,7 +804,10 @@ func (s *orgs) OrgsList(ctx context.Context, request operations.OrgsListRequest)
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#list-app-installations-for-an-organization - API method documentation
 func (s *orgs) OrgsListAppInstallations(ctx context.Context, request operations.OrgsListAppInstallationsRequest) (*operations.OrgsListAppInstallationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/installations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/installations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -891,7 +930,10 @@ func (s *orgs) OrgsListForAuthenticatedUser(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#list-organizations-for-a-user - API method documentation
 func (s *orgs) OrgsListForUser(ctx context.Context, request operations.OrgsListForUserRequest) (*operations.OrgsListForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/orgs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/orgs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -943,7 +985,10 @@ func (s *orgs) OrgsListForUser(ctx context.Context, request operations.OrgsListF
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#list-organization-members - API method documentation
 func (s *orgs) OrgsListMembers(ctx context.Context, request operations.OrgsListMembersRequest) (*operations.OrgsListMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1079,7 +1124,10 @@ func (s *orgs) OrgsListMembershipsForAuthenticatedUser(ctx context.Context, requ
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#list-outside-collaborators-for-an-organization - API method documentation
 func (s *orgs) OrgsListOutsideCollaborators(ctx context.Context, request operations.OrgsListOutsideCollaboratorsRequest) (*operations.OrgsListOutsideCollaboratorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/outside_collaborators", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/outside_collaborators", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1131,7 +1179,10 @@ func (s *orgs) OrgsListOutsideCollaborators(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#list-public-organization-members - API method documentation
 func (s *orgs) OrgsListPublicMembers(ctx context.Context, request operations.OrgsListPublicMembersRequest) (*operations.OrgsListPublicMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/public_members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/public_members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1183,7 +1234,10 @@ func (s *orgs) OrgsListPublicMembers(ctx context.Context, request operations.Org
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#list-deliveries-for-an-organization-webhook - API method documentation
 func (s *orgs) OrgsListWebhookDeliveries(ctx context.Context, request operations.OrgsListWebhookDeliveriesRequest) (*operations.OrgsListWebhookDeliveriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}/deliveries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}/deliveries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1259,7 +1313,10 @@ func (s *orgs) OrgsListWebhookDeliveries(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#list-organization-webhooks - API method documentation
 func (s *orgs) OrgsListWebhooks(ctx context.Context, request operations.OrgsListWebhooksRequest) (*operations.OrgsListWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1321,7 +1378,10 @@ func (s *orgs) OrgsListWebhooks(ctx context.Context, request operations.OrgsList
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#ping-an-organization-webhook - API method documentation
 func (s *orgs) OrgsPingWebhook(ctx context.Context, request operations.OrgsPingWebhookRequest) (*operations.OrgsPingWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}/pings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}/pings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1368,7 +1428,10 @@ func (s *orgs) OrgsPingWebhook(ctx context.Context, request operations.OrgsPingW
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#redeliver-a-delivery-for-an-organization-webhook - API method documentation
 func (s *orgs) OrgsRedeliverWebhookDelivery(ctx context.Context, request operations.OrgsRedeliverWebhookDeliveryRequest) (*operations.OrgsRedeliverWebhookDeliveryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}/attempts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1441,7 +1504,10 @@ func (s *orgs) OrgsRedeliverWebhookDelivery(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#remove-an-organization-member - API method documentation
 func (s *orgs) OrgsRemoveMember(ctx context.Context, request operations.OrgsRemoveMemberRequest) (*operations.OrgsRemoveMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/members/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/members/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1490,7 +1556,10 @@ func (s *orgs) OrgsRemoveMember(ctx context.Context, request operations.OrgsRemo
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#remove-organization-membership-for-a-user - API method documentation
 func (s *orgs) OrgsRemoveMembershipForUser(ctx context.Context, request operations.OrgsRemoveMembershipForUserRequest) (*operations.OrgsRemoveMembershipForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/memberships/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/memberships/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1539,7 +1608,10 @@ func (s *orgs) OrgsRemoveMembershipForUser(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#remove-outside-collaborator-from-an-organization - API method documentation
 func (s *orgs) OrgsRemoveOutsideCollaborator(ctx context.Context, request operations.OrgsRemoveOutsideCollaboratorRequest) (*operations.OrgsRemoveOutsideCollaboratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/outside_collaborators/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/outside_collaborators/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1585,7 +1657,10 @@ func (s *orgs) OrgsRemoveOutsideCollaborator(ctx context.Context, request operat
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#remove-public-organization-membership-for-the-authenticated-user - API method documentation
 func (s *orgs) OrgsRemovePublicMembershipForAuthenticatedUser(ctx context.Context, request operations.OrgsRemovePublicMembershipForAuthenticatedUserRequest) (*operations.OrgsRemovePublicMembershipForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/public_members/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/public_members/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1630,7 +1705,10 @@ func (s *orgs) OrgsRemovePublicMembershipForAuthenticatedUser(ctx context.Contex
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#set-organization-membership-for-a-user - API method documentation
 func (s *orgs) OrgsSetMembershipForUser(ctx context.Context, request operations.OrgsSetMembershipForUserRequest) (*operations.OrgsSetMembershipForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/memberships/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/memberships/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1705,7 +1783,10 @@ func (s *orgs) OrgsSetMembershipForUser(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#set-public-organization-membership-for-the-authenticated-user - API method documentation
 func (s *orgs) OrgsSetPublicMembershipForAuthenticatedUser(ctx context.Context, request operations.OrgsSetPublicMembershipForAuthenticatedUserRequest) (*operations.OrgsSetPublicMembershipForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/public_members/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/public_members/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1754,7 +1835,10 @@ func (s *orgs) OrgsSetPublicMembershipForAuthenticatedUser(ctx context.Context, 
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#update-an-organization - API method documentation
 func (s *orgs) OrgsUpdate(ctx context.Context, request operations.OrgsUpdateRequest) (*operations.OrgsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1826,7 +1910,10 @@ func (s *orgs) OrgsUpdate(ctx context.Context, request operations.OrgsUpdateRequ
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#update-an-organization-membership-for-the-authenticated-user - API method documentation
 func (s *orgs) OrgsUpdateMembershipForAuthenticatedUser(ctx context.Context, request operations.OrgsUpdateMembershipForAuthenticatedUserRequest) (*operations.OrgsUpdateMembershipForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/memberships/orgs/{org}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/memberships/orgs/{org}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1904,7 +1991,10 @@ func (s *orgs) OrgsUpdateMembershipForAuthenticatedUser(ctx context.Context, req
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#update-an-organization-webhook - API method documentation
 func (s *orgs) OrgsUpdateWebhook(ctx context.Context, request operations.OrgsUpdateWebhookRequest) (*operations.OrgsUpdateWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1979,7 +2069,10 @@ func (s *orgs) OrgsUpdateWebhook(ctx context.Context, request operations.OrgsUpd
 // https://docs.github.com/enterprise-server@3.3/rest/reference/orgs#update-a-webhook-configuration-for-an-organization - API method documentation
 func (s *orgs) OrgsUpdateWebhookConfigForOrg(ctx context.Context, request operations.OrgsUpdateWebhookConfigForOrgRequest) (*operations.OrgsUpdateWebhookConfigForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/hooks/{hook_id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

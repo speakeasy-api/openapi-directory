@@ -16,21 +16,25 @@ const (
 	DeliveryControlCreativeBlockingLevelEnumAdxPolicyBlockingOnly            DeliveryControlCreativeBlockingLevelEnum = "ADX_POLICY_BLOCKING_ONLY"
 )
 
+func (e DeliveryControlCreativeBlockingLevelEnum) ToPointer() *DeliveryControlCreativeBlockingLevelEnum {
+	return &e
+}
+
 func (e *DeliveryControlCreativeBlockingLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_BLOCKING_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "PUBLISHER_BLOCKING_RULES":
 		fallthrough
 	case "ADX_POLICY_BLOCKING_ONLY":
-		*e = DeliveryControlCreativeBlockingLevelEnum(s)
+		*e = DeliveryControlCreativeBlockingLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryControlCreativeBlockingLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryControlCreativeBlockingLevelEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	DeliveryControlDeliveryRateTypeEnumAsFastAsPossible            DeliveryControlDeliveryRateTypeEnum = "AS_FAST_AS_POSSIBLE"
 )
 
+func (e DeliveryControlDeliveryRateTypeEnum) ToPointer() *DeliveryControlDeliveryRateTypeEnum {
+	return &e
+}
+
 func (e *DeliveryControlDeliveryRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELIVERY_RATE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EVENLY":
@@ -57,10 +65,10 @@ func (e *DeliveryControlDeliveryRateTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FRONT_LOADED":
 		fallthrough
 	case "AS_FAST_AS_POSSIBLE":
-		*e = DeliveryControlDeliveryRateTypeEnum(s)
+		*e = DeliveryControlDeliveryRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryControlDeliveryRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryControlDeliveryRateTypeEnum: %v", v)
 	}
 }
 

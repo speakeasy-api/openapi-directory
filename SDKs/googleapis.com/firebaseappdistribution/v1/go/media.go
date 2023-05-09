@@ -34,7 +34,10 @@ func newMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // FirebaseappdistributionMediaUpload - Uploads a binary. Uploading a binary can result in a new release being created, an update to an existing release, or a no-op if a release with the same binary already exists.
 func (s *media) FirebaseappdistributionMediaUpload(ctx context.Context, request operations.FirebaseappdistributionMediaUploadRequest, security operations.FirebaseappdistributionMediaUploadSecurity) (*operations.FirebaseappdistributionMediaUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{app}/releases:upload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{app}/releases:upload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

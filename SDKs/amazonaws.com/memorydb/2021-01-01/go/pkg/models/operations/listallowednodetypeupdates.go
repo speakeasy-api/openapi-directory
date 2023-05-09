@@ -16,17 +16,21 @@ const (
 	ListAllowedNodeTypeUpdatesXAmzTargetEnumAmazonMemoryDbListAllowedNodeTypeUpdates ListAllowedNodeTypeUpdatesXAmzTargetEnum = "AmazonMemoryDB.ListAllowedNodeTypeUpdates"
 )
 
+func (e ListAllowedNodeTypeUpdatesXAmzTargetEnum) ToPointer() *ListAllowedNodeTypeUpdatesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListAllowedNodeTypeUpdatesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.ListAllowedNodeTypeUpdates":
-		*e = ListAllowedNodeTypeUpdatesXAmzTargetEnum(s)
+		*e = ListAllowedNodeTypeUpdatesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAllowedNodeTypeUpdatesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAllowedNodeTypeUpdatesXAmzTargetEnum: %v", v)
 	}
 }
 

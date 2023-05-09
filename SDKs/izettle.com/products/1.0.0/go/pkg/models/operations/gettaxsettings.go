@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetTaxSettingsSecurity struct {
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetTaxSettingsResponse struct {
 	ContentType string
 	StatusCode  int

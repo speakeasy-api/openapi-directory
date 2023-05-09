@@ -13,19 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/hubapi.com/communication-
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
     ctx := context.Background()
-    res, err := s.Definition.GetCommunicationPreferencesV3DefinitionsGetPage(ctx)
+    res, err := s.Definition.GetCommunicationPreferencesV3DefinitionsGetPage(ctx, operations.GetCommunicationPreferencesV3DefinitionsGetPageSecurity{
+        Hapikey: sdk.String("YOUR_API_KEY_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -41,15 +42,15 @@ func main() {
 ## Available Resources and Operations
 
 
-### Definition
+### [Definition](docs/definition/README.md)
 
-* `GetCommunicationPreferencesV3DefinitionsGetPage` - Get subscription definitions
+* [GetCommunicationPreferencesV3DefinitionsGetPage](docs/definition/README.md#getcommunicationpreferencesv3definitionsgetpage) - Get subscription definitions
 
-### Status
+### [Status](docs/status/README.md)
 
-* `GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatus` - Get subscription statuses for a contact
-* `PostCommunicationPreferencesV3SubscribeSubscribe` - Subscribe a contact
-* `PostCommunicationPreferencesV3UnsubscribeUnsubscribe` - Unsubscribe a contact
+* [GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatus](docs/status/README.md#getcommunicationpreferencesv3statusemailemailaddressgetemailstatus) - Get subscription statuses for a contact
+* [PostCommunicationPreferencesV3SubscribeSubscribe](docs/status/README.md#postcommunicationpreferencesv3subscribesubscribe) - Subscribe a contact
+* [PostCommunicationPreferencesV3UnsubscribeUnsubscribe](docs/status/README.md#postcommunicationpreferencesv3unsubscribeunsubscribe) - Unsubscribe a contact
 <!-- End SDK Available Operations -->
 
 ### Maturity

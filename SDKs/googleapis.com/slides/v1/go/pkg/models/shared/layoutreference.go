@@ -25,12 +25,16 @@ const (
 	LayoutReferencePredefinedLayoutEnumBigNumber                   LayoutReferencePredefinedLayoutEnum = "BIG_NUMBER"
 )
 
+func (e LayoutReferencePredefinedLayoutEnum) ToPointer() *LayoutReferencePredefinedLayoutEnum {
+	return &e
+}
+
 func (e *LayoutReferencePredefinedLayoutEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PREDEFINED_LAYOUT_UNSPECIFIED":
 		fallthrough
 	case "BLANK":
@@ -54,10 +58,10 @@ func (e *LayoutReferencePredefinedLayoutEnum) UnmarshalJSON(data []byte) error {
 	case "MAIN_POINT":
 		fallthrough
 	case "BIG_NUMBER":
-		*e = LayoutReferencePredefinedLayoutEnum(s)
+		*e = LayoutReferencePredefinedLayoutEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LayoutReferencePredefinedLayoutEnum: %s", s)
+		return fmt.Errorf("invalid value for LayoutReferencePredefinedLayoutEnum: %v", v)
 	}
 }
 

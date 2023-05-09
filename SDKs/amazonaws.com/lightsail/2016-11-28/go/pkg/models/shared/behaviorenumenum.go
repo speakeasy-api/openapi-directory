@@ -14,18 +14,22 @@ const (
 	BehaviorEnumEnumCache     BehaviorEnumEnum = "cache"
 )
 
+func (e BehaviorEnumEnum) ToPointer() *BehaviorEnumEnum {
+	return &e
+}
+
 func (e *BehaviorEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dont-cache":
 		fallthrough
 	case "cache":
-		*e = BehaviorEnumEnum(s)
+		*e = BehaviorEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BehaviorEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for BehaviorEnumEnum: %v", v)
 	}
 }

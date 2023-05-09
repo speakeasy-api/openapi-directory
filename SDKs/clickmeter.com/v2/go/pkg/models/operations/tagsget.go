@@ -19,12 +19,16 @@ const (
 	TagsGetTypeEnumGr TagsGetTypeEnum = "gr"
 )
 
+func (e TagsGetTypeEnum) ToPointer() *TagsGetTypeEnum {
+	return &e
+}
+
 func (e *TagsGetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tp":
 		fallthrough
 	case "tl":
@@ -32,10 +36,10 @@ func (e *TagsGetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "dp":
 		fallthrough
 	case "gr":
-		*e = TagsGetTypeEnum(s)
+		*e = TagsGetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagsGetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TagsGetTypeEnum: %v", v)
 	}
 }
 

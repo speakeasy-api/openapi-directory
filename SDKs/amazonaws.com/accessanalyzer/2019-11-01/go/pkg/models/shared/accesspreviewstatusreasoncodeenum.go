@@ -14,18 +14,22 @@ const (
 	AccessPreviewStatusReasonCodeEnumInvalidConfiguration AccessPreviewStatusReasonCodeEnum = "INVALID_CONFIGURATION"
 )
 
+func (e AccessPreviewStatusReasonCodeEnum) ToPointer() *AccessPreviewStatusReasonCodeEnum {
+	return &e
+}
+
 func (e *AccessPreviewStatusReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_ERROR":
 		fallthrough
 	case "INVALID_CONFIGURATION":
-		*e = AccessPreviewStatusReasonCodeEnum(s)
+		*e = AccessPreviewStatusReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessPreviewStatusReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessPreviewStatusReasonCodeEnum: %v", v)
 	}
 }

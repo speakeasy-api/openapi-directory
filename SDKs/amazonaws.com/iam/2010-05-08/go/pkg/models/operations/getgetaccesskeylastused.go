@@ -15,17 +15,21 @@ const (
 	GETGETAccessKeyLastUsedActionEnumGetAccessKeyLastUsed GETGETAccessKeyLastUsedActionEnum = "GetAccessKeyLastUsed"
 )
 
+func (e GETGETAccessKeyLastUsedActionEnum) ToPointer() *GETGETAccessKeyLastUsedActionEnum {
+	return &e
+}
+
 func (e *GETGETAccessKeyLastUsedActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAccessKeyLastUsed":
-		*e = GETGETAccessKeyLastUsedActionEnum(s)
+		*e = GETGETAccessKeyLastUsedActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAccessKeyLastUsedActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAccessKeyLastUsedActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETAccessKeyLastUsedVersionEnumTwoThousandAndTen0508 GETGETAccessKeyLastUsedVersionEnum = "2010-05-08"
 )
 
+func (e GETGETAccessKeyLastUsedVersionEnum) ToPointer() *GETGETAccessKeyLastUsedVersionEnum {
+	return &e
+}
+
 func (e *GETGETAccessKeyLastUsedVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETGETAccessKeyLastUsedVersionEnum(s)
+		*e = GETGETAccessKeyLastUsedVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAccessKeyLastUsedVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAccessKeyLastUsedVersionEnum: %v", v)
 	}
 }
 

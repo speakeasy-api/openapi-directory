@@ -15,17 +15,21 @@ const (
 	POSTAuthorizeDBSecurityGroupIngressActionEnumAuthorizeDbSecurityGroupIngress POSTAuthorizeDBSecurityGroupIngressActionEnum = "AuthorizeDBSecurityGroupIngress"
 )
 
+func (e POSTAuthorizeDBSecurityGroupIngressActionEnum) ToPointer() *POSTAuthorizeDBSecurityGroupIngressActionEnum {
+	return &e
+}
+
 func (e *POSTAuthorizeDBSecurityGroupIngressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AuthorizeDBSecurityGroupIngress":
-		*e = POSTAuthorizeDBSecurityGroupIngressActionEnum(s)
+		*e = POSTAuthorizeDBSecurityGroupIngressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAuthorizeDBSecurityGroupIngressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAuthorizeDBSecurityGroupIngressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAuthorizeDBSecurityGroupIngressVersionEnumTwoThousandAndThirteen0909 POSTAuthorizeDBSecurityGroupIngressVersionEnum = "2013-09-09"
 )
 
+func (e POSTAuthorizeDBSecurityGroupIngressVersionEnum) ToPointer() *POSTAuthorizeDBSecurityGroupIngressVersionEnum {
+	return &e
+}
+
 func (e *POSTAuthorizeDBSecurityGroupIngressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-09-09":
-		*e = POSTAuthorizeDBSecurityGroupIngressVersionEnum(s)
+		*e = POSTAuthorizeDBSecurityGroupIngressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAuthorizeDBSecurityGroupIngressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAuthorizeDBSecurityGroupIngressVersionEnum: %v", v)
 	}
 }
 

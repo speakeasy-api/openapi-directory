@@ -27,12 +27,16 @@ const (
 	IssuesListFilterEnumAll        IssuesListFilterEnum = "all"
 )
 
+func (e IssuesListFilterEnum) ToPointer() *IssuesListFilterEnum {
+	return &e
+}
+
 func (e *IssuesListFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "assigned":
 		fallthrough
 	case "created":
@@ -44,10 +48,10 @@ func (e *IssuesListFilterEnum) UnmarshalJSON(data []byte) error {
 	case "repos":
 		fallthrough
 	case "all":
-		*e = IssuesListFilterEnum(s)
+		*e = IssuesListFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListFilterEnum: %v", v)
 	}
 }
 
@@ -60,21 +64,25 @@ const (
 	IssuesListSortEnumComments IssuesListSortEnum = "comments"
 )
 
+func (e IssuesListSortEnum) ToPointer() *IssuesListSortEnum {
+	return &e
+}
+
 func (e *IssuesListSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
 		fallthrough
 	case "comments":
-		*e = IssuesListSortEnum(s)
+		*e = IssuesListSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListSortEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListSortEnum: %v", v)
 	}
 }
 
@@ -87,21 +95,25 @@ const (
 	IssuesListStateEnumAll    IssuesListStateEnum = "all"
 )
 
+func (e IssuesListStateEnum) ToPointer() *IssuesListStateEnum {
+	return &e
+}
+
 func (e *IssuesListStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "all":
-		*e = IssuesListStateEnum(s)
+		*e = IssuesListStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListStateEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListStateEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ListPoliciesXAmzTargetEnumAwsOrganizationsV20161128ListPolicies ListPoliciesXAmzTargetEnum = "AWSOrganizationsV20161128.ListPolicies"
 )
 
+func (e ListPoliciesXAmzTargetEnum) ToPointer() *ListPoliciesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListPoliciesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.ListPolicies":
-		*e = ListPoliciesXAmzTargetEnum(s)
+		*e = ListPoliciesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPoliciesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPoliciesXAmzTargetEnum: %v", v)
 	}
 }
 

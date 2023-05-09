@@ -16,17 +16,21 @@ const (
 	DescribeReservedNodesXAmzTargetEnumAmazonMemoryDbDescribeReservedNodes DescribeReservedNodesXAmzTargetEnum = "AmazonMemoryDB.DescribeReservedNodes"
 )
 
+func (e DescribeReservedNodesXAmzTargetEnum) ToPointer() *DescribeReservedNodesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeReservedNodesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.DescribeReservedNodes":
-		*e = DescribeReservedNodesXAmzTargetEnum(s)
+		*e = DescribeReservedNodesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedNodesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedNodesXAmzTargetEnum: %v", v)
 	}
 }
 

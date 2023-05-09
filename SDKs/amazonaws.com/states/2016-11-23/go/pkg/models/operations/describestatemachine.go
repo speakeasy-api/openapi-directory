@@ -16,17 +16,21 @@ const (
 	DescribeStateMachineXAmzTargetEnumAwsStepFunctionsDescribeStateMachine DescribeStateMachineXAmzTargetEnum = "AWSStepFunctions.DescribeStateMachine"
 )
 
+func (e DescribeStateMachineXAmzTargetEnum) ToPointer() *DescribeStateMachineXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeStateMachineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSStepFunctions.DescribeStateMachine":
-		*e = DescribeStateMachineXAmzTargetEnum(s)
+		*e = DescribeStateMachineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeStateMachineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeStateMachineXAmzTargetEnum: %v", v)
 	}
 }
 

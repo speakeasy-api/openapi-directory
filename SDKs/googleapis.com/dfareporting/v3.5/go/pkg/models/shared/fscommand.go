@@ -15,19 +15,23 @@ const (
 	FsCommandPositionOptionEnumDistanceFromTopLeftCorner FsCommandPositionOptionEnum = "DISTANCE_FROM_TOP_LEFT_CORNER"
 )
 
+func (e FsCommandPositionOptionEnum) ToPointer() *FsCommandPositionOptionEnum {
+	return &e
+}
+
 func (e *FsCommandPositionOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CENTERED":
 		fallthrough
 	case "DISTANCE_FROM_TOP_LEFT_CORNER":
-		*e = FsCommandPositionOptionEnum(s)
+		*e = FsCommandPositionOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FsCommandPositionOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FsCommandPositionOptionEnum: %v", v)
 	}
 }
 

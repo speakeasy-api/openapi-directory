@@ -15,20 +15,24 @@ const (
 	RecommendationComplianceStatusEnumMetCanImprove        RecommendationComplianceStatusEnum = "MetCanImprove"
 )
 
+func (e RecommendationComplianceStatusEnum) ToPointer() *RecommendationComplianceStatusEnum {
+	return &e
+}
+
 func (e *RecommendationComplianceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BreachedUnattainable":
 		fallthrough
 	case "BreachedCanMeet":
 		fallthrough
 	case "MetCanImprove":
-		*e = RecommendationComplianceStatusEnum(s)
+		*e = RecommendationComplianceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecommendationComplianceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RecommendationComplianceStatusEnum: %v", v)
 	}
 }

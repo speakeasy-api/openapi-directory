@@ -34,7 +34,10 @@ func newProperties(defaultClient, securityClient HTTPClient, serverURL, language
 // DrivePropertiesDelete - Deletes a property.
 func (s *properties) DrivePropertiesDelete(ctx context.Context, request operations.DrivePropertiesDeleteRequest, security operations.DrivePropertiesDeleteSecurity) (*operations.DrivePropertiesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *properties) DrivePropertiesDelete(ctx context.Context, request operatio
 // DrivePropertiesGet - Gets a property by its key.
 func (s *properties) DrivePropertiesGet(ctx context.Context, request operations.DrivePropertiesGetRequest, security operations.DrivePropertiesGetSecurity) (*operations.DrivePropertiesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *properties) DrivePropertiesGet(ctx context.Context, request operations.
 // DrivePropertiesInsert - Adds a property to a file, or updates it if it already exists.
 func (s *properties) DrivePropertiesInsert(ctx context.Context, request operations.DrivePropertiesInsertRequest, security operations.DrivePropertiesInsertSecurity) (*operations.DrivePropertiesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Property", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *properties) DrivePropertiesInsert(ctx context.Context, request operatio
 // DrivePropertiesList - Lists a file's properties.
 func (s *properties) DrivePropertiesList(ctx context.Context, request operations.DrivePropertiesListRequest, security operations.DrivePropertiesListSecurity) (*operations.DrivePropertiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *properties) DrivePropertiesList(ctx context.Context, request operations
 // DrivePropertiesPatch - Updates a property.
 func (s *properties) DrivePropertiesPatch(ctx context.Context, request operations.DrivePropertiesPatchRequest, security operations.DrivePropertiesPatchSecurity) (*operations.DrivePropertiesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Property", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *properties) DrivePropertiesPatch(ctx context.Context, request operation
 // DrivePropertiesUpdate - Updates a property.
 func (s *properties) DrivePropertiesUpdate(ctx context.Context, request operations.DrivePropertiesUpdateRequest, security operations.DrivePropertiesUpdateSecurity) (*operations.DrivePropertiesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/properties/{propertyKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Property", "json")
 	if err != nil {

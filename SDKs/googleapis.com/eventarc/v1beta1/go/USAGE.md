@@ -2,37 +2,35 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.EventarcProjectsLocationsListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Filter: "nulla",
-        Key: "corrupti",
-        Name: "illum",
-        OauthToken: "vel",
-        PageSize: 623564,
-        PageToken: "deserunt",
-        PrettyPrint: false,
-        QuotaUser: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.EventarcProjectsLocationsList(ctx, req, operations.EventarcProjectsLocationsListSecurity{
+    res, err := s.Projects.EventarcProjectsLocationsList(ctx, operations.EventarcProjectsLocationsListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Filter: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        Name: "Ben Mueller",
+        OauthToken: sdk.String("iure"),
+        PageSize: sdk.Int64(297534),
+        PageToken: sdk.String("debitis"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("ipsa"),
+        UploadType: sdk.String("delectus"),
+        UploadProtocol: sdk.String("tempora"),
+    }, operations.EventarcProjectsLocationsListSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

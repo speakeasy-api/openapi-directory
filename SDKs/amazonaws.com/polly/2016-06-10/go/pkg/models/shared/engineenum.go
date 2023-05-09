@@ -14,18 +14,22 @@ const (
 	EngineEnumNeural   EngineEnum = "neural"
 )
 
+func (e EngineEnum) ToPointer() *EngineEnum {
+	return &e
+}
+
 func (e *EngineEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "neural":
-		*e = EngineEnum(s)
+		*e = EngineEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EngineEnum: %s", s)
+		return fmt.Errorf("invalid value for EngineEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	PageTemplateEnumJSON             PageTemplateEnum = "json"
 )
 
+func (e PageTemplateEnum) ToPointer() *PageTemplateEnum {
+	return &e
+}
+
 func (e *PageTemplateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "contained":
 		fallthrough
 	case "full_within_layout":
@@ -30,10 +34,10 @@ func (e *PageTemplateEnum) UnmarshalJSON(data []byte) error {
 	case "nav_bar_included":
 		fallthrough
 	case "json":
-		*e = PageTemplateEnum(s)
+		*e = PageTemplateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PageTemplateEnum: %s", s)
+		return fmt.Errorf("invalid value for PageTemplateEnum: %v", v)
 	}
 }
 

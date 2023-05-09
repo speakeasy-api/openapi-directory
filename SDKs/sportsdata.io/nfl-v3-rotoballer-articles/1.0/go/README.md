@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/nfl-v3-roto
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.RotoballerArticlesRequest{
-        Format: "json",
-    }
-
     ctx := context.Background()
-    res, err := s.RotoballerArticles(ctx, req)
+    res, err := s.RotoballerArticles(ctx, operations.RotoballerArticlesRequest{
+        Format: operations.RotoballerArticlesFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,11 +45,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `RotoballerArticles` - RotoBaller Articles
-* `RotoballerArticlesByDate` - RotoBaller Articles by Date
-* `RotoballerArticlesByPlayer` - RotoBaller Articles by Player
+* [RotoballerArticles](docs/sdk/README.md#rotoballerarticles) - RotoBaller Articles
+* [RotoballerArticlesByDate](docs/sdk/README.md#rotoballerarticlesbydate) - RotoBaller Articles by Date
+* [RotoballerArticlesByPlayer](docs/sdk/README.md#rotoballerarticlesbyplayer) - RotoBaller Articles by Player
 <!-- End SDK Available Operations -->
 
 ### Maturity

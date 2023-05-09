@@ -16,21 +16,25 @@ const (
 	GooglePrivacyDlpV2SummaryResultCodeEnumError                               GooglePrivacyDlpV2SummaryResultCodeEnum = "ERROR"
 )
 
+func (e GooglePrivacyDlpV2SummaryResultCodeEnum) ToPointer() *GooglePrivacyDlpV2SummaryResultCodeEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2SummaryResultCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRANSFORMATION_RESULT_CODE_UNSPECIFIED":
 		fallthrough
 	case "SUCCESS":
 		fallthrough
 	case "ERROR":
-		*e = GooglePrivacyDlpV2SummaryResultCodeEnum(s)
+		*e = GooglePrivacyDlpV2SummaryResultCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2SummaryResultCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2SummaryResultCodeEnum: %v", v)
 	}
 }
 

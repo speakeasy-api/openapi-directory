@@ -74,12 +74,16 @@ const (
 	ErrorCategoryHTTPStatusEnumNetworkAuthenticationRequired ErrorCategoryHTTPStatusEnum = "NETWORK_AUTHENTICATION_REQUIRED"
 )
 
+func (e ErrorCategoryHTTPStatusEnum) ToPointer() *ErrorCategoryHTTPStatusEnum {
+	return &e
+}
+
 func (e *ErrorCategoryHTTPStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTINUE":
 		fallthrough
 	case "SWITCHING_PROTOCOLS":
@@ -203,10 +207,10 @@ func (e *ErrorCategoryHTTPStatusEnum) UnmarshalJSON(data []byte) error {
 	case "NOT_EXTENDED":
 		fallthrough
 	case "NETWORK_AUTHENTICATION_REQUIRED":
-		*e = ErrorCategoryHTTPStatusEnum(s)
+		*e = ErrorCategoryHTTPStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorCategoryHTTPStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorCategoryHTTPStatusEnum: %v", v)
 	}
 }
 

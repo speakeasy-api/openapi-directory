@@ -15,17 +15,21 @@ const (
 	GETReleaseIpamPoolAllocationActionEnumReleaseIpamPoolAllocation GETReleaseIpamPoolAllocationActionEnum = "ReleaseIpamPoolAllocation"
 )
 
+func (e GETReleaseIpamPoolAllocationActionEnum) ToPointer() *GETReleaseIpamPoolAllocationActionEnum {
+	return &e
+}
+
 func (e *GETReleaseIpamPoolAllocationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReleaseIpamPoolAllocation":
-		*e = GETReleaseIpamPoolAllocationActionEnum(s)
+		*e = GETReleaseIpamPoolAllocationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReleaseIpamPoolAllocationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReleaseIpamPoolAllocationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETReleaseIpamPoolAllocationVersionEnumTwoThousandAndSixteen1115 GETReleaseIpamPoolAllocationVersionEnum = "2016-11-15"
 )
 
+func (e GETReleaseIpamPoolAllocationVersionEnum) ToPointer() *GETReleaseIpamPoolAllocationVersionEnum {
+	return &e
+}
+
 func (e *GETReleaseIpamPoolAllocationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETReleaseIpamPoolAllocationVersionEnum(s)
+		*e = GETReleaseIpamPoolAllocationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReleaseIpamPoolAllocationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReleaseIpamPoolAllocationVersionEnum: %v", v)
 	}
 }
 

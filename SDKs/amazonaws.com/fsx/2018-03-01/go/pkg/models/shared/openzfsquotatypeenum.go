@@ -14,18 +14,22 @@ const (
 	OpenZFSQuotaTypeEnumGroup OpenZFSQuotaTypeEnum = "GROUP"
 )
 
+func (e OpenZFSQuotaTypeEnum) ToPointer() *OpenZFSQuotaTypeEnum {
+	return &e
+}
+
 func (e *OpenZFSQuotaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER":
 		fallthrough
 	case "GROUP":
-		*e = OpenZFSQuotaTypeEnum(s)
+		*e = OpenZFSQuotaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpenZFSQuotaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OpenZFSQuotaTypeEnum: %v", v)
 	}
 }

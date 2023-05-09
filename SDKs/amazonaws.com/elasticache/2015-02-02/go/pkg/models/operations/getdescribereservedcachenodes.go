@@ -15,17 +15,21 @@ const (
 	GETDescribeReservedCacheNodesActionEnumDescribeReservedCacheNodes GETDescribeReservedCacheNodesActionEnum = "DescribeReservedCacheNodes"
 )
 
+func (e GETDescribeReservedCacheNodesActionEnum) ToPointer() *GETDescribeReservedCacheNodesActionEnum {
+	return &e
+}
+
 func (e *GETDescribeReservedCacheNodesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeReservedCacheNodes":
-		*e = GETDescribeReservedCacheNodesActionEnum(s)
+		*e = GETDescribeReservedCacheNodesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeReservedCacheNodesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeReservedCacheNodesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeReservedCacheNodesVersionEnumTwoThousandAndFifteen0202 GETDescribeReservedCacheNodesVersionEnum = "2015-02-02"
 )
 
+func (e GETDescribeReservedCacheNodesVersionEnum) ToPointer() *GETDescribeReservedCacheNodesVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeReservedCacheNodesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = GETDescribeReservedCacheNodesVersionEnum(s)
+		*e = GETDescribeReservedCacheNodesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeReservedCacheNodesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeReservedCacheNodesVersionEnum: %v", v)
 	}
 }
 

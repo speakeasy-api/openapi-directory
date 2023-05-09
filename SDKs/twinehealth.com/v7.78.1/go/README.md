@@ -13,55 +13,55 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/twinehealth.com/v7.78.1/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.CreateActionRequestInput{
+    ctx := context.Background()
+    res, err := s.Action.CreateAction(ctx, shared.CreateActionRequestInput{
         Data: shared.ActionResourceInput{
             Attributes: &shared.ActionResourceAttributesInput{
-                Thread: "corrupti",
+                Thread: sdk.String("corrupti"),
                 Details: map[string]interface{}{
                     "distinctio": "quibusdam",
                     "unde": "nulla",
                     "corrupti": "illum",
                 },
                 EffectiveFrom: "vel",
-                EffectiveTo: "error",
+                EffectiveTo: sdk.String("error"),
                 FrequencyGoal: &shared.ActionResourceAttributesFrequencyGoal{
                     Weeks: &shared.ActionResourceAttributesFrequencyGoalWeeks{
                         Days: []shared.ActionResourceAttributesFrequencyGoalWeeksDaysEnum{
-                            "2",
-                            "3",
-                            "2",
+                            shared.ActionResourceAttributesFrequencyGoalWeeksDaysEnumTwo,
+                            shared.ActionResourceAttributesFrequencyGoalWeeksDaysEnumThree,
+                            shared.ActionResourceAttributesFrequencyGoalWeeksDaysEnumTwo,
                         },
                     },
                 },
                 Identifiers: []shared.Identifier{
                     shared.Identifier{
-                        Label: "ipsa",
+                        Label: sdk.String("ipsa"),
                         System: "delectus",
                         Value: "tempora",
                     },
                     shared.Identifier{
-                        Label: "suscipit",
+                        Label: sdk.String("suscipit"),
                         System: "molestiae",
                         Value: "minus",
                     },
                     shared.Identifier{
-                        Label: "placeat",
+                        Label: sdk.String("placeat"),
                         System: "voluptatum",
                         Value: "iusto",
                     },
                     shared.Identifier{
-                        Label: "excepturi",
+                        Label: sdk.String("excepturi"),
                         System: "nisi",
                         Value: "recusandae",
                     },
@@ -72,22 +72,22 @@ func main() {
                     "perferendis": "ipsam",
                     "repellendus": "sapiente",
                 },
-                MetricRequired: false,
+                MetricRequired: sdk.Bool(false),
                 Metrics: []shared.ActionMetric{
                     shared.ActionMetric{
                         Goal: map[string]interface{}{
                             "at": "at",
                         },
-                        MetricType: "maiores",
-                        Unit: "molestiae",
+                        MetricType: sdk.String("maiores"),
+                        Unit: sdk.String("molestiae"),
                         Validations: &shared.ActionMetricValidations{
                             Maximum: &shared.ActionMetricValidationsMaximum{
-                                Unit: "quod",
-                                Value: 8009.11,
+                                Unit: sdk.String("quod"),
+                                Value: sdk.Float64(8009.11),
                             },
                             Minimum: &shared.ActionMetricValidationsMinimum{
-                                Unit: "esse",
-                                Value: 5204.78,
+                                Unit: sdk.String("esse"),
+                                Value: sdk.Float64(5204.78),
                             },
                         },
                     },
@@ -98,16 +98,16 @@ func main() {
                             "occaecati": "fugit",
                             "deleniti": "hic",
                         },
-                        MetricType: "optio",
-                        Unit: "totam",
+                        MetricType: sdk.String("optio"),
+                        Unit: sdk.String("totam"),
                         Validations: &shared.ActionMetricValidations{
                             Maximum: &shared.ActionMetricValidationsMaximum{
-                                Unit: "beatae",
-                                Value: 4146.62,
+                                Unit: sdk.String("beatae"),
+                                Value: sdk.Float64(4146.62),
                             },
                             Minimum: &shared.ActionMetricValidationsMinimum{
-                                Unit: "molestiae",
-                                Value: 2645.55,
+                                Unit: sdk.String("molestiae"),
+                                Value: sdk.Float64(2645.55),
                             },
                         },
                     },
@@ -115,16 +115,16 @@ func main() {
                         Goal: map[string]interface{}{
                             "impedit": "cum",
                         },
-                        MetricType: "esse",
-                        Unit: "ipsum",
+                        MetricType: sdk.String("esse"),
+                        Unit: sdk.String("ipsum"),
                         Validations: &shared.ActionMetricValidations{
                             Maximum: &shared.ActionMetricValidationsMaximum{
-                                Unit: "excepturi",
-                                Value: 1352.18,
+                                Unit: sdk.String("excepturi"),
+                                Value: sdk.Float64(1352.18),
                             },
                             Minimum: &shared.ActionMetricValidationsMinimum{
-                                Unit: "perferendis",
-                                Value: 3241.41,
+                                Unit: sdk.String("perferendis"),
+                                Value: sdk.Float64(3241.41),
                             },
                         },
                     },
@@ -134,61 +134,57 @@ func main() {
                             "dolor": "natus",
                             "laboriosam": "hic",
                         },
-                        MetricType: "saepe",
-                        Unit: "fuga",
+                        MetricType: sdk.String("saepe"),
+                        Unit: sdk.String("fuga"),
                         Validations: &shared.ActionMetricValidations{
                             Maximum: &shared.ActionMetricValidationsMaximum{
-                                Unit: "in",
-                                Value: 3595.08,
+                                Unit: sdk.String("in"),
+                                Value: sdk.Float64(3595.08),
                             },
                             Minimum: &shared.ActionMetricValidationsMinimum{
-                                Unit: "iste",
-                                Value: 4370.32,
+                                Unit: sdk.String("iste"),
+                                Value: sdk.Float64(4370.32),
                             },
                         },
                     },
                 },
                 Title: "Dr.",
-                Tracking: false,
-                Type: "other_lifestyle",
+                Tracking: sdk.Bool(false),
+                Type: shared.ActionResourceAttributesTypeEnumOtherLifestyle,
                 Windows: []shared.ActionWindow{
                     shared.ActionWindow{
-                        ID: "architecto",
-                        Title: "Mr.",
-                        Type: "reiciendis",
+                        ID: sdk.String("10faaa23-52c5-4955-907a-ff1a3a2fa946"),
+                        Title: sdk.String("Ms."),
+                        Type: "molestiae",
                     },
                     shared.ActionWindow{
-                        ID: "est",
-                        Title: "Miss",
-                        Type: "laborum",
+                        ID: sdk.String("39251aa5-2c3f-45ad-819d-a1ffe78f097b"),
+                        Title: sdk.String("Mr."),
+                        Type: "doloremque",
                     },
                     shared.ActionWindow{
-                        ID: "dolores",
-                        Title: "Mrs.",
-                        Type: "corporis",
+                        ID: sdk.String("74f15471-b5e6-4e13-b99d-488e1e91e450"),
+                        Title: sdk.String("Miss"),
+                        Type: "quibusdam",
                     },
                 },
             },
-            ID: "explicabo",
+            ID: "2abd4426-9802-4d50-aa94-bb4f63c969e9",
             Relationships: &shared.ActionResourceRelationships{
                 Plan: &shared.ActionResourceRelationshipsPlan{
                     Data: &shared.ActionResourceRelationshipsPlanData{
-                        ID: "nobis",
-                        Type: "enim",
+                        ID: sdk.String("a3efa77d-fb14-4cd6-aae3-95efb9ba88f3"),
+                        Type: sdk.String("deserunt"),
                     },
                     Links: map[string]interface{}{
-                        "nemo": "minima",
-                        "excepturi": "accusantium",
-                        "iure": "culpa",
+                        "vel": "natus",
+                        "omnis": "molestiae",
                     },
                 },
             },
-            Type: "doloribus",
+            Type: "perferendis",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.Action.CreateAction(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -204,133 +200,133 @@ func main() {
 ## Available Resources and Operations
 
 
-### Action
+### [Action](docs/action/README.md)
 
-* `CreateAction` - Create action
-* `FetchAction` - Get an action
-* `UpdateAction` - Update an action
+* [CreateAction](docs/action/README.md#createaction) - Create action
+* [FetchAction](docs/action/README.md#fetchaction) - Get an action
+* [UpdateAction](docs/action/README.md#updateaction) - Update an action
 
-### Bundle
+### [Bundle](docs/bundle/README.md)
 
-* `CreateBundle` - Create bundle
-* `FetchBundle` - Get a bundle
-* `UpdateBundle` - Update a bundle
+* [CreateBundle](docs/bundle/README.md#createbundle) - Create bundle
+* [FetchBundle](docs/bundle/README.md#fetchbundle) - Get a bundle
+* [UpdateBundle](docs/bundle/README.md#updatebundle) - Update a bundle
 
-### CalendarEvent
+### [CalendarEvent](docs/calendarevent/README.md)
 
-* `CreateCalendarEvent` - Create calendar event
-* `DeleteCalendarEvent` - Delete a calendar event
-* `FetchCalendarEvent` - Get a calendar event
-* `FetchCalendarEvents` - List calendar events
-* `UpdateCalendarEvent` - Update a calendar event
+* [CreateCalendarEvent](docs/calendarevent/README.md#createcalendarevent) - Create calendar event
+* [DeleteCalendarEvent](docs/calendarevent/README.md#deletecalendarevent) - Delete a calendar event
+* [FetchCalendarEvent](docs/calendarevent/README.md#fetchcalendarevent) - Get a calendar event
+* [FetchCalendarEvents](docs/calendarevent/README.md#fetchcalendarevents) - List calendar events
+* [UpdateCalendarEvent](docs/calendarevent/README.md#updatecalendarevent) - Update a calendar event
 
-### CalendarEventResponse
+### [CalendarEventResponse](docs/calendareventresponse/README.md)
 
-* `CreateCalendarEventResponse` - Create calendar event response
+* [CreateCalendarEventResponse](docs/calendareventresponse/README.md#createcalendareventresponse) - Create calendar event response
 
-### Coach
+### [Coach](docs/coach/README.md)
 
-* `FetchCoach` - Get a coach
-* `FetchCoaches` - List coaches
+* [FetchCoach](docs/coach/README.md#fetchcoach) - Get a coach
+* [FetchCoaches](docs/coach/README.md#fetchcoaches) - List coaches
 
-### EmailHistory
+### [EmailHistory](docs/emailhistory/README.md)
 
-* `FetchEmailHistories` - List email histories
-* `FetchEmailHistory` - Get an email history
+* [FetchEmailHistories](docs/emailhistory/README.md#fetchemailhistories) - List email histories
+* [FetchEmailHistory](docs/emailhistory/README.md#fetchemailhistory) - Get an email history
 
-### Group
+### [Group](docs/group/README.md)
 
-* `CreateGroup` - Create a group
-* `FetchGroup` - Get a group
-* `FetchGroups` - List groups
+* [CreateGroup](docs/group/README.md#creategroup) - Create a group
+* [FetchGroup](docs/group/README.md#fetchgroup) - Get a group
+* [FetchGroups](docs/group/README.md#fetchgroups) - List groups
 
-### HealthProfile
+### [HealthProfile](docs/healthprofile/README.md)
 
-* `FetchHealthProfile` - Get a health profile
-* `FetchHealthProfiles` - List health profiles
+* [FetchHealthProfile](docs/healthprofile/README.md#fetchhealthprofile) - Get a health profile
+* [FetchHealthProfiles](docs/healthprofile/README.md#fetchhealthprofiles) - List health profiles
 
-### HealthProfileAnswer
+### [HealthProfileAnswer](docs/healthprofileanswer/README.md)
 
-* `FetchHealthProfileAnswer` - Get a health profile answer
-* `FetchHealthProfileAnswers` - List health profile answers
+* [FetchHealthProfileAnswer](docs/healthprofileanswer/README.md#fetchhealthprofileanswer) - Get a health profile answer
+* [FetchHealthProfileAnswers](docs/healthprofileanswer/README.md#fetchhealthprofileanswers) - List health profile answers
 
-### HealthProfileQuestion
+### [HealthProfileQuestion](docs/healthprofilequestion/README.md)
 
-* `FetchHealthProfileQuestion` - Get a health profile question
-* `FetchHealthProfileQuestions` - List health profile questions
+* [FetchHealthProfileQuestion](docs/healthprofilequestion/README.md#fetchhealthprofilequestion) - Get a health profile question
+* [FetchHealthProfileQuestions](docs/healthprofilequestion/README.md#fetchhealthprofilequestions) - List health profile questions
 
-### HealthQuestionDefinition
+### [HealthQuestionDefinition](docs/healthquestiondefinition/README.md)
 
-* `FetchHealthQuestionDefinition` - Get a health question definition
-* `FetchHealthQuestionDefinitions` - List health question definitions
+* [FetchHealthQuestionDefinition](docs/healthquestiondefinition/README.md#fetchhealthquestiondefinition) - Get a health question definition
+* [FetchHealthQuestionDefinitions](docs/healthquestiondefinition/README.md#fetchhealthquestiondefinitions) - List health question definitions
 
-### Metric
+### [Metric](docs/metric/README.md)
 
-* `CreatePatientHealthMetric` - Create patient health metrics
-* `FetchPatientHealthMetric` - Get a patient health metric
-* `FetchPatientHealthMetrics` - List patient health metrics
+* [CreatePatientHealthMetric](docs/metric/README.md#createpatienthealthmetric) - Create patient health metrics
+* [FetchPatientHealthMetric](docs/metric/README.md#fetchpatienthealthmetric) - Get a patient health metric
+* [FetchPatientHealthMetrics](docs/metric/README.md#fetchpatienthealthmetrics) - List patient health metrics
 
-### Oauth
+### [Oauth](docs/oauth/README.md)
 
-* `CreateToken` - Create an oauth token
-* `FetchTokenGroups` - Get the groups for a token
-* `FetchTokenOrganization` - Get the organization for a token
+* [CreateToken](docs/oauth/README.md#createtoken) - Create an oauth token
+* [FetchTokenGroups](docs/oauth/README.md#fetchtokengroups) - Get the groups for a token
+* [FetchTokenOrganization](docs/oauth/README.md#fetchtokenorganization) - Get the organization for a token
 
-### Organization
+### [Organization](docs/organization/README.md)
 
-* `FetchOrganization` - Get an organization
+* [FetchOrganization](docs/organization/README.md#fetchorganization) - Get an organization
 
-### Patient
+### [Patient](docs/patient/README.md)
 
-* `CreatePatient` - Create a patient
-* `FetchPatient` - Get a patient
-* `FetchPatientCoaches` - List coaches for a patient
-* `FetchPatientGroups` - List groups for a patient
-* `FetchPatients` - List patients
-* `UpdatePatient` - Update a patient
-* `UpsertPatient` - Upsert patient
+* [CreatePatient](docs/patient/README.md#createpatient) - Create a patient
+* [FetchPatient](docs/patient/README.md#fetchpatient) - Get a patient
+* [FetchPatientCoaches](docs/patient/README.md#fetchpatientcoaches) - List coaches for a patient
+* [FetchPatientGroups](docs/patient/README.md#fetchpatientgroups) - List groups for a patient
+* [FetchPatients](docs/patient/README.md#fetchpatients) - List patients
+* [UpdatePatient](docs/patient/README.md#updatepatient) - Update a patient
+* [UpsertPatient](docs/patient/README.md#upsertpatient) - Upsert patient
 
-### Plan
+### [Plan](docs/plan/README.md)
 
-* `FetchPatientPlanSummaries` - List patient plan summaries
-* `FetchPatientPlanSummary` - Get the plan summary for a patient
-* `UpdatePatientPlanSummary` - Update a plan summary
+* [FetchPatientPlanSummaries](docs/plan/README.md#fetchpatientplansummaries) - List patient plan summaries
+* [FetchPatientPlanSummary](docs/plan/README.md#fetchpatientplansummary) - Get the plan summary for a patient
+* [UpdatePatientPlanSummary](docs/plan/README.md#updatepatientplansummary) - Update a plan summary
 
-### Result
+### [Result](docs/result/README.md)
 
-* `FetchPatientHealthResult` - Get a patient health result
-* `FetchPatientHealthResults` - List patient health results
+* [FetchPatientHealthResult](docs/result/README.md#fetchpatienthealthresult) - Get a patient health result
+* [FetchPatientHealthResults](docs/result/README.md#fetchpatienthealthresults) - List patient health results
 
-### Reward
+### [Reward](docs/reward/README.md)
 
-* `CreateReward` - Create a reward
-* `FetchReward` - Get a reward
-* `FetchRewards` - List rewards
+* [CreateReward](docs/reward/README.md#createreward) - Create a reward
+* [FetchReward](docs/reward/README.md#fetchreward) - Get a reward
+* [FetchRewards](docs/reward/README.md#fetchrewards) - List rewards
 
-### RewardEarning
+### [RewardEarning](docs/rewardearning/README.md)
 
-* `CreateRewardEarning` - Create a reward earning
-* `FetchRewardEarning` - Get a reward earning
-* `FetchRewardEarnings` - List reward earnings
+* [CreateRewardEarning](docs/rewardearning/README.md#createrewardearning) - Create a reward earning
+* [FetchRewardEarning](docs/rewardearning/README.md#fetchrewardearning) - Get a reward earning
+* [FetchRewardEarnings](docs/rewardearning/README.md#fetchrewardearnings) - List reward earnings
 
-### RewardEarningFulfillment
+### [RewardEarningFulfillment](docs/rewardearningfulfillment/README.md)
 
-* `CreateRewardEarningFulfillment` - Create a reward earning fulfillment
-* `FetchRewardEarningFulfillment` - Get a reward earning fulfillment
-* `FetchRewardEarningFulfillments` - List reward earning fulfillments
+* [CreateRewardEarningFulfillment](docs/rewardearningfulfillment/README.md#createrewardearningfulfillment) - Create a reward earning fulfillment
+* [FetchRewardEarningFulfillment](docs/rewardearningfulfillment/README.md#fetchrewardearningfulfillment) - Get a reward earning fulfillment
+* [FetchRewardEarningFulfillments](docs/rewardearningfulfillment/README.md#fetchrewardearningfulfillments) - List reward earning fulfillments
 
-### RewardProgram
+### [RewardProgram](docs/rewardprogram/README.md)
 
-* `CreateRewardProgram` - Create a reward program
-* `FetchRewardProgram` - Get a reward program
-* `FetchRewardProgramGroup` - Get group for a reward program
-* `FetchRewardPrograms` - List reward programs
+* [CreateRewardProgram](docs/rewardprogram/README.md#createrewardprogram) - Create a reward program
+* [FetchRewardProgram](docs/rewardprogram/README.md#fetchrewardprogram) - Get a reward program
+* [FetchRewardProgramGroup](docs/rewardprogram/README.md#fetchrewardprogramgroup) - Get group for a reward program
+* [FetchRewardPrograms](docs/rewardprogram/README.md#fetchrewardprograms) - List reward programs
 
-### RewardProgramActivation
+### [RewardProgramActivation](docs/rewardprogramactivation/README.md)
 
-* `CreateRewardProgramActivation` - Create a reward program activation
-* `FetchRewardProgramActivation` - Get a reward program activation
-* `FetchRewardProgramActivations` - List reward program activations
+* [CreateRewardProgramActivation](docs/rewardprogramactivation/README.md#createrewardprogramactivation) - Create a reward program activation
+* [FetchRewardProgramActivation](docs/rewardprogramactivation/README.md#fetchrewardprogramactivation) - Get a reward program activation
+* [FetchRewardProgramActivations](docs/rewardprogramactivation/README.md#fetchrewardprogramactivations) - List reward program activations
 <!-- End SDK Available Operations -->
 
 ### Maturity

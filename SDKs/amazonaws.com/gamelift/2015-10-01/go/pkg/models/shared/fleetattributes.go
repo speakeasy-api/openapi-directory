@@ -6,13 +6,13 @@ import (
 	"time"
 )
 
-// FleetAttributes - <p>Describes a GameLift fleet of game hosting resources.</p> <p> <b>Related actions</b> </p>
+// FleetAttributes - <p>Describes a Amazon GameLift fleet of game hosting resources.</p> <p> <b>Related actions</b> </p>
 type FleetAttributes struct {
-	// GameLift Anywhere configuration options for your Anywhere fleets.
+	// Amazon GameLift Anywhere configuration options for your Anywhere fleets.
 	AnywhereConfiguration *AnywhereConfiguration `json:"AnywhereConfiguration,omitempty"`
 	BuildArn              *string                `json:"BuildArn,omitempty"`
 	BuildID               *string                `json:"BuildId,omitempty"`
-	// Determines whether a TLS/SSL certificate is generated for a fleet. This feature must be enabled when creating the fleet. All instances in a fleet share the same certificate. The certificate can be retrieved by calling the <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk.html">GameLift Server SDK</a> operation <code>GetInstanceCertificate</code>.
+	// Determines whether a TLS/SSL certificate is generated for a fleet. This feature must be enabled when creating the fleet. All instances in a fleet share the same certificate. The certificate can be retrieved by calling the <a href="https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk.html">Amazon GameLift Server SDK</a> operation <code>GetInstanceCertificate</code>.
 	CertificateConfiguration       *CertificateConfiguration `json:"CertificateConfiguration,omitempty"`
 	ComputeType                    *ComputeTypeEnum          `json:"ComputeType,omitempty"`
 	CreationTime                   *time.Time                `json:"CreationTime,omitempty"`
@@ -27,7 +27,7 @@ type FleetAttributes struct {
 	Name                           *string                   `json:"Name,omitempty"`
 	NewGameSessionProtectionPolicy *ProtectionPolicyEnum     `json:"NewGameSessionProtectionPolicy,omitempty"`
 	OperatingSystem                *OperatingSystemEnum      `json:"OperatingSystem,omitempty"`
-	// <p>A policy that puts limits on the number of game sessions that a player can create within a specified span of time. With this policy, you can control players' ability to consume available resources.</p> <p>The policy is evaluated when a player tries to create a new game session. On receiving a <code>CreateGameSession</code> request, GameLift checks that the player (identified by <code>CreatorId</code>) has created fewer than game session limit in the specified time period.</p>
+	// <p>A policy that puts limits on the number of game sessions that a player can create within a specified span of time. With this policy, you can control players' ability to consume available resources.</p> <p>The policy is evaluated when a player tries to create a new game session. On receiving a <code>CreateGameSession</code> request, Amazon GameLift checks that the player (identified by <code>CreatorId</code>) has created fewer than game session limit in the specified time period.</p>
 	ResourceCreationLimitPolicy *ResourceCreationLimitPolicy `json:"ResourceCreationLimitPolicy,omitempty"`
 	ScriptArn                   *string                      `json:"ScriptArn,omitempty"`
 	ScriptID                    *string                      `json:"ScriptId,omitempty"`

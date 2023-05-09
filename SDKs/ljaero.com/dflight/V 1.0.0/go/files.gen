@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -93,4 +94,13 @@ pkg/models/shared/wxpolyresponse.go
 pkg/models/shared/wxbypolygon.go
 pkg/models/shared/wxrouteresponse.go
 pkg/models/shared/wxbyroute.go
+docs/sdk/README.md
+docs/aerodromes/README.md
+docs/airspace/README.md
+docs/flightrestrictions/README.md
+docs/restrictedpublicvenues/README.md
+docs/specialsecurityareas/README.md
+docs/surfaceobstacles/README.md
+docs/uasoperatingareas/README.md
+docs/weather/README.md
 USAGE.md

@@ -31,12 +31,16 @@ const (
 	AnalyticsListDevicePropertiesDefaultApplicationJSONErrorCodeEnumTooManyRequests     AnalyticsListDevicePropertiesDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AnalyticsListDevicePropertiesDefaultApplicationJSONErrorCodeEnum) ToPointer() *AnalyticsListDevicePropertiesDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AnalyticsListDevicePropertiesDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *AnalyticsListDevicePropertiesDefaultApplicationJSONErrorCodeEnum) Unmar
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AnalyticsListDevicePropertiesDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AnalyticsListDevicePropertiesDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsListDevicePropertiesDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsListDevicePropertiesDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -77,12 +81,16 @@ const (
 	AnalyticsListDeviceProperties200ApplicationJSONValuesEnumDateTime AnalyticsListDeviceProperties200ApplicationJSONValuesEnum = "date_time"
 )
 
+func (e AnalyticsListDeviceProperties200ApplicationJSONValuesEnum) ToPointer() *AnalyticsListDeviceProperties200ApplicationJSONValuesEnum {
+	return &e
+}
+
 func (e *AnalyticsListDeviceProperties200ApplicationJSONValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "string":
 		fallthrough
 	case "number":
@@ -90,10 +98,10 @@ func (e *AnalyticsListDeviceProperties200ApplicationJSONValuesEnum) UnmarshalJSO
 	case "boolean":
 		fallthrough
 	case "date_time":
-		*e = AnalyticsListDeviceProperties200ApplicationJSONValuesEnum(s)
+		*e = AnalyticsListDeviceProperties200ApplicationJSONValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsListDeviceProperties200ApplicationJSONValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsListDeviceProperties200ApplicationJSONValuesEnum: %v", v)
 	}
 }
 

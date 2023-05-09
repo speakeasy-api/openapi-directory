@@ -19,12 +19,16 @@ const (
 	DescribeVpcsResultVpcsCidrBlockAssociationSetCidrBlockStateStateEnumFailed         DescribeVpcsResultVpcsCidrBlockAssociationSetCidrBlockStateStateEnum = "failed"
 )
 
+func (e DescribeVpcsResultVpcsCidrBlockAssociationSetCidrBlockStateStateEnum) ToPointer() *DescribeVpcsResultVpcsCidrBlockAssociationSetCidrBlockStateStateEnum {
+	return &e
+}
+
 func (e *DescribeVpcsResultVpcsCidrBlockAssociationSetCidrBlockStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -36,10 +40,10 @@ func (e *DescribeVpcsResultVpcsCidrBlockAssociationSetCidrBlockStateStateEnum) U
 	case "failing":
 		fallthrough
 	case "failed":
-		*e = DescribeVpcsResultVpcsCidrBlockAssociationSetCidrBlockStateStateEnum(s)
+		*e = DescribeVpcsResultVpcsCidrBlockAssociationSetCidrBlockStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcsResultVpcsCidrBlockAssociationSetCidrBlockStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcsResultVpcsCidrBlockAssociationSetCidrBlockStateStateEnum: %v", v)
 	}
 }
 
@@ -65,21 +69,25 @@ const (
 	DescribeVpcsResultVpcsInstanceTenancyEnumHost      DescribeVpcsResultVpcsInstanceTenancyEnum = "host"
 )
 
+func (e DescribeVpcsResultVpcsInstanceTenancyEnum) ToPointer() *DescribeVpcsResultVpcsInstanceTenancyEnum {
+	return &e
+}
+
 func (e *DescribeVpcsResultVpcsInstanceTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = DescribeVpcsResultVpcsInstanceTenancyEnum(s)
+		*e = DescribeVpcsResultVpcsInstanceTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcsResultVpcsInstanceTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcsResultVpcsInstanceTenancyEnum: %v", v)
 	}
 }
 
@@ -95,12 +103,16 @@ const (
 	DescribeVpcsResultVpcsIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnumFailed         DescribeVpcsResultVpcsIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum = "failed"
 )
 
+func (e DescribeVpcsResultVpcsIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum) ToPointer() *DescribeVpcsResultVpcsIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum {
+	return &e
+}
+
 func (e *DescribeVpcsResultVpcsIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -112,10 +124,10 @@ func (e *DescribeVpcsResultVpcsIpv6CidrBlockAssociationSetIpv6CidrBlockStateStat
 	case "failing":
 		fallthrough
 	case "failed":
-		*e = DescribeVpcsResultVpcsIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum(s)
+		*e = DescribeVpcsResultVpcsIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcsResultVpcsIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcsResultVpcsIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum: %v", v)
 	}
 }
 
@@ -142,19 +154,23 @@ const (
 	DescribeVpcsResultVpcsStateEnumAvailable DescribeVpcsResultVpcsStateEnum = "available"
 )
 
+func (e DescribeVpcsResultVpcsStateEnum) ToPointer() *DescribeVpcsResultVpcsStateEnum {
+	return &e
+}
+
 func (e *DescribeVpcsResultVpcsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
-		*e = DescribeVpcsResultVpcsStateEnum(s)
+		*e = DescribeVpcsResultVpcsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcsResultVpcsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcsResultVpcsStateEnum: %v", v)
 	}
 }
 

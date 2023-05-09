@@ -17,12 +17,16 @@ const (
 	LivingAreaAccessibilityAdaCompliantUnitExceptionEnumDependentOnDayOfWeek LivingAreaAccessibilityAdaCompliantUnitExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaAccessibilityAdaCompliantUnitExceptionEnum) ToPointer() *LivingAreaAccessibilityAdaCompliantUnitExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaAccessibilityAdaCompliantUnitExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *LivingAreaAccessibilityAdaCompliantUnitExceptionEnum) UnmarshalJSON(dat
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaAccessibilityAdaCompliantUnitExceptionEnum(s)
+		*e = LivingAreaAccessibilityAdaCompliantUnitExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaAccessibilityAdaCompliantUnitExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaAccessibilityAdaCompliantUnitExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	LivingAreaAccessibilityHearingAccessibleDoorbellExceptionEnumDependentOnDayOfWeek LivingAreaAccessibilityHearingAccessibleDoorbellExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaAccessibilityHearingAccessibleDoorbellExceptionEnum) ToPointer() *LivingAreaAccessibilityHearingAccessibleDoorbellExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaAccessibilityHearingAccessibleDoorbellExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *LivingAreaAccessibilityHearingAccessibleDoorbellExceptionEnum) Unmarsha
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaAccessibilityHearingAccessibleDoorbellExceptionEnum(s)
+		*e = LivingAreaAccessibilityHearingAccessibleDoorbellExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaAccessibilityHearingAccessibleDoorbellExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaAccessibilityHearingAccessibleDoorbellExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	LivingAreaAccessibilityHearingAccessibleFireAlarmExceptionEnumDependentOnDayOfWeek LivingAreaAccessibilityHearingAccessibleFireAlarmExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaAccessibilityHearingAccessibleFireAlarmExceptionEnum) ToPointer() *LivingAreaAccessibilityHearingAccessibleFireAlarmExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaAccessibilityHearingAccessibleFireAlarmExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *LivingAreaAccessibilityHearingAccessibleFireAlarmExceptionEnum) Unmarsh
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaAccessibilityHearingAccessibleFireAlarmExceptionEnum(s)
+		*e = LivingAreaAccessibilityHearingAccessibleFireAlarmExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaAccessibilityHearingAccessibleFireAlarmExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaAccessibilityHearingAccessibleFireAlarmExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	LivingAreaAccessibilityHearingAccessibleUnitExceptionEnumDependentOnDayOfWeek LivingAreaAccessibilityHearingAccessibleUnitExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaAccessibilityHearingAccessibleUnitExceptionEnum) ToPointer() *LivingAreaAccessibilityHearingAccessibleUnitExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaAccessibilityHearingAccessibleUnitExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *LivingAreaAccessibilityHearingAccessibleUnitExceptionEnum) UnmarshalJSO
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaAccessibilityHearingAccessibleUnitExceptionEnum(s)
+		*e = LivingAreaAccessibilityHearingAccessibleUnitExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaAccessibilityHearingAccessibleUnitExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaAccessibilityHearingAccessibleUnitExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	LivingAreaAccessibilityMobilityAccessibleBathtubExceptionEnumDependentOnDayOfWeek LivingAreaAccessibilityMobilityAccessibleBathtubExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaAccessibilityMobilityAccessibleBathtubExceptionEnum) ToPointer() *LivingAreaAccessibilityMobilityAccessibleBathtubExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaAccessibilityMobilityAccessibleBathtubExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *LivingAreaAccessibilityMobilityAccessibleBathtubExceptionEnum) Unmarsha
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaAccessibilityMobilityAccessibleBathtubExceptionEnum(s)
+		*e = LivingAreaAccessibilityMobilityAccessibleBathtubExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaAccessibilityMobilityAccessibleBathtubExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaAccessibilityMobilityAccessibleBathtubExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	LivingAreaAccessibilityMobilityAccessibleShowerExceptionEnumDependentOnDayOfWeek LivingAreaAccessibilityMobilityAccessibleShowerExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaAccessibilityMobilityAccessibleShowerExceptionEnum) ToPointer() *LivingAreaAccessibilityMobilityAccessibleShowerExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaAccessibilityMobilityAccessibleShowerExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *LivingAreaAccessibilityMobilityAccessibleShowerExceptionEnum) Unmarshal
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaAccessibilityMobilityAccessibleShowerExceptionEnum(s)
+		*e = LivingAreaAccessibilityMobilityAccessibleShowerExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaAccessibilityMobilityAccessibleShowerExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaAccessibilityMobilityAccessibleShowerExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	LivingAreaAccessibilityMobilityAccessibleToiletExceptionEnumDependentOnDayOfWeek LivingAreaAccessibilityMobilityAccessibleToiletExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaAccessibilityMobilityAccessibleToiletExceptionEnum) ToPointer() *LivingAreaAccessibilityMobilityAccessibleToiletExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaAccessibilityMobilityAccessibleToiletExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *LivingAreaAccessibilityMobilityAccessibleToiletExceptionEnum) Unmarshal
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaAccessibilityMobilityAccessibleToiletExceptionEnum(s)
+		*e = LivingAreaAccessibilityMobilityAccessibleToiletExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaAccessibilityMobilityAccessibleToiletExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaAccessibilityMobilityAccessibleToiletExceptionEnum: %v", v)
 	}
 }
 
@@ -227,12 +255,16 @@ const (
 	LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnumDependentOnDayOfWeek LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnum) ToPointer() *LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -240,10 +272,10 @@ func (e *LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnum) UnmarshalJS
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnum(s)
+		*e = LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaAccessibilityMobilityAccessibleUnitExceptionEnum: %v", v)
 	}
 }
 

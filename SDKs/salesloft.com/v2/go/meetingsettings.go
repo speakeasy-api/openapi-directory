@@ -36,7 +36,10 @@ func newMeetingSettings(defaultClient, securityClient HTTPClient, serverURL, lan
 // Updates a meeting setting, by ID only.
 func (s *meetingSettings) PutV2MeetingsSettingsIDJSON(ctx context.Context, request operations.PutV2MeetingsSettingsIDJSONRequest) (*operations.PutV2MeetingsSettingsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/meetings/settings/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/meetings/settings/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

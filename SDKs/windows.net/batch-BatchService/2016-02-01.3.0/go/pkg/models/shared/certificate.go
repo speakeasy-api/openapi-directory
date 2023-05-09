@@ -17,21 +17,25 @@ const (
 	CertificatePreviousStateEnumDeletefailed CertificatePreviousStateEnum = "deletefailed"
 )
 
+func (e CertificatePreviousStateEnum) ToPointer() *CertificatePreviousStateEnum {
+	return &e
+}
+
 func (e *CertificatePreviousStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "deleting":
 		fallthrough
 	case "deletefailed":
-		*e = CertificatePreviousStateEnum(s)
+		*e = CertificatePreviousStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificatePreviousStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificatePreviousStateEnum: %v", v)
 	}
 }
 
@@ -44,21 +48,25 @@ const (
 	CertificateStateEnumDeletefailed CertificateStateEnum = "deletefailed"
 )
 
+func (e CertificateStateEnum) ToPointer() *CertificateStateEnum {
+	return &e
+}
+
 func (e *CertificateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "deleting":
 		fallthrough
 	case "deletefailed":
-		*e = CertificateStateEnum(s)
+		*e = CertificateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateStateEnum: %v", v)
 	}
 }
 

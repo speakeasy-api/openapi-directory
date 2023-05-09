@@ -20,32 +20,36 @@ type WebhooksListRequest struct {
 }
 
 // WebhooksListDefaultApplicationJSONCodeEnum - The status code return by the API. It can be 400 or 404 or 409 or 500.
-type WebhooksListDefaultApplicationJSONCodeEnum string
+type WebhooksListDefaultApplicationJSONCodeEnum int64
 
 const (
-	WebhooksListDefaultApplicationJSONCodeEnumFourHundred        WebhooksListDefaultApplicationJSONCodeEnum = "400"
-	WebhooksListDefaultApplicationJSONCodeEnumFourHundredAndFour WebhooksListDefaultApplicationJSONCodeEnum = "404"
-	WebhooksListDefaultApplicationJSONCodeEnumFourHundredAndNine WebhooksListDefaultApplicationJSONCodeEnum = "409"
-	WebhooksListDefaultApplicationJSONCodeEnumFiveHundred        WebhooksListDefaultApplicationJSONCodeEnum = "500"
+	WebhooksListDefaultApplicationJSONCodeEnumFourHundred        WebhooksListDefaultApplicationJSONCodeEnum = 400
+	WebhooksListDefaultApplicationJSONCodeEnumFourHundredAndFour WebhooksListDefaultApplicationJSONCodeEnum = 404
+	WebhooksListDefaultApplicationJSONCodeEnumFourHundredAndNine WebhooksListDefaultApplicationJSONCodeEnum = 409
+	WebhooksListDefaultApplicationJSONCodeEnumFiveHundred        WebhooksListDefaultApplicationJSONCodeEnum = 500
 )
 
+func (e WebhooksListDefaultApplicationJSONCodeEnum) ToPointer() *WebhooksListDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *WebhooksListDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
+	switch v {
+	case 400:
 		fallthrough
-	case "404":
+	case 404:
 		fallthrough
-	case "409":
+	case 409:
 		fallthrough
-	case "500":
-		*e = WebhooksListDefaultApplicationJSONCodeEnum(s)
+	case 500:
+		*e = WebhooksListDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhooksListDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhooksListDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -67,19 +71,23 @@ const (
 	WebhooksList200ApplicationJSONValuesEventTypesEnumNewAppReleased       WebhooksList200ApplicationJSONValuesEventTypesEnum = "newAppReleased"
 )
 
+func (e WebhooksList200ApplicationJSONValuesEventTypesEnum) ToPointer() *WebhooksList200ApplicationJSONValuesEventTypesEnum {
+	return &e
+}
+
 func (e *WebhooksList200ApplicationJSONValuesEventTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newCrashGroupCreated":
 		fallthrough
 	case "newAppReleased":
-		*e = WebhooksList200ApplicationJSONValuesEventTypesEnum(s)
+		*e = WebhooksList200ApplicationJSONValuesEventTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhooksList200ApplicationJSONValuesEventTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhooksList200ApplicationJSONValuesEventTypesEnum: %v", v)
 	}
 }
 

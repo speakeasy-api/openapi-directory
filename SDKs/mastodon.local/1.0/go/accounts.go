@@ -151,7 +151,7 @@ func (s *accounts) GetAPIV1AccountsSearch(ctx context.Context, request operation
 }
 
 // GetAPIV1AccountsVerifyCredentials - Test to make sure that the user token works.
-func (s *accounts) GetAPIV1AccountsVerifyCredentials(ctx context.Context) (*operations.GetAPIV1AccountsVerifyCredentialsResponse, error) {
+func (s *accounts) GetAPIV1AccountsVerifyCredentials(ctx context.Context, security operations.GetAPIV1AccountsVerifyCredentialsSecurity) (*operations.GetAPIV1AccountsVerifyCredentialsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/accounts/verify_credentials"
 
@@ -160,7 +160,7 @@ func (s *accounts) GetAPIV1AccountsVerifyCredentials(ctx context.Context) (*oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -205,9 +205,13 @@ func (s *accounts) GetAPIV1AccountsVerifyCredentials(ctx context.Context) (*oper
 
 	return res, nil
 }
+
 func (s *accounts) GetAPIV1AccountsID(ctx context.Context, request operations.GetAPIV1AccountsIDRequest, security operations.GetAPIV1AccountsIDSecurity) (*operations.GetAPIV1AccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -264,7 +268,10 @@ func (s *accounts) GetAPIV1AccountsID(ctx context.Context, request operations.Ge
 // GetAPIV1AccountsIDFeaturedTags - Tags featured by this account.
 func (s *accounts) GetAPIV1AccountsIDFeaturedTags(ctx context.Context, request operations.GetAPIV1AccountsIDFeaturedTagsRequest, security operations.GetAPIV1AccountsIDFeaturedTagsSecurity) (*operations.GetAPIV1AccountsIDFeaturedTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/featured_tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/featured_tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -318,7 +325,10 @@ func (s *accounts) GetAPIV1AccountsIDFeaturedTags(ctx context.Context, request o
 // GetAPIV1AccountsIDFollowers - Accounts which follow the given account, if network is not hidden by the account owner.
 func (s *accounts) GetAPIV1AccountsIDFollowers(ctx context.Context, request operations.GetAPIV1AccountsIDFollowersRequest, security operations.GetAPIV1AccountsIDFollowersSecurity) (*operations.GetAPIV1AccountsIDFollowersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/followers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/followers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -379,7 +389,10 @@ func (s *accounts) GetAPIV1AccountsIDFollowers(ctx context.Context, request oper
 // GetAPIV1AccountsIDFollowing - Accounts which the given account is following, if network is not hidden by the account owner.
 func (s *accounts) GetAPIV1AccountsIDFollowing(ctx context.Context, request operations.GetAPIV1AccountsIDFollowingRequest, security operations.GetAPIV1AccountsIDFollowingSecurity) (*operations.GetAPIV1AccountsIDFollowingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/following", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/following", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -440,7 +453,10 @@ func (s *accounts) GetAPIV1AccountsIDFollowing(ctx context.Context, request oper
 // GetAPIV1AccountsIDIdentityProofs - Array of IdentityProof
 func (s *accounts) GetAPIV1AccountsIDIdentityProofs(ctx context.Context, request operations.GetAPIV1AccountsIDIdentityProofsRequest, security operations.GetAPIV1AccountsIDIdentityProofsSecurity) (*operations.GetAPIV1AccountsIDIdentityProofsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/identity_proofs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/identity_proofs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -497,7 +513,10 @@ func (s *accounts) GetAPIV1AccountsIDIdentityProofs(ctx context.Context, request
 // GetAPIV1AccountsIDLists - User lists that you have added this account to.
 func (s *accounts) GetAPIV1AccountsIDLists(ctx context.Context, request operations.GetAPIV1AccountsIDListsRequest, security operations.GetAPIV1AccountsIDListsSecurity) (*operations.GetAPIV1AccountsIDListsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/lists", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/lists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -554,7 +573,10 @@ func (s *accounts) GetAPIV1AccountsIDLists(ctx context.Context, request operatio
 // GetAPIV1AccountsIDStatuses - Statuses posted to the given account.
 func (s *accounts) GetAPIV1AccountsIDStatuses(ctx context.Context, request operations.GetAPIV1AccountsIDStatusesRequest, security operations.GetAPIV1AccountsIDStatusesSecurity) (*operations.GetAPIV1AccountsIDStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/statuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/statuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -716,7 +738,10 @@ func (s *accounts) PostAPIV1Accounts(ctx context.Context, request []byte, securi
 // PostAPIV1AccountsIDBlock - Block the given account. Clients should filter statuses from this account if received (e.g. due to a boost in the Home timeline).
 func (s *accounts) PostAPIV1AccountsIDBlock(ctx context.Context, request operations.PostAPIV1AccountsIDBlockRequest, security operations.PostAPIV1AccountsIDBlockSecurity) (*operations.PostAPIV1AccountsIDBlockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/block", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/block", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -770,7 +795,10 @@ func (s *accounts) PostAPIV1AccountsIDBlock(ctx context.Context, request operati
 // PostAPIV1AccountsIDFollow - Follow the given account. Can also be used to update whether to show reblogs or enable notifications.
 func (s *accounts) PostAPIV1AccountsIDFollow(ctx context.Context, request operations.PostAPIV1AccountsIDFollowRequest, security operations.PostAPIV1AccountsIDFollowSecurity) (*operations.PostAPIV1AccountsIDFollowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/follow", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/follow", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -831,7 +859,10 @@ func (s *accounts) PostAPIV1AccountsIDFollow(ctx context.Context, request operat
 // PostAPIV1AccountsIDMute - Mute the given account. Clients should filter statuses and notifications from this account, if received (e.g. due to a boost in the Home timeline).
 func (s *accounts) PostAPIV1AccountsIDMute(ctx context.Context, request operations.PostAPIV1AccountsIDMuteRequest, security operations.PostAPIV1AccountsIDMuteSecurity) (*operations.PostAPIV1AccountsIDMuteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/mute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/mute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -892,7 +923,10 @@ func (s *accounts) PostAPIV1AccountsIDMute(ctx context.Context, request operatio
 // PostAPIV1AccountsIDNote - Sets a private note on a user.
 func (s *accounts) PostAPIV1AccountsIDNote(ctx context.Context, request operations.PostAPIV1AccountsIDNoteRequest, security operations.PostAPIV1AccountsIDNoteSecurity) (*operations.PostAPIV1AccountsIDNoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/note", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/note", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -954,7 +988,10 @@ func (s *accounts) PostAPIV1AccountsIDNote(ctx context.Context, request operatio
 // PostAPIV1AccountsIDPin - Add the given account to the user's featured profiles. (Featured profiles are currently shown on the user's own public profile.)
 func (s *accounts) PostAPIV1AccountsIDPin(ctx context.Context, request operations.PostAPIV1AccountsIDPinRequest, security operations.PostAPIV1AccountsIDPinSecurity) (*operations.PostAPIV1AccountsIDPinResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/pin", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/pin", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1014,7 +1051,10 @@ func (s *accounts) PostAPIV1AccountsIDPin(ctx context.Context, request operation
 // PostAPIV1AccountsIDUnblock - Block the given account. Clients should filter statuses from this account if received (e.g. due to a boost in the Home timeline).
 func (s *accounts) PostAPIV1AccountsIDUnblock(ctx context.Context, request operations.PostAPIV1AccountsIDUnblockRequest, security operations.PostAPIV1AccountsIDUnblockSecurity) (*operations.PostAPIV1AccountsIDUnblockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/unblock", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/unblock", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1068,7 +1108,10 @@ func (s *accounts) PostAPIV1AccountsIDUnblock(ctx context.Context, request opera
 // PostAPIV1AccountsIDUnfollow - Unfollow the given account.
 func (s *accounts) PostAPIV1AccountsIDUnfollow(ctx context.Context, request operations.PostAPIV1AccountsIDUnfollowRequest, security operations.PostAPIV1AccountsIDUnfollowSecurity) (*operations.PostAPIV1AccountsIDUnfollowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/unfollow", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/unfollow", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1122,7 +1165,10 @@ func (s *accounts) PostAPIV1AccountsIDUnfollow(ctx context.Context, request oper
 // PostAPIV1AccountsIDUnmute - Unmute the given account.
 func (s *accounts) PostAPIV1AccountsIDUnmute(ctx context.Context, request operations.PostAPIV1AccountsIDUnmuteRequest, security operations.PostAPIV1AccountsIDUnmuteSecurity) (*operations.PostAPIV1AccountsIDUnmuteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/unmute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/unmute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1176,7 +1222,10 @@ func (s *accounts) PostAPIV1AccountsIDUnmute(ctx context.Context, request operat
 // PostAPIV1AccountsIDUnpin - Remove the given account from the user's featured profiles.
 func (s *accounts) PostAPIV1AccountsIDUnpin(ctx context.Context, request operations.PostAPIV1AccountsIDUnpinRequest, security operations.PostAPIV1AccountsIDUnpinSecurity) (*operations.PostAPIV1AccountsIDUnpinResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/unpin", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/accounts/{id}/unpin", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

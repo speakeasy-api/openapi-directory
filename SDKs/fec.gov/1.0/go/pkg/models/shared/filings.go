@@ -24,7 +24,7 @@ type Filings struct {
 	// City of bank or depository as reported on the Form 1
 	//
 	BankDepositoryCity *string `json:"bank_depository_city,omitempty"`
-	// Primary bank or depository in which the committee deposits funds, holds accounts, rents safety deposit boxes or maintains funds.
+	// Primary bank or depository in which the committee deposits funds,holds accounts, rents safety deposit boxes or maintains funds.
 	//
 	BankDepositoryName *string `json:"bank_depository_name,omitempty"`
 	// State of bank or depository as reported on the Form 1
@@ -42,6 +42,12 @@ type Filings struct {
 	BeginningImageNumber *string `json:"beginning_image_number,omitempty"`
 	// A unique identifier assigned to each candidate registered with the FEC.
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
+	// First character indicates office - [P]residential, [H]ouse, [S]enate].
+	// Second character is the last digit of the two-year period the ID was created.
+	// Third and fourth is the candidate state. Presidential IDs don't have state.
+	// Fifth and sixth is the district when the candidate first ran. This does not change if the
+	// candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+	// The rest is sequence.
 	//
 	CandidateID *string `json:"candidate_id,omitempty"`
 	// Name of candidate running for office

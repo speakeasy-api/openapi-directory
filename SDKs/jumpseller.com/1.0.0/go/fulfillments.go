@@ -131,7 +131,10 @@ func (s *fulfillments) GetFulfillmentsCountJSON(ctx context.Context, request ope
 // GetFulfillmentsIDJSON - Retrieve a single Fulfillment.
 func (s *fulfillments) GetFulfillmentsIDJSON(ctx context.Context, request operations.GetFulfillmentsIDJSONRequest) (*operations.GetFulfillmentsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/fulfillments/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/fulfillments/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -189,7 +192,10 @@ func (s *fulfillments) GetFulfillmentsIDJSON(ctx context.Context, request operat
 // GetOrderIDFulfillmentsJSON - Retrieve the Fulfillments associated with the Order.
 func (s *fulfillments) GetOrderIDFulfillmentsJSON(ctx context.Context, request operations.GetOrderIDFulfillmentsJSONRequest) (*operations.GetOrderIDFulfillmentsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/order/{id}/fulfillments.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/order/{id}/fulfillments.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

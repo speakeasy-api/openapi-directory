@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type ListHpvcManagersSecurity struct {
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+}
+
 type ListHpvcManagersResponse struct {
 	ContentType string
 	// OK

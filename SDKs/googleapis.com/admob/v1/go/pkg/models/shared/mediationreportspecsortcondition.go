@@ -29,12 +29,16 @@ const (
 	MediationReportSpecSortConditionDimensionEnumServingRestriction   MediationReportSpecSortConditionDimensionEnum = "SERVING_RESTRICTION"
 )
 
+func (e MediationReportSpecSortConditionDimensionEnum) ToPointer() *MediationReportSpecSortConditionDimensionEnum {
+	return &e
+}
+
 func (e *MediationReportSpecSortConditionDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "DATE":
@@ -66,10 +70,10 @@ func (e *MediationReportSpecSortConditionDimensionEnum) UnmarshalJSON(data []byt
 	case "APP_VERSION_NAME":
 		fallthrough
 	case "SERVING_RESTRICTION":
-		*e = MediationReportSpecSortConditionDimensionEnum(s)
+		*e = MediationReportSpecSortConditionDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediationReportSpecSortConditionDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for MediationReportSpecSortConditionDimensionEnum: %v", v)
 	}
 }
 
@@ -88,12 +92,16 @@ const (
 	MediationReportSpecSortConditionMetricEnumObservedEcpm      MediationReportSpecSortConditionMetricEnum = "OBSERVED_ECPM"
 )
 
+func (e MediationReportSpecSortConditionMetricEnum) ToPointer() *MediationReportSpecSortConditionMetricEnum {
+	return &e
+}
+
 func (e *MediationReportSpecSortConditionMetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_UNSPECIFIED":
 		fallthrough
 	case "AD_REQUESTS":
@@ -111,10 +119,10 @@ func (e *MediationReportSpecSortConditionMetricEnum) UnmarshalJSON(data []byte) 
 	case "MATCH_RATE":
 		fallthrough
 	case "OBSERVED_ECPM":
-		*e = MediationReportSpecSortConditionMetricEnum(s)
+		*e = MediationReportSpecSortConditionMetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediationReportSpecSortConditionMetricEnum: %s", s)
+		return fmt.Errorf("invalid value for MediationReportSpecSortConditionMetricEnum: %v", v)
 	}
 }
 
@@ -127,21 +135,25 @@ const (
 	MediationReportSpecSortConditionOrderEnumDescending           MediationReportSpecSortConditionOrderEnum = "DESCENDING"
 )
 
+func (e MediationReportSpecSortConditionOrderEnum) ToPointer() *MediationReportSpecSortConditionOrderEnum {
+	return &e
+}
+
 func (e *MediationReportSpecSortConditionOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SORT_ORDER_UNSPECIFIED":
 		fallthrough
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = MediationReportSpecSortConditionOrderEnum(s)
+		*e = MediationReportSpecSortConditionOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediationReportSpecSortConditionOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for MediationReportSpecSortConditionOrderEnum: %v", v)
 	}
 }
 

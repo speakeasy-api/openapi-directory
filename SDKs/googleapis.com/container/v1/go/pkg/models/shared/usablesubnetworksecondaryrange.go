@@ -18,12 +18,16 @@ const (
 	UsableSubnetworkSecondaryRangeStatusEnumInUseManagedPod   UsableSubnetworkSecondaryRangeStatusEnum = "IN_USE_MANAGED_POD"
 )
 
+func (e UsableSubnetworkSecondaryRangeStatusEnum) ToPointer() *UsableSubnetworkSecondaryRangeStatusEnum {
+	return &e
+}
+
 func (e *UsableSubnetworkSecondaryRangeStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "UNUSED":
@@ -33,10 +37,10 @@ func (e *UsableSubnetworkSecondaryRangeStatusEnum) UnmarshalJSON(data []byte) er
 	case "IN_USE_SHAREABLE_POD":
 		fallthrough
 	case "IN_USE_MANAGED_POD":
-		*e = UsableSubnetworkSecondaryRangeStatusEnum(s)
+		*e = UsableSubnetworkSecondaryRangeStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsableSubnetworkSecondaryRangeStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UsableSubnetworkSecondaryRangeStatusEnum: %v", v)
 	}
 }
 

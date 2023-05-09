@@ -15,20 +15,24 @@ const (
 	ConnectionAuthorizationTypeEnumAPIKey                 ConnectionAuthorizationTypeEnum = "API_KEY"
 )
 
+func (e ConnectionAuthorizationTypeEnum) ToPointer() *ConnectionAuthorizationTypeEnum {
+	return &e
+}
+
 func (e *ConnectionAuthorizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "OAUTH_CLIENT_CREDENTIALS":
 		fallthrough
 	case "API_KEY":
-		*e = ConnectionAuthorizationTypeEnum(s)
+		*e = ConnectionAuthorizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionAuthorizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionAuthorizationTypeEnum: %v", v)
 	}
 }

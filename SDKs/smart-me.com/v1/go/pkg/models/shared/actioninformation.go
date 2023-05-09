@@ -15,19 +15,23 @@ const (
 	ActionInformationActionTypeEnumAnalogAction ActionInformationActionTypeEnum = "AnalogAction"
 )
 
+func (e ActionInformationActionTypeEnum) ToPointer() *ActionInformationActionTypeEnum {
+	return &e
+}
+
 func (e *ActionInformationActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OnOffAction":
 		fallthrough
 	case "AnalogAction":
-		*e = ActionInformationActionTypeEnum(s)
+		*e = ActionInformationActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionInformationActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionInformationActionTypeEnum: %v", v)
 	}
 }
 

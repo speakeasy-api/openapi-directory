@@ -16,17 +16,21 @@ const (
 	CreateAnomalyMonitorXAmzTargetEnumAwsInsightsIndexServiceCreateAnomalyMonitor CreateAnomalyMonitorXAmzTargetEnum = "AWSInsightsIndexService.CreateAnomalyMonitor"
 )
 
+func (e CreateAnomalyMonitorXAmzTargetEnum) ToPointer() *CreateAnomalyMonitorXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAnomalyMonitorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSInsightsIndexService.CreateAnomalyMonitor":
-		*e = CreateAnomalyMonitorXAmzTargetEnum(s)
+		*e = CreateAnomalyMonitorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnomalyMonitorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnomalyMonitorXAmzTargetEnum: %v", v)
 	}
 }
 

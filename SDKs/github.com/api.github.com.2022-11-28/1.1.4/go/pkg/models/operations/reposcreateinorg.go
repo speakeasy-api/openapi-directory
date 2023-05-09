@@ -22,21 +22,25 @@ const (
 	ReposCreateInOrgRequestBodyMergeCommitMessageEnumBlank   ReposCreateInOrgRequestBodyMergeCommitMessageEnum = "BLANK"
 )
 
+func (e ReposCreateInOrgRequestBodyMergeCommitMessageEnum) ToPointer() *ReposCreateInOrgRequestBodyMergeCommitMessageEnum {
+	return &e
+}
+
 func (e *ReposCreateInOrgRequestBodyMergeCommitMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_BODY":
 		fallthrough
 	case "PR_TITLE":
 		fallthrough
 	case "BLANK":
-		*e = ReposCreateInOrgRequestBodyMergeCommitMessageEnum(s)
+		*e = ReposCreateInOrgRequestBodyMergeCommitMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateInOrgRequestBodyMergeCommitMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateInOrgRequestBodyMergeCommitMessageEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	ReposCreateInOrgRequestBodyMergeCommitTitleEnumMergeMessage ReposCreateInOrgRequestBodyMergeCommitTitleEnum = "MERGE_MESSAGE"
 )
 
+func (e ReposCreateInOrgRequestBodyMergeCommitTitleEnum) ToPointer() *ReposCreateInOrgRequestBodyMergeCommitTitleEnum {
+	return &e
+}
+
 func (e *ReposCreateInOrgRequestBodyMergeCommitTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_TITLE":
 		fallthrough
 	case "MERGE_MESSAGE":
-		*e = ReposCreateInOrgRequestBodyMergeCommitTitleEnum(s)
+		*e = ReposCreateInOrgRequestBodyMergeCommitTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateInOrgRequestBodyMergeCommitTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateInOrgRequestBodyMergeCommitTitleEnum: %v", v)
 	}
 }
 
@@ -80,21 +88,25 @@ const (
 	ReposCreateInOrgRequestBodySquashMergeCommitMessageEnumBlank          ReposCreateInOrgRequestBodySquashMergeCommitMessageEnum = "BLANK"
 )
 
+func (e ReposCreateInOrgRequestBodySquashMergeCommitMessageEnum) ToPointer() *ReposCreateInOrgRequestBodySquashMergeCommitMessageEnum {
+	return &e
+}
+
 func (e *ReposCreateInOrgRequestBodySquashMergeCommitMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_BODY":
 		fallthrough
 	case "COMMIT_MESSAGES":
 		fallthrough
 	case "BLANK":
-		*e = ReposCreateInOrgRequestBodySquashMergeCommitMessageEnum(s)
+		*e = ReposCreateInOrgRequestBodySquashMergeCommitMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateInOrgRequestBodySquashMergeCommitMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateInOrgRequestBodySquashMergeCommitMessageEnum: %v", v)
 	}
 }
 
@@ -109,19 +121,23 @@ const (
 	ReposCreateInOrgRequestBodySquashMergeCommitTitleEnumCommitOrPrTitle ReposCreateInOrgRequestBodySquashMergeCommitTitleEnum = "COMMIT_OR_PR_TITLE"
 )
 
+func (e ReposCreateInOrgRequestBodySquashMergeCommitTitleEnum) ToPointer() *ReposCreateInOrgRequestBodySquashMergeCommitTitleEnum {
+	return &e
+}
+
 func (e *ReposCreateInOrgRequestBodySquashMergeCommitTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_TITLE":
 		fallthrough
 	case "COMMIT_OR_PR_TITLE":
-		*e = ReposCreateInOrgRequestBodySquashMergeCommitTitleEnum(s)
+		*e = ReposCreateInOrgRequestBodySquashMergeCommitTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateInOrgRequestBodySquashMergeCommitTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateInOrgRequestBodySquashMergeCommitTitleEnum: %v", v)
 	}
 }
 
@@ -133,19 +149,23 @@ const (
 	ReposCreateInOrgRequestBodyVisibilityEnumPrivate ReposCreateInOrgRequestBodyVisibilityEnum = "private"
 )
 
+func (e ReposCreateInOrgRequestBodyVisibilityEnum) ToPointer() *ReposCreateInOrgRequestBodyVisibilityEnum {
+	return &e
+}
+
 func (e *ReposCreateInOrgRequestBodyVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = ReposCreateInOrgRequestBodyVisibilityEnum(s)
+		*e = ReposCreateInOrgRequestBodyVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateInOrgRequestBodyVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateInOrgRequestBodyVisibilityEnum: %v", v)
 	}
 }
 

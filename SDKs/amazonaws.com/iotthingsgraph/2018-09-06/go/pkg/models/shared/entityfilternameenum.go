@@ -16,12 +16,16 @@ const (
 	EntityFilterNameEnumReferencedEntityID EntityFilterNameEnum = "REFERENCED_ENTITY_ID"
 )
 
+func (e EntityFilterNameEnum) ToPointer() *EntityFilterNameEnum {
+	return &e
+}
+
 func (e *EntityFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NAME":
 		fallthrough
 	case "NAMESPACE":
@@ -29,9 +33,9 @@ func (e *EntityFilterNameEnum) UnmarshalJSON(data []byte) error {
 	case "SEMANTIC_TYPE_PATH":
 		fallthrough
 	case "REFERENCED_ENTITY_ID":
-		*e = EntityFilterNameEnum(s)
+		*e = EntityFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityFilterNameEnum: %v", v)
 	}
 }

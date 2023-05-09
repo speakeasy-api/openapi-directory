@@ -20,12 +20,16 @@ const (
 	ImageAttributesBucketTypeEnumUser         ImageAttributesBucketTypeEnum = "User"
 )
 
+func (e ImageAttributesBucketTypeEnum) ToPointer() *ImageAttributesBucketTypeEnum {
+	return &e
+}
+
 func (e *ImageAttributesBucketTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AdRepAccount":
 		fallthrough
 	case "Agency":
@@ -35,10 +39,10 @@ func (e *ImageAttributesBucketTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Series":
 		fallthrough
 	case "User":
-		*e = ImageAttributesBucketTypeEnum(s)
+		*e = ImageAttributesBucketTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageAttributesBucketTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageAttributesBucketTypeEnum: %v", v)
 	}
 }
 
@@ -66,12 +70,16 @@ const (
 	ImageAttributesStatusEnumValid      ImageAttributesStatusEnum = "valid"
 )
 
+func (e ImageAttributesStatusEnum) ToPointer() *ImageAttributesStatusEnum {
+	return &e
+}
+
 func (e *ImageAttributesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid":
 		fallthrough
 	case "processing":
@@ -79,10 +87,10 @@ func (e *ImageAttributesStatusEnum) UnmarshalJSON(data []byte) error {
 	case "uploaded":
 		fallthrough
 	case "valid":
-		*e = ImageAttributesStatusEnum(s)
+		*e = ImageAttributesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageAttributesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageAttributesStatusEnum: %v", v)
 	}
 }
 

@@ -13,43 +13,41 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/chromeuxre
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ChromeuxreportRecordsQueryHistoryRecordRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Records.ChromeuxreportRecordsQueryHistoryRecord(ctx, operations.ChromeuxreportRecordsQueryHistoryRecordRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         QueryHistoryRequest: &shared.QueryHistoryRequest{
-            FormFactor: "DESKTOP",
+            FormFactor: shared.QueryHistoryRequestFormFactorEnumDesktop.ToPointer(),
             Metrics: []string{
                 "quibusdam",
                 "unde",
                 "nulla",
             },
-            Origin: "corrupti",
-            URL: "illum",
+            Origin: sdk.String("corrupti"),
+            URL: sdk.String("illum"),
         },
-        AccessToken: "vel",
-        Alt: "media",
-        Callback: "deserunt",
-        Fields: "suscipit",
-        Key: "iure",
-        OauthToken: "magnam",
-        PrettyPrint: false,
-        QuotaUser: "debitis",
-        UploadType: "ipsa",
-        UploadProtocol: "delectus",
-    }
-
-    ctx := context.Background()
-    res, err := s.Records.ChromeuxreportRecordsQueryHistoryRecord(ctx, req)
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("deserunt"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        OauthToken: sdk.String("magnam"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("debitis"),
+        UploadType: sdk.String("ipsa"),
+        UploadProtocol: sdk.String("delectus"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -65,10 +63,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### Records
+### [Records](docs/records/README.md)
 
-* `ChromeuxreportRecordsQueryHistoryRecord` - Queries the Chrome User Experience Report for a timeseries `history record` for a given site. Returns a `history record` that contains one or more `metric timeseries` corresponding to performance data about the requested site.
-* `ChromeuxreportRecordsQueryRecord` - Queries the Chrome User Experience for a single `record` for a given site. Returns a `record` that contains one or more `metrics` corresponding to performance data about the requested site.
+* [ChromeuxreportRecordsQueryHistoryRecord](docs/records/README.md#chromeuxreportrecordsqueryhistoryrecord) - Queries the Chrome User Experience Report for a timeseries `history record` for a given site. Returns a `history record` that contains one or more `metric timeseries` corresponding to performance data about the requested site.
+* [ChromeuxreportRecordsQueryRecord](docs/records/README.md#chromeuxreportrecordsqueryrecord) - Queries the Chrome User Experience for a single `record` for a given site. Returns a `record` that contains one or more `metrics` corresponding to performance data about the requested site.
 <!-- End SDK Available Operations -->
 
 ### Maturity

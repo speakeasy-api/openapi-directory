@@ -16,17 +16,21 @@ const (
 	GetOpsSummaryXAmzTargetEnumAmazonSsmGetOpsSummary GetOpsSummaryXAmzTargetEnum = "AmazonSSM.GetOpsSummary"
 )
 
+func (e GetOpsSummaryXAmzTargetEnum) ToPointer() *GetOpsSummaryXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetOpsSummaryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.GetOpsSummary":
-		*e = GetOpsSummaryXAmzTargetEnum(s)
+		*e = GetOpsSummaryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOpsSummaryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOpsSummaryXAmzTargetEnum: %v", v)
 	}
 }
 

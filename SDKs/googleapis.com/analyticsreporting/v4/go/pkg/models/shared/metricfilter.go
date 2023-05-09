@@ -18,12 +18,16 @@ const (
 	MetricFilterOperatorEnumIsMissing           MetricFilterOperatorEnum = "IS_MISSING"
 )
 
+func (e MetricFilterOperatorEnum) ToPointer() *MetricFilterOperatorEnum {
+	return &e
+}
+
 func (e *MetricFilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATOR_UNSPECIFIED":
 		fallthrough
 	case "EQUAL":
@@ -33,10 +37,10 @@ func (e *MetricFilterOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "GREATER_THAN":
 		fallthrough
 	case "IS_MISSING":
-		*e = MetricFilterOperatorEnum(s)
+		*e = MetricFilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricFilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricFilterOperatorEnum: %v", v)
 	}
 }
 

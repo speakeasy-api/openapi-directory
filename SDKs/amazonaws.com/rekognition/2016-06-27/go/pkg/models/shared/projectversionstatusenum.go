@@ -24,12 +24,16 @@ const (
 	ProjectVersionStatusEnumCopyingFailed      ProjectVersionStatusEnum = "COPYING_FAILED"
 )
 
+func (e ProjectVersionStatusEnum) ToPointer() *ProjectVersionStatusEnum {
+	return &e
+}
+
 func (e *ProjectVersionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRAINING_IN_PROGRESS":
 		fallthrough
 	case "TRAINING_COMPLETED":
@@ -53,9 +57,9 @@ func (e *ProjectVersionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "COPYING_COMPLETED":
 		fallthrough
 	case "COPYING_FAILED":
-		*e = ProjectVersionStatusEnum(s)
+		*e = ProjectVersionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectVersionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectVersionStatusEnum: %v", v)
 	}
 }

@@ -36,12 +36,16 @@ const (
 	CloudsearchDebugIdentitysourcesUnmappedidsListResolutionStatusCodeEnumInternalError               CloudsearchDebugIdentitysourcesUnmappedidsListResolutionStatusCodeEnum = "INTERNAL_ERROR"
 )
 
+func (e CloudsearchDebugIdentitysourcesUnmappedidsListResolutionStatusCodeEnum) ToPointer() *CloudsearchDebugIdentitysourcesUnmappedidsListResolutionStatusCodeEnum {
+	return &e
+}
+
 func (e *CloudsearchDebugIdentitysourcesUnmappedidsListResolutionStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODE_UNSPECIFIED":
 		fallthrough
 	case "NOT_FOUND":
@@ -53,10 +57,10 @@ func (e *CloudsearchDebugIdentitysourcesUnmappedidsListResolutionStatusCodeEnum)
 	case "TOO_MANY_MAPPINGS_FOUND":
 		fallthrough
 	case "INTERNAL_ERROR":
-		*e = CloudsearchDebugIdentitysourcesUnmappedidsListResolutionStatusCodeEnum(s)
+		*e = CloudsearchDebugIdentitysourcesUnmappedidsListResolutionStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudsearchDebugIdentitysourcesUnmappedidsListResolutionStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudsearchDebugIdentitysourcesUnmappedidsListResolutionStatusCodeEnum: %v", v)
 	}
 }
 

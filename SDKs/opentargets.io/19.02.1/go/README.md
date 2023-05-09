@@ -13,42 +13,39 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/opentargets.io/19.02.1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAssociationFilterRequest{
-        Datasource: "corrupti",
-        Datastructure: "provident",
-        Datatype: "distinctio",
-        Direct: false,
-        Disease: "quibusdam",
-        Facets: false,
-        Fields: "unde",
-        Format: "nulla",
-        From: 5448.83,
-        Pathway: "illum",
-        ScorevalueMax: 4236.55,
-        ScorevalueMin: 6235.64,
-        ScorevalueTypes: "deserunt",
-        Search: "suscipit",
-        Size: 4375.87,
-        Sort: "magnam",
-        Target: "debitis",
-        TargetClass: "ipsa",
-        TherapeuticArea: "delectus",
-        Uniprotkw: "tempora",
-    }
-
     ctx := context.Background()
-    res, err := s.Filter.GetAssociationFilter(ctx, req)
+    res, err := s.Filter.GetAssociationFilter(ctx, operations.GetAssociationFilterRequest{
+        Datasource: sdk.String("corrupti"),
+        Datastructure: sdk.String("provident"),
+        Datatype: sdk.String("distinctio"),
+        Direct: sdk.Bool(false),
+        Disease: sdk.String("quibusdam"),
+        Facets: sdk.Bool(false),
+        Fields: sdk.String("unde"),
+        Format: sdk.String("nulla"),
+        From: sdk.Float64(5448.83),
+        Pathway: sdk.String("illum"),
+        ScorevalueMax: sdk.Float32(4236.55),
+        ScorevalueMin: sdk.Float32(6235.64),
+        ScorevalueTypes: sdk.String("deserunt"),
+        Search: sdk.String("suscipit"),
+        Size: sdk.Float64(4375.87),
+        Sort: sdk.String("magnam"),
+        Target: sdk.String("debitis"),
+        TargetClass: sdk.String("ipsa"),
+        TherapeuticArea: sdk.String("delectus"),
+        Uniprotkw: sdk.String("tempora"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -64,67 +61,67 @@ func main() {
 ## Available Resources and Operations
 
 
-### Filter
+### [Filter](docs/filter/README.md)
 
-* `GetAssociationFilter` - Filter available associations
-* `GetEvidenceFilter` - Filter available evidence
-* `PostAssociationFilter` - Batch query available associations
-* `PostEvidenceFilter` - Batch filter available evidence
+* [GetAssociationFilter](docs/filter/README.md#getassociationfilter) - Filter available associations
+* [GetEvidenceFilter](docs/filter/README.md#getevidencefilter) - Filter available evidence
+* [PostAssociationFilter](docs/filter/README.md#postassociationfilter) - Batch query available associations
+* [PostEvidenceFilter](docs/filter/README.md#postevidencefilter) - Batch filter available evidence
 
-### Private
+### [Private](docs/private/README.md)
 
-* `GetAPIDocs` - Browse API documentation
-* `GetAPISwaggerUI` - Browse interactive API documentation
-* `GetAutocomplete` - Get `autocomplete` objects.
-* `GetDiseaseByID` - Find information about a disease
-* `GetDrugByID` - Get drug by ID
-* `GetECObyID` - Get evidence code by ID
-* `GetQuickSearch` - Search most relevant results
-* `GetRelationByEFOID` - Find related entities by disease
-* `GetRelationByENSGID` - Find related entities by target
-* `GetSwagger` - Get OpenAPI schema
-* `GetTargetByENSGID` - Find information about a target
-* `GetTargetExpressionByENSGID` - Query expression levels
-* `PostBestHitSearch` - Find the best hit
-* `PostDiseaseByID` - Find information about a list of diseases
-* `PostEnrichmentTarget` - Enrichment analysis
-* `PostRelation` - Find related entities
-* `PostTargetByENSGID` - Find information about a list of targets
-* `PostTargetExpressionByENSGID` - Batch query expression levels
+* [GetAPIDocs](docs/private/README.md#getapidocs) - Browse API documentation
+* [GetAPISwaggerUI](docs/private/README.md#getapiswaggerui) - Browse interactive API documentation
+* [GetAutocomplete](docs/private/README.md#getautocomplete) - Get `autocomplete` objects.
+* [GetDiseaseByID](docs/private/README.md#getdiseasebyid) - Find information about a disease
+* [GetDrugByID](docs/private/README.md#getdrugbyid) - Get drug by ID
+* [GetECObyID](docs/private/README.md#getecobyid) - Get evidence code by ID
+* [GetQuickSearch](docs/private/README.md#getquicksearch) - Search most relevant results
+* [GetRelationByEFOID](docs/private/README.md#getrelationbyefoid) - Find related entities by disease
+* [GetRelationByENSGID](docs/private/README.md#getrelationbyensgid) - Find related entities by target
+* [GetSwagger](docs/private/README.md#getswagger) - Get OpenAPI schema
+* [GetTargetByENSGID](docs/private/README.md#gettargetbyensgid) - Find information about a target
+* [GetTargetExpressionByENSGID](docs/private/README.md#gettargetexpressionbyensgid) - Query expression levels
+* [PostBestHitSearch](docs/private/README.md#postbesthitsearch) - Find the best hit
+* [PostDiseaseByID](docs/private/README.md#postdiseasebyid) - Find information about a list of diseases
+* [PostEnrichmentTarget](docs/private/README.md#postenrichmenttarget) - Enrichment analysis
+* [PostRelation](docs/private/README.md#postrelation) - Find related entities
+* [PostTargetByENSGID](docs/private/README.md#posttargetbyensgid) - Find information about a list of targets
+* [PostTargetExpressionByENSGID](docs/private/README.md#posttargetexpressionbyensgid) - Batch query expression levels
 
-### Public
+### [Public](docs/public/README.md)
 
-* `GetAssociationByID` - Get association by id
-* `GetAssociationFilter` - Filter available associations
-* `GetDataMetrics` - Get metrics about the current data release
-* `GetDataStats` - Get statistics about the current data release
-* `GetEvidenceByID` - Get evidence by ID
-* `GetEvidenceFilter` - Filter available evidence
-* `GetPing` - Ping service
-* `GetSearch` - Search for a disease or a target
-* `GetTherapeuticAreas` - Get the list of therapeutic areas about the current data release
-* `GetVersion` - Get API version
-* `PostAssociationFilter` - Batch query available associations
-* `PostEvidenceByID` - Get evidence for a list of IDs
-* `PostEvidenceFilter` - Batch filter available evidence
+* [GetAssociationByID](docs/public/README.md#getassociationbyid) - Get association by id
+* [GetAssociationFilter](docs/public/README.md#getassociationfilter) - Filter available associations
+* [GetDataMetrics](docs/public/README.md#getdatametrics) - Get metrics about the current data release
+* [GetDataStats](docs/public/README.md#getdatastats) - Get statistics about the current data release
+* [GetEvidenceByID](docs/public/README.md#getevidencebyid) - Get evidence by ID
+* [GetEvidenceFilter](docs/public/README.md#getevidencefilter) - Filter available evidence
+* [GetPing](docs/public/README.md#getping) - Ping service
+* [GetSearch](docs/public/README.md#getsearch) - Search for a disease or a target
+* [GetTherapeuticAreas](docs/public/README.md#gettherapeuticareas) - Get the list of therapeutic areas about the current data release
+* [GetVersion](docs/public/README.md#getversion) - Get API version
+* [PostAssociationFilter](docs/public/README.md#postassociationfilter) - Batch query available associations
+* [PostEvidenceByID](docs/public/README.md#postevidencebyid) - Get evidence for a list of IDs
+* [PostEvidenceFilter](docs/public/README.md#postevidencefilter) - Batch filter available evidence
 
-### Retrieve
+### [Retrieve](docs/retrieve/README.md)
 
-* `GetAssociationByID` - Get association by id
-* `GetEvidenceByID` - Get evidence by ID
-* `PostEvidenceByID` - Get evidence for a list of IDs
+* [GetAssociationByID](docs/retrieve/README.md#getassociationbyid) - Get association by id
+* [GetEvidenceByID](docs/retrieve/README.md#getevidencebyid) - Get evidence by ID
+* [PostEvidenceByID](docs/retrieve/README.md#postevidencebyid) - Get evidence for a list of IDs
 
-### Search
+### [Search](docs/search/README.md)
 
-* `GetSearch` - Search for a disease or a target
+* [GetSearch](docs/search/README.md#getsearch) - Search for a disease or a target
 
-### Utils
+### [Utils](docs/utils/README.md)
 
-* `GetDataMetrics` - Get metrics about the current data release
-* `GetDataStats` - Get statistics about the current data release
-* `GetPing` - Ping service
-* `GetTherapeuticAreas` - Get the list of therapeutic areas about the current data release
-* `GetVersion` - Get API version
+* [GetDataMetrics](docs/utils/README.md#getdatametrics) - Get metrics about the current data release
+* [GetDataStats](docs/utils/README.md#getdatastats) - Get statistics about the current data release
+* [GetPing](docs/utils/README.md#getping) - Ping service
+* [GetTherapeuticAreas](docs/utils/README.md#gettherapeuticareas) - Get the list of therapeutic areas about the current data release
+* [GetVersion](docs/utils/README.md#getversion) - Get API version
 <!-- End SDK Available Operations -->
 
 ### Maturity

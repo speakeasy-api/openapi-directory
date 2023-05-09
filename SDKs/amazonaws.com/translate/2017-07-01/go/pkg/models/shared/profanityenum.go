@@ -13,16 +13,20 @@ const (
 	ProfanityEnumMask ProfanityEnum = "MASK"
 )
 
+func (e ProfanityEnum) ToPointer() *ProfanityEnum {
+	return &e
+}
+
 func (e *ProfanityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MASK":
-		*e = ProfanityEnum(s)
+		*e = ProfanityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProfanityEnum: %s", s)
+		return fmt.Errorf("invalid value for ProfanityEnum: %v", v)
 	}
 }

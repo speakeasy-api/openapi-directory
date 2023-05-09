@@ -14,17 +14,21 @@ const (
 	SourceOfFundsTypeEnumBusiness SourceOfFundsTypeEnum = "business"
 )
 
+func (e SourceOfFundsTypeEnum) ToPointer() *SourceOfFundsTypeEnum {
+	return &e
+}
+
 func (e *SourceOfFundsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "business":
-		*e = SourceOfFundsTypeEnum(s)
+		*e = SourceOfFundsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceOfFundsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceOfFundsTypeEnum: %v", v)
 	}
 }
 

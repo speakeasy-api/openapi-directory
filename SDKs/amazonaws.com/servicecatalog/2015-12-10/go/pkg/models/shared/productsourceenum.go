@@ -13,16 +13,20 @@ const (
 	ProductSourceEnumAccount ProductSourceEnum = "ACCOUNT"
 )
 
+func (e ProductSourceEnum) ToPointer() *ProductSourceEnum {
+	return &e
+}
+
 func (e *ProductSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT":
-		*e = ProductSourceEnum(s)
+		*e = ProductSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductSourceEnum: %v", v)
 	}
 }

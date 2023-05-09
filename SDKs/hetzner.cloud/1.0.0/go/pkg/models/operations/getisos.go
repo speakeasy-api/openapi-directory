@@ -9,8 +9,40 @@ import (
 )
 
 type GetIsosRequest struct {
+	// Return only ISOs with the given architecture.
+	Architecture *string `queryParam:"style=form,explode=true,name=architecture"`
+	// Include Images with wildcard architecture (architecture is null). Works only if architecture filter is specified.
+	IncludeArchitectureWildcard *bool `queryParam:"style=form,explode=true,name=include_architecture_wildcard"`
 	// Can be used to filter ISOs by their name. The response will only contain the ISO matching the specified name.
 	Name *string `queryParam:"style=form,explode=true,name=name"`
+}
+
+// GetIsos200ApplicationJSONIsosArchitectureEnum - Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+type GetIsos200ApplicationJSONIsosArchitectureEnum string
+
+const (
+	GetIsos200ApplicationJSONIsosArchitectureEnumX86 GetIsos200ApplicationJSONIsosArchitectureEnum = "x86"
+	GetIsos200ApplicationJSONIsosArchitectureEnumArm GetIsos200ApplicationJSONIsosArchitectureEnum = "arm"
+)
+
+func (e GetIsos200ApplicationJSONIsosArchitectureEnum) ToPointer() *GetIsos200ApplicationJSONIsosArchitectureEnum {
+	return &e
+}
+
+func (e *GetIsos200ApplicationJSONIsosArchitectureEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "x86":
+		fallthrough
+	case "arm":
+		*e = GetIsos200ApplicationJSONIsosArchitectureEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetIsos200ApplicationJSONIsosArchitectureEnum: %v", v)
+	}
 }
 
 // GetIsos200ApplicationJSONIsosTypeEnum - Type of the ISO
@@ -21,23 +53,29 @@ const (
 	GetIsos200ApplicationJSONIsosTypeEnumPrivate GetIsos200ApplicationJSONIsosTypeEnum = "private"
 )
 
+func (e GetIsos200ApplicationJSONIsosTypeEnum) ToPointer() *GetIsos200ApplicationJSONIsosTypeEnum {
+	return &e
+}
+
 func (e *GetIsos200ApplicationJSONIsosTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = GetIsos200ApplicationJSONIsosTypeEnum(s)
+		*e = GetIsos200ApplicationJSONIsosTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIsos200ApplicationJSONIsosTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIsos200ApplicationJSONIsosTypeEnum: %v", v)
 	}
 }
 
 type GetIsos200ApplicationJSONIsos struct {
+	// Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+	Architecture GetIsos200ApplicationJSONIsosArchitectureEnum `json:"architecture"`
 	// ISO 8601 timestamp of deprecation, null if ISO is still available. After the deprecation time it will no longer be possible to attach the ISO to Servers.
 	Deprecated string `json:"deprecated"`
 	// Description of the ISO

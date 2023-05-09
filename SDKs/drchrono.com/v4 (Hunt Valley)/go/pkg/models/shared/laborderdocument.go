@@ -23,12 +23,16 @@ const (
 	LabOrderDocumentTypeEnumRes LabOrderDocumentTypeEnum = "RES"
 )
 
+func (e LabOrderDocumentTypeEnum) ToPointer() *LabOrderDocumentTypeEnum {
+	return &e
+}
+
 func (e *LabOrderDocumentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQ":
 		fallthrough
 	case "ABN":
@@ -36,10 +40,10 @@ func (e *LabOrderDocumentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "R-A":
 		fallthrough
 	case "RES":
-		*e = LabOrderDocumentTypeEnum(s)
+		*e = LabOrderDocumentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LabOrderDocumentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LabOrderDocumentTypeEnum: %v", v)
 	}
 }
 

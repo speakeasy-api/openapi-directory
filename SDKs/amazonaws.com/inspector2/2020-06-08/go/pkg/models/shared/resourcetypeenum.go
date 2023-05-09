@@ -16,12 +16,16 @@ const (
 	ResourceTypeEnumAwsLambdaFunction    ResourceTypeEnum = "AWS_LAMBDA_FUNCTION"
 )
 
+func (e ResourceTypeEnum) ToPointer() *ResourceTypeEnum {
+	return &e
+}
+
 func (e *ResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_EC2_INSTANCE":
 		fallthrough
 	case "AWS_ECR_CONTAINER_IMAGE":
@@ -29,9 +33,9 @@ func (e *ResourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AWS_ECR_REPOSITORY":
 		fallthrough
 	case "AWS_LAMBDA_FUNCTION":
-		*e = ResourceTypeEnum(s)
+		*e = ResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceTypeEnum: %v", v)
 	}
 }

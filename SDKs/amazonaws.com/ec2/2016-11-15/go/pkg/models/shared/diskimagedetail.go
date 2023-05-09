@@ -16,21 +16,25 @@ const (
 	DiskImageDetailFormatEnumVhd  DiskImageDetailFormatEnum = "VHD"
 )
 
+func (e DiskImageDetailFormatEnum) ToPointer() *DiskImageDetailFormatEnum {
+	return &e
+}
+
 func (e *DiskImageDetailFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VMDK":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "VHD":
-		*e = DiskImageDetailFormatEnum(s)
+		*e = DiskImageDetailFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiskImageDetailFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for DiskImageDetailFormatEnum: %v", v)
 	}
 }
 

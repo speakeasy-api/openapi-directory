@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -25,4 +26,7 @@ pkg/models/shared/xgafvenum.go
 pkg/models/shared/listplaceactionlinksresponse.go
 pkg/models/shared/listplaceactiontypemetadataresponse.go
 pkg/models/shared/placeactiontypemetadata.go
+docs/sdk/README.md
+docs/locations/README.md
+docs/placeactiontypemetadata/README.md
 USAGE.md

@@ -15,17 +15,21 @@ const (
 	GETBatchStopUpdateActionActionEnumBatchStopUpdateAction GETBatchStopUpdateActionActionEnum = "BatchStopUpdateAction"
 )
 
+func (e GETBatchStopUpdateActionActionEnum) ToPointer() *GETBatchStopUpdateActionActionEnum {
+	return &e
+}
+
 func (e *GETBatchStopUpdateActionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BatchStopUpdateAction":
-		*e = GETBatchStopUpdateActionActionEnum(s)
+		*e = GETBatchStopUpdateActionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETBatchStopUpdateActionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETBatchStopUpdateActionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETBatchStopUpdateActionVersionEnumTwoThousandAndFifteen0202 GETBatchStopUpdateActionVersionEnum = "2015-02-02"
 )
 
+func (e GETBatchStopUpdateActionVersionEnum) ToPointer() *GETBatchStopUpdateActionVersionEnum {
+	return &e
+}
+
 func (e *GETBatchStopUpdateActionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = GETBatchStopUpdateActionVersionEnum(s)
+		*e = GETBatchStopUpdateActionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETBatchStopUpdateActionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETBatchStopUpdateActionVersionEnum: %v", v)
 	}
 }
 

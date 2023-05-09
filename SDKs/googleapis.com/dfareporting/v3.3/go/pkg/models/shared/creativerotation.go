@@ -15,19 +15,23 @@ const (
 	CreativeRotationTypeEnumCreativeRotationTypeRandom     CreativeRotationTypeEnum = "CREATIVE_ROTATION_TYPE_RANDOM"
 )
 
+func (e CreativeRotationTypeEnum) ToPointer() *CreativeRotationTypeEnum {
+	return &e
+}
+
 func (e *CreativeRotationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_ROTATION_TYPE_SEQUENTIAL":
 		fallthrough
 	case "CREATIVE_ROTATION_TYPE_RANDOM":
-		*e = CreativeRotationTypeEnum(s)
+		*e = CreativeRotationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeRotationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeRotationTypeEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	CreativeRotationWeightCalculationStrategyEnumWeightStrategyOptimized  CreativeRotationWeightCalculationStrategyEnum = "WEIGHT_STRATEGY_OPTIMIZED"
 )
 
+func (e CreativeRotationWeightCalculationStrategyEnum) ToPointer() *CreativeRotationWeightCalculationStrategyEnum {
+	return &e
+}
+
 func (e *CreativeRotationWeightCalculationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEIGHT_STRATEGY_EQUAL":
 		fallthrough
 	case "WEIGHT_STRATEGY_CUSTOM":
@@ -54,10 +62,10 @@ func (e *CreativeRotationWeightCalculationStrategyEnum) UnmarshalJSON(data []byt
 	case "WEIGHT_STRATEGY_HIGHEST_CTR":
 		fallthrough
 	case "WEIGHT_STRATEGY_OPTIMIZED":
-		*e = CreativeRotationWeightCalculationStrategyEnum(s)
+		*e = CreativeRotationWeightCalculationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeRotationWeightCalculationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeRotationWeightCalculationStrategyEnum: %v", v)
 	}
 }
 

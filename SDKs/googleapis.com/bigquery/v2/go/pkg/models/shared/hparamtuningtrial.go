@@ -20,12 +20,16 @@ const (
 	HparamTuningTrialStatusEnumStoppedEarly           HparamTuningTrialStatusEnum = "STOPPED_EARLY"
 )
 
+func (e HparamTuningTrialStatusEnum) ToPointer() *HparamTuningTrialStatusEnum {
+	return &e
+}
+
 func (e *HparamTuningTrialStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRIAL_STATUS_UNSPECIFIED":
 		fallthrough
 	case "NOT_STARTED":
@@ -39,10 +43,10 @@ func (e *HparamTuningTrialStatusEnum) UnmarshalJSON(data []byte) error {
 	case "INFEASIBLE":
 		fallthrough
 	case "STOPPED_EARLY":
-		*e = HparamTuningTrialStatusEnum(s)
+		*e = HparamTuningTrialStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HparamTuningTrialStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HparamTuningTrialStatusEnum: %v", v)
 	}
 }
 

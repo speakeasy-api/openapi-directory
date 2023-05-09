@@ -24,12 +24,16 @@ const (
 	GetProductsSearchJSONFieldsEnumCustomFieldsSelects GetProductsSearchJSONFieldsEnum = "custom_fields_selects"
 )
 
+func (e GetProductsSearchJSONFieldsEnum) ToPointer() *GetProductsSearchJSONFieldsEnum {
+	return &e
+}
+
 func (e *GetProductsSearchJSONFieldsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sku":
 		fallthrough
 	case "barcode":
@@ -47,10 +51,10 @@ func (e *GetProductsSearchJSONFieldsEnum) UnmarshalJSON(data []byte) error {
 	case "custom_fields":
 		fallthrough
 	case "custom_fields_selects":
-		*e = GetProductsSearchJSONFieldsEnum(s)
+		*e = GetProductsSearchJSONFieldsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProductsSearchJSONFieldsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProductsSearchJSONFieldsEnum: %v", v)
 	}
 }
 

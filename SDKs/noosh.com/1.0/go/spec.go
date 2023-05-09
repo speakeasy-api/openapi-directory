@@ -36,7 +36,10 @@ func newSpec(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Get product type of workgroup level
 func (s *spec) GetProductTypeListOfWorkgroup(ctx context.Context, request operations.GetProductTypeListOfWorkgroupRequest) (*operations.GetProductTypeListOfWorkgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/productTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/productTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +194,10 @@ func (s *spec) GetProductTypeListOfWorkgroup(ctx context.Context, request operat
 // List a specific spec of project Level
 func (s *spec) GetSpec(ctx context.Context, request operations.GetSpecRequest) (*operations.GetSpecResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,7 +352,10 @@ func (s *spec) GetSpec(ctx context.Context, request operations.GetSpecRequest) (
 // List specs of project Level
 func (s *spec) GetSpecList(ctx context.Context, request operations.GetSpecListRequest) (*operations.GetSpecListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -501,7 +510,10 @@ func (s *spec) GetSpecList(ctx context.Context, request operations.GetSpecListRe
 // Get product type of spec level by workgroupId
 func (s *spec) GetSpecProductTypeListOfWorkgroup(ctx context.Context, request operations.GetSpecProductTypeListOfWorkgroupRequest) (*operations.GetSpecProductTypeListOfWorkgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/productTypesOfSpecTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/productTypesOfSpecTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -656,7 +668,10 @@ func (s *spec) GetSpecProductTypeListOfWorkgroup(ctx context.Context, request op
 // Get Spec Type Fields
 func (s *spec) GetSpecTypeFields(ctx context.Context, request operations.GetSpecTypeFieldsRequest) (*operations.GetSpecTypeFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/specTypes/{spec_type_id}/specTypeFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/specTypes/{spec_type_id}/specTypeFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -811,7 +826,10 @@ func (s *spec) GetSpecTypeFields(ctx context.Context, request operations.GetSpec
 // List a specific spec of project Level
 func (s *spec) GetV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecID(ctx context.Context, request operations.GetV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDRequest) (*operations.GetV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -966,7 +984,10 @@ func (s *spec) GetV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecID(ctx contex
 // Get Spec Type Fields
 func (s *spec) GetV1WorkgroupsWorkgroupIDSpecTypesSpecTypeIDSpecTypeFields(ctx context.Context, request operations.GetV1WorkgroupsWorkgroupIDSpecTypesSpecTypeIDSpecTypeFieldsRequest) (*operations.GetV1WorkgroupsWorkgroupIDSpecTypesSpecTypeIDSpecTypeFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/specTypes/{spec_type_id}/specTypeFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/specTypes/{spec_type_id}/specTypeFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1121,7 +1142,10 @@ func (s *spec) GetV1WorkgroupsWorkgroupIDSpecTypesSpecTypeIDSpecTypeFields(ctx c
 // Register product types for spec types
 func (s *spec) PostSpecProductTypeListOfWorkgroupJSON(ctx context.Context, request operations.PostSpecProductTypeListOfWorkgroupJSONRequest) (*operations.PostSpecProductTypeListOfWorkgroupJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/productTypesOfSpecTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/productTypesOfSpecTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WgSpecPrdTypeRegPersistVO", "json")
 	if err != nil {
@@ -1283,7 +1307,10 @@ func (s *spec) PostSpecProductTypeListOfWorkgroupJSON(ctx context.Context, reque
 // Register product types for spec types
 func (s *spec) PostSpecProductTypeListOfWorkgroupRaw(ctx context.Context, request operations.PostSpecProductTypeListOfWorkgroupRawRequest) (*operations.PostSpecProductTypeListOfWorkgroupRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/productTypesOfSpecTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/productTypesOfSpecTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1445,7 +1472,10 @@ func (s *spec) PostSpecProductTypeListOfWorkgroupRaw(ctx context.Context, reques
 // Create a Spec
 func (s *spec) PostSpecJSON(ctx context.Context, request operations.PostSpecJSONRequest) (*operations.PostSpecJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SpecPersistVO", "json")
 	if err != nil {
@@ -1607,7 +1637,10 @@ func (s *spec) PostSpecJSON(ctx context.Context, request operations.PostSpecJSON
 // Create a Spec
 func (s *spec) PostSpecRaw(ctx context.Context, request operations.PostSpecRawRequest) (*operations.PostSpecRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1769,7 +1802,10 @@ func (s *spec) PostSpecRaw(ctx context.Context, request operations.PostSpecRawRe
 // Update a specific Spec
 func (s *spec) PutSpecJSON(ctx context.Context, request operations.PutSpecJSONRequest) (*operations.PutSpecJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "V1X1SpecUpdatingPO", "json")
 	if err != nil {
@@ -1931,7 +1967,10 @@ func (s *spec) PutSpecJSON(ctx context.Context, request operations.PutSpecJSONRe
 // Update a specific Spec
 func (s *spec) PutSpecRaw(ctx context.Context, request operations.PutSpecRawRequest) (*operations.PutSpecRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -2093,7 +2132,10 @@ func (s *spec) PutSpecRaw(ctx context.Context, request operations.PutSpecRawRequ
 // Update a specific Spec
 func (s *spec) PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDJSON(ctx context.Context, request operations.PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDJSONRequest) (*operations.PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SpecUpdatePersistVO", "json")
 	if err != nil {
@@ -2255,7 +2297,10 @@ func (s *spec) PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDJSON(ctx co
 // Update a specific Spec
 func (s *spec) PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDRaw(ctx context.Context, request operations.PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDRawRequest) (*operations.PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

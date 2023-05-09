@@ -15,20 +15,24 @@ const (
 	OwnerEnumCustomPolicy OwnerEnum = "CUSTOM_POLICY"
 )
 
+func (e OwnerEnum) ToPointer() *OwnerEnum {
+	return &e
+}
+
 func (e *OwnerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOM_LAMBDA":
 		fallthrough
 	case "AWS":
 		fallthrough
 	case "CUSTOM_POLICY":
-		*e = OwnerEnum(s)
+		*e = OwnerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OwnerEnum: %s", s)
+		return fmt.Errorf("invalid value for OwnerEnum: %v", v)
 	}
 }

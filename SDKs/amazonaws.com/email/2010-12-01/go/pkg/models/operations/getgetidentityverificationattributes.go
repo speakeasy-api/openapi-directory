@@ -15,17 +15,21 @@ const (
 	GETGETIdentityVerificationAttributesActionEnumGetIdentityVerificationAttributes GETGETIdentityVerificationAttributesActionEnum = "GetIdentityVerificationAttributes"
 )
 
+func (e GETGETIdentityVerificationAttributesActionEnum) ToPointer() *GETGETIdentityVerificationAttributesActionEnum {
+	return &e
+}
+
 func (e *GETGETIdentityVerificationAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetIdentityVerificationAttributes":
-		*e = GETGETIdentityVerificationAttributesActionEnum(s)
+		*e = GETGETIdentityVerificationAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETIdentityVerificationAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETIdentityVerificationAttributesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETIdentityVerificationAttributesVersionEnumTwoThousandAndTen1201 GETGETIdentityVerificationAttributesVersionEnum = "2010-12-01"
 )
 
+func (e GETGETIdentityVerificationAttributesVersionEnum) ToPointer() *GETGETIdentityVerificationAttributesVersionEnum {
+	return &e
+}
+
 func (e *GETGETIdentityVerificationAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETGETIdentityVerificationAttributesVersionEnum(s)
+		*e = GETGETIdentityVerificationAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETIdentityVerificationAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETIdentityVerificationAttributesVersionEnum: %v", v)
 	}
 }
 

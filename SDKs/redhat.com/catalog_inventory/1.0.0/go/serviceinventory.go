@@ -85,7 +85,10 @@ func (s *serviceInventory) ListServiceInventories(ctx context.Context, request o
 // Returns an array of Tag objects
 func (s *serviceInventory) ListServiceInventoryTags(ctx context.Context, request operations.ListServiceInventoryTagsRequest) (*operations.ListServiceInventoryTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -144,7 +147,10 @@ func (s *serviceInventory) ListServiceInventoryTags(ctx context.Context, request
 // Returns a ServiceInventory object
 func (s *serviceInventory) ShowServiceInventory(ctx context.Context, request operations.ShowServiceInventoryRequest) (*operations.ShowServiceInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -199,7 +205,10 @@ func (s *serviceInventory) ShowServiceInventory(ctx context.Context, request ope
 // Tags a ServiceInventory object
 func (s *serviceInventory) TagServiceInventory(ctx context.Context, request operations.TagServiceInventoryRequest) (*operations.TagServiceInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}/tag", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}/tag", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -255,7 +264,10 @@ func (s *serviceInventory) TagServiceInventory(ctx context.Context, request oper
 // Untags a ServiceInventory object
 func (s *serviceInventory) UntagServiceInventory(ctx context.Context, request operations.UntagServiceInventoryRequest) (*operations.UntagServiceInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}/untag", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_inventories/{id}/untag", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

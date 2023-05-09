@@ -2,31 +2,29 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.BalanceTransferRequest{
+    ctx := context.Background()
+    res, err := s.General.PostBalanceTransfer(ctx, shared.BalanceTransferRequest{
         Amount: shared.Amount{
             Currency: "corrupti",
             Value: 592845,
         },
-        Description: "distinctio",
+        Description: sdk.String("distinctio"),
         FromMerchant: "quibusdam",
-        Reference: "unde",
+        Reference: sdk.String("unde"),
         ToMerchant: "nulla",
-        Type: "credit",
-    }
-
-    ctx := context.Background()
-    res, err := s.General.PostBalanceTransfer(ctx, req, operations.PostBalanceTransferSecurity{
+        Type: shared.BalanceTransferRequestTypeEnumCredit,
+    }, operations.PostBalanceTransferSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {

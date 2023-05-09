@@ -15,17 +15,21 @@ const (
 	GETRevokeClientVpnIngressActionEnumRevokeClientVpnIngress GETRevokeClientVpnIngressActionEnum = "RevokeClientVpnIngress"
 )
 
+func (e GETRevokeClientVpnIngressActionEnum) ToPointer() *GETRevokeClientVpnIngressActionEnum {
+	return &e
+}
+
 func (e *GETRevokeClientVpnIngressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RevokeClientVpnIngress":
-		*e = GETRevokeClientVpnIngressActionEnum(s)
+		*e = GETRevokeClientVpnIngressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRevokeClientVpnIngressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRevokeClientVpnIngressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRevokeClientVpnIngressVersionEnumTwoThousandAndSixteen1115 GETRevokeClientVpnIngressVersionEnum = "2016-11-15"
 )
 
+func (e GETRevokeClientVpnIngressVersionEnum) ToPointer() *GETRevokeClientVpnIngressVersionEnum {
+	return &e
+}
+
 func (e *GETRevokeClientVpnIngressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETRevokeClientVpnIngressVersionEnum(s)
+		*e = GETRevokeClientVpnIngressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRevokeClientVpnIngressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRevokeClientVpnIngressVersionEnum: %v", v)
 	}
 }
 

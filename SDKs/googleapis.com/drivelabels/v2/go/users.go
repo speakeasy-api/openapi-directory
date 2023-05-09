@@ -34,7 +34,10 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DrivelabelsUsersGetCapabilities - Gets the user capabilities.
 func (s *users) DrivelabelsUsersGetCapabilities(ctx context.Context, request operations.DrivelabelsUsersGetCapabilitiesRequest) (*operations.DrivelabelsUsersGetCapabilitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

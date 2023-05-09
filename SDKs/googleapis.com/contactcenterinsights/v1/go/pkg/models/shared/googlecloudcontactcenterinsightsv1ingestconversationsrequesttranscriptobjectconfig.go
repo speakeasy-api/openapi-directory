@@ -16,21 +16,25 @@ const (
 	GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnumChat              GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum = "CHAT"
 )
 
+func (e GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum) ToPointer() *GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum {
+	return &e
+}
+
 func (e *GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEDIUM_UNSPECIFIED":
 		fallthrough
 	case "PHONE_CALL":
 		fallthrough
 	case "CHAT":
-		*e = GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum(s)
+		*e = GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum: %v", v)
 	}
 }
 

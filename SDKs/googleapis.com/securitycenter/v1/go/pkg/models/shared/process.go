@@ -16,11 +16,11 @@ type Process struct {
 	EnvVariablesTruncated *bool `json:"envVariablesTruncated,omitempty"`
 	// File information for libraries loaded by the process.
 	Libraries []File `json:"libraries,omitempty"`
-	// The process name visible in utilities like `top` and `ps`; it can be accessed via `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
+	// The process name, as displayed in utilities like `top` and `ps`. This name can be accessed through `/proc/[pid]/comm` and changed with `prctl(PR_SET_NAME)`.
 	Name *string `json:"name,omitempty"`
-	// The parent process id.
+	// The parent process ID.
 	ParentPid *string `json:"parentPid,omitempty"`
-	// The process id.
+	// The process ID.
 	Pid *string `json:"pid,omitempty"`
 	// File information about the related binary/library used by an executable, or the script used by a script interpreter
 	Script *File `json:"script,omitempty"`

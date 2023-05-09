@@ -20,12 +20,16 @@ const (
 	GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnumBrowserError             GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum = "BROWSER_ERROR"
 )
 
+func (e GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum) ToPointer() *GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVALID_REASON_UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN_INVALID_REASON":
@@ -39,10 +43,10 @@ func (e *GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum) Unmar
 	case "MISSING":
 		fallthrough
 	case "BROWSER_ERROR":
-		*e = GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum(s)
+		*e = GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum: %v", v)
 	}
 }
 

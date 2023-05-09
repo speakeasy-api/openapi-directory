@@ -17,12 +17,16 @@ const (
 	GetIpamPoolAllocationsResultIpamPoolAllocationsResourceTypeEnumCustom            GetIpamPoolAllocationsResultIpamPoolAllocationsResourceTypeEnum = "custom"
 )
 
+func (e GetIpamPoolAllocationsResultIpamPoolAllocationsResourceTypeEnum) ToPointer() *GetIpamPoolAllocationsResultIpamPoolAllocationsResourceTypeEnum {
+	return &e
+}
+
 func (e *GetIpamPoolAllocationsResultIpamPoolAllocationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipam-pool":
 		fallthrough
 	case "vpc":
@@ -30,10 +34,10 @@ func (e *GetIpamPoolAllocationsResultIpamPoolAllocationsResourceTypeEnum) Unmars
 	case "ec2-public-ipv4-pool":
 		fallthrough
 	case "custom":
-		*e = GetIpamPoolAllocationsResultIpamPoolAllocationsResourceTypeEnum(s)
+		*e = GetIpamPoolAllocationsResultIpamPoolAllocationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIpamPoolAllocationsResultIpamPoolAllocationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIpamPoolAllocationsResultIpamPoolAllocationsResourceTypeEnum: %v", v)
 	}
 }
 

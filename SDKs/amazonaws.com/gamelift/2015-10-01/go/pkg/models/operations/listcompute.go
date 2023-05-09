@@ -16,17 +16,21 @@ const (
 	ListComputeXAmzTargetEnumGameLiftListCompute ListComputeXAmzTargetEnum = "GameLift.ListCompute"
 )
 
+func (e ListComputeXAmzTargetEnum) ToPointer() *ListComputeXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListComputeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.ListCompute":
-		*e = ListComputeXAmzTargetEnum(s)
+		*e = ListComputeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListComputeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListComputeXAmzTargetEnum: %v", v)
 	}
 }
 

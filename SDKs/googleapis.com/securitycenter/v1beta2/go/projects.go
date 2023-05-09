@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettings - Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing field only indicates that it was not explicitly set, so no assumption should be made about these fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective service settings for the resource, which accounts for inherited settings and defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
 func (s *projects) SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettings(ctx context.Context, request operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest, security operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity) (*operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) SecuritycenterProjectsLocationsClustersGetContainerThreatDete
 // SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettings - Update the ContainerThreatDetectionSettings resource.
 func (s *projects) SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettings(ctx context.Context, request operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsRequest, security operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsSecurity) (*operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContainerThreatDetectionSettingsInput", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) SecuritycenterProjectsLocationsClustersUpdateContainerThreatD
 // SecuritycenterProjectsWebSecurityScannerSettingsCalculate - Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings. Settings provided closer to the target resource take precedence over those further away (e.g. folder will override organization level settings). The default SCC setting for the detector service defaults can be overridden at organization, folder and project levels. No assumptions should be made about the SCC defaults as it is considered an internal implementation detail.
 func (s *projects) SecuritycenterProjectsWebSecurityScannerSettingsCalculate(ctx context.Context, request operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateRequest, security operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateSecurity) (*operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:calculate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:calculate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

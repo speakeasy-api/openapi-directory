@@ -27,6 +27,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - papinet API is a global initiative for the Forst and Paper supply chain.
 type SDK struct {
 
@@ -146,7 +161,10 @@ func (s *SDK) GetOrders(ctx context.Context, request operations.GetOrdersRequest
 // Gets the details of a specific `order`, including a paginated list of all its lines.
 func (s *SDK) GetOrdersOrderID(ctx context.Context, request operations.GetOrdersOrderIDRequest) (*operations.GetOrdersOrderIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{orderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/{orderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

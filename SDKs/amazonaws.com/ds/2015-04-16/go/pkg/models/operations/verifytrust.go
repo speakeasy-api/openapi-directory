@@ -16,17 +16,21 @@ const (
 	VerifyTrustXAmzTargetEnumDirectoryService20150416VerifyTrust VerifyTrustXAmzTargetEnum = "DirectoryService_20150416.VerifyTrust"
 )
 
+func (e VerifyTrustXAmzTargetEnum) ToPointer() *VerifyTrustXAmzTargetEnum {
+	return &e
+}
+
 func (e *VerifyTrustXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.VerifyTrust":
-		*e = VerifyTrustXAmzTargetEnum(s)
+		*e = VerifyTrustXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyTrustXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyTrustXAmzTargetEnum: %v", v)
 	}
 }
 

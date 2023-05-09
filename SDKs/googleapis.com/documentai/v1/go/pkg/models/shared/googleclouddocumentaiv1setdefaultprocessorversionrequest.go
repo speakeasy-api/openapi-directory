@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest - Request message for the set default processor version method.
+// GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest - Request message for the SetDefaultProcessorVersion method.
 type GoogleCloudDocumentaiV1SetDefaultProcessorVersionRequest struct {
 	// Required. The resource name of child ProcessorVersion to use as default. Format: `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{version}`
 	DefaultProcessorVersion *string `json:"defaultProcessorVersion,omitempty"`

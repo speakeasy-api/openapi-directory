@@ -16,12 +16,16 @@ const (
 	CollectionStatusEnumFailed   CollectionStatusEnum = "FAILED"
 )
 
+func (e CollectionStatusEnum) ToPointer() *CollectionStatusEnum {
+	return &e
+}
+
 func (e *CollectionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "DELETING":
@@ -29,9 +33,9 @@ func (e *CollectionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE":
 		fallthrough
 	case "FAILED":
-		*e = CollectionStatusEnum(s)
+		*e = CollectionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CollectionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CollectionStatusEnum: %v", v)
 	}
 }

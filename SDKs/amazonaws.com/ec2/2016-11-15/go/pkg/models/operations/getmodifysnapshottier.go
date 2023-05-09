@@ -15,17 +15,21 @@ const (
 	GETModifySnapshotTierActionEnumModifySnapshotTier GETModifySnapshotTierActionEnum = "ModifySnapshotTier"
 )
 
+func (e GETModifySnapshotTierActionEnum) ToPointer() *GETModifySnapshotTierActionEnum {
+	return &e
+}
+
 func (e *GETModifySnapshotTierActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifySnapshotTier":
-		*e = GETModifySnapshotTierActionEnum(s)
+		*e = GETModifySnapshotTierActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifySnapshotTierActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifySnapshotTierActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifySnapshotTierStorageTierEnumArchive GETModifySnapshotTierStorageTierEnum = "archive"
 )
 
+func (e GETModifySnapshotTierStorageTierEnum) ToPointer() *GETModifySnapshotTierStorageTierEnum {
+	return &e
+}
+
 func (e *GETModifySnapshotTierStorageTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "archive":
-		*e = GETModifySnapshotTierStorageTierEnum(s)
+		*e = GETModifySnapshotTierStorageTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifySnapshotTierStorageTierEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifySnapshotTierStorageTierEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	GETModifySnapshotTierVersionEnumTwoThousandAndSixteen1115 GETModifySnapshotTierVersionEnum = "2016-11-15"
 )
 
+func (e GETModifySnapshotTierVersionEnum) ToPointer() *GETModifySnapshotTierVersionEnum {
+	return &e
+}
+
 func (e *GETModifySnapshotTierVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifySnapshotTierVersionEnum(s)
+		*e = GETModifySnapshotTierVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifySnapshotTierVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifySnapshotTierVersionEnum: %v", v)
 	}
 }
 

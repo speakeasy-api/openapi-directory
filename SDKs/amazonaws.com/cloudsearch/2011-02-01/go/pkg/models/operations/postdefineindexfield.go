@@ -15,17 +15,21 @@ const (
 	POSTDefineIndexFieldActionEnumDefineIndexField POSTDefineIndexFieldActionEnum = "DefineIndexField"
 )
 
+func (e POSTDefineIndexFieldActionEnum) ToPointer() *POSTDefineIndexFieldActionEnum {
+	return &e
+}
+
 func (e *POSTDefineIndexFieldActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DefineIndexField":
-		*e = POSTDefineIndexFieldActionEnum(s)
+		*e = POSTDefineIndexFieldActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDefineIndexFieldActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDefineIndexFieldActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDefineIndexFieldVersionEnumTwoThousandAndEleven0201 POSTDefineIndexFieldVersionEnum = "2011-02-01"
 )
 
+func (e POSTDefineIndexFieldVersionEnum) ToPointer() *POSTDefineIndexFieldVersionEnum {
+	return &e
+}
+
 func (e *POSTDefineIndexFieldVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-02-01":
-		*e = POSTDefineIndexFieldVersionEnum(s)
+		*e = POSTDefineIndexFieldVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDefineIndexFieldVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDefineIndexFieldVersionEnum: %v", v)
 	}
 }
 

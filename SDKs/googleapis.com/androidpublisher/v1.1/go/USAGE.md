@@ -2,32 +2,30 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AndroidpublisherInapppurchasesGetRequest{
-        Alt: "json",
-        Fields: "corrupti",
-        Key: "provident",
-        OauthToken: "distinctio",
-        PackageName: "quibusdam",
-        PrettyPrint: false,
-        ProductID: "unde",
-        QuotaUser: "nulla",
-        Token: "corrupti",
-        UserIP: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.Inapppurchases.AndroidpublisherInapppurchasesGet(ctx, req, operations.AndroidpublisherInapppurchasesGetSecurity{
+    res, err := s.Inapppurchases.AndroidpublisherInapppurchasesGet(ctx, operations.AndroidpublisherInapppurchasesGetRequest{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("provident"),
+        OauthToken: sdk.String("distinctio"),
+        PackageName: "quibusdam",
+        PrettyPrint: sdk.Bool(false),
+        ProductID: "unde",
+        QuotaUser: sdk.String("nulla"),
+        Token: "corrupti",
+        UserIP: sdk.String("illum"),
+    }, operations.AndroidpublisherInapppurchasesGetSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

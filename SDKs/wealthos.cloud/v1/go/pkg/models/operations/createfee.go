@@ -27,12 +27,16 @@ const (
 	CreateFeeRootTypeForFeeSubTransactionTypeEnumCommissionRebate  CreateFeeRootTypeForFeeSubTransactionTypeEnum = "Commission rebate"
 )
 
+func (e CreateFeeRootTypeForFeeSubTransactionTypeEnum) ToPointer() *CreateFeeRootTypeForFeeSubTransactionTypeEnum {
+	return &e
+}
+
 func (e *CreateFeeRootTypeForFeeSubTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ancillary fee":
 		fallthrough
 	case "Management fee":
@@ -50,10 +54,10 @@ func (e *CreateFeeRootTypeForFeeSubTransactionTypeEnum) UnmarshalJSON(data []byt
 	case "Fee rebate":
 		fallthrough
 	case "Commission rebate":
-		*e = CreateFeeRootTypeForFeeSubTransactionTypeEnum(s)
+		*e = CreateFeeRootTypeForFeeSubTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeSubTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeSubTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -101,19 +105,23 @@ const (
 	CreateFee409ApplicationJSONStatusEnumComplete   CreateFee409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e CreateFee409ApplicationJSONStatusEnum) ToPointer() *CreateFee409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *CreateFee409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = CreateFee409ApplicationJSONStatusEnum(s)
+		*e = CreateFee409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFee409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFee409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -167,19 +175,23 @@ const (
 	CreateFeeRootTypeForFeeCreationResponseDirectionEnumOut CreateFeeRootTypeForFeeCreationResponseDirectionEnum = "out"
 )
 
+func (e CreateFeeRootTypeForFeeCreationResponseDirectionEnum) ToPointer() *CreateFeeRootTypeForFeeCreationResponseDirectionEnum {
+	return &e
+}
+
 func (e *CreateFeeRootTypeForFeeCreationResponseDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "in":
 		fallthrough
 	case "out":
-		*e = CreateFeeRootTypeForFeeCreationResponseDirectionEnum(s)
+		*e = CreateFeeRootTypeForFeeCreationResponseDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeCreationResponseDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeCreationResponseDirectionEnum: %v", v)
 	}
 }
 
@@ -193,12 +205,16 @@ const (
 	CreateFeeRootTypeForFeeCreationResponseOriginEnumSystem     CreateFeeRootTypeForFeeCreationResponseOriginEnum = "system"
 )
 
+func (e CreateFeeRootTypeForFeeCreationResponseOriginEnum) ToPointer() *CreateFeeRootTypeForFeeCreationResponseOriginEnum {
+	return &e
+}
+
 func (e *CreateFeeRootTypeForFeeCreationResponseOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api":
 		fallthrough
 	case "admin_ui":
@@ -206,10 +222,10 @@ func (e *CreateFeeRootTypeForFeeCreationResponseOriginEnum) UnmarshalJSON(data [
 	case "file_upload":
 		fallthrough
 	case "system":
-		*e = CreateFeeRootTypeForFeeCreationResponseOriginEnum(s)
+		*e = CreateFeeRootTypeForFeeCreationResponseOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeCreationResponseOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeCreationResponseOriginEnum: %v", v)
 	}
 }
 
@@ -219,17 +235,21 @@ const (
 	CreateFeeRootTypeForFeeCreationResponsePrimaryTransactionTypeEnumFees CreateFeeRootTypeForFeeCreationResponsePrimaryTransactionTypeEnum = "Fees"
 )
 
+func (e CreateFeeRootTypeForFeeCreationResponsePrimaryTransactionTypeEnum) ToPointer() *CreateFeeRootTypeForFeeCreationResponsePrimaryTransactionTypeEnum {
+	return &e
+}
+
 func (e *CreateFeeRootTypeForFeeCreationResponsePrimaryTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Fees":
-		*e = CreateFeeRootTypeForFeeCreationResponsePrimaryTransactionTypeEnum(s)
+		*e = CreateFeeRootTypeForFeeCreationResponsePrimaryTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeCreationResponsePrimaryTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeCreationResponsePrimaryTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -248,12 +268,16 @@ const (
 	CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnumCommissionRebate  CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnum = "Commission rebate"
 )
 
+func (e CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnum) ToPointer() *CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnum {
+	return &e
+}
+
 func (e *CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ancillary fee":
 		fallthrough
 	case "Management fee":
@@ -271,10 +295,10 @@ func (e *CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnum) Unmarsha
 	case "Fee rebate":
 		fallthrough
 	case "Commission rebate":
-		*e = CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnum(s)
+		*e = CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeCreationResponseSubTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -291,12 +315,16 @@ const (
 	CreateFeeRootTypeForFeeCreationResponseSubTypeEnumScheduled  CreateFeeRootTypeForFeeCreationResponseSubTypeEnum = "scheduled"
 )
 
+func (e CreateFeeRootTypeForFeeCreationResponseSubTypeEnum) ToPointer() *CreateFeeRootTypeForFeeCreationResponseSubTypeEnum {
+	return &e
+}
+
 func (e *CreateFeeRootTypeForFeeCreationResponseSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instructed":
 		fallthrough
 	case "confirmed":
@@ -310,10 +338,10 @@ func (e *CreateFeeRootTypeForFeeCreationResponseSubTypeEnum) UnmarshalJSON(data 
 	case "cancelled":
 		fallthrough
 	case "scheduled":
-		*e = CreateFeeRootTypeForFeeCreationResponseSubTypeEnum(s)
+		*e = CreateFeeRootTypeForFeeCreationResponseSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeCreationResponseSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeCreationResponseSubTypeEnum: %v", v)
 	}
 }
 
@@ -325,19 +353,23 @@ const (
 	CreateFeeRootTypeForFeeCreationResponseTypeEnumArchived CreateFeeRootTypeForFeeCreationResponseTypeEnum = "archived"
 )
 
+func (e CreateFeeRootTypeForFeeCreationResponseTypeEnum) ToPointer() *CreateFeeRootTypeForFeeCreationResponseTypeEnum {
+	return &e
+}
+
 func (e *CreateFeeRootTypeForFeeCreationResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "archived":
-		*e = CreateFeeRootTypeForFeeCreationResponseTypeEnum(s)
+		*e = CreateFeeRootTypeForFeeCreationResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeCreationResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFeeRootTypeForFeeCreationResponseTypeEnum: %v", v)
 	}
 }
 

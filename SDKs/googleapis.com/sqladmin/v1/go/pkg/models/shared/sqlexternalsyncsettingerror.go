@@ -42,12 +42,16 @@ const (
 	SQLExternalSyncSettingErrorTypeEnumExistingDataInReplica                      SQLExternalSyncSettingErrorTypeEnum = "EXISTING_DATA_IN_REPLICA"
 )
 
+func (e SQLExternalSyncSettingErrorTypeEnum) ToPointer() *SQLExternalSyncSettingErrorTypeEnum {
+	return &e
+}
+
 func (e *SQLExternalSyncSettingErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_EXTERNAL_SYNC_SETTING_ERROR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CONNECTION_FAILURE":
@@ -105,10 +109,10 @@ func (e *SQLExternalSyncSettingErrorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LIMITED_SUPPORT_TABLES":
 		fallthrough
 	case "EXISTING_DATA_IN_REPLICA":
-		*e = SQLExternalSyncSettingErrorTypeEnum(s)
+		*e = SQLExternalSyncSettingErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SQLExternalSyncSettingErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SQLExternalSyncSettingErrorTypeEnum: %v", v)
 	}
 }
 

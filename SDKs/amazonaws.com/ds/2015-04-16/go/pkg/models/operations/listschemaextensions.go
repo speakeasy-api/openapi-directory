@@ -16,17 +16,21 @@ const (
 	ListSchemaExtensionsXAmzTargetEnumDirectoryService20150416ListSchemaExtensions ListSchemaExtensionsXAmzTargetEnum = "DirectoryService_20150416.ListSchemaExtensions"
 )
 
+func (e ListSchemaExtensionsXAmzTargetEnum) ToPointer() *ListSchemaExtensionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListSchemaExtensionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.ListSchemaExtensions":
-		*e = ListSchemaExtensionsXAmzTargetEnum(s)
+		*e = ListSchemaExtensionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSchemaExtensionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSchemaExtensionsXAmzTargetEnum: %v", v)
 	}
 }
 

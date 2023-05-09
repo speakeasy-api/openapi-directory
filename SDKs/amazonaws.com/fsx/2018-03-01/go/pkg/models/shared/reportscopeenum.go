@@ -13,16 +13,20 @@ const (
 	ReportScopeEnumFailedFilesOnly ReportScopeEnum = "FAILED_FILES_ONLY"
 )
 
+func (e ReportScopeEnum) ToPointer() *ReportScopeEnum {
+	return &e
+}
+
 func (e *ReportScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILED_FILES_ONLY":
-		*e = ReportScopeEnum(s)
+		*e = ReportScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportScopeEnum: %v", v)
 	}
 }

@@ -20,12 +20,16 @@ const (
 	ResponseStatusCodeStatusClassEnumStatusClassAny         ResponseStatusCodeStatusClassEnum = "STATUS_CLASS_ANY"
 )
 
+func (e ResponseStatusCodeStatusClassEnum) ToPointer() *ResponseStatusCodeStatusClassEnum {
+	return &e
+}
+
 func (e *ResponseStatusCodeStatusClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_CLASS_UNSPECIFIED":
 		fallthrough
 	case "STATUS_CLASS_1XX":
@@ -39,10 +43,10 @@ func (e *ResponseStatusCodeStatusClassEnum) UnmarshalJSON(data []byte) error {
 	case "STATUS_CLASS_5XX":
 		fallthrough
 	case "STATUS_CLASS_ANY":
-		*e = ResponseStatusCodeStatusClassEnum(s)
+		*e = ResponseStatusCodeStatusClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResponseStatusCodeStatusClassEnum: %s", s)
+		return fmt.Errorf("invalid value for ResponseStatusCodeStatusClassEnum: %v", v)
 	}
 }
 

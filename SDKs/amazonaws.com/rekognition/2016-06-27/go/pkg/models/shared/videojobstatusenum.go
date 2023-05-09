@@ -15,20 +15,24 @@ const (
 	VideoJobStatusEnumFailed     VideoJobStatusEnum = "FAILED"
 )
 
+func (e VideoJobStatusEnum) ToPointer() *VideoJobStatusEnum {
+	return &e
+}
+
 func (e *VideoJobStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = VideoJobStatusEnum(s)
+		*e = VideoJobStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoJobStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoJobStatusEnum: %v", v)
 	}
 }

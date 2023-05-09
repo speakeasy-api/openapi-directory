@@ -27,19 +27,23 @@ const (
 	GetProfileIDFile200MultipartFormDataSexEnumFemale GetProfileIDFile200MultipartFormDataSexEnum = "female"
 )
 
+func (e GetProfileIDFile200MultipartFormDataSexEnum) ToPointer() *GetProfileIDFile200MultipartFormDataSexEnum {
+	return &e
+}
+
 func (e *GetProfileIDFile200MultipartFormDataSexEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
-		*e = GetProfileIDFile200MultipartFormDataSexEnum(s)
+		*e = GetProfileIDFile200MultipartFormDataSexEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProfileIDFile200MultipartFormDataSexEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProfileIDFile200MultipartFormDataSexEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	GetProfileIDFile200MultipartFormDataStatusEnumNotValidated GetProfileIDFile200MultipartFormDataStatusEnum = "not validated"
 )
 
+func (e GetProfileIDFile200MultipartFormDataStatusEnum) ToPointer() *GetProfileIDFile200MultipartFormDataStatusEnum {
+	return &e
+}
+
 func (e *GetProfileIDFile200MultipartFormDataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "validated":
 		fallthrough
 	case "not validated":
-		*e = GetProfileIDFile200MultipartFormDataStatusEnum(s)
+		*e = GetProfileIDFile200MultipartFormDataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProfileIDFile200MultipartFormDataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProfileIDFile200MultipartFormDataStatusEnum: %v", v)
 	}
 }
 
@@ -96,19 +104,23 @@ const (
 	GetProfileIDFile200ApplicationJSONSexEnumFemale GetProfileIDFile200ApplicationJSONSexEnum = "female"
 )
 
+func (e GetProfileIDFile200ApplicationJSONSexEnum) ToPointer() *GetProfileIDFile200ApplicationJSONSexEnum {
+	return &e
+}
+
 func (e *GetProfileIDFile200ApplicationJSONSexEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
-		*e = GetProfileIDFile200ApplicationJSONSexEnum(s)
+		*e = GetProfileIDFile200ApplicationJSONSexEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProfileIDFile200ApplicationJSONSexEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProfileIDFile200ApplicationJSONSexEnum: %v", v)
 	}
 }
 
@@ -119,19 +131,23 @@ const (
 	GetProfileIDFile200ApplicationJSONStatusEnumNotValidated GetProfileIDFile200ApplicationJSONStatusEnum = "not validated"
 )
 
+func (e GetProfileIDFile200ApplicationJSONStatusEnum) ToPointer() *GetProfileIDFile200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetProfileIDFile200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "validated":
 		fallthrough
 	case "not validated":
-		*e = GetProfileIDFile200ApplicationJSONStatusEnum(s)
+		*e = GetProfileIDFile200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProfileIDFile200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProfileIDFile200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

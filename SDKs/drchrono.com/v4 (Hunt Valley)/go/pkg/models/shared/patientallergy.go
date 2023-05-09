@@ -33,12 +33,16 @@ const (
 	PatientAllergySnomedReactionEnumSixtyFiveMillionOneHundredAndTwentyFourThousandAndFour                  PatientAllergySnomedReactionEnum = "65124004"
 )
 
+func (e PatientAllergySnomedReactionEnum) ToPointer() *PatientAllergySnomedReactionEnum {
+	return &e
+}
+
 func (e *PatientAllergySnomedReactionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "14669001":
@@ -78,10 +82,10 @@ func (e *PatientAllergySnomedReactionEnum) UnmarshalJSON(data []byte) error {
 	case "162397003":
 		fallthrough
 	case "65124004":
-		*e = PatientAllergySnomedReactionEnum(s)
+		*e = PatientAllergySnomedReactionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientAllergySnomedReactionEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientAllergySnomedReactionEnum: %v", v)
 	}
 }
 
@@ -93,19 +97,23 @@ const (
 	PatientAllergyStatusEnumInactive PatientAllergyStatusEnum = "inactive"
 )
 
+func (e PatientAllergyStatusEnum) ToPointer() *PatientAllergyStatusEnum {
+	return &e
+}
+
 func (e *PatientAllergyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = PatientAllergyStatusEnum(s)
+		*e = PatientAllergyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientAllergyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientAllergyStatusEnum: %v", v)
 	}
 }
 

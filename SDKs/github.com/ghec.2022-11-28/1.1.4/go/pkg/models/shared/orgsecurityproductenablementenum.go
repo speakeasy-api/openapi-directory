@@ -18,18 +18,22 @@ const (
 	OrgSecurityProductEnablementEnumDisableAll OrgSecurityProductEnablementEnum = "disable_all"
 )
 
+func (e OrgSecurityProductEnablementEnum) ToPointer() *OrgSecurityProductEnablementEnum {
+	return &e
+}
+
 func (e *OrgSecurityProductEnablementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable_all":
 		fallthrough
 	case "disable_all":
-		*e = OrgSecurityProductEnablementEnum(s)
+		*e = OrgSecurityProductEnablementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgSecurityProductEnablementEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgSecurityProductEnablementEnum: %v", v)
 	}
 }

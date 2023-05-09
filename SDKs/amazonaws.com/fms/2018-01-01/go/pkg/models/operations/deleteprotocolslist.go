@@ -16,17 +16,21 @@ const (
 	DeleteProtocolsListXAmzTargetEnumAwsfms20180101DeleteProtocolsList DeleteProtocolsListXAmzTargetEnum = "AWSFMS_20180101.DeleteProtocolsList"
 )
 
+func (e DeleteProtocolsListXAmzTargetEnum) ToPointer() *DeleteProtocolsListXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteProtocolsListXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.DeleteProtocolsList":
-		*e = DeleteProtocolsListXAmzTargetEnum(s)
+		*e = DeleteProtocolsListXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteProtocolsListXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteProtocolsListXAmzTargetEnum: %v", v)
 	}
 }
 

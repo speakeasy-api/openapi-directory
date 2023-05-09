@@ -14,18 +14,22 @@ const (
 	ArtifactNamespaceEnumBuildID ArtifactNamespaceEnum = "BUILD_ID"
 )
 
+func (e ArtifactNamespaceEnum) ToPointer() *ArtifactNamespaceEnum {
+	return &e
+}
+
 func (e *ArtifactNamespaceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "BUILD_ID":
-		*e = ArtifactNamespaceEnum(s)
+		*e = ArtifactNamespaceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArtifactNamespaceEnum: %s", s)
+		return fmt.Errorf("invalid value for ArtifactNamespaceEnum: %v", v)
 	}
 }

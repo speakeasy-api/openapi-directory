@@ -17,12 +17,16 @@ const (
 	TargetHealthReasonEnumInvalidReplicationState TargetHealthReasonEnum = "INVALID_REPLICATION_STATE"
 )
 
+func (e TargetHealthReasonEnum) ToPointer() *TargetHealthReasonEnum {
+	return &e
+}
+
 func (e *TargetHealthReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNREACHABLE":
 		fallthrough
 	case "CONNECTION_FAILED":
@@ -32,9 +36,9 @@ func (e *TargetHealthReasonEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING_PROXY_CAPACITY":
 		fallthrough
 	case "INVALID_REPLICATION_STATE":
-		*e = TargetHealthReasonEnum(s)
+		*e = TargetHealthReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetHealthReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetHealthReasonEnum: %v", v)
 	}
 }

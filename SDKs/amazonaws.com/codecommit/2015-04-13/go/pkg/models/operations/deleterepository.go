@@ -16,17 +16,21 @@ const (
 	DeleteRepositoryXAmzTargetEnumCodeCommit20150413DeleteRepository DeleteRepositoryXAmzTargetEnum = "CodeCommit_20150413.DeleteRepository"
 )
 
+func (e DeleteRepositoryXAmzTargetEnum) ToPointer() *DeleteRepositoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteRepositoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.DeleteRepository":
-		*e = DeleteRepositoryXAmzTargetEnum(s)
+		*e = DeleteRepositoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRepositoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRepositoryXAmzTargetEnum: %v", v)
 	}
 }
 

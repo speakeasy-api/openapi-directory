@@ -15,17 +15,21 @@ const (
 	POSTDeleteOpenIDConnectProviderActionEnumDeleteOpenIDConnectProvider POSTDeleteOpenIDConnectProviderActionEnum = "DeleteOpenIDConnectProvider"
 )
 
+func (e POSTDeleteOpenIDConnectProviderActionEnum) ToPointer() *POSTDeleteOpenIDConnectProviderActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteOpenIDConnectProviderActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteOpenIDConnectProvider":
-		*e = POSTDeleteOpenIDConnectProviderActionEnum(s)
+		*e = POSTDeleteOpenIDConnectProviderActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteOpenIDConnectProviderActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteOpenIDConnectProviderActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteOpenIDConnectProviderVersionEnumTwoThousandAndTen0508 POSTDeleteOpenIDConnectProviderVersionEnum = "2010-05-08"
 )
 
+func (e POSTDeleteOpenIDConnectProviderVersionEnum) ToPointer() *POSTDeleteOpenIDConnectProviderVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteOpenIDConnectProviderVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTDeleteOpenIDConnectProviderVersionEnum(s)
+		*e = POSTDeleteOpenIDConnectProviderVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteOpenIDConnectProviderVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteOpenIDConnectProviderVersionEnum: %v", v)
 	}
 }
 

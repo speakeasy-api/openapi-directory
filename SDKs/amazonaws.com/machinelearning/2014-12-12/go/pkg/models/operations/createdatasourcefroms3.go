@@ -16,17 +16,21 @@ const (
 	CreateDataSourceFromS3XAmzTargetEnumAmazonMl20141212CreateDataSourceFromS3 CreateDataSourceFromS3XAmzTargetEnum = "AmazonML_20141212.CreateDataSourceFromS3"
 )
 
+func (e CreateDataSourceFromS3XAmzTargetEnum) ToPointer() *CreateDataSourceFromS3XAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateDataSourceFromS3XAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.CreateDataSourceFromS3":
-		*e = CreateDataSourceFromS3XAmzTargetEnum(s)
+		*e = CreateDataSourceFromS3XAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDataSourceFromS3XAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDataSourceFromS3XAmzTargetEnum: %v", v)
 	}
 }
 

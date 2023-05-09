@@ -17,21 +17,25 @@ const (
 	TransportationIncentivesLawsAllOutputFormatEnumCsv  TransportationIncentivesLawsAllOutputFormatEnum = "csv"
 )
 
+func (e TransportationIncentivesLawsAllOutputFormatEnum) ToPointer() *TransportationIncentivesLawsAllOutputFormatEnum {
+	return &e
+}
+
 func (e *TransportationIncentivesLawsAllOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
 		fallthrough
 	case "csv":
-		*e = TransportationIncentivesLawsAllOutputFormatEnum(s)
+		*e = TransportationIncentivesLawsAllOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransportationIncentivesLawsAllOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TransportationIncentivesLawsAllOutputFormatEnum: %v", v)
 	}
 }
 

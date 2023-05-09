@@ -15,17 +15,21 @@ const (
 	POSTResetDBParameterGroupActionEnumResetDbParameterGroup POSTResetDBParameterGroupActionEnum = "ResetDBParameterGroup"
 )
 
+func (e POSTResetDBParameterGroupActionEnum) ToPointer() *POSTResetDBParameterGroupActionEnum {
+	return &e
+}
+
 func (e *POSTResetDBParameterGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetDBParameterGroup":
-		*e = POSTResetDBParameterGroupActionEnum(s)
+		*e = POSTResetDBParameterGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetDBParameterGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetDBParameterGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTResetDBParameterGroupVersionEnumTwoThousandAndFourteen0901 POSTResetDBParameterGroupVersionEnum = "2014-09-01"
 )
 
+func (e POSTResetDBParameterGroupVersionEnum) ToPointer() *POSTResetDBParameterGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTResetDBParameterGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-09-01":
-		*e = POSTResetDBParameterGroupVersionEnum(s)
+		*e = POSTResetDBParameterGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetDBParameterGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetDBParameterGroupVersionEnum: %v", v)
 	}
 }
 

@@ -33,21 +33,25 @@ const (
 	DisplayvideoAdvertisersInvoicesListLoiSapinInvoiceTypeEnumLoiSapinInvoiceTypePlatform    DisplayvideoAdvertisersInvoicesListLoiSapinInvoiceTypeEnum = "LOI_SAPIN_INVOICE_TYPE_PLATFORM"
 )
 
+func (e DisplayvideoAdvertisersInvoicesListLoiSapinInvoiceTypeEnum) ToPointer() *DisplayvideoAdvertisersInvoicesListLoiSapinInvoiceTypeEnum {
+	return &e
+}
+
 func (e *DisplayvideoAdvertisersInvoicesListLoiSapinInvoiceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOI_SAPIN_INVOICE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LOI_SAPIN_INVOICE_TYPE_MEDIA":
 		fallthrough
 	case "LOI_SAPIN_INVOICE_TYPE_PLATFORM":
-		*e = DisplayvideoAdvertisersInvoicesListLoiSapinInvoiceTypeEnum(s)
+		*e = DisplayvideoAdvertisersInvoicesListLoiSapinInvoiceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisplayvideoAdvertisersInvoicesListLoiSapinInvoiceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisplayvideoAdvertisersInvoicesListLoiSapinInvoiceTypeEnum: %v", v)
 	}
 }
 

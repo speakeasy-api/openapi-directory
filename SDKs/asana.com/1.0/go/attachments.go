@@ -131,7 +131,10 @@ func (s *attachments) CreateAttachmentForObject(ctx context.Context, request ope
 // Returns an empty data record.
 func (s *attachments) DeleteAttachment(ctx context.Context, request operations.DeleteAttachmentRequest) (*operations.DeleteAttachmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attachments/{attachment_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/attachments/{attachment_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -198,7 +201,10 @@ func (s *attachments) DeleteAttachment(ctx context.Context, request operations.D
 // Get the full record for a single attachment.
 func (s *attachments) GetAttachment(ctx context.Context, request operations.GetAttachmentRequest) (*operations.GetAttachmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attachments/{attachment_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/attachments/{attachment_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

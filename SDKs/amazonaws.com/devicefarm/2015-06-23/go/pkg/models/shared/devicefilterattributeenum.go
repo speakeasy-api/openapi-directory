@@ -24,12 +24,16 @@ const (
 	DeviceFilterAttributeEnumFleetType           DeviceFilterAttributeEnum = "FLEET_TYPE"
 )
 
+func (e DeviceFilterAttributeEnum) ToPointer() *DeviceFilterAttributeEnum {
+	return &e
+}
+
 func (e *DeviceFilterAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARN":
 		fallthrough
 	case "PLATFORM":
@@ -53,9 +57,9 @@ func (e *DeviceFilterAttributeEnum) UnmarshalJSON(data []byte) error {
 	case "INSTANCE_LABELS":
 		fallthrough
 	case "FLEET_TYPE":
-		*e = DeviceFilterAttributeEnum(s)
+		*e = DeviceFilterAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceFilterAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceFilterAttributeEnum: %v", v)
 	}
 }

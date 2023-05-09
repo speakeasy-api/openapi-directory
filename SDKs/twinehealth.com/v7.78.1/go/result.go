@@ -37,7 +37,10 @@ func newResult(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Get patient health result by id.
 func (s *result) FetchPatientHealthResult(ctx context.Context, request operations.FetchPatientHealthResultRequest) (*operations.FetchPatientHealthResultResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/result/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/result/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

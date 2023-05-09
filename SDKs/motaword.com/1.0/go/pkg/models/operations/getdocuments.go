@@ -19,12 +19,16 @@ const (
 	GetDocumentsOrderByEnumName      GetDocumentsOrderByEnum = "name"
 )
 
+func (e GetDocumentsOrderByEnum) ToPointer() *GetDocumentsOrderByEnum {
+	return &e
+}
+
 func (e *GetDocumentsOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "updated_at":
@@ -32,10 +36,10 @@ func (e *GetDocumentsOrderByEnum) UnmarshalJSON(data []byte) error {
 	case "created_at":
 		fallthrough
 	case "name":
-		*e = GetDocumentsOrderByEnum(s)
+		*e = GetDocumentsOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDocumentsOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDocumentsOrderByEnum: %v", v)
 	}
 }
 
@@ -57,12 +61,16 @@ const (
 	GetDocumentsTypeFilterEnumGlossaries    GetDocumentsTypeFilterEnum = "GLOSSARIES"
 )
 
+func (e GetDocumentsTypeFilterEnum) ToPointer() *GetDocumentsTypeFilterEnum {
+	return &e
+}
+
 func (e *GetDocumentsTypeFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "TEXT_DOCUMENTS":
@@ -86,10 +94,10 @@ func (e *GetDocumentsTypeFilterEnum) UnmarshalJSON(data []byte) error {
 	case "STYLE_GUIDES":
 		fallthrough
 	case "GLOSSARIES":
-		*e = GetDocumentsTypeFilterEnum(s)
+		*e = GetDocumentsTypeFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDocumentsTypeFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDocumentsTypeFilterEnum: %v", v)
 	}
 }
 
@@ -100,19 +108,23 @@ const (
 	GetDocumentsWithEnumEditors GetDocumentsWithEnum = "editors"
 )
 
+func (e GetDocumentsWithEnum) ToPointer() *GetDocumentsWithEnum {
+	return &e
+}
+
 func (e *GetDocumentsWithEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "preview":
 		fallthrough
 	case "editors":
-		*e = GetDocumentsWithEnum(s)
+		*e = GetDocumentsWithEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDocumentsWithEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDocumentsWithEnum: %v", v)
 	}
 }
 

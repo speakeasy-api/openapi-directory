@@ -15,17 +15,21 @@ const (
 	GETDeleteCustomDBEngineVersionActionEnumDeleteCustomDbEngineVersion GETDeleteCustomDBEngineVersionActionEnum = "DeleteCustomDBEngineVersion"
 )
 
+func (e GETDeleteCustomDBEngineVersionActionEnum) ToPointer() *GETDeleteCustomDBEngineVersionActionEnum {
+	return &e
+}
+
 func (e *GETDeleteCustomDBEngineVersionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteCustomDBEngineVersion":
-		*e = GETDeleteCustomDBEngineVersionActionEnum(s)
+		*e = GETDeleteCustomDBEngineVersionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteCustomDBEngineVersionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteCustomDBEngineVersionActionEnum: %v", v)
 	}
 }
 
@@ -36,23 +40,27 @@ const (
 	GETDeleteCustomDBEngineVersionVersionEnumTwoThousandAndFourteen1031 GETDeleteCustomDBEngineVersionVersionEnum = "2014-10-31"
 )
 
+func (e GETDeleteCustomDBEngineVersionVersionEnum) ToPointer() *GETDeleteCustomDBEngineVersionVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteCustomDBEngineVersionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETDeleteCustomDBEngineVersionVersionEnum(s)
+		*e = GETDeleteCustomDBEngineVersionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteCustomDBEngineVersionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteCustomDBEngineVersionVersionEnum: %v", v)
 	}
 }
 
 type GETDeleteCustomDBEngineVersionRequest struct {
 	Action GETDeleteCustomDBEngineVersionActionEnum `queryParam:"style=form,explode=true,name=Action"`
-	// The database engine. The only supported engine is <code>custom-oracle-ee</code>.
+	// The database engine. The only supported engines are <code>custom-oracle-ee</code> and <code>custom-oracle-ee-cdb</code>.
 	Engine string `queryParam:"style=form,explode=true,name=Engine"`
 	// The custom engine version (CEV) for your DB instance. This option is required for RDS Custom, but optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique per customer per Amazon Web Services Region.
 	EngineVersion     string                                    `queryParam:"style=form,explode=true,name=EngineVersion"`

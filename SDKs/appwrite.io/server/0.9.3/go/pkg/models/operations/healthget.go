@@ -6,6 +6,11 @@ import (
 	"net/http"
 )
 
+type HealthGetSecurity struct {
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
+}
+
 type HealthGetResponse struct {
 	ContentType string
 	StatusCode  int

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.AddTagsToResourceRequest{
+    ctx := context.Background()
+    res, err := s.AddTagsToResource(ctx, operations.AddTagsToResourceRequest{
         AddTagsToResourceRequest: shared.AddTagsToResourceRequest{
             ResourceArn: "corrupti",
             TagList: []shared.Tag{
@@ -35,18 +36,15 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "vel",
-        XAmzContentSha256: "error",
-        XAmzCredential: "deserunt",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "iure",
-        XAmzSignature: "magnam",
-        XAmzSignedHeaders: "debitis",
-        XAmzTarget: "CloudHsmFrontendService.AddTagsToResource",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddTagsToResource(ctx, req)
+        XAmzAlgorithm: sdk.String("vel"),
+        XAmzContentSha256: sdk.String("error"),
+        XAmzCredential: sdk.String("deserunt"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("iure"),
+        XAmzSignature: sdk.String("magnam"),
+        XAmzSignedHeaders: sdk.String("debitis"),
+        XAmzTarget: operations.AddTagsToResourceXAmzTargetEnumCloudHsmFrontendServiceAddTagsToResource,
+    })
     if err != nil {
         log.Fatal(err)
     }

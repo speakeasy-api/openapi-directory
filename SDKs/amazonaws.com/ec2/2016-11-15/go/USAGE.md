@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,28 +16,26 @@ func main() {
         }),
     )
 
-    req := operations.GETAcceptTransitGatewayMulticastDomainAssociationsRequest{
-        Action: "AcceptTransitGatewayMulticastDomainAssociations",
-        DryRun: false,
+    ctx := context.Background()
+    res, err := s.GETAcceptTransitGatewayMulticastDomainAssociations(ctx, operations.GETAcceptTransitGatewayMulticastDomainAssociationsRequest{
+        Action: operations.GETAcceptTransitGatewayMulticastDomainAssociationsActionEnumAcceptTransitGatewayMulticastDomainAssociations,
+        DryRun: sdk.Bool(false),
         SubnetIds: []string{
             "provident",
             "distinctio",
             "quibusdam",
         },
-        TransitGatewayAttachmentID: "unde",
-        TransitGatewayMulticastDomainID: "nulla",
-        Version: "2016-11-15",
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "illum",
-        XAmzCredential: "vel",
-        XAmzDate: "error",
-        XAmzSecurityToken: "deserunt",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "iure",
-    }
-
-    ctx := context.Background()
-    res, err := s.GETAcceptTransitGatewayMulticastDomainAssociations(ctx, req)
+        TransitGatewayAttachmentID: sdk.String("unde"),
+        TransitGatewayMulticastDomainID: sdk.String("nulla"),
+        Version: operations.GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnumTwoThousandAndSixteen1115,
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("illum"),
+        XAmzCredential: sdk.String("vel"),
+        XAmzDate: sdk.String("error"),
+        XAmzSecurityToken: sdk.String("deserunt"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("iure"),
+    })
     if err != nil {
         log.Fatal(err)
     }

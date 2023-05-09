@@ -15,17 +15,21 @@ const (
 	GETUpdateSSHPublicKeyActionEnumUpdateSSHPublicKey GETUpdateSSHPublicKeyActionEnum = "UpdateSSHPublicKey"
 )
 
+func (e GETUpdateSSHPublicKeyActionEnum) ToPointer() *GETUpdateSSHPublicKeyActionEnum {
+	return &e
+}
+
 func (e *GETUpdateSSHPublicKeyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateSSHPublicKey":
-		*e = GETUpdateSSHPublicKeyActionEnum(s)
+		*e = GETUpdateSSHPublicKeyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateSSHPublicKeyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateSSHPublicKeyActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETUpdateSSHPublicKeyStatusEnumInactive GETUpdateSSHPublicKeyStatusEnum = "Inactive"
 )
 
+func (e GETUpdateSSHPublicKeyStatusEnum) ToPointer() *GETUpdateSSHPublicKeyStatusEnum {
+	return &e
+}
+
 func (e *GETUpdateSSHPublicKeyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Inactive":
-		*e = GETUpdateSSHPublicKeyStatusEnum(s)
+		*e = GETUpdateSSHPublicKeyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateSSHPublicKeyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateSSHPublicKeyStatusEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETUpdateSSHPublicKeyVersionEnumTwoThousandAndTen0508 GETUpdateSSHPublicKeyVersionEnum = "2010-05-08"
 )
 
+func (e GETUpdateSSHPublicKeyVersionEnum) ToPointer() *GETUpdateSSHPublicKeyVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateSSHPublicKeyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETUpdateSSHPublicKeyVersionEnum(s)
+		*e = GETUpdateSSHPublicKeyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateSSHPublicKeyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateSSHPublicKeyVersionEnum: %v", v)
 	}
 }
 

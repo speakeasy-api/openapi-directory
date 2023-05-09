@@ -16,17 +16,21 @@ const (
 	StartSessionXAmzTargetEnumAmazonAthenaStartSession StartSessionXAmzTargetEnum = "AmazonAthena.StartSession"
 )
 
+func (e StartSessionXAmzTargetEnum) ToPointer() *StartSessionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartSessionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.StartSession":
-		*e = StartSessionXAmzTargetEnum(s)
+		*e = StartSessionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartSessionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartSessionXAmzTargetEnum: %v", v)
 	}
 }
 

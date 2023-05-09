@@ -35,7 +35,10 @@ func newCatalogs(defaultClient, securityClient HTTPClient, serverURL, language, 
 // CloudprivatecatalogproducerCatalogsAssociationsCreate - Creates an Association instance under a given Catalog.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsAssociationsCreate(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsAssociationsCreateRequest, security operations.CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity) (*operations.CloudprivatecatalogproducerCatalogsAssociationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/associations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/associations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest", "json")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsAssociationsCreate(ctx con
 // CloudprivatecatalogproducerCatalogsAssociationsList - Lists all Association resources under a catalog.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsAssociationsList(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsAssociationsListRequest, security operations.CloudprivatecatalogproducerCatalogsAssociationsListSecurity) (*operations.CloudprivatecatalogproducerCatalogsAssociationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/associations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/associations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +199,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsCreate(ctx context.Context
 // CloudprivatecatalogproducerCatalogsGetIamPolicy - Gets IAM policy for the specified Catalog.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsGetIamPolicy(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsGetIamPolicyRequest, security operations.CloudprivatecatalogproducerCatalogsGetIamPolicySecurity) (*operations.CloudprivatecatalogproducerCatalogsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -290,7 +299,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsList(ctx context.Context, 
 // CloudprivatecatalogproducerCatalogsProductsCopy - Copies a Product under another Catalog.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsCopy(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsCopyRequest, security operations.CloudprivatecatalogproducerCatalogsProductsCopySecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsCopyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:copy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:copy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1CopyProductRequest", "json")
 	if err != nil {
@@ -345,7 +357,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsCopy(ctx context.C
 // CloudprivatecatalogproducerCatalogsProductsCreate - Creates a Product instance under a given Catalog.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsCreate(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsCreateRequest, security operations.CloudprivatecatalogproducerCatalogsProductsCreateSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/products", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/products", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1Product", "json")
 	if err != nil {
@@ -405,7 +420,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsCreate(ctx context
 // Icon with the given Product and deletes the old icon.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsIconsUpload(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadRequest, security operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{product}/icons:upload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{product}/icons:upload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1UploadIconRequest", "json")
 	if err != nil {
@@ -461,7 +479,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsIconsUpload(ctx co
 // scope of the parent catalog.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsList(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsListRequest, security operations.CloudprivatecatalogproducerCatalogsProductsListSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/products", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/products", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -509,7 +530,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsList(ctx context.C
 // CloudprivatecatalogproducerCatalogsProductsVersionsCreate - Creates a Version instance under a given Product.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsCreate(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateRequest, security operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1Version", "json")
 	if err != nil {
@@ -564,7 +588,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsCreate(ctx
 // CloudprivatecatalogproducerCatalogsProductsVersionsDelete - Hard deletes a Version.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsDelete(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteRequest, security operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -612,7 +639,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsDelete(ctx
 // CloudprivatecatalogproducerCatalogsProductsVersionsGet - Returns the requested Version resource.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsGet(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetRequest, security operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -661,7 +691,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsGet(ctx co
 // scope of the parent Product.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsList(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsListRequest, security operations.CloudprivatecatalogproducerCatalogsProductsVersionsListSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -709,7 +742,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsList(ctx c
 // CloudprivatecatalogproducerCatalogsProductsVersionsPatch - Updates a specific Version resource.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsPatch(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest, security operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchSecurity) (*operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPrivatecatalogproducerV1beta1Version", "json")
 	if err != nil {
@@ -764,7 +800,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsProductsVersionsPatch(ctx 
 // CloudprivatecatalogproducerCatalogsSetIamPolicy - Sets the IAM policy for the specified Catalog.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsSetIamPolicy(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsSetIamPolicyRequest, security operations.CloudprivatecatalogproducerCatalogsSetIamPolicySecurity) (*operations.CloudprivatecatalogproducerCatalogsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1SetIamPolicyRequest", "json")
 	if err != nil {
@@ -819,7 +858,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsSetIamPolicy(ctx context.C
 // CloudprivatecatalogproducerCatalogsTestIamPermissions - Tests the IAM permissions for the specified Catalog.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsTestIamPermissions(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsRequest, security operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsSecurity) (*operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -874,7 +916,10 @@ func (s *catalogs) CloudprivatecatalogproducerCatalogsTestIamPermissions(ctx con
 // CloudprivatecatalogproducerCatalogsUndelete - Undeletes a deleted Catalog and all resources under it.
 func (s *catalogs) CloudprivatecatalogproducerCatalogsUndelete(ctx context.Context, request operations.CloudprivatecatalogproducerCatalogsUndeleteRequest, security operations.CloudprivatecatalogproducerCatalogsUndeleteSecurity) (*operations.CloudprivatecatalogproducerCatalogsUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:undelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:undelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

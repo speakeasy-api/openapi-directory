@@ -20,12 +20,16 @@ const (
 	DataTypeFieldFormatEnumBlob        DataTypeFieldFormatEnum = "blob"
 )
 
+func (e DataTypeFieldFormatEnum) ToPointer() *DataTypeFieldFormatEnum {
+	return &e
+}
+
 func (e *DataTypeFieldFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "integer":
 		fallthrough
 	case "floatPoint":
@@ -39,10 +43,10 @@ func (e *DataTypeFieldFormatEnum) UnmarshalJSON(data []byte) error {
 	case "floatList":
 		fallthrough
 	case "blob":
-		*e = DataTypeFieldFormatEnum(s)
+		*e = DataTypeFieldFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataTypeFieldFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for DataTypeFieldFormatEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newProductdeliverytime(defaultClient, securityClient HTTPClient, serverURL,
 // ContentProductdeliverytimeCreate - Creates or updates the delivery time of a product.
 func (s *productdeliverytime) ContentProductdeliverytimeCreate(ctx context.Context, request operations.ContentProductdeliverytimeCreateRequest, security operations.ContentProductdeliverytimeCreateSecurity) (*operations.ContentProductdeliverytimeCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productdeliverytime", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productdeliverytime", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductDeliveryTime", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *productdeliverytime) ContentProductdeliverytimeCreate(ctx context.Conte
 // ContentProductdeliverytimeDelete - Deletes the delivery time of a product.
 func (s *productdeliverytime) ContentProductdeliverytimeDelete(ctx context.Context, request operations.ContentProductdeliverytimeDeleteRequest, security operations.ContentProductdeliverytimeDeleteSecurity) (*operations.ContentProductdeliverytimeDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productdeliverytime/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productdeliverytime/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *productdeliverytime) ContentProductdeliverytimeDelete(ctx context.Conte
 // ContentProductdeliverytimeGet - Gets `productDeliveryTime` by `productId`.
 func (s *productdeliverytime) ContentProductdeliverytimeGet(ctx context.Context, request operations.ContentProductdeliverytimeGetRequest, security operations.ContentProductdeliverytimeGetSecurity) (*operations.ContentProductdeliverytimeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productdeliverytime/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productdeliverytime/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

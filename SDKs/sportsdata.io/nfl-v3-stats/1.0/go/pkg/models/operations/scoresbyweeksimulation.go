@@ -17,19 +17,23 @@ const (
 	ScoresByWeekSimulationFormatEnumJSON ScoresByWeekSimulationFormatEnum = "JSON"
 )
 
+func (e ScoresByWeekSimulationFormatEnum) ToPointer() *ScoresByWeekSimulationFormatEnum {
+	return &e
+}
+
 func (e *ScoresByWeekSimulationFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = ScoresByWeekSimulationFormatEnum(s)
+		*e = ScoresByWeekSimulationFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScoresByWeekSimulationFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ScoresByWeekSimulationFormatEnum: %v", v)
 	}
 }
 

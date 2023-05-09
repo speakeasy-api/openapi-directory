@@ -15,17 +15,21 @@ const (
 	POSTGetEbsEncryptionByDefaultActionEnumGetEbsEncryptionByDefault POSTGetEbsEncryptionByDefaultActionEnum = "GetEbsEncryptionByDefault"
 )
 
+func (e POSTGetEbsEncryptionByDefaultActionEnum) ToPointer() *POSTGetEbsEncryptionByDefaultActionEnum {
+	return &e
+}
+
 func (e *POSTGetEbsEncryptionByDefaultActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetEbsEncryptionByDefault":
-		*e = POSTGetEbsEncryptionByDefaultActionEnum(s)
+		*e = POSTGetEbsEncryptionByDefaultActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetEbsEncryptionByDefaultActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetEbsEncryptionByDefaultActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetEbsEncryptionByDefaultVersionEnumTwoThousandAndSixteen1115 POSTGetEbsEncryptionByDefaultVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetEbsEncryptionByDefaultVersionEnum) ToPointer() *POSTGetEbsEncryptionByDefaultVersionEnum {
+	return &e
+}
+
 func (e *POSTGetEbsEncryptionByDefaultVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetEbsEncryptionByDefaultVersionEnum(s)
+		*e = POSTGetEbsEncryptionByDefaultVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetEbsEncryptionByDefaultVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetEbsEncryptionByDefaultVersionEnum: %v", v)
 	}
 }
 

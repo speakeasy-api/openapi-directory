@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,24 +17,22 @@ func main() {
         }),
     )
 
-    req := operations.DescribeStreamRequest{
+    ctx := context.Background()
+    res, err := s.DescribeStream(ctx, operations.DescribeStreamRequest{
         DescribeStreamInput: shared.DescribeStreamInput{
-            ExclusiveStartShardID: "corrupti",
-            Limit: 592845,
+            ExclusiveStartShardID: sdk.String("corrupti"),
+            Limit: sdk.Int64(592845),
             StreamArn: "distinctio",
         },
-        XAmzAlgorithm: "quibusdam",
-        XAmzContentSha256: "unde",
-        XAmzCredential: "nulla",
-        XAmzDate: "corrupti",
-        XAmzSecurityToken: "illum",
-        XAmzSignature: "vel",
-        XAmzSignedHeaders: "error",
-        XAmzTarget: "DynamoDBStreams_20120810.DescribeStream",
-    }
-
-    ctx := context.Background()
-    res, err := s.DescribeStream(ctx, req)
+        XAmzAlgorithm: sdk.String("quibusdam"),
+        XAmzContentSha256: sdk.String("unde"),
+        XAmzCredential: sdk.String("nulla"),
+        XAmzDate: sdk.String("corrupti"),
+        XAmzSecurityToken: sdk.String("illum"),
+        XAmzSignature: sdk.String("vel"),
+        XAmzSignedHeaders: sdk.String("error"),
+        XAmzTarget: operations.DescribeStreamXAmzTargetEnumDynamoDbStreams20120810DescribeStream,
+    })
     if err != nil {
         log.Fatal(err)
     }

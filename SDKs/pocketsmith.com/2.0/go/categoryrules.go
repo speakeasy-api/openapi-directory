@@ -35,7 +35,10 @@ func newCategoryRules(defaultClient, securityClient HTTPClient, serverURL, langu
 // Lists all category rules belonging to a user by their ID.
 func (s *categoryRules) GetUsersIDCategoryRules(ctx context.Context, request operations.GetUsersIDCategoryRulesRequest) (*operations.GetUsersIDCategoryRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/category_rules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}/category_rules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -92,7 +95,10 @@ func (s *categoryRules) GetUsersIDCategoryRules(ctx context.Context, request ope
 // Creates a rule to allocate a category to transactions.
 func (s *categoryRules) PostCategoriesIDCategoryRules(ctx context.Context, request operations.PostCategoriesIDCategoryRulesRequest) (*operations.PostCategoriesIDCategoryRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}/category_rules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/categories/{id}/category_rules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

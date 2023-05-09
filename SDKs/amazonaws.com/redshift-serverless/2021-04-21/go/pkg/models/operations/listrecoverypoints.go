@@ -16,17 +16,21 @@ const (
 	ListRecoveryPointsXAmzTargetEnumRedshiftServerlessListRecoveryPoints ListRecoveryPointsXAmzTargetEnum = "RedshiftServerless.ListRecoveryPoints"
 )
 
+func (e ListRecoveryPointsXAmzTargetEnum) ToPointer() *ListRecoveryPointsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListRecoveryPointsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.ListRecoveryPoints":
-		*e = ListRecoveryPointsXAmzTargetEnum(s)
+		*e = ListRecoveryPointsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRecoveryPointsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRecoveryPointsXAmzTargetEnum: %v", v)
 	}
 }
 

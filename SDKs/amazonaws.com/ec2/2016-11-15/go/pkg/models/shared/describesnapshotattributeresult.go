@@ -14,17 +14,21 @@ const (
 	DescribeSnapshotAttributeResultCreateVolumePermissionsGroupEnumAll DescribeSnapshotAttributeResultCreateVolumePermissionsGroupEnum = "all"
 )
 
+func (e DescribeSnapshotAttributeResultCreateVolumePermissionsGroupEnum) ToPointer() *DescribeSnapshotAttributeResultCreateVolumePermissionsGroupEnum {
+	return &e
+}
+
 func (e *DescribeSnapshotAttributeResultCreateVolumePermissionsGroupEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
-		*e = DescribeSnapshotAttributeResultCreateVolumePermissionsGroupEnum(s)
+		*e = DescribeSnapshotAttributeResultCreateVolumePermissionsGroupEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSnapshotAttributeResultCreateVolumePermissionsGroupEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSnapshotAttributeResultCreateVolumePermissionsGroupEnum: %v", v)
 	}
 }
 
@@ -42,19 +46,23 @@ const (
 	DescribeSnapshotAttributeResultProductCodesProductCodeTypeEnumMarketplace DescribeSnapshotAttributeResultProductCodesProductCodeTypeEnum = "marketplace"
 )
 
+func (e DescribeSnapshotAttributeResultProductCodesProductCodeTypeEnum) ToPointer() *DescribeSnapshotAttributeResultProductCodesProductCodeTypeEnum {
+	return &e
+}
+
 func (e *DescribeSnapshotAttributeResultProductCodesProductCodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "devpay":
 		fallthrough
 	case "marketplace":
-		*e = DescribeSnapshotAttributeResultProductCodesProductCodeTypeEnum(s)
+		*e = DescribeSnapshotAttributeResultProductCodesProductCodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSnapshotAttributeResultProductCodesProductCodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSnapshotAttributeResultProductCodesProductCodeTypeEnum: %v", v)
 	}
 }
 

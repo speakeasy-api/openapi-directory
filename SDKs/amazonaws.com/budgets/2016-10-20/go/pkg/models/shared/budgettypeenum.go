@@ -19,12 +19,16 @@ const (
 	BudgetTypeEnumSavingsPlansCoverage    BudgetTypeEnum = "SAVINGS_PLANS_COVERAGE"
 )
 
+func (e BudgetTypeEnum) ToPointer() *BudgetTypeEnum {
+	return &e
+}
+
 func (e *BudgetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USAGE":
 		fallthrough
 	case "COST":
@@ -36,9 +40,9 @@ func (e *BudgetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SAVINGS_PLANS_UTILIZATION":
 		fallthrough
 	case "SAVINGS_PLANS_COVERAGE":
-		*e = BudgetTypeEnum(s)
+		*e = BudgetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BudgetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BudgetTypeEnum: %v", v)
 	}
 }

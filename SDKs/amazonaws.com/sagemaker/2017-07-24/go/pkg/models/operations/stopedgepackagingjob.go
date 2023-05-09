@@ -16,17 +16,21 @@ const (
 	StopEdgePackagingJobXAmzTargetEnumSageMakerStopEdgePackagingJob StopEdgePackagingJobXAmzTargetEnum = "SageMaker.StopEdgePackagingJob"
 )
 
+func (e StopEdgePackagingJobXAmzTargetEnum) ToPointer() *StopEdgePackagingJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopEdgePackagingJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.StopEdgePackagingJob":
-		*e = StopEdgePackagingJobXAmzTargetEnum(s)
+		*e = StopEdgePackagingJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopEdgePackagingJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopEdgePackagingJobXAmzTargetEnum: %v", v)
 	}
 }
 

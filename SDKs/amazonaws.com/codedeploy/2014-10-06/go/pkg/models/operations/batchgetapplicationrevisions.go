@@ -16,17 +16,21 @@ const (
 	BatchGetApplicationRevisionsXAmzTargetEnumCodeDeploy20141006BatchGetApplicationRevisions BatchGetApplicationRevisionsXAmzTargetEnum = "CodeDeploy_20141006.BatchGetApplicationRevisions"
 )
 
+func (e BatchGetApplicationRevisionsXAmzTargetEnum) ToPointer() *BatchGetApplicationRevisionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchGetApplicationRevisionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.BatchGetApplicationRevisions":
-		*e = BatchGetApplicationRevisionsXAmzTargetEnum(s)
+		*e = BatchGetApplicationRevisionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetApplicationRevisionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetApplicationRevisionsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalInitiatingProductEnumLinkedProduct                            GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalInitiatingProductEnum = "LINKED_PRODUCT"
 )
 
+func (e GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalInitiatingProductEnum) ToPointer() *GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalInitiatingProductEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalInitiatingProductEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINK_PROPOSAL_INITIATING_PRODUCT_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_ANALYTICS":
 		fallthrough
 	case "LINKED_PRODUCT":
-		*e = GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalInitiatingProductEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalInitiatingProductEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalInitiatingProductEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalInitiatingProductEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalStateEnumObsolete                          GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalStateEnum = "OBSOLETE"
 )
 
+func (e GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalStateEnum) ToPointer() *GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalStateEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINK_PROPOSAL_STATE_UNSPECIFIED":
 		fallthrough
 	case "AWAITING_REVIEW_FROM_GOOGLE_ANALYTICS":
@@ -66,10 +74,10 @@ func (e *GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalStateEn
 	case "EXPIRED":
 		fallthrough
 	case "OBSOLETE":
-		*e = GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalStateEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaLinkProposalStatusDetailsLinkProposalStateEnum: %v", v)
 	}
 }
 

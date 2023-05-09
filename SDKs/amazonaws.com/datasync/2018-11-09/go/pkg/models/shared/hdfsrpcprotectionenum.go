@@ -16,12 +16,16 @@ const (
 	HdfsRPCProtectionEnumPrivacy        HdfsRPCProtectionEnum = "PRIVACY"
 )
 
+func (e HdfsRPCProtectionEnum) ToPointer() *HdfsRPCProtectionEnum {
+	return &e
+}
+
 func (e *HdfsRPCProtectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "AUTHENTICATION":
@@ -29,9 +33,9 @@ func (e *HdfsRPCProtectionEnum) UnmarshalJSON(data []byte) error {
 	case "INTEGRITY":
 		fallthrough
 	case "PRIVACY":
-		*e = HdfsRPCProtectionEnum(s)
+		*e = HdfsRPCProtectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HdfsRPCProtectionEnum: %s", s)
+		return fmt.Errorf("invalid value for HdfsRPCProtectionEnum: %v", v)
 	}
 }

@@ -16,20 +16,24 @@ const (
 	TrainingInputModeEnumFastFile TrainingInputModeEnum = "FastFile"
 )
 
+func (e TrainingInputModeEnum) ToPointer() *TrainingInputModeEnum {
+	return &e
+}
+
 func (e *TrainingInputModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pipe":
 		fallthrough
 	case "File":
 		fallthrough
 	case "FastFile":
-		*e = TrainingInputModeEnum(s)
+		*e = TrainingInputModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingInputModeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingInputModeEnum: %v", v)
 	}
 }

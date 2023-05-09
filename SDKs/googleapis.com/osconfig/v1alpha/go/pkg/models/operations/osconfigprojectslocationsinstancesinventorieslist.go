@@ -23,21 +23,25 @@ const (
 	OsconfigProjectsLocationsInstancesInventoriesListViewEnumFull                     OsconfigProjectsLocationsInstancesInventoriesListViewEnum = "FULL"
 )
 
+func (e OsconfigProjectsLocationsInstancesInventoriesListViewEnum) ToPointer() *OsconfigProjectsLocationsInstancesInventoriesListViewEnum {
+	return &e
+}
+
 func (e *OsconfigProjectsLocationsInstancesInventoriesListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVENTORY_VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = OsconfigProjectsLocationsInstancesInventoriesListViewEnum(s)
+		*e = OsconfigProjectsLocationsInstancesInventoriesListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OsconfigProjectsLocationsInstancesInventoriesListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for OsconfigProjectsLocationsInstancesInventoriesListViewEnum: %v", v)
 	}
 }
 

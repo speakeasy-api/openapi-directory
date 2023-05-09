@@ -12,6 +12,10 @@ type AccessApprovalSettingsInput struct {
 	Name *string `json:"name,omitempty"`
 	// A list of email addresses to which notifications relating to approval requests should be sent. Notifications relating to a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email addresses are allowed.
 	NotificationEmails []string `json:"notificationEmails,omitempty"`
+	// This preference is communicated to Google personnel when sending an approval request but can be overridden if necessary.
+	PreferNoBroadApprovalRequests *bool `json:"preferNoBroadApprovalRequests,omitempty"`
+	// This preference is shared with Google personnel, but can be overridden if said personnel deems necessary. The approver ultimately can set the expiration at approval time.
+	PreferredRequestExpirationDays *int `json:"preferredRequestExpirationDays,omitempty"`
 }
 
 // AccessApprovalSettings - Settings on a Project/Folder/Organization related to Access Approval.
@@ -30,4 +34,8 @@ type AccessApprovalSettings struct {
 	Name *string `json:"name,omitempty"`
 	// A list of email addresses to which notifications relating to approval requests should be sent. Notifications relating to a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email addresses are allowed.
 	NotificationEmails []string `json:"notificationEmails,omitempty"`
+	// This preference is communicated to Google personnel when sending an approval request but can be overridden if necessary.
+	PreferNoBroadApprovalRequests *bool `json:"preferNoBroadApprovalRequests,omitempty"`
+	// This preference is shared with Google personnel, but can be overridden if said personnel deems necessary. The approver ultimately can set the expiration at approval time.
+	PreferredRequestExpirationDays *int `json:"preferredRequestExpirationDays,omitempty"`
 }

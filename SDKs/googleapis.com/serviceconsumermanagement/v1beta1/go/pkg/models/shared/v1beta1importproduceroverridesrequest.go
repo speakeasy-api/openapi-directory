@@ -15,21 +15,25 @@ const (
 	V1Beta1ImportProducerOverridesRequestForceOnlyEnumLimitDecreasePercentageTooHigh V1Beta1ImportProducerOverridesRequestForceOnlyEnum = "LIMIT_DECREASE_PERCENTAGE_TOO_HIGH"
 )
 
+func (e V1Beta1ImportProducerOverridesRequestForceOnlyEnum) ToPointer() *V1Beta1ImportProducerOverridesRequestForceOnlyEnum {
+	return &e
+}
+
 func (e *V1Beta1ImportProducerOverridesRequestForceOnlyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUOTA_SAFETY_CHECK_UNSPECIFIED":
 		fallthrough
 	case "LIMIT_DECREASE_BELOW_USAGE":
 		fallthrough
 	case "LIMIT_DECREASE_PERCENTAGE_TOO_HIGH":
-		*e = V1Beta1ImportProducerOverridesRequestForceOnlyEnum(s)
+		*e = V1Beta1ImportProducerOverridesRequestForceOnlyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for V1Beta1ImportProducerOverridesRequestForceOnlyEnum: %s", s)
+		return fmt.Errorf("invalid value for V1Beta1ImportProducerOverridesRequestForceOnlyEnum: %v", v)
 	}
 }
 

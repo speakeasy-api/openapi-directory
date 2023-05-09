@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// SubjectKindEnum - Authentication type for subject.
+// SubjectKindEnum - Authentication type for the subject.
 type SubjectKindEnum string
 
 const (
@@ -17,12 +17,16 @@ const (
 	SubjectKindEnumGroup               SubjectKindEnum = "GROUP"
 )
 
+func (e SubjectKindEnum) ToPointer() *SubjectKindEnum {
+	return &e
+}
+
 func (e *SubjectKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "USER":
@@ -30,19 +34,19 @@ func (e *SubjectKindEnum) UnmarshalJSON(data []byte) error {
 	case "SERVICEACCOUNT":
 		fallthrough
 	case "GROUP":
-		*e = SubjectKindEnum(s)
+		*e = SubjectKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubjectKindEnum: %s", s)
+		return fmt.Errorf("invalid value for SubjectKindEnum: %v", v)
 	}
 }
 
-// Subject - Represents a Kubernetes Subject.
+// Subject - Represents a Kubernetes subject.
 type Subject struct {
-	// Authentication type for subject.
+	// Authentication type for the subject.
 	Kind *SubjectKindEnum `json:"kind,omitempty"`
-	// Name for subject.
+	// Name for the subject.
 	Name *string `json:"name,omitempty"`
-	// Namespace for subject.
+	// Namespace for the subject.
 	Ns *string `json:"ns,omitempty"`
 }

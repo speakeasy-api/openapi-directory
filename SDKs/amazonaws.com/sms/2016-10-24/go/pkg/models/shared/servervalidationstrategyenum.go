@@ -13,16 +13,20 @@ const (
 	ServerValidationStrategyEnumUserdata ServerValidationStrategyEnum = "USERDATA"
 )
 
+func (e ServerValidationStrategyEnum) ToPointer() *ServerValidationStrategyEnum {
+	return &e
+}
+
 func (e *ServerValidationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USERDATA":
-		*e = ServerValidationStrategyEnum(s)
+		*e = ServerValidationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServerValidationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for ServerValidationStrategyEnum: %v", v)
 	}
 }

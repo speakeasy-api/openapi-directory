@@ -27,12 +27,16 @@ const (
 	GetGenericObjectByTypeTypeEnumCase        GetGenericObjectByTypeTypeEnum = "case"
 )
 
+func (e GetGenericObjectByTypeTypeEnum) ToPointer() *GetGenericObjectByTypeTypeEnum {
+	return &e
+}
+
 func (e *GetGenericObjectByTypeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gene":
 		fallthrough
 	case "variant":
@@ -58,10 +62,10 @@ func (e *GetGenericObjectByTypeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "model":
 		fallthrough
 	case "case":
-		*e = GetGenericObjectByTypeTypeEnum(s)
+		*e = GetGenericObjectByTypeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGenericObjectByTypeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGenericObjectByTypeTypeEnum: %v", v)
 	}
 }
 

@@ -23,19 +23,23 @@ const (
 	KkidAllowancePostTransactionTypeEnumSubtract KkidAllowancePostTransactionTypeEnum = "Subtract"
 )
 
+func (e KkidAllowancePostTransactionTypeEnum) ToPointer() *KkidAllowancePostTransactionTypeEnum {
+	return &e
+}
+
 func (e *KkidAllowancePostTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Add":
 		fallthrough
 	case "Subtract":
-		*e = KkidAllowancePostTransactionTypeEnum(s)
+		*e = KkidAllowancePostTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KkidAllowancePostTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for KkidAllowancePostTransactionTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ImportComponentRequestBodyFormatEnumShell ImportComponentRequestBodyFormatEnum = "SHELL"
 )
 
+func (e ImportComponentRequestBodyFormatEnum) ToPointer() *ImportComponentRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *ImportComponentRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHELL":
-		*e = ImportComponentRequestBodyFormatEnum(s)
+		*e = ImportComponentRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportComponentRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportComponentRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -38,19 +42,23 @@ const (
 	ImportComponentRequestBodyPlatformEnumLinux   ImportComponentRequestBodyPlatformEnum = "Linux"
 )
 
+func (e ImportComponentRequestBodyPlatformEnum) ToPointer() *ImportComponentRequestBodyPlatformEnum {
+	return &e
+}
+
 func (e *ImportComponentRequestBodyPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Windows":
 		fallthrough
 	case "Linux":
-		*e = ImportComponentRequestBodyPlatformEnum(s)
+		*e = ImportComponentRequestBodyPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportComponentRequestBodyPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportComponentRequestBodyPlatformEnum: %v", v)
 	}
 }
 
@@ -62,24 +70,28 @@ const (
 	ImportComponentRequestBodyTypeEnumTest  ImportComponentRequestBodyTypeEnum = "TEST"
 )
 
+func (e ImportComponentRequestBodyTypeEnum) ToPointer() *ImportComponentRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *ImportComponentRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUILD":
 		fallthrough
 	case "TEST":
-		*e = ImportComponentRequestBodyTypeEnum(s)
+		*e = ImportComponentRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportComponentRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportComponentRequestBodyTypeEnum: %v", v)
 	}
 }
 
 type ImportComponentRequestBody struct {
-	// The change description of the component. Describes what change has been made in this version, or what makes this version different from other versions of this component.
+	// The change description of the component. This description indicates the change that has been made in this version, or what makes this version different from other versions of this component.
 	ChangeDescription *string `json:"changeDescription,omitempty"`
 	// The idempotency token of the component.
 	ClientToken string `json:"clientToken"`
@@ -91,7 +103,7 @@ type ImportComponentRequestBody struct {
 	Format ImportComponentRequestBodyFormatEnum `json:"format"`
 	// The ID of the KMS key that should be used to encrypt this component.
 	KmsKeyID *string `json:"kmsKeyId,omitempty"`
-	//  The name of the component.
+	// The name of the component.
 	Name string `json:"name"`
 	// The platform of the component.
 	Platform ImportComponentRequestBodyPlatformEnum `json:"platform"`

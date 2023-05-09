@@ -2,31 +2,28 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAssociationBySubjectAndAssocTypeRequest{
-        AssociationType: "corrupti",
-        Evidence: "provident",
-        ExcludeAutomaticAssertions: false,
-        Object: "distinctio",
-        Rows: 844266,
-        Start: 602763,
-        Subject: "nulla",
-        UnselectEvidence: false,
-        UseCompactAssociations: false,
-    }
-
     ctx := context.Background()
-    res, err := s.Association.GetAssociationBySubjectAndAssocType(ctx, req)
+    res, err := s.Association.GetAssociationBySubjectAndAssocType(ctx, operations.GetAssociationBySubjectAndAssocTypeRequest{
+        AssociationType: "corrupti",
+        Evidence: sdk.String("provident"),
+        ExcludeAutomaticAssertions: sdk.Bool(false),
+        Object: sdk.String("distinctio"),
+        Rows: sdk.Int64(844266),
+        Start: sdk.Int64(602763),
+        Subject: sdk.String("nulla"),
+        UnselectEvidence: sdk.Bool(false),
+        UseCompactAssociations: sdk.Bool(false),
+    })
     if err != nil {
         log.Fatal(err)
     }

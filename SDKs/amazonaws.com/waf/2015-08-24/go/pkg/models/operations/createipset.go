@@ -16,17 +16,21 @@ const (
 	CreateIPSetXAmzTargetEnumAwswaf20150824CreateIPSet CreateIPSetXAmzTargetEnum = "AWSWAF_20150824.CreateIPSet"
 )
 
+func (e CreateIPSetXAmzTargetEnum) ToPointer() *CreateIPSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateIPSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.CreateIPSet":
-		*e = CreateIPSetXAmzTargetEnum(s)
+		*e = CreateIPSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIPSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIPSetXAmzTargetEnum: %v", v)
 	}
 }
 

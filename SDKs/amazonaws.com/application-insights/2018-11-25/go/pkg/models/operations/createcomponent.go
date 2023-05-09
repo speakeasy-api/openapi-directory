@@ -16,17 +16,21 @@ const (
 	CreateComponentXAmzTargetEnumEc2WindowsBarleyServiceCreateComponent CreateComponentXAmzTargetEnum = "EC2WindowsBarleyService.CreateComponent"
 )
 
+func (e CreateComponentXAmzTargetEnum) ToPointer() *CreateComponentXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateComponentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2WindowsBarleyService.CreateComponent":
-		*e = CreateComponentXAmzTargetEnum(s)
+		*e = CreateComponentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateComponentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateComponentXAmzTargetEnum: %v", v)
 	}
 }
 

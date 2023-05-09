@@ -17,6 +17,7 @@ type InstanceRecommendation struct {
 	InferredWorkloadTypes              []InferredWorkloadTypeEnum                    `json:"inferredWorkloadTypes,omitempty"`
 	InstanceArn                        *string                                       `json:"instanceArn,omitempty"`
 	InstanceName                       *string                                       `json:"instanceName,omitempty"`
+	InstanceState                      *InstanceStateEnum                            `json:"instanceState,omitempty"`
 	LastRefreshTimestamp               *time.Time                                    `json:"lastRefreshTimestamp,omitempty"`
 	LookBackPeriodInDays               *float64                                      `json:"lookBackPeriodInDays,omitempty"`
 	RecommendationOptions              []InstanceRecommendationOption                `json:"recommendationOptions,omitempty"`

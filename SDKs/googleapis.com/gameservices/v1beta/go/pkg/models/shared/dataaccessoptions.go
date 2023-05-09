@@ -14,19 +14,23 @@ const (
 	DataAccessOptionsLogModeEnumLogFailClosed      DataAccessOptionsLogModeEnum = "LOG_FAIL_CLOSED"
 )
 
+func (e DataAccessOptionsLogModeEnum) ToPointer() *DataAccessOptionsLogModeEnum {
+	return &e
+}
+
 func (e *DataAccessOptionsLogModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_MODE_UNSPECIFIED":
 		fallthrough
 	case "LOG_FAIL_CLOSED":
-		*e = DataAccessOptionsLogModeEnum(s)
+		*e = DataAccessOptionsLogModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataAccessOptionsLogModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataAccessOptionsLogModeEnum: %v", v)
 	}
 }
 

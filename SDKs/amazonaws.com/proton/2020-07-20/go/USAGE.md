@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,22 +17,20 @@ func main() {
         }),
     )
 
-    req := operations.AcceptEnvironmentAccountConnectionRequest{
-        AcceptEnvironmentAccountConnectionInput: shared.AcceptEnvironmentAccountConnectionInput{
-            ID: "corrupti",
-        },
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-        XAmzTarget: "AwsProton20200720.AcceptEnvironmentAccountConnection",
-    }
-
     ctx := context.Background()
-    res, err := s.AcceptEnvironmentAccountConnection(ctx, req)
+    res, err := s.AcceptEnvironmentAccountConnection(ctx, operations.AcceptEnvironmentAccountConnectionRequest{
+        AcceptEnvironmentAccountConnectionInput: shared.AcceptEnvironmentAccountConnectionInput{
+            ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+        },
+        XAmzAlgorithm: sdk.String("deserunt"),
+        XAmzContentSha256: sdk.String("perferendis"),
+        XAmzCredential: sdk.String("ipsam"),
+        XAmzDate: sdk.String("repellendus"),
+        XAmzSecurityToken: sdk.String("sapiente"),
+        XAmzSignature: sdk.String("quo"),
+        XAmzSignedHeaders: sdk.String("odit"),
+        XAmzTarget: operations.AcceptEnvironmentAccountConnectionXAmzTargetEnumAwsProton20200720AcceptEnvironmentAccountConnection,
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -472,7 +472,10 @@ func (s *domesticStandingOrders) CreateDomesticStandingOrdersRaw(ctx context.Con
 // GetDomesticStandingOrderConsentsConsentID - Get Domestic Standing Order Consents
 func (s *domesticStandingOrders) GetDomesticStandingOrderConsentsConsentID(ctx context.Context, request operations.GetDomesticStandingOrderConsentsConsentIDRequest, security operations.GetDomesticStandingOrderConsentsConsentIDSecurity) (*operations.GetDomesticStandingOrderConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-standing-order-consents/{ConsentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domestic-standing-order-consents/{ConsentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -569,7 +572,10 @@ func (s *domesticStandingOrders) GetDomesticStandingOrderConsentsConsentID(ctx c
 // GetDomesticStandingOrdersDomesticStandingOrderID - Get Domestic Standing Orders
 func (s *domesticStandingOrders) GetDomesticStandingOrdersDomesticStandingOrderID(ctx context.Context, request operations.GetDomesticStandingOrdersDomesticStandingOrderIDRequest, security operations.GetDomesticStandingOrdersDomesticStandingOrderIDSecurity) (*operations.GetDomesticStandingOrdersDomesticStandingOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-standing-orders/{DomesticStandingOrderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domestic-standing-orders/{DomesticStandingOrderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

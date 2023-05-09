@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // CloudbuildProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) CloudbuildProjectsLocationsOperationsCancel(ctx context.Context, request operations.CloudbuildProjectsLocationsOperationsCancelRequest, security operations.CloudbuildProjectsLocationsOperationsCancelSecurity) (*operations.CloudbuildProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) CloudbuildProjectsLocationsOperationsCancel(ctx context.Conte
 // CloudbuildProjectsLocationsWorkerPoolsCreate - Creates a `WorkerPool` to run the builds, and returns the new worker pool. NOTE: As of now, this method returns an `Operation` that is always complete.
 func (s *projects) CloudbuildProjectsLocationsWorkerPoolsCreate(ctx context.Context, request operations.CloudbuildProjectsLocationsWorkerPoolsCreateRequest, security operations.CloudbuildProjectsLocationsWorkerPoolsCreateSecurity) (*operations.CloudbuildProjectsLocationsWorkerPoolsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/workerPools", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/workerPools", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WorkerPoolInput", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) CloudbuildProjectsLocationsWorkerPoolsCreate(ctx context.Cont
 // CloudbuildProjectsLocationsWorkerPoolsDelete - Deletes a `WorkerPool`. NOTE: As of now, this method returns an `Operation` that is always complete.
 func (s *projects) CloudbuildProjectsLocationsWorkerPoolsDelete(ctx context.Context, request operations.CloudbuildProjectsLocationsWorkerPoolsDeleteRequest, security operations.CloudbuildProjectsLocationsWorkerPoolsDeleteSecurity) (*operations.CloudbuildProjectsLocationsWorkerPoolsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) CloudbuildProjectsLocationsWorkerPoolsDelete(ctx context.Cont
 // CloudbuildProjectsLocationsWorkerPoolsGet - Returns details of a `WorkerPool`.
 func (s *projects) CloudbuildProjectsLocationsWorkerPoolsGet(ctx context.Context, request operations.CloudbuildProjectsLocationsWorkerPoolsGetRequest, security operations.CloudbuildProjectsLocationsWorkerPoolsGetSecurity) (*operations.CloudbuildProjectsLocationsWorkerPoolsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) CloudbuildProjectsLocationsWorkerPoolsGet(ctx context.Context
 // CloudbuildProjectsLocationsWorkerPoolsList - Lists `WorkerPool`s in the given project.
 func (s *projects) CloudbuildProjectsLocationsWorkerPoolsList(ctx context.Context, request operations.CloudbuildProjectsLocationsWorkerPoolsListRequest, security operations.CloudbuildProjectsLocationsWorkerPoolsListSecurity) (*operations.CloudbuildProjectsLocationsWorkerPoolsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/workerPools", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/workerPools", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) CloudbuildProjectsLocationsWorkerPoolsList(ctx context.Contex
 // CloudbuildProjectsLocationsWorkerPoolsPatch - Updates a `WorkerPool`. NOTE: As of now, this method returns an `Operation` that is always complete.
 func (s *projects) CloudbuildProjectsLocationsWorkerPoolsPatch(ctx context.Context, request operations.CloudbuildProjectsLocationsWorkerPoolsPatchRequest, security operations.CloudbuildProjectsLocationsWorkerPoolsPatchSecurity) (*operations.CloudbuildProjectsLocationsWorkerPoolsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WorkerPoolInput", "json")
 	if err != nil {

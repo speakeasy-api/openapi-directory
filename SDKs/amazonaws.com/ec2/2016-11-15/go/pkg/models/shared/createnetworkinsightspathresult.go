@@ -56,19 +56,23 @@ const (
 	CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnumUDP CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum = "udp"
 )
 
+func (e CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum) ToPointer() *CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum {
+	return &e
+}
+
 func (e *CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "udp":
-		*e = CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum(s)
+		*e = CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum: %v", v)
 	}
 }
 

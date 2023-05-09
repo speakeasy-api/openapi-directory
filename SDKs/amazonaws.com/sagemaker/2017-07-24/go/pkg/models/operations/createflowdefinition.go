@@ -16,17 +16,21 @@ const (
 	CreateFlowDefinitionXAmzTargetEnumSageMakerCreateFlowDefinition CreateFlowDefinitionXAmzTargetEnum = "SageMaker.CreateFlowDefinition"
 )
 
+func (e CreateFlowDefinitionXAmzTargetEnum) ToPointer() *CreateFlowDefinitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateFlowDefinitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreateFlowDefinition":
-		*e = CreateFlowDefinitionXAmzTargetEnum(s)
+		*e = CreateFlowDefinitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFlowDefinitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFlowDefinitionXAmzTargetEnum: %v", v)
 	}
 }
 

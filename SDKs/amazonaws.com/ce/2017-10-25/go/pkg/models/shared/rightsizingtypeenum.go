@@ -14,18 +14,22 @@ const (
 	RightsizingTypeEnumModify    RightsizingTypeEnum = "MODIFY"
 )
 
+func (e RightsizingTypeEnum) ToPointer() *RightsizingTypeEnum {
+	return &e
+}
+
 func (e *RightsizingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TERMINATE":
 		fallthrough
 	case "MODIFY":
-		*e = RightsizingTypeEnum(s)
+		*e = RightsizingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RightsizingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RightsizingTypeEnum: %v", v)
 	}
 }

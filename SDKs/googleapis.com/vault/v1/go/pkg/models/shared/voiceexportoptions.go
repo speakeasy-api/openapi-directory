@@ -16,21 +16,25 @@ const (
 	VoiceExportOptionsExportFormatEnumPst                     VoiceExportOptionsExportFormatEnum = "PST"
 )
 
+func (e VoiceExportOptionsExportFormatEnum) ToPointer() *VoiceExportOptionsExportFormatEnum {
+	return &e
+}
+
 func (e *VoiceExportOptionsExportFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXPORT_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "MBOX":
 		fallthrough
 	case "PST":
-		*e = VoiceExportOptionsExportFormatEnum(s)
+		*e = VoiceExportOptionsExportFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VoiceExportOptionsExportFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for VoiceExportOptionsExportFormatEnum: %v", v)
 	}
 }
 

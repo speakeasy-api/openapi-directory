@@ -37,7 +37,10 @@ func newPayments(defaultClient, securityClient HTTPClient, serverURL, language, 
 // the APPROVED `status`.
 func (s *payments) CancelPayment(ctx context.Context, request operations.CancelPaymentRequest, security operations.CancelPaymentSecurity) (*operations.CancelPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -150,7 +153,10 @@ func (s *payments) CancelPaymentByIdempotencyKey(ctx context.Context, request sh
 // You can use this endpoint to complete a payment with the APPROVED `status`.
 func (s *payments) CompletePayment(ctx context.Context, request operations.CompletePaymentRequest, security operations.CompletePaymentSecurity) (*operations.CompletePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}/complete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}/complete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -257,7 +263,10 @@ func (s *payments) CreatePayment(ctx context.Context, request shared.CreatePayme
 // Retrieves details for a specific payment.
 func (s *payments) GetPayment(ctx context.Context, request operations.GetPaymentRequest, security operations.GetPaymentSecurity) (*operations.GetPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -303,7 +312,10 @@ func (s *payments) GetPayment(ctx context.Context, request operations.GetPayment
 // You can update the `amount_money` and `tip_money` using this endpoint.
 func (s *payments) UpdatePayment(ctx context.Context, request operations.UpdatePaymentRequest, security operations.UpdatePaymentSecurity) (*operations.UpdatePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/payments/{payment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePaymentRequest", "json")
 	if err != nil {

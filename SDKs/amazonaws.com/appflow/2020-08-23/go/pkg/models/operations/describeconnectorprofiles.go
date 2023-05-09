@@ -39,12 +39,16 @@ const (
 	DescribeConnectorProfilesRequestBodyConnectorTypeEnumPardot           DescribeConnectorProfilesRequestBodyConnectorTypeEnum = "Pardot"
 )
 
+func (e DescribeConnectorProfilesRequestBodyConnectorTypeEnum) ToPointer() *DescribeConnectorProfilesRequestBodyConnectorTypeEnum {
+	return &e
+}
+
 func (e *DescribeConnectorProfilesRequestBodyConnectorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Salesforce":
 		fallthrough
 	case "Singular":
@@ -92,10 +96,10 @@ func (e *DescribeConnectorProfilesRequestBodyConnectorTypeEnum) UnmarshalJSON(da
 	case "CustomConnector":
 		fallthrough
 	case "Pardot":
-		*e = DescribeConnectorProfilesRequestBodyConnectorTypeEnum(s)
+		*e = DescribeConnectorProfilesRequestBodyConnectorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeConnectorProfilesRequestBodyConnectorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeConnectorProfilesRequestBodyConnectorTypeEnum: %v", v)
 	}
 }
 

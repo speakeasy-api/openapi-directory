@@ -16,17 +16,21 @@ const (
 	DeleteAccessControlRuleXAmzTargetEnumWorkMailServiceDeleteAccessControlRule DeleteAccessControlRuleXAmzTargetEnum = "WorkMailService.DeleteAccessControlRule"
 )
 
+func (e DeleteAccessControlRuleXAmzTargetEnum) ToPointer() *DeleteAccessControlRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteAccessControlRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.DeleteAccessControlRule":
-		*e = DeleteAccessControlRuleXAmzTargetEnum(s)
+		*e = DeleteAccessControlRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAccessControlRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAccessControlRuleXAmzTargetEnum: %v", v)
 	}
 }
 

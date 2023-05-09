@@ -22,12 +22,16 @@ const (
 	SourcePredefinedSourceEnumGoogleKeep     SourcePredefinedSourceEnum = "GOOGLE_KEEP"
 )
 
+func (e SourcePredefinedSourceEnum) ToPointer() *SourcePredefinedSourceEnum {
+	return &e
+}
+
 func (e *SourcePredefinedSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "QUERY_HISTORY":
@@ -45,10 +49,10 @@ func (e *SourcePredefinedSourceEnum) UnmarshalJSON(data []byte) error {
 	case "GOOGLE_CALENDAR":
 		fallthrough
 	case "GOOGLE_KEEP":
-		*e = SourcePredefinedSourceEnum(s)
+		*e = SourcePredefinedSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourcePredefinedSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for SourcePredefinedSourceEnum: %v", v)
 	}
 }
 

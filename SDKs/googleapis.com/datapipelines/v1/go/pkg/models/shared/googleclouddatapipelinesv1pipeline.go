@@ -19,12 +19,16 @@ const (
 	GoogleCloudDatapipelinesV1PipelineStateEnumStatePaused      GoogleCloudDatapipelinesV1PipelineStateEnum = "STATE_PAUSED"
 )
 
+func (e GoogleCloudDatapipelinesV1PipelineStateEnum) ToPointer() *GoogleCloudDatapipelinesV1PipelineStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatapipelinesV1PipelineStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "STATE_RESUMING":
@@ -36,10 +40,10 @@ func (e *GoogleCloudDatapipelinesV1PipelineStateEnum) UnmarshalJSON(data []byte)
 	case "STATE_ARCHIVED":
 		fallthrough
 	case "STATE_PAUSED":
-		*e = GoogleCloudDatapipelinesV1PipelineStateEnum(s)
+		*e = GoogleCloudDatapipelinesV1PipelineStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatapipelinesV1PipelineStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatapipelinesV1PipelineStateEnum: %v", v)
 	}
 }
 
@@ -52,21 +56,25 @@ const (
 	GoogleCloudDatapipelinesV1PipelineTypeEnumPipelineTypeStreaming   GoogleCloudDatapipelinesV1PipelineTypeEnum = "PIPELINE_TYPE_STREAMING"
 )
 
+func (e GoogleCloudDatapipelinesV1PipelineTypeEnum) ToPointer() *GoogleCloudDatapipelinesV1PipelineTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatapipelinesV1PipelineTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PIPELINE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PIPELINE_TYPE_BATCH":
 		fallthrough
 	case "PIPELINE_TYPE_STREAMING":
-		*e = GoogleCloudDatapipelinesV1PipelineTypeEnum(s)
+		*e = GoogleCloudDatapipelinesV1PipelineTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatapipelinesV1PipelineTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatapipelinesV1PipelineTypeEnum: %v", v)
 	}
 }
 

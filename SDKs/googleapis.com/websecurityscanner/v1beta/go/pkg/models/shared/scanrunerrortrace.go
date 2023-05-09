@@ -21,12 +21,16 @@ const (
 	ScanRunErrorTraceCodeEnumStartingUrlsCrawlHTTPErrors ScanRunErrorTraceCodeEnum = "STARTING_URLS_CRAWL_HTTP_ERRORS"
 )
 
+func (e ScanRunErrorTraceCodeEnum) ToPointer() *ScanRunErrorTraceCodeEnum {
+	return &e
+}
+
 func (e *ScanRunErrorTraceCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODE_UNSPECIFIED":
 		fallthrough
 	case "INTERNAL_ERROR":
@@ -42,10 +46,10 @@ func (e *ScanRunErrorTraceCodeEnum) UnmarshalJSON(data []byte) error {
 	case "TOO_MANY_HTTP_ERRORS":
 		fallthrough
 	case "STARTING_URLS_CRAWL_HTTP_ERRORS":
-		*e = ScanRunErrorTraceCodeEnum(s)
+		*e = ScanRunErrorTraceCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanRunErrorTraceCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanRunErrorTraceCodeEnum: %v", v)
 	}
 }
 

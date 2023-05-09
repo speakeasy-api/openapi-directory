@@ -19,12 +19,16 @@ const (
 	MatchFieldTypeEnumAllQueryArgs   MatchFieldTypeEnum = "ALL_QUERY_ARGS"
 )
 
+func (e MatchFieldTypeEnum) ToPointer() *MatchFieldTypeEnum {
+	return &e
+}
+
 func (e *MatchFieldTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "URI":
 		fallthrough
 	case "QUERY_STRING":
@@ -38,9 +42,9 @@ func (e *MatchFieldTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SINGLE_QUERY_ARG":
 		fallthrough
 	case "ALL_QUERY_ARGS":
-		*e = MatchFieldTypeEnum(s)
+		*e = MatchFieldTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MatchFieldTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MatchFieldTypeEnum: %v", v)
 	}
 }

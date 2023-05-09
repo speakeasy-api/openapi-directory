@@ -34,7 +34,10 @@ func newDNSKeys(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DNSDNSKeysGet - Fetches the representation of an existing DnsKey.
 func (s *dnsKeys) DNSDNSKeysGet(ctx context.Context, request operations.DNSDNSKeysGetRequest, security operations.DNSDNSKeysGetSecurity) (*operations.DNSDNSKeysGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *dnsKeys) DNSDNSKeysGet(ctx context.Context, request operations.DNSDNSKe
 // DNSDNSKeysList - Enumerates DnsKeys to a ResourceRecordSet collection.
 func (s *dnsKeys) DNSDNSKeysList(ctx context.Context, request operations.DNSDNSKeysListRequest, security operations.DNSDNSKeysListSecurity) (*operations.DNSDNSKeysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

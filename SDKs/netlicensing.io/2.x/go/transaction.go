@@ -105,7 +105,10 @@ func (s *transaction) CreateTransaction(ctx context.Context, request operations.
 // Return a Transaction by 'transactionNumber'
 func (s *transaction) GetTransaction(ctx context.Context, request operations.GetTransactionRequest, security operations.GetTransactionSecurity) (*operations.GetTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transaction/{transactionNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transaction/{transactionNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -162,7 +165,7 @@ func (s *transaction) GetTransaction(ctx context.Context, request operations.Get
 
 // ListTransactions - List Transactions
 // Return a list of all Transactions for the current Vendor
-func (s *transaction) ListTransactions(ctx context.Context) (*operations.ListTransactionsResponse, error) {
+func (s *transaction) ListTransactions(ctx context.Context, security operations.ListTransactionsSecurity) (*operations.ListTransactionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/transaction"
 
@@ -171,7 +174,7 @@ func (s *transaction) ListTransactions(ctx context.Context) (*operations.ListTra
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -223,7 +226,10 @@ func (s *transaction) ListTransactions(ctx context.Context) (*operations.ListTra
 // Sets the provided properties to a Transaction. Return an updated Transaction
 func (s *transaction) UpdateTransaction(ctx context.Context, request operations.UpdateTransactionRequest, security operations.UpdateTransactionSecurity) (*operations.UpdateTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transaction/{transactionNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transaction/{transactionNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

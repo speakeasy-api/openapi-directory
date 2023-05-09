@@ -16,17 +16,21 @@ const (
 	DeleteNamespaceXAmzTargetEnumIotThingsGraphFrontEndServiceDeleteNamespace DeleteNamespaceXAmzTargetEnum = "IotThingsGraphFrontEndService.DeleteNamespace"
 )
 
+func (e DeleteNamespaceXAmzTargetEnum) ToPointer() *DeleteNamespaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteNamespaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.DeleteNamespace":
-		*e = DeleteNamespaceXAmzTargetEnum(s)
+		*e = DeleteNamespaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteNamespaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteNamespaceXAmzTargetEnum: %v", v)
 	}
 }
 

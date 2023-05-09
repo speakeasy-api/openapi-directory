@@ -16,17 +16,21 @@ const (
 	DescribeEnvironmentStatusXAmzTargetEnumAwsCloud9WorkspaceManagementServiceDescribeEnvironmentStatus DescribeEnvironmentStatusXAmzTargetEnum = "AWSCloud9WorkspaceManagementService.DescribeEnvironmentStatus"
 )
 
+func (e DescribeEnvironmentStatusXAmzTargetEnum) ToPointer() *DescribeEnvironmentStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeEnvironmentStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCloud9WorkspaceManagementService.DescribeEnvironmentStatus":
-		*e = DescribeEnvironmentStatusXAmzTargetEnum(s)
+		*e = DescribeEnvironmentStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeEnvironmentStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeEnvironmentStatusXAmzTargetEnum: %v", v)
 	}
 }
 

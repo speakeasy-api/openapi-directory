@@ -16,17 +16,21 @@ const (
 	CreateCostCategoryDefinitionXAmzTargetEnumAwsInsightsIndexServiceCreateCostCategoryDefinition CreateCostCategoryDefinitionXAmzTargetEnum = "AWSInsightsIndexService.CreateCostCategoryDefinition"
 )
 
+func (e CreateCostCategoryDefinitionXAmzTargetEnum) ToPointer() *CreateCostCategoryDefinitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateCostCategoryDefinitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSInsightsIndexService.CreateCostCategoryDefinition":
-		*e = CreateCostCategoryDefinitionXAmzTargetEnum(s)
+		*e = CreateCostCategoryDefinitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCostCategoryDefinitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCostCategoryDefinitionXAmzTargetEnum: %v", v)
 	}
 }
 

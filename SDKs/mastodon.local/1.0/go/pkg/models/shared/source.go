@@ -17,12 +17,16 @@ const (
 	SourcePrivacyEnumDirect   SourcePrivacyEnum = "direct"
 )
 
+func (e SourcePrivacyEnum) ToPointer() *SourcePrivacyEnum {
+	return &e
+}
+
 func (e *SourcePrivacyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "unlisted":
@@ -30,10 +34,10 @@ func (e *SourcePrivacyEnum) UnmarshalJSON(data []byte) error {
 	case "private":
 		fallthrough
 	case "direct":
-		*e = SourcePrivacyEnum(s)
+		*e = SourcePrivacyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourcePrivacyEnum: %s", s)
+		return fmt.Errorf("invalid value for SourcePrivacyEnum: %v", v)
 	}
 }
 

@@ -36,12 +36,16 @@ const (
 	StateReasonCodeEnumFunctionError               StateReasonCodeEnum = "FunctionError"
 )
 
+func (e StateReasonCodeEnum) ToPointer() *StateReasonCodeEnum {
+	return &e
+}
+
 func (e *StateReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Idle":
 		fallthrough
 	case "Creating":
@@ -89,9 +93,9 @@ func (e *StateReasonCodeEnum) UnmarshalJSON(data []byte) error {
 	case "InvalidZipFileException":
 		fallthrough
 	case "FunctionError":
-		*e = StateReasonCodeEnum(s)
+		*e = StateReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StateReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StateReasonCodeEnum: %v", v)
 	}
 }

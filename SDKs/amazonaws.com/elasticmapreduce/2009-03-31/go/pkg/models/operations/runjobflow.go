@@ -16,17 +16,21 @@ const (
 	RunJobFlowXAmzTargetEnumElasticMapReduceRunJobFlow RunJobFlowXAmzTargetEnum = "ElasticMapReduce.RunJobFlow"
 )
 
+func (e RunJobFlowXAmzTargetEnum) ToPointer() *RunJobFlowXAmzTargetEnum {
+	return &e
+}
+
 func (e *RunJobFlowXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.RunJobFlow":
-		*e = RunJobFlowXAmzTargetEnum(s)
+		*e = RunJobFlowXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunJobFlowXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RunJobFlowXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DescribeAccountModificationsXAmzTargetEnumWorkspacesServiceDescribeAccountModifications DescribeAccountModificationsXAmzTargetEnum = "WorkspacesService.DescribeAccountModifications"
 )
 
+func (e DescribeAccountModificationsXAmzTargetEnum) ToPointer() *DescribeAccountModificationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAccountModificationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.DescribeAccountModifications":
-		*e = DescribeAccountModificationsXAmzTargetEnum(s)
+		*e = DescribeAccountModificationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAccountModificationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAccountModificationsXAmzTargetEnum: %v", v)
 	}
 }
 

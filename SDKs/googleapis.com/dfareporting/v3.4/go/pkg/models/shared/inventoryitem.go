@@ -15,19 +15,23 @@ const (
 	InventoryItemTypeEnumPlanningPlacementTypeCredit  InventoryItemTypeEnum = "PLANNING_PLACEMENT_TYPE_CREDIT"
 )
 
+func (e InventoryItemTypeEnum) ToPointer() *InventoryItemTypeEnum {
+	return &e
+}
+
 func (e *InventoryItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLANNING_PLACEMENT_TYPE_REGULAR":
 		fallthrough
 	case "PLANNING_PLACEMENT_TYPE_CREDIT":
-		*e = InventoryItemTypeEnum(s)
+		*e = InventoryItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventoryItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InventoryItemTypeEnum: %v", v)
 	}
 }
 

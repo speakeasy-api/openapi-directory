@@ -74,12 +74,16 @@ const (
 	CrmlogErrorCodeCommonErrorCodeEnumExecutionCancelled                 CrmlogErrorCodeCommonErrorCodeEnum = "EXECUTION_CANCELLED"
 )
 
+func (e CrmlogErrorCodeCommonErrorCodeEnum) ToPointer() *CrmlogErrorCodeCommonErrorCodeEnum {
+	return &e
+}
+
 func (e *CrmlogErrorCodeCommonErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMON_ERROR_CODE_UNSPECIFIED":
 		fallthrough
 	case "INVALID_CREDENTIALS":
@@ -203,10 +207,10 @@ func (e *CrmlogErrorCodeCommonErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "HTTP_EXCEPTION":
 		fallthrough
 	case "EXECUTION_CANCELLED":
-		*e = CrmlogErrorCodeCommonErrorCodeEnum(s)
+		*e = CrmlogErrorCodeCommonErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrmlogErrorCodeCommonErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CrmlogErrorCodeCommonErrorCodeEnum: %v", v)
 	}
 }
 

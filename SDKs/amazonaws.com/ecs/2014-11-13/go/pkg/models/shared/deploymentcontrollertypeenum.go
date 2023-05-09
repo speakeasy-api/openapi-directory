@@ -15,20 +15,24 @@ const (
 	DeploymentControllerTypeEnumExternal   DeploymentControllerTypeEnum = "EXTERNAL"
 )
 
+func (e DeploymentControllerTypeEnum) ToPointer() *DeploymentControllerTypeEnum {
+	return &e
+}
+
 func (e *DeploymentControllerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ECS":
 		fallthrough
 	case "CODE_DEPLOY":
 		fallthrough
 	case "EXTERNAL":
-		*e = DeploymentControllerTypeEnum(s)
+		*e = DeploymentControllerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentControllerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentControllerTypeEnum: %v", v)
 	}
 }

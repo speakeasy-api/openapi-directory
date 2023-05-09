@@ -15,19 +15,23 @@ const (
 	DeletePodcastResponseStatusEnumInReview DeletePodcastResponseStatusEnum = "in review"
 )
 
+func (e DeletePodcastResponseStatusEnum) ToPointer() *DeletePodcastResponseStatusEnum {
+	return &e
+}
+
 func (e *DeletePodcastResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "in review":
-		*e = DeletePodcastResponseStatusEnum(s)
+		*e = DeletePodcastResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletePodcastResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletePodcastResponseStatusEnum: %v", v)
 	}
 }
 

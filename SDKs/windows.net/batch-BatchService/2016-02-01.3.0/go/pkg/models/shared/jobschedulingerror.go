@@ -16,21 +16,25 @@ const (
 	JobSchedulingErrorCategoryEnumUnmapped    JobSchedulingErrorCategoryEnum = "unmapped"
 )
 
+func (e JobSchedulingErrorCategoryEnum) ToPointer() *JobSchedulingErrorCategoryEnum {
+	return &e
+}
+
 func (e *JobSchedulingErrorCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "usererror":
 		fallthrough
 	case "servererror":
 		fallthrough
 	case "unmapped":
-		*e = JobSchedulingErrorCategoryEnum(s)
+		*e = JobSchedulingErrorCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobSchedulingErrorCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for JobSchedulingErrorCategoryEnum: %v", v)
 	}
 }
 

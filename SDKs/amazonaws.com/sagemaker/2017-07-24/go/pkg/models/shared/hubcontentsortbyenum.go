@@ -15,20 +15,24 @@ const (
 	HubContentSortByEnumHubContentStatus HubContentSortByEnum = "HubContentStatus"
 )
 
+func (e HubContentSortByEnum) ToPointer() *HubContentSortByEnum {
+	return &e
+}
+
 func (e *HubContentSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HubContentName":
 		fallthrough
 	case "CreationTime":
 		fallthrough
 	case "HubContentStatus":
-		*e = HubContentSortByEnum(s)
+		*e = HubContentSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HubContentSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for HubContentSortByEnum: %v", v)
 	}
 }

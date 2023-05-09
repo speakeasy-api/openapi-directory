@@ -16,17 +16,21 @@ const (
 	DescribeAlgorithmXAmzTargetEnumAmazonPersonalizeDescribeAlgorithm DescribeAlgorithmXAmzTargetEnum = "AmazonPersonalize.DescribeAlgorithm"
 )
 
+func (e DescribeAlgorithmXAmzTargetEnum) ToPointer() *DescribeAlgorithmXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAlgorithmXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.DescribeAlgorithm":
-		*e = DescribeAlgorithmXAmzTargetEnum(s)
+		*e = DescribeAlgorithmXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAlgorithmXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAlgorithmXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -7,6 +7,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -102,6 +103,13 @@ pkg/models/shared/listsavedqueriesresponse.go
 pkg/models/shared/analyzeiampolicyresponse.go
 pkg/models/shared/iampolicyanalysis.go
 pkg/models/shared/iampolicyanalysisstate.go
+pkg/models/shared/deniedaccess.go
+pkg/models/shared/googlecloudassetv1deniedaccessdenydetail.go
+pkg/models/shared/googlecloudassetv1deniedaccessresource.go
+pkg/models/shared/googlecloudassetv1deniedaccessidentity.go
+pkg/models/shared/googleiamv2denyrule.go
+pkg/models/shared/googlecloudassetv1deniedaccessaccess.go
+pkg/models/shared/googlecloudassetv1deniedaccessaccesstuple.go
 pkg/models/shared/iampolicyanalysisresult.go
 pkg/models/shared/googlecloudassetv1identitylist.go
 pkg/models/shared/googlecloudassetv1identity.go
@@ -160,4 +168,10 @@ pkg/models/shared/versionedresource.go
 pkg/models/shared/relatedresources.go
 pkg/models/shared/relatedresource.go
 pkg/models/shared/attachedresource.go
+docs/sdk/README.md
+docs/assets/README.md
+docs/effectiveiampolicies/README.md
+docs/feeds/README.md
+docs/savedqueries/README.md
+docs/v1/README.md
 USAGE.md

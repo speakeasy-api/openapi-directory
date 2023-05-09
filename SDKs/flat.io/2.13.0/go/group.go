@@ -35,7 +35,10 @@ func newGroup(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // GetGroupDetails - Get group information
 func (s *group) GetGroupDetails(ctx context.Context, request operations.GetGroupDetailsRequest, security operations.GetGroupDetailsSecurity) (*operations.GetGroupDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{group}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *group) GetGroupDetails(ctx context.Context, request operations.GetGroup
 // Get the list of scores shared with a group.
 func (s *group) GetGroupScores(ctx context.Context, request operations.GetGroupScoresRequest, security operations.GetGroupScoresSecurity) (*operations.GetGroupScoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group}/scores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{group}/scores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -148,7 +154,10 @@ func (s *group) GetGroupScores(ctx context.Context, request operations.GetGroupS
 // ListGroupUsers - List group's users
 func (s *group) ListGroupUsers(ctx context.Context, request operations.ListGroupUsersRequest, security operations.ListGroupUsersSecurity) (*operations.ListGroupUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{group}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{group}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

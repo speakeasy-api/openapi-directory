@@ -18,21 +18,25 @@ const (
 	ReposCreateDeploymentStatusRequestBodyEnvironmentEnumQa         ReposCreateDeploymentStatusRequestBodyEnvironmentEnum = "qa"
 )
 
+func (e ReposCreateDeploymentStatusRequestBodyEnvironmentEnum) ToPointer() *ReposCreateDeploymentStatusRequestBodyEnvironmentEnum {
+	return &e
+}
+
 func (e *ReposCreateDeploymentStatusRequestBodyEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "production":
 		fallthrough
 	case "staging":
 		fallthrough
 	case "qa":
-		*e = ReposCreateDeploymentStatusRequestBodyEnvironmentEnum(s)
+		*e = ReposCreateDeploymentStatusRequestBodyEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateDeploymentStatusRequestBodyEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateDeploymentStatusRequestBodyEnvironmentEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	ReposCreateDeploymentStatusRequestBodyStateEnumSuccess    ReposCreateDeploymentStatusRequestBodyStateEnum = "success"
 )
 
+func (e ReposCreateDeploymentStatusRequestBodyStateEnum) ToPointer() *ReposCreateDeploymentStatusRequestBodyStateEnum {
+	return &e
+}
+
 func (e *ReposCreateDeploymentStatusRequestBodyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "error":
 		fallthrough
 	case "failure":
@@ -68,10 +76,10 @@ func (e *ReposCreateDeploymentStatusRequestBodyStateEnum) UnmarshalJSON(data []b
 	case "pending":
 		fallthrough
 	case "success":
-		*e = ReposCreateDeploymentStatusRequestBodyStateEnum(s)
+		*e = ReposCreateDeploymentStatusRequestBodyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateDeploymentStatusRequestBodyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateDeploymentStatusRequestBodyStateEnum: %v", v)
 	}
 }
 

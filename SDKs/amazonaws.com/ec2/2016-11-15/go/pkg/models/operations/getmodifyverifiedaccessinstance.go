@@ -15,17 +15,21 @@ const (
 	GETModifyVerifiedAccessInstanceActionEnumModifyVerifiedAccessInstance GETModifyVerifiedAccessInstanceActionEnum = "ModifyVerifiedAccessInstance"
 )
 
+func (e GETModifyVerifiedAccessInstanceActionEnum) ToPointer() *GETModifyVerifiedAccessInstanceActionEnum {
+	return &e
+}
+
 func (e *GETModifyVerifiedAccessInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVerifiedAccessInstance":
-		*e = GETModifyVerifiedAccessInstanceActionEnum(s)
+		*e = GETModifyVerifiedAccessInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVerifiedAccessInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVerifiedAccessInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyVerifiedAccessInstanceVersionEnumTwoThousandAndSixteen1115 GETModifyVerifiedAccessInstanceVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVerifiedAccessInstanceVersionEnum) ToPointer() *GETModifyVerifiedAccessInstanceVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVerifiedAccessInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVerifiedAccessInstanceVersionEnum(s)
+		*e = GETModifyVerifiedAccessInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVerifiedAccessInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVerifiedAccessInstanceVersionEnum: %v", v)
 	}
 }
 
@@ -54,11 +62,11 @@ type GETModifyVerifiedAccessInstanceRequest struct {
 	Action GETModifyVerifiedAccessInstanceActionEnum `queryParam:"style=form,explode=true,name=Action"`
 	// A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring Idempotency</a>.
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
-	// A description for the Amazon Web Services Verified Access instance.
+	// A description for the Verified Access instance.
 	Description *string `queryParam:"style=form,explode=true,name=Description"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
-	// The ID of the Amazon Web Services Verified Access instance.
+	// The ID of the Verified Access instance.
 	VerifiedAccessInstanceID string                                     `queryParam:"style=form,explode=true,name=VerifiedAccessInstanceId"`
 	Version                  GETModifyVerifiedAccessInstanceVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	XAmzAlgorithm            *string                                    `header:"style=simple,explode=false,name=X-Amz-Algorithm"`

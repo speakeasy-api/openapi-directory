@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetSalesTaxJurisdictionsRequest{
-        CountryCode: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Country.GetSalesTaxJurisdictions(ctx, req, operations.GetSalesTaxJurisdictionsSecurity{
+    res, err := s.Country.GetSalesTaxJurisdictions(ctx, operations.GetSalesTaxJurisdictionsRequest{
+        CountryCode: "MA",
+    }, operations.GetSalesTaxJurisdictionsSecurity{
         APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

@@ -30,6 +30,8 @@ type FileUploadPartEntity struct {
 	Path *string `json:"path,omitempty"`
 	// Reference name for this upload part
 	Ref *string `json:"ref,omitempty"`
+	// If `true`, parts may be retried. If `false`, a part cannot be retried and the upload should be restarted.
+	RetryParts *bool `json:"retry_parts,omitempty"`
 	// Content-Type and File to send
 	Send map[string]interface{} `json:"send,omitempty"`
 	// URI to upload this part to

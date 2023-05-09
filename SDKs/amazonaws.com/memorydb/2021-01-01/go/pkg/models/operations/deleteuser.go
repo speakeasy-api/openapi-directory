@@ -16,17 +16,21 @@ const (
 	DeleteUserXAmzTargetEnumAmazonMemoryDbDeleteUser DeleteUserXAmzTargetEnum = "AmazonMemoryDB.DeleteUser"
 )
 
+func (e DeleteUserXAmzTargetEnum) ToPointer() *DeleteUserXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteUserXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.DeleteUser":
-		*e = DeleteUserXAmzTargetEnum(s)
+		*e = DeleteUserXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteUserXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteUserXAmzTargetEnum: %v", v)
 	}
 }
 

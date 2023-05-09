@@ -13,16 +13,20 @@ const (
 	StorageClassEnumTemporal StorageClassEnum = "TEMPORAL"
 )
 
+func (e StorageClassEnum) ToPointer() *StorageClassEnum {
+	return &e
+}
+
 func (e *StorageClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEMPORAL":
-		*e = StorageClassEnum(s)
+		*e = StorageClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageClassEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageClassEnum: %v", v)
 	}
 }

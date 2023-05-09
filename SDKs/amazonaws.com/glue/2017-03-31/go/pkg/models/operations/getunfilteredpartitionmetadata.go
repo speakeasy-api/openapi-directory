@@ -16,17 +16,21 @@ const (
 	GetUnfilteredPartitionMetadataXAmzTargetEnumAwsGlueGetUnfilteredPartitionMetadata GetUnfilteredPartitionMetadataXAmzTargetEnum = "AWSGlue.GetUnfilteredPartitionMetadata"
 )
 
+func (e GetUnfilteredPartitionMetadataXAmzTargetEnum) ToPointer() *GetUnfilteredPartitionMetadataXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetUnfilteredPartitionMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetUnfilteredPartitionMetadata":
-		*e = GetUnfilteredPartitionMetadataXAmzTargetEnum(s)
+		*e = GetUnfilteredPartitionMetadataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnfilteredPartitionMetadataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnfilteredPartitionMetadataXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -46,6 +50,10 @@ type GetUnfilteredPartitionMetadataResponse struct {
 	ContentType string
 	// EntityNotFoundException
 	EntityNotFoundException interface{}
+	// FederationSourceException
+	FederationSourceException interface{}
+	// FederationSourceRetryableException
+	FederationSourceRetryableException interface{}
 	// Success
 	GetUnfilteredPartitionMetadataResponse *shared.GetUnfilteredPartitionMetadataResponse
 	// GlueEncryptionException

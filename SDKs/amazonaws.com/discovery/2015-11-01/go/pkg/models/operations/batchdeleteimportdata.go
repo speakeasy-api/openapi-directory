@@ -16,17 +16,21 @@ const (
 	BatchDeleteImportDataXAmzTargetEnumAwsPoseidonServiceV20151101BatchDeleteImportData BatchDeleteImportDataXAmzTargetEnum = "AWSPoseidonService_V2015_11_01.BatchDeleteImportData"
 )
 
+func (e BatchDeleteImportDataXAmzTargetEnum) ToPointer() *BatchDeleteImportDataXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchDeleteImportDataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPoseidonService_V2015_11_01.BatchDeleteImportData":
-		*e = BatchDeleteImportDataXAmzTargetEnum(s)
+		*e = BatchDeleteImportDataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchDeleteImportDataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchDeleteImportDataXAmzTargetEnum: %v", v)
 	}
 }
 

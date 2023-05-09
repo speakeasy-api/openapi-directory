@@ -34,12 +34,16 @@ const (
 	PeoplePeopleConnectionsListSortOrderEnumLastNameAscending      PeoplePeopleConnectionsListSortOrderEnum = "LAST_NAME_ASCENDING"
 )
 
+func (e PeoplePeopleConnectionsListSortOrderEnum) ToPointer() *PeoplePeopleConnectionsListSortOrderEnum {
+	return &e
+}
+
 func (e *PeoplePeopleConnectionsListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAST_MODIFIED_ASCENDING":
 		fallthrough
 	case "LAST_MODIFIED_DESCENDING":
@@ -47,10 +51,10 @@ func (e *PeoplePeopleConnectionsListSortOrderEnum) UnmarshalJSON(data []byte) er
 	case "FIRST_NAME_ASCENDING":
 		fallthrough
 	case "LAST_NAME_ASCENDING":
-		*e = PeoplePeopleConnectionsListSortOrderEnum(s)
+		*e = PeoplePeopleConnectionsListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PeoplePeopleConnectionsListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for PeoplePeopleConnectionsListSortOrderEnum: %v", v)
 	}
 }
 
@@ -63,12 +67,16 @@ const (
 	PeoplePeopleConnectionsListSourcesEnumReadSourceTypeDomainContact PeoplePeopleConnectionsListSourcesEnum = "READ_SOURCE_TYPE_DOMAIN_CONTACT"
 )
 
+func (e PeoplePeopleConnectionsListSourcesEnum) ToPointer() *PeoplePeopleConnectionsListSourcesEnum {
+	return &e
+}
+
 func (e *PeoplePeopleConnectionsListSourcesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READ_SOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "READ_SOURCE_TYPE_PROFILE":
@@ -76,10 +84,10 @@ func (e *PeoplePeopleConnectionsListSourcesEnum) UnmarshalJSON(data []byte) erro
 	case "READ_SOURCE_TYPE_CONTACT":
 		fallthrough
 	case "READ_SOURCE_TYPE_DOMAIN_CONTACT":
-		*e = PeoplePeopleConnectionsListSourcesEnum(s)
+		*e = PeoplePeopleConnectionsListSourcesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PeoplePeopleConnectionsListSourcesEnum: %s", s)
+		return fmt.Errorf("invalid value for PeoplePeopleConnectionsListSourcesEnum: %v", v)
 	}
 }
 

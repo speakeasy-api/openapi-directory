@@ -2,77 +2,77 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ScanConfig: &shared.ScanConfig{
             Authentication: &shared.Authentication{
                 CustomAccount: &shared.CustomAccount{
-                    LoginURL: "provident",
-                    Password: "distinctio",
-                    Username: "Rosalinda_Mitchell84",
+                    LoginURL: sdk.String("provident"),
+                    Password: sdk.String("distinctio"),
+                    Username: sdk.String("Rosalinda_Mitchell84"),
                 },
                 GoogleAccount: &shared.GoogleAccount{
-                    Password: "vel",
-                    Username: "Linda.Oberbrunner",
+                    Password: sdk.String("vel"),
+                    Username: sdk.String("Linda.Oberbrunner"),
                 },
             },
             BlacklistPatterns: []string{
                 "debitis",
                 "ipsa",
             },
-            DisplayName: "delectus",
+            DisplayName: sdk.String("delectus"),
             LatestRun: &shared.ScanRun{
-                EndTime: "tempora",
-                ExecutionState: "QUEUED",
-                HasVulnerabilities: false,
-                Name: "molestiae",
-                ProgressPercent: 791725,
-                ResultState: "KILLED",
-                StartTime: "voluptatum",
-                UrlsCrawledCount: "iusto",
-                UrlsTestedCount: "excepturi",
+                EndTime: sdk.String("tempora"),
+                ExecutionState: shared.ScanRunExecutionStateEnumQueued.ToPointer(),
+                HasVulnerabilities: sdk.Bool(false),
+                Name: sdk.String("Alexandra Schulist"),
+                ProgressPercent: sdk.Int(568045),
+                ResultState: shared.ScanRunResultStateEnumSuccess.ToPointer(),
+                StartTime: sdk.String("recusandae"),
+                UrlsCrawledCount: sdk.String("temporibus"),
+                UrlsTestedCount: sdk.String("ab"),
             },
-            MaxQPS: 392785,
-            Name: "recusandae",
+            MaxQPS: sdk.Int(337396),
+            Name: sdk.String("Iris Aufderhar"),
             Schedule: &shared.Schedule{
-                IntervalDurationDays: 836079,
-                ScheduleTime: "ab",
+                IntervalDurationDays: sdk.Int(957156),
+                ScheduleTime: sdk.String("quo"),
             },
             StartingUrls: []string{
-                "veritatis",
-                "deserunt",
+                "at",
             },
             TargetPlatforms: []shared.ScanConfigTargetPlatformsEnum{
-                "APP_ENGINE",
+                shared.ScanConfigTargetPlatformsEnumCloudFunctions,
+                shared.ScanConfigTargetPlatformsEnumCompute,
+                shared.ScanConfigTargetPlatformsEnumCloudRun,
+                shared.ScanConfigTargetPlatformsEnumCloudFunctions,
             },
-            UserAgent: "SAFARI_IPHONE",
+            UserAgent: shared.ScanConfigUserAgentEnumChromeLinux.ToPointer(),
         },
-        AccessToken: "sapiente",
-        Alt: "proto",
-        Callback: "odit",
-        Fields: "at",
-        Key: "at",
-        OauthToken: "maiores",
-        Parent: "molestiae",
-        PrettyPrint: false,
-        QuotaUser: "quod",
-        UploadType: "quod",
-        UploadProtocol: "esse",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, req, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
+        AccessToken: sdk.String("totam"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("dolorum"),
+        Fields: sdk.String("dicta"),
+        Key: sdk.String("nam"),
+        OauthToken: sdk.String("officia"),
+        Parent: "occaecati",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("fugit"),
+        UploadType: sdk.String("deleniti"),
+        UploadProtocol: sdk.String("hic"),
+    }, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

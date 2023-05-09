@@ -15,21 +15,25 @@ const (
 	GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnumTeam                    GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum = "TEAM"
 )
 
+func (e GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum) ToPointer() *GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOMER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DOMAIN":
 		fallthrough
 	case "TEAM":
-		*e = GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum(s)
+		*e = GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1CustomerConstraintsAllowedCustomerTypesEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnumPromotionSwitch            GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum = "PROMOTION_SWITCH"
 )
 
+func (e GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum) ToPointer() *GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROMOTIONAL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NEW_UPGRADE":
@@ -55,10 +63,10 @@ func (e *GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum) Unmar
 	case "TRANSFER":
 		fallthrough
 	case "PROMOTION_SWITCH":
-		*e = GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum(s)
+		*e = GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1CustomerConstraintsPromotionalOrderTypesEnum: %v", v)
 	}
 }
 

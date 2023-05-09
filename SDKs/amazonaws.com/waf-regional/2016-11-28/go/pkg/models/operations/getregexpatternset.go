@@ -16,17 +16,21 @@ const (
 	GetRegexPatternSetXAmzTargetEnumAwswafRegional20161128GetRegexPatternSet GetRegexPatternSetXAmzTargetEnum = "AWSWAF_Regional_20161128.GetRegexPatternSet"
 )
 
+func (e GetRegexPatternSetXAmzTargetEnum) ToPointer() *GetRegexPatternSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRegexPatternSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.GetRegexPatternSet":
-		*e = GetRegexPatternSetXAmzTargetEnum(s)
+		*e = GetRegexPatternSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRegexPatternSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRegexPatternSetXAmzTargetEnum: %v", v)
 	}
 }
 

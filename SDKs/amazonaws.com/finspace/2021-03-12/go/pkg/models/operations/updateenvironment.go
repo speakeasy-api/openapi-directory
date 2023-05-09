@@ -17,19 +17,23 @@ const (
 	UpdateEnvironmentRequestBodyFederationModeEnumLocal     UpdateEnvironmentRequestBodyFederationModeEnum = "LOCAL"
 )
 
+func (e UpdateEnvironmentRequestBodyFederationModeEnum) ToPointer() *UpdateEnvironmentRequestBodyFederationModeEnum {
+	return &e
+}
+
 func (e *UpdateEnvironmentRequestBodyFederationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEDERATED":
 		fallthrough
 	case "LOCAL":
-		*e = UpdateEnvironmentRequestBodyFederationModeEnum(s)
+		*e = UpdateEnvironmentRequestBodyFederationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateEnvironmentRequestBodyFederationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateEnvironmentRequestBodyFederationModeEnum: %v", v)
 	}
 }
 

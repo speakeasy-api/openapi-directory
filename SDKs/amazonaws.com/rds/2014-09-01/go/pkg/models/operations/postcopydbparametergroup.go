@@ -15,17 +15,21 @@ const (
 	POSTCopyDBParameterGroupActionEnumCopyDbParameterGroup POSTCopyDBParameterGroupActionEnum = "CopyDBParameterGroup"
 )
 
+func (e POSTCopyDBParameterGroupActionEnum) ToPointer() *POSTCopyDBParameterGroupActionEnum {
+	return &e
+}
+
 func (e *POSTCopyDBParameterGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CopyDBParameterGroup":
-		*e = POSTCopyDBParameterGroupActionEnum(s)
+		*e = POSTCopyDBParameterGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCopyDBParameterGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCopyDBParameterGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCopyDBParameterGroupVersionEnumTwoThousandAndFourteen0901 POSTCopyDBParameterGroupVersionEnum = "2014-09-01"
 )
 
+func (e POSTCopyDBParameterGroupVersionEnum) ToPointer() *POSTCopyDBParameterGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTCopyDBParameterGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-09-01":
-		*e = POSTCopyDBParameterGroupVersionEnum(s)
+		*e = POSTCopyDBParameterGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCopyDBParameterGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCopyDBParameterGroupVersionEnum: %v", v)
 	}
 }
 

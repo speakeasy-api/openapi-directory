@@ -14,18 +14,22 @@ const (
 	ECSServiceMetricStatisticEnumAverage ECSServiceMetricStatisticEnum = "Average"
 )
 
+func (e ECSServiceMetricStatisticEnum) ToPointer() *ECSServiceMetricStatisticEnum {
+	return &e
+}
+
 func (e *ECSServiceMetricStatisticEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Maximum":
 		fallthrough
 	case "Average":
-		*e = ECSServiceMetricStatisticEnum(s)
+		*e = ECSServiceMetricStatisticEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ECSServiceMetricStatisticEnum: %s", s)
+		return fmt.Errorf("invalid value for ECSServiceMetricStatisticEnum: %v", v)
 	}
 }

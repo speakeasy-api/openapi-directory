@@ -13,35 +13,33 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/dfareporti
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DfareportingAccountActiveAdSummariesGetRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
-        PrettyPrint: false,
-        ProfileID: "illum",
-        QuotaUser: "vel",
-        SummaryAccountID: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.AccountActiveAdSummaries.DfareportingAccountActiveAdSummariesGet(ctx, req, operations.DfareportingAccountActiveAdSummariesGetSecurity{
+    res, err := s.AccountActiveAdSummaries.DfareportingAccountActiveAdSummariesGet(ctx, operations.DfareportingAccountActiveAdSummariesGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
+        PrettyPrint: sdk.Bool(false),
+        ProfileID: "illum",
+        QuotaUser: sdk.String("vel"),
+        SummaryAccountID: "error",
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.DfareportingAccountActiveAdSummariesGetSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -60,389 +58,389 @@ func main() {
 ## Available Resources and Operations
 
 
-### AccountActiveAdSummaries
+### [AccountActiveAdSummaries](docs/accountactiveadsummaries/README.md)
 
-* `DfareportingAccountActiveAdSummariesGet` - Gets the account's active ad summary by account ID.
+* [DfareportingAccountActiveAdSummariesGet](docs/accountactiveadsummaries/README.md#dfareportingaccountactiveadsummariesget) - Gets the account's active ad summary by account ID.
 
-### AccountPermissionGroups
+### [AccountPermissionGroups](docs/accountpermissiongroups/README.md)
 
-* `DfareportingAccountPermissionGroupsGet` - Gets one account permission group by ID.
-* `DfareportingAccountPermissionGroupsList` - Retrieves the list of account permission groups.
+* [DfareportingAccountPermissionGroupsGet](docs/accountpermissiongroups/README.md#dfareportingaccountpermissiongroupsget) - Gets one account permission group by ID.
+* [DfareportingAccountPermissionGroupsList](docs/accountpermissiongroups/README.md#dfareportingaccountpermissiongroupslist) - Retrieves the list of account permission groups.
 
-### AccountPermissions
+### [AccountPermissions](docs/accountpermissions/README.md)
 
-* `DfareportingAccountPermissionsGet` - Gets one account permission by ID.
-* `DfareportingAccountPermissionsList` - Retrieves the list of account permissions.
+* [DfareportingAccountPermissionsGet](docs/accountpermissions/README.md#dfareportingaccountpermissionsget) - Gets one account permission by ID.
+* [DfareportingAccountPermissionsList](docs/accountpermissions/README.md#dfareportingaccountpermissionslist) - Retrieves the list of account permissions.
 
-### AccountUserProfiles
+### [AccountUserProfiles](docs/accountuserprofiles/README.md)
 
-* `DfareportingAccountUserProfilesGet` - Gets one account user profile by ID.
-* `DfareportingAccountUserProfilesInsert` - Inserts a new account user profile.
-* `DfareportingAccountUserProfilesList` - Retrieves a list of account user profiles, possibly filtered. This method supports paging.
-* `DfareportingAccountUserProfilesPatch` - Updates an existing account user profile. This method supports patch semantics.
-* `DfareportingAccountUserProfilesUpdate` - Updates an existing account user profile.
+* [DfareportingAccountUserProfilesGet](docs/accountuserprofiles/README.md#dfareportingaccountuserprofilesget) - Gets one account user profile by ID.
+* [DfareportingAccountUserProfilesInsert](docs/accountuserprofiles/README.md#dfareportingaccountuserprofilesinsert) - Inserts a new account user profile.
+* [DfareportingAccountUserProfilesList](docs/accountuserprofiles/README.md#dfareportingaccountuserprofileslist) - Retrieves a list of account user profiles, possibly filtered. This method supports paging.
+* [DfareportingAccountUserProfilesPatch](docs/accountuserprofiles/README.md#dfareportingaccountuserprofilespatch) - Updates an existing account user profile. This method supports patch semantics.
+* [DfareportingAccountUserProfilesUpdate](docs/accountuserprofiles/README.md#dfareportingaccountuserprofilesupdate) - Updates an existing account user profile.
 
-### Accounts
+### [Accounts](docs/accounts/README.md)
 
-* `DfareportingAccountsGet` - Gets one account by ID.
-* `DfareportingAccountsList` - Retrieves the list of accounts, possibly filtered. This method supports paging.
-* `DfareportingAccountsPatch` - Updates an existing account. This method supports patch semantics.
-* `DfareportingAccountsUpdate` - Updates an existing account.
+* [DfareportingAccountsGet](docs/accounts/README.md#dfareportingaccountsget) - Gets one account by ID.
+* [DfareportingAccountsList](docs/accounts/README.md#dfareportingaccountslist) - Retrieves the list of accounts, possibly filtered. This method supports paging.
+* [DfareportingAccountsPatch](docs/accounts/README.md#dfareportingaccountspatch) - Updates an existing account. This method supports patch semantics.
+* [DfareportingAccountsUpdate](docs/accounts/README.md#dfareportingaccountsupdate) - Updates an existing account.
 
-### Ads
+### [Ads](docs/ads/README.md)
 
-* `DfareportingAdsGet` - Gets one ad by ID.
-* `DfareportingAdsInsert` - Inserts a new ad.
-* `DfareportingAdsList` - Retrieves a list of ads, possibly filtered. This method supports paging.
-* `DfareportingAdsPatch` - Updates an existing ad. This method supports patch semantics.
-* `DfareportingAdsUpdate` - Updates an existing ad.
+* [DfareportingAdsGet](docs/ads/README.md#dfareportingadsget) - Gets one ad by ID.
+* [DfareportingAdsInsert](docs/ads/README.md#dfareportingadsinsert) - Inserts a new ad.
+* [DfareportingAdsList](docs/ads/README.md#dfareportingadslist) - Retrieves a list of ads, possibly filtered. This method supports paging.
+* [DfareportingAdsPatch](docs/ads/README.md#dfareportingadspatch) - Updates an existing ad. This method supports patch semantics.
+* [DfareportingAdsUpdate](docs/ads/README.md#dfareportingadsupdate) - Updates an existing ad.
 
-### AdvertiserGroups
+### [AdvertiserGroups](docs/advertisergroups/README.md)
 
-* `DfareportingAdvertiserGroupsDelete` - Deletes an existing advertiser group.
-* `DfareportingAdvertiserGroupsGet` - Gets one advertiser group by ID.
-* `DfareportingAdvertiserGroupsInsert` - Inserts a new advertiser group.
-* `DfareportingAdvertiserGroupsList` - Retrieves a list of advertiser groups, possibly filtered. This method supports paging.
-* `DfareportingAdvertiserGroupsPatch` - Updates an existing advertiser group. This method supports patch semantics.
-* `DfareportingAdvertiserGroupsUpdate` - Updates an existing advertiser group.
+* [DfareportingAdvertiserGroupsDelete](docs/advertisergroups/README.md#dfareportingadvertisergroupsdelete) - Deletes an existing advertiser group.
+* [DfareportingAdvertiserGroupsGet](docs/advertisergroups/README.md#dfareportingadvertisergroupsget) - Gets one advertiser group by ID.
+* [DfareportingAdvertiserGroupsInsert](docs/advertisergroups/README.md#dfareportingadvertisergroupsinsert) - Inserts a new advertiser group.
+* [DfareportingAdvertiserGroupsList](docs/advertisergroups/README.md#dfareportingadvertisergroupslist) - Retrieves a list of advertiser groups, possibly filtered. This method supports paging.
+* [DfareportingAdvertiserGroupsPatch](docs/advertisergroups/README.md#dfareportingadvertisergroupspatch) - Updates an existing advertiser group. This method supports patch semantics.
+* [DfareportingAdvertiserGroupsUpdate](docs/advertisergroups/README.md#dfareportingadvertisergroupsupdate) - Updates an existing advertiser group.
 
-### AdvertiserLandingPages
+### [AdvertiserLandingPages](docs/advertiserlandingpages/README.md)
 
-* `DfareportingAdvertiserLandingPagesGet` - Gets one landing page by ID.
-* `DfareportingAdvertiserLandingPagesInsert` - Inserts a new landing page.
-* `DfareportingAdvertiserLandingPagesList` - Retrieves a list of landing pages.
-* `DfareportingAdvertiserLandingPagesPatch` - Updates an existing advertiser landing page. This method supports patch semantics.
-* `DfareportingAdvertiserLandingPagesUpdate` - Updates an existing landing page.
+* [DfareportingAdvertiserLandingPagesGet](docs/advertiserlandingpages/README.md#dfareportingadvertiserlandingpagesget) - Gets one landing page by ID.
+* [DfareportingAdvertiserLandingPagesInsert](docs/advertiserlandingpages/README.md#dfareportingadvertiserlandingpagesinsert) - Inserts a new landing page.
+* [DfareportingAdvertiserLandingPagesList](docs/advertiserlandingpages/README.md#dfareportingadvertiserlandingpageslist) - Retrieves a list of landing pages.
+* [DfareportingAdvertiserLandingPagesPatch](docs/advertiserlandingpages/README.md#dfareportingadvertiserlandingpagespatch) - Updates an existing advertiser landing page. This method supports patch semantics.
+* [DfareportingAdvertiserLandingPagesUpdate](docs/advertiserlandingpages/README.md#dfareportingadvertiserlandingpagesupdate) - Updates an existing landing page.
 
-### Advertisers
+### [Advertisers](docs/advertisers/README.md)
 
-* `DfareportingAdvertisersGet` - Gets one advertiser by ID.
-* `DfareportingAdvertisersInsert` - Inserts a new advertiser.
-* `DfareportingAdvertisersList` - Retrieves a list of advertisers, possibly filtered. This method supports paging.
-* `DfareportingAdvertisersPatch` - Updates an existing advertiser. This method supports patch semantics.
-* `DfareportingAdvertisersUpdate` - Updates an existing advertiser.
+* [DfareportingAdvertisersGet](docs/advertisers/README.md#dfareportingadvertisersget) - Gets one advertiser by ID.
+* [DfareportingAdvertisersInsert](docs/advertisers/README.md#dfareportingadvertisersinsert) - Inserts a new advertiser.
+* [DfareportingAdvertisersList](docs/advertisers/README.md#dfareportingadvertiserslist) - Retrieves a list of advertisers, possibly filtered. This method supports paging.
+* [DfareportingAdvertisersPatch](docs/advertisers/README.md#dfareportingadvertiserspatch) - Updates an existing advertiser. This method supports patch semantics.
+* [DfareportingAdvertisersUpdate](docs/advertisers/README.md#dfareportingadvertisersupdate) - Updates an existing advertiser.
 
-### Browsers
+### [Browsers](docs/browsers/README.md)
 
-* `DfareportingBrowsersList` - Retrieves a list of browsers.
+* [DfareportingBrowsersList](docs/browsers/README.md#dfareportingbrowserslist) - Retrieves a list of browsers.
 
-### CampaignCreativeAssociations
+### [CampaignCreativeAssociations](docs/campaigncreativeassociations/README.md)
 
-* `DfareportingCampaignCreativeAssociationsInsert` - Associates a creative with the specified campaign. This method creates a default ad with dimensions matching the creative in the campaign if such a default ad does not exist already.
-* `DfareportingCampaignCreativeAssociationsList` - Retrieves the list of creative IDs associated with the specified campaign. This method supports paging.
+* [DfareportingCampaignCreativeAssociationsInsert](docs/campaigncreativeassociations/README.md#dfareportingcampaigncreativeassociationsinsert) - Associates a creative with the specified campaign. This method creates a default ad with dimensions matching the creative in the campaign if such a default ad does not exist already.
+* [DfareportingCampaignCreativeAssociationsList](docs/campaigncreativeassociations/README.md#dfareportingcampaigncreativeassociationslist) - Retrieves the list of creative IDs associated with the specified campaign. This method supports paging.
 
-### Campaigns
+### [Campaigns](docs/campaigns/README.md)
 
-* `DfareportingCampaignsGet` - Gets one campaign by ID.
-* `DfareportingCampaignsInsert` - Inserts a new campaign.
-* `DfareportingCampaignsList` - Retrieves a list of campaigns, possibly filtered. This method supports paging.
-* `DfareportingCampaignsPatch` - Updates an existing campaign. This method supports patch semantics.
-* `DfareportingCampaignsUpdate` - Updates an existing campaign.
+* [DfareportingCampaignsGet](docs/campaigns/README.md#dfareportingcampaignsget) - Gets one campaign by ID.
+* [DfareportingCampaignsInsert](docs/campaigns/README.md#dfareportingcampaignsinsert) - Inserts a new campaign.
+* [DfareportingCampaignsList](docs/campaigns/README.md#dfareportingcampaignslist) - Retrieves a list of campaigns, possibly filtered. This method supports paging.
+* [DfareportingCampaignsPatch](docs/campaigns/README.md#dfareportingcampaignspatch) - Updates an existing campaign. This method supports patch semantics.
+* [DfareportingCampaignsUpdate](docs/campaigns/README.md#dfareportingcampaignsupdate) - Updates an existing campaign.
 
-### ChangeLogs
+### [ChangeLogs](docs/changelogs/README.md)
 
-* `DfareportingChangeLogsGet` - Gets one change log by ID.
-* `DfareportingChangeLogsList` - Retrieves a list of change logs. This method supports paging.
+* [DfareportingChangeLogsGet](docs/changelogs/README.md#dfareportingchangelogsget) - Gets one change log by ID.
+* [DfareportingChangeLogsList](docs/changelogs/README.md#dfareportingchangelogslist) - Retrieves a list of change logs. This method supports paging.
 
-### Cities
+### [Cities](docs/cities/README.md)
 
-* `DfareportingCitiesList` - Retrieves a list of cities, possibly filtered.
+* [DfareportingCitiesList](docs/cities/README.md#dfareportingcitieslist) - Retrieves a list of cities, possibly filtered.
 
-### ConnectionTypes
+### [ConnectionTypes](docs/connectiontypes/README.md)
 
-* `DfareportingConnectionTypesGet` - Gets one connection type by ID.
-* `DfareportingConnectionTypesList` - Retrieves a list of connection types.
+* [DfareportingConnectionTypesGet](docs/connectiontypes/README.md#dfareportingconnectiontypesget) - Gets one connection type by ID.
+* [DfareportingConnectionTypesList](docs/connectiontypes/README.md#dfareportingconnectiontypeslist) - Retrieves a list of connection types.
 
-### ContentCategories
+### [ContentCategories](docs/contentcategories/README.md)
 
-* `DfareportingContentCategoriesDelete` - Deletes an existing content category.
-* `DfareportingContentCategoriesGet` - Gets one content category by ID.
-* `DfareportingContentCategoriesInsert` - Inserts a new content category.
-* `DfareportingContentCategoriesList` - Retrieves a list of content categories, possibly filtered. This method supports paging.
-* `DfareportingContentCategoriesPatch` - Updates an existing content category. This method supports patch semantics.
-* `DfareportingContentCategoriesUpdate` - Updates an existing content category.
+* [DfareportingContentCategoriesDelete](docs/contentcategories/README.md#dfareportingcontentcategoriesdelete) - Deletes an existing content category.
+* [DfareportingContentCategoriesGet](docs/contentcategories/README.md#dfareportingcontentcategoriesget) - Gets one content category by ID.
+* [DfareportingContentCategoriesInsert](docs/contentcategories/README.md#dfareportingcontentcategoriesinsert) - Inserts a new content category.
+* [DfareportingContentCategoriesList](docs/contentcategories/README.md#dfareportingcontentcategorieslist) - Retrieves a list of content categories, possibly filtered. This method supports paging.
+* [DfareportingContentCategoriesPatch](docs/contentcategories/README.md#dfareportingcontentcategoriespatch) - Updates an existing content category. This method supports patch semantics.
+* [DfareportingContentCategoriesUpdate](docs/contentcategories/README.md#dfareportingcontentcategoriesupdate) - Updates an existing content category.
 
-### Conversions
+### [Conversions](docs/conversions/README.md)
 
-* `DfareportingConversionsBatchinsert` - Inserts conversions.
-* `DfareportingConversionsBatchupdate` - Updates existing conversions.
+* [DfareportingConversionsBatchinsert](docs/conversions/README.md#dfareportingconversionsbatchinsert) - Inserts conversions.
+* [DfareportingConversionsBatchupdate](docs/conversions/README.md#dfareportingconversionsbatchupdate) - Updates existing conversions.
 
-### Countries
+### [Countries](docs/countries/README.md)
 
-* `DfareportingCountriesGet` - Gets one country by ID.
-* `DfareportingCountriesList` - Retrieves a list of countries.
+* [DfareportingCountriesGet](docs/countries/README.md#dfareportingcountriesget) - Gets one country by ID.
+* [DfareportingCountriesList](docs/countries/README.md#dfareportingcountrieslist) - Retrieves a list of countries.
 
-### CreativeAssets
+### [CreativeAssets](docs/creativeassets/README.md)
 
-* `DfareportingCreativeAssetsInsert` - Inserts a new creative asset.
+* [DfareportingCreativeAssetsInsert](docs/creativeassets/README.md#dfareportingcreativeassetsinsert) - Inserts a new creative asset.
 
-### CreativeFieldValues
+### [CreativeFieldValues](docs/creativefieldvalues/README.md)
 
-* `DfareportingCreativeFieldValuesDelete` - Deletes an existing creative field value.
-* `DfareportingCreativeFieldValuesGet` - Gets one creative field value by ID.
-* `DfareportingCreativeFieldValuesInsert` - Inserts a new creative field value.
-* `DfareportingCreativeFieldValuesList` - Retrieves a list of creative field values, possibly filtered. This method supports paging.
-* `DfareportingCreativeFieldValuesPatch` - Updates an existing creative field value. This method supports patch semantics.
-* `DfareportingCreativeFieldValuesUpdate` - Updates an existing creative field value.
+* [DfareportingCreativeFieldValuesDelete](docs/creativefieldvalues/README.md#dfareportingcreativefieldvaluesdelete) - Deletes an existing creative field value.
+* [DfareportingCreativeFieldValuesGet](docs/creativefieldvalues/README.md#dfareportingcreativefieldvaluesget) - Gets one creative field value by ID.
+* [DfareportingCreativeFieldValuesInsert](docs/creativefieldvalues/README.md#dfareportingcreativefieldvaluesinsert) - Inserts a new creative field value.
+* [DfareportingCreativeFieldValuesList](docs/creativefieldvalues/README.md#dfareportingcreativefieldvalueslist) - Retrieves a list of creative field values, possibly filtered. This method supports paging.
+* [DfareportingCreativeFieldValuesPatch](docs/creativefieldvalues/README.md#dfareportingcreativefieldvaluespatch) - Updates an existing creative field value. This method supports patch semantics.
+* [DfareportingCreativeFieldValuesUpdate](docs/creativefieldvalues/README.md#dfareportingcreativefieldvaluesupdate) - Updates an existing creative field value.
 
-### CreativeFields
+### [CreativeFields](docs/creativefields/README.md)
 
-* `DfareportingCreativeFieldsDelete` - Deletes an existing creative field.
-* `DfareportingCreativeFieldsGet` - Gets one creative field by ID.
-* `DfareportingCreativeFieldsInsert` - Inserts a new creative field.
-* `DfareportingCreativeFieldsList` - Retrieves a list of creative fields, possibly filtered. This method supports paging.
-* `DfareportingCreativeFieldsPatch` - Updates an existing creative field. This method supports patch semantics.
-* `DfareportingCreativeFieldsUpdate` - Updates an existing creative field.
+* [DfareportingCreativeFieldsDelete](docs/creativefields/README.md#dfareportingcreativefieldsdelete) - Deletes an existing creative field.
+* [DfareportingCreativeFieldsGet](docs/creativefields/README.md#dfareportingcreativefieldsget) - Gets one creative field by ID.
+* [DfareportingCreativeFieldsInsert](docs/creativefields/README.md#dfareportingcreativefieldsinsert) - Inserts a new creative field.
+* [DfareportingCreativeFieldsList](docs/creativefields/README.md#dfareportingcreativefieldslist) - Retrieves a list of creative fields, possibly filtered. This method supports paging.
+* [DfareportingCreativeFieldsPatch](docs/creativefields/README.md#dfareportingcreativefieldspatch) - Updates an existing creative field. This method supports patch semantics.
+* [DfareportingCreativeFieldsUpdate](docs/creativefields/README.md#dfareportingcreativefieldsupdate) - Updates an existing creative field.
 
-### CreativeGroups
+### [CreativeGroups](docs/creativegroups/README.md)
 
-* `DfareportingCreativeGroupsGet` - Gets one creative group by ID.
-* `DfareportingCreativeGroupsInsert` - Inserts a new creative group.
-* `DfareportingCreativeGroupsList` - Retrieves a list of creative groups, possibly filtered. This method supports paging.
-* `DfareportingCreativeGroupsPatch` - Updates an existing creative group. This method supports patch semantics.
-* `DfareportingCreativeGroupsUpdate` - Updates an existing creative group.
+* [DfareportingCreativeGroupsGet](docs/creativegroups/README.md#dfareportingcreativegroupsget) - Gets one creative group by ID.
+* [DfareportingCreativeGroupsInsert](docs/creativegroups/README.md#dfareportingcreativegroupsinsert) - Inserts a new creative group.
+* [DfareportingCreativeGroupsList](docs/creativegroups/README.md#dfareportingcreativegroupslist) - Retrieves a list of creative groups, possibly filtered. This method supports paging.
+* [DfareportingCreativeGroupsPatch](docs/creativegroups/README.md#dfareportingcreativegroupspatch) - Updates an existing creative group. This method supports patch semantics.
+* [DfareportingCreativeGroupsUpdate](docs/creativegroups/README.md#dfareportingcreativegroupsupdate) - Updates an existing creative group.
 
-### Creatives
+### [Creatives](docs/creatives/README.md)
 
-* `DfareportingCreativesGet` - Gets one creative by ID.
-* `DfareportingCreativesInsert` - Inserts a new creative.
-* `DfareportingCreativesList` - Retrieves a list of creatives, possibly filtered. This method supports paging.
-* `DfareportingCreativesPatch` - Updates an existing creative. This method supports patch semantics.
-* `DfareportingCreativesUpdate` - Updates an existing creative.
+* [DfareportingCreativesGet](docs/creatives/README.md#dfareportingcreativesget) - Gets one creative by ID.
+* [DfareportingCreativesInsert](docs/creatives/README.md#dfareportingcreativesinsert) - Inserts a new creative.
+* [DfareportingCreativesList](docs/creatives/README.md#dfareportingcreativeslist) - Retrieves a list of creatives, possibly filtered. This method supports paging.
+* [DfareportingCreativesPatch](docs/creatives/README.md#dfareportingcreativespatch) - Updates an existing creative. This method supports patch semantics.
+* [DfareportingCreativesUpdate](docs/creatives/README.md#dfareportingcreativesupdate) - Updates an existing creative.
 
-### DimensionValues
+### [DimensionValues](docs/dimensionvalues/README.md)
 
-* `DfareportingDimensionValuesQuery` - Retrieves list of report dimension values for a list of filters.
+* [DfareportingDimensionValuesQuery](docs/dimensionvalues/README.md#dfareportingdimensionvaluesquery) - Retrieves list of report dimension values for a list of filters.
 
-### DirectorySites
+### [DirectorySites](docs/directorysites/README.md)
 
-* `DfareportingDirectorySitesGet` - Gets one directory site by ID.
-* `DfareportingDirectorySitesInsert` - Inserts a new directory site.
-* `DfareportingDirectorySitesList` - Retrieves a list of directory sites, possibly filtered. This method supports paging.
+* [DfareportingDirectorySitesGet](docs/directorysites/README.md#dfareportingdirectorysitesget) - Gets one directory site by ID.
+* [DfareportingDirectorySitesInsert](docs/directorysites/README.md#dfareportingdirectorysitesinsert) - Inserts a new directory site.
+* [DfareportingDirectorySitesList](docs/directorysites/README.md#dfareportingdirectorysiteslist) - Retrieves a list of directory sites, possibly filtered. This method supports paging.
 
-### DynamicTargetingKeys
+### [DynamicTargetingKeys](docs/dynamictargetingkeys/README.md)
 
-* `DfareportingDynamicTargetingKeysDelete` - Deletes an existing dynamic targeting key.
-* `DfareportingDynamicTargetingKeysInsert` - Inserts a new dynamic targeting key. Keys must be created at the advertiser level before being assigned to the advertiser's ads, creatives, or placements. There is a maximum of 1000 keys per advertiser, out of which a maximum of 20 keys can be assigned per ad, creative, or placement.
-* `DfareportingDynamicTargetingKeysList` - Retrieves a list of dynamic targeting keys.
+* [DfareportingDynamicTargetingKeysDelete](docs/dynamictargetingkeys/README.md#dfareportingdynamictargetingkeysdelete) - Deletes an existing dynamic targeting key.
+* [DfareportingDynamicTargetingKeysInsert](docs/dynamictargetingkeys/README.md#dfareportingdynamictargetingkeysinsert) - Inserts a new dynamic targeting key. Keys must be created at the advertiser level before being assigned to the advertiser's ads, creatives, or placements. There is a maximum of 1000 keys per advertiser, out of which a maximum of 20 keys can be assigned per ad, creative, or placement.
+* [DfareportingDynamicTargetingKeysList](docs/dynamictargetingkeys/README.md#dfareportingdynamictargetingkeyslist) - Retrieves a list of dynamic targeting keys.
 
-### EventTags
+### [EventTags](docs/eventtags/README.md)
 
-* `DfareportingEventTagsDelete` - Deletes an existing event tag.
-* `DfareportingEventTagsGet` - Gets one event tag by ID.
-* `DfareportingEventTagsInsert` - Inserts a new event tag.
-* `DfareportingEventTagsList` - Retrieves a list of event tags, possibly filtered.
-* `DfareportingEventTagsPatch` - Updates an existing event tag. This method supports patch semantics.
-* `DfareportingEventTagsUpdate` - Updates an existing event tag.
+* [DfareportingEventTagsDelete](docs/eventtags/README.md#dfareportingeventtagsdelete) - Deletes an existing event tag.
+* [DfareportingEventTagsGet](docs/eventtags/README.md#dfareportingeventtagsget) - Gets one event tag by ID.
+* [DfareportingEventTagsInsert](docs/eventtags/README.md#dfareportingeventtagsinsert) - Inserts a new event tag.
+* [DfareportingEventTagsList](docs/eventtags/README.md#dfareportingeventtagslist) - Retrieves a list of event tags, possibly filtered.
+* [DfareportingEventTagsPatch](docs/eventtags/README.md#dfareportingeventtagspatch) - Updates an existing event tag. This method supports patch semantics.
+* [DfareportingEventTagsUpdate](docs/eventtags/README.md#dfareportingeventtagsupdate) - Updates an existing event tag.
 
-### Files
+### [Files](docs/files/README.md)
 
-* `DfareportingFilesGet` - Retrieves a report file by its report ID and file ID. This method supports media download.
-* `DfareportingFilesList` - Lists files for a user profile.
+* [DfareportingFilesGet](docs/files/README.md#dfareportingfilesget) - Retrieves a report file by its report ID and file ID. This method supports media download.
+* [DfareportingFilesList](docs/files/README.md#dfareportingfileslist) - Lists files for a user profile.
 
-### FloodlightActivities
+### [FloodlightActivities](docs/floodlightactivities/README.md)
 
-* `DfareportingFloodlightActivitiesDelete` - Deletes an existing floodlight activity.
-* `DfareportingFloodlightActivitiesGeneratetag` - Generates a tag for a floodlight activity.
-* `DfareportingFloodlightActivitiesGet` - Gets one floodlight activity by ID.
-* `DfareportingFloodlightActivitiesInsert` - Inserts a new floodlight activity.
-* `DfareportingFloodlightActivitiesList` - Retrieves a list of floodlight activities, possibly filtered. This method supports paging.
-* `DfareportingFloodlightActivitiesPatch` - Updates an existing floodlight activity. This method supports patch semantics.
-* `DfareportingFloodlightActivitiesUpdate` - Updates an existing floodlight activity.
+* [DfareportingFloodlightActivitiesDelete](docs/floodlightactivities/README.md#dfareportingfloodlightactivitiesdelete) - Deletes an existing floodlight activity.
+* [DfareportingFloodlightActivitiesGeneratetag](docs/floodlightactivities/README.md#dfareportingfloodlightactivitiesgeneratetag) - Generates a tag for a floodlight activity.
+* [DfareportingFloodlightActivitiesGet](docs/floodlightactivities/README.md#dfareportingfloodlightactivitiesget) - Gets one floodlight activity by ID.
+* [DfareportingFloodlightActivitiesInsert](docs/floodlightactivities/README.md#dfareportingfloodlightactivitiesinsert) - Inserts a new floodlight activity.
+* [DfareportingFloodlightActivitiesList](docs/floodlightactivities/README.md#dfareportingfloodlightactivitieslist) - Retrieves a list of floodlight activities, possibly filtered. This method supports paging.
+* [DfareportingFloodlightActivitiesPatch](docs/floodlightactivities/README.md#dfareportingfloodlightactivitiespatch) - Updates an existing floodlight activity. This method supports patch semantics.
+* [DfareportingFloodlightActivitiesUpdate](docs/floodlightactivities/README.md#dfareportingfloodlightactivitiesupdate) - Updates an existing floodlight activity.
 
-### FloodlightActivityGroups
+### [FloodlightActivityGroups](docs/floodlightactivitygroups/README.md)
 
-* `DfareportingFloodlightActivityGroupsGet` - Gets one floodlight activity group by ID.
-* `DfareportingFloodlightActivityGroupsInsert` - Inserts a new floodlight activity group.
-* `DfareportingFloodlightActivityGroupsList` - Retrieves a list of floodlight activity groups, possibly filtered. This method supports paging.
-* `DfareportingFloodlightActivityGroupsPatch` - Updates an existing floodlight activity group. This method supports patch semantics.
-* `DfareportingFloodlightActivityGroupsUpdate` - Updates an existing floodlight activity group.
+* [DfareportingFloodlightActivityGroupsGet](docs/floodlightactivitygroups/README.md#dfareportingfloodlightactivitygroupsget) - Gets one floodlight activity group by ID.
+* [DfareportingFloodlightActivityGroupsInsert](docs/floodlightactivitygroups/README.md#dfareportingfloodlightactivitygroupsinsert) - Inserts a new floodlight activity group.
+* [DfareportingFloodlightActivityGroupsList](docs/floodlightactivitygroups/README.md#dfareportingfloodlightactivitygroupslist) - Retrieves a list of floodlight activity groups, possibly filtered. This method supports paging.
+* [DfareportingFloodlightActivityGroupsPatch](docs/floodlightactivitygroups/README.md#dfareportingfloodlightactivitygroupspatch) - Updates an existing floodlight activity group. This method supports patch semantics.
+* [DfareportingFloodlightActivityGroupsUpdate](docs/floodlightactivitygroups/README.md#dfareportingfloodlightactivitygroupsupdate) - Updates an existing floodlight activity group.
 
-### FloodlightConfigurations
+### [FloodlightConfigurations](docs/floodlightconfigurations/README.md)
 
-* `DfareportingFloodlightConfigurationsGet` - Gets one floodlight configuration by ID.
-* `DfareportingFloodlightConfigurationsList` - Retrieves a list of floodlight configurations, possibly filtered.
-* `DfareportingFloodlightConfigurationsPatch` - Updates an existing floodlight configuration. This method supports patch semantics.
-* `DfareportingFloodlightConfigurationsUpdate` - Updates an existing floodlight configuration.
+* [DfareportingFloodlightConfigurationsGet](docs/floodlightconfigurations/README.md#dfareportingfloodlightconfigurationsget) - Gets one floodlight configuration by ID.
+* [DfareportingFloodlightConfigurationsList](docs/floodlightconfigurations/README.md#dfareportingfloodlightconfigurationslist) - Retrieves a list of floodlight configurations, possibly filtered.
+* [DfareportingFloodlightConfigurationsPatch](docs/floodlightconfigurations/README.md#dfareportingfloodlightconfigurationspatch) - Updates an existing floodlight configuration. This method supports patch semantics.
+* [DfareportingFloodlightConfigurationsUpdate](docs/floodlightconfigurations/README.md#dfareportingfloodlightconfigurationsupdate) - Updates an existing floodlight configuration.
 
-### InventoryItems
+### [InventoryItems](docs/inventoryitems/README.md)
 
-* `DfareportingInventoryItemsGet` - Gets one inventory item by ID.
-* `DfareportingInventoryItemsList` - Retrieves a list of inventory items, possibly filtered. This method supports paging.
+* [DfareportingInventoryItemsGet](docs/inventoryitems/README.md#dfareportinginventoryitemsget) - Gets one inventory item by ID.
+* [DfareportingInventoryItemsList](docs/inventoryitems/README.md#dfareportinginventoryitemslist) - Retrieves a list of inventory items, possibly filtered. This method supports paging.
 
-### Languages
+### [Languages](docs/languages/README.md)
 
-* `DfareportingLanguagesList` - Retrieves a list of languages.
+* [DfareportingLanguagesList](docs/languages/README.md#dfareportinglanguageslist) - Retrieves a list of languages.
 
-### Metros
+### [Metros](docs/metros/README.md)
 
-* `DfareportingMetrosList` - Retrieves a list of metros.
+* [DfareportingMetrosList](docs/metros/README.md#dfareportingmetroslist) - Retrieves a list of metros.
 
-### MobileApps
+### [MobileApps](docs/mobileapps/README.md)
 
-* `DfareportingMobileAppsGet` - Gets one mobile app by ID.
-* `DfareportingMobileAppsList` - Retrieves list of available mobile apps.
+* [DfareportingMobileAppsGet](docs/mobileapps/README.md#dfareportingmobileappsget) - Gets one mobile app by ID.
+* [DfareportingMobileAppsList](docs/mobileapps/README.md#dfareportingmobileappslist) - Retrieves list of available mobile apps.
 
-### MobileCarriers
+### [MobileCarriers](docs/mobilecarriers/README.md)
 
-* `DfareportingMobileCarriersGet` - Gets one mobile carrier by ID.
-* `DfareportingMobileCarriersList` - Retrieves a list of mobile carriers.
+* [DfareportingMobileCarriersGet](docs/mobilecarriers/README.md#dfareportingmobilecarriersget) - Gets one mobile carrier by ID.
+* [DfareportingMobileCarriersList](docs/mobilecarriers/README.md#dfareportingmobilecarrierslist) - Retrieves a list of mobile carriers.
 
-### OperatingSystemVersions
+### [OperatingSystemVersions](docs/operatingsystemversions/README.md)
 
-* `DfareportingOperatingSystemVersionsGet` - Gets one operating system version by ID.
-* `DfareportingOperatingSystemVersionsList` - Retrieves a list of operating system versions.
+* [DfareportingOperatingSystemVersionsGet](docs/operatingsystemversions/README.md#dfareportingoperatingsystemversionsget) - Gets one operating system version by ID.
+* [DfareportingOperatingSystemVersionsList](docs/operatingsystemversions/README.md#dfareportingoperatingsystemversionslist) - Retrieves a list of operating system versions.
 
-### OperatingSystems
+### [OperatingSystems](docs/operatingsystems/README.md)
 
-* `DfareportingOperatingSystemsGet` - Gets one operating system by DART ID.
-* `DfareportingOperatingSystemsList` - Retrieves a list of operating systems.
+* [DfareportingOperatingSystemsGet](docs/operatingsystems/README.md#dfareportingoperatingsystemsget) - Gets one operating system by DART ID.
+* [DfareportingOperatingSystemsList](docs/operatingsystems/README.md#dfareportingoperatingsystemslist) - Retrieves a list of operating systems.
 
-### OrderDocuments
+### [OrderDocuments](docs/orderdocuments/README.md)
 
-* `DfareportingOrderDocumentsGet` - Gets one order document by ID.
-* `DfareportingOrderDocumentsList` - Retrieves a list of order documents, possibly filtered. This method supports paging.
+* [DfareportingOrderDocumentsGet](docs/orderdocuments/README.md#dfareportingorderdocumentsget) - Gets one order document by ID.
+* [DfareportingOrderDocumentsList](docs/orderdocuments/README.md#dfareportingorderdocumentslist) - Retrieves a list of order documents, possibly filtered. This method supports paging.
 
-### Orders
+### [Orders](docs/orders/README.md)
 
-* `DfareportingOrdersGet` - Gets one order by ID.
-* `DfareportingOrdersList` - Retrieves a list of orders, possibly filtered. This method supports paging.
+* [DfareportingOrdersGet](docs/orders/README.md#dfareportingordersget) - Gets one order by ID.
+* [DfareportingOrdersList](docs/orders/README.md#dfareportingorderslist) - Retrieves a list of orders, possibly filtered. This method supports paging.
 
-### PlacementGroups
+### [PlacementGroups](docs/placementgroups/README.md)
 
-* `DfareportingPlacementGroupsGet` - Gets one placement group by ID.
-* `DfareportingPlacementGroupsInsert` - Inserts a new placement group.
-* `DfareportingPlacementGroupsList` - Retrieves a list of placement groups, possibly filtered. This method supports paging.
-* `DfareportingPlacementGroupsPatch` - Updates an existing placement group. This method supports patch semantics.
-* `DfareportingPlacementGroupsUpdate` - Updates an existing placement group.
+* [DfareportingPlacementGroupsGet](docs/placementgroups/README.md#dfareportingplacementgroupsget) - Gets one placement group by ID.
+* [DfareportingPlacementGroupsInsert](docs/placementgroups/README.md#dfareportingplacementgroupsinsert) - Inserts a new placement group.
+* [DfareportingPlacementGroupsList](docs/placementgroups/README.md#dfareportingplacementgroupslist) - Retrieves a list of placement groups, possibly filtered. This method supports paging.
+* [DfareportingPlacementGroupsPatch](docs/placementgroups/README.md#dfareportingplacementgroupspatch) - Updates an existing placement group. This method supports patch semantics.
+* [DfareportingPlacementGroupsUpdate](docs/placementgroups/README.md#dfareportingplacementgroupsupdate) - Updates an existing placement group.
 
-### PlacementStrategies
+### [PlacementStrategies](docs/placementstrategies/README.md)
 
-* `DfareportingPlacementStrategiesDelete` - Deletes an existing placement strategy.
-* `DfareportingPlacementStrategiesGet` - Gets one placement strategy by ID.
-* `DfareportingPlacementStrategiesInsert` - Inserts a new placement strategy.
-* `DfareportingPlacementStrategiesList` - Retrieves a list of placement strategies, possibly filtered. This method supports paging.
-* `DfareportingPlacementStrategiesPatch` - Updates an existing placement strategy. This method supports patch semantics.
-* `DfareportingPlacementStrategiesUpdate` - Updates an existing placement strategy.
+* [DfareportingPlacementStrategiesDelete](docs/placementstrategies/README.md#dfareportingplacementstrategiesdelete) - Deletes an existing placement strategy.
+* [DfareportingPlacementStrategiesGet](docs/placementstrategies/README.md#dfareportingplacementstrategiesget) - Gets one placement strategy by ID.
+* [DfareportingPlacementStrategiesInsert](docs/placementstrategies/README.md#dfareportingplacementstrategiesinsert) - Inserts a new placement strategy.
+* [DfareportingPlacementStrategiesList](docs/placementstrategies/README.md#dfareportingplacementstrategieslist) - Retrieves a list of placement strategies, possibly filtered. This method supports paging.
+* [DfareportingPlacementStrategiesPatch](docs/placementstrategies/README.md#dfareportingplacementstrategiespatch) - Updates an existing placement strategy. This method supports patch semantics.
+* [DfareportingPlacementStrategiesUpdate](docs/placementstrategies/README.md#dfareportingplacementstrategiesupdate) - Updates an existing placement strategy.
 
-### Placements
+### [Placements](docs/placements/README.md)
 
-* `DfareportingPlacementsGeneratetags` - Generates tags for a placement.
-* `DfareportingPlacementsGet` - Gets one placement by ID.
-* `DfareportingPlacementsInsert` - Inserts a new placement.
-* `DfareportingPlacementsList` - Retrieves a list of placements, possibly filtered. This method supports paging.
-* `DfareportingPlacementsPatch` - Updates an existing placement. This method supports patch semantics.
-* `DfareportingPlacementsUpdate` - Updates an existing placement.
+* [DfareportingPlacementsGeneratetags](docs/placements/README.md#dfareportingplacementsgeneratetags) - Generates tags for a placement.
+* [DfareportingPlacementsGet](docs/placements/README.md#dfareportingplacementsget) - Gets one placement by ID.
+* [DfareportingPlacementsInsert](docs/placements/README.md#dfareportingplacementsinsert) - Inserts a new placement.
+* [DfareportingPlacementsList](docs/placements/README.md#dfareportingplacementslist) - Retrieves a list of placements, possibly filtered. This method supports paging.
+* [DfareportingPlacementsPatch](docs/placements/README.md#dfareportingplacementspatch) - Updates an existing placement. This method supports patch semantics.
+* [DfareportingPlacementsUpdate](docs/placements/README.md#dfareportingplacementsupdate) - Updates an existing placement.
 
-### PlatformTypes
+### [PlatformTypes](docs/platformtypes/README.md)
 
-* `DfareportingPlatformTypesGet` - Gets one platform type by ID.
-* `DfareportingPlatformTypesList` - Retrieves a list of platform types.
+* [DfareportingPlatformTypesGet](docs/platformtypes/README.md#dfareportingplatformtypesget) - Gets one platform type by ID.
+* [DfareportingPlatformTypesList](docs/platformtypes/README.md#dfareportingplatformtypeslist) - Retrieves a list of platform types.
 
-### PostalCodes
+### [PostalCodes](docs/postalcodes/README.md)
 
-* `DfareportingPostalCodesGet` - Gets one postal code by ID.
-* `DfareportingPostalCodesList` - Retrieves a list of postal codes.
+* [DfareportingPostalCodesGet](docs/postalcodes/README.md#dfareportingpostalcodesget) - Gets one postal code by ID.
+* [DfareportingPostalCodesList](docs/postalcodes/README.md#dfareportingpostalcodeslist) - Retrieves a list of postal codes.
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `DfareportingProjectsGet` - Gets one project by ID.
-* `DfareportingProjectsList` - Retrieves a list of projects, possibly filtered. This method supports paging .
+* [DfareportingProjectsGet](docs/projects/README.md#dfareportingprojectsget) - Gets one project by ID.
+* [DfareportingProjectsList](docs/projects/README.md#dfareportingprojectslist) - Retrieves a list of projects, possibly filtered. This method supports paging .
 
-### Regions
+### [Regions](docs/regions/README.md)
 
-* `DfareportingRegionsList` - Retrieves a list of regions.
+* [DfareportingRegionsList](docs/regions/README.md#dfareportingregionslist) - Retrieves a list of regions.
 
-### RemarketingListShares
+### [RemarketingListShares](docs/remarketinglistshares/README.md)
 
-* `DfareportingRemarketingListSharesGet` - Gets one remarketing list share by remarketing list ID.
-* `DfareportingRemarketingListSharesPatch` - Updates an existing remarketing list share. This method supports patch semantics.
-* `DfareportingRemarketingListSharesUpdate` - Updates an existing remarketing list share.
+* [DfareportingRemarketingListSharesGet](docs/remarketinglistshares/README.md#dfareportingremarketinglistsharesget) - Gets one remarketing list share by remarketing list ID.
+* [DfareportingRemarketingListSharesPatch](docs/remarketinglistshares/README.md#dfareportingremarketinglistsharespatch) - Updates an existing remarketing list share. This method supports patch semantics.
+* [DfareportingRemarketingListSharesUpdate](docs/remarketinglistshares/README.md#dfareportingremarketinglistsharesupdate) - Updates an existing remarketing list share.
 
-### RemarketingLists
+### [RemarketingLists](docs/remarketinglists/README.md)
 
-* `DfareportingRemarketingListsGet` - Gets one remarketing list by ID.
-* `DfareportingRemarketingListsInsert` - Inserts a new remarketing list.
-* `DfareportingRemarketingListsList` - Retrieves a list of remarketing lists, possibly filtered. This method supports paging.
-* `DfareportingRemarketingListsPatch` - Updates an existing remarketing list. This method supports patch semantics.
-* `DfareportingRemarketingListsUpdate` - Updates an existing remarketing list.
+* [DfareportingRemarketingListsGet](docs/remarketinglists/README.md#dfareportingremarketinglistsget) - Gets one remarketing list by ID.
+* [DfareportingRemarketingListsInsert](docs/remarketinglists/README.md#dfareportingremarketinglistsinsert) - Inserts a new remarketing list.
+* [DfareportingRemarketingListsList](docs/remarketinglists/README.md#dfareportingremarketinglistslist) - Retrieves a list of remarketing lists, possibly filtered. This method supports paging.
+* [DfareportingRemarketingListsPatch](docs/remarketinglists/README.md#dfareportingremarketinglistspatch) - Updates an existing remarketing list. This method supports patch semantics.
+* [DfareportingRemarketingListsUpdate](docs/remarketinglists/README.md#dfareportingremarketinglistsupdate) - Updates an existing remarketing list.
 
-### Reports
+### [Reports](docs/reports/README.md)
 
-* `DfareportingReportsCompatibleFieldsQuery` - Returns the fields that are compatible to be selected in the respective sections of a report criteria, given the fields already selected in the input report and user permissions.
-* `DfareportingReportsDelete` - Deletes a report by its ID.
-* `DfareportingReportsFilesGet` - Retrieves a report file by its report ID and file ID. This method supports media download.
-* `DfareportingReportsFilesList` - Lists files for a report.
-* `DfareportingReportsGet` - Retrieves a report by its ID.
-* `DfareportingReportsInsert` - Creates a report.
-* `DfareportingReportsList` - Retrieves list of reports.
-* `DfareportingReportsPatch` - Updates an existing report. This method supports patch semantics.
-* `DfareportingReportsRun` - Runs a report.
-* `DfareportingReportsUpdate` - Updates a report.
+* [DfareportingReportsCompatibleFieldsQuery](docs/reports/README.md#dfareportingreportscompatiblefieldsquery) - Returns the fields that are compatible to be selected in the respective sections of a report criteria, given the fields already selected in the input report and user permissions.
+* [DfareportingReportsDelete](docs/reports/README.md#dfareportingreportsdelete) - Deletes a report by its ID.
+* [DfareportingReportsFilesGet](docs/reports/README.md#dfareportingreportsfilesget) - Retrieves a report file by its report ID and file ID. This method supports media download.
+* [DfareportingReportsFilesList](docs/reports/README.md#dfareportingreportsfileslist) - Lists files for a report.
+* [DfareportingReportsGet](docs/reports/README.md#dfareportingreportsget) - Retrieves a report by its ID.
+* [DfareportingReportsInsert](docs/reports/README.md#dfareportingreportsinsert) - Creates a report.
+* [DfareportingReportsList](docs/reports/README.md#dfareportingreportslist) - Retrieves list of reports.
+* [DfareportingReportsPatch](docs/reports/README.md#dfareportingreportspatch) - Updates an existing report. This method supports patch semantics.
+* [DfareportingReportsRun](docs/reports/README.md#dfareportingreportsrun) - Runs a report.
+* [DfareportingReportsUpdate](docs/reports/README.md#dfareportingreportsupdate) - Updates a report.
 
-### Sites
+### [Sites](docs/sites/README.md)
 
-* `DfareportingSitesGet` - Gets one site by ID.
-* `DfareportingSitesInsert` - Inserts a new site.
-* `DfareportingSitesList` - Retrieves a list of sites, possibly filtered. This method supports paging.
-* `DfareportingSitesPatch` - Updates an existing site. This method supports patch semantics.
-* `DfareportingSitesUpdate` - Updates an existing site.
+* [DfareportingSitesGet](docs/sites/README.md#dfareportingsitesget) - Gets one site by ID.
+* [DfareportingSitesInsert](docs/sites/README.md#dfareportingsitesinsert) - Inserts a new site.
+* [DfareportingSitesList](docs/sites/README.md#dfareportingsiteslist) - Retrieves a list of sites, possibly filtered. This method supports paging.
+* [DfareportingSitesPatch](docs/sites/README.md#dfareportingsitespatch) - Updates an existing site. This method supports patch semantics.
+* [DfareportingSitesUpdate](docs/sites/README.md#dfareportingsitesupdate) - Updates an existing site.
 
-### Sizes
+### [Sizes](docs/sizes/README.md)
 
-* `DfareportingSizesGet` - Gets one size by ID.
-* `DfareportingSizesInsert` - Inserts a new size.
-* `DfareportingSizesList` - Retrieves a list of sizes, possibly filtered. Retrieved sizes are globally unique and may include values not currently in use by your account. Due to this, the list of sizes returned by this method may differ from the list seen in the Trafficking UI.
+* [DfareportingSizesGet](docs/sizes/README.md#dfareportingsizesget) - Gets one size by ID.
+* [DfareportingSizesInsert](docs/sizes/README.md#dfareportingsizesinsert) - Inserts a new size.
+* [DfareportingSizesList](docs/sizes/README.md#dfareportingsizeslist) - Retrieves a list of sizes, possibly filtered. Retrieved sizes are globally unique and may include values not currently in use by your account. Due to this, the list of sizes returned by this method may differ from the list seen in the Trafficking UI.
 
-### Subaccounts
+### [Subaccounts](docs/subaccounts/README.md)
 
-* `DfareportingSubaccountsGet` - Gets one subaccount by ID.
-* `DfareportingSubaccountsInsert` - Inserts a new subaccount.
-* `DfareportingSubaccountsList` - Gets a list of subaccounts, possibly filtered. This method supports paging.
-* `DfareportingSubaccountsPatch` - Updates an existing subaccount. This method supports patch semantics.
-* `DfareportingSubaccountsUpdate` - Updates an existing subaccount.
+* [DfareportingSubaccountsGet](docs/subaccounts/README.md#dfareportingsubaccountsget) - Gets one subaccount by ID.
+* [DfareportingSubaccountsInsert](docs/subaccounts/README.md#dfareportingsubaccountsinsert) - Inserts a new subaccount.
+* [DfareportingSubaccountsList](docs/subaccounts/README.md#dfareportingsubaccountslist) - Gets a list of subaccounts, possibly filtered. This method supports paging.
+* [DfareportingSubaccountsPatch](docs/subaccounts/README.md#dfareportingsubaccountspatch) - Updates an existing subaccount. This method supports patch semantics.
+* [DfareportingSubaccountsUpdate](docs/subaccounts/README.md#dfareportingsubaccountsupdate) - Updates an existing subaccount.
 
-### TargetableRemarketingLists
+### [TargetableRemarketingLists](docs/targetableremarketinglists/README.md)
 
-* `DfareportingTargetableRemarketingListsGet` - Gets one remarketing list by ID.
-* `DfareportingTargetableRemarketingListsList` - Retrieves a list of targetable remarketing lists, possibly filtered. This method supports paging.
+* [DfareportingTargetableRemarketingListsGet](docs/targetableremarketinglists/README.md#dfareportingtargetableremarketinglistsget) - Gets one remarketing list by ID.
+* [DfareportingTargetableRemarketingListsList](docs/targetableremarketinglists/README.md#dfareportingtargetableremarketinglistslist) - Retrieves a list of targetable remarketing lists, possibly filtered. This method supports paging.
 
-### TargetingTemplates
+### [TargetingTemplates](docs/targetingtemplates/README.md)
 
-* `DfareportingTargetingTemplatesGet` - Gets one targeting template by ID.
-* `DfareportingTargetingTemplatesInsert` - Inserts a new targeting template.
-* `DfareportingTargetingTemplatesList` - Retrieves a list of targeting templates, optionally filtered. This method supports paging.
-* `DfareportingTargetingTemplatesPatch` - Updates an existing targeting template. This method supports patch semantics.
-* `DfareportingTargetingTemplatesUpdate` - Updates an existing targeting template.
+* [DfareportingTargetingTemplatesGet](docs/targetingtemplates/README.md#dfareportingtargetingtemplatesget) - Gets one targeting template by ID.
+* [DfareportingTargetingTemplatesInsert](docs/targetingtemplates/README.md#dfareportingtargetingtemplatesinsert) - Inserts a new targeting template.
+* [DfareportingTargetingTemplatesList](docs/targetingtemplates/README.md#dfareportingtargetingtemplateslist) - Retrieves a list of targeting templates, optionally filtered. This method supports paging.
+* [DfareportingTargetingTemplatesPatch](docs/targetingtemplates/README.md#dfareportingtargetingtemplatespatch) - Updates an existing targeting template. This method supports patch semantics.
+* [DfareportingTargetingTemplatesUpdate](docs/targetingtemplates/README.md#dfareportingtargetingtemplatesupdate) - Updates an existing targeting template.
 
-### UserProfiles
+### [UserProfiles](docs/userprofiles/README.md)
 
-* `DfareportingUserProfilesGet` - Gets one user profile by ID.
-* `DfareportingUserProfilesList` - Retrieves list of user profiles for a user.
+* [DfareportingUserProfilesGet](docs/userprofiles/README.md#dfareportinguserprofilesget) - Gets one user profile by ID.
+* [DfareportingUserProfilesList](docs/userprofiles/README.md#dfareportinguserprofileslist) - Retrieves list of user profiles for a user.
 
-### UserRolePermissionGroups
+### [UserRolePermissionGroups](docs/userrolepermissiongroups/README.md)
 
-* `DfareportingUserRolePermissionGroupsGet` - Gets one user role permission group by ID.
-* `DfareportingUserRolePermissionGroupsList` - Gets a list of all supported user role permission groups.
+* [DfareportingUserRolePermissionGroupsGet](docs/userrolepermissiongroups/README.md#dfareportinguserrolepermissiongroupsget) - Gets one user role permission group by ID.
+* [DfareportingUserRolePermissionGroupsList](docs/userrolepermissiongroups/README.md#dfareportinguserrolepermissiongroupslist) - Gets a list of all supported user role permission groups.
 
-### UserRolePermissions
+### [UserRolePermissions](docs/userrolepermissions/README.md)
 
-* `DfareportingUserRolePermissionsGet` - Gets one user role permission by ID.
-* `DfareportingUserRolePermissionsList` - Gets a list of user role permissions, possibly filtered.
+* [DfareportingUserRolePermissionsGet](docs/userrolepermissions/README.md#dfareportinguserrolepermissionsget) - Gets one user role permission by ID.
+* [DfareportingUserRolePermissionsList](docs/userrolepermissions/README.md#dfareportinguserrolepermissionslist) - Gets a list of user role permissions, possibly filtered.
 
-### UserRoles
+### [UserRoles](docs/userroles/README.md)
 
-* `DfareportingUserRolesDelete` - Deletes an existing user role.
-* `DfareportingUserRolesGet` - Gets one user role by ID.
-* `DfareportingUserRolesInsert` - Inserts a new user role.
-* `DfareportingUserRolesList` - Retrieves a list of user roles, possibly filtered. This method supports paging.
-* `DfareportingUserRolesPatch` - Updates an existing user role. This method supports patch semantics.
-* `DfareportingUserRolesUpdate` - Updates an existing user role.
+* [DfareportingUserRolesDelete](docs/userroles/README.md#dfareportinguserrolesdelete) - Deletes an existing user role.
+* [DfareportingUserRolesGet](docs/userroles/README.md#dfareportinguserrolesget) - Gets one user role by ID.
+* [DfareportingUserRolesInsert](docs/userroles/README.md#dfareportinguserrolesinsert) - Inserts a new user role.
+* [DfareportingUserRolesList](docs/userroles/README.md#dfareportinguserroleslist) - Retrieves a list of user roles, possibly filtered. This method supports paging.
+* [DfareportingUserRolesPatch](docs/userroles/README.md#dfareportinguserrolespatch) - Updates an existing user role. This method supports patch semantics.
+* [DfareportingUserRolesUpdate](docs/userroles/README.md#dfareportinguserrolesupdate) - Updates an existing user role.
 
-### VideoFormats
+### [VideoFormats](docs/videoformats/README.md)
 
-* `DfareportingVideoFormatsGet` - Gets one video format by ID.
-* `DfareportingVideoFormatsList` - Lists available video formats.
+* [DfareportingVideoFormatsGet](docs/videoformats/README.md#dfareportingvideoformatsget) - Gets one video format by ID.
+* [DfareportingVideoFormatsList](docs/videoformats/README.md#dfareportingvideoformatslist) - Lists available video formats.
 <!-- End SDK Available Operations -->
 
 ### Maturity

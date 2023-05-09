@@ -4,8 +4,10 @@ package shared
 
 // ContactCenterQuota - Represents a quota for contact centers.
 type ContactCenterQuota struct {
-	// Reflects the count limit of contact centers on a billing account.
+	// Deprecated: Use the Quota fields instead. Reflects the count limit of contact centers on a billing account.
 	ContactCenterCountLimit *int `json:"contactCenterCountLimit,omitempty"`
-	// Reflects the count sum of contact centers on a billing account.
+	// Deprecated: Use the Quota fields instead. Reflects the count sum of contact centers on a billing account.
 	ContactCenterCountSum *int `json:"contactCenterCountSum,omitempty"`
+	// Quota details per contact center instance type.
+	Quotas []Quota `json:"quotas,omitempty"`
 }

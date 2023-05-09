@@ -16,20 +16,24 @@ const (
 	BackupTypeEnumAwsBackup     BackupTypeEnum = "AWS_BACKUP"
 )
 
+func (e BackupTypeEnum) ToPointer() *BackupTypeEnum {
+	return &e
+}
+
 func (e *BackupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTOMATIC":
 		fallthrough
 	case "USER_INITIATED":
 		fallthrough
 	case "AWS_BACKUP":
-		*e = BackupTypeEnum(s)
+		*e = BackupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupTypeEnum: %v", v)
 	}
 }

@@ -18,12 +18,16 @@ const (
 	NonBillableWinningBidStatusRowStatusEnumLostInMediation   NonBillableWinningBidStatusRowStatusEnum = "LOST_IN_MEDIATION"
 )
 
+func (e NonBillableWinningBidStatusRowStatusEnum) ToPointer() *NonBillableWinningBidStatusRowStatusEnum {
+	return &e
+}
+
 func (e *NonBillableWinningBidStatusRowStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "AD_NOT_RENDERED":
@@ -33,10 +37,10 @@ func (e *NonBillableWinningBidStatusRowStatusEnum) UnmarshalJSON(data []byte) er
 	case "FATAL_VAST_ERROR":
 		fallthrough
 	case "LOST_IN_MEDIATION":
-		*e = NonBillableWinningBidStatusRowStatusEnum(s)
+		*e = NonBillableWinningBidStatusRowStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NonBillableWinningBidStatusRowStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for NonBillableWinningBidStatusRowStatusEnum: %v", v)
 	}
 }
 

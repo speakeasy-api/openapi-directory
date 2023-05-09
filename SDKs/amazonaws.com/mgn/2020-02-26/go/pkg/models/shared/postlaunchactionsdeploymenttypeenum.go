@@ -15,20 +15,24 @@ const (
 	PostLaunchActionsDeploymentTypeEnumTestOnly       PostLaunchActionsDeploymentTypeEnum = "TEST_ONLY"
 )
 
+func (e PostLaunchActionsDeploymentTypeEnum) ToPointer() *PostLaunchActionsDeploymentTypeEnum {
+	return &e
+}
+
 func (e *PostLaunchActionsDeploymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEST_AND_CUTOVER":
 		fallthrough
 	case "CUTOVER_ONLY":
 		fallthrough
 	case "TEST_ONLY":
-		*e = PostLaunchActionsDeploymentTypeEnum(s)
+		*e = PostLaunchActionsDeploymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostLaunchActionsDeploymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostLaunchActionsDeploymentTypeEnum: %v", v)
 	}
 }

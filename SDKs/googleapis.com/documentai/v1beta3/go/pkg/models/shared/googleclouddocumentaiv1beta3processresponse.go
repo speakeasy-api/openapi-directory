@@ -2,11 +2,11 @@
 
 package shared
 
-// GoogleCloudDocumentaiV1beta3ProcessResponse - Response message for the process document method.
+// GoogleCloudDocumentaiV1beta3ProcessResponse - Response message for the ProcessDocument method.
 type GoogleCloudDocumentaiV1beta3ProcessResponse struct {
 	// Document represents the canonical document resource in Document AI. It is an interchange format that provides insights into documents and allows for collaboration between users and Document AI to iterate and optimize for quality.
 	Document *GoogleCloudDocumentaiV1beta3Document `json:"document,omitempty"`
-	// The name of the operation triggered by the processed document. If the human review process is not triggered, this field will be empty. It has the same response type and metadata as the long running operation returned by ReviewDocument method.
+	// The name of the operation triggered by the processed document. If the human review process isn't triggered, this field is empty. It has the same response type and metadata as the long-running operation returned by ReviewDocument.
 	HumanReviewOperation *string `json:"humanReviewOperation,omitempty"`
 	// The status of human review on a processed document.
 	HumanReviewStatus *GoogleCloudDocumentaiV1beta3HumanReviewStatus `json:"humanReviewStatus,omitempty"`

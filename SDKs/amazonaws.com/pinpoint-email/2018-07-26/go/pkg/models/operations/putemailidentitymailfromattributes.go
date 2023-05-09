@@ -16,19 +16,23 @@ const (
 	PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnumRejectMessage   PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum = "REJECT_MESSAGE"
 )
 
+func (e PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum) ToPointer() *PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum {
+	return &e
+}
+
 func (e *PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USE_DEFAULT_VALUE":
 		fallthrough
 	case "REJECT_MESSAGE":
-		*e = PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum(s)
+		*e = PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum: %s", s)
+		return fmt.Errorf("invalid value for PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum: %v", v)
 	}
 }
 

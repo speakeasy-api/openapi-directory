@@ -29,12 +29,16 @@ const (
 	GetVehiclesVehicleidFieldEnumOdometer            GetVehiclesVehicleidFieldEnum = "odometer"
 )
 
+func (e GetVehiclesVehicleidFieldEnum) ToPointer() *GetVehiclesVehicleidFieldEnum {
+	return &e
+}
+
 func (e *GetVehiclesVehicleidFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "smartChargingPolicy":
 		fallthrough
 	case "chargeState":
@@ -44,10 +48,10 @@ func (e *GetVehiclesVehicleidFieldEnum) UnmarshalJSON(data []byte) error {
 	case "information":
 		fallthrough
 	case "odometer":
-		*e = GetVehiclesVehicleidFieldEnum(s)
+		*e = GetVehiclesVehicleidFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVehiclesVehicleidFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVehiclesVehicleidFieldEnum: %v", v)
 	}
 }
 

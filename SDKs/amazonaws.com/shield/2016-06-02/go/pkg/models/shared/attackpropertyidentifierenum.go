@@ -20,12 +20,16 @@ const (
 	AttackPropertyIdentifierEnumWordpressPingbackSource    AttackPropertyIdentifierEnum = "WORDPRESS_PINGBACK_SOURCE"
 )
 
+func (e AttackPropertyIdentifierEnum) ToPointer() *AttackPropertyIdentifierEnum {
+	return &e
+}
+
 func (e *AttackPropertyIdentifierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DESTINATION_URL":
 		fallthrough
 	case "REFERRER":
@@ -41,9 +45,9 @@ func (e *AttackPropertyIdentifierEnum) UnmarshalJSON(data []byte) error {
 	case "WORDPRESS_PINGBACK_REFLECTOR":
 		fallthrough
 	case "WORDPRESS_PINGBACK_SOURCE":
-		*e = AttackPropertyIdentifierEnum(s)
+		*e = AttackPropertyIdentifierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttackPropertyIdentifierEnum: %s", s)
+		return fmt.Errorf("invalid value for AttackPropertyIdentifierEnum: %v", v)
 	}
 }

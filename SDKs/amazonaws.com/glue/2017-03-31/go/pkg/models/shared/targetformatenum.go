@@ -19,12 +19,16 @@ const (
 	TargetFormatEnumDelta   TargetFormatEnum = "delta"
 )
 
+func (e TargetFormatEnum) ToPointer() *TargetFormatEnum {
+	return &e
+}
+
 func (e *TargetFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "csv":
@@ -38,9 +42,9 @@ func (e *TargetFormatEnum) UnmarshalJSON(data []byte) error {
 	case "hudi":
 		fallthrough
 	case "delta":
-		*e = TargetFormatEnum(s)
+		*e = TargetFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetFormatEnum: %v", v)
 	}
 }

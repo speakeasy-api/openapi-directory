@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -94,4 +95,6 @@ pkg/models/shared/useraccess.go
 pkg/models/shared/containeraccess.go
 pkg/models/shared/accountaccess.go
 pkg/models/shared/listaccountusersresponse.go
+docs/sdk/README.md
+docs/accounts/README.md
 USAGE.md

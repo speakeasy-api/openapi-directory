@@ -16,17 +16,21 @@ const (
 	DeploySystemInstanceXAmzTargetEnumIotThingsGraphFrontEndServiceDeploySystemInstance DeploySystemInstanceXAmzTargetEnum = "IotThingsGraphFrontEndService.DeploySystemInstance"
 )
 
+func (e DeploySystemInstanceXAmzTargetEnum) ToPointer() *DeploySystemInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeploySystemInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.DeploySystemInstance":
-		*e = DeploySystemInstanceXAmzTargetEnum(s)
+		*e = DeploySystemInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploySystemInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploySystemInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

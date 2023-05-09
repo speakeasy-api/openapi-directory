@@ -16,17 +16,21 @@ const (
 	GETModifyVpcEndpointActionEnumModifyVpcEndpoint GETModifyVpcEndpointActionEnum = "ModifyVpcEndpoint"
 )
 
+func (e GETModifyVpcEndpointActionEnum) ToPointer() *GETModifyVpcEndpointActionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcEndpointActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVpcEndpoint":
-		*e = GETModifyVpcEndpointActionEnum(s)
+		*e = GETModifyVpcEndpointActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcEndpointActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcEndpointActionEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	GETModifyVpcEndpointIPAddressTypeEnumIpv6      GETModifyVpcEndpointIPAddressTypeEnum = "ipv6"
 )
 
+func (e GETModifyVpcEndpointIPAddressTypeEnum) ToPointer() *GETModifyVpcEndpointIPAddressTypeEnum {
+	return &e
+}
+
 func (e *GETModifyVpcEndpointIPAddressTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "dualstack":
 		fallthrough
 	case "ipv6":
-		*e = GETModifyVpcEndpointIPAddressTypeEnum(s)
+		*e = GETModifyVpcEndpointIPAddressTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcEndpointIPAddressTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcEndpointIPAddressTypeEnum: %v", v)
 	}
 }
 
@@ -70,17 +78,21 @@ const (
 	GETModifyVpcEndpointVersionEnumTwoThousandAndSixteen1115 GETModifyVpcEndpointVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVpcEndpointVersionEnum) ToPointer() *GETModifyVpcEndpointVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcEndpointVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVpcEndpointVersionEnum(s)
+		*e = GETModifyVpcEndpointVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcEndpointVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcEndpointVersionEnum: %v", v)
 	}
 }
 

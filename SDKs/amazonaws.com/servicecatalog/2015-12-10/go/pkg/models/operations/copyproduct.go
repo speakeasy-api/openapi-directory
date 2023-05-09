@@ -16,17 +16,21 @@ const (
 	CopyProductXAmzTargetEnumAws242ServiceCatalogServiceCopyProduct CopyProductXAmzTargetEnum = "AWS242ServiceCatalogService.CopyProduct"
 )
 
+func (e CopyProductXAmzTargetEnum) ToPointer() *CopyProductXAmzTargetEnum {
+	return &e
+}
+
 func (e *CopyProductXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.CopyProduct":
-		*e = CopyProductXAmzTargetEnum(s)
+		*e = CopyProductXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CopyProductXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CopyProductXAmzTargetEnum: %v", v)
 	}
 }
 

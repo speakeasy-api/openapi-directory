@@ -34,7 +34,10 @@ func newPageViews(defaultClient, securityClient HTTPClient, serverURL, language,
 // BloggerPageViewsGet - Gets page views by blog id.
 func (s *pageViews) BloggerPageViewsGet(ctx context.Context, request operations.BloggerPageViewsGetRequest, security operations.BloggerPageViewsGetSecurity) (*operations.BloggerPageViewsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pageviews", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pageviews", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

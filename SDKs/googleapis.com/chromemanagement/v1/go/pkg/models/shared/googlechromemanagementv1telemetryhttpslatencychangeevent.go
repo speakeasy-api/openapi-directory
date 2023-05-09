@@ -16,25 +16,29 @@ const (
 	GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEventHTTPSLatencyStateEnumProblem                      GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEventHTTPSLatencyStateEnum = "PROBLEM"
 )
 
+func (e GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEventHTTPSLatencyStateEnum) ToPointer() *GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEventHTTPSLatencyStateEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEventHTTPSLatencyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTPS_LATENCY_STATE_UNSPECIFIED":
 		fallthrough
 	case "RECOVERY":
 		fallthrough
 	case "PROBLEM":
-		*e = GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEventHTTPSLatencyStateEnum(s)
+		*e = GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEventHTTPSLatencyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEventHTTPSLatencyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEventHTTPSLatencyStateEnum: %v", v)
 	}
 }
 
-// GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEvent - Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if a latency problem was detected or if the device has recovered from a latency problem..
+// GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEvent - Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if a latency problem was detected or if the device has recovered from a latency problem. * Granular permission needed: TELEMETRY_API_NETWORK_REPORT
 type GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEvent struct {
 	// Data that describes the result of the HTTPS latency diagnostics routine, with the HTTPS requests issued to Google websites.
 	HTTPSLatencyRoutineData *GoogleChromeManagementV1HTTPSLatencyRoutineData `json:"httpsLatencyRoutineData,omitempty"`

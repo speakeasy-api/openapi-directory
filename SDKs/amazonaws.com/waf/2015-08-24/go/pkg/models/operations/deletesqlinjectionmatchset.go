@@ -16,17 +16,21 @@ const (
 	DeleteSQLInjectionMatchSetXAmzTargetEnumAwswaf20150824DeleteSQLInjectionMatchSet DeleteSQLInjectionMatchSetXAmzTargetEnum = "AWSWAF_20150824.DeleteSqlInjectionMatchSet"
 )
 
+func (e DeleteSQLInjectionMatchSetXAmzTargetEnum) ToPointer() *DeleteSQLInjectionMatchSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteSQLInjectionMatchSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.DeleteSqlInjectionMatchSet":
-		*e = DeleteSQLInjectionMatchSetXAmzTargetEnum(s)
+		*e = DeleteSQLInjectionMatchSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSQLInjectionMatchSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSQLInjectionMatchSetXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	MappingRuleMatchTypeEnumNotEqual   MappingRuleMatchTypeEnum = "NotEqual"
 )
 
+func (e MappingRuleMatchTypeEnum) ToPointer() *MappingRuleMatchTypeEnum {
+	return &e
+}
+
 func (e *MappingRuleMatchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Equals":
 		fallthrough
 	case "Contains":
@@ -29,9 +33,9 @@ func (e *MappingRuleMatchTypeEnum) UnmarshalJSON(data []byte) error {
 	case "StartsWith":
 		fallthrough
 	case "NotEqual":
-		*e = MappingRuleMatchTypeEnum(s)
+		*e = MappingRuleMatchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MappingRuleMatchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MappingRuleMatchTypeEnum: %v", v)
 	}
 }

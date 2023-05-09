@@ -17,12 +17,16 @@ const (
 	ApplicationStateEnumDeleteFailed ApplicationStateEnum = "DELETE_FAILED"
 )
 
+func (e ApplicationStateEnum) ToPointer() *ApplicationStateEnum {
+	return &e
+}
+
 func (e *ApplicationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "DELETING":
@@ -32,9 +36,9 @@ func (e *ApplicationStateEnum) UnmarshalJSON(data []byte) error {
 	case "CREATE_FAILED":
 		fallthrough
 	case "DELETE_FAILED":
-		*e = ApplicationStateEnum(s)
+		*e = ApplicationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationStateEnum: %v", v)
 	}
 }

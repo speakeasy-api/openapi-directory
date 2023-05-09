@@ -23,21 +23,25 @@ const (
 	DlpProjectsLocationsJobTriggersListTypeEnumRiskAnalysisJob       DlpProjectsLocationsJobTriggersListTypeEnum = "RISK_ANALYSIS_JOB"
 )
 
+func (e DlpProjectsLocationsJobTriggersListTypeEnum) ToPointer() *DlpProjectsLocationsJobTriggersListTypeEnum {
+	return &e
+}
+
 func (e *DlpProjectsLocationsJobTriggersListTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DLP_JOB_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INSPECT_JOB":
 		fallthrough
 	case "RISK_ANALYSIS_JOB":
-		*e = DlpProjectsLocationsJobTriggersListTypeEnum(s)
+		*e = DlpProjectsLocationsJobTriggersListTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DlpProjectsLocationsJobTriggersListTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DlpProjectsLocationsJobTriggersListTypeEnum: %v", v)
 	}
 }
 

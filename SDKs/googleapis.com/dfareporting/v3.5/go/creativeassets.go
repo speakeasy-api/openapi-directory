@@ -34,7 +34,10 @@ func newCreativeAssets(defaultClient, securityClient HTTPClient, serverURL, lang
 // DfareportingCreativeAssetsInsert - Inserts a new creative asset.
 func (s *creativeAssets) DfareportingCreativeAssetsInsert(ctx context.Context, request operations.DfareportingCreativeAssetsInsertRequest, security operations.DfareportingCreativeAssetsInsertSecurity) (*operations.DfareportingCreativeAssetsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeAssets/{advertiserId}/creativeAssets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeAssets/{advertiserId}/creativeAssets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	OSPolicyResourcePackageResourceDesiredStateEnumRemoved                 OSPolicyResourcePackageResourceDesiredStateEnum = "REMOVED"
 )
 
+func (e OSPolicyResourcePackageResourceDesiredStateEnum) ToPointer() *OSPolicyResourcePackageResourceDesiredStateEnum {
+	return &e
+}
+
 func (e *OSPolicyResourcePackageResourceDesiredStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DESIRED_STATE_UNSPECIFIED":
 		fallthrough
 	case "INSTALLED":
 		fallthrough
 	case "REMOVED":
-		*e = OSPolicyResourcePackageResourceDesiredStateEnum(s)
+		*e = OSPolicyResourcePackageResourceDesiredStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OSPolicyResourcePackageResourceDesiredStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OSPolicyResourcePackageResourceDesiredStateEnum: %v", v)
 	}
 }
 

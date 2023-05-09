@@ -18,12 +18,16 @@ const (
 	GetQueryExtensionExtensionEnumJSON GetQueryExtensionExtensionEnum = "json"
 )
 
+func (e GetQueryExtensionExtensionEnum) ToPointer() *GetQueryExtensionExtensionEnum {
+	return &e
+}
+
 func (e *GetQueryExtensionExtensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "atom":
 		fallthrough
 	case "rss":
@@ -31,10 +35,10 @@ func (e *GetQueryExtensionExtensionEnum) UnmarshalJSON(data []byte) error {
 	case "html":
 		fallthrough
 	case "json":
-		*e = GetQueryExtensionExtensionEnum(s)
+		*e = GetQueryExtensionExtensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetQueryExtensionExtensionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetQueryExtensionExtensionEnum: %v", v)
 	}
 }
 

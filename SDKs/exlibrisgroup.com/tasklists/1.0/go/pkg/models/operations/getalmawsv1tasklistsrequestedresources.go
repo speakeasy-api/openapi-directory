@@ -100,12 +100,16 @@ const (
 	GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestTypeEnumWorkOrder    GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestTypeEnum = "WORK_ORDER"
 )
 
+func (e GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestTypeEnum) ToPointer() *GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestTypeEnum {
+	return &e
+}
+
 func (e *GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BOOKING":
 		fallthrough
 	case "DIGITIZATION":
@@ -115,10 +119,10 @@ func (e *GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResour
 	case "MOVE":
 		fallthrough
 	case "WORK_ORDER":
-		*e = GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestTypeEnum(s)
+		*e = GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestRequestTypeEnum: %v", v)
 	}
 }
 

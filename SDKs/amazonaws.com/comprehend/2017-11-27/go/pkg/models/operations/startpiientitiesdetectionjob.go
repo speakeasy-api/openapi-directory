@@ -16,17 +16,21 @@ const (
 	StartPiiEntitiesDetectionJobXAmzTargetEnumComprehend20171127StartPiiEntitiesDetectionJob StartPiiEntitiesDetectionJobXAmzTargetEnum = "Comprehend_20171127.StartPiiEntitiesDetectionJob"
 )
 
+func (e StartPiiEntitiesDetectionJobXAmzTargetEnum) ToPointer() *StartPiiEntitiesDetectionJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartPiiEntitiesDetectionJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.StartPiiEntitiesDetectionJob":
-		*e = StartPiiEntitiesDetectionJobXAmzTargetEnum(s)
+		*e = StartPiiEntitiesDetectionJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartPiiEntitiesDetectionJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartPiiEntitiesDetectionJobXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -50,6 +54,8 @@ type StartPiiEntitiesDetectionJobResponse struct {
 	InvalidRequestException interface{}
 	// KmsKeyValidationException
 	KmsKeyValidationException interface{}
+	// ResourceInUseException
+	ResourceInUseException interface{}
 	// Success
 	StartPiiEntitiesDetectionJobResponse *shared.StartPiiEntitiesDetectionJobResponse
 	StatusCode                           int

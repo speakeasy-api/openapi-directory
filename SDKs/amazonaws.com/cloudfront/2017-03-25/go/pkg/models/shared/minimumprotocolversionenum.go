@@ -17,12 +17,16 @@ const (
 	MinimumProtocolVersionEnumTlSv122018 MinimumProtocolVersionEnum = "TLSv1.2_2018"
 )
 
+func (e MinimumProtocolVersionEnum) ToPointer() *MinimumProtocolVersionEnum {
+	return &e
+}
+
 func (e *MinimumProtocolVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSLv3":
 		fallthrough
 	case "TLSv1":
@@ -32,9 +36,9 @@ func (e *MinimumProtocolVersionEnum) UnmarshalJSON(data []byte) error {
 	case "TLSv1.1_2016":
 		fallthrough
 	case "TLSv1.2_2018":
-		*e = MinimumProtocolVersionEnum(s)
+		*e = MinimumProtocolVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MinimumProtocolVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for MinimumProtocolVersionEnum: %v", v)
 	}
 }

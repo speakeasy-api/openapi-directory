@@ -22,19 +22,23 @@ const (
 	DirectoryChromeosdevicesPatchProjectionEnumFull  DirectoryChromeosdevicesPatchProjectionEnum = "FULL"
 )
 
+func (e DirectoryChromeosdevicesPatchProjectionEnum) ToPointer() *DirectoryChromeosdevicesPatchProjectionEnum {
+	return &e
+}
+
 func (e *DirectoryChromeosdevicesPatchProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = DirectoryChromeosdevicesPatchProjectionEnum(s)
+		*e = DirectoryChromeosdevicesPatchProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryChromeosdevicesPatchProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryChromeosdevicesPatchProjectionEnum: %v", v)
 	}
 }
 

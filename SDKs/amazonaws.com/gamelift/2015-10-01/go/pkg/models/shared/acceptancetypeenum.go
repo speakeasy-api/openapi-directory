@@ -14,18 +14,22 @@ const (
 	AcceptanceTypeEnumReject AcceptanceTypeEnum = "REJECT"
 )
 
+func (e AcceptanceTypeEnum) ToPointer() *AcceptanceTypeEnum {
+	return &e
+}
+
 func (e *AcceptanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCEPT":
 		fallthrough
 	case "REJECT":
-		*e = AcceptanceTypeEnum(s)
+		*e = AcceptanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AcceptanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AcceptanceTypeEnum: %v", v)
 	}
 }

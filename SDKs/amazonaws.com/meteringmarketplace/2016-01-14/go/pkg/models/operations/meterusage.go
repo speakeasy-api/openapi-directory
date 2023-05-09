@@ -16,17 +16,21 @@ const (
 	MeterUsageXAmzTargetEnumAwsmpMeteringServiceMeterUsage MeterUsageXAmzTargetEnum = "AWSMPMeteringService.MeterUsage"
 )
 
+func (e MeterUsageXAmzTargetEnum) ToPointer() *MeterUsageXAmzTargetEnum {
+	return &e
+}
+
 func (e *MeterUsageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMPMeteringService.MeterUsage":
-		*e = MeterUsageXAmzTargetEnum(s)
+		*e = MeterUsageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MeterUsageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for MeterUsageXAmzTargetEnum: %v", v)
 	}
 }
 

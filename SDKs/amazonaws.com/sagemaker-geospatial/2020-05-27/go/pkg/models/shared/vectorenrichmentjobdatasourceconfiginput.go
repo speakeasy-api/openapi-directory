@@ -2,7 +2,7 @@
 
 package shared
 
-// VectorEnrichmentJobDataSourceConfigInput - <p/>
+// VectorEnrichmentJobDataSourceConfigInput - The input structure for the data source that represents the storage type of the input data objects.
 type VectorEnrichmentJobDataSourceConfigInput struct {
 	S3Data *VectorEnrichmentJobS3Data `json:"S3Data,omitempty"`
 }

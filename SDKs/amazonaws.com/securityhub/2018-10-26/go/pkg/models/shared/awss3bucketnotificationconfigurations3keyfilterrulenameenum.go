@@ -14,18 +14,22 @@ const (
 	AwsS3BucketNotificationConfigurationS3KeyFilterRuleNameEnumSuffix AwsS3BucketNotificationConfigurationS3KeyFilterRuleNameEnum = "Suffix"
 )
 
+func (e AwsS3BucketNotificationConfigurationS3KeyFilterRuleNameEnum) ToPointer() *AwsS3BucketNotificationConfigurationS3KeyFilterRuleNameEnum {
+	return &e
+}
+
 func (e *AwsS3BucketNotificationConfigurationS3KeyFilterRuleNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Prefix":
 		fallthrough
 	case "Suffix":
-		*e = AwsS3BucketNotificationConfigurationS3KeyFilterRuleNameEnum(s)
+		*e = AwsS3BucketNotificationConfigurationS3KeyFilterRuleNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AwsS3BucketNotificationConfigurationS3KeyFilterRuleNameEnum: %s", s)
+		return fmt.Errorf("invalid value for AwsS3BucketNotificationConfigurationS3KeyFilterRuleNameEnum: %v", v)
 	}
 }

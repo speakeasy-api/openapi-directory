@@ -28,12 +28,16 @@ const (
 	MessageCode401SBSEnumTokenExpired          MessageCode401SBSEnum = "TOKEN_EXPIRED"
 )
 
+func (e MessageCode401SBSEnum) ToPointer() *MessageCode401SBSEnum {
+	return &e
+}
+
 func (e *MessageCode401SBSEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERTIFICATE_INVALID":
 		fallthrough
 	case "ROLE_INVALID":
@@ -63,9 +67,9 @@ func (e *MessageCode401SBSEnum) UnmarshalJSON(data []byte) error {
 	case "TOKEN_INVALID":
 		fallthrough
 	case "TOKEN_EXPIRED":
-		*e = MessageCode401SBSEnum(s)
+		*e = MessageCode401SBSEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageCode401SBSEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageCode401SBSEnum: %v", v)
 	}
 }

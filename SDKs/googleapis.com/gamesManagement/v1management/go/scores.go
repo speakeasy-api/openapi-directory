@@ -35,7 +35,10 @@ func newScores(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GamesManagementScoresReset - Resets scores for the leaderboard with the given ID for the currently authenticated player. This method is only accessible to whitelisted tester accounts for your application.
 func (s *scores) GamesManagementScoresReset(ctx context.Context, request operations.GamesManagementScoresResetRequest, security operations.GamesManagementScoresResetSecurity) (*operations.GamesManagementScoresResetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/leaderboards/{leaderboardId}/scores/reset", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1management/leaderboards/{leaderboardId}/scores/reset", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -170,7 +173,10 @@ func (s *scores) GamesManagementScoresResetAllForAllPlayers(ctx context.Context,
 // GamesManagementScoresResetForAllPlayers - Resets scores for the leaderboard with the given ID for all players. This method is only available to user accounts for your developer console. Only draft leaderboards can be reset.
 func (s *scores) GamesManagementScoresResetForAllPlayers(ctx context.Context, request operations.GamesManagementScoresResetForAllPlayersRequest, security operations.GamesManagementScoresResetForAllPlayersSecurity) (*operations.GamesManagementScoresResetForAllPlayersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/leaderboards/{leaderboardId}/scores/resetForAllPlayers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1management/leaderboards/{leaderboardId}/scores/resetForAllPlayers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

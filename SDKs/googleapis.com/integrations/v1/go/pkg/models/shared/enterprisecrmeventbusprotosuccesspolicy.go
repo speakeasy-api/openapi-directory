@@ -16,21 +16,25 @@ const (
 	EnterpriseCrmEventbusProtoSuccessPolicyFinalStateEnumSuspended   EnterpriseCrmEventbusProtoSuccessPolicyFinalStateEnum = "SUSPENDED"
 )
 
+func (e EnterpriseCrmEventbusProtoSuccessPolicyFinalStateEnum) ToPointer() *EnterpriseCrmEventbusProtoSuccessPolicyFinalStateEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoSuccessPolicyFinalStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "SUCCEEDED":
 		fallthrough
 	case "SUSPENDED":
-		*e = EnterpriseCrmEventbusProtoSuccessPolicyFinalStateEnum(s)
+		*e = EnterpriseCrmEventbusProtoSuccessPolicyFinalStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoSuccessPolicyFinalStateEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoSuccessPolicyFinalStateEnum: %v", v)
 	}
 }
 

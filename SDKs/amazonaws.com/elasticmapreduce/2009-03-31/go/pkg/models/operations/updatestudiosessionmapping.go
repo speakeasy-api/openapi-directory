@@ -16,17 +16,21 @@ const (
 	UpdateStudioSessionMappingXAmzTargetEnumElasticMapReduceUpdateStudioSessionMapping UpdateStudioSessionMappingXAmzTargetEnum = "ElasticMapReduce.UpdateStudioSessionMapping"
 )
 
+func (e UpdateStudioSessionMappingXAmzTargetEnum) ToPointer() *UpdateStudioSessionMappingXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateStudioSessionMappingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.UpdateStudioSessionMapping":
-		*e = UpdateStudioSessionMappingXAmzTargetEnum(s)
+		*e = UpdateStudioSessionMappingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateStudioSessionMappingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateStudioSessionMappingXAmzTargetEnum: %v", v)
 	}
 }
 

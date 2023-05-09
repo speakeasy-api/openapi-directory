@@ -15,19 +15,23 @@ const (
 	AppGatewayHostTypeEnumGcpRegionalMig      AppGatewayHostTypeEnum = "GCP_REGIONAL_MIG"
 )
 
+func (e AppGatewayHostTypeEnum) ToPointer() *AppGatewayHostTypeEnum {
+	return &e
+}
+
 func (e *AppGatewayHostTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HOST_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GCP_REGIONAL_MIG":
-		*e = AppGatewayHostTypeEnum(s)
+		*e = AppGatewayHostTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppGatewayHostTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppGatewayHostTypeEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	AppGatewayStateEnumDown             AppGatewayStateEnum = "DOWN"
 )
 
+func (e AppGatewayStateEnum) ToPointer() *AppGatewayStateEnum {
+	return &e
+}
+
 func (e *AppGatewayStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -60,10 +68,10 @@ func (e *AppGatewayStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "DOWN":
-		*e = AppGatewayStateEnum(s)
+		*e = AppGatewayStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppGatewayStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AppGatewayStateEnum: %v", v)
 	}
 }
 
@@ -75,19 +83,23 @@ const (
 	AppGatewayTypeEnumTCPProxy        AppGatewayTypeEnum = "TCP_PROXY"
 )
 
+func (e AppGatewayTypeEnum) ToPointer() *AppGatewayTypeEnum {
+	return &e
+}
+
 func (e *AppGatewayTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "TCP_PROXY":
-		*e = AppGatewayTypeEnum(s)
+		*e = AppGatewayTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppGatewayTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppGatewayTypeEnum: %v", v)
 	}
 }
 

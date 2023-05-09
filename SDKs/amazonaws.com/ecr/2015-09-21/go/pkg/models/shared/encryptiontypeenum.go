@@ -14,18 +14,22 @@ const (
 	EncryptionTypeEnumKms    EncryptionTypeEnum = "KMS"
 )
 
+func (e EncryptionTypeEnum) ToPointer() *EncryptionTypeEnum {
+	return &e
+}
+
 func (e *EncryptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AES256":
 		fallthrough
 	case "KMS":
-		*e = EncryptionTypeEnum(s)
+		*e = EncryptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EncryptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EncryptionTypeEnum: %v", v)
 	}
 }

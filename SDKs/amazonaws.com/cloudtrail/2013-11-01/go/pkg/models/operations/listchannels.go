@@ -16,17 +16,21 @@ const (
 	ListChannelsXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101ListChannels ListChannelsXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.ListChannels"
 )
 
+func (e ListChannelsXAmzTargetEnum) ToPointer() *ListChannelsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListChannelsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.ListChannels":
-		*e = ListChannelsXAmzTargetEnum(s)
+		*e = ListChannelsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListChannelsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListChannelsXAmzTargetEnum: %v", v)
 	}
 }
 

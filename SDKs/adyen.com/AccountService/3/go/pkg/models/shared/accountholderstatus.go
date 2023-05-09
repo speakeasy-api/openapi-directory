@@ -18,12 +18,16 @@ const (
 	AccountHolderStatusStatusEnumSuspended AccountHolderStatusStatusEnum = "Suspended"
 )
 
+func (e AccountHolderStatusStatusEnum) ToPointer() *AccountHolderStatusStatusEnum {
+	return &e
+}
+
 func (e *AccountHolderStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Closed":
@@ -31,16 +35,16 @@ func (e *AccountHolderStatusStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Inactive":
 		fallthrough
 	case "Suspended":
-		*e = AccountHolderStatusStatusEnum(s)
+		*e = AccountHolderStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountHolderStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountHolderStatusStatusEnum: %v", v)
 	}
 }
 
 type AccountHolderStatus struct {
 	// A list of events scheduled for the account holder.
-	Events          []AccountEvent          `json:"events,omitempty"`
+	Events          []AccountEventWrapper   `json:"events,omitempty"`
 	PayoutState     *AccountPayoutState     `json:"payoutState,omitempty"`
 	ProcessingState *AccountProcessingState `json:"processingState,omitempty"`
 	// The status of the account holder.

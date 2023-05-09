@@ -37,21 +37,25 @@ const (
 	PostPrimaryIpsIDActionsUnassignActionResponseActionStatusEnumError   PostPrimaryIpsIDActionsUnassignActionResponseActionStatusEnum = "error"
 )
 
+func (e PostPrimaryIpsIDActionsUnassignActionResponseActionStatusEnum) ToPointer() *PostPrimaryIpsIDActionsUnassignActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostPrimaryIpsIDActionsUnassignActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostPrimaryIpsIDActionsUnassignActionResponseActionStatusEnum(s)
+		*e = PostPrimaryIpsIDActionsUnassignActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostPrimaryIpsIDActionsUnassignActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostPrimaryIpsIDActionsUnassignActionResponseActionStatusEnum: %v", v)
 	}
 }
 

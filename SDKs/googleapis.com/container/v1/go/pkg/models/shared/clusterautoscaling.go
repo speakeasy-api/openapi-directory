@@ -16,21 +16,25 @@ const (
 	ClusterAutoscalingAutoscalingProfileEnumBalanced            ClusterAutoscalingAutoscalingProfileEnum = "BALANCED"
 )
 
+func (e ClusterAutoscalingAutoscalingProfileEnum) ToPointer() *ClusterAutoscalingAutoscalingProfileEnum {
+	return &e
+}
+
 func (e *ClusterAutoscalingAutoscalingProfileEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROFILE_UNSPECIFIED":
 		fallthrough
 	case "OPTIMIZE_UTILIZATION":
 		fallthrough
 	case "BALANCED":
-		*e = ClusterAutoscalingAutoscalingProfileEnum(s)
+		*e = ClusterAutoscalingAutoscalingProfileEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterAutoscalingAutoscalingProfileEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterAutoscalingAutoscalingProfileEnum: %v", v)
 	}
 }
 

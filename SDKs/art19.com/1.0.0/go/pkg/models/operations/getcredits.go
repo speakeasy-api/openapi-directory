@@ -24,21 +24,25 @@ const (
 	GetCreditsCreditableTypeEnumEpisode GetCreditsCreditableTypeEnum = "Episode"
 )
 
+func (e GetCreditsCreditableTypeEnum) ToPointer() *GetCreditsCreditableTypeEnum {
+	return &e
+}
+
 func (e *GetCreditsCreditableTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Series":
 		fallthrough
 	case "Season":
 		fallthrough
 	case "Episode":
-		*e = GetCreditsCreditableTypeEnum(s)
+		*e = GetCreditsCreditableTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCreditsCreditableTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCreditsCreditableTypeEnum: %v", v)
 	}
 }
 
@@ -50,21 +54,25 @@ const (
 	GetCreditsSortEnumUpdatedAt GetCreditsSortEnum = "updated_at"
 )
 
+func (e GetCreditsSortEnum) ToPointer() *GetCreditsSortEnum {
+	return &e
+}
+
 func (e *GetCreditsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created_at":
 		fallthrough
 	case "position":
 		fallthrough
 	case "updated_at":
-		*e = GetCreditsSortEnum(s)
+		*e = GetCreditsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCreditsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCreditsSortEnum: %v", v)
 	}
 }
 

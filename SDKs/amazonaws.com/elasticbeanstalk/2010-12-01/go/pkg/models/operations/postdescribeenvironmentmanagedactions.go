@@ -15,17 +15,21 @@ const (
 	POSTDescribeEnvironmentManagedActionsActionEnumDescribeEnvironmentManagedActions POSTDescribeEnvironmentManagedActionsActionEnum = "DescribeEnvironmentManagedActions"
 )
 
+func (e POSTDescribeEnvironmentManagedActionsActionEnum) ToPointer() *POSTDescribeEnvironmentManagedActionsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeEnvironmentManagedActionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeEnvironmentManagedActions":
-		*e = POSTDescribeEnvironmentManagedActionsActionEnum(s)
+		*e = POSTDescribeEnvironmentManagedActionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeEnvironmentManagedActionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeEnvironmentManagedActionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeEnvironmentManagedActionsVersionEnumTwoThousandAndTen1201 POSTDescribeEnvironmentManagedActionsVersionEnum = "2010-12-01"
 )
 
+func (e POSTDescribeEnvironmentManagedActionsVersionEnum) ToPointer() *POSTDescribeEnvironmentManagedActionsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeEnvironmentManagedActionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTDescribeEnvironmentManagedActionsVersionEnum(s)
+		*e = POSTDescribeEnvironmentManagedActionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeEnvironmentManagedActionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeEnvironmentManagedActionsVersionEnum: %v", v)
 	}
 }
 

@@ -11,26 +11,30 @@ import (
 type CategoryRefundBehaviourEnum string
 
 const (
-	CategoryRefundBehaviourEnumDebitsAreDeductions CategoryRefundBehaviourEnum = "debits_are_deductions"
-	CategoryRefundBehaviourEnumCreditsAreRefunds   CategoryRefundBehaviourEnum = "credits_are_refunds"
-	CategoryRefundBehaviourEnumNull                CategoryRefundBehaviourEnum = "null"
+	CategoryRefundBehaviourEnumDebitsAreDeductions    CategoryRefundBehaviourEnum = "debits_are_deductions"
+	CategoryRefundBehaviourEnumCreditsAreRefunds      CategoryRefundBehaviourEnum = "credits_are_refunds"
+	CategoryRefundBehaviourEnumLessThanNilGreaterThan CategoryRefundBehaviourEnum = "<nil>"
 )
 
+func (e CategoryRefundBehaviourEnum) ToPointer() *CategoryRefundBehaviourEnum {
+	return &e
+}
+
 func (e *CategoryRefundBehaviourEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "debits_are_deductions":
 		fallthrough
 	case "credits_are_refunds":
 		fallthrough
-	case "null":
-		*e = CategoryRefundBehaviourEnum(s)
+	case "<nil>":
+		*e = CategoryRefundBehaviourEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CategoryRefundBehaviourEnum: %s", s)
+		return fmt.Errorf("invalid value for CategoryRefundBehaviourEnum: %v", v)
 	}
 }
 

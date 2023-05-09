@@ -17,118 +17,130 @@ const (
 	GetMapVersionNumberCopyrightsZoomXYFormatFormatEnumXML   GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum = "xml"
 )
 
+func (e GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum) ToPointer() *GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "jsonp":
 		fallthrough
 	case "xml":
-		*e = GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum(s)
+		*e = GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum: %v", v)
 	}
 }
 
 // GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum - Version of the service to call. The current version is 1
-type GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum string
+type GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum int64
 
 const (
-	GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnumOne GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum = "1"
+	GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnumOne GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum = 1
 )
 
+func (e GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum) ToPointer() *GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
-		*e = GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum(s)
+	switch v {
+	case 1:
+		*e = GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum: %v", v)
 	}
 }
 
 // GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum - Zoom level of tile to be rendered. Only used for tile-level
 // copyright calls.
-type GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum string
+type GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum int64
 
 const (
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumZero      GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "0"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumOne       GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "1"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumTwo       GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "2"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumThree     GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "3"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumFour      GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "4"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumFive      GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "5"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumSix       GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "6"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumSeven     GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "7"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumEight     GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "8"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumNine      GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "9"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumTen       GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "10"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumEleven    GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "11"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumTwelve    GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "12"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumThirteen  GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "13"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumFourteen  GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "14"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumFifteen   GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "15"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumSixteen   GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "16"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumSeventeen GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "17"
-	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumEighteen  GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = "18"
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumZero      GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 0
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumOne       GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 1
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumTwo       GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 2
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumThree     GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 3
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumFour      GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 4
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumFive      GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 5
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumSix       GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 6
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumSeven     GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 7
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumEight     GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 8
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumNine      GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 9
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumTen       GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 10
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumEleven    GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 11
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumTwelve    GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 12
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumThirteen  GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 13
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumFourteen  GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 14
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumFifteen   GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 15
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumSixteen   GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 16
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumSeventeen GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 17
+	GetMapVersionNumberCopyrightsZoomXYFormatZoomEnumEighteen  GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum = 18
 )
 
+func (e GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum) ToPointer() *GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "7":
+	case 7:
 		fallthrough
-	case "8":
+	case 8:
 		fallthrough
-	case "9":
+	case 9:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "11":
+	case 11:
 		fallthrough
-	case "12":
+	case 12:
 		fallthrough
-	case "13":
+	case 13:
 		fallthrough
-	case "14":
+	case 14:
 		fallthrough
-	case "15":
+	case 15:
 		fallthrough
-	case "16":
+	case 16:
 		fallthrough
-	case "17":
+	case 17:
 		fallthrough
-	case "18":
-		*e = GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum(s)
+	case 18:
+		*e = GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum: %v", v)
 	}
 }
 

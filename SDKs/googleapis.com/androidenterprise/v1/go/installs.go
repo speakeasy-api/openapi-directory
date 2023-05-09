@@ -34,7 +34,10 @@ func newInstalls(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AndroidenterpriseInstallsDelete - Requests to remove an app from a device. A call to get or list will still show the app as installed on the device until it is actually removed.
 func (s *installs) AndroidenterpriseInstallsDelete(ctx context.Context, request operations.AndroidenterpriseInstallsDeleteRequest, security operations.AndroidenterpriseInstallsDeleteSecurity) (*operations.AndroidenterpriseInstallsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *installs) AndroidenterpriseInstallsDelete(ctx context.Context, request 
 // AndroidenterpriseInstallsGet - Retrieves details of an installation of an app on a device.
 func (s *installs) AndroidenterpriseInstallsGet(ctx context.Context, request operations.AndroidenterpriseInstallsGetRequest, security operations.AndroidenterpriseInstallsGetSecurity) (*operations.AndroidenterpriseInstallsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *installs) AndroidenterpriseInstallsGet(ctx context.Context, request ope
 // AndroidenterpriseInstallsList - Retrieves the details of all apps installed on the specified device.
 func (s *installs) AndroidenterpriseInstallsList(ctx context.Context, request operations.AndroidenterpriseInstallsListRequest, security operations.AndroidenterpriseInstallsListSecurity) (*operations.AndroidenterpriseInstallsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +178,10 @@ func (s *installs) AndroidenterpriseInstallsList(ctx context.Context, request op
 // AndroidenterpriseInstallsUpdate - Requests to install the latest version of an app to a device. If the app is already installed, then it is updated to the latest version if necessary.
 func (s *installs) AndroidenterpriseInstallsUpdate(ctx context.Context, request operations.AndroidenterpriseInstallsUpdateRequest, security operations.AndroidenterpriseInstallsUpdateSecurity) (*operations.AndroidenterpriseInstallsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/installs/{installId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Install", "json")
 	if err != nil {

@@ -194,12 +194,16 @@ const (
 	ClipEffectEnumSlideDown  ClipEffectEnum = "slideDown"
 )
 
+func (e ClipEffectEnum) ToPointer() *ClipEffectEnum {
+	return &e
+}
+
 func (e *ClipEffectEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "zoomIn":
 		fallthrough
 	case "zoomOut":
@@ -211,10 +215,10 @@ func (e *ClipEffectEnum) UnmarshalJSON(data []byte) error {
 	case "slideUp":
 		fallthrough
 	case "slideDown":
-		*e = ClipEffectEnum(s)
+		*e = ClipEffectEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClipEffectEnum: %s", s)
+		return fmt.Errorf("invalid value for ClipEffectEnum: %v", v)
 	}
 }
 
@@ -241,12 +245,16 @@ const (
 	ClipFilterEnumNegative  ClipFilterEnum = "negative"
 )
 
+func (e ClipFilterEnum) ToPointer() *ClipFilterEnum {
+	return &e
+}
+
 func (e *ClipFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "boost":
 		fallthrough
 	case "contrast":
@@ -260,10 +268,10 @@ func (e *ClipFilterEnum) UnmarshalJSON(data []byte) error {
 	case "muted":
 		fallthrough
 	case "negative":
-		*e = ClipFilterEnum(s)
+		*e = ClipFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClipFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for ClipFilterEnum: %v", v)
 	}
 }
 
@@ -284,12 +292,16 @@ const (
 	ClipFitEnumNone    ClipFitEnum = "none"
 )
 
+func (e ClipFitEnum) ToPointer() *ClipFitEnum {
+	return &e
+}
+
 func (e *ClipFitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cover":
 		fallthrough
 	case "contain":
@@ -297,10 +309,10 @@ func (e *ClipFitEnum) UnmarshalJSON(data []byte) error {
 	case "crop":
 		fallthrough
 	case "none":
-		*e = ClipFitEnum(s)
+		*e = ClipFitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClipFitEnum: %s", s)
+		return fmt.Errorf("invalid value for ClipFitEnum: %v", v)
 	}
 }
 
@@ -331,12 +343,16 @@ const (
 	ClipPositionEnumCenter      ClipPositionEnum = "center"
 )
 
+func (e ClipPositionEnum) ToPointer() *ClipPositionEnum {
+	return &e
+}
+
 func (e *ClipPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "top":
 		fallthrough
 	case "topRight":
@@ -354,10 +370,10 @@ func (e *ClipPositionEnum) UnmarshalJSON(data []byte) error {
 	case "topLeft":
 		fallthrough
 	case "center":
-		*e = ClipPositionEnum(s)
+		*e = ClipPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClipPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for ClipPositionEnum: %v", v)
 	}
 }
 

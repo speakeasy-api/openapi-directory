@@ -14,18 +14,22 @@ const (
 	FraudDetectionActionEnumFail   FraudDetectionActionEnum = "FAIL"
 )
 
+func (e FraudDetectionActionEnum) ToPointer() *FraudDetectionActionEnum {
+	return &e
+}
+
 func (e *FraudDetectionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IGNORE":
 		fallthrough
 	case "FAIL":
-		*e = FraudDetectionActionEnum(s)
+		*e = FraudDetectionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FraudDetectionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for FraudDetectionActionEnum: %v", v)
 	}
 }

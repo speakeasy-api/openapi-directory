@@ -16,14 +16,19 @@ const (
 	GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnumPage                GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnum = "PAGE"
 	GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnumParameters          GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnum = "PARAMETERS"
 	GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnumUtterance           GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnum = "UTTERANCE"
+	GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnumFlow                GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnum = "FLOW"
 )
 
+func (e GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnum) ToPointer() *GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIFF_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INTENT":
@@ -33,10 +38,12 @@ func (e *GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnum) UnmarshalJSON(data 
 	case "PARAMETERS":
 		fallthrough
 	case "UTTERANCE":
-		*e = GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnum(s)
+		fallthrough
+	case "FLOW":
+		*e = GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3TestRunDifferenceTypeEnum: %v", v)
 	}
 }
 

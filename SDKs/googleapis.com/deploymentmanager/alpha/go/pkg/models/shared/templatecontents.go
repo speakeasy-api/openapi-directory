@@ -16,21 +16,25 @@ const (
 	TemplateContentsInterpreterEnumJinja              TemplateContentsInterpreterEnum = "JINJA"
 )
 
+func (e TemplateContentsInterpreterEnum) ToPointer() *TemplateContentsInterpreterEnum {
+	return &e
+}
+
 func (e *TemplateContentsInterpreterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_INTERPRETER":
 		fallthrough
 	case "PYTHON":
 		fallthrough
 	case "JINJA":
-		*e = TemplateContentsInterpreterEnum(s)
+		*e = TemplateContentsInterpreterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemplateContentsInterpreterEnum: %s", s)
+		return fmt.Errorf("invalid value for TemplateContentsInterpreterEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	DescribeInternetGatewaysResultInternetGatewaysAttachmentsStateEnumDetached  DescribeInternetGatewaysResultInternetGatewaysAttachmentsStateEnum = "detached"
 )
 
+func (e DescribeInternetGatewaysResultInternetGatewaysAttachmentsStateEnum) ToPointer() *DescribeInternetGatewaysResultInternetGatewaysAttachmentsStateEnum {
+	return &e
+}
+
 func (e *DescribeInternetGatewaysResultInternetGatewaysAttachmentsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -30,10 +34,10 @@ func (e *DescribeInternetGatewaysResultInternetGatewaysAttachmentsStateEnum) Unm
 	case "detaching":
 		fallthrough
 	case "detached":
-		*e = DescribeInternetGatewaysResultInternetGatewaysAttachmentsStateEnum(s)
+		*e = DescribeInternetGatewaysResultInternetGatewaysAttachmentsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInternetGatewaysResultInternetGatewaysAttachmentsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInternetGatewaysResultInternetGatewaysAttachmentsStateEnum: %v", v)
 	}
 }
 

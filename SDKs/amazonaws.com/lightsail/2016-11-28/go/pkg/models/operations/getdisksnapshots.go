@@ -16,17 +16,21 @@ const (
 	GetDiskSnapshotsXAmzTargetEnumLightsail20161128GetDiskSnapshots GetDiskSnapshotsXAmzTargetEnum = "Lightsail_20161128.GetDiskSnapshots"
 )
 
+func (e GetDiskSnapshotsXAmzTargetEnum) ToPointer() *GetDiskSnapshotsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDiskSnapshotsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetDiskSnapshots":
-		*e = GetDiskSnapshotsXAmzTargetEnum(s)
+		*e = GetDiskSnapshotsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiskSnapshotsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiskSnapshotsXAmzTargetEnum: %v", v)
 	}
 }
 

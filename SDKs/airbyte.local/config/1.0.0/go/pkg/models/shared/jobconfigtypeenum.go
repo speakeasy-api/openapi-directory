@@ -18,12 +18,16 @@ const (
 	JobConfigTypeEnumResetConnection            JobConfigTypeEnum = "reset_connection"
 )
 
+func (e JobConfigTypeEnum) ToPointer() *JobConfigTypeEnum {
+	return &e
+}
+
 func (e *JobConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "check_connection_source":
 		fallthrough
 	case "check_connection_destination":
@@ -35,9 +39,9 @@ func (e *JobConfigTypeEnum) UnmarshalJSON(data []byte) error {
 	case "sync":
 		fallthrough
 	case "reset_connection":
-		*e = JobConfigTypeEnum(s)
+		*e = JobConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for JobConfigTypeEnum: %v", v)
 	}
 }

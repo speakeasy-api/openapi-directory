@@ -14,18 +14,22 @@ const (
 	PersistentAppUIEnumDisabled PersistentAppUIEnum = "DISABLED"
 )
 
+func (e PersistentAppUIEnum) ToPointer() *PersistentAppUIEnum {
+	return &e
+}
+
 func (e *PersistentAppUIEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = PersistentAppUIEnum(s)
+		*e = PersistentAppUIEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PersistentAppUIEnum: %s", s)
+		return fmt.Errorf("invalid value for PersistentAppUIEnum: %v", v)
 	}
 }

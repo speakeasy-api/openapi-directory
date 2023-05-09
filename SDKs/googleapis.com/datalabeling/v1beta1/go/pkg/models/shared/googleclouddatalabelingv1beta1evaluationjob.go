@@ -18,12 +18,16 @@ const (
 	GoogleCloudDatalabelingV1beta1EvaluationJobStateEnumStopped          GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum = "STOPPED"
 )
 
+func (e GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum) ToPointer() *GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "SCHEDULED":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum) UnmarshalJSON(dat
 	case "PAUSED":
 		fallthrough
 	case "STOPPED":
-		*e = GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum: %v", v)
 	}
 }
 

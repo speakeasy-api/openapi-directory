@@ -14,18 +14,22 @@ const (
 	AZModeEnumCrossAz  AZModeEnum = "cross-az"
 )
 
+func (e AZModeEnum) ToPointer() *AZModeEnum {
+	return &e
+}
+
 func (e *AZModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "single-az":
 		fallthrough
 	case "cross-az":
-		*e = AZModeEnum(s)
+		*e = AZModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AZModeEnum: %s", s)
+		return fmt.Errorf("invalid value for AZModeEnum: %v", v)
 	}
 }

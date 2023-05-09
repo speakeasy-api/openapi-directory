@@ -16,17 +16,21 @@ const (
 	CreateConfiguredTableRequestBodyAnalysisMethodEnumDirectQuery CreateConfiguredTableRequestBodyAnalysisMethodEnum = "DIRECT_QUERY"
 )
 
+func (e CreateConfiguredTableRequestBodyAnalysisMethodEnum) ToPointer() *CreateConfiguredTableRequestBodyAnalysisMethodEnum {
+	return &e
+}
+
 func (e *CreateConfiguredTableRequestBodyAnalysisMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIRECT_QUERY":
-		*e = CreateConfiguredTableRequestBodyAnalysisMethodEnum(s)
+		*e = CreateConfiguredTableRequestBodyAnalysisMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateConfiguredTableRequestBodyAnalysisMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateConfiguredTableRequestBodyAnalysisMethodEnum: %v", v)
 	}
 }
 

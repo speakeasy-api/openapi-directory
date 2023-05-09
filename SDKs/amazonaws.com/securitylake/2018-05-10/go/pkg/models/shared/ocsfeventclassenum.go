@@ -45,12 +45,16 @@ const (
 	OcsfEventClassEnumVirtualMachineActivity OcsfEventClassEnum = "VIRTUAL_MACHINE_ACTIVITY"
 )
 
+func (e OcsfEventClassEnum) ToPointer() *OcsfEventClassEnum {
+	return &e
+}
+
 func (e *OcsfEventClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_ACTIVITY":
 		fallthrough
 	case "FILE_ACTIVITY":
@@ -116,9 +120,9 @@ func (e *OcsfEventClassEnum) UnmarshalJSON(data []byte) error {
 	case "SMTP_ACTIVITY":
 		fallthrough
 	case "VIRTUAL_MACHINE_ACTIVITY":
-		*e = OcsfEventClassEnum(s)
+		*e = OcsfEventClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OcsfEventClassEnum: %s", s)
+		return fmt.Errorf("invalid value for OcsfEventClassEnum: %v", v)
 	}
 }

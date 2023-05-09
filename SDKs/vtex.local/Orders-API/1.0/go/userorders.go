@@ -38,7 +38,10 @@ func newUserOrders(defaultClient, securityClient HTTPClient, serverURL, language
 // > Note that these requests are meant to be made by **Call center operator** profiles. Otherwise, they will return only orders from the same email making the request.
 func (s *userOrders) Userorderdetails(ctx context.Context, request operations.UserorderdetailsRequest) (*operations.UserorderdetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/oms/user/orders/{orderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/oms/user/orders/{orderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

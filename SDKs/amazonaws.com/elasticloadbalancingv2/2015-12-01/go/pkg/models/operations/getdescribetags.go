@@ -15,17 +15,21 @@ const (
 	GETDescribeTagsActionEnumDescribeTags GETDescribeTagsActionEnum = "DescribeTags"
 )
 
+func (e GETDescribeTagsActionEnum) ToPointer() *GETDescribeTagsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeTagsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeTags":
-		*e = GETDescribeTagsActionEnum(s)
+		*e = GETDescribeTagsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeTagsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeTagsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeTagsVersionEnumTwoThousandAndFifteen1201 GETDescribeTagsVersionEnum = "2015-12-01"
 )
 
+func (e GETDescribeTagsVersionEnum) ToPointer() *GETDescribeTagsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeTagsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = GETDescribeTagsVersionEnum(s)
+		*e = GETDescribeTagsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeTagsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeTagsVersionEnum: %v", v)
 	}
 }
 

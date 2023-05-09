@@ -16,17 +16,21 @@ const (
 	DescribeDirectoryConfigsXAmzTargetEnumPhotonAdminProxyServiceDescribeDirectoryConfigs DescribeDirectoryConfigsXAmzTargetEnum = "PhotonAdminProxyService.DescribeDirectoryConfigs"
 )
 
+func (e DescribeDirectoryConfigsXAmzTargetEnum) ToPointer() *DescribeDirectoryConfigsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDirectoryConfigsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.DescribeDirectoryConfigs":
-		*e = DescribeDirectoryConfigsXAmzTargetEnum(s)
+		*e = DescribeDirectoryConfigsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDirectoryConfigsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDirectoryConfigsXAmzTargetEnum: %v", v)
 	}
 }
 

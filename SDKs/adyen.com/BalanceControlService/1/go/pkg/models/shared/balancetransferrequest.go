@@ -19,12 +19,16 @@ const (
 	BalanceTransferRequestTypeEnumAdjustment   BalanceTransferRequestTypeEnum = "adjustment"
 )
 
+func (e BalanceTransferRequestTypeEnum) ToPointer() *BalanceTransferRequestTypeEnum {
+	return &e
+}
+
 func (e *BalanceTransferRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tax":
 		fallthrough
 	case "fee":
@@ -36,10 +40,10 @@ func (e *BalanceTransferRequestTypeEnum) UnmarshalJSON(data []byte) error {
 	case "debit":
 		fallthrough
 	case "adjustment":
-		*e = BalanceTransferRequestTypeEnum(s)
+		*e = BalanceTransferRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BalanceTransferRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BalanceTransferRequestTypeEnum: %v", v)
 	}
 }
 

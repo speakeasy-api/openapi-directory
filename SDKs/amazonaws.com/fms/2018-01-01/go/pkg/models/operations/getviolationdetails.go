@@ -16,17 +16,21 @@ const (
 	GetViolationDetailsXAmzTargetEnumAwsfms20180101GetViolationDetails GetViolationDetailsXAmzTargetEnum = "AWSFMS_20180101.GetViolationDetails"
 )
 
+func (e GetViolationDetailsXAmzTargetEnum) ToPointer() *GetViolationDetailsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetViolationDetailsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.GetViolationDetails":
-		*e = GetViolationDetailsXAmzTargetEnum(s)
+		*e = GetViolationDetailsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetViolationDetailsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetViolationDetailsXAmzTargetEnum: %v", v)
 	}
 }
 

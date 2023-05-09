@@ -16,21 +16,25 @@ const (
 	PartitionSpecPartitionKeyEnumRequestTime             PartitionSpecPartitionKeyEnum = "REQUEST_TIME"
 )
 
+func (e PartitionSpecPartitionKeyEnum) ToPointer() *PartitionSpecPartitionKeyEnum {
+	return &e
+}
+
 func (e *PartitionSpecPartitionKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARTITION_KEY_UNSPECIFIED":
 		fallthrough
 	case "READ_TIME":
 		fallthrough
 	case "REQUEST_TIME":
-		*e = PartitionSpecPartitionKeyEnum(s)
+		*e = PartitionSpecPartitionKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartitionSpecPartitionKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for PartitionSpecPartitionKeyEnum: %v", v)
 	}
 }
 

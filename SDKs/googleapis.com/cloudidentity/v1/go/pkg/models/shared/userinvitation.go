@@ -18,12 +18,16 @@ const (
 	UserInvitationStateEnumDeclined         UserInvitationStateEnum = "DECLINED"
 )
 
+func (e UserInvitationStateEnum) ToPointer() *UserInvitationStateEnum {
+	return &e
+}
+
 func (e *UserInvitationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_YET_SENT":
@@ -33,10 +37,10 @@ func (e *UserInvitationStateEnum) UnmarshalJSON(data []byte) error {
 	case "ACCEPTED":
 		fallthrough
 	case "DECLINED":
-		*e = UserInvitationStateEnum(s)
+		*e = UserInvitationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserInvitationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for UserInvitationStateEnum: %v", v)
 	}
 }
 

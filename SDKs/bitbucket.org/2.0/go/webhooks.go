@@ -63,7 +63,10 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 // repository.
 func (s *webhooks) DeleteRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -111,7 +114,10 @@ func (s *webhooks) DeleteRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Conte
 // Deletes the specified webhook subscription from the given workspace.
 func (s *webhooks) DeleteWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.DeleteWorkspacesWorkspaceHooksUIDRequest, security operations.DeleteWorkspacesWorkspaceHooksUIDSecurity) (*operations.DeleteWorkspacesWorkspaceHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -189,7 +195,7 @@ func (s *webhooks) DeleteWorkspacesWorkspaceHooksUID(ctx context.Context, reques
 //	}
 //
 // ```
-func (s *webhooks) GetHookEvents(ctx context.Context) (*operations.GetHookEventsResponse, error) {
+func (s *webhooks) GetHookEvents(ctx context.Context, security operations.GetHookEventsSecurity) (*operations.GetHookEventsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hook_events"
 
@@ -198,7 +204,7 @@ func (s *webhooks) GetHookEvents(ctx context.Context) (*operations.GetHookEvents
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -284,7 +290,10 @@ func (s *webhooks) GetHookEvents(ctx context.Context) (*operations.GetHookEvents
 // ```
 func (s *webhooks) GetHookEventsSubjectType(ctx context.Context, request operations.GetHookEventsSubjectTypeRequest, security operations.GetHookEventsSubjectTypeSecurity) (*operations.GetHookEventsSubjectTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hook_events/{subject_type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hook_events/{subject_type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -339,7 +348,10 @@ func (s *webhooks) GetHookEventsSubjectType(ctx context.Context, request operati
 // Returns a paginated list of webhooks installed on this repository.
 func (s *webhooks) GetRepositoriesWorkspaceRepoSlugHooks(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugHooksRequest, security operations.GetRepositoriesWorkspaceRepoSlugHooksSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugHooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -397,7 +409,10 @@ func (s *webhooks) GetRepositoriesWorkspaceRepoSlugHooks(ctx context.Context, re
 // repository.
 func (s *webhooks) GetRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugHooksUIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugHooksUIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -452,7 +467,10 @@ func (s *webhooks) GetRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context,
 // Returns a paginated list of webhooks installed on this workspace.
 func (s *webhooks) GetWorkspacesWorkspaceHooks(ctx context.Context, request operations.GetWorkspacesWorkspaceHooksRequest, security operations.GetWorkspacesWorkspaceHooksSecurity) (*operations.GetWorkspacesWorkspaceHooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -510,7 +528,10 @@ func (s *webhooks) GetWorkspacesWorkspaceHooks(ctx context.Context, request oper
 // workspace.
 func (s *webhooks) GetWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.GetWorkspacesWorkspaceHooksUIDRequest, security operations.GetWorkspacesWorkspaceHooksUIDSecurity) (*operations.GetWorkspacesWorkspaceHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -592,7 +613,10 @@ func (s *webhooks) GetWorkspacesWorkspaceHooksUID(ctx context.Context, request o
 // internal, non-routed address.
 func (s *webhooks) PostRepositoriesWorkspaceRepoSlugHooks(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugHooksRequest, security operations.PostRepositoriesWorkspaceRepoSlugHooksSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugHooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -682,7 +706,10 @@ func (s *webhooks) PostRepositoriesWorkspaceRepoSlugHooks(ctx context.Context, r
 // Only workspace owners can install webhooks on workspaces.
 func (s *webhooks) PostWorkspacesWorkspaceHooks(ctx context.Context, request operations.PostWorkspacesWorkspaceHooksRequest, security operations.PostWorkspacesWorkspaceHooksSecurity) (*operations.PostWorkspacesWorkspaceHooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -748,7 +775,10 @@ func (s *webhooks) PostWorkspacesWorkspaceHooks(ctx context.Context, request ope
 // * `events`
 func (s *webhooks) PutRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugHooksUIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugHooksUIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -812,7 +842,10 @@ func (s *webhooks) PutRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context,
 // * `events`
 func (s *webhooks) PutWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.PutWorkspacesWorkspaceHooksUIDRequest, security operations.PutWorkspacesWorkspaceHooksUIDSecurity) (*operations.PutWorkspacesWorkspaceHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

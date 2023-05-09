@@ -17,12 +17,16 @@ const (
 	TextBroadcastBigMessageStrategyEnumMms          TextBroadcastBigMessageStrategyEnum = "MMS"
 )
 
+func (e TextBroadcastBigMessageStrategyEnum) ToPointer() *TextBroadcastBigMessageStrategyEnum {
+	return &e
+}
+
 func (e *TextBroadcastBigMessageStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEND_MULTIPLE":
 		fallthrough
 	case "DO_NOT_SEND":
@@ -30,10 +34,10 @@ func (e *TextBroadcastBigMessageStrategyEnum) UnmarshalJSON(data []byte) error {
 	case "TRIM":
 		fallthrough
 	case "MMS":
-		*e = TextBroadcastBigMessageStrategyEnum(s)
+		*e = TextBroadcastBigMessageStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextBroadcastBigMessageStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for TextBroadcastBigMessageStrategyEnum: %v", v)
 	}
 }
 
@@ -85,12 +89,16 @@ const (
 	TextBroadcastStatusEnumApproved          TextBroadcastStatusEnum = "APPROVED"
 )
 
+func (e TextBroadcastStatusEnum) ToPointer() *TextBroadcastStatusEnum {
+	return &e
+}
+
 func (e *TextBroadcastStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEST":
 		fallthrough
 	case "SETUP":
@@ -118,10 +126,10 @@ func (e *TextBroadcastStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DECLINED":
 		fallthrough
 	case "APPROVED":
-		*e = TextBroadcastStatusEnum(s)
+		*e = TextBroadcastStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextBroadcastStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TextBroadcastStatusEnum: %v", v)
 	}
 }
 

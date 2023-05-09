@@ -166,7 +166,10 @@ func (s *paymentsAPI) GetListOfPayments(ctx context.Context, request operations.
 // - invoice_id - this parameter shows invoice ID from which the payment was created
 func (s *paymentsAPI) GetPaymentStatus(ctx context.Context, request operations.GetPaymentStatusRequest) (*operations.GetPaymentStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment/{payment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/payment/{payment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -285,7 +288,10 @@ func (s *paymentsAPI) GetTheMinimumPaymentAmount(ctx context.Context, request op
 // `expiration_estimate_date` - expiration date of this estimate
 func (s *paymentsAPI) GetUpdatePaymentEstimate(ctx context.Context, request operations.GetUpdatePaymentEstimateRequest) (*operations.GetUpdatePaymentEstimateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payment/{id}/update-merchant-estimate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/payment/{id}/update-merchant-estimate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

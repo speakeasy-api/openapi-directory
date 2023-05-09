@@ -17,19 +17,23 @@ const (
 	ReposListForUserDirectionEnumDesc ReposListForUserDirectionEnum = "desc"
 )
 
+func (e ReposListForUserDirectionEnum) ToPointer() *ReposListForUserDirectionEnum {
+	return &e
+}
+
 func (e *ReposListForUserDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = ReposListForUserDirectionEnum(s)
+		*e = ReposListForUserDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListForUserDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListForUserDirectionEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	ReposListForUserSortEnumFullName ReposListForUserSortEnum = "full_name"
 )
 
+func (e ReposListForUserSortEnum) ToPointer() *ReposListForUserSortEnum {
+	return &e
+}
+
 func (e *ReposListForUserSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
@@ -56,10 +64,10 @@ func (e *ReposListForUserSortEnum) UnmarshalJSON(data []byte) error {
 	case "pushed":
 		fallthrough
 	case "full_name":
-		*e = ReposListForUserSortEnum(s)
+		*e = ReposListForUserSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListForUserSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListForUserSortEnum: %v", v)
 	}
 }
 
@@ -72,21 +80,25 @@ const (
 	ReposListForUserTypeEnumMember ReposListForUserTypeEnum = "member"
 )
 
+func (e ReposListForUserTypeEnum) ToPointer() *ReposListForUserTypeEnum {
+	return &e
+}
+
 func (e *ReposListForUserTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "owner":
 		fallthrough
 	case "member":
-		*e = ReposListForUserTypeEnum(s)
+		*e = ReposListForUserTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListForUserTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListForUserTypeEnum: %v", v)
 	}
 }
 

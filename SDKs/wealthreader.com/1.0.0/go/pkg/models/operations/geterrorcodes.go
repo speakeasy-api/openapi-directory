@@ -17,19 +17,23 @@ const (
 	GetErrorCodesLangEnumEn GetErrorCodesLangEnum = "en"
 )
 
+func (e GetErrorCodesLangEnum) ToPointer() *GetErrorCodesLangEnum {
+	return &e
+}
+
 func (e *GetErrorCodesLangEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "es":
 		fallthrough
 	case "en":
-		*e = GetErrorCodesLangEnum(s)
+		*e = GetErrorCodesLangEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetErrorCodesLangEnum: %s", s)
+		return fmt.Errorf("invalid value for GetErrorCodesLangEnum: %v", v)
 	}
 }
 

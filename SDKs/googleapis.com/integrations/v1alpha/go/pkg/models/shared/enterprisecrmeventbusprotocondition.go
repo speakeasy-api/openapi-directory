@@ -22,12 +22,16 @@ const (
 	EnterpriseCrmEventbusProtoConditionOperatorEnumIsNotEmpty   EnterpriseCrmEventbusProtoConditionOperatorEnum = "IS_NOT_EMPTY"
 )
 
+func (e EnterpriseCrmEventbusProtoConditionOperatorEnum) ToPointer() *EnterpriseCrmEventbusProtoConditionOperatorEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoConditionOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSET":
 		fallthrough
 	case "EQUALS":
@@ -45,10 +49,10 @@ func (e *EnterpriseCrmEventbusProtoConditionOperatorEnum) UnmarshalJSON(data []b
 	case "IS_EMPTY":
 		fallthrough
 	case "IS_NOT_EMPTY":
-		*e = EnterpriseCrmEventbusProtoConditionOperatorEnum(s)
+		*e = EnterpriseCrmEventbusProtoConditionOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoConditionOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoConditionOperatorEnum: %v", v)
 	}
 }
 

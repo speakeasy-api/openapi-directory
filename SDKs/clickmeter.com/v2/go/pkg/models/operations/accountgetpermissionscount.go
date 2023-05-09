@@ -17,19 +17,23 @@ const (
 	AccountGetPermissionsCountEntityTypeEnumGroup     AccountGetPermissionsCountEntityTypeEnum = "group"
 )
 
+func (e AccountGetPermissionsCountEntityTypeEnum) ToPointer() *AccountGetPermissionsCountEntityTypeEnum {
+	return &e
+}
+
 func (e *AccountGetPermissionsCountEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "datapoint":
 		fallthrough
 	case "group":
-		*e = AccountGetPermissionsCountEntityTypeEnum(s)
+		*e = AccountGetPermissionsCountEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountGetPermissionsCountEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountGetPermissionsCountEntityTypeEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	AccountGetPermissionsCountTypeEnumW AccountGetPermissionsCountTypeEnum = "w"
 )
 
+func (e AccountGetPermissionsCountTypeEnum) ToPointer() *AccountGetPermissionsCountTypeEnum {
+	return &e
+}
+
 func (e *AccountGetPermissionsCountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "r":
 		fallthrough
 	case "w":
-		*e = AccountGetPermissionsCountTypeEnum(s)
+		*e = AccountGetPermissionsCountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountGetPermissionsCountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountGetPermissionsCountTypeEnum: %v", v)
 	}
 }
 

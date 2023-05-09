@@ -17,12 +17,16 @@ const (
 	ServiceMeshAnalysisMessageBaseLevelEnumInfo             ServiceMeshAnalysisMessageBaseLevelEnum = "INFO"
 )
 
+func (e ServiceMeshAnalysisMessageBaseLevelEnum) ToPointer() *ServiceMeshAnalysisMessageBaseLevelEnum {
+	return &e
+}
+
 func (e *ServiceMeshAnalysisMessageBaseLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEVEL_UNSPECIFIED":
 		fallthrough
 	case "ERROR":
@@ -30,10 +34,10 @@ func (e *ServiceMeshAnalysisMessageBaseLevelEnum) UnmarshalJSON(data []byte) err
 	case "WARNING":
 		fallthrough
 	case "INFO":
-		*e = ServiceMeshAnalysisMessageBaseLevelEnum(s)
+		*e = ServiceMeshAnalysisMessageBaseLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceMeshAnalysisMessageBaseLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceMeshAnalysisMessageBaseLevelEnum: %v", v)
 	}
 }
 

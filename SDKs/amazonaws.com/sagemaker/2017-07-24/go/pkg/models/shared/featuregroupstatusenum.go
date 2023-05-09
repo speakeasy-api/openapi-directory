@@ -17,12 +17,16 @@ const (
 	FeatureGroupStatusEnumDeleteFailed FeatureGroupStatusEnum = "DeleteFailed"
 )
 
+func (e FeatureGroupStatusEnum) ToPointer() *FeatureGroupStatusEnum {
+	return &e
+}
+
 func (e *FeatureGroupStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Creating":
 		fallthrough
 	case "Created":
@@ -32,9 +36,9 @@ func (e *FeatureGroupStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Deleting":
 		fallthrough
 	case "DeleteFailed":
-		*e = FeatureGroupStatusEnum(s)
+		*e = FeatureGroupStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeatureGroupStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FeatureGroupStatusEnum: %v", v)
 	}
 }

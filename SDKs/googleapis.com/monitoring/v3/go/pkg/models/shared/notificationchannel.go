@@ -16,21 +16,25 @@ const (
 	NotificationChannelVerificationStatusEnumVerified                      NotificationChannelVerificationStatusEnum = "VERIFIED"
 )
 
+func (e NotificationChannelVerificationStatusEnum) ToPointer() *NotificationChannelVerificationStatusEnum {
+	return &e
+}
+
 func (e *NotificationChannelVerificationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERIFICATION_STATUS_UNSPECIFIED":
 		fallthrough
 	case "UNVERIFIED":
 		fallthrough
 	case "VERIFIED":
-		*e = NotificationChannelVerificationStatusEnum(s)
+		*e = NotificationChannelVerificationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationChannelVerificationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationChannelVerificationStatusEnum: %v", v)
 	}
 }
 

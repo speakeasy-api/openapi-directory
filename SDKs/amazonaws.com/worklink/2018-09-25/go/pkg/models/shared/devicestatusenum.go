@@ -14,18 +14,22 @@ const (
 	DeviceStatusEnumSignedOut DeviceStatusEnum = "SIGNED_OUT"
 )
 
+func (e DeviceStatusEnum) ToPointer() *DeviceStatusEnum {
+	return &e
+}
+
 func (e *DeviceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "SIGNED_OUT":
-		*e = DeviceStatusEnum(s)
+		*e = DeviceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceStatusEnum: %v", v)
 	}
 }

@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/oceandrivers.com/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CompareStationRequest{
-        StationName: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.ODWeather.CompareStation(ctx, req)
+    res, err := s.ODWeather.CompareStation(ctx, operations.CompareStationRequest{
+        StationName: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,18 +42,18 @@ func main() {
 ## Available Resources and Operations
 
 
-### ODWeather
+### [ODWeather](docs/odweather/README.md)
 
-* `CompareStation` - Get forecast and realtime information for known points<br/>None
-* `GetAemetStation` - Get data from the aemet stations<br/>None
-* `GetEasywind` - Get data from the easywind weather stations<br/>None
-* `GetEventStations` - Get stations in an event<br/>None
-* `GetForecastPoints` - Get forecast points of a yatchclub<br/>None
-* `GetForecastTimeSeries` - Get timeseries forecast information<br/>None
-* `GetForecastTimeSeriesWrf` - Get timeseries forecast information<br/>None
-* `GetSocibWeatherStation` - Get data from the socib bahia de palma buoy<br/>None
-* `GetWeatherDisplay` - Get data from the weather display software<br/>None
-* `GetWebCams` - Get forecast and realtime information for known points<br/>None
+* [CompareStation](docs/odweather/README.md#comparestation) - Get forecast and realtime information for known points<br/>None
+* [GetAemetStation](docs/odweather/README.md#getaemetstation) - Get data from the aemet stations<br/>None
+* [GetEasywind](docs/odweather/README.md#geteasywind) - Get data from the easywind weather stations<br/>None
+* [GetEventStations](docs/odweather/README.md#geteventstations) - Get stations in an event<br/>None
+* [GetForecastPoints](docs/odweather/README.md#getforecastpoints) - Get forecast points of a yatchclub<br/>None
+* [GetForecastTimeSeries](docs/odweather/README.md#getforecasttimeseries) - Get timeseries forecast information<br/>None
+* [GetForecastTimeSeriesWrf](docs/odweather/README.md#getforecasttimeserieswrf) - Get timeseries forecast information<br/>None
+* [GetSocibWeatherStation](docs/odweather/README.md#getsocibweatherstation) - Get data from the socib bahia de palma buoy<br/>None
+* [GetWeatherDisplay](docs/odweather/README.md#getweatherdisplay) - Get data from the weather display software<br/>None
+* [GetWebCams](docs/odweather/README.md#getwebcams) - Get forecast and realtime information for known points<br/>None
 <!-- End SDK Available Operations -->
 
 ### Maturity

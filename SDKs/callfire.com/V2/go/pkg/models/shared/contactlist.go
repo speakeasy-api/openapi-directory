@@ -21,12 +21,16 @@ const (
 	ContactListStatusEnumColumnTooLarge ContactListStatusEnum = "COLUMN_TOO_LARGE"
 )
 
+func (e ContactListStatusEnum) ToPointer() *ContactListStatusEnum {
+	return &e
+}
+
 func (e *ContactListStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "VALIDATING":
@@ -42,10 +46,10 @@ func (e *ContactListStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PARSE_FAILED":
 		fallthrough
 	case "COLUMN_TOO_LARGE":
-		*e = ContactListStatusEnum(s)
+		*e = ContactListStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactListStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactListStatusEnum: %v", v)
 	}
 }
 

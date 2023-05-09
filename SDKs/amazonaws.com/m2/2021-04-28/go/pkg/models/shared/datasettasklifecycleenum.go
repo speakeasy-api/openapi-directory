@@ -15,20 +15,24 @@ const (
 	DataSetTaskLifecycleEnumCompleted DataSetTaskLifecycleEnum = "Completed"
 )
 
+func (e DataSetTaskLifecycleEnum) ToPointer() *DataSetTaskLifecycleEnum {
+	return &e
+}
+
 func (e *DataSetTaskLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Creating":
 		fallthrough
 	case "Running":
 		fallthrough
 	case "Completed":
-		*e = DataSetTaskLifecycleEnum(s)
+		*e = DataSetTaskLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSetTaskLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSetTaskLifecycleEnum: %v", v)
 	}
 }

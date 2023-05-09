@@ -36,12 +36,16 @@ const (
 	DirectoryChromeosdevicesListOrderByEnumStatus            DirectoryChromeosdevicesListOrderByEnum = "status"
 )
 
+func (e DirectoryChromeosdevicesListOrderByEnum) ToPointer() *DirectoryChromeosdevicesListOrderByEnum {
+	return &e
+}
+
 func (e *DirectoryChromeosdevicesListOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "annotatedLocation":
 		fallthrough
 	case "annotatedUser":
@@ -53,10 +57,10 @@ func (e *DirectoryChromeosdevicesListOrderByEnum) UnmarshalJSON(data []byte) err
 	case "serialNumber":
 		fallthrough
 	case "status":
-		*e = DirectoryChromeosdevicesListOrderByEnum(s)
+		*e = DirectoryChromeosdevicesListOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryChromeosdevicesListOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryChromeosdevicesListOrderByEnum: %v", v)
 	}
 }
 
@@ -68,19 +72,23 @@ const (
 	DirectoryChromeosdevicesListProjectionEnumFull  DirectoryChromeosdevicesListProjectionEnum = "FULL"
 )
 
+func (e DirectoryChromeosdevicesListProjectionEnum) ToPointer() *DirectoryChromeosdevicesListProjectionEnum {
+	return &e
+}
+
 func (e *DirectoryChromeosdevicesListProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = DirectoryChromeosdevicesListProjectionEnum(s)
+		*e = DirectoryChromeosdevicesListProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryChromeosdevicesListProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryChromeosdevicesListProjectionEnum: %v", v)
 	}
 }
 
@@ -92,19 +100,23 @@ const (
 	DirectoryChromeosdevicesListSortOrderEnumDescending DirectoryChromeosdevicesListSortOrderEnum = "DESCENDING"
 )
 
+func (e DirectoryChromeosdevicesListSortOrderEnum) ToPointer() *DirectoryChromeosdevicesListSortOrderEnum {
+	return &e
+}
+
 func (e *DirectoryChromeosdevicesListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DirectoryChromeosdevicesListSortOrderEnum(s)
+		*e = DirectoryChromeosdevicesListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryChromeosdevicesListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryChromeosdevicesListSortOrderEnum: %v", v)
 	}
 }
 

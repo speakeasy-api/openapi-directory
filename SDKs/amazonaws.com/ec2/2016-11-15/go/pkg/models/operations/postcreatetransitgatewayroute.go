@@ -15,17 +15,21 @@ const (
 	POSTCreateTransitGatewayRouteActionEnumCreateTransitGatewayRoute POSTCreateTransitGatewayRouteActionEnum = "CreateTransitGatewayRoute"
 )
 
+func (e POSTCreateTransitGatewayRouteActionEnum) ToPointer() *POSTCreateTransitGatewayRouteActionEnum {
+	return &e
+}
+
 func (e *POSTCreateTransitGatewayRouteActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateTransitGatewayRoute":
-		*e = POSTCreateTransitGatewayRouteActionEnum(s)
+		*e = POSTCreateTransitGatewayRouteActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateTransitGatewayRouteActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateTransitGatewayRouteActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateTransitGatewayRouteVersionEnumTwoThousandAndSixteen1115 POSTCreateTransitGatewayRouteVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateTransitGatewayRouteVersionEnum) ToPointer() *POSTCreateTransitGatewayRouteVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateTransitGatewayRouteVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateTransitGatewayRouteVersionEnum(s)
+		*e = POSTCreateTransitGatewayRouteVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateTransitGatewayRouteVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateTransitGatewayRouteVersionEnum: %v", v)
 	}
 }
 

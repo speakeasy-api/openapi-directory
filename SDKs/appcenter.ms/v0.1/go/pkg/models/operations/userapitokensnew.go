@@ -20,19 +20,23 @@ const (
 	UserAPITokensNewRequestBodyScopeEnumViewer UserAPITokensNewRequestBodyScopeEnum = "viewer"
 )
 
+func (e UserAPITokensNewRequestBodyScopeEnum) ToPointer() *UserAPITokensNewRequestBodyScopeEnum {
+	return &e
+}
+
 func (e *UserAPITokensNewRequestBodyScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "viewer":
-		*e = UserAPITokensNewRequestBodyScopeEnum(s)
+		*e = UserAPITokensNewRequestBodyScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserAPITokensNewRequestBodyScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserAPITokensNewRequestBodyScopeEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	UserAPITokensNew401ApplicationJSONErrorCodeEnumTooManyRequests     UserAPITokensNew401ApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e UserAPITokensNew401ApplicationJSONErrorCodeEnum) ToPointer() *UserAPITokensNew401ApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *UserAPITokensNew401ApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -75,10 +83,10 @@ func (e *UserAPITokensNew401ApplicationJSONErrorCodeEnum) UnmarshalJSON(data []b
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = UserAPITokensNew401ApplicationJSONErrorCodeEnum(s)
+		*e = UserAPITokensNew401ApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserAPITokensNew401ApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserAPITokensNew401ApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -104,12 +112,16 @@ const (
 	UserAPITokensNew400ApplicationJSONErrorCodeEnumTooManyRequests     UserAPITokensNew400ApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e UserAPITokensNew400ApplicationJSONErrorCodeEnum) ToPointer() *UserAPITokensNew400ApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *UserAPITokensNew400ApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -123,10 +135,10 @@ func (e *UserAPITokensNew400ApplicationJSONErrorCodeEnum) UnmarshalJSON(data []b
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = UserAPITokensNew400ApplicationJSONErrorCodeEnum(s)
+		*e = UserAPITokensNew400ApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserAPITokensNew400ApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserAPITokensNew400ApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -147,19 +159,23 @@ const (
 	UserAPITokensNew201ApplicationJSONScopeEnumViewer UserAPITokensNew201ApplicationJSONScopeEnum = "viewer"
 )
 
+func (e UserAPITokensNew201ApplicationJSONScopeEnum) ToPointer() *UserAPITokensNew201ApplicationJSONScopeEnum {
+	return &e
+}
+
 func (e *UserAPITokensNew201ApplicationJSONScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "viewer":
-		*e = UserAPITokensNew201ApplicationJSONScopeEnum(s)
+		*e = UserAPITokensNew201ApplicationJSONScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserAPITokensNew201ApplicationJSONScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserAPITokensNew201ApplicationJSONScopeEnum: %v", v)
 	}
 }
 

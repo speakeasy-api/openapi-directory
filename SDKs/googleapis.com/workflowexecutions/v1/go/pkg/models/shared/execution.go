@@ -14,23 +14,30 @@ const (
 	ExecutionCallLogLevelEnumCallLogLevelUnspecified ExecutionCallLogLevelEnum = "CALL_LOG_LEVEL_UNSPECIFIED"
 	ExecutionCallLogLevelEnumLogAllCalls             ExecutionCallLogLevelEnum = "LOG_ALL_CALLS"
 	ExecutionCallLogLevelEnumLogErrorsOnly           ExecutionCallLogLevelEnum = "LOG_ERRORS_ONLY"
+	ExecutionCallLogLevelEnumLogNone                 ExecutionCallLogLevelEnum = "LOG_NONE"
 )
 
+func (e ExecutionCallLogLevelEnum) ToPointer() *ExecutionCallLogLevelEnum {
+	return &e
+}
+
 func (e *ExecutionCallLogLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CALL_LOG_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "LOG_ALL_CALLS":
 		fallthrough
 	case "LOG_ERRORS_ONLY":
-		*e = ExecutionCallLogLevelEnum(s)
+		fallthrough
+	case "LOG_NONE":
+		*e = ExecutionCallLogLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionCallLogLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionCallLogLevelEnum: %v", v)
 	}
 }
 
@@ -43,14 +50,19 @@ const (
 	ExecutionStateEnumSucceeded        ExecutionStateEnum = "SUCCEEDED"
 	ExecutionStateEnumFailed           ExecutionStateEnum = "FAILED"
 	ExecutionStateEnumCancelled        ExecutionStateEnum = "CANCELLED"
+	ExecutionStateEnumUnavailable      ExecutionStateEnum = "UNAVAILABLE"
 )
 
+func (e ExecutionStateEnum) ToPointer() *ExecutionStateEnum {
+	return &e
+}
+
 func (e *ExecutionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -60,10 +72,12 @@ func (e *ExecutionStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "CANCELLED":
-		*e = ExecutionStateEnum(s)
+		fallthrough
+	case "UNAVAILABLE":
+		*e = ExecutionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionStateEnum: %v", v)
 	}
 }
 
@@ -89,6 +103,8 @@ type Execution struct {
 	StartTime *string `json:"startTime,omitempty"`
 	// Output only. Current state of the execution.
 	State *ExecutionStateEnum `json:"state,omitempty"`
+	// Describes an error related to the current state of the Execution resource.
+	StateError *StateError `json:"stateError,omitempty"`
 	// Represents the current status of this execution.
 	Status *Status `json:"status,omitempty"`
 	// Output only. Revision of the workflow this execution is using.
@@ -105,6 +121,8 @@ type ExecutionInput struct {
 	Error *Error `json:"error,omitempty"`
 	// Labels associated with this execution. Labels can contain at most 64 entries. Keys and values can be no longer than 63 characters and can only contain lowercase letters, numeric characters, underscores, and dashes. Label keys must start with a letter. International characters are allowed. By default, labels are inherited from the workflow but are overridden by any labels associated with the execution.
 	Labels map[string]string `json:"labels,omitempty"`
+	// Describes an error related to the current state of the Execution resource.
+	StateError *StateError `json:"stateError,omitempty"`
 	// Represents the current status of this execution.
 	Status *Status `json:"status,omitempty"`
 }

@@ -22,21 +22,25 @@ const (
 	WebriskThreatListsComputeDiffConstraintsSupportedCompressionsEnumRice                       WebriskThreatListsComputeDiffConstraintsSupportedCompressionsEnum = "RICE"
 )
 
+func (e WebriskThreatListsComputeDiffConstraintsSupportedCompressionsEnum) ToPointer() *WebriskThreatListsComputeDiffConstraintsSupportedCompressionsEnum {
+	return &e
+}
+
 func (e *WebriskThreatListsComputeDiffConstraintsSupportedCompressionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPRESSION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "RICE":
-		*e = WebriskThreatListsComputeDiffConstraintsSupportedCompressionsEnum(s)
+		*e = WebriskThreatListsComputeDiffConstraintsSupportedCompressionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebriskThreatListsComputeDiffConstraintsSupportedCompressionsEnum: %s", s)
+		return fmt.Errorf("invalid value for WebriskThreatListsComputeDiffConstraintsSupportedCompressionsEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	WebriskThreatListsComputeDiffThreatTypeEnumSocialEngineeringExtendedCoverage WebriskThreatListsComputeDiffThreatTypeEnum = "SOCIAL_ENGINEERING_EXTENDED_COVERAGE"
 )
 
+func (e WebriskThreatListsComputeDiffThreatTypeEnum) ToPointer() *WebriskThreatListsComputeDiffThreatTypeEnum {
+	return &e
+}
+
 func (e *WebriskThreatListsComputeDiffThreatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THREAT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MALWARE":
@@ -66,10 +74,10 @@ func (e *WebriskThreatListsComputeDiffThreatTypeEnum) UnmarshalJSON(data []byte)
 	case "UNWANTED_SOFTWARE":
 		fallthrough
 	case "SOCIAL_ENGINEERING_EXTENDED_COVERAGE":
-		*e = WebriskThreatListsComputeDiffThreatTypeEnum(s)
+		*e = WebriskThreatListsComputeDiffThreatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebriskThreatListsComputeDiffThreatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WebriskThreatListsComputeDiffThreatTypeEnum: %v", v)
 	}
 }
 

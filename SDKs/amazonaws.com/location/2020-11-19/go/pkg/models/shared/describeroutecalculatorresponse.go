@@ -17,21 +17,25 @@ const (
 	DescribeRouteCalculatorResponsePricingPlanEnumMobileAssetManagement DescribeRouteCalculatorResponsePricingPlanEnum = "MobileAssetManagement"
 )
 
+func (e DescribeRouteCalculatorResponsePricingPlanEnum) ToPointer() *DescribeRouteCalculatorResponsePricingPlanEnum {
+	return &e
+}
+
 func (e *DescribeRouteCalculatorResponsePricingPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RequestBasedUsage":
 		fallthrough
 	case "MobileAssetTracking":
 		fallthrough
 	case "MobileAssetManagement":
-		*e = DescribeRouteCalculatorResponsePricingPlanEnum(s)
+		*e = DescribeRouteCalculatorResponsePricingPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeRouteCalculatorResponsePricingPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeRouteCalculatorResponsePricingPlanEnum: %v", v)
 	}
 }
 

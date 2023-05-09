@@ -16,17 +16,21 @@ const (
 	PutBlockPublicAccessConfigurationXAmzTargetEnumElasticMapReducePutBlockPublicAccessConfiguration PutBlockPublicAccessConfigurationXAmzTargetEnum = "ElasticMapReduce.PutBlockPublicAccessConfiguration"
 )
 
+func (e PutBlockPublicAccessConfigurationXAmzTargetEnum) ToPointer() *PutBlockPublicAccessConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutBlockPublicAccessConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.PutBlockPublicAccessConfiguration":
-		*e = PutBlockPublicAccessConfigurationXAmzTargetEnum(s)
+		*e = PutBlockPublicAccessConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutBlockPublicAccessConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutBlockPublicAccessConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

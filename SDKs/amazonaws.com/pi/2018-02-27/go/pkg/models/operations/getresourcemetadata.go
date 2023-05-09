@@ -16,17 +16,21 @@ const (
 	GetResourceMetadataXAmzTargetEnumPerformanceInsightsv20180227GetResourceMetadata GetResourceMetadataXAmzTargetEnum = "PerformanceInsightsv20180227.GetResourceMetadata"
 )
 
+func (e GetResourceMetadataXAmzTargetEnum) ToPointer() *GetResourceMetadataXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetResourceMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PerformanceInsightsv20180227.GetResourceMetadata":
-		*e = GetResourceMetadataXAmzTargetEnum(s)
+		*e = GetResourceMetadataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResourceMetadataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResourceMetadataXAmzTargetEnum: %v", v)
 	}
 }
 

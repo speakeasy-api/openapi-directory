@@ -44,19 +44,23 @@ const (
 	GetRebalanceDetails409ApplicationJSONStatusEnumComplete   GetRebalanceDetails409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e GetRebalanceDetails409ApplicationJSONStatusEnum) ToPointer() *GetRebalanceDetails409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetRebalanceDetails409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = GetRebalanceDetails409ApplicationJSONStatusEnum(s)
+		*e = GetRebalanceDetails409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRebalanceDetails409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRebalanceDetails409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -111,21 +115,25 @@ const (
 	GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnumValue      GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum = "value"
 )
 
+func (e GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum) ToPointer() *GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum {
+	return &e
+}
+
 func (e *GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "percentage":
 		fallthrough
 	case "unit":
 		fallthrough
 	case "value":
-		*e = GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum(s)
+		*e = GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum: %v", v)
 	}
 }
 
@@ -151,12 +159,16 @@ const (
 	GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnumCompleted      GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum = "completed"
 )
 
+func (e GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum) ToPointer() *GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum {
+	return &e
+}
+
 func (e *GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "failed":
 		fallthrough
 	case "processing":
@@ -168,10 +180,10 @@ func (e *GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRe
 	case "buy_in_progress":
 		fallthrough
 	case "completed":
-		*e = GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum(s)
+		*e = GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum: %v", v)
 	}
 }
 
@@ -183,19 +195,23 @@ const (
 	GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsSideEnumSell GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsSideEnum = "sell"
 )
 
+func (e GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsSideEnum) ToPointer() *GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsSideEnum {
+	return &e
+}
+
 func (e *GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsSideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "buy":
 		fallthrough
 	case "sell":
-		*e = GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsSideEnum(s)
+		*e = GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsSideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsSideEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsSideEnum: %v", v)
 	}
 }
 
@@ -208,12 +224,16 @@ const (
 	GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsStatusEnumRejected   GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsStatusEnum = "rejected"
 )
 
+func (e GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsStatusEnum) ToPointer() *GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsStatusEnum {
+	return &e
+}
+
 func (e *GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instructed":
 		fallthrough
 	case "priced":
@@ -221,10 +241,10 @@ func (e *GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRe
 	case "settled":
 		fallthrough
 	case "rejected":
-		*e = GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsStatusEnum(s)
+		*e = GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRebalanceDetails200ApplicationJSONEachPotInstructionOfTheRebalanceRequestTransactionsStatusEnum: %v", v)
 	}
 }
 
@@ -276,12 +296,16 @@ const (
 	GetRebalanceDetails200ApplicationJSONStatusEnumFailed     GetRebalanceDetails200ApplicationJSONStatusEnum = "failed"
 )
 
+func (e GetRebalanceDetails200ApplicationJSONStatusEnum) ToPointer() *GetRebalanceDetails200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetRebalanceDetails200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "processing":
 		fallthrough
 	case "in_progress":
@@ -289,10 +313,10 @@ func (e *GetRebalanceDetails200ApplicationJSONStatusEnum) UnmarshalJSON(data []b
 	case "completed":
 		fallthrough
 	case "failed":
-		*e = GetRebalanceDetails200ApplicationJSONStatusEnum(s)
+		*e = GetRebalanceDetails200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRebalanceDetails200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRebalanceDetails200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

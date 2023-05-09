@@ -93,7 +93,10 @@ func (s *customerGroups) CreateCustomerGroup(ctx context.Context, request shared
 // Deletes a customer group as identified by the `group_id` value.
 func (s *customerGroups) DeleteCustomerGroup(ctx context.Context, request operations.DeleteCustomerGroupRequest, security operations.DeleteCustomerGroupSecurity) (*operations.DeleteCustomerGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/groups/{group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customers/groups/{group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -187,7 +190,10 @@ func (s *customerGroups) ListCustomerGroups(ctx context.Context, request operati
 // Retrieves a specific customer group as identified by the `group_id` value.
 func (s *customerGroups) RetrieveCustomerGroup(ctx context.Context, request operations.RetrieveCustomerGroupRequest, security operations.RetrieveCustomerGroupSecurity) (*operations.RetrieveCustomerGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/groups/{group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customers/groups/{group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -232,7 +238,10 @@ func (s *customerGroups) RetrieveCustomerGroup(ctx context.Context, request oper
 // Updates a customer group as identified by the `group_id` value.
 func (s *customerGroups) UpdateCustomerGroup(ctx context.Context, request operations.UpdateCustomerGroupRequest, security operations.UpdateCustomerGroupSecurity) (*operations.UpdateCustomerGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/groups/{group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customers/groups/{group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCustomerGroupRequest", "json")
 	if err != nil {

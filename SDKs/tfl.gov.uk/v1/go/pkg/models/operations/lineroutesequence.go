@@ -18,21 +18,25 @@ const (
 	LineRouteSequenceDirectionEnumAll      LineRouteSequenceDirectionEnum = "all"
 )
 
+func (e LineRouteSequenceDirectionEnum) ToPointer() *LineRouteSequenceDirectionEnum {
+	return &e
+}
+
 func (e *LineRouteSequenceDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inbound":
 		fallthrough
 	case "outbound":
 		fallthrough
 	case "all":
-		*e = LineRouteSequenceDirectionEnum(s)
+		*e = LineRouteSequenceDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineRouteSequenceDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for LineRouteSequenceDirectionEnum: %v", v)
 	}
 }
 
@@ -43,19 +47,23 @@ const (
 	LineRouteSequenceServiceTypesEnumNight   LineRouteSequenceServiceTypesEnum = "Night"
 )
 
+func (e LineRouteSequenceServiceTypesEnum) ToPointer() *LineRouteSequenceServiceTypesEnum {
+	return &e
+}
+
 func (e *LineRouteSequenceServiceTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Regular":
 		fallthrough
 	case "Night":
-		*e = LineRouteSequenceServiceTypesEnum(s)
+		*e = LineRouteSequenceServiceTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineRouteSequenceServiceTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for LineRouteSequenceServiceTypesEnum: %v", v)
 	}
 }
 

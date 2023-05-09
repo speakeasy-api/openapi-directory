@@ -14,18 +14,22 @@ const (
 	ReplicationRunTypeEnumAutomatic ReplicationRunTypeEnum = "AUTOMATIC"
 )
 
+func (e ReplicationRunTypeEnum) ToPointer() *ReplicationRunTypeEnum {
+	return &e
+}
+
 func (e *ReplicationRunTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ON_DEMAND":
 		fallthrough
 	case "AUTOMATIC":
-		*e = ReplicationRunTypeEnum(s)
+		*e = ReplicationRunTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicationRunTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicationRunTypeEnum: %v", v)
 	}
 }

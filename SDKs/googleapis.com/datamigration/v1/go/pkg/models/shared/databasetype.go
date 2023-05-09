@@ -17,12 +17,16 @@ const (
 	DatabaseTypeEngineEnumOracle                    DatabaseTypeEngineEnum = "ORACLE"
 )
 
+func (e DatabaseTypeEngineEnum) ToPointer() *DatabaseTypeEngineEnum {
+	return &e
+}
+
 func (e *DatabaseTypeEngineEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATABASE_ENGINE_UNSPECIFIED":
 		fallthrough
 	case "MYSQL":
@@ -30,10 +34,10 @@ func (e *DatabaseTypeEngineEnum) UnmarshalJSON(data []byte) error {
 	case "POSTGRESQL":
 		fallthrough
 	case "ORACLE":
-		*e = DatabaseTypeEngineEnum(s)
+		*e = DatabaseTypeEngineEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseTypeEngineEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseTypeEngineEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	DatabaseTypeProviderEnumAlloydb                     DatabaseTypeProviderEnum = "ALLOYDB"
 )
 
+func (e DatabaseTypeProviderEnum) ToPointer() *DatabaseTypeProviderEnum {
+	return &e
+}
+
 func (e *DatabaseTypeProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATABASE_PROVIDER_UNSPECIFIED":
 		fallthrough
 	case "CLOUDSQL":
@@ -63,10 +71,10 @@ func (e *DatabaseTypeProviderEnum) UnmarshalJSON(data []byte) error {
 	case "AURORA":
 		fallthrough
 	case "ALLOYDB":
-		*e = DatabaseTypeProviderEnum(s)
+		*e = DatabaseTypeProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseTypeProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseTypeProviderEnum: %v", v)
 	}
 }
 

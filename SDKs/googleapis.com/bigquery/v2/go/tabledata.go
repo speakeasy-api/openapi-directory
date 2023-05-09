@@ -34,7 +34,10 @@ func newTabledata(defaultClient, securityClient HTTPClient, serverURL, language,
 // BigqueryTabledataInsertAll - Streams data into BigQuery one record at a time without needing to run a load job. Requires the WRITER dataset role.
 func (s *tabledata) BigqueryTabledataInsertAll(ctx context.Context, request operations.BigqueryTabledataInsertAllRequest, security operations.BigqueryTabledataInsertAllSecurity) (*operations.BigqueryTabledataInsertAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/insertAll", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/insertAll", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TableDataInsertAllRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *tabledata) BigqueryTabledataInsertAll(ctx context.Context, request oper
 // BigqueryTabledataList - Retrieves table data from a specified set of rows. Requires the READER dataset role.
 func (s *tabledata) BigqueryTabledataList(ctx context.Context, request operations.BigqueryTabledataListRequest, security operations.BigqueryTabledataListSecurity) (*operations.BigqueryTabledataListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/data", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/data", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

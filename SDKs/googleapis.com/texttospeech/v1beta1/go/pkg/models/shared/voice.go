@@ -17,12 +17,16 @@ const (
 	VoiceSsmlGenderEnumNeutral                    VoiceSsmlGenderEnum = "NEUTRAL"
 )
 
+func (e VoiceSsmlGenderEnum) ToPointer() *VoiceSsmlGenderEnum {
+	return &e
+}
+
 func (e *VoiceSsmlGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSML_VOICE_GENDER_UNSPECIFIED":
 		fallthrough
 	case "MALE":
@@ -30,10 +34,10 @@ func (e *VoiceSsmlGenderEnum) UnmarshalJSON(data []byte) error {
 	case "FEMALE":
 		fallthrough
 	case "NEUTRAL":
-		*e = VoiceSsmlGenderEnum(s)
+		*e = VoiceSsmlGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VoiceSsmlGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for VoiceSsmlGenderEnum: %v", v)
 	}
 }
 

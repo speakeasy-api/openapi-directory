@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/ec2-instanc
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,25 +28,23 @@ func main() {
         }),
     )
 
-    req := operations.SendSSHPublicKeyRequest{
+    ctx := context.Background()
+    res, err := s.SendSSHPublicKey(ctx, operations.SendSSHPublicKeyRequest{
         SendSSHPublicKeyRequest: shared.SendSSHPublicKeyRequest{
-            AvailabilityZone: "corrupti",
+            AvailabilityZone: sdk.String("corrupti"),
             InstanceID: "provident",
             InstanceOSUser: "distinctio",
             SSHPublicKey: "quibusdam",
         },
-        XAmzAlgorithm: "unde",
-        XAmzContentSha256: "nulla",
-        XAmzCredential: "corrupti",
-        XAmzDate: "illum",
-        XAmzSecurityToken: "vel",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "deserunt",
-        XAmzTarget: "AWSEC2InstanceConnectService.SendSSHPublicKey",
-    }
-
-    ctx := context.Background()
-    res, err := s.SendSSHPublicKey(ctx, req)
+        XAmzAlgorithm: sdk.String("unde"),
+        XAmzContentSha256: sdk.String("nulla"),
+        XAmzCredential: sdk.String("corrupti"),
+        XAmzDate: sdk.String("illum"),
+        XAmzSecurityToken: sdk.String("vel"),
+        XAmzSignature: sdk.String("error"),
+        XAmzSignedHeaders: sdk.String("deserunt"),
+        XAmzTarget: operations.SendSSHPublicKeyXAmzTargetEnumAwsec2InstanceConnectServiceSendSSHPublicKey,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -61,10 +59,10 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `SendSSHPublicKey` - Pushes an SSH public key to the specified EC2 instance for use by the specified user. The key remains for 60 seconds. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html">Connect to your Linux instance using EC2 Instance Connect</a> in the <i>Amazon EC2 User Guide</i>.
-* `SendSerialConsoleSSHPublicKey` - Pushes an SSH public key to the specified EC2 instance. The key remains for 60 seconds, which gives you 60 seconds to establish a serial console connection to the instance using SSH. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-serial-console.html">EC2 Serial Console</a> in the <i>Amazon EC2 User Guide</i>.
+* [SendSSHPublicKey](docs/sdk/README.md#sendsshpublickey) - Pushes an SSH public key to the specified EC2 instance for use by the specified user. The key remains for 60 seconds. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html">Connect to your Linux instance using EC2 Instance Connect</a> in the <i>Amazon EC2 User Guide</i>.
+* [SendSerialConsoleSSHPublicKey](docs/sdk/README.md#sendserialconsolesshpublickey) - Pushes an SSH public key to the specified EC2 instance. The key remains for 60 seconds, which gives you 60 seconds to establish a serial console connection to the instance using SSH. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-serial-console.html">EC2 Serial Console</a> in the <i>Amazon EC2 User Guide</i>.
 <!-- End SDK Available Operations -->
 
 ### Maturity

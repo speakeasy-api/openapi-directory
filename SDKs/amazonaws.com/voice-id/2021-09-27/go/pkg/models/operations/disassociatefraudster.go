@@ -16,17 +16,21 @@ const (
 	DisassociateFraudsterXAmzTargetEnumVoiceIDDisassociateFraudster DisassociateFraudsterXAmzTargetEnum = "VoiceID.DisassociateFraudster"
 )
 
+func (e DisassociateFraudsterXAmzTargetEnum) ToPointer() *DisassociateFraudsterXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateFraudsterXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VoiceID.DisassociateFraudster":
-		*e = DisassociateFraudsterXAmzTargetEnum(s)
+		*e = DisassociateFraudsterXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateFraudsterXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateFraudsterXAmzTargetEnum: %v", v)
 	}
 }
 

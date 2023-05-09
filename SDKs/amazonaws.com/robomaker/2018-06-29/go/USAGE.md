@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,7 +16,8 @@ func main() {
         }),
     )
 
-    req := operations.BatchDeleteWorldsRequest{
+    ctx := context.Background()
+    res, err := s.BatchDeleteWorlds(ctx, operations.BatchDeleteWorldsRequest{
         RequestBody: operations.BatchDeleteWorldsRequestBody{
             Worlds: []string{
                 "provident",
@@ -25,17 +25,14 @@ func main() {
                 "quibusdam",
             },
         },
-        XAmzAlgorithm: "unde",
-        XAmzContentSha256: "nulla",
-        XAmzCredential: "corrupti",
-        XAmzDate: "illum",
-        XAmzSecurityToken: "vel",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "deserunt",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchDeleteWorlds(ctx, req)
+        XAmzAlgorithm: sdk.String("unde"),
+        XAmzContentSha256: sdk.String("nulla"),
+        XAmzCredential: sdk.String("corrupti"),
+        XAmzDate: sdk.String("illum"),
+        XAmzSecurityToken: sdk.String("vel"),
+        XAmzSignature: sdk.String("error"),
+        XAmzSignedHeaders: sdk.String("deserunt"),
+    })
     if err != nil {
         log.Fatal(err)
     }

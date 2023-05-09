@@ -18,21 +18,25 @@ const (
 	GetProductsStatusStatusJSONStatusEnumDisabled     GetProductsStatusStatusJSONStatusEnum = "disabled"
 )
 
+func (e GetProductsStatusStatusJSONStatusEnum) ToPointer() *GetProductsStatusStatusJSONStatusEnum {
+	return &e
+}
+
 func (e *GetProductsStatusStatusJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "not-available":
 		fallthrough
 	case "disabled":
-		*e = GetProductsStatusStatusJSONStatusEnum(s)
+		*e = GetProductsStatusStatusJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProductsStatusStatusJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProductsStatusStatusJSONStatusEnum: %v", v)
 	}
 }
 

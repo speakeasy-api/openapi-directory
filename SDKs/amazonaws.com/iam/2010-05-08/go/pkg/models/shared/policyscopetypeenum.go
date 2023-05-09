@@ -15,20 +15,24 @@ const (
 	PolicyScopeTypeEnumLocal PolicyScopeTypeEnum = "Local"
 )
 
+func (e PolicyScopeTypeEnum) ToPointer() *PolicyScopeTypeEnum {
+	return &e
+}
+
 func (e *PolicyScopeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All":
 		fallthrough
 	case "AWS":
 		fallthrough
 	case "Local":
-		*e = PolicyScopeTypeEnum(s)
+		*e = PolicyScopeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyScopeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyScopeTypeEnum: %v", v)
 	}
 }

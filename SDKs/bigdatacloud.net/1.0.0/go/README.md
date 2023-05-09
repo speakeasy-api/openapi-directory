@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/bigdatacloud.net/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.IPGeolocationWithConfidenceAreaAndHazardReportAPIRequest{
-        IP: "193.114.112.122",
-        Key: "{{API KEY}}",
-        LocalityLanguage: "en",
-    }
-
     ctx := context.Background()
-    res, err := s.IPGeolocationWithConfidenceAreaAndHazardReportAPI(ctx, req)
+    res, err := s.IPGeolocationWithConfidenceAreaAndHazardReportAPI(ctx, operations.IPGeolocationWithConfidenceAreaAndHazardReportAPIRequest{
+        IP: sdk.String("193.114.112.122"),
+        Key: sdk.String("{{API KEY}}"),
+        LocalityLanguage: sdk.String("en"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +43,10 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `IPGeolocationWithConfidenceAreaAndHazardReportAPI` - IP Geolocation with Confidence Area and Hazard Report API
-* `IPGeolocationWithConfidenceAreaAPI` - IP Geolocation with Confidence Area API
+* [IPGeolocationWithConfidenceAreaAndHazardReportAPI](docs/sdk/README.md#ipgeolocationwithconfidenceareaandhazardreportapi) - IP Geolocation with Confidence Area and Hazard Report API
+* [IPGeolocationWithConfidenceAreaAPI](docs/sdk/README.md#ipgeolocationwithconfidenceareaapi) - IP Geolocation with Confidence Area API
 <!-- End SDK Available Operations -->
 
 ### Maturity

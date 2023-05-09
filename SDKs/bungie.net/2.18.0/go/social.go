@@ -36,7 +36,10 @@ func newSocial(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // SocialAcceptFriendRequest - Accepts a friend relationship with the target user. The user must be on your incoming friend request list, though no error will occur if they are not.
 func (s *social) SocialAcceptFriendRequest(ctx context.Context, request operations.SocialAcceptFriendRequestRequest, security operations.SocialAcceptFriendRequestSecurity) (*operations.SocialAcceptFriendRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Social/Friends/Requests/Accept/{membershipId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Social/Friends/Requests/Accept/{membershipId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -80,7 +83,10 @@ func (s *social) SocialAcceptFriendRequest(ctx context.Context, request operatio
 // SocialDeclineFriendRequest - Declines a friend relationship with the target user. The user must be on your incoming friend request list, though no error will occur if they are not.
 func (s *social) SocialDeclineFriendRequest(ctx context.Context, request operations.SocialDeclineFriendRequestRequest, security operations.SocialDeclineFriendRequestSecurity) (*operations.SocialDeclineFriendRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Social/Friends/Requests/Decline/{membershipId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Social/Friends/Requests/Decline/{membershipId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -122,7 +128,7 @@ func (s *social) SocialDeclineFriendRequest(ctx context.Context, request operati
 }
 
 // SocialGetFriendList - Returns your Bungie Friend list
-func (s *social) SocialGetFriendList(ctx context.Context) (*operations.SocialGetFriendListResponse, error) {
+func (s *social) SocialGetFriendList(ctx context.Context, security operations.SocialGetFriendListSecurity) (*operations.SocialGetFriendListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Social/Friends/"
 
@@ -131,7 +137,7 @@ func (s *social) SocialGetFriendList(ctx context.Context) (*operations.SocialGet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -166,7 +172,7 @@ func (s *social) SocialGetFriendList(ctx context.Context) (*operations.SocialGet
 }
 
 // SocialGetFriendRequestList - Returns your friend request queue.
-func (s *social) SocialGetFriendRequestList(ctx context.Context) (*operations.SocialGetFriendRequestListResponse, error) {
+func (s *social) SocialGetFriendRequestList(ctx context.Context, security operations.SocialGetFriendRequestListSecurity) (*operations.SocialGetFriendRequestListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Social/Friends/Requests/"
 
@@ -175,7 +181,7 @@ func (s *social) SocialGetFriendRequestList(ctx context.Context) (*operations.So
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -212,7 +218,10 @@ func (s *social) SocialGetFriendRequestList(ctx context.Context) (*operations.So
 // SocialGetPlatformFriendList - Gets the platform friend of the requested type, with additional information if they have Bungie accounts. Must have a recent login session with said platform.
 func (s *social) SocialGetPlatformFriendList(ctx context.Context, request operations.SocialGetPlatformFriendListRequest) (*operations.SocialGetPlatformFriendListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Social/PlatformFriends/{friendPlatform}/{page}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Social/PlatformFriends/{friendPlatform}/{page}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -256,7 +265,10 @@ func (s *social) SocialGetPlatformFriendList(ctx context.Context, request operat
 // SocialIssueFriendRequest - Requests a friend relationship with the target user. Any of the target user's linked membership ids are valid inputs.
 func (s *social) SocialIssueFriendRequest(ctx context.Context, request operations.SocialIssueFriendRequestRequest, security operations.SocialIssueFriendRequestSecurity) (*operations.SocialIssueFriendRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Social/Friends/Add/{membershipId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Social/Friends/Add/{membershipId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -300,7 +312,10 @@ func (s *social) SocialIssueFriendRequest(ctx context.Context, request operation
 // SocialRemoveFriend - Remove a friend relationship with the target user. The user must be on your friend list, though no error will occur if they are not.
 func (s *social) SocialRemoveFriend(ctx context.Context, request operations.SocialRemoveFriendRequest, security operations.SocialRemoveFriendSecurity) (*operations.SocialRemoveFriendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Social/Friends/Remove/{membershipId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Social/Friends/Remove/{membershipId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -344,7 +359,10 @@ func (s *social) SocialRemoveFriend(ctx context.Context, request operations.Soci
 // SocialRemoveFriendRequest - Remove a friend relationship with the target user. The user must be on your outgoing request friend list, though no error will occur if they are not.
 func (s *social) SocialRemoveFriendRequest(ctx context.Context, request operations.SocialRemoveFriendRequestRequest, security operations.SocialRemoveFriendRequestSecurity) (*operations.SocialRemoveFriendRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Social/Friends/Requests/Remove/{membershipId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Social/Friends/Requests/Remove/{membershipId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

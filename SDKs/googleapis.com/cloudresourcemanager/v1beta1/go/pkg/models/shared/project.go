@@ -17,12 +17,16 @@ const (
 	ProjectLifecycleStateEnumDeleteInProgress          ProjectLifecycleStateEnum = "DELETE_IN_PROGRESS"
 )
 
+func (e ProjectLifecycleStateEnum) ToPointer() *ProjectLifecycleStateEnum {
+	return &e
+}
+
 func (e *ProjectLifecycleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIFECYCLE_STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -30,10 +34,10 @@ func (e *ProjectLifecycleStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETE_REQUESTED":
 		fallthrough
 	case "DELETE_IN_PROGRESS":
-		*e = ProjectLifecycleStateEnum(s)
+		*e = ProjectLifecycleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectLifecycleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectLifecycleStateEnum: %v", v)
 	}
 }
 

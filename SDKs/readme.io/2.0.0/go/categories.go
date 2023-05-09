@@ -34,7 +34,10 @@ func newCategories(defaultClient, securityClient HTTPClient, serverURL, language
 // Returns the category with this slug
 func (s *categories) GetCategory(ctx context.Context, request operations.GetCategoryRequest, security operations.GetCategorySecurity) (*operations.GetCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/categories/{slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *categories) GetCategory(ctx context.Context, request operations.GetCate
 // Returns the docs and children docs within this category
 func (s *categories) GetCategoryDocs(ctx context.Context, request operations.GetCategoryDocsRequest, security operations.GetCategoryDocsSecurity) (*operations.GetCategoryDocsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{slug}/docs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/categories/{slug}/docs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

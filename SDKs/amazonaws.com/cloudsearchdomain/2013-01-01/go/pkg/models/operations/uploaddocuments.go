@@ -17,19 +17,23 @@ const (
 	UploadDocumentsContentTypeEnumApplicationXML  UploadDocumentsContentTypeEnum = "application/xml"
 )
 
+func (e UploadDocumentsContentTypeEnum) ToPointer() *UploadDocumentsContentTypeEnum {
+	return &e
+}
+
 func (e *UploadDocumentsContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "application/json":
 		fallthrough
 	case "application/xml":
-		*e = UploadDocumentsContentTypeEnum(s)
+		*e = UploadDocumentsContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UploadDocumentsContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UploadDocumentsContentTypeEnum: %v", v)
 	}
 }
 
@@ -45,17 +49,21 @@ const (
 	UploadDocumentsFormatEnumSDK UploadDocumentsFormatEnum = "sdk"
 )
 
+func (e UploadDocumentsFormatEnum) ToPointer() *UploadDocumentsFormatEnum {
+	return &e
+}
+
 func (e *UploadDocumentsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sdk":
-		*e = UploadDocumentsFormatEnum(s)
+		*e = UploadDocumentsFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UploadDocumentsFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for UploadDocumentsFormatEnum: %v", v)
 	}
 }
 

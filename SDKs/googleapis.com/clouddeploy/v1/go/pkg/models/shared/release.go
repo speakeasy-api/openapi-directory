@@ -17,12 +17,16 @@ const (
 	ReleaseRenderStateEnumInProgress             ReleaseRenderStateEnum = "IN_PROGRESS"
 )
 
+func (e ReleaseRenderStateEnum) ToPointer() *ReleaseRenderStateEnum {
+	return &e
+}
+
 func (e *ReleaseRenderStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RENDER_STATE_UNSPECIFIED":
 		fallthrough
 	case "SUCCEEDED":
@@ -30,10 +34,10 @@ func (e *ReleaseRenderStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "IN_PROGRESS":
-		*e = ReleaseRenderStateEnum(s)
+		*e = ReleaseRenderStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleaseRenderStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleaseRenderStateEnum: %v", v)
 	}
 }
 

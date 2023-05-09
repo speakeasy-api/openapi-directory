@@ -18,12 +18,16 @@ const (
 	CryptoKeyPurposeEnumMac                         CryptoKeyPurposeEnum = "MAC"
 )
 
+func (e CryptoKeyPurposeEnum) ToPointer() *CryptoKeyPurposeEnum {
+	return &e
+}
+
 func (e *CryptoKeyPurposeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRYPTO_KEY_PURPOSE_UNSPECIFIED":
 		fallthrough
 	case "ENCRYPT_DECRYPT":
@@ -33,10 +37,10 @@ func (e *CryptoKeyPurposeEnum) UnmarshalJSON(data []byte) error {
 	case "ASYMMETRIC_DECRYPT":
 		fallthrough
 	case "MAC":
-		*e = CryptoKeyPurposeEnum(s)
+		*e = CryptoKeyPurposeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CryptoKeyPurposeEnum: %s", s)
+		return fmt.Errorf("invalid value for CryptoKeyPurposeEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	StreamViewTypeEnumKeysOnly        StreamViewTypeEnum = "KEYS_ONLY"
 )
 
+func (e StreamViewTypeEnum) ToPointer() *StreamViewTypeEnum {
+	return &e
+}
+
 func (e *StreamViewTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEW_IMAGE":
 		fallthrough
 	case "OLD_IMAGE":
@@ -29,9 +33,9 @@ func (e *StreamViewTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NEW_AND_OLD_IMAGES":
 		fallthrough
 	case "KEYS_ONLY":
-		*e = StreamViewTypeEnum(s)
+		*e = StreamViewTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamViewTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamViewTypeEnum: %v", v)
 	}
 }

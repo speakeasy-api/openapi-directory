@@ -16,21 +16,25 @@ const (
 	NetworkConfigConnectModeEnumPrivateServiceAccess   NetworkConfigConnectModeEnum = "PRIVATE_SERVICE_ACCESS"
 )
 
+func (e NetworkConfigConnectModeEnum) ToPointer() *NetworkConfigConnectModeEnum {
+	return &e
+}
+
 func (e *NetworkConfigConnectModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECT_MODE_UNSPECIFIED":
 		fallthrough
 	case "DIRECT_PEERING":
 		fallthrough
 	case "PRIVATE_SERVICE_ACCESS":
-		*e = NetworkConfigConnectModeEnum(s)
+		*e = NetworkConfigConnectModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkConfigConnectModeEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkConfigConnectModeEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	NetworkConfigModesEnumModeIpv4               NetworkConfigModesEnum = "MODE_IPV4"
 )
 
+func (e NetworkConfigModesEnum) ToPointer() *NetworkConfigModesEnum {
+	return &e
+}
+
 func (e *NetworkConfigModesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADDRESS_MODE_UNSPECIFIED":
 		fallthrough
 	case "MODE_IPV4":
-		*e = NetworkConfigModesEnum(s)
+		*e = NetworkConfigModesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkConfigModesEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkConfigModesEnum: %v", v)
 	}
 }
 

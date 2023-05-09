@@ -16,17 +16,21 @@ const (
 	ListEndpointsXAmzTargetEnumComprehend20171127ListEndpoints ListEndpointsXAmzTargetEnum = "Comprehend_20171127.ListEndpoints"
 )
 
+func (e ListEndpointsXAmzTargetEnum) ToPointer() *ListEndpointsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListEndpointsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.ListEndpoints":
-		*e = ListEndpointsXAmzTargetEnum(s)
+		*e = ListEndpointsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEndpointsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEndpointsXAmzTargetEnum: %v", v)
 	}
 }
 

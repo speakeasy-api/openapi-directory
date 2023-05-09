@@ -15,17 +15,21 @@ const (
 	POSTModifyInstanceMetadataOptionsActionEnumModifyInstanceMetadataOptions POSTModifyInstanceMetadataOptionsActionEnum = "ModifyInstanceMetadataOptions"
 )
 
+func (e POSTModifyInstanceMetadataOptionsActionEnum) ToPointer() *POSTModifyInstanceMetadataOptionsActionEnum {
+	return &e
+}
+
 func (e *POSTModifyInstanceMetadataOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyInstanceMetadataOptions":
-		*e = POSTModifyInstanceMetadataOptionsActionEnum(s)
+		*e = POSTModifyInstanceMetadataOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyInstanceMetadataOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyInstanceMetadataOptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyInstanceMetadataOptionsVersionEnumTwoThousandAndSixteen1115 POSTModifyInstanceMetadataOptionsVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyInstanceMetadataOptionsVersionEnum) ToPointer() *POSTModifyInstanceMetadataOptionsVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyInstanceMetadataOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyInstanceMetadataOptionsVersionEnum(s)
+		*e = POSTModifyInstanceMetadataOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyInstanceMetadataOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyInstanceMetadataOptionsVersionEnum: %v", v)
 	}
 }
 

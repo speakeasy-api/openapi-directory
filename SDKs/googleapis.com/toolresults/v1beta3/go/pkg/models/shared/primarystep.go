@@ -19,12 +19,16 @@ const (
 	PrimaryStepRollUpEnumFlaky        PrimaryStepRollUpEnum = "flaky"
 )
 
+func (e PrimaryStepRollUpEnum) ToPointer() *PrimaryStepRollUpEnum {
+	return &e
+}
+
 func (e *PrimaryStepRollUpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unset":
 		fallthrough
 	case "success":
@@ -36,10 +40,10 @@ func (e *PrimaryStepRollUpEnum) UnmarshalJSON(data []byte) error {
 	case "skipped":
 		fallthrough
 	case "flaky":
-		*e = PrimaryStepRollUpEnum(s)
+		*e = PrimaryStepRollUpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrimaryStepRollUpEnum: %s", s)
+		return fmt.Errorf("invalid value for PrimaryStepRollUpEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTGetIpamDiscoveredResourceCidrsActionEnumGetIpamDiscoveredResourceCidrs POSTGetIpamDiscoveredResourceCidrsActionEnum = "GetIpamDiscoveredResourceCidrs"
 )
 
+func (e POSTGetIpamDiscoveredResourceCidrsActionEnum) ToPointer() *POSTGetIpamDiscoveredResourceCidrsActionEnum {
+	return &e
+}
+
 func (e *POSTGetIpamDiscoveredResourceCidrsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetIpamDiscoveredResourceCidrs":
-		*e = POSTGetIpamDiscoveredResourceCidrsActionEnum(s)
+		*e = POSTGetIpamDiscoveredResourceCidrsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetIpamDiscoveredResourceCidrsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetIpamDiscoveredResourceCidrsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetIpamDiscoveredResourceCidrsVersionEnumTwoThousandAndSixteen1115 POSTGetIpamDiscoveredResourceCidrsVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetIpamDiscoveredResourceCidrsVersionEnum) ToPointer() *POSTGetIpamDiscoveredResourceCidrsVersionEnum {
+	return &e
+}
+
 func (e *POSTGetIpamDiscoveredResourceCidrsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetIpamDiscoveredResourceCidrsVersionEnum(s)
+		*e = POSTGetIpamDiscoveredResourceCidrsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetIpamDiscoveredResourceCidrsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetIpamDiscoveredResourceCidrsVersionEnum: %v", v)
 	}
 }
 

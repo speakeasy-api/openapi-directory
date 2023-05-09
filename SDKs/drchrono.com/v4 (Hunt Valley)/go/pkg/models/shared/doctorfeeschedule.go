@@ -18,12 +18,16 @@ const (
 	DoctorFeeScheduleCodeTypeEnumRevenue DoctorFeeScheduleCodeTypeEnum = "Revenue"
 )
 
+func (e DoctorFeeScheduleCodeTypeEnum) ToPointer() *DoctorFeeScheduleCodeTypeEnum {
+	return &e
+}
+
 func (e *DoctorFeeScheduleCodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CPT":
 		fallthrough
 	case "HCPCS":
@@ -35,10 +39,10 @@ func (e *DoctorFeeScheduleCodeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ICD10":
 		fallthrough
 	case "Revenue":
-		*e = DoctorFeeScheduleCodeTypeEnum(s)
+		*e = DoctorFeeScheduleCodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoctorFeeScheduleCodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DoctorFeeScheduleCodeTypeEnum: %v", v)
 	}
 }
 
@@ -478,12 +482,16 @@ const (
 	DoctorFeeScheduleCPTHCPCSModifierNumber2EnumEightP       DoctorFeeScheduleCPTHCPCSModifierNumber2Enum = "8P"
 )
 
+func (e DoctorFeeScheduleCPTHCPCSModifierNumber2Enum) ToPointer() *DoctorFeeScheduleCPTHCPCSModifierNumber2Enum {
+	return &e
+}
+
 func (e *DoctorFeeScheduleCPTHCPCSModifierNumber2Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "17":
@@ -1345,10 +1353,10 @@ func (e *DoctorFeeScheduleCPTHCPCSModifierNumber2Enum) UnmarshalJSON(data []byte
 	case "3P":
 		fallthrough
 	case "8P":
-		*e = DoctorFeeScheduleCPTHCPCSModifierNumber2Enum(s)
+		*e = DoctorFeeScheduleCPTHCPCSModifierNumber2Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoctorFeeScheduleCPTHCPCSModifierNumber2Enum: %s", s)
+		return fmt.Errorf("invalid value for DoctorFeeScheduleCPTHCPCSModifierNumber2Enum: %v", v)
 	}
 }
 
@@ -1788,12 +1796,16 @@ const (
 	DoctorFeeScheduleCPTHCPCSModifierNumber3EnumEightP       DoctorFeeScheduleCPTHCPCSModifierNumber3Enum = "8P"
 )
 
+func (e DoctorFeeScheduleCPTHCPCSModifierNumber3Enum) ToPointer() *DoctorFeeScheduleCPTHCPCSModifierNumber3Enum {
+	return &e
+}
+
 func (e *DoctorFeeScheduleCPTHCPCSModifierNumber3Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "17":
@@ -2655,10 +2667,10 @@ func (e *DoctorFeeScheduleCPTHCPCSModifierNumber3Enum) UnmarshalJSON(data []byte
 	case "3P":
 		fallthrough
 	case "8P":
-		*e = DoctorFeeScheduleCPTHCPCSModifierNumber3Enum(s)
+		*e = DoctorFeeScheduleCPTHCPCSModifierNumber3Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoctorFeeScheduleCPTHCPCSModifierNumber3Enum: %s", s)
+		return fmt.Errorf("invalid value for DoctorFeeScheduleCPTHCPCSModifierNumber3Enum: %v", v)
 	}
 }
 
@@ -3098,12 +3110,16 @@ const (
 	DoctorFeeScheduleCPTHCPCSModifierNumber4EnumEightP       DoctorFeeScheduleCPTHCPCSModifierNumber4Enum = "8P"
 )
 
+func (e DoctorFeeScheduleCPTHCPCSModifierNumber4Enum) ToPointer() *DoctorFeeScheduleCPTHCPCSModifierNumber4Enum {
+	return &e
+}
+
 func (e *DoctorFeeScheduleCPTHCPCSModifierNumber4Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "17":
@@ -3965,10 +3981,10 @@ func (e *DoctorFeeScheduleCPTHCPCSModifierNumber4Enum) UnmarshalJSON(data []byte
 	case "3P":
 		fallthrough
 	case "8P":
-		*e = DoctorFeeScheduleCPTHCPCSModifierNumber4Enum(s)
+		*e = DoctorFeeScheduleCPTHCPCSModifierNumber4Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoctorFeeScheduleCPTHCPCSModifierNumber4Enum: %s", s)
+		return fmt.Errorf("invalid value for DoctorFeeScheduleCPTHCPCSModifierNumber4Enum: %v", v)
 	}
 }
 
@@ -3982,12 +3998,16 @@ const (
 	DoctorFeeScheduleNDCUnitsEnumUn DoctorFeeScheduleNDCUnitsEnum = "UN"
 )
 
+func (e DoctorFeeScheduleNDCUnitsEnum) ToPointer() *DoctorFeeScheduleNDCUnitsEnum {
+	return &e
+}
+
 func (e *DoctorFeeScheduleNDCUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "F2":
 		fallthrough
 	case "GR":
@@ -3997,10 +4017,10 @@ func (e *DoctorFeeScheduleNDCUnitsEnum) UnmarshalJSON(data []byte) error {
 	case "ML":
 		fallthrough
 	case "UN":
-		*e = DoctorFeeScheduleNDCUnitsEnum(s)
+		*e = DoctorFeeScheduleNDCUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoctorFeeScheduleNDCUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for DoctorFeeScheduleNDCUnitsEnum: %v", v)
 	}
 }
 

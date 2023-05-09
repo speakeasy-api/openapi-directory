@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - AWS Amplify Admin API
 // https://docs.aws.amazon.com/amplifybackend/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // CloneBackend - This operation clones an existing backend.
 func (s *SDK) CloneBackend(ctx context.Context, request operations.CloneBackendRequest) (*operations.CloneBackendResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/environments/{backendEnvironmentName}/clone", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/environments/{backendEnvironmentName}/clone", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -306,7 +324,10 @@ func (s *SDK) CreateBackend(ctx context.Context, request operations.CreateBacken
 // CreateBackendAPI - Creates a new backend API resource.
 func (s *SDK) CreateBackendAPI(ctx context.Context, request operations.CreateBackendAPIRequest) (*operations.CreateBackendAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -402,7 +423,10 @@ func (s *SDK) CreateBackendAPI(ctx context.Context, request operations.CreateBac
 // CreateBackendAuth - Creates a new backend authentication resource.
 func (s *SDK) CreateBackendAuth(ctx context.Context, request operations.CreateBackendAuthRequest) (*operations.CreateBackendAuthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -498,7 +522,10 @@ func (s *SDK) CreateBackendAuth(ctx context.Context, request operations.CreateBa
 // CreateBackendConfig - Creates a config object for a backend.
 func (s *SDK) CreateBackendConfig(ctx context.Context, request operations.CreateBackendConfigRequest) (*operations.CreateBackendConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -594,7 +621,10 @@ func (s *SDK) CreateBackendConfig(ctx context.Context, request operations.Create
 // CreateBackendStorage - Creates a backend storage resource.
 func (s *SDK) CreateBackendStorage(ctx context.Context, request operations.CreateBackendStorageRequest) (*operations.CreateBackendStorageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -690,7 +720,10 @@ func (s *SDK) CreateBackendStorage(ctx context.Context, request operations.Creat
 // CreateToken - Generates a one-time challenge code to authenticate a user into your Amplify Admin UI.
 func (s *SDK) CreateToken(ctx context.Context, request operations.CreateTokenRequest) (*operations.CreateTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/challenge", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/challenge", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -776,7 +809,10 @@ func (s *SDK) CreateToken(ctx context.Context, request operations.CreateTokenReq
 // DeleteBackend - Removes an existing environment from your Amplify project.
 func (s *SDK) DeleteBackend(ctx context.Context, request operations.DeleteBackendRequest) (*operations.DeleteBackendResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/environments/{backendEnvironmentName}/remove", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/environments/{backendEnvironmentName}/remove", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -862,7 +898,10 @@ func (s *SDK) DeleteBackend(ctx context.Context, request operations.DeleteBacken
 // DeleteBackendAPI - Deletes an existing backend API resource.
 func (s *SDK) DeleteBackendAPI(ctx context.Context, request operations.DeleteBackendAPIRequest) (*operations.DeleteBackendAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/remove", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/remove", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -958,7 +997,10 @@ func (s *SDK) DeleteBackendAPI(ctx context.Context, request operations.DeleteBac
 // DeleteBackendAuth - Deletes an existing backend authentication resource.
 func (s *SDK) DeleteBackendAuth(ctx context.Context, request operations.DeleteBackendAuthRequest) (*operations.DeleteBackendAuthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}/remove", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}/remove", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1054,7 +1096,10 @@ func (s *SDK) DeleteBackendAuth(ctx context.Context, request operations.DeleteBa
 // DeleteBackendStorage - Removes the specified backend storage resource.
 func (s *SDK) DeleteBackendStorage(ctx context.Context, request operations.DeleteBackendStorageRequest) (*operations.DeleteBackendStorageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}/remove", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}/remove", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1150,7 +1195,10 @@ func (s *SDK) DeleteBackendStorage(ctx context.Context, request operations.Delet
 // DeleteToken - Deletes the challenge token based on the given appId and sessionId.
 func (s *SDK) DeleteToken(ctx context.Context, request operations.DeleteTokenRequest) (*operations.DeleteTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/challenge/{sessionId}/remove", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/challenge/{sessionId}/remove", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1236,7 +1284,10 @@ func (s *SDK) DeleteToken(ctx context.Context, request operations.DeleteTokenReq
 // GenerateBackendAPIModels - Generates a model schema for an existing backend API resource.
 func (s *SDK) GenerateBackendAPIModels(ctx context.Context, request operations.GenerateBackendAPIModelsRequest) (*operations.GenerateBackendAPIModelsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/generateModels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/generateModels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1332,7 +1383,10 @@ func (s *SDK) GenerateBackendAPIModels(ctx context.Context, request operations.G
 // GetBackend - Provides project-level details for your Amplify UI project.
 func (s *SDK) GetBackend(ctx context.Context, request operations.GetBackendRequest) (*operations.GetBackendResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1428,7 +1482,10 @@ func (s *SDK) GetBackend(ctx context.Context, request operations.GetBackendReque
 // GetBackendAPI - Gets the details for a backend API.
 func (s *SDK) GetBackendAPI(ctx context.Context, request operations.GetBackendAPIRequest) (*operations.GetBackendAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1524,7 +1581,10 @@ func (s *SDK) GetBackendAPI(ctx context.Context, request operations.GetBackendAP
 // GetBackendAPIModels - Gets a model introspection schema for an existing backend API resource.
 func (s *SDK) GetBackendAPIModels(ctx context.Context, request operations.GetBackendAPIModelsRequest) (*operations.GetBackendAPIModelsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/getModels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}/getModels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1620,7 +1680,10 @@ func (s *SDK) GetBackendAPIModels(ctx context.Context, request operations.GetBac
 // GetBackendAuth - Gets a backend auth details.
 func (s *SDK) GetBackendAuth(ctx context.Context, request operations.GetBackendAuthRequest) (*operations.GetBackendAuthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1716,7 +1779,10 @@ func (s *SDK) GetBackendAuth(ctx context.Context, request operations.GetBackendA
 // GetBackendJob - Returns information about a specific job.
 func (s *SDK) GetBackendJob(ctx context.Context, request operations.GetBackendJobRequest) (*operations.GetBackendJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/job/{backendEnvironmentName}/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/job/{backendEnvironmentName}/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1802,7 +1868,10 @@ func (s *SDK) GetBackendJob(ctx context.Context, request operations.GetBackendJo
 // GetBackendStorage - Gets details for a backend storage resource.
 func (s *SDK) GetBackendStorage(ctx context.Context, request operations.GetBackendStorageRequest) (*operations.GetBackendStorageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1898,7 +1967,10 @@ func (s *SDK) GetBackendStorage(ctx context.Context, request operations.GetBacke
 // GetToken - Gets the challenge token based on the given appId and sessionId.
 func (s *SDK) GetToken(ctx context.Context, request operations.GetTokenRequest) (*operations.GetTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/challenge/{sessionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/challenge/{sessionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1984,7 +2056,10 @@ func (s *SDK) GetToken(ctx context.Context, request operations.GetTokenRequest) 
 // ImportBackendAuth - Imports an existing backend authentication resource.
 func (s *SDK) ImportBackendAuth(ctx context.Context, request operations.ImportBackendAuthRequest) (*operations.ImportBackendAuthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}/import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}/import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2080,7 +2155,10 @@ func (s *SDK) ImportBackendAuth(ctx context.Context, request operations.ImportBa
 // ImportBackendStorage - Imports an existing backend storage resource.
 func (s *SDK) ImportBackendStorage(ctx context.Context, request operations.ImportBackendStorageRequest) (*operations.ImportBackendStorageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}/import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}/import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2176,7 +2254,10 @@ func (s *SDK) ImportBackendStorage(ctx context.Context, request operations.Impor
 // ListBackendJobs - Lists the jobs for the backend of an Amplify app.
 func (s *SDK) ListBackendJobs(ctx context.Context, request operations.ListBackendJobsRequest) (*operations.ListBackendJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/job/{backendEnvironmentName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/job/{backendEnvironmentName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2372,7 +2453,10 @@ func (s *SDK) ListS3Buckets(ctx context.Context, request operations.ListS3Bucket
 // RemoveAllBackends - Removes all backend environments from your Amplify project.
 func (s *SDK) RemoveAllBackends(ctx context.Context, request operations.RemoveAllBackendsRequest) (*operations.RemoveAllBackendsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/remove", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/remove", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2468,7 +2552,10 @@ func (s *SDK) RemoveAllBackends(ctx context.Context, request operations.RemoveAl
 // RemoveBackendConfig - Removes the AWS resources required to access the Amplify Admin UI.
 func (s *SDK) RemoveBackendConfig(ctx context.Context, request operations.RemoveBackendConfigRequest) (*operations.RemoveBackendConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/config/remove", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/config/remove", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2554,7 +2641,10 @@ func (s *SDK) RemoveBackendConfig(ctx context.Context, request operations.Remove
 // UpdateBackendAPI - Updates an existing backend API resource.
 func (s *SDK) UpdateBackendAPI(ctx context.Context, request operations.UpdateBackendAPIRequest) (*operations.UpdateBackendAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/api/{backendEnvironmentName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2650,7 +2740,10 @@ func (s *SDK) UpdateBackendAPI(ctx context.Context, request operations.UpdateBac
 // UpdateBackendAuth - Updates an existing backend authentication resource.
 func (s *SDK) UpdateBackendAuth(ctx context.Context, request operations.UpdateBackendAuthRequest) (*operations.UpdateBackendAuthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/auth/{backendEnvironmentName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2746,7 +2839,10 @@ func (s *SDK) UpdateBackendAuth(ctx context.Context, request operations.UpdateBa
 // UpdateBackendConfig - Updates the AWS resources required to access the Amplify Admin UI.
 func (s *SDK) UpdateBackendConfig(ctx context.Context, request operations.UpdateBackendConfigRequest) (*operations.UpdateBackendConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/config/update", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/config/update", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2842,7 +2938,10 @@ func (s *SDK) UpdateBackendConfig(ctx context.Context, request operations.Update
 // UpdateBackendJob - Updates a specific job.
 func (s *SDK) UpdateBackendJob(ctx context.Context, request operations.UpdateBackendJobRequest) (*operations.UpdateBackendJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/job/{backendEnvironmentName}/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/job/{backendEnvironmentName}/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2938,7 +3037,10 @@ func (s *SDK) UpdateBackendJob(ctx context.Context, request operations.UpdateBac
 // UpdateBackendStorage - Updates an existing backend storage resource.
 func (s *SDK) UpdateBackendStorage(ctx context.Context, request operations.UpdateBackendStorageRequest) (*operations.UpdateBackendStorageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/backend/{appId}/storage/{backendEnvironmentName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

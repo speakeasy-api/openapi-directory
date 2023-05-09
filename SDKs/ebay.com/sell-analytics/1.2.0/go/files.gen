@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -40,4 +41,8 @@ pkg/models/shared/definition.go
 pkg/models/shared/metadata.go
 pkg/models/shared/metadatarecord.go
 pkg/models/shared/metadataheader.go
+docs/sdk/README.md
+docs/customerservicemetric/README.md
+docs/sellerstandardsprofile/README.md
+docs/trafficreport/README.md
 USAGE.md

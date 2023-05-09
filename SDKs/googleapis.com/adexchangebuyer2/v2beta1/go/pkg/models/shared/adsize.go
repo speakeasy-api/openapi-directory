@@ -18,12 +18,16 @@ const (
 	AdSizeSizeTypeEnumFluid               AdSizeSizeTypeEnum = "FLUID"
 )
 
+func (e AdSizeSizeTypeEnum) ToPointer() *AdSizeSizeTypeEnum {
+	return &e
+}
+
 func (e *AdSizeSizeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIZE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PIXEL":
@@ -33,10 +37,10 @@ func (e *AdSizeSizeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NATIVE":
 		fallthrough
 	case "FLUID":
-		*e = AdSizeSizeTypeEnum(s)
+		*e = AdSizeSizeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdSizeSizeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdSizeSizeTypeEnum: %v", v)
 	}
 }
 

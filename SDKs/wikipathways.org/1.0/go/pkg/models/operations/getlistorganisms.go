@@ -20,12 +20,16 @@ const (
 	GetListOrganismsFormatEnumPdf  GetListOrganismsFormatEnum = "pdf"
 )
 
+func (e GetListOrganismsFormatEnum) ToPointer() *GetListOrganismsFormatEnum {
+	return &e
+}
+
 func (e *GetListOrganismsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -37,10 +41,10 @@ func (e *GetListOrganismsFormatEnum) UnmarshalJSON(data []byte) error {
 	case "jpg":
 		fallthrough
 	case "pdf":
-		*e = GetListOrganismsFormatEnum(s)
+		*e = GetListOrganismsFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetListOrganismsFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetListOrganismsFormatEnum: %v", v)
 	}
 }
 

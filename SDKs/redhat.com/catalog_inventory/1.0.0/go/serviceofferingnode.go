@@ -85,7 +85,10 @@ func (s *serviceOfferingNode) ListServiceOfferingNodes(ctx context.Context, requ
 // Returns a ServiceOfferingNode object
 func (s *serviceOfferingNode) ShowServiceOfferingNode(ctx context.Context, request operations.ShowServiceOfferingNodeRequest) (*operations.ShowServiceOfferingNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_offering_nodes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_offering_nodes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

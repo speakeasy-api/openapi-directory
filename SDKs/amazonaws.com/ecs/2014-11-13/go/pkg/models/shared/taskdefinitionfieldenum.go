@@ -13,16 +13,20 @@ const (
 	TaskDefinitionFieldEnumTags TaskDefinitionFieldEnum = "TAGS"
 )
 
+func (e TaskDefinitionFieldEnum) ToPointer() *TaskDefinitionFieldEnum {
+	return &e
+}
+
 func (e *TaskDefinitionFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TAGS":
-		*e = TaskDefinitionFieldEnum(s)
+		*e = TaskDefinitionFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskDefinitionFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskDefinitionFieldEnum: %v", v)
 	}
 }

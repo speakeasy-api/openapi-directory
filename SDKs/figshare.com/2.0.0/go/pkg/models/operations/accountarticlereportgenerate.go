@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type AccountArticleReportGenerateSecurity struct {
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type AccountArticleReportGenerateResponse struct {
 	// OK. AccountReport created.
 	AccountReport *shared.AccountReport

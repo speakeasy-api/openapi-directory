@@ -17,12 +17,16 @@ const (
 	ApigatewayAuditLogConfigLogTypeEnumDataRead           ApigatewayAuditLogConfigLogTypeEnum = "DATA_READ"
 )
 
+func (e ApigatewayAuditLogConfigLogTypeEnum) ToPointer() *ApigatewayAuditLogConfigLogTypeEnum {
+	return &e
+}
+
 func (e *ApigatewayAuditLogConfigLogTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ADMIN_READ":
@@ -30,10 +34,10 @@ func (e *ApigatewayAuditLogConfigLogTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DATA_WRITE":
 		fallthrough
 	case "DATA_READ":
-		*e = ApigatewayAuditLogConfigLogTypeEnum(s)
+		*e = ApigatewayAuditLogConfigLogTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApigatewayAuditLogConfigLogTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApigatewayAuditLogConfigLogTypeEnum: %v", v)
 	}
 }
 

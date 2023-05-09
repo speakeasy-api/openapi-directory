@@ -32,17 +32,21 @@ const (
 	GetCommercialCreditCards503ErrorObjectDescriptionEnumTheServiceIsTemporarilyUnavailable GetCommercialCreditCards503ErrorObjectDescriptionEnum = "The service is temporarily unavailable."
 )
 
+func (e GetCommercialCreditCards503ErrorObjectDescriptionEnum) ToPointer() *GetCommercialCreditCards503ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards503ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "The service is temporarily unavailable.":
-		*e = GetCommercialCreditCards503ErrorObjectDescriptionEnum(s)
+		*e = GetCommercialCreditCards503ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards503ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards503ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -52,17 +56,21 @@ const (
 	GetCommercialCreditCards503ErrorObjectStatusEnumFiveHundredAndThree GetCommercialCreditCards503ErrorObjectStatusEnum = "503"
 )
 
+func (e GetCommercialCreditCards503ErrorObjectStatusEnum) ToPointer() *GetCommercialCreditCards503ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards503ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "503":
-		*e = GetCommercialCreditCards503ErrorObjectStatusEnum(s)
+		*e = GetCommercialCreditCards503ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards503ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards503ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -72,17 +80,21 @@ const (
 	GetCommercialCreditCards503ErrorObjectTitleEnumServiceTemporarilyUnavailable GetCommercialCreditCards503ErrorObjectTitleEnum = "Service temporarily unavailable"
 )
 
+func (e GetCommercialCreditCards503ErrorObjectTitleEnum) ToPointer() *GetCommercialCreditCards503ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards503ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Service temporarily unavailable":
-		*e = GetCommercialCreditCards503ErrorObjectTitleEnum(s)
+		*e = GetCommercialCreditCards503ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards503ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards503ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -99,17 +111,21 @@ const (
 	GetCommercialCreditCards500ErrorObjectDescriptionEnumAnErrorOccurredOnTheServerNoFurtherInformationIsAvailable GetCommercialCreditCards500ErrorObjectDescriptionEnum = "An error occurred on the server. No further information is available."
 )
 
+func (e GetCommercialCreditCards500ErrorObjectDescriptionEnum) ToPointer() *GetCommercialCreditCards500ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards500ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "An error occurred on the server. No further information is available.":
-		*e = GetCommercialCreditCards500ErrorObjectDescriptionEnum(s)
+		*e = GetCommercialCreditCards500ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards500ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards500ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -119,17 +135,21 @@ const (
 	GetCommercialCreditCards500ErrorObjectStatusEnumFiveHundred GetCommercialCreditCards500ErrorObjectStatusEnum = "500"
 )
 
+func (e GetCommercialCreditCards500ErrorObjectStatusEnum) ToPointer() *GetCommercialCreditCards500ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards500ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "500":
-		*e = GetCommercialCreditCards500ErrorObjectStatusEnum(s)
+		*e = GetCommercialCreditCards500ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards500ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards500ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -139,17 +159,21 @@ const (
 	GetCommercialCreditCards500ErrorObjectTitleEnumInternalServerError GetCommercialCreditCards500ErrorObjectTitleEnum = "Internal server error"
 )
 
+func (e GetCommercialCreditCards500ErrorObjectTitleEnum) ToPointer() *GetCommercialCreditCards500ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards500ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = GetCommercialCreditCards500ErrorObjectTitleEnum(s)
+		*e = GetCommercialCreditCards500ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards500ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards500ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -166,17 +190,21 @@ const (
 	GetCommercialCreditCards429ErrorObjectDescriptionEnumYouHaveRequestedThisResourceTooOftenSlowDown GetCommercialCreditCards429ErrorObjectDescriptionEnum = "You have requested this resource too often. Slow down."
 )
 
+func (e GetCommercialCreditCards429ErrorObjectDescriptionEnum) ToPointer() *GetCommercialCreditCards429ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards429ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "You have requested this resource too often. Slow down.":
-		*e = GetCommercialCreditCards429ErrorObjectDescriptionEnum(s)
+		*e = GetCommercialCreditCards429ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards429ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards429ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -186,17 +214,21 @@ const (
 	GetCommercialCreditCards429ErrorObjectStatusEnumFourHundredAndTwentyNine GetCommercialCreditCards429ErrorObjectStatusEnum = "429"
 )
 
+func (e GetCommercialCreditCards429ErrorObjectStatusEnum) ToPointer() *GetCommercialCreditCards429ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards429ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "429":
-		*e = GetCommercialCreditCards429ErrorObjectStatusEnum(s)
+		*e = GetCommercialCreditCards429ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards429ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards429ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -206,17 +238,21 @@ const (
 	GetCommercialCreditCards429ErrorObjectTitleEnumTooManyRequests GetCommercialCreditCards429ErrorObjectTitleEnum = "Too many requests"
 )
 
+func (e GetCommercialCreditCards429ErrorObjectTitleEnum) ToPointer() *GetCommercialCreditCards429ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards429ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Too many requests":
-		*e = GetCommercialCreditCards429ErrorObjectTitleEnum(s)
+		*e = GetCommercialCreditCards429ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards429ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards429ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -233,17 +269,21 @@ const (
 	GetCommercialCreditCards408ErrorObjectDescriptionEnumYourClientHasFailedToSubmitARequestAndATimeoutHasOccurred GetCommercialCreditCards408ErrorObjectDescriptionEnum = "Your client has failed to submit a request, and a timeout has occurred."
 )
 
+func (e GetCommercialCreditCards408ErrorObjectDescriptionEnum) ToPointer() *GetCommercialCreditCards408ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards408ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Your client has failed to submit a request, and a timeout has occurred.":
-		*e = GetCommercialCreditCards408ErrorObjectDescriptionEnum(s)
+		*e = GetCommercialCreditCards408ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards408ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards408ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -253,17 +293,21 @@ const (
 	GetCommercialCreditCards408ErrorObjectStatusEnumFourHundredAndEight GetCommercialCreditCards408ErrorObjectStatusEnum = "408"
 )
 
+func (e GetCommercialCreditCards408ErrorObjectStatusEnum) ToPointer() *GetCommercialCreditCards408ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards408ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "408":
-		*e = GetCommercialCreditCards408ErrorObjectStatusEnum(s)
+		*e = GetCommercialCreditCards408ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards408ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards408ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	GetCommercialCreditCards408ErrorObjectTitleEnumClientTimeout GetCommercialCreditCards408ErrorObjectTitleEnum = "Client timeout"
 )
 
+func (e GetCommercialCreditCards408ErrorObjectTitleEnum) ToPointer() *GetCommercialCreditCards408ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards408ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Client timeout":
-		*e = GetCommercialCreditCards408ErrorObjectTitleEnum(s)
+		*e = GetCommercialCreditCards408ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards408ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards408ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -300,17 +348,21 @@ const (
 	GetCommercialCreditCards400ErrorObjectDescriptionEnumYouHaveSentARequestWhichCouldNotBeUnderstood GetCommercialCreditCards400ErrorObjectDescriptionEnum = "You have sent a request which could not be understood."
 )
 
+func (e GetCommercialCreditCards400ErrorObjectDescriptionEnum) ToPointer() *GetCommercialCreditCards400ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards400ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "You have sent a request which could not be understood.":
-		*e = GetCommercialCreditCards400ErrorObjectDescriptionEnum(s)
+		*e = GetCommercialCreditCards400ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards400ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards400ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	GetCommercialCreditCards400ErrorObjectStatusEnumFourHundred GetCommercialCreditCards400ErrorObjectStatusEnum = "400"
 )
 
+func (e GetCommercialCreditCards400ErrorObjectStatusEnum) ToPointer() *GetCommercialCreditCards400ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards400ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "400":
-		*e = GetCommercialCreditCards400ErrorObjectStatusEnum(s)
+		*e = GetCommercialCreditCards400ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards400ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards400ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -340,17 +396,21 @@ const (
 	GetCommercialCreditCards400ErrorObjectTitleEnumBadRequest GetCommercialCreditCards400ErrorObjectTitleEnum = "Bad request"
 )
 
+func (e GetCommercialCreditCards400ErrorObjectTitleEnum) ToPointer() *GetCommercialCreditCards400ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards400ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Bad request":
-		*e = GetCommercialCreditCards400ErrorObjectTitleEnum(s)
+		*e = GetCommercialCreditCards400ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards400ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards400ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -374,12 +434,16 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnumRegularDeposit GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum = "RegularDeposit"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CashDeposit":
 		fallthrough
 	case "Deposit":
@@ -393,10 +457,10 @@ func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSON
 	case "MobileLogon":
 		fallthrough
 	case "RegularDeposit":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum: %v", v)
 	}
 }
 
@@ -449,21 +513,25 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnumRegular             GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum = "Regular"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum: %v", v)
 	}
 }
 
@@ -491,21 +559,25 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCCSubTypeEnumRegular             GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCCSubTypeEnum = "Regular"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCCSubTypeEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCCSubTypeEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCCSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCCSubTypeEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCCSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCCSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCCSubTypeEnum: %v", v)
 	}
 }
 
@@ -517,19 +589,23 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemBalanceTransferInterestRatePeriodEnumMonthly GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemBalanceTransferInterestRatePeriodEnum = "Monthly"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemBalanceTransferInterestRatePeriodEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemBalanceTransferInterestRatePeriodEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemBalanceTransferInterestRatePeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Annual":
 		fallthrough
 	case "Monthly":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemBalanceTransferInterestRatePeriodEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemBalanceTransferInterestRatePeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemBalanceTransferInterestRatePeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemBalanceTransferInterestRatePeriodEnum: %v", v)
 	}
 }
 
@@ -542,21 +618,25 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemCardSchemeEnumCreditVisa       GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemCardSchemeEnum = "CreditVisa"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemCardSchemeEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemCardSchemeEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemCardSchemeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cashcard":
 		fallthrough
 	case "CreditMastercard":
 		fallthrough
 	case "CreditVisa":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemCardSchemeEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemCardSchemeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemCardSchemeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemCardSchemeEnum: %v", v)
 	}
 }
 
@@ -574,12 +654,16 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemRepaymentFrequencyEnumYearly      GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemRepaymentFrequencyEnum = "Yearly"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemRepaymentFrequencyEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemRepaymentFrequencyEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemRepaymentFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Daily":
 		fallthrough
 	case "Flexible":
@@ -595,10 +679,10 @@ func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSON
 	case "Weekly":
 		fallthrough
 	case "Yearly":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemRepaymentFrequencyEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemRepaymentFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemRepaymentFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataDetailsCommercialCreditCardItemRepaymentFrequencyEnum: %v", v)
 	}
 }
 
@@ -733,12 +817,16 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnumUcasFulltimeTwoYears      GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum = "UCASFulltimeTwoYears"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyBusinessCustomer":
 		fallthrough
 	case "BusinessOnly":
@@ -776,10 +864,10 @@ func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSON
 	case "TwoMonthsOfCourseStart":
 		fallthrough
 	case "UCASFulltimeTwoYears":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum: %v", v)
 	}
 }
 
@@ -793,12 +881,16 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnumStartUp           GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum = "StartUp"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ExistingCustomers":
 		fallthrough
 	case "NewCustomersOnly":
@@ -806,10 +898,10 @@ func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSON
 	case "SwitchersOnly":
 		fallthrough
 	case "StartUp":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum: %v", v)
 	}
 }
 
@@ -825,12 +917,16 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnumYearly       GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum = "Yearly"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcademicTerm":
 		fallthrough
 	case "HalfYearly":
@@ -842,10 +938,10 @@ func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSON
 	case "Weekly":
 		fallthrough
 	case "Yearly":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum: %v", v)
 	}
 }
 
@@ -864,12 +960,16 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnumIrl   GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum = "IRL"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UK":
 		fallthrough
 	case "EEA":
@@ -887,10 +987,10 @@ func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSON
 	case "GB - WLS":
 		fallthrough
 	case "IRL":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum: %v", v)
 	}
 }
 
@@ -904,12 +1004,16 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnumTurnover    GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum = "Turnover"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Joint":
 		fallthrough
 	case "SoleIncome":
@@ -917,10 +1021,10 @@ func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSON
 	case "SoleOrJoint":
 		fallthrough
 	case "Turnover":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum: %v", v)
 	}
 }
 
@@ -1001,19 +1105,23 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnumEu GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum = "EU"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UK":
 		fallthrough
 	case "EU":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum: %v", v)
 	}
 }
 
@@ -1060,12 +1168,16 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnumSme       GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum = "SME"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cashback":
 		fallthrough
 	case "Corporate":
@@ -1075,10 +1187,10 @@ func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSON
 	case "Reward":
 		fallthrough
 	case "SME":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum: %v", v)
 	}
 }
 
@@ -1089,17 +1201,21 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeEnumCommercialCreditCards GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeEnum = "CommercialCreditCards"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CommercialCreditCards":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeEnum: %v", v)
 	}
 }
 
@@ -1143,17 +1259,21 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnumUseOfTheApIsAndAnyRelatedDataWillBeSubjectToTheTermsOfTheOpenLicenceAndSubjectToTermsAndConditions GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum = "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum: %v", v)
 	}
 }
 
@@ -1164,17 +1284,21 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnumHTTPSWwwOpenbankingOrgUkOpenLicence GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum = "https://www.openbanking.org.uk/open-licence"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "https://www.openbanking.org.uk/open-licence":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum: %v", v)
 	}
 }
 
@@ -1185,17 +1309,21 @@ const (
 	GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnumHTTPSWwwOpenbankingOrgUkTerms GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum = "https://www.openbanking.org.uk/terms"
 )
 
+func (e GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum) ToPointer() *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum {
+	return &e
+}
+
 func (e *GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "https://www.openbanking.org.uk/terms":
-		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum(s)
+		*e = GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum: %v", v)
 	}
 }
 

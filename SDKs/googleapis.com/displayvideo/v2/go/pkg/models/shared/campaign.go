@@ -19,12 +19,16 @@ const (
 	CampaignEntityStatusEnumEntityStatusScheduledForDeletion CampaignEntityStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
+func (e CampaignEntityStatusEnum) ToPointer() *CampaignEntityStatusEnum {
+	return &e
+}
+
 func (e *CampaignEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ENTITY_STATUS_ACTIVE":
@@ -36,10 +40,10 @@ func (e *CampaignEntityStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ENTITY_STATUS_PAUSED":
 		fallthrough
 	case "ENTITY_STATUS_SCHEDULED_FOR_DELETION":
-		*e = CampaignEntityStatusEnum(s)
+		*e = CampaignEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CampaignEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CampaignEntityStatusEnum: %v", v)
 	}
 }
 

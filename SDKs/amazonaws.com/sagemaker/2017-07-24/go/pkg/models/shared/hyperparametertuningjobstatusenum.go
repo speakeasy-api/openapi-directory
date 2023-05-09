@@ -17,12 +17,16 @@ const (
 	HyperParameterTuningJobStatusEnumStopping   HyperParameterTuningJobStatusEnum = "Stopping"
 )
 
+func (e HyperParameterTuningJobStatusEnum) ToPointer() *HyperParameterTuningJobStatusEnum {
+	return &e
+}
+
 func (e *HyperParameterTuningJobStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Completed":
 		fallthrough
 	case "InProgress":
@@ -32,9 +36,9 @@ func (e *HyperParameterTuningJobStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Stopped":
 		fallthrough
 	case "Stopping":
-		*e = HyperParameterTuningJobStatusEnum(s)
+		*e = HyperParameterTuningJobStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HyperParameterTuningJobStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HyperParameterTuningJobStatusEnum: %v", v)
 	}
 }

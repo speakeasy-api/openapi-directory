@@ -18,21 +18,25 @@ const (
 	GetElectionsSummaryOfficeEnumPresident GetElectionsSummaryOfficeEnum = "president"
 )
 
+func (e GetElectionsSummaryOfficeEnum) ToPointer() *GetElectionsSummaryOfficeEnum {
+	return &e
+}
+
 func (e *GetElectionsSummaryOfficeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "house":
 		fallthrough
 	case "senate":
 		fallthrough
 	case "president":
-		*e = GetElectionsSummaryOfficeEnum(s)
+		*e = GetElectionsSummaryOfficeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetElectionsSummaryOfficeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetElectionsSummaryOfficeEnum: %v", v)
 	}
 }
 

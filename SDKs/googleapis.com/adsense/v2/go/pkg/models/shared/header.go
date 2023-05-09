@@ -20,12 +20,16 @@ const (
 	HeaderTypeEnumMetricDecimal         HeaderTypeEnum = "METRIC_DECIMAL"
 )
 
+func (e HeaderTypeEnum) ToPointer() *HeaderTypeEnum {
+	return &e
+}
+
 func (e *HeaderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEADER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DIMENSION":
@@ -39,10 +43,10 @@ func (e *HeaderTypeEnum) UnmarshalJSON(data []byte) error {
 	case "METRIC_MILLISECONDS":
 		fallthrough
 	case "METRIC_DECIMAL":
-		*e = HeaderTypeEnum(s)
+		*e = HeaderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HeaderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HeaderTypeEnum: %v", v)
 	}
 }
 

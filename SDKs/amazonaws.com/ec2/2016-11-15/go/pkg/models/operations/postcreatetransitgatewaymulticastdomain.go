@@ -15,17 +15,21 @@ const (
 	POSTCreateTransitGatewayMulticastDomainActionEnumCreateTransitGatewayMulticastDomain POSTCreateTransitGatewayMulticastDomainActionEnum = "CreateTransitGatewayMulticastDomain"
 )
 
+func (e POSTCreateTransitGatewayMulticastDomainActionEnum) ToPointer() *POSTCreateTransitGatewayMulticastDomainActionEnum {
+	return &e
+}
+
 func (e *POSTCreateTransitGatewayMulticastDomainActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateTransitGatewayMulticastDomain":
-		*e = POSTCreateTransitGatewayMulticastDomainActionEnum(s)
+		*e = POSTCreateTransitGatewayMulticastDomainActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateTransitGatewayMulticastDomainActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateTransitGatewayMulticastDomainActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateTransitGatewayMulticastDomainVersionEnumTwoThousandAndSixteen1115 POSTCreateTransitGatewayMulticastDomainVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateTransitGatewayMulticastDomainVersionEnum) ToPointer() *POSTCreateTransitGatewayMulticastDomainVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateTransitGatewayMulticastDomainVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateTransitGatewayMulticastDomainVersionEnum(s)
+		*e = POSTCreateTransitGatewayMulticastDomainVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateTransitGatewayMulticastDomainVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateTransitGatewayMulticastDomainVersionEnum: %v", v)
 	}
 }
 

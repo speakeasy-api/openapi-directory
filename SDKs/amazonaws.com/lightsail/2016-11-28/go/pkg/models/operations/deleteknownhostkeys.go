@@ -16,17 +16,21 @@ const (
 	DeleteKnownHostKeysXAmzTargetEnumLightsail20161128DeleteKnownHostKeys DeleteKnownHostKeysXAmzTargetEnum = "Lightsail_20161128.DeleteKnownHostKeys"
 )
 
+func (e DeleteKnownHostKeysXAmzTargetEnum) ToPointer() *DeleteKnownHostKeysXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteKnownHostKeysXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.DeleteKnownHostKeys":
-		*e = DeleteKnownHostKeysXAmzTargetEnum(s)
+		*e = DeleteKnownHostKeysXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteKnownHostKeysXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteKnownHostKeysXAmzTargetEnum: %v", v)
 	}
 }
 

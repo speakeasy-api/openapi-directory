@@ -13,16 +13,20 @@ const (
 	AccountAttributeNameEnumAccountTier AccountAttributeNameEnum = "ACCOUNT_TIER"
 )
 
+func (e AccountAttributeNameEnum) ToPointer() *AccountAttributeNameEnum {
+	return &e
+}
+
 func (e *AccountAttributeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_TIER":
-		*e = AccountAttributeNameEnum(s)
+		*e = AccountAttributeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountAttributeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountAttributeNameEnum: %v", v)
 	}
 }

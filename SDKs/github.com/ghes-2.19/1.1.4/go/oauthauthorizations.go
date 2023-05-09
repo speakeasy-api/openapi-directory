@@ -38,7 +38,10 @@ func newOauthAuthorizations(defaultClient, securityClient HTTPClient, serverURL,
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#check-an-authorization - API method documentation
 func (s *oauthAuthorizations) OauthAuthorizationsCheckAuthorization(ctx context.Context, request operations.OauthAuthorizationsCheckAuthorizationRequest) (*operations.OauthAuthorizationsCheckAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/tokens/{access_token}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/tokens/{access_token}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -92,6 +95,8 @@ func (s *oauthAuthorizations) OauthAuthorizationsCheckAuthorization(ctx context.
 //
 // Organizations that enforce SAML SSO require personal access tokens to be allowed. Read more about allowing tokens in [the GitHub Help documentation](https://help.github.com/articles/about-identity-and-access-management-with-saml-single-sign-on).
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#create-a-new-authorization - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *oauthAuthorizations) OauthAuthorizationsCreateAuthorization(ctx context.Context, request operations.OauthAuthorizationsCreateAuthorizationRequestBody) (*operations.OauthAuthorizationsCreateAuthorizationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authorizations"
@@ -172,9 +177,14 @@ func (s *oauthAuthorizations) OauthAuthorizationsCreateAuthorization(ctx context
 // OauthAuthorizationsDeleteAuthorization - Delete an authorization
 // **Deprecation Notice:** GitHub Enterprise Server will discontinue the [OAuth Authorizations API](https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations), which is used by integrations to create personal access tokens and OAuth tokens, and you must now create these tokens using our [web application flow](https://docs.github.com/enterprise-server@2.19/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow). The [OAuth Authorizations API](https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations) will be removed on November, 13, 2020. For more information, including scheduled brownouts, see the [blog post](https://developer.github.com/changes/2020-02-14-deprecating-oauth-auth-endpoint/).
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#delete-an-authorization - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *oauthAuthorizations) OauthAuthorizationsDeleteAuthorization(ctx context.Context, request operations.OauthAuthorizationsDeleteAuthorizationRequest) (*operations.OauthAuthorizationsDeleteAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizations/{authorization_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/authorizations/{authorization_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -225,9 +235,14 @@ func (s *oauthAuthorizations) OauthAuthorizationsDeleteAuthorization(ctx context
 //
 // Deleting an OAuth application's grant will also delete all OAuth tokens associated with the application for your user. Once deleted, the application has no access to your account and is no longer listed on [the application authorizations settings screen within GitHub](https://github.com/settings/applications#authorized).
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#delete-a-grant - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *oauthAuthorizations) OauthAuthorizationsDeleteGrant(ctx context.Context, request operations.OauthAuthorizationsDeleteGrantRequest) (*operations.OauthAuthorizationsDeleteGrantResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/grants/{grant_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/grants/{grant_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -276,9 +291,14 @@ func (s *oauthAuthorizations) OauthAuthorizationsDeleteGrant(ctx context.Context
 // OauthAuthorizationsGetAuthorization - Get a single authorization
 // **Deprecation Notice:** GitHub Enterprise Server will discontinue the [OAuth Authorizations API](https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations), which is used by integrations to create personal access tokens and OAuth tokens, and you must now create these tokens using our [web application flow](https://docs.github.com/enterprise-server@2.19/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow). The [OAuth Authorizations API](https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations) will be removed on November, 13, 2020. For more information, including scheduled brownouts, see the [blog post](https://developer.github.com/changes/2020-02-14-deprecating-oauth-auth-endpoint/).
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#get-a-single-authorization - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *oauthAuthorizations) OauthAuthorizationsGetAuthorization(ctx context.Context, request operations.OauthAuthorizationsGetAuthorizationRequest) (*operations.OauthAuthorizationsGetAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizations/{authorization_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/authorizations/{authorization_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -335,9 +355,14 @@ func (s *oauthAuthorizations) OauthAuthorizationsGetAuthorization(ctx context.Co
 // OauthAuthorizationsGetGrant - Get a single grant
 // **Deprecation Notice:** GitHub Enterprise Server will discontinue the [OAuth Authorizations API](https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations), which is used by integrations to create personal access tokens and OAuth tokens, and you must now create these tokens using our [web application flow](https://docs.github.com/enterprise-server@2.19/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow). The [OAuth Authorizations API](https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations) will be removed on November, 13, 2020. For more information, including scheduled brownouts, see the [blog post](https://developer.github.com/changes/2020-02-14-deprecating-oauth-auth-endpoint/).
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#get-a-single-grant - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *oauthAuthorizations) OauthAuthorizationsGetGrant(ctx context.Context, request operations.OauthAuthorizationsGetGrantRequest) (*operations.OauthAuthorizationsGetGrantResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/grants/{grant_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/grants/{grant_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -402,9 +427,14 @@ func (s *oauthAuthorizations) OauthAuthorizationsGetGrant(ctx context.Context, r
 //
 // **Deprecation Notice:** GitHub Enterprise Server will discontinue the [OAuth Authorizations API](https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations/), which is used by integrations to create personal access tokens and OAuth tokens, and you must now create these tokens using our [web application flow](https://docs.github.com/enterprise-server@2.19/developers/apps/authorizing-oauth-apps#web-application-flow). The [OAuth Authorizations API](https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations) will be removed on November, 13, 2020. For more information, including scheduled brownouts, see the [blog post](https://developer.github.com/changes/2020-02-14-deprecating-oauth-auth-endpoint/).
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#get-or-create-an-authorization-for-a-specific-app - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *oauthAuthorizations) OauthAuthorizationsGetOrCreateAuthorizationForApp(ctx context.Context, request operations.OauthAuthorizationsGetOrCreateAuthorizationForAppRequest) (*operations.OauthAuthorizationsGetOrCreateAuthorizationForAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizations/clients/{client_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/authorizations/clients/{client_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -491,9 +521,14 @@ func (s *oauthAuthorizations) OauthAuthorizationsGetOrCreateAuthorizationForApp(
 //
 // If you have two-factor authentication setup, Basic Authentication for this endpoint requires that you use a one-time password (OTP) and your username and password instead of tokens. For more information, see "[Working with two-factor authentication](https://docs.github.com/enterprise-server@2.19/rest/overview/other-authentication-methods#working-with-two-factor-authentication)."
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#get-or-create-an-authorization-for-a-specific-app-and-fingerprint - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *oauthAuthorizations) OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprint(ctx context.Context, request operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest) (*operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizations/clients/{client_id}/{fingerprint}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/authorizations/clients/{client_id}/{fingerprint}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -561,6 +596,8 @@ func (s *oauthAuthorizations) OauthAuthorizationsGetOrCreateAuthorizationForAppA
 // OauthAuthorizationsListAuthorizations - List your authorizations
 // **Deprecation Notice:** GitHub Enterprise Server will discontinue the [OAuth Authorizations API](https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations), which is used by integrations to create personal access tokens and OAuth tokens, and you must now create these tokens using our [web application flow](https://docs.github.com/enterprise-server@2.19/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow). The [OAuth Authorizations API](https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations) will be removed on November, 13, 2020. For more information, including scheduled brownouts, see the [blog post](https://developer.github.com/changes/2020-02-14-deprecating-oauth-auth-endpoint/).
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#list-your-authorizations - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *oauthAuthorizations) OauthAuthorizationsListAuthorizations(ctx context.Context, request operations.OauthAuthorizationsListAuthorizationsRequest) (*operations.OauthAuthorizationsListAuthorizationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/authorizations"
@@ -630,6 +667,8 @@ func (s *oauthAuthorizations) OauthAuthorizationsListAuthorizations(ctx context.
 //
 // You can use this API to list the set of OAuth applications that have been granted access to your account. Unlike the [list your authorizations](https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#list-your-authorizations) API, this API does not manage individual tokens. This API will return one entry for each OAuth application that has been granted access to your account, regardless of the number of tokens an application has generated for your user. The list of OAuth applications returned matches what is shown on [the application authorizations settings screen within GitHub](https://github.com/settings/applications#authorized). The `scopes` returned are the union of scopes authorized for the application. For example, if an application has one token with `repo` scope and another token with `user` scope, the grant will return `["repo", "user"]`.
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#list-your-grants - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *oauthAuthorizations) OauthAuthorizationsListGrants(ctx context.Context, request operations.OauthAuthorizationsListGrantsRequest) (*operations.OauthAuthorizationsListGrantsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/applications/grants"
@@ -699,7 +738,10 @@ func (s *oauthAuthorizations) OauthAuthorizationsListGrants(ctx context.Context,
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#reset-an-authorization - API method documentation
 func (s *oauthAuthorizations) OauthAuthorizationsResetAuthorization(ctx context.Context, request operations.OauthAuthorizationsResetAuthorizationRequest) (*operations.OauthAuthorizationsResetAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/tokens/{access_token}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/tokens/{access_token}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -745,7 +787,10 @@ func (s *oauthAuthorizations) OauthAuthorizationsResetAuthorization(ctx context.
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#revoke-an-authorization-for-an-application - API method documentation
 func (s *oauthAuthorizations) OauthAuthorizationsRevokeAuthorizationForApplication(ctx context.Context, request operations.OauthAuthorizationsRevokeAuthorizationForApplicationRequest) (*operations.OauthAuthorizationsRevokeAuthorizationForApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/tokens/{access_token}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/tokens/{access_token}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -784,7 +829,10 @@ func (s *oauthAuthorizations) OauthAuthorizationsRevokeAuthorizationForApplicati
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#revoke-a-grant-for-an-application - API method documentation
 func (s *oauthAuthorizations) OauthAuthorizationsRevokeGrantForApplication(ctx context.Context, request operations.OauthAuthorizationsRevokeGrantForApplicationRequest) (*operations.OauthAuthorizationsRevokeGrantForApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/grants/{access_token}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{client_id}/grants/{access_token}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -823,9 +871,14 @@ func (s *oauthAuthorizations) OauthAuthorizationsRevokeGrantForApplication(ctx c
 //
 // You can only send one of these scope keys at a time.
 // https://docs.github.com/enterprise-server@2.19/rest/reference/oauth-authorizations#update-an-existing-authorization - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *oauthAuthorizations) OauthAuthorizationsUpdateAuthorization(ctx context.Context, request operations.OauthAuthorizationsUpdateAuthorizationRequest) (*operations.OauthAuthorizationsUpdateAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/authorizations/{authorization_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/authorizations/{authorization_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

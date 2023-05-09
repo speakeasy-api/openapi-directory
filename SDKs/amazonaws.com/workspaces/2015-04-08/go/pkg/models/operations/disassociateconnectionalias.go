@@ -16,17 +16,21 @@ const (
 	DisassociateConnectionAliasXAmzTargetEnumWorkspacesServiceDisassociateConnectionAlias DisassociateConnectionAliasXAmzTargetEnum = "WorkspacesService.DisassociateConnectionAlias"
 )
 
+func (e DisassociateConnectionAliasXAmzTargetEnum) ToPointer() *DisassociateConnectionAliasXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateConnectionAliasXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.DisassociateConnectionAlias":
-		*e = DisassociateConnectionAliasXAmzTargetEnum(s)
+		*e = DisassociateConnectionAliasXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateConnectionAliasXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateConnectionAliasXAmzTargetEnum: %v", v)
 	}
 }
 

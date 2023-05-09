@@ -16,17 +16,21 @@ const (
 	TerminateWorkflowExecutionXAmzTargetEnumSimpleWorkflowServiceTerminateWorkflowExecution TerminateWorkflowExecutionXAmzTargetEnum = "SimpleWorkflowService.TerminateWorkflowExecution"
 )
 
+func (e TerminateWorkflowExecutionXAmzTargetEnum) ToPointer() *TerminateWorkflowExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *TerminateWorkflowExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleWorkflowService.TerminateWorkflowExecution":
-		*e = TerminateWorkflowExecutionXAmzTargetEnum(s)
+		*e = TerminateWorkflowExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TerminateWorkflowExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TerminateWorkflowExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

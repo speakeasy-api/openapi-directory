@@ -4,11 +4,11 @@ package shared
 
 // ComponentStatusData - Data on the status of agent components.
 type ComponentStatusData struct {
-	BytesReceived  *int64            `json:"bytesReceived,omitempty"`
-	BytesSent      *int64            `json:"bytesSent,omitempty"`
-	CapabilityArn  string            `json:"capabilityArn"`
-	ComponentType  ComponentTypeEnum `json:"componentType"`
-	DataflowID     string            `json:"dataflowId"`
-	PacketsDropped *int64            `json:"packetsDropped,omitempty"`
-	Status         AgentStatusEnum   `json:"status"`
+	BytesReceived  *int64          `json:"bytesReceived,omitempty"`
+	BytesSent      *int64          `json:"bytesSent,omitempty"`
+	CapabilityArn  string          `json:"capabilityArn"`
+	ComponentType  string          `json:"componentType"`
+	DataflowID     string          `json:"dataflowId"`
+	PacketsDropped *int64          `json:"packetsDropped,omitempty"`
+	Status         AgentStatusEnum `json:"status"`
 }

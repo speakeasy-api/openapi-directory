@@ -30,21 +30,25 @@ const (
 	GetInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnumCart       GetInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum = "cart"
 )
 
+func (e GetInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum) ToPointer() *GetInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum {
+	return &e
+}
+
 func (e *GetInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "thanks_page":
 		fallthrough
 	case "cart":
-		*e = GetInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum(s)
+		*e = GetInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum: %v", v)
 	}
 }
 
@@ -57,17 +61,21 @@ const (
 	GetInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnumObjectBuilded GetInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum = "object_builded"
 )
 
+func (e GetInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum) ToPointer() *GetInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum {
+	return &e
+}
+
 func (e *GetInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_builded":
-		*e = GetInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum(s)
+		*e = GetInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum: %v", v)
 	}
 }
 

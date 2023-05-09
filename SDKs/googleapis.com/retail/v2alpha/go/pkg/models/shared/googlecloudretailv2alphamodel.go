@@ -16,21 +16,25 @@ const (
 	GoogleCloudRetailV2alphaModelDataStateEnumDataError            GoogleCloudRetailV2alphaModelDataStateEnum = "DATA_ERROR"
 )
 
+func (e GoogleCloudRetailV2alphaModelDataStateEnum) ToPointer() *GoogleCloudRetailV2alphaModelDataStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaModelDataStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_STATE_UNSPECIFIED":
 		fallthrough
 	case "DATA_OK":
 		fallthrough
 	case "DATA_ERROR":
-		*e = GoogleCloudRetailV2alphaModelDataStateEnum(s)
+		*e = GoogleCloudRetailV2alphaModelDataStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaModelDataStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaModelDataStateEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudRetailV2alphaModelFilteringOptionEnumRecommendationsFilteringEnabled           GoogleCloudRetailV2alphaModelFilteringOptionEnum = "RECOMMENDATIONS_FILTERING_ENABLED"
 )
 
+func (e GoogleCloudRetailV2alphaModelFilteringOptionEnum) ToPointer() *GoogleCloudRetailV2alphaModelFilteringOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaModelFilteringOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECOMMENDATIONS_FILTERING_OPTION_UNSPECIFIED":
 		fallthrough
 	case "RECOMMENDATIONS_FILTERING_DISABLED":
 		fallthrough
 	case "RECOMMENDATIONS_FILTERING_ENABLED":
-		*e = GoogleCloudRetailV2alphaModelFilteringOptionEnum(s)
+		*e = GoogleCloudRetailV2alphaModelFilteringOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaModelFilteringOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaModelFilteringOptionEnum: %v", v)
 	}
 }
 
@@ -71,12 +79,16 @@ const (
 	GoogleCloudRetailV2alphaModelPeriodicTuningStateEnumPeriodicTuningEnabled          GoogleCloudRetailV2alphaModelPeriodicTuningStateEnum = "PERIODIC_TUNING_ENABLED"
 )
 
+func (e GoogleCloudRetailV2alphaModelPeriodicTuningStateEnum) ToPointer() *GoogleCloudRetailV2alphaModelPeriodicTuningStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaModelPeriodicTuningStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERIODIC_TUNING_STATE_UNSPECIFIED":
 		fallthrough
 	case "PERIODIC_TUNING_DISABLED":
@@ -84,10 +96,10 @@ func (e *GoogleCloudRetailV2alphaModelPeriodicTuningStateEnum) UnmarshalJSON(dat
 	case "ALL_TUNING_DISABLED":
 		fallthrough
 	case "PERIODIC_TUNING_ENABLED":
-		*e = GoogleCloudRetailV2alphaModelPeriodicTuningStateEnum(s)
+		*e = GoogleCloudRetailV2alphaModelPeriodicTuningStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaModelPeriodicTuningStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaModelPeriodicTuningStateEnum: %v", v)
 	}
 }
 
@@ -101,12 +113,16 @@ const (
 	GoogleCloudRetailV2alphaModelServingStateEnumTuned                   GoogleCloudRetailV2alphaModelServingStateEnum = "TUNED"
 )
 
+func (e GoogleCloudRetailV2alphaModelServingStateEnum) ToPointer() *GoogleCloudRetailV2alphaModelServingStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaModelServingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVING_STATE_UNSPECIFIED":
 		fallthrough
 	case "INACTIVE":
@@ -114,10 +130,10 @@ func (e *GoogleCloudRetailV2alphaModelServingStateEnum) UnmarshalJSON(data []byt
 	case "ACTIVE":
 		fallthrough
 	case "TUNED":
-		*e = GoogleCloudRetailV2alphaModelServingStateEnum(s)
+		*e = GoogleCloudRetailV2alphaModelServingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaModelServingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaModelServingStateEnum: %v", v)
 	}
 }
 
@@ -130,21 +146,25 @@ const (
 	GoogleCloudRetailV2alphaModelTrainingStateEnumTraining                 GoogleCloudRetailV2alphaModelTrainingStateEnum = "TRAINING"
 )
 
+func (e GoogleCloudRetailV2alphaModelTrainingStateEnum) ToPointer() *GoogleCloudRetailV2alphaModelTrainingStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaModelTrainingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRAINING_STATE_UNSPECIFIED":
 		fallthrough
 	case "PAUSED":
 		fallthrough
 	case "TRAINING":
-		*e = GoogleCloudRetailV2alphaModelTrainingStateEnum(s)
+		*e = GoogleCloudRetailV2alphaModelTrainingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaModelTrainingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaModelTrainingStateEnum: %v", v)
 	}
 }
 
@@ -160,6 +180,8 @@ type GoogleCloudRetailV2alphaModel struct {
 	FilteringOption *GoogleCloudRetailV2alphaModelFilteringOptionEnum `json:"filteringOption,omitempty"`
 	// Output only. The timestamp when the latest successful tune finished.
 	LastTuneTime *string `json:"lastTuneTime,omitempty"`
+	// Additional model features config.
+	ModelFeaturesConfig *GoogleCloudRetailV2alphaModelModelFeaturesConfig `json:"modelFeaturesConfig,omitempty"`
 	// Required. The fully qualified resource name of the model. Format: `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}` catalog_id has char limit of 50. recommendation_model_id has char limit of 40.
 	Name *string `json:"name,omitempty"`
 	// Optional. The optimization objective e.g. `cvr`. Currently supported values: `ctr`, `cvr`, `revenue-per-order`. If not specified, we choose default based on model type. Default depends on type of recommendation: `recommended-for-you` => `ctr` `others-you-may-like` => `ctr` `frequently-bought-together` => `revenue_per_order` This field together with optimization_objective describe model metadata to use to control model training and serving. See https://cloud.google.com/retail/docs/models for more details on what the model metadata control and which combination of parameters are valid. For invalid combinations of parameters (e.g. type = `frequently-bought-together` and optimization_objective = `ctr`), you receive an error 400 if you try to create/update a recommendation with this set of knobs.
@@ -188,6 +210,8 @@ type GoogleCloudRetailV2alphaModelInput struct {
 	DisplayName *string `json:"displayName,omitempty"`
 	// Optional. If `RECOMMENDATIONS_FILTERING_ENABLED`, recommendation filtering by attributes is enabled for the model.
 	FilteringOption *GoogleCloudRetailV2alphaModelFilteringOptionEnum `json:"filteringOption,omitempty"`
+	// Additional model features config.
+	ModelFeaturesConfig *GoogleCloudRetailV2alphaModelModelFeaturesConfig `json:"modelFeaturesConfig,omitempty"`
 	// Required. The fully qualified resource name of the model. Format: `projects/{project_number}/locations/{location_id}/catalogs/{catalog_id}/models/{model_id}` catalog_id has char limit of 50. recommendation_model_id has char limit of 40.
 	Name *string `json:"name,omitempty"`
 	// Optional. The optimization objective e.g. `cvr`. Currently supported values: `ctr`, `cvr`, `revenue-per-order`. If not specified, we choose default based on model type. Default depends on type of recommendation: `recommended-for-you` => `ctr` `others-you-may-like` => `ctr` `frequently-bought-together` => `revenue_per_order` This field together with optimization_objective describe model metadata to use to control model training and serving. See https://cloud.google.com/retail/docs/models for more details on what the model metadata control and which combination of parameters are valid. For invalid combinations of parameters (e.g. type = `frequently-bought-together` and optimization_objective = `ctr`), you receive an error 400 if you try to create/update a recommendation with this set of knobs.

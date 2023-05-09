@@ -46,6 +46,7 @@ type UpdateCategory200ApplicationJSONCategory struct {
 	AvailableGroups                     []interface{}                                               `json:"available_groups"`
 	CanDelete                           bool                                                        `json:"can_delete"`
 	CanEdit                             bool                                                        `json:"can_edit"`
+	CategorySetting                     interface{}                                                 `json:"category_setting,omitempty"`
 	Color                               string                                                      `json:"color"`
 	CustomFields                        map[string]interface{}                                      `json:"custom_fields"`
 	DefaultListFilter                   string                                                      `json:"default_list_filter"`

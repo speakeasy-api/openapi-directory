@@ -15,17 +15,21 @@ const (
 	POSTDescribeReservedNodeExchangeStatusActionEnumDescribeReservedNodeExchangeStatus POSTDescribeReservedNodeExchangeStatusActionEnum = "DescribeReservedNodeExchangeStatus"
 )
 
+func (e POSTDescribeReservedNodeExchangeStatusActionEnum) ToPointer() *POSTDescribeReservedNodeExchangeStatusActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeReservedNodeExchangeStatusActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeReservedNodeExchangeStatus":
-		*e = POSTDescribeReservedNodeExchangeStatusActionEnum(s)
+		*e = POSTDescribeReservedNodeExchangeStatusActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeReservedNodeExchangeStatusActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeReservedNodeExchangeStatusActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeReservedNodeExchangeStatusVersionEnumTwoThousandAndTwelve1201 POSTDescribeReservedNodeExchangeStatusVersionEnum = "2012-12-01"
 )
 
+func (e POSTDescribeReservedNodeExchangeStatusVersionEnum) ToPointer() *POSTDescribeReservedNodeExchangeStatusVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeReservedNodeExchangeStatusVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTDescribeReservedNodeExchangeStatusVersionEnum(s)
+		*e = POSTDescribeReservedNodeExchangeStatusVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeReservedNodeExchangeStatusVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeReservedNodeExchangeStatusVersionEnum: %v", v)
 	}
 }
 

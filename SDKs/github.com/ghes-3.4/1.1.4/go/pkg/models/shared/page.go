@@ -16,19 +16,23 @@ const (
 	PageBuildTypeEnumWorkflow PageBuildTypeEnum = "workflow"
 )
 
+func (e PageBuildTypeEnum) ToPointer() *PageBuildTypeEnum {
+	return &e
+}
+
 func (e *PageBuildTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy":
 		fallthrough
 	case "workflow":
-		*e = PageBuildTypeEnum(s)
+		*e = PageBuildTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PageBuildTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PageBuildTypeEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	PageProtectedDomainStateEnumUnverified PageProtectedDomainStateEnum = "unverified"
 )
 
+func (e PageProtectedDomainStateEnum) ToPointer() *PageProtectedDomainStateEnum {
+	return &e
+}
+
 func (e *PageProtectedDomainStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "verified":
 		fallthrough
 	case "unverified":
-		*e = PageProtectedDomainStateEnum(s)
+		*e = PageProtectedDomainStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PageProtectedDomainStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PageProtectedDomainStateEnum: %v", v)
 	}
 }
 
@@ -68,21 +76,25 @@ const (
 	PageStatusEnumErrored  PageStatusEnum = "errored"
 )
 
+func (e PageStatusEnum) ToPointer() *PageStatusEnum {
+	return &e
+}
+
 func (e *PageStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "built":
 		fallthrough
 	case "building":
 		fallthrough
 	case "errored":
-		*e = PageStatusEnum(s)
+		*e = PageStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PageStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PageStatusEnum: %v", v)
 	}
 }
 

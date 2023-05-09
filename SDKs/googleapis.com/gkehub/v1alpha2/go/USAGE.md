@@ -2,39 +2,37 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GkehubProjectsLocationsGlobalMembershipsInitializeHubRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.GkehubProjectsLocationsGlobalMembershipsInitializeHub(ctx, operations.GkehubProjectsLocationsGlobalMembershipsInitializeHubRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         RequestBody: map[string]interface{}{
             "distinctio": "quibusdam",
             "unde": "nulla",
             "corrupti": "illum",
         },
-        AccessToken: "vel",
-        Alt: "media",
-        Callback: "deserunt",
-        Fields: "suscipit",
-        Key: "iure",
-        OauthToken: "magnam",
-        PrettyPrint: false,
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("deserunt"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        OauthToken: sdk.String("magnam"),
+        PrettyPrint: sdk.Bool(false),
         Project: "debitis",
-        QuotaUser: "ipsa",
-        UploadType: "delectus",
-        UploadProtocol: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.GkehubProjectsLocationsGlobalMembershipsInitializeHub(ctx, req, operations.GkehubProjectsLocationsGlobalMembershipsInitializeHubSecurity{
+        QuotaUser: sdk.String("ipsa"),
+        UploadType: sdk.String("delectus"),
+        UploadProtocol: sdk.String("tempora"),
+    }, operations.GkehubProjectsLocationsGlobalMembershipsInitializeHubSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -35,7 +35,10 @@ func newLandlordController(defaultClient, securityClient HTTPClient, serverURL, 
 // LandlordControllerCreateMaintenancePreference - Post tenancy maintenance preferences:-
 func (s *landlordController) LandlordControllerCreateMaintenancePreference(ctx context.Context, request operations.LandlordControllerCreateMaintenancePreferenceRequest) (*operations.LandlordControllerCreateMaintenancePreferenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/tenancy/maintenance/preference", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/tenancy/maintenance/preference", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -108,7 +111,10 @@ func (s *landlordController) LandlordControllerCreateMaintenancePreference(ctx c
 // LandlordControllerGetAccounts - Get the accounting details for the landlord.
 func (s *landlordController) LandlordControllerGetAccounts(ctx context.Context, request operations.LandlordControllerGetAccountsRequest) (*operations.LandlordControllerGetAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/accounting", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/accounting", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -163,7 +169,10 @@ func (s *landlordController) LandlordControllerGetAccounts(ctx context.Context, 
 // LandlordControllerGetDocument - Download a Document
 func (s *landlordController) LandlordControllerGetDocument(ctx context.Context, request operations.LandlordControllerGetDocumentRequest) (*operations.LandlordControllerGetDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/document", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/document", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -232,7 +241,10 @@ func (s *landlordController) LandlordControllerGetDocument(ctx context.Context, 
 // LandlordControllerGetInvetoryReport - Generate a Inventory PDF for a tenancy
 func (s *landlordController) LandlordControllerGetInvetoryReport(ctx context.Context, request operations.LandlordControllerGetInvetoryReportRequest) (*operations.LandlordControllerGetInvetoryReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/inventory", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/inventory", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -301,7 +313,10 @@ func (s *landlordController) LandlordControllerGetInvetoryReport(ctx context.Con
 // LandlordControllerGetInvoice - Get an invoice pdf belonging to the landlord.
 func (s *landlordController) LandlordControllerGetInvoice(ctx context.Context, request operations.LandlordControllerGetInvoiceRequest) (*operations.LandlordControllerGetInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/invoice", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/invoice", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -370,7 +385,10 @@ func (s *landlordController) LandlordControllerGetInvoice(ctx context.Context, r
 // LandlordControllerGetLandlordCrmEntries - Retrieve landlord's CRM ID
 func (s *landlordController) LandlordControllerGetLandlordCrmEntries(ctx context.Context, request operations.LandlordControllerGetLandlordCrmEntriesRequest) (*operations.LandlordControllerGetLandlordCrmEntriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/landlordcrmentries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/landlordcrmentries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -439,7 +457,10 @@ func (s *landlordController) LandlordControllerGetLandlordCrmEntries(ctx context
 // LandlordControllerGetMaintenanceJobs - Get Active maintenance jobs.
 func (s *landlordController) LandlordControllerGetMaintenanceJobs(ctx context.Context, request operations.LandlordControllerGetMaintenanceJobsRequest) (*operations.LandlordControllerGetMaintenanceJobsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/maintenance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/maintenance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -494,7 +515,10 @@ func (s *landlordController) LandlordControllerGetMaintenanceJobs(ctx context.Co
 // LandlordControllerGetProfitLossReport - Generate a Profit and Loss Report
 func (s *landlordController) LandlordControllerGetProfitLossReport(ctx context.Context, request operations.LandlordControllerGetProfitLossReportRequest) (*operations.LandlordControllerGetProfitLossReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/profitloss", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/profitloss", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -549,7 +573,10 @@ func (s *landlordController) LandlordControllerGetProfitLossReport(ctx context.C
 // LandlordControllerGetRentArrears - Rent Arrears
 func (s *landlordController) LandlordControllerGetRentArrears(ctx context.Context, request operations.LandlordControllerGetRentArrearsRequest) (*operations.LandlordControllerGetRentArrearsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/rentarrears", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/rentarrears", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -604,7 +631,10 @@ func (s *landlordController) LandlordControllerGetRentArrears(ctx context.Contex
 // LandlordControllerGetSASReport - Generate a Self Assessment Tax Report
 func (s *landlordController) LandlordControllerGetSASReport(ctx context.Context, request operations.LandlordControllerGetSASReportRequest) (*operations.LandlordControllerGetSASReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/sas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/sas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -673,7 +703,10 @@ func (s *landlordController) LandlordControllerGetSASReport(ctx context.Context,
 // LandlordControllerGetSettings - Get contact details of all linked landlords.
 func (s *landlordController) LandlordControllerGetSettings(ctx context.Context, request operations.LandlordControllerGetSettingsRequest) (*operations.LandlordControllerGetSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -728,7 +761,10 @@ func (s *landlordController) LandlordControllerGetSettings(ctx context.Context, 
 // LandlordControllerGetSummaryDetails - Get the summary details for the landlord.
 func (s *landlordController) LandlordControllerGetSummaryDetails(ctx context.Context, request operations.LandlordControllerGetSummaryDetailsRequest) (*operations.LandlordControllerGetSummaryDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/summary", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/summary", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -783,7 +819,10 @@ func (s *landlordController) LandlordControllerGetSummaryDetails(ctx context.Con
 // LandlordControllerGetTenancy - Get tenancy details.
 func (s *landlordController) LandlordControllerGetTenancy(ctx context.Context, request operations.LandlordControllerGetTenancyRequest) (*operations.LandlordControllerGetTenancyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/tenancy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/tenancy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -838,7 +877,10 @@ func (s *landlordController) LandlordControllerGetTenancy(ctx context.Context, r
 // LandlordControllerGetTenancyAgreementReport - Generate a Tenancy Agreement Copy (PDF)
 func (s *landlordController) LandlordControllerGetTenancyAgreementReport(ctx context.Context, request operations.LandlordControllerGetTenancyAgreementReportRequest) (*operations.LandlordControllerGetTenancyAgreementReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/tenancyagreement", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/landlord/tenancyagreement", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

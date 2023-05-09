@@ -16,21 +16,25 @@ const (
 	GoogleCloudRetailV2alphaSearchRequestQueryExpansionSpecConditionEnumAuto                 GoogleCloudRetailV2alphaSearchRequestQueryExpansionSpecConditionEnum = "AUTO"
 )
 
+func (e GoogleCloudRetailV2alphaSearchRequestQueryExpansionSpecConditionEnum) ToPointer() *GoogleCloudRetailV2alphaSearchRequestQueryExpansionSpecConditionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaSearchRequestQueryExpansionSpecConditionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONDITION_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "AUTO":
-		*e = GoogleCloudRetailV2alphaSearchRequestQueryExpansionSpecConditionEnum(s)
+		*e = GoogleCloudRetailV2alphaSearchRequestQueryExpansionSpecConditionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaSearchRequestQueryExpansionSpecConditionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaSearchRequestQueryExpansionSpecConditionEnum: %v", v)
 	}
 }
 

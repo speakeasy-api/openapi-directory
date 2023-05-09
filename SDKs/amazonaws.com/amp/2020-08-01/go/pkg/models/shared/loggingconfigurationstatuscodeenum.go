@@ -19,12 +19,16 @@ const (
 	LoggingConfigurationStatusCodeEnumUpdateFailed   LoggingConfigurationStatusCodeEnum = "UPDATE_FAILED"
 )
 
+func (e LoggingConfigurationStatusCodeEnum) ToPointer() *LoggingConfigurationStatusCodeEnum {
+	return &e
+}
+
 func (e *LoggingConfigurationStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -36,9 +40,9 @@ func (e *LoggingConfigurationStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "CREATION_FAILED":
 		fallthrough
 	case "UPDATE_FAILED":
-		*e = LoggingConfigurationStatusCodeEnum(s)
+		*e = LoggingConfigurationStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoggingConfigurationStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for LoggingConfigurationStatusCodeEnum: %v", v)
 	}
 }

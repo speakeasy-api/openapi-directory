@@ -16,12 +16,16 @@ const (
 	ShippingLabelStatusEnumFailed     ShippingLabelStatusEnum = "Failed"
 )
 
+func (e ShippingLabelStatusEnum) ToPointer() *ShippingLabelStatusEnum {
+	return &e
+}
+
 func (e *ShippingLabelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InProgress":
 		fallthrough
 	case "TimedOut":
@@ -29,9 +33,9 @@ func (e *ShippingLabelStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Succeeded":
 		fallthrough
 	case "Failed":
-		*e = ShippingLabelStatusEnum(s)
+		*e = ShippingLabelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShippingLabelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ShippingLabelStatusEnum: %v", v)
 	}
 }

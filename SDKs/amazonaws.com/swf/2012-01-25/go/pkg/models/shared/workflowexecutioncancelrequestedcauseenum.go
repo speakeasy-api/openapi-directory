@@ -13,16 +13,20 @@ const (
 	WorkflowExecutionCancelRequestedCauseEnumChildPolicyApplied WorkflowExecutionCancelRequestedCauseEnum = "CHILD_POLICY_APPLIED"
 )
 
+func (e WorkflowExecutionCancelRequestedCauseEnum) ToPointer() *WorkflowExecutionCancelRequestedCauseEnum {
+	return &e
+}
+
 func (e *WorkflowExecutionCancelRequestedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHILD_POLICY_APPLIED":
-		*e = WorkflowExecutionCancelRequestedCauseEnum(s)
+		*e = WorkflowExecutionCancelRequestedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkflowExecutionCancelRequestedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkflowExecutionCancelRequestedCauseEnum: %v", v)
 	}
 }

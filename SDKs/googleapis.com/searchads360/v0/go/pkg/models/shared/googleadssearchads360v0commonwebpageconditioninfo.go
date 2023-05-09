@@ -20,12 +20,16 @@ const (
 	GoogleAdsSearchads360V0CommonWebpageConditionInfoOperandEnumCustomLabel GoogleAdsSearchads360V0CommonWebpageConditionInfoOperandEnum = "CUSTOM_LABEL"
 )
 
+func (e GoogleAdsSearchads360V0CommonWebpageConditionInfoOperandEnum) ToPointer() *GoogleAdsSearchads360V0CommonWebpageConditionInfoOperandEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonWebpageConditionInfoOperandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -39,10 +43,10 @@ func (e *GoogleAdsSearchads360V0CommonWebpageConditionInfoOperandEnum) Unmarshal
 	case "PAGE_CONTENT":
 		fallthrough
 	case "CUSTOM_LABEL":
-		*e = GoogleAdsSearchads360V0CommonWebpageConditionInfoOperandEnum(s)
+		*e = GoogleAdsSearchads360V0CommonWebpageConditionInfoOperandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonWebpageConditionInfoOperandEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonWebpageConditionInfoOperandEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	GoogleAdsSearchads360V0CommonWebpageConditionInfoOperatorEnumContains    GoogleAdsSearchads360V0CommonWebpageConditionInfoOperatorEnum = "CONTAINS"
 )
 
+func (e GoogleAdsSearchads360V0CommonWebpageConditionInfoOperatorEnum) ToPointer() *GoogleAdsSearchads360V0CommonWebpageConditionInfoOperatorEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonWebpageConditionInfoOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -69,10 +77,10 @@ func (e *GoogleAdsSearchads360V0CommonWebpageConditionInfoOperatorEnum) Unmarsha
 	case "EQUALS":
 		fallthrough
 	case "CONTAINS":
-		*e = GoogleAdsSearchads360V0CommonWebpageConditionInfoOperatorEnum(s)
+		*e = GoogleAdsSearchads360V0CommonWebpageConditionInfoOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonWebpageConditionInfoOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonWebpageConditionInfoOperatorEnum: %v", v)
 	}
 }
 

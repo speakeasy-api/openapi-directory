@@ -2,29 +2,27 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GETAnalyticsDataUsingGETRequest{
-        APIKey: "corrupti",
-        DataType: "sessionAnalytic",
-        EndDate: "2021-04-24",
-        Keys: "unde",
-        Precision: "MONTHLY",
-        Stage: "PREVIEW",
-        StartDate: "2021-09-24",
-    }
-
     ctx := context.Background()
-    res, err := s.Analytics.GETAnalyticsDataUsingGET(ctx, req)
+    res, err := s.Analytics.GETAnalyticsDataUsingGET(ctx, operations.GETAnalyticsDataUsingGETRequest{
+        APIKey: "corrupti",
+        DataType: operations.GETAnalyticsDataUsingGETDataTypeEnumSessionAnalytic,
+        EndDate: types.MustDateFromString("2021-04-24"),
+        Keys: sdk.String("unde"),
+        Precision: operations.GETAnalyticsDataUsingGETPrecisionEnumMonthly,
+        Stage: operations.GETAnalyticsDataUsingGETStageEnumPreview,
+        StartDate: types.MustDateFromString("2021-09-24"),
+    })
     if err != nil {
         log.Fatal(err)
     }

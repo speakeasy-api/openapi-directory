@@ -16,17 +16,21 @@ const (
 	StopInferenceRecommendationsJobXAmzTargetEnumSageMakerStopInferenceRecommendationsJob StopInferenceRecommendationsJobXAmzTargetEnum = "SageMaker.StopInferenceRecommendationsJob"
 )
 
+func (e StopInferenceRecommendationsJobXAmzTargetEnum) ToPointer() *StopInferenceRecommendationsJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopInferenceRecommendationsJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.StopInferenceRecommendationsJob":
-		*e = StopInferenceRecommendationsJobXAmzTargetEnum(s)
+		*e = StopInferenceRecommendationsJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopInferenceRecommendationsJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopInferenceRecommendationsJobXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -25,12 +25,16 @@ const (
 	KeySpecEnumSm2              KeySpecEnum = "SM2"
 )
 
+func (e KeySpecEnum) ToPointer() *KeySpecEnum {
+	return &e
+}
+
 func (e *KeySpecEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RSA_2048":
 		fallthrough
 	case "RSA_3072":
@@ -56,9 +60,9 @@ func (e *KeySpecEnum) UnmarshalJSON(data []byte) error {
 	case "HMAC_512":
 		fallthrough
 	case "SM2":
-		*e = KeySpecEnum(s)
+		*e = KeySpecEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeySpecEnum: %s", s)
+		return fmt.Errorf("invalid value for KeySpecEnum: %v", v)
 	}
 }

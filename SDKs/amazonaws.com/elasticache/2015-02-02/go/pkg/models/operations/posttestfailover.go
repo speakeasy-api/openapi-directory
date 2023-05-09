@@ -15,17 +15,21 @@ const (
 	POSTTestFailoverActionEnumTestFailover POSTTestFailoverActionEnum = "TestFailover"
 )
 
+func (e POSTTestFailoverActionEnum) ToPointer() *POSTTestFailoverActionEnum {
+	return &e
+}
+
 func (e *POSTTestFailoverActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TestFailover":
-		*e = POSTTestFailoverActionEnum(s)
+		*e = POSTTestFailoverActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTestFailoverActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTestFailoverActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTTestFailoverVersionEnumTwoThousandAndFifteen0202 POSTTestFailoverVersionEnum = "2015-02-02"
 )
 
+func (e POSTTestFailoverVersionEnum) ToPointer() *POSTTestFailoverVersionEnum {
+	return &e
+}
+
 func (e *POSTTestFailoverVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTTestFailoverVersionEnum(s)
+		*e = POSTTestFailoverVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTestFailoverVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTestFailoverVersionEnum: %v", v)
 	}
 }
 

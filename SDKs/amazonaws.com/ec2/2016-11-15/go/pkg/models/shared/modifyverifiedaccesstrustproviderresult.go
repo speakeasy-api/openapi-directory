@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions - The options for device-identity type trust provider.
+// ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions - The options for device-identity trust provider.
 type ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions struct {
 	TenantID *string
 }
@@ -20,23 +20,27 @@ const (
 	ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnumCrowdstrike ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum = "crowdstrike"
 )
 
+func (e ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum) ToPointer() *ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "jamf":
 		fallthrough
 	case "crowdstrike":
-		*e = ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum(s)
+		*e = ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum: %v", v)
 	}
 }
 
-// ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions - The OpenID Connect details for an <code>oidc</code>-type, user-identity based trust provider.
+// ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions - The options for an OpenID Connect-compatible user-identity trust provider.
 type ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions struct {
 	AuthorizationEndpoint *string
 	ClientID              *string
@@ -61,19 +65,23 @@ const (
 	ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnumDevice ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum = "device"
 )
 
+func (e ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum) ToPointer() *ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "device":
-		*e = ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum(s)
+		*e = ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -85,23 +93,27 @@ const (
 	ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnumOidc              ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum = "oidc"
 )
 
+func (e ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum) ToPointer() *ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iam-identity-center":
 		fallthrough
 	case "oidc":
-		*e = ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum(s)
+		*e = ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum: %v", v)
 	}
 }
 
-// ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider - The ID of the Amazon Web Services Verified Access trust provider.
+// ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider - The ID of the Verified Access trust provider.
 type ModifyVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider struct {
 	CreationTime                  *string
 	Description                   *string

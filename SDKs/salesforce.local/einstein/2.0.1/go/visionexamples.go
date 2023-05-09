@@ -37,7 +37,10 @@ func newVisionExamples(defaultClient, securityClient HTTPClient, serverURL, lang
 // Adds an example with the specified label to a dataset.
 func (s *visionExamples) AddExample(ctx context.Context, request operations.AddExampleRequest, security operations.AddExampleSecurity) (*operations.AddExampleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/examples", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/examples", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *visionExamples) GetExamplesByLabel1(ctx context.Context, request operat
 // Returns all the examples for the specified dataset. By default, returns examples created by uploading them from a .zip file.
 func (s *visionExamples) GetExamples1(ctx context.Context, request operations.GetExamples1Request, security operations.GetExamples1Security) (*operations.GetExamples1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/examples", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/examples", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -291,7 +297,10 @@ func (s *visionExamples) UpdateDatasetAsync1(ctx context.Context, request operat
 // Adds examples from a .zip file to a dataset. You can use this call only with a dataset that was created from a .zip file.
 func (s *visionExamples) UpdateDatasetAsync2(ctx context.Context, request operations.UpdateDatasetAsync2Request, security operations.UpdateDatasetAsync2Security) (*operations.UpdateDatasetAsync2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/upload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}/upload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

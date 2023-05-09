@@ -17,19 +17,23 @@ const (
 	PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJSONVehicleEngineTypeEnumElectric   PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJSONVehicleEngineTypeEnum = "electric"
 )
 
+func (e PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJSONVehicleEngineTypeEnum) ToPointer() *PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJSONVehicleEngineTypeEnum {
+	return &e
+}
+
 func (e *PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJSONVehicleEngineTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "combustion":
 		fallthrough
 	case "electric":
-		*e = PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJSONVehicleEngineTypeEnum(s)
+		*e = PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJSONVehicleEngineTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJSONVehicleEngineTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJSONVehicleEngineTypeEnum: %v", v)
 	}
 }
 

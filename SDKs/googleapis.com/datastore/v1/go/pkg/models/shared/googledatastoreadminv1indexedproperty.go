@@ -16,21 +16,25 @@ const (
 	GoogleDatastoreAdminV1IndexedPropertyDirectionEnumDescending           GoogleDatastoreAdminV1IndexedPropertyDirectionEnum = "DESCENDING"
 )
 
+func (e GoogleDatastoreAdminV1IndexedPropertyDirectionEnum) ToPointer() *GoogleDatastoreAdminV1IndexedPropertyDirectionEnum {
+	return &e
+}
+
 func (e *GoogleDatastoreAdminV1IndexedPropertyDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIRECTION_UNSPECIFIED":
 		fallthrough
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = GoogleDatastoreAdminV1IndexedPropertyDirectionEnum(s)
+		*e = GoogleDatastoreAdminV1IndexedPropertyDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleDatastoreAdminV1IndexedPropertyDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleDatastoreAdminV1IndexedPropertyDirectionEnum: %v", v)
 	}
 }
 

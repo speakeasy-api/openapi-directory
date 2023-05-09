@@ -16,17 +16,21 @@ const (
 	SetDefaultMessageTypeXAmzTargetEnumPinpointSmsVoiceV2SetDefaultMessageType SetDefaultMessageTypeXAmzTargetEnum = "PinpointSMSVoiceV2.SetDefaultMessageType"
 )
 
+func (e SetDefaultMessageTypeXAmzTargetEnum) ToPointer() *SetDefaultMessageTypeXAmzTargetEnum {
+	return &e
+}
+
 func (e *SetDefaultMessageTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.SetDefaultMessageType":
-		*e = SetDefaultMessageTypeXAmzTargetEnum(s)
+		*e = SetDefaultMessageTypeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetDefaultMessageTypeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SetDefaultMessageTypeXAmzTargetEnum: %v", v)
 	}
 }
 

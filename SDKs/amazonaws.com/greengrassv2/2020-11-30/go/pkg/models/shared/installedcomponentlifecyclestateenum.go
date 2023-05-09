@@ -20,12 +20,16 @@ const (
 	InstalledComponentLifecycleStateEnumFinished  InstalledComponentLifecycleStateEnum = "FINISHED"
 )
 
+func (e InstalledComponentLifecycleStateEnum) ToPointer() *InstalledComponentLifecycleStateEnum {
+	return &e
+}
+
 func (e *InstalledComponentLifecycleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEW":
 		fallthrough
 	case "INSTALLED":
@@ -41,9 +45,9 @@ func (e *InstalledComponentLifecycleStateEnum) UnmarshalJSON(data []byte) error 
 	case "BROKEN":
 		fallthrough
 	case "FINISHED":
-		*e = InstalledComponentLifecycleStateEnum(s)
+		*e = InstalledComponentLifecycleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstalledComponentLifecycleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstalledComponentLifecycleStateEnum: %v", v)
 	}
 }

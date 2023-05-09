@@ -15,17 +15,21 @@ const (
 	GETRestoreAddressToClassicActionEnumRestoreAddressToClassic GETRestoreAddressToClassicActionEnum = "RestoreAddressToClassic"
 )
 
+func (e GETRestoreAddressToClassicActionEnum) ToPointer() *GETRestoreAddressToClassicActionEnum {
+	return &e
+}
+
 func (e *GETRestoreAddressToClassicActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RestoreAddressToClassic":
-		*e = GETRestoreAddressToClassicActionEnum(s)
+		*e = GETRestoreAddressToClassicActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestoreAddressToClassicActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestoreAddressToClassicActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRestoreAddressToClassicVersionEnumTwoThousandAndSixteen1115 GETRestoreAddressToClassicVersionEnum = "2016-11-15"
 )
 
+func (e GETRestoreAddressToClassicVersionEnum) ToPointer() *GETRestoreAddressToClassicVersionEnum {
+	return &e
+}
+
 func (e *GETRestoreAddressToClassicVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETRestoreAddressToClassicVersionEnum(s)
+		*e = GETRestoreAddressToClassicVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestoreAddressToClassicVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestoreAddressToClassicVersionEnum: %v", v)
 	}
 }
 

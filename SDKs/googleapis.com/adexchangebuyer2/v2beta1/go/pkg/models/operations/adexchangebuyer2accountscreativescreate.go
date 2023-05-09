@@ -22,19 +22,23 @@ const (
 	Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnumForceEnableDuplicateIds Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnum = "FORCE_ENABLE_DUPLICATE_IDS"
 )
 
+func (e Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnum) ToPointer() *Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnum {
+	return &e
+}
+
 func (e *Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_DUPLICATES":
 		fallthrough
 	case "FORCE_ENABLE_DUPLICATE_IDS":
-		*e = Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnum(s)
+		*e = Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnum: %s", s)
+		return fmt.Errorf("invalid value for Adexchangebuyer2AccountsCreativesCreateDuplicateIDModeEnum: %v", v)
 	}
 }
 

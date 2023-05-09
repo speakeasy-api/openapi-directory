@@ -15,17 +15,21 @@ const (
 	GETAssociateDataShareConsumerActionEnumAssociateDataShareConsumer GETAssociateDataShareConsumerActionEnum = "AssociateDataShareConsumer"
 )
 
+func (e GETAssociateDataShareConsumerActionEnum) ToPointer() *GETAssociateDataShareConsumerActionEnum {
+	return &e
+}
+
 func (e *GETAssociateDataShareConsumerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssociateDataShareConsumer":
-		*e = GETAssociateDataShareConsumerActionEnum(s)
+		*e = GETAssociateDataShareConsumerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssociateDataShareConsumerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssociateDataShareConsumerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAssociateDataShareConsumerVersionEnumTwoThousandAndTwelve1201 GETAssociateDataShareConsumerVersionEnum = "2012-12-01"
 )
 
+func (e GETAssociateDataShareConsumerVersionEnum) ToPointer() *GETAssociateDataShareConsumerVersionEnum {
+	return &e
+}
+
 func (e *GETAssociateDataShareConsumerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETAssociateDataShareConsumerVersionEnum(s)
+		*e = GETAssociateDataShareConsumerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssociateDataShareConsumerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssociateDataShareConsumerVersionEnum: %v", v)
 	}
 }
 

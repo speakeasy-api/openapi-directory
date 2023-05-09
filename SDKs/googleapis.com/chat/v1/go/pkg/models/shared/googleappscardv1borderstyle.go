@@ -16,25 +16,29 @@ const (
 	GoogleAppsCardV1BorderStyleTypeEnumStroke                GoogleAppsCardV1BorderStyleTypeEnum = "STROKE"
 )
 
+func (e GoogleAppsCardV1BorderStyleTypeEnum) ToPointer() *GoogleAppsCardV1BorderStyleTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1BorderStyleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BORDER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NO_BORDER":
 		fallthrough
 	case "STROKE":
-		*e = GoogleAppsCardV1BorderStyleTypeEnum(s)
+		*e = GoogleAppsCardV1BorderStyleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1BorderStyleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1BorderStyleTypeEnum: %v", v)
 	}
 }
 
-// GoogleAppsCardV1BorderStyle - Represents the complete border style applied to items in a widget.
+// GoogleAppsCardV1BorderStyle - The style options for the border of a card or widget, including the border type and color.
 type GoogleAppsCardV1BorderStyle struct {
 	// The corner radius for the border.
 	CornerRadius *int `json:"cornerRadius,omitempty"`

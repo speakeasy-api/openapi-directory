@@ -16,21 +16,25 @@ const (
 	InstanceAvailabilityEnumDynamic     InstanceAvailabilityEnum = "DYNAMIC"
 )
 
+func (e InstanceAvailabilityEnum) ToPointer() *InstanceAvailabilityEnum {
+	return &e
+}
+
 func (e *InstanceAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "RESIDENT":
 		fallthrough
 	case "DYNAMIC":
-		*e = InstanceAvailabilityEnum(s)
+		*e = InstanceAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceAvailabilityEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	InstanceVMLivenessEnumTimeout                  InstanceVMLivenessEnum = "TIMEOUT"
 )
 
+func (e InstanceVMLivenessEnum) ToPointer() *InstanceVMLivenessEnum {
+	return &e
+}
+
 func (e *InstanceVMLivenessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVENESS_STATE_UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -63,10 +71,10 @@ func (e *InstanceVMLivenessEnum) UnmarshalJSON(data []byte) error {
 	case "DRAINING":
 		fallthrough
 	case "TIMEOUT":
-		*e = InstanceVMLivenessEnum(s)
+		*e = InstanceVMLivenessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceVMLivenessEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceVMLivenessEnum: %v", v)
 	}
 }
 

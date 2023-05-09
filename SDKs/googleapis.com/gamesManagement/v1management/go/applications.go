@@ -34,7 +34,10 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 // GamesManagementApplicationsListHidden - Get the list of players hidden from the given application. This method is only available to user accounts for your developer console.
 func (s *applications) GamesManagementApplicationsListHidden(ctx context.Context, request operations.GamesManagementApplicationsListHiddenRequest, security operations.GamesManagementApplicationsListHiddenSecurity) (*operations.GamesManagementApplicationsListHiddenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/applications/{applicationId}/players/hidden", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1management/applications/{applicationId}/players/hidden", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

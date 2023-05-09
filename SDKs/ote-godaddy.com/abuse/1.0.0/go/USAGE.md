@@ -2,29 +2,26 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.AbuseTicketCreate{
-        Info: "corrupti",
-        InfoURL: "provident",
-        Intentional: false,
-        Proxy: "distinctio",
-        Source: "quibusdam",
-        Target: "unde",
-        Type: "PHISHING",
-    }
-
     ctx := context.Background()
-    res, err := s.V1.CreateTicket(ctx, req)
+    res, err := s.V1.CreateTicket(ctx, shared.AbuseTicketCreate{
+        Info: sdk.String("corrupti"),
+        InfoURL: sdk.String("provident"),
+        Intentional: sdk.Bool(false),
+        Proxy: sdk.String("distinctio"),
+        Source: sdk.String("quibusdam"),
+        Target: sdk.String("unde"),
+        Type: shared.AbuseTicketCreateTypeEnumPhishing.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -34,10 +35,12 @@ pkg/models/operations/cloudresourcemanagerprojectsundelete.go
 pkg/models/operations/cloudresourcemanagertagbindingscreate.go
 pkg/models/operations/cloudresourcemanagertagbindingslist.go
 pkg/models/operations/cloudresourcemanagertagkeyscreate.go
+pkg/models/operations/cloudresourcemanagertagkeysgetnamespaced.go
 pkg/models/operations/cloudresourcemanagertagkeyslist.go
 pkg/models/operations/cloudresourcemanagertagvaluescreate.go
 pkg/models/operations/cloudresourcemanagertagvaluesget.go
 pkg/models/operations/cloudresourcemanagertagvaluesgetiampolicy.go
+pkg/models/operations/cloudresourcemanagertagvaluesgetnamespaced.go
 pkg/models/operations/cloudresourcemanagertagvalueslist.go
 pkg/models/operations/cloudresourcemanagertagvaluespatch.go
 pkg/models/operations/cloudresourcemanagertagvaluessetiampolicy.go
@@ -80,4 +83,13 @@ pkg/models/shared/taghold.go
 pkg/models/shared/listtagholdsresponse.go
 pkg/models/shared/testiampermissionsresponse.go
 pkg/models/shared/testiampermissionsrequest.go
+docs/sdk/README.md
+docs/effectivetags/README.md
+docs/folders/README.md
+docs/liens/README.md
+docs/organizations/README.md
+docs/projects/README.md
+docs/tagbindings/README.md
+docs/tagkeys/README.md
+docs/tagvalues/README.md
 USAGE.md

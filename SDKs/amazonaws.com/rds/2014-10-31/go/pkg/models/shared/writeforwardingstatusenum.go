@@ -17,12 +17,16 @@ const (
 	WriteForwardingStatusEnumUnknown   WriteForwardingStatusEnum = "unknown"
 )
 
+func (e WriteForwardingStatusEnum) ToPointer() *WriteForwardingStatusEnum {
+	return &e
+}
+
 func (e *WriteForwardingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
@@ -32,9 +36,9 @@ func (e *WriteForwardingStatusEnum) UnmarshalJSON(data []byte) error {
 	case "disabling":
 		fallthrough
 	case "unknown":
-		*e = WriteForwardingStatusEnum(s)
+		*e = WriteForwardingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WriteForwardingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WriteForwardingStatusEnum: %v", v)
 	}
 }

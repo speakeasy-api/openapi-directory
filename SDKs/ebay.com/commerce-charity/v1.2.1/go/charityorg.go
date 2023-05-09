@@ -35,7 +35,10 @@ func newCharityOrg(defaultClient, securityClient HTTPClient, serverURL, language
 // GetCharityOrg - This call is used to retrieve detailed information about supported charitable organizations. It allows users to retrieve the details for a specific charitable organization using its charity organization ID.
 func (s *charityOrg) GetCharityOrg(ctx context.Context, request operations.GetCharityOrgRequest, security operations.GetCharityOrgSecurity) (*operations.GetCharityOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/charity_org/{charity_org_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/charity_org/{charity_org_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

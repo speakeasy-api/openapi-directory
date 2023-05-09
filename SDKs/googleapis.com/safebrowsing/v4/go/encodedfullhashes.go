@@ -33,7 +33,10 @@ func newEncodedFullHashes(defaultClient, securityClient HTTPClient, serverURL, l
 
 func (s *encodedFullHashes) SafebrowsingEncodedFullHashesGet(ctx context.Context, request operations.SafebrowsingEncodedFullHashesGetRequest) (*operations.SafebrowsingEncodedFullHashesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/encodedFullHashes/{encodedRequest}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/encodedFullHashes/{encodedRequest}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

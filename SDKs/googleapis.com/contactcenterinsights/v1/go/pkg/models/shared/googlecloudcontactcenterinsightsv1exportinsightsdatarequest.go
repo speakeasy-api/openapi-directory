@@ -16,21 +16,25 @@ const (
 	GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnumWriteAppend                 GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum = "WRITE_APPEND"
 )
 
+func (e GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum) ToPointer() *GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum {
+	return &e
+}
+
 func (e *GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WRITE_DISPOSITION_UNSPECIFIED":
 		fallthrough
 	case "WRITE_TRUNCATE":
 		fallthrough
 	case "WRITE_APPEND":
-		*e = GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum(s)
+		*e = GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestWriteDispositionEnum: %v", v)
 	}
 }
 

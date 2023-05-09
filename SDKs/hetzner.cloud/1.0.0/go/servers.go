@@ -36,7 +36,10 @@ func newServers(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Deletes a Server. This immediately removes the Server from your account, and it is no longer accessible.
 func (s *servers) DeleteServersID(ctx context.Context, request operations.DeleteServersIDRequest) (*operations.DeleteServersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/servers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -130,7 +133,10 @@ func (s *servers) GetServers(ctx context.Context, request operations.GetServersR
 // Returns a specific Server object. The Server must exist inside the Project
 func (s *servers) GetServersID(ctx context.Context, request operations.GetServersIDRequest) (*operations.GetServersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/servers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -197,7 +203,10 @@ func (s *servers) GetServersID(ctx context.Context, request operations.GetServer
 // We limit the number of samples returned to a maximum of 500 and will adjust the step parameter accordingly.
 func (s *servers) GetServersIDMetrics(ctx context.Context, request operations.GetServersIDMetricsRequest) (*operations.GetServersIDMetricsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}/metrics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/servers/{id}/metrics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -300,7 +309,10 @@ func (s *servers) PostServers(ctx context.Context, request operations.PostServer
 // Also note that when updating labels, the Server’s current set of labels will be replaced with the labels provided in the request body. So, for example, if you want to add a new label, you have to provide all existing labels plus the new label in the request body.
 func (s *servers) PutServersID(ctx context.Context, request operations.PutServersIDRequest) (*operations.PutServersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/servers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/servers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

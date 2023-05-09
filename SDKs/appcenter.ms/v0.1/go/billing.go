@@ -92,7 +92,10 @@ func (s *billing) BillingAggregatedInformationGetAll(ctx context.Context, reques
 // BillingAggregatedInformationGetByApp - Aggregated Billing Information for owner of a given app.
 func (s *billing) BillingAggregatedInformationGetByApp(ctx context.Context, request operations.BillingAggregatedInformationGetByAppRequest, security operations.BillingAggregatedInformationGetByAppSecurity) (*operations.BillingAggregatedInformationGetByAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/billing/aggregated", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/billing/aggregated", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -150,7 +153,10 @@ func (s *billing) BillingAggregatedInformationGetByApp(ctx context.Context, requ
 // BillingAggregatedInformationGetForOrg - Aggregated Billing Information for a given Organization.
 func (s *billing) BillingAggregatedInformationGetForOrg(ctx context.Context, request operations.BillingAggregatedInformationGetForOrgRequest, security operations.BillingAggregatedInformationGetForOrgSecurity) (*operations.BillingAggregatedInformationGetForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{orgName}/billing/aggregated", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{orgName}/billing/aggregated", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

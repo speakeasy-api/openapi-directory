@@ -20,12 +20,16 @@ const (
 	GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnumAccessMaybeGained           GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum = "ACCESS_MAYBE_GAINED"
 )
 
+func (e GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum) ToPointer() *GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_CHANGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NO_CHANGE":
@@ -39,10 +43,10 @@ func (e *GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum) UnmarshalJ
 	case "ACCESS_MAYBE_REVOKED":
 		fallthrough
 	case "ACCESS_MAYBE_GAINED":
-		*e = GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum(s)
+		*e = GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicysimulatorV1AccessStateDiffAccessChangeEnum: %v", v)
 	}
 }
 

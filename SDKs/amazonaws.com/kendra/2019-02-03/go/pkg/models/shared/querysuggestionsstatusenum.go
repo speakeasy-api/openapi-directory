@@ -14,18 +14,22 @@ const (
 	QuerySuggestionsStatusEnumUpdating QuerySuggestionsStatusEnum = "UPDATING"
 )
 
+func (e QuerySuggestionsStatusEnum) ToPointer() *QuerySuggestionsStatusEnum {
+	return &e
+}
+
 func (e *QuerySuggestionsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "UPDATING":
-		*e = QuerySuggestionsStatusEnum(s)
+		*e = QuerySuggestionsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QuerySuggestionsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for QuerySuggestionsStatusEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	NotifyResourceDeploymentStatusChangeXAmzTargetEnumAwsProton20200720NotifyResourceDeploymentStatusChange NotifyResourceDeploymentStatusChangeXAmzTargetEnum = "AwsProton20200720.NotifyResourceDeploymentStatusChange"
 )
 
+func (e NotifyResourceDeploymentStatusChangeXAmzTargetEnum) ToPointer() *NotifyResourceDeploymentStatusChangeXAmzTargetEnum {
+	return &e
+}
+
 func (e *NotifyResourceDeploymentStatusChangeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.NotifyResourceDeploymentStatusChange":
-		*e = NotifyResourceDeploymentStatusChangeXAmzTargetEnum(s)
+		*e = NotifyResourceDeploymentStatusChangeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotifyResourceDeploymentStatusChangeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for NotifyResourceDeploymentStatusChangeXAmzTargetEnum: %v", v)
 	}
 }
 

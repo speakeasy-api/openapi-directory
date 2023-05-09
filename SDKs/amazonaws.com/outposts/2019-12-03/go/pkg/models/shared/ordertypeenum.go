@@ -14,18 +14,22 @@ const (
 	OrderTypeEnumReplacement OrderTypeEnum = "REPLACEMENT"
 )
 
+func (e OrderTypeEnum) ToPointer() *OrderTypeEnum {
+	return &e
+}
+
 func (e *OrderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OUTPOST":
 		fallthrough
 	case "REPLACEMENT":
-		*e = OrderTypeEnum(s)
+		*e = OrderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderTypeEnum: %v", v)
 	}
 }

@@ -35,7 +35,10 @@ func newTransaction(defaultClient, securityClient HTTPClient, serverURL, languag
 // Creates a cancellation in the transaction. Cancel a item reservation or create a refund.
 func (s *transaction) CancelGiftCardTransaction(ctx context.Context, request operations.CancelGiftCardTransactionRequest) (*operations.CancelGiftCardTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/cancellations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/cancellations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CancelGiftCardTransactionRequest", "json")
 	if err != nil {
@@ -92,7 +95,10 @@ func (s *transaction) CancelGiftCardTransaction(ctx context.Context, request ope
 // Register a new giftcard transaction and authorize the item reservation.
 func (s *transaction) CreateGiftCardTransaction(ctx context.Context, request operations.CreateGiftCardTransactionRequest) (*operations.CreateGiftCardTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateGiftCardTransactionRequest", "json")
 	if err != nil {
@@ -145,7 +151,10 @@ func (s *transaction) CreateGiftCardTransaction(ctx context.Context, request ope
 // GetGiftCardTransactionbyID - Get GiftCard Transaction by ID
 func (s *transaction) GetGiftCardTransactionbyID(ctx context.Context, request operations.GetGiftCardTransactionbyIDRequest) (*operations.GetGiftCardTransactionbyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *transaction) GetGiftCardTransactionbyID(ctx context.Context, request op
 // Returns all transaction of a giftcard.
 func (s *transaction) GetGiftCardTransactions(ctx context.Context, request operations.GetGiftCardTransactionsRequest) (*operations.GetGiftCardTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,7 +251,10 @@ func (s *transaction) GetGiftCardTransactions(ctx context.Context, request opera
 // Returns the giftcard transaction authorizations.
 func (s *transaction) GetTransactionAuthorizations(ctx context.Context, request operations.GetTransactionAuthorizationsRequest) (*operations.GetTransactionAuthorizationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/authorization", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/authorization", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -286,7 +301,10 @@ func (s *transaction) GetTransactionAuthorizations(ctx context.Context, request 
 // Returns the giftcard transaction cancellations.
 func (s *transaction) GetTransactionCancellations(ctx context.Context, request operations.GetTransactionCancellationsRequest) (*operations.GetTransactionCancellationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/cancellations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/cancellations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -333,7 +351,10 @@ func (s *transaction) GetTransactionCancellations(ctx context.Context, request o
 // Returns the giftcard transaction settlements.
 func (s *transaction) GetTransactionSettlements(ctx context.Context, request operations.GetTransactionSettlementsRequest) (*operations.GetTransactionSettlementsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/settlements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/settlements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -380,7 +401,10 @@ func (s *transaction) GetTransactionSettlements(ctx context.Context, request ope
 // Creates a giftcard transaction settlement.
 func (s *transaction) SettleGiftCardTransaction(ctx context.Context, request operations.SettleGiftCardTransactionRequest) (*operations.SettleGiftCardTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/settlements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}/transactions/{transactionID}/settlements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SettleGiftCardTransactionRequest", "json")
 	if err != nil {

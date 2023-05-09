@@ -16,21 +16,25 @@ const (
 	DateFieldFontEnumTimesRoman DateFieldFontEnum = "times_roman"
 )
 
+func (e DateFieldFontEnum) ToPointer() *DateFieldFontEnum {
+	return &e
+}
+
 func (e *DateFieldFontEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "courier":
 		fallthrough
 	case "helvetica":
 		fallthrough
 	case "times_roman":
-		*e = DateFieldFontEnum(s)
+		*e = DateFieldFontEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DateFieldFontEnum: %s", s)
+		return fmt.Errorf("invalid value for DateFieldFontEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	DateFieldHorizontalAlignEnumR DateFieldHorizontalAlignEnum = "R"
 )
 
+func (e DateFieldHorizontalAlignEnum) ToPointer() *DateFieldHorizontalAlignEnum {
+	return &e
+}
+
 func (e *DateFieldHorizontalAlignEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "L":
 		fallthrough
 	case "C":
 		fallthrough
 	case "R":
-		*e = DateFieldHorizontalAlignEnum(s)
+		*e = DateFieldHorizontalAlignEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DateFieldHorizontalAlignEnum: %s", s)
+		return fmt.Errorf("invalid value for DateFieldHorizontalAlignEnum: %v", v)
 	}
 }
 
@@ -67,17 +75,21 @@ const (
 	DateFieldTypeEnumDate DateFieldTypeEnum = "date"
 )
 
+func (e DateFieldTypeEnum) ToPointer() *DateFieldTypeEnum {
+	return &e
+}
+
 func (e *DateFieldTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "date":
-		*e = DateFieldTypeEnum(s)
+		*e = DateFieldTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DateFieldTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DateFieldTypeEnum: %v", v)
 	}
 }
 
@@ -90,21 +102,25 @@ const (
 	DateFieldVerticalAlignEnumB DateFieldVerticalAlignEnum = "B"
 )
 
+func (e DateFieldVerticalAlignEnum) ToPointer() *DateFieldVerticalAlignEnum {
+	return &e
+}
+
 func (e *DateFieldVerticalAlignEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "T":
 		fallthrough
 	case "C":
 		fallthrough
 	case "B":
-		*e = DateFieldVerticalAlignEnum(s)
+		*e = DateFieldVerticalAlignEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DateFieldVerticalAlignEnum: %s", s)
+		return fmt.Errorf("invalid value for DateFieldVerticalAlignEnum: %v", v)
 	}
 }
 

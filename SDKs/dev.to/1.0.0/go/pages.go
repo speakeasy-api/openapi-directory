@@ -36,7 +36,10 @@ func newPages(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // This endpoint allows the client to delete a single Page object, specified by ID.
 func (s *pages) DeleteAPIPagesID(ctx context.Context, request operations.DeleteAPIPagesIDRequest) (*operations.DeleteAPIPagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +132,10 @@ func (s *pages) GetAPIPages(ctx context.Context) (*operations.GetAPIPagesRespons
 // This endpoint allows the client to retrieve details for a single Page object, specified by ID.
 func (s *pages) GetAPIPagesID(ctx context.Context, request operations.GetAPIPagesIDRequest) (*operations.GetAPIPagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +227,10 @@ func (s *pages) PostAPIPages(ctx context.Context, request operations.PostAPIPage
 // This endpoint allows the client to retrieve details for a single Page object, specified by ID.
 func (s *pages) PutAPIPagesID(ctx context.Context, request operations.PutAPIPagesIDRequest) (*operations.PutAPIPagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Page", "json")
 	if err != nil {

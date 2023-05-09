@@ -36,7 +36,10 @@ func newScope(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // SignConfirm - this is a scope confirmation
 func (s *scope) SignConfirm(ctx context.Context, request operations.SignConfirmRequest) (*operations.SignConfirmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -104,7 +107,10 @@ func (s *scope) SignConfirm(ctx context.Context, request operations.SignConfirmR
 // SignDelete - delete a verification job
 func (s *scope) SignDelete(ctx context.Context, request operations.SignDeleteRequest) (*operations.SignDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -247,7 +253,10 @@ func (s *scope) SignRequest(ctx context.Context, request operations.SignRequestR
 // SignRetrieve - get the status / current content of a verification job
 func (s *scope) SignRetrieve(ctx context.Context, request operations.SignRetrieveRequest) (*operations.SignRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -326,7 +335,10 @@ func (s *scope) SignRetrieve(ctx context.Context, request operations.SignRetriev
 // SignRetrieveHead - HEAD to get the status of a verification job
 func (s *scope) SignRetrieveHead(ctx context.Context, request operations.SignRetrieveHeadRequest) (*operations.SignRetrieveHeadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
@@ -384,7 +396,10 @@ func (s *scope) SignRetrieveHead(ctx context.Context, request operations.SignRet
 // See: https://github.com/skion/authentiq/wiki/JWT-Examples
 func (s *scope) SignUpdate(ctx context.Context, request operations.SignUpdateRequest) (*operations.SignUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

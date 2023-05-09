@@ -2,7 +2,7 @@
 
 package shared
 
-// AmiDistributionConfiguration -  Define and configure the output AMIs of the pipeline.
+// AmiDistributionConfiguration - Define and configure the output AMIs of the pipeline.
 type AmiDistributionConfiguration struct {
 	AmiTags          map[string]string              `json:"amiTags,omitempty"`
 	Description      *string                        `json:"description,omitempty"`

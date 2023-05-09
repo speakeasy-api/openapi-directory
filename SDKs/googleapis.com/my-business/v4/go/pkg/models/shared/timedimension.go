@@ -21,12 +21,16 @@ const (
 	TimeDimensionDayOfWeekEnumSunday               TimeDimensionDayOfWeekEnum = "SUNDAY"
 )
 
+func (e TimeDimensionDayOfWeekEnum) ToPointer() *TimeDimensionDayOfWeekEnum {
+	return &e
+}
+
 func (e *TimeDimensionDayOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAY_OF_WEEK_UNSPECIFIED":
 		fallthrough
 	case "MONDAY":
@@ -42,10 +46,10 @@ func (e *TimeDimensionDayOfWeekEnum) UnmarshalJSON(data []byte) error {
 	case "SATURDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = TimeDimensionDayOfWeekEnum(s)
+		*e = TimeDimensionDayOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimeDimensionDayOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for TimeDimensionDayOfWeekEnum: %v", v)
 	}
 }
 

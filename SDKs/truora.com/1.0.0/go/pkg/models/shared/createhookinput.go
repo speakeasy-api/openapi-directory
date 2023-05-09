@@ -16,21 +16,25 @@ const (
 	CreateHookInputEventTypeEnumContinuousCheck CreateHookInputEventTypeEnum = "continuous_check"
 )
 
+func (e CreateHookInputEventTypeEnum) ToPointer() *CreateHookInputEventTypeEnum {
+	return &e
+}
+
 func (e *CreateHookInputEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "check":
 		fallthrough
 	case "continuous_check":
-		*e = CreateHookInputEventTypeEnum(s)
+		*e = CreateHookInputEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateHookInputEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateHookInputEventTypeEnum: %v", v)
 	}
 }
 
@@ -42,19 +46,23 @@ const (
 	CreateHookInputStatusEnumDisabled CreateHookInputStatusEnum = "disabled"
 )
 
+func (e CreateHookInputStatusEnum) ToPointer() *CreateHookInputStatusEnum {
+	return &e
+}
+
 func (e *CreateHookInputStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
-		*e = CreateHookInputStatusEnum(s)
+		*e = CreateHookInputStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateHookInputStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateHookInputStatusEnum: %v", v)
 	}
 }
 
@@ -99,12 +107,16 @@ const (
 	CreateHookInputSubscriberLanguageEnumZhHk CreateHookInputSubscriberLanguageEnum = "zh-HK"
 )
 
+func (e CreateHookInputSubscriberLanguageEnum) ToPointer() *CreateHookInputSubscriberLanguageEnum {
+	return &e
+}
+
 func (e *CreateHookInputSubscriberLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "af":
 		fallthrough
 	case "ar":
@@ -174,10 +186,10 @@ func (e *CreateHookInputSubscriberLanguageEnum) UnmarshalJSON(data []byte) error
 	case "zh-CN":
 		fallthrough
 	case "zh-HK":
-		*e = CreateHookInputSubscriberLanguageEnum(s)
+		*e = CreateHookInputSubscriberLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateHookInputSubscriberLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateHookInputSubscriberLanguageEnum: %v", v)
 	}
 }
 
@@ -189,19 +201,23 @@ const (
 	CreateHookInputSubscriberTypeEnumEmail CreateHookInputSubscriberTypeEnum = "email"
 )
 
+func (e CreateHookInputSubscriberTypeEnum) ToPointer() *CreateHookInputSubscriberTypeEnum {
+	return &e
+}
+
 func (e *CreateHookInputSubscriberTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "web":
 		fallthrough
 	case "email":
-		*e = CreateHookInputSubscriberTypeEnum(s)
+		*e = CreateHookInputSubscriberTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateHookInputSubscriberTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateHookInputSubscriberTypeEnum: %v", v)
 	}
 }
 

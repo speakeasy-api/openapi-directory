@@ -36,7 +36,10 @@ func newShipment(defaultClient, securityClient HTTPClient, serverURL, language, 
 // CancelShipment - This method cancels the shipment associated with the specified shipment ID and the associated shipping label is deleted. When you cancel a shipment, the <b>totalShippingCost</b> of the canceled shipment is refunded to the account established by the user's billing agreement.  <br><br>Note that you cannot cancel a shipment if you have used the associated shipping label.
 func (s *shipment) CancelShipment(ctx context.Context, request operations.CancelShipmentRequest, security operations.CancelShipmentSecurity) (*operations.CancelShipmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shipment/{shipmentId}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/shipment/{shipmentId}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -146,7 +149,10 @@ func (s *shipment) CreateFromShippingQuote(ctx context.Context, request shared.C
 // DownloadLabelFile - This method returns the shipping label file that was generated for the <b>shipmentId</b> value specified in the request. Call <b>createFromShippingQuote</b> to generate a shipment ID.  <br><br>Use the <code>Accept</code> HTTP header to specify the format of the returned file. The default file format is a PDF file. <!-- Are other options available? -->
 func (s *shipment) DownloadLabelFile(ctx context.Context, request operations.DownloadLabelFileRequest, security operations.DownloadLabelFileSecurity) (*operations.DownloadLabelFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shipment/{shipmentId}/download_label_file", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/shipment/{shipmentId}/download_label_file", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -195,7 +201,10 @@ func (s *shipment) DownloadLabelFile(ctx context.Context, request operations.Dow
 // GetShipment - This method retrieves the shipment details for the specified shipment ID. Call <b>createFromShippingQuote</b> to generate a shipment ID.
 func (s *shipment) GetShipment(ctx context.Context, request operations.GetShipmentRequest, security operations.GetShipmentSecurity) (*operations.GetShipmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shipment/{shipmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/shipment/{shipmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

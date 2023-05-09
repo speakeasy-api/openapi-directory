@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariantEnumUseEnhanced                   GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariantEnum = "USE_ENHANCED"
 )
 
+func (e GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariantEnum) ToPointer() *GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariantEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariantEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPEECH_MODEL_VARIANT_UNSPECIFIED":
 		fallthrough
 	case "USE_BEST_AVAILABLE":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariantEnum) U
 	case "USE_STANDARD":
 		fallthrough
 	case "USE_ENHANCED":
-		*e = GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariantEnum(s)
+		*e = GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariantEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariantEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1SpeechToTextConfigSpeechModelVariantEnum: %v", v)
 	}
 }
 

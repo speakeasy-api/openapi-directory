@@ -20,12 +20,16 @@ const (
 	UpdateAccountHolderStateRequestStateTypeEnumProcessing          UpdateAccountHolderStateRequestStateTypeEnum = "Processing"
 )
 
+func (e UpdateAccountHolderStateRequestStateTypeEnum) ToPointer() *UpdateAccountHolderStateRequestStateTypeEnum {
+	return &e
+}
+
 func (e *UpdateAccountHolderStateRequestStateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LimitedPayout":
 		fallthrough
 	case "LimitedProcessing":
@@ -37,10 +41,10 @@ func (e *UpdateAccountHolderStateRequestStateTypeEnum) UnmarshalJSON(data []byte
 	case "Payout":
 		fallthrough
 	case "Processing":
-		*e = UpdateAccountHolderStateRequestStateTypeEnum(s)
+		*e = UpdateAccountHolderStateRequestStateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAccountHolderStateRequestStateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAccountHolderStateRequestStateTypeEnum: %v", v)
 	}
 }
 

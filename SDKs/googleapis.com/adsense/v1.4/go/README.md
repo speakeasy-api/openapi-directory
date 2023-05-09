@@ -13,32 +13,30 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/adsense/v1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AdsenseAccountsAdclientsGetAdCodeRequest{
+    ctx := context.Background()
+    res, err := s.Accounts.AdsenseAccountsAdclientsGetAdCode(ctx, operations.AdsenseAccountsAdclientsGetAdCodeRequest{
         AccountID: "corrupti",
         AdClientID: "provident",
-        Alt: "json",
-        Fields: "quibusdam",
-        Key: "unde",
-        OauthToken: "nulla",
-        PrettyPrint: false,
-        QuotaUser: "corrupti",
-        TagPartner: "illum",
-        UserIP: "vel",
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.AdsenseAccountsAdclientsGetAdCode(ctx, req, operations.AdsenseAccountsAdclientsGetAdCodeSecurity{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("quibusdam"),
+        Key: sdk.String("unde"),
+        OauthToken: sdk.String("nulla"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("corrupti"),
+        TagPartner: sdk.String("illum"),
+        UserIP: sdk.String("vel"),
+    }, operations.AdsenseAccountsAdclientsGetAdCodeSecurity{
         Option1: &operations.AdsenseAccountsAdclientsGetAdCodeSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -59,74 +57,74 @@ func main() {
 ## Available Resources and Operations
 
 
-### Accounts
+### [Accounts](docs/accounts/README.md)
 
-* `AdsenseAccountsAdclientsGetAdCode` - Get Auto ad code for a given ad client.
-* `AdsenseAccountsAdclientsList` - List all ad clients in the specified account.
-* `AdsenseAccountsAdunitsCustomchannelsList` - List all custom channels which the specified ad unit belongs to.
-* `AdsenseAccountsAdunitsGet` - Gets the specified ad unit in the specified ad client for the specified account.
-* `AdsenseAccountsAdunitsGetAdCode` - Get ad code for the specified ad unit.
-* `AdsenseAccountsAdunitsList` - List all ad units in the specified ad client for the specified account.
-* `AdsenseAccountsAlertsDelete` - Dismiss (delete) the specified alert from the specified publisher AdSense account.
-* `AdsenseAccountsAlertsList` - List the alerts for the specified AdSense account.
-* `AdsenseAccountsCustomchannelsAdunitsList` - List all ad units in the specified custom channel.
-* `AdsenseAccountsCustomchannelsGet` - Get the specified custom channel from the specified ad client for the specified account.
-* `AdsenseAccountsCustomchannelsList` - List all custom channels in the specified ad client for the specified account.
-* `AdsenseAccountsGet` - Get information about the selected AdSense account.
-* `AdsenseAccountsList` - List all accounts available to this AdSense account.
-* `AdsenseAccountsPaymentsList` - List the payments for the specified AdSense account.
-* `AdsenseAccountsReportsGenerate` - Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
-* `AdsenseAccountsReportsSavedGenerate` - Generate an AdSense report based on the saved report ID sent in the query parameters.
-* `AdsenseAccountsReportsSavedList` - List all saved reports in the specified AdSense account.
-* `AdsenseAccountsSavedadstylesGet` - List a specific saved ad style for the specified account.
-* `AdsenseAccountsSavedadstylesList` - List all saved ad styles in the specified account.
-* `AdsenseAccountsUrlchannelsList` - List all URL channels in the specified ad client for the specified account.
+* [AdsenseAccountsAdclientsGetAdCode](docs/accounts/README.md#adsenseaccountsadclientsgetadcode) - Get Auto ad code for a given ad client.
+* [AdsenseAccountsAdclientsList](docs/accounts/README.md#adsenseaccountsadclientslist) - List all ad clients in the specified account.
+* [AdsenseAccountsAdunitsCustomchannelsList](docs/accounts/README.md#adsenseaccountsadunitscustomchannelslist) - List all custom channels which the specified ad unit belongs to.
+* [AdsenseAccountsAdunitsGet](docs/accounts/README.md#adsenseaccountsadunitsget) - Gets the specified ad unit in the specified ad client for the specified account.
+* [AdsenseAccountsAdunitsGetAdCode](docs/accounts/README.md#adsenseaccountsadunitsgetadcode) - Get ad code for the specified ad unit.
+* [AdsenseAccountsAdunitsList](docs/accounts/README.md#adsenseaccountsadunitslist) - List all ad units in the specified ad client for the specified account.
+* [AdsenseAccountsAlertsDelete](docs/accounts/README.md#adsenseaccountsalertsdelete) - Dismiss (delete) the specified alert from the specified publisher AdSense account.
+* [AdsenseAccountsAlertsList](docs/accounts/README.md#adsenseaccountsalertslist) - List the alerts for the specified AdSense account.
+* [AdsenseAccountsCustomchannelsAdunitsList](docs/accounts/README.md#adsenseaccountscustomchannelsadunitslist) - List all ad units in the specified custom channel.
+* [AdsenseAccountsCustomchannelsGet](docs/accounts/README.md#adsenseaccountscustomchannelsget) - Get the specified custom channel from the specified ad client for the specified account.
+* [AdsenseAccountsCustomchannelsList](docs/accounts/README.md#adsenseaccountscustomchannelslist) - List all custom channels in the specified ad client for the specified account.
+* [AdsenseAccountsGet](docs/accounts/README.md#adsenseaccountsget) - Get information about the selected AdSense account.
+* [AdsenseAccountsList](docs/accounts/README.md#adsenseaccountslist) - List all accounts available to this AdSense account.
+* [AdsenseAccountsPaymentsList](docs/accounts/README.md#adsenseaccountspaymentslist) - List the payments for the specified AdSense account.
+* [AdsenseAccountsReportsGenerate](docs/accounts/README.md#adsenseaccountsreportsgenerate) - Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
+* [AdsenseAccountsReportsSavedGenerate](docs/accounts/README.md#adsenseaccountsreportssavedgenerate) - Generate an AdSense report based on the saved report ID sent in the query parameters.
+* [AdsenseAccountsReportsSavedList](docs/accounts/README.md#adsenseaccountsreportssavedlist) - List all saved reports in the specified AdSense account.
+* [AdsenseAccountsSavedadstylesGet](docs/accounts/README.md#adsenseaccountssavedadstylesget) - List a specific saved ad style for the specified account.
+* [AdsenseAccountsSavedadstylesList](docs/accounts/README.md#adsenseaccountssavedadstyleslist) - List all saved ad styles in the specified account.
+* [AdsenseAccountsUrlchannelsList](docs/accounts/README.md#adsenseaccountsurlchannelslist) - List all URL channels in the specified ad client for the specified account.
 
-### Adclients
+### [Adclients](docs/adclients/README.md)
 
-* `AdsenseAdclientsList` - List all ad clients in this AdSense account.
+* [AdsenseAdclientsList](docs/adclients/README.md#adsenseadclientslist) - List all ad clients in this AdSense account.
 
-### Adunits
+### [Adunits](docs/adunits/README.md)
 
-* `AdsenseAdunitsCustomchannelsList` - List all custom channels which the specified ad unit belongs to.
-* `AdsenseAdunitsGet` - Gets the specified ad unit in the specified ad client.
-* `AdsenseAdunitsGetAdCode` - Get ad code for the specified ad unit.
-* `AdsenseAdunitsList` - List all ad units in the specified ad client for this AdSense account.
+* [AdsenseAdunitsCustomchannelsList](docs/adunits/README.md#adsenseadunitscustomchannelslist) - List all custom channels which the specified ad unit belongs to.
+* [AdsenseAdunitsGet](docs/adunits/README.md#adsenseadunitsget) - Gets the specified ad unit in the specified ad client.
+* [AdsenseAdunitsGetAdCode](docs/adunits/README.md#adsenseadunitsgetadcode) - Get ad code for the specified ad unit.
+* [AdsenseAdunitsList](docs/adunits/README.md#adsenseadunitslist) - List all ad units in the specified ad client for this AdSense account.
 
-### Alerts
+### [Alerts](docs/alerts/README.md)
 
-* `AdsenseAlertsDelete` - Dismiss (delete) the specified alert from the publisher's AdSense account.
-* `AdsenseAlertsList` - List the alerts for this AdSense account.
+* [AdsenseAlertsDelete](docs/alerts/README.md#adsensealertsdelete) - Dismiss (delete) the specified alert from the publisher's AdSense account.
+* [AdsenseAlertsList](docs/alerts/README.md#adsensealertslist) - List the alerts for this AdSense account.
 
-### Customchannels
+### [Customchannels](docs/customchannels/README.md)
 
-* `AdsenseCustomchannelsAdunitsList` - List all ad units in the specified custom channel.
-* `AdsenseCustomchannelsGet` - Get the specified custom channel from the specified ad client.
-* `AdsenseCustomchannelsList` - List all custom channels in the specified ad client for this AdSense account.
+* [AdsenseCustomchannelsAdunitsList](docs/customchannels/README.md#adsensecustomchannelsadunitslist) - List all ad units in the specified custom channel.
+* [AdsenseCustomchannelsGet](docs/customchannels/README.md#adsensecustomchannelsget) - Get the specified custom channel from the specified ad client.
+* [AdsenseCustomchannelsList](docs/customchannels/README.md#adsensecustomchannelslist) - List all custom channels in the specified ad client for this AdSense account.
 
-### Metadata
+### [Metadata](docs/metadata/README.md)
 
-* `AdsenseMetadataDimensionsList` - List the metadata for the dimensions available to this AdSense account.
-* `AdsenseMetadataMetricsList` - List the metadata for the metrics available to this AdSense account.
+* [AdsenseMetadataDimensionsList](docs/metadata/README.md#adsensemetadatadimensionslist) - List the metadata for the dimensions available to this AdSense account.
+* [AdsenseMetadataMetricsList](docs/metadata/README.md#adsensemetadatametricslist) - List the metadata for the metrics available to this AdSense account.
 
-### Payments
+### [Payments](docs/payments/README.md)
 
-* `AdsensePaymentsList` - List the payments for this AdSense account.
+* [AdsensePaymentsList](docs/payments/README.md#adsensepaymentslist) - List the payments for this AdSense account.
 
-### Reports
+### [Reports](docs/reports/README.md)
 
-* `AdsenseReportsGenerate` - Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
-* `AdsenseReportsSavedGenerate` - Generate an AdSense report based on the saved report ID sent in the query parameters.
-* `AdsenseReportsSavedList` - List all saved reports in this AdSense account.
+* [AdsenseReportsGenerate](docs/reports/README.md#adsensereportsgenerate) - Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
+* [AdsenseReportsSavedGenerate](docs/reports/README.md#adsensereportssavedgenerate) - Generate an AdSense report based on the saved report ID sent in the query parameters.
+* [AdsenseReportsSavedList](docs/reports/README.md#adsensereportssavedlist) - List all saved reports in this AdSense account.
 
-### Savedadstyles
+### [Savedadstyles](docs/savedadstyles/README.md)
 
-* `AdsenseSavedadstylesGet` - Get a specific saved ad style from the user's account.
-* `AdsenseSavedadstylesList` - List all saved ad styles in the user's account.
+* [AdsenseSavedadstylesGet](docs/savedadstyles/README.md#adsensesavedadstylesget) - Get a specific saved ad style from the user's account.
+* [AdsenseSavedadstylesList](docs/savedadstyles/README.md#adsensesavedadstyleslist) - List all saved ad styles in the user's account.
 
-### Urlchannels
+### [Urlchannels](docs/urlchannels/README.md)
 
-* `AdsenseUrlchannelsList` - List all URL channels in the specified ad client for this AdSense account.
+* [AdsenseUrlchannelsList](docs/urlchannels/README.md#adsenseurlchannelslist) - List all URL channels in the specified ad client for this AdSense account.
 <!-- End SDK Available Operations -->
 
 ### Maturity

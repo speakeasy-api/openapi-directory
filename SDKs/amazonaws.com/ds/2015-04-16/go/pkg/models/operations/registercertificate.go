@@ -16,17 +16,21 @@ const (
 	RegisterCertificateXAmzTargetEnumDirectoryService20150416RegisterCertificate RegisterCertificateXAmzTargetEnum = "DirectoryService_20150416.RegisterCertificate"
 )
 
+func (e RegisterCertificateXAmzTargetEnum) ToPointer() *RegisterCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.RegisterCertificate":
-		*e = RegisterCertificateXAmzTargetEnum(s)
+		*e = RegisterCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

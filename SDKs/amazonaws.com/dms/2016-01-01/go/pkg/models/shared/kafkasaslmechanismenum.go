@@ -14,18 +14,22 @@ const (
 	KafkaSaslMechanismEnumPlain       KafkaSaslMechanismEnum = "plain"
 )
 
+func (e KafkaSaslMechanismEnum) ToPointer() *KafkaSaslMechanismEnum {
+	return &e
+}
+
 func (e *KafkaSaslMechanismEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "scram-sha-512":
 		fallthrough
 	case "plain":
-		*e = KafkaSaslMechanismEnum(s)
+		*e = KafkaSaslMechanismEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KafkaSaslMechanismEnum: %s", s)
+		return fmt.Errorf("invalid value for KafkaSaslMechanismEnum: %v", v)
 	}
 }

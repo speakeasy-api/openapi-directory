@@ -14,18 +14,22 @@ const (
 	HookFailureModeEnumWarn HookFailureModeEnum = "WARN"
 )
 
+func (e HookFailureModeEnum) ToPointer() *HookFailureModeEnum {
+	return &e
+}
+
 func (e *HookFailureModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAIL":
 		fallthrough
 	case "WARN":
-		*e = HookFailureModeEnum(s)
+		*e = HookFailureModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HookFailureModeEnum: %s", s)
+		return fmt.Errorf("invalid value for HookFailureModeEnum: %v", v)
 	}
 }

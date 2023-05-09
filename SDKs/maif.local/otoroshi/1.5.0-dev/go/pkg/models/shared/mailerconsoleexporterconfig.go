@@ -14,17 +14,21 @@ const (
 	MailerConsoleExporterConfigTypeEnumGeneric MailerConsoleExporterConfigTypeEnum = "generic"
 )
 
+func (e MailerConsoleExporterConfigTypeEnum) ToPointer() *MailerConsoleExporterConfigTypeEnum {
+	return &e
+}
+
 func (e *MailerConsoleExporterConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "generic":
-		*e = MailerConsoleExporterConfigTypeEnum(s)
+		*e = MailerConsoleExporterConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailerConsoleExporterConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailerConsoleExporterConfigTypeEnum: %v", v)
 	}
 }
 

@@ -6,6 +6,6 @@ package shared
 type ClassificationCategory struct {
 	// The classifier's confidence of the category. Number represents how certain the classifier is that this category represents the given text.
 	Confidence *float32 `json:"confidence,omitempty"`
-	// The name of the category representing the document, from the [predefined taxonomy](https://cloud.google.com/natural-language/docs/categories).
+	// The name of the category representing the document.
 	Name *string `json:"name,omitempty"`
 }

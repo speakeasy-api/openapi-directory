@@ -16,17 +16,21 @@ const (
 	GetDeviceXAmzTargetEnumAwsCognitoIdentityProviderServiceGetDevice GetDeviceXAmzTargetEnum = "AWSCognitoIdentityProviderService.GetDevice"
 )
 
+func (e GetDeviceXAmzTargetEnum) ToPointer() *GetDeviceXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDeviceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.GetDevice":
-		*e = GetDeviceXAmzTargetEnum(s)
+		*e = GetDeviceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDeviceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDeviceXAmzTargetEnum: %v", v)
 	}
 }
 

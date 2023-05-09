@@ -16,17 +16,21 @@ const (
 	ListRulesPackagesXAmzTargetEnumInspectorServiceListRulesPackages ListRulesPackagesXAmzTargetEnum = "InspectorService.ListRulesPackages"
 )
 
+func (e ListRulesPackagesXAmzTargetEnum) ToPointer() *ListRulesPackagesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListRulesPackagesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InspectorService.ListRulesPackages":
-		*e = ListRulesPackagesXAmzTargetEnum(s)
+		*e = ListRulesPackagesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRulesPackagesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRulesPackagesXAmzTargetEnum: %v", v)
 	}
 }
 

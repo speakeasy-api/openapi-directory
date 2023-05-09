@@ -16,17 +16,21 @@ const (
 	GetCommandInvocationXAmzTargetEnumAmazonSsmGetCommandInvocation GetCommandInvocationXAmzTargetEnum = "AmazonSSM.GetCommandInvocation"
 )
 
+func (e GetCommandInvocationXAmzTargetEnum) ToPointer() *GetCommandInvocationXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCommandInvocationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.GetCommandInvocation":
-		*e = GetCommandInvocationXAmzTargetEnum(s)
+		*e = GetCommandInvocationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommandInvocationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommandInvocationXAmzTargetEnum: %v", v)
 	}
 }
 

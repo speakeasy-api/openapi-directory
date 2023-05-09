@@ -15,17 +15,21 @@ const (
 	GETExitStandbyActionEnumExitStandby GETExitStandbyActionEnum = "ExitStandby"
 )
 
+func (e GETExitStandbyActionEnum) ToPointer() *GETExitStandbyActionEnum {
+	return &e
+}
+
 func (e *GETExitStandbyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ExitStandby":
-		*e = GETExitStandbyActionEnum(s)
+		*e = GETExitStandbyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETExitStandbyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETExitStandbyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETExitStandbyVersionEnumTwoThousandAndEleven0101 GETExitStandbyVersionEnum = "2011-01-01"
 )
 
+func (e GETExitStandbyVersionEnum) ToPointer() *GETExitStandbyVersionEnum {
+	return &e
+}
+
 func (e *GETExitStandbyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETExitStandbyVersionEnum(s)
+		*e = GETExitStandbyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETExitStandbyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETExitStandbyVersionEnum: %v", v)
 	}
 }
 

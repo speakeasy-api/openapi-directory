@@ -15,19 +15,23 @@ const (
 	CreateFooterRequestTypeEnumDefault                     CreateFooterRequestTypeEnum = "DEFAULT"
 )
 
+func (e CreateFooterRequestTypeEnum) ToPointer() *CreateFooterRequestTypeEnum {
+	return &e
+}
+
 func (e *CreateFooterRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEADER_FOOTER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DEFAULT":
-		*e = CreateFooterRequestTypeEnum(s)
+		*e = CreateFooterRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFooterRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFooterRequestTypeEnum: %v", v)
 	}
 }
 

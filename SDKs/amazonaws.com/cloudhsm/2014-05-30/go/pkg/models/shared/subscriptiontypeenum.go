@@ -14,16 +14,20 @@ const (
 	SubscriptionTypeEnumProduction SubscriptionTypeEnum = "PRODUCTION"
 )
 
+func (e SubscriptionTypeEnum) ToPointer() *SubscriptionTypeEnum {
+	return &e
+}
+
 func (e *SubscriptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCTION":
-		*e = SubscriptionTypeEnum(s)
+		*e = SubscriptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionTypeEnum: %v", v)
 	}
 }

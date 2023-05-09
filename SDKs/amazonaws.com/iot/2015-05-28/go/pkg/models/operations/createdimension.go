@@ -16,17 +16,21 @@ const (
 	CreateDimensionRequestBodyTypeEnumTopicFilter CreateDimensionRequestBodyTypeEnum = "TOPIC_FILTER"
 )
 
+func (e CreateDimensionRequestBodyTypeEnum) ToPointer() *CreateDimensionRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *CreateDimensionRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TOPIC_FILTER":
-		*e = CreateDimensionRequestBodyTypeEnum(s)
+		*e = CreateDimensionRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDimensionRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDimensionRequestBodyTypeEnum: %v", v)
 	}
 }
 

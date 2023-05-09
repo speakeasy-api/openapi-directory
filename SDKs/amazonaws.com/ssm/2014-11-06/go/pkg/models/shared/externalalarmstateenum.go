@@ -14,18 +14,22 @@ const (
 	ExternalAlarmStateEnumAlarm   ExternalAlarmStateEnum = "ALARM"
 )
 
+func (e ExternalAlarmStateEnum) ToPointer() *ExternalAlarmStateEnum {
+	return &e
+}
+
 func (e *ExternalAlarmStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "ALARM":
-		*e = ExternalAlarmStateEnum(s)
+		*e = ExternalAlarmStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExternalAlarmStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ExternalAlarmStateEnum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newSubaccounts(defaultClient, securityClient HTTPClient, serverURL, languag
 // DfareportingSubaccountsGet - Gets one subaccount by ID.
 func (s *subaccounts) DfareportingSubaccountsGet(ctx context.Context, request operations.DfareportingSubaccountsGetRequest, security operations.DfareportingSubaccountsGetSecurity) (*operations.DfareportingSubaccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/subaccounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/subaccounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *subaccounts) DfareportingSubaccountsGet(ctx context.Context, request op
 // DfareportingSubaccountsInsert - Inserts a new subaccount.
 func (s *subaccounts) DfareportingSubaccountsInsert(ctx context.Context, request operations.DfareportingSubaccountsInsertRequest, security operations.DfareportingSubaccountsInsertSecurity) (*operations.DfareportingSubaccountsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/subaccounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/subaccounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Subaccount", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *subaccounts) DfareportingSubaccountsInsert(ctx context.Context, request
 // DfareportingSubaccountsList - Gets a list of subaccounts, possibly filtered. This method supports paging.
 func (s *subaccounts) DfareportingSubaccountsList(ctx context.Context, request operations.DfareportingSubaccountsListRequest, security operations.DfareportingSubaccountsListSecurity) (*operations.DfareportingSubaccountsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/subaccounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/subaccounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *subaccounts) DfareportingSubaccountsList(ctx context.Context, request o
 // DfareportingSubaccountsPatch - Updates an existing subaccount. This method supports patch semantics.
 func (s *subaccounts) DfareportingSubaccountsPatch(ctx context.Context, request operations.DfareportingSubaccountsPatchRequest, security operations.DfareportingSubaccountsPatchSecurity) (*operations.DfareportingSubaccountsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/subaccounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/subaccounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Subaccount", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *subaccounts) DfareportingSubaccountsPatch(ctx context.Context, request 
 // DfareportingSubaccountsUpdate - Updates an existing subaccount.
 func (s *subaccounts) DfareportingSubaccountsUpdate(ctx context.Context, request operations.DfareportingSubaccountsUpdateRequest, security operations.DfareportingSubaccountsUpdateSecurity) (*operations.DfareportingSubaccountsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/subaccounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/subaccounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Subaccount", "json")
 	if err != nil {

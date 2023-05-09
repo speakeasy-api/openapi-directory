@@ -16,21 +16,25 @@ const (
 	VariableFormatValueCaseConversionTypeEnumUppercase VariableFormatValueCaseConversionTypeEnum = "uppercase"
 )
 
+func (e VariableFormatValueCaseConversionTypeEnum) ToPointer() *VariableFormatValueCaseConversionTypeEnum {
+	return &e
+}
+
 func (e *VariableFormatValueCaseConversionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "lowercase":
 		fallthrough
 	case "uppercase":
-		*e = VariableFormatValueCaseConversionTypeEnum(s)
+		*e = VariableFormatValueCaseConversionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VariableFormatValueCaseConversionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VariableFormatValueCaseConversionTypeEnum: %v", v)
 	}
 }
 

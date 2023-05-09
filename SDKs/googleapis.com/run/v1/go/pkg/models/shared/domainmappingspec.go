@@ -16,21 +16,25 @@ const (
 	DomainMappingSpecCertificateModeEnumAutomatic                  DomainMappingSpecCertificateModeEnum = "AUTOMATIC"
 )
 
+func (e DomainMappingSpecCertificateModeEnum) ToPointer() *DomainMappingSpecCertificateModeEnum {
+	return &e
+}
+
 func (e *DomainMappingSpecCertificateModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERTIFICATE_MODE_UNSPECIFIED":
 		fallthrough
 	case "NONE":
 		fallthrough
 	case "AUTOMATIC":
-		*e = DomainMappingSpecCertificateModeEnum(s)
+		*e = DomainMappingSpecCertificateModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainMappingSpecCertificateModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainMappingSpecCertificateModeEnum: %v", v)
 	}
 }
 

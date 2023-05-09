@@ -14,18 +14,22 @@ const (
 	ComplianceUploadTypeEnumPartial  ComplianceUploadTypeEnum = "PARTIAL"
 )
 
+func (e ComplianceUploadTypeEnum) ToPointer() *ComplianceUploadTypeEnum {
+	return &e
+}
+
 func (e *ComplianceUploadTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETE":
 		fallthrough
 	case "PARTIAL":
-		*e = ComplianceUploadTypeEnum(s)
+		*e = ComplianceUploadTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComplianceUploadTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComplianceUploadTypeEnum: %v", v)
 	}
 }

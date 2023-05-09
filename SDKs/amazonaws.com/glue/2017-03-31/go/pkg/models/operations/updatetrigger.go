@@ -16,17 +16,21 @@ const (
 	UpdateTriggerXAmzTargetEnumAwsGlueUpdateTrigger UpdateTriggerXAmzTargetEnum = "AWSGlue.UpdateTrigger"
 )
 
+func (e UpdateTriggerXAmzTargetEnum) ToPointer() *UpdateTriggerXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateTriggerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.UpdateTrigger":
-		*e = UpdateTriggerXAmzTargetEnum(s)
+		*e = UpdateTriggerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateTriggerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateTriggerXAmzTargetEnum: %v", v)
 	}
 }
 

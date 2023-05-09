@@ -34,12 +34,16 @@ const (
 	AnalyticsGenericLogFlowDefaultApplicationJSONErrorCodeEnumTooManyRequests     AnalyticsGenericLogFlowDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AnalyticsGenericLogFlowDefaultApplicationJSONErrorCodeEnum) ToPointer() *AnalyticsGenericLogFlowDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AnalyticsGenericLogFlowDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -53,10 +57,10 @@ func (e *AnalyticsGenericLogFlowDefaultApplicationJSONErrorCodeEnum) UnmarshalJS
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AnalyticsGenericLogFlowDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AnalyticsGenericLogFlowDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsGenericLogFlowDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsGenericLogFlowDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -155,12 +159,16 @@ const (
 	AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnumCustomProperties AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnum = "custom_properties"
 )
 
+func (e AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnum) ToPointer() *AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnum {
+	return &e
+}
+
 func (e *AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "event":
 		fallthrough
 	case "page":
@@ -172,10 +180,10 @@ func (e *AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnum) UnmarshalJSON(da
 	case "start_service":
 		fallthrough
 	case "custom_properties":
-		*e = AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnum(s)
+		*e = AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnum: %v", v)
 	}
 }
 

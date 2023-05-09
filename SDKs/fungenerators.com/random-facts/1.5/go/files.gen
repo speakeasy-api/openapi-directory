@@ -7,6 +7,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -28,4 +29,10 @@ pkg/models/operations/putfact.go
 pkg/models/operations/getfactcategories.go
 pkg/models/operations/getfactrandom.go
 pkg/models/operations/getfactsearch.go
+docs/sdk/README.md
+docs/factoftheday/README.md
+docs/numberfacts/README.md
+docs/onthisday/README.md
+docs/privatefacts/README.md
+docs/randomfacts/README.md
 USAGE.md

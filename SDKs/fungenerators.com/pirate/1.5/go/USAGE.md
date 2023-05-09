@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetPirateGenerateInsultRequest{
-        Limit: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.Generation.GetPirateGenerateInsult(ctx, req, operations.GetPirateGenerateInsultSecurity{
+    res, err := s.Generation.GetPirateGenerateInsult(ctx, operations.GetPirateGenerateInsultRequest{
+        Limit: sdk.Int64(548814),
+    }, operations.GetPirateGenerateInsultSecurity{
         XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
     })
     if err != nil {

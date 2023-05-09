@@ -16,17 +16,21 @@ const (
 	RegisterCrossAccountAccessRoleXAmzTargetEnumInspectorServiceRegisterCrossAccountAccessRole RegisterCrossAccountAccessRoleXAmzTargetEnum = "InspectorService.RegisterCrossAccountAccessRole"
 )
 
+func (e RegisterCrossAccountAccessRoleXAmzTargetEnum) ToPointer() *RegisterCrossAccountAccessRoleXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterCrossAccountAccessRoleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InspectorService.RegisterCrossAccountAccessRole":
-		*e = RegisterCrossAccountAccessRoleXAmzTargetEnum(s)
+		*e = RegisterCrossAccountAccessRoleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterCrossAccountAccessRoleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterCrossAccountAccessRoleXAmzTargetEnum: %v", v)
 	}
 }
 

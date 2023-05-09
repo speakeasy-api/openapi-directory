@@ -15,17 +15,21 @@ const (
 	POSTUpdateConfigurationSetTrackingOptionsActionEnumUpdateConfigurationSetTrackingOptions POSTUpdateConfigurationSetTrackingOptionsActionEnum = "UpdateConfigurationSetTrackingOptions"
 )
 
+func (e POSTUpdateConfigurationSetTrackingOptionsActionEnum) ToPointer() *POSTUpdateConfigurationSetTrackingOptionsActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateConfigurationSetTrackingOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateConfigurationSetTrackingOptions":
-		*e = POSTUpdateConfigurationSetTrackingOptionsActionEnum(s)
+		*e = POSTUpdateConfigurationSetTrackingOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateConfigurationSetTrackingOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateConfigurationSetTrackingOptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateConfigurationSetTrackingOptionsVersionEnumTwoThousandAndTen1201 POSTUpdateConfigurationSetTrackingOptionsVersionEnum = "2010-12-01"
 )
 
+func (e POSTUpdateConfigurationSetTrackingOptionsVersionEnum) ToPointer() *POSTUpdateConfigurationSetTrackingOptionsVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateConfigurationSetTrackingOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTUpdateConfigurationSetTrackingOptionsVersionEnum(s)
+		*e = POSTUpdateConfigurationSetTrackingOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateConfigurationSetTrackingOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateConfigurationSetTrackingOptionsVersionEnum: %v", v)
 	}
 }
 

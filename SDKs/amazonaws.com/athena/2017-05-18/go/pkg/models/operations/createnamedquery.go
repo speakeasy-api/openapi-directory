@@ -16,17 +16,21 @@ const (
 	CreateNamedQueryXAmzTargetEnumAmazonAthenaCreateNamedQuery CreateNamedQueryXAmzTargetEnum = "AmazonAthena.CreateNamedQuery"
 )
 
+func (e CreateNamedQueryXAmzTargetEnum) ToPointer() *CreateNamedQueryXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateNamedQueryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.CreateNamedQuery":
-		*e = CreateNamedQueryXAmzTargetEnum(s)
+		*e = CreateNamedQueryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNamedQueryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNamedQueryXAmzTargetEnum: %v", v)
 	}
 }
 

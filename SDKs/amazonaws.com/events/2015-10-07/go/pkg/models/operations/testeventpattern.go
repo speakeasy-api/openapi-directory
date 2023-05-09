@@ -16,17 +16,21 @@ const (
 	TestEventPatternXAmzTargetEnumAwsEventsTestEventPattern TestEventPatternXAmzTargetEnum = "AWSEvents.TestEventPattern"
 )
 
+func (e TestEventPatternXAmzTargetEnum) ToPointer() *TestEventPatternXAmzTargetEnum {
+	return &e
+}
+
 func (e *TestEventPatternXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.TestEventPattern":
-		*e = TestEventPatternXAmzTargetEnum(s)
+		*e = TestEventPatternXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestEventPatternXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TestEventPatternXAmzTargetEnum: %v", v)
 	}
 }
 

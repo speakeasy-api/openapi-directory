@@ -16,21 +16,25 @@ const (
 	DimensionRangeDimensionEnumColumns              DimensionRangeDimensionEnum = "COLUMNS"
 )
 
+func (e DimensionRangeDimensionEnum) ToPointer() *DimensionRangeDimensionEnum {
+	return &e
+}
+
 func (e *DimensionRangeDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "ROWS":
 		fallthrough
 	case "COLUMNS":
-		*e = DimensionRangeDimensionEnum(s)
+		*e = DimensionRangeDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DimensionRangeDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for DimensionRangeDimensionEnum: %v", v)
 	}
 }
 

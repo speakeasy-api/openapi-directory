@@ -4,7 +4,7 @@ package shared
 
 type DetailBalance struct {
 	// The list of balances held by the account.
-	Balance []Amount `json:"balance,omitempty"`
+	Balance []AmountWrapper `json:"balance,omitempty"`
 	// The list of pending balances held by the account.
-	PendingBalance []Amount `json:"pendingBalance,omitempty"`
+	PendingBalance []AmountWrapper `json:"pendingBalance,omitempty"`
 }

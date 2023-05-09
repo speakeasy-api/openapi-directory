@@ -15,20 +15,24 @@ const (
 	ReportFrequencyTypeEnumMonth ReportFrequencyTypeEnum = "MONTH"
 )
 
+func (e ReportFrequencyTypeEnum) ToPointer() *ReportFrequencyTypeEnum {
+	return &e
+}
+
 func (e *ReportFrequencyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAY":
 		fallthrough
 	case "WEEK":
 		fallthrough
 	case "MONTH":
-		*e = ReportFrequencyTypeEnum(s)
+		*e = ReportFrequencyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportFrequencyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportFrequencyTypeEnum: %v", v)
 	}
 }

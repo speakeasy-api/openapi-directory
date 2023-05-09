@@ -16,17 +16,21 @@ const (
 	ListParallelDataXAmzTargetEnumAwsShineFrontendService20170701ListParallelData ListParallelDataXAmzTargetEnum = "AWSShineFrontendService_20170701.ListParallelData"
 )
 
+func (e ListParallelDataXAmzTargetEnum) ToPointer() *ListParallelDataXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListParallelDataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShineFrontendService_20170701.ListParallelData":
-		*e = ListParallelDataXAmzTargetEnum(s)
+		*e = ListParallelDataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListParallelDataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListParallelDataXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -23,12 +23,16 @@ const (
 	GetIntersectionsIntersectionIDOutputFormatOutputFormatEnumShpz    GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum = "shpz"
 )
 
+func (e GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum) ToPointer() *GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "geojson":
@@ -42,52 +46,56 @@ func (e *GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum) UnmarshalJS
 	case "csv":
 		fallthrough
 	case "shpz":
-		*e = GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum(s)
+		*e = GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 
 // GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
-type GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum string
+type GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum int64
 
 const (
-	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = "4326"
-	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = "4269"
-	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumThreeThousandAndFive                  GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = "3005"
-	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = "26907"
-	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = "26908"
-	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = "26909"
-	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = "26910"
-	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = "26911"
+	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = 4326
+	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = 4269
+	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumThreeThousandAndFive                  GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = 3005
+	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = 26907
+	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = 26908
+	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = 26909
+	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = 26910
+	GetIntersectionsIntersectionIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum = 26911
 )
 
+func (e GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum) ToPointer() *GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum {
+	return &e
+}
+
 func (e *GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum(s)
+	case 26911:
+		*e = GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	HistogramChartSpecLegendPositionEnumInsideLegend                            HistogramChartSpecLegendPositionEnum = "INSIDE_LEGEND"
 )
 
+func (e HistogramChartSpecLegendPositionEnum) ToPointer() *HistogramChartSpecLegendPositionEnum {
+	return &e
+}
+
 func (e *HistogramChartSpecLegendPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HISTOGRAM_CHART_LEGEND_POSITION_UNSPECIFIED":
 		fallthrough
 	case "BOTTOM_LEGEND":
@@ -39,10 +43,10 @@ func (e *HistogramChartSpecLegendPositionEnum) UnmarshalJSON(data []byte) error 
 	case "NO_LEGEND":
 		fallthrough
 	case "INSIDE_LEGEND":
-		*e = HistogramChartSpecLegendPositionEnum(s)
+		*e = HistogramChartSpecLegendPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HistogramChartSpecLegendPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for HistogramChartSpecLegendPositionEnum: %v", v)
 	}
 }
 

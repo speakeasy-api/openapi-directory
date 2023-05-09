@@ -22,12 +22,16 @@ const (
 	CompensationEntryTypeEnumOtherCompensationType       CompensationEntryTypeEnum = "OTHER_COMPENSATION_TYPE"
 )
 
+func (e CompensationEntryTypeEnum) ToPointer() *CompensationEntryTypeEnum {
+	return &e
+}
+
 func (e *CompensationEntryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPENSATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BASE":
@@ -45,10 +49,10 @@ func (e *CompensationEntryTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TIPS":
 		fallthrough
 	case "OTHER_COMPENSATION_TYPE":
-		*e = CompensationEntryTypeEnum(s)
+		*e = CompensationEntryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompensationEntryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompensationEntryTypeEnum: %v", v)
 	}
 }
 
@@ -66,12 +70,16 @@ const (
 	CompensationEntryUnitEnumOtherCompensationUnit       CompensationEntryUnitEnum = "OTHER_COMPENSATION_UNIT"
 )
 
+func (e CompensationEntryUnitEnum) ToPointer() *CompensationEntryUnitEnum {
+	return &e
+}
+
 func (e *CompensationEntryUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPENSATION_UNIT_UNSPECIFIED":
 		fallthrough
 	case "HOURLY":
@@ -87,10 +95,10 @@ func (e *CompensationEntryUnitEnum) UnmarshalJSON(data []byte) error {
 	case "ONE_TIME":
 		fallthrough
 	case "OTHER_COMPENSATION_UNIT":
-		*e = CompensationEntryUnitEnum(s)
+		*e = CompensationEntryUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompensationEntryUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for CompensationEntryUnitEnum: %v", v)
 	}
 }
 

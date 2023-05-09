@@ -36,7 +36,10 @@ func newObservationController(defaultClient, securityClient HTTPClient, serverUR
 // Given a User ID and observation code, retrieve all observations.
 func (s *observationController) GetObservationsByCode(ctx context.Context, request operations.GetObservationsByCodeRequest) (*operations.GetObservationsByCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/observations/{code}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/{userId}/observations/{code}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -86,7 +89,10 @@ func (s *observationController) GetObservationsByCode(ctx context.Context, reque
 // Given a User ID and search parameters, retrieve a page of observations.
 func (s *observationController) GetObservationsByCodes(ctx context.Context, request operations.GetObservationsByCodesRequest) (*operations.GetObservationsByCodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/observations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/{userId}/observations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -140,7 +146,10 @@ func (s *observationController) GetObservationsByCodes(ctx context.Context, requ
 // Given a User ID and observation code, retrieve patient entered observations.
 func (s *observationController) GetPatientEnteredObservationsByCode(ctx context.Context, request operations.GetPatientEnteredObservationsByCodeRequest) (*operations.GetPatientEnteredObservationsByCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}/observations/{code}/patiententered", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/{userId}/observations/{code}/patiententered", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

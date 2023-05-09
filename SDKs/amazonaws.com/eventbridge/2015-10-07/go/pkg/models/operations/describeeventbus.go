@@ -16,17 +16,21 @@ const (
 	DescribeEventBusXAmzTargetEnumAwsEventsDescribeEventBus DescribeEventBusXAmzTargetEnum = "AWSEvents.DescribeEventBus"
 )
 
+func (e DescribeEventBusXAmzTargetEnum) ToPointer() *DescribeEventBusXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeEventBusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.DescribeEventBus":
-		*e = DescribeEventBusXAmzTargetEnum(s)
+		*e = DescribeEventBusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeEventBusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeEventBusXAmzTargetEnum: %v", v)
 	}
 }
 

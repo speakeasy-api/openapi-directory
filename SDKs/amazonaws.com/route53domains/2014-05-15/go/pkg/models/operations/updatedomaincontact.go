@@ -16,17 +16,21 @@ const (
 	UpdateDomainContactXAmzTargetEnumRoute53DomainsV20140515UpdateDomainContact UpdateDomainContactXAmzTargetEnum = "Route53Domains_v20140515.UpdateDomainContact"
 )
 
+func (e UpdateDomainContactXAmzTargetEnum) ToPointer() *UpdateDomainContactXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDomainContactXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.UpdateDomainContact":
-		*e = UpdateDomainContactXAmzTargetEnum(s)
+		*e = UpdateDomainContactXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDomainContactXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDomainContactXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -42,21 +42,25 @@ const (
 	ScimUserOperationsOpEnumReplace ScimUserOperationsOpEnum = "replace"
 )
 
+func (e ScimUserOperationsOpEnum) ToPointer() *ScimUserOperationsOpEnum {
+	return &e
+}
+
 func (e *ScimUserOperationsOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "add":
 		fallthrough
 	case "remove":
 		fallthrough
 	case "replace":
-		*e = ScimUserOperationsOpEnum(s)
+		*e = ScimUserOperationsOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScimUserOperationsOpEnum: %s", s)
+		return fmt.Errorf("invalid value for ScimUserOperationsOpEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	EnterpriseCrmLoggingGwsSanitizeOptionsLogTypeEnumAll                EnterpriseCrmLoggingGwsSanitizeOptionsLogTypeEnum = "ALL"
 )
 
+func (e EnterpriseCrmLoggingGwsSanitizeOptionsLogTypeEnum) ToPointer() *EnterpriseCrmLoggingGwsSanitizeOptionsLogTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmLoggingGwsSanitizeOptionsLogTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GWS":
@@ -29,10 +33,10 @@ func (e *EnterpriseCrmLoggingGwsSanitizeOptionsLogTypeEnum) UnmarshalJSON(data [
 	case "GTS":
 		fallthrough
 	case "ALL":
-		*e = EnterpriseCrmLoggingGwsSanitizeOptionsLogTypeEnum(s)
+		*e = EnterpriseCrmLoggingGwsSanitizeOptionsLogTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmLoggingGwsSanitizeOptionsLogTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmLoggingGwsSanitizeOptionsLogTypeEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	EnterpriseCrmLoggingGwsSanitizeOptionsPrivacyEnumUnsure                 EnterpriseCrmLoggingGwsSanitizeOptionsPrivacyEnum = "UNSURE"
 )
 
+func (e EnterpriseCrmLoggingGwsSanitizeOptionsPrivacyEnum) ToPointer() *EnterpriseCrmLoggingGwsSanitizeOptionsPrivacyEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmLoggingGwsSanitizeOptionsPrivacyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVACY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NOT_PII":
@@ -61,10 +69,10 @@ func (e *EnterpriseCrmLoggingGwsSanitizeOptionsPrivacyEnum) UnmarshalJSON(data [
 	case "SPII":
 		fallthrough
 	case "UNSURE":
-		*e = EnterpriseCrmLoggingGwsSanitizeOptionsPrivacyEnum(s)
+		*e = EnterpriseCrmLoggingGwsSanitizeOptionsPrivacyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmLoggingGwsSanitizeOptionsPrivacyEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmLoggingGwsSanitizeOptionsPrivacyEnum: %v", v)
 	}
 }
 
@@ -80,12 +88,16 @@ const (
 	EnterpriseCrmLoggingGwsSanitizeOptionsSanitizeTypeEnumDoNotSanitize              EnterpriseCrmLoggingGwsSanitizeOptionsSanitizeTypeEnum = "DO_NOT_SANITIZE"
 )
 
+func (e EnterpriseCrmLoggingGwsSanitizeOptionsSanitizeTypeEnum) ToPointer() *EnterpriseCrmLoggingGwsSanitizeOptionsSanitizeTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmLoggingGwsSanitizeOptionsSanitizeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SANITIZE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SCRUB":
@@ -99,10 +111,10 @@ func (e *EnterpriseCrmLoggingGwsSanitizeOptionsSanitizeTypeEnum) UnmarshalJSON(d
 	case "ENCRYPT":
 		fallthrough
 	case "DO_NOT_SANITIZE":
-		*e = EnterpriseCrmLoggingGwsSanitizeOptionsSanitizeTypeEnum(s)
+		*e = EnterpriseCrmLoggingGwsSanitizeOptionsSanitizeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmLoggingGwsSanitizeOptionsSanitizeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmLoggingGwsSanitizeOptionsSanitizeTypeEnum: %v", v)
 	}
 }
 

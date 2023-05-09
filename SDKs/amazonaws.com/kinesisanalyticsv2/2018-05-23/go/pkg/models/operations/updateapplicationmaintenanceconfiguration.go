@@ -16,17 +16,21 @@ const (
 	UpdateApplicationMaintenanceConfigurationXAmzTargetEnumKinesisAnalytics20180523UpdateApplicationMaintenanceConfiguration UpdateApplicationMaintenanceConfigurationXAmzTargetEnum = "KinesisAnalytics_20180523.UpdateApplicationMaintenanceConfiguration"
 )
 
+func (e UpdateApplicationMaintenanceConfigurationXAmzTargetEnum) ToPointer() *UpdateApplicationMaintenanceConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateApplicationMaintenanceConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20180523.UpdateApplicationMaintenanceConfiguration":
-		*e = UpdateApplicationMaintenanceConfigurationXAmzTargetEnum(s)
+		*e = UpdateApplicationMaintenanceConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateApplicationMaintenanceConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateApplicationMaintenanceConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

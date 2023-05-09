@@ -7,3 +7,9 @@ type Host struct {
 	// A runtime using a Compute Engine instance.
 	GceInstance *GceInstance `json:"gceInstance,omitempty"`
 }
+
+// HostInput - Runtime host for a workstation.
+type HostInput struct {
+	// A runtime using a Compute Engine instance.
+	GceInstance *GceInstanceInput `json:"gceInstance,omitempty"`
+}

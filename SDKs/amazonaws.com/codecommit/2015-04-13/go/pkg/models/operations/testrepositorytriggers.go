@@ -16,17 +16,21 @@ const (
 	TestRepositoryTriggersXAmzTargetEnumCodeCommit20150413TestRepositoryTriggers TestRepositoryTriggersXAmzTargetEnum = "CodeCommit_20150413.TestRepositoryTriggers"
 )
 
+func (e TestRepositoryTriggersXAmzTargetEnum) ToPointer() *TestRepositoryTriggersXAmzTargetEnum {
+	return &e
+}
+
 func (e *TestRepositoryTriggersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.TestRepositoryTriggers":
-		*e = TestRepositoryTriggersXAmzTargetEnum(s)
+		*e = TestRepositoryTriggersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestRepositoryTriggersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TestRepositoryTriggersXAmzTargetEnum: %v", v)
 	}
 }
 

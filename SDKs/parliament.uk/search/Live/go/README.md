@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/parliament.uk/search/Live
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -41,14 +39,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### Description
+### [Description](docs/description/README.md)
 
-* `GetDescription` - OpenSearch description document
+* [GetDescription](docs/description/README.md#getdescription) - OpenSearch description document
 
-### Query
+### [Query](docs/query/README.md)
 
-* `GetQuery` - Search results
-* `GetQueryExtension` - Search results
+* [GetQuery](docs/query/README.md#getquery) - Search results
+* [GetQueryExtension](docs/query/README.md#getqueryextension) - Search results
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TripsTripDetailsRequest{
-        TrackToken: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.TwoForMobileAppOptional.TripsTripDetails(ctx, req)
+    res, err := s.TwoForMobileAppOptional.TripsTripDetails(ctx, operations.TripsTripDetailsRequest{
+        TrackToken: sdk.String("corrupti"),
+    })
     if err != nil {
         log.Fatal(err)
     }

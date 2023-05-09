@@ -16,17 +16,21 @@ const (
 	GetParameterHistoryXAmzTargetEnumAmazonSsmGetParameterHistory GetParameterHistoryXAmzTargetEnum = "AmazonSSM.GetParameterHistory"
 )
 
+func (e GetParameterHistoryXAmzTargetEnum) ToPointer() *GetParameterHistoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetParameterHistoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.GetParameterHistory":
-		*e = GetParameterHistoryXAmzTargetEnum(s)
+		*e = GetParameterHistoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetParameterHistoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetParameterHistoryXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	DiffEntryStatusEnumUnchanged DiffEntryStatusEnum = "unchanged"
 )
 
+func (e DiffEntryStatusEnum) ToPointer() *DiffEntryStatusEnum {
+	return &e
+}
+
 func (e *DiffEntryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "added":
 		fallthrough
 	case "removed":
@@ -38,10 +42,10 @@ func (e *DiffEntryStatusEnum) UnmarshalJSON(data []byte) error {
 	case "changed":
 		fallthrough
 	case "unchanged":
-		*e = DiffEntryStatusEnum(s)
+		*e = DiffEntryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiffEntryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DiffEntryStatusEnum: %v", v)
 	}
 }
 

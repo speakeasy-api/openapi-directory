@@ -19,12 +19,16 @@ const (
 	AccountHolderCapabilityAllowedLevelEnumNotApplicable AccountHolderCapabilityAllowedLevelEnum = "notApplicable"
 )
 
+func (e AccountHolderCapabilityAllowedLevelEnum) ToPointer() *AccountHolderCapabilityAllowedLevelEnum {
+	return &e
+}
+
 func (e *AccountHolderCapabilityAllowedLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "high":
 		fallthrough
 	case "low":
@@ -32,10 +36,10 @@ func (e *AccountHolderCapabilityAllowedLevelEnum) UnmarshalJSON(data []byte) err
 	case "medium":
 		fallthrough
 	case "notApplicable":
-		*e = AccountHolderCapabilityAllowedLevelEnum(s)
+		*e = AccountHolderCapabilityAllowedLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountHolderCapabilityAllowedLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountHolderCapabilityAllowedLevelEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	AccountHolderCapabilityRequestedLevelEnumNotApplicable AccountHolderCapabilityRequestedLevelEnum = "notApplicable"
 )
 
+func (e AccountHolderCapabilityRequestedLevelEnum) ToPointer() *AccountHolderCapabilityRequestedLevelEnum {
+	return &e
+}
+
 func (e *AccountHolderCapabilityRequestedLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "high":
 		fallthrough
 	case "low":
@@ -64,10 +72,10 @@ func (e *AccountHolderCapabilityRequestedLevelEnum) UnmarshalJSON(data []byte) e
 	case "medium":
 		fallthrough
 	case "notApplicable":
-		*e = AccountHolderCapabilityRequestedLevelEnum(s)
+		*e = AccountHolderCapabilityRequestedLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountHolderCapabilityRequestedLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountHolderCapabilityRequestedLevelEnum: %v", v)
 	}
 }
 
@@ -91,12 +99,16 @@ const (
 	AccountHolderCapabilityVerificationStatusEnumValid    AccountHolderCapabilityVerificationStatusEnum = "valid"
 )
 
+func (e AccountHolderCapabilityVerificationStatusEnum) ToPointer() *AccountHolderCapabilityVerificationStatusEnum {
+	return &e
+}
+
 func (e *AccountHolderCapabilityVerificationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid":
 		fallthrough
 	case "pending":
@@ -104,10 +116,10 @@ func (e *AccountHolderCapabilityVerificationStatusEnum) UnmarshalJSON(data []byt
 	case "rejected":
 		fallthrough
 	case "valid":
-		*e = AccountHolderCapabilityVerificationStatusEnum(s)
+		*e = AccountHolderCapabilityVerificationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountHolderCapabilityVerificationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountHolderCapabilityVerificationStatusEnum: %v", v)
 	}
 }
 

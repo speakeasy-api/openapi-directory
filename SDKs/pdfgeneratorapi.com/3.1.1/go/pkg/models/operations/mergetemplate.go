@@ -40,12 +40,16 @@ const (
 	MergeTemplate422ApplicationJSONErrorEnumRequiredParameterMissingTemplateNotDefined           MergeTemplate422ApplicationJSONErrorEnum = "Required parameter missing: template not defined"
 )
 
+func (e MergeTemplate422ApplicationJSONErrorEnum) ToPointer() *MergeTemplate422ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *MergeTemplate422ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unable to parse JSON, please check formatting":
 		fallthrough
 	case "Required parameter missing":
@@ -53,10 +57,10 @@ func (e *MergeTemplate422ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) er
 	case "Required parameter missing: template definition not defined":
 		fallthrough
 	case "Required parameter missing: template not defined":
-		*e = MergeTemplate422ApplicationJSONErrorEnum(s)
+		*e = MergeTemplate422ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MergeTemplate422ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for MergeTemplate422ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -77,21 +81,25 @@ const (
 	MergeTemplate404ApplicationJSONErrorEnumNoneOfTheTemplatesIsAvailableForTheWorkspace MergeTemplate404ApplicationJSONErrorEnum = "None of the templates is available for the workspace."
 )
 
+func (e MergeTemplate404ApplicationJSONErrorEnum) ToPointer() *MergeTemplate404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *MergeTemplate404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Entity not found":
 		fallthrough
 	case "Resource not found":
 		fallthrough
 	case "None of the templates is available for the workspace.":
-		*e = MergeTemplate404ApplicationJSONErrorEnum(s)
+		*e = MergeTemplate404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MergeTemplate404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for MergeTemplate404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -110,17 +118,21 @@ const (
 	MergeTemplate403ApplicationJSONErrorEnumYourAccountHasExceededTheMonthlyDocumentGenerationLimit MergeTemplate403ApplicationJSONErrorEnum = "Your account has exceeded the monthly document generation limit."
 )
 
+func (e MergeTemplate403ApplicationJSONErrorEnum) ToPointer() *MergeTemplate403ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *MergeTemplate403ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Your account has exceeded the monthly document generation limit.":
-		*e = MergeTemplate403ApplicationJSONErrorEnum(s)
+		*e = MergeTemplate403ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MergeTemplate403ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for MergeTemplate403ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -148,12 +160,16 @@ const (
 	MergeTemplate401ApplicationJSONErrorEnumAuthenticationFailed                                      MergeTemplate401ApplicationJSONErrorEnum = "Authentication failed"
 )
 
+func (e MergeTemplate401ApplicationJSONErrorEnum) ToPointer() *MergeTemplate401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *MergeTemplate401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed: request expired":
 		fallthrough
 	case "Authentication failed: signature or secret missing":
@@ -173,10 +189,10 @@ func (e *MergeTemplate401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) er
 	case "Authentication failed: incorrect signature":
 		fallthrough
 	case "Authentication failed":
-		*e = MergeTemplate401ApplicationJSONErrorEnum(s)
+		*e = MergeTemplate401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MergeTemplate401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for MergeTemplate401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 

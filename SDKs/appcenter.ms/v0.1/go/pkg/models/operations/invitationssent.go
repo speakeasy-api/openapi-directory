@@ -8,6 +8,10 @@ import (
 	"net/http"
 )
 
+type InvitationsSentSecurity struct {
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
+}
+
 type InvitationsSentDefaultApplicationJSONErrorCodeEnum string
 
 const (
@@ -20,12 +24,16 @@ const (
 	InvitationsSentDefaultApplicationJSONErrorCodeEnumTooManyRequests     InvitationsSentDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e InvitationsSentDefaultApplicationJSONErrorCodeEnum) ToPointer() *InvitationsSentDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *InvitationsSentDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -39,10 +47,10 @@ func (e *InvitationsSentDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data 
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = InvitationsSentDefaultApplicationJSONErrorCodeEnum(s)
+		*e = InvitationsSentDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationsSentDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationsSentDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -80,12 +88,16 @@ const (
 	InvitationsSent200ApplicationJSONAppMemberPermissionsEnumTester    InvitationsSent200ApplicationJSONAppMemberPermissionsEnum = "tester"
 )
 
+func (e InvitationsSent200ApplicationJSONAppMemberPermissionsEnum) ToPointer() *InvitationsSent200ApplicationJSONAppMemberPermissionsEnum {
+	return &e
+}
+
 func (e *InvitationsSent200ApplicationJSONAppMemberPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
@@ -93,10 +105,10 @@ func (e *InvitationsSent200ApplicationJSONAppMemberPermissionsEnum) UnmarshalJSO
 	case "viewer":
 		fallthrough
 	case "tester":
-		*e = InvitationsSent200ApplicationJSONAppMemberPermissionsEnum(s)
+		*e = InvitationsSent200ApplicationJSONAppMemberPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationsSent200ApplicationJSONAppMemberPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationsSent200ApplicationJSONAppMemberPermissionsEnum: %v", v)
 	}
 }
 
@@ -109,21 +121,25 @@ const (
 	InvitationsSent200ApplicationJSONAppOriginEnumCodepush  InvitationsSent200ApplicationJSONAppOriginEnum = "codepush"
 )
 
+func (e InvitationsSent200ApplicationJSONAppOriginEnum) ToPointer() *InvitationsSent200ApplicationJSONAppOriginEnum {
+	return &e
+}
+
 func (e *InvitationsSent200ApplicationJSONAppOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
 		fallthrough
 	case "codepush":
-		*e = InvitationsSent200ApplicationJSONAppOriginEnum(s)
+		*e = InvitationsSent200ApplicationJSONAppOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationsSent200ApplicationJSONAppOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationsSent200ApplicationJSONAppOriginEnum: %v", v)
 	}
 }
 
@@ -141,12 +157,16 @@ const (
 	InvitationsSent200ApplicationJSONAppOsEnumCustom  InvitationsSent200ApplicationJSONAppOsEnum = "Custom"
 )
 
+func (e InvitationsSent200ApplicationJSONAppOsEnum) ToPointer() *InvitationsSent200ApplicationJSONAppOsEnum {
+	return &e
+}
+
 func (e *InvitationsSent200ApplicationJSONAppOsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Android":
 		fallthrough
 	case "iOS":
@@ -162,10 +182,10 @@ func (e *InvitationsSent200ApplicationJSONAppOsEnum) UnmarshalJSON(data []byte) 
 	case "Linux":
 		fallthrough
 	case "Custom":
-		*e = InvitationsSent200ApplicationJSONAppOsEnum(s)
+		*e = InvitationsSent200ApplicationJSONAppOsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationsSent200ApplicationJSONAppOsEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationsSent200ApplicationJSONAppOsEnum: %v", v)
 	}
 }
 
@@ -177,19 +197,23 @@ const (
 	InvitationsSent200ApplicationJSONAppOwnerTypeEnumUser InvitationsSent200ApplicationJSONAppOwnerTypeEnum = "user"
 )
 
+func (e InvitationsSent200ApplicationJSONAppOwnerTypeEnum) ToPointer() *InvitationsSent200ApplicationJSONAppOwnerTypeEnum {
+	return &e
+}
+
 func (e *InvitationsSent200ApplicationJSONAppOwnerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "org":
 		fallthrough
 	case "user":
-		*e = InvitationsSent200ApplicationJSONAppOwnerTypeEnum(s)
+		*e = InvitationsSent200ApplicationJSONAppOwnerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationsSent200ApplicationJSONAppOwnerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationsSent200ApplicationJSONAppOwnerTypeEnum: %v", v)
 	}
 }
 
@@ -227,12 +251,16 @@ const (
 	InvitationsSent200ApplicationJSONAppPlatformEnumCustom          InvitationsSent200ApplicationJSONAppPlatformEnum = "Custom"
 )
 
+func (e InvitationsSent200ApplicationJSONAppPlatformEnum) ToPointer() *InvitationsSent200ApplicationJSONAppPlatformEnum {
+	return &e
+}
+
 func (e *InvitationsSent200ApplicationJSONAppPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Java":
 		fallthrough
 	case "Objective-C-Swift":
@@ -256,10 +284,10 @@ func (e *InvitationsSent200ApplicationJSONAppPlatformEnum) UnmarshalJSON(data []
 	case "Unknown":
 		fallthrough
 	case "Custom":
-		*e = InvitationsSent200ApplicationJSONAppPlatformEnum(s)
+		*e = InvitationsSent200ApplicationJSONAppPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationsSent200ApplicationJSONAppPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationsSent200ApplicationJSONAppPlatformEnum: %v", v)
 	}
 }
 
@@ -305,19 +333,23 @@ const (
 	InvitationsSent200ApplicationJSONOrganizationOriginEnumHockeyapp InvitationsSent200ApplicationJSONOrganizationOriginEnum = "hockeyapp"
 )
 
+func (e InvitationsSent200ApplicationJSONOrganizationOriginEnum) ToPointer() *InvitationsSent200ApplicationJSONOrganizationOriginEnum {
+	return &e
+}
+
 func (e *InvitationsSent200ApplicationJSONOrganizationOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = InvitationsSent200ApplicationJSONOrganizationOriginEnum(s)
+		*e = InvitationsSent200ApplicationJSONOrganizationOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationsSent200ApplicationJSONOrganizationOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationsSent200ApplicationJSONOrganizationOriginEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.AccountDeleteDomainWhitelistRequest{
-        WhitelistID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Account.AccountDeleteDomainWhitelist(ctx, req)
+    res, err := s.Account.AccountDeleteDomainWhitelist(ctx, operations.AccountDeleteDomainWhitelistRequest{
+        WhitelistID: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

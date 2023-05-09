@@ -23,21 +23,25 @@ const (
 	UpdateStoreRequestStatusEnumInactive UpdateStoreRequestStatusEnum = "inactive"
 )
 
+func (e UpdateStoreRequestStatusEnum) ToPointer() *UpdateStoreRequestStatusEnum {
+	return &e
+}
+
 func (e *UpdateStoreRequestStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "inactive":
-		*e = UpdateStoreRequestStatusEnum(s)
+		*e = UpdateStoreRequestStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateStoreRequestStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateStoreRequestStatusEnum: %v", v)
 	}
 }
 

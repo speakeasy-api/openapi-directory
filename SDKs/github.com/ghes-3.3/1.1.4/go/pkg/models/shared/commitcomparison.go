@@ -16,12 +16,16 @@ const (
 	CommitComparisonStatusEnumIdentical CommitComparisonStatusEnum = "identical"
 )
 
+func (e CommitComparisonStatusEnum) ToPointer() *CommitComparisonStatusEnum {
+	return &e
+}
+
 func (e *CommitComparisonStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "diverged":
 		fallthrough
 	case "ahead":
@@ -29,10 +33,10 @@ func (e *CommitComparisonStatusEnum) UnmarshalJSON(data []byte) error {
 	case "behind":
 		fallthrough
 	case "identical":
-		*e = CommitComparisonStatusEnum(s)
+		*e = CommitComparisonStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommitComparisonStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CommitComparisonStatusEnum: %v", v)
 	}
 }
 

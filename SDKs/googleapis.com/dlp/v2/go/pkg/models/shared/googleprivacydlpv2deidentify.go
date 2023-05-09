@@ -23,12 +23,16 @@ const (
 	GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnumExcel               GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum = "EXCEL"
 )
 
+func (e GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum) ToPointer() *GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BINARY_FILE":
@@ -50,10 +54,10 @@ func (e *GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum) UnmarshalJSON(dat
 	case "POWERPOINT":
 		fallthrough
 	case "EXCEL":
-		*e = GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum(s)
+		*e = GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum: %v", v)
 	}
 }
 

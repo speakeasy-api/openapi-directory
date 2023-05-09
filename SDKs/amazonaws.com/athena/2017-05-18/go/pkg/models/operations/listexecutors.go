@@ -16,17 +16,21 @@ const (
 	ListExecutorsXAmzTargetEnumAmazonAthenaListExecutors ListExecutorsXAmzTargetEnum = "AmazonAthena.ListExecutors"
 )
 
+func (e ListExecutorsXAmzTargetEnum) ToPointer() *ListExecutorsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListExecutorsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.ListExecutors":
-		*e = ListExecutorsXAmzTargetEnum(s)
+		*e = ListExecutorsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListExecutorsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListExecutorsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/d7networks.com/1.0.2/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -45,11 +43,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `BalanceGet` - Balance
-* `SendPost` - SendSMS
-* `SendbatchPost` - Bulk SMS
+* [BalanceGet](docs/sdk/README.md#balanceget) - Balance
+* [SendPost](docs/sdk/README.md#sendpost) - SendSMS
+* [SendbatchPost](docs/sdk/README.md#sendbatchpost) - Bulk SMS
 <!-- End SDK Available Operations -->
 
 ### Maturity

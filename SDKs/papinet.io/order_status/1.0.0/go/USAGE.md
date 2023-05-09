@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetOrdersRequest{
-        Limit: "corrupti",
-        Offset: "provident",
-        OrderStatus: "Completed",
-    }
-
     ctx := context.Background()
-    res, err := s.GetOrders(ctx, req)
+    res, err := s.GetOrders(ctx, operations.GetOrdersRequest{
+        Limit: sdk.String("corrupti"),
+        Offset: sdk.String("provident"),
+        OrderStatus: operations.GetOrdersOrderStatusEnumCompleted.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }

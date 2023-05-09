@@ -16,12 +16,16 @@ const (
 	FindingEnumNotOptimized     FindingEnum = "NotOptimized"
 )
 
+func (e FindingEnum) ToPointer() *FindingEnum {
+	return &e
+}
+
 func (e *FindingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Underprovisioned":
 		fallthrough
 	case "Overprovisioned":
@@ -29,9 +33,9 @@ func (e *FindingEnum) UnmarshalJSON(data []byte) error {
 	case "Optimized":
 		fallthrough
 	case "NotOptimized":
-		*e = FindingEnum(s)
+		*e = FindingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingEnum: %v", v)
 	}
 }

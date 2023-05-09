@@ -6,13 +6,13 @@ import (
 	"net/http"
 )
 
-// PutMetadataFlagRequestBodyBody - Stores the metadata information about a feature on a form or view.
+// PutMetadataFlagRequestBodyBody - Stores the metadata information about a feature on a form.
 type PutMetadataFlagRequestBodyBody struct {
 	NewValue *string `json:"newValue,omitempty"`
 }
 
 type PutMetadataFlagRequestBody struct {
-	// Stores the metadata information about a feature on a form or view.
+	// Stores the metadata information about a feature on a form.
 	Body PutMetadataFlagRequestBodyBody `json:"body"`
 }
 

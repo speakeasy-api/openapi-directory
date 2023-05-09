@@ -16,21 +16,25 @@ const (
 	LeaseTasksRequestResponseViewEnumFull            LeaseTasksRequestResponseViewEnum = "FULL"
 )
 
+func (e LeaseTasksRequestResponseViewEnum) ToPointer() *LeaseTasksRequestResponseViewEnum {
+	return &e
+}
+
 func (e *LeaseTasksRequestResponseViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = LeaseTasksRequestResponseViewEnum(s)
+		*e = LeaseTasksRequestResponseViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LeaseTasksRequestResponseViewEnum: %s", s)
+		return fmt.Errorf("invalid value for LeaseTasksRequestResponseViewEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DescribeRegistriesXAmzTargetEnumSpencerFrontendServiceDescribeRegistries DescribeRegistriesXAmzTargetEnum = "SpencerFrontendService.DescribeRegistries"
 )
 
+func (e DescribeRegistriesXAmzTargetEnum) ToPointer() *DescribeRegistriesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeRegistriesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SpencerFrontendService.DescribeRegistries":
-		*e = DescribeRegistriesXAmzTargetEnum(s)
+		*e = DescribeRegistriesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeRegistriesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeRegistriesXAmzTargetEnum: %v", v)
 	}
 }
 

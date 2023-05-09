@@ -16,17 +16,21 @@ const (
 	UpdateXSSMatchSetXAmzTargetEnumAwswaf20150824UpdateXSSMatchSet UpdateXSSMatchSetXAmzTargetEnum = "AWSWAF_20150824.UpdateXssMatchSet"
 )
 
+func (e UpdateXSSMatchSetXAmzTargetEnum) ToPointer() *UpdateXSSMatchSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateXSSMatchSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.UpdateXssMatchSet":
-		*e = UpdateXSSMatchSetXAmzTargetEnum(s)
+		*e = UpdateXSSMatchSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateXSSMatchSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateXSSMatchSetXAmzTargetEnum: %v", v)
 	}
 }
 

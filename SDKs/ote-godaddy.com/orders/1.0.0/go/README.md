@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ote-godaddy.com/orders/1.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRequest{
-        XMarketID: "corrupti",
-        XShopperID: "provident",
-        OrderID: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.V1.Get(ctx, req)
+    res, err := s.V1.Get(ctx, operations.GetRequest{
+        XMarketID: sdk.String("corrupti"),
+        XShopperID: sdk.String("provident"),
+        OrderID: "distinctio",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,10 +44,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### V1
+### [V1](docs/v1/README.md)
 
-* `Get` - Retrieve details for specified order
-* `List` - Retrieve a list of orders for the authenticated shopper. Only one filter may be used at a time
+* [Get](docs/v1/README.md#get) - Retrieve details for specified order
+* [List](docs/v1/README.md#list) - Retrieve a list of orders for the authenticated shopper. Only one filter may be used at a time
 <!-- End SDK Available Operations -->
 
 ### Maturity

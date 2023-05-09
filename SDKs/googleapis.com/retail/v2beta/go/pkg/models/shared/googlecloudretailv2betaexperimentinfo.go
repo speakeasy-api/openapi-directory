@@ -2,10 +2,10 @@
 
 package shared
 
-// GoogleCloudRetailV2betaExperimentInfo - Metadata for active A/B testing Experiments.
+// GoogleCloudRetailV2betaExperimentInfo - Metadata for active A/B testing Experiment.
 type GoogleCloudRetailV2betaExperimentInfo struct {
 	// The fully qualified resource name of the experiment that provides the serving config under test, should an active experiment exist. For example: `projects/*/locations/global/catalogs/default_catalog/experiments/experiment_id`
-	ExperimentName *string `json:"experimentName,omitempty"`
+	Experiment *string `json:"experiment,omitempty"`
 	// Metadata for active serving config A/B tests.
 	ServingConfigExperiment *GoogleCloudRetailV2betaExperimentInfoServingConfigExperiment `json:"servingConfigExperiment,omitempty"`
 }

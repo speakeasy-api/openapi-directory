@@ -14,18 +14,22 @@ const (
 	SlotConstraintEnumOptional SlotConstraintEnum = "Optional"
 )
 
+func (e SlotConstraintEnum) ToPointer() *SlotConstraintEnum {
+	return &e
+}
+
 func (e *SlotConstraintEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Required":
 		fallthrough
 	case "Optional":
-		*e = SlotConstraintEnum(s)
+		*e = SlotConstraintEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SlotConstraintEnum: %s", s)
+		return fmt.Errorf("invalid value for SlotConstraintEnum: %v", v)
 	}
 }

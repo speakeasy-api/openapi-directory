@@ -103,7 +103,10 @@ func (s *orders) FindOrders(ctx context.Context, request operations.FindOrdersRe
 // Returns a single NumberOrder instance for a given order id. Order contains information about purchased keywords, local, toll-free numbers
 func (s *orders) GetOrder(ctx context.Context, request operations.GetOrderRequest, security operations.GetOrderSecurity) (*operations.GetOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

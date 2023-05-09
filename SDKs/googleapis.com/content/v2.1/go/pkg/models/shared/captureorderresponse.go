@@ -16,21 +16,25 @@ const (
 	CaptureOrderResponseExecutionStatusEnumDuplicate                  CaptureOrderResponseExecutionStatusEnum = "DUPLICATE"
 )
 
+func (e CaptureOrderResponseExecutionStatusEnum) ToPointer() *CaptureOrderResponseExecutionStatusEnum {
+	return &e
+}
+
 func (e *CaptureOrderResponseExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXECUTION_STATUS_UNSPECIFIED":
 		fallthrough
 	case "EXECUTED":
 		fallthrough
 	case "DUPLICATE":
-		*e = CaptureOrderResponseExecutionStatusEnum(s)
+		*e = CaptureOrderResponseExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CaptureOrderResponseExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CaptureOrderResponseExecutionStatusEnum: %v", v)
 	}
 }
 

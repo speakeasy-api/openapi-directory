@@ -17,12 +17,16 @@ const (
 	RecoveryInstanceDataReplicationInitiationStepStatusEnumSkipped    RecoveryInstanceDataReplicationInitiationStepStatusEnum = "SKIPPED"
 )
 
+func (e RecoveryInstanceDataReplicationInitiationStepStatusEnum) ToPointer() *RecoveryInstanceDataReplicationInitiationStepStatusEnum {
+	return &e
+}
+
 func (e *RecoveryInstanceDataReplicationInitiationStepStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_STARTED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -32,9 +36,9 @@ func (e *RecoveryInstanceDataReplicationInitiationStepStatusEnum) UnmarshalJSON(
 	case "FAILED":
 		fallthrough
 	case "SKIPPED":
-		*e = RecoveryInstanceDataReplicationInitiationStepStatusEnum(s)
+		*e = RecoveryInstanceDataReplicationInitiationStepStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecoveryInstanceDataReplicationInitiationStepStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RecoveryInstanceDataReplicationInitiationStepStatusEnum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newMGPortForwardingRules(defaultClient, securityClient HTTPClient, serverUR
 // Returns the port forwarding rules for a single MG.
 func (s *mgPortForwardingRules) GetDeviceCellularGatewaySettingsPortForwardingRules(ctx context.Context, request operations.GetDeviceCellularGatewaySettingsPortForwardingRulesRequest) (*operations.GetDeviceCellularGatewaySettingsPortForwardingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/settings/portForwardingRules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/settings/portForwardingRules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *mgPortForwardingRules) GetDeviceCellularGatewaySettingsPortForwardingRu
 // Updates the port forwarding rules for a single MG.
 func (s *mgPortForwardingRules) UpdateDeviceCellularGatewaySettingsPortForwardingRules(ctx context.Context, request operations.UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequest) (*operations.UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/settings/portForwardingRules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/cellularGateway/settings/portForwardingRules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

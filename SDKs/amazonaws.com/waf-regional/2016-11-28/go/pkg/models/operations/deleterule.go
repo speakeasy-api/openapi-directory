@@ -16,17 +16,21 @@ const (
 	DeleteRuleXAmzTargetEnumAwswafRegional20161128DeleteRule DeleteRuleXAmzTargetEnum = "AWSWAF_Regional_20161128.DeleteRule"
 )
 
+func (e DeleteRuleXAmzTargetEnum) ToPointer() *DeleteRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.DeleteRule":
-		*e = DeleteRuleXAmzTargetEnum(s)
+		*e = DeleteRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRuleXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	InstanceFleetStateChangeReasonCodeEnumClusterTerminated InstanceFleetStateChangeReasonCodeEnum = "CLUSTER_TERMINATED"
 )
 
+func (e InstanceFleetStateChangeReasonCodeEnum) ToPointer() *InstanceFleetStateChangeReasonCodeEnum {
+	return &e
+}
+
 func (e *InstanceFleetStateChangeReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_ERROR":
 		fallthrough
 	case "VALIDATION_ERROR":
@@ -29,9 +33,9 @@ func (e *InstanceFleetStateChangeReasonCodeEnum) UnmarshalJSON(data []byte) erro
 	case "INSTANCE_FAILURE":
 		fallthrough
 	case "CLUSTER_TERMINATED":
-		*e = InstanceFleetStateChangeReasonCodeEnum(s)
+		*e = InstanceFleetStateChangeReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceFleetStateChangeReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceFleetStateChangeReasonCodeEnum: %v", v)
 	}
 }

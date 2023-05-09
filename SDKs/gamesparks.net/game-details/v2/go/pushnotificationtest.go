@@ -35,7 +35,10 @@ func newPushNotificationTest(defaultClient, securityClient HTTPClient, serverURL
 // TestPushAmazonNotificationsUsingPOST - testPushAmazonNotifications
 func (s *pushNotificationTest) TestPushAmazonNotificationsUsingPOST(ctx context.Context, request operations.TestPushAmazonNotificationsUsingPOSTRequest) (*operations.TestPushAmazonNotificationsUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/amazon", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/amazon", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PushNotificationTestModel", "json")
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *pushNotificationTest) TestPushAmazonNotificationsUsingPOST(ctx context.
 // TestPushAppleDevNotificationsUsingPOST - testPushAppleDevNotifications
 func (s *pushNotificationTest) TestPushAppleDevNotificationsUsingPOST(ctx context.Context, request operations.TestPushAppleDevNotificationsUsingPOSTRequest) (*operations.TestPushAppleDevNotificationsUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/apple/development", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/apple/development", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PushNotificationTestModel", "json")
 	if err != nil {
@@ -153,7 +159,10 @@ func (s *pushNotificationTest) TestPushAppleDevNotificationsUsingPOST(ctx contex
 // TestPushAppleProdNotificationsUsingPOST - testPushAppleProdNotifications
 func (s *pushNotificationTest) TestPushAppleProdNotificationsUsingPOST(ctx context.Context, request operations.TestPushAppleProdNotificationsUsingPOSTRequest) (*operations.TestPushAppleProdNotificationsUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/apple/production", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/apple/production", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PushNotificationTestModel", "json")
 	if err != nil {
@@ -212,7 +221,10 @@ func (s *pushNotificationTest) TestPushAppleProdNotificationsUsingPOST(ctx conte
 // TestPushGoogleNotificationsUsingPOST - testPushGoogleNotifications
 func (s *pushNotificationTest) TestPushGoogleNotificationsUsingPOST(ctx context.Context, request operations.TestPushGoogleNotificationsUsingPOSTRequest) (*operations.TestPushGoogleNotificationsUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/google", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/google", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PushNotificationTestModel", "json")
 	if err != nil {
@@ -271,7 +283,10 @@ func (s *pushNotificationTest) TestPushGoogleNotificationsUsingPOST(ctx context.
 // TestViberIntegrationNotificationsUsingPOST - testViberIntegrationNotifications
 func (s *pushNotificationTest) TestViberIntegrationNotificationsUsingPOST(ctx context.Context, request operations.TestViberIntegrationNotificationsUsingPOSTRequest) (*operations.TestViberIntegrationNotificationsUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/viber/integration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/viber/integration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PushNotificationTestModel", "json")
 	if err != nil {
@@ -330,7 +345,10 @@ func (s *pushNotificationTest) TestViberIntegrationNotificationsUsingPOST(ctx co
 // TestViberProductionNotificationsUsingPOST - testViberProductionNotifications
 func (s *pushNotificationTest) TestViberProductionNotificationsUsingPOST(ctx context.Context, request operations.TestViberProductionNotificationsUsingPOSTRequest) (*operations.TestViberProductionNotificationsUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/viber/production", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/viber/production", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PushNotificationTestModel", "json")
 	if err != nil {
@@ -389,7 +407,10 @@ func (s *pushNotificationTest) TestViberProductionNotificationsUsingPOST(ctx con
 // TestWindows8NotificationsUsingPOST - testWindows8Notifications
 func (s *pushNotificationTest) TestWindows8NotificationsUsingPOST(ctx context.Context, request operations.TestWindows8NotificationsUsingPOSTRequest) (*operations.TestWindows8NotificationsUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/microsoft/windows8", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/microsoft/windows8", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PushNotificationTestModel", "json")
 	if err != nil {
@@ -448,7 +469,10 @@ func (s *pushNotificationTest) TestWindows8NotificationsUsingPOST(ctx context.Co
 // TestWindowsPhone8NotificationsUsingPOST - testWindowsPhone8Notifications
 func (s *pushNotificationTest) TestWindowsPhone8NotificationsUsingPOST(ctx context.Context, request operations.TestWindowsPhone8NotificationsUsingPOSTRequest) (*operations.TestWindowsPhone8NotificationsUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/microsoft/windowsPhone8", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/pushNotifications/test/microsoft/windowsPhone8", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PushNotificationTestModel", "json")
 	if err != nil {

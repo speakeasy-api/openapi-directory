@@ -18,21 +18,25 @@ const (
 	ListTasksStateEnumCompleted  ListTasksStateEnum = "COMPLETED"
 )
 
+func (e ListTasksStateEnum) ToPointer() *ListTasksStateEnum {
+	return &e
+}
+
 func (e *ListTasksStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "CANCELED":
 		fallthrough
 	case "COMPLETED":
-		*e = ListTasksStateEnum(s)
+		*e = ListTasksStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTasksStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTasksStateEnum: %v", v)
 	}
 }
 

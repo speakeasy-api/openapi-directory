@@ -36,7 +36,10 @@ func newTeamMemberRole(defaultClient, securityClient HTTPClient, serverURL, lang
 // List all the role options for the user
 func (s *teamMemberRole) GetMemberRoles(ctx context.Context, request operations.GetMemberRolesRequest) (*operations.GetMemberRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/memberroles/{user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/memberroles/{user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

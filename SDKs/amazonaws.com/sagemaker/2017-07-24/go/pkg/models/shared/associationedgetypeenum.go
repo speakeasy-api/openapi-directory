@@ -16,12 +16,16 @@ const (
 	AssociationEdgeTypeEnumProduced       AssociationEdgeTypeEnum = "Produced"
 )
 
+func (e AssociationEdgeTypeEnum) ToPointer() *AssociationEdgeTypeEnum {
+	return &e
+}
+
 func (e *AssociationEdgeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ContributedTo":
 		fallthrough
 	case "AssociatedWith":
@@ -29,9 +33,9 @@ func (e *AssociationEdgeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DerivedFrom":
 		fallthrough
 	case "Produced":
-		*e = AssociationEdgeTypeEnum(s)
+		*e = AssociationEdgeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociationEdgeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociationEdgeTypeEnum: %v", v)
 	}
 }

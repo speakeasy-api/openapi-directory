@@ -41,12 +41,16 @@ const (
 	PayoutResponseResultCodeEnumSuccess                   PayoutResponseResultCodeEnum = "Success"
 )
 
+func (e PayoutResponseResultCodeEnum) ToPointer() *PayoutResponseResultCodeEnum {
+	return &e
+}
+
 func (e *PayoutResponseResultCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AuthenticationFinished":
 		fallthrough
 	case "AuthenticationNotRequired":
@@ -72,10 +76,10 @@ func (e *PayoutResponseResultCodeEnum) UnmarshalJSON(data []byte) error {
 	case "Refused":
 		fallthrough
 	case "Success":
-		*e = PayoutResponseResultCodeEnum(s)
+		*e = PayoutResponseResultCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PayoutResponseResultCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for PayoutResponseResultCodeEnum: %v", v)
 	}
 }
 

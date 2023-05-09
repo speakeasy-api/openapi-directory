@@ -15,20 +15,24 @@ const (
 	ChildPolicyEnumAbandon       ChildPolicyEnum = "ABANDON"
 )
 
+func (e ChildPolicyEnum) ToPointer() *ChildPolicyEnum {
+	return &e
+}
+
 func (e *ChildPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TERMINATE":
 		fallthrough
 	case "REQUEST_CANCEL":
 		fallthrough
 	case "ABANDON":
-		*e = ChildPolicyEnum(s)
+		*e = ChildPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChildPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ChildPolicyEnum: %v", v)
 	}
 }

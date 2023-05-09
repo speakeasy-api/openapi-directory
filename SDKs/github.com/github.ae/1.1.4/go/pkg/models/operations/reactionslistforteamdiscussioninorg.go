@@ -23,12 +23,16 @@ const (
 	ReactionsListForTeamDiscussionInOrgContentEnumEyes     ReactionsListForTeamDiscussionInOrgContentEnum = "eyes"
 )
 
+func (e ReactionsListForTeamDiscussionInOrgContentEnum) ToPointer() *ReactionsListForTeamDiscussionInOrgContentEnum {
+	return &e
+}
+
 func (e *ReactionsListForTeamDiscussionInOrgContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "+1":
 		fallthrough
 	case "-1":
@@ -44,10 +48,10 @@ func (e *ReactionsListForTeamDiscussionInOrgContentEnum) UnmarshalJSON(data []by
 	case "rocket":
 		fallthrough
 	case "eyes":
-		*e = ReactionsListForTeamDiscussionInOrgContentEnum(s)
+		*e = ReactionsListForTeamDiscussionInOrgContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReactionsListForTeamDiscussionInOrgContentEnum: %s", s)
+		return fmt.Errorf("invalid value for ReactionsListForTeamDiscussionInOrgContentEnum: %v", v)
 	}
 }
 

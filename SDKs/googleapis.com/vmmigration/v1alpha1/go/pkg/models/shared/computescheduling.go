@@ -16,21 +16,25 @@ const (
 	ComputeSchedulingOnHostMaintenanceEnumMigrate                      ComputeSchedulingOnHostMaintenanceEnum = "MIGRATE"
 )
 
+func (e ComputeSchedulingOnHostMaintenanceEnum) ToPointer() *ComputeSchedulingOnHostMaintenanceEnum {
+	return &e
+}
+
 func (e *ComputeSchedulingOnHostMaintenanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ON_HOST_MAINTENANCE_UNSPECIFIED":
 		fallthrough
 	case "TERMINATE":
 		fallthrough
 	case "MIGRATE":
-		*e = ComputeSchedulingOnHostMaintenanceEnum(s)
+		*e = ComputeSchedulingOnHostMaintenanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeSchedulingOnHostMaintenanceEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeSchedulingOnHostMaintenanceEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	ComputeSchedulingRestartTypeEnumNoAutomaticRestart     ComputeSchedulingRestartTypeEnum = "NO_AUTOMATIC_RESTART"
 )
 
+func (e ComputeSchedulingRestartTypeEnum) ToPointer() *ComputeSchedulingRestartTypeEnum {
+	return &e
+}
+
 func (e *ComputeSchedulingRestartTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESTART_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AUTOMATIC_RESTART":
 		fallthrough
 	case "NO_AUTOMATIC_RESTART":
-		*e = ComputeSchedulingRestartTypeEnum(s)
+		*e = ComputeSchedulingRestartTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeSchedulingRestartTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeSchedulingRestartTypeEnum: %v", v)
 	}
 }
 

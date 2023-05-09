@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/twilio.com/twilio_fax_v1/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteFaxRequest{
-        Sid: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteFax(ctx, req, operations.DeleteFaxSecurity{
+    res, err := s.DeleteFax(ctx, operations.DeleteFaxRequest{
+        Sid: "corrupti",
+    }, operations.DeleteFaxSecurity{
         Password: "YOUR_PASSWORD_HERE",
         Username: "YOUR_USERNAME_HERE",
     })
@@ -47,14 +44,14 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DeleteFax` - Delete a specific fax and its associated media.
-* `DeleteFaxMedia` - Delete a specific fax media instance.
-* `FetchFax` - Fetch a specific fax.
-* `FetchFaxMedia` - Fetch a specific fax media instance.
-* `ListFax` - Retrieve a list of all faxes.
-* `ListFaxMedia` - Retrieve a list of all fax media instances for the specified fax.
+* [DeleteFax](docs/sdk/README.md#deletefax) - Delete a specific fax and its associated media.
+* [DeleteFaxMedia](docs/sdk/README.md#deletefaxmedia) - Delete a specific fax media instance.
+* [FetchFax](docs/sdk/README.md#fetchfax) - Fetch a specific fax.
+* [FetchFaxMedia](docs/sdk/README.md#fetchfaxmedia) - Fetch a specific fax media instance.
+* [ListFax](docs/sdk/README.md#listfax) - Retrieve a list of all faxes.
+* [ListFaxMedia](docs/sdk/README.md#listfaxmedia) - Retrieve a list of all fax media instances for the specified fax.
 <!-- End SDK Available Operations -->
 
 ### Maturity

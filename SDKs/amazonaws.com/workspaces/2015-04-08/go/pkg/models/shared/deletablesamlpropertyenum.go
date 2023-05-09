@@ -14,18 +14,22 @@ const (
 	DeletableSamlPropertyEnumSamlPropertiesRelayStateParameterName DeletableSamlPropertyEnum = "SAML_PROPERTIES_RELAY_STATE_PARAMETER_NAME"
 )
 
+func (e DeletableSamlPropertyEnum) ToPointer() *DeletableSamlPropertyEnum {
+	return &e
+}
+
 func (e *DeletableSamlPropertyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SAML_PROPERTIES_USER_ACCESS_URL":
 		fallthrough
 	case "SAML_PROPERTIES_RELAY_STATE_PARAMETER_NAME":
-		*e = DeletableSamlPropertyEnum(s)
+		*e = DeletableSamlPropertyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletableSamlPropertyEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletableSamlPropertyEnum: %v", v)
 	}
 }

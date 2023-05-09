@@ -98,12 +98,16 @@ const (
 	CreateSubnetRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateSubnetRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateSubnetRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateSubnetRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateSubnetRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateSubnetRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(dat
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateSubnetRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateSubnetRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSubnetRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSubnetRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

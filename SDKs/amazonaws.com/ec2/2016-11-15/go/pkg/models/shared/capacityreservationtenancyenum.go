@@ -14,18 +14,22 @@ const (
 	CapacityReservationTenancyEnumDedicated CapacityReservationTenancyEnum = "dedicated"
 )
 
+func (e CapacityReservationTenancyEnum) ToPointer() *CapacityReservationTenancyEnum {
+	return &e
+}
+
 func (e *CapacityReservationTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
-		*e = CapacityReservationTenancyEnum(s)
+		*e = CapacityReservationTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapacityReservationTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for CapacityReservationTenancyEnum: %v", v)
 	}
 }

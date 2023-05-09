@@ -15,20 +15,24 @@ const (
 	AuthDecisionEnumImplicitDeny AuthDecisionEnum = "IMPLICIT_DENY"
 )
 
+func (e AuthDecisionEnum) ToPointer() *AuthDecisionEnum {
+	return &e
+}
+
 func (e *AuthDecisionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOWED":
 		fallthrough
 	case "EXPLICIT_DENY":
 		fallthrough
 	case "IMPLICIT_DENY":
-		*e = AuthDecisionEnum(s)
+		*e = AuthDecisionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthDecisionEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthDecisionEnum: %v", v)
 	}
 }

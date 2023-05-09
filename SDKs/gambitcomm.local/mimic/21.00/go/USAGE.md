@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,14 +17,12 @@ func main() {
         }),
     )
 
-    req := operations.AccessAddRequest{
+    ctx := context.Background()
+    res, err := s.Access.AccessAdd(ctx, operations.AccessAddRequest{
         Agents: "corrupti",
         Mask: "provident",
         User: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.Access.AccessAdd(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

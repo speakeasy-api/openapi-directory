@@ -15,20 +15,24 @@ const (
 	EncodingTypeValueEnumRleDictionary   EncodingTypeValueEnum = "rle-dictionary"
 )
 
+func (e EncodingTypeValueEnum) ToPointer() *EncodingTypeValueEnum {
+	return &e
+}
+
 func (e *EncodingTypeValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "plain":
 		fallthrough
 	case "plain-dictionary":
 		fallthrough
 	case "rle-dictionary":
-		*e = EncodingTypeValueEnum(s)
+		*e = EncodingTypeValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EncodingTypeValueEnum: %s", s)
+		return fmt.Errorf("invalid value for EncodingTypeValueEnum: %v", v)
 	}
 }

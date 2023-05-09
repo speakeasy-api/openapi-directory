@@ -16,12 +16,16 @@ const (
 	RobotSoftwareSuiteVersionTypeEnumFoxy    RobotSoftwareSuiteVersionTypeEnum = "Foxy"
 )
 
+func (e RobotSoftwareSuiteVersionTypeEnum) ToPointer() *RobotSoftwareSuiteVersionTypeEnum {
+	return &e
+}
+
 func (e *RobotSoftwareSuiteVersionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kinetic":
 		fallthrough
 	case "Melodic":
@@ -29,9 +33,9 @@ func (e *RobotSoftwareSuiteVersionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Dashing":
 		fallthrough
 	case "Foxy":
-		*e = RobotSoftwareSuiteVersionTypeEnum(s)
+		*e = RobotSoftwareSuiteVersionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RobotSoftwareSuiteVersionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RobotSoftwareSuiteVersionTypeEnum: %v", v)
 	}
 }

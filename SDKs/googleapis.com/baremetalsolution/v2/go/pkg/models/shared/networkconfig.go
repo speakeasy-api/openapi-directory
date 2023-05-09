@@ -18,12 +18,16 @@ const (
 	NetworkConfigBandwidthEnumBw10Gbps             NetworkConfigBandwidthEnum = "BW_10_GBPS"
 )
 
+func (e NetworkConfigBandwidthEnum) ToPointer() *NetworkConfigBandwidthEnum {
+	return &e
+}
+
 func (e *NetworkConfigBandwidthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BANDWIDTH_UNSPECIFIED":
 		fallthrough
 	case "BW_1_GBPS":
@@ -33,10 +37,10 @@ func (e *NetworkConfigBandwidthEnum) UnmarshalJSON(data []byte) error {
 	case "BW_5_GBPS":
 		fallthrough
 	case "BW_10_GBPS":
-		*e = NetworkConfigBandwidthEnum(s)
+		*e = NetworkConfigBandwidthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkConfigBandwidthEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkConfigBandwidthEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	NetworkConfigServiceCidrEnumHigh28                 NetworkConfigServiceCidrEnum = "HIGH_28"
 )
 
+func (e NetworkConfigServiceCidrEnum) ToPointer() *NetworkConfigServiceCidrEnum {
+	return &e
+}
+
 func (e *NetworkConfigServiceCidrEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE_CIDR_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
@@ -66,10 +74,10 @@ func (e *NetworkConfigServiceCidrEnum) UnmarshalJSON(data []byte) error {
 	case "HIGH_27":
 		fallthrough
 	case "HIGH_28":
-		*e = NetworkConfigServiceCidrEnum(s)
+		*e = NetworkConfigServiceCidrEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkConfigServiceCidrEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkConfigServiceCidrEnum: %v", v)
 	}
 }
 
@@ -82,21 +90,25 @@ const (
 	NetworkConfigTypeEnumPrivate         NetworkConfigTypeEnum = "PRIVATE"
 )
 
+func (e NetworkConfigTypeEnum) ToPointer() *NetworkConfigTypeEnum {
+	return &e
+}
+
 func (e *NetworkConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "CLIENT":
 		fallthrough
 	case "PRIVATE":
-		*e = NetworkConfigTypeEnum(s)
+		*e = NetworkConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkConfigTypeEnum: %v", v)
 	}
 }
 

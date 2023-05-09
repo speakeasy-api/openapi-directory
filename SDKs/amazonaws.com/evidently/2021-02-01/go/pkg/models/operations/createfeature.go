@@ -17,19 +17,23 @@ const (
 	CreateFeatureRequestBodyEvaluationStrategyEnumDefaultVariation CreateFeatureRequestBodyEvaluationStrategyEnum = "DEFAULT_VARIATION"
 )
 
+func (e CreateFeatureRequestBodyEvaluationStrategyEnum) ToPointer() *CreateFeatureRequestBodyEvaluationStrategyEnum {
+	return &e
+}
+
 func (e *CreateFeatureRequestBodyEvaluationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL_RULES":
 		fallthrough
 	case "DEFAULT_VARIATION":
-		*e = CreateFeatureRequestBodyEvaluationStrategyEnum(s)
+		*e = CreateFeatureRequestBodyEvaluationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFeatureRequestBodyEvaluationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFeatureRequestBodyEvaluationStrategyEnum: %v", v)
 	}
 }
 

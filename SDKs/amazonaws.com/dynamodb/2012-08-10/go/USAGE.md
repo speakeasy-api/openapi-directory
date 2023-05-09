@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,16 +17,17 @@ func main() {
         }),
     )
 
-    req := operations.BatchExecuteStatementRequest{
+    ctx := context.Background()
+    res, err := s.BatchExecuteStatement(ctx, operations.BatchExecuteStatementRequest{
         BatchExecuteStatementInput: shared.BatchExecuteStatementInput{
-            ReturnConsumedCapacity: "TOTAL",
+            ReturnConsumedCapacity: shared.ReturnConsumedCapacityEnumTotal.ToPointer(),
             Statements: []shared.BatchStatementRequest{
                 shared.BatchStatementRequest{
-                    ConsistentRead: false,
+                    ConsistentRead: sdk.Bool(false),
                     Parameters: []shared.AttributeValue{
                         shared.AttributeValue{
-                            B: "quibusdam",
-                            Bool: false,
+                            B: sdk.String("quibusdam"),
+                            Bool: sdk.Bool(false),
                             Bs: []string{
                                 "nulla",
                                 "corrupti",
@@ -41,15 +42,15 @@ func main() {
                                 "suscipit": shared.AttributeValue{},
                                 "iure": shared.AttributeValue{},
                             },
-                            N: "magnam",
+                            N: sdk.String("magnam"),
                             Ns: []string{
                                 "ipsa",
                                 "delectus",
                                 "tempora",
                                 "suscipit",
                             },
-                            Null: false,
-                            S: "molestiae",
+                            Null: sdk.Bool(false),
+                            S: sdk.String("molestiae"),
                             Ss: []string{
                                 "placeat",
                                 "voluptatum",
@@ -58,8 +59,8 @@ func main() {
                             },
                         },
                         shared.AttributeValue{
-                            B: "nisi",
-                            Bool: false,
+                            B: sdk.String("nisi"),
+                            Bool: sdk.Bool(false),
                             Bs: []string{
                                 "temporibus",
                                 "ab",
@@ -74,23 +75,23 @@ func main() {
                             M: map[string]shared.AttributeValue{
                                 "ipsam": shared.AttributeValue{},
                             },
-                            N: "repellendus",
+                            N: sdk.String("repellendus"),
                             Ns: []string{
                                 "quo",
                                 "odit",
                                 "at",
                                 "at",
                             },
-                            Null: false,
-                            S: "maiores",
+                            Null: sdk.Bool(false),
+                            S: sdk.String("maiores"),
                             Ss: []string{
                                 "quod",
                                 "quod",
                             },
                         },
                         shared.AttributeValue{
-                            B: "esse",
-                            Bool: false,
+                            B: sdk.String("esse"),
+                            Bool: sdk.Bool(false),
                             Bs: []string{
                                 "porro",
                                 "dolorum",
@@ -106,15 +107,15 @@ func main() {
                                 "fugit": shared.AttributeValue{},
                                 "deleniti": shared.AttributeValue{},
                             },
-                            N: "hic",
+                            N: sdk.String("hic"),
                             Ns: []string{
                                 "totam",
                                 "beatae",
                                 "commodi",
                                 "molestiae",
                             },
-                            Null: false,
-                            S: "modi",
+                            Null: sdk.Bool(false),
+                            S: sdk.String("modi"),
                             Ss: []string{
                                 "impedit",
                             },
@@ -123,11 +124,11 @@ func main() {
                     Statement: "cum",
                 },
                 shared.BatchStatementRequest{
-                    ConsistentRead: false,
+                    ConsistentRead: sdk.Bool(false),
                     Parameters: []shared.AttributeValue{
                         shared.AttributeValue{
-                            B: "ipsum",
-                            Bool: false,
+                            B: sdk.String("ipsum"),
+                            Bool: sdk.Bool(false),
                             Bs: []string{
                                 "aspernatur",
                                 "perferendis",
@@ -141,22 +142,22 @@ func main() {
                             M: map[string]shared.AttributeValue{
                                 "iste": shared.AttributeValue{},
                             },
-                            N: "dolor",
+                            N: sdk.String("dolor"),
                             Ns: []string{
                                 "laboriosam",
                                 "hic",
                                 "saepe",
                             },
-                            Null: false,
-                            S: "fuga",
+                            Null: sdk.Bool(false),
+                            S: sdk.String("fuga"),
                             Ss: []string{
                                 "corporis",
                                 "iste",
                             },
                         },
                         shared.AttributeValue{
-                            B: "iure",
-                            Bool: false,
+                            B: sdk.String("iure"),
+                            Bool: sdk.Bool(false),
                             Bs: []string{
                                 "quidem",
                                 "architecto",
@@ -173,12 +174,12 @@ func main() {
                                 "dolores": shared.AttributeValue{},
                                 "dolorem": shared.AttributeValue{},
                             },
-                            N: "corporis",
+                            N: sdk.String("corporis"),
                             Ns: []string{
                                 "nobis",
                             },
-                            Null: false,
-                            S: "enim",
+                            Null: sdk.Bool(false),
+                            S: sdk.String("enim"),
                             Ss: []string{
                                 "nemo",
                                 "minima",
@@ -189,11 +190,11 @@ func main() {
                     Statement: "accusantium",
                 },
                 shared.BatchStatementRequest{
-                    ConsistentRead: false,
+                    ConsistentRead: sdk.Bool(false),
                     Parameters: []shared.AttributeValue{
                         shared.AttributeValue{
-                            B: "culpa",
-                            Bool: false,
+                            B: sdk.String("culpa"),
+                            Bool: sdk.Bool(false),
                             Bs: []string{
                                 "sapiente",
                                 "architecto",
@@ -208,21 +209,21 @@ func main() {
                             M: map[string]shared.AttributeValue{
                                 "repellat": shared.AttributeValue{},
                             },
-                            N: "mollitia",
+                            N: sdk.String("mollitia"),
                             Ns: []string{
                                 "numquam",
                                 "commodi",
                                 "quam",
                             },
-                            Null: false,
-                            S: "molestiae",
+                            Null: sdk.Bool(false),
+                            S: sdk.String("molestiae"),
                             Ss: []string{
                                 "error",
                             },
                         },
                         shared.AttributeValue{
-                            B: "quia",
-                            Bool: false,
+                            B: sdk.String("quia"),
+                            Bool: sdk.Bool(false),
                             Bs: []string{
                                 "vitae",
                                 "laborum",
@@ -236,15 +237,15 @@ func main() {
                                 "odit": shared.AttributeValue{},
                                 "quo": shared.AttributeValue{},
                             },
-                            N: "sequi",
+                            N: sdk.String("sequi"),
                             Ns: []string{
                                 "ipsam",
                                 "id",
                                 "possimus",
                                 "aut",
                             },
-                            Null: false,
-                            S: "quasi",
+                            Null: sdk.Bool(false),
+                            S: sdk.String("quasi"),
                             Ss: []string{
                                 "temporibus",
                                 "laborum",
@@ -256,18 +257,15 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "voluptatibus",
-        XAmzContentSha256: "vero",
-        XAmzCredential: "nihil",
-        XAmzDate: "praesentium",
-        XAmzSecurityToken: "voluptatibus",
-        XAmzSignature: "ipsa",
-        XAmzSignedHeaders: "omnis",
-        XAmzTarget: "DynamoDB_20120810.BatchExecuteStatement",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchExecuteStatement(ctx, req)
+        XAmzAlgorithm: sdk.String("voluptatibus"),
+        XAmzContentSha256: sdk.String("vero"),
+        XAmzCredential: sdk.String("nihil"),
+        XAmzDate: sdk.String("praesentium"),
+        XAmzSecurityToken: sdk.String("voluptatibus"),
+        XAmzSignature: sdk.String("ipsa"),
+        XAmzSignedHeaders: sdk.String("omnis"),
+        XAmzTarget: operations.BatchExecuteStatementXAmzTargetEnumDynamoDb20120810BatchExecuteStatement,
+    })
     if err != nil {
         log.Fatal(err)
     }

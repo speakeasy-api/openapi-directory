@@ -22,12 +22,16 @@ const (
 	GetAvailableNumbersFeaturesEnumSmsMmsVoice GetAvailableNumbersFeaturesEnum = "SMS,MMS,VOICE"
 )
 
+func (e GetAvailableNumbersFeaturesEnum) ToPointer() *GetAvailableNumbersFeaturesEnum {
+	return &e
+}
+
 func (e *GetAvailableNumbersFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SMS":
 		fallthrough
 	case "VOICE":
@@ -41,10 +45,10 @@ func (e *GetAvailableNumbersFeaturesEnum) UnmarshalJSON(data []byte) error {
 	case "VOICE,MMS":
 		fallthrough
 	case "SMS,MMS,VOICE":
-		*e = GetAvailableNumbersFeaturesEnum(s)
+		*e = GetAvailableNumbersFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAvailableNumbersFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAvailableNumbersFeaturesEnum: %v", v)
 	}
 }
 

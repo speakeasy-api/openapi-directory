@@ -13,25 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/conversation.v2
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetUsersRequest{
-        Cursor: "corrupti",
-        Order: "desc",
-        PageSize: 715190,
-    }
-
     ctx := context.Background()
-    res, err := s.GetUsers(ctx, req)
+    res, err := s.GetUsers(ctx, operations.GetUsersRequest{
+        Cursor: sdk.String("corrupti"),
+        Order: shared.OrderEnumDesc.ToPointer(),
+        PageSize: sdk.Int64(715190),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,21 +44,21 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetUsers` - List Users
+* [GetUsers](docs/sdk/README.md#getusers) - List Users
 
-### Conversation
+### [Conversation](docs/conversation/README.md)
 
-* `GetConversations` - List Conversations
+* [GetConversations](docs/conversation/README.md#getconversations) - List Conversations
 
-### Event
+### [Event](docs/event/README.md)
 
-* `GetEvents` - List Events
+* [GetEvents](docs/event/README.md#getevents) - List Events
 
-### Member
+### [Member](docs/member/README.md)
 
-* `GetMembers` - List Members
+* [GetMembers](docs/member/README.md#getmembers) - List Members
 <!-- End SDK Available Operations -->
 
 ### Maturity

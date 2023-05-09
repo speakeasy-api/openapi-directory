@@ -27,12 +27,16 @@ const (
 	IssuesListForAuthenticatedUserFilterEnumAll        IssuesListForAuthenticatedUserFilterEnum = "all"
 )
 
+func (e IssuesListForAuthenticatedUserFilterEnum) ToPointer() *IssuesListForAuthenticatedUserFilterEnum {
+	return &e
+}
+
 func (e *IssuesListForAuthenticatedUserFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "assigned":
 		fallthrough
 	case "created":
@@ -44,10 +48,10 @@ func (e *IssuesListForAuthenticatedUserFilterEnum) UnmarshalJSON(data []byte) er
 	case "repos":
 		fallthrough
 	case "all":
-		*e = IssuesListForAuthenticatedUserFilterEnum(s)
+		*e = IssuesListForAuthenticatedUserFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListForAuthenticatedUserFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListForAuthenticatedUserFilterEnum: %v", v)
 	}
 }
 
@@ -60,21 +64,25 @@ const (
 	IssuesListForAuthenticatedUserSortEnumComments IssuesListForAuthenticatedUserSortEnum = "comments"
 )
 
+func (e IssuesListForAuthenticatedUserSortEnum) ToPointer() *IssuesListForAuthenticatedUserSortEnum {
+	return &e
+}
+
 func (e *IssuesListForAuthenticatedUserSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
 		fallthrough
 	case "comments":
-		*e = IssuesListForAuthenticatedUserSortEnum(s)
+		*e = IssuesListForAuthenticatedUserSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListForAuthenticatedUserSortEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListForAuthenticatedUserSortEnum: %v", v)
 	}
 }
 
@@ -87,21 +95,25 @@ const (
 	IssuesListForAuthenticatedUserStateEnumAll    IssuesListForAuthenticatedUserStateEnum = "all"
 )
 
+func (e IssuesListForAuthenticatedUserStateEnum) ToPointer() *IssuesListForAuthenticatedUserStateEnum {
+	return &e
+}
+
 func (e *IssuesListForAuthenticatedUserStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "all":
-		*e = IssuesListForAuthenticatedUserStateEnum(s)
+		*e = IssuesListForAuthenticatedUserStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListForAuthenticatedUserStateEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListForAuthenticatedUserStateEnum: %v", v)
 	}
 }
 

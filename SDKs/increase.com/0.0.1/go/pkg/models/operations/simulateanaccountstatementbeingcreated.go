@@ -9,23 +9,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnum = "429"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13TypeEnumRateLimitedError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -57,23 +65,27 @@ type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13 struct {
 	Type       SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnumFourHundredAndThree SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnum = "403"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnumFourHundredAndThree SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -83,17 +95,21 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12TypeEnumPrivateFeatureError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -104,23 +120,27 @@ type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12 struct {
 	Type   SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnumFourHundredAndFour SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum = "404"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnumFourHundredAndFour SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11TypeEnumObjectNotFoundError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -151,23 +175,27 @@ type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11 struct {
 	Type   SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnumFourHundred SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnum = "400"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnumFourHundred SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -177,17 +205,21 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10TypeEnumMalformedRequestError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -198,23 +230,27 @@ type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10 struct {
 	Type   SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnumFourHundred SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnum = "400"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnumFourHundred SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -224,46 +260,54 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9TypeEnumInvalidParametersError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                                `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                                `json:"errors"`
 	Status SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                                  `json:"title"`
 	Type   SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnumFourHundredAndNine SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnum = "409"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnumFourHundredAndNine SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8TypeEnumInvalidOperationError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -294,23 +342,27 @@ type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8 struct {
 	Type   SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnumFourHundredAndOne SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnum = "401"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnumFourHundredAndOne SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7TypeEnumInvalidAPIKeyError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -341,23 +397,27 @@ type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7 struct {
 	Type   SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnumFiveHundred SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnum = "500"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnumFiveHundred SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -367,17 +427,21 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6TypeEnumInternalServerError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -388,23 +452,27 @@ type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6 struct {
 	Type   SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnumFourHundredAndThree SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnum = "403"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnumFourHundredAndThree SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -414,17 +482,21 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5TypeEnumInsufficientPermissionsError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -435,23 +507,27 @@ type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5 struct {
 	Type   SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnum = "422"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -461,17 +537,21 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -482,23 +562,27 @@ type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4 struct {
 	Type   SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnumFourHundredAndNine SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnum = "409"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnumFourHundredAndNine SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -508,17 +592,21 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3TypeEnumIdempotencyConflictError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -529,23 +617,27 @@ type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3 struct {
 	Type   SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnumFourHundredAndThree SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnum = "403"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnumFourHundredAndThree SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -555,17 +647,21 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2TypeEnumEnvironmentMismatchError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -576,23 +672,27 @@ type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2 struct {
 	Type   SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnum string
+type SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnum int64
 
 const (
-	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnumFourHundredAndFour SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnum = "404"
+	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnumFourHundredAndFour SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -602,17 +702,21 @@ const (
 	SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1TypeEnum) ToPointer() *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1TypeEnum(s)
+		*e = SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

@@ -33,21 +33,25 @@ const (
 	VaultMattersHoldsListViewEnumFullHold            VaultMattersHoldsListViewEnum = "FULL_HOLD"
 )
 
+func (e VaultMattersHoldsListViewEnum) ToPointer() *VaultMattersHoldsListViewEnum {
+	return &e
+}
+
 func (e *VaultMattersHoldsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HOLD_VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC_HOLD":
 		fallthrough
 	case "FULL_HOLD":
-		*e = VaultMattersHoldsListViewEnum(s)
+		*e = VaultMattersHoldsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VaultMattersHoldsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for VaultMattersHoldsListViewEnum: %v", v)
 	}
 }
 

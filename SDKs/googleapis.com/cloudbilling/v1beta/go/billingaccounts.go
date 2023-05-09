@@ -34,7 +34,10 @@ func newBillingAccounts(defaultClient, securityClient HTTPClient, serverURL, lan
 // CloudbillingBillingAccountsEstimateCostScenario - Use custom pricing in the estimate, using a `CostScenario` with a defined `billingAccount`.
 func (s *billingAccounts) CloudbillingBillingAccountsEstimateCostScenario(ctx context.Context, request operations.CloudbillingBillingAccountsEstimateCostScenarioRequest, security operations.CloudbillingBillingAccountsEstimateCostScenarioSecurity) (*operations.CloudbillingBillingAccountsEstimateCostScenarioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{billingAccount}:estimateCostScenario", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{billingAccount}:estimateCostScenario", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EstimateCostScenarioForBillingAccountRequest", "json")
 	if err != nil {

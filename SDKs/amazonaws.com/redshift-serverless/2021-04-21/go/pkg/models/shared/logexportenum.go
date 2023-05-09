@@ -15,20 +15,24 @@ const (
 	LogExportEnumConnectionlog   LogExportEnum = "connectionlog"
 )
 
+func (e LogExportEnum) ToPointer() *LogExportEnum {
+	return &e
+}
+
 func (e *LogExportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "useractivitylog":
 		fallthrough
 	case "userlog":
 		fallthrough
 	case "connectionlog":
-		*e = LogExportEnum(s)
+		*e = LogExportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LogExportEnum: %s", s)
+		return fmt.Errorf("invalid value for LogExportEnum: %v", v)
 	}
 }

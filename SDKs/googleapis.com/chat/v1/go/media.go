@@ -34,7 +34,10 @@ func newMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // ChatMediaDownload - Downloads media. Download is supported on the URI `/v1/media/{+name}?alt=media`.
 func (s *media) ChatMediaDownload(ctx context.Context, request operations.ChatMediaDownloadRequest, security operations.ChatMediaDownloadSecurity) (*operations.ChatMediaDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/media/{resourceName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/media/{resourceName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

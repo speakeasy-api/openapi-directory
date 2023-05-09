@@ -15,17 +15,21 @@ const (
 	GETDefineRankExpressionActionEnumDefineRankExpression GETDefineRankExpressionActionEnum = "DefineRankExpression"
 )
 
+func (e GETDefineRankExpressionActionEnum) ToPointer() *GETDefineRankExpressionActionEnum {
+	return &e
+}
+
 func (e *GETDefineRankExpressionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DefineRankExpression":
-		*e = GETDefineRankExpressionActionEnum(s)
+		*e = GETDefineRankExpressionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDefineRankExpressionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDefineRankExpressionActionEnum: %v", v)
 	}
 }
 
@@ -42,17 +46,21 @@ const (
 	GETDefineRankExpressionVersionEnumTwoThousandAndEleven0201 GETDefineRankExpressionVersionEnum = "2011-02-01"
 )
 
+func (e GETDefineRankExpressionVersionEnum) ToPointer() *GETDefineRankExpressionVersionEnum {
+	return &e
+}
+
 func (e *GETDefineRankExpressionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-02-01":
-		*e = GETDefineRankExpressionVersionEnum(s)
+		*e = GETDefineRankExpressionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDefineRankExpressionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDefineRankExpressionVersionEnum: %v", v)
 	}
 }
 

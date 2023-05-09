@@ -24,12 +24,16 @@ const (
 	CheckRunConclusionEnumActionRequired CheckRunConclusionEnum = "action_required"
 )
 
+func (e CheckRunConclusionEnum) ToPointer() *CheckRunConclusionEnum {
+	return &e
+}
+
 func (e *CheckRunConclusionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "failure":
@@ -43,10 +47,10 @@ func (e *CheckRunConclusionEnum) UnmarshalJSON(data []byte) error {
 	case "timed_out":
 		fallthrough
 	case "action_required":
-		*e = CheckRunConclusionEnum(s)
+		*e = CheckRunConclusionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckRunConclusionEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckRunConclusionEnum: %v", v)
 	}
 }
 
@@ -67,21 +71,25 @@ const (
 	CheckRunStatusEnumCompleted  CheckRunStatusEnum = "completed"
 )
 
+func (e CheckRunStatusEnum) ToPointer() *CheckRunStatusEnum {
+	return &e
+}
+
 func (e *CheckRunStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "queued":
 		fallthrough
 	case "in_progress":
 		fallthrough
 	case "completed":
-		*e = CheckRunStatusEnum(s)
+		*e = CheckRunStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckRunStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckRunStatusEnum: %v", v)
 	}
 }
 

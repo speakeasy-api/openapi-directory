@@ -14,18 +14,22 @@ const (
 	ScriptTypeEnumPowershellScript ScriptTypeEnum = "POWERSHELL_SCRIPT"
 )
 
+func (e ScriptTypeEnum) ToPointer() *ScriptTypeEnum {
+	return &e
+}
+
 func (e *ScriptTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHELL_SCRIPT":
 		fallthrough
 	case "POWERSHELL_SCRIPT":
-		*e = ScriptTypeEnum(s)
+		*e = ScriptTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScriptTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScriptTypeEnum: %v", v)
 	}
 }

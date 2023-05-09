@@ -15,17 +15,21 @@ const (
 	POSTDisableAddressTransferActionEnumDisableAddressTransfer POSTDisableAddressTransferActionEnum = "DisableAddressTransfer"
 )
 
+func (e POSTDisableAddressTransferActionEnum) ToPointer() *POSTDisableAddressTransferActionEnum {
+	return &e
+}
+
 func (e *POSTDisableAddressTransferActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableAddressTransfer":
-		*e = POSTDisableAddressTransferActionEnum(s)
+		*e = POSTDisableAddressTransferActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableAddressTransferActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableAddressTransferActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisableAddressTransferVersionEnumTwoThousandAndSixteen1115 POSTDisableAddressTransferVersionEnum = "2016-11-15"
 )
 
+func (e POSTDisableAddressTransferVersionEnum) ToPointer() *POSTDisableAddressTransferVersionEnum {
+	return &e
+}
+
 func (e *POSTDisableAddressTransferVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDisableAddressTransferVersionEnum(s)
+		*e = POSTDisableAddressTransferVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableAddressTransferVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableAddressTransferVersionEnum: %v", v)
 	}
 }
 

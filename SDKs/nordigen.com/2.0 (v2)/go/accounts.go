@@ -31,12 +31,15 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// AccountsBalancesRetrieve - Access account balances.
+// RetrieveAccountBalancesV2 - Access account balances.
 //
 // Balances will be returned in Berlin Group PSD2 format.
-func (s *accounts) AccountsBalancesRetrieve(ctx context.Context, request operations.AccountsBalancesRetrieveRequest) (*operations.AccountsBalancesRetrieveResponse, error) {
+func (s *accounts) RetrieveAccountBalancesV2(ctx context.Context, request operations.RetrieveAccountBalancesV2Request) (*operations.RetrieveAccountBalancesV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/balances/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/balances/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -56,12 +59,22 @@ func (s *accounts) AccountsBalancesRetrieve(ctx context.Context, request operati
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.AccountsBalancesRetrieveResponse{
+	res := &operations.RetrieveAccountBalancesV2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountBalancesV2200ApplicationJSONObject = out
+		}
 	case httpRes.StatusCode == 400:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
@@ -70,7 +83,7 @@ func (s *accounts) AccountsBalancesRetrieve(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.AccountsBalancesRetrieve400ApplicationJSONObject = out
+			res.RetrieveAccountBalancesV2400ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 401:
 		switch {
@@ -80,7 +93,7 @@ func (s *accounts) AccountsBalancesRetrieve(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.AccountsBalancesRetrieve401ApplicationJSONObject = out
+			res.RetrieveAccountBalancesV2401ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 403:
 		switch {
@@ -90,7 +103,7 @@ func (s *accounts) AccountsBalancesRetrieve(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.AccountsBalancesRetrieve403ApplicationJSONObject = out
+			res.RetrieveAccountBalancesV2403ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 404:
 		switch {
@@ -100,7 +113,7 @@ func (s *accounts) AccountsBalancesRetrieve(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.AccountsBalancesRetrieve404ApplicationJSONObject = out
+			res.RetrieveAccountBalancesV2404ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 409:
 		switch {
@@ -110,7 +123,7 @@ func (s *accounts) AccountsBalancesRetrieve(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.AccountsBalancesRetrieve409ApplicationJSONObject = out
+			res.RetrieveAccountBalancesV2409ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 429:
 		switch {
@@ -120,7 +133,7 @@ func (s *accounts) AccountsBalancesRetrieve(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.AccountsBalancesRetrieve429ApplicationJSONObject = out
+			res.RetrieveAccountBalancesV2429ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 500:
 		switch {
@@ -130,7 +143,7 @@ func (s *accounts) AccountsBalancesRetrieve(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.AccountsBalancesRetrieve500ApplicationJSONObject = out
+			res.RetrieveAccountBalancesV2500ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 503:
 		switch {
@@ -140,19 +153,22 @@ func (s *accounts) AccountsBalancesRetrieve(ctx context.Context, request operati
 				return nil, err
 			}
 
-			res.AccountsBalancesRetrieve503ApplicationJSONObject = out
+			res.RetrieveAccountBalancesV2503ApplicationJSONObject = out
 		}
 	}
 
 	return res, nil
 }
 
-// AccountsDetailsRetrieve - Access account details.
+// RetrieveAccountDetailsV2 - Access account details.
 //
 // Account details will be returned in Berlin Group PSD2 format.
-func (s *accounts) AccountsDetailsRetrieve(ctx context.Context, request operations.AccountsDetailsRetrieveRequest) (*operations.AccountsDetailsRetrieveResponse, error) {
+func (s *accounts) RetrieveAccountDetailsV2(ctx context.Context, request operations.RetrieveAccountDetailsV2Request) (*operations.RetrieveAccountDetailsV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/details/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/details/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -172,12 +188,22 @@ func (s *accounts) AccountsDetailsRetrieve(ctx context.Context, request operatio
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.AccountsDetailsRetrieveResponse{
+	res := &operations.RetrieveAccountDetailsV2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountDetailsV2200ApplicationJSONObject = out
+		}
 	case httpRes.StatusCode == 400:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
@@ -186,7 +212,7 @@ func (s *accounts) AccountsDetailsRetrieve(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.AccountsDetailsRetrieve400ApplicationJSONObject = out
+			res.RetrieveAccountDetailsV2400ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 401:
 		switch {
@@ -196,7 +222,7 @@ func (s *accounts) AccountsDetailsRetrieve(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.AccountsDetailsRetrieve401ApplicationJSONObject = out
+			res.RetrieveAccountDetailsV2401ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 403:
 		switch {
@@ -206,7 +232,7 @@ func (s *accounts) AccountsDetailsRetrieve(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.AccountsDetailsRetrieve403ApplicationJSONObject = out
+			res.RetrieveAccountDetailsV2403ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 404:
 		switch {
@@ -216,7 +242,7 @@ func (s *accounts) AccountsDetailsRetrieve(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.AccountsDetailsRetrieve404ApplicationJSONObject = out
+			res.RetrieveAccountDetailsV2404ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 409:
 		switch {
@@ -226,7 +252,7 @@ func (s *accounts) AccountsDetailsRetrieve(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.AccountsDetailsRetrieve409ApplicationJSONObject = out
+			res.RetrieveAccountDetailsV2409ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 429:
 		switch {
@@ -236,7 +262,7 @@ func (s *accounts) AccountsDetailsRetrieve(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.AccountsDetailsRetrieve429ApplicationJSONObject = out
+			res.RetrieveAccountDetailsV2429ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 500:
 		switch {
@@ -246,7 +272,7 @@ func (s *accounts) AccountsDetailsRetrieve(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.AccountsDetailsRetrieve500ApplicationJSONObject = out
+			res.RetrieveAccountDetailsV2500ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 503:
 		switch {
@@ -256,127 +282,7 @@ func (s *accounts) AccountsDetailsRetrieve(ctx context.Context, request operatio
 				return nil, err
 			}
 
-			res.AccountsDetailsRetrieve503ApplicationJSONObject = out
-		}
-	}
-
-	return res, nil
-}
-
-// AccountsTransactionsRetrieve - Access account transactions.
-//
-// Transactions will be returned in Berlin Group PSD2 format.
-func (s *accounts) AccountsTransactionsRetrieve(ctx context.Context, request operations.AccountsTransactionsRetrieveRequest) (*operations.AccountsTransactionsRetrieveResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/transactions/", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := s.securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.AccountsTransactionsRetrieveResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 400:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.AccountsTransactionsRetrieve400ApplicationJSONObject = out
-		}
-	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.AccountsTransactionsRetrieve401ApplicationJSONObject = out
-		}
-	case httpRes.StatusCode == 403:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.AccountsTransactionsRetrieve403ApplicationJSONObject = out
-		}
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.AccountsTransactionsRetrieve404ApplicationJSONObject = out
-		}
-	case httpRes.StatusCode == 409:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.AccountsTransactionsRetrieve409ApplicationJSONObject = out
-		}
-	case httpRes.StatusCode == 429:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.AccountsTransactionsRetrieve429ApplicationJSONObject = out
-		}
-	case httpRes.StatusCode == 500:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.AccountsTransactionsRetrieve500ApplicationJSONObject = out
-		}
-	case httpRes.StatusCode == 503:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.AccountsTransactionsRetrieve503ApplicationJSONObject = out
+			res.RetrieveAccountDetailsV2503ApplicationJSONObject = out
 		}
 	}
 
@@ -390,7 +296,10 @@ func (s *accounts) AccountsTransactionsRetrieve(ctx context.Context, request ope
 // Account status is recalculated based on the error count in the latest req.
 func (s *accounts) RetrieveAccountMetadata(ctx context.Context, request operations.RetrieveAccountMetadataRequest) (*operations.RetrieveAccountMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -419,12 +328,12 @@ func (s *accounts) RetrieveAccountMetadata(ctx context.Context, request operatio
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.AccountV2
+			var out *shared.Account
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.AccountV2 = out
+			res.Account = out
 		}
 	case httpRes.StatusCode == 401:
 		switch {
@@ -455,6 +364,149 @@ func (s *accounts) RetrieveAccountMetadata(ctx context.Context, request operatio
 			}
 
 			res.RetrieveAccountMetadata404ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountMetadata429ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// RetrieveAccountTransactionsV22 - Access account transactions.
+//
+// Transactions will be returned in Berlin Group PSD2 format.
+func (s *accounts) RetrieveAccountTransactionsV22(ctx context.Context, request operations.RetrieveAccountTransactionsV22Request) (*operations.RetrieveAccountTransactionsV22Response, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/{id}/transactions/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetrieveAccountTransactionsV22Response{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountTransactionsV22200ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountTransactionsV22400ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountTransactionsV22401ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountTransactionsV22403ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountTransactionsV22404ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 409:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountTransactionsV22409ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountTransactionsV22429ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountTransactionsV22500ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 503:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountTransactionsV22503ApplicationJSONObject = out
 		}
 	}
 

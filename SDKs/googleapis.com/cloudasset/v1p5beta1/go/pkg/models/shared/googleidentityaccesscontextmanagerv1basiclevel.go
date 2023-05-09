@@ -15,19 +15,23 @@ const (
 	GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnumOr  GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum = "OR"
 )
 
+func (e GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum) ToPointer() *GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum {
+	return &e
+}
+
 func (e *GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AND":
 		fallthrough
 	case "OR":
-		*e = GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum(s)
+		*e = GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum: %v", v)
 	}
 }
 

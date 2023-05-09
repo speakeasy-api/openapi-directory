@@ -16,12 +16,16 @@ const (
 	ComputeTypeEnumBuildGeneral12Xlarge ComputeTypeEnum = "BUILD_GENERAL1_2XLARGE"
 )
 
+func (e ComputeTypeEnum) ToPointer() *ComputeTypeEnum {
+	return &e
+}
+
 func (e *ComputeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUILD_GENERAL1_SMALL":
 		fallthrough
 	case "BUILD_GENERAL1_MEDIUM":
@@ -29,9 +33,9 @@ func (e *ComputeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BUILD_GENERAL1_LARGE":
 		fallthrough
 	case "BUILD_GENERAL1_2XLARGE":
-		*e = ComputeTypeEnum(s)
+		*e = ComputeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeTypeEnum: %v", v)
 	}
 }

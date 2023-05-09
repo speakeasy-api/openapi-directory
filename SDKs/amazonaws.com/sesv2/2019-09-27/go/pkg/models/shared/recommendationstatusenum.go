@@ -14,18 +14,22 @@ const (
 	RecommendationStatusEnumFixed RecommendationStatusEnum = "FIXED"
 )
 
+func (e RecommendationStatusEnum) ToPointer() *RecommendationStatusEnum {
+	return &e
+}
+
 func (e *RecommendationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPEN":
 		fallthrough
 	case "FIXED":
-		*e = RecommendationStatusEnum(s)
+		*e = RecommendationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecommendationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RecommendationStatusEnum: %v", v)
 	}
 }

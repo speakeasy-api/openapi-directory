@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/codesearch.debian.net/1.4
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SearchRequest{
-        MatchMode: "regexp",
-        Query: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.Search.Search(ctx, req, operations.SearchSecurity{
+    res, err := s.Search.Search(ctx, operations.SearchRequest{
+        MatchMode: operations.SearchMatchModeEnumRegexp.ToPointer(),
+        Query: "provident",
+    }, operations.SearchSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -48,10 +45,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### Search
+### [Search](docs/search/README.md)
 
-* `Search` - Searches through source code
-* `Searchperpackage` - Like /search, but aggregates per package
+* [Search](docs/search/README.md#search) - Searches through source code
+* [Searchperpackage](docs/search/README.md#searchperpackage) - Like /search, but aggregates per package
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,21 +16,25 @@ const (
 	ServiceAreaBusinessBusinessTypeEnumCustomerAndBusinessLocation ServiceAreaBusinessBusinessTypeEnum = "CUSTOMER_AND_BUSINESS_LOCATION"
 )
 
+func (e ServiceAreaBusinessBusinessTypeEnum) ToPointer() *ServiceAreaBusinessBusinessTypeEnum {
+	return &e
+}
+
 func (e *ServiceAreaBusinessBusinessTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUSINESS_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CUSTOMER_LOCATION_ONLY":
 		fallthrough
 	case "CUSTOMER_AND_BUSINESS_LOCATION":
-		*e = ServiceAreaBusinessBusinessTypeEnum(s)
+		*e = ServiceAreaBusinessBusinessTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceAreaBusinessBusinessTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceAreaBusinessBusinessTypeEnum: %v", v)
 	}
 }
 

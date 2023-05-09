@@ -16,12 +16,16 @@ const (
 	ServiceRoleEnumHealthLocker ServiceRoleEnum = "HEALTH_LOCKER"
 )
 
+func (e ServiceRoleEnum) ToPointer() *ServiceRoleEnum {
+	return &e
+}
+
 func (e *ServiceRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HIP":
 		fallthrough
 	case "HIU":
@@ -29,9 +33,9 @@ func (e *ServiceRoleEnum) UnmarshalJSON(data []byte) error {
 	case "HIP_AND_HIU":
 		fallthrough
 	case "HEALTH_LOCKER":
-		*e = ServiceRoleEnum(s)
+		*e = ServiceRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceRoleEnum: %v", v)
 	}
 }

@@ -15,19 +15,23 @@ const (
 	GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnumGcpRegionalMig  GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum = "GCP_REGIONAL_MIG"
 )
 
+func (e GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum) ToPointer() *GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "GCP_REGIONAL_MIG":
-		*e = GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum(s)
+		*e = GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum: %v", v)
 	}
 }
 

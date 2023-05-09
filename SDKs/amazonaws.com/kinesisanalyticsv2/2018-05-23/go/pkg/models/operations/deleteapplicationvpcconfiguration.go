@@ -16,17 +16,21 @@ const (
 	DeleteApplicationVpcConfigurationXAmzTargetEnumKinesisAnalytics20180523DeleteApplicationVpcConfiguration DeleteApplicationVpcConfigurationXAmzTargetEnum = "KinesisAnalytics_20180523.DeleteApplicationVpcConfiguration"
 )
 
+func (e DeleteApplicationVpcConfigurationXAmzTargetEnum) ToPointer() *DeleteApplicationVpcConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteApplicationVpcConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20180523.DeleteApplicationVpcConfiguration":
-		*e = DeleteApplicationVpcConfigurationXAmzTargetEnum(s)
+		*e = DeleteApplicationVpcConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteApplicationVpcConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteApplicationVpcConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

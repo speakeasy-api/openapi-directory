@@ -16,12 +16,16 @@ const (
 	GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestActionEnumDeleted               GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestActionEnum = "DELETED"
 )
 
+func (e GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestActionEnum) ToPointer() *GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestActionEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CREATED":
@@ -29,10 +33,10 @@ func (e *GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestActionEnum) U
 	case "UPDATED":
 		fallthrough
 	case "DELETED":
-		*e = GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestActionEnum(s)
+		*e = GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestActionEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnumAttributionSettings                   GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum = "ATTRIBUTION_SETTINGS"
 )
 
+func (e GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum) ToPointer() *GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHANGE_HISTORY_RESOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ACCOUNT":
@@ -85,10 +93,10 @@ func (e *GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeE
 	case "DATA_STREAM":
 		fallthrough
 	case "ATTRIBUTION_SETTINGS":
-		*e = GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum(s)
+		*e = GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETAcceptVpcEndpointConnectionsActionEnumAcceptVpcEndpointConnections GETAcceptVpcEndpointConnectionsActionEnum = "AcceptVpcEndpointConnections"
 )
 
+func (e GETAcceptVpcEndpointConnectionsActionEnum) ToPointer() *GETAcceptVpcEndpointConnectionsActionEnum {
+	return &e
+}
+
 func (e *GETAcceptVpcEndpointConnectionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcceptVpcEndpointConnections":
-		*e = GETAcceptVpcEndpointConnectionsActionEnum(s)
+		*e = GETAcceptVpcEndpointConnectionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAcceptVpcEndpointConnectionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAcceptVpcEndpointConnectionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAcceptVpcEndpointConnectionsVersionEnumTwoThousandAndSixteen1115 GETAcceptVpcEndpointConnectionsVersionEnum = "2016-11-15"
 )
 
+func (e GETAcceptVpcEndpointConnectionsVersionEnum) ToPointer() *GETAcceptVpcEndpointConnectionsVersionEnum {
+	return &e
+}
+
 func (e *GETAcceptVpcEndpointConnectionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETAcceptVpcEndpointConnectionsVersionEnum(s)
+		*e = GETAcceptVpcEndpointConnectionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAcceptVpcEndpointConnectionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAcceptVpcEndpointConnectionsVersionEnum: %v", v)
 	}
 }
 

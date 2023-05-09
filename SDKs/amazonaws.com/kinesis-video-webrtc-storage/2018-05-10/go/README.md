@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/kinesis-vid
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,21 +27,19 @@ func main() {
         }),
     )
 
-    req := operations.JoinStorageSessionRequest{
+    ctx := context.Background()
+    res, err := s.JoinStorageSession(ctx, operations.JoinStorageSessionRequest{
         RequestBody: operations.JoinStorageSessionRequestBody{
             ChannelArn: "corrupti",
         },
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-    }
-
-    ctx := context.Background()
-    res, err := s.JoinStorageSession(ctx, req)
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -57,9 +54,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `JoinStorageSession` - <p> Join the ongoing one way-video and/or multi-way audio WebRTC session as a video producing device for an input channel. If there’s no existing session for the channel, a new streaming session needs to be created, and the Amazon Resource Name (ARN) of the signaling channel must be provided. </p> <p>Currently for the <code>SINGLE_MASTER</code> type, a video producing device is able to ingest both audio and video media into a stream, while viewers can only ingest audio. Both a video producing device and viewers can join the session first, and wait for other participants.</p> <p>While participants are having peer to peer conversations through webRTC, the ingested media session will be stored into the Kinesis Video Stream. Multiple viewers are able to playback real-time media.</p> <p>Customers can also use existing Kinesis Video Streams features like <code>HLS</code> or <code>DASH</code> playback, Image generation, and more with ingested WebRTC media.</p> <note> <p>Assume that only one video producing device client can be associated with a session for the channel. If more than one client joins the session of a specific channel as a video producing device, the most recent client request takes precedence. </p> </note>
+* [JoinStorageSession](docs/sdk/README.md#joinstoragesession) - <p> Join the ongoing one way-video and/or multi-way audio WebRTC session as a video producing device for an input channel. If there’s no existing session for the channel, a new streaming session needs to be created, and the Amazon Resource Name (ARN) of the signaling channel must be provided. </p> <p>Currently for the <code>SINGLE_MASTER</code> type, a video producing device is able to ingest both audio and video media into a stream, while viewers can only ingest audio. Both a video producing device and viewers can join the session first, and wait for other participants.</p> <p>While participants are having peer to peer conversations through webRTC, the ingested media session will be stored into the Kinesis Video Stream. Multiple viewers are able to playback real-time media.</p> <p>Customers can also use existing Kinesis Video Streams features like <code>HLS</code> or <code>DASH</code> playback, Image generation, and more with ingested WebRTC media.</p> <note> <p>Assume that only one video producing device client can be associated with a session for the channel. If more than one client joins the session of a specific channel as a video producing device, the most recent client request takes precedence. </p> </note>
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -2,7 +2,7 @@
 
 package shared
 
-// SetFulfillmentPolicyResponse - A complex type that is populated with a response containing a fulfillment policy.
+// SetFulfillmentPolicyResponse - Complex type that that gets populated with a response containing a fulfillment policy.
 type SetFulfillmentPolicyResponse struct {
 	// This container indicates whether the fulfillment business policy applies to motor vehicle listings, or if it applies to non-motor vehicle listings.
 	CategoryTypes []CategoryType `json:"categoryTypes,omitempty"`

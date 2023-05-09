@@ -16,12 +16,16 @@ const (
 	JobTypeDTORelationToLanguageEnumLanguageIndependent        JobTypeDTORelationToLanguageEnum = "LANGUAGE_INDEPENDENT"
 )
 
+func (e JobTypeDTORelationToLanguageEnum) ToPointer() *JobTypeDTORelationToLanguageEnum {
+	return &e
+}
+
 func (e *JobTypeDTORelationToLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LANGUAGE_COMBINATION_RELATED":
 		fallthrough
 	case "SOURCE_LANGUAGE_RELATED_ONLY":
@@ -29,10 +33,10 @@ func (e *JobTypeDTORelationToLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "TARGET_LANGUAGE_RELATED_ONLY":
 		fallthrough
 	case "LANGUAGE_INDEPENDENT":
-		*e = JobTypeDTORelationToLanguageEnum(s)
+		*e = JobTypeDTORelationToLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobTypeDTORelationToLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for JobTypeDTORelationToLanguageEnum: %v", v)
 	}
 }
 

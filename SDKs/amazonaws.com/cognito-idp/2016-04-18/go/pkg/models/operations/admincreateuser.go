@@ -16,17 +16,21 @@ const (
 	AdminCreateUserXAmzTargetEnumAwsCognitoIdentityProviderServiceAdminCreateUser AdminCreateUserXAmzTargetEnum = "AWSCognitoIdentityProviderService.AdminCreateUser"
 )
 
+func (e AdminCreateUserXAmzTargetEnum) ToPointer() *AdminCreateUserXAmzTargetEnum {
+	return &e
+}
+
 func (e *AdminCreateUserXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.AdminCreateUser":
-		*e = AdminCreateUserXAmzTargetEnum(s)
+		*e = AdminCreateUserXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminCreateUserXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminCreateUserXAmzTargetEnum: %v", v)
 	}
 }
 

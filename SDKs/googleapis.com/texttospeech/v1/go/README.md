@@ -13,39 +13,37 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/texttospee
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TexttospeechOperationsCancelRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Operations.TexttospeechOperationsCancel(ctx, operations.TexttospeechOperationsCancelRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         RequestBody: map[string]interface{}{
             "distinctio": "quibusdam",
             "unde": "nulla",
             "corrupti": "illum",
         },
-        AccessToken: "vel",
-        Alt: "media",
-        Callback: "deserunt",
-        Fields: "suscipit",
-        Key: "iure",
-        Name: "magnam",
-        OauthToken: "debitis",
-        PrettyPrint: false,
-        QuotaUser: "ipsa",
-        UploadType: "delectus",
-        UploadProtocol: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.Operations.TexttospeechOperationsCancel(ctx, req, operations.TexttospeechOperationsCancelSecurity{
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("deserunt"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        Name: "Raquel Bednar",
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("molestiae"),
+        UploadType: sdk.String("minus"),
+        UploadProtocol: sdk.String("placeat"),
+    }, operations.TexttospeechOperationsCancelSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -64,24 +62,24 @@ func main() {
 ## Available Resources and Operations
 
 
-### Operations
+### [Operations](docs/operations/README.md)
 
-* `TexttospeechOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `TexttospeechOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [TexttospeechOperationsCancel](docs/operations/README.md#texttospeechoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [TexttospeechOperationsDelete](docs/operations/README.md#texttospeechoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `TexttospeechProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `TexttospeechProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `TexttospeechProjectsLocationsSynthesizeLongAudio` - Synthesizes long form text asynchronously.
+* [TexttospeechProjectsLocationsOperationsGet](docs/projects/README.md#texttospeechprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [TexttospeechProjectsLocationsOperationsList](docs/projects/README.md#texttospeechprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [TexttospeechProjectsLocationsSynthesizeLongAudio](docs/projects/README.md#texttospeechprojectslocationssynthesizelongaudio) - Synthesizes long form text asynchronously.
 
-### Text
+### [Text](docs/text/README.md)
 
-* `TexttospeechTextSynthesize` - Synthesizes speech synchronously: receive results after all text input has been processed.
+* [TexttospeechTextSynthesize](docs/text/README.md#texttospeechtextsynthesize) - Synthesizes speech synchronously: receive results after all text input has been processed.
 
-### Voices
+### [Voices](docs/voices/README.md)
 
-* `TexttospeechVoicesList` - Returns a list of Voice supported for synthesis.
+* [TexttospeechVoicesList](docs/voices/README.md#texttospeechvoiceslist) - Returns a list of Voice supported for synthesis.
 <!-- End SDK Available Operations -->
 
 ### Maturity

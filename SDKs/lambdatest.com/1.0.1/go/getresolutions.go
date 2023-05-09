@@ -34,7 +34,7 @@ func newGetResolutions(defaultClient, securityClient HTTPClient, serverURL, lang
 
 // Resolutions - Fetch all available resolution on different OS
 // Fetch all available resolution on different OS
-func (s *getResolutions) Resolutions(ctx context.Context) (*operations.ResolutionsResponse, error) {
+func (s *getResolutions) Resolutions(ctx context.Context, security operations.ResolutionsSecurity) (*operations.ResolutionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/resolutions"
 
@@ -43,7 +43,7 @@ func (s *getResolutions) Resolutions(ctx context.Context) (*operations.Resolutio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

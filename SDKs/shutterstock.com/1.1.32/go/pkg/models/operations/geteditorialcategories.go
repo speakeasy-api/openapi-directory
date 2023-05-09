@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetEditorialCategoriesSecurity struct {
+	Basic              *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	CustomerAccessCode *string             `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetEditorialCategoriesResponse struct {
 	ContentType string
 	// OK

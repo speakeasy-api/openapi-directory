@@ -22,12 +22,16 @@ const (
 	PolicyControllerMembershipStateStateEnumSuspended                 PolicyControllerMembershipStateStateEnum = "SUSPENDED"
 )
 
+func (e PolicyControllerMembershipStateStateEnum) ToPointer() *PolicyControllerMembershipStateStateEnum {
+	return &e
+}
+
 func (e *PolicyControllerMembershipStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIFECYCLE_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -45,10 +49,10 @@ func (e *PolicyControllerMembershipStateStateEnum) UnmarshalJSON(data []byte) er
 	case "HUB_ERROR":
 		fallthrough
 	case "SUSPENDED":
-		*e = PolicyControllerMembershipStateStateEnum(s)
+		*e = PolicyControllerMembershipStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyControllerMembershipStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyControllerMembershipStateStateEnum: %v", v)
 	}
 }
 
@@ -56,7 +60,7 @@ func (e *PolicyControllerMembershipStateStateEnum) UnmarshalJSON(data []byte) er
 type PolicyControllerMembershipState struct {
 	// Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation"
 	ComponentStates map[string]PolicyControllerOnClusterState `json:"componentStates,omitempty"`
-	// The state of the template library and any bundles included in the chosen version of the manifest TODO (b/271878194): Remove this
+	// The state of the template library and any bundles included in the chosen version of the manifest
 	ContentStates map[string]PolicyControllerOnClusterState `json:"contentStates,omitempty"`
 	// The state of the policy controller policy content
 	PolicyContentState *PolicyControllerPolicyContentState `json:"policyContentState,omitempty"`

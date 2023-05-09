@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetABatchOfConsumerTransactionClassificationResultsRequest{
-        ID: "247ee045-3d04-4b3c-872b-a9160b810f33",
-    }
-
     ctx := context.Background()
-    res, err := s.Batch.GetABatchOfConsumerTransactionClassificationResults(ctx, req)
+    res, err := s.Batch.GetABatchOfConsumerTransactionClassificationResults(ctx, operations.GetABatchOfConsumerTransactionClassificationResultsRequest{
+        ID: "247ee045-3d04-4b3c-872b-a9160b810f33",
+    })
     if err != nil {
         log.Fatal(err)
     }

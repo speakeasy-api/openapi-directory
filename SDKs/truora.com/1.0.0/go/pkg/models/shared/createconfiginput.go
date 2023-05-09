@@ -22,12 +22,16 @@ const (
 	CreateConfigInputCountryEnumAr  CreateConfigInputCountryEnum = "AR"
 )
 
+func (e CreateConfigInputCountryEnum) ToPointer() *CreateConfigInputCountryEnum {
+	return &e
+}
+
 func (e *CreateConfigInputCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "BR":
@@ -45,10 +49,10 @@ func (e *CreateConfigInputCountryEnum) UnmarshalJSON(data []byte) error {
 	case "PE":
 		fallthrough
 	case "AR":
-		*e = CreateConfigInputCountryEnum(s)
+		*e = CreateConfigInputCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateConfigInputCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateConfigInputCountryEnum: %v", v)
 	}
 }
 

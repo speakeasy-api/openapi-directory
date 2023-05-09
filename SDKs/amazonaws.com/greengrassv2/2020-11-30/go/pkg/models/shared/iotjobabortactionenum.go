@@ -13,16 +13,20 @@ const (
 	IoTJobAbortActionEnumCancel IoTJobAbortActionEnum = "CANCEL"
 )
 
+func (e IoTJobAbortActionEnum) ToPointer() *IoTJobAbortActionEnum {
+	return &e
+}
+
 func (e *IoTJobAbortActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANCEL":
-		*e = IoTJobAbortActionEnum(s)
+		*e = IoTJobAbortActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IoTJobAbortActionEnum: %s", s)
+		return fmt.Errorf("invalid value for IoTJobAbortActionEnum: %v", v)
 	}
 }

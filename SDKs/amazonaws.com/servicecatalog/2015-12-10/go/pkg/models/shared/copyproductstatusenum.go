@@ -15,20 +15,24 @@ const (
 	CopyProductStatusEnumFailed     CopyProductStatusEnum = "FAILED"
 )
 
+func (e CopyProductStatusEnum) ToPointer() *CopyProductStatusEnum {
+	return &e
+}
+
 func (e *CopyProductStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCEEDED":
 		fallthrough
 	case "IN_PROGRESS":
 		fallthrough
 	case "FAILED":
-		*e = CopyProductStatusEnum(s)
+		*e = CopyProductStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CopyProductStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CopyProductStatusEnum: %v", v)
 	}
 }

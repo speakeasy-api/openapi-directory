@@ -35,7 +35,10 @@ func newBioentity(defaultClient, securityClient HTTPClient, serverURL, language,
 // GetAnatomyGeneAssociations - Returns genes associated with a given anatomy
 func (s *bioentity) GetAnatomyGeneAssociations(ctx context.Context, request operations.GetAnatomyGeneAssociationsRequest) (*operations.GetAnatomyGeneAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/anatomy/{id}/genes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/anatomy/{id}/genes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,9 +85,14 @@ func (s *bioentity) GetAnatomyGeneAssociations(ctx context.Context, request oper
 
 // GetAnatomyGeneByTaxonAssociations - Returns gene IDs for all genes associated with a given anatomy, filtered by taxon
 // For example, + NCBITaxon:10090 (mouse)
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *bioentity) GetAnatomyGeneByTaxonAssociations(ctx context.Context, request operations.GetAnatomyGeneByTaxonAssociationsRequest) (*operations.GetAnatomyGeneByTaxonAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/anatomy/{id}/genes/{taxid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/anatomy/{id}/genes/{taxid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -123,7 +131,10 @@ func (s *bioentity) GetAnatomyGeneByTaxonAssociations(ctx context.Context, reque
 // GetCaseDiseaseAssociations - Returns diseases associated with a case
 func (s *bioentity) GetCaseDiseaseAssociations(ctx context.Context, request operations.GetCaseDiseaseAssociationsRequest) (*operations.GetCaseDiseaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/case/{id}/diseases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/case/{id}/diseases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +182,10 @@ func (s *bioentity) GetCaseDiseaseAssociations(ctx context.Context, request oper
 // GetCaseGenotypeAssociations - Returns genotypes associated with a case
 func (s *bioentity) GetCaseGenotypeAssociations(ctx context.Context, request operations.GetCaseGenotypeAssociationsRequest) (*operations.GetCaseGenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/case/{id}/genotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/case/{id}/genotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -219,7 +233,10 @@ func (s *bioentity) GetCaseGenotypeAssociations(ctx context.Context, request ope
 // GetCaseModelAssociations - Returns models associated with a case
 func (s *bioentity) GetCaseModelAssociations(ctx context.Context, request operations.GetCaseModelAssociationsRequest) (*operations.GetCaseModelAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/case/{id}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/case/{id}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +284,10 @@ func (s *bioentity) GetCaseModelAssociations(ctx context.Context, request operat
 // GetCasePhenotypeAssociations - Returns phenotypes associated with a case
 func (s *bioentity) GetCasePhenotypeAssociations(ctx context.Context, request operations.GetCasePhenotypeAssociationsRequest) (*operations.GetCasePhenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/case/{id}/phenotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/case/{id}/phenotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -315,7 +335,10 @@ func (s *bioentity) GetCasePhenotypeAssociations(ctx context.Context, request op
 // GetCaseVariantAssociations - Returns variants associated with a case
 func (s *bioentity) GetCaseVariantAssociations(ctx context.Context, request operations.GetCaseVariantAssociationsRequest) (*operations.GetCaseVariantAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/case/{id}/variants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/case/{id}/variants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -363,7 +386,10 @@ func (s *bioentity) GetCaseVariantAssociations(ctx context.Context, request oper
 // GetDiseaseCaseAssociations - Returns cases associated with a disease
 func (s *bioentity) GetDiseaseCaseAssociations(ctx context.Context, request operations.GetDiseaseCaseAssociationsRequest) (*operations.GetDiseaseCaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/cases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/cases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -411,7 +437,10 @@ func (s *bioentity) GetDiseaseCaseAssociations(ctx context.Context, request oper
 // GetDiseaseGeneAssociations - Returns genes associated with a disease
 func (s *bioentity) GetDiseaseGeneAssociations(ctx context.Context, request operations.GetDiseaseGeneAssociationsRequest) (*operations.GetDiseaseGeneAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/genes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/genes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -459,7 +488,10 @@ func (s *bioentity) GetDiseaseGeneAssociations(ctx context.Context, request oper
 // GetDiseaseGenotypeAssociations - Returns genotypes associated with a disease
 func (s *bioentity) GetDiseaseGenotypeAssociations(ctx context.Context, request operations.GetDiseaseGenotypeAssociationsRequest) (*operations.GetDiseaseGenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/genotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/genotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -519,7 +551,10 @@ func (s *bioentity) GetDiseaseGenotypeAssociations(ctx context.Context, request 
 // * TODO: provide hook into owlsim for dynamic computation of models by similarity
 func (s *bioentity) GetDiseaseModelAssociations(ctx context.Context, request operations.GetDiseaseModelAssociationsRequest) (*operations.GetDiseaseModelAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -566,9 +601,14 @@ func (s *bioentity) GetDiseaseModelAssociations(ctx context.Context, request ope
 
 // GetDiseaseModelTaxonAssociations - Returns associations to models of the disease constrained by taxon
 // See /disease/<id>/models route for full details
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *bioentity) GetDiseaseModelTaxonAssociations(ctx context.Context, request operations.GetDiseaseModelTaxonAssociationsRequest) (*operations.GetDiseaseModelTaxonAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/models/{taxon}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/models/{taxon}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -616,7 +656,10 @@ func (s *bioentity) GetDiseaseModelTaxonAssociations(ctx context.Context, reques
 // GetDiseasePathwayAssociations - Returns pathways associated with a disease
 func (s *bioentity) GetDiseasePathwayAssociations(ctx context.Context, request operations.GetDiseasePathwayAssociationsRequest) (*operations.GetDiseasePathwayAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/pathways", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/pathways", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -664,7 +707,10 @@ func (s *bioentity) GetDiseasePathwayAssociations(ctx context.Context, request o
 // GetDiseasePhenotypeAssociations - Returns phenotypes associated with disease
 func (s *bioentity) GetDiseasePhenotypeAssociations(ctx context.Context, request operations.GetDiseasePhenotypeAssociationsRequest) (*operations.GetDiseasePhenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/phenotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/phenotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -712,7 +758,10 @@ func (s *bioentity) GetDiseasePhenotypeAssociations(ctx context.Context, request
 // GetDiseasePublicationAssociations - Returns publications associated with a disease
 func (s *bioentity) GetDiseasePublicationAssociations(ctx context.Context, request operations.GetDiseasePublicationAssociationsRequest) (*operations.GetDiseasePublicationAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/publications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/publications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -761,7 +810,10 @@ func (s *bioentity) GetDiseasePublicationAssociations(ctx context.Context, reque
 // e.g. drugs or small molecules used to treat
 func (s *bioentity) GetDiseaseSubstanceAssociations(ctx context.Context, request operations.GetDiseaseSubstanceAssociationsRequest) (*operations.GetDiseaseSubstanceAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/treatment", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/treatment", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -800,7 +852,10 @@ func (s *bioentity) GetDiseaseSubstanceAssociations(ctx context.Context, request
 // GetDiseaseVariantAssociations - Returns variants associated with a disease
 func (s *bioentity) GetDiseaseVariantAssociations(ctx context.Context, request operations.GetDiseaseVariantAssociationsRequest) (*operations.GetDiseaseVariantAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/variants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/disease/{id}/variants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -848,7 +903,10 @@ func (s *bioentity) GetDiseaseVariantAssociations(ctx context.Context, request o
 // GetFunctionAssociations - Returns annotations associated to a function term
 func (s *bioentity) GetFunctionAssociations(ctx context.Context, request operations.GetFunctionAssociationsRequest) (*operations.GetFunctionAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/function/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/function/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -887,7 +945,10 @@ func (s *bioentity) GetFunctionAssociations(ctx context.Context, request operati
 // GetFunctionGeneAssociations - Returns genes associated to a GO term
 func (s *bioentity) GetFunctionGeneAssociations(ctx context.Context, request operations.GetFunctionGeneAssociationsRequest) (*operations.GetFunctionGeneAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/function/{id}/genes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/function/{id}/genes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -935,7 +996,10 @@ func (s *bioentity) GetFunctionGeneAssociations(ctx context.Context, request ope
 // GetFunctionPublicationAssociations - Returns publications associated to a GO term
 func (s *bioentity) GetFunctionPublicationAssociations(ctx context.Context, request operations.GetFunctionPublicationAssociationsRequest) (*operations.GetFunctionPublicationAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/function/{id}/publications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/function/{id}/publications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -974,7 +1038,10 @@ func (s *bioentity) GetFunctionPublicationAssociations(ctx context.Context, requ
 // GetFunctionTaxonAssociations - Returns taxons associated to a GO term
 func (s *bioentity) GetFunctionTaxonAssociations(ctx context.Context, request operations.GetFunctionTaxonAssociationsRequest) (*operations.GetFunctionTaxonAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/function/{id}/taxons", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/function/{id}/taxons", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1013,7 +1080,10 @@ func (s *bioentity) GetFunctionTaxonAssociations(ctx context.Context, request op
 // GetGeneAnatomyAssociations - Returns anatomical entities associated with a gene
 func (s *bioentity) GetGeneAnatomyAssociations(ctx context.Context, request operations.GetGeneAnatomyAssociationsRequest) (*operations.GetGeneAnatomyAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/anatomy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/anatomy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1061,7 +1131,10 @@ func (s *bioentity) GetGeneAnatomyAssociations(ctx context.Context, request oper
 // GetGeneCaseAssociations - Returns cases associated with a gene
 func (s *bioentity) GetGeneCaseAssociations(ctx context.Context, request operations.GetGeneCaseAssociationsRequest) (*operations.GetGeneCaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/cases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/cases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1109,7 +1182,10 @@ func (s *bioentity) GetGeneCaseAssociations(ctx context.Context, request operati
 // GetGeneDiseaseAssociations - Returns diseases associated with gene
 func (s *bioentity) GetGeneDiseaseAssociations(ctx context.Context, request operations.GetGeneDiseaseAssociationsRequest) (*operations.GetGeneDiseaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/diseases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/diseases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1157,7 +1233,10 @@ func (s *bioentity) GetGeneDiseaseAssociations(ctx context.Context, request oper
 // GetGeneExpressionAssociations - Returns expression events for a gene
 func (s *bioentity) GetGeneExpressionAssociations(ctx context.Context, request operations.GetGeneExpressionAssociationsRequest) (*operations.GetGeneExpressionAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/expression/anatomy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/expression/anatomy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1220,7 +1299,10 @@ func (s *bioentity) GetGeneExpressionAssociations(ctx context.Context, request o
 // mapped behind the scenes for querying.
 func (s *bioentity) GetGeneFunctionAssociations(ctx context.Context, request operations.GetGeneFunctionAssociationsRequest) (*operations.GetGeneFunctionAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/function", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/function", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1268,7 +1350,10 @@ func (s *bioentity) GetGeneFunctionAssociations(ctx context.Context, request ope
 // GetGeneGenotypeAssociations - Returns genotypes associated with a gene
 func (s *bioentity) GetGeneGenotypeAssociations(ctx context.Context, request operations.GetGeneGenotypeAssociationsRequest) (*operations.GetGeneGenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/genotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/genotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1316,7 +1401,10 @@ func (s *bioentity) GetGeneGenotypeAssociations(ctx context.Context, request ope
 // GetGeneHomologAssociations - Returns homologs for a gene
 func (s *bioentity) GetGeneHomologAssociations(ctx context.Context, request operations.GetGeneHomologAssociationsRequest) (*operations.GetGeneHomologAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/homologs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/homologs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1364,7 +1452,10 @@ func (s *bioentity) GetGeneHomologAssociations(ctx context.Context, request oper
 // GetGeneInteractions - Returns interactions for a gene
 func (s *bioentity) GetGeneInteractions(ctx context.Context, request operations.GetGeneInteractionsRequest) (*operations.GetGeneInteractionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/interactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/interactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1412,7 +1503,10 @@ func (s *bioentity) GetGeneInteractions(ctx context.Context, request operations.
 // GetGeneModelAssociations - Returns models associated with a gene
 func (s *bioentity) GetGeneModelAssociations(ctx context.Context, request operations.GetGeneModelAssociationsRequest) (*operations.GetGeneModelAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1460,7 +1554,10 @@ func (s *bioentity) GetGeneModelAssociations(ctx context.Context, request operat
 // GetGeneOrthologDiseaseAssociations - Return diseases associated with orthologs of a gene
 func (s *bioentity) GetGeneOrthologDiseaseAssociations(ctx context.Context, request operations.GetGeneOrthologDiseaseAssociationsRequest) (*operations.GetGeneOrthologDiseaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/ortholog/diseases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/ortholog/diseases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1508,7 +1605,10 @@ func (s *bioentity) GetGeneOrthologDiseaseAssociations(ctx context.Context, requ
 // GetGeneOrthologPhenotypeAssociations - Return phenotypes associated with orthologs for a gene
 func (s *bioentity) GetGeneOrthologPhenotypeAssociations(ctx context.Context, request operations.GetGeneOrthologPhenotypeAssociationsRequest) (*operations.GetGeneOrthologPhenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/ortholog/phenotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/ortholog/phenotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1556,7 +1656,10 @@ func (s *bioentity) GetGeneOrthologPhenotypeAssociations(ctx context.Context, re
 // GetGenePathwayAssociations - Returns pathways associated with gene
 func (s *bioentity) GetGenePathwayAssociations(ctx context.Context, request operations.GetGenePathwayAssociationsRequest) (*operations.GetGenePathwayAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/pathways", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/pathways", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1604,7 +1707,10 @@ func (s *bioentity) GetGenePathwayAssociations(ctx context.Context, request oper
 // GetGenePhenotypeAssociations - Returns phenotypes associated with gene
 func (s *bioentity) GetGenePhenotypeAssociations(ctx context.Context, request operations.GetGenePhenotypeAssociationsRequest) (*operations.GetGenePhenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/phenotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/phenotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1652,7 +1758,10 @@ func (s *bioentity) GetGenePhenotypeAssociations(ctx context.Context, request op
 // GetGenePublicationAssociations - Returns publications associated with a gene
 func (s *bioentity) GetGenePublicationAssociations(ctx context.Context, request operations.GetGenePublicationAssociationsRequest) (*operations.GetGenePublicationAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/publications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/publications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1700,7 +1809,10 @@ func (s *bioentity) GetGenePublicationAssociations(ctx context.Context, request 
 // GetGeneVariantAssociations - Returns variants associated with a gene
 func (s *bioentity) GetGeneVariantAssociations(ctx context.Context, request operations.GetGeneVariantAssociationsRequest) (*operations.GetGeneVariantAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/variants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/gene/{id}/variants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1748,7 +1860,10 @@ func (s *bioentity) GetGeneVariantAssociations(ctx context.Context, request oper
 // GetGenericAssociations - Returns associations for an entity regardless of the type
 func (s *bioentity) GetGenericAssociations(ctx context.Context, request operations.GetGenericAssociationsRequest) (*operations.GetGenericAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/{id}/associations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/{id}/associations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1796,7 +1911,10 @@ func (s *bioentity) GetGenericAssociations(ctx context.Context, request operatio
 // GetGenericObject - Returns basic info on object of any type
 func (s *bioentity) GetGenericObject(ctx context.Context, request operations.GetGenericObjectRequest) (*operations.GetGenericObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1844,7 +1962,10 @@ func (s *bioentity) GetGenericObject(ctx context.Context, request operations.Get
 // GetGenericObjectByType - Return basic info on an object for a given type
 func (s *bioentity) GetGenericObjectByType(ctx context.Context, request operations.GetGenericObjectByTypeRequest) (*operations.GetGenericObjectByTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/{type}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/{type}/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1883,7 +2004,10 @@ func (s *bioentity) GetGenericObjectByType(ctx context.Context, request operatio
 // GetGenotypeCaseAssociations - Returns cases associated with a genotype
 func (s *bioentity) GetGenotypeCaseAssociations(ctx context.Context, request operations.GetGenotypeCaseAssociationsRequest) (*operations.GetGenotypeCaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/cases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/cases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1931,7 +2055,10 @@ func (s *bioentity) GetGenotypeCaseAssociations(ctx context.Context, request ope
 // GetGenotypeDiseaseAssociations - Returns diseases associated with a genotype
 func (s *bioentity) GetGenotypeDiseaseAssociations(ctx context.Context, request operations.GetGenotypeDiseaseAssociationsRequest) (*operations.GetGenotypeDiseaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/diseases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/diseases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1979,7 +2106,10 @@ func (s *bioentity) GetGenotypeDiseaseAssociations(ctx context.Context, request 
 // GetGenotypeGeneAssociations - Returns genes associated with a genotype
 func (s *bioentity) GetGenotypeGeneAssociations(ctx context.Context, request operations.GetGenotypeGeneAssociationsRequest) (*operations.GetGenotypeGeneAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/genes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/genes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2028,7 +2158,10 @@ func (s *bioentity) GetGenotypeGeneAssociations(ctx context.Context, request ope
 // Genotypes may be related to one another according to the GENO model
 func (s *bioentity) GetGenotypeGenotypeAssociations(ctx context.Context, request operations.GetGenotypeGenotypeAssociationsRequest) (*operations.GetGenotypeGenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/genotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/genotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2076,7 +2209,10 @@ func (s *bioentity) GetGenotypeGenotypeAssociations(ctx context.Context, request
 // GetGenotypeModelAssociations - Returns models associated with a genotype
 func (s *bioentity) GetGenotypeModelAssociations(ctx context.Context, request operations.GetGenotypeModelAssociationsRequest) (*operations.GetGenotypeModelAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2124,7 +2260,10 @@ func (s *bioentity) GetGenotypeModelAssociations(ctx context.Context, request op
 // GetGenotypePhenotypeAssociations - Returns phenotypes associated with a genotype
 func (s *bioentity) GetGenotypePhenotypeAssociations(ctx context.Context, request operations.GetGenotypePhenotypeAssociationsRequest) (*operations.GetGenotypePhenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/phenotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/phenotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2172,7 +2311,10 @@ func (s *bioentity) GetGenotypePhenotypeAssociations(ctx context.Context, reques
 // GetGenotypePublicationAssociations - Returns publications associated with a genotype
 func (s *bioentity) GetGenotypePublicationAssociations(ctx context.Context, request operations.GetGenotypePublicationAssociationsRequest) (*operations.GetGenotypePublicationAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/publications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/publications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2220,7 +2362,10 @@ func (s *bioentity) GetGenotypePublicationAssociations(ctx context.Context, requ
 // GetGenotypeVariantAssociations - Returns genotypes-variant associations
 func (s *bioentity) GetGenotypeVariantAssociations(ctx context.Context, request operations.GetGenotypeVariantAssociationsRequest) (*operations.GetGenotypeVariantAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/variants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/genotype/{id}/variants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2266,9 +2411,14 @@ func (s *bioentity) GetGenotypeVariantAssociations(ctx context.Context, request 
 }
 
 // GetGotermGeneAssociations - Returns associations to GO terms for a gene
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *bioentity) GetGotermGeneAssociations(ctx context.Context, request operations.GetGotermGeneAssociationsRequest) (*operations.GetGotermGeneAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/goterm/{id}/genes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/goterm/{id}/genes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2316,7 +2466,10 @@ func (s *bioentity) GetGotermGeneAssociations(ctx context.Context, request opera
 // GetModelCaseAssociations - Returns cases associated with a model
 func (s *bioentity) GetModelCaseAssociations(ctx context.Context, request operations.GetModelCaseAssociationsRequest) (*operations.GetModelCaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/cases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/cases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2364,7 +2517,10 @@ func (s *bioentity) GetModelCaseAssociations(ctx context.Context, request operat
 // GetModelDiseaseAssociations - Returns diseases associated with a model
 func (s *bioentity) GetModelDiseaseAssociations(ctx context.Context, request operations.GetModelDiseaseAssociationsRequest) (*operations.GetModelDiseaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/diseases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/diseases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2412,7 +2568,10 @@ func (s *bioentity) GetModelDiseaseAssociations(ctx context.Context, request ope
 // GetModelGeneAssociations - Returns genes associated with a model
 func (s *bioentity) GetModelGeneAssociations(ctx context.Context, request operations.GetModelGeneAssociationsRequest) (*operations.GetModelGeneAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/genes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/genes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2460,7 +2619,10 @@ func (s *bioentity) GetModelGeneAssociations(ctx context.Context, request operat
 // GetModelGenotypeAssociations - Returns genotypes associated with a model
 func (s *bioentity) GetModelGenotypeAssociations(ctx context.Context, request operations.GetModelGenotypeAssociationsRequest) (*operations.GetModelGenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/genotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/genotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2508,7 +2670,10 @@ func (s *bioentity) GetModelGenotypeAssociations(ctx context.Context, request op
 // GetModelPhenotypeAssociations - Returns phenotypes associated with a model
 func (s *bioentity) GetModelPhenotypeAssociations(ctx context.Context, request operations.GetModelPhenotypeAssociationsRequest) (*operations.GetModelPhenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/phenotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/phenotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2556,7 +2721,10 @@ func (s *bioentity) GetModelPhenotypeAssociations(ctx context.Context, request o
 // GetModelPublicationAssociations - Returns publications associated with a model
 func (s *bioentity) GetModelPublicationAssociations(ctx context.Context, request operations.GetModelPublicationAssociationsRequest) (*operations.GetModelPublicationAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/publications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/publications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2604,7 +2772,10 @@ func (s *bioentity) GetModelPublicationAssociations(ctx context.Context, request
 // GetModelVariantAssociations - Returns variants associated with a model
 func (s *bioentity) GetModelVariantAssociations(ctx context.Context, request operations.GetModelVariantAssociationsRequest) (*operations.GetModelVariantAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/variants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/model/{id}/variants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2652,7 +2823,10 @@ func (s *bioentity) GetModelVariantAssociations(ctx context.Context, request ope
 // GetPathwayDiseaseAssociations - Returns diseases associated with a pathway
 func (s *bioentity) GetPathwayDiseaseAssociations(ctx context.Context, request operations.GetPathwayDiseaseAssociationsRequest) (*operations.GetPathwayDiseaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/pathway/{id}/diseases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/pathway/{id}/diseases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2700,7 +2874,10 @@ func (s *bioentity) GetPathwayDiseaseAssociations(ctx context.Context, request o
 // GetPathwayGeneAssociations - Returns genes associated with a pathway
 func (s *bioentity) GetPathwayGeneAssociations(ctx context.Context, request operations.GetPathwayGeneAssociationsRequest) (*operations.GetPathwayGeneAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/pathway/{id}/genes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/pathway/{id}/genes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2748,7 +2925,10 @@ func (s *bioentity) GetPathwayGeneAssociations(ctx context.Context, request oper
 // GetPathwayPhenotypeAssociations - Returns phenotypes associated with a pathway
 func (s *bioentity) GetPathwayPhenotypeAssociations(ctx context.Context, request operations.GetPathwayPhenotypeAssociationsRequest) (*operations.GetPathwayPhenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/pathway/{id}/phenotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/pathway/{id}/phenotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2799,7 +2979,10 @@ func (s *bioentity) GetPathwayPhenotypeAssociations(ctx context.Context, request
 //   - MP:0008521 abnormal Bowman membrane
 func (s *bioentity) GetPhenotypeAnatomyAssociations(ctx context.Context, request operations.GetPhenotypeAnatomyAssociationsRequest) (*operations.GetPhenotypeAnatomyAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/anatomy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/anatomy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2847,7 +3030,10 @@ func (s *bioentity) GetPhenotypeAnatomyAssociations(ctx context.Context, request
 // GetPhenotypeCaseAssociations - Returns cases associated with a phenotype
 func (s *bioentity) GetPhenotypeCaseAssociations(ctx context.Context, request operations.GetPhenotypeCaseAssociationsRequest) (*operations.GetPhenotypeCaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/cases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/cases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2895,7 +3081,10 @@ func (s *bioentity) GetPhenotypeCaseAssociations(ctx context.Context, request op
 // GetPhenotypeDiseaseAssociations - Returns diseases associated with a phenotype
 func (s *bioentity) GetPhenotypeDiseaseAssociations(ctx context.Context, request operations.GetPhenotypeDiseaseAssociationsRequest) (*operations.GetPhenotypeDiseaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/diseases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/diseases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2943,7 +3132,10 @@ func (s *bioentity) GetPhenotypeDiseaseAssociations(ctx context.Context, request
 // GetPhenotypeGeneAssociations - Returns genes associated with a phenotype
 func (s *bioentity) GetPhenotypeGeneAssociations(ctx context.Context, request operations.GetPhenotypeGeneAssociationsRequest) (*operations.GetPhenotypeGeneAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/genes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/genes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2990,9 +3182,14 @@ func (s *bioentity) GetPhenotypeGeneAssociations(ctx context.Context, request op
 
 // GetPhenotypeGeneByTaxonAssociations - Returns gene IDs for all genes associated with a given phenotype, filtered by taxon
 // For example, MP:0001569 + NCBITaxon:10090 (mouse)
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *bioentity) GetPhenotypeGeneByTaxonAssociations(ctx context.Context, request operations.GetPhenotypeGeneByTaxonAssociationsRequest) (*operations.GetPhenotypeGeneByTaxonAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/gene/{taxid}/ids", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/gene/{taxid}/ids", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3031,7 +3228,10 @@ func (s *bioentity) GetPhenotypeGeneByTaxonAssociations(ctx context.Context, req
 // GetPhenotypeGenotypeAssociations - Returns genotypes associated with a phenotype
 func (s *bioentity) GetPhenotypeGenotypeAssociations(ctx context.Context, request operations.GetPhenotypeGenotypeAssociationsRequest) (*operations.GetPhenotypeGenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/genotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/genotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3079,7 +3279,10 @@ func (s *bioentity) GetPhenotypeGenotypeAssociations(ctx context.Context, reques
 // GetPhenotypePathwayAssociations - Returns pathways associated with a phenotype
 func (s *bioentity) GetPhenotypePathwayAssociations(ctx context.Context, request operations.GetPhenotypePathwayAssociationsRequest) (*operations.GetPhenotypePathwayAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/pathways", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/pathways", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3127,7 +3330,10 @@ func (s *bioentity) GetPhenotypePathwayAssociations(ctx context.Context, request
 // GetPhenotypePublicationAssociations - Returns publications associated with a phenotype
 func (s *bioentity) GetPhenotypePublicationAssociations(ctx context.Context, request operations.GetPhenotypePublicationAssociationsRequest) (*operations.GetPhenotypePublicationAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/publications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/publications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3175,7 +3381,10 @@ func (s *bioentity) GetPhenotypePublicationAssociations(ctx context.Context, req
 // GetPhenotypeVariantAssociations - Returns variants associated with a phenotype
 func (s *bioentity) GetPhenotypeVariantAssociations(ctx context.Context, request operations.GetPhenotypeVariantAssociationsRequest) (*operations.GetPhenotypeVariantAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/variants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/phenotype/{id}/variants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3223,7 +3432,10 @@ func (s *bioentity) GetPhenotypeVariantAssociations(ctx context.Context, request
 // GetPublicationDiseaseAssociations - Returns diseases associated with a publication
 func (s *bioentity) GetPublicationDiseaseAssociations(ctx context.Context, request operations.GetPublicationDiseaseAssociationsRequest) (*operations.GetPublicationDiseaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/publication/{id}/diseases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/publication/{id}/diseases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3271,7 +3483,10 @@ func (s *bioentity) GetPublicationDiseaseAssociations(ctx context.Context, reque
 // GetPublicationGeneAssociations - Returns genes associated with a publication
 func (s *bioentity) GetPublicationGeneAssociations(ctx context.Context, request operations.GetPublicationGeneAssociationsRequest) (*operations.GetPublicationGeneAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/publication/{id}/genes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/publication/{id}/genes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3319,7 +3534,10 @@ func (s *bioentity) GetPublicationGeneAssociations(ctx context.Context, request 
 // GetPublicationGenotypeAssociations - Returns genotypes associated with a publication
 func (s *bioentity) GetPublicationGenotypeAssociations(ctx context.Context, request operations.GetPublicationGenotypeAssociationsRequest) (*operations.GetPublicationGenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/publication/{id}/genotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/publication/{id}/genotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3367,7 +3585,10 @@ func (s *bioentity) GetPublicationGenotypeAssociations(ctx context.Context, requ
 // GetPublicationModelAssociations - Returns models associated with a publication
 func (s *bioentity) GetPublicationModelAssociations(ctx context.Context, request operations.GetPublicationModelAssociationsRequest) (*operations.GetPublicationModelAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/publication/{id}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/publication/{id}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3415,7 +3636,10 @@ func (s *bioentity) GetPublicationModelAssociations(ctx context.Context, request
 // GetPublicationPhenotypeAssociations - Returns phenotypes associated with a publication
 func (s *bioentity) GetPublicationPhenotypeAssociations(ctx context.Context, request operations.GetPublicationPhenotypeAssociationsRequest) (*operations.GetPublicationPhenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/publication/{id}/phenotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/publication/{id}/phenotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3463,7 +3687,10 @@ func (s *bioentity) GetPublicationPhenotypeAssociations(ctx context.Context, req
 // GetPublicationVariantAssociations - Returns variants associated with a publication
 func (s *bioentity) GetPublicationVariantAssociations(ctx context.Context, request operations.GetPublicationVariantAssociationsRequest) (*operations.GetPublicationVariantAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/publication/{id}/variants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/publication/{id}/variants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3520,7 +3747,10 @@ func (s *bioentity) GetPublicationVariantAssociations(ctx context.Context, reque
 // For example, CHEBI:40036 (amitrole)
 func (s *bioentity) GetSubstanceParticipantInAssociations(ctx context.Context, request operations.GetSubstanceParticipantInAssociationsRequest) (*operations.GetSubstanceParticipantInAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/substance/{id}/participant_in", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/substance/{id}/participant_in", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3569,7 +3799,10 @@ func (s *bioentity) GetSubstanceParticipantInAssociations(ctx context.Context, r
 // Roles may be human-oriented (e.g. pesticide) or molecular (e.g. enzyme inhibitor)
 func (s *bioentity) GetSubstanceRoleAssociations(ctx context.Context, request operations.GetSubstanceRoleAssociationsRequest) (*operations.GetSubstanceRoleAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/substance/{id}/roles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/substance/{id}/roles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3618,7 +3851,10 @@ func (s *bioentity) GetSubstanceRoleAssociations(ctx context.Context, request op
 // e.g. drugs or small molecules used to treat
 func (s *bioentity) GetSubstanceTreatsAssociations(ctx context.Context, request operations.GetSubstanceTreatsAssociationsRequest) (*operations.GetSubstanceTreatsAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/substance/{id}/treats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/substance/{id}/treats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3657,7 +3893,10 @@ func (s *bioentity) GetSubstanceTreatsAssociations(ctx context.Context, request 
 // GetVariantCaseAssociations - Returns cases associated with a variant
 func (s *bioentity) GetVariantCaseAssociations(ctx context.Context, request operations.GetVariantCaseAssociationsRequest) (*operations.GetVariantCaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/cases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/cases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3705,7 +3944,10 @@ func (s *bioentity) GetVariantCaseAssociations(ctx context.Context, request oper
 // GetVariantDiseaseAssociations - Returns diseases associated with a variant
 func (s *bioentity) GetVariantDiseaseAssociations(ctx context.Context, request operations.GetVariantDiseaseAssociationsRequest) (*operations.GetVariantDiseaseAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/diseases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/diseases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3753,7 +3995,10 @@ func (s *bioentity) GetVariantDiseaseAssociations(ctx context.Context, request o
 // GetVariantGeneAssociations - Returns genes associated with a variant
 func (s *bioentity) GetVariantGeneAssociations(ctx context.Context, request operations.GetVariantGeneAssociationsRequest) (*operations.GetVariantGeneAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/genes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/genes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3801,7 +4046,10 @@ func (s *bioentity) GetVariantGeneAssociations(ctx context.Context, request oper
 // GetVariantGenotypeAssociations - Returns genotypes associated with a variant
 func (s *bioentity) GetVariantGenotypeAssociations(ctx context.Context, request operations.GetVariantGenotypeAssociationsRequest) (*operations.GetVariantGenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/genotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/genotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3849,7 +4097,10 @@ func (s *bioentity) GetVariantGenotypeAssociations(ctx context.Context, request 
 // GetVariantModelAssociations - Returns models associated with a variant
 func (s *bioentity) GetVariantModelAssociations(ctx context.Context, request operations.GetVariantModelAssociationsRequest) (*operations.GetVariantModelAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3897,7 +4148,10 @@ func (s *bioentity) GetVariantModelAssociations(ctx context.Context, request ope
 // GetVariantPhenotypeAssociations - Returns phenotypes associated with a variant
 func (s *bioentity) GetVariantPhenotypeAssociations(ctx context.Context, request operations.GetVariantPhenotypeAssociationsRequest) (*operations.GetVariantPhenotypeAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/phenotypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/phenotypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3945,7 +4199,10 @@ func (s *bioentity) GetVariantPhenotypeAssociations(ctx context.Context, request
 // GetVariantPublicationAssociations - Returns publications associated with a variant
 func (s *bioentity) GetVariantPublicationAssociations(ctx context.Context, request operations.GetVariantPublicationAssociationsRequest) (*operations.GetVariantPublicationAssociationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/publications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bioentity/variant/{id}/publications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

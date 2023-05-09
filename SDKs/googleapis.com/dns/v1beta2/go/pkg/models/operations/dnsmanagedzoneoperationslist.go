@@ -44,19 +44,23 @@ const (
 	DNSManagedZoneOperationsListSortByEnumID        DNSManagedZoneOperationsListSortByEnum = "id"
 )
 
+func (e DNSManagedZoneOperationsListSortByEnum) ToPointer() *DNSManagedZoneOperationsListSortByEnum {
+	return &e
+}
+
 func (e *DNSManagedZoneOperationsListSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "startTime":
 		fallthrough
 	case "id":
-		*e = DNSManagedZoneOperationsListSortByEnum(s)
+		*e = DNSManagedZoneOperationsListSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DNSManagedZoneOperationsListSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for DNSManagedZoneOperationsListSortByEnum: %v", v)
 	}
 }
 

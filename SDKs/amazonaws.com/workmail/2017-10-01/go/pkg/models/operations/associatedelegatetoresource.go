@@ -16,17 +16,21 @@ const (
 	AssociateDelegateToResourceXAmzTargetEnumWorkMailServiceAssociateDelegateToResource AssociateDelegateToResourceXAmzTargetEnum = "WorkMailService.AssociateDelegateToResource"
 )
 
+func (e AssociateDelegateToResourceXAmzTargetEnum) ToPointer() *AssociateDelegateToResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateDelegateToResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.AssociateDelegateToResource":
-		*e = AssociateDelegateToResourceXAmzTargetEnum(s)
+		*e = AssociateDelegateToResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateDelegateToResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateDelegateToResourceXAmzTargetEnum: %v", v)
 	}
 }
 

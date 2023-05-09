@@ -16,12 +16,16 @@ const (
 	ConfigRuleStateEnumEvaluating      ConfigRuleStateEnum = "EVALUATING"
 )
 
+func (e ConfigRuleStateEnum) ToPointer() *ConfigRuleStateEnum {
+	return &e
+}
+
 func (e *ConfigRuleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "DELETING":
@@ -29,9 +33,9 @@ func (e *ConfigRuleStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING_RESULTS":
 		fallthrough
 	case "EVALUATING":
-		*e = ConfigRuleStateEnum(s)
+		*e = ConfigRuleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigRuleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigRuleStateEnum: %v", v)
 	}
 }

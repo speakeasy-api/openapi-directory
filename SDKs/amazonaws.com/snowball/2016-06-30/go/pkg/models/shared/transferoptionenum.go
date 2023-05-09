@@ -15,20 +15,24 @@ const (
 	TransferOptionEnumLocalUse TransferOptionEnum = "LOCAL_USE"
 )
 
+func (e TransferOptionEnum) ToPointer() *TransferOptionEnum {
+	return &e
+}
+
 func (e *TransferOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORT":
 		fallthrough
 	case "EXPORT":
 		fallthrough
 	case "LOCAL_USE":
-		*e = TransferOptionEnum(s)
+		*e = TransferOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferOptionEnum: %v", v)
 	}
 }

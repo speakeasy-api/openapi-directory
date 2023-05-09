@@ -16,17 +16,21 @@ const (
 	ListIcd10CMInferenceJobsXAmzTargetEnumComprehendMedical20181030ListIcd10CmInferenceJobs ListIcd10CMInferenceJobsXAmzTargetEnum = "ComprehendMedical_20181030.ListICD10CMInferenceJobs"
 )
 
+func (e ListIcd10CMInferenceJobsXAmzTargetEnum) ToPointer() *ListIcd10CMInferenceJobsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListIcd10CMInferenceJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComprehendMedical_20181030.ListICD10CMInferenceJobs":
-		*e = ListIcd10CMInferenceJobsXAmzTargetEnum(s)
+		*e = ListIcd10CMInferenceJobsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListIcd10CMInferenceJobsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListIcd10CMInferenceJobsXAmzTargetEnum: %v", v)
 	}
 }
 

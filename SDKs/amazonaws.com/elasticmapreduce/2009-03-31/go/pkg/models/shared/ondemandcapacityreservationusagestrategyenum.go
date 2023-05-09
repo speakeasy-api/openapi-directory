@@ -13,16 +13,20 @@ const (
 	OnDemandCapacityReservationUsageStrategyEnumUseCapacityReservationsFirst OnDemandCapacityReservationUsageStrategyEnum = "use-capacity-reservations-first"
 )
 
+func (e OnDemandCapacityReservationUsageStrategyEnum) ToPointer() *OnDemandCapacityReservationUsageStrategyEnum {
+	return &e
+}
+
 func (e *OnDemandCapacityReservationUsageStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "use-capacity-reservations-first":
-		*e = OnDemandCapacityReservationUsageStrategyEnum(s)
+		*e = OnDemandCapacityReservationUsageStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OnDemandCapacityReservationUsageStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for OnDemandCapacityReservationUsageStrategyEnum: %v", v)
 	}
 }

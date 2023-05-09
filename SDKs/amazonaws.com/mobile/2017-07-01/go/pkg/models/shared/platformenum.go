@@ -20,12 +20,16 @@ const (
 	PlatformEnumJavascript PlatformEnum = "JAVASCRIPT"
 )
 
+func (e PlatformEnum) ToPointer() *PlatformEnum {
+	return &e
+}
+
 func (e *PlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OSX":
 		fallthrough
 	case "WINDOWS":
@@ -39,9 +43,9 @@ func (e *PlatformEnum) UnmarshalJSON(data []byte) error {
 	case "ANDROID":
 		fallthrough
 	case "JAVASCRIPT":
-		*e = PlatformEnum(s)
+		*e = PlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for PlatformEnum: %v", v)
 	}
 }

@@ -27,6 +27,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 type SDK struct {
 	TODOSecurity *todoSecurity
 	Accounts     *accounts
@@ -135,7 +150,10 @@ func New(opts ...SDKOption) *SDK {
 // DeleteAPIV1AnnouncementsIDReactionsName - Undo a react emoji to an announcement.
 func (s *SDK) DeleteAPIV1AnnouncementsIDReactionsName(ctx context.Context, request operations.DeleteAPIV1AnnouncementsIDReactionsNameRequest, security operations.DeleteAPIV1AnnouncementsIDReactionsNameSecurity) (*operations.DeleteAPIV1AnnouncementsIDReactionsNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/announcements/{id}/reactions/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/announcements/{id}/reactions/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -189,7 +207,10 @@ func (s *SDK) DeleteAPIV1AnnouncementsIDReactionsName(ctx context.Context, reque
 // DeleteAPIV1ConversationsID - Remove converstation
 func (s *SDK) DeleteAPIV1ConversationsID(ctx context.Context, request operations.DeleteAPIV1ConversationsIDRequest, security operations.DeleteAPIV1ConversationsIDSecurity) (*operations.DeleteAPIV1ConversationsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/conversations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/conversations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -305,7 +326,10 @@ func (s *SDK) DeleteAPIV1DomainBlocks(ctx context.Context, request operations.De
 // DeleteAPIV1FeaturedTagsID - Unfeature a tag
 func (s *SDK) DeleteAPIV1FeaturedTagsID(ctx context.Context, request operations.DeleteAPIV1FeaturedTagsIDRequest, security operations.DeleteAPIV1FeaturedTagsIDSecurity) (*operations.DeleteAPIV1FeaturedTagsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/featured_tags/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/featured_tags/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -359,7 +383,10 @@ func (s *SDK) DeleteAPIV1FeaturedTagsID(ctx context.Context, request operations.
 // DeleteAPIV1FiltersID - Delete a filter.
 func (s *SDK) DeleteAPIV1FiltersID(ctx context.Context, request operations.DeleteAPIV1FiltersIDRequest, security operations.DeleteAPIV1FiltersIDSecurity) (*operations.DeleteAPIV1FiltersIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/filters/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/filters/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -404,7 +431,7 @@ func (s *SDK) DeleteAPIV1FiltersID(ctx context.Context, request operations.Delet
 }
 
 // DeleteAPIV1Lists - Delete a list
-func (s *SDK) DeleteAPIV1Lists(ctx context.Context) (*operations.DeleteAPIV1ListsResponse, error) {
+func (s *SDK) DeleteAPIV1Lists(ctx context.Context, security operations.DeleteAPIV1ListsSecurity) (*operations.DeleteAPIV1ListsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/lists"
 
@@ -413,7 +440,7 @@ func (s *SDK) DeleteAPIV1Lists(ctx context.Context) (*operations.DeleteAPIV1List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -462,7 +489,10 @@ func (s *SDK) DeleteAPIV1Lists(ctx context.Context) (*operations.DeleteAPIV1List
 // DeleteAPIV1ListsIDAccounts - Remove accounts from the given list.
 func (s *SDK) DeleteAPIV1ListsIDAccounts(ctx context.Context, request operations.DeleteAPIV1ListsIDAccountsRequest, security operations.DeleteAPIV1ListsIDAccountsSecurity) (*operations.DeleteAPIV1ListsIDAccountsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/lists/{id}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/lists/{id}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -522,7 +552,7 @@ func (s *SDK) DeleteAPIV1ListsIDAccounts(ctx context.Context, request operations
 }
 
 // DeleteAPIV1PushSubscription - Updates the current push subscription. Only the data part can be updated. To change fundamentals, a new subscription must be created instead.
-func (s *SDK) DeleteAPIV1PushSubscription(ctx context.Context) (*operations.DeleteAPIV1PushSubscriptionResponse, error) {
+func (s *SDK) DeleteAPIV1PushSubscription(ctx context.Context, security operations.DeleteAPIV1PushSubscriptionSecurity) (*operations.DeleteAPIV1PushSubscriptionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/push/subscription"
 
@@ -531,7 +561,7 @@ func (s *SDK) DeleteAPIV1PushSubscription(ctx context.Context) (*operations.Dele
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -568,7 +598,10 @@ func (s *SDK) DeleteAPIV1PushSubscription(ctx context.Context) (*operations.Dele
 // DeleteAPIV1ScheduledStatusesID - Cancel a scheduled status
 func (s *SDK) DeleteAPIV1ScheduledStatusesID(ctx context.Context, request operations.DeleteAPIV1ScheduledStatusesIDRequest, security operations.DeleteAPIV1ScheduledStatusesIDSecurity) (*operations.DeleteAPIV1ScheduledStatusesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/scheduled_statuses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/scheduled_statuses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -620,9 +653,13 @@ func (s *SDK) DeleteAPIV1ScheduledStatusesID(ctx context.Context, request operat
 
 	return res, nil
 }
+
 func (s *SDK) DeleteAPIV1StatusesID(ctx context.Context, request operations.DeleteAPIV1StatusesIDRequest, security operations.DeleteAPIV1StatusesIDSecurity) (*operations.DeleteAPIV1StatusesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -678,7 +715,10 @@ func (s *SDK) DeleteAPIV1StatusesID(ctx context.Context, request operations.Dele
 // DeleteAPIV1SuggestionsID - Delete user suggestion
 func (s *SDK) DeleteAPIV1SuggestionsID(ctx context.Context, request operations.DeleteAPIV1SuggestionsIDRequest, security operations.DeleteAPIV1SuggestionsIDSecurity) (*operations.DeleteAPIV1SuggestionsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/suggestions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/suggestions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -896,7 +936,10 @@ func (s *SDK) GetAPIV1AdminAccounts(ctx context.Context, request operations.GetA
 // GetAPIV1AdminAccountsID - View admin-level information about the given account.
 func (s *SDK) GetAPIV1AdminAccountsID(ctx context.Context, request operations.GetAPIV1AdminAccountsIDRequest, security operations.GetAPIV1AdminAccountsIDSecurity) (*operations.GetAPIV1AdminAccountsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -988,7 +1031,10 @@ func (s *SDK) GetAPIV1AdminReports(ctx context.Context, request operations.GetAP
 // GetAPIV1AdminReportsID - View information about the report with the given ID.
 func (s *SDK) GetAPIV1AdminReportsID(ctx context.Context, request operations.GetAPIV1AdminReportsIDRequest, security operations.GetAPIV1AdminReportsIDSecurity) (*operations.GetAPIV1AdminReportsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/reports/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/reports/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1518,7 +1564,7 @@ func (s *SDK) GetAPIV1Favourites(ctx context.Context, request operations.GetAPIV
 }
 
 // GetAPIV1FeaturedTags - View your featured tags.
-func (s *SDK) GetAPIV1FeaturedTags(ctx context.Context) (*operations.GetAPIV1FeaturedTagsResponse, error) {
+func (s *SDK) GetAPIV1FeaturedTags(ctx context.Context, security operations.GetAPIV1FeaturedTagsSecurity) (*operations.GetAPIV1FeaturedTagsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/featured_tags"
 
@@ -1527,7 +1573,7 @@ func (s *SDK) GetAPIV1FeaturedTags(ctx context.Context) (*operations.GetAPIV1Fea
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1572,7 +1618,7 @@ func (s *SDK) GetAPIV1FeaturedTags(ctx context.Context) (*operations.GetAPIV1Fea
 }
 
 // GetAPIV1FeaturedTagsSuggestions - Shows your 10 most-used tags, with usage history for the past week.
-func (s *SDK) GetAPIV1FeaturedTagsSuggestions(ctx context.Context) (*operations.GetAPIV1FeaturedTagsSuggestionsResponse, error) {
+func (s *SDK) GetAPIV1FeaturedTagsSuggestions(ctx context.Context, security operations.GetAPIV1FeaturedTagsSuggestionsSecurity) (*operations.GetAPIV1FeaturedTagsSuggestionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/featured_tags/suggestions"
 
@@ -1581,7 +1627,7 @@ func (s *SDK) GetAPIV1FeaturedTagsSuggestions(ctx context.Context) (*operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1624,7 +1670,8 @@ func (s *SDK) GetAPIV1FeaturedTagsSuggestions(ctx context.Context) (*operations.
 
 	return res, nil
 }
-func (s *SDK) GetAPIV1Filters(ctx context.Context) (*operations.GetAPIV1FiltersResponse, error) {
+
+func (s *SDK) GetAPIV1Filters(ctx context.Context, security operations.GetAPIV1FiltersSecurity) (*operations.GetAPIV1FiltersResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/filters"
 
@@ -1633,7 +1680,7 @@ func (s *SDK) GetAPIV1Filters(ctx context.Context) (*operations.GetAPIV1FiltersR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1680,7 +1727,10 @@ func (s *SDK) GetAPIV1Filters(ctx context.Context) (*operations.GetAPIV1FiltersR
 // GetAPIV1FiltersID - Get one filter.
 func (s *SDK) GetAPIV1FiltersID(ctx context.Context, request operations.GetAPIV1FiltersIDRequest, security operations.GetAPIV1FiltersIDSecurity) (*operations.GetAPIV1FiltersIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/filters/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/filters/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1924,7 +1974,7 @@ func (s *SDK) GetAPIV1InstancePeers(ctx context.Context) (*operations.GetAPIV1In
 }
 
 // GetAPIV1Lists - Fetch all lists that the user owns.
-func (s *SDK) GetAPIV1Lists(ctx context.Context) (*operations.GetAPIV1ListsResponse, error) {
+func (s *SDK) GetAPIV1Lists(ctx context.Context, security operations.GetAPIV1ListsSecurity) (*operations.GetAPIV1ListsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/lists"
 
@@ -1933,7 +1983,7 @@ func (s *SDK) GetAPIV1Lists(ctx context.Context) (*operations.GetAPIV1ListsRespo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1980,7 +2030,10 @@ func (s *SDK) GetAPIV1Lists(ctx context.Context) (*operations.GetAPIV1ListsRespo
 // GetAPIV1ListsID - Remove converstation
 func (s *SDK) GetAPIV1ListsID(ctx context.Context, request operations.GetAPIV1ListsIDRequest, security operations.GetAPIV1ListsIDSecurity) (*operations.GetAPIV1ListsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/lists/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/lists/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2036,7 +2089,10 @@ func (s *SDK) GetAPIV1ListsID(ctx context.Context, request operations.GetAPIV1Li
 // GetAPIV1ListsIDAccounts - View accounts in List
 func (s *SDK) GetAPIV1ListsIDAccounts(ctx context.Context, request operations.GetAPIV1ListsIDAccountsRequest, security operations.GetAPIV1ListsIDAccountsSecurity) (*operations.GetAPIV1ListsIDAccountsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/lists/{id}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/lists/{id}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2096,7 +2152,10 @@ func (s *SDK) GetAPIV1ListsIDAccounts(ctx context.Context, request operations.Ge
 // GetAPIV1MediaID - Get an attachement.
 func (s *SDK) GetAPIV1MediaID(ctx context.Context, request operations.GetAPIV1MediaIDRequest, security operations.GetAPIV1MediaIDSecurity) (*operations.GetAPIV1MediaIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/media/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/media/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2272,7 +2331,10 @@ func (s *SDK) GetAPIV1Notifications(ctx context.Context, request operations.GetA
 // GetAPIV1NotificationsID - View information about a notification with a given ID.
 func (s *SDK) GetAPIV1NotificationsID(ctx context.Context, request operations.GetAPIV1NotificationsIDRequest, security operations.GetAPIV1NotificationsIDSecurity) (*operations.GetAPIV1NotificationsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/notifications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/notifications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2326,7 +2388,10 @@ func (s *SDK) GetAPIV1NotificationsID(ctx context.Context, request operations.Ge
 // GetAPIV1PollsID - View a poll.
 func (s *SDK) GetAPIV1PollsID(ctx context.Context, request operations.GetAPIV1PollsIDRequest) (*operations.GetAPIV1PollsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/polls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/polls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2378,7 +2443,7 @@ func (s *SDK) GetAPIV1PollsID(ctx context.Context, request operations.GetAPIV1Po
 }
 
 // GetAPIV1Preferences - Shows your 10 most-used tags, with usage history for the past week.
-func (s *SDK) GetAPIV1Preferences(ctx context.Context) (*operations.GetAPIV1PreferencesResponse, error) {
+func (s *SDK) GetAPIV1Preferences(ctx context.Context, security operations.GetAPIV1PreferencesSecurity) (*operations.GetAPIV1PreferencesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/preferences"
 
@@ -2387,7 +2452,7 @@ func (s *SDK) GetAPIV1Preferences(ctx context.Context) (*operations.GetAPIV1Pref
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2432,7 +2497,7 @@ func (s *SDK) GetAPIV1Preferences(ctx context.Context) (*operations.GetAPIV1Pref
 }
 
 // GetAPIV1PushSubscription - View the PushSubscription currently associated with this access token.
-func (s *SDK) GetAPIV1PushSubscription(ctx context.Context) (*operations.GetAPIV1PushSubscriptionResponse, error) {
+func (s *SDK) GetAPIV1PushSubscription(ctx context.Context, security operations.GetAPIV1PushSubscriptionSecurity) (*operations.GetAPIV1PushSubscriptionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/push/subscription"
 
@@ -2441,7 +2506,7 @@ func (s *SDK) GetAPIV1PushSubscription(ctx context.Context) (*operations.GetAPIV
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2546,7 +2611,10 @@ func (s *SDK) GetAPIV1ScheduledStatuses(ctx context.Context, request operations.
 // GetAPIV1ScheduledStatusesID - View a single scheduled status
 func (s *SDK) GetAPIV1ScheduledStatusesID(ctx context.Context, request operations.GetAPIV1ScheduledStatusesIDRequest, security operations.GetAPIV1ScheduledStatusesIDSecurity) (*operations.GetAPIV1ScheduledStatusesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/scheduled_statuses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/scheduled_statuses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2598,9 +2666,13 @@ func (s *SDK) GetAPIV1ScheduledStatusesID(ctx context.Context, request operation
 
 	return res, nil
 }
+
 func (s *SDK) GetAPIV1StatusesID(ctx context.Context, request operations.GetAPIV1StatusesIDRequest, security operations.GetAPIV1StatusesIDSecurity) (*operations.GetAPIV1StatusesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2652,9 +2724,13 @@ func (s *SDK) GetAPIV1StatusesID(ctx context.Context, request operations.GetAPIV
 
 	return res, nil
 }
+
 func (s *SDK) GetAPIV1StatusesIDContext(ctx context.Context, request operations.GetAPIV1StatusesIDContextRequest, security operations.GetAPIV1StatusesIDContextSecurity) (*operations.GetAPIV1StatusesIDContextResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/context", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/context", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2708,7 +2784,10 @@ func (s *SDK) GetAPIV1StatusesIDContext(ctx context.Context, request operations.
 // GetAPIV1StatusesIDFavouritedBy - View who favourited a given status.
 func (s *SDK) GetAPIV1StatusesIDFavouritedBy(ctx context.Context, request operations.GetAPIV1StatusesIDFavouritedByRequest) (*operations.GetAPIV1StatusesIDFavouritedByResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/favourited_by", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/favourited_by", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2762,7 +2841,10 @@ func (s *SDK) GetAPIV1StatusesIDFavouritedBy(ctx context.Context, request operat
 // GetAPIV1StatusesIDRebloggedBy - View who boosted a given status.
 func (s *SDK) GetAPIV1StatusesIDRebloggedBy(ctx context.Context, request operations.GetAPIV1StatusesIDRebloggedByRequest) (*operations.GetAPIV1StatusesIDRebloggedByResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/reblogged_by", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/reblogged_by", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2933,7 +3015,10 @@ func (s *SDK) GetAPIV1TimelinesHome(ctx context.Context, request operations.GetA
 // GetAPIV1TimelinesListListID - View statuses in the given list timeline.
 func (s *SDK) GetAPIV1TimelinesListListID(ctx context.Context, request operations.GetAPIV1TimelinesListListIDRequest, security operations.GetAPIV1TimelinesListListIDSecurity) (*operations.GetAPIV1TimelinesListListIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/timelines/list/{list_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/timelines/list/{list_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3039,7 +3124,10 @@ func (s *SDK) GetAPIV1TimelinesPublic(ctx context.Context, request operations.Ge
 // GetAPIV1TimelinesTagHashtag - View public statuses containing the given hashtag.
 func (s *SDK) GetAPIV1TimelinesTagHashtag(ctx context.Context, request operations.GetAPIV1TimelinesTagHashtagRequest) (*operations.GetAPIV1TimelinesTagHashtagResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/timelines/tag/{hashtag}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/timelines/tag/{hashtag}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3193,7 +3281,10 @@ func (s *SDK) GetAPIV2Search(ctx context.Context, request operations.GetAPIV2Sea
 // PostAPIV1AdminAccountsIDAction - Perform an action against an account and log this action in the moderation history.
 func (s *SDK) PostAPIV1AdminAccountsIDAction(ctx context.Context, request operations.PostAPIV1AdminAccountsIDActionRequest, security operations.PostAPIV1AdminAccountsIDActionSecurity) (*operations.PostAPIV1AdminAccountsIDActionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}/action", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}/action", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3235,7 +3326,10 @@ func (s *SDK) PostAPIV1AdminAccountsIDAction(ctx context.Context, request operat
 // PostAPIV1AdminAccountsIDApprove - Approve the given local account if it is currently pending approval.
 func (s *SDK) PostAPIV1AdminAccountsIDApprove(ctx context.Context, request operations.PostAPIV1AdminAccountsIDApproveRequest, security operations.PostAPIV1AdminAccountsIDApproveSecurity) (*operations.PostAPIV1AdminAccountsIDApproveResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}/approve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}/approve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3270,7 +3364,10 @@ func (s *SDK) PostAPIV1AdminAccountsIDApprove(ctx context.Context, request opera
 // PostAPIV1AdminAccountsIDEnable - Re-enable a local account whose login is currently disabled.
 func (s *SDK) PostAPIV1AdminAccountsIDEnable(ctx context.Context, request operations.PostAPIV1AdminAccountsIDEnableRequest, security operations.PostAPIV1AdminAccountsIDEnableSecurity) (*operations.PostAPIV1AdminAccountsIDEnableResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3305,7 +3402,10 @@ func (s *SDK) PostAPIV1AdminAccountsIDEnable(ctx context.Context, request operat
 // PostAPIV1AdminAccountsIDReject - Reject the given local account if it is currently pending approval.
 func (s *SDK) PostAPIV1AdminAccountsIDReject(ctx context.Context, request operations.PostAPIV1AdminAccountsIDRejectRequest, security operations.PostAPIV1AdminAccountsIDRejectSecurity) (*operations.PostAPIV1AdminAccountsIDRejectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}/reject", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}/reject", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3340,7 +3440,10 @@ func (s *SDK) PostAPIV1AdminAccountsIDReject(ctx context.Context, request operat
 // PostAPIV1AdminAccountsIDUnsilence - Unsilence a currently silenced account.
 func (s *SDK) PostAPIV1AdminAccountsIDUnsilence(ctx context.Context, request operations.PostAPIV1AdminAccountsIDUnsilenceRequest, security operations.PostAPIV1AdminAccountsIDUnsilenceSecurity) (*operations.PostAPIV1AdminAccountsIDUnsilenceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}/unsilence", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}/unsilence", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3375,7 +3478,10 @@ func (s *SDK) PostAPIV1AdminAccountsIDUnsilence(ctx context.Context, request ope
 // PostAPIV1AdminAccountsIDUnsuspend - Unsuspend a currently suspended account.
 func (s *SDK) PostAPIV1AdminAccountsIDUnsuspend(ctx context.Context, request operations.PostAPIV1AdminAccountsIDUnsuspendRequest, security operations.PostAPIV1AdminAccountsIDUnsuspendSecurity) (*operations.PostAPIV1AdminAccountsIDUnsuspendResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}/unsuspend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/accounts/{id}/unsuspend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3410,7 +3516,10 @@ func (s *SDK) PostAPIV1AdminAccountsIDUnsuspend(ctx context.Context, request ope
 // PostAPIV1AdminReportsIDAssignToSelf - Claim the handling of this report to yourself.
 func (s *SDK) PostAPIV1AdminReportsIDAssignToSelf(ctx context.Context, request operations.PostAPIV1AdminReportsIDAssignToSelfRequest, security operations.PostAPIV1AdminReportsIDAssignToSelfSecurity) (*operations.PostAPIV1AdminReportsIDAssignToSelfResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/reports/{id}/assign_to_self", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/reports/{id}/assign_to_self", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3454,7 +3563,10 @@ func (s *SDK) PostAPIV1AdminReportsIDAssignToSelf(ctx context.Context, request o
 // PostAPIV1AdminReportsIDReopen - Mark a report as resolved with no further action taken.
 func (s *SDK) PostAPIV1AdminReportsIDReopen(ctx context.Context, request operations.PostAPIV1AdminReportsIDReopenRequest, security operations.PostAPIV1AdminReportsIDReopenSecurity) (*operations.PostAPIV1AdminReportsIDReopenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/reports/{id}/reopen", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/reports/{id}/reopen", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3498,7 +3610,10 @@ func (s *SDK) PostAPIV1AdminReportsIDReopen(ctx context.Context, request operati
 // PostAPIV1AdminReportsIDResolve - Mark a report as resolved with no further action taken.
 func (s *SDK) PostAPIV1AdminReportsIDResolve(ctx context.Context, request operations.PostAPIV1AdminReportsIDResolveRequest, security operations.PostAPIV1AdminReportsIDResolveSecurity) (*operations.PostAPIV1AdminReportsIDResolveResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/reports/{id}/resolve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/reports/{id}/resolve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3542,7 +3657,10 @@ func (s *SDK) PostAPIV1AdminReportsIDResolve(ctx context.Context, request operat
 // PostAPIV1AdminReportsIDUnassign - Unassign a report so that someone else can claim it.
 func (s *SDK) PostAPIV1AdminReportsIDUnassign(ctx context.Context, request operations.PostAPIV1AdminReportsIDUnassignRequest, security operations.PostAPIV1AdminReportsIDUnassignSecurity) (*operations.PostAPIV1AdminReportsIDUnassignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/reports/{id}/unassign", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/admin/reports/{id}/unassign", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3586,7 +3704,10 @@ func (s *SDK) PostAPIV1AdminReportsIDUnassign(ctx context.Context, request opera
 // PostAPIV1AnnouncementsIDDismiss - Allows a user to mark the announcement as read.
 func (s *SDK) PostAPIV1AnnouncementsIDDismiss(ctx context.Context, request operations.PostAPIV1AnnouncementsIDDismissRequest, security operations.PostAPIV1AnnouncementsIDDismissSecurity) (*operations.PostAPIV1AnnouncementsIDDismissResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/announcements/{id}/dismiss", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/announcements/{id}/dismiss", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3630,7 +3751,10 @@ func (s *SDK) PostAPIV1AnnouncementsIDDismiss(ctx context.Context, request opera
 // PostAPIV1ConversationsIDRead - Remove converstation
 func (s *SDK) PostAPIV1ConversationsIDRead(ctx context.Context, request operations.PostAPIV1ConversationsIDReadRequest, security operations.PostAPIV1ConversationsIDReadSecurity) (*operations.PostAPIV1ConversationsIDReadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/conversations/{id}/read", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/conversations/{id}/read", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3810,6 +3934,7 @@ func (s *SDK) PostAPIV1FeaturedTags(ctx context.Context, request operations.Post
 
 	return res, nil
 }
+
 func (s *SDK) PostAPIV1Filters(ctx context.Context, request []byte, security operations.PostAPIV1FiltersSecurity) (*operations.PostAPIV1FiltersResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/filters"
@@ -3875,7 +4000,10 @@ func (s *SDK) PostAPIV1Filters(ctx context.Context, request []byte, security ope
 // PostAPIV1FollowRequestsIDAuthorize - Accept Follow
 func (s *SDK) PostAPIV1FollowRequestsIDAuthorize(ctx context.Context, request operations.PostAPIV1FollowRequestsIDAuthorizeRequest, security operations.PostAPIV1FollowRequestsIDAuthorizeSecurity) (*operations.PostAPIV1FollowRequestsIDAuthorizeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/follow_requests/{id}/authorize", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/follow_requests/{id}/authorize", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3931,7 +4059,10 @@ func (s *SDK) PostAPIV1FollowRequestsIDAuthorize(ctx context.Context, request op
 // PostAPIV1FollowRequestsIDReject - Accept Follow
 func (s *SDK) PostAPIV1FollowRequestsIDReject(ctx context.Context, request operations.PostAPIV1FollowRequestsIDRejectRequest, security operations.PostAPIV1FollowRequestsIDRejectSecurity) (*operations.PostAPIV1FollowRequestsIDRejectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/follow_requests/{id}/reject", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/follow_requests/{id}/reject", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -4048,7 +4179,10 @@ func (s *SDK) PostAPIV1Lists(ctx context.Context, request operations.PostAPIV1Li
 // PostAPIV1ListsIDAccounts - Add accounts to the given list. Note that the user must be following these accounts.
 func (s *SDK) PostAPIV1ListsIDAccounts(ctx context.Context, request operations.PostAPIV1ListsIDAccountsRequest, security operations.PostAPIV1ListsIDAccountsSecurity) (*operations.PostAPIV1ListsIDAccountsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/lists/{id}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/lists/{id}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4239,7 +4373,10 @@ func (s *SDK) PostAPIV1Media(ctx context.Context, request []byte, security opera
 // PostAPIV1MediaID - Update an Attachment, before it is attached to a status and posted.
 func (s *SDK) PostAPIV1MediaID(ctx context.Context, request operations.PostAPIV1MediaIDRequest, security operations.PostAPIV1MediaIDSecurity) (*operations.PostAPIV1MediaIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/media/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/media/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -4302,7 +4439,7 @@ func (s *SDK) PostAPIV1MediaID(ctx context.Context, request operations.PostAPIV1
 }
 
 // PostAPIV1NotificationsClear - Clear all notifications from the server.
-func (s *SDK) PostAPIV1NotificationsClear(ctx context.Context) (*operations.PostAPIV1NotificationsClearResponse, error) {
+func (s *SDK) PostAPIV1NotificationsClear(ctx context.Context, security operations.PostAPIV1NotificationsClearSecurity) (*operations.PostAPIV1NotificationsClearResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/notifications/clear"
 
@@ -4311,7 +4448,7 @@ func (s *SDK) PostAPIV1NotificationsClear(ctx context.Context) (*operations.Post
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4358,7 +4495,10 @@ func (s *SDK) PostAPIV1NotificationsClear(ctx context.Context) (*operations.Post
 // PostAPIV1NotificationsIDDismiss - Clear a single notification from the server.
 func (s *SDK) PostAPIV1NotificationsIDDismiss(ctx context.Context, request operations.PostAPIV1NotificationsIDDismissRequest, security operations.PostAPIV1NotificationsIDDismissSecurity) (*operations.PostAPIV1NotificationsIDDismissResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/notifications/{id}/dismiss", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/notifications/{id}/dismiss", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -4412,7 +4552,10 @@ func (s *SDK) PostAPIV1NotificationsIDDismiss(ctx context.Context, request opera
 // PostAPIV1PollsID - Vote on a poll.
 func (s *SDK) PostAPIV1PollsID(ctx context.Context, request operations.PostAPIV1PollsIDRequest, security operations.PostAPIV1PollsIDSecurity) (*operations.PostAPIV1PollsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/polls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/polls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4595,6 +4738,7 @@ func (s *SDK) PostAPIV1Reports(ctx context.Context, request operations.PostAPIV1
 
 	return res, nil
 }
+
 func (s *SDK) PostAPIV1Statuses(ctx context.Context, request operations.PostAPIV1StatusesRequest, security operations.PostAPIV1StatusesSecurity) (*operations.PostAPIV1StatusesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/statuses"
@@ -4660,7 +4804,10 @@ func (s *SDK) PostAPIV1Statuses(ctx context.Context, request operations.PostAPIV
 // PostAPIV1StatusesIDBookmark - Privately bookmark a status.
 func (s *SDK) PostAPIV1StatusesIDBookmark(ctx context.Context, request operations.PostAPIV1StatusesIDBookmarkRequest, security operations.PostAPIV1StatusesIDBookmarkSecurity) (*operations.PostAPIV1StatusesIDBookmarkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/bookmark", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/bookmark", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -4716,7 +4863,10 @@ func (s *SDK) PostAPIV1StatusesIDBookmark(ctx context.Context, request operation
 // PostAPIV1StatusesIDFavourite - Add a status to your favourites list.
 func (s *SDK) PostAPIV1StatusesIDFavourite(ctx context.Context, request operations.PostAPIV1StatusesIDFavouriteRequest, security operations.PostAPIV1StatusesIDFavouriteSecurity) (*operations.PostAPIV1StatusesIDFavouriteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/favourite", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/favourite", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -4772,7 +4922,10 @@ func (s *SDK) PostAPIV1StatusesIDFavourite(ctx context.Context, request operatio
 // PostAPIV1StatusesIDMute - Do not receive notifications for the thread that this status is part of. Must be a thread in which you are a participant.
 func (s *SDK) PostAPIV1StatusesIDMute(ctx context.Context, request operations.PostAPIV1StatusesIDMuteRequest, security operations.PostAPIV1StatusesIDMuteSecurity) (*operations.PostAPIV1StatusesIDMuteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/mute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/mute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -4828,7 +4981,10 @@ func (s *SDK) PostAPIV1StatusesIDMute(ctx context.Context, request operations.Po
 // PostAPIV1StatusesIDPin - Feature one of your own public statuses at the top of your profile.
 func (s *SDK) PostAPIV1StatusesIDPin(ctx context.Context, request operations.PostAPIV1StatusesIDPinRequest, security operations.PostAPIV1StatusesIDPinSecurity) (*operations.PostAPIV1StatusesIDPinResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/pin", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/pin", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -4886,7 +5042,10 @@ func (s *SDK) PostAPIV1StatusesIDPin(ctx context.Context, request operations.Pos
 // PostAPIV1StatusesIDReblog - Reshare a status.
 func (s *SDK) PostAPIV1StatusesIDReblog(ctx context.Context, request operations.PostAPIV1StatusesIDReblogRequest, security operations.PostAPIV1StatusesIDReblogSecurity) (*operations.PostAPIV1StatusesIDReblogResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/reblog", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/reblog", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4949,7 +5108,10 @@ func (s *SDK) PostAPIV1StatusesIDReblog(ctx context.Context, request operations.
 // PostAPIV1StatusesIDUnbookmark - Remove a status from your private bookmarks.
 func (s *SDK) PostAPIV1StatusesIDUnbookmark(ctx context.Context, request operations.PostAPIV1StatusesIDUnbookmarkRequest, security operations.PostAPIV1StatusesIDUnbookmarkSecurity) (*operations.PostAPIV1StatusesIDUnbookmarkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/unbookmark", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/unbookmark", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -5005,7 +5167,10 @@ func (s *SDK) PostAPIV1StatusesIDUnbookmark(ctx context.Context, request operati
 // PostAPIV1StatusesIDUnfavourite - Remove a status from your favourites list.
 func (s *SDK) PostAPIV1StatusesIDUnfavourite(ctx context.Context, request operations.PostAPIV1StatusesIDUnfavouriteRequest, security operations.PostAPIV1StatusesIDUnfavouriteSecurity) (*operations.PostAPIV1StatusesIDUnfavouriteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/unfavourite", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/unfavourite", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -5061,7 +5226,10 @@ func (s *SDK) PostAPIV1StatusesIDUnfavourite(ctx context.Context, request operat
 // PostAPIV1StatusesIDUnmute - Status's conversation unmuted, or was already unmuted
 func (s *SDK) PostAPIV1StatusesIDUnmute(ctx context.Context, request operations.PostAPIV1StatusesIDUnmuteRequest, security operations.PostAPIV1StatusesIDUnmuteSecurity) (*operations.PostAPIV1StatusesIDUnmuteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/unmute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/unmute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -5117,7 +5285,10 @@ func (s *SDK) PostAPIV1StatusesIDUnmute(ctx context.Context, request operations.
 // PostAPIV1StatusesIDUnpin - Unfeature a status from the top of your profile.
 func (s *SDK) PostAPIV1StatusesIDUnpin(ctx context.Context, request operations.PostAPIV1StatusesIDUnpinRequest, security operations.PostAPIV1StatusesIDUnpinSecurity) (*operations.PostAPIV1StatusesIDUnpinResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/unpin", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/unpin", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -5173,7 +5344,10 @@ func (s *SDK) PostAPIV1StatusesIDUnpin(ctx context.Context, request operations.P
 // PostAPIV1StatusesIDUnreblog - Undo a reshare of a status.
 func (s *SDK) PostAPIV1StatusesIDUnreblog(ctx context.Context, request operations.PostAPIV1StatusesIDUnreblogRequest, security operations.PostAPIV1StatusesIDUnreblogSecurity) (*operations.PostAPIV1StatusesIDUnreblogResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/unreblog", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/statuses/{id}/unreblog", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -5229,7 +5403,10 @@ func (s *SDK) PostAPIV1StatusesIDUnreblog(ctx context.Context, request operation
 // PutAPIV1AnnouncementsIDReactionsName - Allows a user to mark the announcement as read.
 func (s *SDK) PutAPIV1AnnouncementsIDReactionsName(ctx context.Context, request operations.PutAPIV1AnnouncementsIDReactionsNameRequest, security operations.PutAPIV1AnnouncementsIDReactionsNameSecurity) (*operations.PutAPIV1AnnouncementsIDReactionsNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/announcements/{id}/reactions/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/announcements/{id}/reactions/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -5283,7 +5460,10 @@ func (s *SDK) PutAPIV1AnnouncementsIDReactionsName(ctx context.Context, request 
 // PutAPIV1FiltersID - Update a filter.
 func (s *SDK) PutAPIV1FiltersID(ctx context.Context, request operations.PutAPIV1FiltersIDRequest, security operations.PutAPIV1FiltersIDSecurity) (*operations.PutAPIV1FiltersIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/filters/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/filters/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -5472,7 +5652,10 @@ func (s *SDK) PutAPIV1PushSubscription(ctx context.Context, request operations.P
 // PutAPIV1ScheduledStatusesID - View a single scheduled status
 func (s *SDK) PutAPIV1ScheduledStatusesID(ctx context.Context, request operations.PutAPIV1ScheduledStatusesIDRequest, security operations.PutAPIV1ScheduledStatusesIDSecurity) (*operations.PutAPIV1ScheduledStatusesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/scheduled_statuses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/scheduled_statuses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

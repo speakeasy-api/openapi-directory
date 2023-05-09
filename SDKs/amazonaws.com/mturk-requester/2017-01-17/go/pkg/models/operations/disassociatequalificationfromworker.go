@@ -16,17 +16,21 @@ const (
 	DisassociateQualificationFromWorkerXAmzTargetEnumMTurkRequesterServiceV20170117DisassociateQualificationFromWorker DisassociateQualificationFromWorkerXAmzTargetEnum = "MTurkRequesterServiceV20170117.DisassociateQualificationFromWorker"
 )
 
+func (e DisassociateQualificationFromWorkerXAmzTargetEnum) ToPointer() *DisassociateQualificationFromWorkerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateQualificationFromWorkerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.DisassociateQualificationFromWorker":
-		*e = DisassociateQualificationFromWorkerXAmzTargetEnum(s)
+		*e = DisassociateQualificationFromWorkerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateQualificationFromWorkerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateQualificationFromWorkerXAmzTargetEnum: %v", v)
 	}
 }
 

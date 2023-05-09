@@ -50,12 +50,16 @@ const (
 	CreativeServingDecisionDetectedAttributesEnumOmsdk10                             CreativeServingDecisionDetectedAttributesEnum = "OMSDK_1_0"
 )
 
+func (e CreativeServingDecisionDetectedAttributesEnum) ToPointer() *CreativeServingDecisionDetectedAttributesEnum {
+	return &e
+}
+
 func (e *CreativeServingDecisionDetectedAttributesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTRIBUTE_UNSPECIFIED":
 		fallthrough
 	case "IMAGE_RICH_MEDIA":
@@ -131,10 +135,10 @@ func (e *CreativeServingDecisionDetectedAttributesEnum) UnmarshalJSON(data []byt
 	case "RENDERING_SIZELESS_ADX":
 		fallthrough
 	case "OMSDK_1_0":
-		*e = CreativeServingDecisionDetectedAttributesEnum(s)
+		*e = CreativeServingDecisionDetectedAttributesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeServingDecisionDetectedAttributesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeServingDecisionDetectedAttributesEnum: %v", v)
 	}
 }
 

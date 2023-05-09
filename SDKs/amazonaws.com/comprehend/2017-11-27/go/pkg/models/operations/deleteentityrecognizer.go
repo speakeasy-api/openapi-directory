@@ -16,17 +16,21 @@ const (
 	DeleteEntityRecognizerXAmzTargetEnumComprehend20171127DeleteEntityRecognizer DeleteEntityRecognizerXAmzTargetEnum = "Comprehend_20171127.DeleteEntityRecognizer"
 )
 
+func (e DeleteEntityRecognizerXAmzTargetEnum) ToPointer() *DeleteEntityRecognizerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteEntityRecognizerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.DeleteEntityRecognizer":
-		*e = DeleteEntityRecognizerXAmzTargetEnum(s)
+		*e = DeleteEntityRecognizerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteEntityRecognizerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteEntityRecognizerXAmzTargetEnum: %v", v)
 	}
 }
 

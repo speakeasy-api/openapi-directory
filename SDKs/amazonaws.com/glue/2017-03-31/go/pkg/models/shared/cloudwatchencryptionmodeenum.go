@@ -14,18 +14,22 @@ const (
 	CloudWatchEncryptionModeEnumSseKms   CloudWatchEncryptionModeEnum = "SSE-KMS"
 )
 
+func (e CloudWatchEncryptionModeEnum) ToPointer() *CloudWatchEncryptionModeEnum {
+	return &e
+}
+
 func (e *CloudWatchEncryptionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "SSE-KMS":
-		*e = CloudWatchEncryptionModeEnum(s)
+		*e = CloudWatchEncryptionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudWatchEncryptionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudWatchEncryptionModeEnum: %v", v)
 	}
 }

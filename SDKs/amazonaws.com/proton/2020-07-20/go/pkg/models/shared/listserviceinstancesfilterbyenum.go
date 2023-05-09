@@ -22,12 +22,16 @@ const (
 	ListServiceInstancesFilterByEnumCreatedAtAfter                  ListServiceInstancesFilterByEnum = "createdAtAfter"
 )
 
+func (e ListServiceInstancesFilterByEnum) ToPointer() *ListServiceInstancesFilterByEnum {
+	return &e
+}
+
 func (e *ListServiceInstancesFilterByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "name":
 		fallthrough
 	case "deploymentStatus":
@@ -47,9 +51,9 @@ func (e *ListServiceInstancesFilterByEnum) UnmarshalJSON(data []byte) error {
 	case "createdAtBefore":
 		fallthrough
 	case "createdAtAfter":
-		*e = ListServiceInstancesFilterByEnum(s)
+		*e = ListServiceInstancesFilterByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListServiceInstancesFilterByEnum: %s", s)
+		return fmt.Errorf("invalid value for ListServiceInstancesFilterByEnum: %v", v)
 	}
 }

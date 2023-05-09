@@ -15,19 +15,23 @@ const (
 	GoogleCloudDataplexV1ContentNotebookKernelTypeEnumPython3               GoogleCloudDataplexV1ContentNotebookKernelTypeEnum = "PYTHON3"
 )
 
+func (e GoogleCloudDataplexV1ContentNotebookKernelTypeEnum) ToPointer() *GoogleCloudDataplexV1ContentNotebookKernelTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1ContentNotebookKernelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KERNEL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PYTHON3":
-		*e = GoogleCloudDataplexV1ContentNotebookKernelTypeEnum(s)
+		*e = GoogleCloudDataplexV1ContentNotebookKernelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ContentNotebookKernelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ContentNotebookKernelTypeEnum: %v", v)
 	}
 }
 

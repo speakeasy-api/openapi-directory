@@ -17,12 +17,16 @@ const (
 	GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagationsStateEnumDisabled  GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagationsStateEnum = "disabled"
 )
 
+func (e GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagationsStateEnum) ToPointer() *GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagationsStateEnum {
+	return &e
+}
+
 func (e *GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagationsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabling":
 		fallthrough
 	case "enabled":
@@ -30,10 +34,10 @@ func (e *GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPr
 	case "disabling":
 		fallthrough
 	case "disabled":
-		*e = GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagationsStateEnum(s)
+		*e = GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagationsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagationsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTransitGatewayAttachmentPropagationsResultTransitGatewayAttachmentPropagationsStateEnum: %v", v)
 	}
 }
 

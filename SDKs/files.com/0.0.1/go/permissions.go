@@ -37,7 +37,10 @@ func newPermissions(defaultClient, securityClient HTTPClient, serverURL, languag
 // Delete Permission
 func (s *permissions) DeletePermissionsID(ctx context.Context, request operations.DeletePermissionsIDRequest) (*operations.DeletePermissionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/permissions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/permissions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

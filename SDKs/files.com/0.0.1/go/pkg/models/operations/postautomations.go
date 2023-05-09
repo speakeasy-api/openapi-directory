@@ -24,12 +24,16 @@ const (
 	PostAutomationsRequestBodyAutomationEnumRunSync        PostAutomationsRequestBodyAutomationEnum = "run_sync"
 )
 
+func (e PostAutomationsRequestBodyAutomationEnum) ToPointer() *PostAutomationsRequestBodyAutomationEnum {
+	return &e
+}
+
 func (e *PostAutomationsRequestBodyAutomationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "create_folder":
 		fallthrough
 	case "request_file":
@@ -47,10 +51,10 @@ func (e *PostAutomationsRequestBodyAutomationEnum) UnmarshalJSON(data []byte) er
 	case "as2_send":
 		fallthrough
 	case "run_sync":
-		*e = PostAutomationsRequestBodyAutomationEnum(s)
+		*e = PostAutomationsRequestBodyAutomationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAutomationsRequestBodyAutomationEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAutomationsRequestBodyAutomationEnum: %v", v)
 	}
 }
 
@@ -66,12 +70,16 @@ const (
 	PostAutomationsRequestBodyTriggerEnumAction         PostAutomationsRequestBodyTriggerEnum = "action"
 )
 
+func (e PostAutomationsRequestBodyTriggerEnum) ToPointer() *PostAutomationsRequestBodyTriggerEnum {
+	return &e
+}
+
 func (e *PostAutomationsRequestBodyTriggerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "realtime":
 		fallthrough
 	case "daily":
@@ -83,10 +91,10 @@ func (e *PostAutomationsRequestBodyTriggerEnum) UnmarshalJSON(data []byte) error
 	case "email":
 		fallthrough
 	case "action":
-		*e = PostAutomationsRequestBodyTriggerEnum(s)
+		*e = PostAutomationsRequestBodyTriggerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAutomationsRequestBodyTriggerEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAutomationsRequestBodyTriggerEnum: %v", v)
 	}
 }
 
@@ -113,6 +121,8 @@ type PostAutomationsRequestBody struct {
 	Name *string `multipartForm:"name=name"`
 	// Path on which this Automation runs.  Supports globs.
 	Path *string `multipartForm:"name=path"`
+	// If trigger type is `daily`, this specifies a day number to run in one of the supported intervals: `week`, `month`, `quarter`, `year`.
+	RecurringDay *int `multipartForm:"name=recurring_day"`
 	// Custom schedule for running this automation.
 	Schedule map[string]interface{} `multipartForm:"name=schedule,json"`
 	// Source Path

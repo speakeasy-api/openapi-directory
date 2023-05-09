@@ -16,17 +16,21 @@ const (
 	ListDataQualityRuleRecommendationRunsXAmzTargetEnumAwsGlueListDataQualityRuleRecommendationRuns ListDataQualityRuleRecommendationRunsXAmzTargetEnum = "AWSGlue.ListDataQualityRuleRecommendationRuns"
 )
 
+func (e ListDataQualityRuleRecommendationRunsXAmzTargetEnum) ToPointer() *ListDataQualityRuleRecommendationRunsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListDataQualityRuleRecommendationRunsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.ListDataQualityRuleRecommendationRuns":
-		*e = ListDataQualityRuleRecommendationRunsXAmzTargetEnum(s)
+		*e = ListDataQualityRuleRecommendationRunsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDataQualityRuleRecommendationRunsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDataQualityRuleRecommendationRunsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -31,12 +31,16 @@ const (
 	AppsGetTeamsDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppsGetTeamsDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppsGetTeamsDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppsGetTeamsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppsGetTeamsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *AppsGetTeamsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []b
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppsGetTeamsDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppsGetTeamsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsGetTeamsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsGetTeamsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -76,12 +80,16 @@ const (
 	AppsGetTeams200ApplicationJSONPermissionsEnumTester    AppsGetTeams200ApplicationJSONPermissionsEnum = "tester"
 )
 
+func (e AppsGetTeams200ApplicationJSONPermissionsEnum) ToPointer() *AppsGetTeams200ApplicationJSONPermissionsEnum {
+	return &e
+}
+
 func (e *AppsGetTeams200ApplicationJSONPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
@@ -89,10 +97,10 @@ func (e *AppsGetTeams200ApplicationJSONPermissionsEnum) UnmarshalJSON(data []byt
 	case "viewer":
 		fallthrough
 	case "tester":
-		*e = AppsGetTeams200ApplicationJSONPermissionsEnum(s)
+		*e = AppsGetTeams200ApplicationJSONPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsGetTeams200ApplicationJSONPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsGetTeams200ApplicationJSONPermissionsEnum: %v", v)
 	}
 }
 

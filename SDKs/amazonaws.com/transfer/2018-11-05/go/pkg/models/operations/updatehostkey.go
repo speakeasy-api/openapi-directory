@@ -16,17 +16,21 @@ const (
 	UpdateHostKeyXAmzTargetEnumTransferServiceUpdateHostKey UpdateHostKeyXAmzTargetEnum = "TransferService.UpdateHostKey"
 )
 
+func (e UpdateHostKeyXAmzTargetEnum) ToPointer() *UpdateHostKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateHostKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.UpdateHostKey":
-		*e = UpdateHostKeyXAmzTargetEnum(s)
+		*e = UpdateHostKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateHostKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateHostKeyXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -9,6 +9,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -133,4 +134,12 @@ pkg/models/shared/iterationperformance.go
 pkg/models/shared/tagperformance.go
 pkg/models/shared/suggestedtagandregion.go
 pkg/models/shared/tag.go
+docs/sdk/README.md
+docs/domainsapi/README.md
+docs/imageapi/README.md
+docs/imageregionproposalapi/README.md
+docs/predictionsapi/README.md
+docs/projectapi/README.md
+docs/suggesttagsandregionsapi/README.md
+docs/tagsapi/README.md
 USAGE.md

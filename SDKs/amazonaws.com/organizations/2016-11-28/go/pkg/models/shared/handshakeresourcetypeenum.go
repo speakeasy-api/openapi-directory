@@ -20,12 +20,16 @@ const (
 	HandshakeResourceTypeEnumParentHandshake        HandshakeResourceTypeEnum = "PARENT_HANDSHAKE"
 )
 
+func (e HandshakeResourceTypeEnum) ToPointer() *HandshakeResourceTypeEnum {
+	return &e
+}
+
 func (e *HandshakeResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT":
 		fallthrough
 	case "ORGANIZATION":
@@ -41,9 +45,9 @@ func (e *HandshakeResourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NOTES":
 		fallthrough
 	case "PARENT_HANDSHAKE":
-		*e = HandshakeResourceTypeEnum(s)
+		*e = HandshakeResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HandshakeResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HandshakeResourceTypeEnum: %v", v)
 	}
 }

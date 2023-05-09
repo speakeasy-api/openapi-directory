@@ -14,17 +14,21 @@ const (
 	LicenseImageVectorFormatEnumEps LicenseImageVectorFormatEnum = "eps"
 )
 
+func (e LicenseImageVectorFormatEnum) ToPointer() *LicenseImageVectorFormatEnum {
+	return &e
+}
+
 func (e *LicenseImageVectorFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "eps":
-		*e = LicenseImageVectorFormatEnum(s)
+		*e = LicenseImageVectorFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseImageVectorFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseImageVectorFormatEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	LicenseImageVectorSizeEnumVector LicenseImageVectorSizeEnum = "vector"
 )
 
+func (e LicenseImageVectorSizeEnum) ToPointer() *LicenseImageVectorSizeEnum {
+	return &e
+}
+
 func (e *LicenseImageVectorSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vector":
-		*e = LicenseImageVectorSizeEnum(s)
+		*e = LicenseImageVectorSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseImageVectorSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseImageVectorSizeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CreateTransitVirtualInterfaceXAmzTargetEnumOvertureServiceCreateTransitVirtualInterface CreateTransitVirtualInterfaceXAmzTargetEnum = "OvertureService.CreateTransitVirtualInterface"
 )
 
+func (e CreateTransitVirtualInterfaceXAmzTargetEnum) ToPointer() *CreateTransitVirtualInterfaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateTransitVirtualInterfaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.CreateTransitVirtualInterface":
-		*e = CreateTransitVirtualInterfaceXAmzTargetEnum(s)
+		*e = CreateTransitVirtualInterfaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTransitVirtualInterfaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTransitVirtualInterfaceXAmzTargetEnum: %v", v)
 	}
 }
 

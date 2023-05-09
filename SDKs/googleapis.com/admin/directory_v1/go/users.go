@@ -35,7 +35,10 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DirectoryUsersAliasesDelete - Removes an alias.
 func (s *users) DirectoryUsersAliasesDelete(ctx context.Context, request operations.DirectoryUsersAliasesDeleteRequest, security operations.DirectoryUsersAliasesDeleteSecurity) (*operations.DirectoryUsersAliasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases/{alias}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases/{alias}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *users) DirectoryUsersAliasesDelete(ctx context.Context, request operati
 // DirectoryUsersAliasesInsert - Adds an alias.
 func (s *users) DirectoryUsersAliasesInsert(ctx context.Context, request operations.DirectoryUsersAliasesInsertRequest, security operations.DirectoryUsersAliasesInsertSecurity) (*operations.DirectoryUsersAliasesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Alias", "json")
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *users) DirectoryUsersAliasesInsert(ctx context.Context, request operati
 // DirectoryUsersAliasesList - Lists all aliases for a user.
 func (s *users) DirectoryUsersAliasesList(ctx context.Context, request operations.DirectoryUsersAliasesListRequest, security operations.DirectoryUsersAliasesListSecurity) (*operations.DirectoryUsersAliasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,7 +186,10 @@ func (s *users) DirectoryUsersAliasesList(ctx context.Context, request operation
 // DirectoryUsersAliasesWatch - Watches for changes in users list.
 func (s *users) DirectoryUsersAliasesWatch(ctx context.Context, request operations.DirectoryUsersAliasesWatchRequest, security operations.DirectoryUsersAliasesWatchSecurity) (*operations.DirectoryUsersAliasesWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases/watch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/aliases/watch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {
@@ -232,7 +244,10 @@ func (s *users) DirectoryUsersAliasesWatch(ctx context.Context, request operatio
 // DirectoryUsersDelete - Deletes a user.
 func (s *users) DirectoryUsersDelete(ctx context.Context, request operations.DirectoryUsersDeleteRequest, security operations.DirectoryUsersDeleteSecurity) (*operations.DirectoryUsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -271,7 +286,10 @@ func (s *users) DirectoryUsersDelete(ctx context.Context, request operations.Dir
 // DirectoryUsersGet - Retrieves a user.
 func (s *users) DirectoryUsersGet(ctx context.Context, request operations.DirectoryUsersGetRequest, security operations.DirectoryUsersGetSecurity) (*operations.DirectoryUsersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -422,7 +440,10 @@ func (s *users) DirectoryUsersList(ctx context.Context, request operations.Direc
 // DirectoryUsersMakeAdmin - Makes a user a super administrator.
 func (s *users) DirectoryUsersMakeAdmin(ctx context.Context, request operations.DirectoryUsersMakeAdminRequest, security operations.DirectoryUsersMakeAdminSecurity) (*operations.DirectoryUsersMakeAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/makeAdmin", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/makeAdmin", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserMakeAdmin", "json")
 	if err != nil {
@@ -468,7 +489,10 @@ func (s *users) DirectoryUsersMakeAdmin(ctx context.Context, request operations.
 // DirectoryUsersPatch - Updates a user using patch semantics. The update method should be used instead, because it also supports patch semantics and has better performance. If you're mapping an external identity to a Google identity, use the [`update`](https://developers.google.com/admin-sdk/directory/v1/reference/users/update) method instead of the `patch` method. This method is unable to clear fields that contain repeated objects (`addresses`, `phones`, etc). Use the update method instead.
 func (s *users) DirectoryUsersPatch(ctx context.Context, request operations.DirectoryUsersPatchRequest, security operations.DirectoryUsersPatchSecurity) (*operations.DirectoryUsersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {
@@ -523,7 +547,10 @@ func (s *users) DirectoryUsersPatch(ctx context.Context, request operations.Dire
 // DirectoryUsersPhotosDelete - Removes the user's photo.
 func (s *users) DirectoryUsersPhotosDelete(ctx context.Context, request operations.DirectoryUsersPhotosDeleteRequest, security operations.DirectoryUsersPhotosDeleteSecurity) (*operations.DirectoryUsersPhotosDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -562,7 +589,10 @@ func (s *users) DirectoryUsersPhotosDelete(ctx context.Context, request operatio
 // DirectoryUsersPhotosGet - Retrieves the user's photo.
 func (s *users) DirectoryUsersPhotosGet(ctx context.Context, request operations.DirectoryUsersPhotosGetRequest, security operations.DirectoryUsersPhotosGetSecurity) (*operations.DirectoryUsersPhotosGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -610,7 +640,10 @@ func (s *users) DirectoryUsersPhotosGet(ctx context.Context, request operations.
 // DirectoryUsersPhotosPatch - Adds a photo for the user. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch).
 func (s *users) DirectoryUsersPhotosPatch(ctx context.Context, request operations.DirectoryUsersPhotosPatchRequest, security operations.DirectoryUsersPhotosPatchSecurity) (*operations.DirectoryUsersPhotosPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserPhoto", "json")
 	if err != nil {
@@ -665,7 +698,10 @@ func (s *users) DirectoryUsersPhotosPatch(ctx context.Context, request operation
 // DirectoryUsersPhotosUpdate - Adds a photo for the user.
 func (s *users) DirectoryUsersPhotosUpdate(ctx context.Context, request operations.DirectoryUsersPhotosUpdateRequest, security operations.DirectoryUsersPhotosUpdateSecurity) (*operations.DirectoryUsersPhotosUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/photos/thumbnail", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserPhoto", "json")
 	if err != nil {
@@ -720,7 +756,10 @@ func (s *users) DirectoryUsersPhotosUpdate(ctx context.Context, request operatio
 // DirectoryUsersSignOut - Signs a user out of all web and device sessions and reset their sign-in cookies. User will have to sign in by authenticating again.
 func (s *users) DirectoryUsersSignOut(ctx context.Context, request operations.DirectoryUsersSignOutRequest, security operations.DirectoryUsersSignOutSecurity) (*operations.DirectoryUsersSignOutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/signOut", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/signOut", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -759,7 +798,10 @@ func (s *users) DirectoryUsersSignOut(ctx context.Context, request operations.Di
 // DirectoryUsersUndelete - Undeletes a deleted user.
 func (s *users) DirectoryUsersUndelete(ctx context.Context, request operations.DirectoryUsersUndeleteRequest, security operations.DirectoryUsersUndeleteSecurity) (*operations.DirectoryUsersUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/undelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/undelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserUndelete", "json")
 	if err != nil {
@@ -805,7 +847,10 @@ func (s *users) DirectoryUsersUndelete(ctx context.Context, request operations.D
 // DirectoryUsersUpdate - Updates a user. This method supports patch semantics, meaning that you only need to include the fields you wish to update. Fields that are not present in the request will be preserved, and fields set to `null` will be cleared. For repeating fields that contain arrays, individual items in the array can't be patched piecemeal; they must be supplied in the request body with the desired values for all items. See the [user accounts guide](https://developers.google.com/admin-sdk/directory/v1/guides/manage-users#update_user) for more information.
 func (s *users) DirectoryUsersUpdate(ctx context.Context, request operations.DirectoryUsersUpdateRequest, security operations.DirectoryUsersUpdateSecurity) (*operations.DirectoryUsersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {

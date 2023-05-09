@@ -22,12 +22,16 @@ const (
 	GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnumChrome                  GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum = "CHROME"
 )
 
+func (e GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum) ToPointer() *GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum {
+	return &e
+}
+
 func (e *GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "WINDOWS":
@@ -45,10 +49,10 @@ func (e *GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum) Unmar
 	case "ALL_PLATFORMS":
 		fallthrough
 	case "CHROME":
-		*e = GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum(s)
+		*e = GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum: %v", v)
 	}
 }
 
@@ -65,12 +69,16 @@ const (
 	GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnumCert                       GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum = "CERT"
 )
 
+func (e GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum) ToPointer() *GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum {
+	return &e
+}
+
 func (e *GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THREAT_ENTRY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "URL":
@@ -84,10 +92,10 @@ func (e *GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum) Un
 	case "FILENAME":
 		fallthrough
 	case "CERT":
-		*e = GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum(s)
+		*e = GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum: %v", v)
 	}
 }
 
@@ -115,12 +123,16 @@ const (
 	GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnumAccuracyTips                  GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum = "ACCURACY_TIPS"
 )
 
+func (e GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum) ToPointer() *GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum {
+	return &e
+}
+
 func (e *GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THREAT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MALWARE":
@@ -156,10 +168,10 @@ func (e *GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum) Unmarsh
 	case "HIGH_CONFIDENCE_ALLOWLIST":
 		fallthrough
 	case "ACCURACY_TIPS":
-		*e = GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum(s)
+		*e = GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum: %v", v)
 	}
 }
 

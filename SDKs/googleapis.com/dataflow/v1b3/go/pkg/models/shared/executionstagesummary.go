@@ -22,12 +22,16 @@ const (
 	ExecutionStageSummaryKindEnumShuffleKind    ExecutionStageSummaryKindEnum = "SHUFFLE_KIND"
 )
 
+func (e ExecutionStageSummaryKindEnum) ToPointer() *ExecutionStageSummaryKindEnum {
+	return &e
+}
+
 func (e *ExecutionStageSummaryKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_KIND":
 		fallthrough
 	case "PAR_DO_KIND":
@@ -45,10 +49,10 @@ func (e *ExecutionStageSummaryKindEnum) UnmarshalJSON(data []byte) error {
 	case "SINGLETON_KIND":
 		fallthrough
 	case "SHUFFLE_KIND":
-		*e = ExecutionStageSummaryKindEnum(s)
+		*e = ExecutionStageSummaryKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionStageSummaryKindEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionStageSummaryKindEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	MemberPermissionsEnumReadOnly  MemberPermissionsEnum = "read-only"
 )
 
+func (e MemberPermissionsEnum) ToPointer() *MemberPermissionsEnum {
+	return &e
+}
+
 func (e *MemberPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read-write":
 		fallthrough
 	case "read-only":
-		*e = MemberPermissionsEnum(s)
+		*e = MemberPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MemberPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for MemberPermissionsEnum: %v", v)
 	}
 }

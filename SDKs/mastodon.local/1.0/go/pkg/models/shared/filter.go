@@ -16,12 +16,16 @@ const (
 	FilterContextEnumThread        FilterContextEnum = "thread"
 )
 
+func (e FilterContextEnum) ToPointer() *FilterContextEnum {
+	return &e
+}
+
 func (e *FilterContextEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "home":
 		fallthrough
 	case "notifications":
@@ -29,10 +33,10 @@ func (e *FilterContextEnum) UnmarshalJSON(data []byte) error {
 	case "public":
 		fallthrough
 	case "thread":
-		*e = FilterContextEnum(s)
+		*e = FilterContextEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterContextEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterContextEnum: %v", v)
 	}
 }
 

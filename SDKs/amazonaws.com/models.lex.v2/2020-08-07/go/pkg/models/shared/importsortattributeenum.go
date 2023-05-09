@@ -13,16 +13,20 @@ const (
 	ImportSortAttributeEnumLastUpdatedDateTime ImportSortAttributeEnum = "LastUpdatedDateTime"
 )
 
+func (e ImportSortAttributeEnum) ToPointer() *ImportSortAttributeEnum {
+	return &e
+}
+
 func (e *ImportSortAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LastUpdatedDateTime":
-		*e = ImportSortAttributeEnum(s)
+		*e = ImportSortAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportSortAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportSortAttributeEnum: %v", v)
 	}
 }

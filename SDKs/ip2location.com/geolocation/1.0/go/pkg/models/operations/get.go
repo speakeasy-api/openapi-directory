@@ -20,12 +20,16 @@ const (
 	GetAddonEnumTimeZoneInfo     GetAddonEnum = "time_zone_info"
 )
 
+func (e GetAddonEnum) ToPointer() *GetAddonEnum {
+	return &e
+}
+
 func (e *GetAddonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "continent":
 		fallthrough
 	case "country":
@@ -39,10 +43,10 @@ func (e *GetAddonEnum) UnmarshalJSON(data []byte) error {
 	case "country_groupings":
 		fallthrough
 	case "time_zone_info":
-		*e = GetAddonEnum(s)
+		*e = GetAddonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAddonEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAddonEnum: %v", v)
 	}
 }
 
@@ -54,19 +58,23 @@ const (
 	GetFormatEnumXML  GetFormatEnum = "xml"
 )
 
+func (e GetFormatEnum) ToPointer() *GetFormatEnum {
+	return &e
+}
+
 func (e *GetFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = GetFormatEnum(s)
+		*e = GetFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFormatEnum: %v", v)
 	}
 }
 
@@ -98,12 +106,16 @@ const (
 	GetLangEnumZhTw GetLangEnum = "zh-tw"
 )
 
+func (e GetLangEnum) ToPointer() *GetLangEnum {
+	return &e
+}
+
 func (e *GetLangEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ar":
 		fallthrough
 	case "cs":
@@ -147,10 +159,10 @@ func (e *GetLangEnum) UnmarshalJSON(data []byte) error {
 	case "zh-cn":
 		fallthrough
 	case "zh-tw":
-		*e = GetLangEnum(s)
+		*e = GetLangEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLangEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLangEnum: %v", v)
 	}
 }
 
@@ -185,12 +197,16 @@ const (
 	GetPackageEnumWs25 GetPackageEnum = "WS25"
 )
 
+func (e GetPackageEnum) ToPointer() *GetPackageEnum {
+	return &e
+}
+
 func (e *GetPackageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WS1":
 		fallthrough
 	case "WS2":
@@ -240,10 +256,10 @@ func (e *GetPackageEnum) UnmarshalJSON(data []byte) error {
 	case "WS24":
 		fallthrough
 	case "WS25":
-		*e = GetPackageEnum(s)
+		*e = GetPackageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPackageEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPackageEnum: %v", v)
 	}
 }
 

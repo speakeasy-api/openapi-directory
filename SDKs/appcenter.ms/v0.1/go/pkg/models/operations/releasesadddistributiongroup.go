@@ -45,12 +45,16 @@ const (
 	ReleasesAddDistributionGroup404ApplicationJSONCodeEnumTooManyRequests     ReleasesAddDistributionGroup404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesAddDistributionGroup404ApplicationJSONCodeEnum) ToPointer() *ReleasesAddDistributionGroup404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesAddDistributionGroup404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -64,10 +68,10 @@ func (e *ReleasesAddDistributionGroup404ApplicationJSONCodeEnum) UnmarshalJSON(d
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesAddDistributionGroup404ApplicationJSONCodeEnum(s)
+		*e = ReleasesAddDistributionGroup404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesAddDistributionGroup404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesAddDistributionGroup404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -89,12 +93,16 @@ const (
 	ReleasesAddDistributionGroup400ApplicationJSONCodeEnumTooManyRequests     ReleasesAddDistributionGroup400ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesAddDistributionGroup400ApplicationJSONCodeEnum) ToPointer() *ReleasesAddDistributionGroup400ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesAddDistributionGroup400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -108,10 +116,10 @@ func (e *ReleasesAddDistributionGroup400ApplicationJSONCodeEnum) UnmarshalJSON(d
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesAddDistributionGroup400ApplicationJSONCodeEnum(s)
+		*e = ReleasesAddDistributionGroup400ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesAddDistributionGroup400ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesAddDistributionGroup400ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

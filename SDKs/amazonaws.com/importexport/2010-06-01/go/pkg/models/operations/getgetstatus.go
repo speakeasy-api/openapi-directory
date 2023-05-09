@@ -15,17 +15,21 @@ const (
 	GETGETStatusActionEnumGetStatus GETGETStatusActionEnum = "GetStatus"
 )
 
+func (e GETGETStatusActionEnum) ToPointer() *GETGETStatusActionEnum {
+	return &e
+}
+
 func (e *GETGETStatusActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetStatus":
-		*e = GETGETStatusActionEnum(s)
+		*e = GETGETStatusActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETStatusActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETStatusActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETStatusOperationEnumGetStatus GETGETStatusOperationEnum = "GetStatus"
 )
 
+func (e GETGETStatusOperationEnum) ToPointer() *GETGETStatusOperationEnum {
+	return &e
+}
+
 func (e *GETGETStatusOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetStatus":
-		*e = GETGETStatusOperationEnum(s)
+		*e = GETGETStatusOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETStatusOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETStatusOperationEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	GETGETStatusVersionEnumTwoThousandAndTen0601 GETGETStatusVersionEnum = "2010-06-01"
 )
 
+func (e GETGETStatusVersionEnum) ToPointer() *GETGETStatusVersionEnum {
+	return &e
+}
+
 func (e *GETGETStatusVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-06-01":
-		*e = GETGETStatusVersionEnum(s)
+		*e = GETGETStatusVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETStatusVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETStatusVersionEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	HostMaintenanceEnumOff HostMaintenanceEnum = "off"
 )
 
+func (e HostMaintenanceEnum) ToPointer() *HostMaintenanceEnum {
+	return &e
+}
+
 func (e *HostMaintenanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on":
 		fallthrough
 	case "off":
-		*e = HostMaintenanceEnum(s)
+		*e = HostMaintenanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HostMaintenanceEnum: %s", s)
+		return fmt.Errorf("invalid value for HostMaintenanceEnum: %v", v)
 	}
 }

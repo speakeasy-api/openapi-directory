@@ -30,12 +30,16 @@ const (
 	DescribeInstanceEventWindowsResultInstanceEventWindowsStateEnumDeleted  DescribeInstanceEventWindowsResultInstanceEventWindowsStateEnum = "deleted"
 )
 
+func (e DescribeInstanceEventWindowsResultInstanceEventWindowsStateEnum) ToPointer() *DescribeInstanceEventWindowsResultInstanceEventWindowsStateEnum {
+	return &e
+}
+
 func (e *DescribeInstanceEventWindowsResultInstanceEventWindowsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creating":
 		fallthrough
 	case "deleting":
@@ -43,10 +47,10 @@ func (e *DescribeInstanceEventWindowsResultInstanceEventWindowsStateEnum) Unmars
 	case "active":
 		fallthrough
 	case "deleted":
-		*e = DescribeInstanceEventWindowsResultInstanceEventWindowsStateEnum(s)
+		*e = DescribeInstanceEventWindowsResultInstanceEventWindowsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceEventWindowsResultInstanceEventWindowsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceEventWindowsResultInstanceEventWindowsStateEnum: %v", v)
 	}
 }
 
@@ -69,12 +73,16 @@ const (
 	DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesEndWeekDayEnumSaturday  DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesEndWeekDayEnum = "saturday"
 )
 
+func (e DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesEndWeekDayEnum) ToPointer() *DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesEndWeekDayEnum {
+	return &e
+}
+
 func (e *DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesEndWeekDayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sunday":
 		fallthrough
 	case "monday":
@@ -88,10 +96,10 @@ func (e *DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesEndWeek
 	case "friday":
 		fallthrough
 	case "saturday":
-		*e = DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesEndWeekDayEnum(s)
+		*e = DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesEndWeekDayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesEndWeekDayEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesEndWeekDayEnum: %v", v)
 	}
 }
 
@@ -108,12 +116,16 @@ const (
 	DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesStartWeekDayEnumSaturday  DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesStartWeekDayEnum = "saturday"
 )
 
+func (e DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesStartWeekDayEnum) ToPointer() *DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesStartWeekDayEnum {
+	return &e
+}
+
 func (e *DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesStartWeekDayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sunday":
 		fallthrough
 	case "monday":
@@ -127,10 +139,10 @@ func (e *DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesStartWe
 	case "friday":
 		fallthrough
 	case "saturday":
-		*e = DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesStartWeekDayEnum(s)
+		*e = DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesStartWeekDayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesStartWeekDayEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceEventWindowsResultInstanceEventWindowsTimeRangesStartWeekDayEnum: %v", v)
 	}
 }
 

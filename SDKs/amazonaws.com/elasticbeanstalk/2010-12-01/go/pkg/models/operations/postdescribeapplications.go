@@ -15,17 +15,21 @@ const (
 	POSTDescribeApplicationsActionEnumDescribeApplications POSTDescribeApplicationsActionEnum = "DescribeApplications"
 )
 
+func (e POSTDescribeApplicationsActionEnum) ToPointer() *POSTDescribeApplicationsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeApplicationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeApplications":
-		*e = POSTDescribeApplicationsActionEnum(s)
+		*e = POSTDescribeApplicationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeApplicationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeApplicationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeApplicationsVersionEnumTwoThousandAndTen1201 POSTDescribeApplicationsVersionEnum = "2010-12-01"
 )
 
+func (e POSTDescribeApplicationsVersionEnum) ToPointer() *POSTDescribeApplicationsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeApplicationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTDescribeApplicationsVersionEnum(s)
+		*e = POSTDescribeApplicationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeApplicationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeApplicationsVersionEnum: %v", v)
 	}
 }
 

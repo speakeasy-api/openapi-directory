@@ -19,12 +19,16 @@ const (
 	GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsResourceTypeEnumTgwPeering           GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsResourceTypeEnum = "tgw-peering"
 )
 
+func (e GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsResourceTypeEnum) ToPointer() *GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsResourceTypeEnum {
+	return &e
+}
+
 func (e *GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "vpn":
@@ -36,10 +40,10 @@ func (e *GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePr
 	case "peering":
 		fallthrough
 	case "tgw-peering":
-		*e = GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsResourceTypeEnum(s)
+		*e = GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsResourceTypeEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsStateEnumDisabled  GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsStateEnum = "disabled"
 )
 
+func (e GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsStateEnum) ToPointer() *GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsStateEnum {
+	return &e
+}
+
 func (e *GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabling":
 		fallthrough
 	case "enabled":
@@ -66,10 +74,10 @@ func (e *GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePr
 	case "disabling":
 		fallthrough
 	case "disabled":
-		*e = GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsStateEnum(s)
+		*e = GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTransitGatewayRouteTablePropagationsResultTransitGatewayRouteTablePropagationsStateEnum: %v", v)
 	}
 }
 

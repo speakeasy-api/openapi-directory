@@ -15,20 +15,24 @@ const (
 	FormButtonsPositionEnumTopAndBottom FormButtonsPositionEnum = "top_and_bottom"
 )
 
+func (e FormButtonsPositionEnum) ToPointer() *FormButtonsPositionEnum {
+	return &e
+}
+
 func (e *FormButtonsPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "top":
 		fallthrough
 	case "bottom":
 		fallthrough
 	case "top_and_bottom":
-		*e = FormButtonsPositionEnum(s)
+		*e = FormButtonsPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FormButtonsPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for FormButtonsPositionEnum: %v", v)
 	}
 }

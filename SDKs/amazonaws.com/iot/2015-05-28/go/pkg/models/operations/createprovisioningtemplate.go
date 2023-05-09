@@ -23,19 +23,23 @@ const (
 	CreateProvisioningTemplateRequestBodyTypeEnumJitp              CreateProvisioningTemplateRequestBodyTypeEnum = "JITP"
 )
 
+func (e CreateProvisioningTemplateRequestBodyTypeEnum) ToPointer() *CreateProvisioningTemplateRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *CreateProvisioningTemplateRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FLEET_PROVISIONING":
 		fallthrough
 	case "JITP":
-		*e = CreateProvisioningTemplateRequestBodyTypeEnum(s)
+		*e = CreateProvisioningTemplateRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProvisioningTemplateRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProvisioningTemplateRequestBodyTypeEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	ReadSetActivationJobItemStatusEnumFailed     ReadSetActivationJobItemStatusEnum = "FAILED"
 )
 
+func (e ReadSetActivationJobItemStatusEnum) ToPointer() *ReadSetActivationJobItemStatusEnum {
+	return &e
+}
+
 func (e *ReadSetActivationJobItemStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_STARTED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -29,9 +33,9 @@ func (e *ReadSetActivationJobItemStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FINISHED":
 		fallthrough
 	case "FAILED":
-		*e = ReadSetActivationJobItemStatusEnum(s)
+		*e = ReadSetActivationJobItemStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReadSetActivationJobItemStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReadSetActivationJobItemStatusEnum: %v", v)
 	}
 }

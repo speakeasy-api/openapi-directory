@@ -19,12 +19,16 @@ const (
 	ReposCreateCommitStatusRequestBodyStateEnumSuccess ReposCreateCommitStatusRequestBodyStateEnum = "success"
 )
 
+func (e ReposCreateCommitStatusRequestBodyStateEnum) ToPointer() *ReposCreateCommitStatusRequestBodyStateEnum {
+	return &e
+}
+
 func (e *ReposCreateCommitStatusRequestBodyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "error":
 		fallthrough
 	case "failure":
@@ -32,10 +36,10 @@ func (e *ReposCreateCommitStatusRequestBodyStateEnum) UnmarshalJSON(data []byte)
 	case "pending":
 		fallthrough
 	case "success":
-		*e = ReposCreateCommitStatusRequestBodyStateEnum(s)
+		*e = ReposCreateCommitStatusRequestBodyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateCommitStatusRequestBodyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateCommitStatusRequestBodyStateEnum: %v", v)
 	}
 }
 

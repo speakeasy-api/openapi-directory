@@ -17,19 +17,23 @@ const (
 	UpdateClusterRequestBodyAuthTypeEnumSecretArn UpdateClusterRequestBodyAuthTypeEnum = "SECRET_ARN"
 )
 
+func (e UpdateClusterRequestBodyAuthTypeEnum) ToPointer() *UpdateClusterRequestBodyAuthTypeEnum {
+	return &e
+}
+
 func (e *UpdateClusterRequestBodyAuthTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLAIN_TEXT":
 		fallthrough
 	case "SECRET_ARN":
-		*e = UpdateClusterRequestBodyAuthTypeEnum(s)
+		*e = UpdateClusterRequestBodyAuthTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateClusterRequestBodyAuthTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateClusterRequestBodyAuthTypeEnum: %v", v)
 	}
 }
 

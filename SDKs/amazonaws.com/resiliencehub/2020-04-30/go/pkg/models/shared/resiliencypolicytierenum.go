@@ -17,12 +17,16 @@ const (
 	ResiliencyPolicyTierEnumNonCritical     ResiliencyPolicyTierEnum = "NonCritical"
 )
 
+func (e ResiliencyPolicyTierEnum) ToPointer() *ResiliencyPolicyTierEnum {
+	return &e
+}
+
 func (e *ResiliencyPolicyTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MissionCritical":
 		fallthrough
 	case "Critical":
@@ -32,9 +36,9 @@ func (e *ResiliencyPolicyTierEnum) UnmarshalJSON(data []byte) error {
 	case "CoreServices":
 		fallthrough
 	case "NonCritical":
-		*e = ResiliencyPolicyTierEnum(s)
+		*e = ResiliencyPolicyTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResiliencyPolicyTierEnum: %s", s)
+		return fmt.Errorf("invalid value for ResiliencyPolicyTierEnum: %v", v)
 	}
 }

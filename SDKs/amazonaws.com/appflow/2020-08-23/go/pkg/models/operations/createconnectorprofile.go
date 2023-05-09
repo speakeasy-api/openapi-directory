@@ -17,19 +17,23 @@ const (
 	CreateConnectorProfileRequestBodyConnectionModeEnumPrivate CreateConnectorProfileRequestBodyConnectionModeEnum = "Private"
 )
 
+func (e CreateConnectorProfileRequestBodyConnectionModeEnum) ToPointer() *CreateConnectorProfileRequestBodyConnectionModeEnum {
+	return &e
+}
+
 func (e *CreateConnectorProfileRequestBodyConnectionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Public":
 		fallthrough
 	case "Private":
-		*e = CreateConnectorProfileRequestBodyConnectionModeEnum(s)
+		*e = CreateConnectorProfileRequestBodyConnectionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateConnectorProfileRequestBodyConnectionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateConnectorProfileRequestBodyConnectionModeEnum: %v", v)
 	}
 }
 
@@ -69,12 +73,16 @@ const (
 	CreateConnectorProfileRequestBodyConnectorTypeEnumPardot           CreateConnectorProfileRequestBodyConnectorTypeEnum = "Pardot"
 )
 
+func (e CreateConnectorProfileRequestBodyConnectorTypeEnum) ToPointer() *CreateConnectorProfileRequestBodyConnectorTypeEnum {
+	return &e
+}
+
 func (e *CreateConnectorProfileRequestBodyConnectorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Salesforce":
 		fallthrough
 	case "Singular":
@@ -122,14 +130,16 @@ func (e *CreateConnectorProfileRequestBodyConnectorTypeEnum) UnmarshalJSON(data 
 	case "CustomConnector":
 		fallthrough
 	case "Pardot":
-		*e = CreateConnectorProfileRequestBodyConnectorTypeEnum(s)
+		*e = CreateConnectorProfileRequestBodyConnectorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateConnectorProfileRequestBodyConnectorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateConnectorProfileRequestBodyConnectorTypeEnum: %v", v)
 	}
 }
 
 type CreateConnectorProfileRequestBody struct {
+	// <p>The <code>clientToken</code> parameter is an idempotency token. It ensures that your <code>CreateConnectorProfile</code> request completes only once. You choose the value to pass. For example, if you don't receive a response from your request, you can safely retry the request with the same <code>clientToken</code> parameter value.</p> <p>If you omit a <code>clientToken</code> value, the Amazon Web Services SDK that you are using inserts a value for you. This way, the SDK can safely retry requests multiple times after a network error. You must provide your own value for other use cases.</p> <p>If you specify input parameters that differ from your first request, an error occurs. If you use a different value for <code>clientToken</code>, Amazon AppFlow considers it a new call to <code>CreateConnectorProfile</code>. The token is active for 8 hours.</p>
+	ClientToken *string `json:"clientToken,omitempty"`
 	//  Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the public internet.
 	ConnectionMode CreateConnectorProfileRequestBodyConnectionModeEnum `json:"connectionMode"`
 	// The label of the connector. The label is unique for each <code>ConnectorRegistration</code> in your Amazon Web Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.

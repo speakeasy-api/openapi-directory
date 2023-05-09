@@ -35,7 +35,10 @@ func newSurveys(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Get survey questions in given scope and type
 func (s *surveys) GetQuestions(ctx context.Context, request operations.GetQuestionsRequest) (*operations.GetQuestionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/surveys/{scope}/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/surveys/{scope}/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *surveys) GetQuestions(ctx context.Context, request operations.GetQuesti
 // Post survey answers for scope and type
 func (s *surveys) SubmitAnswers(ctx context.Context, request operations.SubmitAnswersRequest) (*operations.SubmitAnswersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/surveys/{scope}/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/surveys/{scope}/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SurveyAnswers", "json")
 	if err != nil {

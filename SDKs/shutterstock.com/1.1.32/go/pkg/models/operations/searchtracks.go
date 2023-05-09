@@ -22,19 +22,23 @@ const (
 	SearchTracksLibraryEnumPremier      SearchTracksLibraryEnum = "premier"
 )
 
+func (e SearchTracksLibraryEnum) ToPointer() *SearchTracksLibraryEnum {
+	return &e
+}
+
 func (e *SearchTracksLibraryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shutterstock":
 		fallthrough
 	case "premier":
-		*e = SearchTracksLibraryEnum(s)
+		*e = SearchTracksLibraryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchTracksLibraryEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchTracksLibraryEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	SearchTracksSortEnumDuration   SearchTracksSortEnum = "duration"
 )
 
+func (e SearchTracksSortEnum) ToPointer() *SearchTracksSortEnum {
+	return &e
+}
+
 func (e *SearchTracksSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "score":
 		fallthrough
 	case "ranking_all":
@@ -70,10 +78,10 @@ func (e *SearchTracksSortEnum) UnmarshalJSON(data []byte) error {
 	case "freshness":
 		fallthrough
 	case "duration":
-		*e = SearchTracksSortEnum(s)
+		*e = SearchTracksSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchTracksSortEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchTracksSortEnum: %v", v)
 	}
 }
 
@@ -85,19 +93,23 @@ const (
 	SearchTracksSortOrderEnumDesc SearchTracksSortOrderEnum = "desc"
 )
 
+func (e SearchTracksSortOrderEnum) ToPointer() *SearchTracksSortOrderEnum {
+	return &e
+}
+
 func (e *SearchTracksSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = SearchTracksSortOrderEnum(s)
+		*e = SearchTracksSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchTracksSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchTracksSortOrderEnum: %v", v)
 	}
 }
 
@@ -109,19 +121,23 @@ const (
 	SearchTracksViewEnumFull    SearchTracksViewEnum = "full"
 )
 
+func (e SearchTracksViewEnum) ToPointer() *SearchTracksViewEnum {
+	return &e
+}
+
 func (e *SearchTracksViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimal":
 		fallthrough
 	case "full":
-		*e = SearchTracksViewEnum(s)
+		*e = SearchTracksViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchTracksViewEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchTracksViewEnum: %v", v)
 	}
 }
 
@@ -129,6 +145,8 @@ type SearchTracksRequest struct {
 	// Show tracks with one of the specified artist names or IDs
 	Artists []string `queryParam:"style=form,explode=true,name=artists"`
 	// (Deprecated; use bpm_from and bpm_to instead) Show tracks with the specified beats per minute
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Bpm *int64 `queryParam:"style=form,explode=true,name=bpm"`
 	// Show tracks with the specified beats per minute or faster
 	BpmFrom *int64 `queryParam:"style=form,explode=true,name=bpm_from"`

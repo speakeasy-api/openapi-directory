@@ -92,7 +92,10 @@ func (s *cards) CreateCard(ctx context.Context, request shared.CreateCardRequest
 // Disabling an already disabled card is allowed but has no effect.
 func (s *cards) DisableCard(ctx context.Context, request operations.DisableCardRequest, security operations.DisableCardSecurity) (*operations.DisableCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cards/{card_id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/cards/{card_id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -187,7 +190,10 @@ func (s *cards) ListCards(ctx context.Context, request operations.ListCardsReque
 // Retrieves details for a specific Card.
 func (s *cards) RetrieveCard(ctx context.Context, request operations.RetrieveCardRequest, security operations.RetrieveCardSecurity) (*operations.RetrieveCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cards/{card_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/cards/{card_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

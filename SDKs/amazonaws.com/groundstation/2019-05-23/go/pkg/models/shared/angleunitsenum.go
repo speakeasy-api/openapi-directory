@@ -14,18 +14,22 @@ const (
 	AngleUnitsEnumRadian      AngleUnitsEnum = "RADIAN"
 )
 
+func (e AngleUnitsEnum) ToPointer() *AngleUnitsEnum {
+	return &e
+}
+
 func (e *AngleUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEGREE_ANGLE":
 		fallthrough
 	case "RADIAN":
-		*e = AngleUnitsEnum(s)
+		*e = AngleUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AngleUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for AngleUnitsEnum: %v", v)
 	}
 }

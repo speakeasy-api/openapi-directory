@@ -17,12 +17,16 @@ const (
 	EphemerisInvalidReasonEnumValidationError   EphemerisInvalidReasonEnum = "VALIDATION_ERROR"
 )
 
+func (e EphemerisInvalidReasonEnum) ToPointer() *EphemerisInvalidReasonEnum {
+	return &e
+}
+
 func (e *EphemerisInvalidReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METADATA_INVALID":
 		fallthrough
 	case "TIME_RANGE_INVALID":
@@ -32,9 +36,9 @@ func (e *EphemerisInvalidReasonEnum) UnmarshalJSON(data []byte) error {
 	case "KMS_KEY_INVALID":
 		fallthrough
 	case "VALIDATION_ERROR":
-		*e = EphemerisInvalidReasonEnum(s)
+		*e = EphemerisInvalidReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EphemerisInvalidReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for EphemerisInvalidReasonEnum: %v", v)
 	}
 }

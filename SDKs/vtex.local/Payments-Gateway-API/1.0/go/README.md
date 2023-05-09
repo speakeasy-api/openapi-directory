@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Payments-Gatew
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,16 +28,14 @@ func main() {
         }),
     )
 
-    req := operations.AffiliationByIDRequest{
+    ctx := context.Background()
+    res, err := s.Configuration.AffiliationByID(ctx, operations.AffiliationByIDRequest{
         Accept: "application/json",
         ContentType: "application/json",
         XPROVIDERAPIAppKey: "{{X-PROVIDER-API-AppKey}}",
         XPROVIDERAPIAppToken: "{{X-PROVIDER-API-AppToken}}",
         AffiliationID: "e046d326-5421-45ab-95ae-f13d37f260b5",
-    }
-
-    ctx := context.Background()
-    res, err := s.Configuration.AffiliationByID(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -54,39 +51,39 @@ func main() {
 ## Available Resources and Operations
 
 
-### Configuration
+### [Configuration](docs/configuration/README.md)
 
-* `AffiliationByID` - Affiliation By Id
-* `Affiliations` - Affiliations
-* `AvailablePaymentMethods` - Available Payment Methods
-* `InsertAffiliation` - Insert Affiliation
-* `InsertRule` - Insert Rule
-* `PutRuleByID` - Rule By Id
-* `Rule` - Delete Rule
-* `RuleByID` - Rule By Id
-* `Rules` - Rules
-* `UpdateAffiliation` - Update Affiliation
+* [AffiliationByID](docs/configuration/README.md#affiliationbyid) - Affiliation By Id
+* [Affiliations](docs/configuration/README.md#affiliations) - Affiliations
+* [AvailablePaymentMethods](docs/configuration/README.md#availablepaymentmethods) - Available Payment Methods
+* [InsertAffiliation](docs/configuration/README.md#insertaffiliation) - Insert Affiliation
+* [InsertRule](docs/configuration/README.md#insertrule) - Insert Rule
+* [PutRuleByID](docs/configuration/README.md#putrulebyid) - Rule By Id
+* [Rule](docs/configuration/README.md#rule) - Delete Rule
+* [RuleByID](docs/configuration/README.md#rulebyid) - Rule By Id
+* [Rules](docs/configuration/README.md#rules) - Rules
+* [UpdateAffiliation](docs/configuration/README.md#updateaffiliation) - Update Affiliation
 
-### Installments
+### [Installments](docs/installments/README.md)
 
-* `Installmentsoptions` - Installments options
+* [Installmentsoptions](docs/installments/README.md#installmentsoptions) - Installments options
 
-### TransactionFlow
+### [TransactionFlow](docs/transactionflow/README.md)
 
-* `Cancelthetransaction` - Cancel the transaction
-* `Refundthetransaction` - Refund the transaction
-* `Settlethetransaction` - Settle the transaction
+* [Cancelthetransaction](docs/transactionflow/README.md#cancelthetransaction) - Cancel the transaction
+* [Refundthetransaction](docs/transactionflow/README.md#refundthetransaction) - Refund the transaction
+* [Settlethetransaction](docs/transactionflow/README.md#settlethetransaction) - Settle the transaction
 
-### TransactionProcess
+### [TransactionProcess](docs/transactionprocess/README.md)
 
-* `OneCreateanewtransaction` - 1. Starts a new transaction
-* `TwoSendPaymentsPublic` - 2.1 Send Payments Information Public
-* `TwoSendPaymentsWithSavedCreditCard` - 2.2 Send Payments With Saved Credit Card
-* `ThreeSendAdditionalData` - 3. Send Additional Data
-* `FourDoauthorization` - Do authorization
-* `PaymentDetails` - Payment Details
-* `TransactionDetails` - Transaction Details
-* `TransactionSettlementDetails` - Transaction Settlement  Details
+* [OneCreateanewtransaction](docs/transactionprocess/README.md#onecreateanewtransaction) - 1. Starts a new transaction
+* [TwoSendPaymentsPublic](docs/transactionprocess/README.md#twosendpaymentspublic) - 2.1 Send Payments Information Public
+* [TwoSendPaymentsWithSavedCreditCard](docs/transactionprocess/README.md#twosendpaymentswithsavedcreditcard) - 2.2 Send Payments With Saved Credit Card
+* [ThreeSendAdditionalData](docs/transactionprocess/README.md#threesendadditionaldata) - 3. Send Additional Data
+* [FourDoauthorization](docs/transactionprocess/README.md#fourdoauthorization) - Do authorization
+* [PaymentDetails](docs/transactionprocess/README.md#paymentdetails) - Payment Details
+* [TransactionDetails](docs/transactionprocess/README.md#transactiondetails) - Transaction Details
+* [TransactionSettlementDetails](docs/transactionprocess/README.md#transactionsettlementdetails) - Transaction Settlement  Details
 <!-- End SDK Available Operations -->
 
 ### Maturity

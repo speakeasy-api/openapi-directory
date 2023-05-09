@@ -15,17 +15,21 @@ const (
 	POSTChangeMessageVisibilityBatchActionEnumChangeMessageVisibilityBatch POSTChangeMessageVisibilityBatchActionEnum = "ChangeMessageVisibilityBatch"
 )
 
+func (e POSTChangeMessageVisibilityBatchActionEnum) ToPointer() *POSTChangeMessageVisibilityBatchActionEnum {
+	return &e
+}
+
 func (e *POSTChangeMessageVisibilityBatchActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ChangeMessageVisibilityBatch":
-		*e = POSTChangeMessageVisibilityBatchActionEnum(s)
+		*e = POSTChangeMessageVisibilityBatchActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTChangeMessageVisibilityBatchActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTChangeMessageVisibilityBatchActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTChangeMessageVisibilityBatchVersionEnumTwoThousandAndTwelve1105 POSTChangeMessageVisibilityBatchVersionEnum = "2012-11-05"
 )
 
+func (e POSTChangeMessageVisibilityBatchVersionEnum) ToPointer() *POSTChangeMessageVisibilityBatchVersionEnum {
+	return &e
+}
+
 func (e *POSTChangeMessageVisibilityBatchVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = POSTChangeMessageVisibilityBatchVersionEnum(s)
+		*e = POSTChangeMessageVisibilityBatchVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTChangeMessageVisibilityBatchVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTChangeMessageVisibilityBatchVersionEnum: %v", v)
 	}
 }
 

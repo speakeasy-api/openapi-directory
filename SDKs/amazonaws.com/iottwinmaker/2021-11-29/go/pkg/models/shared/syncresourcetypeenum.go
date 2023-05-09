@@ -14,18 +14,22 @@ const (
 	SyncResourceTypeEnumComponentType SyncResourceTypeEnum = "COMPONENT_TYPE"
 )
 
+func (e SyncResourceTypeEnum) ToPointer() *SyncResourceTypeEnum {
+	return &e
+}
+
 func (e *SyncResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY":
 		fallthrough
 	case "COMPONENT_TYPE":
-		*e = SyncResourceTypeEnum(s)
+		*e = SyncResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SyncResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SyncResourceTypeEnum: %v", v)
 	}
 }

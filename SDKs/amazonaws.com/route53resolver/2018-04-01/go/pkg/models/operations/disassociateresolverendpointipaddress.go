@@ -16,17 +16,21 @@ const (
 	DisassociateResolverEndpointIPAddressXAmzTargetEnumRoute53ResolverDisassociateResolverEndpointIPAddress DisassociateResolverEndpointIPAddressXAmzTargetEnum = "Route53Resolver.DisassociateResolverEndpointIpAddress"
 )
 
+func (e DisassociateResolverEndpointIPAddressXAmzTargetEnum) ToPointer() *DisassociateResolverEndpointIPAddressXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateResolverEndpointIPAddressXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.DisassociateResolverEndpointIpAddress":
-		*e = DisassociateResolverEndpointIPAddressXAmzTargetEnum(s)
+		*e = DisassociateResolverEndpointIPAddressXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateResolverEndpointIPAddressXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateResolverEndpointIPAddressXAmzTargetEnum: %v", v)
 	}
 }
 

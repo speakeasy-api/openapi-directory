@@ -37,7 +37,10 @@ func newDaemon(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Add a new timer script to be executed at specified interval (in msec) with the specified argument.
 func (s *daemon) AddDaemonTimerScript(ctx context.Context, request operations.AddDaemonTimerScriptRequest) (*operations.AddDaemonTimerScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/timer/script/add/{script}/{interval}/{arg}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/timer/script/add/{script}/{interval}/{arg}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *daemon) AddDaemonTimerScript(ctx context.Context, request operations.Ad
 // Load agents in cfgFile from firstAgentNum to lastAgentNum on startAgentNum of current configuration
 func (s *daemon) CfgLoad(ctx context.Context, request operations.CfgLoadRequest) (*operations.CfgLoadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/load/{cfgFile}/{firstAgentNum}/{lastAgentNum}/{startAgentNum}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/load/{cfgFile}/{firstAgentNum}/{lastAgentNum}/{startAgentNum}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *daemon) CfgLoad(ctx context.Context, request operations.CfgLoadRequest)
 // Clear the lab configuration.
 func (s *daemon) CfgNew(ctx context.Context, request operations.CfgNewRequest) (*operations.CfgNewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/clear/{firstAgentNum}/{lastAgentNum}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/clear/{firstAgentNum}/{lastAgentNum}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -219,7 +228,10 @@ func (s *daemon) CfgSave(ctx context.Context) (*operations.CfgSaveResponse, erro
 // Save the lab configuration in file.
 func (s *daemon) CfgSaveas(ctx context.Context, request operations.CfgSaveasRequest) (*operations.CfgSaveasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/saveas/{cfgFile}/{firstAgentNum}/{lastAgentNum}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/saveas/{cfgFile}/{firstAgentNum}/{lastAgentNum}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -264,7 +276,10 @@ func (s *daemon) CfgSaveas(ctx context.Context, request operations.CfgSaveasRequ
 // The first scheduled script that matches the script name, and optionally the interval and argument will be deleted.
 func (s *daemon) DelDaemonTimerScript(ctx context.Context, request operations.DelDaemonTimerScriptRequest) (*operations.DelDaemonTimerScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/timer/script/delete/{script}/{interval}/{arg}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/timer/script/delete/{script}/{interval}/{arg}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1168,7 +1183,10 @@ func (s *daemon) ListDaemonTimerScripts(ctx context.Context) (*operations.ListDa
 // Get multiple sets of information about MIMIC, where infoArray is one of the parameters defined in the mimic get command.
 func (s *daemon) MgetInfo(ctx context.Context, request operations.MgetInfoRequest) (*operations.MgetInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/mget/{infoArray}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/mget/{infoArray}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1405,7 +1423,10 @@ func (s *daemon) StopAllAgents(ctx context.Context) (*operations.StopAllAgentsRe
 // It returns "1" if the variable exists, else "0".
 func (s *daemon) StoreExists(ctx context.Context, request operations.StoreExistsRequest) (*operations.StoreExistsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/store/exists/{var}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/store/exists/{var}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1452,7 +1473,10 @@ func (s *daemon) StoreExists(ctx context.Context, request operations.StoreExists
 // The value will be returned as a string (like all Tcl values).
 func (s *daemon) StoreGet(ctx context.Context, request operations.StoreGetRequest) (*operations.StoreGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/store/get/{var}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/store/get/{var}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1545,7 +1569,10 @@ func (s *daemon) StoreList(ctx context.Context) (*operations.StoreListResponse, 
 // These commands treat the variable as a list, and allow to replace an entry in the list at the specified index with the specified value. The variable has to already exist.
 func (s *daemon) StoreLreplace(ctx context.Context, request operations.StoreLreplaceRequest) (*operations.StoreLreplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/store/lreplace/{var}/{index}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/store/lreplace/{var}/{index}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
@@ -1599,7 +1626,10 @@ func (s *daemon) StoreLreplace(ctx context.Context, request operations.StoreLrep
 // It returns "1" if the variable is persistent, else "0".
 func (s *daemon) StorePersists(ctx context.Context, request operations.StorePersistsRequest) (*operations.StorePersistsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/store/persists/{var}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/store/persists/{var}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1691,7 +1721,10 @@ func (s *daemon) StoreSave(ctx context.Context) (*operations.StoreSaveResponse, 
 // Persist 1 means persistent , 0 means non-persistent
 func (s *daemon) StoreSet(ctx context.Context, request operations.StoreSetRequest) (*operations.StoreSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/store/set/{var}/{persist}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/store/set/{var}/{persist}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
@@ -1745,7 +1778,10 @@ func (s *daemon) StoreSet(ctx context.Context, request operations.StoreSetReques
 // This will cleanup persistent variables if needed
 func (s *daemon) StoreUnset(ctx context.Context, request operations.StoreUnsetRequest) (*operations.StoreUnsetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/store/unset/{var}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/store/unset/{var}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

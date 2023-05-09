@@ -21,12 +21,16 @@ const (
 	PowerManagementEventEventTypeEnumShutdown                            PowerManagementEventEventTypeEnum = "SHUTDOWN"
 )
 
+func (e PowerManagementEventEventTypeEnum) ToPointer() *PowerManagementEventEventTypeEnum {
+	return &e
+}
+
 func (e *PowerManagementEventEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POWER_MANAGEMENT_EVENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BATTERY_LEVEL_COLLECTED":
@@ -42,10 +46,10 @@ func (e *PowerManagementEventEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BOOT_COMPLETED":
 		fallthrough
 	case "SHUTDOWN":
-		*e = PowerManagementEventEventTypeEnum(s)
+		*e = PowerManagementEventEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PowerManagementEventEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PowerManagementEventEventTypeEnum: %v", v)
 	}
 }
 

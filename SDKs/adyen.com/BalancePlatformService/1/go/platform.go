@@ -35,7 +35,10 @@ func newPlatform(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Returns a balance platform.
 func (s *platform) GetBalancePlatformsID(ctx context.Context, request operations.GetBalancePlatformsIDRequest, security operations.GetBalancePlatformsIDSecurity) (*operations.GetBalancePlatformsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/balancePlatforms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/balancePlatforms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -100,7 +103,10 @@ func (s *platform) GetBalancePlatformsID(ctx context.Context, request operations
 // For example, to limit the page to 5 account holders and to skip the first 20, use `/balancePlatforms/{id}/accountHolders?limit=5&offset=20`.
 func (s *platform) GetBalancePlatformsIDAccountHolders(ctx context.Context, request operations.GetBalancePlatformsIDAccountHoldersRequest, security operations.GetBalancePlatformsIDAccountHoldersSecurity) (*operations.GetBalancePlatformsIDAccountHoldersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/balancePlatforms/{id}/accountHolders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/balancePlatforms/{id}/accountHolders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

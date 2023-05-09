@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/appsync/201
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,22 +27,20 @@ func main() {
         }),
     )
 
-    req := operations.AssociateAPIRequest{
+    ctx := context.Background()
+    res, err := s.AssociateAPI(ctx, operations.AssociateAPIRequest{
         RequestBody: operations.AssociateAPIRequestBody{
             APIID: "corrupti",
         },
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
         DomainName: "vel",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateAPI(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -58,59 +55,59 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AssociateAPI` - Maps an endpoint to your custom domain.
-* `CreateAPICache` - Creates a cache for the GraphQL API.
-* `CreateAPIKey` - Creates a unique key that you can distribute to clients who invoke your API.
-* `CreateDataSource` - Creates a <code>DataSource</code> object.
-* `CreateDomainName` - Creates a custom <code>DomainName</code> object.
-* `CreateFunction` - <p>Creates a <code>Function</code> object.</p> <p>A function is a reusable entity. You can use multiple functions to compose the resolver logic.</p>
-* `CreateGraphqlAPI` - Creates a <code>GraphqlApi</code> object.
-* `CreateResolver` - <p>Creates a <code>Resolver</code> object.</p> <p>A resolver converts incoming requests into a format that a data source can understand, and converts the data source's responses into GraphQL.</p>
-* `CreateType` - Creates a <code>Type</code> object.
-* `DeleteAPICache` - Deletes an <code>ApiCache</code> object.
-* `DeleteAPIKey` - Deletes an API key.
-* `DeleteDataSource` - Deletes a <code>DataSource</code> object.
-* `DeleteDomainName` - Deletes a custom <code>DomainName</code> object.
-* `DeleteFunction` - Deletes a <code>Function</code>.
-* `DeleteGraphqlAPI` - Deletes a <code>GraphqlApi</code> object.
-* `DeleteResolver` - Deletes a <code>Resolver</code> object.
-* `DeleteType` - Deletes a <code>Type</code> object.
-* `DisassociateAPI` - Removes an <code>ApiAssociation</code> object from a custom domain.
-* `EvaluateCode` - Evaluates the given code and returns the response. The code definition requirements depend on the specified runtime. For <code>APPSYNC_JS</code> runtimes, the code defines the request and response functions. The request function takes the incoming request after a GraphQL operation is parsed and converts it into a request configuration for the selected data source operation. The response function interprets responses from the data source and maps it to the shape of the GraphQL field output type. 
-* `EvaluateMappingTemplate` - <p>Evaluates a given template and returns the response. The mapping template can be a request or response template.</p> <p>Request templates take the incoming request after a GraphQL operation is parsed and convert it into a request configuration for the selected data source operation. Response templates interpret responses from the data source and map it to the shape of the GraphQL field output type.</p> <p>Mapping templates are written in the Apache Velocity Template Language (VTL).</p>
-* `FlushAPICache` - Flushes an <code>ApiCache</code> object.
-* `GetAPIAssociation` - Retrieves an <code>ApiAssociation</code> object.
-* `GetAPICache` - Retrieves an <code>ApiCache</code> object.
-* `GetDataSource` - Retrieves a <code>DataSource</code> object.
-* `GetDomainName` - Retrieves a custom <code>DomainName</code> object.
-* `GetFunction` - Get a <code>Function</code>.
-* `GetGraphqlAPI` - Retrieves a <code>GraphqlApi</code> object.
-* `GetIntrospectionSchema` - Retrieves the introspection schema for a GraphQL API.
-* `GetResolver` - Retrieves a <code>Resolver</code> object.
-* `GetSchemaCreationStatus` - Retrieves the current status of a schema creation operation.
-* `GetType` - Retrieves a <code>Type</code> object.
-* `ListAPIKeys` - <p>Lists the API keys for a given API.</p> <note> <p>API keys are deleted automatically 60 days after they expire. However, they may still be included in the response until they have actually been deleted. You can safely call <code>DeleteApiKey</code> to manually delete a key before it's automatically deleted.</p> </note>
-* `ListDataSources` - Lists the data sources for a given API.
-* `ListDomainNames` - Lists multiple custom domain names.
-* `ListFunctions` - List multiple functions.
-* `ListGraphqlApis` - Lists your GraphQL APIs.
-* `ListResolvers` - Lists the resolvers for a given API and type.
-* `ListResolversByFunction` - List the resolvers that are associated with a specific function.
-* `ListTagsForResource` - Lists the tags for a resource.
-* `ListTypes` - Lists the types for a given API.
-* `StartSchemaCreation` - <p>Adds a new schema to your GraphQL API.</p> <p>This operation is asynchronous. Use to determine when it has completed.</p>
-* `TagResource` - Tags a resource with user-supplied tags.
-* `UntagResource` - Untags a resource.
-* `UpdateAPICache` - Updates the cache for the GraphQL API.
-* `UpdateAPIKey` - Updates an API key. You can update the key as long as it's not deleted.
-* `UpdateDataSource` - Updates a <code>DataSource</code> object.
-* `UpdateDomainName` - Updates a custom <code>DomainName</code> object.
-* `UpdateFunction` - Updates a <code>Function</code> object.
-* `UpdateGraphqlAPI` - Updates a <code>GraphqlApi</code> object.
-* `UpdateResolver` - Updates a <code>Resolver</code> object.
-* `UpdateType` - Updates a <code>Type</code> object.
+* [AssociateAPI](docs/sdk/README.md#associateapi) - Maps an endpoint to your custom domain.
+* [CreateAPICache](docs/sdk/README.md#createapicache) - Creates a cache for the GraphQL API.
+* [CreateAPIKey](docs/sdk/README.md#createapikey) - Creates a unique key that you can distribute to clients who invoke your API.
+* [CreateDataSource](docs/sdk/README.md#createdatasource) - Creates a <code>DataSource</code> object.
+* [CreateDomainName](docs/sdk/README.md#createdomainname) - Creates a custom <code>DomainName</code> object.
+* [CreateFunction](docs/sdk/README.md#createfunction) - <p>Creates a <code>Function</code> object.</p> <p>A function is a reusable entity. You can use multiple functions to compose the resolver logic.</p>
+* [CreateGraphqlAPI](docs/sdk/README.md#creategraphqlapi) - Creates a <code>GraphqlApi</code> object.
+* [CreateResolver](docs/sdk/README.md#createresolver) - <p>Creates a <code>Resolver</code> object.</p> <p>A resolver converts incoming requests into a format that a data source can understand, and converts the data source's responses into GraphQL.</p>
+* [CreateType](docs/sdk/README.md#createtype) - Creates a <code>Type</code> object.
+* [DeleteAPICache](docs/sdk/README.md#deleteapicache) - Deletes an <code>ApiCache</code> object.
+* [DeleteAPIKey](docs/sdk/README.md#deleteapikey) - Deletes an API key.
+* [DeleteDataSource](docs/sdk/README.md#deletedatasource) - Deletes a <code>DataSource</code> object.
+* [DeleteDomainName](docs/sdk/README.md#deletedomainname) - Deletes a custom <code>DomainName</code> object.
+* [DeleteFunction](docs/sdk/README.md#deletefunction) - Deletes a <code>Function</code>.
+* [DeleteGraphqlAPI](docs/sdk/README.md#deletegraphqlapi) - Deletes a <code>GraphqlApi</code> object.
+* [DeleteResolver](docs/sdk/README.md#deleteresolver) - Deletes a <code>Resolver</code> object.
+* [DeleteType](docs/sdk/README.md#deletetype) - Deletes a <code>Type</code> object.
+* [DisassociateAPI](docs/sdk/README.md#disassociateapi) - Removes an <code>ApiAssociation</code> object from a custom domain.
+* [EvaluateCode](docs/sdk/README.md#evaluatecode) - Evaluates the given code and returns the response. The code definition requirements depend on the specified runtime. For <code>APPSYNC_JS</code> runtimes, the code defines the request and response functions. The request function takes the incoming request after a GraphQL operation is parsed and converts it into a request configuration for the selected data source operation. The response function interprets responses from the data source and maps it to the shape of the GraphQL field output type. 
+* [EvaluateMappingTemplate](docs/sdk/README.md#evaluatemappingtemplate) - <p>Evaluates a given template and returns the response. The mapping template can be a request or response template.</p> <p>Request templates take the incoming request after a GraphQL operation is parsed and convert it into a request configuration for the selected data source operation. Response templates interpret responses from the data source and map it to the shape of the GraphQL field output type.</p> <p>Mapping templates are written in the Apache Velocity Template Language (VTL).</p>
+* [FlushAPICache](docs/sdk/README.md#flushapicache) - Flushes an <code>ApiCache</code> object.
+* [GetAPIAssociation](docs/sdk/README.md#getapiassociation) - Retrieves an <code>ApiAssociation</code> object.
+* [GetAPICache](docs/sdk/README.md#getapicache) - Retrieves an <code>ApiCache</code> object.
+* [GetDataSource](docs/sdk/README.md#getdatasource) - Retrieves a <code>DataSource</code> object.
+* [GetDomainName](docs/sdk/README.md#getdomainname) - Retrieves a custom <code>DomainName</code> object.
+* [GetFunction](docs/sdk/README.md#getfunction) - Get a <code>Function</code>.
+* [GetGraphqlAPI](docs/sdk/README.md#getgraphqlapi) - Retrieves a <code>GraphqlApi</code> object.
+* [GetIntrospectionSchema](docs/sdk/README.md#getintrospectionschema) - Retrieves the introspection schema for a GraphQL API.
+* [GetResolver](docs/sdk/README.md#getresolver) - Retrieves a <code>Resolver</code> object.
+* [GetSchemaCreationStatus](docs/sdk/README.md#getschemacreationstatus) - Retrieves the current status of a schema creation operation.
+* [GetType](docs/sdk/README.md#gettype) - Retrieves a <code>Type</code> object.
+* [ListAPIKeys](docs/sdk/README.md#listapikeys) - <p>Lists the API keys for a given API.</p> <note> <p>API keys are deleted automatically 60 days after they expire. However, they may still be included in the response until they have actually been deleted. You can safely call <code>DeleteApiKey</code> to manually delete a key before it's automatically deleted.</p> </note>
+* [ListDataSources](docs/sdk/README.md#listdatasources) - Lists the data sources for a given API.
+* [ListDomainNames](docs/sdk/README.md#listdomainnames) - Lists multiple custom domain names.
+* [ListFunctions](docs/sdk/README.md#listfunctions) - List multiple functions.
+* [ListGraphqlApis](docs/sdk/README.md#listgraphqlapis) - Lists your GraphQL APIs.
+* [ListResolvers](docs/sdk/README.md#listresolvers) - Lists the resolvers for a given API and type.
+* [ListResolversByFunction](docs/sdk/README.md#listresolversbyfunction) - List the resolvers that are associated with a specific function.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the tags for a resource.
+* [ListTypes](docs/sdk/README.md#listtypes) - Lists the types for a given API.
+* [StartSchemaCreation](docs/sdk/README.md#startschemacreation) - <p>Adds a new schema to your GraphQL API.</p> <p>This operation is asynchronous. Use to determine when it has completed.</p>
+* [TagResource](docs/sdk/README.md#tagresource) - Tags a resource with user-supplied tags.
+* [UntagResource](docs/sdk/README.md#untagresource) - Untags a resource.
+* [UpdateAPICache](docs/sdk/README.md#updateapicache) - Updates the cache for the GraphQL API.
+* [UpdateAPIKey](docs/sdk/README.md#updateapikey) - Updates an API key. You can update the key as long as it's not deleted.
+* [UpdateDataSource](docs/sdk/README.md#updatedatasource) - Updates a <code>DataSource</code> object.
+* [UpdateDomainName](docs/sdk/README.md#updatedomainname) - Updates a custom <code>DomainName</code> object.
+* [UpdateFunction](docs/sdk/README.md#updatefunction) - Updates a <code>Function</code> object.
+* [UpdateGraphqlAPI](docs/sdk/README.md#updategraphqlapi) - Updates a <code>GraphqlApi</code> object.
+* [UpdateResolver](docs/sdk/README.md#updateresolver) - Updates a <code>Resolver</code> object.
+* [UpdateType](docs/sdk/README.md#updatetype) - Updates a <code>Type</code> object.
 <!-- End SDK Available Operations -->
 
 ### Maturity

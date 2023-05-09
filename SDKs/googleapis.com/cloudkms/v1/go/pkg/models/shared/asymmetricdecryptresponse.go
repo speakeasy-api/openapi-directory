@@ -18,12 +18,16 @@ const (
 	AsymmetricDecryptResponseProtectionLevelEnumExternalVpc                AsymmetricDecryptResponseProtectionLevelEnum = "EXTERNAL_VPC"
 )
 
+func (e AsymmetricDecryptResponseProtectionLevelEnum) ToPointer() *AsymmetricDecryptResponseProtectionLevelEnum {
+	return &e
+}
+
 func (e *AsymmetricDecryptResponseProtectionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROTECTION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "SOFTWARE":
@@ -33,10 +37,10 @@ func (e *AsymmetricDecryptResponseProtectionLevelEnum) UnmarshalJSON(data []byte
 	case "EXTERNAL":
 		fallthrough
 	case "EXTERNAL_VPC":
-		*e = AsymmetricDecryptResponseProtectionLevelEnum(s)
+		*e = AsymmetricDecryptResponseProtectionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AsymmetricDecryptResponseProtectionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AsymmetricDecryptResponseProtectionLevelEnum: %v", v)
 	}
 }
 

@@ -21,12 +21,16 @@ const (
 	MaximizeSpendBidStrategyPerformanceGoalTypeEnumBiddingStrategyPerformanceGoalTypeAvViewed    MaximizeSpendBidStrategyPerformanceGoalTypeEnum = "BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED"
 )
 
+func (e MaximizeSpendBidStrategyPerformanceGoalTypeEnum) ToPointer() *MaximizeSpendBidStrategyPerformanceGoalTypeEnum {
+	return &e
+}
+
 func (e *MaximizeSpendBidStrategyPerformanceGoalTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA":
@@ -42,10 +46,10 @@ func (e *MaximizeSpendBidStrategyPerformanceGoalTypeEnum) UnmarshalJSON(data []b
 	case "BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN":
 		fallthrough
 	case "BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED":
-		*e = MaximizeSpendBidStrategyPerformanceGoalTypeEnum(s)
+		*e = MaximizeSpendBidStrategyPerformanceGoalTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MaximizeSpendBidStrategyPerformanceGoalTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MaximizeSpendBidStrategyPerformanceGoalTypeEnum: %v", v)
 	}
 }
 

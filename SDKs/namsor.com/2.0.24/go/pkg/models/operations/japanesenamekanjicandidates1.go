@@ -14,7 +14,6 @@ type JapaneseNameKanjiCandidates1Security struct {
 type JapaneseNameKanjiCandidates1Request struct {
 	JapaneseGivenNameLatin string `pathParam:"style=simple,explode=false,name=japaneseGivenNameLatin"`
 	JapaneseSurnameLatin   string `pathParam:"style=simple,explode=false,name=japaneseSurnameLatin"`
-	KnownGender            string `pathParam:"style=simple,explode=false,name=knownGender"`
 }
 
 type JapaneseNameKanjiCandidates1Response struct {

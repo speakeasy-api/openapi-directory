@@ -5,6 +5,8 @@ package shared
 type OrderItem struct {
 	// The unique identifier of the product.
 	ID *string `json:"id,omitempty"`
+	// The number of installments for the specified product `id`.
+	Installments *int64 `json:"installments,omitempty"`
 	// The name of the product.
 	Name *string `json:"name,omitempty"`
 	// The number of items with the specified product `id` included in the order.

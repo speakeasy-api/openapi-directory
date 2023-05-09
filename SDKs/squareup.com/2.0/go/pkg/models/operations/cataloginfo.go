@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type CatalogInfoSecurity struct {
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type CatalogInfoResponse struct {
 	// Success
 	CatalogInfoResponse *shared.CatalogInfoResponse

@@ -21,12 +21,16 @@ const (
 	UpdateActionStatusEnumNotApplicable  UpdateActionStatusEnum = "not-applicable"
 )
 
+func (e UpdateActionStatusEnum) ToPointer() *UpdateActionStatusEnum {
+	return &e
+}
+
 func (e *UpdateActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "not-applied":
 		fallthrough
 	case "waiting-to-start":
@@ -44,9 +48,9 @@ func (e *UpdateActionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "scheduled":
 		fallthrough
 	case "not-applicable":
-		*e = UpdateActionStatusEnum(s)
+		*e = UpdateActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateActionStatusEnum: %v", v)
 	}
 }

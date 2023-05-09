@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,27 +17,25 @@ func main() {
         }),
     )
 
-    req := operations.DescribeServicesRequest{
-        DescribeServicesRequest: shared.DescribeServicesRequest{
-            FormatVersion: "corrupti",
-            MaxResults: 592845,
-            NextToken: "distinctio",
-            ServiceCode: "quibusdam",
-        },
-        MaxResults: "unde",
-        NextToken: "nulla",
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "illum",
-        XAmzCredential: "vel",
-        XAmzDate: "error",
-        XAmzSecurityToken: "deserunt",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "iure",
-        XAmzTarget: "AWSPriceListService.DescribeServices",
-    }
-
     ctx := context.Background()
-    res, err := s.DescribeServices(ctx, req)
+    res, err := s.DescribeServices(ctx, operations.DescribeServicesRequest{
+        DescribeServicesRequest: shared.DescribeServicesRequest{
+            FormatVersion: sdk.String("corrupti"),
+            MaxResults: sdk.Int64(592845),
+            NextToken: sdk.String("distinctio"),
+            ServiceCode: sdk.String("quibusdam"),
+        },
+        MaxResults: sdk.String("unde"),
+        NextToken: sdk.String("nulla"),
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("illum"),
+        XAmzCredential: sdk.String("vel"),
+        XAmzDate: sdk.String("error"),
+        XAmzSecurityToken: sdk.String("deserunt"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("iure"),
+        XAmzTarget: operations.DescribeServicesXAmzTargetEnumAwsPriceListServiceDescribeServices,
+    })
     if err != nil {
         log.Fatal(err)
     }

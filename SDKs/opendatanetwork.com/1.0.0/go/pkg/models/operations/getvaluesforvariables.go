@@ -18,17 +18,21 @@ const (
 	GetValuesForVariablesFormatEnumGoogle GetValuesForVariablesFormatEnum = "google"
 )
 
+func (e GetValuesForVariablesFormatEnum) ToPointer() *GetValuesForVariablesFormatEnum {
+	return &e
+}
+
 func (e *GetValuesForVariablesFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "google":
-		*e = GetValuesForVariablesFormatEnum(s)
+		*e = GetValuesForVariablesFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetValuesForVariablesFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetValuesForVariablesFormatEnum: %v", v)
 	}
 }
 

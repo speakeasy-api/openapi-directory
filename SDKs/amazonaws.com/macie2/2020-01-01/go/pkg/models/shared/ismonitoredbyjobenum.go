@@ -15,20 +15,24 @@ const (
 	IsMonitoredByJobEnumUnknown IsMonitoredByJobEnum = "UNKNOWN"
 )
 
+func (e IsMonitoredByJobEnum) ToPointer() *IsMonitoredByJobEnum {
+	return &e
+}
+
 func (e *IsMonitoredByJobEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRUE":
 		fallthrough
 	case "FALSE":
 		fallthrough
 	case "UNKNOWN":
-		*e = IsMonitoredByJobEnum(s)
+		*e = IsMonitoredByJobEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IsMonitoredByJobEnum: %s", s)
+		return fmt.Errorf("invalid value for IsMonitoredByJobEnum: %v", v)
 	}
 }

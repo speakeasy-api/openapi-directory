@@ -2,7 +2,7 @@
 
 package shared
 
-// LocationConfiguration - A remote location where a multi-location fleet can deploy EC2 instances for game hosting.
+// LocationConfiguration - A remote location where a multi-location fleet can deploy game servers for game hosting.
 type LocationConfiguration struct {
 	Location string `json:"Location"`
 }

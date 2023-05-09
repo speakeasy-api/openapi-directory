@@ -24,12 +24,16 @@ const (
 	IndexFieldTypeEnumDateArray    IndexFieldTypeEnum = "date-array"
 )
 
+func (e IndexFieldTypeEnum) ToPointer() *IndexFieldTypeEnum {
+	return &e
+}
+
 func (e *IndexFieldTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "int":
 		fallthrough
 	case "double":
@@ -51,9 +55,9 @@ func (e *IndexFieldTypeEnum) UnmarshalJSON(data []byte) error {
 	case "text-array":
 		fallthrough
 	case "date-array":
-		*e = IndexFieldTypeEnum(s)
+		*e = IndexFieldTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IndexFieldTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IndexFieldTypeEnum: %v", v)
 	}
 }

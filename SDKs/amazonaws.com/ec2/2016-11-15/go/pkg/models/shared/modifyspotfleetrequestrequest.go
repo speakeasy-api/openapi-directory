@@ -15,19 +15,23 @@ const (
 	ModifySpotFleetRequestRequestExcessCapacityTerminationPolicyEnumDefault       ModifySpotFleetRequestRequestExcessCapacityTerminationPolicyEnum = "default"
 )
 
+func (e ModifySpotFleetRequestRequestExcessCapacityTerminationPolicyEnum) ToPointer() *ModifySpotFleetRequestRequestExcessCapacityTerminationPolicyEnum {
+	return &e
+}
+
 func (e *ModifySpotFleetRequestRequestExcessCapacityTerminationPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "noTermination":
 		fallthrough
 	case "default":
-		*e = ModifySpotFleetRequestRequestExcessCapacityTerminationPolicyEnum(s)
+		*e = ModifySpotFleetRequestRequestExcessCapacityTerminationPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestExcessCapacityTerminationPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestExcessCapacityTerminationPolicyEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnumXilinx            ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum = "xilinx"
 )
 
+func (e ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum) ToPointer() *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum {
+	return &e
+}
+
 func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nvidia":
 		fallthrough
 	case "amd":
@@ -66,10 +74,10 @@ func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequ
 	case "amazon-web-services":
 		fallthrough
 	case "xilinx":
-		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum(s)
+		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum: %v", v)
 	}
 }
 
@@ -87,12 +95,16 @@ const (
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnumK520          ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum = "k520"
 )
 
+func (e ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum) ToPointer() *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum {
+	return &e
+}
+
 func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a100":
 		fallthrough
 	case "v100":
@@ -110,10 +122,10 @@ func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequ
 	case "inferentia":
 		fallthrough
 	case "k520":
-		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum(s)
+		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum: %v", v)
 	}
 }
 
@@ -131,21 +143,25 @@ const (
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnumInference ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum = "inference"
 )
 
+func (e ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum) ToPointer() *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum {
+	return &e
+}
+
 func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gpu":
 		fallthrough
 	case "fpga":
 		fallthrough
 	case "inference":
-		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum(s)
+		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum: %v", v)
 	}
 }
 
@@ -158,21 +174,25 @@ const (
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnumExcluded ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum = "excluded"
 )
 
+func (e ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum) ToPointer() *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum {
+	return &e
+}
+
 func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum(s)
+		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum: %v", v)
 	}
 }
 
@@ -191,21 +211,25 @@ const (
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnumExcluded ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum = "excluded"
 )
 
+func (e ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum) ToPointer() *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum {
+	return &e
+}
+
 func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum(s)
+		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum: %v", v)
 	}
 }
 
@@ -217,21 +241,25 @@ const (
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnumAmazonWebServices ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum = "amazon-web-services"
 )
 
+func (e ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum) ToPointer() *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum {
+	return &e
+}
+
 func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intel":
 		fallthrough
 	case "amd":
 		fallthrough
 	case "amazon-web-services":
-		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum(s)
+		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum: %v", v)
 	}
 }
 
@@ -242,19 +270,23 @@ const (
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnumPrevious ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum = "previous"
 )
 
+func (e ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum) ToPointer() *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum {
+	return &e
+}
+
 func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "previous":
-		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum(s)
+		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum: %v", v)
 	}
 }
 
@@ -267,21 +299,25 @@ const (
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnumExcluded ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum = "excluded"
 )
 
+func (e ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum) ToPointer() *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum {
+	return &e
+}
+
 func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum(s)
+		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum: %v", v)
 	}
 }
 
@@ -292,19 +328,23 @@ const (
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnumSsd ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum = "ssd"
 )
 
+func (e ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum) ToPointer() *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum {
+	return &e
+}
+
 func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hdd":
 		fallthrough
 	case "ssd":
-		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum(s)
+		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum: %v", v)
 	}
 }
 
@@ -1013,14 +1053,23 @@ const (
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR7g12xlarge     ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.12xlarge"
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR7g16xlarge     ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.16xlarge"
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR7gMetal        ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.metal"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumC6inMetal       ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "c6in.metal"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumM6inMetal       ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "m6in.metal"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumM6idnMetal      ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "m6idn.metal"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR6inMetal       ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r6in.metal"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR6idnMetal      ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum) ToPointer() *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum {
+	return &e
+}
+
 func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -2296,10 +2345,20 @@ func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceType
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum: %v", v)
 	}
 }
 

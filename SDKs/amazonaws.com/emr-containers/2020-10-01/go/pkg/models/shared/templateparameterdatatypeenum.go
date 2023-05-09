@@ -14,18 +14,22 @@ const (
 	TemplateParameterDataTypeEnumString TemplateParameterDataTypeEnum = "STRING"
 )
 
+func (e TemplateParameterDataTypeEnum) ToPointer() *TemplateParameterDataTypeEnum {
+	return &e
+}
+
 func (e *TemplateParameterDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NUMBER":
 		fallthrough
 	case "STRING":
-		*e = TemplateParameterDataTypeEnum(s)
+		*e = TemplateParameterDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemplateParameterDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TemplateParameterDataTypeEnum: %v", v)
 	}
 }

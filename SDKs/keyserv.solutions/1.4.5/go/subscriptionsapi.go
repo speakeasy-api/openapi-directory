@@ -84,9 +84,13 @@ func (s *subscriptionsAPI) SubscriptionsAPICount(ctx context.Context, request op
 
 	return res, nil
 }
+
 func (s *subscriptionsAPI) SubscriptionsAPIDeleteSubscription(ctx context.Context, request operations.SubscriptionsAPIDeleteSubscriptionRequest) (*operations.SubscriptionsAPIDeleteSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/SubscriptionsApi/{serial}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/SubscriptionsApi/{serial}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -123,9 +127,13 @@ func (s *subscriptionsAPI) SubscriptionsAPIDeleteSubscription(ctx context.Contex
 
 	return res, nil
 }
+
 func (s *subscriptionsAPI) SubscriptionsAPIDeleteSubscription2(ctx context.Context, request operations.SubscriptionsAPIDeleteSubscription2Request) (*operations.SubscriptionsAPIDeleteSubscription2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/SubscriptionsApi/{serial}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/SubscriptionsApi/{serial}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -162,6 +170,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIDeleteSubscription2(ctx context.Conte
 
 	return res, nil
 }
+
 func (s *subscriptionsAPI) SubscriptionsAPIDisable(ctx context.Context, request operations.SubscriptionsAPIDisableRequestBody) (*operations.SubscriptionsAPIDisableResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Disable"
@@ -205,6 +214,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIDisable(ctx context.Context, request 
 
 	return res, nil
 }
+
 func (s *subscriptionsAPI) SubscriptionsAPIDisable2(ctx context.Context, request operations.SubscriptionsAPIDisable2RequestBody) (*operations.SubscriptionsAPIDisable2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Disable"
@@ -248,6 +258,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIDisable2(ctx context.Context, request
 
 	return res, nil
 }
+
 func (s *subscriptionsAPI) SubscriptionsAPIEnable(ctx context.Context, request operations.SubscriptionsAPIEnableRequestBody) (*operations.SubscriptionsAPIEnableResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Enable"
@@ -291,6 +302,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIEnable(ctx context.Context, request o
 
 	return res, nil
 }
+
 func (s *subscriptionsAPI) SubscriptionsAPIEnable2(ctx context.Context, request operations.SubscriptionsAPIEnable2RequestBody) (*operations.SubscriptionsAPIEnable2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Enable"
@@ -334,6 +346,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIEnable2(ctx context.Context, request 
 
 	return res, nil
 }
+
 func (s *subscriptionsAPI) SubscriptionsAPIFind(ctx context.Context, request operations.SubscriptionsAPIFindRequestBody) (*operations.SubscriptionsAPIFindResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Find"
@@ -386,6 +399,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIFind(ctx context.Context, request ope
 
 	return res, nil
 }
+
 func (s *subscriptionsAPI) SubscriptionsAPIList(ctx context.Context, request operations.SubscriptionsAPIListRequest) (*operations.SubscriptionsAPIListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/List"
@@ -442,6 +456,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIList(ctx context.Context, request ope
 
 	return res, nil
 }
+
 func (s *subscriptionsAPI) SubscriptionsAPIPutSubscription(ctx context.Context, request operations.SubscriptionsAPIPutSubscriptionRequestBody) (*operations.SubscriptionsAPIPutSubscriptionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi"
@@ -485,6 +500,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIPutSubscription(ctx context.Context, 
 
 	return res, nil
 }
+
 func (s *subscriptionsAPI) SubscriptionsAPIPutSubscription2(ctx context.Context, request operations.SubscriptionsAPIPutSubscription2RequestBody) (*operations.SubscriptionsAPIPutSubscription2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi"
@@ -528,6 +544,7 @@ func (s *subscriptionsAPI) SubscriptionsAPIPutSubscription2(ctx context.Context,
 
 	return res, nil
 }
+
 func (s *subscriptionsAPI) SubscriptionsAPISave(ctx context.Context, request operations.SubscriptionsAPISaveRequestBody) (*operations.SubscriptionsAPISaveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/SubscriptionsApi/Save"

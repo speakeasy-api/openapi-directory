@@ -21,12 +21,16 @@ const (
 	DeviceTypeEnumSmartDisplay DeviceTypeEnum = "smartDisplay"
 )
 
+func (e DeviceTypeEnum) ToPointer() *DeviceTypeEnum {
+	return &e
+}
+
 func (e *DeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "phone":
@@ -42,10 +46,10 @@ func (e *DeviceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "headMounted":
 		fallthrough
 	case "smartDisplay":
-		*e = DeviceTypeEnum(s)
+		*e = DeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceTypeEnum: %v", v)
 	}
 }
 

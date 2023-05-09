@@ -28,12 +28,16 @@ const (
 	RenderResponseDataStatusEnumFailed    RenderResponseDataStatusEnum = "failed"
 )
 
+func (e RenderResponseDataStatusEnum) ToPointer() *RenderResponseDataStatusEnum {
+	return &e
+}
+
 func (e *RenderResponseDataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "queued":
 		fallthrough
 	case "fetching":
@@ -45,10 +49,10 @@ func (e *RenderResponseDataStatusEnum) UnmarshalJSON(data []byte) error {
 	case "done":
 		fallthrough
 	case "failed":
-		*e = RenderResponseDataStatusEnum(s)
+		*e = RenderResponseDataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RenderResponseDataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RenderResponseDataStatusEnum: %v", v)
 	}
 }
 

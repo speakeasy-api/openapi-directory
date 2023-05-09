@@ -16,17 +16,21 @@ const (
 	UpdateInstanceAccessControlAttributeConfigurationXAmzTargetEnumSwbExternalServiceUpdateInstanceAccessControlAttributeConfiguration UpdateInstanceAccessControlAttributeConfigurationXAmzTargetEnum = "SWBExternalService.UpdateInstanceAccessControlAttributeConfiguration"
 )
 
+func (e UpdateInstanceAccessControlAttributeConfigurationXAmzTargetEnum) ToPointer() *UpdateInstanceAccessControlAttributeConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateInstanceAccessControlAttributeConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.UpdateInstanceAccessControlAttributeConfiguration":
-		*e = UpdateInstanceAccessControlAttributeConfigurationXAmzTargetEnum(s)
+		*e = UpdateInstanceAccessControlAttributeConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInstanceAccessControlAttributeConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInstanceAccessControlAttributeConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

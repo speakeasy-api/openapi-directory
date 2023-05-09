@@ -16,17 +16,21 @@ const (
 	GetInlinePolicyForPermissionSetXAmzTargetEnumSwbExternalServiceGetInlinePolicyForPermissionSet GetInlinePolicyForPermissionSetXAmzTargetEnum = "SWBExternalService.GetInlinePolicyForPermissionSet"
 )
 
+func (e GetInlinePolicyForPermissionSetXAmzTargetEnum) ToPointer() *GetInlinePolicyForPermissionSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetInlinePolicyForPermissionSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.GetInlinePolicyForPermissionSet":
-		*e = GetInlinePolicyForPermissionSetXAmzTargetEnum(s)
+		*e = GetInlinePolicyForPermissionSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInlinePolicyForPermissionSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInlinePolicyForPermissionSetXAmzTargetEnum: %v", v)
 	}
 }
 

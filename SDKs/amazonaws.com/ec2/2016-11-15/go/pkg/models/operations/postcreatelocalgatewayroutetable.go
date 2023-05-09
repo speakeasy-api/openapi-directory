@@ -15,17 +15,21 @@ const (
 	POSTCreateLocalGatewayRouteTableActionEnumCreateLocalGatewayRouteTable POSTCreateLocalGatewayRouteTableActionEnum = "CreateLocalGatewayRouteTable"
 )
 
+func (e POSTCreateLocalGatewayRouteTableActionEnum) ToPointer() *POSTCreateLocalGatewayRouteTableActionEnum {
+	return &e
+}
+
 func (e *POSTCreateLocalGatewayRouteTableActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateLocalGatewayRouteTable":
-		*e = POSTCreateLocalGatewayRouteTableActionEnum(s)
+		*e = POSTCreateLocalGatewayRouteTableActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateLocalGatewayRouteTableActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateLocalGatewayRouteTableActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateLocalGatewayRouteTableVersionEnumTwoThousandAndSixteen1115 POSTCreateLocalGatewayRouteTableVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateLocalGatewayRouteTableVersionEnum) ToPointer() *POSTCreateLocalGatewayRouteTableVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateLocalGatewayRouteTableVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateLocalGatewayRouteTableVersionEnum(s)
+		*e = POSTCreateLocalGatewayRouteTableVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateLocalGatewayRouteTableVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateLocalGatewayRouteTableVersionEnum: %v", v)
 	}
 }
 

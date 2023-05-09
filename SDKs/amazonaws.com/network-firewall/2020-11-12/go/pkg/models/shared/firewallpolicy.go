@@ -11,4 +11,5 @@ type FirewallPolicy struct {
 	StatelessDefaultActions         []string                      `json:"StatelessDefaultActions"`
 	StatelessFragmentDefaultActions []string                      `json:"StatelessFragmentDefaultActions"`
 	StatelessRuleGroupReferences    []StatelessRuleGroupReference `json:"StatelessRuleGroupReferences,omitempty"`
+	TLSInspectionConfigurationArn   *string                       `json:"TLSInspectionConfigurationArn,omitempty"`
 }

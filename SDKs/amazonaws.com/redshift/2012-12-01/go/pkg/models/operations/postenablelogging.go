@@ -15,17 +15,21 @@ const (
 	POSTEnableLoggingActionEnumEnableLogging POSTEnableLoggingActionEnum = "EnableLogging"
 )
 
+func (e POSTEnableLoggingActionEnum) ToPointer() *POSTEnableLoggingActionEnum {
+	return &e
+}
+
 func (e *POSTEnableLoggingActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableLogging":
-		*e = POSTEnableLoggingActionEnum(s)
+		*e = POSTEnableLoggingActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableLoggingActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableLoggingActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTEnableLoggingVersionEnumTwoThousandAndTwelve1201 POSTEnableLoggingVersionEnum = "2012-12-01"
 )
 
+func (e POSTEnableLoggingVersionEnum) ToPointer() *POSTEnableLoggingVersionEnum {
+	return &e
+}
+
 func (e *POSTEnableLoggingVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTEnableLoggingVersionEnum(s)
+		*e = POSTEnableLoggingVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableLoggingVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableLoggingVersionEnum: %v", v)
 	}
 }
 

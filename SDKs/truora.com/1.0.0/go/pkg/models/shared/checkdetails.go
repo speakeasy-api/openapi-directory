@@ -20,12 +20,16 @@ const (
 	CheckDetailsGroupEnumUnknown      CheckDetailsGroupEnum = "unknown"
 )
 
+func (e CheckDetailsGroupEnum) ToPointer() *CheckDetailsGroupEnum {
+	return &e
+}
+
 func (e *CheckDetailsGroupEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "profile":
 		fallthrough
 	case "legal":
@@ -39,10 +43,10 @@ func (e *CheckDetailsGroupEnum) UnmarshalJSON(data []byte) error {
 	case "media":
 		fallthrough
 	case "unknown":
-		*e = CheckDetailsGroupEnum(s)
+		*e = CheckDetailsGroupEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckDetailsGroupEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckDetailsGroupEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	CheckDetailsResultEnumError    CheckDetailsResultEnum = "error"
 )
 
+func (e CheckDetailsResultEnum) ToPointer() *CheckDetailsResultEnum {
+	return &e
+}
+
 func (e *CheckDetailsResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "found":
@@ -69,10 +77,10 @@ func (e *CheckDetailsResultEnum) UnmarshalJSON(data []byte) error {
 	case "not_found":
 		fallthrough
 	case "error":
-		*e = CheckDetailsResultEnum(s)
+		*e = CheckDetailsResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckDetailsResultEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckDetailsResultEnum: %v", v)
 	}
 }
 

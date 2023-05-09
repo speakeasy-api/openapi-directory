@@ -22,12 +22,16 @@ const (
 	GetPeopleSortEnumUpdatedAt GetPeopleSortEnum = "updated_at"
 )
 
+func (e GetPeopleSortEnum) ToPointer() *GetPeopleSortEnum {
+	return &e
+}
+
 func (e *GetPeopleSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created_at":
 		fallthrough
 	case "first_name":
@@ -35,10 +39,10 @@ func (e *GetPeopleSortEnum) UnmarshalJSON(data []byte) error {
 	case "last_name":
 		fallthrough
 	case "updated_at":
-		*e = GetPeopleSortEnum(s)
+		*e = GetPeopleSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPeopleSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPeopleSortEnum: %v", v)
 	}
 }
 

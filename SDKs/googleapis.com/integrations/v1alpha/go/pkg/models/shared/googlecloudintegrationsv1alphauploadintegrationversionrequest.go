@@ -16,21 +16,25 @@ const (
 	GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequestFileFormatEnumYaml                  GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequestFileFormatEnum = "YAML"
 )
 
+func (e GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequestFileFormatEnum) ToPointer() *GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequestFileFormatEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequestFileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILE_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "JSON":
 		fallthrough
 	case "YAML":
-		*e = GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequestFileFormatEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequestFileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequestFileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequestFileFormatEnum: %v", v)
 	}
 }
 

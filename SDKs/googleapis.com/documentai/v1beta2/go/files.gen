@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -53,6 +54,7 @@ pkg/models/shared/googleclouddocumentaiv1beta2documentpagelayout.go
 pkg/models/shared/googleclouddocumentaiv1beta2documentpagedetectedlanguage.go
 pkg/models/shared/googleclouddocumentaiv1beta2documentpagematrix.go
 pkg/models/shared/googleclouddocumentaiv1beta2documentpagetoken.go
+pkg/models/shared/googleclouddocumentaiv1beta2documentpagetokenstyleinfo.go
 pkg/models/shared/googleclouddocumentaiv1beta2documentpagetokendetectedbreak.go
 pkg/models/shared/googleclouddocumentaiv1beta2documentpagetable.go
 pkg/models/shared/googleclouddocumentaiv1beta2documentpagetabletablerow.go
@@ -79,4 +81,6 @@ pkg/models/shared/googletypedatetime.go
 pkg/models/shared/googletypetimezone.go
 pkg/models/shared/googletypedate.go
 pkg/models/shared/googletypepostaladdress.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

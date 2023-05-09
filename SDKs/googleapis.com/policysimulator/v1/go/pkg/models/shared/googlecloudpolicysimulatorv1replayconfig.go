@@ -15,19 +15,23 @@ const (
 	GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnumRecentAccesses       GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum = "RECENT_ACCESSES"
 )
 
+func (e GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum) ToPointer() *GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "RECENT_ACCESSES":
-		*e = GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum(s)
+		*e = GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum: %v", v)
 	}
 }
 

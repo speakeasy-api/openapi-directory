@@ -14,17 +14,21 @@ const (
 	PreviewContentTypeEnumAudioMp3 PreviewContentTypeEnum = "audio/mp3"
 )
 
+func (e PreviewContentTypeEnum) ToPointer() *PreviewContentTypeEnum {
+	return &e
+}
+
 func (e *PreviewContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "audio/mp3":
-		*e = PreviewContentTypeEnum(s)
+		*e = PreviewContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PreviewContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PreviewContentTypeEnum: %v", v)
 	}
 }
 

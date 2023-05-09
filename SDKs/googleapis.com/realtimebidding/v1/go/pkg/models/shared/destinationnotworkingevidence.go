@@ -16,21 +16,25 @@ const (
 	DestinationNotWorkingEvidenceDNSErrorEnumGoogleCrawlerDNSIssue DestinationNotWorkingEvidenceDNSErrorEnum = "GOOGLE_CRAWLER_DNS_ISSUE"
 )
 
+func (e DestinationNotWorkingEvidenceDNSErrorEnum) ToPointer() *DestinationNotWorkingEvidenceDNSErrorEnum {
+	return &e
+}
+
 func (e *DestinationNotWorkingEvidenceDNSErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DNS_ERROR_UNSPECIFIED":
 		fallthrough
 	case "ERROR_DNS":
 		fallthrough
 	case "GOOGLE_CRAWLER_DNS_ISSUE":
-		*e = DestinationNotWorkingEvidenceDNSErrorEnum(s)
+		*e = DestinationNotWorkingEvidenceDNSErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinationNotWorkingEvidenceDNSErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinationNotWorkingEvidenceDNSErrorEnum: %v", v)
 	}
 }
 
@@ -42,19 +46,23 @@ const (
 	DestinationNotWorkingEvidenceInvalidPageEnumEmptyOrErrorPage       DestinationNotWorkingEvidenceInvalidPageEnum = "EMPTY_OR_ERROR_PAGE"
 )
 
+func (e DestinationNotWorkingEvidenceInvalidPageEnum) ToPointer() *DestinationNotWorkingEvidenceInvalidPageEnum {
+	return &e
+}
+
 func (e *DestinationNotWorkingEvidenceInvalidPageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVALID_PAGE_UNSPECIFIED":
 		fallthrough
 	case "EMPTY_OR_ERROR_PAGE":
-		*e = DestinationNotWorkingEvidenceInvalidPageEnum(s)
+		*e = DestinationNotWorkingEvidenceInvalidPageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinationNotWorkingEvidenceInvalidPageEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinationNotWorkingEvidenceInvalidPageEnum: %v", v)
 	}
 }
 
@@ -68,12 +76,16 @@ const (
 	DestinationNotWorkingEvidencePlatformEnumIos                 DestinationNotWorkingEvidencePlatformEnum = "IOS"
 )
 
+func (e DestinationNotWorkingEvidencePlatformEnum) ToPointer() *DestinationNotWorkingEvidencePlatformEnum {
+	return &e
+}
+
 func (e *DestinationNotWorkingEvidencePlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_UNSPECIFIED":
 		fallthrough
 	case "PERSONAL_COMPUTER":
@@ -81,10 +93,10 @@ func (e *DestinationNotWorkingEvidencePlatformEnum) UnmarshalJSON(data []byte) e
 	case "ANDROID":
 		fallthrough
 	case "IOS":
-		*e = DestinationNotWorkingEvidencePlatformEnum(s)
+		*e = DestinationNotWorkingEvidencePlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinationNotWorkingEvidencePlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinationNotWorkingEvidencePlatformEnum: %v", v)
 	}
 }
 
@@ -99,12 +111,16 @@ const (
 	DestinationNotWorkingEvidenceRedirectionErrorEnumRedirectErrorUnknown        DestinationNotWorkingEvidenceRedirectionErrorEnum = "REDIRECT_ERROR_UNKNOWN"
 )
 
+func (e DestinationNotWorkingEvidenceRedirectionErrorEnum) ToPointer() *DestinationNotWorkingEvidenceRedirectionErrorEnum {
+	return &e
+}
+
 func (e *DestinationNotWorkingEvidenceRedirectionErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REDIRECTION_ERROR_UNSPECIFIED":
 		fallthrough
 	case "TOO_MANY_REDIRECTS":
@@ -114,10 +130,10 @@ func (e *DestinationNotWorkingEvidenceRedirectionErrorEnum) UnmarshalJSON(data [
 	case "EMPTY_REDIRECT":
 		fallthrough
 	case "REDIRECT_ERROR_UNKNOWN":
-		*e = DestinationNotWorkingEvidenceRedirectionErrorEnum(s)
+		*e = DestinationNotWorkingEvidenceRedirectionErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinationNotWorkingEvidenceRedirectionErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinationNotWorkingEvidenceRedirectionErrorEnum: %v", v)
 	}
 }
 
@@ -131,12 +147,16 @@ const (
 	DestinationNotWorkingEvidenceURLRejectedEnumURLRejectedUnknown     DestinationNotWorkingEvidenceURLRejectedEnum = "URL_REJECTED_UNKNOWN"
 )
 
+func (e DestinationNotWorkingEvidenceURLRejectedEnum) ToPointer() *DestinationNotWorkingEvidenceURLRejectedEnum {
+	return &e
+}
+
 func (e *DestinationNotWorkingEvidenceURLRejectedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "URL_REJECTED_UNSPECIFIED":
 		fallthrough
 	case "BAD_REQUEST":
@@ -144,10 +164,10 @@ func (e *DestinationNotWorkingEvidenceURLRejectedEnum) UnmarshalJSON(data []byte
 	case "MALFORMED_URL":
 		fallthrough
 	case "URL_REJECTED_UNKNOWN":
-		*e = DestinationNotWorkingEvidenceURLRejectedEnum(s)
+		*e = DestinationNotWorkingEvidenceURLRejectedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinationNotWorkingEvidenceURLRejectedEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinationNotWorkingEvidenceURLRejectedEnum: %v", v)
 	}
 }
 

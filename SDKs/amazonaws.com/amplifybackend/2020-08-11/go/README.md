@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/amplifyback
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,23 +27,21 @@ func main() {
         }),
     )
 
-    req := operations.CloneBackendRequest{
+    ctx := context.Background()
+    res, err := s.CloneBackend(ctx, operations.CloneBackendRequest{
         RequestBody: operations.CloneBackendRequestBody{
             TargetEnvironmentName: "corrupti",
         },
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
         AppID: "vel",
         BackendEnvironmentName: "error",
-    }
-
-    ctx := context.Background()
-    res, err := s.CloneBackend(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -59,39 +56,39 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CloneBackend` - This operation clones an existing backend.
-* `CreateBackend` - This operation creates a backend for an Amplify app. Backends are automatically created at the time of app creation.
-* `CreateBackendAPI` - Creates a new backend API resource.
-* `CreateBackendAuth` - Creates a new backend authentication resource.
-* `CreateBackendConfig` - Creates a config object for a backend.
-* `CreateBackendStorage` - Creates a backend storage resource.
-* `CreateToken` - Generates a one-time challenge code to authenticate a user into your Amplify Admin UI.
-* `DeleteBackend` - Removes an existing environment from your Amplify project.
-* `DeleteBackendAPI` - Deletes an existing backend API resource.
-* `DeleteBackendAuth` - Deletes an existing backend authentication resource.
-* `DeleteBackendStorage` - Removes the specified backend storage resource.
-* `DeleteToken` - Deletes the challenge token based on the given appId and sessionId.
-* `GenerateBackendAPIModels` - Generates a model schema for an existing backend API resource.
-* `GetBackend` - Provides project-level details for your Amplify UI project.
-* `GetBackendAPI` - Gets the details for a backend API.
-* `GetBackendAPIModels` - Gets a model introspection schema for an existing backend API resource.
-* `GetBackendAuth` - Gets a backend auth details.
-* `GetBackendJob` - Returns information about a specific job.
-* `GetBackendStorage` - Gets details for a backend storage resource.
-* `GetToken` - Gets the challenge token based on the given appId and sessionId.
-* `ImportBackendAuth` - Imports an existing backend authentication resource.
-* `ImportBackendStorage` - Imports an existing backend storage resource.
-* `ListBackendJobs` - Lists the jobs for the backend of an Amplify app.
-* `ListS3Buckets` - The list of S3 buckets in your account.
-* `RemoveAllBackends` - Removes all backend environments from your Amplify project.
-* `RemoveBackendConfig` - Removes the AWS resources required to access the Amplify Admin UI.
-* `UpdateBackendAPI` - Updates an existing backend API resource.
-* `UpdateBackendAuth` - Updates an existing backend authentication resource.
-* `UpdateBackendConfig` - Updates the AWS resources required to access the Amplify Admin UI.
-* `UpdateBackendJob` - Updates a specific job.
-* `UpdateBackendStorage` - Updates an existing backend storage resource.
+* [CloneBackend](docs/sdk/README.md#clonebackend) - This operation clones an existing backend.
+* [CreateBackend](docs/sdk/README.md#createbackend) - This operation creates a backend for an Amplify app. Backends are automatically created at the time of app creation.
+* [CreateBackendAPI](docs/sdk/README.md#createbackendapi) - Creates a new backend API resource.
+* [CreateBackendAuth](docs/sdk/README.md#createbackendauth) - Creates a new backend authentication resource.
+* [CreateBackendConfig](docs/sdk/README.md#createbackendconfig) - Creates a config object for a backend.
+* [CreateBackendStorage](docs/sdk/README.md#createbackendstorage) - Creates a backend storage resource.
+* [CreateToken](docs/sdk/README.md#createtoken) - Generates a one-time challenge code to authenticate a user into your Amplify Admin UI.
+* [DeleteBackend](docs/sdk/README.md#deletebackend) - Removes an existing environment from your Amplify project.
+* [DeleteBackendAPI](docs/sdk/README.md#deletebackendapi) - Deletes an existing backend API resource.
+* [DeleteBackendAuth](docs/sdk/README.md#deletebackendauth) - Deletes an existing backend authentication resource.
+* [DeleteBackendStorage](docs/sdk/README.md#deletebackendstorage) - Removes the specified backend storage resource.
+* [DeleteToken](docs/sdk/README.md#deletetoken) - Deletes the challenge token based on the given appId and sessionId.
+* [GenerateBackendAPIModels](docs/sdk/README.md#generatebackendapimodels) - Generates a model schema for an existing backend API resource.
+* [GetBackend](docs/sdk/README.md#getbackend) - Provides project-level details for your Amplify UI project.
+* [GetBackendAPI](docs/sdk/README.md#getbackendapi) - Gets the details for a backend API.
+* [GetBackendAPIModels](docs/sdk/README.md#getbackendapimodels) - Gets a model introspection schema for an existing backend API resource.
+* [GetBackendAuth](docs/sdk/README.md#getbackendauth) - Gets a backend auth details.
+* [GetBackendJob](docs/sdk/README.md#getbackendjob) - Returns information about a specific job.
+* [GetBackendStorage](docs/sdk/README.md#getbackendstorage) - Gets details for a backend storage resource.
+* [GetToken](docs/sdk/README.md#gettoken) - Gets the challenge token based on the given appId and sessionId.
+* [ImportBackendAuth](docs/sdk/README.md#importbackendauth) - Imports an existing backend authentication resource.
+* [ImportBackendStorage](docs/sdk/README.md#importbackendstorage) - Imports an existing backend storage resource.
+* [ListBackendJobs](docs/sdk/README.md#listbackendjobs) - Lists the jobs for the backend of an Amplify app.
+* [ListS3Buckets](docs/sdk/README.md#lists3buckets) - The list of S3 buckets in your account.
+* [RemoveAllBackends](docs/sdk/README.md#removeallbackends) - Removes all backend environments from your Amplify project.
+* [RemoveBackendConfig](docs/sdk/README.md#removebackendconfig) - Removes the AWS resources required to access the Amplify Admin UI.
+* [UpdateBackendAPI](docs/sdk/README.md#updatebackendapi) - Updates an existing backend API resource.
+* [UpdateBackendAuth](docs/sdk/README.md#updatebackendauth) - Updates an existing backend authentication resource.
+* [UpdateBackendConfig](docs/sdk/README.md#updatebackendconfig) - Updates the AWS resources required to access the Amplify Admin UI.
+* [UpdateBackendJob](docs/sdk/README.md#updatebackendjob) - Updates a specific job.
+* [UpdateBackendStorage](docs/sdk/README.md#updatebackendstorage) - Updates an existing backend storage resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

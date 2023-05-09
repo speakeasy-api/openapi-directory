@@ -19,12 +19,16 @@ const (
 	MemoryEventEventTypeEnumExternalStorageMeasured    MemoryEventEventTypeEnum = "EXTERNAL_STORAGE_MEASURED"
 )
 
+func (e MemoryEventEventTypeEnum) ToPointer() *MemoryEventEventTypeEnum {
+	return &e
+}
+
 func (e *MemoryEventEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEMORY_EVENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RAM_MEASURED":
@@ -36,10 +40,10 @@ func (e *MemoryEventEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "EXTERNAL_STORAGE_REMOVED":
 		fallthrough
 	case "EXTERNAL_STORAGE_MEASURED":
-		*e = MemoryEventEventTypeEnum(s)
+		*e = MemoryEventEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MemoryEventEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MemoryEventEventTypeEnum: %v", v)
 	}
 }
 

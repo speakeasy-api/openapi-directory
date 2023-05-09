@@ -307,12 +307,16 @@ const (
 	FilterPairTypeEnumFilterPublisherTrafficSource                             FilterPairTypeEnum = "FILTER_PUBLISHER_TRAFFIC_SOURCE"
 )
 
+func (e FilterPairTypeEnum) ToPointer() *FilterPairTypeEnum {
+	return &e
+}
+
 func (e *FilterPairTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILTER_UNKNOWN":
 		fallthrough
 	case "FILTER_DATE":
@@ -900,10 +904,10 @@ func (e *FilterPairTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FILTER_TRUEVIEW_TARGETING_EXPANSION":
 		fallthrough
 	case "FILTER_PUBLISHER_TRAFFIC_SOURCE":
-		*e = FilterPairTypeEnum(s)
+		*e = FilterPairTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterPairTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterPairTypeEnum: %v", v)
 	}
 }
 

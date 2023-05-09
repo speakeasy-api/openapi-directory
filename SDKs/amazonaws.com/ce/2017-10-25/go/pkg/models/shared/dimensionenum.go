@@ -46,12 +46,16 @@ const (
 	DimensionEnumAnomalyTotalImpactPercentage DimensionEnum = "ANOMALY_TOTAL_IMPACT_PERCENTAGE"
 )
 
+func (e DimensionEnum) ToPointer() *DimensionEnum {
+	return &e
+}
+
 func (e *DimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AZ":
 		fallthrough
 	case "INSTANCE_TYPE":
@@ -119,9 +123,9 @@ func (e *DimensionEnum) UnmarshalJSON(data []byte) error {
 	case "ANOMALY_TOTAL_IMPACT_ABSOLUTE":
 		fallthrough
 	case "ANOMALY_TOTAL_IMPACT_PERCENTAGE":
-		*e = DimensionEnum(s)
+		*e = DimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for DimensionEnum: %v", v)
 	}
 }

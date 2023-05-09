@@ -15,17 +15,21 @@ const (
 	POSTRemoveListenerCertificatesActionEnumRemoveListenerCertificates POSTRemoveListenerCertificatesActionEnum = "RemoveListenerCertificates"
 )
 
+func (e POSTRemoveListenerCertificatesActionEnum) ToPointer() *POSTRemoveListenerCertificatesActionEnum {
+	return &e
+}
+
 func (e *POSTRemoveListenerCertificatesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RemoveListenerCertificates":
-		*e = POSTRemoveListenerCertificatesActionEnum(s)
+		*e = POSTRemoveListenerCertificatesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRemoveListenerCertificatesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRemoveListenerCertificatesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRemoveListenerCertificatesVersionEnumTwoThousandAndFifteen1201 POSTRemoveListenerCertificatesVersionEnum = "2015-12-01"
 )
 
+func (e POSTRemoveListenerCertificatesVersionEnum) ToPointer() *POSTRemoveListenerCertificatesVersionEnum {
+	return &e
+}
+
 func (e *POSTRemoveListenerCertificatesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = POSTRemoveListenerCertificatesVersionEnum(s)
+		*e = POSTRemoveListenerCertificatesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRemoveListenerCertificatesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRemoveListenerCertificatesVersionEnum: %v", v)
 	}
 }
 

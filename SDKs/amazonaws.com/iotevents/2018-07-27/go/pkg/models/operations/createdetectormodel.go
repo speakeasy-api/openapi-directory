@@ -23,19 +23,23 @@ const (
 	CreateDetectorModelRequestBodyEvaluationMethodEnumSerial CreateDetectorModelRequestBodyEvaluationMethodEnum = "SERIAL"
 )
 
+func (e CreateDetectorModelRequestBodyEvaluationMethodEnum) ToPointer() *CreateDetectorModelRequestBodyEvaluationMethodEnum {
+	return &e
+}
+
 func (e *CreateDetectorModelRequestBodyEvaluationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BATCH":
 		fallthrough
 	case "SERIAL":
-		*e = CreateDetectorModelRequestBodyEvaluationMethodEnum(s)
+		*e = CreateDetectorModelRequestBodyEvaluationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDetectorModelRequestBodyEvaluationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDetectorModelRequestBodyEvaluationMethodEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DescribeExperienceXAmzTargetEnumAwsKendraFrontendServiceDescribeExperience DescribeExperienceXAmzTargetEnum = "AWSKendraFrontendService.DescribeExperience"
 )
 
+func (e DescribeExperienceXAmzTargetEnum) ToPointer() *DescribeExperienceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeExperienceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.DescribeExperience":
-		*e = DescribeExperienceXAmzTargetEnum(s)
+		*e = DescribeExperienceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeExperienceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeExperienceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -85,7 +85,10 @@ func (s *customers) GetSetupV1Customers(ctx context.Context, request operations.
 // <p>Use this endpoint to return a <b>Customer</b> object. A valid <b>customer id</b> is required. Find customer id's by using the <i>GET /setup/v1/customers</i> endpoint.</p>
 func (s *customers) GetSetupV1CustomersID(ctx context.Context, request operations.GetSetupV1CustomersIDRequest) (*operations.GetSetupV1CustomersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/customers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/customers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +133,10 @@ func (s *customers) GetSetupV1CustomersID(ctx context.Context, request operation
 // <p>Use this endpoint to return the <b>Customer</b> object. A valid <b>customer id</b> is required. Find customer id's using the <i>GET /setup/v1/customers</i> endpoint.</p>
 func (s *customers) GetSetupV1CustomersIDPrivacy(ctx context.Context, request operations.GetSetupV1CustomersIDPrivacyRequest) (*operations.GetSetupV1CustomersIDPrivacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/customers/{id}/privacy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/customers/{id}/privacy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

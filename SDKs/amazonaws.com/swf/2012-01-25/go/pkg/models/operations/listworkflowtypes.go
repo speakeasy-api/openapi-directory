@@ -16,17 +16,21 @@ const (
 	ListWorkflowTypesXAmzTargetEnumSimpleWorkflowServiceListWorkflowTypes ListWorkflowTypesXAmzTargetEnum = "SimpleWorkflowService.ListWorkflowTypes"
 )
 
+func (e ListWorkflowTypesXAmzTargetEnum) ToPointer() *ListWorkflowTypesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListWorkflowTypesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleWorkflowService.ListWorkflowTypes":
-		*e = ListWorkflowTypesXAmzTargetEnum(s)
+		*e = ListWorkflowTypesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListWorkflowTypesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListWorkflowTypesXAmzTargetEnum: %v", v)
 	}
 }
 

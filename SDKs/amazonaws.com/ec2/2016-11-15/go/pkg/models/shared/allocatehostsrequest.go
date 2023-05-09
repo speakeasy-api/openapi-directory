@@ -15,19 +15,23 @@ const (
 	AllocateHostsRequestAutoPlacementEnumOff AllocateHostsRequestAutoPlacementEnum = "off"
 )
 
+func (e AllocateHostsRequestAutoPlacementEnum) ToPointer() *AllocateHostsRequestAutoPlacementEnum {
+	return &e
+}
+
 func (e *AllocateHostsRequestAutoPlacementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on":
 		fallthrough
 	case "off":
-		*e = AllocateHostsRequestAutoPlacementEnum(s)
+		*e = AllocateHostsRequestAutoPlacementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllocateHostsRequestAutoPlacementEnum: %s", s)
+		return fmt.Errorf("invalid value for AllocateHostsRequestAutoPlacementEnum: %v", v)
 	}
 }
 
@@ -122,12 +126,16 @@ const (
 	AllocateHostsRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       AllocateHostsRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e AllocateHostsRequestTagSpecificationsResourceTypeEnum) ToPointer() *AllocateHostsRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *AllocateHostsRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -297,10 +305,10 @@ func (e *AllocateHostsRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(da
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = AllocateHostsRequestTagSpecificationsResourceTypeEnum(s)
+		*e = AllocateHostsRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllocateHostsRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AllocateHostsRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DescribeConformancePackComplianceXAmzTargetEnumStarlingDoveServiceDescribeConformancePackCompliance DescribeConformancePackComplianceXAmzTargetEnum = "StarlingDoveService.DescribeConformancePackCompliance"
 )
 
+func (e DescribeConformancePackComplianceXAmzTargetEnum) ToPointer() *DescribeConformancePackComplianceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeConformancePackComplianceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DescribeConformancePackCompliance":
-		*e = DescribeConformancePackComplianceXAmzTargetEnum(s)
+		*e = DescribeConformancePackComplianceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeConformancePackComplianceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeConformancePackComplianceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetUserPoolMfaConfigXAmzTargetEnumAwsCognitoIdentityProviderServiceGetUserPoolMfaConfig GetUserPoolMfaConfigXAmzTargetEnum = "AWSCognitoIdentityProviderService.GetUserPoolMfaConfig"
 )
 
+func (e GetUserPoolMfaConfigXAmzTargetEnum) ToPointer() *GetUserPoolMfaConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetUserPoolMfaConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.GetUserPoolMfaConfig":
-		*e = GetUserPoolMfaConfigXAmzTargetEnum(s)
+		*e = GetUserPoolMfaConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUserPoolMfaConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUserPoolMfaConfigXAmzTargetEnum: %v", v)
 	}
 }
 

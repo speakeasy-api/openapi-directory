@@ -16,17 +16,21 @@ const (
 	AddTagsToCertificateXAmzTargetEnumCertificateManagerAddTagsToCertificate AddTagsToCertificateXAmzTargetEnum = "CertificateManager.AddTagsToCertificate"
 )
 
+func (e AddTagsToCertificateXAmzTargetEnum) ToPointer() *AddTagsToCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddTagsToCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CertificateManager.AddTagsToCertificate":
-		*e = AddTagsToCertificateXAmzTargetEnum(s)
+		*e = AddTagsToCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddTagsToCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddTagsToCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

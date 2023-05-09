@@ -18,12 +18,16 @@ const (
 	FloodlightActivityCacheBustingTypeEnumColdFusion       FloodlightActivityCacheBustingTypeEnum = "COLD_FUSION"
 )
 
+func (e FloodlightActivityCacheBustingTypeEnum) ToPointer() *FloodlightActivityCacheBustingTypeEnum {
+	return &e
+}
+
 func (e *FloodlightActivityCacheBustingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JAVASCRIPT":
 		fallthrough
 	case "ACTIVE_SERVER_PAGE":
@@ -33,10 +37,10 @@ func (e *FloodlightActivityCacheBustingTypeEnum) UnmarshalJSON(data []byte) erro
 	case "PHP":
 		fallthrough
 	case "COLD_FUSION":
-		*e = FloodlightActivityCacheBustingTypeEnum(s)
+		*e = FloodlightActivityCacheBustingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FloodlightActivityCacheBustingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FloodlightActivityCacheBustingTypeEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	FloodlightActivityCountingMethodEnumItemsSoldCounting    FloodlightActivityCountingMethodEnum = "ITEMS_SOLD_COUNTING"
 )
 
+func (e FloodlightActivityCountingMethodEnum) ToPointer() *FloodlightActivityCountingMethodEnum {
+	return &e
+}
+
 func (e *FloodlightActivityCountingMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD_COUNTING":
 		fallthrough
 	case "UNIQUE_COUNTING":
@@ -66,10 +74,10 @@ func (e *FloodlightActivityCountingMethodEnum) UnmarshalJSON(data []byte) error 
 	case "TRANSACTIONS_COUNTING":
 		fallthrough
 	case "ITEMS_SOLD_COUNTING":
-		*e = FloodlightActivityCountingMethodEnum(s)
+		*e = FloodlightActivityCountingMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FloodlightActivityCountingMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for FloodlightActivityCountingMethodEnum: %v", v)
 	}
 }
 
@@ -81,19 +89,23 @@ const (
 	FloodlightActivityFloodlightActivityGroupTypeEnumSale    FloodlightActivityFloodlightActivityGroupTypeEnum = "SALE"
 )
 
+func (e FloodlightActivityFloodlightActivityGroupTypeEnum) ToPointer() *FloodlightActivityFloodlightActivityGroupTypeEnum {
+	return &e
+}
+
 func (e *FloodlightActivityFloodlightActivityGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COUNTER":
 		fallthrough
 	case "SALE":
-		*e = FloodlightActivityFloodlightActivityGroupTypeEnum(s)
+		*e = FloodlightActivityFloodlightActivityGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FloodlightActivityFloodlightActivityGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FloodlightActivityFloodlightActivityGroupTypeEnum: %v", v)
 	}
 }
 
@@ -106,21 +118,25 @@ const (
 	FloodlightActivityFloodlightTagTypeEnumGlobalSiteTag FloodlightActivityFloodlightTagTypeEnum = "GLOBAL_SITE_TAG"
 )
 
+func (e FloodlightActivityFloodlightTagTypeEnum) ToPointer() *FloodlightActivityFloodlightTagTypeEnum {
+	return &e
+}
+
 func (e *FloodlightActivityFloodlightTagTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IFRAME":
 		fallthrough
 	case "IMAGE":
 		fallthrough
 	case "GLOBAL_SITE_TAG":
-		*e = FloodlightActivityFloodlightTagTypeEnum(s)
+		*e = FloodlightActivityFloodlightTagTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FloodlightActivityFloodlightTagTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FloodlightActivityFloodlightTagTypeEnum: %v", v)
 	}
 }
 
@@ -134,12 +150,16 @@ const (
 	FloodlightActivityStatusEnumDisabledPolicy      FloodlightActivityStatusEnum = "DISABLED_POLICY"
 )
 
+func (e FloodlightActivityStatusEnum) ToPointer() *FloodlightActivityStatusEnum {
+	return &e
+}
+
 func (e *FloodlightActivityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "ARCHIVED_AND_DISABLED":
@@ -147,10 +167,10 @@ func (e *FloodlightActivityStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ARCHIVED":
 		fallthrough
 	case "DISABLED_POLICY":
-		*e = FloodlightActivityStatusEnum(s)
+		*e = FloodlightActivityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FloodlightActivityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FloodlightActivityStatusEnum: %v", v)
 	}
 }
 
@@ -162,19 +182,23 @@ const (
 	FloodlightActivityTagFormatEnumXhtml FloodlightActivityTagFormatEnum = "XHTML"
 )
 
+func (e FloodlightActivityTagFormatEnum) ToPointer() *FloodlightActivityTagFormatEnum {
+	return &e
+}
+
 func (e *FloodlightActivityTagFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTML":
 		fallthrough
 	case "XHTML":
-		*e = FloodlightActivityTagFormatEnum(s)
+		*e = FloodlightActivityTagFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FloodlightActivityTagFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for FloodlightActivityTagFormatEnum: %v", v)
 	}
 }
 
@@ -283,12 +307,16 @@ const (
 	FloodlightActivityUserDefinedVariableTypesEnumU100 FloodlightActivityUserDefinedVariableTypesEnum = "U100"
 )
 
+func (e FloodlightActivityUserDefinedVariableTypesEnum) ToPointer() *FloodlightActivityUserDefinedVariableTypesEnum {
+	return &e
+}
+
 func (e *FloodlightActivityUserDefinedVariableTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "U1":
 		fallthrough
 	case "U2":
@@ -488,10 +516,10 @@ func (e *FloodlightActivityUserDefinedVariableTypesEnum) UnmarshalJSON(data []by
 	case "U99":
 		fallthrough
 	case "U100":
-		*e = FloodlightActivityUserDefinedVariableTypesEnum(s)
+		*e = FloodlightActivityUserDefinedVariableTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FloodlightActivityUserDefinedVariableTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for FloodlightActivityUserDefinedVariableTypesEnum: %v", v)
 	}
 }
 

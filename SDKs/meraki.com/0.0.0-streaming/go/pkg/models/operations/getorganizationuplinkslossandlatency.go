@@ -17,21 +17,25 @@ const (
 	GetOrganizationUplinksLossAndLatencyUplinkEnumWan2     GetOrganizationUplinksLossAndLatencyUplinkEnum = "wan2"
 )
 
+func (e GetOrganizationUplinksLossAndLatencyUplinkEnum) ToPointer() *GetOrganizationUplinksLossAndLatencyUplinkEnum {
+	return &e
+}
+
 func (e *GetOrganizationUplinksLossAndLatencyUplinkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cellular":
 		fallthrough
 	case "wan1":
 		fallthrough
 	case "wan2":
-		*e = GetOrganizationUplinksLossAndLatencyUplinkEnum(s)
+		*e = GetOrganizationUplinksLossAndLatencyUplinkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOrganizationUplinksLossAndLatencyUplinkEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOrganizationUplinksLossAndLatencyUplinkEnum: %v", v)
 	}
 }
 

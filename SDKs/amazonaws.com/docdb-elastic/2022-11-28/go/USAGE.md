@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,15 +16,16 @@ func main() {
         }),
     )
 
-    req := operations.CreateClusterRequest{
+    ctx := context.Background()
+    res, err := s.CreateCluster(ctx, operations.CreateClusterRequest{
         RequestBody: operations.CreateClusterRequestBody{
             AdminUserName: "corrupti",
             AdminUserPassword: "provident",
-            AuthType: "SECRET_ARN",
-            ClientToken: "quibusdam",
+            AuthType: operations.CreateClusterRequestBodyAuthTypeEnumSecretArn,
+            ClientToken: sdk.String("quibusdam"),
             ClusterName: "unde",
-            KmsKeyID: "nulla",
-            PreferredMaintenanceWindow: "corrupti",
+            KmsKeyID: sdk.String("nulla"),
+            PreferredMaintenanceWindow: sdk.String("corrupti"),
             ShardCapacity: 847252,
             ShardCount: 423655,
             SubnetIds: []string{
@@ -42,17 +42,14 @@ func main() {
                 "minus",
             },
         },
-        XAmzAlgorithm: "placeat",
-        XAmzContentSha256: "voluptatum",
-        XAmzCredential: "iusto",
-        XAmzDate: "excepturi",
-        XAmzSecurityToken: "nisi",
-        XAmzSignature: "recusandae",
-        XAmzSignedHeaders: "temporibus",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateCluster(ctx, req)
+        XAmzAlgorithm: sdk.String("placeat"),
+        XAmzContentSha256: sdk.String("voluptatum"),
+        XAmzCredential: sdk.String("iusto"),
+        XAmzDate: sdk.String("excepturi"),
+        XAmzSecurityToken: sdk.String("nisi"),
+        XAmzSignature: sdk.String("recusandae"),
+        XAmzSignedHeaders: sdk.String("temporibus"),
+    })
     if err != nil {
         log.Fatal(err)
     }

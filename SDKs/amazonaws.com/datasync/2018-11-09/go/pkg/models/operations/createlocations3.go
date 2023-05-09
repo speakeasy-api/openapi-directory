@@ -16,17 +16,21 @@ const (
 	CreateLocationS3XAmzTargetEnumFmrsServiceCreateLocationS3 CreateLocationS3XAmzTargetEnum = "FmrsService.CreateLocationS3"
 )
 
+func (e CreateLocationS3XAmzTargetEnum) ToPointer() *CreateLocationS3XAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateLocationS3XAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FmrsService.CreateLocationS3":
-		*e = CreateLocationS3XAmzTargetEnum(s)
+		*e = CreateLocationS3XAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLocationS3XAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLocationS3XAmzTargetEnum: %v", v)
 	}
 }
 

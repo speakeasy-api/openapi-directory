@@ -18,12 +18,16 @@ const (
 	CertificateStateEnumDeregisterFailed CertificateStateEnum = "DeregisterFailed"
 )
 
+func (e CertificateStateEnum) ToPointer() *CertificateStateEnum {
+	return &e
+}
+
 func (e *CertificateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Registering":
 		fallthrough
 	case "Registered":
@@ -35,9 +39,9 @@ func (e *CertificateStateEnum) UnmarshalJSON(data []byte) error {
 	case "Deregistered":
 		fallthrough
 	case "DeregisterFailed":
-		*e = CertificateStateEnum(s)
+		*e = CertificateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateStateEnum: %v", v)
 	}
 }

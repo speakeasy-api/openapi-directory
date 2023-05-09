@@ -14,18 +14,22 @@ const (
 	SourceControlProviderEnumAwsCodeCommit SourceControlProviderEnum = "AWS_CODE_COMMIT"
 )
 
+func (e SourceControlProviderEnum) ToPointer() *SourceControlProviderEnum {
+	return &e
+}
+
 func (e *SourceControlProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GITHUB":
 		fallthrough
 	case "AWS_CODE_COMMIT":
-		*e = SourceControlProviderEnum(s)
+		*e = SourceControlProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceControlProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceControlProviderEnum: %v", v)
 	}
 }

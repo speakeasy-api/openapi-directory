@@ -23,21 +23,25 @@ const (
 	YoutubeMembersListModeEnumAllCurrent             YoutubeMembersListModeEnum = "all_current"
 )
 
+func (e YoutubeMembersListModeEnum) ToPointer() *YoutubeMembersListModeEnum {
+	return &e
+}
+
 func (e *YoutubeMembersListModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "listMembersModeUnknown":
 		fallthrough
 	case "updates":
 		fallthrough
 	case "all_current":
-		*e = YoutubeMembersListModeEnum(s)
+		*e = YoutubeMembersListModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeMembersListModeEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeMembersListModeEnum: %v", v)
 	}
 }
 

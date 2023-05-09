@@ -16,17 +16,21 @@ const (
 	GetDeployablePatchSnapshotForInstanceXAmzTargetEnumAmazonSsmGetDeployablePatchSnapshotForInstance GetDeployablePatchSnapshotForInstanceXAmzTargetEnum = "AmazonSSM.GetDeployablePatchSnapshotForInstance"
 )
 
+func (e GetDeployablePatchSnapshotForInstanceXAmzTargetEnum) ToPointer() *GetDeployablePatchSnapshotForInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDeployablePatchSnapshotForInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.GetDeployablePatchSnapshotForInstance":
-		*e = GetDeployablePatchSnapshotForInstanceXAmzTargetEnum(s)
+		*e = GetDeployablePatchSnapshotForInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDeployablePatchSnapshotForInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDeployablePatchSnapshotForInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

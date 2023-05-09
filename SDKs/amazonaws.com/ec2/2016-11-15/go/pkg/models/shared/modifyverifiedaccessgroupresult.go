@@ -8,7 +8,7 @@ type ModifyVerifiedAccessGroupResultVerifiedAccessGroupTags struct {
 	Value *string
 }
 
-// ModifyVerifiedAccessGroupResultVerifiedAccessGroup - Details of Amazon Web Services Verified Access group.
+// ModifyVerifiedAccessGroupResultVerifiedAccessGroup - Details of Verified Access group.
 type ModifyVerifiedAccessGroupResultVerifiedAccessGroup struct {
 	CreationTime             *string
 	DeletionTime             *string

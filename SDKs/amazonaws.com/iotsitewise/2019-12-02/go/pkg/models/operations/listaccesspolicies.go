@@ -18,21 +18,25 @@ const (
 	ListAccessPoliciesIdentityTypeEnumIam   ListAccessPoliciesIdentityTypeEnum = "IAM"
 )
 
+func (e ListAccessPoliciesIdentityTypeEnum) ToPointer() *ListAccessPoliciesIdentityTypeEnum {
+	return &e
+}
+
 func (e *ListAccessPoliciesIdentityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER":
 		fallthrough
 	case "GROUP":
 		fallthrough
 	case "IAM":
-		*e = ListAccessPoliciesIdentityTypeEnum(s)
+		*e = ListAccessPoliciesIdentityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAccessPoliciesIdentityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAccessPoliciesIdentityTypeEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	ListAccessPoliciesResourceTypeEnumProject ListAccessPoliciesResourceTypeEnum = "PROJECT"
 )
 
+func (e ListAccessPoliciesResourceTypeEnum) ToPointer() *ListAccessPoliciesResourceTypeEnum {
+	return &e
+}
+
 func (e *ListAccessPoliciesResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PORTAL":
 		fallthrough
 	case "PROJECT":
-		*e = ListAccessPoliciesResourceTypeEnum(s)
+		*e = ListAccessPoliciesResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAccessPoliciesResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAccessPoliciesResourceTypeEnum: %v", v)
 	}
 }
 

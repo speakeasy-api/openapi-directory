@@ -16,21 +16,25 @@ const (
 	ProductApprovalEventApprovedEnumUnapproved ProductApprovalEventApprovedEnum = "unapproved"
 )
 
+func (e ProductApprovalEventApprovedEnum) ToPointer() *ProductApprovalEventApprovedEnum {
+	return &e
+}
+
 func (e *ProductApprovalEventApprovedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "approved":
 		fallthrough
 	case "unapproved":
-		*e = ProductApprovalEventApprovedEnum(s)
+		*e = ProductApprovalEventApprovedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductApprovalEventApprovedEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductApprovalEventApprovedEnum: %v", v)
 	}
 }
 

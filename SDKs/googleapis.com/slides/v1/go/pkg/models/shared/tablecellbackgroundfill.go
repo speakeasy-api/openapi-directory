@@ -16,21 +16,25 @@ const (
 	TableCellBackgroundFillPropertyStateEnumInherit     TableCellBackgroundFillPropertyStateEnum = "INHERIT"
 )
 
+func (e TableCellBackgroundFillPropertyStateEnum) ToPointer() *TableCellBackgroundFillPropertyStateEnum {
+	return &e
+}
+
 func (e *TableCellBackgroundFillPropertyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RENDERED":
 		fallthrough
 	case "NOT_RENDERED":
 		fallthrough
 	case "INHERIT":
-		*e = TableCellBackgroundFillPropertyStateEnum(s)
+		*e = TableCellBackgroundFillPropertyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TableCellBackgroundFillPropertyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TableCellBackgroundFillPropertyStateEnum: %v", v)
 	}
 }
 

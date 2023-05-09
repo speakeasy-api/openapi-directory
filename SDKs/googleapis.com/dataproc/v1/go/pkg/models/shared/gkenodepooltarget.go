@@ -17,12 +17,16 @@ const (
 	GkeNodePoolTargetRolesEnumSparkExecutor   GkeNodePoolTargetRolesEnum = "SPARK_EXECUTOR"
 )
 
+func (e GkeNodePoolTargetRolesEnum) ToPointer() *GkeNodePoolTargetRolesEnum {
+	return &e
+}
+
 func (e *GkeNodePoolTargetRolesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLE_UNSPECIFIED":
 		fallthrough
 	case "DEFAULT":
@@ -32,10 +36,10 @@ func (e *GkeNodePoolTargetRolesEnum) UnmarshalJSON(data []byte) error {
 	case "SPARK_DRIVER":
 		fallthrough
 	case "SPARK_EXECUTOR":
-		*e = GkeNodePoolTargetRolesEnum(s)
+		*e = GkeNodePoolTargetRolesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GkeNodePoolTargetRolesEnum: %s", s)
+		return fmt.Errorf("invalid value for GkeNodePoolTargetRolesEnum: %v", v)
 	}
 }
 

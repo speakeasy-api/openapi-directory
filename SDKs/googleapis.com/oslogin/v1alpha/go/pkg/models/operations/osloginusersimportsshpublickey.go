@@ -33,21 +33,25 @@ const (
 	OsloginUsersImportSSHPublicKeyViewEnumSecurityKey                 OsloginUsersImportSSHPublicKeyViewEnum = "SECURITY_KEY"
 )
 
+func (e OsloginUsersImportSSHPublicKeyViewEnum) ToPointer() *OsloginUsersImportSSHPublicKeyViewEnum {
+	return &e
+}
+
 func (e *OsloginUsersImportSSHPublicKeyViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOGIN_PROFILE_VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "SECURITY_KEY":
-		*e = OsloginUsersImportSSHPublicKeyViewEnum(s)
+		*e = OsloginUsersImportSSHPublicKeyViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OsloginUsersImportSSHPublicKeyViewEnum: %s", s)
+		return fmt.Errorf("invalid value for OsloginUsersImportSSHPublicKeyViewEnum: %v", v)
 	}
 }
 

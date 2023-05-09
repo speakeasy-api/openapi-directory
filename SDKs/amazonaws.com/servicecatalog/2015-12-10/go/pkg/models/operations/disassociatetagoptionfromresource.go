@@ -16,17 +16,21 @@ const (
 	DisassociateTagOptionFromResourceXAmzTargetEnumAws242ServiceCatalogServiceDisassociateTagOptionFromResource DisassociateTagOptionFromResourceXAmzTargetEnum = "AWS242ServiceCatalogService.DisassociateTagOptionFromResource"
 )
 
+func (e DisassociateTagOptionFromResourceXAmzTargetEnum) ToPointer() *DisassociateTagOptionFromResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateTagOptionFromResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DisassociateTagOptionFromResource":
-		*e = DisassociateTagOptionFromResourceXAmzTargetEnum(s)
+		*e = DisassociateTagOptionFromResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateTagOptionFromResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateTagOptionFromResourceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -13,39 +13,37 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/realtimebi
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.RealtimebiddingBiddersBiddingFunctionsActivateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Bidders.RealtimebiddingBiddersBiddingFunctionsActivate(ctx, operations.RealtimebiddingBiddersBiddingFunctionsActivateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         RequestBody: map[string]interface{}{
             "distinctio": "quibusdam",
             "unde": "nulla",
             "corrupti": "illum",
         },
-        AccessToken: "vel",
-        Alt: "media",
-        Callback: "deserunt",
-        Fields: "suscipit",
-        Key: "iure",
-        Name: "magnam",
-        OauthToken: "debitis",
-        PrettyPrint: false,
-        QuotaUser: "ipsa",
-        UploadType: "delectus",
-        UploadProtocol: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.Bidders.RealtimebiddingBiddersBiddingFunctionsActivate(ctx, req, operations.RealtimebiddingBiddersBiddingFunctionsActivateSecurity{
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("deserunt"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        Name: "Raquel Bednar",
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("molestiae"),
+        UploadType: sdk.String("minus"),
+        UploadProtocol: sdk.String("placeat"),
+    }, operations.RealtimebiddingBiddersBiddingFunctionsActivateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -64,12 +62,12 @@ func main() {
 ## Available Resources and Operations
 
 
-### Bidders
+### [Bidders](docs/bidders/README.md)
 
-* `RealtimebiddingBiddersBiddingFunctionsActivate` - Activates an existing bidding function. An activated function is available for invocation for the server-side TURTLEDOVE simulations.
-* `RealtimebiddingBiddersBiddingFunctionsArchive` - Archives an existing bidding function. An archived function will not be available for function invocation for the server-side TURTLEDOVE simulations unless it is activated.
-* `RealtimebiddingBiddersBiddingFunctionsCreate` - Creates a new bidding function.
-* `RealtimebiddingBiddersBiddingFunctionsList` - Lists the bidding functions that a bidder currently has registered.
+* [RealtimebiddingBiddersBiddingFunctionsActivate](docs/bidders/README.md#realtimebiddingbiddersbiddingfunctionsactivate) - Activates an existing bidding function. An activated function is available for invocation for the server-side TURTLEDOVE simulations.
+* [RealtimebiddingBiddersBiddingFunctionsArchive](docs/bidders/README.md#realtimebiddingbiddersbiddingfunctionsarchive) - Archives an existing bidding function. An archived function will not be available for function invocation for the server-side TURTLEDOVE simulations unless it is activated.
+* [RealtimebiddingBiddersBiddingFunctionsCreate](docs/bidders/README.md#realtimebiddingbiddersbiddingfunctionscreate) - Creates a new bidding function.
+* [RealtimebiddingBiddersBiddingFunctionsList](docs/bidders/README.md#realtimebiddingbiddersbiddingfunctionslist) - Lists the bidding functions that a bidder currently has registered.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,17 +15,21 @@ const (
 	GETDeleteRolePermissionsBoundaryActionEnumDeleteRolePermissionsBoundary GETDeleteRolePermissionsBoundaryActionEnum = "DeleteRolePermissionsBoundary"
 )
 
+func (e GETDeleteRolePermissionsBoundaryActionEnum) ToPointer() *GETDeleteRolePermissionsBoundaryActionEnum {
+	return &e
+}
+
 func (e *GETDeleteRolePermissionsBoundaryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteRolePermissionsBoundary":
-		*e = GETDeleteRolePermissionsBoundaryActionEnum(s)
+		*e = GETDeleteRolePermissionsBoundaryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteRolePermissionsBoundaryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteRolePermissionsBoundaryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteRolePermissionsBoundaryVersionEnumTwoThousandAndTen0508 GETDeleteRolePermissionsBoundaryVersionEnum = "2010-05-08"
 )
 
+func (e GETDeleteRolePermissionsBoundaryVersionEnum) ToPointer() *GETDeleteRolePermissionsBoundaryVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteRolePermissionsBoundaryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETDeleteRolePermissionsBoundaryVersionEnum(s)
+		*e = GETDeleteRolePermissionsBoundaryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteRolePermissionsBoundaryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteRolePermissionsBoundaryVersionEnum: %v", v)
 	}
 }
 

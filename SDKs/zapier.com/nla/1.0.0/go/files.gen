@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -14,10 +15,12 @@ pkg/utils/utils.go
 pkg/models/operations/check.go
 pkg/models/operations/executeappactionendpoint.go
 pkg/models/operations/getconfigurationlink.go
+pkg/models/operations/getexecutionlogendpoint.go
 pkg/models/operations/listexposedactions.go
 pkg/models/shared/executeresponse.go
 pkg/models/shared/errorresponse.go
 pkg/models/shared/executerequest.go
 pkg/models/shared/exposedactionresponseschema.go
 pkg/models/shared/exposedactionschema.go
+docs/sdk/README.md
 USAGE.md

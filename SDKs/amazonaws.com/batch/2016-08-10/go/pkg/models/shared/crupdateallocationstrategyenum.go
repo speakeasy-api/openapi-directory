@@ -14,18 +14,22 @@ const (
 	CRUpdateAllocationStrategyEnumSpotCapacityOptimized CRUpdateAllocationStrategyEnum = "SPOT_CAPACITY_OPTIMIZED"
 )
 
+func (e CRUpdateAllocationStrategyEnum) ToPointer() *CRUpdateAllocationStrategyEnum {
+	return &e
+}
+
 func (e *CRUpdateAllocationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BEST_FIT_PROGRESSIVE":
 		fallthrough
 	case "SPOT_CAPACITY_OPTIMIZED":
-		*e = CRUpdateAllocationStrategyEnum(s)
+		*e = CRUpdateAllocationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CRUpdateAllocationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for CRUpdateAllocationStrategyEnum: %v", v)
 	}
 }

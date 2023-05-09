@@ -15,17 +15,21 @@ const (
 	POSTDescribeLocalGatewayVirtualInterfacesActionEnumDescribeLocalGatewayVirtualInterfaces POSTDescribeLocalGatewayVirtualInterfacesActionEnum = "DescribeLocalGatewayVirtualInterfaces"
 )
 
+func (e POSTDescribeLocalGatewayVirtualInterfacesActionEnum) ToPointer() *POSTDescribeLocalGatewayVirtualInterfacesActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeLocalGatewayVirtualInterfacesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeLocalGatewayVirtualInterfaces":
-		*e = POSTDescribeLocalGatewayVirtualInterfacesActionEnum(s)
+		*e = POSTDescribeLocalGatewayVirtualInterfacesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeLocalGatewayVirtualInterfacesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeLocalGatewayVirtualInterfacesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeLocalGatewayVirtualInterfacesVersionEnumTwoThousandAndSixteen1115 POSTDescribeLocalGatewayVirtualInterfacesVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeLocalGatewayVirtualInterfacesVersionEnum) ToPointer() *POSTDescribeLocalGatewayVirtualInterfacesVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeLocalGatewayVirtualInterfacesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeLocalGatewayVirtualInterfacesVersionEnum(s)
+		*e = POSTDescribeLocalGatewayVirtualInterfacesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeLocalGatewayVirtualInterfacesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeLocalGatewayVirtualInterfacesVersionEnum: %v", v)
 	}
 }
 

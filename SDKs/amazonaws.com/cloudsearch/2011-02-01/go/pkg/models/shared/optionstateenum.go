@@ -16,20 +16,24 @@ const (
 	OptionStateEnumActive                 OptionStateEnum = "Active"
 )
 
+func (e OptionStateEnum) ToPointer() *OptionStateEnum {
+	return &e
+}
+
 func (e *OptionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RequiresIndexDocuments":
 		fallthrough
 	case "Processing":
 		fallthrough
 	case "Active":
-		*e = OptionStateEnum(s)
+		*e = OptionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OptionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OptionStateEnum: %v", v)
 	}
 }

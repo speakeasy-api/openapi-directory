@@ -17,12 +17,16 @@ const (
 	InsertionOrderBillableOutcomeEnumBillableOutcomePayPerViewableImpression InsertionOrderBillableOutcomeEnum = "BILLABLE_OUTCOME_PAY_PER_VIEWABLE_IMPRESSION"
 )
 
+func (e InsertionOrderBillableOutcomeEnum) ToPointer() *InsertionOrderBillableOutcomeEnum {
+	return &e
+}
+
 func (e *InsertionOrderBillableOutcomeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BILLABLE_OUTCOME_UNSPECIFIED":
 		fallthrough
 	case "BILLABLE_OUTCOME_PAY_PER_IMPRESSION":
@@ -30,10 +34,10 @@ func (e *InsertionOrderBillableOutcomeEnum) UnmarshalJSON(data []byte) error {
 	case "BILLABLE_OUTCOME_PAY_PER_CLICK":
 		fallthrough
 	case "BILLABLE_OUTCOME_PAY_PER_VIEWABLE_IMPRESSION":
-		*e = InsertionOrderBillableOutcomeEnum(s)
+		*e = InsertionOrderBillableOutcomeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InsertionOrderBillableOutcomeEnum: %s", s)
+		return fmt.Errorf("invalid value for InsertionOrderBillableOutcomeEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	InsertionOrderEntityStatusEnumEntityStatusScheduledForDeletion InsertionOrderEntityStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
+func (e InsertionOrderEntityStatusEnum) ToPointer() *InsertionOrderEntityStatusEnum {
+	return &e
+}
+
 func (e *InsertionOrderEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ENTITY_STATUS_ACTIVE":
@@ -66,10 +74,10 @@ func (e *InsertionOrderEntityStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ENTITY_STATUS_PAUSED":
 		fallthrough
 	case "ENTITY_STATUS_SCHEDULED_FOR_DELETION":
-		*e = InsertionOrderEntityStatusEnum(s)
+		*e = InsertionOrderEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InsertionOrderEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InsertionOrderEntityStatusEnum: %v", v)
 	}
 }
 
@@ -82,21 +90,25 @@ const (
 	InsertionOrderInsertionOrderTypeEnumOverTheTop                    InsertionOrderInsertionOrderTypeEnum = "OVER_THE_TOP"
 )
 
+func (e InsertionOrderInsertionOrderTypeEnum) ToPointer() *InsertionOrderInsertionOrderTypeEnum {
+	return &e
+}
+
 func (e *InsertionOrderInsertionOrderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSERTION_ORDER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RTB":
 		fallthrough
 	case "OVER_THE_TOP":
-		*e = InsertionOrderInsertionOrderTypeEnum(s)
+		*e = InsertionOrderInsertionOrderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InsertionOrderInsertionOrderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InsertionOrderInsertionOrderTypeEnum: %v", v)
 	}
 }
 
@@ -138,12 +150,16 @@ const (
 	InsertionOrderReservationTypeEnumReservationTypeTagGuaranteed          InsertionOrderReservationTypeEnum = "RESERVATION_TYPE_TAG_GUARANTEED"
 )
 
+func (e InsertionOrderReservationTypeEnum) ToPointer() *InsertionOrderReservationTypeEnum {
+	return &e
+}
+
 func (e *InsertionOrderReservationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESERVATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RESERVATION_TYPE_NOT_GUARANTEED":
@@ -151,10 +167,10 @@ func (e *InsertionOrderReservationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "RESERVATION_TYPE_PROGRAMMATIC_GUARANTEED":
 		fallthrough
 	case "RESERVATION_TYPE_TAG_GUARANTEED":
-		*e = InsertionOrderReservationTypeEnum(s)
+		*e = InsertionOrderReservationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InsertionOrderReservationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InsertionOrderReservationTypeEnum: %v", v)
 	}
 }
 

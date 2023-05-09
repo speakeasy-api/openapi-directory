@@ -37,12 +37,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnumConvertedLead   GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum = "CONVERTED_LEAD"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -90,10 +94,10 @@ func (e *GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum) Unmarshal
 	case "QUALIFIED_LEAD":
 		fallthrough
 	case "CONVERTED_LEAD":
-		*e = GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum: %v", v)
 	}
 }
 
@@ -108,12 +112,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesConversionActionStatusEnumHidden      GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum = "HIDDEN"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -123,10 +131,10 @@ func (e *GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum) UnmarshalJS
 	case "REMOVED":
 		fallthrough
 	case "HIDDEN":
-		*e = GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum: %v", v)
 	}
 }
 
@@ -171,14 +179,19 @@ const (
 	GoogleAdsSearchads360V0ResourcesConversionActionTypeEnumSmartCampaignMapDirections                 GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum = "SMART_CAMPAIGN_MAP_DIRECTIONS"
 	GoogleAdsSearchads360V0ResourcesConversionActionTypeEnumSmartCampaignTrackedCalls                  GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum = "SMART_CAMPAIGN_TRACKED_CALLS"
 	GoogleAdsSearchads360V0ResourcesConversionActionTypeEnumStoreVisits                                GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum = "STORE_VISITS"
+	GoogleAdsSearchads360V0ResourcesConversionActionTypeEnumWebpageCodeless                            GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum = "WEBPAGE_CODELESS"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -252,10 +265,12 @@ func (e *GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum) UnmarshalJSON
 	case "SMART_CAMPAIGN_TRACKED_CALLS":
 		fallthrough
 	case "STORE_VISITS":
-		*e = GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum(s)
+		fallthrough
+	case "WEBPAGE_CODELESS":
+		*e = GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum: %v", v)
 	}
 }
 

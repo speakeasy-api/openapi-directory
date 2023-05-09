@@ -27,12 +27,16 @@ const (
 	APICacheTypeEnumLarge12X  APICacheTypeEnum = "LARGE_12X"
 )
 
+func (e APICacheTypeEnum) ToPointer() *APICacheTypeEnum {
+	return &e
+}
+
 func (e *APICacheTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "T2_SMALL":
 		fallthrough
 	case "T2_MEDIUM":
@@ -62,9 +66,9 @@ func (e *APICacheTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LARGE_8X":
 		fallthrough
 	case "LARGE_12X":
-		*e = APICacheTypeEnum(s)
+		*e = APICacheTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APICacheTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for APICacheTypeEnum: %v", v)
 	}
 }

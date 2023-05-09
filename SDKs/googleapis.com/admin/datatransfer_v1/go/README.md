@@ -13,34 +13,32 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/admin/data
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DatatransferApplicationsGetRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        ApplicationID: "quibusdam",
-        Callback: "unde",
-        Fields: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.Applications.DatatransferApplicationsGet(ctx, req, operations.DatatransferApplicationsGetSecurity{
+    res, err := s.Applications.DatatransferApplicationsGet(ctx, operations.DatatransferApplicationsGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        ApplicationID: "quibusdam",
+        Callback: sdk.String("unde"),
+        Fields: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("vel"),
+        UploadType: sdk.String("error"),
+        UploadProtocol: sdk.String("deserunt"),
+    }, operations.DatatransferApplicationsGetSecurity{
         Option1: &operations.DatatransferApplicationsGetSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -61,16 +59,16 @@ func main() {
 ## Available Resources and Operations
 
 
-### Applications
+### [Applications](docs/applications/README.md)
 
-* `DatatransferApplicationsGet` - Retrieves information about an application for the given application ID.
-* `DatatransferApplicationsList` - Lists the applications available for data transfer for a customer.
+* [DatatransferApplicationsGet](docs/applications/README.md#datatransferapplicationsget) - Retrieves information about an application for the given application ID.
+* [DatatransferApplicationsList](docs/applications/README.md#datatransferapplicationslist) - Lists the applications available for data transfer for a customer.
 
-### Transfers
+### [Transfers](docs/transfers/README.md)
 
-* `DatatransferTransfersGet` - Retrieves a data transfer request by its resource ID.
-* `DatatransferTransfersInsert` - Inserts a data transfer request. See the [Transfer parameters](/admin-sdk/data-transfer/v1/parameters) reference for specific application requirements.
-* `DatatransferTransfersList` - Lists the transfers for a customer by source user, destination user, or status.
+* [DatatransferTransfersGet](docs/transfers/README.md#datatransfertransfersget) - Retrieves a data transfer request by its resource ID.
+* [DatatransferTransfersInsert](docs/transfers/README.md#datatransfertransfersinsert) - Inserts a data transfer request. See the [Transfer parameters](/admin-sdk/data-transfer/v1/parameters) reference for specific application requirements.
+* [DatatransferTransfersList](docs/transfers/README.md#datatransfertransferslist) - Lists the transfers for a customer by source user, destination user, or status.
 <!-- End SDK Available Operations -->
 
 ### Maturity

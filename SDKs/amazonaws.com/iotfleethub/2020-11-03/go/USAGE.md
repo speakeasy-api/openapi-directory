@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,11 +16,12 @@ func main() {
         }),
     )
 
-    req := operations.CreateApplicationRequest{
+    ctx := context.Background()
+    res, err := s.CreateApplication(ctx, operations.CreateApplicationRequest{
         RequestBody: operations.CreateApplicationRequestBody{
-            ApplicationDescription: "corrupti",
+            ApplicationDescription: sdk.String("corrupti"),
             ApplicationName: "provident",
-            ClientToken: "distinctio",
+            ClientToken: sdk.String("distinctio"),
             RoleArn: "quibusdam",
             Tags: map[string]string{
                 "nulla": "corrupti",
@@ -29,17 +29,14 @@ func main() {
                 "error": "deserunt",
             },
         },
-        XAmzAlgorithm: "suscipit",
-        XAmzContentSha256: "iure",
-        XAmzCredential: "magnam",
-        XAmzDate: "debitis",
-        XAmzSecurityToken: "ipsa",
-        XAmzSignature: "delectus",
-        XAmzSignedHeaders: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateApplication(ctx, req)
+        XAmzAlgorithm: sdk.String("suscipit"),
+        XAmzContentSha256: sdk.String("iure"),
+        XAmzCredential: sdk.String("magnam"),
+        XAmzDate: sdk.String("debitis"),
+        XAmzSecurityToken: sdk.String("ipsa"),
+        XAmzSignature: sdk.String("delectus"),
+        XAmzSignedHeaders: sdk.String("tempora"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -16,17 +16,21 @@ const (
 	AssociateOpsItemRelatedItemXAmzTargetEnumAmazonSsmAssociateOpsItemRelatedItem AssociateOpsItemRelatedItemXAmzTargetEnum = "AmazonSSM.AssociateOpsItemRelatedItem"
 )
 
+func (e AssociateOpsItemRelatedItemXAmzTargetEnum) ToPointer() *AssociateOpsItemRelatedItemXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateOpsItemRelatedItemXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.AssociateOpsItemRelatedItem":
-		*e = AssociateOpsItemRelatedItemXAmzTargetEnum(s)
+		*e = AssociateOpsItemRelatedItemXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateOpsItemRelatedItemXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateOpsItemRelatedItemXAmzTargetEnum: %v", v)
 	}
 }
 

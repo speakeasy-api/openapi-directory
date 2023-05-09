@@ -17,12 +17,16 @@ const (
 	VolumeConfigPerformanceTierEnumVolumePerformanceTierHt          VolumeConfigPerformanceTierEnum = "VOLUME_PERFORMANCE_TIER_HT"
 )
 
+func (e VolumeConfigPerformanceTierEnum) ToPointer() *VolumeConfigPerformanceTierEnum {
+	return &e
+}
+
 func (e *VolumeConfigPerformanceTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VOLUME_PERFORMANCE_TIER_UNSPECIFIED":
 		fallthrough
 	case "VOLUME_PERFORMANCE_TIER_SHARED":
@@ -30,10 +34,10 @@ func (e *VolumeConfigPerformanceTierEnum) UnmarshalJSON(data []byte) error {
 	case "VOLUME_PERFORMANCE_TIER_ASSIGNED":
 		fallthrough
 	case "VOLUME_PERFORMANCE_TIER_HT":
-		*e = VolumeConfigPerformanceTierEnum(s)
+		*e = VolumeConfigPerformanceTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeConfigPerformanceTierEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeConfigPerformanceTierEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	VolumeConfigProtocolEnumProtocolNfs         VolumeConfigProtocolEnum = "PROTOCOL_NFS"
 )
 
+func (e VolumeConfigProtocolEnum) ToPointer() *VolumeConfigProtocolEnum {
+	return &e
+}
+
 func (e *VolumeConfigProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROTOCOL_UNSPECIFIED":
 		fallthrough
 	case "PROTOCOL_FC":
 		fallthrough
 	case "PROTOCOL_NFS":
-		*e = VolumeConfigProtocolEnum(s)
+		*e = VolumeConfigProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeConfigProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeConfigProtocolEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	VolumeConfigTypeEnumDisk            VolumeConfigTypeEnum = "DISK"
 )
 
+func (e VolumeConfigTypeEnum) ToPointer() *VolumeConfigTypeEnum {
+	return &e
+}
+
 func (e *VolumeConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "FLASH":
 		fallthrough
 	case "DISK":
-		*e = VolumeConfigTypeEnum(s)
+		*e = VolumeConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeConfigTypeEnum: %v", v)
 	}
 }
 

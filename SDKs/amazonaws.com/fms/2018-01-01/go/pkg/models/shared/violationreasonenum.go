@@ -40,12 +40,16 @@ const (
 	ViolationReasonEnumFirewallSubnetMissingVpceEndpoint       ViolationReasonEnum = "FIREWALL_SUBNET_MISSING_VPCE_ENDPOINT"
 )
 
+func (e ViolationReasonEnum) ToPointer() *ViolationReasonEnum {
+	return &e
+}
+
 func (e *ViolationReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEB_ACL_MISSING_RULE_GROUP":
 		fallthrough
 	case "RESOURCE_MISSING_WEB_ACL":
@@ -101,9 +105,9 @@ func (e *ViolationReasonEnum) UnmarshalJSON(data []byte) error {
 	case "ROUTE_HAS_OUT_OF_SCOPE_ENDPOINT":
 		fallthrough
 	case "FIREWALL_SUBNET_MISSING_VPCE_ENDPOINT":
-		*e = ViolationReasonEnum(s)
+		*e = ViolationReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViolationReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for ViolationReasonEnum: %v", v)
 	}
 }

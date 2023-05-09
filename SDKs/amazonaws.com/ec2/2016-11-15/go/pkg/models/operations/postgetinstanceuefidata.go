@@ -15,17 +15,21 @@ const (
 	POSTGetInstanceUefiDataActionEnumGetInstanceUefiData POSTGetInstanceUefiDataActionEnum = "GetInstanceUefiData"
 )
 
+func (e POSTGetInstanceUefiDataActionEnum) ToPointer() *POSTGetInstanceUefiDataActionEnum {
+	return &e
+}
+
 func (e *POSTGetInstanceUefiDataActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetInstanceUefiData":
-		*e = POSTGetInstanceUefiDataActionEnum(s)
+		*e = POSTGetInstanceUefiDataActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetInstanceUefiDataActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetInstanceUefiDataActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetInstanceUefiDataVersionEnumTwoThousandAndSixteen1115 POSTGetInstanceUefiDataVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetInstanceUefiDataVersionEnum) ToPointer() *POSTGetInstanceUefiDataVersionEnum {
+	return &e
+}
+
 func (e *POSTGetInstanceUefiDataVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetInstanceUefiDataVersionEnum(s)
+		*e = POSTGetInstanceUefiDataVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetInstanceUefiDataVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetInstanceUefiDataVersionEnum: %v", v)
 	}
 }
 

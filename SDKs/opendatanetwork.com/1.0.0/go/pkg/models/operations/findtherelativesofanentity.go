@@ -18,12 +18,16 @@ const (
 	FindTheRelativesOfAnEntityRelationEnumPeer    FindTheRelativesOfAnEntityRelationEnum = "peer"
 )
 
+func (e FindTheRelativesOfAnEntityRelationEnum) ToPointer() *FindTheRelativesOfAnEntityRelationEnum {
+	return &e
+}
+
 func (e *FindTheRelativesOfAnEntityRelationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "parent":
 		fallthrough
 	case "child":
@@ -31,10 +35,10 @@ func (e *FindTheRelativesOfAnEntityRelationEnum) UnmarshalJSON(data []byte) erro
 	case "sibling":
 		fallthrough
 	case "peer":
-		*e = FindTheRelativesOfAnEntityRelationEnum(s)
+		*e = FindTheRelativesOfAnEntityRelationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindTheRelativesOfAnEntityRelationEnum: %s", s)
+		return fmt.Errorf("invalid value for FindTheRelativesOfAnEntityRelationEnum: %v", v)
 	}
 }
 

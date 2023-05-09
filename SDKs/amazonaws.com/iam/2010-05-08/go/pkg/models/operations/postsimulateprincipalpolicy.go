@@ -15,17 +15,21 @@ const (
 	POSTSimulatePrincipalPolicyActionEnumSimulatePrincipalPolicy POSTSimulatePrincipalPolicyActionEnum = "SimulatePrincipalPolicy"
 )
 
+func (e POSTSimulatePrincipalPolicyActionEnum) ToPointer() *POSTSimulatePrincipalPolicyActionEnum {
+	return &e
+}
+
 func (e *POSTSimulatePrincipalPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimulatePrincipalPolicy":
-		*e = POSTSimulatePrincipalPolicyActionEnum(s)
+		*e = POSTSimulatePrincipalPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSimulatePrincipalPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSimulatePrincipalPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSimulatePrincipalPolicyVersionEnumTwoThousandAndTen0508 POSTSimulatePrincipalPolicyVersionEnum = "2010-05-08"
 )
 
+func (e POSTSimulatePrincipalPolicyVersionEnum) ToPointer() *POSTSimulatePrincipalPolicyVersionEnum {
+	return &e
+}
+
 func (e *POSTSimulatePrincipalPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTSimulatePrincipalPolicyVersionEnum(s)
+		*e = POSTSimulatePrincipalPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSimulatePrincipalPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSimulatePrincipalPolicyVersionEnum: %v", v)
 	}
 }
 

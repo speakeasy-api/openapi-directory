@@ -98,12 +98,16 @@ const (
 	CreateRestoreImageTaskRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateRestoreImageTaskRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateRestoreImageTaskRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateRestoreImageTaskRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateRestoreImageTaskRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateRestoreImageTaskRequestTagSpecificationsResourceTypeEnum) Unmarsh
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateRestoreImageTaskRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateRestoreImageTaskRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRestoreImageTaskRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRestoreImageTaskRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

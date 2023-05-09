@@ -15,17 +15,21 @@ const (
 	POSTUpdateConfigurationSetSendingEnabledActionEnumUpdateConfigurationSetSendingEnabled POSTUpdateConfigurationSetSendingEnabledActionEnum = "UpdateConfigurationSetSendingEnabled"
 )
 
+func (e POSTUpdateConfigurationSetSendingEnabledActionEnum) ToPointer() *POSTUpdateConfigurationSetSendingEnabledActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateConfigurationSetSendingEnabledActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateConfigurationSetSendingEnabled":
-		*e = POSTUpdateConfigurationSetSendingEnabledActionEnum(s)
+		*e = POSTUpdateConfigurationSetSendingEnabledActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateConfigurationSetSendingEnabledActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateConfigurationSetSendingEnabledActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateConfigurationSetSendingEnabledVersionEnumTwoThousandAndTen1201 POSTUpdateConfigurationSetSendingEnabledVersionEnum = "2010-12-01"
 )
 
+func (e POSTUpdateConfigurationSetSendingEnabledVersionEnum) ToPointer() *POSTUpdateConfigurationSetSendingEnabledVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateConfigurationSetSendingEnabledVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTUpdateConfigurationSetSendingEnabledVersionEnum(s)
+		*e = POSTUpdateConfigurationSetSendingEnabledVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateConfigurationSetSendingEnabledVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateConfigurationSetSendingEnabledVersionEnum: %v", v)
 	}
 }
 

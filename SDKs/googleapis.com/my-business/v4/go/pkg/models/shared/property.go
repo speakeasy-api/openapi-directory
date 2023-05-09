@@ -17,12 +17,16 @@ const (
 	PropertyBuiltYearExceptionEnumDependentOnDayOfWeek PropertyBuiltYearExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PropertyBuiltYearExceptionEnum) ToPointer() *PropertyBuiltYearExceptionEnum {
+	return &e
+}
+
 func (e *PropertyBuiltYearExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *PropertyBuiltYearExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PropertyBuiltYearExceptionEnum(s)
+		*e = PropertyBuiltYearExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyBuiltYearExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyBuiltYearExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	PropertyFloorsCountExceptionEnumDependentOnDayOfWeek PropertyFloorsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PropertyFloorsCountExceptionEnum) ToPointer() *PropertyFloorsCountExceptionEnum {
+	return &e
+}
+
 func (e *PropertyFloorsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *PropertyFloorsCountExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PropertyFloorsCountExceptionEnum(s)
+		*e = PropertyFloorsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyFloorsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyFloorsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	PropertyLastRenovatedYearExceptionEnumDependentOnDayOfWeek PropertyLastRenovatedYearExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PropertyLastRenovatedYearExceptionEnum) ToPointer() *PropertyLastRenovatedYearExceptionEnum {
+	return &e
+}
+
 func (e *PropertyLastRenovatedYearExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *PropertyLastRenovatedYearExceptionEnum) UnmarshalJSON(data []byte) erro
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PropertyLastRenovatedYearExceptionEnum(s)
+		*e = PropertyLastRenovatedYearExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyLastRenovatedYearExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyLastRenovatedYearExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	PropertyRoomsCountExceptionEnumDependentOnDayOfWeek PropertyRoomsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PropertyRoomsCountExceptionEnum) ToPointer() *PropertyRoomsCountExceptionEnum {
+	return &e
+}
+
 func (e *PropertyRoomsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *PropertyRoomsCountExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PropertyRoomsCountExceptionEnum(s)
+		*e = PropertyRoomsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyRoomsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyRoomsCountExceptionEnum: %v", v)
 	}
 }
 

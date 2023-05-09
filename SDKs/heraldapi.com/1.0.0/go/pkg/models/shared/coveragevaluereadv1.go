@@ -27,12 +27,16 @@ const (
 	CoverageValueReadV1InputTypeEnumFile       CoverageValueReadV1InputTypeEnum = "file"
 )
 
+func (e CoverageValueReadV1InputTypeEnum) ToPointer() *CoverageValueReadV1InputTypeEnum {
+	return &e
+}
+
 func (e *CoverageValueReadV1InputTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "date":
 		fallthrough
 	case "number":
@@ -60,10 +64,10 @@ func (e *CoverageValueReadV1InputTypeEnum) UnmarshalJSON(data []byte) error {
 	case "website":
 		fallthrough
 	case "file":
-		*e = CoverageValueReadV1InputTypeEnum(s)
+		*e = CoverageValueReadV1InputTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CoverageValueReadV1InputTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CoverageValueReadV1InputTypeEnum: %v", v)
 	}
 }
 
@@ -75,21 +79,25 @@ const (
 	CoverageValueReadV1RequiredForEnumNull  CoverageValueReadV1RequiredForEnum = "null"
 )
 
+func (e CoverageValueReadV1RequiredForEnum) ToPointer() *CoverageValueReadV1RequiredForEnum {
+	return &e
+}
+
 func (e *CoverageValueReadV1RequiredForEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "quote":
 		fallthrough
 	case "bind":
 		fallthrough
 	case "null":
-		*e = CoverageValueReadV1RequiredForEnum(s)
+		*e = CoverageValueReadV1RequiredForEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CoverageValueReadV1RequiredForEnum: %s", s)
+		return fmt.Errorf("invalid value for CoverageValueReadV1RequiredForEnum: %v", v)
 	}
 }
 

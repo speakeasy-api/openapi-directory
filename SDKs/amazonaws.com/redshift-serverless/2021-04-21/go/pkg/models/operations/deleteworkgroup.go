@@ -16,17 +16,21 @@ const (
 	DeleteWorkgroupXAmzTargetEnumRedshiftServerlessDeleteWorkgroup DeleteWorkgroupXAmzTargetEnum = "RedshiftServerless.DeleteWorkgroup"
 )
 
+func (e DeleteWorkgroupXAmzTargetEnum) ToPointer() *DeleteWorkgroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteWorkgroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.DeleteWorkgroup":
-		*e = DeleteWorkgroupXAmzTargetEnum(s)
+		*e = DeleteWorkgroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteWorkgroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteWorkgroupXAmzTargetEnum: %v", v)
 	}
 }
 

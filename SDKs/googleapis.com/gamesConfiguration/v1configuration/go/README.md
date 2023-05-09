@@ -13,34 +13,32 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/gamesConfi
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GamesConfigurationAchievementConfigurationsDeleteRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        AchievementID: "distinctio",
-        Alt: "proto",
-        Callback: "unde",
-        Fields: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.AchievementConfigurations.GamesConfigurationAchievementConfigurationsDelete(ctx, req, operations.GamesConfigurationAchievementConfigurationsDeleteSecurity{
+    res, err := s.AchievementConfigurations.GamesConfigurationAchievementConfigurationsDelete(ctx, operations.GamesConfigurationAchievementConfigurationsDeleteRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        AchievementID: "distinctio",
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("unde"),
+        Fields: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("vel"),
+        UploadType: sdk.String("error"),
+        UploadProtocol: sdk.String("deserunt"),
+    }, operations.GamesConfigurationAchievementConfigurationsDeleteSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -59,21 +57,21 @@ func main() {
 ## Available Resources and Operations
 
 
-### AchievementConfigurations
+### [AchievementConfigurations](docs/achievementconfigurations/README.md)
 
-* `GamesConfigurationAchievementConfigurationsDelete` - Delete the achievement configuration with the given ID.
-* `GamesConfigurationAchievementConfigurationsGet` - Retrieves the metadata of the achievement configuration with the given ID.
-* `GamesConfigurationAchievementConfigurationsInsert` - Insert a new achievement configuration in this application.
-* `GamesConfigurationAchievementConfigurationsList` - Returns a list of the achievement configurations in this application.
-* `GamesConfigurationAchievementConfigurationsUpdate` - Update the metadata of the achievement configuration with the given ID.
+* [GamesConfigurationAchievementConfigurationsDelete](docs/achievementconfigurations/README.md#gamesconfigurationachievementconfigurationsdelete) - Delete the achievement configuration with the given ID.
+* [GamesConfigurationAchievementConfigurationsGet](docs/achievementconfigurations/README.md#gamesconfigurationachievementconfigurationsget) - Retrieves the metadata of the achievement configuration with the given ID.
+* [GamesConfigurationAchievementConfigurationsInsert](docs/achievementconfigurations/README.md#gamesconfigurationachievementconfigurationsinsert) - Insert a new achievement configuration in this application.
+* [GamesConfigurationAchievementConfigurationsList](docs/achievementconfigurations/README.md#gamesconfigurationachievementconfigurationslist) - Returns a list of the achievement configurations in this application.
+* [GamesConfigurationAchievementConfigurationsUpdate](docs/achievementconfigurations/README.md#gamesconfigurationachievementconfigurationsupdate) - Update the metadata of the achievement configuration with the given ID.
 
-### LeaderboardConfigurations
+### [LeaderboardConfigurations](docs/leaderboardconfigurations/README.md)
 
-* `GamesConfigurationLeaderboardConfigurationsDelete` - Delete the leaderboard configuration with the given ID.
-* `GamesConfigurationLeaderboardConfigurationsGet` - Retrieves the metadata of the leaderboard configuration with the given ID.
-* `GamesConfigurationLeaderboardConfigurationsInsert` - Insert a new leaderboard configuration in this application.
-* `GamesConfigurationLeaderboardConfigurationsList` - Returns a list of the leaderboard configurations in this application.
-* `GamesConfigurationLeaderboardConfigurationsUpdate` - Update the metadata of the leaderboard configuration with the given ID.
+* [GamesConfigurationLeaderboardConfigurationsDelete](docs/leaderboardconfigurations/README.md#gamesconfigurationleaderboardconfigurationsdelete) - Delete the leaderboard configuration with the given ID.
+* [GamesConfigurationLeaderboardConfigurationsGet](docs/leaderboardconfigurations/README.md#gamesconfigurationleaderboardconfigurationsget) - Retrieves the metadata of the leaderboard configuration with the given ID.
+* [GamesConfigurationLeaderboardConfigurationsInsert](docs/leaderboardconfigurations/README.md#gamesconfigurationleaderboardconfigurationsinsert) - Insert a new leaderboard configuration in this application.
+* [GamesConfigurationLeaderboardConfigurationsList](docs/leaderboardconfigurations/README.md#gamesconfigurationleaderboardconfigurationslist) - Returns a list of the leaderboard configurations in this application.
+* [GamesConfigurationLeaderboardConfigurationsUpdate](docs/leaderboardconfigurations/README.md#gamesconfigurationleaderboardconfigurationsupdate) - Update the metadata of the leaderboard configuration with the given ID.
 <!-- End SDK Available Operations -->
 
 ### Maturity

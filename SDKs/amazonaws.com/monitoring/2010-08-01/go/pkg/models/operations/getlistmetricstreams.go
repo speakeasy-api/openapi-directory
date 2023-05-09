@@ -15,17 +15,21 @@ const (
 	GETListMetricStreamsActionEnumListMetricStreams GETListMetricStreamsActionEnum = "ListMetricStreams"
 )
 
+func (e GETListMetricStreamsActionEnum) ToPointer() *GETListMetricStreamsActionEnum {
+	return &e
+}
+
 func (e *GETListMetricStreamsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListMetricStreams":
-		*e = GETListMetricStreamsActionEnum(s)
+		*e = GETListMetricStreamsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListMetricStreamsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListMetricStreamsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListMetricStreamsVersionEnumTwoThousandAndTen0801 GETListMetricStreamsVersionEnum = "2010-08-01"
 )
 
+func (e GETListMetricStreamsVersionEnum) ToPointer() *GETListMetricStreamsVersionEnum {
+	return &e
+}
+
 func (e *GETListMetricStreamsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = GETListMetricStreamsVersionEnum(s)
+		*e = GETListMetricStreamsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListMetricStreamsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListMetricStreamsVersionEnum: %v", v)
 	}
 }
 

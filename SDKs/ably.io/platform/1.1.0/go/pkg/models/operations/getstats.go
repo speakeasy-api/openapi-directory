@@ -19,12 +19,16 @@ const (
 	GetStatsUnitEnumMonth  GetStatsUnitEnum = "month"
 )
 
+func (e GetStatsUnitEnum) ToPointer() *GetStatsUnitEnum {
+	return &e
+}
+
 func (e *GetStatsUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minute":
 		fallthrough
 	case "hour":
@@ -32,10 +36,10 @@ func (e *GetStatsUnitEnum) UnmarshalJSON(data []byte) error {
 	case "day":
 		fallthrough
 	case "month":
-		*e = GetStatsUnitEnum(s)
+		*e = GetStatsUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetStatsUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetStatsUnitEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	ListPolicyAllValuesEnumDeny                 ListPolicyAllValuesEnum = "DENY"
 )
 
+func (e ListPolicyAllValuesEnum) ToPointer() *ListPolicyAllValuesEnum {
+	return &e
+}
+
 func (e *ListPolicyAllValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL_VALUES_UNSPECIFIED":
 		fallthrough
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = ListPolicyAllValuesEnum(s)
+		*e = ListPolicyAllValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPolicyAllValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPolicyAllValuesEnum: %v", v)
 	}
 }
 

@@ -21,12 +21,16 @@ const (
 	LoggingConfigDriverLogLevelsEnumOff              LoggingConfigDriverLogLevelsEnum = "OFF"
 )
 
+func (e LoggingConfigDriverLogLevelsEnum) ToPointer() *LoggingConfigDriverLogLevelsEnum {
+	return &e
+}
+
 func (e *LoggingConfigDriverLogLevelsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEVEL_UNSPECIFIED":
 		fallthrough
 	case "ALL":
@@ -44,15 +48,15 @@ func (e *LoggingConfigDriverLogLevelsEnum) UnmarshalJSON(data []byte) error {
 	case "FATAL":
 		fallthrough
 	case "OFF":
-		*e = LoggingConfigDriverLogLevelsEnum(s)
+		*e = LoggingConfigDriverLogLevelsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoggingConfigDriverLogLevelsEnum: %s", s)
+		return fmt.Errorf("invalid value for LoggingConfigDriverLogLevelsEnum: %v", v)
 	}
 }
 
 // LoggingConfig - The runtime logging config of the job.
 type LoggingConfig struct {
-	// The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
+	// The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: - 'com.google = FATAL' - 'root = INFO' - 'org.apache = DEBUG'
 	DriverLogLevels map[string]LoggingConfigDriverLogLevelsEnum `json:"driverLogLevels,omitempty"`
 }

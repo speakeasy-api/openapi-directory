@@ -17,12 +17,16 @@ const (
 	GetIosPostInstallAttributionResponseAttributionConfidenceEnumUnique                       GetIosPostInstallAttributionResponseAttributionConfidenceEnum = "UNIQUE"
 )
 
+func (e GetIosPostInstallAttributionResponseAttributionConfidenceEnum) ToPointer() *GetIosPostInstallAttributionResponseAttributionConfidenceEnum {
+	return &e
+}
+
 func (e *GetIosPostInstallAttributionResponseAttributionConfidenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_ATTRIBUTION_CONFIDENCE":
 		fallthrough
 	case "WEAK":
@@ -30,10 +34,10 @@ func (e *GetIosPostInstallAttributionResponseAttributionConfidenceEnum) Unmarsha
 	case "DEFAULT":
 		fallthrough
 	case "UNIQUE":
-		*e = GetIosPostInstallAttributionResponseAttributionConfidenceEnum(s)
+		*e = GetIosPostInstallAttributionResponseAttributionConfidenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIosPostInstallAttributionResponseAttributionConfidenceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIosPostInstallAttributionResponseAttributionConfidenceEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	GetIosPostInstallAttributionResponseRequestIPVersionEnumIPV6             GetIosPostInstallAttributionResponseRequestIPVersionEnum = "IP_V6"
 )
 
+func (e GetIosPostInstallAttributionResponseRequestIPVersionEnum) ToPointer() *GetIosPostInstallAttributionResponseRequestIPVersionEnum {
+	return &e
+}
+
 func (e *GetIosPostInstallAttributionResponseRequestIPVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_IP_VERSION":
 		fallthrough
 	case "IP_V4":
 		fallthrough
 	case "IP_V6":
-		*e = GetIosPostInstallAttributionResponseRequestIPVersionEnum(s)
+		*e = GetIosPostInstallAttributionResponseRequestIPVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIosPostInstallAttributionResponseRequestIPVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIosPostInstallAttributionResponseRequestIPVersionEnum: %v", v)
 	}
 }
 

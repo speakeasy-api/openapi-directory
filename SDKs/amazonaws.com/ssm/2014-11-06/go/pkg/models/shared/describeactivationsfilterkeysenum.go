@@ -15,20 +15,24 @@ const (
 	DescribeActivationsFilterKeysEnumIamRole             DescribeActivationsFilterKeysEnum = "IamRole"
 )
 
+func (e DescribeActivationsFilterKeysEnum) ToPointer() *DescribeActivationsFilterKeysEnum {
+	return &e
+}
+
 func (e *DescribeActivationsFilterKeysEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ActivationIds":
 		fallthrough
 	case "DefaultInstanceName":
 		fallthrough
 	case "IamRole":
-		*e = DescribeActivationsFilterKeysEnum(s)
+		*e = DescribeActivationsFilterKeysEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeActivationsFilterKeysEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeActivationsFilterKeysEnum: %v", v)
 	}
 }

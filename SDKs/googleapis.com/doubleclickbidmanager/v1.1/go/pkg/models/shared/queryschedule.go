@@ -20,12 +20,16 @@ const (
 	QueryScheduleFrequencyEnumYearly      QueryScheduleFrequencyEnum = "YEARLY"
 )
 
+func (e QueryScheduleFrequencyEnum) ToPointer() *QueryScheduleFrequencyEnum {
+	return &e
+}
+
 func (e *QueryScheduleFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONE_TIME":
 		fallthrough
 	case "DAILY":
@@ -39,10 +43,10 @@ func (e *QueryScheduleFrequencyEnum) UnmarshalJSON(data []byte) error {
 	case "QUARTERLY":
 		fallthrough
 	case "YEARLY":
-		*e = QueryScheduleFrequencyEnum(s)
+		*e = QueryScheduleFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryScheduleFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryScheduleFrequencyEnum: %v", v)
 	}
 }
 

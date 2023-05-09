@@ -16,17 +16,21 @@ const (
 	ExecuteProvisionedProductServiceActionXAmzTargetEnumAws242ServiceCatalogServiceExecuteProvisionedProductServiceAction ExecuteProvisionedProductServiceActionXAmzTargetEnum = "AWS242ServiceCatalogService.ExecuteProvisionedProductServiceAction"
 )
 
+func (e ExecuteProvisionedProductServiceActionXAmzTargetEnum) ToPointer() *ExecuteProvisionedProductServiceActionXAmzTargetEnum {
+	return &e
+}
+
 func (e *ExecuteProvisionedProductServiceActionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.ExecuteProvisionedProductServiceAction":
-		*e = ExecuteProvisionedProductServiceActionXAmzTargetEnum(s)
+		*e = ExecuteProvisionedProductServiceActionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteProvisionedProductServiceActionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteProvisionedProductServiceActionXAmzTargetEnum: %v", v)
 	}
 }
 

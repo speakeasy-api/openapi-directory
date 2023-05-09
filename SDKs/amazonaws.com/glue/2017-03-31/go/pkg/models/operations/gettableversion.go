@@ -16,17 +16,21 @@ const (
 	GetTableVersionXAmzTargetEnumAwsGlueGetTableVersion GetTableVersionXAmzTargetEnum = "AWSGlue.GetTableVersion"
 )
 
+func (e GetTableVersionXAmzTargetEnum) ToPointer() *GetTableVersionXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetTableVersionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetTableVersion":
-		*e = GetTableVersionXAmzTargetEnum(s)
+		*e = GetTableVersionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTableVersionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTableVersionXAmzTargetEnum: %v", v)
 	}
 }
 

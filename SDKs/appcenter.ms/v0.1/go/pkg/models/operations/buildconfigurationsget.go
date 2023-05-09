@@ -20,19 +20,23 @@ const (
 	BuildConfigurationsGetFormatEnumJSON BuildConfigurationsGetFormatEnum = "json"
 )
 
+func (e BuildConfigurationsGetFormatEnum) ToPointer() *BuildConfigurationsGetFormatEnum {
+	return &e
+}
+
 func (e *BuildConfigurationsGetFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yaml":
 		fallthrough
 	case "json":
-		*e = BuildConfigurationsGetFormatEnum(s)
+		*e = BuildConfigurationsGetFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuildConfigurationsGetFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for BuildConfigurationsGetFormatEnum: %v", v)
 	}
 }
 

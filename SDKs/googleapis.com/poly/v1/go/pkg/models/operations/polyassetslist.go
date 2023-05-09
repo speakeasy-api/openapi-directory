@@ -19,12 +19,16 @@ const (
 	PolyAssetsListMaxComplexityEnumSimple                PolyAssetsListMaxComplexityEnum = "SIMPLE"
 )
 
+func (e PolyAssetsListMaxComplexityEnum) ToPointer() *PolyAssetsListMaxComplexityEnum {
+	return &e
+}
+
 func (e *PolyAssetsListMaxComplexityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLEXITY_UNSPECIFIED":
 		fallthrough
 	case "COMPLEX":
@@ -32,10 +36,10 @@ func (e *PolyAssetsListMaxComplexityEnum) UnmarshalJSON(data []byte) error {
 	case "MEDIUM":
 		fallthrough
 	case "SIMPLE":
-		*e = PolyAssetsListMaxComplexityEnum(s)
+		*e = PolyAssetsListMaxComplexityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolyAssetsListMaxComplexityEnum: %s", s)
+		return fmt.Errorf("invalid value for PolyAssetsListMaxComplexityEnum: %v", v)
 	}
 }
 

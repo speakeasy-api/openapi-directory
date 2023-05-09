@@ -14,18 +14,22 @@ const (
 	DataShareStatusForConsumerEnumAvailable DataShareStatusForConsumerEnum = "AVAILABLE"
 )
 
+func (e DataShareStatusForConsumerEnum) ToPointer() *DataShareStatusForConsumerEnum {
+	return &e
+}
+
 func (e *DataShareStatusForConsumerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "AVAILABLE":
-		*e = DataShareStatusForConsumerEnum(s)
+		*e = DataShareStatusForConsumerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataShareStatusForConsumerEnum: %s", s)
+		return fmt.Errorf("invalid value for DataShareStatusForConsumerEnum: %v", v)
 	}
 }

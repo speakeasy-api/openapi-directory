@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/doqs.dev/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,7 +27,8 @@ func main() {
         }),
     )
 
-    req := shared.CreateOrUpdateTemplateRequest{
+    ctx := context.Background()
+    res, err := s.CreateTemplateDesignerTemplatesPost(ctx, shared.CreateOrUpdateTemplateRequest{
         Components: []map[string]interface{}{
             map[string]interface{}{
                 "distinctio": "quibusdam",
@@ -45,21 +45,23 @@ func main() {
             },
         },
         CSS: "suscipit",
-        FooterHTML: "molestiae",
-        Format: "a5",
-        HeaderHTML: "placeat",
-        Name: "voluptatum",
-        Orientation: "landscape",
-        PreviewPayload: map[string]interface{}{
-            "nisi": "recusandae",
-            "temporibus": "ab",
-            "quis": "veritatis",
+        FooterHTML: sdk.String("molestiae"),
+        Format: shared.FormatEnumA5,
+        HeaderHTML: sdk.String("placeat"),
+        Margin: &shared.CreateOrUpdateTemplateRequestMargin{
+            Bottom: sdk.Int64(528895),
+            Left: sdk.Int64(479977),
+            Right: sdk.Int64(568045),
+            Top: sdk.Int64(392785),
         },
-        TemplateHTML: "deserunt",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateTemplateDesignerTemplatesPost(ctx, req)
+        Name: "Jake Bernier MD",
+        Orientation: shared.OrientationEnumLandscape,
+        PreviewPayload: map[string]interface{}{
+            "repellendus": "sapiente",
+            "quo": "odit",
+        },
+        TemplateHTML: "at",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -74,25 +76,25 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateTemplateDesignerTemplatesPost` - Create Template
-* `DeleteDesignerTemplatesIDDelete` - Delete
-* `GeneratePdfDesignerTemplatesIDGeneratePost` - Generate Pdf
-* `ListTemplatesDesignerTemplatesGet` - List Templates
-* `ListTemplatesDesignerTemplatesIDGet` - List Templates
-* `PreviewDesignerTemplatesPreviewPost` - Preview
-* `UpdateTemplateDesignerTemplatesIDPut` - Update Template
+* [CreateTemplateDesignerTemplatesPost](docs/sdk/README.md#createtemplatedesignertemplatespost) - Create Template
+* [DeleteDesignerTemplatesIDDelete](docs/sdk/README.md#deletedesignertemplatesiddelete) - Delete
+* [GeneratePdfDesignerTemplatesIDGeneratePost](docs/sdk/README.md#generatepdfdesignertemplatesidgeneratepost) - Generate Pdf
+* [ListTemplatesDesignerTemplatesIDGet](docs/sdk/README.md#listtemplatesdesignertemplatesidget) - List Templates
+* [ListTemplatesDesignerTemplatesGet](docs/sdk/README.md#listtemplatesdesignertemplatesget) - List Templates
+* [PreviewDesignerTemplatesPreviewPost](docs/sdk/README.md#previewdesignertemplatespreviewpost) - Preview
+* [UpdateTemplateDesignerTemplatesIDPut](docs/sdk/README.md#updatetemplatedesignertemplatesidput) - Update Template
 
-### Templates
+### [Templates](docs/templates/README.md)
 
-* `Create` - Create
-* `DeleteTemplatesIDDelete` - Delete 
-* `Fill` - Fill
-* `Get` - Get Template
-* `GetFileTemplatesIDFileGet` - Get File
-* `List` - List 
-* `Update` - Update
+* [Create](docs/templates/README.md#create) - Create
+* [DeleteTemplatesIDDelete](docs/templates/README.md#deletetemplatesiddelete) - Delete 
+* [Fill](docs/templates/README.md#fill) - Fill
+* [Get](docs/templates/README.md#get) - Get Template
+* [GetFileTemplatesIDFileGet](docs/templates/README.md#getfiletemplatesidfileget) - Get File
+* [List](docs/templates/README.md#list) - List 
+* [Update](docs/templates/README.md#update) - Update
 <!-- End SDK Available Operations -->
 
 ### Maturity

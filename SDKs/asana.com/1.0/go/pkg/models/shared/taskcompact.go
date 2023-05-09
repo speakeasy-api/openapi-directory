@@ -18,12 +18,16 @@ const (
 	TaskCompactResourceSubtypeEnumApproval    TaskCompactResourceSubtypeEnum = "approval"
 )
 
+func (e TaskCompactResourceSubtypeEnum) ToPointer() *TaskCompactResourceSubtypeEnum {
+	return &e
+}
+
 func (e *TaskCompactResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default_task":
 		fallthrough
 	case "milestone":
@@ -31,10 +35,10 @@ func (e *TaskCompactResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
 	case "section":
 		fallthrough
 	case "approval":
-		*e = TaskCompactResourceSubtypeEnum(s)
+		*e = TaskCompactResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskCompactResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskCompactResourceSubtypeEnum: %v", v)
 	}
 }
 

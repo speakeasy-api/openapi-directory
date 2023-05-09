@@ -33,12 +33,16 @@ const (
 	GETAnalyticsDataUsingGETDataTypeEnumConnectedUsers             GETAnalyticsDataUsingGETDataTypeEnum = "connectedUsers"
 )
 
+func (e GETAnalyticsDataUsingGETDataTypeEnum) ToPointer() *GETAnalyticsDataUsingGETDataTypeEnum {
+	return &e
+}
+
 func (e *GETAnalyticsDataUsingGETDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "activeDevices":
 		fallthrough
 	case "activeLocations":
@@ -72,10 +76,10 @@ func (e *GETAnalyticsDataUsingGETDataTypeEnum) UnmarshalJSON(data []byte) error 
 	case "sessionAnalyticTotal":
 		fallthrough
 	case "connectedUsers":
-		*e = GETAnalyticsDataUsingGETDataTypeEnum(s)
+		*e = GETAnalyticsDataUsingGETDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAnalyticsDataUsingGETDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAnalyticsDataUsingGETDataTypeEnum: %v", v)
 	}
 }
 
@@ -88,21 +92,25 @@ const (
 	GETAnalyticsDataUsingGETPrecisionEnumMonthly GETAnalyticsDataUsingGETPrecisionEnum = "MONTHLY"
 )
 
+func (e GETAnalyticsDataUsingGETPrecisionEnum) ToPointer() *GETAnalyticsDataUsingGETPrecisionEnum {
+	return &e
+}
+
 func (e *GETAnalyticsDataUsingGETPrecisionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HOURLY":
 		fallthrough
 	case "DAILY":
 		fallthrough
 	case "MONTHLY":
-		*e = GETAnalyticsDataUsingGETPrecisionEnum(s)
+		*e = GETAnalyticsDataUsingGETPrecisionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAnalyticsDataUsingGETPrecisionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAnalyticsDataUsingGETPrecisionEnum: %v", v)
 	}
 }
 
@@ -114,19 +122,23 @@ const (
 	GETAnalyticsDataUsingGETStageEnumPreview GETAnalyticsDataUsingGETStageEnum = "PREVIEW"
 )
 
+func (e GETAnalyticsDataUsingGETStageEnum) ToPointer() *GETAnalyticsDataUsingGETStageEnum {
+	return &e
+}
+
 func (e *GETAnalyticsDataUsingGETStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "PREVIEW":
-		*e = GETAnalyticsDataUsingGETStageEnum(s)
+		*e = GETAnalyticsDataUsingGETStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAnalyticsDataUsingGETStageEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAnalyticsDataUsingGETStageEnum: %v", v)
 	}
 }
 

@@ -18,21 +18,25 @@ const (
 	GetGeneHomologAssociationsHomologyTypeEnumLdo GetGeneHomologAssociationsHomologyTypeEnum = "LDO"
 )
 
+func (e GetGeneHomologAssociationsHomologyTypeEnum) ToPointer() *GetGeneHomologAssociationsHomologyTypeEnum {
+	return &e
+}
+
 func (e *GetGeneHomologAssociationsHomologyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "P":
 		fallthrough
 	case "O":
 		fallthrough
 	case "LDO":
-		*e = GetGeneHomologAssociationsHomologyTypeEnum(s)
+		*e = GetGeneHomologAssociationsHomologyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGeneHomologAssociationsHomologyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGeneHomologAssociationsHomologyTypeEnum: %v", v)
 	}
 }
 

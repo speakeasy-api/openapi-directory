@@ -15,21 +15,25 @@ const (
 	QueryInterpretationInterpretationTypeEnumReplace QueryInterpretationInterpretationTypeEnum = "REPLACE"
 )
 
+func (e QueryInterpretationInterpretationTypeEnum) ToPointer() *QueryInterpretationInterpretationTypeEnum {
+	return &e
+}
+
 func (e *QueryInterpretationInterpretationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "BLEND":
 		fallthrough
 	case "REPLACE":
-		*e = QueryInterpretationInterpretationTypeEnum(s)
+		*e = QueryInterpretationInterpretationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryInterpretationInterpretationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryInterpretationInterpretationTypeEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	QueryInterpretationReasonEnumNotEnoughResultsFoundForUserQuery QueryInterpretationReasonEnum = "NOT_ENOUGH_RESULTS_FOUND_FOR_USER_QUERY"
 )
 
+func (e QueryInterpretationReasonEnum) ToPointer() *QueryInterpretationReasonEnum {
+	return &e
+}
+
 func (e *QueryInterpretationReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "QUERY_HAS_NATURAL_LANGUAGE_INTENT":
 		fallthrough
 	case "NOT_ENOUGH_RESULTS_FOUND_FOR_USER_QUERY":
-		*e = QueryInterpretationReasonEnum(s)
+		*e = QueryInterpretationReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryInterpretationReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryInterpretationReasonEnum: %v", v)
 	}
 }
 

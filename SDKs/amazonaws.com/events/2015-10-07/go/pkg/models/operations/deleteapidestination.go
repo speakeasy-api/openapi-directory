@@ -16,17 +16,21 @@ const (
 	DeleteAPIDestinationXAmzTargetEnumAwsEventsDeleteAPIDestination DeleteAPIDestinationXAmzTargetEnum = "AWSEvents.DeleteApiDestination"
 )
 
+func (e DeleteAPIDestinationXAmzTargetEnum) ToPointer() *DeleteAPIDestinationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteAPIDestinationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.DeleteApiDestination":
-		*e = DeleteAPIDestinationXAmzTargetEnum(s)
+		*e = DeleteAPIDestinationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAPIDestinationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAPIDestinationXAmzTargetEnum: %v", v)
 	}
 }
 

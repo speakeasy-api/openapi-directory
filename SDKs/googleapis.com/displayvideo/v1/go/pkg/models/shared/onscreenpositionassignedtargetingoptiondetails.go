@@ -17,12 +17,16 @@ const (
 	OnScreenPositionAssignedTargetingOptionDetailsAdTypeEnumAdTypeAudio       OnScreenPositionAssignedTargetingOptionDetailsAdTypeEnum = "AD_TYPE_AUDIO"
 )
 
+func (e OnScreenPositionAssignedTargetingOptionDetailsAdTypeEnum) ToPointer() *OnScreenPositionAssignedTargetingOptionDetailsAdTypeEnum {
+	return &e
+}
+
 func (e *OnScreenPositionAssignedTargetingOptionDetailsAdTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AD_TYPE_DISPLAY":
@@ -30,10 +34,10 @@ func (e *OnScreenPositionAssignedTargetingOptionDetailsAdTypeEnum) UnmarshalJSON
 	case "AD_TYPE_VIDEO":
 		fallthrough
 	case "AD_TYPE_AUDIO":
-		*e = OnScreenPositionAssignedTargetingOptionDetailsAdTypeEnum(s)
+		*e = OnScreenPositionAssignedTargetingOptionDetailsAdTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OnScreenPositionAssignedTargetingOptionDetailsAdTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OnScreenPositionAssignedTargetingOptionDetailsAdTypeEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	OnScreenPositionAssignedTargetingOptionDetailsOnScreenPositionEnumOnScreenPositionBelowTheFold OnScreenPositionAssignedTargetingOptionDetailsOnScreenPositionEnum = "ON_SCREEN_POSITION_BELOW_THE_FOLD"
 )
 
+func (e OnScreenPositionAssignedTargetingOptionDetailsOnScreenPositionEnum) ToPointer() *OnScreenPositionAssignedTargetingOptionDetailsOnScreenPositionEnum {
+	return &e
+}
+
 func (e *OnScreenPositionAssignedTargetingOptionDetailsOnScreenPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ON_SCREEN_POSITION_UNSPECIFIED":
 		fallthrough
 	case "ON_SCREEN_POSITION_UNKNOWN":
@@ -60,10 +68,10 @@ func (e *OnScreenPositionAssignedTargetingOptionDetailsOnScreenPositionEnum) Unm
 	case "ON_SCREEN_POSITION_ABOVE_THE_FOLD":
 		fallthrough
 	case "ON_SCREEN_POSITION_BELOW_THE_FOLD":
-		*e = OnScreenPositionAssignedTargetingOptionDetailsOnScreenPositionEnum(s)
+		*e = OnScreenPositionAssignedTargetingOptionDetailsOnScreenPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OnScreenPositionAssignedTargetingOptionDetailsOnScreenPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for OnScreenPositionAssignedTargetingOptionDetailsOnScreenPositionEnum: %v", v)
 	}
 }
 

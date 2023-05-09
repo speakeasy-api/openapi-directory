@@ -16,17 +16,21 @@ const (
 	UpdateThesaurusXAmzTargetEnumAwsKendraFrontendServiceUpdateThesaurus UpdateThesaurusXAmzTargetEnum = "AWSKendraFrontendService.UpdateThesaurus"
 )
 
+func (e UpdateThesaurusXAmzTargetEnum) ToPointer() *UpdateThesaurusXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateThesaurusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.UpdateThesaurus":
-		*e = UpdateThesaurusXAmzTargetEnum(s)
+		*e = UpdateThesaurusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateThesaurusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateThesaurusXAmzTargetEnum: %v", v)
 	}
 }
 

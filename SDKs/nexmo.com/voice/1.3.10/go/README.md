@@ -13,21 +13,19 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/voice/1.3.10/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateCallRequestBody{}
-
     ctx := context.Background()
-    res, err := s.Calls.CreateCall(ctx, req, operations.CreateCallSecurity{
+    res, err := s.Calls.CreateCall(ctx, operations.CreateCallRequestBody{}, operations.CreateCallSecurity{
         BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
@@ -45,26 +43,26 @@ func main() {
 ## Available Resources and Operations
 
 
-### Calls
+### [Calls](docs/calls/README.md)
 
-* `CreateCall` - Create an outbound call
-* `GetCall` - Get detail of a specific call
-* `GetCalls` - Get details of your calls
-* `UpdateCall` - Modify an in progress call
+* [CreateCall](docs/calls/README.md#createcall) - Create an outbound call
+* [GetCall](docs/calls/README.md#getcall) - Get detail of a specific call
+* [GetCalls](docs/calls/README.md#getcalls) - Get details of your calls
+* [UpdateCall](docs/calls/README.md#updatecall) - Modify an in progress call
 
-### PlayDTMF
+### [PlayDTMF](docs/playdtmf/README.md)
 
-* `StartDTMF` - Play DTMF tones into a call
+* [StartDTMF](docs/playdtmf/README.md#startdtmf) - Play DTMF tones into a call
 
-### PlayTTS
+### [PlayTTS](docs/playtts/README.md)
 
-* `StartTalk` - Play text to speech into a call
-* `StopTalk` - Stop text to speech in a call
+* [StartTalk](docs/playtts/README.md#starttalk) - Play text to speech into a call
+* [StopTalk](docs/playtts/README.md#stoptalk) - Stop text to speech in a call
 
-### StreamAudio
+### [StreamAudio](docs/streamaudio/README.md)
 
-* `StartStream` - Play an audio file into a call
-* `StopStream` - Stop playing an audio file into a call
+* [StartStream](docs/streamaudio/README.md#startstream) - Play an audio file into a call
+* [StopStream](docs/streamaudio/README.md#stopstream) - Stop playing an audio file into a call
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -14,18 +14,22 @@ const (
 	AggregatedSourceTypeEnumOrganization AggregatedSourceTypeEnum = "ORGANIZATION"
 )
 
+func (e AggregatedSourceTypeEnum) ToPointer() *AggregatedSourceTypeEnum {
+	return &e
+}
+
 func (e *AggregatedSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT":
 		fallthrough
 	case "ORGANIZATION":
-		*e = AggregatedSourceTypeEnum(s)
+		*e = AggregatedSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregatedSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregatedSourceTypeEnum: %v", v)
 	}
 }

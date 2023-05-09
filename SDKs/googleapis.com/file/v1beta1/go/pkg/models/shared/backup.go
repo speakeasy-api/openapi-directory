@@ -18,14 +18,19 @@ const (
 	BackupSourceInstanceTierEnumBasicSsd        BackupSourceInstanceTierEnum = "BASIC_SSD"
 	BackupSourceInstanceTierEnumHighScaleSsd    BackupSourceInstanceTierEnum = "HIGH_SCALE_SSD"
 	BackupSourceInstanceTierEnumEnterprise      BackupSourceInstanceTierEnum = "ENTERPRISE"
+	BackupSourceInstanceTierEnumZonal           BackupSourceInstanceTierEnum = "ZONAL"
 )
 
+func (e BackupSourceInstanceTierEnum) ToPointer() *BackupSourceInstanceTierEnum {
+	return &e
+}
+
 func (e *BackupSourceInstanceTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIER_UNSPECIFIED":
 		fallthrough
 	case "STANDARD":
@@ -39,10 +44,12 @@ func (e *BackupSourceInstanceTierEnum) UnmarshalJSON(data []byte) error {
 	case "HIGH_SCALE_SSD":
 		fallthrough
 	case "ENTERPRISE":
-		*e = BackupSourceInstanceTierEnum(s)
+		fallthrough
+	case "ZONAL":
+		*e = BackupSourceInstanceTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupSourceInstanceTierEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupSourceInstanceTierEnum: %v", v)
 	}
 }
 
@@ -55,14 +62,19 @@ const (
 	BackupStateEnumFinalizing       BackupStateEnum = "FINALIZING"
 	BackupStateEnumReady            BackupStateEnum = "READY"
 	BackupStateEnumDeleting         BackupStateEnum = "DELETING"
+	BackupStateEnumInvalid          BackupStateEnum = "INVALID"
 )
 
+func (e BackupStateEnum) ToPointer() *BackupStateEnum {
+	return &e
+}
+
 func (e *BackupStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -72,10 +84,12 @@ func (e *BackupStateEnum) UnmarshalJSON(data []byte) error {
 	case "READY":
 		fallthrough
 	case "DELETING":
-		*e = BackupStateEnum(s)
+		fallthrough
+	case "INVALID":
+		*e = BackupStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupStateEnum: %v", v)
 	}
 }
 

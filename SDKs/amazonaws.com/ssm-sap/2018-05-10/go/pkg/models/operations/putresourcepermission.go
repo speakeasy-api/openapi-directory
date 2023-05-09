@@ -16,17 +16,21 @@ const (
 	PutResourcePermissionRequestBodyActionTypeEnumRestore PutResourcePermissionRequestBodyActionTypeEnum = "RESTORE"
 )
 
+func (e PutResourcePermissionRequestBodyActionTypeEnum) ToPointer() *PutResourcePermissionRequestBodyActionTypeEnum {
+	return &e
+}
+
 func (e *PutResourcePermissionRequestBodyActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESTORE":
-		*e = PutResourcePermissionRequestBodyActionTypeEnum(s)
+		*e = PutResourcePermissionRequestBodyActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutResourcePermissionRequestBodyActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutResourcePermissionRequestBodyActionTypeEnum: %v", v)
 	}
 }
 

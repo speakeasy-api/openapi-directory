@@ -92,7 +92,10 @@ func (s *devices) CreateDeviceCode(ctx context.Context, request shared.CreateDev
 // Retrieves DeviceCode with the associated ID.
 func (s *devices) GetDeviceCode(ctx context.Context, request operations.GetDeviceCodeRequest, security operations.GetDeviceCodeSecurity) (*operations.GetDeviceCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/devices/codes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/devices/codes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

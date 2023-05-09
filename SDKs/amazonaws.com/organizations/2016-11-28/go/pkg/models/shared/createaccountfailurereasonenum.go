@@ -27,12 +27,16 @@ const (
 	CreateAccountFailureReasonEnumUpdateExistingResourcePolicyWithTagsNotSupported CreateAccountFailureReasonEnum = "UPDATE_EXISTING_RESOURCE_POLICY_WITH_TAGS_NOT_SUPPORTED"
 )
 
+func (e CreateAccountFailureReasonEnum) ToPointer() *CreateAccountFailureReasonEnum {
+	return &e
+}
+
 func (e *CreateAccountFailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_LIMIT_EXCEEDED":
 		fallthrough
 	case "EMAIL_ALREADY_EXISTS":
@@ -62,9 +66,9 @@ func (e *CreateAccountFailureReasonEnum) UnmarshalJSON(data []byte) error {
 	case "INVALID_PAYMENT_INSTRUMENT":
 		fallthrough
 	case "UPDATE_EXISTING_RESOURCE_POLICY_WITH_TAGS_NOT_SUPPORTED":
-		*e = CreateAccountFailureReasonEnum(s)
+		*e = CreateAccountFailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccountFailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccountFailureReasonEnum: %v", v)
 	}
 }

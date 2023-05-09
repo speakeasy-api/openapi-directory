@@ -34,7 +34,10 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // SecuritycenterOrganizationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *organizations) SecuritycenterOrganizationsOperationsCancel(ctx context.Context, request operations.SecuritycenterOrganizationsOperationsCancelRequest, security operations.SecuritycenterOrganizationsOperationsCancelSecurity) (*operations.SecuritycenterOrganizationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p1alpha1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1p1alpha1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *organizations) SecuritycenterOrganizationsOperationsCancel(ctx context.
 // SecuritycenterOrganizationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *organizations) SecuritycenterOrganizationsOperationsDelete(ctx context.Context, request operations.SecuritycenterOrganizationsOperationsDeleteRequest, security operations.SecuritycenterOrganizationsOperationsDeleteSecurity) (*operations.SecuritycenterOrganizationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1p1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *organizations) SecuritycenterOrganizationsOperationsDelete(ctx context.
 // SecuritycenterOrganizationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *organizations) SecuritycenterOrganizationsOperationsList(ctx context.Context, request operations.SecuritycenterOrganizationsOperationsListRequest, security operations.SecuritycenterOrganizationsOperationsListSecurity) (*operations.SecuritycenterOrganizationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1p1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

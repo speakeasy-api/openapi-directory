@@ -20,12 +20,16 @@ const (
 	CreateBranchRequestBodyStageEnumPullRequest  CreateBranchRequestBodyStageEnum = "PULL_REQUEST"
 )
 
+func (e CreateBranchRequestBodyStageEnum) ToPointer() *CreateBranchRequestBodyStageEnum {
+	return &e
+}
+
 func (e *CreateBranchRequestBodyStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCTION":
 		fallthrough
 	case "BETA":
@@ -35,10 +39,10 @@ func (e *CreateBranchRequestBodyStageEnum) UnmarshalJSON(data []byte) error {
 	case "EXPERIMENTAL":
 		fallthrough
 	case "PULL_REQUEST":
-		*e = CreateBranchRequestBodyStageEnum(s)
+		*e = CreateBranchRequestBodyStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBranchRequestBodyStageEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBranchRequestBodyStageEnum: %v", v)
 	}
 }
 

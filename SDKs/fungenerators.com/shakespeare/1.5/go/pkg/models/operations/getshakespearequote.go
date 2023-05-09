@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type GetShakespeareQuoteSecurity struct {
+	XFungeneratorsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret"`
+}
+
 type GetShakespeareQuoteResponse struct {
 	ContentType string
 	StatusCode  int

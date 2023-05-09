@@ -16,17 +16,21 @@ const (
 	UpdateJobFromSourceControlXAmzTargetEnumAwsGlueUpdateJobFromSourceControl UpdateJobFromSourceControlXAmzTargetEnum = "AWSGlue.UpdateJobFromSourceControl"
 )
 
+func (e UpdateJobFromSourceControlXAmzTargetEnum) ToPointer() *UpdateJobFromSourceControlXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateJobFromSourceControlXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.UpdateJobFromSourceControl":
-		*e = UpdateJobFromSourceControlXAmzTargetEnum(s)
+		*e = UpdateJobFromSourceControlXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateJobFromSourceControlXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateJobFromSourceControlXAmzTargetEnum: %v", v)
 	}
 }
 

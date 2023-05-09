@@ -107,7 +107,10 @@ func (s *applications) AddApplication(ctx context.Context, request shared.Applic
 // virtual machines or ip addresses/subnet. Please refer to API Guide on how to construct membership criteria.
 func (s *applications) AddTier(ctx context.Context, request operations.AddTierRequest, security operations.AddTierSecurity) (*operations.AddTierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TierRequest", "json")
 	if err != nil {
@@ -179,7 +182,10 @@ func (s *applications) AddTier(ctx context.Context, request operations.AddTierRe
 // Deleting an application deletes all the tiers of the application along with the application
 func (s *applications) DeleteApplication(ctx context.Context, request operations.DeleteApplicationRequest, security operations.DeleteApplicationSecurity) (*operations.DeleteApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -219,7 +225,10 @@ func (s *applications) DeleteApplication(ctx context.Context, request operations
 // Delete tier of an application
 func (s *applications) DeleteTier(ctx context.Context, request operations.DeleteTierRequest, security operations.DeleteTierSecurity) (*operations.DeleteTierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers/{tier-id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers/{tier-id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -259,7 +268,10 @@ func (s *applications) DeleteTier(ctx context.Context, request operations.Delete
 // Show application details
 func (s *applications) GetApplication(ctx context.Context, request operations.GetApplicationRequest, security operations.GetApplicationSecurity) (*operations.GetApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -309,7 +321,10 @@ func (s *applications) GetApplication(ctx context.Context, request operations.Ge
 // Show tier details
 func (s *applications) GetApplicationTier(ctx context.Context, request operations.GetApplicationTierRequest, security operations.GetApplicationTierSecurity) (*operations.GetApplicationTierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers/{tier-id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers/{tier-id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -359,7 +374,10 @@ func (s *applications) GetApplicationTier(ctx context.Context, request operation
 // Show tier details
 func (s *applications) GetTier(ctx context.Context, request operations.GetTierRequest, security operations.GetTierSecurity) (*operations.GetTierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/tiers/{tier-id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/tiers/{tier-id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -411,7 +429,10 @@ func (s *applications) GetTier(ctx context.Context, request operations.GetTierRe
 // List tiers of an application
 func (s *applications) ListApplicationTiers(ctx context.Context, request operations.ListApplicationTiersRequest, security operations.ListApplicationTiersSecurity) (*operations.ListApplicationTiersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/applications/{id}/tiers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

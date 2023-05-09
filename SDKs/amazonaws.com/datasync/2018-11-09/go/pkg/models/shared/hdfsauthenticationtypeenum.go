@@ -14,18 +14,22 @@ const (
 	HdfsAuthenticationTypeEnumKerberos HdfsAuthenticationTypeEnum = "KERBEROS"
 )
 
+func (e HdfsAuthenticationTypeEnum) ToPointer() *HdfsAuthenticationTypeEnum {
+	return &e
+}
+
 func (e *HdfsAuthenticationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIMPLE":
 		fallthrough
 	case "KERBEROS":
-		*e = HdfsAuthenticationTypeEnum(s)
+		*e = HdfsAuthenticationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HdfsAuthenticationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HdfsAuthenticationTypeEnum: %v", v)
 	}
 }

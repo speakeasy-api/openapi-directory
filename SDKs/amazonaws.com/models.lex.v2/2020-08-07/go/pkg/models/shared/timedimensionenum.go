@@ -15,20 +15,24 @@ const (
 	TimeDimensionEnumWeeks TimeDimensionEnum = "Weeks"
 )
 
+func (e TimeDimensionEnum) ToPointer() *TimeDimensionEnum {
+	return &e
+}
+
 func (e *TimeDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Hours":
 		fallthrough
 	case "Days":
 		fallthrough
 	case "Weeks":
-		*e = TimeDimensionEnum(s)
+		*e = TimeDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimeDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for TimeDimensionEnum: %v", v)
 	}
 }

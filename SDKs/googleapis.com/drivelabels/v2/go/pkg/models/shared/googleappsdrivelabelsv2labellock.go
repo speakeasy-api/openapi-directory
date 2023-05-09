@@ -16,21 +16,25 @@ const (
 	GoogleAppsDriveLabelsV2LabelLockStateEnumDeleting         GoogleAppsDriveLabelsV2LabelLockStateEnum = "DELETING"
 )
 
+func (e GoogleAppsDriveLabelsV2LabelLockStateEnum) ToPointer() *GoogleAppsDriveLabelsV2LabelLockStateEnum {
+	return &e
+}
+
 func (e *GoogleAppsDriveLabelsV2LabelLockStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "DELETING":
-		*e = GoogleAppsDriveLabelsV2LabelLockStateEnum(s)
+		*e = GoogleAppsDriveLabelsV2LabelLockStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2LabelLockStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2LabelLockStateEnum: %v", v)
 	}
 }
 

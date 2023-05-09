@@ -21,12 +21,16 @@ const (
 	FacetsSortKeysEnumUpdatedDesc          FacetsSortKeysEnum = "updated,,desc"
 )
 
+func (e FacetsSortKeysEnum) ToPointer() *FacetsSortKeysEnum {
+	return &e
+}
+
 func (e *FacetsSortKeysEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "score,,desc":
 		fallthrough
 	case "spatial_area,,asc":
@@ -38,10 +42,10 @@ func (e *FacetsSortKeysEnum) UnmarshalJSON(data []byte) error {
 	case "temporal_duration,,desc":
 		fallthrough
 	case "updated,,desc":
-		*e = FacetsSortKeysEnum(s)
+		*e = FacetsSortKeysEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FacetsSortKeysEnum: %s", s)
+		return fmt.Errorf("invalid value for FacetsSortKeysEnum: %v", v)
 	}
 }
 
@@ -53,19 +57,23 @@ const (
 	FacetsSourceEnumAde   FacetsSourceEnum = "ADE"
 )
 
+func (e FacetsSourceEnum) ToPointer() *FacetsSourceEnum {
+	return &e
+}
+
 func (e *FacetsSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NSIDC":
 		fallthrough
 	case "ADE":
-		*e = FacetsSourceEnum(s)
+		*e = FacetsSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FacetsSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for FacetsSourceEnum: %v", v)
 	}
 }
 

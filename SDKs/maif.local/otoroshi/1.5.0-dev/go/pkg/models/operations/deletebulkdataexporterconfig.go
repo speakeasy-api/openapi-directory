@@ -20,17 +20,21 @@ const (
 	DeletebulkDataExporterConfig200ApplicationJSONStatusEnumTwoHundred DeletebulkDataExporterConfig200ApplicationJSONStatusEnum = "200"
 )
 
+func (e DeletebulkDataExporterConfig200ApplicationJSONStatusEnum) ToPointer() *DeletebulkDataExporterConfig200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *DeletebulkDataExporterConfig200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "200":
-		*e = DeletebulkDataExporterConfig200ApplicationJSONStatusEnum(s)
+		*e = DeletebulkDataExporterConfig200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletebulkDataExporterConfig200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletebulkDataExporterConfig200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

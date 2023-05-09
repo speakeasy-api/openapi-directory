@@ -8,47 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum string
-
-const (
-	PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnumTax              PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum = "tax"
-	PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnumWealthManagement PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum = "wealth management"
-	PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnumSocial           PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum = "social"
-	PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnumSocialManager    PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum = "social manager"
-	PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnumPurchases        PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum = "purchases"
-	PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnumSales            PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum = "sales"
-	PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnumLegal            PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum = "legal"
-	PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnumAccounting       PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum = "accounting"
-)
-
-func (e *PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "tax":
-		fallthrough
-	case "wealth management":
-		fallthrough
-	case "social":
-		fallthrough
-	case "social manager":
-		fallthrough
-	case "purchases":
-		fallthrough
-	case "sales":
-		fallthrough
-	case "legal":
-		fallthrough
-	case "accounting":
-		*e = PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum: %s", s)
-	}
-}
-
 type PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyRoleEnum string
 
 const (
@@ -57,29 +16,33 @@ const (
 	PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyRoleEnumEmpty        PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyRoleEnum = "empty"
 )
 
+func (e PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyRoleEnum) ToPointer() *PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyRoleEnum {
+	return &e
+}
+
 func (e *PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "collaborator":
 		fallthrough
 	case "assistant":
 		fallthrough
 	case "empty":
-		*e = PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyRoleEnum(s)
+		*e = PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyRoleEnum: %v", v)
 	}
 }
 
 // PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBody - Customer contract to modify
 type PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBody struct {
-	Groups  *PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyGroupsEnum `json:"Groups,omitempty"`
-	IsAdmin *bool                                                             `json:"IsAdmin,omitempty"`
-	Role    *PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyRoleEnum   `json:"Role,omitempty"`
+	Groups  []string                                                        `json:"Groups,omitempty"`
+	IsAdmin *bool                                                           `json:"IsAdmin,omitempty"`
+	Role    *PatchSpacesIDFoldersFolderIDPersonsMemberIDRequestBodyRoleEnum `json:"Role,omitempty"`
 }
 
 type PatchSpacesIDFoldersFolderIDPersonsMemberIDRequest struct {

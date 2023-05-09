@@ -20,12 +20,16 @@ const (
 	ProvisionNetworkClientsRequestBodyDevicePolicyEnumWhitelisted   ProvisionNetworkClientsRequestBodyDevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyDevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyDevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyDevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Allowed":
 		fallthrough
 	case "Blocked":
@@ -37,10 +41,10 @@ func (e *ProvisionNetworkClientsRequestBodyDevicePolicyEnum) UnmarshalJSON(data 
 	case "Per connection":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyDevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyDevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyDevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyDevicePolicyEnum: %v", v)
 	}
 }
 
@@ -53,21 +57,25 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySecurityApplianceDevicePolicyEnum: %v", v)
 	}
 }
 
@@ -87,12 +95,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -100,10 +112,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum) Unma
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid0DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -125,12 +137,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -138,10 +154,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum) Unma
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid1DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -163,12 +179,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -176,10 +196,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum) Unm
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid10DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -201,12 +221,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -214,10 +238,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum) Unm
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid11DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -239,12 +263,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -252,10 +280,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum) Unm
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid12DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -277,12 +305,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -290,10 +322,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum) Unm
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid13DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -315,12 +347,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -328,10 +364,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum) Unm
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid14DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -353,12 +389,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -366,10 +406,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum) Unma
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid2DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -391,12 +431,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -404,10 +448,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum) Unma
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid3DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -429,12 +473,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -442,10 +490,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum) Unma
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid4DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -467,12 +515,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -480,10 +532,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum) Unma
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid5DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -505,12 +557,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -518,10 +574,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum) Unma
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid6DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -543,12 +599,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -556,10 +616,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum) Unma
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid7DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -581,12 +641,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -594,10 +658,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum) Unma
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid8DevicePolicyEnum: %v", v)
 	}
 }
 
@@ -619,12 +683,16 @@ const (
 	ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnumWhitelisted ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum = "Whitelisted"
 )
 
+func (e ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum) ToPointer() *ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum {
+	return &e
+}
+
 func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blocked":
 		fallthrough
 	case "Group policy":
@@ -632,10 +700,10 @@ func (e *ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum) Unma
 	case "Normal":
 		fallthrough
 	case "Whitelisted":
-		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum(s)
+		*e = ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionNetworkClientsRequestBodyPoliciesBySsid9DevicePolicyEnum: %v", v)
 	}
 }
 

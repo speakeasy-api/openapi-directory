@@ -16,17 +16,21 @@ const (
 	CreatePublicDNSNamespaceXAmzTargetEnumRoute53AutoNamingV20170314CreatePublicDNSNamespace CreatePublicDNSNamespaceXAmzTargetEnum = "Route53AutoNaming_v20170314.CreatePublicDnsNamespace"
 )
 
+func (e CreatePublicDNSNamespaceXAmzTargetEnum) ToPointer() *CreatePublicDNSNamespaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreatePublicDNSNamespaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53AutoNaming_v20170314.CreatePublicDnsNamespace":
-		*e = CreatePublicDNSNamespaceXAmzTargetEnum(s)
+		*e = CreatePublicDNSNamespaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePublicDNSNamespaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePublicDNSNamespaceXAmzTargetEnum: %v", v)
 	}
 }
 

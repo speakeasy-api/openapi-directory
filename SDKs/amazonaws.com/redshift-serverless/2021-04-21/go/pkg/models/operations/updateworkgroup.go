@@ -16,17 +16,21 @@ const (
 	UpdateWorkgroupXAmzTargetEnumRedshiftServerlessUpdateWorkgroup UpdateWorkgroupXAmzTargetEnum = "RedshiftServerless.UpdateWorkgroup"
 )
 
+func (e UpdateWorkgroupXAmzTargetEnum) ToPointer() *UpdateWorkgroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateWorkgroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.UpdateWorkgroup":
-		*e = UpdateWorkgroupXAmzTargetEnum(s)
+		*e = UpdateWorkgroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateWorkgroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateWorkgroupXAmzTargetEnum: %v", v)
 	}
 }
 

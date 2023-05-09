@@ -15,20 +15,24 @@ const (
 	BatchGetAssetPropertyAggregatesErrorCodeEnumAccessDeniedException     BatchGetAssetPropertyAggregatesErrorCodeEnum = "AccessDeniedException"
 )
 
+func (e BatchGetAssetPropertyAggregatesErrorCodeEnum) ToPointer() *BatchGetAssetPropertyAggregatesErrorCodeEnum {
+	return &e
+}
+
 func (e *BatchGetAssetPropertyAggregatesErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResourceNotFoundException":
 		fallthrough
 	case "InvalidRequestException":
 		fallthrough
 	case "AccessDeniedException":
-		*e = BatchGetAssetPropertyAggregatesErrorCodeEnum(s)
+		*e = BatchGetAssetPropertyAggregatesErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetAssetPropertyAggregatesErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetAssetPropertyAggregatesErrorCodeEnum: %v", v)
 	}
 }

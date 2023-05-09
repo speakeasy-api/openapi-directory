@@ -15,17 +15,21 @@ const (
 	GETSetInstanceHealthActionEnumSetInstanceHealth GETSetInstanceHealthActionEnum = "SetInstanceHealth"
 )
 
+func (e GETSetInstanceHealthActionEnum) ToPointer() *GETSetInstanceHealthActionEnum {
+	return &e
+}
+
 func (e *GETSetInstanceHealthActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetInstanceHealth":
-		*e = GETSetInstanceHealthActionEnum(s)
+		*e = GETSetInstanceHealthActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetInstanceHealthActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetInstanceHealthActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSetInstanceHealthVersionEnumTwoThousandAndEleven0101 GETSetInstanceHealthVersionEnum = "2011-01-01"
 )
 
+func (e GETSetInstanceHealthVersionEnum) ToPointer() *GETSetInstanceHealthVersionEnum {
+	return &e
+}
+
 func (e *GETSetInstanceHealthVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETSetInstanceHealthVersionEnum(s)
+		*e = GETSetInstanceHealthVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetInstanceHealthVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetInstanceHealthVersionEnum: %v", v)
 	}
 }
 

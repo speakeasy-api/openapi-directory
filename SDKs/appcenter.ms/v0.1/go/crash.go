@@ -33,9 +33,14 @@ func newCrash(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // CrashGroupsGet - Gets a specific group.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashGroupsGet(ctx context.Context, request operations.CrashGroupsGetRequest, security operations.CrashGroupsGetSecurity) (*operations.CrashGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -87,9 +92,14 @@ func (s *crash) CrashGroupsGet(ctx context.Context, request operations.CrashGrou
 }
 
 // CrashGroupsGetStacktrace - Gets a stacktrace for a specific crash.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashGroupsGetStacktrace(ctx context.Context, request operations.CrashGroupsGetStacktraceRequest, security operations.CrashGroupsGetStacktraceSecurity) (*operations.CrashGroupsGetStacktraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/stacktrace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/stacktrace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -145,9 +155,14 @@ func (s *crash) CrashGroupsGetStacktrace(ctx context.Context, request operations
 }
 
 // CrashGroupsList - Gets a list of crash groups and whether the list contains all available groups.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashGroupsList(ctx context.Context, request operations.CrashGroupsListRequest, security operations.CrashGroupsListSecurity) (*operations.CrashGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -203,9 +218,14 @@ func (s *crash) CrashGroupsList(ctx context.Context, request operations.CrashGro
 }
 
 // CrashGroupsUpdate - Updates a group.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashGroupsUpdate(ctx context.Context, request operations.CrashGroupsUpdateRequest, security operations.CrashGroupsUpdateSecurity) (*operations.CrashGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -267,9 +287,14 @@ func (s *crash) CrashGroupsUpdate(ctx context.Context, request operations.CrashG
 }
 
 // CrashesDelete - Delete a specific crash and related attachments and blobs for an app.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashesDelete(ctx context.Context, request operations.CrashesDeleteRequest, security operations.CrashesDeleteSecurity) (*operations.CrashesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -325,9 +350,14 @@ func (s *crash) CrashesDelete(ctx context.Context, request operations.CrashesDel
 }
 
 // CrashesGet - Gets a specific crash for an app.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashesGet(ctx context.Context, request operations.CrashesGetRequest, security operations.CrashesGetSecurity) (*operations.CrashesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -383,9 +413,14 @@ func (s *crash) CrashesGet(ctx context.Context, request operations.CrashesGetReq
 }
 
 // CrashesGetAppCrashesInfo - Gets whether the application has any crashes.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashesGetAppCrashesInfo(ctx context.Context, request operations.CrashesGetAppCrashesInfoRequest, security operations.CrashesGetAppCrashesInfoSecurity) (*operations.CrashesGetAppCrashesInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crashes_info", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crashes_info", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -437,9 +472,14 @@ func (s *crash) CrashesGetAppCrashesInfo(ctx context.Context, request operations
 }
 
 // CrashesGetAppVersions - Gets a list of application versions.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashesGetAppVersions(ctx context.Context, request operations.CrashesGetAppVersionsRequest, security operations.CrashesGetAppVersionsSecurity) (*operations.CrashesGetAppVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -491,9 +531,14 @@ func (s *crash) CrashesGetAppVersions(ctx context.Context, request operations.Cr
 }
 
 // CrashesGetCrashAttachmentLocation - Gets the URI location to download crash attachment.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashesGetCrashAttachmentLocation(ctx context.Context, request operations.CrashesGetCrashAttachmentLocationRequest, security operations.CrashesGetCrashAttachmentLocationSecurity) (*operations.CrashesGetCrashAttachmentLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments/{attachment_id}/location", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments/{attachment_id}/location", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -545,9 +590,14 @@ func (s *crash) CrashesGetCrashAttachmentLocation(ctx context.Context, request o
 }
 
 // CrashesGetCrashTextAttachmentContent - Gets content of the text attachment.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashesGetCrashTextAttachmentContent(ctx context.Context, request operations.CrashesGetCrashTextAttachmentContentRequest, security operations.CrashesGetCrashTextAttachmentContentSecurity) (*operations.CrashesGetCrashTextAttachmentContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments/{attachment_id}/text", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments/{attachment_id}/text", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -600,9 +650,14 @@ func (s *crash) CrashesGetCrashTextAttachmentContent(ctx context.Context, reques
 }
 
 // CrashesGetNativeCrash - Gets the native log of a specific crash.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashesGetNativeCrash(ctx context.Context, request operations.CrashesGetNativeCrashRequest, security operations.CrashesGetNativeCrashSecurity) (*operations.CrashesGetNativeCrashResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/native", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/native", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -655,9 +710,14 @@ func (s *crash) CrashesGetNativeCrash(ctx context.Context, request operations.Cr
 }
 
 // CrashesGetNativeCrashDownload - Gets the native log of a specific crash as a text attachment.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashesGetNativeCrashDownload(ctx context.Context, request operations.CrashesGetNativeCrashDownloadRequest, security operations.CrashesGetNativeCrashDownloadSecurity) (*operations.CrashesGetNativeCrashDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/native/download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/native/download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -710,9 +770,14 @@ func (s *crash) CrashesGetNativeCrashDownload(ctx context.Context, request opera
 }
 
 // CrashesGetRawCrashLocation - Gets the URI location to download json of a specific crash.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashesGetRawCrashLocation(ctx context.Context, request operations.CrashesGetRawCrashLocationRequest, security operations.CrashesGetRawCrashLocationSecurity) (*operations.CrashesGetRawCrashLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/raw/location", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/raw/location", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -764,9 +829,14 @@ func (s *crash) CrashesGetRawCrashLocation(ctx context.Context, request operatio
 }
 
 // CrashesGetStacktrace - Gets a stacktrace for a specific crash.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashesGetStacktrace(ctx context.Context, request operations.CrashesGetStacktraceRequest, security operations.CrashesGetStacktraceSecurity) (*operations.CrashesGetStacktraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/stacktrace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes/{crash_id}/stacktrace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -822,9 +892,14 @@ func (s *crash) CrashesGetStacktrace(ctx context.Context, request operations.Cra
 }
 
 // CrashesList - Gets all crashes of a group.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashesList(ctx context.Context, request operations.CrashesListRequest, security operations.CrashesListSecurity) (*operations.CrashesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crash_groups/{crash_group_id}/crashes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -880,9 +955,14 @@ func (s *crash) CrashesList(ctx context.Context, request operations.CrashesListR
 }
 
 // CrashesListAttachments - Gets all attachments for a specific crash.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *crash) CrashesListAttachments(ctx context.Context, request operations.CrashesListAttachmentsRequest, security operations.CrashesListAttachmentsSecurity) (*operations.CrashesListAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -937,7 +1017,10 @@ func (s *crash) CrashesListAttachments(ctx context.Context, request operations.C
 // Gets missing symbol crash group by its id
 func (s *crash) MissingSymbolGroupsGet(ctx context.Context, request operations.MissingSymbolGroupsGetRequest, security operations.MissingSymbolGroupsGetSecurity) (*operations.MissingSymbolGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups/{symbol_group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups/{symbol_group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -992,7 +1075,10 @@ func (s *crash) MissingSymbolGroupsGet(ctx context.Context, request operations.M
 // Gets application level statistics for all missing symbol groups
 func (s *crash) MissingSymbolGroupsInfo(ctx context.Context, request operations.MissingSymbolGroupsInfoRequest, security operations.MissingSymbolGroupsInfoSecurity) (*operations.MissingSymbolGroupsInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups_info", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups_info", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1047,7 +1133,10 @@ func (s *crash) MissingSymbolGroupsInfo(ctx context.Context, request operations.
 // Gets top N (ordered by crash count) of crash groups by missing symbol
 func (s *crash) MissingSymbolGroupsList(ctx context.Context, request operations.MissingSymbolGroupsListRequest, security operations.MissingSymbolGroupsListSecurity) (*operations.MissingSymbolGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/diagnostics/symbol_groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1105,7 +1194,10 @@ func (s *crash) MissingSymbolGroupsList(ctx context.Context, request operations.
 // SymbolUploadsComplete - Commits or aborts the symbol upload process for a new set of symbols for the specified application
 func (s *crash) SymbolUploadsComplete(ctx context.Context, request operations.SymbolUploadsCompleteRequest, security operations.SymbolUploadsCompleteSecurity) (*operations.SymbolUploadsCompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1189,7 +1281,10 @@ func (s *crash) SymbolUploadsComplete(ctx context.Context, request operations.Sy
 // SymbolUploadsCreate - Begins the symbol upload process for a new set of symbols for the specified application
 func (s *crash) SymbolUploadsCreate(ctx context.Context, request operations.SymbolUploadsCreateRequest, security operations.SymbolUploadsCreateSecurity) (*operations.SymbolUploadsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbol_uploads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbol_uploads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1273,7 +1368,10 @@ func (s *crash) SymbolUploadsCreate(ctx context.Context, request operations.Symb
 // SymbolUploadsDelete - Deletes a symbol upload by id for the specified application
 func (s *crash) SymbolUploadsDelete(ctx context.Context, request operations.SymbolUploadsDeleteRequest, security operations.SymbolUploadsDeleteSecurity) (*operations.SymbolUploadsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1347,7 +1445,10 @@ func (s *crash) SymbolUploadsDelete(ctx context.Context, request operations.Symb
 // SymbolUploadsGet - Gets a symbol upload by id for the specified application
 func (s *crash) SymbolUploadsGet(ctx context.Context, request operations.SymbolUploadsGetRequest, security operations.SymbolUploadsGetSecurity) (*operations.SymbolUploadsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1421,7 +1522,10 @@ func (s *crash) SymbolUploadsGet(ctx context.Context, request operations.SymbolU
 // SymbolUploadsGetLocation - Gets the URL to download the symbol upload
 func (s *crash) SymbolUploadsGetLocation(ctx context.Context, request operations.SymbolUploadsGetLocationRequest, security operations.SymbolUploadsGetLocationSecurity) (*operations.SymbolUploadsGetLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id}/location", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbol_uploads/{symbol_upload_id}/location", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1495,7 +1599,10 @@ func (s *crash) SymbolUploadsGetLocation(ctx context.Context, request operations
 // SymbolUploadsList - Gets a list of all uploads for the specified application
 func (s *crash) SymbolUploadsList(ctx context.Context, request operations.SymbolUploadsListRequest, security operations.SymbolUploadsListSecurity) (*operations.SymbolUploadsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbol_uploads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbol_uploads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1563,7 +1670,10 @@ func (s *crash) SymbolUploadsList(ctx context.Context, request operations.Symbol
 // SymbolsGet - Returns a particular symbol by id (uuid) for the provided application
 func (s *crash) SymbolsGet(ctx context.Context, request operations.SymbolsGetRequest, security operations.SymbolsGetSecurity) (*operations.SymbolsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbols/{symbol_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbols/{symbol_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1637,7 +1747,10 @@ func (s *crash) SymbolsGet(ctx context.Context, request operations.SymbolsGetReq
 // SymbolsGetLocation - Gets the URL to download the symbol
 func (s *crash) SymbolsGetLocation(ctx context.Context, request operations.SymbolsGetLocationRequest, security operations.SymbolsGetLocationSecurity) (*operations.SymbolsGetLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbols/{symbol_id}/location", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbols/{symbol_id}/location", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1711,7 +1824,10 @@ func (s *crash) SymbolsGetLocation(ctx context.Context, request operations.Symbo
 // SymbolsGetStatus - Returns a particular symbol by id (uuid) for the provided application
 func (s *crash) SymbolsGetStatus(ctx context.Context, request operations.SymbolsGetStatusRequest, security operations.SymbolsGetStatusSecurity) (*operations.SymbolsGetStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbols/{symbol_id}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbols/{symbol_id}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1785,7 +1901,10 @@ func (s *crash) SymbolsGetStatus(ctx context.Context, request operations.Symbols
 // SymbolsIgnore - Marks a symbol by id (uuid) as ignored
 func (s *crash) SymbolsIgnore(ctx context.Context, request operations.SymbolsIgnoreRequest, security operations.SymbolsIgnoreSecurity) (*operations.SymbolsIgnoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbols/{symbol_id}/ignore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbols/{symbol_id}/ignore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1859,7 +1978,10 @@ func (s *crash) SymbolsIgnore(ctx context.Context, request operations.SymbolsIgn
 // SymbolsList - Returns the list of all symbols for the provided application
 func (s *crash) SymbolsList(ctx context.Context, request operations.SymbolsListRequest, security operations.SymbolsListSecurity) (*operations.SymbolsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbols", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/symbols", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

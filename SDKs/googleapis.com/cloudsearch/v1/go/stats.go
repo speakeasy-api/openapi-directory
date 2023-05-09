@@ -275,7 +275,10 @@ func (s *stats) CloudsearchStatsGetUser(ctx context.Context, request operations.
 // CloudsearchStatsIndexDatasourcesGet - Gets indexed item statistics for a single data source. **Note:** This API requires a standard end user account to execute.
 func (s *stats) CloudsearchStatsIndexDatasourcesGet(ctx context.Context, request operations.CloudsearchStatsIndexDatasourcesGetRequest, security operations.CloudsearchStatsIndexDatasourcesGetSecurity) (*operations.CloudsearchStatsIndexDatasourcesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/index/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/stats/index/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -323,7 +326,10 @@ func (s *stats) CloudsearchStatsIndexDatasourcesGet(ctx context.Context, request
 // CloudsearchStatsQuerySearchapplicationsGet - Get the query statistics for search application. **Note:** This API requires a standard end user account to execute.
 func (s *stats) CloudsearchStatsQuerySearchapplicationsGet(ctx context.Context, request operations.CloudsearchStatsQuerySearchapplicationsGetRequest, security operations.CloudsearchStatsQuerySearchapplicationsGetSecurity) (*operations.CloudsearchStatsQuerySearchapplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/query/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/stats/query/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -371,7 +377,10 @@ func (s *stats) CloudsearchStatsQuerySearchapplicationsGet(ctx context.Context, 
 // CloudsearchStatsSessionSearchapplicationsGet - Get the # of search sessions, % of successful sessions with a click query statistics for search application. **Note:** This API requires a standard end user account to execute.
 func (s *stats) CloudsearchStatsSessionSearchapplicationsGet(ctx context.Context, request operations.CloudsearchStatsSessionSearchapplicationsGetRequest, security operations.CloudsearchStatsSessionSearchapplicationsGetSecurity) (*operations.CloudsearchStatsSessionSearchapplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/session/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/stats/session/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -419,7 +428,10 @@ func (s *stats) CloudsearchStatsSessionSearchapplicationsGet(ctx context.Context
 // CloudsearchStatsUserSearchapplicationsGet - Get the users statistics for search application. **Note:** This API requires a standard end user account to execute.
 func (s *stats) CloudsearchStatsUserSearchapplicationsGet(ctx context.Context, request operations.CloudsearchStatsUserSearchapplicationsGetRequest, security operations.CloudsearchStatsUserSearchapplicationsGetSecurity) (*operations.CloudsearchStatsUserSearchapplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/user/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/stats/user/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

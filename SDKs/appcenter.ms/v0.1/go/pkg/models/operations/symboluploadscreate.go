@@ -24,12 +24,16 @@ const (
 	SymbolUploadsCreateRequestBodySymbolTypeEnumUwp             SymbolUploadsCreateRequestBodySymbolTypeEnum = "UWP"
 )
 
+func (e SymbolUploadsCreateRequestBodySymbolTypeEnum) ToPointer() *SymbolUploadsCreateRequestBodySymbolTypeEnum {
+	return &e
+}
+
 func (e *SymbolUploadsCreateRequestBodySymbolTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Apple":
 		fallthrough
 	case "JavaScript":
@@ -39,10 +43,10 @@ func (e *SymbolUploadsCreateRequestBodySymbolTypeEnum) UnmarshalJSON(data []byte
 	case "AndroidProguard":
 		fallthrough
 	case "UWP":
-		*e = SymbolUploadsCreateRequestBodySymbolTypeEnum(s)
+		*e = SymbolUploadsCreateRequestBodySymbolTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymbolUploadsCreateRequestBodySymbolTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SymbolUploadsCreateRequestBodySymbolTypeEnum: %v", v)
 	}
 }
 

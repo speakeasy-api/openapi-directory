@@ -16,19 +16,23 @@ const (
 	GetApplicationsDirectionEnumDesc GetApplicationsDirectionEnum = "desc"
 )
 
+func (e GetApplicationsDirectionEnum) ToPointer() *GetApplicationsDirectionEnum {
+	return &e
+}
+
 func (e *GetApplicationsDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetApplicationsDirectionEnum(s)
+		*e = GetApplicationsDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetApplicationsDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetApplicationsDirectionEnum: %v", v)
 	}
 }
 

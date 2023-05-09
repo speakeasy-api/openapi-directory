@@ -36,7 +36,10 @@ func newProjectStatus(defaultClient, securityClient HTTPClient, serverURL, langu
 // List the project status
 func (s *projectStatus) GetProjectStatus(ctx context.Context, request operations.GetProjectStatusRequest) (*operations.GetProjectStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projectStatus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projectStatus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +194,10 @@ func (s *projectStatus) GetProjectStatus(ctx context.Context, request operations
 // List the project status of client
 func (s *projectStatus) GetProjectStatusOfClient(ctx context.Context, request operations.GetProjectStatusOfClientRequest) (*operations.GetProjectStatusOfClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}/projectStatus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}/projectStatus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

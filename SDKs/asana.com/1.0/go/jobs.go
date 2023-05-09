@@ -40,7 +40,10 @@ func newJobs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Returns the full record for a job.
 func (s *jobs) GetJob(ctx context.Context, request operations.GetJobRequest) (*operations.GetJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{job_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{job_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

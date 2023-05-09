@@ -16,17 +16,21 @@ const (
 	ImportSourceCredentialsXAmzTargetEnumCodeBuild20161006ImportSourceCredentials ImportSourceCredentialsXAmzTargetEnum = "CodeBuild_20161006.ImportSourceCredentials"
 )
 
+func (e ImportSourceCredentialsXAmzTargetEnum) ToPointer() *ImportSourceCredentialsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportSourceCredentialsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.ImportSourceCredentials":
-		*e = ImportSourceCredentialsXAmzTargetEnum(s)
+		*e = ImportSourceCredentialsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportSourceCredentialsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportSourceCredentialsXAmzTargetEnum: %v", v)
 	}
 }
 

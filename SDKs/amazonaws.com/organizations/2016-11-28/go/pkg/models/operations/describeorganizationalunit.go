@@ -16,17 +16,21 @@ const (
 	DescribeOrganizationalUnitXAmzTargetEnumAwsOrganizationsV20161128DescribeOrganizationalUnit DescribeOrganizationalUnitXAmzTargetEnum = "AWSOrganizationsV20161128.DescribeOrganizationalUnit"
 )
 
+func (e DescribeOrganizationalUnitXAmzTargetEnum) ToPointer() *DescribeOrganizationalUnitXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeOrganizationalUnitXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.DescribeOrganizationalUnit":
-		*e = DescribeOrganizationalUnitXAmzTargetEnum(s)
+		*e = DescribeOrganizationalUnitXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeOrganizationalUnitXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeOrganizationalUnitXAmzTargetEnum: %v", v)
 	}
 }
 

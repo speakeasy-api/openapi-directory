@@ -18,21 +18,25 @@ const (
 	StartImportFileTaskRequestBodyDataSourceTypeEnumImport                      StartImportFileTaskRequestBodyDataSourceTypeEnum = "Import"
 )
 
+func (e StartImportFileTaskRequestBodyDataSourceTypeEnum) ToPointer() *StartImportFileTaskRequestBodyDataSourceTypeEnum {
+	return &e
+}
+
 func (e *StartImportFileTaskRequestBodyDataSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ApplicationDiscoveryService":
 		fallthrough
 	case "MPA":
 		fallthrough
 	case "Import":
-		*e = StartImportFileTaskRequestBodyDataSourceTypeEnum(s)
+		*e = StartImportFileTaskRequestBodyDataSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartImportFileTaskRequestBodyDataSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StartImportFileTaskRequestBodyDataSourceTypeEnum: %v", v)
 	}
 }
 

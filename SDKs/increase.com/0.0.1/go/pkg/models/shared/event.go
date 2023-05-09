@@ -25,6 +25,8 @@ const (
 	EventCategoryEnumAchTransferUpdated                                   EventCategoryEnum = "ach_transfer.updated"
 	EventCategoryEnumCardCreated                                          EventCategoryEnum = "card.created"
 	EventCategoryEnumCardUpdated                                          EventCategoryEnum = "card.updated"
+	EventCategoryEnumCardPaymentCreated                                   EventCategoryEnum = "card_payment.created"
+	EventCategoryEnumCardPaymentUpdated                                   EventCategoryEnum = "card_payment.updated"
 	EventCategoryEnumCardDisputeCreated                                   EventCategoryEnum = "card_dispute.created"
 	EventCategoryEnumCardDisputeUpdated                                   EventCategoryEnum = "card_dispute.updated"
 	EventCategoryEnumCheckDepositCreated                                  EventCategoryEnum = "check_deposit.created"
@@ -62,12 +64,16 @@ const (
 	EventCategoryEnumWireTransferUpdated                                  EventCategoryEnum = "wire_transfer.updated"
 )
 
+func (e EventCategoryEnum) ToPointer() *EventCategoryEnum {
+	return &e
+}
+
 func (e *EventCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account.created":
 		fallthrough
 	case "account.updated":
@@ -93,6 +99,10 @@ func (e *EventCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "card.created":
 		fallthrough
 	case "card.updated":
+		fallthrough
+	case "card_payment.created":
+		fallthrough
+	case "card_payment.updated":
 		fallthrough
 	case "card_dispute.created":
 		fallthrough
@@ -163,10 +173,10 @@ func (e *EventCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "wire_transfer.created":
 		fallthrough
 	case "wire_transfer.updated":
-		*e = EventCategoryEnum(s)
+		*e = EventCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for EventCategoryEnum: %v", v)
 	}
 }
 
@@ -177,17 +187,21 @@ const (
 	EventTypeEnumEvent EventTypeEnum = "event"
 )
 
+func (e EventTypeEnum) ToPointer() *EventTypeEnum {
+	return &e
+}
+
 func (e *EventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "event":
-		*e = EventTypeEnum(s)
+		*e = EventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventTypeEnum: %v", v)
 	}
 }
 

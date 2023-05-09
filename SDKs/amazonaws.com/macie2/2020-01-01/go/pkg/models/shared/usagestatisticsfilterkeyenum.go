@@ -17,12 +17,16 @@ const (
 	UsageStatisticsFilterKeyEnumTotal              UsageStatisticsFilterKeyEnum = "total"
 )
 
+func (e UsageStatisticsFilterKeyEnum) ToPointer() *UsageStatisticsFilterKeyEnum {
+	return &e
+}
+
 func (e *UsageStatisticsFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "accountId":
 		fallthrough
 	case "serviceLimit":
@@ -30,9 +34,9 @@ func (e *UsageStatisticsFilterKeyEnum) UnmarshalJSON(data []byte) error {
 	case "freeTrialStartDate":
 		fallthrough
 	case "total":
-		*e = UsageStatisticsFilterKeyEnum(s)
+		*e = UsageStatisticsFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageStatisticsFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageStatisticsFilterKeyEnum: %v", v)
 	}
 }

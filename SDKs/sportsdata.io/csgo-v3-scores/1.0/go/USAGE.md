@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.AreasCountriesRequest{
-        Format: "json",
-    }
-
     ctx := context.Background()
-    res, err := s.AreasCountries(ctx, req)
+    res, err := s.AreasCountries(ctx, operations.AreasCountriesRequest{
+        Format: operations.AreasCountriesFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }

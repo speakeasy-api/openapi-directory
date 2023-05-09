@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/byautomata.io/1.0.1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetContentproSearchRequest{
-        Terms: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.ContentproSearch.GetContentproSearch(ctx, req)
+    res, err := s.ContentproSearch.GetContentproSearch(ctx, operations.GetContentproSearchRequest{
+        Terms: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,21 +42,21 @@ func main() {
 ## Available Resources and Operations
 
 
-### ContentproSearch
+### [ContentproSearch](docs/contentprosearch/README.md)
 
-* `GetContentproSearch` - Send search terms to receive the most relevant articles and companies.
+* [GetContentproSearch](docs/contentprosearch/README.md#getcontentprosearch) - Send search terms to receive the most relevant articles and companies.
 
-### ContentproSimilarText
+### [ContentproSimilarText](docs/contentprosimilartext/README.md)
 
-* `PostContentproSimilarText` - The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.
+* [PostContentproSimilarText](docs/contentprosimilartext/README.md#postcontentprosimilartext) - The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.
 
-### Search
+### [Search](docs/search/README.md)
 
-* `GetSearch` - Send search terms to receive the most relevant companies along with text snippets.
+* [GetSearch](docs/search/README.md#getsearch) - Send search terms to receive the most relevant companies along with text snippets.
 
-### Similar
+### [Similar](docs/similar/README.md)
 
-* `GetSimilar` - Send a company website to receive a list of companies related to them.
+* [GetSimilar](docs/similar/README.md#getsimilar) - Send a company website to receive a list of companies related to them.
 <!-- End SDK Available Operations -->
 
 ### Maturity

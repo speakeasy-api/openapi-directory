@@ -16,17 +16,21 @@ const (
 	DeleteMobileDeviceAccessRuleXAmzTargetEnumWorkMailServiceDeleteMobileDeviceAccessRule DeleteMobileDeviceAccessRuleXAmzTargetEnum = "WorkMailService.DeleteMobileDeviceAccessRule"
 )
 
+func (e DeleteMobileDeviceAccessRuleXAmzTargetEnum) ToPointer() *DeleteMobileDeviceAccessRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteMobileDeviceAccessRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.DeleteMobileDeviceAccessRule":
-		*e = DeleteMobileDeviceAccessRuleXAmzTargetEnum(s)
+		*e = DeleteMobileDeviceAccessRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteMobileDeviceAccessRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteMobileDeviceAccessRuleXAmzTargetEnum: %v", v)
 	}
 }
 

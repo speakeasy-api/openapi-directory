@@ -16,17 +16,21 @@ const (
 	RegisterContainerInstanceXAmzTargetEnumAmazonEc2ContainerServiceV20141113RegisterContainerInstance RegisterContainerInstanceXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.RegisterContainerInstance"
 )
 
+func (e RegisterContainerInstanceXAmzTargetEnum) ToPointer() *RegisterContainerInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterContainerInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.RegisterContainerInstance":
-		*e = RegisterContainerInstanceXAmzTargetEnum(s)
+		*e = RegisterContainerInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterContainerInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterContainerInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

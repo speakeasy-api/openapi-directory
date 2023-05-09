@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -77,4 +78,8 @@ pkg/models/shared/testiampermissionsrequest.go
 pkg/models/shared/setiampolicyrequest.go
 pkg/models/shared/gcpuseraccessbinding.go
 pkg/models/shared/listgcpuseraccessbindingsresponse.go
+docs/sdk/README.md
+docs/accesspolicies/README.md
+docs/operations/README.md
+docs/organizations/README.md
 USAGE.md

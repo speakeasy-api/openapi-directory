@@ -20,12 +20,16 @@ const (
 	GetFlightOffersTravelClassEnumFirst          GetFlightOffersTravelClassEnum = "FIRST"
 )
 
+func (e GetFlightOffersTravelClassEnum) ToPointer() *GetFlightOffersTravelClassEnum {
+	return &e
+}
+
 func (e *GetFlightOffersTravelClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ECONOMY":
 		fallthrough
 	case "PREMIUM_ECONOMY":
@@ -33,10 +37,10 @@ func (e *GetFlightOffersTravelClassEnum) UnmarshalJSON(data []byte) error {
 	case "BUSINESS":
 		fallthrough
 	case "FIRST":
-		*e = GetFlightOffersTravelClassEnum(s)
+		*e = GetFlightOffersTravelClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFlightOffersTravelClassEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFlightOffersTravelClassEnum: %v", v)
 	}
 }
 

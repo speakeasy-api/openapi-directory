@@ -16,17 +16,21 @@ const (
 	DescribeHandshakeXAmzTargetEnumAwsOrganizationsV20161128DescribeHandshake DescribeHandshakeXAmzTargetEnum = "AWSOrganizationsV20161128.DescribeHandshake"
 )
 
+func (e DescribeHandshakeXAmzTargetEnum) ToPointer() *DescribeHandshakeXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeHandshakeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.DescribeHandshake":
-		*e = DescribeHandshakeXAmzTargetEnum(s)
+		*e = DescribeHandshakeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHandshakeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHandshakeXAmzTargetEnum: %v", v)
 	}
 }
 

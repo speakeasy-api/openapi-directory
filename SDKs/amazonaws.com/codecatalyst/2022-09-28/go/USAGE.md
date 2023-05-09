@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,13 +17,11 @@ func main() {
         }),
     )
 
-    req := operations.CreateAccessTokenRequestBody{
-        ExpiresTime: "2021-10-25T05:21:43.948Z",
-        Name: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.CreateAccessToken(ctx, req)
+    res, err := s.CreateAccessToken(ctx, operations.CreateAccessTokenRequestBody{
+        ExpiresTime: types.MustTimeFromString("2021-10-25T05:21:43.948Z"),
+        Name: "Ellis Mitchell",
+    })
     if err != nil {
         log.Fatal(err)
     }

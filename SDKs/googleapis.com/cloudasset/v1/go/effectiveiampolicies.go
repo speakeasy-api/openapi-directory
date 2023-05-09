@@ -34,7 +34,10 @@ func newEffectiveIamPolicies(defaultClient, securityClient HTTPClient, serverURL
 // CloudassetEffectiveIamPoliciesBatchGet - Gets effective IAM policies for a batch of resources.
 func (s *effectiveIamPolicies) CloudassetEffectiveIamPoliciesBatchGet(ctx context.Context, request operations.CloudassetEffectiveIamPoliciesBatchGetRequest, security operations.CloudassetEffectiveIamPoliciesBatchGetSecurity) (*operations.CloudassetEffectiveIamPoliciesBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}/effectiveIamPolicies:batchGet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{scope}/effectiveIamPolicies:batchGet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

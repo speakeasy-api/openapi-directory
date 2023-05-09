@@ -13,16 +13,20 @@ const (
 	CustomEmailSenderLambdaVersionTypeEnumV10 CustomEmailSenderLambdaVersionTypeEnum = "V1_0"
 )
 
+func (e CustomEmailSenderLambdaVersionTypeEnum) ToPointer() *CustomEmailSenderLambdaVersionTypeEnum {
+	return &e
+}
+
 func (e *CustomEmailSenderLambdaVersionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "V1_0":
-		*e = CustomEmailSenderLambdaVersionTypeEnum(s)
+		*e = CustomEmailSenderLambdaVersionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomEmailSenderLambdaVersionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomEmailSenderLambdaVersionTypeEnum: %v", v)
 	}
 }

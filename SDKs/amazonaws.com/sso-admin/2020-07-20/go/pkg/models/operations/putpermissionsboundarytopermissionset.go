@@ -16,17 +16,21 @@ const (
 	PutPermissionsBoundaryToPermissionSetXAmzTargetEnumSwbExternalServicePutPermissionsBoundaryToPermissionSet PutPermissionsBoundaryToPermissionSetXAmzTargetEnum = "SWBExternalService.PutPermissionsBoundaryToPermissionSet"
 )
 
+func (e PutPermissionsBoundaryToPermissionSetXAmzTargetEnum) ToPointer() *PutPermissionsBoundaryToPermissionSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutPermissionsBoundaryToPermissionSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.PutPermissionsBoundaryToPermissionSet":
-		*e = PutPermissionsBoundaryToPermissionSetXAmzTargetEnum(s)
+		*e = PutPermissionsBoundaryToPermissionSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutPermissionsBoundaryToPermissionSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutPermissionsBoundaryToPermissionSetXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	AttachDiskXAmzTargetEnumLightsail20161128AttachDisk AttachDiskXAmzTargetEnum = "Lightsail_20161128.AttachDisk"
 )
 
+func (e AttachDiskXAmzTargetEnum) ToPointer() *AttachDiskXAmzTargetEnum {
+	return &e
+}
+
 func (e *AttachDiskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.AttachDisk":
-		*e = AttachDiskXAmzTargetEnum(s)
+		*e = AttachDiskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachDiskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachDiskXAmzTargetEnum: %v", v)
 	}
 }
 

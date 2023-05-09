@@ -26,12 +26,16 @@ const (
 	ServiceNamespaceEnumNeptune          ServiceNamespaceEnum = "neptune"
 )
 
+func (e ServiceNamespaceEnum) ToPointer() *ServiceNamespaceEnum {
+	return &e
+}
+
 func (e *ServiceNamespaceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ecs":
 		fallthrough
 	case "elasticmapreduce":
@@ -59,9 +63,9 @@ func (e *ServiceNamespaceEnum) UnmarshalJSON(data []byte) error {
 	case "elasticache":
 		fallthrough
 	case "neptune":
-		*e = ServiceNamespaceEnum(s)
+		*e = ServiceNamespaceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceNamespaceEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceNamespaceEnum: %v", v)
 	}
 }

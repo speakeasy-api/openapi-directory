@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/portfoliooptimizer.io/1.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,7 +27,8 @@ func main() {
         }),
     )
 
-    req := operations.PostAssetsAnalysisAbsorptionRatioRequestBody{
+    ctx := context.Background()
+    res, err := s.AssetsAnalysis.PostAssetsAnalysisAbsorptionRatio(ctx, operations.PostAssetsAnalysisAbsorptionRatioRequestBody{
         Assets: 548814,
         AssetsCovarianceMatrix: [][]float64{
             []float64{
@@ -48,12 +48,9 @@ func main() {
             },
         },
         AssetsCovarianceMatrixEigenvectors: &operations.PostAssetsAnalysisAbsorptionRatioRequestBodyAssetsCovarianceMatrixEigenvectors{
-            EigenvectorsRetained: 891773,
+            EigenvectorsRetained: sdk.Int64(891773),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.AssetsAnalysis.PostAssetsAnalysisAbsorptionRatio(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -69,139 +66,159 @@ func main() {
 ## Available Resources and Operations
 
 
-### AssetsAnalysis
+### [AssetsAnalysis](docs/assetsanalysis/README.md)
 
-* `PostAssetsAnalysisAbsorptionRatio` - Absorption Ratio
-* `PostAssetsAnalysisTurbulenceIndex` - Turbulence Index
+* [PostAssetsAnalysisAbsorptionRatio](docs/assetsanalysis/README.md#postassetsanalysisabsorptionratio) - Absorption Ratio
+* [PostAssetsAnalysisTurbulenceIndex](docs/assetsanalysis/README.md#postassetsanalysisturbulenceindex) - Turbulence Index
 
-### AssetsCorrelationMatrix
+### [AssetsCorrelationMatrix](docs/assetscorrelationmatrix/README.md)
 
-* `PostAssetsCorrelationMatrix` - Correlation Matrix
-* `PostAssetsCorrelationMatrixBounds` - Correlation Matrix Bounds
-* `PostAssetsCorrelationMatrixDenoised` - Denoised Correlation Matrix
-* `PostAssetsCorrelationMatrixDistance` - Correlation Matrix Distance
-* `PostAssetsCorrelationMatrixEffectiveRank` - Correlation Matrix Effective Rank
-* `PostAssetsCorrelationMatrixInformativeness` - Correlation Matrix Informativeness
-* `PostAssetsCorrelationMatrixNearest` - Nearest Correlation Matrix
-* `PostAssetsCorrelationMatrixRandom` - Random Correlation Matrix
-* `PostAssetsCorrelationMatrixShrinkage` - Correlation Matrix Shrinkage
-* `PostAssetsCorrelationMatrixTheoryImplied` - Theory-Implied Correlation Matrix
-* `PostAssetsCorrelationMatrixValidation` - Correlation Matrix Validation
+* [PostAssetsCorrelationMatrix](docs/assetscorrelationmatrix/README.md#postassetscorrelationmatrix) - Correlation Matrix
+* [PostAssetsCorrelationMatrixBounds](docs/assetscorrelationmatrix/README.md#postassetscorrelationmatrixbounds) - Correlation Matrix Bounds
+* [PostAssetsCorrelationMatrixDenoised](docs/assetscorrelationmatrix/README.md#postassetscorrelationmatrixdenoised) - Denoised Correlation Matrix
+* [PostAssetsCorrelationMatrixDistance](docs/assetscorrelationmatrix/README.md#postassetscorrelationmatrixdistance) - Correlation Matrix Distance
+* [PostAssetsCorrelationMatrixEffectiveRank](docs/assetscorrelationmatrix/README.md#postassetscorrelationmatrixeffectiverank) - Correlation Matrix Effective Rank
+* [PostAssetsCorrelationMatrixInformativeness](docs/assetscorrelationmatrix/README.md#postassetscorrelationmatrixinformativeness) - Correlation Matrix Informativeness
+* [PostAssetsCorrelationMatrixNearest](docs/assetscorrelationmatrix/README.md#postassetscorrelationmatrixnearest) - Nearest Correlation Matrix
+* [PostAssetsCorrelationMatrixRandom](docs/assetscorrelationmatrix/README.md#postassetscorrelationmatrixrandom) - Random Correlation Matrix
+* [PostAssetsCorrelationMatrixShrinkage](docs/assetscorrelationmatrix/README.md#postassetscorrelationmatrixshrinkage) - Correlation Matrix Shrinkage
+* [PostAssetsCorrelationMatrixTheoryImplied](docs/assetscorrelationmatrix/README.md#postassetscorrelationmatrixtheoryimplied) - Theory-Implied Correlation Matrix
+* [PostAssetsCorrelationMatrixValidation](docs/assetscorrelationmatrix/README.md#postassetscorrelationmatrixvalidation) - Correlation Matrix Validation
 
-### AssetsCovarianceMatrix
+### [AssetsCovarianceMatrix](docs/assetscovariancematrix/README.md)
 
-* `PostAssetsCovarianceMatrix` - Covariance Matrix
-* `PostAssetsCovarianceMatrixEffectiveRank` - Covariance Matrix Effective Rank
-* `PostAssetsCovarianceMatrixExponentiallyWeighted` - Exponentially Weighted Covariance Matrix
-* `PostAssetsCovarianceMatrixValidation` - Covariance Matrix Validation
+* [PostAssetsCovarianceMatrix](docs/assetscovariancematrix/README.md#postassetscovariancematrix) - Covariance Matrix
+* [PostAssetsCovarianceMatrixEffectiveRank](docs/assetscovariancematrix/README.md#postassetscovariancematrixeffectiverank) - Covariance Matrix Effective Rank
+* [PostAssetsCovarianceMatrixExponentiallyWeighted](docs/assetscovariancematrix/README.md#postassetscovariancematrixexponentiallyweighted) - Exponentially Weighted Covariance Matrix
+* [PostAssetsCovarianceMatrixValidation](docs/assetscovariancematrix/README.md#postassetscovariancematrixvalidation) - Covariance Matrix Validation
 
-### AssetsKurtosis
+### [AssetsKurtosis](docs/assetskurtosis/README.md)
 
-* `PostAssetsKurtosis` - Kurtosis
+* [PostAssetsKurtosis](docs/assetskurtosis/README.md#postassetskurtosis) - Kurtosis
 
-### AssetsPrices
+### [AssetsMonteCarloReturnsSimulation](docs/assetsmontecarloreturnssimulation/README.md)
 
-* `PostAssetsPricesAdjusted` - Adjusted Prices
-* `PostAssetsPricesAdjustedForward` - Forward-Adjusted Prices
+* [PostAssetsReturnsSimulationMonteCarloCornishFisher](docs/assetsmontecarloreturnssimulation/README.md#postassetsreturnssimulationmontecarlocornishfisher) - Cornish-Fisher Distribution
+* [PostAssetsReturnsSimulationMonteCarloCornishFisherCorrected](docs/assetsmontecarloreturnssimulation/README.md#postassetsreturnssimulationmontecarlocornishfishercorrected) - Corrected Cornish-Fisher Distribution
+* [PostAssetsReturnsSimulationMonteCarloGaussian](docs/assetsmontecarloreturnssimulation/README.md#postassetsreturnssimulationmontecarlogaussian) - Gaussian Distribution
 
-### AssetsReturns
+### [AssetsPrices](docs/assetsprices/README.md)
 
-* `PostAssetsReturns` - Arithmetic Returns
-* `PostAssetsReturnsAverage` - Arithmetic Average Return
+* [PostAssetsPricesAdjusted](docs/assetsprices/README.md#postassetspricesadjusted) - Adjusted Prices
+* [PostAssetsPricesAdjustedForward](docs/assetsprices/README.md#postassetspricesadjustedforward) - Forward-Adjusted Prices
 
-### AssetsReturnsSimulation
+### [AssetsReturns](docs/assetsreturns/README.md)
 
-* `PostAssetsReturnsSimulationBootstrap` - Bootstrap
+* [PostAssetsReturns](docs/assetsreturns/README.md#postassetsreturns) - Arithmetic Returns
+* [PostAssetsReturnsAverage](docs/assetsreturns/README.md#postassetsreturnsaverage) - Arithmetic Average Return
+* [PostAssetsReturnsLogarithmic](docs/assetsreturns/README.md#postassetsreturnslogarithmic) - Logarithmic Returns
+* [PostAssetsReturnsTurbulencePartitioned](docs/assetsreturns/README.md#postassetsreturnsturbulencepartitioned) - Turbulence-partitioned Asset Returns
 
-### AssetsSkewness
+### [AssetsReturnsSimulation](docs/assetsreturnssimulation/README.md)
 
-* `PostAssetsSkewness` - Skewness
+* [PostAssetsReturnsSimulationBootstrap](docs/assetsreturnssimulation/README.md#postassetsreturnssimulationbootstrap) - Bootstrap
 
-### AssetsVariance
+### [AssetsSkewness](docs/assetsskewness/README.md)
 
-* `PostAssetsVariance` - Variance
+* [PostAssetsSkewness](docs/assetsskewness/README.md#postassetsskewness) - Skewness
 
-### AssetsVolatility
+### [AssetsVariance](docs/assetsvariance/README.md)
 
-* `PostAssetsVolatility` - Volatility
+* [PostAssetsVariance](docs/assetsvariance/README.md#postassetsvariance) - Variance
 
-### Factors
+### [AssetsVolatility](docs/assetsvolatility/README.md)
 
-* `PostFactorsResidualization` - Residualization
+* [PostAssetsVolatility](docs/assetsvolatility/README.md#postassetsvolatility) - Volatility
 
-### PortfolioAnalysis
+### [Factors](docs/factors/README.md)
 
-* `PostPortfolioAnalysisAlpha` - Alpha
-* `PostPortfolioAnalysisBeta` - Beta
-* `PostPortfolioAnalysisConditionalValueAtRisk` - Conditional Value At Risk
-* `PostPortfolioAnalysisContributionsReturn` - Return Contributions
-* `PostPortfolioAnalysisContributionsRisk` - Risk Contributions
-* `PostPortfolioAnalysisCorrelationSpectrum` - Correlation Spectrum
-* `PostPortfolioAnalysisDiversificationRatio` - Diversification Ratio
-* `PostPortfolioAnalysisDrawdowns` - Drawdowns
-* `PostPortfolioAnalysisEffectiveNumberOfBets` - Effective Number of Bets
-* `PostPortfolioAnalysisFactorsExposures` - Factor Exposures
-* `PostPortfolioAnalysisMeanVarianceEfficientFrontier` - Mean-Variance Efficient Frontier
-* `PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier` - Mean-Variance Minimum Variance Frontier
-* `PostPortfolioAnalysisReturn` - Arithmetic Return
-* `PostPortfolioAnalysisReturnsAverage` - Arithmetic Average Return
-* `PostPortfolioAnalysisTrackingError` - Tracking Error
-* `PostPortfolioAnalysisUlcerIndex` - Ulcer Index
-* `PostPortfolioAnalysisUlcerPerformanceIndex` - Ulcer Performance Index
-* `PostPortfolioAnalysisValueAtRisk` - Value At Risk
-* `PostPortfolioAnalysisVolatility` - Volatility
+* [PostFactorsResidualization](docs/factors/README.md#postfactorsresidualization) - Residualization
 
-### PortfolioAnalysisSharpeRatio
+### [PortfolioAnalysis](docs/portfolioanalysis/README.md)
 
-* `PostPortfolioAnalysisSharpeRatio` - Sharpe Ratio
-* `PostPortfolioAnalysisSharpeRatioBiasAdjusted` - Bias-Adjusted Sharpe Ratio
-* `PostPortfolioAnalysisSharpeRatioConfidenceInterval` - Sharpe Ratio Confidence Interval
-* `PostPortfolioAnalysisSharpeRatioProbabilistic` - Probabilistic Sharpe Ratio
-* `PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLength` - Minimum Track Record Length
+* [PostPortfolioAnalysisAlpha](docs/portfolioanalysis/README.md#postportfolioanalysisalpha) - Alpha
+* [PostPortfolioAnalysisBeta](docs/portfolioanalysis/README.md#postportfolioanalysisbeta) - Beta
+* [PostPortfolioAnalysisContributionsReturn](docs/portfolioanalysis/README.md#postportfolioanalysiscontributionsreturn) - Return Contributions
+* [PostPortfolioAnalysisContributionsRisk](docs/portfolioanalysis/README.md#postportfolioanalysiscontributionsrisk) - Risk Contributions
+* [PostPortfolioAnalysisCorrelationSpectrum](docs/portfolioanalysis/README.md#postportfolioanalysiscorrelationspectrum) - Correlation Spectrum
+* [PostPortfolioAnalysisDiversificationRatio](docs/portfolioanalysis/README.md#postportfolioanalysisdiversificationratio) - Diversification Ratio
+* [PostPortfolioAnalysisDrawdowns](docs/portfolioanalysis/README.md#postportfolioanalysisdrawdowns) - Drawdowns
+* [PostPortfolioAnalysisEffectiveNumberOfBets](docs/portfolioanalysis/README.md#postportfolioanalysiseffectivenumberofbets) - Effective Number of Bets
+* [PostPortfolioAnalysisFactorsExposures](docs/portfolioanalysis/README.md#postportfolioanalysisfactorsexposures) - Factor Exposures
+* [PostPortfolioAnalysisMeanVarianceEfficientFrontier](docs/portfolioanalysis/README.md#postportfolioanalysismeanvarianceefficientfrontier) - Mean-Variance Efficient Frontier
+* [PostPortfolioAnalysisMeanVarianceMinimumVarianceFrontier](docs/portfolioanalysis/README.md#postportfolioanalysismeanvarianceminimumvariancefrontier) - Mean-Variance Minimum Variance Frontier
+* [PostPortfolioAnalysisReturn](docs/portfolioanalysis/README.md#postportfolioanalysisreturn) - Arithmetic Return
+* [PostPortfolioAnalysisReturnsAverage](docs/portfolioanalysis/README.md#postportfolioanalysisreturnsaverage) - Arithmetic Average Return
+* [PostPortfolioAnalysisTrackingError](docs/portfolioanalysis/README.md#postportfolioanalysistrackingerror) - Tracking Error
+* [PostPortfolioAnalysisUlcerIndex](docs/portfolioanalysis/README.md#postportfolioanalysisulcerindex) - Ulcer Index
+* [PostPortfolioAnalysisUlcerPerformanceIndex](docs/portfolioanalysis/README.md#postportfolioanalysisulcerperformanceindex) - Ulcer Performance Index
+* [PostPortfolioAnalysisVolatility](docs/portfolioanalysis/README.md#postportfolioanalysisvolatility) - Volatility
 
-### PortfolioConstruction
+### [PortfolioAnalysisConditionalValueAtRisk](docs/portfolioanalysisconditionalvalueatrisk/README.md)
 
-* `PostPortfolioConstructionInvestable` - Investable Portfolio
-* `PostPortfolioConstructionMimicking` - Mimicking Portfolio
-* `PostPortfolioConstructionRandom` - Random Portfolio
+* [PostPortfolioAnalysisValueAtRiskConditionalCornishFisher](docs/portfolioanalysisconditionalvalueatrisk/README.md#postportfolioanalysisvalueatriskconditionalcornishfisher) - Cornish-Fisher Conditional Value At Risk
+* [PostPortfolioAnalysisValueAtRiskConditionalCornishFisherCorrected](docs/portfolioanalysisconditionalvalueatrisk/README.md#postportfolioanalysisvalueatriskconditionalcornishfishercorrected) - Corrected Cornish-Fisher Conditional Value At Risk
+* [PostPortfolioAnalysisValueAtRiskConditionalGaussian](docs/portfolioanalysisconditionalvalueatrisk/README.md#postportfolioanalysisvalueatriskconditionalgaussian) - Gaussian Conditional Value At Risk
+* [PostPortfolioAnalysisValueAtRiskConditionalHistorical](docs/portfolioanalysisconditionalvalueatrisk/README.md#postportfolioanalysisvalueatriskconditionalhistorical) - Historical Conditional Value At Risk
 
-### PortfolioOptimization
+### [PortfolioAnalysisSharpeRatio](docs/portfolioanalysissharperatio/README.md)
 
-* `PostPortfolioOptimizationEqualRiskContributions` - Equal Risk Contributions Portfolio
-* `PostPortfolioOptimizationEqualSharpeRatioContributions` - Equal Sharpe Ratio Contributions Portfolio
-* `PostPortfolioOptimizationEqualVolatilityWeighted` - Equal Volatility Weighted Portfolio
-* `PostPortfolioOptimizationEqualWeighted` - Equal Weighted Portfolio
-* `PostPortfolioOptimizationHierarchicalRiskParity` - Hierarchical Risk Parity Portfolio
-* `PostPortfolioOptimizationHierarchicalRiskParityClusteringBased` - Hierarchical Clustering-Based Risk Parity Portfolio
-* `PostPortfolioOptimizationInverseVarianceWeighted` - Inverse Variance Weighted Portfolio
-* `PostPortfolioOptimizationInverseVolatilityWeighted` - Inverse Volatility Weighted Portfolio
-* `PostPortfolioOptimizationMarketCapitalizationWeighted` - Market Capitalization Weighted Portfolio
-* `PostPortfolioOptimizationMaximumDecorrelation` - Maximum Decorrelation Portfolio
-* `PostPortfolioOptimizationMaximumUlcerPerformanceIndex` - Maximum Ulcer Performance Index Portfolio
-* `PostPortfolioOptimizationMinimumCorrelation` - Minimum Correlation Portfolio
-* `PostPortfolioOptimizationMinimumUlcerIndex` - Minimum Ulcer Index Portfolio
-* `PostPortfolioOptimizationMostDiversified` - Most Diversified Portfolio
+* [PostPortfolioAnalysisSharpeRatio](docs/portfolioanalysissharperatio/README.md#postportfolioanalysissharperatio) - Sharpe Ratio
+* [PostPortfolioAnalysisSharpeRatioBiasAdjusted](docs/portfolioanalysissharperatio/README.md#postportfolioanalysissharperatiobiasadjusted) - Bias-Adjusted Sharpe Ratio
+* [PostPortfolioAnalysisSharpeRatioConfidenceInterval](docs/portfolioanalysissharperatio/README.md#postportfolioanalysissharperatioconfidenceinterval) - Sharpe Ratio Confidence Interval
+* [PostPortfolioAnalysisSharpeRatioProbabilistic](docs/portfolioanalysissharperatio/README.md#postportfolioanalysissharperatioprobabilistic) - Probabilistic Sharpe Ratio
+* [PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLength](docs/portfolioanalysissharperatio/README.md#postportfolioanalysissharperatioprobabilisticminimumtrackrecordlength) - Minimum Track Record Length
 
-### PortfolioOptimizationMeanVariance
+### [PortfolioAnalysisValueAtRisk](docs/portfolioanalysisvalueatrisk/README.md)
 
-* `PostPortfolioOptimizationMaximumReturn` - Maximum Return Portfolio
-* `PostPortfolioOptimizationMaximumReturnDiversified` - Diversified Maximum Return Portfolio
-* `PostPortfolioOptimizationMaximumReturnSubsetResamplingBased` - Subset Resampling-Based Maximum Return Portfolio
-* `PostPortfolioOptimizationMaximumSharpeRatio` - Maximum Sharpe Ratio Portfolio
-* `PostPortfolioOptimizationMaximumSharpeRatioDiversified` - Diversified Maximum Sharpe Ratio Portfolio
-* `PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased` - Subset Resampling-Based Maximum Sharpe Ratio Portfolio
-* `PostPortfolioOptimizationMeanVarianceEfficient` - Mean-Variance Efficient Portfolio
-* `PostPortfolioOptimizationMeanVarianceEfficientDiversified` - Diversified Mean-Variance Efficient Portfolio
-* `PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased` - Subset Resampling-Based Mean-Variance Efficient Portfolio
-* `PostPortfolioOptimizationMinimumVariance` - Minimum Variance Portfolio
-* `PostPortfolioOptimizationMinimumVarianceDiversified` - Diversified Minimum Variance Portfolio
-* `PostPortfolioOptimizationMinimumVarianceSubsetResamplingBased` - Subset Resampling-Based Minimum Variance Portfolio
+* [PostPortfolioAnalysisValueAtRiskCornishFisher](docs/portfolioanalysisvalueatrisk/README.md#postportfolioanalysisvalueatriskcornishfisher) - Cornish-Fisher Value At Risk
+* [PostPortfolioAnalysisValueAtRiskCornishFisherCorrected](docs/portfolioanalysisvalueatrisk/README.md#postportfolioanalysisvalueatriskcornishfishercorrected) - Corrected Cornish-Fisher Value At Risk
+* [PostPortfolioAnalysisValueAtRiskGaussian](docs/portfolioanalysisvalueatrisk/README.md#postportfolioanalysisvalueatriskgaussian) - Gaussian Value At Risk
+* [PostPortfolioAnalysisValueAtRiskHistorical](docs/portfolioanalysisvalueatrisk/README.md#postportfolioanalysisvalueatriskhistorical) - Historical Value At Risk
 
-### PortfolioSimulation
+### [PortfolioConstruction](docs/portfolioconstruction/README.md)
 
-* `PostPortfolioSimulationRebalancingDriftWeight` - Drift-weight Portfolio Rebalancing
-* `PostPortfolioSimulationRebalancingFixedWeight` - Fixed-weight Portfolio Rebalancing
-* `PostPortfolioSimulationRebalancingRandomWeight` - Random-weight Portfolio Rebalancing
+* [PostPortfolioConstructionInvestable](docs/portfolioconstruction/README.md#postportfolioconstructioninvestable) - Investable Portfolio
+* [PostPortfolioConstructionMimicking](docs/portfolioconstruction/README.md#postportfolioconstructionmimicking) - Mimicking Portfolio
+* [PostPortfolioConstructionRandom](docs/portfolioconstruction/README.md#postportfolioconstructionrandom) - Random Portfolio
+
+### [PortfolioOptimization](docs/portfoliooptimization/README.md)
+
+* [PostPortfolioOptimizationEqualRiskContributions](docs/portfoliooptimization/README.md#postportfoliooptimizationequalriskcontributions) - Equal Risk Contributions Portfolio
+* [PostPortfolioOptimizationEqualSharpeRatioContributions](docs/portfoliooptimization/README.md#postportfoliooptimizationequalsharperatiocontributions) - Equal Sharpe Ratio Contributions Portfolio
+* [PostPortfolioOptimizationEqualVolatilityWeighted](docs/portfoliooptimization/README.md#postportfoliooptimizationequalvolatilityweighted) - Equal Volatility Weighted Portfolio
+* [PostPortfolioOptimizationEqualWeighted](docs/portfoliooptimization/README.md#postportfoliooptimizationequalweighted) - Equal Weighted Portfolio
+* [PostPortfolioOptimizationHierarchicalRiskParity](docs/portfoliooptimization/README.md#postportfoliooptimizationhierarchicalriskparity) - Hierarchical Risk Parity Portfolio
+* [PostPortfolioOptimizationHierarchicalRiskParityClusteringBased](docs/portfoliooptimization/README.md#postportfoliooptimizationhierarchicalriskparityclusteringbased) - Hierarchical Clustering-Based Risk Parity Portfolio
+* [PostPortfolioOptimizationInverseVarianceWeighted](docs/portfoliooptimization/README.md#postportfoliooptimizationinversevarianceweighted) - Inverse Variance Weighted Portfolio
+* [PostPortfolioOptimizationInverseVolatilityWeighted](docs/portfoliooptimization/README.md#postportfoliooptimizationinversevolatilityweighted) - Inverse Volatility Weighted Portfolio
+* [PostPortfolioOptimizationMarketCapitalizationWeighted](docs/portfoliooptimization/README.md#postportfoliooptimizationmarketcapitalizationweighted) - Market Capitalization Weighted Portfolio
+* [PostPortfolioOptimizationMaximumDecorrelation](docs/portfoliooptimization/README.md#postportfoliooptimizationmaximumdecorrelation) - Maximum Decorrelation Portfolio
+* [PostPortfolioOptimizationMaximumUlcerPerformanceIndex](docs/portfoliooptimization/README.md#postportfoliooptimizationmaximumulcerperformanceindex) - Maximum Ulcer Performance Index Portfolio
+* [PostPortfolioOptimizationMinimumCorrelation](docs/portfoliooptimization/README.md#postportfoliooptimizationminimumcorrelation) - Minimum Correlation Portfolio
+* [PostPortfolioOptimizationMinimumUlcerIndex](docs/portfoliooptimization/README.md#postportfoliooptimizationminimumulcerindex) - Minimum Ulcer Index Portfolio
+* [PostPortfolioOptimizationMostDiversified](docs/portfoliooptimization/README.md#postportfoliooptimizationmostdiversified) - Most Diversified Portfolio
+
+### [PortfolioOptimizationMeanVariance](docs/portfoliooptimizationmeanvariance/README.md)
+
+* [PostPortfolioOptimizationMaximumReturn](docs/portfoliooptimizationmeanvariance/README.md#postportfoliooptimizationmaximumreturn) - Maximum Return Portfolio
+* [PostPortfolioOptimizationMaximumReturnDiversified](docs/portfoliooptimizationmeanvariance/README.md#postportfoliooptimizationmaximumreturndiversified) - Diversified Maximum Return Portfolio
+* [PostPortfolioOptimizationMaximumReturnSubsetResamplingBased](docs/portfoliooptimizationmeanvariance/README.md#postportfoliooptimizationmaximumreturnsubsetresamplingbased) - Subset Resampling-Based Maximum Return Portfolio
+* [PostPortfolioOptimizationMaximumSharpeRatio](docs/portfoliooptimizationmeanvariance/README.md#postportfoliooptimizationmaximumsharperatio) - Maximum Sharpe Ratio Portfolio
+* [PostPortfolioOptimizationMaximumSharpeRatioDiversified](docs/portfoliooptimizationmeanvariance/README.md#postportfoliooptimizationmaximumsharperatiodiversified) - Diversified Maximum Sharpe Ratio Portfolio
+* [PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased](docs/portfoliooptimizationmeanvariance/README.md#postportfoliooptimizationmaximumsharperatiosubsetresamplingbased) - Subset Resampling-Based Maximum Sharpe Ratio Portfolio
+* [PostPortfolioOptimizationMeanVarianceEfficient](docs/portfoliooptimizationmeanvariance/README.md#postportfoliooptimizationmeanvarianceefficient) - Mean-Variance Efficient Portfolio
+* [PostPortfolioOptimizationMeanVarianceEfficientDiversified](docs/portfoliooptimizationmeanvariance/README.md#postportfoliooptimizationmeanvarianceefficientdiversified) - Diversified Mean-Variance Efficient Portfolio
+* [PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased](docs/portfoliooptimizationmeanvariance/README.md#postportfoliooptimizationmeanvarianceefficientsubsetresamplingbased) - Subset Resampling-Based Mean-Variance Efficient Portfolio
+* [PostPortfolioOptimizationMinimumVariance](docs/portfoliooptimizationmeanvariance/README.md#postportfoliooptimizationminimumvariance) - Minimum Variance Portfolio
+* [PostPortfolioOptimizationMinimumVarianceDiversified](docs/portfoliooptimizationmeanvariance/README.md#postportfoliooptimizationminimumvariancediversified) - Diversified Minimum Variance Portfolio
+* [PostPortfolioOptimizationMinimumVarianceSubsetResamplingBased](docs/portfoliooptimizationmeanvariance/README.md#postportfoliooptimizationminimumvariancesubsetresamplingbased) - Subset Resampling-Based Minimum Variance Portfolio
+
+### [PortfolioSimulation](docs/portfoliosimulation/README.md)
+
+* [PostPortfolioSimulationRebalancingDriftWeight](docs/portfoliosimulation/README.md#postportfoliosimulationrebalancingdriftweight) - Drift-weight Portfolio Rebalancing
+* [PostPortfolioSimulationRebalancingFixedWeight](docs/portfoliosimulation/README.md#postportfoliosimulationrebalancingfixedweight) - Fixed-weight Portfolio Rebalancing
+* [PostPortfolioSimulationRebalancingRandomWeight](docs/portfoliosimulation/README.md#postportfoliosimulationrebalancingrandomweight) - Random-weight Portfolio Rebalancing
 <!-- End SDK Available Operations -->
 
 ### Maturity

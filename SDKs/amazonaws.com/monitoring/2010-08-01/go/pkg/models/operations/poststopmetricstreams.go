@@ -15,17 +15,21 @@ const (
 	POSTStopMetricStreamsActionEnumStopMetricStreams POSTStopMetricStreamsActionEnum = "StopMetricStreams"
 )
 
+func (e POSTStopMetricStreamsActionEnum) ToPointer() *POSTStopMetricStreamsActionEnum {
+	return &e
+}
+
 func (e *POSTStopMetricStreamsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StopMetricStreams":
-		*e = POSTStopMetricStreamsActionEnum(s)
+		*e = POSTStopMetricStreamsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStopMetricStreamsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStopMetricStreamsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTStopMetricStreamsVersionEnumTwoThousandAndTen0801 POSTStopMetricStreamsVersionEnum = "2010-08-01"
 )
 
+func (e POSTStopMetricStreamsVersionEnum) ToPointer() *POSTStopMetricStreamsVersionEnum {
+	return &e
+}
+
 func (e *POSTStopMetricStreamsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = POSTStopMetricStreamsVersionEnum(s)
+		*e = POSTStopMetricStreamsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStopMetricStreamsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStopMetricStreamsVersionEnum: %v", v)
 	}
 }
 

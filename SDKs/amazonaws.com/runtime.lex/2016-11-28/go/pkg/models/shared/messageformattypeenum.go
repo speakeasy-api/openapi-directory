@@ -16,12 +16,16 @@ const (
 	MessageFormatTypeEnumComposite     MessageFormatTypeEnum = "Composite"
 )
 
+func (e MessageFormatTypeEnum) ToPointer() *MessageFormatTypeEnum {
+	return &e
+}
+
 func (e *MessageFormatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PlainText":
 		fallthrough
 	case "CustomPayload":
@@ -29,9 +33,9 @@ func (e *MessageFormatTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SSML":
 		fallthrough
 	case "Composite":
-		*e = MessageFormatTypeEnum(s)
+		*e = MessageFormatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageFormatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageFormatTypeEnum: %v", v)
 	}
 }

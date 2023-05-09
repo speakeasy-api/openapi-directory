@@ -38,7 +38,10 @@ func newPicoLoadmanagementGroup(defaultClient, securityClient HTTPClient, server
 //	Returns a pico load management group by it's id
 func (s *picoLoadmanagementGroup) PicoLoadmanagementGroupGet(ctx context.Context, request operations.PicoLoadmanagementGroupGetRequest) (*operations.PicoLoadmanagementGroupGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pico/loadmanagementgroup/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pico/loadmanagementgroup/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

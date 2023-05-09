@@ -15,21 +15,25 @@ const (
 	ModifyInvitationClientManagementEnumAdn     ModifyInvitationClientManagementEnum = "adn"
 )
 
+func (e ModifyInvitationClientManagementEnum) ToPointer() *ModifyInvitationClientManagementEnum {
+	return &e
+}
+
 func (e *ModifyInvitationClientManagementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no":
 		fallthrough
 	case "manager":
 		fallthrough
 	case "adn":
-		*e = ModifyInvitationClientManagementEnum(s)
+		*e = ModifyInvitationClientManagementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyInvitationClientManagementEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyInvitationClientManagementEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	ModifyInvitationFoldersRightEnumWrite ModifyInvitationFoldersRightEnum = "write"
 )
 
+func (e ModifyInvitationFoldersRightEnum) ToPointer() *ModifyInvitationFoldersRightEnum {
+	return &e
+}
+
 func (e *ModifyInvitationFoldersRightEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = ModifyInvitationFoldersRightEnum(s)
+		*e = ModifyInvitationFoldersRightEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyInvitationFoldersRightEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyInvitationFoldersRightEnum: %v", v)
 	}
 }
 
@@ -71,12 +79,16 @@ const (
 	ModifyInvitationPlayerEnumCollaborator ModifyInvitationPlayerEnum = "collaborator"
 )
 
+func (e ModifyInvitationPlayerEnum) ToPointer() *ModifyInvitationPlayerEnum {
+	return &e
+}
+
 func (e *ModifyInvitationPlayerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "guest":
 		fallthrough
 	case "owner":
@@ -86,10 +98,10 @@ func (e *ModifyInvitationPlayerEnum) UnmarshalJSON(data []byte) error {
 	case "assistant":
 		fallthrough
 	case "collaborator":
-		*e = ModifyInvitationPlayerEnum(s)
+		*e = ModifyInvitationPlayerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyInvitationPlayerEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyInvitationPlayerEnum: %v", v)
 	}
 }
 

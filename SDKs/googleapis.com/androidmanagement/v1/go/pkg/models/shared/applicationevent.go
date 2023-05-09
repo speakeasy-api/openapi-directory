@@ -22,12 +22,16 @@ const (
 	ApplicationEventEventTypeEnumUnpinned                        ApplicationEventEventTypeEnum = "UNPINNED"
 )
 
+func (e ApplicationEventEventTypeEnum) ToPointer() *ApplicationEventEventTypeEnum {
+	return &e
+}
+
 func (e *ApplicationEventEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPLICATION_EVENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INSTALLED":
@@ -45,10 +49,10 @@ func (e *ApplicationEventEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PINNED":
 		fallthrough
 	case "UNPINNED":
-		*e = ApplicationEventEventTypeEnum(s)
+		*e = ApplicationEventEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationEventEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationEventEventTypeEnum: %v", v)
 	}
 }
 

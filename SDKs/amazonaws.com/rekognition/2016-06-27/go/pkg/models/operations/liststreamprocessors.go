@@ -16,17 +16,21 @@ const (
 	ListStreamProcessorsXAmzTargetEnumRekognitionServiceListStreamProcessors ListStreamProcessorsXAmzTargetEnum = "RekognitionService.ListStreamProcessors"
 )
 
+func (e ListStreamProcessorsXAmzTargetEnum) ToPointer() *ListStreamProcessorsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListStreamProcessorsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.ListStreamProcessors":
-		*e = ListStreamProcessorsXAmzTargetEnum(s)
+		*e = ListStreamProcessorsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListStreamProcessorsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListStreamProcessorsXAmzTargetEnum: %v", v)
 	}
 }
 

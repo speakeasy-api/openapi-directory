@@ -4,8 +4,6 @@ package shared
 
 // Challenge - Result message for VerifiedAccess.GenerateChallenge.
 type Challenge struct {
-	// Challenge generated with the old signing key, the bytes representation of SignedData (this will only be present during key rotation).
-	AlternativeChallenge *string `json:"alternativeChallenge,omitempty"`
 	// Generated challenge, the bytes representation of SignedData.
 	Challenge *string `json:"challenge,omitempty"`
 }

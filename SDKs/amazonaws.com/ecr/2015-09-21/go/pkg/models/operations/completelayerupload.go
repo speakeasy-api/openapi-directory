@@ -16,17 +16,21 @@ const (
 	CompleteLayerUploadXAmzTargetEnumAmazonEc2ContainerRegistryV20150921CompleteLayerUpload CompleteLayerUploadXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.CompleteLayerUpload"
 )
 
+func (e CompleteLayerUploadXAmzTargetEnum) ToPointer() *CompleteLayerUploadXAmzTargetEnum {
+	return &e
+}
+
 func (e *CompleteLayerUploadXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.CompleteLayerUpload":
-		*e = CompleteLayerUploadXAmzTargetEnum(s)
+		*e = CompleteLayerUploadXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteLayerUploadXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteLayerUploadXAmzTargetEnum: %v", v)
 	}
 }
 

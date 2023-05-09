@@ -41,7 +41,10 @@ func newProducts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // identified by the `organizationId` parameter, which can be obtained from the [List Organizations](#operation/get-organizations) endpoint.
 func (s *products) CreateProduct(ctx context.Context, request operations.CreateProductRequest) (*operations.CreateProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{organizationId}/products", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{organizationId}/products", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateProductRequest", "json")
 	if err != nil {
@@ -110,7 +113,10 @@ func (s *products) CreateProduct(ctx context.Context, request operations.CreateP
 // This endpoint removes a Product identified by the `productId` parameter.
 func (s *products) DeleteProduct(ctx context.Context, request operations.DeleteProductRequest) (*operations.DeleteProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -155,7 +161,10 @@ func (s *products) DeleteProduct(ctx context.Context, request operations.DeleteP
 // identified by the `productId`.
 func (s *products) GetProduct(ctx context.Context, request operations.GetProductRequest) (*operations.GetProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -269,7 +278,10 @@ func (s *products) GetProducts(ctx context.Context) (*operations.GetProductsResp
 // This endpoint updates a Product identified by the `productId` parameter.
 func (s *products) UpdateProduct(ctx context.Context, request operations.UpdateProductRequest) (*operations.UpdateProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateProductRequest", "json")
 	if err != nil {

@@ -17,19 +17,23 @@ const (
 	ListEventsDirectionEnumOutbound ListEventsDirectionEnum = "OUTBOUND"
 )
 
+func (e ListEventsDirectionEnum) ToPointer() *ListEventsDirectionEnum {
+	return &e
+}
+
 func (e *ListEventsDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INBOUND":
 		fallthrough
 	case "OUTBOUND":
-		*e = ListEventsDirectionEnum(s)
+		*e = ListEventsDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEventsDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEventsDirectionEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	ListEventsOrderEnumAsc  ListEventsOrderEnum = "ASC"
 )
 
+func (e ListEventsOrderEnum) ToPointer() *ListEventsOrderEnum {
+	return &e
+}
+
 func (e *ListEventsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DESC":
 		fallthrough
 	case "ASC":
-		*e = ListEventsOrderEnum(s)
+		*e = ListEventsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEventsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEventsOrderEnum: %v", v)
 	}
 }
 
@@ -73,12 +81,16 @@ const (
 	ListEventsStatesEnumMissed       ListEventsStatesEnum = "MISSED"
 )
 
+func (e ListEventsStatesEnum) ToPointer() *ListEventsStatesEnum {
+	return &e
+}
+
 func (e *ListEventsStatesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIALIZING":
 		fallthrough
 	case "RINGING":
@@ -98,10 +110,10 @@ func (e *ListEventsStatesEnum) UnmarshalJSON(data []byte) error {
 	case "ANSWERED":
 		fallthrough
 	case "MISSED":
-		*e = ListEventsStatesEnum(s)
+		*e = ListEventsStatesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEventsStatesEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEventsStatesEnum: %v", v)
 	}
 }
 
@@ -112,17 +124,21 @@ const (
 	ListEventsTypesEnumCall ListEventsTypesEnum = "CALL"
 )
 
+func (e ListEventsTypesEnum) ToPointer() *ListEventsTypesEnum {
+	return &e
+}
+
 func (e *ListEventsTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CALL":
-		*e = ListEventsTypesEnum(s)
+		*e = ListEventsTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEventsTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEventsTypesEnum: %v", v)
 	}
 }
 

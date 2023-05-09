@@ -16,17 +16,21 @@ const (
 	RemoveTagsXAmzTargetEnumElasticMapReduceRemoveTags RemoveTagsXAmzTargetEnum = "ElasticMapReduce.RemoveTags"
 )
 
+func (e RemoveTagsXAmzTargetEnum) ToPointer() *RemoveTagsXAmzTargetEnum {
+	return &e
+}
+
 func (e *RemoveTagsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.RemoveTags":
-		*e = RemoveTagsXAmzTargetEnum(s)
+		*e = RemoveTagsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveTagsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveTagsXAmzTargetEnum: %v", v)
 	}
 }
 

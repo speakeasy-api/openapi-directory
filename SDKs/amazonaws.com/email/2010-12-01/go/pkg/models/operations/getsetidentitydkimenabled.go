@@ -15,17 +15,21 @@ const (
 	GETSetIdentityDkimEnabledActionEnumSetIdentityDkimEnabled GETSetIdentityDkimEnabledActionEnum = "SetIdentityDkimEnabled"
 )
 
+func (e GETSetIdentityDkimEnabledActionEnum) ToPointer() *GETSetIdentityDkimEnabledActionEnum {
+	return &e
+}
+
 func (e *GETSetIdentityDkimEnabledActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetIdentityDkimEnabled":
-		*e = GETSetIdentityDkimEnabledActionEnum(s)
+		*e = GETSetIdentityDkimEnabledActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIdentityDkimEnabledActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIdentityDkimEnabledActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSetIdentityDkimEnabledVersionEnumTwoThousandAndTen1201 GETSetIdentityDkimEnabledVersionEnum = "2010-12-01"
 )
 
+func (e GETSetIdentityDkimEnabledVersionEnum) ToPointer() *GETSetIdentityDkimEnabledVersionEnum {
+	return &e
+}
+
 func (e *GETSetIdentityDkimEnabledVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETSetIdentityDkimEnabledVersionEnum(s)
+		*e = GETSetIdentityDkimEnabledVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIdentityDkimEnabledVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIdentityDkimEnabledVersionEnum: %v", v)
 	}
 }
 

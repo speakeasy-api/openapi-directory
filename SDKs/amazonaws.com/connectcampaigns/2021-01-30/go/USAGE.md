@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateCampaignRequest{
+    ctx := context.Background()
+    res, err := s.CreateCampaign(ctx, operations.CreateCampaignRequest{
         RequestBody: operations.CreateCampaignRequestBody{
             ConnectInstanceID: "corrupti",
             DialerConfig: operations.CreateCampaignRequestBodyDialerConfig{
@@ -28,33 +29,28 @@ func main() {
                     BandwidthAllocation: 7151.9,
                 },
             },
-            Name: "quibusdam",
+            Name: "Stuart Stiedemann",
             OutboundCallConfig: operations.CreateCampaignRequestBodyOutboundCallConfig{
                 AnswerMachineDetectionConfig: &shared.AnswerMachineDetectionConfig{
                     EnableAnswerMachineDetection: false,
                 },
-                ConnectContactFlowID: "unde",
-                ConnectQueueID: "nulla",
-                ConnectSourcePhoneNumber: "corrupti",
+                ConnectContactFlowID: sdk.String("vel"),
+                ConnectQueueID: sdk.String("error"),
+                ConnectSourcePhoneNumber: sdk.String("deserunt"),
             },
             Tags: map[string]string{
-                "vel": "error",
-                "deserunt": "suscipit",
                 "iure": "magnam",
                 "debitis": "ipsa",
             },
         },
-        XAmzAlgorithm: "delectus",
-        XAmzContentSha256: "tempora",
-        XAmzCredential: "suscipit",
-        XAmzDate: "molestiae",
-        XAmzSecurityToken: "minus",
-        XAmzSignature: "placeat",
-        XAmzSignedHeaders: "voluptatum",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateCampaign(ctx, req)
+        XAmzAlgorithm: sdk.String("delectus"),
+        XAmzContentSha256: sdk.String("tempora"),
+        XAmzCredential: sdk.String("suscipit"),
+        XAmzDate: sdk.String("molestiae"),
+        XAmzSecurityToken: sdk.String("minus"),
+        XAmzSignature: sdk.String("placeat"),
+        XAmzSignedHeaders: sdk.String("voluptatum"),
+    })
     if err != nil {
         log.Fatal(err)
     }

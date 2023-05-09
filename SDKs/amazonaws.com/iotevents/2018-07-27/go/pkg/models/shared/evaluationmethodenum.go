@@ -14,18 +14,22 @@ const (
 	EvaluationMethodEnumSerial EvaluationMethodEnum = "SERIAL"
 )
 
+func (e EvaluationMethodEnum) ToPointer() *EvaluationMethodEnum {
+	return &e
+}
+
 func (e *EvaluationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BATCH":
 		fallthrough
 	case "SERIAL":
-		*e = EvaluationMethodEnum(s)
+		*e = EvaluationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EvaluationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for EvaluationMethodEnum: %v", v)
 	}
 }

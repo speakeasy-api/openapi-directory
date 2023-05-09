@@ -15,19 +15,23 @@ const (
 	ManagedZoneDNSSecConfigNonExistenceEnumNsec3 ManagedZoneDNSSecConfigNonExistenceEnum = "NSEC3"
 )
 
+func (e ManagedZoneDNSSecConfigNonExistenceEnum) ToPointer() *ManagedZoneDNSSecConfigNonExistenceEnum {
+	return &e
+}
+
 func (e *ManagedZoneDNSSecConfigNonExistenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NSEC":
 		fallthrough
 	case "NSEC3":
-		*e = ManagedZoneDNSSecConfigNonExistenceEnum(s)
+		*e = ManagedZoneDNSSecConfigNonExistenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagedZoneDNSSecConfigNonExistenceEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagedZoneDNSSecConfigNonExistenceEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	ManagedZoneDNSSecConfigStateEnumTransfer ManagedZoneDNSSecConfigStateEnum = "TRANSFER"
 )
 
+func (e ManagedZoneDNSSecConfigStateEnum) ToPointer() *ManagedZoneDNSSecConfigStateEnum {
+	return &e
+}
+
 func (e *ManagedZoneDNSSecConfigStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFF":
 		fallthrough
 	case "ON":
 		fallthrough
 	case "TRANSFER":
-		*e = ManagedZoneDNSSecConfigStateEnum(s)
+		*e = ManagedZoneDNSSecConfigStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagedZoneDNSSecConfigStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagedZoneDNSSecConfigStateEnum: %v", v)
 	}
 }
 

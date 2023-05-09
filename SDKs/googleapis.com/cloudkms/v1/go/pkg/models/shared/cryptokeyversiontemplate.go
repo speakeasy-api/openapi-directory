@@ -42,12 +42,16 @@ const (
 	CryptoKeyVersionTemplateAlgorithmEnumExternalSymmetricEncryption          CryptoKeyVersionTemplateAlgorithmEnum = "EXTERNAL_SYMMETRIC_ENCRYPTION"
 )
 
+func (e CryptoKeyVersionTemplateAlgorithmEnum) ToPointer() *CryptoKeyVersionTemplateAlgorithmEnum {
+	return &e
+}
+
 func (e *CryptoKeyVersionTemplateAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_SYMMETRIC_ENCRYPTION":
@@ -105,10 +109,10 @@ func (e *CryptoKeyVersionTemplateAlgorithmEnum) UnmarshalJSON(data []byte) error
 	case "HMAC_SHA224":
 		fallthrough
 	case "EXTERNAL_SYMMETRIC_ENCRYPTION":
-		*e = CryptoKeyVersionTemplateAlgorithmEnum(s)
+		*e = CryptoKeyVersionTemplateAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CryptoKeyVersionTemplateAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for CryptoKeyVersionTemplateAlgorithmEnum: %v", v)
 	}
 }
 
@@ -123,12 +127,16 @@ const (
 	CryptoKeyVersionTemplateProtectionLevelEnumExternalVpc                CryptoKeyVersionTemplateProtectionLevelEnum = "EXTERNAL_VPC"
 )
 
+func (e CryptoKeyVersionTemplateProtectionLevelEnum) ToPointer() *CryptoKeyVersionTemplateProtectionLevelEnum {
+	return &e
+}
+
 func (e *CryptoKeyVersionTemplateProtectionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROTECTION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "SOFTWARE":
@@ -138,10 +146,10 @@ func (e *CryptoKeyVersionTemplateProtectionLevelEnum) UnmarshalJSON(data []byte)
 	case "EXTERNAL":
 		fallthrough
 	case "EXTERNAL_VPC":
-		*e = CryptoKeyVersionTemplateProtectionLevelEnum(s)
+		*e = CryptoKeyVersionTemplateProtectionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CryptoKeyVersionTemplateProtectionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for CryptoKeyVersionTemplateProtectionLevelEnum: %v", v)
 	}
 }
 

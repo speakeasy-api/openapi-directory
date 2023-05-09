@@ -34,7 +34,10 @@ func newChannelCatalogsColumnMappings(defaultClient, securityClient HTTPClient, 
 // ConfigureChannelCatalogColumnMappings - Configure channel catalog column mappings
 func (s *channelCatalogsColumnMappings) ConfigureChannelCatalogColumnMappings(ctx context.Context, request operations.ConfigureChannelCatalogColumnMappingsRequest) (*operations.ConfigureChannelCatalogColumnMappingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/columnMappings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/columnMappings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

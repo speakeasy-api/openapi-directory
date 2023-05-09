@@ -22,12 +22,16 @@ const (
 	DataQualityMetricTypeEnumBacktestInferenceDataEndTimeStamp   DataQualityMetricTypeEnum = "BACKTEST_INFERENCE_DATA_END_TIME_STAMP"
 )
 
+func (e DataQualityMetricTypeEnum) ToPointer() *DataQualityMetricTypeEnum {
+	return &e
+}
+
 func (e *DataQualityMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COLUMN_COMPLETENESS":
 		fallthrough
 	case "DIMENSION_UNIQUENESS":
@@ -47,9 +51,9 @@ func (e *DataQualityMetricTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BACKTEST_INFERENCE_DATA_START_TIME_STAMP":
 		fallthrough
 	case "BACKTEST_INFERENCE_DATA_END_TIME_STAMP":
-		*e = DataQualityMetricTypeEnum(s)
+		*e = DataQualityMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataQualityMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataQualityMetricTypeEnum: %v", v)
 	}
 }

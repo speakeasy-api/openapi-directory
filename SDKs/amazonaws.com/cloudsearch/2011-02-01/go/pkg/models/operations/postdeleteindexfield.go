@@ -15,17 +15,21 @@ const (
 	POSTDeleteIndexFieldActionEnumDeleteIndexField POSTDeleteIndexFieldActionEnum = "DeleteIndexField"
 )
 
+func (e POSTDeleteIndexFieldActionEnum) ToPointer() *POSTDeleteIndexFieldActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteIndexFieldActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteIndexField":
-		*e = POSTDeleteIndexFieldActionEnum(s)
+		*e = POSTDeleteIndexFieldActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteIndexFieldActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteIndexFieldActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteIndexFieldVersionEnumTwoThousandAndEleven0201 POSTDeleteIndexFieldVersionEnum = "2011-02-01"
 )
 
+func (e POSTDeleteIndexFieldVersionEnum) ToPointer() *POSTDeleteIndexFieldVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteIndexFieldVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-02-01":
-		*e = POSTDeleteIndexFieldVersionEnum(s)
+		*e = POSTDeleteIndexFieldVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteIndexFieldVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteIndexFieldVersionEnum: %v", v)
 	}
 }
 

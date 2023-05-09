@@ -16,17 +16,21 @@ const (
 	SendSerialConsoleSSHPublicKeyXAmzTargetEnumAwsec2InstanceConnectServiceSendSerialConsoleSSHPublicKey SendSerialConsoleSSHPublicKeyXAmzTargetEnum = "AWSEC2InstanceConnectService.SendSerialConsoleSSHPublicKey"
 )
 
+func (e SendSerialConsoleSSHPublicKeyXAmzTargetEnum) ToPointer() *SendSerialConsoleSSHPublicKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *SendSerialConsoleSSHPublicKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEC2InstanceConnectService.SendSerialConsoleSSHPublicKey":
-		*e = SendSerialConsoleSSHPublicKeyXAmzTargetEnum(s)
+		*e = SendSerialConsoleSSHPublicKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendSerialConsoleSSHPublicKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SendSerialConsoleSSHPublicKeyXAmzTargetEnum: %v", v)
 	}
 }
 

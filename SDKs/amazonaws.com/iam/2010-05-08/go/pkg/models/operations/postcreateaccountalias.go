@@ -15,17 +15,21 @@ const (
 	POSTCreateAccountAliasActionEnumCreateAccountAlias POSTCreateAccountAliasActionEnum = "CreateAccountAlias"
 )
 
+func (e POSTCreateAccountAliasActionEnum) ToPointer() *POSTCreateAccountAliasActionEnum {
+	return &e
+}
+
 func (e *POSTCreateAccountAliasActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateAccountAlias":
-		*e = POSTCreateAccountAliasActionEnum(s)
+		*e = POSTCreateAccountAliasActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateAccountAliasActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateAccountAliasActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateAccountAliasVersionEnumTwoThousandAndTen0508 POSTCreateAccountAliasVersionEnum = "2010-05-08"
 )
 
+func (e POSTCreateAccountAliasVersionEnum) ToPointer() *POSTCreateAccountAliasVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateAccountAliasVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTCreateAccountAliasVersionEnum(s)
+		*e = POSTCreateAccountAliasVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateAccountAliasVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateAccountAliasVersionEnum: %v", v)
 	}
 }
 

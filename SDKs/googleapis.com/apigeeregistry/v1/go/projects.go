@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ApigeeregistryProjectsLocationsApisCreate - Creates a specified API.
 func (s *projects) ApigeeregistryProjectsLocationsApisCreate(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisCreateRequest, security operations.ApigeeregistryProjectsLocationsApisCreateSecurity) (*operations.ApigeeregistryProjectsLocationsApisCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apis", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apis", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisCreate(ctx context.Context
 // ApigeeregistryProjectsLocationsApisDeploymentsCreate - Creates a specified deployment.
 func (s *projects) ApigeeregistryProjectsLocationsApisDeploymentsCreate(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateRequest, security operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateSecurity) (*operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIDeploymentInput", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisDeploymentsCreate(ctx cont
 // ApigeeregistryProjectsLocationsApisDeploymentsList - Returns matching deployments.
 func (s *projects) ApigeeregistryProjectsLocationsApisDeploymentsList(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisDeploymentsListRequest, security operations.ApigeeregistryProjectsLocationsApisDeploymentsListSecurity) (*operations.ApigeeregistryProjectsLocationsApisDeploymentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisDeploymentsList(ctx contex
 // ApigeeregistryProjectsLocationsApisList - Returns matching APIs.
 func (s *projects) ApigeeregistryProjectsLocationsApisList(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisListRequest, security operations.ApigeeregistryProjectsLocationsApisListSecurity) (*operations.ApigeeregistryProjectsLocationsApisListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apis", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/apis", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisList(ctx context.Context, 
 // ApigeeregistryProjectsLocationsApisVersionsCreate - Creates a specified version.
 func (s *projects) ApigeeregistryProjectsLocationsApisVersionsCreate(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisVersionsCreateRequest, security operations.ApigeeregistryProjectsLocationsApisVersionsCreateSecurity) (*operations.ApigeeregistryProjectsLocationsApisVersionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIVersionInput", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisVersionsCreate(ctx context
 // ApigeeregistryProjectsLocationsApisVersionsList - Returns matching versions.
 func (s *projects) ApigeeregistryProjectsLocationsApisVersionsList(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisVersionsListRequest, security operations.ApigeeregistryProjectsLocationsApisVersionsListSecurity) (*operations.ApigeeregistryProjectsLocationsApisVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisVersionsList(ctx context.C
 // ApigeeregistryProjectsLocationsApisVersionsSpecsCreate - Creates a specified spec.
 func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsCreate(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateRequest, security operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateSecurity) (*operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/specs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/specs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APISpecInput", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsCreate(ctx co
 // ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevision - Deletes a revision of a spec.
 func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevision(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionRequest, security operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionSecurity) (*operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:deleteRevision", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:deleteRevision", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisio
 // ApigeeregistryProjectsLocationsApisVersionsSpecsList - Returns matching specs.
 func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsList(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRequest, security operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListSecurity) (*operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/specs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/specs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -494,7 +521,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsList(ctx cont
 // ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisions - Lists all revisions of a spec. Revisions are returned in descending order of revision creation time.
 func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisions(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest, security operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsSecurity) (*operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:listRevisions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:listRevisions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +572,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisions
 // ApigeeregistryProjectsLocationsApisVersionsSpecsPatch - Used to modify a specified spec.
 func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsPatch(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchRequest, security operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchSecurity) (*operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APISpecInput", "json")
 	if err != nil {
@@ -597,7 +630,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsPatch(ctx con
 // ApigeeregistryProjectsLocationsApisVersionsSpecsRollback - Sets the current revision to a specified prior revision. Note that this creates a new revision with a new revision ID.
 func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsRollback(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackRequest, security operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackSecurity) (*operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:rollback", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:rollback", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RollbackAPISpecRequest", "json")
 	if err != nil {
@@ -652,7 +688,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsRollback(ctx 
 // ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevision - Adds a tag to a specified revision of a spec.
 func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevision(ctx context.Context, request operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionRequest, security operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionSecurity) (*operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:tagRevision", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:tagRevision", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagAPISpecRevisionRequest", "json")
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *projects) ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevision(c
 // ApigeeregistryProjectsLocationsArtifactsCreate - Creates a specified artifact.
 func (s *projects) ApigeeregistryProjectsLocationsArtifactsCreate(ctx context.Context, request operations.ApigeeregistryProjectsLocationsArtifactsCreateRequest, security operations.ApigeeregistryProjectsLocationsArtifactsCreateSecurity) (*operations.ApigeeregistryProjectsLocationsArtifactsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/artifacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/artifacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArtifactInput", "json")
 	if err != nil {
@@ -762,7 +804,10 @@ func (s *projects) ApigeeregistryProjectsLocationsArtifactsCreate(ctx context.Co
 // ApigeeregistryProjectsLocationsArtifactsGetContents - Returns the contents of a specified artifact. If artifacts are stored with GZip compression, the default behavior is to return the artifact uncompressed (the mime_type response field indicates the exact format returned).
 func (s *projects) ApigeeregistryProjectsLocationsArtifactsGetContents(ctx context.Context, request operations.ApigeeregistryProjectsLocationsArtifactsGetContentsRequest, security operations.ApigeeregistryProjectsLocationsArtifactsGetContentsSecurity) (*operations.ApigeeregistryProjectsLocationsArtifactsGetContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getContents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getContents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -810,7 +855,10 @@ func (s *projects) ApigeeregistryProjectsLocationsArtifactsGetContents(ctx conte
 // ApigeeregistryProjectsLocationsArtifactsList - Returns matching artifacts.
 func (s *projects) ApigeeregistryProjectsLocationsArtifactsList(ctx context.Context, request operations.ApigeeregistryProjectsLocationsArtifactsListRequest, security operations.ApigeeregistryProjectsLocationsArtifactsListSecurity) (*operations.ApigeeregistryProjectsLocationsArtifactsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/artifacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/artifacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -858,7 +906,10 @@ func (s *projects) ApigeeregistryProjectsLocationsArtifactsList(ctx context.Cont
 // ApigeeregistryProjectsLocationsArtifactsReplaceArtifact - Used to replace a specified artifact.
 func (s *projects) ApigeeregistryProjectsLocationsArtifactsReplaceArtifact(ctx context.Context, request operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactRequest, security operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactSecurity) (*operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArtifactInput", "json")
 	if err != nil {
@@ -913,7 +964,10 @@ func (s *projects) ApigeeregistryProjectsLocationsArtifactsReplaceArtifact(ctx c
 // ApigeeregistryProjectsLocationsInstancesCreate - Provisions instance resources for the Registry.
 func (s *projects) ApigeeregistryProjectsLocationsInstancesCreate(ctx context.Context, request operations.ApigeeregistryProjectsLocationsInstancesCreateRequest, security operations.ApigeeregistryProjectsLocationsInstancesCreateSecurity) (*operations.ApigeeregistryProjectsLocationsInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstanceInput", "json")
 	if err != nil {
@@ -968,7 +1022,10 @@ func (s *projects) ApigeeregistryProjectsLocationsInstancesCreate(ctx context.Co
 // ApigeeregistryProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) ApigeeregistryProjectsLocationsList(ctx context.Context, request operations.ApigeeregistryProjectsLocationsListRequest, security operations.ApigeeregistryProjectsLocationsListSecurity) (*operations.ApigeeregistryProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1016,7 +1073,10 @@ func (s *projects) ApigeeregistryProjectsLocationsList(ctx context.Context, requ
 // ApigeeregistryProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) ApigeeregistryProjectsLocationsOperationsCancel(ctx context.Context, request operations.ApigeeregistryProjectsLocationsOperationsCancelRequest, security operations.ApigeeregistryProjectsLocationsOperationsCancelSecurity) (*operations.ApigeeregistryProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1071,7 +1131,10 @@ func (s *projects) ApigeeregistryProjectsLocationsOperationsCancel(ctx context.C
 // ApigeeregistryProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) ApigeeregistryProjectsLocationsOperationsDelete(ctx context.Context, request operations.ApigeeregistryProjectsLocationsOperationsDeleteRequest, security operations.ApigeeregistryProjectsLocationsOperationsDeleteSecurity) (*operations.ApigeeregistryProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1119,7 +1182,10 @@ func (s *projects) ApigeeregistryProjectsLocationsOperationsDelete(ctx context.C
 // ApigeeregistryProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) ApigeeregistryProjectsLocationsOperationsGet(ctx context.Context, request operations.ApigeeregistryProjectsLocationsOperationsGetRequest, security operations.ApigeeregistryProjectsLocationsOperationsGetSecurity) (*operations.ApigeeregistryProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1167,7 +1233,10 @@ func (s *projects) ApigeeregistryProjectsLocationsOperationsGet(ctx context.Cont
 // ApigeeregistryProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
 func (s *projects) ApigeeregistryProjectsLocationsOperationsList(ctx context.Context, request operations.ApigeeregistryProjectsLocationsOperationsListRequest, security operations.ApigeeregistryProjectsLocationsOperationsListSecurity) (*operations.ApigeeregistryProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1215,7 +1284,10 @@ func (s *projects) ApigeeregistryProjectsLocationsOperationsList(ctx context.Con
 // ApigeeregistryProjectsLocationsRuntimeGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) ApigeeregistryProjectsLocationsRuntimeGetIamPolicy(ctx context.Context, request operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyRequest, security operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicySecurity) (*operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1263,7 +1335,10 @@ func (s *projects) ApigeeregistryProjectsLocationsRuntimeGetIamPolicy(ctx contex
 // ApigeeregistryProjectsLocationsRuntimeSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) ApigeeregistryProjectsLocationsRuntimeSetIamPolicy(ctx context.Context, request operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyRequest, security operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicySecurity) (*operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -1318,7 +1393,10 @@ func (s *projects) ApigeeregistryProjectsLocationsRuntimeSetIamPolicy(ctx contex
 // ApigeeregistryProjectsLocationsRuntimeTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) ApigeeregistryProjectsLocationsRuntimeTestIamPermissions(ctx context.Context, request operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsRequest, security operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsSecurity) (*operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {

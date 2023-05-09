@@ -15,19 +15,23 @@ const (
 	UpdateTopicStatusRequestBodyEnabledEnumFalse UpdateTopicStatusRequestBodyEnabledEnum = "false"
 )
 
+func (e UpdateTopicStatusRequestBodyEnabledEnum) ToPointer() *UpdateTopicStatusRequestBodyEnabledEnum {
+	return &e
+}
+
 func (e *UpdateTopicStatusRequestBodyEnabledEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = UpdateTopicStatusRequestBodyEnabledEnum(s)
+		*e = UpdateTopicStatusRequestBodyEnabledEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateTopicStatusRequestBodyEnabledEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateTopicStatusRequestBodyEnabledEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	UpdateTopicStatusRequestBodyStatusEnumVisible        UpdateTopicStatusRequestBodyStatusEnum = "visible"
 )
 
+func (e UpdateTopicStatusRequestBodyStatusEnum) ToPointer() *UpdateTopicStatusRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *UpdateTopicStatusRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "closed":
 		fallthrough
 	case "pinned":
@@ -56,10 +64,10 @@ func (e *UpdateTopicStatusRequestBodyStatusEnum) UnmarshalJSON(data []byte) erro
 	case "archived":
 		fallthrough
 	case "visible":
-		*e = UpdateTopicStatusRequestBodyStatusEnum(s)
+		*e = UpdateTopicStatusRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateTopicStatusRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateTopicStatusRequestBodyStatusEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	DataShareStatusForProducerEnumRejected             DataShareStatusForProducerEnum = "REJECTED"
 )
 
+func (e DataShareStatusForProducerEnum) ToPointer() *DataShareStatusForProducerEnum {
+	return &e
+}
+
 func (e *DataShareStatusForProducerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "AUTHORIZED":
@@ -32,9 +36,9 @@ func (e *DataShareStatusForProducerEnum) UnmarshalJSON(data []byte) error {
 	case "DEAUTHORIZED":
 		fallthrough
 	case "REJECTED":
-		*e = DataShareStatusForProducerEnum(s)
+		*e = DataShareStatusForProducerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataShareStatusForProducerEnum: %s", s)
+		return fmt.Errorf("invalid value for DataShareStatusForProducerEnum: %v", v)
 	}
 }

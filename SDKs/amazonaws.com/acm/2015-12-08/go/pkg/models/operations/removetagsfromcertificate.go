@@ -16,17 +16,21 @@ const (
 	RemoveTagsFromCertificateXAmzTargetEnumCertificateManagerRemoveTagsFromCertificate RemoveTagsFromCertificateXAmzTargetEnum = "CertificateManager.RemoveTagsFromCertificate"
 )
 
+func (e RemoveTagsFromCertificateXAmzTargetEnum) ToPointer() *RemoveTagsFromCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *RemoveTagsFromCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CertificateManager.RemoveTagsFromCertificate":
-		*e = RemoveTagsFromCertificateXAmzTargetEnum(s)
+		*e = RemoveTagsFromCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveTagsFromCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveTagsFromCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

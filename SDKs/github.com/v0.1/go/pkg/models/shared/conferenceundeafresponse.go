@@ -17,12 +17,16 @@ const (
 	ConferenceUndeafResponseMessageEnumConferenceUndeafFailedConferenceNotFound ConferenceUndeafResponseMessageEnum = "Conference Undeaf Failed -- Conference not found"
 )
 
+func (e ConferenceUndeafResponseMessageEnum) ToPointer() *ConferenceUndeafResponseMessageEnum {
+	return &e
+}
+
 func (e *ConferenceUndeafResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Conference Undeaf Executed":
 		fallthrough
 	case "ConferenceName Parameter must be present":
@@ -30,10 +34,10 @@ func (e *ConferenceUndeafResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "MemberID Parameter must be present":
 		fallthrough
 	case "Conference Undeaf Failed -- Conference not found":
-		*e = ConferenceUndeafResponseMessageEnum(s)
+		*e = ConferenceUndeafResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConferenceUndeafResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ConferenceUndeafResponseMessageEnum: %v", v)
 	}
 }
 

@@ -22,21 +22,25 @@ const (
 	GetReviewsResourceTypeJSONOrderEnumByOpeningDate     GetReviewsResourceTypeJSONOrderEnum = "by-opening-date"
 )
 
+func (e GetReviewsResourceTypeJSONOrderEnum) ToPointer() *GetReviewsResourceTypeJSONOrderEnum {
+	return &e
+}
+
 func (e *GetReviewsResourceTypeJSONOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "by-title":
 		fallthrough
 	case "by-publication-date":
 		fallthrough
 	case "by-opening-date":
-		*e = GetReviewsResourceTypeJSONOrderEnum(s)
+		*e = GetReviewsResourceTypeJSONOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetReviewsResourceTypeJSONOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetReviewsResourceTypeJSONOrderEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	GetReviewsResourceTypeJSONResourceTypeEnumPicks GetReviewsResourceTypeJSONResourceTypeEnum = "picks"
 )
 
+func (e GetReviewsResourceTypeJSONResourceTypeEnum) ToPointer() *GetReviewsResourceTypeJSONResourceTypeEnum {
+	return &e
+}
+
 func (e *GetReviewsResourceTypeJSONResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "picks":
-		*e = GetReviewsResourceTypeJSONResourceTypeEnum(s)
+		*e = GetReviewsResourceTypeJSONResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetReviewsResourceTypeJSONResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetReviewsResourceTypeJSONResourceTypeEnum: %v", v)
 	}
 }
 

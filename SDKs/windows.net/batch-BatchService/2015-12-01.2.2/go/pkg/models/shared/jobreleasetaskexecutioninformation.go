@@ -16,19 +16,23 @@ const (
 	JobReleaseTaskExecutionInformationStateEnumCompleted JobReleaseTaskExecutionInformationStateEnum = "completed"
 )
 
+func (e JobReleaseTaskExecutionInformationStateEnum) ToPointer() *JobReleaseTaskExecutionInformationStateEnum {
+	return &e
+}
+
 func (e *JobReleaseTaskExecutionInformationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "completed":
-		*e = JobReleaseTaskExecutionInformationStateEnum(s)
+		*e = JobReleaseTaskExecutionInformationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobReleaseTaskExecutionInformationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for JobReleaseTaskExecutionInformationStateEnum: %v", v)
 	}
 }
 

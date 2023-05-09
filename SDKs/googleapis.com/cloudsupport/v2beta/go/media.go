@@ -34,7 +34,10 @@ func newMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // CloudsupportMediaDownload - Download a file attachment on a case. Note: HTTP requests must append "?alt=media" to the URL.
 func (s *media) CloudsupportMediaDownload(ctx context.Context, request operations.CloudsupportMediaDownloadRequest, security operations.CloudsupportMediaDownloadSecurity) (*operations.CloudsupportMediaDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}:download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *media) CloudsupportMediaDownload(ctx context.Context, request operation
 // CloudsupportMediaUpload - Create a file attachment on a case or Cloud resource. The attachment object must have the following fields set: filename.
 func (s *media) CloudsupportMediaUpload(ctx context.Context, request operations.CloudsupportMediaUploadRequest, security operations.CloudsupportMediaUploadSecurity) (*operations.CloudsupportMediaUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

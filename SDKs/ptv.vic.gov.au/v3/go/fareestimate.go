@@ -35,7 +35,10 @@ func newFareEstimate(defaultClient, securityClient HTTPClient, serverURL, langua
 // FareEstimateGetFareEstimateByZone - Estimate a fare by zone
 func (s *fareEstimate) FareEstimateGetFareEstimateByZone(ctx context.Context, request operations.FareEstimateGetFareEstimateByZoneRequest) (*operations.FareEstimateGetFareEstimateByZoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/fare_estimate/min_zone/{minZone}/max_zone/{maxZone}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/fare_estimate/min_zone/{minZone}/max_zone/{maxZone}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

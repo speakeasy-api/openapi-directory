@@ -14,18 +14,22 @@ const (
 	DeploymentFailureHandlingPolicyEnumDoNothing DeploymentFailureHandlingPolicyEnum = "DO_NOTHING"
 )
 
+func (e DeploymentFailureHandlingPolicyEnum) ToPointer() *DeploymentFailureHandlingPolicyEnum {
+	return &e
+}
+
 func (e *DeploymentFailureHandlingPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLLBACK":
 		fallthrough
 	case "DO_NOTHING":
-		*e = DeploymentFailureHandlingPolicyEnum(s)
+		*e = DeploymentFailureHandlingPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentFailureHandlingPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentFailureHandlingPolicyEnum: %v", v)
 	}
 }

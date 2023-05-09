@@ -15,17 +15,21 @@ const (
 	POSTDeleteQueuedReservedInstancesActionEnumDeleteQueuedReservedInstances POSTDeleteQueuedReservedInstancesActionEnum = "DeleteQueuedReservedInstances"
 )
 
+func (e POSTDeleteQueuedReservedInstancesActionEnum) ToPointer() *POSTDeleteQueuedReservedInstancesActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteQueuedReservedInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteQueuedReservedInstances":
-		*e = POSTDeleteQueuedReservedInstancesActionEnum(s)
+		*e = POSTDeleteQueuedReservedInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteQueuedReservedInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteQueuedReservedInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteQueuedReservedInstancesVersionEnumTwoThousandAndSixteen1115 POSTDeleteQueuedReservedInstancesVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteQueuedReservedInstancesVersionEnum) ToPointer() *POSTDeleteQueuedReservedInstancesVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteQueuedReservedInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteQueuedReservedInstancesVersionEnum(s)
+		*e = POSTDeleteQueuedReservedInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteQueuedReservedInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteQueuedReservedInstancesVersionEnum: %v", v)
 	}
 }
 

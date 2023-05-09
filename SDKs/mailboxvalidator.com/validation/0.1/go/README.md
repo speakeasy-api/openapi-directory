@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/mailboxvalidator.com/vali
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetV1ValidationSingleRequest{
-        Email: "Larue_Rau85@yahoo.com",
-        Format: "xml",
-        Key: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.GetV1ValidationSingle(ctx, req)
+    res, err := s.GetV1ValidationSingle(ctx, operations.GetV1ValidationSingleRequest{
+        Email: "Larue_Rau85@yahoo.com",
+        Format: operations.GetV1ValidationSingleFormatEnumXML.ToPointer(),
+        Key: "illum",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetV1ValidationSingle` - The Single Validation API does validation on a single email address and returns all the validation results in either JSON or XML format.
+* [GetV1ValidationSingle](docs/sdk/README.md#getv1validationsingle) - The Single Validation API does validation on a single email address and returns all the validation results in either JSON or XML format.
 <!-- End SDK Available Operations -->
 
 ### Maturity

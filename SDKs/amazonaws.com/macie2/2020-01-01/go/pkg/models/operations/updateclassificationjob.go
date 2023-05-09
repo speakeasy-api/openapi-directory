@@ -20,12 +20,16 @@ const (
 	UpdateClassificationJobRequestBodyJobStatusEnumUserPaused UpdateClassificationJobRequestBodyJobStatusEnum = "USER_PAUSED"
 )
 
+func (e UpdateClassificationJobRequestBodyJobStatusEnum) ToPointer() *UpdateClassificationJobRequestBodyJobStatusEnum {
+	return &e
+}
+
 func (e *UpdateClassificationJobRequestBodyJobStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "PAUSED":
@@ -37,10 +41,10 @@ func (e *UpdateClassificationJobRequestBodyJobStatusEnum) UnmarshalJSON(data []b
 	case "IDLE":
 		fallthrough
 	case "USER_PAUSED":
-		*e = UpdateClassificationJobRequestBodyJobStatusEnum(s)
+		*e = UpdateClassificationJobRequestBodyJobStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateClassificationJobRequestBodyJobStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateClassificationJobRequestBodyJobStatusEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CreateBackupXAmzTargetEnumDynamoDb20120810CreateBackup CreateBackupXAmzTargetEnum = "DynamoDB_20120810.CreateBackup"
 )
 
+func (e CreateBackupXAmzTargetEnum) ToPointer() *CreateBackupXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateBackupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.CreateBackup":
-		*e = CreateBackupXAmzTargetEnum(s)
+		*e = CreateBackupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBackupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBackupXAmzTargetEnum: %v", v)
 	}
 }
 

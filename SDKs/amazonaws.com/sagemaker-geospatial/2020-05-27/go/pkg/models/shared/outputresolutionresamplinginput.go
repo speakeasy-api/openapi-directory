@@ -2,7 +2,7 @@
 
 package shared
 
-// OutputResolutionResamplingInput - <p/>
+// OutputResolutionResamplingInput - OutputResolution Configuration indicating the target resolution for the output of Resampling operation.
 type OutputResolutionResamplingInput struct {
 	UserDefined UserDefined `json:"UserDefined"`
 }

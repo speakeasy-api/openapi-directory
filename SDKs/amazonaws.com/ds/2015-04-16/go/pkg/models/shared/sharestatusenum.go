@@ -21,12 +21,16 @@ const (
 	ShareStatusEnumDeleting          ShareStatusEnum = "Deleting"
 )
 
+func (e ShareStatusEnum) ToPointer() *ShareStatusEnum {
+	return &e
+}
+
 func (e *ShareStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Shared":
 		fallthrough
 	case "PendingAcceptance":
@@ -44,9 +48,9 @@ func (e *ShareStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Deleted":
 		fallthrough
 	case "Deleting":
-		*e = ShareStatusEnum(s)
+		*e = ShareStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareStatusEnum: %v", v)
 	}
 }

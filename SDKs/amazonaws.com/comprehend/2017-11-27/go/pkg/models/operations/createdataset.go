@@ -16,17 +16,21 @@ const (
 	CreateDatasetXAmzTargetEnumComprehend20171127CreateDataset CreateDatasetXAmzTargetEnum = "Comprehend_20171127.CreateDataset"
 )
 
+func (e CreateDatasetXAmzTargetEnum) ToPointer() *CreateDatasetXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateDatasetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.CreateDataset":
-		*e = CreateDatasetXAmzTargetEnum(s)
+		*e = CreateDatasetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDatasetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDatasetXAmzTargetEnum: %v", v)
 	}
 }
 

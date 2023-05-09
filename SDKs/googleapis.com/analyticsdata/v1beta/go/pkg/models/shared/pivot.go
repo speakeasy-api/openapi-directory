@@ -17,12 +17,16 @@ const (
 	PivotMetricAggregationsEnumCount                        PivotMetricAggregationsEnum = "COUNT"
 )
 
+func (e PivotMetricAggregationsEnum) ToPointer() *PivotMetricAggregationsEnum {
+	return &e
+}
+
 func (e *PivotMetricAggregationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_AGGREGATION_UNSPECIFIED":
 		fallthrough
 	case "TOTAL":
@@ -32,10 +36,10 @@ func (e *PivotMetricAggregationsEnum) UnmarshalJSON(data []byte) error {
 	case "MAXIMUM":
 		fallthrough
 	case "COUNT":
-		*e = PivotMetricAggregationsEnum(s)
+		*e = PivotMetricAggregationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PivotMetricAggregationsEnum: %s", s)
+		return fmt.Errorf("invalid value for PivotMetricAggregationsEnum: %v", v)
 	}
 }
 
@@ -43,7 +47,7 @@ func (e *PivotMetricAggregationsEnum) UnmarshalJSON(data []byte) error {
 type Pivot struct {
 	// Dimension names for visible columns in the report response. Including "dateRange" produces a date range column; for each row in the response, dimension values in the date range column will indicate the corresponding date range from the request.
 	FieldNames []string `json:"fieldNames,omitempty"`
-	// The number of unique combinations of dimension values to return in this pivot. The `limit` parameter is required. A `limit` of 10,000 is common for single pivot requests. The product of the `limit` for each `pivot` in a `RunPivotReportRequest` must not exceed 100,000. For example, a two pivot request with `limit: 1000` in each pivot will fail because the product is `1,000,000`.
+	// The number of unique combinations of dimension values to return in this pivot. The `limit` parameter is required. A `limit` of 10,000 is common for single pivot requests. The product of the `limit` for each `pivot` in a `RunPivotReportRequest` must not exceed 250,000. For example, a two pivot request with `limit: 1000` in each pivot will fail because the product is `1,000,000`.
 	Limit *string `json:"limit,omitempty"`
 	// Aggregate the metrics by dimensions in this pivot using the specified metric_aggregations.
 	MetricAggregations []PivotMetricAggregationsEnum `json:"metricAggregations,omitempty"`

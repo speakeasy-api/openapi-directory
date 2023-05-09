@@ -16,19 +16,23 @@ const (
 	GetTagsRequiredOrderEnumAsc  GetTagsRequiredOrderEnum = "asc"
 )
 
+func (e GetTagsRequiredOrderEnum) ToPointer() *GetTagsRequiredOrderEnum {
+	return &e
+}
+
 func (e *GetTagsRequiredOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetTagsRequiredOrderEnum(s)
+		*e = GetTagsRequiredOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTagsRequiredOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTagsRequiredOrderEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	GetTagsRequiredSortEnumName     GetTagsRequiredSortEnum = "name"
 )
 
+func (e GetTagsRequiredSortEnum) ToPointer() *GetTagsRequiredSortEnum {
+	return &e
+}
+
 func (e *GetTagsRequiredSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "popular":
 		fallthrough
 	case "activity":
 		fallthrough
 	case "name":
-		*e = GetTagsRequiredSortEnum(s)
+		*e = GetTagsRequiredSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTagsRequiredSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTagsRequiredSortEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetMergeOptionsXAmzTargetEnumCodeCommit20150413GetMergeOptions GetMergeOptionsXAmzTargetEnum = "CodeCommit_20150413.GetMergeOptions"
 )
 
+func (e GetMergeOptionsXAmzTargetEnum) ToPointer() *GetMergeOptionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetMergeOptionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.GetMergeOptions":
-		*e = GetMergeOptionsXAmzTargetEnum(s)
+		*e = GetMergeOptionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMergeOptionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMergeOptionsXAmzTargetEnum: %v", v)
 	}
 }
 

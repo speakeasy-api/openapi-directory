@@ -34,7 +34,10 @@ func newRevisions(defaultClient, securityClient HTTPClient, serverURL, language,
 // DriveRevisionsDelete - Permanently deletes a file version. You can only delete revisions for files with binary content, like images or videos. Revisions for other files, like Google Docs or Sheets, and the last remaining file version can't be deleted.
 func (s *revisions) DriveRevisionsDelete(ctx context.Context, request operations.DriveRevisionsDeleteRequest, security operations.DriveRevisionsDeleteSecurity) (*operations.DriveRevisionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *revisions) DriveRevisionsDelete(ctx context.Context, request operations
 // DriveRevisionsGet - Gets a specific revision.
 func (s *revisions) DriveRevisionsGet(ctx context.Context, request operations.DriveRevisionsGetRequest, security operations.DriveRevisionsGetSecurity) (*operations.DriveRevisionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *revisions) DriveRevisionsGet(ctx context.Context, request operations.Dr
 // DriveRevisionsList - Lists a file's revisions.
 func (s *revisions) DriveRevisionsList(ctx context.Context, request operations.DriveRevisionsListRequest, security operations.DriveRevisionsListSecurity) (*operations.DriveRevisionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +178,10 @@ func (s *revisions) DriveRevisionsList(ctx context.Context, request operations.D
 // DriveRevisionsPatch - Updates a revision.
 func (s *revisions) DriveRevisionsPatch(ctx context.Context, request operations.DriveRevisionsPatchRequest, security operations.DriveRevisionsPatchSecurity) (*operations.DriveRevisionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Revision", "json")
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *revisions) DriveRevisionsPatch(ctx context.Context, request operations.
 // DriveRevisionsUpdate - Updates a revision.
 func (s *revisions) DriveRevisionsUpdate(ctx context.Context, request operations.DriveRevisionsUpdateRequest, security operations.DriveRevisionsUpdateSecurity) (*operations.DriveRevisionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/revisions/{revisionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Revision", "json")
 	if err != nil {

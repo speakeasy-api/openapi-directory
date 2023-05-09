@@ -21,12 +21,16 @@ const (
 	ConnectorConfigProviderEnumOther       ConnectorConfigProviderEnum = "OTHER"
 )
 
+func (e ConnectorConfigProviderEnum) ToPointer() *ConnectorConfigProviderEnum {
+	return &e
+}
+
 func (e *ConnectorConfigProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EKS_ANYWHERE":
 		fallthrough
 	case "ANTHOS":
@@ -44,9 +48,9 @@ func (e *ConnectorConfigProviderEnum) UnmarshalJSON(data []byte) error {
 	case "EC2":
 		fallthrough
 	case "OTHER":
-		*e = ConnectorConfigProviderEnum(s)
+		*e = ConnectorConfigProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectorConfigProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectorConfigProviderEnum: %v", v)
 	}
 }

@@ -31,12 +31,16 @@ const (
 	AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnumTooManyRequests     AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnum) ToPointer() *AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnum) UnmarshalJS
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnum(s)
+		*e = AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppleMappingTestFlightGroupsDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 

@@ -37,7 +37,10 @@ func newPolicyAPI(defaultClient, securityClient HTTPClient, serverURL, language,
 // This API endpoint removes an existing policy module from the server
 func (s *policyAPI) DeletePolicyModule(ctx context.Context, request operations.DeletePolicyModuleRequest) (*operations.DeletePolicyModuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/policies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/policies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -167,7 +170,10 @@ func (s *policyAPI) GetPolicies(ctx context.Context, request operations.GetPolic
 // This API endpoint returns the details of the specified policy module (`{id}`)
 func (s *policyAPI) GetPolicyModule(ctx context.Context, request operations.GetPolicyModuleRequest) (*operations.GetPolicyModuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/policies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/policies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -257,7 +263,10 @@ func (s *policyAPI) GetPolicyModule(ctx context.Context, request operations.GetP
 // ```
 func (s *policyAPI) PutPolicyModule(ctx context.Context, request operations.PutPolicyModuleRequest) (*operations.PutPolicyModuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/policies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/policies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {

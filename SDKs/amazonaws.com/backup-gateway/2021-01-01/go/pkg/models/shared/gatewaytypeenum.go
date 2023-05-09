@@ -13,16 +13,20 @@ const (
 	GatewayTypeEnumBackupVM GatewayTypeEnum = "BACKUP_VM"
 )
 
+func (e GatewayTypeEnum) ToPointer() *GatewayTypeEnum {
+	return &e
+}
+
 func (e *GatewayTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BACKUP_VM":
-		*e = GatewayTypeEnum(s)
+		*e = GatewayTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GatewayTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GatewayTypeEnum: %v", v)
 	}
 }

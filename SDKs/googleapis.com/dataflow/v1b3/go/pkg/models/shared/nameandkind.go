@@ -23,12 +23,16 @@ const (
 	NameAndKindKindEnumLatestValue  NameAndKindKindEnum = "LATEST_VALUE"
 )
 
+func (e NameAndKindKindEnum) ToPointer() *NameAndKindKindEnum {
+	return &e
+}
+
 func (e *NameAndKindKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVALID":
 		fallthrough
 	case "SUM":
@@ -48,10 +52,10 @@ func (e *NameAndKindKindEnum) UnmarshalJSON(data []byte) error {
 	case "DISTRIBUTION":
 		fallthrough
 	case "LATEST_VALUE":
-		*e = NameAndKindKindEnum(s)
+		*e = NameAndKindKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NameAndKindKindEnum: %s", s)
+		return fmt.Errorf("invalid value for NameAndKindKindEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,7 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // PostWebhooksFirehoseTest - Test Firehose Webhook
 // Trigger a test payload to be sent to your configured Firehose Webhook url.
-func (s *webhooks) PostWebhooksFirehoseTest(ctx context.Context) (*operations.PostWebhooksFirehoseTestResponse, error) {
+func (s *webhooks) PostWebhooksFirehoseTest(ctx context.Context, security operations.PostWebhooksFirehoseTestSecurity) (*operations.PostWebhooksFirehoseTestResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhooks/firehose/test"
 
@@ -43,7 +43,7 @@ func (s *webhooks) PostWebhooksFirehoseTest(ctx context.Context) (*operations.Po
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

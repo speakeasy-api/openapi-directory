@@ -15,20 +15,24 @@ const (
 	ResolverEndpointTypeEnumDualstack ResolverEndpointTypeEnum = "DUALSTACK"
 )
 
+func (e ResolverEndpointTypeEnum) ToPointer() *ResolverEndpointTypeEnum {
+	return &e
+}
+
 func (e *ResolverEndpointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IPV6":
 		fallthrough
 	case "IPV4":
 		fallthrough
 	case "DUALSTACK":
-		*e = ResolverEndpointTypeEnum(s)
+		*e = ResolverEndpointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResolverEndpointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResolverEndpointTypeEnum: %v", v)
 	}
 }

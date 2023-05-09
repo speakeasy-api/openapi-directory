@@ -35,7 +35,7 @@ func newClientManagement(defaultClient, securityClient HTTPClient, serverURL, la
 
 // Client - List clients
 // Retrieve a list of clients.
-func (s *clientManagement) Client(ctx context.Context) (*operations.ClientResponse, error) {
+func (s *clientManagement) Client(ctx context.Context, security operations.ClientSecurity) (*operations.ClientResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/client"
 
@@ -44,7 +44,7 @@ func (s *clientManagement) Client(ctx context.Context) (*operations.ClientRespon
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -115,7 +115,10 @@ func (s *clientManagement) Client(ctx context.Context) (*operations.ClientRespon
 // http://openid.net/specs/openid-connect-registration-1_0.html#ClientConfigurationEndpoint - OIDC Client Configuration Endpoint
 func (s *clientManagement) ClientClientID(ctx context.Context, request operations.ClientClientIDRequest, security operations.ClientClientIDSecurity) (*operations.ClientClientIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -267,7 +270,10 @@ func (s *clientManagement) CreateClient(ctx context.Context, request shared.Clie
 // http://openid.net/specs/openid-connect-registration-1_0.html#ClientConfigurationEndpoint - OIDC Client Configuration Endpoint
 func (s *clientManagement) GetClient(ctx context.Context, request operations.GetClientRequest, security operations.GetClientSecurity) (*operations.GetClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -345,7 +351,10 @@ func (s *clientManagement) GetClient(ctx context.Context, request operations.Get
 // http://openid.net/specs/openid-connect-registration-1_0.html#ClientConfigurationEndpoint - OIDC Client Configuration Endpoint
 func (s *clientManagement) UpdateClient(ctx context.Context, request operations.UpdateClientRequest, security operations.UpdateClientSecurity) (*operations.UpdateClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Client", "json")
 	if err != nil {

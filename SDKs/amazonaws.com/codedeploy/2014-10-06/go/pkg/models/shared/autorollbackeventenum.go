@@ -15,20 +15,24 @@ const (
 	AutoRollbackEventEnumDeploymentStopOnRequest AutoRollbackEventEnum = "DEPLOYMENT_STOP_ON_REQUEST"
 )
 
+func (e AutoRollbackEventEnum) ToPointer() *AutoRollbackEventEnum {
+	return &e
+}
+
 func (e *AutoRollbackEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_FAILURE":
 		fallthrough
 	case "DEPLOYMENT_STOP_ON_ALARM":
 		fallthrough
 	case "DEPLOYMENT_STOP_ON_REQUEST":
-		*e = AutoRollbackEventEnum(s)
+		*e = AutoRollbackEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoRollbackEventEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoRollbackEventEnum: %v", v)
 	}
 }

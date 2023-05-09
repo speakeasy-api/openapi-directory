@@ -16,17 +16,21 @@ const (
 	GetRelationalDatabasesXAmzTargetEnumLightsail20161128GetRelationalDatabases GetRelationalDatabasesXAmzTargetEnum = "Lightsail_20161128.GetRelationalDatabases"
 )
 
+func (e GetRelationalDatabasesXAmzTargetEnum) ToPointer() *GetRelationalDatabasesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRelationalDatabasesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetRelationalDatabases":
-		*e = GetRelationalDatabasesXAmzTargetEnum(s)
+		*e = GetRelationalDatabasesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRelationalDatabasesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRelationalDatabasesXAmzTargetEnum: %v", v)
 	}
 }
 

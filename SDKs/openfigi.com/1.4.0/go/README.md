@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/openfigi.com/1.4.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.GetMappingValuesKeyRequest{
-        Key: "currency",
-    }
-
     ctx := context.Background()
-    res, err := s.GetMappingValuesKey(ctx, req)
+    res, err := s.GetMappingValuesKey(ctx, operations.GetMappingValuesKeyRequest{
+        Key: operations.GetMappingValuesKeyKeyEnumCurrency,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,10 +45,10 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetMappingValuesKey` - Get values for enum-like fields.
-* `PostMapping` - Allows mapping from third-party identifiers to FIGIs.
+* [GetMappingValuesKey](docs/sdk/README.md#getmappingvalueskey) - Get values for enum-like fields.
+* [PostMapping](docs/sdk/README.md#postmapping) - Allows mapping from third-party identifiers to FIGIs.
 <!-- End SDK Available Operations -->
 
 ### Maturity

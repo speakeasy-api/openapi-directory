@@ -16,17 +16,21 @@ const (
 	GetSavingsPlansUtilizationXAmzTargetEnumAwsInsightsIndexServiceGetSavingsPlansUtilization GetSavingsPlansUtilizationXAmzTargetEnum = "AWSInsightsIndexService.GetSavingsPlansUtilization"
 )
 
+func (e GetSavingsPlansUtilizationXAmzTargetEnum) ToPointer() *GetSavingsPlansUtilizationXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSavingsPlansUtilizationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSInsightsIndexService.GetSavingsPlansUtilization":
-		*e = GetSavingsPlansUtilizationXAmzTargetEnum(s)
+		*e = GetSavingsPlansUtilizationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSavingsPlansUtilizationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSavingsPlansUtilizationXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -98,12 +98,16 @@ const (
 	CreateNetworkACLRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateNetworkACLRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateNetworkACLRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateNetworkACLRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateNetworkACLRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateNetworkACLRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateNetworkACLRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateNetworkACLRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNetworkACLRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNetworkACLRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

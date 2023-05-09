@@ -39,21 +39,25 @@ const (
 	GetImagesIDActionsActionIDActionResponseActionStatusEnumError   GetImagesIDActionsActionIDActionResponseActionStatusEnum = "error"
 )
 
+func (e GetImagesIDActionsActionIDActionResponseActionStatusEnum) ToPointer() *GetImagesIDActionsActionIDActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *GetImagesIDActionsActionIDActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = GetImagesIDActionsActionIDActionResponseActionStatusEnum(s)
+		*e = GetImagesIDActionsActionIDActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImagesIDActionsActionIDActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImagesIDActionsActionIDActionResponseActionStatusEnum: %v", v)
 	}
 }
 

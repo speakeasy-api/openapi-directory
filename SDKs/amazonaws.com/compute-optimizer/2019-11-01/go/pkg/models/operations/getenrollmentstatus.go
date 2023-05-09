@@ -16,17 +16,21 @@ const (
 	GetEnrollmentStatusXAmzTargetEnumComputeOptimizerServiceGetEnrollmentStatus GetEnrollmentStatusXAmzTargetEnum = "ComputeOptimizerService.GetEnrollmentStatus"
 )
 
+func (e GetEnrollmentStatusXAmzTargetEnum) ToPointer() *GetEnrollmentStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetEnrollmentStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComputeOptimizerService.GetEnrollmentStatus":
-		*e = GetEnrollmentStatusXAmzTargetEnum(s)
+		*e = GetEnrollmentStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEnrollmentStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEnrollmentStatusXAmzTargetEnum: %v", v)
 	}
 }
 

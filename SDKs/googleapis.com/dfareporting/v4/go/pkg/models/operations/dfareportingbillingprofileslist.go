@@ -22,19 +22,23 @@ const (
 	DfareportingBillingProfilesListSortFieldEnumName DfareportingBillingProfilesListSortFieldEnum = "NAME"
 )
 
+func (e DfareportingBillingProfilesListSortFieldEnum) ToPointer() *DfareportingBillingProfilesListSortFieldEnum {
+	return &e
+}
+
 func (e *DfareportingBillingProfilesListSortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID":
 		fallthrough
 	case "NAME":
-		*e = DfareportingBillingProfilesListSortFieldEnum(s)
+		*e = DfareportingBillingProfilesListSortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingBillingProfilesListSortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingBillingProfilesListSortFieldEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	DfareportingBillingProfilesListSortOrderEnumDescending DfareportingBillingProfilesListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingBillingProfilesListSortOrderEnum) ToPointer() *DfareportingBillingProfilesListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingBillingProfilesListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingBillingProfilesListSortOrderEnum(s)
+		*e = DfareportingBillingProfilesListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingBillingProfilesListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingBillingProfilesListSortOrderEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	DfareportingBillingProfilesListStatusEnumArchived    DfareportingBillingProfilesListStatusEnum = "ARCHIVED"
 )
 
+func (e DfareportingBillingProfilesListStatusEnum) ToPointer() *DfareportingBillingProfilesListStatusEnum {
+	return &e
+}
+
 func (e *DfareportingBillingProfilesListStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNDER_REVIEW":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "ARCHIVED":
-		*e = DfareportingBillingProfilesListStatusEnum(s)
+		*e = DfareportingBillingProfilesListStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingBillingProfilesListStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingBillingProfilesListStatusEnum: %v", v)
 	}
 }
 

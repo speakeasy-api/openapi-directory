@@ -14,18 +14,22 @@ const (
 	AutoMLChannelTypeEnumValidation AutoMLChannelTypeEnum = "validation"
 )
 
+func (e AutoMLChannelTypeEnum) ToPointer() *AutoMLChannelTypeEnum {
+	return &e
+}
+
 func (e *AutoMLChannelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "training":
 		fallthrough
 	case "validation":
-		*e = AutoMLChannelTypeEnum(s)
+		*e = AutoMLChannelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoMLChannelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoMLChannelTypeEnum: %v", v)
 	}
 }

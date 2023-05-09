@@ -80,12 +80,16 @@ const (
 	ChromeOsDeviceDeprovisionReasonEnumDeprovisionReasonRepairCenter              ChromeOsDeviceDeprovisionReasonEnum = "deprovisionReasonRepairCenter"
 )
 
+func (e ChromeOsDeviceDeprovisionReasonEnum) ToPointer() *ChromeOsDeviceDeprovisionReasonEnum {
+	return &e
+}
+
 func (e *ChromeOsDeviceDeprovisionReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deprovisionReasonUnspecified":
 		fallthrough
 	case "deprovisionReasonSameModelReplacement":
@@ -107,10 +111,10 @@ func (e *ChromeOsDeviceDeprovisionReasonEnum) UnmarshalJSON(data []byte) error {
 	case "deprovisionReasonNotRequired":
 		fallthrough
 	case "deprovisionReasonRepairCenter":
-		*e = ChromeOsDeviceDeprovisionReasonEnum(s)
+		*e = ChromeOsDeviceDeprovisionReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChromeOsDeviceDeprovisionReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for ChromeOsDeviceDeprovisionReasonEnum: %v", v)
 	}
 }
 

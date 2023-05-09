@@ -18,12 +18,16 @@ const (
 	DBProxyEndpointStatusEnumDeleting                   DBProxyEndpointStatusEnum = "deleting"
 )
 
+func (e DBProxyEndpointStatusEnum) ToPointer() *DBProxyEndpointStatusEnum {
+	return &e
+}
+
 func (e *DBProxyEndpointStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "modifying":
@@ -35,9 +39,9 @@ func (e *DBProxyEndpointStatusEnum) UnmarshalJSON(data []byte) error {
 	case "creating":
 		fallthrough
 	case "deleting":
-		*e = DBProxyEndpointStatusEnum(s)
+		*e = DBProxyEndpointStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DBProxyEndpointStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DBProxyEndpointStatusEnum: %v", v)
 	}
 }

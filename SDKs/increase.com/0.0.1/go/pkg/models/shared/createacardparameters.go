@@ -16,7 +16,7 @@ type CreateACardParametersBillingAddress struct {
 	State string `json:"state"`
 }
 
-// CreateACardParametersDigitalWallet - The contact information used in the two-factor steps for digital wallet card creation. At least one field must be present to complete the digital wallet steps.
+// CreateACardParametersDigitalWallet - The contact information used in the two-factor steps for digital wallet card creation. To add the card to a digital wallet, you may supply an email or phone number with this request. Otherwise, subscribe and then action a Real Time Decision with the category `digital_wallet_token_requested` or `digital_wallet_authentication_requested`.
 type CreateACardParametersDigitalWallet struct {
 	// The card profile assigned to this digital card. Card profiles may also be assigned at the program level.
 	CardProfileID *string `json:"card_profile_id,omitempty"`
@@ -33,6 +33,6 @@ type CreateACardParameters struct {
 	BillingAddress *CreateACardParametersBillingAddress `json:"billing_address,omitempty"`
 	// The description you choose to give the card.
 	Description *string `json:"description,omitempty"`
-	// The contact information used in the two-factor steps for digital wallet card creation. At least one field must be present to complete the digital wallet steps.
+	// The contact information used in the two-factor steps for digital wallet card creation. To add the card to a digital wallet, you may supply an email or phone number with this request. Otherwise, subscribe and then action a Real Time Decision with the category `digital_wallet_token_requested` or `digital_wallet_authentication_requested`.
 	DigitalWallet *CreateACardParametersDigitalWallet `json:"digital_wallet,omitempty"`
 }

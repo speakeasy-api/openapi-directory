@@ -16,12 +16,16 @@ const (
 	AcceleratorManufacturerEnumXilinx            AcceleratorManufacturerEnum = "xilinx"
 )
 
+func (e AcceleratorManufacturerEnum) ToPointer() *AcceleratorManufacturerEnum {
+	return &e
+}
+
 func (e *AcceleratorManufacturerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nvidia":
 		fallthrough
 	case "amd":
@@ -29,9 +33,9 @@ func (e *AcceleratorManufacturerEnum) UnmarshalJSON(data []byte) error {
 	case "amazon-web-services":
 		fallthrough
 	case "xilinx":
-		*e = AcceleratorManufacturerEnum(s)
+		*e = AcceleratorManufacturerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AcceleratorManufacturerEnum: %s", s)
+		return fmt.Errorf("invalid value for AcceleratorManufacturerEnum: %v", v)
 	}
 }

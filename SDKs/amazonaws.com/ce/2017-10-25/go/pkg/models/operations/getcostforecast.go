@@ -16,17 +16,21 @@ const (
 	GetCostForecastXAmzTargetEnumAwsInsightsIndexServiceGetCostForecast GetCostForecastXAmzTargetEnum = "AWSInsightsIndexService.GetCostForecast"
 )
 
+func (e GetCostForecastXAmzTargetEnum) ToPointer() *GetCostForecastXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCostForecastXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSInsightsIndexService.GetCostForecast":
-		*e = GetCostForecastXAmzTargetEnum(s)
+		*e = GetCostForecastXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCostForecastXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCostForecastXAmzTargetEnum: %v", v)
 	}
 }
 

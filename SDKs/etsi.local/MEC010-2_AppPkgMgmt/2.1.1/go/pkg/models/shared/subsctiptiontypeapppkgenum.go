@@ -16,20 +16,24 @@ const (
 	SubsctiptionTypeAppPkgEnumAppPackageDeletion        SubsctiptionTypeAppPkgEnum = "AppPackageDeletion"
 )
 
+func (e SubsctiptionTypeAppPkgEnum) ToPointer() *SubsctiptionTypeAppPkgEnum {
+	return &e
+}
+
 func (e *SubsctiptionTypeAppPkgEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppPackageOnBoarding":
 		fallthrough
 	case "AppPacakgeOperationChange":
 		fallthrough
 	case "AppPackageDeletion":
-		*e = SubsctiptionTypeAppPkgEnum(s)
+		*e = SubsctiptionTypeAppPkgEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubsctiptionTypeAppPkgEnum: %s", s)
+		return fmt.Errorf("invalid value for SubsctiptionTypeAppPkgEnum: %v", v)
 	}
 }

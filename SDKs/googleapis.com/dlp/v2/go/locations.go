@@ -34,7 +34,10 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // DlpLocationsInfoTypesList - Returns a list of the sensitive information types that DLP API supports. See https://cloud.google.com/dlp/docs/infotypes-reference to learn more.
 func (s *locations) DlpLocationsInfoTypesList(ctx context.Context, request operations.DlpLocationsInfoTypesListRequest, security operations.DlpLocationsInfoTypesListSecurity) (*operations.DlpLocationsInfoTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/infoTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/infoTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

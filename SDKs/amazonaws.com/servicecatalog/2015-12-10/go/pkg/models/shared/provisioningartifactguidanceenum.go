@@ -14,18 +14,22 @@ const (
 	ProvisioningArtifactGuidanceEnumDeprecated ProvisioningArtifactGuidanceEnum = "DEPRECATED"
 )
 
+func (e ProvisioningArtifactGuidanceEnum) ToPointer() *ProvisioningArtifactGuidanceEnum {
+	return &e
+}
+
 func (e *ProvisioningArtifactGuidanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "DEPRECATED":
-		*e = ProvisioningArtifactGuidanceEnum(s)
+		*e = ProvisioningArtifactGuidanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisioningArtifactGuidanceEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisioningArtifactGuidanceEnum: %v", v)
 	}
 }

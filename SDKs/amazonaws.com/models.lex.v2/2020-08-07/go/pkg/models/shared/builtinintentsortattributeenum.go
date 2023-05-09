@@ -13,16 +13,20 @@ const (
 	BuiltInIntentSortAttributeEnumIntentSignature BuiltInIntentSortAttributeEnum = "IntentSignature"
 )
 
+func (e BuiltInIntentSortAttributeEnum) ToPointer() *BuiltInIntentSortAttributeEnum {
+	return &e
+}
+
 func (e *BuiltInIntentSortAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IntentSignature":
-		*e = BuiltInIntentSortAttributeEnum(s)
+		*e = BuiltInIntentSortAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuiltInIntentSortAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for BuiltInIntentSortAttributeEnum: %v", v)
 	}
 }

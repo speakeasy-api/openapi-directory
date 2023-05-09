@@ -28,21 +28,25 @@ const (
 	GetCertificatesIDCertificateResponseCertificateStatusIssuanceEnumFailed    GetCertificatesIDCertificateResponseCertificateStatusIssuanceEnum = "failed"
 )
 
+func (e GetCertificatesIDCertificateResponseCertificateStatusIssuanceEnum) ToPointer() *GetCertificatesIDCertificateResponseCertificateStatusIssuanceEnum {
+	return &e
+}
+
 func (e *GetCertificatesIDCertificateResponseCertificateStatusIssuanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "completed":
 		fallthrough
 	case "failed":
-		*e = GetCertificatesIDCertificateResponseCertificateStatusIssuanceEnum(s)
+		*e = GetCertificatesIDCertificateResponseCertificateStatusIssuanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCertificatesIDCertificateResponseCertificateStatusIssuanceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCertificatesIDCertificateResponseCertificateStatusIssuanceEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	GetCertificatesIDCertificateResponseCertificateStatusRenewalEnumUnavailable GetCertificatesIDCertificateResponseCertificateStatusRenewalEnum = "unavailable"
 )
 
+func (e GetCertificatesIDCertificateResponseCertificateStatusRenewalEnum) ToPointer() *GetCertificatesIDCertificateResponseCertificateStatusRenewalEnum {
+	return &e
+}
+
 func (e *GetCertificatesIDCertificateResponseCertificateStatusRenewalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "scheduled":
 		fallthrough
 	case "pending":
@@ -69,10 +77,10 @@ func (e *GetCertificatesIDCertificateResponseCertificateStatusRenewalEnum) Unmar
 	case "failed":
 		fallthrough
 	case "unavailable":
-		*e = GetCertificatesIDCertificateResponseCertificateStatusRenewalEnum(s)
+		*e = GetCertificatesIDCertificateResponseCertificateStatusRenewalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCertificatesIDCertificateResponseCertificateStatusRenewalEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCertificatesIDCertificateResponseCertificateStatusRenewalEnum: %v", v)
 	}
 }
 
@@ -94,19 +102,23 @@ const (
 	GetCertificatesIDCertificateResponseCertificateTypeEnumManaged  GetCertificatesIDCertificateResponseCertificateTypeEnum = "managed"
 )
 
+func (e GetCertificatesIDCertificateResponseCertificateTypeEnum) ToPointer() *GetCertificatesIDCertificateResponseCertificateTypeEnum {
+	return &e
+}
+
 func (e *GetCertificatesIDCertificateResponseCertificateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uploaded":
 		fallthrough
 	case "managed":
-		*e = GetCertificatesIDCertificateResponseCertificateTypeEnum(s)
+		*e = GetCertificatesIDCertificateResponseCertificateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCertificatesIDCertificateResponseCertificateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCertificatesIDCertificateResponseCertificateTypeEnum: %v", v)
 	}
 }
 

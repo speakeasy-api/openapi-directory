@@ -15,17 +15,21 @@ const (
 	PurchaseReservedInstancesOfferingRequestLimitPriceCurrencyCodeEnumUsd PurchaseReservedInstancesOfferingRequestLimitPriceCurrencyCodeEnum = "USD"
 )
 
+func (e PurchaseReservedInstancesOfferingRequestLimitPriceCurrencyCodeEnum) ToPointer() *PurchaseReservedInstancesOfferingRequestLimitPriceCurrencyCodeEnum {
+	return &e
+}
+
 func (e *PurchaseReservedInstancesOfferingRequestLimitPriceCurrencyCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
-		*e = PurchaseReservedInstancesOfferingRequestLimitPriceCurrencyCodeEnum(s)
+		*e = PurchaseReservedInstancesOfferingRequestLimitPriceCurrencyCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PurchaseReservedInstancesOfferingRequestLimitPriceCurrencyCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for PurchaseReservedInstancesOfferingRequestLimitPriceCurrencyCodeEnum: %v", v)
 	}
 }
 

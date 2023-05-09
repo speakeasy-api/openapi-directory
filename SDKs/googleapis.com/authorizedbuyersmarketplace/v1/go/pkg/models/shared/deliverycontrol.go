@@ -17,12 +17,16 @@ const (
 	DeliveryControlCompanionDeliveryTypeEnumDeliveryAll                      DeliveryControlCompanionDeliveryTypeEnum = "DELIVERY_ALL"
 )
 
+func (e DeliveryControlCompanionDeliveryTypeEnum) ToPointer() *DeliveryControlCompanionDeliveryTypeEnum {
+	return &e
+}
+
 func (e *DeliveryControlCompanionDeliveryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPANION_DELIVERY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DELIVERY_OPTIONAL":
@@ -30,10 +34,10 @@ func (e *DeliveryControlCompanionDeliveryTypeEnum) UnmarshalJSON(data []byte) er
 	case "DELIVERY_AT_LEAST_ONE":
 		fallthrough
 	case "DELIVERY_ALL":
-		*e = DeliveryControlCompanionDeliveryTypeEnum(s)
+		*e = DeliveryControlCompanionDeliveryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryControlCompanionDeliveryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryControlCompanionDeliveryTypeEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	DeliveryControlCreativeRotationTypeEnumRotationSequential              DeliveryControlCreativeRotationTypeEnum = "ROTATION_SEQUENTIAL"
 )
 
+func (e DeliveryControlCreativeRotationTypeEnum) ToPointer() *DeliveryControlCreativeRotationTypeEnum {
+	return &e
+}
+
 func (e *DeliveryControlCreativeRotationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_ROTATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ROTATION_EVEN":
@@ -63,10 +71,10 @@ func (e *DeliveryControlCreativeRotationTypeEnum) UnmarshalJSON(data []byte) err
 	case "ROTATION_MANUAL":
 		fallthrough
 	case "ROTATION_SEQUENTIAL":
-		*e = DeliveryControlCreativeRotationTypeEnum(s)
+		*e = DeliveryControlCreativeRotationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryControlCreativeRotationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryControlCreativeRotationTypeEnum: %v", v)
 	}
 }
 
@@ -80,12 +88,16 @@ const (
 	DeliveryControlDeliveryRateTypeEnumAsFastAsPossible            DeliveryControlDeliveryRateTypeEnum = "AS_FAST_AS_POSSIBLE"
 )
 
+func (e DeliveryControlDeliveryRateTypeEnum) ToPointer() *DeliveryControlDeliveryRateTypeEnum {
+	return &e
+}
+
 func (e *DeliveryControlDeliveryRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELIVERY_RATE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EVENLY":
@@ -93,10 +105,10 @@ func (e *DeliveryControlDeliveryRateTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FRONT_LOADED":
 		fallthrough
 	case "AS_FAST_AS_POSSIBLE":
-		*e = DeliveryControlDeliveryRateTypeEnum(s)
+		*e = DeliveryControlDeliveryRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryControlDeliveryRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryControlDeliveryRateTypeEnum: %v", v)
 	}
 }
 
@@ -112,12 +124,16 @@ const (
 	DeliveryControlRoadblockingTypeEnumCreativeSet                 DeliveryControlRoadblockingTypeEnum = "CREATIVE_SET"
 )
 
+func (e DeliveryControlRoadblockingTypeEnum) ToPointer() *DeliveryControlRoadblockingTypeEnum {
+	return &e
+}
+
 func (e *DeliveryControlRoadblockingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROADBLOCKING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ONLY_ONE":
@@ -129,10 +145,10 @@ func (e *DeliveryControlRoadblockingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ALL_ROADBLOCK":
 		fallthrough
 	case "CREATIVE_SET":
-		*e = DeliveryControlRoadblockingTypeEnum(s)
+		*e = DeliveryControlRoadblockingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryControlRoadblockingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryControlRoadblockingTypeEnum: %v", v)
 	}
 }
 

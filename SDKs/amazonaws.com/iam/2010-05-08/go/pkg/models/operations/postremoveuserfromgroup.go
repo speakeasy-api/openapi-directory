@@ -15,17 +15,21 @@ const (
 	POSTRemoveUserFromGroupActionEnumRemoveUserFromGroup POSTRemoveUserFromGroupActionEnum = "RemoveUserFromGroup"
 )
 
+func (e POSTRemoveUserFromGroupActionEnum) ToPointer() *POSTRemoveUserFromGroupActionEnum {
+	return &e
+}
+
 func (e *POSTRemoveUserFromGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RemoveUserFromGroup":
-		*e = POSTRemoveUserFromGroupActionEnum(s)
+		*e = POSTRemoveUserFromGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRemoveUserFromGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRemoveUserFromGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRemoveUserFromGroupVersionEnumTwoThousandAndTen0508 POSTRemoveUserFromGroupVersionEnum = "2010-05-08"
 )
 
+func (e POSTRemoveUserFromGroupVersionEnum) ToPointer() *POSTRemoveUserFromGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTRemoveUserFromGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTRemoveUserFromGroupVersionEnum(s)
+		*e = POSTRemoveUserFromGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRemoveUserFromGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRemoveUserFromGroupVersionEnum: %v", v)
 	}
 }
 

@@ -168,7 +168,10 @@ func (s *artifacts) CreateArtifact(ctx context.Context, request operations.Creat
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) DeleteArtifact(ctx context.Context, request operations.DeleteArtifactRequest) (*operations.DeleteArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -222,7 +225,10 @@ func (s *artifacts) DeleteArtifact(ctx context.Context, request operations.Delet
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) GetArtifactByGlobalID(ctx context.Context, request operations.GetArtifactByGlobalIDRequest) (*operations.GetArtifactByGlobalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ids/{globalId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ids/{globalId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -255,17 +261,18 @@ func (s *artifacts) GetArtifactByGlobalID(ctx context.Context, request operation
 }
 
 // GetLatestArtifact - Get latest artifact
-// Returns the latest version of the artifact in its raw form.  The `Content-Type` of the
-// response depends on the artifact type.  In most cases, this is `application/json`, but
-// for some types it may be different (for example, `PROTOBUF`).
+// Returns the latest version of the artifact in its raw form.  The `Content-Type` of the response depends on the artifact type.  In most cases, this is `application/json`, but for some types it may be different (for example, `PROTOBUF`). If the latest version of the artifact is marked as `DISABLED`, the next available non-disabled version will be used.
 //
 // This operation may fail for one of the following reasons:
 //
-// * No artifact with this `artifactId` exists (HTTP error `404`)
+// * No artifact with this `artifactId` exists or all versions are `DISABLED` (HTTP error `404`)
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) GetLatestArtifact(ctx context.Context, request operations.GetLatestArtifactRequest) (*operations.GetLatestArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -464,7 +471,10 @@ func (s *artifacts) SearchArtifacts(ctx context.Context, request operations.Sear
 // (and therefore official) version of the artifact.
 func (s *artifacts) UpdateArtifact(ctx context.Context, request operations.UpdateArtifactRequest) (*operations.UpdateArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -532,9 +542,7 @@ func (s *artifacts) UpdateArtifact(ctx context.Context, request operations.Updat
 }
 
 // UpdateArtifactState - Update artifact state
-// Updates the state of the artifact.  For example, you can use this to mark the latest
-// version of an artifact as `DEPRECATED`.  The operation changes the state of the latest
-// version of the artifact.  If multiple versions exist, only the most recent is changed.
+// Updates the state of the artifact. For example, you can use this to mark the latest version of an artifact as `DEPRECATED`. The operation changes the state of the latest version of the artifact, even if this version is `DISABLED`. If multiple versions exist, only the most recent is changed.
 //
 // The following state changes are supported:
 //
@@ -553,7 +561,10 @@ func (s *artifacts) UpdateArtifact(ctx context.Context, request operations.Updat
 // * A server error occurred (HTTP error `500`)
 func (s *artifacts) UpdateArtifactState(ctx context.Context, request operations.UpdateArtifactStateRequest) (*operations.UpdateArtifactStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/state", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}/state", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateState", "json")
 	if err != nil {

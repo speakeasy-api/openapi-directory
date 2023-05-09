@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -33,7 +34,7 @@ func newHealth(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // HealthGet - Get HTTP
 // Check the Appwrite HTTP server is up and responsive.
-func (s *health) HealthGet(ctx context.Context) (*operations.HealthGetResponse, error) {
+func (s *health) HealthGet(ctx context.Context, security operations.HealthGetSecurity) (*operations.HealthGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/health"
 
@@ -42,7 +43,7 @@ func (s *health) HealthGet(ctx context.Context) (*operations.HealthGetResponse, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -69,7 +70,7 @@ func (s *health) HealthGet(ctx context.Context) (*operations.HealthGetResponse, 
 
 // HealthGetAntiVirus - Get Anti virus
 // Check the Appwrite Anti Virus server is up and connection is successful.
-func (s *health) HealthGetAntiVirus(ctx context.Context) (*operations.HealthGetAntiVirusResponse, error) {
+func (s *health) HealthGetAntiVirus(ctx context.Context, security operations.HealthGetAntiVirusSecurity) (*operations.HealthGetAntiVirusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/health/anti-virus"
 
@@ -78,7 +79,7 @@ func (s *health) HealthGetAntiVirus(ctx context.Context) (*operations.HealthGetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -105,7 +106,7 @@ func (s *health) HealthGetAntiVirus(ctx context.Context) (*operations.HealthGetA
 
 // HealthGetCache - Get Cache
 // Check the Appwrite in-memory cache server is up and connection is successful.
-func (s *health) HealthGetCache(ctx context.Context) (*operations.HealthGetCacheResponse, error) {
+func (s *health) HealthGetCache(ctx context.Context, security operations.HealthGetCacheSecurity) (*operations.HealthGetCacheResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/health/cache"
 
@@ -114,7 +115,7 @@ func (s *health) HealthGetCache(ctx context.Context) (*operations.HealthGetCache
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -141,7 +142,7 @@ func (s *health) HealthGetCache(ctx context.Context) (*operations.HealthGetCache
 
 // HealthGetDB - Get DB
 // Check the Appwrite database server is up and connection is successful.
-func (s *health) HealthGetDB(ctx context.Context) (*operations.HealthGetDBResponse, error) {
+func (s *health) HealthGetDB(ctx context.Context, security operations.HealthGetDBSecurity) (*operations.HealthGetDBResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/health/db"
 
@@ -150,7 +151,7 @@ func (s *health) HealthGetDB(ctx context.Context) (*operations.HealthGetDBRespon
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -177,7 +178,7 @@ func (s *health) HealthGetDB(ctx context.Context) (*operations.HealthGetDBRespon
 
 // HealthGetQueueCertificates - Get Certificate Queue
 // Get the number of certificates that are waiting to be issued against [Letsencrypt](https://letsencrypt.org/) in the Appwrite internal queue server.
-func (s *health) HealthGetQueueCertificates(ctx context.Context) (*operations.HealthGetQueueCertificatesResponse, error) {
+func (s *health) HealthGetQueueCertificates(ctx context.Context, security operations.HealthGetQueueCertificatesSecurity) (*operations.HealthGetQueueCertificatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/health/queue/certificates"
 
@@ -186,7 +187,7 @@ func (s *health) HealthGetQueueCertificates(ctx context.Context) (*operations.He
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -212,7 +213,7 @@ func (s *health) HealthGetQueueCertificates(ctx context.Context) (*operations.He
 }
 
 // HealthGetQueueFunctions - Get Functions Queue
-func (s *health) HealthGetQueueFunctions(ctx context.Context) (*operations.HealthGetQueueFunctionsResponse, error) {
+func (s *health) HealthGetQueueFunctions(ctx context.Context, security operations.HealthGetQueueFunctionsSecurity) (*operations.HealthGetQueueFunctionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/health/queue/functions"
 
@@ -221,7 +222,7 @@ func (s *health) HealthGetQueueFunctions(ctx context.Context) (*operations.Healt
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -248,7 +249,7 @@ func (s *health) HealthGetQueueFunctions(ctx context.Context) (*operations.Healt
 
 // HealthGetQueueLogs - Get Logs Queue
 // Get the number of logs that are waiting to be processed in the Appwrite internal queue server.
-func (s *health) HealthGetQueueLogs(ctx context.Context) (*operations.HealthGetQueueLogsResponse, error) {
+func (s *health) HealthGetQueueLogs(ctx context.Context, security operations.HealthGetQueueLogsSecurity) (*operations.HealthGetQueueLogsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/health/queue/logs"
 
@@ -257,7 +258,7 @@ func (s *health) HealthGetQueueLogs(ctx context.Context) (*operations.HealthGetQ
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -284,7 +285,7 @@ func (s *health) HealthGetQueueLogs(ctx context.Context) (*operations.HealthGetQ
 
 // HealthGetQueueTasks - Get Tasks Queue
 // Get the number of tasks that are waiting to be processed in the Appwrite internal queue server.
-func (s *health) HealthGetQueueTasks(ctx context.Context) (*operations.HealthGetQueueTasksResponse, error) {
+func (s *health) HealthGetQueueTasks(ctx context.Context, security operations.HealthGetQueueTasksSecurity) (*operations.HealthGetQueueTasksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/health/queue/tasks"
 
@@ -293,7 +294,7 @@ func (s *health) HealthGetQueueTasks(ctx context.Context) (*operations.HealthGet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -320,7 +321,7 @@ func (s *health) HealthGetQueueTasks(ctx context.Context) (*operations.HealthGet
 
 // HealthGetQueueUsage - Get Usage Queue
 // Get the number of usage stats that are waiting to be processed in the Appwrite internal queue server.
-func (s *health) HealthGetQueueUsage(ctx context.Context) (*operations.HealthGetQueueUsageResponse, error) {
+func (s *health) HealthGetQueueUsage(ctx context.Context, security operations.HealthGetQueueUsageSecurity) (*operations.HealthGetQueueUsageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/health/queue/usage"
 
@@ -329,7 +330,7 @@ func (s *health) HealthGetQueueUsage(ctx context.Context) (*operations.HealthGet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -356,7 +357,7 @@ func (s *health) HealthGetQueueUsage(ctx context.Context) (*operations.HealthGet
 
 // HealthGetQueueWebhooks - Get Webhooks Queue
 // Get the number of webhooks that are waiting to be processed in the Appwrite internal queue server.
-func (s *health) HealthGetQueueWebhooks(ctx context.Context) (*operations.HealthGetQueueWebhooksResponse, error) {
+func (s *health) HealthGetQueueWebhooks(ctx context.Context, security operations.HealthGetQueueWebhooksSecurity) (*operations.HealthGetQueueWebhooksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/health/queue/webhooks"
 
@@ -365,7 +366,7 @@ func (s *health) HealthGetQueueWebhooks(ctx context.Context) (*operations.Health
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -392,7 +393,7 @@ func (s *health) HealthGetQueueWebhooks(ctx context.Context) (*operations.Health
 
 // HealthGetStorageLocal - Get Local Storage
 // Check the Appwrite local storage device is up and connection is successful.
-func (s *health) HealthGetStorageLocal(ctx context.Context) (*operations.HealthGetStorageLocalResponse, error) {
+func (s *health) HealthGetStorageLocal(ctx context.Context, security operations.HealthGetStorageLocalSecurity) (*operations.HealthGetStorageLocalResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/health/storage/local"
 
@@ -401,7 +402,7 @@ func (s *health) HealthGetStorageLocal(ctx context.Context) (*operations.HealthG
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -428,7 +429,7 @@ func (s *health) HealthGetStorageLocal(ctx context.Context) (*operations.HealthG
 
 // HealthGetTime - Get Time
 // Check the Appwrite server time is synced with Google remote NTP server. We use this technology to smoothly handle leap seconds with no disruptive events. The [Network Time Protocol](https://en.wikipedia.org/wiki/Network_Time_Protocol) (NTP) is used by hundreds of millions of computers and devices to synchronize their clocks over the Internet. If your computer sets its own clock, it likely uses NTP.
-func (s *health) HealthGetTime(ctx context.Context) (*operations.HealthGetTimeResponse, error) {
+func (s *health) HealthGetTime(ctx context.Context, security operations.HealthGetTimeSecurity) (*operations.HealthGetTimeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/health/time"
 
@@ -437,7 +438,7 @@ func (s *health) HealthGetTime(ctx context.Context) (*operations.HealthGetTimeRe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

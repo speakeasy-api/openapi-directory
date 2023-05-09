@@ -23,21 +23,25 @@ const (
 	DescribeSpotInstanceRequestsResultSpotInstanceRequestsInstanceInterruptionBehaviorEnumTerminate DescribeSpotInstanceRequestsResultSpotInstanceRequestsInstanceInterruptionBehaviorEnum = "terminate"
 )
 
+func (e DescribeSpotInstanceRequestsResultSpotInstanceRequestsInstanceInterruptionBehaviorEnum) ToPointer() *DescribeSpotInstanceRequestsResultSpotInstanceRequestsInstanceInterruptionBehaviorEnum {
+	return &e
+}
+
 func (e *DescribeSpotInstanceRequestsResultSpotInstanceRequestsInstanceInterruptionBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hibernate":
 		fallthrough
 	case "stop":
 		fallthrough
 	case "terminate":
-		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsInstanceInterruptionBehaviorEnum(s)
+		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsInstanceInterruptionBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsInstanceInterruptionBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsInstanceInterruptionBehaviorEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnumGp3      DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum = "gp3"
 )
 
+func (e DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum) ToPointer() *DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum {
+	return &e
+}
+
 func (e *DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -73,10 +81,10 @@ func (e *DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificati
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum(s)
+		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum: %v", v)
 	}
 }
 
@@ -749,14 +757,23 @@ const (
 	DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnumR7g12xlarge     DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum = "r7g.12xlarge"
 	DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnumR7g16xlarge     DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum = "r7g.16xlarge"
 	DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnumR7gMetal        DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum = "r7g.metal"
+	DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnumC6inMetal       DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum = "c6in.metal"
+	DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnumM6inMetal       DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum = "m6in.metal"
+	DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnumM6idnMetal      DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum = "m6idn.metal"
+	DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnumR6inMetal       DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum = "r6in.metal"
+	DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnumR6idnMetal      DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum) ToPointer() *DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum {
+	return &e
+}
+
 func (e *DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -2032,10 +2049,20 @@ func (e *DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificati
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -2097,21 +2124,25 @@ const (
 	DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationPlacementTenancyEnumHost      DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationPlacementTenancyEnum = "host"
 )
 
+func (e DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationPlacementTenancyEnum) ToPointer() *DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationPlacementTenancyEnum {
+	return &e
+}
+
 func (e *DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationPlacementTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationPlacementTenancyEnum(s)
+		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationPlacementTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationPlacementTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsLaunchSpecificationPlacementTenancyEnum: %v", v)
 	}
 }
 
@@ -2157,12 +2188,16 @@ const (
 	DescribeSpotInstanceRequestsResultSpotInstanceRequestsProductDescriptionEnumWindowsAmazonVpc   DescribeSpotInstanceRequestsResultSpotInstanceRequestsProductDescriptionEnum = "Windows (Amazon VPC)"
 )
 
+func (e DescribeSpotInstanceRequestsResultSpotInstanceRequestsProductDescriptionEnum) ToPointer() *DescribeSpotInstanceRequestsResultSpotInstanceRequestsProductDescriptionEnum {
+	return &e
+}
+
 func (e *DescribeSpotInstanceRequestsResultSpotInstanceRequestsProductDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Linux/UNIX":
 		fallthrough
 	case "Linux/UNIX (Amazon VPC)":
@@ -2170,10 +2205,10 @@ func (e *DescribeSpotInstanceRequestsResultSpotInstanceRequestsProductDescriptio
 	case "Windows":
 		fallthrough
 	case "Windows (Amazon VPC)":
-		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsProductDescriptionEnum(s)
+		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsProductDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsProductDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsProductDescriptionEnum: %v", v)
 	}
 }
 
@@ -2188,12 +2223,16 @@ const (
 	DescribeSpotInstanceRequestsResultSpotInstanceRequestsStateEnumFailed    DescribeSpotInstanceRequestsResultSpotInstanceRequestsStateEnum = "failed"
 )
 
+func (e DescribeSpotInstanceRequestsResultSpotInstanceRequestsStateEnum) ToPointer() *DescribeSpotInstanceRequestsResultSpotInstanceRequestsStateEnum {
+	return &e
+}
+
 func (e *DescribeSpotInstanceRequestsResultSpotInstanceRequestsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "active":
@@ -2203,10 +2242,10 @@ func (e *DescribeSpotInstanceRequestsResultSpotInstanceRequestsStateEnum) Unmars
 	case "cancelled":
 		fallthrough
 	case "failed":
-		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsStateEnum(s)
+		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsStateEnum: %v", v)
 	}
 }
 
@@ -2231,19 +2270,23 @@ const (
 	DescribeSpotInstanceRequestsResultSpotInstanceRequestsTypeEnumPersistent DescribeSpotInstanceRequestsResultSpotInstanceRequestsTypeEnum = "persistent"
 )
 
+func (e DescribeSpotInstanceRequestsResultSpotInstanceRequestsTypeEnum) ToPointer() *DescribeSpotInstanceRequestsResultSpotInstanceRequestsTypeEnum {
+	return &e
+}
+
 func (e *DescribeSpotInstanceRequestsResultSpotInstanceRequestsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "one-time":
 		fallthrough
 	case "persistent":
-		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsTypeEnum(s)
+		*e = DescribeSpotInstanceRequestsResultSpotInstanceRequestsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSpotInstanceRequestsResultSpotInstanceRequestsTypeEnum: %v", v)
 	}
 }
 

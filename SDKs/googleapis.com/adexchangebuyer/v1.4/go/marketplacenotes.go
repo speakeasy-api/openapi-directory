@@ -34,7 +34,10 @@ func newMarketplacenotes(defaultClient, securityClient HTTPClient, serverURL, la
 // AdexchangebuyerMarketplacenotesInsert - Add notes to the proposal
 func (s *marketplacenotes) AdexchangebuyerMarketplacenotesInsert(ctx context.Context, request operations.AdexchangebuyerMarketplacenotesInsertRequest, security operations.AdexchangebuyerMarketplacenotesInsertSecurity) (*operations.AdexchangebuyerMarketplacenotesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/notes/insert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/notes/insert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddOrderNotesRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *marketplacenotes) AdexchangebuyerMarketplacenotesInsert(ctx context.Con
 // AdexchangebuyerMarketplacenotesList - Get all the notes associated with a proposal
 func (s *marketplacenotes) AdexchangebuyerMarketplacenotesList(ctx context.Context, request operations.AdexchangebuyerMarketplacenotesListRequest, security operations.AdexchangebuyerMarketplacenotesListSecurity) (*operations.AdexchangebuyerMarketplacenotesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/notes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/notes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -24,12 +24,16 @@ const (
 	SortOrderEnumPriceFromD       SortOrderEnum = "PRICE_FROM_D"
 )
 
+func (e SortOrderEnum) ToPointer() *SortOrderEnum {
+	return &e
+}
+
 func (e *SortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TOP_SELLERS":
 		fallthrough
 	case "REVIEW_AVG_RATING_A":
@@ -39,9 +43,9 @@ func (e *SortOrderEnum) UnmarshalJSON(data []byte) error {
 	case "PRICE_FROM_A":
 		fallthrough
 	case "PRICE_FROM_D":
-		*e = SortOrderEnum(s)
+		*e = SortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for SortOrderEnum: %v", v)
 	}
 }

@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GlobalConfigSecurity struct {
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
+}
+
 type GlobalConfigResponse struct {
 	ContentType string
 	// Successful operation

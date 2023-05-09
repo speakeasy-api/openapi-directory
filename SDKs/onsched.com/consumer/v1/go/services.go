@@ -85,7 +85,10 @@ func (s *services) GetConsumerV1Services(ctx context.Context, request operations
 // <p>Use this endpoint to return a <b>Service Allocation</b> object. A valid <b>serviceAllocation id</b> is required. Find service allocation id's by using the <i>GET/consumer​/v1​/services​/{id}​/allocations</i> endpoint.</p>
 func (s *services) GetConsumerV1ServicesAllocationsID(ctx context.Context, request operations.GetConsumerV1ServicesAllocationsIDRequest) (*operations.GetConsumerV1ServicesAllocationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/services/allocations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/consumer/v1/services/allocations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +133,10 @@ func (s *services) GetConsumerV1ServicesAllocationsID(ctx context.Context, reque
 // <p>Use this endpoint to return a <b>Service</b> object. A valid <b>service id</b> is required. Find service id's by using the <i>GET /consumer/v1/services</i> endpoint.</p>
 func (s *services) GetConsumerV1ServicesID(ctx context.Context, request operations.GetConsumerV1ServicesIDRequest) (*operations.GetConsumerV1ServicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/services/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/consumer/v1/services/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -175,7 +181,10 @@ func (s *services) GetConsumerV1ServicesID(ctx context.Context, request operatio
 // <p>Use this endpoint to return a <b>List of Service Allocations</b> associated with the requested service. A valid <b>service id</b> is required. Allocations are used for Event type services/bookings. Retrieve all allocations for a location by passing in zero as the service id. Otherwise, to get allocations for a specific service supply the service id. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further. For more information: <a href="https://docs.onsched.com/reference/post_setup-v1-services-id-allocations">Create Service Allocations</a></p>
 func (s *services) GetConsumerV1ServicesIDAllocations(ctx context.Context, request operations.GetConsumerV1ServicesIDAllocationsRequest) (*operations.GetConsumerV1ServicesIDAllocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/services/{id}/allocations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/consumer/v1/services/{id}/allocations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,7 +238,10 @@ func (s *services) GetConsumerV1ServicesIDAllocations(ctx context.Context, reque
 // <p>Use this endpoint to return a list of <b>Resources that provide the Service requested</b>. A valid <b>service id</b> is required. The results are returned in pages. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
 func (s *services) GetConsumerV1ServicesIDResources(ctx context.Context, request operations.GetConsumerV1ServicesIDResourcesRequest) (*operations.GetConsumerV1ServicesIDResourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/services/{id}/resources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/consumer/v1/services/{id}/resources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

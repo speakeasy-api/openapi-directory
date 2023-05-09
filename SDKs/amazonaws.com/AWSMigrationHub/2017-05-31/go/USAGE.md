@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,28 +17,26 @@ func main() {
         }),
     )
 
-    req := operations.AssociateCreatedArtifactRequest{
+    ctx := context.Background()
+    res, err := s.AssociateCreatedArtifact(ctx, operations.AssociateCreatedArtifactRequest{
         AssociateCreatedArtifactRequest: shared.AssociateCreatedArtifactRequest{
             CreatedArtifact: shared.CreatedArtifact{
-                Description: "corrupti",
-                Name: "provident",
+                Description: sdk.String("corrupti"),
+                Name: "Kelvin Sporer",
             },
-            DryRun: false,
-            MigrationTaskName: "distinctio",
-            ProgressUpdateStream: "quibusdam",
+            DryRun: sdk.Bool(false),
+            MigrationTaskName: "corrupti",
+            ProgressUpdateStream: "illum",
         },
-        XAmzAlgorithm: "unde",
-        XAmzContentSha256: "nulla",
-        XAmzCredential: "corrupti",
-        XAmzDate: "illum",
-        XAmzSecurityToken: "vel",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "deserunt",
-        XAmzTarget: "AWSMigrationHub.AssociateCreatedArtifact",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateCreatedArtifact(ctx, req)
+        XAmzAlgorithm: sdk.String("vel"),
+        XAmzContentSha256: sdk.String("error"),
+        XAmzCredential: sdk.String("deserunt"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("iure"),
+        XAmzSignature: sdk.String("magnam"),
+        XAmzSignedHeaders: sdk.String("debitis"),
+        XAmzTarget: operations.AssociateCreatedArtifactXAmzTargetEnumAwsMigrationHubAssociateCreatedArtifact,
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -15,20 +15,24 @@ const (
 	BackupStatusEnumAvailable BackupStatusEnum = "AVAILABLE"
 )
 
+func (e BackupStatusEnum) ToPointer() *BackupStatusEnum {
+	return &e
+}
+
 func (e *BackupStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "DELETED":
 		fallthrough
 	case "AVAILABLE":
-		*e = BackupStatusEnum(s)
+		*e = BackupStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupStatusEnum: %v", v)
 	}
 }

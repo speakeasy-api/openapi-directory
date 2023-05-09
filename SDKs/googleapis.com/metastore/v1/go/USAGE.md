@@ -2,58 +2,57 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MetastoreProjectsLocationsFederationsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.MetastoreProjectsLocationsFederationsCreate(ctx, operations.MetastoreProjectsLocationsFederationsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         FederationInput: &shared.FederationInput{
             BackendMetastores: map[string]shared.BackendMetastore{
                 "distinctio": shared.BackendMetastore{
-                    MetastoreType: "DATAPROC_METASTORE",
-                    Name: "unde",
+                    MetastoreType: shared.BackendMetastoreMetastoreTypeEnumDataprocMetastore.ToPointer(),
+                    Name: sdk.String("Ismael Little"),
                 },
-                "nulla": shared.BackendMetastore{
-                    MetastoreType: "DATAPROC_METASTORE",
-                    Name: "illum",
+                "error": shared.BackendMetastore{
+                    MetastoreType: shared.BackendMetastoreMetastoreTypeEnumDataprocMetastore.ToPointer(),
+                    Name: sdk.String("Willie Gulgowski DVM"),
                 },
-                "vel": shared.BackendMetastore{
-                    MetastoreType: "DATAPROC_METASTORE",
-                    Name: "deserunt",
+                "tempora": shared.BackendMetastore{
+                    MetastoreType: shared.BackendMetastoreMetastoreTypeEnumMetastoreTypeUnspecified.ToPointer(),
+                    Name: sdk.String("Alexandra Schulist"),
                 },
             },
             Labels: map[string]string{
-                "iure": "magnam",
-                "debitis": "ipsa",
+                "nisi": "recusandae",
+                "temporibus": "ab",
+                "quis": "veritatis",
             },
-            Name: "delectus",
-            Version: "tempora",
+            Name: sdk.String("Christopher Hills"),
+            Version: sdk.String("quo"),
         },
-        AccessToken: "suscipit",
-        Alt: "media",
-        Callback: "minus",
-        FederationID: "placeat",
-        Fields: "voluptatum",
-        Key: "iusto",
-        OauthToken: "excepturi",
-        Parent: "nisi",
-        PrettyPrint: false,
-        QuotaUser: "recusandae",
-        RequestID: "temporibus",
-        UploadType: "ab",
-        UploadProtocol: "quis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.MetastoreProjectsLocationsFederationsCreate(ctx, req, operations.MetastoreProjectsLocationsFederationsCreateSecurity{
+        AccessToken: sdk.String("odit"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("at"),
+        FederationID: sdk.String("maiores"),
+        Fields: sdk.String("molestiae"),
+        Key: sdk.String("quod"),
+        OauthToken: sdk.String("quod"),
+        Parent: "esse",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("totam"),
+        RequestID: sdk.String("porro"),
+        UploadType: sdk.String("dolorum"),
+        UploadProtocol: sdk.String("dicta"),
+    }, operations.MetastoreProjectsLocationsFederationsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

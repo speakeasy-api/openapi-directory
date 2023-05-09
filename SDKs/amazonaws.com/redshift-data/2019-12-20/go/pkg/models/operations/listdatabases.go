@@ -16,17 +16,21 @@ const (
 	ListDatabasesXAmzTargetEnumRedshiftDataListDatabases ListDatabasesXAmzTargetEnum = "RedshiftData.ListDatabases"
 )
 
+func (e ListDatabasesXAmzTargetEnum) ToPointer() *ListDatabasesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListDatabasesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftData.ListDatabases":
-		*e = ListDatabasesXAmzTargetEnum(s)
+		*e = ListDatabasesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDatabasesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDatabasesXAmzTargetEnum: %v", v)
 	}
 }
 

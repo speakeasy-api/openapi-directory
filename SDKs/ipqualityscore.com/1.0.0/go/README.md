@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ipqualityscore.com/1.0.0/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.EmailValidationRequest{
+    ctx := context.Background()
+    res, err := s.EmailValidation.EmailValidation(ctx, operations.EmailValidationRequest{
         UserEmailHere: "example@example.com",
         YourAPIKeyHere: "asd24#sdfs322#",
-    }
-
-    ctx := context.Background()
-    res, err := s.EmailValidation.EmailValidation(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,17 +43,17 @@ func main() {
 ## Available Resources and Operations
 
 
-### EmailValidation
+### [EmailValidation](docs/emailvalidation/README.md)
 
-* `EmailValidation` - Email Validation
+* [EmailValidation](docs/emailvalidation/README.md#emailvalidation) - Email Validation
 
-### MaliciousURLScanner
+### [MaliciousURLScanner](docs/maliciousurlscanner/README.md)
 
-* `MaliciousURLScanner` - Malicious URL Scanner
+* [MaliciousURLScanner](docs/maliciousurlscanner/README.md#maliciousurlscanner) - Malicious URL Scanner
 
-### PhoneValidation
+### [PhoneValidation](docs/phonevalidation/README.md)
 
-* `PhoneValidation` - Phone Validation
+* [PhoneValidation](docs/phonevalidation/README.md#phonevalidation) - Phone Validation
 <!-- End SDK Available Operations -->
 
 ### Maturity

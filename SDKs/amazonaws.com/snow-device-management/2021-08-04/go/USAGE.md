@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,19 +16,17 @@ func main() {
         }),
     )
 
-    req := operations.CancelTaskRequest{
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "provident",
-        XAmzCredential: "distinctio",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "unde",
-        XAmzSignature: "nulla",
-        XAmzSignedHeaders: "corrupti",
-        TaskID: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.CancelTask(ctx, req)
+    res, err := s.CancelTask(ctx, operations.CancelTaskRequest{
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("provident"),
+        XAmzCredential: sdk.String("distinctio"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("unde"),
+        XAmzSignature: sdk.String("nulla"),
+        XAmzSignedHeaders: sdk.String("corrupti"),
+        TaskID: "illum",
+    })
     if err != nil {
         log.Fatal(err)
     }

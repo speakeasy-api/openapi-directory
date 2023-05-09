@@ -15,19 +15,23 @@ const (
 	AllocateAddressResultDomainEnumStandard AllocateAddressResultDomainEnum = "standard"
 )
 
+func (e AllocateAddressResultDomainEnum) ToPointer() *AllocateAddressResultDomainEnum {
+	return &e
+}
+
 func (e *AllocateAddressResultDomainEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "standard":
-		*e = AllocateAddressResultDomainEnum(s)
+		*e = AllocateAddressResultDomainEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllocateAddressResultDomainEnum: %s", s)
+		return fmt.Errorf("invalid value for AllocateAddressResultDomainEnum: %v", v)
 	}
 }
 

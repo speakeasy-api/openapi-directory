@@ -15,17 +15,21 @@ const (
 	POSTUpdateSecurityGroupRuleDescriptionsEgressActionEnumUpdateSecurityGroupRuleDescriptionsEgress POSTUpdateSecurityGroupRuleDescriptionsEgressActionEnum = "UpdateSecurityGroupRuleDescriptionsEgress"
 )
 
+func (e POSTUpdateSecurityGroupRuleDescriptionsEgressActionEnum) ToPointer() *POSTUpdateSecurityGroupRuleDescriptionsEgressActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateSecurityGroupRuleDescriptionsEgressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateSecurityGroupRuleDescriptionsEgress":
-		*e = POSTUpdateSecurityGroupRuleDescriptionsEgressActionEnum(s)
+		*e = POSTUpdateSecurityGroupRuleDescriptionsEgressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateSecurityGroupRuleDescriptionsEgressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateSecurityGroupRuleDescriptionsEgressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateSecurityGroupRuleDescriptionsEgressVersionEnumTwoThousandAndSixteen1115 POSTUpdateSecurityGroupRuleDescriptionsEgressVersionEnum = "2016-11-15"
 )
 
+func (e POSTUpdateSecurityGroupRuleDescriptionsEgressVersionEnum) ToPointer() *POSTUpdateSecurityGroupRuleDescriptionsEgressVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateSecurityGroupRuleDescriptionsEgressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTUpdateSecurityGroupRuleDescriptionsEgressVersionEnum(s)
+		*e = POSTUpdateSecurityGroupRuleDescriptionsEgressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateSecurityGroupRuleDescriptionsEgressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateSecurityGroupRuleDescriptionsEgressVersionEnum: %v", v)
 	}
 }
 

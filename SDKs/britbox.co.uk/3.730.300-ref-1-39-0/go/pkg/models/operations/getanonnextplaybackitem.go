@@ -23,19 +23,23 @@ const (
 	GetAnonNextPlaybackItemExpandEnumAncestors GetAnonNextPlaybackItemExpandEnum = "ancestors"
 )
 
+func (e GetAnonNextPlaybackItemExpandEnum) ToPointer() *GetAnonNextPlaybackItemExpandEnum {
+	return &e
+}
+
 func (e *GetAnonNextPlaybackItemExpandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "parent":
 		fallthrough
 	case "ancestors":
-		*e = GetAnonNextPlaybackItemExpandEnum(s)
+		*e = GetAnonNextPlaybackItemExpandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAnonNextPlaybackItemExpandEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAnonNextPlaybackItemExpandEnum: %v", v)
 	}
 }
 

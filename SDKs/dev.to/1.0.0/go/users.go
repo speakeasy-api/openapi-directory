@@ -38,7 +38,10 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // It supports pagination, each page will contain `30` users by default.
 func (s *users) GetOrgUsers(ctx context.Context, request operations.GetOrgUsersRequest) (*operations.GetOrgUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -91,7 +94,10 @@ func (s *users) GetOrgUsers(ctx context.Context, request operations.GetOrgUsersR
 // For complete documentation, see the v0 API docs: https://developers.forem.com/api/v0#tag/users/operation/getUser
 func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/users/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/users/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -464,7 +470,10 @@ func (s *users) PostAdminUsersCreate(ctx context.Context, request shared.UserInv
 // in the UI, so if you want them to know about this, you must notify them.
 func (s *users) SuspendUser(ctx context.Context, request operations.SuspendUserRequest) (*operations.SuspendUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/users/{id}/suspend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/users/{id}/suspend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -516,7 +525,10 @@ func (s *users) SuspendUser(ctx context.Context, request operations.SuspendUserR
 // request is completed on the server.
 func (s *users) UnpublishUser(ctx context.Context, request operations.UnpublishUserRequest) (*operations.UnpublishUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/users/{id}/unpublish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/users/{id}/unpublish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

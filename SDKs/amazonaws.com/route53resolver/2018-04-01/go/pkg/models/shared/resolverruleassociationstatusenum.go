@@ -17,12 +17,16 @@ const (
 	ResolverRuleAssociationStatusEnumOverridden ResolverRuleAssociationStatusEnum = "OVERRIDDEN"
 )
 
+func (e ResolverRuleAssociationStatusEnum) ToPointer() *ResolverRuleAssociationStatusEnum {
+	return &e
+}
+
 func (e *ResolverRuleAssociationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "COMPLETE":
@@ -32,9 +36,9 @@ func (e *ResolverRuleAssociationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "OVERRIDDEN":
-		*e = ResolverRuleAssociationStatusEnum(s)
+		*e = ResolverRuleAssociationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResolverRuleAssociationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ResolverRuleAssociationStatusEnum: %v", v)
 	}
 }

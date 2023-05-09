@@ -31,12 +31,16 @@ const (
 	ProjectTemplateBaseColorEnumLightWarmGray ProjectTemplateBaseColorEnum = "light-warm-gray"
 )
 
+func (e ProjectTemplateBaseColorEnum) ToPointer() *ProjectTemplateBaseColorEnum {
+	return &e
+}
+
 func (e *ProjectTemplateBaseColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dark-pink":
 		fallthrough
 	case "dark-green":
@@ -72,10 +76,10 @@ func (e *ProjectTemplateBaseColorEnum) UnmarshalJSON(data []byte) error {
 	case "light-purple":
 		fallthrough
 	case "light-warm-gray":
-		*e = ProjectTemplateBaseColorEnum(s)
+		*e = ProjectTemplateBaseColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectTemplateBaseColorEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectTemplateBaseColorEnum: %v", v)
 	}
 }
 

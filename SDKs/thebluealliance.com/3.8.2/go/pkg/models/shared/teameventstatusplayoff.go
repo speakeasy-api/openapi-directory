@@ -18,12 +18,16 @@ const (
 	TeamEventStatusPlayoffLevelEnumF  TeamEventStatusPlayoffLevelEnum = "f"
 )
 
+func (e TeamEventStatusPlayoffLevelEnum) ToPointer() *TeamEventStatusPlayoffLevelEnum {
+	return &e
+}
+
 func (e *TeamEventStatusPlayoffLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "qm":
 		fallthrough
 	case "ef":
@@ -33,10 +37,10 @@ func (e *TeamEventStatusPlayoffLevelEnum) UnmarshalJSON(data []byte) error {
 	case "sf":
 		fallthrough
 	case "f":
-		*e = TeamEventStatusPlayoffLevelEnum(s)
+		*e = TeamEventStatusPlayoffLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamEventStatusPlayoffLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamEventStatusPlayoffLevelEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	TeamEventStatusPlayoffStatusEnumPlaying    TeamEventStatusPlayoffStatusEnum = "playing"
 )
 
+func (e TeamEventStatusPlayoffStatusEnum) ToPointer() *TeamEventStatusPlayoffStatusEnum {
+	return &e
+}
+
 func (e *TeamEventStatusPlayoffStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "won":
 		fallthrough
 	case "eliminated":
 		fallthrough
 	case "playing":
-		*e = TeamEventStatusPlayoffStatusEnum(s)
+		*e = TeamEventStatusPlayoffStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamEventStatusPlayoffStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamEventStatusPlayoffStatusEnum: %v", v)
 	}
 }
 

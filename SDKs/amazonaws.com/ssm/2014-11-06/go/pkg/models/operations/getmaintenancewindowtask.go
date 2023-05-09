@@ -16,17 +16,21 @@ const (
 	GetMaintenanceWindowTaskXAmzTargetEnumAmazonSsmGetMaintenanceWindowTask GetMaintenanceWindowTaskXAmzTargetEnum = "AmazonSSM.GetMaintenanceWindowTask"
 )
 
+func (e GetMaintenanceWindowTaskXAmzTargetEnum) ToPointer() *GetMaintenanceWindowTaskXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetMaintenanceWindowTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.GetMaintenanceWindowTask":
-		*e = GetMaintenanceWindowTaskXAmzTargetEnum(s)
+		*e = GetMaintenanceWindowTaskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMaintenanceWindowTaskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMaintenanceWindowTaskXAmzTargetEnum: %v", v)
 	}
 }
 

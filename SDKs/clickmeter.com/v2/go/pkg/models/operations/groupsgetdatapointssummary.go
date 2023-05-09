@@ -17,19 +17,23 @@ const (
 	GroupsGetDatapointsSummarySortDirectionEnumDesc GroupsGetDatapointsSummarySortDirectionEnum = "desc"
 )
 
+func (e GroupsGetDatapointsSummarySortDirectionEnum) ToPointer() *GroupsGetDatapointsSummarySortDirectionEnum {
+	return &e
+}
+
 func (e *GroupsGetDatapointsSummarySortDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GroupsGetDatapointsSummarySortDirectionEnum(s)
+		*e = GroupsGetDatapointsSummarySortDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsGetDatapointsSummarySortDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsGetDatapointsSummarySortDirectionEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	GroupsGetDatapointsSummaryStatusEnumActive  GroupsGetDatapointsSummaryStatusEnum = "active"
 )
 
+func (e GroupsGetDatapointsSummaryStatusEnum) ToPointer() *GroupsGetDatapointsSummaryStatusEnum {
+	return &e
+}
+
 func (e *GroupsGetDatapointsSummaryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "active":
-		*e = GroupsGetDatapointsSummaryStatusEnum(s)
+		*e = GroupsGetDatapointsSummaryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsGetDatapointsSummaryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsGetDatapointsSummaryStatusEnum: %v", v)
 	}
 }
 
@@ -78,12 +86,16 @@ const (
 	GroupsGetDatapointsSummaryTimeFrameEnumCustom        GroupsGetDatapointsSummaryTimeFrameEnum = "custom"
 )
 
+func (e GroupsGetDatapointsSummaryTimeFrameEnum) ToPointer() *GroupsGetDatapointsSummaryTimeFrameEnum {
+	return &e
+}
+
 func (e *GroupsGetDatapointsSummaryTimeFrameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "today":
 		fallthrough
 	case "yesterday":
@@ -113,10 +125,10 @@ func (e *GroupsGetDatapointsSummaryTimeFrameEnum) UnmarshalJSON(data []byte) err
 	case "beginning":
 		fallthrough
 	case "custom":
-		*e = GroupsGetDatapointsSummaryTimeFrameEnum(s)
+		*e = GroupsGetDatapointsSummaryTimeFrameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsGetDatapointsSummaryTimeFrameEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsGetDatapointsSummaryTimeFrameEnum: %v", v)
 	}
 }
 
@@ -128,19 +140,23 @@ const (
 	GroupsGetDatapointsSummaryTypeEnumTl GroupsGetDatapointsSummaryTypeEnum = "tl"
 )
 
+func (e GroupsGetDatapointsSummaryTypeEnum) ToPointer() *GroupsGetDatapointsSummaryTypeEnum {
+	return &e
+}
+
 func (e *GroupsGetDatapointsSummaryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tp":
 		fallthrough
 	case "tl":
-		*e = GroupsGetDatapointsSummaryTypeEnum(s)
+		*e = GroupsGetDatapointsSummaryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsGetDatapointsSummaryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsGetDatapointsSummaryTypeEnum: %v", v)
 	}
 }
 

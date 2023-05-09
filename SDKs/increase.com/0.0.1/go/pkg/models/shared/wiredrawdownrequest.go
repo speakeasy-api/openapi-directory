@@ -17,12 +17,16 @@ const (
 	WireDrawdownRequestStatusEnumRefused           WireDrawdownRequestStatusEnum = "refused"
 )
 
+func (e WireDrawdownRequestStatusEnum) ToPointer() *WireDrawdownRequestStatusEnum {
+	return &e
+}
+
 func (e *WireDrawdownRequestStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending_submission":
 		fallthrough
 	case "pending_response":
@@ -30,10 +34,10 @@ func (e *WireDrawdownRequestStatusEnum) UnmarshalJSON(data []byte) error {
 	case "fulfilled":
 		fallthrough
 	case "refused":
-		*e = WireDrawdownRequestStatusEnum(s)
+		*e = WireDrawdownRequestStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WireDrawdownRequestStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WireDrawdownRequestStatusEnum: %v", v)
 	}
 }
 
@@ -50,17 +54,21 @@ const (
 	WireDrawdownRequestTypeEnumWireDrawdownRequest WireDrawdownRequestTypeEnum = "wire_drawdown_request"
 )
 
+func (e WireDrawdownRequestTypeEnum) ToPointer() *WireDrawdownRequestTypeEnum {
+	return &e
+}
+
 func (e *WireDrawdownRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "wire_drawdown_request":
-		*e = WireDrawdownRequestTypeEnum(s)
+		*e = WireDrawdownRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WireDrawdownRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WireDrawdownRequestTypeEnum: %v", v)
 	}
 }
 

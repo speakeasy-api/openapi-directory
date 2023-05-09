@@ -12,21 +12,25 @@ import (
 type ScheduledTransactionSummaryFlagColorEnum string
 
 const (
-	ScheduledTransactionSummaryFlagColorEnumRed    ScheduledTransactionSummaryFlagColorEnum = "red"
-	ScheduledTransactionSummaryFlagColorEnumOrange ScheduledTransactionSummaryFlagColorEnum = "orange"
-	ScheduledTransactionSummaryFlagColorEnumYellow ScheduledTransactionSummaryFlagColorEnum = "yellow"
-	ScheduledTransactionSummaryFlagColorEnumGreen  ScheduledTransactionSummaryFlagColorEnum = "green"
-	ScheduledTransactionSummaryFlagColorEnumBlue   ScheduledTransactionSummaryFlagColorEnum = "blue"
-	ScheduledTransactionSummaryFlagColorEnumPurple ScheduledTransactionSummaryFlagColorEnum = "purple"
-	ScheduledTransactionSummaryFlagColorEnumNull   ScheduledTransactionSummaryFlagColorEnum = "null"
+	ScheduledTransactionSummaryFlagColorEnumRed                    ScheduledTransactionSummaryFlagColorEnum = "red"
+	ScheduledTransactionSummaryFlagColorEnumOrange                 ScheduledTransactionSummaryFlagColorEnum = "orange"
+	ScheduledTransactionSummaryFlagColorEnumYellow                 ScheduledTransactionSummaryFlagColorEnum = "yellow"
+	ScheduledTransactionSummaryFlagColorEnumGreen                  ScheduledTransactionSummaryFlagColorEnum = "green"
+	ScheduledTransactionSummaryFlagColorEnumBlue                   ScheduledTransactionSummaryFlagColorEnum = "blue"
+	ScheduledTransactionSummaryFlagColorEnumPurple                 ScheduledTransactionSummaryFlagColorEnum = "purple"
+	ScheduledTransactionSummaryFlagColorEnumLessThanNilGreaterThan ScheduledTransactionSummaryFlagColorEnum = "<nil>"
 )
 
+func (e ScheduledTransactionSummaryFlagColorEnum) ToPointer() *ScheduledTransactionSummaryFlagColorEnum {
+	return &e
+}
+
 func (e *ScheduledTransactionSummaryFlagColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "red":
 		fallthrough
 	case "orange":
@@ -39,11 +43,11 @@ func (e *ScheduledTransactionSummaryFlagColorEnum) UnmarshalJSON(data []byte) er
 		fallthrough
 	case "purple":
 		fallthrough
-	case "null":
-		*e = ScheduledTransactionSummaryFlagColorEnum(s)
+	case "<nil>":
+		*e = ScheduledTransactionSummaryFlagColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScheduledTransactionSummaryFlagColorEnum: %s", s)
+		return fmt.Errorf("invalid value for ScheduledTransactionSummaryFlagColorEnum: %v", v)
 	}
 }
 
@@ -65,12 +69,16 @@ const (
 	ScheduledTransactionSummaryFrequencyEnumEveryOtherYear  ScheduledTransactionSummaryFrequencyEnum = "everyOtherYear"
 )
 
+func (e ScheduledTransactionSummaryFrequencyEnum) ToPointer() *ScheduledTransactionSummaryFrequencyEnum {
+	return &e
+}
+
 func (e *ScheduledTransactionSummaryFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "never":
 		fallthrough
 	case "daily":
@@ -96,10 +104,10 @@ func (e *ScheduledTransactionSummaryFrequencyEnum) UnmarshalJSON(data []byte) er
 	case "yearly":
 		fallthrough
 	case "everyOtherYear":
-		*e = ScheduledTransactionSummaryFrequencyEnum(s)
+		*e = ScheduledTransactionSummaryFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScheduledTransactionSummaryFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for ScheduledTransactionSummaryFrequencyEnum: %v", v)
 	}
 }
 

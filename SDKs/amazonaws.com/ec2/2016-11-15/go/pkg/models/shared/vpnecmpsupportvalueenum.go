@@ -14,18 +14,22 @@ const (
 	VpnEcmpSupportValueEnumDisable VpnEcmpSupportValueEnum = "disable"
 )
 
+func (e VpnEcmpSupportValueEnum) ToPointer() *VpnEcmpSupportValueEnum {
+	return &e
+}
+
 func (e *VpnEcmpSupportValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = VpnEcmpSupportValueEnum(s)
+		*e = VpnEcmpSupportValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VpnEcmpSupportValueEnum: %s", s)
+		return fmt.Errorf("invalid value for VpnEcmpSupportValueEnum: %v", v)
 	}
 }

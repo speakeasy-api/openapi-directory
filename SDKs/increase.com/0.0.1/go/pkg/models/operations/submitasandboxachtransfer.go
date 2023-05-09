@@ -13,23 +13,27 @@ type SubmitASandboxAchTransferRequest struct {
 	AchTransferID string `pathParam:"style=simple,explode=false,name=ach_transfer_id"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnum = "429"
+	SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON13TypeEnumRateLimitedError SubmitASandboxAchTransferDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON13TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON13TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type SubmitASandboxAchTransferDefaultApplicationJSON13 struct {
 	Type       SubmitASandboxAchTransferDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnum = "403"
+	SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON12TypeEnumPrivateFeatureError SubmitASandboxAchTransferDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON12TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON12TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type SubmitASandboxAchTransferDefaultApplicationJSON12 struct {
 	Type   SubmitASandboxAchTransferDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnum = "404"
+	SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON11TypeEnumObjectNotFoundError SubmitASandboxAchTransferDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON11TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON11TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type SubmitASandboxAchTransferDefaultApplicationJSON11 struct {
 	Type   SubmitASandboxAchTransferDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnumFourHundred SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnum = "400"
+	SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnumFourHundred SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON10TypeEnumMalformedRequestError SubmitASandboxAchTransferDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON10TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON10TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type SubmitASandboxAchTransferDefaultApplicationJSON10 struct {
 	Type   SubmitASandboxAchTransferDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnumFourHundred SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnum = "400"
+	SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnumFourHundred SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON9TypeEnumInvalidParametersError SubmitASandboxAchTransferDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON9TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON9TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type SubmitASandboxAchTransferDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                   `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                   `json:"errors"`
 	Status SubmitASandboxAchTransferDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                     `json:"title"`
 	Type   SubmitASandboxAchTransferDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnum = "409"
+	SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON8TypeEnumInvalidOperationError SubmitASandboxAchTransferDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON8TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON8TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type SubmitASandboxAchTransferDefaultApplicationJSON8 struct {
 	Type   SubmitASandboxAchTransferDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnum = "401"
+	SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON7TypeEnumInvalidAPIKeyError SubmitASandboxAchTransferDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON7TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON7TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type SubmitASandboxAchTransferDefaultApplicationJSON7 struct {
 	Type   SubmitASandboxAchTransferDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnumFiveHundred SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnum = "500"
+	SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnumFiveHundred SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON6TypeEnumInternalServerError SubmitASandboxAchTransferDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON6TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON6TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type SubmitASandboxAchTransferDefaultApplicationJSON6 struct {
 	Type   SubmitASandboxAchTransferDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnum = "403"
+	SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON5TypeEnumInsufficientPermissionsError SubmitASandboxAchTransferDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON5TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON5TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type SubmitASandboxAchTransferDefaultApplicationJSON5 struct {
 	Type   SubmitASandboxAchTransferDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnum = "422"
+	SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError SubmitASandboxAchTransferDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON4TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON4TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type SubmitASandboxAchTransferDefaultApplicationJSON4 struct {
 	Type   SubmitASandboxAchTransferDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnum = "409"
+	SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON3TypeEnumIdempotencyConflictError SubmitASandboxAchTransferDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON3TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON3TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type SubmitASandboxAchTransferDefaultApplicationJSON3 struct {
 	Type   SubmitASandboxAchTransferDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnum = "403"
+	SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON2TypeEnumEnvironmentMismatchError SubmitASandboxAchTransferDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON2TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON2TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type SubmitASandboxAchTransferDefaultApplicationJSON2 struct {
 	Type   SubmitASandboxAchTransferDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnum string
+type SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnum int64
 
 const (
-	SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnum = "404"
+	SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	SubmitASandboxAchTransferDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError SubmitASandboxAchTransferDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e SubmitASandboxAchTransferDefaultApplicationJSON1TypeEnum) ToPointer() *SubmitASandboxAchTransferDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxAchTransferDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = SubmitASandboxAchTransferDefaultApplicationJSON1TypeEnum(s)
+		*e = SubmitASandboxAchTransferDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxAchTransferDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

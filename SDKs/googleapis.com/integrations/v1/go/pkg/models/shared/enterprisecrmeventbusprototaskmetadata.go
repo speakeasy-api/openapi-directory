@@ -22,12 +22,16 @@ const (
 	EnterpriseCrmEventbusProtoTaskMetadataCategoryEnumTaskRecommendations EnterpriseCrmEventbusProtoTaskMetadataCategoryEnum = "TASK_RECOMMENDATIONS"
 )
 
+func (e EnterpriseCrmEventbusProtoTaskMetadataCategoryEnum) ToPointer() *EnterpriseCrmEventbusProtoTaskMetadataCategoryEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoTaskMetadataCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_CATEGORY":
 		fallthrough
 	case "CUSTOM":
@@ -47,10 +51,10 @@ func (e *EnterpriseCrmEventbusProtoTaskMetadataCategoryEnum) UnmarshalJSON(data 
 	case "CUSTOM_TASK_TEMPLATE":
 		fallthrough
 	case "TASK_RECOMMENDATIONS":
-		*e = EnterpriseCrmEventbusProtoTaskMetadataCategoryEnum(s)
+		*e = EnterpriseCrmEventbusProtoTaskMetadataCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskMetadataCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskMetadataCategoryEnum: %v", v)
 	}
 }
 
@@ -65,12 +69,16 @@ const (
 	EnterpriseCrmEventbusProtoTaskMetadataDefaultJSONValidationOptionEnumPrePostExecution                EnterpriseCrmEventbusProtoTaskMetadataDefaultJSONValidationOptionEnum = "PRE_POST_EXECUTION"
 )
 
+func (e EnterpriseCrmEventbusProtoTaskMetadataDefaultJSONValidationOptionEnum) ToPointer() *EnterpriseCrmEventbusProtoTaskMetadataDefaultJSONValidationOptionEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoTaskMetadataDefaultJSONValidationOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_JSON_VALIDATION_OPTION":
 		fallthrough
 	case "SKIP":
@@ -80,36 +88,76 @@ func (e *EnterpriseCrmEventbusProtoTaskMetadataDefaultJSONValidationOptionEnum) 
 	case "POST_EXECUTION":
 		fallthrough
 	case "PRE_POST_EXECUTION":
-		*e = EnterpriseCrmEventbusProtoTaskMetadataDefaultJSONValidationOptionEnum(s)
+		*e = EnterpriseCrmEventbusProtoTaskMetadataDefaultJSONValidationOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskMetadataDefaultJSONValidationOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskMetadataDefaultJSONValidationOptionEnum: %v", v)
 	}
 }
 
 type EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum string
 
 const (
-	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumUnspecifiedExternalCategory EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "UNSPECIFIED_EXTERNAL_CATEGORY"
-	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumCore                        EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "CORE"
-	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumConnectors                  EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "CONNECTORS"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumUnspecifiedExternalCategory   EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "UNSPECIFIED_EXTERNAL_CATEGORY"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumCore                          EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "CORE"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumConnectors                    EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "CONNECTORS"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumExternalHTTP                  EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "EXTERNAL_HTTP"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumExternalIntegrationServices   EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "EXTERNAL_INTEGRATION_SERVICES"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumExternalCustomerActions       EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "EXTERNAL_CUSTOMER_ACTIONS"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumExternalFlowControl           EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "EXTERNAL_FLOW_CONTROL"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumExternalWorkspace             EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "EXTERNAL_WORKSPACE"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumExternalSecurity              EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "EXTERNAL_SECURITY"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumExternalDatabases             EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "EXTERNAL_DATABASES"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumExternalAnalytics             EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "EXTERNAL_ANALYTICS"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumExternalByoc                  EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "EXTERNAL_BYOC"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumExternalByot                  EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "EXTERNAL_BYOT"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumExternalArtificialInteligence EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "EXTERNAL_ARTIFICIAL_INTELIGENCE"
+	EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnumExternalDataManipulation      EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum = "EXTERNAL_DATA_MANIPULATION"
 )
 
+func (e EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum) ToPointer() *EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_EXTERNAL_CATEGORY":
 		fallthrough
 	case "CORE":
 		fallthrough
 	case "CONNECTORS":
-		*e = EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum(s)
+		fallthrough
+	case "EXTERNAL_HTTP":
+		fallthrough
+	case "EXTERNAL_INTEGRATION_SERVICES":
+		fallthrough
+	case "EXTERNAL_CUSTOMER_ACTIONS":
+		fallthrough
+	case "EXTERNAL_FLOW_CONTROL":
+		fallthrough
+	case "EXTERNAL_WORKSPACE":
+		fallthrough
+	case "EXTERNAL_SECURITY":
+		fallthrough
+	case "EXTERNAL_DATABASES":
+		fallthrough
+	case "EXTERNAL_ANALYTICS":
+		fallthrough
+	case "EXTERNAL_BYOC":
+		fallthrough
+	case "EXTERNAL_BYOT":
+		fallthrough
+	case "EXTERNAL_ARTIFICIAL_INTELIGENCE":
+		fallthrough
+	case "EXTERNAL_DATA_MANIPULATION":
+		*e = EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskMetadataExternalCategoryEnum: %v", v)
 	}
 }
 
@@ -122,21 +170,25 @@ const (
 	EnterpriseCrmEventbusProtoTaskMetadataStatusEnumActive            EnterpriseCrmEventbusProtoTaskMetadataStatusEnum = "ACTIVE"
 )
 
+func (e EnterpriseCrmEventbusProtoTaskMetadataStatusEnum) ToPointer() *EnterpriseCrmEventbusProtoTaskMetadataStatusEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoTaskMetadataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_STATUS":
 		fallthrough
 	case "DEFAULT_INACTIVE":
 		fallthrough
 	case "ACTIVE":
-		*e = EnterpriseCrmEventbusProtoTaskMetadataStatusEnum(s)
+		*e = EnterpriseCrmEventbusProtoTaskMetadataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskMetadataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskMetadataStatusEnum: %v", v)
 	}
 }
 
@@ -156,12 +208,16 @@ const (
 	EnterpriseCrmEventbusProtoTaskMetadataSystemEnumDataBridge        EnterpriseCrmEventbusProtoTaskMetadataSystemEnum = "DATA_BRIDGE"
 )
 
+func (e EnterpriseCrmEventbusProtoTaskMetadataSystemEnum) ToPointer() *EnterpriseCrmEventbusProtoTaskMetadataSystemEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoTaskMetadataSystemEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_SYSTEM":
 		fallthrough
 	case "GENERIC":
@@ -183,10 +239,10 @@ func (e *EnterpriseCrmEventbusProtoTaskMetadataSystemEnum) UnmarshalJSON(data []
 	case "SPANNER":
 		fallthrough
 	case "DATA_BRIDGE":
-		*e = EnterpriseCrmEventbusProtoTaskMetadataSystemEnum(s)
+		*e = EnterpriseCrmEventbusProtoTaskMetadataSystemEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskMetadataSystemEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskMetadataSystemEnum: %v", v)
 	}
 }
 

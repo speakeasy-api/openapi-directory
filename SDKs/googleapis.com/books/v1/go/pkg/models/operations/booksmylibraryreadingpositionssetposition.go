@@ -27,12 +27,16 @@ const (
 	BooksMylibraryReadingpositionsSetPositionActionEnumSearch          BooksMylibraryReadingpositionsSetPositionActionEnum = "search"
 )
 
+func (e BooksMylibraryReadingpositionsSetPositionActionEnum) ToPointer() *BooksMylibraryReadingpositionsSetPositionActionEnum {
+	return &e
+}
+
 func (e *BooksMylibraryReadingpositionsSetPositionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_UNDEFINED":
 		fallthrough
 	case "bookmark":
@@ -46,10 +50,10 @@ func (e *BooksMylibraryReadingpositionsSetPositionActionEnum) UnmarshalJSON(data
 	case "scroll":
 		fallthrough
 	case "search":
-		*e = BooksMylibraryReadingpositionsSetPositionActionEnum(s)
+		*e = BooksMylibraryReadingpositionsSetPositionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksMylibraryReadingpositionsSetPositionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksMylibraryReadingpositionsSetPositionActionEnum: %v", v)
 	}
 }
 

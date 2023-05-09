@@ -40,7 +40,10 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Results are given in order (The same order as Asana's sidebar).
 func (s *users) GetFavoritesForUser(ctx context.Context, request operations.GetFavoritesForUserRequest) (*operations.GetFavoritesForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/favorites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/favorites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -107,7 +110,10 @@ func (s *users) GetFavoritesForUser(ctx context.Context, request operations.GetF
 // Returns the full user record for the single user with the provided ID.
 func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -243,7 +249,10 @@ func (s *users) GetUsers(ctx context.Context, request operations.GetUsersRequest
 // Results are sorted alphabetically and limited to 2000. For more results use the `/users` endpoint.
 func (s *users) GetUsersForTeam(ctx context.Context, request operations.GetUsersForTeamRequest) (*operations.GetUsersForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -311,7 +320,10 @@ func (s *users) GetUsersForTeam(ctx context.Context, request operations.GetUsers
 // Results are sorted alphabetically and limited to 2000. For more results use the `/users` endpoint.
 func (s *users) GetUsersForWorkspace(ctx context.Context, request operations.GetUsersForWorkspaceRequest) (*operations.GetUsersForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -17,12 +17,16 @@ const (
 	OptionGoToActionEnumSubmitForm            OptionGoToActionEnum = "SUBMIT_FORM"
 )
 
+func (e OptionGoToActionEnum) ToPointer() *OptionGoToActionEnum {
+	return &e
+}
+
 func (e *OptionGoToActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GO_TO_ACTION_UNSPECIFIED":
 		fallthrough
 	case "NEXT_SECTION":
@@ -30,10 +34,10 @@ func (e *OptionGoToActionEnum) UnmarshalJSON(data []byte) error {
 	case "RESTART_FORM":
 		fallthrough
 	case "SUBMIT_FORM":
-		*e = OptionGoToActionEnum(s)
+		*e = OptionGoToActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OptionGoToActionEnum: %s", s)
+		return fmt.Errorf("invalid value for OptionGoToActionEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTDetachVolumeActionEnumDetachVolume POSTDetachVolumeActionEnum = "DetachVolume"
 )
 
+func (e POSTDetachVolumeActionEnum) ToPointer() *POSTDetachVolumeActionEnum {
+	return &e
+}
+
 func (e *POSTDetachVolumeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DetachVolume":
-		*e = POSTDetachVolumeActionEnum(s)
+		*e = POSTDetachVolumeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDetachVolumeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDetachVolumeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDetachVolumeVersionEnumTwoThousandAndSixteen1115 POSTDetachVolumeVersionEnum = "2016-11-15"
 )
 
+func (e POSTDetachVolumeVersionEnum) ToPointer() *POSTDetachVolumeVersionEnum {
+	return &e
+}
+
 func (e *POSTDetachVolumeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDetachVolumeVersionEnum(s)
+		*e = POSTDetachVolumeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDetachVolumeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDetachVolumeVersionEnum: %v", v)
 	}
 }
 

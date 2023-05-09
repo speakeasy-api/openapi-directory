@@ -16,27 +16,31 @@ const (
 	GoogleCloudRunV2RevisionTemplateExecutionEnvironmentEnumExecutionEnvironmentGen2        GoogleCloudRunV2RevisionTemplateExecutionEnvironmentEnum = "EXECUTION_ENVIRONMENT_GEN2"
 )
 
+func (e GoogleCloudRunV2RevisionTemplateExecutionEnvironmentEnum) ToPointer() *GoogleCloudRunV2RevisionTemplateExecutionEnvironmentEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2RevisionTemplateExecutionEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXECUTION_ENVIRONMENT_UNSPECIFIED":
 		fallthrough
 	case "EXECUTION_ENVIRONMENT_GEN1":
 		fallthrough
 	case "EXECUTION_ENVIRONMENT_GEN2":
-		*e = GoogleCloudRunV2RevisionTemplateExecutionEnvironmentEnum(s)
+		*e = GoogleCloudRunV2RevisionTemplateExecutionEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2RevisionTemplateExecutionEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2RevisionTemplateExecutionEnvironmentEnum: %v", v)
 	}
 }
 
 // GoogleCloudRunV2RevisionTemplate - RevisionTemplate describes the data a revision should have when created from a template.
 type GoogleCloudRunV2RevisionTemplate struct {
-	// KRM-style annotations for the resource. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 RevisionTemplate.
+	// Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 RevisionTemplate. This field follows Kubernetes annotations' namespacing, limits, and rules.
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// Holds the single container that defines the unit of execution for this Revision.
 	Containers []GoogleCloudRunV2Container `json:"containers,omitempty"`
@@ -44,7 +48,7 @@ type GoogleCloudRunV2RevisionTemplate struct {
 	EncryptionKey *string `json:"encryptionKey,omitempty"`
 	// The sandbox environment to host this Revision.
 	ExecutionEnvironment *GoogleCloudRunV2RevisionTemplateExecutionEnvironmentEnum `json:"executionEnvironment,omitempty"`
-	// KRM-style labels for the resource. Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
+	// Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
 	Labels map[string]string `json:"labels,omitempty"`
 	// Sets the maximum number of requests that each serving instance can receive.
 	MaxInstanceRequestConcurrency *int `json:"maxInstanceRequestConcurrency,omitempty"`
@@ -54,6 +58,8 @@ type GoogleCloudRunV2RevisionTemplate struct {
 	Scaling *GoogleCloudRunV2RevisionScaling `json:"scaling,omitempty"`
 	// Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
 	ServiceAccount *string `json:"serviceAccount,omitempty"`
+	// Enable session affinity.
+	SessionAffinity *bool `json:"sessionAffinity,omitempty"`
 	// Max allowed time for an instance to respond to a request.
 	Timeout *string `json:"timeout,omitempty"`
 	// A list of Volumes to make available to containers.

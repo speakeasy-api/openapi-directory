@@ -16,17 +16,21 @@ const (
 	GetInstancesHealthStatusXAmzTargetEnumRoute53AutoNamingV20170314GetInstancesHealthStatus GetInstancesHealthStatusXAmzTargetEnum = "Route53AutoNaming_v20170314.GetInstancesHealthStatus"
 )
 
+func (e GetInstancesHealthStatusXAmzTargetEnum) ToPointer() *GetInstancesHealthStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetInstancesHealthStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53AutoNaming_v20170314.GetInstancesHealthStatus":
-		*e = GetInstancesHealthStatusXAmzTargetEnum(s)
+		*e = GetInstancesHealthStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInstancesHealthStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInstancesHealthStatusXAmzTargetEnum: %v", v)
 	}
 }
 

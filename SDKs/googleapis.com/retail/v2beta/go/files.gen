@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -116,6 +117,8 @@ pkg/models/shared/googlecloudretailv2betamerchantcenterlinkingconfig.go
 pkg/models/shared/googlecloudretailv2betamerchantcenterlink.go
 pkg/models/shared/googlecloudretailv2betamerchantcenterfeedfilter.go
 pkg/models/shared/googlecloudretailv2betamodel.go
+pkg/models/shared/googlecloudretailv2betamodelmodelfeaturesconfig.go
+pkg/models/shared/googlecloudretailv2betamodelfrequentlyboughttogetherfeaturesconfig.go
 pkg/models/shared/googlecloudretailv2betalistmodelsresponse.go
 pkg/models/shared/googlecloudretailv2betamodelservingconfiglist.go
 pkg/models/shared/googlecloudretailv2betaservingconfig.go
@@ -152,4 +155,6 @@ pkg/models/shared/googlecloudretailv2betausereventinlinesource.go
 pkg/models/shared/googlecloudretailv2betapurgeusereventsrequest.go
 pkg/models/shared/googlecloudretailv2betarejoinusereventsrequest.go
 pkg/models/shared/googlelongrunninglistoperationsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

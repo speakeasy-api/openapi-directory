@@ -21,12 +21,16 @@ const (
 	InstanceRefreshStatusEnumRollbackSuccessful InstanceRefreshStatusEnum = "RollbackSuccessful"
 )
 
+func (e InstanceRefreshStatusEnum) ToPointer() *InstanceRefreshStatusEnum {
+	return &e
+}
+
 func (e *InstanceRefreshStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "InProgress":
@@ -44,9 +48,9 @@ func (e *InstanceRefreshStatusEnum) UnmarshalJSON(data []byte) error {
 	case "RollbackFailed":
 		fallthrough
 	case "RollbackSuccessful":
-		*e = InstanceRefreshStatusEnum(s)
+		*e = InstanceRefreshStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceRefreshStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceRefreshStatusEnum: %v", v)
 	}
 }

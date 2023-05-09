@@ -16,17 +16,21 @@ const (
 	DeleteScalingPolicyXAmzTargetEnumAnyScaleFrontendServiceDeleteScalingPolicy DeleteScalingPolicyXAmzTargetEnum = "AnyScaleFrontendService.DeleteScalingPolicy"
 )
 
+func (e DeleteScalingPolicyXAmzTargetEnum) ToPointer() *DeleteScalingPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteScalingPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyScaleFrontendService.DeleteScalingPolicy":
-		*e = DeleteScalingPolicyXAmzTargetEnum(s)
+		*e = DeleteScalingPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteScalingPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteScalingPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

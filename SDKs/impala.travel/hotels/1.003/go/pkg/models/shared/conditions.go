@@ -11,20 +11,24 @@ import (
 type ConditionsCancellationPolicyEnum string
 
 const (
-	ConditionsCancellationPolicyEnumFreeCancellation     ConditionsCancellationPolicyEnum = "FREE_CANCELLATION"
-	ConditionsCancellationPolicyEnumFreeCancellation24   ConditionsCancellationPolicyEnum = "FREE_CANCELLATION_24"
-	ConditionsCancellationPolicyEnumFreeCancellation48   ConditionsCancellationPolicyEnum = "FREE_CANCELLATION_48"
-	ConditionsCancellationPolicyEnumFreeCancellationWeek ConditionsCancellationPolicyEnum = "FREE_CANCELLATION_WEEK"
-	ConditionsCancellationPolicyEnumNonRefundable        ConditionsCancellationPolicyEnum = "NON_REFUNDABLE"
-	ConditionsCancellationPolicyEnumNull                 ConditionsCancellationPolicyEnum = "null"
+	ConditionsCancellationPolicyEnumFreeCancellation       ConditionsCancellationPolicyEnum = "FREE_CANCELLATION"
+	ConditionsCancellationPolicyEnumFreeCancellation24     ConditionsCancellationPolicyEnum = "FREE_CANCELLATION_24"
+	ConditionsCancellationPolicyEnumFreeCancellation48     ConditionsCancellationPolicyEnum = "FREE_CANCELLATION_48"
+	ConditionsCancellationPolicyEnumFreeCancellationWeek   ConditionsCancellationPolicyEnum = "FREE_CANCELLATION_WEEK"
+	ConditionsCancellationPolicyEnumNonRefundable          ConditionsCancellationPolicyEnum = "NON_REFUNDABLE"
+	ConditionsCancellationPolicyEnumLessThanNilGreaterThan ConditionsCancellationPolicyEnum = "<nil>"
 )
 
+func (e ConditionsCancellationPolicyEnum) ToPointer() *ConditionsCancellationPolicyEnum {
+	return &e
+}
+
 func (e *ConditionsCancellationPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FREE_CANCELLATION":
 		fallthrough
 	case "FREE_CANCELLATION_24":
@@ -35,11 +39,11 @@ func (e *ConditionsCancellationPolicyEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "NON_REFUNDABLE":
 		fallthrough
-	case "null":
-		*e = ConditionsCancellationPolicyEnum(s)
+	case "<nil>":
+		*e = ConditionsCancellationPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConditionsCancellationPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ConditionsCancellationPolicyEnum: %v", v)
 	}
 }
 

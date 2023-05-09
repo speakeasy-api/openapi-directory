@@ -2,19 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MigrationcenterProjectsLocationsAssetsAggregateValuesRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.MigrationcenterProjectsLocationsAssetsAggregateValues(ctx, operations.MigrationcenterProjectsLocationsAssetsAggregateValuesRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AggregateAssetsValuesRequest: &shared.AggregateAssetsValuesRequest{
             Aggregations: []shared.Aggregation{
                 shared.Aggregation{
@@ -23,7 +24,7 @@ func main() {
                         "nulla": "corrupti",
                         "illum": "vel",
                     },
-                    Field: "error",
+                    Field: sdk.String("error"),
                     Frequency: map[string]interface{}{
                         "suscipit": "iure",
                         "magnam": "debitis",
@@ -47,7 +48,7 @@ func main() {
                         "veritatis": "deserunt",
                         "perferendis": "ipsam",
                     },
-                    Field: "repellendus",
+                    Field: sdk.String("repellendus"),
                     Frequency: map[string]interface{}{
                         "quo": "odit",
                         "at": "at",
@@ -73,7 +74,7 @@ func main() {
                         "molestiae": "modi",
                         "qui": "impedit",
                     },
-                    Field: "cum",
+                    Field: sdk.String("cum"),
                     Frequency: map[string]interface{}{
                         "ipsum": "excepturi",
                         "aspernatur": "perferendis",
@@ -91,23 +92,20 @@ func main() {
                     },
                 },
             },
-            Filter: "in",
+            Filter: sdk.String("in"),
         },
-        AccessToken: "corporis",
-        Alt: "media",
-        Callback: "iure",
-        Fields: "saepe",
-        Key: "quidem",
-        OauthToken: "architecto",
+        AccessToken: sdk.String("corporis"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("iure"),
+        Fields: sdk.String("saepe"),
+        Key: sdk.String("quidem"),
+        OauthToken: sdk.String("architecto"),
         Parent: "ipsa",
-        PrettyPrint: false,
-        QuotaUser: "reiciendis",
-        UploadType: "est",
-        UploadProtocol: "mollitia",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.MigrationcenterProjectsLocationsAssetsAggregateValues(ctx, req, operations.MigrationcenterProjectsLocationsAssetsAggregateValuesSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("reiciendis"),
+        UploadType: sdk.String("est"),
+        UploadProtocol: sdk.String("mollitia"),
+    }, operations.MigrationcenterProjectsLocationsAssetsAggregateValuesSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

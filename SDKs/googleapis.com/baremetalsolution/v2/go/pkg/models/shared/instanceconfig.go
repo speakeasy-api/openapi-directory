@@ -16,21 +16,25 @@ const (
 	InstanceConfigNetworkConfigEnumMultiVlan                InstanceConfigNetworkConfigEnum = "MULTI_VLAN"
 )
 
+func (e InstanceConfigNetworkConfigEnum) ToPointer() *InstanceConfigNetworkConfigEnum {
+	return &e
+}
+
 func (e *InstanceConfigNetworkConfigEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NETWORKCONFIG_UNSPECIFIED":
 		fallthrough
 	case "SINGLE_VLAN":
 		fallthrough
 	case "MULTI_VLAN":
-		*e = InstanceConfigNetworkConfigEnum(s)
+		*e = InstanceConfigNetworkConfigEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceConfigNetworkConfigEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceConfigNetworkConfigEnum: %v", v)
 	}
 }
 

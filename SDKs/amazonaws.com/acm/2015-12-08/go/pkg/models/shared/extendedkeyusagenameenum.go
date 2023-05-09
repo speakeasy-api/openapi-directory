@@ -24,12 +24,16 @@ const (
 	ExtendedKeyUsageNameEnumCustom                     ExtendedKeyUsageNameEnum = "CUSTOM"
 )
 
+func (e ExtendedKeyUsageNameEnum) ToPointer() *ExtendedKeyUsageNameEnum {
+	return &e
+}
+
 func (e *ExtendedKeyUsageNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TLS_WEB_SERVER_AUTHENTICATION":
 		fallthrough
 	case "TLS_WEB_CLIENT_AUTHENTICATION":
@@ -53,9 +57,9 @@ func (e *ExtendedKeyUsageNameEnum) UnmarshalJSON(data []byte) error {
 	case "NONE":
 		fallthrough
 	case "CUSTOM":
-		*e = ExtendedKeyUsageNameEnum(s)
+		*e = ExtendedKeyUsageNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExtendedKeyUsageNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ExtendedKeyUsageNameEnum: %v", v)
 	}
 }

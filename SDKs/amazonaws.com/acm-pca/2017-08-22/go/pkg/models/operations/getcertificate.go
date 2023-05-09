@@ -16,17 +16,21 @@ const (
 	GetCertificateXAmzTargetEnumAcmPrivateCaGetCertificate GetCertificateXAmzTargetEnum = "ACMPrivateCA.GetCertificate"
 )
 
+func (e GetCertificateXAmzTargetEnum) ToPointer() *GetCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACMPrivateCA.GetCertificate":
-		*e = GetCertificateXAmzTargetEnum(s)
+		*e = GetCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

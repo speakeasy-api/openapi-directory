@@ -22,19 +22,23 @@ const (
 	ContentAccountsListViewEnumCSS      ContentAccountsListViewEnum = "CSS"
 )
 
+func (e ContentAccountsListViewEnum) ToPointer() *ContentAccountsListViewEnum {
+	return &e
+}
+
 func (e *ContentAccountsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MERCHANT":
 		fallthrough
 	case "CSS":
-		*e = ContentAccountsListViewEnum(s)
+		*e = ContentAccountsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentAccountsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentAccountsListViewEnum: %v", v)
 	}
 }
 

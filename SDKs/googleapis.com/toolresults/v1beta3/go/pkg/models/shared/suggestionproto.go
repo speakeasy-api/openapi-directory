@@ -17,12 +17,16 @@ const (
 	SuggestionProtoPriorityEnumInfo            SuggestionProtoPriorityEnum = "info"
 )
 
+func (e SuggestionProtoPriorityEnum) ToPointer() *SuggestionProtoPriorityEnum {
+	return &e
+}
+
 func (e *SuggestionProtoPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknownPriority":
 		fallthrough
 	case "error":
@@ -30,10 +34,10 @@ func (e *SuggestionProtoPriorityEnum) UnmarshalJSON(data []byte) error {
 	case "warning":
 		fallthrough
 	case "info":
-		*e = SuggestionProtoPriorityEnum(s)
+		*e = SuggestionProtoPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SuggestionProtoPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for SuggestionProtoPriorityEnum: %v", v)
 	}
 }
 

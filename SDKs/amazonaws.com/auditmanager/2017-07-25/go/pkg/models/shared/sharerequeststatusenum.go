@@ -20,12 +20,16 @@ const (
 	ShareRequestStatusEnumRevoked     ShareRequestStatusEnum = "REVOKED"
 )
 
+func (e ShareRequestStatusEnum) ToPointer() *ShareRequestStatusEnum {
+	return &e
+}
+
 func (e *ShareRequestStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "REPLICATING":
@@ -41,9 +45,9 @@ func (e *ShareRequestStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DECLINED":
 		fallthrough
 	case "REVOKED":
-		*e = ShareRequestStatusEnum(s)
+		*e = ShareRequestStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareRequestStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareRequestStatusEnum: %v", v)
 	}
 }

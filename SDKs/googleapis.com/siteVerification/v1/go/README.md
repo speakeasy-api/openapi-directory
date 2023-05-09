@@ -13,30 +13,28 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/siteVerifi
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SiteVerificationWebResourceDeleteRequest{
-        Alt: "json",
-        Fields: "corrupti",
-        ID: "provident",
-        Key: "distinctio",
-        OauthToken: "quibusdam",
-        PrettyPrint: false,
-        QuotaUser: "unde",
-        UserIP: "nulla",
-    }
-
     ctx := context.Background()
-    res, err := s.WebResource.SiteVerificationWebResourceDelete(ctx, req, operations.SiteVerificationWebResourceDeleteSecurity{
+    res, err := s.WebResource.SiteVerificationWebResourceDelete(ctx, operations.SiteVerificationWebResourceDeleteRequest{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("corrupti"),
+        ID: "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
+        Key: sdk.String("perferendis"),
+        OauthToken: sdk.String("ipsam"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("repellendus"),
+        UserIP: sdk.String("sapiente"),
+    }, operations.SiteVerificationWebResourceDeleteSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -55,15 +53,15 @@ func main() {
 ## Available Resources and Operations
 
 
-### WebResource
+### [WebResource](docs/webresource/README.md)
 
-* `SiteVerificationWebResourceDelete` - Relinquish ownership of a website or domain.
-* `SiteVerificationWebResourceGet` - Get the most current data for a website or domain.
-* `SiteVerificationWebResourceGetToken` - Get a verification token for placing on a website or domain.
-* `SiteVerificationWebResourceInsert` - Attempt verification of a website or domain.
-* `SiteVerificationWebResourceList` - Get the list of your verified websites and domains.
-* `SiteVerificationWebResourcePatch` - Modify the list of owners for your website or domain. This method supports patch semantics.
-* `SiteVerificationWebResourceUpdate` - Modify the list of owners for your website or domain.
+* [SiteVerificationWebResourceDelete](docs/webresource/README.md#siteverificationwebresourcedelete) - Relinquish ownership of a website or domain.
+* [SiteVerificationWebResourceGet](docs/webresource/README.md#siteverificationwebresourceget) - Get the most current data for a website or domain.
+* [SiteVerificationWebResourceGetToken](docs/webresource/README.md#siteverificationwebresourcegettoken) - Get a verification token for placing on a website or domain.
+* [SiteVerificationWebResourceInsert](docs/webresource/README.md#siteverificationwebresourceinsert) - Attempt verification of a website or domain.
+* [SiteVerificationWebResourceList](docs/webresource/README.md#siteverificationwebresourcelist) - Get the list of your verified websites and domains.
+* [SiteVerificationWebResourcePatch](docs/webresource/README.md#siteverificationwebresourcepatch) - Modify the list of owners for your website or domain. This method supports patch semantics.
+* [SiteVerificationWebResourceUpdate](docs/webresource/README.md#siteverificationwebresourceupdate) - Modify the list of owners for your website or domain.
 <!-- End SDK Available Operations -->
 
 ### Maturity

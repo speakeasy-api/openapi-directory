@@ -18,21 +18,25 @@ const (
 	ListSharesScopeEnumCurrentUser ListSharesScopeEnum = "currentUser"
 )
 
+func (e ListSharesScopeEnum) ToPointer() *ListSharesScopeEnum {
+	return &e
+}
+
 func (e *ListSharesScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "active":
 		fallthrough
 	case "currentUser":
-		*e = ListSharesScopeEnum(s)
+		*e = ListSharesScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSharesScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSharesScopeEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	ListSharesSortEnumMinusCreated ListSharesSortEnum = "-created"
 )
 
+func (e ListSharesSortEnum) ToPointer() *ListSharesSortEnum {
+	return &e
+}
+
 func (e *ListSharesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "-created":
-		*e = ListSharesSortEnum(s)
+		*e = ListSharesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSharesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSharesSortEnum: %v", v)
 	}
 }
 
@@ -69,21 +77,25 @@ const (
 	ListSharesTypeEnumSend         ListSharesTypeEnum = "send"
 )
 
+func (e ListSharesTypeEnum) ToPointer() *ListSharesTypeEnum {
+	return &e
+}
+
 func (e *ListSharesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "receive":
 		fallthrough
 	case "shared_folder":
 		fallthrough
 	case "send":
-		*e = ListSharesTypeEnum(s)
+		*e = ListSharesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSharesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSharesTypeEnum: %v", v)
 	}
 }
 

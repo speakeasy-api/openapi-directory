@@ -90,7 +90,10 @@ func (s *notes) KeepNotesCreate(ctx context.Context, request operations.KeepNote
 // KeepNotesDelete - Deletes a note. Caller must have the `OWNER` role on the note to delete. Deleting a note removes the resource immediately and cannot be undone. Any collaborators will lose access to the note.
 func (s *notes) KeepNotesDelete(ctx context.Context, request operations.KeepNotesDeleteRequest, security operations.KeepNotesDeleteSecurity) (*operations.KeepNotesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *notes) KeepNotesDelete(ctx context.Context, request operations.KeepNote
 // KeepNotesGet - Gets a note.
 func (s *notes) KeepNotesGet(ctx context.Context, request operations.KeepNotesGetRequest, security operations.KeepNotesGetSecurity) (*operations.KeepNotesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -234,7 +240,10 @@ func (s *notes) KeepNotesList(ctx context.Context, request operations.KeepNotesL
 // KeepNotesPermissionsBatchCreate - Creates one or more permissions on the note. Only permissions with the `WRITER` role may be created. If adding any permission fails, then the entire request fails and no changes are made.
 func (s *notes) KeepNotesPermissionsBatchCreate(ctx context.Context, request operations.KeepNotesPermissionsBatchCreateRequest, security operations.KeepNotesPermissionsBatchCreateSecurity) (*operations.KeepNotesPermissionsBatchCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/permissions:batchCreate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/permissions:batchCreate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchCreatePermissionsRequestInput", "json")
 	if err != nil {
@@ -289,7 +298,10 @@ func (s *notes) KeepNotesPermissionsBatchCreate(ctx context.Context, request ope
 // KeepNotesPermissionsBatchDelete - Deletes one or more permissions on the note. The specified entities will immediately lose access. A permission with the `OWNER` role can't be removed. If removing a permission fails, then the entire request fails and no changes are made. Returns a 400 bad request error if a specified permission does not exist on the note.
 func (s *notes) KeepNotesPermissionsBatchDelete(ctx context.Context, request operations.KeepNotesPermissionsBatchDeleteRequest, security operations.KeepNotesPermissionsBatchDeleteSecurity) (*operations.KeepNotesPermissionsBatchDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/permissions:batchDelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/permissions:batchDelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchDeletePermissionsRequest", "json")
 	if err != nil {

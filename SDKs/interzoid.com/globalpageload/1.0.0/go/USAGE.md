@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GlobalpageloadRequest{
+    ctx := context.Background()
+    res, err := s.PageLoadPerformanceTime.Globalpageload(ctx, operations.GlobalpageloadRequest{
         License: "corrupti",
         Origin: "provident",
         URL: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.PageLoadPerformanceTime.Globalpageload(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

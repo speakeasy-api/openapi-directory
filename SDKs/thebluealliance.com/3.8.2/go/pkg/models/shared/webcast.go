@@ -25,12 +25,16 @@ const (
 	WebcastTypeEnumDacast     WebcastTypeEnum = "dacast"
 )
 
+func (e WebcastTypeEnum) ToPointer() *WebcastTypeEnum {
+	return &e
+}
+
 func (e *WebcastTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "youtube":
 		fallthrough
 	case "twitch":
@@ -54,10 +58,10 @@ func (e *WebcastTypeEnum) UnmarshalJSON(data []byte) error {
 	case "stemtv":
 		fallthrough
 	case "dacast":
-		*e = WebcastTypeEnum(s)
+		*e = WebcastTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebcastTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WebcastTypeEnum: %v", v)
 	}
 }
 

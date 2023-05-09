@@ -17,12 +17,16 @@ const (
 	ConferenceMuteResponseMessageEnumConferenceMuteFailedConferenceNotFound ConferenceMuteResponseMessageEnum = "Conference Mute Failed -- Conference not found"
 )
 
+func (e ConferenceMuteResponseMessageEnum) ToPointer() *ConferenceMuteResponseMessageEnum {
+	return &e
+}
+
 func (e *ConferenceMuteResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Conference Mute Executed":
 		fallthrough
 	case "ConferenceName Parameter must be present":
@@ -30,10 +34,10 @@ func (e *ConferenceMuteResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "MemberID Parameter must be present":
 		fallthrough
 	case "Conference Mute Failed -- Conference not found":
-		*e = ConferenceMuteResponseMessageEnum(s)
+		*e = ConferenceMuteResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConferenceMuteResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ConferenceMuteResponseMessageEnum: %v", v)
 	}
 }
 

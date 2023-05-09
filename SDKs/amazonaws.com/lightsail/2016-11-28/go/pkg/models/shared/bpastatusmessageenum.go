@@ -16,12 +16,16 @@ const (
 	BPAStatusMessageEnumUnknown                      BPAStatusMessageEnum = "Unknown"
 )
 
+func (e BPAStatusMessageEnum) ToPointer() *BPAStatusMessageEnum {
+	return &e
+}
+
 func (e *BPAStatusMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULTED_FOR_SLR_MISSING":
 		fallthrough
 	case "SYNC_ON_HOLD":
@@ -29,9 +33,9 @@ func (e *BPAStatusMessageEnum) UnmarshalJSON(data []byte) error {
 	case "DEFAULTED_FOR_SLR_MISSING_ON_HOLD":
 		fallthrough
 	case "Unknown":
-		*e = BPAStatusMessageEnum(s)
+		*e = BPAStatusMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BPAStatusMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for BPAStatusMessageEnum: %v", v)
 	}
 }

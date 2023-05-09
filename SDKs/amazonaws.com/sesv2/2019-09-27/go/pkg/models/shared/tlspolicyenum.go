@@ -15,18 +15,22 @@ const (
 	TLSPolicyEnumOptional TLSPolicyEnum = "OPTIONAL"
 )
 
+func (e TLSPolicyEnum) ToPointer() *TLSPolicyEnum {
+	return &e
+}
+
 func (e *TLSPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUIRE":
 		fallthrough
 	case "OPTIONAL":
-		*e = TLSPolicyEnum(s)
+		*e = TLSPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TLSPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for TLSPolicyEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	ReportTypeEnumByDay      ReportTypeEnum = "ByDay"
 )
 
+func (e ReportTypeEnum) ToPointer() *ReportTypeEnum {
+	return &e
+}
+
 func (e *ReportTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ByChannel":
 		fallthrough
 	case "ByCategory":
@@ -30,9 +34,9 @@ func (e *ReportTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ByProduct":
 		fallthrough
 	case "ByDay":
-		*e = ReportTypeEnum(s)
+		*e = ReportTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportTypeEnum: %v", v)
 	}
 }

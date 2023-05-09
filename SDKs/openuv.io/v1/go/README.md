@@ -13,28 +13,26 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/openuv.io/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetForecastRequest{
-        Alt: 1050,
-        Dt: "2018-02-04T04:39:06.467Z",
+    ctx := context.Background()
+    res, err := s.GetForecast(ctx, operations.GetForecastRequest{
+        Alt: sdk.Float64(1050),
+        Dt: types.MustTimeFromString("2018-02-04T04:39:06.467Z"),
         Lat: 78.67,
         Lng: 115.67,
-        Ozone: 304.5,
+        Ozone: sdk.Float64(304.5),
         XAccessToken: "corrupti",
-    }
-
-    ctx := context.Background()
-    res, err := s.GetForecast(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,11 +47,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetForecast` - Get hourly UV Index Forecast by location and date. Optional altitude, ozone level and datetime could be provided.
-* `GetProtection` - Get daily protection time by location, UV Index from and UV Index to with 10 minutes accuracy. Optional altitide and ozone level could be provided.
-* `GetUv` - Get real-time UV Index by location. Optional altitude, ozone level and datetime could be provided.
+* [GetForecast](docs/sdk/README.md#getforecast) - Get hourly UV Index Forecast by location and date. Optional altitude, ozone level and datetime could be provided.
+* [GetProtection](docs/sdk/README.md#getprotection) - Get daily protection time by location, UV Index from and UV Index to with 10 minutes accuracy. Optional altitide and ozone level could be provided.
+* [GetUv](docs/sdk/README.md#getuv) - Get real-time UV Index by location. Optional altitude, ozone level and datetime could be provided.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,17 +16,21 @@ const (
 	InstallToRemoteAccessSessionXAmzTargetEnumDeviceFarm20150623InstallToRemoteAccessSession InstallToRemoteAccessSessionXAmzTargetEnum = "DeviceFarm_20150623.InstallToRemoteAccessSession"
 )
 
+func (e InstallToRemoteAccessSessionXAmzTargetEnum) ToPointer() *InstallToRemoteAccessSessionXAmzTargetEnum {
+	return &e
+}
+
 func (e *InstallToRemoteAccessSessionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.InstallToRemoteAccessSession":
-		*e = InstallToRemoteAccessSessionXAmzTargetEnum(s)
+		*e = InstallToRemoteAccessSessionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstallToRemoteAccessSessionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for InstallToRemoteAccessSessionXAmzTargetEnum: %v", v)
 	}
 }
 

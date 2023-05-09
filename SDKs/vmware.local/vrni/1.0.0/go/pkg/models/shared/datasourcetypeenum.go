@@ -24,12 +24,16 @@ const (
 	DataSourceTypeEnumCheckpointFirewallDataSource DataSourceTypeEnum = "CheckpointFirewallDataSource"
 )
 
+func (e DataSourceTypeEnum) ToPointer() *DataSourceTypeEnum {
+	return &e
+}
+
 func (e *DataSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CiscoSwitchDataSource":
 		fallthrough
 	case "DellSwitchDataSource":
@@ -53,9 +57,9 @@ func (e *DataSourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PanFirewallDataSource":
 		fallthrough
 	case "CheckpointFirewallDataSource":
-		*e = DataSourceTypeEnum(s)
+		*e = DataSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSourceTypeEnum: %v", v)
 	}
 }

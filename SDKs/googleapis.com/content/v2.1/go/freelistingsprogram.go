@@ -34,7 +34,10 @@ func newFreelistingsprogram(defaultClient, securityClient HTTPClient, serverURL,
 // ContentFreelistingsprogramGet - Retrieves the status and review eligibility for the free listing program. Returns errors and warnings if they require action to resolve, will become disapprovals, or impact impressions. Use `accountstatuses` to view all issues for an account.
 func (s *freelistingsprogram) ContentFreelistingsprogramGet(ctx context.Context, request operations.ContentFreelistingsprogramGetRequest, security operations.ContentFreelistingsprogramGetSecurity) (*operations.ContentFreelistingsprogramGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/freelistingsprogram", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/freelistingsprogram", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *freelistingsprogram) ContentFreelistingsprogramGet(ctx context.Context,
 // ContentFreelistingsprogramRequestreview - Requests a review of free listings in a specific region. This method is only available to selected merchants.
 func (s *freelistingsprogram) ContentFreelistingsprogramRequestreview(ctx context.Context, request operations.ContentFreelistingsprogramRequestreviewRequest, security operations.ContentFreelistingsprogramRequestreviewSecurity) (*operations.ContentFreelistingsprogramRequestreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/freelistingsprogram/requestreview", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/freelistingsprogram/requestreview", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestReviewFreeListingsRequest", "json")
 	if err != nil {

@@ -265,12 +265,16 @@ const (
 	OfficeCountryEnumZw      OfficeCountryEnum = "ZW"
 )
 
+func (e OfficeCountryEnum) ToPointer() *OfficeCountryEnum {
+	return &e
+}
+
 func (e *OfficeCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "AF":
@@ -774,10 +778,10 @@ func (e *OfficeCountryEnum) UnmarshalJSON(data []byte) error {
 	case "ZM":
 		fallthrough
 	case "ZW":
-		*e = OfficeCountryEnum(s)
+		*e = OfficeCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OfficeCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for OfficeCountryEnum: %v", v)
 	}
 }
 
@@ -855,12 +859,16 @@ const (
 	OfficeStateEnumWy OfficeStateEnum = "WY"
 )
 
+func (e OfficeStateEnum) ToPointer() *OfficeStateEnum {
+	return &e
+}
+
 func (e *OfficeStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL":
 		fallthrough
 	case "AK":
@@ -978,10 +986,10 @@ func (e *OfficeStateEnum) UnmarshalJSON(data []byte) error {
 	case "WI":
 		fallthrough
 	case "WY":
-		*e = OfficeStateEnum(s)
+		*e = OfficeStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OfficeStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OfficeStateEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	ContainerStatusEnumDeleting ContainerStatusEnum = "DELETING"
 )
 
+func (e ContainerStatusEnum) ToPointer() *ContainerStatusEnum {
+	return &e
+}
+
 func (e *ContainerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "CREATING":
 		fallthrough
 	case "DELETING":
-		*e = ContainerStatusEnum(s)
+		*e = ContainerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerStatusEnum: %v", v)
 	}
 }

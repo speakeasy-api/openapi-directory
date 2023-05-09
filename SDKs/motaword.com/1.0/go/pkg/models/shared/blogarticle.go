@@ -17,12 +17,16 @@ const (
 	BlogArticleAnnouncementTypeEnumSales             BlogArticleAnnouncementTypeEnum = "sales"
 )
 
+func (e BlogArticleAnnouncementTypeEnum) ToPointer() *BlogArticleAnnouncementTypeEnum {
+	return &e
+}
+
 func (e *BlogArticleAnnouncementTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "article":
 		fallthrough
 	case "case":
@@ -30,10 +34,10 @@ func (e *BlogArticleAnnouncementTypeEnum) UnmarshalJSON(data []byte) error {
 	case "famous-translators":
 		fallthrough
 	case "sales":
-		*e = BlogArticleAnnouncementTypeEnum(s)
+		*e = BlogArticleAnnouncementTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BlogArticleAnnouncementTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BlogArticleAnnouncementTypeEnum: %v", v)
 	}
 }
 

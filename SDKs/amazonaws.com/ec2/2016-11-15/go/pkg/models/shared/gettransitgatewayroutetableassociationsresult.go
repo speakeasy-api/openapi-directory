@@ -19,12 +19,16 @@ const (
 	GetTransitGatewayRouteTableAssociationsResultAssociationsResourceTypeEnumTgwPeering           GetTransitGatewayRouteTableAssociationsResultAssociationsResourceTypeEnum = "tgw-peering"
 )
 
+func (e GetTransitGatewayRouteTableAssociationsResultAssociationsResourceTypeEnum) ToPointer() *GetTransitGatewayRouteTableAssociationsResultAssociationsResourceTypeEnum {
+	return &e
+}
+
 func (e *GetTransitGatewayRouteTableAssociationsResultAssociationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "vpn":
@@ -36,10 +40,10 @@ func (e *GetTransitGatewayRouteTableAssociationsResultAssociationsResourceTypeEn
 	case "peering":
 		fallthrough
 	case "tgw-peering":
-		*e = GetTransitGatewayRouteTableAssociationsResultAssociationsResourceTypeEnum(s)
+		*e = GetTransitGatewayRouteTableAssociationsResultAssociationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTransitGatewayRouteTableAssociationsResultAssociationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTransitGatewayRouteTableAssociationsResultAssociationsResourceTypeEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	GetTransitGatewayRouteTableAssociationsResultAssociationsStateEnumDisassociated  GetTransitGatewayRouteTableAssociationsResultAssociationsStateEnum = "disassociated"
 )
 
+func (e GetTransitGatewayRouteTableAssociationsResultAssociationsStateEnum) ToPointer() *GetTransitGatewayRouteTableAssociationsResultAssociationsStateEnum {
+	return &e
+}
+
 func (e *GetTransitGatewayRouteTableAssociationsResultAssociationsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -66,10 +74,10 @@ func (e *GetTransitGatewayRouteTableAssociationsResultAssociationsStateEnum) Unm
 	case "disassociating":
 		fallthrough
 	case "disassociated":
-		*e = GetTransitGatewayRouteTableAssociationsResultAssociationsStateEnum(s)
+		*e = GetTransitGatewayRouteTableAssociationsResultAssociationsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTransitGatewayRouteTableAssociationsResultAssociationsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTransitGatewayRouteTableAssociationsResultAssociationsStateEnum: %v", v)
 	}
 }
 

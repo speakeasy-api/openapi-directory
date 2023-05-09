@@ -16,17 +16,21 @@ const (
 	SendTaskSuccessXAmzTargetEnumAwsStepFunctionsSendTaskSuccess SendTaskSuccessXAmzTargetEnum = "AWSStepFunctions.SendTaskSuccess"
 )
 
+func (e SendTaskSuccessXAmzTargetEnum) ToPointer() *SendTaskSuccessXAmzTargetEnum {
+	return &e
+}
+
 func (e *SendTaskSuccessXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSStepFunctions.SendTaskSuccess":
-		*e = SendTaskSuccessXAmzTargetEnum(s)
+		*e = SendTaskSuccessXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendTaskSuccessXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SendTaskSuccessXAmzTargetEnum: %v", v)
 	}
 }
 

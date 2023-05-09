@@ -16,12 +16,16 @@ const (
 	R53HostedZoneDeletionStateCodeEnumStarted   R53HostedZoneDeletionStateCodeEnum = "STARTED"
 )
 
+func (e R53HostedZoneDeletionStateCodeEnum) ToPointer() *R53HostedZoneDeletionStateCodeEnum {
+	return &e
+}
+
 func (e *R53HostedZoneDeletionStateCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCEEDED":
 		fallthrough
 	case "PENDING":
@@ -29,9 +33,9 @@ func (e *R53HostedZoneDeletionStateCodeEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "STARTED":
-		*e = R53HostedZoneDeletionStateCodeEnum(s)
+		*e = R53HostedZoneDeletionStateCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for R53HostedZoneDeletionStateCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for R53HostedZoneDeletionStateCodeEnum: %v", v)
 	}
 }

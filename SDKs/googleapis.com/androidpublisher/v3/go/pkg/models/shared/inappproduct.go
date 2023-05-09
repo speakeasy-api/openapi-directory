@@ -16,21 +16,25 @@ const (
 	InAppProductPurchaseTypeEnumSubscription            InAppProductPurchaseTypeEnum = "subscription"
 )
 
+func (e InAppProductPurchaseTypeEnum) ToPointer() *InAppProductPurchaseTypeEnum {
+	return &e
+}
+
 func (e *InAppProductPurchaseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "purchaseTypeUnspecified":
 		fallthrough
 	case "managedUser":
 		fallthrough
 	case "subscription":
-		*e = InAppProductPurchaseTypeEnum(s)
+		*e = InAppProductPurchaseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InAppProductPurchaseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InAppProductPurchaseTypeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	InAppProductStatusEnumInactive          InAppProductStatusEnum = "inactive"
 )
 
+func (e InAppProductStatusEnum) ToPointer() *InAppProductStatusEnum {
+	return &e
+}
+
 func (e *InAppProductStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "statusUnspecified":
 		fallthrough
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = InAppProductStatusEnum(s)
+		*e = InAppProductStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InAppProductStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InAppProductStatusEnum: %v", v)
 	}
 }
 

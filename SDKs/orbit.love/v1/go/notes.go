@@ -33,7 +33,10 @@ func newNotes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // GetWorkspaceSlugMembersMemberSlugNotes - Get the member's notes
 func (s *notes) GetWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, request operations.GetWorkspaceSlugMembersMemberSlugNotesRequest, security operations.GetWorkspaceSlugMembersMemberSlugNotesSecurity) (*operations.GetWorkspaceSlugMembersMemberSlugNotesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -72,7 +75,10 @@ func (s *notes) GetWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, requ
 // PostWorkspaceSlugMembersMemberSlugNotes - Create a note
 func (s *notes) PostWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, request operations.PostWorkspaceSlugMembersMemberSlugNotesRequest, security operations.PostWorkspaceSlugMembersMemberSlugNotesSecurity) (*operations.PostWorkspaceSlugMembersMemberSlugNotesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Note", "json")
 	if err != nil {
@@ -116,7 +122,10 @@ func (s *notes) PostWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, req
 // PutWorkspaceSlugMembersMemberSlugNotesID - Update a note
 func (s *notes) PutWorkspaceSlugMembersMemberSlugNotesID(ctx context.Context, request operations.PutWorkspaceSlugMembersMemberSlugNotesIDRequest, security operations.PutWorkspaceSlugMembersMemberSlugNotesIDSecurity) (*operations.PutWorkspaceSlugMembersMemberSlugNotesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Note", "json")
 	if err != nil {

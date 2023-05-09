@@ -17,12 +17,16 @@ const (
 	PatchConfigRebootConfigEnumNever                   PatchConfigRebootConfigEnum = "NEVER"
 )
 
+func (e PatchConfigRebootConfigEnum) ToPointer() *PatchConfigRebootConfigEnum {
+	return &e
+}
+
 func (e *PatchConfigRebootConfigEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REBOOT_CONFIG_UNSPECIFIED":
 		fallthrough
 	case "DEFAULT":
@@ -30,10 +34,10 @@ func (e *PatchConfigRebootConfigEnum) UnmarshalJSON(data []byte) error {
 	case "ALWAYS":
 		fallthrough
 	case "NEVER":
-		*e = PatchConfigRebootConfigEnum(s)
+		*e = PatchConfigRebootConfigEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchConfigRebootConfigEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchConfigRebootConfigEnum: %v", v)
 	}
 }
 

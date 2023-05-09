@@ -18,21 +18,25 @@ const (
 	GetCrawlStatisticsByFrequencyFrequencyEnumSixtymn GetCrawlStatisticsByFrequencyFrequencyEnum = "60mn"
 )
 
+func (e GetCrawlStatisticsByFrequencyFrequencyEnum) ToPointer() *GetCrawlStatisticsByFrequencyFrequencyEnum {
+	return &e
+}
+
 func (e *GetCrawlStatisticsByFrequencyFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1mn":
 		fallthrough
 	case "5mn":
 		fallthrough
 	case "60mn":
-		*e = GetCrawlStatisticsByFrequencyFrequencyEnum(s)
+		*e = GetCrawlStatisticsByFrequencyFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCrawlStatisticsByFrequencyFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCrawlStatisticsByFrequencyFrequencyEnum: %v", v)
 	}
 }
 

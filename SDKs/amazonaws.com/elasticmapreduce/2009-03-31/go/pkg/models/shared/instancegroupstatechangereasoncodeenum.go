@@ -16,12 +16,16 @@ const (
 	InstanceGroupStateChangeReasonCodeEnumClusterTerminated InstanceGroupStateChangeReasonCodeEnum = "CLUSTER_TERMINATED"
 )
 
+func (e InstanceGroupStateChangeReasonCodeEnum) ToPointer() *InstanceGroupStateChangeReasonCodeEnum {
+	return &e
+}
+
 func (e *InstanceGroupStateChangeReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_ERROR":
 		fallthrough
 	case "VALIDATION_ERROR":
@@ -29,9 +33,9 @@ func (e *InstanceGroupStateChangeReasonCodeEnum) UnmarshalJSON(data []byte) erro
 	case "INSTANCE_FAILURE":
 		fallthrough
 	case "CLUSTER_TERMINATED":
-		*e = InstanceGroupStateChangeReasonCodeEnum(s)
+		*e = InstanceGroupStateChangeReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceGroupStateChangeReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceGroupStateChangeReasonCodeEnum: %v", v)
 	}
 }

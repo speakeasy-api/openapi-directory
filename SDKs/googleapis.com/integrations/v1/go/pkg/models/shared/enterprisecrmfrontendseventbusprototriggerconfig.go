@@ -16,21 +16,25 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoTriggerConfigNextTasksExecutionPolicyEnumRunFirstMatch EnterpriseCrmFrontendsEventbusProtoTriggerConfigNextTasksExecutionPolicyEnum = "RUN_FIRST_MATCH"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoTriggerConfigNextTasksExecutionPolicyEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoTriggerConfigNextTasksExecutionPolicyEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoTriggerConfigNextTasksExecutionPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "RUN_ALL_MATCH":
 		fallthrough
 	case "RUN_FIRST_MATCH":
-		*e = EnterpriseCrmFrontendsEventbusProtoTriggerConfigNextTasksExecutionPolicyEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoTriggerConfigNextTasksExecutionPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTriggerConfigNextTasksExecutionPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTriggerConfigNextTasksExecutionPolicyEnum: %v", v)
 	}
 }
 
@@ -52,12 +56,16 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnumCloudScheduler            EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnum = "CLOUD_SCHEDULER"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "CLOUD_PUBSUB":
@@ -83,10 +91,10 @@ func (e *EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnum) Unmars
 	case "SFDC_PLATFORM_EVENTS_CHANNEL":
 		fallthrough
 	case "CLOUD_SCHEDULER":
-		*e = EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnum: %v", v)
 	}
 }
 

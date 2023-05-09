@@ -15,17 +15,21 @@ const (
 	GETModifyInstancePlacementActionEnumModifyInstancePlacement GETModifyInstancePlacementActionEnum = "ModifyInstancePlacement"
 )
 
+func (e GETModifyInstancePlacementActionEnum) ToPointer() *GETModifyInstancePlacementActionEnum {
+	return &e
+}
+
 func (e *GETModifyInstancePlacementActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyInstancePlacement":
-		*e = GETModifyInstancePlacementActionEnum(s)
+		*e = GETModifyInstancePlacementActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstancePlacementActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstancePlacementActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETModifyInstancePlacementAffinityEnumHost    GETModifyInstancePlacementAffinityEnum = "host"
 )
 
+func (e GETModifyInstancePlacementAffinityEnum) ToPointer() *GETModifyInstancePlacementAffinityEnum {
+	return &e
+}
+
 func (e *GETModifyInstancePlacementAffinityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "host":
-		*e = GETModifyInstancePlacementAffinityEnum(s)
+		*e = GETModifyInstancePlacementAffinityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstancePlacementAffinityEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstancePlacementAffinityEnum: %v", v)
 	}
 }
 
@@ -61,19 +69,23 @@ const (
 	GETModifyInstancePlacementTenancyEnumHost      GETModifyInstancePlacementTenancyEnum = "host"
 )
 
+func (e GETModifyInstancePlacementTenancyEnum) ToPointer() *GETModifyInstancePlacementTenancyEnum {
+	return &e
+}
+
 func (e *GETModifyInstancePlacementTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = GETModifyInstancePlacementTenancyEnum(s)
+		*e = GETModifyInstancePlacementTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstancePlacementTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstancePlacementTenancyEnum: %v", v)
 	}
 }
 
@@ -84,17 +96,21 @@ const (
 	GETModifyInstancePlacementVersionEnumTwoThousandAndSixteen1115 GETModifyInstancePlacementVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyInstancePlacementVersionEnum) ToPointer() *GETModifyInstancePlacementVersionEnum {
+	return &e
+}
+
 func (e *GETModifyInstancePlacementVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyInstancePlacementVersionEnum(s)
+		*e = GETModifyInstancePlacementVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstancePlacementVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstancePlacementVersionEnum: %v", v)
 	}
 }
 

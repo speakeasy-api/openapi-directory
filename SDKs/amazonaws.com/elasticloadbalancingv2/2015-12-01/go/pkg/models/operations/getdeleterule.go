@@ -15,17 +15,21 @@ const (
 	GETDeleteRuleActionEnumDeleteRule GETDeleteRuleActionEnum = "DeleteRule"
 )
 
+func (e GETDeleteRuleActionEnum) ToPointer() *GETDeleteRuleActionEnum {
+	return &e
+}
+
 func (e *GETDeleteRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteRule":
-		*e = GETDeleteRuleActionEnum(s)
+		*e = GETDeleteRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteRuleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteRuleVersionEnumTwoThousandAndFifteen1201 GETDeleteRuleVersionEnum = "2015-12-01"
 )
 
+func (e GETDeleteRuleVersionEnum) ToPointer() *GETDeleteRuleVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteRuleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = GETDeleteRuleVersionEnum(s)
+		*e = GETDeleteRuleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteRuleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteRuleVersionEnum: %v", v)
 	}
 }
 

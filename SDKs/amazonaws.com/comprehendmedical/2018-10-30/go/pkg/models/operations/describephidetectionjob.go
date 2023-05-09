@@ -16,17 +16,21 @@ const (
 	DescribePHIDetectionJobXAmzTargetEnumComprehendMedical20181030DescribePhiDetectionJob DescribePHIDetectionJobXAmzTargetEnum = "ComprehendMedical_20181030.DescribePHIDetectionJob"
 )
 
+func (e DescribePHIDetectionJobXAmzTargetEnum) ToPointer() *DescribePHIDetectionJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribePHIDetectionJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComprehendMedical_20181030.DescribePHIDetectionJob":
-		*e = DescribePHIDetectionJobXAmzTargetEnum(s)
+		*e = DescribePHIDetectionJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribePHIDetectionJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribePHIDetectionJobXAmzTargetEnum: %v", v)
 	}
 }
 

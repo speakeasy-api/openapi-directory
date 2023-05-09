@@ -16,21 +16,25 @@ const (
 	RoleKindEnumClusterRole     RoleKindEnum = "CLUSTER_ROLE"
 )
 
+func (e RoleKindEnum) ToPointer() *RoleKindEnum {
+	return &e
+}
+
 func (e *RoleKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KIND_UNSPECIFIED":
 		fallthrough
 	case "ROLE":
 		fallthrough
 	case "CLUSTER_ROLE":
-		*e = RoleKindEnum(s)
+		*e = RoleKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoleKindEnum: %s", s)
+		return fmt.Errorf("invalid value for RoleKindEnum: %v", v)
 	}
 }
 

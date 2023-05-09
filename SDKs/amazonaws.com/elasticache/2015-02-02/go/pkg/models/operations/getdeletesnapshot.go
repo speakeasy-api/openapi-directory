@@ -15,17 +15,21 @@ const (
 	GETDeleteSnapshotActionEnumDeleteSnapshot GETDeleteSnapshotActionEnum = "DeleteSnapshot"
 )
 
+func (e GETDeleteSnapshotActionEnum) ToPointer() *GETDeleteSnapshotActionEnum {
+	return &e
+}
+
 func (e *GETDeleteSnapshotActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteSnapshot":
-		*e = GETDeleteSnapshotActionEnum(s)
+		*e = GETDeleteSnapshotActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteSnapshotActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteSnapshotActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteSnapshotVersionEnumTwoThousandAndFifteen0202 GETDeleteSnapshotVersionEnum = "2015-02-02"
 )
 
+func (e GETDeleteSnapshotVersionEnum) ToPointer() *GETDeleteSnapshotVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteSnapshotVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = GETDeleteSnapshotVersionEnum(s)
+		*e = GETDeleteSnapshotVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteSnapshotVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteSnapshotVersionEnum: %v", v)
 	}
 }
 

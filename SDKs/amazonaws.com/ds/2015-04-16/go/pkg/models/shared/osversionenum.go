@@ -14,18 +14,22 @@ const (
 	OSVersionEnumServer2019 OSVersionEnum = "SERVER_2019"
 )
 
+func (e OSVersionEnum) ToPointer() *OSVersionEnum {
+	return &e
+}
+
 func (e *OSVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVER_2012":
 		fallthrough
 	case "SERVER_2019":
-		*e = OSVersionEnum(s)
+		*e = OSVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OSVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for OSVersionEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	ImageSelectorTypeEnumProducerTimestamp ImageSelectorTypeEnum = "PRODUCER_TIMESTAMP"
 )
 
+func (e ImageSelectorTypeEnum) ToPointer() *ImageSelectorTypeEnum {
+	return &e
+}
+
 func (e *ImageSelectorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVER_TIMESTAMP":
 		fallthrough
 	case "PRODUCER_TIMESTAMP":
-		*e = ImageSelectorTypeEnum(s)
+		*e = ImageSelectorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageSelectorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageSelectorTypeEnum: %v", v)
 	}
 }

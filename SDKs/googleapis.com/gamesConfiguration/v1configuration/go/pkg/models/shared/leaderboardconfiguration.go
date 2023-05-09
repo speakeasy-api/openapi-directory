@@ -15,21 +15,25 @@ const (
 	LeaderboardConfigurationScoreOrderEnumSmallerIsBetter       LeaderboardConfigurationScoreOrderEnum = "SMALLER_IS_BETTER"
 )
 
+func (e LeaderboardConfigurationScoreOrderEnum) ToPointer() *LeaderboardConfigurationScoreOrderEnum {
+	return &e
+}
+
 func (e *LeaderboardConfigurationScoreOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCORE_ORDER_UNSPECIFIED":
 		fallthrough
 	case "LARGER_IS_BETTER":
 		fallthrough
 	case "SMALLER_IS_BETTER":
-		*e = LeaderboardConfigurationScoreOrderEnum(s)
+		*e = LeaderboardConfigurationScoreOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LeaderboardConfigurationScoreOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for LeaderboardConfigurationScoreOrderEnum: %v", v)
 	}
 }
 

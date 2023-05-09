@@ -21,12 +21,16 @@ const (
 	GoogleCloudRunV2ExecutionLaunchStageEnumDeprecated             GoogleCloudRunV2ExecutionLaunchStageEnum = "DEPRECATED"
 )
 
+func (e GoogleCloudRunV2ExecutionLaunchStageEnum) ToPointer() *GoogleCloudRunV2ExecutionLaunchStageEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2ExecutionLaunchStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_STAGE_UNSPECIFIED":
 		fallthrough
 	case "UNIMPLEMENTED":
@@ -42,16 +46,16 @@ func (e *GoogleCloudRunV2ExecutionLaunchStageEnum) UnmarshalJSON(data []byte) er
 	case "GA":
 		fallthrough
 	case "DEPRECATED":
-		*e = GoogleCloudRunV2ExecutionLaunchStageEnum(s)
+		*e = GoogleCloudRunV2ExecutionLaunchStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2ExecutionLaunchStageEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2ExecutionLaunchStageEnum: %v", v)
 	}
 }
 
 // GoogleCloudRunV2Execution - Execution represents the configuration of a single execution. A execution an immutable resource that references a container image which is run to completion.
 type GoogleCloudRunV2Execution struct {
-	// KRM-style annotations for the resource.
+	// Output only. Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// Output only. The number of tasks which reached phase Cancelled.
 	CancelledCount *int `json:"cancelledCount,omitempty"`
@@ -73,7 +77,7 @@ type GoogleCloudRunV2Execution struct {
 	Generation *string `json:"generation,omitempty"`
 	// Output only. The name of the parent Job.
 	Job *string `json:"job,omitempty"`
-	// KRM-style labels for the resource. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
+	// Output only. Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
 	Labels map[string]string `json:"labels,omitempty"`
 	// The least stable launch stage needed to create this resource, as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used as input. For example, if ALPHA was provided as input in the parent resource, but only BETA and GA-level features are were, this field will be BETA.
 	LaunchStage *GoogleCloudRunV2ExecutionLaunchStageEnum `json:"launchStage,omitempty"`
@@ -83,7 +87,7 @@ type GoogleCloudRunV2Execution struct {
 	Name *string `json:"name,omitempty"`
 	// Output only. The generation of this Execution. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
 	ObservedGeneration *string `json:"observedGeneration,omitempty"`
-	// Output only. Specifies the maximum desired number of tasks the execution should run at any given time. Must be <= task_count. The actual number of tasks running in steady state will be less than this number when ((.spec.task_count - .status.successful) < .spec.parallelism), i.e. when the work left to do is less than max parallelism. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+	// Output only. Specifies the maximum desired number of tasks the execution should run at any given time. Must be <= task_count. The actual number of tasks running in steady state will be less than this number when ((.spec.task_count - .status.successful) < .spec.parallelism), i.e. when the work left to do is less than max parallelism.
 	Parallelism *int `json:"parallelism,omitempty"`
 	// Output only. Indicates whether the resource's reconciliation is still in progress. See comments in `Job.reconciling` for additional information on reconciliation process in Cloud Run.
 	Reconciling *bool `json:"reconciling,omitempty"`
@@ -97,7 +101,7 @@ type GoogleCloudRunV2Execution struct {
 	StartTime *string `json:"startTime,omitempty"`
 	// Output only. The number of tasks which reached phase Succeeded.
 	SucceededCount *int `json:"succeededCount,omitempty"`
-	// Output only. Specifies the desired number of tasks the execution should run. Setting to 1 means that parallelism is limited to 1 and the success of that task signals the success of the execution. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
+	// Output only. Specifies the desired number of tasks the execution should run. Setting to 1 means that parallelism is limited to 1 and the success of that task signals the success of the execution.
 	TaskCount *int `json:"taskCount,omitempty"`
 	// TaskTemplate describes the data a task should have when created from a template.
 	Template *GoogleCloudRunV2TaskTemplate `json:"template,omitempty"`

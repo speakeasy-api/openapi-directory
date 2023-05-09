@@ -16,17 +16,21 @@ const (
 	AssociateApplicationToEntitlementXAmzTargetEnumPhotonAdminProxyServiceAssociateApplicationToEntitlement AssociateApplicationToEntitlementXAmzTargetEnum = "PhotonAdminProxyService.AssociateApplicationToEntitlement"
 )
 
+func (e AssociateApplicationToEntitlementXAmzTargetEnum) ToPointer() *AssociateApplicationToEntitlementXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateApplicationToEntitlementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.AssociateApplicationToEntitlement":
-		*e = AssociateApplicationToEntitlementXAmzTargetEnum(s)
+		*e = AssociateApplicationToEntitlementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateApplicationToEntitlementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateApplicationToEntitlementXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -55,6 +56,7 @@ pkg/models/shared/monitoringconfiguration.go
 pkg/models/shared/s3monitoringconfiguration.go
 pkg/models/shared/managedpersistencemonitoringconfiguration.go
 pkg/models/shared/configuration.go
+pkg/models/shared/resourceutilization.go
 pkg/models/shared/listapplicationsresponse.go
 pkg/models/shared/applicationsummary.go
 pkg/models/shared/listjobrunsresponse.go
@@ -63,4 +65,5 @@ pkg/models/shared/listtagsforresourceresponse.go
 pkg/models/shared/startjobrunresponse.go
 pkg/models/shared/updateapplicationresponse.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

@@ -35,7 +35,10 @@ func newCategory(defaultClient, securityClient HTTPClient, serverURL, language, 
 // List categories
 func (s *category) CategoriesAll(ctx context.Context, request operations.CategoriesAllRequest) (*operations.CategoriesAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/categories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/categories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *category) CategoriesAll(ctx context.Context, request operations.Categor
 // Get category
 func (s *category) CategoriesOne(ctx context.Context, request operations.CategoriesOneRequest) (*operations.CategoriesOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/categories/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/categories/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *category) CategoriesOne(ctx context.Context, request operations.Categor
 // List category listings
 func (s *category) CategoryListingsAll(ctx context.Context, request operations.CategoryListingsAllRequest) (*operations.CategoryListingsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/categories/{id}/listings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/categories/{id}/listings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

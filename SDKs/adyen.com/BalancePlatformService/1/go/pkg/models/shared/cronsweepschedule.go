@@ -30,12 +30,16 @@ const (
 	CronSweepScheduleTypeEnumCron    CronSweepScheduleTypeEnum = "cron"
 )
 
+func (e CronSweepScheduleTypeEnum) ToPointer() *CronSweepScheduleTypeEnum {
+	return &e
+}
+
 func (e *CronSweepScheduleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "daily":
 		fallthrough
 	case "weekly":
@@ -45,10 +49,10 @@ func (e *CronSweepScheduleTypeEnum) UnmarshalJSON(data []byte) error {
 	case "balance":
 		fallthrough
 	case "cron":
-		*e = CronSweepScheduleTypeEnum(s)
+		*e = CronSweepScheduleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CronSweepScheduleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CronSweepScheduleTypeEnum: %v", v)
 	}
 }
 

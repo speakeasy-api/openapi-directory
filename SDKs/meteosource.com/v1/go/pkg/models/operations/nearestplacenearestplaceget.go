@@ -26,12 +26,16 @@ const (
 	NearestPlaceNearestPlaceGetLanguageLanguageEnumPt NearestPlaceNearestPlaceGetLanguageLanguageEnum = "pt"
 )
 
+func (e NearestPlaceNearestPlaceGetLanguageLanguageEnum) ToPointer() *NearestPlaceNearestPlaceGetLanguageLanguageEnum {
+	return &e
+}
+
 func (e *NearestPlaceNearestPlaceGetLanguageLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cs":
 		fallthrough
 	case "en":
@@ -45,10 +49,10 @@ func (e *NearestPlaceNearestPlaceGetLanguageLanguageEnum) UnmarshalJSON(data []b
 	case "pl":
 		fallthrough
 	case "pt":
-		*e = NearestPlaceNearestPlaceGetLanguageLanguageEnum(s)
+		*e = NearestPlaceNearestPlaceGetLanguageLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NearestPlaceNearestPlaceGetLanguageLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for NearestPlaceNearestPlaceGetLanguageLanguageEnum: %v", v)
 	}
 }
 

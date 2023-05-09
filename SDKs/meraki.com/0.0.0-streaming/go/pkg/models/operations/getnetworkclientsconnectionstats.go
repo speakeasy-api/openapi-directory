@@ -16,19 +16,23 @@ const (
 	GetNetworkClientsConnectionStatsBandEnumFive GetNetworkClientsConnectionStatsBandEnum = "5"
 )
 
+func (e GetNetworkClientsConnectionStatsBandEnum) ToPointer() *GetNetworkClientsConnectionStatsBandEnum {
+	return &e
+}
+
 func (e *GetNetworkClientsConnectionStatsBandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2.4":
 		fallthrough
 	case "5":
-		*e = GetNetworkClientsConnectionStatsBandEnum(s)
+		*e = GetNetworkClientsConnectionStatsBandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNetworkClientsConnectionStatsBandEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNetworkClientsConnectionStatsBandEnum: %v", v)
 	}
 }
 

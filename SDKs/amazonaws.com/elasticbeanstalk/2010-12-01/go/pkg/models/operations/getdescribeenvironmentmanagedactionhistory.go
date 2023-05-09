@@ -15,17 +15,21 @@ const (
 	GETDescribeEnvironmentManagedActionHistoryActionEnumDescribeEnvironmentManagedActionHistory GETDescribeEnvironmentManagedActionHistoryActionEnum = "DescribeEnvironmentManagedActionHistory"
 )
 
+func (e GETDescribeEnvironmentManagedActionHistoryActionEnum) ToPointer() *GETDescribeEnvironmentManagedActionHistoryActionEnum {
+	return &e
+}
+
 func (e *GETDescribeEnvironmentManagedActionHistoryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeEnvironmentManagedActionHistory":
-		*e = GETDescribeEnvironmentManagedActionHistoryActionEnum(s)
+		*e = GETDescribeEnvironmentManagedActionHistoryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEnvironmentManagedActionHistoryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEnvironmentManagedActionHistoryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeEnvironmentManagedActionHistoryVersionEnumTwoThousandAndTen1201 GETDescribeEnvironmentManagedActionHistoryVersionEnum = "2010-12-01"
 )
 
+func (e GETDescribeEnvironmentManagedActionHistoryVersionEnum) ToPointer() *GETDescribeEnvironmentManagedActionHistoryVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeEnvironmentManagedActionHistoryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETDescribeEnvironmentManagedActionHistoryVersionEnum(s)
+		*e = GETDescribeEnvironmentManagedActionHistoryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEnvironmentManagedActionHistoryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEnvironmentManagedActionHistoryVersionEnum: %v", v)
 	}
 }
 

@@ -45,7 +45,10 @@ func newPayment(defaultClient, securityClient HTTPClient, serverURL, language, s
 // | `paymentId` | string | Payment ID |
 func (s *payment) SendPaymentNotification2(ctx context.Context, request operations.SendPaymentNotification2Request) (*operations.SendPaymentNotification2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/payment/{paymentId}/notify-payment", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/payment/{paymentId}/notify-payment", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

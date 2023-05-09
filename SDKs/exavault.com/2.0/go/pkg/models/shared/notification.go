@@ -13,17 +13,21 @@ const (
 	NotificationRelationshipsOwnerUserDataTypeEnumUser NotificationRelationshipsOwnerUserDataTypeEnum = "user"
 )
 
+func (e NotificationRelationshipsOwnerUserDataTypeEnum) ToPointer() *NotificationRelationshipsOwnerUserDataTypeEnum {
+	return &e
+}
+
 func (e *NotificationRelationshipsOwnerUserDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
-		*e = NotificationRelationshipsOwnerUserDataTypeEnum(s)
+		*e = NotificationRelationshipsOwnerUserDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationRelationshipsOwnerUserDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationRelationshipsOwnerUserDataTypeEnum: %v", v)
 	}
 }
 

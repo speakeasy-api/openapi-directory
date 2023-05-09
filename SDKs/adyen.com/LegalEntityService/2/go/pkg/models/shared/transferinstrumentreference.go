@@ -9,4 +9,6 @@ type TransferInstrumentReference struct {
 	ID string `json:"id"`
 	// Four last digits of the bank account number.
 	RealLastFour *string `json:"realLastFour,omitempty"`
+	// Identifies if the TI was created from a trusted source.
+	TrustedSource *bool `json:"trustedSource,omitempty"`
 }

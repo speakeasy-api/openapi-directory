@@ -16,21 +16,25 @@ const (
 	AuthorizationPolicyActionEnumDeny              AuthorizationPolicyActionEnum = "DENY"
 )
 
+func (e AuthorizationPolicyActionEnum) ToPointer() *AuthorizationPolicyActionEnum {
+	return &e
+}
+
 func (e *AuthorizationPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_UNSPECIFIED":
 		fallthrough
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = AuthorizationPolicyActionEnum(s)
+		*e = AuthorizationPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizationPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizationPolicyActionEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ApplicationEnumMicrosoftOffice2019 ApplicationEnum = "Microsoft_Office_2019"
 )
 
+func (e ApplicationEnum) ToPointer() *ApplicationEnum {
+	return &e
+}
+
 func (e *ApplicationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Microsoft_Office_2016":
 		fallthrough
 	case "Microsoft_Office_2019":
-		*e = ApplicationEnum(s)
+		*e = ApplicationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationEnum: %v", v)
 	}
 }

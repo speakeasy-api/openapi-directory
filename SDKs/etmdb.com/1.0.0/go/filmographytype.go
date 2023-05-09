@@ -41,7 +41,10 @@ func newFilmographyType(defaultClient, securityClient HTTPClient, serverURL, lan
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *filmographyType) FilmographyTypeSearchRead(ctx context.Context, request operations.FilmographyTypeSearchReadRequest) (*operations.FilmographyTypeSearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/filmography-type/search/{filmography_description}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/filmography-type/search/{filmography_description}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

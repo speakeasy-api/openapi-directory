@@ -14,18 +14,22 @@ const (
 	SamplingStrategyNameEnumFixedRate   SamplingStrategyNameEnum = "FixedRate"
 )
 
+func (e SamplingStrategyNameEnum) ToPointer() *SamplingStrategyNameEnum {
+	return &e
+}
+
 func (e *SamplingStrategyNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PartialScan":
 		fallthrough
 	case "FixedRate":
-		*e = SamplingStrategyNameEnum(s)
+		*e = SamplingStrategyNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SamplingStrategyNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SamplingStrategyNameEnum: %v", v)
 	}
 }

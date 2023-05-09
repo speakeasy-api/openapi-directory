@@ -16,17 +16,21 @@ const (
 	DescribeAliasXAmzTargetEnumGameLiftDescribeAlias DescribeAliasXAmzTargetEnum = "GameLift.DescribeAlias"
 )
 
+func (e DescribeAliasXAmzTargetEnum) ToPointer() *DescribeAliasXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAliasXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DescribeAlias":
-		*e = DescribeAliasXAmzTargetEnum(s)
+		*e = DescribeAliasXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAliasXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAliasXAmzTargetEnum: %v", v)
 	}
 }
 

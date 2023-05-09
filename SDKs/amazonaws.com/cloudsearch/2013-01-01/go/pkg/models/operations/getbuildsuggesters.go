@@ -15,17 +15,21 @@ const (
 	GETBuildSuggestersActionEnumBuildSuggesters GETBuildSuggestersActionEnum = "BuildSuggesters"
 )
 
+func (e GETBuildSuggestersActionEnum) ToPointer() *GETBuildSuggestersActionEnum {
+	return &e
+}
+
 func (e *GETBuildSuggestersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BuildSuggesters":
-		*e = GETBuildSuggestersActionEnum(s)
+		*e = GETBuildSuggestersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETBuildSuggestersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETBuildSuggestersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETBuildSuggestersVersionEnumTwoThousandAndThirteen0101 GETBuildSuggestersVersionEnum = "2013-01-01"
 )
 
+func (e GETBuildSuggestersVersionEnum) ToPointer() *GETBuildSuggestersVersionEnum {
+	return &e
+}
+
 func (e *GETBuildSuggestersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = GETBuildSuggestersVersionEnum(s)
+		*e = GETBuildSuggestersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETBuildSuggestersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETBuildSuggestersVersionEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newMember(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // CreateMember - Create a member
 func (s *member) CreateMember(ctx context.Context, request operations.CreateMemberRequest) (*operations.CreateMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *member) CreateMember(ctx context.Context, request operations.CreateMemb
 // DeleteMember - Delete a member
 func (s *member) DeleteMember(ctx context.Context, request operations.DeleteMemberRequest) (*operations.DeleteMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members/{member_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members/{member_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *member) DeleteMember(ctx context.Context, request operations.DeleteMemb
 // GetMember - Retrieve a member
 func (s *member) GetMember(ctx context.Context, request operations.GetMemberRequest) (*operations.GetMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members/{member_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members/{member_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -172,9 +181,14 @@ func (s *member) GetMember(ctx context.Context, request operations.GetMemberRequ
 
 // GetMembers - List members
 // This endpoint is **DEPRECATED**. Please use [/v0.2/members](/api/conversation.v2#get-members).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *member) GetMembers(ctx context.Context, request operations.GetMembersRequest) (*operations.GetMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -218,7 +232,10 @@ func (s *member) GetMembers(ctx context.Context, request operations.GetMembersRe
 // UpdateMember - Update a member
 func (s *member) UpdateMember(ctx context.Context, request operations.UpdateMemberRequest) (*operations.UpdateMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members/{member_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/members/{member_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

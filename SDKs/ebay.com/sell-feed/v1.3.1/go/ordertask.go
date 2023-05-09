@@ -88,7 +88,10 @@ func (s *orderTask) CreateOrderTask(ctx context.Context, request shared.CreateOr
 // GetOrderTask - This method retrieves the task details and status of the specified task. The input is <strong>task_id</strong>. <p>For details about how this method is used, see <a href="/api-docs/sell/static/orders/generating-and-retrieving-order-reports.html">Working with Order Feeds</a> in the Selling Integration Guide.  </p>
 func (s *orderTask) GetOrderTask(ctx context.Context, request operations.GetOrderTaskRequest, security operations.GetOrderTaskSecurity) (*operations.GetOrderTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/order_task/{task_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/order_task/{task_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

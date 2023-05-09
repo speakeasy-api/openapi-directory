@@ -34,7 +34,10 @@ func newMarketplacesChannelCatalogsSettings(defaultClient, securityClient HTTPCl
 // GetChannelCatalogMarketplaceProperties - Get the marketplace properties for a channel catalog
 func (s *marketplacesChannelCatalogsSettings) GetChannelCatalogMarketplaceProperties(ctx context.Context, request operations.GetChannelCatalogMarketplacePropertiesRequest) (*operations.GetChannelCatalogMarketplacePropertiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/properties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/properties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -98,7 +101,10 @@ func (s *marketplacesChannelCatalogsSettings) GetChannelCatalogMarketplaceProper
 // GetChannelCatalogMarketplaceSettings - Get the marketplace settings for a channel catalog
 func (s *marketplacesChannelCatalogsSettings) GetChannelCatalogMarketplaceSettings(ctx context.Context, request operations.GetChannelCatalogMarketplaceSettingsRequest) (*operations.GetChannelCatalogMarketplaceSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -158,7 +164,10 @@ func (s *marketplacesChannelCatalogsSettings) GetChannelCatalogMarketplaceSettin
 // Partial update accepted.
 func (s *marketplacesChannelCatalogsSettings) SetChannelCatalogMarketplaceSettings(ctx context.Context, request operations.SetChannelCatalogMarketplaceSettingsRequest) (*operations.SetChannelCatalogMarketplaceSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetChannelCatalogMarketplaceSettingsRequest", "json")
 	if err != nil {

@@ -2,7 +2,7 @@
 
 package shared
 
-// EndUserAgreementRequest - EndUserAgreement.
+// EndUserAgreementRequest - Represents an end-user agreement.
 type EndUserAgreementRequest struct {
 	// Array containing one or several values of ['balances', 'details', 'transactions']
 	AccessScope [][]interface{} `json:"access_scope,omitempty" form:"name=access_scope,json" multipartForm:"name=access_scope,json"`

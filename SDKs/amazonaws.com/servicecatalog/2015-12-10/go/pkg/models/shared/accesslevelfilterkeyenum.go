@@ -15,20 +15,24 @@ const (
 	AccessLevelFilterKeyEnumUser    AccessLevelFilterKeyEnum = "User"
 )
 
+func (e AccessLevelFilterKeyEnum) ToPointer() *AccessLevelFilterKeyEnum {
+	return &e
+}
+
 func (e *AccessLevelFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Account":
 		fallthrough
 	case "Role":
 		fallthrough
 	case "User":
-		*e = AccessLevelFilterKeyEnum(s)
+		*e = AccessLevelFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessLevelFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessLevelFilterKeyEnum: %v", v)
 	}
 }

@@ -18,21 +18,25 @@ const (
 	ListLensesLensStatusEnumPublished ListLensesLensStatusEnum = "PUBLISHED"
 )
 
+func (e ListLensesLensStatusEnum) ToPointer() *ListLensesLensStatusEnum {
+	return &e
+}
+
 func (e *ListLensesLensStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "DRAFT":
 		fallthrough
 	case "PUBLISHED":
-		*e = ListLensesLensStatusEnum(s)
+		*e = ListLensesLensStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLensesLensStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLensesLensStatusEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	ListLensesLensTypeEnumCustomSelf   ListLensesLensTypeEnum = "CUSTOM_SELF"
 )
 
+func (e ListLensesLensTypeEnum) ToPointer() *ListLensesLensTypeEnum {
+	return &e
+}
+
 func (e *ListLensesLensTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_OFFICIAL":
 		fallthrough
 	case "CUSTOM_SHARED":
 		fallthrough
 	case "CUSTOM_SELF":
-		*e = ListLensesLensTypeEnum(s)
+		*e = ListLensesLensTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLensesLensTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLensesLensTypeEnum: %v", v)
 	}
 }
 

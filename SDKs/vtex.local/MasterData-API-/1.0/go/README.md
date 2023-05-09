@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/MasterData-API
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,15 +28,13 @@ func main() {
         }),
     )
 
-    req := operations.RetrieveattachmentRequest{
+    ctx := context.Background()
+    res, err := s.Attachments.Retrieveattachment(ctx, operations.RetrieveattachmentRequest{
         Acronym: "corrupti",
         Field: "provident",
         FileName: "distinctio",
-        ID: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Attachments.Retrieveattachment(ctx, req)
+        ID: "d9d8d69a-674e-40f4-a7cc-8796ed151a05",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -53,49 +50,49 @@ func main() {
 ## Available Resources and Operations
 
 
-### Attachments
+### [Attachments](docs/attachments/README.md)
 
-* `Retrieveattachment` - Retrieve attachment
-* `Saveattachment` - Save attachment
+* [Retrieveattachment](docs/attachments/README.md#retrieveattachment) - Retrieve attachment
+* [Saveattachment](docs/attachments/README.md#saveattachment) - Save attachment
 
-### Clusters
+### [Clusters](docs/clusters/README.md)
 
-* `ValidateDocumentbyClusters` - Validate Document by Clusters
+* [ValidateDocumentbyClusters](docs/clusters/README.md#validatedocumentbyclusters) - Validate Document by Clusters
 
-### DataEntities
+### [DataEntities](docs/dataentities/README.md)
 
-* `Getdataentitystructure` - Get data entity structure
-* `Listdataentities` - List data entities
+* [Getdataentitystructure](docs/dataentities/README.md#getdataentitystructure) - Get data entity structure
+* [Listdataentities](docs/dataentities/README.md#listdataentities) - List data entities
 
-### Documents
+### [Documents](docs/documents/README.md)
 
-* `Createnewdocument` - Create new document
-* `Createorupdateentiredocument` - Create or update entire document
-* `Createorupdatepartialdocument` - Create or update partial document
-* `Deletedocument` - Delete document
-* `Getdocument` - Get document
-* `Updateentiredocument` - Update entire document
-* `Updatepartialdocument` - Update partial document
+* [Createnewdocument](docs/documents/README.md#createnewdocument) - Create new document
+* [Createorupdateentiredocument](docs/documents/README.md#createorupdateentiredocument) - Create or update entire document
+* [Createorupdatepartialdocument](docs/documents/README.md#createorupdatepartialdocument) - Create or update partial document
+* [Deletedocument](docs/documents/README.md#deletedocument) - Delete document
+* [Getdocument](docs/documents/README.md#getdocument) - Get document
+* [Updateentiredocument](docs/documents/README.md#updateentiredocument) - Update entire document
+* [Updatepartialdocument](docs/documents/README.md#updatepartialdocument) - Update partial document
 
-### Score
+### [Score](docs/score/README.md)
 
-* `Deletescorebyfield` - Delete score by field
-* `Putscorebyfield` - Put score by field
-* `Putscores` - Put scores
+* [Deletescorebyfield](docs/score/README.md#deletescorebyfield) - Delete score by field
+* [Putscorebyfield](docs/score/README.md#putscorebyfield) - Put score by field
+* [Putscores](docs/score/README.md#putscores) - Put scores
 
-### Scroll
+### [Scroll](docs/scroll/README.md)
 
-* `Scrolldocuments` - Scroll documents
+* [Scrolldocuments](docs/scroll/README.md#scrolldocuments) - Scroll documents
 
-### Search
+### [Search](docs/search/README.md)
 
-* `Searchdocuments` - Search documents
+* [Searchdocuments](docs/search/README.md#searchdocuments) - Search documents
 
-### Versions
+### [Versions](docs/versions/README.md)
 
-* `Getversion` - Get version
-* `Listversions` - List versions
-* `Putversion` - Put version
+* [Getversion](docs/versions/README.md#getversion) - Get version
+* [Listversions](docs/versions/README.md#listversions) - List versions
+* [Putversion](docs/versions/README.md#putversion) - Put version
 <!-- End SDK Available Operations -->
 
 ### Maturity

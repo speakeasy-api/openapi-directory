@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/nba-v3-roto
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.PremiumNewsRequest{
-        Format: "json",
-    }
-
     ctx := context.Background()
-    res, err := s.PremiumNews(ctx, req)
+    res, err := s.PremiumNews(ctx, operations.PremiumNewsRequest{
+        Format: operations.PremiumNewsFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,11 +45,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `PremiumNews` - Premium News
-* `PremiumNewsByDate` - Premium News by Date
-* `PremiumNewsByPlayer` - Premium News by Player
+* [PremiumNews](docs/sdk/README.md#premiumnews) - Premium News
+* [PremiumNewsByDate](docs/sdk/README.md#premiumnewsbydate) - Premium News by Date
+* [PremiumNewsByPlayer](docs/sdk/README.md#premiumnewsbyplayer) - Premium News by Player
 <!-- End SDK Available Operations -->
 
 ### Maturity

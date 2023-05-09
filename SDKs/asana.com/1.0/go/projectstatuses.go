@@ -49,7 +49,10 @@ func newProjectStatuses(defaultClient, securityClient HTTPClient, serverURL, lan
 // Returns the full record of the newly created project status update.
 func (s *projectStatuses) CreateProjectStatusForProject(ctx context.Context, request operations.CreateProjectStatusForProjectRequest) (*operations.CreateProjectStatusForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/project_statuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/project_statuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -130,7 +133,10 @@ func (s *projectStatuses) CreateProjectStatusForProject(ctx context.Context, req
 // Returns an empty data record.
 func (s *projectStatuses) DeleteProjectStatus(ctx context.Context, request operations.DeleteProjectStatusRequest) (*operations.DeleteProjectStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project_statuses/{project_status_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/project_statuses/{project_status_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -199,7 +205,10 @@ func (s *projectStatuses) DeleteProjectStatus(ctx context.Context, request opera
 // Returns the complete record for a single status update.
 func (s *projectStatuses) GetProjectStatus(ctx context.Context, request operations.GetProjectStatusRequest) (*operations.GetProjectStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project_statuses/{project_status_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/project_statuses/{project_status_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -268,7 +277,10 @@ func (s *projectStatuses) GetProjectStatus(ctx context.Context, request operatio
 // Returns the compact project status update records for all updates on the project.
 func (s *projectStatuses) GetProjectStatusesForProject(ctx context.Context, request operations.GetProjectStatusesForProjectRequest) (*operations.GetProjectStatusesForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/project_statuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/project_statuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

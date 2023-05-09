@@ -16,17 +16,21 @@ const (
 	DeleteVoiceMessageSpendLimitOverrideXAmzTargetEnumPinpointSmsVoiceV2DeleteVoiceMessageSpendLimitOverride DeleteVoiceMessageSpendLimitOverrideXAmzTargetEnum = "PinpointSMSVoiceV2.DeleteVoiceMessageSpendLimitOverride"
 )
 
+func (e DeleteVoiceMessageSpendLimitOverrideXAmzTargetEnum) ToPointer() *DeleteVoiceMessageSpendLimitOverrideXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteVoiceMessageSpendLimitOverrideXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.DeleteVoiceMessageSpendLimitOverride":
-		*e = DeleteVoiceMessageSpendLimitOverrideXAmzTargetEnum(s)
+		*e = DeleteVoiceMessageSpendLimitOverrideXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVoiceMessageSpendLimitOverrideXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVoiceMessageSpendLimitOverrideXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -22,19 +22,23 @@ const (
 	GetSpacesIDGroupsGroupID200ApplicationJSONAccessesRightEnumWrite GetSpacesIDGroupsGroupID200ApplicationJSONAccessesRightEnum = "write"
 )
 
+func (e GetSpacesIDGroupsGroupID200ApplicationJSONAccessesRightEnum) ToPointer() *GetSpacesIDGroupsGroupID200ApplicationJSONAccessesRightEnum {
+	return &e
+}
+
 func (e *GetSpacesIDGroupsGroupID200ApplicationJSONAccessesRightEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = GetSpacesIDGroupsGroupID200ApplicationJSONAccessesRightEnum(s)
+		*e = GetSpacesIDGroupsGroupID200ApplicationJSONAccessesRightEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesIDGroupsGroupID200ApplicationJSONAccessesRightEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesIDGroupsGroupID200ApplicationJSONAccessesRightEnum: %v", v)
 	}
 }
 

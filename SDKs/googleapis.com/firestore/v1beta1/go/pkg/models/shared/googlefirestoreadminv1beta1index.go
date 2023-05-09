@@ -17,12 +17,16 @@ const (
 	GoogleFirestoreAdminV1beta1IndexStateEnumError            GoogleFirestoreAdminV1beta1IndexStateEnum = "ERROR"
 )
 
+func (e GoogleFirestoreAdminV1beta1IndexStateEnum) ToPointer() *GoogleFirestoreAdminV1beta1IndexStateEnum {
+	return &e
+}
+
 func (e *GoogleFirestoreAdminV1beta1IndexStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -30,10 +34,10 @@ func (e *GoogleFirestoreAdminV1beta1IndexStateEnum) UnmarshalJSON(data []byte) e
 	case "READY":
 		fallthrough
 	case "ERROR":
-		*e = GoogleFirestoreAdminV1beta1IndexStateEnum(s)
+		*e = GoogleFirestoreAdminV1beta1IndexStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1beta1IndexStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1beta1IndexStateEnum: %v", v)
 	}
 }
 

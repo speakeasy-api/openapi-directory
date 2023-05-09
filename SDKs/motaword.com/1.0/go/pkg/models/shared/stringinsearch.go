@@ -16,19 +16,23 @@ const (
 	StringInSearchTypeEnumImportedTm   StringInSearchTypeEnum = "IMPORTED_TM"
 )
 
+func (e StringInSearchTypeEnum) ToPointer() *StringInSearchTypeEnum {
+	return &e
+}
+
 func (e *StringInSearchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCAL_PROJECT":
 		fallthrough
 	case "IMPORTED_TM":
-		*e = StringInSearchTypeEnum(s)
+		*e = StringInSearchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StringInSearchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StringInSearchTypeEnum: %v", v)
 	}
 }
 

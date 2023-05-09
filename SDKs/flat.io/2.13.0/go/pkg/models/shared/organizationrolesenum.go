@@ -17,12 +17,16 @@ const (
 	OrganizationRolesEnumUser    OrganizationRolesEnum = "user"
 )
 
+func (e OrganizationRolesEnum) ToPointer() *OrganizationRolesEnum {
+	return &e
+}
+
 func (e *OrganizationRolesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin":
 		fallthrough
 	case "billing":
@@ -30,9 +34,9 @@ func (e *OrganizationRolesEnum) UnmarshalJSON(data []byte) error {
 	case "teacher":
 		fallthrough
 	case "user":
-		*e = OrganizationRolesEnum(s)
+		*e = OrganizationRolesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationRolesEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationRolesEnum: %v", v)
 	}
 }

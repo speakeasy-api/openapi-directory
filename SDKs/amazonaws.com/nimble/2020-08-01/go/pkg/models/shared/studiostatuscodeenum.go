@@ -32,12 +32,16 @@ const (
 	StudioStatusCodeEnumAwsStsRegionDisabled                 StudioStatusCodeEnum = "AWS_STS_REGION_DISABLED"
 )
 
+func (e StudioStatusCodeEnum) ToPointer() *StudioStatusCodeEnum {
+	return &e
+}
+
 func (e *StudioStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STUDIO_CREATED":
 		fallthrough
 	case "STUDIO_DELETED":
@@ -75,9 +79,9 @@ func (e *StudioStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "AWS_SSO_CONFIGURATION_REPAIR_IN_PROGRESS":
 		fallthrough
 	case "AWS_STS_REGION_DISABLED":
-		*e = StudioStatusCodeEnum(s)
+		*e = StudioStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StudioStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StudioStatusCodeEnum: %v", v)
 	}
 }

@@ -138,7 +138,10 @@ func (s *contactGroups) PeopleContactGroupsCreate(ctx context.Context, request o
 // PeopleContactGroupsDelete - Delete an existing contact group owned by the authenticated user by specifying a contact group resource name. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 func (s *contactGroups) PeopleContactGroupsDelete(ctx context.Context, request operations.PeopleContactGroupsDeleteRequest, security operations.PeopleContactGroupsDeleteSecurity) (*operations.PeopleContactGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -234,7 +237,10 @@ func (s *contactGroups) PeopleContactGroupsList(ctx context.Context, request ope
 // PeopleContactGroupsMembersModify - Modify the members of a contact group owned by the authenticated user. The only system contact groups that can have members added are `contactGroups/myContacts` and `contactGroups/starred`. Other system contact groups are deprecated and can only have contacts removed.
 func (s *contactGroups) PeopleContactGroupsMembersModify(ctx context.Context, request operations.PeopleContactGroupsMembersModifyRequest, security operations.PeopleContactGroupsMembersModifySecurity) (*operations.PeopleContactGroupsMembersModifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}/members:modify", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}/members:modify", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyContactGroupMembersRequest", "json")
 	if err != nil {
@@ -289,7 +295,10 @@ func (s *contactGroups) PeopleContactGroupsMembersModify(ctx context.Context, re
 // PeopleContactGroupsUpdate - Update the name of an existing contact group owned by the authenticated user. Updated contact group names must be unique to the users contact groups. Attempting to create a group with a duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 func (s *contactGroups) PeopleContactGroupsUpdate(ctx context.Context, request operations.PeopleContactGroupsUpdateRequest, security operations.PeopleContactGroupsUpdateSecurity) (*operations.PeopleContactGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateContactGroupRequestInput", "json")
 	if err != nil {

@@ -13,16 +13,20 @@ const (
 	RecipeProviderEnumService RecipeProviderEnum = "SERVICE"
 )
 
+func (e RecipeProviderEnum) ToPointer() *RecipeProviderEnum {
+	return &e
+}
+
 func (e *RecipeProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE":
-		*e = RecipeProviderEnum(s)
+		*e = RecipeProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecipeProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for RecipeProviderEnum: %v", v)
 	}
 }

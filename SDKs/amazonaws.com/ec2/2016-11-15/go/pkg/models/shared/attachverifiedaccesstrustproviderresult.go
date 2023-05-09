@@ -21,19 +21,23 @@ const (
 	AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnumCrowdstrike AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum = "crowdstrike"
 )
 
+func (e AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum) ToPointer() *AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "jamf":
 		fallthrough
 	case "crowdstrike":
-		*e = AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum(s)
+		*e = AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnumDevice AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum = "device"
 )
 
+func (e AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum) ToPointer() *AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "device":
-		*e = AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum(s)
+		*e = AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -69,19 +77,23 @@ const (
 	AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnumOidc              AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum = "oidc"
 )
 
+func (e AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum) ToPointer() *AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iam-identity-center":
 		fallthrough
 	case "oidc":
-		*e = AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum(s)
+		*e = AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProvidersUserTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -94,7 +106,7 @@ type AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccess
 	VerifiedAccessTrustProviderID *string
 }
 
-// AttachVerifiedAccessTrustProviderResultVerifiedAccessInstance - The ID of the Amazon Web Services Verified Access instance.
+// AttachVerifiedAccessTrustProviderResultVerifiedAccessInstance - The ID of the Verified Access instance.
 type AttachVerifiedAccessTrustProviderResultVerifiedAccessInstance struct {
 	CreationTime                 *string
 	Description                  *string
@@ -104,7 +116,7 @@ type AttachVerifiedAccessTrustProviderResultVerifiedAccessInstance struct {
 	VerifiedAccessTrustProviders []AttachVerifiedAccessTrustProviderResultVerifiedAccessInstanceVerifiedAccessTrustProviders
 }
 
-// AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions - The options for device-identity type trust provider.
+// AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions - The options for device-identity trust provider.
 type AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions struct {
 	TenantID *string
 }
@@ -117,23 +129,27 @@ const (
 	AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnumCrowdstrike AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum = "crowdstrike"
 )
 
+func (e AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum) ToPointer() *AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "jamf":
 		fallthrough
 	case "crowdstrike":
-		*e = AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum(s)
+		*e = AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum: %v", v)
 	}
 }
 
-// AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions - The OpenID Connect details for an <code>oidc</code>-type, user-identity based trust provider.
+// AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions - The options for an OpenID Connect-compatible user-identity trust provider.
 type AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions struct {
 	AuthorizationEndpoint *string
 	ClientID              *string
@@ -158,19 +174,23 @@ const (
 	AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnumDevice AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum = "device"
 )
 
+func (e AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum) ToPointer() *AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "device":
-		*e = AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum(s)
+		*e = AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -182,23 +202,27 @@ const (
 	AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnumOidc              AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum = "oidc"
 )
 
+func (e AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum) ToPointer() *AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iam-identity-center":
 		fallthrough
 	case "oidc":
-		*e = AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum(s)
+		*e = AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum: %v", v)
 	}
 }
 
-// AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider - The ID of the Amazon Web Services Verified Access trust provider.
+// AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider - The ID of the Verified Access trust provider.
 type AttachVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider struct {
 	CreationTime                  *string
 	Description                   *string

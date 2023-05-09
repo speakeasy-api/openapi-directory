@@ -19,12 +19,16 @@ const (
 	RegionEnumApSoutheast2 RegionEnum = "ap-southeast-2"
 )
 
+func (e RegionEnum) ToPointer() *RegionEnum {
+	return &e
+}
+
 func (e *RegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "us-east-1":
 		fallthrough
 	case "us-west-2":
@@ -38,9 +42,9 @@ func (e *RegionEnum) UnmarshalJSON(data []byte) error {
 	case "ap-northeast-1":
 		fallthrough
 	case "ap-southeast-2":
-		*e = RegionEnum(s)
+		*e = RegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegionEnum: %s", s)
+		return fmt.Errorf("invalid value for RegionEnum: %v", v)
 	}
 }

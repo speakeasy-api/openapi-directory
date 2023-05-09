@@ -15,17 +15,21 @@ const (
 	POSTCreateInstanceExportTaskActionEnumCreateInstanceExportTask POSTCreateInstanceExportTaskActionEnum = "CreateInstanceExportTask"
 )
 
+func (e POSTCreateInstanceExportTaskActionEnum) ToPointer() *POSTCreateInstanceExportTaskActionEnum {
+	return &e
+}
+
 func (e *POSTCreateInstanceExportTaskActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateInstanceExportTask":
-		*e = POSTCreateInstanceExportTaskActionEnum(s)
+		*e = POSTCreateInstanceExportTaskActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateInstanceExportTaskActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateInstanceExportTaskActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateInstanceExportTaskVersionEnumTwoThousandAndSixteen1115 POSTCreateInstanceExportTaskVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateInstanceExportTaskVersionEnum) ToPointer() *POSTCreateInstanceExportTaskVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateInstanceExportTaskVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateInstanceExportTaskVersionEnum(s)
+		*e = POSTCreateInstanceExportTaskVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateInstanceExportTaskVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateInstanceExportTaskVersionEnum: %v", v)
 	}
 }
 

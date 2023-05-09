@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/fungenerators.com/pirate/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetPirateGenerateInsultRequest{
-        Limit: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.Generation.GetPirateGenerateInsult(ctx, req, operations.GetPirateGenerateInsultSecurity{
+    res, err := s.Generation.GetPirateGenerateInsult(ctx, operations.GetPirateGenerateInsultRequest{
+        Limit: sdk.Int64(548814),
+    }, operations.GetPirateGenerateInsultSecurity{
         XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -47,15 +44,15 @@ func main() {
 ## Available Resources and Operations
 
 
-### Generation
+### [Generation](docs/generation/README.md)
 
-* `GetPirateGenerateInsult` - Generate random pirate insults.
-* `GetPirateGenerateLoremIpsum` - Generate pirate lorem ipsum.
-* `GetPirateGenerateName` - Generate random pirate names.
+* [GetPirateGenerateInsult](docs/generation/README.md#getpirategenerateinsult) - Generate random pirate insults.
+* [GetPirateGenerateLoremIpsum](docs/generation/README.md#getpirategenerateloremipsum) - Generate pirate lorem ipsum.
+* [GetPirateGenerateName](docs/generation/README.md#getpirategeneratename) - Generate random pirate names.
 
-### Translation
+### [Translation](docs/translation/README.md)
 
-* `GetPirateTranslate` - Translate from English to pirate.
+* [GetPirateTranslate](docs/translation/README.md#getpiratetranslate) - Translate from English to pirate.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -111,19 +111,23 @@ const (
 	AuditEventSourceEnumDevapi AuditEventSourceEnum = "DEVAPI"
 )
 
+func (e AuditEventSourceEnum) ToPointer() *AuditEventSourceEnum {
+	return &e
+}
+
 func (e *AuditEventSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CD":
 		fallthrough
 	case "DEVAPI":
-		*e = AuditEventSourceEnum(s)
+		*e = AuditEventSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditEventSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditEventSourceEnum: %v", v)
 	}
 }
 
@@ -135,19 +139,23 @@ const (
 	AuditEventSourceDescriptionEnumDeveloperAPI      AuditEventSourceDescriptionEnum = "Developer API"
 )
 
+func (e AuditEventSourceDescriptionEnum) ToPointer() *AuditEventSourceDescriptionEnum {
+	return &e
+}
+
 func (e *AuditEventSourceDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Customer Dashboard":
 		fallthrough
 	case "Developer API":
-		*e = AuditEventSourceDescriptionEnum(s)
+		*e = AuditEventSourceDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditEventSourceDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditEventSourceDescriptionEnum: %v", v)
 	}
 }
 

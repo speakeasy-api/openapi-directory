@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/media/1.0.2/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -40,12 +38,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DeleteAMediaItem` - Delete a media item
-* `ListAndSearchMediaItems` - List and search media items
-* `RetrieveAMediaItem` - Retrieve a media item
-* `UpdateAMediaItem` - Update a media item
+* [DeleteAMediaItem](docs/sdk/README.md#deleteamediaitem) - Delete a media item
+* [ListAndSearchMediaItems](docs/sdk/README.md#listandsearchmediaitems) - List and search media items
+* [RetrieveAMediaItem](docs/sdk/README.md#retrieveamediaitem) - Retrieve a media item
+* [UpdateAMediaItem](docs/sdk/README.md#updateamediaitem) - Update a media item
 <!-- End SDK Available Operations -->
 
 ### Maturity

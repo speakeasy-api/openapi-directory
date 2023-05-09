@@ -36,7 +36,10 @@ func newFilePayments(defaultClient, securityClient HTTPClient, serverURL, langua
 // CreateFilePaymentConsentsConsentIDFileJSON - Create File Payment Consents
 func (s *filePayments) CreateFilePaymentConsentsConsentIDFileJSON(ctx context.Context, request operations.CreateFilePaymentConsentsConsentIDFileJSONRequest, security operations.CreateFilePaymentConsentsConsentIDFileJSONSecurity) (*operations.CreateFilePaymentConsentsConsentIDFileJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}/file", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}/file", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -123,7 +126,10 @@ func (s *filePayments) CreateFilePaymentConsentsConsentIDFileJSON(ctx context.Co
 // CreateFilePaymentConsentsConsentIDFileRaw - Create File Payment Consents
 func (s *filePayments) CreateFilePaymentConsentsConsentIDFileRaw(ctx context.Context, request operations.CreateFilePaymentConsentsConsentIDFileRawRequest, security operations.CreateFilePaymentConsentsConsentIDFileRawSecurity) (*operations.CreateFilePaymentConsentsConsentIDFileRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}/file", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}/file", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -646,7 +652,10 @@ func (s *filePayments) CreateFilePaymentsRaw(ctx context.Context, request operat
 // GetFilePaymentConsentsConsentID - Get File Payment Consents
 func (s *filePayments) GetFilePaymentConsentsConsentID(ctx context.Context, request operations.GetFilePaymentConsentsConsentIDRequest, security operations.GetFilePaymentConsentsConsentIDSecurity) (*operations.GetFilePaymentConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -743,7 +752,10 @@ func (s *filePayments) GetFilePaymentConsentsConsentID(ctx context.Context, requ
 // GetFilePaymentConsentsConsentIDFile - Get File Payment Consents
 func (s *filePayments) GetFilePaymentConsentsConsentIDFile(ctx context.Context, request operations.GetFilePaymentConsentsConsentIDFileRequest, security operations.GetFilePaymentConsentsConsentIDFileSecurity) (*operations.GetFilePaymentConsentsConsentIDFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}/file", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file-payment-consents/{ConsentId}/file", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -840,7 +852,10 @@ func (s *filePayments) GetFilePaymentConsentsConsentIDFile(ctx context.Context, 
 // GetFilePaymentsFilePaymentID - Get File Payments
 func (s *filePayments) GetFilePaymentsFilePaymentID(ctx context.Context, request operations.GetFilePaymentsFilePaymentIDRequest, security operations.GetFilePaymentsFilePaymentIDSecurity) (*operations.GetFilePaymentsFilePaymentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payments/{FilePaymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file-payments/{FilePaymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -937,7 +952,10 @@ func (s *filePayments) GetFilePaymentsFilePaymentID(ctx context.Context, request
 // GetFilePaymentsFilePaymentIDReportFile - Get File Payments
 func (s *filePayments) GetFilePaymentsFilePaymentIDReportFile(ctx context.Context, request operations.GetFilePaymentsFilePaymentIDReportFileRequest, security operations.GetFilePaymentsFilePaymentIDReportFileSecurity) (*operations.GetFilePaymentsFilePaymentIDReportFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payments/{FilePaymentId}/report-file", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file-payments/{FilePaymentId}/report-file", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

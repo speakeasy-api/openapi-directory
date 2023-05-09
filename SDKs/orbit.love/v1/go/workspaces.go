@@ -32,7 +32,7 @@ func newWorkspaces(defaultClient, securityClient HTTPClient, serverURL, language
 }
 
 // GetWorkspaces - Get all workspaces for the current user
-func (s *workspaces) GetWorkspaces(ctx context.Context) (*operations.GetWorkspacesResponse, error) {
+func (s *workspaces) GetWorkspaces(ctx context.Context, security operations.GetWorkspacesSecurity) (*operations.GetWorkspacesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workspaces"
 
@@ -41,7 +41,7 @@ func (s *workspaces) GetWorkspaces(ctx context.Context) (*operations.GetWorkspac
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -69,7 +69,10 @@ func (s *workspaces) GetWorkspaces(ctx context.Context) (*operations.GetWorkspac
 // GetWorkspacesWorkspaceSlug - Get a workspace
 func (s *workspaces) GetWorkspacesWorkspaceSlug(ctx context.Context, request operations.GetWorkspacesWorkspaceSlugRequest, security operations.GetWorkspacesWorkspaceSlugSecurity) (*operations.GetWorkspacesWorkspaceSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

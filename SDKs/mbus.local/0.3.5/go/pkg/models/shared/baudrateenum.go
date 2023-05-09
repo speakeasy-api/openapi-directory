@@ -8,37 +8,41 @@ import (
 )
 
 // BaudrateEnum - Baudrate to use for the communication - valid values 300, 600, 1200, 2400, 4800, 9600
-type BaudrateEnum string
+type BaudrateEnum int
 
 const (
-	BaudrateEnumThreeHundred             BaudrateEnum = "300"
-	BaudrateEnumSixHundred               BaudrateEnum = "600"
-	BaudrateEnumOneThousandTwoHundred    BaudrateEnum = "1200"
-	BaudrateEnumTwoThousandFourHundred   BaudrateEnum = "2400"
-	BaudrateEnumFourThousandEightHundred BaudrateEnum = "4800"
-	BaudrateEnumNineThousandSixHundred   BaudrateEnum = "9600"
+	BaudrateEnumThreeHundred             BaudrateEnum = 300
+	BaudrateEnumSixHundred               BaudrateEnum = 600
+	BaudrateEnumOneThousandTwoHundred    BaudrateEnum = 1200
+	BaudrateEnumTwoThousandFourHundred   BaudrateEnum = 2400
+	BaudrateEnumFourThousandEightHundred BaudrateEnum = 4800
+	BaudrateEnumNineThousandSixHundred   BaudrateEnum = 9600
 )
 
+func (e BaudrateEnum) ToPointer() *BaudrateEnum {
+	return &e
+}
+
 func (e *BaudrateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "300":
+	switch v {
+	case 300:
 		fallthrough
-	case "600":
+	case 600:
 		fallthrough
-	case "1200":
+	case 1200:
 		fallthrough
-	case "2400":
+	case 2400:
 		fallthrough
-	case "4800":
+	case 4800:
 		fallthrough
-	case "9600":
-		*e = BaudrateEnum(s)
+	case 9600:
+		*e = BaudrateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BaudrateEnum: %s", s)
+		return fmt.Errorf("invalid value for BaudrateEnum: %v", v)
 	}
 }

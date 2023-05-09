@@ -17,12 +17,16 @@ const (
 	GetIosPostInstallAttributionRequestRetrievalMethodEnumExplicitStrongAfterWeakMatch  GetIosPostInstallAttributionRequestRetrievalMethodEnum = "EXPLICIT_STRONG_AFTER_WEAK_MATCH"
 )
 
+func (e GetIosPostInstallAttributionRequestRetrievalMethodEnum) ToPointer() *GetIosPostInstallAttributionRequestRetrievalMethodEnum {
+	return &e
+}
+
 func (e *GetIosPostInstallAttributionRequestRetrievalMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_PAYLOAD_RETRIEVAL_METHOD":
 		fallthrough
 	case "IMPLICIT_WEAK_MATCH":
@@ -30,10 +34,10 @@ func (e *GetIosPostInstallAttributionRequestRetrievalMethodEnum) UnmarshalJSON(d
 	case "EXPLICIT_WEAK_MATCH":
 		fallthrough
 	case "EXPLICIT_STRONG_AFTER_WEAK_MATCH":
-		*e = GetIosPostInstallAttributionRequestRetrievalMethodEnum(s)
+		*e = GetIosPostInstallAttributionRequestRetrievalMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIosPostInstallAttributionRequestRetrievalMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIosPostInstallAttributionRequestRetrievalMethodEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	GetIosPostInstallAttributionRequestVisualStyleEnumCustomStyle        GetIosPostInstallAttributionRequestVisualStyleEnum = "CUSTOM_STYLE"
 )
 
+func (e GetIosPostInstallAttributionRequestVisualStyleEnum) ToPointer() *GetIosPostInstallAttributionRequestVisualStyleEnum {
+	return &e
+}
+
 func (e *GetIosPostInstallAttributionRequestVisualStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_VISUAL_STYLE":
 		fallthrough
 	case "DEFAULT_STYLE":
 		fallthrough
 	case "CUSTOM_STYLE":
-		*e = GetIosPostInstallAttributionRequestVisualStyleEnum(s)
+		*e = GetIosPostInstallAttributionRequestVisualStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIosPostInstallAttributionRequestVisualStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIosPostInstallAttributionRequestVisualStyleEnum: %v", v)
 	}
 }
 

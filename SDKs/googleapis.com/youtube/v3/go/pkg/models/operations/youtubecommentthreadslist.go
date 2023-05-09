@@ -24,12 +24,16 @@ const (
 	YoutubeCommentThreadsListModerationStatusEnumRejected      YoutubeCommentThreadsListModerationStatusEnum = "rejected"
 )
 
+func (e YoutubeCommentThreadsListModerationStatusEnum) ToPointer() *YoutubeCommentThreadsListModerationStatusEnum {
+	return &e
+}
+
 func (e *YoutubeCommentThreadsListModerationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "published":
 		fallthrough
 	case "heldForReview":
@@ -37,10 +41,10 @@ func (e *YoutubeCommentThreadsListModerationStatusEnum) UnmarshalJSON(data []byt
 	case "likelySpam":
 		fallthrough
 	case "rejected":
-		*e = YoutubeCommentThreadsListModerationStatusEnum(s)
+		*e = YoutubeCommentThreadsListModerationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeCommentThreadsListModerationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeCommentThreadsListModerationStatusEnum: %v", v)
 	}
 }
 
@@ -53,21 +57,25 @@ const (
 	YoutubeCommentThreadsListOrderEnumRelevance        YoutubeCommentThreadsListOrderEnum = "relevance"
 )
 
+func (e YoutubeCommentThreadsListOrderEnum) ToPointer() *YoutubeCommentThreadsListOrderEnum {
+	return &e
+}
+
 func (e *YoutubeCommentThreadsListOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "orderUnspecified":
 		fallthrough
 	case "time":
 		fallthrough
 	case "relevance":
-		*e = YoutubeCommentThreadsListOrderEnum(s)
+		*e = YoutubeCommentThreadsListOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeCommentThreadsListOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeCommentThreadsListOrderEnum: %v", v)
 	}
 }
 
@@ -80,21 +88,25 @@ const (
 	YoutubeCommentThreadsListTextFormatEnumPlainText             YoutubeCommentThreadsListTextFormatEnum = "plainText"
 )
 
+func (e YoutubeCommentThreadsListTextFormatEnum) ToPointer() *YoutubeCommentThreadsListTextFormatEnum {
+	return &e
+}
+
 func (e *YoutubeCommentThreadsListTextFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "textFormatUnspecified":
 		fallthrough
 	case "html":
 		fallthrough
 	case "plainText":
-		*e = YoutubeCommentThreadsListTextFormatEnum(s)
+		*e = YoutubeCommentThreadsListTextFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeCommentThreadsListTextFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeCommentThreadsListTextFormatEnum: %v", v)
 	}
 }
 

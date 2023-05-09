@@ -17,19 +17,23 @@ const (
 	GetOperationsLogStatusNumEnumOne  GetOperationsLogStatusNumEnum = "1"
 )
 
+func (e GetOperationsLogStatusNumEnum) ToPointer() *GetOperationsLogStatusNumEnum {
+	return &e
+}
+
 func (e *GetOperationsLogStatusNumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "0":
 		fallthrough
 	case "1":
-		*e = GetOperationsLogStatusNumEnum(s)
+		*e = GetOperationsLogStatusNumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOperationsLogStatusNumEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOperationsLogStatusNumEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UnpeerVpcXAmzTargetEnumLightsail20161128UnpeerVpc UnpeerVpcXAmzTargetEnum = "Lightsail_20161128.UnpeerVpc"
 )
 
+func (e UnpeerVpcXAmzTargetEnum) ToPointer() *UnpeerVpcXAmzTargetEnum {
+	return &e
+}
+
 func (e *UnpeerVpcXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.UnpeerVpc":
-		*e = UnpeerVpcXAmzTargetEnum(s)
+		*e = UnpeerVpcXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UnpeerVpcXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UnpeerVpcXAmzTargetEnum: %v", v)
 	}
 }
 

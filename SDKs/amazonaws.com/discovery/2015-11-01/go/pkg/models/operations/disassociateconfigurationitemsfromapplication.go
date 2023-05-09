@@ -16,17 +16,21 @@ const (
 	DisassociateConfigurationItemsFromApplicationXAmzTargetEnumAwsPoseidonServiceV20151101DisassociateConfigurationItemsFromApplication DisassociateConfigurationItemsFromApplicationXAmzTargetEnum = "AWSPoseidonService_V2015_11_01.DisassociateConfigurationItemsFromApplication"
 )
 
+func (e DisassociateConfigurationItemsFromApplicationXAmzTargetEnum) ToPointer() *DisassociateConfigurationItemsFromApplicationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateConfigurationItemsFromApplicationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPoseidonService_V2015_11_01.DisassociateConfigurationItemsFromApplication":
-		*e = DisassociateConfigurationItemsFromApplicationXAmzTargetEnum(s)
+		*e = DisassociateConfigurationItemsFromApplicationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateConfigurationItemsFromApplicationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateConfigurationItemsFromApplicationXAmzTargetEnum: %v", v)
 	}
 }
 

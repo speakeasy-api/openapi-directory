@@ -16,17 +16,21 @@ const (
 	GetVirtualMachineXAmzTargetEnumBackupOnPremisesV20210101GetVirtualMachine GetVirtualMachineXAmzTargetEnum = "BackupOnPremises_v20210101.GetVirtualMachine"
 )
 
+func (e GetVirtualMachineXAmzTargetEnum) ToPointer() *GetVirtualMachineXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetVirtualMachineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.GetVirtualMachine":
-		*e = GetVirtualMachineXAmzTargetEnum(s)
+		*e = GetVirtualMachineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVirtualMachineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVirtualMachineXAmzTargetEnum: %v", v)
 	}
 }
 

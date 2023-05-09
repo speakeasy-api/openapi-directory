@@ -16,17 +16,21 @@ const (
 	ListWorkersWithQualificationTypeXAmzTargetEnumMTurkRequesterServiceV20170117ListWorkersWithQualificationType ListWorkersWithQualificationTypeXAmzTargetEnum = "MTurkRequesterServiceV20170117.ListWorkersWithQualificationType"
 )
 
+func (e ListWorkersWithQualificationTypeXAmzTargetEnum) ToPointer() *ListWorkersWithQualificationTypeXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListWorkersWithQualificationTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.ListWorkersWithQualificationType":
-		*e = ListWorkersWithQualificationTypeXAmzTargetEnum(s)
+		*e = ListWorkersWithQualificationTypeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListWorkersWithQualificationTypeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListWorkersWithQualificationTypeXAmzTargetEnum: %v", v)
 	}
 }
 

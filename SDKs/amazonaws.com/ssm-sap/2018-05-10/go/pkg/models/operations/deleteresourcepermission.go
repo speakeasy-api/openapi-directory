@@ -16,17 +16,21 @@ const (
 	DeleteResourcePermissionRequestBodyActionTypeEnumRestore DeleteResourcePermissionRequestBodyActionTypeEnum = "RESTORE"
 )
 
+func (e DeleteResourcePermissionRequestBodyActionTypeEnum) ToPointer() *DeleteResourcePermissionRequestBodyActionTypeEnum {
+	return &e
+}
+
 func (e *DeleteResourcePermissionRequestBodyActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESTORE":
-		*e = DeleteResourcePermissionRequestBodyActionTypeEnum(s)
+		*e = DeleteResourcePermissionRequestBodyActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteResourcePermissionRequestBodyActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteResourcePermissionRequestBodyActionTypeEnum: %v", v)
 	}
 }
 

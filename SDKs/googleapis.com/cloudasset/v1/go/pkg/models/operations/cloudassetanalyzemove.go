@@ -23,21 +23,25 @@ const (
 	CloudassetAnalyzeMoveViewEnumBasic                   CloudassetAnalyzeMoveViewEnum = "BASIC"
 )
 
+func (e CloudassetAnalyzeMoveViewEnum) ToPointer() *CloudassetAnalyzeMoveViewEnum {
+	return &e
+}
+
 func (e *CloudassetAnalyzeMoveViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANALYSIS_VIEW_UNSPECIFIED":
 		fallthrough
 	case "FULL":
 		fallthrough
 	case "BASIC":
-		*e = CloudassetAnalyzeMoveViewEnum(s)
+		*e = CloudassetAnalyzeMoveViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudassetAnalyzeMoveViewEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudassetAnalyzeMoveViewEnum: %v", v)
 	}
 }
 

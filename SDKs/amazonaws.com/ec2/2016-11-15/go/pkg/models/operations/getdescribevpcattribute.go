@@ -15,17 +15,21 @@ const (
 	GETDescribeVpcAttributeActionEnumDescribeVpcAttribute GETDescribeVpcAttributeActionEnum = "DescribeVpcAttribute"
 )
 
+func (e GETDescribeVpcAttributeActionEnum) ToPointer() *GETDescribeVpcAttributeActionEnum {
+	return &e
+}
+
 func (e *GETDescribeVpcAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeVpcAttribute":
-		*e = GETDescribeVpcAttributeActionEnum(s)
+		*e = GETDescribeVpcAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeVpcAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeVpcAttributeActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETDescribeVpcAttributeAttributeEnumEnableNetworkAddressUsageMetrics GETDescribeVpcAttributeAttributeEnum = "enableNetworkAddressUsageMetrics"
 )
 
+func (e GETDescribeVpcAttributeAttributeEnum) ToPointer() *GETDescribeVpcAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETDescribeVpcAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enableDnsSupport":
 		fallthrough
 	case "enableDnsHostnames":
 		fallthrough
 	case "enableNetworkAddressUsageMetrics":
-		*e = GETDescribeVpcAttributeAttributeEnum(s)
+		*e = GETDescribeVpcAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeVpcAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeVpcAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETDescribeVpcAttributeVersionEnumTwoThousandAndSixteen1115 GETDescribeVpcAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeVpcAttributeVersionEnum) ToPointer() *GETDescribeVpcAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeVpcAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeVpcAttributeVersionEnum(s)
+		*e = GETDescribeVpcAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeVpcAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeVpcAttributeVersionEnum: %v", v)
 	}
 }
 

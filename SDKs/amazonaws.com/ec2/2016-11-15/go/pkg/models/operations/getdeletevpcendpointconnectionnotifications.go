@@ -15,17 +15,21 @@ const (
 	GETDeleteVpcEndpointConnectionNotificationsActionEnumDeleteVpcEndpointConnectionNotifications GETDeleteVpcEndpointConnectionNotificationsActionEnum = "DeleteVpcEndpointConnectionNotifications"
 )
 
+func (e GETDeleteVpcEndpointConnectionNotificationsActionEnum) ToPointer() *GETDeleteVpcEndpointConnectionNotificationsActionEnum {
+	return &e
+}
+
 func (e *GETDeleteVpcEndpointConnectionNotificationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteVpcEndpointConnectionNotifications":
-		*e = GETDeleteVpcEndpointConnectionNotificationsActionEnum(s)
+		*e = GETDeleteVpcEndpointConnectionNotificationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVpcEndpointConnectionNotificationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVpcEndpointConnectionNotificationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteVpcEndpointConnectionNotificationsVersionEnumTwoThousandAndSixteen1115 GETDeleteVpcEndpointConnectionNotificationsVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteVpcEndpointConnectionNotificationsVersionEnum) ToPointer() *GETDeleteVpcEndpointConnectionNotificationsVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteVpcEndpointConnectionNotificationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteVpcEndpointConnectionNotificationsVersionEnum(s)
+		*e = GETDeleteVpcEndpointConnectionNotificationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVpcEndpointConnectionNotificationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVpcEndpointConnectionNotificationsVersionEnum: %v", v)
 	}
 }
 

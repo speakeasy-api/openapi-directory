@@ -16,17 +16,21 @@ const (
 	ListClusterJobsXAmzTargetEnumAwsieSnowballJobManagementServiceListClusterJobs ListClusterJobsXAmzTargetEnum = "AWSIESnowballJobManagementService.ListClusterJobs"
 )
 
+func (e ListClusterJobsXAmzTargetEnum) ToPointer() *ListClusterJobsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListClusterJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSIESnowballJobManagementService.ListClusterJobs":
-		*e = ListClusterJobsXAmzTargetEnum(s)
+		*e = ListClusterJobsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListClusterJobsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListClusterJobsXAmzTargetEnum: %v", v)
 	}
 }
 

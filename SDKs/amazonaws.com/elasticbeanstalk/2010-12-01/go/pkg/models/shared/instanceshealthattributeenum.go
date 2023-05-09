@@ -23,12 +23,16 @@ const (
 	InstancesHealthAttributeEnumAll                InstancesHealthAttributeEnum = "All"
 )
 
+func (e InstancesHealthAttributeEnum) ToPointer() *InstancesHealthAttributeEnum {
+	return &e
+}
+
 func (e *InstancesHealthAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HealthStatus":
 		fallthrough
 	case "Color":
@@ -50,9 +54,9 @@ func (e *InstancesHealthAttributeEnum) UnmarshalJSON(data []byte) error {
 	case "InstanceType":
 		fallthrough
 	case "All":
-		*e = InstancesHealthAttributeEnum(s)
+		*e = InstancesHealthAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstancesHealthAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstancesHealthAttributeEnum: %v", v)
 	}
 }

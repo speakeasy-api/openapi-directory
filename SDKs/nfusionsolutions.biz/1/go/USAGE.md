@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,16 +17,14 @@ func main() {
         }),
     )
 
-    req := operations.CurrenciesHistoryGETRequest{
-        End: "2021-10-25T05:21:43.948Z",
-        Format: "xml",
-        Interval: "quibusdam",
-        Pairs: "unde",
-        Start: "2021-05-14T08:28:11.899Z",
-    }
-
     ctx := context.Background()
-    res, err := s.Currencies.CurrenciesHistoryGET(ctx, req)
+    res, err := s.Currencies.CurrenciesHistoryGET(ctx, operations.CurrenciesHistoryGETRequest{
+        End: types.MustTimeFromString("2021-10-25T05:21:43.948Z"),
+        Format: operations.CurrenciesHistoryGETFormatEnumXML.ToPointer(),
+        Interval: sdk.String("quibusdam"),
+        Pairs: "unde",
+        Start: types.MustTimeFromString("2021-05-14T08:28:11.899Z"),
+    })
     if err != nil {
         log.Fatal(err)
     }

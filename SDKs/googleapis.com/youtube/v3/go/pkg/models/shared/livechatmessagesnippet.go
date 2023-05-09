@@ -30,12 +30,16 @@ const (
 	LiveChatMessageSnippetTypeEnumSuperStickerEvent           LiveChatMessageSnippetTypeEnum = "superStickerEvent"
 )
 
+func (e LiveChatMessageSnippetTypeEnum) ToPointer() *LiveChatMessageSnippetTypeEnum {
+	return &e
+}
+
 func (e *LiveChatMessageSnippetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalidType":
 		fallthrough
 	case "textMessageEvent":
@@ -67,10 +71,10 @@ func (e *LiveChatMessageSnippetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "superChatEvent":
 		fallthrough
 	case "superStickerEvent":
-		*e = LiveChatMessageSnippetTypeEnum(s)
+		*e = LiveChatMessageSnippetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveChatMessageSnippetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveChatMessageSnippetTypeEnum: %v", v)
 	}
 }
 

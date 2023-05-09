@@ -13,6 +13,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -98,4 +99,16 @@ pkg/models/shared/v3stopsbydistanceresponse.go
 pkg/models/shared/v3stopgeosearch.go
 pkg/models/shared/v3stopsonrouteresponse.go
 pkg/models/shared/v3stoponroute.go
+docs/sdk/README.md
+docs/departures/README.md
+docs/directions/README.md
+docs/disruptions/README.md
+docs/fareestimate/README.md
+docs/outlets/README.md
+docs/patterns/README.md
+docs/routetypes/README.md
+docs/routes/README.md
+docs/runs/README.md
+docs/search/README.md
+docs/stops/README.md
 USAGE.md

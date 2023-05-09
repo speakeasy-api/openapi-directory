@@ -18,12 +18,16 @@ const (
 	ProductViewAggregatedDestinationStatusEnumEligible                    ProductViewAggregatedDestinationStatusEnum = "ELIGIBLE"
 )
 
+func (e ProductViewAggregatedDestinationStatusEnum) ToPointer() *ProductViewAggregatedDestinationStatusEnum {
+	return &e
+}
+
 func (e *ProductViewAggregatedDestinationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGGREGATED_STATUS_UNSPECIFIED":
 		fallthrough
 	case "NOT_ELIGIBLE_OR_DISAPPROVED":
@@ -33,10 +37,10 @@ func (e *ProductViewAggregatedDestinationStatusEnum) UnmarshalJSON(data []byte) 
 	case "ELIGIBLE_LIMITED":
 		fallthrough
 	case "ELIGIBLE":
-		*e = ProductViewAggregatedDestinationStatusEnum(s)
+		*e = ProductViewAggregatedDestinationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductViewAggregatedDestinationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductViewAggregatedDestinationStatusEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	ProductViewChannelEnumOnline             ProductViewChannelEnum = "ONLINE"
 )
 
+func (e ProductViewChannelEnum) ToPointer() *ProductViewChannelEnum {
+	return &e
+}
+
 func (e *ProductViewChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHANNEL_UNSPECIFIED":
 		fallthrough
 	case "LOCAL":
 		fallthrough
 	case "ONLINE":
-		*e = ProductViewChannelEnum(s)
+		*e = ProductViewChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductViewChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductViewChannelEnum: %v", v)
 	}
 }
 

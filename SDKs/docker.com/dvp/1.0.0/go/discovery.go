@@ -36,7 +36,10 @@ func newDiscovery(defaultClient, securityClient HTTPClient, serverURL, language,
 // Gets metadata associated with specified namespace, including extra repos associated with the namespace
 func (s *discovery) GetNamespace(ctx context.Context, request operations.GetNamespaceRequest) (*operations.GetNamespaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/namespaces/{namespace}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/namespaces/{namespace}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

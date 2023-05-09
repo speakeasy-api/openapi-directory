@@ -62,12 +62,16 @@ const (
 	VerificationErrorCapabilitiesEnumWithdrawFromAtmInRestrictedCountriesConsumer      VerificationErrorCapabilitiesEnum = "withdrawFromAtmInRestrictedCountriesConsumer"
 )
 
+func (e VerificationErrorCapabilitiesEnum) ToPointer() *VerificationErrorCapabilitiesEnum {
+	return &e
+}
+
 func (e *VerificationErrorCapabilitiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "acceptExternalFunding":
 		fallthrough
 	case "acceptPspFunding":
@@ -167,10 +171,10 @@ func (e *VerificationErrorCapabilitiesEnum) UnmarshalJSON(data []byte) error {
 	case "withdrawFromAtmInRestrictedCountriesCommercial":
 		fallthrough
 	case "withdrawFromAtmInRestrictedCountriesConsumer":
-		*e = VerificationErrorCapabilitiesEnum(s)
+		*e = VerificationErrorCapabilitiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerificationErrorCapabilitiesEnum: %s", s)
+		return fmt.Errorf("invalid value for VerificationErrorCapabilitiesEnum: %v", v)
 	}
 }
 
@@ -183,21 +187,25 @@ const (
 	VerificationErrorTypeEnumPendingStatus VerificationErrorTypeEnum = "pendingStatus"
 )
 
+func (e VerificationErrorTypeEnum) ToPointer() *VerificationErrorTypeEnum {
+	return &e
+}
+
 func (e *VerificationErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dataMissing":
 		fallthrough
 	case "invalidInput":
 		fallthrough
 	case "pendingStatus":
-		*e = VerificationErrorTypeEnum(s)
+		*e = VerificationErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerificationErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VerificationErrorTypeEnum: %v", v)
 	}
 }
 

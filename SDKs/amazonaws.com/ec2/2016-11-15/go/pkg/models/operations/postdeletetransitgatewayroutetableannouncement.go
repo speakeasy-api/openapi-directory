@@ -15,17 +15,21 @@ const (
 	POSTDeleteTransitGatewayRouteTableAnnouncementActionEnumDeleteTransitGatewayRouteTableAnnouncement POSTDeleteTransitGatewayRouteTableAnnouncementActionEnum = "DeleteTransitGatewayRouteTableAnnouncement"
 )
 
+func (e POSTDeleteTransitGatewayRouteTableAnnouncementActionEnum) ToPointer() *POSTDeleteTransitGatewayRouteTableAnnouncementActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteTransitGatewayRouteTableAnnouncementActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteTransitGatewayRouteTableAnnouncement":
-		*e = POSTDeleteTransitGatewayRouteTableAnnouncementActionEnum(s)
+		*e = POSTDeleteTransitGatewayRouteTableAnnouncementActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteTransitGatewayRouteTableAnnouncementActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteTransitGatewayRouteTableAnnouncementActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteTransitGatewayRouteTableAnnouncementVersionEnumTwoThousandAndSixteen1115 POSTDeleteTransitGatewayRouteTableAnnouncementVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteTransitGatewayRouteTableAnnouncementVersionEnum) ToPointer() *POSTDeleteTransitGatewayRouteTableAnnouncementVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteTransitGatewayRouteTableAnnouncementVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteTransitGatewayRouteTableAnnouncementVersionEnum(s)
+		*e = POSTDeleteTransitGatewayRouteTableAnnouncementVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteTransitGatewayRouteTableAnnouncementVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteTransitGatewayRouteTableAnnouncementVersionEnum: %v", v)
 	}
 }
 

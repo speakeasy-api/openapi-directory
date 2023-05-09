@@ -127,12 +127,16 @@ const (
 	BuiltInVariableTypeEnumVisitorRegion                                       BuiltInVariableTypeEnum = "visitorRegion"
 )
 
+func (e BuiltInVariableTypeEnum) ToPointer() *BuiltInVariableTypeEnum {
+	return &e
+}
+
 func (e *BuiltInVariableTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "builtInVariableTypeUnspecified":
 		fallthrough
 	case "pageUrl":
@@ -360,10 +364,10 @@ func (e *BuiltInVariableTypeEnum) UnmarshalJSON(data []byte) error {
 	case "serverPageLocationHostname":
 		fallthrough
 	case "visitorRegion":
-		*e = BuiltInVariableTypeEnum(s)
+		*e = BuiltInVariableTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuiltInVariableTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BuiltInVariableTypeEnum: %v", v)
 	}
 }
 

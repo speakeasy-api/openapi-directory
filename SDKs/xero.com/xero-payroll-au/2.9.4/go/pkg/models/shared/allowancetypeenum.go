@@ -19,12 +19,16 @@ const (
 	AllowanceTypeEnumOther     AllowanceTypeEnum = "OTHER"
 )
 
+func (e AllowanceTypeEnum) ToPointer() *AllowanceTypeEnum {
+	return &e
+}
+
 func (e *AllowanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAR":
 		fallthrough
 	case "TRANSPORT":
@@ -38,9 +42,9 @@ func (e *AllowanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "JOBKEEPER":
 		fallthrough
 	case "OTHER":
-		*e = AllowanceTypeEnum(s)
+		*e = AllowanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllowanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AllowanceTypeEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETCreateStorageLocationActionEnumCreateStorageLocation GETCreateStorageLocationActionEnum = "CreateStorageLocation"
 )
 
+func (e GETCreateStorageLocationActionEnum) ToPointer() *GETCreateStorageLocationActionEnum {
+	return &e
+}
+
 func (e *GETCreateStorageLocationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateStorageLocation":
-		*e = GETCreateStorageLocationActionEnum(s)
+		*e = GETCreateStorageLocationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateStorageLocationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateStorageLocationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateStorageLocationVersionEnumTwoThousandAndTen1201 GETCreateStorageLocationVersionEnum = "2010-12-01"
 )
 
+func (e GETCreateStorageLocationVersionEnum) ToPointer() *GETCreateStorageLocationVersionEnum {
+	return &e
+}
+
 func (e *GETCreateStorageLocationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETCreateStorageLocationVersionEnum(s)
+		*e = GETCreateStorageLocationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateStorageLocationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateStorageLocationVersionEnum: %v", v)
 	}
 }
 

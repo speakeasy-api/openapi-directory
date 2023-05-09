@@ -14,18 +14,22 @@ const (
 	VectorEnrichmentJobTypeEnumMapMatching      VectorEnrichmentJobTypeEnum = "MAP_MATCHING"
 )
 
+func (e VectorEnrichmentJobTypeEnum) ToPointer() *VectorEnrichmentJobTypeEnum {
+	return &e
+}
+
 func (e *VectorEnrichmentJobTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVERSE_GEOCODING":
 		fallthrough
 	case "MAP_MATCHING":
-		*e = VectorEnrichmentJobTypeEnum(s)
+		*e = VectorEnrichmentJobTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VectorEnrichmentJobTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VectorEnrichmentJobTypeEnum: %v", v)
 	}
 }

@@ -41,12 +41,16 @@ const (
 	EventEventTypeEnumOwnershipExpired                EventEventTypeEnum = "ownership.expired"
 )
 
+func (e EventEventTypeEnum) ToPointer() *EventEventTypeEnum {
+	return &e
+}
+
 func (e *EventEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "app.submitted":
 		fallthrough
 	case "app.approved":
@@ -102,10 +106,10 @@ func (e *EventEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "payment.required":
 		fallthrough
 	case "ownership.expired":
-		*e = EventEventTypeEnum(s)
+		*e = EventEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventEventTypeEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	FilterValueTypeEnumConstant        FilterValueTypeEnum = "CONSTANT"
 )
 
+func (e FilterValueTypeEnum) ToPointer() *FilterValueTypeEnum {
+	return &e
+}
+
 func (e *FilterValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COLUMNEXTRACTED":
 		fallthrough
 	case "CONSTANT":
-		*e = FilterValueTypeEnum(s)
+		*e = FilterValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterValueTypeEnum: %v", v)
 	}
 }

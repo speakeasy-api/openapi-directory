@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2MessageParticipantRoleEnumEndUser         GoogleCloudDialogflowV2MessageParticipantRoleEnum = "END_USER"
 )
 
+func (e GoogleCloudDialogflowV2MessageParticipantRoleEnum) ToPointer() *GoogleCloudDialogflowV2MessageParticipantRoleEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2MessageParticipantRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLE_UNSPECIFIED":
 		fallthrough
 	case "HUMAN_AGENT":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowV2MessageParticipantRoleEnum) UnmarshalJSON(data [
 	case "AUTOMATED_AGENT":
 		fallthrough
 	case "END_USER":
-		*e = GoogleCloudDialogflowV2MessageParticipantRoleEnum(s)
+		*e = GoogleCloudDialogflowV2MessageParticipantRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2MessageParticipantRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2MessageParticipantRoleEnum: %v", v)
 	}
 }
 

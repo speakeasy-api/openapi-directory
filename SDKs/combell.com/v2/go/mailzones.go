@@ -35,7 +35,10 @@ func newMailZones(defaultClient, securityClient HTTPClient, serverURL, language,
 // ConfigureAlias - Configure a alias
 func (s *mailZones) ConfigureAlias(ctx context.Context, request operations.ConfigureAliasRequest) (*operations.ConfigureAliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/aliases/{emailAddress}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/aliases/{emailAddress}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAliasRequest", "json")
 	if err != nil {
@@ -91,7 +94,10 @@ func (s *mailZones) ConfigureAlias(ctx context.Context, request operations.Confi
 // ConfigureAntiSpam - Configure anti-spam for mail zone
 func (s *mailZones) ConfigureAntiSpam(ctx context.Context, request operations.ConfigureAntiSpamRequest) (*operations.ConfigureAntiSpamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/antispam", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/antispam", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAntiSpamRequest", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *mailZones) ConfigureAntiSpam(ctx context.Context, request operations.Co
 // ConfigureSMTPDomain - Configure an extra smtp domain
 func (s *mailZones) ConfigureSMTPDomain(ctx context.Context, request operations.ConfigureSMTPDomainRequest) (*operations.ConfigureSMTPDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/smtpdomains/{hostname}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/smtpdomains/{hostname}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSMTPDomainRequest", "json")
 	if err != nil {
@@ -193,7 +202,10 @@ func (s *mailZones) ConfigureSMTPDomain(ctx context.Context, request operations.
 // CreateAlias - Create a new alias
 func (s *mailZones) CreateAlias(ctx context.Context, request operations.CreateAliasRequest) (*operations.CreateAliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/aliases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/aliases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateAliasRequest", "json")
 	if err != nil {
@@ -251,7 +263,10 @@ func (s *mailZones) CreateAlias(ctx context.Context, request operations.CreateAl
 // CreateCatchAll - Create a catch-all on the mail zone
 func (s *mailZones) CreateCatchAll(ctx context.Context, request operations.CreateCatchAllRequest) (*operations.CreateCatchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/catchall", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/catchall", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCatchAllRequest", "json")
 	if err != nil {
@@ -298,7 +313,10 @@ func (s *mailZones) CreateCatchAll(ctx context.Context, request operations.Creat
 // CreateSMTPDomain - Create an extra smtp domain
 func (s *mailZones) CreateSMTPDomain(ctx context.Context, request operations.CreateSMTPDomainRequest) (*operations.CreateSMTPDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/smtpdomains", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/smtpdomains", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateSMTPDomainRequest", "json")
 	if err != nil {
@@ -356,7 +374,10 @@ func (s *mailZones) CreateSMTPDomain(ctx context.Context, request operations.Cre
 // DeleteAlias - Delete a alias
 func (s *mailZones) DeleteAlias(ctx context.Context, request operations.DeleteAliasRequest) (*operations.DeleteAliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/aliases/{emailAddress}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/aliases/{emailAddress}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -397,7 +418,10 @@ func (s *mailZones) DeleteAlias(ctx context.Context, request operations.DeleteAl
 // DeleteCatchAll - Delete a catch-all on the mail zone
 func (s *mailZones) DeleteCatchAll(ctx context.Context, request operations.DeleteCatchAllRequest) (*operations.DeleteCatchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/catchall/{emailAddress}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/catchall/{emailAddress}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -436,7 +460,10 @@ func (s *mailZones) DeleteCatchAll(ctx context.Context, request operations.Delet
 // DeleteSMTPDomain - Delete an extra smtp domain
 func (s *mailZones) DeleteSMTPDomain(ctx context.Context, request operations.DeleteSMTPDomainRequest) (*operations.DeleteSMTPDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/smtpdomains/{hostname}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}/smtpdomains/{hostname}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -477,7 +504,10 @@ func (s *mailZones) DeleteSMTPDomain(ctx context.Context, request operations.Del
 // GetMailZone - Get the mail zone.
 func (s *mailZones) GetMailZone(ctx context.Context, request operations.GetMailZoneRequest) (*operations.GetMailZoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailzones/{domainName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

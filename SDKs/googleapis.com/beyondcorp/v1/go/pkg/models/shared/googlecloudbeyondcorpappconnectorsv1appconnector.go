@@ -7,6 +7,20 @@ import (
 	"fmt"
 )
 
+// GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput - A BeyondCorp connector resource that represents an application facing component deployed proximal to and with direct access to the application instances. It is used to establish connectivity between the remote enterprise environment and GCP. It initiates connections to the applications and can proxy the data from users over the connection.
+type GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput struct {
+	// Optional. An arbitrary user-provided name for the AppConnector. Cannot exceed 64 characters.
+	DisplayName *string `json:"displayName,omitempty"`
+	// Optional. Resource labels to represent user provided metadata.
+	Labels map[string]string `json:"labels,omitempty"`
+	// Required. Unique resource name of the AppConnector. The name is ignored when creating a AppConnector.
+	Name *string `json:"name,omitempty"`
+	// PrincipalInfo represents an Identity oneof.
+	PrincipalInfo *GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo `json:"principalInfo,omitempty"`
+	// ResourceInfo represents the information/status of an app connector resource. Such as: - remote_agent - container - runtime - appgateway - appconnector - appconnection - tunnel - logagent
+	ResourceInfo *GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo `json:"resourceInfo,omitempty"`
+}
+
 // GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum - Output only. The current state of the AppConnector.
 type GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum string
 
@@ -19,12 +33,16 @@ const (
 	GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnumDown             GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum = "DOWN"
 )
 
+func (e GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum) ToPointer() *GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -36,10 +54,10 @@ func (e *GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum) UnmarshalJSO
 	case "DELETING":
 		fallthrough
 	case "DOWN":
-		*e = GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum(s)
+		*e = GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudBeyondcorpAppconnectorsV1AppConnectorStateEnum: %v", v)
 	}
 }
 
@@ -63,18 +81,4 @@ type GoogleCloudBeyondcorpAppconnectorsV1AppConnector struct {
 	UID *string `json:"uid,omitempty"`
 	// Output only. Timestamp when the resource was last modified.
 	UpdateTime *string `json:"updateTime,omitempty"`
-}
-
-// GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput - A BeyondCorp connector resource that represents an application facing component deployed proximal to and with direct access to the application instances. It is used to establish connectivity between the remote enterprise environment and GCP. It initiates connections to the applications and can proxy the data from users over the connection.
-type GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInput struct {
-	// Optional. An arbitrary user-provided name for the AppConnector. Cannot exceed 64 characters.
-	DisplayName *string `json:"displayName,omitempty"`
-	// Optional. Resource labels to represent user provided metadata.
-	Labels map[string]string `json:"labels,omitempty"`
-	// Required. Unique resource name of the AppConnector. The name is ignored when creating a AppConnector.
-	Name *string `json:"name,omitempty"`
-	// PrincipalInfo represents an Identity oneof.
-	PrincipalInfo *GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo `json:"principalInfo,omitempty"`
-	// ResourceInfo represents the information/status of an app connector resource. Such as: - remote_agent - container - runtime - appgateway - appconnector - appconnection - tunnel - logagent
-	ResourceInfo *GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo `json:"resourceInfo,omitempty"`
 }

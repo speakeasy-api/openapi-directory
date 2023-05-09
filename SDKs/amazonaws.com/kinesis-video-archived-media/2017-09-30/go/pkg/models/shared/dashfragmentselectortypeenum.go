@@ -14,18 +14,22 @@ const (
 	DASHFragmentSelectorTypeEnumServerTimestamp   DASHFragmentSelectorTypeEnum = "SERVER_TIMESTAMP"
 )
 
+func (e DASHFragmentSelectorTypeEnum) ToPointer() *DASHFragmentSelectorTypeEnum {
+	return &e
+}
+
 func (e *DASHFragmentSelectorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCER_TIMESTAMP":
 		fallthrough
 	case "SERVER_TIMESTAMP":
-		*e = DASHFragmentSelectorTypeEnum(s)
+		*e = DASHFragmentSelectorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DASHFragmentSelectorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DASHFragmentSelectorTypeEnum: %v", v)
 	}
 }

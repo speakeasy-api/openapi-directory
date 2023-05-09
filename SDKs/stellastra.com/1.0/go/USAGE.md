@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,19 +17,17 @@ func main() {
         }),
     )
 
-    req := operations.PostPostReviewRequest{
+    ctx := context.Background()
+    res, err := s.PostPostReview(ctx, operations.PostPostReviewRequest{
         RequestBody: operations.PostPostReviewRequestBody{
             Rating: 5,
             UserEmail: "johnsmith@usercompanyxyz.com",
-            UserName: "John",
+            UserName: sdk.String("John"),
         },
-        Rating: "3",
+        Rating: operations.PostPostReviewRatingEnumThree,
         UserEmail: "provident",
-        UserName: "Micheal_Sporer",
-    }
-
-    ctx := context.Background()
-    res, err := s.PostPostReview(ctx, req)
+        UserName: sdk.String("Micheal_Sporer"),
+    })
     if err != nil {
         log.Fatal(err)
     }

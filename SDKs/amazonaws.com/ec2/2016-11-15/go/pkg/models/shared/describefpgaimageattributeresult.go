@@ -14,17 +14,21 @@ const (
 	DescribeFpgaImageAttributeResultFpgaImageAttributeLoadPermissionsGroupEnumAll DescribeFpgaImageAttributeResultFpgaImageAttributeLoadPermissionsGroupEnum = "all"
 )
 
+func (e DescribeFpgaImageAttributeResultFpgaImageAttributeLoadPermissionsGroupEnum) ToPointer() *DescribeFpgaImageAttributeResultFpgaImageAttributeLoadPermissionsGroupEnum {
+	return &e
+}
+
 func (e *DescribeFpgaImageAttributeResultFpgaImageAttributeLoadPermissionsGroupEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
-		*e = DescribeFpgaImageAttributeResultFpgaImageAttributeLoadPermissionsGroupEnum(s)
+		*e = DescribeFpgaImageAttributeResultFpgaImageAttributeLoadPermissionsGroupEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFpgaImageAttributeResultFpgaImageAttributeLoadPermissionsGroupEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFpgaImageAttributeResultFpgaImageAttributeLoadPermissionsGroupEnum: %v", v)
 	}
 }
 
@@ -42,19 +46,23 @@ const (
 	DescribeFpgaImageAttributeResultFpgaImageAttributeProductCodesProductCodeTypeEnumMarketplace DescribeFpgaImageAttributeResultFpgaImageAttributeProductCodesProductCodeTypeEnum = "marketplace"
 )
 
+func (e DescribeFpgaImageAttributeResultFpgaImageAttributeProductCodesProductCodeTypeEnum) ToPointer() *DescribeFpgaImageAttributeResultFpgaImageAttributeProductCodesProductCodeTypeEnum {
+	return &e
+}
+
 func (e *DescribeFpgaImageAttributeResultFpgaImageAttributeProductCodesProductCodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "devpay":
 		fallthrough
 	case "marketplace":
-		*e = DescribeFpgaImageAttributeResultFpgaImageAttributeProductCodesProductCodeTypeEnum(s)
+		*e = DescribeFpgaImageAttributeResultFpgaImageAttributeProductCodesProductCodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFpgaImageAttributeResultFpgaImageAttributeProductCodesProductCodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFpgaImageAttributeResultFpgaImageAttributeProductCodesProductCodeTypeEnum: %v", v)
 	}
 }
 

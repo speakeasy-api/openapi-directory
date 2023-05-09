@@ -39,7 +39,10 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 // and the customer group is identified by the `group_id` value.
 func (s *customers) AddGroupToCustomer(ctx context.Context, request operations.AddGroupToCustomerRequest, security operations.AddGroupToCustomerSecurity) (*operations.AddGroupToCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/groups/{group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/groups/{group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -152,7 +155,10 @@ func (s *customers) CreateCustomer(ctx context.Context, request shared.CreateCus
 // with the provided nonce during the _first_ call.
 func (s *customers) CreateCustomerCard(ctx context.Context, request operations.CreateCustomerCardRequest, security operations.CreateCustomerCardSecurity) (*operations.CreateCustomerCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/cards", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/cards", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCustomerCardRequest", "json")
 	if err != nil {
@@ -211,7 +217,10 @@ func (s *customers) CreateCustomerCard(ctx context.Context, request operations.C
 // To delete a customer profile that was created by merging existing profiles, you must use the ID of the newly created profile.
 func (s *customers) DeleteCustomer(ctx context.Context, request operations.DeleteCustomerRequest, security operations.DeleteCustomerSecurity) (*operations.DeleteCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -260,7 +269,10 @@ func (s *customers) DeleteCustomer(ctx context.Context, request operations.Delet
 // Removes a card on file from a customer.
 func (s *customers) DeleteCustomerCard(ctx context.Context, request operations.DeleteCustomerCardRequest, security operations.DeleteCustomerCardSecurity) (*operations.DeleteCustomerCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/cards/{card_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/cards/{card_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -361,7 +373,10 @@ func (s *customers) ListCustomers(ctx context.Context, request operations.ListCu
 // and the customer group is identified by the `group_id` value.
 func (s *customers) RemoveGroupFromCustomer(ctx context.Context, request operations.RemoveGroupFromCustomerRequest, security operations.RemoveGroupFromCustomerSecurity) (*operations.RemoveGroupFromCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/groups/{group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}/groups/{group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -406,7 +421,10 @@ func (s *customers) RemoveGroupFromCustomer(ctx context.Context, request operati
 // Returns details for a single customer.
 func (s *customers) RetrieveCustomer(ctx context.Context, request operations.RetrieveCustomerRequest, security operations.RetrieveCustomerSecurity) (*operations.RetrieveCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -520,7 +538,10 @@ func (s *customers) SearchCustomers(ctx context.Context, request shared.SearchCu
 // You cannot use this endpoint to change cards on file. To make changes, use the [Cards API](https://developer.squareup.com/reference/square_2021-08-18/cards-api) or [Gift Cards API](https://developer.squareup.com/reference/square_2021-08-18/gift-cards-api).
 func (s *customers) UpdateCustomer(ctx context.Context, request operations.UpdateCustomerRequest, security operations.UpdateCustomerSecurity) (*operations.UpdateCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customers/{customer_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCustomerRequest", "json")
 	if err != nil {

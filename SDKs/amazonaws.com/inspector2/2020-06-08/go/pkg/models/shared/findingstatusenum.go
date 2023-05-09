@@ -15,20 +15,24 @@ const (
 	FindingStatusEnumClosed     FindingStatusEnum = "CLOSED"
 )
 
+func (e FindingStatusEnum) ToPointer() *FindingStatusEnum {
+	return &e
+}
+
 func (e *FindingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "SUPPRESSED":
 		fallthrough
 	case "CLOSED":
-		*e = FindingStatusEnum(s)
+		*e = FindingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingStatusEnum: %v", v)
 	}
 }

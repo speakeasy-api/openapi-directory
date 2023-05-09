@@ -16,17 +16,21 @@ const (
 	DeleteLogSubscriptionXAmzTargetEnumDirectoryService20150416DeleteLogSubscription DeleteLogSubscriptionXAmzTargetEnum = "DirectoryService_20150416.DeleteLogSubscription"
 )
 
+func (e DeleteLogSubscriptionXAmzTargetEnum) ToPointer() *DeleteLogSubscriptionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteLogSubscriptionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.DeleteLogSubscription":
-		*e = DeleteLogSubscriptionXAmzTargetEnum(s)
+		*e = DeleteLogSubscriptionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLogSubscriptionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLogSubscriptionXAmzTargetEnum: %v", v)
 	}
 }
 

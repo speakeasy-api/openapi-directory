@@ -31,21 +31,25 @@ const (
 	RegistrationIssuesEnumUnverifiedEmail  RegistrationIssuesEnum = "UNVERIFIED_EMAIL"
 )
 
+func (e RegistrationIssuesEnum) ToPointer() *RegistrationIssuesEnum {
+	return &e
+}
+
 func (e *RegistrationIssuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ISSUE_UNSPECIFIED":
 		fallthrough
 	case "CONTACT_SUPPORT":
 		fallthrough
 	case "UNVERIFIED_EMAIL":
-		*e = RegistrationIssuesEnum(s)
+		*e = RegistrationIssuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegistrationIssuesEnum: %s", s)
+		return fmt.Errorf("invalid value for RegistrationIssuesEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	RegistrationRegisterFailureReasonEnumInvalidContacts                  RegistrationRegisterFailureReasonEnum = "INVALID_CONTACTS"
 )
 
+func (e RegistrationRegisterFailureReasonEnum) ToPointer() *RegistrationRegisterFailureReasonEnum {
+	return &e
+}
+
 func (e *RegistrationRegisterFailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGISTER_FAILURE_REASON_UNSPECIFIED":
 		fallthrough
 	case "REGISTER_FAILURE_REASON_UNKNOWN":
@@ -72,10 +80,10 @@ func (e *RegistrationRegisterFailureReasonEnum) UnmarshalJSON(data []byte) error
 	case "DOMAIN_NOT_AVAILABLE":
 		fallthrough
 	case "INVALID_CONTACTS":
-		*e = RegistrationRegisterFailureReasonEnum(s)
+		*e = RegistrationRegisterFailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegistrationRegisterFailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for RegistrationRegisterFailureReasonEnum: %v", v)
 	}
 }
 
@@ -94,12 +102,16 @@ const (
 	RegistrationStateEnumExported            RegistrationStateEnum = "EXPORTED"
 )
 
+func (e RegistrationStateEnum) ToPointer() *RegistrationStateEnum {
+	return &e
+}
+
 func (e *RegistrationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "REGISTRATION_PENDING":
@@ -117,10 +129,10 @@ func (e *RegistrationStateEnum) UnmarshalJSON(data []byte) error {
 	case "SUSPENDED":
 		fallthrough
 	case "EXPORTED":
-		*e = RegistrationStateEnum(s)
+		*e = RegistrationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegistrationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RegistrationStateEnum: %v", v)
 	}
 }
 
@@ -133,12 +145,16 @@ const (
 	RegistrationSupportedPrivacyEnumRedactedContactData       RegistrationSupportedPrivacyEnum = "REDACTED_CONTACT_DATA"
 )
 
+func (e RegistrationSupportedPrivacyEnum) ToPointer() *RegistrationSupportedPrivacyEnum {
+	return &e
+}
+
 func (e *RegistrationSupportedPrivacyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTACT_PRIVACY_UNSPECIFIED":
 		fallthrough
 	case "PUBLIC_CONTACT_DATA":
@@ -146,10 +162,10 @@ func (e *RegistrationSupportedPrivacyEnum) UnmarshalJSON(data []byte) error {
 	case "PRIVATE_CONTACT_DATA":
 		fallthrough
 	case "REDACTED_CONTACT_DATA":
-		*e = RegistrationSupportedPrivacyEnum(s)
+		*e = RegistrationSupportedPrivacyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegistrationSupportedPrivacyEnum: %s", s)
+		return fmt.Errorf("invalid value for RegistrationSupportedPrivacyEnum: %v", v)
 	}
 }
 
@@ -170,12 +186,16 @@ const (
 	RegistrationTransferFailureReasonEnumTransferAlreadyPending           RegistrationTransferFailureReasonEnum = "TRANSFER_ALREADY_PENDING"
 )
 
+func (e RegistrationTransferFailureReasonEnum) ToPointer() *RegistrationTransferFailureReasonEnum {
+	return &e
+}
+
 func (e *RegistrationTransferFailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRANSFER_FAILURE_REASON_UNSPECIFIED":
 		fallthrough
 	case "TRANSFER_FAILURE_REASON_UNKNOWN":
@@ -197,10 +217,10 @@ func (e *RegistrationTransferFailureReasonEnum) UnmarshalJSON(data []byte) error
 	case "DOMAIN_NOT_ELIGIBLE_FOR_TRANSFER":
 		fallthrough
 	case "TRANSFER_ALREADY_PENDING":
-		*e = RegistrationTransferFailureReasonEnum(s)
+		*e = RegistrationTransferFailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegistrationTransferFailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for RegistrationTransferFailureReasonEnum: %v", v)
 	}
 }
 

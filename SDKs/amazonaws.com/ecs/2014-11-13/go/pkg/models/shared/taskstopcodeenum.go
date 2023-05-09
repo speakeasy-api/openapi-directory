@@ -18,12 +18,16 @@ const (
 	TaskStopCodeEnumTerminationNotice         TaskStopCodeEnum = "TerminationNotice"
 )
 
+func (e TaskStopCodeEnum) ToPointer() *TaskStopCodeEnum {
+	return &e
+}
+
 func (e *TaskStopCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TaskFailedToStart":
 		fallthrough
 	case "EssentialContainerExited":
@@ -35,9 +39,9 @@ func (e *TaskStopCodeEnum) UnmarshalJSON(data []byte) error {
 	case "SpotInterruption":
 		fallthrough
 	case "TerminationNotice":
-		*e = TaskStopCodeEnum(s)
+		*e = TaskStopCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskStopCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskStopCodeEnum: %v", v)
 	}
 }

@@ -2,51 +2,48 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.OrgpolicyOrganizationsCustomConstraintsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Organizations.OrgpolicyOrganizationsCustomConstraintsCreate(ctx, operations.OrgpolicyOrganizationsCustomConstraintsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudOrgpolicyV2CustomConstraintInput: &shared.GoogleCloudOrgpolicyV2CustomConstraintInput{
-            ActionType: "ALLOW",
-            Condition: "distinctio",
-            Description: "quibusdam",
-            DisplayName: "unde",
+            ActionType: shared.GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnumAllow.ToPointer(),
+            Condition: sdk.String("distinctio"),
+            Description: sdk.String("quibusdam"),
+            DisplayName: sdk.String("unde"),
             MethodTypes: []shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum{
-                "UPDATE",
-                "DELETE",
-                "CREATE",
-                "UPDATE",
+                shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnumUpdate,
+                shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnumDelete,
+                shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnumCreate,
+                shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnumUpdate,
             },
-            Name: "deserunt",
+            Name: sdk.String("Rick Kertzmann"),
             ResourceTypes: []string{
-                "iure",
-                "magnam",
+                "delectus",
             },
         },
-        AccessToken: "debitis",
-        Alt: "json",
-        Callback: "delectus",
-        Fields: "tempora",
-        Key: "suscipit",
-        OauthToken: "molestiae",
-        Parent: "minus",
-        PrettyPrint: false,
-        QuotaUser: "placeat",
-        UploadType: "voluptatum",
-        UploadProtocol: "iusto",
-    }
-
-    ctx := context.Background()
-    res, err := s.Organizations.OrgpolicyOrganizationsCustomConstraintsCreate(ctx, req, operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity{
+        AccessToken: sdk.String("tempora"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("molestiae"),
+        Fields: sdk.String("minus"),
+        Key: sdk.String("placeat"),
+        OauthToken: sdk.String("voluptatum"),
+        Parent: "iusto",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("excepturi"),
+        UploadType: sdk.String("nisi"),
+        UploadProtocol: sdk.String("recusandae"),
+    }, operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

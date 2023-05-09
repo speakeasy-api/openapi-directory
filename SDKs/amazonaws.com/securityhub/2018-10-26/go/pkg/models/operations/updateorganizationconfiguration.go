@@ -16,19 +16,23 @@ const (
 	UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnumDefault UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnum = "DEFAULT"
 )
 
+func (e UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnum) ToPointer() *UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnum {
+	return &e
+}
+
 func (e *UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "DEFAULT":
-		*e = UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnum(s)
+		*e = UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateOrganizationConfigurationRequestBodyAutoEnableStandardsEnum: %v", v)
 	}
 }
 

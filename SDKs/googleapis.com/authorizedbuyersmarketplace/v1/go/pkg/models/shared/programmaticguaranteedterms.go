@@ -16,21 +16,25 @@ const (
 	ProgrammaticGuaranteedTermsReservationTypeEnumSponsorship                ProgrammaticGuaranteedTermsReservationTypeEnum = "SPONSORSHIP"
 )
 
+func (e ProgrammaticGuaranteedTermsReservationTypeEnum) ToPointer() *ProgrammaticGuaranteedTermsReservationTypeEnum {
+	return &e
+}
+
 func (e *ProgrammaticGuaranteedTermsReservationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESERVATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STANDARD":
 		fallthrough
 	case "SPONSORSHIP":
-		*e = ProgrammaticGuaranteedTermsReservationTypeEnum(s)
+		*e = ProgrammaticGuaranteedTermsReservationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProgrammaticGuaranteedTermsReservationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProgrammaticGuaranteedTermsReservationTypeEnum: %v", v)
 	}
 }
 
@@ -38,11 +42,11 @@ func (e *ProgrammaticGuaranteedTermsReservationTypeEnum) UnmarshalJSON(data []by
 type ProgrammaticGuaranteedTerms struct {
 	// Represents a price and a pricing type for a deal.
 	FixedPrice *Price `json:"fixedPrice,omitempty"`
-	// Count of guaranteed looks.
+	// Count of guaranteed looks. For CPD deals, buyer changes to guaranteed_looks will be ignored.
 	GuaranteedLooks *string `json:"guaranteedLooks,omitempty"`
 	// The lifetime impression cap for CPM Sponsorship deals. Deal will stop serving when cap is reached.
 	ImpressionCap *string `json:"impressionCap,omitempty"`
-	// Daily minimum looks for CPD deal types.
+	// Daily minimum looks for CPD deal types. For CPD deals, buyer should negotiate on this field instead of guaranteed_looks.
 	MinimumDailyLooks *string `json:"minimumDailyLooks,omitempty"`
 	// For sponsorship deals, this is the percentage of the seller's eligible impressions that the deal will serve until the cap is reached. Valid value is within range 0~100.
 	PercentShareOfVoice *string `json:"percentShareOfVoice,omitempty"`

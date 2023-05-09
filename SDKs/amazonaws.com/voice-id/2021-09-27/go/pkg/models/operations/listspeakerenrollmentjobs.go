@@ -16,17 +16,21 @@ const (
 	ListSpeakerEnrollmentJobsXAmzTargetEnumVoiceIDListSpeakerEnrollmentJobs ListSpeakerEnrollmentJobsXAmzTargetEnum = "VoiceID.ListSpeakerEnrollmentJobs"
 )
 
+func (e ListSpeakerEnrollmentJobsXAmzTargetEnum) ToPointer() *ListSpeakerEnrollmentJobsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListSpeakerEnrollmentJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VoiceID.ListSpeakerEnrollmentJobs":
-		*e = ListSpeakerEnrollmentJobsXAmzTargetEnum(s)
+		*e = ListSpeakerEnrollmentJobsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSpeakerEnrollmentJobsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSpeakerEnrollmentJobsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	BareMetalEnumRequired BareMetalEnum = "required"
 )
 
+func (e BareMetalEnum) ToPointer() *BareMetalEnum {
+	return &e
+}
+
 func (e *BareMetalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "excluded":
 		fallthrough
 	case "required":
-		*e = BareMetalEnum(s)
+		*e = BareMetalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BareMetalEnum: %s", s)
+		return fmt.Errorf("invalid value for BareMetalEnum: %v", v)
 	}
 }

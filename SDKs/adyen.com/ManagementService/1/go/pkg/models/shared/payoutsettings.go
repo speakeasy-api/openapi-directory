@@ -22,21 +22,25 @@ const (
 	PayoutSettingsPriorityEnumUrgent PayoutSettingsPriorityEnum = "urgent"
 )
 
+func (e PayoutSettingsPriorityEnum) ToPointer() *PayoutSettingsPriorityEnum {
+	return &e
+}
+
 func (e *PayoutSettingsPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "first":
 		fallthrough
 	case "normal":
 		fallthrough
 	case "urgent":
-		*e = PayoutSettingsPriorityEnum(s)
+		*e = PayoutSettingsPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PayoutSettingsPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for PayoutSettingsPriorityEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	PayoutSettingsVerificationStatusEnumValid    PayoutSettingsVerificationStatusEnum = "valid"
 )
 
+func (e PayoutSettingsVerificationStatusEnum) ToPointer() *PayoutSettingsVerificationStatusEnum {
+	return &e
+}
+
 func (e *PayoutSettingsVerificationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid":
 		fallthrough
 	case "pending":
@@ -69,10 +77,10 @@ func (e *PayoutSettingsVerificationStatusEnum) UnmarshalJSON(data []byte) error 
 	case "rejected":
 		fallthrough
 	case "valid":
-		*e = PayoutSettingsVerificationStatusEnum(s)
+		*e = PayoutSettingsVerificationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PayoutSettingsVerificationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PayoutSettingsVerificationStatusEnum: %v", v)
 	}
 }
 

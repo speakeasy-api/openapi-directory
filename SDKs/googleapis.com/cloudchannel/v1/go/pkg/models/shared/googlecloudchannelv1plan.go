@@ -19,12 +19,16 @@ const (
 	GoogleCloudChannelV1PlanPaymentPlanEnumOffline                GoogleCloudChannelV1PlanPaymentPlanEnum = "OFFLINE"
 )
 
+func (e GoogleCloudChannelV1PlanPaymentPlanEnum) ToPointer() *GoogleCloudChannelV1PlanPaymentPlanEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1PlanPaymentPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PAYMENT_PLAN_UNSPECIFIED":
 		fallthrough
 	case "COMMITMENT":
@@ -36,10 +40,10 @@ func (e *GoogleCloudChannelV1PlanPaymentPlanEnum) UnmarshalJSON(data []byte) err
 	case "TRIAL":
 		fallthrough
 	case "OFFLINE":
-		*e = GoogleCloudChannelV1PlanPaymentPlanEnum(s)
+		*e = GoogleCloudChannelV1PlanPaymentPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1PlanPaymentPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1PlanPaymentPlanEnum: %v", v)
 	}
 }
 
@@ -52,27 +56,31 @@ const (
 	GoogleCloudChannelV1PlanPaymentTypeEnumPostpay                GoogleCloudChannelV1PlanPaymentTypeEnum = "POSTPAY"
 )
 
+func (e GoogleCloudChannelV1PlanPaymentTypeEnum) ToPointer() *GoogleCloudChannelV1PlanPaymentTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1PlanPaymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PAYMENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PREPAY":
 		fallthrough
 	case "POSTPAY":
-		*e = GoogleCloudChannelV1PlanPaymentTypeEnum(s)
+		*e = GoogleCloudChannelV1PlanPaymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1PlanPaymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1PlanPaymentTypeEnum: %v", v)
 	}
 }
 
 // GoogleCloudChannelV1Plan - The payment plan for the Offer. Describes how to make a payment.
 type GoogleCloudChannelV1Plan struct {
-	// Reseller Billing account to charge after an offer transaction. Only present for Google Cloud Platform offers.
+	// Reseller Billing account to charge after an offer transaction. Only present for Google Cloud offers.
 	BillingAccount *string `json:"billingAccount,omitempty"`
 	// Represents period in days/months/years.
 	PaymentCycle *GoogleCloudChannelV1Period `json:"paymentCycle,omitempty"`

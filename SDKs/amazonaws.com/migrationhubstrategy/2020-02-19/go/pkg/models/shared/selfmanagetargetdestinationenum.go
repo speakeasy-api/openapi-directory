@@ -16,12 +16,16 @@ const (
 	SelfManageTargetDestinationEnumAmazonElasticKubernetesServiceEks SelfManageTargetDestinationEnum = "Amazon Elastic Kubernetes Service (EKS)"
 )
 
+func (e SelfManageTargetDestinationEnum) ToPointer() *SelfManageTargetDestinationEnum {
+	return &e
+}
+
 func (e *SelfManageTargetDestinationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None specified":
 		fallthrough
 	case "Amazon Elastic Cloud Compute (EC2)":
@@ -29,9 +33,9 @@ func (e *SelfManageTargetDestinationEnum) UnmarshalJSON(data []byte) error {
 	case "Amazon Elastic Container Service (ECS)":
 		fallthrough
 	case "Amazon Elastic Kubernetes Service (EKS)":
-		*e = SelfManageTargetDestinationEnum(s)
+		*e = SelfManageTargetDestinationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SelfManageTargetDestinationEnum: %s", s)
+		return fmt.Errorf("invalid value for SelfManageTargetDestinationEnum: %v", v)
 	}
 }

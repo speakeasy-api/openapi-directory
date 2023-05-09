@@ -16,17 +16,21 @@ const (
 	UpdateWorkspaceImagePermissionXAmzTargetEnumWorkspacesServiceUpdateWorkspaceImagePermission UpdateWorkspaceImagePermissionXAmzTargetEnum = "WorkspacesService.UpdateWorkspaceImagePermission"
 )
 
+func (e UpdateWorkspaceImagePermissionXAmzTargetEnum) ToPointer() *UpdateWorkspaceImagePermissionXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateWorkspaceImagePermissionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.UpdateWorkspaceImagePermission":
-		*e = UpdateWorkspaceImagePermissionXAmzTargetEnum(s)
+		*e = UpdateWorkspaceImagePermissionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateWorkspaceImagePermissionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateWorkspaceImagePermissionXAmzTargetEnum: %v", v)
 	}
 }
 

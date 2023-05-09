@@ -34,7 +34,10 @@ func newWhatsApp(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GetWAAccount - Retrieve a Whatsapp account
 func (s *whatsApp) GetWAAccount(ctx context.Context, request operations.GetWAAccountRequest, security operations.GetWAAccountSecurity) (*operations.GetWAAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/whatsapp/{external_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/whatsapp/{external_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -2,67 +2,65 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.ContactcenteraiplatformProjectsLocationsContactCentersCreate(ctx, operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ContactCenterInput: &shared.ContactCenterInput{
             AdminUser: &shared.AdminUser{
-                FamilyName: "provident",
-                GivenName: "distinctio",
+                FamilyName: sdk.String("provident"),
+                GivenName: sdk.String("distinctio"),
             },
-            CcaipManagedUsers: false,
-            CustomerDomainPrefix: "quibusdam",
-            DisplayName: "unde",
+            CcaipManagedUsers: sdk.Bool(false),
+            CustomerDomainPrefix: sdk.String("quibusdam"),
+            DisplayName: sdk.String("unde"),
             InstanceConfig: &shared.InstanceConfig{
-                InstanceSize: "STANDARD_3XLARGE",
+                InstanceSize: shared.InstanceConfigInstanceSizeEnumStandard3Xlarge.ToPointer(),
             },
             Labels: map[string]string{
                 "illum": "vel",
                 "error": "deserunt",
                 "suscipit": "iure",
             },
-            Name: "magnam",
+            Name: sdk.String("Raquel Bednar"),
             SamlParams: &shared.SAMLParams{
-                Certificate: "debitis",
-                EntityID: "ipsa",
-                SsoURI: "delectus",
-                UserEmail: "tempora",
+                Certificate: sdk.String("suscipit"),
+                EntityID: sdk.String("molestiae"),
+                SsoURI: sdk.String("minus"),
+                UserEmail: sdk.String("placeat"),
             },
             Uris: &shared.URIs{
-                ChatBotURI: "suscipit",
-                MediaURI: "molestiae",
-                RootURI: "minus",
-                VirtualAgentStreamingServiceURI: "placeat",
+                ChatBotURI: sdk.String("voluptatum"),
+                MediaURI: sdk.String("iusto"),
+                RootURI: sdk.String("excepturi"),
+                VirtualAgentStreamingServiceURI: sdk.String("nisi"),
             },
-            UserEmail: "voluptatum",
+            UserEmail: sdk.String("recusandae"),
         },
-        AccessToken: "iusto",
-        Alt: "media",
-        Callback: "nisi",
-        ContactCenterID: "recusandae",
-        Fields: "temporibus",
-        Key: "ab",
-        OauthToken: "quis",
-        Parent: "veritatis",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        RequestID: "perferendis",
-        UploadType: "ipsam",
-        UploadProtocol: "repellendus",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.ContactcenteraiplatformProjectsLocationsContactCentersCreate(ctx, req, operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateSecurity{
+        AccessToken: sdk.String("temporibus"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("quis"),
+        ContactCenterID: sdk.String("veritatis"),
+        Fields: sdk.String("deserunt"),
+        Key: sdk.String("perferendis"),
+        OauthToken: sdk.String("ipsam"),
+        Parent: "repellendus",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("sapiente"),
+        RequestID: sdk.String("quo"),
+        UploadType: sdk.String("odit"),
+        UploadProtocol: sdk.String("at"),
+    }, operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

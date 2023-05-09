@@ -32,12 +32,16 @@ const (
 	GetFirewallsIDActionsSortParameterSortEnumFinishedDesc GetFirewallsIDActionsSortParameterSortEnum = "finished:desc"
 )
 
+func (e GetFirewallsIDActionsSortParameterSortEnum) ToPointer() *GetFirewallsIDActionsSortParameterSortEnum {
+	return &e
+}
+
 func (e *GetFirewallsIDActionsSortParameterSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -73,10 +77,10 @@ func (e *GetFirewallsIDActionsSortParameterSortEnum) UnmarshalJSON(data []byte) 
 	case "finished:asc":
 		fallthrough
 	case "finished:desc":
-		*e = GetFirewallsIDActionsSortParameterSortEnum(s)
+		*e = GetFirewallsIDActionsSortParameterSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFirewallsIDActionsSortParameterSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFirewallsIDActionsSortParameterSortEnum: %v", v)
 	}
 }
 
@@ -89,21 +93,25 @@ const (
 	GetFirewallsIDActionsStatusParameterStatusEnumError   GetFirewallsIDActionsStatusParameterStatusEnum = "error"
 )
 
+func (e GetFirewallsIDActionsStatusParameterStatusEnum) ToPointer() *GetFirewallsIDActionsStatusParameterStatusEnum {
+	return &e
+}
+
 func (e *GetFirewallsIDActionsStatusParameterStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "success":
 		fallthrough
 	case "error":
-		*e = GetFirewallsIDActionsStatusParameterStatusEnum(s)
+		*e = GetFirewallsIDActionsStatusParameterStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFirewallsIDActionsStatusParameterStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFirewallsIDActionsStatusParameterStatusEnum: %v", v)
 	}
 }
 
@@ -140,21 +148,25 @@ const (
 	GetFirewallsIDActionsActionsResponseActionStatusEnumError   GetFirewallsIDActionsActionsResponseActionStatusEnum = "error"
 )
 
+func (e GetFirewallsIDActionsActionsResponseActionStatusEnum) ToPointer() *GetFirewallsIDActionsActionsResponseActionStatusEnum {
+	return &e
+}
+
 func (e *GetFirewallsIDActionsActionsResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = GetFirewallsIDActionsActionsResponseActionStatusEnum(s)
+		*e = GetFirewallsIDActionsActionsResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFirewallsIDActionsActionsResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFirewallsIDActionsActionsResponseActionStatusEnum: %v", v)
 	}
 }
 

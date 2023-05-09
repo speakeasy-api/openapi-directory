@@ -2,51 +2,49 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.IdsProjectsLocationsEndpointsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.IdsProjectsLocationsEndpointsCreate(ctx, operations.IdsProjectsLocationsEndpointsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         EndpointInput: &shared.EndpointInput{
-            Description: "provident",
+            Description: sdk.String("provident"),
             Labels: map[string]string{
                 "quibusdam": "unde",
                 "nulla": "corrupti",
                 "illum": "vel",
             },
-            Network: "error",
-            Severity: "MEDIUM",
+            Network: sdk.String("error"),
+            Severity: shared.EndpointSeverityEnumMedium.ToPointer(),
             ThreatExceptions: []string{
                 "iure",
                 "magnam",
             },
-            TrafficLogs: false,
+            TrafficLogs: sdk.Bool(false),
         },
-        AccessToken: "debitis",
-        Alt: "json",
-        Callback: "delectus",
-        EndpointID: "tempora",
-        Fields: "suscipit",
-        Key: "molestiae",
-        OauthToken: "minus",
+        AccessToken: sdk.String("debitis"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("delectus"),
+        EndpointID: sdk.String("tempora"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("molestiae"),
+        OauthToken: sdk.String("minus"),
         Parent: "placeat",
-        PrettyPrint: false,
-        QuotaUser: "voluptatum",
-        RequestID: "iusto",
-        UploadType: "excepturi",
-        UploadProtocol: "nisi",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.IdsProjectsLocationsEndpointsCreate(ctx, req, operations.IdsProjectsLocationsEndpointsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("voluptatum"),
+        RequestID: sdk.String("iusto"),
+        UploadType: sdk.String("excepturi"),
+        UploadProtocol: sdk.String("nisi"),
+    }, operations.IdsProjectsLocationsEndpointsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -15,17 +15,21 @@ const (
 	POSTGetConsoleScreenshotActionEnumGetConsoleScreenshot POSTGetConsoleScreenshotActionEnum = "GetConsoleScreenshot"
 )
 
+func (e POSTGetConsoleScreenshotActionEnum) ToPointer() *POSTGetConsoleScreenshotActionEnum {
+	return &e
+}
+
 func (e *POSTGetConsoleScreenshotActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetConsoleScreenshot":
-		*e = POSTGetConsoleScreenshotActionEnum(s)
+		*e = POSTGetConsoleScreenshotActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetConsoleScreenshotActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetConsoleScreenshotActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetConsoleScreenshotVersionEnumTwoThousandAndSixteen1115 POSTGetConsoleScreenshotVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetConsoleScreenshotVersionEnum) ToPointer() *POSTGetConsoleScreenshotVersionEnum {
+	return &e
+}
+
 func (e *POSTGetConsoleScreenshotVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetConsoleScreenshotVersionEnum(s)
+		*e = POSTGetConsoleScreenshotVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetConsoleScreenshotVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetConsoleScreenshotVersionEnum: %v", v)
 	}
 }
 

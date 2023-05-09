@@ -8,6 +8,10 @@ import (
 	"net/http"
 )
 
+type UsersGetUserMetadataSecurity struct {
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
+}
+
 type UsersGetUserMetadataDefaultApplicationJSONErrorCodeEnum string
 
 const (
@@ -19,12 +23,16 @@ const (
 	UsersGetUserMetadataDefaultApplicationJSONErrorCodeEnumUnauthorized        UsersGetUserMetadataDefaultApplicationJSONErrorCodeEnum = "Unauthorized"
 )
 
+func (e UsersGetUserMetadataDefaultApplicationJSONErrorCodeEnum) ToPointer() *UsersGetUserMetadataDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *UsersGetUserMetadataDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -36,10 +44,10 @@ func (e *UsersGetUserMetadataDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(
 	case "InternalServerError":
 		fallthrough
 	case "Unauthorized":
-		*e = UsersGetUserMetadataDefaultApplicationJSONErrorCodeEnum(s)
+		*e = UsersGetUserMetadataDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsersGetUserMetadataDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for UsersGetUserMetadataDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

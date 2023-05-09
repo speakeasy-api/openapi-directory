@@ -16,21 +16,25 @@ const (
 	MediaItemMediaFormatEnumVideo                  MediaItemMediaFormatEnum = "VIDEO"
 )
 
+func (e MediaItemMediaFormatEnum) ToPointer() *MediaItemMediaFormatEnum {
+	return &e
+}
+
 func (e *MediaItemMediaFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEDIA_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "PHOTO":
 		fallthrough
 	case "VIDEO":
-		*e = MediaItemMediaFormatEnum(s)
+		*e = MediaItemMediaFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaItemMediaFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaItemMediaFormatEnum: %v", v)
 	}
 }
 

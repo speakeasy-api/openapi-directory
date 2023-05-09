@@ -25,12 +25,16 @@ const (
 	DisconnectVendorVendorEnumNissan     DisconnectVendorVendorEnum = "NISSAN"
 )
 
+func (e DisconnectVendorVendorEnum) ToPointer() *DisconnectVendorVendorEnum {
+	return &e
+}
+
 func (e *DisconnectVendorVendorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TESLA":
 		fallthrough
 	case "BMW":
@@ -44,10 +48,10 @@ func (e *DisconnectVendorVendorEnum) UnmarshalJSON(data []byte) error {
 	case "PEUGEOT":
 		fallthrough
 	case "NISSAN":
-		*e = DisconnectVendorVendorEnum(s)
+		*e = DisconnectVendorVendorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisconnectVendorVendorEnum: %s", s)
+		return fmt.Errorf("invalid value for DisconnectVendorVendorEnum: %v", v)
 	}
 }
 

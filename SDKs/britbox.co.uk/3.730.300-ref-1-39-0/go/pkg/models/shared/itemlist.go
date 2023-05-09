@@ -21,12 +21,16 @@ const (
 	ItemListItemTypesEnumCustomAsset ItemListItemTypesEnum = "customAsset"
 )
 
+func (e ItemListItemTypesEnum) ToPointer() *ItemListItemTypesEnum {
+	return &e
+}
+
 func (e *ItemListItemTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "movie":
 		fallthrough
 	case "show":
@@ -44,10 +48,10 @@ func (e *ItemListItemTypesEnum) UnmarshalJSON(data []byte) error {
 	case "channel":
 		fallthrough
 	case "customAsset":
-		*e = ItemListItemTypesEnum(s)
+		*e = ItemListItemTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItemListItemTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for ItemListItemTypesEnum: %v", v)
 	}
 }
 

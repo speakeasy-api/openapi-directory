@@ -8,6 +8,10 @@ import (
 	"time"
 )
 
+type GetUsersMeSecurity struct {
+	FdcAuth string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetUsersMeUserContactV2UserContactV2Merchant struct {
 	ID *int64 `json:"id,omitempty"`
 }

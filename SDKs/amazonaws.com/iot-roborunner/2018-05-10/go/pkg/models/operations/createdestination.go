@@ -18,21 +18,25 @@ const (
 	CreateDestinationRequestBodyStateEnumDecommissioned CreateDestinationRequestBodyStateEnum = "DECOMMISSIONED"
 )
 
+func (e CreateDestinationRequestBodyStateEnum) ToPointer() *CreateDestinationRequestBodyStateEnum {
+	return &e
+}
+
 func (e *CreateDestinationRequestBodyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "DECOMMISSIONED":
-		*e = CreateDestinationRequestBodyStateEnum(s)
+		*e = CreateDestinationRequestBodyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDestinationRequestBodyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDestinationRequestBodyStateEnum: %v", v)
 	}
 }
 

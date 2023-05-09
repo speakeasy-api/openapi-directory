@@ -36,7 +36,10 @@ func newConnections(defaultClient, securityClient HTTPClient, serverURL, languag
 // This will make it so the specified source will not be synchronized anymore.<br><br>
 func (s *connections) DeleteConnectionsIDConnectionSourcesIDSource(ctx context.Context, request operations.DeleteConnectionsIDConnectionSourcesIDSourceRequest) (*operations.DeleteConnectionsIDConnectionSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources/{id_source}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources/{id_source}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *connections) DeleteConnectionsIDConnectionSourcesIDSource(ctx context.C
 // DeleteUsersIDUserConnections - Delete all connections
 func (s *connections) DeleteUsersIDUserConnections(ctx context.Context, request operations.DeleteUsersIDUserConnectionsRequest) (*operations.DeleteUsersIDUserConnectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -133,7 +139,10 @@ func (s *connections) DeleteUsersIDUserConnections(ctx context.Context, request 
 // This endpoint deletes a connection and all related accounts and transactions.<br><br>
 func (s *connections) DeleteUsersIDUserConnectionsIDConnection(ctx context.Context, request operations.DeleteUsersIDUserConnectionsIDConnectionRequest) (*operations.DeleteUsersIDUserConnectionsIDConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -182,7 +191,10 @@ func (s *connections) DeleteUsersIDUserConnectionsIDConnection(ctx context.Conte
 // This will make it so the specified source will not be synchronized anymore.<br><br>
 func (s *connections) DeleteUsersIDUserConnectionsIDConnectionSourcesIDSource(ctx context.Context, request operations.DeleteUsersIDUserConnectionsIDConnectionSourcesIDSourceRequest) (*operations.DeleteUsersIDUserConnectionsIDConnectionSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -278,7 +290,10 @@ func (s *connections) GetBanks(ctx context.Context, request operations.GetBanksR
 // GetBanksIDBank - Get a connector
 func (s *connections) GetBanksIDBank(ctx context.Context, request operations.GetBanksIDBankRequest) (*operations.GetBanksIDBankResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_bank}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/banks/{id_bank}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -327,7 +342,10 @@ func (s *connections) GetBanksIDBank(ctx context.Context, request operations.Get
 // By default, it selects a set of 3 connections with the 'diversity' method<br><br>
 func (s *connections) GetBanksIDConnectorConnections(ctx context.Context, request operations.GetBanksIDConnectorConnectionsRequest) (*operations.GetBanksIDConnectorConnectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/connections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/connections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -375,7 +393,10 @@ func (s *connections) GetBanksIDConnectorConnections(ctx context.Context, reques
 // GetBanksIDConnectorSources - Get list of connector sources
 func (s *connections) GetBanksIDConnectorSources(ctx context.Context, request operations.GetBanksIDConnectorSourcesRequest) (*operations.GetBanksIDConnectorSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/sources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/sources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -423,7 +444,10 @@ func (s *connections) GetBanksIDConnectorSources(ctx context.Context, request op
 // GetBanksIDConnectorSourcesIDConnectorSourceFields - Get fields specific to a domain and a source
 func (s *connections) GetBanksIDConnectorSourcesIDConnectorSourceFields(ctx context.Context, request operations.GetBanksIDConnectorSourcesIDConnectorSourceFieldsRequest) (*operations.GetBanksIDConnectorSourcesIDConnectorSourceFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/sources/{id_connector_source}/fields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/sources/{id_connector_source}/fields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -471,7 +495,10 @@ func (s *connections) GetBanksIDConnectorSourcesIDConnectorSourceFields(ctx cont
 // GetBanksIDConnectorSourcesIDSource - Get the connector source
 func (s *connections) GetBanksIDConnectorSourcesIDSource(ctx context.Context, request operations.GetBanksIDConnectorSourcesIDSourceRequest) (*operations.GetBanksIDConnectorSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/sources/{id_source}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/banks/{id_connector}/sources/{id_source}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -568,7 +595,10 @@ func (s *connections) GetConnections(ctx context.Context, request operations.Get
 // Get logs about connections.<br><br>
 func (s *connections) GetConnectionsIDConnectionLogs(ctx context.Context, request operations.GetConnectionsIDConnectionLogsRequest) (*operations.GetConnectionsIDConnectionLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -616,7 +646,10 @@ func (s *connections) GetConnectionsIDConnectionLogs(ctx context.Context, reques
 // GetConnectionsIDConnectionSources - Get connection sources
 func (s *connections) GetConnectionsIDConnectionSources(ctx context.Context, request operations.GetConnectionsIDConnectionSourcesRequest) (*operations.GetConnectionsIDConnectionSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -712,7 +745,10 @@ func (s *connections) GetConnectors(ctx context.Context, request operations.GetC
 // GetConnectorsIDConnector - Get a connector
 func (s *connections) GetConnectorsIDConnector(ctx context.Context, request operations.GetConnectorsIDConnectorRequest) (*operations.GetConnectorsIDConnectorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -760,7 +796,10 @@ func (s *connections) GetConnectorsIDConnector(ctx context.Context, request oper
 // GetConnectorsIDConnectorSources - Get list of connector sources
 func (s *connections) GetConnectorsIDConnectorSources(ctx context.Context, request operations.GetConnectorsIDConnectorSourcesRequest) (*operations.GetConnectorsIDConnectorSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -808,7 +847,10 @@ func (s *connections) GetConnectorsIDConnectorSources(ctx context.Context, reque
 // GetConnectorsIDConnectorSourcesIDConnectorSourceFields - Get fields specific to a domain and a source
 func (s *connections) GetConnectorsIDConnectorSourcesIDConnectorSourceFields(ctx context.Context, request operations.GetConnectorsIDConnectorSourcesIDConnectorSourceFieldsRequest) (*operations.GetConnectorsIDConnectorSourcesIDConnectorSourceFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources/{id_connector_source}/fields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources/{id_connector_source}/fields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -856,7 +898,10 @@ func (s *connections) GetConnectorsIDConnectorSourcesIDConnectorSourceFields(ctx
 // GetConnectorsIDConnectorSourcesIDSource - Get the connector source
 func (s *connections) GetConnectorsIDConnectorSourcesIDSource(ctx context.Context, request operations.GetConnectorsIDConnectorSourcesIDSourceRequest) (*operations.GetConnectorsIDConnectorSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources/{id_source}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources/{id_source}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1002,7 +1047,10 @@ func (s *connections) GetProviders(ctx context.Context, request operations.GetPr
 // By default, it selects a set of 3 connections.<br><br>
 func (s *connections) GetProvidersIDConnectorConnections(ctx context.Context, request operations.GetProvidersIDConnectorConnectionsRequest) (*operations.GetProvidersIDConnectorConnectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/connections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/connections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1050,7 +1098,10 @@ func (s *connections) GetProvidersIDConnectorConnections(ctx context.Context, re
 // GetProvidersIDConnectorSources - Get list of connector sources
 func (s *connections) GetProvidersIDConnectorSources(ctx context.Context, request operations.GetProvidersIDConnectorSourcesRequest) (*operations.GetProvidersIDConnectorSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/sources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/sources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1098,7 +1149,10 @@ func (s *connections) GetProvidersIDConnectorSources(ctx context.Context, reques
 // GetProvidersIDConnectorSourcesIDConnectorSourceFields - Get fields specific to a domain and a source
 func (s *connections) GetProvidersIDConnectorSourcesIDConnectorSourceFields(ctx context.Context, request operations.GetProvidersIDConnectorSourcesIDConnectorSourceFieldsRequest) (*operations.GetProvidersIDConnectorSourcesIDConnectorSourceFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/sources/{id_connector_source}/fields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/sources/{id_connector_source}/fields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1146,7 +1200,10 @@ func (s *connections) GetProvidersIDConnectorSourcesIDConnectorSourceFields(ctx 
 // GetProvidersIDConnectorSourcesIDSource - Get the connector source
 func (s *connections) GetProvidersIDConnectorSourcesIDSource(ctx context.Context, request operations.GetProvidersIDConnectorSourcesIDSourceRequest) (*operations.GetProvidersIDConnectorSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/sources/{id_source}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{id_connector}/sources/{id_source}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1194,7 +1251,10 @@ func (s *connections) GetProvidersIDConnectorSourcesIDSource(ctx context.Context
 // GetProvidersIDProvider - Get a connector
 func (s *connections) GetProvidersIDProvider(ctx context.Context, request operations.GetProvidersIDProviderRequest) (*operations.GetProvidersIDProviderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{id_provider}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{id_provider}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1242,7 +1302,10 @@ func (s *connections) GetProvidersIDProvider(ctx context.Context, request operat
 // GetUsersIDUserConnections - Get connections
 func (s *connections) GetUsersIDUserConnections(ctx context.Context, request operations.GetUsersIDUserConnectionsRequest) (*operations.GetUsersIDUserConnectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1291,7 +1354,10 @@ func (s *connections) GetUsersIDUserConnections(ctx context.Context, request ope
 // <br><br>
 func (s *connections) GetUsersIDUserConnectionsIDConnectionInformations(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionInformationsRequest) (*operations.GetUsersIDUserConnectionsIDConnectionInformationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/informations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/informations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1340,7 +1406,10 @@ func (s *connections) GetUsersIDUserConnectionsIDConnectionInformations(ctx cont
 // Get logs about connections.<br><br>
 func (s *connections) GetUsersIDUserConnectionsIDConnectionLogs(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionLogsRequest) (*operations.GetUsersIDUserConnectionsIDConnectionLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1388,7 +1457,10 @@ func (s *connections) GetUsersIDUserConnectionsIDConnectionLogs(ctx context.Cont
 // GetUsersIDUserConnectionsIDConnectionSources - Get connection sources
 func (s *connections) GetUsersIDUserConnectionsIDConnectionSources(ctx context.Context, request operations.GetUsersIDUserConnectionsIDConnectionSourcesRequest) (*operations.GetUsersIDUserConnectionsIDConnectionSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1437,7 +1509,10 @@ func (s *connections) GetUsersIDUserConnectionsIDConnectionSources(ctx context.C
 // Get logs about connections.<br><br>
 func (s *connections) GetUsersIDUserLogs(ctx context.Context, request operations.GetUsersIDUserLogsRequest) (*operations.GetUsersIDUserLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1486,7 +1561,10 @@ func (s *connections) GetUsersIDUserLogs(ctx context.Context, request operations
 // This endpoint is used to enable a source or force a synchronization on it.<br><br>
 func (s *connections) PostConnectionsIDConnectionSourcesIDSource(ctx context.Context, request operations.PostConnectionsIDConnectionSourcesIDSourceRequest) (*operations.PostConnectionsIDConnectionSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources/{id_source}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources/{id_source}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -1601,7 +1679,10 @@ func (s *connections) PostConnectors(ctx context.Context, request operations.Pos
 // Create a new connection to a given bank or provider. You have to give all needed parameters (use /banks/ID/fields or /providers/ID/fields to get them).<br><br>
 func (s *connections) PostUsersIDUserConnections(ctx context.Context, request operations.PostUsersIDUserConnectionsRequest) (*operations.PostUsersIDUserConnectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -1657,7 +1738,10 @@ func (s *connections) PostUsersIDUserConnections(ctx context.Context, request op
 // Give new parameters to change on the configuration of this connection (for example "password").<br><br>It tests connection to website, and if it fails, a 400 response is given with the error code "wrongpass" or "websiteUnavailable".<br><br>You can also supply meta-parameters on connection, like 'active' or 'expire'.<br><br>It's possible to execute the update/synchronization in the background with a query parameter. If done in background this endpoint will respond with data that is not yet updated. To obtain updated data, polling is required as the the data will be filled in the background.<br><br>
 func (s *connections) PostUsersIDUserConnectionsIDConnection(ctx context.Context, request operations.PostUsersIDUserConnectionsIDConnectionRequest) (*operations.PostUsersIDUserConnectionsIDConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -1713,7 +1797,10 @@ func (s *connections) PostUsersIDUserConnectionsIDConnection(ctx context.Context
 // This endpoint is used to enable a source or force a synchronization on it.<br><br>
 func (s *connections) PostUsersIDUserConnectionsIDConnectionSourcesIDSource(ctx context.Context, request operations.PostUsersIDUserConnectionsIDConnectionSourcesIDSourceRequest) (*operations.PostUsersIDUserConnectionsIDConnectionSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -1769,7 +1856,10 @@ func (s *connections) PostUsersIDUserConnectionsIDConnectionSourcesIDSource(ctx 
 // This endpoint is used to enable a source or force a synchronization on it.<br><br>
 func (s *connections) PutConnectionsIDConnectionSourcesIDSource(ctx context.Context, request operations.PutConnectionsIDConnectionSourcesIDSourceRequest) (*operations.PutConnectionsIDConnectionSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources/{id_source}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connections/{id_connection}/sources/{id_source}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -1824,7 +1914,10 @@ func (s *connections) PutConnectionsIDConnectionSourcesIDSource(ctx context.Cont
 // PutConnectorsIDConnectorSources - Edit several connector sources
 func (s *connections) PutConnectorsIDConnectorSources(ctx context.Context, request operations.PutConnectorsIDConnectorSourcesRequest) (*operations.PutConnectorsIDConnectorSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -1879,7 +1972,10 @@ func (s *connections) PutConnectorsIDConnectorSources(ctx context.Context, reque
 // PutConnectorsIDConnectorSourcesIDSource - Edit the provided connector source
 func (s *connections) PutConnectorsIDConnectorSourcesIDSource(ctx context.Context, request operations.PutConnectorsIDConnectorSourcesIDSourceRequest) (*operations.PutConnectorsIDConnectorSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources/{id_source}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connectors/{id_connector}/sources/{id_source}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -1935,7 +2031,10 @@ func (s *connections) PutConnectorsIDConnectorSourcesIDSource(ctx context.Contex
 // We suggest to pass parameter expand=accounts[transactions] to get all *new* and *updated* transactions.<br><br>
 func (s *connections) PutUsersIDUserConnectionsIDConnection(ctx context.Context, request operations.PutUsersIDUserConnectionsIDConnectionRequest) (*operations.PutUsersIDUserConnectionsIDConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1984,7 +2083,10 @@ func (s *connections) PutUsersIDUserConnectionsIDConnection(ctx context.Context,
 // This endpoint is used to enable a source or force a synchronization on it.<br><br>
 func (s *connections) PutUsersIDUserConnectionsIDConnectionSourcesIDSource(ctx context.Context, request operations.PutUsersIDUserConnectionsIDConnectionSourcesIDSourceRequest) (*operations.PutUsersIDUserConnectionsIDConnectionSourcesIDSourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

@@ -37,7 +37,10 @@ func newSegments(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DeleteAPIV2SegmentsID - Deletes the segment with the given ID.
 func (s *segments) DeleteAPIV2SegmentsID(ctx context.Context, request operations.DeleteAPIV2SegmentsIDRequest, security operations.DeleteAPIV2SegmentsIDSecurity) (*operations.DeleteAPIV2SegmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/segments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/segments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -144,7 +147,10 @@ func (s *segments) GetAPIV2Segments(ctx context.Context, request operations.GetA
 // GetAPIV2SegmentsID - Returns the segment matching the given ID.
 func (s *segments) GetAPIV2SegmentsID(ctx context.Context, request operations.GetAPIV2SegmentsIDRequest, security operations.GetAPIV2SegmentsIDSecurity) (*operations.GetAPIV2SegmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/segments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/segments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -200,7 +206,10 @@ func (s *segments) GetAPIV2SegmentsID(ctx context.Context, request operations.Ge
 // GetAPIV2SegmentsIDContent - UNDER DEVELOPMENT - Returns the audio content segment matching the given ID.
 func (s *segments) GetAPIV2SegmentsIDContent(ctx context.Context, request operations.GetAPIV2SegmentsIDContentRequest, security operations.GetAPIV2SegmentsIDContentSecurity) (*operations.GetAPIV2SegmentsIDContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/segments/{id}/content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/segments/{id}/content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

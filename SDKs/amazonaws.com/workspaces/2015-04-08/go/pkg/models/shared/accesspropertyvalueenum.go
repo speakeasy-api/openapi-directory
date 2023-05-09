@@ -14,18 +14,22 @@ const (
 	AccessPropertyValueEnumDeny  AccessPropertyValueEnum = "DENY"
 )
 
+func (e AccessPropertyValueEnum) ToPointer() *AccessPropertyValueEnum {
+	return &e
+}
+
 func (e *AccessPropertyValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = AccessPropertyValueEnum(s)
+		*e = AccessPropertyValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessPropertyValueEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessPropertyValueEnum: %v", v)
 	}
 }

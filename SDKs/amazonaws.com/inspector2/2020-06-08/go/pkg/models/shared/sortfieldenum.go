@@ -28,12 +28,16 @@ const (
 	SortFieldEnumVendorSeverity         SortFieldEnum = "VENDOR_SEVERITY"
 )
 
+func (e SortFieldEnum) ToPointer() *SortFieldEnum {
+	return &e
+}
+
 func (e *SortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_ACCOUNT_ID":
 		fallthrough
 	case "FINDING_TYPE":
@@ -65,9 +69,9 @@ func (e *SortFieldEnum) UnmarshalJSON(data []byte) error {
 	case "INSPECTOR_SCORE":
 		fallthrough
 	case "VENDOR_SEVERITY":
-		*e = SortFieldEnum(s)
+		*e = SortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for SortFieldEnum: %v", v)
 	}
 }

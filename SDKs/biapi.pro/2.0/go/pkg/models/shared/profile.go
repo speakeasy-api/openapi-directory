@@ -14,19 +14,23 @@ const (
 	ProfileRoleEnumSer   ProfileRoleEnum = "ser"
 )
 
+func (e ProfileRoleEnum) ToPointer() *ProfileRoleEnum {
+	return &e
+}
+
 func (e *ProfileRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin":
 		fallthrough
 	case "ser":
-		*e = ProfileRoleEnum(s)
+		*e = ProfileRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProfileRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for ProfileRoleEnum: %v", v)
 	}
 }
 

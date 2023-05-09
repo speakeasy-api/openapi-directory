@@ -17,19 +17,23 @@ const (
 	CreateCallRequestNccoEventMethodEnumGet  CreateCallRequestNccoEventMethodEnum = "GET"
 )
 
+func (e CreateCallRequestNccoEventMethodEnum) ToPointer() *CreateCallRequestNccoEventMethodEnum {
+	return &e
+}
+
 func (e *CreateCallRequestNccoEventMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POST":
 		fallthrough
 	case "GET":
-		*e = CreateCallRequestNccoEventMethodEnum(s)
+		*e = CreateCallRequestNccoEventMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCallRequestNccoEventMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCallRequestNccoEventMethodEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	CreateCallRequestNccoMachineDetectionEnumHangup   CreateCallRequestNccoMachineDetectionEnum = "hangup"
 )
 
+func (e CreateCallRequestNccoMachineDetectionEnum) ToPointer() *CreateCallRequestNccoMachineDetectionEnum {
+	return &e
+}
+
 func (e *CreateCallRequestNccoMachineDetectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "continue":
 		fallthrough
 	case "hangup":
-		*e = CreateCallRequestNccoMachineDetectionEnum(s)
+		*e = CreateCallRequestNccoMachineDetectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCallRequestNccoMachineDetectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCallRequestNccoMachineDetectionEnum: %v", v)
 	}
 }
 

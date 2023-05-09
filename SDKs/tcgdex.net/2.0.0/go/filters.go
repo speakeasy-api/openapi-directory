@@ -75,9 +75,13 @@ func (s *filters) GetCategories(ctx context.Context) (*operations.GetCategoriesR
 
 	return res, nil
 }
+
 func (s *filters) GetCategoriesCategory(ctx context.Context, request operations.GetCategoriesCategoryRequest) (*operations.GetCategoriesCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{category}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/categories/{category}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -118,6 +122,7 @@ func (s *filters) GetCategoriesCategory(ctx context.Context, request operations.
 
 	return res, nil
 }
+
 func (s *filters) GetDexIds(ctx context.Context) (*operations.GetDexIdsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/dex-ids"
@@ -160,9 +165,13 @@ func (s *filters) GetDexIds(ctx context.Context) (*operations.GetDexIdsResponse,
 
 	return res, nil
 }
+
 func (s *filters) GetDexIdsDexID(ctx context.Context, request operations.GetDexIdsDexIDRequest) (*operations.GetDexIdsDexIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dex-ids/{dexId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dex-ids/{dexId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -203,6 +212,7 @@ func (s *filters) GetDexIdsDexID(ctx context.Context, request operations.GetDexI
 
 	return res, nil
 }
+
 func (s *filters) GetEnergyTypes(ctx context.Context) (*operations.GetEnergyTypesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/energy-types"
@@ -245,9 +255,13 @@ func (s *filters) GetEnergyTypes(ctx context.Context) (*operations.GetEnergyType
 
 	return res, nil
 }
+
 func (s *filters) GetEnergyTypesEnergyType(ctx context.Context, request operations.GetEnergyTypesEnergyTypeRequest) (*operations.GetEnergyTypesEnergyTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/energy-types/{energy-type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/energy-types/{energy-type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,6 +302,7 @@ func (s *filters) GetEnergyTypesEnergyType(ctx context.Context, request operatio
 
 	return res, nil
 }
+
 func (s *filters) GetHp(ctx context.Context) (*operations.GetHpResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hp"
@@ -330,9 +345,13 @@ func (s *filters) GetHp(ctx context.Context) (*operations.GetHpResponse, error) 
 
 	return res, nil
 }
+
 func (s *filters) GetHpHp(ctx context.Context, request operations.GetHpHpRequest) (*operations.GetHpHpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hp/{hp}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hp/{hp}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -373,6 +392,7 @@ func (s *filters) GetHpHp(ctx context.Context, request operations.GetHpHpRequest
 
 	return res, nil
 }
+
 func (s *filters) GetIllustrators(ctx context.Context) (*operations.GetIllustratorsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/illustrators"
@@ -415,9 +435,13 @@ func (s *filters) GetIllustrators(ctx context.Context) (*operations.GetIllustrat
 
 	return res, nil
 }
+
 func (s *filters) GetIllustratorsIllustrator(ctx context.Context, request operations.GetIllustratorsIllustratorRequest) (*operations.GetIllustratorsIllustratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/illustrators/{illustrator}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/illustrators/{illustrator}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -458,6 +482,7 @@ func (s *filters) GetIllustratorsIllustrator(ctx context.Context, request operat
 
 	return res, nil
 }
+
 func (s *filters) GetRarities(ctx context.Context) (*operations.GetRaritiesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/rarities"
@@ -500,9 +525,13 @@ func (s *filters) GetRarities(ctx context.Context) (*operations.GetRaritiesRespo
 
 	return res, nil
 }
+
 func (s *filters) GetRaritiesRarity(ctx context.Context, request operations.GetRaritiesRarityRequest) (*operations.GetRaritiesRarityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rarities/{rarity}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/rarities/{rarity}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -543,6 +572,7 @@ func (s *filters) GetRaritiesRarity(ctx context.Context, request operations.GetR
 
 	return res, nil
 }
+
 func (s *filters) GetRegulationMarks(ctx context.Context) (*operations.GetRegulationMarksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/regulation-marks"
@@ -585,9 +615,13 @@ func (s *filters) GetRegulationMarks(ctx context.Context) (*operations.GetRegula
 
 	return res, nil
 }
+
 func (s *filters) GetRegulationMarksRegulationMark(ctx context.Context, request operations.GetRegulationMarksRegulationMarkRequest) (*operations.GetRegulationMarksRegulationMarkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/regulation-marks/{regulation-mark}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/regulation-marks/{regulation-mark}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -628,6 +662,7 @@ func (s *filters) GetRegulationMarksRegulationMark(ctx context.Context, request 
 
 	return res, nil
 }
+
 func (s *filters) GetRetreats(ctx context.Context) (*operations.GetRetreatsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/retreats"
@@ -670,9 +705,13 @@ func (s *filters) GetRetreats(ctx context.Context) (*operations.GetRetreatsRespo
 
 	return res, nil
 }
+
 func (s *filters) GetRetreatsRetreat(ctx context.Context, request operations.GetRetreatsRetreatRequest) (*operations.GetRetreatsRetreatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/retreats/{retreat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/retreats/{retreat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -713,6 +752,7 @@ func (s *filters) GetRetreatsRetreat(ctx context.Context, request operations.Get
 
 	return res, nil
 }
+
 func (s *filters) GetSeries(ctx context.Context) (*operations.GetSeriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/series"
@@ -755,9 +795,13 @@ func (s *filters) GetSeries(ctx context.Context) (*operations.GetSeriesResponse,
 
 	return res, nil
 }
+
 func (s *filters) GetSeriesSerie(ctx context.Context, request operations.GetSeriesSerieRequest) (*operations.GetSeriesSerieResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/series/{serie}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/series/{serie}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -798,6 +842,7 @@ func (s *filters) GetSeriesSerie(ctx context.Context, request operations.GetSeri
 
 	return res, nil
 }
+
 func (s *filters) GetSets(ctx context.Context) (*operations.GetSetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/sets"
@@ -840,9 +885,13 @@ func (s *filters) GetSets(ctx context.Context) (*operations.GetSetsResponse, err
 
 	return res, nil
 }
+
 func (s *filters) GetSetsSet(ctx context.Context, request operations.GetSetsSetRequest) (*operations.GetSetsSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/{set}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sets/{set}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -883,6 +932,7 @@ func (s *filters) GetSetsSet(ctx context.Context, request operations.GetSetsSetR
 
 	return res, nil
 }
+
 func (s *filters) GetStages(ctx context.Context) (*operations.GetStagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stages"
@@ -925,9 +975,13 @@ func (s *filters) GetStages(ctx context.Context) (*operations.GetStagesResponse,
 
 	return res, nil
 }
+
 func (s *filters) GetStagesStage(ctx context.Context, request operations.GetStagesStageRequest) (*operations.GetStagesStageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stages/{stage}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/stages/{stage}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -968,6 +1022,7 @@ func (s *filters) GetStagesStage(ctx context.Context, request operations.GetStag
 
 	return res, nil
 }
+
 func (s *filters) GetSuffixes(ctx context.Context) (*operations.GetSuffixesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/suffixes"
@@ -1010,9 +1065,13 @@ func (s *filters) GetSuffixes(ctx context.Context) (*operations.GetSuffixesRespo
 
 	return res, nil
 }
+
 func (s *filters) GetSuffixesSuffix(ctx context.Context, request operations.GetSuffixesSuffixRequest) (*operations.GetSuffixesSuffixResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suffixes/{suffix}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suffixes/{suffix}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1053,6 +1112,7 @@ func (s *filters) GetSuffixesSuffix(ctx context.Context, request operations.GetS
 
 	return res, nil
 }
+
 func (s *filters) GetTrainerTypes(ctx context.Context) (*operations.GetTrainerTypesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/trainer-types"
@@ -1095,9 +1155,13 @@ func (s *filters) GetTrainerTypes(ctx context.Context) (*operations.GetTrainerTy
 
 	return res, nil
 }
+
 func (s *filters) GetTrainerTypesTrainerType(ctx context.Context, request operations.GetTrainerTypesTrainerTypeRequest) (*operations.GetTrainerTypesTrainerTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trainer-types/{trainer-type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/trainer-types/{trainer-type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1138,6 +1202,7 @@ func (s *filters) GetTrainerTypesTrainerType(ctx context.Context, request operat
 
 	return res, nil
 }
+
 func (s *filters) GetTypes(ctx context.Context) (*operations.GetTypesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/types"
@@ -1180,9 +1245,13 @@ func (s *filters) GetTypes(ctx context.Context) (*operations.GetTypesResponse, e
 
 	return res, nil
 }
+
 func (s *filters) GetTypesType(ctx context.Context, request operations.GetTypesTypeRequest) (*operations.GetTypesTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/types/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/types/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1223,6 +1292,7 @@ func (s *filters) GetTypesType(ctx context.Context, request operations.GetTypesT
 
 	return res, nil
 }
+
 func (s *filters) GetVariants(ctx context.Context) (*operations.GetVariantsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/variants"
@@ -1265,9 +1335,13 @@ func (s *filters) GetVariants(ctx context.Context) (*operations.GetVariantsRespo
 
 	return res, nil
 }
+
 func (s *filters) GetVariantsVariant(ctx context.Context, request operations.GetVariantsVariantRequest) (*operations.GetVariantsVariantResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/variants/{variant}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/variants/{variant}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

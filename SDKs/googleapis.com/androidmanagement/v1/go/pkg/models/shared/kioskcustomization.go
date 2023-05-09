@@ -16,21 +16,25 @@ const (
 	KioskCustomizationDeviceSettingsEnumSettingsAccessBlocked     KioskCustomizationDeviceSettingsEnum = "SETTINGS_ACCESS_BLOCKED"
 )
 
+func (e KioskCustomizationDeviceSettingsEnum) ToPointer() *KioskCustomizationDeviceSettingsEnum {
+	return &e
+}
+
 func (e *KioskCustomizationDeviceSettingsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_SETTINGS_UNSPECIFIED":
 		fallthrough
 	case "SETTINGS_ACCESS_ALLOWED":
 		fallthrough
 	case "SETTINGS_ACCESS_BLOCKED":
-		*e = KioskCustomizationDeviceSettingsEnum(s)
+		*e = KioskCustomizationDeviceSettingsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KioskCustomizationDeviceSettingsEnum: %s", s)
+		return fmt.Errorf("invalid value for KioskCustomizationDeviceSettingsEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	KioskCustomizationPowerButtonActionsEnumPowerButtonBlocked            KioskCustomizationPowerButtonActionsEnum = "POWER_BUTTON_BLOCKED"
 )
 
+func (e KioskCustomizationPowerButtonActionsEnum) ToPointer() *KioskCustomizationPowerButtonActionsEnum {
+	return &e
+}
+
 func (e *KioskCustomizationPowerButtonActionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POWER_BUTTON_ACTIONS_UNSPECIFIED":
 		fallthrough
 	case "POWER_BUTTON_AVAILABLE":
 		fallthrough
 	case "POWER_BUTTON_BLOCKED":
-		*e = KioskCustomizationPowerButtonActionsEnum(s)
+		*e = KioskCustomizationPowerButtonActionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KioskCustomizationPowerButtonActionsEnum: %s", s)
+		return fmt.Errorf("invalid value for KioskCustomizationPowerButtonActionsEnum: %v", v)
 	}
 }
 
@@ -71,12 +79,16 @@ const (
 	KioskCustomizationStatusBarEnumSystemInfoOnly                     KioskCustomizationStatusBarEnum = "SYSTEM_INFO_ONLY"
 )
 
+func (e KioskCustomizationStatusBarEnum) ToPointer() *KioskCustomizationStatusBarEnum {
+	return &e
+}
+
 func (e *KioskCustomizationStatusBarEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_BAR_UNSPECIFIED":
 		fallthrough
 	case "NOTIFICATIONS_AND_SYSTEM_INFO_ENABLED":
@@ -84,10 +96,10 @@ func (e *KioskCustomizationStatusBarEnum) UnmarshalJSON(data []byte) error {
 	case "NOTIFICATIONS_AND_SYSTEM_INFO_DISABLED":
 		fallthrough
 	case "SYSTEM_INFO_ONLY":
-		*e = KioskCustomizationStatusBarEnum(s)
+		*e = KioskCustomizationStatusBarEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KioskCustomizationStatusBarEnum: %s", s)
+		return fmt.Errorf("invalid value for KioskCustomizationStatusBarEnum: %v", v)
 	}
 }
 
@@ -100,21 +112,25 @@ const (
 	KioskCustomizationSystemErrorWarningsEnumErrorAndWarningsMuted          KioskCustomizationSystemErrorWarningsEnum = "ERROR_AND_WARNINGS_MUTED"
 )
 
+func (e KioskCustomizationSystemErrorWarningsEnum) ToPointer() *KioskCustomizationSystemErrorWarningsEnum {
+	return &e
+}
+
 func (e *KioskCustomizationSystemErrorWarningsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYSTEM_ERROR_WARNINGS_UNSPECIFIED":
 		fallthrough
 	case "ERROR_AND_WARNINGS_ENABLED":
 		fallthrough
 	case "ERROR_AND_WARNINGS_MUTED":
-		*e = KioskCustomizationSystemErrorWarningsEnum(s)
+		*e = KioskCustomizationSystemErrorWarningsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KioskCustomizationSystemErrorWarningsEnum: %s", s)
+		return fmt.Errorf("invalid value for KioskCustomizationSystemErrorWarningsEnum: %v", v)
 	}
 }
 
@@ -128,12 +144,16 @@ const (
 	KioskCustomizationSystemNavigationEnumHomeButtonOnly              KioskCustomizationSystemNavigationEnum = "HOME_BUTTON_ONLY"
 )
 
+func (e KioskCustomizationSystemNavigationEnum) ToPointer() *KioskCustomizationSystemNavigationEnum {
+	return &e
+}
+
 func (e *KioskCustomizationSystemNavigationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYSTEM_NAVIGATION_UNSPECIFIED":
 		fallthrough
 	case "NAVIGATION_ENABLED":
@@ -141,10 +161,10 @@ func (e *KioskCustomizationSystemNavigationEnum) UnmarshalJSON(data []byte) erro
 	case "NAVIGATION_DISABLED":
 		fallthrough
 	case "HOME_BUTTON_ONLY":
-		*e = KioskCustomizationSystemNavigationEnum(s)
+		*e = KioskCustomizationSystemNavigationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KioskCustomizationSystemNavigationEnum: %s", s)
+		return fmt.Errorf("invalid value for KioskCustomizationSystemNavigationEnum: %v", v)
 	}
 }
 

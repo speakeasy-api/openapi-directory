@@ -15,19 +15,23 @@ const (
 	XxePayloadLocationEnumCompleteRequestBody XxePayloadLocationEnum = "COMPLETE_REQUEST_BODY"
 )
 
+func (e XxePayloadLocationEnum) ToPointer() *XxePayloadLocationEnum {
+	return &e
+}
+
 func (e *XxePayloadLocationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCATION_UNSPECIFIED":
 		fallthrough
 	case "COMPLETE_REQUEST_BODY":
-		*e = XxePayloadLocationEnum(s)
+		*e = XxePayloadLocationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for XxePayloadLocationEnum: %s", s)
+		return fmt.Errorf("invalid value for XxePayloadLocationEnum: %v", v)
 	}
 }
 

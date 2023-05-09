@@ -15,21 +15,25 @@ const (
 	ModifyCollectClientManagementEnumAdn     ModifyCollectClientManagementEnum = "adn"
 )
 
+func (e ModifyCollectClientManagementEnum) ToPointer() *ModifyCollectClientManagementEnum {
+	return &e
+}
+
 func (e *ModifyCollectClientManagementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no":
 		fallthrough
 	case "manager":
 		fallthrough
 	case "adn":
-		*e = ModifyCollectClientManagementEnum(s)
+		*e = ModifyCollectClientManagementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyCollectClientManagementEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyCollectClientManagementEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	ModifyCollectPlayerEnumCollaborator ModifyCollectPlayerEnum = "collaborator"
 )
 
+func (e ModifyCollectPlayerEnum) ToPointer() *ModifyCollectPlayerEnum {
+	return &e
+}
+
 func (e *ModifyCollectPlayerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "guest":
 		fallthrough
 	case "owner":
@@ -58,10 +66,10 @@ func (e *ModifyCollectPlayerEnum) UnmarshalJSON(data []byte) error {
 	case "assistant":
 		fallthrough
 	case "collaborator":
-		*e = ModifyCollectPlayerEnum(s)
+		*e = ModifyCollectPlayerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyCollectPlayerEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyCollectPlayerEnum: %v", v)
 	}
 }
 

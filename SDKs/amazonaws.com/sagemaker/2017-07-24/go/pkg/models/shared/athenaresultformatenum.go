@@ -18,12 +18,16 @@ const (
 	AthenaResultFormatEnumTextfile AthenaResultFormatEnum = "TEXTFILE"
 )
 
+func (e AthenaResultFormatEnum) ToPointer() *AthenaResultFormatEnum {
+	return &e
+}
+
 func (e *AthenaResultFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARQUET":
 		fallthrough
 	case "ORC":
@@ -33,9 +37,9 @@ func (e *AthenaResultFormatEnum) UnmarshalJSON(data []byte) error {
 	case "JSON":
 		fallthrough
 	case "TEXTFILE":
-		*e = AthenaResultFormatEnum(s)
+		*e = AthenaResultFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AthenaResultFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for AthenaResultFormatEnum: %v", v)
 	}
 }

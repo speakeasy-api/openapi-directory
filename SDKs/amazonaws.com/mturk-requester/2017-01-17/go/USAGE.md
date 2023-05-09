@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,23 +17,21 @@ func main() {
         }),
     )
 
-    req := operations.AcceptQualificationRequestRequest{
+    ctx := context.Background()
+    res, err := s.AcceptQualificationRequest(ctx, operations.AcceptQualificationRequestRequest{
         AcceptQualificationRequestRequest: shared.AcceptQualificationRequestRequest{
-            IntegerValue: 548814,
+            IntegerValue: sdk.Int64(548814),
             QualificationRequestID: "provident",
         },
-        XAmzAlgorithm: "distinctio",
-        XAmzContentSha256: "quibusdam",
-        XAmzCredential: "unde",
-        XAmzDate: "nulla",
-        XAmzSecurityToken: "corrupti",
-        XAmzSignature: "illum",
-        XAmzSignedHeaders: "vel",
-        XAmzTarget: "MTurkRequesterServiceV20170117.AcceptQualificationRequest",
-    }
-
-    ctx := context.Background()
-    res, err := s.AcceptQualificationRequest(ctx, req)
+        XAmzAlgorithm: sdk.String("distinctio"),
+        XAmzContentSha256: sdk.String("quibusdam"),
+        XAmzCredential: sdk.String("unde"),
+        XAmzDate: sdk.String("nulla"),
+        XAmzSecurityToken: sdk.String("corrupti"),
+        XAmzSignature: sdk.String("illum"),
+        XAmzSignedHeaders: sdk.String("vel"),
+        XAmzTarget: operations.AcceptQualificationRequestXAmzTargetEnumMTurkRequesterServiceV20170117AcceptQualificationRequest,
+    })
     if err != nil {
         log.Fatal(err)
     }

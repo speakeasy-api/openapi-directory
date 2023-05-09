@@ -28,12 +28,16 @@ const (
 	SchoolHighGradeEnumOther           SchoolHighGradeEnum = "Other"
 )
 
+func (e SchoolHighGradeEnum) ToPointer() *SchoolHighGradeEnum {
+	return &e
+}
+
 func (e *SchoolHighGradeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "2":
@@ -65,10 +69,10 @@ func (e *SchoolHighGradeEnum) UnmarshalJSON(data []byte) error {
 	case "PostGraduate":
 		fallthrough
 	case "Other":
-		*e = SchoolHighGradeEnum(s)
+		*e = SchoolHighGradeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SchoolHighGradeEnum: %s", s)
+		return fmt.Errorf("invalid value for SchoolHighGradeEnum: %v", v)
 	}
 }
 
@@ -93,12 +97,16 @@ const (
 	SchoolLowGradeEnumOther           SchoolLowGradeEnum = "Other"
 )
 
+func (e SchoolLowGradeEnum) ToPointer() *SchoolLowGradeEnum {
+	return &e
+}
+
 func (e *SchoolLowGradeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "2":
@@ -130,10 +138,10 @@ func (e *SchoolLowGradeEnum) UnmarshalJSON(data []byte) error {
 	case "PostGraduate":
 		fallthrough
 	case "Other":
-		*e = SchoolLowGradeEnum(s)
+		*e = SchoolLowGradeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SchoolLowGradeEnum: %s", s)
+		return fmt.Errorf("invalid value for SchoolLowGradeEnum: %v", v)
 	}
 }
 

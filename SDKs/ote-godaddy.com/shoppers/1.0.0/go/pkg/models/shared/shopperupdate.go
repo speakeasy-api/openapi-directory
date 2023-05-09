@@ -68,12 +68,16 @@ const (
 	ShopperUpdateMarketIDEnumZhTw ShopperUpdateMarketIDEnum = "zh-TW"
 )
 
+func (e ShopperUpdateMarketIDEnum) ToPointer() *ShopperUpdateMarketIDEnum {
+	return &e
+}
+
 func (e *ShopperUpdateMarketIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "da-DK":
 		fallthrough
 	case "de-AT":
@@ -185,10 +189,10 @@ func (e *ShopperUpdateMarketIDEnum) UnmarshalJSON(data []byte) error {
 	case "zh-SG":
 		fallthrough
 	case "zh-TW":
-		*e = ShopperUpdateMarketIDEnum(s)
+		*e = ShopperUpdateMarketIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShopperUpdateMarketIDEnum: %s", s)
+		return fmt.Errorf("invalid value for ShopperUpdateMarketIDEnum: %v", v)
 	}
 }
 

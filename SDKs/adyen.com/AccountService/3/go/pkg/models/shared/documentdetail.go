@@ -34,12 +34,16 @@ const (
 	DocumentDetailDocumentTypeEnumSsn                 DocumentDetailDocumentTypeEnum = "SSN"
 )
 
+func (e DocumentDetailDocumentTypeEnum) ToPointer() *DocumentDetailDocumentTypeEnum {
+	return &e
+}
+
 func (e *DocumentDetailDocumentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BANK_STATEMENT":
 		fallthrough
 	case "BSN":
@@ -61,10 +65,10 @@ func (e *DocumentDetailDocumentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PROOF_OF_RESIDENCY":
 		fallthrough
 	case "SSN":
-		*e = DocumentDetailDocumentTypeEnum(s)
+		*e = DocumentDetailDocumentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentDetailDocumentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentDetailDocumentTypeEnum: %v", v)
 	}
 }
 

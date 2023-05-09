@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.PremiumNewsRequest{
-        Format: "json",
-    }
-
     ctx := context.Background()
-    res, err := s.PremiumNews(ctx, req)
+    res, err := s.PremiumNews(ctx, operations.PremiumNewsRequest{
+        Format: operations.PremiumNewsFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }

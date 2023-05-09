@@ -16,21 +16,25 @@ const (
 	PersonMetadataObjectTypeEnumPage                  PersonMetadataObjectTypeEnum = "PAGE"
 )
 
+func (e PersonMetadataObjectTypeEnum) ToPointer() *PersonMetadataObjectTypeEnum {
+	return &e
+}
+
 func (e *PersonMetadataObjectTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OBJECT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PERSON":
 		fallthrough
 	case "PAGE":
-		*e = PersonMetadataObjectTypeEnum(s)
+		*e = PersonMetadataObjectTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PersonMetadataObjectTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PersonMetadataObjectTypeEnum: %v", v)
 	}
 }
 

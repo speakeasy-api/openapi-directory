@@ -36,7 +36,10 @@ func newScim(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/scim#delete-a-scim-user-from-an-organization - API method documentation
 func (s *scim) ScimDeleteUserFromOrg(ctx context.Context, request operations.ScimDeleteUserFromOrgRequest) (*operations.ScimDeleteUserFromOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -93,7 +96,10 @@ func (s *scim) ScimDeleteUserFromOrg(ctx context.Context, request operations.Sci
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/scim#get-scim-provisioning-information-for-a-user - API method documentation
 func (s *scim) ScimGetProvisioningInformationForUser(ctx context.Context, request operations.ScimGetProvisioningInformationForUserRequest) (*operations.ScimGetProvisioningInformationForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -175,7 +181,10 @@ func (s *scim) ScimGetProvisioningInformationForUser(ctx context.Context, reques
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/scim#list-scim-provisioned-identities - API method documentation
 func (s *scim) ScimListProvisionedIdentities(ctx context.Context, request operations.ScimListProvisionedIdentitiesRequest) (*operations.ScimListProvisionedIdentitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scim/v2/organizations/{org}/Users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scim/v2/organizations/{org}/Users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -249,7 +258,10 @@ func (s *scim) ScimListProvisionedIdentities(ctx context.Context, request operat
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/scim#provision-and-invite-a-scim-user - API method documentation
 func (s *scim) ScimProvisionAndInviteUser(ctx context.Context, request operations.ScimProvisionAndInviteUserRequest) (*operations.ScimProvisionAndInviteUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scim/v2/organizations/{org}/Users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scim/v2/organizations/{org}/Users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -335,7 +347,10 @@ func (s *scim) ScimProvisionAndInviteUser(ctx context.Context, request operation
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/scim#set-scim-information-for-a-provisioned-user - API method documentation
 func (s *scim) ScimSetInformationForProvisionedUser(ctx context.Context, request operations.ScimSetInformationForProvisionedUserRequest) (*operations.ScimSetInformationForProvisionedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -428,7 +443,10 @@ func (s *scim) ScimSetInformationForProvisionedUser(ctx context.Context, request
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/scim#update-an-attribute-for-a-scim-user - API method documentation
 func (s *scim) ScimUpdateAttributeForUser(ctx context.Context, request operations.ScimUpdateAttributeForUserRequest) (*operations.ScimUpdateAttributeForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

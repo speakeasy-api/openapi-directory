@@ -29,19 +29,23 @@ const (
 	WorkflowStateEnumActive           WorkflowStateEnum = "ACTIVE"
 )
 
+func (e WorkflowStateEnum) ToPointer() *WorkflowStateEnum {
+	return &e
+}
+
 func (e *WorkflowStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
-		*e = WorkflowStateEnum(s)
+		*e = WorkflowStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkflowStateEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkflowStateEnum: %v", v)
 	}
 }
 

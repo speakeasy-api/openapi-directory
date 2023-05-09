@@ -22,19 +22,23 @@ const (
 	DfareportingCreativeGroupsListSortFieldEnumName DfareportingCreativeGroupsListSortFieldEnum = "NAME"
 )
 
+func (e DfareportingCreativeGroupsListSortFieldEnum) ToPointer() *DfareportingCreativeGroupsListSortFieldEnum {
+	return &e
+}
+
 func (e *DfareportingCreativeGroupsListSortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID":
 		fallthrough
 	case "NAME":
-		*e = DfareportingCreativeGroupsListSortFieldEnum(s)
+		*e = DfareportingCreativeGroupsListSortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingCreativeGroupsListSortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingCreativeGroupsListSortFieldEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	DfareportingCreativeGroupsListSortOrderEnumDescending DfareportingCreativeGroupsListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingCreativeGroupsListSortOrderEnum) ToPointer() *DfareportingCreativeGroupsListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingCreativeGroupsListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingCreativeGroupsListSortOrderEnum(s)
+		*e = DfareportingCreativeGroupsListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingCreativeGroupsListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingCreativeGroupsListSortOrderEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	IPMappingTypeEnumMigrated1StGen              IPMappingTypeEnum = "MIGRATED_1ST_GEN"
 )
 
+func (e IPMappingTypeEnum) ToPointer() *IPMappingTypeEnum {
+	return &e
+}
+
 func (e *IPMappingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_IP_ADDRESS_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PRIMARY":
@@ -33,10 +37,10 @@ func (e *IPMappingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PRIVATE":
 		fallthrough
 	case "MIGRATED_1ST_GEN":
-		*e = IPMappingTypeEnum(s)
+		*e = IPMappingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IPMappingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IPMappingTypeEnum: %v", v)
 	}
 }
 

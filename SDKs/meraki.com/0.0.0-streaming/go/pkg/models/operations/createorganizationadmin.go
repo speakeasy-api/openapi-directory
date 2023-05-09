@@ -16,19 +16,23 @@ const (
 	CreateOrganizationAdminRequestBodyAuthenticationMethodEnumEmail              CreateOrganizationAdminRequestBodyAuthenticationMethodEnum = "Email"
 )
 
+func (e CreateOrganizationAdminRequestBodyAuthenticationMethodEnum) ToPointer() *CreateOrganizationAdminRequestBodyAuthenticationMethodEnum {
+	return &e
+}
+
 func (e *CreateOrganizationAdminRequestBodyAuthenticationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cisco SecureX Sign-On":
 		fallthrough
 	case "Email":
-		*e = CreateOrganizationAdminRequestBodyAuthenticationMethodEnum(s)
+		*e = CreateOrganizationAdminRequestBodyAuthenticationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateOrganizationAdminRequestBodyAuthenticationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateOrganizationAdminRequestBodyAuthenticationMethodEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	CreateOrganizationAdminRequestBodyOrgAccessEnumReadOnly   CreateOrganizationAdminRequestBodyOrgAccessEnum = "read-only"
 )
 
+func (e CreateOrganizationAdminRequestBodyOrgAccessEnum) ToPointer() *CreateOrganizationAdminRequestBodyOrgAccessEnum {
+	return &e
+}
+
 func (e *CreateOrganizationAdminRequestBodyOrgAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enterprise":
 		fallthrough
 	case "full":
@@ -62,10 +70,10 @@ func (e *CreateOrganizationAdminRequestBodyOrgAccessEnum) UnmarshalJSON(data []b
 	case "none":
 		fallthrough
 	case "read-only":
-		*e = CreateOrganizationAdminRequestBodyOrgAccessEnum(s)
+		*e = CreateOrganizationAdminRequestBodyOrgAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateOrganizationAdminRequestBodyOrgAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateOrganizationAdminRequestBodyOrgAccessEnum: %v", v)
 	}
 }
 

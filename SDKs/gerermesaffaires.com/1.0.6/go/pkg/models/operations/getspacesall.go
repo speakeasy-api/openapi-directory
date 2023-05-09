@@ -18,12 +18,16 @@ const (
 	GetSpacesAllTypeEnumAssociation GetSpacesAllTypeEnum = "association"
 )
 
+func (e GetSpacesAllTypeEnum) ToPointer() *GetSpacesAllTypeEnum {
+	return &e
+}
+
 func (e *GetSpacesAllTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private":
 		fallthrough
 	case "enterprise":
@@ -31,10 +35,10 @@ func (e *GetSpacesAllTypeEnum) UnmarshalJSON(data []byte) error {
 	case "company":
 		fallthrough
 	case "association":
-		*e = GetSpacesAllTypeEnum(s)
+		*e = GetSpacesAllTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesAllTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesAllTypeEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	GetSpacesAll200ApplicationJSONTypeEnumAssociation GetSpacesAll200ApplicationJSONTypeEnum = "association"
 )
 
+func (e GetSpacesAll200ApplicationJSONTypeEnum) ToPointer() *GetSpacesAll200ApplicationJSONTypeEnum {
+	return &e
+}
+
 func (e *GetSpacesAll200ApplicationJSONTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private":
 		fallthrough
 	case "enterprise":
@@ -67,10 +75,10 @@ func (e *GetSpacesAll200ApplicationJSONTypeEnum) UnmarshalJSON(data []byte) erro
 	case "company":
 		fallthrough
 	case "association":
-		*e = GetSpacesAll200ApplicationJSONTypeEnum(s)
+		*e = GetSpacesAll200ApplicationJSONTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesAll200ApplicationJSONTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesAll200ApplicationJSONTypeEnum: %v", v)
 	}
 }
 

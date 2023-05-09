@@ -24,12 +24,16 @@ const (
 	IntegrationsCallbackGenerateTokenProductEnumSecurity           IntegrationsCallbackGenerateTokenProductEnum = "SECURITY"
 )
 
+func (e IntegrationsCallbackGenerateTokenProductEnum) ToPointer() *IntegrationsCallbackGenerateTokenProductEnum {
+	return &e
+}
+
 func (e *IntegrationsCallbackGenerateTokenProductEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_PRODUCT":
 		fallthrough
 	case "IP":
@@ -37,10 +41,10 @@ func (e *IntegrationsCallbackGenerateTokenProductEnum) UnmarshalJSON(data []byte
 	case "APIGEE":
 		fallthrough
 	case "SECURITY":
-		*e = IntegrationsCallbackGenerateTokenProductEnum(s)
+		*e = IntegrationsCallbackGenerateTokenProductEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegrationsCallbackGenerateTokenProductEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegrationsCallbackGenerateTokenProductEnum: %v", v)
 	}
 }
 

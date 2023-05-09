@@ -22,12 +22,16 @@ const (
 	DomainVerificationDetailCertificateAuthorityAuthorizationRecommendationsEnumValidateSoa           DomainVerificationDetailCertificateAuthorityAuthorizationRecommendationsEnum = "VALIDATE_SOA"
 )
 
+func (e DomainVerificationDetailCertificateAuthorityAuthorizationRecommendationsEnum) ToPointer() *DomainVerificationDetailCertificateAuthorityAuthorizationRecommendationsEnum {
+	return &e
+}
+
 func (e *DomainVerificationDetailCertificateAuthorityAuthorizationRecommendationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADD_CA_TO_CAA":
 		fallthrough
 	case "CREATE_TARGET_DOMAIN_CAA":
@@ -37,10 +41,10 @@ func (e *DomainVerificationDetailCertificateAuthorityAuthorizationRecommendation
 	case "FIX_CRITICAL_TAG":
 		fallthrough
 	case "VALIDATE_SOA":
-		*e = DomainVerificationDetailCertificateAuthorityAuthorizationRecommendationsEnum(s)
+		*e = DomainVerificationDetailCertificateAuthorityAuthorizationRecommendationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainVerificationDetailCertificateAuthorityAuthorizationRecommendationsEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainVerificationDetailCertificateAuthorityAuthorizationRecommendationsEnum: %v", v)
 	}
 }
 
@@ -64,12 +68,16 @@ const (
 	DomainVerificationDetailCertificateAuthorityAuthorizationStatusEnumSuccessDnssec             DomainVerificationDetailCertificateAuthorityAuthorizationStatusEnum = "SUCCESS_DNSSEC"
 )
 
+func (e DomainVerificationDetailCertificateAuthorityAuthorizationStatusEnum) ToPointer() *DomainVerificationDetailCertificateAuthorityAuthorizationStatusEnum {
+	return &e
+}
+
 func (e *DomainVerificationDetailCertificateAuthorityAuthorizationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "REMOVED_DNS_ERROR":
@@ -83,10 +91,10 @@ func (e *DomainVerificationDetailCertificateAuthorityAuthorizationStatusEnum) Un
 	case "SUCCESS_CAA":
 		fallthrough
 	case "SUCCESS_DNSSEC":
-		*e = DomainVerificationDetailCertificateAuthorityAuthorizationStatusEnum(s)
+		*e = DomainVerificationDetailCertificateAuthorityAuthorizationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainVerificationDetailCertificateAuthorityAuthorizationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainVerificationDetailCertificateAuthorityAuthorizationStatusEnum: %v", v)
 	}
 }
 
@@ -142,12 +150,16 @@ const (
 	DomainVerificationDetailStatusEnumRevokedCertificate                       DomainVerificationDetailStatusEnum = "REVOKED_CERTIFICATE"
 )
 
+func (e DomainVerificationDetailStatusEnum) ToPointer() *DomainVerificationDetailStatusEnum {
+	return &e
+}
+
 func (e *DomainVerificationDetailStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETED":
 		fallthrough
 	case "FAILED_VERIFICATION":
@@ -167,10 +179,10 @@ func (e *DomainVerificationDetailStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING_POSSIBLE_FRAUD":
 		fallthrough
 	case "REVOKED_CERTIFICATE":
-		*e = DomainVerificationDetailStatusEnum(s)
+		*e = DomainVerificationDetailStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainVerificationDetailStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainVerificationDetailStatusEnum: %v", v)
 	}
 }
 
@@ -214,12 +226,16 @@ const (
 	DomainVerificationDetailTypeEnumWebsiteControl                             DomainVerificationDetailTypeEnum = "WEBSITE_CONTROL"
 )
 
+func (e DomainVerificationDetailTypeEnum) ToPointer() *DomainVerificationDetailTypeEnum {
+	return &e
+}
+
 func (e *DomainVerificationDetailTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOMAIN_CONTROL_EMAIL":
 		fallthrough
 	case "AUTO_GENERATED_DOMAIN_ACCESS_EMAIL_ADMIN":
@@ -253,10 +269,10 @@ func (e *DomainVerificationDetailTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CUSTOMER_OWNED":
 		fallthrough
 	case "WEBSITE_CONTROL":
-		*e = DomainVerificationDetailTypeEnum(s)
+		*e = DomainVerificationDetailTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainVerificationDetailTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainVerificationDetailTypeEnum: %v", v)
 	}
 }
 
@@ -268,19 +284,23 @@ const (
 	DomainVerificationDetailUsageEnumSubjectAlternativeName DomainVerificationDetailUsageEnum = "SUBJECT_ALTERNATIVE_NAME"
 )
 
+func (e DomainVerificationDetailUsageEnum) ToPointer() *DomainVerificationDetailUsageEnum {
+	return &e
+}
+
 func (e *DomainVerificationDetailUsageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMON_NAME":
 		fallthrough
 	case "SUBJECT_ALTERNATIVE_NAME":
-		*e = DomainVerificationDetailUsageEnum(s)
+		*e = DomainVerificationDetailUsageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainVerificationDetailUsageEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainVerificationDetailUsageEnum: %v", v)
 	}
 }
 

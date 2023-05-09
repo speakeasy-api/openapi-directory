@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/fungenerators.com/riddle/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteRiddleRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.PrivateRiddles.DeleteRiddle(ctx, req, operations.DeleteRiddleSecurity{
+    res, err := s.PrivateRiddles.DeleteRiddle(ctx, operations.DeleteRiddleRequest{
+        ID: "corrupti",
+    }, operations.DeleteRiddleSecurity{
         XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -47,17 +44,17 @@ func main() {
 ## Available Resources and Operations
 
 
-### PrivateRiddles
+### [PrivateRiddles](docs/privateriddles/README.md)
 
-* `DeleteRiddle` - Create a random Riddle entry.
-* `GetRiddle` - Get a Riddle entry for a given id. Retrieves a riddle question and answer based on the id.
-* `PostRiddle` - Create a random Riddle entry. Same as 'PUT' but can be used when some of the client libraries don't support 'PUT'.
-* `PutRiddle` - Create a random Riddle entry.
+* [DeleteRiddle](docs/privateriddles/README.md#deleteriddle) - Create a random Riddle entry.
+* [GetRiddle](docs/privateriddles/README.md#getriddle) - Get a Riddle entry for a given id. Retrieves a riddle question and answer based on the id.
+* [PostRiddle](docs/privateriddles/README.md#postriddle) - Create a random Riddle entry. Same as 'PUT' but can be used when some of the client libraries don't support 'PUT'.
+* [PutRiddle](docs/privateriddles/README.md#putriddle) - Create a random Riddle entry.
 
-### RandomRiddle
+### [RandomRiddle](docs/randomriddle/README.md)
 
-* `GetRiddleRandom` - Get a random riddle for a given category(optional)
-* `GetRiddleSearch` - Search for random riddle which has the text in the query, for a given category(optional).
+* [GetRiddleRandom](docs/randomriddle/README.md#getriddlerandom) - Get a random riddle for a given category(optional)
+* [GetRiddleSearch](docs/randomriddle/README.md#getriddlesearch) - Search for random riddle which has the text in the query, for a given category(optional).
 <!-- End SDK Available Operations -->
 
 ### Maturity

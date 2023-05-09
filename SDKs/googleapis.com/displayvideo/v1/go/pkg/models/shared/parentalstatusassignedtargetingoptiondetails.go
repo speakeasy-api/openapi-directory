@@ -17,12 +17,16 @@ const (
 	ParentalStatusAssignedTargetingOptionDetailsParentalStatusEnumParentalStatusUnknown     ParentalStatusAssignedTargetingOptionDetailsParentalStatusEnum = "PARENTAL_STATUS_UNKNOWN"
 )
 
+func (e ParentalStatusAssignedTargetingOptionDetailsParentalStatusEnum) ToPointer() *ParentalStatusAssignedTargetingOptionDetailsParentalStatusEnum {
+	return &e
+}
+
 func (e *ParentalStatusAssignedTargetingOptionDetailsParentalStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARENTAL_STATUS_UNSPECIFIED":
 		fallthrough
 	case "PARENTAL_STATUS_PARENT":
@@ -30,10 +34,10 @@ func (e *ParentalStatusAssignedTargetingOptionDetailsParentalStatusEnum) Unmarsh
 	case "PARENTAL_STATUS_NOT_A_PARENT":
 		fallthrough
 	case "PARENTAL_STATUS_UNKNOWN":
-		*e = ParentalStatusAssignedTargetingOptionDetailsParentalStatusEnum(s)
+		*e = ParentalStatusAssignedTargetingOptionDetailsParentalStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParentalStatusAssignedTargetingOptionDetailsParentalStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ParentalStatusAssignedTargetingOptionDetailsParentalStatusEnum: %v", v)
 	}
 }
 

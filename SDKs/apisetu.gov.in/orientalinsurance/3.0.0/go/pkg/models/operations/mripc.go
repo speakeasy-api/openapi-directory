@@ -30,17 +30,21 @@ const (
 	MripcRequestBodyFormatEnumPdf MripcRequestBodyFormatEnum = "pdf"
 )
 
+func (e MripcRequestBodyFormatEnum) ToPointer() *MripcRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *MripcRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = MripcRequestBodyFormatEnum(s)
+		*e = MripcRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MripcRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MripcRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -60,17 +64,21 @@ const (
 	Mripc504ApplicationJSONErrorEnumGatewayTimeout Mripc504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Mripc504ApplicationJSONErrorEnum) ToPointer() *Mripc504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mripc504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Mripc504ApplicationJSONErrorEnum(s)
+		*e = Mripc504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -80,17 +88,21 @@ const (
 	Mripc504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Mripc504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Mripc504ApplicationJSONErrorDescriptionEnum) ToPointer() *Mripc504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mripc504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Mripc504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mripc504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -106,17 +118,21 @@ const (
 	Mripc503ApplicationJSONErrorEnumServiceUnavailable Mripc503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Mripc503ApplicationJSONErrorEnum) ToPointer() *Mripc503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mripc503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Mripc503ApplicationJSONErrorEnum(s)
+		*e = Mripc503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -126,17 +142,21 @@ const (
 	Mripc503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Mripc503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Mripc503ApplicationJSONErrorDescriptionEnum) ToPointer() *Mripc503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mripc503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Mripc503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mripc503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -152,17 +172,21 @@ const (
 	Mripc502ApplicationJSONErrorEnumBadGatewy Mripc502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Mripc502ApplicationJSONErrorEnum) ToPointer() *Mripc502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mripc502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Mripc502ApplicationJSONErrorEnum(s)
+		*e = Mripc502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -172,17 +196,21 @@ const (
 	Mripc502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Mripc502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Mripc502ApplicationJSONErrorDescriptionEnum) ToPointer() *Mripc502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mripc502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Mripc502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mripc502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -198,17 +226,21 @@ const (
 	Mripc500ApplicationJSONErrorEnumInternalServerError Mripc500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Mripc500ApplicationJSONErrorEnum) ToPointer() *Mripc500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mripc500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Mripc500ApplicationJSONErrorEnum(s)
+		*e = Mripc500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -218,17 +250,21 @@ const (
 	Mripc500ApplicationJSONErrorDescriptionEnumInternalServerError Mripc500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Mripc500ApplicationJSONErrorDescriptionEnum) ToPointer() *Mripc500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mripc500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Mripc500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mripc500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -245,19 +281,23 @@ const (
 	Mripc404ApplicationJSONErrorEnumURLNotFound    Mripc404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Mripc404ApplicationJSONErrorEnum) ToPointer() *Mripc404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mripc404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Mripc404ApplicationJSONErrorEnum(s)
+		*e = Mripc404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -268,19 +308,23 @@ const (
 	Mripc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Mripc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Mripc404ApplicationJSONErrorDescriptionEnum) ToPointer() *Mripc404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mripc404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Mripc404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mripc404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -297,19 +341,23 @@ const (
 	Mripc401ApplicationJSONErrorEnumInvalidAuthorization  Mripc401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Mripc401ApplicationJSONErrorEnum) ToPointer() *Mripc401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mripc401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Mripc401ApplicationJSONErrorEnum(s)
+		*e = Mripc401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -320,19 +368,23 @@ const (
 	Mripc401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Mripc401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Mripc401ApplicationJSONErrorDescriptionEnum) ToPointer() *Mripc401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mripc401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Mripc401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mripc401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -352,12 +404,16 @@ const (
 	Mripc400ApplicationJSONErrorEnumInvalidConsentid Mripc400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Mripc400ApplicationJSONErrorEnum) ToPointer() *Mripc400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mripc400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -367,10 +423,10 @@ func (e *Mripc400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Mripc400ApplicationJSONErrorEnum(s)
+		*e = Mripc400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -384,12 +440,16 @@ const (
 	Mripc400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Mripc400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Mripc400ApplicationJSONErrorDescriptionEnum) ToPointer() *Mripc400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mripc400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -399,10 +459,10 @@ func (e *Mripc400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Mripc400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mripc400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mripc400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mripc400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

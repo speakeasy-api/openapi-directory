@@ -2,6 +2,14 @@
 
 package shared
 
+// AttachmentInput - Represents a file attached to a support case.
+type AttachmentInput struct {
+	// An object containing information about the effective user and authenticated principal responsible for an action.
+	Creator *ActorInput
+	// The filename of the attachment (e.g. `"graph.jpg"`).
+	Filename *string
+}
+
 // Attachment - Represents a file attached to a support case.
 type Attachment struct {
 	// Output only. The time at which the attachment was created.
@@ -16,12 +24,4 @@ type Attachment struct {
 	Name *string `json:"name,omitempty"`
 	// Output only. The size of the attachment in bytes.
 	SizeBytes *string `json:"sizeBytes,omitempty"`
-}
-
-// AttachmentInput - Represents a file attached to a support case.
-type AttachmentInput struct {
-	// An object containing information about the effective user and authenticated principal responsible for an action.
-	Creator *ActorInput
-	// The filename of the attachment (e.g. `"graph.jpg"`).
-	Filename *string
 }

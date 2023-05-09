@@ -2,7 +2,7 @@
 
 package shared
 
-// MapMatchingConfig - <p/>
+// MapMatchingConfig - The input structure for Map Matching operation type.
 type MapMatchingConfig struct {
 	IDAttributeName        string `json:"IdAttributeName"`
 	TimestampAttributeName string `json:"TimestampAttributeName"`

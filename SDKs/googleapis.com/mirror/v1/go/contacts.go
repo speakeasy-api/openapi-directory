@@ -35,7 +35,10 @@ func newContacts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // MirrorContactsDelete - Deletes a contact.
 func (s *contacts) MirrorContactsDelete(ctx context.Context, request operations.MirrorContactsDeleteRequest, security operations.MirrorContactsDeleteSecurity) (*operations.MirrorContactsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *contacts) MirrorContactsDelete(ctx context.Context, request operations.
 // MirrorContactsGet - Gets a single contact by ID.
 func (s *contacts) MirrorContactsGet(ctx context.Context, request operations.MirrorContactsGetRequest, security operations.MirrorContactsGetSecurity) (*operations.MirrorContactsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *contacts) MirrorContactsList(ctx context.Context, request operations.Mi
 // MirrorContactsPatch - Updates a contact in place. This method supports patch semantics.
 func (s *contacts) MirrorContactsPatch(ctx context.Context, request operations.MirrorContactsPatchRequest, security operations.MirrorContactsPatchSecurity) (*operations.MirrorContactsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Contact", "json")
 	if err != nil {
@@ -280,7 +289,10 @@ func (s *contacts) MirrorContactsPatch(ctx context.Context, request operations.M
 // MirrorContactsUpdate - Updates a contact in place.
 func (s *contacts) MirrorContactsUpdate(ctx context.Context, request operations.MirrorContactsUpdateRequest, security operations.MirrorContactsUpdateSecurity) (*operations.MirrorContactsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contacts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Contact", "json")
 	if err != nil {

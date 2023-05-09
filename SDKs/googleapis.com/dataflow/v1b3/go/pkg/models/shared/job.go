@@ -26,12 +26,16 @@ const (
 	JobCurrentStateEnumJobStateResourceCleaningUp JobCurrentStateEnum = "JOB_STATE_RESOURCE_CLEANING_UP"
 )
 
+func (e JobCurrentStateEnum) ToPointer() *JobCurrentStateEnum {
+	return &e
+}
+
 func (e *JobCurrentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_STATE_UNKNOWN":
 		fallthrough
 	case "JOB_STATE_STOPPED":
@@ -57,10 +61,10 @@ func (e *JobCurrentStateEnum) UnmarshalJSON(data []byte) error {
 	case "JOB_STATE_QUEUED":
 		fallthrough
 	case "JOB_STATE_RESOURCE_CLEANING_UP":
-		*e = JobCurrentStateEnum(s)
+		*e = JobCurrentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobCurrentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for JobCurrentStateEnum: %v", v)
 	}
 }
 
@@ -83,12 +87,16 @@ const (
 	JobRequestedStateEnumJobStateResourceCleaningUp JobRequestedStateEnum = "JOB_STATE_RESOURCE_CLEANING_UP"
 )
 
+func (e JobRequestedStateEnum) ToPointer() *JobRequestedStateEnum {
+	return &e
+}
+
 func (e *JobRequestedStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_STATE_UNKNOWN":
 		fallthrough
 	case "JOB_STATE_STOPPED":
@@ -114,10 +122,10 @@ func (e *JobRequestedStateEnum) UnmarshalJSON(data []byte) error {
 	case "JOB_STATE_QUEUED":
 		fallthrough
 	case "JOB_STATE_RESOURCE_CLEANING_UP":
-		*e = JobRequestedStateEnum(s)
+		*e = JobRequestedStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobRequestedStateEnum: %s", s)
+		return fmt.Errorf("invalid value for JobRequestedStateEnum: %v", v)
 	}
 }
 
@@ -130,21 +138,25 @@ const (
 	JobTypeEnumJobTypeStreaming JobTypeEnum = "JOB_TYPE_STREAMING"
 )
 
+func (e JobTypeEnum) ToPointer() *JobTypeEnum {
+	return &e
+}
+
 func (e *JobTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_TYPE_UNKNOWN":
 		fallthrough
 	case "JOB_TYPE_BATCH":
 		fallthrough
 	case "JOB_TYPE_STREAMING":
-		*e = JobTypeEnum(s)
+		*e = JobTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for JobTypeEnum: %v", v)
 	}
 }
 
@@ -184,6 +196,8 @@ type Job struct {
 	ReplacedByJobID *string `json:"replacedByJobId,omitempty"`
 	// The job's requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job's requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.
 	RequestedState *JobRequestedStateEnum `json:"requestedState,omitempty"`
+	// Additional job parameters that can only be updated during runtime using the projects.jobs.update method. These fields have no effect when specified during job creation.
+	RuntimeUpdatableParams *RuntimeUpdatableParams `json:"runtimeUpdatableParams,omitempty"`
 	// Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
 	SatisfiesPzs *bool `json:"satisfiesPzs,omitempty"`
 	// This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.
@@ -238,6 +252,8 @@ type JobInput struct {
 	ReplacedByJobID *string `json:"replacedByJobId,omitempty"`
 	// The job's requested state. `UpdateJob` may be used to switch between the `JOB_STATE_STOPPED` and `JOB_STATE_RUNNING` states, by setting requested_state. `UpdateJob` may also be used to directly set a job's requested state to `JOB_STATE_CANCELLED` or `JOB_STATE_DONE`, irrevocably terminating the job if it has not already reached a terminal state.
 	RequestedState *JobRequestedStateEnum `json:"requestedState,omitempty"`
+	// Additional job parameters that can only be updated during runtime using the projects.jobs.update method. These fields have no effect when specified during job creation.
+	RuntimeUpdatableParams *RuntimeUpdatableParams `json:"runtimeUpdatableParams,omitempty"`
 	// Reserved for future use. This field is set only in responses from the server; it is ignored if it is set in any requests.
 	SatisfiesPzs *bool `json:"satisfiesPzs,omitempty"`
 	// This field may be mutated by the Cloud Dataflow service; callers cannot mutate it.

@@ -40,7 +40,10 @@ func newTerminalOrdersCompanyLevel(defaultClient, securityClient HTTPClient, ser
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDBillingEntities(ctx context.Context, request operations.GetCompaniesCompanyIDBillingEntitiesRequest, security operations.GetCompaniesCompanyIDBillingEntitiesSecurity) (*operations.GetCompaniesCompanyIDBillingEntitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/billingEntities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/billingEntities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -112,7 +115,10 @@ func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDBillingEntities(ctx co
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDShippingLocations(ctx context.Context, request operations.GetCompaniesCompanyIDShippingLocationsRequest, security operations.GetCompaniesCompanyIDShippingLocationsSecurity) (*operations.GetCompaniesCompanyIDShippingLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/shippingLocations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/shippingLocations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -184,7 +190,10 @@ func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDShippingLocations(ctx 
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalModels(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalModelsRequest, security operations.GetCompaniesCompanyIDTerminalModelsSecurity) (*operations.GetCompaniesCompanyIDTerminalModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalModels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalModels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -252,7 +261,10 @@ func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalModels(ctx con
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalOrders(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalOrdersRequest, security operations.GetCompaniesCompanyIDTerminalOrdersSecurity) (*operations.GetCompaniesCompanyIDTerminalOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -323,7 +335,10 @@ func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalOrders(ctx con
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalOrdersOrderID(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalOrdersOrderIDRequest, security operations.GetCompaniesCompanyIDTerminalOrdersOrderIDSecurity) (*operations.GetCompaniesCompanyIDTerminalOrdersOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders/{orderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders/{orderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -390,7 +405,10 @@ func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalOrdersOrderID(
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalProducts(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalProductsRequest, security operations.GetCompaniesCompanyIDTerminalProductsSecurity) (*operations.GetCompaniesCompanyIDTerminalProductsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalProducts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalProducts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -466,7 +484,10 @@ func (s *terminalOrdersCompanyLevel) GetCompaniesCompanyIDTerminalProducts(ctx c
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersCompanyLevel) PatchCompaniesCompanyIDTerminalOrdersOrderID(ctx context.Context, request operations.PatchCompaniesCompanyIDTerminalOrdersOrderIDRequest, security operations.PatchCompaniesCompanyIDTerminalOrdersOrderIDSecurity) (*operations.PatchCompaniesCompanyIDTerminalOrdersOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders/{orderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders/{orderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalOrderRequest", "json")
 	if err != nil {
@@ -539,7 +560,10 @@ func (s *terminalOrdersCompanyLevel) PatchCompaniesCompanyIDTerminalOrdersOrderI
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDShippingLocations(ctx context.Context, request operations.PostCompaniesCompanyIDShippingLocationsRequest, security operations.PostCompaniesCompanyIDShippingLocationsSecurity) (*operations.PostCompaniesCompanyIDShippingLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/shippingLocations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/shippingLocations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShippingLocation", "json")
 	if err != nil {
@@ -612,7 +636,10 @@ func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDShippingLocations(ctx
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDTerminalOrders(ctx context.Context, request operations.PostCompaniesCompanyIDTerminalOrdersRequest, security operations.PostCompaniesCompanyIDTerminalOrdersSecurity) (*operations.PostCompaniesCompanyIDTerminalOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalOrderRequest", "json")
 	if err != nil {
@@ -687,7 +714,10 @@ func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDTerminalOrders(ctx co
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersCompanyLevel) PostCompaniesCompanyIDTerminalOrdersOrderIDCancel(ctx context.Context, request operations.PostCompaniesCompanyIDTerminalOrdersOrderIDCancelRequest, security operations.PostCompaniesCompanyIDTerminalOrdersOrderIDCancelSecurity) (*operations.PostCompaniesCompanyIDTerminalOrdersOrderIDCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders/{orderId}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalOrders/{orderId}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

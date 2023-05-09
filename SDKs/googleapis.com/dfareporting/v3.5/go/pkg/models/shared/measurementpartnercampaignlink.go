@@ -21,12 +21,16 @@ const (
 	MeasurementPartnerCampaignLinkLinkStatusEnumMeasurementPartnerModeChangePending   MeasurementPartnerCampaignLinkLinkStatusEnum = "MEASUREMENT_PARTNER_MODE_CHANGE_PENDING"
 )
 
+func (e MeasurementPartnerCampaignLinkLinkStatusEnum) ToPointer() *MeasurementPartnerCampaignLinkLinkStatusEnum {
+	return &e
+}
+
 func (e *MeasurementPartnerCampaignLinkLinkStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEASUREMENT_PARTNER_UNLINKED":
 		fallthrough
 	case "MEASUREMENT_PARTNER_LINKED":
@@ -42,10 +46,10 @@ func (e *MeasurementPartnerCampaignLinkLinkStatusEnum) UnmarshalJSON(data []byte
 	case "MEASUREMENT_PARTNER_LINK_WRAPPING_PENDING":
 		fallthrough
 	case "MEASUREMENT_PARTNER_MODE_CHANGE_PENDING":
-		*e = MeasurementPartnerCampaignLinkLinkStatusEnum(s)
+		*e = MeasurementPartnerCampaignLinkLinkStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MeasurementPartnerCampaignLinkLinkStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MeasurementPartnerCampaignLinkLinkStatusEnum: %v", v)
 	}
 }
 
@@ -58,21 +62,25 @@ const (
 	MeasurementPartnerCampaignLinkMeasurementPartnerEnumDoubleVerify      MeasurementPartnerCampaignLinkMeasurementPartnerEnum = "DOUBLE_VERIFY"
 )
 
+func (e MeasurementPartnerCampaignLinkMeasurementPartnerEnum) ToPointer() *MeasurementPartnerCampaignLinkMeasurementPartnerEnum {
+	return &e
+}
+
 func (e *MeasurementPartnerCampaignLinkMeasurementPartnerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "INTEGRAL_AD_SCIENCE":
 		fallthrough
 	case "DOUBLE_VERIFY":
-		*e = MeasurementPartnerCampaignLinkMeasurementPartnerEnum(s)
+		*e = MeasurementPartnerCampaignLinkMeasurementPartnerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MeasurementPartnerCampaignLinkMeasurementPartnerEnum: %s", s)
+		return fmt.Errorf("invalid value for MeasurementPartnerCampaignLinkMeasurementPartnerEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	WellnessDoctorOnCallExceptionEnumDependentOnDayOfWeek WellnessDoctorOnCallExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WellnessDoctorOnCallExceptionEnum) ToPointer() *WellnessDoctorOnCallExceptionEnum {
+	return &e
+}
+
 func (e *WellnessDoctorOnCallExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *WellnessDoctorOnCallExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WellnessDoctorOnCallExceptionEnum(s)
+		*e = WellnessDoctorOnCallExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WellnessDoctorOnCallExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WellnessDoctorOnCallExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	WellnessEllipticalMachineExceptionEnumDependentOnDayOfWeek WellnessEllipticalMachineExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WellnessEllipticalMachineExceptionEnum) ToPointer() *WellnessEllipticalMachineExceptionEnum {
+	return &e
+}
+
 func (e *WellnessEllipticalMachineExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *WellnessEllipticalMachineExceptionEnum) UnmarshalJSON(data []byte) erro
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WellnessEllipticalMachineExceptionEnum(s)
+		*e = WellnessEllipticalMachineExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WellnessEllipticalMachineExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WellnessEllipticalMachineExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	WellnessFitnessCenterExceptionEnumDependentOnDayOfWeek WellnessFitnessCenterExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WellnessFitnessCenterExceptionEnum) ToPointer() *WellnessFitnessCenterExceptionEnum {
+	return &e
+}
+
 func (e *WellnessFitnessCenterExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *WellnessFitnessCenterExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WellnessFitnessCenterExceptionEnum(s)
+		*e = WellnessFitnessCenterExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WellnessFitnessCenterExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WellnessFitnessCenterExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	WellnessFreeFitnessCenterExceptionEnumDependentOnDayOfWeek WellnessFreeFitnessCenterExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WellnessFreeFitnessCenterExceptionEnum) ToPointer() *WellnessFreeFitnessCenterExceptionEnum {
+	return &e
+}
+
 func (e *WellnessFreeFitnessCenterExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *WellnessFreeFitnessCenterExceptionEnum) UnmarshalJSON(data []byte) erro
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WellnessFreeFitnessCenterExceptionEnum(s)
+		*e = WellnessFreeFitnessCenterExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WellnessFreeFitnessCenterExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WellnessFreeFitnessCenterExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	WellnessFreeWeightsExceptionEnumDependentOnDayOfWeek WellnessFreeWeightsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WellnessFreeWeightsExceptionEnum) ToPointer() *WellnessFreeWeightsExceptionEnum {
+	return &e
+}
+
 func (e *WellnessFreeWeightsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *WellnessFreeWeightsExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WellnessFreeWeightsExceptionEnum(s)
+		*e = WellnessFreeWeightsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WellnessFreeWeightsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WellnessFreeWeightsExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	WellnessMassageExceptionEnumDependentOnDayOfWeek WellnessMassageExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WellnessMassageExceptionEnum) ToPointer() *WellnessMassageExceptionEnum {
+	return &e
+}
+
 func (e *WellnessMassageExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *WellnessMassageExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WellnessMassageExceptionEnum(s)
+		*e = WellnessMassageExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WellnessMassageExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WellnessMassageExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	WellnessSalonExceptionEnumDependentOnDayOfWeek WellnessSalonExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WellnessSalonExceptionEnum) ToPointer() *WellnessSalonExceptionEnum {
+	return &e
+}
+
 func (e *WellnessSalonExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *WellnessSalonExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WellnessSalonExceptionEnum(s)
+		*e = WellnessSalonExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WellnessSalonExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WellnessSalonExceptionEnum: %v", v)
 	}
 }
 
@@ -227,12 +255,16 @@ const (
 	WellnessSaunaExceptionEnumDependentOnDayOfWeek WellnessSaunaExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WellnessSaunaExceptionEnum) ToPointer() *WellnessSaunaExceptionEnum {
+	return &e
+}
+
 func (e *WellnessSaunaExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -240,10 +272,10 @@ func (e *WellnessSaunaExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WellnessSaunaExceptionEnum(s)
+		*e = WellnessSaunaExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WellnessSaunaExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WellnessSaunaExceptionEnum: %v", v)
 	}
 }
 
@@ -257,12 +289,16 @@ const (
 	WellnessSpaExceptionEnumDependentOnDayOfWeek WellnessSpaExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WellnessSpaExceptionEnum) ToPointer() *WellnessSpaExceptionEnum {
+	return &e
+}
+
 func (e *WellnessSpaExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -270,10 +306,10 @@ func (e *WellnessSpaExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WellnessSpaExceptionEnum(s)
+		*e = WellnessSpaExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WellnessSpaExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WellnessSpaExceptionEnum: %v", v)
 	}
 }
 
@@ -287,12 +323,16 @@ const (
 	WellnessTreadmillExceptionEnumDependentOnDayOfWeek WellnessTreadmillExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WellnessTreadmillExceptionEnum) ToPointer() *WellnessTreadmillExceptionEnum {
+	return &e
+}
+
 func (e *WellnessTreadmillExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -300,10 +340,10 @@ func (e *WellnessTreadmillExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WellnessTreadmillExceptionEnum(s)
+		*e = WellnessTreadmillExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WellnessTreadmillExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WellnessTreadmillExceptionEnum: %v", v)
 	}
 }
 
@@ -317,12 +357,16 @@ const (
 	WellnessWeightMachineExceptionEnumDependentOnDayOfWeek WellnessWeightMachineExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WellnessWeightMachineExceptionEnum) ToPointer() *WellnessWeightMachineExceptionEnum {
+	return &e
+}
+
 func (e *WellnessWeightMachineExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -330,10 +374,10 @@ func (e *WellnessWeightMachineExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WellnessWeightMachineExceptionEnum(s)
+		*e = WellnessWeightMachineExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WellnessWeightMachineExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WellnessWeightMachineExceptionEnum: %v", v)
 	}
 }
 

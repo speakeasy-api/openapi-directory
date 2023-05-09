@@ -14,17 +14,21 @@ const (
 	UpdateCallRequestHangupActionEnumHangup UpdateCallRequestHangupActionEnum = "hangup"
 )
 
+func (e UpdateCallRequestHangupActionEnum) ToPointer() *UpdateCallRequestHangupActionEnum {
+	return &e
+}
+
 func (e *UpdateCallRequestHangupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hangup":
-		*e = UpdateCallRequestHangupActionEnum(s)
+		*e = UpdateCallRequestHangupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateCallRequestHangupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateCallRequestHangupActionEnum: %v", v)
 	}
 }
 

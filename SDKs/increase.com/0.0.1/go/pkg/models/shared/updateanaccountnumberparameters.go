@@ -16,21 +16,25 @@ const (
 	UpdateAnAccountNumberParametersStatusEnumCanceled UpdateAnAccountNumberParametersStatusEnum = "canceled"
 )
 
+func (e UpdateAnAccountNumberParametersStatusEnum) ToPointer() *UpdateAnAccountNumberParametersStatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountNumberParametersStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "disabled":
 		fallthrough
 	case "canceled":
-		*e = UpdateAnAccountNumberParametersStatusEnum(s)
+		*e = UpdateAnAccountNumberParametersStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountNumberParametersStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountNumberParametersStatusEnum: %v", v)
 	}
 }
 

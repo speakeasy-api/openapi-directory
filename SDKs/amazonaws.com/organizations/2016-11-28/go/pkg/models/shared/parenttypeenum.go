@@ -14,18 +14,22 @@ const (
 	ParentTypeEnumOrganizationalUnit ParentTypeEnum = "ORGANIZATIONAL_UNIT"
 )
 
+func (e ParentTypeEnum) ToPointer() *ParentTypeEnum {
+	return &e
+}
+
 func (e *ParentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROOT":
 		fallthrough
 	case "ORGANIZATIONAL_UNIT":
-		*e = ParentTypeEnum(s)
+		*e = ParentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParentTypeEnum: %v", v)
 	}
 }

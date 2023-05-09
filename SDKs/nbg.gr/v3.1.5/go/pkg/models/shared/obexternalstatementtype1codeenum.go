@@ -17,12 +17,16 @@ const (
 	OBExternalStatementType1CodeEnumRegularPeriodic OBExternalStatementType1CodeEnum = "RegularPeriodic"
 )
 
+func (e OBExternalStatementType1CodeEnum) ToPointer() *OBExternalStatementType1CodeEnum {
+	return &e
+}
+
 func (e *OBExternalStatementType1CodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AccountClosure":
 		fallthrough
 	case "AccountOpening":
@@ -32,9 +36,9 @@ func (e *OBExternalStatementType1CodeEnum) UnmarshalJSON(data []byte) error {
 	case "Interim":
 		fallthrough
 	case "RegularPeriodic":
-		*e = OBExternalStatementType1CodeEnum(s)
+		*e = OBExternalStatementType1CodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBExternalStatementType1CodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBExternalStatementType1CodeEnum: %v", v)
 	}
 }

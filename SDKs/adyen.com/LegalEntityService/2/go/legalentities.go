@@ -36,7 +36,10 @@ func newLegalEntities(defaultClient, securityClient HTTPClient, serverURL, langu
 // Returns a legal entity.
 func (s *legalEntities) GetLegalEntitiesID(ctx context.Context, request operations.GetLegalEntitiesIDRequest, security operations.GetLegalEntitiesIDSecurity) (*operations.GetLegalEntitiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -99,7 +102,10 @@ func (s *legalEntities) GetLegalEntitiesID(ctx context.Context, request operatio
 // Returns the business lines owned by a legal entity.
 func (s *legalEntities) GetLegalEntitiesIDBusinessLines(ctx context.Context, request operations.GetLegalEntitiesIDBusinessLinesRequest, security operations.GetLegalEntitiesIDBusinessLinesSecurity) (*operations.GetLegalEntitiesIDBusinessLinesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/businessLines", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/businessLines", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -164,7 +170,10 @@ func (s *legalEntities) GetLegalEntitiesIDBusinessLines(ctx context.Context, req
 //	>To change the legal entity type, include only the new `type` in your request. To update the `entityAssociations` array, you need to replace the entire array. For example, if the array has 3 entries and you want to remove 1 entry, you need to PATCH the resource with the remaining 2 entries.
 func (s *legalEntities) PatchLegalEntitiesID(ctx context.Context, request operations.PatchLegalEntitiesIDRequest, security operations.PatchLegalEntitiesIDSecurity) (*operations.PatchLegalEntitiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LegalEntityInfoInput", "json")
 	if err != nil {
@@ -234,6 +243,8 @@ func (s *legalEntities) PatchLegalEntitiesID(ctx context.Context, request operat
 // Creates a legal entity.
 //
 // This resource contains information about the user that will be onboarded in your platform. Adyen uses this information to perform verification checks as required by payment industry regulations. Adyen informs you of the verification results through webhooks or API responses.
+//
+// >If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
 func (s *legalEntities) PostLegalEntities(ctx context.Context, request shared.LegalEntityInfoRequiredTypeInput, security operations.PostLegalEntitiesSecurity) (*operations.PostLegalEntitiesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/legalEntities"

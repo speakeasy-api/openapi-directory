@@ -16,19 +16,23 @@ const (
 	AssignmentCreationAssigneeModeEnumSelected AssignmentCreationAssigneeModeEnum = "selected"
 )
 
+func (e AssignmentCreationAssigneeModeEnum) ToPointer() *AssignmentCreationAssigneeModeEnum {
+	return &e
+}
+
 func (e *AssignmentCreationAssigneeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "everyone":
 		fallthrough
 	case "selected":
-		*e = AssignmentCreationAssigneeModeEnum(s)
+		*e = AssignmentCreationAssigneeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignmentCreationAssigneeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignmentCreationAssigneeModeEnum: %v", v)
 	}
 }
 
@@ -52,19 +56,23 @@ const (
 	AssignmentCreationStateEnumActive AssignmentCreationStateEnum = "active"
 )
 
+func (e AssignmentCreationStateEnum) ToPointer() *AssignmentCreationStateEnum {
+	return &e
+}
+
 func (e *AssignmentCreationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "draft":
 		fallthrough
 	case "active":
-		*e = AssignmentCreationStateEnum(s)
+		*e = AssignmentCreationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignmentCreationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignmentCreationStateEnum: %v", v)
 	}
 }
 

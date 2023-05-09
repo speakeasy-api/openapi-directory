@@ -17,12 +17,16 @@ const (
 	TextPositionHorizontalAlignmentEnumRight                      TextPositionHorizontalAlignmentEnum = "RIGHT"
 )
 
+func (e TextPositionHorizontalAlignmentEnum) ToPointer() *TextPositionHorizontalAlignmentEnum {
+	return &e
+}
+
 func (e *TextPositionHorizontalAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HORIZONTAL_ALIGN_UNSPECIFIED":
 		fallthrough
 	case "LEFT":
@@ -30,10 +34,10 @@ func (e *TextPositionHorizontalAlignmentEnum) UnmarshalJSON(data []byte) error {
 	case "CENTER":
 		fallthrough
 	case "RIGHT":
-		*e = TextPositionHorizontalAlignmentEnum(s)
+		*e = TextPositionHorizontalAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextPositionHorizontalAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for TextPositionHorizontalAlignmentEnum: %v", v)
 	}
 }
 

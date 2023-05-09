@@ -22,19 +22,23 @@ const (
 	ContentOrderreturnsListOrderByEnumReturnCreationTimeAsc  ContentOrderreturnsListOrderByEnum = "RETURN_CREATION_TIME_ASC"
 )
 
+func (e ContentOrderreturnsListOrderByEnum) ToPointer() *ContentOrderreturnsListOrderByEnum {
+	return &e
+}
+
 func (e *ContentOrderreturnsListOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETURN_CREATION_TIME_DESC":
 		fallthrough
 	case "RETURN_CREATION_TIME_ASC":
-		*e = ContentOrderreturnsListOrderByEnum(s)
+		*e = ContentOrderreturnsListOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentOrderreturnsListOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentOrderreturnsListOrderByEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	ContentOrderreturnsListShipmentStatesEnumPending       ContentOrderreturnsListShipmentStatesEnum = "PENDING"
 )
 
+func (e ContentOrderreturnsListShipmentStatesEnum) ToPointer() *ContentOrderreturnsListShipmentStatesEnum {
+	return &e
+}
+
 func (e *ContentOrderreturnsListShipmentStatesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEW":
 		fallthrough
 	case "SHIPPED":
@@ -63,10 +71,10 @@ func (e *ContentOrderreturnsListShipmentStatesEnum) UnmarshalJSON(data []byte) e
 	case "UNDELIVERABLE":
 		fallthrough
 	case "PENDING":
-		*e = ContentOrderreturnsListShipmentStatesEnum(s)
+		*e = ContentOrderreturnsListShipmentStatesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentOrderreturnsListShipmentStatesEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentOrderreturnsListShipmentStatesEnum: %v", v)
 	}
 }
 
@@ -78,21 +86,25 @@ const (
 	ContentOrderreturnsListShipmentStatusEnumProcessed  ContentOrderreturnsListShipmentStatusEnum = "PROCESSED"
 )
 
+func (e ContentOrderreturnsListShipmentStatusEnum) ToPointer() *ContentOrderreturnsListShipmentStatusEnum {
+	return &e
+}
+
 func (e *ContentOrderreturnsListShipmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEW":
 		fallthrough
 	case "IN_PROGRESS":
 		fallthrough
 	case "PROCESSED":
-		*e = ContentOrderreturnsListShipmentStatusEnum(s)
+		*e = ContentOrderreturnsListShipmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentOrderreturnsListShipmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentOrderreturnsListShipmentStatusEnum: %v", v)
 	}
 }
 
@@ -104,21 +116,25 @@ const (
 	ContentOrderreturnsListShipmentTypesEnumContactCustomerSupport ContentOrderreturnsListShipmentTypesEnum = "CONTACT_CUSTOMER_SUPPORT"
 )
 
+func (e ContentOrderreturnsListShipmentTypesEnum) ToPointer() *ContentOrderreturnsListShipmentTypesEnum {
+	return &e
+}
+
 func (e *ContentOrderreturnsListShipmentTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BY_MAIL":
 		fallthrough
 	case "RETURNLESS":
 		fallthrough
 	case "CONTACT_CUSTOMER_SUPPORT":
-		*e = ContentOrderreturnsListShipmentTypesEnum(s)
+		*e = ContentOrderreturnsListShipmentTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentOrderreturnsListShipmentTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentOrderreturnsListShipmentTypesEnum: %v", v)
 	}
 }
 

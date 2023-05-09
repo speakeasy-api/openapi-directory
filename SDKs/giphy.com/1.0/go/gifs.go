@@ -35,7 +35,10 @@ func newGifs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Returns a GIF given that GIF's unique ID
 func (s *gifs) GetGifByID(ctx context.Context, request operations.GetGifByIDRequest) (*operations.GetGifByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gifs/{gifId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gifs/{gifId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

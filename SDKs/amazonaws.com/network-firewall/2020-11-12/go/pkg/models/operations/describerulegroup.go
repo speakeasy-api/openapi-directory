@@ -16,17 +16,21 @@ const (
 	DescribeRuleGroupXAmzTargetEnumNetworkFirewall20201112DescribeRuleGroup DescribeRuleGroupXAmzTargetEnum = "NetworkFirewall_20201112.DescribeRuleGroup"
 )
 
+func (e DescribeRuleGroupXAmzTargetEnum) ToPointer() *DescribeRuleGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeRuleGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NetworkFirewall_20201112.DescribeRuleGroup":
-		*e = DescribeRuleGroupXAmzTargetEnum(s)
+		*e = DescribeRuleGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeRuleGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeRuleGroupXAmzTargetEnum: %v", v)
 	}
 }
 

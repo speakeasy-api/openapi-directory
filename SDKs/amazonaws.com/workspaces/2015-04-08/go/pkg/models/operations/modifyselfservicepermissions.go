@@ -16,17 +16,21 @@ const (
 	ModifySelfservicePermissionsXAmzTargetEnumWorkspacesServiceModifySelfservicePermissions ModifySelfservicePermissionsXAmzTargetEnum = "WorkspacesService.ModifySelfservicePermissions"
 )
 
+func (e ModifySelfservicePermissionsXAmzTargetEnum) ToPointer() *ModifySelfservicePermissionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ModifySelfservicePermissionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.ModifySelfservicePermissions":
-		*e = ModifySelfservicePermissionsXAmzTargetEnum(s)
+		*e = ModifySelfservicePermissionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifySelfservicePermissionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifySelfservicePermissionsXAmzTargetEnum: %v", v)
 	}
 }
 

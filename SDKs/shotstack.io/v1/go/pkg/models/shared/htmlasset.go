@@ -34,12 +34,16 @@ const (
 	HTMLAssetPositionEnumCenter      HTMLAssetPositionEnum = "center"
 )
 
+func (e HTMLAssetPositionEnum) ToPointer() *HTMLAssetPositionEnum {
+	return &e
+}
+
 func (e *HTMLAssetPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "top":
 		fallthrough
 	case "topRight":
@@ -57,10 +61,10 @@ func (e *HTMLAssetPositionEnum) UnmarshalJSON(data []byte) error {
 	case "topLeft":
 		fallthrough
 	case "center":
-		*e = HTMLAssetPositionEnum(s)
+		*e = HTMLAssetPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HTMLAssetPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for HTMLAssetPositionEnum: %v", v)
 	}
 }
 

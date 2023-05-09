@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,15 +17,16 @@ func main() {
         }),
     )
 
-    req := operations.CreateApplicationRequest{
+    ctx := context.Background()
+    res, err := s.CreateApplication(ctx, operations.CreateApplicationRequest{
         CreateApplicationRequest: shared.CreateApplicationRequest{
-            AutoConfigEnabled: false,
-            AutoCreate: false,
-            CWEMonitorEnabled: false,
-            GroupingType: "ACCOUNT_BASED",
-            OpsCenterEnabled: false,
-            OpsItemSNSTopicArn: "corrupti",
-            ResourceGroupName: "provident",
+            AutoConfigEnabled: sdk.Bool(false),
+            AutoCreate: sdk.Bool(false),
+            CWEMonitorEnabled: sdk.Bool(false),
+            GroupingType: shared.GroupingTypeEnumAccountBased.ToPointer(),
+            OpsCenterEnabled: sdk.Bool(false),
+            OpsItemSNSTopicArn: sdk.String("corrupti"),
+            ResourceGroupName: sdk.String("provident"),
             Tags: []shared.Tag{
                 shared.Tag{
                     Key: "quibusdam",
@@ -41,18 +42,15 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "error",
-        XAmzContentSha256: "deserunt",
-        XAmzCredential: "suscipit",
-        XAmzDate: "iure",
-        XAmzSecurityToken: "magnam",
-        XAmzSignature: "debitis",
-        XAmzSignedHeaders: "ipsa",
-        XAmzTarget: "EC2WindowsBarleyService.CreateApplication",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateApplication(ctx, req)
+        XAmzAlgorithm: sdk.String("error"),
+        XAmzContentSha256: sdk.String("deserunt"),
+        XAmzCredential: sdk.String("suscipit"),
+        XAmzDate: sdk.String("iure"),
+        XAmzSecurityToken: sdk.String("magnam"),
+        XAmzSignature: sdk.String("debitis"),
+        XAmzSignedHeaders: sdk.String("ipsa"),
+        XAmzTarget: operations.CreateApplicationXAmzTargetEnumEc2WindowsBarleyServiceCreateApplication,
+    })
     if err != nil {
         log.Fatal(err)
     }

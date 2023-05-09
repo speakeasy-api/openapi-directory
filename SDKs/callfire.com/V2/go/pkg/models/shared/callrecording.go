@@ -16,21 +16,25 @@ const (
 	CallRecordingStateEnumError     CallRecordingStateEnum = "ERROR"
 )
 
+func (e CallRecordingStateEnum) ToPointer() *CallRecordingStateEnum {
+	return &e
+}
+
 func (e *CallRecordingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECORDING":
 		fallthrough
 	case "READY":
 		fallthrough
 	case "ERROR":
-		*e = CallRecordingStateEnum(s)
+		*e = CallRecordingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallRecordingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CallRecordingStateEnum: %v", v)
 	}
 }
 

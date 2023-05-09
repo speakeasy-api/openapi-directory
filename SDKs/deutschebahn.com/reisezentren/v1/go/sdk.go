@@ -28,6 +28,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - This REST-API enables you to query information about travel centers in Germany.
 type SDK struct {
 
@@ -159,7 +174,10 @@ func (s *SDK) GetReisezentren(ctx context.Context, request operations.GetReiseze
 // Get information about a station near a location
 func (s *SDK) GetReisezentrenLocLatLon(ctx context.Context, request operations.GetReisezentrenLocLatLonRequest) (*operations.GetReisezentrenLocLatLonResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reisezentren/loc/{lat}/{lon}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reisezentren/loc/{lat}/{lon}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -204,7 +222,10 @@ func (s *SDK) GetReisezentrenLocLatLon(ctx context.Context, request operations.G
 // Get stations in a given radius
 func (s *SDK) GetReisezentrenLocLatLonDist(ctx context.Context, request operations.GetReisezentrenLocLatLonDistRequest) (*operations.GetReisezentrenLocLatLonDistResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reisezentren/loc/{lat}/{lon}/{dist}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reisezentren/loc/{lat}/{lon}/{dist}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -249,7 +270,10 @@ func (s *SDK) GetReisezentrenLocLatLonDist(ctx context.Context, request operatio
 // Get information about a specific station
 func (s *SDK) GetReisezentrenID(ctx context.Context, request operations.GetReisezentrenIDRequest) (*operations.GetReisezentrenIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reisezentren/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reisezentren/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

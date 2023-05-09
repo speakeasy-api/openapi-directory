@@ -15,19 +15,23 @@ const (
 	NpmRepositoryPublicRepositoryEnumNpmjs                       NpmRepositoryPublicRepositoryEnum = "NPMJS"
 )
 
+func (e NpmRepositoryPublicRepositoryEnum) ToPointer() *NpmRepositoryPublicRepositoryEnum {
+	return &e
+}
+
 func (e *NpmRepositoryPublicRepositoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLIC_REPOSITORY_UNSPECIFIED":
 		fallthrough
 	case "NPMJS":
-		*e = NpmRepositoryPublicRepositoryEnum(s)
+		*e = NpmRepositoryPublicRepositoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NpmRepositoryPublicRepositoryEnum: %s", s)
+		return fmt.Errorf("invalid value for NpmRepositoryPublicRepositoryEnum: %v", v)
 	}
 }
 

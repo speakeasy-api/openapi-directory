@@ -16,17 +16,21 @@ const (
 	CreateAdditionalAssignmentsForHITXAmzTargetEnumMTurkRequesterServiceV20170117CreateAdditionalAssignmentsForHit CreateAdditionalAssignmentsForHITXAmzTargetEnum = "MTurkRequesterServiceV20170117.CreateAdditionalAssignmentsForHIT"
 )
 
+func (e CreateAdditionalAssignmentsForHITXAmzTargetEnum) ToPointer() *CreateAdditionalAssignmentsForHITXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAdditionalAssignmentsForHITXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.CreateAdditionalAssignmentsForHIT":
-		*e = CreateAdditionalAssignmentsForHITXAmzTargetEnum(s)
+		*e = CreateAdditionalAssignmentsForHITXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAdditionalAssignmentsForHITXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAdditionalAssignmentsForHITXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -104,7 +104,7 @@ func (s *authentication) Create(ctx context.Context, request shared.UserCredenti
 // Delete - Delete an auth token.
 // Deletes the auth token provided in Authorization header.
 // Deleting an expired or invalid token will result in 401 Unauthorized error.
-func (s *authentication) Delete(ctx context.Context) (*operations.DeleteResponse, error) {
+func (s *authentication) Delete(ctx context.Context, security operations.DeleteSecurity) (*operations.DeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/auth/token"
 
@@ -113,7 +113,7 @@ func (s *authentication) Delete(ctx context.Context) (*operations.DeleteResponse
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

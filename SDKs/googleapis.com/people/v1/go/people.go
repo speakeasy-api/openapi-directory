@@ -200,7 +200,10 @@ func (s *people) PeoplePeopleBatchUpdateContacts(ctx context.Context, request op
 // PeoplePeopleConnectionsList - Provides a list of the authenticated user's contacts. Sync tokens expire 7 days after the full sync. A request with an expired sync token will get an error with an [google.rpc.ErrorInfo](https://cloud.google.com/apis/design/errors#error_info) with reason "EXPIRED_SYNC_TOKEN". In the case of such an error clients should make a full sync request without a `sync_token`. The first page of a full sync request has an additional quota. If the quota is exceeded, a 429 error will be returned. This quota is fixed and can not be increased. When the `sync_token` is specified, resources deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or `sync_token` is specified, all other request parameters must match the first call. Writes may have a propagation delay of several minutes for sync requests. Incremental syncs are not intended for read-after-write use cases. See example usage at [List the user's contacts that have changed](/people/v1/contacts#list_the_users_contacts_that_have_changed).
 func (s *people) PeoplePeopleConnectionsList(ctx context.Context, request operations.PeoplePeopleConnectionsListRequest, security operations.PeoplePeopleConnectionsListSecurity) (*operations.PeoplePeopleConnectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}/connections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}/connections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -303,7 +306,10 @@ func (s *people) PeoplePeopleCreateContact(ctx context.Context, request operatio
 // PeoplePeopleDeleteContact - Delete a contact person. Any non-contact data will not be deleted. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 func (s *people) PeoplePeopleDeleteContact(ctx context.Context, request operations.PeoplePeopleDeleteContactRequest, security operations.PeoplePeopleDeleteContactSecurity) (*operations.PeoplePeopleDeleteContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}:deleteContact", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}:deleteContact", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -351,7 +357,10 @@ func (s *people) PeoplePeopleDeleteContact(ctx context.Context, request operatio
 // PeoplePeopleDeleteContactPhoto - Delete a contact's photo. Mutate requests for the same user should be done sequentially to avoid // lock contention.
 func (s *people) PeoplePeopleDeleteContactPhoto(ctx context.Context, request operations.PeoplePeopleDeleteContactPhotoRequest, security operations.PeoplePeopleDeleteContactPhotoSecurity) (*operations.PeoplePeopleDeleteContactPhotoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}:deleteContactPhoto", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}:deleteContactPhoto", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -399,7 +408,10 @@ func (s *people) PeoplePeopleDeleteContactPhoto(ctx context.Context, request ope
 // PeoplePeopleGet - Provides information about a person by specifying a resource name. Use `people/me` to indicate the authenticated user. The request returns a 400 error if 'personFields' is not specified.
 func (s *people) PeoplePeopleGet(ctx context.Context, request operations.PeoplePeopleGetRequest, security operations.PeoplePeopleGetSecurity) (*operations.PeoplePeopleGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -639,7 +651,10 @@ func (s *people) PeoplePeopleSearchDirectoryPeople(ctx context.Context, request 
 // PeoplePeopleUpdateContact - Update contact data for an existing contact person. Any non-contact data will not be modified. Any non-contact data in the person to update will be ignored. All fields specified in the `update_mask` will be replaced. The server returns a 400 error if `person.metadata.sources` is not specified for the contact to be updated or if there is no contact source. The server returns a 400 error with reason `"failedPrecondition"` if `person.metadata.sources.etag` is different than the contact's etag, which indicates the contact has changed since its data was read. Clients should get the latest person and merge their updates into the latest person. The server returns a 400 error if `memberships` are being updated and there are no contact group memberships specified on the person. The server returns a 400 error if more than one field is specified on a field that is a singleton for contact sources: * biographies * birthdays * genders * names Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 func (s *people) PeoplePeopleUpdateContact(ctx context.Context, request operations.PeoplePeopleUpdateContactRequest, security operations.PeoplePeopleUpdateContactSecurity) (*operations.PeoplePeopleUpdateContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}:updateContact", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}:updateContact", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PersonInput", "json")
 	if err != nil {
@@ -694,7 +709,10 @@ func (s *people) PeoplePeopleUpdateContact(ctx context.Context, request operatio
 // PeoplePeopleUpdateContactPhoto - Update a contact's photo. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 func (s *people) PeoplePeopleUpdateContactPhoto(ctx context.Context, request operations.PeoplePeopleUpdateContactPhotoRequest, security operations.PeoplePeopleUpdateContactPhotoSecurity) (*operations.PeoplePeopleUpdateContactPhotoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}:updateContactPhoto", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}:updateContactPhoto", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateContactPhotoRequest", "json")
 	if err != nil {

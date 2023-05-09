@@ -16,17 +16,21 @@ const (
 	RebootInstanceXAmzTargetEnumLightsail20161128RebootInstance RebootInstanceXAmzTargetEnum = "Lightsail_20161128.RebootInstance"
 )
 
+func (e RebootInstanceXAmzTargetEnum) ToPointer() *RebootInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *RebootInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.RebootInstance":
-		*e = RebootInstanceXAmzTargetEnum(s)
+		*e = RebootInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RebootInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RebootInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

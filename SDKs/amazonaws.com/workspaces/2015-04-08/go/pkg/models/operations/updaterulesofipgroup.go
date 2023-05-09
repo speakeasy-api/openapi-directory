@@ -16,17 +16,21 @@ const (
 	UpdateRulesOfIPGroupXAmzTargetEnumWorkspacesServiceUpdateRulesOfIPGroup UpdateRulesOfIPGroupXAmzTargetEnum = "WorkspacesService.UpdateRulesOfIpGroup"
 )
 
+func (e UpdateRulesOfIPGroupXAmzTargetEnum) ToPointer() *UpdateRulesOfIPGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateRulesOfIPGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.UpdateRulesOfIpGroup":
-		*e = UpdateRulesOfIPGroupXAmzTargetEnum(s)
+		*e = UpdateRulesOfIPGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateRulesOfIPGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateRulesOfIPGroupXAmzTargetEnum: %v", v)
 	}
 }
 

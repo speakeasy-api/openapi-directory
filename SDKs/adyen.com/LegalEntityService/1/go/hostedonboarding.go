@@ -34,7 +34,9 @@ func newHostedOnboarding(defaultClient, securityClient HTTPClient, serverURL, la
 
 // GetThemes - Get a list of hosted onboarding page themes
 // Returns a list of hosted onboarding page themes.
-func (s *hostedOnboarding) GetThemes(ctx context.Context) (*operations.GetThemesResponse, error) {
+//
+// >If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
+func (s *hostedOnboarding) GetThemes(ctx context.Context, security operations.GetThemesSecurity) (*operations.GetThemesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/themes"
 
@@ -43,7 +45,7 @@ func (s *hostedOnboarding) GetThemes(ctx context.Context) (*operations.GetThemes
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -96,10 +98,13 @@ func (s *hostedOnboarding) GetThemes(ctx context.Context) (*operations.GetThemes
 }
 
 // GetThemesID - Get an onboarding link theme
-// Returns the details of the theme identified in the path.
+// Returns the details of the theme identified in the path.>If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
 func (s *hostedOnboarding) GetThemesID(ctx context.Context, request operations.GetThemesIDRequest, security operations.GetThemesIDSecurity) (*operations.GetThemesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/themes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/themes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -160,9 +165,14 @@ func (s *hostedOnboarding) GetThemesID(ctx context.Context, request operations.G
 
 // PostLegalEntitiesIDOnboardingLinks - Get a link to an Adyen-hosted onboarding page
 // Returns a link to an Adyen-hosted onboarding page where you need to redirect your user.
+//
+// >If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
 func (s *hostedOnboarding) PostLegalEntitiesIDOnboardingLinks(ctx context.Context, request operations.PostLegalEntitiesIDOnboardingLinksRequest, security operations.PostLegalEntitiesIDOnboardingLinksSecurity) (*operations.PostLegalEntitiesIDOnboardingLinksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/onboardingLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/onboardingLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OnboardingLinkInfo", "json")
 	if err != nil {

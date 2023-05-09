@@ -16,19 +16,23 @@ const (
 	DeleteAssessmentFrameworkShareRequestTypeEnumReceived DeleteAssessmentFrameworkShareRequestTypeEnum = "RECEIVED"
 )
 
+func (e DeleteAssessmentFrameworkShareRequestTypeEnum) ToPointer() *DeleteAssessmentFrameworkShareRequestTypeEnum {
+	return &e
+}
+
 func (e *DeleteAssessmentFrameworkShareRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SENT":
 		fallthrough
 	case "RECEIVED":
-		*e = DeleteAssessmentFrameworkShareRequestTypeEnum(s)
+		*e = DeleteAssessmentFrameworkShareRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAssessmentFrameworkShareRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAssessmentFrameworkShareRequestTypeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	SearchResourcesSortAttributeNameEnumS3ClassifiableSizeInBytes SearchResourcesSortAttributeNameEnum = "S3_CLASSIFIABLE_SIZE_IN_BYTES"
 )
 
+func (e SearchResourcesSortAttributeNameEnum) ToPointer() *SearchResourcesSortAttributeNameEnum {
+	return &e
+}
+
 func (e *SearchResourcesSortAttributeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_ID":
 		fallthrough
 	case "RESOURCE_NAME":
@@ -30,9 +34,9 @@ func (e *SearchResourcesSortAttributeNameEnum) UnmarshalJSON(data []byte) error 
 	case "S3_CLASSIFIABLE_OBJECT_COUNT":
 		fallthrough
 	case "S3_CLASSIFIABLE_SIZE_IN_BYTES":
-		*e = SearchResourcesSortAttributeNameEnum(s)
+		*e = SearchResourcesSortAttributeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchResourcesSortAttributeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchResourcesSortAttributeNameEnum: %v", v)
 	}
 }

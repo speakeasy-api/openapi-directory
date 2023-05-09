@@ -15,19 +15,23 @@ const (
 	NewDeviceEventManagementTypeEnumManagedProfile NewDeviceEventManagementTypeEnum = "managedProfile"
 )
 
+func (e NewDeviceEventManagementTypeEnum) ToPointer() *NewDeviceEventManagementTypeEnum {
+	return &e
+}
+
 func (e *NewDeviceEventManagementTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "managedDevice":
 		fallthrough
 	case "managedProfile":
-		*e = NewDeviceEventManagementTypeEnum(s)
+		*e = NewDeviceEventManagementTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NewDeviceEventManagementTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NewDeviceEventManagementTypeEnum: %v", v)
 	}
 }
 

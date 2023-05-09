@@ -20,12 +20,16 @@ const (
 	GoogleAudienceGoogleAudienceTypeEnumGoogleAudienceTypeExtendedDemographic GoogleAudienceGoogleAudienceTypeEnum = "GOOGLE_AUDIENCE_TYPE_EXTENDED_DEMOGRAPHIC"
 )
 
+func (e GoogleAudienceGoogleAudienceTypeEnum) ToPointer() *GoogleAudienceGoogleAudienceTypeEnum {
+	return &e
+}
+
 func (e *GoogleAudienceGoogleAudienceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GOOGLE_AUDIENCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_AUDIENCE_TYPE_AFFINITY":
@@ -39,10 +43,10 @@ func (e *GoogleAudienceGoogleAudienceTypeEnum) UnmarshalJSON(data []byte) error 
 	case "GOOGLE_AUDIENCE_TYPE_LIFE_EVENT":
 		fallthrough
 	case "GOOGLE_AUDIENCE_TYPE_EXTENDED_DEMOGRAPHIC":
-		*e = GoogleAudienceGoogleAudienceTypeEnum(s)
+		*e = GoogleAudienceGoogleAudienceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAudienceGoogleAudienceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAudienceGoogleAudienceTypeEnum: %v", v)
 	}
 }
 

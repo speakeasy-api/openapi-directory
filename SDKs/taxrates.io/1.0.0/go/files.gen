@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -16,4 +17,7 @@ pkg/utils/utils.go
 pkg/models/operations/taxratesbycountrycode.go
 pkg/models/operations/taxratesbyipaddress.go
 pkg/models/operations/alltaxrates.go
+docs/sdk/README.md
+docs/v1tax/README.md
+docs/v3tax/README.md
 USAGE.md

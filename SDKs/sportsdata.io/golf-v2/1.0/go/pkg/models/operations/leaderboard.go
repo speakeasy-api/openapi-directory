@@ -17,19 +17,23 @@ const (
 	LeaderboardFormatEnumJSON LeaderboardFormatEnum = "JSON"
 )
 
+func (e LeaderboardFormatEnum) ToPointer() *LeaderboardFormatEnum {
+	return &e
+}
+
 func (e *LeaderboardFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = LeaderboardFormatEnum(s)
+		*e = LeaderboardFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LeaderboardFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LeaderboardFormatEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	LogTypeEnumEngineLog LogTypeEnum = "engine-log"
 )
 
+func (e LogTypeEnum) ToPointer() *LogTypeEnum {
+	return &e
+}
+
 func (e *LogTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "slow-log":
 		fallthrough
 	case "engine-log":
-		*e = LogTypeEnum(s)
+		*e = LogTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LogTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LogTypeEnum: %v", v)
 	}
 }

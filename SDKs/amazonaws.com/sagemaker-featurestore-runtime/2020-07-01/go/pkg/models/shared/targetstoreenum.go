@@ -14,18 +14,22 @@ const (
 	TargetStoreEnumOfflineStore TargetStoreEnum = "OfflineStore"
 )
 
+func (e TargetStoreEnum) ToPointer() *TargetStoreEnum {
+	return &e
+}
+
 func (e *TargetStoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OnlineStore":
 		fallthrough
 	case "OfflineStore":
-		*e = TargetStoreEnum(s)
+		*e = TargetStoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetStoreEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetStoreEnum: %v", v)
 	}
 }

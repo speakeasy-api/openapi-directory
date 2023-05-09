@@ -13,16 +13,20 @@ const (
 	DefinitionLanguageEnumGraphql DefinitionLanguageEnum = "GRAPHQL"
 )
 
+func (e DefinitionLanguageEnum) ToPointer() *DefinitionLanguageEnum {
+	return &e
+}
+
 func (e *DefinitionLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GRAPHQL":
-		*e = DefinitionLanguageEnum(s)
+		*e = DefinitionLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DefinitionLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for DefinitionLanguageEnum: %v", v)
 	}
 }

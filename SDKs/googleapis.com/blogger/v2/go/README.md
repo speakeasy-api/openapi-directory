@@ -13,34 +13,32 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/blogger/v2
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BloggerBlogsGetRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        BlogID: "quibusdam",
-        Callback: "unde",
-        Fields: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.Blogs.BloggerBlogsGet(ctx, req, operations.BloggerBlogsGetSecurity{
+    res, err := s.Blogs.BloggerBlogsGet(ctx, operations.BloggerBlogsGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        BlogID: "quibusdam",
+        Callback: sdk.String("unde"),
+        Fields: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("vel"),
+        UploadType: sdk.String("error"),
+        UploadProtocol: sdk.String("deserunt"),
+    }, operations.BloggerBlogsGetSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -59,29 +57,29 @@ func main() {
 ## Available Resources and Operations
 
 
-### Blogs
+### [Blogs](docs/blogs/README.md)
 
-* `BloggerBlogsGet` - Gets a blog by id.
-* `BloggerBlogsList` - Lists blogs by user id, possibly filtered.
+* [BloggerBlogsGet](docs/blogs/README.md#bloggerblogsget) - Gets a blog by id.
+* [BloggerBlogsList](docs/blogs/README.md#bloggerblogslist) - Lists blogs by user id, possibly filtered.
 
-### Comments
+### [Comments](docs/comments/README.md)
 
-* `BloggerCommentsGet` - Gets a comment by blog id, post id and comment id.
-* `BloggerCommentsList` - Lists comments.
+* [BloggerCommentsGet](docs/comments/README.md#bloggercommentsget) - Gets a comment by blog id, post id and comment id.
+* [BloggerCommentsList](docs/comments/README.md#bloggercommentslist) - Lists comments.
 
-### Pages
+### [Pages](docs/pages/README.md)
 
-* `BloggerPagesGet` - Gets a page by blog id and page id.
-* `BloggerPagesList` - Lists pages.
+* [BloggerPagesGet](docs/pages/README.md#bloggerpagesget) - Gets a page by blog id and page id.
+* [BloggerPagesList](docs/pages/README.md#bloggerpageslist) - Lists pages.
 
-### Posts
+### [Posts](docs/posts/README.md)
 
-* `BloggerPostsGet` - Gets a post by blog id and post id
-* `BloggerPostsList` - Lists posts.
+* [BloggerPostsGet](docs/posts/README.md#bloggerpostsget) - Gets a post by blog id and post id
+* [BloggerPostsList](docs/posts/README.md#bloggerpostslist) - Lists posts.
 
-### Users
+### [Users](docs/users/README.md)
 
-* `BloggerUsersGet` - Gets a user by user id.
+* [BloggerUsersGet](docs/users/README.md#bloggerusersget) - Gets a user by user id.
 <!-- End SDK Available Operations -->
 
 ### Maturity

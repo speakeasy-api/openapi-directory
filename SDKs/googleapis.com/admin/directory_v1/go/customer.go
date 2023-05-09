@@ -34,7 +34,10 @@ func newCustomer(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AdminCustomerDevicesChromeosCommandsGet - Gets command data a specific command issued to the device.
 func (s *customer) AdminCustomerDevicesChromeosCommandsGet(ctx context.Context, request operations.AdminCustomerDevicesChromeosCommandsGetRequest, security operations.AdminCustomerDevicesChromeosCommandsGetSecurity) (*operations.AdminCustomerDevicesChromeosCommandsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}/commands/{commandId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}/commands/{commandId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *customer) AdminCustomerDevicesChromeosCommandsGet(ctx context.Context, 
 // AdminCustomerDevicesChromeosIssueCommand - Issues a command for the device to execute.
 func (s *customer) AdminCustomerDevicesChromeosIssueCommand(ctx context.Context, request operations.AdminCustomerDevicesChromeosIssueCommandRequest, security operations.AdminCustomerDevicesChromeosIssueCommandSecurity) (*operations.AdminCustomerDevicesChromeosIssueCommandResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}:issueCommand", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}:issueCommand", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DirectoryChromeosdevicesIssueCommandRequest", "json")
 	if err != nil {

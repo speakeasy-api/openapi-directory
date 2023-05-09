@@ -124,7 +124,10 @@ func (s *outlets) OutletsGetAllOutlets(ctx context.Context, request operations.O
 // OutletsGetOutletsByGeolocation - List ticket outlets near a specific location
 func (s *outlets) OutletsGetOutletsByGeolocation(ctx context.Context, request operations.OutletsGetOutletsByGeolocationRequest) (*operations.OutletsGetOutletsByGeolocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/outlets/location/{latitude},{longitude}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/outlets/location/{latitude},{longitude}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

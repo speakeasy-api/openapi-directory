@@ -16,17 +16,21 @@ const (
 	DescribeEcsClustersXAmzTargetEnumOpsWorks20130218DescribeEcsClusters DescribeEcsClustersXAmzTargetEnum = "OpsWorks_20130218.DescribeEcsClusters"
 )
 
+func (e DescribeEcsClustersXAmzTargetEnum) ToPointer() *DescribeEcsClustersXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeEcsClustersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DescribeEcsClusters":
-		*e = DescribeEcsClustersXAmzTargetEnum(s)
+		*e = DescribeEcsClustersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeEcsClustersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeEcsClustersXAmzTargetEnum: %v", v)
 	}
 }
 

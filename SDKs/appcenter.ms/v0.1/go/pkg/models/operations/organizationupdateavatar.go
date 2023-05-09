@@ -40,12 +40,16 @@ const (
 	OrganizationUpdateAvatarDefaultApplicationJSONErrorCodeEnumTooManyRequests     OrganizationUpdateAvatarDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e OrganizationUpdateAvatarDefaultApplicationJSONErrorCodeEnum) ToPointer() *OrganizationUpdateAvatarDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *OrganizationUpdateAvatarDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -59,10 +63,10 @@ func (e *OrganizationUpdateAvatarDefaultApplicationJSONErrorCodeEnum) UnmarshalJ
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = OrganizationUpdateAvatarDefaultApplicationJSONErrorCodeEnum(s)
+		*e = OrganizationUpdateAvatarDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationUpdateAvatarDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationUpdateAvatarDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -84,19 +88,23 @@ const (
 	OrganizationUpdateAvatar200ApplicationJSONOriginEnumHockeyapp OrganizationUpdateAvatar200ApplicationJSONOriginEnum = "hockeyapp"
 )
 
+func (e OrganizationUpdateAvatar200ApplicationJSONOriginEnum) ToPointer() *OrganizationUpdateAvatar200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *OrganizationUpdateAvatar200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = OrganizationUpdateAvatar200ApplicationJSONOriginEnum(s)
+		*e = OrganizationUpdateAvatar200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationUpdateAvatar200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationUpdateAvatar200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

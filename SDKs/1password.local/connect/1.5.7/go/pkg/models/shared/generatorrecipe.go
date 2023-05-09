@@ -15,21 +15,25 @@ const (
 	GeneratorRecipeCharacterSetsEnumSymbols GeneratorRecipeCharacterSetsEnum = "SYMBOLS"
 )
 
+func (e GeneratorRecipeCharacterSetsEnum) ToPointer() *GeneratorRecipeCharacterSetsEnum {
+	return &e
+}
+
 func (e *GeneratorRecipeCharacterSetsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LETTERS":
 		fallthrough
 	case "DIGITS":
 		fallthrough
 	case "SYMBOLS":
-		*e = GeneratorRecipeCharacterSetsEnum(s)
+		*e = GeneratorRecipeCharacterSetsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GeneratorRecipeCharacterSetsEnum: %s", s)
+		return fmt.Errorf("invalid value for GeneratorRecipeCharacterSetsEnum: %v", v)
 	}
 }
 

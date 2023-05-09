@@ -62,19 +62,23 @@ const (
 	DriveFilesGetProjectionEnumFull  DriveFilesGetProjectionEnum = "FULL"
 )
 
+func (e DriveFilesGetProjectionEnum) ToPointer() *DriveFilesGetProjectionEnum {
+	return &e
+}
+
 func (e *DriveFilesGetProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = DriveFilesGetProjectionEnum(s)
+		*e = DriveFilesGetProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DriveFilesGetProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for DriveFilesGetProjectionEnum: %v", v)
 	}
 }
 

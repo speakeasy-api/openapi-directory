@@ -17,19 +17,23 @@ const (
 	SoleProprietorshipVatAbsenceReasonEnumBelowTaxThreshold SoleProprietorshipVatAbsenceReasonEnum = "belowTaxThreshold"
 )
 
+func (e SoleProprietorshipVatAbsenceReasonEnum) ToPointer() *SoleProprietorshipVatAbsenceReasonEnum {
+	return &e
+}
+
 func (e *SoleProprietorshipVatAbsenceReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "industryExemption":
 		fallthrough
 	case "belowTaxThreshold":
-		*e = SoleProprietorshipVatAbsenceReasonEnum(s)
+		*e = SoleProprietorshipVatAbsenceReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SoleProprietorshipVatAbsenceReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for SoleProprietorshipVatAbsenceReasonEnum: %v", v)
 	}
 }
 

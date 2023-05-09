@@ -14,19 +14,23 @@ const (
 	NodeGroupRolesEnumDriver          NodeGroupRolesEnum = "DRIVER"
 )
 
+func (e NodeGroupRolesEnum) ToPointer() *NodeGroupRolesEnum {
+	return &e
+}
+
 func (e *NodeGroupRolesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLE_UNSPECIFIED":
 		fallthrough
 	case "DRIVER":
-		*e = NodeGroupRolesEnum(s)
+		*e = NodeGroupRolesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodeGroupRolesEnum: %s", s)
+		return fmt.Errorf("invalid value for NodeGroupRolesEnum: %v", v)
 	}
 }
 

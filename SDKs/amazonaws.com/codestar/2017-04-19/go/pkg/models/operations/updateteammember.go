@@ -16,17 +16,21 @@ const (
 	UpdateTeamMemberXAmzTargetEnumCodeStar20170419UpdateTeamMember UpdateTeamMemberXAmzTargetEnum = "CodeStar_20170419.UpdateTeamMember"
 )
 
+func (e UpdateTeamMemberXAmzTargetEnum) ToPointer() *UpdateTeamMemberXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateTeamMemberXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeStar_20170419.UpdateTeamMember":
-		*e = UpdateTeamMemberXAmzTargetEnum(s)
+		*e = UpdateTeamMemberXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateTeamMemberXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateTeamMemberXAmzTargetEnum: %v", v)
 	}
 }
 

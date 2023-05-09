@@ -17,12 +17,16 @@ const (
 	ConfigManagementOperatorStateDeploymentStateEnumError                      ConfigManagementOperatorStateDeploymentStateEnum = "ERROR"
 )
 
+func (e ConfigManagementOperatorStateDeploymentStateEnum) ToPointer() *ConfigManagementOperatorStateDeploymentStateEnum {
+	return &e
+}
+
 func (e *ConfigManagementOperatorStateDeploymentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -30,10 +34,10 @@ func (e *ConfigManagementOperatorStateDeploymentStateEnum) UnmarshalJSON(data []
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementOperatorStateDeploymentStateEnum(s)
+		*e = ConfigManagementOperatorStateDeploymentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementOperatorStateDeploymentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementOperatorStateDeploymentStateEnum: %v", v)
 	}
 }
 

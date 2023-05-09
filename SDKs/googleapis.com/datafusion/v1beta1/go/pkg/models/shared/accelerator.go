@@ -18,12 +18,16 @@ const (
 	AcceleratorAcceleratorTypeEnumCloudsearch                AcceleratorAcceleratorTypeEnum = "CLOUDSEARCH"
 )
 
+func (e AcceleratorAcceleratorTypeEnum) ToPointer() *AcceleratorAcceleratorTypeEnum {
+	return &e
+}
+
 func (e *AcceleratorAcceleratorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCELERATOR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CDC":
@@ -33,10 +37,10 @@ func (e *AcceleratorAcceleratorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CCAI_INSIGHTS":
 		fallthrough
 	case "CLOUDSEARCH":
-		*e = AcceleratorAcceleratorTypeEnum(s)
+		*e = AcceleratorAcceleratorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AcceleratorAcceleratorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AcceleratorAcceleratorTypeEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	AcceleratorStateEnumUnknown          AcceleratorStateEnum = "UNKNOWN"
 )
 
+func (e AcceleratorStateEnum) ToPointer() *AcceleratorStateEnum {
+	return &e
+}
+
 func (e *AcceleratorStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ENABLED":
@@ -63,10 +71,10 @@ func (e *AcceleratorStateEnum) UnmarshalJSON(data []byte) error {
 	case "DISABLED":
 		fallthrough
 	case "UNKNOWN":
-		*e = AcceleratorStateEnum(s)
+		*e = AcceleratorStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AcceleratorStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AcceleratorStateEnum: %v", v)
 	}
 }
 

@@ -13,29 +13,26 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/apple.com/sirikit-cloud-m
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ExtensionConfigurationRequest{
+    ctx := context.Background()
+    res, err := s.Config.ExtensionConfiguration(ctx, operations.ExtensionConfigurationRequest{
         AcceptLanguage: "corrupti",
         CacheControl: "provident",
-        IfNoneMatch: "distinctio",
+        IfNoneMatch: sdk.String("distinctio"),
         RequestTimeout: 8442.66,
         UserAgent: "unde",
-        XApplecloudextensionRetryCount: 8579.46,
+        XApplecloudextensionRetryCount: sdk.Float64(8579.46),
         XApplecloudextensionSessionID: "corrupti",
-    }
-
-    ctx := context.Background()
-    res, err := s.Config.ExtensionConfiguration(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,20 +48,20 @@ func main() {
 ## Available Resources and Operations
 
 
-### Config
+### [Config](docs/config/README.md)
 
-* `ExtensionConfiguration` - Configuration Resource
+* [ExtensionConfiguration](docs/config/README.md#extensionconfiguration) - Configuration Resource
 
-### Intent
+### [Intent](docs/intent/README.md)
 
-* `AddMediaIntentHandling` - addMedia
-* `PlayMediaIntentHandling` - playMedia
-* `UpdateMediaAffinityIntentHandling` - updateMediaAffinity
+* [AddMediaIntentHandling](docs/intent/README.md#addmediaintenthandling) - addMedia
+* [PlayMediaIntentHandling](docs/intent/README.md#playmediaintenthandling) - playMedia
+* [UpdateMediaAffinityIntentHandling](docs/intent/README.md#updatemediaaffinityintenthandling) - updateMediaAffinity
 
-### Queues
+### [Queues](docs/queues/README.md)
 
-* `PlayMediaOnQueue` - playMedia
-* `UpdateActivityOnQueue` - updateActivity
+* [PlayMediaOnQueue](docs/queues/README.md#playmediaonqueue) - playMedia
+* [UpdateActivityOnQueue](docs/queues/README.md#updateactivityonqueue) - updateActivity
 <!-- End SDK Available Operations -->
 
 ### Maturity

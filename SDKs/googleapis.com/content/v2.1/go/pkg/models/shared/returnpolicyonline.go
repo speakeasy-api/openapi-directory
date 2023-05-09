@@ -15,21 +15,25 @@ const (
 	ReturnPolicyOnlineItemConditionsEnumUsed                     ReturnPolicyOnlineItemConditionsEnum = "USED"
 )
 
+func (e ReturnPolicyOnlineItemConditionsEnum) ToPointer() *ReturnPolicyOnlineItemConditionsEnum {
+	return &e
+}
+
 func (e *ReturnPolicyOnlineItemConditionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ITEM_CONDITION_UNSPECIFIED":
 		fallthrough
 	case "NEW":
 		fallthrough
 	case "USED":
-		*e = ReturnPolicyOnlineItemConditionsEnum(s)
+		*e = ReturnPolicyOnlineItemConditionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReturnPolicyOnlineItemConditionsEnum: %s", s)
+		return fmt.Errorf("invalid value for ReturnPolicyOnlineItemConditionsEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	ReturnPolicyOnlineReturnMethodsEnumAtAKiosk                ReturnPolicyOnlineReturnMethodsEnum = "AT_A_KIOSK"
 )
 
+func (e ReturnPolicyOnlineReturnMethodsEnum) ToPointer() *ReturnPolicyOnlineReturnMethodsEnum {
+	return &e
+}
+
 func (e *ReturnPolicyOnlineReturnMethodsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETURN_METHOD_UNSPECIFIED":
 		fallthrough
 	case "BY_MAIL":
@@ -55,10 +63,10 @@ func (e *ReturnPolicyOnlineReturnMethodsEnum) UnmarshalJSON(data []byte) error {
 	case "IN_STORE":
 		fallthrough
 	case "AT_A_KIOSK":
-		*e = ReturnPolicyOnlineReturnMethodsEnum(s)
+		*e = ReturnPolicyOnlineReturnMethodsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReturnPolicyOnlineReturnMethodsEnum: %s", s)
+		return fmt.Errorf("invalid value for ReturnPolicyOnlineReturnMethodsEnum: %v", v)
 	}
 }
 

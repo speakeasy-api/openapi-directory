@@ -22,17 +22,21 @@ const (
 	CoachResourceTypeEnumCoach CoachResourceTypeEnum = "coach"
 )
 
+func (e CoachResourceTypeEnum) ToPointer() *CoachResourceTypeEnum {
+	return &e
+}
+
 func (e *CoachResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "coach":
-		*e = CoachResourceTypeEnum(s)
+		*e = CoachResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CoachResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CoachResourceTypeEnum: %v", v)
 	}
 }
 

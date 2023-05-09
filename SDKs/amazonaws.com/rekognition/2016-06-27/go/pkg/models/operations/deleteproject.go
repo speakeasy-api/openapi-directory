@@ -16,17 +16,21 @@ const (
 	DeleteProjectXAmzTargetEnumRekognitionServiceDeleteProject DeleteProjectXAmzTargetEnum = "RekognitionService.DeleteProject"
 )
 
+func (e DeleteProjectXAmzTargetEnum) ToPointer() *DeleteProjectXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteProjectXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.DeleteProject":
-		*e = DeleteProjectXAmzTargetEnum(s)
+		*e = DeleteProjectXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteProjectXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteProjectXAmzTargetEnum: %v", v)
 	}
 }
 

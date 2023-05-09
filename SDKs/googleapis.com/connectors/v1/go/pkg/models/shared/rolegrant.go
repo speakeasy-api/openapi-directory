@@ -15,19 +15,23 @@ const (
 	RoleGrantPrincipalEnumConnectorSa          RoleGrantPrincipalEnum = "CONNECTOR_SA"
 )
 
+func (e RoleGrantPrincipalEnum) ToPointer() *RoleGrantPrincipalEnum {
+	return &e
+}
+
 func (e *RoleGrantPrincipalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRINCIPAL_UNSPECIFIED":
 		fallthrough
 	case "CONNECTOR_SA":
-		*e = RoleGrantPrincipalEnum(s)
+		*e = RoleGrantPrincipalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoleGrantPrincipalEnum: %s", s)
+		return fmt.Errorf("invalid value for RoleGrantPrincipalEnum: %v", v)
 	}
 }
 

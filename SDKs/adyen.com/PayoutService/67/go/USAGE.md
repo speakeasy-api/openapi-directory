@@ -2,77 +2,76 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.StoreDetailRequest{
+    ctx := context.Background()
+    res, err := s.Initialization.PostStoreDetail(ctx, shared.StoreDetailRequest{
         AdditionalData: map[string]string{
             "provident": "distinctio",
             "quibusdam": "unde",
             "nulla": "corrupti",
         },
         Bank: &shared.BankAccount{
-            BankAccountNumber: "illum",
-            BankCity: "vel",
-            BankLocationID: "error",
-            BankName: "deserunt",
-            Bic: "suscipit",
-            CountryCode: "iure",
-            Iban: "magnam",
-            OwnerName: "debitis",
-            TaxID: "ipsa",
+            BankAccountNumber: sdk.String("illum"),
+            BankCity: sdk.String("vel"),
+            BankLocationID: sdk.String("error"),
+            BankName: sdk.String("deserunt"),
+            Bic: sdk.String("suscipit"),
+            CountryCode: sdk.String("IS"),
+            Iban: sdk.String("magnam"),
+            OwnerName: sdk.String("debitis"),
+            TaxID: sdk.String("ipsa"),
         },
         BillingAddress: &shared.Address{
             City: "Edinburg",
             Country: "Holy See (Vatican City State)",
             HouseNumberOrName: "molestiae",
             PostalCode: "85453-9803",
-            StateOrProvince: "veritatis",
+            StateOrProvince: sdk.String("veritatis"),
             Street: "0389 Connelly Trace",
         },
         Card: &shared.Card{
-            Cvc: "at",
-            ExpiryMonth: "maiores",
-            ExpiryYear: "molestiae",
-            HolderName: "quod",
-            IssueNumber: "quod",
-            Number: "esse",
-            StartMonth: "totam",
-            StartYear: "porro",
+            Cvc: sdk.String("at"),
+            ExpiryMonth: sdk.String("maiores"),
+            ExpiryYear: sdk.String("molestiae"),
+            HolderName: sdk.String("quod"),
+            IssueNumber: sdk.String("quod"),
+            Number: sdk.String("esse"),
+            StartMonth: sdk.String("totam"),
+            StartYear: sdk.String("porro"),
         },
-        DateOfBirth: "2022-10-06T15:49:54.663Z",
-        EntityType: "Company",
-        FraudOffset: 639921,
+        DateOfBirth: types.MustDateFromString("2022-10-06"),
+        EntityType: shared.StoreDetailRequestEntityTypeEnumCompany,
+        FraudOffset: sdk.Int(639921),
         MerchantAccount: "occaecati",
         Nationality: "fugit",
         Recurring: shared.Recurring{
-            Contract: "RECURRING",
-            RecurringDetailName: "hic",
-            RecurringExpiry: "2021-06-08T13:49:32.889Z",
-            RecurringFrequency: "beatae",
-            TokenService: "VISATOKENSERVICE",
+            Contract: shared.RecurringContractEnumRecurring.ToPointer(),
+            RecurringDetailName: sdk.String("hic"),
+            RecurringExpiry: types.MustTimeFromString("2021-06-08T13:49:32.889Z"),
+            RecurringFrequency: sdk.String("beatae"),
+            TokenService: shared.RecurringTokenServiceEnumVisatokenservice.ToPointer(),
         },
-        SelectedBrand: "molestiae",
+        SelectedBrand: sdk.String("molestiae"),
         ShopperEmail: "modi",
         ShopperName: &shared.Name{
             FirstName: "Christy",
             LastName: "Ryan",
         },
         ShopperReference: "cum",
-        SocialSecurityNumber: "esse",
-        TelephoneNumber: "ipsum",
-    }
-
-    ctx := context.Background()
-    res, err := s.Initialization.PostStoreDetail(ctx, req, operations.PostStoreDetailSecurity{
+        SocialSecurityNumber: sdk.String("esse"),
+        TelephoneNumber: sdk.String("ipsum"),
+    }, operations.PostStoreDetailSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {

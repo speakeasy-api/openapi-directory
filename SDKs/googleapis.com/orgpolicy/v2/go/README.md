@@ -13,51 +13,48 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/orgpolicy/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.OrgpolicyOrganizationsCustomConstraintsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Organizations.OrgpolicyOrganizationsCustomConstraintsCreate(ctx, operations.OrgpolicyOrganizationsCustomConstraintsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudOrgpolicyV2CustomConstraintInput: &shared.GoogleCloudOrgpolicyV2CustomConstraintInput{
-            ActionType: "ALLOW",
-            Condition: "distinctio",
-            Description: "quibusdam",
-            DisplayName: "unde",
+            ActionType: shared.GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnumAllow.ToPointer(),
+            Condition: sdk.String("distinctio"),
+            Description: sdk.String("quibusdam"),
+            DisplayName: sdk.String("unde"),
             MethodTypes: []shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum{
-                "UPDATE",
-                "DELETE",
-                "CREATE",
-                "UPDATE",
+                shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnumUpdate,
+                shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnumDelete,
+                shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnumCreate,
+                shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnumUpdate,
             },
-            Name: "deserunt",
+            Name: sdk.String("Rick Kertzmann"),
             ResourceTypes: []string{
-                "iure",
-                "magnam",
+                "delectus",
             },
         },
-        AccessToken: "debitis",
-        Alt: "json",
-        Callback: "delectus",
-        Fields: "tempora",
-        Key: "suscipit",
-        OauthToken: "molestiae",
-        Parent: "minus",
-        PrettyPrint: false,
-        QuotaUser: "placeat",
-        UploadType: "voluptatum",
-        UploadProtocol: "iusto",
-    }
-
-    ctx := context.Background()
-    res, err := s.Organizations.OrgpolicyOrganizationsCustomConstraintsCreate(ctx, req, operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity{
+        AccessToken: sdk.String("tempora"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("molestiae"),
+        Fields: sdk.String("minus"),
+        Key: sdk.String("placeat"),
+        OauthToken: sdk.String("voluptatum"),
+        Parent: "iusto",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("excepturi"),
+        UploadType: sdk.String("nisi"),
+        UploadProtocol: sdk.String("recusandae"),
+    }, operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -76,20 +73,20 @@ func main() {
 ## Available Resources and Operations
 
 
-### Organizations
+### [Organizations](docs/organizations/README.md)
 
-* `OrgpolicyOrganizationsCustomConstraintsCreate` - Creates a custom constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the organization does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the constraint already exists on the given organization.
-* `OrgpolicyOrganizationsCustomConstraintsList` - Retrieves all of the custom constraints that exist on a particular organization resource.
+* [OrgpolicyOrganizationsCustomConstraintsCreate](docs/organizations/README.md#orgpolicyorganizationscustomconstraintscreate) - Creates a custom constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the organization does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the constraint already exists on the given organization.
+* [OrgpolicyOrganizationsCustomConstraintsList](docs/organizations/README.md#orgpolicyorganizationscustomconstraintslist) - Retrieves all of the custom constraints that exist on a particular organization resource.
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `OrgpolicyProjectsConstraintsList` - Lists constraints that could be applied on the specified resource.
-* `OrgpolicyProjectsPoliciesCreate` - Creates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the policy already exists on the given Google Cloud resource.
-* `OrgpolicyProjectsPoliciesDelete` - Deletes a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint or organization policy does not exist.
-* `OrgpolicyProjectsPoliciesGet` - Gets a policy on a resource. If no policy is set on the resource, `NOT_FOUND` is returned. The `etag` value can be used with `UpdatePolicy()` to update a policy during read-modify-write.
-* `OrgpolicyProjectsPoliciesGetEffectivePolicy` - Gets the effective policy on a resource. This is the result of merging policies in the resource hierarchy and evaluating conditions. The returned policy will not have an `etag` or `condition` set because it is an evaluated policy across multiple resources. Subtrees of Resource Manager resource hierarchy with 'under:' prefix will not be expanded.
-* `OrgpolicyProjectsPoliciesList` - Retrieves all of the policies that exist on a particular resource.
-* `OrgpolicyProjectsPoliciesPatch` - Updates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint or the policy do not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag of the policy Note: the supplied policy will perform a full overwrite of all fields.
+* [OrgpolicyProjectsConstraintsList](docs/projects/README.md#orgpolicyprojectsconstraintslist) - Lists constraints that could be applied on the specified resource.
+* [OrgpolicyProjectsPoliciesCreate](docs/projects/README.md#orgpolicyprojectspoliciescreate) - Creates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the policy already exists on the given Google Cloud resource.
+* [OrgpolicyProjectsPoliciesDelete](docs/projects/README.md#orgpolicyprojectspoliciesdelete) - Deletes a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint or organization policy does not exist.
+* [OrgpolicyProjectsPoliciesGet](docs/projects/README.md#orgpolicyprojectspoliciesget) - Gets a policy on a resource. If no policy is set on the resource, `NOT_FOUND` is returned. The `etag` value can be used with `UpdatePolicy()` to update a policy during read-modify-write.
+* [OrgpolicyProjectsPoliciesGetEffectivePolicy](docs/projects/README.md#orgpolicyprojectspoliciesgeteffectivepolicy) - Gets the effective policy on a resource. This is the result of merging policies in the resource hierarchy and evaluating conditions. The returned policy will not have an `etag` or `condition` set because it is an evaluated policy across multiple resources. Subtrees of Resource Manager resource hierarchy with 'under:' prefix will not be expanded.
+* [OrgpolicyProjectsPoliciesList](docs/projects/README.md#orgpolicyprojectspolicieslist) - Retrieves all of the policies that exist on a particular resource.
+* [OrgpolicyProjectsPoliciesPatch](docs/projects/README.md#orgpolicyprojectspoliciespatch) - Updates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the constraint or the policy do not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag of the policy Note: the supplied policy will perform a full overwrite of all fields.
 <!-- End SDK Available Operations -->
 
 ### Maturity

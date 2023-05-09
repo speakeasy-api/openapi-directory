@@ -87,7 +87,10 @@ func (s *groups) GetV2GroupsJSON(ctx context.Context, request operations.GetV2Gr
 // Fetches a group, by ID only.
 func (s *groups) GetV2GroupsIDJSON(ctx context.Context, request operations.GetV2GroupsIDJSONRequest) (*operations.GetV2GroupsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/groups/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/groups/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	PermissionTypeEnumCellFilterPermission PermissionTypeEnum = "CELL_FILTER_PERMISSION"
 )
 
+func (e PermissionTypeEnum) ToPointer() *PermissionTypeEnum {
+	return &e
+}
+
 func (e *PermissionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COLUMN_PERMISSION":
 		fallthrough
 	case "CELL_FILTER_PERMISSION":
-		*e = PermissionTypeEnum(s)
+		*e = PermissionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PermissionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PermissionTypeEnum: %v", v)
 	}
 }

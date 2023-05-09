@@ -7,32 +7,36 @@ import (
 	"fmt"
 )
 
-type BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum string
+type BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum int
 
 const (
-	BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnumZero  BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum = "0"
-	BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnumOne   BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum = "1"
-	BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnumTwo   BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum = "2"
-	BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnumThree BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum = "3"
+	BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnumZero  BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum = 0
+	BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnumOne   BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum = 1
+	BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnumTwo   BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum = 2
+	BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnumThree BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum = 3
 )
 
+func (e BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum) ToPointer() *BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum {
+	return &e
+}
+
 func (e *BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
-		*e = BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum(s)
+	case 3:
+		*e = BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum: %v", v)
 	}
 }
 

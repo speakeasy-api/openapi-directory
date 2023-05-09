@@ -34,7 +34,10 @@ func newEntitlements(defaultClient, securityClient HTTPClient, serverURL, langua
 // AndroidenterpriseEntitlementsDelete - Removes an entitlement to an app for a user. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 func (s *entitlements) AndroidenterpriseEntitlementsDelete(ctx context.Context, request operations.AndroidenterpriseEntitlementsDeleteRequest, security operations.AndroidenterpriseEntitlementsDeleteSecurity) (*operations.AndroidenterpriseEntitlementsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *entitlements) AndroidenterpriseEntitlementsDelete(ctx context.Context, 
 // AndroidenterpriseEntitlementsGet - Retrieves details of an entitlement. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 func (s *entitlements) AndroidenterpriseEntitlementsGet(ctx context.Context, request operations.AndroidenterpriseEntitlementsGetRequest, security operations.AndroidenterpriseEntitlementsGetSecurity) (*operations.AndroidenterpriseEntitlementsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *entitlements) AndroidenterpriseEntitlementsGet(ctx context.Context, req
 // AndroidenterpriseEntitlementsList - Lists all entitlements for the specified user. Only the ID is set. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 func (s *entitlements) AndroidenterpriseEntitlementsList(ctx context.Context, request operations.AndroidenterpriseEntitlementsListRequest, security operations.AndroidenterpriseEntitlementsListSecurity) (*operations.AndroidenterpriseEntitlementsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +178,10 @@ func (s *entitlements) AndroidenterpriseEntitlementsList(ctx context.Context, re
 // AndroidenterpriseEntitlementsUpdate - Adds or updates an entitlement to an app for a user. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 func (s *entitlements) AndroidenterpriseEntitlementsUpdate(ctx context.Context, request operations.AndroidenterpriseEntitlementsUpdateRequest, security operations.AndroidenterpriseEntitlementsUpdateSecurity) (*operations.AndroidenterpriseEntitlementsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/entitlements/{entitlementId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Entitlement", "json")
 	if err != nil {

@@ -35,7 +35,10 @@ func newDownloads(defaultClient, securityClient HTTPClient, serverURL, language,
 // Deletes the specified download artifact from the repository.
 func (s *downloads) DeleteRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *downloads) DeleteRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx con
 // Returns a list of download links associated with the repository.
 func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloads(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDownloadsRequest, security operations.GetRepositoriesWorkspaceRepoSlugDownloadsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugDownloadsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -135,7 +141,10 @@ func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloads(ctx context.Contex
 //	Hello World
 func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest, security operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx contex
 // then the existing file will be replaced.
 func (s *downloads) PostRepositoriesWorkspaceRepoSlugDownloads(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugDownloadsRequest, security operations.PostRepositoriesWorkspaceRepoSlugDownloadsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugDownloadsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -24,4 +25,6 @@ pkg/models/shared/feedbackloop.go
 pkg/models/shared/ipreputation.go
 pkg/models/shared/deliveryerror.go
 pkg/models/shared/listtrafficstatsresponse.go
+docs/sdk/README.md
+docs/domains/README.md
 USAGE.md

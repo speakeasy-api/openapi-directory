@@ -15,17 +15,21 @@ const (
 	GETGETSendStatisticsActionEnumGetSendStatistics GETGETSendStatisticsActionEnum = "GetSendStatistics"
 )
 
+func (e GETGETSendStatisticsActionEnum) ToPointer() *GETGETSendStatisticsActionEnum {
+	return &e
+}
+
 func (e *GETGETSendStatisticsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetSendStatistics":
-		*e = GETGETSendStatisticsActionEnum(s)
+		*e = GETGETSendStatisticsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETSendStatisticsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETSendStatisticsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETSendStatisticsVersionEnumTwoThousandAndTen1201 GETGETSendStatisticsVersionEnum = "2010-12-01"
 )
 
+func (e GETGETSendStatisticsVersionEnum) ToPointer() *GETGETSendStatisticsVersionEnum {
+	return &e
+}
+
 func (e *GETGETSendStatisticsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETGETSendStatisticsVersionEnum(s)
+		*e = GETGETSendStatisticsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETSendStatisticsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETSendStatisticsVersionEnum: %v", v)
 	}
 }
 

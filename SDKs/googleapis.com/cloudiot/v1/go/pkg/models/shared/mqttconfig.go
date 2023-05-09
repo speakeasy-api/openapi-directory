@@ -16,21 +16,25 @@ const (
 	MqttConfigMqttEnabledStateEnumMqttDisabled         MqttConfigMqttEnabledStateEnum = "MQTT_DISABLED"
 )
 
+func (e MqttConfigMqttEnabledStateEnum) ToPointer() *MqttConfigMqttEnabledStateEnum {
+	return &e
+}
+
 func (e *MqttConfigMqttEnabledStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MQTT_STATE_UNSPECIFIED":
 		fallthrough
 	case "MQTT_ENABLED":
 		fallthrough
 	case "MQTT_DISABLED":
-		*e = MqttConfigMqttEnabledStateEnum(s)
+		*e = MqttConfigMqttEnabledStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MqttConfigMqttEnabledStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MqttConfigMqttEnabledStateEnum: %v", v)
 	}
 }
 

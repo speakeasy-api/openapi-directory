@@ -32,19 +32,23 @@ const (
 	PlusPeopleListCollectionEnumVisible   PlusPeopleListCollectionEnum = "visible"
 )
 
+func (e PlusPeopleListCollectionEnum) ToPointer() *PlusPeopleListCollectionEnum {
+	return &e
+}
+
 func (e *PlusPeopleListCollectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "connected":
 		fallthrough
 	case "visible":
-		*e = PlusPeopleListCollectionEnum(s)
+		*e = PlusPeopleListCollectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlusPeopleListCollectionEnum: %s", s)
+		return fmt.Errorf("invalid value for PlusPeopleListCollectionEnum: %v", v)
 	}
 }
 
@@ -56,19 +60,23 @@ const (
 	PlusPeopleListOrderByEnumBest         PlusPeopleListOrderByEnum = "best"
 )
 
+func (e PlusPeopleListOrderByEnum) ToPointer() *PlusPeopleListOrderByEnum {
+	return &e
+}
+
 func (e *PlusPeopleListOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "alphabetical":
 		fallthrough
 	case "best":
-		*e = PlusPeopleListOrderByEnum(s)
+		*e = PlusPeopleListOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlusPeopleListOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for PlusPeopleListOrderByEnum: %v", v)
 	}
 }
 

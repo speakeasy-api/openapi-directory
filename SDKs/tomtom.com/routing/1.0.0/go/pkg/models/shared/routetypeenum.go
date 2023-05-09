@@ -17,12 +17,16 @@ const (
 	RouteTypeEnumThrilling RouteTypeEnum = "thrilling"
 )
 
+func (e RouteTypeEnum) ToPointer() *RouteTypeEnum {
+	return &e
+}
+
 func (e *RouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fastest":
 		fallthrough
 	case "shortest":
@@ -30,9 +34,9 @@ func (e *RouteTypeEnum) UnmarshalJSON(data []byte) error {
 	case "eco":
 		fallthrough
 	case "thrilling":
-		*e = RouteTypeEnum(s)
+		*e = RouteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RouteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RouteTypeEnum: %v", v)
 	}
 }

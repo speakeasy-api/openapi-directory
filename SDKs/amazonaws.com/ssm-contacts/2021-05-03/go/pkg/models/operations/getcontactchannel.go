@@ -16,17 +16,21 @@ const (
 	GetContactChannelXAmzTargetEnumSsmContactsGetContactChannel GetContactChannelXAmzTargetEnum = "SSMContacts.GetContactChannel"
 )
 
+func (e GetContactChannelXAmzTargetEnum) ToPointer() *GetContactChannelXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetContactChannelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSMContacts.GetContactChannel":
-		*e = GetContactChannelXAmzTargetEnum(s)
+		*e = GetContactChannelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetContactChannelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetContactChannelXAmzTargetEnum: %v", v)
 	}
 }
 

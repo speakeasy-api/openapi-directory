@@ -19,12 +19,16 @@ const (
 	CreativeAssetIDTypeEnumAudio     CreativeAssetIDTypeEnum = "AUDIO"
 )
 
+func (e CreativeAssetIDTypeEnum) ToPointer() *CreativeAssetIDTypeEnum {
+	return &e
+}
+
 func (e *CreativeAssetIDTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMAGE":
 		fallthrough
 	case "FLASH":
@@ -36,10 +40,10 @@ func (e *CreativeAssetIDTypeEnum) UnmarshalJSON(data []byte) error {
 	case "HTML_IMAGE":
 		fallthrough
 	case "AUDIO":
-		*e = CreativeAssetIDTypeEnum(s)
+		*e = CreativeAssetIDTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetIDTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetIDTypeEnum: %v", v)
 	}
 }
 

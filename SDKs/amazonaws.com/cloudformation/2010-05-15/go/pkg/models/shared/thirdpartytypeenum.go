@@ -15,20 +15,24 @@ const (
 	ThirdPartyTypeEnumHook     ThirdPartyTypeEnum = "HOOK"
 )
 
+func (e ThirdPartyTypeEnum) ToPointer() *ThirdPartyTypeEnum {
+	return &e
+}
+
 func (e *ThirdPartyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = ThirdPartyTypeEnum(s)
+		*e = ThirdPartyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThirdPartyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ThirdPartyTypeEnum: %v", v)
 	}
 }

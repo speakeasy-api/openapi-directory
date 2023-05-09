@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,13 +17,14 @@ func main() {
         }),
     )
 
-    req := operations.CreateWorkflowRequest{
+    ctx := context.Background()
+    res, err := s.CreateWorkflow(ctx, operations.CreateWorkflowRequest{
         RequestBody: operations.CreateWorkflowRequestBody{
             ApplicationConfigurationID: "corrupti",
-            Description: "provident",
+            Description: sdk.String("provident"),
             InputParameters: map[string]shared.StepInput{
                 "quibusdam": shared.StepInput{
-                    IntegerValue: 602763,
+                    IntegerValue: sdk.Int64(602763),
                     ListOfStringsValue: []string{
                         "corrupti",
                         "illum",
@@ -35,10 +36,10 @@ func main() {
                         "magnam": "debitis",
                         "ipsa": "delectus",
                     },
-                    StringValue: "tempora",
+                    StringValue: sdk.String("tempora"),
                 },
                 "suscipit": shared.StepInput{
-                    IntegerValue: 477665,
+                    IntegerValue: sdk.Int64(477665),
                     ListOfStringsValue: []string{
                         "placeat",
                         "voluptatum",
@@ -49,10 +50,10 @@ func main() {
                         "recusandae": "temporibus",
                         "ab": "quis",
                     },
-                    StringValue: "veritatis",
+                    StringValue: sdk.String("veritatis"),
                 },
                 "deserunt": shared.StepInput{
-                    IntegerValue: 20218,
+                    IntegerValue: sdk.Int64(20218),
                     ListOfStringsValue: []string{
                         "repellendus",
                         "sapiente",
@@ -63,33 +64,31 @@ func main() {
                         "molestiae": "quod",
                         "quod": "esse",
                     },
-                    StringValue: "totam",
+                    StringValue: sdk.String("totam"),
                 },
             },
-            Name: "porro",
+            Name: "Omar Carroll",
             StepTargets: []string{
-                "dicta",
-                "nam",
-                "officia",
+                "fugit",
+                "deleniti",
+                "hic",
             },
             Tags: map[string]string{
-                "fugit": "deleniti",
-                "hic": "optio",
                 "totam": "beatae",
+                "commodi": "molestiae",
+                "modi": "qui",
+                "impedit": "cum",
             },
-            TemplateID: "commodi",
+            TemplateID: "esse",
         },
-        XAmzAlgorithm: "molestiae",
-        XAmzContentSha256: "modi",
-        XAmzCredential: "qui",
-        XAmzDate: "impedit",
-        XAmzSecurityToken: "cum",
-        XAmzSignature: "esse",
-        XAmzSignedHeaders: "ipsum",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateWorkflow(ctx, req)
+        XAmzAlgorithm: sdk.String("ipsum"),
+        XAmzContentSha256: sdk.String("excepturi"),
+        XAmzCredential: sdk.String("aspernatur"),
+        XAmzDate: sdk.String("perferendis"),
+        XAmzSecurityToken: sdk.String("ad"),
+        XAmzSignature: sdk.String("natus"),
+        XAmzSignedHeaders: sdk.String("sed"),
+    })
     if err != nil {
         log.Fatal(err)
     }

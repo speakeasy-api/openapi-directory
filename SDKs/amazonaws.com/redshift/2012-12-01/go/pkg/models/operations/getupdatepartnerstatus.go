@@ -15,17 +15,21 @@ const (
 	GETUpdatePartnerStatusActionEnumUpdatePartnerStatus GETUpdatePartnerStatusActionEnum = "UpdatePartnerStatus"
 )
 
+func (e GETUpdatePartnerStatusActionEnum) ToPointer() *GETUpdatePartnerStatusActionEnum {
+	return &e
+}
+
 func (e *GETUpdatePartnerStatusActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdatePartnerStatus":
-		*e = GETUpdatePartnerStatusActionEnum(s)
+		*e = GETUpdatePartnerStatusActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdatePartnerStatusActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdatePartnerStatusActionEnum: %v", v)
 	}
 }
 
@@ -39,12 +43,16 @@ const (
 	GETUpdatePartnerStatusStatusEnumConnectionFailure GETUpdatePartnerStatusStatusEnum = "ConnectionFailure"
 )
 
+func (e GETUpdatePartnerStatusStatusEnum) ToPointer() *GETUpdatePartnerStatusStatusEnum {
+	return &e
+}
+
 func (e *GETUpdatePartnerStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Inactive":
@@ -52,10 +60,10 @@ func (e *GETUpdatePartnerStatusStatusEnum) UnmarshalJSON(data []byte) error {
 	case "RuntimeFailure":
 		fallthrough
 	case "ConnectionFailure":
-		*e = GETUpdatePartnerStatusStatusEnum(s)
+		*e = GETUpdatePartnerStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdatePartnerStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdatePartnerStatusStatusEnum: %v", v)
 	}
 }
 
@@ -66,17 +74,21 @@ const (
 	GETUpdatePartnerStatusVersionEnumTwoThousandAndTwelve1201 GETUpdatePartnerStatusVersionEnum = "2012-12-01"
 )
 
+func (e GETUpdatePartnerStatusVersionEnum) ToPointer() *GETUpdatePartnerStatusVersionEnum {
+	return &e
+}
+
 func (e *GETUpdatePartnerStatusVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETUpdatePartnerStatusVersionEnum(s)
+		*e = GETUpdatePartnerStatusVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdatePartnerStatusVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdatePartnerStatusVersionEnum: %v", v)
 	}
 }
 

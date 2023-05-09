@@ -35,7 +35,10 @@ func newInvitations(defaultClient, securityClient HTTPClient, serverURL, languag
 // ClassroomInvitationsAccept - Accepts an invitation, removing it and adding the invited user to the teachers or students (as appropriate) of the specified course. Only the invited user may accept an invitation. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to accept the requested invitation or for access errors. * `FAILED_PRECONDITION` for the following request errors: * CourseMemberLimitReached * CourseNotModifiable * CourseTeacherLimitReached * UserGroupsMembershipLimitReached * `NOT_FOUND` if no invitation exists with the requested ID.
 func (s *invitations) ClassroomInvitationsAccept(ctx context.Context, request operations.ClassroomInvitationsAcceptRequest, security operations.ClassroomInvitationsAcceptSecurity) (*operations.ClassroomInvitationsAcceptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invitations/{id}:accept", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/invitations/{id}:accept", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *invitations) ClassroomInvitationsCreate(ctx context.Context, request op
 // ClassroomInvitationsDelete - Deletes an invitation. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to delete the requested invitation or for access errors. * `NOT_FOUND` if no invitation exists with the requested ID.
 func (s *invitations) ClassroomInvitationsDelete(ctx context.Context, request operations.ClassroomInvitationsDeleteRequest, security operations.ClassroomInvitationsDeleteSecurity) (*operations.ClassroomInvitationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invitations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/invitations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -186,7 +192,10 @@ func (s *invitations) ClassroomInvitationsDelete(ctx context.Context, request op
 // ClassroomInvitationsGet - Returns an invitation. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to view the requested invitation or for access errors. * `NOT_FOUND` if no invitation exists with the requested ID.
 func (s *invitations) ClassroomInvitationsGet(ctx context.Context, request operations.ClassroomInvitationsGetRequest, security operations.ClassroomInvitationsGetSecurity) (*operations.ClassroomInvitationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/invitations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/invitations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

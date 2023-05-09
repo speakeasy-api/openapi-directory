@@ -14,18 +14,22 @@ const (
 	FleetReplacementStrategyEnumLaunchBeforeTerminate FleetReplacementStrategyEnum = "launch-before-terminate"
 )
 
+func (e FleetReplacementStrategyEnum) ToPointer() *FleetReplacementStrategyEnum {
+	return &e
+}
+
 func (e *FleetReplacementStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "launch":
 		fallthrough
 	case "launch-before-terminate":
-		*e = FleetReplacementStrategyEnum(s)
+		*e = FleetReplacementStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FleetReplacementStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for FleetReplacementStrategyEnum: %v", v)
 	}
 }

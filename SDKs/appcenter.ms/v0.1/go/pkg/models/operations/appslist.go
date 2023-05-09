@@ -20,19 +20,23 @@ const (
 	AppsListDollarOrderByEnumName        AppsListDollarOrderByEnum = "name"
 )
 
+func (e AppsListDollarOrderByEnum) ToPointer() *AppsListDollarOrderByEnum {
+	return &e
+}
+
 func (e *AppsListDollarOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "display_name":
 		fallthrough
 	case "name":
-		*e = AppsListDollarOrderByEnum(s)
+		*e = AppsListDollarOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsListDollarOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsListDollarOrderByEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	AppsListDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppsListDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppsListDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppsListDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppsListDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -72,10 +80,10 @@ func (e *AppsListDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte)
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppsListDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppsListDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsListDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsListDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -113,12 +121,16 @@ const (
 	AppsList200ApplicationJSONMemberPermissionsEnumTester    AppsList200ApplicationJSONMemberPermissionsEnum = "tester"
 )
 
+func (e AppsList200ApplicationJSONMemberPermissionsEnum) ToPointer() *AppsList200ApplicationJSONMemberPermissionsEnum {
+	return &e
+}
+
 func (e *AppsList200ApplicationJSONMemberPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
@@ -126,10 +138,10 @@ func (e *AppsList200ApplicationJSONMemberPermissionsEnum) UnmarshalJSON(data []b
 	case "viewer":
 		fallthrough
 	case "tester":
-		*e = AppsList200ApplicationJSONMemberPermissionsEnum(s)
+		*e = AppsList200ApplicationJSONMemberPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsList200ApplicationJSONMemberPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsList200ApplicationJSONMemberPermissionsEnum: %v", v)
 	}
 }
 
@@ -142,21 +154,25 @@ const (
 	AppsList200ApplicationJSONOriginEnumCodepush  AppsList200ApplicationJSONOriginEnum = "codepush"
 )
 
+func (e AppsList200ApplicationJSONOriginEnum) ToPointer() *AppsList200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *AppsList200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
 		fallthrough
 	case "codepush":
-		*e = AppsList200ApplicationJSONOriginEnum(s)
+		*e = AppsList200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsList200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsList200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -174,12 +190,16 @@ const (
 	AppsList200ApplicationJSONOsEnumCustom  AppsList200ApplicationJSONOsEnum = "Custom"
 )
 
+func (e AppsList200ApplicationJSONOsEnum) ToPointer() *AppsList200ApplicationJSONOsEnum {
+	return &e
+}
+
 func (e *AppsList200ApplicationJSONOsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Android":
 		fallthrough
 	case "iOS":
@@ -195,10 +215,10 @@ func (e *AppsList200ApplicationJSONOsEnum) UnmarshalJSON(data []byte) error {
 	case "Linux":
 		fallthrough
 	case "Custom":
-		*e = AppsList200ApplicationJSONOsEnum(s)
+		*e = AppsList200ApplicationJSONOsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsList200ApplicationJSONOsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsList200ApplicationJSONOsEnum: %v", v)
 	}
 }
 
@@ -210,19 +230,23 @@ const (
 	AppsList200ApplicationJSONOwnerTypeEnumUser AppsList200ApplicationJSONOwnerTypeEnum = "user"
 )
 
+func (e AppsList200ApplicationJSONOwnerTypeEnum) ToPointer() *AppsList200ApplicationJSONOwnerTypeEnum {
+	return &e
+}
+
 func (e *AppsList200ApplicationJSONOwnerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "org":
 		fallthrough
 	case "user":
-		*e = AppsList200ApplicationJSONOwnerTypeEnum(s)
+		*e = AppsList200ApplicationJSONOwnerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsList200ApplicationJSONOwnerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsList200ApplicationJSONOwnerTypeEnum: %v", v)
 	}
 }
 
@@ -260,12 +284,16 @@ const (
 	AppsList200ApplicationJSONPlatformEnumCustom          AppsList200ApplicationJSONPlatformEnum = "Custom"
 )
 
+func (e AppsList200ApplicationJSONPlatformEnum) ToPointer() *AppsList200ApplicationJSONPlatformEnum {
+	return &e
+}
+
 func (e *AppsList200ApplicationJSONPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Java":
 		fallthrough
 	case "Objective-C-Swift":
@@ -289,10 +317,10 @@ func (e *AppsList200ApplicationJSONPlatformEnum) UnmarshalJSON(data []byte) erro
 	case "Unknown":
 		fallthrough
 	case "Custom":
-		*e = AppsList200ApplicationJSONPlatformEnum(s)
+		*e = AppsList200ApplicationJSONPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsList200ApplicationJSONPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsList200ApplicationJSONPlatformEnum: %v", v)
 	}
 }
 

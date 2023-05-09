@@ -25,6 +25,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Fetch the latest currency exchange rates via API. ExchangeRate-API is free and unlimited.
 // https://www.exchangerate-api.com/docs/documentation - API Documentation
 type SDK struct {
@@ -95,7 +110,10 @@ func New(opts ...SDKOption) *SDK {
 // GetLatestBaseCurrency - Returns latest exchange rates in parameter-supplied base currency.
 func (s *SDK) GetLatestBaseCurrency(ctx context.Context, request operations.GetLatestBaseCurrencyRequest) (*operations.GetLatestBaseCurrencyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/latest/{base_currency}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/latest/{base_currency}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

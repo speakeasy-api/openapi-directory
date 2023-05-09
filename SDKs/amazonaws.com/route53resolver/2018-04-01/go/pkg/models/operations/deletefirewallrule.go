@@ -16,17 +16,21 @@ const (
 	DeleteFirewallRuleXAmzTargetEnumRoute53ResolverDeleteFirewallRule DeleteFirewallRuleXAmzTargetEnum = "Route53Resolver.DeleteFirewallRule"
 )
 
+func (e DeleteFirewallRuleXAmzTargetEnum) ToPointer() *DeleteFirewallRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteFirewallRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.DeleteFirewallRule":
-		*e = DeleteFirewallRuleXAmzTargetEnum(s)
+		*e = DeleteFirewallRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteFirewallRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteFirewallRuleXAmzTargetEnum: %v", v)
 	}
 }
 

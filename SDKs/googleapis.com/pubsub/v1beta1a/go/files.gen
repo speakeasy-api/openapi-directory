@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -48,4 +49,7 @@ pkg/models/shared/listtopicsresponse.go
 pkg/models/shared/publishrequest.go
 pkg/models/shared/publishbatchresponse.go
 pkg/models/shared/publishbatchrequest.go
+docs/sdk/README.md
+docs/subscriptions/README.md
+docs/topics/README.md
 USAGE.md

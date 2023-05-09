@@ -16,17 +16,21 @@ const (
 	CreateResourceGroupXAmzTargetEnumInspectorServiceCreateResourceGroup CreateResourceGroupXAmzTargetEnum = "InspectorService.CreateResourceGroup"
 )
 
+func (e CreateResourceGroupXAmzTargetEnum) ToPointer() *CreateResourceGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateResourceGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InspectorService.CreateResourceGroup":
-		*e = CreateResourceGroupXAmzTargetEnum(s)
+		*e = CreateResourceGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateResourceGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateResourceGroupXAmzTargetEnum: %v", v)
 	}
 }
 

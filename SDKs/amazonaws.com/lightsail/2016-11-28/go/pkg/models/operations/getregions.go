@@ -16,17 +16,21 @@ const (
 	GetRegionsXAmzTargetEnumLightsail20161128GetRegions GetRegionsXAmzTargetEnum = "Lightsail_20161128.GetRegions"
 )
 
+func (e GetRegionsXAmzTargetEnum) ToPointer() *GetRegionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRegionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetRegions":
-		*e = GetRegionsXAmzTargetEnum(s)
+		*e = GetRegionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRegionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRegionsXAmzTargetEnum: %v", v)
 	}
 }
 

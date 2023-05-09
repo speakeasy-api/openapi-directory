@@ -21,12 +21,16 @@ const (
 	WorkerLifecycleEventEventEnumSDKInstallFinish           WorkerLifecycleEventEventEnum = "SDK_INSTALL_FINISH"
 )
 
+func (e WorkerLifecycleEventEventEnum) ToPointer() *WorkerLifecycleEventEventEnum {
+	return &e
+}
+
 func (e *WorkerLifecycleEventEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_EVENT":
 		fallthrough
 	case "OS_START":
@@ -42,10 +46,10 @@ func (e *WorkerLifecycleEventEventEnum) UnmarshalJSON(data []byte) error {
 	case "SDK_INSTALL_START":
 		fallthrough
 	case "SDK_INSTALL_FINISH":
-		*e = WorkerLifecycleEventEventEnum(s)
+		*e = WorkerLifecycleEventEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkerLifecycleEventEventEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkerLifecycleEventEventEnum: %v", v)
 	}
 }
 

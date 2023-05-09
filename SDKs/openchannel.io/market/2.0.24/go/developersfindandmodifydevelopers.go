@@ -35,7 +35,10 @@ func newDevelopersFindAndModifyDevelopers(defaultClient, securityClient HTTPClie
 // DeleteDevelopersDeveloperID - Removes a single developer
 func (s *developersFindAndModifyDevelopers) DeleteDevelopersDeveloperID(ctx context.Context, request operations.DeleteDevelopersDeveloperIDRequest) (*operations.DeleteDevelopersDeveloperIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/developers/{developerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/developers/{developerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -124,7 +127,10 @@ func (s *developersFindAndModifyDevelopers) GetDevelopers(ctx context.Context, r
 // GetDevelopersDeveloperID - Returns a single developer
 func (s *developersFindAndModifyDevelopers) GetDevelopersDeveloperID(ctx context.Context, request operations.GetDevelopersDeveloperIDRequest) (*operations.GetDevelopersDeveloperIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/developers/{developerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/developers/{developerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +177,10 @@ func (s *developersFindAndModifyDevelopers) GetDevelopersDeveloperID(ctx context
 // PatchDevelopersDeveloperID - Updates the developer fields
 func (s *developersFindAndModifyDevelopers) PatchDevelopersDeveloperID(ctx context.Context, request operations.PatchDevelopersDeveloperIDRequest) (*operations.PatchDevelopersDeveloperIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/developers/{developerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/developers/{developerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -222,7 +231,10 @@ func (s *developersFindAndModifyDevelopers) PatchDevelopersDeveloperID(ctx conte
 // PostDevelopersDeveloperID - Updates the developer record or adds the developer if it doesn't exist
 func (s *developersFindAndModifyDevelopers) PostDevelopersDeveloperID(ctx context.Context, request operations.PostDevelopersDeveloperIDRequest) (*operations.PostDevelopersDeveloperIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/developers/{developerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/developers/{developerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

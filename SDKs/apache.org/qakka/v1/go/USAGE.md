@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AckMessageRequest{
+    ctx := context.Background()
+    res, err := s.Queues.AckMessage(ctx, operations.AckMessageRequest{
         QueueMessageID: "corrupti",
         QueueName: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.Queues.AckMessage(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

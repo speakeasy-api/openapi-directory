@@ -18,12 +18,16 @@ const (
 	DoubleVerifyVideoViewabilityPlayerImpressionRateEnumPlayerSize400X3005           DoubleVerifyVideoViewabilityPlayerImpressionRateEnum = "PLAYER_SIZE_400X300_5"
 )
 
+func (e DoubleVerifyVideoViewabilityPlayerImpressionRateEnum) ToPointer() *DoubleVerifyVideoViewabilityPlayerImpressionRateEnum {
+	return &e
+}
+
 func (e *DoubleVerifyVideoViewabilityPlayerImpressionRateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLAYER_SIZE_400X300_UNSPECIFIED":
 		fallthrough
 	case "PLAYER_SIZE_400X300_95":
@@ -33,10 +37,10 @@ func (e *DoubleVerifyVideoViewabilityPlayerImpressionRateEnum) UnmarshalJSON(dat
 	case "PLAYER_SIZE_400X300_25":
 		fallthrough
 	case "PLAYER_SIZE_400X300_5":
-		*e = DoubleVerifyVideoViewabilityPlayerImpressionRateEnum(s)
+		*e = DoubleVerifyVideoViewabilityPlayerImpressionRateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoubleVerifyVideoViewabilityPlayerImpressionRateEnum: %s", s)
+		return fmt.Errorf("invalid value for DoubleVerifyVideoViewabilityPlayerImpressionRateEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	DoubleVerifyVideoViewabilityVideoIabEnumIabViewability30PercentHihger DoubleVerifyVideoViewabilityVideoIabEnum = "IAB_VIEWABILITY_30_PERCENT_HIHGER"
 )
 
+func (e DoubleVerifyVideoViewabilityVideoIabEnum) ToPointer() *DoubleVerifyVideoViewabilityVideoIabEnum {
+	return &e
+}
+
 func (e *DoubleVerifyVideoViewabilityVideoIabEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIDEO_IAB_UNSPECIFIED":
 		fallthrough
 	case "IAB_VIEWABILITY_80_PERCENT_HIGHER":
@@ -81,10 +89,10 @@ func (e *DoubleVerifyVideoViewabilityVideoIabEnum) UnmarshalJSON(data []byte) er
 	case "IAB_VIEWABILITY_40_PERCENT_HIHGER":
 		fallthrough
 	case "IAB_VIEWABILITY_30_PERCENT_HIHGER":
-		*e = DoubleVerifyVideoViewabilityVideoIabEnum(s)
+		*e = DoubleVerifyVideoViewabilityVideoIabEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoubleVerifyVideoViewabilityVideoIabEnum: %s", s)
+		return fmt.Errorf("invalid value for DoubleVerifyVideoViewabilityVideoIabEnum: %v", v)
 	}
 }
 
@@ -101,12 +109,16 @@ const (
 	DoubleVerifyVideoViewabilityVideoViewableRateEnumViewedPerformance10PercentHigher DoubleVerifyVideoViewabilityVideoViewableRateEnum = "VIEWED_PERFORMANCE_10_PERCENT_HIGHER"
 )
 
+func (e DoubleVerifyVideoViewabilityVideoViewableRateEnum) ToPointer() *DoubleVerifyVideoViewabilityVideoViewableRateEnum {
+	return &e
+}
+
 func (e *DoubleVerifyVideoViewabilityVideoViewableRateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIDEO_VIEWABLE_RATE_UNSPECIFIED":
 		fallthrough
 	case "VIEWED_PERFORMANCE_40_PERCENT_HIGHER":
@@ -120,10 +132,10 @@ func (e *DoubleVerifyVideoViewabilityVideoViewableRateEnum) UnmarshalJSON(data [
 	case "VIEWED_PERFORMANCE_20_PERCENT_HIGHER":
 		fallthrough
 	case "VIEWED_PERFORMANCE_10_PERCENT_HIGHER":
-		*e = DoubleVerifyVideoViewabilityVideoViewableRateEnum(s)
+		*e = DoubleVerifyVideoViewabilityVideoViewableRateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoubleVerifyVideoViewabilityVideoViewableRateEnum: %s", s)
+		return fmt.Errorf("invalid value for DoubleVerifyVideoViewabilityVideoViewableRateEnum: %v", v)
 	}
 }
 

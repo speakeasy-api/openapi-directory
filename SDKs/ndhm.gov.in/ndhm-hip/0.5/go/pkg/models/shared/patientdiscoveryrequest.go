@@ -17,12 +17,16 @@ const (
 	PatientDiscoveryRequestPatientGenderEnumU PatientDiscoveryRequestPatientGenderEnum = "U"
 )
 
+func (e PatientDiscoveryRequestPatientGenderEnum) ToPointer() *PatientDiscoveryRequestPatientGenderEnum {
+	return &e
+}
+
 func (e *PatientDiscoveryRequestPatientGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "M":
 		fallthrough
 	case "F":
@@ -30,10 +34,10 @@ func (e *PatientDiscoveryRequestPatientGenderEnum) UnmarshalJSON(data []byte) er
 	case "O":
 		fallthrough
 	case "U":
-		*e = PatientDiscoveryRequestPatientGenderEnum(s)
+		*e = PatientDiscoveryRequestPatientGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientDiscoveryRequestPatientGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientDiscoveryRequestPatientGenderEnum: %v", v)
 	}
 }
 

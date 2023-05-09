@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type PrivateInstitutionDetailsSecurity struct {
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type PrivateInstitutionDetailsResponse struct {
 	ContentType string
 	// Forbidden

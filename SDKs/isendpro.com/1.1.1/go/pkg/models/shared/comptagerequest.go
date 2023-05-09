@@ -13,17 +13,21 @@ const (
 	ComptageRequestComptageEnumOne ComptageRequestComptageEnum = "1"
 )
 
+func (e ComptageRequestComptageEnum) ToPointer() *ComptageRequestComptageEnum {
+	return &e
+}
+
 func (e *ComptageRequestComptageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
-		*e = ComptageRequestComptageEnum(s)
+		*e = ComptageRequestComptageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComptageRequestComptageEnum: %s", s)
+		return fmt.Errorf("invalid value for ComptageRequestComptageEnum: %v", v)
 	}
 }
 
@@ -123,12 +127,16 @@ const (
 	ComptageRequestGmtZoneEnumPacificKiritimati           ComptageRequestGmtZoneEnum = "Pacific/Kiritimati"
 )
 
+func (e ComptageRequestGmtZoneEnum) ToPointer() *ComptageRequestGmtZoneEnum {
+	return &e
+}
+
 func (e *ComptageRequestGmtZoneEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pacific/Midway":
 		fallthrough
 	case "America/Adak":
@@ -308,10 +316,10 @@ func (e *ComptageRequestGmtZoneEnum) UnmarshalJSON(data []byte) error {
 	case "Pacific/Tongatapu":
 		fallthrough
 	case "Pacific/Kiritimati":
-		*e = ComptageRequestGmtZoneEnum(s)
+		*e = ComptageRequestGmtZoneEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComptageRequestGmtZoneEnum: %s", s)
+		return fmt.Errorf("invalid value for ComptageRequestGmtZoneEnum: %v", v)
 	}
 }
 
@@ -321,17 +329,21 @@ const (
 	ComptageRequestNumAzurEnumOne ComptageRequestNumAzurEnum = "1"
 )
 
+func (e ComptageRequestNumAzurEnum) ToPointer() *ComptageRequestNumAzurEnum {
+	return &e
+}
+
 func (e *ComptageRequestNumAzurEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
-		*e = ComptageRequestNumAzurEnum(s)
+		*e = ComptageRequestNumAzurEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComptageRequestNumAzurEnum: %s", s)
+		return fmt.Errorf("invalid value for ComptageRequestNumAzurEnum: %v", v)
 	}
 }
 
@@ -349,17 +361,21 @@ const (
 	ComptageRequestSmslongEnumNineHundredAndNinetyNine ComptageRequestSmslongEnum = "999"
 )
 
+func (e ComptageRequestSmslongEnum) ToPointer() *ComptageRequestSmslongEnum {
+	return &e
+}
+
 func (e *ComptageRequestSmslongEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "999":
-		*e = ComptageRequestSmslongEnum(s)
+		*e = ComptageRequestSmslongEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComptageRequestSmslongEnum: %s", s)
+		return fmt.Errorf("invalid value for ComptageRequestSmslongEnum: %v", v)
 	}
 }
 

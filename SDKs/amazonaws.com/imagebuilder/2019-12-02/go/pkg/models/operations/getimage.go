@@ -15,7 +15,7 @@ type GetImageRequest struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// The Amazon Resource Name (ARN) of the image that you want to retrieve.
+	// The Amazon Resource Name (ARN) of the image that you want to get.
 	ImageBuildVersionArn string `queryParam:"style=form,explode=true,name=imageBuildVersionArn"`
 }
 

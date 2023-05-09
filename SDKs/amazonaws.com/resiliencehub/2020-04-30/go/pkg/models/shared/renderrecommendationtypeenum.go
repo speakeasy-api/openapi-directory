@@ -15,20 +15,24 @@ const (
 	RenderRecommendationTypeEnumTest  RenderRecommendationTypeEnum = "Test"
 )
 
+func (e RenderRecommendationTypeEnum) ToPointer() *RenderRecommendationTypeEnum {
+	return &e
+}
+
 func (e *RenderRecommendationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Alarm":
 		fallthrough
 	case "Sop":
 		fallthrough
 	case "Test":
-		*e = RenderRecommendationTypeEnum(s)
+		*e = RenderRecommendationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RenderRecommendationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RenderRecommendationTypeEnum: %v", v)
 	}
 }

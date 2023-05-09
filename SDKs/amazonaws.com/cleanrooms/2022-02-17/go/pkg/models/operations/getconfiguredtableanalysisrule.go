@@ -17,19 +17,23 @@ const (
 	GetConfiguredTableAnalysisRuleAnalysisRuleTypeEnumList        GetConfiguredTableAnalysisRuleAnalysisRuleTypeEnum = "LIST"
 )
 
+func (e GetConfiguredTableAnalysisRuleAnalysisRuleTypeEnum) ToPointer() *GetConfiguredTableAnalysisRuleAnalysisRuleTypeEnum {
+	return &e
+}
+
 func (e *GetConfiguredTableAnalysisRuleAnalysisRuleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGGREGATION":
 		fallthrough
 	case "LIST":
-		*e = GetConfiguredTableAnalysisRuleAnalysisRuleTypeEnum(s)
+		*e = GetConfiguredTableAnalysisRuleAnalysisRuleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetConfiguredTableAnalysisRuleAnalysisRuleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetConfiguredTableAnalysisRuleAnalysisRuleTypeEnum: %v", v)
 	}
 }
 

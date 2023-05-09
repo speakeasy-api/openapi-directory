@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAPIV2BroadcastservicesRequest{
-        OrderByID: "desc",
-        PageSize: 592845,
-        PageStart: 715190,
-    }
-
     ctx := context.Background()
-    res, err := s.BroadcastServices.GetAPIV2Broadcastservices(ctx, req, operations.GetAPIV2BroadcastservicesSecurity{
+    res, err := s.BroadcastServices.GetAPIV2Broadcastservices(ctx, operations.GetAPIV2BroadcastservicesRequest{
+        OrderByID: operations.GetAPIV2BroadcastservicesOrderByIDEnumDesc.ToPointer(),
+        PageSize: sdk.Int(592845),
+        PageStart: sdk.Int(715190),
+    }, operations.GetAPIV2BroadcastservicesSecurity{
         CdOauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

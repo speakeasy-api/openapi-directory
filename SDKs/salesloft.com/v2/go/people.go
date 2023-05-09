@@ -38,7 +38,10 @@ func newPeople(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // This operation can be called multiple times successfully.
 func (s *people) DeleteV2PeopleIDJSON(ctx context.Context, request operations.DeleteV2PeopleIDJSONRequest) (*operations.DeleteV2PeopleIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/people/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/people/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -124,7 +127,10 @@ func (s *people) GetV2PeopleJSON(ctx context.Context, request operations.GetV2Pe
 // Fetches a person, by ID only.
 func (s *people) GetV2PeopleIDJSON(ctx context.Context, request operations.GetV2PeopleIDJSONRequest) (*operations.GetV2PeopleIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/people/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/people/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -222,7 +228,10 @@ func (s *people) PostV2PeopleJSON(ctx context.Context, request operations.PostV2
 // Updates a person.
 func (s *people) PutV2PeopleIDJSON(ctx context.Context, request operations.PutV2PeopleIDJSONRequest) (*operations.PutV2PeopleIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/people/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/people/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

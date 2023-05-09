@@ -15,17 +15,21 @@ const (
 	GETModifyEndpointAccessActionEnumModifyEndpointAccess GETModifyEndpointAccessActionEnum = "ModifyEndpointAccess"
 )
 
+func (e GETModifyEndpointAccessActionEnum) ToPointer() *GETModifyEndpointAccessActionEnum {
+	return &e
+}
+
 func (e *GETModifyEndpointAccessActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyEndpointAccess":
-		*e = GETModifyEndpointAccessActionEnum(s)
+		*e = GETModifyEndpointAccessActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyEndpointAccessActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyEndpointAccessActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyEndpointAccessVersionEnumTwoThousandAndTwelve1201 GETModifyEndpointAccessVersionEnum = "2012-12-01"
 )
 
+func (e GETModifyEndpointAccessVersionEnum) ToPointer() *GETModifyEndpointAccessVersionEnum {
+	return &e
+}
+
 func (e *GETModifyEndpointAccessVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETModifyEndpointAccessVersionEnum(s)
+		*e = GETModifyEndpointAccessVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyEndpointAccessVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyEndpointAccessVersionEnum: %v", v)
 	}
 }
 

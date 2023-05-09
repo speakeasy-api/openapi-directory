@@ -16,17 +16,21 @@ const (
 	UpdateCrawlerScheduleXAmzTargetEnumAwsGlueUpdateCrawlerSchedule UpdateCrawlerScheduleXAmzTargetEnum = "AWSGlue.UpdateCrawlerSchedule"
 )
 
+func (e UpdateCrawlerScheduleXAmzTargetEnum) ToPointer() *UpdateCrawlerScheduleXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateCrawlerScheduleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.UpdateCrawlerSchedule":
-		*e = UpdateCrawlerScheduleXAmzTargetEnum(s)
+		*e = UpdateCrawlerScheduleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateCrawlerScheduleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateCrawlerScheduleXAmzTargetEnum: %v", v)
 	}
 }
 

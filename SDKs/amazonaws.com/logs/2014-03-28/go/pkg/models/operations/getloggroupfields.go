@@ -16,17 +16,21 @@ const (
 	GetLogGroupFieldsXAmzTargetEnumLogs20140328GetLogGroupFields GetLogGroupFieldsXAmzTargetEnum = "Logs_20140328.GetLogGroupFields"
 )
 
+func (e GetLogGroupFieldsXAmzTargetEnum) ToPointer() *GetLogGroupFieldsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetLogGroupFieldsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.GetLogGroupFields":
-		*e = GetLogGroupFieldsXAmzTargetEnum(s)
+		*e = GetLogGroupFieldsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLogGroupFieldsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLogGroupFieldsXAmzTargetEnum: %v", v)
 	}
 }
 

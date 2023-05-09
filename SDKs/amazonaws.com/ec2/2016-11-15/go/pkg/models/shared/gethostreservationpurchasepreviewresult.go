@@ -14,17 +14,21 @@ const (
 	GetHostReservationPurchasePreviewResultCurrencyCodeEnumUsd GetHostReservationPurchasePreviewResultCurrencyCodeEnum = "USD"
 )
 
+func (e GetHostReservationPurchasePreviewResultCurrencyCodeEnum) ToPointer() *GetHostReservationPurchasePreviewResultCurrencyCodeEnum {
+	return &e
+}
+
 func (e *GetHostReservationPurchasePreviewResultCurrencyCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
-		*e = GetHostReservationPurchasePreviewResultCurrencyCodeEnum(s)
+		*e = GetHostReservationPurchasePreviewResultCurrencyCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHostReservationPurchasePreviewResultCurrencyCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHostReservationPurchasePreviewResultCurrencyCodeEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	GetHostReservationPurchasePreviewResultPurchaseCurrencyCodeEnumUsd GetHostReservationPurchasePreviewResultPurchaseCurrencyCodeEnum = "USD"
 )
 
+func (e GetHostReservationPurchasePreviewResultPurchaseCurrencyCodeEnum) ToPointer() *GetHostReservationPurchasePreviewResultPurchaseCurrencyCodeEnum {
+	return &e
+}
+
 func (e *GetHostReservationPurchasePreviewResultPurchaseCurrencyCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
-		*e = GetHostReservationPurchasePreviewResultPurchaseCurrencyCodeEnum(s)
+		*e = GetHostReservationPurchasePreviewResultPurchaseCurrencyCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHostReservationPurchasePreviewResultPurchaseCurrencyCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHostReservationPurchasePreviewResultPurchaseCurrencyCodeEnum: %v", v)
 	}
 }
 
@@ -58,21 +66,25 @@ const (
 	GetHostReservationPurchasePreviewResultPurchasePaymentOptionEnumNoUpfront      GetHostReservationPurchasePreviewResultPurchasePaymentOptionEnum = "NoUpfront"
 )
 
+func (e GetHostReservationPurchasePreviewResultPurchasePaymentOptionEnum) ToPointer() *GetHostReservationPurchasePreviewResultPurchasePaymentOptionEnum {
+	return &e
+}
+
 func (e *GetHostReservationPurchasePreviewResultPurchasePaymentOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AllUpfront":
 		fallthrough
 	case "PartialUpfront":
 		fallthrough
 	case "NoUpfront":
-		*e = GetHostReservationPurchasePreviewResultPurchasePaymentOptionEnum(s)
+		*e = GetHostReservationPurchasePreviewResultPurchasePaymentOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHostReservationPurchasePreviewResultPurchasePaymentOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHostReservationPurchasePreviewResultPurchasePaymentOptionEnum: %v", v)
 	}
 }
 

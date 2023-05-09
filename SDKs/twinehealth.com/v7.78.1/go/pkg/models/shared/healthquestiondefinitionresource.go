@@ -16,21 +16,25 @@ const (
 	HealthQuestionDefinitionResourceAttributesCategoryEnumPreventativeCare   HealthQuestionDefinitionResourceAttributesCategoryEnum = "preventative_care"
 )
 
+func (e HealthQuestionDefinitionResourceAttributesCategoryEnum) ToPointer() *HealthQuestionDefinitionResourceAttributesCategoryEnum {
+	return &e
+}
+
 func (e *HealthQuestionDefinitionResourceAttributesCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lifestyle_behaviors":
 		fallthrough
 	case "mental_wellbeing":
 		fallthrough
 	case "preventative_care":
-		*e = HealthQuestionDefinitionResourceAttributesCategoryEnum(s)
+		*e = HealthQuestionDefinitionResourceAttributesCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HealthQuestionDefinitionResourceAttributesCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for HealthQuestionDefinitionResourceAttributesCategoryEnum: %v", v)
 	}
 }
 

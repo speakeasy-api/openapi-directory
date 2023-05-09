@@ -16,17 +16,21 @@ const (
 	DescribeMatchmakingRuleSetsXAmzTargetEnumGameLiftDescribeMatchmakingRuleSets DescribeMatchmakingRuleSetsXAmzTargetEnum = "GameLift.DescribeMatchmakingRuleSets"
 )
 
+func (e DescribeMatchmakingRuleSetsXAmzTargetEnum) ToPointer() *DescribeMatchmakingRuleSetsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeMatchmakingRuleSetsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DescribeMatchmakingRuleSets":
-		*e = DescribeMatchmakingRuleSetsXAmzTargetEnum(s)
+		*e = DescribeMatchmakingRuleSetsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeMatchmakingRuleSetsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeMatchmakingRuleSetsXAmzTargetEnum: %v", v)
 	}
 }
 

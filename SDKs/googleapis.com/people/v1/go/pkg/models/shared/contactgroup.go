@@ -28,21 +28,25 @@ const (
 	ContactGroupGroupTypeEnumSystemContactGroup   ContactGroupGroupTypeEnum = "SYSTEM_CONTACT_GROUP"
 )
 
+func (e ContactGroupGroupTypeEnum) ToPointer() *ContactGroupGroupTypeEnum {
+	return &e
+}
+
 func (e *ContactGroupGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GROUP_TYPE_UNSPECIFIED":
 		fallthrough
 	case "USER_CONTACT_GROUP":
 		fallthrough
 	case "SYSTEM_CONTACT_GROUP":
-		*e = ContactGroupGroupTypeEnum(s)
+		*e = ContactGroupGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactGroupGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactGroupGroupTypeEnum: %v", v)
 	}
 }
 

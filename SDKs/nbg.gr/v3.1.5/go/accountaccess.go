@@ -36,7 +36,10 @@ func newAccountAccess(defaultClient, securityClient HTTPClient, serverURL, langu
 // Delete Account Access Consents by Consent ID
 func (s *accountAccess) DeleteAccountAccessConsentsConsentID(ctx context.Context, request operations.DeleteAccountAccessConsentsConsentIDRequest, security operations.DeleteAccountAccessConsentsConsentIDSecurity) (*operations.DeleteAccountAccessConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account-access-consents/{consentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account-access-consents/{consentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -103,7 +106,10 @@ func (s *accountAccess) DeleteAccountAccessConsentsConsentID(ctx context.Context
 // Get Account Access Consents by Consent ID
 func (s *accountAccess) GetAccountAccessConsentsConsentID(ctx context.Context, request operations.GetAccountAccessConsentsConsentIDRequest, security operations.GetAccountAccessConsentsConsentIDSecurity) (*operations.GetAccountAccessConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account-access-consents/{consentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account-access-consents/{consentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

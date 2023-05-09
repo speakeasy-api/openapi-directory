@@ -41,7 +41,10 @@ func newTerminalSettingsMerchantLevel(defaultClient, securityClient HTTPClient, 
 // * Management API—Terminal settings read and write
 func (s *terminalSettingsMerchantLevel) GetMerchantsMerchantIDTerminalLogos(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalLogosRequest, security operations.GetMerchantsMerchantIDTerminalLogosSecurity) (*operations.GetMerchantsMerchantIDTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalLogos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalLogos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -113,7 +116,10 @@ func (s *terminalSettingsMerchantLevel) GetMerchantsMerchantIDTerminalLogos(ctx 
 // * Management API—Terminal settings read and write
 func (s *terminalSettingsMerchantLevel) GetMerchantsMerchantIDTerminalSettings(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalSettingsRequest, security operations.GetMerchantsMerchantIDTerminalSettingsSecurity) (*operations.GetMerchantsMerchantIDTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -184,7 +190,10 @@ func (s *terminalSettingsMerchantLevel) GetMerchantsMerchantIDTerminalSettings(c
 // * Management API—Terminal settings read and write
 func (s *terminalSettingsMerchantLevel) PatchMerchantsMerchantIDTerminalLogos(ctx context.Context, request operations.PatchMerchantsMerchantIDTerminalLogosRequest, security operations.PatchMerchantsMerchantIDTerminalLogosSecurity) (*operations.PatchMerchantsMerchantIDTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalLogos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalLogos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Logo", "json")
 	if err != nil {
@@ -267,7 +276,10 @@ func (s *terminalSettingsMerchantLevel) PatchMerchantsMerchantIDTerminalLogos(ct
 // * Management API—Terminal settings read and write
 func (s *terminalSettingsMerchantLevel) PatchMerchantsMerchantIDTerminalSettings(ctx context.Context, request operations.PatchMerchantsMerchantIDTerminalSettingsRequest, security operations.PatchMerchantsMerchantIDTerminalSettingsSecurity) (*operations.PatchMerchantsMerchantIDTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalSettings", "json")
 	if err != nil {

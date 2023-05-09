@@ -18,21 +18,25 @@ const (
 	ListMembershipsStatusEnumCollaborationDeleted ListMembershipsStatusEnum = "COLLABORATION_DELETED"
 )
 
+func (e ListMembershipsStatusEnum) ToPointer() *ListMembershipsStatusEnum {
+	return &e
+}
+
 func (e *ListMembershipsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "REMOVED":
 		fallthrough
 	case "COLLABORATION_DELETED":
-		*e = ListMembershipsStatusEnum(s)
+		*e = ListMembershipsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListMembershipsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListMembershipsStatusEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	ListCompilationJobsSortByEnumStatus       ListCompilationJobsSortByEnum = "Status"
 )
 
+func (e ListCompilationJobsSortByEnum) ToPointer() *ListCompilationJobsSortByEnum {
+	return &e
+}
+
 func (e *ListCompilationJobsSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "CreationTime":
 		fallthrough
 	case "Status":
-		*e = ListCompilationJobsSortByEnum(s)
+		*e = ListCompilationJobsSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCompilationJobsSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCompilationJobsSortByEnum: %v", v)
 	}
 }

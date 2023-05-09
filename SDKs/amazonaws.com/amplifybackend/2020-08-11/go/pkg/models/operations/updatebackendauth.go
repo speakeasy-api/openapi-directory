@@ -17,19 +17,23 @@ const (
 	UpdateBackendAuthRequestBodyResourceConfigAuthResourcesEnumIdentityPoolAndUserPool UpdateBackendAuthRequestBodyResourceConfigAuthResourcesEnum = "IDENTITY_POOL_AND_USER_POOL"
 )
 
+func (e UpdateBackendAuthRequestBodyResourceConfigAuthResourcesEnum) ToPointer() *UpdateBackendAuthRequestBodyResourceConfigAuthResourcesEnum {
+	return &e
+}
+
 func (e *UpdateBackendAuthRequestBodyResourceConfigAuthResourcesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_POOL_ONLY":
 		fallthrough
 	case "IDENTITY_POOL_AND_USER_POOL":
-		*e = UpdateBackendAuthRequestBodyResourceConfigAuthResourcesEnum(s)
+		*e = UpdateBackendAuthRequestBodyResourceConfigAuthResourcesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateBackendAuthRequestBodyResourceConfigAuthResourcesEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateBackendAuthRequestBodyResourceConfigAuthResourcesEnum: %v", v)
 	}
 }
 
@@ -45,17 +49,21 @@ const (
 	UpdateBackendAuthRequestBodyResourceConfigServiceEnumCognito UpdateBackendAuthRequestBodyResourceConfigServiceEnum = "COGNITO"
 )
 
+func (e UpdateBackendAuthRequestBodyResourceConfigServiceEnum) ToPointer() *UpdateBackendAuthRequestBodyResourceConfigServiceEnum {
+	return &e
+}
+
 func (e *UpdateBackendAuthRequestBodyResourceConfigServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COGNITO":
-		*e = UpdateBackendAuthRequestBodyResourceConfigServiceEnum(s)
+		*e = UpdateBackendAuthRequestBodyResourceConfigServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateBackendAuthRequestBodyResourceConfigServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateBackendAuthRequestBodyResourceConfigServiceEnum: %v", v)
 	}
 }
 
@@ -67,19 +75,23 @@ const (
 	UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnumSms   UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum = "SMS"
 )
 
+func (e UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum) ToPointer() *UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum {
+	return &e
+}
+
 func (e *UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EMAIL":
 		fallthrough
 	case "SMS":
-		*e = UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum(s)
+		*e = UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordDeliveryMethodEnum: %v", v)
 	}
 }
 
@@ -121,19 +133,23 @@ const (
 	UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnumImplicit UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum = "IMPLICIT"
 )
 
+func (e UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum) ToPointer() *UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum {
+	return &e
+}
+
 func (e *UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODE":
 		fallthrough
 	case "IMPLICIT":
-		*e = UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum(s)
+		*e = UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthOAuthGrantTypeEnum: %v", v)
 	}
 }
 
@@ -173,19 +189,23 @@ const (
 	UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnumSms   UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum = "SMS"
 )
 
+func (e UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum) ToPointer() *UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum {
+	return &e
+}
+
 func (e *UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EMAIL":
 		fallthrough
 	case "SMS":
-		*e = UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum(s)
+		*e = UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsVerificationMessageDeliveryMethodEnum: %v", v)
 	}
 }
 

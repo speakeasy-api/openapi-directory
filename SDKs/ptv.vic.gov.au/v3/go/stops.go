@@ -35,7 +35,10 @@ func newStops(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // StopsStopDetails - View facilities at a specific stop (Metro and V/Line stations only)
 func (s *stops) StopsStopDetails(ctx context.Context, request operations.StopsStopDetailsRequest) (*operations.StopsStopDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/stops/{stop_id}/route_type/{route_type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/stops/{stop_id}/route_type/{route_type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -123,7 +126,10 @@ func (s *stops) StopsStopDetails(ctx context.Context, request operations.StopsSt
 // StopsStopsByGeolocation - View all stops near a specific location
 func (s *stops) StopsStopsByGeolocation(ctx context.Context, request operations.StopsStopsByGeolocationRequest) (*operations.StopsStopsByGeolocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/stops/location/{latitude},{longitude}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/stops/location/{latitude},{longitude}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -211,7 +217,10 @@ func (s *stops) StopsStopsByGeolocation(ctx context.Context, request operations.
 // StopsStopsForRoute - View all stops on a specific route
 func (s *stops) StopsStopsForRoute(ctx context.Context, request operations.StopsStopsForRouteRequest) (*operations.StopsStopsForRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/stops/route/{route_id}/route_type/{route_type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/stops/route/{route_id}/route_type/{route_type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

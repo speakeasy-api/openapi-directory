@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>The Amazon AppIntegrations service enables you to configure and reuse connections to external applications.</p> <p>For information about how you can use external applications with Amazon Connect, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/crm.html">Set up pre-built integrations</a> and <a href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-wisdom.html">Deliver information to agents using Amazon Connect Wisdom</a> in the <i>Amazon Connect Administrator Guide</i>.</p>
 // https://docs.aws.amazon.com/app-integrations/ - Amazon Web Services documentation
 type SDK struct {
@@ -346,7 +361,10 @@ func (s *SDK) CreateEventIntegration(ctx context.Context, request operations.Cre
 // DeleteDataIntegration - <p>Deletes the DataIntegration. Only DataIntegrations that don't have any DataIntegrationAssociations can be deleted. Deleting a DataIntegration also deletes the underlying Amazon AppFlow flow and service linked role. </p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
 func (s *SDK) DeleteDataIntegration(ctx context.Context, request operations.DeleteDataIntegrationRequest) (*operations.DeleteDataIntegrationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dataIntegrations/{Identifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dataIntegrations/{Identifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -442,7 +460,10 @@ func (s *SDK) DeleteDataIntegration(ctx context.Context, request operations.Dele
 // DeleteEventIntegration - Deletes the specified existing event integration. If the event integration is associated with clients, the request is rejected.
 func (s *SDK) DeleteEventIntegration(ctx context.Context, request operations.DeleteEventIntegrationRequest) (*operations.DeleteEventIntegrationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/eventIntegrations/{Name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/eventIntegrations/{Name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -538,7 +559,10 @@ func (s *SDK) DeleteEventIntegration(ctx context.Context, request operations.Del
 // GetDataIntegration - <p>Returns information about the DataIntegration.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
 func (s *SDK) GetDataIntegration(ctx context.Context, request operations.GetDataIntegrationRequest) (*operations.GetDataIntegrationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dataIntegrations/{Identifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dataIntegrations/{Identifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -634,7 +658,10 @@ func (s *SDK) GetDataIntegration(ctx context.Context, request operations.GetData
 // GetEventIntegration - Returns information about the event integration.
 func (s *SDK) GetEventIntegration(ctx context.Context, request operations.GetEventIntegrationRequest) (*operations.GetEventIntegrationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/eventIntegrations/{Name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/eventIntegrations/{Name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -730,7 +757,10 @@ func (s *SDK) GetEventIntegration(ctx context.Context, request operations.GetEve
 // ListDataIntegrationAssociations - <p>Returns a paginated list of DataIntegration associations in the account.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
 func (s *SDK) ListDataIntegrationAssociations(ctx context.Context, request operations.ListDataIntegrationAssociationsRequest) (*operations.ListDataIntegrationAssociationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dataIntegrations/{Identifier}/associations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dataIntegrations/{Identifier}/associations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -920,7 +950,10 @@ func (s *SDK) ListDataIntegrations(ctx context.Context, request operations.ListD
 // ListEventIntegrationAssociations - Returns a paginated list of event integration associations in the account.
 func (s *SDK) ListEventIntegrationAssociations(ctx context.Context, request operations.ListEventIntegrationAssociationsRequest) (*operations.ListEventIntegrationAssociationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/eventIntegrations/{Name}/associations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/eventIntegrations/{Name}/associations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1110,7 +1143,10 @@ func (s *SDK) ListEventIntegrations(ctx context.Context, request operations.List
 // ListTagsForResource - Lists the tags for the specified resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1196,7 +1232,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // TagResource - Adds the specified tags to the specified resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1292,7 +1331,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes the specified tags from the specified resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1382,7 +1424,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateDataIntegration - <p>Updates the description of a DataIntegration.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
 func (s *SDK) UpdateDataIntegration(ctx context.Context, request operations.UpdateDataIntegrationRequest) (*operations.UpdateDataIntegrationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dataIntegrations/{Identifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dataIntegrations/{Identifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1488,7 +1533,10 @@ func (s *SDK) UpdateDataIntegration(ctx context.Context, request operations.Upda
 // UpdateEventIntegration - Updates the description of an event integration.
 func (s *SDK) UpdateEventIntegration(ctx context.Context, request operations.UpdateEventIntegrationRequest) (*operations.UpdateEventIntegrationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/eventIntegrations/{Name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/eventIntegrations/{Name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

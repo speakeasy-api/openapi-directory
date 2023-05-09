@@ -69,12 +69,16 @@ const (
 	DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnumTargetingTypeSessionPosition              DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum = "TARGETING_TYPE_SESSION_POSITION"
 )
 
+func (e DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum) ToPointer() *DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum {
+	return &e
+}
+
 func (e *DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGETING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TARGETING_TYPE_CHANNEL":
@@ -172,10 +176,10 @@ func (e *DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOp
 	case "TARGETING_TYPE_YOUTUBE_CHANNEL":
 		fallthrough
 	case "TARGETING_TYPE_SESSION_POSITION":
-		*e = DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum(s)
+		*e = DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum: %v", v)
 	}
 }
 

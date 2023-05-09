@@ -15,25 +15,29 @@ const (
 	PolicyAndroidDevicePolicyTracksEnumBeta                PolicyAndroidDevicePolicyTracksEnum = "BETA"
 )
 
+func (e PolicyAndroidDevicePolicyTracksEnum) ToPointer() *PolicyAndroidDevicePolicyTracksEnum {
+	return &e
+}
+
 func (e *PolicyAndroidDevicePolicyTracksEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP_TRACK_UNSPECIFIED":
 		fallthrough
 	case "PRODUCTION":
 		fallthrough
 	case "BETA":
-		*e = PolicyAndroidDevicePolicyTracksEnum(s)
+		*e = PolicyAndroidDevicePolicyTracksEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyAndroidDevicePolicyTracksEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyAndroidDevicePolicyTracksEnum: %v", v)
 	}
 }
 
-// PolicyAppAutoUpdatePolicyEnum - Deprecated. Use autoUpdateMode instead.When autoUpdateMode is set to AUTO_UPDATE_POSTPONED or AUTO_UPDATE_HIGH_PRIORITY, this field has no effect.The app auto update policy, which controls when automatic app updates can be applied.
+// PolicyAppAutoUpdatePolicyEnum - Recommended alternative: autoUpdateMode which is set per app, provides greater flexibility around update frequency.When autoUpdateMode is set to AUTO_UPDATE_POSTPONED or AUTO_UPDATE_HIGH_PRIORITY, this field has no effect.The app auto update policy, which controls when automatic app updates can be applied.
 type PolicyAppAutoUpdatePolicyEnum string
 
 const (
@@ -44,12 +48,16 @@ const (
 	PolicyAppAutoUpdatePolicyEnumAlways                         PolicyAppAutoUpdatePolicyEnum = "ALWAYS"
 )
 
+func (e PolicyAppAutoUpdatePolicyEnum) ToPointer() *PolicyAppAutoUpdatePolicyEnum {
+	return &e
+}
+
 func (e *PolicyAppAutoUpdatePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP_AUTO_UPDATE_POLICY_UNSPECIFIED":
 		fallthrough
 	case "CHOICE_TO_THE_USER":
@@ -59,10 +67,10 @@ func (e *PolicyAppAutoUpdatePolicyEnum) UnmarshalJSON(data []byte) error {
 	case "WIFI_ONLY":
 		fallthrough
 	case "ALWAYS":
-		*e = PolicyAppAutoUpdatePolicyEnum(s)
+		*e = PolicyAppAutoUpdatePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyAppAutoUpdatePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyAppAutoUpdatePolicyEnum: %v", v)
 	}
 }
 
@@ -75,21 +83,25 @@ const (
 	PolicyAutoDateAndTimeZoneEnumAutoDateAndTimeZoneEnforced    PolicyAutoDateAndTimeZoneEnum = "AUTO_DATE_AND_TIME_ZONE_ENFORCED"
 )
 
+func (e PolicyAutoDateAndTimeZoneEnum) ToPointer() *PolicyAutoDateAndTimeZoneEnum {
+	return &e
+}
+
 func (e *PolicyAutoDateAndTimeZoneEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTO_DATE_AND_TIME_ZONE_UNSPECIFIED":
 		fallthrough
 	case "AUTO_DATE_AND_TIME_ZONE_USER_CHOICE":
 		fallthrough
 	case "AUTO_DATE_AND_TIME_ZONE_ENFORCED":
-		*e = PolicyAutoDateAndTimeZoneEnum(s)
+		*e = PolicyAutoDateAndTimeZoneEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyAutoDateAndTimeZoneEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyAutoDateAndTimeZoneEnum: %v", v)
 	}
 }
 
@@ -103,12 +115,16 @@ const (
 	PolicyCameraAccessEnumCameraAccessEnforced    PolicyCameraAccessEnum = "CAMERA_ACCESS_ENFORCED"
 )
 
+func (e PolicyCameraAccessEnum) ToPointer() *PolicyCameraAccessEnum {
+	return &e
+}
+
 func (e *PolicyCameraAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAMERA_ACCESS_UNSPECIFIED":
 		fallthrough
 	case "CAMERA_ACCESS_USER_CHOICE":
@@ -116,10 +132,10 @@ func (e *PolicyCameraAccessEnum) UnmarshalJSON(data []byte) error {
 	case "CAMERA_ACCESS_DISABLED":
 		fallthrough
 	case "CAMERA_ACCESS_ENFORCED":
-		*e = PolicyCameraAccessEnum(s)
+		*e = PolicyCameraAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyCameraAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyCameraAccessEnum: %v", v)
 	}
 }
 
@@ -133,12 +149,16 @@ const (
 	PolicyDefaultPermissionPolicyEnumDeny                        PolicyDefaultPermissionPolicyEnum = "DENY"
 )
 
+func (e PolicyDefaultPermissionPolicyEnum) ToPointer() *PolicyDefaultPermissionPolicyEnum {
+	return &e
+}
+
 func (e *PolicyDefaultPermissionPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERMISSION_POLICY_UNSPECIFIED":
 		fallthrough
 	case "PROMPT":
@@ -146,10 +166,10 @@ func (e *PolicyDefaultPermissionPolicyEnum) UnmarshalJSON(data []byte) error {
 	case "GRANT":
 		fallthrough
 	case "DENY":
-		*e = PolicyDefaultPermissionPolicyEnum(s)
+		*e = PolicyDefaultPermissionPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyDefaultPermissionPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyDefaultPermissionPolicyEnum: %v", v)
 	}
 }
 
@@ -162,21 +182,25 @@ const (
 	PolicyEncryptionPolicyEnumEnabledWithPassword         PolicyEncryptionPolicyEnum = "ENABLED_WITH_PASSWORD"
 )
 
+func (e PolicyEncryptionPolicyEnum) ToPointer() *PolicyEncryptionPolicyEnum {
+	return &e
+}
+
 func (e *PolicyEncryptionPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENCRYPTION_POLICY_UNSPECIFIED":
 		fallthrough
 	case "ENABLED_WITHOUT_PASSWORD":
 		fallthrough
 	case "ENABLED_WITH_PASSWORD":
-		*e = PolicyEncryptionPolicyEnum(s)
+		*e = PolicyEncryptionPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyEncryptionPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyEncryptionPolicyEnum: %v", v)
 	}
 }
 
@@ -196,12 +220,16 @@ const (
 	PolicyKeyguardDisabledFeaturesEnumAllFeatures                        PolicyKeyguardDisabledFeaturesEnum = "ALL_FEATURES"
 )
 
+func (e PolicyKeyguardDisabledFeaturesEnum) ToPointer() *PolicyKeyguardDisabledFeaturesEnum {
+	return &e
+}
+
 func (e *PolicyKeyguardDisabledFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KEYGUARD_DISABLED_FEATURE_UNSPECIFIED":
 		fallthrough
 	case "CAMERA":
@@ -223,10 +251,10 @@ func (e *PolicyKeyguardDisabledFeaturesEnum) UnmarshalJSON(data []byte) error {
 	case "BIOMETRICS":
 		fallthrough
 	case "ALL_FEATURES":
-		*e = PolicyKeyguardDisabledFeaturesEnum(s)
+		*e = PolicyKeyguardDisabledFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyKeyguardDisabledFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyKeyguardDisabledFeaturesEnum: %v", v)
 	}
 }
 
@@ -244,12 +272,16 @@ const (
 	PolicyLocationModeEnumLocationDisabled        PolicyLocationModeEnum = "LOCATION_DISABLED"
 )
 
+func (e PolicyLocationModeEnum) ToPointer() *PolicyLocationModeEnum {
+	return &e
+}
+
 func (e *PolicyLocationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCATION_MODE_UNSPECIFIED":
 		fallthrough
 	case "HIGH_ACCURACY":
@@ -265,10 +297,10 @@ func (e *PolicyLocationModeEnum) UnmarshalJSON(data []byte) error {
 	case "LOCATION_ENFORCED":
 		fallthrough
 	case "LOCATION_DISABLED":
-		*e = PolicyLocationModeEnum(s)
+		*e = PolicyLocationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyLocationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyLocationModeEnum: %v", v)
 	}
 }
 
@@ -282,12 +314,16 @@ const (
 	PolicyMicrophoneAccessEnumMicrophoneAccessEnforced    PolicyMicrophoneAccessEnum = "MICROPHONE_ACCESS_ENFORCED"
 )
 
+func (e PolicyMicrophoneAccessEnum) ToPointer() *PolicyMicrophoneAccessEnum {
+	return &e
+}
+
 func (e *PolicyMicrophoneAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MICROPHONE_ACCESS_UNSPECIFIED":
 		fallthrough
 	case "MICROPHONE_ACCESS_USER_CHOICE":
@@ -295,10 +331,10 @@ func (e *PolicyMicrophoneAccessEnum) UnmarshalJSON(data []byte) error {
 	case "MICROPHONE_ACCESS_DISABLED":
 		fallthrough
 	case "MICROPHONE_ACCESS_ENFORCED":
-		*e = PolicyMicrophoneAccessEnum(s)
+		*e = PolicyMicrophoneAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyMicrophoneAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyMicrophoneAccessEnum: %v", v)
 	}
 }
 
@@ -311,21 +347,25 @@ const (
 	PolicyPlayStoreModeEnumBlacklist                PolicyPlayStoreModeEnum = "BLACKLIST"
 )
 
+func (e PolicyPlayStoreModeEnum) ToPointer() *PolicyPlayStoreModeEnum {
+	return &e
+}
+
 func (e *PolicyPlayStoreModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLAY_STORE_MODE_UNSPECIFIED":
 		fallthrough
 	case "WHITELIST":
 		fallthrough
 	case "BLACKLIST":
-		*e = PolicyPlayStoreModeEnum(s)
+		*e = PolicyPlayStoreModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyPlayStoreModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyPlayStoreModeEnum: %v", v)
 	}
 }
 
@@ -338,21 +378,25 @@ const (
 	PolicyPreferentialNetworkServiceEnumPreferentialNetworkServiceEnabled     PolicyPreferentialNetworkServiceEnum = "PREFERENTIAL_NETWORK_SERVICE_ENABLED"
 )
 
+func (e PolicyPreferentialNetworkServiceEnum) ToPointer() *PolicyPreferentialNetworkServiceEnum {
+	return &e
+}
+
 func (e *PolicyPreferentialNetworkServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PREFERENTIAL_NETWORK_SERVICE_UNSPECIFIED":
 		fallthrough
 	case "PREFERENTIAL_NETWORK_SERVICE_DISABLED":
 		fallthrough
 	case "PREFERENTIAL_NETWORK_SERVICE_ENABLED":
-		*e = PolicyPreferentialNetworkServiceEnum(s)
+		*e = PolicyPreferentialNetworkServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyPreferentialNetworkServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyPreferentialNetworkServiceEnum: %v", v)
 	}
 }
 
@@ -365,12 +409,16 @@ const (
 	PolicyStayOnPluggedModesEnumWireless                      PolicyStayOnPluggedModesEnum = "WIRELESS"
 )
 
+func (e PolicyStayOnPluggedModesEnum) ToPointer() *PolicyStayOnPluggedModesEnum {
+	return &e
+}
+
 func (e *PolicyStayOnPluggedModesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BATTERY_PLUGGED_MODE_UNSPECIFIED":
 		fallthrough
 	case "AC":
@@ -378,10 +426,10 @@ func (e *PolicyStayOnPluggedModesEnum) UnmarshalJSON(data []byte) error {
 	case "USB":
 		fallthrough
 	case "WIRELESS":
-		*e = PolicyStayOnPluggedModesEnum(s)
+		*e = PolicyStayOnPluggedModesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyStayOnPluggedModesEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyStayOnPluggedModesEnum: %v", v)
 	}
 }
 
@@ -399,7 +447,7 @@ type Policy struct {
 	AlwaysOnVpnPackage *AlwaysOnVpnPackage `json:"alwaysOnVpnPackage,omitempty"`
 	// The app tracks for Android Device Policy the device can access. The device receives the latest version among all accessible tracks. If no tracks are specified, then the device only uses the production track.
 	AndroidDevicePolicyTracks []PolicyAndroidDevicePolicyTracksEnum `json:"androidDevicePolicyTracks,omitempty"`
-	// Deprecated. Use autoUpdateMode instead.When autoUpdateMode is set to AUTO_UPDATE_POSTPONED or AUTO_UPDATE_HIGH_PRIORITY, this field has no effect.The app auto update policy, which controls when automatic app updates can be applied.
+	// Recommended alternative: autoUpdateMode which is set per app, provides greater flexibility around update frequency.When autoUpdateMode is set to AUTO_UPDATE_POSTPONED or AUTO_UPDATE_HIGH_PRIORITY, this field has no effect.The app auto update policy, which controls when automatic app updates can be applied.
 	AppAutoUpdatePolicy *PolicyAppAutoUpdatePolicyEnum `json:"appAutoUpdatePolicy,omitempty"`
 	// Policy applied to apps.
 	Applications []ApplicationPolicy `json:"applications,omitempty"`

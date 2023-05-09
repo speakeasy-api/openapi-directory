@@ -14,18 +14,22 @@ const (
 	OrchestrationTypeEnumEks OrchestrationTypeEnum = "EKS"
 )
 
+func (e OrchestrationTypeEnum) ToPointer() *OrchestrationTypeEnum {
+	return &e
+}
+
 func (e *OrchestrationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ECS":
 		fallthrough
 	case "EKS":
-		*e = OrchestrationTypeEnum(s)
+		*e = OrchestrationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrchestrationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrchestrationTypeEnum: %v", v)
 	}
 }

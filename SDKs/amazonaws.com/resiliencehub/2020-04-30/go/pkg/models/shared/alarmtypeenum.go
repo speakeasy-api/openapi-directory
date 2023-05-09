@@ -17,12 +17,16 @@ const (
 	AlarmTypeEnumEvent     AlarmTypeEnum = "Event"
 )
 
+func (e AlarmTypeEnum) ToPointer() *AlarmTypeEnum {
+	return &e
+}
+
 func (e *AlarmTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Metric":
 		fallthrough
 	case "Composite":
@@ -32,9 +36,9 @@ func (e *AlarmTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Logs":
 		fallthrough
 	case "Event":
-		*e = AlarmTypeEnum(s)
+		*e = AlarmTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlarmTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AlarmTypeEnum: %v", v)
 	}
 }

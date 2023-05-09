@@ -16,21 +16,25 @@ const (
 	CreateAudioRenderPresetEnumStemsWav  CreateAudioRenderPresetEnum = "STEMS_WAV"
 )
 
+func (e CreateAudioRenderPresetEnum) ToPointer() *CreateAudioRenderPresetEnum {
+	return &e
+}
+
 func (e *CreateAudioRenderPresetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MASTER_MP3":
 		fallthrough
 	case "MASTER_WAV":
 		fallthrough
 	case "STEMS_WAV":
-		*e = CreateAudioRenderPresetEnum(s)
+		*e = CreateAudioRenderPresetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAudioRenderPresetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAudioRenderPresetEnum: %v", v)
 	}
 }
 

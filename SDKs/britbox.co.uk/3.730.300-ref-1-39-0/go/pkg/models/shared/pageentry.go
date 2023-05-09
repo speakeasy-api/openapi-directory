@@ -22,12 +22,16 @@ const (
 	PageEntryTypeEnumPeopleEntry     PageEntryTypeEnum = "PeopleEntry"
 )
 
+func (e PageEntryTypeEnum) ToPointer() *PageEntryTypeEnum {
+	return &e
+}
+
 func (e *PageEntryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ItemEntry":
 		fallthrough
 	case "ItemDetailEntry":
@@ -45,10 +49,10 @@ func (e *PageEntryTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CustomEntry":
 		fallthrough
 	case "PeopleEntry":
-		*e = PageEntryTypeEnum(s)
+		*e = PageEntryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PageEntryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PageEntryTypeEnum: %v", v)
 	}
 }
 

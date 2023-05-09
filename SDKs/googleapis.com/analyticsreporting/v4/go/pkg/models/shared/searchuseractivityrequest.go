@@ -18,12 +18,16 @@ const (
 	SearchUserActivityRequestActivityTypesEnumEvent                   SearchUserActivityRequestActivityTypesEnum = "EVENT"
 )
 
+func (e SearchUserActivityRequestActivityTypesEnum) ToPointer() *SearchUserActivityRequestActivityTypesEnum {
+	return &e
+}
+
 func (e *SearchUserActivityRequestActivityTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVITY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PAGEVIEW":
@@ -35,10 +39,10 @@ func (e *SearchUserActivityRequestActivityTypesEnum) UnmarshalJSON(data []byte) 
 	case "ECOMMERCE":
 		fallthrough
 	case "EVENT":
-		*e = SearchUserActivityRequestActivityTypesEnum(s)
+		*e = SearchUserActivityRequestActivityTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchUserActivityRequestActivityTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchUserActivityRequestActivityTypesEnum: %v", v)
 	}
 }
 

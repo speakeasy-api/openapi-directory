@@ -35,12 +35,16 @@ const (
 	FullItemCategoryEnumCustom               FullItemCategoryEnum = "CUSTOM"
 )
 
+func (e FullItemCategoryEnum) ToPointer() *FullItemCategoryEnum {
+	return &e
+}
+
 func (e *FullItemCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOGIN":
 		fallthrough
 	case "PASSWORD":
@@ -84,10 +88,10 @@ func (e *FullItemCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "SSH_KEY":
 		fallthrough
 	case "CUSTOM":
-		*e = FullItemCategoryEnum(s)
+		*e = FullItemCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FullItemCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for FullItemCategoryEnum: %v", v)
 	}
 }
 
@@ -127,19 +131,23 @@ const (
 	FullItemStateEnumDeleted  FullItemStateEnum = "DELETED"
 )
 
+func (e FullItemStateEnum) ToPointer() *FullItemStateEnum {
+	return &e
+}
+
 func (e *FullItemStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARCHIVED":
 		fallthrough
 	case "DELETED":
-		*e = FullItemStateEnum(s)
+		*e = FullItemStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FullItemStateEnum: %s", s)
+		return fmt.Errorf("invalid value for FullItemStateEnum: %v", v)
 	}
 }
 

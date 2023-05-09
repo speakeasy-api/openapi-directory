@@ -18,12 +18,16 @@ const (
 	InteractionExpiryEnumSixMonths InteractionExpiryEnum = "six_months"
 )
 
+func (e InteractionExpiryEnum) ToPointer() *InteractionExpiryEnum {
+	return &e
+}
+
 func (e *InteractionExpiryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "one_day":
 		fallthrough
 	case "three_days":
@@ -33,9 +37,9 @@ func (e *InteractionExpiryEnum) UnmarshalJSON(data []byte) error {
 	case "one_month":
 		fallthrough
 	case "six_months":
-		*e = InteractionExpiryEnum(s)
+		*e = InteractionExpiryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InteractionExpiryEnum: %s", s)
+		return fmt.Errorf("invalid value for InteractionExpiryEnum: %v", v)
 	}
 }

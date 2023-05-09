@@ -21,12 +21,16 @@ const (
 	ContainerServiceStateDetailCodeEnumUnknownError                  ContainerServiceStateDetailCodeEnum = "UNKNOWN_ERROR"
 )
 
+func (e ContainerServiceStateDetailCodeEnum) ToPointer() *ContainerServiceStateDetailCodeEnum {
+	return &e
+}
+
 func (e *ContainerServiceStateDetailCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING_SYSTEM_RESOURCES":
 		fallthrough
 	case "CREATING_NETWORK_INFRASTRUCTURE":
@@ -44,9 +48,9 @@ func (e *ContainerServiceStateDetailCodeEnum) UnmarshalJSON(data []byte) error {
 	case "CERTIFICATE_LIMIT_EXCEEDED":
 		fallthrough
 	case "UNKNOWN_ERROR":
-		*e = ContainerServiceStateDetailCodeEnum(s)
+		*e = ContainerServiceStateDetailCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerServiceStateDetailCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerServiceStateDetailCodeEnum: %v", v)
 	}
 }

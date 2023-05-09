@@ -36,7 +36,10 @@ func newSocial(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // PhoneCode - [USES 11 UNITS PER NAME] Infer the likely country and phone prefix, given a personal name and formatted / unformatted phone number.
 func (s *social) PhoneCode(ctx context.Context, request operations.PhoneCodeRequest, security operations.PhoneCodeSecurity) (*operations.PhoneCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/phoneCode/{firstName}/{lastName}/{phoneNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/phoneCode/{firstName}/{lastName}/{phoneNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -139,7 +142,10 @@ func (s *social) PhoneCodeBatch(ctx context.Context, request shared.BatchFirstLa
 // PhoneCodeGeo - [USES 11 UNITS PER NAME] Infer the likely phone prefix, given a personal name and formatted / unformatted phone number, with a local context (ISO2 country of residence).
 func (s *social) PhoneCodeGeo(ctx context.Context, request operations.PhoneCodeGeoRequest, security operations.PhoneCodeGeoSecurity) (*operations.PhoneCodeGeoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/phoneCodeGeo/{firstName}/{lastName}/{phoneNumber}/{countryIso2}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/phoneCodeGeo/{firstName}/{lastName}/{phoneNumber}/{countryIso2}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -242,7 +248,10 @@ func (s *social) PhoneCodeGeoBatch(ctx context.Context, request shared.BatchFirs
 // PhoneCodeGeoFeedbackLoop - [CREDITS 1 UNIT] Feedback loop to better infer the likely phone prefix, given a personal name and formatted / unformatted phone number, with a local context (ISO2 country of residence).
 func (s *social) PhoneCodeGeoFeedbackLoop(ctx context.Context, request operations.PhoneCodeGeoFeedbackLoopRequest, security operations.PhoneCodeGeoFeedbackLoopSecurity) (*operations.PhoneCodeGeoFeedbackLoopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/phoneCodeGeoFeedbackLoop/{firstName}/{lastName}/{phoneNumber}/{phoneNumberE164}/{countryIso2}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/phoneCodeGeoFeedbackLoop/{firstName}/{lastName}/{phoneNumber}/{phoneNumberE164}/{countryIso2}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

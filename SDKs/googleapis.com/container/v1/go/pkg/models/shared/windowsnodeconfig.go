@@ -16,21 +16,25 @@ const (
 	WindowsNodeConfigOsVersionEnumOsVersionLtsc2022    WindowsNodeConfigOsVersionEnum = "OS_VERSION_LTSC2022"
 )
 
+func (e WindowsNodeConfigOsVersionEnum) ToPointer() *WindowsNodeConfigOsVersionEnum {
+	return &e
+}
+
 func (e *WindowsNodeConfigOsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OS_VERSION_UNSPECIFIED":
 		fallthrough
 	case "OS_VERSION_LTSC2019":
 		fallthrough
 	case "OS_VERSION_LTSC2022":
-		*e = WindowsNodeConfigOsVersionEnum(s)
+		*e = WindowsNodeConfigOsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WindowsNodeConfigOsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for WindowsNodeConfigOsVersionEnum: %v", v)
 	}
 }
 

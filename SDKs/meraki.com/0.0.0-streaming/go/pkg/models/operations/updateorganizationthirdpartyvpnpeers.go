@@ -16,19 +16,23 @@ const (
 	UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIkeVersionEnumTwo UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIkeVersionEnum = "2"
 )
 
+func (e UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIkeVersionEnum) ToPointer() *UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIkeVersionEnum {
+	return &e
+}
+
 func (e *UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIkeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "2":
-		*e = UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIkeVersionEnum(s)
+		*e = UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIkeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIkeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIkeVersionEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPoliciesIkePrfAlgoEnumPrfsha256 UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPoliciesIkePrfAlgoEnum = "prfsha256"
 )
 
+func (e UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPoliciesIkePrfAlgoEnum) ToPointer() *UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPoliciesIkePrfAlgoEnum {
+	return &e
+}
+
 func (e *UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPoliciesIkePrfAlgoEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "prfmd5":
@@ -54,10 +62,10 @@ func (e *UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPoliciesIkePrf
 	case "prfsha1":
 		fallthrough
 	case "prfsha256":
-		*e = UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPoliciesIkePrfAlgoEnum(s)
+		*e = UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPoliciesIkePrfAlgoEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPoliciesIkePrfAlgoEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPoliciesIkePrfAlgoEnum: %v", v)
 	}
 }
 

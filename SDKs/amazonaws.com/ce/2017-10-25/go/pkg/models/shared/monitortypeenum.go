@@ -14,18 +14,22 @@ const (
 	MonitorTypeEnumCustom      MonitorTypeEnum = "CUSTOM"
 )
 
+func (e MonitorTypeEnum) ToPointer() *MonitorTypeEnum {
+	return &e
+}
+
 func (e *MonitorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSIONAL":
 		fallthrough
 	case "CUSTOM":
-		*e = MonitorTypeEnum(s)
+		*e = MonitorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitorTypeEnum: %v", v)
 	}
 }

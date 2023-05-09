@@ -16,17 +16,21 @@ const (
 	UploadLayerPartXAmzTargetEnumAmazonEc2ContainerRegistryV20150921UploadLayerPart UploadLayerPartXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.UploadLayerPart"
 )
 
+func (e UploadLayerPartXAmzTargetEnum) ToPointer() *UploadLayerPartXAmzTargetEnum {
+	return &e
+}
+
 func (e *UploadLayerPartXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.UploadLayerPart":
-		*e = UploadLayerPartXAmzTargetEnum(s)
+		*e = UploadLayerPartXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UploadLayerPartXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UploadLayerPartXAmzTargetEnum: %v", v)
 	}
 }
 

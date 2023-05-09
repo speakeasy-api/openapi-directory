@@ -17,21 +17,25 @@ const (
 	GoalResponseCurrentStatusUpdateResourceSubtypeEnumGoalStatusUpdate      GoalResponseCurrentStatusUpdateResourceSubtypeEnum = "goal_status_update"
 )
 
+func (e GoalResponseCurrentStatusUpdateResourceSubtypeEnum) ToPointer() *GoalResponseCurrentStatusUpdateResourceSubtypeEnum {
+	return &e
+}
+
 func (e *GoalResponseCurrentStatusUpdateResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "project_status_update":
 		fallthrough
 	case "portfolio_status_update":
 		fallthrough
 	case "goal_status_update":
-		*e = GoalResponseCurrentStatusUpdateResourceSubtypeEnum(s)
+		*e = GoalResponseCurrentStatusUpdateResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoalResponseCurrentStatusUpdateResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoalResponseCurrentStatusUpdateResourceSubtypeEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	GoalResponseMetricProgressSourceEnumExternal                   GoalResponseMetricProgressSourceEnum = "external"
 )
 
+func (e GoalResponseMetricProgressSourceEnum) ToPointer() *GoalResponseMetricProgressSourceEnum {
+	return &e
+}
+
 func (e *GoalResponseMetricProgressSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manual":
 		fallthrough
 	case "subgoal_progress":
@@ -74,10 +82,10 @@ func (e *GoalResponseMetricProgressSourceEnum) UnmarshalJSON(data []byte) error 
 	case "project_milestone_completion":
 		fallthrough
 	case "external":
-		*e = GoalResponseMetricProgressSourceEnum(s)
+		*e = GoalResponseMetricProgressSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoalResponseMetricProgressSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoalResponseMetricProgressSourceEnum: %v", v)
 	}
 }
 
@@ -88,17 +96,21 @@ const (
 	GoalResponseMetricResourceSubtypeEnumNumber GoalResponseMetricResourceSubtypeEnum = "number"
 )
 
+func (e GoalResponseMetricResourceSubtypeEnum) ToPointer() *GoalResponseMetricResourceSubtypeEnum {
+	return &e
+}
+
 func (e *GoalResponseMetricResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "number":
-		*e = GoalResponseMetricResourceSubtypeEnum(s)
+		*e = GoalResponseMetricResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoalResponseMetricResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoalResponseMetricResourceSubtypeEnum: %v", v)
 	}
 }
 
@@ -111,21 +123,25 @@ const (
 	GoalResponseMetricUnitEnumPercentage GoalResponseMetricUnitEnum = "percentage"
 )
 
+func (e GoalResponseMetricUnitEnum) ToPointer() *GoalResponseMetricUnitEnum {
+	return &e
+}
+
 func (e *GoalResponseMetricUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "currency":
 		fallthrough
 	case "percentage":
-		*e = GoalResponseMetricUnitEnum(s)
+		*e = GoalResponseMetricUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoalResponseMetricUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GoalResponseMetricUnitEnum: %v", v)
 	}
 }
 
@@ -191,12 +207,16 @@ const (
 	GoalResponseTimePeriodPeriodEnumQ4 GoalResponseTimePeriodPeriodEnum = "Q4"
 )
 
+func (e GoalResponseTimePeriodPeriodEnum) ToPointer() *GoalResponseTimePeriodPeriodEnum {
+	return &e
+}
+
 func (e *GoalResponseTimePeriodPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FY":
 		fallthrough
 	case "H1":
@@ -210,10 +230,10 @@ func (e *GoalResponseTimePeriodPeriodEnum) UnmarshalJSON(data []byte) error {
 	case "Q3":
 		fallthrough
 	case "Q4":
-		*e = GoalResponseTimePeriodPeriodEnum(s)
+		*e = GoalResponseTimePeriodPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoalResponseTimePeriodPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for GoalResponseTimePeriodPeriodEnum: %v", v)
 	}
 }
 

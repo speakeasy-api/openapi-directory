@@ -17,12 +17,16 @@ const (
 	HyperParameterTuningJobStrategyTypeEnumGrid      HyperParameterTuningJobStrategyTypeEnum = "Grid"
 )
 
+func (e HyperParameterTuningJobStrategyTypeEnum) ToPointer() *HyperParameterTuningJobStrategyTypeEnum {
+	return &e
+}
+
 func (e *HyperParameterTuningJobStrategyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Bayesian":
 		fallthrough
 	case "Random":
@@ -30,9 +34,9 @@ func (e *HyperParameterTuningJobStrategyTypeEnum) UnmarshalJSON(data []byte) err
 	case "Hyperband":
 		fallthrough
 	case "Grid":
-		*e = HyperParameterTuningJobStrategyTypeEnum(s)
+		*e = HyperParameterTuningJobStrategyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HyperParameterTuningJobStrategyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HyperParameterTuningJobStrategyTypeEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETReplaceIamInstanceProfileAssociationActionEnumReplaceIamInstanceProfileAssociation GETReplaceIamInstanceProfileAssociationActionEnum = "ReplaceIamInstanceProfileAssociation"
 )
 
+func (e GETReplaceIamInstanceProfileAssociationActionEnum) ToPointer() *GETReplaceIamInstanceProfileAssociationActionEnum {
+	return &e
+}
+
 func (e *GETReplaceIamInstanceProfileAssociationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReplaceIamInstanceProfileAssociation":
-		*e = GETReplaceIamInstanceProfileAssociationActionEnum(s)
+		*e = GETReplaceIamInstanceProfileAssociationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReplaceIamInstanceProfileAssociationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReplaceIamInstanceProfileAssociationActionEnum: %v", v)
 	}
 }
 
@@ -42,17 +46,21 @@ const (
 	GETReplaceIamInstanceProfileAssociationVersionEnumTwoThousandAndSixteen1115 GETReplaceIamInstanceProfileAssociationVersionEnum = "2016-11-15"
 )
 
+func (e GETReplaceIamInstanceProfileAssociationVersionEnum) ToPointer() *GETReplaceIamInstanceProfileAssociationVersionEnum {
+	return &e
+}
+
 func (e *GETReplaceIamInstanceProfileAssociationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETReplaceIamInstanceProfileAssociationVersionEnum(s)
+		*e = GETReplaceIamInstanceProfileAssociationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReplaceIamInstanceProfileAssociationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReplaceIamInstanceProfileAssociationVersionEnum: %v", v)
 	}
 }
 

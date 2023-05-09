@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/remove.bg/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,27 +27,25 @@ func main() {
         }),
     )
 
-    req := shared.RemoveBgJSON{
-        AddShadow: false,
-        BgColor: "corrupti",
-        BgImageURL: "provident",
-        Channels: "alpha",
-        Crop: false,
-        CropMargin: "quibusdam",
-        Format: "jpg",
-        ImageFileB64: "nulla",
-        ImageURL: "https://www.remove.bg/example-hd.jpg",
-        Position: "corrupti",
-        Roi: "illum",
-        Scale: "vel",
-        Semitransparency: false,
-        Size: "full",
-        Type: "product",
-        TypeLevel: "1",
-    }
-
     ctx := context.Background()
-    res, err := s.BackgroundRemoval.PostRemovebgForm(ctx, req)
+    res, err := s.BackgroundRemoval.PostRemovebgForm(ctx, shared.RemoveBgJSON{
+        AddShadow: sdk.Bool(false),
+        BgColor: sdk.String("corrupti"),
+        BgImageURL: sdk.String("provident"),
+        Channels: shared.RemoveBgJSONChannelsEnumAlpha.ToPointer(),
+        Crop: sdk.Bool(false),
+        CropMargin: sdk.String("quibusdam"),
+        Format: shared.RemoveBgJSONFormatEnumJpg.ToPointer(),
+        ImageFileB64: sdk.String("nulla"),
+        ImageURL: sdk.String("https://www.remove.bg/example-hd.jpg"),
+        Position: sdk.String("corrupti"),
+        Roi: sdk.String("illum"),
+        Scale: sdk.String("vel"),
+        Semitransparency: sdk.Bool(false),
+        Size: shared.RemoveBgJSONSizeEnumFull.ToPointer(),
+        Type: shared.RemoveBgJSONTypeEnumProduct.ToPointer(),
+        TypeLevel: shared.RemoveBgJSONTypeLevelEnumOne.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -64,19 +61,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### BackgroundRemoval
+### [BackgroundRemoval](docs/backgroundremoval/README.md)
 
-* `PostRemovebgForm` - Remove the background of an image
-* `PostRemovebgJSON` - Remove the background of an image
-* `PostRemovebgMultipart` - Remove the background of an image
+* [PostRemovebgForm](docs/backgroundremoval/README.md#postremovebgform) - Remove the background of an image
+* [PostRemovebgJSON](docs/backgroundremoval/README.md#postremovebgjson) - Remove the background of an image
+* [PostRemovebgMultipart](docs/backgroundremoval/README.md#postremovebgmultipart) - Remove the background of an image
 
-### FetchAccountInfo
+### [FetchAccountInfo](docs/fetchaccountinfo/README.md)
 
-* `GetAccount` - Fetch credit balance and free API calls.
+* [GetAccount](docs/fetchaccountinfo/README.md#getaccount) - Fetch credit balance and free API calls.
 
-### ImprovementProgram
+### [ImprovementProgram](docs/improvementprogram/README.md)
 
-* `PostImproveForm` - Submit an image to the remove.bg Improvement program
+* [PostImproveForm](docs/improvementprogram/README.md#postimproveform) - Submit an image to the remove.bg Improvement program
 * Contribute an image that remove.bg is currently not able to remove the background from properly
 * Help us make remove.bg better
 * Get better results for similiar images in the future
@@ -90,7 +87,7 @@ Requires either an API Key to be provided in the `X-API-Key` request header or a
 
 Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
 
-* `PostImproveJSON` - Submit an image to the remove.bg Improvement program
+* [PostImproveJSON](docs/improvementprogram/README.md#postimprovejson) - Submit an image to the remove.bg Improvement program
 * Contribute an image that remove.bg is currently not able to remove the background from properly
 * Help us make remove.bg better
 * Get better results for similiar images in the future
@@ -104,7 +101,7 @@ Requires either an API Key to be provided in the `X-API-Key` request header or a
 
 Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
 
-* `PostImproveMultipart` - Submit an image to the remove.bg Improvement program
+* [PostImproveMultipart](docs/improvementprogram/README.md#postimprovemultipart) - Submit an image to the remove.bg Improvement program
 * Contribute an image that remove.bg is currently not able to remove the background from properly
 * Help us make remove.bg better
 * Get better results for similiar images in the future

@@ -18,18 +18,22 @@ const (
 	PublicationStrategyKindEnumFull  PublicationStrategyKindEnum = "Full"
 )
 
+func (e PublicationStrategyKindEnum) ToPointer() *PublicationStrategyKindEnum {
+	return &e
+}
+
 func (e *PublicationStrategyKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Delta":
 		fallthrough
 	case "Full":
-		*e = PublicationStrategyKindEnum(s)
+		*e = PublicationStrategyKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublicationStrategyKindEnum: %s", s)
+		return fmt.Errorf("invalid value for PublicationStrategyKindEnum: %v", v)
 	}
 }

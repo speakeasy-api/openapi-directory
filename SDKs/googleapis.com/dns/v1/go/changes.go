@@ -34,7 +34,10 @@ func newChanges(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DNSChangesCreate - Atomically updates the ResourceRecordSet collection.
 func (s *changes) DNSChangesCreate(ctx context.Context, request operations.DNSChangesCreateRequest, security operations.DNSChangesCreateSecurity) (*operations.DNSChangesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/changes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/changes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Change", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *changes) DNSChangesCreate(ctx context.Context, request operations.DNSCh
 // DNSChangesGet - Fetches the representation of an existing Change.
 func (s *changes) DNSChangesGet(ctx context.Context, request operations.DNSChangesGetRequest, security operations.DNSChangesGetSecurity) (*operations.DNSChangesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/changes/{changeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/changes/{changeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *changes) DNSChangesGet(ctx context.Context, request operations.DNSChang
 // DNSChangesList - Enumerates Changes to a ResourceRecordSet collection.
 func (s *changes) DNSChangesList(ctx context.Context, request operations.DNSChangesListRequest, security operations.DNSChangesListSecurity) (*operations.DNSChangesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/changes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/changes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

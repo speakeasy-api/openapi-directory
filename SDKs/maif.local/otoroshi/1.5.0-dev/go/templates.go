@@ -35,7 +35,7 @@ func newTemplates(defaultClient, securityClient HTTPClient, serverURL, language,
 
 // InitiateAPIKey - Get a template of an Otoroshi Api Key
 // Get a template of an Otoroshi Api Key. The generated entity is not persisted
-func (s *templates) InitiateAPIKey(ctx context.Context) (*operations.InitiateAPIKeyResponse, error) {
+func (s *templates) InitiateAPIKey(ctx context.Context, security operations.InitiateAPIKeySecurity) (*operations.InitiateAPIKeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/new/apikey"
 
@@ -44,7 +44,7 @@ func (s *templates) InitiateAPIKey(ctx context.Context) (*operations.InitiateAPI
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -85,7 +85,7 @@ func (s *templates) InitiateAPIKey(ctx context.Context) (*operations.InitiateAPI
 
 // InitiateService - Get a template of an Otoroshi service descriptor
 // Get a template of an Otoroshi service descriptor. The generated entity is not persisted
-func (s *templates) InitiateService(ctx context.Context) (*operations.InitiateServiceResponse, error) {
+func (s *templates) InitiateService(ctx context.Context, security operations.InitiateServiceSecurity) (*operations.InitiateServiceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/new/service"
 
@@ -94,7 +94,7 @@ func (s *templates) InitiateService(ctx context.Context) (*operations.InitiateSe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -135,7 +135,7 @@ func (s *templates) InitiateService(ctx context.Context) (*operations.InitiateSe
 
 // InitiateServiceGroup - Get a template of an Otoroshi service group
 // Get a template of an Otoroshi service group. The generated entity is not persisted
-func (s *templates) InitiateServiceGroup(ctx context.Context) (*operations.InitiateServiceGroupResponse, error) {
+func (s *templates) InitiateServiceGroup(ctx context.Context, security operations.InitiateServiceGroupSecurity) (*operations.InitiateServiceGroupResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/new/group"
 
@@ -144,7 +144,7 @@ func (s *templates) InitiateServiceGroup(ctx context.Context) (*operations.Initi
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

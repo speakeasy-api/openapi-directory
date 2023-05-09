@@ -34,7 +34,10 @@ func newInstances(defaultClient, securityClient HTTPClient, serverURL, language,
 // SQLInstancesAddServerCa - Add a new trusted Certificate Authority (CA) version for the specified instance. Required to prepare for a certificate rotation. If a CA version was previously added but never used in a certificate rotation, this operation replaces that version. There cannot be more than one CA version waiting to be rotated in.
 func (s *instances) SQLInstancesAddServerCa(ctx context.Context, request operations.SQLInstancesAddServerCaRequest, security operations.SQLInstancesAddServerCaSecurity) (*operations.SQLInstancesAddServerCaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/addServerCa", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/addServerCa", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *instances) SQLInstancesAddServerCa(ctx context.Context, request operati
 // SQLInstancesClone - Creates a Cloud SQL instance as a clone of the source instance. Using this operation might cause your instance to restart.
 func (s *instances) SQLInstancesClone(ctx context.Context, request operations.SQLInstancesCloneRequest, security operations.SQLInstancesCloneSecurity) (*operations.SQLInstancesCloneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/clone", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/clone", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstancesCloneRequest", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *instances) SQLInstancesClone(ctx context.Context, request operations.SQ
 // SQLInstancesDelete - Deletes a Cloud SQL instance.
 func (s *instances) SQLInstancesDelete(ctx context.Context, request operations.SQLInstancesDeleteRequest, security operations.SQLInstancesDeleteSecurity) (*operations.SQLInstancesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *instances) SQLInstancesDelete(ctx context.Context, request operations.S
 // SQLInstancesDemoteMaster - Demotes the stand-alone instance to be a Cloud SQL read replica for an external database server.
 func (s *instances) SQLInstancesDemoteMaster(ctx context.Context, request operations.SQLInstancesDemoteMasterRequest, security operations.SQLInstancesDemoteMasterSecurity) (*operations.SQLInstancesDemoteMasterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/demoteMaster", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/demoteMaster", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstancesDemoteMasterRequest", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *instances) SQLInstancesDemoteMaster(ctx context.Context, request operat
 // SQLInstancesExport - Exports data from a Cloud SQL instance to a Cloud Storage bucket as a SQL dump or CSV file.
 func (s *instances) SQLInstancesExport(ctx context.Context, request operations.SQLInstancesExportRequest, security operations.SQLInstancesExportSecurity) (*operations.SQLInstancesExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/export", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/export", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstancesExportRequest", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *instances) SQLInstancesExport(ctx context.Context, request operations.S
 // SQLInstancesFailover - Initiates a manual failover of a high availability (HA) primary instance to a standby instance, which becomes the primary instance. Users are then rerouted to the new primary. For more information, see the [Overview of high availability](https://cloud.google.com/sql/docs/mysql/high-availability) page in the Cloud SQL documentation. If using Legacy HA (MySQL only), this causes the instance to failover to its failover replica instance.
 func (s *instances) SQLInstancesFailover(ctx context.Context, request operations.SQLInstancesFailoverRequest, security operations.SQLInstancesFailoverSecurity) (*operations.SQLInstancesFailoverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/failover", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/failover", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstancesFailoverRequest", "json")
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *instances) SQLInstancesFailover(ctx context.Context, request operations
 // SQLInstancesGet - Retrieves a resource containing information about a Cloud SQL instance.
 func (s *instances) SQLInstancesGet(ctx context.Context, request operations.SQLInstancesGetRequest, security operations.SQLInstancesGetSecurity) (*operations.SQLInstancesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *instances) SQLInstancesGet(ctx context.Context, request operations.SQLI
 // SQLInstancesImport - Imports data into a Cloud SQL instance from a SQL dump or CSV file in Cloud Storage.
 func (s *instances) SQLInstancesImport(ctx context.Context, request operations.SQLInstancesImportRequest, security operations.SQLInstancesImportSecurity) (*operations.SQLInstancesImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstancesImportRequest", "json")
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *instances) SQLInstancesImport(ctx context.Context, request operations.S
 // SQLInstancesInsert - Creates a new Cloud SQL instance.
 func (s *instances) SQLInstancesInsert(ctx context.Context, request operations.SQLInstancesInsertRequest, security operations.SQLInstancesInsertSecurity) (*operations.SQLInstancesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DatabaseInstanceInput", "json")
 	if err != nil {
@@ -508,7 +535,10 @@ func (s *instances) SQLInstancesInsert(ctx context.Context, request operations.S
 // SQLInstancesList - Lists instances under a given project.
 func (s *instances) SQLInstancesList(ctx context.Context, request operations.SQLInstancesListRequest, security operations.SQLInstancesListSecurity) (*operations.SQLInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -556,7 +586,10 @@ func (s *instances) SQLInstancesList(ctx context.Context, request operations.SQL
 // SQLInstancesListServerCas - Lists all of the trusted Certificate Authorities (CAs) for the specified instance. There can be up to three CAs listed: the CA that was used to sign the certificate that is currently in use, a CA that has been added but not yet used to sign a certificate, and a CA used to sign a certificate that has previously rotated out.
 func (s *instances) SQLInstancesListServerCas(ctx context.Context, request operations.SQLInstancesListServerCasRequest, security operations.SQLInstancesListServerCasSecurity) (*operations.SQLInstancesListServerCasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/listServerCas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/listServerCas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -604,7 +637,10 @@ func (s *instances) SQLInstancesListServerCas(ctx context.Context, request opera
 // SQLInstancesPatch - Partially updates settings of a Cloud SQL instance by merging the request with the current configuration. This method supports patch semantics.
 func (s *instances) SQLInstancesPatch(ctx context.Context, request operations.SQLInstancesPatchRequest, security operations.SQLInstancesPatchSecurity) (*operations.SQLInstancesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DatabaseInstanceInput", "json")
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *instances) SQLInstancesPatch(ctx context.Context, request operations.SQ
 // SQLInstancesPromoteReplica - Promotes the read replica instance to be a stand-alone Cloud SQL instance. Using this operation might cause your instance to restart.
 func (s *instances) SQLInstancesPromoteReplica(ctx context.Context, request operations.SQLInstancesPromoteReplicaRequest, security operations.SQLInstancesPromoteReplicaSecurity) (*operations.SQLInstancesPromoteReplicaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/promoteReplica", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/promoteReplica", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *instances) SQLInstancesPromoteReplica(ctx context.Context, request oper
 // SQLInstancesResetSslConfig - Deletes all client certificates and generates a new server SSL certificate for the instance.
 func (s *instances) SQLInstancesResetSslConfig(ctx context.Context, request operations.SQLInstancesResetSslConfigRequest, security operations.SQLInstancesResetSslConfigSecurity) (*operations.SQLInstancesResetSslConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/resetSslConfig", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/resetSslConfig", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -755,7 +797,10 @@ func (s *instances) SQLInstancesResetSslConfig(ctx context.Context, request oper
 // SQLInstancesRestart - Restarts a Cloud SQL instance.
 func (s *instances) SQLInstancesRestart(ctx context.Context, request operations.SQLInstancesRestartRequest, security operations.SQLInstancesRestartSecurity) (*operations.SQLInstancesRestartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/restart", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/restart", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -803,7 +848,10 @@ func (s *instances) SQLInstancesRestart(ctx context.Context, request operations.
 // SQLInstancesRestoreBackup - Restores a backup of a Cloud SQL instance. Using this operation might cause your instance to restart.
 func (s *instances) SQLInstancesRestoreBackup(ctx context.Context, request operations.SQLInstancesRestoreBackupRequest, security operations.SQLInstancesRestoreBackupSecurity) (*operations.SQLInstancesRestoreBackupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/restoreBackup", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/restoreBackup", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstancesRestoreBackupRequest", "json")
 	if err != nil {
@@ -858,7 +906,10 @@ func (s *instances) SQLInstancesRestoreBackup(ctx context.Context, request opera
 // SQLInstancesRotateServerCa - Rotates the server certificate to one signed by the Certificate Authority (CA) version previously added with the addServerCA method.
 func (s *instances) SQLInstancesRotateServerCa(ctx context.Context, request operations.SQLInstancesRotateServerCaRequest, security operations.SQLInstancesRotateServerCaSecurity) (*operations.SQLInstancesRotateServerCaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/rotateServerCa", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/rotateServerCa", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstancesRotateServerCaRequest", "json")
 	if err != nil {
@@ -913,7 +964,10 @@ func (s *instances) SQLInstancesRotateServerCa(ctx context.Context, request oper
 // SQLInstancesStartReplica - Starts the replication in the read replica instance.
 func (s *instances) SQLInstancesStartReplica(ctx context.Context, request operations.SQLInstancesStartReplicaRequest, security operations.SQLInstancesStartReplicaSecurity) (*operations.SQLInstancesStartReplicaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/startReplica", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/startReplica", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -961,7 +1015,10 @@ func (s *instances) SQLInstancesStartReplica(ctx context.Context, request operat
 // SQLInstancesStopReplica - Stops the replication in the read replica instance.
 func (s *instances) SQLInstancesStopReplica(ctx context.Context, request operations.SQLInstancesStopReplicaRequest, security operations.SQLInstancesStopReplicaSecurity) (*operations.SQLInstancesStopReplicaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/stopReplica", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/stopReplica", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1009,7 +1066,10 @@ func (s *instances) SQLInstancesStopReplica(ctx context.Context, request operati
 // SQLInstancesTruncateLog - Truncate MySQL general and slow query log tables MySQL only.
 func (s *instances) SQLInstancesTruncateLog(ctx context.Context, request operations.SQLInstancesTruncateLogRequest, security operations.SQLInstancesTruncateLogSecurity) (*operations.SQLInstancesTruncateLogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/truncateLog", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/truncateLog", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstancesTruncateLogRequest", "json")
 	if err != nil {
@@ -1064,7 +1124,10 @@ func (s *instances) SQLInstancesTruncateLog(ctx context.Context, request operati
 // SQLInstancesUpdate - Updates settings of a Cloud SQL instance. Using this operation might cause your instance to restart.
 func (s *instances) SQLInstancesUpdate(ctx context.Context, request operations.SQLInstancesUpdateRequest, security operations.SQLInstancesUpdateSecurity) (*operations.SQLInstancesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DatabaseInstanceInput", "json")
 	if err != nil {

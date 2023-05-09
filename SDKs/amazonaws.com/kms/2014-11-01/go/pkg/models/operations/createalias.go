@@ -16,17 +16,21 @@ const (
 	CreateAliasXAmzTargetEnumTrentServiceCreateAlias CreateAliasXAmzTargetEnum = "TrentService.CreateAlias"
 )
 
+func (e CreateAliasXAmzTargetEnum) ToPointer() *CreateAliasXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAliasXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.CreateAlias":
-		*e = CreateAliasXAmzTargetEnum(s)
+		*e = CreateAliasXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAliasXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAliasXAmzTargetEnum: %v", v)
 	}
 }
 

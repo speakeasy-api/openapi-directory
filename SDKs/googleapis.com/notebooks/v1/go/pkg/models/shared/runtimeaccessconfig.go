@@ -16,21 +16,25 @@ const (
 	RuntimeAccessConfigAccessTypeEnumServiceAccount               RuntimeAccessConfigAccessTypeEnum = "SERVICE_ACCOUNT"
 )
 
+func (e RuntimeAccessConfigAccessTypeEnum) ToPointer() *RuntimeAccessConfigAccessTypeEnum {
+	return &e
+}
+
 func (e *RuntimeAccessConfigAccessTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNTIME_ACCESS_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SINGLE_USER":
 		fallthrough
 	case "SERVICE_ACCOUNT":
-		*e = RuntimeAccessConfigAccessTypeEnum(s)
+		*e = RuntimeAccessConfigAccessTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuntimeAccessConfigAccessTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RuntimeAccessConfigAccessTypeEnum: %v", v)
 	}
 }
 

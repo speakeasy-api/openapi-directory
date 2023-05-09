@@ -16,17 +16,21 @@ const (
 	ListAccessControlRulesXAmzTargetEnumWorkMailServiceListAccessControlRules ListAccessControlRulesXAmzTargetEnum = "WorkMailService.ListAccessControlRules"
 )
 
+func (e ListAccessControlRulesXAmzTargetEnum) ToPointer() *ListAccessControlRulesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListAccessControlRulesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.ListAccessControlRules":
-		*e = ListAccessControlRulesXAmzTargetEnum(s)
+		*e = ListAccessControlRulesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAccessControlRulesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAccessControlRulesXAmzTargetEnum: %v", v)
 	}
 }
 

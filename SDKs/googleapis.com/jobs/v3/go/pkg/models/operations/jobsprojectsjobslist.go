@@ -35,12 +35,16 @@ const (
 	JobsProjectsJobsListJobViewEnumJobViewFull        JobsProjectsJobsListJobViewEnum = "JOB_VIEW_FULL"
 )
 
+func (e JobsProjectsJobsListJobViewEnum) ToPointer() *JobsProjectsJobsListJobViewEnum {
+	return &e
+}
+
 func (e *JobsProjectsJobsListJobViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_VIEW_UNSPECIFIED":
 		fallthrough
 	case "JOB_VIEW_ID_ONLY":
@@ -50,10 +54,10 @@ func (e *JobsProjectsJobsListJobViewEnum) UnmarshalJSON(data []byte) error {
 	case "JOB_VIEW_SMALL":
 		fallthrough
 	case "JOB_VIEW_FULL":
-		*e = JobsProjectsJobsListJobViewEnum(s)
+		*e = JobsProjectsJobsListJobViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobsProjectsJobsListJobViewEnum: %s", s)
+		return fmt.Errorf("invalid value for JobsProjectsJobsListJobViewEnum: %v", v)
 	}
 }
 

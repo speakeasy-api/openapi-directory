@@ -17,12 +17,16 @@ const (
 	StatusFlagEnumPendingSupportCase         StatusFlagEnum = "PENDING_SUPPORT_CASE"
 )
 
+func (e StatusFlagEnum) ToPointer() *StatusFlagEnum {
+	return &e
+}
+
 func (e *StatusFlagEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_ACCEPTANCE":
 		fallthrough
 	case "PENDING_CUSTOMER_ACTION":
@@ -32,9 +36,9 @@ func (e *StatusFlagEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING_PAYMENT_VERIFICATION":
 		fallthrough
 	case "PENDING_SUPPORT_CASE":
-		*e = StatusFlagEnum(s)
+		*e = StatusFlagEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusFlagEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusFlagEnum: %v", v)
 	}
 }

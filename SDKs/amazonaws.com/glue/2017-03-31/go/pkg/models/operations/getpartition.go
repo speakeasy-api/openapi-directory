@@ -16,17 +16,21 @@ const (
 	GetPartitionXAmzTargetEnumAwsGlueGetPartition GetPartitionXAmzTargetEnum = "AWSGlue.GetPartition"
 )
 
+func (e GetPartitionXAmzTargetEnum) ToPointer() *GetPartitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetPartitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetPartition":
-		*e = GetPartitionXAmzTargetEnum(s)
+		*e = GetPartitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPartitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPartitionXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -46,6 +50,10 @@ type GetPartitionResponse struct {
 	ContentType string
 	// EntityNotFoundException
 	EntityNotFoundException interface{}
+	// FederationSourceException
+	FederationSourceException interface{}
+	// FederationSourceRetryableException
+	FederationSourceRetryableException interface{}
 	// Success
 	GetPartitionResponse *shared.GetPartitionResponse
 	// GlueEncryptionException

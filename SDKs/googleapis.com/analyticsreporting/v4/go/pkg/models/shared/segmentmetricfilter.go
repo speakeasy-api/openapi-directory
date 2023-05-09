@@ -18,12 +18,16 @@ const (
 	SegmentMetricFilterOperatorEnumBetween             SegmentMetricFilterOperatorEnum = "BETWEEN"
 )
 
+func (e SegmentMetricFilterOperatorEnum) ToPointer() *SegmentMetricFilterOperatorEnum {
+	return &e
+}
+
 func (e *SegmentMetricFilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_OPERATOR":
 		fallthrough
 	case "LESS_THAN":
@@ -33,10 +37,10 @@ func (e *SegmentMetricFilterOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "EQUAL":
 		fallthrough
 	case "BETWEEN":
-		*e = SegmentMetricFilterOperatorEnum(s)
+		*e = SegmentMetricFilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SegmentMetricFilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for SegmentMetricFilterOperatorEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	SegmentMetricFilterScopeEnumUser             SegmentMetricFilterScopeEnum = "USER"
 )
 
+func (e SegmentMetricFilterScopeEnum) ToPointer() *SegmentMetricFilterScopeEnum {
+	return &e
+}
+
 func (e *SegmentMetricFilterScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_SCOPE":
 		fallthrough
 	case "PRODUCT":
@@ -66,10 +74,10 @@ func (e *SegmentMetricFilterScopeEnum) UnmarshalJSON(data []byte) error {
 	case "SESSION":
 		fallthrough
 	case "USER":
-		*e = SegmentMetricFilterScopeEnum(s)
+		*e = SegmentMetricFilterScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SegmentMetricFilterScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for SegmentMetricFilterScopeEnum: %v", v)
 	}
 }
 

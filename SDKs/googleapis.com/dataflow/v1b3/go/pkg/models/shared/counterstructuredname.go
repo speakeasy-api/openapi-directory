@@ -15,19 +15,23 @@ const (
 	CounterStructuredNameOriginEnumUser   CounterStructuredNameOriginEnum = "USER"
 )
 
+func (e CounterStructuredNameOriginEnum) ToPointer() *CounterStructuredNameOriginEnum {
+	return &e
+}
+
 func (e *CounterStructuredNameOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYSTEM":
 		fallthrough
 	case "USER":
-		*e = CounterStructuredNameOriginEnum(s)
+		*e = CounterStructuredNameOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CounterStructuredNameOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for CounterStructuredNameOriginEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	CounterStructuredNamePortionEnumValue CounterStructuredNamePortionEnum = "VALUE"
 )
 
+func (e CounterStructuredNamePortionEnum) ToPointer() *CounterStructuredNamePortionEnum {
+	return &e
+}
+
 func (e *CounterStructuredNamePortionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "KEY":
 		fallthrough
 	case "VALUE":
-		*e = CounterStructuredNamePortionEnum(s)
+		*e = CounterStructuredNamePortionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CounterStructuredNamePortionEnum: %s", s)
+		return fmt.Errorf("invalid value for CounterStructuredNamePortionEnum: %v", v)
 	}
 }
 

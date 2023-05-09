@@ -19,21 +19,25 @@ const (
 	ListViolationEventsBehaviorCriteriaTypeEnumMachineLearning ListViolationEventsBehaviorCriteriaTypeEnum = "MACHINE_LEARNING"
 )
 
+func (e ListViolationEventsBehaviorCriteriaTypeEnum) ToPointer() *ListViolationEventsBehaviorCriteriaTypeEnum {
+	return &e
+}
+
 func (e *ListViolationEventsBehaviorCriteriaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATIC":
 		fallthrough
 	case "STATISTICAL":
 		fallthrough
 	case "MACHINE_LEARNING":
-		*e = ListViolationEventsBehaviorCriteriaTypeEnum(s)
+		*e = ListViolationEventsBehaviorCriteriaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListViolationEventsBehaviorCriteriaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListViolationEventsBehaviorCriteriaTypeEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ListViolationEventsVerificationStateEnumUnknown        ListViolationEventsVerificationStateEnum = "UNKNOWN"
 )
 
+func (e ListViolationEventsVerificationStateEnum) ToPointer() *ListViolationEventsVerificationStateEnum {
+	return &e
+}
+
 func (e *ListViolationEventsVerificationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FALSE_POSITIVE":
 		fallthrough
 	case "BENIGN_POSITIVE":
@@ -60,10 +68,10 @@ func (e *ListViolationEventsVerificationStateEnum) UnmarshalJSON(data []byte) er
 	case "TRUE_POSITIVE":
 		fallthrough
 	case "UNKNOWN":
-		*e = ListViolationEventsVerificationStateEnum(s)
+		*e = ListViolationEventsVerificationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListViolationEventsVerificationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ListViolationEventsVerificationStateEnum: %v", v)
 	}
 }
 

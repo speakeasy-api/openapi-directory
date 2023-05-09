@@ -16,21 +16,25 @@ const (
 	PacingPacingPeriodEnumPacingPeriodFlight      PacingPacingPeriodEnum = "PACING_PERIOD_FLIGHT"
 )
 
+func (e PacingPacingPeriodEnum) ToPointer() *PacingPacingPeriodEnum {
+	return &e
+}
+
 func (e *PacingPacingPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PACING_PERIOD_UNSPECIFIED":
 		fallthrough
 	case "PACING_PERIOD_DAILY":
 		fallthrough
 	case "PACING_PERIOD_FLIGHT":
-		*e = PacingPacingPeriodEnum(s)
+		*e = PacingPacingPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PacingPacingPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for PacingPacingPeriodEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	PacingPacingTypeEnumPacingTypeEven        PacingPacingTypeEnum = "PACING_TYPE_EVEN"
 )
 
+func (e PacingPacingTypeEnum) ToPointer() *PacingPacingTypeEnum {
+	return &e
+}
+
 func (e *PacingPacingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PACING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PACING_TYPE_AHEAD":
@@ -57,10 +65,10 @@ func (e *PacingPacingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PACING_TYPE_ASAP":
 		fallthrough
 	case "PACING_TYPE_EVEN":
-		*e = PacingPacingTypeEnum(s)
+		*e = PacingPacingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PacingPacingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PacingPacingTypeEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	LaunchTemplateInstanceMetadataEndpointStateEnumEnabled  LaunchTemplateInstanceMetadataEndpointStateEnum = "enabled"
 )
 
+func (e LaunchTemplateInstanceMetadataEndpointStateEnum) ToPointer() *LaunchTemplateInstanceMetadataEndpointStateEnum {
+	return &e
+}
+
 func (e *LaunchTemplateInstanceMetadataEndpointStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = LaunchTemplateInstanceMetadataEndpointStateEnum(s)
+		*e = LaunchTemplateInstanceMetadataEndpointStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LaunchTemplateInstanceMetadataEndpointStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LaunchTemplateInstanceMetadataEndpointStateEnum: %v", v)
 	}
 }

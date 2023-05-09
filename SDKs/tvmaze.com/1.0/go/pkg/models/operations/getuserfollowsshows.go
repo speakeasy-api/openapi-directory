@@ -16,17 +16,21 @@ const (
 	GetUserFollowsShowsEmbedEnumShow GetUserFollowsShowsEmbedEnum = "show"
 )
 
+func (e GetUserFollowsShowsEmbedEnum) ToPointer() *GetUserFollowsShowsEmbedEnum {
+	return &e
+}
+
 func (e *GetUserFollowsShowsEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "show":
-		*e = GetUserFollowsShowsEmbedEnum(s)
+		*e = GetUserFollowsShowsEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUserFollowsShowsEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUserFollowsShowsEmbedEnum: %v", v)
 	}
 }
 

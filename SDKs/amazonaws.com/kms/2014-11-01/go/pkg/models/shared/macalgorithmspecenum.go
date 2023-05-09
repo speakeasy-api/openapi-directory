@@ -16,12 +16,16 @@ const (
 	MacAlgorithmSpecEnumHmacSha512 MacAlgorithmSpecEnum = "HMAC_SHA_512"
 )
 
+func (e MacAlgorithmSpecEnum) ToPointer() *MacAlgorithmSpecEnum {
+	return &e
+}
+
 func (e *MacAlgorithmSpecEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HMAC_SHA_224":
 		fallthrough
 	case "HMAC_SHA_256":
@@ -29,9 +33,9 @@ func (e *MacAlgorithmSpecEnum) UnmarshalJSON(data []byte) error {
 	case "HMAC_SHA_384":
 		fallthrough
 	case "HMAC_SHA_512":
-		*e = MacAlgorithmSpecEnum(s)
+		*e = MacAlgorithmSpecEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MacAlgorithmSpecEnum: %s", s)
+		return fmt.Errorf("invalid value for MacAlgorithmSpecEnum: %v", v)
 	}
 }

@@ -83,7 +83,10 @@ func (s *polygons) CreateUpdatePolygon(ctx context.Context, request operations.C
 // Deletes polygon set up in your store, by polygon name.
 func (s *polygons) DeletePolygon(ctx context.Context, request operations.DeletePolygonRequest) (*operations.DeletePolygonResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/geoshape/{polygonName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/geoshape/{polygonName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -163,7 +166,10 @@ func (s *polygons) PagedPolygons(ctx context.Context, request operations.PagedPo
 // Lists your store's polygons by searching through polygon name
 func (s *polygons) PolygonbyID(ctx context.Context, request operations.PolygonbyIDRequest) (*operations.PolygonbyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/geoshape/{polygonName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/geoshape/{polygonName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

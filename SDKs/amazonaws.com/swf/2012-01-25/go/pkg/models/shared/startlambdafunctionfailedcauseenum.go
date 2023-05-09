@@ -13,16 +13,20 @@ const (
 	StartLambdaFunctionFailedCauseEnumAssumeRoleFailed StartLambdaFunctionFailedCauseEnum = "ASSUME_ROLE_FAILED"
 )
 
+func (e StartLambdaFunctionFailedCauseEnum) ToPointer() *StartLambdaFunctionFailedCauseEnum {
+	return &e
+}
+
 func (e *StartLambdaFunctionFailedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSUME_ROLE_FAILED":
-		*e = StartLambdaFunctionFailedCauseEnum(s)
+		*e = StartLambdaFunctionFailedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartLambdaFunctionFailedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for StartLambdaFunctionFailedCauseEnum: %v", v)
 	}
 }

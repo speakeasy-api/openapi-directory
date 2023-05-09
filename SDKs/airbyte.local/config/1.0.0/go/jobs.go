@@ -378,6 +378,7 @@ func (s *jobs) GetJobInfoLight(ctx context.Context, request shared.JobIDRequestB
 
 	return res, nil
 }
+
 func (s *jobs) GetLastReplicationJob(ctx context.Context, request shared.ConnectionIDRequestBody) (*operations.GetLastReplicationJobResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/jobs/get_last_replication_job"

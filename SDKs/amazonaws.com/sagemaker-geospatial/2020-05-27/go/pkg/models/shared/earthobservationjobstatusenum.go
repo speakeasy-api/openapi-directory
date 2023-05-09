@@ -20,12 +20,16 @@ const (
 	EarthObservationJobStatusEnumDeleted      EarthObservationJobStatusEnum = "DELETED"
 )
 
+func (e EarthObservationJobStatusEnum) ToPointer() *EarthObservationJobStatusEnum {
+	return &e
+}
+
 func (e *EarthObservationJobStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIALIZING":
 		fallthrough
 	case "IN_PROGRESS":
@@ -41,9 +45,9 @@ func (e *EarthObservationJobStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "DELETED":
-		*e = EarthObservationJobStatusEnum(s)
+		*e = EarthObservationJobStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EarthObservationJobStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EarthObservationJobStatusEnum: %v", v)
 	}
 }

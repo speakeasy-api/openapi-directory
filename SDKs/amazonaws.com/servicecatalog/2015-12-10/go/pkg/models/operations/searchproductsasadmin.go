@@ -16,17 +16,21 @@ const (
 	SearchProductsAsAdminXAmzTargetEnumAws242ServiceCatalogServiceSearchProductsAsAdmin SearchProductsAsAdminXAmzTargetEnum = "AWS242ServiceCatalogService.SearchProductsAsAdmin"
 )
 
+func (e SearchProductsAsAdminXAmzTargetEnum) ToPointer() *SearchProductsAsAdminXAmzTargetEnum {
+	return &e
+}
+
 func (e *SearchProductsAsAdminXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.SearchProductsAsAdmin":
-		*e = SearchProductsAsAdminXAmzTargetEnum(s)
+		*e = SearchProductsAsAdminXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchProductsAsAdminXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchProductsAsAdminXAmzTargetEnum: %v", v)
 	}
 }
 

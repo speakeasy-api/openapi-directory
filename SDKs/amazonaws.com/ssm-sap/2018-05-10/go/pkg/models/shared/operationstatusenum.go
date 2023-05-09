@@ -15,20 +15,24 @@ const (
 	OperationStatusEnumError      OperationStatusEnum = "ERROR"
 )
 
+func (e OperationStatusEnum) ToPointer() *OperationStatusEnum {
+	return &e
+}
+
 func (e *OperationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INPROGRESS":
 		fallthrough
 	case "SUCCESS":
 		fallthrough
 	case "ERROR":
-		*e = OperationStatusEnum(s)
+		*e = OperationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OperationStatusEnum: %v", v)
 	}
 }

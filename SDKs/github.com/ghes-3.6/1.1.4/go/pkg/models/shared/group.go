@@ -20,17 +20,21 @@ const (
 	GroupSchemasEnumUrnIetfParamsScimSchemasCore20Group GroupSchemasEnum = "urn:ietf:params:scim:schemas:core:2.0:Group"
 )
 
+func (e GroupSchemasEnum) ToPointer() *GroupSchemasEnum {
+	return &e
+}
+
 func (e *GroupSchemasEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "urn:ietf:params:scim:schemas:core:2.0:Group":
-		*e = GroupSchemasEnum(s)
+		*e = GroupSchemasEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupSchemasEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupSchemasEnum: %v", v)
 	}
 }
 

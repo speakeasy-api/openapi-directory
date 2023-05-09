@@ -34,7 +34,10 @@ func newDomains(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DirectoryDomainsDelete - Deletes a domain of the customer.
 func (s *domains) DirectoryDomainsDelete(ctx context.Context, request operations.DirectoryDomainsDeleteRequest, security operations.DirectoryDomainsDeleteSecurity) (*operations.DirectoryDomainsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains/{domainName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains/{domainName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *domains) DirectoryDomainsDelete(ctx context.Context, request operations
 // DirectoryDomainsGet - Retrieves a domain of the customer.
 func (s *domains) DirectoryDomainsGet(ctx context.Context, request operations.DirectoryDomainsGetRequest, security operations.DirectoryDomainsGetSecurity) (*operations.DirectoryDomainsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains/{domainName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains/{domainName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *domains) DirectoryDomainsGet(ctx context.Context, request operations.Di
 // DirectoryDomainsInsert - Inserts a domain of the customer.
 func (s *domains) DirectoryDomainsInsert(ctx context.Context, request operations.DirectoryDomainsInsertRequest, security operations.DirectoryDomainsInsertSecurity) (*operations.DirectoryDomainsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Domains", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *domains) DirectoryDomainsInsert(ctx context.Context, request operations
 // DirectoryDomainsList - Lists the domains of the customer.
 func (s *domains) DirectoryDomainsList(ctx context.Context, request operations.DirectoryDomainsListRequest, security operations.DirectoryDomainsListSecurity) (*operations.DirectoryDomainsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domains", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

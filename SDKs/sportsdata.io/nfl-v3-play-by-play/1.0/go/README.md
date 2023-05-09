@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/nfl-v3-play
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,15 +27,13 @@ func main() {
         }),
     )
 
-    req := operations.PlayByPlayRequest{
-        Format: "JSON",
+    ctx := context.Background()
+    res, err := s.PlayByPlay(ctx, operations.PlayByPlayRequest{
+        Format: operations.PlayByPlayFormatEnumJSON,
         Hometeam: "provident",
         Season: "distinctio",
         Week: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.PlayByPlay(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,11 +48,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `PlayByPlay` - Play By Play
-* `PlayByPlayDelta` - Play By Play Delta
-* `PlayByPlaySimulation` - Play By Play Simulation
+* [PlayByPlay](docs/sdk/README.md#playbyplay) - Play By Play
+* [PlayByPlayDelta](docs/sdk/README.md#playbyplaydelta) - Play By Play Delta
+* [PlayByPlaySimulation](docs/sdk/README.md#playbyplaysimulation) - Play By Play Simulation
 <!-- End SDK Available Operations -->
 
 ### Maturity

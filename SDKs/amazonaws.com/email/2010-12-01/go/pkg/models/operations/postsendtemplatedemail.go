@@ -15,17 +15,21 @@ const (
 	POSTSendTemplatedEmailActionEnumSendTemplatedEmail POSTSendTemplatedEmailActionEnum = "SendTemplatedEmail"
 )
 
+func (e POSTSendTemplatedEmailActionEnum) ToPointer() *POSTSendTemplatedEmailActionEnum {
+	return &e
+}
+
 func (e *POSTSendTemplatedEmailActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SendTemplatedEmail":
-		*e = POSTSendTemplatedEmailActionEnum(s)
+		*e = POSTSendTemplatedEmailActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSendTemplatedEmailActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSendTemplatedEmailActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSendTemplatedEmailVersionEnumTwoThousandAndTen1201 POSTSendTemplatedEmailVersionEnum = "2010-12-01"
 )
 
+func (e POSTSendTemplatedEmailVersionEnum) ToPointer() *POSTSendTemplatedEmailVersionEnum {
+	return &e
+}
+
 func (e *POSTSendTemplatedEmailVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTSendTemplatedEmailVersionEnum(s)
+		*e = POSTSendTemplatedEmailVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSendTemplatedEmailVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSendTemplatedEmailVersionEnum: %v", v)
 	}
 }
 

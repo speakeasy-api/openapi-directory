@@ -40,19 +40,23 @@ const (
 	DescribeVolumeStatusResultVolumeStatusesVolumeStatusDetailsNameEnumIoPerformance DescribeVolumeStatusResultVolumeStatusesVolumeStatusDetailsNameEnum = "io-performance"
 )
 
+func (e DescribeVolumeStatusResultVolumeStatusesVolumeStatusDetailsNameEnum) ToPointer() *DescribeVolumeStatusResultVolumeStatusesVolumeStatusDetailsNameEnum {
+	return &e
+}
+
 func (e *DescribeVolumeStatusResultVolumeStatusesVolumeStatusDetailsNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "io-enabled":
 		fallthrough
 	case "io-performance":
-		*e = DescribeVolumeStatusResultVolumeStatusesVolumeStatusDetailsNameEnum(s)
+		*e = DescribeVolumeStatusResultVolumeStatusesVolumeStatusDetailsNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVolumeStatusResultVolumeStatusesVolumeStatusDetailsNameEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVolumeStatusResultVolumeStatusesVolumeStatusDetailsNameEnum: %v", v)
 	}
 }
 
@@ -71,21 +75,25 @@ const (
 	DescribeVolumeStatusResultVolumeStatusesVolumeStatusStatusEnumInsufficientData DescribeVolumeStatusResultVolumeStatusesVolumeStatusStatusEnum = "insufficient-data"
 )
 
+func (e DescribeVolumeStatusResultVolumeStatusesVolumeStatusStatusEnum) ToPointer() *DescribeVolumeStatusResultVolumeStatusesVolumeStatusStatusEnum {
+	return &e
+}
+
 func (e *DescribeVolumeStatusResultVolumeStatusesVolumeStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ok":
 		fallthrough
 	case "impaired":
 		fallthrough
 	case "insufficient-data":
-		*e = DescribeVolumeStatusResultVolumeStatusesVolumeStatusStatusEnum(s)
+		*e = DescribeVolumeStatusResultVolumeStatusesVolumeStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVolumeStatusResultVolumeStatusesVolumeStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVolumeStatusResultVolumeStatusesVolumeStatusStatusEnum: %v", v)
 	}
 }
 

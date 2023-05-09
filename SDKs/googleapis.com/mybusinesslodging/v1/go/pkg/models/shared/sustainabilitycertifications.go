@@ -20,12 +20,16 @@ const (
 	SustainabilityCertificationsBreeamCertificationEnumBreeamOutstanding              SustainabilityCertificationsBreeamCertificationEnum = "BREEAM_OUTSTANDING"
 )
 
+func (e SustainabilityCertificationsBreeamCertificationEnum) ToPointer() *SustainabilityCertificationsBreeamCertificationEnum {
+	return &e
+}
+
 func (e *SustainabilityCertificationsBreeamCertificationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BREEAM_CERTIFICATION_UNSPECIFIED":
 		fallthrough
 	case "NO_BREEAM_CERTIFICATION":
@@ -39,10 +43,10 @@ func (e *SustainabilityCertificationsBreeamCertificationEnum) UnmarshalJSON(data
 	case "BREEAM_EXCELLENT":
 		fallthrough
 	case "BREEAM_OUTSTANDING":
-		*e = SustainabilityCertificationsBreeamCertificationEnum(s)
+		*e = SustainabilityCertificationsBreeamCertificationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SustainabilityCertificationsBreeamCertificationEnum: %s", s)
+		return fmt.Errorf("invalid value for SustainabilityCertificationsBreeamCertificationEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	SustainabilityCertificationsBreeamCertificationExceptionEnumDependentOnDayOfWeek SustainabilityCertificationsBreeamCertificationExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e SustainabilityCertificationsBreeamCertificationExceptionEnum) ToPointer() *SustainabilityCertificationsBreeamCertificationExceptionEnum {
+	return &e
+}
+
 func (e *SustainabilityCertificationsBreeamCertificationExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -69,10 +77,10 @@ func (e *SustainabilityCertificationsBreeamCertificationExceptionEnum) Unmarshal
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = SustainabilityCertificationsBreeamCertificationExceptionEnum(s)
+		*e = SustainabilityCertificationsBreeamCertificationExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SustainabilityCertificationsBreeamCertificationExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SustainabilityCertificationsBreeamCertificationExceptionEnum: %v", v)
 	}
 }
 
@@ -88,12 +96,16 @@ const (
 	SustainabilityCertificationsLeedCertificationEnumLeedPlatinum                 SustainabilityCertificationsLeedCertificationEnum = "LEED_PLATINUM"
 )
 
+func (e SustainabilityCertificationsLeedCertificationEnum) ToPointer() *SustainabilityCertificationsLeedCertificationEnum {
+	return &e
+}
+
 func (e *SustainabilityCertificationsLeedCertificationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEED_CERTIFICATION_UNSPECIFIED":
 		fallthrough
 	case "NO_LEED_CERTIFICATION":
@@ -105,10 +117,10 @@ func (e *SustainabilityCertificationsLeedCertificationEnum) UnmarshalJSON(data [
 	case "LEED_GOLD":
 		fallthrough
 	case "LEED_PLATINUM":
-		*e = SustainabilityCertificationsLeedCertificationEnum(s)
+		*e = SustainabilityCertificationsLeedCertificationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SustainabilityCertificationsLeedCertificationEnum: %s", s)
+		return fmt.Errorf("invalid value for SustainabilityCertificationsLeedCertificationEnum: %v", v)
 	}
 }
 
@@ -122,12 +134,16 @@ const (
 	SustainabilityCertificationsLeedCertificationExceptionEnumDependentOnDayOfWeek SustainabilityCertificationsLeedCertificationExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e SustainabilityCertificationsLeedCertificationExceptionEnum) ToPointer() *SustainabilityCertificationsLeedCertificationExceptionEnum {
+	return &e
+}
+
 func (e *SustainabilityCertificationsLeedCertificationExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -135,10 +151,10 @@ func (e *SustainabilityCertificationsLeedCertificationExceptionEnum) UnmarshalJS
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = SustainabilityCertificationsLeedCertificationExceptionEnum(s)
+		*e = SustainabilityCertificationsLeedCertificationExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SustainabilityCertificationsLeedCertificationExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SustainabilityCertificationsLeedCertificationExceptionEnum: %v", v)
 	}
 }
 

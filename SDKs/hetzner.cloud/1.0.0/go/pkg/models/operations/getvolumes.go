@@ -23,12 +23,16 @@ const (
 	GetVolumesSortEnumCreatedDesc GetVolumesSortEnum = "created:desc"
 )
 
+func (e GetVolumesSortEnum) ToPointer() *GetVolumesSortEnum {
+	return &e
+}
+
 func (e *GetVolumesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -46,10 +50,10 @@ func (e *GetVolumesSortEnum) UnmarshalJSON(data []byte) error {
 	case "created:asc":
 		fallthrough
 	case "created:desc":
-		*e = GetVolumesSortEnum(s)
+		*e = GetVolumesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVolumesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVolumesSortEnum: %v", v)
 	}
 }
 
@@ -61,19 +65,23 @@ const (
 	GetVolumesStatusEnumCreating  GetVolumesStatusEnum = "creating"
 )
 
+func (e GetVolumesStatusEnum) ToPointer() *GetVolumesStatusEnum {
+	return &e
+}
+
 func (e *GetVolumesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "creating":
-		*e = GetVolumesStatusEnum(s)
+		*e = GetVolumesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVolumesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVolumesStatusEnum: %v", v)
 	}
 }
 
@@ -141,19 +149,23 @@ const (
 	GetVolumes200ApplicationJSONVolumesStatusEnumAvailable GetVolumes200ApplicationJSONVolumesStatusEnum = "available"
 )
 
+func (e GetVolumes200ApplicationJSONVolumesStatusEnum) ToPointer() *GetVolumes200ApplicationJSONVolumesStatusEnum {
+	return &e
+}
+
 func (e *GetVolumes200ApplicationJSONVolumesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creating":
 		fallthrough
 	case "available":
-		*e = GetVolumes200ApplicationJSONVolumesStatusEnum(s)
+		*e = GetVolumes200ApplicationJSONVolumesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVolumes200ApplicationJSONVolumesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVolumes200ApplicationJSONVolumesStatusEnum: %v", v)
 	}
 }
 

@@ -50,12 +50,16 @@ const (
 	CreativeDeclaredAttributesEnumOmsdk10                             CreativeDeclaredAttributesEnum = "OMSDK_1_0"
 )
 
+func (e CreativeDeclaredAttributesEnum) ToPointer() *CreativeDeclaredAttributesEnum {
+	return &e
+}
+
 func (e *CreativeDeclaredAttributesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTRIBUTE_UNSPECIFIED":
 		fallthrough
 	case "IMAGE_RICH_MEDIA":
@@ -131,10 +135,10 @@ func (e *CreativeDeclaredAttributesEnum) UnmarshalJSON(data []byte) error {
 	case "RENDERING_SIZELESS_ADX":
 		fallthrough
 	case "OMSDK_1_0":
-		*e = CreativeDeclaredAttributesEnum(s)
+		*e = CreativeDeclaredAttributesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeDeclaredAttributesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeDeclaredAttributesEnum: %v", v)
 	}
 }
 
@@ -145,19 +149,23 @@ const (
 	CreativeDeclaredRestrictedCategoriesEnumAlcohol                       CreativeDeclaredRestrictedCategoriesEnum = "ALCOHOL"
 )
 
+func (e CreativeDeclaredRestrictedCategoriesEnum) ToPointer() *CreativeDeclaredRestrictedCategoriesEnum {
+	return &e
+}
+
 func (e *CreativeDeclaredRestrictedCategoriesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESTRICTED_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "ALCOHOL":
-		*e = CreativeDeclaredRestrictedCategoriesEnum(s)
+		*e = CreativeDeclaredRestrictedCategoriesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeDeclaredRestrictedCategoriesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeDeclaredRestrictedCategoriesEnum: %v", v)
 	}
 }
 
@@ -168,19 +176,23 @@ const (
 	CreativeRestrictedCategoriesEnumAlcohol                       CreativeRestrictedCategoriesEnum = "ALCOHOL"
 )
 
+func (e CreativeRestrictedCategoriesEnum) ToPointer() *CreativeRestrictedCategoriesEnum {
+	return &e
+}
+
 func (e *CreativeRestrictedCategoriesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESTRICTED_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "ALCOHOL":
-		*e = CreativeRestrictedCategoriesEnum(s)
+		*e = CreativeRestrictedCategoriesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeRestrictedCategoriesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeRestrictedCategoriesEnum: %v", v)
 	}
 }
 
@@ -228,12 +240,16 @@ const (
 	CreativeCreativeFormatEnumNative                    CreativeCreativeFormatEnum = "NATIVE"
 )
 
+func (e CreativeCreativeFormatEnum) ToPointer() *CreativeCreativeFormatEnum {
+	return &e
+}
+
 func (e *CreativeCreativeFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "HTML":
@@ -241,10 +257,10 @@ func (e *CreativeCreativeFormatEnum) UnmarshalJSON(data []byte) error {
 	case "VIDEO":
 		fallthrough
 	case "NATIVE":
-		*e = CreativeCreativeFormatEnum(s)
+		*e = CreativeCreativeFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeCreativeFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeCreativeFormatEnum: %v", v)
 	}
 }
 

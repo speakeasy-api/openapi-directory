@@ -16,12 +16,16 @@ const (
 	ListEdgeDeploymentPlansSortByEnumLastModifiedTime ListEdgeDeploymentPlansSortByEnum = "LAST_MODIFIED_TIME"
 )
 
+func (e ListEdgeDeploymentPlansSortByEnum) ToPointer() *ListEdgeDeploymentPlansSortByEnum {
+	return &e
+}
+
 func (e *ListEdgeDeploymentPlansSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NAME":
 		fallthrough
 	case "DEVICE_FLEET_NAME":
@@ -29,9 +33,9 @@ func (e *ListEdgeDeploymentPlansSortByEnum) UnmarshalJSON(data []byte) error {
 	case "CREATION_TIME":
 		fallthrough
 	case "LAST_MODIFIED_TIME":
-		*e = ListEdgeDeploymentPlansSortByEnum(s)
+		*e = ListEdgeDeploymentPlansSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEdgeDeploymentPlansSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEdgeDeploymentPlansSortByEnum: %v", v)
 	}
 }

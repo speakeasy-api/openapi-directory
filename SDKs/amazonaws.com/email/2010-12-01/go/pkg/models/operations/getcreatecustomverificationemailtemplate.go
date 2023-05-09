@@ -15,17 +15,21 @@ const (
 	GETCreateCustomVerificationEmailTemplateActionEnumCreateCustomVerificationEmailTemplate GETCreateCustomVerificationEmailTemplateActionEnum = "CreateCustomVerificationEmailTemplate"
 )
 
+func (e GETCreateCustomVerificationEmailTemplateActionEnum) ToPointer() *GETCreateCustomVerificationEmailTemplateActionEnum {
+	return &e
+}
+
 func (e *GETCreateCustomVerificationEmailTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateCustomVerificationEmailTemplate":
-		*e = GETCreateCustomVerificationEmailTemplateActionEnum(s)
+		*e = GETCreateCustomVerificationEmailTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateCustomVerificationEmailTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateCustomVerificationEmailTemplateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateCustomVerificationEmailTemplateVersionEnumTwoThousandAndTen1201 GETCreateCustomVerificationEmailTemplateVersionEnum = "2010-12-01"
 )
 
+func (e GETCreateCustomVerificationEmailTemplateVersionEnum) ToPointer() *GETCreateCustomVerificationEmailTemplateVersionEnum {
+	return &e
+}
+
 func (e *GETCreateCustomVerificationEmailTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETCreateCustomVerificationEmailTemplateVersionEnum(s)
+		*e = GETCreateCustomVerificationEmailTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateCustomVerificationEmailTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateCustomVerificationEmailTemplateVersionEnum: %v", v)
 	}
 }
 

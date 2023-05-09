@@ -16,17 +16,21 @@ const (
 	DescribeOrganizationConfigRuleStatusesXAmzTargetEnumStarlingDoveServiceDescribeOrganizationConfigRuleStatuses DescribeOrganizationConfigRuleStatusesXAmzTargetEnum = "StarlingDoveService.DescribeOrganizationConfigRuleStatuses"
 )
 
+func (e DescribeOrganizationConfigRuleStatusesXAmzTargetEnum) ToPointer() *DescribeOrganizationConfigRuleStatusesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeOrganizationConfigRuleStatusesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DescribeOrganizationConfigRuleStatuses":
-		*e = DescribeOrganizationConfigRuleStatusesXAmzTargetEnum(s)
+		*e = DescribeOrganizationConfigRuleStatusesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeOrganizationConfigRuleStatusesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeOrganizationConfigRuleStatusesXAmzTargetEnum: %v", v)
 	}
 }
 

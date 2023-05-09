@@ -16,17 +16,21 @@ const (
 	FilterLogEventsXAmzTargetEnumLogs20140328FilterLogEvents FilterLogEventsXAmzTargetEnum = "Logs_20140328.FilterLogEvents"
 )
 
+func (e FilterLogEventsXAmzTargetEnum) ToPointer() *FilterLogEventsXAmzTargetEnum {
+	return &e
+}
+
 func (e *FilterLogEventsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.FilterLogEvents":
-		*e = FilterLogEventsXAmzTargetEnum(s)
+		*e = FilterLogEventsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterLogEventsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterLogEventsXAmzTargetEnum: %v", v)
 	}
 }
 

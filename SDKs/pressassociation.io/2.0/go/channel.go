@@ -35,7 +35,10 @@ func newChannel(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Return the content of the selected channel.
 func (s *channel) GetChannel(ctx context.Context, request operations.GetChannelRequest, security operations.GetChannelSecurity) (*operations.GetChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channel/{channelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/channel/{channelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

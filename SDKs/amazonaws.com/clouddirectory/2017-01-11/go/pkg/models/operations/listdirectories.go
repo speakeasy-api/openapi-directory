@@ -18,21 +18,25 @@ const (
 	ListDirectoriesRequestBodyStateEnumDeleted  ListDirectoriesRequestBodyStateEnum = "DELETED"
 )
 
+func (e ListDirectoriesRequestBodyStateEnum) ToPointer() *ListDirectoriesRequestBodyStateEnum {
+	return &e
+}
+
 func (e *ListDirectoriesRequestBodyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "DELETED":
-		*e = ListDirectoriesRequestBodyStateEnum(s)
+		*e = ListDirectoriesRequestBodyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDirectoriesRequestBodyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDirectoriesRequestBodyStateEnum: %v", v)
 	}
 }
 

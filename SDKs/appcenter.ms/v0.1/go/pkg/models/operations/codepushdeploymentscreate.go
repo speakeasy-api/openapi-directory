@@ -26,21 +26,25 @@ const (
 	CodePushDeploymentsCreateRequestBodyLatestReleaseReleaseMethodEnumRollback CodePushDeploymentsCreateRequestBodyLatestReleaseReleaseMethodEnum = "Rollback"
 )
 
+func (e CodePushDeploymentsCreateRequestBodyLatestReleaseReleaseMethodEnum) ToPointer() *CodePushDeploymentsCreateRequestBodyLatestReleaseReleaseMethodEnum {
+	return &e
+}
+
 func (e *CodePushDeploymentsCreateRequestBodyLatestReleaseReleaseMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Upload":
 		fallthrough
 	case "Promote":
 		fallthrough
 	case "Rollback":
-		*e = CodePushDeploymentsCreateRequestBodyLatestReleaseReleaseMethodEnum(s)
+		*e = CodePushDeploymentsCreateRequestBodyLatestReleaseReleaseMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodePushDeploymentsCreateRequestBodyLatestReleaseReleaseMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CodePushDeploymentsCreateRequestBodyLatestReleaseReleaseMethodEnum: %v", v)
 	}
 }
 
@@ -100,21 +104,25 @@ const (
 	CodePushDeploymentsCreate201ApplicationJSONLatestReleaseReleaseMethodEnumRollback CodePushDeploymentsCreate201ApplicationJSONLatestReleaseReleaseMethodEnum = "Rollback"
 )
 
+func (e CodePushDeploymentsCreate201ApplicationJSONLatestReleaseReleaseMethodEnum) ToPointer() *CodePushDeploymentsCreate201ApplicationJSONLatestReleaseReleaseMethodEnum {
+	return &e
+}
+
 func (e *CodePushDeploymentsCreate201ApplicationJSONLatestReleaseReleaseMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Upload":
 		fallthrough
 	case "Promote":
 		fallthrough
 	case "Rollback":
-		*e = CodePushDeploymentsCreate201ApplicationJSONLatestReleaseReleaseMethodEnum(s)
+		*e = CodePushDeploymentsCreate201ApplicationJSONLatestReleaseReleaseMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodePushDeploymentsCreate201ApplicationJSONLatestReleaseReleaseMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CodePushDeploymentsCreate201ApplicationJSONLatestReleaseReleaseMethodEnum: %v", v)
 	}
 }
 

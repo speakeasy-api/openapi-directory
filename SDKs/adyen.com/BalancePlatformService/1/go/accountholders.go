@@ -36,7 +36,10 @@ func newAccountHolders(defaultClient, securityClient HTTPClient, serverURL, lang
 // Returns an account holder.
 func (s *accountHolders) GetAccountHoldersID(ctx context.Context, request operations.GetAccountHoldersIDRequest, security operations.GetAccountHoldersIDSecurity) (*operations.GetAccountHoldersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accountHolders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accountHolders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,7 +104,10 @@ func (s *accountHolders) GetAccountHoldersID(ctx context.Context, request operat
 // For example, to limit the page to 5 balance accounts and skip the first 10, use `/accountHolders/{id}/balanceAccounts?limit=5&offset=10`.
 func (s *accountHolders) GetAccountHoldersIDBalanceAccounts(ctx context.Context, request operations.GetAccountHoldersIDBalanceAccountsRequest, security operations.GetAccountHoldersIDBalanceAccountsSecurity) (*operations.GetAccountHoldersIDBalanceAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accountHolders/{id}/balanceAccounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accountHolders/{id}/balanceAccounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -168,7 +174,10 @@ func (s *accountHolders) GetAccountHoldersIDBalanceAccounts(ctx context.Context,
 // Updates an account holder. When updating an account holder resource, if a parameter is not provided in the request, it is left unchanged.
 func (s *accountHolders) PatchAccountHoldersID(ctx context.Context, request operations.PatchAccountHoldersIDRequest, security operations.PatchAccountHoldersIDSecurity) (*operations.PatchAccountHoldersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accountHolders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accountHolders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountHolderInput", "json")
 	if err != nil {

@@ -20,12 +20,16 @@ const (
 	GetGetUserByOrcidFormatEnumPdf  GetGetUserByOrcidFormatEnum = "pdf"
 )
 
+func (e GetGetUserByOrcidFormatEnum) ToPointer() *GetGetUserByOrcidFormatEnum {
+	return &e
+}
+
 func (e *GetGetUserByOrcidFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -37,10 +41,10 @@ func (e *GetGetUserByOrcidFormatEnum) UnmarshalJSON(data []byte) error {
 	case "jpg":
 		fallthrough
 	case "pdf":
-		*e = GetGetUserByOrcidFormatEnum(s)
+		*e = GetGetUserByOrcidFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGetUserByOrcidFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGetUserByOrcidFormatEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ListResolverRuleAssociationsXAmzTargetEnumRoute53ResolverListResolverRuleAssociations ListResolverRuleAssociationsXAmzTargetEnum = "Route53Resolver.ListResolverRuleAssociations"
 )
 
+func (e ListResolverRuleAssociationsXAmzTargetEnum) ToPointer() *ListResolverRuleAssociationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListResolverRuleAssociationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.ListResolverRuleAssociations":
-		*e = ListResolverRuleAssociationsXAmzTargetEnum(s)
+		*e = ListResolverRuleAssociationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListResolverRuleAssociationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListResolverRuleAssociationsXAmzTargetEnum: %v", v)
 	}
 }
 

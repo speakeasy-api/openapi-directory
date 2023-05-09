@@ -37,7 +37,10 @@ func newSyslog(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Agent's SYSLOG configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *syslog) ProtocolSyslogGetArgs(ctx context.Context, request operations.ProtocolSyslogGetArgsRequest) (*operations.ProtocolSyslogGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/args", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/args", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *syslog) ProtocolSyslogGetArgs(ctx context.Context, request operations.P
 // Attribute can be server , sequence , separator , hostname , timestamp
 func (s *syslog) ProtocolSyslogGetAttr(ctx context.Context, request operations.ProtocolSyslogGetAttrRequest) (*operations.ProtocolSyslogGetAttrResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/{attr}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/{attr}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *syslog) ProtocolSyslogGetAttr(ctx context.Context, request operations.P
 // Agent's SYSLOG configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *syslog) ProtocolSyslogGetConfig(ctx context.Context, request operations.ProtocolSyslogGetConfigRequest) (*operations.ProtocolSyslogGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *syslog) ProtocolSyslogGetConfig(ctx context.Context, request operations
 // Statistics of fields indicated in the headers
 func (s *syslog) ProtocolSyslogGetStatistics(ctx context.Context, request operations.ProtocolSyslogGetStatisticsRequest) (*operations.ProtocolSyslogGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/statistics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/statistics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -268,7 +280,10 @@ func (s *syslog) ProtocolSyslogGetStatsHdr(ctx context.Context) (*operations.Pro
 // Trace 1 means enabled, 0 means not
 func (s *syslog) ProtocolSyslogGetTrace(ctx context.Context, request operations.ProtocolSyslogGetTraceRequest) (*operations.ProtocolSyslogGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/trace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/trace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -314,7 +329,10 @@ func (s *syslog) ProtocolSyslogGetTrace(ctx context.Context, request operations.
 // 1 to enable, 0 to disable
 func (s *syslog) ProtocolSyslogSend(ctx context.Context, request operations.ProtocolSyslogSendRequest) (*operations.ProtocolSyslogSendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/send/{pri}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/send/{pri}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SyslogMsg", "json")
 	if err != nil {
@@ -371,7 +389,10 @@ func (s *syslog) ProtocolSyslogSend(ctx context.Context, request operations.Prot
 // Attribute can be server , sequence , separator , hostname , timestamp
 func (s *syslog) ProtocolSyslogSetAttr(ctx context.Context, request operations.ProtocolSyslogSetAttrRequest) (*operations.ProtocolSyslogSetAttrResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/set/{attr}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/set/{attr}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -418,7 +439,10 @@ func (s *syslog) ProtocolSyslogSetAttr(ctx context.Context, request operations.P
 // Agent's SYSLOG configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *syslog) ProtocolSyslogSetConfig(ctx context.Context, request operations.ProtocolSyslogSetConfigRequest) (*operations.ProtocolSyslogSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/set/config/{argument}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/set/config/{argument}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -465,7 +489,10 @@ func (s *syslog) ProtocolSyslogSetConfig(ctx context.Context, request operations
 // 1 to enable, 0 to disable
 func (s *syslog) ProtocolSyslogSetTrace(ctx context.Context, request operations.ProtocolSyslogSetTraceRequest) (*operations.ProtocolSyslogSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/set/trace/{enableOrNot}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/syslog/set/trace/{enableOrNot}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

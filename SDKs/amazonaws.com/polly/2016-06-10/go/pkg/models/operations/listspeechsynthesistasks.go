@@ -19,12 +19,16 @@ const (
 	ListSpeechSynthesisTasksStatusEnumFailed     ListSpeechSynthesisTasksStatusEnum = "failed"
 )
 
+func (e ListSpeechSynthesisTasksStatusEnum) ToPointer() *ListSpeechSynthesisTasksStatusEnum {
+	return &e
+}
+
 func (e *ListSpeechSynthesisTasksStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "scheduled":
 		fallthrough
 	case "inProgress":
@@ -32,10 +36,10 @@ func (e *ListSpeechSynthesisTasksStatusEnum) UnmarshalJSON(data []byte) error {
 	case "completed":
 		fallthrough
 	case "failed":
-		*e = ListSpeechSynthesisTasksStatusEnum(s)
+		*e = ListSpeechSynthesisTasksStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSpeechSynthesisTasksStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSpeechSynthesisTasksStatusEnum: %v", v)
 	}
 }
 

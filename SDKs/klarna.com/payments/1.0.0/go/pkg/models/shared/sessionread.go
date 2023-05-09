@@ -17,21 +17,25 @@ const (
 	SessionReadAcquiringChannelEnumTelesales SessionReadAcquiringChannelEnum = "TELESALES"
 )
 
+func (e SessionReadAcquiringChannelEnum) ToPointer() *SessionReadAcquiringChannelEnum {
+	return &e
+}
+
 func (e *SessionReadAcquiringChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ECOMMERCE":
 		fallthrough
 	case "IN_STORE":
 		fallthrough
 	case "TELESALES":
-		*e = SessionReadAcquiringChannelEnum(s)
+		*e = SessionReadAcquiringChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SessionReadAcquiringChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SessionReadAcquiringChannelEnum: %v", v)
 	}
 }
 
@@ -44,21 +48,25 @@ const (
 	SessionReadIntentEnumBuyAndTokenize SessionReadIntentEnum = "buy_and_tokenize"
 )
 
+func (e SessionReadIntentEnum) ToPointer() *SessionReadIntentEnum {
+	return &e
+}
+
 func (e *SessionReadIntentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "buy":
 		fallthrough
 	case "tokenize":
 		fallthrough
 	case "buy_and_tokenize":
-		*e = SessionReadIntentEnum(s)
+		*e = SessionReadIntentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SessionReadIntentEnum: %s", s)
+		return fmt.Errorf("invalid value for SessionReadIntentEnum: %v", v)
 	}
 }
 
@@ -70,19 +78,23 @@ const (
 	SessionReadStatusEnumIncomplete SessionReadStatusEnum = "incomplete"
 )
 
+func (e SessionReadStatusEnum) ToPointer() *SessionReadStatusEnum {
+	return &e
+}
+
 func (e *SessionReadStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "complete":
 		fallthrough
 	case "incomplete":
-		*e = SessionReadStatusEnum(s)
+		*e = SessionReadStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SessionReadStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SessionReadStatusEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	PersonaEnumViewer PersonaEnum = "VIEWER"
 )
 
+func (e PersonaEnum) ToPointer() *PersonaEnum {
+	return &e
+}
+
 func (e *PersonaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OWNER":
 		fallthrough
 	case "VIEWER":
-		*e = PersonaEnum(s)
+		*e = PersonaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PersonaEnum: %s", s)
+		return fmt.Errorf("invalid value for PersonaEnum: %v", v)
 	}
 }

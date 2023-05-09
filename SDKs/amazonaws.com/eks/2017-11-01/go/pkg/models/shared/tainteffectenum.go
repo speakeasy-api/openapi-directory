@@ -15,20 +15,24 @@ const (
 	TaintEffectEnumPreferNoSchedule TaintEffectEnum = "PREFER_NO_SCHEDULE"
 )
 
+func (e TaintEffectEnum) ToPointer() *TaintEffectEnum {
+	return &e
+}
+
 func (e *TaintEffectEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_SCHEDULE":
 		fallthrough
 	case "NO_EXECUTE":
 		fallthrough
 	case "PREFER_NO_SCHEDULE":
-		*e = TaintEffectEnum(s)
+		*e = TaintEffectEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaintEffectEnum: %s", s)
+		return fmt.Errorf("invalid value for TaintEffectEnum: %v", v)
 	}
 }

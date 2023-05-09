@@ -16,12 +16,16 @@ const (
 	RecordTypeEnumCname RecordTypeEnum = "CNAME"
 )
 
+func (e RecordTypeEnum) ToPointer() *RecordTypeEnum {
+	return &e
+}
+
 func (e *RecordTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SRV":
 		fallthrough
 	case "A":
@@ -29,9 +33,9 @@ func (e *RecordTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AAAA":
 		fallthrough
 	case "CNAME":
-		*e = RecordTypeEnum(s)
+		*e = RecordTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecordTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RecordTypeEnum: %v", v)
 	}
 }

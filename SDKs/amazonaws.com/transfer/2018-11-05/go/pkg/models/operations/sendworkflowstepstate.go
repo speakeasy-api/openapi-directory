@@ -16,17 +16,21 @@ const (
 	SendWorkflowStepStateXAmzTargetEnumTransferServiceSendWorkflowStepState SendWorkflowStepStateXAmzTargetEnum = "TransferService.SendWorkflowStepState"
 )
 
+func (e SendWorkflowStepStateXAmzTargetEnum) ToPointer() *SendWorkflowStepStateXAmzTargetEnum {
+	return &e
+}
+
 func (e *SendWorkflowStepStateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.SendWorkflowStepState":
-		*e = SendWorkflowStepStateXAmzTargetEnum(s)
+		*e = SendWorkflowStepStateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendWorkflowStepStateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SendWorkflowStepStateXAmzTargetEnum: %v", v)
 	}
 }
 

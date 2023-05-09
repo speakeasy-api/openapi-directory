@@ -6,6 +6,8 @@ package shared
 type SQLInstancesGetDiskShrinkConfigResponse struct {
 	// This is always `sql#getDiskShrinkConfig`.
 	Kind *string `json:"kind,omitempty"`
+	// Additional message to customers.
+	Message *string `json:"message,omitempty"`
 	// The minimum size to which a disk can be shrunk in GigaBytes.
 	MinimalTargetSizeGb *string `json:"minimalTargetSizeGb,omitempty"`
 }

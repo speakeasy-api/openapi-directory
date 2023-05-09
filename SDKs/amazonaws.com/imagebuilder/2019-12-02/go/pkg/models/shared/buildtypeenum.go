@@ -15,20 +15,24 @@ const (
 	BuildTypeEnumImport        BuildTypeEnum = "IMPORT"
 )
 
+func (e BuildTypeEnum) ToPointer() *BuildTypeEnum {
+	return &e
+}
+
 func (e *BuildTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_INITIATED":
 		fallthrough
 	case "SCHEDULED":
 		fallthrough
 	case "IMPORT":
-		*e = BuildTypeEnum(s)
+		*e = BuildTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuildTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BuildTypeEnum: %v", v)
 	}
 }

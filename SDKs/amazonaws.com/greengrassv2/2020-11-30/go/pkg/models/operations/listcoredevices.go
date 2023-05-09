@@ -17,19 +17,23 @@ const (
 	ListCoreDevicesStatusEnumUnhealthy ListCoreDevicesStatusEnum = "UNHEALTHY"
 )
 
+func (e ListCoreDevicesStatusEnum) ToPointer() *ListCoreDevicesStatusEnum {
+	return &e
+}
+
 func (e *ListCoreDevicesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEALTHY":
 		fallthrough
 	case "UNHEALTHY":
-		*e = ListCoreDevicesStatusEnum(s)
+		*e = ListCoreDevicesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCoreDevicesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCoreDevicesStatusEnum: %v", v)
 	}
 }
 

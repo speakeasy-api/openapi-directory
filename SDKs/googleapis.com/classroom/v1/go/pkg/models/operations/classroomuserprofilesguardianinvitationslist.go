@@ -32,21 +32,25 @@ const (
 	ClassroomUserProfilesGuardianInvitationsListStatesEnumComplete                           ClassroomUserProfilesGuardianInvitationsListStatesEnum = "COMPLETE"
 )
 
+func (e ClassroomUserProfilesGuardianInvitationsListStatesEnum) ToPointer() *ClassroomUserProfilesGuardianInvitationsListStatesEnum {
+	return &e
+}
+
 func (e *ClassroomUserProfilesGuardianInvitationsListStatesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GUARDIAN_INVITATION_STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
 		fallthrough
 	case "COMPLETE":
-		*e = ClassroomUserProfilesGuardianInvitationsListStatesEnum(s)
+		*e = ClassroomUserProfilesGuardianInvitationsListStatesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassroomUserProfilesGuardianInvitationsListStatesEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassroomUserProfilesGuardianInvitationsListStatesEnum: %v", v)
 	}
 }
 

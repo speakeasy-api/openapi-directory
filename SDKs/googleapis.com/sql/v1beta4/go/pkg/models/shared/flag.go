@@ -25,6 +25,7 @@ const (
 	FlagAppliesToEnumPostgres12                    FlagAppliesToEnum = "POSTGRES_12"
 	FlagAppliesToEnumPostgres13                    FlagAppliesToEnum = "POSTGRES_13"
 	FlagAppliesToEnumPostgres14                    FlagAppliesToEnum = "POSTGRES_14"
+	FlagAppliesToEnumPostgres15                    FlagAppliesToEnum = "POSTGRES_15"
 	FlagAppliesToEnumMysql80                       FlagAppliesToEnum = "MYSQL_8_0"
 	FlagAppliesToEnumMysql8018                     FlagAppliesToEnum = "MYSQL_8_0_18"
 	FlagAppliesToEnumMysql8026                     FlagAppliesToEnum = "MYSQL_8_0_26"
@@ -34,18 +35,26 @@ const (
 	FlagAppliesToEnumMysql8030                     FlagAppliesToEnum = "MYSQL_8_0_30"
 	FlagAppliesToEnumMysql8031                     FlagAppliesToEnum = "MYSQL_8_0_31"
 	FlagAppliesToEnumMysql8032                     FlagAppliesToEnum = "MYSQL_8_0_32"
+	FlagAppliesToEnumMysql8033                     FlagAppliesToEnum = "MYSQL_8_0_33"
+	FlagAppliesToEnumMysql8034                     FlagAppliesToEnum = "MYSQL_8_0_34"
+	FlagAppliesToEnumMysql8035                     FlagAppliesToEnum = "MYSQL_8_0_35"
+	FlagAppliesToEnumMysql8036                     FlagAppliesToEnum = "MYSQL_8_0_36"
 	FlagAppliesToEnumSqlserver2019Standard         FlagAppliesToEnum = "SQLSERVER_2019_STANDARD"
 	FlagAppliesToEnumSqlserver2019Enterprise       FlagAppliesToEnum = "SQLSERVER_2019_ENTERPRISE"
 	FlagAppliesToEnumSqlserver2019Express          FlagAppliesToEnum = "SQLSERVER_2019_EXPRESS"
 	FlagAppliesToEnumSqlserver2019Web              FlagAppliesToEnum = "SQLSERVER_2019_WEB"
 )
 
+func (e FlagAppliesToEnum) ToPointer() *FlagAppliesToEnum {
+	return &e
+}
+
 func (e *FlagAppliesToEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_DATABASE_VERSION_UNSPECIFIED":
 		fallthrough
 	case "MYSQL_5_1":
@@ -76,6 +85,8 @@ func (e *FlagAppliesToEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "POSTGRES_14":
 		fallthrough
+	case "POSTGRES_15":
+		fallthrough
 	case "MYSQL_8_0":
 		fallthrough
 	case "MYSQL_8_0_18":
@@ -94,6 +105,14 @@ func (e *FlagAppliesToEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "MYSQL_8_0_32":
 		fallthrough
+	case "MYSQL_8_0_33":
+		fallthrough
+	case "MYSQL_8_0_34":
+		fallthrough
+	case "MYSQL_8_0_35":
+		fallthrough
+	case "MYSQL_8_0_36":
+		fallthrough
 	case "SQLSERVER_2019_STANDARD":
 		fallthrough
 	case "SQLSERVER_2019_ENTERPRISE":
@@ -101,10 +120,10 @@ func (e *FlagAppliesToEnum) UnmarshalJSON(data []byte) error {
 	case "SQLSERVER_2019_EXPRESS":
 		fallthrough
 	case "SQLSERVER_2019_WEB":
-		*e = FlagAppliesToEnum(s)
+		*e = FlagAppliesToEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlagAppliesToEnum: %s", s)
+		return fmt.Errorf("invalid value for FlagAppliesToEnum: %v", v)
 	}
 }
 
@@ -122,12 +141,16 @@ const (
 	FlagTypeEnumRepeatedString         FlagTypeEnum = "REPEATED_STRING"
 )
 
+func (e FlagTypeEnum) ToPointer() *FlagTypeEnum {
+	return &e
+}
+
 func (e *FlagTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_FLAG_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BOOLEAN":
@@ -143,10 +166,10 @@ func (e *FlagTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FLOAT":
 		fallthrough
 	case "REPEATED_STRING":
-		*e = FlagTypeEnum(s)
+		*e = FlagTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlagTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FlagTypeEnum: %v", v)
 	}
 }
 

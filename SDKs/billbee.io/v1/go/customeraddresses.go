@@ -330,7 +330,10 @@ func (s *customerAddresses) CustomerAddressesGetAll(ctx context.Context, request
 // CustomerAddressesGetOne - Queries a single customer address by id
 func (s *customerAddresses) CustomerAddressesGetOne(ctx context.Context, request operations.CustomerAddressesGetOneRequest) (*operations.CustomerAddressesGetOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -395,7 +398,10 @@ func (s *customerAddresses) CustomerAddressesGetOne(ctx context.Context, request
 // CustomerAddressesUpdateForm - Updates a customer address by id
 func (s *customerAddresses) CustomerAddressesUpdateForm(ctx context.Context, request operations.CustomerAddressesUpdateFormRequest) (*operations.CustomerAddressesUpdateFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel", "form")
 	if err != nil {
@@ -470,7 +476,10 @@ func (s *customerAddresses) CustomerAddressesUpdateForm(ctx context.Context, req
 // CustomerAddressesUpdateJSON - Updates a customer address by id
 func (s *customerAddresses) CustomerAddressesUpdateJSON(ctx context.Context, request operations.CustomerAddressesUpdateJSONRequest) (*operations.CustomerAddressesUpdateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel", "json")
 	if err != nil {
@@ -545,7 +554,10 @@ func (s *customerAddresses) CustomerAddressesUpdateJSON(ctx context.Context, req
 // CustomerAddressesUpdateRaw - Updates a customer address by id
 func (s *customerAddresses) CustomerAddressesUpdateRaw(ctx context.Context, request operations.CustomerAddressesUpdateRawRequest) (*operations.CustomerAddressesUpdateRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/customer-addresses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

@@ -56,21 +56,25 @@ const (
 	PostReaderCommentsEnumDontAllowHideExisting PostReaderCommentsEnum = "DONT_ALLOW_HIDE_EXISTING"
 )
 
+func (e PostReaderCommentsEnum) ToPointer() *PostReaderCommentsEnum {
+	return &e
+}
+
 func (e *PostReaderCommentsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOW":
 		fallthrough
 	case "DONT_ALLOW_SHOW_EXISTING":
 		fallthrough
 	case "DONT_ALLOW_HIDE_EXISTING":
-		*e = PostReaderCommentsEnum(s)
+		*e = PostReaderCommentsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostReaderCommentsEnum: %s", s)
+		return fmt.Errorf("invalid value for PostReaderCommentsEnum: %v", v)
 	}
 }
 
@@ -94,12 +98,16 @@ const (
 	PostStatusEnumSoftTrashed PostStatusEnum = "SOFT_TRASHED"
 )
 
+func (e PostStatusEnum) ToPointer() *PostStatusEnum {
+	return &e
+}
+
 func (e *PostStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "DRAFT":
@@ -107,10 +115,10 @@ func (e *PostStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SCHEDULED":
 		fallthrough
 	case "SOFT_TRASHED":
-		*e = PostStatusEnum(s)
+		*e = PostStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostStatusEnum: %v", v)
 	}
 }
 

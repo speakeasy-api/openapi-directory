@@ -18,12 +18,16 @@ const (
 	GoogleAdsSearchads360V0CommonTargetImpressionShareLocationEnumAbsoluteTopOfPage GoogleAdsSearchads360V0CommonTargetImpressionShareLocationEnum = "ABSOLUTE_TOP_OF_PAGE"
 )
 
+func (e GoogleAdsSearchads360V0CommonTargetImpressionShareLocationEnum) ToPointer() *GoogleAdsSearchads360V0CommonTargetImpressionShareLocationEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonTargetImpressionShareLocationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -33,10 +37,10 @@ func (e *GoogleAdsSearchads360V0CommonTargetImpressionShareLocationEnum) Unmarsh
 	case "TOP_OF_PAGE":
 		fallthrough
 	case "ABSOLUTE_TOP_OF_PAGE":
-		*e = GoogleAdsSearchads360V0CommonTargetImpressionShareLocationEnum(s)
+		*e = GoogleAdsSearchads360V0CommonTargetImpressionShareLocationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonTargetImpressionShareLocationEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonTargetImpressionShareLocationEnum: %v", v)
 	}
 }
 

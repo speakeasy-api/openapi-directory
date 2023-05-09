@@ -129,7 +129,10 @@ func (s *fields) FetchAllFields(ctx context.Context, request operations.FetchAll
 // Retrieve a given **Field** by ID.
 func (s *fields) FetchFieldByID(ctx context.Context, request operations.FetchFieldByIDRequest, security operations.FetchFieldByIDSecurity) (*operations.FetchFieldByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/fields/{fieldId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/fields/{fieldId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

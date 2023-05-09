@@ -16,17 +16,21 @@ const (
 	ListLogSubscriptionsXAmzTargetEnumDirectoryService20150416ListLogSubscriptions ListLogSubscriptionsXAmzTargetEnum = "DirectoryService_20150416.ListLogSubscriptions"
 )
 
+func (e ListLogSubscriptionsXAmzTargetEnum) ToPointer() *ListLogSubscriptionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListLogSubscriptionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.ListLogSubscriptions":
-		*e = ListLogSubscriptionsXAmzTargetEnum(s)
+		*e = ListLogSubscriptionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLogSubscriptionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLogSubscriptionsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -89,7 +89,10 @@ func (s *datacenters) GetDatacenters(ctx context.Context, request operations.Get
 // Returns a specific Datacenter object.
 func (s *datacenters) GetDatacentersID(ctx context.Context, request operations.GetDatacentersIDRequest) (*operations.GetDatacentersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datacenters/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/datacenters/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

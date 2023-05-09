@@ -9,23 +9,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum = "429"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13TypeEnumRateLimitedError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -57,23 +65,27 @@ type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13 struct {
 	Type       SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnumFourHundredAndThree SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnum = "403"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnumFourHundredAndThree SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -83,17 +95,21 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12TypeEnumPrivateFeatureError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -104,23 +120,27 @@ type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12 struct {
 	Type   SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnumFourHundredAndFour SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnum = "404"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnumFourHundredAndFour SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11TypeEnumObjectNotFoundError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -151,23 +175,27 @@ type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11 struct {
 	Type   SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnumFourHundred SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnum = "400"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnumFourHundred SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -177,17 +205,21 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10TypeEnumMalformedRequestError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -198,23 +230,27 @@ type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10 struct {
 	Type   SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnumFourHundred SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnum = "400"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnumFourHundred SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -224,46 +260,54 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9TypeEnumInvalidParametersError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                                   `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                                   `json:"errors"`
 	Status SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                                     `json:"title"`
 	Type   SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnumFourHundredAndNine SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnum = "409"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnumFourHundredAndNine SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8TypeEnumInvalidOperationError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -294,23 +342,27 @@ type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8 struct {
 	Type   SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnumFourHundredAndOne SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnum = "401"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnumFourHundredAndOne SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7TypeEnumInvalidAPIKeyError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -341,23 +397,27 @@ type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7 struct {
 	Type   SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnumFiveHundred SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum = "500"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnumFiveHundred SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -367,17 +427,21 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6TypeEnumInternalServerError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -388,23 +452,27 @@ type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6 struct {
 	Type   SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnumFourHundredAndThree SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnum = "403"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnumFourHundredAndThree SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -414,17 +482,21 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5TypeEnumInsufficientPermissionsError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -435,23 +507,27 @@ type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5 struct {
 	Type   SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnum = "422"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -461,17 +537,21 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -482,23 +562,27 @@ type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4 struct {
 	Type   SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnumFourHundredAndNine SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnum = "409"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnumFourHundredAndNine SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -508,17 +592,21 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3TypeEnumIdempotencyConflictError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -529,23 +617,27 @@ type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3 struct {
 	Type   SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnumFourHundredAndThree SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnum = "403"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnumFourHundredAndThree SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -555,17 +647,21 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2TypeEnumEnvironmentMismatchError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -576,23 +672,27 @@ type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2 struct {
 	Type   SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnum string
+type SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnum int64
 
 const (
-	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnumFourHundredAndFour SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnum = "404"
+	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnumFourHundredAndFour SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -602,17 +702,21 @@ const (
 	SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1TypeEnum) ToPointer() *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1TypeEnum(s)
+		*e = SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

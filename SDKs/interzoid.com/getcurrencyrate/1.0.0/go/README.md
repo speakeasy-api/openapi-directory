@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getcurrency
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetcurrencyrateRequest{
+    ctx := context.Background()
+    res, err := s.CurrencyRates.Getcurrencyrate(ctx, operations.GetcurrencyrateRequest{
         License: "corrupti",
         Symbol: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.CurrencyRates.Getcurrencyrate(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### CurrencyRates
+### [CurrencyRates](docs/currencyrates/README.md)
 
-* `Getcurrencyrate` - Gets a foreign currency rate for one US Dollar
+* [Getcurrencyrate](docs/currencyrates/README.md#getcurrencyrate) - Gets a foreign currency rate for one US Dollar
 <!-- End SDK Available Operations -->
 
 ### Maturity

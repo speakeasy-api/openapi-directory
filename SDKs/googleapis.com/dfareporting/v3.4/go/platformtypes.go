@@ -34,7 +34,10 @@ func newPlatformTypes(defaultClient, securityClient HTTPClient, serverURL, langu
 // DfareportingPlatformTypesGet - Gets one platform type by ID.
 func (s *platformTypes) DfareportingPlatformTypesGet(ctx context.Context, request operations.DfareportingPlatformTypesGetRequest, security operations.DfareportingPlatformTypesGetSecurity) (*operations.DfareportingPlatformTypesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/platformTypes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/platformTypes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *platformTypes) DfareportingPlatformTypesGet(ctx context.Context, reques
 // DfareportingPlatformTypesList - Retrieves a list of platform types.
 func (s *platformTypes) DfareportingPlatformTypesList(ctx context.Context, request operations.DfareportingPlatformTypesListRequest, security operations.DfareportingPlatformTypesListSecurity) (*operations.DfareportingPlatformTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/platformTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/platformTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

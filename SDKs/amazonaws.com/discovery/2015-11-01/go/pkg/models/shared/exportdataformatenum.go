@@ -14,18 +14,22 @@ const (
 	ExportDataFormatEnumGraphml ExportDataFormatEnum = "GRAPHML"
 )
 
+func (e ExportDataFormatEnum) ToPointer() *ExportDataFormatEnum {
+	return &e
+}
+
 func (e *ExportDataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
 		fallthrough
 	case "GRAPHML":
-		*e = ExportDataFormatEnum(s)
+		*e = ExportDataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportDataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportDataFormatEnum: %v", v)
 	}
 }

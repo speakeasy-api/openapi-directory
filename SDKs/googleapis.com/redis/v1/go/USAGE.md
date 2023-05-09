@@ -2,106 +2,104 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.RedisProjectsLocationsInstancesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.RedisProjectsLocationsInstancesCreate(ctx, operations.RedisProjectsLocationsInstancesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         InstanceInput: &shared.InstanceInput{
-            AlternativeLocationID: "provident",
-            AuthEnabled: false,
-            AuthorizedNetwork: "distinctio",
+            AlternativeLocationID: sdk.String("provident"),
+            AuthEnabled: sdk.Bool(false),
+            AuthorizedNetwork: sdk.String("distinctio"),
             AvailableMaintenanceVersions: []string{
                 "unde",
                 "nulla",
                 "corrupti",
                 "illum",
             },
-            ConnectMode: "DIRECT_PEERING",
-            CustomerManagedKey: "error",
-            DisplayName: "deserunt",
+            ConnectMode: shared.InstanceConnectModeEnumDirectPeering.ToPointer(),
+            CustomerManagedKey: sdk.String("error"),
+            DisplayName: sdk.String("deserunt"),
             Labels: map[string]string{
                 "iure": "magnam",
                 "debitis": "ipsa",
             },
-            LocationID: "delectus",
+            LocationID: sdk.String("delectus"),
             MaintenancePolicy: &shared.MaintenancePolicyInput{
-                Description: "tempora",
+                Description: sdk.String("tempora"),
                 WeeklyMaintenanceWindow: []shared.WeeklyMaintenanceWindowInput{
                     shared.WeeklyMaintenanceWindowInput{
-                        Day: "WEDNESDAY",
+                        Day: shared.WeeklyMaintenanceWindowDayEnumWednesday.ToPointer(),
                         StartTime: &shared.TimeOfDay{
-                            Hours: 791725,
-                            Minutes: 812169,
-                            Nanos: 528895,
-                            Seconds: 479977,
+                            Hours: sdk.Int(791725),
+                            Minutes: sdk.Int(812169),
+                            Nanos: sdk.Int(528895),
+                            Seconds: sdk.Int(479977),
                         },
                     },
                     shared.WeeklyMaintenanceWindowInput{
-                        Day: "THURSDAY",
+                        Day: shared.WeeklyMaintenanceWindowDayEnumThursday.ToPointer(),
                         StartTime: &shared.TimeOfDay{
-                            Hours: 392785,
-                            Minutes: 925597,
-                            Nanos: 836079,
-                            Seconds: 71036,
+                            Hours: sdk.Int(392785),
+                            Minutes: sdk.Int(925597),
+                            Nanos: sdk.Int(836079),
+                            Seconds: sdk.Int(71036),
                         },
                     },
                 },
             },
             MaintenanceSchedule: &shared.MaintenanceScheduleInput{
-                CanReschedule: false,
+                CanReschedule: sdk.Bool(false),
             },
-            MaintenanceVersion: "quis",
-            MemorySizeGb: 87129,
-            Name: "deserunt",
+            MaintenanceVersion: sdk.String("quis"),
+            MemorySizeGb: sdk.Int(87129),
+            Name: sdk.String("Christopher Hills"),
             PersistenceConfig: &shared.PersistenceConfigInput{
-                PersistenceMode: "PERSISTENCE_MODE_UNSPECIFIED",
-                RdbSnapshotPeriod: "ONE_HOUR",
-                RdbSnapshotStartTime: "repellendus",
+                PersistenceMode: shared.PersistenceConfigPersistenceModeEnumRdb.ToPointer(),
+                RdbSnapshotPeriod: shared.PersistenceConfigRdbSnapshotPeriodEnumSnapshotPeriodUnspecified.ToPointer(),
+                RdbSnapshotStartTime: sdk.String("at"),
             },
-            ReadReplicasMode: "READ_REPLICAS_ENABLED",
+            ReadReplicasMode: shared.InstanceReadReplicasModeEnumReadReplicasEnabled.ToPointer(),
             RedisConfigs: map[string]string{
-                "odit": "at",
-                "at": "maiores",
                 "molestiae": "quod",
                 "quod": "esse",
+                "totam": "porro",
+                "dolorum": "dicta",
             },
-            RedisVersion: "totam",
-            ReplicaCount: 780529,
-            ReservedIPRange: "dolorum",
-            SecondaryIPRange: "dicta",
+            RedisVersion: sdk.String("nam"),
+            ReplicaCount: sdk.Int(639921),
+            ReservedIPRange: sdk.String("occaecati"),
+            SecondaryIPRange: sdk.String("fugit"),
             SuspensionReasons: []shared.InstanceSuspensionReasonsEnum{
-                "CUSTOMER_MANAGED_KEY_ISSUE",
-                "CUSTOMER_MANAGED_KEY_ISSUE",
-                "SUSPENSION_REASON_UNSPECIFIED",
+                shared.InstanceSuspensionReasonsEnumCustomerManagedKeyIssue,
+                shared.InstanceSuspensionReasonsEnumCustomerManagedKeyIssue,
+                shared.InstanceSuspensionReasonsEnumCustomerManagedKeyIssue,
             },
-            Tier: "BASIC",
-            TransitEncryptionMode: "DISABLED",
+            Tier: shared.InstanceTierEnumTierUnspecified.ToPointer(),
+            TransitEncryptionMode: shared.InstanceTransitEncryptionModeEnumServerAuthentication.ToPointer(),
         },
-        AccessToken: "optio",
-        Alt: "media",
-        Callback: "beatae",
-        Fields: "commodi",
-        InstanceID: "molestiae",
-        Key: "modi",
-        OauthToken: "qui",
-        Parent: "impedit",
-        PrettyPrint: false,
-        QuotaUser: "cum",
-        UploadType: "esse",
-        UploadProtocol: "ipsum",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.RedisProjectsLocationsInstancesCreate(ctx, req, operations.RedisProjectsLocationsInstancesCreateSecurity{
+        AccessToken: sdk.String("molestiae"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("qui"),
+        Fields: sdk.String("impedit"),
+        InstanceID: sdk.String("cum"),
+        Key: sdk.String("esse"),
+        OauthToken: sdk.String("ipsum"),
+        Parent: "excepturi",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("aspernatur"),
+        UploadType: sdk.String("perferendis"),
+        UploadProtocol: sdk.String("ad"),
+    }, operations.RedisProjectsLocationsInstancesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

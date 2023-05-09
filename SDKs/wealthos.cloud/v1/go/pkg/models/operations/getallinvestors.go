@@ -21,19 +21,23 @@ const (
 	GetAllInvestorsSortEnumDesc GetAllInvestorsSortEnum = "desc"
 )
 
+func (e GetAllInvestorsSortEnum) ToPointer() *GetAllInvestorsSortEnum {
+	return &e
+}
+
 func (e *GetAllInvestorsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetAllInvestorsSortEnum(s)
+		*e = GetAllInvestorsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllInvestorsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllInvestorsSortEnum: %v", v)
 	}
 }
 
@@ -114,19 +118,23 @@ const (
 	GetAllInvestors200ApplicationJSONRootTypeForInvestorDealingStatusEnumActive   GetAllInvestors200ApplicationJSONRootTypeForInvestorDealingStatusEnum = "active"
 )
 
+func (e GetAllInvestors200ApplicationJSONRootTypeForInvestorDealingStatusEnum) ToPointer() *GetAllInvestors200ApplicationJSONRootTypeForInvestorDealingStatusEnum {
+	return &e
+}
+
 func (e *GetAllInvestors200ApplicationJSONRootTypeForInvestorDealingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inactive":
 		fallthrough
 	case "active":
-		*e = GetAllInvestors200ApplicationJSONRootTypeForInvestorDealingStatusEnum(s)
+		*e = GetAllInvestors200ApplicationJSONRootTypeForInvestorDealingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllInvestors200ApplicationJSONRootTypeForInvestorDealingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllInvestors200ApplicationJSONRootTypeForInvestorDealingStatusEnum: %v", v)
 	}
 }
 
@@ -145,12 +153,16 @@ const (
 	GetAllInvestors200ApplicationJSONRootTypeForInvestorEmploymentStatusEnumOther                   GetAllInvestors200ApplicationJSONRootTypeForInvestorEmploymentStatusEnum = "other"
 )
 
+func (e GetAllInvestors200ApplicationJSONRootTypeForInvestorEmploymentStatusEnum) ToPointer() *GetAllInvestors200ApplicationJSONRootTypeForInvestorEmploymentStatusEnum {
+	return &e
+}
+
 func (e *GetAllInvestors200ApplicationJSONRootTypeForInvestorEmploymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "employed":
 		fallthrough
 	case "self_employed":
@@ -168,10 +180,10 @@ func (e *GetAllInvestors200ApplicationJSONRootTypeForInvestorEmploymentStatusEnu
 	case "caring_for_a_person_under_16":
 		fallthrough
 	case "other":
-		*e = GetAllInvestors200ApplicationJSONRootTypeForInvestorEmploymentStatusEnum(s)
+		*e = GetAllInvestors200ApplicationJSONRootTypeForInvestorEmploymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllInvestors200ApplicationJSONRootTypeForInvestorEmploymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllInvestors200ApplicationJSONRootTypeForInvestorEmploymentStatusEnum: %v", v)
 	}
 }
 
@@ -218,12 +230,16 @@ const (
 	GetAllInvestors200ApplicationJSONRootTypeForInvestorKycAmlStatusEnumNotStarted     GetAllInvestors200ApplicationJSONRootTypeForInvestorKycAmlStatusEnum = "not_started"
 )
 
+func (e GetAllInvestors200ApplicationJSONRootTypeForInvestorKycAmlStatusEnum) ToPointer() *GetAllInvestors200ApplicationJSONRootTypeForInvestorKycAmlStatusEnum {
+	return &e
+}
+
 func (e *GetAllInvestors200ApplicationJSONRootTypeForInvestorKycAmlStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "kyc_failed_error":
@@ -233,10 +249,10 @@ func (e *GetAllInvestors200ApplicationJSONRootTypeForInvestorKycAmlStatusEnum) U
 	case "clear":
 		fallthrough
 	case "not_started":
-		*e = GetAllInvestors200ApplicationJSONRootTypeForInvestorKycAmlStatusEnum(s)
+		*e = GetAllInvestors200ApplicationJSONRootTypeForInvestorKycAmlStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllInvestors200ApplicationJSONRootTypeForInvestorKycAmlStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllInvestors200ApplicationJSONRootTypeForInvestorKycAmlStatusEnum: %v", v)
 	}
 }
 
@@ -252,12 +268,16 @@ const (
 	GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnumIp16     GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum = "ip16"
 )
 
+func (e GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum) ToPointer() *GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum {
+	return &e
+}
+
 func (e *GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "primary":
 		fallthrough
 	case "enhanced":
@@ -271,10 +291,10 @@ func (e *GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetail
 	case "fp16":
 		fallthrough
 	case "ip16":
-		*e = GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum(s)
+		*e = GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum: %v", v)
 	}
 }
 
@@ -299,12 +319,16 @@ const (
 	GetAllInvestors200ApplicationJSONRootTypeForInvestorStatusEnumActive     GetAllInvestors200ApplicationJSONRootTypeForInvestorStatusEnum = "active"
 )
 
+func (e GetAllInvestors200ApplicationJSONRootTypeForInvestorStatusEnum) ToPointer() *GetAllInvestors200ApplicationJSONRootTypeForInvestorStatusEnum {
+	return &e
+}
+
 func (e *GetAllInvestors200ApplicationJSONRootTypeForInvestorStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "kyc_pending":
 		fallthrough
 	case "kyc_failed":
@@ -312,10 +336,10 @@ func (e *GetAllInvestors200ApplicationJSONRootTypeForInvestorStatusEnum) Unmarsh
 	case "inactive":
 		fallthrough
 	case "active":
-		*e = GetAllInvestors200ApplicationJSONRootTypeForInvestorStatusEnum(s)
+		*e = GetAllInvestors200ApplicationJSONRootTypeForInvestorStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllInvestors200ApplicationJSONRootTypeForInvestorStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllInvestors200ApplicationJSONRootTypeForInvestorStatusEnum: %v", v)
 	}
 }
 
@@ -329,12 +353,16 @@ const (
 	GetAllInvestors200ApplicationJSONRootTypeForInvestorTaxResidenceEnumGbWls GetAllInvestors200ApplicationJSONRootTypeForInvestorTaxResidenceEnum = "GB-WLS"
 )
 
+func (e GetAllInvestors200ApplicationJSONRootTypeForInvestorTaxResidenceEnum) ToPointer() *GetAllInvestors200ApplicationJSONRootTypeForInvestorTaxResidenceEnum {
+	return &e
+}
+
 func (e *GetAllInvestors200ApplicationJSONRootTypeForInvestorTaxResidenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GB-ENG":
 		fallthrough
 	case "GB-NIR":
@@ -342,10 +370,10 @@ func (e *GetAllInvestors200ApplicationJSONRootTypeForInvestorTaxResidenceEnum) U
 	case "GB-SCT":
 		fallthrough
 	case "GB-WLS":
-		*e = GetAllInvestors200ApplicationJSONRootTypeForInvestorTaxResidenceEnum(s)
+		*e = GetAllInvestors200ApplicationJSONRootTypeForInvestorTaxResidenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllInvestors200ApplicationJSONRootTypeForInvestorTaxResidenceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllInvestors200ApplicationJSONRootTypeForInvestorTaxResidenceEnum: %v", v)
 	}
 }
 

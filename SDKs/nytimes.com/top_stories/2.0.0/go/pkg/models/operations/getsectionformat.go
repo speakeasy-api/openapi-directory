@@ -17,19 +17,23 @@ const (
 	GetSectionFormatFormatEnumJsonp GetSectionFormatFormatEnum = "jsonp"
 )
 
+func (e GetSectionFormatFormatEnum) ToPointer() *GetSectionFormatFormatEnum {
+	return &e
+}
+
 func (e *GetSectionFormatFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "jsonp":
-		*e = GetSectionFormatFormatEnum(s)
+		*e = GetSectionFormatFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSectionFormatFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSectionFormatFormatEnum: %v", v)
 	}
 }
 
@@ -65,12 +69,16 @@ const (
 	GetSectionFormatSectionEnumInsider      GetSectionFormatSectionEnum = "insider"
 )
 
+func (e GetSectionFormatSectionEnum) ToPointer() *GetSectionFormatSectionEnum {
+	return &e
+}
+
 func (e *GetSectionFormatSectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "home":
 		fallthrough
 	case "opinion":
@@ -122,10 +130,10 @@ func (e *GetSectionFormatSectionEnum) UnmarshalJSON(data []byte) error {
 	case "obituaries":
 		fallthrough
 	case "insider":
-		*e = GetSectionFormatSectionEnum(s)
+		*e = GetSectionFormatSectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSectionFormatSectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSectionFormatSectionEnum: %v", v)
 	}
 }
 

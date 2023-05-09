@@ -41,12 +41,16 @@ const (
 	YoutubeLiveBroadcastsListBroadcastStatusEnumCompleted                        YoutubeLiveBroadcastsListBroadcastStatusEnum = "completed"
 )
 
+func (e YoutubeLiveBroadcastsListBroadcastStatusEnum) ToPointer() *YoutubeLiveBroadcastsListBroadcastStatusEnum {
+	return &e
+}
+
 func (e *YoutubeLiveBroadcastsListBroadcastStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "broadcastStatusFilterUnspecified":
 		fallthrough
 	case "all":
@@ -56,10 +60,10 @@ func (e *YoutubeLiveBroadcastsListBroadcastStatusEnum) UnmarshalJSON(data []byte
 	case "upcoming":
 		fallthrough
 	case "completed":
-		*e = YoutubeLiveBroadcastsListBroadcastStatusEnum(s)
+		*e = YoutubeLiveBroadcastsListBroadcastStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeLiveBroadcastsListBroadcastStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeLiveBroadcastsListBroadcastStatusEnum: %v", v)
 	}
 }
 
@@ -73,12 +77,16 @@ const (
 	YoutubeLiveBroadcastsListBroadcastTypeEnumPersistent                     YoutubeLiveBroadcastsListBroadcastTypeEnum = "persistent"
 )
 
+func (e YoutubeLiveBroadcastsListBroadcastTypeEnum) ToPointer() *YoutubeLiveBroadcastsListBroadcastTypeEnum {
+	return &e
+}
+
 func (e *YoutubeLiveBroadcastsListBroadcastTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "broadcastTypeFilterUnspecified":
 		fallthrough
 	case "all":
@@ -86,10 +94,10 @@ func (e *YoutubeLiveBroadcastsListBroadcastTypeEnum) UnmarshalJSON(data []byte) 
 	case "event":
 		fallthrough
 	case "persistent":
-		*e = YoutubeLiveBroadcastsListBroadcastTypeEnum(s)
+		*e = YoutubeLiveBroadcastsListBroadcastTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeLiveBroadcastsListBroadcastTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeLiveBroadcastsListBroadcastTypeEnum: %v", v)
 	}
 }
 

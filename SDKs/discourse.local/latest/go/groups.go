@@ -34,7 +34,10 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // AddGroupMembers - Add group members
 func (s *groups) AddGroupMembers(ctx context.Context, request operations.AddGroupMembersRequest) (*operations.AddGroupMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/members.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/members.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -136,7 +139,10 @@ func (s *groups) CreateGroup(ctx context.Context, request operations.CreateGroup
 // DeleteGroup - Delete a group
 func (s *groups) DeleteGroup(ctx context.Context, request operations.DeleteGroupRequest) (*operations.DeleteGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/groups/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/groups/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -180,7 +186,10 @@ func (s *groups) DeleteGroup(ctx context.Context, request operations.DeleteGroup
 // GetGroup - Get a group
 func (s *groups) GetGroup(ctx context.Context, request operations.GetGroupRequest) (*operations.GetGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +233,10 @@ func (s *groups) GetGroup(ctx context.Context, request operations.GetGroupReques
 // ListGroupMembers - List group members
 func (s *groups) ListGroupMembers(ctx context.Context, request operations.ListGroupMembersRequest) (*operations.ListGroupMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/members.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/members.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -312,7 +324,10 @@ func (s *groups) ListGroups(ctx context.Context) (*operations.ListGroupsResponse
 // RemoveGroupMembers - Remove group members
 func (s *groups) RemoveGroupMembers(ctx context.Context, request operations.RemoveGroupMembersRequest) (*operations.RemoveGroupMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/members.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/members.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -363,7 +378,10 @@ func (s *groups) RemoveGroupMembers(ctx context.Context, request operations.Remo
 // UpdateGroup - Update a group
 func (s *groups) UpdateGroup(ctx context.Context, request operations.UpdateGroupRequest) (*operations.UpdateGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

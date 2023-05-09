@@ -22,12 +22,16 @@ const (
 	ParameterInEnumFile   ParameterInEnum = "file"
 )
 
+func (e ParameterInEnum) ToPointer() *ParameterInEnum {
+	return &e
+}
+
 func (e *ParameterInEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "path":
 		fallthrough
 	case "header":
@@ -37,9 +41,9 @@ func (e *ParameterInEnum) UnmarshalJSON(data []byte) error {
 	case "body":
 		fallthrough
 	case "file":
-		*e = ParameterInEnum(s)
+		*e = ParameterInEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParameterInEnum: %s", s)
+		return fmt.Errorf("invalid value for ParameterInEnum: %v", v)
 	}
 }

@@ -371,7 +371,10 @@ func (s *name) GetNamesSearch(ctx context.Context, request operations.GetNamesSe
 // Get information about the geographical name with the specified nameId.
 func (s *name) GetNamesNameIDOutputFormat(ctx context.Context, request operations.GetNamesNameIDOutputFormatRequest) (*operations.GetNamesNameIDOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/names/{nameId}.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/names/{nameId}.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

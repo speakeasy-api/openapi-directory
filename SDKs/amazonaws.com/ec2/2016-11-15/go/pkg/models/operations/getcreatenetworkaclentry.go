@@ -15,17 +15,21 @@ const (
 	GETCreateNetworkACLEntryActionEnumCreateNetworkACLEntry GETCreateNetworkACLEntryActionEnum = "CreateNetworkAclEntry"
 )
 
+func (e GETCreateNetworkACLEntryActionEnum) ToPointer() *GETCreateNetworkACLEntryActionEnum {
+	return &e
+}
+
 func (e *GETCreateNetworkACLEntryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateNetworkAclEntry":
-		*e = GETCreateNetworkACLEntryActionEnum(s)
+		*e = GETCreateNetworkACLEntryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateNetworkACLEntryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateNetworkACLEntryActionEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	GETCreateNetworkACLEntryRuleActionEnumDeny  GETCreateNetworkACLEntryRuleActionEnum = "deny"
 )
 
+func (e GETCreateNetworkACLEntryRuleActionEnum) ToPointer() *GETCreateNetworkACLEntryRuleActionEnum {
+	return &e
+}
+
 func (e *GETCreateNetworkACLEntryRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "allow":
 		fallthrough
 	case "deny":
-		*e = GETCreateNetworkACLEntryRuleActionEnum(s)
+		*e = GETCreateNetworkACLEntryRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateNetworkACLEntryRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateNetworkACLEntryRuleActionEnum: %v", v)
 	}
 }
 
@@ -72,17 +80,21 @@ const (
 	GETCreateNetworkACLEntryVersionEnumTwoThousandAndSixteen1115 GETCreateNetworkACLEntryVersionEnum = "2016-11-15"
 )
 
+func (e GETCreateNetworkACLEntryVersionEnum) ToPointer() *GETCreateNetworkACLEntryVersionEnum {
+	return &e
+}
+
 func (e *GETCreateNetworkACLEntryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCreateNetworkACLEntryVersionEnum(s)
+		*e = GETCreateNetworkACLEntryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateNetworkACLEntryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateNetworkACLEntryVersionEnum: %v", v)
 	}
 }
 

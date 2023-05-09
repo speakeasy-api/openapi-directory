@@ -3,16 +3,51 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
+
+// ListPermissionsRequestBodyPermissionTypeEnum - <p>Specifies that you want to list only permissions of this type:</p> <ul> <li> <p> <code>AWS</code> – returns only Amazon Web Services managed permissions.</p> </li> <li> <p> <code>LOCAL</code> – returns only customer managed permissions</p> </li> <li> <p> <code>ALL</code> – returns both Amazon Web Services managed permissions and customer managed permissions.</p> </li> </ul> <p>If you don't specify this parameter, the default is <code>All</code>.</p>
+type ListPermissionsRequestBodyPermissionTypeEnum string
+
+const (
+	ListPermissionsRequestBodyPermissionTypeEnumAll             ListPermissionsRequestBodyPermissionTypeEnum = "ALL"
+	ListPermissionsRequestBodyPermissionTypeEnumAwsManaged      ListPermissionsRequestBodyPermissionTypeEnum = "AWS_MANAGED"
+	ListPermissionsRequestBodyPermissionTypeEnumCustomerManaged ListPermissionsRequestBodyPermissionTypeEnum = "CUSTOMER_MANAGED"
+)
+
+func (e ListPermissionsRequestBodyPermissionTypeEnum) ToPointer() *ListPermissionsRequestBodyPermissionTypeEnum {
+	return &e
+}
+
+func (e *ListPermissionsRequestBodyPermissionTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "ALL":
+		fallthrough
+	case "AWS_MANAGED":
+		fallthrough
+	case "CUSTOMER_MANAGED":
+		*e = ListPermissionsRequestBodyPermissionTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ListPermissionsRequestBodyPermissionTypeEnum: %v", v)
+	}
+}
 
 type ListPermissionsRequestBody struct {
 	// Specifies the total number of results that you want included on each page of the response. If you do not include this parameter, it defaults to a value that is specific to the operation. If additional items exist beyond the number you specify, the <code>NextToken</code> response element is returned with a value (not null). Include the specified value as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the results. Note that the service might return fewer results than the maximum even when there are more results available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the results.
 	MaxResults *int64 `json:"maxResults,omitempty"`
 	// Specifies that you want to receive the next page of results. Valid only if you received a <code>NextToken</code> response in the previous request. If you did, it indicates that more output is available. Set this parameter to the value provided by the previous call's <code>NextToken</code> response to request the next page of results.
 	NextToken *string `json:"nextToken,omitempty"`
-	// Specifies that you want to list permissions for only the specified resource type. For example, to list only permissions that apply to EC2 subnets, specify <code>ec2:Subnet</code>. You can use the <a>ListResourceTypes</a> operation to get the specific string required.
+	// <p>Specifies that you want to list only permissions of this type:</p> <ul> <li> <p> <code>AWS</code> – returns only Amazon Web Services managed permissions.</p> </li> <li> <p> <code>LOCAL</code> – returns only customer managed permissions</p> </li> <li> <p> <code>ALL</code> – returns both Amazon Web Services managed permissions and customer managed permissions.</p> </li> </ul> <p>If you don't specify this parameter, the default is <code>All</code>.</p>
+	PermissionType *ListPermissionsRequestBodyPermissionTypeEnum `json:"permissionType,omitempty"`
+	// <p>Specifies that you want to list only those permissions that apply to the specified resource type. This parameter is not case sensitive.</p> <p>For example, to list only permissions that apply to Amazon EC2 subnets, specify <code>ec2:subnet</code>. You can use the <a>ListResourceTypes</a> operation to get the specific string required.</p>
 	ResourceType *string `json:"resourceType,omitempty"`
 }
 

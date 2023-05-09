@@ -14,19 +14,23 @@ const (
 	APICoreDtoAccountingGuestTimeFormatEnumH24  APICoreDtoAccountingGuestTimeFormatEnum = "H24"
 )
 
+func (e APICoreDtoAccountingGuestTimeFormatEnum) ToPointer() *APICoreDtoAccountingGuestTimeFormatEnum {
+	return &e
+}
+
 func (e *APICoreDtoAccountingGuestTimeFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmPm":
 		fallthrough
 	case "H24":
-		*e = APICoreDtoAccountingGuestTimeFormatEnum(s)
+		*e = APICoreDtoAccountingGuestTimeFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APICoreDtoAccountingGuestTimeFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for APICoreDtoAccountingGuestTimeFormatEnum: %v", v)
 	}
 }
 

@@ -38,7 +38,10 @@ func newCDDrive(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Delete a file from the customer's private CD Drive.
 func (s *cdDrive) DeleteAPIV2CddriveFilesFileID(ctx context.Context, request operations.DeleteAPIV2CddriveFilesFileIDRequest, security operations.DeleteAPIV2CddriveFilesFileIDSecurity) (*operations.DeleteAPIV2CddriveFilesFileIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/files/{file-id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/files/{file-id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -76,7 +79,10 @@ func (s *cdDrive) DeleteAPIV2CddriveFilesFileID(ctx context.Context, request ope
 // Delete a file from the customer's private CD Drive.
 func (s *cdDrive) DeleteAPIV2CddriveFoldersFolderID(ctx context.Context, request operations.DeleteAPIV2CddriveFoldersFolderIDRequest, security operations.DeleteAPIV2CddriveFoldersFolderIDSecurity) (*operations.DeleteAPIV2CddriveFoldersFolderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/folders/{folder-id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/folders/{folder-id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -118,7 +124,10 @@ func (s *cdDrive) DeleteAPIV2CddriveFoldersFolderID(ctx context.Context, request
 // Get the information about a file in the customer's private CD Drive.
 func (s *cdDrive) GetAPIV2CddriveFilesFileID(ctx context.Context, request operations.GetAPIV2CddriveFilesFileIDRequest, security operations.GetAPIV2CddriveFilesFileIDSecurity) (*operations.GetAPIV2CddriveFilesFileIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/files/{file-id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/files/{file-id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -164,7 +173,10 @@ func (s *cdDrive) GetAPIV2CddriveFilesFileID(ctx context.Context, request operat
 // Download a file from the customer's private CD Drive.
 func (s *cdDrive) GetAPIV2CddriveFilesFileIDContent(ctx context.Context, request operations.GetAPIV2CddriveFilesFileIDContentRequest, security operations.GetAPIV2CddriveFilesFileIDContentSecurity) (*operations.GetAPIV2CddriveFilesFileIDContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/files/{file-id}/content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/files/{file-id}/content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,7 +227,10 @@ func (s *cdDrive) GetAPIV2CddriveFilesFileIDContent(ctx context.Context, request
 // Get the information about a folder in the customer's private CD Drive.
 func (s *cdDrive) GetAPIV2CddriveFoldersFolderID(ctx context.Context, request operations.GetAPIV2CddriveFoldersFolderIDRequest, security operations.GetAPIV2CddriveFoldersFolderIDSecurity) (*operations.GetAPIV2CddriveFoldersFolderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/folders/{folder-id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/folders/{folder-id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,7 +276,10 @@ func (s *cdDrive) GetAPIV2CddriveFoldersFolderID(ctx context.Context, request op
 // Get the information about a folder in the customer's private CD Drive.
 func (s *cdDrive) GetAPIV2CddriveFoldersFolderIDItems(ctx context.Context, request operations.GetAPIV2CddriveFoldersFolderIDItemsRequest, security operations.GetAPIV2CddriveFoldersFolderIDItemsSecurity) (*operations.GetAPIV2CddriveFoldersFolderIDItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/folders/{folder-id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/cddrive/folders/{folder-id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

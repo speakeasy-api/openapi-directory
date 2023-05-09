@@ -16,21 +16,25 @@ const (
 	ClusterDefaultStorageTypeEnumHdd                    ClusterDefaultStorageTypeEnum = "HDD"
 )
 
+func (e ClusterDefaultStorageTypeEnum) ToPointer() *ClusterDefaultStorageTypeEnum {
+	return &e
+}
+
 func (e *ClusterDefaultStorageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STORAGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SSD":
 		fallthrough
 	case "HDD":
-		*e = ClusterDefaultStorageTypeEnum(s)
+		*e = ClusterDefaultStorageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterDefaultStorageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterDefaultStorageTypeEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	ClusterStateEnumDisabled      ClusterStateEnum = "DISABLED"
 )
 
+func (e ClusterStateEnum) ToPointer() *ClusterStateEnum {
+	return &e
+}
+
 func (e *ClusterStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_NOT_KNOWN":
 		fallthrough
 	case "READY":
@@ -76,10 +84,10 @@ func (e *ClusterStateEnum) UnmarshalJSON(data []byte) error {
 	case "RESIZING":
 		fallthrough
 	case "DISABLED":
-		*e = ClusterStateEnum(s)
+		*e = ClusterStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterStateEnum: %v", v)
 	}
 }
 

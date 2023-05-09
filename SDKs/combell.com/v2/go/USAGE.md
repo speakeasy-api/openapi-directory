@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.CreateAccount{
-        FtpPassword: "corrupti",
-        Identifier: "provident",
-        ServicepackID: 715190,
-    }
-
     ctx := context.Background()
-    res, err := s.Accounts.CreateAccount(ctx, req)
+    res, err := s.Accounts.CreateAccount(ctx, shared.CreateAccount{
+        FtpPassword: sdk.String("corrupti"),
+        Identifier: sdk.String("provident"),
+        ServicepackID: sdk.Int(715190),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -14,18 +14,22 @@ const (
 	AmazonopensearchserviceS3BackupModeEnumAllDocuments        AmazonopensearchserviceS3BackupModeEnum = "AllDocuments"
 )
 
+func (e AmazonopensearchserviceS3BackupModeEnum) ToPointer() *AmazonopensearchserviceS3BackupModeEnum {
+	return &e
+}
+
 func (e *AmazonopensearchserviceS3BackupModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FailedDocumentsOnly":
 		fallthrough
 	case "AllDocuments":
-		*e = AmazonopensearchserviceS3BackupModeEnum(s)
+		*e = AmazonopensearchserviceS3BackupModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AmazonopensearchserviceS3BackupModeEnum: %s", s)
+		return fmt.Errorf("invalid value for AmazonopensearchserviceS3BackupModeEnum: %v", v)
 	}
 }

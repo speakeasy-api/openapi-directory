@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/logoraisr.com/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.PreviewsReadRequest{
-        FileID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Previews.PreviewsRead(ctx, req)
+    res, err := s.Previews.PreviewsRead(ctx, operations.PreviewsReadRequest{
+        FileID: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,33 +46,33 @@ func main() {
 ## Available Resources and Operations
 
 
-### Previews
+### [Previews](docs/previews/README.md)
 
-* `PreviewsRead` - Get preview image of uploaded file
+* [PreviewsRead](docs/previews/README.md#previewsread) - Get preview image of uploaded file
 
-### Processes
+### [Processes](docs/processes/README.md)
 
-* `ProcessesList` - Get process list.
+* [ProcessesList](docs/processes/README.md#processeslist) - Get process list.
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `ProjectsCreate` - Create a new project.
-* `ProjectsList` - Get user project list.
-* `ProjectsRead` - Get project details.
+* [ProjectsCreate](docs/projects/README.md#projectscreate) - Create a new project.
+* [ProjectsList](docs/projects/README.md#projectslist) - Get user project list.
+* [ProjectsRead](docs/projects/README.md#projectsread) - Get project details.
 
-### Reports
+### [Reports](docs/reports/README.md)
 
-* `ReportsCreate` - Create a new report.
-* `ReportsList` - Get user report list.
-* `ReportsRead` - Get report details.
+* [ReportsCreate](docs/reports/README.md#reportscreate) - Create a new report.
+* [ReportsList](docs/reports/README.md#reportslist) - Get user report list.
+* [ReportsRead](docs/reports/README.md#reportsread) - Get report details.
 
-### Results
+### [Results](docs/results/README.md)
 
-* `ResultsRead` - Get the result from image processing
+* [ResultsRead](docs/results/README.md#resultsread) - Get the result from image processing
 
-### Uploads
+### [Uploads](docs/uploads/README.md)
 
-* `UploadsCreate` - Upload a new image
+* [UploadsCreate](docs/uploads/README.md#uploadscreate) - Upload a new image
 <!-- End SDK Available Operations -->
 
 ### Maturity

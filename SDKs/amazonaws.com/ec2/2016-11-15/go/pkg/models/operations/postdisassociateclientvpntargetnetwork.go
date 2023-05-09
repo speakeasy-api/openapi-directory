@@ -15,17 +15,21 @@ const (
 	POSTDisassociateClientVpnTargetNetworkActionEnumDisassociateClientVpnTargetNetwork POSTDisassociateClientVpnTargetNetworkActionEnum = "DisassociateClientVpnTargetNetwork"
 )
 
+func (e POSTDisassociateClientVpnTargetNetworkActionEnum) ToPointer() *POSTDisassociateClientVpnTargetNetworkActionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateClientVpnTargetNetworkActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateClientVpnTargetNetwork":
-		*e = POSTDisassociateClientVpnTargetNetworkActionEnum(s)
+		*e = POSTDisassociateClientVpnTargetNetworkActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateClientVpnTargetNetworkActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateClientVpnTargetNetworkActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisassociateClientVpnTargetNetworkVersionEnumTwoThousandAndSixteen1115 POSTDisassociateClientVpnTargetNetworkVersionEnum = "2016-11-15"
 )
 
+func (e POSTDisassociateClientVpnTargetNetworkVersionEnum) ToPointer() *POSTDisassociateClientVpnTargetNetworkVersionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateClientVpnTargetNetworkVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDisassociateClientVpnTargetNetworkVersionEnum(s)
+		*e = POSTDisassociateClientVpnTargetNetworkVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateClientVpnTargetNetworkVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateClientVpnTargetNetworkVersionEnum: %v", v)
 	}
 }
 

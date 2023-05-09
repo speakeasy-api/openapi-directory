@@ -15,20 +15,24 @@ const (
 	ConformancePackComplianceTypeEnumInsufficientData ConformancePackComplianceTypeEnum = "INSUFFICIENT_DATA"
 )
 
+func (e ConformancePackComplianceTypeEnum) ToPointer() *ConformancePackComplianceTypeEnum {
+	return &e
+}
+
 func (e *ConformancePackComplianceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLIANT":
 		fallthrough
 	case "NON_COMPLIANT":
 		fallthrough
 	case "INSUFFICIENT_DATA":
-		*e = ConformancePackComplianceTypeEnum(s)
+		*e = ConformancePackComplianceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConformancePackComplianceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConformancePackComplianceTypeEnum: %v", v)
 	}
 }

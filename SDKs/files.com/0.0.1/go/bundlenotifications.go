@@ -37,7 +37,10 @@ func newBundleNotifications(defaultClient, securityClient HTTPClient, serverURL,
 // Delete Bundle Notification
 func (s *bundleNotifications) DeleteBundleNotificationsID(ctx context.Context, request operations.DeleteBundleNotificationsIDRequest) (*operations.DeleteBundleNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bundle_notifications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bundle_notifications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *bundleNotifications) GetBundleNotifications(ctx context.Context, reques
 // Show Bundle Notification
 func (s *bundleNotifications) GetBundleNotificationsID(ctx context.Context, request operations.GetBundleNotificationsIDRequest) (*operations.GetBundleNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bundle_notifications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bundle_notifications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *bundleNotifications) GetBundleNotificationsID(ctx context.Context, requ
 // Update Bundle Notification
 func (s *bundleNotifications) PatchBundleNotificationsID(ctx context.Context, request operations.PatchBundleNotificationsIDRequest) (*operations.PatchBundleNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bundle_notifications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bundle_notifications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

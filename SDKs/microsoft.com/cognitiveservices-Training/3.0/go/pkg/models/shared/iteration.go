@@ -22,19 +22,23 @@ const (
 	IterationClassificationTypeEnumMultilabel IterationClassificationTypeEnum = "Multilabel"
 )
 
+func (e IterationClassificationTypeEnum) ToPointer() *IterationClassificationTypeEnum {
+	return &e
+}
+
 func (e *IterationClassificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Multiclass":
 		fallthrough
 	case "Multilabel":
-		*e = IterationClassificationTypeEnum(s)
+		*e = IterationClassificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IterationClassificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IterationClassificationTypeEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	IterationExportableToEnumVaidk      IterationExportableToEnum = "VAIDK"
 )
 
+func (e IterationExportableToEnum) ToPointer() *IterationExportableToEnum {
+	return &e
+}
+
 func (e *IterationExportableToEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CoreML":
 		fallthrough
 	case "TensorFlow":
@@ -63,10 +71,10 @@ func (e *IterationExportableToEnum) UnmarshalJSON(data []byte) error {
 	case "ONNX":
 		fallthrough
 	case "VAIDK":
-		*e = IterationExportableToEnum(s)
+		*e = IterationExportableToEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IterationExportableToEnum: %s", s)
+		return fmt.Errorf("invalid value for IterationExportableToEnum: %v", v)
 	}
 }
 
@@ -78,19 +86,23 @@ const (
 	IterationTrainingTypeEnumAdvanced IterationTrainingTypeEnum = "Advanced"
 )
 
+func (e IterationTrainingTypeEnum) ToPointer() *IterationTrainingTypeEnum {
+	return &e
+}
+
 func (e *IterationTrainingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Regular":
 		fallthrough
 	case "Advanced":
-		*e = IterationTrainingTypeEnum(s)
+		*e = IterationTrainingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IterationTrainingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IterationTrainingTypeEnum: %v", v)
 	}
 }
 

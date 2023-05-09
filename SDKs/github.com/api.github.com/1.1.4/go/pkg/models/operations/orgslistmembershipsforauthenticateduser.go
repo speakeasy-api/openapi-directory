@@ -17,19 +17,23 @@ const (
 	OrgsListMembershipsForAuthenticatedUserStateEnumPending OrgsListMembershipsForAuthenticatedUserStateEnum = "pending"
 )
 
+func (e OrgsListMembershipsForAuthenticatedUserStateEnum) ToPointer() *OrgsListMembershipsForAuthenticatedUserStateEnum {
+	return &e
+}
+
 func (e *OrgsListMembershipsForAuthenticatedUserStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "pending":
-		*e = OrgsListMembershipsForAuthenticatedUserStateEnum(s)
+		*e = OrgsListMembershipsForAuthenticatedUserStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgsListMembershipsForAuthenticatedUserStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgsListMembershipsForAuthenticatedUserStateEnum: %v", v)
 	}
 }
 

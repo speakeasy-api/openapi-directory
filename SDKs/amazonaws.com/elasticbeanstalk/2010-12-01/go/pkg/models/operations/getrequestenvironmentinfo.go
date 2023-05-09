@@ -15,17 +15,21 @@ const (
 	GETRequestEnvironmentInfoActionEnumRequestEnvironmentInfo GETRequestEnvironmentInfoActionEnum = "RequestEnvironmentInfo"
 )
 
+func (e GETRequestEnvironmentInfoActionEnum) ToPointer() *GETRequestEnvironmentInfoActionEnum {
+	return &e
+}
+
 func (e *GETRequestEnvironmentInfoActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RequestEnvironmentInfo":
-		*e = GETRequestEnvironmentInfoActionEnum(s)
+		*e = GETRequestEnvironmentInfoActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRequestEnvironmentInfoActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRequestEnvironmentInfoActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETRequestEnvironmentInfoInfoTypeEnumBundle GETRequestEnvironmentInfoInfoTypeEnum = "bundle"
 )
 
+func (e GETRequestEnvironmentInfoInfoTypeEnum) ToPointer() *GETRequestEnvironmentInfoInfoTypeEnum {
+	return &e
+}
+
 func (e *GETRequestEnvironmentInfoInfoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tail":
 		fallthrough
 	case "bundle":
-		*e = GETRequestEnvironmentInfoInfoTypeEnum(s)
+		*e = GETRequestEnvironmentInfoInfoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRequestEnvironmentInfoInfoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRequestEnvironmentInfoInfoTypeEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETRequestEnvironmentInfoVersionEnumTwoThousandAndTen1201 GETRequestEnvironmentInfoVersionEnum = "2010-12-01"
 )
 
+func (e GETRequestEnvironmentInfoVersionEnum) ToPointer() *GETRequestEnvironmentInfoVersionEnum {
+	return &e
+}
+
 func (e *GETRequestEnvironmentInfoVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETRequestEnvironmentInfoVersionEnum(s)
+		*e = GETRequestEnvironmentInfoVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRequestEnvironmentInfoVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRequestEnvironmentInfoVersionEnum: %v", v)
 	}
 }
 

@@ -27,12 +27,16 @@ const (
 	GoogleCloudIdentitytoolkitAdminV2HashConfigAlgorithmEnumStandardScrypt           GoogleCloudIdentitytoolkitAdminV2HashConfigAlgorithmEnum = "STANDARD_SCRYPT"
 )
 
+func (e GoogleCloudIdentitytoolkitAdminV2HashConfigAlgorithmEnum) ToPointer() *GoogleCloudIdentitytoolkitAdminV2HashConfigAlgorithmEnum {
+	return &e
+}
+
 func (e *GoogleCloudIdentitytoolkitAdminV2HashConfigAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HASH_ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "HMAC_SHA256":
@@ -60,10 +64,10 @@ func (e *GoogleCloudIdentitytoolkitAdminV2HashConfigAlgorithmEnum) UnmarshalJSON
 	case "SHA512":
 		fallthrough
 	case "STANDARD_SCRYPT":
-		*e = GoogleCloudIdentitytoolkitAdminV2HashConfigAlgorithmEnum(s)
+		*e = GoogleCloudIdentitytoolkitAdminV2HashConfigAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIdentitytoolkitAdminV2HashConfigAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIdentitytoolkitAdminV2HashConfigAlgorithmEnum: %v", v)
 	}
 }
 

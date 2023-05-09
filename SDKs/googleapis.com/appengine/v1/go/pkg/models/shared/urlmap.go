@@ -16,21 +16,25 @@ const (
 	URLMapAuthFailActionEnumAuthFailActionUnauthorized URLMapAuthFailActionEnum = "AUTH_FAIL_ACTION_UNAUTHORIZED"
 )
 
+func (e URLMapAuthFailActionEnum) ToPointer() *URLMapAuthFailActionEnum {
+	return &e
+}
+
 func (e *URLMapAuthFailActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTH_FAIL_ACTION_UNSPECIFIED":
 		fallthrough
 	case "AUTH_FAIL_ACTION_REDIRECT":
 		fallthrough
 	case "AUTH_FAIL_ACTION_UNAUTHORIZED":
-		*e = URLMapAuthFailActionEnum(s)
+		*e = URLMapAuthFailActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for URLMapAuthFailActionEnum: %s", s)
+		return fmt.Errorf("invalid value for URLMapAuthFailActionEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	URLMapLoginEnumLoginRequired    URLMapLoginEnum = "LOGIN_REQUIRED"
 )
 
+func (e URLMapLoginEnum) ToPointer() *URLMapLoginEnum {
+	return &e
+}
+
 func (e *URLMapLoginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOGIN_UNSPECIFIED":
 		fallthrough
 	case "LOGIN_OPTIONAL":
@@ -57,10 +65,10 @@ func (e *URLMapLoginEnum) UnmarshalJSON(data []byte) error {
 	case "LOGIN_ADMIN":
 		fallthrough
 	case "LOGIN_REQUIRED":
-		*e = URLMapLoginEnum(s)
+		*e = URLMapLoginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for URLMapLoginEnum: %s", s)
+		return fmt.Errorf("invalid value for URLMapLoginEnum: %v", v)
 	}
 }
 
@@ -75,12 +83,16 @@ const (
 	URLMapRedirectHTTPResponseCodeEnumRedirectHTTPResponseCode307         URLMapRedirectHTTPResponseCodeEnum = "REDIRECT_HTTP_RESPONSE_CODE_307"
 )
 
+func (e URLMapRedirectHTTPResponseCodeEnum) ToPointer() *URLMapRedirectHTTPResponseCodeEnum {
+	return &e
+}
+
 func (e *URLMapRedirectHTTPResponseCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED":
 		fallthrough
 	case "REDIRECT_HTTP_RESPONSE_CODE_301":
@@ -90,10 +102,10 @@ func (e *URLMapRedirectHTTPResponseCodeEnum) UnmarshalJSON(data []byte) error {
 	case "REDIRECT_HTTP_RESPONSE_CODE_303":
 		fallthrough
 	case "REDIRECT_HTTP_RESPONSE_CODE_307":
-		*e = URLMapRedirectHTTPResponseCodeEnum(s)
+		*e = URLMapRedirectHTTPResponseCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for URLMapRedirectHTTPResponseCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for URLMapRedirectHTTPResponseCodeEnum: %v", v)
 	}
 }
 
@@ -108,12 +120,16 @@ const (
 	URLMapSecurityLevelEnumSecureAlways      URLMapSecurityLevelEnum = "SECURE_ALWAYS"
 )
 
+func (e URLMapSecurityLevelEnum) ToPointer() *URLMapSecurityLevelEnum {
+	return &e
+}
+
 func (e *URLMapSecurityLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECURE_UNSPECIFIED":
 		fallthrough
 	case "SECURE_DEFAULT":
@@ -123,10 +139,10 @@ func (e *URLMapSecurityLevelEnum) UnmarshalJSON(data []byte) error {
 	case "SECURE_OPTIONAL":
 		fallthrough
 	case "SECURE_ALWAYS":
-		*e = URLMapSecurityLevelEnum(s)
+		*e = URLMapSecurityLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for URLMapSecurityLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for URLMapSecurityLevelEnum: %v", v)
 	}
 }
 

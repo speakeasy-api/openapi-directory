@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <fullname>AWS Lambda</fullname> <p><b>Overview</b></p> <p>This is the AWS Lambda API Reference. The AWS Lambda Developer Guide provides additional information. For the service overview, go to <a href="http://docs.aws.amazon.com/lambda/latest/dg/welcome.html">What is AWS Lambda</a>, and for information about how the service works, go to <a href="http://docs.aws.amazon.com/lambda/latest/dg/lambda-introduction.html">AWS LambdaL How it Works</a> in the AWS Lambda Developer Guide.</p>
 // https://docs.aws.amazon.com/lambda/ - Amazon Web Services documentation
 type SDK struct {
@@ -190,7 +205,10 @@ func (s *SDK) AddEventSource(ctx context.Context, request operations.AddEventSou
 // DeleteFunction - <p>Deletes the specified Lambda function code and configuration.</p> <p>This operation requires permission for the <code>lambda:DeleteFunction</code> action.</p>
 func (s *SDK) DeleteFunction(ctx context.Context, request operations.DeleteFunctionRequest) (*operations.DeleteFunctionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -247,7 +265,10 @@ func (s *SDK) DeleteFunction(ctx context.Context, request operations.DeleteFunct
 // GetEventSource - <p>Returns configuration information for the specified event source mapping (see <a>AddEventSource</a>).</p> <p>This operation requires permission for the <code>lambda:GetEventSource</code> action.</p>
 func (s *SDK) GetEventSource(ctx context.Context, request operations.GetEventSourceRequest) (*operations.GetEventSourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2014-11-13/event-source-mappings/{UUID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2014-11-13/event-source-mappings/{UUID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -323,7 +344,10 @@ func (s *SDK) GetEventSource(ctx context.Context, request operations.GetEventSou
 // GetFunction - <p>Returns the configuration information of the Lambda function and a presigned URL link to the .zip file you uploaded with <a>UploadFunction</a> so you can download the .zip file. Note that the URL is valid for up to 10 minutes. The configuration information is the same information you provided as parameters when uploading the function.</p> <p>This operation requires permission for the <code>lambda:GetFunction</code> action.</p>
 func (s *SDK) GetFunction(ctx context.Context, request operations.GetFunctionRequest) (*operations.GetFunctionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -389,7 +413,10 @@ func (s *SDK) GetFunction(ctx context.Context, request operations.GetFunctionReq
 // GetFunctionConfiguration - <p>Returns the configuration information of the Lambda function. This the same information you provided as parameters when uploading the function by using <a>UploadFunction</a>.</p> <p>This operation requires permission for the <code>lambda:GetFunctionConfiguration</code> operation.</p>
 func (s *SDK) GetFunctionConfiguration(ctx context.Context, request operations.GetFunctionConfigurationRequest) (*operations.GetFunctionConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}/configuration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}/configuration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -455,7 +482,10 @@ func (s *SDK) GetFunctionConfiguration(ctx context.Context, request operations.G
 // InvokeAsync - <p>Submits an invocation request to AWS Lambda. Upon receiving the request, Lambda executes the specified function asynchronously. To see the logs generated by the Lambda function execution, see the CloudWatch logs console.</p> <p>This operation requires permission for the <code>lambda:InvokeAsync</code> action.</p>
 func (s *SDK) InvokeAsync(ctx context.Context, request operations.InvokeAsyncRequest) (*operations.InvokeAsyncResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}/invoke-async/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}/invoke-async/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -681,7 +711,10 @@ func (s *SDK) ListFunctions(ctx context.Context, request operations.ListFunction
 // RemoveEventSource - <p>Removes an event source mapping. This means AWS Lambda will no longer invoke the function for events in the associated source.</p> <p>This operation requires permission for the <code>lambda:RemoveEventSource</code> action.</p>
 func (s *SDK) RemoveEventSource(ctx context.Context, request operations.RemoveEventSourceRequest) (*operations.RemoveEventSourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2014-11-13/event-source-mappings/{UUID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2014-11-13/event-source-mappings/{UUID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -748,7 +781,10 @@ func (s *SDK) RemoveEventSource(ctx context.Context, request operations.RemoveEv
 // UpdateFunctionConfiguration - <p>Updates the configuration parameters for the specified Lambda function by using the values provided in the request. You provide only the parameters you want to change. This operation must only be used on an existing Lambda function and cannot be used to update the function's code. </p> <p>This operation requires permission for the <code>lambda:UpdateFunctionConfiguration</code> action.</p>
 func (s *SDK) UpdateFunctionConfiguration(ctx context.Context, request operations.UpdateFunctionConfigurationRequest) (*operations.UpdateFunctionConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}/configuration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}/configuration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -828,7 +864,10 @@ func (s *SDK) UpdateFunctionConfiguration(ctx context.Context, request operation
 // UploadFunction - <p>Creates a new Lambda function or updates an existing function. The function metadata is created from the request parameters, and the code for the function is provided by a .zip file in the request body. If the function name already exists, the existing Lambda function is updated with the new code and metadata. </p> <p>This operation requires permission for the <code>lambda:UploadFunction</code> action.</p>
 func (s *SDK) UploadFunction(ctx context.Context, request operations.UploadFunctionRequest) (*operations.UploadFunctionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}#Runtime&Role&Handler&Mode", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2014-11-13/functions/{FunctionName}#Runtime&Role&Handler&Mode", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

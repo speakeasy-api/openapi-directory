@@ -14,18 +14,22 @@ const (
 	KeyLocationEnumSecretManager KeyLocationEnum = "SECRET_MANAGER"
 )
 
+func (e KeyLocationEnum) ToPointer() *KeyLocationEnum {
+	return &e
+}
+
 func (e *KeyLocationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "URL":
 		fallthrough
 	case "SECRET_MANAGER":
-		*e = KeyLocationEnum(s)
+		*e = KeyLocationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyLocationEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyLocationEnum: %v", v)
 	}
 }

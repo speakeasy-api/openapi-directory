@@ -13,16 +13,20 @@ const (
 	ResetImageAttributeNameEnumLaunchPermission ResetImageAttributeNameEnum = "launchPermission"
 )
 
+func (e ResetImageAttributeNameEnum) ToPointer() *ResetImageAttributeNameEnum {
+	return &e
+}
+
 func (e *ResetImageAttributeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "launchPermission":
-		*e = ResetImageAttributeNameEnum(s)
+		*e = ResetImageAttributeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResetImageAttributeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ResetImageAttributeNameEnum: %v", v)
 	}
 }

@@ -82,19 +82,23 @@ const (
 	GetPaymentRootTypeForPaymentsPaymentTypeEnumElectronicFundTransfer GetPaymentRootTypeForPaymentsPaymentTypeEnum = "electronic_fund_transfer"
 )
 
+func (e GetPaymentRootTypeForPaymentsPaymentTypeEnum) ToPointer() *GetPaymentRootTypeForPaymentsPaymentTypeEnum {
+	return &e
+}
+
 func (e *GetPaymentRootTypeForPaymentsPaymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card":
 		fallthrough
 	case "electronic_fund_transfer":
-		*e = GetPaymentRootTypeForPaymentsPaymentTypeEnum(s)
+		*e = GetPaymentRootTypeForPaymentsPaymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPaymentRootTypeForPaymentsPaymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPaymentRootTypeForPaymentsPaymentTypeEnum: %v", v)
 	}
 }
 
@@ -105,19 +109,23 @@ const (
 	GetPaymentRootTypeForPaymentsPurposeEnumInvest GetPaymentRootTypeForPaymentsPurposeEnum = "invest"
 )
 
+func (e GetPaymentRootTypeForPaymentsPurposeEnum) ToPointer() *GetPaymentRootTypeForPaymentsPurposeEnum {
+	return &e
+}
+
 func (e *GetPaymentRootTypeForPaymentsPurposeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cash":
 		fallthrough
 	case "invest":
-		*e = GetPaymentRootTypeForPaymentsPurposeEnum(s)
+		*e = GetPaymentRootTypeForPaymentsPurposeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPaymentRootTypeForPaymentsPurposeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPaymentRootTypeForPaymentsPurposeEnum: %v", v)
 	}
 }
 
@@ -129,21 +137,25 @@ const (
 	GetPaymentRootTypeForPaymentsServiceProviderEnumNone      GetPaymentRootTypeForPaymentsServiceProviderEnum = "none"
 )
 
+func (e GetPaymentRootTypeForPaymentsServiceProviderEnum) ToPointer() *GetPaymentRootTypeForPaymentsServiceProviderEnum {
+	return &e
+}
+
 func (e *GetPaymentRootTypeForPaymentsServiceProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stripe":
 		fallthrough
 	case "truelayer":
 		fallthrough
 	case "none":
-		*e = GetPaymentRootTypeForPaymentsServiceProviderEnum(s)
+		*e = GetPaymentRootTypeForPaymentsServiceProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPaymentRootTypeForPaymentsServiceProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPaymentRootTypeForPaymentsServiceProviderEnum: %v", v)
 	}
 }
 
@@ -174,12 +186,16 @@ const (
 	GetPaymentRootTypeForPaymentsStatusEnumFailed              GetPaymentRootTypeForPaymentsStatusEnum = "failed"
 )
 
+func (e GetPaymentRootTypeForPaymentsStatusEnum) ToPointer() *GetPaymentRootTypeForPaymentsStatusEnum {
+	return &e
+}
+
 func (e *GetPaymentRootTypeForPaymentsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending_confirmation":
 		fallthrough
 	case "processing":
@@ -189,10 +205,10 @@ func (e *GetPaymentRootTypeForPaymentsStatusEnum) UnmarshalJSON(data []byte) err
 	case "cancelled":
 		fallthrough
 	case "failed":
-		*e = GetPaymentRootTypeForPaymentsStatusEnum(s)
+		*e = GetPaymentRootTypeForPaymentsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPaymentRootTypeForPaymentsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPaymentRootTypeForPaymentsStatusEnum: %v", v)
 	}
 }
 

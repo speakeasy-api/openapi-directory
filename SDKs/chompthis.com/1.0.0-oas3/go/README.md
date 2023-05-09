@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/chompthis.com/1.0.0-oas3/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetFoodBrandedBarcodePhpRequest{
-        Code: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetFoodBrandedBarcodePhp(ctx, req, operations.GetFoodBrandedBarcodePhpSecurity{
+    res, err := s.GetFoodBrandedBarcodePhp(ctx, operations.GetFoodBrandedBarcodePhpRequest{
+        Code: "corrupti",
+    }, operations.GetFoodBrandedBarcodePhpSecurity{
         APIKeyAuth: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -46,12 +43,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetFoodBrandedBarcodePhp` - Get a branded food item using a barcode
-* `GetFoodBrandedNamePhp` - Get a branded food item by name
-* `GetFoodBrandedSearchPhp` - Get data for branded food items using various search parameters
-* `GetFoodIngredientSearchPhp` - Get raw/generic food ingredient item(s)
+* [GetFoodBrandedBarcodePhp](docs/sdk/README.md#getfoodbrandedbarcodephp) - Get a branded food item using a barcode
+* [GetFoodBrandedNamePhp](docs/sdk/README.md#getfoodbrandednamephp) - Get a branded food item by name
+* [GetFoodBrandedSearchPhp](docs/sdk/README.md#getfoodbrandedsearchphp) - Get data for branded food items using various search parameters
+* [GetFoodIngredientSearchPhp](docs/sdk/README.md#getfoodingredientsearchphp) - Get raw/generic food ingredient item(s)
 <!-- End SDK Available Operations -->
 
 ### Maturity

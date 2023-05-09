@@ -16,17 +16,21 @@ const (
 	DeleteAccountSettingXAmzTargetEnumAmazonEc2ContainerServiceV20141113DeleteAccountSetting DeleteAccountSettingXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.DeleteAccountSetting"
 )
 
+func (e DeleteAccountSettingXAmzTargetEnum) ToPointer() *DeleteAccountSettingXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteAccountSettingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.DeleteAccountSetting":
-		*e = DeleteAccountSettingXAmzTargetEnum(s)
+		*e = DeleteAccountSettingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAccountSettingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAccountSettingXAmzTargetEnum: %v", v)
 	}
 }
 

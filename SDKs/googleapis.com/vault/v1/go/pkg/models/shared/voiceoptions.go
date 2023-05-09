@@ -16,12 +16,16 @@ const (
 	VoiceOptionsCoveredDataEnumCallLogs               VoiceOptionsCoveredDataEnum = "CALL_LOGS"
 )
 
+func (e VoiceOptionsCoveredDataEnum) ToPointer() *VoiceOptionsCoveredDataEnum {
+	return &e
+}
+
 func (e *VoiceOptionsCoveredDataEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COVERED_DATA_UNSPECIFIED":
 		fallthrough
 	case "TEXT_MESSAGES":
@@ -29,10 +33,10 @@ func (e *VoiceOptionsCoveredDataEnum) UnmarshalJSON(data []byte) error {
 	case "VOICEMAILS":
 		fallthrough
 	case "CALL_LOGS":
-		*e = VoiceOptionsCoveredDataEnum(s)
+		*e = VoiceOptionsCoveredDataEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VoiceOptionsCoveredDataEnum: %s", s)
+		return fmt.Errorf("invalid value for VoiceOptionsCoveredDataEnum: %v", v)
 	}
 }
 

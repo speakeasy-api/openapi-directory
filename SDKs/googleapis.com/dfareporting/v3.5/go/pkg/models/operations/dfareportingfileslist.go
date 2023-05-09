@@ -23,21 +23,25 @@ const (
 	DfareportingFilesListScopeEnumSharedWithMe DfareportingFilesListScopeEnum = "SHARED_WITH_ME"
 )
 
+func (e DfareportingFilesListScopeEnum) ToPointer() *DfareportingFilesListScopeEnum {
+	return &e
+}
+
 func (e *DfareportingFilesListScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "MINE":
 		fallthrough
 	case "SHARED_WITH_ME":
-		*e = DfareportingFilesListScopeEnum(s)
+		*e = DfareportingFilesListScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingFilesListScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingFilesListScopeEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	DfareportingFilesListSortFieldEnumLastModifiedTime DfareportingFilesListSortFieldEnum = "LAST_MODIFIED_TIME"
 )
 
+func (e DfareportingFilesListSortFieldEnum) ToPointer() *DfareportingFilesListSortFieldEnum {
+	return &e
+}
+
 func (e *DfareportingFilesListSortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID":
 		fallthrough
 	case "LAST_MODIFIED_TIME":
-		*e = DfareportingFilesListSortFieldEnum(s)
+		*e = DfareportingFilesListSortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingFilesListSortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingFilesListSortFieldEnum: %v", v)
 	}
 }
 
@@ -73,19 +81,23 @@ const (
 	DfareportingFilesListSortOrderEnumDescending DfareportingFilesListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingFilesListSortOrderEnum) ToPointer() *DfareportingFilesListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingFilesListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingFilesListSortOrderEnum(s)
+		*e = DfareportingFilesListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingFilesListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingFilesListSortOrderEnum: %v", v)
 	}
 }
 

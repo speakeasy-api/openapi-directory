@@ -16,17 +16,21 @@ const (
 	DescribeLocationFsxWindowsXAmzTargetEnumFmrsServiceDescribeLocationFsxWindows DescribeLocationFsxWindowsXAmzTargetEnum = "FmrsService.DescribeLocationFsxWindows"
 )
 
+func (e DescribeLocationFsxWindowsXAmzTargetEnum) ToPointer() *DescribeLocationFsxWindowsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeLocationFsxWindowsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FmrsService.DescribeLocationFsxWindows":
-		*e = DescribeLocationFsxWindowsXAmzTargetEnum(s)
+		*e = DescribeLocationFsxWindowsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeLocationFsxWindowsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeLocationFsxWindowsXAmzTargetEnum: %v", v)
 	}
 }
 

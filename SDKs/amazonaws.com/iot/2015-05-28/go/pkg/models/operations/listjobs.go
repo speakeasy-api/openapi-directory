@@ -20,12 +20,16 @@ const (
 	ListJobsStatusEnumScheduled          ListJobsStatusEnum = "SCHEDULED"
 )
 
+func (e ListJobsStatusEnum) ToPointer() *ListJobsStatusEnum {
+	return &e
+}
+
 func (e *ListJobsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "CANCELED":
@@ -35,10 +39,10 @@ func (e *ListJobsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETION_IN_PROGRESS":
 		fallthrough
 	case "SCHEDULED":
-		*e = ListJobsStatusEnum(s)
+		*e = ListJobsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListJobsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListJobsStatusEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	ListJobsTargetSelectionEnumSnapshot   ListJobsTargetSelectionEnum = "SNAPSHOT"
 )
 
+func (e ListJobsTargetSelectionEnum) ToPointer() *ListJobsTargetSelectionEnum {
+	return &e
+}
+
 func (e *ListJobsTargetSelectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTINUOUS":
 		fallthrough
 	case "SNAPSHOT":
-		*e = ListJobsTargetSelectionEnum(s)
+		*e = ListJobsTargetSelectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListJobsTargetSelectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ListJobsTargetSelectionEnum: %v", v)
 	}
 }
 

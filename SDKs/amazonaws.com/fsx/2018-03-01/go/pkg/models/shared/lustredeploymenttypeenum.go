@@ -16,12 +16,16 @@ const (
 	LustreDeploymentTypeEnumPersistent2 LustreDeploymentTypeEnum = "PERSISTENT_2"
 )
 
+func (e LustreDeploymentTypeEnum) ToPointer() *LustreDeploymentTypeEnum {
+	return &e
+}
+
 func (e *LustreDeploymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCRATCH_1":
 		fallthrough
 	case "SCRATCH_2":
@@ -29,9 +33,9 @@ func (e *LustreDeploymentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PERSISTENT_1":
 		fallthrough
 	case "PERSISTENT_2":
-		*e = LustreDeploymentTypeEnum(s)
+		*e = LustreDeploymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LustreDeploymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LustreDeploymentTypeEnum: %v", v)
 	}
 }

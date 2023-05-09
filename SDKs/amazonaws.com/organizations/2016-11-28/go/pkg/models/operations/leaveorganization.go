@@ -15,17 +15,21 @@ const (
 	LeaveOrganizationXAmzTargetEnumAwsOrganizationsV20161128LeaveOrganization LeaveOrganizationXAmzTargetEnum = "AWSOrganizationsV20161128.LeaveOrganization"
 )
 
+func (e LeaveOrganizationXAmzTargetEnum) ToPointer() *LeaveOrganizationXAmzTargetEnum {
+	return &e
+}
+
 func (e *LeaveOrganizationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.LeaveOrganization":
-		*e = LeaveOrganizationXAmzTargetEnum(s)
+		*e = LeaveOrganizationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LeaveOrganizationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for LeaveOrganizationXAmzTargetEnum: %v", v)
 	}
 }
 

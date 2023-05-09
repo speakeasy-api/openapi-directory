@@ -13,38 +13,36 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudiot/v
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest{
-        DollarXgafv: "2",
-        BindDeviceToGatewayRequest: &shared.BindDeviceToGatewayRequest{
-            DeviceID: "provident",
-            GatewayID: "distinctio",
-        },
-        AccessToken: "quibusdam",
-        Alt: "media",
-        Callback: "nulla",
-        Fields: "corrupti",
-        Key: "illum",
-        OauthToken: "vel",
-        Parent: "error",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.CloudiotProjectsLocationsRegistriesBindDeviceToGateway(ctx, req, operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurity{
+    res, err := s.Projects.CloudiotProjectsLocationsRegistriesBindDeviceToGateway(ctx, operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        BindDeviceToGatewayRequest: &shared.BindDeviceToGatewayRequest{
+            DeviceID: sdk.String("provident"),
+            GatewayID: sdk.String("distinctio"),
+        },
+        AccessToken: sdk.String("quibusdam"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("nulla"),
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("illum"),
+        OauthToken: sdk.String("vel"),
+        Parent: "error",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("iure"),
+    }, operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurity{
         Option1: &operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -65,24 +63,24 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `CloudiotProjectsLocationsRegistriesBindDeviceToGateway` - Associates the device with the gateway.
-* `CloudiotProjectsLocationsRegistriesCreate` - Creates a device registry that contains devices.
-* `CloudiotProjectsLocationsRegistriesDevicesConfigVersionsList` - Lists the last few versions of the device configuration in descending order (i.e.: newest first).
-* `CloudiotProjectsLocationsRegistriesDevicesCreate` - Creates a device in a device registry.
-* `CloudiotProjectsLocationsRegistriesDevicesDelete` - Deletes a device.
-* `CloudiotProjectsLocationsRegistriesDevicesGet` - Gets details about a device.
-* `CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfig` - Modifies the configuration for the device, which is eventually sent from the Cloud IoT Core servers. Returns the modified configuration version and its metadata.
-* `CloudiotProjectsLocationsRegistriesDevicesPatch` - Updates a device.
-* `CloudiotProjectsLocationsRegistriesDevicesSendCommandToDevice` - Sends a command to the specified device. In order for a device to be able to receive commands, it must: 1) be connected to Cloud IoT Core using the MQTT protocol, and 2) be subscribed to the group of MQTT topics specified by /devices/{device-id}/commands/#. This subscription will receive commands at the top-level topic /devices/{device-id}/commands as well as commands for subfolders, like /devices/{device-id}/commands/subfolder. Note that subscribing to specific subfolders is not supported. If the command could not be delivered to the device, this method will return an error; in particular, if the device is not subscribed, this method will return FAILED_PRECONDITION. Otherwise, this method will return OK. If the subscription is QoS 1, at least once delivery will be guaranteed; for QoS 0, no acknowledgment will be expected from the device.
-* `CloudiotProjectsLocationsRegistriesDevicesStatesList` - Lists the last few versions of the device state in descending order (i.e.: newest first).
-* `CloudiotProjectsLocationsRegistriesGroupsDevicesList` - List devices in a device registry.
-* `CloudiotProjectsLocationsRegistriesGroupsGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `CloudiotProjectsLocationsRegistriesGroupsSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy.
-* `CloudiotProjectsLocationsRegistriesGroupsTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.
-* `CloudiotProjectsLocationsRegistriesList` - Lists device registries.
-* `CloudiotProjectsLocationsRegistriesUnbindDeviceFromGateway` - Deletes the association between the device and the gateway.
+* [CloudiotProjectsLocationsRegistriesBindDeviceToGateway](docs/projects/README.md#cloudiotprojectslocationsregistriesbinddevicetogateway) - Associates the device with the gateway.
+* [CloudiotProjectsLocationsRegistriesCreate](docs/projects/README.md#cloudiotprojectslocationsregistriescreate) - Creates a device registry that contains devices.
+* [CloudiotProjectsLocationsRegistriesDevicesConfigVersionsList](docs/projects/README.md#cloudiotprojectslocationsregistriesdevicesconfigversionslist) - Lists the last few versions of the device configuration in descending order (i.e.: newest first).
+* [CloudiotProjectsLocationsRegistriesDevicesCreate](docs/projects/README.md#cloudiotprojectslocationsregistriesdevicescreate) - Creates a device in a device registry.
+* [CloudiotProjectsLocationsRegistriesDevicesDelete](docs/projects/README.md#cloudiotprojectslocationsregistriesdevicesdelete) - Deletes a device.
+* [CloudiotProjectsLocationsRegistriesDevicesGet](docs/projects/README.md#cloudiotprojectslocationsregistriesdevicesget) - Gets details about a device.
+* [CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfig](docs/projects/README.md#cloudiotprojectslocationsregistriesdevicesmodifycloudtodeviceconfig) - Modifies the configuration for the device, which is eventually sent from the Cloud IoT Core servers. Returns the modified configuration version and its metadata.
+* [CloudiotProjectsLocationsRegistriesDevicesPatch](docs/projects/README.md#cloudiotprojectslocationsregistriesdevicespatch) - Updates a device.
+* [CloudiotProjectsLocationsRegistriesDevicesSendCommandToDevice](docs/projects/README.md#cloudiotprojectslocationsregistriesdevicessendcommandtodevice) - Sends a command to the specified device. In order for a device to be able to receive commands, it must: 1) be connected to Cloud IoT Core using the MQTT protocol, and 2) be subscribed to the group of MQTT topics specified by /devices/{device-id}/commands/#. This subscription will receive commands at the top-level topic /devices/{device-id}/commands as well as commands for subfolders, like /devices/{device-id}/commands/subfolder. Note that subscribing to specific subfolders is not supported. If the command could not be delivered to the device, this method will return an error; in particular, if the device is not subscribed, this method will return FAILED_PRECONDITION. Otherwise, this method will return OK. If the subscription is QoS 1, at least once delivery will be guaranteed; for QoS 0, no acknowledgment will be expected from the device.
+* [CloudiotProjectsLocationsRegistriesDevicesStatesList](docs/projects/README.md#cloudiotprojectslocationsregistriesdevicesstateslist) - Lists the last few versions of the device state in descending order (i.e.: newest first).
+* [CloudiotProjectsLocationsRegistriesGroupsDevicesList](docs/projects/README.md#cloudiotprojectslocationsregistriesgroupsdeviceslist) - List devices in a device registry.
+* [CloudiotProjectsLocationsRegistriesGroupsGetIamPolicy](docs/projects/README.md#cloudiotprojectslocationsregistriesgroupsgetiampolicy) - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* [CloudiotProjectsLocationsRegistriesGroupsSetIamPolicy](docs/projects/README.md#cloudiotprojectslocationsregistriesgroupssetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy.
+* [CloudiotProjectsLocationsRegistriesGroupsTestIamPermissions](docs/projects/README.md#cloudiotprojectslocationsregistriesgroupstestiampermissions) - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.
+* [CloudiotProjectsLocationsRegistriesList](docs/projects/README.md#cloudiotprojectslocationsregistrieslist) - Lists device registries.
+* [CloudiotProjectsLocationsRegistriesUnbindDeviceFromGateway](docs/projects/README.md#cloudiotprojectslocationsregistriesunbinddevicefromgateway) - Deletes the association between the device and the gateway.
 <!-- End SDK Available Operations -->
 
 ### Maturity

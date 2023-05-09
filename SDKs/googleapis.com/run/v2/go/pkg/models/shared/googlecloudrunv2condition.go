@@ -18,12 +18,16 @@ const (
 	GoogleCloudRunV2ConditionExecutionReasonEnumCancelling                   GoogleCloudRunV2ConditionExecutionReasonEnum = "CANCELLING"
 )
 
+func (e GoogleCloudRunV2ConditionExecutionReasonEnum) ToPointer() *GoogleCloudRunV2ConditionExecutionReasonEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2ConditionExecutionReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXECUTION_REASON_UNDEFINED":
 		fallthrough
 	case "JOB_STATUS_SERVICE_POLLING_ERROR":
@@ -33,10 +37,10 @@ func (e *GoogleCloudRunV2ConditionExecutionReasonEnum) UnmarshalJSON(data []byte
 	case "CANCELLED":
 		fallthrough
 	case "CANCELLING":
-		*e = GoogleCloudRunV2ConditionExecutionReasonEnum(s)
+		*e = GoogleCloudRunV2ConditionExecutionReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2ConditionExecutionReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2ConditionExecutionReasonEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	GoogleCloudRunV2ConditionReasonEnumInternal                               GoogleCloudRunV2ConditionReasonEnum = "INTERNAL"
 )
 
+func (e GoogleCloudRunV2ConditionReasonEnum) ToPointer() *GoogleCloudRunV2ConditionReasonEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2ConditionReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMON_REASON_UNDEFINED":
 		fallthrough
 	case "UNKNOWN":
@@ -96,10 +104,10 @@ func (e *GoogleCloudRunV2ConditionReasonEnum) UnmarshalJSON(data []byte) error {
 	case "POSTPONED_RETRY":
 		fallthrough
 	case "INTERNAL":
-		*e = GoogleCloudRunV2ConditionReasonEnum(s)
+		*e = GoogleCloudRunV2ConditionReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2ConditionReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2ConditionReasonEnum: %v", v)
 	}
 }
 
@@ -122,12 +130,16 @@ const (
 	GoogleCloudRunV2ConditionRevisionReasonEnumMinInstancesWarming           GoogleCloudRunV2ConditionRevisionReasonEnum = "MIN_INSTANCES_WARMING"
 )
 
+func (e GoogleCloudRunV2ConditionRevisionReasonEnum) ToPointer() *GoogleCloudRunV2ConditionRevisionReasonEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2ConditionRevisionReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVISION_REASON_UNDEFINED":
 		fallthrough
 	case "PENDING":
@@ -153,10 +165,10 @@ func (e *GoogleCloudRunV2ConditionRevisionReasonEnum) UnmarshalJSON(data []byte)
 	case "HEALTH_CHECK_SKIPPED":
 		fallthrough
 	case "MIN_INSTANCES_WARMING":
-		*e = GoogleCloudRunV2ConditionRevisionReasonEnum(s)
+		*e = GoogleCloudRunV2ConditionRevisionReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2ConditionRevisionReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2ConditionRevisionReasonEnum: %v", v)
 	}
 }
 
@@ -170,12 +182,16 @@ const (
 	GoogleCloudRunV2ConditionSeverityEnumInfo                GoogleCloudRunV2ConditionSeverityEnum = "INFO"
 )
 
+func (e GoogleCloudRunV2ConditionSeverityEnum) ToPointer() *GoogleCloudRunV2ConditionSeverityEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2ConditionSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "ERROR":
@@ -183,10 +199,10 @@ func (e *GoogleCloudRunV2ConditionSeverityEnum) UnmarshalJSON(data []byte) error
 	case "WARNING":
 		fallthrough
 	case "INFO":
-		*e = GoogleCloudRunV2ConditionSeverityEnum(s)
+		*e = GoogleCloudRunV2ConditionSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2ConditionSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2ConditionSeverityEnum: %v", v)
 	}
 }
 
@@ -201,12 +217,16 @@ const (
 	GoogleCloudRunV2ConditionStateEnumConditionSucceeded   GoogleCloudRunV2ConditionStateEnum = "CONDITION_SUCCEEDED"
 )
 
+func (e GoogleCloudRunV2ConditionStateEnum) ToPointer() *GoogleCloudRunV2ConditionStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2ConditionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CONDITION_PENDING":
@@ -216,10 +236,10 @@ func (e *GoogleCloudRunV2ConditionStateEnum) UnmarshalJSON(data []byte) error {
 	case "CONDITION_FAILED":
 		fallthrough
 	case "CONDITION_SUCCEEDED":
-		*e = GoogleCloudRunV2ConditionStateEnum(s)
+		*e = GoogleCloudRunV2ConditionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2ConditionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2ConditionStateEnum: %v", v)
 	}
 }
 

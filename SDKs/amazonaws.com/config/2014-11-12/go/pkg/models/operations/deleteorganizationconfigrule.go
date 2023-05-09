@@ -16,17 +16,21 @@ const (
 	DeleteOrganizationConfigRuleXAmzTargetEnumStarlingDoveServiceDeleteOrganizationConfigRule DeleteOrganizationConfigRuleXAmzTargetEnum = "StarlingDoveService.DeleteOrganizationConfigRule"
 )
 
+func (e DeleteOrganizationConfigRuleXAmzTargetEnum) ToPointer() *DeleteOrganizationConfigRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteOrganizationConfigRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DeleteOrganizationConfigRule":
-		*e = DeleteOrganizationConfigRuleXAmzTargetEnum(s)
+		*e = DeleteOrganizationConfigRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteOrganizationConfigRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteOrganizationConfigRuleXAmzTargetEnum: %v", v)
 	}
 }
 

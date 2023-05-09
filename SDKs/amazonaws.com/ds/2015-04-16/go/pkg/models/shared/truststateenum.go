@@ -23,12 +23,16 @@ const (
 	TrustStateEnumFailed       TrustStateEnum = "Failed"
 )
 
+func (e TrustStateEnum) ToPointer() *TrustStateEnum {
+	return &e
+}
+
 func (e *TrustStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Creating":
 		fallthrough
 	case "Created":
@@ -50,9 +54,9 @@ func (e *TrustStateEnum) UnmarshalJSON(data []byte) error {
 	case "Deleted":
 		fallthrough
 	case "Failed":
-		*e = TrustStateEnum(s)
+		*e = TrustStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrustStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TrustStateEnum: %v", v)
 	}
 }

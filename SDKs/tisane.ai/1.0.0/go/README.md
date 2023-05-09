@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/tisane.ai/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetFamilyDetailsRequest{
-        OcpApimSubscriptionKey: "{{apiKey}}",
-        ID: "{family_id}",
-    }
-
     ctx := context.Background()
-    res, err := s.LanguageModelDirectAccess.GetFamilyDetails(ctx, req)
+    res, err := s.LanguageModelDirectAccess.GetFamilyDetails(ctx, operations.GetFamilyDetailsRequest{
+        OcpApimSubscriptionKey: sdk.String("{{apiKey}}"),
+        ID: sdk.String("{family_id}"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,14 +43,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### LanguageModelDirectAccess
+### [LanguageModelDirectAccess](docs/languagemodeldirectaccess/README.md)
 
-* `GetFamilyDetails` - Get family details
-* `ListFeatureValues` - List feature values
-* `ListHypernyms` - List hypernyms
-* `ListHyponyms` - List hyponyms
-* `ListInflectedForms` - List inflected forms
-* `ListWordSenses` - List word senses
+* [GetFamilyDetails](docs/languagemodeldirectaccess/README.md#getfamilydetails) - Get family details
+* [ListFeatureValues](docs/languagemodeldirectaccess/README.md#listfeaturevalues) - List feature values
+* [ListHypernyms](docs/languagemodeldirectaccess/README.md#listhypernyms) - List hypernyms
+* [ListHyponyms](docs/languagemodeldirectaccess/README.md#listhyponyms) - List hyponyms
+* [ListInflectedForms](docs/languagemodeldirectaccess/README.md#listinflectedforms) - List inflected forms
+* [ListWordSenses](docs/languagemodeldirectaccess/README.md#listwordsenses) - List word senses
 <!-- End SDK Available Operations -->
 
 ### Maturity

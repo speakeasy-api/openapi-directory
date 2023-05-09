@@ -104,7 +104,10 @@ func (s *episode) GetEpisodes(ctx context.Context, request operations.GetEpisode
 // GetEpisodesID - Get a specific episode
 func (s *episode) GetEpisodesID(ctx context.Context, request operations.GetEpisodesIDRequest, security operations.GetEpisodesIDSecurity) (*operations.GetEpisodesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/episodes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -157,7 +160,10 @@ func (s *episode) GetEpisodesID(ctx context.Context, request operations.GetEpiso
 // GetEpisodesIDNextSibling - Get the episode released right after the specified one
 func (s *episode) GetEpisodesIDNextSibling(ctx context.Context, request operations.GetEpisodesIDNextSiblingRequest, security operations.GetEpisodesIDNextSiblingSecurity) (*operations.GetEpisodesIDNextSiblingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{id}/next_sibling", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/episodes/{id}/next_sibling", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -214,7 +220,10 @@ func (s *episode) GetEpisodesIDNextSibling(ctx context.Context, request operatio
 // GetEpisodesIDPreviousSibling - Get the episode released right before the specified one
 func (s *episode) GetEpisodesIDPreviousSibling(ctx context.Context, request operations.GetEpisodesIDPreviousSiblingRequest, security operations.GetEpisodesIDPreviousSiblingSecurity) (*operations.GetEpisodesIDPreviousSiblingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{id}/previous_sibling", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/episodes/{id}/previous_sibling", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -21,20 +21,24 @@ const (
 	BookingEngineIDResponseEnumFo BookingEngineIDResponseEnum = "FO"
 )
 
+func (e BookingEngineIDResponseEnum) ToPointer() *BookingEngineIDResponseEnum {
+	return &e
+}
+
 func (e *BookingEngineIDResponseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UF":
 		fallthrough
 	case "OR":
 		fallthrough
 	case "FO":
-		*e = BookingEngineIDResponseEnum(s)
+		*e = BookingEngineIDResponseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BookingEngineIDResponseEnum: %s", s)
+		return fmt.Errorf("invalid value for BookingEngineIDResponseEnum: %v", v)
 	}
 }

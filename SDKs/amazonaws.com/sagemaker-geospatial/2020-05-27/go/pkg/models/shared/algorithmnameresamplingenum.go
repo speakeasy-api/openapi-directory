@@ -26,12 +26,16 @@ const (
 	AlgorithmNameResamplingEnumSum         AlgorithmNameResamplingEnum = "SUM"
 )
 
+func (e AlgorithmNameResamplingEnum) ToPointer() *AlgorithmNameResamplingEnum {
+	return &e
+}
+
 func (e *AlgorithmNameResamplingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEAR":
 		fallthrough
 	case "BILINEAR":
@@ -59,9 +63,9 @@ func (e *AlgorithmNameResamplingEnum) UnmarshalJSON(data []byte) error {
 	case "Q3":
 		fallthrough
 	case "SUM":
-		*e = AlgorithmNameResamplingEnum(s)
+		*e = AlgorithmNameResamplingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlgorithmNameResamplingEnum: %s", s)
+		return fmt.Errorf("invalid value for AlgorithmNameResamplingEnum: %v", v)
 	}
 }

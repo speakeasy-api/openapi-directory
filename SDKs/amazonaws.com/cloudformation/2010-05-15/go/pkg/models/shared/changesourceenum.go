@@ -17,12 +17,16 @@ const (
 	ChangeSourceEnumAutomatic          ChangeSourceEnum = "Automatic"
 )
 
+func (e ChangeSourceEnum) ToPointer() *ChangeSourceEnum {
+	return &e
+}
+
 func (e *ChangeSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResourceReference":
 		fallthrough
 	case "ParameterReference":
@@ -32,9 +36,9 @@ func (e *ChangeSourceEnum) UnmarshalJSON(data []byte) error {
 	case "DirectModification":
 		fallthrough
 	case "Automatic":
-		*e = ChangeSourceEnum(s)
+		*e = ChangeSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChangeSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ChangeSourceEnum: %v", v)
 	}
 }

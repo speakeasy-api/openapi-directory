@@ -16,17 +16,21 @@ const (
 	CreateAccessXAmzTargetEnumTransferServiceCreateAccess CreateAccessXAmzTargetEnum = "TransferService.CreateAccess"
 )
 
+func (e CreateAccessXAmzTargetEnum) ToPointer() *CreateAccessXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAccessXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.CreateAccess":
-		*e = CreateAccessXAmzTargetEnum(s)
+		*e = CreateAccessXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccessXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccessXAmzTargetEnum: %v", v)
 	}
 }
 

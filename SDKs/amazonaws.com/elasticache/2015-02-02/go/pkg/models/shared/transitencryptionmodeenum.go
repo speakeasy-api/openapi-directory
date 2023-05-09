@@ -14,18 +14,22 @@ const (
 	TransitEncryptionModeEnumRequired  TransitEncryptionModeEnum = "required"
 )
 
+func (e TransitEncryptionModeEnum) ToPointer() *TransitEncryptionModeEnum {
+	return &e
+}
+
 func (e *TransitEncryptionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "preferred":
 		fallthrough
 	case "required":
-		*e = TransitEncryptionModeEnum(s)
+		*e = TransitEncryptionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransitEncryptionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for TransitEncryptionModeEnum: %v", v)
 	}
 }

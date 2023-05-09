@@ -2,18 +2,18 @@
 
 package shared
 
-// GoogleCloudContactcenterinsightsV1ConversationDataSource - The conversation source, which is a combination of transcript and audio.
-type GoogleCloudContactcenterinsightsV1ConversationDataSource struct {
-	// A Dialogflow source of conversation data.
-	DialogflowSource *GoogleCloudContactcenterinsightsV1DialogflowSource `json:"dialogflowSource,omitempty"`
-	// A Cloud Storage source of conversation data.
-	GcsSource *GoogleCloudContactcenterinsightsV1GcsSource `json:"gcsSource,omitempty"`
-}
-
 // GoogleCloudContactcenterinsightsV1ConversationDataSourceInput - The conversation source, which is a combination of transcript and audio.
 type GoogleCloudContactcenterinsightsV1ConversationDataSourceInput struct {
 	// A Dialogflow source of conversation data.
 	DialogflowSource *GoogleCloudContactcenterinsightsV1DialogflowSourceInput `json:"dialogflowSource,omitempty"`
+	// A Cloud Storage source of conversation data.
+	GcsSource *GoogleCloudContactcenterinsightsV1GcsSource `json:"gcsSource,omitempty"`
+}
+
+// GoogleCloudContactcenterinsightsV1ConversationDataSource - The conversation source, which is a combination of transcript and audio.
+type GoogleCloudContactcenterinsightsV1ConversationDataSource struct {
+	// A Dialogflow source of conversation data.
+	DialogflowSource *GoogleCloudContactcenterinsightsV1DialogflowSource `json:"dialogflowSource,omitempty"`
 	// A Cloud Storage source of conversation data.
 	GcsSource *GoogleCloudContactcenterinsightsV1GcsSource `json:"gcsSource,omitempty"`
 }

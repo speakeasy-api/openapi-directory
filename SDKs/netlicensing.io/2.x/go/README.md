@@ -13,36 +13,34 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/netlicensing.io/2.x/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateLicenseRequestBody{
+    ctx := context.Background()
+    res, err := s.License.CreateLicense(ctx, operations.CreateLicenseRequestBody{
         Active: false,
-        Currency: "corrupti",
-        Hidden: false,
+        Currency: sdk.String("corrupti"),
+        Hidden: sdk.Bool(false),
         LicenseTemplateNumber: "provident",
         LicenseeNumber: "distinctio",
-        Name: "quibusdam",
-        Number: "unde",
-        Parentfeature: "nulla",
-        Price: 5448.83,
-        Quantity: "illum",
-        StartDate: "2022-05-18T09:34:54.894Z",
-        TimeVolume: "deserunt",
-        TimeVolumePeriod: "suscipit",
-        UsedQuantity: "iure",
-    }
-
-    ctx := context.Background()
-    res, err := s.License.CreateLicense(ctx, req, operations.CreateLicenseSecurity{
+        Name: sdk.String("Stuart Stiedemann"),
+        Number: sdk.String("vel"),
+        Parentfeature: sdk.String("error"),
+        Price: sdk.Float64(6458.94),
+        Quantity: sdk.String("suscipit"),
+        StartDate: types.MustTimeFromString("2022-09-14T09:35:47.986Z"),
+        TimeVolume: sdk.String("debitis"),
+        TimeVolumePeriod: sdk.String("ipsa"),
+        UsedQuantity: sdk.String("delectus"),
+    }, operations.CreateLicenseSecurity{
         Password: "YOUR_PASSWORD_HERE",
         Username: "YOUR_USERNAME_HERE",
     })
@@ -61,72 +59,72 @@ func main() {
 ## Available Resources and Operations
 
 
-### License
+### [License](docs/license/README.md)
 
-* `CreateLicense` - Create License
-* `DeleteLicense` - Delete License
-* `GetLicense` - Get License
-* `ListLicenses` - List Licenses
-* `UpdateLicense` - Update License
+* [CreateLicense](docs/license/README.md#createlicense) - Create License
+* [DeleteLicense](docs/license/README.md#deletelicense) - Delete License
+* [GetLicense](docs/license/README.md#getlicense) - Get License
+* [ListLicenses](docs/license/README.md#listlicenses) - List Licenses
+* [UpdateLicense](docs/license/README.md#updatelicense) - Update License
 
-### LicenseTemplate
+### [LicenseTemplate](docs/licensetemplate/README.md)
 
-* `CreateLicenseTemplate` - Create License Template
-* `DeleteLicenseTemplate` - Delete License Template
-* `GetLicenseTemplate` - Get License Template
-* `ListLicenseTemplates` - List License Templates
-* `UpdateLicenseTemplate` - Update License Template
+* [CreateLicenseTemplate](docs/licensetemplate/README.md#createlicensetemplate) - Create License Template
+* [DeleteLicenseTemplate](docs/licensetemplate/README.md#deletelicensetemplate) - Delete License Template
+* [GetLicenseTemplate](docs/licensetemplate/README.md#getlicensetemplate) - Get License Template
+* [ListLicenseTemplates](docs/licensetemplate/README.md#listlicensetemplates) - List License Templates
+* [UpdateLicenseTemplate](docs/licensetemplate/README.md#updatelicensetemplate) - Update License Template
 
-### Licensee
+### [Licensee](docs/licensee/README.md)
 
-* `CreateLicensee` - Create Licensee
-* `DeleteLicensee` - Delete Licensee
-* `GetLicensee` - Get Licensee
-* `ListLicensees` - List Licensees
-* `TransferLicenses` - Transfer Licenses
-* `UpdateLicensee` - Update Licensee
-* `ValidateLicensee` - Validate Licensee
+* [CreateLicensee](docs/licensee/README.md#createlicensee) - Create Licensee
+* [DeleteLicensee](docs/licensee/README.md#deletelicensee) - Delete Licensee
+* [GetLicensee](docs/licensee/README.md#getlicensee) - Get Licensee
+* [ListLicensees](docs/licensee/README.md#listlicensees) - List Licensees
+* [TransferLicenses](docs/licensee/README.md#transferlicenses) - Transfer Licenses
+* [UpdateLicensee](docs/licensee/README.md#updatelicensee) - Update Licensee
+* [ValidateLicensee](docs/licensee/README.md#validatelicensee) - Validate Licensee
 
-### PaymentMethod
+### [PaymentMethod](docs/paymentmethod/README.md)
 
-* `GetPaymentMethod` - Get Payment Method
-* `ListPaymentMethods` - List Payment Methods
-* `UpdatePaymentMethod` - Update Payment Method
+* [GetPaymentMethod](docs/paymentmethod/README.md#getpaymentmethod) - Get Payment Method
+* [ListPaymentMethods](docs/paymentmethod/README.md#listpaymentmethods) - List Payment Methods
+* [UpdatePaymentMethod](docs/paymentmethod/README.md#updatepaymentmethod) - Update Payment Method
 
-### Product
+### [Product](docs/product/README.md)
 
-* `CreateProduct` - Create Product
-* `DeleteProduct` - Delete Product
-* `ListProducts` - List Products
-* `ProductNumber` - Get Product
-* `UpdateProduct` - Update Product
+* [CreateProduct](docs/product/README.md#createproduct) - Create Product
+* [DeleteProduct](docs/product/README.md#deleteproduct) - Delete Product
+* [ListProducts](docs/product/README.md#listproducts) - List Products
+* [ProductNumber](docs/product/README.md#productnumber) - Get Product
+* [UpdateProduct](docs/product/README.md#updateproduct) - Update Product
 
-### ProductModule
+### [ProductModule](docs/productmodule/README.md)
 
-* `CreateProductModule` - Create Product Module
-* `DeleteProductModule` - Delete Product Module
-* `GetProductModule` - Get Product Module
-* `ListProductModules` - List Product Modules
-* `UpdateProductModule` - Update Product Module
+* [CreateProductModule](docs/productmodule/README.md#createproductmodule) - Create Product Module
+* [DeleteProductModule](docs/productmodule/README.md#deleteproductmodule) - Delete Product Module
+* [GetProductModule](docs/productmodule/README.md#getproductmodule) - Get Product Module
+* [ListProductModules](docs/productmodule/README.md#listproductmodules) - List Product Modules
+* [UpdateProductModule](docs/productmodule/README.md#updateproductmodule) - Update Product Module
 
-### Token
+### [Token](docs/token/README.md)
 
-* `CreateToken` - Create token
-* `DeleteToken` - Delete token
-* `GetToken` - Get token
-* `ListTokens` - List Tokens
+* [CreateToken](docs/token/README.md#createtoken) - Create token
+* [DeleteToken](docs/token/README.md#deletetoken) - Delete token
+* [GetToken](docs/token/README.md#gettoken) - Get token
+* [ListTokens](docs/token/README.md#listtokens) - List Tokens
 
-### Transaction
+### [Transaction](docs/transaction/README.md)
 
-* `CreateTransaction` - Create Transaction
-* `GetTransaction` - Get Transaction 
-* `ListTransactions` - List Transactions
-* `UpdateTransaction` - Update Transaction
+* [CreateTransaction](docs/transaction/README.md#createtransaction) - Create Transaction
+* [GetTransaction](docs/transaction/README.md#gettransaction) - Get Transaction 
+* [ListTransactions](docs/transaction/README.md#listtransactions) - List Transactions
+* [UpdateTransaction](docs/transaction/README.md#updatetransaction) - Update Transaction
 
-### Utility
+### [Utility](docs/utility/README.md)
 
-* `LicenseTypes` - List License Types
-* `LicensingModels` - List Licensing Models
+* [LicenseTypes](docs/utility/README.md#licensetypes) - List License Types
+* [LicensingModels](docs/utility/README.md#licensingmodels) - List Licensing Models
 <!-- End SDK Available Operations -->
 
 ### Maturity

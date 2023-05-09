@@ -35,7 +35,10 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AdsensehostAccountsAdclientsGet - Get information about one of the ad clients in the specified publisher's AdSense account.
 func (s *accounts) AdsensehostAccountsAdclientsGet(ctx context.Context, request operations.AdsensehostAccountsAdclientsGetRequest, security operations.AdsensehostAccountsAdclientsGetSecurity) (*operations.AdsensehostAccountsAdclientsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *accounts) AdsensehostAccountsAdclientsGet(ctx context.Context, request 
 // AdsensehostAccountsAdclientsList - List all hosted ad clients in the specified hosted account.
 func (s *accounts) AdsensehostAccountsAdclientsList(ctx context.Context, request operations.AdsensehostAccountsAdclientsListRequest, security operations.AdsensehostAccountsAdclientsListSecurity) (*operations.AdsensehostAccountsAdclientsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *accounts) AdsensehostAccountsAdclientsList(ctx context.Context, request
 // AdsensehostAccountsAdunitsDelete - Delete the specified ad unit from the specified publisher AdSense account.
 func (s *accounts) AdsensehostAccountsAdunitsDelete(ctx context.Context, request operations.AdsensehostAccountsAdunitsDeleteRequest, security operations.AdsensehostAccountsAdunitsDeleteSecurity) (*operations.AdsensehostAccountsAdunitsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -179,7 +188,10 @@ func (s *accounts) AdsensehostAccountsAdunitsDelete(ctx context.Context, request
 // AdsensehostAccountsAdunitsGet - Get the specified host ad unit in this AdSense account.
 func (s *accounts) AdsensehostAccountsAdunitsGet(ctx context.Context, request operations.AdsensehostAccountsAdunitsGetRequest, security operations.AdsensehostAccountsAdunitsGetSecurity) (*operations.AdsensehostAccountsAdunitsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -227,7 +239,10 @@ func (s *accounts) AdsensehostAccountsAdunitsGet(ctx context.Context, request op
 // AdsensehostAccountsAdunitsGetAdCode - Get ad code for the specified ad unit, attaching the specified host custom channels.
 func (s *accounts) AdsensehostAccountsAdunitsGetAdCode(ctx context.Context, request operations.AdsensehostAccountsAdunitsGetAdCodeRequest, security operations.AdsensehostAccountsAdunitsGetAdCodeSecurity) (*operations.AdsensehostAccountsAdunitsGetAdCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/adcode", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/adcode", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -275,7 +290,10 @@ func (s *accounts) AdsensehostAccountsAdunitsGetAdCode(ctx context.Context, requ
 // AdsensehostAccountsAdunitsInsert - Insert the supplied ad unit into the specified publisher AdSense account.
 func (s *accounts) AdsensehostAccountsAdunitsInsert(ctx context.Context, request operations.AdsensehostAccountsAdunitsInsertRequest, security operations.AdsensehostAccountsAdunitsInsertSecurity) (*operations.AdsensehostAccountsAdunitsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdUnit", "json")
 	if err != nil {
@@ -330,7 +348,10 @@ func (s *accounts) AdsensehostAccountsAdunitsInsert(ctx context.Context, request
 // AdsensehostAccountsAdunitsList - List all ad units in the specified publisher's AdSense account.
 func (s *accounts) AdsensehostAccountsAdunitsList(ctx context.Context, request operations.AdsensehostAccountsAdunitsListRequest, security operations.AdsensehostAccountsAdunitsListSecurity) (*operations.AdsensehostAccountsAdunitsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -378,7 +399,10 @@ func (s *accounts) AdsensehostAccountsAdunitsList(ctx context.Context, request o
 // AdsensehostAccountsAdunitsPatch - Update the supplied ad unit in the specified publisher AdSense account. This method supports patch semantics.
 func (s *accounts) AdsensehostAccountsAdunitsPatch(ctx context.Context, request operations.AdsensehostAccountsAdunitsPatchRequest, security operations.AdsensehostAccountsAdunitsPatchSecurity) (*operations.AdsensehostAccountsAdunitsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdUnit", "json")
 	if err != nil {
@@ -433,7 +457,10 @@ func (s *accounts) AdsensehostAccountsAdunitsPatch(ctx context.Context, request 
 // AdsensehostAccountsAdunitsUpdate - Update the supplied ad unit in the specified publisher AdSense account.
 func (s *accounts) AdsensehostAccountsAdunitsUpdate(ctx context.Context, request operations.AdsensehostAccountsAdunitsUpdateRequest, security operations.AdsensehostAccountsAdunitsUpdateSecurity) (*operations.AdsensehostAccountsAdunitsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/adclients/{adClientId}/adunits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdUnit", "json")
 	if err != nil {
@@ -488,7 +515,10 @@ func (s *accounts) AdsensehostAccountsAdunitsUpdate(ctx context.Context, request
 // AdsensehostAccountsGet - Get information about the selected associated AdSense account.
 func (s *accounts) AdsensehostAccountsGet(ctx context.Context, request operations.AdsensehostAccountsGetRequest, security operations.AdsensehostAccountsGetSecurity) (*operations.AdsensehostAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -584,7 +614,10 @@ func (s *accounts) AdsensehostAccountsList(ctx context.Context, request operatio
 // AdsensehostAccountsReportsGenerate - Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
 func (s *accounts) AdsensehostAccountsReportsGenerate(ctx context.Context, request operations.AdsensehostAccountsReportsGenerateRequest, security operations.AdsensehostAccountsReportsGenerateSecurity) (*operations.AdsensehostAccountsReportsGenerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/reports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

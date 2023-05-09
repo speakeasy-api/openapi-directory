@@ -14,18 +14,22 @@ const (
 	BatchStrategyEnumSingleRecord BatchStrategyEnum = "SingleRecord"
 )
 
+func (e BatchStrategyEnum) ToPointer() *BatchStrategyEnum {
+	return &e
+}
+
 func (e *BatchStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MultiRecord":
 		fallthrough
 	case "SingleRecord":
-		*e = BatchStrategyEnum(s)
+		*e = BatchStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchStrategyEnum: %v", v)
 	}
 }

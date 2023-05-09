@@ -16,12 +16,16 @@ const (
 	CategoryEnumAwsTypes   CategoryEnum = "AWS_TYPES"
 )
 
+func (e CategoryEnum) ToPointer() *CategoryEnum {
+	return &e
+}
+
 func (e *CategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGISTERED":
 		fallthrough
 	case "ACTIVATED":
@@ -29,9 +33,9 @@ func (e *CategoryEnum) UnmarshalJSON(data []byte) error {
 	case "THIRD_PARTY":
 		fallthrough
 	case "AWS_TYPES":
-		*e = CategoryEnum(s)
+		*e = CategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for CategoryEnum: %v", v)
 	}
 }

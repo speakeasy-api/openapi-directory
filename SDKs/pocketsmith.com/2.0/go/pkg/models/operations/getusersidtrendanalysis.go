@@ -19,12 +19,16 @@ const (
 	GetUsersIDTrendAnalysisPeriodEnumEvent  GetUsersIDTrendAnalysisPeriodEnum = "event"
 )
 
+func (e GetUsersIDTrendAnalysisPeriodEnum) ToPointer() *GetUsersIDTrendAnalysisPeriodEnum {
+	return &e
+}
+
 func (e *GetUsersIDTrendAnalysisPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "weeks":
 		fallthrough
 	case "months":
@@ -32,10 +36,10 @@ func (e *GetUsersIDTrendAnalysisPeriodEnum) UnmarshalJSON(data []byte) error {
 	case "years":
 		fallthrough
 	case "event":
-		*e = GetUsersIDTrendAnalysisPeriodEnum(s)
+		*e = GetUsersIDTrendAnalysisPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUsersIDTrendAnalysisPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUsersIDTrendAnalysisPeriodEnum: %v", v)
 	}
 }
 

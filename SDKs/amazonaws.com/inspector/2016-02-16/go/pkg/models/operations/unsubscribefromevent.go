@@ -16,17 +16,21 @@ const (
 	UnsubscribeFromEventXAmzTargetEnumInspectorServiceUnsubscribeFromEvent UnsubscribeFromEventXAmzTargetEnum = "InspectorService.UnsubscribeFromEvent"
 )
 
+func (e UnsubscribeFromEventXAmzTargetEnum) ToPointer() *UnsubscribeFromEventXAmzTargetEnum {
+	return &e
+}
+
 func (e *UnsubscribeFromEventXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InspectorService.UnsubscribeFromEvent":
-		*e = UnsubscribeFromEventXAmzTargetEnum(s)
+		*e = UnsubscribeFromEventXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UnsubscribeFromEventXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UnsubscribeFromEventXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -31,12 +31,16 @@ const (
 	DsRecordAlgorithmEnumPrivateoid           DsRecordAlgorithmEnum = "PRIVATEOID"
 )
 
+func (e DsRecordAlgorithmEnum) ToPointer() *DsRecordAlgorithmEnum {
+	return &e
+}
+
 func (e *DsRecordAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "RSAMD5":
@@ -72,10 +76,10 @@ func (e *DsRecordAlgorithmEnum) UnmarshalJSON(data []byte) error {
 	case "PRIVATEDNS":
 		fallthrough
 	case "PRIVATEOID":
-		*e = DsRecordAlgorithmEnum(s)
+		*e = DsRecordAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DsRecordAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for DsRecordAlgorithmEnum: %v", v)
 	}
 }
 
@@ -90,12 +94,16 @@ const (
 	DsRecordDigestTypeEnumSha384                DsRecordDigestTypeEnum = "SHA384"
 )
 
+func (e DsRecordDigestTypeEnum) ToPointer() *DsRecordDigestTypeEnum {
+	return &e
+}
+
 func (e *DsRecordDigestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIGEST_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SHA1":
@@ -105,10 +113,10 @@ func (e *DsRecordDigestTypeEnum) UnmarshalJSON(data []byte) error {
 	case "GOST3411":
 		fallthrough
 	case "SHA384":
-		*e = DsRecordDigestTypeEnum(s)
+		*e = DsRecordDigestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DsRecordDigestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DsRecordDigestTypeEnum: %v", v)
 	}
 }
 

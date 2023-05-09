@@ -16,17 +16,21 @@ const (
 	DeliverConfigSnapshotXAmzTargetEnumStarlingDoveServiceDeliverConfigSnapshot DeliverConfigSnapshotXAmzTargetEnum = "StarlingDoveService.DeliverConfigSnapshot"
 )
 
+func (e DeliverConfigSnapshotXAmzTargetEnum) ToPointer() *DeliverConfigSnapshotXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeliverConfigSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DeliverConfigSnapshot":
-		*e = DeliverConfigSnapshotXAmzTargetEnum(s)
+		*e = DeliverConfigSnapshotXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliverConfigSnapshotXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliverConfigSnapshotXAmzTargetEnum: %v", v)
 	}
 }
 

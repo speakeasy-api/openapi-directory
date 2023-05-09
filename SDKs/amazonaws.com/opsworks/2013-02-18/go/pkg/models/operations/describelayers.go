@@ -16,17 +16,21 @@ const (
 	DescribeLayersXAmzTargetEnumOpsWorks20130218DescribeLayers DescribeLayersXAmzTargetEnum = "OpsWorks_20130218.DescribeLayers"
 )
 
+func (e DescribeLayersXAmzTargetEnum) ToPointer() *DescribeLayersXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeLayersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DescribeLayers":
-		*e = DescribeLayersXAmzTargetEnum(s)
+		*e = DescribeLayersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeLayersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeLayersXAmzTargetEnum: %v", v)
 	}
 }
 

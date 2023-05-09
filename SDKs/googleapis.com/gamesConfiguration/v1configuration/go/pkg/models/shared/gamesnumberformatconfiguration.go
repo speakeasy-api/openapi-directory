@@ -17,12 +17,16 @@ const (
 	GamesNumberFormatConfigurationNumberFormatTypeEnumCurrency                    GamesNumberFormatConfigurationNumberFormatTypeEnum = "CURRENCY"
 )
 
+func (e GamesNumberFormatConfigurationNumberFormatTypeEnum) ToPointer() *GamesNumberFormatConfigurationNumberFormatTypeEnum {
+	return &e
+}
+
 func (e *GamesNumberFormatConfigurationNumberFormatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NUMBER_FORMAT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NUMERIC":
@@ -30,10 +34,10 @@ func (e *GamesNumberFormatConfigurationNumberFormatTypeEnum) UnmarshalJSON(data 
 	case "TIME_DURATION":
 		fallthrough
 	case "CURRENCY":
-		*e = GamesNumberFormatConfigurationNumberFormatTypeEnum(s)
+		*e = GamesNumberFormatConfigurationNumberFormatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GamesNumberFormatConfigurationNumberFormatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GamesNumberFormatConfigurationNumberFormatTypeEnum: %v", v)
 	}
 }
 

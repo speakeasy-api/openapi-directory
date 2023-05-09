@@ -51,9 +51,12 @@ func newVersions(defaultClient, securityClient HTTPClient, serverURL, language, 
 // * A server error occurred (HTTP error `500`)
 func (s *versions) CreateArtifactVersionJSON(ctx context.Context, request operations.CreateArtifactVersionJSONRequest) (*operations.CreateArtifactVersionJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContentCreateRequest", "json")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArtifactContent", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -144,7 +147,10 @@ func (s *versions) CreateArtifactVersionJSON(ctx context.Context, request operat
 // * A server error occurred (HTTP error `500`)
 func (s *versions) CreateArtifactVersionRaw(ctx context.Context, request operations.CreateArtifactVersionRawRequest) (*operations.CreateArtifactVersionRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -219,6 +225,68 @@ func (s *versions) CreateArtifactVersionRaw(ctx context.Context, request operati
 	return res, nil
 }
 
+// DeleteArtifactVersion - Delete artifact version
+// Deletes a single version of the artifact. Parameters `groupId`, `artifactId` and the unique `version`
+// are needed. If this is the only version of the artifact, this operation is the same as
+// deleting the entire artifact.
+//
+// This feature is disabled by default and it's discouraged for normal usage. To enable it, set the `registry.rest.artifact.deletion.enabled` property to true. This operation can fail for the following reasons:
+//
+// * No artifact with this `artifactId` exists (HTTP error `404`)
+// * No version with this `version` exists (HTTP error `404`)
+//   - Feature is disabled (HTTP error `405`)
+//   - A server error occurred (HTTP error `500`)
+func (s *versions) DeleteArtifactVersion(ctx context.Context, request operations.DeleteArtifactVersionRequest) (*operations.DeleteArtifactVersionResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteArtifactVersionResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 405:
+		fallthrough
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // GetArtifactVersion - Get artifact version
 // Retrieves a single version of the artifact content.  Both the `artifactId` and the
 // unique `version` number must be provided.  The `Content-Type` of the response depends
@@ -232,7 +300,10 @@ func (s *versions) CreateArtifactVersionRaw(ctx context.Context, request operati
 // * A server error occurred (HTTP error `500`)
 func (s *versions) GetArtifactVersion(ctx context.Context, request operations.GetArtifactVersionRequest) (*operations.GetArtifactVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -302,7 +373,10 @@ func (s *versions) GetArtifactVersion(ctx context.Context, request operations.Ge
 // * A server error occurred (HTTP error `500`)
 func (s *versions) GetArtifactVersionReferences(ctx context.Context, request operations.GetArtifactVersionReferencesRequest) (*operations.GetArtifactVersionReferencesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/references", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/references", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -364,7 +438,10 @@ func (s *versions) GetArtifactVersionReferences(ctx context.Context, request ope
 // * A server error occurred (HTTP error `500`)
 func (s *versions) ListArtifactVersions(ctx context.Context, request operations.ListArtifactVersionsRequest) (*operations.ListArtifactVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -432,7 +509,10 @@ func (s *versions) ListArtifactVersions(ctx context.Context, request operations.
 // * A server error occurred (HTTP error `500`)
 func (s *versions) UpdateArtifactVersionState(ctx context.Context, request operations.UpdateArtifactVersionStateRequest) (*operations.UpdateArtifactVersionStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/state", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/state", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateState", "json")
 	if err != nil {

@@ -24,12 +24,16 @@ const (
 	GamesScoresListCollectionEnumFriends                    GamesScoresListCollectionEnum = "FRIENDS"
 )
 
+func (e GamesScoresListCollectionEnum) ToPointer() *GamesScoresListCollectionEnum {
+	return &e
+}
+
 func (e *GamesScoresListCollectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCORE_COLLECTION_UNSPECIFIED":
 		fallthrough
 	case "PUBLIC":
@@ -37,10 +41,10 @@ func (e *GamesScoresListCollectionEnum) UnmarshalJSON(data []byte) error {
 	case "SOCIAL":
 		fallthrough
 	case "FRIENDS":
-		*e = GamesScoresListCollectionEnum(s)
+		*e = GamesScoresListCollectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GamesScoresListCollectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GamesScoresListCollectionEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	GamesScoresListTimeSpanEnumDaily                    GamesScoresListTimeSpanEnum = "DAILY"
 )
 
+func (e GamesScoresListTimeSpanEnum) ToPointer() *GamesScoresListTimeSpanEnum {
+	return &e
+}
+
 func (e *GamesScoresListTimeSpanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCORE_TIME_SPAN_UNSPECIFIED":
 		fallthrough
 	case "ALL_TIME":
@@ -67,10 +75,10 @@ func (e *GamesScoresListTimeSpanEnum) UnmarshalJSON(data []byte) error {
 	case "WEEKLY":
 		fallthrough
 	case "DAILY":
-		*e = GamesScoresListTimeSpanEnum(s)
+		*e = GamesScoresListTimeSpanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GamesScoresListTimeSpanEnum: %s", s)
+		return fmt.Errorf("invalid value for GamesScoresListTimeSpanEnum: %v", v)
 	}
 }
 

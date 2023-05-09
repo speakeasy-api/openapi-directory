@@ -32,19 +32,23 @@ const (
 	ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnumLog     ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnum = "LOG"
 )
 
+func (e ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnum) ToPointer() *ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnum {
+	return &e
+}
+
 func (e *ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAPTURE":
 		fallthrough
 	case "LOG":
-		*e = ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnum(s)
+		*e = ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnum: %s", s)
+		return fmt.Errorf("invalid value for ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnum: %v", v)
 	}
 }
 

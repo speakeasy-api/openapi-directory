@@ -14,18 +14,22 @@ const (
 	ResponseHeadersPolicyTypeEnumCustom  ResponseHeadersPolicyTypeEnum = "custom"
 )
 
+func (e ResponseHeadersPolicyTypeEnum) ToPointer() *ResponseHeadersPolicyTypeEnum {
+	return &e
+}
+
 func (e *ResponseHeadersPolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "managed":
 		fallthrough
 	case "custom":
-		*e = ResponseHeadersPolicyTypeEnum(s)
+		*e = ResponseHeadersPolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResponseHeadersPolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResponseHeadersPolicyTypeEnum: %v", v)
 	}
 }

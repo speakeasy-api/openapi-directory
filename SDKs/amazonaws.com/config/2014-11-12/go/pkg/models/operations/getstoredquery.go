@@ -16,17 +16,21 @@ const (
 	GetStoredQueryXAmzTargetEnumStarlingDoveServiceGetStoredQuery GetStoredQueryXAmzTargetEnum = "StarlingDoveService.GetStoredQuery"
 )
 
+func (e GetStoredQueryXAmzTargetEnum) ToPointer() *GetStoredQueryXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetStoredQueryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.GetStoredQuery":
-		*e = GetStoredQueryXAmzTargetEnum(s)
+		*e = GetStoredQueryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetStoredQueryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetStoredQueryXAmzTargetEnum: %v", v)
 	}
 }
 

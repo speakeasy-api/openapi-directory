@@ -4,7 +4,7 @@ package shared
 
 // ServiceSpecInput - ServiceSpec holds the desired state of the Route (from the client), which is used to manipulate the underlying Route and Configuration(s).
 type ServiceSpecInput struct {
-	// RevisionTemplateSpec describes the data a revision should have when created from a template. Based on: https://github.com/kubernetes/api/blob/e771f807/core/v1/types.go#L3179-L3190
+	// RevisionTemplateSpec describes the data a revision should have when created from a template.
 	Template *RevisionTemplate `json:"template,omitempty"`
 	// Specifies how to distribute traffic over a collection of Knative Revisions and Configurations to the Service's main URL.
 	Traffic []TrafficTargetInput `json:"traffic,omitempty"`
@@ -12,7 +12,7 @@ type ServiceSpecInput struct {
 
 // ServiceSpec - ServiceSpec holds the desired state of the Route (from the client), which is used to manipulate the underlying Route and Configuration(s).
 type ServiceSpec struct {
-	// RevisionTemplateSpec describes the data a revision should have when created from a template. Based on: https://github.com/kubernetes/api/blob/e771f807/core/v1/types.go#L3179-L3190
+	// RevisionTemplateSpec describes the data a revision should have when created from a template.
 	Template *RevisionTemplate `json:"template,omitempty"`
 	// Specifies how to distribute traffic over a collection of Knative Revisions and Configurations to the Service's main URL.
 	Traffic []TrafficTarget `json:"traffic,omitempty"`

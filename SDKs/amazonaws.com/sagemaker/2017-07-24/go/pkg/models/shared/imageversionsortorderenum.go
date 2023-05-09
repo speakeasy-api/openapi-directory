@@ -14,18 +14,22 @@ const (
 	ImageVersionSortOrderEnumDescending ImageVersionSortOrderEnum = "DESCENDING"
 )
 
+func (e ImageVersionSortOrderEnum) ToPointer() *ImageVersionSortOrderEnum {
+	return &e
+}
+
 func (e *ImageVersionSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = ImageVersionSortOrderEnum(s)
+		*e = ImageVersionSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageVersionSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageVersionSortOrderEnum: %v", v)
 	}
 }

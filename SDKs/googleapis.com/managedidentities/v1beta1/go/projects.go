@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrust - Adds an AD trust to a domain.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrust(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:attachTrust", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:attachTrust", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AttachTrustRequestInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrust(ct
 // ManagedidentitiesProjectsLocationsGlobalDomainsBackupsCreate - Creates a Backup for a domain.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsBackupsCreate(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsCreateRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsCreateSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/backups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/backups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BackupInput", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsBackupsCreate(
 // ManagedidentitiesProjectsLocationsGlobalDomainsBackupsList - Lists Backup in a given project.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsBackupsList(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/backups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/backups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsBackupsList(ct
 // ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermission - CheckMigrationPermission API gets the current state of DomainMigration
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermission(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermissionRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermissionSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigrationPermissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{domain}:checkMigrationPermission", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{domain}:checkMigrationPermission", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsCheckMigration
 // ManagedidentitiesProjectsLocationsGlobalDomainsCreate - Creates a Microsoft AD domain.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsCreate(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsCreateRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsCreateSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/domains", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/domains", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DomainInput", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsCreate(ctx con
 // ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrust - Removes an AD trust.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrust(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:detachTrust", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:detachTrust", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DetachTrustRequestInput", "json")
 	if err != nil {
@@ -357,7 +375,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrust(ct
 // ManagedidentitiesProjectsLocationsGlobalDomainsDisableMigration - Disable Domain Migration
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsDisableMigration(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsDisableMigrationRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsDisableMigrationSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsDisableMigrationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{domain}:disableMigration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{domain}:disableMigration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -412,7 +433,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsDisableMigrati
 // ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachine - DomainJoinMachine API joins a Compute Engine VM to the domain
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachine(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{domain}:domainJoinMachine", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{domain}:domainJoinMachine", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DomainJoinMachineRequest", "json")
 	if err != nil {
@@ -467,7 +491,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMach
 // ManagedidentitiesProjectsLocationsGlobalDomainsEnableMigration - Enable Domain Migration
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsEnableMigration(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsEnableMigrationRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsEnableMigrationSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsEnableMigrationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{domain}:enableMigration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{domain}:enableMigration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnableMigrationRequest", "json")
 	if err != nil {
@@ -522,7 +549,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsEnableMigratio
 // ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchema - Extend Schema for Domain
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchema(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{domain}:extendSchema", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{domain}:extendSchema", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExtendSchemaRequest", "json")
 	if err != nil {
@@ -577,7 +607,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchema(c
 // ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettings - Gets the domain ldaps settings.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettings(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/ldapssettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/ldapssettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -625,7 +658,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettin
 // ManagedidentitiesProjectsLocationsGlobalDomainsList - Lists domains in a project.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsList(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsListRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsListSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/domains", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/domains", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -673,7 +709,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsList(ctx conte
 // ManagedidentitiesProjectsLocationsGlobalDomainsReconfigureTrust - Updates the DNS conditional forwarder.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsReconfigureTrust(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsReconfigureTrustRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsReconfigureTrustSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsReconfigureTrustResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:reconfigureTrust", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:reconfigureTrust", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReconfigureTrustRequest", "json")
 	if err != nil {
@@ -728,7 +767,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsReconfigureTru
 // ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPassword - Resets a domain's administrator password.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPassword(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:resetAdminPassword", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:resetAdminPassword", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -783,7 +825,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPass
 // ManagedidentitiesProjectsLocationsGlobalDomainsRestore - RestoreBackup restores domain mentioned in the RestoreBackupRequest
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsRestore(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsRestoreRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsRestoreSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsRestoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:restore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:restore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RestoreDomainRequest", "json")
 	if err != nil {
@@ -838,7 +883,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsRestore(ctx co
 // ManagedidentitiesProjectsLocationsGlobalDomainsSQLIntegrationsList - Lists SqlIntegrations in a given domain.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsSQLIntegrationsList(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsSQLIntegrationsListRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsSQLIntegrationsListSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsSQLIntegrationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/sqlIntegrations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/sqlIntegrations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -886,7 +934,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsSQLIntegration
 // ManagedidentitiesProjectsLocationsGlobalDomainsUpdateLdapssettings - Patches a single ldaps settings.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsUpdateLdapssettings(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsUpdateLdapssettingsRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsUpdateLdapssettingsSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsUpdateLdapssettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/ldapssettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/ldapssettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LDAPSSettingsInput", "json")
 	if err != nil {
@@ -941,7 +992,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsUpdateLdapsset
 // ManagedidentitiesProjectsLocationsGlobalDomainsValidateTrust - Validates a trust state, that the target domain is reachable, and that the target domain is able to accept incoming trust requests.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsValidateTrust(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalDomainsValidateTrustRequest, security operations.ManagedidentitiesProjectsLocationsGlobalDomainsValidateTrustSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalDomainsValidateTrustResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:validateTrust", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:validateTrust", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ValidateTrustRequestInput", "json")
 	if err != nil {
@@ -996,7 +1050,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalDomainsValidateTrust(
 // ManagedidentitiesProjectsLocationsGlobalOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalOperationsCancel(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalOperationsCancelRequest, security operations.ManagedidentitiesProjectsLocationsGlobalOperationsCancelSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1051,7 +1108,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalOperationsCancel(ctx 
 // ManagedidentitiesProjectsLocationsGlobalPeeringsCreate - Creates a Peering for Managed AD instance.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsCreate(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalPeeringsCreateRequest, security operations.ManagedidentitiesProjectsLocationsGlobalPeeringsCreateSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalPeeringsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/peerings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/peerings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PeeringInput", "json")
 	if err != nil {
@@ -1106,7 +1166,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsCreate(ctx co
 // ManagedidentitiesProjectsLocationsGlobalPeeringsDelete - Deletes identified Peering.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsDelete(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalPeeringsDeleteRequest, security operations.ManagedidentitiesProjectsLocationsGlobalPeeringsDeleteSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalPeeringsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1154,7 +1217,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsDelete(ctx co
 // ManagedidentitiesProjectsLocationsGlobalPeeringsGet - Gets details of a single Peering.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsGet(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetRequest, security operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1202,7 +1268,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsGet(ctx conte
 // ManagedidentitiesProjectsLocationsGlobalPeeringsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsGetIamPolicy(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetIamPolicyRequest, security operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetIamPolicySecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1250,7 +1319,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsGetIamPolicy(
 // ManagedidentitiesProjectsLocationsGlobalPeeringsList - Lists Peerings in a given project.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsList(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalPeeringsListRequest, security operations.ManagedidentitiesProjectsLocationsGlobalPeeringsListSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalPeeringsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/peerings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/peerings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1298,7 +1370,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsList(ctx cont
 // ManagedidentitiesProjectsLocationsGlobalPeeringsPatch - Updates the labels for specified Peering.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsPatch(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalPeeringsPatchRequest, security operations.ManagedidentitiesProjectsLocationsGlobalPeeringsPatchSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalPeeringsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PeeringInput", "json")
 	if err != nil {
@@ -1353,7 +1428,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsPatch(ctx con
 // ManagedidentitiesProjectsLocationsGlobalPeeringsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsSetIamPolicy(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalPeeringsSetIamPolicyRequest, security operations.ManagedidentitiesProjectsLocationsGlobalPeeringsSetIamPolicySecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalPeeringsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -1408,7 +1486,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsSetIamPolicy(
 // ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissions(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsRequest, security operations.ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsSecurity) (*operations.ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -1463,7 +1544,10 @@ func (s *projects) ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermis
 // ManagedidentitiesProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) ManagedidentitiesProjectsLocationsList(ctx context.Context, request operations.ManagedidentitiesProjectsLocationsListRequest, security operations.ManagedidentitiesProjectsLocationsListSecurity) (*operations.ManagedidentitiesProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	POSTEnableReachabilityAnalyzerOrganizationSharingActionEnumEnableReachabilityAnalyzerOrganizationSharing POSTEnableReachabilityAnalyzerOrganizationSharingActionEnum = "EnableReachabilityAnalyzerOrganizationSharing"
 )
 
+func (e POSTEnableReachabilityAnalyzerOrganizationSharingActionEnum) ToPointer() *POSTEnableReachabilityAnalyzerOrganizationSharingActionEnum {
+	return &e
+}
+
 func (e *POSTEnableReachabilityAnalyzerOrganizationSharingActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableReachabilityAnalyzerOrganizationSharing":
-		*e = POSTEnableReachabilityAnalyzerOrganizationSharingActionEnum(s)
+		*e = POSTEnableReachabilityAnalyzerOrganizationSharingActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableReachabilityAnalyzerOrganizationSharingActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableReachabilityAnalyzerOrganizationSharingActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnumTwoThousandAndSixteen1115 POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum = "2016-11-15"
 )
 
+func (e POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum) ToPointer() *POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum {
+	return &e
+}
+
 func (e *POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum(s)
+		*e = POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,18 +17,19 @@ func main() {
         }),
     )
 
-    req := operations.CreateReplicationSetRequest{
+    ctx := context.Background()
+    res, err := s.CreateReplicationSet(ctx, operations.CreateReplicationSetRequest{
         RequestBody: operations.CreateReplicationSetRequestBody{
-            ClientToken: "corrupti",
+            ClientToken: sdk.String("corrupti"),
             Regions: map[string]shared.RegionMapInputValue{
                 "distinctio": shared.RegionMapInputValue{
-                    SseKmsKeyID: "quibusdam",
+                    SseKmsKeyID: sdk.String("quibusdam"),
                 },
                 "unde": shared.RegionMapInputValue{
-                    SseKmsKeyID: "nulla",
+                    SseKmsKeyID: sdk.String("nulla"),
                 },
                 "corrupti": shared.RegionMapInputValue{
-                    SseKmsKeyID: "illum",
+                    SseKmsKeyID: sdk.String("illum"),
                 },
             },
             Tags: map[string]string{
@@ -36,17 +37,14 @@ func main() {
                 "suscipit": "iure",
             },
         },
-        XAmzAlgorithm: "magnam",
-        XAmzContentSha256: "debitis",
-        XAmzCredential: "ipsa",
-        XAmzDate: "delectus",
-        XAmzSecurityToken: "tempora",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateReplicationSet(ctx, req)
+        XAmzAlgorithm: sdk.String("magnam"),
+        XAmzContentSha256: sdk.String("debitis"),
+        XAmzCredential: sdk.String("ipsa"),
+        XAmzDate: sdk.String("delectus"),
+        XAmzSecurityToken: sdk.String("tempora"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("molestiae"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -15,17 +15,21 @@ const (
 	GETSwitchoverBlueGreenDeploymentActionEnumSwitchoverBlueGreenDeployment GETSwitchoverBlueGreenDeploymentActionEnum = "SwitchoverBlueGreenDeployment"
 )
 
+func (e GETSwitchoverBlueGreenDeploymentActionEnum) ToPointer() *GETSwitchoverBlueGreenDeploymentActionEnum {
+	return &e
+}
+
 func (e *GETSwitchoverBlueGreenDeploymentActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SwitchoverBlueGreenDeployment":
-		*e = GETSwitchoverBlueGreenDeploymentActionEnum(s)
+		*e = GETSwitchoverBlueGreenDeploymentActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSwitchoverBlueGreenDeploymentActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSwitchoverBlueGreenDeploymentActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSwitchoverBlueGreenDeploymentVersionEnumTwoThousandAndFourteen1031 GETSwitchoverBlueGreenDeploymentVersionEnum = "2014-10-31"
 )
 
+func (e GETSwitchoverBlueGreenDeploymentVersionEnum) ToPointer() *GETSwitchoverBlueGreenDeploymentVersionEnum {
+	return &e
+}
+
 func (e *GETSwitchoverBlueGreenDeploymentVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETSwitchoverBlueGreenDeploymentVersionEnum(s)
+		*e = GETSwitchoverBlueGreenDeploymentVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSwitchoverBlueGreenDeploymentVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSwitchoverBlueGreenDeploymentVersionEnum: %v", v)
 	}
 }
 

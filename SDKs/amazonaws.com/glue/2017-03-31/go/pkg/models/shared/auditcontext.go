@@ -2,7 +2,7 @@
 
 package shared
 
-// AuditContext - A structure containing information for audit.
+// AuditContext - A structure containing the Lake Formation audit context.
 type AuditContext struct {
 	AdditionalAuditContext *string  `json:"AdditionalAuditContext,omitempty"`
 	AllColumnsRequested    *bool    `json:"AllColumnsRequested,omitempty"`

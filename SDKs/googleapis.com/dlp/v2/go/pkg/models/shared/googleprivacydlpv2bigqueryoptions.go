@@ -15,21 +15,25 @@ const (
 	GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnumRandomStart             GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum = "RANDOM_START"
 )
 
+func (e GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum) ToPointer() *GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SAMPLE_METHOD_UNSPECIFIED":
 		fallthrough
 	case "TOP":
 		fallthrough
 	case "RANDOM_START":
-		*e = GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum(s)
+		*e = GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2BigQueryOptionsSampleMethodEnum: %v", v)
 	}
 }
 

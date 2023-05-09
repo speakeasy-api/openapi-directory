@@ -36,7 +36,10 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Read more on **[Cancel an existing authorization](https://docs.klarna.com/klarna-payments/other-actions/cancel-an-authorization/)**.
 func (s *orders) CancelAuthorization(ctx context.Context, request operations.CancelAuthorizationRequest) (*operations.CancelAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payments/v1/authorizations/{authorizationToken}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payments/v1/authorizations/{authorizationToken}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -77,7 +80,10 @@ func (s *orders) CancelAuthorization(ctx context.Context, request operations.Can
 // Read more on **[Create a new order](https://docs.klarna.com/klarna-payments/integrate-with-klarna-payments/step-3-create-an-order/)**.
 func (s *orders) CreateOrder(ctx context.Context, request operations.CreateOrderRequest) (*operations.CreateOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payments/v1/authorizations/{authorizationToken}/order", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payments/v1/authorizations/{authorizationToken}/order", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateOrderRequestInput", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *orders) CreateOrder(ctx context.Context, request operations.CreateOrder
 // Read more on **[Generate a consumer token](https://docs.klarna.com/klarna-payments/in-depth-knowledge/customer-token/)**.
 func (s *orders) PurchaseToken(ctx context.Context, request operations.PurchaseTokenRequest) (*operations.PurchaseTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payments/v1/authorizations/{authorizationToken}/customer-token", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payments/v1/authorizations/{authorizationToken}/customer-token", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerTokenCreationRequest", "json")
 	if err != nil {

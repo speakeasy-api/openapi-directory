@@ -24,12 +24,16 @@ const (
 	CostEstimateRequestShopperInteractionEnumPos       CostEstimateRequestShopperInteractionEnum = "POS"
 )
 
+func (e CostEstimateRequestShopperInteractionEnum) ToPointer() *CostEstimateRequestShopperInteractionEnum {
+	return &e
+}
+
 func (e *CostEstimateRequestShopperInteractionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ecommerce":
 		fallthrough
 	case "ContAuth":
@@ -37,10 +41,10 @@ func (e *CostEstimateRequestShopperInteractionEnum) UnmarshalJSON(data []byte) e
 	case "Moto":
 		fallthrough
 	case "POS":
-		*e = CostEstimateRequestShopperInteractionEnum(s)
+		*e = CostEstimateRequestShopperInteractionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CostEstimateRequestShopperInteractionEnum: %s", s)
+		return fmt.Errorf("invalid value for CostEstimateRequestShopperInteractionEnum: %v", v)
 	}
 }
 

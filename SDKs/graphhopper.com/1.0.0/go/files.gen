@@ -9,6 +9,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -89,4 +90,12 @@ pkg/models/shared/snappedwaypoint.go
 pkg/models/shared/inforesponse.go
 pkg/models/shared/routerequest.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/clusterapi/README.md
+docs/geocodingapi/README.md
+docs/isochroneapi/README.md
+docs/mapmatchingapi/README.md
+docs/matrixapi/README.md
+docs/routeoptimizationapi/README.md
+docs/routingapi/README.md
 USAGE.md

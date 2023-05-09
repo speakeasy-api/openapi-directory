@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2ImportDocumentTemplateKnowledgeTypesEnumAgentFacingSmartReply    GoogleCloudDialogflowV2ImportDocumentTemplateKnowledgeTypesEnum = "AGENT_FACING_SMART_REPLY"
 )
 
+func (e GoogleCloudDialogflowV2ImportDocumentTemplateKnowledgeTypesEnum) ToPointer() *GoogleCloudDialogflowV2ImportDocumentTemplateKnowledgeTypesEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2ImportDocumentTemplateKnowledgeTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KNOWLEDGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FAQ":
@@ -32,10 +36,10 @@ func (e *GoogleCloudDialogflowV2ImportDocumentTemplateKnowledgeTypesEnum) Unmars
 	case "ARTICLE_SUGGESTION":
 		fallthrough
 	case "AGENT_FACING_SMART_REPLY":
-		*e = GoogleCloudDialogflowV2ImportDocumentTemplateKnowledgeTypesEnum(s)
+		*e = GoogleCloudDialogflowV2ImportDocumentTemplateKnowledgeTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ImportDocumentTemplateKnowledgeTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ImportDocumentTemplateKnowledgeTypesEnum: %v", v)
 	}
 }
 

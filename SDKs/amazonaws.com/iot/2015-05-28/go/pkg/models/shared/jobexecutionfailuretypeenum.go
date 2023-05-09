@@ -16,12 +16,16 @@ const (
 	JobExecutionFailureTypeEnumAll      JobExecutionFailureTypeEnum = "ALL"
 )
 
+func (e JobExecutionFailureTypeEnum) ToPointer() *JobExecutionFailureTypeEnum {
+	return &e
+}
+
 func (e *JobExecutionFailureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILED":
 		fallthrough
 	case "REJECTED":
@@ -29,9 +33,9 @@ func (e *JobExecutionFailureTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TIMED_OUT":
 		fallthrough
 	case "ALL":
-		*e = JobExecutionFailureTypeEnum(s)
+		*e = JobExecutionFailureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobExecutionFailureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for JobExecutionFailureTypeEnum: %v", v)
 	}
 }

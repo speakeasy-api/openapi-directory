@@ -15,17 +15,21 @@ const (
 	GETDescribeValidDBInstanceModificationsActionEnumDescribeValidDbInstanceModifications GETDescribeValidDBInstanceModificationsActionEnum = "DescribeValidDBInstanceModifications"
 )
 
+func (e GETDescribeValidDBInstanceModificationsActionEnum) ToPointer() *GETDescribeValidDBInstanceModificationsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeValidDBInstanceModificationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeValidDBInstanceModifications":
-		*e = GETDescribeValidDBInstanceModificationsActionEnum(s)
+		*e = GETDescribeValidDBInstanceModificationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeValidDBInstanceModificationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeValidDBInstanceModificationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeValidDBInstanceModificationsVersionEnumTwoThousandAndFourteen1031 GETDescribeValidDBInstanceModificationsVersionEnum = "2014-10-31"
 )
 
+func (e GETDescribeValidDBInstanceModificationsVersionEnum) ToPointer() *GETDescribeValidDBInstanceModificationsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeValidDBInstanceModificationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETDescribeValidDBInstanceModificationsVersionEnum(s)
+		*e = GETDescribeValidDBInstanceModificationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeValidDBInstanceModificationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeValidDBInstanceModificationsVersionEnum: %v", v)
 	}
 }
 

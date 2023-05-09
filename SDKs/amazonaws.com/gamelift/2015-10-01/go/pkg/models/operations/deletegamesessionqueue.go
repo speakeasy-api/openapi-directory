@@ -16,17 +16,21 @@ const (
 	DeleteGameSessionQueueXAmzTargetEnumGameLiftDeleteGameSessionQueue DeleteGameSessionQueueXAmzTargetEnum = "GameLift.DeleteGameSessionQueue"
 )
 
+func (e DeleteGameSessionQueueXAmzTargetEnum) ToPointer() *DeleteGameSessionQueueXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteGameSessionQueueXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DeleteGameSessionQueue":
-		*e = DeleteGameSessionQueueXAmzTargetEnum(s)
+		*e = DeleteGameSessionQueueXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteGameSessionQueueXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteGameSessionQueueXAmzTargetEnum: %v", v)
 	}
 }
 

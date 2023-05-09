@@ -16,17 +16,21 @@ const (
 	ListQuerySuggestionsBlockListsXAmzTargetEnumAwsKendraFrontendServiceListQuerySuggestionsBlockLists ListQuerySuggestionsBlockListsXAmzTargetEnum = "AWSKendraFrontendService.ListQuerySuggestionsBlockLists"
 )
 
+func (e ListQuerySuggestionsBlockListsXAmzTargetEnum) ToPointer() *ListQuerySuggestionsBlockListsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListQuerySuggestionsBlockListsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.ListQuerySuggestionsBlockLists":
-		*e = ListQuerySuggestionsBlockListsXAmzTargetEnum(s)
+		*e = ListQuerySuggestionsBlockListsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListQuerySuggestionsBlockListsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListQuerySuggestionsBlockListsXAmzTargetEnum: %v", v)
 	}
 }
 

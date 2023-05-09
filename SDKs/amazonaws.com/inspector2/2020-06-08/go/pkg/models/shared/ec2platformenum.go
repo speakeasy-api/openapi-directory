@@ -15,20 +15,24 @@ const (
 	Ec2PlatformEnumUnknown Ec2PlatformEnum = "UNKNOWN"
 )
 
+func (e Ec2PlatformEnum) ToPointer() *Ec2PlatformEnum {
+	return &e
+}
+
 func (e *Ec2PlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WINDOWS":
 		fallthrough
 	case "LINUX":
 		fallthrough
 	case "UNKNOWN":
-		*e = Ec2PlatformEnum(s)
+		*e = Ec2PlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ec2PlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for Ec2PlatformEnum: %v", v)
 	}
 }

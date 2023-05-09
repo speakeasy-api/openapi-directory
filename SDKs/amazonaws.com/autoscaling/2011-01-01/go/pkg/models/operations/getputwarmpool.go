@@ -15,17 +15,21 @@ const (
 	GETPutWarmPoolActionEnumPutWarmPool GETPutWarmPoolActionEnum = "PutWarmPool"
 )
 
+func (e GETPutWarmPoolActionEnum) ToPointer() *GETPutWarmPoolActionEnum {
+	return &e
+}
+
 func (e *GETPutWarmPoolActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PutWarmPool":
-		*e = GETPutWarmPoolActionEnum(s)
+		*e = GETPutWarmPoolActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutWarmPoolActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutWarmPoolActionEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GETPutWarmPoolPoolStateEnumHibernated GETPutWarmPoolPoolStateEnum = "Hibernated"
 )
 
+func (e GETPutWarmPoolPoolStateEnum) ToPointer() *GETPutWarmPoolPoolStateEnum {
+	return &e
+}
+
 func (e *GETPutWarmPoolPoolStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Stopped":
 		fallthrough
 	case "Running":
 		fallthrough
 	case "Hibernated":
-		*e = GETPutWarmPoolPoolStateEnum(s)
+		*e = GETPutWarmPoolPoolStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutWarmPoolPoolStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutWarmPoolPoolStateEnum: %v", v)
 	}
 }
 
@@ -68,17 +76,21 @@ const (
 	GETPutWarmPoolVersionEnumTwoThousandAndEleven0101 GETPutWarmPoolVersionEnum = "2011-01-01"
 )
 
+func (e GETPutWarmPoolVersionEnum) ToPointer() *GETPutWarmPoolVersionEnum {
+	return &e
+}
+
 func (e *GETPutWarmPoolVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETPutWarmPoolVersionEnum(s)
+		*e = GETPutWarmPoolVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutWarmPoolVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutWarmPoolVersionEnum: %v", v)
 	}
 }
 

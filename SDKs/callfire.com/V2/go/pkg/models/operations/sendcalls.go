@@ -25,12 +25,16 @@ const (
 	SendCallsDefaultVoiceEnumFrenchcanadian1 SendCallsDefaultVoiceEnum = "FRENCHCANADIAN1"
 )
 
+func (e SendCallsDefaultVoiceEnum) ToPointer() *SendCallsDefaultVoiceEnum {
+	return &e
+}
+
 func (e *SendCallsDefaultVoiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MALE1":
 		fallthrough
 	case "FEMALE1":
@@ -40,10 +44,10 @@ func (e *SendCallsDefaultVoiceEnum) UnmarshalJSON(data []byte) error {
 	case "SPANISH1":
 		fallthrough
 	case "FRENCHCANADIAN1":
-		*e = SendCallsDefaultVoiceEnum(s)
+		*e = SendCallsDefaultVoiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendCallsDefaultVoiceEnum: %s", s)
+		return fmt.Errorf("invalid value for SendCallsDefaultVoiceEnum: %v", v)
 	}
 }
 

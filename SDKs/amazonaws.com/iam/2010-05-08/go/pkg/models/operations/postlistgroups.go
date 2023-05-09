@@ -15,17 +15,21 @@ const (
 	POSTListGroupsActionEnumListGroups POSTListGroupsActionEnum = "ListGroups"
 )
 
+func (e POSTListGroupsActionEnum) ToPointer() *POSTListGroupsActionEnum {
+	return &e
+}
+
 func (e *POSTListGroupsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListGroups":
-		*e = POSTListGroupsActionEnum(s)
+		*e = POSTListGroupsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListGroupsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListGroupsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTListGroupsVersionEnumTwoThousandAndTen0508 POSTListGroupsVersionEnum = "2010-05-08"
 )
 
+func (e POSTListGroupsVersionEnum) ToPointer() *POSTListGroupsVersionEnum {
+	return &e
+}
+
 func (e *POSTListGroupsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTListGroupsVersionEnum(s)
+		*e = POSTListGroupsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListGroupsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListGroupsVersionEnum: %v", v)
 	}
 }
 

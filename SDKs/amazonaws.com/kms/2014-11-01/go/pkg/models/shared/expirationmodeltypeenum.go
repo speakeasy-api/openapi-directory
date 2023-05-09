@@ -14,18 +14,22 @@ const (
 	ExpirationModelTypeEnumKeyMaterialDoesNotExpire ExpirationModelTypeEnum = "KEY_MATERIAL_DOES_NOT_EXPIRE"
 )
 
+func (e ExpirationModelTypeEnum) ToPointer() *ExpirationModelTypeEnum {
+	return &e
+}
+
 func (e *ExpirationModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KEY_MATERIAL_EXPIRES":
 		fallthrough
 	case "KEY_MATERIAL_DOES_NOT_EXPIRE":
-		*e = ExpirationModelTypeEnum(s)
+		*e = ExpirationModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExpirationModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExpirationModelTypeEnum: %v", v)
 	}
 }

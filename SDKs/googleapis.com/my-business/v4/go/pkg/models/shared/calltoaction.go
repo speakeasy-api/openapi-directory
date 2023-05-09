@@ -21,12 +21,16 @@ const (
 	CallToActionActionTypeEnumCall                  CallToActionActionTypeEnum = "CALL"
 )
 
+func (e CallToActionActionTypeEnum) ToPointer() *CallToActionActionTypeEnum {
+	return &e
+}
+
 func (e *CallToActionActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BOOK":
@@ -42,10 +46,10 @@ func (e *CallToActionActionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "GET_OFFER":
 		fallthrough
 	case "CALL":
-		*e = CallToActionActionTypeEnum(s)
+		*e = CallToActionActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallToActionActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CallToActionActionTypeEnum: %v", v)
 	}
 }
 

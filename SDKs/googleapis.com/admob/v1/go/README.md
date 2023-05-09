@@ -13,36 +13,34 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/admob/v1/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AdmobAccountsAdUnitsListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
-        PageSize: 847252,
-        PageToken: "vel",
-        Parent: "error",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.Accounts.AdmobAccountsAdUnitsList(ctx, req, operations.AdmobAccountsAdUnitsListSecurity{
+    res, err := s.Accounts.AdmobAccountsAdUnitsList(ctx, operations.AdmobAccountsAdUnitsListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
+        PageSize: sdk.Int64(847252),
+        PageToken: sdk.String("vel"),
+        Parent: "error",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("iure"),
+    }, operations.AdmobAccountsAdUnitsListSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -61,14 +59,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### Accounts
+### [Accounts](docs/accounts/README.md)
 
-* `AdmobAccountsAdUnitsList` - List the ad units under the specified AdMob account.
-* `AdmobAccountsAppsList` - List the apps under the specified AdMob account.
-* `AdmobAccountsGet` - Gets information about the specified AdMob publisher account.
-* `AdmobAccountsList` - Lists the AdMob publisher account that was most recently signed in to from the AdMob UI. For more information, see https://support.google.com/admob/answer/10243672.
-* `AdmobAccountsMediationReportGenerate` - Generates an AdMob mediation report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
-* `AdmobAccountsNetworkReportGenerate` - Generates an AdMob Network report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
+* [AdmobAccountsAdUnitsList](docs/accounts/README.md#admobaccountsadunitslist) - List the ad units under the specified AdMob account.
+* [AdmobAccountsAppsList](docs/accounts/README.md#admobaccountsappslist) - List the apps under the specified AdMob account.
+* [AdmobAccountsGet](docs/accounts/README.md#admobaccountsget) - Gets information about the specified AdMob publisher account.
+* [AdmobAccountsList](docs/accounts/README.md#admobaccountslist) - Lists the AdMob publisher account that was most recently signed in to from the AdMob UI. For more information, see https://support.google.com/admob/answer/10243672.
+* [AdmobAccountsMediationReportGenerate](docs/accounts/README.md#admobaccountsmediationreportgenerate) - Generates an AdMob mediation report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
+* [AdmobAccountsNetworkReportGenerate](docs/accounts/README.md#admobaccountsnetworkreportgenerate) - Generates an AdMob Network report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
 <!-- End SDK Available Operations -->
 
 ### Maturity

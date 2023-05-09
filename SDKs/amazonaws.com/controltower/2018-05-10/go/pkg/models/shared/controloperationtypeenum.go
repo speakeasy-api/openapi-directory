@@ -14,18 +14,22 @@ const (
 	ControlOperationTypeEnumDisableControl ControlOperationTypeEnum = "DISABLE_CONTROL"
 )
 
+func (e ControlOperationTypeEnum) ToPointer() *ControlOperationTypeEnum {
+	return &e
+}
+
 func (e *ControlOperationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLE_CONTROL":
 		fallthrough
 	case "DISABLE_CONTROL":
-		*e = ControlOperationTypeEnum(s)
+		*e = ControlOperationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ControlOperationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ControlOperationTypeEnum: %v", v)
 	}
 }

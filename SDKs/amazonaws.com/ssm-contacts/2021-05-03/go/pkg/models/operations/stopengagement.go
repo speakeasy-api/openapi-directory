@@ -16,17 +16,21 @@ const (
 	StopEngagementXAmzTargetEnumSsmContactsStopEngagement StopEngagementXAmzTargetEnum = "SSMContacts.StopEngagement"
 )
 
+func (e StopEngagementXAmzTargetEnum) ToPointer() *StopEngagementXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopEngagementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSMContacts.StopEngagement":
-		*e = StopEngagementXAmzTargetEnum(s)
+		*e = StopEngagementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopEngagementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopEngagementXAmzTargetEnum: %v", v)
 	}
 }
 

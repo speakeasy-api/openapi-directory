@@ -13,32 +13,30 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/androidpub
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AndroidpublisherInapppurchasesGetRequest{
-        Alt: "json",
-        Fields: "corrupti",
-        Key: "provident",
-        OauthToken: "distinctio",
-        PackageName: "quibusdam",
-        PrettyPrint: false,
-        ProductID: "unde",
-        QuotaUser: "nulla",
-        Token: "corrupti",
-        UserIP: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.Inapppurchases.AndroidpublisherInapppurchasesGet(ctx, req, operations.AndroidpublisherInapppurchasesGetSecurity{
+    res, err := s.Inapppurchases.AndroidpublisherInapppurchasesGet(ctx, operations.AndroidpublisherInapppurchasesGetRequest{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("provident"),
+        OauthToken: sdk.String("distinctio"),
+        PackageName: "quibusdam",
+        PrettyPrint: sdk.Bool(false),
+        ProductID: "unde",
+        QuotaUser: sdk.String("nulla"),
+        Token: "corrupti",
+        UserIP: sdk.String("illum"),
+    }, operations.AndroidpublisherInapppurchasesGetSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -57,14 +55,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### Inapppurchases
+### [Inapppurchases](docs/inapppurchases/README.md)
 
-* `AndroidpublisherInapppurchasesGet` - Checks the purchase and consumption status of an inapp item.
+* [AndroidpublisherInapppurchasesGet](docs/inapppurchases/README.md#androidpublisherinapppurchasesget) - Checks the purchase and consumption status of an inapp item.
 
-### Purchases
+### [Purchases](docs/purchases/README.md)
 
-* `AndroidpublisherPurchasesCancel` - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
-* `AndroidpublisherPurchasesGet` - Checks whether a user's subscription purchase is valid and returns its expiry time.
+* [AndroidpublisherPurchasesCancel](docs/purchases/README.md#androidpublisherpurchasescancel) - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
+* [AndroidpublisherPurchasesGet](docs/purchases/README.md#androidpublisherpurchasesget) - Checks whether a user's subscription purchase is valid and returns its expiry time.
 <!-- End SDK Available Operations -->
 
 ### Maturity

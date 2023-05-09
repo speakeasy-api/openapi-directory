@@ -36,7 +36,10 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DeleteGroupsID - Delete a Group
 func (s *groups) DeleteGroupsID(ctx context.Context, request operations.DeleteGroupsIDRequest) (*operations.DeleteGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -175,7 +178,10 @@ func (s *groups) PostGroups(ctx context.Context, request shared.Group) (*operati
 // PutGroupsID - Update a Group
 func (s *groups) PutGroupsID(ctx context.Context, request operations.PutGroupsIDRequest) (*operations.PutGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Group", "json")
 	if err != nil {

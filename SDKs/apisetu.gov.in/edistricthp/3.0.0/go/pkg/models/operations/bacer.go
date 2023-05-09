@@ -26,17 +26,21 @@ const (
 	BacerRequestBodyFormatEnumPdf BacerRequestBodyFormatEnum = "pdf"
 )
 
+func (e BacerRequestBodyFormatEnum) ToPointer() *BacerRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *BacerRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = BacerRequestBodyFormatEnum(s)
+		*e = BacerRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BacerRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for BacerRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -56,17 +60,21 @@ const (
 	Bacer504ApplicationJSONErrorEnumGatewayTimeout Bacer504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Bacer504ApplicationJSONErrorEnum) ToPointer() *Bacer504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Bacer504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Bacer504ApplicationJSONErrorEnum(s)
+		*e = Bacer504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -76,17 +84,21 @@ const (
 	Bacer504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Bacer504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Bacer504ApplicationJSONErrorDescriptionEnum) ToPointer() *Bacer504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Bacer504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Bacer504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Bacer504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -102,17 +114,21 @@ const (
 	Bacer503ApplicationJSONErrorEnumServiceUnavailable Bacer503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Bacer503ApplicationJSONErrorEnum) ToPointer() *Bacer503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Bacer503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Bacer503ApplicationJSONErrorEnum(s)
+		*e = Bacer503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -122,17 +138,21 @@ const (
 	Bacer503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Bacer503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Bacer503ApplicationJSONErrorDescriptionEnum) ToPointer() *Bacer503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Bacer503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Bacer503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Bacer503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -148,17 +168,21 @@ const (
 	Bacer502ApplicationJSONErrorEnumBadGatewy Bacer502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Bacer502ApplicationJSONErrorEnum) ToPointer() *Bacer502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Bacer502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Bacer502ApplicationJSONErrorEnum(s)
+		*e = Bacer502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -168,17 +192,21 @@ const (
 	Bacer502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Bacer502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Bacer502ApplicationJSONErrorDescriptionEnum) ToPointer() *Bacer502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Bacer502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Bacer502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Bacer502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -194,17 +222,21 @@ const (
 	Bacer500ApplicationJSONErrorEnumInternalServerError Bacer500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Bacer500ApplicationJSONErrorEnum) ToPointer() *Bacer500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Bacer500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Bacer500ApplicationJSONErrorEnum(s)
+		*e = Bacer500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -214,17 +246,21 @@ const (
 	Bacer500ApplicationJSONErrorDescriptionEnumInternalServerError Bacer500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Bacer500ApplicationJSONErrorDescriptionEnum) ToPointer() *Bacer500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Bacer500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Bacer500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Bacer500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -241,19 +277,23 @@ const (
 	Bacer404ApplicationJSONErrorEnumURLNotFound    Bacer404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Bacer404ApplicationJSONErrorEnum) ToPointer() *Bacer404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Bacer404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Bacer404ApplicationJSONErrorEnum(s)
+		*e = Bacer404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -264,19 +304,23 @@ const (
 	Bacer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Bacer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Bacer404ApplicationJSONErrorDescriptionEnum) ToPointer() *Bacer404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Bacer404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Bacer404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Bacer404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -293,19 +337,23 @@ const (
 	Bacer401ApplicationJSONErrorEnumInvalidAuthorization  Bacer401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Bacer401ApplicationJSONErrorEnum) ToPointer() *Bacer401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Bacer401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Bacer401ApplicationJSONErrorEnum(s)
+		*e = Bacer401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -316,19 +364,23 @@ const (
 	Bacer401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Bacer401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Bacer401ApplicationJSONErrorDescriptionEnum) ToPointer() *Bacer401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Bacer401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Bacer401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Bacer401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -348,12 +400,16 @@ const (
 	Bacer400ApplicationJSONErrorEnumInvalidConsentid Bacer400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Bacer400ApplicationJSONErrorEnum) ToPointer() *Bacer400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Bacer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -363,10 +419,10 @@ func (e *Bacer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Bacer400ApplicationJSONErrorEnum(s)
+		*e = Bacer400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -380,12 +436,16 @@ const (
 	Bacer400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Bacer400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Bacer400ApplicationJSONErrorDescriptionEnum) ToPointer() *Bacer400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Bacer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -395,10 +455,10 @@ func (e *Bacer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Bacer400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Bacer400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Bacer400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Bacer400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

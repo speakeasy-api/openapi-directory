@@ -16,17 +16,21 @@ const (
 	DeleteFirewallDomainListXAmzTargetEnumRoute53ResolverDeleteFirewallDomainList DeleteFirewallDomainListXAmzTargetEnum = "Route53Resolver.DeleteFirewallDomainList"
 )
 
+func (e DeleteFirewallDomainListXAmzTargetEnum) ToPointer() *DeleteFirewallDomainListXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteFirewallDomainListXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.DeleteFirewallDomainList":
-		*e = DeleteFirewallDomainListXAmzTargetEnum(s)
+		*e = DeleteFirewallDomainListXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteFirewallDomainListXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteFirewallDomainListXAmzTargetEnum: %v", v)
 	}
 }
 

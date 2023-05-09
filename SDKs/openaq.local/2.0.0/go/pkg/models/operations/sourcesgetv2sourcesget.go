@@ -18,21 +18,25 @@ const (
 	SourcesGetV2SourcesGetOrderBySourcesOrderEnumLastUpdated  SourcesGetV2SourcesGetOrderBySourcesOrderEnum = "lastUpdated"
 )
 
+func (e SourcesGetV2SourcesGetOrderBySourcesOrderEnum) ToPointer() *SourcesGetV2SourcesGetOrderBySourcesOrderEnum {
+	return &e
+}
+
 func (e *SourcesGetV2SourcesGetOrderBySourcesOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sourceName":
 		fallthrough
 	case "firstUpdated":
 		fallthrough
 	case "lastUpdated":
-		*e = SourcesGetV2SourcesGetOrderBySourcesOrderEnum(s)
+		*e = SourcesGetV2SourcesGetOrderBySourcesOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourcesGetV2SourcesGetOrderBySourcesOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for SourcesGetV2SourcesGetOrderBySourcesOrderEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	SourcesGetV2SourcesGetSortSortEnumDesc SourcesGetV2SourcesGetSortSortEnum = "desc"
 )
 
+func (e SourcesGetV2SourcesGetSortSortEnum) ToPointer() *SourcesGetV2SourcesGetSortSortEnum {
+	return &e
+}
+
 func (e *SourcesGetV2SourcesGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = SourcesGetV2SourcesGetSortSortEnum(s)
+		*e = SourcesGetV2SourcesGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourcesGetV2SourcesGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for SourcesGetV2SourcesGetSortSortEnum: %v", v)
 	}
 }
 

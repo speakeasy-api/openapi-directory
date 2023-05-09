@@ -16,17 +16,21 @@ const (
 	DescribeAttackStatisticsXAmzTargetEnumAwsShield20160616DescribeAttackStatistics DescribeAttackStatisticsXAmzTargetEnum = "AWSShield_20160616.DescribeAttackStatistics"
 )
 
+func (e DescribeAttackStatisticsXAmzTargetEnum) ToPointer() *DescribeAttackStatisticsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAttackStatisticsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.DescribeAttackStatistics":
-		*e = DescribeAttackStatisticsXAmzTargetEnum(s)
+		*e = DescribeAttackStatisticsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAttackStatisticsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAttackStatisticsXAmzTargetEnum: %v", v)
 	}
 }
 

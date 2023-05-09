@@ -24,12 +24,16 @@ const (
 	CompanyIDDatasetDatasetEnumRefresh CompanyIDDatasetDatasetEnum = "refresh"
 )
 
+func (e CompanyIDDatasetDatasetEnum) ToPointer() *CompanyIDDatasetDatasetEnum {
+	return &e
+}
+
 func (e *CompanyIDDatasetDatasetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "mini":
@@ -39,10 +43,10 @@ func (e *CompanyIDDatasetDatasetEnum) UnmarshalJSON(data []byte) error {
 	case "full":
 		fallthrough
 	case "refresh":
-		*e = CompanyIDDatasetDatasetEnum(s)
+		*e = CompanyIDDatasetDatasetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompanyIDDatasetDatasetEnum: %s", s)
+		return fmt.Errorf("invalid value for CompanyIDDatasetDatasetEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	CompanyIDDatasetLangEnumFr      CompanyIDDatasetLangEnum = "FR"
 )
 
+func (e CompanyIDDatasetLangEnum) ToPointer() *CompanyIDDatasetLangEnum {
+	return &e
+}
+
 func (e *CompanyIDDatasetLangEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "EN":
@@ -69,10 +77,10 @@ func (e *CompanyIDDatasetLangEnum) UnmarshalJSON(data []byte) error {
 	case "ES":
 		fallthrough
 	case "FR":
-		*e = CompanyIDDatasetLangEnum(s)
+		*e = CompanyIDDatasetLangEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompanyIDDatasetLangEnum: %s", s)
+		return fmt.Errorf("invalid value for CompanyIDDatasetLangEnum: %v", v)
 	}
 }
 

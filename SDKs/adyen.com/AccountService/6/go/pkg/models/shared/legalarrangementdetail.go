@@ -37,12 +37,16 @@ const (
 	LegalArrangementDetailLegalFormEnumOtherPartnership                     LegalArrangementDetailLegalFormEnum = "OtherPartnership"
 )
 
+func (e LegalArrangementDetailLegalFormEnum) ToPointer() *LegalArrangementDetailLegalFormEnum {
+	return &e
+}
+
 func (e *LegalArrangementDetailLegalFormEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CashManagementTrust":
 		fallthrough
 	case "CorporateUnitTrust":
@@ -78,10 +82,10 @@ func (e *LegalArrangementDetailLegalFormEnum) UnmarshalJSON(data []byte) error {
 	case "FamilyPartnership":
 		fallthrough
 	case "OtherPartnership":
-		*e = LegalArrangementDetailLegalFormEnum(s)
+		*e = LegalArrangementDetailLegalFormEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LegalArrangementDetailLegalFormEnum: %s", s)
+		return fmt.Errorf("invalid value for LegalArrangementDetailLegalFormEnum: %v", v)
 	}
 }
 
@@ -105,12 +109,16 @@ const (
 	LegalArrangementDetailTypeEnumTrust              LegalArrangementDetailTypeEnum = "Trust"
 )
 
+func (e LegalArrangementDetailTypeEnum) ToPointer() *LegalArrangementDetailTypeEnum {
+	return &e
+}
+
 func (e *LegalArrangementDetailTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Association":
 		fallthrough
 	case "Partnership":
@@ -118,10 +126,10 @@ func (e *LegalArrangementDetailTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SoleProprietorship":
 		fallthrough
 	case "Trust":
-		*e = LegalArrangementDetailTypeEnum(s)
+		*e = LegalArrangementDetailTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LegalArrangementDetailTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LegalArrangementDetailTypeEnum: %v", v)
 	}
 }
 

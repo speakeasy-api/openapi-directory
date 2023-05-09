@@ -15,19 +15,23 @@ const (
 	PopupWindowPropertiesPositionTypeEnumCoordinates PopupWindowPropertiesPositionTypeEnum = "COORDINATES"
 )
 
+func (e PopupWindowPropertiesPositionTypeEnum) ToPointer() *PopupWindowPropertiesPositionTypeEnum {
+	return &e
+}
+
 func (e *PopupWindowPropertiesPositionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CENTER":
 		fallthrough
 	case "COORDINATES":
-		*e = PopupWindowPropertiesPositionTypeEnum(s)
+		*e = PopupWindowPropertiesPositionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PopupWindowPropertiesPositionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PopupWindowPropertiesPositionTypeEnum: %v", v)
 	}
 }
 

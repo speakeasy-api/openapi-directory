@@ -20,12 +20,16 @@ const (
 	ExperimentActionStatusEnumFailed     ExperimentActionStatusEnum = "failed"
 )
 
+func (e ExperimentActionStatusEnum) ToPointer() *ExperimentActionStatusEnum {
+	return &e
+}
+
 func (e *ExperimentActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "initiating":
@@ -41,9 +45,9 @@ func (e *ExperimentActionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "stopped":
 		fallthrough
 	case "failed":
-		*e = ExperimentActionStatusEnum(s)
+		*e = ExperimentActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExperimentActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExperimentActionStatusEnum: %v", v)
 	}
 }

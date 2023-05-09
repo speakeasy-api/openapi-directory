@@ -16,12 +16,16 @@ const (
 	RevisionLocationTypeEnumAppSpecContent RevisionLocationTypeEnum = "AppSpecContent"
 )
 
+func (e RevisionLocationTypeEnum) ToPointer() *RevisionLocationTypeEnum {
+	return &e
+}
+
 func (e *RevisionLocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "S3":
 		fallthrough
 	case "GitHub":
@@ -29,9 +33,9 @@ func (e *RevisionLocationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "String":
 		fallthrough
 	case "AppSpecContent":
-		*e = RevisionLocationTypeEnum(s)
+		*e = RevisionLocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RevisionLocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RevisionLocationTypeEnum: %v", v)
 	}
 }

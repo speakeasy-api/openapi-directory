@@ -21,19 +21,23 @@ const (
 	GetCollectionsSortEnumOldest GetCollectionsSortEnum = "oldest"
 )
 
+func (e GetCollectionsSortEnum) ToPointer() *GetCollectionsSortEnum {
+	return &e
+}
+
 func (e *GetCollectionsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "oldest":
-		*e = GetCollectionsSortEnum(s)
+		*e = GetCollectionsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCollectionsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCollectionsSortEnum: %v", v)
 	}
 }
 

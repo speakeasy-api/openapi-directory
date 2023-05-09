@@ -33,12 +33,16 @@ const (
 	AppsTransferToOrgDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppsTransferToOrgDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppsTransferToOrgDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppsTransferToOrgDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppsTransferToOrgDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *AppsTransferToOrgDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(dat
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppsTransferToOrgDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppsTransferToOrgDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsTransferToOrgDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsTransferToOrgDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -77,19 +81,23 @@ const (
 	AppsTransferToOrg200ApplicationJSONOriginEnumHockeyapp AppsTransferToOrg200ApplicationJSONOriginEnum = "hockeyapp"
 )
 
+func (e AppsTransferToOrg200ApplicationJSONOriginEnum) ToPointer() *AppsTransferToOrg200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *AppsTransferToOrg200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = AppsTransferToOrg200ApplicationJSONOriginEnum(s)
+		*e = AppsTransferToOrg200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsTransferToOrg200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsTransferToOrg200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

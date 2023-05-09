@@ -24,21 +24,25 @@ const (
 	BatchGetFrameMetricDataTargetResolutionEnumP1D  BatchGetFrameMetricDataTargetResolutionEnum = "P1D"
 )
 
+func (e BatchGetFrameMetricDataTargetResolutionEnum) ToPointer() *BatchGetFrameMetricDataTargetResolutionEnum {
+	return &e
+}
+
 func (e *BatchGetFrameMetricDataTargetResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PT5M":
 		fallthrough
 	case "PT1H":
 		fallthrough
 	case "P1D":
-		*e = BatchGetFrameMetricDataTargetResolutionEnum(s)
+		*e = BatchGetFrameMetricDataTargetResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetFrameMetricDataTargetResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetFrameMetricDataTargetResolutionEnum: %v", v)
 	}
 }
 

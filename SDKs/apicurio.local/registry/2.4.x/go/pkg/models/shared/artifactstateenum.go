@@ -21,20 +21,24 @@ const (
 	ArtifactStateEnumDeprecated ArtifactStateEnum = "DEPRECATED"
 )
 
+func (e ArtifactStateEnum) ToPointer() *ArtifactStateEnum {
+	return &e
+}
+
 func (e *ArtifactStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "DEPRECATED":
-		*e = ArtifactStateEnum(s)
+		*e = ArtifactStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArtifactStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ArtifactStateEnum: %v", v)
 	}
 }

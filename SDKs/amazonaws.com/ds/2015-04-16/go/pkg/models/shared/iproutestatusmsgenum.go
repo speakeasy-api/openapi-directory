@@ -18,12 +18,16 @@ const (
 	IPRouteStatusMsgEnumRemoveFailed IPRouteStatusMsgEnum = "RemoveFailed"
 )
 
+func (e IPRouteStatusMsgEnum) ToPointer() *IPRouteStatusMsgEnum {
+	return &e
+}
+
 func (e *IPRouteStatusMsgEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Adding":
 		fallthrough
 	case "Added":
@@ -35,9 +39,9 @@ func (e *IPRouteStatusMsgEnum) UnmarshalJSON(data []byte) error {
 	case "AddFailed":
 		fallthrough
 	case "RemoveFailed":
-		*e = IPRouteStatusMsgEnum(s)
+		*e = IPRouteStatusMsgEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IPRouteStatusMsgEnum: %s", s)
+		return fmt.Errorf("invalid value for IPRouteStatusMsgEnum: %v", v)
 	}
 }

@@ -16,12 +16,16 @@ const (
 	ValidatePolicyFindingTypeEnumWarning         ValidatePolicyFindingTypeEnum = "WARNING"
 )
 
+func (e ValidatePolicyFindingTypeEnum) ToPointer() *ValidatePolicyFindingTypeEnum {
+	return &e
+}
+
 func (e *ValidatePolicyFindingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ERROR":
 		fallthrough
 	case "SECURITY_WARNING":
@@ -29,9 +33,9 @@ func (e *ValidatePolicyFindingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SUGGESTION":
 		fallthrough
 	case "WARNING":
-		*e = ValidatePolicyFindingTypeEnum(s)
+		*e = ValidatePolicyFindingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidatePolicyFindingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidatePolicyFindingTypeEnum: %v", v)
 	}
 }

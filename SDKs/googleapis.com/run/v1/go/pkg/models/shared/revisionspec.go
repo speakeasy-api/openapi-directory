@@ -6,7 +6,7 @@ package shared
 type RevisionSpec struct {
 	// ContainerConcurrency specifies the maximum allowed in-flight (concurrent) requests per container instance of the Revision. If not specified, defaults to 80.
 	ContainerConcurrency *int `json:"containerConcurrency,omitempty"`
-	// Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided. The runtime contract is documented here: https://github.com/knative/specs/blob/main/specs/serving/runtime-contract.md
+	// Containers holds the single container that defines the unit of execution for this Revision. In the context of a Revision, we disallow a number of fields on this Container, including: name and lifecycle. In Cloud Run, only a single container may be provided.
 	Containers []Container `json:"containers,omitempty"`
 	// Not supported by Cloud Run.
 	EnableServiceLinks *bool `json:"enableServiceLinks,omitempty"`

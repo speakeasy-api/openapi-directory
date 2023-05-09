@@ -15,19 +15,23 @@ const (
 	CreateIpamPoolResultIpamPoolAddressFamilyEnumIpv6 CreateIpamPoolResultIpamPoolAddressFamilyEnum = "ipv6"
 )
 
+func (e CreateIpamPoolResultIpamPoolAddressFamilyEnum) ToPointer() *CreateIpamPoolResultIpamPoolAddressFamilyEnum {
+	return &e
+}
+
 func (e *CreateIpamPoolResultIpamPoolAddressFamilyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
-		*e = CreateIpamPoolResultIpamPoolAddressFamilyEnum(s)
+		*e = CreateIpamPoolResultIpamPoolAddressFamilyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIpamPoolResultIpamPoolAddressFamilyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIpamPoolResultIpamPoolAddressFamilyEnum: %v", v)
 	}
 }
 
@@ -44,17 +48,21 @@ const (
 	CreateIpamPoolResultIpamPoolAwsServiceEnumEc2 CreateIpamPoolResultIpamPoolAwsServiceEnum = "ec2"
 )
 
+func (e CreateIpamPoolResultIpamPoolAwsServiceEnum) ToPointer() *CreateIpamPoolResultIpamPoolAwsServiceEnum {
+	return &e
+}
+
 func (e *CreateIpamPoolResultIpamPoolAwsServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ec2":
-		*e = CreateIpamPoolResultIpamPoolAwsServiceEnum(s)
+		*e = CreateIpamPoolResultIpamPoolAwsServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIpamPoolResultIpamPoolAwsServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIpamPoolResultIpamPoolAwsServiceEnum: %v", v)
 	}
 }
 
@@ -66,19 +74,23 @@ const (
 	CreateIpamPoolResultIpamPoolIpamScopeTypeEnumPrivate CreateIpamPoolResultIpamPoolIpamScopeTypeEnum = "private"
 )
 
+func (e CreateIpamPoolResultIpamPoolIpamScopeTypeEnum) ToPointer() *CreateIpamPoolResultIpamPoolIpamScopeTypeEnum {
+	return &e
+}
+
 func (e *CreateIpamPoolResultIpamPoolIpamScopeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = CreateIpamPoolResultIpamPoolIpamScopeTypeEnum(s)
+		*e = CreateIpamPoolResultIpamPoolIpamScopeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIpamPoolResultIpamPoolIpamScopeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIpamPoolResultIpamPoolIpamScopeTypeEnum: %v", v)
 	}
 }
 
@@ -90,19 +102,23 @@ const (
 	CreateIpamPoolResultIpamPoolPublicIPSourceEnumByoip  CreateIpamPoolResultIpamPoolPublicIPSourceEnum = "byoip"
 )
 
+func (e CreateIpamPoolResultIpamPoolPublicIPSourceEnum) ToPointer() *CreateIpamPoolResultIpamPoolPublicIPSourceEnum {
+	return &e
+}
+
 func (e *CreateIpamPoolResultIpamPoolPublicIPSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "amazon":
 		fallthrough
 	case "byoip":
-		*e = CreateIpamPoolResultIpamPoolPublicIPSourceEnum(s)
+		*e = CreateIpamPoolResultIpamPoolPublicIPSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIpamPoolResultIpamPoolPublicIPSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIpamPoolResultIpamPoolPublicIPSourceEnum: %v", v)
 	}
 }
 
@@ -124,12 +140,16 @@ const (
 	CreateIpamPoolResultIpamPoolStateEnumRestoreInProgress CreateIpamPoolResultIpamPoolStateEnum = "restore-in-progress"
 )
 
+func (e CreateIpamPoolResultIpamPoolStateEnum) ToPointer() *CreateIpamPoolResultIpamPoolStateEnum {
+	return &e
+}
+
 func (e *CreateIpamPoolResultIpamPoolStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "create-in-progress":
 		fallthrough
 	case "create-complete":
@@ -153,10 +173,10 @@ func (e *CreateIpamPoolResultIpamPoolStateEnum) UnmarshalJSON(data []byte) error
 	case "isolate-complete":
 		fallthrough
 	case "restore-in-progress":
-		*e = CreateIpamPoolResultIpamPoolStateEnum(s)
+		*e = CreateIpamPoolResultIpamPoolStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIpamPoolResultIpamPoolStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIpamPoolResultIpamPoolStateEnum: %v", v)
 	}
 }
 

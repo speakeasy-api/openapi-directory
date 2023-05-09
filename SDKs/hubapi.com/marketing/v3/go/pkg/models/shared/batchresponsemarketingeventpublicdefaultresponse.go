@@ -17,12 +17,16 @@ const (
 	BatchResponseMarketingEventPublicDefaultResponseStatusEnumComplete   BatchResponseMarketingEventPublicDefaultResponseStatusEnum = "COMPLETE"
 )
 
+func (e BatchResponseMarketingEventPublicDefaultResponseStatusEnum) ToPointer() *BatchResponseMarketingEventPublicDefaultResponseStatusEnum {
+	return &e
+}
+
 func (e *BatchResponseMarketingEventPublicDefaultResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "PROCESSING":
@@ -30,10 +34,10 @@ func (e *BatchResponseMarketingEventPublicDefaultResponseStatusEnum) UnmarshalJS
 	case "CANCELED":
 		fallthrough
 	case "COMPLETE":
-		*e = BatchResponseMarketingEventPublicDefaultResponseStatusEnum(s)
+		*e = BatchResponseMarketingEventPublicDefaultResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchResponseMarketingEventPublicDefaultResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchResponseMarketingEventPublicDefaultResponseStatusEnum: %v", v)
 	}
 }
 

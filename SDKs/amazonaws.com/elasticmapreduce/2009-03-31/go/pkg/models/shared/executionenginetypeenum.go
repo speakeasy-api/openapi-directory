@@ -13,16 +13,20 @@ const (
 	ExecutionEngineTypeEnumEmr ExecutionEngineTypeEnum = "EMR"
 )
 
+func (e ExecutionEngineTypeEnum) ToPointer() *ExecutionEngineTypeEnum {
+	return &e
+}
+
 func (e *ExecutionEngineTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EMR":
-		*e = ExecutionEngineTypeEnum(s)
+		*e = ExecutionEngineTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionEngineTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionEngineTypeEnum: %v", v)
 	}
 }

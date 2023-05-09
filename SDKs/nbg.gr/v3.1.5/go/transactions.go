@@ -35,7 +35,10 @@ func newTransactions(defaultClient, securityClient HTTPClient, serverURL, langua
 // Get Transactions by Account ID and Statement ID
 func (s *transactions) GetAccountsAccountIDStatementsStatementIDTransactions(ctx context.Context, request operations.GetAccountsAccountIDStatementsStatementIDTransactionsRequest, security operations.GetAccountsAccountIDStatementsStatementIDTransactionsSecurity) (*operations.GetAccountsAccountIDStatementsStatementIDTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements/{statementId}/transactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements/{statementId}/transactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -117,7 +120,10 @@ func (s *transactions) GetAccountsAccountIDStatementsStatementIDTransactions(ctx
 // Get Transactions by Account ID
 func (s *transactions) GetAccountsAccountIDTransactions(ctx context.Context, request operations.GetAccountsAccountIDTransactionsRequest, security operations.GetAccountsAccountIDTransactionsSecurity) (*operations.GetAccountsAccountIDTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/transactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/transactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

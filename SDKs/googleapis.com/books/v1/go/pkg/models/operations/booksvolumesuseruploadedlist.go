@@ -23,12 +23,16 @@ const (
 	BooksVolumesUseruploadedListProcessingStateEnumRunning                  BooksVolumesUseruploadedListProcessingStateEnum = "RUNNING"
 )
 
+func (e BooksVolumesUseruploadedListProcessingStateEnum) ToPointer() *BooksVolumesUseruploadedListProcessingStateEnum {
+	return &e
+}
+
 func (e *BooksVolumesUseruploadedListProcessingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING_STATE_UNDEFINED":
 		fallthrough
 	case "COMPLETED_FAILED":
@@ -36,10 +40,10 @@ func (e *BooksVolumesUseruploadedListProcessingStateEnum) UnmarshalJSON(data []b
 	case "COMPLETED_SUCCESS":
 		fallthrough
 	case "RUNNING":
-		*e = BooksVolumesUseruploadedListProcessingStateEnum(s)
+		*e = BooksVolumesUseruploadedListProcessingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksVolumesUseruploadedListProcessingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksVolumesUseruploadedListProcessingStateEnum: %v", v)
 	}
 }
 

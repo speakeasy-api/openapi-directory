@@ -15,17 +15,21 @@ const (
 	GETSendDiagnosticInterruptActionEnumSendDiagnosticInterrupt GETSendDiagnosticInterruptActionEnum = "SendDiagnosticInterrupt"
 )
 
+func (e GETSendDiagnosticInterruptActionEnum) ToPointer() *GETSendDiagnosticInterruptActionEnum {
+	return &e
+}
+
 func (e *GETSendDiagnosticInterruptActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SendDiagnosticInterrupt":
-		*e = GETSendDiagnosticInterruptActionEnum(s)
+		*e = GETSendDiagnosticInterruptActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSendDiagnosticInterruptActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSendDiagnosticInterruptActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSendDiagnosticInterruptVersionEnumTwoThousandAndSixteen1115 GETSendDiagnosticInterruptVersionEnum = "2016-11-15"
 )
 
+func (e GETSendDiagnosticInterruptVersionEnum) ToPointer() *GETSendDiagnosticInterruptVersionEnum {
+	return &e
+}
+
 func (e *GETSendDiagnosticInterruptVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETSendDiagnosticInterruptVersionEnum(s)
+		*e = GETSendDiagnosticInterruptVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSendDiagnosticInterruptVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSendDiagnosticInterruptVersionEnum: %v", v)
 	}
 }
 

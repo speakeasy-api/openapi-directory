@@ -1,0 +1,53 @@
+# Regions
+
+### Available Operations
+
+* [DfareportingRegionsList](#dfareportingregionslist) - Retrieves a list of regions.
+
+## DfareportingRegionsList
+
+Retrieves a list of regions.
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+)
+
+func main() {
+    s := sdk.New()
+
+    ctx := context.Background()
+    res, err := s.Regions.DfareportingRegionsList(ctx, operations.DfareportingRegionsListRequest{
+        DollarXgafv: shared.XgafvEnumOne.ToPointer(),
+        AccessToken: sdk.String("dolores"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("voluptatibus"),
+        Fields: sdk.String("alias"),
+        Key: sdk.String("officia"),
+        OauthToken: sdk.String("mollitia"),
+        PrettyPrint: sdk.Bool(false),
+        ProfileID: "animi",
+        QuotaUser: sdk.String("officiis"),
+        UploadType: sdk.String("vero"),
+        UploadProtocol: sdk.String("repudiandae"),
+    }, operations.DfareportingRegionsListSecurity{
+        Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
+        Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.RegionsListResponse != nil {
+        // handle response
+    }
+}
+```

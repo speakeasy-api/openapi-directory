@@ -15,17 +15,21 @@ const (
 	POSTRebuildEnvironmentActionEnumRebuildEnvironment POSTRebuildEnvironmentActionEnum = "RebuildEnvironment"
 )
 
+func (e POSTRebuildEnvironmentActionEnum) ToPointer() *POSTRebuildEnvironmentActionEnum {
+	return &e
+}
+
 func (e *POSTRebuildEnvironmentActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RebuildEnvironment":
-		*e = POSTRebuildEnvironmentActionEnum(s)
+		*e = POSTRebuildEnvironmentActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRebuildEnvironmentActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRebuildEnvironmentActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRebuildEnvironmentVersionEnumTwoThousandAndTen1201 POSTRebuildEnvironmentVersionEnum = "2010-12-01"
 )
 
+func (e POSTRebuildEnvironmentVersionEnum) ToPointer() *POSTRebuildEnvironmentVersionEnum {
+	return &e
+}
+
 func (e *POSTRebuildEnvironmentVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTRebuildEnvironmentVersionEnum(s)
+		*e = POSTRebuildEnvironmentVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRebuildEnvironmentVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRebuildEnvironmentVersionEnum: %v", v)
 	}
 }
 

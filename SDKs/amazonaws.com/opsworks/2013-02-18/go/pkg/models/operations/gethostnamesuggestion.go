@@ -16,17 +16,21 @@ const (
 	GetHostnameSuggestionXAmzTargetEnumOpsWorks20130218GetHostnameSuggestion GetHostnameSuggestionXAmzTargetEnum = "OpsWorks_20130218.GetHostnameSuggestion"
 )
 
+func (e GetHostnameSuggestionXAmzTargetEnum) ToPointer() *GetHostnameSuggestionXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetHostnameSuggestionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.GetHostnameSuggestion":
-		*e = GetHostnameSuggestionXAmzTargetEnum(s)
+		*e = GetHostnameSuggestionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHostnameSuggestionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHostnameSuggestionXAmzTargetEnum: %v", v)
 	}
 }
 

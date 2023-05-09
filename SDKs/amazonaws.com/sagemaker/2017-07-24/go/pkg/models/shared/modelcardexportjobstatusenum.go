@@ -15,20 +15,24 @@ const (
 	ModelCardExportJobStatusEnumFailed     ModelCardExportJobStatusEnum = "Failed"
 )
 
+func (e ModelCardExportJobStatusEnum) ToPointer() *ModelCardExportJobStatusEnum {
+	return &e
+}
+
 func (e *ModelCardExportJobStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InProgress":
 		fallthrough
 	case "Completed":
 		fallthrough
 	case "Failed":
-		*e = ModelCardExportJobStatusEnum(s)
+		*e = ModelCardExportJobStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelCardExportJobStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelCardExportJobStatusEnum: %v", v)
 	}
 }

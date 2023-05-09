@@ -17,12 +17,16 @@ const (
 	InstanceGroupConfigPreemptibilityEnumSpot                      InstanceGroupConfigPreemptibilityEnum = "SPOT"
 )
 
+func (e InstanceGroupConfigPreemptibilityEnum) ToPointer() *InstanceGroupConfigPreemptibilityEnum {
+	return &e
+}
+
 func (e *InstanceGroupConfigPreemptibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PREEMPTIBILITY_UNSPECIFIED":
 		fallthrough
 	case "NON_PREEMPTIBLE":
@@ -30,10 +34,10 @@ func (e *InstanceGroupConfigPreemptibilityEnum) UnmarshalJSON(data []byte) error
 	case "PREEMPTIBLE":
 		fallthrough
 	case "SPOT":
-		*e = InstanceGroupConfigPreemptibilityEnum(s)
+		*e = InstanceGroupConfigPreemptibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceGroupConfigPreemptibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceGroupConfigPreemptibilityEnum: %v", v)
 	}
 }
 

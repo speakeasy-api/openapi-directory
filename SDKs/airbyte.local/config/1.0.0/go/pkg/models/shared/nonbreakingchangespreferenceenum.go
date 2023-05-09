@@ -14,18 +14,22 @@ const (
 	NonBreakingChangesPreferenceEnumDisable NonBreakingChangesPreferenceEnum = "disable"
 )
 
+func (e NonBreakingChangesPreferenceEnum) ToPointer() *NonBreakingChangesPreferenceEnum {
+	return &e
+}
+
 func (e *NonBreakingChangesPreferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ignore":
 		fallthrough
 	case "disable":
-		*e = NonBreakingChangesPreferenceEnum(s)
+		*e = NonBreakingChangesPreferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NonBreakingChangesPreferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for NonBreakingChangesPreferenceEnum: %v", v)
 	}
 }

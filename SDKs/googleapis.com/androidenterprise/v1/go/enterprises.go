@@ -122,7 +122,10 @@ func (s *enterprises) AndroidenterpriseEnterprisesCompleteSignup(ctx context.Con
 // AndroidenterpriseEnterprisesCreateEnrollmentToken - Returns a token for device enrollment. The DPC can encode this token within the QR/NFC/zero-touch enrollment payload or fetch it before calling the on-device API to authenticate the user. The token can be generated for each device or reused across multiple devices.
 func (s *enterprises) AndroidenterpriseEnterprisesCreateEnrollmentToken(ctx context.Context, request operations.AndroidenterpriseEnterprisesCreateEnrollmentTokenRequest, security operations.AndroidenterpriseEnterprisesCreateEnrollmentTokenSecurity) (*operations.AndroidenterpriseEnterprisesCreateEnrollmentTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/createEnrollmentToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/createEnrollmentToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -170,7 +173,10 @@ func (s *enterprises) AndroidenterpriseEnterprisesCreateEnrollmentToken(ctx cont
 // AndroidenterpriseEnterprisesCreateWebToken - Returns a unique token to access an embeddable UI. To generate a web UI, pass the generated token into the managed Google Play javascript API. Each token may only be used to start one UI session. See the javascript API documentation for further information.
 func (s *enterprises) AndroidenterpriseEnterprisesCreateWebToken(ctx context.Context, request operations.AndroidenterpriseEnterprisesCreateWebTokenRequest, security operations.AndroidenterpriseEnterprisesCreateWebTokenSecurity) (*operations.AndroidenterpriseEnterprisesCreateWebTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/createWebToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/createWebToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdministratorWebTokenSpec", "json")
 	if err != nil {
@@ -328,7 +334,10 @@ func (s *enterprises) AndroidenterpriseEnterprisesGenerateSignupURL(ctx context.
 // AndroidenterpriseEnterprisesGet - Retrieves the name and domain of an enterprise.
 func (s *enterprises) AndroidenterpriseEnterprisesGet(ctx context.Context, request operations.AndroidenterpriseEnterprisesGetRequest, security operations.AndroidenterpriseEnterprisesGetSecurity) (*operations.AndroidenterpriseEnterprisesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -376,7 +385,10 @@ func (s *enterprises) AndroidenterpriseEnterprisesGet(ctx context.Context, reque
 // AndroidenterpriseEnterprisesGetServiceAccount - Returns a service account and credentials. The service account can be bound to the enterprise by calling setAccount. The service account is unique to this enterprise and EMM, and will be deleted if the enterprise is unbound. The credentials contain private key data and are not stored server-side. This method can only be called after calling Enterprises.Enroll or Enterprises.CompleteSignup, and before Enterprises.SetAccount; at other times it will return an error. Subsequent calls after the first will generate a new, unique set of credentials, and invalidate the previously generated credentials. Once the service account is bound to the enterprise, it can be managed using the serviceAccountKeys resource.
 func (s *enterprises) AndroidenterpriseEnterprisesGetServiceAccount(ctx context.Context, request operations.AndroidenterpriseEnterprisesGetServiceAccountRequest, security operations.AndroidenterpriseEnterprisesGetServiceAccountSecurity) (*operations.AndroidenterpriseEnterprisesGetServiceAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccount", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccount", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -424,7 +436,10 @@ func (s *enterprises) AndroidenterpriseEnterprisesGetServiceAccount(ctx context.
 // AndroidenterpriseEnterprisesGetStoreLayout - Returns the store layout for the enterprise. If the store layout has not been set, returns "basic" as the store layout type and no homepage.
 func (s *enterprises) AndroidenterpriseEnterprisesGetStoreLayout(ctx context.Context, request operations.AndroidenterpriseEnterprisesGetStoreLayoutRequest, security operations.AndroidenterpriseEnterprisesGetStoreLayoutSecurity) (*operations.AndroidenterpriseEnterprisesGetStoreLayoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -568,7 +583,10 @@ func (s *enterprises) AndroidenterpriseEnterprisesPullNotificationSet(ctx contex
 // AndroidenterpriseEnterprisesSendTestPushNotification - Sends a test notification to validate the EMM integration with the Google Cloud Pub/Sub service for this enterprise.
 func (s *enterprises) AndroidenterpriseEnterprisesSendTestPushNotification(ctx context.Context, request operations.AndroidenterpriseEnterprisesSendTestPushNotificationRequest, security operations.AndroidenterpriseEnterprisesSendTestPushNotificationSecurity) (*operations.AndroidenterpriseEnterprisesSendTestPushNotificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/sendTestPushNotification", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/sendTestPushNotification", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -616,7 +634,10 @@ func (s *enterprises) AndroidenterpriseEnterprisesSendTestPushNotification(ctx c
 // AndroidenterpriseEnterprisesSetAccount - Sets the account that will be used to authenticate to the API as the enterprise.
 func (s *enterprises) AndroidenterpriseEnterprisesSetAccount(ctx context.Context, request operations.AndroidenterpriseEnterprisesSetAccountRequest, security operations.AndroidenterpriseEnterprisesSetAccountSecurity) (*operations.AndroidenterpriseEnterprisesSetAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/account", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/account", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnterpriseAccount", "json")
 	if err != nil {
@@ -671,7 +692,10 @@ func (s *enterprises) AndroidenterpriseEnterprisesSetAccount(ctx context.Context
 // AndroidenterpriseEnterprisesSetStoreLayout - Sets the store layout for the enterprise. By default, storeLayoutType is set to "basic" and the basic store layout is enabled. The basic layout only contains apps approved by the admin, and that have been added to the available product set for a user (using the setAvailableProductSet call). Apps on the page are sorted in order of their product ID value. If you create a custom store layout (by setting storeLayoutType = "custom" and setting a homepage), the basic store layout is disabled.
 func (s *enterprises) AndroidenterpriseEnterprisesSetStoreLayout(ctx context.Context, request operations.AndroidenterpriseEnterprisesSetStoreLayoutRequest, security operations.AndroidenterpriseEnterprisesSetStoreLayoutSecurity) (*operations.AndroidenterpriseEnterprisesSetStoreLayoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StoreLayout", "json")
 	if err != nil {
@@ -726,7 +750,10 @@ func (s *enterprises) AndroidenterpriseEnterprisesSetStoreLayout(ctx context.Con
 // AndroidenterpriseEnterprisesUnenroll - Unenrolls an enterprise from the calling EMM.
 func (s *enterprises) AndroidenterpriseEnterprisesUnenroll(ctx context.Context, request operations.AndroidenterpriseEnterprisesUnenrollRequest, security operations.AndroidenterpriseEnterprisesUnenrollSecurity) (*operations.AndroidenterpriseEnterprisesUnenrollResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/unenroll", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/unenroll", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

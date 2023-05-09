@@ -18,12 +18,16 @@ const (
 	DescribeRouteTablesResultRouteTablesAssociationsAssociationStateStateEnumFailed         DescribeRouteTablesResultRouteTablesAssociationsAssociationStateStateEnum = "failed"
 )
 
+func (e DescribeRouteTablesResultRouteTablesAssociationsAssociationStateStateEnum) ToPointer() *DescribeRouteTablesResultRouteTablesAssociationsAssociationStateStateEnum {
+	return &e
+}
+
 func (e *DescribeRouteTablesResultRouteTablesAssociationsAssociationStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -33,10 +37,10 @@ func (e *DescribeRouteTablesResultRouteTablesAssociationsAssociationStateStateEn
 	case "disassociated":
 		fallthrough
 	case "failed":
-		*e = DescribeRouteTablesResultRouteTablesAssociationsAssociationStateStateEnum(s)
+		*e = DescribeRouteTablesResultRouteTablesAssociationsAssociationStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeRouteTablesResultRouteTablesAssociationsAssociationStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeRouteTablesResultRouteTablesAssociationsAssociationStateStateEnum: %v", v)
 	}
 }
 
@@ -70,21 +74,25 @@ const (
 	DescribeRouteTablesResultRouteTablesRoutesOriginEnumEnableVgwRoutePropagation DescribeRouteTablesResultRouteTablesRoutesOriginEnum = "EnableVgwRoutePropagation"
 )
 
+func (e DescribeRouteTablesResultRouteTablesRoutesOriginEnum) ToPointer() *DescribeRouteTablesResultRouteTablesRoutesOriginEnum {
+	return &e
+}
+
 func (e *DescribeRouteTablesResultRouteTablesRoutesOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateRouteTable":
 		fallthrough
 	case "CreateRoute":
 		fallthrough
 	case "EnableVgwRoutePropagation":
-		*e = DescribeRouteTablesResultRouteTablesRoutesOriginEnum(s)
+		*e = DescribeRouteTablesResultRouteTablesRoutesOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeRouteTablesResultRouteTablesRoutesOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeRouteTablesResultRouteTablesRoutesOriginEnum: %v", v)
 	}
 }
 
@@ -96,19 +104,23 @@ const (
 	DescribeRouteTablesResultRouteTablesRoutesStateEnumBlackhole DescribeRouteTablesResultRouteTablesRoutesStateEnum = "blackhole"
 )
 
+func (e DescribeRouteTablesResultRouteTablesRoutesStateEnum) ToPointer() *DescribeRouteTablesResultRouteTablesRoutesStateEnum {
+	return &e
+}
+
 func (e *DescribeRouteTablesResultRouteTablesRoutesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "blackhole":
-		*e = DescribeRouteTablesResultRouteTablesRoutesStateEnum(s)
+		*e = DescribeRouteTablesResultRouteTablesRoutesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeRouteTablesResultRouteTablesRoutesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeRouteTablesResultRouteTablesRoutesStateEnum: %v", v)
 	}
 }
 

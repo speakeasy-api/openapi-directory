@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // EventarcProjectsLocationsChannelConnectionsCreate - Create a new ChannelConnection in a particular project and location.
 func (s *projects) EventarcProjectsLocationsChannelConnectionsCreate(ctx context.Context, request operations.EventarcProjectsLocationsChannelConnectionsCreateRequest, security operations.EventarcProjectsLocationsChannelConnectionsCreateSecurity) (*operations.EventarcProjectsLocationsChannelConnectionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/channelConnections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/channelConnections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChannelConnectionInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) EventarcProjectsLocationsChannelConnectionsCreate(ctx context
 // EventarcProjectsLocationsChannelConnectionsList - List channel connections.
 func (s *projects) EventarcProjectsLocationsChannelConnectionsList(ctx context.Context, request operations.EventarcProjectsLocationsChannelConnectionsListRequest, security operations.EventarcProjectsLocationsChannelConnectionsListSecurity) (*operations.EventarcProjectsLocationsChannelConnectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/channelConnections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/channelConnections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) EventarcProjectsLocationsChannelConnectionsList(ctx context.C
 // EventarcProjectsLocationsChannelsCreate - Create a new channel in a particular project and location.
 func (s *projects) EventarcProjectsLocationsChannelsCreate(ctx context.Context, request operations.EventarcProjectsLocationsChannelsCreateRequest, security operations.EventarcProjectsLocationsChannelsCreateSecurity) (*operations.EventarcProjectsLocationsChannelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/channels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/channels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChannelInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) EventarcProjectsLocationsChannelsCreate(ctx context.Context, 
 // EventarcProjectsLocationsChannelsList - List channels.
 func (s *projects) EventarcProjectsLocationsChannelsList(ctx context.Context, request operations.EventarcProjectsLocationsChannelsListRequest, security operations.EventarcProjectsLocationsChannelsListSecurity) (*operations.EventarcProjectsLocationsChannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/channels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/channels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) EventarcProjectsLocationsChannelsList(ctx context.Context, re
 // EventarcProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) EventarcProjectsLocationsList(ctx context.Context, request operations.EventarcProjectsLocationsListRequest, security operations.EventarcProjectsLocationsListSecurity) (*operations.EventarcProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) EventarcProjectsLocationsList(ctx context.Context, request op
 // EventarcProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) EventarcProjectsLocationsOperationsCancel(ctx context.Context, request operations.EventarcProjectsLocationsOperationsCancelRequest, security operations.EventarcProjectsLocationsOperationsCancelSecurity) (*operations.EventarcProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) EventarcProjectsLocationsOperationsCancel(ctx context.Context
 // EventarcProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) EventarcProjectsLocationsOperationsList(ctx context.Context, request operations.EventarcProjectsLocationsOperationsListRequest, security operations.EventarcProjectsLocationsOperationsListSecurity) (*operations.EventarcProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) EventarcProjectsLocationsOperationsList(ctx context.Context, 
 // EventarcProjectsLocationsProvidersList - List providers.
 func (s *projects) EventarcProjectsLocationsProvidersList(ctx context.Context, request operations.EventarcProjectsLocationsProvidersListRequest, security operations.EventarcProjectsLocationsProvidersListSecurity) (*operations.EventarcProjectsLocationsProvidersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/providers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/providers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -439,7 +463,10 @@ func (s *projects) EventarcProjectsLocationsProvidersList(ctx context.Context, r
 // EventarcProjectsLocationsTriggersCreate - Create a new trigger in a particular project and location.
 func (s *projects) EventarcProjectsLocationsTriggersCreate(ctx context.Context, request operations.EventarcProjectsLocationsTriggersCreateRequest, security operations.EventarcProjectsLocationsTriggersCreateSecurity) (*operations.EventarcProjectsLocationsTriggersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/triggers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/triggers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TriggerInput", "json")
 	if err != nil {
@@ -494,7 +521,10 @@ func (s *projects) EventarcProjectsLocationsTriggersCreate(ctx context.Context, 
 // EventarcProjectsLocationsTriggersDelete - Delete a single trigger.
 func (s *projects) EventarcProjectsLocationsTriggersDelete(ctx context.Context, request operations.EventarcProjectsLocationsTriggersDeleteRequest, security operations.EventarcProjectsLocationsTriggersDeleteSecurity) (*operations.EventarcProjectsLocationsTriggersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -542,7 +572,10 @@ func (s *projects) EventarcProjectsLocationsTriggersDelete(ctx context.Context, 
 // EventarcProjectsLocationsTriggersGet - Get a single trigger.
 func (s *projects) EventarcProjectsLocationsTriggersGet(ctx context.Context, request operations.EventarcProjectsLocationsTriggersGetRequest, security operations.EventarcProjectsLocationsTriggersGetSecurity) (*operations.EventarcProjectsLocationsTriggersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -590,7 +623,10 @@ func (s *projects) EventarcProjectsLocationsTriggersGet(ctx context.Context, req
 // EventarcProjectsLocationsTriggersGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) EventarcProjectsLocationsTriggersGetIamPolicy(ctx context.Context, request operations.EventarcProjectsLocationsTriggersGetIamPolicyRequest, security operations.EventarcProjectsLocationsTriggersGetIamPolicySecurity) (*operations.EventarcProjectsLocationsTriggersGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -638,7 +674,10 @@ func (s *projects) EventarcProjectsLocationsTriggersGetIamPolicy(ctx context.Con
 // EventarcProjectsLocationsTriggersList - List triggers.
 func (s *projects) EventarcProjectsLocationsTriggersList(ctx context.Context, request operations.EventarcProjectsLocationsTriggersListRequest, security operations.EventarcProjectsLocationsTriggersListSecurity) (*operations.EventarcProjectsLocationsTriggersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/triggers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/triggers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -686,7 +725,10 @@ func (s *projects) EventarcProjectsLocationsTriggersList(ctx context.Context, re
 // EventarcProjectsLocationsTriggersPatch - Update a single trigger.
 func (s *projects) EventarcProjectsLocationsTriggersPatch(ctx context.Context, request operations.EventarcProjectsLocationsTriggersPatchRequest, security operations.EventarcProjectsLocationsTriggersPatchSecurity) (*operations.EventarcProjectsLocationsTriggersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TriggerInput", "json")
 	if err != nil {
@@ -741,7 +783,10 @@ func (s *projects) EventarcProjectsLocationsTriggersPatch(ctx context.Context, r
 // EventarcProjectsLocationsTriggersSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) EventarcProjectsLocationsTriggersSetIamPolicy(ctx context.Context, request operations.EventarcProjectsLocationsTriggersSetIamPolicyRequest, security operations.EventarcProjectsLocationsTriggersSetIamPolicySecurity) (*operations.EventarcProjectsLocationsTriggersSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -796,7 +841,10 @@ func (s *projects) EventarcProjectsLocationsTriggersSetIamPolicy(ctx context.Con
 // EventarcProjectsLocationsTriggersTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) EventarcProjectsLocationsTriggersTestIamPermissions(ctx context.Context, request operations.EventarcProjectsLocationsTriggersTestIamPermissionsRequest, security operations.EventarcProjectsLocationsTriggersTestIamPermissionsSecurity) (*operations.EventarcProjectsLocationsTriggersTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {

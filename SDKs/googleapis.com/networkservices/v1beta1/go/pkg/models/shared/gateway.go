@@ -16,34 +16,46 @@ const (
 	GatewayTypeEnumSecureWebGateway GatewayTypeEnum = "SECURE_WEB_GATEWAY"
 )
 
+func (e GatewayTypeEnum) ToPointer() *GatewayTypeEnum {
+	return &e
+}
+
 func (e *GatewayTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "OPEN_MESH":
 		fallthrough
 	case "SECURE_WEB_GATEWAY":
-		*e = GatewayTypeEnum(s)
+		*e = GatewayTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GatewayTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GatewayTypeEnum: %v", v)
 	}
 }
 
 // Gateway - Gateway represents the configuration for a proxy, typically a load balancer. It captures the ip:port over which the services are exposed by the proxy, along with any policy configurations. Routes have reference to to Gateways to dictate how requests should be routed by this Gateway.
 type Gateway struct {
+	// Optional. Zero or one IPv4-address on which the Gateway will receive the traffic. When no address is provided, an IP from the subnetwork is allocated This field only applies to gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.
+	Addresses []string `json:"addresses,omitempty"`
+	// Optional. A fully-qualified Certificates URL reference. The proxy presents a Certificate (selected based on SNI) when establishing a TLS connection. This feature only applies to gateways of type 'SECURE_WEB_GATEWAY'.
+	CertificateUrls []string `json:"certificateUrls,omitempty"`
 	// Output only. The timestamp when the resource was created.
 	CreateTime *string `json:"createTime,omitempty"`
 	// Optional. A free-text description of the resource. Max length 1024 characters.
 	Description *string `json:"description,omitempty"`
+	// Optional. A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections. For example: `projects/*/locations/*/gatewaySecurityPolicies/swg-policy`. This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.
+	GatewaySecurityPolicy *string `json:"gatewaySecurityPolicy,omitempty"`
 	// Optional. Set of label tags associated with the Gateway resource.
 	Labels map[string]string `json:"labels,omitempty"`
 	// Required. Name of the Gateway resource. It matches pattern `projects/*/locations/*/gateways/`.
 	Name *string `json:"name,omitempty"`
+	// Optional. The relative resource name identifying the VPC network that is using this configuration. For example: `projects/*/global/networks/network-1`. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.
+	Network *string `json:"network,omitempty"`
 	// Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1 port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.
 	Ports []int `json:"ports,omitempty"`
 	// Optional. Scope determines how configuration across multiple Gateway instances are merged. The configuration for multiple Gateway instances with the same scope will be merged as presented as a single coniguration to the proxy/load balancer. Max length 64 characters. Scope should start with a letter and can only have letters, numbers, hyphens.
@@ -52,6 +64,8 @@ type Gateway struct {
 	SelfLink *string `json:"selfLink,omitempty"`
 	// Optional. A fully-qualified ServerTLSPolicy URL reference. Specifies how TLS traffic is terminated. If empty, TLS termination is disabled.
 	ServerTLSPolicy *string `json:"serverTlsPolicy,omitempty"`
+	// Optional. The relative resource name identifying the subnetwork in which this SWG is allocated. For example: `projects/*/regions/us-central1/subnetworks/network-1` Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY".
+	Subnetwork *string `json:"subnetwork,omitempty"`
 	// Immutable. The type of the customer managed gateway. This field is required. If unspecified, an error is returned.
 	Type *GatewayTypeEnum `json:"type,omitempty"`
 	// Output only. The timestamp when the resource was updated.
@@ -60,18 +74,28 @@ type Gateway struct {
 
 // GatewayInput - Gateway represents the configuration for a proxy, typically a load balancer. It captures the ip:port over which the services are exposed by the proxy, along with any policy configurations. Routes have reference to to Gateways to dictate how requests should be routed by this Gateway.
 type GatewayInput struct {
+	// Optional. Zero or one IPv4-address on which the Gateway will receive the traffic. When no address is provided, an IP from the subnetwork is allocated This field only applies to gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.
+	Addresses []string `json:"addresses,omitempty"`
+	// Optional. A fully-qualified Certificates URL reference. The proxy presents a Certificate (selected based on SNI) when establishing a TLS connection. This feature only applies to gateways of type 'SECURE_WEB_GATEWAY'.
+	CertificateUrls []string `json:"certificateUrls,omitempty"`
 	// Optional. A free-text description of the resource. Max length 1024 characters.
 	Description *string `json:"description,omitempty"`
+	// Optional. A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections. For example: `projects/*/locations/*/gatewaySecurityPolicies/swg-policy`. This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.
+	GatewaySecurityPolicy *string `json:"gatewaySecurityPolicy,omitempty"`
 	// Optional. Set of label tags associated with the Gateway resource.
 	Labels map[string]string `json:"labels,omitempty"`
 	// Required. Name of the Gateway resource. It matches pattern `projects/*/locations/*/gateways/`.
 	Name *string `json:"name,omitempty"`
+	// Optional. The relative resource name identifying the VPC network that is using this configuration. For example: `projects/*/global/networks/network-1`. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.
+	Network *string `json:"network,omitempty"`
 	// Required. One or more port numbers (1-65535), on which the Gateway will receive traffic. The proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1 port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.
 	Ports []int `json:"ports,omitempty"`
 	// Optional. Scope determines how configuration across multiple Gateway instances are merged. The configuration for multiple Gateway instances with the same scope will be merged as presented as a single coniguration to the proxy/load balancer. Max length 64 characters. Scope should start with a letter and can only have letters, numbers, hyphens.
 	Scope *string `json:"scope,omitempty"`
 	// Optional. A fully-qualified ServerTLSPolicy URL reference. Specifies how TLS traffic is terminated. If empty, TLS termination is disabled.
 	ServerTLSPolicy *string `json:"serverTlsPolicy,omitempty"`
+	// Optional. The relative resource name identifying the subnetwork in which this SWG is allocated. For example: `projects/*/regions/us-central1/subnetworks/network-1` Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY".
+	Subnetwork *string `json:"subnetwork,omitempty"`
 	// Immutable. The type of the customer managed gateway. This field is required. If unspecified, an error is returned.
 	Type *GatewayTypeEnum `json:"type,omitempty"`
 }

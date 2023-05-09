@@ -14,18 +14,22 @@ const (
 	NotificationTypeEnumLensVersionDeprecated NotificationTypeEnum = "LENS_VERSION_DEPRECATED"
 )
 
+func (e NotificationTypeEnum) ToPointer() *NotificationTypeEnum {
+	return &e
+}
+
 func (e *NotificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LENS_VERSION_UPGRADED":
 		fallthrough
 	case "LENS_VERSION_DEPRECATED":
-		*e = NotificationTypeEnum(s)
+		*e = NotificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationTypeEnum: %v", v)
 	}
 }

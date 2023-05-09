@@ -16,17 +16,21 @@ const (
 	DeregisterEcsClusterXAmzTargetEnumOpsWorks20130218DeregisterEcsCluster DeregisterEcsClusterXAmzTargetEnum = "OpsWorks_20130218.DeregisterEcsCluster"
 )
 
+func (e DeregisterEcsClusterXAmzTargetEnum) ToPointer() *DeregisterEcsClusterXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeregisterEcsClusterXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DeregisterEcsCluster":
-		*e = DeregisterEcsClusterXAmzTargetEnum(s)
+		*e = DeregisterEcsClusterXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeregisterEcsClusterXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeregisterEcsClusterXAmzTargetEnum: %v", v)
 	}
 }
 

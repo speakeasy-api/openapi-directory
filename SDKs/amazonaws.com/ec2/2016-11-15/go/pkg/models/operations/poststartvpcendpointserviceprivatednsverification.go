@@ -15,17 +15,21 @@ const (
 	POSTStartVpcEndpointServicePrivateDNSVerificationActionEnumStartVpcEndpointServicePrivateDNSVerification POSTStartVpcEndpointServicePrivateDNSVerificationActionEnum = "StartVpcEndpointServicePrivateDnsVerification"
 )
 
+func (e POSTStartVpcEndpointServicePrivateDNSVerificationActionEnum) ToPointer() *POSTStartVpcEndpointServicePrivateDNSVerificationActionEnum {
+	return &e
+}
+
 func (e *POSTStartVpcEndpointServicePrivateDNSVerificationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartVpcEndpointServicePrivateDnsVerification":
-		*e = POSTStartVpcEndpointServicePrivateDNSVerificationActionEnum(s)
+		*e = POSTStartVpcEndpointServicePrivateDNSVerificationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartVpcEndpointServicePrivateDNSVerificationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartVpcEndpointServicePrivateDNSVerificationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTStartVpcEndpointServicePrivateDNSVerificationVersionEnumTwoThousandAndSixteen1115 POSTStartVpcEndpointServicePrivateDNSVerificationVersionEnum = "2016-11-15"
 )
 
+func (e POSTStartVpcEndpointServicePrivateDNSVerificationVersionEnum) ToPointer() *POSTStartVpcEndpointServicePrivateDNSVerificationVersionEnum {
+	return &e
+}
+
 func (e *POSTStartVpcEndpointServicePrivateDNSVerificationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTStartVpcEndpointServicePrivateDNSVerificationVersionEnum(s)
+		*e = POSTStartVpcEndpointServicePrivateDNSVerificationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartVpcEndpointServicePrivateDNSVerificationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartVpcEndpointServicePrivateDNSVerificationVersionEnum: %v", v)
 	}
 }
 

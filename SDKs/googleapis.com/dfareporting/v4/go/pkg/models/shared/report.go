@@ -34,12 +34,16 @@ const (
 	ReportCrossDimensionReachCriteriaDimensionEnumSiteByCampaign   ReportCrossDimensionReachCriteriaDimensionEnum = "SITE_BY_CAMPAIGN"
 )
 
+func (e ReportCrossDimensionReachCriteriaDimensionEnum) ToPointer() *ReportCrossDimensionReachCriteriaDimensionEnum {
+	return &e
+}
+
 func (e *ReportCrossDimensionReachCriteriaDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADVERTISER":
 		fallthrough
 	case "CAMPAIGN":
@@ -47,10 +51,10 @@ func (e *ReportCrossDimensionReachCriteriaDimensionEnum) UnmarshalJSON(data []by
 	case "SITE_BY_ADVERTISER":
 		fallthrough
 	case "SITE_BY_CAMPAIGN":
-		*e = ReportCrossDimensionReachCriteriaDimensionEnum(s)
+		*e = ReportCrossDimensionReachCriteriaDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportCrossDimensionReachCriteriaDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportCrossDimensionReachCriteriaDimensionEnum: %v", v)
 	}
 }
 
@@ -80,19 +84,23 @@ const (
 	ReportDeliveryEmailOwnerDeliveryTypeEnumAttachment ReportDeliveryEmailOwnerDeliveryTypeEnum = "ATTACHMENT"
 )
 
+func (e ReportDeliveryEmailOwnerDeliveryTypeEnum) ToPointer() *ReportDeliveryEmailOwnerDeliveryTypeEnum {
+	return &e
+}
+
 func (e *ReportDeliveryEmailOwnerDeliveryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINK":
 		fallthrough
 	case "ATTACHMENT":
-		*e = ReportDeliveryEmailOwnerDeliveryTypeEnum(s)
+		*e = ReportDeliveryEmailOwnerDeliveryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportDeliveryEmailOwnerDeliveryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportDeliveryEmailOwnerDeliveryTypeEnum: %v", v)
 	}
 }
 
@@ -144,19 +152,23 @@ const (
 	ReportFormatEnumExcel ReportFormatEnum = "EXCEL"
 )
 
+func (e ReportFormatEnum) ToPointer() *ReportFormatEnum {
+	return &e
+}
+
 func (e *ReportFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
 		fallthrough
 	case "EXCEL":
-		*e = ReportFormatEnum(s)
+		*e = ReportFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportFormatEnum: %v", v)
 	}
 }
 
@@ -272,12 +284,16 @@ const (
 	ReportScheduleRepeatsOnWeekDaysEnumSaturday  ReportScheduleRepeatsOnWeekDaysEnum = "SATURDAY"
 )
 
+func (e ReportScheduleRepeatsOnWeekDaysEnum) ToPointer() *ReportScheduleRepeatsOnWeekDaysEnum {
+	return &e
+}
+
 func (e *ReportScheduleRepeatsOnWeekDaysEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUNDAY":
 		fallthrough
 	case "MONDAY":
@@ -291,10 +307,10 @@ func (e *ReportScheduleRepeatsOnWeekDaysEnum) UnmarshalJSON(data []byte) error {
 	case "FRIDAY":
 		fallthrough
 	case "SATURDAY":
-		*e = ReportScheduleRepeatsOnWeekDaysEnum(s)
+		*e = ReportScheduleRepeatsOnWeekDaysEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportScheduleRepeatsOnWeekDaysEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportScheduleRepeatsOnWeekDaysEnum: %v", v)
 	}
 }
 
@@ -306,19 +322,23 @@ const (
 	ReportScheduleRunsOnDayOfMonthEnumWeekOfMonth ReportScheduleRunsOnDayOfMonthEnum = "WEEK_OF_MONTH"
 )
 
+func (e ReportScheduleRunsOnDayOfMonthEnum) ToPointer() *ReportScheduleRunsOnDayOfMonthEnum {
+	return &e
+}
+
 func (e *ReportScheduleRunsOnDayOfMonthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAY_OF_MONTH":
 		fallthrough
 	case "WEEK_OF_MONTH":
-		*e = ReportScheduleRunsOnDayOfMonthEnum(s)
+		*e = ReportScheduleRunsOnDayOfMonthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportScheduleRunsOnDayOfMonthEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportScheduleRunsOnDayOfMonthEnum: %v", v)
 	}
 }
 
@@ -353,12 +373,16 @@ const (
 	ReportTypeEnumPathAttribution     ReportTypeEnum = "PATH_ATTRIBUTION"
 )
 
+func (e ReportTypeEnum) ToPointer() *ReportTypeEnum {
+	return &e
+}
+
 func (e *ReportTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD":
 		fallthrough
 	case "REACH":
@@ -372,10 +396,10 @@ func (e *ReportTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PATH":
 		fallthrough
 	case "PATH_ATTRIBUTION":
-		*e = ReportTypeEnum(s)
+		*e = ReportTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportTypeEnum: %v", v)
 	}
 }
 

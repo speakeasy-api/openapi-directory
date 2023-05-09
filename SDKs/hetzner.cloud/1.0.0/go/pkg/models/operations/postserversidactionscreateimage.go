@@ -22,19 +22,23 @@ const (
 	PostServersIDActionsCreateImageCreateImageRequestTypeEnumBackup   PostServersIDActionsCreateImageCreateImageRequestTypeEnum = "backup"
 )
 
+func (e PostServersIDActionsCreateImageCreateImageRequestTypeEnum) ToPointer() *PostServersIDActionsCreateImageCreateImageRequestTypeEnum {
+	return &e
+}
+
 func (e *PostServersIDActionsCreateImageCreateImageRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "snapshot":
 		fallthrough
 	case "backup":
-		*e = PostServersIDActionsCreateImageCreateImageRequestTypeEnum(s)
+		*e = PostServersIDActionsCreateImageCreateImageRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersIDActionsCreateImageCreateImageRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersIDActionsCreateImageCreateImageRequestTypeEnum: %v", v)
 	}
 }
 
@@ -77,21 +81,25 @@ const (
 	PostServersIDActionsCreateImage201ApplicationJSONActionStatusEnumError   PostServersIDActionsCreateImage201ApplicationJSONActionStatusEnum = "error"
 )
 
+func (e PostServersIDActionsCreateImage201ApplicationJSONActionStatusEnum) ToPointer() *PostServersIDActionsCreateImage201ApplicationJSONActionStatusEnum {
+	return &e
+}
+
 func (e *PostServersIDActionsCreateImage201ApplicationJSONActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostServersIDActionsCreateImage201ApplicationJSONActionStatusEnum(s)
+		*e = PostServersIDActionsCreateImage201ApplicationJSONActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersIDActionsCreateImage201ApplicationJSONActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersIDActionsCreateImage201ApplicationJSONActionStatusEnum: %v", v)
 	}
 }
 
@@ -133,12 +141,16 @@ const (
 	PostServersIDActionsCreateImage201ApplicationJSONImageOsFlavorEnumUnknown PostServersIDActionsCreateImage201ApplicationJSONImageOsFlavorEnum = "unknown"
 )
 
+func (e PostServersIDActionsCreateImage201ApplicationJSONImageOsFlavorEnum) ToPointer() *PostServersIDActionsCreateImage201ApplicationJSONImageOsFlavorEnum {
+	return &e
+}
+
 func (e *PostServersIDActionsCreateImage201ApplicationJSONImageOsFlavorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ubuntu":
 		fallthrough
 	case "centos":
@@ -148,10 +160,10 @@ func (e *PostServersIDActionsCreateImage201ApplicationJSONImageOsFlavorEnum) Unm
 	case "fedora":
 		fallthrough
 	case "unknown":
-		*e = PostServersIDActionsCreateImage201ApplicationJSONImageOsFlavorEnum(s)
+		*e = PostServersIDActionsCreateImage201ApplicationJSONImageOsFlavorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersIDActionsCreateImage201ApplicationJSONImageOsFlavorEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersIDActionsCreateImage201ApplicationJSONImageOsFlavorEnum: %v", v)
 	}
 }
 
@@ -170,21 +182,25 @@ const (
 	PostServersIDActionsCreateImage201ApplicationJSONImageStatusEnumUnavailable PostServersIDActionsCreateImage201ApplicationJSONImageStatusEnum = "unavailable"
 )
 
+func (e PostServersIDActionsCreateImage201ApplicationJSONImageStatusEnum) ToPointer() *PostServersIDActionsCreateImage201ApplicationJSONImageStatusEnum {
+	return &e
+}
+
 func (e *PostServersIDActionsCreateImage201ApplicationJSONImageStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "creating":
 		fallthrough
 	case "unavailable":
-		*e = PostServersIDActionsCreateImage201ApplicationJSONImageStatusEnum(s)
+		*e = PostServersIDActionsCreateImage201ApplicationJSONImageStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersIDActionsCreateImage201ApplicationJSONImageStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersIDActionsCreateImage201ApplicationJSONImageStatusEnum: %v", v)
 	}
 }
 
@@ -199,12 +215,16 @@ const (
 	PostServersIDActionsCreateImage201ApplicationJSONImageTypeEnumTemporary PostServersIDActionsCreateImage201ApplicationJSONImageTypeEnum = "temporary"
 )
 
+func (e PostServersIDActionsCreateImage201ApplicationJSONImageTypeEnum) ToPointer() *PostServersIDActionsCreateImage201ApplicationJSONImageTypeEnum {
+	return &e
+}
+
 func (e *PostServersIDActionsCreateImage201ApplicationJSONImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "system":
 		fallthrough
 	case "app":
@@ -214,10 +234,10 @@ func (e *PostServersIDActionsCreateImage201ApplicationJSONImageTypeEnum) Unmarsh
 	case "backup":
 		fallthrough
 	case "temporary":
-		*e = PostServersIDActionsCreateImage201ApplicationJSONImageTypeEnum(s)
+		*e = PostServersIDActionsCreateImage201ApplicationJSONImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersIDActionsCreateImage201ApplicationJSONImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersIDActionsCreateImage201ApplicationJSONImageTypeEnum: %v", v)
 	}
 }
 

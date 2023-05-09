@@ -13,18 +13,19 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/BinLookupServic
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.ThreeDSAvailabilityRequest{
+    ctx := context.Background()
+    res, err := s.General.PostGet3dsAvailability(ctx, shared.ThreeDSAvailabilityRequest{
         AdditionalData: map[string]string{
             "provident": "distinctio",
             "quibusdam": "unde",
@@ -36,14 +37,11 @@ func main() {
             "deserunt",
             "suscipit",
         },
-        CardNumber: "iure",
+        CardNumber: sdk.String("iure"),
         MerchantAccount: "magnam",
-        RecurringDetailReference: "debitis",
-        ShopperReference: "ipsa",
-    }
-
-    ctx := context.Background()
-    res, err := s.General.PostGet3dsAvailability(ctx, req, operations.PostGet3dsAvailabilitySecurity{
+        RecurringDetailReference: sdk.String("debitis"),
+        ShopperReference: sdk.String("ipsa"),
+    }, operations.PostGet3dsAvailabilitySecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {
@@ -61,10 +59,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### General
+### [General](docs/general/README.md)
 
-* `PostGet3dsAvailability` - Check if 3D Secure is available
-* `PostGetCostEstimate` - Get a fees cost estimate
+* [PostGet3dsAvailability](docs/general/README.md#postget3dsavailability) - Check if 3D Secure is available
+* [PostGetCostEstimate](docs/general/README.md#postgetcostestimate) - Get a fees cost estimate
 <!-- End SDK Available Operations -->
 
 ### Maturity

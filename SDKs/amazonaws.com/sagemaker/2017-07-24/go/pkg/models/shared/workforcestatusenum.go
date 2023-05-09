@@ -17,12 +17,16 @@ const (
 	WorkforceStatusEnumActive       WorkforceStatusEnum = "Active"
 )
 
+func (e WorkforceStatusEnum) ToPointer() *WorkforceStatusEnum {
+	return &e
+}
+
 func (e *WorkforceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Initializing":
 		fallthrough
 	case "Updating":
@@ -32,9 +36,9 @@ func (e *WorkforceStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Failed":
 		fallthrough
 	case "Active":
-		*e = WorkforceStatusEnum(s)
+		*e = WorkforceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkforceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkforceStatusEnum: %v", v)
 	}
 }

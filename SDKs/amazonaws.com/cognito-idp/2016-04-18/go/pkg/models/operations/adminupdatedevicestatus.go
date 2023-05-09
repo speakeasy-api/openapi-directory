@@ -16,17 +16,21 @@ const (
 	AdminUpdateDeviceStatusXAmzTargetEnumAwsCognitoIdentityProviderServiceAdminUpdateDeviceStatus AdminUpdateDeviceStatusXAmzTargetEnum = "AWSCognitoIdentityProviderService.AdminUpdateDeviceStatus"
 )
 
+func (e AdminUpdateDeviceStatusXAmzTargetEnum) ToPointer() *AdminUpdateDeviceStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *AdminUpdateDeviceStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.AdminUpdateDeviceStatus":
-		*e = AdminUpdateDeviceStatusXAmzTargetEnum(s)
+		*e = AdminUpdateDeviceStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminUpdateDeviceStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminUpdateDeviceStatusXAmzTargetEnum: %v", v)
 	}
 }
 

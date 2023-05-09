@@ -18,12 +18,16 @@ const (
 	StartSelectorTypeEnumContinuationToken StartSelectorTypeEnum = "CONTINUATION_TOKEN"
 )
 
+func (e StartSelectorTypeEnum) ToPointer() *StartSelectorTypeEnum {
+	return &e
+}
+
 func (e *StartSelectorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FRAGMENT_NUMBER":
 		fallthrough
 	case "SERVER_TIMESTAMP":
@@ -35,9 +39,9 @@ func (e *StartSelectorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "EARLIEST":
 		fallthrough
 	case "CONTINUATION_TOKEN":
-		*e = StartSelectorTypeEnum(s)
+		*e = StartSelectorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartSelectorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StartSelectorTypeEnum: %v", v)
 	}
 }

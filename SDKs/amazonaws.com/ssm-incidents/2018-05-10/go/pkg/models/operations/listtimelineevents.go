@@ -16,17 +16,21 @@ const (
 	ListTimelineEventsRequestBodySortByEnumEventTime ListTimelineEventsRequestBodySortByEnum = "EVENT_TIME"
 )
 
+func (e ListTimelineEventsRequestBodySortByEnum) ToPointer() *ListTimelineEventsRequestBodySortByEnum {
+	return &e
+}
+
 func (e *ListTimelineEventsRequestBodySortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVENT_TIME":
-		*e = ListTimelineEventsRequestBodySortByEnum(s)
+		*e = ListTimelineEventsRequestBodySortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTimelineEventsRequestBodySortByEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTimelineEventsRequestBodySortByEnum: %v", v)
 	}
 }
 
@@ -38,19 +42,23 @@ const (
 	ListTimelineEventsRequestBodySortOrderEnumDescending ListTimelineEventsRequestBodySortOrderEnum = "DESCENDING"
 )
 
+func (e ListTimelineEventsRequestBodySortOrderEnum) ToPointer() *ListTimelineEventsRequestBodySortOrderEnum {
+	return &e
+}
+
 func (e *ListTimelineEventsRequestBodySortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = ListTimelineEventsRequestBodySortOrderEnum(s)
+		*e = ListTimelineEventsRequestBodySortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTimelineEventsRequestBodySortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTimelineEventsRequestBodySortOrderEnum: %v", v)
 	}
 }
 

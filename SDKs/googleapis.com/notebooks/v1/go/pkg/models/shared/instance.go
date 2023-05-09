@@ -18,12 +18,16 @@ const (
 	InstanceBootDiskTypeEnumPdExtreme           InstanceBootDiskTypeEnum = "PD_EXTREME"
 )
 
+func (e InstanceBootDiskTypeEnum) ToPointer() *InstanceBootDiskTypeEnum {
+	return &e
+}
+
 func (e *InstanceBootDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PD_STANDARD":
@@ -33,10 +37,10 @@ func (e *InstanceBootDiskTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PD_BALANCED":
 		fallthrough
 	case "PD_EXTREME":
-		*e = InstanceBootDiskTypeEnum(s)
+		*e = InstanceBootDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceBootDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceBootDiskTypeEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	InstanceDataDiskTypeEnumPdExtreme           InstanceDataDiskTypeEnum = "PD_EXTREME"
 )
 
+func (e InstanceDataDiskTypeEnum) ToPointer() *InstanceDataDiskTypeEnum {
+	return &e
+}
+
 func (e *InstanceDataDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PD_STANDARD":
@@ -66,10 +74,10 @@ func (e *InstanceDataDiskTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PD_BALANCED":
 		fallthrough
 	case "PD_EXTREME":
-		*e = InstanceDataDiskTypeEnum(s)
+		*e = InstanceDataDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceDataDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceDataDiskTypeEnum: %v", v)
 	}
 }
 
@@ -82,21 +90,25 @@ const (
 	InstanceDiskEncryptionEnumCmek                      InstanceDiskEncryptionEnum = "CMEK"
 )
 
+func (e InstanceDiskEncryptionEnum) ToPointer() *InstanceDiskEncryptionEnum {
+	return &e
+}
+
 func (e *InstanceDiskEncryptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISK_ENCRYPTION_UNSPECIFIED":
 		fallthrough
 	case "GMEK":
 		fallthrough
 	case "CMEK":
-		*e = InstanceDiskEncryptionEnum(s)
+		*e = InstanceDiskEncryptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceDiskEncryptionEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceDiskEncryptionEnum: %v", v)
 	}
 }
 
@@ -109,21 +121,25 @@ const (
 	InstanceNicTypeEnumGvnic              InstanceNicTypeEnum = "GVNIC"
 )
 
+func (e InstanceNicTypeEnum) ToPointer() *InstanceNicTypeEnum {
+	return &e
+}
+
 func (e *InstanceNicTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_NIC_TYPE":
 		fallthrough
 	case "VIRTIO_NET":
 		fallthrough
 	case "GVNIC":
-		*e = InstanceNicTypeEnum(s)
+		*e = InstanceNicTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceNicTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceNicTypeEnum: %v", v)
 	}
 }
 
@@ -145,12 +161,16 @@ const (
 	InstanceStateEnumSuspended        InstanceStateEnum = "SUSPENDED"
 )
 
+func (e InstanceStateEnum) ToPointer() *InstanceStateEnum {
+	return &e
+}
+
 func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "STARTING":
@@ -174,10 +194,10 @@ func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
 	case "SUSPENDING":
 		fallthrough
 	case "SUSPENDED":
-		*e = InstanceStateEnum(s)
+		*e = InstanceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceStateEnum: %v", v)
 	}
 }
 

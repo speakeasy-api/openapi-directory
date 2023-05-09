@@ -17,21 +17,25 @@ const (
 	ListTrackersResponseEntryPricingPlanEnumMobileAssetManagement ListTrackersResponseEntryPricingPlanEnum = "MobileAssetManagement"
 )
 
+func (e ListTrackersResponseEntryPricingPlanEnum) ToPointer() *ListTrackersResponseEntryPricingPlanEnum {
+	return &e
+}
+
 func (e *ListTrackersResponseEntryPricingPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RequestBasedUsage":
 		fallthrough
 	case "MobileAssetTracking":
 		fallthrough
 	case "MobileAssetManagement":
-		*e = ListTrackersResponseEntryPricingPlanEnum(s)
+		*e = ListTrackersResponseEntryPricingPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTrackersResponseEntryPricingPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTrackersResponseEntryPricingPlanEnum: %v", v)
 	}
 }
 

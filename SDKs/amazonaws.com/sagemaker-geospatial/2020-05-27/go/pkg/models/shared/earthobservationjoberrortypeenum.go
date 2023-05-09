@@ -14,18 +14,22 @@ const (
 	EarthObservationJobErrorTypeEnumServerError EarthObservationJobErrorTypeEnum = "SERVER_ERROR"
 )
 
+func (e EarthObservationJobErrorTypeEnum) ToPointer() *EarthObservationJobErrorTypeEnum {
+	return &e
+}
+
 func (e *EarthObservationJobErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLIENT_ERROR":
 		fallthrough
 	case "SERVER_ERROR":
-		*e = EarthObservationJobErrorTypeEnum(s)
+		*e = EarthObservationJobErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EarthObservationJobErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EarthObservationJobErrorTypeEnum: %v", v)
 	}
 }

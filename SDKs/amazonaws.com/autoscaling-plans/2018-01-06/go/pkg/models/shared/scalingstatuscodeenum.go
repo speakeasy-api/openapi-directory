@@ -15,20 +15,24 @@ const (
 	ScalingStatusCodeEnumActive          ScalingStatusCodeEnum = "Active"
 )
 
+func (e ScalingStatusCodeEnum) ToPointer() *ScalingStatusCodeEnum {
+	return &e
+}
+
 func (e *ScalingStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Inactive":
 		fallthrough
 	case "PartiallyActive":
 		fallthrough
 	case "Active":
-		*e = ScalingStatusCodeEnum(s)
+		*e = ScalingStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScalingStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScalingStatusCodeEnum: %v", v)
 	}
 }

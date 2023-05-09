@@ -8,26 +8,30 @@ import (
 )
 
 // Psd2RequestCodeLengthEnum - The length of the verification code.
-type Psd2RequestCodeLengthEnum string
+type Psd2RequestCodeLengthEnum int64
 
 const (
-	Psd2RequestCodeLengthEnumFour Psd2RequestCodeLengthEnum = "4"
-	Psd2RequestCodeLengthEnumSix  Psd2RequestCodeLengthEnum = "6"
+	Psd2RequestCodeLengthEnumFour Psd2RequestCodeLengthEnum = 4
+	Psd2RequestCodeLengthEnumSix  Psd2RequestCodeLengthEnum = 6
 )
 
+func (e Psd2RequestCodeLengthEnum) ToPointer() *Psd2RequestCodeLengthEnum {
+	return &e
+}
+
 func (e *Psd2RequestCodeLengthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4":
+	switch v {
+	case 4:
 		fallthrough
-	case "6":
-		*e = Psd2RequestCodeLengthEnum(s)
+	case 6:
+		*e = Psd2RequestCodeLengthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Psd2RequestCodeLengthEnum: %s", s)
+		return fmt.Errorf("invalid value for Psd2RequestCodeLengthEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	Psd2RequestLgEnumSvSe Psd2RequestLgEnum = "sv-se"
 )
 
+func (e Psd2RequestLgEnum) ToPointer() *Psd2RequestLgEnum {
+	return &e
+}
+
 func (e *Psd2RequestLgEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "en-gb":
 		fallthrough
 	case "bg-bg":
@@ -106,49 +114,53 @@ func (e *Psd2RequestLgEnum) UnmarshalJSON(data []byte) error {
 	case "sl-si":
 		fallthrough
 	case "sv-se":
-		*e = Psd2RequestLgEnum(s)
+		*e = Psd2RequestLgEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Psd2RequestLgEnum: %s", s)
+		return fmt.Errorf("invalid value for Psd2RequestLgEnum: %v", v)
 	}
 }
 
 // Psd2RequestWorkflowIDEnum - Selects the predefined sequence of SMS and TTS (Text To Speech) actions to use in order to convey the PIN to your user. For example, an id of 1 identifies the workflow SMS - TTS - TTS. For a list of all workflows and their associated ids, please visit the [developer portal](https://developer.nexmo.com/verify/guides/workflows-and-events).
-type Psd2RequestWorkflowIDEnum string
+type Psd2RequestWorkflowIDEnum int64
 
 const (
-	Psd2RequestWorkflowIDEnumOne   Psd2RequestWorkflowIDEnum = "1"
-	Psd2RequestWorkflowIDEnumTwo   Psd2RequestWorkflowIDEnum = "2"
-	Psd2RequestWorkflowIDEnumThree Psd2RequestWorkflowIDEnum = "3"
-	Psd2RequestWorkflowIDEnumFour  Psd2RequestWorkflowIDEnum = "4"
-	Psd2RequestWorkflowIDEnumFive  Psd2RequestWorkflowIDEnum = "5"
-	Psd2RequestWorkflowIDEnumSix   Psd2RequestWorkflowIDEnum = "6"
-	Psd2RequestWorkflowIDEnumSeven Psd2RequestWorkflowIDEnum = "7"
+	Psd2RequestWorkflowIDEnumOne   Psd2RequestWorkflowIDEnum = 1
+	Psd2RequestWorkflowIDEnumTwo   Psd2RequestWorkflowIDEnum = 2
+	Psd2RequestWorkflowIDEnumThree Psd2RequestWorkflowIDEnum = 3
+	Psd2RequestWorkflowIDEnumFour  Psd2RequestWorkflowIDEnum = 4
+	Psd2RequestWorkflowIDEnumFive  Psd2RequestWorkflowIDEnum = 5
+	Psd2RequestWorkflowIDEnumSix   Psd2RequestWorkflowIDEnum = 6
+	Psd2RequestWorkflowIDEnumSeven Psd2RequestWorkflowIDEnum = 7
 )
 
+func (e Psd2RequestWorkflowIDEnum) ToPointer() *Psd2RequestWorkflowIDEnum {
+	return &e
+}
+
 func (e *Psd2RequestWorkflowIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "7":
-		*e = Psd2RequestWorkflowIDEnum(s)
+	case 7:
+		*e = Psd2RequestWorkflowIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Psd2RequestWorkflowIDEnum: %s", s)
+		return fmt.Errorf("invalid value for Psd2RequestWorkflowIDEnum: %v", v)
 	}
 }
 

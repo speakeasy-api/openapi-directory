@@ -13,16 +13,20 @@ const (
 	CoverageMapComparisonEnumEquals CoverageMapComparisonEnum = "EQUALS"
 )
 
+func (e CoverageMapComparisonEnum) ToPointer() *CoverageMapComparisonEnum {
+	return &e
+}
+
 func (e *CoverageMapComparisonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUALS":
-		*e = CoverageMapComparisonEnum(s)
+		*e = CoverageMapComparisonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CoverageMapComparisonEnum: %s", s)
+		return fmt.Errorf("invalid value for CoverageMapComparisonEnum: %v", v)
 	}
 }

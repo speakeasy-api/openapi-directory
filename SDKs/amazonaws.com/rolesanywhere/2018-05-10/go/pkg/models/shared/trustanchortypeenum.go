@@ -15,20 +15,24 @@ const (
 	TrustAnchorTypeEnumSelfSignedRepository TrustAnchorTypeEnum = "SELF_SIGNED_REPOSITORY"
 )
 
+func (e TrustAnchorTypeEnum) ToPointer() *TrustAnchorTypeEnum {
+	return &e
+}
+
 func (e *TrustAnchorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_ACM_PCA":
 		fallthrough
 	case "CERTIFICATE_BUNDLE":
 		fallthrough
 	case "SELF_SIGNED_REPOSITORY":
-		*e = TrustAnchorTypeEnum(s)
+		*e = TrustAnchorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrustAnchorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrustAnchorTypeEnum: %v", v)
 	}
 }

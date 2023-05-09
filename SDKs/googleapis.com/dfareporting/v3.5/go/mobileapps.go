@@ -34,7 +34,10 @@ func newMobileApps(defaultClient, securityClient HTTPClient, serverURL, language
 // DfareportingMobileAppsGet - Gets one mobile app by ID.
 func (s *mobileApps) DfareportingMobileAppsGet(ctx context.Context, request operations.DfareportingMobileAppsGetRequest, security operations.DfareportingMobileAppsGetSecurity) (*operations.DfareportingMobileAppsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileApps/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileApps/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *mobileApps) DfareportingMobileAppsGet(ctx context.Context, request oper
 // DfareportingMobileAppsList - Retrieves list of available mobile apps.
 func (s *mobileApps) DfareportingMobileAppsList(ctx context.Context, request operations.DfareportingMobileAppsListRequest, security operations.DfareportingMobileAppsListSecurity) (*operations.DfareportingMobileAppsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileApps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileApps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

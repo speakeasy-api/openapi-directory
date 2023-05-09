@@ -19,12 +19,16 @@ const (
 	GroundhogsIsGroundhogEnumFalse GroundhogsIsGroundhogEnum = "false"
 )
 
+func (e GroundhogsIsGroundhogEnum) ToPointer() *GroundhogsIsGroundhogEnum {
+	return &e
+}
+
 func (e *GroundhogsIsGroundhogEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "0":
@@ -32,10 +36,10 @@ func (e *GroundhogsIsGroundhogEnum) UnmarshalJSON(data []byte) error {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GroundhogsIsGroundhogEnum(s)
+		*e = GroundhogsIsGroundhogEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroundhogsIsGroundhogEnum: %s", s)
+		return fmt.Errorf("invalid value for GroundhogsIsGroundhogEnum: %v", v)
 	}
 }
 

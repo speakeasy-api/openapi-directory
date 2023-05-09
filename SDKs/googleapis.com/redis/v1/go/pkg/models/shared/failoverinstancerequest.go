@@ -16,21 +16,25 @@ const (
 	FailoverInstanceRequestDataProtectionModeEnumForceDataLoss                 FailoverInstanceRequestDataProtectionModeEnum = "FORCE_DATA_LOSS"
 )
 
+func (e FailoverInstanceRequestDataProtectionModeEnum) ToPointer() *FailoverInstanceRequestDataProtectionModeEnum {
+	return &e
+}
+
 func (e *FailoverInstanceRequestDataProtectionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_PROTECTION_MODE_UNSPECIFIED":
 		fallthrough
 	case "LIMITED_DATA_LOSS":
 		fallthrough
 	case "FORCE_DATA_LOSS":
-		*e = FailoverInstanceRequestDataProtectionModeEnum(s)
+		*e = FailoverInstanceRequestDataProtectionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailoverInstanceRequestDataProtectionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for FailoverInstanceRequestDataProtectionModeEnum: %v", v)
 	}
 }
 

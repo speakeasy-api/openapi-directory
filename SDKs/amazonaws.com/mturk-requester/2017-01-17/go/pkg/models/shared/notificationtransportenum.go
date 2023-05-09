@@ -15,20 +15,24 @@ const (
 	NotificationTransportEnumSns   NotificationTransportEnum = "SNS"
 )
 
+func (e NotificationTransportEnum) ToPointer() *NotificationTransportEnum {
+	return &e
+}
+
 func (e *NotificationTransportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Email":
 		fallthrough
 	case "SQS":
 		fallthrough
 	case "SNS":
-		*e = NotificationTransportEnum(s)
+		*e = NotificationTransportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationTransportEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationTransportEnum: %v", v)
 	}
 }

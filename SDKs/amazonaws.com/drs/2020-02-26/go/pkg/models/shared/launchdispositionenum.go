@@ -14,18 +14,22 @@ const (
 	LaunchDispositionEnumStarted LaunchDispositionEnum = "STARTED"
 )
 
+func (e LaunchDispositionEnum) ToPointer() *LaunchDispositionEnum {
+	return &e
+}
+
 func (e *LaunchDispositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STOPPED":
 		fallthrough
 	case "STARTED":
-		*e = LaunchDispositionEnum(s)
+		*e = LaunchDispositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LaunchDispositionEnum: %s", s)
+		return fmt.Errorf("invalid value for LaunchDispositionEnum: %v", v)
 	}
 }

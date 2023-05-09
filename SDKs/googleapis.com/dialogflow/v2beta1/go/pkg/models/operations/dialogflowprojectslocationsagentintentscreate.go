@@ -32,19 +32,23 @@ const (
 	DialogflowProjectsLocationsAgentIntentsCreateIntentViewEnumIntentViewFull        DialogflowProjectsLocationsAgentIntentsCreateIntentViewEnum = "INTENT_VIEW_FULL"
 )
 
+func (e DialogflowProjectsLocationsAgentIntentsCreateIntentViewEnum) ToPointer() *DialogflowProjectsLocationsAgentIntentsCreateIntentViewEnum {
+	return &e
+}
+
 func (e *DialogflowProjectsLocationsAgentIntentsCreateIntentViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTENT_VIEW_UNSPECIFIED":
 		fallthrough
 	case "INTENT_VIEW_FULL":
-		*e = DialogflowProjectsLocationsAgentIntentsCreateIntentViewEnum(s)
+		*e = DialogflowProjectsLocationsAgentIntentsCreateIntentViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DialogflowProjectsLocationsAgentIntentsCreateIntentViewEnum: %s", s)
+		return fmt.Errorf("invalid value for DialogflowProjectsLocationsAgentIntentsCreateIntentViewEnum: %v", v)
 	}
 }
 

@@ -13,36 +13,34 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/testing/v1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TestingApplicationDetailServiceGetApkDetailsRequest{
-        DollarXgafv: "2",
-        FileReference: &shared.FileReference{
-            GcsPath: "provident",
-        },
-        AccessToken: "distinctio",
-        Alt: "proto",
-        Callback: "unde",
-        Fields: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.ApplicationDetailService.TestingApplicationDetailServiceGetApkDetails(ctx, req, operations.TestingApplicationDetailServiceGetApkDetailsSecurity{
+    res, err := s.ApplicationDetailService.TestingApplicationDetailServiceGetApkDetails(ctx, operations.TestingApplicationDetailServiceGetApkDetailsRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        FileReference: &shared.FileReference{
+            GcsPath: sdk.String("provident"),
+        },
+        AccessToken: sdk.String("distinctio"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("unde"),
+        Fields: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("vel"),
+        UploadType: sdk.String("error"),
+        UploadProtocol: sdk.String("deserunt"),
+    }, operations.TestingApplicationDetailServiceGetApkDetailsSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -61,19 +59,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### ApplicationDetailService
+### [ApplicationDetailService](docs/applicationdetailservice/README.md)
 
-* `TestingApplicationDetailServiceGetApkDetails` - Gets the details of an Android application APK.
+* [TestingApplicationDetailServiceGetApkDetails](docs/applicationdetailservice/README.md#testingapplicationdetailservicegetapkdetails) - Gets the details of an Android application APK.
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `TestingProjectsTestMatricesCancel` - Cancels unfinished test executions in a test matrix. This call returns immediately and cancellation proceeds asynchronously. If the matrix is already final, this operation will have no effect. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
-* `TestingProjectsTestMatricesCreate` - Creates and runs a matrix of tests according to the given specifications. Unsupported environments will be returned in the state UNSUPPORTED. A test matrix is limited to use at most 2000 devices in parallel. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed or if the matrix tries to use too many simultaneous devices.
-* `TestingProjectsTestMatricesGet` - Checks the status of a test matrix. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
+* [TestingProjectsTestMatricesCancel](docs/projects/README.md#testingprojectstestmatricescancel) - Cancels unfinished test executions in a test matrix. This call returns immediately and cancellation proceeds asynchronously. If the matrix is already final, this operation will have no effect. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
+* [TestingProjectsTestMatricesCreate](docs/projects/README.md#testingprojectstestmatricescreate) - Creates and runs a matrix of tests according to the given specifications. Unsupported environments will be returned in the state UNSUPPORTED. A test matrix is limited to use at most 2000 devices in parallel. The returned matrix will not yet contain the executions that will be created for this matrix. That happens later on and will require a call to GetTestMatrix. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed or if the matrix tries to use too many simultaneous devices.
+* [TestingProjectsTestMatricesGet](docs/projects/README.md#testingprojectstestmatricesget) - Checks the status of a test matrix and the executions once they are created. The test matrix will contain the list of test executions to run if and only if the resultStorage.toolResultsExecution fields have been populated. Note: Flaky test executions may still be added to the matrix at a later stage. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Test Matrix does not exist
 
-### TestEnvironmentCatalog
+### [TestEnvironmentCatalog](docs/testenvironmentcatalog/README.md)
 
-* `TestingTestEnvironmentCatalogGet` - Gets the catalog of supported test environments. May return any of the following canonical error codes: - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the environment type does not exist - INTERNAL - if an internal error occurred
+* [TestingTestEnvironmentCatalogGet](docs/testenvironmentcatalog/README.md#testingtestenvironmentcatalogget) - Gets the catalog of supported test environments. May return any of the following canonical error codes: - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the environment type does not exist - INTERNAL - if an internal error occurred
 <!-- End SDK Available Operations -->
 
 ### Maturity

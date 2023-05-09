@@ -14,18 +14,22 @@ const (
 	MfaTypesElementEnumTotp MfaTypesElementEnum = "TOTP"
 )
 
+func (e MfaTypesElementEnum) ToPointer() *MfaTypesElementEnum {
+	return &e
+}
+
 func (e *MfaTypesElementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SMS":
 		fallthrough
 	case "TOTP":
-		*e = MfaTypesElementEnum(s)
+		*e = MfaTypesElementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MfaTypesElementEnum: %s", s)
+		return fmt.Errorf("invalid value for MfaTypesElementEnum: %v", v)
 	}
 }

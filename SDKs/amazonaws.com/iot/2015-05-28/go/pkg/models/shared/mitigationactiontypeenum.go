@@ -18,12 +18,16 @@ const (
 	MitigationActionTypeEnumPublishFindingToSns         MitigationActionTypeEnum = "PUBLISH_FINDING_TO_SNS"
 )
 
+func (e MitigationActionTypeEnum) ToPointer() *MitigationActionTypeEnum {
+	return &e
+}
+
 func (e *MitigationActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPDATE_DEVICE_CERTIFICATE":
 		fallthrough
 	case "UPDATE_CA_CERTIFICATE":
@@ -35,9 +39,9 @@ func (e *MitigationActionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ENABLE_IOT_LOGGING":
 		fallthrough
 	case "PUBLISH_FINDING_TO_SNS":
-		*e = MitigationActionTypeEnum(s)
+		*e = MitigationActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MitigationActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MitigationActionTypeEnum: %v", v)
 	}
 }

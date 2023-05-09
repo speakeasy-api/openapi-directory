@@ -16,17 +16,21 @@ const (
 	AddTagsXAmzTargetEnumDataPipelineAddTags AddTagsXAmzTargetEnum = "DataPipeline.AddTags"
 )
 
+func (e AddTagsXAmzTargetEnum) ToPointer() *AddTagsXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddTagsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DataPipeline.AddTags":
-		*e = AddTagsXAmzTargetEnum(s)
+		*e = AddTagsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddTagsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddTagsXAmzTargetEnum: %v", v)
 	}
 }
 

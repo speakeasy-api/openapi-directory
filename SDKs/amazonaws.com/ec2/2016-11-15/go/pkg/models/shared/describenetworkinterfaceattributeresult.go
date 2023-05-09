@@ -29,12 +29,16 @@ const (
 	DescribeNetworkInterfaceAttributeResultAttachmentStatusEnumDetached  DescribeNetworkInterfaceAttributeResultAttachmentStatusEnum = "detached"
 )
 
+func (e DescribeNetworkInterfaceAttributeResultAttachmentStatusEnum) ToPointer() *DescribeNetworkInterfaceAttributeResultAttachmentStatusEnum {
+	return &e
+}
+
 func (e *DescribeNetworkInterfaceAttributeResultAttachmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -42,10 +46,10 @@ func (e *DescribeNetworkInterfaceAttributeResultAttachmentStatusEnum) UnmarshalJ
 	case "detaching":
 		fallthrough
 	case "detached":
-		*e = DescribeNetworkInterfaceAttributeResultAttachmentStatusEnum(s)
+		*e = DescribeNetworkInterfaceAttributeResultAttachmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNetworkInterfaceAttributeResultAttachmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNetworkInterfaceAttributeResultAttachmentStatusEnum: %v", v)
 	}
 }
 

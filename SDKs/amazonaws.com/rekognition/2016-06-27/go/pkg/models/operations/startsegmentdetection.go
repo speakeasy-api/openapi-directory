@@ -16,17 +16,21 @@ const (
 	StartSegmentDetectionXAmzTargetEnumRekognitionServiceStartSegmentDetection StartSegmentDetectionXAmzTargetEnum = "RekognitionService.StartSegmentDetection"
 )
 
+func (e StartSegmentDetectionXAmzTargetEnum) ToPointer() *StartSegmentDetectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartSegmentDetectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.StartSegmentDetection":
-		*e = StartSegmentDetectionXAmzTargetEnum(s)
+		*e = StartSegmentDetectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartSegmentDetectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartSegmentDetectionXAmzTargetEnum: %v", v)
 	}
 }
 

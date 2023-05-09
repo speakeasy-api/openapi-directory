@@ -35,7 +35,10 @@ func newReferenceData(defaultClient, securityClient HTTPClient, serverURL, langu
 // A description of all available seat details by aircraft type. You can retrieve the full set or details for a particular aircraft type.
 func (s *referenceData) SeatDetails(ctx context.Context, request operations.SeatDetailsRequest, security operations.SeatDetailsSecurity) (*operations.SeatDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/seatdetails/{aircraftCode}/{cabinCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/references/seatdetails/{aircraftCode}/{cabinCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

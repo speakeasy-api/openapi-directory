@@ -14,18 +14,22 @@ const (
 	AssociationStatusEnumDisabled AssociationStatusEnum = "DISABLED"
 )
 
+func (e AssociationStatusEnum) ToPointer() *AssociationStatusEnum {
+	return &e
+}
+
 func (e *AssociationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = AssociationStatusEnum(s)
+		*e = AssociationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociationStatusEnum: %v", v)
 	}
 }

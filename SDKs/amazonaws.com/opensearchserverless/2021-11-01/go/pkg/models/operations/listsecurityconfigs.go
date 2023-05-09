@@ -16,17 +16,21 @@ const (
 	ListSecurityConfigsXAmzTargetEnumOpenSearchServerlessListSecurityConfigs ListSecurityConfigsXAmzTargetEnum = "OpenSearchServerless.ListSecurityConfigs"
 )
 
+func (e ListSecurityConfigsXAmzTargetEnum) ToPointer() *ListSecurityConfigsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListSecurityConfigsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpenSearchServerless.ListSecurityConfigs":
-		*e = ListSecurityConfigsXAmzTargetEnum(s)
+		*e = ListSecurityConfigsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSecurityConfigsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSecurityConfigsXAmzTargetEnum: %v", v)
 	}
 }
 

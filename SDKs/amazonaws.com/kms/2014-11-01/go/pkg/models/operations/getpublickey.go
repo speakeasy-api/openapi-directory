@@ -16,17 +16,21 @@ const (
 	GetPublicKeyXAmzTargetEnumTrentServiceGetPublicKey GetPublicKeyXAmzTargetEnum = "TrentService.GetPublicKey"
 )
 
+func (e GetPublicKeyXAmzTargetEnum) ToPointer() *GetPublicKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetPublicKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.GetPublicKey":
-		*e = GetPublicKeyXAmzTargetEnum(s)
+		*e = GetPublicKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPublicKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPublicKeyXAmzTargetEnum: %v", v)
 	}
 }
 

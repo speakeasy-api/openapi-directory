@@ -15,17 +15,21 @@ const (
 	UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnumDeny UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnum = "deny"
 )
 
+func (e UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnum) ToPointer() *UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnum {
+	return &e
+}
+
 func (e *UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deny":
-		*e = UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnum(s)
+		*e = UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkL7FirewallRulesRequestBodyRulesPolicyEnum: %v", v)
 	}
 }
 
@@ -40,12 +44,16 @@ const (
 	UpdateNetworkL7FirewallRulesRequestBodyRulesTypeEnumPort                UpdateNetworkL7FirewallRulesRequestBodyRulesTypeEnum = "port"
 )
 
+func (e UpdateNetworkL7FirewallRulesRequestBodyRulesTypeEnum) ToPointer() *UpdateNetworkL7FirewallRulesRequestBodyRulesTypeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkL7FirewallRulesRequestBodyRulesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "application":
 		fallthrough
 	case "applicationCategory":
@@ -55,10 +63,10 @@ func (e *UpdateNetworkL7FirewallRulesRequestBodyRulesTypeEnum) UnmarshalJSON(dat
 	case "ipRange":
 		fallthrough
 	case "port":
-		*e = UpdateNetworkL7FirewallRulesRequestBodyRulesTypeEnum(s)
+		*e = UpdateNetworkL7FirewallRulesRequestBodyRulesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkL7FirewallRulesRequestBodyRulesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkL7FirewallRulesRequestBodyRulesTypeEnum: %v", v)
 	}
 }
 

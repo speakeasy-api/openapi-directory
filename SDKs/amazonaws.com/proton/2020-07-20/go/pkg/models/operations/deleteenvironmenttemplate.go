@@ -16,17 +16,21 @@ const (
 	DeleteEnvironmentTemplateXAmzTargetEnumAwsProton20200720DeleteEnvironmentTemplate DeleteEnvironmentTemplateXAmzTargetEnum = "AwsProton20200720.DeleteEnvironmentTemplate"
 )
 
+func (e DeleteEnvironmentTemplateXAmzTargetEnum) ToPointer() *DeleteEnvironmentTemplateXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteEnvironmentTemplateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.DeleteEnvironmentTemplate":
-		*e = DeleteEnvironmentTemplateXAmzTargetEnum(s)
+		*e = DeleteEnvironmentTemplateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteEnvironmentTemplateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteEnvironmentTemplateXAmzTargetEnum: %v", v)
 	}
 }
 

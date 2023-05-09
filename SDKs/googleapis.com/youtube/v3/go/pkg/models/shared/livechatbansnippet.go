@@ -16,21 +16,25 @@ const (
 	LiveChatBanSnippetTypeEnumTemporary                  LiveChatBanSnippetTypeEnum = "temporary"
 )
 
+func (e LiveChatBanSnippetTypeEnum) ToPointer() *LiveChatBanSnippetTypeEnum {
+	return &e
+}
+
 func (e *LiveChatBanSnippetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "liveChatBanTypeUnspecified":
 		fallthrough
 	case "permanent":
 		fallthrough
 	case "temporary":
-		*e = LiveChatBanSnippetTypeEnum(s)
+		*e = LiveChatBanSnippetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveChatBanSnippetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveChatBanSnippetTypeEnum: %v", v)
 	}
 }
 

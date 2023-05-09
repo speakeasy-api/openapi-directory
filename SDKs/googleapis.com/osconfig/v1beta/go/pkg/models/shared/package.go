@@ -17,12 +17,16 @@ const (
 	PackageDesiredStateEnumRemoved                 PackageDesiredStateEnum = "REMOVED"
 )
 
+func (e PackageDesiredStateEnum) ToPointer() *PackageDesiredStateEnum {
+	return &e
+}
+
 func (e *PackageDesiredStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DESIRED_STATE_UNSPECIFIED":
 		fallthrough
 	case "INSTALLED":
@@ -30,10 +34,10 @@ func (e *PackageDesiredStateEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATED":
 		fallthrough
 	case "REMOVED":
-		*e = PackageDesiredStateEnum(s)
+		*e = PackageDesiredStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PackageDesiredStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PackageDesiredStateEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	PackageManagerEnumGoo                PackageManagerEnum = "GOO"
 )
 
+func (e PackageManagerEnum) ToPointer() *PackageManagerEnum {
+	return &e
+}
+
 func (e *PackageManagerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANAGER_UNSPECIFIED":
 		fallthrough
 	case "ANY":
@@ -66,10 +74,10 @@ func (e *PackageManagerEnum) UnmarshalJSON(data []byte) error {
 	case "ZYPPER":
 		fallthrough
 	case "GOO":
-		*e = PackageManagerEnum(s)
+		*e = PackageManagerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PackageManagerEnum: %s", s)
+		return fmt.Errorf("invalid value for PackageManagerEnum: %v", v)
 	}
 }
 

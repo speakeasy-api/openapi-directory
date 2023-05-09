@@ -16,17 +16,21 @@ const (
 	GenerateRandomXAmzTargetEnumTrentServiceGenerateRandom GenerateRandomXAmzTargetEnum = "TrentService.GenerateRandom"
 )
 
+func (e GenerateRandomXAmzTargetEnum) ToPointer() *GenerateRandomXAmzTargetEnum {
+	return &e
+}
+
 func (e *GenerateRandomXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.GenerateRandom":
-		*e = GenerateRandomXAmzTargetEnum(s)
+		*e = GenerateRandomXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GenerateRandomXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GenerateRandomXAmzTargetEnum: %v", v)
 	}
 }
 

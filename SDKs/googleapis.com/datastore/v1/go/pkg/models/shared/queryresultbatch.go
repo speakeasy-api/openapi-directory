@@ -17,12 +17,16 @@ const (
 	QueryResultBatchEntityResultTypeEnumKeyOnly               QueryResultBatchEntityResultTypeEnum = "KEY_ONLY"
 )
 
+func (e QueryResultBatchEntityResultTypeEnum) ToPointer() *QueryResultBatchEntityResultTypeEnum {
+	return &e
+}
+
 func (e *QueryResultBatchEntityResultTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESULT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FULL":
@@ -30,10 +34,10 @@ func (e *QueryResultBatchEntityResultTypeEnum) UnmarshalJSON(data []byte) error 
 	case "PROJECTION":
 		fallthrough
 	case "KEY_ONLY":
-		*e = QueryResultBatchEntityResultTypeEnum(s)
+		*e = QueryResultBatchEntityResultTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryResultBatchEntityResultTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryResultBatchEntityResultTypeEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	QueryResultBatchMoreResultsEnumNoMoreResults              QueryResultBatchMoreResultsEnum = "NO_MORE_RESULTS"
 )
 
+func (e QueryResultBatchMoreResultsEnum) ToPointer() *QueryResultBatchMoreResultsEnum {
+	return &e
+}
+
 func (e *QueryResultBatchMoreResultsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MORE_RESULTS_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NOT_FINISHED":
@@ -63,10 +71,10 @@ func (e *QueryResultBatchMoreResultsEnum) UnmarshalJSON(data []byte) error {
 	case "MORE_RESULTS_AFTER_CURSOR":
 		fallthrough
 	case "NO_MORE_RESULTS":
-		*e = QueryResultBatchMoreResultsEnum(s)
+		*e = QueryResultBatchMoreResultsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryResultBatchMoreResultsEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryResultBatchMoreResultsEnum: %v", v)
 	}
 }
 

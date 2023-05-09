@@ -21,12 +21,16 @@ const (
 	GoogleCloudRunV2JobLaunchStageEnumDeprecated             GoogleCloudRunV2JobLaunchStageEnum = "DEPRECATED"
 )
 
+func (e GoogleCloudRunV2JobLaunchStageEnum) ToPointer() *GoogleCloudRunV2JobLaunchStageEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2JobLaunchStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_STAGE_UNSPECIFIED":
 		fallthrough
 	case "UNIMPLEMENTED":
@@ -42,16 +46,16 @@ func (e *GoogleCloudRunV2JobLaunchStageEnum) UnmarshalJSON(data []byte) error {
 	case "GA":
 		fallthrough
 	case "DEPRECATED":
-		*e = GoogleCloudRunV2JobLaunchStageEnum(s)
+		*e = GoogleCloudRunV2JobLaunchStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2JobLaunchStageEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2JobLaunchStageEnum: %v", v)
 	}
 }
 
 // GoogleCloudRunV2Job - Job represents the configuration of a single job, which references a container image that is run to completion.
 type GoogleCloudRunV2Job struct {
-	// KRM-style annotations for the resource. Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 Job. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
+	// Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected on new resources. All system annotations in v1 now have a corresponding field in v2 Job. This field follows Kubernetes annotations' namespacing, limits, and rules.
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// Settings for Binary Authorization feature.
 	BinaryAuthorization *GoogleCloudRunV2BinaryAuthorization `json:"binaryAuthorization,omitempty"`
@@ -75,7 +79,7 @@ type GoogleCloudRunV2Job struct {
 	ExpireTime *string `json:"expireTime,omitempty"`
 	// Output only. A number that monotonically increases every time the user modifies the desired state.
 	Generation *string `json:"generation,omitempty"`
-	// KRM-style labels for the resource. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 Job.
+	// Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 Job.
 	Labels map[string]string `json:"labels,omitempty"`
 	// Output only. Email address of the last authenticated modifier.
 	LastModifier *string `json:"lastModifier,omitempty"`
@@ -103,7 +107,7 @@ type GoogleCloudRunV2Job struct {
 
 // GoogleCloudRunV2JobInput - Job represents the configuration of a single job, which references a container image that is run to completion.
 type GoogleCloudRunV2JobInput struct {
-	// KRM-style annotations for the resource. Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 Job. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
+	// Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected on new resources. All system annotations in v1 now have a corresponding field in v2 Job. This field follows Kubernetes annotations' namespacing, limits, and rules.
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// Settings for Binary Authorization feature.
 	BinaryAuthorization *GoogleCloudRunV2BinaryAuthorization `json:"binaryAuthorization,omitempty"`
@@ -111,7 +115,7 @@ type GoogleCloudRunV2JobInput struct {
 	Client *string `json:"client,omitempty"`
 	// Arbitrary version identifier for the API client.
 	ClientVersion *string `json:"clientVersion,omitempty"`
-	// KRM-style labels for the resource. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 Job.
+	// Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 Job.
 	Labels map[string]string `json:"labels,omitempty"`
 	// Reference to an Execution. Use /Executions.GetExecution with the given name to get full execution including the latest status.
 	LatestCreatedExecution *GoogleCloudRunV2ExecutionReference `json:"latestCreatedExecution,omitempty"`

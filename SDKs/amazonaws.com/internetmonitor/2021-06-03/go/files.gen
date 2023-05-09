@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -23,6 +24,8 @@ pkg/models/operations/untagresource.go
 pkg/models/operations/updatemonitor.go
 pkg/models/shared/createmonitoroutput.go
 pkg/models/shared/monitorconfigstateenum.go
+pkg/models/shared/s3config.go
+pkg/models/shared/logdeliverystatusenum.go
 pkg/models/shared/gethealtheventoutput.go
 pkg/models/shared/healtheventstatusenum.go
 pkg/models/shared/impactedlocation.go
@@ -36,6 +39,7 @@ pkg/models/shared/triangulationeventtypeenum.go
 pkg/models/shared/healtheventimpacttypeenum.go
 pkg/models/shared/getmonitoroutput.go
 pkg/models/shared/monitorprocessingstatuscodeenum.go
+pkg/models/shared/internetmeasurementslogdelivery.go
 pkg/models/shared/listhealtheventsoutput.go
 pkg/models/shared/healthevent.go
 pkg/models/shared/listmonitorsoutput.go
@@ -43,4 +47,5 @@ pkg/models/shared/monitor.go
 pkg/models/shared/listtagsforresourceoutput.go
 pkg/models/shared/updatemonitoroutput.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

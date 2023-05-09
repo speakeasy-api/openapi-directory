@@ -15,17 +15,21 @@ const (
 	POSTDecreaseReplicaCountActionEnumDecreaseReplicaCount POSTDecreaseReplicaCountActionEnum = "DecreaseReplicaCount"
 )
 
+func (e POSTDecreaseReplicaCountActionEnum) ToPointer() *POSTDecreaseReplicaCountActionEnum {
+	return &e
+}
+
 func (e *POSTDecreaseReplicaCountActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DecreaseReplicaCount":
-		*e = POSTDecreaseReplicaCountActionEnum(s)
+		*e = POSTDecreaseReplicaCountActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDecreaseReplicaCountActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDecreaseReplicaCountActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDecreaseReplicaCountVersionEnumTwoThousandAndFifteen0202 POSTDecreaseReplicaCountVersionEnum = "2015-02-02"
 )
 
+func (e POSTDecreaseReplicaCountVersionEnum) ToPointer() *POSTDecreaseReplicaCountVersionEnum {
+	return &e
+}
+
 func (e *POSTDecreaseReplicaCountVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTDecreaseReplicaCountVersionEnum(s)
+		*e = POSTDecreaseReplicaCountVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDecreaseReplicaCountVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDecreaseReplicaCountVersionEnum: %v", v)
 	}
 }
 

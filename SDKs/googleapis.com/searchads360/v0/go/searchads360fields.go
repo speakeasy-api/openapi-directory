@@ -35,7 +35,10 @@ func newSearchAds360Fields(defaultClient, securityClient HTTPClient, serverURL, 
 // Searchads360SearchAds360FieldsGet - Returns just the requested field. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QuotaError]() [RequestError]()
 func (s *searchAds360Fields) Searchads360SearchAds360FieldsGet(ctx context.Context, request operations.Searchads360SearchAds360FieldsGetRequest, security operations.Searchads360SearchAds360FieldsGetSecurity) (*operations.Searchads360SearchAds360FieldsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0/{resourceName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0/{resourceName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

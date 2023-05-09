@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,12 +17,13 @@ func main() {
         }),
     )
 
-    req := operations.AddLFTagsToResourceRequest{
+    ctx := context.Background()
+    res, err := s.AddLFTagsToResource(ctx, operations.AddLFTagsToResourceRequest{
         RequestBody: operations.AddLFTagsToResourceRequestBody{
-            CatalogID: "corrupti",
+            CatalogID: sdk.String("corrupti"),
             LFTags: []shared.LFTagPair{
                 shared.LFTagPair{
-                    CatalogID: "distinctio",
+                    CatalogID: sdk.String("distinctio"),
                     TagKey: "quibusdam",
                     TagValues: []string{
                         "nulla",
@@ -31,7 +32,7 @@ func main() {
                     },
                 },
                 shared.LFTagPair{
-                    CatalogID: "vel",
+                    CatalogID: sdk.String("vel"),
                     TagKey: "error",
                     TagValues: []string{
                         "suscipit",
@@ -40,7 +41,7 @@ func main() {
                     },
                 },
                 shared.LFTagPair{
-                    CatalogID: "debitis",
+                    CatalogID: sdk.String("debitis"),
                     TagKey: "ipsa",
                     TagValues: []string{
                         "tempora",
@@ -58,97 +59,90 @@ func main() {
                     "ab": "quis",
                 },
                 DataCellsFilter: &shared.DataCellsFilterResource{
-                    DatabaseName: "veritatis",
-                    Name: "deserunt",
-                    TableCatalogID: "perferendis",
-                    TableName: "ipsam",
+                    DatabaseName: sdk.String("veritatis"),
+                    Name: sdk.String("Christopher Hills"),
+                    TableCatalogID: sdk.String("quo"),
+                    TableName: sdk.String("odit"),
                 },
                 DataLocation: &shared.DataLocationResource{
-                    CatalogID: "repellendus",
-                    ResourceArn: "sapiente",
+                    CatalogID: sdk.String("at"),
+                    ResourceArn: "at",
                 },
                 Database: &shared.DatabaseResource{
-                    CatalogID: "quo",
-                    Name: "odit",
+                    CatalogID: sdk.String("maiores"),
+                    Name: "Bernadette Schmidt",
                 },
                 LFTag: &shared.LFTagKeyResource{
-                    CatalogID: "at",
-                    TagKey: "at",
+                    CatalogID: sdk.String("porro"),
+                    TagKey: "dolorum",
                     TagValues: []string{
-                        "molestiae",
-                        "quod",
-                        "quod",
-                        "esse",
+                        "nam",
                     },
                 },
                 LFTagPolicy: &shared.LFTagPolicyResource{
-                    CatalogID: "totam",
+                    CatalogID: sdk.String("officia"),
                     Expression: []shared.LFTag{
                         shared.LFTag{
-                            TagKey: "dolorum",
+                            TagKey: "fugit",
                             TagValues: []string{
-                                "nam",
-                            },
-                        },
-                        shared.LFTag{
-                            TagKey: "officia",
-                            TagValues: []string{
-                                "fugit",
-                                "deleniti",
                                 "hic",
+                                "optio",
+                                "totam",
                             },
                         },
                         shared.LFTag{
-                            TagKey: "optio",
+                            TagKey: "beatae",
                             TagValues: []string{
-                                "beatae",
-                                "commodi",
                                 "molestiae",
+                                "modi",
                             },
                         },
                         shared.LFTag{
-                            TagKey: "modi",
+                            TagKey: "qui",
                             TagValues: []string{
-                                "impedit",
+                                "cum",
+                                "esse",
+                                "ipsum",
+                                "excepturi",
                             },
                         },
                     },
-                    ResourceType: "TABLE",
+                    ResourceType: shared.ResourceTypeEnumDatabase,
                 },
                 Table: &shared.TableResource{
-                    CatalogID: "esse",
-                    DatabaseName: "ipsum",
-                    Name: "excepturi",
+                    CatalogID: sdk.String("perferendis"),
+                    DatabaseName: "ad",
+                    Name: sdk.String("Louis Moore"),
                     TableWildcard: map[string]interface{}{
-                        "perferendis": "ad",
+                        "hic": "saepe",
+                        "fuga": "in",
                     },
                 },
                 TableWithColumns: &shared.TableWithColumnsResource{
-                    CatalogID: "natus",
+                    CatalogID: sdk.String("corporis"),
                     ColumnNames: []string{
-                        "iste",
+                        "iure",
+                        "saepe",
+                        "quidem",
                     },
                     ColumnWildcard: &shared.ColumnWildcard{
                         ExcludedColumnNames: []string{
-                            "natus",
+                            "ipsa",
                         },
                     },
-                    DatabaseName: "laboriosam",
-                    Name: "hic",
+                    DatabaseName: "reiciendis",
+                    Name: "Shaun Osinski",
                 },
             },
         },
-        XAmzAlgorithm: "saepe",
-        XAmzContentSha256: "fuga",
-        XAmzCredential: "in",
-        XAmzDate: "corporis",
-        XAmzSecurityToken: "iste",
-        XAmzSignature: "iure",
-        XAmzSignedHeaders: "saepe",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddLFTagsToResource(ctx, req)
+        XAmzAlgorithm: sdk.String("corporis"),
+        XAmzContentSha256: sdk.String("explicabo"),
+        XAmzCredential: sdk.String("nobis"),
+        XAmzDate: sdk.String("enim"),
+        XAmzSecurityToken: sdk.String("omnis"),
+        XAmzSignature: sdk.String("nemo"),
+        XAmzSignedHeaders: sdk.String("minima"),
+    })
     if err != nil {
         log.Fatal(err)
     }

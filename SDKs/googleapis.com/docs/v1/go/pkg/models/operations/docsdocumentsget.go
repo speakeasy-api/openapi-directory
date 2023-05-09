@@ -52,12 +52,16 @@ const (
 	DocsDocumentsGetSuggestionsViewModeEnumPreviewWithoutSuggestions  DocsDocumentsGetSuggestionsViewModeEnum = "PREVIEW_WITHOUT_SUGGESTIONS"
 )
 
+func (e DocsDocumentsGetSuggestionsViewModeEnum) ToPointer() *DocsDocumentsGetSuggestionsViewModeEnum {
+	return &e
+}
+
 func (e *DocsDocumentsGetSuggestionsViewModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT_FOR_CURRENT_ACCESS":
 		fallthrough
 	case "SUGGESTIONS_INLINE":
@@ -65,10 +69,10 @@ func (e *DocsDocumentsGetSuggestionsViewModeEnum) UnmarshalJSON(data []byte) err
 	case "PREVIEW_SUGGESTIONS_ACCEPTED":
 		fallthrough
 	case "PREVIEW_WITHOUT_SUGGESTIONS":
-		*e = DocsDocumentsGetSuggestionsViewModeEnum(s)
+		*e = DocsDocumentsGetSuggestionsViewModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocsDocumentsGetSuggestionsViewModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DocsDocumentsGetSuggestionsViewModeEnum: %v", v)
 	}
 }
 

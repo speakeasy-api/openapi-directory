@@ -15,17 +15,21 @@ const (
 	GETEnableAwsNetworkPerformanceMetricSubscriptionActionEnumEnableAwsNetworkPerformanceMetricSubscription GETEnableAwsNetworkPerformanceMetricSubscriptionActionEnum = "EnableAwsNetworkPerformanceMetricSubscription"
 )
 
+func (e GETEnableAwsNetworkPerformanceMetricSubscriptionActionEnum) ToPointer() *GETEnableAwsNetworkPerformanceMetricSubscriptionActionEnum {
+	return &e
+}
+
 func (e *GETEnableAwsNetworkPerformanceMetricSubscriptionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableAwsNetworkPerformanceMetricSubscription":
-		*e = GETEnableAwsNetworkPerformanceMetricSubscriptionActionEnum(s)
+		*e = GETEnableAwsNetworkPerformanceMetricSubscriptionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableAwsNetworkPerformanceMetricSubscriptionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableAwsNetworkPerformanceMetricSubscriptionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETEnableAwsNetworkPerformanceMetricSubscriptionMetricEnumAggregateLatency GETEnableAwsNetworkPerformanceMetricSubscriptionMetricEnum = "aggregate-latency"
 )
 
+func (e GETEnableAwsNetworkPerformanceMetricSubscriptionMetricEnum) ToPointer() *GETEnableAwsNetworkPerformanceMetricSubscriptionMetricEnum {
+	return &e
+}
+
 func (e *GETEnableAwsNetworkPerformanceMetricSubscriptionMetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "aggregate-latency":
-		*e = GETEnableAwsNetworkPerformanceMetricSubscriptionMetricEnum(s)
+		*e = GETEnableAwsNetworkPerformanceMetricSubscriptionMetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableAwsNetworkPerformanceMetricSubscriptionMetricEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableAwsNetworkPerformanceMetricSubscriptionMetricEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnumP50 GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnum = "p50"
 )
 
+func (e GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnum) ToPointer() *GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnum {
+	return &e
+}
+
 func (e *GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "p50":
-		*e = GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnum(s)
+		*e = GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnum: %v", v)
 	}
 }
 
@@ -78,17 +90,21 @@ const (
 	GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnumTwoThousandAndSixteen1115 GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum = "2016-11-15"
 )
 
+func (e GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum) ToPointer() *GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum {
+	return &e
+}
+
 func (e *GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum(s)
+		*e = GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum: %v", v)
 	}
 }
 

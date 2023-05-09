@@ -23,21 +23,25 @@ const (
 	RealtimebiddingBuyersCreativesListViewEnumFull                    RealtimebiddingBuyersCreativesListViewEnum = "FULL"
 )
 
+func (e RealtimebiddingBuyersCreativesListViewEnum) ToPointer() *RealtimebiddingBuyersCreativesListViewEnum {
+	return &e
+}
+
 func (e *RealtimebiddingBuyersCreativesListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_VIEW_UNSPECIFIED":
 		fallthrough
 	case "SERVING_DECISION_ONLY":
 		fallthrough
 	case "FULL":
-		*e = RealtimebiddingBuyersCreativesListViewEnum(s)
+		*e = RealtimebiddingBuyersCreativesListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealtimebiddingBuyersCreativesListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for RealtimebiddingBuyersCreativesListViewEnum: %v", v)
 	}
 }
 

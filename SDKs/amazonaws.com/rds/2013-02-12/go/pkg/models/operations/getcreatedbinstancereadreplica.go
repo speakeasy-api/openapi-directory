@@ -15,17 +15,21 @@ const (
 	GETCreateDBInstanceReadReplicaActionEnumCreateDbInstanceReadReplica GETCreateDBInstanceReadReplicaActionEnum = "CreateDBInstanceReadReplica"
 )
 
+func (e GETCreateDBInstanceReadReplicaActionEnum) ToPointer() *GETCreateDBInstanceReadReplicaActionEnum {
+	return &e
+}
+
 func (e *GETCreateDBInstanceReadReplicaActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateDBInstanceReadReplica":
-		*e = GETCreateDBInstanceReadReplicaActionEnum(s)
+		*e = GETCreateDBInstanceReadReplicaActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateDBInstanceReadReplicaActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateDBInstanceReadReplicaActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateDBInstanceReadReplicaVersionEnumTwoThousandAndThirteen0212 GETCreateDBInstanceReadReplicaVersionEnum = "2013-02-12"
 )
 
+func (e GETCreateDBInstanceReadReplicaVersionEnum) ToPointer() *GETCreateDBInstanceReadReplicaVersionEnum {
+	return &e
+}
+
 func (e *GETCreateDBInstanceReadReplicaVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETCreateDBInstanceReadReplicaVersionEnum(s)
+		*e = GETCreateDBInstanceReadReplicaVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateDBInstanceReadReplicaVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateDBInstanceReadReplicaVersionEnum: %v", v)
 	}
 }
 

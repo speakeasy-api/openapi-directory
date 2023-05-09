@@ -21,14 +21,19 @@ const (
 	InstanceStateEnumSuspended        InstanceStateEnum = "SUSPENDED"
 	InstanceStateEnumSuspending       InstanceStateEnum = "SUSPENDING"
 	InstanceStateEnumResuming         InstanceStateEnum = "RESUMING"
+	InstanceStateEnumReverting        InstanceStateEnum = "REVERTING"
 )
 
+func (e InstanceStateEnum) ToPointer() *InstanceStateEnum {
+	return &e
+}
+
 func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -48,10 +53,12 @@ func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
 	case "SUSPENDING":
 		fallthrough
 	case "RESUMING":
-		*e = InstanceStateEnum(s)
+		fallthrough
+	case "REVERTING":
+		*e = InstanceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceStateEnum: %v", v)
 	}
 }
 
@@ -62,19 +69,23 @@ const (
 	InstanceSuspensionReasonsEnumKmsKeyIssue                 InstanceSuspensionReasonsEnum = "KMS_KEY_ISSUE"
 )
 
+func (e InstanceSuspensionReasonsEnum) ToPointer() *InstanceSuspensionReasonsEnum {
+	return &e
+}
+
 func (e *InstanceSuspensionReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUSPENSION_REASON_UNSPECIFIED":
 		fallthrough
 	case "KMS_KEY_ISSUE":
-		*e = InstanceSuspensionReasonsEnum(s)
+		*e = InstanceSuspensionReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceSuspensionReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceSuspensionReasonsEnum: %v", v)
 	}
 }
 
@@ -89,14 +100,19 @@ const (
 	InstanceTierEnumBasicSsd        InstanceTierEnum = "BASIC_SSD"
 	InstanceTierEnumHighScaleSsd    InstanceTierEnum = "HIGH_SCALE_SSD"
 	InstanceTierEnumEnterprise      InstanceTierEnum = "ENTERPRISE"
+	InstanceTierEnumZonal           InstanceTierEnum = "ZONAL"
 )
 
+func (e InstanceTierEnum) ToPointer() *InstanceTierEnum {
+	return &e
+}
+
 func (e *InstanceTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIER_UNSPECIFIED":
 		fallthrough
 	case "STANDARD":
@@ -110,10 +126,12 @@ func (e *InstanceTierEnum) UnmarshalJSON(data []byte) error {
 	case "HIGH_SCALE_SSD":
 		fallthrough
 	case "ENTERPRISE":
-		*e = InstanceTierEnum(s)
+		fallthrough
+	case "ZONAL":
+		*e = InstanceTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceTierEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceTierEnum: %v", v)
 	}
 }
 

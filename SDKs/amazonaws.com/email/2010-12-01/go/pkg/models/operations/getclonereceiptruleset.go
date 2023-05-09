@@ -15,17 +15,21 @@ const (
 	GETCloneReceiptRuleSetActionEnumCloneReceiptRuleSet GETCloneReceiptRuleSetActionEnum = "CloneReceiptRuleSet"
 )
 
+func (e GETCloneReceiptRuleSetActionEnum) ToPointer() *GETCloneReceiptRuleSetActionEnum {
+	return &e
+}
+
 func (e *GETCloneReceiptRuleSetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CloneReceiptRuleSet":
-		*e = GETCloneReceiptRuleSetActionEnum(s)
+		*e = GETCloneReceiptRuleSetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCloneReceiptRuleSetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCloneReceiptRuleSetActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCloneReceiptRuleSetVersionEnumTwoThousandAndTen1201 GETCloneReceiptRuleSetVersionEnum = "2010-12-01"
 )
 
+func (e GETCloneReceiptRuleSetVersionEnum) ToPointer() *GETCloneReceiptRuleSetVersionEnum {
+	return &e
+}
+
 func (e *GETCloneReceiptRuleSetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETCloneReceiptRuleSetVersionEnum(s)
+		*e = GETCloneReceiptRuleSetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCloneReceiptRuleSetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCloneReceiptRuleSetVersionEnum: %v", v)
 	}
 }
 

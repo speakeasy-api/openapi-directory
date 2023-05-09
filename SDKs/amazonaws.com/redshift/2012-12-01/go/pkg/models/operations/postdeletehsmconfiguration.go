@@ -15,17 +15,21 @@ const (
 	POSTDeleteHsmConfigurationActionEnumDeleteHsmConfiguration POSTDeleteHsmConfigurationActionEnum = "DeleteHsmConfiguration"
 )
 
+func (e POSTDeleteHsmConfigurationActionEnum) ToPointer() *POSTDeleteHsmConfigurationActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteHsmConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteHsmConfiguration":
-		*e = POSTDeleteHsmConfigurationActionEnum(s)
+		*e = POSTDeleteHsmConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteHsmConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteHsmConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteHsmConfigurationVersionEnumTwoThousandAndTwelve1201 POSTDeleteHsmConfigurationVersionEnum = "2012-12-01"
 )
 
+func (e POSTDeleteHsmConfigurationVersionEnum) ToPointer() *POSTDeleteHsmConfigurationVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteHsmConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTDeleteHsmConfigurationVersionEnum(s)
+		*e = POSTDeleteHsmConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteHsmConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteHsmConfigurationVersionEnum: %v", v)
 	}
 }
 

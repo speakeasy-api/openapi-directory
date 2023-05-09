@@ -15,20 +15,24 @@ const (
 	ServiceTypeEnumDNS     ServiceTypeEnum = "DNS"
 )
 
+func (e ServiceTypeEnum) ToPointer() *ServiceTypeEnum {
+	return &e
+}
+
 func (e *ServiceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP":
 		fallthrough
 	case "DNS_HTTP":
 		fallthrough
 	case "DNS":
-		*e = ServiceTypeEnum(s)
+		*e = ServiceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceTypeEnum: %v", v)
 	}
 }

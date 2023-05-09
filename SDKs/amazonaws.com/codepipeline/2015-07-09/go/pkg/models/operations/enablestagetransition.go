@@ -16,17 +16,21 @@ const (
 	EnableStageTransitionXAmzTargetEnumCodePipeline20150709EnableStageTransition EnableStageTransitionXAmzTargetEnum = "CodePipeline_20150709.EnableStageTransition"
 )
 
+func (e EnableStageTransitionXAmzTargetEnum) ToPointer() *EnableStageTransitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *EnableStageTransitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.EnableStageTransition":
-		*e = EnableStageTransitionXAmzTargetEnum(s)
+		*e = EnableStageTransitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnableStageTransitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for EnableStageTransitionXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -40,7 +40,10 @@ func newProjectBriefs(defaultClient, securityClient HTTPClient, serverURL, langu
 // Returns the full record of the newly created project brief.
 func (s *projectBriefs) CreateProjectBrief(ctx context.Context, request operations.CreateProjectBriefRequest) (*operations.CreateProjectBriefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/project_briefs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/project_briefs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -121,7 +124,10 @@ func (s *projectBriefs) CreateProjectBrief(ctx context.Context, request operatio
 // Returns an empty data record.
 func (s *projectBriefs) DeleteProjectBrief(ctx context.Context, request operations.DeleteProjectBriefRequest) (*operations.DeleteProjectBriefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project_briefs/{project_brief_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/project_briefs/{project_brief_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -188,7 +194,10 @@ func (s *projectBriefs) DeleteProjectBrief(ctx context.Context, request operatio
 // Get the full record for a project brief.
 func (s *projectBriefs) GetProjectBrief(ctx context.Context, request operations.GetProjectBriefRequest) (*operations.GetProjectBriefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project_briefs/{project_brief_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/project_briefs/{project_brief_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -269,7 +278,10 @@ func (s *projectBriefs) GetProjectBrief(ctx context.Context, request operations.
 // Returns the complete updated project brief record.
 func (s *projectBriefs) UpdateProjectBrief(ctx context.Context, request operations.UpdateProjectBriefRequest) (*operations.UpdateProjectBriefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project_briefs/{project_brief_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/project_briefs/{project_brief_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

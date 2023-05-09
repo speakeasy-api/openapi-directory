@@ -16,17 +16,21 @@ const (
 	ListWorkgroupsXAmzTargetEnumRedshiftServerlessListWorkgroups ListWorkgroupsXAmzTargetEnum = "RedshiftServerless.ListWorkgroups"
 )
 
+func (e ListWorkgroupsXAmzTargetEnum) ToPointer() *ListWorkgroupsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListWorkgroupsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.ListWorkgroups":
-		*e = ListWorkgroupsXAmzTargetEnum(s)
+		*e = ListWorkgroupsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListWorkgroupsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListWorkgroupsXAmzTargetEnum: %v", v)
 	}
 }
 

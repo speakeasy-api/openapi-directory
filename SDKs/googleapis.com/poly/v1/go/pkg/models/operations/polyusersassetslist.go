@@ -18,21 +18,25 @@ const (
 	PolyUsersAssetsListVisibilityEnumPrivate               PolyUsersAssetsListVisibilityEnum = "PRIVATE"
 )
 
+func (e PolyUsersAssetsListVisibilityEnum) ToPointer() *PolyUsersAssetsListVisibilityEnum {
+	return &e
+}
+
 func (e *PolyUsersAssetsListVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VISIBILITY_UNSPECIFIED":
 		fallthrough
 	case "PUBLISHED":
 		fallthrough
 	case "PRIVATE":
-		*e = PolyUsersAssetsListVisibilityEnum(s)
+		*e = PolyUsersAssetsListVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolyUsersAssetsListVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for PolyUsersAssetsListVisibilityEnum: %v", v)
 	}
 }
 

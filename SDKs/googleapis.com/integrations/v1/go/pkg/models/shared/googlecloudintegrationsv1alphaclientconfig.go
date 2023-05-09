@@ -17,12 +17,16 @@ const (
 	GoogleCloudIntegrationsV1alphaClientConfigBillingTypeEnumBillingTypePayg               GoogleCloudIntegrationsV1alphaClientConfigBillingTypeEnum = "BILLING_TYPE_PAYG"
 )
 
+func (e GoogleCloudIntegrationsV1alphaClientConfigBillingTypeEnum) ToPointer() *GoogleCloudIntegrationsV1alphaClientConfigBillingTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaClientConfigBillingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BILLING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BILLING_TYPE_APIGEE_TRIALS":
@@ -30,10 +34,10 @@ func (e *GoogleCloudIntegrationsV1alphaClientConfigBillingTypeEnum) UnmarshalJSO
 	case "BILLING_TYPE_APIGEE_SUBSCRIPTION":
 		fallthrough
 	case "BILLING_TYPE_PAYG":
-		*e = GoogleCloudIntegrationsV1alphaClientConfigBillingTypeEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaClientConfigBillingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaClientConfigBillingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaClientConfigBillingTypeEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	GoogleCloudIntegrationsV1alphaClientConfigClientStateEnumClientStateDisabled    GoogleCloudIntegrationsV1alphaClientConfigClientStateEnum = "CLIENT_STATE_DISABLED"
 )
 
+func (e GoogleCloudIntegrationsV1alphaClientConfigClientStateEnum) ToPointer() *GoogleCloudIntegrationsV1alphaClientConfigClientStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaClientConfigClientStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLIENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "CLIENT_STATE_ACTIVE":
 		fallthrough
 	case "CLIENT_STATE_DISABLED":
-		*e = GoogleCloudIntegrationsV1alphaClientConfigClientStateEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaClientConfigClientStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaClientConfigClientStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaClientConfigClientStateEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DeleteDeploymentConfigXAmzTargetEnumCodeDeploy20141006DeleteDeploymentConfig DeleteDeploymentConfigXAmzTargetEnum = "CodeDeploy_20141006.DeleteDeploymentConfig"
 )
 
+func (e DeleteDeploymentConfigXAmzTargetEnum) ToPointer() *DeleteDeploymentConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDeploymentConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.DeleteDeploymentConfig":
-		*e = DeleteDeploymentConfigXAmzTargetEnum(s)
+		*e = DeleteDeploymentConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDeploymentConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDeploymentConfigXAmzTargetEnum: %v", v)
 	}
 }
 

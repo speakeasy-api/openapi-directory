@@ -17,12 +17,16 @@ const (
 	LoadBalancerStateEnumUnknown        LoadBalancerStateEnum = "unknown"
 )
 
+func (e LoadBalancerStateEnum) ToPointer() *LoadBalancerStateEnum {
+	return &e
+}
+
 func (e *LoadBalancerStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "provisioning":
@@ -32,9 +36,9 @@ func (e *LoadBalancerStateEnum) UnmarshalJSON(data []byte) error {
 	case "failed":
 		fallthrough
 	case "unknown":
-		*e = LoadBalancerStateEnum(s)
+		*e = LoadBalancerStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoadBalancerStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LoadBalancerStateEnum: %v", v)
 	}
 }

@@ -16,21 +16,25 @@ const (
 	GooglePlayDeveloperReportingV1beta1ErrorReportTypeEnumCrash                    GooglePlayDeveloperReportingV1beta1ErrorReportTypeEnum = "CRASH"
 )
 
+func (e GooglePlayDeveloperReportingV1beta1ErrorReportTypeEnum) ToPointer() *GooglePlayDeveloperReportingV1beta1ErrorReportTypeEnum {
+	return &e
+}
+
 func (e *GooglePlayDeveloperReportingV1beta1ErrorReportTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ERROR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "APPLICATION_NOT_RESPONDING":
 		fallthrough
 	case "CRASH":
-		*e = GooglePlayDeveloperReportingV1beta1ErrorReportTypeEnum(s)
+		*e = GooglePlayDeveloperReportingV1beta1ErrorReportTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePlayDeveloperReportingV1beta1ErrorReportTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePlayDeveloperReportingV1beta1ErrorReportTypeEnum: %v", v)
 	}
 }
 

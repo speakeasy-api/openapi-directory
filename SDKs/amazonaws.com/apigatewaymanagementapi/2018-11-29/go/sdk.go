@@ -32,6 +32,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - The Amazon API Gateway Management API allows you to directly manage runtime aspects of your deployed APIs. To use it, you must explicitly set the SDK's endpoint to point to the endpoint of your deployed API. The endpoint will be of the form https://{api-id}.execute-api.{region}.amazonaws.com/{stage}, or will be the endpoint corresponding to your API's custom domain and base path, if applicable.
 // https://docs.aws.amazon.com/execute-api/ - Amazon Web Services documentation
 type SDK struct {
@@ -113,7 +128,10 @@ func New(opts ...SDKOption) *SDK {
 // DeleteConnection - Delete the connection with the provided id.
 func (s *SDK) DeleteConnection(ctx context.Context, request operations.DeleteConnectionRequest) (*operations.DeleteConnectionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/@connections/{connectionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/@connections/{connectionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -180,7 +198,10 @@ func (s *SDK) DeleteConnection(ctx context.Context, request operations.DeleteCon
 // GetConnection - Get information about the connection with the provided id.
 func (s *SDK) GetConnection(ctx context.Context, request operations.GetConnectionRequest) (*operations.GetConnectionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/@connections/{connectionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/@connections/{connectionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -256,7 +277,10 @@ func (s *SDK) GetConnection(ctx context.Context, request operations.GetConnectio
 // PostToConnection - Sends the provided data to the specified connection.
 func (s *SDK) PostToConnection(ctx context.Context, request operations.PostToConnectionRequest) (*operations.PostToConnectionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/@connections/{connectionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/@connections/{connectionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

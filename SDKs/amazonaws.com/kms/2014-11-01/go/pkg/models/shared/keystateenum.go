@@ -20,12 +20,16 @@ const (
 	KeyStateEnumUpdating               KeyStateEnum = "Updating"
 )
 
+func (e KeyStateEnum) ToPointer() *KeyStateEnum {
+	return &e
+}
+
 func (e *KeyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Creating":
 		fallthrough
 	case "Enabled":
@@ -41,9 +45,9 @@ func (e *KeyStateEnum) UnmarshalJSON(data []byte) error {
 	case "Unavailable":
 		fallthrough
 	case "Updating":
-		*e = KeyStateEnum(s)
+		*e = KeyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyStateEnum: %v", v)
 	}
 }

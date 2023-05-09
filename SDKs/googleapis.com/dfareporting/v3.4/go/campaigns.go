@@ -34,7 +34,10 @@ func newCampaigns(defaultClient, securityClient HTTPClient, serverURL, language,
 // DfareportingCampaignsGet - Gets one campaign by ID.
 func (s *campaigns) DfareportingCampaignsGet(ctx context.Context, request operations.DfareportingCampaignsGetRequest, security operations.DfareportingCampaignsGetSecurity) (*operations.DfareportingCampaignsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *campaigns) DfareportingCampaignsGet(ctx context.Context, request operat
 // DfareportingCampaignsInsert - Inserts a new campaign.
 func (s *campaigns) DfareportingCampaignsInsert(ctx context.Context, request operations.DfareportingCampaignsInsertRequest, security operations.DfareportingCampaignsInsertSecurity) (*operations.DfareportingCampaignsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Campaign", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *campaigns) DfareportingCampaignsInsert(ctx context.Context, request ope
 // DfareportingCampaignsList - Retrieves a list of campaigns, possibly filtered. This method supports paging.
 func (s *campaigns) DfareportingCampaignsList(ctx context.Context, request operations.DfareportingCampaignsListRequest, security operations.DfareportingCampaignsListSecurity) (*operations.DfareportingCampaignsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *campaigns) DfareportingCampaignsList(ctx context.Context, request opera
 // DfareportingCampaignsPatch - Updates an existing campaign. This method supports patch semantics.
 func (s *campaigns) DfareportingCampaignsPatch(ctx context.Context, request operations.DfareportingCampaignsPatchRequest, security operations.DfareportingCampaignsPatchSecurity) (*operations.DfareportingCampaignsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Campaign", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *campaigns) DfareportingCampaignsPatch(ctx context.Context, request oper
 // DfareportingCampaignsUpdate - Updates an existing campaign.
 func (s *campaigns) DfareportingCampaignsUpdate(ctx context.Context, request operations.DfareportingCampaignsUpdateRequest, security operations.DfareportingCampaignsUpdateSecurity) (*operations.DfareportingCampaignsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Campaign", "json")
 	if err != nil {

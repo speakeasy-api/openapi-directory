@@ -120,7 +120,10 @@ func (s *post) KeyRegister(ctx context.Context, request []byte) (*operations.Key
 // See: https://github.com/skion/authentiq/wiki/JWT-Examples
 func (s *post) KeyUpdate(ctx context.Context, request operations.KeyUpdateRequest) (*operations.KeyUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -273,7 +276,10 @@ func (s *post) PushLoginRequest(ctx context.Context, request operations.PushLogi
 // SignConfirm - this is a scope confirmation
 func (s *post) SignConfirm(ctx context.Context, request operations.SignConfirmRequest) (*operations.SignConfirmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

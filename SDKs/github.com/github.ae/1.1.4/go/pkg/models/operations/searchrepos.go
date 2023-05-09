@@ -19,12 +19,16 @@ const (
 	SearchReposSortEnumUpdated          SearchReposSortEnum = "updated"
 )
 
+func (e SearchReposSortEnum) ToPointer() *SearchReposSortEnum {
+	return &e
+}
+
 func (e *SearchReposSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stars":
 		fallthrough
 	case "forks":
@@ -32,10 +36,10 @@ func (e *SearchReposSortEnum) UnmarshalJSON(data []byte) error {
 	case "help-wanted-issues":
 		fallthrough
 	case "updated":
-		*e = SearchReposSortEnum(s)
+		*e = SearchReposSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchReposSortEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchReposSortEnum: %v", v)
 	}
 }
 

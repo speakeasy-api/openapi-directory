@@ -17,19 +17,23 @@ const (
 	CodeScanningListAlertsForOrgSortEnumUpdated CodeScanningListAlertsForOrgSortEnum = "updated"
 )
 
+func (e CodeScanningListAlertsForOrgSortEnum) ToPointer() *CodeScanningListAlertsForOrgSortEnum {
+	return &e
+}
+
 func (e *CodeScanningListAlertsForOrgSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
-		*e = CodeScanningListAlertsForOrgSortEnum(s)
+		*e = CodeScanningListAlertsForOrgSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodeScanningListAlertsForOrgSortEnum: %s", s)
+		return fmt.Errorf("invalid value for CodeScanningListAlertsForOrgSortEnum: %v", v)
 	}
 }
 

@@ -13,16 +13,20 @@ const (
 	DecisionTaskTimeoutTypeEnumStartToClose DecisionTaskTimeoutTypeEnum = "START_TO_CLOSE"
 )
 
+func (e DecisionTaskTimeoutTypeEnum) ToPointer() *DecisionTaskTimeoutTypeEnum {
+	return &e
+}
+
 func (e *DecisionTaskTimeoutTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "START_TO_CLOSE":
-		*e = DecisionTaskTimeoutTypeEnum(s)
+		*e = DecisionTaskTimeoutTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DecisionTaskTimeoutTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DecisionTaskTimeoutTypeEnum: %v", v)
 	}
 }

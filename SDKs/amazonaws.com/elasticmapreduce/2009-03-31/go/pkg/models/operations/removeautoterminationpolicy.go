@@ -16,17 +16,21 @@ const (
 	RemoveAutoTerminationPolicyXAmzTargetEnumElasticMapReduceRemoveAutoTerminationPolicy RemoveAutoTerminationPolicyXAmzTargetEnum = "ElasticMapReduce.RemoveAutoTerminationPolicy"
 )
 
+func (e RemoveAutoTerminationPolicyXAmzTargetEnum) ToPointer() *RemoveAutoTerminationPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *RemoveAutoTerminationPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.RemoveAutoTerminationPolicy":
-		*e = RemoveAutoTerminationPolicyXAmzTargetEnum(s)
+		*e = RemoveAutoTerminationPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveAutoTerminationPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveAutoTerminationPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

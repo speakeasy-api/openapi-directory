@@ -15,17 +15,21 @@ const (
 	GETCreateEventSubscriptionActionEnumCreateEventSubscription GETCreateEventSubscriptionActionEnum = "CreateEventSubscription"
 )
 
+func (e GETCreateEventSubscriptionActionEnum) ToPointer() *GETCreateEventSubscriptionActionEnum {
+	return &e
+}
+
 func (e *GETCreateEventSubscriptionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateEventSubscription":
-		*e = GETCreateEventSubscriptionActionEnum(s)
+		*e = GETCreateEventSubscriptionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateEventSubscriptionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateEventSubscriptionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateEventSubscriptionVersionEnumTwoThousandAndThirteen0212 GETCreateEventSubscriptionVersionEnum = "2013-02-12"
 )
 
+func (e GETCreateEventSubscriptionVersionEnum) ToPointer() *GETCreateEventSubscriptionVersionEnum {
+	return &e
+}
+
 func (e *GETCreateEventSubscriptionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETCreateEventSubscriptionVersionEnum(s)
+		*e = GETCreateEventSubscriptionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateEventSubscriptionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateEventSubscriptionVersionEnum: %v", v)
 	}
 }
 

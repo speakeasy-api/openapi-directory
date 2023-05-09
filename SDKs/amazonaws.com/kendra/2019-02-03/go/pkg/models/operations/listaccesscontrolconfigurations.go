@@ -16,17 +16,21 @@ const (
 	ListAccessControlConfigurationsXAmzTargetEnumAwsKendraFrontendServiceListAccessControlConfigurations ListAccessControlConfigurationsXAmzTargetEnum = "AWSKendraFrontendService.ListAccessControlConfigurations"
 )
 
+func (e ListAccessControlConfigurationsXAmzTargetEnum) ToPointer() *ListAccessControlConfigurationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListAccessControlConfigurationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.ListAccessControlConfigurations":
-		*e = ListAccessControlConfigurationsXAmzTargetEnum(s)
+		*e = ListAccessControlConfigurationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAccessControlConfigurationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAccessControlConfigurationsXAmzTargetEnum: %v", v)
 	}
 }
 

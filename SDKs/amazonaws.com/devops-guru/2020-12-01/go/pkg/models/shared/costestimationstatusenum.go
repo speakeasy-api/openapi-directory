@@ -14,18 +14,22 @@ const (
 	CostEstimationStatusEnumCompleted CostEstimationStatusEnum = "COMPLETED"
 )
 
+func (e CostEstimationStatusEnum) ToPointer() *CostEstimationStatusEnum {
+	return &e
+}
+
 func (e *CostEstimationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONGOING":
 		fallthrough
 	case "COMPLETED":
-		*e = CostEstimationStatusEnum(s)
+		*e = CostEstimationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CostEstimationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CostEstimationStatusEnum: %v", v)
 	}
 }

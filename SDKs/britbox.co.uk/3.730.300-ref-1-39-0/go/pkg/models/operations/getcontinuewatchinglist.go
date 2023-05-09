@@ -21,21 +21,25 @@ const (
 	GetContinueWatchingListIncludeEnumShow    GetContinueWatchingListIncludeEnum = "show"
 )
 
+func (e GetContinueWatchingListIncludeEnum) ToPointer() *GetContinueWatchingListIncludeEnum {
+	return &e
+}
+
 func (e *GetContinueWatchingListIncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "episode":
 		fallthrough
 	case "season":
 		fallthrough
 	case "show":
-		*e = GetContinueWatchingListIncludeEnum(s)
+		*e = GetContinueWatchingListIncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetContinueWatchingListIncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetContinueWatchingListIncludeEnum: %v", v)
 	}
 }
 
@@ -68,21 +72,25 @@ const (
 	GetContinueWatchingListShowItemTypeEnumShow    GetContinueWatchingListShowItemTypeEnum = "show"
 )
 
+func (e GetContinueWatchingListShowItemTypeEnum) ToPointer() *GetContinueWatchingListShowItemTypeEnum {
+	return &e
+}
+
 func (e *GetContinueWatchingListShowItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "episode":
 		fallthrough
 	case "season":
 		fallthrough
 	case "show":
-		*e = GetContinueWatchingListShowItemTypeEnum(s)
+		*e = GetContinueWatchingListShowItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetContinueWatchingListShowItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetContinueWatchingListShowItemTypeEnum: %v", v)
 	}
 }
 

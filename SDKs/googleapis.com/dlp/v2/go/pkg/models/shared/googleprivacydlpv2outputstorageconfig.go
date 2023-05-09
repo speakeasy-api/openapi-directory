@@ -19,12 +19,16 @@ const (
 	GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnumAllColumns              GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum = "ALL_COLUMNS"
 )
 
+func (e GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum) ToPointer() *GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OUTPUT_SCHEMA_UNSPECIFIED":
 		fallthrough
 	case "BASIC_COLUMNS":
@@ -36,10 +40,10 @@ func (e *GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum) UnmarshalJSON(da
 	case "BIG_QUERY_COLUMNS":
 		fallthrough
 	case "ALL_COLUMNS":
-		*e = GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum(s)
+		*e = GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2OutputStorageConfigOutputSchemaEnum: %v", v)
 	}
 }
 

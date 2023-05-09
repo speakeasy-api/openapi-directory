@@ -19,19 +19,23 @@ const (
 	RouteRequestAlgorithmEnumAlternativeRoute RouteRequestAlgorithmEnum = "alternative_route"
 )
 
+func (e RouteRequestAlgorithmEnum) ToPointer() *RouteRequestAlgorithmEnum {
+	return &e
+}
+
 func (e *RouteRequestAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "round_trip":
 		fallthrough
 	case "alternative_route":
-		*e = RouteRequestAlgorithmEnum(s)
+		*e = RouteRequestAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RouteRequestAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for RouteRequestAlgorithmEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	RouteRequestCurbsidesEnumLeft  RouteRequestCurbsidesEnum = "left"
 )
 
+func (e RouteRequestCurbsidesEnum) ToPointer() *RouteRequestCurbsidesEnum {
+	return &e
+}
+
 func (e *RouteRequestCurbsidesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "right":
 		fallthrough
 	case "left":
-		*e = RouteRequestCurbsidesEnum(s)
+		*e = RouteRequestCurbsidesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RouteRequestCurbsidesEnum: %s", s)
+		return fmt.Errorf("invalid value for RouteRequestCurbsidesEnum: %v", v)
 	}
 }
 
@@ -76,12 +84,16 @@ const (
 	RouteRequestVehicleEnumSmallTruck RouteRequestVehicleEnum = "small_truck"
 )
 
+func (e RouteRequestVehicleEnum) ToPointer() *RouteRequestVehicleEnum {
+	return &e
+}
+
 func (e *RouteRequestVehicleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "car":
 		fallthrough
 	case "bike":
@@ -99,10 +111,10 @@ func (e *RouteRequestVehicleEnum) UnmarshalJSON(data []byte) error {
 	case "truck":
 		fallthrough
 	case "small_truck":
-		*e = RouteRequestVehicleEnum(s)
+		*e = RouteRequestVehicleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RouteRequestVehicleEnum: %s", s)
+		return fmt.Errorf("invalid value for RouteRequestVehicleEnum: %v", v)
 	}
 }
 

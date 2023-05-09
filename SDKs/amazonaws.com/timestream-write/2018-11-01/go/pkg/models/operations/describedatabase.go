@@ -16,17 +16,21 @@ const (
 	DescribeDatabaseXAmzTargetEnumTimestream20181101DescribeDatabase DescribeDatabaseXAmzTargetEnum = "Timestream_20181101.DescribeDatabase"
 )
 
+func (e DescribeDatabaseXAmzTargetEnum) ToPointer() *DescribeDatabaseXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDatabaseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Timestream_20181101.DescribeDatabase":
-		*e = DescribeDatabaseXAmzTargetEnum(s)
+		*e = DescribeDatabaseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDatabaseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDatabaseXAmzTargetEnum: %v", v)
 	}
 }
 

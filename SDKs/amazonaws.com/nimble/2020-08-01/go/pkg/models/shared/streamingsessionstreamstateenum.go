@@ -18,12 +18,16 @@ const (
 	StreamingSessionStreamStateEnumDeleteFailed     StreamingSessionStreamStateEnum = "DELETE_FAILED"
 )
 
+func (e StreamingSessionStreamStateEnum) ToPointer() *StreamingSessionStreamStateEnum {
+	return &e
+}
+
 func (e *StreamingSessionStreamStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READY":
 		fallthrough
 	case "CREATE_IN_PROGRESS":
@@ -35,9 +39,9 @@ func (e *StreamingSessionStreamStateEnum) UnmarshalJSON(data []byte) error {
 	case "CREATE_FAILED":
 		fallthrough
 	case "DELETE_FAILED":
-		*e = StreamingSessionStreamStateEnum(s)
+		*e = StreamingSessionStreamStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamingSessionStreamStateEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamingSessionStreamStateEnum: %v", v)
 	}
 }

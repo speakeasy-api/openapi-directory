@@ -33,12 +33,16 @@ const (
 	StoresGetDefaultApplicationJSONCodeEnumTooManyRequests     StoresGetDefaultApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e StoresGetDefaultApplicationJSONCodeEnum) ToPointer() *StoresGetDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *StoresGetDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *StoresGetDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) err
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = StoresGetDefaultApplicationJSONCodeEnum(s)
+		*e = StoresGetDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoresGetDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoresGetDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -96,12 +100,16 @@ const (
 	StoresGet200ApplicationJSONTrackEnumTestflightExternal StoresGet200ApplicationJSONTrackEnum = "testflight-external"
 )
 
+func (e StoresGet200ApplicationJSONTrackEnum) ToPointer() *StoresGet200ApplicationJSONTrackEnum {
+	return &e
+}
+
 func (e *StoresGet200ApplicationJSONTrackEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "production":
 		fallthrough
 	case "alpha":
@@ -111,10 +119,10 @@ func (e *StoresGet200ApplicationJSONTrackEnum) UnmarshalJSON(data []byte) error 
 	case "testflight-internal":
 		fallthrough
 	case "testflight-external":
-		*e = StoresGet200ApplicationJSONTrackEnum(s)
+		*e = StoresGet200ApplicationJSONTrackEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoresGet200ApplicationJSONTrackEnum: %s", s)
+		return fmt.Errorf("invalid value for StoresGet200ApplicationJSONTrackEnum: %v", v)
 	}
 }
 

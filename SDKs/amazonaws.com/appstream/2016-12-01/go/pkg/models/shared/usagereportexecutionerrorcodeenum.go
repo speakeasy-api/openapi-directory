@@ -15,20 +15,24 @@ const (
 	UsageReportExecutionErrorCodeEnumInternalServiceError UsageReportExecutionErrorCodeEnum = "INTERNAL_SERVICE_ERROR"
 )
 
+func (e UsageReportExecutionErrorCodeEnum) ToPointer() *UsageReportExecutionErrorCodeEnum {
+	return &e
+}
+
 func (e *UsageReportExecutionErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE_NOT_FOUND":
 		fallthrough
 	case "ACCESS_DENIED":
 		fallthrough
 	case "INTERNAL_SERVICE_ERROR":
-		*e = UsageReportExecutionErrorCodeEnum(s)
+		*e = UsageReportExecutionErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageReportExecutionErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageReportExecutionErrorCodeEnum: %v", v)
 	}
 }

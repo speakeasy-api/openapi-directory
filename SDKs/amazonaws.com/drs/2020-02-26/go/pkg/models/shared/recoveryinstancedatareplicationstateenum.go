@@ -24,12 +24,16 @@ const (
 	RecoveryInstanceDataReplicationStateEnumNotStarted                   RecoveryInstanceDataReplicationStateEnum = "NOT_STARTED"
 )
 
+func (e RecoveryInstanceDataReplicationStateEnum) ToPointer() *RecoveryInstanceDataReplicationStateEnum {
+	return &e
+}
+
 func (e *RecoveryInstanceDataReplicationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STOPPED":
 		fallthrough
 	case "INITIATING":
@@ -53,9 +57,9 @@ func (e *RecoveryInstanceDataReplicationStateEnum) UnmarshalJSON(data []byte) er
 	case "REPLICATION_STATE_NOT_AVAILABLE":
 		fallthrough
 	case "NOT_STARTED":
-		*e = RecoveryInstanceDataReplicationStateEnum(s)
+		*e = RecoveryInstanceDataReplicationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecoveryInstanceDataReplicationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RecoveryInstanceDataReplicationStateEnum: %v", v)
 	}
 }

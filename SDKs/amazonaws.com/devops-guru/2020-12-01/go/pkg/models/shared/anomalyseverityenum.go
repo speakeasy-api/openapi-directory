@@ -15,20 +15,24 @@ const (
 	AnomalySeverityEnumHigh   AnomalySeverityEnum = "HIGH"
 )
 
+func (e AnomalySeverityEnum) ToPointer() *AnomalySeverityEnum {
+	return &e
+}
+
 func (e *AnomalySeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOW":
 		fallthrough
 	case "MEDIUM":
 		fallthrough
 	case "HIGH":
-		*e = AnomalySeverityEnum(s)
+		*e = AnomalySeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnomalySeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for AnomalySeverityEnum: %v", v)
 	}
 }

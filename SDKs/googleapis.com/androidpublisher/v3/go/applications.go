@@ -34,7 +34,10 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 // AndroidpublisherApplicationsDeviceTierConfigsCreate - Creates a new device tier config for an app.
 func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsCreate(ctx context.Context, request operations.AndroidpublisherApplicationsDeviceTierConfigsCreateRequest, security operations.AndroidpublisherApplicationsDeviceTierConfigsCreateSecurity) (*operations.AndroidpublisherApplicationsDeviceTierConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceTierConfigInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsCreate(ctx c
 // AndroidpublisherApplicationsDeviceTierConfigsGet - Returns a particular device tier config.
 func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsGet(ctx context.Context, request operations.AndroidpublisherApplicationsDeviceTierConfigsGetRequest, security operations.AndroidpublisherApplicationsDeviceTierConfigsGetSecurity) (*operations.AndroidpublisherApplicationsDeviceTierConfigsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs/{deviceTierConfigId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs/{deviceTierConfigId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsGet(ctx cont
 // AndroidpublisherApplicationsDeviceTierConfigsList - Returns created device tier configs, ordered by descending creation time.
 func (s *applications) AndroidpublisherApplicationsDeviceTierConfigsList(ctx context.Context, request operations.AndroidpublisherApplicationsDeviceTierConfigsListRequest, security operations.AndroidpublisherApplicationsDeviceTierConfigsListSecurity) (*operations.AndroidpublisherApplicationsDeviceTierConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

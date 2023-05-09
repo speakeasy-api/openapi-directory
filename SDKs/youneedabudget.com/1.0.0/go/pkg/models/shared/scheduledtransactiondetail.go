@@ -12,21 +12,25 @@ import (
 type ScheduledTransactionDetailFlagColorEnum string
 
 const (
-	ScheduledTransactionDetailFlagColorEnumRed    ScheduledTransactionDetailFlagColorEnum = "red"
-	ScheduledTransactionDetailFlagColorEnumOrange ScheduledTransactionDetailFlagColorEnum = "orange"
-	ScheduledTransactionDetailFlagColorEnumYellow ScheduledTransactionDetailFlagColorEnum = "yellow"
-	ScheduledTransactionDetailFlagColorEnumGreen  ScheduledTransactionDetailFlagColorEnum = "green"
-	ScheduledTransactionDetailFlagColorEnumBlue   ScheduledTransactionDetailFlagColorEnum = "blue"
-	ScheduledTransactionDetailFlagColorEnumPurple ScheduledTransactionDetailFlagColorEnum = "purple"
-	ScheduledTransactionDetailFlagColorEnumNull   ScheduledTransactionDetailFlagColorEnum = "null"
+	ScheduledTransactionDetailFlagColorEnumRed                    ScheduledTransactionDetailFlagColorEnum = "red"
+	ScheduledTransactionDetailFlagColorEnumOrange                 ScheduledTransactionDetailFlagColorEnum = "orange"
+	ScheduledTransactionDetailFlagColorEnumYellow                 ScheduledTransactionDetailFlagColorEnum = "yellow"
+	ScheduledTransactionDetailFlagColorEnumGreen                  ScheduledTransactionDetailFlagColorEnum = "green"
+	ScheduledTransactionDetailFlagColorEnumBlue                   ScheduledTransactionDetailFlagColorEnum = "blue"
+	ScheduledTransactionDetailFlagColorEnumPurple                 ScheduledTransactionDetailFlagColorEnum = "purple"
+	ScheduledTransactionDetailFlagColorEnumLessThanNilGreaterThan ScheduledTransactionDetailFlagColorEnum = "<nil>"
 )
 
+func (e ScheduledTransactionDetailFlagColorEnum) ToPointer() *ScheduledTransactionDetailFlagColorEnum {
+	return &e
+}
+
 func (e *ScheduledTransactionDetailFlagColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "red":
 		fallthrough
 	case "orange":
@@ -39,11 +43,11 @@ func (e *ScheduledTransactionDetailFlagColorEnum) UnmarshalJSON(data []byte) err
 		fallthrough
 	case "purple":
 		fallthrough
-	case "null":
-		*e = ScheduledTransactionDetailFlagColorEnum(s)
+	case "<nil>":
+		*e = ScheduledTransactionDetailFlagColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScheduledTransactionDetailFlagColorEnum: %s", s)
+		return fmt.Errorf("invalid value for ScheduledTransactionDetailFlagColorEnum: %v", v)
 	}
 }
 
@@ -65,12 +69,16 @@ const (
 	ScheduledTransactionDetailFrequencyEnumEveryOtherYear  ScheduledTransactionDetailFrequencyEnum = "everyOtherYear"
 )
 
+func (e ScheduledTransactionDetailFrequencyEnum) ToPointer() *ScheduledTransactionDetailFrequencyEnum {
+	return &e
+}
+
 func (e *ScheduledTransactionDetailFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "never":
 		fallthrough
 	case "daily":
@@ -96,10 +104,10 @@ func (e *ScheduledTransactionDetailFrequencyEnum) UnmarshalJSON(data []byte) err
 	case "yearly":
 		fallthrough
 	case "everyOtherYear":
-		*e = ScheduledTransactionDetailFrequencyEnum(s)
+		*e = ScheduledTransactionDetailFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScheduledTransactionDetailFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for ScheduledTransactionDetailFrequencyEnum: %v", v)
 	}
 }
 
@@ -107,8 +115,9 @@ type ScheduledTransactionDetail struct {
 	AccountID   string `json:"account_id"`
 	AccountName string `json:"account_name"`
 	// The scheduled transaction amount in milliunits format
-	Amount       int64   `json:"amount"`
-	CategoryID   *string `json:"category_id,omitempty"`
+	Amount     int64   `json:"amount"`
+	CategoryID *string `json:"category_id,omitempty"`
+	// The name of the category.  If a split scheduled transaction, this will be 'Split'.
 	CategoryName *string `json:"category_name,omitempty"`
 	// The first date for which the Scheduled Transaction was scheduled.
 	DateFirst types.Date `json:"date_first"`

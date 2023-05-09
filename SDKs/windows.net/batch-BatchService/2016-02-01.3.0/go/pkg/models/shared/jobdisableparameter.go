@@ -16,21 +16,25 @@ const (
 	JobDisableParameterDisableTasksEnumWait      JobDisableParameterDisableTasksEnum = "wait"
 )
 
+func (e JobDisableParameterDisableTasksEnum) ToPointer() *JobDisableParameterDisableTasksEnum {
+	return &e
+}
+
 func (e *JobDisableParameterDisableTasksEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "requeue":
 		fallthrough
 	case "terminate":
 		fallthrough
 	case "wait":
-		*e = JobDisableParameterDisableTasksEnum(s)
+		*e = JobDisableParameterDisableTasksEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobDisableParameterDisableTasksEnum: %s", s)
+		return fmt.Errorf("invalid value for JobDisableParameterDisableTasksEnum: %v", v)
 	}
 }
 

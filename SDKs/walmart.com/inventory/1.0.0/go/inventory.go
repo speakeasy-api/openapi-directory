@@ -145,7 +145,10 @@ func (s *inventory) GetMultiNodeInventoryForAllSkuAndAllShipNodes(ctx context.Co
 // This API will retrieve the inventory count for an item across all ship nodes or one specific ship node. You can specify the ship node for which you want to fetch the inventory
 func (s *inventory) GetMultiNodeInventoryForSkuAndAllShipnodes(ctx context.Context, request operations.GetMultiNodeInventoryForSkuAndAllShipnodesRequest) (*operations.GetMultiNodeInventoryForSkuAndAllShipnodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/inventories/{sku}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/inventories/{sku}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -457,7 +460,10 @@ func (s *inventory) UpdateInventoryForAnItemRaw(ctx context.Context, request ope
 // This API will update the inventory for an item across one or more fulfillment centers, known as ship nodes.
 func (s *inventory) UpdateMultiNodeInventory(ctx context.Context, request operations.UpdateMultiNodeInventoryRequest) (*operations.UpdateMultiNodeInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/inventories/{sku}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/inventories/{sku}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

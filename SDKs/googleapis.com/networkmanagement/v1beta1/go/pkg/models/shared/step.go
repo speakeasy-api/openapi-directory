@@ -40,12 +40,16 @@ const (
 	StepStateEnumViewerPermissionMissing      StepStateEnum = "VIEWER_PERMISSION_MISSING"
 )
 
+func (e StepStateEnum) ToPointer() *StepStateEnum {
+	return &e
+}
+
 func (e *StepStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "START_FROM_INSTANCE":
@@ -99,10 +103,10 @@ func (e *StepStateEnum) UnmarshalJSON(data []byte) error {
 	case "ABORT":
 		fallthrough
 	case "VIEWER_PERMISSION_MISSING":
-		*e = StepStateEnum(s)
+		*e = StepStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StepStateEnum: %s", s)
+		return fmt.Errorf("invalid value for StepStateEnum: %v", v)
 	}
 }
 

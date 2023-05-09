@@ -16,21 +16,25 @@ const (
 	PatchSpacesIDPersonsMemberIDPlayerRequestBodyClientManagementEnumAdn     PatchSpacesIDPersonsMemberIDPlayerRequestBodyClientManagementEnum = "adn"
 )
 
+func (e PatchSpacesIDPersonsMemberIDPlayerRequestBodyClientManagementEnum) ToPointer() *PatchSpacesIDPersonsMemberIDPlayerRequestBodyClientManagementEnum {
+	return &e
+}
+
 func (e *PatchSpacesIDPersonsMemberIDPlayerRequestBodyClientManagementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no":
 		fallthrough
 	case "manager":
 		fallthrough
 	case "adn":
-		*e = PatchSpacesIDPersonsMemberIDPlayerRequestBodyClientManagementEnum(s)
+		*e = PatchSpacesIDPersonsMemberIDPlayerRequestBodyClientManagementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesIDPersonsMemberIDPlayerRequestBodyClientManagementEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesIDPersonsMemberIDPlayerRequestBodyClientManagementEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	PatchSpacesIDPersonsMemberIDPlayerRequestBodyPlayerEnumCollaborator PatchSpacesIDPersonsMemberIDPlayerRequestBodyPlayerEnum = "collaborator"
 )
 
+func (e PatchSpacesIDPersonsMemberIDPlayerRequestBodyPlayerEnum) ToPointer() *PatchSpacesIDPersonsMemberIDPlayerRequestBodyPlayerEnum {
+	return &e
+}
+
 func (e *PatchSpacesIDPersonsMemberIDPlayerRequestBodyPlayerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "guest":
 		fallthrough
 	case "owner":
@@ -59,10 +67,10 @@ func (e *PatchSpacesIDPersonsMemberIDPlayerRequestBodyPlayerEnum) UnmarshalJSON(
 	case "assistant":
 		fallthrough
 	case "collaborator":
-		*e = PatchSpacesIDPersonsMemberIDPlayerRequestBodyPlayerEnum(s)
+		*e = PatchSpacesIDPersonsMemberIDPlayerRequestBodyPlayerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesIDPersonsMemberIDPlayerRequestBodyPlayerEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesIDPersonsMemberIDPlayerRequestBodyPlayerEnum: %v", v)
 	}
 }
 

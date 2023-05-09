@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -20,6 +21,7 @@ pkg/models/operations/workflowexecutionsprojectslocationsworkflowstriggerpubsube
 pkg/models/shared/execution.go
 pkg/models/shared/status.go
 pkg/models/shared/step.go
+pkg/models/shared/stateerror.go
 pkg/models/shared/error.go
 pkg/models/shared/stacktrace.go
 pkg/models/shared/stacktraceelement.go
@@ -29,4 +31,6 @@ pkg/models/shared/xgafvenum.go
 pkg/models/shared/listexecutionsresponse.go
 pkg/models/shared/triggerpubsubexecutionrequest.go
 pkg/models/shared/pubsubmessage.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

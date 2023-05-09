@@ -98,12 +98,16 @@ const (
 	CreateNetworkInsightsPathRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateNetworkInsightsPathRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateNetworkInsightsPathRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateNetworkInsightsPathRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateNetworkInsightsPathRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateNetworkInsightsPathRequestTagSpecificationsResourceTypeEnum) Unma
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateNetworkInsightsPathRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateNetworkInsightsPathRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNetworkInsightsPathRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNetworkInsightsPathRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

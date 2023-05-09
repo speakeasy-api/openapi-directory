@@ -73,12 +73,16 @@ const (
 	BalanceTypeEnumNonInvoiced      BalanceTypeEnum = "nonInvoiced"
 )
 
+func (e BalanceTypeEnum) ToPointer() *BalanceTypeEnum {
+	return &e
+}
+
 func (e *BalanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "closingBooked":
 		fallthrough
 	case "expected":
@@ -92,9 +96,9 @@ func (e *BalanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "forwardAvailable":
 		fallthrough
 	case "nonInvoiced":
-		*e = BalanceTypeEnum(s)
+		*e = BalanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BalanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BalanceTypeEnum: %v", v)
 	}
 }

@@ -62,19 +62,23 @@ const (
 	ObjectiveTypeEnumMinMax ObjectiveTypeEnum = "min-max"
 )
 
+func (e ObjectiveTypeEnum) ToPointer() *ObjectiveTypeEnum {
+	return &e
+}
+
 func (e *ObjectiveTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "min":
 		fallthrough
 	case "min-max":
-		*e = ObjectiveTypeEnum(s)
+		*e = ObjectiveTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ObjectiveTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ObjectiveTypeEnum: %v", v)
 	}
 }
 
@@ -95,12 +99,16 @@ const (
 	ObjectiveValueEnumActivities     ObjectiveValueEnum = "activities"
 )
 
+func (e ObjectiveValueEnum) ToPointer() *ObjectiveValueEnum {
+	return &e
+}
+
 func (e *ObjectiveValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "completion_time":
 		fallthrough
 	case "transport_time":
@@ -108,10 +116,10 @@ func (e *ObjectiveValueEnum) UnmarshalJSON(data []byte) error {
 	case "vehicles":
 		fallthrough
 	case "activities":
-		*e = ObjectiveValueEnum(s)
+		*e = ObjectiveValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ObjectiveValueEnum: %s", s)
+		return fmt.Errorf("invalid value for ObjectiveValueEnum: %v", v)
 	}
 }
 

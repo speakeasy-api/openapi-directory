@@ -84,7 +84,10 @@ func (s *orders) GetOrdersJSON(ctx context.Context, request operations.GetOrders
 // For example the GET /orders/after/5000 will return Order 5001, 5002, 5003, etc.
 func (s *orders) GetOrdersAfterIDJSON(ctx context.Context, request operations.GetOrdersAfterIDJSONRequest) (*operations.GetOrdersAfterIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/after/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/after/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -190,7 +193,10 @@ func (s *orders) GetOrdersCountJSON(ctx context.Context, request operations.GetO
 // GetOrdersStatusStatusJSON - Retrieve orders filtered by status.
 func (s *orders) GetOrdersStatusStatusJSON(ctx context.Context, request operations.GetOrdersStatusStatusJSONRequest) (*operations.GetOrdersStatusStatusJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/status/{status}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/status/{status}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -248,7 +254,10 @@ func (s *orders) GetOrdersStatusStatusJSON(ctx context.Context, request operatio
 // GetOrdersIDJSON - Retrieve a single Order.
 func (s *orders) GetOrdersIDJSON(ctx context.Context, request operations.GetOrdersIDJSONRequest) (*operations.GetOrdersIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -306,7 +315,10 @@ func (s *orders) GetOrdersIDJSON(ctx context.Context, request operations.GetOrde
 // GetOrdersIDHistoryJSON - Retrieve all Order History.
 func (s *orders) GetOrdersIDHistoryJSON(ctx context.Context, request operations.GetOrdersIDHistoryJSONRequest) (*operations.GetOrdersIDHistoryJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}/history.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/{id}/history.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -413,7 +425,10 @@ func (s *orders) PostOrdersJSON(ctx context.Context, request operations.PostOrde
 // PostOrdersIDHistoryJSON - Create a new Order History Entry.
 func (s *orders) PostOrdersIDHistoryJSON(ctx context.Context, request operations.PostOrdersIDHistoryJSONRequest) (*operations.PostOrdersIDHistoryJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}/history.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/{id}/history.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderHistoryEdit", "json")
 	if err != nil {
@@ -472,7 +487,10 @@ func (s *orders) PostOrdersIDHistoryJSON(ctx context.Context, request operations
 // Only `status`, `shipment_status`, `tracking_number`, `tracking_company`, `tracking_url`, `additional_information` and `additional_fields` are available for update. An email is send if `shipment_status` changes.
 func (s *orders) PutOrdersIDJSON(ctx context.Context, request operations.PutOrdersIDJSONRequest) (*operations.PutOrdersIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderEdit", "json")
 	if err != nil {

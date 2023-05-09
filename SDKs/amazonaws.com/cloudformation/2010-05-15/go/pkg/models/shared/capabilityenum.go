@@ -15,20 +15,24 @@ const (
 	CapabilityEnumCapabilityAutoExpand CapabilityEnum = "CAPABILITY_AUTO_EXPAND"
 )
 
+func (e CapabilityEnum) ToPointer() *CapabilityEnum {
+	return &e
+}
+
 func (e *CapabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAPABILITY_IAM":
 		fallthrough
 	case "CAPABILITY_NAMED_IAM":
 		fallthrough
 	case "CAPABILITY_AUTO_EXPAND":
-		*e = CapabilityEnum(s)
+		*e = CapabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for CapabilityEnum: %v", v)
 	}
 }

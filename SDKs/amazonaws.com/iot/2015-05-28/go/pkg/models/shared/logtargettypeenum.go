@@ -17,12 +17,16 @@ const (
 	LogTargetTypeEnumPrincipalID LogTargetTypeEnum = "PRINCIPAL_ID"
 )
 
+func (e LogTargetTypeEnum) ToPointer() *LogTargetTypeEnum {
+	return &e
+}
+
 func (e *LogTargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "THING_GROUP":
@@ -32,9 +36,9 @@ func (e *LogTargetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SOURCE_IP":
 		fallthrough
 	case "PRINCIPAL_ID":
-		*e = LogTargetTypeEnum(s)
+		*e = LogTargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LogTargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LogTargetTypeEnum: %v", v)
 	}
 }

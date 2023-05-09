@@ -23,12 +23,16 @@ const (
 	ExportPackagesSortEnumSystemsUpdatable ExportPackagesSortEnum = "systems_updatable"
 )
 
+func (e ExportPackagesSortEnum) ToPointer() *ExportPackagesSortEnum {
+	return &e
+}
+
 func (e *ExportPackagesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "name":
@@ -36,10 +40,10 @@ func (e *ExportPackagesSortEnum) UnmarshalJSON(data []byte) error {
 	case "systems_installed":
 		fallthrough
 	case "systems_updatable":
-		*e = ExportPackagesSortEnum(s)
+		*e = ExportPackagesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportPackagesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportPackagesSortEnum: %v", v)
 	}
 }
 

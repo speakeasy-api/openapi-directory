@@ -13,16 +13,20 @@ const (
 	AccessEndpointTypeEnumStreaming AccessEndpointTypeEnum = "STREAMING"
 )
 
+func (e AccessEndpointTypeEnum) ToPointer() *AccessEndpointTypeEnum {
+	return &e
+}
+
 func (e *AccessEndpointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STREAMING":
-		*e = AccessEndpointTypeEnum(s)
+		*e = AccessEndpointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessEndpointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessEndpointTypeEnum: %v", v)
 	}
 }

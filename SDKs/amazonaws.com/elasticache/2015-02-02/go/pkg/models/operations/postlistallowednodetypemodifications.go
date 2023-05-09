@@ -15,17 +15,21 @@ const (
 	POSTListAllowedNodeTypeModificationsActionEnumListAllowedNodeTypeModifications POSTListAllowedNodeTypeModificationsActionEnum = "ListAllowedNodeTypeModifications"
 )
 
+func (e POSTListAllowedNodeTypeModificationsActionEnum) ToPointer() *POSTListAllowedNodeTypeModificationsActionEnum {
+	return &e
+}
+
 func (e *POSTListAllowedNodeTypeModificationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListAllowedNodeTypeModifications":
-		*e = POSTListAllowedNodeTypeModificationsActionEnum(s)
+		*e = POSTListAllowedNodeTypeModificationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListAllowedNodeTypeModificationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListAllowedNodeTypeModificationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTListAllowedNodeTypeModificationsVersionEnumTwoThousandAndFifteen0202 POSTListAllowedNodeTypeModificationsVersionEnum = "2015-02-02"
 )
 
+func (e POSTListAllowedNodeTypeModificationsVersionEnum) ToPointer() *POSTListAllowedNodeTypeModificationsVersionEnum {
+	return &e
+}
+
 func (e *POSTListAllowedNodeTypeModificationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTListAllowedNodeTypeModificationsVersionEnum(s)
+		*e = POSTListAllowedNodeTypeModificationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListAllowedNodeTypeModificationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListAllowedNodeTypeModificationsVersionEnum: %v", v)
 	}
 }
 

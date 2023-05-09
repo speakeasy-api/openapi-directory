@@ -64,13 +64,12 @@ func (s *openapi) GetOpenAPISpec(ctx context.Context) (*operations.GetOpenAPISpe
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
-			data, err := io.ReadAll(httpRes.Body)
+			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {
 				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
-			out := string(data)
-			res.GetOpenAPISpec200TextPlainBinaryString = &out
+			res.GetOpenAPISpec200TextPlainBinaryString = out
 		}
 	}
 

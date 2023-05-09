@@ -33,12 +33,16 @@ const (
 	UpdateNetworkSsidRequestBodyAuthModeEnumPsk                                   UpdateNetworkSsidRequestBodyAuthModeEnum = "psk"
 )
 
+func (e UpdateNetworkSsidRequestBodyAuthModeEnum) ToPointer() *UpdateNetworkSsidRequestBodyAuthModeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSsidRequestBodyAuthModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "8021x-google":
 		fallthrough
 	case "8021x-localradius":
@@ -62,10 +66,10 @@ func (e *UpdateNetworkSsidRequestBodyAuthModeEnum) UnmarshalJSON(data []byte) er
 	case "open-with-radius":
 		fallthrough
 	case "psk":
-		*e = UpdateNetworkSsidRequestBodyAuthModeEnum(s)
+		*e = UpdateNetworkSsidRequestBodyAuthModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodyAuthModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodyAuthModeEnum: %v", v)
 	}
 }
 
@@ -77,19 +81,23 @@ const (
 	UpdateNetworkSsidRequestBodyEncryptionModeEnumWpa UpdateNetworkSsidRequestBodyEncryptionModeEnum = "wpa"
 )
 
+func (e UpdateNetworkSsidRequestBodyEncryptionModeEnum) ToPointer() *UpdateNetworkSsidRequestBodyEncryptionModeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSsidRequestBodyEncryptionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "wep":
 		fallthrough
 	case "wpa":
-		*e = UpdateNetworkSsidRequestBodyEncryptionModeEnum(s)
+		*e = UpdateNetworkSsidRequestBodyEncryptionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodyEncryptionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodyEncryptionModeEnum: %v", v)
 	}
 }
 
@@ -101,19 +109,23 @@ const (
 	UpdateNetworkSsidRequestBodyEnterpriseAdminAccessEnumAccessEnabled  UpdateNetworkSsidRequestBodyEnterpriseAdminAccessEnum = "access enabled"
 )
 
+func (e UpdateNetworkSsidRequestBodyEnterpriseAdminAccessEnum) ToPointer() *UpdateNetworkSsidRequestBodyEnterpriseAdminAccessEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSsidRequestBodyEnterpriseAdminAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "access disabled":
 		fallthrough
 	case "access enabled":
-		*e = UpdateNetworkSsidRequestBodyEnterpriseAdminAccessEnum(s)
+		*e = UpdateNetworkSsidRequestBodyEnterpriseAdminAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodyEnterpriseAdminAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodyEnterpriseAdminAccessEnum: %v", v)
 	}
 }
 
@@ -134,19 +146,23 @@ const (
 	UpdateNetworkSsidRequestBodyRadiusFailoverPolicyEnumDenyAccess  UpdateNetworkSsidRequestBodyRadiusFailoverPolicyEnum = "Deny access"
 )
 
+func (e UpdateNetworkSsidRequestBodyRadiusFailoverPolicyEnum) ToPointer() *UpdateNetworkSsidRequestBodyRadiusFailoverPolicyEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSsidRequestBodyRadiusFailoverPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Allow access":
 		fallthrough
 	case "Deny access":
-		*e = UpdateNetworkSsidRequestBodyRadiusFailoverPolicyEnum(s)
+		*e = UpdateNetworkSsidRequestBodyRadiusFailoverPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodyRadiusFailoverPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodyRadiusFailoverPolicyEnum: %v", v)
 	}
 }
 
@@ -158,19 +174,23 @@ const (
 	UpdateNetworkSsidRequestBodyRadiusLoadBalancingPolicyEnumStrictPriorityOrder UpdateNetworkSsidRequestBodyRadiusLoadBalancingPolicyEnum = "Strict priority order"
 )
 
+func (e UpdateNetworkSsidRequestBodyRadiusLoadBalancingPolicyEnum) ToPointer() *UpdateNetworkSsidRequestBodyRadiusLoadBalancingPolicyEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSsidRequestBodyRadiusLoadBalancingPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Round robin":
 		fallthrough
 	case "Strict priority order":
-		*e = UpdateNetworkSsidRequestBodyRadiusLoadBalancingPolicyEnum(s)
+		*e = UpdateNetworkSsidRequestBodyRadiusLoadBalancingPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodyRadiusLoadBalancingPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodyRadiusLoadBalancingPolicyEnum: %v", v)
 	}
 }
 
@@ -203,12 +223,16 @@ const (
 	UpdateNetworkSsidRequestBodySplashPageEnumSystemsManagerSentry                 UpdateNetworkSsidRequestBodySplashPageEnum = "Systems Manager Sentry"
 )
 
+func (e UpdateNetworkSsidRequestBodySplashPageEnum) ToPointer() *UpdateNetworkSsidRequestBodySplashPageEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSsidRequestBodySplashPageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Billing":
 		fallthrough
 	case "Cisco ISE":
@@ -236,43 +260,50 @@ func (e *UpdateNetworkSsidRequestBodySplashPageEnum) UnmarshalJSON(data []byte) 
 	case "Sponsored guest":
 		fallthrough
 	case "Systems Manager Sentry":
-		*e = UpdateNetworkSsidRequestBodySplashPageEnum(s)
+		*e = UpdateNetworkSsidRequestBodySplashPageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodySplashPageEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodySplashPageEnum: %v", v)
 	}
 }
 
-// UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum - The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode' or 'WPA3 only')
+// UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum - The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode', 'WPA3 only' or 'WPA3 192-bit Security')
 type UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum string
 
 const (
 	UpdateNetworkSsidRequestBodyWpaEncryptionModeEnumWpa1AndWpa2        UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum = "WPA1 and WPA2"
 	UpdateNetworkSsidRequestBodyWpaEncryptionModeEnumWpa1Only           UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum = "WPA1 only"
 	UpdateNetworkSsidRequestBodyWpaEncryptionModeEnumWpa2Only           UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum = "WPA2 only"
+	UpdateNetworkSsidRequestBodyWpaEncryptionModeEnumWpa3192BitSecurity UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum = "WPA3 192-bit Security"
 	UpdateNetworkSsidRequestBodyWpaEncryptionModeEnumWpa3TransitionMode UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum = "WPA3 Transition Mode"
 	UpdateNetworkSsidRequestBodyWpaEncryptionModeEnumWpa3Only           UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum = "WPA3 only"
 )
 
+func (e UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum) ToPointer() *UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WPA1 and WPA2":
 		fallthrough
 	case "WPA1 only":
 		fallthrough
 	case "WPA2 only":
 		fallthrough
+	case "WPA3 192-bit Security":
+		fallthrough
 	case "WPA3 Transition Mode":
 		fallthrough
 	case "WPA3 only":
-		*e = UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum(s)
+		*e = UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum: %v", v)
 	}
 }
 
@@ -343,7 +374,7 @@ type UpdateNetworkSsidRequestBody struct {
 	WalledGardenEnabled *bool `json:"walledGardenEnabled,omitempty"`
 	// Specify your walled garden by entering space-separated addresses, ranges using CIDR notation, domain names, and domain wildcards (e.g. 192.168.1.1/24 192.168.37.10/32 www.yahoo.com *.google.com). Meraki's splash page is automatically included in your walled garden.
 	WalledGardenRanges *string `json:"walledGardenRanges,omitempty"`
-	// The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode' or 'WPA3 only')
+	// The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode', 'WPA3 only' or 'WPA3 192-bit Security')
 	WpaEncryptionMode *UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum `json:"wpaEncryptionMode,omitempty"`
 }
 

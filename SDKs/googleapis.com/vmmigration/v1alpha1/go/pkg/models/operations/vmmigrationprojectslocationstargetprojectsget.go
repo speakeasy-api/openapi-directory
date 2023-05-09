@@ -23,21 +23,25 @@ const (
 	VmmigrationProjectsLocationsTargetProjectsGetViewEnumFull                             VmmigrationProjectsLocationsTargetProjectsGetViewEnum = "FULL"
 )
 
+func (e VmmigrationProjectsLocationsTargetProjectsGetViewEnum) ToPointer() *VmmigrationProjectsLocationsTargetProjectsGetViewEnum {
+	return &e
+}
+
 func (e *VmmigrationProjectsLocationsTargetProjectsGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UTILIZATION_REPORT_VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = VmmigrationProjectsLocationsTargetProjectsGetViewEnum(s)
+		*e = VmmigrationProjectsLocationsTargetProjectsGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VmmigrationProjectsLocationsTargetProjectsGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for VmmigrationProjectsLocationsTargetProjectsGetViewEnum: %v", v)
 	}
 }
 

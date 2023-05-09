@@ -34,7 +34,10 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // CloudshellUsersEnvironmentsAddPublicKey - Adds a public SSH key to an environment, allowing clients with the corresponding private key to connect to that environment via SSH. If a key with the same content already exists, this will error with ALREADY_EXISTS.
 func (s *users) CloudshellUsersEnvironmentsAddPublicKey(ctx context.Context, request operations.CloudshellUsersEnvironmentsAddPublicKeyRequest, security operations.CloudshellUsersEnvironmentsAddPublicKeySecurity) (*operations.CloudshellUsersEnvironmentsAddPublicKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:addPublicKey", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:addPublicKey", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddPublicKeyRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *users) CloudshellUsersEnvironmentsAddPublicKey(ctx context.Context, req
 // CloudshellUsersEnvironmentsAuthorize - Sends OAuth credentials to a running environment on behalf of a user. When this completes, the environment will be authorized to run various Google Cloud command line tools without requiring the user to manually authenticate.
 func (s *users) CloudshellUsersEnvironmentsAuthorize(ctx context.Context, request operations.CloudshellUsersEnvironmentsAuthorizeRequest, security operations.CloudshellUsersEnvironmentsAuthorizeSecurity) (*operations.CloudshellUsersEnvironmentsAuthorizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:authorize", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:authorize", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthorizeEnvironmentRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *users) CloudshellUsersEnvironmentsAuthorize(ctx context.Context, reques
 // CloudshellUsersEnvironmentsGet - Gets an environment. Returns NOT_FOUND if the environment does not exist.
 func (s *users) CloudshellUsersEnvironmentsGet(ctx context.Context, request operations.CloudshellUsersEnvironmentsGetRequest, security operations.CloudshellUsersEnvironmentsGetSecurity) (*operations.CloudshellUsersEnvironmentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *users) CloudshellUsersEnvironmentsGet(ctx context.Context, request oper
 // CloudshellUsersEnvironmentsRemovePublicKey - Removes a public SSH key from an environment. Clients will no longer be able to connect to the environment using the corresponding private key. If a key with the same content is not present, this will error with NOT_FOUND.
 func (s *users) CloudshellUsersEnvironmentsRemovePublicKey(ctx context.Context, request operations.CloudshellUsersEnvironmentsRemovePublicKeyRequest, security operations.CloudshellUsersEnvironmentsRemovePublicKeySecurity) (*operations.CloudshellUsersEnvironmentsRemovePublicKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:removePublicKey", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:removePublicKey", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemovePublicKeyRequest", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *users) CloudshellUsersEnvironmentsRemovePublicKey(ctx context.Context, 
 // CloudshellUsersEnvironmentsStart - Starts an existing environment, allowing clients to connect to it. The returned operation will contain an instance of StartEnvironmentMetadata in its metadata field. Users can wait for the environment to start by polling this operation via GetOperation. Once the environment has finished starting and is ready to accept connections, the operation will contain a StartEnvironmentResponse in its response field.
 func (s *users) CloudshellUsersEnvironmentsStart(ctx context.Context, request operations.CloudshellUsersEnvironmentsStartRequest, security operations.CloudshellUsersEnvironmentsStartSecurity) (*operations.CloudshellUsersEnvironmentsStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartEnvironmentRequest", "json")
 	if err != nil {

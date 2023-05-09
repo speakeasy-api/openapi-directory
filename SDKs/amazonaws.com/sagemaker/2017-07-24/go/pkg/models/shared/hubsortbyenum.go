@@ -16,12 +16,16 @@ const (
 	HubSortByEnumAccountIDOwner HubSortByEnum = "AccountIdOwner"
 )
 
+func (e HubSortByEnum) ToPointer() *HubSortByEnum {
+	return &e
+}
+
 func (e *HubSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HubName":
 		fallthrough
 	case "CreationTime":
@@ -29,9 +33,9 @@ func (e *HubSortByEnum) UnmarshalJSON(data []byte) error {
 	case "HubStatus":
 		fallthrough
 	case "AccountIdOwner":
-		*e = HubSortByEnum(s)
+		*e = HubSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HubSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for HubSortByEnum: %v", v)
 	}
 }

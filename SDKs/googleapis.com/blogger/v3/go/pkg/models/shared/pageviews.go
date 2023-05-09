@@ -16,21 +16,25 @@ const (
 	PageviewsCountsTimeRangeEnumSevenDays  PageviewsCountsTimeRangeEnum = "SEVEN_DAYS"
 )
 
+func (e PageviewsCountsTimeRangeEnum) ToPointer() *PageviewsCountsTimeRangeEnum {
+	return &e
+}
+
 func (e *PageviewsCountsTimeRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL_TIME":
 		fallthrough
 	case "THIRTY_DAYS":
 		fallthrough
 	case "SEVEN_DAYS":
-		*e = PageviewsCountsTimeRangeEnum(s)
+		*e = PageviewsCountsTimeRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PageviewsCountsTimeRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for PageviewsCountsTimeRangeEnum: %v", v)
 	}
 }
 

@@ -32,17 +32,21 @@ const (
 	GetBranches503ErrorObjectDescriptionEnumTheServiceIsTemporarilyUnavailable GetBranches503ErrorObjectDescriptionEnum = "The service is temporarily unavailable."
 )
 
+func (e GetBranches503ErrorObjectDescriptionEnum) ToPointer() *GetBranches503ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetBranches503ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "The service is temporarily unavailable.":
-		*e = GetBranches503ErrorObjectDescriptionEnum(s)
+		*e = GetBranches503ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches503ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches503ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -52,17 +56,21 @@ const (
 	GetBranches503ErrorObjectStatusEnumFiveHundredAndThree GetBranches503ErrorObjectStatusEnum = "503"
 )
 
+func (e GetBranches503ErrorObjectStatusEnum) ToPointer() *GetBranches503ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetBranches503ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "503":
-		*e = GetBranches503ErrorObjectStatusEnum(s)
+		*e = GetBranches503ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches503ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches503ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -72,17 +80,21 @@ const (
 	GetBranches503ErrorObjectTitleEnumServiceTemporarilyUnavailable GetBranches503ErrorObjectTitleEnum = "Service temporarily unavailable"
 )
 
+func (e GetBranches503ErrorObjectTitleEnum) ToPointer() *GetBranches503ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetBranches503ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Service temporarily unavailable":
-		*e = GetBranches503ErrorObjectTitleEnum(s)
+		*e = GetBranches503ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches503ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches503ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -99,17 +111,21 @@ const (
 	GetBranches500ErrorObjectDescriptionEnumAnErrorOccurredOnTheServerNoFurtherInformationIsAvailable GetBranches500ErrorObjectDescriptionEnum = "An error occurred on the server. No further information is available."
 )
 
+func (e GetBranches500ErrorObjectDescriptionEnum) ToPointer() *GetBranches500ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetBranches500ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "An error occurred on the server. No further information is available.":
-		*e = GetBranches500ErrorObjectDescriptionEnum(s)
+		*e = GetBranches500ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches500ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches500ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -119,17 +135,21 @@ const (
 	GetBranches500ErrorObjectStatusEnumFiveHundred GetBranches500ErrorObjectStatusEnum = "500"
 )
 
+func (e GetBranches500ErrorObjectStatusEnum) ToPointer() *GetBranches500ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetBranches500ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "500":
-		*e = GetBranches500ErrorObjectStatusEnum(s)
+		*e = GetBranches500ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches500ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches500ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -139,17 +159,21 @@ const (
 	GetBranches500ErrorObjectTitleEnumInternalServerError GetBranches500ErrorObjectTitleEnum = "Internal server error"
 )
 
+func (e GetBranches500ErrorObjectTitleEnum) ToPointer() *GetBranches500ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetBranches500ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = GetBranches500ErrorObjectTitleEnum(s)
+		*e = GetBranches500ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches500ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches500ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -166,17 +190,21 @@ const (
 	GetBranches429ErrorObjectDescriptionEnumYouHaveRequestedThisResourceTooOftenSlowDown GetBranches429ErrorObjectDescriptionEnum = "You have requested this resource too often. Slow down."
 )
 
+func (e GetBranches429ErrorObjectDescriptionEnum) ToPointer() *GetBranches429ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetBranches429ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "You have requested this resource too often. Slow down.":
-		*e = GetBranches429ErrorObjectDescriptionEnum(s)
+		*e = GetBranches429ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches429ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches429ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -186,17 +214,21 @@ const (
 	GetBranches429ErrorObjectStatusEnumFourHundredAndTwentyNine GetBranches429ErrorObjectStatusEnum = "429"
 )
 
+func (e GetBranches429ErrorObjectStatusEnum) ToPointer() *GetBranches429ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetBranches429ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "429":
-		*e = GetBranches429ErrorObjectStatusEnum(s)
+		*e = GetBranches429ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches429ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches429ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -206,17 +238,21 @@ const (
 	GetBranches429ErrorObjectTitleEnumTooManyRequests GetBranches429ErrorObjectTitleEnum = "Too many requests"
 )
 
+func (e GetBranches429ErrorObjectTitleEnum) ToPointer() *GetBranches429ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetBranches429ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Too many requests":
-		*e = GetBranches429ErrorObjectTitleEnum(s)
+		*e = GetBranches429ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches429ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches429ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -233,17 +269,21 @@ const (
 	GetBranches408ErrorObjectDescriptionEnumYourClientHasFailedToSubmitARequestAndATimeoutHasOccurred GetBranches408ErrorObjectDescriptionEnum = "Your client has failed to submit a request, and a timeout has occurred."
 )
 
+func (e GetBranches408ErrorObjectDescriptionEnum) ToPointer() *GetBranches408ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetBranches408ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Your client has failed to submit a request, and a timeout has occurred.":
-		*e = GetBranches408ErrorObjectDescriptionEnum(s)
+		*e = GetBranches408ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches408ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches408ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -253,17 +293,21 @@ const (
 	GetBranches408ErrorObjectStatusEnumFourHundredAndEight GetBranches408ErrorObjectStatusEnum = "408"
 )
 
+func (e GetBranches408ErrorObjectStatusEnum) ToPointer() *GetBranches408ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetBranches408ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "408":
-		*e = GetBranches408ErrorObjectStatusEnum(s)
+		*e = GetBranches408ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches408ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches408ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	GetBranches408ErrorObjectTitleEnumClientTimeout GetBranches408ErrorObjectTitleEnum = "Client timeout"
 )
 
+func (e GetBranches408ErrorObjectTitleEnum) ToPointer() *GetBranches408ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetBranches408ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Client timeout":
-		*e = GetBranches408ErrorObjectTitleEnum(s)
+		*e = GetBranches408ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches408ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches408ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -300,17 +348,21 @@ const (
 	GetBranches400ErrorObjectDescriptionEnumYouHaveSentARequestWhichCouldNotBeUnderstood GetBranches400ErrorObjectDescriptionEnum = "You have sent a request which could not be understood."
 )
 
+func (e GetBranches400ErrorObjectDescriptionEnum) ToPointer() *GetBranches400ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetBranches400ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "You have sent a request which could not be understood.":
-		*e = GetBranches400ErrorObjectDescriptionEnum(s)
+		*e = GetBranches400ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches400ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches400ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	GetBranches400ErrorObjectStatusEnumFourHundred GetBranches400ErrorObjectStatusEnum = "400"
 )
 
+func (e GetBranches400ErrorObjectStatusEnum) ToPointer() *GetBranches400ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetBranches400ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "400":
-		*e = GetBranches400ErrorObjectStatusEnum(s)
+		*e = GetBranches400ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches400ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches400ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -340,17 +396,21 @@ const (
 	GetBranches400ErrorObjectTitleEnumBadRequest GetBranches400ErrorObjectTitleEnum = "Bad request"
 )
 
+func (e GetBranches400ErrorObjectTitleEnum) ToPointer() *GetBranches400ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetBranches400ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Bad request":
-		*e = GetBranches400ErrorObjectTitleEnum(s)
+		*e = GetBranches400ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches400ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches400ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -377,12 +437,16 @@ const (
 	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnumWheelchairAccess  GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnum = "WheelchairAccess"
 )
 
+func (e GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnum) ToPointer() *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnum {
+	return &e
+}
+
 func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AudioCashMachine":
 		fallthrough
 	case "AutomaticDoors":
@@ -402,10 +466,10 @@ func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessi
 	case "LowerLevelCounter":
 		fallthrough
 	case "WheelchairAccess":
-		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnum(s)
+		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchAccessibilityTypesEnum: %v", v)
 	}
 }
 
@@ -446,12 +510,16 @@ const (
 	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchFacilitiesNameEnumWifi              GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchFacilitiesNameEnum = "Wifi"
 )
 
+func (e GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchFacilitiesNameEnum) ToPointer() *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchFacilitiesNameEnum {
+	return &e
+}
+
 func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchFacilitiesNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BusinessITSupport":
 		fallthrough
 	case "CollectionLockers":
@@ -461,10 +529,10 @@ func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchF
 	case "Parking":
 		fallthrough
 	case "Wifi":
-		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchFacilitiesNameEnum(s)
+		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchFacilitiesNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchFacilitiesNameEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchFacilitiesNameEnum: %v", v)
 	}
 }
 
@@ -485,12 +553,16 @@ const (
 	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchMediatedServiceNameEnumWheelChairAccess     GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchMediatedServiceNameEnum = "WheelChairAccess"
 )
 
+func (e GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchMediatedServiceNameEnum) ToPointer() *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchMediatedServiceNameEnum {
+	return &e
+}
+
 func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchMediatedServiceNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BureauDeChange":
 		fallthrough
 	case "BusinessCounter":
@@ -512,10 +584,10 @@ func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchM
 	case "VideoBanking":
 		fallthrough
 	case "WheelChairAccess":
-		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchMediatedServiceNameEnum(s)
+		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchMediatedServiceNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchMediatedServiceNameEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchMediatedServiceNameEnum: %v", v)
 	}
 }
 
@@ -542,12 +614,16 @@ const (
 	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchSelfServeServiceNameEnumStatementPrinter               GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchSelfServeServiceNameEnum = "StatementPrinter"
 )
 
+func (e GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchSelfServeServiceNameEnum) ToPointer() *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchSelfServeServiceNameEnum {
+	return &e
+}
+
 func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchSelfServeServiceNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AccountVerificationService":
 		fallthrough
 	case "AssistedServiceCounter":
@@ -581,10 +657,10 @@ func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchS
 	case "SelfServiceAccountOpening":
 		fallthrough
 	case "StatementPrinter":
-		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchSelfServeServiceNameEnum(s)
+		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchSelfServeServiceNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchSelfServeServiceNameEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchSelfServeServiceNameEnum: %v", v)
 	}
 }
 
@@ -596,19 +672,23 @@ const (
 	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchTypeEnumMobile   GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchTypeEnum = "Mobile"
 )
 
+func (e GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchTypeEnum) ToPointer() *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchTypeEnum {
+	return &e
+}
+
 func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Physical":
 		fallthrough
 	case "Mobile":
-		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchTypeEnum(s)
+		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchBranchTypeEnum: %v", v)
 	}
 }
 
@@ -626,12 +706,16 @@ const (
 	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustomerSegmentEnumWealth    GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustomerSegmentEnum = "Wealth"
 )
 
+func (e GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustomerSegmentEnum) ToPointer() *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustomerSegmentEnum {
+	return &e
+}
+
 func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustomerSegmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Business":
 		fallthrough
 	case "Corporate":
@@ -647,10 +731,10 @@ func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustome
 	case "SME":
 		fallthrough
 	case "Wealth":
-		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustomerSegmentEnum(s)
+		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustomerSegmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustomerSegmentEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchCustomerSegmentEnum: %v", v)
 	}
 }
 
@@ -676,12 +760,16 @@ const (
 	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimesOpeningDayEnumPublicAndBankHoliday GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimesOpeningDayEnum = "Public and Bank Holiday"
 )
 
+func (e GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimesOpeningDayEnum) ToPointer() *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimesOpeningDayEnum {
+	return &e
+}
+
 func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimesOpeningDayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Monday":
 		fallthrough
 	case "Tuesday":
@@ -697,10 +785,10 @@ func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpening
 	case "Sunday":
 		fallthrough
 	case "Public and Bank Holiday":
-		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimesOpeningDayEnum(s)
+		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimesOpeningDayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimesOpeningDayEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOpeningTimesOpeningDayEnum: %v", v)
 	}
 }
 
@@ -725,19 +813,23 @@ const (
 	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIPOCodeEnumEu GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIPOCodeEnum = "EU"
 )
 
+func (e GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIPOCodeEnum) ToPointer() *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIPOCodeEnum {
+	return &e
+}
+
 func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIPOCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UK":
 		fallthrough
 	case "EU":
-		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIPOCodeEnum(s)
+		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIPOCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIPOCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONBranchOrganisationBrandTrademarkIPOCodeEnum: %v", v)
 	}
 }
 
@@ -841,17 +933,21 @@ const (
 	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnumUseOfTheApIsAndAnyRelatedDataWillBeSubjectToTheTermsOfTheOpenLicenceAndSubjectToTermsAndConditions GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum = "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions"
 )
 
+func (e GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum) ToPointer() *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum {
+	return &e
+}
+
 func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions":
-		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum(s)
+		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum: %v", v)
 	}
 }
 
@@ -862,17 +958,21 @@ const (
 	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnumHTTPSWwwOpenbankingOrgUkOpenLicence GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum = "https://www.openbanking.org.uk/open-licence"
 )
 
+func (e GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum) ToPointer() *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum {
+	return &e
+}
+
 func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "https://www.openbanking.org.uk/open-licence":
-		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum(s)
+		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum: %v", v)
 	}
 }
 
@@ -883,17 +983,21 @@ const (
 	GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnumHTTPSWwwOpenbankingOrgUkTerms GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum = "https://www.openbanking.org.uk/terms"
 )
 
+func (e GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum) ToPointer() *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum {
+	return &e
+}
+
 func (e *GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "https://www.openbanking.org.uk/terms":
-		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum(s)
+		*e = GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum: %v", v)
 	}
 }
 

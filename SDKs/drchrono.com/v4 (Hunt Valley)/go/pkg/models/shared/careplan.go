@@ -19,12 +19,16 @@ const (
 	CarePlanPlanTypeEnumSix   CarePlanPlanTypeEnum = "6"
 )
 
+func (e CarePlanPlanTypeEnum) ToPointer() *CarePlanPlanTypeEnum {
+	return &e
+}
+
 func (e *CarePlanPlanTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "2":
@@ -36,10 +40,10 @@ func (e *CarePlanPlanTypeEnum) UnmarshalJSON(data []byte) error {
 	case "5":
 		fallthrough
 	case "6":
-		*e = CarePlanPlanTypeEnum(s)
+		*e = CarePlanPlanTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CarePlanPlanTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CarePlanPlanTypeEnum: %v", v)
 	}
 }
 

@@ -38,19 +38,23 @@ const (
 	BigqueryJobsListProjectionEnumMinimal BigqueryJobsListProjectionEnum = "minimal"
 )
 
+func (e BigqueryJobsListProjectionEnum) ToPointer() *BigqueryJobsListProjectionEnum {
+	return &e
+}
+
 func (e *BigqueryJobsListProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "full":
 		fallthrough
 	case "minimal":
-		*e = BigqueryJobsListProjectionEnum(s)
+		*e = BigqueryJobsListProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BigqueryJobsListProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for BigqueryJobsListProjectionEnum: %v", v)
 	}
 }
 
@@ -62,21 +66,25 @@ const (
 	BigqueryJobsListStateFilterEnumRunning BigqueryJobsListStateFilterEnum = "running"
 )
 
+func (e BigqueryJobsListStateFilterEnum) ToPointer() *BigqueryJobsListStateFilterEnum {
+	return &e
+}
+
 func (e *BigqueryJobsListStateFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "done":
 		fallthrough
 	case "pending":
 		fallthrough
 	case "running":
-		*e = BigqueryJobsListStateFilterEnum(s)
+		*e = BigqueryJobsListStateFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BigqueryJobsListStateFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for BigqueryJobsListStateFilterEnum: %v", v)
 	}
 }
 

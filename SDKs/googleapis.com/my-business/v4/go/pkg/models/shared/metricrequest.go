@@ -29,12 +29,16 @@ const (
 	MetricRequestMetricEnumLocalPostActionsCallToAction MetricRequestMetricEnum = "LOCAL_POST_ACTIONS_CALL_TO_ACTION"
 )
 
+func (e MetricRequestMetricEnum) ToPointer() *MetricRequestMetricEnum {
+	return &e
+}
+
 func (e *MetricRequestMetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_UNSPECIFIED":
 		fallthrough
 	case "ALL":
@@ -66,10 +70,10 @@ func (e *MetricRequestMetricEnum) UnmarshalJSON(data []byte) error {
 	case "LOCAL_POST_VIEWS_SEARCH":
 		fallthrough
 	case "LOCAL_POST_ACTIONS_CALL_TO_ACTION":
-		*e = MetricRequestMetricEnum(s)
+		*e = MetricRequestMetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricRequestMetricEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricRequestMetricEnum: %v", v)
 	}
 }
 
@@ -83,12 +87,16 @@ const (
 	MetricRequestOptionsEnumBreakdownHourOfDay      MetricRequestOptionsEnum = "BREAKDOWN_HOUR_OF_DAY"
 )
 
+func (e MetricRequestOptionsEnum) ToPointer() *MetricRequestOptionsEnum {
+	return &e
+}
+
 func (e *MetricRequestOptionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_OPTION_UNSPECIFIED":
 		fallthrough
 	case "AGGREGATED_TOTAL":
@@ -98,10 +106,10 @@ func (e *MetricRequestOptionsEnum) UnmarshalJSON(data []byte) error {
 	case "BREAKDOWN_DAY_OF_WEEK":
 		fallthrough
 	case "BREAKDOWN_HOUR_OF_DAY":
-		*e = MetricRequestOptionsEnum(s)
+		*e = MetricRequestOptionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricRequestOptionsEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricRequestOptionsEnum: %v", v)
 	}
 }
 

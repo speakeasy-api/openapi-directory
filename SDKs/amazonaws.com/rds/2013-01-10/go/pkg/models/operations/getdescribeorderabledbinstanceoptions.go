@@ -15,17 +15,21 @@ const (
 	GETDescribeOrderableDBInstanceOptionsActionEnumDescribeOrderableDbInstanceOptions GETDescribeOrderableDBInstanceOptionsActionEnum = "DescribeOrderableDBInstanceOptions"
 )
 
+func (e GETDescribeOrderableDBInstanceOptionsActionEnum) ToPointer() *GETDescribeOrderableDBInstanceOptionsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeOrderableDBInstanceOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeOrderableDBInstanceOptions":
-		*e = GETDescribeOrderableDBInstanceOptionsActionEnum(s)
+		*e = GETDescribeOrderableDBInstanceOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeOrderableDBInstanceOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeOrderableDBInstanceOptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeOrderableDBInstanceOptionsVersionEnumTwoThousandAndThirteen0110 GETDescribeOrderableDBInstanceOptionsVersionEnum = "2013-01-10"
 )
 
+func (e GETDescribeOrderableDBInstanceOptionsVersionEnum) ToPointer() *GETDescribeOrderableDBInstanceOptionsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeOrderableDBInstanceOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-10":
-		*e = GETDescribeOrderableDBInstanceOptionsVersionEnum(s)
+		*e = GETDescribeOrderableDBInstanceOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeOrderableDBInstanceOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeOrderableDBInstanceOptionsVersionEnum: %v", v)
 	}
 }
 

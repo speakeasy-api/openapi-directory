@@ -5,6 +5,7 @@ package shared
 // QueryResult - Success
 type QueryResult struct {
 	FacetResults          []FacetResult         `json:"FacetResults,omitempty"`
+	FeaturedResultsItems  []FeaturedResultsItem `json:"FeaturedResultsItems,omitempty"`
 	QueryID               *string               `json:"QueryId,omitempty"`
 	ResultItems           []QueryResultItem     `json:"ResultItems,omitempty"`
 	SpellCorrectedQueries []SpellCorrectedQuery `json:"SpellCorrectedQueries,omitempty"`

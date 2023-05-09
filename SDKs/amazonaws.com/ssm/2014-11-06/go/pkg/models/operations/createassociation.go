@@ -16,17 +16,21 @@ const (
 	CreateAssociationXAmzTargetEnumAmazonSsmCreateAssociation CreateAssociationXAmzTargetEnum = "AmazonSSM.CreateAssociation"
 )
 
+func (e CreateAssociationXAmzTargetEnum) ToPointer() *CreateAssociationXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAssociationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.CreateAssociation":
-		*e = CreateAssociationXAmzTargetEnum(s)
+		*e = CreateAssociationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAssociationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAssociationXAmzTargetEnum: %v", v)
 	}
 }
 

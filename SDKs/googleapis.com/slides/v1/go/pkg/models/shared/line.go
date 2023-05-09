@@ -17,12 +17,16 @@ const (
 	LineLineCategoryEnumCurved                  LineLineCategoryEnum = "CURVED"
 )
 
+func (e LineLineCategoryEnum) ToPointer() *LineLineCategoryEnum {
+	return &e
+}
+
 func (e *LineLineCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "STRAIGHT":
@@ -30,10 +34,10 @@ func (e *LineLineCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "BENT":
 		fallthrough
 	case "CURVED":
-		*e = LineLineCategoryEnum(s)
+		*e = LineLineCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineLineCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for LineLineCategoryEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	LineLineTypeEnumStraightLine       LineLineTypeEnum = "STRAIGHT_LINE"
 )
 
+func (e LineLineTypeEnum) ToPointer() *LineLineTypeEnum {
+	return &e
+}
+
 func (e *LineLineTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "STRAIGHT_CONNECTOR_1":
@@ -81,10 +89,10 @@ func (e *LineLineTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CURVED_CONNECTOR_5":
 		fallthrough
 	case "STRAIGHT_LINE":
-		*e = LineLineTypeEnum(s)
+		*e = LineLineTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineLineTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LineLineTypeEnum: %v", v)
 	}
 }
 

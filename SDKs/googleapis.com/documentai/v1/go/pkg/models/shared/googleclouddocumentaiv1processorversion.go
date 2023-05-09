@@ -22,12 +22,16 @@ const (
 	GoogleCloudDocumentaiV1ProcessorVersionStateEnumImporting        GoogleCloudDocumentaiV1ProcessorVersionStateEnum = "IMPORTING"
 )
 
+func (e GoogleCloudDocumentaiV1ProcessorVersionStateEnum) ToPointer() *GoogleCloudDocumentaiV1ProcessorVersionStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1ProcessorVersionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "DEPLOYED":
@@ -45,10 +49,10 @@ func (e *GoogleCloudDocumentaiV1ProcessorVersionStateEnum) UnmarshalJSON(data []
 	case "FAILED":
 		fallthrough
 	case "IMPORTING":
-		*e = GoogleCloudDocumentaiV1ProcessorVersionStateEnum(s)
+		*e = GoogleCloudDocumentaiV1ProcessorVersionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1ProcessorVersionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1ProcessorVersionStateEnum: %v", v)
 	}
 }
 

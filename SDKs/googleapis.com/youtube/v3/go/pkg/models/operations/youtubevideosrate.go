@@ -39,21 +39,25 @@ const (
 	YoutubeVideosRateRatingEnumDislike YoutubeVideosRateRatingEnum = "dislike"
 )
 
+func (e YoutubeVideosRateRatingEnum) ToPointer() *YoutubeVideosRateRatingEnum {
+	return &e
+}
+
 func (e *YoutubeVideosRateRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "like":
 		fallthrough
 	case "dislike":
-		*e = YoutubeVideosRateRatingEnum(s)
+		*e = YoutubeVideosRateRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeVideosRateRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeVideosRateRatingEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CreatePresignedDomainURLXAmzTargetEnumSageMakerCreatePresignedDomainURL CreatePresignedDomainURLXAmzTargetEnum = "SageMaker.CreatePresignedDomainUrl"
 )
 
+func (e CreatePresignedDomainURLXAmzTargetEnum) ToPointer() *CreatePresignedDomainURLXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreatePresignedDomainURLXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreatePresignedDomainUrl":
-		*e = CreatePresignedDomainURLXAmzTargetEnum(s)
+		*e = CreatePresignedDomainURLXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePresignedDomainURLXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePresignedDomainURLXAmzTargetEnum: %v", v)
 	}
 }
 

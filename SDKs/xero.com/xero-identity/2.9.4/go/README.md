@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/xero.com/xero-identity/2.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteConnectionRequest{
-        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-    }
-
     ctx := context.Background()
-    res, err := s.Identity.DeleteConnection(ctx, req, operations.DeleteConnectionSecurity{
+    res, err := s.Identity.DeleteConnection(ctx, operations.DeleteConnectionRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    }, operations.DeleteConnectionSecurity{
         OAuth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -47,10 +44,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### Identity
+### [Identity](docs/identity/README.md)
 
-* `DeleteConnection` - Deletes a connection for this user (i.e. disconnect a tenant)
-* `GetConnections` - Retrieves the connections for this user
+* [DeleteConnection](docs/identity/README.md#deleteconnection) - Deletes a connection for this user (i.e. disconnect a tenant)
+* [GetConnections](docs/identity/README.md#getconnections) - Retrieves the connections for this user
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -14,18 +14,22 @@ const (
 	InvitationTypeEnumOrganization InvitationTypeEnum = "ORGANIZATION"
 )
 
+func (e InvitationTypeEnum) ToPointer() *InvitationTypeEnum {
+	return &e
+}
+
 func (e *InvitationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVITATION":
 		fallthrough
 	case "ORGANIZATION":
-		*e = InvitationTypeEnum(s)
+		*e = InvitationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationTypeEnum: %v", v)
 	}
 }

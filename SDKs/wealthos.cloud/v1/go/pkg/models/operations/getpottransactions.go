@@ -20,19 +20,23 @@ const (
 	GetPotTransactionsSortEnumDesc GetPotTransactionsSortEnum = "desc"
 )
 
+func (e GetPotTransactionsSortEnum) ToPointer() *GetPotTransactionsSortEnum {
+	return &e
+}
+
 func (e *GetPotTransactionsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetPotTransactionsSortEnum(s)
+		*e = GetPotTransactionsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPotTransactionsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPotTransactionsSortEnum: %v", v)
 	}
 }
 
@@ -103,19 +107,23 @@ const (
 	GetPotTransactions200ApplicationJSONTransactionsDirectionEnumOut GetPotTransactions200ApplicationJSONTransactionsDirectionEnum = "out"
 )
 
+func (e GetPotTransactions200ApplicationJSONTransactionsDirectionEnum) ToPointer() *GetPotTransactions200ApplicationJSONTransactionsDirectionEnum {
+	return &e
+}
+
 func (e *GetPotTransactions200ApplicationJSONTransactionsDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "in":
 		fallthrough
 	case "out":
-		*e = GetPotTransactions200ApplicationJSONTransactionsDirectionEnum(s)
+		*e = GetPotTransactions200ApplicationJSONTransactionsDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPotTransactions200ApplicationJSONTransactionsDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPotTransactions200ApplicationJSONTransactionsDirectionEnum: %v", v)
 	}
 }
 
@@ -129,12 +137,16 @@ const (
 	GetPotTransactions200ApplicationJSONTransactionsOriginEnumSystem     GetPotTransactions200ApplicationJSONTransactionsOriginEnum = "system"
 )
 
+func (e GetPotTransactions200ApplicationJSONTransactionsOriginEnum) ToPointer() *GetPotTransactions200ApplicationJSONTransactionsOriginEnum {
+	return &e
+}
+
 func (e *GetPotTransactions200ApplicationJSONTransactionsOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api":
 		fallthrough
 	case "admin_ui":
@@ -142,10 +154,10 @@ func (e *GetPotTransactions200ApplicationJSONTransactionsOriginEnum) UnmarshalJS
 	case "file_upload":
 		fallthrough
 	case "system":
-		*e = GetPotTransactions200ApplicationJSONTransactionsOriginEnum(s)
+		*e = GetPotTransactions200ApplicationJSONTransactionsOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPotTransactions200ApplicationJSONTransactionsOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPotTransactions200ApplicationJSONTransactionsOriginEnum: %v", v)
 	}
 }
 
@@ -164,12 +176,16 @@ const (
 	GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeEnumCorporateActions GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeEnum = "Corporate actions"
 )
 
+func (e GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeEnum) ToPointer() *GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeEnum {
+	return &e
+}
+
 func (e *GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Fees":
 		fallthrough
 	case "Buy":
@@ -187,10 +203,10 @@ func (e *GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeE
 	case "Withdrawal":
 		fallthrough
 	case "Corporate actions":
-		*e = GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeEnum(s)
+		*e = GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPotTransactions200ApplicationJSONTransactionsPrimaryTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -267,12 +283,16 @@ const (
 	GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnumMiscellaneousCorporateActionExercise     GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnum = "Miscellaneous Corporate Action Exercise"
 )
 
+func (e GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnum) ToPointer() *GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnum {
+	return &e
+}
+
 func (e *GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Dividend Reinvestment":
 		fallthrough
 	case "Interest Reinvestment":
@@ -406,10 +426,10 @@ func (e *GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnum)
 	case "Withdrawal":
 		fallthrough
 	case "Miscellaneous Corporate Action Exercise":
-		*e = GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnum(s)
+		*e = GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPotTransactions200ApplicationJSONTransactionsSubTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -426,12 +446,16 @@ const (
 	GetPotTransactions200ApplicationJSONTransactionsSubTypeEnumScheduled  GetPotTransactions200ApplicationJSONTransactionsSubTypeEnum = "scheduled"
 )
 
+func (e GetPotTransactions200ApplicationJSONTransactionsSubTypeEnum) ToPointer() *GetPotTransactions200ApplicationJSONTransactionsSubTypeEnum {
+	return &e
+}
+
 func (e *GetPotTransactions200ApplicationJSONTransactionsSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instructed":
 		fallthrough
 	case "confirmed":
@@ -445,10 +469,10 @@ func (e *GetPotTransactions200ApplicationJSONTransactionsSubTypeEnum) UnmarshalJ
 	case "cancelled":
 		fallthrough
 	case "scheduled":
-		*e = GetPotTransactions200ApplicationJSONTransactionsSubTypeEnum(s)
+		*e = GetPotTransactions200ApplicationJSONTransactionsSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPotTransactions200ApplicationJSONTransactionsSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPotTransactions200ApplicationJSONTransactionsSubTypeEnum: %v", v)
 	}
 }
 
@@ -460,19 +484,23 @@ const (
 	GetPotTransactions200ApplicationJSONTransactionsTypeEnumArchived GetPotTransactions200ApplicationJSONTransactionsTypeEnum = "archived"
 )
 
+func (e GetPotTransactions200ApplicationJSONTransactionsTypeEnum) ToPointer() *GetPotTransactions200ApplicationJSONTransactionsTypeEnum {
+	return &e
+}
+
 func (e *GetPotTransactions200ApplicationJSONTransactionsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "archived":
-		*e = GetPotTransactions200ApplicationJSONTransactionsTypeEnum(s)
+		*e = GetPotTransactions200ApplicationJSONTransactionsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPotTransactions200ApplicationJSONTransactionsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPotTransactions200ApplicationJSONTransactionsTypeEnum: %v", v)
 	}
 }
 

@@ -28,12 +28,16 @@ const (
 	CreativeCreativeTypeEnumCreativeTypeTemplatedAppInstallVideo        CreativeCreativeTypeEnum = "CREATIVE_TYPE_TEMPLATED_APP_INSTALL_VIDEO"
 )
 
+func (e CreativeCreativeTypeEnum) ToPointer() *CreativeCreativeTypeEnum {
+	return &e
+}
+
 func (e *CreativeCreativeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CREATIVE_TYPE_STANDARD":
@@ -63,10 +67,10 @@ func (e *CreativeCreativeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CREATIVE_TYPE_NATIVE_VIDEO":
 		fallthrough
 	case "CREATIVE_TYPE_TEMPLATED_APP_INSTALL_VIDEO":
-		*e = CreativeCreativeTypeEnum(s)
+		*e = CreativeCreativeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeCreativeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeCreativeTypeEnum: %v", v)
 	}
 }
 
@@ -82,12 +86,16 @@ const (
 	CreativeEntityStatusEnumEntityStatusScheduledForDeletion CreativeEntityStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
+func (e CreativeEntityStatusEnum) ToPointer() *CreativeEntityStatusEnum {
+	return &e
+}
+
 func (e *CreativeEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ENTITY_STATUS_ACTIVE":
@@ -99,10 +107,10 @@ func (e *CreativeEntityStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ENTITY_STATUS_PAUSED":
 		fallthrough
 	case "ENTITY_STATUS_SCHEDULED_FOR_DELETION":
-		*e = CreativeEntityStatusEnum(s)
+		*e = CreativeEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeEntityStatusEnum: %v", v)
 	}
 }
 
@@ -125,12 +133,16 @@ const (
 	CreativeExpandingDirectionEnumExpandingDirectionAnyDiagonal  CreativeExpandingDirectionEnum = "EXPANDING_DIRECTION_ANY_DIAGONAL"
 )
 
+func (e CreativeExpandingDirectionEnum) ToPointer() *CreativeExpandingDirectionEnum {
+	return &e
+}
+
 func (e *CreativeExpandingDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXPANDING_DIRECTION_UNSPECIFIED":
 		fallthrough
 	case "EXPANDING_DIRECTION_NONE":
@@ -156,10 +168,10 @@ func (e *CreativeExpandingDirectionEnum) UnmarshalJSON(data []byte) error {
 	case "EXPANDING_DIRECTION_LEFT_OR_RIGHT":
 		fallthrough
 	case "EXPANDING_DIRECTION_ANY_DIAGONAL":
-		*e = CreativeExpandingDirectionEnum(s)
+		*e = CreativeExpandingDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeExpandingDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeExpandingDirectionEnum: %v", v)
 	}
 }
 
@@ -174,12 +186,16 @@ const (
 	CreativeHostingSourceEnumHostingSourceRichMedia   CreativeHostingSourceEnum = "HOSTING_SOURCE_RICH_MEDIA"
 )
 
+func (e CreativeHostingSourceEnum) ToPointer() *CreativeHostingSourceEnum {
+	return &e
+}
+
 func (e *CreativeHostingSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HOSTING_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "HOSTING_SOURCE_CM":
@@ -189,20 +205,20 @@ func (e *CreativeHostingSourceEnum) UnmarshalJSON(data []byte) error {
 	case "HOSTING_SOURCE_HOSTED":
 		fallthrough
 	case "HOSTING_SOURCE_RICH_MEDIA":
-		*e = CreativeHostingSourceEnum(s)
+		*e = CreativeHostingSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeHostingSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeHostingSourceEnum: %v", v)
 	}
 }
 
 // CreativeInput - A single Creative.
 type CreativeInput struct {
-	// Additional dimensions. Applicable when creative_type is one of: * `CREATIVE_TYPE_STANDARD` * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_TEMPLATED_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_LIGHTBOX` * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified, width_pixels and height_pixels are both required and must be greater than or equal to 0.
+	// Additional dimensions. Applicable when creative_type is one of: * `CREATIVE_TYPE_STANDARD` * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_LIGHTBOX` * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified, width_pixels and height_pixels are both required and must be greater than or equal to 0.
 	AdditionalDimensions []Dimensions `json:"additionalDimensions,omitempty"`
 	// Third-party HTML tracking tag to be appended to the creative tag.
 	AppendedTag *string `json:"appendedTag,omitempty"`
-	// Required. Assets associated to this creative. Assets can be associated to the creative in one of following roles: * `ASSET_ROLE_UNSPECIFIED` * `ASSET_ROLE_MAIN` * `ASSET_ROLE_BACKUP` * `ASSET_ROLE_POLITE_LOAD`
+	// Required. Assets associated to this creative.
 	Assets []AssetAssociation `json:"assets,omitempty"`
 	// A Campaign Manager 360 tracking ad.
 	CmTrackingAd *CmTrackingAd `json:"cmTrackingAd,omitempty"`
@@ -230,7 +246,7 @@ type CreativeInput struct {
 	IasCampaignMonitoring *bool `json:"iasCampaignMonitoring,omitempty"`
 	// ID information used to link this creative to an external system. Must be UTF-8 encoded with a length of no more than 10,000 characters.
 	IntegrationCode *string `json:"integrationCode,omitempty"`
-	// JavaScript measurement URL from supported third-party verification providers (ComScore, DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only supported in following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
+	// JavaScript measurement URL from supported third-party verification providers (ComScore, DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only writeable in following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
 	JsTrackerURL *string `json:"jsTrackerUrl,omitempty"`
 	// User notes for this creative. Must be UTF-8 encoded with a length of no more than 20,000 characters.
 	Notes *string `json:"notes,omitempty"`
@@ -256,7 +272,7 @@ type CreativeInput struct {
 	ThirdPartyUrls []ThirdPartyURL `json:"thirdPartyUrls,omitempty"`
 	// Timer custom events for a rich media creative. Timers track the time during which a user views and interacts with a specified part of a rich media creative. A creative can have multiple timer events, each timed independently. Leave it empty or unset for creatives containing image assets only.
 	TimerEvents []TimerEvent `json:"timerEvents,omitempty"`
-	// Tracking URLs for analytics providers or third-party ad technology vendors. The URLs must start with https (except on inventory that doesn't require SSL compliance). If using macros in your URL, use only macros supported by Display & Video 360. Standard URLs only, no IMG or SCRIPT tags. This field is only supported in following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
+	// Tracking URLs for analytics providers or third-party ad technology vendors. The URLs must start with https (except on inventory that doesn't require SSL compliance). If using macros in your URL, use only macros supported by Display & Video 360. Standard URLs only, no IMG or SCRIPT tags. This field is only writeable in following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
 	TrackerUrls []string `json:"trackerUrls,omitempty"`
 	// A creative identifier provided by a registry that is unique across all platforms. This is part of the VAST 4.0 standard.
 	UniversalAdID *UniversalAdID `json:"universalAdId,omitempty"`
@@ -273,12 +289,16 @@ const (
 	CreativeCreativeAttributesEnumCreativeAttributeVpaidNonLinear CreativeCreativeAttributesEnum = "CREATIVE_ATTRIBUTE_VPAID_NON_LINEAR"
 )
 
+func (e CreativeCreativeAttributesEnum) ToPointer() *CreativeCreativeAttributesEnum {
+	return &e
+}
+
 func (e *CreativeCreativeAttributesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_ATTRIBUTE_UNSPECIFIED":
 		fallthrough
 	case "CREATIVE_ATTRIBUTE_VAST":
@@ -286,22 +306,22 @@ func (e *CreativeCreativeAttributesEnum) UnmarshalJSON(data []byte) error {
 	case "CREATIVE_ATTRIBUTE_VPAID_LINEAR":
 		fallthrough
 	case "CREATIVE_ATTRIBUTE_VPAID_NON_LINEAR":
-		*e = CreativeCreativeAttributesEnum(s)
+		*e = CreativeCreativeAttributesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeCreativeAttributesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeCreativeAttributesEnum: %v", v)
 	}
 }
 
 // Creative - A single Creative.
 type Creative struct {
-	// Additional dimensions. Applicable when creative_type is one of: * `CREATIVE_TYPE_STANDARD` * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_TEMPLATED_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_LIGHTBOX` * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified, width_pixels and height_pixels are both required and must be greater than or equal to 0.
+	// Additional dimensions. Applicable when creative_type is one of: * `CREATIVE_TYPE_STANDARD` * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_LIGHTBOX` * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified, width_pixels and height_pixels are both required and must be greater than or equal to 0.
 	AdditionalDimensions []Dimensions `json:"additionalDimensions,omitempty"`
 	// Output only. The unique ID of the advertiser the creative belongs to.
 	AdvertiserID *string `json:"advertiserId,omitempty"`
 	// Third-party HTML tracking tag to be appended to the creative tag.
 	AppendedTag *string `json:"appendedTag,omitempty"`
-	// Required. Assets associated to this creative. Assets can be associated to the creative in one of following roles: * `ASSET_ROLE_UNSPECIFIED` * `ASSET_ROLE_MAIN` * `ASSET_ROLE_BACKUP` * `ASSET_ROLE_POLITE_LOAD`
+	// Required. Assets associated to this creative.
 	Assets []AssetAssociation `json:"assets,omitempty"`
 	// Output only. The unique ID of the Campaign Manager 360 placement associated with the creative. This field is only applicable for creatives that are synced from Campaign Manager.
 	CmPlacementID *string `json:"cmPlacementId,omitempty"`
@@ -341,7 +361,7 @@ type Creative struct {
 	IasCampaignMonitoring *bool `json:"iasCampaignMonitoring,omitempty"`
 	// ID information used to link this creative to an external system. Must be UTF-8 encoded with a length of no more than 10,000 characters.
 	IntegrationCode *string `json:"integrationCode,omitempty"`
-	// JavaScript measurement URL from supported third-party verification providers (ComScore, DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only supported in following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
+	// JavaScript measurement URL from supported third-party verification providers (ComScore, DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only writeable in following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
 	JsTrackerURL *string `json:"jsTrackerUrl,omitempty"`
 	// Output only. The IDs of the line items this creative is associated with. To associate a creative to a line item, use LineItem.creative_ids instead.
 	LineItemIds []string `json:"lineItemIds,omitempty"`
@@ -377,7 +397,7 @@ type Creative struct {
 	ThirdPartyUrls []ThirdPartyURL `json:"thirdPartyUrls,omitempty"`
 	// Timer custom events for a rich media creative. Timers track the time during which a user views and interacts with a specified part of a rich media creative. A creative can have multiple timer events, each timed independently. Leave it empty or unset for creatives containing image assets only.
 	TimerEvents []TimerEvent `json:"timerEvents,omitempty"`
-	// Tracking URLs for analytics providers or third-party ad technology vendors. The URLs must start with https (except on inventory that doesn't require SSL compliance). If using macros in your URL, use only macros supported by Display & Video 360. Standard URLs only, no IMG or SCRIPT tags. This field is only supported in following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_APP_INSTALL` * `CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
+	// Tracking URLs for analytics providers or third-party ad technology vendors. The URLs must start with https (except on inventory that doesn't require SSL compliance). If using macros in your URL, use only macros supported by Display & Video 360. Standard URLs only, no IMG or SCRIPT tags. This field is only writeable in following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
 	TrackerUrls []string `json:"trackerUrls,omitempty"`
 	// Output only. Audio/Video transcodes. Display & Video 360 transcodes the main asset into a number of alternative versions that use different file formats or have different properties (resolution, audio bit rate, and video bit rate), each designed for specific video players or bandwidths. These transcodes give a publisher's system more options to choose from for each impression on your video and ensures that the appropriate file serves based on the viewer’s connection and screen size. This field is only supported in following creative_type: * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_NATIVE_VIDEO` * `CREATIVE_TYPE_AUDIO`
 	Transcodes []Transcode `json:"transcodes,omitempty"`

@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type CompanyMonitorChangeTypesListSecurity struct {
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
+}
+
 // CompanyMonitorChangeTypesListDefaultApplicationJSON - Detailed information about the error
 type CompanyMonitorChangeTypesListDefaultApplicationJSON struct {
 	Code    int     `json:"code"`

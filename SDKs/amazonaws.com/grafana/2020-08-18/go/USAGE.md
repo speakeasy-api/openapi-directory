@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,20 +16,18 @@ func main() {
         }),
     )
 
-    req := operations.AssociateLicenseRequest{
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "provident",
-        XAmzCredential: "distinctio",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "unde",
-        XAmzSignature: "nulla",
-        XAmzSignedHeaders: "corrupti",
-        LicenseType: "ENTERPRISE_FREE_TRIAL",
-        WorkspaceID: "vel",
-    }
-
     ctx := context.Background()
-    res, err := s.AssociateLicense(ctx, req)
+    res, err := s.AssociateLicense(ctx, operations.AssociateLicenseRequest{
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("provident"),
+        XAmzCredential: sdk.String("distinctio"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("unde"),
+        XAmzSignature: sdk.String("nulla"),
+        XAmzSignedHeaders: sdk.String("corrupti"),
+        LicenseType: operations.AssociateLicenseLicenseTypeEnumEnterpriseFreeTrial,
+        WorkspaceID: "vel",
+    })
     if err != nil {
         log.Fatal(err)
     }

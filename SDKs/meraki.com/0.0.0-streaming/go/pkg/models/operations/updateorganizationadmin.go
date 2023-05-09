@@ -25,12 +25,16 @@ const (
 	UpdateOrganizationAdminRequestBodyOrgAccessEnumReadOnly   UpdateOrganizationAdminRequestBodyOrgAccessEnum = "read-only"
 )
 
+func (e UpdateOrganizationAdminRequestBodyOrgAccessEnum) ToPointer() *UpdateOrganizationAdminRequestBodyOrgAccessEnum {
+	return &e
+}
+
 func (e *UpdateOrganizationAdminRequestBodyOrgAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enterprise":
 		fallthrough
 	case "full":
@@ -38,10 +42,10 @@ func (e *UpdateOrganizationAdminRequestBodyOrgAccessEnum) UnmarshalJSON(data []b
 	case "none":
 		fallthrough
 	case "read-only":
-		*e = UpdateOrganizationAdminRequestBodyOrgAccessEnum(s)
+		*e = UpdateOrganizationAdminRequestBodyOrgAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateOrganizationAdminRequestBodyOrgAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateOrganizationAdminRequestBodyOrgAccessEnum: %v", v)
 	}
 }
 

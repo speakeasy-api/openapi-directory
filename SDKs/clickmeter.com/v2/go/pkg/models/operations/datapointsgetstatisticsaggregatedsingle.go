@@ -19,12 +19,16 @@ const (
 	DataPointsGetStatisticsAggregatedSingleStatusEnumSpam    DataPointsGetStatisticsAggregatedSingleStatusEnum = "spam"
 )
 
+func (e DataPointsGetStatisticsAggregatedSingleStatusEnum) ToPointer() *DataPointsGetStatisticsAggregatedSingleStatusEnum {
+	return &e
+}
+
 func (e *DataPointsGetStatisticsAggregatedSingleStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "active":
@@ -32,10 +36,10 @@ func (e *DataPointsGetStatisticsAggregatedSingleStatusEnum) UnmarshalJSON(data [
 	case "paused":
 		fallthrough
 	case "spam":
-		*e = DataPointsGetStatisticsAggregatedSingleStatusEnum(s)
+		*e = DataPointsGetStatisticsAggregatedSingleStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataPointsGetStatisticsAggregatedSingleStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DataPointsGetStatisticsAggregatedSingleStatusEnum: %v", v)
 	}
 }
 
@@ -60,12 +64,16 @@ const (
 	DataPointsGetStatisticsAggregatedSingleTimeFrameEnumCustom        DataPointsGetStatisticsAggregatedSingleTimeFrameEnum = "custom"
 )
 
+func (e DataPointsGetStatisticsAggregatedSingleTimeFrameEnum) ToPointer() *DataPointsGetStatisticsAggregatedSingleTimeFrameEnum {
+	return &e
+}
+
 func (e *DataPointsGetStatisticsAggregatedSingleTimeFrameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "today":
 		fallthrough
 	case "yesterday":
@@ -95,10 +103,10 @@ func (e *DataPointsGetStatisticsAggregatedSingleTimeFrameEnum) UnmarshalJSON(dat
 	case "beginning":
 		fallthrough
 	case "custom":
-		*e = DataPointsGetStatisticsAggregatedSingleTimeFrameEnum(s)
+		*e = DataPointsGetStatisticsAggregatedSingleTimeFrameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataPointsGetStatisticsAggregatedSingleTimeFrameEnum: %s", s)
+		return fmt.Errorf("invalid value for DataPointsGetStatisticsAggregatedSingleTimeFrameEnum: %v", v)
 	}
 }
 
@@ -110,19 +118,23 @@ const (
 	DataPointsGetStatisticsAggregatedSingleTypeEnumTl DataPointsGetStatisticsAggregatedSingleTypeEnum = "tl"
 )
 
+func (e DataPointsGetStatisticsAggregatedSingleTypeEnum) ToPointer() *DataPointsGetStatisticsAggregatedSingleTypeEnum {
+	return &e
+}
+
 func (e *DataPointsGetStatisticsAggregatedSingleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tp":
 		fallthrough
 	case "tl":
-		*e = DataPointsGetStatisticsAggregatedSingleTypeEnum(s)
+		*e = DataPointsGetStatisticsAggregatedSingleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataPointsGetStatisticsAggregatedSingleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataPointsGetStatisticsAggregatedSingleTypeEnum: %v", v)
 	}
 }
 

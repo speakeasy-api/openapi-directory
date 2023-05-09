@@ -17,21 +17,25 @@ const (
 	HybridTransactionClearedEnumReconciled HybridTransactionClearedEnum = "reconciled"
 )
 
+func (e HybridTransactionClearedEnum) ToPointer() *HybridTransactionClearedEnum {
+	return &e
+}
+
 func (e *HybridTransactionClearedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cleared":
 		fallthrough
 	case "uncleared":
 		fallthrough
 	case "reconciled":
-		*e = HybridTransactionClearedEnum(s)
+		*e = HybridTransactionClearedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HybridTransactionClearedEnum: %s", s)
+		return fmt.Errorf("invalid value for HybridTransactionClearedEnum: %v", v)
 	}
 }
 
@@ -39,23 +43,27 @@ func (e *HybridTransactionClearedEnum) UnmarshalJSON(data []byte) error {
 type HybridTransactionDebtTransactionTypeEnum string
 
 const (
-	HybridTransactionDebtTransactionTypeEnumPayment            HybridTransactionDebtTransactionTypeEnum = "payment"
-	HybridTransactionDebtTransactionTypeEnumRefund             HybridTransactionDebtTransactionTypeEnum = "refund"
-	HybridTransactionDebtTransactionTypeEnumFee                HybridTransactionDebtTransactionTypeEnum = "fee"
-	HybridTransactionDebtTransactionTypeEnumInterest           HybridTransactionDebtTransactionTypeEnum = "interest"
-	HybridTransactionDebtTransactionTypeEnumEscrow             HybridTransactionDebtTransactionTypeEnum = "escrow"
-	HybridTransactionDebtTransactionTypeEnumBalancedAdjustment HybridTransactionDebtTransactionTypeEnum = "balancedAdjustment"
-	HybridTransactionDebtTransactionTypeEnumCredit             HybridTransactionDebtTransactionTypeEnum = "credit"
-	HybridTransactionDebtTransactionTypeEnumCharge             HybridTransactionDebtTransactionTypeEnum = "charge"
-	HybridTransactionDebtTransactionTypeEnumNull               HybridTransactionDebtTransactionTypeEnum = "null"
+	HybridTransactionDebtTransactionTypeEnumPayment                HybridTransactionDebtTransactionTypeEnum = "payment"
+	HybridTransactionDebtTransactionTypeEnumRefund                 HybridTransactionDebtTransactionTypeEnum = "refund"
+	HybridTransactionDebtTransactionTypeEnumFee                    HybridTransactionDebtTransactionTypeEnum = "fee"
+	HybridTransactionDebtTransactionTypeEnumInterest               HybridTransactionDebtTransactionTypeEnum = "interest"
+	HybridTransactionDebtTransactionTypeEnumEscrow                 HybridTransactionDebtTransactionTypeEnum = "escrow"
+	HybridTransactionDebtTransactionTypeEnumBalancedAdjustment     HybridTransactionDebtTransactionTypeEnum = "balancedAdjustment"
+	HybridTransactionDebtTransactionTypeEnumCredit                 HybridTransactionDebtTransactionTypeEnum = "credit"
+	HybridTransactionDebtTransactionTypeEnumCharge                 HybridTransactionDebtTransactionTypeEnum = "charge"
+	HybridTransactionDebtTransactionTypeEnumLessThanNilGreaterThan HybridTransactionDebtTransactionTypeEnum = "<nil>"
 )
 
+func (e HybridTransactionDebtTransactionTypeEnum) ToPointer() *HybridTransactionDebtTransactionTypeEnum {
+	return &e
+}
+
 func (e *HybridTransactionDebtTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "payment":
 		fallthrough
 	case "refund":
@@ -72,11 +80,11 @@ func (e *HybridTransactionDebtTransactionTypeEnum) UnmarshalJSON(data []byte) er
 		fallthrough
 	case "charge":
 		fallthrough
-	case "null":
-		*e = HybridTransactionDebtTransactionTypeEnum(s)
+	case "<nil>":
+		*e = HybridTransactionDebtTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HybridTransactionDebtTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HybridTransactionDebtTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -84,21 +92,25 @@ func (e *HybridTransactionDebtTransactionTypeEnum) UnmarshalJSON(data []byte) er
 type HybridTransactionFlagColorEnum string
 
 const (
-	HybridTransactionFlagColorEnumRed    HybridTransactionFlagColorEnum = "red"
-	HybridTransactionFlagColorEnumOrange HybridTransactionFlagColorEnum = "orange"
-	HybridTransactionFlagColorEnumYellow HybridTransactionFlagColorEnum = "yellow"
-	HybridTransactionFlagColorEnumGreen  HybridTransactionFlagColorEnum = "green"
-	HybridTransactionFlagColorEnumBlue   HybridTransactionFlagColorEnum = "blue"
-	HybridTransactionFlagColorEnumPurple HybridTransactionFlagColorEnum = "purple"
-	HybridTransactionFlagColorEnumNull   HybridTransactionFlagColorEnum = "null"
+	HybridTransactionFlagColorEnumRed                    HybridTransactionFlagColorEnum = "red"
+	HybridTransactionFlagColorEnumOrange                 HybridTransactionFlagColorEnum = "orange"
+	HybridTransactionFlagColorEnumYellow                 HybridTransactionFlagColorEnum = "yellow"
+	HybridTransactionFlagColorEnumGreen                  HybridTransactionFlagColorEnum = "green"
+	HybridTransactionFlagColorEnumBlue                   HybridTransactionFlagColorEnum = "blue"
+	HybridTransactionFlagColorEnumPurple                 HybridTransactionFlagColorEnum = "purple"
+	HybridTransactionFlagColorEnumLessThanNilGreaterThan HybridTransactionFlagColorEnum = "<nil>"
 )
 
+func (e HybridTransactionFlagColorEnum) ToPointer() *HybridTransactionFlagColorEnum {
+	return &e
+}
+
 func (e *HybridTransactionFlagColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "red":
 		fallthrough
 	case "orange":
@@ -111,11 +123,11 @@ func (e *HybridTransactionFlagColorEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "purple":
 		fallthrough
-	case "null":
-		*e = HybridTransactionFlagColorEnum(s)
+	case "<nil>":
+		*e = HybridTransactionFlagColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HybridTransactionFlagColorEnum: %s", s)
+		return fmt.Errorf("invalid value for HybridTransactionFlagColorEnum: %v", v)
 	}
 }
 
@@ -127,19 +139,23 @@ const (
 	HybridTransactionTypeEnumSubtransaction HybridTransactionTypeEnum = "subtransaction"
 )
 
+func (e HybridTransactionTypeEnum) ToPointer() *HybridTransactionTypeEnum {
+	return &e
+}
+
 func (e *HybridTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "transaction":
 		fallthrough
 	case "subtransaction":
-		*e = HybridTransactionTypeEnum(s)
+		*e = HybridTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HybridTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HybridTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -149,8 +165,9 @@ type HybridTransaction struct {
 	// The transaction amount in milliunits format
 	Amount int64 `json:"amount"`
 	// Whether or not the transaction is approved
-	Approved     bool    `json:"approved"`
-	CategoryID   *string `json:"category_id,omitempty"`
+	Approved   bool    `json:"approved"`
+	CategoryID *string `json:"category_id,omitempty"`
+	// The name of the category.  If a split transaction, this will be 'Split'.
 	CategoryName *string `json:"category_name,omitempty"`
 	// The cleared status of the transaction
 	Cleared HybridTransactionClearedEnum `json:"cleared"`

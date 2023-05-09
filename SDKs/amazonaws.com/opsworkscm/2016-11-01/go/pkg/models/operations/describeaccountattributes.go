@@ -16,17 +16,21 @@ const (
 	DescribeAccountAttributesXAmzTargetEnumOpsWorksCmV20161101DescribeAccountAttributes DescribeAccountAttributesXAmzTargetEnum = "OpsWorksCM_V2016_11_01.DescribeAccountAttributes"
 )
 
+func (e DescribeAccountAttributesXAmzTargetEnum) ToPointer() *DescribeAccountAttributesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAccountAttributesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorksCM_V2016_11_01.DescribeAccountAttributes":
-		*e = DescribeAccountAttributesXAmzTargetEnum(s)
+		*e = DescribeAccountAttributesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAccountAttributesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAccountAttributesXAmzTargetEnum: %v", v)
 	}
 }
 

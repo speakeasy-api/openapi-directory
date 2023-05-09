@@ -22,12 +22,16 @@ const (
 	YarnApplicationStateEnumKilled           YarnApplicationStateEnum = "KILLED"
 )
 
+func (e YarnApplicationStateEnum) ToPointer() *YarnApplicationStateEnum {
+	return &e
+}
+
 func (e *YarnApplicationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "NEW":
@@ -45,10 +49,10 @@ func (e *YarnApplicationStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "KILLED":
-		*e = YarnApplicationStateEnum(s)
+		*e = YarnApplicationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YarnApplicationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for YarnApplicationStateEnum: %v", v)
 	}
 }
 

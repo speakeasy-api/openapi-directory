@@ -14,18 +14,22 @@ const (
 	PathPrefixEnumSchemaVersion PathPrefixEnum = "SCHEMA_VERSION"
 )
 
+func (e PathPrefixEnum) ToPointer() *PathPrefixEnum {
+	return &e
+}
+
 func (e *PathPrefixEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXECUTION_ID":
 		fallthrough
 	case "SCHEMA_VERSION":
-		*e = PathPrefixEnum(s)
+		*e = PathPrefixEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PathPrefixEnum: %s", s)
+		return fmt.Errorf("invalid value for PathPrefixEnum: %v", v)
 	}
 }

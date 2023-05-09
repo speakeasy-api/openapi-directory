@@ -32,19 +32,23 @@ const (
 	PlusPeopleListByActivityCollectionEnumResharers PlusPeopleListByActivityCollectionEnum = "resharers"
 )
 
+func (e PlusPeopleListByActivityCollectionEnum) ToPointer() *PlusPeopleListByActivityCollectionEnum {
+	return &e
+}
+
 func (e *PlusPeopleListByActivityCollectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "plusoners":
 		fallthrough
 	case "resharers":
-		*e = PlusPeopleListByActivityCollectionEnum(s)
+		*e = PlusPeopleListByActivityCollectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlusPeopleListByActivityCollectionEnum: %s", s)
+		return fmt.Errorf("invalid value for PlusPeopleListByActivityCollectionEnum: %v", v)
 	}
 }
 

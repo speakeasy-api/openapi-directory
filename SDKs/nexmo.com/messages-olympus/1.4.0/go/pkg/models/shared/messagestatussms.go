@@ -14,17 +14,21 @@ const (
 	MessageStatusSMSChannelEnumSms MessageStatusSMSChannelEnum = "sms"
 )
 
+func (e MessageStatusSMSChannelEnum) ToPointer() *MessageStatusSMSChannelEnum {
+	return &e
+}
+
 func (e *MessageStatusSMSChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sms":
-		*e = MessageStatusSMSChannelEnum(s)
+		*e = MessageStatusSMSChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageStatusSMSChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageStatusSMSChannelEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	MessageStatusSMSStatusEnumUndeliverable MessageStatusSMSStatusEnum = "undeliverable"
 )
 
+func (e MessageStatusSMSStatusEnum) ToPointer() *MessageStatusSMSStatusEnum {
+	return &e
+}
+
 func (e *MessageStatusSMSStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "delivered":
@@ -63,10 +71,10 @@ func (e *MessageStatusSMSStatusEnum) UnmarshalJSON(data []byte) error {
 	case "rejected":
 		fallthrough
 	case "undeliverable":
-		*e = MessageStatusSMSStatusEnum(s)
+		*e = MessageStatusSMSStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageStatusSMSStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageStatusSMSStatusEnum: %v", v)
 	}
 }
 
@@ -77,17 +85,21 @@ const (
 	MessageStatusSMSUsageCurrencyEnumEur MessageStatusSMSUsageCurrencyEnum = "EUR"
 )
 
+func (e MessageStatusSMSUsageCurrencyEnum) ToPointer() *MessageStatusSMSUsageCurrencyEnum {
+	return &e
+}
+
 func (e *MessageStatusSMSUsageCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EUR":
-		*e = MessageStatusSMSUsageCurrencyEnum(s)
+		*e = MessageStatusSMSUsageCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageStatusSMSUsageCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageStatusSMSUsageCurrencyEnum: %v", v)
 	}
 }
 

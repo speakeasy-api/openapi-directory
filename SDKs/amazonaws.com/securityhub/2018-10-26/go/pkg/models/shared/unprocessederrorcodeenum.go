@@ -16,12 +16,16 @@ const (
 	UnprocessedErrorCodeEnumLimitExceeded UnprocessedErrorCodeEnum = "LIMIT_EXCEEDED"
 )
 
+func (e UnprocessedErrorCodeEnum) ToPointer() *UnprocessedErrorCodeEnum {
+	return &e
+}
+
 func (e *UnprocessedErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVALID_INPUT":
 		fallthrough
 	case "ACCESS_DENIED":
@@ -29,9 +33,9 @@ func (e *UnprocessedErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "NOT_FOUND":
 		fallthrough
 	case "LIMIT_EXCEEDED":
-		*e = UnprocessedErrorCodeEnum(s)
+		*e = UnprocessedErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UnprocessedErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for UnprocessedErrorCodeEnum: %v", v)
 	}
 }

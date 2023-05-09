@@ -31,12 +31,16 @@ const (
 	AppsDeleteDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppsDeleteDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppsDeleteDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppsDeleteDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppsDeleteDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *AppsDeleteDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byt
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppsDeleteDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppsDeleteDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsDeleteDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsDeleteDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

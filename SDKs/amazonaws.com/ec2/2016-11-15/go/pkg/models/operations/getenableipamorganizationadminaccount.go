@@ -15,17 +15,21 @@ const (
 	GETEnableIpamOrganizationAdminAccountActionEnumEnableIpamOrganizationAdminAccount GETEnableIpamOrganizationAdminAccountActionEnum = "EnableIpamOrganizationAdminAccount"
 )
 
+func (e GETEnableIpamOrganizationAdminAccountActionEnum) ToPointer() *GETEnableIpamOrganizationAdminAccountActionEnum {
+	return &e
+}
+
 func (e *GETEnableIpamOrganizationAdminAccountActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableIpamOrganizationAdminAccount":
-		*e = GETEnableIpamOrganizationAdminAccountActionEnum(s)
+		*e = GETEnableIpamOrganizationAdminAccountActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableIpamOrganizationAdminAccountActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableIpamOrganizationAdminAccountActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETEnableIpamOrganizationAdminAccountVersionEnumTwoThousandAndSixteen1115 GETEnableIpamOrganizationAdminAccountVersionEnum = "2016-11-15"
 )
 
+func (e GETEnableIpamOrganizationAdminAccountVersionEnum) ToPointer() *GETEnableIpamOrganizationAdminAccountVersionEnum {
+	return &e
+}
+
 func (e *GETEnableIpamOrganizationAdminAccountVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETEnableIpamOrganizationAdminAccountVersionEnum(s)
+		*e = GETEnableIpamOrganizationAdminAccountVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableIpamOrganizationAdminAccountVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableIpamOrganizationAdminAccountVersionEnum: %v", v)
 	}
 }
 

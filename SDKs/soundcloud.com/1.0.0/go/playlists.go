@@ -36,7 +36,10 @@ func newPlaylists(defaultClient, securityClient HTTPClient, serverURL, language,
 // DeletePlaylistsPlaylistID - Deletes a playlist.
 func (s *playlists) DeletePlaylistsPlaylistID(ctx context.Context, request operations.DeletePlaylistsPlaylistIDRequest, security operations.DeletePlaylistsPlaylistIDSecurity) (*operations.DeletePlaylistsPlaylistIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *playlists) DeletePlaylistsPlaylistID(ctx context.Context, request opera
 // GetPlaylistsPlaylistID - Returns a playlist.
 func (s *playlists) GetPlaylistsPlaylistID(ctx context.Context, request operations.GetPlaylistsPlaylistIDRequest, security operations.GetPlaylistsPlaylistIDSecurity) (*operations.GetPlaylistsPlaylistIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -141,7 +147,10 @@ func (s *playlists) GetPlaylistsPlaylistID(ctx context.Context, request operatio
 // GetPlaylistsPlaylistIDReposters - Returns a collection of playlist's reposters.
 func (s *playlists) GetPlaylistsPlaylistIDReposters(ctx context.Context, request operations.GetPlaylistsPlaylistIDRepostersRequest, security operations.GetPlaylistsPlaylistIDRepostersSecurity) (*operations.GetPlaylistsPlaylistIDRepostersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}/reposters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}/reposters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -209,7 +218,10 @@ func (s *playlists) GetPlaylistsPlaylistIDReposters(ctx context.Context, request
 // GetPlaylistsPlaylistIDTracks - Returns tracks under a playlist.
 func (s *playlists) GetPlaylistsPlaylistIDTracks(ctx context.Context, request operations.GetPlaylistsPlaylistIDTracksRequest, security operations.GetPlaylistsPlaylistIDTracksSecurity) (*operations.GetPlaylistsPlaylistIDTracksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}/tracks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}/tracks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -340,7 +352,10 @@ func (s *playlists) PostPlaylists(ctx context.Context, request shared.CreateUpda
 // PutPlaylistsPlaylistID - Updates a playlist.
 func (s *playlists) PutPlaylistsPlaylistID(ctx context.Context, request operations.PutPlaylistsPlaylistIDRequest, security operations.PutPlaylistsPlaylistIDSecurity) (*operations.PutPlaylistsPlaylistIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/playlists/{playlist_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateUpdatePlaylistRequest", "json")
 	if err != nil {

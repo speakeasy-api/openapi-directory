@@ -37,7 +37,10 @@ func newFileCommentReactions(defaultClient, securityClient HTTPClient, serverURL
 // Delete File Comment Reaction
 func (s *fileCommentReactions) DeleteFileCommentReactionsID(ctx context.Context, request operations.DeleteFileCommentReactionsIDRequest) (*operations.DeleteFileCommentReactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file_comment_reactions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file_comment_reactions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

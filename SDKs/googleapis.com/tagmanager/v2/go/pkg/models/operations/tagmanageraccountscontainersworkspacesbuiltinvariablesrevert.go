@@ -134,12 +134,16 @@ const (
 	TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnumVisitorRegion                                       TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum = "visitorRegion"
 )
 
+func (e TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum) ToPointer() *TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum {
+	return &e
+}
+
 func (e *TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "builtInVariableTypeUnspecified":
 		fallthrough
 	case "pageUrl":
@@ -367,10 +371,10 @@ func (e *TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum) U
 	case "serverPageLocationHostname":
 		fallthrough
 	case "visitorRegion":
-		*e = TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum(s)
+		*e = TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum: %v", v)
 	}
 }
 

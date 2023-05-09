@@ -15,17 +15,21 @@ const (
 	GETCopyFpgaImageActionEnumCopyFpgaImage GETCopyFpgaImageActionEnum = "CopyFpgaImage"
 )
 
+func (e GETCopyFpgaImageActionEnum) ToPointer() *GETCopyFpgaImageActionEnum {
+	return &e
+}
+
 func (e *GETCopyFpgaImageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CopyFpgaImage":
-		*e = GETCopyFpgaImageActionEnum(s)
+		*e = GETCopyFpgaImageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCopyFpgaImageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCopyFpgaImageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCopyFpgaImageVersionEnumTwoThousandAndSixteen1115 GETCopyFpgaImageVersionEnum = "2016-11-15"
 )
 
+func (e GETCopyFpgaImageVersionEnum) ToPointer() *GETCopyFpgaImageVersionEnum {
+	return &e
+}
+
 func (e *GETCopyFpgaImageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCopyFpgaImageVersionEnum(s)
+		*e = GETCopyFpgaImageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCopyFpgaImageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCopyFpgaImageVersionEnum: %v", v)
 	}
 }
 

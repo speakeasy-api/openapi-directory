@@ -18,12 +18,16 @@ const (
 	SearchQuantumTasksFilterOperatorEnumBetween SearchQuantumTasksFilterOperatorEnum = "BETWEEN"
 )
 
+func (e SearchQuantumTasksFilterOperatorEnum) ToPointer() *SearchQuantumTasksFilterOperatorEnum {
+	return &e
+}
+
 func (e *SearchQuantumTasksFilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LT":
 		fallthrough
 	case "LTE":
@@ -35,9 +39,9 @@ func (e *SearchQuantumTasksFilterOperatorEnum) UnmarshalJSON(data []byte) error 
 	case "GTE":
 		fallthrough
 	case "BETWEEN":
-		*e = SearchQuantumTasksFilterOperatorEnum(s)
+		*e = SearchQuantumTasksFilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchQuantumTasksFilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchQuantumTasksFilterOperatorEnum: %v", v)
 	}
 }

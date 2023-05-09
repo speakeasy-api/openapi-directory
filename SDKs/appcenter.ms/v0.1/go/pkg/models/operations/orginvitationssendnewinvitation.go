@@ -21,21 +21,25 @@ const (
 	OrgInvitationsSendNewInvitationRequestBodyRoleEnumMember       OrgInvitationsSendNewInvitationRequestBodyRoleEnum = "member"
 )
 
+func (e OrgInvitationsSendNewInvitationRequestBodyRoleEnum) ToPointer() *OrgInvitationsSendNewInvitationRequestBodyRoleEnum {
+	return &e
+}
+
 func (e *OrgInvitationsSendNewInvitationRequestBodyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin":
 		fallthrough
 	case "collaborator":
 		fallthrough
 	case "member":
-		*e = OrgInvitationsSendNewInvitationRequestBodyRoleEnum(s)
+		*e = OrgInvitationsSendNewInvitationRequestBodyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgInvitationsSendNewInvitationRequestBodyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgInvitationsSendNewInvitationRequestBodyRoleEnum: %v", v)
 	}
 }
 
@@ -66,12 +70,16 @@ const (
 	OrgInvitationsSendNewInvitationDefaultApplicationJSONErrorCodeEnumTooManyRequests     OrgInvitationsSendNewInvitationDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e OrgInvitationsSendNewInvitationDefaultApplicationJSONErrorCodeEnum) ToPointer() *OrgInvitationsSendNewInvitationDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *OrgInvitationsSendNewInvitationDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -85,10 +93,10 @@ func (e *OrgInvitationsSendNewInvitationDefaultApplicationJSONErrorCodeEnum) Unm
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = OrgInvitationsSendNewInvitationDefaultApplicationJSONErrorCodeEnum(s)
+		*e = OrgInvitationsSendNewInvitationDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgInvitationsSendNewInvitationDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgInvitationsSendNewInvitationDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,45 +17,39 @@ func main() {
         }),
     )
 
-    req := operations.CreateEnvironmentEc2Request{
+    ctx := context.Background()
+    res, err := s.CreateEnvironmentEc2(ctx, operations.CreateEnvironmentEc2Request{
         CreateEnvironmentEc2Request: shared.CreateEnvironmentEc2Request{
-            AutomaticStopTimeMinutes: 548814,
-            ClientRequestToken: "provident",
-            ConnectionType: "CONNECT_SSM",
-            Description: "quibusdam",
-            DryRun: false,
-            ImageID: "unde",
+            AutomaticStopTimeMinutes: sdk.Int64(548814),
+            ClientRequestToken: sdk.String("provident"),
+            ConnectionType: shared.ConnectionTypeEnumConnectSsm.ToPointer(),
+            Description: sdk.String("quibusdam"),
+            DryRun: sdk.Bool(false),
+            ImageID: sdk.String("unde"),
             InstanceType: "nulla",
-            Name: "corrupti",
-            OwnerArn: "illum",
-            SubnetID: "vel",
+            Name: "Dallas Kassulke",
+            OwnerArn: sdk.String("suscipit"),
+            SubnetID: sdk.String("iure"),
             Tags: []shared.Tag{
-                shared.Tag{
-                    Key: "deserunt",
-                    Value: "suscipit",
-                },
-                shared.Tag{
-                    Key: "iure",
-                    Value: "magnam",
-                },
                 shared.Tag{
                     Key: "debitis",
                     Value: "ipsa",
                 },
+                shared.Tag{
+                    Key: "delectus",
+                    Value: "tempora",
+                },
             },
         },
-        XAmzAlgorithm: "delectus",
-        XAmzContentSha256: "tempora",
-        XAmzCredential: "suscipit",
-        XAmzDate: "molestiae",
-        XAmzSecurityToken: "minus",
-        XAmzSignature: "placeat",
-        XAmzSignedHeaders: "voluptatum",
-        XAmzTarget: "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateEnvironmentEc2(ctx, req)
+        XAmzAlgorithm: sdk.String("suscipit"),
+        XAmzContentSha256: sdk.String("molestiae"),
+        XAmzCredential: sdk.String("minus"),
+        XAmzDate: sdk.String("placeat"),
+        XAmzSecurityToken: sdk.String("voluptatum"),
+        XAmzSignature: sdk.String("iusto"),
+        XAmzSignedHeaders: sdk.String("excepturi"),
+        XAmzTarget: operations.CreateEnvironmentEc2XAmzTargetEnumAwsCloud9WorkspaceManagementServiceCreateEnvironmentEc2,
+    })
     if err != nil {
         log.Fatal(err)
     }

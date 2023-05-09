@@ -15,17 +15,21 @@ const (
 	GETRebootDBClusterActionEnumRebootDbCluster GETRebootDBClusterActionEnum = "RebootDBCluster"
 )
 
+func (e GETRebootDBClusterActionEnum) ToPointer() *GETRebootDBClusterActionEnum {
+	return &e
+}
+
 func (e *GETRebootDBClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RebootDBCluster":
-		*e = GETRebootDBClusterActionEnum(s)
+		*e = GETRebootDBClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRebootDBClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRebootDBClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRebootDBClusterVersionEnumTwoThousandAndFourteen1031 GETRebootDBClusterVersionEnum = "2014-10-31"
 )
 
+func (e GETRebootDBClusterVersionEnum) ToPointer() *GETRebootDBClusterVersionEnum {
+	return &e
+}
+
 func (e *GETRebootDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETRebootDBClusterVersionEnum(s)
+		*e = GETRebootDBClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRebootDBClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRebootDBClusterVersionEnum: %v", v)
 	}
 }
 

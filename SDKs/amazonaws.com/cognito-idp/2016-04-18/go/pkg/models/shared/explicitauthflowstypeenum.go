@@ -20,12 +20,16 @@ const (
 	ExplicitAuthFlowsTypeEnumAllowRefreshTokenAuth      ExplicitAuthFlowsTypeEnum = "ALLOW_REFRESH_TOKEN_AUTH"
 )
 
+func (e ExplicitAuthFlowsTypeEnum) ToPointer() *ExplicitAuthFlowsTypeEnum {
+	return &e
+}
+
 func (e *ExplicitAuthFlowsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADMIN_NO_SRP_AUTH":
 		fallthrough
 	case "CUSTOM_AUTH_FLOW_ONLY":
@@ -41,9 +45,9 @@ func (e *ExplicitAuthFlowsTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ALLOW_USER_SRP_AUTH":
 		fallthrough
 	case "ALLOW_REFRESH_TOKEN_AUTH":
-		*e = ExplicitAuthFlowsTypeEnum(s)
+		*e = ExplicitAuthFlowsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExplicitAuthFlowsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExplicitAuthFlowsTypeEnum: %v", v)
 	}
 }

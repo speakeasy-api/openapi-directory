@@ -16,17 +16,21 @@ const (
 	DescribeResourcePoliciesXAmzTargetEnumLogs20140328DescribeResourcePolicies DescribeResourcePoliciesXAmzTargetEnum = "Logs_20140328.DescribeResourcePolicies"
 )
 
+func (e DescribeResourcePoliciesXAmzTargetEnum) ToPointer() *DescribeResourcePoliciesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeResourcePoliciesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.DescribeResourcePolicies":
-		*e = DescribeResourcePoliciesXAmzTargetEnum(s)
+		*e = DescribeResourcePoliciesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeResourcePoliciesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeResourcePoliciesXAmzTargetEnum: %v", v)
 	}
 }
 

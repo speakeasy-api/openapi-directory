@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -14,6 +15,7 @@ pkg/utils/utils.go
 pkg/models/operations/associateentitiestoexperience.go
 pkg/models/operations/associatepersonastoentities.go
 pkg/models/operations/batchdeletedocument.go
+pkg/models/operations/batchdeletefeaturedresultsset.go
 pkg/models/operations/batchgetdocumentstatus.go
 pkg/models/operations/batchputdocument.go
 pkg/models/operations/clearquerysuggestions.go
@@ -21,6 +23,7 @@ pkg/models/operations/createaccesscontrolconfiguration.go
 pkg/models/operations/createdatasource.go
 pkg/models/operations/createexperience.go
 pkg/models/operations/createfaq.go
+pkg/models/operations/createfeaturedresultsset.go
 pkg/models/operations/createindex.go
 pkg/models/operations/createquerysuggestionsblocklist.go
 pkg/models/operations/createthesaurus.go
@@ -36,6 +39,7 @@ pkg/models/operations/describeaccesscontrolconfiguration.go
 pkg/models/operations/describedatasource.go
 pkg/models/operations/describeexperience.go
 pkg/models/operations/describefaq.go
+pkg/models/operations/describefeaturedresultsset.go
 pkg/models/operations/describeindex.go
 pkg/models/operations/describeprincipalmapping.go
 pkg/models/operations/describequerysuggestionsblocklist.go
@@ -52,6 +56,7 @@ pkg/models/operations/listentitypersonas.go
 pkg/models/operations/listexperienceentities.go
 pkg/models/operations/listexperiences.go
 pkg/models/operations/listfaqs.go
+pkg/models/operations/listfeaturedresultssets.go
 pkg/models/operations/listgroupsolderthanorderingid.go
 pkg/models/operations/listindices.go
 pkg/models/operations/listquerysuggestionsblocklists.go
@@ -67,6 +72,7 @@ pkg/models/operations/untagresource.go
 pkg/models/operations/updateaccesscontrolconfiguration.go
 pkg/models/operations/updatedatasource.go
 pkg/models/operations/updateexperience.go
+pkg/models/operations/updatefeaturedresultsset.go
 pkg/models/operations/updateindex.go
 pkg/models/operations/updatequerysuggestionsblocklist.go
 pkg/models/operations/updatequerysuggestionsconfig.go
@@ -85,6 +91,9 @@ pkg/models/shared/batchdeletedocumentresponsefaileddocument.go
 pkg/models/shared/errorcodeenum.go
 pkg/models/shared/batchdeletedocumentrequest.go
 pkg/models/shared/datasourcesyncjobmetrictarget.go
+pkg/models/shared/batchdeletefeaturedresultssetresponse.go
+pkg/models/shared/batchdeletefeaturedresultsseterror.go
+pkg/models/shared/batchdeletefeaturedresultssetrequest.go
 pkg/models/shared/batchgetdocumentstatusresponse.go
 pkg/models/shared/batchgetdocumentstatusresponseerror.go
 pkg/models/shared/status.go
@@ -198,6 +207,11 @@ pkg/models/shared/contentsourceconfiguration.go
 pkg/models/shared/createfaqresponse.go
 pkg/models/shared/createfaqrequest.go
 pkg/models/shared/faqfileformatenum.go
+pkg/models/shared/createfeaturedresultssetresponse.go
+pkg/models/shared/featuredresultsset.go
+pkg/models/shared/featuredresultssetstatusenum.go
+pkg/models/shared/featureddocument.go
+pkg/models/shared/createfeaturedresultssetrequest.go
 pkg/models/shared/createindexresponse.go
 pkg/models/shared/createindexrequest.go
 pkg/models/shared/usertokenconfiguration.go
@@ -234,6 +248,10 @@ pkg/models/shared/describeexperiencerequest.go
 pkg/models/shared/describefaqresponse.go
 pkg/models/shared/faqstatusenum.go
 pkg/models/shared/describefaqrequest.go
+pkg/models/shared/describefeaturedresultssetresponse.go
+pkg/models/shared/featureddocumentwithmetadata.go
+pkg/models/shared/featureddocumentmissing.go
+pkg/models/shared/describefeaturedresultssetrequest.go
 pkg/models/shared/describeindexresponse.go
 pkg/models/shared/indexstatusenum.go
 pkg/models/shared/indexstatistics.go
@@ -299,6 +317,9 @@ pkg/models/shared/listexperiencesrequest.go
 pkg/models/shared/listfaqsresponse.go
 pkg/models/shared/faqsummary.go
 pkg/models/shared/listfaqsrequest.go
+pkg/models/shared/listfeaturedresultssetsresponse.go
+pkg/models/shared/featuredresultssetsummary.go
+pkg/models/shared/listfeaturedresultssetsrequest.go
 pkg/models/shared/listgroupsolderthanorderingidresponse.go
 pkg/models/shared/groupsummary.go
 pkg/models/shared/listgroupsolderthanorderingidrequest.go
@@ -336,6 +357,7 @@ pkg/models/shared/highlighttypeenum.go
 pkg/models/shared/additionalresultattribute.go
 pkg/models/shared/additionalresultattributevaluetypeenum.go
 pkg/models/shared/additionalresultattributevalue.go
+pkg/models/shared/featuredresultsitem.go
 pkg/models/shared/facetresult.go
 pkg/models/shared/documentattributevaluecountpair.go
 pkg/models/shared/queryrequest.go
@@ -359,9 +381,12 @@ pkg/models/shared/untagresourcerequest.go
 pkg/models/shared/updateaccesscontrolconfigurationrequest.go
 pkg/models/shared/updatedatasourcerequest.go
 pkg/models/shared/updateexperiencerequest.go
+pkg/models/shared/updatefeaturedresultssetresponse.go
+pkg/models/shared/updatefeaturedresultssetrequest.go
 pkg/models/shared/updateindexrequest.go
 pkg/models/shared/updatequerysuggestionsblocklistrequest.go
 pkg/models/shared/updatequerysuggestionsconfigrequest.go
 pkg/models/shared/updatethesaurusrequest.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

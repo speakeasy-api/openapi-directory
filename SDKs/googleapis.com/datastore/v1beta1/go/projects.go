@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DatastoreProjectsExport - Exports a copy of all or a subset of entities from Google Cloud Datastore to another storage system, such as Google Cloud Storage. Recent updates to entities may not be reflected in the export. The export occurs in the background and its progress can be monitored and managed via the Operation resource that is created. The output of an export may only be used once the associated operation is done. If an export operation is cancelled before completion it may leave partial data behind in Google Cloud Storage.
 func (s *projects) DatastoreProjectsExport(ctx context.Context, request operations.DatastoreProjectsExportRequest, security operations.DatastoreProjectsExportSecurity) (*operations.DatastoreProjectsExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}:export", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}:export", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleDatastoreAdminV1beta1ExportEntitiesRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) DatastoreProjectsExport(ctx context.Context, request operatio
 // DatastoreProjectsImport - Imports entities into Google Cloud Datastore. Existing entities with the same key are overwritten. The import occurs in the background and its progress can be monitored and managed via the Operation resource that is created. If an ImportEntities operation is cancelled, it is possible that a subset of the data has already been imported to Cloud Datastore.
 func (s *projects) DatastoreProjectsImport(ctx context.Context, request operations.DatastoreProjectsImportRequest, security operations.DatastoreProjectsImportSecurity) (*operations.DatastoreProjectsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}:import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/projects/{projectId}:import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleDatastoreAdminV1beta1ImportEntitiesRequest", "json")
 	if err != nil {

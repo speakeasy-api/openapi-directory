@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/google.home/2.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,13 +27,11 @@ func main() {
         }),
     )
 
-    req := shared.AccessibilityRequest{
+    ctx := context.Background()
+    res, err := s.Assistant.Accessibility(ctx, shared.AccessibilityRequest{
         EndpointEnabled: false,
         HotwordEnabled: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.Assistant.Accessibility(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -50,53 +47,53 @@ func main() {
 ## Available Resources and Operations
 
 
-### Assistant
+### [Assistant](docs/assistant/README.md)
 
-* `Accessibility` - Accessibility
-* `AlarmVolume` - Alarm Volume
-* `DeleteAlarmsandTimers` - Delete Alarms and Timers
-* `DoNotDisturb` - Do Not Disturb
-* `GetAlarmsandTimers` - Get Alarms and Timers
-* `SetEqualizerValues` - Set Equalizer Values
+* [Accessibility](docs/assistant/README.md#accessibility) - Accessibility
+* [AlarmVolume](docs/assistant/README.md#alarmvolume) - Alarm Volume
+* [DeleteAlarmsandTimers](docs/assistant/README.md#deletealarmsandtimers) - Delete Alarms and Timers
+* [DoNotDisturb](docs/assistant/README.md#donotdisturb) - Do Not Disturb
+* [GetAlarmsandTimers](docs/assistant/README.md#getalarmsandtimers) - Get Alarms and Timers
+* [SetEqualizerValues](docs/assistant/README.md#setequalizervalues) - Set Equalizer Values
 
-### Bluetooth
+### [Bluetooth](docs/bluetooth/README.md)
 
-* `ChangeDiscoverability` - Change Discoverability
-* `Forgetpaireddevice` - Forget paired device
-* `GetPairedDevices` - Get Paired Devices
-* `GetScanResults` - Get Scan Results
-* `PairwithSpeaker` - Pair with Speaker
-* `Scanfordevices` - Scan for devices
-* `Status` - Status
+* [ChangeDiscoverability](docs/bluetooth/README.md#changediscoverability) - Change Discoverability
+* [Forgetpaireddevice](docs/bluetooth/README.md#forgetpaireddevice) - Forget paired device
+* [GetPairedDevices](docs/bluetooth/README.md#getpaireddevices) - Get Paired Devices
+* [GetScanResults](docs/bluetooth/README.md#getscanresults) - Get Scan Results
+* [PairwithSpeaker](docs/bluetooth/README.md#pairwithspeaker) - Pair with Speaker
+* [Scanfordevices](docs/bluetooth/README.md#scanfordevices) - Scan for devices
+* [Status](docs/bluetooth/README.md#status) - Status
 
-### DeviceInfo
+### [DeviceInfo](docs/deviceinfo/README.md)
 
-* `AppDeviceID` - App Device ID
-* `CheckReadyStatus` - Check Ready Status
-* `EurekaInfo` - Eureka Info
-* `Locales` - Locales
-* `Offer` - Offer
-* `TestInternetDownloadSpeed` - Test Internet Download Speed
-* `Timezones` - Timezones
+* [AppDeviceID](docs/deviceinfo/README.md#appdeviceid) - App Device ID
+* [CheckReadyStatus](docs/deviceinfo/README.md#checkreadystatus) - Check Ready Status
+* [EurekaInfo](docs/deviceinfo/README.md#eurekainfo) - Eureka Info
+* [Locales](docs/deviceinfo/README.md#locales) - Locales
+* [Offer](docs/deviceinfo/README.md#offer) - Offer
+* [TestInternetDownloadSpeed](docs/deviceinfo/README.md#testinternetdownloadspeed) - Test Internet Download Speed
+* [Timezones](docs/deviceinfo/README.md#timezones) - Timezones
 
-### DeviceSettings
+### [DeviceSettings](docs/devicesettings/README.md)
 
-* `NightModesettings` - Night Mode settings
-* `RebootandFactoryReset` - Reboot and Factory Reset
-* `SetEurekaInfo` - Set Eureka Info
+* [NightModesettings](docs/devicesettings/README.md#nightmodesettings) - Night Mode settings
+* [RebootandFactoryReset](docs/devicesettings/README.md#rebootandfactoryreset) - Reboot and Factory Reset
+* [SetEurekaInfo](docs/devicesettings/README.md#seteurekainfo) - Set Eureka Info
 
-### StaticFiles
+### [StaticFiles](docs/staticfiles/README.md)
 
-* `ChromecastIcon` - Chromecast Icon
-* `LegalNotice` - Legal Notice
+* [ChromecastIcon](docs/staticfiles/README.md#chromecasticon) - Chromecast Icon
+* [LegalNotice](docs/staticfiles/README.md#legalnotice) - Legal Notice
 
-### Wifi
+### [Wifi](docs/wifi/README.md)
 
-* `ConnecttoWiFiNetwork` - Connect to Wi-Fi Network
-* `ForgetWiFiNetwork` - Forget Wi-Fi Network
-* `GetSavedNetworks` - Get Saved Networks
-* `GetWiFiScanResults` - Get Wi-Fi Scan Results
-* `ScanforNetworks` - Scan for Networks
+* [ConnecttoWiFiNetwork](docs/wifi/README.md#connecttowifinetwork) - Connect to Wi-Fi Network
+* [ForgetWiFiNetwork](docs/wifi/README.md#forgetwifinetwork) - Forget Wi-Fi Network
+* [GetSavedNetworks](docs/wifi/README.md#getsavednetworks) - Get Saved Networks
+* [GetWiFiScanResults](docs/wifi/README.md#getwifiscanresults) - Get Wi-Fi Scan Results
+* [ScanforNetworks](docs/wifi/README.md#scanfornetworks) - Scan for Networks
 <!-- End SDK Available Operations -->
 
 ### Maturity

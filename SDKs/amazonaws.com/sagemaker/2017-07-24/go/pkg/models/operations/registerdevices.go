@@ -16,17 +16,21 @@ const (
 	RegisterDevicesXAmzTargetEnumSageMakerRegisterDevices RegisterDevicesXAmzTargetEnum = "SageMaker.RegisterDevices"
 )
 
+func (e RegisterDevicesXAmzTargetEnum) ToPointer() *RegisterDevicesXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterDevicesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.RegisterDevices":
-		*e = RegisterDevicesXAmzTargetEnum(s)
+		*e = RegisterDevicesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterDevicesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterDevicesXAmzTargetEnum: %v", v)
 	}
 }
 

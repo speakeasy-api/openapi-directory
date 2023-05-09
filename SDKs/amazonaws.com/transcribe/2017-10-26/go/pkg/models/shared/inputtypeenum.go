@@ -14,18 +14,22 @@ const (
 	InputTypeEnumPostCall InputTypeEnum = "POST_CALL"
 )
 
+func (e InputTypeEnum) ToPointer() *InputTypeEnum {
+	return &e
+}
+
 func (e *InputTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REAL_TIME":
 		fallthrough
 	case "POST_CALL":
-		*e = InputTypeEnum(s)
+		*e = InputTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InputTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InputTypeEnum: %v", v)
 	}
 }

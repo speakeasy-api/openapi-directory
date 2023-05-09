@@ -16,19 +16,23 @@ const (
 	GetMeCommentsToIDOrderEnumAsc  GetMeCommentsToIDOrderEnum = "asc"
 )
 
+func (e GetMeCommentsToIDOrderEnum) ToPointer() *GetMeCommentsToIDOrderEnum {
+	return &e
+}
+
 func (e *GetMeCommentsToIDOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetMeCommentsToIDOrderEnum(s)
+		*e = GetMeCommentsToIDOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMeCommentsToIDOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMeCommentsToIDOrderEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	GetMeCommentsToIDSortEnumVotes    GetMeCommentsToIDSortEnum = "votes"
 )
 
+func (e GetMeCommentsToIDSortEnum) ToPointer() *GetMeCommentsToIDSortEnum {
+	return &e
+}
+
 func (e *GetMeCommentsToIDSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creation":
 		fallthrough
 	case "votes":
-		*e = GetMeCommentsToIDSortEnum(s)
+		*e = GetMeCommentsToIDSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMeCommentsToIDSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMeCommentsToIDSortEnum: %v", v)
 	}
 }
 

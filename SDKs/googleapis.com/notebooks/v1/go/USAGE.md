@@ -2,49 +2,47 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.NotebooksProjectsLocationsEnvironmentsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.NotebooksProjectsLocationsEnvironmentsCreate(ctx, operations.NotebooksProjectsLocationsEnvironmentsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         EnvironmentInput: &shared.EnvironmentInput{
             ContainerImage: &shared.ContainerImage{
-                Repository: "provident",
-                Tag: "distinctio",
+                Repository: sdk.String("provident"),
+                Tag: sdk.String("distinctio"),
             },
-            Description: "quibusdam",
-            DisplayName: "unde",
-            PostStartupScript: "nulla",
+            Description: sdk.String("quibusdam"),
+            DisplayName: sdk.String("unde"),
+            PostStartupScript: sdk.String("nulla"),
             VMImage: &shared.VMImage{
-                ImageFamily: "corrupti",
-                ImageName: "illum",
-                Project: "vel",
+                ImageFamily: sdk.String("corrupti"),
+                ImageName: sdk.String("illum"),
+                Project: sdk.String("vel"),
             },
         },
-        AccessToken: "error",
-        Alt: "media",
-        Callback: "suscipit",
-        EnvironmentID: "iure",
-        Fields: "magnam",
-        Key: "debitis",
-        OauthToken: "ipsa",
+        AccessToken: sdk.String("error"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("suscipit"),
+        EnvironmentID: sdk.String("iure"),
+        Fields: sdk.String("magnam"),
+        Key: sdk.String("debitis"),
+        OauthToken: sdk.String("ipsa"),
         Parent: "delectus",
-        PrettyPrint: false,
-        QuotaUser: "tempora",
-        UploadType: "suscipit",
-        UploadProtocol: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.NotebooksProjectsLocationsEnvironmentsCreate(ctx, req, operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("tempora"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("molestiae"),
+    }, operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

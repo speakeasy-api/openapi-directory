@@ -22,21 +22,25 @@ const (
 	ErrorsGroupListErrorTypeEnumHandledError   ErrorsGroupListErrorTypeEnum = "handledError"
 )
 
+func (e ErrorsGroupListErrorTypeEnum) ToPointer() *ErrorsGroupListErrorTypeEnum {
+	return &e
+}
+
 func (e *ErrorsGroupListErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "unhandledError":
 		fallthrough
 	case "handledError":
-		*e = ErrorsGroupListErrorTypeEnum(s)
+		*e = ErrorsGroupListErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsGroupListErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsGroupListErrorTypeEnum: %v", v)
 	}
 }
 
@@ -73,12 +77,16 @@ const (
 	ErrorsGroupListDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsGroupListDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsGroupListDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsGroupListDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsGroupListDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -92,10 +100,10 @@ func (e *ErrorsGroupListDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data 
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsGroupListDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsGroupListDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsGroupListDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsGroupListDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -124,12 +132,16 @@ const (
 	ErrorsGroupList200ApplicationJSONErrorGroupsReasonFramesLanguageEnumUnknown      ErrorsGroupList200ApplicationJSONErrorGroupsReasonFramesLanguageEnum = "Unknown"
 )
 
+func (e ErrorsGroupList200ApplicationJSONErrorGroupsReasonFramesLanguageEnum) ToPointer() *ErrorsGroupList200ApplicationJSONErrorGroupsReasonFramesLanguageEnum {
+	return &e
+}
+
 func (e *ErrorsGroupList200ApplicationJSONErrorGroupsReasonFramesLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JavaScript":
 		fallthrough
 	case "CSharp":
@@ -147,10 +159,10 @@ func (e *ErrorsGroupList200ApplicationJSONErrorGroupsReasonFramesLanguageEnum) U
 	case "Java":
 		fallthrough
 	case "Unknown":
-		*e = ErrorsGroupList200ApplicationJSONErrorGroupsReasonFramesLanguageEnum(s)
+		*e = ErrorsGroupList200ApplicationJSONErrorGroupsReasonFramesLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsGroupList200ApplicationJSONErrorGroupsReasonFramesLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsGroupList200ApplicationJSONErrorGroupsReasonFramesLanguageEnum: %v", v)
 	}
 }
 
@@ -191,21 +203,25 @@ const (
 	ErrorsGroupList200ApplicationJSONErrorGroupsStateEnumIgnored ErrorsGroupList200ApplicationJSONErrorGroupsStateEnum = "ignored"
 )
 
+func (e ErrorsGroupList200ApplicationJSONErrorGroupsStateEnum) ToPointer() *ErrorsGroupList200ApplicationJSONErrorGroupsStateEnum {
+	return &e
+}
+
 func (e *ErrorsGroupList200ApplicationJSONErrorGroupsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "ignored":
-		*e = ErrorsGroupList200ApplicationJSONErrorGroupsStateEnum(s)
+		*e = ErrorsGroupList200ApplicationJSONErrorGroupsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsGroupList200ApplicationJSONErrorGroupsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsGroupList200ApplicationJSONErrorGroupsStateEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	ProjectStatusEnumDeleting ProjectStatusEnum = "DELETING"
 )
 
+func (e ProjectStatusEnum) ToPointer() *ProjectStatusEnum {
+	return &e
+}
+
 func (e *ProjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATED":
 		fallthrough
 	case "DELETING":
-		*e = ProjectStatusEnum(s)
+		*e = ProjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectStatusEnum: %v", v)
 	}
 }

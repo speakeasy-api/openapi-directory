@@ -15,17 +15,21 @@ const (
 	POSTResetClusterParameterGroupActionEnumResetClusterParameterGroup POSTResetClusterParameterGroupActionEnum = "ResetClusterParameterGroup"
 )
 
+func (e POSTResetClusterParameterGroupActionEnum) ToPointer() *POSTResetClusterParameterGroupActionEnum {
+	return &e
+}
+
 func (e *POSTResetClusterParameterGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetClusterParameterGroup":
-		*e = POSTResetClusterParameterGroupActionEnum(s)
+		*e = POSTResetClusterParameterGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetClusterParameterGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetClusterParameterGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTResetClusterParameterGroupVersionEnumTwoThousandAndTwelve1201 POSTResetClusterParameterGroupVersionEnum = "2012-12-01"
 )
 
+func (e POSTResetClusterParameterGroupVersionEnum) ToPointer() *POSTResetClusterParameterGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTResetClusterParameterGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTResetClusterParameterGroupVersionEnum(s)
+		*e = POSTResetClusterParameterGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetClusterParameterGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetClusterParameterGroupVersionEnum: %v", v)
 	}
 }
 

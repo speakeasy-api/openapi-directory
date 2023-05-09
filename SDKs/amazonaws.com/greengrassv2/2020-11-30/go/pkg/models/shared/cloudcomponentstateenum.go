@@ -17,12 +17,16 @@ const (
 	CloudComponentStateEnumDeprecated CloudComponentStateEnum = "DEPRECATED"
 )
 
+func (e CloudComponentStateEnum) ToPointer() *CloudComponentStateEnum {
+	return &e
+}
+
 func (e *CloudComponentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUESTED":
 		fallthrough
 	case "INITIATED":
@@ -32,9 +36,9 @@ func (e *CloudComponentStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "DEPRECATED":
-		*e = CloudComponentStateEnum(s)
+		*e = CloudComponentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudComponentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudComponentStateEnum: %v", v)
 	}
 }

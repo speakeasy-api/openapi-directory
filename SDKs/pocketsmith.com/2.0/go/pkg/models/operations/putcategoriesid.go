@@ -13,26 +13,30 @@ import (
 type PutCategoriesIDRequestBodyRefundBehaviourEnum string
 
 const (
-	PutCategoriesIDRequestBodyRefundBehaviourEnumDebitsAreDeductions PutCategoriesIDRequestBodyRefundBehaviourEnum = "debits_are_deductions"
-	PutCategoriesIDRequestBodyRefundBehaviourEnumCreditsAreRefunds   PutCategoriesIDRequestBodyRefundBehaviourEnum = "credits_are_refunds"
-	PutCategoriesIDRequestBodyRefundBehaviourEnumNull                PutCategoriesIDRequestBodyRefundBehaviourEnum = "null"
+	PutCategoriesIDRequestBodyRefundBehaviourEnumDebitsAreDeductions    PutCategoriesIDRequestBodyRefundBehaviourEnum = "debits_are_deductions"
+	PutCategoriesIDRequestBodyRefundBehaviourEnumCreditsAreRefunds      PutCategoriesIDRequestBodyRefundBehaviourEnum = "credits_are_refunds"
+	PutCategoriesIDRequestBodyRefundBehaviourEnumLessThanNilGreaterThan PutCategoriesIDRequestBodyRefundBehaviourEnum = "<nil>"
 )
 
+func (e PutCategoriesIDRequestBodyRefundBehaviourEnum) ToPointer() *PutCategoriesIDRequestBodyRefundBehaviourEnum {
+	return &e
+}
+
 func (e *PutCategoriesIDRequestBodyRefundBehaviourEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "debits_are_deductions":
 		fallthrough
 	case "credits_are_refunds":
 		fallthrough
-	case "null":
-		*e = PutCategoriesIDRequestBodyRefundBehaviourEnum(s)
+	case "<nil>":
+		*e = PutCategoriesIDRequestBodyRefundBehaviourEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutCategoriesIDRequestBodyRefundBehaviourEnum: %s", s)
+		return fmt.Errorf("invalid value for PutCategoriesIDRequestBodyRefundBehaviourEnum: %v", v)
 	}
 }
 

@@ -15,18 +15,22 @@ const (
 	DeliverabilityTestStatusEnumCompleted  DeliverabilityTestStatusEnum = "COMPLETED"
 )
 
+func (e DeliverabilityTestStatusEnum) ToPointer() *DeliverabilityTestStatusEnum {
+	return &e
+}
+
 func (e *DeliverabilityTestStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "COMPLETED":
-		*e = DeliverabilityTestStatusEnum(s)
+		*e = DeliverabilityTestStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliverabilityTestStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliverabilityTestStatusEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	DescribeFleetAdvisorSchemasXAmzTargetEnumAmazonDmSv20160101DescribeFleetAdvisorSchemas DescribeFleetAdvisorSchemasXAmzTargetEnum = "AmazonDMSv20160101.DescribeFleetAdvisorSchemas"
 )
 
+func (e DescribeFleetAdvisorSchemasXAmzTargetEnum) ToPointer() *DescribeFleetAdvisorSchemasXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeFleetAdvisorSchemasXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.DescribeFleetAdvisorSchemas":
-		*e = DescribeFleetAdvisorSchemasXAmzTargetEnum(s)
+		*e = DescribeFleetAdvisorSchemasXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFleetAdvisorSchemasXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFleetAdvisorSchemasXAmzTargetEnum: %v", v)
 	}
 }
 

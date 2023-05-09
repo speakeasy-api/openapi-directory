@@ -20,12 +20,16 @@ const (
 	GoogleCloudDatalabelingV1beta1LabelImageRequestFeatureEnumSegmentation        GoogleCloudDatalabelingV1beta1LabelImageRequestFeatureEnum = "SEGMENTATION"
 )
 
+func (e GoogleCloudDatalabelingV1beta1LabelImageRequestFeatureEnum) ToPointer() *GoogleCloudDatalabelingV1beta1LabelImageRequestFeatureEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1LabelImageRequestFeatureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEATURE_UNSPECIFIED":
 		fallthrough
 	case "CLASSIFICATION":
@@ -39,10 +43,10 @@ func (e *GoogleCloudDatalabelingV1beta1LabelImageRequestFeatureEnum) UnmarshalJS
 	case "POLYLINE":
 		fallthrough
 	case "SEGMENTATION":
-		*e = GoogleCloudDatalabelingV1beta1LabelImageRequestFeatureEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1LabelImageRequestFeatureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1LabelImageRequestFeatureEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1LabelImageRequestFeatureEnum: %v", v)
 	}
 }
 

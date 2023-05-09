@@ -37,7 +37,10 @@ func newPodcasterAPI(defaultClient, securityClient HTTPClient, serverURL, langua
 // Podcast hosting services can use this endpoint to streamline the process of podcast deletion on behave of their users (podcasters). We will review the deletion request within 12 hours. If the podcast is already deleted, the "status" field in the response will be "deleted". Otherwise, the status field will be "in review". If you want to get a notification once the podcast is deleted, you can configure a webhook url in the dashboard: listennotes.com/api/dashboard/#webhooks
 func (s *podcasterAPI) DeletePodcastByID(ctx context.Context, request operations.DeletePodcastByIDRequest) (*operations.DeletePodcastByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/podcasts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/podcasts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

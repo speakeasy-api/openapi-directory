@@ -16,17 +16,21 @@ const (
 	CopyWorkspaceImageXAmzTargetEnumWorkspacesServiceCopyWorkspaceImage CopyWorkspaceImageXAmzTargetEnum = "WorkspacesService.CopyWorkspaceImage"
 )
 
+func (e CopyWorkspaceImageXAmzTargetEnum) ToPointer() *CopyWorkspaceImageXAmzTargetEnum {
+	return &e
+}
+
 func (e *CopyWorkspaceImageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.CopyWorkspaceImage":
-		*e = CopyWorkspaceImageXAmzTargetEnum(s)
+		*e = CopyWorkspaceImageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CopyWorkspaceImageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CopyWorkspaceImageXAmzTargetEnum: %v", v)
 	}
 }
 

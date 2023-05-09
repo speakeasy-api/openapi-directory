@@ -9,23 +9,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnum = "429"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON13TypeEnumRateLimitedError SimulateAnAuthorizationOnACardDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON13TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON13TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -57,23 +65,27 @@ type SimulateAnAuthorizationOnACardDefaultApplicationJSON13 struct {
 	Type       SimulateAnAuthorizationOnACardDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnumFourHundredAndThree SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnum = "403"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnumFourHundredAndThree SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -83,17 +95,21 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON12TypeEnumPrivateFeatureError SimulateAnAuthorizationOnACardDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON12TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON12TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -104,23 +120,27 @@ type SimulateAnAuthorizationOnACardDefaultApplicationJSON12 struct {
 	Type   SimulateAnAuthorizationOnACardDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnumFourHundredAndFour SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnum = "404"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnumFourHundredAndFour SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON11TypeEnumObjectNotFoundError SimulateAnAuthorizationOnACardDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON11TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON11TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -151,23 +175,27 @@ type SimulateAnAuthorizationOnACardDefaultApplicationJSON11 struct {
 	Type   SimulateAnAuthorizationOnACardDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnumFourHundred SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnum = "400"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnumFourHundred SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -177,17 +205,21 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON10TypeEnumMalformedRequestError SimulateAnAuthorizationOnACardDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON10TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON10TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -198,23 +230,27 @@ type SimulateAnAuthorizationOnACardDefaultApplicationJSON10 struct {
 	Type   SimulateAnAuthorizationOnACardDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnumFourHundred SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnum = "400"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnumFourHundred SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -224,46 +260,54 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON9TypeEnumInvalidParametersError SimulateAnAuthorizationOnACardDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON9TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON9TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type SimulateAnAuthorizationOnACardDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                        `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                        `json:"errors"`
 	Status SimulateAnAuthorizationOnACardDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                          `json:"title"`
 	Type   SimulateAnAuthorizationOnACardDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnumFourHundredAndNine SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnum = "409"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnumFourHundredAndNine SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON8TypeEnumInvalidOperationError SimulateAnAuthorizationOnACardDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON8TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON8TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -294,23 +342,27 @@ type SimulateAnAuthorizationOnACardDefaultApplicationJSON8 struct {
 	Type   SimulateAnAuthorizationOnACardDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnumFourHundredAndOne SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnum = "401"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnumFourHundredAndOne SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON7TypeEnumInvalidAPIKeyError SimulateAnAuthorizationOnACardDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON7TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON7TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -341,23 +397,27 @@ type SimulateAnAuthorizationOnACardDefaultApplicationJSON7 struct {
 	Type   SimulateAnAuthorizationOnACardDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnumFiveHundred SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnum = "500"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnumFiveHundred SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -367,17 +427,21 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON6TypeEnumInternalServerError SimulateAnAuthorizationOnACardDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON6TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON6TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -388,23 +452,27 @@ type SimulateAnAuthorizationOnACardDefaultApplicationJSON6 struct {
 	Type   SimulateAnAuthorizationOnACardDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnumFourHundredAndThree SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnum = "403"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnumFourHundredAndThree SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -414,17 +482,21 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON5TypeEnumInsufficientPermissionsError SimulateAnAuthorizationOnACardDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON5TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON5TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -435,23 +507,27 @@ type SimulateAnAuthorizationOnACardDefaultApplicationJSON5 struct {
 	Type   SimulateAnAuthorizationOnACardDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnum = "422"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -461,17 +537,21 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError SimulateAnAuthorizationOnACardDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON4TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON4TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -482,23 +562,27 @@ type SimulateAnAuthorizationOnACardDefaultApplicationJSON4 struct {
 	Type   SimulateAnAuthorizationOnACardDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnumFourHundredAndNine SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnum = "409"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnumFourHundredAndNine SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -508,17 +592,21 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON3TypeEnumIdempotencyConflictError SimulateAnAuthorizationOnACardDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON3TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON3TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -529,23 +617,27 @@ type SimulateAnAuthorizationOnACardDefaultApplicationJSON3 struct {
 	Type   SimulateAnAuthorizationOnACardDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnumFourHundredAndThree SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnum = "403"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnumFourHundredAndThree SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -555,17 +647,21 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON2TypeEnumEnvironmentMismatchError SimulateAnAuthorizationOnACardDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON2TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON2TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -576,23 +672,27 @@ type SimulateAnAuthorizationOnACardDefaultApplicationJSON2 struct {
 	Type   SimulateAnAuthorizationOnACardDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnum string
+type SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnum int64
 
 const (
-	SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnumFourHundredAndFour SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnum = "404"
+	SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnumFourHundredAndFour SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -602,17 +702,21 @@ const (
 	SimulateAnAuthorizationOnACardDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError SimulateAnAuthorizationOnACardDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e SimulateAnAuthorizationOnACardDefaultApplicationJSON1TypeEnum) ToPointer() *SimulateAnAuthorizationOnACardDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *SimulateAnAuthorizationOnACardDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON1TypeEnum(s)
+		*e = SimulateAnAuthorizationOnACardDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAnAuthorizationOnACardDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

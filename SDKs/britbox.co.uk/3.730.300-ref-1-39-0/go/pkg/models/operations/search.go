@@ -18,12 +18,16 @@ const (
 	SearchIncludeEnumOther  SearchIncludeEnum = "other"
 )
 
+func (e SearchIncludeEnum) ToPointer() *SearchIncludeEnum {
+	return &e
+}
+
 func (e *SearchIncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tv":
 		fallthrough
 	case "movies":
@@ -31,10 +35,10 @@ func (e *SearchIncludeEnum) UnmarshalJSON(data []byte) error {
 	case "people":
 		fallthrough
 	case "other":
-		*e = SearchIncludeEnum(s)
+		*e = SearchIncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchIncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchIncludeEnum: %v", v)
 	}
 }
 

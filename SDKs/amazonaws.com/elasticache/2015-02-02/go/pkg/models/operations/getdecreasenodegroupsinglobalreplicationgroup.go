@@ -15,17 +15,21 @@ const (
 	GETDecreaseNodeGroupsInGlobalReplicationGroupActionEnumDecreaseNodeGroupsInGlobalReplicationGroup GETDecreaseNodeGroupsInGlobalReplicationGroupActionEnum = "DecreaseNodeGroupsInGlobalReplicationGroup"
 )
 
+func (e GETDecreaseNodeGroupsInGlobalReplicationGroupActionEnum) ToPointer() *GETDecreaseNodeGroupsInGlobalReplicationGroupActionEnum {
+	return &e
+}
+
 func (e *GETDecreaseNodeGroupsInGlobalReplicationGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DecreaseNodeGroupsInGlobalReplicationGroup":
-		*e = GETDecreaseNodeGroupsInGlobalReplicationGroupActionEnum(s)
+		*e = GETDecreaseNodeGroupsInGlobalReplicationGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDecreaseNodeGroupsInGlobalReplicationGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDecreaseNodeGroupsInGlobalReplicationGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum = "2015-02-02"
 )
 
+func (e GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum) ToPointer() *GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum {
+	return &e
+}
+
 func (e *GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum(s)
+		*e = GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum: %v", v)
 	}
 }
 

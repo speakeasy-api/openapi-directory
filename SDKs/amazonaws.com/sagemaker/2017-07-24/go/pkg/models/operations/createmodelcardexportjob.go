@@ -16,17 +16,21 @@ const (
 	CreateModelCardExportJobXAmzTargetEnumSageMakerCreateModelCardExportJob CreateModelCardExportJobXAmzTargetEnum = "SageMaker.CreateModelCardExportJob"
 )
 
+func (e CreateModelCardExportJobXAmzTargetEnum) ToPointer() *CreateModelCardExportJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateModelCardExportJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreateModelCardExportJob":
-		*e = CreateModelCardExportJobXAmzTargetEnum(s)
+		*e = CreateModelCardExportJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateModelCardExportJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateModelCardExportJobXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type GetUserSecurity struct {
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type GetUserResponse struct {
 	ContentType string
 	StatusCode  int

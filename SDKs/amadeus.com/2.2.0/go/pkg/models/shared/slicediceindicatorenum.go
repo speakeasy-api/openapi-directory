@@ -16,20 +16,24 @@ const (
 	SliceDiceIndicatorEnumSubOdAvailability2 SliceDiceIndicatorEnum = "SUB_OD_AVAILABILITY_2"
 )
 
+func (e SliceDiceIndicatorEnum) ToPointer() *SliceDiceIndicatorEnum {
+	return &e
+}
+
 func (e *SliceDiceIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCAL_AVAILABILITY":
 		fallthrough
 	case "SUB_OD_AVAILABILITY_1":
 		fallthrough
 	case "SUB_OD_AVAILABILITY_2":
-		*e = SliceDiceIndicatorEnum(s)
+		*e = SliceDiceIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SliceDiceIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for SliceDiceIndicatorEnum: %v", v)
 	}
 }

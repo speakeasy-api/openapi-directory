@@ -15,17 +15,21 @@ const (
 	POSTDisableVgwRoutePropagationActionEnumDisableVgwRoutePropagation POSTDisableVgwRoutePropagationActionEnum = "DisableVgwRoutePropagation"
 )
 
+func (e POSTDisableVgwRoutePropagationActionEnum) ToPointer() *POSTDisableVgwRoutePropagationActionEnum {
+	return &e
+}
+
 func (e *POSTDisableVgwRoutePropagationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableVgwRoutePropagation":
-		*e = POSTDisableVgwRoutePropagationActionEnum(s)
+		*e = POSTDisableVgwRoutePropagationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableVgwRoutePropagationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableVgwRoutePropagationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisableVgwRoutePropagationVersionEnumTwoThousandAndSixteen1115 POSTDisableVgwRoutePropagationVersionEnum = "2016-11-15"
 )
 
+func (e POSTDisableVgwRoutePropagationVersionEnum) ToPointer() *POSTDisableVgwRoutePropagationVersionEnum {
+	return &e
+}
+
 func (e *POSTDisableVgwRoutePropagationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDisableVgwRoutePropagationVersionEnum(s)
+		*e = POSTDisableVgwRoutePropagationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableVgwRoutePropagationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableVgwRoutePropagationVersionEnum: %v", v)
 	}
 }
 

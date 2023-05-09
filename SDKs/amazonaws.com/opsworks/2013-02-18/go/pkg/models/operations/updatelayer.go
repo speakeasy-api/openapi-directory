@@ -16,17 +16,21 @@ const (
 	UpdateLayerXAmzTargetEnumOpsWorks20130218UpdateLayer UpdateLayerXAmzTargetEnum = "OpsWorks_20130218.UpdateLayer"
 )
 
+func (e UpdateLayerXAmzTargetEnum) ToPointer() *UpdateLayerXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateLayerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.UpdateLayer":
-		*e = UpdateLayerXAmzTargetEnum(s)
+		*e = UpdateLayerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateLayerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateLayerXAmzTargetEnum: %v", v)
 	}
 }
 

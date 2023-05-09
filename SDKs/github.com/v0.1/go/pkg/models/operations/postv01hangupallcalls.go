@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type PostV01HangupAllCallsSecurity struct {
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
+}
+
 type PostV01HangupAllCallsResponse struct {
 	ContentType string
 	// Response

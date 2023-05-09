@@ -16,17 +16,21 @@ const (
 	UpdateStorageVirtualMachineXAmzTargetEnumAwsSimbaAPIServiceV20180301UpdateStorageVirtualMachine UpdateStorageVirtualMachineXAmzTargetEnum = "AWSSimbaAPIService_v20180301.UpdateStorageVirtualMachine"
 )
 
+func (e UpdateStorageVirtualMachineXAmzTargetEnum) ToPointer() *UpdateStorageVirtualMachineXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateStorageVirtualMachineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.UpdateStorageVirtualMachine":
-		*e = UpdateStorageVirtualMachineXAmzTargetEnum(s)
+		*e = UpdateStorageVirtualMachineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateStorageVirtualMachineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateStorageVirtualMachineXAmzTargetEnum: %v", v)
 	}
 }
 

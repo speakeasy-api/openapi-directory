@@ -14,18 +14,22 @@ const (
 	RelevanceTypeEnumNotRelevant RelevanceTypeEnum = "NOT_RELEVANT"
 )
 
+func (e RelevanceTypeEnum) ToPointer() *RelevanceTypeEnum {
+	return &e
+}
+
 func (e *RelevanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELEVANT":
 		fallthrough
 	case "NOT_RELEVANT":
-		*e = RelevanceTypeEnum(s)
+		*e = RelevanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RelevanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RelevanceTypeEnum: %v", v)
 	}
 }

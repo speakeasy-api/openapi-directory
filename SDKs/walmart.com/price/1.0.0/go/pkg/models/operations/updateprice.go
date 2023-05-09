@@ -16,19 +16,23 @@ const (
 	UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnumCad UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnum = "CAD"
 )
 
+func (e UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnum) ToPointer() *UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnum {
+	return &e
+}
+
 func (e *UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
 		fallthrough
 	case "CAD":
-		*e = UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnum(s)
+		*e = UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePriceRequestBodyPricingComparisonPriceCurrencyEnum: %v", v)
 	}
 }
 
@@ -45,17 +49,21 @@ const (
 	UpdatePriceRequestBodyPricingComparisonPriceTypeEnumBase UpdatePriceRequestBodyPricingComparisonPriceTypeEnum = "BASE"
 )
 
+func (e UpdatePriceRequestBodyPricingComparisonPriceTypeEnum) ToPointer() *UpdatePriceRequestBodyPricingComparisonPriceTypeEnum {
+	return &e
+}
+
 func (e *UpdatePriceRequestBodyPricingComparisonPriceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASE":
-		*e = UpdatePriceRequestBodyPricingComparisonPriceTypeEnum(s)
+		*e = UpdatePriceRequestBodyPricingComparisonPriceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePriceRequestBodyPricingComparisonPriceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePriceRequestBodyPricingComparisonPriceTypeEnum: %v", v)
 	}
 }
 
@@ -66,19 +74,23 @@ const (
 	UpdatePriceRequestBodyPricingCurrentPriceCurrencyEnumCad UpdatePriceRequestBodyPricingCurrentPriceCurrencyEnum = "CAD"
 )
 
+func (e UpdatePriceRequestBodyPricingCurrentPriceCurrencyEnum) ToPointer() *UpdatePriceRequestBodyPricingCurrentPriceCurrencyEnum {
+	return &e
+}
+
 func (e *UpdatePriceRequestBodyPricingCurrentPriceCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
 		fallthrough
 	case "CAD":
-		*e = UpdatePriceRequestBodyPricingCurrentPriceCurrencyEnum(s)
+		*e = UpdatePriceRequestBodyPricingCurrentPriceCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePriceRequestBodyPricingCurrentPriceCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePriceRequestBodyPricingCurrentPriceCurrencyEnum: %v", v)
 	}
 }
 
@@ -96,21 +108,25 @@ const (
 	UpdatePriceRequestBodyPricingCurrentPriceTypeEnumClearance UpdatePriceRequestBodyPricingCurrentPriceTypeEnum = "CLEARANCE"
 )
 
+func (e UpdatePriceRequestBodyPricingCurrentPriceTypeEnum) ToPointer() *UpdatePriceRequestBodyPricingCurrentPriceTypeEnum {
+	return &e
+}
+
 func (e *UpdatePriceRequestBodyPricingCurrentPriceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASE":
 		fallthrough
 	case "REDUCED":
 		fallthrough
 	case "CLEARANCE":
-		*e = UpdatePriceRequestBodyPricingCurrentPriceTypeEnum(s)
+		*e = UpdatePriceRequestBodyPricingCurrentPriceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePriceRequestBodyPricingCurrentPriceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePriceRequestBodyPricingCurrentPriceTypeEnum: %v", v)
 	}
 }
 
@@ -122,19 +138,23 @@ const (
 	UpdatePriceRequestBodyPricingPriceDisplayCodesEnumCheckout UpdatePriceRequestBodyPricingPriceDisplayCodesEnum = "CHECKOUT"
 )
 
+func (e UpdatePriceRequestBodyPricingPriceDisplayCodesEnum) ToPointer() *UpdatePriceRequestBodyPricingPriceDisplayCodesEnum {
+	return &e
+}
+
 func (e *UpdatePriceRequestBodyPricingPriceDisplayCodesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CART":
 		fallthrough
 	case "CHECKOUT":
-		*e = UpdatePriceRequestBodyPricingPriceDisplayCodesEnum(s)
+		*e = UpdatePriceRequestBodyPricingPriceDisplayCodesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePriceRequestBodyPricingPriceDisplayCodesEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePriceRequestBodyPricingPriceDisplayCodesEnum: %v", v)
 	}
 }
 
@@ -146,19 +166,23 @@ const (
 	UpdatePriceRequestBodyPricingProcessModeEnumDelete UpdatePriceRequestBodyPricingProcessModeEnum = "DELETE"
 )
 
+func (e UpdatePriceRequestBodyPricingProcessModeEnum) ToPointer() *UpdatePriceRequestBodyPricingProcessModeEnum {
+	return &e
+}
+
 func (e *UpdatePriceRequestBodyPricingProcessModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPSERT":
 		fallthrough
 	case "DELETE":
-		*e = UpdatePriceRequestBodyPricingProcessModeEnum(s)
+		*e = UpdatePriceRequestBodyPricingProcessModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePriceRequestBodyPricingProcessModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePriceRequestBodyPricingProcessModeEnum: %v", v)
 	}
 }
 
@@ -190,19 +214,23 @@ const (
 	UpdatePriceRequestBodyReplaceAllEnumFalse UpdatePriceRequestBodyReplaceAllEnum = "false"
 )
 
+func (e UpdatePriceRequestBodyReplaceAllEnum) ToPointer() *UpdatePriceRequestBodyReplaceAllEnum {
+	return &e
+}
+
 func (e *UpdatePriceRequestBodyReplaceAllEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = UpdatePriceRequestBodyReplaceAllEnum(s)
+		*e = UpdatePriceRequestBodyReplaceAllEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePriceRequestBodyReplaceAllEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePriceRequestBodyReplaceAllEnum: %v", v)
 	}
 }
 
@@ -239,12 +267,16 @@ const (
 	UpdatePrice200ApplicationXMLErrorsCategoryEnumData        UpdatePrice200ApplicationXMLErrorsCategoryEnum = "DATA"
 )
 
+func (e UpdatePrice200ApplicationXMLErrorsCategoryEnum) ToPointer() *UpdatePrice200ApplicationXMLErrorsCategoryEnum {
+	return &e
+}
+
 func (e *UpdatePrice200ApplicationXMLErrorsCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPLICATION":
 		fallthrough
 	case "SYSTEM":
@@ -252,10 +284,10 @@ func (e *UpdatePrice200ApplicationXMLErrorsCategoryEnum) UnmarshalJSON(data []by
 	case "REQUEST":
 		fallthrough
 	case "DATA":
-		*e = UpdatePrice200ApplicationXMLErrorsCategoryEnum(s)
+		*e = UpdatePrice200ApplicationXMLErrorsCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePrice200ApplicationXMLErrorsCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePrice200ApplicationXMLErrorsCategoryEnum: %v", v)
 	}
 }
 
@@ -274,21 +306,25 @@ const (
 	UpdatePrice200ApplicationXMLErrorsGatewayErrorCategoryEnumSystemError       UpdatePrice200ApplicationXMLErrorsGatewayErrorCategoryEnum = "SYSTEM_ERROR"
 )
 
+func (e UpdatePrice200ApplicationXMLErrorsGatewayErrorCategoryEnum) ToPointer() *UpdatePrice200ApplicationXMLErrorsGatewayErrorCategoryEnum {
+	return &e
+}
+
 func (e *UpdatePrice200ApplicationXMLErrorsGatewayErrorCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_DATA_ERROR":
 		fallthrough
 	case "EXTERNAL_DATA_ERROR":
 		fallthrough
 	case "SYSTEM_ERROR":
-		*e = UpdatePrice200ApplicationXMLErrorsGatewayErrorCategoryEnum(s)
+		*e = UpdatePrice200ApplicationXMLErrorsGatewayErrorCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePrice200ApplicationXMLErrorsGatewayErrorCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePrice200ApplicationXMLErrorsGatewayErrorCategoryEnum: %v", v)
 	}
 }
 
@@ -300,21 +336,25 @@ const (
 	UpdatePrice200ApplicationXMLErrorsSeverityEnumError UpdatePrice200ApplicationXMLErrorsSeverityEnum = "ERROR"
 )
 
+func (e UpdatePrice200ApplicationXMLErrorsSeverityEnum) ToPointer() *UpdatePrice200ApplicationXMLErrorsSeverityEnum {
+	return &e
+}
+
 func (e *UpdatePrice200ApplicationXMLErrorsSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INFO":
 		fallthrough
 	case "WARN":
 		fallthrough
 	case "ERROR":
-		*e = UpdatePrice200ApplicationXMLErrorsSeverityEnum(s)
+		*e = UpdatePrice200ApplicationXMLErrorsSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePrice200ApplicationXMLErrorsSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePrice200ApplicationXMLErrorsSeverityEnum: %v", v)
 	}
 }
 
@@ -354,12 +394,16 @@ const (
 	UpdatePrice200ApplicationJSONErrorsCategoryEnumData        UpdatePrice200ApplicationJSONErrorsCategoryEnum = "DATA"
 )
 
+func (e UpdatePrice200ApplicationJSONErrorsCategoryEnum) ToPointer() *UpdatePrice200ApplicationJSONErrorsCategoryEnum {
+	return &e
+}
+
 func (e *UpdatePrice200ApplicationJSONErrorsCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPLICATION":
 		fallthrough
 	case "SYSTEM":
@@ -367,10 +411,10 @@ func (e *UpdatePrice200ApplicationJSONErrorsCategoryEnum) UnmarshalJSON(data []b
 	case "REQUEST":
 		fallthrough
 	case "DATA":
-		*e = UpdatePrice200ApplicationJSONErrorsCategoryEnum(s)
+		*e = UpdatePrice200ApplicationJSONErrorsCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePrice200ApplicationJSONErrorsCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePrice200ApplicationJSONErrorsCategoryEnum: %v", v)
 	}
 }
 
@@ -389,21 +433,25 @@ const (
 	UpdatePrice200ApplicationJSONErrorsGatewayErrorCategoryEnumSystemError       UpdatePrice200ApplicationJSONErrorsGatewayErrorCategoryEnum = "SYSTEM_ERROR"
 )
 
+func (e UpdatePrice200ApplicationJSONErrorsGatewayErrorCategoryEnum) ToPointer() *UpdatePrice200ApplicationJSONErrorsGatewayErrorCategoryEnum {
+	return &e
+}
+
 func (e *UpdatePrice200ApplicationJSONErrorsGatewayErrorCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_DATA_ERROR":
 		fallthrough
 	case "EXTERNAL_DATA_ERROR":
 		fallthrough
 	case "SYSTEM_ERROR":
-		*e = UpdatePrice200ApplicationJSONErrorsGatewayErrorCategoryEnum(s)
+		*e = UpdatePrice200ApplicationJSONErrorsGatewayErrorCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePrice200ApplicationJSONErrorsGatewayErrorCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePrice200ApplicationJSONErrorsGatewayErrorCategoryEnum: %v", v)
 	}
 }
 
@@ -415,21 +463,25 @@ const (
 	UpdatePrice200ApplicationJSONErrorsSeverityEnumError UpdatePrice200ApplicationJSONErrorsSeverityEnum = "ERROR"
 )
 
+func (e UpdatePrice200ApplicationJSONErrorsSeverityEnum) ToPointer() *UpdatePrice200ApplicationJSONErrorsSeverityEnum {
+	return &e
+}
+
 func (e *UpdatePrice200ApplicationJSONErrorsSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INFO":
 		fallthrough
 	case "WARN":
 		fallthrough
 	case "ERROR":
-		*e = UpdatePrice200ApplicationJSONErrorsSeverityEnum(s)
+		*e = UpdatePrice200ApplicationJSONErrorsSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePrice200ApplicationJSONErrorsSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePrice200ApplicationJSONErrorsSeverityEnum: %v", v)
 	}
 }
 

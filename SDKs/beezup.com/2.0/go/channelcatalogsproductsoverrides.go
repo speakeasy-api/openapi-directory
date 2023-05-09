@@ -34,7 +34,10 @@ func newChannelCatalogsProductsOverrides(defaultClient, securityClient HTTPClien
 // ConfigureChannelCatalogProductValueOverrideCopy - Copy channel catalog product value override
 func (s *channelCatalogsProductsOverrides) ConfigureChannelCatalogProductValueOverrideCopy(ctx context.Context, request operations.ConfigureChannelCatalogProductValueOverrideCopyRequest) (*operations.ConfigureChannelCatalogProductValueOverrideCopyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/copy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/copy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *channelCatalogsProductsOverrides) ConfigureChannelCatalogProductValueOv
 // DeleteChannelCatalogProductValueOverride - Delete a specific channel catalog product value override
 func (s *channelCatalogsProductsOverrides) DeleteChannelCatalogProductValueOverride(ctx context.Context, request operations.DeleteChannelCatalogProductValueOverrideRequest) (*operations.DeleteChannelCatalogProductValueOverrideResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/{channelColumnId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/{channelColumnId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *channelCatalogsProductsOverrides) DeleteChannelCatalogProductValueOverr
 // GetChannelCatalogProductValueOverrideCopy - Get channel catalog product value override compatibilities status
 func (s *channelCatalogsProductsOverrides) GetChannelCatalogProductValueOverrideCopy(ctx context.Context, request operations.GetChannelCatalogProductValueOverrideCopyRequest) (*operations.GetChannelCatalogProductValueOverrideCopyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/copy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/copy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -175,7 +184,10 @@ func (s *channelCatalogsProductsOverrides) GetChannelCatalogProductValueOverride
 // OverrideChannelCatalogProductValues - Override channel catalog product values
 func (s *channelCatalogsProductsOverrides) OverrideChannelCatalogProductValues(ctx context.Context, request operations.OverrideChannelCatalogProductValuesRequest) (*operations.OverrideChannelCatalogProductValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

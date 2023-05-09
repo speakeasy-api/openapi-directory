@@ -16,17 +16,21 @@ const (
 	GetBlueprintsXAmzTargetEnumLightsail20161128GetBlueprints GetBlueprintsXAmzTargetEnum = "Lightsail_20161128.GetBlueprints"
 )
 
+func (e GetBlueprintsXAmzTargetEnum) ToPointer() *GetBlueprintsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetBlueprintsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetBlueprints":
-		*e = GetBlueprintsXAmzTargetEnum(s)
+		*e = GetBlueprintsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBlueprintsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBlueprintsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	PostAssetsCorrelationMatrixDenoisedRequestBodyDenoisingMethodEnumEigenvaluesClipping PostAssetsCorrelationMatrixDenoisedRequestBodyDenoisingMethodEnum = "eigenvaluesClipping"
 )
 
+func (e PostAssetsCorrelationMatrixDenoisedRequestBodyDenoisingMethodEnum) ToPointer() *PostAssetsCorrelationMatrixDenoisedRequestBodyDenoisingMethodEnum {
+	return &e
+}
+
 func (e *PostAssetsCorrelationMatrixDenoisedRequestBodyDenoisingMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "eigenvaluesClipping":
-		*e = PostAssetsCorrelationMatrixDenoisedRequestBodyDenoisingMethodEnum(s)
+		*e = PostAssetsCorrelationMatrixDenoisedRequestBodyDenoisingMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAssetsCorrelationMatrixDenoisedRequestBodyDenoisingMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAssetsCorrelationMatrixDenoisedRequestBodyDenoisingMethodEnum: %v", v)
 	}
 }
 

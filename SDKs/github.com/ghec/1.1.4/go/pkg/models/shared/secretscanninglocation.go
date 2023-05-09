@@ -135,12 +135,16 @@ const (
 	SecretScanningLocationTypeEnumIssueComment SecretScanningLocationTypeEnum = "issue_comment"
 )
 
+func (e SecretScanningLocationTypeEnum) ToPointer() *SecretScanningLocationTypeEnum {
+	return &e
+}
+
 func (e *SecretScanningLocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "commit":
 		fallthrough
 	case "issue_title":
@@ -148,10 +152,10 @@ func (e *SecretScanningLocationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "issue_body":
 		fallthrough
 	case "issue_comment":
-		*e = SecretScanningLocationTypeEnum(s)
+		*e = SecretScanningLocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SecretScanningLocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SecretScanningLocationTypeEnum: %v", v)
 	}
 }
 

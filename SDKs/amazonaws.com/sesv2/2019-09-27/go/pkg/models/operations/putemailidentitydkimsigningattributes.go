@@ -24,19 +24,23 @@ const (
 	PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributesOriginEnumExternal PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributesOriginEnum = "EXTERNAL"
 )
 
+func (e PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributesOriginEnum) ToPointer() *PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributesOriginEnum {
+	return &e
+}
+
 func (e *PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributesOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_SES":
 		fallthrough
 	case "EXTERNAL":
-		*e = PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributesOriginEnum(s)
+		*e = PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributesOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributesOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for PutEmailIdentityDkimSigningAttributesRequestBodySigningAttributesOriginEnum: %v", v)
 	}
 }
 

@@ -13,18 +13,18 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/climatekuul.com/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AirtravelCoordinatesRequest{
+    ctx := context.Background()
+    res, err := s.AirtravelCoordinates.AirtravelCoordinates(ctx, operations.AirtravelCoordinatesRequest{
         ContentType: "application/x-www-form-urlencoded",
         RequestBody: &operations.AirtravelCoordinatesRequestBody{
             APIKeyL1: "d95fead6-e8a6-4547-9fb9-7835101a3960",
@@ -37,10 +37,7 @@ func main() {
             TravelClass: "Economy",
             TravelMode: "round trip",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.AirtravelCoordinates.AirtravelCoordinates(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -56,49 +53,49 @@ func main() {
 ## Available Resources and Operations
 
 
-### AirtravelCoordinates
+### [AirtravelCoordinates](docs/airtravelcoordinates/README.md)
 
-* `AirtravelCoordinates` - airtravelCoordinates
-* `ConfirmCarbonOffset4` - confirmCarbonOffset
-* `ConfirmPayment4` - confirmPayment
-* `ConfirmPaymentOfTransaction4` - confirmTransaction
-* `ConfirmsPlanting4` - confirmPlanting
+* [AirtravelCoordinates](docs/airtravelcoordinates/README.md#airtravelcoordinates) - airtravelCoordinates
+* [ConfirmCarbonOffset4](docs/airtravelcoordinates/README.md#confirmcarbonoffset4) - confirmCarbonOffset
+* [ConfirmPayment4](docs/airtravelcoordinates/README.md#confirmpayment4) - confirmPayment
+* [ConfirmPaymentOfTransaction4](docs/airtravelcoordinates/README.md#confirmpaymentoftransaction4) - confirmTransaction
+* [ConfirmsPlanting4](docs/airtravelcoordinates/README.md#confirmsplanting4) - confirmPlanting
 
-### EcommerceDelivery
+### [EcommerceDelivery](docs/ecommercedelivery/README.md)
 
-* `ConfirmCarbonOffset1` - confirmCarbonOffset
-* `ConfirmPayment1` - confirmPayment
-* `ConfirmPaymentOfTransaction1` - confirmTransaction
-* `ConfirmsPlanting2` - confirmPlanting
-* `EcommerceDelivery` - ecommerceDelivery
+* [ConfirmCarbonOffset1](docs/ecommercedelivery/README.md#confirmcarbonoffset1) - confirmCarbonOffset
+* [ConfirmPayment1](docs/ecommercedelivery/README.md#confirmpayment1) - confirmPayment
+* [ConfirmPaymentOfTransaction1](docs/ecommercedelivery/README.md#confirmpaymentoftransaction1) - confirmTransaction
+* [ConfirmsPlanting2](docs/ecommercedelivery/README.md#confirmsplanting2) - confirmPlanting
+* [EcommerceDelivery](docs/ecommercedelivery/README.md#ecommercedelivery) - ecommerceDelivery
 
-### RequestAPIKey
+### [RequestAPIKey](docs/requestapikey/README.md)
 
-* `RequestAPIKey` - requestApiKey
+* [RequestAPIKey](docs/requestapikey/README.md#requestapikey) - requestApiKey
 
-### RoadDistance
+### [RoadDistance](docs/roaddistance/README.md)
 
-* `ConfirmCarbonOffset5` - confirmCarbonOffset
-* `ConfirmPayment5` - confirmPayment
-* `ConfirmPaymentOfTransaction5` - confirmTransaction
-* `ConfirmsPlanting5` - confirmPlanting
-* `RoadDistance` - RoadDistance
+* [ConfirmCarbonOffset5](docs/roaddistance/README.md#confirmcarbonoffset5) - confirmCarbonOffset
+* [ConfirmPayment5](docs/roaddistance/README.md#confirmpayment5) - confirmPayment
+* [ConfirmPaymentOfTransaction5](docs/roaddistance/README.md#confirmpaymentoftransaction5) - confirmTransaction
+* [ConfirmsPlanting5](docs/roaddistance/README.md#confirmsplanting5) - confirmPlanting
+* [RoadDistance](docs/roaddistance/README.md#roaddistance) - RoadDistance
 
-### UrbanDelivery
+### [UrbanDelivery](docs/urbandelivery/README.md)
 
-* `ConfirmCarbonOffset` - confirmCarbonOffset
-* `ConfirmPayment` - confirmPayment
-* `ConfirmPaymentOfTransaction` - confirmTransaction
-* `ConfirmsPlanting` - confirmPlanting
-* `UrbanDelivery` - urbanDelivery
+* [ConfirmCarbonOffset](docs/urbandelivery/README.md#confirmcarbonoffset) - confirmCarbonOffset
+* [ConfirmPayment](docs/urbandelivery/README.md#confirmpayment) - confirmPayment
+* [ConfirmPaymentOfTransaction](docs/urbandelivery/README.md#confirmpaymentoftransaction) - confirmTransaction
+* [ConfirmsPlanting](docs/urbandelivery/README.md#confirmsplanting) - confirmPlanting
+* [UrbanDelivery](docs/urbandelivery/README.md#urbandelivery) - urbanDelivery
 
-### AirtravelMultileg
+### [AirtravelMultileg](docs/airtravelmultileg/README.md)
 
-* `AirtravelMultileg` - airtravelMultileg
-* `ConfirmCarbonOffset3` - confirmCarbonOffset
-* `ConfirmPayment3` - confirmPayment
-* `ConfirmPaymentOfTransaction3` - confirmTransaction
-* `ConfirmsPlanting3` - confirmPlanting
+* [AirtravelMultileg](docs/airtravelmultileg/README.md#airtravelmultileg) - airtravelMultileg
+* [ConfirmCarbonOffset3](docs/airtravelmultileg/README.md#confirmcarbonoffset3) - confirmCarbonOffset
+* [ConfirmPayment3](docs/airtravelmultileg/README.md#confirmpayment3) - confirmPayment
+* [ConfirmPaymentOfTransaction3](docs/airtravelmultileg/README.md#confirmpaymentoftransaction3) - confirmTransaction
+* [ConfirmsPlanting3](docs/airtravelmultileg/README.md#confirmsplanting3) - confirmPlanting
 <!-- End SDK Available Operations -->
 
 ### Maturity

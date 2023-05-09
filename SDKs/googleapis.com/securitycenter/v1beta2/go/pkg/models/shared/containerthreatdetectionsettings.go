@@ -17,12 +17,16 @@ const (
 	ContainerThreatDetectionSettingsServiceEnablementStateEnumDisabled                   ContainerThreatDetectionSettingsServiceEnablementStateEnum = "DISABLED"
 )
 
+func (e ContainerThreatDetectionSettingsServiceEnablementStateEnum) ToPointer() *ContainerThreatDetectionSettingsServiceEnablementStateEnum {
+	return &e
+}
+
 func (e *ContainerThreatDetectionSettingsServiceEnablementStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLEMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "INHERITED":
@@ -30,10 +34,10 @@ func (e *ContainerThreatDetectionSettingsServiceEnablementStateEnum) UnmarshalJS
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = ContainerThreatDetectionSettingsServiceEnablementStateEnum(s)
+		*e = ContainerThreatDetectionSettingsServiceEnablementStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerThreatDetectionSettingsServiceEnablementStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerThreatDetectionSettingsServiceEnablementStateEnum: %v", v)
 	}
 }
 

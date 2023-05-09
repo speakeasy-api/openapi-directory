@@ -19,12 +19,16 @@ const (
 	ConfigFileFileTypeEnumProtoFile              ConfigFileFileTypeEnum = "PROTO_FILE"
 )
 
+func (e ConfigFileFileTypeEnum) ToPointer() *ConfigFileFileTypeEnum {
+	return &e
+}
+
 func (e *ConfigFileFileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SERVICE_CONFIG_YAML":
@@ -36,10 +40,10 @@ func (e *ConfigFileFileTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FILE_DESCRIPTOR_SET_PROTO":
 		fallthrough
 	case "PROTO_FILE":
-		*e = ConfigFileFileTypeEnum(s)
+		*e = ConfigFileFileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigFileFileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigFileFileTypeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	RunTimeAnalyzerNameEnumSctAnalyzer      RunTimeAnalyzerNameEnum = "SCT_ANALYZER"
 )
 
+func (e RunTimeAnalyzerNameEnum) ToPointer() *RunTimeAnalyzerNameEnum {
+	return &e
+}
+
 func (e *RunTimeAnalyzerNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "A2C_ANALYZER":
 		fallthrough
 	case "REHOST_ANALYZER":
@@ -32,9 +36,9 @@ func (e *RunTimeAnalyzerNameEnum) UnmarshalJSON(data []byte) error {
 	case "DATABASE_ANALYZER":
 		fallthrough
 	case "SCT_ANALYZER":
-		*e = RunTimeAnalyzerNameEnum(s)
+		*e = RunTimeAnalyzerNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunTimeAnalyzerNameEnum: %s", s)
+		return fmt.Errorf("invalid value for RunTimeAnalyzerNameEnum: %v", v)
 	}
 }

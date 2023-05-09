@@ -15,18 +15,22 @@ const (
 	CreditDebitIndicatorEnumDebit  CreditDebitIndicatorEnum = "DEBIT"
 )
 
+func (e CreditDebitIndicatorEnum) ToPointer() *CreditDebitIndicatorEnum {
+	return &e
+}
+
 func (e *CreditDebitIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREDIT":
 		fallthrough
 	case "DEBIT":
-		*e = CreditDebitIndicatorEnum(s)
+		*e = CreditDebitIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreditDebitIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for CreditDebitIndicatorEnum: %v", v)
 	}
 }

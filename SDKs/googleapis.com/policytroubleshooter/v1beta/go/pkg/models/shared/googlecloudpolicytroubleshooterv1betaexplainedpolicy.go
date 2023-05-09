@@ -18,12 +18,16 @@ const (
 	GoogleCloudPolicytroubleshooterV1betaExplainedPolicyAccessEnumUnknownInfoDenied      GoogleCloudPolicytroubleshooterV1betaExplainedPolicyAccessEnum = "UNKNOWN_INFO_DENIED"
 )
 
+func (e GoogleCloudPolicytroubleshooterV1betaExplainedPolicyAccessEnum) ToPointer() *GoogleCloudPolicytroubleshooterV1betaExplainedPolicyAccessEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicytroubleshooterV1betaExplainedPolicyAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_STATE_UNSPECIFIED":
 		fallthrough
 	case "GRANTED":
@@ -33,10 +37,10 @@ func (e *GoogleCloudPolicytroubleshooterV1betaExplainedPolicyAccessEnum) Unmarsh
 	case "UNKNOWN_CONDITIONAL":
 		fallthrough
 	case "UNKNOWN_INFO_DENIED":
-		*e = GoogleCloudPolicytroubleshooterV1betaExplainedPolicyAccessEnum(s)
+		*e = GoogleCloudPolicytroubleshooterV1betaExplainedPolicyAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1betaExplainedPolicyAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1betaExplainedPolicyAccessEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	GoogleCloudPolicytroubleshooterV1betaExplainedPolicyRelevanceEnumHigh                          GoogleCloudPolicytroubleshooterV1betaExplainedPolicyRelevanceEnum = "HIGH"
 )
 
+func (e GoogleCloudPolicytroubleshooterV1betaExplainedPolicyRelevanceEnum) ToPointer() *GoogleCloudPolicytroubleshooterV1betaExplainedPolicyRelevanceEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicytroubleshooterV1betaExplainedPolicyRelevanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEURISTIC_RELEVANCE_UNSPECIFIED":
 		fallthrough
 	case "NORMAL":
 		fallthrough
 	case "HIGH":
-		*e = GoogleCloudPolicytroubleshooterV1betaExplainedPolicyRelevanceEnum(s)
+		*e = GoogleCloudPolicytroubleshooterV1betaExplainedPolicyRelevanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1betaExplainedPolicyRelevanceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1betaExplainedPolicyRelevanceEnum: %v", v)
 	}
 }
 

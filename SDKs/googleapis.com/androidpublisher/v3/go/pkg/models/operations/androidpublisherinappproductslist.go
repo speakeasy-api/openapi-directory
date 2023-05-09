@@ -35,7 +35,7 @@ type AndroidpublisherInappproductsListRequest struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
-	// Deprecated and ignored. Set the `token` parameter to rertieve the next page.
+	// Deprecated and ignored. Set the `token` parameter to retrieve the next page.
 	StartIndex *int64 `queryParam:"style=form,explode=true,name=startIndex"`
 	// Pagination token. If empty, list starts at the first product.
 	Token *string `queryParam:"style=form,explode=true,name=token"`

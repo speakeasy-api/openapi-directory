@@ -15,17 +15,21 @@ const (
 	GETDownloadDBLogFilePortionActionEnumDownloadDbLogFilePortion GETDownloadDBLogFilePortionActionEnum = "DownloadDBLogFilePortion"
 )
 
+func (e GETDownloadDBLogFilePortionActionEnum) ToPointer() *GETDownloadDBLogFilePortionActionEnum {
+	return &e
+}
+
 func (e *GETDownloadDBLogFilePortionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DownloadDBLogFilePortion":
-		*e = GETDownloadDBLogFilePortionActionEnum(s)
+		*e = GETDownloadDBLogFilePortionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDownloadDBLogFilePortionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDownloadDBLogFilePortionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDownloadDBLogFilePortionVersionEnumTwoThousandAndThirteen0909 GETDownloadDBLogFilePortionVersionEnum = "2013-09-09"
 )
 
+func (e GETDownloadDBLogFilePortionVersionEnum) ToPointer() *GETDownloadDBLogFilePortionVersionEnum {
+	return &e
+}
+
 func (e *GETDownloadDBLogFilePortionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-09-09":
-		*e = GETDownloadDBLogFilePortionVersionEnum(s)
+		*e = GETDownloadDBLogFilePortionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDownloadDBLogFilePortionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDownloadDBLogFilePortionVersionEnum: %v", v)
 	}
 }
 

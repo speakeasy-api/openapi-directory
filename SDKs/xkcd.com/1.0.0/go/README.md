@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/xkcd.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -40,11 +38,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetInfo0JSON` - Fetch current comic and metadata.
+* [GetInfo0JSON](docs/sdk/README.md#getinfo0json) - Fetch current comic and metadata.
 
-* `GetComicIDInfo0JSON` - Fetch comics and metadata  by comic id.
+* [GetComicIDInfo0JSON](docs/sdk/README.md#getcomicidinfo0json) - Fetch comics and metadata  by comic id.
 
 <!-- End SDK Available Operations -->
 

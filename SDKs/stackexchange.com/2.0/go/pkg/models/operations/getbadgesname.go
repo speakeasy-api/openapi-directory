@@ -16,19 +16,23 @@ const (
 	GetBadgesNameOrderEnumAsc  GetBadgesNameOrderEnum = "asc"
 )
 
+func (e GetBadgesNameOrderEnum) ToPointer() *GetBadgesNameOrderEnum {
+	return &e
+}
+
 func (e *GetBadgesNameOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetBadgesNameOrderEnum(s)
+		*e = GetBadgesNameOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBadgesNameOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBadgesNameOrderEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	GetBadgesNameSortEnumName GetBadgesNameSortEnum = "name"
 )
 
+func (e GetBadgesNameSortEnum) ToPointer() *GetBadgesNameSortEnum {
+	return &e
+}
+
 func (e *GetBadgesNameSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rank":
 		fallthrough
 	case "name":
-		*e = GetBadgesNameSortEnum(s)
+		*e = GetBadgesNameSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBadgesNameSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBadgesNameSortEnum: %v", v)
 	}
 }
 

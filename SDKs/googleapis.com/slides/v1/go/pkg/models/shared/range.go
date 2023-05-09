@@ -17,12 +17,16 @@ const (
 	RangeTypeEnumAll                  RangeTypeEnum = "ALL"
 )
 
+func (e RangeTypeEnum) ToPointer() *RangeTypeEnum {
+	return &e
+}
+
 func (e *RangeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RANGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FIXED_RANGE":
@@ -30,10 +34,10 @@ func (e *RangeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FROM_START_INDEX":
 		fallthrough
 	case "ALL":
-		*e = RangeTypeEnum(s)
+		*e = RangeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RangeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RangeTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DescribeProductViewXAmzTargetEnumAws242ServiceCatalogServiceDescribeProductView DescribeProductViewXAmzTargetEnum = "AWS242ServiceCatalogService.DescribeProductView"
 )
 
+func (e DescribeProductViewXAmzTargetEnum) ToPointer() *DescribeProductViewXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeProductViewXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DescribeProductView":
-		*e = DescribeProductViewXAmzTargetEnum(s)
+		*e = DescribeProductViewXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeProductViewXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeProductViewXAmzTargetEnum: %v", v)
 	}
 }
 

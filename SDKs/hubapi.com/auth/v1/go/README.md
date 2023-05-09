@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/hubapi.com/auth/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetOauthV1AccessTokensTokenGetRequest{
-        Token: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.AccessTokens.GetOauthV1AccessTokensTokenGet(ctx, req)
+    res, err := s.AccessTokens.GetOauthV1AccessTokensTokenGet(ctx, operations.GetOauthV1AccessTokensTokenGetRequest{
+        Token: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,18 +42,18 @@ func main() {
 ## Available Resources and Operations
 
 
-### AccessTokens
+### [AccessTokens](docs/accesstokens/README.md)
 
-* `GetOauthV1AccessTokensTokenGet`
+* [GetOauthV1AccessTokensTokenGet](docs/accesstokens/README.md#getoauthv1accesstokenstokenget)
 
-### RefreshTokens
+### [RefreshTokens](docs/refreshtokens/README.md)
 
-* `DeleteOauthV1RefreshTokensTokenArchive`
-* `GetOauthV1RefreshTokensTokenGet`
+* [DeleteOauthV1RefreshTokensTokenArchive](docs/refreshtokens/README.md#deleteoauthv1refreshtokenstokenarchive)
+* [GetOauthV1RefreshTokensTokenGet](docs/refreshtokens/README.md#getoauthv1refreshtokenstokenget)
 
-### Tokens
+### [Tokens](docs/tokens/README.md)
 
-* `PostOauthV1TokenCreate`
+* [PostOauthV1TokenCreate](docs/tokens/README.md#postoauthv1tokencreate)
 <!-- End SDK Available Operations -->
 
 ### Maturity

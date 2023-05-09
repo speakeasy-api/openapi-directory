@@ -16,17 +16,21 @@ const (
 	CancelRotateSecretXAmzTargetEnumSecretsmanagerCancelRotateSecret CancelRotateSecretXAmzTargetEnum = "secretsmanager.CancelRotateSecret"
 )
 
+func (e CancelRotateSecretXAmzTargetEnum) ToPointer() *CancelRotateSecretXAmzTargetEnum {
+	return &e
+}
+
 func (e *CancelRotateSecretXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "secretsmanager.CancelRotateSecret":
-		*e = CancelRotateSecretXAmzTargetEnum(s)
+		*e = CancelRotateSecretXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelRotateSecretXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelRotateSecretXAmzTargetEnum: %v", v)
 	}
 }
 

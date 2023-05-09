@@ -16,17 +16,21 @@ const (
 	DetectPHIXAmzTargetEnumComprehendMedical20181030DetectPhi DetectPHIXAmzTargetEnum = "ComprehendMedical_20181030.DetectPHI"
 )
 
+func (e DetectPHIXAmzTargetEnum) ToPointer() *DetectPHIXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetectPHIXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComprehendMedical_20181030.DetectPHI":
-		*e = DetectPHIXAmzTargetEnum(s)
+		*e = DetectPHIXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetectPHIXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetectPHIXAmzTargetEnum: %v", v)
 	}
 }
 

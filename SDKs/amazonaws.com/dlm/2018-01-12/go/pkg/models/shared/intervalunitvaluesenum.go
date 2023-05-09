@@ -13,16 +13,20 @@ const (
 	IntervalUnitValuesEnumHours IntervalUnitValuesEnum = "HOURS"
 )
 
+func (e IntervalUnitValuesEnum) ToPointer() *IntervalUnitValuesEnum {
+	return &e
+}
+
 func (e *IntervalUnitValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HOURS":
-		*e = IntervalUnitValuesEnum(s)
+		*e = IntervalUnitValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntervalUnitValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for IntervalUnitValuesEnum: %v", v)
 	}
 }

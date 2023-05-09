@@ -21,19 +21,23 @@ const (
 	DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnumCrowdstrike DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum = "crowdstrike"
 )
 
+func (e DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum) ToPointer() *DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "jamf":
 		fallthrough
 	case "crowdstrike":
-		*e = DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum(s)
+		*e = DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersTrustProviderTypeEnumDevice DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersTrustProviderTypeEnum = "device"
 )
 
+func (e DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersTrustProviderTypeEnum) ToPointer() *DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "device":
-		*e = DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersTrustProviderTypeEnum(s)
+		*e = DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -69,19 +77,23 @@ const (
 	DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersUserTrustProviderTypeEnumOidc              DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersUserTrustProviderTypeEnum = "oidc"
 )
 
+func (e DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersUserTrustProviderTypeEnum) ToPointer() *DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersUserTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersUserTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iam-identity-center":
 		fallthrough
 	case "oidc":
-		*e = DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersUserTrustProviderTypeEnum(s)
+		*e = DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersUserTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersUserTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVerifiedAccessInstancesResultVerifiedAccessInstancesVerifiedAccessTrustProvidersUserTrustProviderTypeEnum: %v", v)
 	}
 }
 

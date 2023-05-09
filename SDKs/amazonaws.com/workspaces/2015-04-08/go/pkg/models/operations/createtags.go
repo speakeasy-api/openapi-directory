@@ -16,17 +16,21 @@ const (
 	CreateTagsXAmzTargetEnumWorkspacesServiceCreateTags CreateTagsXAmzTargetEnum = "WorkspacesService.CreateTags"
 )
 
+func (e CreateTagsXAmzTargetEnum) ToPointer() *CreateTagsXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateTagsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.CreateTags":
-		*e = CreateTagsXAmzTargetEnum(s)
+		*e = CreateTagsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTagsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTagsXAmzTargetEnum: %v", v)
 	}
 }
 

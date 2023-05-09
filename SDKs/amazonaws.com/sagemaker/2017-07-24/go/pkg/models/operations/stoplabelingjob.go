@@ -16,17 +16,21 @@ const (
 	StopLabelingJobXAmzTargetEnumSageMakerStopLabelingJob StopLabelingJobXAmzTargetEnum = "SageMaker.StopLabelingJob"
 )
 
+func (e StopLabelingJobXAmzTargetEnum) ToPointer() *StopLabelingJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopLabelingJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.StopLabelingJob":
-		*e = StopLabelingJobXAmzTargetEnum(s)
+		*e = StopLabelingJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopLabelingJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopLabelingJobXAmzTargetEnum: %v", v)
 	}
 }
 

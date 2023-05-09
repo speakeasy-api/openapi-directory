@@ -57,12 +57,16 @@ const (
 	AccountHolderTransactionListRequestTransactionStatusesEnumSecondChargebackReceived             AccountHolderTransactionListRequestTransactionStatusesEnum = "SecondChargebackReceived"
 )
 
+func (e AccountHolderTransactionListRequestTransactionStatusesEnum) ToPointer() *AccountHolderTransactionListRequestTransactionStatusesEnum {
+	return &e
+}
+
 func (e *AccountHolderTransactionListRequestTransactionStatusesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BalanceNotPaidOutTransfer":
 		fallthrough
 	case "BalancePlatformSweep":
@@ -152,10 +156,10 @@ func (e *AccountHolderTransactionListRequestTransactionStatusesEnum) UnmarshalJS
 	case "SecondChargebackCorrectionReceived":
 		fallthrough
 	case "SecondChargebackReceived":
-		*e = AccountHolderTransactionListRequestTransactionStatusesEnum(s)
+		*e = AccountHolderTransactionListRequestTransactionStatusesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountHolderTransactionListRequestTransactionStatusesEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountHolderTransactionListRequestTransactionStatusesEnum: %v", v)
 	}
 }
 
@@ -163,7 +167,7 @@ type AccountHolderTransactionListRequest struct {
 	// The code of the account holder that owns the account(s) of which retrieve the transaction list.
 	AccountHolderCode string `json:"accountHolderCode"`
 	// A list of accounts to include in the transaction list. If left blank, the last fifty (50) transactions for all accounts of the account holder will be included.
-	TransactionListsPerAccount []TransactionListForAccount `json:"transactionListsPerAccount,omitempty"`
+	TransactionListsPerAccount []TransactionListForAccountWrapper `json:"transactionListsPerAccount,omitempty"`
 	// A list of statuses to include in the transaction list. If left blank, all transactions will be included.
 	// >Permitted values:
 	// >* `PendingCredit` - a pending balance credit.

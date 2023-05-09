@@ -73,7 +73,10 @@ func (s *priceTables) Getrulesforapricetable(ctx context.Context, request operat
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/pricing/pipeline/catalog/{priceTableId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pricing/pipeline/catalog/{priceTableId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -340,7 +343,10 @@ func (s *priceTables) Getallpricetablesandrules(ctx context.Context, request ope
 // ```
 func (s *priceTables) PutPricingPipelineCatalogPriceTableID(ctx context.Context, request operations.PutPricingPipelineCatalogPriceTableIDRequest) (*operations.PutPricingPipelineCatalogPriceTableIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pricing/pipeline/catalog/{priceTableId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pricing/pipeline/catalog/{priceTableId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

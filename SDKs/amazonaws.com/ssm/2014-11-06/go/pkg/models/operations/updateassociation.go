@@ -16,17 +16,21 @@ const (
 	UpdateAssociationXAmzTargetEnumAmazonSsmUpdateAssociation UpdateAssociationXAmzTargetEnum = "AmazonSSM.UpdateAssociation"
 )
 
+func (e UpdateAssociationXAmzTargetEnum) ToPointer() *UpdateAssociationXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateAssociationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.UpdateAssociation":
-		*e = UpdateAssociationXAmzTargetEnum(s)
+		*e = UpdateAssociationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAssociationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAssociationXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	OSPolicyResourceConfigStepOutcomeEnumFailed             OSPolicyResourceConfigStepOutcomeEnum = "FAILED"
 )
 
+func (e OSPolicyResourceConfigStepOutcomeEnum) ToPointer() *OSPolicyResourceConfigStepOutcomeEnum {
+	return &e
+}
+
 func (e *OSPolicyResourceConfigStepOutcomeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OUTCOME_UNSPECIFIED":
 		fallthrough
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = OSPolicyResourceConfigStepOutcomeEnum(s)
+		*e = OSPolicyResourceConfigStepOutcomeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OSPolicyResourceConfigStepOutcomeEnum: %s", s)
+		return fmt.Errorf("invalid value for OSPolicyResourceConfigStepOutcomeEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	OSPolicyResourceConfigStepTypeEnumDesiredStateCheckPostEnforcement OSPolicyResourceConfigStepTypeEnum = "DESIRED_STATE_CHECK_POST_ENFORCEMENT"
 )
 
+func (e OSPolicyResourceConfigStepTypeEnum) ToPointer() *OSPolicyResourceConfigStepTypeEnum {
+	return &e
+}
+
 func (e *OSPolicyResourceConfigStepTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "VALIDATION":
@@ -60,10 +68,10 @@ func (e *OSPolicyResourceConfigStepTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DESIRED_STATE_ENFORCEMENT":
 		fallthrough
 	case "DESIRED_STATE_CHECK_POST_ENFORCEMENT":
-		*e = OSPolicyResourceConfigStepTypeEnum(s)
+		*e = OSPolicyResourceConfigStepTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OSPolicyResourceConfigStepTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OSPolicyResourceConfigStepTypeEnum: %v", v)
 	}
 }
 

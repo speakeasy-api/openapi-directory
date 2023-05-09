@@ -16,17 +16,21 @@ const (
 	PutPermissionPolicyXAmzTargetEnumAwswaf20150824PutPermissionPolicy PutPermissionPolicyXAmzTargetEnum = "AWSWAF_20150824.PutPermissionPolicy"
 )
 
+func (e PutPermissionPolicyXAmzTargetEnum) ToPointer() *PutPermissionPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutPermissionPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.PutPermissionPolicy":
-		*e = PutPermissionPolicyXAmzTargetEnum(s)
+		*e = PutPermissionPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutPermissionPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutPermissionPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

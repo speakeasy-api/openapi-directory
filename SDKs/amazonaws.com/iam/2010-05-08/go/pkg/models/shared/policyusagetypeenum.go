@@ -15,18 +15,22 @@ const (
 	PolicyUsageTypeEnumPermissionsBoundary PolicyUsageTypeEnum = "PermissionsBoundary"
 )
 
+func (e PolicyUsageTypeEnum) ToPointer() *PolicyUsageTypeEnum {
+	return &e
+}
+
 func (e *PolicyUsageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PermissionsPolicy":
 		fallthrough
 	case "PermissionsBoundary":
-		*e = PolicyUsageTypeEnum(s)
+		*e = PolicyUsageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyUsageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyUsageTypeEnum: %v", v)
 	}
 }

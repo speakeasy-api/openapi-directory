@@ -16,17 +16,21 @@ const (
 	GetRotationOverrideXAmzTargetEnumSsmContactsGetRotationOverride GetRotationOverrideXAmzTargetEnum = "SSMContacts.GetRotationOverride"
 )
 
+func (e GetRotationOverrideXAmzTargetEnum) ToPointer() *GetRotationOverrideXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRotationOverrideXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSMContacts.GetRotationOverride":
-		*e = GetRotationOverrideXAmzTargetEnum(s)
+		*e = GetRotationOverrideXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRotationOverrideXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRotationOverrideXAmzTargetEnum: %v", v)
 	}
 }
 

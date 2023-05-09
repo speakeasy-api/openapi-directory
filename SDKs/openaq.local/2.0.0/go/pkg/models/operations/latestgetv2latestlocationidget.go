@@ -23,12 +23,16 @@ const (
 	LatestGetV2LatestLocationIDGetOrderByLocationsOrderEnumRandom       LatestGetV2LatestLocationIDGetOrderByLocationsOrderEnum = "random"
 )
 
+func (e LatestGetV2LatestLocationIDGetOrderByLocationsOrderEnum) ToPointer() *LatestGetV2LatestLocationIDGetOrderByLocationsOrderEnum {
+	return &e
+}
+
 func (e *LatestGetV2LatestLocationIDGetOrderByLocationsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "city":
 		fallthrough
 	case "country":
@@ -44,10 +48,10 @@ func (e *LatestGetV2LatestLocationIDGetOrderByLocationsOrderEnum) UnmarshalJSON(
 	case "count":
 		fallthrough
 	case "random":
-		*e = LatestGetV2LatestLocationIDGetOrderByLocationsOrderEnum(s)
+		*e = LatestGetV2LatestLocationIDGetOrderByLocationsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LatestGetV2LatestLocationIDGetOrderByLocationsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for LatestGetV2LatestLocationIDGetOrderByLocationsOrderEnum: %v", v)
 	}
 }
 
@@ -59,19 +63,23 @@ const (
 	LatestGetV2LatestLocationIDGetSortSortEnumDesc LatestGetV2LatestLocationIDGetSortSortEnum = "desc"
 )
 
+func (e LatestGetV2LatestLocationIDGetSortSortEnum) ToPointer() *LatestGetV2LatestLocationIDGetSortSortEnum {
+	return &e
+}
+
 func (e *LatestGetV2LatestLocationIDGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = LatestGetV2LatestLocationIDGetSortSortEnum(s)
+		*e = LatestGetV2LatestLocationIDGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LatestGetV2LatestLocationIDGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for LatestGetV2LatestLocationIDGetSortSortEnum: %v", v)
 	}
 }
 

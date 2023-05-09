@@ -19,4 +19,6 @@ type CreateEUAV2Response struct {
 	CreateEUAV2401ApplicationJSONObject map[string]interface{}
 	// IP Access denied
 	CreateEUAV2403ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	CreateEUAV2429ApplicationJSONObject map[string]interface{}
 }

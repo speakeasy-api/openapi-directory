@@ -16,21 +16,25 @@ const (
 	CustomerDTOStatusEnumPotential CustomerDTOStatusEnum = "POTENTIAL"
 )
 
+func (e CustomerDTOStatusEnum) ToPointer() *CustomerDTOStatusEnum {
+	return &e
+}
+
 func (e *CustomerDTOStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
 		fallthrough
 	case "POTENTIAL":
-		*e = CustomerDTOStatusEnum(s)
+		*e = CustomerDTOStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomerDTOStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomerDTOStatusEnum: %v", v)
 	}
 }
 

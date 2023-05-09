@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2beta1AgentAPIVersionEnumAPIVersionV2Beta1     GoogleCloudDialogflowV2beta1AgentAPIVersionEnum = "API_VERSION_V2_BETA_1"
 )
 
+func (e GoogleCloudDialogflowV2beta1AgentAPIVersionEnum) ToPointer() *GoogleCloudDialogflowV2beta1AgentAPIVersionEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1AgentAPIVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "API_VERSION_UNSPECIFIED":
 		fallthrough
 	case "API_VERSION_V1":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowV2beta1AgentAPIVersionEnum) UnmarshalJSON(data []b
 	case "API_VERSION_V2":
 		fallthrough
 	case "API_VERSION_V2_BETA_1":
-		*e = GoogleCloudDialogflowV2beta1AgentAPIVersionEnum(s)
+		*e = GoogleCloudDialogflowV2beta1AgentAPIVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AgentAPIVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AgentAPIVersionEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	GoogleCloudDialogflowV2beta1AgentMatchModeEnumMatchModeMlOnly      GoogleCloudDialogflowV2beta1AgentMatchModeEnum = "MATCH_MODE_ML_ONLY"
 )
 
+func (e GoogleCloudDialogflowV2beta1AgentMatchModeEnum) ToPointer() *GoogleCloudDialogflowV2beta1AgentMatchModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1AgentMatchModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MATCH_MODE_UNSPECIFIED":
 		fallthrough
 	case "MATCH_MODE_HYBRID":
 		fallthrough
 	case "MATCH_MODE_ML_ONLY":
-		*e = GoogleCloudDialogflowV2beta1AgentMatchModeEnum(s)
+		*e = GoogleCloudDialogflowV2beta1AgentMatchModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AgentMatchModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AgentMatchModeEnum: %v", v)
 	}
 }
 
@@ -74,12 +82,16 @@ const (
 	GoogleCloudDialogflowV2beta1AgentTierEnumTierEnterprisePlus GoogleCloudDialogflowV2beta1AgentTierEnum = "TIER_ENTERPRISE_PLUS"
 )
 
+func (e GoogleCloudDialogflowV2beta1AgentTierEnum) ToPointer() *GoogleCloudDialogflowV2beta1AgentTierEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1AgentTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIER_UNSPECIFIED":
 		fallthrough
 	case "TIER_STANDARD":
@@ -87,10 +99,10 @@ func (e *GoogleCloudDialogflowV2beta1AgentTierEnum) UnmarshalJSON(data []byte) e
 	case "TIER_ENTERPRISE":
 		fallthrough
 	case "TIER_ENTERPRISE_PLUS":
-		*e = GoogleCloudDialogflowV2beta1AgentTierEnum(s)
+		*e = GoogleCloudDialogflowV2beta1AgentTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AgentTierEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AgentTierEnum: %v", v)
 	}
 }
 

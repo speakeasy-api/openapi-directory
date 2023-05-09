@@ -15,17 +15,21 @@ const (
 	GETUntagResourceActionEnumUntagResource GETUntagResourceActionEnum = "UntagResource"
 )
 
+func (e GETUntagResourceActionEnum) ToPointer() *GETUntagResourceActionEnum {
+	return &e
+}
+
 func (e *GETUntagResourceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UntagResource":
-		*e = GETUntagResourceActionEnum(s)
+		*e = GETUntagResourceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUntagResourceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUntagResourceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUntagResourceVersionEnumTwoThousandAndTen0801 GETUntagResourceVersionEnum = "2010-08-01"
 )
 
+func (e GETUntagResourceVersionEnum) ToPointer() *GETUntagResourceVersionEnum {
+	return &e
+}
+
 func (e *GETUntagResourceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = GETUntagResourceVersionEnum(s)
+		*e = GETUntagResourceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUntagResourceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUntagResourceVersionEnum: %v", v)
 	}
 }
 

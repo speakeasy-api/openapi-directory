@@ -15,17 +15,21 @@ const (
 	POSTRebootDBInstanceActionEnumRebootDbInstance POSTRebootDBInstanceActionEnum = "RebootDBInstance"
 )
 
+func (e POSTRebootDBInstanceActionEnum) ToPointer() *POSTRebootDBInstanceActionEnum {
+	return &e
+}
+
 func (e *POSTRebootDBInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RebootDBInstance":
-		*e = POSTRebootDBInstanceActionEnum(s)
+		*e = POSTRebootDBInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRebootDBInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRebootDBInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRebootDBInstanceVersionEnumTwoThousandAndFourteen0901 POSTRebootDBInstanceVersionEnum = "2014-09-01"
 )
 
+func (e POSTRebootDBInstanceVersionEnum) ToPointer() *POSTRebootDBInstanceVersionEnum {
+	return &e
+}
+
 func (e *POSTRebootDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-09-01":
-		*e = POSTRebootDBInstanceVersionEnum(s)
+		*e = POSTRebootDBInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRebootDBInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRebootDBInstanceVersionEnum: %v", v)
 	}
 }
 

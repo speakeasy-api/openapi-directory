@@ -39,23 +39,24 @@ type VpnTunnelOptionsSpecificationPhase2IntegrityAlgorithms struct {
 
 // VpnTunnelOptionsSpecification - The tunnel options for a single VPN tunnel.
 type VpnTunnelOptionsSpecification struct {
-	DPDTimeoutAction           *string
-	DPDTimeoutSeconds          *int64
-	IKEVersions                []VpnTunnelOptionsSpecificationIKEVersions
-	LogOptions                 *VpnTunnelLogOptionsSpecification
-	Phase1DHGroupNumbers       []VpnTunnelOptionsSpecificationPhase1DHGroupNumbers
-	Phase1EncryptionAlgorithms []VpnTunnelOptionsSpecificationPhase1EncryptionAlgorithms
-	Phase1IntegrityAlgorithms  []VpnTunnelOptionsSpecificationPhase1IntegrityAlgorithms
-	Phase1LifetimeSeconds      *int64
-	Phase2DHGroupNumbers       []VpnTunnelOptionsSpecificationPhase2DHGroupNumbers
-	Phase2EncryptionAlgorithms []VpnTunnelOptionsSpecificationPhase2EncryptionAlgorithms
-	Phase2IntegrityAlgorithms  []VpnTunnelOptionsSpecificationPhase2IntegrityAlgorithms
-	Phase2LifetimeSeconds      *int64
-	PreSharedKey               *string
-	RekeyFuzzPercentage        *int64
-	RekeyMarginTimeSeconds     *int64
-	ReplayWindowSize           *int64
-	StartupAction              *string
-	TunnelInsideCidr           *string
-	TunnelInsideIpv6Cidr       *string
+	DPDTimeoutAction             *string
+	DPDTimeoutSeconds            *int64
+	EnableTunnelLifecycleControl *bool
+	IKEVersions                  []VpnTunnelOptionsSpecificationIKEVersions
+	LogOptions                   *VpnTunnelLogOptionsSpecification
+	Phase1DHGroupNumbers         []VpnTunnelOptionsSpecificationPhase1DHGroupNumbers
+	Phase1EncryptionAlgorithms   []VpnTunnelOptionsSpecificationPhase1EncryptionAlgorithms
+	Phase1IntegrityAlgorithms    []VpnTunnelOptionsSpecificationPhase1IntegrityAlgorithms
+	Phase1LifetimeSeconds        *int64
+	Phase2DHGroupNumbers         []VpnTunnelOptionsSpecificationPhase2DHGroupNumbers
+	Phase2EncryptionAlgorithms   []VpnTunnelOptionsSpecificationPhase2EncryptionAlgorithms
+	Phase2IntegrityAlgorithms    []VpnTunnelOptionsSpecificationPhase2IntegrityAlgorithms
+	Phase2LifetimeSeconds        *int64
+	PreSharedKey                 *string
+	RekeyFuzzPercentage          *int64
+	RekeyMarginTimeSeconds       *int64
+	ReplayWindowSize             *int64
+	StartupAction                *string
+	TunnelInsideCidr             *string
+	TunnelInsideIpv6Cidr         *string
 }

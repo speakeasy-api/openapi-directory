@@ -16,12 +16,16 @@ const (
 	RealtimeEndpointStatusEnumFailed   RealtimeEndpointStatusEnum = "FAILED"
 )
 
+func (e RealtimeEndpointStatusEnum) ToPointer() *RealtimeEndpointStatusEnum {
+	return &e
+}
+
 func (e *RealtimeEndpointStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "READY":
@@ -29,9 +33,9 @@ func (e *RealtimeEndpointStatusEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATING":
 		fallthrough
 	case "FAILED":
-		*e = RealtimeEndpointStatusEnum(s)
+		*e = RealtimeEndpointStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealtimeEndpointStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RealtimeEndpointStatusEnum: %v", v)
 	}
 }

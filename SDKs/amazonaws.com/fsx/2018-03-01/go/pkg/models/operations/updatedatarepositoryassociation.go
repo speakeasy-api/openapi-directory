@@ -16,17 +16,21 @@ const (
 	UpdateDataRepositoryAssociationXAmzTargetEnumAwsSimbaAPIServiceV20180301UpdateDataRepositoryAssociation UpdateDataRepositoryAssociationXAmzTargetEnum = "AWSSimbaAPIService_v20180301.UpdateDataRepositoryAssociation"
 )
 
+func (e UpdateDataRepositoryAssociationXAmzTargetEnum) ToPointer() *UpdateDataRepositoryAssociationXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDataRepositoryAssociationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.UpdateDataRepositoryAssociation":
-		*e = UpdateDataRepositoryAssociationXAmzTargetEnum(s)
+		*e = UpdateDataRepositoryAssociationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDataRepositoryAssociationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDataRepositoryAssociationXAmzTargetEnum: %v", v)
 	}
 }
 

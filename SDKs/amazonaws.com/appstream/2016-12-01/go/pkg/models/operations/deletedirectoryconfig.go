@@ -16,17 +16,21 @@ const (
 	DeleteDirectoryConfigXAmzTargetEnumPhotonAdminProxyServiceDeleteDirectoryConfig DeleteDirectoryConfigXAmzTargetEnum = "PhotonAdminProxyService.DeleteDirectoryConfig"
 )
 
+func (e DeleteDirectoryConfigXAmzTargetEnum) ToPointer() *DeleteDirectoryConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDirectoryConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.DeleteDirectoryConfig":
-		*e = DeleteDirectoryConfigXAmzTargetEnum(s)
+		*e = DeleteDirectoryConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDirectoryConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDirectoryConfigXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -13,49 +13,47 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/vpcaccess/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.VpcaccessProjectsLocationsConnectorsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.VpcaccessProjectsLocationsConnectorsCreate(ctx, operations.VpcaccessProjectsLocationsConnectorsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ConnectorInput: &shared.ConnectorInput{
-            IPCidrRange: "provident",
-            MachineType: "distinctio",
-            MaxInstances: 844266,
-            MaxThroughput: 602763,
-            MinInstances: 857946,
-            MinThroughput: 544883,
-            Name: "illum",
-            Network: "vel",
+            IPCidrRange: sdk.String("provident"),
+            MachineType: sdk.String("distinctio"),
+            MaxInstances: sdk.Int(844266),
+            MaxThroughput: sdk.Int(602763),
+            MinInstances: sdk.Int(857946),
+            MinThroughput: sdk.Int(544883),
+            Name: sdk.String("Ben Mueller"),
+            Network: sdk.String("iure"),
             Subnet: &shared.Subnet{
-                Name: "error",
-                ProjectID: "deserunt",
+                Name: sdk.String("Raquel Bednar"),
+                ProjectID: sdk.String("suscipit"),
             },
         },
-        AccessToken: "suscipit",
-        Alt: "media",
-        Callback: "magnam",
-        ConnectorID: "debitis",
-        Fields: "ipsa",
-        Key: "delectus",
-        OauthToken: "tempora",
-        Parent: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "molestiae",
-        UploadType: "minus",
-        UploadProtocol: "placeat",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.VpcaccessProjectsLocationsConnectorsCreate(ctx, req, operations.VpcaccessProjectsLocationsConnectorsCreateSecurity{
+        AccessToken: sdk.String("molestiae"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("placeat"),
+        ConnectorID: sdk.String("voluptatum"),
+        Fields: sdk.String("iusto"),
+        Key: sdk.String("excepturi"),
+        OauthToken: sdk.String("nisi"),
+        Parent: "recusandae",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("temporibus"),
+        UploadType: sdk.String("ab"),
+        UploadProtocol: sdk.String("quis"),
+    }, operations.VpcaccessProjectsLocationsConnectorsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -74,15 +72,15 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `VpcaccessProjectsLocationsConnectorsCreate` - Creates a Serverless VPC Access connector, returns an operation.
-* `VpcaccessProjectsLocationsConnectorsDelete` - Deletes a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
-* `VpcaccessProjectsLocationsConnectorsList` - Lists Serverless VPC Access connectors.
-* `VpcaccessProjectsLocationsConnectorsPatch` - Updates a Serverless VPC Access connector, returns an operation.
-* `VpcaccessProjectsLocationsList` - Lists information about the supported locations for this service.
-* `VpcaccessProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `VpcaccessProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [VpcaccessProjectsLocationsConnectorsCreate](docs/projects/README.md#vpcaccessprojectslocationsconnectorscreate) - Creates a Serverless VPC Access connector, returns an operation.
+* [VpcaccessProjectsLocationsConnectorsDelete](docs/projects/README.md#vpcaccessprojectslocationsconnectorsdelete) - Deletes a Serverless VPC Access connector. Returns NOT_FOUND if the resource does not exist.
+* [VpcaccessProjectsLocationsConnectorsList](docs/projects/README.md#vpcaccessprojectslocationsconnectorslist) - Lists Serverless VPC Access connectors.
+* [VpcaccessProjectsLocationsConnectorsPatch](docs/projects/README.md#vpcaccessprojectslocationsconnectorspatch) - Updates a Serverless VPC Access connector, returns an operation.
+* [VpcaccessProjectsLocationsList](docs/projects/README.md#vpcaccessprojectslocationslist) - Lists information about the supported locations for this service.
+* [VpcaccessProjectsLocationsOperationsGet](docs/projects/README.md#vpcaccessprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [VpcaccessProjectsLocationsOperationsList](docs/projects/README.md#vpcaccessprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
 ### Maturity

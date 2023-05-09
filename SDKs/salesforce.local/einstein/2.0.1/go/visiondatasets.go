@@ -89,7 +89,10 @@ func (s *visionDatasets) CreateDataset(ctx context.Context, request operations.C
 // Deletes the specified dataset and associated labels and examples.
 func (s *visionDatasets) DeleteDataset1(ctx context.Context, request operations.DeleteDataset1Request, security operations.DeleteDataset1Security) (*operations.DeleteDataset1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -134,7 +137,10 @@ func (s *visionDatasets) DeleteDataset1(ctx context.Context, request operations.
 // Returns a single dataset.
 func (s *visionDatasets) GetDataset1(ctx context.Context, request operations.GetDataset1Request, security operations.GetDataset1Security) (*operations.GetDataset1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vision/datasets/{datasetId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -179,7 +185,10 @@ func (s *visionDatasets) GetDataset1(ctx context.Context, request operations.Get
 // Returns the status of an image dataset or model deletion. When you delete a dataset or model, the deletion may not occur immediately. Use this call to find out when the deletion is complete.
 func (s *visionDatasets) Get1(ctx context.Context, request operations.Get1Request, security operations.Get1Security) (*operations.Get1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/deletion/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vision/deletion/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

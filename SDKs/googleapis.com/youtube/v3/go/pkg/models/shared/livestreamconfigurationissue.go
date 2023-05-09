@@ -16,21 +16,25 @@ const (
 	LiveStreamConfigurationIssueSeverityEnumError   LiveStreamConfigurationIssueSeverityEnum = "error"
 )
 
+func (e LiveStreamConfigurationIssueSeverityEnum) ToPointer() *LiveStreamConfigurationIssueSeverityEnum {
+	return &e
+}
+
 func (e *LiveStreamConfigurationIssueSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "info":
 		fallthrough
 	case "warning":
 		fallthrough
 	case "error":
-		*e = LiveStreamConfigurationIssueSeverityEnum(s)
+		*e = LiveStreamConfigurationIssueSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveStreamConfigurationIssueSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveStreamConfigurationIssueSeverityEnum: %v", v)
 	}
 }
 
@@ -74,12 +78,16 @@ const (
 	LiveStreamConfigurationIssueTypeEnumVideoIngestionFasterThanRealtime LiveStreamConfigurationIssueTypeEnum = "videoIngestionFasterThanRealtime"
 )
 
+func (e LiveStreamConfigurationIssueTypeEnum) ToPointer() *LiveStreamConfigurationIssueTypeEnum {
+	return &e
+}
+
 func (e *LiveStreamConfigurationIssueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gopSizeOver":
 		fallthrough
 	case "gopSizeLong":
@@ -147,10 +155,10 @@ func (e *LiveStreamConfigurationIssueTypeEnum) UnmarshalJSON(data []byte) error 
 	case "videoIngestionStarved":
 		fallthrough
 	case "videoIngestionFasterThanRealtime":
-		*e = LiveStreamConfigurationIssueTypeEnum(s)
+		*e = LiveStreamConfigurationIssueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveStreamConfigurationIssueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveStreamConfigurationIssueTypeEnum: %v", v)
 	}
 }
 

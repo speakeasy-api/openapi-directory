@@ -16,17 +16,21 @@ const (
 	GetScrobbleShowsShowIDEmbedEnumEpisode GetScrobbleShowsShowIDEmbedEnum = "episode"
 )
 
+func (e GetScrobbleShowsShowIDEmbedEnum) ToPointer() *GetScrobbleShowsShowIDEmbedEnum {
+	return &e
+}
+
 func (e *GetScrobbleShowsShowIDEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "episode":
-		*e = GetScrobbleShowsShowIDEmbedEnum(s)
+		*e = GetScrobbleShowsShowIDEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetScrobbleShowsShowIDEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetScrobbleShowsShowIDEmbedEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnumVertical                   GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum = "VERTICAL"
 )
 
+func (e GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum) ToPointer() *GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CARD_ORIENTATION_UNSPECIFIED":
 		fallthrough
 	case "HORIZONTAL":
 		fallthrough
 	case "VERTICAL":
-		*e = GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum(s)
+		*e = GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientationEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnumRight                              GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum = "RIGHT"
 )
 
+func (e GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum) ToPointer() *GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THUMBNAIL_IMAGE_ALIGNMENT_UNSPECIFIED":
 		fallthrough
 	case "LEFT":
 		fallthrough
 	case "RIGHT":
-		*e = GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum(s)
+		*e = GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignmentEnum: %v", v)
 	}
 }
 

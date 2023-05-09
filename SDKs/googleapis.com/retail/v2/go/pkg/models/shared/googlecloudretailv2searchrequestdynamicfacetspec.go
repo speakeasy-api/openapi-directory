@@ -16,21 +16,25 @@ const (
 	GoogleCloudRetailV2SearchRequestDynamicFacetSpecModeEnumEnabled         GoogleCloudRetailV2SearchRequestDynamicFacetSpecModeEnum = "ENABLED"
 )
 
+func (e GoogleCloudRetailV2SearchRequestDynamicFacetSpecModeEnum) ToPointer() *GoogleCloudRetailV2SearchRequestDynamicFacetSpecModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2SearchRequestDynamicFacetSpecModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODE_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
-		*e = GoogleCloudRetailV2SearchRequestDynamicFacetSpecModeEnum(s)
+		*e = GoogleCloudRetailV2SearchRequestDynamicFacetSpecModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2SearchRequestDynamicFacetSpecModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2SearchRequestDynamicFacetSpecModeEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	PerIosVersionInfoDeviceCapacityEnumDeviceCapacityNone        PerIosVersionInfoDeviceCapacityEnum = "DEVICE_CAPACITY_NONE"
 )
 
+func (e PerIosVersionInfoDeviceCapacityEnum) ToPointer() *PerIosVersionInfoDeviceCapacityEnum {
+	return &e
+}
+
 func (e *PerIosVersionInfoDeviceCapacityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_CAPACITY_UNSPECIFIED":
 		fallthrough
 	case "DEVICE_CAPACITY_HIGH":
@@ -33,10 +37,10 @@ func (e *PerIosVersionInfoDeviceCapacityEnum) UnmarshalJSON(data []byte) error {
 	case "DEVICE_CAPACITY_LOW":
 		fallthrough
 	case "DEVICE_CAPACITY_NONE":
-		*e = PerIosVersionInfoDeviceCapacityEnum(s)
+		*e = PerIosVersionInfoDeviceCapacityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PerIosVersionInfoDeviceCapacityEnum: %s", s)
+		return fmt.Errorf("invalid value for PerIosVersionInfoDeviceCapacityEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newAgreements(defaultClient, securityClient HTTPClient, serverURL, language
 // AcceptEUA - Accept an end-user agreement via the API
 func (s *agreements) AcceptEUA(ctx context.Context, request operations.AcceptEUARequest) (*operations.AcceptEUAResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/agreements/enduser/{id}/accept/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/agreements/enduser/{id}/accept/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnduserAcceptanceDetailsRequest", "json")
 	if err != nil {
@@ -131,12 +134,22 @@ func (s *agreements) AcceptEUA(ctx context.Context, request operations.AcceptEUA
 
 			res.AcceptEUA405ApplicationJSONObject = out
 		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AcceptEUA429ApplicationJSONObject = out
+		}
 	}
 
 	return res, nil
 }
 
-// CreateEUAV2 - Create an end user agreement
+// CreateEUAV2 - API endpoints related to end-user agreements.
 func (s *agreements) CreateEUAV2(ctx context.Context, request shared.EndUserAgreementRequest) (*operations.CreateEUAV2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/agreements/enduser/"
@@ -215,6 +228,16 @@ func (s *agreements) CreateEUAV2(ctx context.Context, request shared.EndUserAgre
 
 			res.CreateEUAV2403ApplicationJSONObject = out
 		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CreateEUAV2429ApplicationJSONObject = out
+		}
 	}
 
 	return res, nil
@@ -223,7 +246,10 @@ func (s *agreements) CreateEUAV2(ctx context.Context, request shared.EndUserAgre
 // DeleteEUAByIDV2 - Delete an end user agreement
 func (s *agreements) DeleteEUAByIDV2(ctx context.Context, request operations.DeleteEUAByIDV2Request) (*operations.DeleteEUAByIDV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/agreements/enduser/{id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/agreements/enduser/{id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -289,6 +315,16 @@ func (s *agreements) DeleteEUAByIDV2(ctx context.Context, request operations.Del
 
 			res.DeleteEUAByIDV2404ApplicationJSONObject = out
 		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteEUAByIDV2429ApplicationJSONObject = out
+		}
 	}
 
 	return res, nil
@@ -297,7 +333,10 @@ func (s *agreements) DeleteEUAByIDV2(ctx context.Context, request operations.Del
 // RetrieveEUAByIDV2 - Retrieve end user agreement by ID
 func (s *agreements) RetrieveEUAByIDV2(ctx context.Context, request operations.RetrieveEUAByIDV2Request) (*operations.RetrieveEUAByIDV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/agreements/enduser/{id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/agreements/enduser/{id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -373,12 +412,22 @@ func (s *agreements) RetrieveEUAByIDV2(ctx context.Context, request operations.R
 
 			res.RetrieveEUAByIDV2404ApplicationJSONObject = out
 		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveEUAByIDV2429ApplicationJSONObject = out
+		}
 	}
 
 	return res, nil
 }
 
-// RetrieveAllEUAsForAnEndUserV2 - Retrieve all end user agreements belonging to the company
+// RetrieveAllEUAsForAnEndUserV2 - API endpoints related to end-user agreements.
 func (s *agreements) RetrieveAllEUAsForAnEndUserV2(ctx context.Context, request operations.RetrieveAllEUAsForAnEndUserV2Request) (*operations.RetrieveAllEUAsForAnEndUserV2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/agreements/enduser/"
@@ -450,6 +499,16 @@ func (s *agreements) RetrieveAllEUAsForAnEndUserV2(ctx context.Context, request 
 			}
 
 			res.RetrieveAllEUAsForAnEndUserV2404ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAllEUAsForAnEndUserV2429ApplicationJSONObject = out
 		}
 	}
 

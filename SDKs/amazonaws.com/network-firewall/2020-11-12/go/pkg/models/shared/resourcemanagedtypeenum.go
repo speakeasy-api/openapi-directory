@@ -14,18 +14,22 @@ const (
 	ResourceManagedTypeEnumAwsManagedDomainLists      ResourceManagedTypeEnum = "AWS_MANAGED_DOMAIN_LISTS"
 )
 
+func (e ResourceManagedTypeEnum) ToPointer() *ResourceManagedTypeEnum {
+	return &e
+}
+
 func (e *ResourceManagedTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_MANAGED_THREAT_SIGNATURES":
 		fallthrough
 	case "AWS_MANAGED_DOMAIN_LISTS":
-		*e = ResourceManagedTypeEnum(s)
+		*e = ResourceManagedTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceManagedTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceManagedTypeEnum: %v", v)
 	}
 }

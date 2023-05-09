@@ -25,6 +25,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - The Football Prediction API allows developers to get predictions for upcoming football (soccer) matches, results for past matches, and performance monitoring for statistical models.
 type SDK struct {
 
@@ -309,7 +324,10 @@ func (s *SDK) GetAPIV2Predictions(ctx context.Context, request operations.GetAPI
 // GetAPIV2PredictionsID - Returns all predictions available for a match id.
 func (s *SDK) GetAPIV2PredictionsID(ctx context.Context, request operations.GetAPIV2PredictionsIDRequest) (*operations.GetAPIV2PredictionsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/predictions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/predictions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

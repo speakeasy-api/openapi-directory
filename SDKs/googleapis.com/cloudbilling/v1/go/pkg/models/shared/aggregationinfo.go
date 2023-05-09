@@ -15,21 +15,25 @@ const (
 	AggregationInfoAggregationIntervalEnumMonthly                        AggregationInfoAggregationIntervalEnum = "MONTHLY"
 )
 
+func (e AggregationInfoAggregationIntervalEnum) ToPointer() *AggregationInfoAggregationIntervalEnum {
+	return &e
+}
+
 func (e *AggregationInfoAggregationIntervalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGGREGATION_INTERVAL_UNSPECIFIED":
 		fallthrough
 	case "DAILY":
 		fallthrough
 	case "MONTHLY":
-		*e = AggregationInfoAggregationIntervalEnum(s)
+		*e = AggregationInfoAggregationIntervalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregationInfoAggregationIntervalEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregationInfoAggregationIntervalEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	AggregationInfoAggregationLevelEnumProject                     AggregationInfoAggregationLevelEnum = "PROJECT"
 )
 
+func (e AggregationInfoAggregationLevelEnum) ToPointer() *AggregationInfoAggregationLevelEnum {
+	return &e
+}
+
 func (e *AggregationInfoAggregationLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGGREGATION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "ACCOUNT":
 		fallthrough
 	case "PROJECT":
-		*e = AggregationInfoAggregationLevelEnum(s)
+		*e = AggregationInfoAggregationLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregationInfoAggregationLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregationInfoAggregationLevelEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	GoogleAppsDriveLabelsV2betaLabelPermissionRoleEnumEditor               GoogleAppsDriveLabelsV2betaLabelPermissionRoleEnum = "EDITOR"
 )
 
+func (e GoogleAppsDriveLabelsV2betaLabelPermissionRoleEnum) ToPointer() *GoogleAppsDriveLabelsV2betaLabelPermissionRoleEnum {
+	return &e
+}
+
 func (e *GoogleAppsDriveLabelsV2betaLabelPermissionRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LABEL_ROLE_UNSPECIFIED":
 		fallthrough
 	case "READER":
@@ -33,10 +37,10 @@ func (e *GoogleAppsDriveLabelsV2betaLabelPermissionRoleEnum) UnmarshalJSON(data 
 	case "ORGANIZER":
 		fallthrough
 	case "EDITOR":
-		*e = GoogleAppsDriveLabelsV2betaLabelPermissionRoleEnum(s)
+		*e = GoogleAppsDriveLabelsV2betaLabelPermissionRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2betaLabelPermissionRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2betaLabelPermissionRoleEnum: %v", v)
 	}
 }
 

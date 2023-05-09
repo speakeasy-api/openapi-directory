@@ -15,17 +15,21 @@ const (
 	GETDisassociateVpcCidrBlockActionEnumDisassociateVpcCidrBlock GETDisassociateVpcCidrBlockActionEnum = "DisassociateVpcCidrBlock"
 )
 
+func (e GETDisassociateVpcCidrBlockActionEnum) ToPointer() *GETDisassociateVpcCidrBlockActionEnum {
+	return &e
+}
+
 func (e *GETDisassociateVpcCidrBlockActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateVpcCidrBlock":
-		*e = GETDisassociateVpcCidrBlockActionEnum(s)
+		*e = GETDisassociateVpcCidrBlockActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateVpcCidrBlockActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateVpcCidrBlockActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisassociateVpcCidrBlockVersionEnumTwoThousandAndSixteen1115 GETDisassociateVpcCidrBlockVersionEnum = "2016-11-15"
 )
 
+func (e GETDisassociateVpcCidrBlockVersionEnum) ToPointer() *GETDisassociateVpcCidrBlockVersionEnum {
+	return &e
+}
+
 func (e *GETDisassociateVpcCidrBlockVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDisassociateVpcCidrBlockVersionEnum(s)
+		*e = GETDisassociateVpcCidrBlockVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateVpcCidrBlockVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateVpcCidrBlockVersionEnum: %v", v)
 	}
 }
 

@@ -21,19 +21,23 @@ const (
 	GetAPIV2SpotinsertionsOrderByIDEnumDesc GetAPIV2SpotinsertionsOrderByIDEnum = "desc"
 )
 
+func (e GetAPIV2SpotinsertionsOrderByIDEnum) ToPointer() *GetAPIV2SpotinsertionsOrderByIDEnum {
+	return &e
+}
+
 func (e *GetAPIV2SpotinsertionsOrderByIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetAPIV2SpotinsertionsOrderByIDEnum(s)
+		*e = GetAPIV2SpotinsertionsOrderByIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAPIV2SpotinsertionsOrderByIDEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAPIV2SpotinsertionsOrderByIDEnum: %v", v)
 	}
 }
 

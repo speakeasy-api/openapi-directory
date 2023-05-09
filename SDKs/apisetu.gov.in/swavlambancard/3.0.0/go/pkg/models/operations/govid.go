@@ -29,19 +29,23 @@ const (
 	GovidRequestBodyFormatEnumPdf GovidRequestBodyFormatEnum = "pdf"
 )
 
+func (e GovidRequestBodyFormatEnum) ToPointer() *GovidRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *GovidRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xml":
 		fallthrough
 	case "pdf":
-		*e = GovidRequestBodyFormatEnum(s)
+		*e = GovidRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GovidRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GovidRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -61,17 +65,21 @@ const (
 	Govid504ApplicationJSONErrorEnumGatewayTimeout Govid504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Govid504ApplicationJSONErrorEnum) ToPointer() *Govid504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Govid504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Govid504ApplicationJSONErrorEnum(s)
+		*e = Govid504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -81,17 +89,21 @@ const (
 	Govid504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Govid504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Govid504ApplicationJSONErrorDescriptionEnum) ToPointer() *Govid504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Govid504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Govid504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Govid504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -107,17 +119,21 @@ const (
 	Govid503ApplicationJSONErrorEnumServiceUnavailable Govid503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Govid503ApplicationJSONErrorEnum) ToPointer() *Govid503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Govid503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Govid503ApplicationJSONErrorEnum(s)
+		*e = Govid503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -127,17 +143,21 @@ const (
 	Govid503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Govid503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Govid503ApplicationJSONErrorDescriptionEnum) ToPointer() *Govid503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Govid503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Govid503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Govid503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -153,17 +173,21 @@ const (
 	Govid502ApplicationJSONErrorEnumBadGatewy Govid502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Govid502ApplicationJSONErrorEnum) ToPointer() *Govid502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Govid502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Govid502ApplicationJSONErrorEnum(s)
+		*e = Govid502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -173,17 +197,21 @@ const (
 	Govid502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Govid502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Govid502ApplicationJSONErrorDescriptionEnum) ToPointer() *Govid502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Govid502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Govid502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Govid502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -199,17 +227,21 @@ const (
 	Govid500ApplicationJSONErrorEnumInternalServerError Govid500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Govid500ApplicationJSONErrorEnum) ToPointer() *Govid500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Govid500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Govid500ApplicationJSONErrorEnum(s)
+		*e = Govid500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -219,17 +251,21 @@ const (
 	Govid500ApplicationJSONErrorDescriptionEnumInternalServerError Govid500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Govid500ApplicationJSONErrorDescriptionEnum) ToPointer() *Govid500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Govid500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Govid500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Govid500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -246,19 +282,23 @@ const (
 	Govid404ApplicationJSONErrorEnumURLNotFound    Govid404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Govid404ApplicationJSONErrorEnum) ToPointer() *Govid404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Govid404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Govid404ApplicationJSONErrorEnum(s)
+		*e = Govid404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -269,19 +309,23 @@ const (
 	Govid404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Govid404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Govid404ApplicationJSONErrorDescriptionEnum) ToPointer() *Govid404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Govid404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Govid404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Govid404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -298,19 +342,23 @@ const (
 	Govid401ApplicationJSONErrorEnumInvalidAuthorization  Govid401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Govid401ApplicationJSONErrorEnum) ToPointer() *Govid401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Govid401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Govid401ApplicationJSONErrorEnum(s)
+		*e = Govid401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -321,19 +369,23 @@ const (
 	Govid401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Govid401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Govid401ApplicationJSONErrorDescriptionEnum) ToPointer() *Govid401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Govid401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Govid401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Govid401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -353,12 +405,16 @@ const (
 	Govid400ApplicationJSONErrorEnumInvalidConsentid Govid400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Govid400ApplicationJSONErrorEnum) ToPointer() *Govid400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Govid400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -368,10 +424,10 @@ func (e *Govid400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Govid400ApplicationJSONErrorEnum(s)
+		*e = Govid400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -385,12 +441,16 @@ const (
 	Govid400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Govid400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Govid400ApplicationJSONErrorDescriptionEnum) ToPointer() *Govid400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Govid400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -400,10 +460,10 @@ func (e *Govid400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Govid400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Govid400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Govid400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Govid400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

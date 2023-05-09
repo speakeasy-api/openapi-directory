@@ -17,12 +17,16 @@ const (
 	OptimizationMetricEnumMape                        OptimizationMetricEnum = "MAPE"
 )
 
+func (e OptimizationMetricEnum) ToPointer() *OptimizationMetricEnum {
+	return &e
+}
+
 func (e *OptimizationMetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WAPE":
 		fallthrough
 	case "RMSE":
@@ -32,9 +36,9 @@ func (e *OptimizationMetricEnum) UnmarshalJSON(data []byte) error {
 	case "MASE":
 		fallthrough
 	case "MAPE":
-		*e = OptimizationMetricEnum(s)
+		*e = OptimizationMetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OptimizationMetricEnum: %s", s)
+		return fmt.Errorf("invalid value for OptimizationMetricEnum: %v", v)
 	}
 }

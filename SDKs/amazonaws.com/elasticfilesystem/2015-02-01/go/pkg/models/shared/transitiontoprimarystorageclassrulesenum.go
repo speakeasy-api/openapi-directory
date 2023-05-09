@@ -13,16 +13,20 @@ const (
 	TransitionToPrimaryStorageClassRulesEnumAfter1Access TransitionToPrimaryStorageClassRulesEnum = "AFTER_1_ACCESS"
 )
 
+func (e TransitionToPrimaryStorageClassRulesEnum) ToPointer() *TransitionToPrimaryStorageClassRulesEnum {
+	return &e
+}
+
 func (e *TransitionToPrimaryStorageClassRulesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AFTER_1_ACCESS":
-		*e = TransitionToPrimaryStorageClassRulesEnum(s)
+		*e = TransitionToPrimaryStorageClassRulesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransitionToPrimaryStorageClassRulesEnum: %s", s)
+		return fmt.Errorf("invalid value for TransitionToPrimaryStorageClassRulesEnum: %v", v)
 	}
 }

@@ -100,7 +100,10 @@ func (s *emailHistory) FetchEmailHistories(ctx context.Context, request operatio
 // Get an email history by id
 func (s *emailHistory) FetchEmailHistory(ctx context.Context, request operations.FetchEmailHistoryRequest) (*operations.FetchEmailHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/email_history/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/email_history/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -20,12 +20,16 @@ const (
 	PostSubtypeEnumReopened           PostSubtypeEnum = "REOPENED"
 )
 
+func (e PostSubtypeEnum) ToPointer() *PostSubtypeEnum {
+	return &e
+}
+
 func (e *PostSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBTYPE_UNSPECIFIED":
 		fallthrough
 	case "ADDED":
@@ -39,10 +43,10 @@ func (e *PostSubtypeEnum) UnmarshalJSON(data []byte) error {
 	case "RESOLVED":
 		fallthrough
 	case "REOPENED":
-		*e = PostSubtypeEnum(s)
+		*e = PostSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSubtypeEnum: %v", v)
 	}
 }
 

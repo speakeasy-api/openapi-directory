@@ -16,17 +16,21 @@ const (
 	CreateTemplateSyncConfigXAmzTargetEnumAwsProton20200720CreateTemplateSyncConfig CreateTemplateSyncConfigXAmzTargetEnum = "AwsProton20200720.CreateTemplateSyncConfig"
 )
 
+func (e CreateTemplateSyncConfigXAmzTargetEnum) ToPointer() *CreateTemplateSyncConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateTemplateSyncConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.CreateTemplateSyncConfig":
-		*e = CreateTemplateSyncConfigXAmzTargetEnum(s)
+		*e = CreateTemplateSyncConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTemplateSyncConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTemplateSyncConfigXAmzTargetEnum: %v", v)
 	}
 }
 

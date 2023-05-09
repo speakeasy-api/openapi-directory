@@ -17,19 +17,23 @@ const (
 	DisassociateLicenseLicenseTypeEnumEnterpriseFreeTrial DisassociateLicenseLicenseTypeEnum = "ENTERPRISE_FREE_TRIAL"
 )
 
+func (e DisassociateLicenseLicenseTypeEnum) ToPointer() *DisassociateLicenseLicenseTypeEnum {
+	return &e
+}
+
 func (e *DisassociateLicenseLicenseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTERPRISE":
 		fallthrough
 	case "ENTERPRISE_FREE_TRIAL":
-		*e = DisassociateLicenseLicenseTypeEnum(s)
+		*e = DisassociateLicenseLicenseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateLicenseLicenseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateLicenseLicenseTypeEnum: %v", v)
 	}
 }
 

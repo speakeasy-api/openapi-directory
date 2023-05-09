@@ -17,21 +17,25 @@ const (
 	NodesContributorsCreateContributorAttributesPermissionEnumAdmin NodesContributorsCreateContributorAttributesPermissionEnum = "admin"
 )
 
+func (e NodesContributorsCreateContributorAttributesPermissionEnum) ToPointer() *NodesContributorsCreateContributorAttributesPermissionEnum {
+	return &e
+}
+
 func (e *NodesContributorsCreateContributorAttributesPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
 		fallthrough
 	case "admin":
-		*e = NodesContributorsCreateContributorAttributesPermissionEnum(s)
+		*e = NodesContributorsCreateContributorAttributesPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodesContributorsCreateContributorAttributesPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for NodesContributorsCreateContributorAttributesPermissionEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	CertificateAuthorityStatusEnumFailed             CertificateAuthorityStatusEnum = "FAILED"
 )
 
+func (e CertificateAuthorityStatusEnum) ToPointer() *CertificateAuthorityStatusEnum {
+	return &e
+}
+
 func (e *CertificateAuthorityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "PENDING_CERTIFICATE":
@@ -38,9 +42,9 @@ func (e *CertificateAuthorityStatusEnum) UnmarshalJSON(data []byte) error {
 	case "EXPIRED":
 		fallthrough
 	case "FAILED":
-		*e = CertificateAuthorityStatusEnum(s)
+		*e = CertificateAuthorityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateAuthorityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateAuthorityStatusEnum: %v", v)
 	}
 }

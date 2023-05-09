@@ -18,12 +18,16 @@ const (
 	ItemStatusCodeEnumAccepted        ItemStatusCodeEnum = "ACCEPTED"
 )
 
+func (e ItemStatusCodeEnum) ToPointer() *ItemStatusCodeEnum {
+	return &e
+}
+
 func (e *ItemStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODE_UNSPECIFIED":
 		fallthrough
 	case "ERROR":
@@ -33,10 +37,10 @@ func (e *ItemStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "NEW_ITEM":
 		fallthrough
 	case "ACCEPTED":
-		*e = ItemStatusCodeEnum(s)
+		*e = ItemStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItemStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ItemStatusCodeEnum: %v", v)
 	}
 }
 

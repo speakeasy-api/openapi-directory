@@ -18,12 +18,16 @@ const (
 	LeaveLineCalculationTypeEnumUnknown                 LeaveLineCalculationTypeEnum = ""
 )
 
+func (e LeaveLineCalculationTypeEnum) ToPointer() *LeaveLineCalculationTypeEnum {
+	return &e
+}
+
 func (e *LeaveLineCalculationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOCALCULATIONREQUIRED":
 		fallthrough
 	case "FIXEDAMOUNTEACHPERIOD":
@@ -33,9 +37,9 @@ func (e *LeaveLineCalculationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BASEDONORDINARYEARNINGS":
 		fallthrough
 	case "":
-		*e = LeaveLineCalculationTypeEnum(s)
+		*e = LeaveLineCalculationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LeaveLineCalculationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LeaveLineCalculationTypeEnum: %v", v)
 	}
 }

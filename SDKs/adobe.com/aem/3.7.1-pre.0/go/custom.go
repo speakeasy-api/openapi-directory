@@ -79,6 +79,7 @@ func (s *custom) GetAemHealthCheck(ctx context.Context, request operations.GetAe
 
 	return res, nil
 }
+
 func (s *custom) PostConfigAemHealthCheckServlet(ctx context.Context, request operations.PostConfigAemHealthCheckServletRequest) (*operations.PostConfigAemHealthCheckServletResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps/system/config/com.shinesolutions.healthcheck.hc.impl.ActiveBundleHealthCheck"
@@ -116,6 +117,7 @@ func (s *custom) PostConfigAemHealthCheckServlet(ctx context.Context, request op
 
 	return res, nil
 }
+
 func (s *custom) PostConfigAemPasswordReset(ctx context.Context, request operations.PostConfigAemPasswordResetRequest) (*operations.PostConfigAemPasswordResetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps/system/config/com.shinesolutions.aem.passwordreset.Activator"

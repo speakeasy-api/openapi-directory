@@ -17,19 +17,23 @@ const (
 	RotoballerArticlesByDateFormatEnumJSON RotoballerArticlesByDateFormatEnum = "json"
 )
 
+func (e RotoballerArticlesByDateFormatEnum) ToPointer() *RotoballerArticlesByDateFormatEnum {
+	return &e
+}
+
 func (e *RotoballerArticlesByDateFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xml":
 		fallthrough
 	case "json":
-		*e = RotoballerArticlesByDateFormatEnum(s)
+		*e = RotoballerArticlesByDateFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RotoballerArticlesByDateFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RotoballerArticlesByDateFormatEnum: %v", v)
 	}
 }
 

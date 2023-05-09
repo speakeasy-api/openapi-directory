@@ -90,7 +90,10 @@ func (s *regionalinventory) ContentRegionalinventoryCustombatch(ctx context.Cont
 // ContentRegionalinventoryInsert - Updates the regional inventory of a product in your Merchant Center account. If a regional inventory with the same region ID already exists, this method updates that entry.
 func (s *regionalinventory) ContentRegionalinventoryInsert(ctx context.Context, request operations.ContentRegionalinventoryInsertRequest, security operations.ContentRegionalinventoryInsertSecurity) (*operations.ContentRegionalinventoryInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products/{productId}/regionalinventory", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products/{productId}/regionalinventory", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegionalInventory", "json")
 	if err != nil {

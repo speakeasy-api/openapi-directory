@@ -8,6 +8,7 @@ import (
 )
 
 type PatchAs2PartnersIDRequestBody struct {
+	EnableDedicatedIps *bool `multipartForm:"name=enable_dedicated_ips"`
 	// AS2 Name
 	Name              *string `multipartForm:"name=name"`
 	PublicCertificate *string `multipartForm:"name=public_certificate"`

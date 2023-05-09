@@ -14,18 +14,22 @@ const (
 	ReportPackagingTypeEnumNone ReportPackagingTypeEnum = "NONE"
 )
 
+func (e ReportPackagingTypeEnum) ToPointer() *ReportPackagingTypeEnum {
+	return &e
+}
+
 func (e *ReportPackagingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ZIP":
 		fallthrough
 	case "NONE":
-		*e = ReportPackagingTypeEnum(s)
+		*e = ReportPackagingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportPackagingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportPackagingTypeEnum: %v", v)
 	}
 }

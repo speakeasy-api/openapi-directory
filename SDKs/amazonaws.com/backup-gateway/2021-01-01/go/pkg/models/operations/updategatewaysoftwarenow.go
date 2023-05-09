@@ -16,17 +16,21 @@ const (
 	UpdateGatewaySoftwareNowXAmzTargetEnumBackupOnPremisesV20210101UpdateGatewaySoftwareNow UpdateGatewaySoftwareNowXAmzTargetEnum = "BackupOnPremises_v20210101.UpdateGatewaySoftwareNow"
 )
 
+func (e UpdateGatewaySoftwareNowXAmzTargetEnum) ToPointer() *UpdateGatewaySoftwareNowXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateGatewaySoftwareNowXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.UpdateGatewaySoftwareNow":
-		*e = UpdateGatewaySoftwareNowXAmzTargetEnum(s)
+		*e = UpdateGatewaySoftwareNowXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateGatewaySoftwareNowXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateGatewaySoftwareNowXAmzTargetEnum: %v", v)
 	}
 }
 

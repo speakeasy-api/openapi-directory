@@ -16,17 +16,21 @@ const (
 	PutKeyPolicyXAmzTargetEnumTrentServicePutKeyPolicy PutKeyPolicyXAmzTargetEnum = "TrentService.PutKeyPolicy"
 )
 
+func (e PutKeyPolicyXAmzTargetEnum) ToPointer() *PutKeyPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutKeyPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.PutKeyPolicy":
-		*e = PutKeyPolicyXAmzTargetEnum(s)
+		*e = PutKeyPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutKeyPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutKeyPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

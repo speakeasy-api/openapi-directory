@@ -15,17 +15,21 @@ const (
 	POSTTerminateEnvironmentActionEnumTerminateEnvironment POSTTerminateEnvironmentActionEnum = "TerminateEnvironment"
 )
 
+func (e POSTTerminateEnvironmentActionEnum) ToPointer() *POSTTerminateEnvironmentActionEnum {
+	return &e
+}
+
 func (e *POSTTerminateEnvironmentActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TerminateEnvironment":
-		*e = POSTTerminateEnvironmentActionEnum(s)
+		*e = POSTTerminateEnvironmentActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTerminateEnvironmentActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTerminateEnvironmentActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTTerminateEnvironmentVersionEnumTwoThousandAndTen1201 POSTTerminateEnvironmentVersionEnum = "2010-12-01"
 )
 
+func (e POSTTerminateEnvironmentVersionEnum) ToPointer() *POSTTerminateEnvironmentVersionEnum {
+	return &e
+}
+
 func (e *POSTTerminateEnvironmentVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTTerminateEnvironmentVersionEnum(s)
+		*e = POSTTerminateEnvironmentVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTerminateEnvironmentVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTerminateEnvironmentVersionEnum: %v", v)
 	}
 }
 

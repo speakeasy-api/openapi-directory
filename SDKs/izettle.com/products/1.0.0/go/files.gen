@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -93,4 +94,13 @@ pkg/models/shared/taxrateproductcount.go
 pkg/models/shared/taxsettingsresponse.go
 pkg/models/shared/taxsettingsupdaterequest.go
 pkg/models/shared/taxrateupdaterequest.go
+docs/sdk/README.md
+docs/categories/README.md
+docs/discounts/README.md
+docs/images/README.md
+docs/import/README.md
+docs/library/README.md
+docs/products/README.md
+docs/productsonline/README.md
+docs/taxes/README.md
 USAGE.md

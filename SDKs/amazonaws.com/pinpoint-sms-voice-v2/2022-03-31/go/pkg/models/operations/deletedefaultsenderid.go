@@ -16,17 +16,21 @@ const (
 	DeleteDefaultSenderIDXAmzTargetEnumPinpointSmsVoiceV2DeleteDefaultSenderID DeleteDefaultSenderIDXAmzTargetEnum = "PinpointSMSVoiceV2.DeleteDefaultSenderId"
 )
 
+func (e DeleteDefaultSenderIDXAmzTargetEnum) ToPointer() *DeleteDefaultSenderIDXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDefaultSenderIDXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.DeleteDefaultSenderId":
-		*e = DeleteDefaultSenderIDXAmzTargetEnum(s)
+		*e = DeleteDefaultSenderIDXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDefaultSenderIDXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDefaultSenderIDXAmzTargetEnum: %v", v)
 	}
 }
 

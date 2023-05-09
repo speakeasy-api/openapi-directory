@@ -15,17 +15,21 @@ const (
 	POSTSignalResourceActionEnumSignalResource POSTSignalResourceActionEnum = "SignalResource"
 )
 
+func (e POSTSignalResourceActionEnum) ToPointer() *POSTSignalResourceActionEnum {
+	return &e
+}
+
 func (e *POSTSignalResourceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SignalResource":
-		*e = POSTSignalResourceActionEnum(s)
+		*e = POSTSignalResourceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSignalResourceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSignalResourceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSignalResourceVersionEnumTwoThousandAndTen0515 POSTSignalResourceVersionEnum = "2010-05-15"
 )
 
+func (e POSTSignalResourceVersionEnum) ToPointer() *POSTSignalResourceVersionEnum {
+	return &e
+}
+
 func (e *POSTSignalResourceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTSignalResourceVersionEnum(s)
+		*e = POSTSignalResourceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSignalResourceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSignalResourceVersionEnum: %v", v)
 	}
 }
 

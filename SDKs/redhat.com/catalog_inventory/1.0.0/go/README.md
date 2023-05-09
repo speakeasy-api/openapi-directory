@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/redhat.com/catalog_invent
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -45,76 +43,76 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetDocumentation` - Return this API document in JSON format
-* `PostGraphQL` - Perform a GraphQL Query
+* [GetDocumentation](docs/sdk/README.md#getdocumentation) - Return this API document in JSON format
+* [PostGraphQL](docs/sdk/README.md#postgraphql) - Perform a GraphQL Query
 
-### ServiceCredential
+### [ServiceCredential](docs/servicecredential/README.md)
 
-* `ListServiceCredentials` - List ServiceCredentials
-* `ShowServiceCredential` - Show an existing ServiceCredential
+* [ListServiceCredentials](docs/servicecredential/README.md#listservicecredentials) - List ServiceCredentials
+* [ShowServiceCredential](docs/servicecredential/README.md#showservicecredential) - Show an existing ServiceCredential
 
-### ServiceCredentialType
+### [ServiceCredentialType](docs/servicecredentialtype/README.md)
 
-* `ListServiceCredentialTypes` - List ServiceCredentialTypes
-* `ShowServiceCredentialType` - Show an existing ServiceCredentialType
+* [ListServiceCredentialTypes](docs/servicecredentialtype/README.md#listservicecredentialtypes) - List ServiceCredentialTypes
+* [ShowServiceCredentialType](docs/servicecredentialtype/README.md#showservicecredentialtype) - Show an existing ServiceCredentialType
 
-### ServiceInstance
+### [ServiceInstance](docs/serviceinstance/README.md)
 
-* `ListServiceInstances` - List ServiceInstances
-* `ShowServiceInstance` - Show an existing ServiceInstance
+* [ListServiceInstances](docs/serviceinstance/README.md#listserviceinstances) - List ServiceInstances
+* [ShowServiceInstance](docs/serviceinstance/README.md#showserviceinstance) - Show an existing ServiceInstance
 
-### ServiceInventory
+### [ServiceInventory](docs/serviceinventory/README.md)
 
-* `ListServiceInventories` - List ServiceInventories
-* `ListServiceInventoryTags` - List Tags for ServiceInventory
-* `ShowServiceInventory` - Show an existing ServiceInventory
-* `TagServiceInventory` - Tag a ServiceInventory
-* `UntagServiceInventory` - Untag a ServiceInventory
+* [ListServiceInventories](docs/serviceinventory/README.md#listserviceinventories) - List ServiceInventories
+* [ListServiceInventoryTags](docs/serviceinventory/README.md#listserviceinventorytags) - List Tags for ServiceInventory
+* [ShowServiceInventory](docs/serviceinventory/README.md#showserviceinventory) - Show an existing ServiceInventory
+* [TagServiceInventory](docs/serviceinventory/README.md#tagserviceinventory) - Tag a ServiceInventory
+* [UntagServiceInventory](docs/serviceinventory/README.md#untagserviceinventory) - Untag a ServiceInventory
 
-### ServiceOffering
+### [ServiceOffering](docs/serviceoffering/README.md)
 
-* `AppliedInventoriesTagsForServiceOffering` - Invokes computing of ServiceInventories tags for given ServiceOffering
-* `ListServiceOfferingServiceInstances` - List ServiceInstances for ServiceOffering
-* `ListServiceOfferingServiceOfferingNodes` - List ServiceOfferingNodes for ServiceOffering
-* `ListServiceOfferingServicePlans` - List ServicePlans for ServiceOffering
-* `ListServiceOfferings` - List ServiceOfferings
-* `OrderServiceOffering` - Order an existing ServiceOffering
-* `ShowServiceOffering` - Show an existing ServiceOffering
+* [AppliedInventoriesTagsForServiceOffering](docs/serviceoffering/README.md#appliedinventoriestagsforserviceoffering) - Invokes computing of ServiceInventories tags for given ServiceOffering
+* [ListServiceOfferingServiceInstances](docs/serviceoffering/README.md#listserviceofferingserviceinstances) - List ServiceInstances for ServiceOffering
+* [ListServiceOfferingServiceOfferingNodes](docs/serviceoffering/README.md#listserviceofferingserviceofferingnodes) - List ServiceOfferingNodes for ServiceOffering
+* [ListServiceOfferingServicePlans](docs/serviceoffering/README.md#listserviceofferingserviceplans) - List ServicePlans for ServiceOffering
+* [ListServiceOfferings](docs/serviceoffering/README.md#listserviceofferings) - List ServiceOfferings
+* [OrderServiceOffering](docs/serviceoffering/README.md#orderserviceoffering) - Order an existing ServiceOffering
+* [ShowServiceOffering](docs/serviceoffering/README.md#showserviceoffering) - Show an existing ServiceOffering
 
-### ServiceOfferingNode
+### [ServiceOfferingNode](docs/serviceofferingnode/README.md)
 
-* `ListServiceOfferingNodes` - List ServiceOfferingNodes
-* `ShowServiceOfferingNode` - Show an existing ServiceOfferingNode
+* [ListServiceOfferingNodes](docs/serviceofferingnode/README.md#listserviceofferingnodes) - List ServiceOfferingNodes
+* [ShowServiceOfferingNode](docs/serviceofferingnode/README.md#showserviceofferingnode) - Show an existing ServiceOfferingNode
 
-### ServicePlan
+### [ServicePlan](docs/serviceplan/README.md)
 
-* `ListServicePlans` - List ServicePlans
-* `ShowServicePlan` - Show an existing ServicePlan
+* [ListServicePlans](docs/serviceplan/README.md#listserviceplans) - List ServicePlans
+* [ShowServicePlan](docs/serviceplan/README.md#showserviceplan) - Show an existing ServicePlan
 
-### Source
+### [Source](docs/source/README.md)
 
-* `IncrementalRefreshSource` - Incremental Refresh an existing Source
-* `ListSourceServiceInstances` - List ServiceInstances for Source
-* `ListSourceServiceInventories` - List ServiceInventories for Source
-* `ListSourceServiceOfferingNodes` - List ServiceOfferingNodes for Source
-* `ListSourceServiceOfferings` - List ServiceOfferings for Source
-* `ListSourceServicePlans` - List ServicePlans for Source
-* `ListSourceTasks` - List Tasks for Source
-* `ListSources` - List Sources
-* `RefreshSource` -  Refresh an existing Source
-* `ShowSource` - Show an existing Source
+* [IncrementalRefreshSource](docs/source/README.md#incrementalrefreshsource) - Incremental Refresh an existing Source
+* [ListSourceServiceInstances](docs/source/README.md#listsourceserviceinstances) - List ServiceInstances for Source
+* [ListSourceServiceInventories](docs/source/README.md#listsourceserviceinventories) - List ServiceInventories for Source
+* [ListSourceServiceOfferingNodes](docs/source/README.md#listsourceserviceofferingnodes) - List ServiceOfferingNodes for Source
+* [ListSourceServiceOfferings](docs/source/README.md#listsourceserviceofferings) - List ServiceOfferings for Source
+* [ListSourceServicePlans](docs/source/README.md#listsourceserviceplans) - List ServicePlans for Source
+* [ListSourceTasks](docs/source/README.md#listsourcetasks) - List Tasks for Source
+* [ListSources](docs/source/README.md#listsources) - List Sources
+* [RefreshSource](docs/source/README.md#refreshsource) -  Refresh an existing Source
+* [ShowSource](docs/source/README.md#showsource) - Show an existing Source
 
-### Tags
+### [Tags](docs/tags/README.md)
 
-* `ListTags` - List Tags
+* [ListTags](docs/tags/README.md#listtags) - List Tags
 
-### Task
+### [Task](docs/task/README.md)
 
-* `ListTasks` - List Tasks
-* `ShowTask` - Show an existing Task
-* `UpdateTask` - Update an existing Task
+* [ListTasks](docs/task/README.md#listtasks) - List Tasks
+* [ShowTask](docs/task/README.md#showtask) - Show an existing Task
+* [UpdateTask](docs/task/README.md#updatetask) - Update an existing Task
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -47,19 +47,23 @@ const (
 	GetVolumesID200ApplicationJSONVolumeStatusEnumAvailable GetVolumesID200ApplicationJSONVolumeStatusEnum = "available"
 )
 
+func (e GetVolumesID200ApplicationJSONVolumeStatusEnum) ToPointer() *GetVolumesID200ApplicationJSONVolumeStatusEnum {
+	return &e
+}
+
 func (e *GetVolumesID200ApplicationJSONVolumeStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creating":
 		fallthrough
 	case "available":
-		*e = GetVolumesID200ApplicationJSONVolumeStatusEnum(s)
+		*e = GetVolumesID200ApplicationJSONVolumeStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVolumesID200ApplicationJSONVolumeStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVolumesID200ApplicationJSONVolumeStatusEnum: %v", v)
 	}
 }
 

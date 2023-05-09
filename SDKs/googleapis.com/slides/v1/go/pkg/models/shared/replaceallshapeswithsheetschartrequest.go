@@ -15,19 +15,23 @@ const (
 	ReplaceAllShapesWithSheetsChartRequestLinkingModeEnumLinked         ReplaceAllShapesWithSheetsChartRequestLinkingModeEnum = "LINKED"
 )
 
+func (e ReplaceAllShapesWithSheetsChartRequestLinkingModeEnum) ToPointer() *ReplaceAllShapesWithSheetsChartRequestLinkingModeEnum {
+	return &e
+}
+
 func (e *ReplaceAllShapesWithSheetsChartRequestLinkingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_LINKED_IMAGE":
 		fallthrough
 	case "LINKED":
-		*e = ReplaceAllShapesWithSheetsChartRequestLinkingModeEnum(s)
+		*e = ReplaceAllShapesWithSheetsChartRequestLinkingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplaceAllShapesWithSheetsChartRequestLinkingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplaceAllShapesWithSheetsChartRequestLinkingModeEnum: %v", v)
 	}
 }
 

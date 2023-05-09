@@ -14,18 +14,22 @@ const (
 	TrustProviderTypeEnumDevice TrustProviderTypeEnum = "device"
 )
 
+func (e TrustProviderTypeEnum) ToPointer() *TrustProviderTypeEnum {
+	return &e
+}
+
 func (e *TrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "device":
-		*e = TrustProviderTypeEnum(s)
+		*e = TrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrustProviderTypeEnum: %v", v)
 	}
 }

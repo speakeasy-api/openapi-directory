@@ -18,12 +18,16 @@ const (
 	GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnumAnyAgent        GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum = "ANY_AGENT"
 )
 
+func (e GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum) ToPointer() *GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum {
+	return &e
+}
+
 func (e *GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLE_UNSPECIFIED":
 		fallthrough
 	case "HUMAN_AGENT":
@@ -33,10 +37,10 @@ func (e *GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum) Unmarshal
 	case "END_USER":
 		fallthrough
 	case "ANY_AGENT":
-		*e = GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum(s)
+		*e = GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnumAnyOf                        GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum = "ANY_OF"
 )
 
+func (e GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum) ToPointer() *GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PHRASE_MATCHER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ALL_OF":
 		fallthrough
 	case "ANY_OF":
-		*e = GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum(s)
+		*e = GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum: %v", v)
 	}
 }
 

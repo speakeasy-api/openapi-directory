@@ -75,6 +75,7 @@ func (s *utilities) Heartbeat(ctx context.Context) (*operations.HeartbeatRespons
 
 	return res, nil
 }
+
 func (s *utilities) Lbheartbeat(ctx context.Context) (*operations.LbheartbeatResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__lbheartbeat__"
@@ -117,6 +118,7 @@ func (s *utilities) Lbheartbeat(ctx context.Context) (*operations.LbheartbeatRes
 
 	return res, nil
 }
+
 func (s *utilities) Version(ctx context.Context) (*operations.VersionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__version__"
@@ -159,6 +161,7 @@ func (s *utilities) Version(ctx context.Context) (*operations.VersionResponse, e
 
 	return res, nil
 }
+
 func (s *utilities) Contribute(ctx context.Context) (*operations.ContributeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/contribute.json"
@@ -201,6 +204,7 @@ func (s *utilities) Contribute(ctx context.Context) (*operations.ContributeRespo
 
 	return res, nil
 }
+
 func (s *utilities) GetOpenapiSpec(ctx context.Context) (*operations.GetOpenapiSpecResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__api__"
@@ -243,6 +247,7 @@ func (s *utilities) GetOpenapiSpec(ctx context.Context) (*operations.GetOpenapiS
 
 	return res, nil
 }
+
 func (s *utilities) ServerInfo(ctx context.Context) (*operations.ServerInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"

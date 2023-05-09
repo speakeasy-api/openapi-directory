@@ -16,19 +16,23 @@ const (
 	DescribeNatGatewaysResultNatGatewaysConnectivityTypeEnumPublic  DescribeNatGatewaysResultNatGatewaysConnectivityTypeEnum = "public"
 )
 
+func (e DescribeNatGatewaysResultNatGatewaysConnectivityTypeEnum) ToPointer() *DescribeNatGatewaysResultNatGatewaysConnectivityTypeEnum {
+	return &e
+}
+
 func (e *DescribeNatGatewaysResultNatGatewaysConnectivityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private":
 		fallthrough
 	case "public":
-		*e = DescribeNatGatewaysResultNatGatewaysConnectivityTypeEnum(s)
+		*e = DescribeNatGatewaysResultNatGatewaysConnectivityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNatGatewaysResultNatGatewaysConnectivityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNatGatewaysResultNatGatewaysConnectivityTypeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	DescribeNatGatewaysResultNatGatewaysNatGatewayAddressesStatusEnumFailed         DescribeNatGatewaysResultNatGatewaysNatGatewayAddressesStatusEnum = "failed"
 )
 
+func (e DescribeNatGatewaysResultNatGatewaysNatGatewayAddressesStatusEnum) ToPointer() *DescribeNatGatewaysResultNatGatewaysNatGatewayAddressesStatusEnum {
+	return &e
+}
+
 func (e *DescribeNatGatewaysResultNatGatewaysNatGatewayAddressesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "assigning":
 		fallthrough
 	case "unassigning":
@@ -61,10 +69,10 @@ func (e *DescribeNatGatewaysResultNatGatewaysNatGatewayAddressesStatusEnum) Unma
 	case "succeeded":
 		fallthrough
 	case "failed":
-		*e = DescribeNatGatewaysResultNatGatewaysNatGatewayAddressesStatusEnum(s)
+		*e = DescribeNatGatewaysResultNatGatewaysNatGatewayAddressesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNatGatewaysResultNatGatewaysNatGatewayAddressesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNatGatewaysResultNatGatewaysNatGatewayAddressesStatusEnum: %v", v)
 	}
 }
 
@@ -100,12 +108,16 @@ const (
 	DescribeNatGatewaysResultNatGatewaysStateEnumDeleted   DescribeNatGatewaysResultNatGatewaysStateEnum = "deleted"
 )
 
+func (e DescribeNatGatewaysResultNatGatewaysStateEnum) ToPointer() *DescribeNatGatewaysResultNatGatewaysStateEnum {
+	return &e
+}
+
 func (e *DescribeNatGatewaysResultNatGatewaysStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "failed":
@@ -115,10 +127,10 @@ func (e *DescribeNatGatewaysResultNatGatewaysStateEnum) UnmarshalJSON(data []byt
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = DescribeNatGatewaysResultNatGatewaysStateEnum(s)
+		*e = DescribeNatGatewaysResultNatGatewaysStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNatGatewaysResultNatGatewaysStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNatGatewaysResultNatGatewaysStateEnum: %v", v)
 	}
 }
 

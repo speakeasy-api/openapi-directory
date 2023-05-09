@@ -33,12 +33,16 @@ const (
 	ReleasesDeleteTesterFromDestinations404ApplicationJSONCodeEnumTooManyRequests     ReleasesDeleteTesterFromDestinations404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesDeleteTesterFromDestinations404ApplicationJSONCodeEnum) ToPointer() *ReleasesDeleteTesterFromDestinations404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesDeleteTesterFromDestinations404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *ReleasesDeleteTesterFromDestinations404ApplicationJSONCodeEnum) Unmarsh
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesDeleteTesterFromDestinations404ApplicationJSONCodeEnum(s)
+		*e = ReleasesDeleteTesterFromDestinations404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesDeleteTesterFromDestinations404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesDeleteTesterFromDestinations404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

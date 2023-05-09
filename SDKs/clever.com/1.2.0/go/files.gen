@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -99,4 +100,13 @@ pkg/models/shared/schooladminsresponse.go
 pkg/models/shared/studentcontactsforstudentresponse.go
 pkg/models/shared/gradelevelsresponse.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/contacts/README.md
+docs/districtadmins/README.md
+docs/districts/README.md
+docs/schooladmins/README.md
+docs/schools/README.md
+docs/sections/README.md
+docs/students/README.md
+docs/teachers/README.md
 USAGE.md

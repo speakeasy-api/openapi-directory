@@ -16,17 +16,21 @@ const (
 	ListCodeRepositoriesXAmzTargetEnumSageMakerListCodeRepositories ListCodeRepositoriesXAmzTargetEnum = "SageMaker.ListCodeRepositories"
 )
 
+func (e ListCodeRepositoriesXAmzTargetEnum) ToPointer() *ListCodeRepositoriesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCodeRepositoriesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.ListCodeRepositories":
-		*e = ListCodeRepositoriesXAmzTargetEnum(s)
+		*e = ListCodeRepositoriesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCodeRepositoriesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCodeRepositoriesXAmzTargetEnum: %v", v)
 	}
 }
 

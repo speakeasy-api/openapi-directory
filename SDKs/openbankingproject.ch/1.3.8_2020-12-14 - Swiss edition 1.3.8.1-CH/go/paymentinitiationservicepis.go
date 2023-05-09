@@ -50,7 +50,10 @@ func newPaymentInitiationServicePIS(defaultClient, securityClient HTTPClient, se
 //   - access method is generally applicable, but further authorisation processes are needed.
 func (s *paymentInitiationServicePIS) CancelPayment(ctx context.Context, request operations.CancelPaymentRequest, security operations.CancelPaymentSecurity) (*operations.CancelPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -228,7 +231,10 @@ func (s *paymentInitiationServicePIS) CancelPayment(ctx context.Context, request
 // This method returns the SCA status of a payment initiation's authorisation sub-resource.
 func (s *paymentInitiationServicePIS) GetPaymentCancellationScaStatus(ctx context.Context, request operations.GetPaymentCancellationScaStatusRequest, security operations.GetPaymentCancellationScaStatusSecurity) (*operations.GetPaymentCancellationScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -404,7 +410,10 @@ func (s *paymentInitiationServicePIS) GetPaymentCancellationScaStatus(ctx contex
 // Returns the content of a payment object
 func (s *paymentInitiationServicePIS) GetPaymentInformation(ctx context.Context, request operations.GetPaymentInformationRequest, security operations.GetPaymentInformationSecurity) (*operations.GetPaymentInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -596,7 +605,10 @@ func (s *paymentInitiationServicePIS) GetPaymentInformation(ctx context.Context,
 // This function returns an array of hyperlinks to all generated authorisation sub-resources.
 func (s *paymentInitiationServicePIS) GetPaymentInitiationAuthorisation(ctx context.Context, request operations.GetPaymentInitiationAuthorisationRequest, security operations.GetPaymentInitiationAuthorisationSecurity) (*operations.GetPaymentInitiationAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -772,7 +784,10 @@ func (s *paymentInitiationServicePIS) GetPaymentInitiationAuthorisation(ctx cont
 // Retrieve a list of all created cancellation authorisation sub-resources.
 func (s *paymentInitiationServicePIS) GetPaymentInitiationCancellationAuthorisationInformation(ctx context.Context, request operations.GetPaymentInitiationCancellationAuthorisationInformationRequest, security operations.GetPaymentInitiationCancellationAuthorisationInformationSecurity) (*operations.GetPaymentInitiationCancellationAuthorisationInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -948,7 +963,10 @@ func (s *paymentInitiationServicePIS) GetPaymentInitiationCancellationAuthorisat
 // This method returns the SCA status of a payment initiation's authorisation sub-resource.
 func (s *paymentInitiationServicePIS) GetPaymentInitiationScaStatus(ctx context.Context, request operations.GetPaymentInitiationScaStatusRequest, security operations.GetPaymentInitiationScaStatusSecurity) (*operations.GetPaymentInitiationScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1124,7 +1142,10 @@ func (s *paymentInitiationServicePIS) GetPaymentInitiationScaStatus(ctx context.
 // Check the transaction status of a payment initiation.
 func (s *paymentInitiationServicePIS) GetPaymentInitiationStatus(ctx context.Context, request operations.GetPaymentInitiationStatusRequest, security operations.GetPaymentInitiationStatusSecurity) (*operations.GetPaymentInitiationStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1356,7 +1377,10 @@ func (s *paymentInitiationServicePIS) GetPaymentInitiationStatus(ctx context.Con
 // In these cases, first an authorisation sub-resource has to be generated following the 'startAuthorisation' link.
 func (s *paymentInitiationServicePIS) InitiatePaymentJSON(ctx context.Context, request operations.InitiatePaymentJSONRequest, security operations.InitiatePaymentJSONSecurity) (*operations.InitiatePaymentJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1590,7 +1614,10 @@ func (s *paymentInitiationServicePIS) InitiatePaymentJSON(ctx context.Context, r
 // In these cases, first an authorisation sub-resource has to be generated following the 'startAuthorisation' link.
 func (s *paymentInitiationServicePIS) InitiatePaymentMultipart(ctx context.Context, request operations.InitiatePaymentMultipartRequest, security operations.InitiatePaymentMultipartSecurity) (*operations.InitiatePaymentMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PeriodicPaymentInitiationMultipartBody", "multipart")
 	if err != nil {
@@ -1824,7 +1851,10 @@ func (s *paymentInitiationServicePIS) InitiatePaymentMultipart(ctx context.Conte
 // In these cases, first an authorisation sub-resource has to be generated following the 'startAuthorisation' link.
 func (s *paymentInitiationServicePIS) InitiatePaymentRaw(ctx context.Context, request operations.InitiatePaymentRawRequest, security operations.InitiatePaymentRawSecurity) (*operations.InitiatePaymentRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -2042,7 +2072,10 @@ func (s *paymentInitiationServicePIS) InitiatePaymentRaw(ctx context.Context, re
 //   - The signing basket needs to be authorised yet.
 func (s *paymentInitiationServicePIS) StartPaymentAuthorisation(ctx context.Context, request operations.StartPaymentAuthorisationRequest, security operations.StartPaymentAuthorisationSecurity) (*operations.StartPaymentAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2256,7 +2289,10 @@ func (s *paymentInitiationServicePIS) StartPaymentAuthorisation(ctx context.Cont
 //   - The signing basket needs to be authorised yet.
 func (s *paymentInitiationServicePIS) StartPaymentInitiationCancellationAuthorisation(ctx context.Context, request operations.StartPaymentInitiationCancellationAuthorisationRequest, security operations.StartPaymentInitiationCancellationAuthorisationSecurity) (*operations.StartPaymentInitiationCancellationAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2476,7 +2512,10 @@ func (s *paymentInitiationServicePIS) StartPaymentInitiationCancellationAuthoris
 //     Maybe in a later version the access path will change.
 func (s *paymentInitiationServicePIS) UpdatePaymentCancellationPsuData(ctx context.Context, request operations.UpdatePaymentCancellationPsuDataRequest, security operations.UpdatePaymentCancellationPsuDataSecurity) (*operations.UpdatePaymentCancellationPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2696,7 +2735,10 @@ func (s *paymentInitiationServicePIS) UpdatePaymentCancellationPsuData(ctx conte
 //     Maybe in a later version the access path will change.
 func (s *paymentInitiationServicePIS) UpdatePaymentPsuData(ctx context.Context, request operations.UpdatePaymentPsuDataRequest, security operations.UpdatePaymentPsuDataSecurity) (*operations.UpdatePaymentPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

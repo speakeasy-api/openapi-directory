@@ -16,17 +16,21 @@ const (
 	AdminSetUserSettingsXAmzTargetEnumAwsCognitoIdentityProviderServiceAdminSetUserSettings AdminSetUserSettingsXAmzTargetEnum = "AWSCognitoIdentityProviderService.AdminSetUserSettings"
 )
 
+func (e AdminSetUserSettingsXAmzTargetEnum) ToPointer() *AdminSetUserSettingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *AdminSetUserSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.AdminSetUserSettings":
-		*e = AdminSetUserSettingsXAmzTargetEnum(s)
+		*e = AdminSetUserSettingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminSetUserSettingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminSetUserSettingsXAmzTargetEnum: %v", v)
 	}
 }
 

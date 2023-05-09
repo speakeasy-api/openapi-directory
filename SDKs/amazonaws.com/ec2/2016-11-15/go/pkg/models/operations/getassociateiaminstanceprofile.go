@@ -15,17 +15,21 @@ const (
 	GETAssociateIamInstanceProfileActionEnumAssociateIamInstanceProfile GETAssociateIamInstanceProfileActionEnum = "AssociateIamInstanceProfile"
 )
 
+func (e GETAssociateIamInstanceProfileActionEnum) ToPointer() *GETAssociateIamInstanceProfileActionEnum {
+	return &e
+}
+
 func (e *GETAssociateIamInstanceProfileActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssociateIamInstanceProfile":
-		*e = GETAssociateIamInstanceProfileActionEnum(s)
+		*e = GETAssociateIamInstanceProfileActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssociateIamInstanceProfileActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssociateIamInstanceProfileActionEnum: %v", v)
 	}
 }
 
@@ -42,17 +46,21 @@ const (
 	GETAssociateIamInstanceProfileVersionEnumTwoThousandAndSixteen1115 GETAssociateIamInstanceProfileVersionEnum = "2016-11-15"
 )
 
+func (e GETAssociateIamInstanceProfileVersionEnum) ToPointer() *GETAssociateIamInstanceProfileVersionEnum {
+	return &e
+}
+
 func (e *GETAssociateIamInstanceProfileVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETAssociateIamInstanceProfileVersionEnum(s)
+		*e = GETAssociateIamInstanceProfileVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssociateIamInstanceProfileVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssociateIamInstanceProfileVersionEnum: %v", v)
 	}
 }
 

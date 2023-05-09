@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest{
+    ctx := context.Background()
+    res, err := s.Actions.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg(ctx, operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest{
         Org: "corrupti",
         RepositoryID: 592845,
         RunnerGroupID: 715190,
-    }
-
-    ctx := context.Background()
-    res, err := s.Actions.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -16,21 +16,25 @@ const (
 	YoutubeAndPartnersBiddingStrategyAdGroupEffectiveTargetCpaSourceEnumBiddingSourceAdGroup     YoutubeAndPartnersBiddingStrategyAdGroupEffectiveTargetCpaSourceEnum = "BIDDING_SOURCE_AD_GROUP"
 )
 
+func (e YoutubeAndPartnersBiddingStrategyAdGroupEffectiveTargetCpaSourceEnum) ToPointer() *YoutubeAndPartnersBiddingStrategyAdGroupEffectiveTargetCpaSourceEnum {
+	return &e
+}
+
 func (e *YoutubeAndPartnersBiddingStrategyAdGroupEffectiveTargetCpaSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BIDDING_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "BIDDING_SOURCE_LINE_ITEM":
 		fallthrough
 	case "BIDDING_SOURCE_AD_GROUP":
-		*e = YoutubeAndPartnersBiddingStrategyAdGroupEffectiveTargetCpaSourceEnum(s)
+		*e = YoutubeAndPartnersBiddingStrategyAdGroupEffectiveTargetCpaSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeAndPartnersBiddingStrategyAdGroupEffectiveTargetCpaSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeAndPartnersBiddingStrategyAdGroupEffectiveTargetCpaSourceEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	YoutubeAndPartnersBiddingStrategyTypeEnumYoutubeAndPartnersBiddingStrategyTypeMaximizeConversions YoutubeAndPartnersBiddingStrategyTypeEnum = "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MAXIMIZE_CONVERSIONS"
 )
 
+func (e YoutubeAndPartnersBiddingStrategyTypeEnum) ToPointer() *YoutubeAndPartnersBiddingStrategyTypeEnum {
+	return &e
+}
+
 func (e *YoutubeAndPartnersBiddingStrategyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MANUAL_CPV":
@@ -66,10 +74,10 @@ func (e *YoutubeAndPartnersBiddingStrategyTypeEnum) UnmarshalJSON(data []byte) e
 	case "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MAXIMIZE_LIFT":
 		fallthrough
 	case "YOUTUBE_AND_PARTNERS_BIDDING_STRATEGY_TYPE_MAXIMIZE_CONVERSIONS":
-		*e = YoutubeAndPartnersBiddingStrategyTypeEnum(s)
+		*e = YoutubeAndPartnersBiddingStrategyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeAndPartnersBiddingStrategyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeAndPartnersBiddingStrategyTypeEnum: %v", v)
 	}
 }
 

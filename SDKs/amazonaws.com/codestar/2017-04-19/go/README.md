@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/codestar/20
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,26 +28,24 @@ func main() {
         }),
     )
 
-    req := operations.AssociateTeamMemberRequest{
+    ctx := context.Background()
+    res, err := s.AssociateTeamMember(ctx, operations.AssociateTeamMemberRequest{
         AssociateTeamMemberRequest: shared.AssociateTeamMemberRequest{
-            ClientRequestToken: "corrupti",
+            ClientRequestToken: sdk.String("corrupti"),
             ProjectID: "provident",
             ProjectRole: "distinctio",
-            RemoteAccessAllowed: false,
+            RemoteAccessAllowed: sdk.Bool(false),
             UserArn: "quibusdam",
         },
-        XAmzAlgorithm: "unde",
-        XAmzContentSha256: "nulla",
-        XAmzCredential: "corrupti",
-        XAmzDate: "illum",
-        XAmzSecurityToken: "vel",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "deserunt",
-        XAmzTarget: "CodeStar_20170419.AssociateTeamMember",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateTeamMember(ctx, req)
+        XAmzAlgorithm: sdk.String("unde"),
+        XAmzContentSha256: sdk.String("nulla"),
+        XAmzCredential: sdk.String("corrupti"),
+        XAmzDate: sdk.String("illum"),
+        XAmzSecurityToken: sdk.String("vel"),
+        XAmzSignature: sdk.String("error"),
+        XAmzSignedHeaders: sdk.String("deserunt"),
+        XAmzTarget: operations.AssociateTeamMemberXAmzTargetEnumCodeStar20170419AssociateTeamMember,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -62,26 +60,26 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AssociateTeamMember` - Adds an IAM user to the team for an AWS CodeStar project.
-* `CreateProject` - Creates a project, including project resources. This action creates a project based on a submitted project request. A set of source code files and a toolchain template file can be included with the project request. If these are not provided, an empty project is created.
-* `CreateUserProfile` - Creates a profile for a user that includes user preferences, such as the display name and email address assocciated with the user, in AWS CodeStar. The user profile is not project-specific. Information in the user profile is displayed wherever the user's information appears to other users in AWS CodeStar.
-* `DeleteProject` - Deletes a project, including project resources. Does not delete users associated with the project, but does delete the IAM roles that allowed access to the project.
-* `DeleteUserProfile` - Deletes a user profile in AWS CodeStar, including all personal preference data associated with that profile, such as display name and email address. It does not delete the history of that user, for example the history of commits made by that user.
-* `DescribeProject` - Describes a project and its resources.
-* `DescribeUserProfile` - Describes a user in AWS CodeStar and the user attributes across all projects.
-* `DisassociateTeamMember` - Removes a user from a project. Removing a user from a project also removes the IAM policies from that user that allowed access to the project and its resources. Disassociating a team member does not remove that user's profile from AWS CodeStar. It does not remove the user from IAM.
-* `ListProjects` - Lists all projects in AWS CodeStar associated with your AWS account.
-* `ListResources` - Lists resources associated with a project in AWS CodeStar.
-* `ListTagsForProject` - Gets the tags for a project.
-* `ListTeamMembers` - Lists all team members associated with a project.
-* `ListUserProfiles` - Lists all the user profiles configured for your AWS account in AWS CodeStar.
-* `TagProject` - Adds tags to a project.
-* `UntagProject` - Removes tags from a project.
-* `UpdateProject` - Updates a project in AWS CodeStar.
-* `UpdateTeamMember` - Updates a team member's attributes in an AWS CodeStar project. For example, you can change a team member's role in the project, or change whether they have remote access to project resources.
-* `UpdateUserProfile` - Updates a user's profile in AWS CodeStar. The user profile is not project-specific. Information in the user profile is displayed wherever the user's information appears to other users in AWS CodeStar. 
+* [AssociateTeamMember](docs/sdk/README.md#associateteammember) - Adds an IAM user to the team for an AWS CodeStar project.
+* [CreateProject](docs/sdk/README.md#createproject) - Creates a project, including project resources. This action creates a project based on a submitted project request. A set of source code files and a toolchain template file can be included with the project request. If these are not provided, an empty project is created.
+* [CreateUserProfile](docs/sdk/README.md#createuserprofile) - Creates a profile for a user that includes user preferences, such as the display name and email address assocciated with the user, in AWS CodeStar. The user profile is not project-specific. Information in the user profile is displayed wherever the user's information appears to other users in AWS CodeStar.
+* [DeleteProject](docs/sdk/README.md#deleteproject) - Deletes a project, including project resources. Does not delete users associated with the project, but does delete the IAM roles that allowed access to the project.
+* [DeleteUserProfile](docs/sdk/README.md#deleteuserprofile) - Deletes a user profile in AWS CodeStar, including all personal preference data associated with that profile, such as display name and email address. It does not delete the history of that user, for example the history of commits made by that user.
+* [DescribeProject](docs/sdk/README.md#describeproject) - Describes a project and its resources.
+* [DescribeUserProfile](docs/sdk/README.md#describeuserprofile) - Describes a user in AWS CodeStar and the user attributes across all projects.
+* [DisassociateTeamMember](docs/sdk/README.md#disassociateteammember) - Removes a user from a project. Removing a user from a project also removes the IAM policies from that user that allowed access to the project and its resources. Disassociating a team member does not remove that user's profile from AWS CodeStar. It does not remove the user from IAM.
+* [ListProjects](docs/sdk/README.md#listprojects) - Lists all projects in AWS CodeStar associated with your AWS account.
+* [ListResources](docs/sdk/README.md#listresources) - Lists resources associated with a project in AWS CodeStar.
+* [ListTagsForProject](docs/sdk/README.md#listtagsforproject) - Gets the tags for a project.
+* [ListTeamMembers](docs/sdk/README.md#listteammembers) - Lists all team members associated with a project.
+* [ListUserProfiles](docs/sdk/README.md#listuserprofiles) - Lists all the user profiles configured for your AWS account in AWS CodeStar.
+* [TagProject](docs/sdk/README.md#tagproject) - Adds tags to a project.
+* [UntagProject](docs/sdk/README.md#untagproject) - Removes tags from a project.
+* [UpdateProject](docs/sdk/README.md#updateproject) - Updates a project in AWS CodeStar.
+* [UpdateTeamMember](docs/sdk/README.md#updateteammember) - Updates a team member's attributes in an AWS CodeStar project. For example, you can change a team member's role in the project, or change whether they have remote access to project resources.
+* [UpdateUserProfile](docs/sdk/README.md#updateuserprofile) - Updates a user's profile in AWS CodeStar. The user profile is not project-specific. Information in the user profile is displayed wherever the user's information appears to other users in AWS CodeStar. 
 <!-- End SDK Available Operations -->
 
 ### Maturity

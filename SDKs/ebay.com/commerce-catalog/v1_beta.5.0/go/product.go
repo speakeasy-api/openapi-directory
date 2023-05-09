@@ -34,7 +34,10 @@ func newProduct(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GetProduct - This method retrieves details of the catalog product identified by the eBay product identifier (ePID) specified in the request. These details include the product's title and description, aspects and their values, associated images, applicable category IDs, and any recognized identifiers that apply to the product. <br /><br /> For a new listing, you can use the <b>search</b> method to identify candidate products on which to base the listing, then use the <b>getProduct</b> method to present the full details of those candidate products to the seller to make a a final selection.
 func (s *product) GetProduct(ctx context.Context, request operations.GetProductRequest, security operations.GetProductSecurity) (*operations.GetProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/product/{epid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/product/{epid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

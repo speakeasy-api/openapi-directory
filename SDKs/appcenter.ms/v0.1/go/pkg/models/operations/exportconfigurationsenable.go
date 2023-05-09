@@ -33,12 +33,16 @@ const (
 	ExportConfigurationsEnableDefaultApplicationJSONErrorCodeEnumTooManyRequests     ExportConfigurationsEnableDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ExportConfigurationsEnableDefaultApplicationJSONErrorCodeEnum) ToPointer() *ExportConfigurationsEnableDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsEnableDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *ExportConfigurationsEnableDefaultApplicationJSONErrorCodeEnum) Unmarsha
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ExportConfigurationsEnableDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ExportConfigurationsEnableDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsEnableDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsEnableDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

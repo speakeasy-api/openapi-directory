@@ -17,12 +17,16 @@ const (
 	ManagedCertificateStateEnumActive           ManagedCertificateStateEnum = "ACTIVE"
 )
 
+func (e ManagedCertificateStateEnum) ToPointer() *ManagedCertificateStateEnum {
+	return &e
+}
+
 func (e *ManagedCertificateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PROVISIONING":
@@ -30,10 +34,10 @@ func (e *ManagedCertificateStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "ACTIVE":
-		*e = ManagedCertificateStateEnum(s)
+		*e = ManagedCertificateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagedCertificateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagedCertificateStateEnum: %v", v)
 	}
 }
 

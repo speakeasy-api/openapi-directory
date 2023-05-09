@@ -15,17 +15,21 @@ const (
 	GETComposeEnvironmentsActionEnumComposeEnvironments GETComposeEnvironmentsActionEnum = "ComposeEnvironments"
 )
 
+func (e GETComposeEnvironmentsActionEnum) ToPointer() *GETComposeEnvironmentsActionEnum {
+	return &e
+}
+
 func (e *GETComposeEnvironmentsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComposeEnvironments":
-		*e = GETComposeEnvironmentsActionEnum(s)
+		*e = GETComposeEnvironmentsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETComposeEnvironmentsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETComposeEnvironmentsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETComposeEnvironmentsVersionEnumTwoThousandAndTen1201 GETComposeEnvironmentsVersionEnum = "2010-12-01"
 )
 
+func (e GETComposeEnvironmentsVersionEnum) ToPointer() *GETComposeEnvironmentsVersionEnum {
+	return &e
+}
+
 func (e *GETComposeEnvironmentsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETComposeEnvironmentsVersionEnum(s)
+		*e = GETComposeEnvironmentsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETComposeEnvironmentsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETComposeEnvironmentsVersionEnum: %v", v)
 	}
 }
 

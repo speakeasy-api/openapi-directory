@@ -26,12 +26,16 @@ const (
 	GoogleCloudVisionV1p2beta1FeatureTypeEnumObjectLocalization    GoogleCloudVisionV1p2beta1FeatureTypeEnum = "OBJECT_LOCALIZATION"
 )
 
+func (e GoogleCloudVisionV1p2beta1FeatureTypeEnum) ToPointer() *GoogleCloudVisionV1p2beta1FeatureTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p2beta1FeatureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "FACE_DETECTION":
@@ -57,10 +61,10 @@ func (e *GoogleCloudVisionV1p2beta1FeatureTypeEnum) UnmarshalJSON(data []byte) e
 	case "PRODUCT_SEARCH":
 		fallthrough
 	case "OBJECT_LOCALIZATION":
-		*e = GoogleCloudVisionV1p2beta1FeatureTypeEnum(s)
+		*e = GoogleCloudVisionV1p2beta1FeatureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FeatureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FeatureTypeEnum: %v", v)
 	}
 }
 

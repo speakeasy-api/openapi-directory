@@ -16,17 +16,21 @@ const (
 	DescribeSolutionVersionXAmzTargetEnumAmazonPersonalizeDescribeSolutionVersion DescribeSolutionVersionXAmzTargetEnum = "AmazonPersonalize.DescribeSolutionVersion"
 )
 
+func (e DescribeSolutionVersionXAmzTargetEnum) ToPointer() *DescribeSolutionVersionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeSolutionVersionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.DescribeSolutionVersion":
-		*e = DescribeSolutionVersionXAmzTargetEnum(s)
+		*e = DescribeSolutionVersionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSolutionVersionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSolutionVersionXAmzTargetEnum: %v", v)
 	}
 }
 

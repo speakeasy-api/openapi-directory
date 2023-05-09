@@ -30,12 +30,16 @@ const (
 	DataPointsGetStatisticsSingleTimeFrameEnumCustom        DataPointsGetStatisticsSingleTimeFrameEnum = "custom"
 )
 
+func (e DataPointsGetStatisticsSingleTimeFrameEnum) ToPointer() *DataPointsGetStatisticsSingleTimeFrameEnum {
+	return &e
+}
+
 func (e *DataPointsGetStatisticsSingleTimeFrameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "today":
 		fallthrough
 	case "yesterday":
@@ -65,10 +69,10 @@ func (e *DataPointsGetStatisticsSingleTimeFrameEnum) UnmarshalJSON(data []byte) 
 	case "beginning":
 		fallthrough
 	case "custom":
-		*e = DataPointsGetStatisticsSingleTimeFrameEnum(s)
+		*e = DataPointsGetStatisticsSingleTimeFrameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataPointsGetStatisticsSingleTimeFrameEnum: %s", s)
+		return fmt.Errorf("invalid value for DataPointsGetStatisticsSingleTimeFrameEnum: %v", v)
 	}
 }
 

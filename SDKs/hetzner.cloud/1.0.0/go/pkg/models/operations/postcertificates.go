@@ -16,19 +16,23 @@ const (
 	PostCertificatesCreateCertificateRequestTypeEnumManaged  PostCertificatesCreateCertificateRequestTypeEnum = "managed"
 )
 
+func (e PostCertificatesCreateCertificateRequestTypeEnum) ToPointer() *PostCertificatesCreateCertificateRequestTypeEnum {
+	return &e
+}
+
 func (e *PostCertificatesCreateCertificateRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uploaded":
 		fallthrough
 	case "managed":
-		*e = PostCertificatesCreateCertificateRequestTypeEnum(s)
+		*e = PostCertificatesCreateCertificateRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostCertificatesCreateCertificateRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostCertificatesCreateCertificateRequestTypeEnum: %v", v)
 	}
 }
 
@@ -71,21 +75,25 @@ const (
 	PostCertificatesCreateCertificateResponseNullableActionStatusEnumError   PostCertificatesCreateCertificateResponseNullableActionStatusEnum = "error"
 )
 
+func (e PostCertificatesCreateCertificateResponseNullableActionStatusEnum) ToPointer() *PostCertificatesCreateCertificateResponseNullableActionStatusEnum {
+	return &e
+}
+
 func (e *PostCertificatesCreateCertificateResponseNullableActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostCertificatesCreateCertificateResponseNullableActionStatusEnum(s)
+		*e = PostCertificatesCreateCertificateResponseNullableActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostCertificatesCreateCertificateResponseNullableActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostCertificatesCreateCertificateResponseNullableActionStatusEnum: %v", v)
 	}
 }
 
@@ -123,21 +131,25 @@ const (
 	PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnumFailed    PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum = "failed"
 )
 
+func (e PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum) ToPointer() *PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum {
+	return &e
+}
+
 func (e *PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "completed":
 		fallthrough
 	case "failed":
-		*e = PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum(s)
+		*e = PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum: %s", s)
+		return fmt.Errorf("invalid value for PostCertificatesCreateCertificateResponseCertificateStatusIssuanceEnum: %v", v)
 	}
 }
 
@@ -151,12 +163,16 @@ const (
 	PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnumUnavailable PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum = "unavailable"
 )
 
+func (e PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum) ToPointer() *PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum {
+	return &e
+}
+
 func (e *PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "scheduled":
 		fallthrough
 	case "pending":
@@ -164,10 +180,10 @@ func (e *PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum) 
 	case "failed":
 		fallthrough
 	case "unavailable":
-		*e = PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum(s)
+		*e = PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum: %s", s)
+		return fmt.Errorf("invalid value for PostCertificatesCreateCertificateResponseCertificateStatusRenewalEnum: %v", v)
 	}
 }
 
@@ -189,19 +205,23 @@ const (
 	PostCertificatesCreateCertificateResponseCertificateTypeEnumManaged  PostCertificatesCreateCertificateResponseCertificateTypeEnum = "managed"
 )
 
+func (e PostCertificatesCreateCertificateResponseCertificateTypeEnum) ToPointer() *PostCertificatesCreateCertificateResponseCertificateTypeEnum {
+	return &e
+}
+
 func (e *PostCertificatesCreateCertificateResponseCertificateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uploaded":
 		fallthrough
 	case "managed":
-		*e = PostCertificatesCreateCertificateResponseCertificateTypeEnum(s)
+		*e = PostCertificatesCreateCertificateResponseCertificateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostCertificatesCreateCertificateResponseCertificateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostCertificatesCreateCertificateResponseCertificateTypeEnum: %v", v)
 	}
 }
 

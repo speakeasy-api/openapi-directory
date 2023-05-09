@@ -17,19 +17,23 @@ const (
 	UpdateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnumPut  UpdateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum = "PUT"
 )
 
+func (e UpdateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum) ToPointer() *UpdateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum {
+	return &e
+}
+
 func (e *UpdateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POST":
 		fallthrough
 	case "PUT":
-		*e = UpdateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum(s)
+		*e = UpdateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum: %v", v)
 	}
 }
 

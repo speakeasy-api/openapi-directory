@@ -23,19 +23,23 @@ const (
 	ChannelFrom4ContentTypeEnumAudioL16RateEqual16000 ChannelFrom4ContentTypeEnum = "audio/l16;rate=16000"
 )
 
+func (e ChannelFrom4ContentTypeEnum) ToPointer() *ChannelFrom4ContentTypeEnum {
+	return &e
+}
+
 func (e *ChannelFrom4ContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "audio/l16;rate=8000":
 		fallthrough
 	case "audio/l16;rate=16000":
-		*e = ChannelFrom4ContentTypeEnum(s)
+		*e = ChannelFrom4ContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChannelFrom4ContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChannelFrom4ContentTypeEnum: %v", v)
 	}
 }
 

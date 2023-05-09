@@ -18,21 +18,25 @@ const (
 	DescribeResourceCollectionHealthResourceCollectionTypeEnumAwsTags           DescribeResourceCollectionHealthResourceCollectionTypeEnum = "AWS_TAGS"
 )
 
+func (e DescribeResourceCollectionHealthResourceCollectionTypeEnum) ToPointer() *DescribeResourceCollectionHealthResourceCollectionTypeEnum {
+	return &e
+}
+
 func (e *DescribeResourceCollectionHealthResourceCollectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_CLOUD_FORMATION":
 		fallthrough
 	case "AWS_SERVICE":
 		fallthrough
 	case "AWS_TAGS":
-		*e = DescribeResourceCollectionHealthResourceCollectionTypeEnum(s)
+		*e = DescribeResourceCollectionHealthResourceCollectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeResourceCollectionHealthResourceCollectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeResourceCollectionHealthResourceCollectionTypeEnum: %v", v)
 	}
 }
 

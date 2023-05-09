@@ -44,19 +44,23 @@ const (
 	DriveFilesInsertVisibilityEnumPrivate DriveFilesInsertVisibilityEnum = "PRIVATE"
 )
 
+func (e DriveFilesInsertVisibilityEnum) ToPointer() *DriveFilesInsertVisibilityEnum {
+	return &e
+}
+
 func (e *DriveFilesInsertVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "PRIVATE":
-		*e = DriveFilesInsertVisibilityEnum(s)
+		*e = DriveFilesInsertVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DriveFilesInsertVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for DriveFilesInsertVisibilityEnum: %v", v)
 	}
 }
 

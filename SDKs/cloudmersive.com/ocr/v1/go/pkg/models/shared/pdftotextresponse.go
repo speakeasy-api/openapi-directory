@@ -4,6 +4,10 @@ package shared
 
 // PdfToTextResponse - Response from an OCR to text operation.  Includes the confidence rating and converted text result.
 type PdfToTextResponse struct {
+	// When the job exceeds 25 pages, an Async Job ID is returned.  Use the CheckPdfOcrJobStatus API to check on the status of this job using the AsyncJobID and get the result when it finishes
+	AsyncJobID *string `json:"AsyncJobID,omitempty"`
+	// Returns the job status of the Async Job, if applicable.  Possible states are STARTED and COMPLETED
+	AsyncJobStatus *string `json:"AsyncJobStatus,omitempty"`
 	// Page OCR results
 	OcrPages []OcrPageResult `json:"OcrPages,omitempty"`
 	// True if successful, false otherwise

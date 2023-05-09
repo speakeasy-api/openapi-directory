@@ -15,19 +15,23 @@ const (
 	SandboxConfigTypeEnumGvisor      SandboxConfigTypeEnum = "GVISOR"
 )
 
+func (e SandboxConfigTypeEnum) ToPointer() *SandboxConfigTypeEnum {
+	return &e
+}
+
 func (e *SandboxConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "GVISOR":
-		*e = SandboxConfigTypeEnum(s)
+		*e = SandboxConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SandboxConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SandboxConfigTypeEnum: %v", v)
 	}
 }
 

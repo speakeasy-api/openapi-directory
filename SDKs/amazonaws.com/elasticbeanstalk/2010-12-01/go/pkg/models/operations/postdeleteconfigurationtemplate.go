@@ -15,17 +15,21 @@ const (
 	POSTDeleteConfigurationTemplateActionEnumDeleteConfigurationTemplate POSTDeleteConfigurationTemplateActionEnum = "DeleteConfigurationTemplate"
 )
 
+func (e POSTDeleteConfigurationTemplateActionEnum) ToPointer() *POSTDeleteConfigurationTemplateActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteConfigurationTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteConfigurationTemplate":
-		*e = POSTDeleteConfigurationTemplateActionEnum(s)
+		*e = POSTDeleteConfigurationTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteConfigurationTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteConfigurationTemplateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteConfigurationTemplateVersionEnumTwoThousandAndTen1201 POSTDeleteConfigurationTemplateVersionEnum = "2010-12-01"
 )
 
+func (e POSTDeleteConfigurationTemplateVersionEnum) ToPointer() *POSTDeleteConfigurationTemplateVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteConfigurationTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTDeleteConfigurationTemplateVersionEnum(s)
+		*e = POSTDeleteConfigurationTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteConfigurationTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteConfigurationTemplateVersionEnum: %v", v)
 	}
 }
 

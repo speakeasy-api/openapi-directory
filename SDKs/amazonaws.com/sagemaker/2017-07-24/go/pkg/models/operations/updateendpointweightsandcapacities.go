@@ -16,17 +16,21 @@ const (
 	UpdateEndpointWeightsAndCapacitiesXAmzTargetEnumSageMakerUpdateEndpointWeightsAndCapacities UpdateEndpointWeightsAndCapacitiesXAmzTargetEnum = "SageMaker.UpdateEndpointWeightsAndCapacities"
 )
 
+func (e UpdateEndpointWeightsAndCapacitiesXAmzTargetEnum) ToPointer() *UpdateEndpointWeightsAndCapacitiesXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateEndpointWeightsAndCapacitiesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.UpdateEndpointWeightsAndCapacities":
-		*e = UpdateEndpointWeightsAndCapacitiesXAmzTargetEnum(s)
+		*e = UpdateEndpointWeightsAndCapacitiesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateEndpointWeightsAndCapacitiesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateEndpointWeightsAndCapacitiesXAmzTargetEnum: %v", v)
 	}
 }
 

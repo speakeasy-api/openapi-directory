@@ -15,20 +15,24 @@ const (
 	GroupDefinitionTypeEnumCostCategory GroupDefinitionTypeEnum = "COST_CATEGORY"
 )
 
+func (e GroupDefinitionTypeEnum) ToPointer() *GroupDefinitionTypeEnum {
+	return &e
+}
+
 func (e *GroupDefinitionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION":
 		fallthrough
 	case "TAG":
 		fallthrough
 	case "COST_CATEGORY":
-		*e = GroupDefinitionTypeEnum(s)
+		*e = GroupDefinitionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupDefinitionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupDefinitionTypeEnum: %v", v)
 	}
 }

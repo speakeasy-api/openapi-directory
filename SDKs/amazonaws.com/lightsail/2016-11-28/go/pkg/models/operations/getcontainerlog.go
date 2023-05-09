@@ -16,17 +16,21 @@ const (
 	GetContainerLogXAmzTargetEnumLightsail20161128GetContainerLog GetContainerLogXAmzTargetEnum = "Lightsail_20161128.GetContainerLog"
 )
 
+func (e GetContainerLogXAmzTargetEnum) ToPointer() *GetContainerLogXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetContainerLogXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetContainerLog":
-		*e = GetContainerLogXAmzTargetEnum(s)
+		*e = GetContainerLogXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetContainerLogXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetContainerLogXAmzTargetEnum: %v", v)
 	}
 }
 

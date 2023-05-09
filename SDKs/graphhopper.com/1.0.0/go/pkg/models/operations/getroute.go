@@ -22,19 +22,23 @@ const (
 	GetRouteAlgorithmEnumAlternativeRoute GetRouteAlgorithmEnum = "alternative_route"
 )
 
+func (e GetRouteAlgorithmEnum) ToPointer() *GetRouteAlgorithmEnum {
+	return &e
+}
+
 func (e *GetRouteAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "round_trip":
 		fallthrough
 	case "alternative_route":
-		*e = GetRouteAlgorithmEnum(s)
+		*e = GetRouteAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRouteAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRouteAlgorithmEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	GetRouteCurbsideEnumLeft  GetRouteCurbsideEnum = "left"
 )
 
+func (e GetRouteCurbsideEnum) ToPointer() *GetRouteCurbsideEnum {
+	return &e
+}
+
 func (e *GetRouteCurbsideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "right":
 		fallthrough
 	case "left":
-		*e = GetRouteCurbsideEnum(s)
+		*e = GetRouteCurbsideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRouteCurbsideEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRouteCurbsideEnum: %v", v)
 	}
 }
 

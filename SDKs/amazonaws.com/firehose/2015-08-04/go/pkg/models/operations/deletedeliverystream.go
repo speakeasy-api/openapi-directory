@@ -16,17 +16,21 @@ const (
 	DeleteDeliveryStreamXAmzTargetEnumFirehose20150804DeleteDeliveryStream DeleteDeliveryStreamXAmzTargetEnum = "Firehose_20150804.DeleteDeliveryStream"
 )
 
+func (e DeleteDeliveryStreamXAmzTargetEnum) ToPointer() *DeleteDeliveryStreamXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDeliveryStreamXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Firehose_20150804.DeleteDeliveryStream":
-		*e = DeleteDeliveryStreamXAmzTargetEnum(s)
+		*e = DeleteDeliveryStreamXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDeliveryStreamXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDeliveryStreamXAmzTargetEnum: %v", v)
 	}
 }
 

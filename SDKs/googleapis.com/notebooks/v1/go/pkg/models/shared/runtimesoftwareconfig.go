@@ -16,21 +16,25 @@ const (
 	RuntimeSoftwareConfigPostStartupScriptBehaviorEnumDownloadAndRunEveryStart             RuntimeSoftwareConfigPostStartupScriptBehaviorEnum = "DOWNLOAD_AND_RUN_EVERY_START"
 )
 
+func (e RuntimeSoftwareConfigPostStartupScriptBehaviorEnum) ToPointer() *RuntimeSoftwareConfigPostStartupScriptBehaviorEnum {
+	return &e
+}
+
 func (e *RuntimeSoftwareConfigPostStartupScriptBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POST_STARTUP_SCRIPT_BEHAVIOR_UNSPECIFIED":
 		fallthrough
 	case "RUN_EVERY_START":
 		fallthrough
 	case "DOWNLOAD_AND_RUN_EVERY_START":
-		*e = RuntimeSoftwareConfigPostStartupScriptBehaviorEnum(s)
+		*e = RuntimeSoftwareConfigPostStartupScriptBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuntimeSoftwareConfigPostStartupScriptBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for RuntimeSoftwareConfigPostStartupScriptBehaviorEnum: %v", v)
 	}
 }
 

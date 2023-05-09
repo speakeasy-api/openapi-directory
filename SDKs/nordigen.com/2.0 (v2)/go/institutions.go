@@ -115,6 +115,16 @@ func (s *institutions) RetrieveAllSupportedInstitutionsInAGivenCountry(ctx conte
 
 			res.RetrieveAllSupportedInstitutionsInAGivenCountry404ApplicationJSONObject = out
 		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject = out
+		}
 	}
 
 	return res, nil
@@ -123,7 +133,10 @@ func (s *institutions) RetrieveAllSupportedInstitutionsInAGivenCountry(ctx conte
 // RetrieveInstitution - Get details about a specific Institution
 func (s *institutions) RetrieveInstitution(ctx context.Context, request operations.RetrieveInstitutionRequest) (*operations.RetrieveInstitutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/institutions/{id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/institutions/{id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -152,12 +165,12 @@ func (s *institutions) RetrieveInstitution(ctx context.Context, request operatio
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Integration
+			var out *shared.IntegrationRetrieve
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Integration = out
+			res.IntegrationRetrieve = out
 		}
 	case httpRes.StatusCode == 401:
 		switch {
@@ -188,6 +201,16 @@ func (s *institutions) RetrieveInstitution(ctx context.Context, request operatio
 			}
 
 			res.RetrieveInstitution404ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveInstitution429ApplicationJSONObject = out
 		}
 	}
 

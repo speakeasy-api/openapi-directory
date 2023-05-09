@@ -115,7 +115,10 @@ func (s *support) ForgotPassword(ctx context.Context, request operations.ForgotP
 // GetSubscriptionData - Returns the details of subscription data for a user with specified id.
 func (s *support) GetSubscriptionData(ctx context.Context, request operations.GetSubscriptionDataRequest) (*operations.GetSubscriptionDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/check-subscription/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/check-subscription/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

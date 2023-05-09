@@ -37,7 +37,10 @@ func newNetflow(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Change attributes
 func (s *netflow) ProtocolNetflowChangeAttr(ctx context.Context, request operations.ProtocolNetflowChangeAttrRequest) (*operations.ProtocolNetflowChangeAttrResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/change/{flowset-uid}/{field-num}/{attr}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/change/{flowset-uid}/{field-num}/{attr}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *netflow) ProtocolNetflowChangeAttr(ctx context.Context, request operati
 // Interval in msec .
 func (s *netflow) ProtocolNetflowChangeDfs(ctx context.Context, request operations.ProtocolNetflowChangeDfsRequest) (*operations.ProtocolNetflowChangeDfsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/change/dfs_interval/{interval}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/change/dfs_interval/{interval}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *netflow) ProtocolNetflowChangeDfs(ctx context.Context, request operatio
 // Interval in msec .
 func (s *netflow) ProtocolNetflowChangeTfs(ctx context.Context, request operations.ProtocolNetflowChangeTfsRequest) (*operations.ProtocolNetflowChangeTfsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/change/tfs_interval/{interval}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/change/tfs_interval/{interval}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -178,7 +187,10 @@ func (s *netflow) ProtocolNetflowChangeTfs(ctx context.Context, request operatio
 // Agent's NETFLOW configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *netflow) ProtocolNetflowGetArgs(ctx context.Context, request operations.ProtocolNetflowGetArgsRequest) (*operations.ProtocolNetflowGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/args", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/args", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *netflow) ProtocolNetflowGetArgs(ctx context.Context, request operations
 // Agent's NETFLOW configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *netflow) ProtocolNetflowGetConfig(ctx context.Context, request operations.ProtocolNetflowGetConfigRequest) (*operations.ProtocolNetflowGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -270,7 +285,10 @@ func (s *netflow) ProtocolNetflowGetConfig(ctx context.Context, request operatio
 // Statistics of fields indicated in the headers
 func (s *netflow) ProtocolNetflowGetStatistics(ctx context.Context, request operations.ProtocolNetflowGetStatisticsRequest) (*operations.ProtocolNetflowGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/statistics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/statistics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -362,7 +380,10 @@ func (s *netflow) ProtocolNetflowGetStatsHdr(ctx context.Context) (*operations.P
 // Trace 1 means enabled, 0 means not
 func (s *netflow) ProtocolNetflowGetTrace(ctx context.Context, request operations.ProtocolNetflowGetTraceRequest) (*operations.ProtocolNetflowGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/trace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/trace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +429,10 @@ func (s *netflow) ProtocolNetflowGetTrace(ctx context.Context, request operation
 // Halt NETFLOW traffic
 func (s *netflow) ProtocolNetflowHalt(ctx context.Context, request operations.ProtocolNetflowHaltRequest) (*operations.ProtocolNetflowHaltResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/halt", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/halt", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -455,7 +479,10 @@ func (s *netflow) ProtocolNetflowHalt(ctx context.Context, request operations.Pr
 // Show list of NETFLOW exports
 func (s *netflow) ProtocolNetflowList(ctx context.Context, request operations.ProtocolNetflowListRequest) (*operations.ProtocolNetflowListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *netflow) ProtocolNetflowList(ctx context.Context, request operations.Pr
 // Reload NETFLOW configuration before resuming traffic
 func (s *netflow) ProtocolNetflowReload(ctx context.Context, request operations.ProtocolNetflowReloadRequest) (*operations.ProtocolNetflowReloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/reload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/reload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -548,7 +578,10 @@ func (s *netflow) ProtocolNetflowReload(ctx context.Context, request operations.
 // Resuming traffic
 func (s *netflow) ProtocolNetflowResume(ctx context.Context, request operations.ProtocolNetflowResumeRequest) (*operations.ProtocolNetflowResumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/resume", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/resume", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -595,7 +628,10 @@ func (s *netflow) ProtocolNetflowResume(ctx context.Context, request operations.
 // Allow changing collector without stopping agent
 func (s *netflow) ProtocolNetflowSetCollector(ctx context.Context, request operations.ProtocolNetflowSetCollectorRequest) (*operations.ProtocolNetflowSetCollectorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/collector/{collectorIP}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/collector/{collectorIP}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -642,7 +678,10 @@ func (s *netflow) ProtocolNetflowSetCollector(ctx context.Context, request opera
 // Agent's NETFLOW configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *netflow) ProtocolNetflowSetConfig(ctx context.Context, request operations.ProtocolNetflowSetConfigRequest) (*operations.ProtocolNetflowSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/config/{argument}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/config/{argument}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -689,7 +728,10 @@ func (s *netflow) ProtocolNetflowSetConfig(ctx context.Context, request operatio
 // Allow reloading the configuration file for an agent without stopping agent
 func (s *netflow) ProtocolNetflowSetFileName(ctx context.Context, request operations.ProtocolNetflowSetFileNameRequest) (*operations.ProtocolNetflowSetFileNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/filename/{fileName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/filename/{fileName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -736,7 +778,10 @@ func (s *netflow) ProtocolNetflowSetFileName(ctx context.Context, request operat
 // 1 to enable, 0 to disable
 func (s *netflow) ProtocolNetflowSetTrace(ctx context.Context, request operations.ProtocolNetflowSetTraceRequest) (*operations.ProtocolNetflowSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/trace/{enableOrNot}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/trace/{enableOrNot}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

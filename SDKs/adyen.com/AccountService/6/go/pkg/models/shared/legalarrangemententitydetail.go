@@ -19,12 +19,16 @@ const (
 	LegalArrangementEntityDetailLegalArrangementMembersEnumTrustee           LegalArrangementEntityDetailLegalArrangementMembersEnum = "Trustee"
 )
 
+func (e LegalArrangementEntityDetailLegalArrangementMembersEnum) ToPointer() *LegalArrangementEntityDetailLegalArrangementMembersEnum {
+	return &e
+}
+
 func (e *LegalArrangementEntityDetailLegalArrangementMembersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Beneficiary":
 		fallthrough
 	case "ControllingPerson":
@@ -38,10 +42,10 @@ func (e *LegalArrangementEntityDetailLegalArrangementMembersEnum) UnmarshalJSON(
 	case "Shareholder":
 		fallthrough
 	case "Trustee":
-		*e = LegalArrangementEntityDetailLegalArrangementMembersEnum(s)
+		*e = LegalArrangementEntityDetailLegalArrangementMembersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LegalArrangementEntityDetailLegalArrangementMembersEnum: %s", s)
+		return fmt.Errorf("invalid value for LegalArrangementEntityDetailLegalArrangementMembersEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	LegalArrangementEntityDetailLegalEntityTypeEnumPublicCompany LegalArrangementEntityDetailLegalEntityTypeEnum = "PublicCompany"
 )
 
+func (e LegalArrangementEntityDetailLegalEntityTypeEnum) ToPointer() *LegalArrangementEntityDetailLegalEntityTypeEnum {
+	return &e
+}
+
 func (e *LegalArrangementEntityDetailLegalEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Business":
 		fallthrough
 	case "Individual":
@@ -73,10 +81,10 @@ func (e *LegalArrangementEntityDetailLegalEntityTypeEnum) UnmarshalJSON(data []b
 	case "Partnership":
 		fallthrough
 	case "PublicCompany":
-		*e = LegalArrangementEntityDetailLegalEntityTypeEnum(s)
+		*e = LegalArrangementEntityDetailLegalEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LegalArrangementEntityDetailLegalEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LegalArrangementEntityDetailLegalEntityTypeEnum: %v", v)
 	}
 }
 

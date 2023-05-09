@@ -13,36 +13,34 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/area120tab
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.Area120tablesTablesListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
-        OrderBy: "illum",
-        PageSize: 423655,
-        PageToken: "error",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.Tables.Area120tablesTablesList(ctx, req, operations.Area120tablesTablesListSecurity{
+    res, err := s.Tables.Area120tablesTablesList(ctx, operations.Area120tablesTablesListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
+        OrderBy: sdk.String("illum"),
+        PageSize: sdk.Int64(423655),
+        PageToken: sdk.String("error"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("iure"),
+    }, operations.Area120tablesTablesListSecurity{
         Option1: &operations.Area120tablesTablesListSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -63,21 +61,21 @@ func main() {
 ## Available Resources and Operations
 
 
-### Tables
+### [Tables](docs/tables/README.md)
 
-* `Area120tablesTablesList` - Lists tables for the user.
-* `Area120tablesTablesRowsBatchCreate` - Creates multiple rows.
-* `Area120tablesTablesRowsBatchDelete` - Deletes multiple rows.
-* `Area120tablesTablesRowsBatchUpdate` - Updates multiple rows.
-* `Area120tablesTablesRowsCreate` - Creates a row.
-* `Area120tablesTablesRowsDelete` - Deletes a row.
-* `Area120tablesTablesRowsList` - Lists rows in a table. Returns NOT_FOUND if the table does not exist.
-* `Area120tablesTablesRowsPatch` - Updates a row.
+* [Area120tablesTablesList](docs/tables/README.md#area120tablestableslist) - Lists tables for the user.
+* [Area120tablesTablesRowsBatchCreate](docs/tables/README.md#area120tablestablesrowsbatchcreate) - Creates multiple rows.
+* [Area120tablesTablesRowsBatchDelete](docs/tables/README.md#area120tablestablesrowsbatchdelete) - Deletes multiple rows.
+* [Area120tablesTablesRowsBatchUpdate](docs/tables/README.md#area120tablestablesrowsbatchupdate) - Updates multiple rows.
+* [Area120tablesTablesRowsCreate](docs/tables/README.md#area120tablestablesrowscreate) - Creates a row.
+* [Area120tablesTablesRowsDelete](docs/tables/README.md#area120tablestablesrowsdelete) - Deletes a row.
+* [Area120tablesTablesRowsList](docs/tables/README.md#area120tablestablesrowslist) - Lists rows in a table. Returns NOT_FOUND if the table does not exist.
+* [Area120tablesTablesRowsPatch](docs/tables/README.md#area120tablestablesrowspatch) - Updates a row.
 
-### Workspaces
+### [Workspaces](docs/workspaces/README.md)
 
-* `Area120tablesWorkspacesGet` - Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
-* `Area120tablesWorkspacesList` - Lists workspaces for the user.
+* [Area120tablesWorkspacesGet](docs/workspaces/README.md#area120tablesworkspacesget) - Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
+* [Area120tablesWorkspacesList](docs/workspaces/README.md#area120tablesworkspaceslist) - Lists workspaces for the user.
 <!-- End SDK Available Operations -->
 
 ### Maturity

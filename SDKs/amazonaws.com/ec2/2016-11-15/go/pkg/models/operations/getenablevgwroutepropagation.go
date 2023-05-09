@@ -15,17 +15,21 @@ const (
 	GETEnableVgwRoutePropagationActionEnumEnableVgwRoutePropagation GETEnableVgwRoutePropagationActionEnum = "EnableVgwRoutePropagation"
 )
 
+func (e GETEnableVgwRoutePropagationActionEnum) ToPointer() *GETEnableVgwRoutePropagationActionEnum {
+	return &e
+}
+
 func (e *GETEnableVgwRoutePropagationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableVgwRoutePropagation":
-		*e = GETEnableVgwRoutePropagationActionEnum(s)
+		*e = GETEnableVgwRoutePropagationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableVgwRoutePropagationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableVgwRoutePropagationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETEnableVgwRoutePropagationVersionEnumTwoThousandAndSixteen1115 GETEnableVgwRoutePropagationVersionEnum = "2016-11-15"
 )
 
+func (e GETEnableVgwRoutePropagationVersionEnum) ToPointer() *GETEnableVgwRoutePropagationVersionEnum {
+	return &e
+}
+
 func (e *GETEnableVgwRoutePropagationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETEnableVgwRoutePropagationVersionEnum(s)
+		*e = GETEnableVgwRoutePropagationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableVgwRoutePropagationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableVgwRoutePropagationVersionEnum: %v", v)
 	}
 }
 

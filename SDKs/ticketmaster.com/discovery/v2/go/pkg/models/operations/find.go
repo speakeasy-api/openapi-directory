@@ -16,19 +16,23 @@ const (
 	FindIncludeLicensedContentEnumNo  FindIncludeLicensedContentEnum = " no"
 )
 
+func (e FindIncludeLicensedContentEnum) ToPointer() *FindIncludeLicensedContentEnum {
+	return &e
+}
+
 func (e *FindIncludeLicensedContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = FindIncludeLicensedContentEnum(s)
+		*e = FindIncludeLicensedContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindIncludeLicensedContentEnum: %s", s)
+		return fmt.Errorf("invalid value for FindIncludeLicensedContentEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	FindIncludeSpellcheckEnumNo  FindIncludeSpellcheckEnum = " no"
 )
 
+func (e FindIncludeSpellcheckEnum) ToPointer() *FindIncludeSpellcheckEnum {
+	return &e
+}
+
 func (e *FindIncludeSpellcheckEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = FindIncludeSpellcheckEnum(s)
+		*e = FindIncludeSpellcheckEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindIncludeSpellcheckEnum: %s", s)
+		return fmt.Errorf("invalid value for FindIncludeSpellcheckEnum: %v", v)
 	}
 }
 
@@ -65,21 +73,25 @@ const (
 	FindIncludeTestEnumOnly FindIncludeTestEnum = " only"
 )
 
+func (e FindIncludeTestEnum) ToPointer() *FindIncludeTestEnum {
+	return &e
+}
+
 func (e *FindIncludeTestEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
 		fallthrough
 	case " only":
-		*e = FindIncludeTestEnum(s)
+		*e = FindIncludeTestEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindIncludeTestEnum: %s", s)
+		return fmt.Errorf("invalid value for FindIncludeTestEnum: %v", v)
 	}
 }
 
@@ -93,12 +105,16 @@ const (
 	FindSourceEnumTmr          FindSourceEnum = " tmr"
 )
 
+func (e FindSourceEnum) ToPointer() *FindSourceEnum {
+	return &e
+}
+
 func (e *FindSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ticketmaster":
 		fallthrough
 	case " universe":
@@ -106,10 +122,10 @@ func (e *FindSourceEnum) UnmarshalJSON(data []byte) error {
 	case " frontgate":
 		fallthrough
 	case " tmr":
-		*e = FindSourceEnum(s)
+		*e = FindSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for FindSourceEnum: %v", v)
 	}
 }
 

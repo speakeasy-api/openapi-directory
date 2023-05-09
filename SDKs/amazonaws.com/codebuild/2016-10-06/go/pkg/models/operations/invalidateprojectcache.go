@@ -16,17 +16,21 @@ const (
 	InvalidateProjectCacheXAmzTargetEnumCodeBuild20161006InvalidateProjectCache InvalidateProjectCacheXAmzTargetEnum = "CodeBuild_20161006.InvalidateProjectCache"
 )
 
+func (e InvalidateProjectCacheXAmzTargetEnum) ToPointer() *InvalidateProjectCacheXAmzTargetEnum {
+	return &e
+}
+
 func (e *InvalidateProjectCacheXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.InvalidateProjectCache":
-		*e = InvalidateProjectCacheXAmzTargetEnum(s)
+		*e = InvalidateProjectCacheXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvalidateProjectCacheXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for InvalidateProjectCacheXAmzTargetEnum: %v", v)
 	}
 }
 

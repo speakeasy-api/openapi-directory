@@ -18,12 +18,16 @@ const (
 	GoogleAppsScriptTypeWebAppConfigAccessEnumAnyoneAnonymous GoogleAppsScriptTypeWebAppConfigAccessEnum = "ANYONE_ANONYMOUS"
 )
 
+func (e GoogleAppsScriptTypeWebAppConfigAccessEnum) ToPointer() *GoogleAppsScriptTypeWebAppConfigAccessEnum {
+	return &e
+}
+
 func (e *GoogleAppsScriptTypeWebAppConfigAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_ACCESS":
 		fallthrough
 	case "MYSELF":
@@ -33,10 +37,10 @@ func (e *GoogleAppsScriptTypeWebAppConfigAccessEnum) UnmarshalJSON(data []byte) 
 	case "ANYONE":
 		fallthrough
 	case "ANYONE_ANONYMOUS":
-		*e = GoogleAppsScriptTypeWebAppConfigAccessEnum(s)
+		*e = GoogleAppsScriptTypeWebAppConfigAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsScriptTypeWebAppConfigAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsScriptTypeWebAppConfigAccessEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	GoogleAppsScriptTypeWebAppConfigExecuteAsEnumUserDeploying    GoogleAppsScriptTypeWebAppConfigExecuteAsEnum = "USER_DEPLOYING"
 )
 
+func (e GoogleAppsScriptTypeWebAppConfigExecuteAsEnum) ToPointer() *GoogleAppsScriptTypeWebAppConfigExecuteAsEnum {
+	return &e
+}
+
 func (e *GoogleAppsScriptTypeWebAppConfigExecuteAsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_EXECUTE_AS":
 		fallthrough
 	case "USER_ACCESSING":
 		fallthrough
 	case "USER_DEPLOYING":
-		*e = GoogleAppsScriptTypeWebAppConfigExecuteAsEnum(s)
+		*e = GoogleAppsScriptTypeWebAppConfigExecuteAsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsScriptTypeWebAppConfigExecuteAsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsScriptTypeWebAppConfigExecuteAsEnum: %v", v)
 	}
 }
 

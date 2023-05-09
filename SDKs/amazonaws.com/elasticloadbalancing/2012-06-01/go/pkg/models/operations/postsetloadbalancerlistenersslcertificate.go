@@ -15,17 +15,21 @@ const (
 	POSTSetLoadBalancerListenerSSLCertificateActionEnumSetLoadBalancerListenerSslCertificate POSTSetLoadBalancerListenerSSLCertificateActionEnum = "SetLoadBalancerListenerSSLCertificate"
 )
 
+func (e POSTSetLoadBalancerListenerSSLCertificateActionEnum) ToPointer() *POSTSetLoadBalancerListenerSSLCertificateActionEnum {
+	return &e
+}
+
 func (e *POSTSetLoadBalancerListenerSSLCertificateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetLoadBalancerListenerSSLCertificate":
-		*e = POSTSetLoadBalancerListenerSSLCertificateActionEnum(s)
+		*e = POSTSetLoadBalancerListenerSSLCertificateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetLoadBalancerListenerSSLCertificateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetLoadBalancerListenerSSLCertificateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSetLoadBalancerListenerSSLCertificateVersionEnumTwoThousandAndTwelve0601 POSTSetLoadBalancerListenerSSLCertificateVersionEnum = "2012-06-01"
 )
 
+func (e POSTSetLoadBalancerListenerSSLCertificateVersionEnum) ToPointer() *POSTSetLoadBalancerListenerSSLCertificateVersionEnum {
+	return &e
+}
+
 func (e *POSTSetLoadBalancerListenerSSLCertificateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = POSTSetLoadBalancerListenerSSLCertificateVersionEnum(s)
+		*e = POSTSetLoadBalancerListenerSSLCertificateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetLoadBalancerListenerSSLCertificateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetLoadBalancerListenerSSLCertificateVersionEnum: %v", v)
 	}
 }
 

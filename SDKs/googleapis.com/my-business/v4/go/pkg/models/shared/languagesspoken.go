@@ -17,12 +17,16 @@ const (
 	LanguagesSpokenArabicSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenArabicSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenArabicSpokenExceptionEnum) ToPointer() *LanguagesSpokenArabicSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenArabicSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *LanguagesSpokenArabicSpokenExceptionEnum) UnmarshalJSON(data []byte) er
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenArabicSpokenExceptionEnum(s)
+		*e = LanguagesSpokenArabicSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenArabicSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenArabicSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	LanguagesSpokenCantoneseSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenCantoneseSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenCantoneseSpokenExceptionEnum) ToPointer() *LanguagesSpokenCantoneseSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenCantoneseSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *LanguagesSpokenCantoneseSpokenExceptionEnum) UnmarshalJSON(data []byte)
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenCantoneseSpokenExceptionEnum(s)
+		*e = LanguagesSpokenCantoneseSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenCantoneseSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenCantoneseSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	LanguagesSpokenDutchSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenDutchSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenDutchSpokenExceptionEnum) ToPointer() *LanguagesSpokenDutchSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenDutchSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *LanguagesSpokenDutchSpokenExceptionEnum) UnmarshalJSON(data []byte) err
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenDutchSpokenExceptionEnum(s)
+		*e = LanguagesSpokenDutchSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenDutchSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenDutchSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	LanguagesSpokenEnglishSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenEnglishSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenEnglishSpokenExceptionEnum) ToPointer() *LanguagesSpokenEnglishSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenEnglishSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *LanguagesSpokenEnglishSpokenExceptionEnum) UnmarshalJSON(data []byte) e
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenEnglishSpokenExceptionEnum(s)
+		*e = LanguagesSpokenEnglishSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenEnglishSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenEnglishSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	LanguagesSpokenFilipinoSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenFilipinoSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenFilipinoSpokenExceptionEnum) ToPointer() *LanguagesSpokenFilipinoSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenFilipinoSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *LanguagesSpokenFilipinoSpokenExceptionEnum) UnmarshalJSON(data []byte) 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenFilipinoSpokenExceptionEnum(s)
+		*e = LanguagesSpokenFilipinoSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenFilipinoSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenFilipinoSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	LanguagesSpokenFrenchSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenFrenchSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenFrenchSpokenExceptionEnum) ToPointer() *LanguagesSpokenFrenchSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenFrenchSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *LanguagesSpokenFrenchSpokenExceptionEnum) UnmarshalJSON(data []byte) er
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenFrenchSpokenExceptionEnum(s)
+		*e = LanguagesSpokenFrenchSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenFrenchSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenFrenchSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	LanguagesSpokenGermanSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenGermanSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenGermanSpokenExceptionEnum) ToPointer() *LanguagesSpokenGermanSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenGermanSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *LanguagesSpokenGermanSpokenExceptionEnum) UnmarshalJSON(data []byte) er
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenGermanSpokenExceptionEnum(s)
+		*e = LanguagesSpokenGermanSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenGermanSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenGermanSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -227,12 +255,16 @@ const (
 	LanguagesSpokenHindiSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenHindiSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenHindiSpokenExceptionEnum) ToPointer() *LanguagesSpokenHindiSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenHindiSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -240,10 +272,10 @@ func (e *LanguagesSpokenHindiSpokenExceptionEnum) UnmarshalJSON(data []byte) err
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenHindiSpokenExceptionEnum(s)
+		*e = LanguagesSpokenHindiSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenHindiSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenHindiSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -257,12 +289,16 @@ const (
 	LanguagesSpokenIndonesianSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenIndonesianSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenIndonesianSpokenExceptionEnum) ToPointer() *LanguagesSpokenIndonesianSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenIndonesianSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -270,10 +306,10 @@ func (e *LanguagesSpokenIndonesianSpokenExceptionEnum) UnmarshalJSON(data []byte
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenIndonesianSpokenExceptionEnum(s)
+		*e = LanguagesSpokenIndonesianSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenIndonesianSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenIndonesianSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -287,12 +323,16 @@ const (
 	LanguagesSpokenItalianSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenItalianSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenItalianSpokenExceptionEnum) ToPointer() *LanguagesSpokenItalianSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenItalianSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -300,10 +340,10 @@ func (e *LanguagesSpokenItalianSpokenExceptionEnum) UnmarshalJSON(data []byte) e
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenItalianSpokenExceptionEnum(s)
+		*e = LanguagesSpokenItalianSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenItalianSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenItalianSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -317,12 +357,16 @@ const (
 	LanguagesSpokenJapaneseSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenJapaneseSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenJapaneseSpokenExceptionEnum) ToPointer() *LanguagesSpokenJapaneseSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenJapaneseSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -330,10 +374,10 @@ func (e *LanguagesSpokenJapaneseSpokenExceptionEnum) UnmarshalJSON(data []byte) 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenJapaneseSpokenExceptionEnum(s)
+		*e = LanguagesSpokenJapaneseSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenJapaneseSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenJapaneseSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -347,12 +391,16 @@ const (
 	LanguagesSpokenKoreanSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenKoreanSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenKoreanSpokenExceptionEnum) ToPointer() *LanguagesSpokenKoreanSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenKoreanSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -360,10 +408,10 @@ func (e *LanguagesSpokenKoreanSpokenExceptionEnum) UnmarshalJSON(data []byte) er
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenKoreanSpokenExceptionEnum(s)
+		*e = LanguagesSpokenKoreanSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenKoreanSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenKoreanSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -377,12 +425,16 @@ const (
 	LanguagesSpokenMandarinSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenMandarinSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenMandarinSpokenExceptionEnum) ToPointer() *LanguagesSpokenMandarinSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenMandarinSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -390,10 +442,10 @@ func (e *LanguagesSpokenMandarinSpokenExceptionEnum) UnmarshalJSON(data []byte) 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenMandarinSpokenExceptionEnum(s)
+		*e = LanguagesSpokenMandarinSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenMandarinSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenMandarinSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -407,12 +459,16 @@ const (
 	LanguagesSpokenPortugueseSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenPortugueseSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenPortugueseSpokenExceptionEnum) ToPointer() *LanguagesSpokenPortugueseSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenPortugueseSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -420,10 +476,10 @@ func (e *LanguagesSpokenPortugueseSpokenExceptionEnum) UnmarshalJSON(data []byte
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenPortugueseSpokenExceptionEnum(s)
+		*e = LanguagesSpokenPortugueseSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenPortugueseSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenPortugueseSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -437,12 +493,16 @@ const (
 	LanguagesSpokenRussianSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenRussianSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenRussianSpokenExceptionEnum) ToPointer() *LanguagesSpokenRussianSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenRussianSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -450,10 +510,10 @@ func (e *LanguagesSpokenRussianSpokenExceptionEnum) UnmarshalJSON(data []byte) e
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenRussianSpokenExceptionEnum(s)
+		*e = LanguagesSpokenRussianSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenRussianSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenRussianSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -467,12 +527,16 @@ const (
 	LanguagesSpokenSpanishSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenSpanishSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenSpanishSpokenExceptionEnum) ToPointer() *LanguagesSpokenSpanishSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenSpanishSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -480,10 +544,10 @@ func (e *LanguagesSpokenSpanishSpokenExceptionEnum) UnmarshalJSON(data []byte) e
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenSpanishSpokenExceptionEnum(s)
+		*e = LanguagesSpokenSpanishSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenSpanishSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenSpanishSpokenExceptionEnum: %v", v)
 	}
 }
 
@@ -497,12 +561,16 @@ const (
 	LanguagesSpokenVietnameseSpokenExceptionEnumDependentOnDayOfWeek LanguagesSpokenVietnameseSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguagesSpokenVietnameseSpokenExceptionEnum) ToPointer() *LanguagesSpokenVietnameseSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguagesSpokenVietnameseSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -510,10 +578,10 @@ func (e *LanguagesSpokenVietnameseSpokenExceptionEnum) UnmarshalJSON(data []byte
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguagesSpokenVietnameseSpokenExceptionEnum(s)
+		*e = LanguagesSpokenVietnameseSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguagesSpokenVietnameseSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguagesSpokenVietnameseSpokenExceptionEnum: %v", v)
 	}
 }
 

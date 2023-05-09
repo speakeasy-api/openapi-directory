@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Master-Data-AP
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -29,29 +29,27 @@ func main() {
         }),
     )
 
-    req := operations.CreateNewCustomerAddressRequest{
+    ctx := context.Background()
+    res, err := s.Addresses.CreateNewCustomerAddress(ctx, operations.CreateNewCustomerAddressRequest{
         Accept: "application/json",
         ContentType: "application/json",
-        Schema: "schema",
+        Schema: sdk.String("schema"),
         CreateUpdateAddressRequests: shared.CreateUpdateAddressRequests{
-            AddressName: "My house",
-            AddressType: "residential",
-            City: "Rio de Janeiro",
-            Complement: "3rd floor",
-            Country: "BRA",
-            Neighborhood: "Botafogo",
-            Number: "300",
-            PostalCode: "12345-000",
-            ReceiverName: "Clark Kent.",
-            Reference: "Grey building",
-            State: "Rio de Janeiro",
-            Street: "Praia de Botafogo",
-            UserID: "7e03m794-a33a-11e9-84rt6-0adfa64s5a8e",
+            AddressName: sdk.String("My house"),
+            AddressType: sdk.String("residential"),
+            City: sdk.String("Rio de Janeiro"),
+            Complement: sdk.String("3rd floor"),
+            Country: sdk.String("BRA"),
+            Neighborhood: sdk.String("Botafogo"),
+            Number: sdk.String("300"),
+            PostalCode: sdk.String("12345-000"),
+            ReceiverName: sdk.String("Clark Kent."),
+            Reference: sdk.String("Grey building"),
+            State: sdk.String("Rio de Janeiro"),
+            Street: sdk.String("Praia de Botafogo"),
+            UserID: sdk.String("7e03m794-a33a-11e9-84rt6-0adfa64s5a8e"),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.Addresses.CreateNewCustomerAddress(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -67,58 +65,58 @@ func main() {
 ## Available Resources and Operations
 
 
-### Addresses
+### [Addresses](docs/addresses/README.md)
 
-* `CreateNewCustomerAddress` - Create new customer address
-* `DeleteCustomerAddress` - Delete customer address
-* `UpdateCustomerAddress` - Update customer address
+* [CreateNewCustomerAddress](docs/addresses/README.md#createnewcustomeraddress) - Create new customer address
+* [DeleteCustomerAddress](docs/addresses/README.md#deletecustomeraddress) - Delete customer address
+* [UpdateCustomerAddress](docs/addresses/README.md#updatecustomeraddress) - Update customer address
 
-### Clusters
+### [Clusters](docs/clusters/README.md)
 
-* `Validatedocumentbyclusters` - Validate document by clusters
+* [Validatedocumentbyclusters](docs/clusters/README.md#validatedocumentbyclusters) - Validate document by clusters
 
-### CustomerProfiles
+### [CustomerProfiles](docs/customerprofiles/README.md)
 
-* `CreateNewCustomerProfilev2` - Create new customer profile
-* `DeleteCustomerProfile` - Delete customer profile
-* `UpdateCustomerProfile` - Update customer profile
+* [CreateNewCustomerProfilev2](docs/customerprofiles/README.md#createnewcustomerprofilev2) - Create new customer profile
+* [DeleteCustomerProfile](docs/customerprofiles/README.md#deletecustomerprofile) - Delete customer profile
+* [UpdateCustomerProfile](docs/customerprofiles/README.md#updatecustomerprofile) - Update customer profile
 
-### Documents
+### [Documents](docs/documents/README.md)
 
-* `Createnewdocument` - Create new document
-* `Createorupdatepartialdocument` - Create partial document
-* `Deletedocument` - Delete document
-* `Getdocument` - Get document
-* `Updateentiredocument` - Update entire document
-* `Updatepartialdocument` - Update partial document
+* [Createnewdocument](docs/documents/README.md#createnewdocument) - Create new document
+* [Createorupdatepartialdocument](docs/documents/README.md#createorupdatepartialdocument) - Create partial document
+* [Deletedocument](docs/documents/README.md#deletedocument) - Delete document
+* [Getdocument](docs/documents/README.md#getdocument) - Get document
+* [Updateentiredocument](docs/documents/README.md#updateentiredocument) - Update entire document
+* [Updatepartialdocument](docs/documents/README.md#updatepartialdocument) - Update partial document
 
-### Indices
+### [Indices](docs/indices/README.md)
 
-* `Deleteindexbyname` - Delete index by name
-* `Getindexbyname` - Get index by name
-* `Getindices` - Get indices
-* `Putindices` - Put indices
+* [Deleteindexbyname](docs/indices/README.md#deleteindexbyname) - Delete index by name
+* [Getindexbyname](docs/indices/README.md#getindexbyname) - Get index by name
+* [Getindices](docs/indices/README.md#getindices) - Get indices
+* [Putindices](docs/indices/README.md#putindices) - Put indices
 
-### Schemas
+### [Schemas](docs/schemas/README.md)
 
-* `Deleteschemabyname` - Delete schema by name
-* `Getschemabyname` - Get schema by name
-* `Getschemas` - Get schemas
-* `Saveschemabyname` - Save schema by name
+* [Deleteschemabyname](docs/schemas/README.md#deleteschemabyname) - Delete schema by name
+* [Getschemabyname](docs/schemas/README.md#getschemabyname) - Get schema by name
+* [Getschemas](docs/schemas/README.md#getschemas) - Get schemas
+* [Saveschemabyname](docs/schemas/README.md#saveschemabyname) - Save schema by name
 
-### Scroll
+### [Scroll](docs/scroll/README.md)
 
-* `Scrolldocuments` - Scroll documents
+* [Scrolldocuments](docs/scroll/README.md#scrolldocuments) - Scroll documents
 
-### Search
+### [Search](docs/search/README.md)
 
-* `Searchdocuments` - Search documents
+* [Searchdocuments](docs/search/README.md#searchdocuments) - Search documents
 
-### Versions
+### [Versions](docs/versions/README.md)
 
-* `Getversion` - Get version
-* `Listversions` - List versions
-* `Putversion` - Put version
+* [Getversion](docs/versions/README.md#getversion) - Get version
+* [Listversions](docs/versions/README.md#listversions) - List versions
+* [Putversion](docs/versions/README.md#putversion) - Put version
 <!-- End SDK Available Operations -->
 
 ### Maturity

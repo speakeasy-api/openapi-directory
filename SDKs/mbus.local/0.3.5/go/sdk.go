@@ -28,6 +28,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 type SDK struct {
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
@@ -96,7 +111,10 @@ func New(opts ...SDKOption) *SDK {
 // Get - Gets data from the slave identified by {address}
 func (s *SDK) Get(ctx context.Context, request operations.GetRequest) (*operations.GetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mbus/get/{device}/{baudrate}/{address}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mbus/get/{device}/{baudrate}/{address}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -154,7 +172,10 @@ func (s *SDK) Get(ctx context.Context, request operations.GetRequest) (*operatio
 // GetMulti - Gets data from the slave identified by {address}, and supports multiple responses from the slave
 func (s *SDK) GetMulti(ctx context.Context, request operations.GetMultiRequest) (*operations.GetMultiResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mbus/getMulti/{device}/{baudrate}/{address}/{maxframes}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mbus/getMulti/{device}/{baudrate}/{address}/{maxframes}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -415,7 +436,10 @@ func (s *SDK) MbusAPI(ctx context.Context) (*operations.MbusAPIResponse, error) 
 // Scan - Scan the specified device for slaves
 func (s *SDK) Scan(ctx context.Context, request operations.ScanRequest) (*operations.ScanResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mbus/scan/{device}/{baudrate}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mbus/scan/{device}/{baudrate}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -15,20 +15,24 @@ const (
 	LabelRatingEnumNeutral   LabelRatingEnum = "NEUTRAL"
 )
 
+func (e LabelRatingEnum) ToPointer() *LabelRatingEnum {
+	return &e
+}
+
 func (e *LabelRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANOMALY":
 		fallthrough
 	case "NO_ANOMALY":
 		fallthrough
 	case "NEUTRAL":
-		*e = LabelRatingEnum(s)
+		*e = LabelRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LabelRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for LabelRatingEnum: %v", v)
 	}
 }

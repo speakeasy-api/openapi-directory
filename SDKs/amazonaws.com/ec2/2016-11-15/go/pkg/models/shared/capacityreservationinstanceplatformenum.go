@@ -29,12 +29,16 @@ const (
 	CapacityReservationInstancePlatformEnumRhelWithHaAndSQLServerEnterprise CapacityReservationInstancePlatformEnum = "RHEL with HA and SQL Server Enterprise"
 )
 
+func (e CapacityReservationInstancePlatformEnum) ToPointer() *CapacityReservationInstancePlatformEnum {
+	return &e
+}
+
 func (e *CapacityReservationInstancePlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Linux/UNIX":
 		fallthrough
 	case "Red Hat Enterprise Linux":
@@ -68,9 +72,9 @@ func (e *CapacityReservationInstancePlatformEnum) UnmarshalJSON(data []byte) err
 	case "RHEL with HA and SQL Server Standard":
 		fallthrough
 	case "RHEL with HA and SQL Server Enterprise":
-		*e = CapacityReservationInstancePlatformEnum(s)
+		*e = CapacityReservationInstancePlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapacityReservationInstancePlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for CapacityReservationInstancePlatformEnum: %v", v)
 	}
 }

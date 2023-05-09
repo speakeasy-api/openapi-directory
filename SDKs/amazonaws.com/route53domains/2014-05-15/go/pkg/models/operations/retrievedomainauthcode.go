@@ -16,17 +16,21 @@ const (
 	RetrieveDomainAuthCodeXAmzTargetEnumRoute53DomainsV20140515RetrieveDomainAuthCode RetrieveDomainAuthCodeXAmzTargetEnum = "Route53Domains_v20140515.RetrieveDomainAuthCode"
 )
 
+func (e RetrieveDomainAuthCodeXAmzTargetEnum) ToPointer() *RetrieveDomainAuthCodeXAmzTargetEnum {
+	return &e
+}
+
 func (e *RetrieveDomainAuthCodeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.RetrieveDomainAuthCode":
-		*e = RetrieveDomainAuthCodeXAmzTargetEnum(s)
+		*e = RetrieveDomainAuthCodeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveDomainAuthCodeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveDomainAuthCodeXAmzTargetEnum: %v", v)
 	}
 }
 

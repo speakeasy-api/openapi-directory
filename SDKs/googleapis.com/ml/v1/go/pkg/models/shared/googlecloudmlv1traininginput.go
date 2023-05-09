@@ -19,12 +19,16 @@ const (
 	GoogleCloudMlV1TrainingInputScaleTierEnumCustom    GoogleCloudMlV1TrainingInputScaleTierEnum = "CUSTOM"
 )
 
+func (e GoogleCloudMlV1TrainingInputScaleTierEnum) ToPointer() *GoogleCloudMlV1TrainingInputScaleTierEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1TrainingInputScaleTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "STANDARD_1":
@@ -36,10 +40,10 @@ func (e *GoogleCloudMlV1TrainingInputScaleTierEnum) UnmarshalJSON(data []byte) e
 	case "BASIC_TPU":
 		fallthrough
 	case "CUSTOM":
-		*e = GoogleCloudMlV1TrainingInputScaleTierEnum(s)
+		*e = GoogleCloudMlV1TrainingInputScaleTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1TrainingInputScaleTierEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1TrainingInputScaleTierEnum: %v", v)
 	}
 }
 

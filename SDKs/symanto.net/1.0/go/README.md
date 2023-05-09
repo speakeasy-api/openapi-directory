@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/symanto.net/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,29 +28,27 @@ func main() {
         }),
     )
 
-    req := operations.CommunicationRequest{
+    ctx := context.Background()
+    res, err := s.TextAnalysis.Communication(ctx, operations.CommunicationRequest{
         RequestBody: []shared.Post{
             shared.Post{
-                ID: "1",
+                ID: sdk.String("1"),
                 Language: "en",
                 Text: "I love the service",
             },
             shared.Post{
-                ID: "1",
+                ID: sdk.String("1"),
                 Language: "en",
                 Text: "I love the service",
             },
             shared.Post{
-                ID: "1",
+                ID: sdk.String("1"),
                 Language: "en",
                 Text: "I love the service",
             },
         },
-        All: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.TextAnalysis.Communication(ctx, req)
+        All: sdk.Bool(false),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -66,15 +64,15 @@ func main() {
 ## Available Resources and Operations
 
 
-### TextAnalysis
+### [TextAnalysis](docs/textanalysis/README.md)
 
-* `Communication` - Communication & Tonality
-* `EkmanEmotion` - Emotion Analysis
-* `Emotion` - Emotion Analysis
-* `LanguageDetection` - Language Detection
-* `Personality` - Personality Traits
-* `Sentiment` - Sentiment Analysis
-* `TopicSentiment` - Extracts topics and sentiments and relates them.
+* [Communication](docs/textanalysis/README.md#communication) - Communication & Tonality
+* [EkmanEmotion](docs/textanalysis/README.md#ekmanemotion) - Emotion Analysis
+* [Emotion](docs/textanalysis/README.md#emotion) - Emotion Analysis
+* [LanguageDetection](docs/textanalysis/README.md#languagedetection) - Language Detection
+* [Personality](docs/textanalysis/README.md#personality) - Personality Traits
+* [Sentiment](docs/textanalysis/README.md#sentiment) - Sentiment Analysis
+* [TopicSentiment](docs/textanalysis/README.md#topicsentiment) - Extracts topics and sentiments and relates them.
 <!-- End SDK Available Operations -->
 
 ### Maturity

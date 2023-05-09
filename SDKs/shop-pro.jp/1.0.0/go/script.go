@@ -93,7 +93,10 @@ func (s *script) CreateShopScriptTag(ctx context.Context, request operations.Cre
 // DeleteScriptTag - スクリプトタグの削除
 func (s *script) DeleteScriptTag(ctx context.Context, request operations.DeleteScriptTagRequest, security operations.DeleteScriptTagSecurity) (*operations.DeleteScriptTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/appstore/v1/script_tags/{scriptTagId}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/appstore/v1/script_tags/{scriptTagId}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -128,7 +131,10 @@ func (s *script) DeleteScriptTag(ctx context.Context, request operations.DeleteS
 // GetShopScriptTag - スクリプトタグの取得
 func (s *script) GetShopScriptTag(ctx context.Context, request operations.GetShopScriptTagRequest, security operations.GetShopScriptTagSecurity) (*operations.GetShopScriptTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/appstore/v1/script_tags/{scriptTagId}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/appstore/v1/script_tags/{scriptTagId}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +176,7 @@ func (s *script) GetShopScriptTag(ctx context.Context, request operations.GetSho
 }
 
 // GetShopScriptTags - スクリプトタグの取得
-func (s *script) GetShopScriptTags(ctx context.Context) (*operations.GetShopScriptTagsResponse, error) {
+func (s *script) GetShopScriptTags(ctx context.Context, security operations.GetShopScriptTagsSecurity) (*operations.GetShopScriptTagsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/appstore/v1/script_tags.json"
 
@@ -179,7 +185,7 @@ func (s *script) GetShopScriptTags(ctx context.Context) (*operations.GetShopScri
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -216,7 +222,10 @@ func (s *script) GetShopScriptTags(ctx context.Context) (*operations.GetShopScri
 // UpdateShopScriptTag - スクリプトタグの更新
 func (s *script) UpdateShopScriptTag(ctx context.Context, request operations.UpdateShopScriptTagRequest, security operations.UpdateShopScriptTagSecurity) (*operations.UpdateShopScriptTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/appstore/v1/script_tags/{scriptTagId}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/appstore/v1/script_tags/{scriptTagId}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	ScheduledActionFilterNameEnumIamRole           ScheduledActionFilterNameEnum = "iam-role"
 )
 
+func (e ScheduledActionFilterNameEnum) ToPointer() *ScheduledActionFilterNameEnum {
+	return &e
+}
+
 func (e *ScheduledActionFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cluster-identifier":
 		fallthrough
 	case "iam-role":
-		*e = ScheduledActionFilterNameEnum(s)
+		*e = ScheduledActionFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScheduledActionFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ScheduledActionFilterNameEnum: %v", v)
 	}
 }

@@ -16,21 +16,25 @@ const (
 	DNSConfigClusterDNSEnumCloudDNS            DNSConfigClusterDNSEnum = "CLOUD_DNS"
 )
 
+func (e DNSConfigClusterDNSEnum) ToPointer() *DNSConfigClusterDNSEnum {
+	return &e
+}
+
 func (e *DNSConfigClusterDNSEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROVIDER_UNSPECIFIED":
 		fallthrough
 	case "PLATFORM_DEFAULT":
 		fallthrough
 	case "CLOUD_DNS":
-		*e = DNSConfigClusterDNSEnum(s)
+		*e = DNSConfigClusterDNSEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DNSConfigClusterDNSEnum: %s", s)
+		return fmt.Errorf("invalid value for DNSConfigClusterDNSEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	DNSConfigClusterDNSScopeEnumVpcScope            DNSConfigClusterDNSScopeEnum = "VPC_SCOPE"
 )
 
+func (e DNSConfigClusterDNSScopeEnum) ToPointer() *DNSConfigClusterDNSScopeEnum {
+	return &e
+}
+
 func (e *DNSConfigClusterDNSScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DNS_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "CLUSTER_SCOPE":
 		fallthrough
 	case "VPC_SCOPE":
-		*e = DNSConfigClusterDNSScopeEnum(s)
+		*e = DNSConfigClusterDNSScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DNSConfigClusterDNSScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for DNSConfigClusterDNSScopeEnum: %v", v)
 	}
 }
 

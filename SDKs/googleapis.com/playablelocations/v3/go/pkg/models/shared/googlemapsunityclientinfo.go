@@ -21,12 +21,16 @@ const (
 	GoogleMapsUnityClientInfoPlatformEnumWebGl               GoogleMapsUnityClientInfoPlatformEnum = "WEB_GL"
 )
 
+func (e GoogleMapsUnityClientInfoPlatformEnum) ToPointer() *GoogleMapsUnityClientInfoPlatformEnum {
+	return &e
+}
+
 func (e *GoogleMapsUnityClientInfoPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_UNSPECIFIED":
 		fallthrough
 	case "EDITOR":
@@ -42,10 +46,10 @@ func (e *GoogleMapsUnityClientInfoPlatformEnum) UnmarshalJSON(data []byte) error
 	case "IOS":
 		fallthrough
 	case "WEB_GL":
-		*e = GoogleMapsUnityClientInfoPlatformEnum(s)
+		*e = GoogleMapsUnityClientInfoPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleMapsUnityClientInfoPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleMapsUnityClientInfoPlatformEnum: %v", v)
 	}
 }
 

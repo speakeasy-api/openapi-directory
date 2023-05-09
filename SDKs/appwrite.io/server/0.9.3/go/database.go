@@ -89,7 +89,10 @@ func (s *database) DatabaseCreateCollection(ctx context.Context, request operati
 // Create a new Document. Before using this route, you should create a new collection resource using either a [server integration](/docs/server/database#databaseCreateCollection) API or directly from your database console.
 func (s *database) DatabaseCreateDocument(ctx context.Context, request operations.DatabaseCreateDocumentRequest, security operations.DatabaseCreateDocumentSecurity) (*operations.DatabaseCreateDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -141,7 +144,10 @@ func (s *database) DatabaseCreateDocument(ctx context.Context, request operation
 // Delete a collection by its unique ID. Only users with write permissions have access to delete this resource.
 func (s *database) DatabaseDeleteCollection(ctx context.Context, request operations.DatabaseDeleteCollectionRequest, security operations.DatabaseDeleteCollectionSecurity) (*operations.DatabaseDeleteCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -177,7 +183,10 @@ func (s *database) DatabaseDeleteCollection(ctx context.Context, request operati
 // Delete a document by its unique ID. This endpoint deletes only the parent documents, its attributes and relations to other documents. Child documents **will not** be deleted.
 func (s *database) DatabaseDeleteDocument(ctx context.Context, request operations.DatabaseDeleteDocumentRequest, security operations.DatabaseDeleteDocumentSecurity) (*operations.DatabaseDeleteDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -213,7 +222,10 @@ func (s *database) DatabaseDeleteDocument(ctx context.Context, request operation
 // Get a collection by its unique ID. This endpoint response returns a JSON object with the collection metadata.
 func (s *database) DatabaseGetCollection(ctx context.Context, request operations.DatabaseGetCollectionRequest, security operations.DatabaseGetCollectionSecurity) (*operations.DatabaseGetCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -258,7 +270,10 @@ func (s *database) DatabaseGetCollection(ctx context.Context, request operations
 // Get a document by its unique ID. This endpoint response returns a JSON object with the document data.
 func (s *database) DatabaseGetDocument(ctx context.Context, request operations.DatabaseGetDocumentRequest, security operations.DatabaseGetDocumentSecurity) (*operations.DatabaseGetDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -352,7 +367,10 @@ func (s *database) DatabaseListCollections(ctx context.Context, request operatio
 // Get a list of all the user documents. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's documents. [Learn more about different API modes](/docs/admin).
 func (s *database) DatabaseListDocuments(ctx context.Context, request operations.DatabaseListDocumentsRequest, security operations.DatabaseListDocumentsSecurity) (*operations.DatabaseListDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -401,7 +419,10 @@ func (s *database) DatabaseListDocuments(ctx context.Context, request operations
 // Update a collection by its unique ID.
 func (s *database) DatabaseUpdateCollection(ctx context.Context, request operations.DatabaseUpdateCollectionRequest, security operations.DatabaseUpdateCollectionSecurity) (*operations.DatabaseUpdateCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -453,7 +474,10 @@ func (s *database) DatabaseUpdateCollection(ctx context.Context, request operati
 // Update a document by its unique ID. Using the patch method you can pass only specific fields that will get updated.
 func (s *database) DatabaseUpdateDocument(ctx context.Context, request operations.DatabaseUpdateDocumentRequest, security operations.DatabaseUpdateDocumentSecurity) (*operations.DatabaseUpdateDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/database/collections/{collectionId}/documents/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

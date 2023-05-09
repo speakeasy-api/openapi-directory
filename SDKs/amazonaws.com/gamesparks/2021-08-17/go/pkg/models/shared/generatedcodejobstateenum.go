@@ -16,12 +16,16 @@ const (
 	GeneratedCodeJobStateEnumPending    GeneratedCodeJobStateEnum = "PENDING"
 )
 
+func (e GeneratedCodeJobStateEnum) ToPointer() *GeneratedCodeJobStateEnum {
+	return &e
+}
+
 func (e *GeneratedCodeJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "COMPLETED":
@@ -29,9 +33,9 @@ func (e *GeneratedCodeJobStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "PENDING":
-		*e = GeneratedCodeJobStateEnum(s)
+		*e = GeneratedCodeJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GeneratedCodeJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GeneratedCodeJobStateEnum: %v", v)
 	}
 }

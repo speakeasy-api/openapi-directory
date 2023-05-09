@@ -17,12 +17,16 @@ const (
 	EndpointBidProtocolEnumOpenrtbProtobuf        EndpointBidProtocolEnum = "OPENRTB_PROTOBUF"
 )
 
+func (e EndpointBidProtocolEnum) ToPointer() *EndpointBidProtocolEnum {
+	return &e
+}
+
 func (e *EndpointBidProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BID_PROTOCOL_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_RTB":
@@ -30,10 +34,10 @@ func (e *EndpointBidProtocolEnum) UnmarshalJSON(data []byte) error {
 	case "OPENRTB_JSON":
 		fallthrough
 	case "OPENRTB_PROTOBUF":
-		*e = EndpointBidProtocolEnum(s)
+		*e = EndpointBidProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointBidProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointBidProtocolEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	EndpointTradingLocationEnumAsia                       EndpointTradingLocationEnum = "ASIA"
 )
 
+func (e EndpointTradingLocationEnum) ToPointer() *EndpointTradingLocationEnum {
+	return &e
+}
+
 func (e *EndpointTradingLocationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRADING_LOCATION_UNSPECIFIED":
 		fallthrough
 	case "US_WEST":
@@ -63,10 +71,10 @@ func (e *EndpointTradingLocationEnum) UnmarshalJSON(data []byte) error {
 	case "EUROPE":
 		fallthrough
 	case "ASIA":
-		*e = EndpointTradingLocationEnum(s)
+		*e = EndpointTradingLocationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointTradingLocationEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointTradingLocationEnum: %v", v)
 	}
 }
 

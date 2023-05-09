@@ -35,7 +35,10 @@ func newApplication(defaultClient, securityClient HTTPClient, serverURL, languag
 // LinkApplication - Link application to an account
 func (s *application) LinkApplication(ctx context.Context, request operations.LinkApplicationRequest, security operations.LinkApplicationSecurity) (*operations.LinkApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{provider}/{external_id}/applications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{provider}/{external_id}/applications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -119,7 +122,10 @@ func (s *application) LinkApplication(ctx context.Context, request operations.Li
 // UnliWithoutApplicationnkApplication - Unlink application from an account
 func (s *application) UnliWithoutApplicationnkApplication(ctx context.Context, request operations.UnliWithoutApplicationnkApplicationRequest, security operations.UnliWithoutApplicationnkApplicationSecurity) (*operations.UnliWithoutApplicationnkApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{provider}/{external_id}/applications/{application_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{provider}/{external_id}/applications/{application_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

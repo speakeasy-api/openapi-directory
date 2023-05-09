@@ -15,17 +15,21 @@ const (
 	POSTGetInsightRuleReportActionEnumGetInsightRuleReport POSTGetInsightRuleReportActionEnum = "GetInsightRuleReport"
 )
 
+func (e POSTGetInsightRuleReportActionEnum) ToPointer() *POSTGetInsightRuleReportActionEnum {
+	return &e
+}
+
 func (e *POSTGetInsightRuleReportActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetInsightRuleReport":
-		*e = POSTGetInsightRuleReportActionEnum(s)
+		*e = POSTGetInsightRuleReportActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetInsightRuleReportActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetInsightRuleReportActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetInsightRuleReportVersionEnumTwoThousandAndTen0801 POSTGetInsightRuleReportVersionEnum = "2010-08-01"
 )
 
+func (e POSTGetInsightRuleReportVersionEnum) ToPointer() *POSTGetInsightRuleReportVersionEnum {
+	return &e
+}
+
 func (e *POSTGetInsightRuleReportVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = POSTGetInsightRuleReportVersionEnum(s)
+		*e = POSTGetInsightRuleReportVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetInsightRuleReportVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetInsightRuleReportVersionEnum: %v", v)
 	}
 }
 

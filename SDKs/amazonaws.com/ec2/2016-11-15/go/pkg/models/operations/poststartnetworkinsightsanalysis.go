@@ -15,17 +15,21 @@ const (
 	POSTStartNetworkInsightsAnalysisActionEnumStartNetworkInsightsAnalysis POSTStartNetworkInsightsAnalysisActionEnum = "StartNetworkInsightsAnalysis"
 )
 
+func (e POSTStartNetworkInsightsAnalysisActionEnum) ToPointer() *POSTStartNetworkInsightsAnalysisActionEnum {
+	return &e
+}
+
 func (e *POSTStartNetworkInsightsAnalysisActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartNetworkInsightsAnalysis":
-		*e = POSTStartNetworkInsightsAnalysisActionEnum(s)
+		*e = POSTStartNetworkInsightsAnalysisActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartNetworkInsightsAnalysisActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartNetworkInsightsAnalysisActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTStartNetworkInsightsAnalysisVersionEnumTwoThousandAndSixteen1115 POSTStartNetworkInsightsAnalysisVersionEnum = "2016-11-15"
 )
 
+func (e POSTStartNetworkInsightsAnalysisVersionEnum) ToPointer() *POSTStartNetworkInsightsAnalysisVersionEnum {
+	return &e
+}
+
 func (e *POSTStartNetworkInsightsAnalysisVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTStartNetworkInsightsAnalysisVersionEnum(s)
+		*e = POSTStartNetworkInsightsAnalysisVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartNetworkInsightsAnalysisVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartNetworkInsightsAnalysisVersionEnum: %v", v)
 	}
 }
 

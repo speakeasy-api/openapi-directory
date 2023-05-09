@@ -34,7 +34,10 @@ func newSwitchAccessPolicies(defaultClient, securityClient HTTPClient, serverURL
 // List the access policies for this network. Only valid for MS networks.
 func (s *switchAccessPolicies) GetNetworkAccessPolicies(ctx context.Context, request operations.GetNetworkAccessPoliciesRequest) (*operations.GetNetworkAccessPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/accessPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/accessPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

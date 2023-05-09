@@ -14,18 +14,22 @@ const (
 	LabelDetectionAggregateByEnumSegments   LabelDetectionAggregateByEnum = "SEGMENTS"
 )
 
+func (e LabelDetectionAggregateByEnum) ToPointer() *LabelDetectionAggregateByEnum {
+	return &e
+}
+
 func (e *LabelDetectionAggregateByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIMESTAMPS":
 		fallthrough
 	case "SEGMENTS":
-		*e = LabelDetectionAggregateByEnum(s)
+		*e = LabelDetectionAggregateByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LabelDetectionAggregateByEnum: %s", s)
+		return fmt.Errorf("invalid value for LabelDetectionAggregateByEnum: %v", v)
 	}
 }

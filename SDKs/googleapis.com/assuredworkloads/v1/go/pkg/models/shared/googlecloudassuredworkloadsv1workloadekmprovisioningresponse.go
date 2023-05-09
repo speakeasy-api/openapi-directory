@@ -19,12 +19,16 @@ const (
 	GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnumTimeoutError                          GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum = "TIMEOUT_ERROR"
 )
 
+func (e GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum) ToPointer() *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EKM_PROVISIONING_ERROR_DOMAIN_UNSPECIFIED":
 		fallthrough
 	case "UNSPECIFIED_ERROR":
@@ -36,10 +40,44 @@ func (e *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisio
 	case "EXTERNAL_PARTNER_ERROR":
 		fallthrough
 	case "TIMEOUT_ERROR":
-		*e = GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum(s)
+		*e = GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum: %v", v)
+	}
+}
+
+// GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum - Detailed error message if Ekm provisioning fails
+type GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum string
+
+const (
+	GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnumEkmProvisioningErrorMappingUnspecified GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum = "EKM_PROVISIONING_ERROR_MAPPING_UNSPECIFIED"
+	GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnumInvalidServiceAccount                  GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum = "INVALID_SERVICE_ACCOUNT"
+	GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnumMissingMetricsScopeAdminPermission     GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum = "MISSING_METRICS_SCOPE_ADMIN_PERMISSION"
+	GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnumMissingEkmConnectionAdminPermission    GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum = "MISSING_EKM_CONNECTION_ADMIN_PERMISSION"
+)
+
+func (e GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum) ToPointer() *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum {
+	return &e
+}
+
+func (e *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "EKM_PROVISIONING_ERROR_MAPPING_UNSPECIFIED":
+		fallthrough
+	case "INVALID_SERVICE_ACCOUNT":
+		fallthrough
+	case "MISSING_METRICS_SCOPE_ADMIN_PERMISSION":
+		fallthrough
+	case "MISSING_EKM_CONNECTION_ADMIN_PERMISSION":
+		*e = GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum: %v", v)
 	}
 }
 
@@ -53,12 +91,16 @@ const (
 	GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnumEkmProvisioningStateCompleted   GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum = "EKM_PROVISIONING_STATE_COMPLETED"
 )
 
+func (e GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum) ToPointer() *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EKM_PROVISIONING_STATE_UNSPECIFIED":
 		fallthrough
 	case "EKM_PROVISIONING_STATE_PENDING":
@@ -66,10 +108,10 @@ func (e *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisio
 	case "EKM_PROVISIONING_STATE_FAILED":
 		fallthrough
 	case "EKM_PROVISIONING_STATE_COMPLETED":
-		*e = GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum(s)
+		*e = GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum: %v", v)
 	}
 }
 
@@ -78,7 +120,7 @@ type GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse struct {
 	// Indicates Ekm provisioning error if any.
 	EkmProvisioningErrorDomain *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorDomainEnum `json:"ekmProvisioningErrorDomain,omitempty"`
 	// Detailed error message if Ekm provisioning fails
-	EkmProvisioningErrorMessage *string `json:"ekmProvisioningErrorMessage,omitempty"`
+	EkmProvisioningErrorMapping *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningErrorMappingEnum `json:"ekmProvisioningErrorMapping,omitempty"`
 	// Indicates Ekm enrollment Provisioning of a given workload.
 	EkmProvisioningState *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponseEkmProvisioningStateEnum `json:"ekmProvisioningState,omitempty"`
 }

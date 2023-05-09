@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/migrationhu
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,13 +28,14 @@ func main() {
         }),
     )
 
-    req := operations.CreateWorkflowRequest{
+    ctx := context.Background()
+    res, err := s.CreateWorkflow(ctx, operations.CreateWorkflowRequest{
         RequestBody: operations.CreateWorkflowRequestBody{
             ApplicationConfigurationID: "corrupti",
-            Description: "provident",
+            Description: sdk.String("provident"),
             InputParameters: map[string]shared.StepInput{
                 "quibusdam": shared.StepInput{
-                    IntegerValue: 602763,
+                    IntegerValue: sdk.Int64(602763),
                     ListOfStringsValue: []string{
                         "corrupti",
                         "illum",
@@ -46,10 +47,10 @@ func main() {
                         "magnam": "debitis",
                         "ipsa": "delectus",
                     },
-                    StringValue: "tempora",
+                    StringValue: sdk.String("tempora"),
                 },
                 "suscipit": shared.StepInput{
-                    IntegerValue: 477665,
+                    IntegerValue: sdk.Int64(477665),
                     ListOfStringsValue: []string{
                         "placeat",
                         "voluptatum",
@@ -60,10 +61,10 @@ func main() {
                         "recusandae": "temporibus",
                         "ab": "quis",
                     },
-                    StringValue: "veritatis",
+                    StringValue: sdk.String("veritatis"),
                 },
                 "deserunt": shared.StepInput{
-                    IntegerValue: 20218,
+                    IntegerValue: sdk.Int64(20218),
                     ListOfStringsValue: []string{
                         "repellendus",
                         "sapiente",
@@ -74,33 +75,31 @@ func main() {
                         "molestiae": "quod",
                         "quod": "esse",
                     },
-                    StringValue: "totam",
+                    StringValue: sdk.String("totam"),
                 },
             },
-            Name: "porro",
+            Name: "Omar Carroll",
             StepTargets: []string{
-                "dicta",
-                "nam",
-                "officia",
+                "fugit",
+                "deleniti",
+                "hic",
             },
             Tags: map[string]string{
-                "fugit": "deleniti",
-                "hic": "optio",
                 "totam": "beatae",
+                "commodi": "molestiae",
+                "modi": "qui",
+                "impedit": "cum",
             },
-            TemplateID: "commodi",
+            TemplateID: "esse",
         },
-        XAmzAlgorithm: "molestiae",
-        XAmzContentSha256: "modi",
-        XAmzCredential: "qui",
-        XAmzDate: "impedit",
-        XAmzSecurityToken: "cum",
-        XAmzSignature: "esse",
-        XAmzSignedHeaders: "ipsum",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateWorkflow(ctx, req)
+        XAmzAlgorithm: sdk.String("ipsum"),
+        XAmzContentSha256: sdk.String("excepturi"),
+        XAmzCredential: sdk.String("aspernatur"),
+        XAmzDate: sdk.String("perferendis"),
+        XAmzSecurityToken: sdk.String("ad"),
+        XAmzSignature: sdk.String("natus"),
+        XAmzSignedHeaders: sdk.String("sed"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -115,36 +114,36 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateWorkflow` - Create a workflow to orchestrate your migrations.
-* `CreateWorkflowStep` - Create a step in the migration workflow.
-* `CreateWorkflowStepGroup` - Create a step group in a migration workflow.
-* `DeleteWorkflow` - Delete a migration workflow. You must pause a running workflow in Migration Hub Orchestrator console to delete it.
-* `DeleteWorkflowStep` - Delete a step in a migration workflow. Pause the workflow to delete a running step.
-* `DeleteWorkflowStepGroup` - Delete a step group in a migration workflow.
-* `GetTemplate` - Get the template you want to use for creating a migration workflow.
-* `GetTemplateStep` - Get a specific step in a template.
-* `GetTemplateStepGroup` - Get a step group in a template.
-* `GetWorkflow` - Get migration workflow.
-* `GetWorkflowStep` - Get a step in the migration workflow.
-* `GetWorkflowStepGroup` - Get the step group of a migration workflow.
-* `ListPlugins` - List AWS Migration Hub Orchestrator plugins.
-* `ListTagsForResource` - List the tags added to a resource.
-* `ListTemplateStepGroups` - List the step groups in a template.
-* `ListTemplateSteps` - List the steps in a template.
-* `ListTemplates` - List the templates available in Migration Hub Orchestrator to create a migration workflow.
-* `ListWorkflowStepGroups` - List the step groups in a migration workflow.
-* `ListWorkflowSteps` - List the steps in a workflow.
-* `ListWorkflows` - List the migration workflows.
-* `RetryWorkflowStep` - Retry a failed step in a migration workflow.
-* `StartWorkflow` - Start a migration workflow.
-* `StopWorkflow` - Stop an ongoing migration workflow.
-* `TagResource` - Tag a resource by specifying its Amazon Resource Name (ARN).
-* `UntagResource` - Deletes the tags for a resource.
-* `UpdateWorkflow` - Update a migration workflow.
-* `UpdateWorkflowStep` - Update a step in a migration workflow.
-* `UpdateWorkflowStepGroup` - Update the step group in a migration workflow.
+* [CreateWorkflow](docs/sdk/README.md#createworkflow) - Create a workflow to orchestrate your migrations.
+* [CreateWorkflowStep](docs/sdk/README.md#createworkflowstep) - Create a step in the migration workflow.
+* [CreateWorkflowStepGroup](docs/sdk/README.md#createworkflowstepgroup) - Create a step group in a migration workflow.
+* [DeleteWorkflow](docs/sdk/README.md#deleteworkflow) - Delete a migration workflow. You must pause a running workflow in Migration Hub Orchestrator console to delete it.
+* [DeleteWorkflowStep](docs/sdk/README.md#deleteworkflowstep) - Delete a step in a migration workflow. Pause the workflow to delete a running step.
+* [DeleteWorkflowStepGroup](docs/sdk/README.md#deleteworkflowstepgroup) - Delete a step group in a migration workflow.
+* [GetTemplate](docs/sdk/README.md#gettemplate) - Get the template you want to use for creating a migration workflow.
+* [GetTemplateStep](docs/sdk/README.md#gettemplatestep) - Get a specific step in a template.
+* [GetTemplateStepGroup](docs/sdk/README.md#gettemplatestepgroup) - Get a step group in a template.
+* [GetWorkflow](docs/sdk/README.md#getworkflow) - Get migration workflow.
+* [GetWorkflowStep](docs/sdk/README.md#getworkflowstep) - Get a step in the migration workflow.
+* [GetWorkflowStepGroup](docs/sdk/README.md#getworkflowstepgroup) - Get the step group of a migration workflow.
+* [ListPlugins](docs/sdk/README.md#listplugins) - List AWS Migration Hub Orchestrator plugins.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - List the tags added to a resource.
+* [ListTemplateStepGroups](docs/sdk/README.md#listtemplatestepgroups) - List the step groups in a template.
+* [ListTemplateSteps](docs/sdk/README.md#listtemplatesteps) - List the steps in a template.
+* [ListTemplates](docs/sdk/README.md#listtemplates) - List the templates available in Migration Hub Orchestrator to create a migration workflow.
+* [ListWorkflowStepGroups](docs/sdk/README.md#listworkflowstepgroups) - List the step groups in a migration workflow.
+* [ListWorkflowSteps](docs/sdk/README.md#listworkflowsteps) - List the steps in a workflow.
+* [ListWorkflows](docs/sdk/README.md#listworkflows) - List the migration workflows.
+* [RetryWorkflowStep](docs/sdk/README.md#retryworkflowstep) - Retry a failed step in a migration workflow.
+* [StartWorkflow](docs/sdk/README.md#startworkflow) - Start a migration workflow.
+* [StopWorkflow](docs/sdk/README.md#stopworkflow) - Stop an ongoing migration workflow.
+* [TagResource](docs/sdk/README.md#tagresource) - Tag a resource by specifying its Amazon Resource Name (ARN).
+* [UntagResource](docs/sdk/README.md#untagresource) - Deletes the tags for a resource.
+* [UpdateWorkflow](docs/sdk/README.md#updateworkflow) - Update a migration workflow.
+* [UpdateWorkflowStep](docs/sdk/README.md#updateworkflowstep) - Update a step in a migration workflow.
+* [UpdateWorkflowStepGroup](docs/sdk/README.md#updateworkflowstepgroup) - Update the step group in a migration workflow.
 <!-- End SDK Available Operations -->
 
 ### Maturity

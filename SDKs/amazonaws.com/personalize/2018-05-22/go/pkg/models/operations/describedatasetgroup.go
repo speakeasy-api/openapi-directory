@@ -16,17 +16,21 @@ const (
 	DescribeDatasetGroupXAmzTargetEnumAmazonPersonalizeDescribeDatasetGroup DescribeDatasetGroupXAmzTargetEnum = "AmazonPersonalize.DescribeDatasetGroup"
 )
 
+func (e DescribeDatasetGroupXAmzTargetEnum) ToPointer() *DescribeDatasetGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDatasetGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.DescribeDatasetGroup":
-		*e = DescribeDatasetGroupXAmzTargetEnum(s)
+		*e = DescribeDatasetGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDatasetGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDatasetGroupXAmzTargetEnum: %v", v)
 	}
 }
 

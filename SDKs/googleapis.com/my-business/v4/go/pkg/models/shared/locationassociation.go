@@ -27,12 +27,16 @@ const (
 	LocationAssociationCategoryEnumAdditional          LocationAssociationCategoryEnum = "ADDITIONAL"
 )
 
+func (e LocationAssociationCategoryEnum) ToPointer() *LocationAssociationCategoryEnum {
+	return &e
+}
+
 func (e *LocationAssociationCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "COVER":
@@ -60,10 +64,10 @@ func (e *LocationAssociationCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "TEAMS":
 		fallthrough
 	case "ADDITIONAL":
-		*e = LocationAssociationCategoryEnum(s)
+		*e = LocationAssociationCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocationAssociationCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for LocationAssociationCategoryEnum: %v", v)
 	}
 }
 

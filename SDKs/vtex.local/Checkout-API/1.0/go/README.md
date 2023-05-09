@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Checkout-API/1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,18 +28,16 @@ func main() {
         }),
     )
 
-    req := operations.AddClientPreferencesRequest{
+    ctx := context.Background()
+    res, err := s.CartAttachments.AddClientPreferences(ctx, operations.AddClientPreferencesRequest{
         Accept: "corrupti",
         ContentType: "provident",
         RequestBody: operations.AddClientPreferencesRequestBody{
-            Locale: "distinctio",
-            OptinNewsLetter: false,
+            Locale: sdk.String("distinctio"),
+            OptinNewsLetter: sdk.Bool(false),
         },
         OrderFormID: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.CartAttachments.AddClientPreferences(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -56,58 +53,58 @@ func main() {
 ## Available Resources and Operations
 
 
-### CartAttachments
+### [CartAttachments](docs/cartattachments/README.md)
 
-* `AddClientPreferences` - Add client preferences
-* `AddClientProfile` - Add client profile
-* `AddMarketingData` - Add marketing data
-* `AddMerchantContextData` - Add merchant context data
-* `AddPaymentData` - Add payment data
-* `AddShippingAddress` - Add shipping address and select delivery option
-* `GetClientProfileByEmail` - Get client profile by email
+* [AddClientPreferences](docs/cartattachments/README.md#addclientpreferences) - Add client preferences
+* [AddClientProfile](docs/cartattachments/README.md#addclientprofile) - Add client profile
+* [AddMarketingData](docs/cartattachments/README.md#addmarketingdata) - Add marketing data
+* [AddMerchantContextData](docs/cartattachments/README.md#addmerchantcontextdata) - Add merchant context data
+* [AddPaymentData](docs/cartattachments/README.md#addpaymentdata) - Add payment data
+* [AddShippingAddress](docs/cartattachments/README.md#addshippingaddress) - Add shipping address and select delivery option
+* [GetClientProfileByEmail](docs/cartattachments/README.md#getclientprofilebyemail) - Get client profile by email
 
-### Configuration
+### [Configuration](docs/configuration/README.md)
 
-* `ClearorderFormMessages` - Clear orderForm messages
-* `GetWindowToChangeSeller` - Get window to change seller
-* `GetorderFormconfiguration` - Get orderForm configuration
-* `UpdateWindowToChangeSeller` - Update window to change seller
-* `UpdateorderFormconfiguration` - Update orderForm configuration
+* [ClearorderFormMessages](docs/configuration/README.md#clearorderformmessages) - Clear orderForm messages
+* [GetWindowToChangeSeller](docs/configuration/README.md#getwindowtochangeseller) - Get window to change seller
+* [GetorderFormconfiguration](docs/configuration/README.md#getorderformconfiguration) - Get orderForm configuration
+* [UpdateWindowToChangeSeller](docs/configuration/README.md#updatewindowtochangeseller) - Update window to change seller
+* [UpdateorderFormconfiguration](docs/configuration/README.md#updateorderformconfiguration) - Update orderForm configuration
 
-### CustomData
+### [CustomData](docs/customdata/README.md)
 
-* `Removesinglecustomfieldvalue` - Remove single custom field value
-* `SetMultipleCustomFieldValues` - Set multiple custom field values
-* `SetSingleCustomFieldValue` - Set single custom field value
+* [Removesinglecustomfieldvalue](docs/customdata/README.md#removesinglecustomfieldvalue) - Remove single custom field value
+* [SetMultipleCustomFieldValues](docs/customdata/README.md#setmultiplecustomfieldvalues) - Set multiple custom field values
+* [SetSingleCustomFieldValue](docs/customdata/README.md#setsinglecustomfieldvalue) - Set single custom field value
 
-### Fulfillment
+### [Fulfillment](docs/fulfillment/README.md)
 
-* `GetAddressByPostalCode` - Get address by postal code
-* `ListPickupPpointsByLocation` - List pickup points by location
+* [GetAddressByPostalCode](docs/fulfillment/README.md#getaddressbypostalcode) - Get address by postal code
+* [ListPickupPpointsByLocation](docs/fulfillment/README.md#listpickupppointsbylocation) - List pickup points by location
 
-### OrderPlacement
+### [OrderPlacement](docs/orderplacement/README.md)
 
-* `PlaceOrder` - Place order
-* `PlaceOrderFromExistingOrderForm` - Place order from an existing cart
-* `ProcessOrder` - Process order
+* [PlaceOrder](docs/orderplacement/README.md#placeorder) - Place order
+* [PlaceOrderFromExistingOrderForm](docs/orderplacement/README.md#placeorderfromexistingorderform) - Place order from an existing cart
+* [ProcessOrder](docs/orderplacement/README.md#processorder) - Process order
 
-### Region
+### [Region](docs/region/README.md)
 
-* `GetSellersByRegion` - Get sellers by region or address
+* [GetSellersByRegion](docs/region/README.md#getsellersbyregion) - Get sellers by region or address
 
-### ShoppingCart
+### [ShoppingCart](docs/shoppingcart/README.md)
 
-* `AddCoupons` - Add coupons to the cart
-* `CartSimulation` - Cart simulation
-* `CreateANewCart` - Get current or create a new cart
-* `GetCartInformationByID` - Get cart information by ID
-* `GetCartInstallments` - Cart installments
-* `IgnoreProfileData` - Ignore profile data
-* `Items` - Add cart items
-* `ItemsUpdate` - Update cart items
-* `PriceChange` - Change price
-* `RemoveAllItems` - Remove all items
-* `Removeallpersonaldata` - Remove all personal data
+* [AddCoupons](docs/shoppingcart/README.md#addcoupons) - Add coupons to the cart
+* [CartSimulation](docs/shoppingcart/README.md#cartsimulation) - Cart simulation
+* [CreateANewCart](docs/shoppingcart/README.md#createanewcart) - Get current or create a new cart
+* [GetCartInformationByID](docs/shoppingcart/README.md#getcartinformationbyid) - Get cart information by ID
+* [GetCartInstallments](docs/shoppingcart/README.md#getcartinstallments) - Cart installments
+* [IgnoreProfileData](docs/shoppingcart/README.md#ignoreprofiledata) - Ignore profile data
+* [Items](docs/shoppingcart/README.md#items) - Add cart items
+* [ItemsUpdate](docs/shoppingcart/README.md#itemsupdate) - Update cart items
+* [PriceChange](docs/shoppingcart/README.md#pricechange) - Change price
+* [RemoveAllItems](docs/shoppingcart/README.md#removeallitems) - Remove all items
+* [Removeallpersonaldata](docs/shoppingcart/README.md#removeallpersonaldata) - Remove all personal data
 <!-- End SDK Available Operations -->
 
 ### Maturity

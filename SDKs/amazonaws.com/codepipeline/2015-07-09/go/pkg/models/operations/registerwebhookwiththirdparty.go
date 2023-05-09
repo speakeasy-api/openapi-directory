@@ -16,17 +16,21 @@ const (
 	RegisterWebhookWithThirdPartyXAmzTargetEnumCodePipeline20150709RegisterWebhookWithThirdParty RegisterWebhookWithThirdPartyXAmzTargetEnum = "CodePipeline_20150709.RegisterWebhookWithThirdParty"
 )
 
+func (e RegisterWebhookWithThirdPartyXAmzTargetEnum) ToPointer() *RegisterWebhookWithThirdPartyXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterWebhookWithThirdPartyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.RegisterWebhookWithThirdParty":
-		*e = RegisterWebhookWithThirdPartyXAmzTargetEnum(s)
+		*e = RegisterWebhookWithThirdPartyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterWebhookWithThirdPartyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterWebhookWithThirdPartyXAmzTargetEnum: %v", v)
 	}
 }
 

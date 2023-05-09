@@ -13,16 +13,20 @@ const (
 	TracingVendorEnumAwsxray TracingVendorEnum = "AWSXRAY"
 )
 
+func (e TracingVendorEnum) ToPointer() *TracingVendorEnum {
+	return &e
+}
+
 func (e *TracingVendorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSXRAY":
-		*e = TracingVendorEnum(s)
+		*e = TracingVendorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TracingVendorEnum: %s", s)
+		return fmt.Errorf("invalid value for TracingVendorEnum: %v", v)
 	}
 }

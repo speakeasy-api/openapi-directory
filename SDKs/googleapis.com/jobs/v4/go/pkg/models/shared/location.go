@@ -24,12 +24,16 @@ const (
 	LocationLocationTypeEnumStreetAddress           LocationLocationTypeEnum = "STREET_ADDRESS"
 )
 
+func (e LocationLocationTypeEnum) ToPointer() *LocationLocationTypeEnum {
+	return &e
+}
+
 func (e *LocationLocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "COUNTRY":
@@ -51,10 +55,10 @@ func (e *LocationLocationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NEIGHBORHOOD":
 		fallthrough
 	case "STREET_ADDRESS":
-		*e = LocationLocationTypeEnum(s)
+		*e = LocationLocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocationLocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LocationLocationTypeEnum: %v", v)
 	}
 }
 

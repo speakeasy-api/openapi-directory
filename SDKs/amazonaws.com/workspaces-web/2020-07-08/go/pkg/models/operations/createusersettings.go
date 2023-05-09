@@ -17,19 +17,23 @@ const (
 	CreateUserSettingsRequestBodyCopyAllowedEnumEnabled  CreateUserSettingsRequestBodyCopyAllowedEnum = "Enabled"
 )
 
+func (e CreateUserSettingsRequestBodyCopyAllowedEnum) ToPointer() *CreateUserSettingsRequestBodyCopyAllowedEnum {
+	return &e
+}
+
 func (e *CreateUserSettingsRequestBodyCopyAllowedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Disabled":
 		fallthrough
 	case "Enabled":
-		*e = CreateUserSettingsRequestBodyCopyAllowedEnum(s)
+		*e = CreateUserSettingsRequestBodyCopyAllowedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateUserSettingsRequestBodyCopyAllowedEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateUserSettingsRequestBodyCopyAllowedEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	CreateUserSettingsRequestBodyDownloadAllowedEnumEnabled  CreateUserSettingsRequestBodyDownloadAllowedEnum = "Enabled"
 )
 
+func (e CreateUserSettingsRequestBodyDownloadAllowedEnum) ToPointer() *CreateUserSettingsRequestBodyDownloadAllowedEnum {
+	return &e
+}
+
 func (e *CreateUserSettingsRequestBodyDownloadAllowedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Disabled":
 		fallthrough
 	case "Enabled":
-		*e = CreateUserSettingsRequestBodyDownloadAllowedEnum(s)
+		*e = CreateUserSettingsRequestBodyDownloadAllowedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateUserSettingsRequestBodyDownloadAllowedEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateUserSettingsRequestBodyDownloadAllowedEnum: %v", v)
 	}
 }
 
@@ -65,19 +73,23 @@ const (
 	CreateUserSettingsRequestBodyPasteAllowedEnumEnabled  CreateUserSettingsRequestBodyPasteAllowedEnum = "Enabled"
 )
 
+func (e CreateUserSettingsRequestBodyPasteAllowedEnum) ToPointer() *CreateUserSettingsRequestBodyPasteAllowedEnum {
+	return &e
+}
+
 func (e *CreateUserSettingsRequestBodyPasteAllowedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Disabled":
 		fallthrough
 	case "Enabled":
-		*e = CreateUserSettingsRequestBodyPasteAllowedEnum(s)
+		*e = CreateUserSettingsRequestBodyPasteAllowedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateUserSettingsRequestBodyPasteAllowedEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateUserSettingsRequestBodyPasteAllowedEnum: %v", v)
 	}
 }
 
@@ -89,19 +101,23 @@ const (
 	CreateUserSettingsRequestBodyPrintAllowedEnumEnabled  CreateUserSettingsRequestBodyPrintAllowedEnum = "Enabled"
 )
 
+func (e CreateUserSettingsRequestBodyPrintAllowedEnum) ToPointer() *CreateUserSettingsRequestBodyPrintAllowedEnum {
+	return &e
+}
+
 func (e *CreateUserSettingsRequestBodyPrintAllowedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Disabled":
 		fallthrough
 	case "Enabled":
-		*e = CreateUserSettingsRequestBodyPrintAllowedEnum(s)
+		*e = CreateUserSettingsRequestBodyPrintAllowedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateUserSettingsRequestBodyPrintAllowedEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateUserSettingsRequestBodyPrintAllowedEnum: %v", v)
 	}
 }
 
@@ -113,19 +129,23 @@ const (
 	CreateUserSettingsRequestBodyUploadAllowedEnumEnabled  CreateUserSettingsRequestBodyUploadAllowedEnum = "Enabled"
 )
 
+func (e CreateUserSettingsRequestBodyUploadAllowedEnum) ToPointer() *CreateUserSettingsRequestBodyUploadAllowedEnum {
+	return &e
+}
+
 func (e *CreateUserSettingsRequestBodyUploadAllowedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Disabled":
 		fallthrough
 	case "Enabled":
-		*e = CreateUserSettingsRequestBodyUploadAllowedEnum(s)
+		*e = CreateUserSettingsRequestBodyUploadAllowedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateUserSettingsRequestBodyUploadAllowedEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateUserSettingsRequestBodyUploadAllowedEnum: %v", v)
 	}
 }
 

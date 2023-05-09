@@ -15,20 +15,24 @@ const (
 	CertificateBasedAuthStatusEnumEnabledNoDirectoryLoginFallback CertificateBasedAuthStatusEnum = "ENABLED_NO_DIRECTORY_LOGIN_FALLBACK"
 )
 
+func (e CertificateBasedAuthStatusEnum) ToPointer() *CertificateBasedAuthStatusEnum {
+	return &e
+}
+
 func (e *CertificateBasedAuthStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
 		fallthrough
 	case "ENABLED_NO_DIRECTORY_LOGIN_FALLBACK":
-		*e = CertificateBasedAuthStatusEnum(s)
+		*e = CertificateBasedAuthStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateBasedAuthStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateBasedAuthStatusEnum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newFirmware(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GetAccounts - Get default accounts and password hashes of a firmware
 func (s *firmware) GetAccounts(ctx context.Context, request operations.GetAccountsRequest, security operations.GetAccountsSecurity) (*operations.GetAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -88,7 +91,10 @@ func (s *firmware) GetAccounts(ctx context.Context, request operations.GetAccoun
 // GetConfigIssues - Get default OS configuration issues of a device firmware
 func (s *firmware) GetConfigIssues(ctx context.Context, request operations.GetConfigIssuesRequest, security operations.GetConfigIssuesSecurity) (*operations.GetConfigIssuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/config-issues", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/config-issues", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -142,7 +148,10 @@ func (s *firmware) GetConfigIssues(ctx context.Context, request operations.GetCo
 // GetExpiredCerts - Get expired digital certificates embedded in a device firmware
 func (s *firmware) GetExpiredCerts(ctx context.Context, request operations.GetExpiredCertsRequest, security operations.GetExpiredCertsSecurity) (*operations.GetExpiredCertsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/expired-certs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/expired-certs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -196,7 +205,10 @@ func (s *firmware) GetExpiredCerts(ctx context.Context, request operations.GetEx
 // GetPrivateKeys - Get private crypto keys embedded in a device firmware
 func (s *firmware) GetPrivateKeys(ctx context.Context, request operations.GetPrivateKeysRequest, security operations.GetPrivateKeysSecurity) (*operations.GetPrivateKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/private-keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/private-keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -250,7 +262,10 @@ func (s *firmware) GetPrivateKeys(ctx context.Context, request operations.GetPri
 // GetRisk - Get iot device firmware risk analysis
 func (s *firmware) GetRisk(ctx context.Context, request operations.GetRiskRequest, security operations.GetRiskSecurity) (*operations.GetRiskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/risk", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/risk", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -304,7 +319,10 @@ func (s *firmware) GetRisk(ctx context.Context, request operations.GetRiskReques
 // GetWeakCerts - Get certificates with weak fingerprinting algorithms that are mebedded in a device firmware
 func (s *firmware) GetWeakCerts(ctx context.Context, request operations.GetWeakCertsRequest, security operations.GetWeakCertsSecurity) (*operations.GetWeakCertsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/weak-certs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/weak-certs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -358,7 +376,10 @@ func (s *firmware) GetWeakCerts(ctx context.Context, request operations.GetWeakC
 // GetWeakKeys - Get weak crypto keys with short length
 func (s *firmware) GetWeakKeys(ctx context.Context, request operations.GetWeakKeysRequest, security operations.GetWeakKeysSecurity) (*operations.GetWeakKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/weak-keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/weak-keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -17,19 +17,23 @@ const (
 	MetalsBenchmarkSummaryGETFormatEnumXML  MetalsBenchmarkSummaryGETFormatEnum = "xml"
 )
 
+func (e MetalsBenchmarkSummaryGETFormatEnum) ToPointer() *MetalsBenchmarkSummaryGETFormatEnum {
+	return &e
+}
+
 func (e *MetalsBenchmarkSummaryGETFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = MetalsBenchmarkSummaryGETFormatEnum(s)
+		*e = MetalsBenchmarkSummaryGETFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetalsBenchmarkSummaryGETFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MetalsBenchmarkSummaryGETFormatEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	MetalsBenchmarkSummaryGETUnitofmeasureEnumDwt MetalsBenchmarkSummaryGETUnitofmeasureEnum = "dwt"
 )
 
+func (e MetalsBenchmarkSummaryGETUnitofmeasureEnum) ToPointer() *MetalsBenchmarkSummaryGETUnitofmeasureEnum {
+	return &e
+}
+
 func (e *MetalsBenchmarkSummaryGETUnitofmeasureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mg":
 		fallthrough
 	case "g":
@@ -76,10 +84,10 @@ func (e *MetalsBenchmarkSummaryGETUnitofmeasureEnum) UnmarshalJSON(data []byte) 
 	case "ct":
 		fallthrough
 	case "dwt":
-		*e = MetalsBenchmarkSummaryGETUnitofmeasureEnum(s)
+		*e = MetalsBenchmarkSummaryGETUnitofmeasureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetalsBenchmarkSummaryGETUnitofmeasureEnum: %s", s)
+		return fmt.Errorf("invalid value for MetalsBenchmarkSummaryGETUnitofmeasureEnum: %v", v)
 	}
 }
 

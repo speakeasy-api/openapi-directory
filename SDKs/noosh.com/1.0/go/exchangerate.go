@@ -36,7 +36,10 @@ func newExchangeRate(defaultClient, securityClient HTTPClient, serverURL, langua
 // Get Exchange Rate List
 func (s *exchangeRate) GetExchangeRateList(ctx context.Context, request operations.GetExchangeRateListRequest) (*operations.GetExchangeRateListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/exchangeRate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/exchangeRate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +194,10 @@ func (s *exchangeRate) GetExchangeRateList(ctx context.Context, request operatio
 // Create Exchange Rates
 func (s *exchangeRate) PostExchangeRateJSON(ctx context.Context, request operations.PostExchangeRateJSONRequest) (*operations.PostExchangeRateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/exchangeRate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/exchangeRate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MultiExchangeRatePersistListVO", "json")
 	if err != nil {
@@ -353,7 +359,10 @@ func (s *exchangeRate) PostExchangeRateJSON(ctx context.Context, request operati
 // Create Exchange Rates
 func (s *exchangeRate) PostExchangeRateRaw(ctx context.Context, request operations.PostExchangeRateRawRequest) (*operations.PostExchangeRateRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/exchangeRate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/exchangeRate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

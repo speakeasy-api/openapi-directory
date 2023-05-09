@@ -20,12 +20,16 @@ const (
 	DomainStatusEnumFailedToDisassociate DomainStatusEnum = "FAILED_TO_DISASSOCIATE"
 )
 
+func (e DomainStatusEnum) ToPointer() *DomainStatusEnum {
+	return &e
+}
+
 func (e *DomainStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_VALIDATION":
 		fallthrough
 	case "ASSOCIATING":
@@ -41,9 +45,9 @@ func (e *DomainStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED_TO_ASSOCIATE":
 		fallthrough
 	case "FAILED_TO_DISASSOCIATE":
-		*e = DomainStatusEnum(s)
+		*e = DomainStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainStatusEnum: %v", v)
 	}
 }

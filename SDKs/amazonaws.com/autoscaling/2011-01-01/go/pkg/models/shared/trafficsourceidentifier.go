@@ -2,7 +2,8 @@
 
 package shared
 
-// TrafficSourceIdentifier - <p>Describes the identifier of a traffic source.</p> <p>Currently, you must specify an Amazon Resource Name (ARN) for an existing VPC Lattice target group.</p>
+// TrafficSourceIdentifier - Identifying information for a traffic source.
 type TrafficSourceIdentifier struct {
-	Identifier *string
+	Identifier string
+	Type       *string
 }

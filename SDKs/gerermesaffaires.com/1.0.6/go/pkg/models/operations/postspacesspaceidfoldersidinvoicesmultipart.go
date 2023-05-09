@@ -26,12 +26,16 @@ const (
 	PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataAccountingWorkbookEnumPermanent   PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataAccountingWorkbookEnum = "permanent"
 )
 
+func (e PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataAccountingWorkbookEnum) ToPointer() *PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataAccountingWorkbookEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataAccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -49,10 +53,10 @@ func (e *PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataAccountingWorkbookEn
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataAccountingWorkbookEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataAccountingWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataAccountingWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataAccountingWorkbookEnum: %v", v)
 	}
 }
 
@@ -79,12 +83,16 @@ const (
 	PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataTypeEnumInformationsInvoice PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataTypeEnum = "informations-invoice"
 )
 
+func (e PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataTypeEnum) ToPointer() *PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataTypeEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "commercial-invoice":
 		fallthrough
 	case "credit-note":
@@ -98,10 +106,10 @@ func (e *PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataTypeEnum) UnmarshalJ
 	case "down-payment-invoice":
 		fallthrough
 	case "informations-invoice":
-		*e = PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataTypeEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDInvoicesMultipartFormDataTypeEnum: %v", v)
 	}
 }
 

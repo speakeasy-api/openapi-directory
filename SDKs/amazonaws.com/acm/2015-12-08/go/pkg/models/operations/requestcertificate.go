@@ -16,17 +16,21 @@ const (
 	RequestCertificateXAmzTargetEnumCertificateManagerRequestCertificate RequestCertificateXAmzTargetEnum = "CertificateManager.RequestCertificate"
 )
 
+func (e RequestCertificateXAmzTargetEnum) ToPointer() *RequestCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *RequestCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CertificateManager.RequestCertificate":
-		*e = RequestCertificateXAmzTargetEnum(s)
+		*e = RequestCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

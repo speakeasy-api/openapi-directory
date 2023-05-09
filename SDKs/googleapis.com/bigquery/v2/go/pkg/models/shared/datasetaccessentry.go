@@ -15,21 +15,25 @@ const (
 	DatasetAccessEntryTargetTypesEnumRoutines              DatasetAccessEntryTargetTypesEnum = "ROUTINES"
 )
 
+func (e DatasetAccessEntryTargetTypesEnum) ToPointer() *DatasetAccessEntryTargetTypesEnum {
+	return &e
+}
+
 func (e *DatasetAccessEntryTargetTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_TYPE_UNSPECIFIED":
 		fallthrough
 	case "VIEWS":
 		fallthrough
 	case "ROUTINES":
-		*e = DatasetAccessEntryTargetTypesEnum(s)
+		*e = DatasetAccessEntryTargetTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatasetAccessEntryTargetTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for DatasetAccessEntryTargetTypesEnum: %v", v)
 	}
 }
 

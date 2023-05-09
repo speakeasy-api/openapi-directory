@@ -37,7 +37,10 @@ func newDependabot(defaultClient, securityClient HTTPClient, serverURL, language
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#add-selected-repository-to-an-organization-secret - API method documentation
 func (s *dependabot) DependabotAddSelectedRepoToOrgSecret(ctx context.Context, request operations.DependabotAddSelectedRepoToOrgSecretRequest) (*operations.DependabotAddSelectedRepoToOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -155,7 +158,10 @@ func (s *dependabot) DependabotAddSelectedRepoToOrgSecret(ctx context.Context, r
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#create-or-update-an-organization-secret - API method documentation
 func (s *dependabot) DependabotCreateOrUpdateOrgSecret(ctx context.Context, request operations.DependabotCreateOrUpdateOrgSecretRequest) (*operations.DependabotCreateOrUpdateOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -291,7 +297,10 @@ func (s *dependabot) DependabotCreateOrUpdateOrgSecret(ctx context.Context, requ
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#create-or-update-a-repository-secret - API method documentation
 func (s *dependabot) DependabotCreateOrUpdateRepoSecret(ctx context.Context, request operations.DependabotCreateOrUpdateRepoSecretRequest) (*operations.DependabotCreateOrUpdateRepoSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -348,7 +357,10 @@ func (s *dependabot) DependabotCreateOrUpdateRepoSecret(ctx context.Context, req
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#delete-an-organization-secret - API method documentation
 func (s *dependabot) DependabotDeleteOrgSecret(ctx context.Context, request operations.DependabotDeleteOrgSecretRequest) (*operations.DependabotDeleteOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -385,7 +397,10 @@ func (s *dependabot) DependabotDeleteOrgSecret(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#delete-a-repository-secret - API method documentation
 func (s *dependabot) DependabotDeleteRepoSecret(ctx context.Context, request operations.DependabotDeleteRepoSecretRequest) (*operations.DependabotDeleteRepoSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -422,7 +437,10 @@ func (s *dependabot) DependabotDeleteRepoSecret(ctx context.Context, request ope
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#get-an-organization-public-key - API method documentation
 func (s *dependabot) DependabotGetOrgPublicKey(ctx context.Context, request operations.DependabotGetOrgPublicKeyRequest) (*operations.DependabotGetOrgPublicKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/public-key", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/public-key", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -468,7 +486,10 @@ func (s *dependabot) DependabotGetOrgPublicKey(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#get-an-organization-secret - API method documentation
 func (s *dependabot) DependabotGetOrgSecret(ctx context.Context, request operations.DependabotGetOrgSecretRequest) (*operations.DependabotGetOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -514,7 +535,10 @@ func (s *dependabot) DependabotGetOrgSecret(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#get-a-repository-public-key - API method documentation
 func (s *dependabot) DependabotGetRepoPublicKey(ctx context.Context, request operations.DependabotGetRepoPublicKeyRequest) (*operations.DependabotGetRepoPublicKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/dependabot/secrets/public-key", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/dependabot/secrets/public-key", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -560,7 +584,10 @@ func (s *dependabot) DependabotGetRepoPublicKey(ctx context.Context, request ope
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#get-a-repository-secret - API method documentation
 func (s *dependabot) DependabotGetRepoSecret(ctx context.Context, request operations.DependabotGetRepoSecretRequest) (*operations.DependabotGetRepoSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -606,7 +633,10 @@ func (s *dependabot) DependabotGetRepoSecret(ctx context.Context, request operat
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#list-organization-secrets - API method documentation
 func (s *dependabot) DependabotListOrgSecrets(ctx context.Context, request operations.DependabotListOrgSecretsRequest) (*operations.DependabotListOrgSecretsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -658,7 +688,10 @@ func (s *dependabot) DependabotListOrgSecrets(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#list-repository-secrets - API method documentation
 func (s *dependabot) DependabotListRepoSecrets(ctx context.Context, request operations.DependabotListRepoSecretsRequest) (*operations.DependabotListRepoSecretsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/dependabot/secrets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/dependabot/secrets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -710,7 +743,10 @@ func (s *dependabot) DependabotListRepoSecrets(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#list-selected-repositories-for-an-organization-secret - API method documentation
 func (s *dependabot) DependabotListSelectedReposForOrgSecret(ctx context.Context, request operations.DependabotListSelectedReposForOrgSecretRequest) (*operations.DependabotListSelectedReposForOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -760,7 +796,10 @@ func (s *dependabot) DependabotListSelectedReposForOrgSecret(ctx context.Context
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#remove-selected-repository-from-an-organization-secret - API method documentation
 func (s *dependabot) DependabotRemoveSelectedRepoFromOrgSecret(ctx context.Context, request operations.DependabotRemoveSelectedRepoFromOrgSecretRequest) (*operations.DependabotRemoveSelectedRepoFromOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -799,7 +838,10 @@ func (s *dependabot) DependabotRemoveSelectedRepoFromOrgSecret(ctx context.Conte
 // https://docs.github.com/enterprise-server@3.5/rest/reference/dependabot#set-selected-repositories-for-an-organization-secret - API method documentation
 func (s *dependabot) DependabotSetSelectedReposForOrgSecret(ctx context.Context, request operations.DependabotSetSelectedReposForOrgSecretRequest) (*operations.DependabotSetSelectedReposForOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

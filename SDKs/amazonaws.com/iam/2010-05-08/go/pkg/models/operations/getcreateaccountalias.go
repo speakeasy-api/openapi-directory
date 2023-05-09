@@ -15,17 +15,21 @@ const (
 	GETCreateAccountAliasActionEnumCreateAccountAlias GETCreateAccountAliasActionEnum = "CreateAccountAlias"
 )
 
+func (e GETCreateAccountAliasActionEnum) ToPointer() *GETCreateAccountAliasActionEnum {
+	return &e
+}
+
 func (e *GETCreateAccountAliasActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateAccountAlias":
-		*e = GETCreateAccountAliasActionEnum(s)
+		*e = GETCreateAccountAliasActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateAccountAliasActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateAccountAliasActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateAccountAliasVersionEnumTwoThousandAndTen0508 GETCreateAccountAliasVersionEnum = "2010-05-08"
 )
 
+func (e GETCreateAccountAliasVersionEnum) ToPointer() *GETCreateAccountAliasVersionEnum {
+	return &e
+}
+
 func (e *GETCreateAccountAliasVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETCreateAccountAliasVersionEnum(s)
+		*e = GETCreateAccountAliasVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateAccountAliasVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateAccountAliasVersionEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	AnnouncementAssigneeModeEnumIndividualStudents      AnnouncementAssigneeModeEnum = "INDIVIDUAL_STUDENTS"
 )
 
+func (e AnnouncementAssigneeModeEnum) ToPointer() *AnnouncementAssigneeModeEnum {
+	return &e
+}
+
 func (e *AnnouncementAssigneeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSIGNEE_MODE_UNSPECIFIED":
 		fallthrough
 	case "ALL_STUDENTS":
 		fallthrough
 	case "INDIVIDUAL_STUDENTS":
-		*e = AnnouncementAssigneeModeEnum(s)
+		*e = AnnouncementAssigneeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnnouncementAssigneeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnnouncementAssigneeModeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	AnnouncementStateEnumDeleted                      AnnouncementStateEnum = "DELETED"
 )
 
+func (e AnnouncementStateEnum) ToPointer() *AnnouncementStateEnum {
+	return &e
+}
+
 func (e *AnnouncementStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANNOUNCEMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "PUBLISHED":
@@ -57,10 +65,10 @@ func (e *AnnouncementStateEnum) UnmarshalJSON(data []byte) error {
 	case "DRAFT":
 		fallthrough
 	case "DELETED":
-		*e = AnnouncementStateEnum(s)
+		*e = AnnouncementStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnnouncementStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AnnouncementStateEnum: %v", v)
 	}
 }
 

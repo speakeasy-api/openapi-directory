@@ -16,19 +16,23 @@ const (
 	DependabotAlertDependencyScopeEnumRuntime     DependabotAlertDependencyScopeEnum = "runtime"
 )
 
+func (e DependabotAlertDependencyScopeEnum) ToPointer() *DependabotAlertDependencyScopeEnum {
+	return &e
+}
+
 func (e *DependabotAlertDependencyScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "development":
 		fallthrough
 	case "runtime":
-		*e = DependabotAlertDependencyScopeEnum(s)
+		*e = DependabotAlertDependencyScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependabotAlertDependencyScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for DependabotAlertDependencyScopeEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	DependabotAlertDismissedReasonEnumTolerableRisk DependabotAlertDismissedReasonEnum = "tolerable_risk"
 )
 
+func (e DependabotAlertDismissedReasonEnum) ToPointer() *DependabotAlertDismissedReasonEnum {
+	return &e
+}
+
 func (e *DependabotAlertDismissedReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fix_started":
 		fallthrough
 	case "inaccurate":
@@ -68,10 +76,10 @@ func (e *DependabotAlertDismissedReasonEnum) UnmarshalJSON(data []byte) error {
 	case "not_used":
 		fallthrough
 	case "tolerable_risk":
-		*e = DependabotAlertDismissedReasonEnum(s)
+		*e = DependabotAlertDismissedReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependabotAlertDismissedReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for DependabotAlertDismissedReasonEnum: %v", v)
 	}
 }
 
@@ -84,21 +92,25 @@ const (
 	DependabotAlertStateEnumOpen      DependabotAlertStateEnum = "open"
 )
 
+func (e DependabotAlertStateEnum) ToPointer() *DependabotAlertStateEnum {
+	return &e
+}
+
 func (e *DependabotAlertStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dismissed":
 		fallthrough
 	case "fixed":
 		fallthrough
 	case "open":
-		*e = DependabotAlertStateEnum(s)
+		*e = DependabotAlertStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependabotAlertStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DependabotAlertStateEnum: %v", v)
 	}
 }
 

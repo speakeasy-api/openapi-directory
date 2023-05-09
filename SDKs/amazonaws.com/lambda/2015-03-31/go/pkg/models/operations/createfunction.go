@@ -48,19 +48,23 @@ const (
 	CreateFunctionRequestBodyPackageTypeEnumImage CreateFunctionRequestBodyPackageTypeEnum = "Image"
 )
 
+func (e CreateFunctionRequestBodyPackageTypeEnum) ToPointer() *CreateFunctionRequestBodyPackageTypeEnum {
+	return &e
+}
+
 func (e *CreateFunctionRequestBodyPackageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Zip":
 		fallthrough
 	case "Image":
-		*e = CreateFunctionRequestBodyPackageTypeEnum(s)
+		*e = CreateFunctionRequestBodyPackageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFunctionRequestBodyPackageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFunctionRequestBodyPackageTypeEnum: %v", v)
 	}
 }
 
@@ -96,14 +100,19 @@ const (
 	CreateFunctionRequestBodyRuntimeEnumProvided     CreateFunctionRequestBodyRuntimeEnum = "provided"
 	CreateFunctionRequestBodyRuntimeEnumProvidedAl2  CreateFunctionRequestBodyRuntimeEnum = "provided.al2"
 	CreateFunctionRequestBodyRuntimeEnumNodejs18X    CreateFunctionRequestBodyRuntimeEnum = "nodejs18.x"
+	CreateFunctionRequestBodyRuntimeEnumPython310    CreateFunctionRequestBodyRuntimeEnum = "python3.10"
 )
 
+func (e CreateFunctionRequestBodyRuntimeEnum) ToPointer() *CreateFunctionRequestBodyRuntimeEnum {
+	return &e
+}
+
 func (e *CreateFunctionRequestBodyRuntimeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nodejs":
 		fallthrough
 	case "nodejs4.3":
@@ -159,10 +168,12 @@ func (e *CreateFunctionRequestBodyRuntimeEnum) UnmarshalJSON(data []byte) error 
 	case "provided.al2":
 		fallthrough
 	case "nodejs18.x":
-		*e = CreateFunctionRequestBodyRuntimeEnum(s)
+		fallthrough
+	case "python3.10":
+		*e = CreateFunctionRequestBodyRuntimeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFunctionRequestBodyRuntimeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFunctionRequestBodyRuntimeEnum: %v", v)
 	}
 }
 

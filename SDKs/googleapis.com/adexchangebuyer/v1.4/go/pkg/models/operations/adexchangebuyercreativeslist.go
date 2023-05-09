@@ -24,12 +24,16 @@ const (
 	AdexchangebuyerCreativesListDealsStatusFilterEnumNotChecked            AdexchangebuyerCreativesListDealsStatusFilterEnum = "not_checked"
 )
 
+func (e AdexchangebuyerCreativesListDealsStatusFilterEnum) ToPointer() *AdexchangebuyerCreativesListDealsStatusFilterEnum {
+	return &e
+}
+
 func (e *AdexchangebuyerCreativesListDealsStatusFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "approved":
 		fallthrough
 	case "conditionally_approved":
@@ -37,10 +41,10 @@ func (e *AdexchangebuyerCreativesListDealsStatusFilterEnum) UnmarshalJSON(data [
 	case "disapproved":
 		fallthrough
 	case "not_checked":
-		*e = AdexchangebuyerCreativesListDealsStatusFilterEnum(s)
+		*e = AdexchangebuyerCreativesListDealsStatusFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdexchangebuyerCreativesListDealsStatusFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for AdexchangebuyerCreativesListDealsStatusFilterEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	AdexchangebuyerCreativesListOpenAuctionStatusFilterEnumNotChecked            AdexchangebuyerCreativesListOpenAuctionStatusFilterEnum = "not_checked"
 )
 
+func (e AdexchangebuyerCreativesListOpenAuctionStatusFilterEnum) ToPointer() *AdexchangebuyerCreativesListOpenAuctionStatusFilterEnum {
+	return &e
+}
+
 func (e *AdexchangebuyerCreativesListOpenAuctionStatusFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "approved":
 		fallthrough
 	case "conditionally_approved":
@@ -67,10 +75,10 @@ func (e *AdexchangebuyerCreativesListOpenAuctionStatusFilterEnum) UnmarshalJSON(
 	case "disapproved":
 		fallthrough
 	case "not_checked":
-		*e = AdexchangebuyerCreativesListOpenAuctionStatusFilterEnum(s)
+		*e = AdexchangebuyerCreativesListOpenAuctionStatusFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdexchangebuyerCreativesListOpenAuctionStatusFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for AdexchangebuyerCreativesListOpenAuctionStatusFilterEnum: %v", v)
 	}
 }
 

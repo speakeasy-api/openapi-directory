@@ -16,17 +16,21 @@ const (
 	DeleteVolumeXAmzTargetEnumAwsSimbaAPIServiceV20180301DeleteVolume DeleteVolumeXAmzTargetEnum = "AWSSimbaAPIService_v20180301.DeleteVolume"
 )
 
+func (e DeleteVolumeXAmzTargetEnum) ToPointer() *DeleteVolumeXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteVolumeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.DeleteVolume":
-		*e = DeleteVolumeXAmzTargetEnum(s)
+		*e = DeleteVolumeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVolumeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVolumeXAmzTargetEnum: %v", v)
 	}
 }
 

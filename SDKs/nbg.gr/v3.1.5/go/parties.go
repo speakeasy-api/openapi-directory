@@ -36,7 +36,10 @@ func newParties(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Get Parties by Account ID
 func (s *parties) GetAccountsAccountIDParties(ctx context.Context, request operations.GetAccountsAccountIDPartiesRequest, security operations.GetAccountsAccountIDPartiesSecurity) (*operations.GetAccountsAccountIDPartiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/parties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/parties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -118,7 +121,10 @@ func (s *parties) GetAccountsAccountIDParties(ctx context.Context, request opera
 // Get Party by Account ID
 func (s *parties) GetAccountsAccountIDParty(ctx context.Context, request operations.GetAccountsAccountIDPartyRequest, security operations.GetAccountsAccountIDPartySecurity) (*operations.GetAccountsAccountIDPartyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/party", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/party", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

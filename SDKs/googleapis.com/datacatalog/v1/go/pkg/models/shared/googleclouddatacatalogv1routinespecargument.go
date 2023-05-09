@@ -17,12 +17,16 @@ const (
 	GoogleCloudDatacatalogV1RoutineSpecArgumentModeEnumInout           GoogleCloudDatacatalogV1RoutineSpecArgumentModeEnum = "INOUT"
 )
 
+func (e GoogleCloudDatacatalogV1RoutineSpecArgumentModeEnum) ToPointer() *GoogleCloudDatacatalogV1RoutineSpecArgumentModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1RoutineSpecArgumentModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODE_UNSPECIFIED":
 		fallthrough
 	case "IN":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDatacatalogV1RoutineSpecArgumentModeEnum) UnmarshalJSON(data
 	case "OUT":
 		fallthrough
 	case "INOUT":
-		*e = GoogleCloudDatacatalogV1RoutineSpecArgumentModeEnum(s)
+		*e = GoogleCloudDatacatalogV1RoutineSpecArgumentModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1RoutineSpecArgumentModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1RoutineSpecArgumentModeEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	DomainAvailabilityEnumDontKnow              DomainAvailabilityEnum = "DONT_KNOW"
 )
 
+func (e DomainAvailabilityEnum) ToPointer() *DomainAvailabilityEnum {
+	return &e
+}
+
 func (e *DomainAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "AVAILABLE_RESERVED":
@@ -41,9 +45,9 @@ func (e *DomainAvailabilityEnum) UnmarshalJSON(data []byte) error {
 	case "RESERVED":
 		fallthrough
 	case "DONT_KNOW":
-		*e = DomainAvailabilityEnum(s)
+		*e = DomainAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainAvailabilityEnum: %v", v)
 	}
 }

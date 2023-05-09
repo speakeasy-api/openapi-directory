@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.IPGeolocationWithConfidenceAreaAndHazardReportAPIRequest{
-        IP: "193.114.112.122",
-        Key: "{{API KEY}}",
-        LocalityLanguage: "en",
-    }
-
     ctx := context.Background()
-    res, err := s.IPGeolocationWithConfidenceAreaAndHazardReportAPI(ctx, req)
+    res, err := s.IPGeolocationWithConfidenceAreaAndHazardReportAPI(ctx, operations.IPGeolocationWithConfidenceAreaAndHazardReportAPIRequest{
+        IP: sdk.String("193.114.112.122"),
+        Key: sdk.String("{{API KEY}}"),
+        LocalityLanguage: sdk.String("en"),
+    })
     if err != nil {
         log.Fatal(err)
     }

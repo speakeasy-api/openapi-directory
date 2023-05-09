@@ -30,12 +30,16 @@ const (
 	AssociateInstanceEventWindowResultInstanceEventWindowStateEnumDeleted  AssociateInstanceEventWindowResultInstanceEventWindowStateEnum = "deleted"
 )
 
+func (e AssociateInstanceEventWindowResultInstanceEventWindowStateEnum) ToPointer() *AssociateInstanceEventWindowResultInstanceEventWindowStateEnum {
+	return &e
+}
+
 func (e *AssociateInstanceEventWindowResultInstanceEventWindowStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creating":
 		fallthrough
 	case "deleting":
@@ -43,10 +47,10 @@ func (e *AssociateInstanceEventWindowResultInstanceEventWindowStateEnum) Unmarsh
 	case "active":
 		fallthrough
 	case "deleted":
-		*e = AssociateInstanceEventWindowResultInstanceEventWindowStateEnum(s)
+		*e = AssociateInstanceEventWindowResultInstanceEventWindowStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateInstanceEventWindowResultInstanceEventWindowStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateInstanceEventWindowResultInstanceEventWindowStateEnum: %v", v)
 	}
 }
 
@@ -69,12 +73,16 @@ const (
 	AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnumSaturday  AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum = "saturday"
 )
 
+func (e AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum) ToPointer() *AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum {
+	return &e
+}
+
 func (e *AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sunday":
 		fallthrough
 	case "monday":
@@ -88,10 +96,10 @@ func (e *AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekD
 	case "friday":
 		fallthrough
 	case "saturday":
-		*e = AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum(s)
+		*e = AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum: %v", v)
 	}
 }
 
@@ -108,12 +116,16 @@ const (
 	AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnumSaturday  AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum = "saturday"
 )
 
+func (e AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum) ToPointer() *AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum {
+	return &e
+}
+
 func (e *AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sunday":
 		fallthrough
 	case "monday":
@@ -127,10 +139,10 @@ func (e *AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWee
 	case "friday":
 		fallthrough
 	case "saturday":
-		*e = AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum(s)
+		*e = AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum: %v", v)
 	}
 }
 

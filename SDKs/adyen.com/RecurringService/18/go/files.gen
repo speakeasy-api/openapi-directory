@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -25,4 +26,5 @@ pkg/models/shared/disablerequest.go
 pkg/models/shared/recurringdetailsresult.go
 pkg/models/shared/recurringdetailsrequest.go
 pkg/models/shared/recurring.go
+docs/sdk/README.md
 USAGE.md

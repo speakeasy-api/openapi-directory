@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,10 +16,11 @@ func main() {
         }),
     )
 
-    req := operations.CreateDataIntegrationRequest{
+    ctx := context.Background()
+    res, err := s.CreateDataIntegration(ctx, operations.CreateDataIntegrationRequest{
         RequestBody: operations.CreateDataIntegrationRequestBody{
-            ClientToken: "corrupti",
-            Description: "provident",
+            ClientToken: sdk.String("corrupti"),
+            Description: sdk.String("provident"),
             FileConfiguration: &operations.CreateDataIntegrationRequestBodyFileConfiguration{
                 Filters: map[string][]string{
                     "quibusdam": []string{
@@ -46,77 +46,35 @@ func main() {
                 },
             },
             KmsKey: "voluptatum",
-            Name: "iusto",
+            Name: "Miriam Huel",
             ObjectConfiguration: map[string]map[string][]string{
-                "nisi": map[string][]string{
-                    "temporibus": []string{
-                        "quis",
-                    },
-                    "veritatis": []string{
-                        "perferendis",
+                "quis": map[string][]string{
+                    "deserunt": []string{
                         "ipsam",
-                        "repellendus",
-                    },
-                    "sapiente": []string{
-                        "odit",
-                        "at",
-                        "at",
-                        "maiores",
-                    },
-                    "molestiae": []string{
-                        "quod",
-                        "esse",
-                        "totam",
-                        "porro",
-                    },
-                },
-                "dolorum": map[string][]string{
-                    "nam": []string{
-                        "occaecati",
-                        "fugit",
-                        "deleniti",
-                    },
-                },
-                "hic": map[string][]string{
-                    "totam": []string{
-                        "commodi",
-                    },
-                    "molestiae": []string{
-                        "qui",
-                        "impedit",
-                    },
-                    "cum": []string{
-                        "ipsum",
-                        "excepturi",
-                    },
-                    "aspernatur": []string{
-                        "ad",
                     },
                 },
             },
             ScheduleConfig: operations.CreateDataIntegrationRequestBodyScheduleConfig{
-                FirstExecutionFrom: "natus",
-                Object: "sed",
-                ScheduleExpression: "iste",
+                FirstExecutionFrom: sdk.String("repellendus"),
+                Object: sdk.String("sapiente"),
+                ScheduleExpression: sdk.String("quo"),
             },
-            SourceURI: "dolor",
+            SourceURI: "odit",
             Tags: map[string]string{
-                "laboriosam": "hic",
-                "saepe": "fuga",
-                "in": "corporis",
+                "at": "maiores",
+                "molestiae": "quod",
+                "quod": "esse",
+                "totam": "porro",
             },
         },
-        XAmzAlgorithm: "iste",
-        XAmzContentSha256: "iure",
-        XAmzCredential: "saepe",
-        XAmzDate: "quidem",
-        XAmzSecurityToken: "architecto",
-        XAmzSignature: "ipsa",
-        XAmzSignedHeaders: "reiciendis",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateDataIntegration(ctx, req)
+        XAmzAlgorithm: sdk.String("dolorum"),
+        XAmzContentSha256: sdk.String("dicta"),
+        XAmzCredential: sdk.String("nam"),
+        XAmzDate: sdk.String("officia"),
+        XAmzSecurityToken: sdk.String("occaecati"),
+        XAmzSignature: sdk.String("fugit"),
+        XAmzSignedHeaders: sdk.String("deleniti"),
+    })
     if err != nil {
         log.Fatal(err)
     }

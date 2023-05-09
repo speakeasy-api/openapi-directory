@@ -19,12 +19,16 @@ const (
 	DescribeInstanceStatusResultInstanceStatusesEventsCodeEnumInstanceStop       DescribeInstanceStatusResultInstanceStatusesEventsCodeEnum = "instance-stop"
 )
 
+func (e DescribeInstanceStatusResultInstanceStatusesEventsCodeEnum) ToPointer() *DescribeInstanceStatusResultInstanceStatusesEventsCodeEnum {
+	return &e
+}
+
 func (e *DescribeInstanceStatusResultInstanceStatusesEventsCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instance-reboot":
 		fallthrough
 	case "system-reboot":
@@ -34,10 +38,10 @@ func (e *DescribeInstanceStatusResultInstanceStatusesEventsCodeEnum) UnmarshalJS
 	case "instance-retirement":
 		fallthrough
 	case "instance-stop":
-		*e = DescribeInstanceStatusResultInstanceStatusesEventsCodeEnum(s)
+		*e = DescribeInstanceStatusResultInstanceStatusesEventsCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesEventsCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesEventsCodeEnum: %v", v)
 	}
 }
 
@@ -63,12 +67,16 @@ const (
 	DescribeInstanceStatusResultInstanceStatusesInstanceStateNameEnumStopped      DescribeInstanceStatusResultInstanceStatusesInstanceStateNameEnum = "stopped"
 )
 
+func (e DescribeInstanceStatusResultInstanceStatusesInstanceStateNameEnum) ToPointer() *DescribeInstanceStatusResultInstanceStatusesInstanceStateNameEnum {
+	return &e
+}
+
 func (e *DescribeInstanceStatusResultInstanceStatusesInstanceStateNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "running":
@@ -80,10 +88,10 @@ func (e *DescribeInstanceStatusResultInstanceStatusesInstanceStateNameEnum) Unma
 	case "stopping":
 		fallthrough
 	case "stopped":
-		*e = DescribeInstanceStatusResultInstanceStatusesInstanceStateNameEnum(s)
+		*e = DescribeInstanceStatusResultInstanceStatusesInstanceStateNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesInstanceStateNameEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesInstanceStateNameEnum: %v", v)
 	}
 }
 
@@ -100,17 +108,21 @@ const (
 	DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsNameEnumReachability DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsNameEnum = "reachability"
 )
 
+func (e DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsNameEnum) ToPointer() *DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsNameEnum {
+	return &e
+}
+
 func (e *DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "reachability":
-		*e = DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsNameEnum(s)
+		*e = DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsNameEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsNameEnum: %v", v)
 	}
 }
 
@@ -124,12 +136,16 @@ const (
 	DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsStatusEnumInitializing     DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsStatusEnum = "initializing"
 )
 
+func (e DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsStatusEnum) ToPointer() *DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsStatusEnum {
+	return &e
+}
+
 func (e *DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "passed":
 		fallthrough
 	case "failed":
@@ -137,10 +153,10 @@ func (e *DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsStatus
 	case "insufficient-data":
 		fallthrough
 	case "initializing":
-		*e = DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsStatusEnum(s)
+		*e = DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesInstanceStatusDetailsStatusEnum: %v", v)
 	}
 }
 
@@ -162,12 +178,16 @@ const (
 	DescribeInstanceStatusResultInstanceStatusesInstanceStatusStatusEnumInitializing     DescribeInstanceStatusResultInstanceStatusesInstanceStatusStatusEnum = "initializing"
 )
 
+func (e DescribeInstanceStatusResultInstanceStatusesInstanceStatusStatusEnum) ToPointer() *DescribeInstanceStatusResultInstanceStatusesInstanceStatusStatusEnum {
+	return &e
+}
+
 func (e *DescribeInstanceStatusResultInstanceStatusesInstanceStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ok":
 		fallthrough
 	case "impaired":
@@ -177,10 +197,10 @@ func (e *DescribeInstanceStatusResultInstanceStatusesInstanceStatusStatusEnum) U
 	case "not-applicable":
 		fallthrough
 	case "initializing":
-		*e = DescribeInstanceStatusResultInstanceStatusesInstanceStatusStatusEnum(s)
+		*e = DescribeInstanceStatusResultInstanceStatusesInstanceStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesInstanceStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesInstanceStatusStatusEnum: %v", v)
 	}
 }
 
@@ -197,17 +217,21 @@ const (
 	DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsNameEnumReachability DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsNameEnum = "reachability"
 )
 
+func (e DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsNameEnum) ToPointer() *DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsNameEnum {
+	return &e
+}
+
 func (e *DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "reachability":
-		*e = DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsNameEnum(s)
+		*e = DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsNameEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsNameEnum: %v", v)
 	}
 }
 
@@ -221,12 +245,16 @@ const (
 	DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsStatusEnumInitializing     DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsStatusEnum = "initializing"
 )
 
+func (e DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsStatusEnum) ToPointer() *DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsStatusEnum {
+	return &e
+}
+
 func (e *DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "passed":
 		fallthrough
 	case "failed":
@@ -234,10 +262,10 @@ func (e *DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsStatusEn
 	case "insufficient-data":
 		fallthrough
 	case "initializing":
-		*e = DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsStatusEnum(s)
+		*e = DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesSystemStatusDetailsStatusEnum: %v", v)
 	}
 }
 
@@ -259,12 +287,16 @@ const (
 	DescribeInstanceStatusResultInstanceStatusesSystemStatusStatusEnumInitializing     DescribeInstanceStatusResultInstanceStatusesSystemStatusStatusEnum = "initializing"
 )
 
+func (e DescribeInstanceStatusResultInstanceStatusesSystemStatusStatusEnum) ToPointer() *DescribeInstanceStatusResultInstanceStatusesSystemStatusStatusEnum {
+	return &e
+}
+
 func (e *DescribeInstanceStatusResultInstanceStatusesSystemStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ok":
 		fallthrough
 	case "impaired":
@@ -274,10 +306,10 @@ func (e *DescribeInstanceStatusResultInstanceStatusesSystemStatusStatusEnum) Unm
 	case "not-applicable":
 		fallthrough
 	case "initializing":
-		*e = DescribeInstanceStatusResultInstanceStatusesSystemStatusStatusEnum(s)
+		*e = DescribeInstanceStatusResultInstanceStatusesSystemStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesSystemStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceStatusResultInstanceStatusesSystemStatusStatusEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	TransitionToIARulesEnumAfter1Day   TransitionToIARulesEnum = "AFTER_1_DAY"
 )
 
+func (e TransitionToIARulesEnum) ToPointer() *TransitionToIARulesEnum {
+	return &e
+}
+
 func (e *TransitionToIARulesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AFTER_7_DAYS":
 		fallthrough
 	case "AFTER_14_DAYS":
@@ -35,9 +39,9 @@ func (e *TransitionToIARulesEnum) UnmarshalJSON(data []byte) error {
 	case "AFTER_90_DAYS":
 		fallthrough
 	case "AFTER_1_DAY":
-		*e = TransitionToIARulesEnum(s)
+		*e = TransitionToIARulesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransitionToIARulesEnum: %s", s)
+		return fmt.Errorf("invalid value for TransitionToIARulesEnum: %v", v)
 	}
 }

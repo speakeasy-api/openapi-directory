@@ -17,19 +17,23 @@ const (
 	DisassociateResourceResourceTypeEnumResourceTagValue DisassociateResourceResourceTypeEnum = "RESOURCE_TAG_VALUE"
 )
 
+func (e DisassociateResourceResourceTypeEnum) ToPointer() *DisassociateResourceResourceTypeEnum {
+	return &e
+}
+
 func (e *DisassociateResourceResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CFN_STACK":
 		fallthrough
 	case "RESOURCE_TAG_VALUE":
-		*e = DisassociateResourceResourceTypeEnum(s)
+		*e = DisassociateResourceResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateResourceResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateResourceResourceTypeEnum: %v", v)
 	}
 }
 

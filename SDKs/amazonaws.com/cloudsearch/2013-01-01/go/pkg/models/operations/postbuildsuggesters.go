@@ -15,17 +15,21 @@ const (
 	POSTBuildSuggestersActionEnumBuildSuggesters POSTBuildSuggestersActionEnum = "BuildSuggesters"
 )
 
+func (e POSTBuildSuggestersActionEnum) ToPointer() *POSTBuildSuggestersActionEnum {
+	return &e
+}
+
 func (e *POSTBuildSuggestersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BuildSuggesters":
-		*e = POSTBuildSuggestersActionEnum(s)
+		*e = POSTBuildSuggestersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTBuildSuggestersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTBuildSuggestersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTBuildSuggestersVersionEnumTwoThousandAndThirteen0101 POSTBuildSuggestersVersionEnum = "2013-01-01"
 )
 
+func (e POSTBuildSuggestersVersionEnum) ToPointer() *POSTBuildSuggestersVersionEnum {
+	return &e
+}
+
 func (e *POSTBuildSuggestersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = POSTBuildSuggestersVersionEnum(s)
+		*e = POSTBuildSuggestersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTBuildSuggestersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTBuildSuggestersVersionEnum: %v", v)
 	}
 }
 

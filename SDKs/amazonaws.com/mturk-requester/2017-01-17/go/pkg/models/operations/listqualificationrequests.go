@@ -16,17 +16,21 @@ const (
 	ListQualificationRequestsXAmzTargetEnumMTurkRequesterServiceV20170117ListQualificationRequests ListQualificationRequestsXAmzTargetEnum = "MTurkRequesterServiceV20170117.ListQualificationRequests"
 )
 
+func (e ListQualificationRequestsXAmzTargetEnum) ToPointer() *ListQualificationRequestsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListQualificationRequestsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.ListQualificationRequests":
-		*e = ListQualificationRequestsXAmzTargetEnum(s)
+		*e = ListQualificationRequestsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListQualificationRequestsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListQualificationRequestsXAmzTargetEnum: %v", v)
 	}
 }
 

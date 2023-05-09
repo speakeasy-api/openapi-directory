@@ -17,21 +17,25 @@ const (
 	GetMatrixCurbsideEnumLeft  GetMatrixCurbsideEnum = "left"
 )
 
+func (e GetMatrixCurbsideEnum) ToPointer() *GetMatrixCurbsideEnum {
+	return &e
+}
+
 func (e *GetMatrixCurbsideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "right":
 		fallthrough
 	case "left":
-		*e = GetMatrixCurbsideEnum(s)
+		*e = GetMatrixCurbsideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMatrixCurbsideEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMatrixCurbsideEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GetMatrixFromCurbsideEnumLeft  GetMatrixFromCurbsideEnum = "left"
 )
 
+func (e GetMatrixFromCurbsideEnum) ToPointer() *GetMatrixFromCurbsideEnum {
+	return &e
+}
+
 func (e *GetMatrixFromCurbsideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "right":
 		fallthrough
 	case "left":
-		*e = GetMatrixFromCurbsideEnum(s)
+		*e = GetMatrixFromCurbsideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMatrixFromCurbsideEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMatrixFromCurbsideEnum: %v", v)
 	}
 }
 
@@ -69,21 +77,25 @@ const (
 	GetMatrixToCurbsideEnumLeft  GetMatrixToCurbsideEnum = "left"
 )
 
+func (e GetMatrixToCurbsideEnum) ToPointer() *GetMatrixToCurbsideEnum {
+	return &e
+}
+
 func (e *GetMatrixToCurbsideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "right":
 		fallthrough
 	case "left":
-		*e = GetMatrixToCurbsideEnum(s)
+		*e = GetMatrixToCurbsideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMatrixToCurbsideEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMatrixToCurbsideEnum: %v", v)
 	}
 }
 

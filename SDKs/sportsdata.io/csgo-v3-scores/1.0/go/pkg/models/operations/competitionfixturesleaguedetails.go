@@ -17,19 +17,23 @@ const (
 	CompetitionFixturesLeagueDetailsFormatEnumJSON CompetitionFixturesLeagueDetailsFormatEnum = "json"
 )
 
+func (e CompetitionFixturesLeagueDetailsFormatEnum) ToPointer() *CompetitionFixturesLeagueDetailsFormatEnum {
+	return &e
+}
+
 func (e *CompetitionFixturesLeagueDetailsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xml":
 		fallthrough
 	case "json":
-		*e = CompetitionFixturesLeagueDetailsFormatEnum(s)
+		*e = CompetitionFixturesLeagueDetailsFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompetitionFixturesLeagueDetailsFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CompetitionFixturesLeagueDetailsFormatEnum: %v", v)
 	}
 }
 

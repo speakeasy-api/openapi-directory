@@ -18,12 +18,16 @@ const (
 	AgentHealthCodeEnumUnknown   AgentHealthCodeEnum = "UNKNOWN"
 )
 
+func (e AgentHealthCodeEnum) ToPointer() *AgentHealthCodeEnum {
+	return &e
+}
+
 func (e *AgentHealthCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IDLE":
 		fallthrough
 	case "RUNNING":
@@ -35,9 +39,9 @@ func (e *AgentHealthCodeEnum) UnmarshalJSON(data []byte) error {
 	case "THROTTLED":
 		fallthrough
 	case "UNKNOWN":
-		*e = AgentHealthCodeEnum(s)
+		*e = AgentHealthCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AgentHealthCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AgentHealthCodeEnum: %v", v)
 	}
 }

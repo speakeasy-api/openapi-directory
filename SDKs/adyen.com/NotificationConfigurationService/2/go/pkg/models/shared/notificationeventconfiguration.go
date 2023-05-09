@@ -40,12 +40,16 @@ const (
 	NotificationEventConfigurationEventTypeEnumTransferNotPaidoutTransfers    NotificationEventConfigurationEventTypeEnum = "TRANSFER_NOT_PAIDOUT_TRANSFERS"
 )
 
+func (e NotificationEventConfigurationEventTypeEnum) ToPointer() *NotificationEventConfigurationEventTypeEnum {
+	return &e
+}
+
 func (e *NotificationEventConfigurationEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_CLOSED":
 		fallthrough
 	case "ACCOUNT_CREATED":
@@ -95,10 +99,10 @@ func (e *NotificationEventConfigurationEventTypeEnum) UnmarshalJSON(data []byte)
 	case "TRANSFER_FUNDS":
 		fallthrough
 	case "TRANSFER_NOT_PAIDOUT_TRANSFERS":
-		*e = NotificationEventConfigurationEventTypeEnum(s)
+		*e = NotificationEventConfigurationEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationEventConfigurationEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationEventConfigurationEventTypeEnum: %v", v)
 	}
 }
 
@@ -113,19 +117,23 @@ const (
 	NotificationEventConfigurationIncludeModeEnumInclude NotificationEventConfigurationIncludeModeEnum = "INCLUDE"
 )
 
+func (e NotificationEventConfigurationIncludeModeEnum) ToPointer() *NotificationEventConfigurationIncludeModeEnum {
+	return &e
+}
+
 func (e *NotificationEventConfigurationIncludeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCLUDE":
 		fallthrough
 	case "INCLUDE":
-		*e = NotificationEventConfigurationIncludeModeEnum(s)
+		*e = NotificationEventConfigurationIncludeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationEventConfigurationIncludeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationEventConfigurationIncludeModeEnum: %v", v)
 	}
 }
 

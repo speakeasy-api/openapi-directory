@@ -16,17 +16,21 @@ const (
 	CreateFileCacheXAmzTargetEnumAwsSimbaAPIServiceV20180301CreateFileCache CreateFileCacheXAmzTargetEnum = "AWSSimbaAPIService_v20180301.CreateFileCache"
 )
 
+func (e CreateFileCacheXAmzTargetEnum) ToPointer() *CreateFileCacheXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateFileCacheXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.CreateFileCache":
-		*e = CreateFileCacheXAmzTargetEnum(s)
+		*e = CreateFileCacheXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFileCacheXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFileCacheXAmzTargetEnum: %v", v)
 	}
 }
 

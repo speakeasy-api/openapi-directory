@@ -17,19 +17,23 @@ const (
 	BoxScoresByDateFormatEnumJSON BoxScoresByDateFormatEnum = "JSON"
 )
 
+func (e BoxScoresByDateFormatEnum) ToPointer() *BoxScoresByDateFormatEnum {
+	return &e
+}
+
 func (e *BoxScoresByDateFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = BoxScoresByDateFormatEnum(s)
+		*e = BoxScoresByDateFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BoxScoresByDateFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for BoxScoresByDateFormatEnum: %v", v)
 	}
 }
 

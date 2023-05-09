@@ -16,17 +16,21 @@ const (
 	DeleteImageXAmzTargetEnumPhotonAdminProxyServiceDeleteImage DeleteImageXAmzTargetEnum = "PhotonAdminProxyService.DeleteImage"
 )
 
+func (e DeleteImageXAmzTargetEnum) ToPointer() *DeleteImageXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteImageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.DeleteImage":
-		*e = DeleteImageXAmzTargetEnum(s)
+		*e = DeleteImageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteImageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteImageXAmzTargetEnum: %v", v)
 	}
 }
 

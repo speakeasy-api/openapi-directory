@@ -79,12 +79,16 @@ const (
 	PostOrdersOrderRequestV2IntegratorEnumYahoo           PostOrdersOrderRequestV2IntegratorEnum = "Yahoo"
 )
 
+func (e PostOrdersOrderRequestV2IntegratorEnum) ToPointer() *PostOrdersOrderRequestV2IntegratorEnum {
+	return &e
+}
+
 func (e *PostOrdersOrderRequestV2IntegratorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1ShoppingCart":
 		fallthrough
 	case "3dCart":
@@ -202,10 +206,10 @@ func (e *PostOrdersOrderRequestV2IntegratorEnum) UnmarshalJSON(data []byte) erro
 	case "WooCommerce":
 		fallthrough
 	case "Yahoo":
-		*e = PostOrdersOrderRequestV2IntegratorEnum(s)
+		*e = PostOrdersOrderRequestV2IntegratorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostOrdersOrderRequestV2IntegratorEnum: %s", s)
+		return fmt.Errorf("invalid value for PostOrdersOrderRequestV2IntegratorEnum: %v", v)
 	}
 }
 

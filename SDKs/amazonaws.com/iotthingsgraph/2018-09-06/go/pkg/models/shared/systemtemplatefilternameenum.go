@@ -13,16 +13,20 @@ const (
 	SystemTemplateFilterNameEnumFlowTemplateID SystemTemplateFilterNameEnum = "FLOW_TEMPLATE_ID"
 )
 
+func (e SystemTemplateFilterNameEnum) ToPointer() *SystemTemplateFilterNameEnum {
+	return &e
+}
+
 func (e *SystemTemplateFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FLOW_TEMPLATE_ID":
-		*e = SystemTemplateFilterNameEnum(s)
+		*e = SystemTemplateFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SystemTemplateFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SystemTemplateFilterNameEnum: %v", v)
 	}
 }

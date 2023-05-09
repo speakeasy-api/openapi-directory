@@ -14,18 +14,22 @@ const (
 	ChallengeResponseEnumFailure ChallengeResponseEnum = "Failure"
 )
 
+func (e ChallengeResponseEnum) ToPointer() *ChallengeResponseEnum {
+	return &e
+}
+
 func (e *ChallengeResponseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Success":
 		fallthrough
 	case "Failure":
-		*e = ChallengeResponseEnum(s)
+		*e = ChallengeResponseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChallengeResponseEnum: %s", s)
+		return fmt.Errorf("invalid value for ChallengeResponseEnum: %v", v)
 	}
 }

@@ -23,17 +23,21 @@ const (
 	LoadService200ApplicationJSONStatusEnumSuccess LoadService200ApplicationJSONStatusEnum = "success"
 )
 
+func (e LoadService200ApplicationJSONStatusEnum) ToPointer() *LoadService200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *LoadService200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
-		*e = LoadService200ApplicationJSONStatusEnum(s)
+		*e = LoadService200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoadService200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LoadService200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	FetchHealthProfileQuestionsIncludeEnumAnswer             FetchHealthProfileQuestionsIncludeEnum = "answer"
 )
 
+func (e FetchHealthProfileQuestionsIncludeEnum) ToPointer() *FetchHealthProfileQuestionsIncludeEnum {
+	return &e
+}
+
 func (e *FetchHealthProfileQuestionsIncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "question_definition":
 		fallthrough
 	case "answer":
-		*e = FetchHealthProfileQuestionsIncludeEnum(s)
+		*e = FetchHealthProfileQuestionsIncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FetchHealthProfileQuestionsIncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for FetchHealthProfileQuestionsIncludeEnum: %v", v)
 	}
 }
 

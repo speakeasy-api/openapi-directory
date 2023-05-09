@@ -42,7 +42,10 @@ func newFilmography(defaultClient, securityClient HTTPClient, serverURL, languag
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *filmography) FilmographySearchRead(ctx context.Context, request operations.FilmographySearchReadRequest) (*operations.FilmographySearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/filmography/search/{movie_title}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/filmography/search/{movie_title}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *filmography) FilmographySearchRead(ctx context.Context, request operati
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *filmography) FilmographySearchallRead(ctx context.Context, request operations.FilmographySearchallReadRequest) (*operations.FilmographySearchallReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/filmography/searchall/{param}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/filmography/searchall/{param}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

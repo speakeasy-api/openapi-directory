@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,40 +17,38 @@ func main() {
         }),
     )
 
-    req := operations.BatchCreateCustomVocabularyItemRequest{
+    ctx := context.Background()
+    res, err := s.BatchCreateCustomVocabularyItem(ctx, operations.BatchCreateCustomVocabularyItemRequest{
         RequestBody: operations.BatchCreateCustomVocabularyItemRequestBody{
             CustomVocabularyItemList: []shared.NewCustomVocabularyItem{
                 shared.NewCustomVocabularyItem{
-                    DisplayAs: "provident",
+                    DisplayAs: sdk.String("provident"),
                     Phrase: "distinctio",
-                    Weight: 844266,
+                    Weight: sdk.Int64(844266),
                 },
                 shared.NewCustomVocabularyItem{
-                    DisplayAs: "unde",
+                    DisplayAs: sdk.String("unde"),
                     Phrase: "nulla",
-                    Weight: 544883,
+                    Weight: sdk.Int64(544883),
                 },
                 shared.NewCustomVocabularyItem{
-                    DisplayAs: "illum",
+                    DisplayAs: sdk.String("illum"),
                     Phrase: "vel",
-                    Weight: 623564,
+                    Weight: sdk.Int64(623564),
                 },
             },
         },
-        XAmzAlgorithm: "deserunt",
-        XAmzContentSha256: "suscipit",
-        XAmzCredential: "iure",
-        XAmzDate: "magnam",
-        XAmzSecurityToken: "debitis",
-        XAmzSignature: "ipsa",
-        XAmzSignedHeaders: "delectus",
+        XAmzAlgorithm: sdk.String("deserunt"),
+        XAmzContentSha256: sdk.String("suscipit"),
+        XAmzCredential: sdk.String("iure"),
+        XAmzDate: sdk.String("magnam"),
+        XAmzSecurityToken: sdk.String("debitis"),
+        XAmzSignature: sdk.String("ipsa"),
+        XAmzSignedHeaders: sdk.String("delectus"),
         BotID: "tempora",
         BotVersion: "suscipit",
         LocaleID: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchCreateCustomVocabularyItem(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

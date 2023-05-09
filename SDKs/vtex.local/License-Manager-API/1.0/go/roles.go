@@ -87,7 +87,10 @@ func (s *roles) GetListRoles(ctx context.Context, request operations.GetListRole
 // Gets roles of a particular user or application key.
 func (s *roles) GetRolesbyUser(ctx context.Context, request operations.GetRolesbyUserRequest) (*operations.GetRolesbyUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}/roles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}/roles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -134,7 +137,10 @@ func (s *roles) GetRolesbyUser(ctx context.Context, request operations.GetRolesb
 // Allows you to add roles to a particular user or application key by specifying the list of roles' IDs on the request's body.
 func (s *roles) PutRolesinUser(ctx context.Context, request operations.PutRolesinUserRequest) (*operations.PutRolesinUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}/roles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}/roles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -202,7 +208,10 @@ func (s *roles) PutRolesinUser(ctx context.Context, request operations.PutRolesi
 // > Note that a successful response returns a `204` response with an empty body. A deletion on a role or user that does not exist will also return a `204`. Thus, this method should not be used to verify the existence of a specific user or role.
 func (s *roles) RemoveRolefromUser(ctx context.Context, request operations.RemoveRolefromUserRequest) (*operations.RemoveRolefromUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}/roles/{roleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}/roles/{roleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

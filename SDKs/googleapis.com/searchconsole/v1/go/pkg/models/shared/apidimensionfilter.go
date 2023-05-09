@@ -17,12 +17,16 @@ const (
 	APIDimensionFilterDimensionEnumSearchAppearance APIDimensionFilterDimensionEnum = "SEARCH_APPEARANCE"
 )
 
+func (e APIDimensionFilterDimensionEnum) ToPointer() *APIDimensionFilterDimensionEnum {
+	return &e
+}
+
 func (e *APIDimensionFilterDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUERY":
 		fallthrough
 	case "PAGE":
@@ -32,10 +36,10 @@ func (e *APIDimensionFilterDimensionEnum) UnmarshalJSON(data []byte) error {
 	case "DEVICE":
 		fallthrough
 	case "SEARCH_APPEARANCE":
-		*e = APIDimensionFilterDimensionEnum(s)
+		*e = APIDimensionFilterDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIDimensionFilterDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for APIDimensionFilterDimensionEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	APIDimensionFilterOperatorEnumExcludingRegex APIDimensionFilterOperatorEnum = "EXCLUDING_REGEX"
 )
 
+func (e APIDimensionFilterOperatorEnum) ToPointer() *APIDimensionFilterOperatorEnum {
+	return &e
+}
+
 func (e *APIDimensionFilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUALS":
 		fallthrough
 	case "NOT_EQUALS":
@@ -67,10 +75,10 @@ func (e *APIDimensionFilterOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "INCLUDING_REGEX":
 		fallthrough
 	case "EXCLUDING_REGEX":
-		*e = APIDimensionFilterOperatorEnum(s)
+		*e = APIDimensionFilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIDimensionFilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for APIDimensionFilterOperatorEnum: %v", v)
 	}
 }
 

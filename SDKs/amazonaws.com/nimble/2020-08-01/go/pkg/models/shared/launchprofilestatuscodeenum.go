@@ -27,12 +27,16 @@ const (
 	LaunchProfileStatusCodeEnumInvalidSubnetsCombination                 LaunchProfileStatusCodeEnum = "INVALID_SUBNETS_COMBINATION"
 )
 
+func (e LaunchProfileStatusCodeEnum) ToPointer() *LaunchProfileStatusCodeEnum {
+	return &e
+}
+
 func (e *LaunchProfileStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_PROFILE_CREATED":
 		fallthrough
 	case "LAUNCH_PROFILE_UPDATED":
@@ -62,9 +66,9 @@ func (e *LaunchProfileStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "INVALID_INSTANCE_TYPES_PROVIDED":
 		fallthrough
 	case "INVALID_SUBNETS_COMBINATION":
-		*e = LaunchProfileStatusCodeEnum(s)
+		*e = LaunchProfileStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LaunchProfileStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for LaunchProfileStatusCodeEnum: %v", v)
 	}
 }

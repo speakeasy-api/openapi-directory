@@ -14,18 +14,22 @@ const (
 	ConnectivityEnumDisconnected ConnectivityEnum = "DISCONNECTED"
 )
 
+func (e ConnectivityEnum) ToPointer() *ConnectivityEnum {
+	return &e
+}
+
 func (e *ConnectivityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTED":
 		fallthrough
 	case "DISCONNECTED":
-		*e = ConnectivityEnum(s)
+		*e = ConnectivityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectivityEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectivityEnum: %v", v)
 	}
 }

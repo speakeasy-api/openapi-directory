@@ -16,17 +16,21 @@ const (
 	UpdateSubnetChangeProtectionXAmzTargetEnumNetworkFirewall20201112UpdateSubnetChangeProtection UpdateSubnetChangeProtectionXAmzTargetEnum = "NetworkFirewall_20201112.UpdateSubnetChangeProtection"
 )
 
+func (e UpdateSubnetChangeProtectionXAmzTargetEnum) ToPointer() *UpdateSubnetChangeProtectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateSubnetChangeProtectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NetworkFirewall_20201112.UpdateSubnetChangeProtection":
-		*e = UpdateSubnetChangeProtectionXAmzTargetEnum(s)
+		*e = UpdateSubnetChangeProtectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSubnetChangeProtectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSubnetChangeProtectionXAmzTargetEnum: %v", v)
 	}
 }
 

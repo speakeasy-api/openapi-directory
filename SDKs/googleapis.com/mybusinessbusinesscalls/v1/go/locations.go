@@ -34,7 +34,10 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // MybusinessbusinesscallsLocationsBusinesscallsinsightsList - Returns insights for Business calls for a location.
 func (s *locations) MybusinessbusinesscallsLocationsBusinesscallsinsightsList(ctx context.Context, request operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest) (*operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/businesscallsinsights", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/businesscallsinsights", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *locations) MybusinessbusinesscallsLocationsBusinesscallsinsightsList(ct
 // MybusinessbusinesscallsLocationsGetBusinesscallssettings - Returns the Business calls settings resource for the given location.
 func (s *locations) MybusinessbusinesscallsLocationsGetBusinesscallssettings(ctx context.Context, request operations.MybusinessbusinesscallsLocationsGetBusinesscallssettingsRequest) (*operations.MybusinessbusinesscallsLocationsGetBusinesscallssettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *locations) MybusinessbusinesscallsLocationsGetBusinesscallssettings(ctx
 // MybusinessbusinesscallsLocationsUpdateBusinesscallssettings - Updates the Business call settings for the specified location.
 func (s *locations) MybusinessbusinesscallsLocationsUpdateBusinesscallssettings(ctx context.Context, request operations.MybusinessbusinesscallsLocationsUpdateBusinesscallssettingsRequest) (*operations.MybusinessbusinesscallsLocationsUpdateBusinesscallssettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BusinessCallsSettings", "json")
 	if err != nil {

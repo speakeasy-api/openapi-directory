@@ -16,17 +16,21 @@ const (
 	UpdateScriptXAmzTargetEnumGameLiftUpdateScript UpdateScriptXAmzTargetEnum = "GameLift.UpdateScript"
 )
 
+func (e UpdateScriptXAmzTargetEnum) ToPointer() *UpdateScriptXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateScriptXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.UpdateScript":
-		*e = UpdateScriptXAmzTargetEnum(s)
+		*e = UpdateScriptXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateScriptXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateScriptXAmzTargetEnum: %v", v)
 	}
 }
 

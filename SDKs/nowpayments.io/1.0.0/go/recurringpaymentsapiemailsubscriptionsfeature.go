@@ -39,7 +39,10 @@ func newRecurringPaymentsAPIEmailSubscriptionsFeature(defaultClient, securityCli
 // You need to specify the payment plan id in the request.
 func (s *recurringPaymentsAPIEmailSubscriptionsFeature) DeleteRecurringPayment(ctx context.Context, request operations.DeleteRecurringPaymentRequest) (*operations.DeleteRecurringPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{sub_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{sub_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -211,7 +214,10 @@ func (s *recurringPaymentsAPIEmailSubscriptionsFeature) GetManyRecurringPayments
 // (you need to specify your payment plan id in the request).
 func (s *recurringPaymentsAPIEmailSubscriptionsFeature) GetOnePlan(ctx context.Context, request operations.GetOnePlanRequest) (*operations.GetOnePlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/plans/{plan-id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/plans/{plan-id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -274,7 +280,10 @@ func (s *recurringPaymentsAPIEmailSubscriptionsFeature) GetOnePlan(ctx context.C
 // \- EXPIRED
 func (s *recurringPaymentsAPIEmailSubscriptionsFeature) GetOneRecurringPayment(ctx context.Context, request operations.GetOneRecurringPaymentRequest) (*operations.GetOneRecurringPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{sub_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/{sub_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -338,7 +347,10 @@ func (s *recurringPaymentsAPIEmailSubscriptionsFeature) GetOneRecurringPayment(c
 // This method allows you to add necessary changes to a created plan. They won’t affect users who have already paid; however, the changes will take effect when a new payment is to be made.
 func (s *recurringPaymentsAPIEmailSubscriptionsFeature) UpdatePlan(ctx context.Context, request operations.UpdatePlanRequest) (*operations.UpdatePlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/plans/{plan-id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/subscriptions/plans/{plan-id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

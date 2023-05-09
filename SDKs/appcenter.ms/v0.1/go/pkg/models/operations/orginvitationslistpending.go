@@ -29,12 +29,16 @@ const (
 	OrgInvitationsListPendingDefaultApplicationJSONErrorCodeEnumTooManyRequests     OrgInvitationsListPendingDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e OrgInvitationsListPendingDefaultApplicationJSONErrorCodeEnum) ToPointer() *OrgInvitationsListPendingDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *OrgInvitationsListPendingDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -48,10 +52,10 @@ func (e *OrgInvitationsListPendingDefaultApplicationJSONErrorCodeEnum) Unmarshal
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = OrgInvitationsListPendingDefaultApplicationJSONErrorCodeEnum(s)
+		*e = OrgInvitationsListPendingDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgInvitationsListPendingDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgInvitationsListPendingDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

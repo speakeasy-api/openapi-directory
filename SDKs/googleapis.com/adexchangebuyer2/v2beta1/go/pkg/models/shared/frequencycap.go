@@ -22,12 +22,16 @@ const (
 	FrequencyCapTimeUnitTypeEnumStream                  FrequencyCapTimeUnitTypeEnum = "STREAM"
 )
 
+func (e FrequencyCapTimeUnitTypeEnum) ToPointer() *FrequencyCapTimeUnitTypeEnum {
+	return &e
+}
+
 func (e *FrequencyCapTimeUnitTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIME_UNIT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MINUTE":
@@ -45,10 +49,10 @@ func (e *FrequencyCapTimeUnitTypeEnum) UnmarshalJSON(data []byte) error {
 	case "POD":
 		fallthrough
 	case "STREAM":
-		*e = FrequencyCapTimeUnitTypeEnum(s)
+		*e = FrequencyCapTimeUnitTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FrequencyCapTimeUnitTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FrequencyCapTimeUnitTypeEnum: %v", v)
 	}
 }
 

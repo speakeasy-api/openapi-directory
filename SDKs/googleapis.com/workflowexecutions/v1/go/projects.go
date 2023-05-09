@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancel - Cancels an execution of the given name.
 func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancel(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest, security operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelSecurity) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancel(
 // WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreate - Creates a new execution using the latest revision of the given workflow.
 func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreate(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreateRequest, security operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreateSecurity) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExecutionInput", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCreate(
 // WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGet - Returns an execution of the given name.
 func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGet(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest, security operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetSecurity) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGet(ctx
 // WorkflowexecutionsProjectsLocationsWorkflowsExecutionsList - Returns a list of executions which belong to the workflow with the given name. The method returns executions of all workflow revisions. Returned executions are ordered by their start time (newest first).
 func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsList(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListRequest, security operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListSecurity) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsExecutionsList(ct
 // WorkflowexecutionsProjectsLocationsWorkflowsTriggerPubsubExecution - Triggers a new execution using the latest revision of the given workflow by a Pub/Sub push notification.
 func (s *projects) WorkflowexecutionsProjectsLocationsWorkflowsTriggerPubsubExecution(ctx context.Context, request operations.WorkflowexecutionsProjectsLocationsWorkflowsTriggerPubsubExecutionRequest, security operations.WorkflowexecutionsProjectsLocationsWorkflowsTriggerPubsubExecutionSecurity) (*operations.WorkflowexecutionsProjectsLocationsWorkflowsTriggerPubsubExecutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{workflow}:triggerPubsubExecution", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{workflow}:triggerPubsubExecution", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TriggerPubsubExecutionRequest", "json")
 	if err != nil {

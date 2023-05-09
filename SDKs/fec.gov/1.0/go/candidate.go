@@ -42,7 +42,10 @@ func newCandidate(defaultClient, securityClient HTTPClient, serverURL, language,
 // `candidate_id` to find the most recent information about that candidate.
 func (s *candidate) GetCandidateCandidateID(ctx context.Context, request operations.GetCandidateCandidateIDRequest) (*operations.GetCandidateCandidateIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *candidate) GetCandidateCandidateID(ctx context.Context, request operati
 // who ran for different offices over time; candidates get a new ID for each office.
 func (s *candidate) GetCandidateCandidateIDHistory(ctx context.Context, request operations.GetCandidateCandidateIDHistoryRequest) (*operations.GetCandidateCandidateIDHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/history/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/history/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -150,7 +156,10 @@ func (s *candidate) GetCandidateCandidateIDHistory(ctx context.Context, request 
 // who ran for different offices over time; candidates get a new ID for each office.
 func (s *candidate) GetCandidateCandidateIDHistoryCycle(ctx context.Context, request operations.GetCandidateCandidateIDHistoryCycleRequest) (*operations.GetCandidateCandidateIDHistoryCycleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/history/{cycle}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/history/{cycle}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -206,7 +215,10 @@ func (s *candidate) GetCandidateCandidateIDHistoryCycle(ctx context.Context, req
 // For presidential and Senate candidates, multiple two-year cycles exist between elections.
 func (s *candidate) GetCandidateCandidateIDTotals(ctx context.Context, request operations.GetCandidateCandidateIDTotalsRequest) (*operations.GetCandidateCandidateIDTotalsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/totals/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/totals/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -562,7 +574,10 @@ func (s *candidate) GetCandidatesTotalsByOfficeByParty(ctx context.Context, requ
 // `candidate_id` to find the most recent information about that candidate.
 func (s *candidate) GetCommitteeCommitteeIDCandidates(ctx context.Context, request operations.GetCommitteeCommitteeIDCandidatesRequest) (*operations.GetCommitteeCommitteeIDCandidatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/candidates/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/candidates/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -616,7 +631,10 @@ func (s *candidate) GetCommitteeCommitteeIDCandidates(ctx context.Context, reque
 // who ran for different offices over time; candidates get a new ID for each office.
 func (s *candidate) GetCommitteeCommitteeIDCandidatesHistory(ctx context.Context, request operations.GetCommitteeCommitteeIDCandidatesHistoryRequest) (*operations.GetCommitteeCommitteeIDCandidatesHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/candidates/history/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/candidates/history/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -670,7 +688,10 @@ func (s *candidate) GetCommitteeCommitteeIDCandidatesHistory(ctx context.Context
 // who ran for different offices over time; candidates get a new ID for each office.
 func (s *candidate) GetCommitteeCommitteeIDCandidatesHistoryCycle(ctx context.Context, request operations.GetCommitteeCommitteeIDCandidatesHistoryCycleRequest) (*operations.GetCommitteeCommitteeIDCandidatesHistoryCycleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/candidates/history/{cycle}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/candidates/history/{cycle}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

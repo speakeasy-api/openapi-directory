@@ -22,19 +22,23 @@ const (
 	ListSimilarImagesViewEnumFull    ListSimilarImagesViewEnum = "full"
 )
 
+func (e ListSimilarImagesViewEnum) ToPointer() *ListSimilarImagesViewEnum {
+	return &e
+}
+
 func (e *ListSimilarImagesViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimal":
 		fallthrough
 	case "full":
-		*e = ListSimilarImagesViewEnum(s)
+		*e = ListSimilarImagesViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSimilarImagesViewEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSimilarImagesViewEnum: %v", v)
 	}
 }
 

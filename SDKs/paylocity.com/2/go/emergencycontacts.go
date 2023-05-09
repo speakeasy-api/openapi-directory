@@ -35,7 +35,10 @@ func newEmergencyContacts(defaultClient, securityClient HTTPClient, serverURL, l
 // Sends new or updated employee emergency contacts directly to Web Pay.
 func (s *emergencyContacts) AddOrUpdateEmergencyContacts(ctx context.Context, request operations.AddOrUpdateEmergencyContactsRequest, security operations.AddOrUpdateEmergencyContactsSecurity) (*operations.AddOrUpdateEmergencyContactsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/emergencyContacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/emergencyContacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EmergencyContact", "json")
 	if err != nil {

@@ -2,18 +2,19 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ReplicapoolPoolsDeleteRequest{
+    ctx := context.Background()
+    res, err := s.Pools.ReplicapoolPoolsDelete(ctx, operations.ReplicapoolPoolsDeleteRequest{
         PoolsDeleteRequest: &shared.PoolsDeleteRequest{
             AbandonInstances: []string{
                 "provident",
@@ -21,20 +22,17 @@ func main() {
                 "quibusdam",
             },
         },
-        Alt: "json",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
         PoolName: "illum",
-        PrettyPrint: false,
+        PrettyPrint: sdk.Bool(false),
         ProjectName: "vel",
-        QuotaUser: "error",
-        UserIP: "deserunt",
+        QuotaUser: sdk.String("error"),
+        UserIP: sdk.String("deserunt"),
         Zone: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.Pools.ReplicapoolPoolsDelete(ctx, req, operations.ReplicapoolPoolsDeleteSecurity{
+    }, operations.ReplicapoolPoolsDeleteSecurity{
         Option1: &operations.ReplicapoolPoolsDeleteSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

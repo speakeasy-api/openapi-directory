@@ -3,6 +3,7 @@
 package shared
 
 type CreateComponentInput struct {
+	ClientToken         *string `json:"clientToken,omitempty"`
 	Description         *string `json:"description,omitempty"`
 	EnvironmentName     *string `json:"environmentName,omitempty"`
 	Manifest            string  `json:"manifest"`

@@ -9,7 +9,7 @@ type CommonFeatureSpec struct {
 	// Spec for App Dev Experience Feature.
 	Appdevexperience map[string]interface{} `json:"appdevexperience,omitempty"`
 	// **Fleet Observability**: The Hub-wide input for the FleetObservability feature.
-	Fleetobservability map[string]interface{} `json:"fleetobservability,omitempty"`
+	Fleetobservability *FleetObservabilityFeatureSpec `json:"fleetobservability,omitempty"`
 	// **Multi-cluster Ingress**: The configuration for the MultiClusterIngress feature.
 	Multiclusteringress *MultiClusterIngressFeatureSpec `json:"multiclusteringress,omitempty"`
 }

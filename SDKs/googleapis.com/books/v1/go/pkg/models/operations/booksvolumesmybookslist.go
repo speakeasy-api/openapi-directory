@@ -28,12 +28,16 @@ const (
 	BooksVolumesMybooksListAcquireMethodEnumUploaded               BooksVolumesMybooksListAcquireMethodEnum = "UPLOADED"
 )
 
+func (e BooksVolumesMybooksListAcquireMethodEnum) ToPointer() *BooksVolumesMybooksListAcquireMethodEnum {
+	return &e
+}
+
 func (e *BooksVolumesMybooksListAcquireMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACQUIRE_METHOD_UNDEFINED":
 		fallthrough
 	case "FAMILY_SHARED":
@@ -51,10 +55,10 @@ func (e *BooksVolumesMybooksListAcquireMethodEnum) UnmarshalJSON(data []byte) er
 	case "SAMPLE":
 		fallthrough
 	case "UPLOADED":
-		*e = BooksVolumesMybooksListAcquireMethodEnum(s)
+		*e = BooksVolumesMybooksListAcquireMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksVolumesMybooksListAcquireMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksVolumesMybooksListAcquireMethodEnum: %v", v)
 	}
 }
 
@@ -67,12 +71,16 @@ const (
 	BooksVolumesMybooksListProcessingStateEnumRunning                  BooksVolumesMybooksListProcessingStateEnum = "RUNNING"
 )
 
+func (e BooksVolumesMybooksListProcessingStateEnum) ToPointer() *BooksVolumesMybooksListProcessingStateEnum {
+	return &e
+}
+
 func (e *BooksVolumesMybooksListProcessingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING_STATE_UNDEFINED":
 		fallthrough
 	case "COMPLETED_FAILED":
@@ -80,10 +88,10 @@ func (e *BooksVolumesMybooksListProcessingStateEnum) UnmarshalJSON(data []byte) 
 	case "COMPLETED_SUCCESS":
 		fallthrough
 	case "RUNNING":
-		*e = BooksVolumesMybooksListProcessingStateEnum(s)
+		*e = BooksVolumesMybooksListProcessingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksVolumesMybooksListProcessingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksVolumesMybooksListProcessingStateEnum: %v", v)
 	}
 }
 

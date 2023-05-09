@@ -18,12 +18,16 @@ const (
 	OperationProgressStatusEnumAborting          OperationProgressStatusEnum = "ABORTING"
 )
 
+func (e OperationProgressStatusEnum) ToPointer() *OperationProgressStatusEnum {
+	return &e
+}
+
 func (e *OperationProgressStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -33,10 +37,10 @@ func (e *OperationProgressStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DONE":
 		fallthrough
 	case "ABORTING":
-		*e = OperationProgressStatusEnum(s)
+		*e = OperationProgressStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperationProgressStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OperationProgressStatusEnum: %v", v)
 	}
 }
 

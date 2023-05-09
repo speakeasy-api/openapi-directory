@@ -15,17 +15,21 @@ const (
 	POSTDescribeRouteTablesActionEnumDescribeRouteTables POSTDescribeRouteTablesActionEnum = "DescribeRouteTables"
 )
 
+func (e POSTDescribeRouteTablesActionEnum) ToPointer() *POSTDescribeRouteTablesActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeRouteTablesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeRouteTables":
-		*e = POSTDescribeRouteTablesActionEnum(s)
+		*e = POSTDescribeRouteTablesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeRouteTablesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeRouteTablesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeRouteTablesVersionEnumTwoThousandAndSixteen1115 POSTDescribeRouteTablesVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeRouteTablesVersionEnum) ToPointer() *POSTDescribeRouteTablesVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeRouteTablesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeRouteTablesVersionEnum(s)
+		*e = POSTDescribeRouteTablesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeRouteTablesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeRouteTablesVersionEnum: %v", v)
 	}
 }
 

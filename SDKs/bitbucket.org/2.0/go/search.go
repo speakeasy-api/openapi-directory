@@ -190,7 +190,10 @@ func newSearch(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Try `fields=%2Bvalues.*.*.*.*` to get an idea what's possible.
 func (s *search) SearchAccount(ctx context.Context, request operations.SearchAccountRequest) (*operations.SearchAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/search/code", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/search/code", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +411,10 @@ func (s *search) SearchAccount(ctx context.Context, request operations.SearchAcc
 // Try `fields=%2Bvalues.*.*.*.*` to get an idea what's possible.
 func (s *search) SearchTeam(ctx context.Context, request operations.SearchTeamRequest) (*operations.SearchTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/search/code", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{username}/search/code", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -626,7 +632,10 @@ func (s *search) SearchTeam(ctx context.Context, request operations.SearchTeamRe
 // Try `fields=%2Bvalues.*.*.*.*` to get an idea what's possible.
 func (s *search) SearchWorkspace(ctx context.Context, request operations.SearchWorkspaceRequest) (*operations.SearchWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/search/code", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/search/code", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

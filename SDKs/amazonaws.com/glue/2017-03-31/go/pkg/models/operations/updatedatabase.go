@@ -16,17 +16,21 @@ const (
 	UpdateDatabaseXAmzTargetEnumAwsGlueUpdateDatabase UpdateDatabaseXAmzTargetEnum = "AWSGlue.UpdateDatabase"
 )
 
+func (e UpdateDatabaseXAmzTargetEnum) ToPointer() *UpdateDatabaseXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDatabaseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.UpdateDatabase":
-		*e = UpdateDatabaseXAmzTargetEnum(s)
+		*e = UpdateDatabaseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDatabaseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDatabaseXAmzTargetEnum: %v", v)
 	}
 }
 

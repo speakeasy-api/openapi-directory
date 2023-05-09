@@ -16,20 +16,24 @@ const (
 	DeliverabilityDashboardAccountStatusEnumDisabled          DeliverabilityDashboardAccountStatusEnum = "DISABLED"
 )
 
+func (e DeliverabilityDashboardAccountStatusEnum) ToPointer() *DeliverabilityDashboardAccountStatusEnum {
+	return &e
+}
+
 func (e *DeliverabilityDashboardAccountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "PENDING_EXPIRATION":
 		fallthrough
 	case "DISABLED":
-		*e = DeliverabilityDashboardAccountStatusEnum(s)
+		*e = DeliverabilityDashboardAccountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliverabilityDashboardAccountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliverabilityDashboardAccountStatusEnum: %v", v)
 	}
 }

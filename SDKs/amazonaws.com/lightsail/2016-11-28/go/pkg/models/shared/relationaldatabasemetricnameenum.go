@@ -18,12 +18,16 @@ const (
 	RelationalDatabaseMetricNameEnumNetworkTransmitThroughput RelationalDatabaseMetricNameEnum = "NetworkTransmitThroughput"
 )
 
+func (e RelationalDatabaseMetricNameEnum) ToPointer() *RelationalDatabaseMetricNameEnum {
+	return &e
+}
+
 func (e *RelationalDatabaseMetricNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CPUUtilization":
 		fallthrough
 	case "DatabaseConnections":
@@ -35,9 +39,9 @@ func (e *RelationalDatabaseMetricNameEnum) UnmarshalJSON(data []byte) error {
 	case "NetworkReceiveThroughput":
 		fallthrough
 	case "NetworkTransmitThroughput":
-		*e = RelationalDatabaseMetricNameEnum(s)
+		*e = RelationalDatabaseMetricNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RelationalDatabaseMetricNameEnum: %s", s)
+		return fmt.Errorf("invalid value for RelationalDatabaseMetricNameEnum: %v", v)
 	}
 }

@@ -37,7 +37,10 @@ func newNotifications(defaultClient, securityClient HTTPClient, serverURL, langu
 // Delete Notification
 func (s *notifications) DeleteNotificationsID(ctx context.Context, request operations.DeleteNotificationsIDRequest) (*operations.DeleteNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *notifications) GetNotifications(ctx context.Context, request operations
 // Show Notification
 func (s *notifications) GetNotificationsID(ctx context.Context, request operations.GetNotificationsIDRequest) (*operations.GetNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *notifications) GetNotificationsID(ctx context.Context, request operatio
 // Update Notification
 func (s *notifications) PatchNotificationsID(ctx context.Context, request operations.PatchNotificationsIDRequest) (*operations.PatchNotificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/notifications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

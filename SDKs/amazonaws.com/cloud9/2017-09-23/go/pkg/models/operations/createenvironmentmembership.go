@@ -16,17 +16,21 @@ const (
 	CreateEnvironmentMembershipXAmzTargetEnumAwsCloud9WorkspaceManagementServiceCreateEnvironmentMembership CreateEnvironmentMembershipXAmzTargetEnum = "AWSCloud9WorkspaceManagementService.CreateEnvironmentMembership"
 )
 
+func (e CreateEnvironmentMembershipXAmzTargetEnum) ToPointer() *CreateEnvironmentMembershipXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateEnvironmentMembershipXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCloud9WorkspaceManagementService.CreateEnvironmentMembership":
-		*e = CreateEnvironmentMembershipXAmzTargetEnum(s)
+		*e = CreateEnvironmentMembershipXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateEnvironmentMembershipXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateEnvironmentMembershipXAmzTargetEnum: %v", v)
 	}
 }
 

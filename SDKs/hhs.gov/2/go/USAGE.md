@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetResourcesCampaignsJSONRequest{
-        Max: 548814,
-        Offset: 592845,
-        Sort: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.Campaigns.GetResourcesCampaignsJSON(ctx, req)
+    res, err := s.Campaigns.GetResourcesCampaignsJSON(ctx, operations.GetResourcesCampaignsJSONRequest{
+        Max: sdk.Int(548814),
+        Offset: sdk.Int(592845),
+        Sort: sdk.String("distinctio"),
+    })
     if err != nil {
         log.Fatal(err)
     }

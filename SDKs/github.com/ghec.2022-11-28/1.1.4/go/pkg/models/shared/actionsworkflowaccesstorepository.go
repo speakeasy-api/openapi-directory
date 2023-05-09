@@ -20,12 +20,16 @@ const (
 	ActionsWorkflowAccessToRepositoryAccessLevelEnumEnterprise   ActionsWorkflowAccessToRepositoryAccessLevelEnum = "enterprise"
 )
 
+func (e ActionsWorkflowAccessToRepositoryAccessLevelEnum) ToPointer() *ActionsWorkflowAccessToRepositoryAccessLevelEnum {
+	return &e
+}
+
 func (e *ActionsWorkflowAccessToRepositoryAccessLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "user":
@@ -33,10 +37,10 @@ func (e *ActionsWorkflowAccessToRepositoryAccessLevelEnum) UnmarshalJSON(data []
 	case "organization":
 		fallthrough
 	case "enterprise":
-		*e = ActionsWorkflowAccessToRepositoryAccessLevelEnum(s)
+		*e = ActionsWorkflowAccessToRepositoryAccessLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionsWorkflowAccessToRepositoryAccessLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionsWorkflowAccessToRepositoryAccessLevelEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	MetricThresholdComparisonEnumComparisonNe          MetricThresholdComparisonEnum = "COMPARISON_NE"
 )
 
+func (e MetricThresholdComparisonEnum) ToPointer() *MetricThresholdComparisonEnum {
+	return &e
+}
+
 func (e *MetricThresholdComparisonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPARISON_UNSPECIFIED":
 		fallthrough
 	case "COMPARISON_GT":
@@ -39,10 +43,10 @@ func (e *MetricThresholdComparisonEnum) UnmarshalJSON(data []byte) error {
 	case "COMPARISON_EQ":
 		fallthrough
 	case "COMPARISON_NE":
-		*e = MetricThresholdComparisonEnum(s)
+		*e = MetricThresholdComparisonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricThresholdComparisonEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricThresholdComparisonEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	MetricThresholdEvaluationMissingDataEnumEvaluationMissingDataNoOp        MetricThresholdEvaluationMissingDataEnum = "EVALUATION_MISSING_DATA_NO_OP"
 )
 
+func (e MetricThresholdEvaluationMissingDataEnum) ToPointer() *MetricThresholdEvaluationMissingDataEnum {
+	return &e
+}
+
 func (e *MetricThresholdEvaluationMissingDataEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVALUATION_MISSING_DATA_UNSPECIFIED":
 		fallthrough
 	case "EVALUATION_MISSING_DATA_INACTIVE":
@@ -69,10 +77,10 @@ func (e *MetricThresholdEvaluationMissingDataEnum) UnmarshalJSON(data []byte) er
 	case "EVALUATION_MISSING_DATA_ACTIVE":
 		fallthrough
 	case "EVALUATION_MISSING_DATA_NO_OP":
-		*e = MetricThresholdEvaluationMissingDataEnum(s)
+		*e = MetricThresholdEvaluationMissingDataEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricThresholdEvaluationMissingDataEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricThresholdEvaluationMissingDataEnum: %v", v)
 	}
 }
 

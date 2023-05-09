@@ -16,17 +16,21 @@ const (
 	GetContainerAPIMetadataXAmzTargetEnumLightsail20161128GetContainerAPIMetadata GetContainerAPIMetadataXAmzTargetEnum = "Lightsail_20161128.GetContainerAPIMetadata"
 )
 
+func (e GetContainerAPIMetadataXAmzTargetEnum) ToPointer() *GetContainerAPIMetadataXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetContainerAPIMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetContainerAPIMetadata":
-		*e = GetContainerAPIMetadataXAmzTargetEnum(s)
+		*e = GetContainerAPIMetadataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetContainerAPIMetadataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetContainerAPIMetadataXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -38,7 +38,10 @@ func newStatus(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Returns a list of subscriptions and their status for a given contact.
 func (s *status) GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatus(ctx context.Context, request operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest, security operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity) (*operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/communication-preferences/v3/status/email/{emailAddress}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/communication-preferences/v3/status/email/{emailAddress}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

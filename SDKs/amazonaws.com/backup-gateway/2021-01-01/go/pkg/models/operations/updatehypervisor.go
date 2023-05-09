@@ -16,17 +16,21 @@ const (
 	UpdateHypervisorXAmzTargetEnumBackupOnPremisesV20210101UpdateHypervisor UpdateHypervisorXAmzTargetEnum = "BackupOnPremises_v20210101.UpdateHypervisor"
 )
 
+func (e UpdateHypervisorXAmzTargetEnum) ToPointer() *UpdateHypervisorXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateHypervisorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.UpdateHypervisor":
-		*e = UpdateHypervisorXAmzTargetEnum(s)
+		*e = UpdateHypervisorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateHypervisorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateHypervisorXAmzTargetEnum: %v", v)
 	}
 }
 

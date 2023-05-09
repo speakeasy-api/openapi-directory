@@ -17,21 +17,25 @@ const (
 	ListGeofenceCollectionsResponseEntryPricingPlanEnumMobileAssetManagement ListGeofenceCollectionsResponseEntryPricingPlanEnum = "MobileAssetManagement"
 )
 
+func (e ListGeofenceCollectionsResponseEntryPricingPlanEnum) ToPointer() *ListGeofenceCollectionsResponseEntryPricingPlanEnum {
+	return &e
+}
+
 func (e *ListGeofenceCollectionsResponseEntryPricingPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RequestBasedUsage":
 		fallthrough
 	case "MobileAssetTracking":
 		fallthrough
 	case "MobileAssetManagement":
-		*e = ListGeofenceCollectionsResponseEntryPricingPlanEnum(s)
+		*e = ListGeofenceCollectionsResponseEntryPricingPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListGeofenceCollectionsResponseEntryPricingPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for ListGeofenceCollectionsResponseEntryPricingPlanEnum: %v", v)
 	}
 }
 

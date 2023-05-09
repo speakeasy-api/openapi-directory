@@ -15,17 +15,21 @@ const (
 	GETGETIdentityNotificationAttributesActionEnumGetIdentityNotificationAttributes GETGETIdentityNotificationAttributesActionEnum = "GetIdentityNotificationAttributes"
 )
 
+func (e GETGETIdentityNotificationAttributesActionEnum) ToPointer() *GETGETIdentityNotificationAttributesActionEnum {
+	return &e
+}
+
 func (e *GETGETIdentityNotificationAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetIdentityNotificationAttributes":
-		*e = GETGETIdentityNotificationAttributesActionEnum(s)
+		*e = GETGETIdentityNotificationAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETIdentityNotificationAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETIdentityNotificationAttributesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETIdentityNotificationAttributesVersionEnumTwoThousandAndTen1201 GETGETIdentityNotificationAttributesVersionEnum = "2010-12-01"
 )
 
+func (e GETGETIdentityNotificationAttributesVersionEnum) ToPointer() *GETGETIdentityNotificationAttributesVersionEnum {
+	return &e
+}
+
 func (e *GETGETIdentityNotificationAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETGETIdentityNotificationAttributesVersionEnum(s)
+		*e = GETGETIdentityNotificationAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETIdentityNotificationAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETIdentityNotificationAttributesVersionEnum: %v", v)
 	}
 }
 

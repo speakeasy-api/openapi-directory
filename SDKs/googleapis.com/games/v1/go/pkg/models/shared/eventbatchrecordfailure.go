@@ -20,12 +20,16 @@ const (
 	EventBatchRecordFailureFailureCauseEnumRecordRateHigh               EventBatchRecordFailureFailureCauseEnum = "RECORD_RATE_HIGH"
 )
 
+func (e EventBatchRecordFailureFailureCauseEnum) ToPointer() *EventBatchRecordFailureFailureCauseEnum {
+	return &e
+}
+
 func (e *EventBatchRecordFailureFailureCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVENT_FAILURE_CAUSE_UNSPECIFIED":
 		fallthrough
 	case "TOO_LARGE":
@@ -39,10 +43,10 @@ func (e *EventBatchRecordFailureFailureCauseEnum) UnmarshalJSON(data []byte) err
 	case "ALREADY_UPDATED":
 		fallthrough
 	case "RECORD_RATE_HIGH":
-		*e = EventBatchRecordFailureFailureCauseEnum(s)
+		*e = EventBatchRecordFailureFailureCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventBatchRecordFailureFailureCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for EventBatchRecordFailureFailureCauseEnum: %v", v)
 	}
 }
 

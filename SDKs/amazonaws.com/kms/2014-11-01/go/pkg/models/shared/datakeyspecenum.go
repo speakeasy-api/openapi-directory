@@ -14,18 +14,22 @@ const (
 	DataKeySpecEnumAes128 DataKeySpecEnum = "AES_128"
 )
 
+func (e DataKeySpecEnum) ToPointer() *DataKeySpecEnum {
+	return &e
+}
+
 func (e *DataKeySpecEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AES_256":
 		fallthrough
 	case "AES_128":
-		*e = DataKeySpecEnum(s)
+		*e = DataKeySpecEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataKeySpecEnum: %s", s)
+		return fmt.Errorf("invalid value for DataKeySpecEnum: %v", v)
 	}
 }

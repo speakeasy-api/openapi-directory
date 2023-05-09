@@ -13,27 +13,24 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/CheckoutUtility
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.CheckoutUtilityRequest{
+    ctx := context.Background()
+    res, err := s.PostOriginKeys(ctx, shared.CheckoutUtilityRequest{
         OriginDomains: []string{
             "provident",
             "distinctio",
             "quibusdam",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.PostOriginKeys(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,9 +45,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `PostOriginKeys` - Create originKey values for one or more merchant domains.
+* [PostOriginKeys](docs/sdk/README.md#postoriginkeys) - Create originKey values for one or more merchant domains.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,17 +15,21 @@ const (
 	GETRejectVpcPeeringConnectionActionEnumRejectVpcPeeringConnection GETRejectVpcPeeringConnectionActionEnum = "RejectVpcPeeringConnection"
 )
 
+func (e GETRejectVpcPeeringConnectionActionEnum) ToPointer() *GETRejectVpcPeeringConnectionActionEnum {
+	return &e
+}
+
 func (e *GETRejectVpcPeeringConnectionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RejectVpcPeeringConnection":
-		*e = GETRejectVpcPeeringConnectionActionEnum(s)
+		*e = GETRejectVpcPeeringConnectionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRejectVpcPeeringConnectionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRejectVpcPeeringConnectionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRejectVpcPeeringConnectionVersionEnumTwoThousandAndSixteen1115 GETRejectVpcPeeringConnectionVersionEnum = "2016-11-15"
 )
 
+func (e GETRejectVpcPeeringConnectionVersionEnum) ToPointer() *GETRejectVpcPeeringConnectionVersionEnum {
+	return &e
+}
+
 func (e *GETRejectVpcPeeringConnectionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETRejectVpcPeeringConnectionVersionEnum(s)
+		*e = GETRejectVpcPeeringConnectionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRejectVpcPeeringConnectionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRejectVpcPeeringConnectionVersionEnum: %v", v)
 	}
 }
 

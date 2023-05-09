@@ -16,17 +16,21 @@ const (
 	GetPermissionPolicyXAmzTargetEnumAwswaf20150824GetPermissionPolicy GetPermissionPolicyXAmzTargetEnum = "AWSWAF_20150824.GetPermissionPolicy"
 )
 
+func (e GetPermissionPolicyXAmzTargetEnum) ToPointer() *GetPermissionPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetPermissionPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.GetPermissionPolicy":
-		*e = GetPermissionPolicyXAmzTargetEnum(s)
+		*e = GetPermissionPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPermissionPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPermissionPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

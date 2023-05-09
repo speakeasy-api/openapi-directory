@@ -14,18 +14,22 @@ const (
 	CodeRepositorySortOrderEnumDescending CodeRepositorySortOrderEnum = "Descending"
 )
 
+func (e CodeRepositorySortOrderEnum) ToPointer() *CodeRepositorySortOrderEnum {
+	return &e
+}
+
 func (e *CodeRepositorySortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ascending":
 		fallthrough
 	case "Descending":
-		*e = CodeRepositorySortOrderEnum(s)
+		*e = CodeRepositorySortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodeRepositorySortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for CodeRepositorySortOrderEnum: %v", v)
 	}
 }

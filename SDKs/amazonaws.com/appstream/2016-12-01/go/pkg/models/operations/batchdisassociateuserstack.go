@@ -16,17 +16,21 @@ const (
 	BatchDisassociateUserStackXAmzTargetEnumPhotonAdminProxyServiceBatchDisassociateUserStack BatchDisassociateUserStackXAmzTargetEnum = "PhotonAdminProxyService.BatchDisassociateUserStack"
 )
 
+func (e BatchDisassociateUserStackXAmzTargetEnum) ToPointer() *BatchDisassociateUserStackXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchDisassociateUserStackXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.BatchDisassociateUserStack":
-		*e = BatchDisassociateUserStackXAmzTargetEnum(s)
+		*e = BatchDisassociateUserStackXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchDisassociateUserStackXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchDisassociateUserStackXAmzTargetEnum: %v", v)
 	}
 }
 

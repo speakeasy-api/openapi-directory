@@ -8,14 +8,16 @@ import (
 
 // GetMonitorOutput - Success
 type GetMonitorOutput struct {
-	CreatedAt                time.Time                        `json:"CreatedAt"`
-	MaxCityNetworksToMonitor int64                            `json:"MaxCityNetworksToMonitor"`
-	ModifiedAt               time.Time                        `json:"ModifiedAt"`
-	MonitorArn               string                           `json:"MonitorArn"`
-	MonitorName              string                           `json:"MonitorName"`
-	ProcessingStatus         *MonitorProcessingStatusCodeEnum `json:"ProcessingStatus,omitempty"`
-	ProcessingStatusInfo     *string                          `json:"ProcessingStatusInfo,omitempty"`
-	Resources                []string                         `json:"Resources"`
-	Status                   MonitorConfigStateEnum           `json:"Status"`
-	Tags                     map[string]string                `json:"Tags,omitempty"`
+	CreatedAt                       time.Time                        `json:"CreatedAt"`
+	InternetMeasurementsLogDelivery *InternetMeasurementsLogDelivery `json:"InternetMeasurementsLogDelivery,omitempty"`
+	MaxCityNetworksToMonitor        *int64                           `json:"MaxCityNetworksToMonitor,omitempty"`
+	ModifiedAt                      time.Time                        `json:"ModifiedAt"`
+	MonitorArn                      string                           `json:"MonitorArn"`
+	MonitorName                     string                           `json:"MonitorName"`
+	ProcessingStatus                *MonitorProcessingStatusCodeEnum `json:"ProcessingStatus,omitempty"`
+	ProcessingStatusInfo            *string                          `json:"ProcessingStatusInfo,omitempty"`
+	Resources                       []string                         `json:"Resources"`
+	Status                          MonitorConfigStateEnum           `json:"Status"`
+	Tags                            map[string]string                `json:"Tags,omitempty"`
+	TrafficPercentageToMonitor      *int64                           `json:"TrafficPercentageToMonitor,omitempty"`
 }

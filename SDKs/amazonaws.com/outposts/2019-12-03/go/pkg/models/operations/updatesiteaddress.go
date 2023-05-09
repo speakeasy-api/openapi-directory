@@ -32,19 +32,23 @@ const (
 	UpdateSiteAddressRequestBodyAddressTypeEnumOperatingAddress UpdateSiteAddressRequestBodyAddressTypeEnum = "OPERATING_ADDRESS"
 )
 
+func (e UpdateSiteAddressRequestBodyAddressTypeEnum) ToPointer() *UpdateSiteAddressRequestBodyAddressTypeEnum {
+	return &e
+}
+
 func (e *UpdateSiteAddressRequestBodyAddressTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHIPPING_ADDRESS":
 		fallthrough
 	case "OPERATING_ADDRESS":
-		*e = UpdateSiteAddressRequestBodyAddressTypeEnum(s)
+		*e = UpdateSiteAddressRequestBodyAddressTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSiteAddressRequestBodyAddressTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSiteAddressRequestBodyAddressTypeEnum: %v", v)
 	}
 }
 

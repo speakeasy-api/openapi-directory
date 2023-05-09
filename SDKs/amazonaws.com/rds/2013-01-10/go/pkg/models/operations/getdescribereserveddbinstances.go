@@ -15,17 +15,21 @@ const (
 	GETDescribeReservedDBInstancesActionEnumDescribeReservedDbInstances GETDescribeReservedDBInstancesActionEnum = "DescribeReservedDBInstances"
 )
 
+func (e GETDescribeReservedDBInstancesActionEnum) ToPointer() *GETDescribeReservedDBInstancesActionEnum {
+	return &e
+}
+
 func (e *GETDescribeReservedDBInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeReservedDBInstances":
-		*e = GETDescribeReservedDBInstancesActionEnum(s)
+		*e = GETDescribeReservedDBInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeReservedDBInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeReservedDBInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeReservedDBInstancesVersionEnumTwoThousandAndThirteen0110 GETDescribeReservedDBInstancesVersionEnum = "2013-01-10"
 )
 
+func (e GETDescribeReservedDBInstancesVersionEnum) ToPointer() *GETDescribeReservedDBInstancesVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeReservedDBInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-10":
-		*e = GETDescribeReservedDBInstancesVersionEnum(s)
+		*e = GETDescribeReservedDBInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeReservedDBInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeReservedDBInstancesVersionEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	FolderTypeEnumStandardFolder  FolderTypeEnum = "STANDARD_FOLDER"
 )
 
+func (e FolderTypeEnum) ToPointer() *FolderTypeEnum {
+	return &e
+}
+
 func (e *FolderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "MY_DRIVE_ROOT":
@@ -30,10 +34,10 @@ func (e *FolderTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TEAM_DRIVE_ROOT":
 		fallthrough
 	case "STANDARD_FOLDER":
-		*e = FolderTypeEnum(s)
+		*e = FolderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FolderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FolderTypeEnum: %v", v)
 	}
 }
 

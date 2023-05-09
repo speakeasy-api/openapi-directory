@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2VoiceSelectionParamsSsmlGenderEnumSsmlVoiceGenderNeutral     GoogleCloudDialogflowV2VoiceSelectionParamsSsmlGenderEnum = "SSML_VOICE_GENDER_NEUTRAL"
 )
 
+func (e GoogleCloudDialogflowV2VoiceSelectionParamsSsmlGenderEnum) ToPointer() *GoogleCloudDialogflowV2VoiceSelectionParamsSsmlGenderEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2VoiceSelectionParamsSsmlGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSML_VOICE_GENDER_UNSPECIFIED":
 		fallthrough
 	case "SSML_VOICE_GENDER_MALE":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowV2VoiceSelectionParamsSsmlGenderEnum) UnmarshalJSO
 	case "SSML_VOICE_GENDER_FEMALE":
 		fallthrough
 	case "SSML_VOICE_GENDER_NEUTRAL":
-		*e = GoogleCloudDialogflowV2VoiceSelectionParamsSsmlGenderEnum(s)
+		*e = GoogleCloudDialogflowV2VoiceSelectionParamsSsmlGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2VoiceSelectionParamsSsmlGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2VoiceSelectionParamsSsmlGenderEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newEntityUsageReports(defaultClient, securityClient HTTPClient, serverURL, 
 // ReportsEntityUsageReportsGet - Retrieves a report which is a collection of properties and statistics for entities used by users within the account. For more information, see the Entities Usage Report guide. For more information about the entities report's parameters, see the Entities Usage parameters reference guides.
 func (s *entityUsageReports) ReportsEntityUsageReportsGet(ctx context.Context, request operations.ReportsEntityUsageReportsGetRequest, security operations.ReportsEntityUsageReportsGetSecurity) (*operations.ReportsEntityUsageReportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/usage/{entityType}/{entityKey}/dates/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/usage/{entityType}/{entityKey}/dates/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

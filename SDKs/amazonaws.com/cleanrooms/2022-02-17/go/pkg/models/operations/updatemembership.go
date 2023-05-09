@@ -17,19 +17,23 @@ const (
 	UpdateMembershipRequestBodyQueryLogStatusEnumDisabled UpdateMembershipRequestBodyQueryLogStatusEnum = "DISABLED"
 )
 
+func (e UpdateMembershipRequestBodyQueryLogStatusEnum) ToPointer() *UpdateMembershipRequestBodyQueryLogStatusEnum {
+	return &e
+}
+
 func (e *UpdateMembershipRequestBodyQueryLogStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = UpdateMembershipRequestBodyQueryLogStatusEnum(s)
+		*e = UpdateMembershipRequestBodyQueryLogStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMembershipRequestBodyQueryLogStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMembershipRequestBodyQueryLogStatusEnum: %v", v)
 	}
 }
 

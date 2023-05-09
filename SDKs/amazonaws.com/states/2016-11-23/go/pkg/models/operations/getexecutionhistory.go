@@ -16,17 +16,21 @@ const (
 	GetExecutionHistoryXAmzTargetEnumAwsStepFunctionsGetExecutionHistory GetExecutionHistoryXAmzTargetEnum = "AWSStepFunctions.GetExecutionHistory"
 )
 
+func (e GetExecutionHistoryXAmzTargetEnum) ToPointer() *GetExecutionHistoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetExecutionHistoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSStepFunctions.GetExecutionHistory":
-		*e = GetExecutionHistoryXAmzTargetEnum(s)
+		*e = GetExecutionHistoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetExecutionHistoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetExecutionHistoryXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -21,12 +21,16 @@ const (
 	ConfluenceBlogFieldNameEnumVersion     ConfluenceBlogFieldNameEnum = "VERSION"
 )
 
+func (e ConfluenceBlogFieldNameEnum) ToPointer() *ConfluenceBlogFieldNameEnum {
+	return &e
+}
+
 func (e *ConfluenceBlogFieldNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTHOR":
 		fallthrough
 	case "DISPLAY_URL":
@@ -44,9 +48,9 @@ func (e *ConfluenceBlogFieldNameEnum) UnmarshalJSON(data []byte) error {
 	case "URL":
 		fallthrough
 	case "VERSION":
-		*e = ConfluenceBlogFieldNameEnum(s)
+		*e = ConfluenceBlogFieldNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfluenceBlogFieldNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfluenceBlogFieldNameEnum: %v", v)
 	}
 }

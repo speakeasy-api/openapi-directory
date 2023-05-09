@@ -13,40 +13,38 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/factcheckt
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FactchecktoolsClaimsSearchRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        LanguageCode: "corrupti",
-        MaxAgeDays: 847252,
-        OauthToken: "vel",
-        Offset: 623564,
-        PageSize: 645894,
-        PageToken: "suscipit",
-        PrettyPrint: false,
-        Query: "iure",
-        QuotaUser: "magnam",
-        ReviewPublisherSiteFilter: "debitis",
-        UploadType: "ipsa",
-        UploadProtocol: "delectus",
-    }
-
     ctx := context.Background()
-    res, err := s.Claims.FactchecktoolsClaimsSearch(ctx, req)
+    res, err := s.Claims.FactchecktoolsClaimsSearch(ctx, operations.FactchecktoolsClaimsSearchRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        LanguageCode: sdk.String("corrupti"),
+        MaxAgeDays: sdk.Int64(847252),
+        OauthToken: sdk.String("vel"),
+        Offset: sdk.Int64(623564),
+        PageSize: sdk.Int64(645894),
+        PageToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        Query: sdk.String("iure"),
+        QuotaUser: sdk.String("magnam"),
+        ReviewPublisherSiteFilter: sdk.String("debitis"),
+        UploadType: sdk.String("ipsa"),
+        UploadProtocol: sdk.String("delectus"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -62,17 +60,17 @@ func main() {
 ## Available Resources and Operations
 
 
-### Claims
+### [Claims](docs/claims/README.md)
 
-* `FactchecktoolsClaimsSearch` - Search through fact-checked claims.
+* [FactchecktoolsClaimsSearch](docs/claims/README.md#factchecktoolsclaimssearch) - Search through fact-checked claims.
 
-### Pages
+### [Pages](docs/pages/README.md)
 
-* `FactchecktoolsPagesCreate` - Create `ClaimReview` markup on a page.
-* `FactchecktoolsPagesDelete` - Delete all `ClaimReview` markup on a page.
-* `FactchecktoolsPagesGet` - Get all `ClaimReview` markup on a page.
-* `FactchecktoolsPagesList` - List the `ClaimReview` markup pages for a specific URL or for an organization.
-* `FactchecktoolsPagesUpdate` - Update for all `ClaimReview` markup on a page Note that this is a full update. To retain the existing `ClaimReview` markup on a page, first perform a Get operation, then modify the returned markup, and finally call Update with the entire `ClaimReview` markup as the body.
+* [FactchecktoolsPagesCreate](docs/pages/README.md#factchecktoolspagescreate) - Create `ClaimReview` markup on a page.
+* [FactchecktoolsPagesDelete](docs/pages/README.md#factchecktoolspagesdelete) - Delete all `ClaimReview` markup on a page.
+* [FactchecktoolsPagesGet](docs/pages/README.md#factchecktoolspagesget) - Get all `ClaimReview` markup on a page.
+* [FactchecktoolsPagesList](docs/pages/README.md#factchecktoolspageslist) - List the `ClaimReview` markup pages for a specific URL or for an organization.
+* [FactchecktoolsPagesUpdate](docs/pages/README.md#factchecktoolspagesupdate) - Update for all `ClaimReview` markup on a page Note that this is a full update. To retain the existing `ClaimReview` markup on a page, first perform a Get operation, then modify the returned markup, and finally call Update with the entire `ClaimReview` markup as the body.
 <!-- End SDK Available Operations -->
 
 ### Maturity

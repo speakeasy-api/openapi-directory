@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DNSProjectsGet - Fetches the representation of an existing Project.
 func (s *projects) DNSProjectsGet(ctx context.Context, request operations.DNSProjectsGetRequest, security operations.DNSProjectsGetSecurity) (*operations.DNSProjectsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v2/projects/{project}/locations/{location}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

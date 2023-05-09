@@ -16,17 +16,21 @@ const (
 	ConfirmPrivateVirtualInterfaceXAmzTargetEnumOvertureServiceConfirmPrivateVirtualInterface ConfirmPrivateVirtualInterfaceXAmzTargetEnum = "OvertureService.ConfirmPrivateVirtualInterface"
 )
 
+func (e ConfirmPrivateVirtualInterfaceXAmzTargetEnum) ToPointer() *ConfirmPrivateVirtualInterfaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *ConfirmPrivateVirtualInterfaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.ConfirmPrivateVirtualInterface":
-		*e = ConfirmPrivateVirtualInterfaceXAmzTargetEnum(s)
+		*e = ConfirmPrivateVirtualInterfaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfirmPrivateVirtualInterfaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfirmPrivateVirtualInterfaceXAmzTargetEnum: %v", v)
 	}
 }
 

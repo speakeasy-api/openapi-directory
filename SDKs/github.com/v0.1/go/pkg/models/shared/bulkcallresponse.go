@@ -22,12 +22,16 @@ const (
 	BulkCallResponseMessageEnumUnknownCoreUUID                             BulkCallResponseMessageEnum = "Unknown Core UUID"
 )
 
+func (e BulkCallResponseMessageEnum) ToPointer() *BulkCallResponseMessageEnum {
+	return &e
+}
+
 func (e *BulkCallResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BulkCalls Request Executed":
 		fallthrough
 	case "Mandatory Parameters Missing":
@@ -45,10 +49,10 @@ func (e *BulkCallResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "RingUrl is not Valid":
 		fallthrough
 	case "Unknown Core UUID":
-		*e = BulkCallResponseMessageEnum(s)
+		*e = BulkCallResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BulkCallResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for BulkCallResponseMessageEnum: %v", v)
 	}
 }
 

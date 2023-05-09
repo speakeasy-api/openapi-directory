@@ -15,19 +15,23 @@ const (
 	SourceSourceTypeEnumConfigVariable        SourceSourceTypeEnum = "CONFIG_VARIABLE"
 )
 
+func (e SourceSourceTypeEnum) ToPointer() *SourceSourceTypeEnum {
+	return &e
+}
+
 func (e *SourceSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CONFIG_VARIABLE":
-		*e = SourceSourceTypeEnum(s)
+		*e = SourceSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceSourceTypeEnum: %v", v)
 	}
 }
 

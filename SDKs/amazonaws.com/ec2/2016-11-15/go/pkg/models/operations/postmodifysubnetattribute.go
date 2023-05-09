@@ -15,17 +15,21 @@ const (
 	POSTModifySubnetAttributeActionEnumModifySubnetAttribute POSTModifySubnetAttributeActionEnum = "ModifySubnetAttribute"
 )
 
+func (e POSTModifySubnetAttributeActionEnum) ToPointer() *POSTModifySubnetAttributeActionEnum {
+	return &e
+}
+
 func (e *POSTModifySubnetAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifySubnetAttribute":
-		*e = POSTModifySubnetAttributeActionEnum(s)
+		*e = POSTModifySubnetAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifySubnetAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifySubnetAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifySubnetAttributeVersionEnumTwoThousandAndSixteen1115 POSTModifySubnetAttributeVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifySubnetAttributeVersionEnum) ToPointer() *POSTModifySubnetAttributeVersionEnum {
+	return &e
+}
+
 func (e *POSTModifySubnetAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifySubnetAttributeVersionEnum(s)
+		*e = POSTModifySubnetAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifySubnetAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifySubnetAttributeVersionEnum: %v", v)
 	}
 }
 

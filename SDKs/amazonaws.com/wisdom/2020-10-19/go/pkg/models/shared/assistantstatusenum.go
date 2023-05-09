@@ -18,12 +18,16 @@ const (
 	AssistantStatusEnumDeleted          AssistantStatusEnum = "DELETED"
 )
 
+func (e AssistantStatusEnum) ToPointer() *AssistantStatusEnum {
+	return &e
+}
+
 func (e *AssistantStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE_IN_PROGRESS":
 		fallthrough
 	case "CREATE_FAILED":
@@ -35,9 +39,9 @@ func (e *AssistantStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETE_FAILED":
 		fallthrough
 	case "DELETED":
-		*e = AssistantStatusEnum(s)
+		*e = AssistantStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssistantStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AssistantStatusEnum: %v", v)
 	}
 }

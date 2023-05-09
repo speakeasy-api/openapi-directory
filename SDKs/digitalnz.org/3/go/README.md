@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/digitalnz.org/3/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,47 +28,45 @@ func main() {
         }),
     )
 
-    req := operations.GetRecordsFormatRequest{
-        AuthenticationToken: "corrupti",
-        AndCategory: "Research papers",
-        AndCentury: "distinctio",
-        AndCollection: "quibusdam",
-        AndContentPartner: "unde",
-        AndCreator: "nulla",
-        AndDate: "corrupti",
-        AndDcType: "illum",
-        AndDecade: "vel",
-        AndFormat: "error",
-        AndHasLargeThumbnailURL: "Y",
-        AndHasLatLng: "false",
-        AndIsCommercialUse: false,
-        AndOrFilterField: "suscipit",
-        AndPlacename: "iure",
-        AndPrimaryCollection: "magnam",
-        AndSubject: "debitis",
-        AndTitle: "ipsa",
-        AndUsage: "Unknown",
-        AndYear: "tempora",
-        Direction: "asc",
-        ExcludeFiltersFromFacets: false,
-        Facets: []GetRecordsFormatFacetsEnum{
-            "copyright",
-            "copyright",
-        },
-        FacetsPage: 528895,
-        FacetsPerPage: 479977,
-        Fields: "excepturi",
-        Format: "json",
-        GeoBbox: "recusandae",
-        Page: 836079,
-        PerPage: 71036,
-        Sort: "syndication_date",
-        Text: "veritatis",
-        WithoutFilterField: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.APICalls.GetRecordsFormat(ctx, req)
+    res, err := s.APICalls.GetRecordsFormat(ctx, operations.GetRecordsFormatRequest{
+        AuthenticationToken: sdk.String("corrupti"),
+        AndCategory: operations.GetRecordsFormatAndCategoryEnumResearchPapers.ToPointer(),
+        AndCentury: sdk.String("distinctio"),
+        AndCollection: sdk.String("quibusdam"),
+        AndContentPartner: sdk.String("unde"),
+        AndCreator: sdk.String("nulla"),
+        AndDate: sdk.String("corrupti"),
+        AndDcType: sdk.String("illum"),
+        AndDecade: sdk.String("vel"),
+        AndFormat: sdk.String("error"),
+        AndHasLargeThumbnailURL: operations.GetRecordsFormatAndHasLargeThumbnailURLEnumY.ToPointer(),
+        AndHasLatLng: sdk.Bool(false),
+        AndIsCommercialUse: sdk.Bool(false),
+        AndOrFilterField: sdk.String("deserunt"),
+        AndPlacename: sdk.String("suscipit"),
+        AndPrimaryCollection: sdk.String("iure"),
+        AndSubject: sdk.String("magnam"),
+        AndTitle: sdk.String("debitis"),
+        AndUsage: operations.GetRecordsFormatAndUsageEnumShare.ToPointer(),
+        AndYear: sdk.String("delectus"),
+        Direction: operations.GetRecordsFormatDirectionEnumAsc.ToPointer(),
+        ExcludeFiltersFromFacets: sdk.Bool(false),
+        Facets: []GetRecordsFormatFacetsEnum{
+            operations.GetRecordsFormatFacetsEnumDecade,
+            operations.GetRecordsFormatFacetsEnumCopyright,
+        },
+        FacetsPage: sdk.Int64(812169),
+        FacetsPerPage: sdk.Int64(528895),
+        Fields: sdk.String("iusto"),
+        Format: shared.FormatEnumXML,
+        GeoBbox: sdk.String("nisi"),
+        Page: sdk.Int64(925597),
+        PerPage: sdk.Int64(836079),
+        Sort: operations.GetRecordsFormatSortEnumSyndicationDate.ToPointer(),
+        Text: sdk.String("quis"),
+        WithoutFilterField: sdk.String("veritatis"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -84,11 +82,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### APICalls
+### [APICalls](docs/apicalls/README.md)
 
-* `GetRecordsFormat` - Run queries against DigitalNZ metadata search service.
-* `GetRecordsRecordIDFormat` - View metadata associated with a single record.
-* `GetRecordsRecordIDMoreLikeThisFormat` - The "More Like This" call returns similar records to the specified ID.
+* [GetRecordsFormat](docs/apicalls/README.md#getrecordsformat) - Run queries against DigitalNZ metadata search service.
+* [GetRecordsRecordIDFormat](docs/apicalls/README.md#getrecordsrecordidformat) - View metadata associated with a single record.
+* [GetRecordsRecordIDMoreLikeThisFormat](docs/apicalls/README.md#getrecordsrecordidmorelikethisformat) - The "More Like This" call returns similar records to the specified ID.
 
 <!-- End SDK Available Operations -->
 

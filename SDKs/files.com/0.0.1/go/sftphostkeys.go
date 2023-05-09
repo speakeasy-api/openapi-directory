@@ -37,7 +37,10 @@ func newSftpHostKeys(defaultClient, securityClient HTTPClient, serverURL, langua
 // Delete Sftp Host Key
 func (s *sftpHostKeys) DeleteSftpHostKeysID(ctx context.Context, request operations.DeleteSftpHostKeysIDRequest) (*operations.DeleteSftpHostKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sftp_host_keys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sftp_host_keys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *sftpHostKeys) GetSftpHostKeys(ctx context.Context, request operations.G
 // Show Sftp Host Key
 func (s *sftpHostKeys) GetSftpHostKeysID(ctx context.Context, request operations.GetSftpHostKeysIDRequest) (*operations.GetSftpHostKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sftp_host_keys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sftp_host_keys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *sftpHostKeys) GetSftpHostKeysID(ctx context.Context, request operations
 // Update Sftp Host Key
 func (s *sftpHostKeys) PatchSftpHostKeysID(ctx context.Context, request operations.PatchSftpHostKeysIDRequest) (*operations.PatchSftpHostKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sftp_host_keys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sftp_host_keys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

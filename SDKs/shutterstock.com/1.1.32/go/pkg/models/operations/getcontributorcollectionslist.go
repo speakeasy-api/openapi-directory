@@ -23,21 +23,25 @@ const (
 	GetContributorCollectionsListSortEnumItemCount   GetContributorCollectionsListSortEnum = "item_count"
 )
 
+func (e GetContributorCollectionsListSortEnum) ToPointer() *GetContributorCollectionsListSortEnum {
+	return &e
+}
+
 func (e *GetContributorCollectionsListSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "last_updated":
 		fallthrough
 	case "item_count":
-		*e = GetContributorCollectionsListSortEnum(s)
+		*e = GetContributorCollectionsListSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetContributorCollectionsListSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetContributorCollectionsListSortEnum: %v", v)
 	}
 }
 

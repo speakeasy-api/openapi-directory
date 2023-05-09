@@ -16,17 +16,21 @@ const (
 	ListDeploymentConfigsXAmzTargetEnumCodeDeploy20141006ListDeploymentConfigs ListDeploymentConfigsXAmzTargetEnum = "CodeDeploy_20141006.ListDeploymentConfigs"
 )
 
+func (e ListDeploymentConfigsXAmzTargetEnum) ToPointer() *ListDeploymentConfigsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListDeploymentConfigsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.ListDeploymentConfigs":
-		*e = ListDeploymentConfigsXAmzTargetEnum(s)
+		*e = ListDeploymentConfigsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDeploymentConfigsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDeploymentConfigsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	DescriptionExcludeEnumLandmarks   DescriptionExcludeEnum = "Landmarks"
 )
 
+func (e DescriptionExcludeEnum) ToPointer() *DescriptionExcludeEnum {
+	return &e
+}
+
 func (e *DescriptionExcludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Celebrities":
 		fallthrough
 	case "Landmarks":
-		*e = DescriptionExcludeEnum(s)
+		*e = DescriptionExcludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescriptionExcludeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescriptionExcludeEnum: %v", v)
 	}
 }

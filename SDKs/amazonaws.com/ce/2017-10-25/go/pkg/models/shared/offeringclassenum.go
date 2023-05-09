@@ -14,18 +14,22 @@ const (
 	OfferingClassEnumConvertible OfferingClassEnum = "CONVERTIBLE"
 )
 
+func (e OfferingClassEnum) ToPointer() *OfferingClassEnum {
+	return &e
+}
+
 func (e *OfferingClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD":
 		fallthrough
 	case "CONVERTIBLE":
-		*e = OfferingClassEnum(s)
+		*e = OfferingClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OfferingClassEnum: %s", s)
+		return fmt.Errorf("invalid value for OfferingClassEnum: %v", v)
 	}
 }

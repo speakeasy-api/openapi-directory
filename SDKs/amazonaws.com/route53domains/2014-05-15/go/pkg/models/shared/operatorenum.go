@@ -15,20 +15,24 @@ const (
 	OperatorEnumBeginsWith OperatorEnum = "BEGINS_WITH"
 )
 
+func (e OperatorEnum) ToPointer() *OperatorEnum {
+	return &e
+}
+
 func (e *OperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LE":
 		fallthrough
 	case "GE":
 		fallthrough
 	case "BEGINS_WITH":
-		*e = OperatorEnum(s)
+		*e = OperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for OperatorEnum: %v", v)
 	}
 }

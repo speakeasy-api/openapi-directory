@@ -15,17 +15,21 @@ const (
 	POSTDescribeClientVpnAuthorizationRulesActionEnumDescribeClientVpnAuthorizationRules POSTDescribeClientVpnAuthorizationRulesActionEnum = "DescribeClientVpnAuthorizationRules"
 )
 
+func (e POSTDescribeClientVpnAuthorizationRulesActionEnum) ToPointer() *POSTDescribeClientVpnAuthorizationRulesActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeClientVpnAuthorizationRulesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeClientVpnAuthorizationRules":
-		*e = POSTDescribeClientVpnAuthorizationRulesActionEnum(s)
+		*e = POSTDescribeClientVpnAuthorizationRulesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeClientVpnAuthorizationRulesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeClientVpnAuthorizationRulesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeClientVpnAuthorizationRulesVersionEnumTwoThousandAndSixteen1115 POSTDescribeClientVpnAuthorizationRulesVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeClientVpnAuthorizationRulesVersionEnum) ToPointer() *POSTDescribeClientVpnAuthorizationRulesVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeClientVpnAuthorizationRulesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeClientVpnAuthorizationRulesVersionEnum(s)
+		*e = POSTDescribeClientVpnAuthorizationRulesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeClientVpnAuthorizationRulesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeClientVpnAuthorizationRulesVersionEnum: %v", v)
 	}
 }
 

@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/easypdfserver.com/1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PostMakePdfRequestBody{
-        HTML: "corrupti",
-        Key: "provident",
-        URL: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.PostMakePdf(ctx, req)
+    res, err := s.PostMakePdf(ctx, operations.PostMakePdfRequestBody{
+        HTML: sdk.String("corrupti"),
+        Key: "provident",
+        URL: sdk.String("distinctio"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `PostMakePdf` - Generate a PDF from HTML or URL.
+* [PostMakePdf](docs/sdk/README.md#postmakepdf) - Generate a PDF from HTML or URL.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/isendpro.com/1.1.1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.ShortlinkRequest{
+    ctx := context.Background()
+    res, err := s.AddShortlink.AddShortlink(ctx, shared.ShortlinkRequest{
         Keyid: "corrupti",
         Shortlink: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddShortlink.AddShortlink(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,55 +43,55 @@ func main() {
 ## Available Resources and Operations
 
 
-### AddShortlink
+### [AddShortlink](docs/addshortlink/README.md)
 
-* `AddShortlink` - add a shortlink
+* [AddShortlink](docs/addshortlink/README.md#addshortlink) - add a shortlink
 
-### AddSubaccount
+### [AddSubaccount](docs/addsubaccount/README.md)
 
-* `SubaccountAdd` - Ajoute un sous compte
+* [SubaccountAdd](docs/addsubaccount/README.md#subaccountadd) - Ajoute un sous compte
 
-### Campagne
+### [Campagne](docs/campagne/README.md)
 
-* `GetCampagne` - Retourne les SMS envoyés sur une période donnée
+* [GetCampagne](docs/campagne/README.md#getcampagne) - Retourne les SMS envoyés sur une période donnée
 
-### Comptage
+### [Comptage](docs/comptage/README.md)
 
-* `Comptage` - Compter le nombre de caractère 
+* [Comptage](docs/comptage/README.md#comptage) - Compter le nombre de caractère 
 
-### Credit
+### [Credit](docs/credit/README.md)
 
-* `GetCredit` - Interrogation credit
+* [GetCredit](docs/credit/README.md#getcredit) - Interrogation credit
 
-### DelListeNoire
+### [DelListeNoire](docs/dellistenoire/README.md)
 
-* `DelListeNoire` - Ajoute un numero en liste noire
+* [DelListeNoire](docs/dellistenoire/README.md#dellistenoire) - Ajoute un numero en liste noire
 
-### EditSubaccount
+### [EditSubaccount](docs/editsubaccount/README.md)
 
-* `SubaccountEdit` - Edit a subaccount
+* [SubaccountEdit](docs/editsubaccount/README.md#subaccountedit) - Edit a subaccount
 
-### GetListeNoire
+### [GetListeNoire](docs/getlistenoire/README.md)
 
-* `GetListeNoire` - Retourne le liste noire
+* [GetListeNoire](docs/getlistenoire/README.md#getlistenoire) - Retourne le liste noire
 
-### Hlr
+### [Hlr](docs/hlr/README.md)
 
-* `GetHlr` - Vérifier la validité d'un numéro
+* [GetHlr](docs/hlr/README.md#gethlr) - Vérifier la validité d'un numéro
 
-### Repertoire
+### [Repertoire](docs/repertoire/README.md)
 
-* `Repertoire` - Gestion repertoire (modification)
-* `RepertoireCrea` - Gestion repertoire (creation)
+* [Repertoire](docs/repertoire/README.md#repertoire) - Gestion repertoire (modification)
+* [RepertoireCrea](docs/repertoire/README.md#repertoirecrea) - Gestion repertoire (creation)
 
-### SetListeNoire
+### [SetListeNoire](docs/setlistenoire/README.md)
 
-* `SetListeNoire` - Ajoute un numero en liste noire
+* [SetListeNoire](docs/setlistenoire/README.md#setlistenoire) - Ajoute un numero en liste noire
 
-### Sms
+### [Sms](docs/sms/README.md)
 
-* `SendSms` - Envoyer un sms
-* `SendSmsMulti` - Envoyer des SMS
+* [SendSms](docs/sms/README.md#sendsms) - Envoyer un sms
+* [SendSmsMulti](docs/sms/README.md#sendsmsmulti) - Envoyer des SMS
 <!-- End SDK Available Operations -->
 
 ### Maturity

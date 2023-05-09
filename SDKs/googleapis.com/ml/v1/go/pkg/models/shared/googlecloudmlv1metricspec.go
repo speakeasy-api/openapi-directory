@@ -16,21 +16,25 @@ const (
 	GoogleCloudMlV1MetricSpecNameEnumGpuDutyCycle          GoogleCloudMlV1MetricSpecNameEnum = "GPU_DUTY_CYCLE"
 )
 
+func (e GoogleCloudMlV1MetricSpecNameEnum) ToPointer() *GoogleCloudMlV1MetricSpecNameEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1MetricSpecNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_NAME_UNSPECIFIED":
 		fallthrough
 	case "CPU_USAGE":
 		fallthrough
 	case "GPU_DUTY_CYCLE":
-		*e = GoogleCloudMlV1MetricSpecNameEnum(s)
+		*e = GoogleCloudMlV1MetricSpecNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1MetricSpecNameEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1MetricSpecNameEnum: %v", v)
 	}
 }
 

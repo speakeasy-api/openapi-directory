@@ -16,17 +16,21 @@ const (
 	CreateRuleGroupXAmzTargetEnumAwswaf20150824CreateRuleGroup CreateRuleGroupXAmzTargetEnum = "AWSWAF_20150824.CreateRuleGroup"
 )
 
+func (e CreateRuleGroupXAmzTargetEnum) ToPointer() *CreateRuleGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateRuleGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.CreateRuleGroup":
-		*e = CreateRuleGroupXAmzTargetEnum(s)
+		*e = CreateRuleGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRuleGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRuleGroupXAmzTargetEnum: %v", v)
 	}
 }
 

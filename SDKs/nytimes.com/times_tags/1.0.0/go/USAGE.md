@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,14 +16,12 @@ func main() {
         }),
     )
 
-    req := operations.GetTimestagsRequest{
-        Filter: "Org",
-        Max: 592845,
-        Query: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.GetTimestags(ctx, req)
+    res, err := s.GetTimestags(ctx, operations.GetTimestagsRequest{
+        Filter: operations.GetTimestagsFilterEnumOrg.ToPointer(),
+        Max: sdk.Int64(592845),
+        Query: "distinctio",
+    })
     if err != nil {
         log.Fatal(err)
     }

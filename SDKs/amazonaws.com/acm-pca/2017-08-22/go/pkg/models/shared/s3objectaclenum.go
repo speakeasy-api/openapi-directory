@@ -14,18 +14,22 @@ const (
 	S3ObjectACLEnumBucketOwnerFullControl S3ObjectACLEnum = "BUCKET_OWNER_FULL_CONTROL"
 )
 
+func (e S3ObjectACLEnum) ToPointer() *S3ObjectACLEnum {
+	return &e
+}
+
 func (e *S3ObjectACLEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLIC_READ":
 		fallthrough
 	case "BUCKET_OWNER_FULL_CONTROL":
-		*e = S3ObjectACLEnum(s)
+		*e = S3ObjectACLEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for S3ObjectACLEnum: %s", s)
+		return fmt.Errorf("invalid value for S3ObjectACLEnum: %v", v)
 	}
 }

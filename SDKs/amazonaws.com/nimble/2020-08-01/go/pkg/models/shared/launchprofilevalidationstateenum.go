@@ -17,12 +17,16 @@ const (
 	LaunchProfileValidationStateEnumValidationFailedInternalServerError LaunchProfileValidationStateEnum = "VALIDATION_FAILED_INTERNAL_SERVER_ERROR"
 )
 
+func (e LaunchProfileValidationStateEnum) ToPointer() *LaunchProfileValidationStateEnum {
+	return &e
+}
+
 func (e *LaunchProfileValidationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALIDATION_NOT_STARTED":
 		fallthrough
 	case "VALIDATION_IN_PROGRESS":
@@ -32,9 +36,9 @@ func (e *LaunchProfileValidationStateEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATION_FAILED":
 		fallthrough
 	case "VALIDATION_FAILED_INTERNAL_SERVER_ERROR":
-		*e = LaunchProfileValidationStateEnum(s)
+		*e = LaunchProfileValidationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LaunchProfileValidationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LaunchProfileValidationStateEnum: %v", v)
 	}
 }

@@ -26,12 +26,16 @@ const (
 	TargetDestinationEnumBabelfishForAuroraPostgreSQL                TargetDestinationEnum = "Babelfish for Aurora PostgreSQL"
 )
 
+func (e TargetDestinationEnum) ToPointer() *TargetDestinationEnum {
+	return &e
+}
+
 func (e *TargetDestinationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None specified":
 		fallthrough
 	case "AWS Elastic BeanStalk":
@@ -59,9 +63,9 @@ func (e *TargetDestinationEnum) UnmarshalJSON(data []byte) error {
 	case "Amazon Relational Database Service":
 		fallthrough
 	case "Babelfish for Aurora PostgreSQL":
-		*e = TargetDestinationEnum(s)
+		*e = TargetDestinationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetDestinationEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetDestinationEnum: %v", v)
 	}
 }

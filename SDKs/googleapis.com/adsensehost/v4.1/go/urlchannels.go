@@ -34,7 +34,10 @@ func newUrlchannels(defaultClient, securityClient HTTPClient, serverURL, languag
 // AdsensehostUrlchannelsDelete - Delete a URL channel from the host AdSense account.
 func (s *urlchannels) AdsensehostUrlchannelsDelete(ctx context.Context, request operations.AdsensehostUrlchannelsDeleteRequest, security operations.AdsensehostUrlchannelsDeleteSecurity) (*operations.AdsensehostUrlchannelsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels/{urlChannelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels/{urlChannelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *urlchannels) AdsensehostUrlchannelsDelete(ctx context.Context, request 
 // AdsensehostUrlchannelsInsert - Add a new URL channel to the host AdSense account.
 func (s *urlchannels) AdsensehostUrlchannelsInsert(ctx context.Context, request operations.AdsensehostUrlchannelsInsertRequest, security operations.AdsensehostUrlchannelsInsertSecurity) (*operations.AdsensehostUrlchannelsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "URLChannel", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *urlchannels) AdsensehostUrlchannelsInsert(ctx context.Context, request 
 // AdsensehostUrlchannelsList - List all host URL channels in the host AdSense account.
 func (s *urlchannels) AdsensehostUrlchannelsList(ctx context.Context, request operations.AdsensehostUrlchannelsListRequest, security operations.AdsensehostUrlchannelsListSecurity) (*operations.AdsensehostUrlchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

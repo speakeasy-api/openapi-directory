@@ -20,12 +20,16 @@ const (
 	PostExternalEventsRequestBodyStatusEnumSkipped        PostExternalEventsRequestBodyStatusEnum = "skipped"
 )
 
+func (e PostExternalEventsRequestBodyStatusEnum) ToPointer() *PostExternalEventsRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *PostExternalEventsRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "failure":
@@ -35,10 +39,10 @@ func (e *PostExternalEventsRequestBodyStatusEnum) UnmarshalJSON(data []byte) err
 	case "in_progress":
 		fallthrough
 	case "skipped":
-		*e = PostExternalEventsRequestBodyStatusEnum(s)
+		*e = PostExternalEventsRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostExternalEventsRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostExternalEventsRequestBodyStatusEnum: %v", v)
 	}
 }
 

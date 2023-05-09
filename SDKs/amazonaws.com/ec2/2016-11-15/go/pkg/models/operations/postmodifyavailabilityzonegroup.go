@@ -15,17 +15,21 @@ const (
 	POSTModifyAvailabilityZoneGroupActionEnumModifyAvailabilityZoneGroup POSTModifyAvailabilityZoneGroupActionEnum = "ModifyAvailabilityZoneGroup"
 )
 
+func (e POSTModifyAvailabilityZoneGroupActionEnum) ToPointer() *POSTModifyAvailabilityZoneGroupActionEnum {
+	return &e
+}
+
 func (e *POSTModifyAvailabilityZoneGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyAvailabilityZoneGroup":
-		*e = POSTModifyAvailabilityZoneGroupActionEnum(s)
+		*e = POSTModifyAvailabilityZoneGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyAvailabilityZoneGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyAvailabilityZoneGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyAvailabilityZoneGroupVersionEnumTwoThousandAndSixteen1115 POSTModifyAvailabilityZoneGroupVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyAvailabilityZoneGroupVersionEnum) ToPointer() *POSTModifyAvailabilityZoneGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyAvailabilityZoneGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyAvailabilityZoneGroupVersionEnum(s)
+		*e = POSTModifyAvailabilityZoneGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyAvailabilityZoneGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyAvailabilityZoneGroupVersionEnum: %v", v)
 	}
 }
 

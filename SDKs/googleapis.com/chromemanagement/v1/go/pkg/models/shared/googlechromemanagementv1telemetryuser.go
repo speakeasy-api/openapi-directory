@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleChromeManagementV1TelemetryUser - Telemetry data collected from a managed user.
+// GoogleChromeManagementV1TelemetryUser - Telemetry data collected from a managed user. * Granular permission needed: TELEMETRY_API_USER
 type GoogleChromeManagementV1TelemetryUser struct {
 	// G Suite Customer whose enterprise enrolled the device.
 	Customer *string `json:"customer,omitempty"`

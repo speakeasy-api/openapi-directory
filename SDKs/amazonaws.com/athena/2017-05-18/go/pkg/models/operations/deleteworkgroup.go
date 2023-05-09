@@ -16,17 +16,21 @@ const (
 	DeleteWorkGroupXAmzTargetEnumAmazonAthenaDeleteWorkGroup DeleteWorkGroupXAmzTargetEnum = "AmazonAthena.DeleteWorkGroup"
 )
 
+func (e DeleteWorkGroupXAmzTargetEnum) ToPointer() *DeleteWorkGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteWorkGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.DeleteWorkGroup":
-		*e = DeleteWorkGroupXAmzTargetEnum(s)
+		*e = DeleteWorkGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteWorkGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteWorkGroupXAmzTargetEnum: %v", v)
 	}
 }
 

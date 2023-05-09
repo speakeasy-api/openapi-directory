@@ -35,7 +35,7 @@ func newApikeys(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // AllAPIKeys - Get all api keys
 // Get all api keys
-func (s *apikeys) AllAPIKeys(ctx context.Context) (*operations.AllAPIKeysResponse, error) {
+func (s *apikeys) AllAPIKeys(ctx context.Context, security operations.AllAPIKeysSecurity) (*operations.AllAPIKeysResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/apikeys"
 
@@ -44,7 +44,7 @@ func (s *apikeys) AllAPIKeys(ctx context.Context) (*operations.AllAPIKeysRespons
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,7 +87,10 @@ func (s *apikeys) AllAPIKeys(ctx context.Context) (*operations.AllAPIKeysRespons
 // Get an api key for a specified service descriptor
 func (s *apikeys) APIKey(ctx context.Context, request operations.APIKeyRequest, security operations.APIKeySecurity) (*operations.APIKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +140,10 @@ func (s *apikeys) APIKey(ctx context.Context, request operations.APIKeyRequest, 
 // Get an api key for a specified service group
 func (s *apikeys) APIKeyFromGroup(ctx context.Context, request operations.APIKeyFromGroupRequest, security operations.APIKeyFromGroupSecurity) (*operations.APIKeyFromGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,7 +193,10 @@ func (s *apikeys) APIKeyFromGroup(ctx context.Context, request operations.APIKey
 // Get the quota state of an api key
 func (s *apikeys) APIKeyFromGroupQuotas(ctx context.Context, request operations.APIKeyFromGroupQuotasRequest, security operations.APIKeyFromGroupQuotasSecurity) (*operations.APIKeyFromGroupQuotasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys/{clientId}/quotas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys/{clientId}/quotas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -237,7 +246,10 @@ func (s *apikeys) APIKeyFromGroupQuotas(ctx context.Context, request operations.
 // Get the group of an api key
 func (s *apikeys) APIKeyGroup(ctx context.Context, request operations.APIKeyGroupRequest, security operations.APIKeyGroupSecurity) (*operations.APIKeyGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}/group", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}/group", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -287,7 +299,10 @@ func (s *apikeys) APIKeyGroup(ctx context.Context, request operations.APIKeyGrou
 // Get the quota state of an api key
 func (s *apikeys) APIKeyQuotas(ctx context.Context, request operations.APIKeyQuotasRequest, security operations.APIKeyQuotasSecurity) (*operations.APIKeyQuotasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}/quotas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}/quotas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -337,7 +352,10 @@ func (s *apikeys) APIKeyQuotas(ctx context.Context, request operations.APIKeyQuo
 // Get all api keys for the group of a service
 func (s *apikeys) APIKeys(ctx context.Context, request operations.APIKeysRequest, security operations.APIKeysSecurity) (*operations.APIKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -387,7 +405,10 @@ func (s *apikeys) APIKeys(ctx context.Context, request operations.APIKeysRequest
 // Get all api keys for the group of a service
 func (s *apikeys) APIKeysFromGroup(ctx context.Context, request operations.APIKeysFromGroupRequest, security operations.APIKeysFromGroupSecurity) (*operations.APIKeysFromGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -436,7 +457,10 @@ func (s *apikeys) APIKeysFromGroup(ctx context.Context, request operations.APIKe
 // CreateAPIKey - Create a new api key for a service
 func (s *apikeys) CreateAPIKey(ctx context.Context, request operations.CreateAPIKeyRequest, security operations.CreateAPIKeySecurity) (*operations.CreateAPIKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIKey", "json")
 	if err != nil {
@@ -493,7 +517,10 @@ func (s *apikeys) CreateAPIKey(ctx context.Context, request operations.CreateAPI
 // Create a new api key for a group
 func (s *apikeys) CreateAPIKeyFromGroup(ctx context.Context, request operations.CreateAPIKeyFromGroupRequest, security operations.CreateAPIKeyFromGroupSecurity) (*operations.CreateAPIKeyFromGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIKey", "json")
 	if err != nil {
@@ -550,7 +577,10 @@ func (s *apikeys) CreateAPIKeyFromGroup(ctx context.Context, request operations.
 // Delete an api key for a specified service descriptor
 func (s *apikeys) DeleteAPIKey(ctx context.Context, request operations.DeleteAPIKeyRequest, security operations.DeleteAPIKeySecurity) (*operations.DeleteAPIKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -600,7 +630,10 @@ func (s *apikeys) DeleteAPIKey(ctx context.Context, request operations.DeleteAPI
 // Delete an api key for a specified service group
 func (s *apikeys) DeleteAPIKeyFromGroup(ctx context.Context, request operations.DeleteAPIKeyFromGroupRequest, security operations.DeleteAPIKeyFromGroupSecurity) (*operations.DeleteAPIKeyFromGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -650,7 +683,10 @@ func (s *apikeys) DeleteAPIKeyFromGroup(ctx context.Context, request operations.
 // Update an api key for a specified service descriptor with a diff
 func (s *apikeys) PatchAPIKey(ctx context.Context, request operations.PatchAPIKeyRequest, security operations.PatchAPIKeySecurity) (*operations.PatchAPIKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -707,7 +743,10 @@ func (s *apikeys) PatchAPIKey(ctx context.Context, request operations.PatchAPIKe
 // Update an api key for a specified service descriptor with a diff
 func (s *apikeys) PatchAPIKeyFromGroup(ctx context.Context, request operations.PatchAPIKeyFromGroupRequest, security operations.PatchAPIKeyFromGroupSecurity) (*operations.PatchAPIKeyFromGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -764,7 +803,10 @@ func (s *apikeys) PatchAPIKeyFromGroup(ctx context.Context, request operations.P
 // Reset the quota state of an api key
 func (s *apikeys) ResetAPIKeyFromGroupQuotas(ctx context.Context, request operations.ResetAPIKeyFromGroupQuotasRequest, security operations.ResetAPIKeyFromGroupQuotasSecurity) (*operations.ResetAPIKeyFromGroupQuotasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys/{clientId}/quotas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys/{clientId}/quotas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -814,7 +856,10 @@ func (s *apikeys) ResetAPIKeyFromGroupQuotas(ctx context.Context, request operat
 // Reset the quota state of an api key
 func (s *apikeys) ResetAPIKeyQuotas(ctx context.Context, request operations.ResetAPIKeyQuotasRequest, security operations.ResetAPIKeyQuotasSecurity) (*operations.ResetAPIKeyQuotasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}/quotas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}/quotas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -864,7 +909,10 @@ func (s *apikeys) ResetAPIKeyQuotas(ctx context.Context, request operations.Rese
 // Update an api key for a specified service descriptor
 func (s *apikeys) UpdateAPIKey(ctx context.Context, request operations.UpdateAPIKeyRequest, security operations.UpdateAPIKeySecurity) (*operations.UpdateAPIKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/services/{serviceId}/apikeys/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIKey", "json")
 	if err != nil {
@@ -921,7 +969,10 @@ func (s *apikeys) UpdateAPIKey(ctx context.Context, request operations.UpdateAPI
 // Update an api key for a specified service group
 func (s *apikeys) UpdateAPIKeyFromGroup(ctx context.Context, request operations.UpdateAPIKeyFromGroupRequest, security operations.UpdateAPIKeyFromGroupSecurity) (*operations.UpdateAPIKeyFromGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{groupId}/apikeys/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIKey", "json")
 	if err != nil {

@@ -19,21 +19,25 @@ const (
 	CreateCompanyWebhookRequestCommunicationFormatEnumSoap CreateCompanyWebhookRequestCommunicationFormatEnum = "soap"
 )
 
+func (e CreateCompanyWebhookRequestCommunicationFormatEnum) ToPointer() *CreateCompanyWebhookRequestCommunicationFormatEnum {
+	return &e
+}
+
 func (e *CreateCompanyWebhookRequestCommunicationFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "http":
 		fallthrough
 	case "json":
 		fallthrough
 	case "soap":
-		*e = CreateCompanyWebhookRequestCommunicationFormatEnum(s)
+		*e = CreateCompanyWebhookRequestCommunicationFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCompanyWebhookRequestCommunicationFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCompanyWebhookRequestCommunicationFormatEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	CreateCompanyWebhookRequestFilterMerchantAccountTypeEnumIncludeAccounts CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum = "includeAccounts"
 )
 
+func (e CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum) ToPointer() *CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum {
+	return &e
+}
+
 func (e *CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "allAccounts":
 		fallthrough
 	case "excludeAccounts":
 		fallthrough
 	case "includeAccounts":
-		*e = CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum(s)
+		*e = CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum: %v", v)
 	}
 }
 
@@ -79,19 +87,23 @@ const (
 	CreateCompanyWebhookRequestNetworkTypeEnumPublic CreateCompanyWebhookRequestNetworkTypeEnum = "PUBLIC"
 )
 
+func (e CreateCompanyWebhookRequestNetworkTypeEnum) ToPointer() *CreateCompanyWebhookRequestNetworkTypeEnum {
+	return &e
+}
+
 func (e *CreateCompanyWebhookRequestNetworkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCAL":
 		fallthrough
 	case "PUBLIC":
-		*e = CreateCompanyWebhookRequestNetworkTypeEnum(s)
+		*e = CreateCompanyWebhookRequestNetworkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCompanyWebhookRequestNetworkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCompanyWebhookRequestNetworkTypeEnum: %v", v)
 	}
 }
 
@@ -114,12 +126,16 @@ const (
 	CreateCompanyWebhookRequestSslVersionEnumTlSv13 CreateCompanyWebhookRequestSslVersionEnum = "TLSv1.3"
 )
 
+func (e CreateCompanyWebhookRequestSslVersionEnum) ToPointer() *CreateCompanyWebhookRequestSslVersionEnum {
+	return &e
+}
+
 func (e *CreateCompanyWebhookRequestSslVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP":
 		fallthrough
 	case "SSL":
@@ -135,10 +151,10 @@ func (e *CreateCompanyWebhookRequestSslVersionEnum) UnmarshalJSON(data []byte) e
 	case "TLSv1.2":
 		fallthrough
 	case "TLSv1.3":
-		*e = CreateCompanyWebhookRequestSslVersionEnum(s)
+		*e = CreateCompanyWebhookRequestSslVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCompanyWebhookRequestSslVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCompanyWebhookRequestSslVersionEnum: %v", v)
 	}
 }
 

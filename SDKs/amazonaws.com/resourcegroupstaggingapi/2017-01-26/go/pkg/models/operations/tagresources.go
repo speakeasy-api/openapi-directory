@@ -16,17 +16,21 @@ const (
 	TagResourcesXAmzTargetEnumResourceGroupsTaggingApi20170126TagResources TagResourcesXAmzTargetEnum = "ResourceGroupsTaggingAPI_20170126.TagResources"
 )
 
+func (e TagResourcesXAmzTargetEnum) ToPointer() *TagResourcesXAmzTargetEnum {
+	return &e
+}
+
 func (e *TagResourcesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResourceGroupsTaggingAPI_20170126.TagResources":
-		*e = TagResourcesXAmzTargetEnum(s)
+		*e = TagResourcesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagResourcesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TagResourcesXAmzTargetEnum: %v", v)
 	}
 }
 

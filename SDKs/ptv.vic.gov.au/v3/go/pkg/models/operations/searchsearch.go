@@ -9,35 +9,39 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SearchSearchRouteTypesEnum string
+type SearchSearchRouteTypesEnum int
 
 const (
-	SearchSearchRouteTypesEnumZero  SearchSearchRouteTypesEnum = "0"
-	SearchSearchRouteTypesEnumOne   SearchSearchRouteTypesEnum = "1"
-	SearchSearchRouteTypesEnumTwo   SearchSearchRouteTypesEnum = "2"
-	SearchSearchRouteTypesEnumThree SearchSearchRouteTypesEnum = "3"
-	SearchSearchRouteTypesEnumFour  SearchSearchRouteTypesEnum = "4"
+	SearchSearchRouteTypesEnumZero  SearchSearchRouteTypesEnum = 0
+	SearchSearchRouteTypesEnumOne   SearchSearchRouteTypesEnum = 1
+	SearchSearchRouteTypesEnumTwo   SearchSearchRouteTypesEnum = 2
+	SearchSearchRouteTypesEnumThree SearchSearchRouteTypesEnum = 3
+	SearchSearchRouteTypesEnumFour  SearchSearchRouteTypesEnum = 4
 )
 
+func (e SearchSearchRouteTypesEnum) ToPointer() *SearchSearchRouteTypesEnum {
+	return &e
+}
+
 func (e *SearchSearchRouteTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
-		*e = SearchSearchRouteTypesEnum(s)
+	case 4:
+		*e = SearchSearchRouteTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchSearchRouteTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchSearchRouteTypesEnum: %v", v)
 	}
 }
 

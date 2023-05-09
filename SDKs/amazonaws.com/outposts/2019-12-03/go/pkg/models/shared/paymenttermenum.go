@@ -14,18 +14,22 @@ const (
 	PaymentTermEnumOneYear    PaymentTermEnum = "ONE_YEAR"
 )
 
+func (e PaymentTermEnum) ToPointer() *PaymentTermEnum {
+	return &e
+}
+
 func (e *PaymentTermEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THREE_YEARS":
 		fallthrough
 	case "ONE_YEAR":
-		*e = PaymentTermEnum(s)
+		*e = PaymentTermEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentTermEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentTermEnum: %v", v)
 	}
 }

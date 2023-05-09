@@ -15,20 +15,24 @@ const (
 	PropertyGroupUpdateTypeEnumCreate PropertyGroupUpdateTypeEnum = "CREATE"
 )
 
+func (e PropertyGroupUpdateTypeEnum) ToPointer() *PropertyGroupUpdateTypeEnum {
+	return &e
+}
+
 func (e *PropertyGroupUpdateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPDATE":
 		fallthrough
 	case "DELETE":
 		fallthrough
 	case "CREATE":
-		*e = PropertyGroupUpdateTypeEnum(s)
+		*e = PropertyGroupUpdateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyGroupUpdateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyGroupUpdateTypeEnum: %v", v)
 	}
 }

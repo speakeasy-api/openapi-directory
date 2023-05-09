@@ -15,17 +15,21 @@ const (
 	POSTModifyClusterSnapshotScheduleActionEnumModifyClusterSnapshotSchedule POSTModifyClusterSnapshotScheduleActionEnum = "ModifyClusterSnapshotSchedule"
 )
 
+func (e POSTModifyClusterSnapshotScheduleActionEnum) ToPointer() *POSTModifyClusterSnapshotScheduleActionEnum {
+	return &e
+}
+
 func (e *POSTModifyClusterSnapshotScheduleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyClusterSnapshotSchedule":
-		*e = POSTModifyClusterSnapshotScheduleActionEnum(s)
+		*e = POSTModifyClusterSnapshotScheduleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyClusterSnapshotScheduleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyClusterSnapshotScheduleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyClusterSnapshotScheduleVersionEnumTwoThousandAndTwelve1201 POSTModifyClusterSnapshotScheduleVersionEnum = "2012-12-01"
 )
 
+func (e POSTModifyClusterSnapshotScheduleVersionEnum) ToPointer() *POSTModifyClusterSnapshotScheduleVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyClusterSnapshotScheduleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTModifyClusterSnapshotScheduleVersionEnum(s)
+		*e = POSTModifyClusterSnapshotScheduleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyClusterSnapshotScheduleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyClusterSnapshotScheduleVersionEnum: %v", v)
 	}
 }
 

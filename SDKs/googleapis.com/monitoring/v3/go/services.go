@@ -34,7 +34,10 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 // MonitoringServicesCreate - Create a Service.
 func (s *services) MonitoringServicesCreate(ctx context.Context, request operations.MonitoringServicesCreateRequest, security operations.MonitoringServicesCreateSecurity) (*operations.MonitoringServicesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/services", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/services", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *services) MonitoringServicesCreate(ctx context.Context, request operati
 // MonitoringServicesList - List Services for this Metrics Scope.
 func (s *services) MonitoringServicesList(ctx context.Context, request operations.MonitoringServicesListRequest, security operations.MonitoringServicesListSecurity) (*operations.MonitoringServicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/services", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/services", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *services) MonitoringServicesList(ctx context.Context, request operation
 // MonitoringServicesServiceLevelObjectivesCreate - Create a ServiceLevelObjective for the given Service.
 func (s *services) MonitoringServicesServiceLevelObjectivesCreate(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesCreateRequest, security operations.MonitoringServicesServiceLevelObjectivesCreateSecurity) (*operations.MonitoringServicesServiceLevelObjectivesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/serviceLevelObjectives", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/serviceLevelObjectives", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceLevelObjective", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *services) MonitoringServicesServiceLevelObjectivesCreate(ctx context.Co
 // MonitoringServicesServiceLevelObjectivesDelete - Delete the given ServiceLevelObjective.
 func (s *services) MonitoringServicesServiceLevelObjectivesDelete(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesDeleteRequest, security operations.MonitoringServicesServiceLevelObjectivesDeleteSecurity) (*operations.MonitoringServicesServiceLevelObjectivesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *services) MonitoringServicesServiceLevelObjectivesDelete(ctx context.Co
 // MonitoringServicesServiceLevelObjectivesGet - Get a ServiceLevelObjective by name.
 func (s *services) MonitoringServicesServiceLevelObjectivesGet(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesGetRequest, security operations.MonitoringServicesServiceLevelObjectivesGetSecurity) (*operations.MonitoringServicesServiceLevelObjectivesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *services) MonitoringServicesServiceLevelObjectivesGet(ctx context.Conte
 // MonitoringServicesServiceLevelObjectivesList - List the ServiceLevelObjectives for the given Service.
 func (s *services) MonitoringServicesServiceLevelObjectivesList(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesListRequest, security operations.MonitoringServicesServiceLevelObjectivesListSecurity) (*operations.MonitoringServicesServiceLevelObjectivesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/serviceLevelObjectives", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/serviceLevelObjectives", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *services) MonitoringServicesServiceLevelObjectivesList(ctx context.Cont
 // MonitoringServicesServiceLevelObjectivesPatch - Update the given ServiceLevelObjective.
 func (s *services) MonitoringServicesServiceLevelObjectivesPatch(ctx context.Context, request operations.MonitoringServicesServiceLevelObjectivesPatchRequest, security operations.MonitoringServicesServiceLevelObjectivesPatchSecurity) (*operations.MonitoringServicesServiceLevelObjectivesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceLevelObjective", "json")
 	if err != nil {

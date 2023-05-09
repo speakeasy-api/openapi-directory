@@ -15,19 +15,23 @@ const (
 	SortedDimensionSortOrderEnumDescending SortedDimensionSortOrderEnum = "DESCENDING"
 )
 
+func (e SortedDimensionSortOrderEnum) ToPointer() *SortedDimensionSortOrderEnum {
+	return &e
+}
+
 func (e *SortedDimensionSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = SortedDimensionSortOrderEnum(s)
+		*e = SortedDimensionSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortedDimensionSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for SortedDimensionSortOrderEnum: %v", v)
 	}
 }
 

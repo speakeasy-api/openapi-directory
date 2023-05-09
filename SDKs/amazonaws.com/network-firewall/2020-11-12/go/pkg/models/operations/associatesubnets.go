@@ -16,17 +16,21 @@ const (
 	AssociateSubnetsXAmzTargetEnumNetworkFirewall20201112AssociateSubnets AssociateSubnetsXAmzTargetEnum = "NetworkFirewall_20201112.AssociateSubnets"
 )
 
+func (e AssociateSubnetsXAmzTargetEnum) ToPointer() *AssociateSubnetsXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateSubnetsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NetworkFirewall_20201112.AssociateSubnets":
-		*e = AssociateSubnetsXAmzTargetEnum(s)
+		*e = AssociateSubnetsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateSubnetsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateSubnetsXAmzTargetEnum: %v", v)
 	}
 }
 

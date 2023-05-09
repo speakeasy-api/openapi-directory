@@ -17,12 +17,16 @@ const (
 	ConformancePackStateEnumDeleteFailed     ConformancePackStateEnum = "DELETE_FAILED"
 )
 
+func (e ConformancePackStateEnum) ToPointer() *ConformancePackStateEnum {
+	return &e
+}
+
 func (e *ConformancePackStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE_IN_PROGRESS":
 		fallthrough
 	case "CREATE_COMPLETE":
@@ -32,9 +36,9 @@ func (e *ConformancePackStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETE_IN_PROGRESS":
 		fallthrough
 	case "DELETE_FAILED":
-		*e = ConformancePackStateEnum(s)
+		*e = ConformancePackStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConformancePackStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConformancePackStateEnum: %v", v)
 	}
 }

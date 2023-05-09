@@ -2,18 +2,18 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetBusinessUnitsV3BusinessUnitsUserUserIDRequest{
+    ctx := context.Background()
+    res, err := s.BusinessUnit.GetBusinessUnitsV3BusinessUnitsUserUserID(ctx, operations.GetBusinessUnitsV3BusinessUnitsUserUserIDRequest{
         Name: []string{
             "provident",
             "distinctio",
@@ -25,10 +25,7 @@ func main() {
             "illum",
         },
         UserID: "vel",
-    }
-
-    ctx := context.Background()
-    res, err := s.BusinessUnit.GetBusinessUnitsV3BusinessUnitsUserUserID(ctx, req, operations.GetBusinessUnitsV3BusinessUnitsUserUserIDSecurity{
+    }, operations.GetBusinessUnitsV3BusinessUnitsUserUserIDSecurity{
         Oauth2Legacy: sdk.String("Bearer YOUR_ACCESS_TOKEN_HERE"),
     })
     if err != nil {

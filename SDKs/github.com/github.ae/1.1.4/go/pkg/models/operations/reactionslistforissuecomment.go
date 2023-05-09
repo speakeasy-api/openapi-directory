@@ -23,12 +23,16 @@ const (
 	ReactionsListForIssueCommentContentEnumEyes     ReactionsListForIssueCommentContentEnum = "eyes"
 )
 
+func (e ReactionsListForIssueCommentContentEnum) ToPointer() *ReactionsListForIssueCommentContentEnum {
+	return &e
+}
+
 func (e *ReactionsListForIssueCommentContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "+1":
 		fallthrough
 	case "-1":
@@ -44,10 +48,10 @@ func (e *ReactionsListForIssueCommentContentEnum) UnmarshalJSON(data []byte) err
 	case "rocket":
 		fallthrough
 	case "eyes":
-		*e = ReactionsListForIssueCommentContentEnum(s)
+		*e = ReactionsListForIssueCommentContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReactionsListForIssueCommentContentEnum: %s", s)
+		return fmt.Errorf("invalid value for ReactionsListForIssueCommentContentEnum: %v", v)
 	}
 }
 

@@ -26,12 +26,16 @@ const (
 	ImageStatusEnumHttp404           ImageStatusEnum = "HTTP_404"
 )
 
+func (e ImageStatusEnum) ToPointer() *ImageStatusEnum {
+	return &e
+}
+
 func (e *ImageStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "PENDING_PROCESSING":
@@ -57,10 +61,10 @@ func (e *ImageStatusEnum) UnmarshalJSON(data []byte) error {
 	case "HOSTLOADED":
 		fallthrough
 	case "HTTP_404":
-		*e = ImageStatusEnum(s)
+		*e = ImageStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageStatusEnum: %v", v)
 	}
 }
 
@@ -73,21 +77,25 @@ const (
 	ImageTypeEnumUploaded        ImageTypeEnum = "UPLOADED"
 )
 
+func (e ImageTypeEnum) ToPointer() *ImageTypeEnum {
+	return &e
+}
+
 func (e *ImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "CRAWLED":
 		fallthrough
 	case "UPLOADED":
-		*e = ImageTypeEnum(s)
+		*e = ImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageTypeEnum: %v", v)
 	}
 }
 

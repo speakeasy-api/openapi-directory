@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,24 +16,22 @@ func main() {
         }),
     )
 
-    req := operations.AssociateServiceQuotaTemplateRequest{
+    ctx := context.Background()
+    res, err := s.AssociateServiceQuotaTemplate(ctx, operations.AssociateServiceQuotaTemplateRequest{
         RequestBody: map[string]interface{}{
             "provident": "distinctio",
             "quibusdam": "unde",
             "nulla": "corrupti",
         },
-        XAmzAlgorithm: "illum",
-        XAmzContentSha256: "vel",
-        XAmzCredential: "error",
-        XAmzDate: "deserunt",
-        XAmzSecurityToken: "suscipit",
-        XAmzSignature: "iure",
-        XAmzSignedHeaders: "magnam",
-        XAmzTarget: "ServiceQuotasV20190624.AssociateServiceQuotaTemplate",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateServiceQuotaTemplate(ctx, req)
+        XAmzAlgorithm: sdk.String("illum"),
+        XAmzContentSha256: sdk.String("vel"),
+        XAmzCredential: sdk.String("error"),
+        XAmzDate: sdk.String("deserunt"),
+        XAmzSecurityToken: sdk.String("suscipit"),
+        XAmzSignature: sdk.String("iure"),
+        XAmzSignedHeaders: sdk.String("magnam"),
+        XAmzTarget: operations.AssociateServiceQuotaTemplateXAmzTargetEnumServiceQuotasV20190624AssociateServiceQuotaTemplate,
+    })
     if err != nil {
         log.Fatal(err)
     }

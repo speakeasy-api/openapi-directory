@@ -16,17 +16,21 @@ const (
 	SendPipelineExecutionStepSuccessXAmzTargetEnumSageMakerSendPipelineExecutionStepSuccess SendPipelineExecutionStepSuccessXAmzTargetEnum = "SageMaker.SendPipelineExecutionStepSuccess"
 )
 
+func (e SendPipelineExecutionStepSuccessXAmzTargetEnum) ToPointer() *SendPipelineExecutionStepSuccessXAmzTargetEnum {
+	return &e
+}
+
 func (e *SendPipelineExecutionStepSuccessXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.SendPipelineExecutionStepSuccess":
-		*e = SendPipelineExecutionStepSuccessXAmzTargetEnum(s)
+		*e = SendPipelineExecutionStepSuccessXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendPipelineExecutionStepSuccessXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SendPipelineExecutionStepSuccessXAmzTargetEnum: %v", v)
 	}
 }
 

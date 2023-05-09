@@ -16,17 +16,21 @@ const (
 	GETDescribeEnvironmentHealthActionEnumDescribeEnvironmentHealth GETDescribeEnvironmentHealthActionEnum = "DescribeEnvironmentHealth"
 )
 
+func (e GETDescribeEnvironmentHealthActionEnum) ToPointer() *GETDescribeEnvironmentHealthActionEnum {
+	return &e
+}
+
 func (e *GETDescribeEnvironmentHealthActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeEnvironmentHealth":
-		*e = GETDescribeEnvironmentHealthActionEnum(s)
+		*e = GETDescribeEnvironmentHealthActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEnvironmentHealthActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEnvironmentHealthActionEnum: %v", v)
 	}
 }
 
@@ -37,17 +41,21 @@ const (
 	GETDescribeEnvironmentHealthVersionEnumTwoThousandAndTen1201 GETDescribeEnvironmentHealthVersionEnum = "2010-12-01"
 )
 
+func (e GETDescribeEnvironmentHealthVersionEnum) ToPointer() *GETDescribeEnvironmentHealthVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeEnvironmentHealthVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETDescribeEnvironmentHealthVersionEnum(s)
+		*e = GETDescribeEnvironmentHealthVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEnvironmentHealthVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEnvironmentHealthVersionEnum: %v", v)
 	}
 }
 

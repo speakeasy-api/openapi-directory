@@ -19,12 +19,16 @@ const (
 	PermissionRoleEnumWriter          PermissionRoleEnum = "writer"
 )
 
+func (e PermissionRoleEnum) ToPointer() *PermissionRoleEnum {
+	return &e
+}
+
 func (e *PermissionRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "commenter":
 		fallthrough
 	case "fileOrganizer":
@@ -36,10 +40,10 @@ func (e *PermissionRoleEnum) UnmarshalJSON(data []byte) error {
 	case "reader":
 		fallthrough
 	case "writer":
-		*e = PermissionRoleEnum(s)
+		*e = PermissionRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PermissionRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for PermissionRoleEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	PermissionTypeEnumUser   PermissionTypeEnum = "user"
 )
 
+func (e PermissionTypeEnum) ToPointer() *PermissionTypeEnum {
+	return &e
+}
+
 func (e *PermissionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "anyone":
 		fallthrough
 	case "domain":
@@ -66,10 +74,10 @@ func (e *PermissionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "group":
 		fallthrough
 	case "user":
-		*e = PermissionTypeEnum(s)
+		*e = PermissionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PermissionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PermissionTypeEnum: %v", v)
 	}
 }
 

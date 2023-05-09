@@ -14,18 +14,22 @@ const (
 	OverrideStatusEnumRevoke   OverrideStatusEnum = "REVOKE"
 )
 
+func (e OverrideStatusEnum) ToPointer() *OverrideStatusEnum {
+	return &e
+}
+
 func (e *OverrideStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OVERRIDE":
 		fallthrough
 	case "REVOKE":
-		*e = OverrideStatusEnum(s)
+		*e = OverrideStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OverrideStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OverrideStatusEnum: %v", v)
 	}
 }

@@ -34,12 +34,16 @@ const (
 	PaymentTypeEnumBraintree    PaymentTypeEnum = "Braintree"
 )
 
+func (e PaymentTypeEnum) ToPointer() *PaymentTypeEnum {
+	return &e
+}
+
 func (e *PaymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Other":
 		fallthrough
 	case "Paypal":
@@ -81,10 +85,10 @@ func (e *PaymentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AuthorizeNet":
 		fallthrough
 	case "Braintree":
-		*e = PaymentTypeEnum(s)
+		*e = PaymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentTypeEnum: %v", v)
 	}
 }
 

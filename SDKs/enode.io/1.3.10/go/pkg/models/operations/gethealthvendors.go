@@ -18,21 +18,25 @@ const (
 	GetHealthVendors200ApplicationJSONStatusEnumOutage            GetHealthVendors200ApplicationJSONStatusEnum = "OUTAGE"
 )
 
+func (e GetHealthVendors200ApplicationJSONStatusEnum) ToPointer() *GetHealthVendors200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetHealthVendors200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READY":
 		fallthrough
 	case "ELEVATED_ERROR_RATE":
 		fallthrough
 	case "OUTAGE":
-		*e = GetHealthVendors200ApplicationJSONStatusEnum(s)
+		*e = GetHealthVendors200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHealthVendors200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHealthVendors200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

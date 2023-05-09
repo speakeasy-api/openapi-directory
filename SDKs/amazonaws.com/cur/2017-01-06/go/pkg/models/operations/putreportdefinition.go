@@ -16,17 +16,21 @@ const (
 	PutReportDefinitionXAmzTargetEnumAwsOrigamiServiceGatewayServicePutReportDefinition PutReportDefinitionXAmzTargetEnum = "AWSOrigamiServiceGatewayService.PutReportDefinition"
 )
 
+func (e PutReportDefinitionXAmzTargetEnum) ToPointer() *PutReportDefinitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutReportDefinitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrigamiServiceGatewayService.PutReportDefinition":
-		*e = PutReportDefinitionXAmzTargetEnum(s)
+		*e = PutReportDefinitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutReportDefinitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutReportDefinitionXAmzTargetEnum: %v", v)
 	}
 }
 

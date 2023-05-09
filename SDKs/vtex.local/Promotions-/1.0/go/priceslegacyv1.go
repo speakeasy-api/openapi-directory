@@ -52,7 +52,10 @@ func (s *pricesLegacyV1) DeletebyskuID(ctx context.Context, request operations.D
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/price-sheet/{skuId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/price-sheet/{skuId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -111,7 +114,10 @@ func (s *pricesLegacyV1) Getallpaged(ctx context.Context, request operations.Get
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/price-sheet/all/{page}/{pageSize}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/price-sheet/all/{page}/{pageSize}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -237,7 +243,10 @@ func (s *pricesLegacyV1) PricebyskuID(ctx context.Context, request operations.Pr
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/price-sheet/{skuId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/price-sheet/{skuId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -296,7 +305,10 @@ func (s *pricesLegacyV1) PricebyskuIdandtradePolicy(ctx context.Context, request
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/price-sheet/{skuId}/{tradePolicy}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/price-sheet/{skuId}/{tradePolicy}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

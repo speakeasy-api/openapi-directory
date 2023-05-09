@@ -21,18 +21,22 @@ const (
 	ProductSetVisibilityCriteriaLogicTypeEnumCumulative ProductSetVisibilityCriteriaLogicTypeEnum = "cumulative"
 )
 
+func (e ProductSetVisibilityCriteriaLogicTypeEnum) ToPointer() *ProductSetVisibilityCriteriaLogicTypeEnum {
+	return &e
+}
+
 func (e *ProductSetVisibilityCriteriaLogicTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "funnel":
 		fallthrough
 	case "cumulative":
-		*e = ProductSetVisibilityCriteriaLogicTypeEnum(s)
+		*e = ProductSetVisibilityCriteriaLogicTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductSetVisibilityCriteriaLogicTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductSetVisibilityCriteriaLogicTypeEnum: %v", v)
 	}
 }

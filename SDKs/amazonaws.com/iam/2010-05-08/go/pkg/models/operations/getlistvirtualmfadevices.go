@@ -15,17 +15,21 @@ const (
 	GETListVirtualMFADevicesActionEnumListVirtualMfaDevices GETListVirtualMFADevicesActionEnum = "ListVirtualMFADevices"
 )
 
+func (e GETListVirtualMFADevicesActionEnum) ToPointer() *GETListVirtualMFADevicesActionEnum {
+	return &e
+}
+
 func (e *GETListVirtualMFADevicesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListVirtualMFADevices":
-		*e = GETListVirtualMFADevicesActionEnum(s)
+		*e = GETListVirtualMFADevicesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListVirtualMFADevicesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListVirtualMFADevicesActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETListVirtualMFADevicesAssignmentStatusEnumAny        GETListVirtualMFADevicesAssignmentStatusEnum = "Any"
 )
 
+func (e GETListVirtualMFADevicesAssignmentStatusEnum) ToPointer() *GETListVirtualMFADevicesAssignmentStatusEnum {
+	return &e
+}
+
 func (e *GETListVirtualMFADevicesAssignmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Assigned":
 		fallthrough
 	case "Unassigned":
 		fallthrough
 	case "Any":
-		*e = GETListVirtualMFADevicesAssignmentStatusEnum(s)
+		*e = GETListVirtualMFADevicesAssignmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListVirtualMFADevicesAssignmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListVirtualMFADevicesAssignmentStatusEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETListVirtualMFADevicesVersionEnumTwoThousandAndTen0508 GETListVirtualMFADevicesVersionEnum = "2010-05-08"
 )
 
+func (e GETListVirtualMFADevicesVersionEnum) ToPointer() *GETListVirtualMFADevicesVersionEnum {
+	return &e
+}
+
 func (e *GETListVirtualMFADevicesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETListVirtualMFADevicesVersionEnum(s)
+		*e = GETListVirtualMFADevicesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListVirtualMFADevicesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListVirtualMFADevicesVersionEnum: %v", v)
 	}
 }
 

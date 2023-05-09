@@ -16,12 +16,16 @@ const (
 	AccountTokenByCodeRequestScopesEnumPlayback AccountTokenByCodeRequestScopesEnum = "Playback"
 )
 
+func (e AccountTokenByCodeRequestScopesEnum) ToPointer() *AccountTokenByCodeRequestScopesEnum {
+	return &e
+}
+
 func (e *AccountTokenByCodeRequestScopesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Catalog":
 		fallthrough
 	case "Commerce":
@@ -29,10 +33,10 @@ func (e *AccountTokenByCodeRequestScopesEnum) UnmarshalJSON(data []byte) error {
 	case "Settings":
 		fallthrough
 	case "Playback":
-		*e = AccountTokenByCodeRequestScopesEnum(s)
+		*e = AccountTokenByCodeRequestScopesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTokenByCodeRequestScopesEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTokenByCodeRequestScopesEnum: %v", v)
 	}
 }
 

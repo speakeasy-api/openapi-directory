@@ -30,12 +30,16 @@ const (
 	ConnectionErrorCodeTypeEnumXksProxyInvalidTLSConfiguration           ConnectionErrorCodeTypeEnum = "XKS_PROXY_INVALID_TLS_CONFIGURATION"
 )
 
+func (e ConnectionErrorCodeTypeEnum) ToPointer() *ConnectionErrorCodeTypeEnum {
+	return &e
+}
+
 func (e *ConnectionErrorCodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVALID_CREDENTIALS":
 		fallthrough
 	case "CLUSTER_NOT_FOUND":
@@ -71,9 +75,9 @@ func (e *ConnectionErrorCodeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "XKS_PROXY_TIMED_OUT":
 		fallthrough
 	case "XKS_PROXY_INVALID_TLS_CONFIGURATION":
-		*e = ConnectionErrorCodeTypeEnum(s)
+		*e = ConnectionErrorCodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionErrorCodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionErrorCodeTypeEnum: %v", v)
 	}
 }

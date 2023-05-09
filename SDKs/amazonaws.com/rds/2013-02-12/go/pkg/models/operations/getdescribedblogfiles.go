@@ -15,17 +15,21 @@ const (
 	GETDescribeDBLogFilesActionEnumDescribeDbLogFiles GETDescribeDBLogFilesActionEnum = "DescribeDBLogFiles"
 )
 
+func (e GETDescribeDBLogFilesActionEnum) ToPointer() *GETDescribeDBLogFilesActionEnum {
+	return &e
+}
+
 func (e *GETDescribeDBLogFilesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeDBLogFiles":
-		*e = GETDescribeDBLogFilesActionEnum(s)
+		*e = GETDescribeDBLogFilesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeDBLogFilesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeDBLogFilesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeDBLogFilesVersionEnumTwoThousandAndThirteen0212 GETDescribeDBLogFilesVersionEnum = "2013-02-12"
 )
 
+func (e GETDescribeDBLogFilesVersionEnum) ToPointer() *GETDescribeDBLogFilesVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeDBLogFilesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETDescribeDBLogFilesVersionEnum(s)
+		*e = GETDescribeDBLogFilesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeDBLogFilesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeDBLogFilesVersionEnum: %v", v)
 	}
 }
 

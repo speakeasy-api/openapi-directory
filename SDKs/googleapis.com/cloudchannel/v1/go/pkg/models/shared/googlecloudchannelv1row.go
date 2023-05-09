@@ -4,6 +4,8 @@ package shared
 
 // GoogleCloudChannelV1Row - A row of report values.
 type GoogleCloudChannelV1Row struct {
+	// The key for the partition this row belongs to. This field is empty if the report is not partitioned.
+	PartitionKey *string `json:"partitionKey,omitempty"`
 	// The list of values in the row.
 	Values []GoogleCloudChannelV1ReportValue `json:"values,omitempty"`
 }

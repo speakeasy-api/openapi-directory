@@ -91,7 +91,10 @@ func (s *neo) BrowseNearEarthObjects(ctx context.Context, request operations.Bro
 // Retrieve a Near Earth Objects with a given id
 func (s *neo) RetrieveNearEarthObjectByID(ctx context.Context, request operations.RetrieveNearEarthObjectByIDRequest) (*operations.RetrieveNearEarthObjectByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rest/v1/neo/{asteroid_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/rest/v1/neo/{asteroid_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

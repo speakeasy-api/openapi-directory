@@ -35,7 +35,10 @@ func newConversations(defaultClient, securityClient HTTPClient, serverURL, langu
 // ConversationsClose - Closes a conversation
 func (s *conversations) ConversationsClose(ctx context.Context, request operations.ConversationsCloseRequest, security operations.ConversationsCloseSecurity) (*operations.ConversationsCloseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations/{conversationId}/close", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations/{conversationId}/close", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *conversations) ConversationsClose(ctx context.Context, request operatio
 // ConversationsFetch - Fetch conversation by ID
 func (s *conversations) ConversationsFetch(ctx context.Context, request operations.ConversationsFetchRequest, security operations.ConversationsFetchSecurity) (*operations.ConversationsFetchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations/{conversationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations/{conversationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -123,7 +129,10 @@ func (s *conversations) ConversationsFetch(ctx context.Context, request operatio
 // ConversationsFetchAll - Fetch conversations
 func (s *conversations) ConversationsFetchAll(ctx context.Context, request operations.ConversationsFetchAllRequest, security operations.ConversationsFetchAllSecurity) (*operations.ConversationsFetchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

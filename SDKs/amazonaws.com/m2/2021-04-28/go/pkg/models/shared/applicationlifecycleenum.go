@@ -23,12 +23,16 @@ const (
 	ApplicationLifecycleEnumDeletingFromEnvironment ApplicationLifecycleEnum = "Deleting From Environment"
 )
 
+func (e ApplicationLifecycleEnum) ToPointer() *ApplicationLifecycleEnum {
+	return &e
+}
+
 func (e *ApplicationLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Creating":
 		fallthrough
 	case "Created":
@@ -50,9 +54,9 @@ func (e *ApplicationLifecycleEnum) UnmarshalJSON(data []byte) error {
 	case "Deleting":
 		fallthrough
 	case "Deleting From Environment":
-		*e = ApplicationLifecycleEnum(s)
+		*e = ApplicationLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationLifecycleEnum: %v", v)
 	}
 }

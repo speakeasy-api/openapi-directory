@@ -13,19 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/extpose.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
     ctx := context.Background()
-    res, err := s.User.GetUserExtensions(ctx)
+    res, err := s.User.GetUserExtensions(ctx, operations.GetUserExtensionsSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -41,9 +42,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### User
+### [User](docs/user/README.md)
 
-* `GetUserExtensions` - Get User Extensions
+* [GetUserExtensions](docs/user/README.md#getuserextensions) - Get User Extensions
 <!-- End SDK Available Operations -->
 
 ### Maturity

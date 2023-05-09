@@ -33,7 +33,7 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // GetUsersMe - About Me
 // Returns the user profile of the access token's owner. This could be useful if managing multiple accounts or confirming validity of a token.
-func (s *users) GetUsersMe(ctx context.Context) (*operations.GetUsersMeResponse, error) {
+func (s *users) GetUsersMe(ctx context.Context, security operations.GetUsersMeSecurity) (*operations.GetUsersMeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users/me"
 
@@ -42,7 +42,7 @@ func (s *users) GetUsersMe(ctx context.Context) (*operations.GetUsersMeResponse,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

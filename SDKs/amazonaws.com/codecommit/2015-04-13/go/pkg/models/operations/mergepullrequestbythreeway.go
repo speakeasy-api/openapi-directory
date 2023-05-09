@@ -16,17 +16,21 @@ const (
 	MergePullRequestByThreeWayXAmzTargetEnumCodeCommit20150413MergePullRequestByThreeWay MergePullRequestByThreeWayXAmzTargetEnum = "CodeCommit_20150413.MergePullRequestByThreeWay"
 )
 
+func (e MergePullRequestByThreeWayXAmzTargetEnum) ToPointer() *MergePullRequestByThreeWayXAmzTargetEnum {
+	return &e
+}
+
 func (e *MergePullRequestByThreeWayXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.MergePullRequestByThreeWay":
-		*e = MergePullRequestByThreeWayXAmzTargetEnum(s)
+		*e = MergePullRequestByThreeWayXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MergePullRequestByThreeWayXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for MergePullRequestByThreeWayXAmzTargetEnum: %v", v)
 	}
 }
 

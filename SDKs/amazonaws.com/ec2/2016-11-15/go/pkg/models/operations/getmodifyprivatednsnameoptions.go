@@ -15,17 +15,21 @@ const (
 	GETModifyPrivateDNSNameOptionsActionEnumModifyPrivateDNSNameOptions GETModifyPrivateDNSNameOptionsActionEnum = "ModifyPrivateDnsNameOptions"
 )
 
+func (e GETModifyPrivateDNSNameOptionsActionEnum) ToPointer() *GETModifyPrivateDNSNameOptionsActionEnum {
+	return &e
+}
+
 func (e *GETModifyPrivateDNSNameOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyPrivateDnsNameOptions":
-		*e = GETModifyPrivateDNSNameOptionsActionEnum(s)
+		*e = GETModifyPrivateDNSNameOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyPrivateDNSNameOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyPrivateDNSNameOptionsActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETModifyPrivateDNSNameOptionsPrivateDNSHostnameTypeEnumResourceName GETModifyPrivateDNSNameOptionsPrivateDNSHostnameTypeEnum = "resource-name"
 )
 
+func (e GETModifyPrivateDNSNameOptionsPrivateDNSHostnameTypeEnum) ToPointer() *GETModifyPrivateDNSNameOptionsPrivateDNSHostnameTypeEnum {
+	return &e
+}
+
 func (e *GETModifyPrivateDNSNameOptionsPrivateDNSHostnameTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ip-name":
 		fallthrough
 	case "resource-name":
-		*e = GETModifyPrivateDNSNameOptionsPrivateDNSHostnameTypeEnum(s)
+		*e = GETModifyPrivateDNSNameOptionsPrivateDNSHostnameTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyPrivateDNSNameOptionsPrivateDNSHostnameTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyPrivateDNSNameOptionsPrivateDNSHostnameTypeEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETModifyPrivateDNSNameOptionsVersionEnumTwoThousandAndSixteen1115 GETModifyPrivateDNSNameOptionsVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyPrivateDNSNameOptionsVersionEnum) ToPointer() *GETModifyPrivateDNSNameOptionsVersionEnum {
+	return &e
+}
+
 func (e *GETModifyPrivateDNSNameOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyPrivateDNSNameOptionsVersionEnum(s)
+		*e = GETModifyPrivateDNSNameOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyPrivateDNSNameOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyPrivateDNSNameOptionsVersionEnum: %v", v)
 	}
 }
 

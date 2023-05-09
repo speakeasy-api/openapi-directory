@@ -17,12 +17,16 @@ const (
 	GradeHistoryGradeChangeTypeEnumMaxPointsChange                 GradeHistoryGradeChangeTypeEnum = "MAX_POINTS_CHANGE"
 )
 
+func (e GradeHistoryGradeChangeTypeEnum) ToPointer() *GradeHistoryGradeChangeTypeEnum {
+	return &e
+}
+
 func (e *GradeHistoryGradeChangeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_GRADE_CHANGE_TYPE":
 		fallthrough
 	case "DRAFT_GRADE_POINTS_EARNED_CHANGE":
@@ -30,10 +34,10 @@ func (e *GradeHistoryGradeChangeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ASSIGNED_GRADE_POINTS_EARNED_CHANGE":
 		fallthrough
 	case "MAX_POINTS_CHANGE":
-		*e = GradeHistoryGradeChangeTypeEnum(s)
+		*e = GradeHistoryGradeChangeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GradeHistoryGradeChangeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GradeHistoryGradeChangeTypeEnum: %v", v)
 	}
 }
 

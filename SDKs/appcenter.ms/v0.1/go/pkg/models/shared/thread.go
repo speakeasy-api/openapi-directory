@@ -22,12 +22,16 @@ const (
 	ThreadFramesLanguageEnumUnknown      ThreadFramesLanguageEnum = "Unknown"
 )
 
+func (e ThreadFramesLanguageEnum) ToPointer() *ThreadFramesLanguageEnum {
+	return &e
+}
+
 func (e *ThreadFramesLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JavaScript":
 		fallthrough
 	case "CSharp":
@@ -45,10 +49,10 @@ func (e *ThreadFramesLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "Java":
 		fallthrough
 	case "Unknown":
-		*e = ThreadFramesLanguageEnum(s)
+		*e = ThreadFramesLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThreadFramesLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for ThreadFramesLanguageEnum: %v", v)
 	}
 }
 
@@ -95,12 +99,16 @@ const (
 	ThreadPlatformEnumOther       ThreadPlatformEnum = "other"
 )
 
+func (e ThreadPlatformEnum) ToPointer() *ThreadPlatformEnum {
+	return &e
+}
+
 func (e *ThreadPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ios":
 		fallthrough
 	case "android":
@@ -114,10 +122,10 @@ func (e *ThreadPlatformEnum) UnmarshalJSON(data []byte) error {
 	case "unity":
 		fallthrough
 	case "other":
-		*e = ThreadPlatformEnum(s)
+		*e = ThreadPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThreadPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for ThreadPlatformEnum: %v", v)
 	}
 }
 

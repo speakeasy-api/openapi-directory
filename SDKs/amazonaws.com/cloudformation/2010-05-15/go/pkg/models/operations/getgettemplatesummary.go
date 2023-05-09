@@ -15,17 +15,21 @@ const (
 	GETGETTemplateSummaryActionEnumGetTemplateSummary GETGETTemplateSummaryActionEnum = "GetTemplateSummary"
 )
 
+func (e GETGETTemplateSummaryActionEnum) ToPointer() *GETGETTemplateSummaryActionEnum {
+	return &e
+}
+
 func (e *GETGETTemplateSummaryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetTemplateSummary":
-		*e = GETGETTemplateSummaryActionEnum(s)
+		*e = GETGETTemplateSummaryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETTemplateSummaryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETTemplateSummaryActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETGETTemplateSummaryCallAsEnumDelegatedAdmin GETGETTemplateSummaryCallAsEnum = "DELEGATED_ADMIN"
 )
 
+func (e GETGETTemplateSummaryCallAsEnum) ToPointer() *GETGETTemplateSummaryCallAsEnum {
+	return &e
+}
+
 func (e *GETGETTemplateSummaryCallAsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SELF":
 		fallthrough
 	case "DELEGATED_ADMIN":
-		*e = GETGETTemplateSummaryCallAsEnum(s)
+		*e = GETGETTemplateSummaryCallAsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETTemplateSummaryCallAsEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETTemplateSummaryCallAsEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETGETTemplateSummaryVersionEnumTwoThousandAndTen0515 GETGETTemplateSummaryVersionEnum = "2010-05-15"
 )
 
+func (e GETGETTemplateSummaryVersionEnum) ToPointer() *GETGETTemplateSummaryVersionEnum {
+	return &e
+}
+
 func (e *GETGETTemplateSummaryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETGETTemplateSummaryVersionEnum(s)
+		*e = GETGETTemplateSummaryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETTemplateSummaryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETTemplateSummaryVersionEnum: %v", v)
 	}
 }
 

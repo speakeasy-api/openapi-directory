@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Orders-API-(PI
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -29,16 +29,17 @@ func main() {
         }),
     )
 
-    req := operations.InvoiceNotification2Request{
+    ctx := context.Background()
+    res, err := s.Invoice.InvoiceNotification2(ctx, operations.InvoiceNotification2Request{
         Accept: "application/json",
         ContentType: "application/json",
         InvoiceNotificationRequest: shared.InvoiceNotificationRequest{
-            Cfop: "6.104",
-            Courier: "corrupti",
-            ExtraValue: 100,
-            InvoiceKey: "provident",
+            Cfop: sdk.String("6.104"),
+            Courier: sdk.String("corrupti"),
+            ExtraValue: sdk.Int64(100),
+            InvoiceKey: sdk.String("provident"),
             InvoiceNumber: "123456789",
-            InvoiceURL: "distinctio",
+            InvoiceURL: sdk.String("distinctio"),
             InvoiceValue: "2499",
             IssuedDate: "2020-07-15",
             Items: []shared.Item1{
@@ -63,16 +64,13 @@ func main() {
                     Quantity: 3,
                 },
             },
-            TrackingNumber: "unde",
-            TrackingURL: "nulla",
+            TrackingNumber: sdk.String("unde"),
+            TrackingURL: sdk.String("nulla"),
             Type: "Output",
-            Volumes: 3,
+            Volumes: sdk.Int64(3),
         },
         OrderID: "70caf3941s6df1",
-    }
-
-    ctx := context.Background()
-    res, err := s.Invoice.InvoiceNotification2(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -88,20 +86,20 @@ func main() {
 ## Available Resources and Operations
 
 
-### Invoice
+### [Invoice](docs/invoice/README.md)
 
-* `InvoiceNotification2` - Order invoice notification
+* [InvoiceNotification2](docs/invoice/README.md#invoicenotification2) - Order invoice notification
 
-### Orders
+### [Orders](docs/orders/README.md)
 
-* `CancelOrder2` - Cancel order
-* `GetOrder2` - Get order
-* `ListOrders2` - List orders
-* `StartHandling2` - Start handling order
+* [CancelOrder2](docs/orders/README.md#cancelorder2) - Cancel order
+* [GetOrder2](docs/orders/README.md#getorder2) - Get order
+* [ListOrders2](docs/orders/README.md#listorders2) - List orders
+* [StartHandling2](docs/orders/README.md#starthandling2) - Start handling order
 
-### Payment
+### [Payment](docs/payment/README.md)
 
-* `SendPaymentNotification2` - Send payment notification
+* [SendPaymentNotification2](docs/payment/README.md#sendpaymentnotification2) - Send payment notification
 <!-- End SDK Available Operations -->
 
 ### Maturity

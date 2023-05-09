@@ -18,12 +18,16 @@ const (
 	RateDetailsInventorySourceRateTypeEnumInventorySourceRateTypeFlat        RateDetailsInventorySourceRateTypeEnum = "INVENTORY_SOURCE_RATE_TYPE_FLAT"
 )
 
+func (e RateDetailsInventorySourceRateTypeEnum) ToPointer() *RateDetailsInventorySourceRateTypeEnum {
+	return &e
+}
+
 func (e *RateDetailsInventorySourceRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVENTORY_SOURCE_RATE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INVENTORY_SOURCE_RATE_TYPE_CPM_FIXED":
@@ -33,10 +37,10 @@ func (e *RateDetailsInventorySourceRateTypeEnum) UnmarshalJSON(data []byte) erro
 	case "INVENTORY_SOURCE_RATE_TYPE_CPD":
 		fallthrough
 	case "INVENTORY_SOURCE_RATE_TYPE_FLAT":
-		*e = RateDetailsInventorySourceRateTypeEnum(s)
+		*e = RateDetailsInventorySourceRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RateDetailsInventorySourceRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RateDetailsInventorySourceRateTypeEnum: %v", v)
 	}
 }
 

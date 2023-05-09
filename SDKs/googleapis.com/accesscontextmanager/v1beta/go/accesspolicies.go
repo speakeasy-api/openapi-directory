@@ -35,7 +35,10 @@ func newAccessPolicies(defaultClient, securityClient HTTPClient, serverURL, lang
 // AccesscontextmanagerAccessPoliciesAccessLevelsCreate - Create an Access Level. The longrunning operation from this RPC will have a successful status once the Access Level has propagated to long-lasting storage. Access Levels containing errors will result in an error response for the first error encountered.
 func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsCreate(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest, security operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity) (*operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/accessLevels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/accessLevels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccessLevel", "json")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsCreate(ct
 // AccesscontextmanagerAccessPoliciesAccessLevelsList - List all Access Levels for an access policy.
 func (s *accessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsList(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAccessLevelsListRequest, security operations.AccesscontextmanagerAccessPoliciesAccessLevelsListSecurity) (*operations.AccesscontextmanagerAccessPoliciesAccessLevelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/accessLevels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/accessLevels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -241,7 +247,10 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesList(ctx context.Cont
 // AccesscontextmanagerAccessPoliciesServicePerimetersCreate - Create a Service Perimeter. The longrunning operation from this RPC will have a successful status once the Service Perimeter has propagated to long-lasting storage. Service Perimeters containing errors will result in an error response for the first error encountered.
 func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersCreate(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateRequest, security operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateSecurity) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/servicePerimeters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/servicePerimeters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServicePerimeter", "json")
 	if err != nil {
@@ -296,7 +305,10 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersCrea
 // AccesscontextmanagerAccessPoliciesServicePerimetersDelete - Delete a Service Perimeter by resource name. The longrunning operation from this RPC will have a successful status once the Service Perimeter has been removed from long-lasting storage.
 func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersDelete(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteRequest, security operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteSecurity) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -344,7 +356,10 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersDele
 // AccesscontextmanagerAccessPoliciesServicePerimetersList - List all Service Perimeters for an access policy.
 func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersList(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersListRequest, security operations.AccesscontextmanagerAccessPoliciesServicePerimetersListSecurity) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/servicePerimeters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/servicePerimeters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -392,7 +407,10 @@ func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersList
 // AccesscontextmanagerAccessPoliciesServicePerimetersPatch - Update a Service Perimeter. The longrunning operation from this RPC will have a successful status once the changes to the Service Perimeter have propagated to long-lasting storage. Service Perimeter containing errors will result in an error response for the first error encountered.
 func (s *accessPolicies) AccesscontextmanagerAccessPoliciesServicePerimetersPatch(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchRequest, security operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchSecurity) (*operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServicePerimeter", "json")
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	SigninDetailAllowPersonalUsageEnumPersonalUsageDisallowed       SigninDetailAllowPersonalUsageEnum = "PERSONAL_USAGE_DISALLOWED"
 )
 
+func (e SigninDetailAllowPersonalUsageEnum) ToPointer() *SigninDetailAllowPersonalUsageEnum {
+	return &e
+}
+
 func (e *SigninDetailAllowPersonalUsageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOW_PERSONAL_USAGE_UNSPECIFIED":
 		fallthrough
 	case "PERSONAL_USAGE_ALLOWED":
 		fallthrough
 	case "PERSONAL_USAGE_DISALLOWED":
-		*e = SigninDetailAllowPersonalUsageEnum(s)
+		*e = SigninDetailAllowPersonalUsageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SigninDetailAllowPersonalUsageEnum: %s", s)
+		return fmt.Errorf("invalid value for SigninDetailAllowPersonalUsageEnum: %v", v)
 	}
 }
 

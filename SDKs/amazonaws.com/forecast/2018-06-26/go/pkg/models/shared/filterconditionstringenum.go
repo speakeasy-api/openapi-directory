@@ -14,18 +14,22 @@ const (
 	FilterConditionStringEnumIsNot FilterConditionStringEnum = "IS_NOT"
 )
 
+func (e FilterConditionStringEnum) ToPointer() *FilterConditionStringEnum {
+	return &e
+}
+
 func (e *FilterConditionStringEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IS":
 		fallthrough
 	case "IS_NOT":
-		*e = FilterConditionStringEnum(s)
+		*e = FilterConditionStringEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterConditionStringEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterConditionStringEnum: %v", v)
 	}
 }

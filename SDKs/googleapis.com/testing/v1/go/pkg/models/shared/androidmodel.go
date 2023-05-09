@@ -17,12 +17,16 @@ const (
 	AndroidModelFormEnumEmulator              AndroidModelFormEnum = "EMULATOR"
 )
 
+func (e AndroidModelFormEnum) ToPointer() *AndroidModelFormEnum {
+	return &e
+}
+
 func (e *AndroidModelFormEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_FORM_UNSPECIFIED":
 		fallthrough
 	case "VIRTUAL":
@@ -30,10 +34,10 @@ func (e *AndroidModelFormEnum) UnmarshalJSON(data []byte) error {
 	case "PHYSICAL":
 		fallthrough
 	case "EMULATOR":
-		*e = AndroidModelFormEnum(s)
+		*e = AndroidModelFormEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidModelFormEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidModelFormEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	AndroidModelFormFactorEnumWearable                    AndroidModelFormFactorEnum = "WEARABLE"
 )
 
+func (e AndroidModelFormFactorEnum) ToPointer() *AndroidModelFormFactorEnum {
+	return &e
+}
+
 func (e *AndroidModelFormFactorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_FORM_FACTOR_UNSPECIFIED":
 		fallthrough
 	case "PHONE":
@@ -60,10 +68,10 @@ func (e *AndroidModelFormFactorEnum) UnmarshalJSON(data []byte) error {
 	case "TABLET":
 		fallthrough
 	case "WEARABLE":
-		*e = AndroidModelFormFactorEnum(s)
+		*e = AndroidModelFormFactorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidModelFormFactorEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidModelFormFactorEnum: %v", v)
 	}
 }
 

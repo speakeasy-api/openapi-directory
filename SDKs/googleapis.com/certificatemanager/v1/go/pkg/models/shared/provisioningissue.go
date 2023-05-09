@@ -16,21 +16,25 @@ const (
 	ProvisioningIssueReasonEnumRateLimited        ProvisioningIssueReasonEnum = "RATE_LIMITED"
 )
 
+func (e ProvisioningIssueReasonEnum) ToPointer() *ProvisioningIssueReasonEnum {
+	return &e
+}
+
 func (e *ProvisioningIssueReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REASON_UNSPECIFIED":
 		fallthrough
 	case "AUTHORIZATION_ISSUE":
 		fallthrough
 	case "RATE_LIMITED":
-		*e = ProvisioningIssueReasonEnum(s)
+		*e = ProvisioningIssueReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisioningIssueReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisioningIssueReasonEnum: %v", v)
 	}
 }
 

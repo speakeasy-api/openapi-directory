@@ -66,12 +66,16 @@ const (
 	GetDocumentWithWebHook200ApplicationJSONExplanationOpEnumRedo  GetDocumentWithWebHook200ApplicationJSONExplanationOpEnum = "redo"
 )
 
+func (e GetDocumentWithWebHook200ApplicationJSONExplanationOpEnum) ToPointer() *GetDocumentWithWebHook200ApplicationJSONExplanationOpEnum {
+	return &e
+}
+
 func (e *GetDocumentWithWebHook200ApplicationJSONExplanationOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enter":
 		fallthrough
 	case "exit":
@@ -81,10 +85,10 @@ func (e *GetDocumentWithWebHook200ApplicationJSONExplanationOpEnum) UnmarshalJSO
 	case "fail":
 		fallthrough
 	case "redo":
-		*e = GetDocumentWithWebHook200ApplicationJSONExplanationOpEnum(s)
+		*e = GetDocumentWithWebHook200ApplicationJSONExplanationOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDocumentWithWebHook200ApplicationJSONExplanationOpEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDocumentWithWebHook200ApplicationJSONExplanationOpEnum: %v", v)
 	}
 }
 
@@ -97,21 +101,25 @@ const (
 	GetDocumentWithWebHook200ApplicationJSONExplanationTypeEnumBody GetDocumentWithWebHook200ApplicationJSONExplanationTypeEnum = "body"
 )
 
+func (e GetDocumentWithWebHook200ApplicationJSONExplanationTypeEnum) ToPointer() *GetDocumentWithWebHook200ApplicationJSONExplanationTypeEnum {
+	return &e
+}
+
 func (e *GetDocumentWithWebHook200ApplicationJSONExplanationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "expr":
 		fallthrough
 	case "rule":
 		fallthrough
 	case "body":
-		*e = GetDocumentWithWebHook200ApplicationJSONExplanationTypeEnum(s)
+		*e = GetDocumentWithWebHook200ApplicationJSONExplanationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDocumentWithWebHook200ApplicationJSONExplanationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDocumentWithWebHook200ApplicationJSONExplanationTypeEnum: %v", v)
 	}
 }
 
@@ -207,19 +215,23 @@ const (
 	GetDocumentWithWebHook200ApplicationJSONResultAstPackagePathTypeEnumPackage GetDocumentWithWebHook200ApplicationJSONResultAstPackagePathTypeEnum = "package"
 )
 
+func (e GetDocumentWithWebHook200ApplicationJSONResultAstPackagePathTypeEnum) ToPointer() *GetDocumentWithWebHook200ApplicationJSONResultAstPackagePathTypeEnum {
+	return &e
+}
+
 func (e *GetDocumentWithWebHook200ApplicationJSONResultAstPackagePathTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "import":
 		fallthrough
 	case "package":
-		*e = GetDocumentWithWebHook200ApplicationJSONResultAstPackagePathTypeEnum(s)
+		*e = GetDocumentWithWebHook200ApplicationJSONResultAstPackagePathTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDocumentWithWebHook200ApplicationJSONResultAstPackagePathTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDocumentWithWebHook200ApplicationJSONResultAstPackagePathTypeEnum: %v", v)
 	}
 }
 

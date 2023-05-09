@@ -15,17 +15,21 @@ const (
 	GETUpdateConfigurationSetReputationMetricsEnabledActionEnumUpdateConfigurationSetReputationMetricsEnabled GETUpdateConfigurationSetReputationMetricsEnabledActionEnum = "UpdateConfigurationSetReputationMetricsEnabled"
 )
 
+func (e GETUpdateConfigurationSetReputationMetricsEnabledActionEnum) ToPointer() *GETUpdateConfigurationSetReputationMetricsEnabledActionEnum {
+	return &e
+}
+
 func (e *GETUpdateConfigurationSetReputationMetricsEnabledActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateConfigurationSetReputationMetricsEnabled":
-		*e = GETUpdateConfigurationSetReputationMetricsEnabledActionEnum(s)
+		*e = GETUpdateConfigurationSetReputationMetricsEnabledActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateConfigurationSetReputationMetricsEnabledActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateConfigurationSetReputationMetricsEnabledActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUpdateConfigurationSetReputationMetricsEnabledVersionEnumTwoThousandAndTen1201 GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum = "2010-12-01"
 )
 
+func (e GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum) ToPointer() *GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum(s)
+		*e = GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum: %v", v)
 	}
 }
 

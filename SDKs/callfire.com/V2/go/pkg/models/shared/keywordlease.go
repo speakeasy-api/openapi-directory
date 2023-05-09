@@ -17,12 +17,16 @@ const (
 	KeywordLeaseStatusEnumUnavailable KeywordLeaseStatusEnum = "UNAVAILABLE"
 )
 
+func (e KeywordLeaseStatusEnum) ToPointer() *KeywordLeaseStatusEnum {
+	return &e
+}
+
 func (e *KeywordLeaseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "ACTIVE":
@@ -30,10 +34,10 @@ func (e *KeywordLeaseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "RELEASED":
 		fallthrough
 	case "UNAVAILABLE":
-		*e = KeywordLeaseStatusEnum(s)
+		*e = KeywordLeaseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeywordLeaseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for KeywordLeaseStatusEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	KeywordLeaseTypeEnumExtra KeywordLeaseTypeEnum = "EXTRA"
 )
 
+func (e KeywordLeaseTypeEnum) ToPointer() *KeywordLeaseTypeEnum {
+	return &e
+}
+
 func (e *KeywordLeaseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLAN":
 		fallthrough
 	case "EXTRA":
-		*e = KeywordLeaseTypeEnum(s)
+		*e = KeywordLeaseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeywordLeaseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for KeywordLeaseTypeEnum: %v", v)
 	}
 }
 

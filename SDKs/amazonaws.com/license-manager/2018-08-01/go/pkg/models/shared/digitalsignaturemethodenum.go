@@ -13,16 +13,20 @@ const (
 	DigitalSignatureMethodEnumJwtPs384 DigitalSignatureMethodEnum = "JWT_PS384"
 )
 
+func (e DigitalSignatureMethodEnum) ToPointer() *DigitalSignatureMethodEnum {
+	return &e
+}
+
 func (e *DigitalSignatureMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JWT_PS384":
-		*e = DigitalSignatureMethodEnum(s)
+		*e = DigitalSignatureMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DigitalSignatureMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for DigitalSignatureMethodEnum: %v", v)
 	}
 }

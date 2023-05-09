@@ -17,12 +17,16 @@ const (
 	LineItemBudgetBudgetAllocationTypeEnumLineItemBudgetAllocationTypeUnlimited   LineItemBudgetBudgetAllocationTypeEnum = "LINE_ITEM_BUDGET_ALLOCATION_TYPE_UNLIMITED"
 )
 
+func (e LineItemBudgetBudgetAllocationTypeEnum) ToPointer() *LineItemBudgetBudgetAllocationTypeEnum {
+	return &e
+}
+
 func (e *LineItemBudgetBudgetAllocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_ITEM_BUDGET_ALLOCATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC":
@@ -30,10 +34,10 @@ func (e *LineItemBudgetBudgetAllocationTypeEnum) UnmarshalJSON(data []byte) erro
 	case "LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED":
 		fallthrough
 	case "LINE_ITEM_BUDGET_ALLOCATION_TYPE_UNLIMITED":
-		*e = LineItemBudgetBudgetAllocationTypeEnum(s)
+		*e = LineItemBudgetBudgetAllocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemBudgetBudgetAllocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemBudgetBudgetAllocationTypeEnum: %v", v)
 	}
 }
 
@@ -54,21 +58,25 @@ const (
 	LineItemBudgetBudgetUnitEnumBudgetUnitImpressions LineItemBudgetBudgetUnitEnum = "BUDGET_UNIT_IMPRESSIONS"
 )
 
+func (e LineItemBudgetBudgetUnitEnum) ToPointer() *LineItemBudgetBudgetUnitEnum {
+	return &e
+}
+
 func (e *LineItemBudgetBudgetUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUDGET_UNIT_UNSPECIFIED":
 		fallthrough
 	case "BUDGET_UNIT_CURRENCY":
 		fallthrough
 	case "BUDGET_UNIT_IMPRESSIONS":
-		*e = LineItemBudgetBudgetUnitEnum(s)
+		*e = LineItemBudgetBudgetUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemBudgetBudgetUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemBudgetBudgetUnitEnum: %v", v)
 	}
 }
 

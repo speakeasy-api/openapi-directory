@@ -24,12 +24,16 @@ const (
 	CancelTestMatrixResponseTestStateEnumInvalid                  CancelTestMatrixResponseTestStateEnum = "INVALID"
 )
 
+func (e CancelTestMatrixResponseTestStateEnum) ToPointer() *CancelTestMatrixResponseTestStateEnum {
+	return &e
+}
+
 func (e *CancelTestMatrixResponseTestStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEST_STATE_UNSPECIFIED":
 		fallthrough
 	case "VALIDATING":
@@ -51,10 +55,10 @@ func (e *CancelTestMatrixResponseTestStateEnum) UnmarshalJSON(data []byte) error
 	case "CANCELLED":
 		fallthrough
 	case "INVALID":
-		*e = CancelTestMatrixResponseTestStateEnum(s)
+		*e = CancelTestMatrixResponseTestStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelTestMatrixResponseTestStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelTestMatrixResponseTestStateEnum: %v", v)
 	}
 }
 

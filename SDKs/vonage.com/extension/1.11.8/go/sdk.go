@@ -25,6 +25,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - The Vonage Business Cloud Extension API enables you to retrieve information about extensions.
 //
 // Your application must subscribe to the Provisioning API suite to use this API.
@@ -96,7 +111,10 @@ func New(opts ...SDKOption) *SDK {
 // ExtensionCtrlGetAccountExtensionByID - Get extension data by account ID and extension number
 func (s *SDK) ExtensionCtrlGetAccountExtensionByID(ctx context.Context, request operations.ExtensionCtrlGetAccountExtensionByIDRequest, security operations.ExtensionCtrlGetAccountExtensionByIDSecurity) (*operations.ExtensionCtrlGetAccountExtensionByIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/extensions/{extension_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/extensions/{extension_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -150,7 +168,10 @@ func (s *SDK) ExtensionCtrlGetAccountExtensionByID(ctx context.Context, request 
 // ExtensionCtrlGetAccountExtensions - Get account extensions data by account ID
 func (s *SDK) ExtensionCtrlGetAccountExtensions(ctx context.Context, request operations.ExtensionCtrlGetAccountExtensionsRequest, security operations.ExtensionCtrlGetAccountExtensionsSecurity) (*operations.ExtensionCtrlGetAccountExtensionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/extensions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/accounts/{account_id}/extensions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

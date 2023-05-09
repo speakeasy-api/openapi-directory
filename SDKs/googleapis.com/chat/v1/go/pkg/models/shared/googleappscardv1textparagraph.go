@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleAppsCardV1TextParagraph - A paragraph of text that supports formatting. See [Text formatting](https://developers.google.com/workspace/add-ons/concepts/widgets#text_formatting) for details.
+// GoogleAppsCardV1TextParagraph - A paragraph of text that supports formatting. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
 type GoogleAppsCardV1TextParagraph struct {
 	// The text that's shown in the widget.
 	Text *string `json:"text,omitempty"`

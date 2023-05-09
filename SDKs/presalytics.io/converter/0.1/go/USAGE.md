@@ -2,26 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SvgconvertFileToConvert{
+    ctx := context.Background()
+    res, err := s.Svgconvert(ctx, operations.SvgconvertFileToConvert{
         File: &operations.SvgconvertFileToConvertFile{
             Content: []byte("corrupti"),
             File: "provident",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.Svgconvert(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

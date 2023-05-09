@@ -90,7 +90,10 @@ func (s *billingAccounts) CloudbillingBillingAccountsCreate(ctx context.Context,
 // CloudbillingBillingAccountsGet - Gets information about a billing account. The current authenticated user must be a [viewer of the billing account](https://cloud.google.com/billing/docs/how-to/billing-access).
 func (s *billingAccounts) CloudbillingBillingAccountsGet(ctx context.Context, request operations.CloudbillingBillingAccountsGetRequest, security operations.CloudbillingBillingAccountsGetSecurity) (*operations.CloudbillingBillingAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *billingAccounts) CloudbillingBillingAccountsGet(ctx context.Context, re
 // CloudbillingBillingAccountsGetIamPolicy - Gets the access control policy for a billing account. The caller must have the `billing.accounts.getIamPolicy` permission on the account, which is often given to billing account [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
 func (s *billingAccounts) CloudbillingBillingAccountsGetIamPolicy(ctx context.Context, request operations.CloudbillingBillingAccountsGetIamPolicyRequest, security operations.CloudbillingBillingAccountsGetIamPolicySecurity) (*operations.CloudbillingBillingAccountsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -234,7 +240,10 @@ func (s *billingAccounts) CloudbillingBillingAccountsList(ctx context.Context, r
 // CloudbillingBillingAccountsPatch - Updates a billing account's fields. Currently the only field that can be edited is `display_name`. The current authenticated user must have the `billing.accounts.update` IAM permission, which is typically given to the [administrator](https://cloud.google.com/billing/docs/how-to/billing-access) of the billing account.
 func (s *billingAccounts) CloudbillingBillingAccountsPatch(ctx context.Context, request operations.CloudbillingBillingAccountsPatchRequest, security operations.CloudbillingBillingAccountsPatchSecurity) (*operations.CloudbillingBillingAccountsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillingAccountInput", "json")
 	if err != nil {
@@ -289,7 +298,10 @@ func (s *billingAccounts) CloudbillingBillingAccountsPatch(ctx context.Context, 
 // CloudbillingBillingAccountsProjectsList - Lists the projects associated with a billing account. The current authenticated user must have the `billing.resourceAssociations.list` IAM permission, which is often given to billing account [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
 func (s *billingAccounts) CloudbillingBillingAccountsProjectsList(ctx context.Context, request operations.CloudbillingBillingAccountsProjectsListRequest, security operations.CloudbillingBillingAccountsProjectsListSecurity) (*operations.CloudbillingBillingAccountsProjectsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -337,7 +349,10 @@ func (s *billingAccounts) CloudbillingBillingAccountsProjectsList(ctx context.Co
 // CloudbillingBillingAccountsSetIamPolicy - Sets the access control policy for a billing account. Replaces any existing policy. The caller must have the `billing.accounts.setIamPolicy` permission on the account, which is often given to billing account [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
 func (s *billingAccounts) CloudbillingBillingAccountsSetIamPolicy(ctx context.Context, request operations.CloudbillingBillingAccountsSetIamPolicyRequest, security operations.CloudbillingBillingAccountsSetIamPolicySecurity) (*operations.CloudbillingBillingAccountsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -392,7 +407,10 @@ func (s *billingAccounts) CloudbillingBillingAccountsSetIamPolicy(ctx context.Co
 // CloudbillingBillingAccountsTestIamPermissions - Tests the access control policy for a billing account. This method takes the resource and a set of permissions as input and returns the subset of the input permissions that the caller is allowed for that resource.
 func (s *billingAccounts) CloudbillingBillingAccountsTestIamPermissions(ctx context.Context, request operations.CloudbillingBillingAccountsTestIamPermissionsRequest, security operations.CloudbillingBillingAccountsTestIamPermissionsSecurity) (*operations.CloudbillingBillingAccountsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {

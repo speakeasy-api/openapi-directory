@@ -15,17 +15,21 @@ const (
 	UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnumEach UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum = "EACH"
 )
 
+func (e UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum) ToPointer() *UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum {
+	return &e
+}
+
 func (e *UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EACH":
-		*e = UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum(s)
+		*e = UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum: %v", v)
 	}
 }
 
@@ -77,12 +81,16 @@ const (
 	UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnumData        UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnum = "DATA"
 )
 
+func (e UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnum) ToPointer() *UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnum {
+	return &e
+}
+
 func (e *UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPLICATION":
 		fallthrough
 	case "SYSTEM":
@@ -90,10 +98,10 @@ func (e *UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnum) Unma
 	case "REQUEST":
 		fallthrough
 	case "DATA":
-		*e = UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnum(s)
+		*e = UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMultiNodeInventory200ApplicationJSONNodesErrorsCategoryEnum: %v", v)
 	}
 }
 
@@ -112,21 +120,25 @@ const (
 	UpdateMultiNodeInventory200ApplicationJSONNodesErrorsSeverityEnumError UpdateMultiNodeInventory200ApplicationJSONNodesErrorsSeverityEnum = "ERROR"
 )
 
+func (e UpdateMultiNodeInventory200ApplicationJSONNodesErrorsSeverityEnum) ToPointer() *UpdateMultiNodeInventory200ApplicationJSONNodesErrorsSeverityEnum {
+	return &e
+}
+
 func (e *UpdateMultiNodeInventory200ApplicationJSONNodesErrorsSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INFO":
 		fallthrough
 	case "WARN":
 		fallthrough
 	case "ERROR":
-		*e = UpdateMultiNodeInventory200ApplicationJSONNodesErrorsSeverityEnum(s)
+		*e = UpdateMultiNodeInventory200ApplicationJSONNodesErrorsSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMultiNodeInventory200ApplicationJSONNodesErrorsSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMultiNodeInventory200ApplicationJSONNodesErrorsSeverityEnum: %v", v)
 	}
 }
 

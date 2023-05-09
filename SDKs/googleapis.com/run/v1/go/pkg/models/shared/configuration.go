@@ -2,7 +2,7 @@
 
 package shared
 
-// Configuration - Configuration represents the "floating HEAD" of a linear history of Revisions, and optionally how the containers those revisions reference are built. Users create new Revisions by updating the Configuration's spec. The "latest created" revision's name is available under status, as is the "latest ready" revision's name. See also: https://github.com/knative/specs/blob/main/specs/serving/overview.md#configuration
+// Configuration - Configuration represents the "floating HEAD" of a linear history of Revisions, and optionally how the containers those revisions reference are built. Users create new Revisions by updating the Configuration's spec. The "latest created" revision's name is available under status, as is the "latest ready" revision's name.
 type Configuration struct {
 	// The API version for this call such as "serving.knative.dev/v1".
 	APIVersion *string `json:"apiVersion,omitempty"`

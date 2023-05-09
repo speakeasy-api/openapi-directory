@@ -349,7 +349,10 @@ func (s *customDevice) CustomDevicePostRaw(ctx context.Context, request []byte) 
 // Gets a Device by it's ID
 func (s *customDevice) GetAPICustomDeviceID(ctx context.Context, request operations.GetAPICustomDeviceIDRequest) (*operations.GetAPICustomDeviceIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/CustomDevice/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/CustomDevice/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

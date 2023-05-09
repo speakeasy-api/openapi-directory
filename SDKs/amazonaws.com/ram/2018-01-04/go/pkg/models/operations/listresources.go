@@ -17,19 +17,23 @@ const (
 	ListResourcesRequestBodyResourceOwnerEnumOtherAccounts ListResourcesRequestBodyResourceOwnerEnum = "OTHER-ACCOUNTS"
 )
 
+func (e ListResourcesRequestBodyResourceOwnerEnum) ToPointer() *ListResourcesRequestBodyResourceOwnerEnum {
+	return &e
+}
+
 func (e *ListResourcesRequestBodyResourceOwnerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SELF":
 		fallthrough
 	case "OTHER-ACCOUNTS":
-		*e = ListResourcesRequestBodyResourceOwnerEnum(s)
+		*e = ListResourcesRequestBodyResourceOwnerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListResourcesRequestBodyResourceOwnerEnum: %s", s)
+		return fmt.Errorf("invalid value for ListResourcesRequestBodyResourceOwnerEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	ListResourcesRequestBodyResourceRegionScopeEnumGlobal   ListResourcesRequestBodyResourceRegionScopeEnum = "GLOBAL"
 )
 
+func (e ListResourcesRequestBodyResourceRegionScopeEnum) ToPointer() *ListResourcesRequestBodyResourceRegionScopeEnum {
+	return &e
+}
+
 func (e *ListResourcesRequestBodyResourceRegionScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "REGIONAL":
 		fallthrough
 	case "GLOBAL":
-		*e = ListResourcesRequestBodyResourceRegionScopeEnum(s)
+		*e = ListResourcesRequestBodyResourceRegionScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListResourcesRequestBodyResourceRegionScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListResourcesRequestBodyResourceRegionScopeEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ContainerServiceMetricNameEnumMemoryUtilization ContainerServiceMetricNameEnum = "MemoryUtilization"
 )
 
+func (e ContainerServiceMetricNameEnum) ToPointer() *ContainerServiceMetricNameEnum {
+	return &e
+}
+
 func (e *ContainerServiceMetricNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CPUUtilization":
 		fallthrough
 	case "MemoryUtilization":
-		*e = ContainerServiceMetricNameEnum(s)
+		*e = ContainerServiceMetricNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerServiceMetricNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerServiceMetricNameEnum: %v", v)
 	}
 }

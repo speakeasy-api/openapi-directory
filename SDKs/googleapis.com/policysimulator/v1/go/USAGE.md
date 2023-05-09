@@ -2,22 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PolicysimulatorProjectsLocationsReplaysCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.PolicysimulatorProjectsLocationsReplaysCreate(ctx, operations.PolicysimulatorProjectsLocationsReplaysCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudPolicysimulatorV1ReplayInput: &shared.GoogleCloudPolicysimulatorV1ReplayInput{
             Config: &shared.GoogleCloudPolicysimulatorV1ReplayConfig{
-                LogSource: "RECENT_ACCESSES",
+                LogSource: shared.GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnumRecentAccesses.ToPointer(),
                 PolicyOverlay: map[string]shared.GoogleIamV1Policy{
                     "quibusdam": shared.GoogleIamV1Policy{
                         AuditConfigs: []shared.GoogleIamV1AuditConfig{
@@ -29,30 +30,30 @@ func main() {
                                             "vel",
                                             "error",
                                         },
-                                        LogType: "DATA_WRITE",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumDataWrite.ToPointer(),
                                     },
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
                                             "iure",
                                             "magnam",
                                         },
-                                        LogType: "DATA_READ",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumDataRead.ToPointer(),
                                     },
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
                                             "delectus",
                                         },
-                                        LogType: "ADMIN_READ",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumAdminRead.ToPointer(),
                                     },
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
                                             "molestiae",
                                             "minus",
                                         },
-                                        LogType: "DATA_READ",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumDataRead.ToPointer(),
                                     },
                                 },
-                                Service: "voluptatum",
+                                Service: sdk.String("voluptatum"),
                             },
                             shared.GoogleIamV1AuditConfig{
                                 AuditLogConfigs: []shared.GoogleIamV1AuditLogConfig{
@@ -62,17 +63,17 @@ func main() {
                                             "recusandae",
                                             "temporibus",
                                         },
-                                        LogType: "LOG_TYPE_UNSPECIFIED",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumLogTypeUnspecified.ToPointer(),
                                     },
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
                                             "veritatis",
                                             "deserunt",
                                         },
-                                        LogType: "LOG_TYPE_UNSPECIFIED",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumLogTypeUnspecified.ToPointer(),
                                     },
                                 },
-                                Service: "ipsam",
+                                Service: sdk.String("ipsam"),
                             },
                             shared.GoogleIamV1AuditConfig{
                                 AuditLogConfigs: []shared.GoogleIamV1AuditLogConfig{
@@ -83,14 +84,14 @@ func main() {
                                             "at",
                                             "at",
                                         },
-                                        LogType: "DATA_READ",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumDataRead.ToPointer(),
                                     },
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
                                             "quod",
                                             "quod",
                                         },
-                                        LogType: "ADMIN_READ",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumAdminRead.ToPointer(),
                                     },
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
@@ -98,7 +99,7 @@ func main() {
                                             "dolorum",
                                             "dicta",
                                         },
-                                        LogType: "DATA_WRITE",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumDataWrite.ToPointer(),
                                     },
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
@@ -106,53 +107,53 @@ func main() {
                                             "fugit",
                                             "deleniti",
                                         },
-                                        LogType: "DATA_READ",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumDataRead.ToPointer(),
                                     },
                                 },
-                                Service: "optio",
+                                Service: sdk.String("optio"),
                             },
                         },
                         Bindings: []shared.GoogleIamV1Binding{
                             shared.GoogleIamV1Binding{
                                 Condition: &shared.GoogleTypeExpr{
-                                    Description: "beatae",
-                                    Expression: "commodi",
-                                    Location: "molestiae",
-                                    Title: "Mrs.",
+                                    Description: sdk.String("beatae"),
+                                    Expression: sdk.String("commodi"),
+                                    Location: sdk.String("molestiae"),
+                                    Title: sdk.String("Mrs."),
                                 },
                                 Members: []string{
                                     "impedit",
                                 },
-                                Role: "cum",
+                                Role: sdk.String("cum"),
                             },
                             shared.GoogleIamV1Binding{
                                 Condition: &shared.GoogleTypeExpr{
-                                    Description: "esse",
-                                    Expression: "ipsum",
-                                    Location: "excepturi",
-                                    Title: "Mr.",
+                                    Description: sdk.String("esse"),
+                                    Expression: sdk.String("ipsum"),
+                                    Location: sdk.String("excepturi"),
+                                    Title: sdk.String("Mr."),
                                 },
                                 Members: []string{
                                     "ad",
                                 },
-                                Role: "natus",
+                                Role: sdk.String("natus"),
                             },
                             shared.GoogleIamV1Binding{
                                 Condition: &shared.GoogleTypeExpr{
-                                    Description: "sed",
-                                    Expression: "iste",
-                                    Location: "dolor",
-                                    Title: "Miss",
+                                    Description: sdk.String("sed"),
+                                    Expression: sdk.String("iste"),
+                                    Location: sdk.String("dolor"),
+                                    Title: sdk.String("Miss"),
                                 },
                                 Members: []string{
                                     "hic",
                                     "saepe",
                                 },
-                                Role: "fuga",
+                                Role: sdk.String("fuga"),
                             },
                         },
-                        Etag: "in",
-                        Version: 359508,
+                        Etag: sdk.String("in"),
+                        Version: sdk.Int(359508),
                     },
                     "iste": shared.GoogleIamV1Policy{
                         AuditConfigs: []shared.GoogleIamV1AuditConfig{
@@ -164,7 +165,7 @@ func main() {
                                             "ipsa",
                                             "reiciendis",
                                         },
-                                        LogType: "DATA_WRITE",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumDataWrite.ToPointer(),
                                     },
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
@@ -172,13 +173,13 @@ func main() {
                                             "dolores",
                                             "dolorem",
                                         },
-                                        LogType: "ADMIN_READ",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumAdminRead.ToPointer(),
                                     },
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
                                             "nobis",
                                         },
-                                        LogType: "ADMIN_READ",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumAdminRead.ToPointer(),
                                     },
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
@@ -186,10 +187,10 @@ func main() {
                                             "minima",
                                             "excepturi",
                                         },
-                                        LogType: "LOG_TYPE_UNSPECIFIED",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumLogTypeUnspecified.ToPointer(),
                                     },
                                 },
-                                Service: "iure",
+                                Service: sdk.String("iure"),
                             },
                             shared.GoogleIamV1AuditConfig{
                                 AuditLogConfigs: []shared.GoogleIamV1AuditLogConfig{
@@ -200,13 +201,13 @@ func main() {
                                             "mollitia",
                                             "dolorem",
                                         },
-                                        LogType: "DATA_WRITE",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumDataWrite.ToPointer(),
                                     },
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
                                             "repellat",
                                         },
-                                        LogType: "DATA_WRITE",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumDataWrite.ToPointer(),
                                     },
                                     shared.GoogleIamV1AuditLogConfig{
                                         ExemptedMembers: []string{
@@ -214,45 +215,45 @@ func main() {
                                             "commodi",
                                             "quam",
                                         },
-                                        LogType: "ADMIN_READ",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumAdminRead.ToPointer(),
                                     },
                                 },
-                                Service: "velit",
+                                Service: sdk.String("velit"),
                             },
                         },
                         Bindings: []shared.GoogleIamV1Binding{
                             shared.GoogleIamV1Binding{
                                 Condition: &shared.GoogleTypeExpr{
-                                    Description: "quia",
-                                    Expression: "quis",
-                                    Location: "vitae",
-                                    Title: "Miss",
+                                    Description: sdk.String("quia"),
+                                    Expression: sdk.String("quis"),
+                                    Location: sdk.String("vitae"),
+                                    Title: sdk.String("Miss"),
                                 },
                                 Members: []string{
                                     "enim",
                                     "odit",
                                     "quo",
                                 },
-                                Role: "sequi",
+                                Role: sdk.String("sequi"),
                             },
                             shared.GoogleIamV1Binding{
                                 Condition: &shared.GoogleTypeExpr{
-                                    Description: "tenetur",
-                                    Expression: "ipsam",
-                                    Location: "id",
-                                    Title: "Dr.",
+                                    Description: sdk.String("tenetur"),
+                                    Expression: sdk.String("ipsam"),
+                                    Location: sdk.String("id"),
+                                    Title: sdk.String("Dr."),
                                 },
                                 Members: []string{
                                     "quasi",
                                 },
-                                Role: "error",
+                                Role: sdk.String("error"),
                             },
                             shared.GoogleIamV1Binding{
                                 Condition: &shared.GoogleTypeExpr{
-                                    Description: "temporibus",
-                                    Expression: "laborum",
-                                    Location: "quasi",
-                                    Title: "Dr.",
+                                    Description: sdk.String("temporibus"),
+                                    Expression: sdk.String("laborum"),
+                                    Location: sdk.String("quasi"),
+                                    Title: sdk.String("Dr."),
                                 },
                                 Members: []string{
                                     "vero",
@@ -260,11 +261,11 @@ func main() {
                                     "praesentium",
                                     "voluptatibus",
                                 },
-                                Role: "ipsa",
+                                Role: sdk.String("ipsa"),
                             },
                         },
-                        Etag: "omnis",
-                        Version: 451159,
+                        Etag: sdk.String("omnis"),
+                        Version: sdk.Int(451159),
                     },
                     "cum": shared.GoogleIamV1Policy{
                         AuditConfigs: []shared.GoogleIamV1AuditConfig{
@@ -275,19 +276,19 @@ func main() {
                                             "ut",
                                             "maiores",
                                         },
-                                        LogType: "LOG_TYPE_UNSPECIFIED",
+                                        LogType: shared.GoogleIamV1AuditLogConfigLogTypeEnumLogTypeUnspecified.ToPointer(),
                                     },
                                 },
-                                Service: "corporis",
+                                Service: sdk.String("corporis"),
                             },
                         },
                         Bindings: []shared.GoogleIamV1Binding{
                             shared.GoogleIamV1Binding{
                                 Condition: &shared.GoogleTypeExpr{
-                                    Description: "iusto",
-                                    Expression: "dicta",
-                                    Location: "harum",
-                                    Title: "Mrs.",
+                                    Description: sdk.String("iusto"),
+                                    Expression: sdk.String("dicta"),
+                                    Location: sdk.String("harum"),
+                                    Title: sdk.String("Mrs."),
                                 },
                                 Members: []string{
                                     "commodi",
@@ -295,60 +296,57 @@ func main() {
                                     "quae",
                                     "ipsum",
                                 },
-                                Role: "quidem",
+                                Role: sdk.String("quidem"),
                             },
                             shared.GoogleIamV1Binding{
                                 Condition: &shared.GoogleTypeExpr{
-                                    Description: "molestias",
-                                    Expression: "excepturi",
-                                    Location: "pariatur",
-                                    Title: "Mrs.",
+                                    Description: sdk.String("molestias"),
+                                    Expression: sdk.String("excepturi"),
+                                    Location: sdk.String("pariatur"),
+                                    Title: sdk.String("Mrs."),
                                 },
                                 Members: []string{
                                     "rem",
                                     "voluptates",
                                     "quasi",
                                 },
-                                Role: "repudiandae",
+                                Role: sdk.String("repudiandae"),
                             },
                         },
-                        Etag: "sint",
-                        Version: 83112,
+                        Etag: sdk.String("sint"),
+                        Version: sdk.Int(83112),
                     },
                 },
             },
             ResultsSummary: &shared.GoogleCloudPolicysimulatorV1ReplayResultsSummary{
-                DifferenceCount: 929297,
-                ErrorCount: 277718,
-                LogCount: 318569,
+                DifferenceCount: sdk.Int(929297),
+                ErrorCount: sdk.Int(277718),
+                LogCount: sdk.Int(318569),
                 NewestDate: &shared.GoogleTypeDate{
-                    Day: 9356,
-                    Month: 667411,
-                    Year: 842342,
+                    Day: sdk.Int(9356),
+                    Month: sdk.Int(667411),
+                    Year: sdk.Int(842342),
                 },
                 OldestDate: &shared.GoogleTypeDate{
-                    Day: 131797,
-                    Month: 647174,
-                    Year: 716327,
+                    Day: sdk.Int(131797),
+                    Month: sdk.Int(647174),
+                    Year: sdk.Int(716327),
                 },
-                UnchangedCount: 841386,
+                UnchangedCount: sdk.Int(841386),
             },
         },
-        AccessToken: "labore",
-        Alt: "json",
-        Callback: "qui",
-        Fields: "aliquid",
-        Key: "cupiditate",
-        OauthToken: "quos",
+        AccessToken: sdk.String("labore"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("qui"),
+        Fields: sdk.String("aliquid"),
+        Key: sdk.String("cupiditate"),
+        OauthToken: sdk.String("quos"),
         Parent: "perferendis",
-        PrettyPrint: false,
-        QuotaUser: "magni",
-        UploadType: "assumenda",
-        UploadProtocol: "ipsam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.PolicysimulatorProjectsLocationsReplaysCreate(ctx, req, operations.PolicysimulatorProjectsLocationsReplaysCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("magni"),
+        UploadType: sdk.String("assumenda"),
+        UploadProtocol: sdk.String("ipsam"),
+    }, operations.PolicysimulatorProjectsLocationsReplaysCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

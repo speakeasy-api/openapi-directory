@@ -35,7 +35,7 @@ func newCertificates(defaultClient, securityClient HTTPClient, serverURL, langua
 
 // AllCerts - Get all certificates
 // Get all certificates
-func (s *certificates) AllCerts(ctx context.Context) (*operations.AllCertsResponse, error) {
+func (s *certificates) AllCerts(ctx context.Context, security operations.AllCertsSecurity) (*operations.AllCertsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/certificates"
 
@@ -44,7 +44,7 @@ func (s *certificates) AllCerts(ctx context.Context) (*operations.AllCertsRespon
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,7 +144,10 @@ func (s *certificates) CreateCert(ctx context.Context, request shared.Certificat
 // Delete one certificate by id
 func (s *certificates) DeleteCert(ctx context.Context, request operations.DeleteCertRequest, security operations.DeleteCertSecurity) (*operations.DeleteCertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -194,7 +197,10 @@ func (s *certificates) DeleteCert(ctx context.Context, request operations.Delete
 // Get one certificate by id
 func (s *certificates) OneCert(ctx context.Context, request operations.OneCertRequest, security operations.OneCertSecurity) (*operations.OneCertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -244,7 +250,10 @@ func (s *certificates) OneCert(ctx context.Context, request operations.OneCertRe
 // Update one certificate by id
 func (s *certificates) PatchCert(ctx context.Context, request operations.PatchCertRequest, security operations.PatchCertSecurity) (*operations.PatchCertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -301,7 +310,10 @@ func (s *certificates) PatchCert(ctx context.Context, request operations.PatchCe
 // Update one certificate by id
 func (s *certificates) PutCert(ctx context.Context, request operations.PutCertRequest, security operations.PutCertSecurity) (*operations.PutCertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/certificates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Certificate", "json")
 	if err != nil {

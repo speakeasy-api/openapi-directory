@@ -19,12 +19,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCustomerClientStatusEnumClosed      GoogleAdsSearchads360V0ResourcesCustomerClientStatusEnum = "CLOSED"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCustomerClientStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCustomerClientStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCustomerClientStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -36,10 +40,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCustomerClientStatusEnum) UnmarshalJSON
 	case "SUSPENDED":
 		fallthrough
 	case "CLOSED":
-		*e = GoogleAdsSearchads360V0ResourcesCustomerClientStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCustomerClientStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCustomerClientStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCustomerClientStatusEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	AccessControlAllowMethodsListEnumAll     AccessControlAllowMethodsListEnum = "ALL"
 )
 
+func (e AccessControlAllowMethodsListEnum) ToPointer() *AccessControlAllowMethodsListEnum {
+	return &e
+}
+
 func (e *AccessControlAllowMethodsListEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "POST":
@@ -41,9 +45,9 @@ func (e *AccessControlAllowMethodsListEnum) UnmarshalJSON(data []byte) error {
 	case "HEAD":
 		fallthrough
 	case "ALL":
-		*e = AccessControlAllowMethodsListEnum(s)
+		*e = AccessControlAllowMethodsListEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessControlAllowMethodsListEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessControlAllowMethodsListEnum: %v", v)
 	}
 }

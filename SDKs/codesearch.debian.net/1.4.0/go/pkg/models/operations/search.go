@@ -21,19 +21,23 @@ const (
 	SearchMatchModeEnumRegexp  SearchMatchModeEnum = "regexp"
 )
 
+func (e SearchMatchModeEnum) ToPointer() *SearchMatchModeEnum {
+	return &e
+}
+
 func (e *SearchMatchModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "literal":
 		fallthrough
 	case "regexp":
-		*e = SearchMatchModeEnum(s)
+		*e = SearchMatchModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchMatchModeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchMatchModeEnum: %v", v)
 	}
 }
 

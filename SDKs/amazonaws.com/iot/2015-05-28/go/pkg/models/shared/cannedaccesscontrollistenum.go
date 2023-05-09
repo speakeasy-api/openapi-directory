@@ -20,12 +20,16 @@ const (
 	CannedAccessControlListEnumLogDeliveryWrite       CannedAccessControlListEnum = "log-delivery-write"
 )
 
+func (e CannedAccessControlListEnum) ToPointer() *CannedAccessControlListEnum {
+	return &e
+}
+
 func (e *CannedAccessControlListEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private":
 		fallthrough
 	case "public-read":
@@ -41,9 +45,9 @@ func (e *CannedAccessControlListEnum) UnmarshalJSON(data []byte) error {
 	case "bucket-owner-full-control":
 		fallthrough
 	case "log-delivery-write":
-		*e = CannedAccessControlListEnum(s)
+		*e = CannedAccessControlListEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CannedAccessControlListEnum: %s", s)
+		return fmt.Errorf("invalid value for CannedAccessControlListEnum: %v", v)
 	}
 }

@@ -16,19 +16,23 @@ const (
 	DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsApplianceModeSupportEnumDisable DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsApplianceModeSupportEnum = "disable"
 )
 
+func (e DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsApplianceModeSupportEnum) ToPointer() *DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsApplianceModeSupportEnum {
+	return &e
+}
+
 func (e *DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsApplianceModeSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsApplianceModeSupportEnum(s)
+		*e = DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsApplianceModeSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsApplianceModeSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsApplianceModeSupportEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsDNSSupportEnumDisable DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsDNSSupportEnum = "disable"
 )
 
+func (e DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsDNSSupportEnum) ToPointer() *DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsDNSSupportEnum {
+	return &e
+}
+
 func (e *DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsDNSSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsDNSSupportEnum(s)
+		*e = DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsDNSSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsDNSSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsDNSSupportEnum: %v", v)
 	}
 }
 
@@ -64,19 +72,23 @@ const (
 	DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsIpv6SupportEnumDisable DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsIpv6SupportEnum = "disable"
 )
 
+func (e DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsIpv6SupportEnum) ToPointer() *DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsIpv6SupportEnum {
+	return &e
+}
+
 func (e *DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsIpv6SupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsIpv6SupportEnum(s)
+		*e = DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsIpv6SupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsIpv6SupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsOptionsIpv6SupportEnum: %v", v)
 	}
 }
 
@@ -106,12 +118,16 @@ const (
 	DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsStateEnumFailing           DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsStateEnum = "failing"
 )
 
+func (e DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsStateEnum) ToPointer() *DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsStateEnum {
+	return &e
+}
+
 func (e *DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "initiating":
 		fallthrough
 	case "initiatingRequest":
@@ -137,10 +153,10 @@ func (e *DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsS
 	case "rejecting":
 		fallthrough
 	case "failing":
-		*e = DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsStateEnum(s)
+		*e = DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTransitGatewayVpcAttachmentsResultTransitGatewayVpcAttachmentsStateEnum: %v", v)
 	}
 }
 

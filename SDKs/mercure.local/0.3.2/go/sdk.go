@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - [Mercure](https://mercure.rocks) is a protocol allowing to push data updates to web browsers and other HTTP clients in a convenient, fast, reliable and battery-efficient way.
 // https://mercure.rocks/spec - The Mercure protocol specification
 type SDK struct {
@@ -200,7 +215,10 @@ func (s *SDK) GetWellKnownMercureSubscriptions(ctx context.Context) (*operations
 // https://mercure.rocks/spec#subscription-api - Subscription API
 func (s *SDK) GetWellKnownMercureSubscriptionsTopic(ctx context.Context, request operations.GetWellKnownMercureSubscriptionsTopicRequest) (*operations.GetWellKnownMercureSubscriptionsTopicResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/.well-known/mercure/subscriptions/{topic}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/.well-known/mercure/subscriptions/{topic}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -246,7 +264,10 @@ func (s *SDK) GetWellKnownMercureSubscriptionsTopic(ctx context.Context, request
 // https://mercure.rocks/spec#active-subscriptions - Subscription API
 func (s *SDK) GetWellKnownMercureSubscriptionsTopicSubscriber(ctx context.Context, request operations.GetWellKnownMercureSubscriptionsTopicSubscriberRequest) (*operations.GetWellKnownMercureSubscriptionsTopicSubscriberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/.well-known/mercure/subscriptions/{topic}/{subscriber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/.well-known/mercure/subscriptions/{topic}/{subscriber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

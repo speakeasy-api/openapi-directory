@@ -37,7 +37,10 @@ func newCards(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Permanently deletes a card definition with the given ID. Once deleted, data fetch requests for this card will no longer be sent to your service. This can't be undone.
 func (s *cards) DeleteCrmV3ExtensionsCardsAppIDCardIDArchive(ctx context.Context, request operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveRequest, security operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveSecurity) (*operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/v3/extensions/cards/{appId}/{cardId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/crm/v3/extensions/cards/{appId}/{cardId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *cards) DeleteCrmV3ExtensionsCardsAppIDCardIDArchive(ctx context.Context
 // Returns the definition for a card with the given ID.
 func (s *cards) GetCrmV3ExtensionsCardsAppIDCardIDGetByID(ctx context.Context, request operations.GetCrmV3ExtensionsCardsAppIDCardIDGetByIDRequest, security operations.GetCrmV3ExtensionsCardsAppIDCardIDGetByIDSecurity) (*operations.GetCrmV3ExtensionsCardsAppIDCardIDGetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/v3/extensions/cards/{appId}/{cardId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/crm/v3/extensions/cards/{appId}/{cardId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +144,10 @@ func (s *cards) GetCrmV3ExtensionsCardsAppIDCardIDGetByID(ctx context.Context, r
 // Returns a list of cards for a given app.
 func (s *cards) GetCrmV3ExtensionsCardsAppIDGetAll(ctx context.Context, request operations.GetCrmV3ExtensionsCardsAppIDGetAllRequest, security operations.GetCrmV3ExtensionsCardsAppIDGetAllSecurity) (*operations.GetCrmV3ExtensionsCardsAppIDGetAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/v3/extensions/cards/{appId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/crm/v3/extensions/cards/{appId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +202,10 @@ func (s *cards) GetCrmV3ExtensionsCardsAppIDGetAll(ctx context.Context, request 
 // Update a card definition with new details.
 func (s *cards) PatchCrmV3ExtensionsCardsAppIDCardIDUpdate(ctx context.Context, request operations.PatchCrmV3ExtensionsCardsAppIDCardIDUpdateRequest, security operations.PatchCrmV3ExtensionsCardsAppIDCardIDUpdateSecurity) (*operations.PatchCrmV3ExtensionsCardsAppIDCardIDUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/v3/extensions/cards/{appId}/{cardId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/crm/v3/extensions/cards/{appId}/{cardId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CardPatchRequest", "json")
 	if err != nil {
@@ -258,7 +270,10 @@ func (s *cards) PatchCrmV3ExtensionsCardsAppIDCardIDUpdate(ctx context.Context, 
 // Defines a new card that will become active on an account when this app is installed.
 func (s *cards) PostCrmV3ExtensionsCardsAppIDCreate(ctx context.Context, request operations.PostCrmV3ExtensionsCardsAppIDCreateRequest, security operations.PostCrmV3ExtensionsCardsAppIDCreateSecurity) (*operations.PostCrmV3ExtensionsCardsAppIDCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crm/v3/extensions/cards/{appId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/crm/v3/extensions/cards/{appId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CardCreateRequest", "json")
 	if err != nil {

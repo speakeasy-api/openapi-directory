@@ -32,19 +32,23 @@ const (
 	PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnumMedian  PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum = "median"
 )
 
+func (e PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum) ToPointer() *PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum {
+	return &e
+}
+
 func (e *PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "average":
 		fallthrough
 	case "median":
-		*e = PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum(s)
+		*e = PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum: %v", v)
 	}
 }
 
@@ -56,19 +60,23 @@ const (
 	PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnumRandomSampling PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum = "randomSampling"
 )
 
+func (e PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum) ToPointer() *PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum {
+	return &e
+}
+
 func (e *PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "complete":
 		fallthrough
 	case "randomSampling":
-		*e = PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum(s)
+		*e = PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum: %v", v)
 	}
 }
 

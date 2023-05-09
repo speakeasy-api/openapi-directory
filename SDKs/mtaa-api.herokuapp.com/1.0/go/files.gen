@@ -7,6 +7,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -21,4 +22,10 @@ pkg/models/operations/streetsinaward.go
 pkg/models/operations/tanzaniaregions.go
 pkg/models/operations/wardsinadistrict.go
 pkg/models/operations/neighborhoodinastreet.go
+docs/sdk/README.md
+docs/districtsinregion/README.md
+docs/streetsinaward/README.md
+docs/tanzaniaregions/README.md
+docs/wardsinadistrict/README.md
+docs/neighborhoodinastreet/README.md
 USAGE.md

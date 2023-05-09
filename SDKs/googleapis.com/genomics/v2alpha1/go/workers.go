@@ -34,7 +34,10 @@ func newWorkers(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GenomicsWorkersCheckIn - The worker uses this method to retrieve the assigned operation and provide periodic status updates.
 func (s *workers) GenomicsWorkersCheckIn(ctx context.Context, request operations.GenomicsWorkersCheckInRequest, security operations.GenomicsWorkersCheckInSecurity) (*operations.GenomicsWorkersCheckInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/workers/{id}:checkIn", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2alpha1/workers/{id}:checkIn", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckInRequest", "json")
 	if err != nil {

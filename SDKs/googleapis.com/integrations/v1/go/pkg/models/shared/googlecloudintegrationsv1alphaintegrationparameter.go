@@ -25,12 +25,16 @@ const (
 	GoogleCloudIntegrationsV1alphaIntegrationParameterDataTypeEnumProtoArray                              GoogleCloudIntegrationsV1alphaIntegrationParameterDataTypeEnum = "PROTO_ARRAY"
 )
 
+func (e GoogleCloudIntegrationsV1alphaIntegrationParameterDataTypeEnum) ToPointer() *GoogleCloudIntegrationsV1alphaIntegrationParameterDataTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaIntegrationParameterDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTEGRATION_PARAMETER_DATA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STRING_VALUE":
@@ -54,10 +58,10 @@ func (e *GoogleCloudIntegrationsV1alphaIntegrationParameterDataTypeEnum) Unmarsh
 	case "PROTO_VALUE":
 		fallthrough
 	case "PROTO_ARRAY":
-		*e = GoogleCloudIntegrationsV1alphaIntegrationParameterDataTypeEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaIntegrationParameterDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationParameterDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationParameterDataTypeEnum: %v", v)
 	}
 }
 
@@ -71,12 +75,16 @@ const (
 	GoogleCloudIntegrationsV1alphaIntegrationParameterInputOutputTypeEnumInOut                GoogleCloudIntegrationsV1alphaIntegrationParameterInputOutputTypeEnum = "IN_OUT"
 )
 
+func (e GoogleCloudIntegrationsV1alphaIntegrationParameterInputOutputTypeEnum) ToPointer() *GoogleCloudIntegrationsV1alphaIntegrationParameterInputOutputTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaIntegrationParameterInputOutputTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_OUT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IN":
@@ -84,10 +92,10 @@ func (e *GoogleCloudIntegrationsV1alphaIntegrationParameterInputOutputTypeEnum) 
 	case "OUT":
 		fallthrough
 	case "IN_OUT":
-		*e = GoogleCloudIntegrationsV1alphaIntegrationParameterInputOutputTypeEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaIntegrationParameterInputOutputTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationParameterInputOutputTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationParameterInputOutputTypeEnum: %v", v)
 	}
 }
 

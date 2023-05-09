@@ -37,7 +37,10 @@ func newSuggestTagsAndRegionsAPI(defaultClient, securityClient HTTPClient, serve
 // There is a limit of 64 images in the batch.
 func (s *suggestTagsAndRegionsAPI) SuggestTagsAndRegions(ctx context.Context, request operations.SuggestTagsAndRegionsRequest) (*operations.SuggestTagsAndRegionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tagsandregions/suggestions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tagsandregions/suggestions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

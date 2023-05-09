@@ -2,30 +2,28 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GroupsSettingsGroupsGetRequest{
-        Alt: "json",
-        Fields: "provident",
-        GroupUniqueID: "distinctio",
-        Key: "quibusdam",
-        OauthToken: "unde",
-        PrettyPrint: false,
-        QuotaUser: "nulla",
-        UserIP: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Groups.GroupsSettingsGroupsGet(ctx, req, operations.GroupsSettingsGroupsGetSecurity{
+    res, err := s.Groups.GroupsSettingsGroupsGet(ctx, operations.GroupsSettingsGroupsGetRequest{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("provident"),
+        GroupUniqueID: "distinctio",
+        Key: sdk.String("quibusdam"),
+        OauthToken: sdk.String("unde"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("nulla"),
+        UserIP: sdk.String("corrupti"),
+    }, operations.GroupsSettingsGroupsGetSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

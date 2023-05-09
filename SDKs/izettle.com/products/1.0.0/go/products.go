@@ -34,7 +34,10 @@ func newProducts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // CountAllProducts - Retrieve the count of existing products
 func (s *products) CountAllProducts(ctx context.Context, request operations.CountAllProductsRequest, security operations.CountAllProductsSecurity) (*operations.CountAllProductsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/v2/count", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/v2/count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -78,7 +81,10 @@ func (s *products) CountAllProducts(ctx context.Context, request operations.Coun
 // CreateProduct - Create a new product
 func (s *products) CreateProduct(ctx context.Context, request operations.CreateProductRequest, security operations.CreateProductSecurity) (*operations.CreateProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductCreateRequest", "json")
 	if err != nil {
@@ -138,7 +144,10 @@ func (s *products) CreateProduct(ctx context.Context, request operations.CreateP
 // DeleteProduct - Delete a single product
 func (s *products) DeleteProduct(ctx context.Context, request operations.DeleteProductRequest, security operations.DeleteProductSecurity) (*operations.DeleteProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/{productUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/{productUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -175,7 +184,10 @@ func (s *products) DeleteProduct(ctx context.Context, request operations.DeleteP
 // DeleteProducts - Delete a list of products
 func (s *products) DeleteProducts(ctx context.Context, request operations.DeleteProductsRequest, security operations.DeleteProductsSecurity) (*operations.DeleteProductsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -214,7 +226,10 @@ func (s *products) DeleteProducts(ctx context.Context, request operations.Delete
 // GetAllOptions - Retrieve an aggregate of active Options in the library
 func (s *products) GetAllOptions(ctx context.Context, request operations.GetAllOptionsRequest, security operations.GetAllOptionsSecurity) (*operations.GetAllOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/options", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/options", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -258,7 +273,10 @@ func (s *products) GetAllOptions(ctx context.Context, request operations.GetAllO
 // GetAllProductsInPos - Retrieve all products visible in POS
 func (s *products) GetAllProductsInPos(ctx context.Context, request operations.GetAllProductsInPosRequest, security operations.GetAllProductsInPosSecurity) (*operations.GetAllProductsInPosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -302,7 +320,10 @@ func (s *products) GetAllProductsInPos(ctx context.Context, request operations.G
 // GetAllProductsV2 - Retrieve all products visible in POS – v2
 func (s *products) GetAllProductsV2(ctx context.Context, request operations.GetAllProductsV2Request, security operations.GetAllProductsV2Security) (*operations.GetAllProductsV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/v2", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/v2", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +372,10 @@ func (s *products) GetAllProductsV2(ctx context.Context, request operations.GetA
 // Get the full product with the provided UUID. The method supports conditional GET through providing a HttpHeaders.IF_NONE_MATCH header. If the conditional prerequisite is fullfilled, the full product is returned, otherwise a 304 not modified will be returned with an empty body.
 func (s *products) GetProduct(ctx context.Context, request operations.GetProductRequest, security operations.GetProductSecurity) (*operations.GetProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/{productUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/{productUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -405,7 +429,10 @@ func (s *products) GetProduct(ctx context.Context, request operations.GetProduct
 // Updates a product entity using JSON merge patch (https://tools.ietf.org/html/rfc7386). This means that only included fields will be changed: null values removes the field on the target entity, and other values updates the field. Conditional updates are supported through the HttpHeaders.IF_MATCH header. If the conditional prerequisite is fullfilled, the product is updated: otherwise a 412 (precondition failed) will be returned with an empty body.
 func (s *products) UpdateProduct(ctx context.Context, request operations.UpdateProductRequest, security operations.UpdateProductSecurity) (*operations.UpdateProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/v2/{productUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/v2/{productUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FullProductUpdateRequest", "json")
 	if err != nil {

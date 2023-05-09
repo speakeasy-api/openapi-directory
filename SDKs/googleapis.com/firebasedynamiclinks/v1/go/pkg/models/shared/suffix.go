@@ -17,12 +17,16 @@ const (
 	SuffixOptionEnumCustom            SuffixOptionEnum = "CUSTOM"
 )
 
+func (e SuffixOptionEnum) ToPointer() *SuffixOptionEnum {
+	return &e
+}
+
 func (e *SuffixOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPTION_UNSPECIFIED":
 		fallthrough
 	case "UNGUESSABLE":
@@ -30,10 +34,10 @@ func (e *SuffixOptionEnum) UnmarshalJSON(data []byte) error {
 	case "SHORT":
 		fallthrough
 	case "CUSTOM":
-		*e = SuffixOptionEnum(s)
+		*e = SuffixOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SuffixOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SuffixOptionEnum: %v", v)
 	}
 }
 

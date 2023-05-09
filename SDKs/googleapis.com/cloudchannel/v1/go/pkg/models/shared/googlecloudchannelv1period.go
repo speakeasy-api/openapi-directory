@@ -17,12 +17,16 @@ const (
 	GoogleCloudChannelV1PeriodPeriodTypeEnumYear                  GoogleCloudChannelV1PeriodPeriodTypeEnum = "YEAR"
 )
 
+func (e GoogleCloudChannelV1PeriodPeriodTypeEnum) ToPointer() *GoogleCloudChannelV1PeriodPeriodTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1PeriodPeriodTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERIOD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DAY":
@@ -30,10 +34,10 @@ func (e *GoogleCloudChannelV1PeriodPeriodTypeEnum) UnmarshalJSON(data []byte) er
 	case "MONTH":
 		fallthrough
 	case "YEAR":
-		*e = GoogleCloudChannelV1PeriodPeriodTypeEnum(s)
+		*e = GoogleCloudChannelV1PeriodPeriodTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1PeriodPeriodTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1PeriodPeriodTypeEnum: %v", v)
 	}
 }
 

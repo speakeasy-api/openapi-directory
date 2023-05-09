@@ -25,6 +25,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Get access to comments from registered users on New York Times articles.  NOTE: This API is deprecated.
 // http://developer.nytimes.com/
 type SDK struct {
@@ -141,7 +156,7 @@ func (s *SDK) GETUserContentByDateJSON(ctx context.Context, request operations.G
 }
 
 // GETUserContentRecentJSON - Recent User Comments
-func (s *SDK) GETUserContentRecentJSON(ctx context.Context) (*operations.GETUserContentRecentJSONResponse, error) {
+func (s *SDK) GETUserContentRecentJSON(ctx context.Context, security operations.GETUserContentRecentJSONSecurity) (*operations.GETUserContentRecentJSONResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user-content/recent.json"
 
@@ -150,7 +165,7 @@ func (s *SDK) GETUserContentRecentJSON(ctx context.Context) (*operations.GETUser
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

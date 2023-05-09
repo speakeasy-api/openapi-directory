@@ -13,38 +13,35 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/peoplefinderspro.com/1.0.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SearchRequest{
+    ctx := context.Background()
+    res, err := s.Search(ctx, operations.SearchRequest{
         RequestBody: &operations.SearchRequestBody{
             Address: &operations.SearchRequestBodyAddress{
-                AddressLine1: "corrupti",
-                AddressLine2: "provident",
+                AddressLine1: sdk.String("corrupti"),
+                AddressLine2: sdk.String("provident"),
             },
-            Age: 7151.9,
-            Dob: "quibusdam",
-            Email: "Ryan.Little62@yahoo.com",
-            FirstName: "Luna",
-            LastName: "Hoppe",
-            MiddleName: "iure",
-            PhoneNumber: "magnam",
+            Age: sdk.Float64(7151.9),
+            Dob: sdk.String("quibusdam"),
+            Email: sdk.String("Ryan.Little62@yahoo.com"),
+            FirstName: sdk.String("Luna"),
+            LastName: sdk.String("Hoppe"),
+            MiddleName: sdk.String("iure"),
+            PhoneNumber: sdk.String("magnam"),
         },
-        GalaxyApName: "debitis",
-        GalaxyApPassword: "ipsa",
-        GalaxySearchType: "delectus",
-    }
-
-    ctx := context.Background()
-    res, err := s.Search(ctx, req)
+        GalaxyApName: sdk.String("debitis"),
+        GalaxyApPassword: sdk.String("ipsa"),
+        GalaxySearchType: sdk.String("delectus"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -59,13 +56,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `Search` - Search
-* `PostAddressAutocomplete` - Search
-* `PostContactEnrich` - Search
-* `PostEmailEnrich` - Search
-* `PostPhoneEnrich` - Search
+* [Search](docs/sdk/README.md#search) - Search
+* [PostAddressAutocomplete](docs/sdk/README.md#postaddressautocomplete) - Search
+* [PostContactEnrich](docs/sdk/README.md#postcontactenrich) - Search
+* [PostEmailEnrich](docs/sdk/README.md#postemailenrich) - Search
+* [PostPhoneEnrich](docs/sdk/README.md#postphoneenrich) - Search
 <!-- End SDK Available Operations -->
 
 ### Maturity

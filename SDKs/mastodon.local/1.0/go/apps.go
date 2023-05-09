@@ -33,7 +33,7 @@ func newApps(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // GetAPIV1AppsVerifyCredentials - Confirm that the app's OAuth2 credentials work.
-func (s *apps) GetAPIV1AppsVerifyCredentials(ctx context.Context) (*operations.GetAPIV1AppsVerifyCredentialsResponse, error) {
+func (s *apps) GetAPIV1AppsVerifyCredentials(ctx context.Context, security operations.GetAPIV1AppsVerifyCredentialsSecurity) (*operations.GetAPIV1AppsVerifyCredentialsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/apps/verify_credentials"
 
@@ -42,7 +42,7 @@ func (s *apps) GetAPIV1AppsVerifyCredentials(ctx context.Context) (*operations.G
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	ProductV1ProductLineEnumBusinessOwnersPolicy ProductV1ProductLineEnum = "business_owners_policy"
 )
 
+func (e ProductV1ProductLineEnum) ToPointer() *ProductV1ProductLineEnum {
+	return &e
+}
+
 func (e *ProductV1ProductLineEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "general_liability":
 		fallthrough
 	case "workers_compensation":
 		fallthrough
 	case "business_owners_policy":
-		*e = ProductV1ProductLineEnum(s)
+		*e = ProductV1ProductLineEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductV1ProductLineEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductV1ProductLineEnum: %v", v)
 	}
 }
 

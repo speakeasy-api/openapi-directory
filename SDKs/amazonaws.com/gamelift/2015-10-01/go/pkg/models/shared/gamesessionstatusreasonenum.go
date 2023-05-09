@@ -13,16 +13,20 @@ const (
 	GameSessionStatusReasonEnumInterrupted GameSessionStatusReasonEnum = "INTERRUPTED"
 )
 
+func (e GameSessionStatusReasonEnum) ToPointer() *GameSessionStatusReasonEnum {
+	return &e
+}
+
 func (e *GameSessionStatusReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERRUPTED":
-		*e = GameSessionStatusReasonEnum(s)
+		*e = GameSessionStatusReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GameSessionStatusReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GameSessionStatusReasonEnum: %v", v)
 	}
 }

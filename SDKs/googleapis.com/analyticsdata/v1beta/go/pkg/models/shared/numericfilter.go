@@ -19,12 +19,16 @@ const (
 	NumericFilterOperationEnumGreaterThanOrEqual   NumericFilterOperationEnum = "GREATER_THAN_OR_EQUAL"
 )
 
+func (e NumericFilterOperationEnum) ToPointer() *NumericFilterOperationEnum {
+	return &e
+}
+
 func (e *NumericFilterOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATION_UNSPECIFIED":
 		fallthrough
 	case "EQUAL":
@@ -36,10 +40,10 @@ func (e *NumericFilterOperationEnum) UnmarshalJSON(data []byte) error {
 	case "GREATER_THAN":
 		fallthrough
 	case "GREATER_THAN_OR_EQUAL":
-		*e = NumericFilterOperationEnum(s)
+		*e = NumericFilterOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NumericFilterOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for NumericFilterOperationEnum: %v", v)
 	}
 }
 

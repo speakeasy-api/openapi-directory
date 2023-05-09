@@ -19,12 +19,16 @@ const (
 	PatchSpacesSpaceIDFoldersIDLoanRequestBodyCategoryEnumObligation         PatchSpacesSpaceIDFoldersIDLoanRequestBodyCategoryEnum = "obligation"
 )
 
+func (e PatchSpacesSpaceIDFoldersIDLoanRequestBodyCategoryEnum) ToPointer() *PatchSpacesSpaceIDFoldersIDLoanRequestBodyCategoryEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersIDLoanRequestBodyCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "debt spreading":
 		fallthrough
 	case "bank loan":
@@ -36,10 +40,10 @@ func (e *PatchSpacesSpaceIDFoldersIDLoanRequestBodyCategoryEnum) UnmarshalJSON(d
 	case "leasing":
 		fallthrough
 	case "obligation":
-		*e = PatchSpacesSpaceIDFoldersIDLoanRequestBodyCategoryEnum(s)
+		*e = PatchSpacesSpaceIDFoldersIDLoanRequestBodyCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDLoanRequestBodyCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDLoanRequestBodyCategoryEnum: %v", v)
 	}
 }
 
@@ -51,21 +55,25 @@ const (
 	PatchSpacesSpaceIDFoldersIDLoanRequestBodyLevelEnumPublic       PatchSpacesSpaceIDFoldersIDLoanRequestBodyLevelEnum = "public"
 )
 
+func (e PatchSpacesSpaceIDFoldersIDLoanRequestBodyLevelEnum) ToPointer() *PatchSpacesSpaceIDFoldersIDLoanRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersIDLoanRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = PatchSpacesSpaceIDFoldersIDLoanRequestBodyLevelEnum(s)
+		*e = PatchSpacesSpaceIDFoldersIDLoanRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDLoanRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDLoanRequestBodyLevelEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	BatchDetectEntitiesXAmzTargetEnumComprehend20171127BatchDetectEntities BatchDetectEntitiesXAmzTargetEnum = "Comprehend_20171127.BatchDetectEntities"
 )
 
+func (e BatchDetectEntitiesXAmzTargetEnum) ToPointer() *BatchDetectEntitiesXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchDetectEntitiesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.BatchDetectEntities":
-		*e = BatchDetectEntitiesXAmzTargetEnum(s)
+		*e = BatchDetectEntitiesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchDetectEntitiesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchDetectEntitiesXAmzTargetEnum: %v", v)
 	}
 }
 

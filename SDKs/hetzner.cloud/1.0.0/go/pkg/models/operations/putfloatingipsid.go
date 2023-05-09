@@ -64,19 +64,23 @@ const (
 	PutFloatingIpsID200ApplicationJSONFloatingIPTypeEnumIpv6 PutFloatingIpsID200ApplicationJSONFloatingIPTypeEnum = "ipv6"
 )
 
+func (e PutFloatingIpsID200ApplicationJSONFloatingIPTypeEnum) ToPointer() *PutFloatingIpsID200ApplicationJSONFloatingIPTypeEnum {
+	return &e
+}
+
 func (e *PutFloatingIpsID200ApplicationJSONFloatingIPTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
-		*e = PutFloatingIpsID200ApplicationJSONFloatingIPTypeEnum(s)
+		*e = PutFloatingIpsID200ApplicationJSONFloatingIPTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutFloatingIpsID200ApplicationJSONFloatingIPTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutFloatingIpsID200ApplicationJSONFloatingIPTypeEnum: %v", v)
 	}
 }
 

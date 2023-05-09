@@ -10,74 +10,86 @@ import (
 )
 
 // TypeaheadSafeModeEnum - Whether or not to exclude podcasts/episodes with explicit language. 1 is yes and 0 is no. It works only when **show_podcasts** is *1*.
-type TypeaheadSafeModeEnum string
+type TypeaheadSafeModeEnum int64
 
 const (
-	TypeaheadSafeModeEnumZero TypeaheadSafeModeEnum = "0"
-	TypeaheadSafeModeEnumOne  TypeaheadSafeModeEnum = "1"
+	TypeaheadSafeModeEnumZero TypeaheadSafeModeEnum = 0
+	TypeaheadSafeModeEnumOne  TypeaheadSafeModeEnum = 1
 )
 
+func (e TypeaheadSafeModeEnum) ToPointer() *TypeaheadSafeModeEnum {
+	return &e
+}
+
 func (e *TypeaheadSafeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = TypeaheadSafeModeEnum(s)
+	case 1:
+		*e = TypeaheadSafeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TypeaheadSafeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for TypeaheadSafeModeEnum: %v", v)
 	}
 }
 
 // TypeaheadShowGenresEnum - Whether or not to autosuggest genres. 1 is yes, 0 is no.
-type TypeaheadShowGenresEnum string
+type TypeaheadShowGenresEnum int64
 
 const (
-	TypeaheadShowGenresEnumZero TypeaheadShowGenresEnum = "0"
-	TypeaheadShowGenresEnumOne  TypeaheadShowGenresEnum = "1"
+	TypeaheadShowGenresEnumZero TypeaheadShowGenresEnum = 0
+	TypeaheadShowGenresEnumOne  TypeaheadShowGenresEnum = 1
 )
 
+func (e TypeaheadShowGenresEnum) ToPointer() *TypeaheadShowGenresEnum {
+	return &e
+}
+
 func (e *TypeaheadShowGenresEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = TypeaheadShowGenresEnum(s)
+	case 1:
+		*e = TypeaheadShowGenresEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TypeaheadShowGenresEnum: %s", s)
+		return fmt.Errorf("invalid value for TypeaheadShowGenresEnum: %v", v)
 	}
 }
 
 // TypeaheadShowPodcastsEnum - Autosuggest podcasts. This only searches podcast title and publisher and returns very limited info of 5 podcasts. 1 is yes, 0 is no. It's a bit slow to autosuggest podcasts, so we turn it off by default. If show_podcasts=1, you can also pass iTunes id (e.g., 474722933) to the q parameter to fetch podcast meta data.
-type TypeaheadShowPodcastsEnum string
+type TypeaheadShowPodcastsEnum int64
 
 const (
-	TypeaheadShowPodcastsEnumZero TypeaheadShowPodcastsEnum = "0"
-	TypeaheadShowPodcastsEnumOne  TypeaheadShowPodcastsEnum = "1"
+	TypeaheadShowPodcastsEnumZero TypeaheadShowPodcastsEnum = 0
+	TypeaheadShowPodcastsEnumOne  TypeaheadShowPodcastsEnum = 1
 )
 
+func (e TypeaheadShowPodcastsEnum) ToPointer() *TypeaheadShowPodcastsEnum {
+	return &e
+}
+
 func (e *TypeaheadShowPodcastsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = TypeaheadShowPodcastsEnum(s)
+	case 1:
+		*e = TypeaheadShowPodcastsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TypeaheadShowPodcastsEnum: %s", s)
+		return fmt.Errorf("invalid value for TypeaheadShowPodcastsEnum: %v", v)
 	}
 }
 

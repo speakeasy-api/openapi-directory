@@ -36,7 +36,10 @@ func newStoryCollaborators(defaultClient, securityClient HTTPClient, serverURL, 
 // Gets a list users that can read or edit this story
 func (s *storyCollaborators) StoryIDCollaboratorsGet(ctx context.Context, request operations.StoryIDCollaboratorsGetRequest) (*operations.StoryIDCollaboratorsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -95,7 +98,10 @@ func (s *storyCollaborators) StoryIDCollaboratorsGet(ctx context.Context, reques
 // Edit story permissions for inactive users.  Requires admin rights.
 func (s *storyCollaborators) StoryIDCollaboratorsInactivePost(ctx context.Context, request operations.StoryIDCollaboratorsInactivePostRequest) (*operations.StoryIDCollaboratorsInactivePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators/inactive", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators/inactive", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyInactiveCollaborator", "json")
 	if err != nil {
@@ -165,7 +171,10 @@ func (s *storyCollaborators) StoryIDCollaboratorsInactivePost(ctx context.Contex
 // Add a colloborator to this story
 func (s *storyCollaborators) StoryIDCollaboratorsPost(ctx context.Context, request operations.StoryIDCollaboratorsPostRequest) (*operations.StoryIDCollaboratorsPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddNewCollaboratorRequest", "json")
 	if err != nil {
@@ -234,7 +243,10 @@ func (s *storyCollaborators) StoryIDCollaboratorsPost(ctx context.Context, reque
 // Remove a collaborator from this story
 func (s *storyCollaborators) StoryIDCollaboratorsUseridDelete(ctx context.Context, request operations.StoryIDCollaboratorsUseridDeleteRequest) (*operations.StoryIDCollaboratorsUseridDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators/{story_collaborator_userid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators/{story_collaborator_userid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -284,7 +296,10 @@ func (s *storyCollaborators) StoryIDCollaboratorsUseridDelete(ctx context.Contex
 // Data to help you understand the access rights of a particular collaborator on this story
 func (s *storyCollaborators) StoryIDCollaboratorsUseridGet(ctx context.Context, request operations.StoryIDCollaboratorsUseridGetRequest) (*operations.StoryIDCollaboratorsUseridGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators/{story_collaborator_userid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators/{story_collaborator_userid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +358,10 @@ func (s *storyCollaborators) StoryIDCollaboratorsUseridGet(ctx context.Context, 
 // Modify a user's access right to this story (e.g., grant edit permissions)
 func (s *storyCollaborators) StoryIDCollaboratorsUseridPut(ctx context.Context, request operations.StoryIDCollaboratorsUseridPutRequest) (*operations.StoryIDCollaboratorsUseridPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators/{story_collaborator_userid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators/{story_collaborator_userid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StoryCollaborator", "json")
 	if err != nil {

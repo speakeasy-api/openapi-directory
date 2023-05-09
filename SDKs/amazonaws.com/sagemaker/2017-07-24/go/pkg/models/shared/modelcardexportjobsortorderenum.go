@@ -14,18 +14,22 @@ const (
 	ModelCardExportJobSortOrderEnumDescending ModelCardExportJobSortOrderEnum = "Descending"
 )
 
+func (e ModelCardExportJobSortOrderEnum) ToPointer() *ModelCardExportJobSortOrderEnum {
+	return &e
+}
+
 func (e *ModelCardExportJobSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ascending":
 		fallthrough
 	case "Descending":
-		*e = ModelCardExportJobSortOrderEnum(s)
+		*e = ModelCardExportJobSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelCardExportJobSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelCardExportJobSortOrderEnum: %v", v)
 	}
 }

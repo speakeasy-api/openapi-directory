@@ -34,12 +34,16 @@ const (
 	BloggerCommentsListStatusEnumSpam    BloggerCommentsListStatusEnum = "SPAM"
 )
 
+func (e BloggerCommentsListStatusEnum) ToPointer() *BloggerCommentsListStatusEnum {
+	return &e
+}
+
 func (e *BloggerCommentsListStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "EMPTIED":
@@ -47,10 +51,10 @@ func (e *BloggerCommentsListStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING":
 		fallthrough
 	case "SPAM":
-		*e = BloggerCommentsListStatusEnum(s)
+		*e = BloggerCommentsListStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerCommentsListStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerCommentsListStatusEnum: %v", v)
 	}
 }
 
@@ -64,12 +68,16 @@ const (
 	BloggerCommentsListViewEnumAdmin               BloggerCommentsListViewEnum = "ADMIN"
 )
 
+func (e BloggerCommentsListViewEnum) ToPointer() *BloggerCommentsListViewEnum {
+	return &e
+}
+
 func (e *BloggerCommentsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_TYPE_UNSPECIFIED":
 		fallthrough
 	case "READER":
@@ -77,10 +85,10 @@ func (e *BloggerCommentsListViewEnum) UnmarshalJSON(data []byte) error {
 	case "AUTHOR":
 		fallthrough
 	case "ADMIN":
-		*e = BloggerCommentsListViewEnum(s)
+		*e = BloggerCommentsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerCommentsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerCommentsListViewEnum: %v", v)
 	}
 }
 

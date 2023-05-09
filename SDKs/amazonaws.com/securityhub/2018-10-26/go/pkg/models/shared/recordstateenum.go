@@ -14,18 +14,22 @@ const (
 	RecordStateEnumArchived RecordStateEnum = "ARCHIVED"
 )
 
+func (e RecordStateEnum) ToPointer() *RecordStateEnum {
+	return &e
+}
+
 func (e *RecordStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "ARCHIVED":
-		*e = RecordStateEnum(s)
+		*e = RecordStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecordStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RecordStateEnum: %v", v)
 	}
 }

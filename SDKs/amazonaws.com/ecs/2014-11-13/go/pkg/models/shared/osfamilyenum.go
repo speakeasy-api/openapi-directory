@@ -20,12 +20,16 @@ const (
 	OSFamilyEnumLinux                 OSFamilyEnum = "LINUX"
 )
 
+func (e OSFamilyEnum) ToPointer() *OSFamilyEnum {
+	return &e
+}
+
 func (e *OSFamilyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WINDOWS_SERVER_2019_FULL":
 		fallthrough
 	case "WINDOWS_SERVER_2019_CORE":
@@ -41,9 +45,9 @@ func (e *OSFamilyEnum) UnmarshalJSON(data []byte) error {
 	case "WINDOWS_SERVER_20H2_CORE":
 		fallthrough
 	case "LINUX":
-		*e = OSFamilyEnum(s)
+		*e = OSFamilyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OSFamilyEnum: %s", s)
+		return fmt.Errorf("invalid value for OSFamilyEnum: %v", v)
 	}
 }

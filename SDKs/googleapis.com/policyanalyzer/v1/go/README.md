@@ -13,37 +13,35 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/policyanal
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PolicyanalyzerProjectsLocationsActivityTypesActivitiesQueryRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Filter: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        PageSize: 423655,
-        PageToken: "error",
-        Parent: "deserunt",
-        PrettyPrint: false,
-        QuotaUser: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.PolicyanalyzerProjectsLocationsActivityTypesActivitiesQuery(ctx, req, operations.PolicyanalyzerProjectsLocationsActivityTypesActivitiesQuerySecurity{
+    res, err := s.Projects.PolicyanalyzerProjectsLocationsActivityTypesActivitiesQuery(ctx, operations.PolicyanalyzerProjectsLocationsActivityTypesActivitiesQueryRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Filter: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PageSize: sdk.Int64(423655),
+        PageToken: sdk.String("error"),
+        Parent: "deserunt",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("suscipit"),
+        UploadType: sdk.String("iure"),
+        UploadProtocol: sdk.String("magnam"),
+    }, operations.PolicyanalyzerProjectsLocationsActivityTypesActivitiesQuerySecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -62,9 +60,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `PolicyanalyzerProjectsLocationsActivityTypesActivitiesQuery` - Queries policy activities on Google Cloud resources.
+* [PolicyanalyzerProjectsLocationsActivityTypesActivitiesQuery](docs/projects/README.md#policyanalyzerprojectslocationsactivitytypesactivitiesquery) - Queries policy activities on Google Cloud resources.
 <!-- End SDK Available Operations -->
 
 ### Maturity

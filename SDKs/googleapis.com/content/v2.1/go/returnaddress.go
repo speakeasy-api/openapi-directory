@@ -90,7 +90,10 @@ func (s *returnaddress) ContentReturnaddressCustombatch(ctx context.Context, req
 // ContentReturnaddressDelete - Deletes a return address for the given Merchant Center account.
 func (s *returnaddress) ContentReturnaddressDelete(ctx context.Context, request operations.ContentReturnaddressDeleteRequest, security operations.ContentReturnaddressDeleteSecurity) (*operations.ContentReturnaddressDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress/{returnAddressId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress/{returnAddressId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +132,10 @@ func (s *returnaddress) ContentReturnaddressDelete(ctx context.Context, request 
 // ContentReturnaddressGet - Gets a return address of the Merchant Center account.
 func (s *returnaddress) ContentReturnaddressGet(ctx context.Context, request operations.ContentReturnaddressGetRequest, security operations.ContentReturnaddressGetSecurity) (*operations.ContentReturnaddressGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress/{returnAddressId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress/{returnAddressId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,7 +183,10 @@ func (s *returnaddress) ContentReturnaddressGet(ctx context.Context, request ope
 // ContentReturnaddressInsert - Inserts a return address for the Merchant Center account.
 func (s *returnaddress) ContentReturnaddressInsert(ctx context.Context, request operations.ContentReturnaddressInsertRequest, security operations.ContentReturnaddressInsertSecurity) (*operations.ContentReturnaddressInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReturnAddress", "json")
 	if err != nil {
@@ -232,7 +241,10 @@ func (s *returnaddress) ContentReturnaddressInsert(ctx context.Context, request 
 // ContentReturnaddressList - Lists the return addresses of the Merchant Center account.
 func (s *returnaddress) ContentReturnaddressList(ctx context.Context, request operations.ContentReturnaddressListRequest, security operations.ContentReturnaddressListSecurity) (*operations.ContentReturnaddressListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/returnaddress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

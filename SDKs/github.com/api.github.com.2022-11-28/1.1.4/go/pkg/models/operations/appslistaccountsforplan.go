@@ -17,19 +17,23 @@ const (
 	AppsListAccountsForPlanDirectionEnumDesc AppsListAccountsForPlanDirectionEnum = "desc"
 )
 
+func (e AppsListAccountsForPlanDirectionEnum) ToPointer() *AppsListAccountsForPlanDirectionEnum {
+	return &e
+}
+
 func (e *AppsListAccountsForPlanDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = AppsListAccountsForPlanDirectionEnum(s)
+		*e = AppsListAccountsForPlanDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsListAccountsForPlanDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsListAccountsForPlanDirectionEnum: %v", v)
 	}
 }
 

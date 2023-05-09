@@ -16,17 +16,21 @@ const (
 	DeleteFraudsterXAmzTargetEnumVoiceIDDeleteFraudster DeleteFraudsterXAmzTargetEnum = "VoiceID.DeleteFraudster"
 )
 
+func (e DeleteFraudsterXAmzTargetEnum) ToPointer() *DeleteFraudsterXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteFraudsterXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VoiceID.DeleteFraudster":
-		*e = DeleteFraudsterXAmzTargetEnum(s)
+		*e = DeleteFraudsterXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteFraudsterXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteFraudsterXAmzTargetEnum: %v", v)
 	}
 }
 

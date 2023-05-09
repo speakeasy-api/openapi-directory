@@ -16,21 +16,25 @@ const (
 	VmwareVMDetailsBootOptionEnumBios                  VmwareVMDetailsBootOptionEnum = "BIOS"
 )
 
+func (e VmwareVMDetailsBootOptionEnum) ToPointer() *VmwareVMDetailsBootOptionEnum {
+	return &e
+}
+
 func (e *VmwareVMDetailsBootOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BOOT_OPTION_UNSPECIFIED":
 		fallthrough
 	case "EFI":
 		fallthrough
 	case "BIOS":
-		*e = VmwareVMDetailsBootOptionEnum(s)
+		*e = VmwareVMDetailsBootOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VmwareVMDetailsBootOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for VmwareVMDetailsBootOptionEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	VmwareVMDetailsPowerStateEnumSuspended             VmwareVMDetailsPowerStateEnum = "SUSPENDED"
 )
 
+func (e VmwareVMDetailsPowerStateEnum) ToPointer() *VmwareVMDetailsPowerStateEnum {
+	return &e
+}
+
 func (e *VmwareVMDetailsPowerStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POWER_STATE_UNSPECIFIED":
 		fallthrough
 	case "ON":
@@ -57,10 +65,10 @@ func (e *VmwareVMDetailsPowerStateEnum) UnmarshalJSON(data []byte) error {
 	case "OFF":
 		fallthrough
 	case "SUSPENDED":
-		*e = VmwareVMDetailsPowerStateEnum(s)
+		*e = VmwareVMDetailsPowerStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VmwareVMDetailsPowerStateEnum: %s", s)
+		return fmt.Errorf("invalid value for VmwareVMDetailsPowerStateEnum: %v", v)
 	}
 }
 

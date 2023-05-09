@@ -14,19 +14,23 @@ const (
 	AuctionContextAuctionTypesEnumDirectDeals AuctionContextAuctionTypesEnum = "DIRECT_DEALS"
 )
 
+func (e AuctionContextAuctionTypesEnum) ToPointer() *AuctionContextAuctionTypesEnum {
+	return &e
+}
+
 func (e *AuctionContextAuctionTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPEN_AUCTION":
 		fallthrough
 	case "DIRECT_DEALS":
-		*e = AuctionContextAuctionTypesEnum(s)
+		*e = AuctionContextAuctionTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuctionContextAuctionTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for AuctionContextAuctionTypesEnum: %v", v)
 	}
 }
 

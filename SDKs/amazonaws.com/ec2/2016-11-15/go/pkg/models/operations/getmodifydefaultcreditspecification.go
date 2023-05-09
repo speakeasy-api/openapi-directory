@@ -15,17 +15,21 @@ const (
 	GETModifyDefaultCreditSpecificationActionEnumModifyDefaultCreditSpecification GETModifyDefaultCreditSpecificationActionEnum = "ModifyDefaultCreditSpecification"
 )
 
+func (e GETModifyDefaultCreditSpecificationActionEnum) ToPointer() *GETModifyDefaultCreditSpecificationActionEnum {
+	return &e
+}
+
 func (e *GETModifyDefaultCreditSpecificationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyDefaultCreditSpecification":
-		*e = GETModifyDefaultCreditSpecificationActionEnum(s)
+		*e = GETModifyDefaultCreditSpecificationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyDefaultCreditSpecificationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyDefaultCreditSpecificationActionEnum: %v", v)
 	}
 }
 
@@ -39,12 +43,16 @@ const (
 	GETModifyDefaultCreditSpecificationInstanceFamilyEnumT4g GETModifyDefaultCreditSpecificationInstanceFamilyEnum = "t4g"
 )
 
+func (e GETModifyDefaultCreditSpecificationInstanceFamilyEnum) ToPointer() *GETModifyDefaultCreditSpecificationInstanceFamilyEnum {
+	return &e
+}
+
 func (e *GETModifyDefaultCreditSpecificationInstanceFamilyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "t2":
 		fallthrough
 	case "t3":
@@ -52,10 +60,10 @@ func (e *GETModifyDefaultCreditSpecificationInstanceFamilyEnum) UnmarshalJSON(da
 	case "t3a":
 		fallthrough
 	case "t4g":
-		*e = GETModifyDefaultCreditSpecificationInstanceFamilyEnum(s)
+		*e = GETModifyDefaultCreditSpecificationInstanceFamilyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyDefaultCreditSpecificationInstanceFamilyEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyDefaultCreditSpecificationInstanceFamilyEnum: %v", v)
 	}
 }
 
@@ -66,17 +74,21 @@ const (
 	GETModifyDefaultCreditSpecificationVersionEnumTwoThousandAndSixteen1115 GETModifyDefaultCreditSpecificationVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyDefaultCreditSpecificationVersionEnum) ToPointer() *GETModifyDefaultCreditSpecificationVersionEnum {
+	return &e
+}
+
 func (e *GETModifyDefaultCreditSpecificationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyDefaultCreditSpecificationVersionEnum(s)
+		*e = GETModifyDefaultCreditSpecificationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyDefaultCreditSpecificationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyDefaultCreditSpecificationVersionEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	FleetTypeEnumElastic  FleetTypeEnum = "ELASTIC"
 )
 
+func (e FleetTypeEnum) ToPointer() *FleetTypeEnum {
+	return &e
+}
+
 func (e *FleetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALWAYS_ON":
 		fallthrough
 	case "ON_DEMAND":
 		fallthrough
 	case "ELASTIC":
-		*e = FleetTypeEnum(s)
+		*e = FleetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FleetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FleetTypeEnum: %v", v)
 	}
 }

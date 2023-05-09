@@ -16,17 +16,21 @@ const (
 	UpdateStreamModeXAmzTargetEnumKinesis20131202UpdateStreamMode UpdateStreamModeXAmzTargetEnum = "Kinesis_20131202.UpdateStreamMode"
 )
 
+func (e UpdateStreamModeXAmzTargetEnum) ToPointer() *UpdateStreamModeXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateStreamModeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kinesis_20131202.UpdateStreamMode":
-		*e = UpdateStreamModeXAmzTargetEnum(s)
+		*e = UpdateStreamModeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateStreamModeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateStreamModeXAmzTargetEnum: %v", v)
 	}
 }
 

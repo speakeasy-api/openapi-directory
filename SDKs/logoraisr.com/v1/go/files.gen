@@ -8,6 +8,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -40,4 +41,11 @@ pkg/models/shared/report.go
 pkg/models/shared/resultresponse.go
 pkg/models/shared/fileresponse.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/previews/README.md
+docs/processes/README.md
+docs/projects/README.md
+docs/reports/README.md
+docs/results/README.md
+docs/uploads/README.md
 USAGE.md

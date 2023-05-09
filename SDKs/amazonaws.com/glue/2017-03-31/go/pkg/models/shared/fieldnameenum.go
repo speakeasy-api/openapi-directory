@@ -17,12 +17,16 @@ const (
 	FieldNameEnumDpuHour   FieldNameEnum = "DPU_HOUR"
 )
 
+func (e FieldNameEnum) ToPointer() *FieldNameEnum {
+	return &e
+}
+
 func (e *FieldNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRAWL_ID":
 		fallthrough
 	case "STATE":
@@ -32,9 +36,9 @@ func (e *FieldNameEnum) UnmarshalJSON(data []byte) error {
 	case "END_TIME":
 		fallthrough
 	case "DPU_HOUR":
-		*e = FieldNameEnum(s)
+		*e = FieldNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldNameEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldNameEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	ArtifactStatusEnumInProgress ArtifactStatusEnum = "IN_PROGRESS"
 )
 
+func (e ArtifactStatusEnum) ToPointer() *ArtifactStatusEnum {
+	return &e
+}
+
 func (e *ArtifactStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPROVED":
 		fallthrough
 	case "REJECTED":
 		fallthrough
 	case "IN_PROGRESS":
-		*e = ArtifactStatusEnum(s)
+		*e = ArtifactStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArtifactStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ArtifactStatusEnum: %v", v)
 	}
 }

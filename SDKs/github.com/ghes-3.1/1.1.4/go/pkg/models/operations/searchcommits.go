@@ -17,19 +17,23 @@ const (
 	SearchCommitsSortEnumCommitterDate SearchCommitsSortEnum = "committer-date"
 )
 
+func (e SearchCommitsSortEnum) ToPointer() *SearchCommitsSortEnum {
+	return &e
+}
+
 func (e *SearchCommitsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "author-date":
 		fallthrough
 	case "committer-date":
-		*e = SearchCommitsSortEnum(s)
+		*e = SearchCommitsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCommitsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCommitsSortEnum: %v", v)
 	}
 }
 

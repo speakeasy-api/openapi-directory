@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -24,6 +25,7 @@ pkg/models/operations/deleteworkloadshare.go
 pkg/models/operations/disassociatelenses.go
 pkg/models/operations/exportlens.go
 pkg/models/operations/getanswer.go
+pkg/models/operations/getconsolidatedreport.go
 pkg/models/operations/getlens.go
 pkg/models/operations/getlensreview.go
 pkg/models/operations/getlensreviewreport.go
@@ -71,6 +73,13 @@ pkg/models/shared/additionalresourcetypeenum.go
 pkg/models/shared/choiceanswer.go
 pkg/models/shared/choicestatusenum.go
 pkg/models/shared/choicereasonenum.go
+pkg/models/shared/getconsolidatedreportoutput.go
+pkg/models/shared/consolidatedreportmetric.go
+pkg/models/shared/metrictypeenum.go
+pkg/models/shared/lensmetric.go
+pkg/models/shared/pillarmetric.go
+pkg/models/shared/questionmetric.go
+pkg/models/shared/bestpractice.go
 pkg/models/shared/getlensoutput.go
 pkg/models/shared/lens.go
 pkg/models/shared/getlensreviewoutput.go
@@ -138,4 +147,5 @@ pkg/models/shared/updateworkloadoutput.go
 pkg/models/shared/updateworkloadshareoutput.go
 pkg/models/shared/workloadshare.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

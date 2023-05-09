@@ -8,26 +8,30 @@ import (
 )
 
 // VerifyRequestCodeLengthEnum - The length of the verification code.
-type VerifyRequestCodeLengthEnum string
+type VerifyRequestCodeLengthEnum int64
 
 const (
-	VerifyRequestCodeLengthEnumFour VerifyRequestCodeLengthEnum = "4"
-	VerifyRequestCodeLengthEnumSix  VerifyRequestCodeLengthEnum = "6"
+	VerifyRequestCodeLengthEnumFour VerifyRequestCodeLengthEnum = 4
+	VerifyRequestCodeLengthEnumSix  VerifyRequestCodeLengthEnum = 6
 )
 
+func (e VerifyRequestCodeLengthEnum) ToPointer() *VerifyRequestCodeLengthEnum {
+	return &e
+}
+
 func (e *VerifyRequestCodeLengthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4":
+	switch v {
+	case 4:
 		fallthrough
-	case "6":
-		*e = VerifyRequestCodeLengthEnum(s)
+	case 6:
+		*e = VerifyRequestCodeLengthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyRequestCodeLengthEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyRequestCodeLengthEnum: %v", v)
 	}
 }
 
@@ -76,12 +80,16 @@ const (
 	VerifyRequestLgEnumZhTw  VerifyRequestLgEnum = "zh-tw"
 )
 
+func (e VerifyRequestLgEnum) ToPointer() *VerifyRequestLgEnum {
+	return &e
+}
+
 func (e *VerifyRequestLgEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ar-xa":
 		fallthrough
 	case "cs-cz":
@@ -159,49 +167,53 @@ func (e *VerifyRequestLgEnum) UnmarshalJSON(data []byte) error {
 	case "zh-cn":
 		fallthrough
 	case "zh-tw":
-		*e = VerifyRequestLgEnum(s)
+		*e = VerifyRequestLgEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyRequestLgEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyRequestLgEnum: %v", v)
 	}
 }
 
 // VerifyRequestWorkflowIDEnum - Selects the predefined sequence of SMS and TTS (Text To Speech) actions to use in order to convey the PIN to your user. For example, an id of 1 identifies the workflow SMS - TTS - TTS. For a list of all workflows and their associated ids, please visit the [developer portal](https://developer.nexmo.com/verify/guides/workflows-and-events).
-type VerifyRequestWorkflowIDEnum string
+type VerifyRequestWorkflowIDEnum int64
 
 const (
-	VerifyRequestWorkflowIDEnumOne   VerifyRequestWorkflowIDEnum = "1"
-	VerifyRequestWorkflowIDEnumTwo   VerifyRequestWorkflowIDEnum = "2"
-	VerifyRequestWorkflowIDEnumThree VerifyRequestWorkflowIDEnum = "3"
-	VerifyRequestWorkflowIDEnumFour  VerifyRequestWorkflowIDEnum = "4"
-	VerifyRequestWorkflowIDEnumFive  VerifyRequestWorkflowIDEnum = "5"
-	VerifyRequestWorkflowIDEnumSix   VerifyRequestWorkflowIDEnum = "6"
-	VerifyRequestWorkflowIDEnumSeven VerifyRequestWorkflowIDEnum = "7"
+	VerifyRequestWorkflowIDEnumOne   VerifyRequestWorkflowIDEnum = 1
+	VerifyRequestWorkflowIDEnumTwo   VerifyRequestWorkflowIDEnum = 2
+	VerifyRequestWorkflowIDEnumThree VerifyRequestWorkflowIDEnum = 3
+	VerifyRequestWorkflowIDEnumFour  VerifyRequestWorkflowIDEnum = 4
+	VerifyRequestWorkflowIDEnumFive  VerifyRequestWorkflowIDEnum = 5
+	VerifyRequestWorkflowIDEnumSix   VerifyRequestWorkflowIDEnum = 6
+	VerifyRequestWorkflowIDEnumSeven VerifyRequestWorkflowIDEnum = 7
 )
 
+func (e VerifyRequestWorkflowIDEnum) ToPointer() *VerifyRequestWorkflowIDEnum {
+	return &e
+}
+
 func (e *VerifyRequestWorkflowIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "7":
-		*e = VerifyRequestWorkflowIDEnum(s)
+	case 7:
+		*e = VerifyRequestWorkflowIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyRequestWorkflowIDEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyRequestWorkflowIDEnum: %v", v)
 	}
 }
 

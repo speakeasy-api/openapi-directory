@@ -16,21 +16,25 @@ const (
 	QuoteV1BindStatusEnumRequested   QuoteV1BindStatusEnum = "requested"
 )
 
+func (e QuoteV1BindStatusEnum) ToPointer() *QuoteV1BindStatusEnum {
+	return &e
+}
+
 func (e *QuoteV1BindStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ready":
 		fallthrough
 	case "unavailable":
 		fallthrough
 	case "requested":
-		*e = QuoteV1BindStatusEnum(s)
+		*e = QuoteV1BindStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QuoteV1BindStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for QuoteV1BindStatusEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	QuoteV1StatusEnumUnresponsive QuoteV1StatusEnum = "unresponsive"
 )
 
+func (e QuoteV1StatusEnum) ToPointer() *QuoteV1StatusEnum {
+	return &e
+}
+
 func (e *QuoteV1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "referral":
@@ -66,10 +74,10 @@ func (e *QuoteV1StatusEnum) UnmarshalJSON(data []byte) error {
 	case "expired":
 		fallthrough
 	case "unresponsive":
-		*e = QuoteV1StatusEnum(s)
+		*e = QuoteV1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QuoteV1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for QuoteV1StatusEnum: %v", v)
 	}
 }
 

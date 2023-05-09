@@ -16,17 +16,21 @@ const (
 	CreateOrganizationalUnitXAmzTargetEnumAwsOrganizationsV20161128CreateOrganizationalUnit CreateOrganizationalUnitXAmzTargetEnum = "AWSOrganizationsV20161128.CreateOrganizationalUnit"
 )
 
+func (e CreateOrganizationalUnitXAmzTargetEnum) ToPointer() *CreateOrganizationalUnitXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateOrganizationalUnitXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.CreateOrganizationalUnit":
-		*e = CreateOrganizationalUnitXAmzTargetEnum(s)
+		*e = CreateOrganizationalUnitXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateOrganizationalUnitXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateOrganizationalUnitXAmzTargetEnum: %v", v)
 	}
 }
 

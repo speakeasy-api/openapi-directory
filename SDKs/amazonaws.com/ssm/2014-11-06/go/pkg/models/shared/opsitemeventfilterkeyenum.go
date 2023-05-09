@@ -13,16 +13,20 @@ const (
 	OpsItemEventFilterKeyEnumOpsItemID OpsItemEventFilterKeyEnum = "OpsItemId"
 )
 
+func (e OpsItemEventFilterKeyEnum) ToPointer() *OpsItemEventFilterKeyEnum {
+	return &e
+}
+
 func (e *OpsItemEventFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsItemId":
-		*e = OpsItemEventFilterKeyEnum(s)
+		*e = OpsItemEventFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpsItemEventFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for OpsItemEventFilterKeyEnum: %v", v)
 	}
 }

@@ -19,12 +19,16 @@ const (
 	EndpointStateEnumDeleteFailed EndpointStateEnum = "DELETE_FAILED"
 )
 
+func (e EndpointStateEnum) ToPointer() *EndpointStateEnum {
+	return &e
+}
+
 func (e *EndpointStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "CREATING":
@@ -38,9 +42,9 @@ func (e *EndpointStateEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATE_FAILED":
 		fallthrough
 	case "DELETE_FAILED":
-		*e = EndpointStateEnum(s)
+		*e = EndpointStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointStateEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointStateEnum: %v", v)
 	}
 }

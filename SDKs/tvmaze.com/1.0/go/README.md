@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/tvmaze.com/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -46,77 +44,77 @@ func main() {
 ## Available Resources and Operations
 
 
-### Auth
+### [Auth](docs/auth/README.md)
 
-* `GetAuthValidate` - Validate your authentication credentials
-* `PostAuthPoll` - Poll whether an authentication request was confirmed
-* `PostAuthStart` - Start an authentication request
+* [GetAuthValidate](docs/auth/README.md#getauthvalidate) - Validate your authentication credentials
+* [PostAuthPoll](docs/auth/README.md#postauthpoll) - Poll whether an authentication request was confirmed
+* [PostAuthStart](docs/auth/README.md#postauthstart) - Start an authentication request
 
-### FollowedNetworks
+### [FollowedNetworks](docs/followednetworks/README.md)
 
-* `DeleteUserFollowsNetworksNetworkID` - Unfollow a network
-* `GetUserFollowsNetworks` - List the followed networks
-* `GetUserFollowsNetworksNetworkID` - Check if a network is followed
-* `PutUserFollowsNetworksNetworkID` - Follow a network
+* [DeleteUserFollowsNetworksNetworkID](docs/followednetworks/README.md#deleteuserfollowsnetworksnetworkid) - Unfollow a network
+* [GetUserFollowsNetworks](docs/followednetworks/README.md#getuserfollowsnetworks) - List the followed networks
+* [GetUserFollowsNetworksNetworkID](docs/followednetworks/README.md#getuserfollowsnetworksnetworkid) - Check if a network is followed
+* [PutUserFollowsNetworksNetworkID](docs/followednetworks/README.md#putuserfollowsnetworksnetworkid) - Follow a network
 
-### FollowedPeople
+### [FollowedPeople](docs/followedpeople/README.md)
 
-* `DeleteUserFollowsPeoplePersonID` - Unfollow a person
-* `GetUserFollowsPeople` - List the followed people
-* `GetUserFollowsPeoplePersonID` - Check if a person is followed
-* `PutUserFollowsPeoplePersonID` - Follow a person
+* [DeleteUserFollowsPeoplePersonID](docs/followedpeople/README.md#deleteuserfollowspeoplepersonid) - Unfollow a person
+* [GetUserFollowsPeople](docs/followedpeople/README.md#getuserfollowspeople) - List the followed people
+* [GetUserFollowsPeoplePersonID](docs/followedpeople/README.md#getuserfollowspeoplepersonid) - Check if a person is followed
+* [PutUserFollowsPeoplePersonID](docs/followedpeople/README.md#putuserfollowspeoplepersonid) - Follow a person
 
-### FollowedShows
+### [FollowedShows](docs/followedshows/README.md)
 
-* `DeleteUserFollowsShowsShowID` - Unfollow a show
-* `GetUserFollowsShows` - List the followed shows
-* `GetUserFollowsShowsShowID` - Check if a show is followed
-* `PutUserFollowsShowsShowID` - Follow a show
+* [DeleteUserFollowsShowsShowID](docs/followedshows/README.md#deleteuserfollowsshowsshowid) - Unfollow a show
+* [GetUserFollowsShows](docs/followedshows/README.md#getuserfollowsshows) - List the followed shows
+* [GetUserFollowsShowsShowID](docs/followedshows/README.md#getuserfollowsshowsshowid) - Check if a show is followed
+* [PutUserFollowsShowsShowID](docs/followedshows/README.md#putuserfollowsshowsshowid) - Follow a show
 
-### FollowedWebchannels
+### [FollowedWebchannels](docs/followedwebchannels/README.md)
 
-* `DeleteUserFollowsWebchannelsWebchannelID` - Unfollow a webchannel
-* `GetUserFollowsWebchannels` - List the followed webchannels
-* `GetUserFollowsWebchannelsWebchannelID` - Check if a webchannel is followed
-* `PutUserFollowsWebchannelsWebchannelID` - Follow a webchannel
+* [DeleteUserFollowsWebchannelsWebchannelID](docs/followedwebchannels/README.md#deleteuserfollowswebchannelswebchannelid) - Unfollow a webchannel
+* [GetUserFollowsWebchannels](docs/followedwebchannels/README.md#getuserfollowswebchannels) - List the followed webchannels
+* [GetUserFollowsWebchannelsWebchannelID](docs/followedwebchannels/README.md#getuserfollowswebchannelswebchannelid) - Check if a webchannel is followed
+* [PutUserFollowsWebchannelsWebchannelID](docs/followedwebchannels/README.md#putuserfollowswebchannelswebchannelid) - Follow a webchannel
 
-### MarkedEpisodes
+### [MarkedEpisodes](docs/markedepisodes/README.md)
 
-* `DeleteUserEpisodesEpisodeID` - Unmark an episode
-* `GetUserEpisodes` - List the marked episodes
-* `GetUserEpisodesEpisodeID` - Check if an episode is marked
-* `PutUserEpisodesEpisodeID` - Mark an episode
+* [DeleteUserEpisodesEpisodeID](docs/markedepisodes/README.md#deleteuserepisodesepisodeid) - Unmark an episode
+* [GetUserEpisodes](docs/markedepisodes/README.md#getuserepisodes) - List the marked episodes
+* [GetUserEpisodesEpisodeID](docs/markedepisodes/README.md#getuserepisodesepisodeid) - Check if an episode is marked
+* [PutUserEpisodesEpisodeID](docs/markedepisodes/README.md#putuserepisodesepisodeid) - Mark an episode
 
-### Scrobbling
+### [Scrobbling](docs/scrobbling/README.md)
 
-* `GetScrobbleShowsShowID` - List watched and acquired episodes for a show
-* `PostScrobbleEpisodes` - Mark episodes as acquired or watched based on their IDs
-* `PostScrobbleShows` - Mark episodes within a show as acquired or watched based on their attributes
-* `PutScrobbleEpisodesEpisodeID` - Mark an episode as acquired or watched based on its ID
+* [GetScrobbleShowsShowID](docs/scrobbling/README.md#getscrobbleshowsshowid) - List watched and acquired episodes for a show
+* [PostScrobbleEpisodes](docs/scrobbling/README.md#postscrobbleepisodes) - Mark episodes as acquired or watched based on their IDs
+* [PostScrobbleShows](docs/scrobbling/README.md#postscrobbleshows) - Mark episodes within a show as acquired or watched based on their attributes
+* [PutScrobbleEpisodesEpisodeID](docs/scrobbling/README.md#putscrobbleepisodesepisodeid) - Mark an episode as acquired or watched based on its ID
 
-### TaggedShows
+### [TaggedShows](docs/taggedshows/README.md)
 
-* `DeleteUserTagsTagID` - Delete a specific tag
-* `DeleteUserTagsTagIDShowsShowID` - Untag a show
-* `GetUserTags` - List all tags
-* `GetUserTagsTagIDShows` - List all shows under this tag
-* `PatchUserTagsTagID` - Update a specific tag
-* `PostUserTags` - Create a new tag
-* `PutUserTagsTagIDShowsShowID` - Tag a show
+* [DeleteUserTagsTagID](docs/taggedshows/README.md#deleteusertagstagid) - Delete a specific tag
+* [DeleteUserTagsTagIDShowsShowID](docs/taggedshows/README.md#deleteusertagstagidshowsshowid) - Untag a show
+* [GetUserTags](docs/taggedshows/README.md#getusertags) - List all tags
+* [GetUserTagsTagIDShows](docs/taggedshows/README.md#getusertagstagidshows) - List all shows under this tag
+* [PatchUserTagsTagID](docs/taggedshows/README.md#patchusertagstagid) - Update a specific tag
+* [PostUserTags](docs/taggedshows/README.md#postusertags) - Create a new tag
+* [PutUserTagsTagIDShowsShowID](docs/taggedshows/README.md#putusertagstagidshowsshowid) - Tag a show
 
-### VotedEpisodes
+### [VotedEpisodes](docs/votedepisodes/README.md)
 
-* `DeleteUserVotesEpisodesEpisodeID` - Remove an episode vote
-* `GetUserVotesEpisodes` - List the episodes voted for
-* `GetUserVotesEpisodesEpisodeID` - Check if an episode is voted for
-* `PutUserVotesEpisodesEpisodeID` - Vote for an episode
+* [DeleteUserVotesEpisodesEpisodeID](docs/votedepisodes/README.md#deleteuservotesepisodesepisodeid) - Remove an episode vote
+* [GetUserVotesEpisodes](docs/votedepisodes/README.md#getuservotesepisodes) - List the episodes voted for
+* [GetUserVotesEpisodesEpisodeID](docs/votedepisodes/README.md#getuservotesepisodesepisodeid) - Check if an episode is voted for
+* [PutUserVotesEpisodesEpisodeID](docs/votedepisodes/README.md#putuservotesepisodesepisodeid) - Vote for an episode
 
-### VotedShows
+### [VotedShows](docs/votedshows/README.md)
 
-* `DeleteUserVotesShowsShowID` - Remove a show vote
-* `GetUserVotesShows` - List the shows voted for
-* `GetUserVotesShowsShowID` - Check if a show is voted for
-* `PutUserVotesShowsShowID` - Vote for a show
+* [DeleteUserVotesShowsShowID](docs/votedshows/README.md#deleteuservotesshowsshowid) - Remove a show vote
+* [GetUserVotesShows](docs/votedshows/README.md#getuservotesshows) - List the shows voted for
+* [GetUserVotesShowsShowID](docs/votedshows/README.md#getuservotesshowsshowid) - Check if a show is voted for
+* [PutUserVotesShowsShowID](docs/votedshows/README.md#putuservotesshowsshowid) - Vote for a show
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -28,12 +28,16 @@ const (
 	CreativeConfigCreativeTypeEnumCreativeTypeTemplatedAppInstallVideo        CreativeConfigCreativeTypeEnum = "CREATIVE_TYPE_TEMPLATED_APP_INSTALL_VIDEO"
 )
 
+func (e CreativeConfigCreativeTypeEnum) ToPointer() *CreativeConfigCreativeTypeEnum {
+	return &e
+}
+
 func (e *CreativeConfigCreativeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CREATIVE_TYPE_STANDARD":
@@ -63,10 +67,10 @@ func (e *CreativeConfigCreativeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CREATIVE_TYPE_NATIVE_VIDEO":
 		fallthrough
 	case "CREATIVE_TYPE_TEMPLATED_APP_INSTALL_VIDEO":
-		*e = CreativeConfigCreativeTypeEnum(s)
+		*e = CreativeConfigCreativeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeConfigCreativeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeConfigCreativeTypeEnum: %v", v)
 	}
 }
 

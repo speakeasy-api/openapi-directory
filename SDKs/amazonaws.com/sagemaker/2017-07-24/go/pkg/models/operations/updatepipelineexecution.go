@@ -16,17 +16,21 @@ const (
 	UpdatePipelineExecutionXAmzTargetEnumSageMakerUpdatePipelineExecution UpdatePipelineExecutionXAmzTargetEnum = "SageMaker.UpdatePipelineExecution"
 )
 
+func (e UpdatePipelineExecutionXAmzTargetEnum) ToPointer() *UpdatePipelineExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdatePipelineExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.UpdatePipelineExecution":
-		*e = UpdatePipelineExecutionXAmzTargetEnum(s)
+		*e = UpdatePipelineExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePipelineExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePipelineExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

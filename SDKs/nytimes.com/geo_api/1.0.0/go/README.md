@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nytimes.com/geo_api/1.0.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,23 +27,21 @@ func main() {
         }),
     )
 
-    req := operations.GetQueryJSONRequest{
-        DateRange: "corrupti",
-        Elevation: 592845,
-        Facets: "1",
-        Filter: "quibusdam",
-        Latitude: "unde",
-        Limit: 857946,
-        Longitude: "corrupti",
-        Name: "illum",
-        Offset: 423655,
-        Query: "error",
-        Sort: "deserunt",
-        Sw: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.Events.GetQueryJSON(ctx, req)
+    res, err := s.Events.GetQueryJSON(ctx, operations.GetQueryJSONRequest{
+        DateRange: sdk.String("corrupti"),
+        Elevation: sdk.Int64(592845),
+        Facets: operations.GetQueryJSONFacetsEnumOne.ToPointer(),
+        Filter: sdk.String("quibusdam"),
+        Latitude: sdk.String("unde"),
+        Limit: sdk.Int64(857946),
+        Longitude: sdk.String("corrupti"),
+        Name: sdk.String("Ben Mueller"),
+        Offset: sdk.Int64(437587),
+        Query: sdk.String("magnam"),
+        Sort: sdk.String("debitis"),
+        Sw: sdk.String("ipsa"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -60,9 +57,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Events
+### [Events](docs/events/README.md)
 
-* `GetQueryJSON` - Geographic API
+* [GetQueryJSON](docs/events/README.md#getqueryjson) - Geographic API
 <!-- End SDK Available Operations -->
 
 ### Maturity

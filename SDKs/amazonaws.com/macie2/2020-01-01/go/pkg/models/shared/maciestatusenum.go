@@ -15,18 +15,22 @@ const (
 	MacieStatusEnumEnabled MacieStatusEnum = "ENABLED"
 )
 
+func (e MacieStatusEnum) ToPointer() *MacieStatusEnum {
+	return &e
+}
+
 func (e *MacieStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PAUSED":
 		fallthrough
 	case "ENABLED":
-		*e = MacieStatusEnum(s)
+		*e = MacieStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MacieStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MacieStatusEnum: %v", v)
 	}
 }

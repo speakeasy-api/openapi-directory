@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -30,4 +31,6 @@ pkg/models/shared/googlecloudbillingbudgetsv1beta1createbudgetrequest.go
 pkg/models/shared/xgafvenum.go
 pkg/models/shared/googlecloudbillingbudgetsv1beta1listbudgetsresponse.go
 pkg/models/shared/googlecloudbillingbudgetsv1beta1updatebudgetrequest.go
+docs/sdk/README.md
+docs/billingaccounts/README.md
 USAGE.md

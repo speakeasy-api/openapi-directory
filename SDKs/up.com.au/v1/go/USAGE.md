@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,14 +17,12 @@ func main() {
         }),
     )
 
-    req := operations.GetAccountsRequest{
-        FilterAccountType: "TRANSACTIONAL",
-        FilterOwnershipType: "JOINT",
-        PageSize: 715190,
-    }
-
     ctx := context.Background()
-    res, err := s.Accounts.GetAccounts(ctx, req)
+    res, err := s.Accounts.GetAccounts(ctx, operations.GetAccountsRequest{
+        FilterAccountType: shared.AccountTypeEnumEnumTransactional.ToPointer(),
+        FilterOwnershipType: shared.OwnershipTypeEnumEnumJoint.ToPointer(),
+        PageSize: sdk.Int64(715190),
+    })
     if err != nil {
         log.Fatal(err)
     }

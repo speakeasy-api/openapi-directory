@@ -34,7 +34,10 @@ func newLifecycleOperations(defaultClient, securityClient HTTPClient, serverURL,
 // Activate User
 func (s *lifecycleOperations) ActivateUser(ctx context.Context, request operations.ActivateUserRequest) (*operations.ActivateUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/activate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/activate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *lifecycleOperations) ActivateUser(ctx context.Context, request operatio
 // Deactivate User
 func (s *lifecycleOperations) DeactivateUser(ctx context.Context, request operations.DeactivateUserRequest) (*operations.DeactivateUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/deactivate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/deactivate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -124,7 +130,10 @@ func (s *lifecycleOperations) DeactivateUser(ctx context.Context, request operat
 // Reset Password
 func (s *lifecycleOperations) ResetPassword(ctx context.Context, request operations.ResetPasswordRequest) (*operations.ResetPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/reset_password", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/reset_password", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -171,7 +180,10 @@ func (s *lifecycleOperations) ResetPassword(ctx context.Context, request operati
 // Set Temp Password
 func (s *lifecycleOperations) SetTempPassword(ctx context.Context, request operations.SetTempPasswordRequest) (*operations.SetTempPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/expire_password", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/expire_password", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -218,7 +230,10 @@ func (s *lifecycleOperations) SetTempPassword(ctx context.Context, request opera
 // Suspend User
 func (s *lifecycleOperations) SuspendUser(ctx context.Context, request operations.SuspendUserRequest) (*operations.SuspendUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/suspend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/suspend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -261,7 +276,10 @@ func (s *lifecycleOperations) SuspendUser(ctx context.Context, request operation
 // Unlock User
 func (s *lifecycleOperations) UnlockUser(ctx context.Context, request operations.UnlockUserRequest) (*operations.UnlockUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/unlock", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/unlock", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -304,7 +322,10 @@ func (s *lifecycleOperations) UnlockUser(ctx context.Context, request operations
 // Unsuspend User
 func (s *lifecycleOperations) UnsuspendUser(ctx context.Context, request operations.UnsuspendUserRequest) (*operations.UnsuspendUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/unsuspend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/lifecycle/unsuspend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

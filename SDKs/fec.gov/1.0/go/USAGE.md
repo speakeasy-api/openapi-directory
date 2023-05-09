@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -19,7 +18,8 @@ func main() {
         }),
     )
 
-    req := operations.GetAuditCaseRequest{
+    ctx := context.Background()
+    res, err := s.Audit.GetAuditCase(ctx, operations.GetAuditCaseRequest{
         APIKey: "corrupti",
         AuditCaseID: []string{
             "distinctio",
@@ -37,7 +37,7 @@ func main() {
             "iure",
             "magnam",
         },
-        CommitteeDesignation: "debitis",
+        CommitteeDesignation: sdk.String("debitis"),
         CommitteeID: []string{
             "delectus",
         },
@@ -51,11 +51,11 @@ func main() {
             479977,
             568045,
         },
-        MaxElectionCycle: 392785,
-        MinElectionCycle: 925597,
-        Page: 836079,
-        PerPage: 71036,
-        PrimaryCategoryID: "quis",
+        MaxElectionCycle: sdk.Int(392785),
+        MinElectionCycle: sdk.Int(925597),
+        Page: sdk.Int(836079),
+        PerPage: sdk.Int(71036),
+        PrimaryCategoryID: sdk.String("quis"),
         Q: []string{
             "deserunt",
         },
@@ -68,14 +68,11 @@ func main() {
             "odit",
             "at",
         },
-        SortHideNull: false,
-        SortNullOnly: false,
-        SortNullsLast: false,
-        SubCategoryID: "at",
-    }
-
-    ctx := context.Background()
-    res, err := s.Audit.GetAuditCase(ctx, req)
+        SortHideNull: sdk.Bool(false),
+        SortNullOnly: sdk.Bool(false),
+        SortNullsLast: sdk.Bool(false),
+        SubCategoryID: sdk.String("at"),
+    })
     if err != nil {
         log.Fatal(err)
     }

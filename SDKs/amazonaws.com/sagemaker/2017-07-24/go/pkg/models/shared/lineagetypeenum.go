@@ -16,12 +16,16 @@ const (
 	LineageTypeEnumAction         LineageTypeEnum = "Action"
 )
 
+func (e LineageTypeEnum) ToPointer() *LineageTypeEnum {
+	return &e
+}
+
 func (e *LineageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrialComponent":
 		fallthrough
 	case "Artifact":
@@ -29,9 +33,9 @@ func (e *LineageTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Context":
 		fallthrough
 	case "Action":
-		*e = LineageTypeEnum(s)
+		*e = LineageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LineageTypeEnum: %v", v)
 	}
 }

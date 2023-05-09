@@ -18,12 +18,16 @@ const (
 	LocalDiskInitializeParamsDiskTypeEnumPdExtreme           LocalDiskInitializeParamsDiskTypeEnum = "PD_EXTREME"
 )
 
+func (e LocalDiskInitializeParamsDiskTypeEnum) ToPointer() *LocalDiskInitializeParamsDiskTypeEnum {
+	return &e
+}
+
 func (e *LocalDiskInitializeParamsDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PD_STANDARD":
@@ -33,10 +37,10 @@ func (e *LocalDiskInitializeParamsDiskTypeEnum) UnmarshalJSON(data []byte) error
 	case "PD_BALANCED":
 		fallthrough
 	case "PD_EXTREME":
-		*e = LocalDiskInitializeParamsDiskTypeEnum(s)
+		*e = LocalDiskInitializeParamsDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocalDiskInitializeParamsDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LocalDiskInitializeParamsDiskTypeEnum: %v", v)
 	}
 }
 

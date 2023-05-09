@@ -22,12 +22,16 @@ const (
 	GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnumTechnicalIncidents              GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum = "TECHNICAL_INCIDENTS"
 )
 
+func (e GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum) ToPointer() *GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum {
+	return &e
+}
+
 func (e *GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOTIFICATION_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "ALL":
@@ -45,10 +49,10 @@ func (e *GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategor
 	case "PRODUCT_UPDATES":
 		fallthrough
 	case "TECHNICAL_INCIDENTS":
-		*e = GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum(s)
+		*e = GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudEssentialcontactsV1SendTestMessageRequestNotificationCategoryEnum: %v", v)
 	}
 }
 

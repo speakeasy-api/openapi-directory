@@ -16,17 +16,21 @@ const (
 	ListCollectionsXAmzTargetEnumOpenSearchServerlessListCollections ListCollectionsXAmzTargetEnum = "OpenSearchServerless.ListCollections"
 )
 
+func (e ListCollectionsXAmzTargetEnum) ToPointer() *ListCollectionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCollectionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpenSearchServerless.ListCollections":
-		*e = ListCollectionsXAmzTargetEnum(s)
+		*e = ListCollectionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCollectionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCollectionsXAmzTargetEnum: %v", v)
 	}
 }
 

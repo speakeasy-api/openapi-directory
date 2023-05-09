@@ -26,12 +26,16 @@ const (
 	FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnumPt FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnum = "pt"
 )
 
+func (e FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnum) ToPointer() *FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnum {
+	return &e
+}
+
 func (e *FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cs":
 		fallthrough
 	case "en":
@@ -45,10 +49,10 @@ func (e *FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnum) UnmarshalJSON(
 	case "pl":
 		fallthrough
 	case "pt":
-		*e = FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnum(s)
+		*e = FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for FindPlacesPrefixFindPlacesPrefixGetLanguageLanguageEnum: %v", v)
 	}
 }
 

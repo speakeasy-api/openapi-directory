@@ -16,21 +16,25 @@ const (
 	MavenRepositoryConfigVersionPolicyEnumSnapshot                 MavenRepositoryConfigVersionPolicyEnum = "SNAPSHOT"
 )
 
+func (e MavenRepositoryConfigVersionPolicyEnum) ToPointer() *MavenRepositoryConfigVersionPolicyEnum {
+	return &e
+}
+
 func (e *MavenRepositoryConfigVersionPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERSION_POLICY_UNSPECIFIED":
 		fallthrough
 	case "RELEASE":
 		fallthrough
 	case "SNAPSHOT":
-		*e = MavenRepositoryConfigVersionPolicyEnum(s)
+		*e = MavenRepositoryConfigVersionPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MavenRepositoryConfigVersionPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for MavenRepositoryConfigVersionPolicyEnum: %v", v)
 	}
 }
 

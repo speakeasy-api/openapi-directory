@@ -16,12 +16,16 @@ const (
 	MonitoringTypeEnumModelExplainability MonitoringTypeEnum = "ModelExplainability"
 )
 
+func (e MonitoringTypeEnum) ToPointer() *MonitoringTypeEnum {
+	return &e
+}
+
 func (e *MonitoringTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DataQuality":
 		fallthrough
 	case "ModelQuality":
@@ -29,9 +33,9 @@ func (e *MonitoringTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ModelBias":
 		fallthrough
 	case "ModelExplainability":
-		*e = MonitoringTypeEnum(s)
+		*e = MonitoringTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringTypeEnum: %v", v)
 	}
 }

@@ -38,7 +38,10 @@ func newPaymentMethodsMerchantLevel(defaultClient, securityClient HTTPClient, se
 // * Management API—Payment methods read
 func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSettings(ctx context.Context, request operations.GetMerchantsMerchantIDPaymentMethodSettingsRequest, security operations.GetMerchantsMerchantIDPaymentMethodSettingsSecurity) (*operations.GetMerchantsMerchantIDPaymentMethodSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -109,7 +112,10 @@ func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSetting
 // * Management API—Payment methods read
 func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodID(ctx context.Context, request operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDRequest, security operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDSecurity) (*operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +182,10 @@ func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSetting
 // * Management API—Payment methods read
 func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDGetApplePayDomains(ctx context.Context, request operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDGetApplePayDomainsRequest, security operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDGetApplePayDomainsSecurity) (*operations.GetMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDGetApplePayDomainsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/getApplePayDomains", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/getApplePayDomains", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -243,7 +252,10 @@ func (s *paymentMethodsMerchantLevel) GetMerchantsMerchantIDPaymentMethodSetting
 // * Management API—Payment methods read and write
 func (s *paymentMethodsMerchantLevel) PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodID(ctx context.Context, request operations.PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDRequest, security operations.PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDSecurity) (*operations.PatchMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePaymentMethodInfo", "json")
 	if err != nil {
@@ -317,7 +329,10 @@ func (s *paymentMethodsMerchantLevel) PatchMerchantsMerchantIDPaymentMethodSetti
 // * Management API—Payment methods read and write
 func (s *paymentMethodsMerchantLevel) PostMerchantsMerchantIDPaymentMethodSettings(ctx context.Context, request operations.PostMerchantsMerchantIDPaymentMethodSettingsRequest, security operations.PostMerchantsMerchantIDPaymentMethodSettingsSecurity) (*operations.PostMerchantsMerchantIDPaymentMethodSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentMethodSetupInfo", "json")
 	if err != nil {
@@ -391,7 +406,10 @@ func (s *paymentMethodsMerchantLevel) PostMerchantsMerchantIDPaymentMethodSettin
 // * Management API—Payment methods read and write
 func (s *paymentMethodsMerchantLevel) PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomains(ctx context.Context, request operations.PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsRequest, security operations.PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsSecurity) (*operations.PostMerchantsMerchantIDPaymentMethodSettingsPaymentMethodIDAddApplePayDomainsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/addApplePayDomains", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/addApplePayDomains", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplePayInfo", "json")
 	if err != nil {

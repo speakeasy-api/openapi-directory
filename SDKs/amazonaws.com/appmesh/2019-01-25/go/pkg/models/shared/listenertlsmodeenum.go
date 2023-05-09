@@ -15,20 +15,24 @@ const (
 	ListenerTLSModeEnumDisabled   ListenerTLSModeEnum = "DISABLED"
 )
 
+func (e ListenerTLSModeEnum) ToPointer() *ListenerTLSModeEnum {
+	return &e
+}
+
 func (e *ListenerTLSModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRICT":
 		fallthrough
 	case "PERMISSIVE":
 		fallthrough
 	case "DISABLED":
-		*e = ListenerTLSModeEnum(s)
+		*e = ListenerTLSModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListenerTLSModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListenerTLSModeEnum: %v", v)
 	}
 }

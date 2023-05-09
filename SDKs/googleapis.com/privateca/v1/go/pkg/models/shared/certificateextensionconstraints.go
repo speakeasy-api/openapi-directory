@@ -19,12 +19,16 @@ const (
 	CertificateExtensionConstraintsKnownExtensionsEnumNameConstraints                      CertificateExtensionConstraintsKnownExtensionsEnum = "NAME_CONSTRAINTS"
 )
 
+func (e CertificateExtensionConstraintsKnownExtensionsEnum) ToPointer() *CertificateExtensionConstraintsKnownExtensionsEnum {
+	return &e
+}
+
 func (e *CertificateExtensionConstraintsKnownExtensionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KNOWN_CERTIFICATE_EXTENSION_UNSPECIFIED":
 		fallthrough
 	case "BASE_KEY_USAGE":
@@ -38,10 +42,10 @@ func (e *CertificateExtensionConstraintsKnownExtensionsEnum) UnmarshalJSON(data 
 	case "AIA_OCSP_SERVERS":
 		fallthrough
 	case "NAME_CONSTRAINTS":
-		*e = CertificateExtensionConstraintsKnownExtensionsEnum(s)
+		*e = CertificateExtensionConstraintsKnownExtensionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateExtensionConstraintsKnownExtensionsEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateExtensionConstraintsKnownExtensionsEnum: %v", v)
 	}
 }
 

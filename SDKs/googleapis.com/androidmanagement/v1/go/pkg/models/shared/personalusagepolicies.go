@@ -17,12 +17,16 @@ const (
 	PersonalUsagePoliciesPersonalPlayStoreModeEnumAllowlist                PersonalUsagePoliciesPersonalPlayStoreModeEnum = "ALLOWLIST"
 )
 
+func (e PersonalUsagePoliciesPersonalPlayStoreModeEnum) ToPointer() *PersonalUsagePoliciesPersonalPlayStoreModeEnum {
+	return &e
+}
+
 func (e *PersonalUsagePoliciesPersonalPlayStoreModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLAY_STORE_MODE_UNSPECIFIED":
 		fallthrough
 	case "BLACKLIST":
@@ -30,10 +34,10 @@ func (e *PersonalUsagePoliciesPersonalPlayStoreModeEnum) UnmarshalJSON(data []by
 	case "BLOCKLIST":
 		fallthrough
 	case "ALLOWLIST":
-		*e = PersonalUsagePoliciesPersonalPlayStoreModeEnum(s)
+		*e = PersonalUsagePoliciesPersonalPlayStoreModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PersonalUsagePoliciesPersonalPlayStoreModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PersonalUsagePoliciesPersonalPlayStoreModeEnum: %v", v)
 	}
 }
 

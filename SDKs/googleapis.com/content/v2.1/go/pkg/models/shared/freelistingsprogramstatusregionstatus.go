@@ -20,12 +20,16 @@ const (
 	FreeListingsProgramStatusRegionStatusEligibilityStatusEnumOnboarding       FreeListingsProgramStatusRegionStatusEligibilityStatusEnum = "ONBOARDING"
 )
 
+func (e FreeListingsProgramStatusRegionStatusEligibilityStatusEnum) ToPointer() *FreeListingsProgramStatusRegionStatusEligibilityStatusEnum {
+	return &e
+}
+
 func (e *FreeListingsProgramStatusRegionStatusEligibilityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "APPROVED":
@@ -39,10 +43,10 @@ func (e *FreeListingsProgramStatusRegionStatusEligibilityStatusEnum) UnmarshalJS
 	case "PENDING_REVIEW":
 		fallthrough
 	case "ONBOARDING":
-		*e = FreeListingsProgramStatusRegionStatusEligibilityStatusEnum(s)
+		*e = FreeListingsProgramStatusRegionStatusEligibilityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FreeListingsProgramStatusRegionStatusEligibilityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FreeListingsProgramStatusRegionStatusEligibilityStatusEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	FreeListingsProgramStatusRegionStatusReviewEligibilityStatusEnumIneligible                   FreeListingsProgramStatusRegionStatusReviewEligibilityStatusEnum = "INELIGIBLE"
 )
 
+func (e FreeListingsProgramStatusRegionStatusReviewEligibilityStatusEnum) ToPointer() *FreeListingsProgramStatusRegionStatusReviewEligibilityStatusEnum {
+	return &e
+}
+
 func (e *FreeListingsProgramStatusRegionStatusReviewEligibilityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVIEW_ELIGIBILITY_UNSPECIFIED":
 		fallthrough
 	case "ELIGIBLE":
 		fallthrough
 	case "INELIGIBLE":
-		*e = FreeListingsProgramStatusRegionStatusReviewEligibilityStatusEnum(s)
+		*e = FreeListingsProgramStatusRegionStatusReviewEligibilityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FreeListingsProgramStatusRegionStatusReviewEligibilityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FreeListingsProgramStatusRegionStatusReviewEligibilityStatusEnum: %v", v)
 	}
 }
 
@@ -88,12 +96,16 @@ const (
 	FreeListingsProgramStatusRegionStatusReviewIneligibilityReasonEnumAlreadyReviewed                      FreeListingsProgramStatusRegionStatusReviewIneligibilityReasonEnum = "ALREADY_REVIEWED"
 )
 
+func (e FreeListingsProgramStatusRegionStatusReviewIneligibilityReasonEnum) ToPointer() *FreeListingsProgramStatusRegionStatusReviewIneligibilityReasonEnum {
+	return &e
+}
+
 func (e *FreeListingsProgramStatusRegionStatusReviewIneligibilityReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVIEW_INELIGIBILITY_REASON_UNSPECIFIED":
 		fallthrough
 	case "ONBOARDING_ISSUES":
@@ -111,10 +123,10 @@ func (e *FreeListingsProgramStatusRegionStatusReviewIneligibilityReasonEnum) Unm
 	case "IS_RETIRED":
 		fallthrough
 	case "ALREADY_REVIEWED":
-		*e = FreeListingsProgramStatusRegionStatusReviewIneligibilityReasonEnum(s)
+		*e = FreeListingsProgramStatusRegionStatusReviewIneligibilityReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FreeListingsProgramStatusRegionStatusReviewIneligibilityReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for FreeListingsProgramStatusRegionStatusReviewIneligibilityReasonEnum: %v", v)
 	}
 }
 

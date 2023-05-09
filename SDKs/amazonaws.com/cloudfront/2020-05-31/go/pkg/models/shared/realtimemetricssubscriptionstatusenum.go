@@ -14,18 +14,22 @@ const (
 	RealtimeMetricsSubscriptionStatusEnumDisabled RealtimeMetricsSubscriptionStatusEnum = "Disabled"
 )
 
+func (e RealtimeMetricsSubscriptionStatusEnum) ToPointer() *RealtimeMetricsSubscriptionStatusEnum {
+	return &e
+}
+
 func (e *RealtimeMetricsSubscriptionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
-		*e = RealtimeMetricsSubscriptionStatusEnum(s)
+		*e = RealtimeMetricsSubscriptionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealtimeMetricsSubscriptionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RealtimeMetricsSubscriptionStatusEnum: %v", v)
 	}
 }

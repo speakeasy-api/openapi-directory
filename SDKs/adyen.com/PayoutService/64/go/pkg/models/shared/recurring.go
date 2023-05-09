@@ -22,21 +22,25 @@ const (
 	RecurringContractEnumPayout    RecurringContractEnum = "PAYOUT"
 )
 
+func (e RecurringContractEnum) ToPointer() *RecurringContractEnum {
+	return &e
+}
+
 func (e *RecurringContractEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONECLICK":
 		fallthrough
 	case "RECURRING":
 		fallthrough
 	case "PAYOUT":
-		*e = RecurringContractEnum(s)
+		*e = RecurringContractEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecurringContractEnum: %s", s)
+		return fmt.Errorf("invalid value for RecurringContractEnum: %v", v)
 	}
 }
 
@@ -48,19 +52,23 @@ const (
 	RecurringTokenServiceEnumMctokenservice   RecurringTokenServiceEnum = "MCTOKENSERVICE"
 )
 
+func (e RecurringTokenServiceEnum) ToPointer() *RecurringTokenServiceEnum {
+	return &e
+}
+
 func (e *RecurringTokenServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VISATOKENSERVICE":
 		fallthrough
 	case "MCTOKENSERVICE":
-		*e = RecurringTokenServiceEnum(s)
+		*e = RecurringTokenServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecurringTokenServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for RecurringTokenServiceEnum: %v", v)
 	}
 }
 

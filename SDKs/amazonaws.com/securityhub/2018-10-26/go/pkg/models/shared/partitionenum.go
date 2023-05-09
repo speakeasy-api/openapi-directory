@@ -15,20 +15,24 @@ const (
 	PartitionEnumAwsUsGov PartitionEnum = "aws-us-gov"
 )
 
+func (e PartitionEnum) ToPointer() *PartitionEnum {
+	return &e
+}
+
 func (e *PartitionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "aws":
 		fallthrough
 	case "aws-cn":
 		fallthrough
 	case "aws-us-gov":
-		*e = PartitionEnum(s)
+		*e = PartitionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartitionEnum: %s", s)
+		return fmt.Errorf("invalid value for PartitionEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	Icd10CMRelationshipTypeEnumSystemOrganSite Icd10CMRelationshipTypeEnum = "SYSTEM_ORGAN_SITE"
 )
 
+func (e Icd10CMRelationshipTypeEnum) ToPointer() *Icd10CMRelationshipTypeEnum {
+	return &e
+}
+
 func (e *Icd10CMRelationshipTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OVERLAP":
 		fallthrough
 	case "SYSTEM_ORGAN_SITE":
-		*e = Icd10CMRelationshipTypeEnum(s)
+		*e = Icd10CMRelationshipTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Icd10CMRelationshipTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for Icd10CMRelationshipTypeEnum: %v", v)
 	}
 }

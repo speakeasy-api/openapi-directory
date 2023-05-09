@@ -16,17 +16,21 @@ const (
 	ListProgressUpdateStreamsXAmzTargetEnumAwsMigrationHubListProgressUpdateStreams ListProgressUpdateStreamsXAmzTargetEnum = "AWSMigrationHub.ListProgressUpdateStreams"
 )
 
+func (e ListProgressUpdateStreamsXAmzTargetEnum) ToPointer() *ListProgressUpdateStreamsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListProgressUpdateStreamsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHub.ListProgressUpdateStreams":
-		*e = ListProgressUpdateStreamsXAmzTargetEnum(s)
+		*e = ListProgressUpdateStreamsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListProgressUpdateStreamsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListProgressUpdateStreamsXAmzTargetEnum: %v", v)
 	}
 }
 

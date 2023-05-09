@@ -2,31 +2,28 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PostCompileRequest{
+    ctx := context.Background()
+    res, err := s.CompileAPI.PostCompile(ctx, operations.PostCompileRequest{
         RequestBody: map[string]interface{}{
             "provident": "distinctio",
             "quibusdam": "unde",
             "nulla": "corrupti",
         },
-        Explain: "illum",
-        Instrument: false,
-        Metrics: false,
-        Pretty: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.CompileAPI.PostCompile(ctx, req)
+        Explain: sdk.String("illum"),
+        Instrument: sdk.Bool(false),
+        Metrics: sdk.Bool(false),
+        Pretty: sdk.Bool(false),
+    })
     if err != nil {
         log.Fatal(err)
     }

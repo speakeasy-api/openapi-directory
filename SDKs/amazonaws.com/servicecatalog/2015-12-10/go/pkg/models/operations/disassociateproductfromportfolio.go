@@ -16,17 +16,21 @@ const (
 	DisassociateProductFromPortfolioXAmzTargetEnumAws242ServiceCatalogServiceDisassociateProductFromPortfolio DisassociateProductFromPortfolioXAmzTargetEnum = "AWS242ServiceCatalogService.DisassociateProductFromPortfolio"
 )
 
+func (e DisassociateProductFromPortfolioXAmzTargetEnum) ToPointer() *DisassociateProductFromPortfolioXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateProductFromPortfolioXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DisassociateProductFromPortfolio":
-		*e = DisassociateProductFromPortfolioXAmzTargetEnum(s)
+		*e = DisassociateProductFromPortfolioXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateProductFromPortfolioXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateProductFromPortfolioXAmzTargetEnum: %v", v)
 	}
 }
 

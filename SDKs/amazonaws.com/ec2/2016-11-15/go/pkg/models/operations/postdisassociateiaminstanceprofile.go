@@ -15,17 +15,21 @@ const (
 	POSTDisassociateIamInstanceProfileActionEnumDisassociateIamInstanceProfile POSTDisassociateIamInstanceProfileActionEnum = "DisassociateIamInstanceProfile"
 )
 
+func (e POSTDisassociateIamInstanceProfileActionEnum) ToPointer() *POSTDisassociateIamInstanceProfileActionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateIamInstanceProfileActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateIamInstanceProfile":
-		*e = POSTDisassociateIamInstanceProfileActionEnum(s)
+		*e = POSTDisassociateIamInstanceProfileActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateIamInstanceProfileActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateIamInstanceProfileActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisassociateIamInstanceProfileVersionEnumTwoThousandAndSixteen1115 POSTDisassociateIamInstanceProfileVersionEnum = "2016-11-15"
 )
 
+func (e POSTDisassociateIamInstanceProfileVersionEnum) ToPointer() *POSTDisassociateIamInstanceProfileVersionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateIamInstanceProfileVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDisassociateIamInstanceProfileVersionEnum(s)
+		*e = POSTDisassociateIamInstanceProfileVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateIamInstanceProfileVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateIamInstanceProfileVersionEnum: %v", v)
 	}
 }
 

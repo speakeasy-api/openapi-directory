@@ -21,12 +21,16 @@ const (
 	LineItemStatusEnumReplaced   LineItemStatusEnum = "REPLACED"
 )
 
+func (e LineItemStatusEnum) ToPointer() *LineItemStatusEnum {
+	return &e
+}
+
 func (e *LineItemStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PREPARING":
 		fallthrough
 	case "BUILDING":
@@ -44,9 +48,9 @@ func (e *LineItemStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLED":
 		fallthrough
 	case "REPLACED":
-		*e = LineItemStatusEnum(s)
+		*e = LineItemStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemStatusEnum: %v", v)
 	}
 }

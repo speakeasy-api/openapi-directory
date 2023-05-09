@@ -99,6 +99,7 @@ func (s *oAuth) OAuthAuthorize(ctx context.Context, request operations.OAuthAuth
 
 	return res, nil
 }
+
 func (s *oAuth) PostAPIOauthAuthorize(ctx context.Context, request operations.PostAPIOauthAuthorizeRequest) (*operations.PostAPIOauthAuthorizeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/oauth/authorize"

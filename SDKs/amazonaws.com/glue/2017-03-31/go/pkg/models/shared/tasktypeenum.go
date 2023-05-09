@@ -17,12 +17,16 @@ const (
 	TaskTypeEnumFindMatches           TaskTypeEnum = "FIND_MATCHES"
 )
 
+func (e TaskTypeEnum) ToPointer() *TaskTypeEnum {
+	return &e
+}
+
 func (e *TaskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVALUATION":
 		fallthrough
 	case "LABELING_SET_GENERATION":
@@ -32,9 +36,9 @@ func (e *TaskTypeEnum) UnmarshalJSON(data []byte) error {
 	case "EXPORT_LABELS":
 		fallthrough
 	case "FIND_MATCHES":
-		*e = TaskTypeEnum(s)
+		*e = TaskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskTypeEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	InstanceAccessControlAttributeConfigurationStatusEnumCreationFailed     InstanceAccessControlAttributeConfigurationStatusEnum = "CREATION_FAILED"
 )
 
+func (e InstanceAccessControlAttributeConfigurationStatusEnum) ToPointer() *InstanceAccessControlAttributeConfigurationStatusEnum {
+	return &e
+}
+
 func (e *InstanceAccessControlAttributeConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "CREATION_IN_PROGRESS":
 		fallthrough
 	case "CREATION_FAILED":
-		*e = InstanceAccessControlAttributeConfigurationStatusEnum(s)
+		*e = InstanceAccessControlAttributeConfigurationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceAccessControlAttributeConfigurationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceAccessControlAttributeConfigurationStatusEnum: %v", v)
 	}
 }

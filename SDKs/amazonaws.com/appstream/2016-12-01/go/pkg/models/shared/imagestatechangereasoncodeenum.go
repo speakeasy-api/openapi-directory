@@ -15,20 +15,24 @@ const (
 	ImageStateChangeReasonCodeEnumImageCopyFailure         ImageStateChangeReasonCodeEnum = "IMAGE_COPY_FAILURE"
 )
 
+func (e ImageStateChangeReasonCodeEnum) ToPointer() *ImageStateChangeReasonCodeEnum {
+	return &e
+}
+
 func (e *ImageStateChangeReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_ERROR":
 		fallthrough
 	case "IMAGE_BUILDER_NOT_AVAILABLE":
 		fallthrough
 	case "IMAGE_COPY_FAILURE":
-		*e = ImageStateChangeReasonCodeEnum(s)
+		*e = ImageStateChangeReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageStateChangeReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageStateChangeReasonCodeEnum: %v", v)
 	}
 }

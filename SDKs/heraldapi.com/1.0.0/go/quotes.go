@@ -38,7 +38,10 @@ func newQuotes(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // > If you're looking to create a new quote with a carrier, you need to [create a submission](../reference/HeraldAPI.v1.yaml/paths/~1submissions/post) before retrieving quote details.
 func (s *quotes) GetQuotesQuoteID(ctx context.Context, request operations.GetQuotesQuoteIDRequest) (*operations.GetQuotesQuoteIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/quotes/{quote_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/quotes/{quote_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

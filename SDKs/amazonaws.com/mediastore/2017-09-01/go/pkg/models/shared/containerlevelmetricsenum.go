@@ -14,18 +14,22 @@ const (
 	ContainerLevelMetricsEnumDisabled ContainerLevelMetricsEnum = "DISABLED"
 )
 
+func (e ContainerLevelMetricsEnum) ToPointer() *ContainerLevelMetricsEnum {
+	return &e
+}
+
 func (e *ContainerLevelMetricsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = ContainerLevelMetricsEnum(s)
+		*e = ContainerLevelMetricsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerLevelMetricsEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerLevelMetricsEnum: %v", v)
 	}
 }

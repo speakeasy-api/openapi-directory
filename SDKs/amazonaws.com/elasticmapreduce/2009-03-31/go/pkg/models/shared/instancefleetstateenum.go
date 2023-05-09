@@ -19,12 +19,16 @@ const (
 	InstanceFleetStateEnumTerminated    InstanceFleetStateEnum = "TERMINATED"
 )
 
+func (e InstanceFleetStateEnum) ToPointer() *InstanceFleetStateEnum {
+	return &e
+}
+
 func (e *InstanceFleetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROVISIONING":
 		fallthrough
 	case "BOOTSTRAPPING":
@@ -38,9 +42,9 @@ func (e *InstanceFleetStateEnum) UnmarshalJSON(data []byte) error {
 	case "TERMINATING":
 		fallthrough
 	case "TERMINATED":
-		*e = InstanceFleetStateEnum(s)
+		*e = InstanceFleetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceFleetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceFleetStateEnum: %v", v)
 	}
 }

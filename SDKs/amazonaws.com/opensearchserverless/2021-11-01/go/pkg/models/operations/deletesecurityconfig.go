@@ -16,17 +16,21 @@ const (
 	DeleteSecurityConfigXAmzTargetEnumOpenSearchServerlessDeleteSecurityConfig DeleteSecurityConfigXAmzTargetEnum = "OpenSearchServerless.DeleteSecurityConfig"
 )
 
+func (e DeleteSecurityConfigXAmzTargetEnum) ToPointer() *DeleteSecurityConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteSecurityConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpenSearchServerless.DeleteSecurityConfig":
-		*e = DeleteSecurityConfigXAmzTargetEnum(s)
+		*e = DeleteSecurityConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSecurityConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSecurityConfigXAmzTargetEnum: %v", v)
 	}
 }
 

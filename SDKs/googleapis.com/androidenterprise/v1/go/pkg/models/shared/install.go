@@ -15,19 +15,23 @@ const (
 	InstallInstallStateEnumInstallPending InstallInstallStateEnum = "installPending"
 )
 
+func (e InstallInstallStateEnum) ToPointer() *InstallInstallStateEnum {
+	return &e
+}
+
 func (e *InstallInstallStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "installed":
 		fallthrough
 	case "installPending":
-		*e = InstallInstallStateEnum(s)
+		*e = InstallInstallStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstallInstallStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstallInstallStateEnum: %v", v)
 	}
 }
 

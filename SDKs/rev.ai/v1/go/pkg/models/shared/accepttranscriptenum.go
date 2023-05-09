@@ -15,18 +15,22 @@ const (
 	AcceptTranscriptEnumTextPlain                              AcceptTranscriptEnum = "text/plain"
 )
 
+func (e AcceptTranscriptEnum) ToPointer() *AcceptTranscriptEnum {
+	return &e
+}
+
 func (e *AcceptTranscriptEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "application/vnd.rev.transcript.v1.0+json":
 		fallthrough
 	case "text/plain":
-		*e = AcceptTranscriptEnum(s)
+		*e = AcceptTranscriptEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AcceptTranscriptEnum: %s", s)
+		return fmt.Errorf("invalid value for AcceptTranscriptEnum: %v", v)
 	}
 }

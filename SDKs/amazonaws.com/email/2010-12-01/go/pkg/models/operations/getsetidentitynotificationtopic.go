@@ -15,17 +15,21 @@ const (
 	GETSetIdentityNotificationTopicActionEnumSetIdentityNotificationTopic GETSetIdentityNotificationTopicActionEnum = "SetIdentityNotificationTopic"
 )
 
+func (e GETSetIdentityNotificationTopicActionEnum) ToPointer() *GETSetIdentityNotificationTopicActionEnum {
+	return &e
+}
+
 func (e *GETSetIdentityNotificationTopicActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetIdentityNotificationTopic":
-		*e = GETSetIdentityNotificationTopicActionEnum(s)
+		*e = GETSetIdentityNotificationTopicActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIdentityNotificationTopicActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIdentityNotificationTopicActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETSetIdentityNotificationTopicNotificationTypeEnumDelivery  GETSetIdentityNotificationTopicNotificationTypeEnum = "Delivery"
 )
 
+func (e GETSetIdentityNotificationTopicNotificationTypeEnum) ToPointer() *GETSetIdentityNotificationTopicNotificationTypeEnum {
+	return &e
+}
+
 func (e *GETSetIdentityNotificationTopicNotificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Bounce":
 		fallthrough
 	case "Complaint":
 		fallthrough
 	case "Delivery":
-		*e = GETSetIdentityNotificationTopicNotificationTypeEnum(s)
+		*e = GETSetIdentityNotificationTopicNotificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIdentityNotificationTopicNotificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIdentityNotificationTopicNotificationTypeEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETSetIdentityNotificationTopicVersionEnumTwoThousandAndTen1201 GETSetIdentityNotificationTopicVersionEnum = "2010-12-01"
 )
 
+func (e GETSetIdentityNotificationTopicVersionEnum) ToPointer() *GETSetIdentityNotificationTopicVersionEnum {
+	return &e
+}
+
 func (e *GETSetIdentityNotificationTopicVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETSetIdentityNotificationTopicVersionEnum(s)
+		*e = GETSetIdentityNotificationTopicVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIdentityNotificationTopicVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIdentityNotificationTopicVersionEnum: %v", v)
 	}
 }
 

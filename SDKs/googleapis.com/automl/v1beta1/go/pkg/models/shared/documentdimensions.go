@@ -17,12 +17,16 @@ const (
 	DocumentDimensionsUnitEnumPoint                            DocumentDimensionsUnitEnum = "POINT"
 )
 
+func (e DocumentDimensionsUnitEnum) ToPointer() *DocumentDimensionsUnitEnum {
+	return &e
+}
+
 func (e *DocumentDimensionsUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOCUMENT_DIMENSION_UNIT_UNSPECIFIED":
 		fallthrough
 	case "INCH":
@@ -30,10 +34,10 @@ func (e *DocumentDimensionsUnitEnum) UnmarshalJSON(data []byte) error {
 	case "CENTIMETER":
 		fallthrough
 	case "POINT":
-		*e = DocumentDimensionsUnitEnum(s)
+		*e = DocumentDimensionsUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentDimensionsUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentDimensionsUnitEnum: %v", v)
 	}
 }
 

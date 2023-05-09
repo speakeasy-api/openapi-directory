@@ -25,6 +25,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Query our database of federal and state laws and incentives for alternative fuels and vehicles, air quality, fuel efficiency, and other transportation-related topics. This dataset powers the <a href="https://afdc.energy.gov/laws">Federal and State Laws and Incentives</a> on the Alternative Fuels Data Center.
 type SDK struct {
 
@@ -94,7 +109,10 @@ func New(opts ...SDKOption) *SDK {
 // TransportationIncentivesLawsAll - Return a full list of laws and incentives that match your query.
 func (s *SDK) TransportationIncentivesLawsAll(ctx context.Context, request operations.TransportationIncentivesLawsAllRequest) (*operations.TransportationIncentivesLawsAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1.{output_format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1.{output_format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -142,7 +160,10 @@ func (s *SDK) TransportationIncentivesLawsAll(ctx context.Context, request opera
 // TransportationIncentivesLawsCategories - Return the law categories for a given category type.
 func (s *SDK) TransportationIncentivesLawsCategories(ctx context.Context, request operations.TransportationIncentivesLawsCategoriesRequest) (*operations.TransportationIncentivesLawsCategoriesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/category-list.{output_format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/category-list.{output_format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -190,7 +211,10 @@ func (s *SDK) TransportationIncentivesLawsCategories(ctx context.Context, reques
 // TransportationIncentivesLawsID - Fetch the details of a specific law given the law's ID.
 func (s *SDK) TransportationIncentivesLawsID(ctx context.Context, request operations.TransportationIncentivesLawsIDRequest) (*operations.TransportationIncentivesLawsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{id}.{output_format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{id}.{output_format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -238,7 +262,10 @@ func (s *SDK) TransportationIncentivesLawsID(ctx context.Context, request operat
 // TransportationIncentivesLawsPocs - Get the points of contact for a given jurisdiction.
 func (s *SDK) TransportationIncentivesLawsPocs(ctx context.Context, request operations.TransportationIncentivesLawsPocsRequest) (*operations.TransportationIncentivesLawsPocsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/pocs.{output_format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/pocs.{output_format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

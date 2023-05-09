@@ -19,12 +19,16 @@ const (
 	CustomFieldDTOTypeEnumMultiSelection CustomFieldDTOTypeEnum = "MULTI_SELECTION"
 )
 
+func (e CustomFieldDTOTypeEnum) ToPointer() *CustomFieldDTOTypeEnum {
+	return &e
+}
+
 func (e *CustomFieldDTOTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEXT":
 		fallthrough
 	case "DATE":
@@ -38,10 +42,10 @@ func (e *CustomFieldDTOTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SELECTION":
 		fallthrough
 	case "MULTI_SELECTION":
-		*e = CustomFieldDTOTypeEnum(s)
+		*e = CustomFieldDTOTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldDTOTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldDTOTypeEnum: %v", v)
 	}
 }
 

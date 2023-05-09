@@ -15,17 +15,21 @@ const (
 	POSTRollbackStackActionEnumRollbackStack POSTRollbackStackActionEnum = "RollbackStack"
 )
 
+func (e POSTRollbackStackActionEnum) ToPointer() *POSTRollbackStackActionEnum {
+	return &e
+}
+
 func (e *POSTRollbackStackActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RollbackStack":
-		*e = POSTRollbackStackActionEnum(s)
+		*e = POSTRollbackStackActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRollbackStackActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRollbackStackActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRollbackStackVersionEnumTwoThousandAndTen0515 POSTRollbackStackVersionEnum = "2010-05-15"
 )
 
+func (e POSTRollbackStackVersionEnum) ToPointer() *POSTRollbackStackVersionEnum {
+	return &e
+}
+
 func (e *POSTRollbackStackVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTRollbackStackVersionEnum(s)
+		*e = POSTRollbackStackVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRollbackStackVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRollbackStackVersionEnum: %v", v)
 	}
 }
 

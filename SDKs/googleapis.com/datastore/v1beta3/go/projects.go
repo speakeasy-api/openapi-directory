@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DatastoreProjectsAllocateIds - Allocates IDs for the given keys, which is useful for referencing an entity before it is inserted.
 func (s *projects) DatastoreProjectsAllocateIds(ctx context.Context, request operations.DatastoreProjectsAllocateIdsRequest, security operations.DatastoreProjectsAllocateIdsSecurity) (*operations.DatastoreProjectsAllocateIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:allocateIds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:allocateIds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AllocateIdsRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) DatastoreProjectsAllocateIds(ctx context.Context, request ope
 // DatastoreProjectsBeginTransaction - Begins a new transaction.
 func (s *projects) DatastoreProjectsBeginTransaction(ctx context.Context, request operations.DatastoreProjectsBeginTransactionRequest, security operations.DatastoreProjectsBeginTransactionSecurity) (*operations.DatastoreProjectsBeginTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:beginTransaction", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:beginTransaction", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BeginTransactionRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) DatastoreProjectsBeginTransaction(ctx context.Context, reques
 // DatastoreProjectsCommit - Commits a transaction, optionally creating, deleting or modifying some entities.
 func (s *projects) DatastoreProjectsCommit(ctx context.Context, request operations.DatastoreProjectsCommitRequest, security operations.DatastoreProjectsCommitSecurity) (*operations.DatastoreProjectsCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:commit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:commit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommitRequest", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *projects) DatastoreProjectsCommit(ctx context.Context, request operatio
 // DatastoreProjectsLookup - Looks up entities by key.
 func (s *projects) DatastoreProjectsLookup(ctx context.Context, request operations.DatastoreProjectsLookupRequest, security operations.DatastoreProjectsLookupSecurity) (*operations.DatastoreProjectsLookupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:lookup", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:lookup", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LookupRequest", "json")
 	if err != nil {
@@ -254,7 +266,10 @@ func (s *projects) DatastoreProjectsLookup(ctx context.Context, request operatio
 // DatastoreProjectsReserveIds - Prevents the supplied keys' IDs from being auto-allocated by Cloud Datastore.
 func (s *projects) DatastoreProjectsReserveIds(ctx context.Context, request operations.DatastoreProjectsReserveIdsRequest, security operations.DatastoreProjectsReserveIdsSecurity) (*operations.DatastoreProjectsReserveIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:reserveIds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:reserveIds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReserveIdsRequest", "json")
 	if err != nil {
@@ -309,7 +324,10 @@ func (s *projects) DatastoreProjectsReserveIds(ctx context.Context, request oper
 // DatastoreProjectsRollback - Rolls back a transaction.
 func (s *projects) DatastoreProjectsRollback(ctx context.Context, request operations.DatastoreProjectsRollbackRequest, security operations.DatastoreProjectsRollbackSecurity) (*operations.DatastoreProjectsRollbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:rollback", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:rollback", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RollbackRequest", "json")
 	if err != nil {
@@ -364,7 +382,10 @@ func (s *projects) DatastoreProjectsRollback(ctx context.Context, request operat
 // DatastoreProjectsRunAggregationQuery - Runs an aggregation query.
 func (s *projects) DatastoreProjectsRunAggregationQuery(ctx context.Context, request operations.DatastoreProjectsRunAggregationQueryRequest, security operations.DatastoreProjectsRunAggregationQuerySecurity) (*operations.DatastoreProjectsRunAggregationQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:runAggregationQuery", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:runAggregationQuery", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunAggregationQueryRequest", "json")
 	if err != nil {
@@ -419,7 +440,10 @@ func (s *projects) DatastoreProjectsRunAggregationQuery(ctx context.Context, req
 // DatastoreProjectsRunQuery - Queries for entities.
 func (s *projects) DatastoreProjectsRunQuery(ctx context.Context, request operations.DatastoreProjectsRunQueryRequest, security operations.DatastoreProjectsRunQuerySecurity) (*operations.DatastoreProjectsRunQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:runQuery", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/projects/{projectId}:runQuery", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunQueryRequest", "json")
 	if err != nil {

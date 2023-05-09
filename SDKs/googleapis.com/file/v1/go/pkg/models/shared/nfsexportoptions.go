@@ -16,21 +16,25 @@ const (
 	NfsExportOptionsAccessModeEnumReadWrite             NfsExportOptionsAccessModeEnum = "READ_WRITE"
 )
 
+func (e NfsExportOptionsAccessModeEnum) ToPointer() *NfsExportOptionsAccessModeEnum {
+	return &e
+}
+
 func (e *NfsExportOptionsAccessModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_MODE_UNSPECIFIED":
 		fallthrough
 	case "READ_ONLY":
 		fallthrough
 	case "READ_WRITE":
-		*e = NfsExportOptionsAccessModeEnum(s)
+		*e = NfsExportOptionsAccessModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NfsExportOptionsAccessModeEnum: %s", s)
+		return fmt.Errorf("invalid value for NfsExportOptionsAccessModeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	NfsExportOptionsSquashModeEnumRootSquash            NfsExportOptionsSquashModeEnum = "ROOT_SQUASH"
 )
 
+func (e NfsExportOptionsSquashModeEnum) ToPointer() *NfsExportOptionsSquashModeEnum {
+	return &e
+}
+
 func (e *NfsExportOptionsSquashModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQUASH_MODE_UNSPECIFIED":
 		fallthrough
 	case "NO_ROOT_SQUASH":
 		fallthrough
 	case "ROOT_SQUASH":
-		*e = NfsExportOptionsSquashModeEnum(s)
+		*e = NfsExportOptionsSquashModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NfsExportOptionsSquashModeEnum: %s", s)
+		return fmt.Errorf("invalid value for NfsExportOptionsSquashModeEnum: %v", v)
 	}
 }
 

@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p><fullname>Migration Hub Strategy Recommendations</fullname> <p>This API reference provides descriptions, syntax, and other details about each of the actions and data types for Migration Hub Strategy Recommendations (Strategy Recommendations). The topic for each action shows the API request parameters and the response. Alternatively, you can use one of the AWS SDKs to access an API that is tailored to the programming language or platform that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">AWS SDKs</a>.</p></p>
 // https://docs.aws.amazon.com/migrationhub-strategy/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // GetApplicationComponentDetails -  Retrieves details about an application component.
 func (s *SDK) GetApplicationComponentDetails(ctx context.Context, request operations.GetApplicationComponentDetailsRequest) (*operations.GetApplicationComponentDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-applicationcomponent-details/{applicationComponentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/get-applicationcomponent-details/{applicationComponentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -190,7 +208,10 @@ func (s *SDK) GetApplicationComponentDetails(ctx context.Context, request operat
 // GetApplicationComponentStrategies -  Retrieves a list of all the recommended strategies and tools for an application component running on a server.
 func (s *SDK) GetApplicationComponentStrategies(ctx context.Context, request operations.GetApplicationComponentStrategiesRequest) (*operations.GetApplicationComponentStrategiesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-applicationcomponent-strategies/{applicationComponentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/get-applicationcomponent-strategies/{applicationComponentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -266,7 +287,10 @@ func (s *SDK) GetApplicationComponentStrategies(ctx context.Context, request ope
 // GetAssessment -  Retrieves the status of an on-going assessment.
 func (s *SDK) GetAssessment(ctx context.Context, request operations.GetAssessmentRequest) (*operations.GetAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-assessment/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/get-assessment/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -352,7 +376,10 @@ func (s *SDK) GetAssessment(ctx context.Context, request operations.GetAssessmen
 // GetImportFileTask -  Retrieves the details about a specific import task.
 func (s *SDK) GetImportFileTask(ctx context.Context, request operations.GetImportFileTaskRequest) (*operations.GetImportFileTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-import-file-task/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/get-import-file-task/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -696,7 +723,10 @@ func (s *SDK) GetPortfolioSummary(ctx context.Context, request operations.GetPor
 // GetRecommendationReportDetails -  Retrieves detailed information about the specified recommendation report.
 func (s *SDK) GetRecommendationReportDetails(ctx context.Context, request operations.GetRecommendationReportDetailsRequest) (*operations.GetRecommendationReportDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-recommendation-report-details/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/get-recommendation-report-details/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -792,7 +822,10 @@ func (s *SDK) GetRecommendationReportDetails(ctx context.Context, request operat
 // GetServerDetails -  Retrieves detailed information about a specified server.
 func (s *SDK) GetServerDetails(ctx context.Context, request operations.GetServerDetailsRequest) (*operations.GetServerDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-server-details/{serverId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/get-server-details/{serverId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -892,7 +925,10 @@ func (s *SDK) GetServerDetails(ctx context.Context, request operations.GetServer
 // GetServerStrategies -  Retrieves recommended strategies and tools for the specified server.
 func (s *SDK) GetServerStrategies(ctx context.Context, request operations.GetServerStrategiesRequest) (*operations.GetServerStrategiesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-server-strategies/{serverId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/get-server-strategies/{serverId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -19,12 +19,16 @@ const (
 	SpaceStatusEnumDeleteFailed SpaceStatusEnum = "Delete_Failed"
 )
 
+func (e SpaceStatusEnum) ToPointer() *SpaceStatusEnum {
+	return &e
+}
+
 func (e *SpaceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Deleting":
 		fallthrough
 	case "Failed":
@@ -38,9 +42,9 @@ func (e *SpaceStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Update_Failed":
 		fallthrough
 	case "Delete_Failed":
-		*e = SpaceStatusEnum(s)
+		*e = SpaceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpaceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SpaceStatusEnum: %v", v)
 	}
 }

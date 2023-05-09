@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/smart-me.com/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.AccessTokenToPut{
-        CardID: 548814,
-        UserID: 592845,
-    }
-
     ctx := context.Background()
-    res, err := s.AccessToken.AccessTokenPutForm(ctx, req)
+    res, err := s.AccessToken.AccessTokenPutForm(ctx, shared.AccessTokenToPut{
+        CardID: sdk.Int64(548814),
+        UserID: sdk.Int64(592845),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,242 +43,242 @@ func main() {
 ## Available Resources and Operations
 
 
-### AccessToken
+### [AccessToken](docs/accesstoken/README.md)
 
-* `AccessTokenPutForm` - Creates a Access Token to write on a Card (e.g. NFC)
-* `AccessTokenPutJSON` - Creates a Access Token to write on a Card (e.g. NFC)
-* `AccessTokenPutRaw` - Creates a Access Token to write on a Card (e.g. NFC)
+* [AccessTokenPutForm](docs/accesstoken/README.md#accesstokenputform) - Creates a Access Token to write on a Card (e.g. NFC)
+* [AccessTokenPutJSON](docs/accesstoken/README.md#accesstokenputjson) - Creates a Access Token to write on a Card (e.g. NFC)
+* [AccessTokenPutRaw](docs/accesstoken/README.md#accesstokenputraw) - Creates a Access Token to write on a Card (e.g. NFC)
 
-### Account
+### [Account](docs/account/README.md)
 
-* `AccountLogin`
-* `PostAPIAccountLogin`
+* [AccountLogin](docs/account/README.md#accountlogin)
+* [PostAPIAccountLogin](docs/account/README.md#postapiaccountlogin)
 
-### Actions
+### [Actions](docs/actions/README.md)
 
-* `ActionsGet` - Gets all available Actions of a Device
-* `ActionsPostForm` - Set an action for the specified device.
-* `ActionsPostJSON` - Set an action for the specified device.
-* `ActionsPostRaw` - Set an action for the specified device.
+* [ActionsGet](docs/actions/README.md#actionsget) - Gets all available Actions of a Device
+* [ActionsPostForm](docs/actions/README.md#actionspostform) - Set an action for the specified device.
+* [ActionsPostJSON](docs/actions/README.md#actionspostjson) - Set an action for the specified device.
+* [ActionsPostRaw](docs/actions/README.md#actionspostraw) - Set an action for the specified device.
 
-### AdditionalDeviceInformation
+### [AdditionalDeviceInformation](docs/additionaldeviceinformation/README.md)
 
-* `AdditionalDeviceInformationGet` - Gets the additional information (e.g. Firmware Version) about a device.
+* [AdditionalDeviceInformationGet](docs/additionaldeviceinformation/README.md#additionaldeviceinformationget) - Gets the additional information (e.g. Firmware Version) about a device.
 
-### CustomDevice
+### [CustomDevice](docs/customdevice/README.md)
 
-* `CustomDeviceGet` - Gets all Custom Devices
-* `CustomDevicePostForm` - Creates or updates a Custom Device or updates it's values.
-* `CustomDevicePostJSON` - Creates or updates a Custom Device or updates it's values.
-* `CustomDevicePostRaw` - Creates or updates a Custom Device or updates it's values.
-* `GetAPICustomDeviceID` - Gets a Custom Device by it's ID
+* [CustomDeviceGet](docs/customdevice/README.md#customdeviceget) - Gets all Custom Devices
+* [CustomDevicePostForm](docs/customdevice/README.md#customdevicepostform) - Creates or updates a Custom Device or updates it's values.
+* [CustomDevicePostJSON](docs/customdevice/README.md#customdevicepostjson) - Creates or updates a Custom Device or updates it's values.
+* [CustomDevicePostRaw](docs/customdevice/README.md#customdevicepostraw) - Creates or updates a Custom Device or updates it's values.
+* [GetAPICustomDeviceID](docs/customdevice/README.md#getapicustomdeviceid) - Gets a Custom Device by it's ID
 
-### DeviceBySerial
+### [DeviceBySerial](docs/devicebyserial/README.md)
 
-* `DeviceBySerialGet` - Gets a Device by it's Serial Number. The Serial is the part before the "-".
+* [DeviceBySerialGet](docs/devicebyserial/README.md#devicebyserialget) - Gets a Device by it's Serial Number. The Serial is the part before the "-".
 
-### Devices
+### [Devices](docs/devices/README.md)
 
-* `DevicesGet` - Gets all Devices
-* `DevicesPostForm` - Creates or updates a Device or updates it's values.
-* `DevicesPostJSON` - Creates or updates a Device or updates it's values.
-* `DevicesPostRaw` - Creates or updates a Device or updates it's values.
-* `DevicesPut` - Updates the On/Off Switch on a device. 
+* [DevicesGet](docs/devices/README.md#devicesget) - Gets all Devices
+* [DevicesPostForm](docs/devices/README.md#devicespostform) - Creates or updates a Device or updates it's values.
+* [DevicesPostJSON](docs/devices/README.md#devicespostjson) - Creates or updates a Device or updates it's values.
+* [DevicesPostRaw](docs/devices/README.md#devicespostraw) - Creates or updates a Device or updates it's values.
+* [DevicesPut](docs/devices/README.md#devicesput) - Updates the On/Off Switch on a device. 
             For new implementations please use the "actions" command
-* `GetAPIDevicesID` - Gets a Device by it's ID
+* [GetAPIDevicesID](docs/devices/README.md#getapidevicesid) - Gets a Device by it's ID
 
-### DevicesByEnergy
+### [DevicesByEnergy](docs/devicesbyenergy/README.md)
 
-* `DevicesByEnergyGet` - Gets all Devices for an Energy Type
+* [DevicesByEnergyGet](docs/devicesbyenergy/README.md#devicesbyenergyget) - Gets all Devices for an Energy Type
 
-### DevicesBySubType
+### [DevicesBySubType](docs/devicesbysubtype/README.md)
 
-* `DevicesBySubTypeGet` - Gets all Devices by it's Sub Type (e.g. E-Charging Station)
+* [DevicesBySubTypeGet](docs/devicesbysubtype/README.md#devicesbysubtypeget) - Gets all Devices by it's Sub Type (e.g. E-Charging Station)
 
-### FastSendDeviceValues
+### [FastSendDeviceValues](docs/fastsenddevicevalues/README.md)
 
-* `FastSendDeviceValuesGet` - Force a device to send the data every second (if supported). This for about 30s.
+* [FastSendDeviceValuesGet](docs/fastsenddevicevalues/README.md#fastsenddevicevaluesget) - Force a device to send the data every second (if supported). This for about 30s.
             Don't use this call to force a device to send the data every second for a longer time.
 
-### Folder
+### [Folder](docs/folder/README.md)
 
-* `FolderGet` - Gets the Values for a folder or a meter
+* [FolderGet](docs/folder/README.md#folderget) - Gets the Values for a folder or a meter
 
-### FolderAssign
+### [FolderAssign](docs/folderassign/README.md)
 
-* `FolderAssignPost` - Assign a folder (source) or meter to another folder (target). Can be used to create a folder structure.
+* [FolderAssignPost](docs/folderassign/README.md#folderassignpost) - Assign a folder (source) or meter to another folder (target). Can be used to create a folder structure.
 
-### FolderMenu
+### [FolderMenu](docs/foldermenu/README.md)
 
-* `FolderMenuGet` - Gets the folder menu items (each item might contain child items)
-* `FolderMenuPostForm` - Creates and updates the folder menu items
-* `FolderMenuPostJSON` - Creates and updates the folder menu items
-* `FolderMenuPostRaw` - Creates and updates the folder menu items
+* [FolderMenuGet](docs/foldermenu/README.md#foldermenuget) - Gets the folder menu items (each item might contain child items)
+* [FolderMenuPostForm](docs/foldermenu/README.md#foldermenupostform) - Creates and updates the folder menu items
+* [FolderMenuPostJSON](docs/foldermenu/README.md#foldermenupostjson) - Creates and updates the folder menu items
+* [FolderMenuPostRaw](docs/foldermenu/README.md#foldermenupostraw) - Creates and updates the folder menu items
 
-### FolderSettings
+### [FolderSettings](docs/foldersettings/README.md)
 
-* `FolderSettingsDelete` - Deletes a folder
-* `FolderSettingsGet` - Gets the settings of a folder or meter
-* `FolderSettingsPostForm` - Add or edit a folder or a meter. To add a new folder use and empty ID
-* `FolderSettingsPostJSON` - Add or edit a folder or a meter. To add a new folder use and empty ID
-* `FolderSettingsPostRaw` - Add or edit a folder or a meter. To add a new folder use and empty ID
+* [FolderSettingsDelete](docs/foldersettings/README.md#foldersettingsdelete) - Deletes a folder
+* [FolderSettingsGet](docs/foldersettings/README.md#foldersettingsget) - Gets the settings of a folder or meter
+* [FolderSettingsPostForm](docs/foldersettings/README.md#foldersettingspostform) - Add or edit a folder or a meter. To add a new folder use and empty ID
+* [FolderSettingsPostJSON](docs/foldersettings/README.md#foldersettingspostjson) - Add or edit a folder or a meter. To add a new folder use and empty ID
+* [FolderSettingsPostRaw](docs/foldersettings/README.md#foldersettingspostraw) - Add or edit a folder or a meter. To add a new folder use and empty ID
 
-### Health
+### [Health](docs/health/README.md)
 
-* `HealthGet` - A method returning HTTP 200 OK when queried.
+* [HealthGet](docs/health/README.md#healthget) - A method returning HTTP 200 OK when queried.
             It is used by Kubernetes probes to determine whether the app is healthy.
 
-### MBus
+### [MBus](docs/mbus/README.md)
 
-* `MBusPostForm` - M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
+* [MBusPostForm](docs/mbus/README.md#mbuspostform) - M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
             Just send us the M-BUS Telegram (RSP_UD) and we will do the Rest.
-* `MBusPostJSON` - M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
+* [MBusPostJSON](docs/mbus/README.md#mbuspostjson) - M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
             Just send us the M-BUS Telegram (RSP_UD) and we will do the Rest.
-* `MBusPostRaw` - M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
+* [MBusPostRaw](docs/mbus/README.md#mbuspostraw) - M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
             Just send us the M-BUS Telegram (RSP_UD) and we will do the Rest.
 
-### MeterFolderInformation
+### [MeterFolderInformation](docs/meterfolderinformation/README.md)
 
-* `MeterFolderInformationGet` - Beta: Gets the General Information for a Meter or a Folder
-* `MeterFolderInformationPostForm` - Sets the Name of a Meter or a Folder
-* `MeterFolderInformationPostJSON` - Sets the Name of a Meter or a Folder
-* `MeterFolderInformationPostRaw` - Sets the Name of a Meter or a Folder
+* [MeterFolderInformationGet](docs/meterfolderinformation/README.md#meterfolderinformationget) - Beta: Gets the General Information for a Meter or a Folder
+* [MeterFolderInformationPostForm](docs/meterfolderinformation/README.md#meterfolderinformationpostform) - Sets the Name of a Meter or a Folder
+* [MeterFolderInformationPostJSON](docs/meterfolderinformation/README.md#meterfolderinformationpostjson) - Sets the Name of a Meter or a Folder
+* [MeterFolderInformationPostRaw](docs/meterfolderinformation/README.md#meterfolderinformationpostraw) - Sets the Name of a Meter or a Folder
 
-### MeterValues
+### [MeterValues](docs/metervalues/README.md)
 
-* `MeterValuesGet` - Gets the Values for a Meter at a given Date. 
+* [MeterValuesGet](docs/metervalues/README.md#metervaluesget) - Gets the Values for a Meter at a given Date. 
             The first Value found before the given Date is returned.
 
-### OAuth
+### [OAuth](docs/oauth/README.md)
 
-* `OAuthAuthorize`
-* `PostAPIOauthAuthorize`
+* [OAuthAuthorize](docs/oauth/README.md#oauthauthorize)
+* [PostAPIOauthAuthorize](docs/oauth/README.md#postapioauthauthorize)
 
-### Pico
+### [Pico](docs/pico/README.md)
 
-* `PicoGet` - Gets all pico charging stations for this user
+* [PicoGet](docs/pico/README.md#picoget) - Gets all pico charging stations for this user
 
-### PicoCharging
+### [PicoCharging](docs/picocharging/README.md)
 
-* `PicoChargingGet` - Gets the active charging data of a pico station
+* [PicoChargingGet](docs/picocharging/README.md#picochargingget) - Gets the active charging data of a pico station
 
-### PicoChargingHistory
+### [PicoChargingHistory](docs/picocharginghistory/README.md)
 
-* `PicoChargingHistoryGet` - Gets the last charging history for a pico station
+* [PicoChargingHistoryGet](docs/picocharginghistory/README.md#picocharginghistoryget) - Gets the last charging history for a pico station
 
-### PicoEnableFixCableLock
+### [PicoEnableFixCableLock](docs/picoenablefixcablelock/README.md)
 
-* `PicoEnableFixCableLockPost` - Try to fix lock the cable of a pico. The pico must be online and a cable (without car) needs to be connected. Otherwise this will fail.
+* [PicoEnableFixCableLockPost](docs/picoenablefixcablelock/README.md#picoenablefixcablelockpost) - Try to fix lock the cable of a pico. The pico must be online and a cable (without car) needs to be connected. Otherwise this will fail.
 
-### PicoLoadmanagementGroup
+### [PicoLoadmanagementGroup](docs/picoloadmanagementgroup/README.md)
 
-* `PicoLoadmanagementGroupGet` - GET: api/pico/loadmanagementgroup
+* [PicoLoadmanagementGroupGet](docs/picoloadmanagementgroup/README.md#picoloadmanagementgroupget) - GET: api/pico/loadmanagementgroup
             
             Returns a pico load management group by it's id
-* `GetAPIPicoLoadmanagementgroup` - GET: api/pico/loadmanagementgroup
+* [GetAPIPicoLoadmanagementgroup](docs/picoloadmanagementgroup/README.md#getapipicoloadmanagementgroup) - GET: api/pico/loadmanagementgroup
             
             Returns all available load management groups
 
-### PicoLoadmanagementSetDynamicCurrent
+### [PicoLoadmanagementSetDynamicCurrent](docs/picoloadmanagementsetdynamiccurrent/README.md)
 
-* `PicoLoadmanagementSetDynamicCurrentPost` - Sets the dynamic current of a load management group or a single station.
+* [PicoLoadmanagementSetDynamicCurrentPost](docs/picoloadmanagementsetdynamiccurrent/README.md#picoloadmanagementsetdynamiccurrentpost) - Sets the dynamic current of a load management group or a single station.
 
-### PicoSettings
+### [PicoSettings](docs/picosettings/README.md)
 
-* `PicoSettingsGet` - GET: api/pico/settings
+* [PicoSettingsGet](docs/picosettings/README.md#picosettingsget) - GET: api/pico/settings
             
             Returns the settings of a pico charging station.
 
-### RegisterForRealtimeAPI
+### [RegisterForRealtimeAPI](docs/registerforrealtimeapi/README.md)
 
-* `RegisterForRealtimeAPIDelete` - Deletes a realtime API registration.
-* `RegisterForRealtimeAPIGet` - Gets all registrations for the Realtime API.
-* `RegisterForRealtimeAPIPostForm` - Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud.
+* [RegisterForRealtimeAPIDelete](docs/registerforrealtimeapi/README.md#registerforrealtimeapidelete) - Deletes a realtime API registration.
+* [RegisterForRealtimeAPIGet](docs/registerforrealtimeapi/README.md#registerforrealtimeapiget) - Gets all registrations for the Realtime API.
+* [RegisterForRealtimeAPIPostForm](docs/registerforrealtimeapi/README.md#registerforrealtimeapipostform) - Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud.
              More Information about the realtime API: https://www.smart-me.com/Description/api/realtimeapi.aspx
-* `RegisterForRealtimeAPIPostJSON` - Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud.
+* [RegisterForRealtimeAPIPostJSON](docs/registerforrealtimeapi/README.md#registerforrealtimeapipostjson) - Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud.
              More Information about the realtime API: https://www.smart-me.com/Description/api/realtimeapi.aspx
-* `RegisterForRealtimeAPIPostRaw` - Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud.
+* [RegisterForRealtimeAPIPostRaw](docs/registerforrealtimeapi/README.md#registerforrealtimeapipostraw) - Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud.
              More Information about the realtime API: https://www.smart-me.com/Description/api/realtimeapi.aspx
 
-### SmartMeDeviceConfiguration
+### [SmartMeDeviceConfiguration](docs/smartmedeviceconfiguration/README.md)
 
-* `SmartMeDeviceConfigurationGet` - Gets the configuration of a smart-me device.
-* `SmartMeDeviceConfigurationPostForm` - Sets the configuration of a smart-me device. The device needs to be online.
-* `SmartMeDeviceConfigurationPostJSON` - Sets the configuration of a smart-me device. The device needs to be online.
-* `SmartMeDeviceConfigurationPostRaw` - Sets the configuration of a smart-me device. The device needs to be online.
+* [SmartMeDeviceConfigurationGet](docs/smartmedeviceconfiguration/README.md#smartmedeviceconfigurationget) - Gets the configuration of a smart-me device.
+* [SmartMeDeviceConfigurationPostForm](docs/smartmedeviceconfiguration/README.md#smartmedeviceconfigurationpostform) - Sets the configuration of a smart-me device. The device needs to be online.
+* [SmartMeDeviceConfigurationPostJSON](docs/smartmedeviceconfiguration/README.md#smartmedeviceconfigurationpostjson) - Sets the configuration of a smart-me device. The device needs to be online.
+* [SmartMeDeviceConfigurationPostRaw](docs/smartmedeviceconfiguration/README.md#smartmedeviceconfigurationpostraw) - Sets the configuration of a smart-me device. The device needs to be online.
 
-### SubUser
+### [SubUser](docs/subuser/README.md)
 
-* `SubUserDelete` - Delete a subuser
-* `SubUserGet` - Get a sub user. The user must be assigend to the user that makes this call.
-* `SubUserPostForm` - Creates or updates a subuser.
+* [SubUserDelete](docs/subuser/README.md#subuserdelete) - Delete a subuser
+* [SubUserGet](docs/subuser/README.md#subuserget) - Get a sub user. The user must be assigend to the user that makes this call.
+* [SubUserPostForm](docs/subuser/README.md#subuserpostform) - Creates or updates a subuser.
             To create a new user set no ID (empty)
-* `SubUserPostJSON` - Creates or updates a subuser.
+* [SubUserPostJSON](docs/subuser/README.md#subuserpostjson) - Creates or updates a subuser.
             To create a new user set no ID (empty)
-* `SubUserPostRaw` - Creates or updates a subuser.
+* [SubUserPostRaw](docs/subuser/README.md#subuserpostraw) - Creates or updates a subuser.
             To create a new user set no ID (empty)
 
-### User
+### [User](docs/user/README.md)
 
-* `UserDelete` - Triggers user account deletion.
-* `UserGet` - Gets the informations for the user.
+* [UserDelete](docs/user/README.md#userdelete) - Triggers user account deletion.
+* [UserGet](docs/user/README.md#userget) - Gets the informations for the user.
 
-### UserToFolderAssign
+### [UserToFolderAssign](docs/usertofolderassign/README.md)
 
-* `UserToFolderAssignDelete` - Deletes a user to folder assignement
-* `UserToFolderAssignPost` - Assign a user to a folder
+* [UserToFolderAssignDelete](docs/usertofolderassign/README.md#usertofolderassigndelete) - Deletes a user to folder assignement
+* [UserToFolderAssignPost](docs/usertofolderassign/README.md#usertofolderassignpost) - Assign a user to a folder
 
-### Values
+### [Values](docs/values/README.md)
 
-* `ValuesGet` - Gets all (last) values of a device
+* [ValuesGet](docs/values/README.md#valuesget) - Gets all (last) values of a device
 
-### ValuesInPast
+### [ValuesInPast](docs/valuesinpast/README.md)
 
-* `ValuesInPastGet` - Gets all (last) values of a device
+* [ValuesInPastGet](docs/valuesinpast/README.md#valuesinpastget) - Gets all (last) values of a device
             The first Value found before the given Date is returned.
 
-### ValuesInPastMultiple
+### [ValuesInPastMultiple](docs/valuesinpastmultiple/README.md)
 
-* `ValuesInPastMultipleGet` - Gets multiple values of a device. This call needs a smart-me professional licence.
+* [ValuesInPastMultipleGet](docs/valuesinpastmultiple/README.md#valuesinpastmultipleget) - Gets multiple values of a device. This call needs a smart-me professional licence.
 
-### VirtualBillingMeterActive
+### [VirtualBillingMeterActive](docs/virtualbillingmeteractive/README.md)
 
-* `VirtualBillingMeterActiveGet` - Beta: Gets all active virtual meters
-* `VirtualBillingMeterActivePostForm` - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
-* `VirtualBillingMeterActivePostJSON` - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
-* `VirtualBillingMeterActivePostRaw` - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
+* [VirtualBillingMeterActiveGet](docs/virtualbillingmeteractive/README.md#virtualbillingmeteractiveget) - Beta: Gets all active virtual meters
+* [VirtualBillingMeterActivePostForm](docs/virtualbillingmeteractive/README.md#virtualbillingmeteractivepostform) - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
+* [VirtualBillingMeterActivePostJSON](docs/virtualbillingmeteractive/README.md#virtualbillingmeteractivepostjson) - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
+* [VirtualBillingMeterActivePostRaw](docs/virtualbillingmeteractive/README.md#virtualbillingmeteractivepostraw) - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
 
-### VirtualBillingMeterDeactivate
+### [VirtualBillingMeterDeactivate](docs/virtualbillingmeterdeactivate/README.md)
 
-* `VirtualBillingMeterDeactivatePostForm` - Beta: Virtual Meter API: Deactivates a Virtual Meter.
-* `VirtualBillingMeterDeactivatePostJSON` - Beta: Virtual Meter API: Deactivates a Virtual Meter.
-* `VirtualBillingMeterDeactivatePostRaw` - Beta: Virtual Meter API: Deactivates a Virtual Meter.
+* [VirtualBillingMeterDeactivatePostForm](docs/virtualbillingmeterdeactivate/README.md#virtualbillingmeterdeactivatepostform) - Beta: Virtual Meter API: Deactivates a Virtual Meter.
+* [VirtualBillingMeterDeactivatePostJSON](docs/virtualbillingmeterdeactivate/README.md#virtualbillingmeterdeactivatepostjson) - Beta: Virtual Meter API: Deactivates a Virtual Meter.
+* [VirtualBillingMeterDeactivatePostRaw](docs/virtualbillingmeterdeactivate/README.md#virtualbillingmeterdeactivatepostraw) - Beta: Virtual Meter API: Deactivates a Virtual Meter.
 
-### VirtualBillingMeters
+### [VirtualBillingMeters](docs/virtualbillingmeters/README.md)
 
-* `VirtualBillingMetersGet` - Beta: Gets all Meters available to activate as a Virtual Meter.
+* [VirtualBillingMetersGet](docs/virtualbillingmeters/README.md#virtualbillingmetersget) - Beta: Gets all Meters available to activate as a Virtual Meter.
 
-### VirtualMeterCalculateFormula
+### [VirtualMeterCalculateFormula](docs/virtualmetercalculateformula/README.md)
 
-* `VirtualMeterCalculateFormulaGet` - Calculates a virtual meter from a formula. 
+* [VirtualMeterCalculateFormulaGet](docs/virtualmetercalculateformula/README.md#virtualmetercalculateformulaget) - Calculates a virtual meter from a formula. 
             A meter is coded as ID("METERID")
 
-### VirtualTariff
+### [VirtualTariff](docs/virtualtariff/README.md)
 
-* `VirtualTariffGet` - Gets all Virtual Tariffs of a user
-* `GetAPIVirtualTariffID` - Gets all virtual tariffs of a folder
+* [VirtualTariffGet](docs/virtualtariff/README.md#virtualtariffget) - Gets all Virtual Tariffs of a user
+* [GetAPIVirtualTariffID](docs/virtualtariff/README.md#getapivirtualtariffid) - Gets all virtual tariffs of a folder
 
-### VirtualTariffConsumption
+### [VirtualTariffConsumption](docs/virtualtariffconsumption/README.md)
 
-* `VirtualTariffConsumptionGet` - Gets the consumption of a folder with a virtuall tariffs.
+* [VirtualTariffConsumptionGet](docs/virtualtariffconsumption/README.md#virtualtariffconsumptionget) - Gets the consumption of a folder with a virtuall tariffs.
 
-### VirtualTariffsForProperty
+### [VirtualTariffsForProperty](docs/virtualtariffsforproperty/README.md)
 
-* `VirtualTariffsForPropertyGet` - Gets all Virtual Tariffs for a property (folder)
+* [VirtualTariffsForPropertyGet](docs/virtualtariffsforproperty/README.md#virtualtariffsforpropertyget) - Gets all Virtual Tariffs for a property (folder)
 
-### VirtualTariffsStatusForProperty
+### [VirtualTariffsStatusForProperty](docs/virtualtariffsstatusforproperty/README.md)
 
-* `VirtualTariffsStatusForPropertyGet` - Gets the calculation status for a virtual tariff property
+* [VirtualTariffsStatusForPropertyGet](docs/virtualtariffsstatusforproperty/README.md#virtualtariffsstatusforpropertyget) - Gets the calculation status for a virtual tariff property
 <!-- End SDK Available Operations -->
 
 ### Maturity

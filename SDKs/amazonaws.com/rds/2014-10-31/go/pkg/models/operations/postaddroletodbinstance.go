@@ -15,17 +15,21 @@ const (
 	POSTAddRoleToDBInstanceActionEnumAddRoleToDbInstance POSTAddRoleToDBInstanceActionEnum = "AddRoleToDBInstance"
 )
 
+func (e POSTAddRoleToDBInstanceActionEnum) ToPointer() *POSTAddRoleToDBInstanceActionEnum {
+	return &e
+}
+
 func (e *POSTAddRoleToDBInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AddRoleToDBInstance":
-		*e = POSTAddRoleToDBInstanceActionEnum(s)
+		*e = POSTAddRoleToDBInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAddRoleToDBInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAddRoleToDBInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAddRoleToDBInstanceVersionEnumTwoThousandAndFourteen1031 POSTAddRoleToDBInstanceVersionEnum = "2014-10-31"
 )
 
+func (e POSTAddRoleToDBInstanceVersionEnum) ToPointer() *POSTAddRoleToDBInstanceVersionEnum {
+	return &e
+}
+
 func (e *POSTAddRoleToDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTAddRoleToDBInstanceVersionEnum(s)
+		*e = POSTAddRoleToDBInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAddRoleToDBInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAddRoleToDBInstanceVersionEnum: %v", v)
 	}
 }
 

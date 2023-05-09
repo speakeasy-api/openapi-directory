@@ -16,21 +16,25 @@ const (
 	UpgradeHistoryEntryActionEnumRollback          UpgradeHistoryEntryActionEnum = "ROLLBACK"
 )
 
+func (e UpgradeHistoryEntryActionEnum) ToPointer() *UpgradeHistoryEntryActionEnum {
+	return &e
+}
+
 func (e *UpgradeHistoryEntryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_UNSPECIFIED":
 		fallthrough
 	case "UPGRADE":
 		fallthrough
 	case "ROLLBACK":
-		*e = UpgradeHistoryEntryActionEnum(s)
+		*e = UpgradeHistoryEntryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpgradeHistoryEntryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpgradeHistoryEntryActionEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	UpgradeHistoryEntryStateEnumFailed           UpgradeHistoryEntryStateEnum = "FAILED"
 )
 
+func (e UpgradeHistoryEntryStateEnum) ToPointer() *UpgradeHistoryEntryStateEnum {
+	return &e
+}
+
 func (e *UpgradeHistoryEntryStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "STARTED":
@@ -57,10 +65,10 @@ func (e *UpgradeHistoryEntryStateEnum) UnmarshalJSON(data []byte) error {
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = UpgradeHistoryEntryStateEnum(s)
+		*e = UpgradeHistoryEntryStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpgradeHistoryEntryStateEnum: %s", s)
+		return fmt.Errorf("invalid value for UpgradeHistoryEntryStateEnum: %v", v)
 	}
 }
 

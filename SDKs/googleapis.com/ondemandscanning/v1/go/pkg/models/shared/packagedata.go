@@ -20,12 +20,16 @@ const (
 	PackageDataPackageTypeEnumNpm                    PackageDataPackageTypeEnum = "NPM"
 )
 
+func (e PackageDataPackageTypeEnum) ToPointer() *PackageDataPackageTypeEnum {
+	return &e
+}
+
 func (e *PackageDataPackageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PACKAGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "OS":
@@ -39,17 +43,17 @@ func (e *PackageDataPackageTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PYPI":
 		fallthrough
 	case "NPM":
-		*e = PackageDataPackageTypeEnum(s)
+		*e = PackageDataPackageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PackageDataPackageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PackageDataPackageTypeEnum: %v", v)
 	}
 }
 
 type PackageData struct {
 	// The architecture of the package.
-	Architecture *string `json:"architecture,omitempty"`
-	Binary       *Binary `json:"binary,omitempty"`
+	Architecture  *string         `json:"architecture,omitempty"`
+	BinaryVersion *PackageVersion `json:"binaryVersion,omitempty"`
 	// The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability may manifest. Examples include distro or storage location for vulnerable jar.
 	CpeURI *string `json:"cpeUri,omitempty"`
 	// The dependency chain between this package and the user's artifact. List in order from the customer's package under review first, to the current package last. Inclusive of the original package and the current package.
@@ -68,8 +72,9 @@ type PackageData struct {
 	// The type of package: os, maven, go, etc.
 	PackageType *PackageDataPackageTypeEnum `json:"packageType,omitempty"`
 	// CVEs that this package is no longer vulnerable to go/drydock-dd-custom-binary-scanning
-	PatchedCve []string `json:"patchedCve,omitempty"`
-	Unused     *string  `json:"unused,omitempty"`
+	PatchedCve    []string        `json:"patchedCve,omitempty"`
+	SourceVersion *PackageVersion `json:"sourceVersion,omitempty"`
+	Unused        *string         `json:"unused,omitempty"`
 	// The version of the package being analysed
 	Version *string `json:"version,omitempty"`
 }

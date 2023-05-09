@@ -75,7 +75,10 @@ func (s *query) GetQuery(ctx context.Context, request operations.GetQueryRequest
 // https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-response-elements - OpenSearch github repository
 func (s *query) GetQueryExtension(ctx context.Context, request operations.GetQueryExtensionRequest) (*operations.GetQueryExtensionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/query.{extension}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/query.{extension}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

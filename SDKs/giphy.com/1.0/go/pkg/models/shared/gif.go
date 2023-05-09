@@ -39,17 +39,21 @@ const (
 	GifTypeEnumGif GifTypeEnum = "gif"
 )
 
+func (e GifTypeEnum) ToPointer() *GifTypeEnum {
+	return &e
+}
+
 func (e *GifTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gif":
-		*e = GifTypeEnum(s)
+		*e = GifTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GifTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GifTypeEnum: %v", v)
 	}
 }
 

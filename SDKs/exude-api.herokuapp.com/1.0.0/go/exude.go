@@ -34,7 +34,10 @@ func newExude(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // FilterFileDataStoppings - Filter the stopping words from the provided input file
 func (s *exude) FilterFileDataStoppings(ctx context.Context, request operations.FilterFileDataStoppingsRequest) (*operations.FilterFileDataStoppingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/exude/{type}/file", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/exude/{type}/file", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -88,7 +91,10 @@ func (s *exude) FilterFileDataStoppings(ctx context.Context, request operations.
 // FilterStoppings - Filter the stopping words from the provided input data or links
 func (s *exude) FilterStoppings(ctx context.Context, request operations.FilterStoppingsRequest) (*operations.FilterStoppingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/exude/{type}/data", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/exude/{type}/data", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExudeBean", "multipart")
 	if err != nil {

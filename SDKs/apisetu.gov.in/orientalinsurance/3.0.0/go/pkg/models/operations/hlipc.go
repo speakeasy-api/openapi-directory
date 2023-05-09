@@ -30,17 +30,21 @@ const (
 	HlipcRequestBodyFormatEnumPdf HlipcRequestBodyFormatEnum = "pdf"
 )
 
+func (e HlipcRequestBodyFormatEnum) ToPointer() *HlipcRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *HlipcRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = HlipcRequestBodyFormatEnum(s)
+		*e = HlipcRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HlipcRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for HlipcRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -60,17 +64,21 @@ const (
 	Hlipc504ApplicationJSONErrorEnumGatewayTimeout Hlipc504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Hlipc504ApplicationJSONErrorEnum) ToPointer() *Hlipc504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hlipc504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Hlipc504ApplicationJSONErrorEnum(s)
+		*e = Hlipc504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -80,17 +88,21 @@ const (
 	Hlipc504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Hlipc504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Hlipc504ApplicationJSONErrorDescriptionEnum) ToPointer() *Hlipc504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hlipc504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Hlipc504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hlipc504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -106,17 +118,21 @@ const (
 	Hlipc503ApplicationJSONErrorEnumServiceUnavailable Hlipc503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Hlipc503ApplicationJSONErrorEnum) ToPointer() *Hlipc503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hlipc503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Hlipc503ApplicationJSONErrorEnum(s)
+		*e = Hlipc503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -126,17 +142,21 @@ const (
 	Hlipc503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Hlipc503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Hlipc503ApplicationJSONErrorDescriptionEnum) ToPointer() *Hlipc503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hlipc503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Hlipc503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hlipc503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -152,17 +172,21 @@ const (
 	Hlipc502ApplicationJSONErrorEnumBadGatewy Hlipc502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Hlipc502ApplicationJSONErrorEnum) ToPointer() *Hlipc502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hlipc502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Hlipc502ApplicationJSONErrorEnum(s)
+		*e = Hlipc502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -172,17 +196,21 @@ const (
 	Hlipc502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Hlipc502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Hlipc502ApplicationJSONErrorDescriptionEnum) ToPointer() *Hlipc502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hlipc502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Hlipc502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hlipc502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -198,17 +226,21 @@ const (
 	Hlipc500ApplicationJSONErrorEnumInternalServerError Hlipc500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Hlipc500ApplicationJSONErrorEnum) ToPointer() *Hlipc500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hlipc500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Hlipc500ApplicationJSONErrorEnum(s)
+		*e = Hlipc500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -218,17 +250,21 @@ const (
 	Hlipc500ApplicationJSONErrorDescriptionEnumInternalServerError Hlipc500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Hlipc500ApplicationJSONErrorDescriptionEnum) ToPointer() *Hlipc500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hlipc500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Hlipc500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hlipc500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -245,19 +281,23 @@ const (
 	Hlipc404ApplicationJSONErrorEnumURLNotFound    Hlipc404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Hlipc404ApplicationJSONErrorEnum) ToPointer() *Hlipc404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hlipc404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Hlipc404ApplicationJSONErrorEnum(s)
+		*e = Hlipc404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -268,19 +308,23 @@ const (
 	Hlipc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Hlipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Hlipc404ApplicationJSONErrorDescriptionEnum) ToPointer() *Hlipc404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hlipc404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Hlipc404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hlipc404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -297,19 +341,23 @@ const (
 	Hlipc401ApplicationJSONErrorEnumInvalidAuthorization  Hlipc401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Hlipc401ApplicationJSONErrorEnum) ToPointer() *Hlipc401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hlipc401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Hlipc401ApplicationJSONErrorEnum(s)
+		*e = Hlipc401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -320,19 +368,23 @@ const (
 	Hlipc401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Hlipc401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Hlipc401ApplicationJSONErrorDescriptionEnum) ToPointer() *Hlipc401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hlipc401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Hlipc401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hlipc401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -352,12 +404,16 @@ const (
 	Hlipc400ApplicationJSONErrorEnumInvalidConsentid Hlipc400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Hlipc400ApplicationJSONErrorEnum) ToPointer() *Hlipc400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hlipc400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -367,10 +423,10 @@ func (e *Hlipc400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Hlipc400ApplicationJSONErrorEnum(s)
+		*e = Hlipc400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -384,12 +440,16 @@ const (
 	Hlipc400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Hlipc400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Hlipc400ApplicationJSONErrorDescriptionEnum) ToPointer() *Hlipc400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hlipc400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -399,10 +459,10 @@ func (e *Hlipc400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Hlipc400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hlipc400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hlipc400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hlipc400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

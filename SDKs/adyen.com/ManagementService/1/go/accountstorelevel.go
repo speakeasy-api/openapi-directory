@@ -40,7 +40,10 @@ func newAccountStoreLevel(defaultClient, securityClient HTTPClient, serverURL, l
 // * Management API—Stores read and write
 func (s *accountStoreLevel) GetMerchantsMerchantIDStores(ctx context.Context, request operations.GetMerchantsMerchantIDStoresRequest, security operations.GetMerchantsMerchantIDStoresSecurity) (*operations.GetMerchantsMerchantIDStoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -112,7 +115,10 @@ func (s *accountStoreLevel) GetMerchantsMerchantIDStores(ctx context.Context, re
 // * Management API—Stores read and write
 func (s *accountStoreLevel) GetMerchantsMerchantIDStoresStoreID(ctx context.Context, request operations.GetMerchantsMerchantIDStoresStoreIDRequest, security operations.GetMerchantsMerchantIDStoresStoreIDSecurity) (*operations.GetMerchantsMerchantIDStoresStoreIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{storeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{storeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -251,7 +257,10 @@ func (s *accountStoreLevel) GetStores(ctx context.Context, request operations.Ge
 // * Management API—Stores read and write
 func (s *accountStoreLevel) GetStoresStoreID(ctx context.Context, request operations.GetStoresStoreIDRequest, security operations.GetStoresStoreIDSecurity) (*operations.GetStoresStoreIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -317,7 +326,10 @@ func (s *accountStoreLevel) GetStoresStoreID(ctx context.Context, request operat
 // * Management API—Stores read and write
 func (s *accountStoreLevel) PatchMerchantsMerchantIDStoresStoreID(ctx context.Context, request operations.PatchMerchantsMerchantIDStoresStoreIDRequest, security operations.PatchMerchantsMerchantIDStoresStoreIDSecurity) (*operations.PatchMerchantsMerchantIDStoresStoreIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{storeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{storeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateStoreRequest", "json")
 	if err != nil {
@@ -392,7 +404,10 @@ func (s *accountStoreLevel) PatchMerchantsMerchantIDStoresStoreID(ctx context.Co
 // * Management API—Stores read and write
 func (s *accountStoreLevel) PatchStoresStoreID(ctx context.Context, request operations.PatchStoresStoreIDRequest, security operations.PatchStoresStoreIDSecurity) (*operations.PatchStoresStoreIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateStoreRequest", "json")
 	if err != nil {
@@ -465,7 +480,10 @@ func (s *accountStoreLevel) PatchStoresStoreID(ctx context.Context, request oper
 // * Management API—Stores read and write
 func (s *accountStoreLevel) PostMerchantsMerchantIDStores(ctx context.Context, request operations.PostMerchantsMerchantIDStoresRequest, security operations.PostMerchantsMerchantIDStoresSecurity) (*operations.PostMerchantsMerchantIDStoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StoreCreationRequest", "json")
 	if err != nil {

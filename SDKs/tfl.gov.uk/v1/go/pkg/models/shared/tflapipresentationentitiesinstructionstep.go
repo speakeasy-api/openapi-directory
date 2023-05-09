@@ -20,12 +20,16 @@ const (
 	TflAPIPresentationEntitiesInstructionStepSkyDirectionDescriptionEnumNorthWest TflAPIPresentationEntitiesInstructionStepSkyDirectionDescriptionEnum = "NorthWest"
 )
 
+func (e TflAPIPresentationEntitiesInstructionStepSkyDirectionDescriptionEnum) ToPointer() *TflAPIPresentationEntitiesInstructionStepSkyDirectionDescriptionEnum {
+	return &e
+}
+
 func (e *TflAPIPresentationEntitiesInstructionStepSkyDirectionDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "North":
 		fallthrough
 	case "NorthEast":
@@ -41,10 +45,10 @@ func (e *TflAPIPresentationEntitiesInstructionStepSkyDirectionDescriptionEnum) U
 	case "West":
 		fallthrough
 	case "NorthWest":
-		*e = TflAPIPresentationEntitiesInstructionStepSkyDirectionDescriptionEnum(s)
+		*e = TflAPIPresentationEntitiesInstructionStepSkyDirectionDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesInstructionStepSkyDirectionDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesInstructionStepSkyDirectionDescriptionEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	TflAPIPresentationEntitiesInstructionStepTrackTypeEnumQuietway             TflAPIPresentationEntitiesInstructionStepTrackTypeEnum = "Quietway"
 )
 
+func (e TflAPIPresentationEntitiesInstructionStepTrackTypeEnum) ToPointer() *TflAPIPresentationEntitiesInstructionStepTrackTypeEnum {
+	return &e
+}
+
 func (e *TflAPIPresentationEntitiesInstructionStepTrackTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CycleSuperHighway":
 		fallthrough
 	case "CanalTowpath":
@@ -82,10 +90,10 @@ func (e *TflAPIPresentationEntitiesInstructionStepTrackTypeEnum) UnmarshalJSON(d
 	case "PushBike":
 		fallthrough
 	case "Quietway":
-		*e = TflAPIPresentationEntitiesInstructionStepTrackTypeEnum(s)
+		*e = TflAPIPresentationEntitiesInstructionStepTrackTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesInstructionStepTrackTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesInstructionStepTrackTypeEnum: %v", v)
 	}
 }
 

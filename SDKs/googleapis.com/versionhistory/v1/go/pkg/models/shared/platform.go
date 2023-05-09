@@ -28,12 +28,16 @@ const (
 	PlatformPlatformTypeEnumFuchsia                 PlatformPlatformTypeEnum = "FUCHSIA"
 )
 
+func (e PlatformPlatformTypeEnum) ToPointer() *PlatformPlatformTypeEnum {
+	return &e
+}
+
 func (e *PlatformPlatformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "WIN":
@@ -63,10 +67,10 @@ func (e *PlatformPlatformTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LACROS_ARM64":
 		fallthrough
 	case "FUCHSIA":
-		*e = PlatformPlatformTypeEnum(s)
+		*e = PlatformPlatformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlatformPlatformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlatformPlatformTypeEnum: %v", v)
 	}
 }
 

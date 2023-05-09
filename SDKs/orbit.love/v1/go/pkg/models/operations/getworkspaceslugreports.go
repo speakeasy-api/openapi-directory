@@ -20,6 +20,8 @@ type GetWorkspaceSlugReportsRequest struct {
 	// Filter activities after this date. Format: YYYY-MM-DD.
 	StartDate *string `queryParam:"style=form,explode=true,name=start_date"`
 	// Deprecated in favor of the activity_type parameter.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Type          *string `queryParam:"style=form,explode=true,name=type"`
 	WorkspaceSlug string  `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }

@@ -16,17 +16,21 @@ const (
 	GetAWSOrganizationsAccessStatusXAmzTargetEnumAws242ServiceCatalogServiceGetAwsOrganizationsAccessStatus GetAWSOrganizationsAccessStatusXAmzTargetEnum = "AWS242ServiceCatalogService.GetAWSOrganizationsAccessStatus"
 )
 
+func (e GetAWSOrganizationsAccessStatusXAmzTargetEnum) ToPointer() *GetAWSOrganizationsAccessStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAWSOrganizationsAccessStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.GetAWSOrganizationsAccessStatus":
-		*e = GetAWSOrganizationsAccessStatusXAmzTargetEnum(s)
+		*e = GetAWSOrganizationsAccessStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAWSOrganizationsAccessStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAWSOrganizationsAccessStatusXAmzTargetEnum: %v", v)
 	}
 }
 

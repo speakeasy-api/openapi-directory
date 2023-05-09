@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetFindInteractionsRequest{
-        Format: "dump",
-        Query: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.AllFunctions.GetFindInteractions(ctx, req)
+    res, err := s.AllFunctions.GetFindInteractions(ctx, operations.GetFindInteractionsRequest{
+        Format: operations.GetFindInteractionsFormatEnumDump.ToPointer(),
+        Query: "provident",
+    })
     if err != nil {
         log.Fatal(err)
     }

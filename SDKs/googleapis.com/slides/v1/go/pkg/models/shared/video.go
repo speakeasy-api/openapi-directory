@@ -16,21 +16,25 @@ const (
 	VideoSourceEnumDrive             VideoSourceEnum = "DRIVE"
 )
 
+func (e VideoSourceEnum) ToPointer() *VideoSourceEnum {
+	return &e
+}
+
 func (e *VideoSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOURCE_UNSPECIFIED":
 		fallthrough
 	case "YOUTUBE":
 		fallthrough
 	case "DRIVE":
-		*e = VideoSourceEnum(s)
+		*e = VideoSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoSourceEnum: %v", v)
 	}
 }
 

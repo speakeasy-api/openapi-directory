@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type AccountCreateJWTSecurity struct {
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
+}
+
 type AccountCreateJWTResponse struct {
 	ContentType string
 	StatusCode  int

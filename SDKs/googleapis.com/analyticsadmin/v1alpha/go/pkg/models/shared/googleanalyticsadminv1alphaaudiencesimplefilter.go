@@ -17,12 +17,16 @@ const (
 	GoogleAnalyticsAdminV1alphaAudienceSimpleFilterScopeEnumAudienceFilterScopeAcrossAllSessions GoogleAnalyticsAdminV1alphaAudienceSimpleFilterScopeEnum = "AUDIENCE_FILTER_SCOPE_ACROSS_ALL_SESSIONS"
 )
 
+func (e GoogleAnalyticsAdminV1alphaAudienceSimpleFilterScopeEnum) ToPointer() *GoogleAnalyticsAdminV1alphaAudienceSimpleFilterScopeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaAudienceSimpleFilterScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUDIENCE_FILTER_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "AUDIENCE_FILTER_SCOPE_WITHIN_SAME_EVENT":
@@ -30,10 +34,10 @@ func (e *GoogleAnalyticsAdminV1alphaAudienceSimpleFilterScopeEnum) UnmarshalJSON
 	case "AUDIENCE_FILTER_SCOPE_WITHIN_SAME_SESSION":
 		fallthrough
 	case "AUDIENCE_FILTER_SCOPE_ACROSS_ALL_SESSIONS":
-		*e = GoogleAnalyticsAdminV1alphaAudienceSimpleFilterScopeEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaAudienceSimpleFilterScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAudienceSimpleFilterScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAudienceSimpleFilterScopeEnum: %v", v)
 	}
 }
 

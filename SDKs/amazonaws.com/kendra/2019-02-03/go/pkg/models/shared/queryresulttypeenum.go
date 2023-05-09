@@ -15,20 +15,24 @@ const (
 	QueryResultTypeEnumAnswer         QueryResultTypeEnum = "ANSWER"
 )
 
+func (e QueryResultTypeEnum) ToPointer() *QueryResultTypeEnum {
+	return &e
+}
+
 func (e *QueryResultTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOCUMENT":
 		fallthrough
 	case "QUESTION_ANSWER":
 		fallthrough
 	case "ANSWER":
-		*e = QueryResultTypeEnum(s)
+		*e = QueryResultTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryResultTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryResultTypeEnum: %v", v)
 	}
 }

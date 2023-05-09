@@ -17,12 +17,16 @@ const (
 	GoogleCloudDataplexV1SchemaSchemaFieldModeEnumRepeated        GoogleCloudDataplexV1SchemaSchemaFieldModeEnum = "REPEATED"
 )
 
+func (e GoogleCloudDataplexV1SchemaSchemaFieldModeEnum) ToPointer() *GoogleCloudDataplexV1SchemaSchemaFieldModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1SchemaSchemaFieldModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODE_UNSPECIFIED":
 		fallthrough
 	case "REQUIRED":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDataplexV1SchemaSchemaFieldModeEnum) UnmarshalJSON(data []by
 	case "NULLABLE":
 		fallthrough
 	case "REPEATED":
-		*e = GoogleCloudDataplexV1SchemaSchemaFieldModeEnum(s)
+		*e = GoogleCloudDataplexV1SchemaSchemaFieldModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1SchemaSchemaFieldModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1SchemaSchemaFieldModeEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	GoogleCloudDataplexV1SchemaSchemaFieldTypeEnumNull            GoogleCloudDataplexV1SchemaSchemaFieldTypeEnum = "NULL"
 )
 
+func (e GoogleCloudDataplexV1SchemaSchemaFieldTypeEnum) ToPointer() *GoogleCloudDataplexV1SchemaSchemaFieldTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1SchemaSchemaFieldTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "BOOLEAN":
@@ -96,10 +104,10 @@ func (e *GoogleCloudDataplexV1SchemaSchemaFieldTypeEnum) UnmarshalJSON(data []by
 	case "RECORD":
 		fallthrough
 	case "NULL":
-		*e = GoogleCloudDataplexV1SchemaSchemaFieldTypeEnum(s)
+		*e = GoogleCloudDataplexV1SchemaSchemaFieldTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1SchemaSchemaFieldTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1SchemaSchemaFieldTypeEnum: %v", v)
 	}
 }
 

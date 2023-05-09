@@ -15,19 +15,23 @@ const (
 	GoogleIdentityAccesscontextmanagerV1ServicePerimeterPerimeterTypeEnumPerimeterTypeBridge  GoogleIdentityAccesscontextmanagerV1ServicePerimeterPerimeterTypeEnum = "PERIMETER_TYPE_BRIDGE"
 )
 
+func (e GoogleIdentityAccesscontextmanagerV1ServicePerimeterPerimeterTypeEnum) ToPointer() *GoogleIdentityAccesscontextmanagerV1ServicePerimeterPerimeterTypeEnum {
+	return &e
+}
+
 func (e *GoogleIdentityAccesscontextmanagerV1ServicePerimeterPerimeterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERIMETER_TYPE_REGULAR":
 		fallthrough
 	case "PERIMETER_TYPE_BRIDGE":
-		*e = GoogleIdentityAccesscontextmanagerV1ServicePerimeterPerimeterTypeEnum(s)
+		*e = GoogleIdentityAccesscontextmanagerV1ServicePerimeterPerimeterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleIdentityAccesscontextmanagerV1ServicePerimeterPerimeterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleIdentityAccesscontextmanagerV1ServicePerimeterPerimeterTypeEnum: %v", v)
 	}
 }
 

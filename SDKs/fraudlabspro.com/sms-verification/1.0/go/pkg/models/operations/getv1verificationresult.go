@@ -16,19 +16,23 @@ const (
 	GetV1VerificationResultFormatEnumXML  GetV1VerificationResultFormatEnum = "xml"
 )
 
+func (e GetV1VerificationResultFormatEnum) ToPointer() *GetV1VerificationResultFormatEnum {
+	return &e
+}
+
 func (e *GetV1VerificationResultFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = GetV1VerificationResultFormatEnum(s)
+		*e = GetV1VerificationResultFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetV1VerificationResultFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetV1VerificationResultFormatEnum: %v", v)
 	}
 }
 

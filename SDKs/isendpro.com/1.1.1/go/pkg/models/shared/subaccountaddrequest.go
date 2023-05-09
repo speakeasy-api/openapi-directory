@@ -13,17 +13,21 @@ const (
 	SubaccountAddRequestSubAccountEditEnumAddAccount SubaccountAddRequestSubAccountEditEnum = "addAccount"
 )
 
+func (e SubaccountAddRequestSubAccountEditEnum) ToPointer() *SubaccountAddRequestSubAccountEditEnum {
+	return &e
+}
+
 func (e *SubaccountAddRequestSubAccountEditEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "addAccount":
-		*e = SubaccountAddRequestSubAccountEditEnum(s)
+		*e = SubaccountAddRequestSubAccountEditEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubaccountAddRequestSubAccountEditEnum: %s", s)
+		return fmt.Errorf("invalid value for SubaccountAddRequestSubAccountEditEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	InstanceConnectModeEnumPrivateServiceAccess   InstanceConnectModeEnum = "PRIVATE_SERVICE_ACCESS"
 )
 
+func (e InstanceConnectModeEnum) ToPointer() *InstanceConnectModeEnum {
+	return &e
+}
+
 func (e *InstanceConnectModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECT_MODE_UNSPECIFIED":
 		fallthrough
 	case "DIRECT_PEERING":
 		fallthrough
 	case "PRIVATE_SERVICE_ACCESS":
-		*e = InstanceConnectModeEnum(s)
+		*e = InstanceConnectModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceConnectModeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceConnectModeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	InstanceReadReplicasModeEnumReadReplicasEnabled         InstanceReadReplicasModeEnum = "READ_REPLICAS_ENABLED"
 )
 
+func (e InstanceReadReplicasModeEnum) ToPointer() *InstanceReadReplicasModeEnum {
+	return &e
+}
+
 func (e *InstanceReadReplicasModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READ_REPLICAS_MODE_UNSPECIFIED":
 		fallthrough
 	case "READ_REPLICAS_DISABLED":
 		fallthrough
 	case "READ_REPLICAS_ENABLED":
-		*e = InstanceReadReplicasModeEnum(s)
+		*e = InstanceReadReplicasModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceReadReplicasModeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceReadReplicasModeEnum: %v", v)
 	}
 }
 
@@ -68,19 +76,23 @@ const (
 	InstanceSuspensionReasonsEnumCustomerManagedKeyIssue     InstanceSuspensionReasonsEnum = "CUSTOMER_MANAGED_KEY_ISSUE"
 )
 
+func (e InstanceSuspensionReasonsEnum) ToPointer() *InstanceSuspensionReasonsEnum {
+	return &e
+}
+
 func (e *InstanceSuspensionReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUSPENSION_REASON_UNSPECIFIED":
 		fallthrough
 	case "CUSTOMER_MANAGED_KEY_ISSUE":
-		*e = InstanceSuspensionReasonsEnum(s)
+		*e = InstanceSuspensionReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceSuspensionReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceSuspensionReasonsEnum: %v", v)
 	}
 }
 
@@ -93,21 +105,25 @@ const (
 	InstanceTierEnumStandardHa      InstanceTierEnum = "STANDARD_HA"
 )
 
+func (e InstanceTierEnum) ToPointer() *InstanceTierEnum {
+	return &e
+}
+
 func (e *InstanceTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIER_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "STANDARD_HA":
-		*e = InstanceTierEnum(s)
+		*e = InstanceTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceTierEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceTierEnum: %v", v)
 	}
 }
 
@@ -120,21 +136,25 @@ const (
 	InstanceTransitEncryptionModeEnumDisabled                         InstanceTransitEncryptionModeEnum = "DISABLED"
 )
 
+func (e InstanceTransitEncryptionModeEnum) ToPointer() *InstanceTransitEncryptionModeEnum {
+	return &e
+}
+
 func (e *InstanceTransitEncryptionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRANSIT_ENCRYPTION_MODE_UNSPECIFIED":
 		fallthrough
 	case "SERVER_AUTHENTICATION":
 		fallthrough
 	case "DISABLED":
-		*e = InstanceTransitEncryptionModeEnum(s)
+		*e = InstanceTransitEncryptionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceTransitEncryptionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceTransitEncryptionModeEnum: %v", v)
 	}
 }
 
@@ -205,12 +225,16 @@ const (
 	InstanceStateEnumFailingOver      InstanceStateEnum = "FAILING_OVER"
 )
 
+func (e InstanceStateEnum) ToPointer() *InstanceStateEnum {
+	return &e
+}
+
 func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -228,10 +252,10 @@ func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
 	case "IMPORTING":
 		fallthrough
 	case "FAILING_OVER":
-		*e = InstanceStateEnum(s)
+		*e = InstanceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceStateEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	StartLoggingXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101StartLogging StartLoggingXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.StartLogging"
 )
 
+func (e StartLoggingXAmzTargetEnum) ToPointer() *StartLoggingXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartLoggingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.StartLogging":
-		*e = StartLoggingXAmzTargetEnum(s)
+		*e = StartLoggingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartLoggingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartLoggingXAmzTargetEnum: %v", v)
 	}
 }
 

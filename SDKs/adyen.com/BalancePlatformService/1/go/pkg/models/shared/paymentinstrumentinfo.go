@@ -38,12 +38,16 @@ const (
 	PaymentInstrumentInfoStatusEnumDiscarded PaymentInstrumentInfoStatusEnum = "discarded"
 )
 
+func (e PaymentInstrumentInfoStatusEnum) ToPointer() *PaymentInstrumentInfoStatusEnum {
+	return &e
+}
+
 func (e *PaymentInstrumentInfoStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Closed":
@@ -61,10 +65,10 @@ func (e *PaymentInstrumentInfoStatusEnum) UnmarshalJSON(data []byte) error {
 	case "blocked":
 		fallthrough
 	case "discarded":
-		*e = PaymentInstrumentInfoStatusEnum(s)
+		*e = PaymentInstrumentInfoStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentInstrumentInfoStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentInstrumentInfoStatusEnum: %v", v)
 	}
 }
 
@@ -78,19 +82,23 @@ const (
 	PaymentInstrumentInfoTypeEnumCard        PaymentInstrumentInfoTypeEnum = "card"
 )
 
+func (e PaymentInstrumentInfoTypeEnum) ToPointer() *PaymentInstrumentInfoTypeEnum {
+	return &e
+}
+
 func (e *PaymentInstrumentInfoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bankAccount":
 		fallthrough
 	case "card":
-		*e = PaymentInstrumentInfoTypeEnum(s)
+		*e = PaymentInstrumentInfoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentInstrumentInfoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentInstrumentInfoTypeEnum: %v", v)
 	}
 }
 

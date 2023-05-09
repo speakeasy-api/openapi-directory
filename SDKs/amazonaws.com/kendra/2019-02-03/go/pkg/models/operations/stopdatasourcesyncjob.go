@@ -16,17 +16,21 @@ const (
 	StopDataSourceSyncJobXAmzTargetEnumAwsKendraFrontendServiceStopDataSourceSyncJob StopDataSourceSyncJobXAmzTargetEnum = "AWSKendraFrontendService.StopDataSourceSyncJob"
 )
 
+func (e StopDataSourceSyncJobXAmzTargetEnum) ToPointer() *StopDataSourceSyncJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopDataSourceSyncJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.StopDataSourceSyncJob":
-		*e = StopDataSourceSyncJobXAmzTargetEnum(s)
+		*e = StopDataSourceSyncJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopDataSourceSyncJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopDataSourceSyncJobXAmzTargetEnum: %v", v)
 	}
 }
 

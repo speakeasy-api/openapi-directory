@@ -19,12 +19,16 @@ const (
 	RedactTransactionProductEnumMessages      RedactTransactionProductEnum = "messages"
 )
 
+func (e RedactTransactionProductEnum) ToPointer() *RedactTransactionProductEnum {
+	return &e
+}
+
 func (e *RedactTransactionProductEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sms":
 		fallthrough
 	case "voice":
@@ -36,10 +40,10 @@ func (e *RedactTransactionProductEnum) UnmarshalJSON(data []byte) error {
 	case "verify-sdk":
 		fallthrough
 	case "messages":
-		*e = RedactTransactionProductEnum(s)
+		*e = RedactTransactionProductEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RedactTransactionProductEnum: %s", s)
+		return fmt.Errorf("invalid value for RedactTransactionProductEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	RedactTransactionTypeEnumOutbound RedactTransactionTypeEnum = "outbound"
 )
 
+func (e RedactTransactionTypeEnum) ToPointer() *RedactTransactionTypeEnum {
+	return &e
+}
+
 func (e *RedactTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inbound":
 		fallthrough
 	case "outbound":
-		*e = RedactTransactionTypeEnum(s)
+		*e = RedactTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RedactTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RedactTransactionTypeEnum: %v", v)
 	}
 }
 

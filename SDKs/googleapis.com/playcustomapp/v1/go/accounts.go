@@ -34,7 +34,10 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // PlaycustomappAccountsCustomAppsCreate - Creates a new custom app.
 func (s *accounts) PlaycustomappAccountsCustomAppsCreate(ctx context.Context, request operations.PlaycustomappAccountsCustomAppsCreateRequest, security operations.PlaycustomappAccountsCustomAppsCreateSecurity) (*operations.PlaycustomappAccountsCustomAppsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playcustomapp/v1/accounts/{account}/customApps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/playcustomapp/v1/accounts/{account}/customApps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

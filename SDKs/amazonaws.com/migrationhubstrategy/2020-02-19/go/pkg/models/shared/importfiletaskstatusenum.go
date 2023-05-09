@@ -20,12 +20,16 @@ const (
 	ImportFileTaskStatusEnumDeleteSuccess        ImportFileTaskStatusEnum = "DeleteSuccess"
 )
 
+func (e ImportFileTaskStatusEnum) ToPointer() *ImportFileTaskStatusEnum {
+	return &e
+}
+
 func (e *ImportFileTaskStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ImportInProgress":
 		fallthrough
 	case "ImportFailed":
@@ -41,9 +45,9 @@ func (e *ImportFileTaskStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DeletePartialSuccess":
 		fallthrough
 	case "DeleteSuccess":
-		*e = ImportFileTaskStatusEnum(s)
+		*e = ImportFileTaskStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportFileTaskStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportFileTaskStatusEnum: %v", v)
 	}
 }

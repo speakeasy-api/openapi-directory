@@ -15,20 +15,24 @@ const (
 	GranularityEnumHourly  GranularityEnum = "HOURLY"
 )
 
+func (e GranularityEnum) ToPointer() *GranularityEnum {
+	return &e
+}
+
 func (e *GranularityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAILY":
 		fallthrough
 	case "MONTHLY":
 		fallthrough
 	case "HOURLY":
-		*e = GranularityEnum(s)
+		*e = GranularityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GranularityEnum: %s", s)
+		return fmt.Errorf("invalid value for GranularityEnum: %v", v)
 	}
 }

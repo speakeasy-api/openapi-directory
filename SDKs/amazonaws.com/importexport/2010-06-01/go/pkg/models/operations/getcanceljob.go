@@ -15,17 +15,21 @@ const (
 	GETCancelJobActionEnumCancelJob GETCancelJobActionEnum = "CancelJob"
 )
 
+func (e GETCancelJobActionEnum) ToPointer() *GETCancelJobActionEnum {
+	return &e
+}
+
 func (e *GETCancelJobActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CancelJob":
-		*e = GETCancelJobActionEnum(s)
+		*e = GETCancelJobActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelJobActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelJobActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCancelJobOperationEnumCancelJob GETCancelJobOperationEnum = "CancelJob"
 )
 
+func (e GETCancelJobOperationEnum) ToPointer() *GETCancelJobOperationEnum {
+	return &e
+}
+
 func (e *GETCancelJobOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CancelJob":
-		*e = GETCancelJobOperationEnum(s)
+		*e = GETCancelJobOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelJobOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelJobOperationEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	GETCancelJobVersionEnumTwoThousandAndTen0601 GETCancelJobVersionEnum = "2010-06-01"
 )
 
+func (e GETCancelJobVersionEnum) ToPointer() *GETCancelJobVersionEnum {
+	return &e
+}
+
 func (e *GETCancelJobVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-06-01":
-		*e = GETCancelJobVersionEnum(s)
+		*e = GETCancelJobVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelJobVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelJobVersionEnum: %v", v)
 	}
 }
 

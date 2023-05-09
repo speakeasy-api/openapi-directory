@@ -15,17 +15,21 @@ const (
 	GETCreateGlobalClusterActionEnumCreateGlobalCluster GETCreateGlobalClusterActionEnum = "CreateGlobalCluster"
 )
 
+func (e GETCreateGlobalClusterActionEnum) ToPointer() *GETCreateGlobalClusterActionEnum {
+	return &e
+}
+
 func (e *GETCreateGlobalClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateGlobalCluster":
-		*e = GETCreateGlobalClusterActionEnum(s)
+		*e = GETCreateGlobalClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateGlobalClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateGlobalClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateGlobalClusterVersionEnumTwoThousandAndFourteen1031 GETCreateGlobalClusterVersionEnum = "2014-10-31"
 )
 
+func (e GETCreateGlobalClusterVersionEnum) ToPointer() *GETCreateGlobalClusterVersionEnum {
+	return &e
+}
+
 func (e *GETCreateGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETCreateGlobalClusterVersionEnum(s)
+		*e = GETCreateGlobalClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateGlobalClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateGlobalClusterVersionEnum: %v", v)
 	}
 }
 

@@ -2,7 +2,7 @@
 
 package shared
 
-// UserDefined - <p/>
+// UserDefined - The output resolution (in target georeferenced units) of the result of the operation
 type UserDefined struct {
 	Unit  UnitEnum `json:"Unit"`
 	Value float32  `json:"Value"`

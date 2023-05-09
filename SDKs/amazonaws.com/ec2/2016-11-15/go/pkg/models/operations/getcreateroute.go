@@ -15,17 +15,21 @@ const (
 	GETCreateRouteActionEnumCreateRoute GETCreateRouteActionEnum = "CreateRoute"
 )
 
+func (e GETCreateRouteActionEnum) ToPointer() *GETCreateRouteActionEnum {
+	return &e
+}
+
 func (e *GETCreateRouteActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateRoute":
-		*e = GETCreateRouteActionEnum(s)
+		*e = GETCreateRouteActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateRouteActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateRouteActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateRouteVersionEnumTwoThousandAndSixteen1115 GETCreateRouteVersionEnum = "2016-11-15"
 )
 
+func (e GETCreateRouteVersionEnum) ToPointer() *GETCreateRouteVersionEnum {
+	return &e
+}
+
 func (e *GETCreateRouteVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCreateRouteVersionEnum(s)
+		*e = GETCreateRouteVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateRouteVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateRouteVersionEnum: %v", v)
 	}
 }
 

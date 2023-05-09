@@ -16,12 +16,16 @@ const (
 	FilterConditionEnumBeginsWith FilterConditionEnum = "BEGINS_WITH"
 )
 
+func (e FilterConditionEnum) ToPointer() *FilterConditionEnum {
+	return &e
+}
+
 func (e *FilterConditionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQ":
 		fallthrough
 	case "IN":
@@ -29,9 +33,9 @@ func (e *FilterConditionEnum) UnmarshalJSON(data []byte) error {
 	case "BETWEEN":
 		fallthrough
 	case "BEGINS_WITH":
-		*e = FilterConditionEnum(s)
+		*e = FilterConditionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterConditionEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterConditionEnum: %v", v)
 	}
 }

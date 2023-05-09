@@ -16,21 +16,25 @@ const (
 	DeleteRangeRequestShiftDimensionEnumColumns              DeleteRangeRequestShiftDimensionEnum = "COLUMNS"
 )
 
+func (e DeleteRangeRequestShiftDimensionEnum) ToPointer() *DeleteRangeRequestShiftDimensionEnum {
+	return &e
+}
+
 func (e *DeleteRangeRequestShiftDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "ROWS":
 		fallthrough
 	case "COLUMNS":
-		*e = DeleteRangeRequestShiftDimensionEnum(s)
+		*e = DeleteRangeRequestShiftDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRangeRequestShiftDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRangeRequestShiftDimensionEnum: %v", v)
 	}
 }
 

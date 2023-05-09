@@ -34,7 +34,10 @@ func newVerificationCodes(defaultClient, securityClient HTTPClient, serverURL, l
 // DirectoryVerificationCodesGenerate - Generates new backup verification codes for the user.
 func (s *verificationCodes) DirectoryVerificationCodesGenerate(ctx context.Context, request operations.DirectoryVerificationCodesGenerateRequest, security operations.DirectoryVerificationCodesGenerateSecurity) (*operations.DirectoryVerificationCodesGenerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/verificationCodes/generate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/verificationCodes/generate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *verificationCodes) DirectoryVerificationCodesGenerate(ctx context.Conte
 // DirectoryVerificationCodesInvalidate - Invalidates the current backup verification codes for the user.
 func (s *verificationCodes) DirectoryVerificationCodesInvalidate(ctx context.Context, request operations.DirectoryVerificationCodesInvalidateRequest, security operations.DirectoryVerificationCodesInvalidateSecurity) (*operations.DirectoryVerificationCodesInvalidateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/verificationCodes/invalidate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/verificationCodes/invalidate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -112,7 +118,10 @@ func (s *verificationCodes) DirectoryVerificationCodesInvalidate(ctx context.Con
 // DirectoryVerificationCodesList - Returns the current set of valid backup verification codes for the specified user.
 func (s *verificationCodes) DirectoryVerificationCodesList(ctx context.Context, request operations.DirectoryVerificationCodesListRequest, security operations.DirectoryVerificationCodesListSecurity) (*operations.DirectoryVerificationCodesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/verificationCodes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/verificationCodes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

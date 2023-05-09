@@ -37,7 +37,10 @@ func newCampaigns(defaultClient, securityClient HTTPClient, serverURL, language,
 // Deletes a single campaign sound instance for a specific campaign sound id, this operation does not delete sound completely, it sets sound status to ARCHIVED which means that sound will no longer appear in 'find' operation results, but still accessible via 'get' operation
 func (s *campaigns) DeleteCampaignSound(ctx context.Context, request operations.DeleteCampaignSoundRequest, security operations.DeleteCampaignSoundSecurity) (*operations.DeleteCampaignSoundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -157,7 +160,10 @@ func (s *campaigns) FindCampaignSounds(ctx context.Context, request operations.F
 // Returns a single Batch instance for a given batch id. This API is useful for determining the state of a validating batch
 func (s *campaigns) GetCampaignBatch(ctx context.Context, request operations.GetCampaignBatchRequest, security operations.GetCampaignBatchSecurity) (*operations.GetCampaignBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/batches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/batches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +230,10 @@ func (s *campaigns) GetCampaignBatch(ctx context.Context, request operations.Get
 // Returns a single CampaignSound instance for a given sound id in campaign. This is a meta data to the sounds. No audio data is returned from this API
 func (s *campaigns) GetCampaignSound(ctx context.Context, request operations.GetCampaignSoundRequest, security operations.GetCampaignSoundSecurity) (*operations.GetCampaignSoundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -291,7 +300,10 @@ func (s *campaigns) GetCampaignSound(ctx context.Context, request operations.Get
 // Download the MP3 version of a hosted file. This is an audio data endpoint. Returns binary response of the 'audio/mpeg' content type
 func (s *campaigns) GetCampaignSoundDataMp3(ctx context.Context, request operations.GetCampaignSoundDataMp3Request, security operations.GetCampaignSoundDataMp3Security) (*operations.GetCampaignSoundDataMp3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}.mp3", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}.mp3", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,7 +358,10 @@ func (s *campaigns) GetCampaignSoundDataMp3(ctx context.Context, request operati
 // Download the WAV version of the hosted file. This is an audio data endpoint. Returns binary response of the 'audio/mpeg' content type
 func (s *campaigns) GetCampaignSoundDataWav(ctx context.Context, request operations.GetCampaignSoundDataWavRequest, security operations.GetCampaignSoundDataWavSecurity) (*operations.GetCampaignSoundDataWavResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}.wav", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/sounds/{id}.wav", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -626,7 +641,10 @@ func (s *campaigns) PostTTSCampaignSound(ctx context.Context, request operations
 // Updates a single Batch instance, currently batch can only be turned "on/off"
 func (s *campaigns) UpdateCampaignBatch(ctx context.Context, request operations.UpdateCampaignBatchRequest, security operations.UpdateCampaignBatchSecurity) (*operations.UpdateCampaignBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/batches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/batches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchInput", "json")
 	if err != nil {

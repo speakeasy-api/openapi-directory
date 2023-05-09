@@ -34,7 +34,10 @@ func newAnalytics(defaultClient, securityClient HTTPClient, serverURL, language,
 // AnalyticsAudienceNameExists - Returns whether audience definition exists.
 func (s *analytics) AnalyticsAudienceNameExists(ctx context.Context, request operations.AnalyticsAudienceNameExistsRequest, security operations.AnalyticsAudienceNameExistsSecurity) (*operations.AnalyticsAudienceNameExistsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
@@ -78,10 +81,79 @@ func (s *analytics) AnalyticsAudienceNameExists(ctx context.Context, request ope
 	return res, nil
 }
 
+// AnalyticsCrashCounts - Available for UWP apps only.
+// Count of crashes by day in the time range based the selected versions. Available for UWP apps only.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
+func (s *analytics) AnalyticsCrashCounts(ctx context.Context, request operations.AnalyticsCrashCountsRequest, security operations.AnalyticsCrashCountsSecurity) (*operations.AnalyticsCrashCountsResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_counts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsCrashCountsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsCrashCounts200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsCrashCounts200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsCrashCountsDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsCrashCountsDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // AnalyticsCrashFreeDevicePercentages - Percentage of crash-free device by day in the time range based on the selected versions. Api will return -1 if crash devices is greater than active devices.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *analytics) AnalyticsCrashFreeDevicePercentages(ctx context.Context, request operations.AnalyticsCrashFreeDevicePercentagesRequest, security operations.AnalyticsCrashFreeDevicePercentagesSecurity) (*operations.AnalyticsCrashFreeDevicePercentagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crashfree_device_percentages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crashfree_device_percentages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,9 +210,14 @@ func (s *analytics) AnalyticsCrashFreeDevicePercentages(ctx context.Context, req
 
 // AnalyticsCrashGroupCounts - Available for UWP apps only.
 // Count of crashes by day in the time range of the selected crash group with selected version. Available for UWP apps only.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *analytics) AnalyticsCrashGroupCounts(ctx context.Context, request operations.AnalyticsCrashGroupCountsRequest, security operations.AnalyticsCrashGroupCountsSecurity) (*operations.AnalyticsCrashGroupCountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/crash_counts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/crash_counts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -197,9 +274,14 @@ func (s *analytics) AnalyticsCrashGroupCounts(ctx context.Context, request opera
 
 // AnalyticsCrashGroupModelCounts - Available for UWP apps only.
 // Top models of the selected crash group with selected version. Available for UWP apps only.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *analytics) AnalyticsCrashGroupModelCounts(ctx context.Context, request operations.AnalyticsCrashGroupModelCountsRequest, security operations.AnalyticsCrashGroupModelCountsSecurity) (*operations.AnalyticsCrashGroupModelCountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -256,9 +338,14 @@ func (s *analytics) AnalyticsCrashGroupModelCounts(ctx context.Context, request 
 
 // AnalyticsCrashGroupOperatingSystemCounts - Available for UWP apps only.
 // Top OSes of the selected crash group with selected version. Available for UWP apps only.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *analytics) AnalyticsCrashGroupOperatingSystemCounts(ctx context.Context, request operations.AnalyticsCrashGroupOperatingSystemCountsRequest, security operations.AnalyticsCrashGroupOperatingSystemCountsSecurity) (*operations.AnalyticsCrashGroupOperatingSystemCountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/operating_systems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/operating_systems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -315,9 +402,14 @@ func (s *analytics) AnalyticsCrashGroupOperatingSystemCounts(ctx context.Context
 
 // AnalyticsCrashGroupTotals - Available for UWP apps only.
 // Overall crashes and affected users count of the selected crash group with selected version. Available for UWP apps only.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *analytics) AnalyticsCrashGroupTotals(ctx context.Context, request operations.AnalyticsCrashGroupTotalsRequest, security operations.AnalyticsCrashGroupTotalsSecurity) (*operations.AnalyticsCrashGroupTotalsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/overall", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/overall", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -375,7 +467,10 @@ func (s *analytics) AnalyticsCrashGroupTotals(ctx context.Context, request opera
 // AnalyticsCrashGroupsTotals - Overall crashes and affected users count of the selected crash groups with selected versions.
 func (s *analytics) AnalyticsCrashGroupsTotals(ctx context.Context, request operations.AnalyticsCrashGroupsTotalsRequest, security operations.AnalyticsCrashGroupsTotalsSecurity) (*operations.AnalyticsCrashGroupsTotalsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -439,7 +534,10 @@ func (s *analytics) AnalyticsCrashGroupsTotals(ctx context.Context, request oper
 // AnalyticsCreateOrUpdateAudience - Creates or updates audience definition.
 func (s *analytics) AnalyticsCreateOrUpdateAudience(ctx context.Context, request operations.AnalyticsCreateOrUpdateAudienceRequest, security operations.AnalyticsCreateOrUpdateAudienceSecurity) (*operations.AnalyticsCreateOrUpdateAudienceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -503,7 +601,10 @@ func (s *analytics) AnalyticsCreateOrUpdateAudience(ctx context.Context, request
 // AnalyticsDeleteAudience - Deletes audience definition.
 func (s *analytics) AnalyticsDeleteAudience(ctx context.Context, request operations.AnalyticsDeleteAudienceRequest, security operations.AnalyticsDeleteAudienceSecurity) (*operations.AnalyticsDeleteAudienceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -547,10 +648,74 @@ func (s *analytics) AnalyticsDeleteAudience(ctx context.Context, request operati
 	return res, nil
 }
 
+// AnalyticsDeviceCounts - Count of active devices by interval in the time range.
+func (s *analytics) AnalyticsDeviceCounts(ctx context.Context, request operations.AnalyticsDeviceCountsRequest, security operations.AnalyticsDeviceCountsSecurity) (*operations.AnalyticsDeviceCountsResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/active_device_counts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsDeviceCountsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsDeviceCounts200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsDeviceCounts200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsDeviceCountsDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsDeviceCountsDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // AnalyticsDistributionReleaseCounts - Count of total downloads for the provided distribution releases.
 func (s *analytics) AnalyticsDistributionReleaseCounts(ctx context.Context, request operations.AnalyticsDistributionReleaseCountsRequest, security operations.AnalyticsDistributionReleaseCountsSecurity) (*operations.AnalyticsDistributionReleaseCountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/distribution/release_counts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/distribution/release_counts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -611,10 +776,257 @@ func (s *analytics) AnalyticsDistributionReleaseCounts(ctx context.Context, requ
 	return res, nil
 }
 
+// AnalyticsEventCount - Count of events by interval in the time range.
+func (s *analytics) AnalyticsEventCount(ctx context.Context, request operations.AnalyticsEventCountRequest, security operations.AnalyticsEventCountSecurity) (*operations.AnalyticsEventCountResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/event_count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsEventCountResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsEventCount200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsEventCount200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsEventCountDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsEventCountDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// AnalyticsEventDeviceCount - Count of devices for an event by interval in the time range.
+func (s *analytics) AnalyticsEventDeviceCount(ctx context.Context, request operations.AnalyticsEventDeviceCountRequest, security operations.AnalyticsEventDeviceCountSecurity) (*operations.AnalyticsEventDeviceCountResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/device_count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsEventDeviceCountResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsEventDeviceCount200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsEventDeviceCount200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsEventDeviceCountDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsEventDeviceCountDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// AnalyticsEventPerDeviceCount - Count of events per device by interval in the time range.
+func (s *analytics) AnalyticsEventPerDeviceCount(ctx context.Context, request operations.AnalyticsEventPerDeviceCountRequest, security operations.AnalyticsEventPerDeviceCountSecurity) (*operations.AnalyticsEventPerDeviceCountResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/count_per_device", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsEventPerDeviceCountResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsEventPerDeviceCount200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsEventPerDeviceCount200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsEventPerDeviceCountDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsEventPerDeviceCountDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// AnalyticsEventPerSessionCount - Count of events per session by interval in the time range.
+func (s *analytics) AnalyticsEventPerSessionCount(ctx context.Context, request operations.AnalyticsEventPerSessionCountRequest, security operations.AnalyticsEventPerSessionCountSecurity) (*operations.AnalyticsEventPerSessionCountResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/count_per_session", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsEventPerSessionCountResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsEventPerSessionCount200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsEventPerSessionCount200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsEventPerSessionCountDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsEventPerSessionCountDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // AnalyticsEventProperties - Event properties.
 func (s *analytics) AnalyticsEventProperties(ctx context.Context, request operations.AnalyticsEventPropertiesRequest, security operations.AnalyticsEventPropertiesSecurity) (*operations.AnalyticsEventPropertiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/properties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/properties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -665,10 +1077,135 @@ func (s *analytics) AnalyticsEventProperties(ctx context.Context, request operat
 	return res, nil
 }
 
+// AnalyticsEventPropertyCounts - Event properties value counts during the time range in descending order.
+func (s *analytics) AnalyticsEventPropertyCounts(ctx context.Context, request operations.AnalyticsEventPropertyCountsRequest, security operations.AnalyticsEventPropertyCountsSecurity) (*operations.AnalyticsEventPropertyCountsResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/properties/{event_property_name}/counts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsEventPropertyCountsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsEventPropertyCounts200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsEventPropertyCounts200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsEventPropertyCountsDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsEventPropertyCountsDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// AnalyticsEvents - Count of active events in the time range ordered by event.
+func (s *analytics) AnalyticsEvents(ctx context.Context, request operations.AnalyticsEventsRequest, security operations.AnalyticsEventsSecurity) (*operations.AnalyticsEventsResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsEventsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsEvents200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsEvents200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsEventsDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsEventsDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // AnalyticsEventsDelete - Delete the set of Events with the specified event names.
 func (s *analytics) AnalyticsEventsDelete(ctx context.Context, request operations.AnalyticsEventsDeleteRequest, security operations.AnalyticsEventsDeleteSecurity) (*operations.AnalyticsEventsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -713,7 +1250,10 @@ func (s *analytics) AnalyticsEventsDelete(ctx context.Context, request operation
 // AnalyticsEventsDeleteLogs - Delete the set of Events with the specified event names.
 func (s *analytics) AnalyticsEventsDeleteLogs(ctx context.Context, request operations.AnalyticsEventsDeleteLogsRequest, security operations.AnalyticsEventsDeleteLogsSecurity) (*operations.AnalyticsEventsDeleteLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/event_logs/{event_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/event_logs/{event_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -758,7 +1298,10 @@ func (s *analytics) AnalyticsEventsDeleteLogs(ctx context.Context, request opera
 // AnalyticsGenericLogFlow - Logs received between the specified start time and the current time. The API will return a maximum of 100 logs per call.
 func (s *analytics) AnalyticsGenericLogFlow(ctx context.Context, request operations.AnalyticsGenericLogFlowRequest, security operations.AnalyticsGenericLogFlowSecurity) (*operations.AnalyticsGenericLogFlowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/generic_log_flow", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/generic_log_flow", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -816,7 +1359,10 @@ func (s *analytics) AnalyticsGenericLogFlow(ctx context.Context, request operati
 // AnalyticsGetAudience - Gets audience definition.
 func (s *analytics) AnalyticsGetAudience(ctx context.Context, request operations.AnalyticsGetAudienceRequest, security operations.AnalyticsGetAudienceSecurity) (*operations.AnalyticsGetAudienceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -867,10 +1413,74 @@ func (s *analytics) AnalyticsGetAudience(ctx context.Context, request operations
 	return res, nil
 }
 
+// AnalyticsLanguageCounts - Languages in the time range.
+func (s *analytics) AnalyticsLanguageCounts(ctx context.Context, request operations.AnalyticsLanguageCountsRequest, security operations.AnalyticsLanguageCountsSecurity) (*operations.AnalyticsLanguageCountsResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/languages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsLanguageCountsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsLanguageCounts200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsLanguageCounts200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsLanguageCountsDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsLanguageCountsDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // AnalyticsListAudiences - Get list of audiences.
 func (s *analytics) AnalyticsListAudiences(ctx context.Context, request operations.AnalyticsListAudiencesRequest, security operations.AnalyticsListAudiencesSecurity) (*operations.AnalyticsListAudiencesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -928,7 +1538,10 @@ func (s *analytics) AnalyticsListAudiences(ctx context.Context, request operatio
 // AnalyticsListCustomProperties - Get list of custom properties.
 func (s *analytics) AnalyticsListCustomProperties(ctx context.Context, request operations.AnalyticsListCustomPropertiesRequest, security operations.AnalyticsListCustomPropertiesSecurity) (*operations.AnalyticsListCustomPropertiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/custom_properties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/custom_properties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -982,7 +1595,10 @@ func (s *analytics) AnalyticsListCustomProperties(ctx context.Context, request o
 // AnalyticsListDeviceProperties - Get list of device properties.
 func (s *analytics) AnalyticsListDeviceProperties(ctx context.Context, request operations.AnalyticsListDevicePropertiesRequest, security operations.AnalyticsListDevicePropertiesSecurity) (*operations.AnalyticsListDevicePropertiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/device_properties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/device_properties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1036,7 +1652,10 @@ func (s *analytics) AnalyticsListDeviceProperties(ctx context.Context, request o
 // AnalyticsListDevicePropertyValues - Get list of device property values.
 func (s *analytics) AnalyticsListDevicePropertyValues(ctx context.Context, request operations.AnalyticsListDevicePropertyValuesRequest, security operations.AnalyticsListDevicePropertyValuesSecurity) (*operations.AnalyticsListDevicePropertyValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/device_properties/{property_name}/values", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/device_properties/{property_name}/values", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1094,7 +1713,10 @@ func (s *analytics) AnalyticsListDevicePropertyValues(ctx context.Context, reque
 // AnalyticsLogFlow - Logs received between the specified start time and the current time. The API will return a maximum of 100 logs per call.
 func (s *analytics) AnalyticsLogFlow(ctx context.Context, request operations.AnalyticsLogFlowRequest, security operations.AnalyticsLogFlowSecurity) (*operations.AnalyticsLogFlowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/log_flow", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/log_flow", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1149,10 +1771,379 @@ func (s *analytics) AnalyticsLogFlow(ctx context.Context, request operations.Ana
 	return res, nil
 }
 
+// AnalyticsModelCounts - Models in the time range.
+func (s *analytics) AnalyticsModelCounts(ctx context.Context, request operations.AnalyticsModelCountsRequest, security operations.AnalyticsModelCountsSecurity) (*operations.AnalyticsModelCountsResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsModelCountsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsModelCounts200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsModelCounts200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsModelCountsDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsModelCountsDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// AnalyticsOperatingSystemCounts - OSes in the time range.
+func (s *analytics) AnalyticsOperatingSystemCounts(ctx context.Context, request operations.AnalyticsOperatingSystemCountsRequest, security operations.AnalyticsOperatingSystemCountsSecurity) (*operations.AnalyticsOperatingSystemCountsResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/oses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsOperatingSystemCountsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsOperatingSystemCounts200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsOperatingSystemCounts200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsOperatingSystemCountsDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsOperatingSystemCountsDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// AnalyticsPerDeviceCounts - Count of sessions per device in the time range.
+func (s *analytics) AnalyticsPerDeviceCounts(ctx context.Context, request operations.AnalyticsPerDeviceCountsRequest, security operations.AnalyticsPerDeviceCountsSecurity) (*operations.AnalyticsPerDeviceCountsResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/sessions_per_device", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsPerDeviceCountsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsPerDeviceCounts200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsPerDeviceCounts200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsPerDeviceCountsDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsPerDeviceCountsDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// AnalyticsPlaceCounts - Places in the time range.
+func (s *analytics) AnalyticsPlaceCounts(ctx context.Context, request operations.AnalyticsPlaceCountsRequest, security operations.AnalyticsPlaceCountsSecurity) (*operations.AnalyticsPlaceCountsResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/places", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsPlaceCountsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsPlaceCounts200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsPlaceCounts200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsPlaceCountsDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsPlaceCountsDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// AnalyticsSessionCounts - Count of sessions in the time range.
+func (s *analytics) AnalyticsSessionCounts(ctx context.Context, request operations.AnalyticsSessionCountsRequest, security operations.AnalyticsSessionCountsSecurity) (*operations.AnalyticsSessionCountsResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/session_counts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsSessionCountsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []operations.AnalyticsSessionCounts200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsSessionCounts200ApplicationJSONObjects = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsSessionCountsDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsSessionCountsDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// AnalyticsSessionDurationsDistribution - Gets session duration.
+func (s *analytics) AnalyticsSessionDurationsDistribution(ctx context.Context, request operations.AnalyticsSessionDurationsDistributionRequest, security operations.AnalyticsSessionDurationsDistributionSecurity) (*operations.AnalyticsSessionDurationsDistributionResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/session_durations_distribution", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsSessionDurationsDistributionResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsSessionDurationsDistribution200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsSessionDurationsDistribution200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsSessionDurationsDistributionDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsSessionDurationsDistributionDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // AnalyticsTestAudience - Tests audience definition.
 func (s *analytics) AnalyticsTestAudience(ctx context.Context, request operations.AnalyticsTestAudienceRequest, security operations.AnalyticsTestAudienceSecurity) (*operations.AnalyticsTestAudienceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/definition/test", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/definition/test", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1213,12 +2204,76 @@ func (s *analytics) AnalyticsTestAudience(ctx context.Context, request operation
 	return res, nil
 }
 
+// AnalyticsVersions - Count of active versions in the time range ordered by version.
+func (s *analytics) AnalyticsVersions(ctx context.Context, request operations.AnalyticsVersionsRequest, security operations.AnalyticsVersionsSecurity) (*operations.AnalyticsVersionsResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/analytics/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsVersionsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsVersions200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsVersions200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.AnalyticsVersionsDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AnalyticsVersionsDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // AppBlockLogs - **Warning, this operation is not reversible.**
 //
 // A successful call to this API will permanently stop ingesting any logs received via SDK by app_id, and cannot be restored. We advise caution when using this API, it is designed to permanently disable an app_id.
 func (s *analytics) AppBlockLogs(ctx context.Context, request operations.AppBlockLogsRequest, security operations.AppBlockLogsSecurity) (*operations.AppBlockLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/devices/block_logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/devices/block_logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1263,7 +2318,10 @@ func (s *analytics) AppBlockLogs(ctx context.Context, request operations.AppBloc
 // CrashesListSessionLogs - Get session logs by crash ID
 func (s *analytics) CrashesListSessionLogs(ctx context.Context, request operations.CrashesListSessionLogsRequest, security operations.CrashesListSessionLogsSecurity) (*operations.CrashesListSessionLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/session_logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/session_logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1323,7 +2381,10 @@ func (s *analytics) CrashesListSessionLogs(ctx context.Context, request operatio
 //	A successful call to this API will permanently stop ingesting any logs received via SDK for the given installation ID, and cannot be restored. We advise caution when using this API, it is designed to permanently disable collection from a specific installation of the app on a device, usually following the request from a user.
 func (s *analytics) DevicesBlockLogs(ctx context.Context, request operations.DevicesBlockLogsRequest, security operations.DevicesBlockLogsSecurity) (*operations.DevicesBlockLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{install_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{install_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

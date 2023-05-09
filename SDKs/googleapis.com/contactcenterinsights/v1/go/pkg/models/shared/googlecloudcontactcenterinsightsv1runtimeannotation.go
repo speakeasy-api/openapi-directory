@@ -10,6 +10,8 @@ type GoogleCloudContactcenterinsightsV1RuntimeAnnotation struct {
 	AnswerFeedback *GoogleCloudContactcenterinsightsV1AnswerFeedback `json:"answerFeedback,omitempty"`
 	// Agent Assist Article Suggestion data.
 	ArticleSuggestion *GoogleCloudContactcenterinsightsV1ArticleSuggestionData `json:"articleSuggestion,omitempty"`
+	// Conversation summarization suggestion data.
+	ConversationSummarizationSuggestion *GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData `json:"conversationSummarizationSuggestion,omitempty"`
 	// The time at which this annotation was created.
 	CreateTime *string `json:"createTime,omitempty"`
 	// Dialogflow interaction data.

@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <div class="Vlt-callout Vlt-callout--critical"> <i></i> <div class="Vlt-callout__content">
 //
 //	<h4>Applications V1 is deprecated</h4>
@@ -155,7 +170,10 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 // You use a `DELETE` request to delete a single application.
 func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteApplicationRequest) (*operations.DeleteApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{app_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{app_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -191,7 +209,10 @@ func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteAp
 // You use a `GET` request to retrieve details about a single application.
 func (s *SDK) RetrieveApplication(ctx context.Context, request operations.RetrieveApplicationRequest) (*operations.RetrieveApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{app_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{app_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -289,7 +310,10 @@ func (s *SDK) RetrieveApplications(ctx context.Context, request operations.Retri
 // You use a `PUT` request to update an existing application.
 func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateApplicationRequest) (*operations.UpdateApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{app_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{app_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -13,16 +13,20 @@ const (
 	OpsItemEventFilterOperatorEnumEqual OpsItemEventFilterOperatorEnum = "Equal"
 )
 
+func (e OpsItemEventFilterOperatorEnum) ToPointer() *OpsItemEventFilterOperatorEnum {
+	return &e
+}
+
 func (e *OpsItemEventFilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Equal":
-		*e = OpsItemEventFilterOperatorEnum(s)
+		*e = OpsItemEventFilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpsItemEventFilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for OpsItemEventFilterOperatorEnum: %v", v)
 	}
 }

@@ -17,17 +17,21 @@ const (
 	GETDescribeAlarmHistoryActionEnumDescribeAlarmHistory GETDescribeAlarmHistoryActionEnum = "DescribeAlarmHistory"
 )
 
+func (e GETDescribeAlarmHistoryActionEnum) ToPointer() *GETDescribeAlarmHistoryActionEnum {
+	return &e
+}
+
 func (e *GETDescribeAlarmHistoryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeAlarmHistory":
-		*e = GETDescribeAlarmHistoryActionEnum(s)
+		*e = GETDescribeAlarmHistoryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAlarmHistoryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAlarmHistoryActionEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	GETDescribeAlarmHistoryHistoryItemTypeEnumAction              GETDescribeAlarmHistoryHistoryItemTypeEnum = "Action"
 )
 
+func (e GETDescribeAlarmHistoryHistoryItemTypeEnum) ToPointer() *GETDescribeAlarmHistoryHistoryItemTypeEnum {
+	return &e
+}
+
 func (e *GETDescribeAlarmHistoryHistoryItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ConfigurationUpdate":
 		fallthrough
 	case "StateUpdate":
 		fallthrough
 	case "Action":
-		*e = GETDescribeAlarmHistoryHistoryItemTypeEnum(s)
+		*e = GETDescribeAlarmHistoryHistoryItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAlarmHistoryHistoryItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAlarmHistoryHistoryItemTypeEnum: %v", v)
 	}
 }
 
@@ -66,19 +74,23 @@ const (
 	GETDescribeAlarmHistoryScanByEnumTimestampAscending  GETDescribeAlarmHistoryScanByEnum = "TimestampAscending"
 )
 
+func (e GETDescribeAlarmHistoryScanByEnum) ToPointer() *GETDescribeAlarmHistoryScanByEnum {
+	return &e
+}
+
 func (e *GETDescribeAlarmHistoryScanByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TimestampDescending":
 		fallthrough
 	case "TimestampAscending":
-		*e = GETDescribeAlarmHistoryScanByEnum(s)
+		*e = GETDescribeAlarmHistoryScanByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAlarmHistoryScanByEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAlarmHistoryScanByEnum: %v", v)
 	}
 }
 
@@ -89,17 +101,21 @@ const (
 	GETDescribeAlarmHistoryVersionEnumTwoThousandAndTen0801 GETDescribeAlarmHistoryVersionEnum = "2010-08-01"
 )
 
+func (e GETDescribeAlarmHistoryVersionEnum) ToPointer() *GETDescribeAlarmHistoryVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeAlarmHistoryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = GETDescribeAlarmHistoryVersionEnum(s)
+		*e = GETDescribeAlarmHistoryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAlarmHistoryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAlarmHistoryVersionEnum: %v", v)
 	}
 }
 

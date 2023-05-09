@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetUUIDRequest{
-        Count: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.UUIDGeneration.GetUUID(ctx, req, operations.GetUUIDSecurity{
+    res, err := s.UUIDGeneration.GetUUID(ctx, operations.GetUUIDRequest{
+        Count: sdk.Int64(548814),
+    }, operations.GetUUIDSecurity{
         XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
     })
     if err != nil {

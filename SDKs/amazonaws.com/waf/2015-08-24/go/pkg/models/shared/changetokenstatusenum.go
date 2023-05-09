@@ -15,20 +15,24 @@ const (
 	ChangeTokenStatusEnumInsync      ChangeTokenStatusEnum = "INSYNC"
 )
 
+func (e ChangeTokenStatusEnum) ToPointer() *ChangeTokenStatusEnum {
+	return &e
+}
+
 func (e *ChangeTokenStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROVISIONED":
 		fallthrough
 	case "PENDING":
 		fallthrough
 	case "INSYNC":
-		*e = ChangeTokenStatusEnum(s)
+		*e = ChangeTokenStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChangeTokenStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ChangeTokenStatusEnum: %v", v)
 	}
 }

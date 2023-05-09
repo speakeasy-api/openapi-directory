@@ -21,12 +21,16 @@ const (
 	ManagedCertificateStatusEnumFailedRetryingCaaChecking   ManagedCertificateStatusEnum = "FAILED_RETRYING_CAA_CHECKING"
 )
 
+func (e ManagedCertificateStatusEnum) ToPointer() *ManagedCertificateStatusEnum {
+	return &e
+}
+
 func (e *ManagedCertificateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_STATUS":
 		fallthrough
 	case "OK":
@@ -42,10 +46,10 @@ func (e *ManagedCertificateStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED_RETRYING_CAA_FORBIDDEN":
 		fallthrough
 	case "FAILED_RETRYING_CAA_CHECKING":
-		*e = ManagedCertificateStatusEnum(s)
+		*e = ManagedCertificateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagedCertificateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagedCertificateStatusEnum: %v", v)
 	}
 }
 

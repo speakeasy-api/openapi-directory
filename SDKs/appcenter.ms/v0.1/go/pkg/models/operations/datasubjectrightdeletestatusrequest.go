@@ -31,12 +31,16 @@ const (
 	DataSubjectRightDeleteStatusRequestDefaultApplicationJSONErrorCodeEnumTooManyRequests     DataSubjectRightDeleteStatusRequestDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DataSubjectRightDeleteStatusRequestDefaultApplicationJSONErrorCodeEnum) ToPointer() *DataSubjectRightDeleteStatusRequestDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DataSubjectRightDeleteStatusRequestDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *DataSubjectRightDeleteStatusRequestDefaultApplicationJSONErrorCodeEnum)
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DataSubjectRightDeleteStatusRequestDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DataSubjectRightDeleteStatusRequestDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSubjectRightDeleteStatusRequestDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSubjectRightDeleteStatusRequestDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -79,12 +83,16 @@ const (
 	DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnumFailed     DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnum = "Failed"
 )
 
+func (e DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnum) ToPointer() *DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "Created":
@@ -96,10 +104,10 @@ func (e *DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnum) Unmars
 	case "Completed":
 		fallthrough
 	case "Failed":
-		*e = DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnum(s)
+		*e = DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSubjectRightDeleteStatusRequest200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

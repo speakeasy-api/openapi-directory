@@ -16,21 +16,25 @@ const (
 	GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnumShortDate             GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum = "SHORT_DATE"
 )
 
+func (e GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum) ToPointer() *GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATE_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "LONG_DATE":
 		fallthrough
 	case "SHORT_DATE":
-		*e = GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum(s)
+		*e = GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnum: %v", v)
 	}
 }
 

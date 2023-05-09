@@ -16,17 +16,21 @@ const (
 	UpdateDeviceInstanceXAmzTargetEnumDeviceFarm20150623UpdateDeviceInstance UpdateDeviceInstanceXAmzTargetEnum = "DeviceFarm_20150623.UpdateDeviceInstance"
 )
 
+func (e UpdateDeviceInstanceXAmzTargetEnum) ToPointer() *UpdateDeviceInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDeviceInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.UpdateDeviceInstance":
-		*e = UpdateDeviceInstanceXAmzTargetEnum(s)
+		*e = UpdateDeviceInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDeviceInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDeviceInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

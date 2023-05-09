@@ -89,7 +89,10 @@ func newSource(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // by the commit made on 2011-05-16, and was previously named `README.txt`.
 func (s *source) GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest, security operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/filehistory/{commit}/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/filehistory/{commit}/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -155,7 +158,10 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(ctx conte
 // To create new commits, [POST to this endpoint](#post)
 func (s *source) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcRequest, security operations.GetRepositoriesWorkspaceRepoSlugSrcSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugSrcResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -421,7 +427,10 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, reques
 // details.
 func (s *source) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest, security operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src/{commit}/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src/{commit}/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -608,7 +617,10 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Conte
 // subrepos / submodules.
 func (s *source) PostRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugSrcRequest, security operations.PostRepositoriesWorkspaceRepoSlugSrcSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugSrcResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

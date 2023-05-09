@@ -19,12 +19,16 @@ const (
 	CodespacesSetCodespacesBillingRequestBodyVisibilityEnumAllMembersAndOutsideCollaborators CodespacesSetCodespacesBillingRequestBodyVisibilityEnum = "all_members_and_outside_collaborators"
 )
 
+func (e CodespacesSetCodespacesBillingRequestBodyVisibilityEnum) ToPointer() *CodespacesSetCodespacesBillingRequestBodyVisibilityEnum {
+	return &e
+}
+
 func (e *CodespacesSetCodespacesBillingRequestBodyVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "selected_members":
@@ -32,10 +36,10 @@ func (e *CodespacesSetCodespacesBillingRequestBodyVisibilityEnum) UnmarshalJSON(
 	case "all_members":
 		fallthrough
 	case "all_members_and_outside_collaborators":
-		*e = CodespacesSetCodespacesBillingRequestBodyVisibilityEnum(s)
+		*e = CodespacesSetCodespacesBillingRequestBodyVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodespacesSetCodespacesBillingRequestBodyVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for CodespacesSetCodespacesBillingRequestBodyVisibilityEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DeleteSecretXAmzTargetEnumSecretsmanagerDeleteSecret DeleteSecretXAmzTargetEnum = "secretsmanager.DeleteSecret"
 )
 
+func (e DeleteSecretXAmzTargetEnum) ToPointer() *DeleteSecretXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteSecretXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "secretsmanager.DeleteSecret":
-		*e = DeleteSecretXAmzTargetEnum(s)
+		*e = DeleteSecretXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSecretXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSecretXAmzTargetEnum: %v", v)
 	}
 }
 

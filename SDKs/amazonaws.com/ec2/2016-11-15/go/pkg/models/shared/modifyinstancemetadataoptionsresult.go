@@ -15,19 +15,23 @@ const (
 	ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPEndpointEnumEnabled  ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPEndpointEnum = "enabled"
 )
 
+func (e ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPEndpointEnum) ToPointer() *ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPEndpointEnum {
+	return &e
+}
+
 func (e *ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPEndpointEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPEndpointEnum(s)
+		*e = ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPEndpointEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPEndpointEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPEndpointEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPProtocolIpv6EnumEnabled  ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPProtocolIpv6Enum = "enabled"
 )
 
+func (e ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPProtocolIpv6Enum) ToPointer() *ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPProtocolIpv6Enum {
+	return &e
+}
+
 func (e *ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPProtocolIpv6Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPProtocolIpv6Enum(s)
+		*e = ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPProtocolIpv6Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPProtocolIpv6Enum: %s", s)
+		return fmt.Errorf("invalid value for ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPProtocolIpv6Enum: %v", v)
 	}
 }
 
@@ -63,19 +71,23 @@ const (
 	ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPTokensEnumRequired ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPTokensEnum = "required"
 )
 
+func (e ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPTokensEnum) ToPointer() *ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPTokensEnum {
+	return &e
+}
+
 func (e *ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPTokensEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "optional":
 		fallthrough
 	case "required":
-		*e = ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPTokensEnum(s)
+		*e = ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPTokensEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPTokensEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHTTPTokensEnum: %v", v)
 	}
 }
 
@@ -87,19 +99,23 @@ const (
 	ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsInstanceMetadataTagsEnumEnabled  ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsInstanceMetadataTagsEnum = "enabled"
 )
 
+func (e ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsInstanceMetadataTagsEnum) ToPointer() *ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsInstanceMetadataTagsEnum {
+	return &e
+}
+
 func (e *ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsInstanceMetadataTagsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsInstanceMetadataTagsEnum(s)
+		*e = ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsInstanceMetadataTagsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsInstanceMetadataTagsEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsInstanceMetadataTagsEnum: %v", v)
 	}
 }
 
@@ -111,19 +127,23 @@ const (
 	ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsStateEnumApplied ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsStateEnum = "applied"
 )
 
+func (e ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsStateEnum) ToPointer() *ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsStateEnum {
+	return &e
+}
+
 func (e *ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "applied":
-		*e = ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsStateEnum(s)
+		*e = ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsStateEnum: %v", v)
 	}
 }
 

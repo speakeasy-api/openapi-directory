@@ -26,12 +26,16 @@ const (
 	TravelerPricingFareOptionEnumCompanion                         TravelerPricingFareOptionEnum = "COMPANION"
 )
 
+func (e TravelerPricingFareOptionEnum) ToPointer() *TravelerPricingFareOptionEnum {
+	return &e
+}
+
 func (e *TravelerPricingFareOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD":
 		fallthrough
 	case "INCLUSIVE_TOUR":
@@ -55,9 +59,9 @@ func (e *TravelerPricingFareOptionEnum) UnmarshalJSON(data []byte) error {
 	case "ADULT_WITH_COMPANION":
 		fallthrough
 	case "COMPANION":
-		*e = TravelerPricingFareOptionEnum(s)
+		*e = TravelerPricingFareOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TravelerPricingFareOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TravelerPricingFareOptionEnum: %v", v)
 	}
 }

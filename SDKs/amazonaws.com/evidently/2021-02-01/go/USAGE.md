@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,38 +17,36 @@ func main() {
         }),
     )
 
-    req := operations.BatchEvaluateFeatureRequest{
+    ctx := context.Background()
+    res, err := s.BatchEvaluateFeature(ctx, operations.BatchEvaluateFeatureRequest{
         RequestBody: operations.BatchEvaluateFeatureRequestBody{
             Requests: []shared.EvaluationRequest{
                 shared.EvaluationRequest{
                     EntityID: "provident",
-                    EvaluationContext: "distinctio",
+                    EvaluationContext: sdk.String("distinctio"),
                     Feature: "quibusdam",
                 },
                 shared.EvaluationRequest{
                     EntityID: "unde",
-                    EvaluationContext: "nulla",
+                    EvaluationContext: sdk.String("nulla"),
                     Feature: "corrupti",
                 },
                 shared.EvaluationRequest{
                     EntityID: "illum",
-                    EvaluationContext: "vel",
+                    EvaluationContext: sdk.String("vel"),
                     Feature: "error",
                 },
             },
         },
-        XAmzAlgorithm: "deserunt",
-        XAmzContentSha256: "suscipit",
-        XAmzCredential: "iure",
-        XAmzDate: "magnam",
-        XAmzSecurityToken: "debitis",
-        XAmzSignature: "ipsa",
-        XAmzSignedHeaders: "delectus",
+        XAmzAlgorithm: sdk.String("deserunt"),
+        XAmzContentSha256: sdk.String("suscipit"),
+        XAmzCredential: sdk.String("iure"),
+        XAmzDate: sdk.String("magnam"),
+        XAmzSecurityToken: sdk.String("debitis"),
+        XAmzSignature: sdk.String("ipsa"),
+        XAmzSignedHeaders: sdk.String("delectus"),
         Project: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchEvaluateFeature(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

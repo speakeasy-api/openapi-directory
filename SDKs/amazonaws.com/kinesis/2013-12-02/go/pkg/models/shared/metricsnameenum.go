@@ -20,12 +20,16 @@ const (
 	MetricsNameEnumAll                                MetricsNameEnum = "ALL"
 )
 
+func (e MetricsNameEnum) ToPointer() *MetricsNameEnum {
+	return &e
+}
+
 func (e *MetricsNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IncomingBytes":
 		fallthrough
 	case "IncomingRecords":
@@ -41,9 +45,9 @@ func (e *MetricsNameEnum) UnmarshalJSON(data []byte) error {
 	case "IteratorAgeMilliseconds":
 		fallthrough
 	case "ALL":
-		*e = MetricsNameEnum(s)
+		*e = MetricsNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricsNameEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricsNameEnum: %v", v)
 	}
 }

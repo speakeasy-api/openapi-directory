@@ -16,21 +16,25 @@ const (
 	ReplaceAllShapesWithImageRequestImageReplaceMethodEnumCenterCrop                    ReplaceAllShapesWithImageRequestImageReplaceMethodEnum = "CENTER_CROP"
 )
 
+func (e ReplaceAllShapesWithImageRequestImageReplaceMethodEnum) ToPointer() *ReplaceAllShapesWithImageRequestImageReplaceMethodEnum {
+	return &e
+}
+
 func (e *ReplaceAllShapesWithImageRequestImageReplaceMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMAGE_REPLACE_METHOD_UNSPECIFIED":
 		fallthrough
 	case "CENTER_INSIDE":
 		fallthrough
 	case "CENTER_CROP":
-		*e = ReplaceAllShapesWithImageRequestImageReplaceMethodEnum(s)
+		*e = ReplaceAllShapesWithImageRequestImageReplaceMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplaceAllShapesWithImageRequestImageReplaceMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplaceAllShapesWithImageRequestImageReplaceMethodEnum: %v", v)
 	}
 }
 
@@ -42,19 +46,23 @@ const (
 	ReplaceAllShapesWithImageRequestReplaceMethodEnumCenterCrop   ReplaceAllShapesWithImageRequestReplaceMethodEnum = "CENTER_CROP"
 )
 
+func (e ReplaceAllShapesWithImageRequestReplaceMethodEnum) ToPointer() *ReplaceAllShapesWithImageRequestReplaceMethodEnum {
+	return &e
+}
+
 func (e *ReplaceAllShapesWithImageRequestReplaceMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CENTER_INSIDE":
 		fallthrough
 	case "CENTER_CROP":
-		*e = ReplaceAllShapesWithImageRequestReplaceMethodEnum(s)
+		*e = ReplaceAllShapesWithImageRequestReplaceMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplaceAllShapesWithImageRequestReplaceMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplaceAllShapesWithImageRequestReplaceMethodEnum: %v", v)
 	}
 }
 

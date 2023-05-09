@@ -16,17 +16,21 @@ const (
 	GETUpdateScalingParametersActionEnumUpdateScalingParameters GETUpdateScalingParametersActionEnum = "UpdateScalingParameters"
 )
 
+func (e GETUpdateScalingParametersActionEnum) ToPointer() *GETUpdateScalingParametersActionEnum {
+	return &e
+}
+
 func (e *GETUpdateScalingParametersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateScalingParameters":
-		*e = GETUpdateScalingParametersActionEnum(s)
+		*e = GETUpdateScalingParametersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateScalingParametersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateScalingParametersActionEnum: %v", v)
 	}
 }
 
@@ -44,17 +48,21 @@ const (
 	GETUpdateScalingParametersVersionEnumTwoThousandAndThirteen0101 GETUpdateScalingParametersVersionEnum = "2013-01-01"
 )
 
+func (e GETUpdateScalingParametersVersionEnum) ToPointer() *GETUpdateScalingParametersVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateScalingParametersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = GETUpdateScalingParametersVersionEnum(s)
+		*e = GETUpdateScalingParametersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateScalingParametersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateScalingParametersVersionEnum: %v", v)
 	}
 }
 

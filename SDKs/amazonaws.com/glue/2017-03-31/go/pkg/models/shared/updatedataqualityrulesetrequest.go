@@ -6,5 +6,4 @@ type UpdateDataQualityRulesetRequest struct {
 	Description *string `json:"Description,omitempty"`
 	Name        string  `json:"Name"`
 	Ruleset     *string `json:"Ruleset,omitempty"`
-	UpdatedName *string `json:"UpdatedName,omitempty"`
 }

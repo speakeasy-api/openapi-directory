@@ -16,17 +16,21 @@ const (
 	CreateGUISessionAccessDetailsXAmzTargetEnumLightsail20161128CreateGuiSessionAccessDetails CreateGUISessionAccessDetailsXAmzTargetEnum = "Lightsail_20161128.CreateGUISessionAccessDetails"
 )
 
+func (e CreateGUISessionAccessDetailsXAmzTargetEnum) ToPointer() *CreateGUISessionAccessDetailsXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateGUISessionAccessDetailsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.CreateGUISessionAccessDetails":
-		*e = CreateGUISessionAccessDetailsXAmzTargetEnum(s)
+		*e = CreateGUISessionAccessDetailsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateGUISessionAccessDetailsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateGUISessionAccessDetailsXAmzTargetEnum: %v", v)
 	}
 }
 

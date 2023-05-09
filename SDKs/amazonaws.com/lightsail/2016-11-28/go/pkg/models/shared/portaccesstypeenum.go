@@ -14,18 +14,22 @@ const (
 	PortAccessTypeEnumPrivate PortAccessTypeEnum = "Private"
 )
 
+func (e PortAccessTypeEnum) ToPointer() *PortAccessTypeEnum {
+	return &e
+}
+
 func (e *PortAccessTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Public":
 		fallthrough
 	case "Private":
-		*e = PortAccessTypeEnum(s)
+		*e = PortAccessTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PortAccessTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PortAccessTypeEnum: %v", v)
 	}
 }

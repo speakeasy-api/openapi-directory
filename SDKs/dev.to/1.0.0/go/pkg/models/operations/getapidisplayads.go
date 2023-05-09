@@ -4,10 +4,13 @@ package operations
 
 import (
 	"net/http"
+	"openapi/pkg/models/shared"
 )
 
 type GetAPIDisplayAdsResponse struct {
 	ContentType string
+	// successful
+	DisplayAds  []shared.DisplayAd
 	StatusCode  int
 	RawResponse *http.Response
 }

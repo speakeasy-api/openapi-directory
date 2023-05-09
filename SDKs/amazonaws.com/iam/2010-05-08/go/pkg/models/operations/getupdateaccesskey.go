@@ -15,17 +15,21 @@ const (
 	GETUpdateAccessKeyActionEnumUpdateAccessKey GETUpdateAccessKeyActionEnum = "UpdateAccessKey"
 )
 
+func (e GETUpdateAccessKeyActionEnum) ToPointer() *GETUpdateAccessKeyActionEnum {
+	return &e
+}
+
 func (e *GETUpdateAccessKeyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateAccessKey":
-		*e = GETUpdateAccessKeyActionEnum(s)
+		*e = GETUpdateAccessKeyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateAccessKeyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateAccessKeyActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETUpdateAccessKeyStatusEnumInactive GETUpdateAccessKeyStatusEnum = "Inactive"
 )
 
+func (e GETUpdateAccessKeyStatusEnum) ToPointer() *GETUpdateAccessKeyStatusEnum {
+	return &e
+}
+
 func (e *GETUpdateAccessKeyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Inactive":
-		*e = GETUpdateAccessKeyStatusEnum(s)
+		*e = GETUpdateAccessKeyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateAccessKeyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateAccessKeyStatusEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETUpdateAccessKeyVersionEnumTwoThousandAndTen0508 GETUpdateAccessKeyVersionEnum = "2010-05-08"
 )
 
+func (e GETUpdateAccessKeyVersionEnum) ToPointer() *GETUpdateAccessKeyVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateAccessKeyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETUpdateAccessKeyVersionEnum(s)
+		*e = GETUpdateAccessKeyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateAccessKeyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateAccessKeyVersionEnum: %v", v)
 	}
 }
 

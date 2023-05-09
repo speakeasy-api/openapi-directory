@@ -16,12 +16,16 @@ const (
 	ActivityTaskTimeoutTypeEnumHeartbeat       ActivityTaskTimeoutTypeEnum = "HEARTBEAT"
 )
 
+func (e ActivityTaskTimeoutTypeEnum) ToPointer() *ActivityTaskTimeoutTypeEnum {
+	return &e
+}
+
 func (e *ActivityTaskTimeoutTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "START_TO_CLOSE":
 		fallthrough
 	case "SCHEDULE_TO_START":
@@ -29,9 +33,9 @@ func (e *ActivityTaskTimeoutTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SCHEDULE_TO_CLOSE":
 		fallthrough
 	case "HEARTBEAT":
-		*e = ActivityTaskTimeoutTypeEnum(s)
+		*e = ActivityTaskTimeoutTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivityTaskTimeoutTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivityTaskTimeoutTypeEnum: %v", v)
 	}
 }

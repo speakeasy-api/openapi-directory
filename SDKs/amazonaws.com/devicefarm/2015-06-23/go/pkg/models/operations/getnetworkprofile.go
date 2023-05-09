@@ -16,17 +16,21 @@ const (
 	GetNetworkProfileXAmzTargetEnumDeviceFarm20150623GetNetworkProfile GetNetworkProfileXAmzTargetEnum = "DeviceFarm_20150623.GetNetworkProfile"
 )
 
+func (e GetNetworkProfileXAmzTargetEnum) ToPointer() *GetNetworkProfileXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetNetworkProfileXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.GetNetworkProfile":
-		*e = GetNetworkProfileXAmzTargetEnum(s)
+		*e = GetNetworkProfileXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNetworkProfileXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNetworkProfileXAmzTargetEnum: %v", v)
 	}
 }
 

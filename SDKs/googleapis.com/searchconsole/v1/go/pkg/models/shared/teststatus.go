@@ -17,12 +17,16 @@ const (
 	TestStatusStatusEnumPageUnreachable       TestStatusStatusEnum = "PAGE_UNREACHABLE"
 )
 
+func (e TestStatusStatusEnum) ToPointer() *TestStatusStatusEnum {
+	return &e
+}
+
 func (e *TestStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEST_STATUS_UNSPECIFIED":
 		fallthrough
 	case "COMPLETE":
@@ -30,10 +34,10 @@ func (e *TestStatusStatusEnum) UnmarshalJSON(data []byte) error {
 	case "INTERNAL_ERROR":
 		fallthrough
 	case "PAGE_UNREACHABLE":
-		*e = TestStatusStatusEnum(s)
+		*e = TestStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TestStatusStatusEnum: %v", v)
 	}
 }
 

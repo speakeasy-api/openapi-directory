@@ -64,12 +64,16 @@ const (
 	DeletePolicyModule200ApplicationJSONExplanationOpEnumRedo  DeletePolicyModule200ApplicationJSONExplanationOpEnum = "redo"
 )
 
+func (e DeletePolicyModule200ApplicationJSONExplanationOpEnum) ToPointer() *DeletePolicyModule200ApplicationJSONExplanationOpEnum {
+	return &e
+}
+
 func (e *DeletePolicyModule200ApplicationJSONExplanationOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enter":
 		fallthrough
 	case "exit":
@@ -79,10 +83,10 @@ func (e *DeletePolicyModule200ApplicationJSONExplanationOpEnum) UnmarshalJSON(da
 	case "fail":
 		fallthrough
 	case "redo":
-		*e = DeletePolicyModule200ApplicationJSONExplanationOpEnum(s)
+		*e = DeletePolicyModule200ApplicationJSONExplanationOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletePolicyModule200ApplicationJSONExplanationOpEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletePolicyModule200ApplicationJSONExplanationOpEnum: %v", v)
 	}
 }
 
@@ -95,21 +99,25 @@ const (
 	DeletePolicyModule200ApplicationJSONExplanationTypeEnumBody DeletePolicyModule200ApplicationJSONExplanationTypeEnum = "body"
 )
 
+func (e DeletePolicyModule200ApplicationJSONExplanationTypeEnum) ToPointer() *DeletePolicyModule200ApplicationJSONExplanationTypeEnum {
+	return &e
+}
+
 func (e *DeletePolicyModule200ApplicationJSONExplanationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "expr":
 		fallthrough
 	case "rule":
 		fallthrough
 	case "body":
-		*e = DeletePolicyModule200ApplicationJSONExplanationTypeEnum(s)
+		*e = DeletePolicyModule200ApplicationJSONExplanationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletePolicyModule200ApplicationJSONExplanationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletePolicyModule200ApplicationJSONExplanationTypeEnum: %v", v)
 	}
 }
 
@@ -205,19 +213,23 @@ const (
 	DeletePolicyModule200ApplicationJSONResultAstPackagePathTypeEnumPackage DeletePolicyModule200ApplicationJSONResultAstPackagePathTypeEnum = "package"
 )
 
+func (e DeletePolicyModule200ApplicationJSONResultAstPackagePathTypeEnum) ToPointer() *DeletePolicyModule200ApplicationJSONResultAstPackagePathTypeEnum {
+	return &e
+}
+
 func (e *DeletePolicyModule200ApplicationJSONResultAstPackagePathTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "import":
 		fallthrough
 	case "package":
-		*e = DeletePolicyModule200ApplicationJSONResultAstPackagePathTypeEnum(s)
+		*e = DeletePolicyModule200ApplicationJSONResultAstPackagePathTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletePolicyModule200ApplicationJSONResultAstPackagePathTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletePolicyModule200ApplicationJSONResultAstPackagePathTypeEnum: %v", v)
 	}
 }
 

@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 type SDK struct {
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
@@ -105,7 +120,10 @@ func New(opts ...SDKOption) *SDK {
 // RotoballerArticles - RotoBaller Articles
 func (s *SDK) RotoballerArticles(ctx context.Context, request operations.RotoballerArticlesRequest) (*operations.RotoballerArticlesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerArticles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerArticles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +167,10 @@ func (s *SDK) RotoballerArticles(ctx context.Context, request operations.Rotobal
 // RotoballerArticlesByDate - RotoBaller Articles by Date
 func (s *SDK) RotoballerArticlesByDate(ctx context.Context, request operations.RotoballerArticlesByDateRequest) (*operations.RotoballerArticlesByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerArticlesByDate/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerArticlesByDate/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +214,10 @@ func (s *SDK) RotoballerArticlesByDate(ctx context.Context, request operations.R
 // RotoballerArticlesByPlayer - RotoBaller Articles by Player
 func (s *SDK) RotoballerArticlesByPlayer(ctx context.Context, request operations.RotoballerArticlesByPlayerRequest) (*operations.RotoballerArticlesByPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerArticlesByPlayerID/{playerid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerArticlesByPlayerID/{playerid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

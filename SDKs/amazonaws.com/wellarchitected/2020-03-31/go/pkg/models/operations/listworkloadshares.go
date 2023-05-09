@@ -23,12 +23,16 @@ const (
 	ListWorkloadSharesStatusEnumFailed      ListWorkloadSharesStatusEnum = "FAILED"
 )
 
+func (e ListWorkloadSharesStatusEnum) ToPointer() *ListWorkloadSharesStatusEnum {
+	return &e
+}
+
 func (e *ListWorkloadSharesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCEPTED":
 		fallthrough
 	case "REJECTED":
@@ -44,10 +48,10 @@ func (e *ListWorkloadSharesStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ASSOCIATED":
 		fallthrough
 	case "FAILED":
-		*e = ListWorkloadSharesStatusEnum(s)
+		*e = ListWorkloadSharesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListWorkloadSharesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListWorkloadSharesStatusEnum: %v", v)
 	}
 }
 

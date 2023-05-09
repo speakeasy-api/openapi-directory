@@ -28,12 +28,16 @@ const (
 	FieldTypeDefinitionFieldTypeEnumUnknown             FieldTypeDefinitionFieldTypeEnum = "unknown"
 )
 
+func (e FieldTypeDefinitionFieldTypeEnum) ToPointer() *FieldTypeDefinitionFieldTypeEnum {
+	return &e
+}
+
 func (e *FieldTypeDefinitionFieldTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "booleancheckbox":
 		fallthrough
 	case "checkbox":
@@ -63,10 +67,10 @@ func (e *FieldTypeDefinitionFieldTypeEnum) UnmarshalJSON(data []byte) error {
 	case "calculation_read_time":
 		fallthrough
 	case "unknown":
-		*e = FieldTypeDefinitionFieldTypeEnum(s)
+		*e = FieldTypeDefinitionFieldTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldTypeDefinitionFieldTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldTypeDefinitionFieldTypeEnum: %v", v)
 	}
 }
 
@@ -138,12 +142,16 @@ const (
 	FieldTypeDefinitionReferencedObjectTypeEnumUnknown                  FieldTypeDefinitionReferencedObjectTypeEnum = "UNKNOWN"
 )
 
+func (e FieldTypeDefinitionReferencedObjectTypeEnum) ToPointer() *FieldTypeDefinitionReferencedObjectTypeEnum {
+	return &e
+}
+
 func (e *FieldTypeDefinitionReferencedObjectTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTACT":
 		fallthrough
 	case "COMPANY":
@@ -267,10 +275,10 @@ func (e *FieldTypeDefinitionReferencedObjectTypeEnum) UnmarshalJSON(data []byte)
 	case "TEMPLATE":
 		fallthrough
 	case "UNKNOWN":
-		*e = FieldTypeDefinitionReferencedObjectTypeEnum(s)
+		*e = FieldTypeDefinitionReferencedObjectTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldTypeDefinitionReferencedObjectTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldTypeDefinitionReferencedObjectTypeEnum: %v", v)
 	}
 }
 
@@ -290,12 +298,16 @@ const (
 	FieldTypeDefinitionTypeEnumObjectCoordinates FieldTypeDefinitionTypeEnum = "object_coordinates"
 )
 
+func (e FieldTypeDefinitionTypeEnum) ToPointer() *FieldTypeDefinitionTypeEnum {
+	return &e
+}
+
 func (e *FieldTypeDefinitionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "string":
 		fallthrough
 	case "number":
@@ -315,10 +327,10 @@ func (e *FieldTypeDefinitionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "json":
 		fallthrough
 	case "object_coordinates":
-		*e = FieldTypeDefinitionTypeEnum(s)
+		*e = FieldTypeDefinitionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldTypeDefinitionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldTypeDefinitionTypeEnum: %v", v)
 	}
 }
 

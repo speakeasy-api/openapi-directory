@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - This is the public Twilio REST API.
 type SDK struct {
 
@@ -109,7 +124,10 @@ func (s *SDK) DeleteFax(ctx context.Context, request operations.DeleteFaxRequest
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{Sid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{Sid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -158,7 +176,10 @@ func (s *SDK) DeleteFaxMedia(ctx context.Context, request operations.DeleteFaxMe
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{FaxSid}/Media/{Sid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{FaxSid}/Media/{Sid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -207,7 +228,10 @@ func (s *SDK) FetchFax(ctx context.Context, request operations.FetchFaxRequest, 
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{Sid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{Sid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -265,7 +289,10 @@ func (s *SDK) FetchFaxMedia(ctx context.Context, request operations.FetchFaxMedi
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{FaxSid}/Media/{Sid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{FaxSid}/Media/{Sid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -385,7 +412,10 @@ func (s *SDK) ListFaxMedia(ctx context.Context, request operations.ListFaxMediaR
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{FaxSid}/Media", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/Faxes/{FaxSid}/Media", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

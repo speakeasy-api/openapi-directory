@@ -22,12 +22,16 @@ const (
 	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumLooker                      GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "LOOKER"
 )
 
+func (e GoogleCloudDatacatalogV1EntryIntegratedSystemEnum) ToPointer() *GoogleCloudDatacatalogV1EntryIntegratedSystemEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1EntryIntegratedSystemEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTEGRATED_SYSTEM_UNSPECIFIED":
 		fallthrough
 	case "BIGQUERY":
@@ -45,10 +49,10 @@ func (e *GoogleCloudDatacatalogV1EntryIntegratedSystemEnum) UnmarshalJSON(data [
 	case "CLOUD_SQL":
 		fallthrough
 	case "LOOKER":
-		*e = GoogleCloudDatacatalogV1EntryIntegratedSystemEnum(s)
+		*e = GoogleCloudDatacatalogV1EntryIntegratedSystemEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1EntryIntegratedSystemEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1EntryIntegratedSystemEnum: %v", v)
 	}
 }
 
@@ -74,12 +78,16 @@ const (
 	GoogleCloudDatacatalogV1EntryTypeEnumLook                 GoogleCloudDatacatalogV1EntryTypeEnum = "LOOK"
 )
 
+func (e GoogleCloudDatacatalogV1EntryTypeEnum) ToPointer() *GoogleCloudDatacatalogV1EntryTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1EntryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTRY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TABLE":
@@ -111,10 +119,10 @@ func (e *GoogleCloudDatacatalogV1EntryTypeEnum) UnmarshalJSON(data []byte) error
 	case "EXPLORE":
 		fallthrough
 	case "LOOK":
-		*e = GoogleCloudDatacatalogV1EntryTypeEnum(s)
+		*e = GoogleCloudDatacatalogV1EntryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1EntryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1EntryTypeEnum: %v", v)
 	}
 }
 
@@ -140,7 +148,7 @@ type GoogleCloudDatacatalogV1Entry struct {
 	DisplayName *string `json:"displayName,omitempty"`
 	// Specification that applies to a fileset. Valid only for entries with the 'FILESET' type.
 	FilesetSpec *GoogleCloudDatacatalogV1FilesetSpec `json:"filesetSpec,omitempty"`
-	// Fully qualified name (FQN) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation and read-only afterwards. Can be used for search and lookup of the entries. FQNs take two forms: * For non-regionalized resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
+	// [Fully Qualified Name (FQN)](https://cloud.google.com//data-catalog/docs/fully-qualified-names) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation, and read-only later. Can be used for search and lookup of the entries.
 	FullyQualifiedName *string `json:"fullyQualifiedName,omitempty"`
 	// Describes a Cloud Storage fileset entry.
 	GcsFilesetSpec *GoogleCloudDatacatalogV1GcsFilesetSpec `json:"gcsFilesetSpec,omitempty"`
@@ -194,7 +202,7 @@ type GoogleCloudDatacatalogV1EntryInput struct {
 	DisplayName *string `json:"displayName,omitempty"`
 	// Specification that applies to a fileset. Valid only for entries with the 'FILESET' type.
 	FilesetSpec *GoogleCloudDatacatalogV1FilesetSpec `json:"filesetSpec,omitempty"`
-	// Fully qualified name (FQN) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation and read-only afterwards. Can be used for search and lookup of the entries. FQNs take two forms: * For non-regionalized resources: `{SYSTEM}:{PROJECT}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` * For regionalized resources: `{SYSTEM}:{PROJECT}.{LOCATION_ID}.{PATH_TO_RESOURCE_SEPARATED_WITH_DOTS}` Example for a DPMS table: `dataproc_metastore:{PROJECT_ID}.{LOCATION_ID}.{INSTANCE_ID}.{DATABASE_ID}.{TABLE_ID}`
+	// [Fully Qualified Name (FQN)](https://cloud.google.com//data-catalog/docs/fully-qualified-names) of the resource. Set automatically for entries representing resources from synced systems. Settable only during creation, and read-only later. Can be used for search and lookup of the entries.
 	FullyQualifiedName *string `json:"fullyQualifiedName,omitempty"`
 	// Describes a Cloud Storage fileset entry.
 	GcsFilesetSpec *GoogleCloudDatacatalogV1GcsFilesetSpecInput `json:"gcsFilesetSpec,omitempty"`

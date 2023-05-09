@@ -17,19 +17,23 @@ const (
 	UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnumPublicIP  UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum = "PUBLIC_IP"
 )
 
+func (e UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum) ToPointer() *UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum {
+	return &e
+}
+
 func (e *UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE_IP":
 		fallthrough
 	case "PUBLIC_IP":
-		*e = UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum(s)
+		*e = UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnumAuto UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum = "AUTO"
 )
 
+func (e UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum) ToPointer() *UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum {
+	return &e
+}
+
 func (e *UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GP2":
 		fallthrough
 	case "GP3":
@@ -56,10 +64,10 @@ func (e *UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDis
 	case "ST1":
 		fallthrough
 	case "AUTO":
-		*e = UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum(s)
+		*e = UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum: %v", v)
 	}
 }
 
@@ -71,19 +79,23 @@ const (
 	UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnumCustom  UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum = "CUSTOM"
 )
 
+func (e UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum) ToPointer() *UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum {
+	return &e
+}
+
 func (e *UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "CUSTOM":
-		*e = UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum(s)
+		*e = UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum: %v", v)
 	}
 }
 
@@ -92,6 +104,8 @@ type UpdateReplicationConfigurationTemplateRequestBody struct {
 	Arn *string `json:"arn,omitempty"`
 	// Whether to associate the default Elastic Disaster Recovery Security group with the Replication Configuration Template.
 	AssociateDefaultSecurityGroup *bool `json:"associateDefaultSecurityGroup,omitempty"`
+	// Whether to allow the AWS replication agent to automatically replicate newly added disks.
+	AutoReplicateNewDisks *bool `json:"autoReplicateNewDisks,omitempty"`
 	// Configure bandwidth throttling for the outbound data transfer rate of the Source Server in Mbps.
 	BandwidthThrottling *int64 `json:"bandwidthThrottling,omitempty"`
 	// Whether to create a Public IP for the Recovery Instance by default.

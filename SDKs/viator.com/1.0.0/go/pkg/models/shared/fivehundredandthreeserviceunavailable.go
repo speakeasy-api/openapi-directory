@@ -13,17 +13,21 @@ const (
 	FiveHundredAndThreeSERVICEUNAVAILABLECodeEnumServiceUnavailable FiveHundredAndThreeSERVICEUNAVAILABLECodeEnum = "SERVICE_UNAVAILABLE"
 )
 
+func (e FiveHundredAndThreeSERVICEUNAVAILABLECodeEnum) ToPointer() *FiveHundredAndThreeSERVICEUNAVAILABLECodeEnum {
+	return &e
+}
+
 func (e *FiveHundredAndThreeSERVICEUNAVAILABLECodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE_UNAVAILABLE":
-		*e = FiveHundredAndThreeSERVICEUNAVAILABLECodeEnum(s)
+		*e = FiveHundredAndThreeSERVICEUNAVAILABLECodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FiveHundredAndThreeSERVICEUNAVAILABLECodeEnum: %s", s)
+		return fmt.Errorf("invalid value for FiveHundredAndThreeSERVICEUNAVAILABLECodeEnum: %v", v)
 	}
 }
 
@@ -33,17 +37,21 @@ const (
 	FiveHundredAndThreeSERVICEUNAVAILABLEMessageEnumInternalServerError FiveHundredAndThreeSERVICEUNAVAILABLEMessageEnum = "Internal server error"
 )
 
+func (e FiveHundredAndThreeSERVICEUNAVAILABLEMessageEnum) ToPointer() *FiveHundredAndThreeSERVICEUNAVAILABLEMessageEnum {
+	return &e
+}
+
 func (e *FiveHundredAndThreeSERVICEUNAVAILABLEMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = FiveHundredAndThreeSERVICEUNAVAILABLEMessageEnum(s)
+		*e = FiveHundredAndThreeSERVICEUNAVAILABLEMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FiveHundredAndThreeSERVICEUNAVAILABLEMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for FiveHundredAndThreeSERVICEUNAVAILABLEMessageEnum: %v", v)
 	}
 }
 

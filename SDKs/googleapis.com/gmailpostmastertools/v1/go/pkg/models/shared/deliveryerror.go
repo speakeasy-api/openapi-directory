@@ -16,21 +16,25 @@ const (
 	DeliveryErrorErrorClassEnumTemporaryError                DeliveryErrorErrorClassEnum = "TEMPORARY_ERROR"
 )
 
+func (e DeliveryErrorErrorClassEnum) ToPointer() *DeliveryErrorErrorClassEnum {
+	return &e
+}
+
 func (e *DeliveryErrorErrorClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELIVERY_ERROR_CLASS_UNSPECIFIED":
 		fallthrough
 	case "PERMANENT_ERROR":
 		fallthrough
 	case "TEMPORARY_ERROR":
-		*e = DeliveryErrorErrorClassEnum(s)
+		*e = DeliveryErrorErrorClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryErrorErrorClassEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryErrorErrorClassEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	DeliveryErrorErrorTypeEnumBadPtrRecord                 DeliveryErrorErrorTypeEnum = "BAD_PTR_RECORD"
 )
 
+func (e DeliveryErrorErrorTypeEnum) ToPointer() *DeliveryErrorErrorTypeEnum {
+	return &e
+}
+
 func (e *DeliveryErrorErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELIVERY_ERROR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RATE_LIMIT_EXCEEDED":
@@ -78,10 +86,10 @@ func (e *DeliveryErrorErrorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DOMAIN_IN_RBL":
 		fallthrough
 	case "BAD_PTR_RECORD":
-		*e = DeliveryErrorErrorTypeEnum(s)
+		*e = DeliveryErrorErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryErrorErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryErrorErrorTypeEnum: %v", v)
 	}
 }
 

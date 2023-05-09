@@ -45,17 +45,21 @@ const (
 	PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnumUniform PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum = "uniform"
 )
 
+func (e PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum) ToPointer() *PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uniform":
-		*e = PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum(s)
+		*e = PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum: %v", v)
 	}
 }
 
@@ -72,17 +76,21 @@ const (
 	PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnumLognormal PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum = "lognormal"
 )
 
+func (e PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum) ToPointer() *PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lognormal":
-		*e = PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum(s)
+		*e = PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsStop200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum: %v", v)
 	}
 }
 
@@ -171,12 +179,16 @@ const (
 	PostAdminRecordingsStop200ApplicationJSONMappingsResponseFaultEnumRandomDataThenClose    PostAdminRecordingsStop200ApplicationJSONMappingsResponseFaultEnum = "RANDOM_DATA_THEN_CLOSE"
 )
 
+func (e PostAdminRecordingsStop200ApplicationJSONMappingsResponseFaultEnum) ToPointer() *PostAdminRecordingsStop200ApplicationJSONMappingsResponseFaultEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsStop200ApplicationJSONMappingsResponseFaultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTION_RESET_BY_PEER":
 		fallthrough
 	case "EMPTY_RESPONSE":
@@ -184,10 +196,10 @@ func (e *PostAdminRecordingsStop200ApplicationJSONMappingsResponseFaultEnum) Unm
 	case "MALFORMED_RESPONSE_CHUNK":
 		fallthrough
 	case "RANDOM_DATA_THEN_CLOSE":
-		*e = PostAdminRecordingsStop200ApplicationJSONMappingsResponseFaultEnum(s)
+		*e = PostAdminRecordingsStop200ApplicationJSONMappingsResponseFaultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsStop200ApplicationJSONMappingsResponseFaultEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsStop200ApplicationJSONMappingsResponseFaultEnum: %v", v)
 	}
 }
 

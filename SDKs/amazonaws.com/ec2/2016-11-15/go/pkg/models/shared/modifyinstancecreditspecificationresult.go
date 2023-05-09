@@ -22,12 +22,16 @@ const (
 	ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsErrorCodeEnumInstanceCreditSpecificationNotSupported ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsErrorCodeEnum = "InstanceCreditSpecification.NotSupported"
 )
 
+func (e ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsErrorCodeEnum) ToPointer() *ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsErrorCodeEnum {
+	return &e
+}
+
 func (e *ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InvalidInstanceID.Malformed":
 		fallthrough
 	case "InvalidInstanceID.NotFound":
@@ -35,10 +39,10 @@ func (e *ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecif
 	case "IncorrectInstanceState":
 		fallthrough
 	case "InstanceCreditSpecification.NotSupported":
-		*e = ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsErrorCodeEnum(s)
+		*e = ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyInstanceCreditSpecificationResultUnsuccessfulInstanceCreditSpecificationsErrorCodeEnum: %v", v)
 	}
 }
 

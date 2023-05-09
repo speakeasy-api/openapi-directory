@@ -103,7 +103,10 @@ func (s *scim) GetV2Scim20ResourceTypes(ctx context.Context) (*operations.GetV2S
 // Returns a resource type by name.
 func (s *scim) GetV2Scim20ResourceTypesName(ctx context.Context, request operations.GetV2Scim20ResourceTypesNameRequest) (*operations.GetV2Scim20ResourceTypesNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/ResourceTypes/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/ResourceTypes/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -243,7 +246,10 @@ func (s *scim) GetV2Scim20Schemas(ctx context.Context) (*operations.GetV2Scim20S
 // Returns a schema by ID.
 func (s *scim) GetV2Scim20SchemasID(ctx context.Context, request operations.GetV2Scim20SchemasIDRequest) (*operations.GetV2Scim20SchemasIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/Schemas/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/Schemas/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -511,7 +517,10 @@ func (s *scim) GetV2Scim20Users(ctx context.Context, request operations.GetV2Sci
 // Returns a user by ID.
 func (s *scim) GetV2Scim20UsersID(ctx context.Context, request operations.GetV2Scim20UsersIDRequest) (*operations.GetV2Scim20UsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/Users/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/Users/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -723,7 +732,10 @@ func (s *scim) PostV2Scim20Users(ctx context.Context, request operations.PostV2S
 // and deactivate the user.
 func (s *scim) PutV2Scim20UsersID(ctx context.Context, request operations.PutV2Scim20UsersIDRequest) (*operations.PutV2Scim20UsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/Users/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/scim/2.0/Users/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

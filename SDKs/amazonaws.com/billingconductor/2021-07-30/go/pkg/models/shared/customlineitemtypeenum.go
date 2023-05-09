@@ -14,18 +14,22 @@ const (
 	CustomLineItemTypeEnumFee    CustomLineItemTypeEnum = "FEE"
 )
 
+func (e CustomLineItemTypeEnum) ToPointer() *CustomLineItemTypeEnum {
+	return &e
+}
+
 func (e *CustomLineItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREDIT":
 		fallthrough
 	case "FEE":
-		*e = CustomLineItemTypeEnum(s)
+		*e = CustomLineItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomLineItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomLineItemTypeEnum: %v", v)
 	}
 }

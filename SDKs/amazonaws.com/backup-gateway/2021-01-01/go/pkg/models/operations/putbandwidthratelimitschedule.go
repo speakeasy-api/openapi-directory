@@ -16,17 +16,21 @@ const (
 	PutBandwidthRateLimitScheduleXAmzTargetEnumBackupOnPremisesV20210101PutBandwidthRateLimitSchedule PutBandwidthRateLimitScheduleXAmzTargetEnum = "BackupOnPremises_v20210101.PutBandwidthRateLimitSchedule"
 )
 
+func (e PutBandwidthRateLimitScheduleXAmzTargetEnum) ToPointer() *PutBandwidthRateLimitScheduleXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutBandwidthRateLimitScheduleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.PutBandwidthRateLimitSchedule":
-		*e = PutBandwidthRateLimitScheduleXAmzTargetEnum(s)
+		*e = PutBandwidthRateLimitScheduleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutBandwidthRateLimitScheduleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutBandwidthRateLimitScheduleXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	OsConstraintOsTypeEnumIos             OsConstraintOsTypeEnum = "IOS"
 )
 
+func (e OsConstraintOsTypeEnum) ToPointer() *OsConstraintOsTypeEnum {
+	return &e
+}
+
 func (e *OsConstraintOsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OS_UNSPECIFIED":
 		fallthrough
 	case "DESKTOP_MAC":
@@ -39,10 +43,10 @@ func (e *OsConstraintOsTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ANDROID":
 		fallthrough
 	case "IOS":
-		*e = OsConstraintOsTypeEnum(s)
+		*e = OsConstraintOsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OsConstraintOsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OsConstraintOsTypeEnum: %v", v)
 	}
 }
 

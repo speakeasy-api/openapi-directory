@@ -35,7 +35,10 @@ func newPeople(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // PlusPeopleGet - Get a person's profile. If your app uses scope https://www.googleapis.com/auth/plus.login, this method is guaranteed to return ageRange and language.
 func (s *people) PlusPeopleGet(ctx context.Context, request operations.PlusPeopleGetRequest, security operations.PlusPeopleGetSecurity) (*operations.PlusPeopleGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/people/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/people/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *people) PlusPeopleGet(ctx context.Context, request operations.PlusPeopl
 // PlusPeopleList - List all of the people in the specified collection.
 func (s *people) PlusPeopleList(ctx context.Context, request operations.PlusPeopleListRequest, security operations.PlusPeopleListSecurity) (*operations.PlusPeopleListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/people/{userId}/people/{collection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/people/{userId}/people/{collection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *people) PlusPeopleList(ctx context.Context, request operations.PlusPeop
 // PlusPeopleListByActivity - Shut down. See https://developers.google.com/+/api-shutdown for more details.
 func (s *people) PlusPeopleListByActivity(ctx context.Context, request operations.PlusPeopleListByActivityRequest, security operations.PlusPeopleListByActivitySecurity) (*operations.PlusPeopleListByActivityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/activities/{activityId}/people/{collection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/activities/{activityId}/people/{collection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

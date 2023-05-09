@@ -18,12 +18,16 @@ const (
 	DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableStateEnumDeleted   DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableStateEnum = "deleted"
 )
 
+func (e DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableStateEnum) ToPointer() *DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableStateEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
@@ -31,10 +35,10 @@ func (e *DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableStateEnum) 
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableStateEnum(s)
+		*e = DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayRouteTableResultTransitGatewayRouteTableStateEnum: %v", v)
 	}
 }
 

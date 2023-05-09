@@ -16,21 +16,25 @@ const (
 	EndpointPolicyTypeEnumGrpcServer                    EndpointPolicyTypeEnum = "GRPC_SERVER"
 )
 
+func (e EndpointPolicyTypeEnum) ToPointer() *EndpointPolicyTypeEnum {
+	return &e
+}
+
 func (e *EndpointPolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENDPOINT_POLICY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SIDECAR_PROXY":
 		fallthrough
 	case "GRPC_SERVER":
-		*e = EndpointPolicyTypeEnum(s)
+		*e = EndpointPolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointPolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointPolicyTypeEnum: %v", v)
 	}
 }
 

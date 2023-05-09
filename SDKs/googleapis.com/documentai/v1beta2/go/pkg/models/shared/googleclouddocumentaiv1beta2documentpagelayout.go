@@ -18,12 +18,16 @@ const (
 	GoogleCloudDocumentaiV1beta2DocumentPageLayoutOrientationEnumPageLeft               GoogleCloudDocumentaiV1beta2DocumentPageLayoutOrientationEnum = "PAGE_LEFT"
 )
 
+func (e GoogleCloudDocumentaiV1beta2DocumentPageLayoutOrientationEnum) ToPointer() *GoogleCloudDocumentaiV1beta2DocumentPageLayoutOrientationEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1beta2DocumentPageLayoutOrientationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORIENTATION_UNSPECIFIED":
 		fallthrough
 	case "PAGE_UP":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDocumentaiV1beta2DocumentPageLayoutOrientationEnum) Unmarsha
 	case "PAGE_DOWN":
 		fallthrough
 	case "PAGE_LEFT":
-		*e = GoogleCloudDocumentaiV1beta2DocumentPageLayoutOrientationEnum(s)
+		*e = GoogleCloudDocumentaiV1beta2DocumentPageLayoutOrientationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1beta2DocumentPageLayoutOrientationEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1beta2DocumentPageLayoutOrientationEnum: %v", v)
 	}
 }
 

@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetReisezentrenRequest{
-        Name: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetReisezentren(ctx, req)
+    res, err := s.GetReisezentren(ctx, operations.GetReisezentrenRequest{
+        Name: sdk.String("Terrence Rau"),
+    })
     if err != nil {
         log.Fatal(err)
     }

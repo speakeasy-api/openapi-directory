@@ -26,12 +26,16 @@ const (
 	GdataMediaReferenceTypeEnumArbitraryBytes        GdataMediaReferenceTypeEnum = "ARBITRARY_BYTES"
 )
 
+func (e GdataMediaReferenceTypeEnum) ToPointer() *GdataMediaReferenceTypeEnum {
+	return &e
+}
+
 func (e *GdataMediaReferenceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PATH":
 		fallthrough
 	case "BLOB_REF":
@@ -57,10 +61,10 @@ func (e *GdataMediaReferenceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "COSMO_BINARY_REFERENCE":
 		fallthrough
 	case "ARBITRARY_BYTES":
-		*e = GdataMediaReferenceTypeEnum(s)
+		*e = GdataMediaReferenceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GdataMediaReferenceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GdataMediaReferenceTypeEnum: %v", v)
 	}
 }
 

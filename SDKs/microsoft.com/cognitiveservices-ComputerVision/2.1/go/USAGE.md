@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,30 +17,28 @@ func main() {
         }),
     )
 
-    req := operations.AnalyzeImageRequest{
+    ctx := context.Background()
+    res, err := s.AnalyzeImage(ctx, operations.AnalyzeImageRequest{
         ImageURL: shared.ImageURL{
             URL: "corrupti",
         },
         DescriptionExclude: []shared.DescriptionExcludeEnum{
-            "Landmarks",
-            "Landmarks",
-            "Landmarks",
+            shared.DescriptionExcludeEnumLandmarks,
+            shared.DescriptionExcludeEnumLandmarks,
+            shared.DescriptionExcludeEnumLandmarks,
         },
         Details: []AnalyzeImageDetailsEnum{
-            "Landmarks",
-            "Landmarks",
-            "Celebrities",
-            "Landmarks",
+            operations.AnalyzeImageDetailsEnumLandmarks,
+            operations.AnalyzeImageDetailsEnumLandmarks,
+            operations.AnalyzeImageDetailsEnumCelebrities,
+            operations.AnalyzeImageDetailsEnumLandmarks,
         },
-        Language: "pt",
+        Language: shared.ServiceLanguageEnumPt.ToPointer(),
         VisualFeatures: []shared.VisualFeaturesEnum{
-            "Categories",
-            "Adult",
+            shared.VisualFeaturesEnumCategories,
+            shared.VisualFeaturesEnumAdult,
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.AnalyzeImage(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

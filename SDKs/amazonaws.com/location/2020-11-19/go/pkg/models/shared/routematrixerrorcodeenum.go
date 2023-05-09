@@ -18,12 +18,16 @@ const (
 	RouteMatrixErrorCodeEnumOtherValidationError        RouteMatrixErrorCodeEnum = "OtherValidationError"
 )
 
+func (e RouteMatrixErrorCodeEnum) ToPointer() *RouteMatrixErrorCodeEnum {
+	return &e
+}
+
 func (e *RouteMatrixErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RouteNotFound":
 		fallthrough
 	case "RouteTooLong":
@@ -35,9 +39,9 @@ func (e *RouteMatrixErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "DeparturePositionNotFound":
 		fallthrough
 	case "OtherValidationError":
-		*e = RouteMatrixErrorCodeEnum(s)
+		*e = RouteMatrixErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RouteMatrixErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for RouteMatrixErrorCodeEnum: %v", v)
 	}
 }

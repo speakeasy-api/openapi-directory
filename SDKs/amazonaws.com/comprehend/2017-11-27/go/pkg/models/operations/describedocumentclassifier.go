@@ -16,17 +16,21 @@ const (
 	DescribeDocumentClassifierXAmzTargetEnumComprehend20171127DescribeDocumentClassifier DescribeDocumentClassifierXAmzTargetEnum = "Comprehend_20171127.DescribeDocumentClassifier"
 )
 
+func (e DescribeDocumentClassifierXAmzTargetEnum) ToPointer() *DescribeDocumentClassifierXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDocumentClassifierXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.DescribeDocumentClassifier":
-		*e = DescribeDocumentClassifierXAmzTargetEnum(s)
+		*e = DescribeDocumentClassifierXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDocumentClassifierXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDocumentClassifierXAmzTargetEnum: %v", v)
 	}
 }
 

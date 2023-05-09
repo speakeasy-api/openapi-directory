@@ -30,12 +30,16 @@ const (
 	AutoMLJobSecondaryStatusEnumTrainingModels                 AutoMLJobSecondaryStatusEnum = "TrainingModels"
 )
 
+func (e AutoMLJobSecondaryStatusEnum) ToPointer() *AutoMLJobSecondaryStatusEnum {
+	return &e
+}
+
 func (e *AutoMLJobSecondaryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Starting":
 		fallthrough
 	case "AnalyzingData":
@@ -71,9 +75,9 @@ func (e *AutoMLJobSecondaryStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ModelInsightsError":
 		fallthrough
 	case "TrainingModels":
-		*e = AutoMLJobSecondaryStatusEnum(s)
+		*e = AutoMLJobSecondaryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoMLJobSecondaryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoMLJobSecondaryStatusEnum: %v", v)
 	}
 }

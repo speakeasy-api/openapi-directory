@@ -15,17 +15,21 @@ const (
 	POSTPutDashboardActionEnumPutDashboard POSTPutDashboardActionEnum = "PutDashboard"
 )
 
+func (e POSTPutDashboardActionEnum) ToPointer() *POSTPutDashboardActionEnum {
+	return &e
+}
+
 func (e *POSTPutDashboardActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PutDashboard":
-		*e = POSTPutDashboardActionEnum(s)
+		*e = POSTPutDashboardActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPutDashboardActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPutDashboardActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTPutDashboardVersionEnumTwoThousandAndTen0801 POSTPutDashboardVersionEnum = "2010-08-01"
 )
 
+func (e POSTPutDashboardVersionEnum) ToPointer() *POSTPutDashboardVersionEnum {
+	return &e
+}
+
 func (e *POSTPutDashboardVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = POSTPutDashboardVersionEnum(s)
+		*e = POSTPutDashboardVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPutDashboardVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPutDashboardVersionEnum: %v", v)
 	}
 }
 

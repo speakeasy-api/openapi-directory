@@ -34,7 +34,10 @@ func newTerraintiles(defaultClient, securityClient HTTPClient, serverURL, langua
 // VectortileTerraintilesGet - Gets a terrain tile by its tile resource name.
 func (s *terraintiles) VectortileTerraintilesGet(ctx context.Context, request operations.VectortileTerraintilesGetRequest) (*operations.VectortileTerraintilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

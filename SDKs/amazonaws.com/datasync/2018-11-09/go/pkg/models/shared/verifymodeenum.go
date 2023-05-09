@@ -15,20 +15,24 @@ const (
 	VerifyModeEnumNone                  VerifyModeEnum = "NONE"
 )
 
+func (e VerifyModeEnum) ToPointer() *VerifyModeEnum {
+	return &e
+}
+
 func (e *VerifyModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POINT_IN_TIME_CONSISTENT":
 		fallthrough
 	case "ONLY_FILES_TRANSFERRED":
 		fallthrough
 	case "NONE":
-		*e = VerifyModeEnum(s)
+		*e = VerifyModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyModeEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyModeEnum: %v", v)
 	}
 }

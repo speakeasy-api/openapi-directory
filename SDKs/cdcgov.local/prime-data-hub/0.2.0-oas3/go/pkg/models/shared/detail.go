@@ -16,21 +16,25 @@ const (
 	DetailScopeEnumItem      DetailScopeEnum = "Item"
 )
 
+func (e DetailScopeEnum) ToPointer() *DetailScopeEnum {
+	return &e
+}
+
 func (e *DetailScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Parameter":
 		fallthrough
 	case "Report":
 		fallthrough
 	case "Item":
-		*e = DetailScopeEnum(s)
+		*e = DetailScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetailScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for DetailScopeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateAccessPolicyXAmzTargetEnumOpenSearchServerlessUpdateAccessPolicy UpdateAccessPolicyXAmzTargetEnum = "OpenSearchServerless.UpdateAccessPolicy"
 )
 
+func (e UpdateAccessPolicyXAmzTargetEnum) ToPointer() *UpdateAccessPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateAccessPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpenSearchServerless.UpdateAccessPolicy":
-		*e = UpdateAccessPolicyXAmzTargetEnum(s)
+		*e = UpdateAccessPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAccessPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAccessPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

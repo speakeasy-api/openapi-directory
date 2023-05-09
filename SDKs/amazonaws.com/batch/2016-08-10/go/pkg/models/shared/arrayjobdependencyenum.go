@@ -14,18 +14,22 @@ const (
 	ArrayJobDependencyEnumSequential ArrayJobDependencyEnum = "SEQUENTIAL"
 )
 
+func (e ArrayJobDependencyEnum) ToPointer() *ArrayJobDependencyEnum {
+	return &e
+}
+
 func (e *ArrayJobDependencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "N_TO_N":
 		fallthrough
 	case "SEQUENTIAL":
-		*e = ArrayJobDependencyEnum(s)
+		*e = ArrayJobDependencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArrayJobDependencyEnum: %s", s)
+		return fmt.Errorf("invalid value for ArrayJobDependencyEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	DeliveryStreamTypeEnumKinesisStreamAsSource DeliveryStreamTypeEnum = "KinesisStreamAsSource"
 )
 
+func (e DeliveryStreamTypeEnum) ToPointer() *DeliveryStreamTypeEnum {
+	return &e
+}
+
 func (e *DeliveryStreamTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectPut":
 		fallthrough
 	case "KinesisStreamAsSource":
-		*e = DeliveryStreamTypeEnum(s)
+		*e = DeliveryStreamTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryStreamTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryStreamTypeEnum: %v", v)
 	}
 }

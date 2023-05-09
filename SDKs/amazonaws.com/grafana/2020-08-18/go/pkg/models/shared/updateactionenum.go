@@ -14,18 +14,22 @@ const (
 	UpdateActionEnumRevoke UpdateActionEnum = "REVOKE"
 )
 
+func (e UpdateActionEnum) ToPointer() *UpdateActionEnum {
+	return &e
+}
+
 func (e *UpdateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADD":
 		fallthrough
 	case "REVOKE":
-		*e = UpdateActionEnum(s)
+		*e = UpdateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateActionEnum: %v", v)
 	}
 }

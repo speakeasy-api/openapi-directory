@@ -35,7 +35,10 @@ func newPreview(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Destiny2GetClanAggregateStats - Gets aggregated stats for a clan using the same categories as the clan leaderboards. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
 func (s *preview) Destiny2GetClanAggregateStats(ctx context.Context, request operations.Destiny2GetClanAggregateStatsRequest) (*operations.Destiny2GetClanAggregateStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/AggregateClanStats/{groupId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/AggregateClanStats/{groupId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *preview) Destiny2GetClanAggregateStats(ctx context.Context, request ope
 // Destiny2GetClanLeaderboards - Gets leaderboards with the signed in user's friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
 func (s *preview) Destiny2GetClanLeaderboards(ctx context.Context, request operations.Destiny2GetClanLeaderboardsRequest) (*operations.Destiny2GetClanLeaderboardsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/Leaderboards/Clans/{groupId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/Leaderboards/Clans/{groupId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *preview) Destiny2GetClanLeaderboards(ctx context.Context, request opera
 // Destiny2GetLeaderboards - Gets leaderboards with the signed in user's friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint has not yet been implemented. It is being returned for a preview of future functionality, and for public comment/suggestion/preparation.
 func (s *preview) Destiny2GetLeaderboards(ctx context.Context, request operations.Destiny2GetLeaderboardsRequest) (*operations.Destiny2GetLeaderboardsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -179,7 +188,10 @@ func (s *preview) Destiny2GetLeaderboards(ctx context.Context, request operation
 // Destiny2GetLeaderboardsForCharacter - Gets leaderboards with the signed in user's friends and the supplied destinyMembershipId as the focus. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is in final form, but there may be bugs that prevent desirable operation.
 func (s *preview) Destiny2GetLeaderboardsForCharacter(ctx context.Context, request operations.Destiny2GetLeaderboardsForCharacterRequest) (*operations.Destiny2GetLeaderboardsForCharacterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -273,7 +285,7 @@ func (s *preview) Destiny2GetPublicVendors(ctx context.Context, request operatio
 }
 
 // Destiny2InsertSocketPlug - Insert a plug into a socketed item. I know how it sounds, but I assure you it's much more G-rated than you might be guessing. We haven't decided yet whether this will be able to insert plugs that have side effects, but if we do it will require special scope permission for an application attempting to do so. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Request must include proof of permission for 'InsertPlugs' from the account owner.
-func (s *preview) Destiny2InsertSocketPlug(ctx context.Context) (*operations.Destiny2InsertSocketPlugResponse, error) {
+func (s *preview) Destiny2InsertSocketPlug(ctx context.Context, security operations.Destiny2InsertSocketPlugSecurity) (*operations.Destiny2InsertSocketPlugResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Items/InsertSocketPlug/"
 
@@ -282,7 +294,7 @@ func (s *preview) Destiny2InsertSocketPlug(ctx context.Context) (*operations.Des
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -317,7 +329,7 @@ func (s *preview) Destiny2InsertSocketPlug(ctx context.Context) (*operations.Des
 }
 
 // Destiny2InsertSocketPlugFree - Insert a 'free' plug into an item's socket. This does not require 'Advanced Write Action' authorization and is available to 3rd-party apps, but will only work on 'free and reversible' socket actions (Perks, Armor Mods, Shaders, Ornaments, etc.). You must have a valid Destiny Account, and the character must either be in a social space, in orbit, or offline.
-func (s *preview) Destiny2InsertSocketPlugFree(ctx context.Context) (*operations.Destiny2InsertSocketPlugFreeResponse, error) {
+func (s *preview) Destiny2InsertSocketPlugFree(ctx context.Context, security operations.Destiny2InsertSocketPlugFreeSecurity) (*operations.Destiny2InsertSocketPlugFreeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Destiny2/Actions/Items/InsertSocketPlugFree/"
 
@@ -326,7 +338,7 @@ func (s *preview) Destiny2InsertSocketPlugFree(ctx context.Context) (*operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

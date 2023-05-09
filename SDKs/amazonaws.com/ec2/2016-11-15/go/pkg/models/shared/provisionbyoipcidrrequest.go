@@ -98,12 +98,16 @@ const (
 	ProvisionByoipCidrRequestPoolTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       ProvisionByoipCidrRequestPoolTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e ProvisionByoipCidrRequestPoolTagSpecificationsResourceTypeEnum) ToPointer() *ProvisionByoipCidrRequestPoolTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *ProvisionByoipCidrRequestPoolTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *ProvisionByoipCidrRequestPoolTagSpecificationsResourceTypeEnum) Unmarsh
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = ProvisionByoipCidrRequestPoolTagSpecificationsResourceTypeEnum(s)
+		*e = ProvisionByoipCidrRequestPoolTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionByoipCidrRequestPoolTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionByoipCidrRequestPoolTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

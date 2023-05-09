@@ -2,8 +2,48 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// MTLSPolicyClientValidationModeEnum - When the client presents an invalid certificate or no certificate to the load balancer, the `client_validation_mode` specifies how the client connection is handled. Required if the policy is to be used with the external HTTPS load balancing. For Traffic Director it must be empty.
+type MTLSPolicyClientValidationModeEnum string
+
+const (
+	MTLSPolicyClientValidationModeEnumClientValidationModeUnspecified MTLSPolicyClientValidationModeEnum = "CLIENT_VALIDATION_MODE_UNSPECIFIED"
+	MTLSPolicyClientValidationModeEnumAllowInvalidOrMissingClientCert MTLSPolicyClientValidationModeEnum = "ALLOW_INVALID_OR_MISSING_CLIENT_CERT"
+	MTLSPolicyClientValidationModeEnumRejectInvalid                   MTLSPolicyClientValidationModeEnum = "REJECT_INVALID"
+)
+
+func (e MTLSPolicyClientValidationModeEnum) ToPointer() *MTLSPolicyClientValidationModeEnum {
+	return &e
+}
+
+func (e *MTLSPolicyClientValidationModeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "CLIENT_VALIDATION_MODE_UNSPECIFIED":
+		fallthrough
+	case "ALLOW_INVALID_OR_MISSING_CLIENT_CERT":
+		fallthrough
+	case "REJECT_INVALID":
+		*e = MTLSPolicyClientValidationModeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for MTLSPolicyClientValidationModeEnum: %v", v)
+	}
+}
+
 // MTLSPolicy - Specification of the MTLSPolicy.
 type MTLSPolicy struct {
-	//  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
+	// Required if the policy is to be used with Traffic Director. For external HTTPS load balancers it must be empty. Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
 	ClientValidationCa []ValidationCA `json:"clientValidationCa,omitempty"`
+	// When the client presents an invalid certificate or no certificate to the load balancer, the `client_validation_mode` specifies how the client connection is handled. Required if the policy is to be used with the external HTTPS load balancing. For Traffic Director it must be empty.
+	ClientValidationMode *MTLSPolicyClientValidationModeEnum `json:"clientValidationMode,omitempty"`
+	// Reference to the TrustConfig from certificatemanager.googleapis.com namespace. If specified, the chain validation will be performed against certificates configured in the given TrustConfig. Allowed only if the policy is to be used with external HTTPS load balancers.
+	ClientValidationTrustConfig *string `json:"clientValidationTrustConfig,omitempty"`
 }

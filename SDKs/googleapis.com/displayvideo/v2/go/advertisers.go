@@ -35,7 +35,10 @@ func newAdvertisers(defaultClient, securityClient HTTPClient, serverURL, languag
 // DisplayvideoAdvertisersAssetsUpload - Uploads an asset. Returns the ID of the newly uploaded asset if successful. The asset file size should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos. Must be used within the [multipart media upload process](/display-video/api/guides/how-tos/upload#multipart). Examples using provided client libraries can be found in our [Creating Creatives guide](/display-video/api/guides/creating-creatives/overview#upload_an_asset).
 func (s *advertisers) DisplayvideoAdvertisersAssetsUpload(ctx context.Context, request operations.DisplayvideoAdvertisersAssetsUploadRequest, security operations.DisplayvideoAdvertisersAssetsUploadSecurity) (*operations.DisplayvideoAdvertisersAssetsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/assets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/assets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *advertisers) DisplayvideoAdvertisersAssetsUpload(ctx context.Context, r
 // DisplayvideoAdvertisersAudit - Audits an advertiser. Returns the counts of used entities per resource type under the advertiser provided. Used entities count towards their respective resource limit. See https://support.google.com/displayvideo/answer/6071450.
 func (s *advertisers) DisplayvideoAdvertisersAudit(ctx context.Context, request operations.DisplayvideoAdvertisersAuditRequest, security operations.DisplayvideoAdvertisersAuditSecurity) (*operations.DisplayvideoAdvertisersAuditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}:audit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}:audit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +144,10 @@ func (s *advertisers) DisplayvideoAdvertisersAudit(ctx context.Context, request 
 // DisplayvideoAdvertisersCampaignsCreate - Creates a new campaign. Returns the newly created campaign if successful.
 func (s *advertisers) DisplayvideoAdvertisersCampaignsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsCreateRequest, security operations.DisplayvideoAdvertisersCampaignsCreateSecurity) (*operations.DisplayvideoAdvertisersCampaignsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CampaignInput", "json")
 	if err != nil {
@@ -193,7 +202,10 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsCreate(ctx context.Context
 // DisplayvideoAdvertisersCampaignsDelete - Permanently deletes a campaign. A deleted campaign cannot be recovered. The campaign should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
 func (s *advertisers) DisplayvideoAdvertisersCampaignsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsDeleteRequest, security operations.DisplayvideoAdvertisersCampaignsDeleteSecurity) (*operations.DisplayvideoAdvertisersCampaignsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -241,7 +253,10 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsDelete(ctx context.Context
 // DisplayvideoAdvertisersCampaignsGet - Gets a campaign.
 func (s *advertisers) DisplayvideoAdvertisersCampaignsGet(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsGetRequest, security operations.DisplayvideoAdvertisersCampaignsGetSecurity) (*operations.DisplayvideoAdvertisersCampaignsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -289,7 +304,10 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsGet(ctx context.Context, r
 // DisplayvideoAdvertisersCampaignsList - Lists campaigns in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, campaigns with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
 func (s *advertisers) DisplayvideoAdvertisersCampaignsList(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsListRequest, security operations.DisplayvideoAdvertisersCampaignsListSecurity) (*operations.DisplayvideoAdvertisersCampaignsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -337,7 +355,10 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsList(ctx context.Context, 
 // DisplayvideoAdvertisersCampaignsListAssignedTargetingOptions - Lists assigned targeting options of a campaign across targeting types.
 func (s *advertisers) DisplayvideoAdvertisersCampaignsListAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}:listAssignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}:listAssignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -385,7 +406,10 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsListAssignedTargetingOptio
 // DisplayvideoAdvertisersCampaignsPatch - Updates an existing campaign. Returns the updated campaign if successful.
 func (s *advertisers) DisplayvideoAdvertisersCampaignsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsPatchRequest, security operations.DisplayvideoAdvertisersCampaignsPatchSecurity) (*operations.DisplayvideoAdvertisersCampaignsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CampaignInput", "json")
 	if err != nil {
@@ -440,7 +464,10 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsPatch(ctx context.Context,
 // DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGet - Gets a single targeting option assigned to a campaign.
 func (s *advertisers) DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetRequest, security operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetSecurity) (*operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -488,7 +515,10 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTarg
 // DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsList - Lists the targeting options assigned to a campaign for a specified targeting type.
 func (s *advertisers) DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListRequest, security operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListSecurity) (*operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -536,7 +566,10 @@ func (s *advertisers) DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTarg
 // DisplayvideoAdvertisersChannelsCreate - Creates a new channel. Returns the newly created channel if successful.
 func (s *advertisers) DisplayvideoAdvertisersChannelsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsCreateRequest, security operations.DisplayvideoAdvertisersChannelsCreateSecurity) (*operations.DisplayvideoAdvertisersChannelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChannelInput", "json")
 	if err != nil {
@@ -591,7 +624,10 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsCreate(ctx context.Context,
 // DisplayvideoAdvertisersChannelsList - Lists channels for a partner or advertiser.
 func (s *advertisers) DisplayvideoAdvertisersChannelsList(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsListRequest, security operations.DisplayvideoAdvertisersChannelsListSecurity) (*operations.DisplayvideoAdvertisersChannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -639,7 +675,10 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsList(ctx context.Context, r
 // DisplayvideoAdvertisersChannelsPatch - Updates a channel. Returns the updated channel if successful.
 func (s *advertisers) DisplayvideoAdvertisersChannelsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsPatchRequest, security operations.DisplayvideoAdvertisersChannelsPatchSecurity) (*operations.DisplayvideoAdvertisersChannelsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels/{channelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels/{channelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChannelInput", "json")
 	if err != nil {
@@ -694,7 +733,10 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsPatch(ctx context.Context, 
 // DisplayvideoAdvertisersChannelsSitesBulkEdit - Bulk edits sites under a single channel. The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then create the sites provided in BulkEditSitesRequest.created_sites.
 func (s *advertisers) DisplayvideoAdvertisersChannelsSitesBulkEdit(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsSitesBulkEditRequest, security operations.DisplayvideoAdvertisersChannelsSitesBulkEditSecurity) (*operations.DisplayvideoAdvertisersChannelsSitesBulkEditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites:bulkEdit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites:bulkEdit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditSitesRequestInput", "json")
 	if err != nil {
@@ -749,7 +791,10 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsSitesBulkEdit(ctx context.C
 // DisplayvideoAdvertisersChannelsSitesDelete - Deletes a site from a channel.
 func (s *advertisers) DisplayvideoAdvertisersChannelsSitesDelete(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsSitesDeleteRequest, security operations.DisplayvideoAdvertisersChannelsSitesDeleteSecurity) (*operations.DisplayvideoAdvertisersChannelsSitesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites/{urlOrAppId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites/{urlOrAppId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -797,7 +842,10 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsSitesDelete(ctx context.Con
 // DisplayvideoAdvertisersChannelsSitesList - Lists sites in a channel.
 func (s *advertisers) DisplayvideoAdvertisersChannelsSitesList(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsSitesListRequest, security operations.DisplayvideoAdvertisersChannelsSitesListSecurity) (*operations.DisplayvideoAdvertisersChannelsSitesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -845,7 +893,10 @@ func (s *advertisers) DisplayvideoAdvertisersChannelsSitesList(ctx context.Conte
 // DisplayvideoAdvertisersChannelsSitesReplace - Replaces all of the sites under a single channel. The operation will replace the sites under a channel with the sites provided in ReplaceSitesRequest.new_sites.
 func (s *advertisers) DisplayvideoAdvertisersChannelsSitesReplace(ctx context.Context, request operations.DisplayvideoAdvertisersChannelsSitesReplaceRequest, security operations.DisplayvideoAdvertisersChannelsSitesReplaceSecurity) (*operations.DisplayvideoAdvertisersChannelsSitesReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites:replace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites:replace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReplaceSitesRequestInput", "json")
 	if err != nil {
@@ -955,7 +1006,10 @@ func (s *advertisers) DisplayvideoAdvertisersCreate(ctx context.Context, request
 // DisplayvideoAdvertisersCreativesCreate - Creates a new creative. Returns the newly created creative if successful.
 func (s *advertisers) DisplayvideoAdvertisersCreativesCreate(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesCreateRequest, security operations.DisplayvideoAdvertisersCreativesCreateSecurity) (*operations.DisplayvideoAdvertisersCreativesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/creatives", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/creatives", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeInput", "json")
 	if err != nil {
@@ -1010,7 +1064,10 @@ func (s *advertisers) DisplayvideoAdvertisersCreativesCreate(ctx context.Context
 // DisplayvideoAdvertisersCreativesDelete - Deletes a creative. Returns error code `NOT_FOUND` if the creative does not exist. The creative should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, before it can be deleted.
 func (s *advertisers) DisplayvideoAdvertisersCreativesDelete(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesDeleteRequest, security operations.DisplayvideoAdvertisersCreativesDeleteSecurity) (*operations.DisplayvideoAdvertisersCreativesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1058,7 +1115,10 @@ func (s *advertisers) DisplayvideoAdvertisersCreativesDelete(ctx context.Context
 // DisplayvideoAdvertisersCreativesGet - Gets a creative.
 func (s *advertisers) DisplayvideoAdvertisersCreativesGet(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesGetRequest, security operations.DisplayvideoAdvertisersCreativesGetSecurity) (*operations.DisplayvideoAdvertisersCreativesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1106,7 +1166,10 @@ func (s *advertisers) DisplayvideoAdvertisersCreativesGet(ctx context.Context, r
 // DisplayvideoAdvertisersCreativesList - Lists creatives in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, creatives with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
 func (s *advertisers) DisplayvideoAdvertisersCreativesList(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesListRequest, security operations.DisplayvideoAdvertisersCreativesListSecurity) (*operations.DisplayvideoAdvertisersCreativesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/creatives", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/creatives", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1154,7 +1217,10 @@ func (s *advertisers) DisplayvideoAdvertisersCreativesList(ctx context.Context, 
 // DisplayvideoAdvertisersCreativesPatch - Updates an existing creative. Returns the updated creative if successful.
 func (s *advertisers) DisplayvideoAdvertisersCreativesPatch(ctx context.Context, request operations.DisplayvideoAdvertisersCreativesPatchRequest, security operations.DisplayvideoAdvertisersCreativesPatchSecurity) (*operations.DisplayvideoAdvertisersCreativesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeInput", "json")
 	if err != nil {
@@ -1209,7 +1275,10 @@ func (s *advertisers) DisplayvideoAdvertisersCreativesPatch(ctx context.Context,
 // DisplayvideoAdvertisersDelete - Deletes an advertiser. Deleting an advertiser will delete all of its child resources, for example, campaigns, insertion orders and line items. A deleted advertiser cannot be recovered.
 func (s *advertisers) DisplayvideoAdvertisersDelete(ctx context.Context, request operations.DisplayvideoAdvertisersDeleteRequest, security operations.DisplayvideoAdvertisersDeleteSecurity) (*operations.DisplayvideoAdvertisersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1257,7 +1326,10 @@ func (s *advertisers) DisplayvideoAdvertisersDelete(ctx context.Context, request
 // DisplayvideoAdvertisersEditAssignedTargetingOptions - Edits targeting options under a single advertiser. The operation will delete the assigned targeting options provided in BulkEditAdvertiserAssignedTargetingOptionsRequest.delete_requests and then create the assigned targeting options provided in BulkEditAdvertiserAssignedTargetingOptionsRequest.create_requests .
 func (s *advertisers) DisplayvideoAdvertisersEditAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}:editAssignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}:editAssignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditAdvertiserAssignedTargetingOptionsRequestInput", "json")
 	if err != nil {
@@ -1312,7 +1384,10 @@ func (s *advertisers) DisplayvideoAdvertisersEditAssignedTargetingOptions(ctx co
 // DisplayvideoAdvertisersGet - Gets an advertiser.
 func (s *advertisers) DisplayvideoAdvertisersGet(ctx context.Context, request operations.DisplayvideoAdvertisersGetRequest, security operations.DisplayvideoAdvertisersGetSecurity) (*operations.DisplayvideoAdvertisersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1360,7 +1435,10 @@ func (s *advertisers) DisplayvideoAdvertisersGet(ctx context.Context, request op
 // DisplayvideoAdvertisersInsertionOrdersCreate - Creates a new insertion order. Returns the newly created insertion order if successful.
 func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersCreate(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersCreateRequest, security operations.DisplayvideoAdvertisersInsertionOrdersCreateSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InsertionOrderInput", "json")
 	if err != nil {
@@ -1415,7 +1493,10 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersCreate(ctx context.C
 // DisplayvideoAdvertisersInsertionOrdersDelete - Deletes an insertion order. Returns error code `NOT_FOUND` if the insertion order does not exist. The insertion order should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
 func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersDelete(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersDeleteRequest, security operations.DisplayvideoAdvertisersInsertionOrdersDeleteSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1463,7 +1544,10 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersDelete(ctx context.C
 // DisplayvideoAdvertisersInsertionOrdersGet - Gets an insertion order. Returns error code `NOT_FOUND` if the insertion order does not exist.
 func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersGet(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersGetRequest, security operations.DisplayvideoAdvertisersInsertionOrdersGetSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1511,7 +1595,10 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersGet(ctx context.Cont
 // DisplayvideoAdvertisersInsertionOrdersList - Lists insertion orders in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, insertion orders with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
 func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersList(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersListRequest, security operations.DisplayvideoAdvertisersInsertionOrdersListSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1559,7 +1646,10 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersList(ctx context.Con
 // DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptions - Lists assigned targeting options of an insertion order across targeting types.
 func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}:listAssignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}:listAssignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1607,7 +1697,10 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersListAssignedTargetin
 // DisplayvideoAdvertisersInsertionOrdersPatch - Updates an existing insertion order. Returns the updated insertion order if successful.
 func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersPatch(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersPatchRequest, security operations.DisplayvideoAdvertisersInsertionOrdersPatchSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InsertionOrderInput", "json")
 	if err != nil {
@@ -1662,7 +1755,10 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersPatch(ctx context.Co
 // DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreate - Assigns a targeting option to an insertion order. Returns the assigned targeting option if successful. Supported targeting types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIEWABILITY`
 func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest, security operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignedTargetingOptionInput", "json")
 	if err != nil {
@@ -1717,7 +1813,10 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssign
 // DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDelete - Deletes an assigned targeting option from an insertion order. Supported targeting types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIEWABILITY`
 func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDeleteRequest, security operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDeleteSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1765,7 +1864,10 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssign
 // DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGet - Gets a single targeting option assigned to an insertion order.
 func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetRequest, security operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1813,7 +1915,10 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssign
 // DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsList - Lists the targeting options assigned to an insertion order.
 func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListRequest, security operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListSecurity) (*operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1861,7 +1966,10 @@ func (s *advertisers) DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssign
 // DisplayvideoAdvertisersInvoicesList - Lists invoices posted for an advertiser in a given month. Invoices generated by billing profiles with a "Partner" invoice level are not retrievable through this method.
 func (s *advertisers) DisplayvideoAdvertisersInvoicesList(ctx context.Context, request operations.DisplayvideoAdvertisersInvoicesListRequest, security operations.DisplayvideoAdvertisersInvoicesListSecurity) (*operations.DisplayvideoAdvertisersInvoicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/invoices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/invoices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1909,7 +2017,10 @@ func (s *advertisers) DisplayvideoAdvertisersInvoicesList(ctx context.Context, r
 // DisplayvideoAdvertisersInvoicesLookupInvoiceCurrency - Retrieves the invoice currency used by an advertiser in a given month.
 func (s *advertisers) DisplayvideoAdvertisersInvoicesLookupInvoiceCurrency(ctx context.Context, request operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyRequest, security operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencySecurity) (*operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/invoices:lookupInvoiceCurrency", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/invoices:lookupInvoiceCurrency", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1957,7 +2068,10 @@ func (s *advertisers) DisplayvideoAdvertisersInvoicesLookupInvoiceCurrency(ctx c
 // DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptions - Bulk edits targeting options under multiple line items. The operation will delete the assigned targeting options provided in BulkEditAssignedTargetingOptionsRequest.delete_requests and then create the assigned targeting options provided in BulkEditAssignedTargetingOptionsRequest.create_requests. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkUpdate * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
 func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems:bulkEditAssignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems:bulkEditAssignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditAssignedTargetingOptionsRequestInput", "json")
 	if err != nil {
@@ -2012,7 +2126,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingO
 // DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptions - Lists assigned targeting options for multiple line items across targeting types.
 func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems:bulkListAssignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems:bulkListAssignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2060,7 +2177,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingO
 // DisplayvideoAdvertisersLineItemsBulkUpdate - Updates multiple line items. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
 func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkUpdate(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsBulkUpdateRequest, security operations.DisplayvideoAdvertisersLineItemsBulkUpdateSecurity) (*operations.DisplayvideoAdvertisersLineItemsBulkUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems:bulkUpdate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems:bulkUpdate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkUpdateLineItemsRequestInput", "json")
 	if err != nil {
@@ -2115,7 +2235,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsBulkUpdate(ctx context.Con
 // DisplayvideoAdvertisersLineItemsCreate - Creates a new line item. Returns the newly created line item if successful.
 func (s *advertisers) DisplayvideoAdvertisersLineItemsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsCreateRequest, security operations.DisplayvideoAdvertisersLineItemsCreateSecurity) (*operations.DisplayvideoAdvertisersLineItemsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LineItemInput", "json")
 	if err != nil {
@@ -2170,7 +2293,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsCreate(ctx context.Context
 // DisplayvideoAdvertisersLineItemsDelete - Deletes a line item. Returns error code `NOT_FOUND` if the line item does not exist. The line item should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
 func (s *advertisers) DisplayvideoAdvertisersLineItemsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsDeleteRequest, security operations.DisplayvideoAdvertisersLineItemsDeleteSecurity) (*operations.DisplayvideoAdvertisersLineItemsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2218,7 +2344,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsDelete(ctx context.Context
 // DisplayvideoAdvertisersLineItemsDuplicate - Duplicates a line item. Returns the ID of the created line item if successful.
 func (s *advertisers) DisplayvideoAdvertisersLineItemsDuplicate(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsDuplicateRequest, security operations.DisplayvideoAdvertisersLineItemsDuplicateSecurity) (*operations.DisplayvideoAdvertisersLineItemsDuplicateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}:duplicate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}:duplicate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DuplicateLineItemRequest", "json")
 	if err != nil {
@@ -2273,7 +2402,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsDuplicate(ctx context.Cont
 // DisplayvideoAdvertisersLineItemsGenerateDefault - Creates a new line item with settings (including targeting) inherited from the insertion order and an `ENTITY_STATUS_DRAFT` entity_status. Returns the newly created line item if successful. There are default values based on the three fields: * The insertion order's insertion_order_type * The insertion order's automation_type * The given line_item_type
 func (s *advertisers) DisplayvideoAdvertisersLineItemsGenerateDefault(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsGenerateDefaultRequest, security operations.DisplayvideoAdvertisersLineItemsGenerateDefaultSecurity) (*operations.DisplayvideoAdvertisersLineItemsGenerateDefaultResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems:generateDefault", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems:generateDefault", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateDefaultLineItemRequestInput", "json")
 	if err != nil {
@@ -2328,7 +2460,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsGenerateDefault(ctx contex
 // DisplayvideoAdvertisersLineItemsGet - Gets a line item.
 func (s *advertisers) DisplayvideoAdvertisersLineItemsGet(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsGetRequest, security operations.DisplayvideoAdvertisersLineItemsGetSecurity) (*operations.DisplayvideoAdvertisersLineItemsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2376,7 +2511,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsGet(ctx context.Context, r
 // DisplayvideoAdvertisersLineItemsList - Lists line items in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, line items with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
 func (s *advertisers) DisplayvideoAdvertisersLineItemsList(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsListRequest, security operations.DisplayvideoAdvertisersLineItemsListSecurity) (*operations.DisplayvideoAdvertisersLineItemsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2424,7 +2562,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsList(ctx context.Context, 
 // DisplayvideoAdvertisersLineItemsPatch - Updates an existing line item. Returns the updated line item if successful. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
 func (s *advertisers) DisplayvideoAdvertisersLineItemsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsPatchRequest, security operations.DisplayvideoAdvertisersLineItemsPatchSecurity) (*operations.DisplayvideoAdvertisersLineItemsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LineItemInput", "json")
 	if err != nil {
@@ -2479,7 +2620,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsPatch(ctx context.Context,
 // DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreate - Assigns a targeting option to a line item. Returns the assigned targeting option if successful. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem * DeleteLineItemAssignedTargetingOption
 func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateRequest, security operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateSecurity) (*operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignedTargetingOptionInput", "json")
 	if err != nil {
@@ -2534,7 +2678,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTarg
 // DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDelete - Deletes an assigned targeting option from a line item. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem * CreateLineItemAssignedTargetingOption
 func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest, security operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteSecurity) (*operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2582,7 +2729,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTarg
 // DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGet - Gets a single targeting option assigned to a line item.
 func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetRequest, security operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetSecurity) (*operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2630,7 +2780,10 @@ func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTarg
 // DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsList - Lists the targeting options assigned to a line item.
 func (s *advertisers) DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListRequest, security operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListSecurity) (*operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2726,7 +2879,10 @@ func (s *advertisers) DisplayvideoAdvertisersList(ctx context.Context, request o
 // DisplayvideoAdvertisersListAssignedTargetingOptions - Lists assigned targeting options of an advertiser across targeting types.
 func (s *advertisers) DisplayvideoAdvertisersListAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersListAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersListAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersListAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}:listAssignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}:listAssignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2774,7 +2930,10 @@ func (s *advertisers) DisplayvideoAdvertisersListAssignedTargetingOptions(ctx co
 // DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEdit - Bulk edits multiple assignments between locations and a single location list. The operation will delete the assigned locations provided in BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
 func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEdit(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditRequest, security operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditSecurity) (*operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations:bulkEdit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations:bulkEdit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditAssignedLocationsRequestInput", "json")
 	if err != nil {
@@ -2829,7 +2988,10 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsBulkE
 // DisplayvideoAdvertisersLocationListsAssignedLocationsCreate - Creates an assignment between a location and a location list.
 func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateRequest, security operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateSecurity) (*operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignedLocationInput", "json")
 	if err != nil {
@@ -2884,7 +3046,10 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsCreat
 // DisplayvideoAdvertisersLocationListsAssignedLocationsDelete - Deletes the assignment between a location and a location list.
 func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteRequest, security operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteSecurity) (*operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations/{assignedLocationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations/{assignedLocationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2932,7 +3097,10 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsDelet
 // DisplayvideoAdvertisersLocationListsAssignedLocationsList - Lists locations assigned to a location list.
 func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsList(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListRequest, security operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListSecurity) (*operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2980,7 +3148,10 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsAssignedLocationsList(
 // DisplayvideoAdvertisersLocationListsCreate - Creates a new location list. Returns the newly created location list if successful.
 func (s *advertisers) DisplayvideoAdvertisersLocationListsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsCreateRequest, security operations.DisplayvideoAdvertisersLocationListsCreateSecurity) (*operations.DisplayvideoAdvertisersLocationListsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationListInput", "json")
 	if err != nil {
@@ -3035,7 +3206,10 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsCreate(ctx context.Con
 // DisplayvideoAdvertisersLocationListsList - Lists location lists based on a given advertiser id.
 func (s *advertisers) DisplayvideoAdvertisersLocationListsList(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsListRequest, security operations.DisplayvideoAdvertisersLocationListsListSecurity) (*operations.DisplayvideoAdvertisersLocationListsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3083,7 +3257,10 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsList(ctx context.Conte
 // DisplayvideoAdvertisersLocationListsPatch - Updates a location list. Returns the updated location list if successful.
 func (s *advertisers) DisplayvideoAdvertisersLocationListsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersLocationListsPatchRequest, security operations.DisplayvideoAdvertisersLocationListsPatchSecurity) (*operations.DisplayvideoAdvertisersLocationListsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationListInput", "json")
 	if err != nil {
@@ -3135,10 +3312,13 @@ func (s *advertisers) DisplayvideoAdvertisersLocationListsPatch(ctx context.Cont
 	return res, nil
 }
 
-// DisplayvideoAdvertisersManualTriggersActivate - Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes apart, otherwise an error will be returned.
+// DisplayvideoAdvertisersManualTriggersActivate - Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes apart, otherwise an error will be returned. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
 func (s *advertisers) DisplayvideoAdvertisersManualTriggersActivate(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersActivateRequest, security operations.DisplayvideoAdvertisersManualTriggersActivateSecurity) (*operations.DisplayvideoAdvertisersManualTriggersActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}:activate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}:activate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3190,10 +3370,13 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersActivate(ctx context.
 	return res, nil
 }
 
-// DisplayvideoAdvertisersManualTriggersCreate - Creates a new manual trigger. Returns the newly created manual trigger if successful.
+// DisplayvideoAdvertisersManualTriggersCreate - Creates a new manual trigger. Returns the newly created manual trigger if successful. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
 func (s *advertisers) DisplayvideoAdvertisersManualTriggersCreate(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersCreateRequest, security operations.DisplayvideoAdvertisersManualTriggersCreateSecurity) (*operations.DisplayvideoAdvertisersManualTriggersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/manualTriggers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/manualTriggers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManualTriggerInput", "json")
 	if err != nil {
@@ -3245,10 +3428,13 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersCreate(ctx context.Co
 	return res, nil
 }
 
-// DisplayvideoAdvertisersManualTriggersDeactivate - Deactivates a manual trigger.
+// DisplayvideoAdvertisersManualTriggersDeactivate - Deactivates a manual trigger. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
 func (s *advertisers) DisplayvideoAdvertisersManualTriggersDeactivate(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersDeactivateRequest, security operations.DisplayvideoAdvertisersManualTriggersDeactivateSecurity) (*operations.DisplayvideoAdvertisersManualTriggersDeactivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}:deactivate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}:deactivate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3300,10 +3486,13 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersDeactivate(ctx contex
 	return res, nil
 }
 
-// DisplayvideoAdvertisersManualTriggersGet - Gets a manual trigger.
+// DisplayvideoAdvertisersManualTriggersGet - Gets a manual trigger. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
 func (s *advertisers) DisplayvideoAdvertisersManualTriggersGet(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersGetRequest, security operations.DisplayvideoAdvertisersManualTriggersGetSecurity) (*operations.DisplayvideoAdvertisersManualTriggersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3348,10 +3537,13 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersGet(ctx context.Conte
 	return res, nil
 }
 
-// DisplayvideoAdvertisersManualTriggersList - Lists manual triggers that are accessible to the current user for a given advertiser ID. The order is defined by the order_by parameter. A single advertiser_id is required.
+// DisplayvideoAdvertisersManualTriggersList - Lists manual triggers that are accessible to the current user for a given advertiser ID. The order is defined by the order_by parameter. A single advertiser_id is required. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
 func (s *advertisers) DisplayvideoAdvertisersManualTriggersList(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersListRequest, security operations.DisplayvideoAdvertisersManualTriggersListSecurity) (*operations.DisplayvideoAdvertisersManualTriggersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/manualTriggers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/manualTriggers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3396,10 +3588,13 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersList(ctx context.Cont
 	return res, nil
 }
 
-// DisplayvideoAdvertisersManualTriggersPatch - Updates a manual trigger. Returns the updated manual trigger if successful.
+// DisplayvideoAdvertisersManualTriggersPatch - Updates a manual trigger. Returns the updated manual trigger if successful. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
 func (s *advertisers) DisplayvideoAdvertisersManualTriggersPatch(ctx context.Context, request operations.DisplayvideoAdvertisersManualTriggersPatchRequest, security operations.DisplayvideoAdvertisersManualTriggersPatchSecurity) (*operations.DisplayvideoAdvertisersManualTriggersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManualTriggerInput", "json")
 	if err != nil {
@@ -3454,7 +3649,10 @@ func (s *advertisers) DisplayvideoAdvertisersManualTriggersPatch(ctx context.Con
 // DisplayvideoAdvertisersNegativeKeywordListsCreate - Creates a new negative keyword list. Returns the newly created negative keyword list if successful.
 func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsCreateRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsCreateSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NegativeKeywordListInput", "json")
 	if err != nil {
@@ -3509,7 +3707,10 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsCreate(ctx cont
 // DisplayvideoAdvertisersNegativeKeywordListsList - Lists negative keyword lists based on a given advertiser id.
 func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsList(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsListRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsListSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3557,7 +3758,10 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsList(ctx contex
 // DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit - Bulk edits negative keywords in a single negative keyword list. The operation will delete the negative keywords provided in BulkEditNegativeKeywordsRequest.deleted_negative_keywords and then create the negative keywords provided in BulkEditNegativeKeywordsRequest.created_negative_keywords. This operation is guaranteed to be atomic and will never result in a partial success or partial failure.
 func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:bulkEdit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:bulkEdit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditNegativeKeywordsRequestInput", "json")
 	if err != nil {
@@ -3612,7 +3816,10 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeyword
 // DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDelete - Deletes a negative keyword from a negative keyword list.
 func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords/{keywordValue}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords/{keywordValue}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3660,7 +3867,10 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeyword
 // DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsList - Lists negative keywords in a negative keyword list.
 func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsList(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3708,7 +3918,10 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeyword
 // DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplace - Replaces all negative keywords in a single negative keyword list. The operation will replace the keywords in a negative keyword list with keywords provided in ReplaceNegativeKeywordsRequest.new_negative_keywords.
 func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplace(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:replace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:replace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReplaceNegativeKeywordsRequestInput", "json")
 	if err != nil {
@@ -3763,7 +3976,10 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsNegativeKeyword
 // DisplayvideoAdvertisersNegativeKeywordListsPatch - Updates a negative keyword list. Returns the updated negative keyword list if successful.
 func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsPatch(ctx context.Context, request operations.DisplayvideoAdvertisersNegativeKeywordListsPatchRequest, security operations.DisplayvideoAdvertisersNegativeKeywordListsPatchSecurity) (*operations.DisplayvideoAdvertisersNegativeKeywordListsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NegativeKeywordListInput", "json")
 	if err != nil {
@@ -3818,7 +4034,10 @@ func (s *advertisers) DisplayvideoAdvertisersNegativeKeywordListsPatch(ctx conte
 // DisplayvideoAdvertisersPatch - Updates an existing advertiser. Returns the updated advertiser if successful.
 func (s *advertisers) DisplayvideoAdvertisersPatch(ctx context.Context, request operations.DisplayvideoAdvertisersPatchRequest, security operations.DisplayvideoAdvertisersPatchSecurity) (*operations.DisplayvideoAdvertisersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdvertiserInput", "json")
 	if err != nil {
@@ -3873,7 +4092,10 @@ func (s *advertisers) DisplayvideoAdvertisersPatch(ctx context.Context, request 
 // DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreate - Assigns a targeting option to an advertiser. Returns the assigned targeting option if successful.
 func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreate(ctx context.Context, request operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateRequest, security operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateSecurity) (*operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignedTargetingOptionInput", "json")
 	if err != nil {
@@ -3928,7 +4150,10 @@ func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOpti
 // DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDelete - Deletes an assigned targeting option from an advertiser.
 func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDelete(ctx context.Context, request operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteRequest, security operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteSecurity) (*operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3976,7 +4201,10 @@ func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOpti
 // DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGet - Gets a single targeting option assigned to an advertiser.
 func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetRequest, security operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetSecurity) (*operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4024,7 +4252,10 @@ func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOpti
 // DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsList - Lists the targeting options assigned to an advertiser.
 func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListRequest, security operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListSecurity) (*operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4072,7 +4303,10 @@ func (s *advertisers) DisplayvideoAdvertisersTargetingTypesAssignedTargetingOpti
 // DisplayvideoAdvertisersYoutubeAdGroupAdsGet - Gets a YouTube ad group ad.
 func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupAdsGet(ctx context.Context, request operations.DisplayvideoAdvertisersYoutubeAdGroupAdsGetRequest, security operations.DisplayvideoAdvertisersYoutubeAdGroupAdsGetSecurity) (*operations.DisplayvideoAdvertisersYoutubeAdGroupAdsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroupAds/{youtubeAdGroupAdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroupAds/{youtubeAdGroupAdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4120,7 +4354,10 @@ func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupAdsGet(ctx context.Co
 // DisplayvideoAdvertisersYoutubeAdGroupAdsList - Lists YouTube ad group ads.
 func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupAdsList(ctx context.Context, request operations.DisplayvideoAdvertisersYoutubeAdGroupAdsListRequest, security operations.DisplayvideoAdvertisersYoutubeAdGroupAdsListSecurity) (*operations.DisplayvideoAdvertisersYoutubeAdGroupAdsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroupAds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroupAds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4168,7 +4405,10 @@ func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupAdsList(ctx context.C
 // DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptions - Lists assigned targeting options for multiple YouTube ad groups across targeting types. Inherieted assigned targeting options are not included.
 func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest, security operations.DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsSecurity) (*operations.DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroups:bulkListAdGroupAssignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroups:bulkListAdGroupAssignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4216,7 +4456,10 @@ func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssig
 // DisplayvideoAdvertisersYoutubeAdGroupsGet - Gets a YouTube ad group.
 func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupsGet(ctx context.Context, request operations.DisplayvideoAdvertisersYoutubeAdGroupsGetRequest, security operations.DisplayvideoAdvertisersYoutubeAdGroupsGetSecurity) (*operations.DisplayvideoAdvertisersYoutubeAdGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroups/{youtubeAdGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroups/{youtubeAdGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4264,7 +4507,10 @@ func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupsGet(ctx context.Cont
 // DisplayvideoAdvertisersYoutubeAdGroupsList - Lists YouTube ad groups.
 func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupsList(ctx context.Context, request operations.DisplayvideoAdvertisersYoutubeAdGroupsListRequest, security operations.DisplayvideoAdvertisersYoutubeAdGroupsListSecurity) (*operations.DisplayvideoAdvertisersYoutubeAdGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4312,7 +4558,10 @@ func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupsList(ctx context.Con
 // DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGet - Gets a single targeting option assigned to a YouTube ad group. Inherited assigned targeting options are not included.
 func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGetRequest, security operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGetSecurity) (*operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroups/{youtubeAdGroupId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroups/{youtubeAdGroupId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4360,7 +4609,10 @@ func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssign
 // DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsList - Lists the targeting options assigned to a YouTube ad group. Inherited assigned targeting options are not included.
 func (s *advertisers) DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsListRequest, security operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsListSecurity) (*operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroups/{youtubeAdGroupId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/advertisers/{advertiserId}/youtubeAdGroups/{youtubeAdGroupId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

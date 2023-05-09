@@ -31,12 +31,16 @@ const (
 	PersonalNameParsedOutNameParserTypeEnumLNxFNx PersonalNameParsedOutNameParserTypeEnum = "LNxFNx"
 )
 
+func (e PersonalNameParsedOutNameParserTypeEnum) ToPointer() *PersonalNameParsedOutNameParserTypeEnum {
+	return &e
+}
+
 func (e *PersonalNameParsedOutNameParserTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FN1LN1":
 		fallthrough
 	case "LN1FN1":
@@ -72,10 +76,10 @@ func (e *PersonalNameParsedOutNameParserTypeEnum) UnmarshalJSON(data []byte) err
 	case "FNxLNx":
 		fallthrough
 	case "LNxFNx":
-		*e = PersonalNameParsedOutNameParserTypeEnum(s)
+		*e = PersonalNameParsedOutNameParserTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PersonalNameParsedOutNameParserTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PersonalNameParsedOutNameParserTypeEnum: %v", v)
 	}
 }
 
@@ -103,12 +107,16 @@ const (
 	PersonalNameParsedOutNameParserTypeAltEnumLNxFNx PersonalNameParsedOutNameParserTypeAltEnum = "LNxFNx"
 )
 
+func (e PersonalNameParsedOutNameParserTypeAltEnum) ToPointer() *PersonalNameParsedOutNameParserTypeAltEnum {
+	return &e
+}
+
 func (e *PersonalNameParsedOutNameParserTypeAltEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FN1LN1":
 		fallthrough
 	case "LN1FN1":
@@ -144,10 +152,10 @@ func (e *PersonalNameParsedOutNameParserTypeAltEnum) UnmarshalJSON(data []byte) 
 	case "FNxLNx":
 		fallthrough
 	case "LNxFNx":
-		*e = PersonalNameParsedOutNameParserTypeAltEnum(s)
+		*e = PersonalNameParsedOutNameParserTypeAltEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PersonalNameParsedOutNameParserTypeAltEnum: %s", s)
+		return fmt.Errorf("invalid value for PersonalNameParsedOutNameParserTypeAltEnum: %v", v)
 	}
 }
 

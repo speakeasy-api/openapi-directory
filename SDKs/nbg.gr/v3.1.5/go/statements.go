@@ -36,7 +36,10 @@ func newStatements(defaultClient, securityClient HTTPClient, serverURL, language
 // Get Statements by Account ID
 func (s *statements) GetAccountsAccountIDStatements(ctx context.Context, request operations.GetAccountsAccountIDStatementsRequest, security operations.GetAccountsAccountIDStatementsSecurity) (*operations.GetAccountsAccountIDStatementsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -122,7 +125,10 @@ func (s *statements) GetAccountsAccountIDStatements(ctx context.Context, request
 // Get Statements by Account ID and Statement ID
 func (s *statements) GetAccountsAccountIDStatementsStatementID(ctx context.Context, request operations.GetAccountsAccountIDStatementsStatementIDRequest, security operations.GetAccountsAccountIDStatementsStatementIDSecurity) (*operations.GetAccountsAccountIDStatementsStatementIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements/{statementId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements/{statementId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -204,7 +210,10 @@ func (s *statements) GetAccountsAccountIDStatementsStatementID(ctx context.Conte
 // Get Statement PDF File by Account ID and Statement ID
 func (s *statements) GetAccountsAccountIDStatementsStatementIDFile(ctx context.Context, request operations.GetAccountsAccountIDStatementsStatementIDFileRequest, security operations.GetAccountsAccountIDStatementsStatementIDFileSecurity) (*operations.GetAccountsAccountIDStatementsStatementIDFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements/{statementId}/file", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/statements/{statementId}/file", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

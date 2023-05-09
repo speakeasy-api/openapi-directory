@@ -20,12 +20,16 @@ const (
 	GetUserUsernameTokenKindKindEnumPlain         GetUserUsernameTokenKindKindEnum = "'plain'"
 )
 
+func (e GetUserUsernameTokenKindKindEnum) ToPointer() *GetUserUsernameTokenKindKindEnum {
+	return &e
+}
+
 func (e *GetUserUsernameTokenKindKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "'access'":
 		fallthrough
 	case "'refresh'":
@@ -37,10 +41,10 @@ func (e *GetUserUsernameTokenKindKindEnum) UnmarshalJSON(data []byte) error {
 	case "'selfie'":
 		fallthrough
 	case "'plain'":
-		*e = GetUserUsernameTokenKindKindEnum(s)
+		*e = GetUserUsernameTokenKindKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUserUsernameTokenKindKindEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUserUsernameTokenKindKindEnum: %v", v)
 	}
 }
 

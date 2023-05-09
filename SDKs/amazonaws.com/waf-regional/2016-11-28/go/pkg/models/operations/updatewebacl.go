@@ -16,17 +16,21 @@ const (
 	UpdateWebACLXAmzTargetEnumAwswafRegional20161128UpdateWebACL UpdateWebACLXAmzTargetEnum = "AWSWAF_Regional_20161128.UpdateWebACL"
 )
 
+func (e UpdateWebACLXAmzTargetEnum) ToPointer() *UpdateWebACLXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateWebACLXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.UpdateWebACL":
-		*e = UpdateWebACLXAmzTargetEnum(s)
+		*e = UpdateWebACLXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateWebACLXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateWebACLXAmzTargetEnum: %v", v)
 	}
 }
 

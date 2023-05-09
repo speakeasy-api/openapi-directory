@@ -14,19 +14,23 @@ const (
 	AlgorithmObjectiveEnumCompletionTime AlgorithmObjectiveEnum = "completion_time"
 )
 
+func (e AlgorithmObjectiveEnum) ToPointer() *AlgorithmObjectiveEnum {
+	return &e
+}
+
 func (e *AlgorithmObjectiveEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "transport_time":
 		fallthrough
 	case "completion_time":
-		*e = AlgorithmObjectiveEnum(s)
+		*e = AlgorithmObjectiveEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlgorithmObjectiveEnum: %s", s)
+		return fmt.Errorf("invalid value for AlgorithmObjectiveEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	AlgorithmProblemTypeEnumMinMax AlgorithmProblemTypeEnum = "min-max"
 )
 
+func (e AlgorithmProblemTypeEnum) ToPointer() *AlgorithmProblemTypeEnum {
+	return &e
+}
+
 func (e *AlgorithmProblemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "min":
 		fallthrough
 	case "min-max":
-		*e = AlgorithmProblemTypeEnum(s)
+		*e = AlgorithmProblemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlgorithmProblemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AlgorithmProblemTypeEnum: %v", v)
 	}
 }
 

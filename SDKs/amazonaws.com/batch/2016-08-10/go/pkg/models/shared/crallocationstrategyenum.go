@@ -15,20 +15,24 @@ const (
 	CRAllocationStrategyEnumSpotCapacityOptimized CRAllocationStrategyEnum = "SPOT_CAPACITY_OPTIMIZED"
 )
 
+func (e CRAllocationStrategyEnum) ToPointer() *CRAllocationStrategyEnum {
+	return &e
+}
+
 func (e *CRAllocationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BEST_FIT":
 		fallthrough
 	case "BEST_FIT_PROGRESSIVE":
 		fallthrough
 	case "SPOT_CAPACITY_OPTIMIZED":
-		*e = CRAllocationStrategyEnum(s)
+		*e = CRAllocationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CRAllocationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for CRAllocationStrategyEnum: %v", v)
 	}
 }

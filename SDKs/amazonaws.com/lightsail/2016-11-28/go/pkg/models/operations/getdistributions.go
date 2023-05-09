@@ -16,17 +16,21 @@ const (
 	GetDistributionsXAmzTargetEnumLightsail20161128GetDistributions GetDistributionsXAmzTargetEnum = "Lightsail_20161128.GetDistributions"
 )
 
+func (e GetDistributionsXAmzTargetEnum) ToPointer() *GetDistributionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDistributionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetDistributions":
-		*e = GetDistributionsXAmzTargetEnum(s)
+		*e = GetDistributionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDistributionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDistributionsXAmzTargetEnum: %v", v)
 	}
 }
 

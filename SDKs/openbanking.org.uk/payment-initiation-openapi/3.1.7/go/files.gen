@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -116,4 +117,13 @@ pkg/models/shared/obwriteinternationalstandingorderconsent6.go
 pkg/models/shared/obwriteinternationalstandingorderresponse7.go
 pkg/models/shared/obwriteinternationalstandingorder4.go
 pkg/models/shared/obwritepaymentdetailsresponse1.go
+docs/sdk/README.md
+docs/domesticpayments/README.md
+docs/domesticscheduledpayments/README.md
+docs/domesticstandingorders/README.md
+docs/filepayments/README.md
+docs/internationalpayments/README.md
+docs/internationalscheduledpayments/README.md
+docs/internationalstandingorders/README.md
+docs/paymentdetails/README.md
 USAGE.md

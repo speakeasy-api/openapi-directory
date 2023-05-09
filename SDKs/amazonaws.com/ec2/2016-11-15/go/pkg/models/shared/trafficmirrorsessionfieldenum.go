@@ -15,20 +15,24 @@ const (
 	TrafficMirrorSessionFieldEnumVirtualNetworkID TrafficMirrorSessionFieldEnum = "virtual-network-id"
 )
 
+func (e TrafficMirrorSessionFieldEnum) ToPointer() *TrafficMirrorSessionFieldEnum {
+	return &e
+}
+
 func (e *TrafficMirrorSessionFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "packet-length":
 		fallthrough
 	case "description":
 		fallthrough
 	case "virtual-network-id":
-		*e = TrafficMirrorSessionFieldEnum(s)
+		*e = TrafficMirrorSessionFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrafficMirrorSessionFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for TrafficMirrorSessionFieldEnum: %v", v)
 	}
 }

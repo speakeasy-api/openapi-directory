@@ -16,21 +16,25 @@ const (
 	GoogleCloudRetailV2betaImportProductsRequestReconciliationModeEnumFull                          GoogleCloudRetailV2betaImportProductsRequestReconciliationModeEnum = "FULL"
 )
 
+func (e GoogleCloudRetailV2betaImportProductsRequestReconciliationModeEnum) ToPointer() *GoogleCloudRetailV2betaImportProductsRequestReconciliationModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2betaImportProductsRequestReconciliationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECONCILIATION_MODE_UNSPECIFIED":
 		fallthrough
 	case "INCREMENTAL":
 		fallthrough
 	case "FULL":
-		*e = GoogleCloudRetailV2betaImportProductsRequestReconciliationModeEnum(s)
+		*e = GoogleCloudRetailV2betaImportProductsRequestReconciliationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaImportProductsRequestReconciliationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaImportProductsRequestReconciliationModeEnum: %v", v)
 	}
 }
 
@@ -40,7 +44,7 @@ type GoogleCloudRetailV2betaImportProductsRequestInput struct {
 	ErrorsConfig *GoogleCloudRetailV2betaImportErrorsConfig `json:"errorsConfig,omitempty"`
 	// The input config source for products.
 	InputConfig *GoogleCloudRetailV2betaProductInputConfigInput `json:"inputConfig,omitempty"`
-	// Full Pub/Sub topic name for receiving notification. If this field is set, when the import is finished, a notification is sent to specified Pub/Sub topic. The message data is JSON string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It has to be within the same project as ImportProductsRequest.parent. Make sure that `service-@gcp-sa-retail.iam.gserviceaccount.com` has the `pubsub.topics.publish` IAM permission on the topic.
+	// Full Pub/Sub topic name for receiving notification. If this field is set, when the import is finished, a notification is sent to specified Pub/Sub topic. The message data is JSON string of a Operation. Format of the Pub/Sub topic is `projects/{project}/topics/{topic}`. It has to be within the same project as ImportProductsRequest.parent. Make sure that both `cloud-retail-customer-data-access@system.gserviceaccount.com` and `service-@gcp-sa-retail.iam.gserviceaccount.com` have the `pubsub.topics.publish` IAM permission on the topic. Only supported when ImportProductsRequest.reconciliation_mode is set to `FULL`.
 	NotificationPubsubTopic *string `json:"notificationPubsubTopic,omitempty"`
 	// The mode of reconciliation between existing products and the products to be imported. Defaults to ReconciliationMode.INCREMENTAL.
 	ReconciliationMode *GoogleCloudRetailV2betaImportProductsRequestReconciliationModeEnum `json:"reconciliationMode,omitempty"`

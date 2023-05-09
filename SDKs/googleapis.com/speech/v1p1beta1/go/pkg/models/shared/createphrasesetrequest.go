@@ -2,10 +2,10 @@
 
 package shared
 
-// CreatePhraseSetRequest - Message sent by the client for the `CreatePhraseSet` method.
-type CreatePhraseSetRequest struct {
+// CreatePhraseSetRequestInput - Message sent by the client for the `CreatePhraseSet` method.
+type CreatePhraseSetRequestInput struct {
 	// Provides "hints" to the speech recognizer to favor specific words and phrases in the results.
-	PhraseSet *PhraseSet `json:"phraseSet,omitempty"`
+	PhraseSet *PhraseSetInput `json:"phraseSet,omitempty"`
 	// Required. The ID to use for the phrase set, which will become the final component of the phrase set's resource name. This value should restrict to letters, numbers, and hyphens, with the first character a letter, the last a letter or a number, and be 4-63 characters.
 	PhraseSetID *string `json:"phraseSetId,omitempty"`
 }

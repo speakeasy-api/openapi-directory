@@ -15,19 +15,23 @@ const (
 	SsoStrategyEntityDeprovisionBehaviorEnumDelete  SsoStrategyEntityDeprovisionBehaviorEnum = "delete"
 )
 
+func (e SsoStrategyEntityDeprovisionBehaviorEnum) ToPointer() *SsoStrategyEntityDeprovisionBehaviorEnum {
+	return &e
+}
+
 func (e *SsoStrategyEntityDeprovisionBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disable":
 		fallthrough
 	case "delete":
-		*e = SsoStrategyEntityDeprovisionBehaviorEnum(s)
+		*e = SsoStrategyEntityDeprovisionBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SsoStrategyEntityDeprovisionBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for SsoStrategyEntityDeprovisionBehaviorEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	SsoStrategyEntityLdapUsernameFieldEnumUserPrincipalName SsoStrategyEntityLdapUsernameFieldEnum = "userPrincipalName"
 )
 
+func (e SsoStrategyEntityLdapUsernameFieldEnum) ToPointer() *SsoStrategyEntityLdapUsernameFieldEnum {
+	return &e
+}
+
 func (e *SsoStrategyEntityLdapUsernameFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sAMAccountName":
 		fallthrough
 	case "userPrincipalName":
-		*e = SsoStrategyEntityLdapUsernameFieldEnum(s)
+		*e = SsoStrategyEntityLdapUsernameFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SsoStrategyEntityLdapUsernameFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for SsoStrategyEntityLdapUsernameFieldEnum: %v", v)
 	}
 }
 
@@ -67,12 +75,16 @@ const (
 	SsoStrategyEntityProtocolEnumScim            SsoStrategyEntityProtocolEnum = "scim"
 )
 
+func (e SsoStrategyEntityProtocolEnum) ToPointer() *SsoStrategyEntityProtocolEnum {
+	return &e
+}
+
 func (e *SsoStrategyEntityProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "oauth2":
 		fallthrough
 	case "_unused_openid2":
@@ -84,10 +96,10 @@ func (e *SsoStrategyEntityProtocolEnum) UnmarshalJSON(data []byte) error {
 	case "open_ldap":
 		fallthrough
 	case "scim":
-		*e = SsoStrategyEntityProtocolEnum(s)
+		*e = SsoStrategyEntityProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SsoStrategyEntityProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for SsoStrategyEntityProtocolEnum: %v", v)
 	}
 }
 
@@ -111,12 +123,16 @@ const (
 	SsoStrategyEntityProviderEnumScim         SsoStrategyEntityProviderEnum = "scim"
 )
 
+func (e SsoStrategyEntityProviderEnum) ToPointer() *SsoStrategyEntityProviderEnum {
+	return &e
+}
+
 func (e *SsoStrategyEntityProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "google":
 		fallthrough
 	case "auth0":
@@ -144,10 +160,10 @@ func (e *SsoStrategyEntityProviderEnum) UnmarshalJSON(data []byte) error {
 	case "ldap":
 		fallthrough
 	case "scim":
-		*e = SsoStrategyEntityProviderEnum(s)
+		*e = SsoStrategyEntityProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SsoStrategyEntityProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for SsoStrategyEntityProviderEnum: %v", v)
 	}
 }
 
@@ -160,21 +176,25 @@ const (
 	SsoStrategyEntityScimAuthenticationMethodEnumToken SsoStrategyEntityScimAuthenticationMethodEnum = "token"
 )
 
+func (e SsoStrategyEntityScimAuthenticationMethodEnum) ToPointer() *SsoStrategyEntityScimAuthenticationMethodEnum {
+	return &e
+}
+
 func (e *SsoStrategyEntityScimAuthenticationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "basic":
 		fallthrough
 	case "token":
-		*e = SsoStrategyEntityScimAuthenticationMethodEnum(s)
+		*e = SsoStrategyEntityScimAuthenticationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SsoStrategyEntityScimAuthenticationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for SsoStrategyEntityScimAuthenticationMethodEnum: %v", v)
 	}
 }
 

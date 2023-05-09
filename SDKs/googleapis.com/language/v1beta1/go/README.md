@@ -13,42 +13,40 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/language/v
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.LanguageDocumentsAnalyzeEntitiesRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Documents.LanguageDocumentsAnalyzeEntities(ctx, operations.LanguageDocumentsAnalyzeEntitiesRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AnalyzeEntitiesRequest: &shared.AnalyzeEntitiesRequest{
             Document: &shared.Document{
-                Content: "provident",
-                GcsContentURI: "distinctio",
-                Language: "quibusdam",
-                Type: "PLAIN_TEXT",
+                Content: sdk.String("provident"),
+                GcsContentURI: sdk.String("distinctio"),
+                Language: sdk.String("quibusdam"),
+                Type: shared.DocumentTypeEnumPlainText.ToPointer(),
             },
-            EncodingType: "UTF32",
+            EncodingType: shared.AnalyzeEntitiesRequestEncodingTypeEnumUtf32.ToPointer(),
         },
-        AccessToken: "corrupti",
-        Alt: "proto",
-        Callback: "vel",
-        Fields: "error",
-        Key: "deserunt",
-        OauthToken: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Documents.LanguageDocumentsAnalyzeEntities(ctx, req, operations.LanguageDocumentsAnalyzeEntitiesSecurity{
+        AccessToken: sdk.String("corrupti"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("vel"),
+        Fields: sdk.String("error"),
+        Key: sdk.String("deserunt"),
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.LanguageDocumentsAnalyzeEntitiesSecurity{
         Option1: &operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -69,12 +67,12 @@ func main() {
 ## Available Resources and Operations
 
 
-### Documents
+### [Documents](docs/documents/README.md)
 
-* `LanguageDocumentsAnalyzeEntities` - Finds named entities (currently proper names and common nouns) in the text along with entity types, salience, mentions for each entity, and other properties.
-* `LanguageDocumentsAnalyzeSentiment` - Analyzes the sentiment of the provided text.
-* `LanguageDocumentsAnalyzeSyntax` - Analyzes the syntax of the text and provides sentence boundaries and tokenization along with part of speech tags, dependency trees, and other properties.
-* `LanguageDocumentsAnnotateText` - A convenience method that provides all the features that analyzeSentiment, analyzeEntities, and analyzeSyntax provide in one call.
+* [LanguageDocumentsAnalyzeEntities](docs/documents/README.md#languagedocumentsanalyzeentities) - Finds named entities (currently proper names and common nouns) in the text along with entity types, salience, mentions for each entity, and other properties.
+* [LanguageDocumentsAnalyzeSentiment](docs/documents/README.md#languagedocumentsanalyzesentiment) - Analyzes the sentiment of the provided text.
+* [LanguageDocumentsAnalyzeSyntax](docs/documents/README.md#languagedocumentsanalyzesyntax) - Analyzes the syntax of the text and provides sentence boundaries and tokenization along with part of speech tags, dependency trees, and other properties.
+* [LanguageDocumentsAnnotateText](docs/documents/README.md#languagedocumentsannotatetext) - A convenience method that provides all the features that analyzeSentiment, analyzeEntities, and analyzeSyntax provide in one call.
 <!-- End SDK Available Operations -->
 
 ### Maturity

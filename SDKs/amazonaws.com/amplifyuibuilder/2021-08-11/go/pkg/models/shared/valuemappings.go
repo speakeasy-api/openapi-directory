@@ -4,5 +4,6 @@ package shared
 
 // ValueMappings - Represents the data binding configuration for a value map.
 type ValueMappings struct {
-	Values []ValueMapping `json:"values"`
+	BindingProperties map[string]FormInputBindingPropertiesValue `json:"bindingProperties,omitempty"`
+	Values            []ValueMapping                             `json:"values"`
 }

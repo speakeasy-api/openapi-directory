@@ -22,17 +22,21 @@ const (
 	GETModifyVpcPeeringConnectionOptionsActionEnumModifyVpcPeeringConnectionOptions GETModifyVpcPeeringConnectionOptionsActionEnum = "ModifyVpcPeeringConnectionOptions"
 )
 
+func (e GETModifyVpcPeeringConnectionOptionsActionEnum) ToPointer() *GETModifyVpcPeeringConnectionOptionsActionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcPeeringConnectionOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVpcPeeringConnectionOptions":
-		*e = GETModifyVpcPeeringConnectionOptionsActionEnum(s)
+		*e = GETModifyVpcPeeringConnectionOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcPeeringConnectionOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcPeeringConnectionOptionsActionEnum: %v", v)
 	}
 }
 
@@ -50,17 +54,21 @@ const (
 	GETModifyVpcPeeringConnectionOptionsVersionEnumTwoThousandAndSixteen1115 GETModifyVpcPeeringConnectionOptionsVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVpcPeeringConnectionOptionsVersionEnum) ToPointer() *GETModifyVpcPeeringConnectionOptionsVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcPeeringConnectionOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVpcPeeringConnectionOptionsVersionEnum(s)
+		*e = GETModifyVpcPeeringConnectionOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcPeeringConnectionOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcPeeringConnectionOptionsVersionEnum: %v", v)
 	}
 }
 

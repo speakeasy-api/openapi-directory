@@ -15,19 +15,23 @@ const (
 	AudioRenderTimelineSpanRegionEndTypeEventEnumTransition AudioRenderTimelineSpanRegionEndTypeEventEnum = "transition"
 )
 
+func (e AudioRenderTimelineSpanRegionEndTypeEventEnum) ToPointer() *AudioRenderTimelineSpanRegionEndTypeEventEnum {
+	return &e
+}
+
 func (e *AudioRenderTimelineSpanRegionEndTypeEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ending":
 		fallthrough
 	case "transition":
-		*e = AudioRenderTimelineSpanRegionEndTypeEventEnum(s)
+		*e = AudioRenderTimelineSpanRegionEndTypeEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AudioRenderTimelineSpanRegionEndTypeEventEnum: %s", s)
+		return fmt.Errorf("invalid value for AudioRenderTimelineSpanRegionEndTypeEventEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	AudioRenderTimelineSpanRegionEndTypeTypeEnumCut     AudioRenderTimelineSpanRegionEndTypeTypeEnum = "cut"
 )
 
+func (e AudioRenderTimelineSpanRegionEndTypeTypeEnum) ToPointer() *AudioRenderTimelineSpanRegionEndTypeTypeEnum {
+	return &e
+}
+
 func (e *AudioRenderTimelineSpanRegionEndTypeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ringout":
 		fallthrough
 	case "cut":
-		*e = AudioRenderTimelineSpanRegionEndTypeTypeEnum(s)
+		*e = AudioRenderTimelineSpanRegionEndTypeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AudioRenderTimelineSpanRegionEndTypeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AudioRenderTimelineSpanRegionEndTypeTypeEnum: %v", v)
 	}
 }
 
@@ -76,12 +84,16 @@ const (
 	AudioRenderTimelineSpanRegionKeyTonicAccidentalEnumDoubleSharp AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum = "double sharp"
 )
 
+func (e AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum) ToPointer() *AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum {
+	return &e
+}
+
 func (e *AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "double flat":
 		fallthrough
 	case "flat":
@@ -91,10 +103,10 @@ func (e *AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum) UnmarshalJSON(data
 	case "sharp":
 		fallthrough
 	case "double sharp":
-		*e = AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum(s)
+		*e = AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum: %s", s)
+		return fmt.Errorf("invalid value for AudioRenderTimelineSpanRegionKeyTonicAccidentalEnum: %v", v)
 	}
 }
 
@@ -111,12 +123,16 @@ const (
 	AudioRenderTimelineSpanRegionKeyTonicNoteEnumB AudioRenderTimelineSpanRegionKeyTonicNoteEnum = "b"
 )
 
+func (e AudioRenderTimelineSpanRegionKeyTonicNoteEnum) ToPointer() *AudioRenderTimelineSpanRegionKeyTonicNoteEnum {
+	return &e
+}
+
 func (e *AudioRenderTimelineSpanRegionKeyTonicNoteEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "c":
 		fallthrough
 	case "d":
@@ -130,10 +146,10 @@ func (e *AudioRenderTimelineSpanRegionKeyTonicNoteEnum) UnmarshalJSON(data []byt
 	case "a":
 		fallthrough
 	case "b":
-		*e = AudioRenderTimelineSpanRegionKeyTonicNoteEnum(s)
+		*e = AudioRenderTimelineSpanRegionKeyTonicNoteEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AudioRenderTimelineSpanRegionKeyTonicNoteEnum: %s", s)
+		return fmt.Errorf("invalid value for AudioRenderTimelineSpanRegionKeyTonicNoteEnum: %v", v)
 	}
 }
 
@@ -154,12 +170,16 @@ const (
 	AudioRenderTimelineSpanRegionKeyTonicQualityEnumLocrian       AudioRenderTimelineSpanRegionKeyTonicQualityEnum = "locrian"
 )
 
+func (e AudioRenderTimelineSpanRegionKeyTonicQualityEnum) ToPointer() *AudioRenderTimelineSpanRegionKeyTonicQualityEnum {
+	return &e
+}
+
 func (e *AudioRenderTimelineSpanRegionKeyTonicQualityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "major":
 		fallthrough
 	case "natural_minor":
@@ -181,10 +201,10 @@ func (e *AudioRenderTimelineSpanRegionKeyTonicQualityEnum) UnmarshalJSON(data []
 	case "aeolian":
 		fallthrough
 	case "locrian":
-		*e = AudioRenderTimelineSpanRegionKeyTonicQualityEnum(s)
+		*e = AudioRenderTimelineSpanRegionKeyTonicQualityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AudioRenderTimelineSpanRegionKeyTonicQualityEnum: %s", s)
+		return fmt.Errorf("invalid value for AudioRenderTimelineSpanRegionKeyTonicQualityEnum: %v", v)
 	}
 }
 
@@ -206,19 +226,23 @@ const (
 	AudioRenderTimelineSpanRegionRegionEnumSilence AudioRenderTimelineSpanRegionRegionEnum = "silence"
 )
 
+func (e AudioRenderTimelineSpanRegionRegionEnum) ToPointer() *AudioRenderTimelineSpanRegionRegionEnum {
+	return &e
+}
+
 func (e *AudioRenderTimelineSpanRegionRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "music":
 		fallthrough
 	case "silence":
-		*e = AudioRenderTimelineSpanRegionRegionEnum(s)
+		*e = AudioRenderTimelineSpanRegionRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AudioRenderTimelineSpanRegionRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for AudioRenderTimelineSpanRegionRegionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DescribeDeliveryChannelStatusXAmzTargetEnumStarlingDoveServiceDescribeDeliveryChannelStatus DescribeDeliveryChannelStatusXAmzTargetEnum = "StarlingDoveService.DescribeDeliveryChannelStatus"
 )
 
+func (e DescribeDeliveryChannelStatusXAmzTargetEnum) ToPointer() *DescribeDeliveryChannelStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDeliveryChannelStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DescribeDeliveryChannelStatus":
-		*e = DescribeDeliveryChannelStatusXAmzTargetEnum(s)
+		*e = DescribeDeliveryChannelStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDeliveryChannelStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDeliveryChannelStatusXAmzTargetEnum: %v", v)
 	}
 }
 

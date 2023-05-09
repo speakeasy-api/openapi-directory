@@ -15,17 +15,21 @@ const (
 	GETDeleteNotificationConfigurationActionEnumDeleteNotificationConfiguration GETDeleteNotificationConfigurationActionEnum = "DeleteNotificationConfiguration"
 )
 
+func (e GETDeleteNotificationConfigurationActionEnum) ToPointer() *GETDeleteNotificationConfigurationActionEnum {
+	return &e
+}
+
 func (e *GETDeleteNotificationConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteNotificationConfiguration":
-		*e = GETDeleteNotificationConfigurationActionEnum(s)
+		*e = GETDeleteNotificationConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteNotificationConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteNotificationConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteNotificationConfigurationVersionEnumTwoThousandAndEleven0101 GETDeleteNotificationConfigurationVersionEnum = "2011-01-01"
 )
 
+func (e GETDeleteNotificationConfigurationVersionEnum) ToPointer() *GETDeleteNotificationConfigurationVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteNotificationConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETDeleteNotificationConfigurationVersionEnum(s)
+		*e = GETDeleteNotificationConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteNotificationConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteNotificationConfigurationVersionEnum: %v", v)
 	}
 }
 

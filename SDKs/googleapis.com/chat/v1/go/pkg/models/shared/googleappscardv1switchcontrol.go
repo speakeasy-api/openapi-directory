@@ -16,21 +16,25 @@ const (
 	GoogleAppsCardV1SwitchControlControlTypeEnumCheckBox GoogleAppsCardV1SwitchControlControlTypeEnum = "CHECK_BOX"
 )
 
+func (e GoogleAppsCardV1SwitchControlControlTypeEnum) ToPointer() *GoogleAppsCardV1SwitchControlControlTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1SwitchControlControlTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWITCH":
 		fallthrough
 	case "CHECKBOX":
 		fallthrough
 	case "CHECK_BOX":
-		*e = GoogleAppsCardV1SwitchControlControlTypeEnum(s)
+		*e = GoogleAppsCardV1SwitchControlControlTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1SwitchControlControlTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1SwitchControlControlTypeEnum: %v", v)
 	}
 }
 

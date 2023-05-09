@@ -33,7 +33,10 @@ func newTwoStepVerification(defaultClient, securityClient HTTPClient, serverURL,
 // DirectoryTwoStepVerificationTurnOff - Turns off 2-Step Verification for user.
 func (s *twoStepVerification) DirectoryTwoStepVerificationTurnOff(ctx context.Context, request operations.DirectoryTwoStepVerificationTurnOffRequest, security operations.DirectoryTwoStepVerificationTurnOffSecurity) (*operations.DirectoryTwoStepVerificationTurnOffResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/twoStepVerification/turnOff", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/twoStepVerification/turnOff", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

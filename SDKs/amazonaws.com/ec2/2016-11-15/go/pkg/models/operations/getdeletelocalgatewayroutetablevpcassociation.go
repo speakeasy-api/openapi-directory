@@ -15,17 +15,21 @@ const (
 	GETDeleteLocalGatewayRouteTableVpcAssociationActionEnumDeleteLocalGatewayRouteTableVpcAssociation GETDeleteLocalGatewayRouteTableVpcAssociationActionEnum = "DeleteLocalGatewayRouteTableVpcAssociation"
 )
 
+func (e GETDeleteLocalGatewayRouteTableVpcAssociationActionEnum) ToPointer() *GETDeleteLocalGatewayRouteTableVpcAssociationActionEnum {
+	return &e
+}
+
 func (e *GETDeleteLocalGatewayRouteTableVpcAssociationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteLocalGatewayRouteTableVpcAssociation":
-		*e = GETDeleteLocalGatewayRouteTableVpcAssociationActionEnum(s)
+		*e = GETDeleteLocalGatewayRouteTableVpcAssociationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteLocalGatewayRouteTableVpcAssociationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteLocalGatewayRouteTableVpcAssociationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteLocalGatewayRouteTableVpcAssociationVersionEnumTwoThousandAndSixteen1115 GETDeleteLocalGatewayRouteTableVpcAssociationVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteLocalGatewayRouteTableVpcAssociationVersionEnum) ToPointer() *GETDeleteLocalGatewayRouteTableVpcAssociationVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteLocalGatewayRouteTableVpcAssociationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteLocalGatewayRouteTableVpcAssociationVersionEnum(s)
+		*e = GETDeleteLocalGatewayRouteTableVpcAssociationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteLocalGatewayRouteTableVpcAssociationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteLocalGatewayRouteTableVpcAssociationVersionEnum: %v", v)
 	}
 }
 

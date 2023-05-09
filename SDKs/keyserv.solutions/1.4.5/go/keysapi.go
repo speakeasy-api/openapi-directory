@@ -33,7 +33,10 @@ func newKeysAPI(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 func (s *keysAPI) KeysAPICurrent(ctx context.Context, request operations.KeysAPICurrentRequest) (*operations.KeysAPICurrentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Current/{serial}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Current/{serial}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -73,9 +76,13 @@ func (s *keysAPI) KeysAPICurrent(ctx context.Context, request operations.KeysAPI
 
 	return res, nil
 }
+
 func (s *keysAPI) KeysAPICustom(ctx context.Context, request operations.KeysAPICustomRequest) (*operations.KeysAPICustomResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Custom/{serial}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Custom/{serial}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -115,9 +122,13 @@ func (s *keysAPI) KeysAPICustom(ctx context.Context, request operations.KeysAPIC
 
 	return res, nil
 }
+
 func (s *keysAPI) KeysAPIExpiry(ctx context.Context, request operations.KeysAPIExpiryRequest) (*operations.KeysAPIExpiryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Expiry/{serial}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Expiry/{serial}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -157,9 +168,13 @@ func (s *keysAPI) KeysAPIExpiry(ctx context.Context, request operations.KeysAPIE
 
 	return res, nil
 }
+
 func (s *keysAPI) KeysAPIFind(ctx context.Context, request operations.KeysAPIFindRequest) (*operations.KeysAPIFindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Find/{serial}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/KeysApi/Find/{serial}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

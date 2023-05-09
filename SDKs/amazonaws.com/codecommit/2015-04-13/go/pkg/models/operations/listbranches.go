@@ -16,17 +16,21 @@ const (
 	ListBranchesXAmzTargetEnumCodeCommit20150413ListBranches ListBranchesXAmzTargetEnum = "CodeCommit_20150413.ListBranches"
 )
 
+func (e ListBranchesXAmzTargetEnum) ToPointer() *ListBranchesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListBranchesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.ListBranches":
-		*e = ListBranchesXAmzTargetEnum(s)
+		*e = ListBranchesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListBranchesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListBranchesXAmzTargetEnum: %v", v)
 	}
 }
 

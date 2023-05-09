@@ -16,17 +16,21 @@ const (
 	DescribeFeatureTransformationXAmzTargetEnumAmazonPersonalizeDescribeFeatureTransformation DescribeFeatureTransformationXAmzTargetEnum = "AmazonPersonalize.DescribeFeatureTransformation"
 )
 
+func (e DescribeFeatureTransformationXAmzTargetEnum) ToPointer() *DescribeFeatureTransformationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeFeatureTransformationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.DescribeFeatureTransformation":
-		*e = DescribeFeatureTransformationXAmzTargetEnum(s)
+		*e = DescribeFeatureTransformationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFeatureTransformationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFeatureTransformationXAmzTargetEnum: %v", v)
 	}
 }
 

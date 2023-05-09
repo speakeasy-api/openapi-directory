@@ -38,7 +38,10 @@ func newRecipients(defaultClient, securityClient HTTPClient, serverURL, language
 // You can use [GET /shares/{id}](#operation/getShareById) to view the recipient list and message history for a share. Use [PATCH /shares/{id}](#operation/updateShareById) to add or remove recipients.
 func (s *recipients) ResendInvitationsForShare(ctx context.Context, request operations.ResendInvitationsForShareRequest) (*operations.ResendInvitationsForShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/recipients/shares/invites/{shareId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/recipients/shares/invites/{shareId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

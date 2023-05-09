@@ -26,12 +26,16 @@ const (
 	ErrorCodeEnumSystemLimitError          ErrorCodeEnum = "SYSTEM_LIMIT_ERROR"
 )
 
+func (e ErrorCodeEnum) ToPointer() *ErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_DENIED":
 		fallthrough
 	case "INVALID_URL_ERROR":
@@ -59,9 +63,9 @@ func (e *ErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "RESOURCE_NOT_FOUND_ERROR":
 		fallthrough
 	case "SYSTEM_LIMIT_ERROR":
-		*e = ErrorCodeEnum(s)
+		*e = ErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorCodeEnum: %v", v)
 	}
 }

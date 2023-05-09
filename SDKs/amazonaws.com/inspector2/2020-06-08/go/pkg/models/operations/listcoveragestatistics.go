@@ -36,12 +36,16 @@ const (
 	ListCoverageStatisticsRequestBodyGroupByEnumEcrRepositoryName ListCoverageStatisticsRequestBodyGroupByEnum = "ECR_REPOSITORY_NAME"
 )
 
+func (e ListCoverageStatisticsRequestBodyGroupByEnum) ToPointer() *ListCoverageStatisticsRequestBodyGroupByEnum {
+	return &e
+}
+
 func (e *ListCoverageStatisticsRequestBodyGroupByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCAN_STATUS_CODE":
 		fallthrough
 	case "SCAN_STATUS_REASON":
@@ -51,10 +55,10 @@ func (e *ListCoverageStatisticsRequestBodyGroupByEnum) UnmarshalJSON(data []byte
 	case "RESOURCE_TYPE":
 		fallthrough
 	case "ECR_REPOSITORY_NAME":
-		*e = ListCoverageStatisticsRequestBodyGroupByEnum(s)
+		*e = ListCoverageStatisticsRequestBodyGroupByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCoverageStatisticsRequestBodyGroupByEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCoverageStatisticsRequestBodyGroupByEnum: %v", v)
 	}
 }
 

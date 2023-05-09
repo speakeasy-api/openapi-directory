@@ -13,23 +13,27 @@ type RetrieveACheckTransferRequest struct {
 	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON13StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON13StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveACheckTransferDefaultApplicationJSON13StatusEnum = "429"
+	RetrieveACheckTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveACheckTransferDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON13StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = RetrieveACheckTransferDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = RetrieveACheckTransferDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON13TypeEnumRateLimitedError RetrieveACheckTransferDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON13TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON13TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type RetrieveACheckTransferDefaultApplicationJSON13 struct {
 	Type       RetrieveACheckTransferDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON12StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON12StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveACheckTransferDefaultApplicationJSON12StatusEnum = "403"
+	RetrieveACheckTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveACheckTransferDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON12StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveACheckTransferDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveACheckTransferDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON12TypeEnumPrivateFeatureError RetrieveACheckTransferDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON12TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON12TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type RetrieveACheckTransferDefaultApplicationJSON12 struct {
 	Type   RetrieveACheckTransferDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON11StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON11StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveACheckTransferDefaultApplicationJSON11StatusEnum = "404"
+	RetrieveACheckTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveACheckTransferDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON11StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveACheckTransferDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveACheckTransferDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON11TypeEnumObjectNotFoundError RetrieveACheckTransferDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON11TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON11TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type RetrieveACheckTransferDefaultApplicationJSON11 struct {
 	Type   RetrieveACheckTransferDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON10StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON10StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON10StatusEnumFourHundred RetrieveACheckTransferDefaultApplicationJSON10StatusEnum = "400"
+	RetrieveACheckTransferDefaultApplicationJSON10StatusEnumFourHundred RetrieveACheckTransferDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON10StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveACheckTransferDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveACheckTransferDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON10TypeEnumMalformedRequestError RetrieveACheckTransferDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON10TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON10TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type RetrieveACheckTransferDefaultApplicationJSON10 struct {
 	Type   RetrieveACheckTransferDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON9StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON9StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON9StatusEnumFourHundred RetrieveACheckTransferDefaultApplicationJSON9StatusEnum = "400"
+	RetrieveACheckTransferDefaultApplicationJSON9StatusEnumFourHundred RetrieveACheckTransferDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON9StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveACheckTransferDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveACheckTransferDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON9TypeEnumInvalidParametersError RetrieveACheckTransferDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON9TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON9TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type RetrieveACheckTransferDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                `json:"errors"`
 	Status RetrieveACheckTransferDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                  `json:"title"`
 	Type   RetrieveACheckTransferDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON8StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON8StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveACheckTransferDefaultApplicationJSON8StatusEnum = "409"
+	RetrieveACheckTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveACheckTransferDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON8StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveACheckTransferDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveACheckTransferDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON8TypeEnumInvalidOperationError RetrieveACheckTransferDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON8TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON8TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type RetrieveACheckTransferDefaultApplicationJSON8 struct {
 	Type   RetrieveACheckTransferDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON7StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON7StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveACheckTransferDefaultApplicationJSON7StatusEnum = "401"
+	RetrieveACheckTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveACheckTransferDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON7StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = RetrieveACheckTransferDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = RetrieveACheckTransferDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON7TypeEnumInvalidAPIKeyError RetrieveACheckTransferDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON7TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON7TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type RetrieveACheckTransferDefaultApplicationJSON7 struct {
 	Type   RetrieveACheckTransferDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON6StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON6StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON6StatusEnumFiveHundred RetrieveACheckTransferDefaultApplicationJSON6StatusEnum = "500"
+	RetrieveACheckTransferDefaultApplicationJSON6StatusEnumFiveHundred RetrieveACheckTransferDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON6StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = RetrieveACheckTransferDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = RetrieveACheckTransferDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON6TypeEnumInternalServerError RetrieveACheckTransferDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON6TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON6TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type RetrieveACheckTransferDefaultApplicationJSON6 struct {
 	Type   RetrieveACheckTransferDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON5StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON5StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveACheckTransferDefaultApplicationJSON5StatusEnum = "403"
+	RetrieveACheckTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveACheckTransferDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON5StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveACheckTransferDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveACheckTransferDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON5TypeEnumInsufficientPermissionsError RetrieveACheckTransferDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON5TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON5TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type RetrieveACheckTransferDefaultApplicationJSON5 struct {
 	Type   RetrieveACheckTransferDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON4StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON4StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveACheckTransferDefaultApplicationJSON4StatusEnum = "422"
+	RetrieveACheckTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveACheckTransferDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON4StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = RetrieveACheckTransferDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = RetrieveACheckTransferDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError RetrieveACheckTransferDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON4TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON4TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type RetrieveACheckTransferDefaultApplicationJSON4 struct {
 	Type   RetrieveACheckTransferDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON3StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON3StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveACheckTransferDefaultApplicationJSON3StatusEnum = "409"
+	RetrieveACheckTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveACheckTransferDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON3StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveACheckTransferDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveACheckTransferDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON3TypeEnumIdempotencyConflictError RetrieveACheckTransferDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON3TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON3TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type RetrieveACheckTransferDefaultApplicationJSON3 struct {
 	Type   RetrieveACheckTransferDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON2StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON2StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveACheckTransferDefaultApplicationJSON2StatusEnum = "403"
+	RetrieveACheckTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveACheckTransferDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON2StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveACheckTransferDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveACheckTransferDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON2TypeEnumEnvironmentMismatchError RetrieveACheckTransferDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON2TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON2TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type RetrieveACheckTransferDefaultApplicationJSON2 struct {
 	Type   RetrieveACheckTransferDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type RetrieveACheckTransferDefaultApplicationJSON1StatusEnum string
+type RetrieveACheckTransferDefaultApplicationJSON1StatusEnum int64
 
 const (
-	RetrieveACheckTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveACheckTransferDefaultApplicationJSON1StatusEnum = "404"
+	RetrieveACheckTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveACheckTransferDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON1StatusEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveACheckTransferDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveACheckTransferDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	RetrieveACheckTransferDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError RetrieveACheckTransferDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e RetrieveACheckTransferDefaultApplicationJSON1TypeEnum) ToPointer() *RetrieveACheckTransferDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACheckTransferDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = RetrieveACheckTransferDefaultApplicationJSON1TypeEnum(s)
+		*e = RetrieveACheckTransferDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACheckTransferDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

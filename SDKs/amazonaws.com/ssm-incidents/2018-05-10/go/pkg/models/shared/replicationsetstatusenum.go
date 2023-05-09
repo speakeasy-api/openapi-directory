@@ -17,12 +17,16 @@ const (
 	ReplicationSetStatusEnumFailed   ReplicationSetStatusEnum = "FAILED"
 )
 
+func (e ReplicationSetStatusEnum) ToPointer() *ReplicationSetStatusEnum {
+	return &e
+}
+
 func (e *ReplicationSetStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "CREATING":
@@ -32,9 +36,9 @@ func (e *ReplicationSetStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "FAILED":
-		*e = ReplicationSetStatusEnum(s)
+		*e = ReplicationSetStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicationSetStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicationSetStatusEnum: %v", v)
 	}
 }

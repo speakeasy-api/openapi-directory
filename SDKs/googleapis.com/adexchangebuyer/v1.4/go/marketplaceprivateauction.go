@@ -33,7 +33,10 @@ func newMarketplaceprivateauction(defaultClient, securityClient HTTPClient, serv
 // AdexchangebuyerMarketplaceprivateauctionUpdateproposal - Update a given private auction proposal
 func (s *marketplaceprivateauction) AdexchangebuyerMarketplaceprivateauctionUpdateproposal(ctx context.Context, request operations.AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest, security operations.AdexchangebuyerMarketplaceprivateauctionUpdateproposalSecurity) (*operations.AdexchangebuyerMarketplaceprivateauctionUpdateproposalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/privateauction/{privateAuctionId}/updateproposal", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/privateauction/{privateAuctionId}/updateproposal", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePrivateAuctionProposalRequest", "json")
 	if err != nil {

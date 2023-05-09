@@ -12,20 +12,162 @@ import (
 type DocumentCategoryEnum string
 
 const (
-	DocumentCategoryEnumForm1099Int DocumentCategoryEnum = "form_1099_int"
+	DocumentCategoryEnumAccountOpeningDisclosures        DocumentCategoryEnum = "account_opening_disclosures"
+	DocumentCategoryEnumAntiMoneyLaunderingPolicy        DocumentCategoryEnum = "anti_money_laundering_policy"
+	DocumentCategoryEnumAntiMoneyLaunderingProcedures    DocumentCategoryEnum = "anti_money_laundering_procedures"
+	DocumentCategoryEnumAuditReport                      DocumentCategoryEnum = "audit_report"
+	DocumentCategoryEnumBackgroundChecks                 DocumentCategoryEnum = "background_checks"
+	DocumentCategoryEnumBusinessContinuityPlan           DocumentCategoryEnum = "business_continuity_plan"
+	DocumentCategoryEnumCollectionsPolicy                DocumentCategoryEnum = "collections_policy"
+	DocumentCategoryEnumComplaintsPolicy                 DocumentCategoryEnum = "complaints_policy"
+	DocumentCategoryEnumComplaintReport                  DocumentCategoryEnum = "complaint_report"
+	DocumentCategoryEnumComplianceReport                 DocumentCategoryEnum = "compliance_report"
+	DocumentCategoryEnumComplianceStaffingPlan           DocumentCategoryEnum = "compliance_staffing_plan"
+	DocumentCategoryEnumComplianceManagementSystemPolicy DocumentCategoryEnum = "compliance_management_system_policy"
+	DocumentCategoryEnumConsumerPrivacyNotice            DocumentCategoryEnum = "consumer_privacy_notice"
+	DocumentCategoryEnumConsumerProtectionPolicy         DocumentCategoryEnum = "consumer_protection_policy"
+	DocumentCategoryEnumCorporateFormationDocument       DocumentCategoryEnum = "corporate_formation_document"
+	DocumentCategoryEnumCreditMonitoringReport           DocumentCategoryEnum = "credit_monitoring_report"
+	DocumentCategoryEnumCustomerInformationProgramPolicy DocumentCategoryEnum = "customer_information_program_policy"
+	DocumentCategoryEnumElectronicFundsTranferActPolicy  DocumentCategoryEnum = "electronic_funds_tranfer_act_policy"
+	DocumentCategoryEnumEmployeeOverview                 DocumentCategoryEnum = "employee_overview"
+	DocumentCategoryEnumEndUserTermsOfService            DocumentCategoryEnum = "end_user_terms_of_service"
+	DocumentCategoryEnumESignPolicy                      DocumentCategoryEnum = "e_sign_policy"
+	DocumentCategoryEnumFinancialStatement               DocumentCategoryEnum = "financial_statement"
+	DocumentCategoryEnumForm1099Int                      DocumentCategoryEnum = "form_1099_int"
+	DocumentCategoryEnumFraudPreventionPolicy            DocumentCategoryEnum = "fraud_prevention_policy"
+	DocumentCategoryEnumFundsAvailabilityPolicy          DocumentCategoryEnum = "funds_availability_policy"
+	DocumentCategoryEnumFundsAvailabilityDisclosure      DocumentCategoryEnum = "funds_availability_disclosure"
+	DocumentCategoryEnumFundsFlowDiagram                 DocumentCategoryEnum = "funds_flow_diagram"
+	DocumentCategoryEnumGrammLeachBlileyActPolicy        DocumentCategoryEnum = "gramm_leach_bliley_act_policy"
+	DocumentCategoryEnumInformationSecurityPolicy        DocumentCategoryEnum = "information_security_policy"
+	DocumentCategoryEnumInsurancePolicy                  DocumentCategoryEnum = "insurance_policy"
+	DocumentCategoryEnumInvestorPresentation             DocumentCategoryEnum = "investor_presentation"
+	DocumentCategoryEnumLoanApplicationProcessingPolicy  DocumentCategoryEnum = "loan_application_processing_policy"
+	DocumentCategoryEnumManagementBiography              DocumentCategoryEnum = "management_biography"
+	DocumentCategoryEnumMarketingAndAdvertisingPolicy    DocumentCategoryEnum = "marketing_and_advertising_policy"
+	DocumentCategoryEnumNetworkSecurityDiagram           DocumentCategoryEnum = "network_security_diagram"
+	DocumentCategoryEnumOnboardingQuestionnaire          DocumentCategoryEnum = "onboarding_questionnaire"
+	DocumentCategoryEnumPenetrationTestReport            DocumentCategoryEnum = "penetration_test_report"
+	DocumentCategoryEnumProgramRiskAssessment            DocumentCategoryEnum = "program_risk_assessment"
+	DocumentCategoryEnumSecurityAuditReport              DocumentCategoryEnum = "security_audit_report"
+	DocumentCategoryEnumServicingPolicy                  DocumentCategoryEnum = "servicing_policy"
+	DocumentCategoryEnumTransactionMonitoringReport      DocumentCategoryEnum = "transaction_monitoring_report"
+	DocumentCategoryEnumTruthInSavingsActPolicy          DocumentCategoryEnum = "truth_in_savings_act_policy"
+	DocumentCategoryEnumUnderwritingPolicy               DocumentCategoryEnum = "underwriting_policy"
+	DocumentCategoryEnumVendorList                       DocumentCategoryEnum = "vendor_list"
+	DocumentCategoryEnumVendorManagementPolicy           DocumentCategoryEnum = "vendor_management_policy"
+	DocumentCategoryEnumVendorRiskManagementReport       DocumentCategoryEnum = "vendor_risk_management_report"
+	DocumentCategoryEnumVolumeForecast                   DocumentCategoryEnum = "volume_forecast"
 )
 
+func (e DocumentCategoryEnum) ToPointer() *DocumentCategoryEnum {
+	return &e
+}
+
 func (e *DocumentCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
+	case "account_opening_disclosures":
+		fallthrough
+	case "anti_money_laundering_policy":
+		fallthrough
+	case "anti_money_laundering_procedures":
+		fallthrough
+	case "audit_report":
+		fallthrough
+	case "background_checks":
+		fallthrough
+	case "business_continuity_plan":
+		fallthrough
+	case "collections_policy":
+		fallthrough
+	case "complaints_policy":
+		fallthrough
+	case "complaint_report":
+		fallthrough
+	case "compliance_report":
+		fallthrough
+	case "compliance_staffing_plan":
+		fallthrough
+	case "compliance_management_system_policy":
+		fallthrough
+	case "consumer_privacy_notice":
+		fallthrough
+	case "consumer_protection_policy":
+		fallthrough
+	case "corporate_formation_document":
+		fallthrough
+	case "credit_monitoring_report":
+		fallthrough
+	case "customer_information_program_policy":
+		fallthrough
+	case "electronic_funds_tranfer_act_policy":
+		fallthrough
+	case "employee_overview":
+		fallthrough
+	case "end_user_terms_of_service":
+		fallthrough
+	case "e_sign_policy":
+		fallthrough
+	case "financial_statement":
+		fallthrough
 	case "form_1099_int":
-		*e = DocumentCategoryEnum(s)
+		fallthrough
+	case "fraud_prevention_policy":
+		fallthrough
+	case "funds_availability_policy":
+		fallthrough
+	case "funds_availability_disclosure":
+		fallthrough
+	case "funds_flow_diagram":
+		fallthrough
+	case "gramm_leach_bliley_act_policy":
+		fallthrough
+	case "information_security_policy":
+		fallthrough
+	case "insurance_policy":
+		fallthrough
+	case "investor_presentation":
+		fallthrough
+	case "loan_application_processing_policy":
+		fallthrough
+	case "management_biography":
+		fallthrough
+	case "marketing_and_advertising_policy":
+		fallthrough
+	case "network_security_diagram":
+		fallthrough
+	case "onboarding_questionnaire":
+		fallthrough
+	case "penetration_test_report":
+		fallthrough
+	case "program_risk_assessment":
+		fallthrough
+	case "security_audit_report":
+		fallthrough
+	case "servicing_policy":
+		fallthrough
+	case "transaction_monitoring_report":
+		fallthrough
+	case "truth_in_savings_act_policy":
+		fallthrough
+	case "underwriting_policy":
+		fallthrough
+	case "vendor_list":
+		fallthrough
+	case "vendor_management_policy":
+		fallthrough
+	case "vendor_risk_management_report":
+		fallthrough
+	case "volume_forecast":
+		*e = DocumentCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentCategoryEnum: %v", v)
 	}
 }
 
@@ -36,17 +178,21 @@ const (
 	DocumentTypeEnumDocument DocumentTypeEnum = "document"
 )
 
+func (e DocumentTypeEnum) ToPointer() *DocumentTypeEnum {
+	return &e
+}
+
 func (e *DocumentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "document":
-		*e = DocumentTypeEnum(s)
+		*e = DocumentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentTypeEnum: %v", v)
 	}
 }
 

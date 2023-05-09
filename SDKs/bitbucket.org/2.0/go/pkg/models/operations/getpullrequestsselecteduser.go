@@ -25,12 +25,16 @@ const (
 	GetPullrequestsSelectedUserStateEnumSuperseded GetPullrequestsSelectedUserStateEnum = "SUPERSEDED"
 )
 
+func (e GetPullrequestsSelectedUserStateEnum) ToPointer() *GetPullrequestsSelectedUserStateEnum {
+	return &e
+}
+
 func (e *GetPullrequestsSelectedUserStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPEN":
 		fallthrough
 	case "MERGED":
@@ -38,10 +42,10 @@ func (e *GetPullrequestsSelectedUserStateEnum) UnmarshalJSON(data []byte) error 
 	case "DECLINED":
 		fallthrough
 	case "SUPERSEDED":
-		*e = GetPullrequestsSelectedUserStateEnum(s)
+		*e = GetPullrequestsSelectedUserStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPullrequestsSelectedUserStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPullrequestsSelectedUserStateEnum: %v", v)
 	}
 }
 

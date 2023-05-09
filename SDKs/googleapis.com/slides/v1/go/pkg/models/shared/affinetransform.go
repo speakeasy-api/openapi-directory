@@ -16,21 +16,25 @@ const (
 	AffineTransformUnitEnumPt              AffineTransformUnitEnum = "PT"
 )
 
+func (e AffineTransformUnitEnum) ToPointer() *AffineTransformUnitEnum {
+	return &e
+}
+
 func (e *AffineTransformUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNIT_UNSPECIFIED":
 		fallthrough
 	case "EMU":
 		fallthrough
 	case "PT":
-		*e = AffineTransformUnitEnum(s)
+		*e = AffineTransformUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AffineTransformUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for AffineTransformUnitEnum: %v", v)
 	}
 }
 

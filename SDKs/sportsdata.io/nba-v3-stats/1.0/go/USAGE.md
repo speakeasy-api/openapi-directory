@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,13 +16,11 @@ func main() {
         }),
     )
 
-    req := operations.AllStarsRequest{
-        Format: "JSON",
-        Season: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.AllStars(ctx, req)
+    res, err := s.AllStars(ctx, operations.AllStarsRequest{
+        Format: operations.AllStarsFormatEnumJSON,
+        Season: "provident",
+    })
     if err != nil {
         log.Fatal(err)
     }

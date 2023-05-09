@@ -68,19 +68,23 @@ const (
 	DriveFilesListCorpusEnumDomain  DriveFilesListCorpusEnum = "DOMAIN"
 )
 
+func (e DriveFilesListCorpusEnum) ToPointer() *DriveFilesListCorpusEnum {
+	return &e
+}
+
 func (e *DriveFilesListCorpusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "DOMAIN":
-		*e = DriveFilesListCorpusEnum(s)
+		*e = DriveFilesListCorpusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DriveFilesListCorpusEnum: %s", s)
+		return fmt.Errorf("invalid value for DriveFilesListCorpusEnum: %v", v)
 	}
 }
 
@@ -92,19 +96,23 @@ const (
 	DriveFilesListProjectionEnumFull  DriveFilesListProjectionEnum = "FULL"
 )
 
+func (e DriveFilesListProjectionEnum) ToPointer() *DriveFilesListProjectionEnum {
+	return &e
+}
+
 func (e *DriveFilesListProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = DriveFilesListProjectionEnum(s)
+		*e = DriveFilesListProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DriveFilesListProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for DriveFilesListProjectionEnum: %v", v)
 	}
 }
 

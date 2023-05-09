@@ -15,20 +15,24 @@ const (
 	OAuthFlowTypeEnumClientCredentials OAuthFlowTypeEnum = "client_credentials"
 )
 
+func (e OAuthFlowTypeEnum) ToPointer() *OAuthFlowTypeEnum {
+	return &e
+}
+
 func (e *OAuthFlowTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "code":
 		fallthrough
 	case "implicit":
 		fallthrough
 	case "client_credentials":
-		*e = OAuthFlowTypeEnum(s)
+		*e = OAuthFlowTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OAuthFlowTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OAuthFlowTypeEnum: %v", v)
 	}
 }

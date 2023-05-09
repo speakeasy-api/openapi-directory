@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -26,10 +27,10 @@ pkg/models/shared/status.go
 pkg/models/shared/listoperationsresponse.go
 pkg/models/shared/analyzepackagesrequest.go
 pkg/models/shared/packagedata.go
+pkg/models/shared/packageversion.go
 pkg/models/shared/maintainer.go
 pkg/models/shared/filelocation.go
 pkg/models/shared/languagepackagedependency.go
-pkg/models/shared/binary.go
 pkg/models/shared/listvulnerabilitiesresponse.go
 pkg/models/shared/occurrence.go
 pkg/models/shared/vulnerabilityoccurrence.go
@@ -46,6 +47,11 @@ pkg/models/shared/windowsupdate.go
 pkg/models/shared/identity.go
 pkg/models/shared/category.go
 pkg/models/shared/upgradedistribution.go
+pkg/models/shared/sbomreferenceoccurrence.go
+pkg/models/shared/envelopesignature.go
+pkg/models/shared/sbomreferenceintotopayload.go
+pkg/models/shared/subject.go
+pkg/models/shared/sbomreferenceintotopredicate.go
 pkg/models/shared/packageoccurrence.go
 pkg/models/shared/location.go
 pkg/models/shared/license.go
@@ -53,10 +59,8 @@ pkg/models/shared/imageoccurrence.go
 pkg/models/shared/layer.go
 pkg/models/shared/fingerprint.go
 pkg/models/shared/envelope.go
-pkg/models/shared/envelopesignature.go
 pkg/models/shared/dsseattestationoccurrence.go
 pkg/models/shared/intotostatement.go
-pkg/models/shared/subject.go
 pkg/models/shared/slsaprovenancezerotwo.go
 pkg/models/shared/grafeasv1slsaprovenancezerotwoslsametadata.go
 pkg/models/shared/grafeasv1slsaprovenancezerotwoslsacompleteness.go
@@ -97,4 +101,6 @@ pkg/models/shared/artifact.go
 pkg/models/shared/attestationoccurrence.go
 pkg/models/shared/signature.go
 pkg/models/shared/jwt.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

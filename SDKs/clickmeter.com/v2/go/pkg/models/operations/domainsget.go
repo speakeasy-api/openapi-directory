@@ -19,12 +19,16 @@ const (
 	DomainsGetTypeEnumDedicated DomainsGetTypeEnum = "dedicated"
 )
 
+func (e DomainsGetTypeEnum) ToPointer() *DomainsGetTypeEnum {
+	return &e
+}
+
 func (e *DomainsGetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "system":
 		fallthrough
 	case "go":
@@ -32,10 +36,10 @@ func (e *DomainsGetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "personal":
 		fallthrough
 	case "dedicated":
-		*e = DomainsGetTypeEnum(s)
+		*e = DomainsGetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainsGetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainsGetTypeEnum: %v", v)
 	}
 }
 

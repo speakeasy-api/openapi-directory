@@ -38,19 +38,23 @@ const (
 	SheetsSpreadsheetsValuesAppendInsertDataOptionEnumInsertRows SheetsSpreadsheetsValuesAppendInsertDataOptionEnum = "INSERT_ROWS"
 )
 
+func (e SheetsSpreadsheetsValuesAppendInsertDataOptionEnum) ToPointer() *SheetsSpreadsheetsValuesAppendInsertDataOptionEnum {
+	return &e
+}
+
 func (e *SheetsSpreadsheetsValuesAppendInsertDataOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OVERWRITE":
 		fallthrough
 	case "INSERT_ROWS":
-		*e = SheetsSpreadsheetsValuesAppendInsertDataOptionEnum(s)
+		*e = SheetsSpreadsheetsValuesAppendInsertDataOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesAppendInsertDataOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesAppendInsertDataOptionEnum: %v", v)
 	}
 }
 
@@ -62,19 +66,23 @@ const (
 	SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnumFormattedString SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum = "FORMATTED_STRING"
 )
 
+func (e SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum) ToPointer() *SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum {
+	return &e
+}
+
 func (e *SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERIAL_NUMBER":
 		fallthrough
 	case "FORMATTED_STRING":
-		*e = SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum(s)
+		*e = SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum: %v", v)
 	}
 }
 
@@ -87,21 +95,25 @@ const (
 	SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnumFormula          SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum = "FORMULA"
 )
 
+func (e SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum) ToPointer() *SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum {
+	return &e
+}
+
 func (e *SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMATTED_VALUE":
 		fallthrough
 	case "UNFORMATTED_VALUE":
 		fallthrough
 	case "FORMULA":
-		*e = SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum(s)
+		*e = SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum: %v", v)
 	}
 }
 
@@ -114,21 +126,25 @@ const (
 	SheetsSpreadsheetsValuesAppendValueInputOptionEnumUserEntered                 SheetsSpreadsheetsValuesAppendValueInputOptionEnum = "USER_ENTERED"
 )
 
+func (e SheetsSpreadsheetsValuesAppendValueInputOptionEnum) ToPointer() *SheetsSpreadsheetsValuesAppendValueInputOptionEnum {
+	return &e
+}
+
 func (e *SheetsSpreadsheetsValuesAppendValueInputOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INPUT_VALUE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "USER_ENTERED":
-		*e = SheetsSpreadsheetsValuesAppendValueInputOptionEnum(s)
+		*e = SheetsSpreadsheetsValuesAppendValueInputOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesAppendValueInputOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesAppendValueInputOptionEnum: %v", v)
 	}
 }
 

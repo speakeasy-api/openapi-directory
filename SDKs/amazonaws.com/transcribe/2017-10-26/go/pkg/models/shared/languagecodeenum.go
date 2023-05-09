@@ -51,12 +51,16 @@ const (
 	LanguageCodeEnumSvSe LanguageCodeEnum = "sv-SE"
 )
 
+func (e LanguageCodeEnum) ToPointer() *LanguageCodeEnum {
+	return &e
+}
+
 func (e *LanguageCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "af-ZA":
 		fallthrough
 	case "ar-AE":
@@ -134,9 +138,9 @@ func (e *LanguageCodeEnum) UnmarshalJSON(data []byte) error {
 	case "vi-VN":
 		fallthrough
 	case "sv-SE":
-		*e = LanguageCodeEnum(s)
+		*e = LanguageCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguageCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguageCodeEnum: %v", v)
 	}
 }

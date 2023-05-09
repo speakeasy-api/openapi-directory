@@ -15,17 +15,21 @@ const (
 	GETRebootInstancesActionEnumRebootInstances GETRebootInstancesActionEnum = "RebootInstances"
 )
 
+func (e GETRebootInstancesActionEnum) ToPointer() *GETRebootInstancesActionEnum {
+	return &e
+}
+
 func (e *GETRebootInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RebootInstances":
-		*e = GETRebootInstancesActionEnum(s)
+		*e = GETRebootInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRebootInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRebootInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRebootInstancesVersionEnumTwoThousandAndSixteen1115 GETRebootInstancesVersionEnum = "2016-11-15"
 )
 
+func (e GETRebootInstancesVersionEnum) ToPointer() *GETRebootInstancesVersionEnum {
+	return &e
+}
+
 func (e *GETRebootInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETRebootInstancesVersionEnum(s)
+		*e = GETRebootInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRebootInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRebootInstancesVersionEnum: %v", v)
 	}
 }
 

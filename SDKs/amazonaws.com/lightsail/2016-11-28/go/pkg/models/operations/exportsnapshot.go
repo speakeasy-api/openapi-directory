@@ -16,17 +16,21 @@ const (
 	ExportSnapshotXAmzTargetEnumLightsail20161128ExportSnapshot ExportSnapshotXAmzTargetEnum = "Lightsail_20161128.ExportSnapshot"
 )
 
+func (e ExportSnapshotXAmzTargetEnum) ToPointer() *ExportSnapshotXAmzTargetEnum {
+	return &e
+}
+
 func (e *ExportSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.ExportSnapshot":
-		*e = ExportSnapshotXAmzTargetEnum(s)
+		*e = ExportSnapshotXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportSnapshotXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportSnapshotXAmzTargetEnum: %v", v)
 	}
 }
 

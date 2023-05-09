@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amadeus.com/amadeus-trave
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRecommendedLocationRequest{
-        CityCodes: "corrupti",
-        DestinationCountryCodes: "provident",
-        TravelerCountryCode: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.RecommendedLocations.GetRecommendedLocation(ctx, req)
+    res, err := s.RecommendedLocations.GetRecommendedLocation(ctx, operations.GetRecommendedLocationRequest{
+        CityCodes: "corrupti",
+        DestinationCountryCodes: sdk.String("provident"),
+        TravelerCountryCode: sdk.String("distinctio"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,9 +44,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### RecommendedLocations
+### [RecommendedLocations](docs/recommendedlocations/README.md)
 
-* `GetRecommendedLocation` - GET recommended destinations
+* [GetRecommendedLocation](docs/recommendedlocations/README.md#getrecommendedlocation) - GET recommended destinations
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,17 +16,21 @@ const (
 	DescribeImageXAmzTargetEnumSageMakerDescribeImage DescribeImageXAmzTargetEnum = "SageMaker.DescribeImage"
 )
 
+func (e DescribeImageXAmzTargetEnum) ToPointer() *DescribeImageXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeImageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DescribeImage":
-		*e = DescribeImageXAmzTargetEnum(s)
+		*e = DescribeImageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImageXAmzTargetEnum: %v", v)
 	}
 }
 

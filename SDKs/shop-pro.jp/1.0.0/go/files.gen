@@ -7,6 +7,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -34,4 +35,10 @@ pkg/models/operations/getscripttag.go
 pkg/models/operations/getscripttags.go
 pkg/models/operations/updatescripttag.go
 pkg/models/operations/deleteinstallation.go
+docs/sdk/README.md
+docs/applicationcharge/README.md
+docs/inlinescript/README.md
+docs/script/README.md
+docs/scriptdeprecated/README.md
+docs/uninstallation/README.md
 USAGE.md

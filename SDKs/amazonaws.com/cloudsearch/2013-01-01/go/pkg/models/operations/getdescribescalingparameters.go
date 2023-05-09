@@ -15,17 +15,21 @@ const (
 	GETDescribeScalingParametersActionEnumDescribeScalingParameters GETDescribeScalingParametersActionEnum = "DescribeScalingParameters"
 )
 
+func (e GETDescribeScalingParametersActionEnum) ToPointer() *GETDescribeScalingParametersActionEnum {
+	return &e
+}
+
 func (e *GETDescribeScalingParametersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeScalingParameters":
-		*e = GETDescribeScalingParametersActionEnum(s)
+		*e = GETDescribeScalingParametersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeScalingParametersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeScalingParametersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeScalingParametersVersionEnumTwoThousandAndThirteen0101 GETDescribeScalingParametersVersionEnum = "2013-01-01"
 )
 
+func (e GETDescribeScalingParametersVersionEnum) ToPointer() *GETDescribeScalingParametersVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeScalingParametersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = GETDescribeScalingParametersVersionEnum(s)
+		*e = GETDescribeScalingParametersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeScalingParametersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeScalingParametersVersionEnum: %v", v)
 	}
 }
 

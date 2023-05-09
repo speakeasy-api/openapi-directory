@@ -36,7 +36,10 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 // When messages are acknowledge by carriers, a notification is sent to the specified URL
 func (s *webhooks) WebhooksFetchAll(ctx context.Context, request operations.WebhooksFetchAllRequest, security operations.WebhooksFetchAllSecurity) (*operations.WebhooksFetchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *webhooks) WebhooksFetchAll(ctx context.Context, request operations.Webh
 // When messages are acknowledge by carriers, a notification is sent to the specified URL
 func (s *webhooks) WebhooksSubscribe(ctx context.Context, request operations.WebhooksSubscribeRequest, security operations.WebhooksSubscribeSecurity) (*operations.WebhooksSubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -136,7 +142,10 @@ func (s *webhooks) WebhooksSubscribe(ctx context.Context, request operations.Web
 // Delete subscription for receiving notifications
 func (s *webhooks) WebhooksUnsubscribe(ctx context.Context, request operations.WebhooksUnsubscribeRequest, security operations.WebhooksUnsubscribeSecurity) (*operations.WebhooksUnsubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks/{url}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks/{url}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

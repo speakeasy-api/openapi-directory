@@ -13,43 +13,41 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudasset
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudassetProjectsBatchGetAssetsHistoryRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
+    ctx := context.Background()
+    res, err := s.Projects.CloudassetProjectsBatchGetAssetsHistory(ctx, operations.CloudassetProjectsBatchGetAssetsHistoryRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
         AssetNames: []string{
             "unde",
             "nulla",
             "corrupti",
             "illum",
         },
-        Callback: "vel",
-        ContentType: "RESOURCE",
-        Fields: "deserunt",
-        Key: "suscipit",
-        OauthToken: "iure",
+        Callback: sdk.String("vel"),
+        ContentType: operations.CloudassetProjectsBatchGetAssetsHistoryContentTypeEnumResource.ToPointer(),
+        Fields: sdk.String("deserunt"),
+        Key: sdk.String("suscipit"),
+        OauthToken: sdk.String("iure"),
         Parent: "magnam",
-        PrettyPrint: false,
-        QuotaUser: "debitis",
-        ReadTimeWindowEndTime: "ipsa",
-        ReadTimeWindowStartTime: "delectus",
-        UploadType: "tempora",
-        UploadProtocol: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.CloudassetProjectsBatchGetAssetsHistory(ctx, req, operations.CloudassetProjectsBatchGetAssetsHistorySecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("debitis"),
+        ReadTimeWindowEndTime: sdk.String("ipsa"),
+        ReadTimeWindowStartTime: sdk.String("delectus"),
+        UploadType: sdk.String("tempora"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.CloudassetProjectsBatchGetAssetsHistorySecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -68,11 +66,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `CloudassetProjectsBatchGetAssetsHistory` - Batch gets the update history of assets that overlap a time window. For IAM_POLICY content, this API outputs history when the asset and its attached IAM POLICY both exist. This can create gaps in the output history. Otherwise, this API outputs history with asset in both non-delete or deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT error.
-* `CloudassetProjectsExportAssets` - Exports assets with time and resource types to a given Cloud Storage location. The output format is newline-delimited JSON. This API implements the google.longrunning.Operation API allowing you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. For regular-size resource parent, the export operation usually finishes within 5 minutes.
-* `CloudassetProjectsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [CloudassetProjectsBatchGetAssetsHistory](docs/projects/README.md#cloudassetprojectsbatchgetassetshistory) - Batch gets the update history of assets that overlap a time window. For IAM_POLICY content, this API outputs history when the asset and its attached IAM POLICY both exist. This can create gaps in the output history. Otherwise, this API outputs history with asset in both non-delete or deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT error.
+* [CloudassetProjectsExportAssets](docs/projects/README.md#cloudassetprojectsexportassets) - Exports assets with time and resource types to a given Cloud Storage location. The output format is newline-delimited JSON. This API implements the google.longrunning.Operation API allowing you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. For regular-size resource parent, the export operation usually finishes within 5 minutes.
+* [CloudassetProjectsOperationsGet](docs/projects/README.md#cloudassetprojectsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 <!-- End SDK Available Operations -->
 
 ### Maturity

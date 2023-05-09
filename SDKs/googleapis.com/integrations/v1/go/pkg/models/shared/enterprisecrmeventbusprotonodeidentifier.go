@@ -16,21 +16,25 @@ const (
 	EnterpriseCrmEventbusProtoNodeIdentifierElementTypeEnumTriggerConfig EnterpriseCrmEventbusProtoNodeIdentifierElementTypeEnum = "TRIGGER_CONFIG"
 )
 
+func (e EnterpriseCrmEventbusProtoNodeIdentifierElementTypeEnum) ToPointer() *EnterpriseCrmEventbusProtoNodeIdentifierElementTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoNodeIdentifierElementTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_TYPE":
 		fallthrough
 	case "TASK_CONFIG":
 		fallthrough
 	case "TRIGGER_CONFIG":
-		*e = EnterpriseCrmEventbusProtoNodeIdentifierElementTypeEnum(s)
+		*e = EnterpriseCrmEventbusProtoNodeIdentifierElementTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoNodeIdentifierElementTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoNodeIdentifierElementTypeEnum: %v", v)
 	}
 }
 

@@ -16,19 +16,23 @@ const (
 	CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementAnnouncementDirectionEnumIncoming CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementAnnouncementDirectionEnum = "incoming"
 )
 
+func (e CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementAnnouncementDirectionEnum) ToPointer() *CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementAnnouncementDirectionEnum {
+	return &e
+}
+
 func (e *CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementAnnouncementDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "outgoing":
 		fallthrough
 	case "incoming":
-		*e = CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementAnnouncementDirectionEnum(s)
+		*e = CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementAnnouncementDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementAnnouncementDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementAnnouncementDirectionEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementStateEnumDeleted   CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementStateEnum = "deleted"
 )
 
+func (e CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementStateEnum) ToPointer() *CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementStateEnum {
+	return &e
+}
+
 func (e *CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "pending":
@@ -61,10 +69,10 @@ func (e *CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTabl
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementStateEnum(s)
+		*e = CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTransitGatewayRouteTableAnnouncementResultTransitGatewayRouteTableAnnouncementStateEnum: %v", v)
 	}
 }
 

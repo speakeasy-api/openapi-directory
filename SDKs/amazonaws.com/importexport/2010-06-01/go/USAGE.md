@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,21 +16,19 @@ func main() {
         }),
     )
 
-    req := operations.GETCancelJobRequest{
-        APIVersion: "corrupti",
+    ctx := context.Background()
+    res, err := s.GETCancelJob(ctx, operations.GETCancelJobRequest{
+        APIVersion: sdk.String("corrupti"),
         AWSAccessKeyID: "provident",
-        Action: "CancelJob",
+        Action: operations.GETCancelJobActionEnumCancelJob,
         JobID: "distinctio",
-        Operation: "CancelJob",
+        Operation: operations.GETCancelJobOperationEnumCancelJob,
         Signature: "quibusdam",
         SignatureMethod: "unde",
         SignatureVersion: "nulla",
         Timestamp: "corrupti",
-        Version: "2010-06-01",
-    }
-
-    ctx := context.Background()
-    res, err := s.GETCancelJob(ctx, req)
+        Version: operations.GETCancelJobVersionEnumTwoThousandAndTen0601,
+    })
     if err != nil {
         log.Fatal(err)
     }

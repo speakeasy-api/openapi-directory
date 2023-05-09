@@ -34,7 +34,10 @@ func newProductVariants(defaultClient, securityClient HTTPClient, serverURL, lan
 // GetProductsIDVariantsJSON - Retrieve all Product Variants.
 func (s *productVariants) GetProductsIDVariantsJSON(ctx context.Context, request operations.GetProductsIDVariantsJSONRequest) (*operations.GetProductsIDVariantsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/variants.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/variants.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -92,7 +95,10 @@ func (s *productVariants) GetProductsIDVariantsJSON(ctx context.Context, request
 // GetProductsIDVariantsCountJSON - Count all Product Variants.
 func (s *productVariants) GetProductsIDVariantsCountJSON(ctx context.Context, request operations.GetProductsIDVariantsCountJSONRequest) (*operations.GetProductsIDVariantsCountJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/variants/count.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/variants/count.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -150,7 +156,10 @@ func (s *productVariants) GetProductsIDVariantsCountJSON(ctx context.Context, re
 // GetProductsIDVariantsVariantIDJSON - Retrieve a single Product Variant.
 func (s *productVariants) GetProductsIDVariantsVariantIDJSON(ctx context.Context, request operations.GetProductsIDVariantsVariantIDJSONRequest) (*operations.GetProductsIDVariantsVariantIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/variants/{variant_id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/variants/{variant_id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -208,7 +217,10 @@ func (s *productVariants) GetProductsIDVariantsVariantIDJSON(ctx context.Context
 // PostProductsIDVariantsJSON - Create a new Product Variant.
 func (s *productVariants) PostProductsIDVariantsJSON(ctx context.Context, request operations.PostProductsIDVariantsJSONRequest) (*operations.PostProductsIDVariantsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/variants.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/variants.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VariantEdit", "json")
 	if err != nil {
@@ -276,7 +288,10 @@ func (s *productVariants) PostProductsIDVariantsJSON(ctx context.Context, reques
 // PutProductsIDVariantsVariantIDJSON - Modify an existing Product Variant.
 func (s *productVariants) PutProductsIDVariantsVariantIDJSON(ctx context.Context, request operations.PutProductsIDVariantsVariantIDJSONRequest) (*operations.PutProductsIDVariantsVariantIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/variants/{variant_id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/variants/{variant_id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VariantEdit", "json")
 	if err != nil {

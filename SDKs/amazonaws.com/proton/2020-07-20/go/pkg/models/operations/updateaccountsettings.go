@@ -16,17 +16,21 @@ const (
 	UpdateAccountSettingsXAmzTargetEnumAwsProton20200720UpdateAccountSettings UpdateAccountSettingsXAmzTargetEnum = "AwsProton20200720.UpdateAccountSettings"
 )
 
+func (e UpdateAccountSettingsXAmzTargetEnum) ToPointer() *UpdateAccountSettingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateAccountSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.UpdateAccountSettings":
-		*e = UpdateAccountSettingsXAmzTargetEnum(s)
+		*e = UpdateAccountSettingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAccountSettingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAccountSettingsXAmzTargetEnum: %v", v)
 	}
 }
 

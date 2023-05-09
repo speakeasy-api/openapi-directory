@@ -16,17 +16,21 @@ const (
 	UpdateDefaultBranchXAmzTargetEnumCodeCommit20150413UpdateDefaultBranch UpdateDefaultBranchXAmzTargetEnum = "CodeCommit_20150413.UpdateDefaultBranch"
 )
 
+func (e UpdateDefaultBranchXAmzTargetEnum) ToPointer() *UpdateDefaultBranchXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDefaultBranchXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.UpdateDefaultBranch":
-		*e = UpdateDefaultBranchXAmzTargetEnum(s)
+		*e = UpdateDefaultBranchXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDefaultBranchXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDefaultBranchXAmzTargetEnum: %v", v)
 	}
 }
 

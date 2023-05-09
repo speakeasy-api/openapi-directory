@@ -13,16 +13,20 @@ const (
 	CustomSMSSenderLambdaVersionTypeEnumV10 CustomSMSSenderLambdaVersionTypeEnum = "V1_0"
 )
 
+func (e CustomSMSSenderLambdaVersionTypeEnum) ToPointer() *CustomSMSSenderLambdaVersionTypeEnum {
+	return &e
+}
+
 func (e *CustomSMSSenderLambdaVersionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "V1_0":
-		*e = CustomSMSSenderLambdaVersionTypeEnum(s)
+		*e = CustomSMSSenderLambdaVersionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomSMSSenderLambdaVersionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomSMSSenderLambdaVersionTypeEnum: %v", v)
 	}
 }

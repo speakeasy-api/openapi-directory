@@ -18,21 +18,25 @@ const (
 	UpdateResiliencyPolicyRequestBodyDataLocationConstraintEnumSameCountry   UpdateResiliencyPolicyRequestBodyDataLocationConstraintEnum = "SameCountry"
 )
 
+func (e UpdateResiliencyPolicyRequestBodyDataLocationConstraintEnum) ToPointer() *UpdateResiliencyPolicyRequestBodyDataLocationConstraintEnum {
+	return &e
+}
+
 func (e *UpdateResiliencyPolicyRequestBodyDataLocationConstraintEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyLocation":
 		fallthrough
 	case "SameContinent":
 		fallthrough
 	case "SameCountry":
-		*e = UpdateResiliencyPolicyRequestBodyDataLocationConstraintEnum(s)
+		*e = UpdateResiliencyPolicyRequestBodyDataLocationConstraintEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateResiliencyPolicyRequestBodyDataLocationConstraintEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateResiliencyPolicyRequestBodyDataLocationConstraintEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	UpdateResiliencyPolicyRequestBodyTierEnumNonCritical     UpdateResiliencyPolicyRequestBodyTierEnum = "NonCritical"
 )
 
+func (e UpdateResiliencyPolicyRequestBodyTierEnum) ToPointer() *UpdateResiliencyPolicyRequestBodyTierEnum {
+	return &e
+}
+
 func (e *UpdateResiliencyPolicyRequestBodyTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MissionCritical":
 		fallthrough
 	case "Critical":
@@ -62,10 +70,10 @@ func (e *UpdateResiliencyPolicyRequestBodyTierEnum) UnmarshalJSON(data []byte) e
 	case "CoreServices":
 		fallthrough
 	case "NonCritical":
-		*e = UpdateResiliencyPolicyRequestBodyTierEnum(s)
+		*e = UpdateResiliencyPolicyRequestBodyTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateResiliencyPolicyRequestBodyTierEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateResiliencyPolicyRequestBodyTierEnum: %v", v)
 	}
 }
 

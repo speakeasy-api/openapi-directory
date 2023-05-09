@@ -22,12 +22,16 @@ const (
 	TextFinalTextResultEnumInvalidNumber    TextFinalTextResultEnum = "INVALID_NUMBER"
 )
 
+func (e TextFinalTextResultEnum) ToPointer() *TextFinalTextResultEnum {
+	return &e
+}
+
 func (e *TextFinalTextResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SENT":
 		fallthrough
 	case "RECEIVED":
@@ -45,10 +49,10 @@ func (e *TextFinalTextResultEnum) UnmarshalJSON(data []byte) error {
 	case "UNDIALED":
 		fallthrough
 	case "INVALID_NUMBER":
-		*e = TextFinalTextResultEnum(s)
+		*e = TextFinalTextResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextFinalTextResultEnum: %s", s)
+		return fmt.Errorf("invalid value for TextFinalTextResultEnum: %v", v)
 	}
 }
 
@@ -70,12 +74,16 @@ const (
 	TextStateEnumRestrictedNumber TextStateEnum = "RESTRICTED_NUMBER"
 )
 
+func (e TextStateEnum) ToPointer() *TextStateEnum {
+	return &e
+}
+
 func (e *TextStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READY":
 		fallthrough
 	case "SELECTED":
@@ -99,10 +107,10 @@ func (e *TextStateEnum) UnmarshalJSON(data []byte) error {
 	case "PERIOD_LIMIT":
 		fallthrough
 	case "RESTRICTED_NUMBER":
-		*e = TextStateEnum(s)
+		*e = TextStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TextStateEnum: %v", v)
 	}
 }
 

@@ -15,18 +15,22 @@ const (
 	WarmupStatusEnumDone       WarmupStatusEnum = "DONE"
 )
 
+func (e WarmupStatusEnum) ToPointer() *WarmupStatusEnum {
+	return &e
+}
+
 func (e *WarmupStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "DONE":
-		*e = WarmupStatusEnum(s)
+		*e = WarmupStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WarmupStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WarmupStatusEnum: %v", v)
 	}
 }

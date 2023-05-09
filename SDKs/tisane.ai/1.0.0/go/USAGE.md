@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetFamilyDetailsRequest{
-        OcpApimSubscriptionKey: "{{apiKey}}",
-        ID: "{family_id}",
-    }
-
     ctx := context.Background()
-    res, err := s.LanguageModelDirectAccess.GetFamilyDetails(ctx, req)
+    res, err := s.LanguageModelDirectAccess.GetFamilyDetails(ctx, operations.GetFamilyDetailsRequest{
+        OcpApimSubscriptionKey: sdk.String("{{apiKey}}"),
+        ID: sdk.String("{family_id}"),
+    })
     if err != nil {
         log.Fatal(err)
     }

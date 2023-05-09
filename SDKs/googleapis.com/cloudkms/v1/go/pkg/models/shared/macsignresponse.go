@@ -18,12 +18,16 @@ const (
 	MacSignResponseProtectionLevelEnumExternalVpc                MacSignResponseProtectionLevelEnum = "EXTERNAL_VPC"
 )
 
+func (e MacSignResponseProtectionLevelEnum) ToPointer() *MacSignResponseProtectionLevelEnum {
+	return &e
+}
+
 func (e *MacSignResponseProtectionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROTECTION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "SOFTWARE":
@@ -33,10 +37,10 @@ func (e *MacSignResponseProtectionLevelEnum) UnmarshalJSON(data []byte) error {
 	case "EXTERNAL":
 		fallthrough
 	case "EXTERNAL_VPC":
-		*e = MacSignResponseProtectionLevelEnum(s)
+		*e = MacSignResponseProtectionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MacSignResponseProtectionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for MacSignResponseProtectionLevelEnum: %v", v)
 	}
 }
 

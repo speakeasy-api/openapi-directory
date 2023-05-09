@@ -20,12 +20,16 @@ const (
 	StreamingImageStateEnumDeleteFailed     StreamingImageStateEnum = "DELETE_FAILED"
 )
 
+func (e StreamingImageStateEnum) ToPointer() *StreamingImageStateEnum {
+	return &e
+}
+
 func (e *StreamingImageStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE_IN_PROGRESS":
 		fallthrough
 	case "READY":
@@ -41,9 +45,9 @@ func (e *StreamingImageStateEnum) UnmarshalJSON(data []byte) error {
 	case "CREATE_FAILED":
 		fallthrough
 	case "DELETE_FAILED":
-		*e = StreamingImageStateEnum(s)
+		*e = StreamingImageStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamingImageStateEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamingImageStateEnum: %v", v)
 	}
 }

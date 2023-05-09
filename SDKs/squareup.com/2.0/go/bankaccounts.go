@@ -37,7 +37,10 @@ func newBankAccounts(defaultClient, securityClient HTTPClient, serverURL, langua
 // linked to a Square account.
 func (s *bankAccounts) GetBankAccount(ctx context.Context, request operations.GetBankAccountRequest, security operations.GetBankAccountSecurity) (*operations.GetBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bank-accounts/{bank_account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/bank-accounts/{bank_account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *bankAccounts) GetBankAccount(ctx context.Context, request operations.Ge
 // Returns details of a [BankAccount](https://developer.squareup.com/reference/square_2021-08-18/objects/BankAccount) identified by V1 bank account ID.
 func (s *bankAccounts) GetBankAccountByV1ID(ctx context.Context, request operations.GetBankAccountByV1IDRequest, security operations.GetBankAccountByV1IDSecurity) (*operations.GetBankAccountByV1IDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bank-accounts/by-v1-id/{v1_bank_account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/bank-accounts/by-v1-id/{v1_bank_account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

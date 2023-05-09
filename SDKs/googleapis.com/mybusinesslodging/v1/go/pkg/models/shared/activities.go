@@ -17,12 +17,16 @@ const (
 	ActivitiesBeachAccessExceptionEnumDependentOnDayOfWeek ActivitiesBeachAccessExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesBeachAccessExceptionEnum) ToPointer() *ActivitiesBeachAccessExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesBeachAccessExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *ActivitiesBeachAccessExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesBeachAccessExceptionEnum(s)
+		*e = ActivitiesBeachAccessExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesBeachAccessExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesBeachAccessExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ActivitiesBeachFrontExceptionEnumDependentOnDayOfWeek ActivitiesBeachFrontExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesBeachFrontExceptionEnum) ToPointer() *ActivitiesBeachFrontExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesBeachFrontExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *ActivitiesBeachFrontExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesBeachFrontExceptionEnum(s)
+		*e = ActivitiesBeachFrontExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesBeachFrontExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesBeachFrontExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	ActivitiesBicycleRentalExceptionEnumDependentOnDayOfWeek ActivitiesBicycleRentalExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesBicycleRentalExceptionEnum) ToPointer() *ActivitiesBicycleRentalExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesBicycleRentalExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *ActivitiesBicycleRentalExceptionEnum) UnmarshalJSON(data []byte) error 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesBicycleRentalExceptionEnum(s)
+		*e = ActivitiesBicycleRentalExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesBicycleRentalExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesBicycleRentalExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	ActivitiesBoutiqueStoresExceptionEnumDependentOnDayOfWeek ActivitiesBoutiqueStoresExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesBoutiqueStoresExceptionEnum) ToPointer() *ActivitiesBoutiqueStoresExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesBoutiqueStoresExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *ActivitiesBoutiqueStoresExceptionEnum) UnmarshalJSON(data []byte) error
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesBoutiqueStoresExceptionEnum(s)
+		*e = ActivitiesBoutiqueStoresExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesBoutiqueStoresExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesBoutiqueStoresExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	ActivitiesCasinoExceptionEnumDependentOnDayOfWeek ActivitiesCasinoExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesCasinoExceptionEnum) ToPointer() *ActivitiesCasinoExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesCasinoExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *ActivitiesCasinoExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesCasinoExceptionEnum(s)
+		*e = ActivitiesCasinoExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesCasinoExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesCasinoExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	ActivitiesFreeBicycleRentalExceptionEnumDependentOnDayOfWeek ActivitiesFreeBicycleRentalExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesFreeBicycleRentalExceptionEnum) ToPointer() *ActivitiesFreeBicycleRentalExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesFreeBicycleRentalExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *ActivitiesFreeBicycleRentalExceptionEnum) UnmarshalJSON(data []byte) er
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesFreeBicycleRentalExceptionEnum(s)
+		*e = ActivitiesFreeBicycleRentalExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesFreeBicycleRentalExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesFreeBicycleRentalExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	ActivitiesFreeWatercraftRentalExceptionEnumDependentOnDayOfWeek ActivitiesFreeWatercraftRentalExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesFreeWatercraftRentalExceptionEnum) ToPointer() *ActivitiesFreeWatercraftRentalExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesFreeWatercraftRentalExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *ActivitiesFreeWatercraftRentalExceptionEnum) UnmarshalJSON(data []byte)
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesFreeWatercraftRentalExceptionEnum(s)
+		*e = ActivitiesFreeWatercraftRentalExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesFreeWatercraftRentalExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesFreeWatercraftRentalExceptionEnum: %v", v)
 	}
 }
 
@@ -227,12 +255,16 @@ const (
 	ActivitiesGameRoomExceptionEnumDependentOnDayOfWeek ActivitiesGameRoomExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesGameRoomExceptionEnum) ToPointer() *ActivitiesGameRoomExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesGameRoomExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -240,10 +272,10 @@ func (e *ActivitiesGameRoomExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesGameRoomExceptionEnum(s)
+		*e = ActivitiesGameRoomExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesGameRoomExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesGameRoomExceptionEnum: %v", v)
 	}
 }
 
@@ -257,12 +289,16 @@ const (
 	ActivitiesGolfExceptionEnumDependentOnDayOfWeek ActivitiesGolfExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesGolfExceptionEnum) ToPointer() *ActivitiesGolfExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesGolfExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -270,10 +306,10 @@ func (e *ActivitiesGolfExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesGolfExceptionEnum(s)
+		*e = ActivitiesGolfExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesGolfExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesGolfExceptionEnum: %v", v)
 	}
 }
 
@@ -287,12 +323,16 @@ const (
 	ActivitiesHorsebackRidingExceptionEnumDependentOnDayOfWeek ActivitiesHorsebackRidingExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesHorsebackRidingExceptionEnum) ToPointer() *ActivitiesHorsebackRidingExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesHorsebackRidingExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -300,10 +340,10 @@ func (e *ActivitiesHorsebackRidingExceptionEnum) UnmarshalJSON(data []byte) erro
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesHorsebackRidingExceptionEnum(s)
+		*e = ActivitiesHorsebackRidingExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesHorsebackRidingExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesHorsebackRidingExceptionEnum: %v", v)
 	}
 }
 
@@ -317,12 +357,16 @@ const (
 	ActivitiesNightclubExceptionEnumDependentOnDayOfWeek ActivitiesNightclubExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesNightclubExceptionEnum) ToPointer() *ActivitiesNightclubExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesNightclubExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -330,10 +374,10 @@ func (e *ActivitiesNightclubExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesNightclubExceptionEnum(s)
+		*e = ActivitiesNightclubExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesNightclubExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesNightclubExceptionEnum: %v", v)
 	}
 }
 
@@ -347,12 +391,16 @@ const (
 	ActivitiesPrivateBeachExceptionEnumDependentOnDayOfWeek ActivitiesPrivateBeachExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesPrivateBeachExceptionEnum) ToPointer() *ActivitiesPrivateBeachExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesPrivateBeachExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -360,10 +408,10 @@ func (e *ActivitiesPrivateBeachExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesPrivateBeachExceptionEnum(s)
+		*e = ActivitiesPrivateBeachExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesPrivateBeachExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesPrivateBeachExceptionEnum: %v", v)
 	}
 }
 
@@ -377,12 +425,16 @@ const (
 	ActivitiesScubaExceptionEnumDependentOnDayOfWeek ActivitiesScubaExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesScubaExceptionEnum) ToPointer() *ActivitiesScubaExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesScubaExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -390,10 +442,10 @@ func (e *ActivitiesScubaExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesScubaExceptionEnum(s)
+		*e = ActivitiesScubaExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesScubaExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesScubaExceptionEnum: %v", v)
 	}
 }
 
@@ -407,12 +459,16 @@ const (
 	ActivitiesSnorkelingExceptionEnumDependentOnDayOfWeek ActivitiesSnorkelingExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesSnorkelingExceptionEnum) ToPointer() *ActivitiesSnorkelingExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesSnorkelingExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -420,10 +476,10 @@ func (e *ActivitiesSnorkelingExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesSnorkelingExceptionEnum(s)
+		*e = ActivitiesSnorkelingExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesSnorkelingExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesSnorkelingExceptionEnum: %v", v)
 	}
 }
 
@@ -437,12 +493,16 @@ const (
 	ActivitiesTennisExceptionEnumDependentOnDayOfWeek ActivitiesTennisExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesTennisExceptionEnum) ToPointer() *ActivitiesTennisExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesTennisExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -450,10 +510,10 @@ func (e *ActivitiesTennisExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesTennisExceptionEnum(s)
+		*e = ActivitiesTennisExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesTennisExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesTennisExceptionEnum: %v", v)
 	}
 }
 
@@ -467,12 +527,16 @@ const (
 	ActivitiesWaterSkiingExceptionEnumDependentOnDayOfWeek ActivitiesWaterSkiingExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesWaterSkiingExceptionEnum) ToPointer() *ActivitiesWaterSkiingExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesWaterSkiingExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -480,10 +544,10 @@ func (e *ActivitiesWaterSkiingExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesWaterSkiingExceptionEnum(s)
+		*e = ActivitiesWaterSkiingExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesWaterSkiingExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesWaterSkiingExceptionEnum: %v", v)
 	}
 }
 
@@ -497,12 +561,16 @@ const (
 	ActivitiesWatercraftRentalExceptionEnumDependentOnDayOfWeek ActivitiesWatercraftRentalExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ActivitiesWatercraftRentalExceptionEnum) ToPointer() *ActivitiesWatercraftRentalExceptionEnum {
+	return &e
+}
+
 func (e *ActivitiesWatercraftRentalExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -510,10 +578,10 @@ func (e *ActivitiesWatercraftRentalExceptionEnum) UnmarshalJSON(data []byte) err
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ActivitiesWatercraftRentalExceptionEnum(s)
+		*e = ActivitiesWatercraftRentalExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitiesWatercraftRentalExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitiesWatercraftRentalExceptionEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	DepthChartsFormatEnumJSON DepthChartsFormatEnum = "JSON"
 )
 
+func (e DepthChartsFormatEnum) ToPointer() *DepthChartsFormatEnum {
+	return &e
+}
+
 func (e *DepthChartsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = DepthChartsFormatEnum(s)
+		*e = DepthChartsFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepthChartsFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for DepthChartsFormatEnum: %v", v)
 	}
 }
 

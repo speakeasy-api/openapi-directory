@@ -16,17 +16,21 @@ const (
 	DeleteHypervisorXAmzTargetEnumBackupOnPremisesV20210101DeleteHypervisor DeleteHypervisorXAmzTargetEnum = "BackupOnPremises_v20210101.DeleteHypervisor"
 )
 
+func (e DeleteHypervisorXAmzTargetEnum) ToPointer() *DeleteHypervisorXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteHypervisorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.DeleteHypervisor":
-		*e = DeleteHypervisorXAmzTargetEnum(s)
+		*e = DeleteHypervisorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteHypervisorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteHypervisorXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DeleteBucketAccessKeyXAmzTargetEnumLightsail20161128DeleteBucketAccessKey DeleteBucketAccessKeyXAmzTargetEnum = "Lightsail_20161128.DeleteBucketAccessKey"
 )
 
+func (e DeleteBucketAccessKeyXAmzTargetEnum) ToPointer() *DeleteBucketAccessKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteBucketAccessKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.DeleteBucketAccessKey":
-		*e = DeleteBucketAccessKeyXAmzTargetEnum(s)
+		*e = DeleteBucketAccessKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteBucketAccessKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteBucketAccessKeyXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -22,21 +22,25 @@ const (
 	GetFoldersSortEnumCreatedDateUtc GetFoldersSortEnum = "CreatedDateUTC"
 )
 
+func (e GetFoldersSortEnum) ToPointer() *GetFoldersSortEnum {
+	return &e
+}
+
 func (e *GetFoldersSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "Size":
 		fallthrough
 	case "CreatedDateUTC":
-		*e = GetFoldersSortEnum(s)
+		*e = GetFoldersSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFoldersSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFoldersSortEnum: %v", v)
 	}
 }
 

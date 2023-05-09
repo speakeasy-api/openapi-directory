@@ -16,21 +16,25 @@ const (
 	GoogleCloudRunV2TaskTemplateExecutionEnvironmentEnumExecutionEnvironmentGen2        GoogleCloudRunV2TaskTemplateExecutionEnvironmentEnum = "EXECUTION_ENVIRONMENT_GEN2"
 )
 
+func (e GoogleCloudRunV2TaskTemplateExecutionEnvironmentEnum) ToPointer() *GoogleCloudRunV2TaskTemplateExecutionEnvironmentEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2TaskTemplateExecutionEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXECUTION_ENVIRONMENT_UNSPECIFIED":
 		fallthrough
 	case "EXECUTION_ENVIRONMENT_GEN1":
 		fallthrough
 	case "EXECUTION_ENVIRONMENT_GEN2":
-		*e = GoogleCloudRunV2TaskTemplateExecutionEnvironmentEnum(s)
+		*e = GoogleCloudRunV2TaskTemplateExecutionEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2TaskTemplateExecutionEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2TaskTemplateExecutionEnvironmentEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	GoogleCloudWebriskV1ComputeThreatListDiffResponseResponseTypeEnumReset                   GoogleCloudWebriskV1ComputeThreatListDiffResponseResponseTypeEnum = "RESET"
 )
 
+func (e GoogleCloudWebriskV1ComputeThreatListDiffResponseResponseTypeEnum) ToPointer() *GoogleCloudWebriskV1ComputeThreatListDiffResponseResponseTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudWebriskV1ComputeThreatListDiffResponseResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESPONSE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DIFF":
 		fallthrough
 	case "RESET":
-		*e = GoogleCloudWebriskV1ComputeThreatListDiffResponseResponseTypeEnum(s)
+		*e = GoogleCloudWebriskV1ComputeThreatListDiffResponseResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudWebriskV1ComputeThreatListDiffResponseResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudWebriskV1ComputeThreatListDiffResponseResponseTypeEnum: %v", v)
 	}
 }
 

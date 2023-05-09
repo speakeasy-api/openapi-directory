@@ -100,12 +100,16 @@ const (
 	GameServerGroupInstanceTypeEnumM6g16xlarge GameServerGroupInstanceTypeEnum = "m6g.16xlarge"
 )
 
+func (e GameServerGroupInstanceTypeEnum) ToPointer() *GameServerGroupInstanceTypeEnum {
+	return &e
+}
+
 func (e *GameServerGroupInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "c4.large":
 		fallthrough
 	case "c4.xlarge":
@@ -281,9 +285,9 @@ func (e *GameServerGroupInstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "m6g.12xlarge":
 		fallthrough
 	case "m6g.16xlarge":
-		*e = GameServerGroupInstanceTypeEnum(s)
+		*e = GameServerGroupInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GameServerGroupInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GameServerGroupInstanceTypeEnum: %v", v)
 	}
 }

@@ -17,19 +17,23 @@ const (
 	CreateCallRequestAnswerURLAnswerMethodEnumGet  CreateCallRequestAnswerURLAnswerMethodEnum = "GET"
 )
 
+func (e CreateCallRequestAnswerURLAnswerMethodEnum) ToPointer() *CreateCallRequestAnswerURLAnswerMethodEnum {
+	return &e
+}
+
 func (e *CreateCallRequestAnswerURLAnswerMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POST":
 		fallthrough
 	case "GET":
-		*e = CreateCallRequestAnswerURLAnswerMethodEnum(s)
+		*e = CreateCallRequestAnswerURLAnswerMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCallRequestAnswerURLAnswerMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCallRequestAnswerURLAnswerMethodEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	CreateCallRequestAnswerURLEventMethodEnumGet  CreateCallRequestAnswerURLEventMethodEnum = "GET"
 )
 
+func (e CreateCallRequestAnswerURLEventMethodEnum) ToPointer() *CreateCallRequestAnswerURLEventMethodEnum {
+	return &e
+}
+
 func (e *CreateCallRequestAnswerURLEventMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POST":
 		fallthrough
 	case "GET":
-		*e = CreateCallRequestAnswerURLEventMethodEnum(s)
+		*e = CreateCallRequestAnswerURLEventMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCallRequestAnswerURLEventMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCallRequestAnswerURLEventMethodEnum: %v", v)
 	}
 }
 
@@ -65,19 +73,23 @@ const (
 	CreateCallRequestAnswerURLMachineDetectionEnumHangup   CreateCallRequestAnswerURLMachineDetectionEnum = "hangup"
 )
 
+func (e CreateCallRequestAnswerURLMachineDetectionEnum) ToPointer() *CreateCallRequestAnswerURLMachineDetectionEnum {
+	return &e
+}
+
 func (e *CreateCallRequestAnswerURLMachineDetectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "continue":
 		fallthrough
 	case "hangup":
-		*e = CreateCallRequestAnswerURLMachineDetectionEnum(s)
+		*e = CreateCallRequestAnswerURLMachineDetectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCallRequestAnswerURLMachineDetectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCallRequestAnswerURLMachineDetectionEnum: %v", v)
 	}
 }
 

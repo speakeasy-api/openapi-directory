@@ -15,17 +15,21 @@ const (
 	GETAssignIpv6AddressesActionEnumAssignIpv6Addresses GETAssignIpv6AddressesActionEnum = "AssignIpv6Addresses"
 )
 
+func (e GETAssignIpv6AddressesActionEnum) ToPointer() *GETAssignIpv6AddressesActionEnum {
+	return &e
+}
+
 func (e *GETAssignIpv6AddressesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssignIpv6Addresses":
-		*e = GETAssignIpv6AddressesActionEnum(s)
+		*e = GETAssignIpv6AddressesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssignIpv6AddressesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssignIpv6AddressesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAssignIpv6AddressesVersionEnumTwoThousandAndSixteen1115 GETAssignIpv6AddressesVersionEnum = "2016-11-15"
 )
 
+func (e GETAssignIpv6AddressesVersionEnum) ToPointer() *GETAssignIpv6AddressesVersionEnum {
+	return &e
+}
+
 func (e *GETAssignIpv6AddressesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETAssignIpv6AddressesVersionEnum(s)
+		*e = GETAssignIpv6AddressesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssignIpv6AddressesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssignIpv6AddressesVersionEnum: %v", v)
 	}
 }
 

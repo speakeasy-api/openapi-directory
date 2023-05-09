@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAutocompleteSuggestionsRequest{
-        Locale: "corrupti",
-        Query: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.Autocomplete.GetAutocompleteSuggestions(ctx, req)
+    res, err := s.Autocomplete.GetAutocompleteSuggestions(ctx, operations.GetAutocompleteSuggestionsRequest{
+        Locale: sdk.String("corrupti"),
+        Query: sdk.String("provident"),
+    })
     if err != nil {
         log.Fatal(err)
     }

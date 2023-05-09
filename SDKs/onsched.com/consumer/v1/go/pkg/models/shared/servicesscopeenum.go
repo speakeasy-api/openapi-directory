@@ -16,20 +16,24 @@ const (
 	ServicesScopeEnumAll      ServicesScopeEnum = "all"
 )
 
+func (e ServicesScopeEnum) ToPointer() *ServicesScopeEnum {
+	return &e
+}
+
 func (e *ServicesScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "company":
 		fallthrough
 	case "location":
 		fallthrough
 	case "all":
-		*e = ServicesScopeEnum(s)
+		*e = ServicesScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServicesScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ServicesScopeEnum: %v", v)
 	}
 }

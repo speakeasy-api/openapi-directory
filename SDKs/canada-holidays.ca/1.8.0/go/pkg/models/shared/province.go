@@ -26,12 +26,16 @@ const (
 	ProvinceIDEnumYt ProvinceIDEnum = "YT"
 )
 
+func (e ProvinceIDEnum) ToPointer() *ProvinceIDEnum {
+	return &e
+}
+
 func (e *ProvinceIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AB":
 		fallthrough
 	case "BC":
@@ -57,31 +61,35 @@ func (e *ProvinceIDEnum) UnmarshalJSON(data []byte) error {
 	case "SK":
 		fallthrough
 	case "YT":
-		*e = ProvinceIDEnum(s)
+		*e = ProvinceIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvinceIDEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvinceIDEnum: %v", v)
 	}
 }
 
 // ProvinceOptionalEnum - Whether this province optionally observes a given holiday.
-type ProvinceOptionalEnum string
+type ProvinceOptionalEnum int64
 
 const (
-	ProvinceOptionalEnumOne ProvinceOptionalEnum = "1"
+	ProvinceOptionalEnumOne ProvinceOptionalEnum = 1
 )
 
+func (e ProvinceOptionalEnum) ToPointer() *ProvinceOptionalEnum {
+	return &e
+}
+
 func (e *ProvinceOptionalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
-		*e = ProvinceOptionalEnum(s)
+	switch v {
+	case 1:
+		*e = ProvinceOptionalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvinceOptionalEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvinceOptionalEnum: %v", v)
 	}
 }
 

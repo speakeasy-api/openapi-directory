@@ -24,21 +24,25 @@ const (
 	GetFoodBrandedSearchPhpDietEnumGlutenFree GetFoodBrandedSearchPhpDietEnum = "Gluten Free"
 )
 
+func (e GetFoodBrandedSearchPhpDietEnum) ToPointer() *GetFoodBrandedSearchPhpDietEnum {
+	return &e
+}
+
 func (e *GetFoodBrandedSearchPhpDietEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Vegan":
 		fallthrough
 	case "Vegetarian":
 		fallthrough
 	case "Gluten Free":
-		*e = GetFoodBrandedSearchPhpDietEnum(s)
+		*e = GetFoodBrandedSearchPhpDietEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFoodBrandedSearchPhpDietEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFoodBrandedSearchPhpDietEnum: %v", v)
 	}
 }
 
@@ -46,50 +50,54 @@ func (e *GetFoodBrandedSearchPhpDietEnum) UnmarshalJSON(data []byte) error {
 //
 // **Example**
 // > ```&limit=10```
-type GetFoodBrandedSearchPhpLimitEnum string
+type GetFoodBrandedSearchPhpLimitEnum int64
 
 const (
-	GetFoodBrandedSearchPhpLimitEnumOne   GetFoodBrandedSearchPhpLimitEnum = "1"
-	GetFoodBrandedSearchPhpLimitEnumTwo   GetFoodBrandedSearchPhpLimitEnum = "2"
-	GetFoodBrandedSearchPhpLimitEnumThree GetFoodBrandedSearchPhpLimitEnum = "3"
-	GetFoodBrandedSearchPhpLimitEnumFour  GetFoodBrandedSearchPhpLimitEnum = "4"
-	GetFoodBrandedSearchPhpLimitEnumFive  GetFoodBrandedSearchPhpLimitEnum = "5"
-	GetFoodBrandedSearchPhpLimitEnumSix   GetFoodBrandedSearchPhpLimitEnum = "6"
-	GetFoodBrandedSearchPhpLimitEnumSeven GetFoodBrandedSearchPhpLimitEnum = "7"
-	GetFoodBrandedSearchPhpLimitEnumEight GetFoodBrandedSearchPhpLimitEnum = "8"
-	GetFoodBrandedSearchPhpLimitEnumNine  GetFoodBrandedSearchPhpLimitEnum = "9"
-	GetFoodBrandedSearchPhpLimitEnumTen   GetFoodBrandedSearchPhpLimitEnum = "10"
+	GetFoodBrandedSearchPhpLimitEnumOne   GetFoodBrandedSearchPhpLimitEnum = 1
+	GetFoodBrandedSearchPhpLimitEnumTwo   GetFoodBrandedSearchPhpLimitEnum = 2
+	GetFoodBrandedSearchPhpLimitEnumThree GetFoodBrandedSearchPhpLimitEnum = 3
+	GetFoodBrandedSearchPhpLimitEnumFour  GetFoodBrandedSearchPhpLimitEnum = 4
+	GetFoodBrandedSearchPhpLimitEnumFive  GetFoodBrandedSearchPhpLimitEnum = 5
+	GetFoodBrandedSearchPhpLimitEnumSix   GetFoodBrandedSearchPhpLimitEnum = 6
+	GetFoodBrandedSearchPhpLimitEnumSeven GetFoodBrandedSearchPhpLimitEnum = 7
+	GetFoodBrandedSearchPhpLimitEnumEight GetFoodBrandedSearchPhpLimitEnum = 8
+	GetFoodBrandedSearchPhpLimitEnumNine  GetFoodBrandedSearchPhpLimitEnum = 9
+	GetFoodBrandedSearchPhpLimitEnumTen   GetFoodBrandedSearchPhpLimitEnum = 10
 )
 
+func (e GetFoodBrandedSearchPhpLimitEnum) ToPointer() *GetFoodBrandedSearchPhpLimitEnum {
+	return &e
+}
+
 func (e *GetFoodBrandedSearchPhpLimitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "7":
+	case 7:
 		fallthrough
-	case "8":
+	case 8:
 		fallthrough
-	case "9":
+	case 9:
 		fallthrough
-	case "10":
-		*e = GetFoodBrandedSearchPhpLimitEnum(s)
+	case 10:
+		*e = GetFoodBrandedSearchPhpLimitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFoodBrandedSearchPhpLimitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFoodBrandedSearchPhpLimitEnum: %v", v)
 	}
 }
 

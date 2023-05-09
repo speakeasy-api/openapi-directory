@@ -14,18 +14,22 @@ const (
 	PreserveDevicesEnumPreserve PreserveDevicesEnum = "PRESERVE"
 )
 
+func (e PreserveDevicesEnum) ToPointer() *PreserveDevicesEnum {
+	return &e
+}
+
 func (e *PreserveDevicesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "PRESERVE":
-		*e = PreserveDevicesEnum(s)
+		*e = PreserveDevicesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PreserveDevicesEnum: %s", s)
+		return fmt.Errorf("invalid value for PreserveDevicesEnum: %v", v)
 	}
 }

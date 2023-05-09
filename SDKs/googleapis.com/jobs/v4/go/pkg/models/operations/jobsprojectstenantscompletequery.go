@@ -33,21 +33,25 @@ const (
 	JobsProjectsTenantsCompleteQueryScopeEnumPublic                     JobsProjectsTenantsCompleteQueryScopeEnum = "PUBLIC"
 )
 
+func (e JobsProjectsTenantsCompleteQueryScopeEnum) ToPointer() *JobsProjectsTenantsCompleteQueryScopeEnum {
+	return &e
+}
+
 func (e *JobsProjectsTenantsCompleteQueryScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETION_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "TENANT":
 		fallthrough
 	case "PUBLIC":
-		*e = JobsProjectsTenantsCompleteQueryScopeEnum(s)
+		*e = JobsProjectsTenantsCompleteQueryScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobsProjectsTenantsCompleteQueryScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for JobsProjectsTenantsCompleteQueryScopeEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	JobsProjectsTenantsCompleteQueryTypeEnumCombined                  JobsProjectsTenantsCompleteQueryTypeEnum = "COMBINED"
 )
 
+func (e JobsProjectsTenantsCompleteQueryTypeEnum) ToPointer() *JobsProjectsTenantsCompleteQueryTypeEnum {
+	return &e
+}
+
 func (e *JobsProjectsTenantsCompleteQueryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "JOB_TITLE":
@@ -74,10 +82,10 @@ func (e *JobsProjectsTenantsCompleteQueryTypeEnum) UnmarshalJSON(data []byte) er
 	case "COMPANY_NAME":
 		fallthrough
 	case "COMBINED":
-		*e = JobsProjectsTenantsCompleteQueryTypeEnum(s)
+		*e = JobsProjectsTenantsCompleteQueryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobsProjectsTenantsCompleteQueryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for JobsProjectsTenantsCompleteQueryTypeEnum: %v", v)
 	}
 }
 

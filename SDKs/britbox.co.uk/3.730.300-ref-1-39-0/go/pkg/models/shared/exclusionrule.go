@@ -17,12 +17,16 @@ const (
 	ExclusionRuleExcludeDeliveryEnumNone                ExclusionRuleExcludeDeliveryEnum = "None"
 )
 
+func (e ExclusionRuleExcludeDeliveryEnum) ToPointer() *ExclusionRuleExcludeDeliveryEnum {
+	return &e
+}
+
 func (e *ExclusionRuleExcludeDeliveryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Stream":
 		fallthrough
 	case "Download":
@@ -32,10 +36,10 @@ func (e *ExclusionRuleExcludeDeliveryEnum) UnmarshalJSON(data []byte) error {
 	case "ProgressiveDownload":
 		fallthrough
 	case "None":
-		*e = ExclusionRuleExcludeDeliveryEnum(s)
+		*e = ExclusionRuleExcludeDeliveryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExclusionRuleExcludeDeliveryEnum: %s", s)
+		return fmt.Errorf("invalid value for ExclusionRuleExcludeDeliveryEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	ExclusionRuleExcludeMinResolutionEnumUnknown  ExclusionRuleExcludeMinResolutionEnum = "Unknown"
 )
 
+func (e ExclusionRuleExcludeMinResolutionEnum) ToPointer() *ExclusionRuleExcludeMinResolutionEnum {
+	return &e
+}
+
 func (e *ExclusionRuleExcludeMinResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SD":
 		fallthrough
 	case "HD-720":
@@ -67,10 +75,10 @@ func (e *ExclusionRuleExcludeMinResolutionEnum) UnmarshalJSON(data []byte) error
 	case "External":
 		fallthrough
 	case "Unknown":
-		*e = ExclusionRuleExcludeMinResolutionEnum(s)
+		*e = ExclusionRuleExcludeMinResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExclusionRuleExcludeMinResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for ExclusionRuleExcludeMinResolutionEnum: %v", v)
 	}
 }
 

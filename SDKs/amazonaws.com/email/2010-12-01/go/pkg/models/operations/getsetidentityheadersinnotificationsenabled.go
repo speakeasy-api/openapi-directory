@@ -15,17 +15,21 @@ const (
 	GETSetIdentityHeadersInNotificationsEnabledActionEnumSetIdentityHeadersInNotificationsEnabled GETSetIdentityHeadersInNotificationsEnabledActionEnum = "SetIdentityHeadersInNotificationsEnabled"
 )
 
+func (e GETSetIdentityHeadersInNotificationsEnabledActionEnum) ToPointer() *GETSetIdentityHeadersInNotificationsEnabledActionEnum {
+	return &e
+}
+
 func (e *GETSetIdentityHeadersInNotificationsEnabledActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetIdentityHeadersInNotificationsEnabled":
-		*e = GETSetIdentityHeadersInNotificationsEnabledActionEnum(s)
+		*e = GETSetIdentityHeadersInNotificationsEnabledActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIdentityHeadersInNotificationsEnabledActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIdentityHeadersInNotificationsEnabledActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnumDelivery  GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnum = "Delivery"
 )
 
+func (e GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnum) ToPointer() *GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnum {
+	return &e
+}
+
 func (e *GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Bounce":
 		fallthrough
 	case "Complaint":
 		fallthrough
 	case "Delivery":
-		*e = GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnum(s)
+		*e = GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETSetIdentityHeadersInNotificationsEnabledVersionEnumTwoThousandAndTen1201 GETSetIdentityHeadersInNotificationsEnabledVersionEnum = "2010-12-01"
 )
 
+func (e GETSetIdentityHeadersInNotificationsEnabledVersionEnum) ToPointer() *GETSetIdentityHeadersInNotificationsEnabledVersionEnum {
+	return &e
+}
+
 func (e *GETSetIdentityHeadersInNotificationsEnabledVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETSetIdentityHeadersInNotificationsEnabledVersionEnum(s)
+		*e = GETSetIdentityHeadersInNotificationsEnabledVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIdentityHeadersInNotificationsEnabledVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIdentityHeadersInNotificationsEnabledVersionEnum: %v", v)
 	}
 }
 

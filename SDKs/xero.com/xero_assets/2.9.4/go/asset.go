@@ -152,7 +152,10 @@ func (s *asset) CreateAssetType(ctx context.Context, request operations.CreateAs
 // a specific fixed asset in the system
 func (s *asset) GetAssetByID(ctx context.Context, request operations.GetAssetByIDRequest, security operations.GetAssetByIDSecurity) (*operations.GetAssetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Assets/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Assets/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -35,7 +35,10 @@ func newPromotions(defaultClient, securityClient HTTPClient, serverURL, language
 // Retrieve a best price offer given an origin and destination.
 func (s *promotions) PriceOffers(ctx context.Context, request operations.PriceOffersRequest, security operations.PriceOffersSecurity) (*operations.PriceOffersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/promotions/priceoffers/flights/ond/{origin}/{destination}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/promotions/priceoffers/flights/ond/{origin}/{destination}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

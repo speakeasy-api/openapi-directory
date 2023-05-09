@@ -15,18 +15,22 @@ const (
 	ResourceIDTypeEnumShortID ResourceIDTypeEnum = "SHORT_ID"
 )
 
+func (e ResourceIDTypeEnum) ToPointer() *ResourceIDTypeEnum {
+	return &e
+}
+
 func (e *ResourceIDTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LONG_ID":
 		fallthrough
 	case "SHORT_ID":
-		*e = ResourceIDTypeEnum(s)
+		*e = ResourceIDTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceIDTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceIDTypeEnum: %v", v)
 	}
 }

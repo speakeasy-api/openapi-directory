@@ -35,7 +35,10 @@ func newCalendarList(defaultClient, securityClient HTTPClient, serverURL, langua
 // CalendarCalendarListDelete - Removes a calendar from the user's calendar list.
 func (s *calendarList) CalendarCalendarListDelete(ctx context.Context, request operations.CalendarCalendarListDeleteRequest, security operations.CalendarCalendarListDeleteSecurity) (*operations.CalendarCalendarListDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/me/calendarList/{calendarId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/me/calendarList/{calendarId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *calendarList) CalendarCalendarListDelete(ctx context.Context, request o
 // CalendarCalendarListGet - Returns a calendar from the user's calendar list.
 func (s *calendarList) CalendarCalendarListGet(ctx context.Context, request operations.CalendarCalendarListGetRequest, security operations.CalendarCalendarListGetSecurity) (*operations.CalendarCalendarListGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/me/calendarList/{calendarId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/me/calendarList/{calendarId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *calendarList) CalendarCalendarListList(ctx context.Context, request ope
 // CalendarCalendarListPatch - Updates an existing calendar on the user's calendar list. This method supports patch semantics.
 func (s *calendarList) CalendarCalendarListPatch(ctx context.Context, request operations.CalendarCalendarListPatchRequest, security operations.CalendarCalendarListPatchSecurity) (*operations.CalendarCalendarListPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/me/calendarList/{calendarId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/me/calendarList/{calendarId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CalendarListEntry", "json")
 	if err != nil {
@@ -280,7 +289,10 @@ func (s *calendarList) CalendarCalendarListPatch(ctx context.Context, request op
 // CalendarCalendarListUpdate - Updates an existing calendar on the user's calendar list.
 func (s *calendarList) CalendarCalendarListUpdate(ctx context.Context, request operations.CalendarCalendarListUpdateRequest, security operations.CalendarCalendarListUpdateSecurity) (*operations.CalendarCalendarListUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/me/calendarList/{calendarId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/me/calendarList/{calendarId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CalendarListEntry", "json")
 	if err != nil {

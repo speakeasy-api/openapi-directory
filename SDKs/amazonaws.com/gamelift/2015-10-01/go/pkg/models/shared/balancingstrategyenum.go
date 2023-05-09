@@ -15,20 +15,24 @@ const (
 	BalancingStrategyEnumOnDemandOnly  BalancingStrategyEnum = "ON_DEMAND_ONLY"
 )
 
+func (e BalancingStrategyEnum) ToPointer() *BalancingStrategyEnum {
+	return &e
+}
+
 func (e *BalancingStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPOT_ONLY":
 		fallthrough
 	case "SPOT_PREFERRED":
 		fallthrough
 	case "ON_DEMAND_ONLY":
-		*e = BalancingStrategyEnum(s)
+		*e = BalancingStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BalancingStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for BalancingStrategyEnum: %v", v)
 	}
 }

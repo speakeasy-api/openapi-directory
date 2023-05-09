@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"time"
+	"openapi/pkg/types"
 )
 
 // SubmitRequestEntityTypeEnum - The type of the entity the payout is processed for.
@@ -21,19 +21,23 @@ const (
 	SubmitRequestEntityTypeEnumCompany       SubmitRequestEntityTypeEnum = "Company"
 )
 
+func (e SubmitRequestEntityTypeEnum) ToPointer() *SubmitRequestEntityTypeEnum {
+	return &e
+}
+
 func (e *SubmitRequestEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NaturalPerson":
 		fallthrough
 	case "Company":
-		*e = SubmitRequestEntityTypeEnum(s)
+		*e = SubmitRequestEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitRequestEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitRequestEntityTypeEnum: %v", v)
 	}
 }
 
@@ -48,7 +52,7 @@ type SubmitRequest struct {
 	//
 	// > This field is mandatory for natural persons.
 	// > This field is required to update the existing `dateOfBirth` that is associated with this recurring contract.
-	DateOfBirth *time.Time `json:"dateOfBirth,omitempty"`
+	DateOfBirth *types.Date `json:"dateOfBirth,omitempty"`
 	// The type of the entity the payout is processed for.
 	//
 	// Allowed values:

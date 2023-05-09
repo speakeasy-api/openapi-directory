@@ -35,7 +35,10 @@ func newFolderSettings(defaultClient, securityClient HTTPClient, serverURL, lang
 // FolderSettingsDelete - Deletes a folder
 func (s *folderSettings) FolderSettingsDelete(ctx context.Context, request operations.FolderSettingsDeleteRequest) (*operations.FolderSettingsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/folder/settings/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/folder/settings/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -70,7 +73,10 @@ func (s *folderSettings) FolderSettingsDelete(ctx context.Context, request opera
 // FolderSettingsGet - Gets the settings of a folder or meter
 func (s *folderSettings) FolderSettingsGet(ctx context.Context, request operations.FolderSettingsGetRequest) (*operations.FolderSettingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/folder/settings/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/folder/settings/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -135,7 +141,10 @@ func (s *folderSettings) FolderSettingsGet(ctx context.Context, request operatio
 // FolderSettingsPostForm - Add or edit a folder or a meter. To add a new folder use and empty ID
 func (s *folderSettings) FolderSettingsPostForm(ctx context.Context, request operations.FolderSettingsPostFormRequest) (*operations.FolderSettingsPostFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/folder/settings/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/folder/settings/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FolderSettings", "form")
 	if err != nil {
@@ -210,7 +219,10 @@ func (s *folderSettings) FolderSettingsPostForm(ctx context.Context, request ope
 // FolderSettingsPostJSON - Add or edit a folder or a meter. To add a new folder use and empty ID
 func (s *folderSettings) FolderSettingsPostJSON(ctx context.Context, request operations.FolderSettingsPostJSONRequest) (*operations.FolderSettingsPostJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/folder/settings/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/folder/settings/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FolderSettings", "json")
 	if err != nil {
@@ -285,7 +297,10 @@ func (s *folderSettings) FolderSettingsPostJSON(ctx context.Context, request ope
 // FolderSettingsPostRaw - Add or edit a folder or a meter. To add a new folder use and empty ID
 func (s *folderSettings) FolderSettingsPostRaw(ctx context.Context, request operations.FolderSettingsPostRawRequest) (*operations.FolderSettingsPostRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/folder/settings/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/folder/settings/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

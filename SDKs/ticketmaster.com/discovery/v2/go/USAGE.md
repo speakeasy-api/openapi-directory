@@ -2,18 +2,18 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FindRequest{
+    ctx := context.Background()
+    res, err := s.Find(ctx, operations.FindRequest{
         ClassificationID: []interface{}{
             "provident",
             "distinctio",
@@ -24,20 +24,17 @@ func main() {
             "corrupti",
             "illum",
         },
-        ID: "vel",
-        IncludeLicensedContent: " no",
-        IncludeSpellcheck: " no",
-        IncludeTest: " no",
-        Keyword: "iure",
-        Locale: "magnam",
-        Page: "debitis",
-        Size: "ipsa",
-        Sort: "delectus",
-        Source: " universe",
-    }
-
-    ctx := context.Background()
-    res, err := s.Find(ctx, req)
+        ID: sdk.String("69a674e0-f467-4cc8-b96e-d151a05dfc2d"),
+        IncludeLicensedContent: operations.FindIncludeLicensedContentEnumNo.ToPointer(),
+        IncludeSpellcheck: operations.FindIncludeSpellcheckEnumNo.ToPointer(),
+        IncludeTest: operations.FindIncludeTestEnumNo.ToPointer(),
+        Keyword: sdk.String("quod"),
+        Locale: sdk.String("quod"),
+        Page: sdk.String("esse"),
+        Size: sdk.String("totam"),
+        Sort: sdk.String("porro"),
+        Source: operations.FindSourceEnumFrontgate.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }

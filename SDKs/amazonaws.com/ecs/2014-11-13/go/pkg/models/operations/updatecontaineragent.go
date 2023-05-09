@@ -16,17 +16,21 @@ const (
 	UpdateContainerAgentXAmzTargetEnumAmazonEc2ContainerServiceV20141113UpdateContainerAgent UpdateContainerAgentXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.UpdateContainerAgent"
 )
 
+func (e UpdateContainerAgentXAmzTargetEnum) ToPointer() *UpdateContainerAgentXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateContainerAgentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.UpdateContainerAgent":
-		*e = UpdateContainerAgentXAmzTargetEnum(s)
+		*e = UpdateContainerAgentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateContainerAgentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateContainerAgentXAmzTargetEnum: %v", v)
 	}
 }
 

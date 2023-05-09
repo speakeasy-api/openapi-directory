@@ -16,17 +16,21 @@ const (
 	StartTriggerXAmzTargetEnumAwsGlueStartTrigger StartTriggerXAmzTargetEnum = "AWSGlue.StartTrigger"
 )
 
+func (e StartTriggerXAmzTargetEnum) ToPointer() *StartTriggerXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartTriggerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.StartTrigger":
-		*e = StartTriggerXAmzTargetEnum(s)
+		*e = StartTriggerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartTriggerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartTriggerXAmzTargetEnum: %v", v)
 	}
 }
 

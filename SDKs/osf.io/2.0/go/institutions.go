@@ -40,7 +40,10 @@ func newInstitutions(defaultClient, securityClient HTTPClient, serverURL, langua
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *institutions) InstitutionsDetail(ctx context.Context, request operations.InstitutionsDetailRequest) (*operations.InstitutionsDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/institutions/{institution_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/institutions/{institution_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -157,7 +160,10 @@ func (s *institutions) InstitutionsList(ctx context.Context) (*operations.Instit
 // Nodes may be filtered by their `id`, `title`, `description`, `public`, `tags`, `category`, `date_created`, `date_modified`, `root`, `parent`, `contributors`, and `preprint`
 func (s *institutions) InstitutionsNodeList(ctx context.Context, request operations.InstitutionsNodeListRequest) (*operations.InstitutionsNodeListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/institutions/{institution_id}/nodes/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/institutions/{institution_id}/nodes/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -214,7 +220,10 @@ func (s *institutions) InstitutionsNodeList(ctx context.Context, request operati
 // Registrations may be filtered by their  `id`, `title`, `description`, `public`, `tags`, `category`, `date_created`, `date_modified`, `root`, `parent`, `contributors`, and `preprint`
 func (s *institutions) InstitutionsRegistrationList(ctx context.Context, request operations.InstitutionsRegistrationListRequest) (*operations.InstitutionsRegistrationListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/institutions/{institution_id}/registrations/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/institutions/{institution_id}/registrations/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -262,7 +271,10 @@ func (s *institutions) InstitutionsRegistrationList(ctx context.Context, request
 // Users may be filtered by their `id`, `full_name`, `given_name`, `middle_names`, and `family_name`
 func (s *institutions) InstitutionsUsersList(ctx context.Context, request operations.InstitutionsUsersListRequest) (*operations.InstitutionsUsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/institutions/{institution_id}/users/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/institutions/{institution_id}/users/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -21,12 +21,16 @@ const (
 	ListSortEnumMinusPricingTotal ListSortEnum = "-pricing.total"
 )
 
+func (e ListSortEnum) ToPointer() *ListSortEnum {
+	return &e
+}
+
 func (e *ListSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "createdAt":
 		fallthrough
 	case "-createdAt":
@@ -38,10 +42,10 @@ func (e *ListSortEnum) UnmarshalJSON(data []byte) error {
 	case "pricing.total":
 		fallthrough
 	case "-pricing.total":
-		*e = ListSortEnum(s)
+		*e = ListSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSortEnum: %v", v)
 	}
 }
 

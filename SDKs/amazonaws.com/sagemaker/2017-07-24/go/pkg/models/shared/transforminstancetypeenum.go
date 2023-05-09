@@ -44,12 +44,16 @@ const (
 	TransformInstanceTypeEnumMlG4dn16xlarge TransformInstanceTypeEnum = "ml.g4dn.16xlarge"
 )
 
+func (e TransformInstanceTypeEnum) ToPointer() *TransformInstanceTypeEnum {
+	return &e
+}
+
 func (e *TransformInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ml.m4.xlarge":
 		fallthrough
 	case "ml.m4.2xlarge":
@@ -113,9 +117,9 @@ func (e *TransformInstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ml.g4dn.12xlarge":
 		fallthrough
 	case "ml.g4dn.16xlarge":
-		*e = TransformInstanceTypeEnum(s)
+		*e = TransformInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransformInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TransformInstanceTypeEnum: %v", v)
 	}
 }

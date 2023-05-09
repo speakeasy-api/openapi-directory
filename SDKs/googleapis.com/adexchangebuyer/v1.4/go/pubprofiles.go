@@ -34,7 +34,10 @@ func newPubprofiles(defaultClient, securityClient HTTPClient, serverURL, languag
 // AdexchangebuyerPubprofilesList - Gets the requested publisher profile(s) by publisher accountId.
 func (s *pubprofiles) AdexchangebuyerPubprofilesList(ctx context.Context, request operations.AdexchangebuyerPubprofilesListRequest, security operations.AdexchangebuyerPubprofilesListSecurity) (*operations.AdexchangebuyerPubprofilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publisher/{accountId}/profiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/publisher/{accountId}/profiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

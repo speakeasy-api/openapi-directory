@@ -15,19 +15,23 @@ const (
 	CreatePlacementGroupResultPlacementGroupSpreadLevelEnumRack CreatePlacementGroupResultPlacementGroupSpreadLevelEnum = "rack"
 )
 
+func (e CreatePlacementGroupResultPlacementGroupSpreadLevelEnum) ToPointer() *CreatePlacementGroupResultPlacementGroupSpreadLevelEnum {
+	return &e
+}
+
 func (e *CreatePlacementGroupResultPlacementGroupSpreadLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "host":
 		fallthrough
 	case "rack":
-		*e = CreatePlacementGroupResultPlacementGroupSpreadLevelEnum(s)
+		*e = CreatePlacementGroupResultPlacementGroupSpreadLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePlacementGroupResultPlacementGroupSpreadLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePlacementGroupResultPlacementGroupSpreadLevelEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	CreatePlacementGroupResultPlacementGroupStateEnumDeleted   CreatePlacementGroupResultPlacementGroupStateEnum = "deleted"
 )
 
+func (e CreatePlacementGroupResultPlacementGroupStateEnum) ToPointer() *CreatePlacementGroupResultPlacementGroupStateEnum {
+	return &e
+}
+
 func (e *CreatePlacementGroupResultPlacementGroupStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
@@ -54,10 +62,10 @@ func (e *CreatePlacementGroupResultPlacementGroupStateEnum) UnmarshalJSON(data [
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = CreatePlacementGroupResultPlacementGroupStateEnum(s)
+		*e = CreatePlacementGroupResultPlacementGroupStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePlacementGroupResultPlacementGroupStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePlacementGroupResultPlacementGroupStateEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	CreatePlacementGroupResultPlacementGroupStrategyEnumPartition CreatePlacementGroupResultPlacementGroupStrategyEnum = "partition"
 )
 
+func (e CreatePlacementGroupResultPlacementGroupStrategyEnum) ToPointer() *CreatePlacementGroupResultPlacementGroupStrategyEnum {
+	return &e
+}
+
 func (e *CreatePlacementGroupResultPlacementGroupStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cluster":
 		fallthrough
 	case "spread":
 		fallthrough
 	case "partition":
-		*e = CreatePlacementGroupResultPlacementGroupStrategyEnum(s)
+		*e = CreatePlacementGroupResultPlacementGroupStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePlacementGroupResultPlacementGroupStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePlacementGroupResultPlacementGroupStrategyEnum: %v", v)
 	}
 }
 

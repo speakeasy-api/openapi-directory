@@ -23,12 +23,16 @@ const (
 	GetDataEndpointRequestBodyAPINameEnumGetImages                  GetDataEndpointRequestBodyAPINameEnum = "GET_IMAGES"
 )
 
+func (e GetDataEndpointRequestBodyAPINameEnum) ToPointer() *GetDataEndpointRequestBodyAPINameEnum {
+	return &e
+}
+
 func (e *GetDataEndpointRequestBodyAPINameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUT_MEDIA":
 		fallthrough
 	case "GET_MEDIA":
@@ -44,10 +48,10 @@ func (e *GetDataEndpointRequestBodyAPINameEnum) UnmarshalJSON(data []byte) error
 	case "GET_CLIP":
 		fallthrough
 	case "GET_IMAGES":
-		*e = GetDataEndpointRequestBodyAPINameEnum(s)
+		*e = GetDataEndpointRequestBodyAPINameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDataEndpointRequestBodyAPINameEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDataEndpointRequestBodyAPINameEnum: %v", v)
 	}
 }
 

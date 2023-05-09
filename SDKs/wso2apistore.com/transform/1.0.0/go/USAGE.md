@@ -2,21 +2,17 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
     s := sdk.New()
 
-    req := "corrupti"
-
     ctx := context.Background()
-    res, err := s.PostJsontoxml(ctx, req)
+    res, err := s.PostJsontoxml(ctx, "corrupti")
     if err != nil {
         log.Fatal(err)
     }

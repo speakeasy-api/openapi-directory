@@ -18,12 +18,16 @@ const (
 	DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnumDeviceTypeTablet      DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum = "DEVICE_TYPE_TABLET"
 )
 
+func (e DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum) ToPointer() *DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum {
+	return &e
+}
+
 func (e *DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DEVICE_TYPE_COMPUTER":
@@ -33,10 +37,10 @@ func (e *DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum) UnmarshalJSON(d
 	case "DEVICE_TYPE_SMART_PHONE":
 		fallthrough
 	case "DEVICE_TYPE_TABLET":
-		*e = DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum(s)
+		*e = DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceTypeAssignedTargetingOptionDetailsDeviceTypeEnum: %v", v)
 	}
 }
 

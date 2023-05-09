@@ -17,12 +17,16 @@ const (
 	DerivedSourceDerivationModeEnumSourceDerivationModeSiblingOfCurrent DerivedSourceDerivationModeEnum = "SOURCE_DERIVATION_MODE_SIBLING_OF_CURRENT"
 )
 
+func (e DerivedSourceDerivationModeEnum) ToPointer() *DerivedSourceDerivationModeEnum {
+	return &e
+}
+
 func (e *DerivedSourceDerivationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOURCE_DERIVATION_MODE_UNKNOWN":
 		fallthrough
 	case "SOURCE_DERIVATION_MODE_INDEPENDENT":
@@ -30,10 +34,10 @@ func (e *DerivedSourceDerivationModeEnum) UnmarshalJSON(data []byte) error {
 	case "SOURCE_DERIVATION_MODE_CHILD_OF_CURRENT":
 		fallthrough
 	case "SOURCE_DERIVATION_MODE_SIBLING_OF_CURRENT":
-		*e = DerivedSourceDerivationModeEnum(s)
+		*e = DerivedSourceDerivationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DerivedSourceDerivationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DerivedSourceDerivationModeEnum: %v", v)
 	}
 }
 

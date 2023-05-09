@@ -16,12 +16,16 @@ const (
 	AttributeDataTypeEnumBoolean  AttributeDataTypeEnum = "Boolean"
 )
 
+func (e AttributeDataTypeEnum) ToPointer() *AttributeDataTypeEnum {
+	return &e
+}
+
 func (e *AttributeDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "String":
 		fallthrough
 	case "Number":
@@ -29,9 +33,9 @@ func (e *AttributeDataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DateTime":
 		fallthrough
 	case "Boolean":
-		*e = AttributeDataTypeEnum(s)
+		*e = AttributeDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttributeDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttributeDataTypeEnum: %v", v)
 	}
 }

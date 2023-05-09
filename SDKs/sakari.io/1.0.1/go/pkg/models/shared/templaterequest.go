@@ -14,19 +14,23 @@ const (
 	TemplateRequestTypeEnumWeb TemplateRequestTypeEnum = "Web"
 )
 
+func (e TemplateRequestTypeEnum) ToPointer() *TemplateRequestTypeEnum {
+	return &e
+}
+
 func (e *TemplateRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SMS":
 		fallthrough
 	case "Web":
-		*e = TemplateRequestTypeEnum(s)
+		*e = TemplateRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemplateRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TemplateRequestTypeEnum: %v", v)
 	}
 }
 

@@ -37,21 +37,25 @@ const (
 	CardDisputeStatusEnumRejected         CardDisputeStatusEnum = "rejected"
 )
 
+func (e CardDisputeStatusEnum) ToPointer() *CardDisputeStatusEnum {
+	return &e
+}
+
 func (e *CardDisputeStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending_reviewing":
 		fallthrough
 	case "accepted":
 		fallthrough
 	case "rejected":
-		*e = CardDisputeStatusEnum(s)
+		*e = CardDisputeStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CardDisputeStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CardDisputeStatusEnum: %v", v)
 	}
 }
 
@@ -62,17 +66,21 @@ const (
 	CardDisputeTypeEnumCardDispute CardDisputeTypeEnum = "card_dispute"
 )
 
+func (e CardDisputeTypeEnum) ToPointer() *CardDisputeTypeEnum {
+	return &e
+}
+
 func (e *CardDisputeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card_dispute":
-		*e = CardDisputeTypeEnum(s)
+		*e = CardDisputeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CardDisputeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CardDisputeTypeEnum: %v", v)
 	}
 }
 

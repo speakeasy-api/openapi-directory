@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetV1Request{
-        APIKey: "corrupti",
-        Fields: "country,city,timezone",
-        IPAddress: "195.154.25.40",
-    }
-
     ctx := context.Background()
-    res, err := s.GetV1(ctx, req)
+    res, err := s.GetV1(ctx, operations.GetV1Request{
+        APIKey: "corrupti",
+        Fields: sdk.String("country,city,timezone"),
+        IPAddress: sdk.String("195.154.25.40"),
+    })
     if err != nil {
         log.Fatal(err)
     }

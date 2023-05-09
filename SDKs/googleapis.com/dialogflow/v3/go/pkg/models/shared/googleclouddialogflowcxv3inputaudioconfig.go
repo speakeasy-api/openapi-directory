@@ -21,12 +21,16 @@ const (
 	GoogleCloudDialogflowCxV3InputAudioConfigAudioEncodingEnumAudioEncodingSpeexWithHeaderByte GoogleCloudDialogflowCxV3InputAudioConfigAudioEncodingEnum = "AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE"
 )
 
+func (e GoogleCloudDialogflowCxV3InputAudioConfigAudioEncodingEnum) ToPointer() *GoogleCloudDialogflowCxV3InputAudioConfigAudioEncodingEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3InputAudioConfigAudioEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUDIO_ENCODING_UNSPECIFIED":
 		fallthrough
 	case "AUDIO_ENCODING_LINEAR_16":
@@ -42,10 +46,10 @@ func (e *GoogleCloudDialogflowCxV3InputAudioConfigAudioEncodingEnum) UnmarshalJS
 	case "AUDIO_ENCODING_OGG_OPUS":
 		fallthrough
 	case "AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE":
-		*e = GoogleCloudDialogflowCxV3InputAudioConfigAudioEncodingEnum(s)
+		*e = GoogleCloudDialogflowCxV3InputAudioConfigAudioEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3InputAudioConfigAudioEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3InputAudioConfigAudioEncodingEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	GoogleCloudDialogflowCxV3InputAudioConfigModelVariantEnumUseEnhanced                   GoogleCloudDialogflowCxV3InputAudioConfigModelVariantEnum = "USE_ENHANCED"
 )
 
+func (e GoogleCloudDialogflowCxV3InputAudioConfigModelVariantEnum) ToPointer() *GoogleCloudDialogflowCxV3InputAudioConfigModelVariantEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3InputAudioConfigModelVariantEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPEECH_MODEL_VARIANT_UNSPECIFIED":
 		fallthrough
 	case "USE_BEST_AVAILABLE":
@@ -72,10 +80,10 @@ func (e *GoogleCloudDialogflowCxV3InputAudioConfigModelVariantEnum) UnmarshalJSO
 	case "USE_STANDARD":
 		fallthrough
 	case "USE_ENHANCED":
-		*e = GoogleCloudDialogflowCxV3InputAudioConfigModelVariantEnum(s)
+		*e = GoogleCloudDialogflowCxV3InputAudioConfigModelVariantEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3InputAudioConfigModelVariantEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3InputAudioConfigModelVariantEnum: %v", v)
 	}
 }
 

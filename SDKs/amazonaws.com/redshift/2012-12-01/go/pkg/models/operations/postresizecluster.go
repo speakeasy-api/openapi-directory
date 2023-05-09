@@ -15,17 +15,21 @@ const (
 	POSTResizeClusterActionEnumResizeCluster POSTResizeClusterActionEnum = "ResizeCluster"
 )
 
+func (e POSTResizeClusterActionEnum) ToPointer() *POSTResizeClusterActionEnum {
+	return &e
+}
+
 func (e *POSTResizeClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResizeCluster":
-		*e = POSTResizeClusterActionEnum(s)
+		*e = POSTResizeClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResizeClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResizeClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTResizeClusterVersionEnumTwoThousandAndTwelve1201 POSTResizeClusterVersionEnum = "2012-12-01"
 )
 
+func (e POSTResizeClusterVersionEnum) ToPointer() *POSTResizeClusterVersionEnum {
+	return &e
+}
+
 func (e *POSTResizeClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTResizeClusterVersionEnum(s)
+		*e = POSTResizeClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResizeClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResizeClusterVersionEnum: %v", v)
 	}
 }
 

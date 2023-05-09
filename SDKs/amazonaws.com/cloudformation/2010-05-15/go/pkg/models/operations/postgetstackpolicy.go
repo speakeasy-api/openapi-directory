@@ -15,17 +15,21 @@ const (
 	POSTGetStackPolicyActionEnumGetStackPolicy POSTGetStackPolicyActionEnum = "GetStackPolicy"
 )
 
+func (e POSTGetStackPolicyActionEnum) ToPointer() *POSTGetStackPolicyActionEnum {
+	return &e
+}
+
 func (e *POSTGetStackPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetStackPolicy":
-		*e = POSTGetStackPolicyActionEnum(s)
+		*e = POSTGetStackPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetStackPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetStackPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetStackPolicyVersionEnumTwoThousandAndTen0515 POSTGetStackPolicyVersionEnum = "2010-05-15"
 )
 
+func (e POSTGetStackPolicyVersionEnum) ToPointer() *POSTGetStackPolicyVersionEnum {
+	return &e
+}
+
 func (e *POSTGetStackPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTGetStackPolicyVersionEnum(s)
+		*e = POSTGetStackPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetStackPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetStackPolicyVersionEnum: %v", v)
 	}
 }
 

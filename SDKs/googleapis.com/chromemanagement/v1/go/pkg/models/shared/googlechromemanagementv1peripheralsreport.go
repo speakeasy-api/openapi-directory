@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleChromeManagementV1PeripheralsReport - Peripherals report.
+// GoogleChromeManagementV1PeripheralsReport - Peripherals report. * Granular permission needed: TELEMETRY_API_PERIPHERALS_REPORT
 type GoogleChromeManagementV1PeripheralsReport struct {
 	// Output only. Timestamp of when the report was collected.
 	ReportTime *string `json:"reportTime,omitempty"`

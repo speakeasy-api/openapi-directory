@@ -15,20 +15,24 @@ const (
 	MeshStatusCodeEnumDeleted  MeshStatusCodeEnum = "DELETED"
 )
 
+func (e MeshStatusCodeEnum) ToPointer() *MeshStatusCodeEnum {
+	return &e
+}
+
 func (e *MeshStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
 		fallthrough
 	case "DELETED":
-		*e = MeshStatusCodeEnum(s)
+		*e = MeshStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MeshStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for MeshStatusCodeEnum: %v", v)
 	}
 }

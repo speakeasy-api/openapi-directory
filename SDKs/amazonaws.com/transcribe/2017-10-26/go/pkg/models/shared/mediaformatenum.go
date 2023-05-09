@@ -19,12 +19,16 @@ const (
 	MediaFormatEnumWebm MediaFormatEnum = "webm"
 )
 
+func (e MediaFormatEnum) ToPointer() *MediaFormatEnum {
+	return &e
+}
+
 func (e *MediaFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mp3":
 		fallthrough
 	case "mp4":
@@ -38,9 +42,9 @@ func (e *MediaFormatEnum) UnmarshalJSON(data []byte) error {
 	case "amr":
 		fallthrough
 	case "webm":
-		*e = MediaFormatEnum(s)
+		*e = MediaFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaFormatEnum: %v", v)
 	}
 }

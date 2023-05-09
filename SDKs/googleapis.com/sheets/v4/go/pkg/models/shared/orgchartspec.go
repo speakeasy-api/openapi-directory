@@ -17,12 +17,16 @@ const (
 	OrgChartSpecNodeSizeEnumLarge                        OrgChartSpecNodeSizeEnum = "LARGE"
 )
 
+func (e OrgChartSpecNodeSizeEnum) ToPointer() *OrgChartSpecNodeSizeEnum {
+	return &e
+}
+
 func (e *OrgChartSpecNodeSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORG_CHART_LABEL_SIZE_UNSPECIFIED":
 		fallthrough
 	case "SMALL":
@@ -30,10 +34,10 @@ func (e *OrgChartSpecNodeSizeEnum) UnmarshalJSON(data []byte) error {
 	case "MEDIUM":
 		fallthrough
 	case "LARGE":
-		*e = OrgChartSpecNodeSizeEnum(s)
+		*e = OrgChartSpecNodeSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgChartSpecNodeSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgChartSpecNodeSizeEnum: %v", v)
 	}
 }
 

@@ -43,7 +43,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Custom fields are associated with projects by way of custom field settings.  This method creates a setting for the project.
 func (s *projects) AddCustomFieldSettingForProject(ctx context.Context, request operations.AddCustomFieldSettingForProjectRequest) (*operations.AddCustomFieldSettingForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/addCustomFieldSetting", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/addCustomFieldSetting", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -121,7 +124,10 @@ func (s *projects) AddCustomFieldSettingForProject(ctx context.Context, request 
 // Returns the updated project record.
 func (s *projects) AddFollowersForProject(ctx context.Context, request operations.AddFollowersForProjectRequest) (*operations.AddFollowersForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/addFollowers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/addFollowers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -199,7 +205,10 @@ func (s *projects) AddFollowersForProject(ctx context.Context, request operation
 // Returns the updated project record.
 func (s *projects) AddMembersForProject(ctx context.Context, request operations.AddMembersForProjectRequest) (*operations.AddMembersForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/addMembers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/addMembers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -365,7 +374,10 @@ func (s *projects) CreateProject(ctx context.Context, request operations.CreateP
 // Returns the full record of the newly created project.
 func (s *projects) CreateProjectForTeam(ctx context.Context, request operations.CreateProjectForTeamRequest) (*operations.CreateProjectForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -447,7 +459,10 @@ func (s *projects) CreateProjectForTeam(ctx context.Context, request operations.
 // Returns the full record of the newly created project.
 func (s *projects) CreateProjectForWorkspace(ctx context.Context, request operations.CreateProjectForWorkspaceRequest) (*operations.CreateProjectForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -527,7 +542,10 @@ func (s *projects) CreateProjectForWorkspace(ctx context.Context, request operat
 // Returns an empty data record.
 func (s *projects) DeleteProject(ctx context.Context, request operations.DeleteProjectRequest) (*operations.DeleteProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -594,7 +612,10 @@ func (s *projects) DeleteProject(ctx context.Context, request operations.DeleteP
 // Creates and returns a job that will asynchronously handle the duplication.
 func (s *projects) DuplicateProject(ctx context.Context, request operations.DuplicateProjectRequest) (*operations.DuplicateProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/duplicate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/duplicate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -668,7 +689,10 @@ func (s *projects) DuplicateProject(ctx context.Context, request operations.Dupl
 // Returns the complete project record for a single project.
 func (s *projects) GetProject(ctx context.Context, request operations.GetProjectRequest) (*operations.GetProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -803,7 +827,10 @@ func (s *projects) GetProjects(ctx context.Context, request operations.GetProjec
 // Returns a compact representation of all of the projects the task is in.
 func (s *projects) GetProjectsForTask(ctx context.Context, request operations.GetProjectsForTaskRequest) (*operations.GetProjectsForTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -870,7 +897,10 @@ func (s *projects) GetProjectsForTask(ctx context.Context, request operations.Ge
 // Returns the compact project records for all projects in the team.
 func (s *projects) GetProjectsForTeam(ctx context.Context, request operations.GetProjectsForTeamRequest) (*operations.GetProjectsForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -938,7 +968,10 @@ func (s *projects) GetProjectsForTeam(ctx context.Context, request operations.Ge
 // *Note: This endpoint may timeout for large domains. Prefer the `/teams/{team_gid}/projects` endpoint.*
 func (s *projects) GetProjectsForWorkspace(ctx context.Context, request operations.GetProjectsForWorkspaceRequest) (*operations.GetProjectsForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1009,7 +1042,10 @@ func (s *projects) GetProjectsForWorkspace(ctx context.Context, request operatio
 // Milestones are just tasks, so they are included in the `num_tasks`, `num_incomplete_tasks`, and `num_completed_tasks` counts.
 func (s *projects) GetTaskCountsForProject(ctx context.Context, request operations.GetTaskCountsForProjectRequest) (*operations.GetTaskCountsForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/task_counts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/task_counts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1078,7 +1114,10 @@ func (s *projects) GetTaskCountsForProject(ctx context.Context, request operatio
 // UI until Project Templates 2.0 is launched in the app. See more in [this forum post](https://forum.asana.com/t/a-new-api-for-project-templates/156432).
 func (s *projects) ProjectSaveAsTemplate(ctx context.Context, request operations.ProjectSaveAsTemplateRequest) (*operations.ProjectSaveAsTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/saveAsTemplate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/saveAsTemplate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1155,7 +1194,10 @@ func (s *projects) ProjectSaveAsTemplate(ctx context.Context, request operations
 // Removes a custom field setting from a project.
 func (s *projects) RemoveCustomFieldSettingForProject(ctx context.Context, request operations.RemoveCustomFieldSettingForProjectRequest) (*operations.RemoveCustomFieldSettingForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/removeCustomFieldSetting", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/removeCustomFieldSetting", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1233,7 +1275,10 @@ func (s *projects) RemoveCustomFieldSettingForProject(ctx context.Context, reque
 // Returns the updated project record.
 func (s *projects) RemoveFollowersForProject(ctx context.Context, request operations.RemoveFollowersForProjectRequest) (*operations.RemoveFollowersForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/removeFollowers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/removeFollowers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1311,7 +1356,10 @@ func (s *projects) RemoveFollowersForProject(ctx context.Context, request operat
 // Returns the updated project record.
 func (s *projects) RemoveMembersForProject(ctx context.Context, request operations.RemoveMembersForProjectRequest) (*operations.RemoveMembersForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/removeMembers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/removeMembers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1396,7 +1444,10 @@ func (s *projects) RemoveMembersForProject(ctx context.Context, request operatio
 // Returns the complete updated project record.
 func (s *projects) UpdateProject(ctx context.Context, request operations.UpdateProjectRequest) (*operations.UpdateProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

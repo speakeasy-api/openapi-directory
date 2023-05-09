@@ -17,19 +17,23 @@ const (
 	UpdatePipeRequestBodyDesiredStateEnumStopped UpdatePipeRequestBodyDesiredStateEnum = "STOPPED"
 )
 
+func (e UpdatePipeRequestBodyDesiredStateEnum) ToPointer() *UpdatePipeRequestBodyDesiredStateEnum {
+	return &e
+}
+
 func (e *UpdatePipeRequestBodyDesiredStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "STOPPED":
-		*e = UpdatePipeRequestBodyDesiredStateEnum(s)
+		*e = UpdatePipeRequestBodyDesiredStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePipeRequestBodyDesiredStateEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePipeRequestBodyDesiredStateEnum: %v", v)
 	}
 }
 

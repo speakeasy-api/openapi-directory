@@ -18,12 +18,16 @@ const (
 	StepExecutionFilterKeyEnumAction              StepExecutionFilterKeyEnum = "Action"
 )
 
+func (e StepExecutionFilterKeyEnum) ToPointer() *StepExecutionFilterKeyEnum {
+	return &e
+}
+
 func (e *StepExecutionFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartTimeBefore":
 		fallthrough
 	case "StartTimeAfter":
@@ -35,9 +39,9 @@ func (e *StepExecutionFilterKeyEnum) UnmarshalJSON(data []byte) error {
 	case "StepName":
 		fallthrough
 	case "Action":
-		*e = StepExecutionFilterKeyEnum(s)
+		*e = StepExecutionFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StepExecutionFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for StepExecutionFilterKeyEnum: %v", v)
 	}
 }

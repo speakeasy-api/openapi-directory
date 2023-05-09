@@ -19,12 +19,16 @@ const (
 	ScanRunWarningTraceCodeEnumNoStartingURLFoundForManagedScan ScanRunWarningTraceCodeEnum = "NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN"
 )
 
+func (e ScanRunWarningTraceCodeEnum) ToPointer() *ScanRunWarningTraceCodeEnum {
+	return &e
+}
+
 func (e *ScanRunWarningTraceCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODE_UNSPECIFIED":
 		fallthrough
 	case "INSUFFICIENT_CRAWL_RESULTS":
@@ -36,10 +40,10 @@ func (e *ScanRunWarningTraceCodeEnum) UnmarshalJSON(data []byte) error {
 	case "BLOCKED_BY_IAP":
 		fallthrough
 	case "NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN":
-		*e = ScanRunWarningTraceCodeEnum(s)
+		*e = ScanRunWarningTraceCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanRunWarningTraceCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanRunWarningTraceCodeEnum: %v", v)
 	}
 }
 

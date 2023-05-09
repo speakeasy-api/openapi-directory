@@ -15,17 +15,21 @@ const (
 	POSTUpdateAutoScalingGroupActionEnumUpdateAutoScalingGroup POSTUpdateAutoScalingGroupActionEnum = "UpdateAutoScalingGroup"
 )
 
+func (e POSTUpdateAutoScalingGroupActionEnum) ToPointer() *POSTUpdateAutoScalingGroupActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateAutoScalingGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateAutoScalingGroup":
-		*e = POSTUpdateAutoScalingGroupActionEnum(s)
+		*e = POSTUpdateAutoScalingGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateAutoScalingGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateAutoScalingGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateAutoScalingGroupVersionEnumTwoThousandAndEleven0101 POSTUpdateAutoScalingGroupVersionEnum = "2011-01-01"
 )
 
+func (e POSTUpdateAutoScalingGroupVersionEnum) ToPointer() *POSTUpdateAutoScalingGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateAutoScalingGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTUpdateAutoScalingGroupVersionEnum(s)
+		*e = POSTUpdateAutoScalingGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateAutoScalingGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateAutoScalingGroupVersionEnum: %v", v)
 	}
 }
 

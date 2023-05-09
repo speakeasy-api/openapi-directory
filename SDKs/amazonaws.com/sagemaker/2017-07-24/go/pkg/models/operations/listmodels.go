@@ -16,17 +16,21 @@ const (
 	ListModelsXAmzTargetEnumSageMakerListModels ListModelsXAmzTargetEnum = "SageMaker.ListModels"
 )
 
+func (e ListModelsXAmzTargetEnum) ToPointer() *ListModelsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListModelsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.ListModels":
-		*e = ListModelsXAmzTargetEnum(s)
+		*e = ListModelsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListModelsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListModelsXAmzTargetEnum: %v", v)
 	}
 }
 

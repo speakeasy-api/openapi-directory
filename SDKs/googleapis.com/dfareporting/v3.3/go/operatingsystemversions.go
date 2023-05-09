@@ -34,7 +34,10 @@ func newOperatingSystemVersions(defaultClient, securityClient HTTPClient, server
 // DfareportingOperatingSystemVersionsGet - Gets one operating system version by ID.
 func (s *operatingSystemVersions) DfareportingOperatingSystemVersionsGet(ctx context.Context, request operations.DfareportingOperatingSystemVersionsGetRequest, security operations.DfareportingOperatingSystemVersionsGetSecurity) (*operations.DfareportingOperatingSystemVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/operatingSystemVersions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/operatingSystemVersions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *operatingSystemVersions) DfareportingOperatingSystemVersionsGet(ctx con
 // DfareportingOperatingSystemVersionsList - Retrieves a list of operating system versions.
 func (s *operatingSystemVersions) DfareportingOperatingSystemVersionsList(ctx context.Context, request operations.DfareportingOperatingSystemVersionsListRequest, security operations.DfareportingOperatingSystemVersionsListSecurity) (*operations.DfareportingOperatingSystemVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/operatingSystemVersions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/operatingSystemVersions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

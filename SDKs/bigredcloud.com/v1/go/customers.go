@@ -35,7 +35,10 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 // CustomersDelete - Removes an existing Customer.
 func (s *customers) CustomersDelete(ctx context.Context, request operations.CustomersDeleteRequest) (*operations.CustomersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +132,10 @@ func (s *customers) CustomersGet(ctx context.Context) (*operations.CustomersGetR
 // CustomersGetAccountTrans - Returns a list of Customer's account transactions.
 func (s *customers) CustomersGetAccountTrans(ctx context.Context, request operations.CustomersGetAccountTransRequest) (*operations.CustomersGetAccountTransResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/accountTrans", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/accountTrans", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -173,7 +179,10 @@ func (s *customers) CustomersGetAccountTrans(ctx context.Context, request operat
 // CustomersGetOpeningBalance - Returns a Customer's opening balances, calculated for the next periods: current month, one month old, two months old, three and more months old.
 func (s *customers) CustomersGetOpeningBalance(ctx context.Context, request operations.CustomersGetOpeningBalanceRequest) (*operations.CustomersGetOpeningBalanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/openingBalance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/openingBalance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +226,10 @@ func (s *customers) CustomersGetOpeningBalance(ctx context.Context, request oper
 // CustomersGetOpeningBalanceList - Returns a list of Customer's opening balance transactions.
 func (s *customers) CustomersGetOpeningBalanceList(ctx context.Context, request operations.CustomersGetOpeningBalanceListRequest) (*operations.CustomersGetOpeningBalanceListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/openingBalanceList", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/openingBalanceList", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,7 +273,10 @@ func (s *customers) CustomersGetOpeningBalanceList(ctx context.Context, request 
 // CustomersGetQuotes - Returns a list of Customer's quotes.
 func (s *customers) CustomersGetQuotes(ctx context.Context, request operations.CustomersGetQuotesRequest) (*operations.CustomersGetQuotesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/quotes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customers/{itemId}/quotes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -413,7 +428,10 @@ func (s *customers) CustomersProcessBatch(ctx context.Context, request []shared.
 // CustomersPut - Updates an existing Customer.
 func (s *customers) CustomersPut(ctx context.Context, request operations.CustomersPutRequest) (*operations.CustomersPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerDto", "json")
 	if err != nil {
@@ -467,7 +485,10 @@ func (s *customers) CustomersPut(ctx context.Context, request operations.Custome
 // GetV1CustomersID - Returns information about a single Customer. You may specify that Customer's ledger balance should be calculated.
 func (s *customers) GetV1CustomersID(ctx context.Context, request operations.GetV1CustomersIDRequest) (*operations.GetV1CustomersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

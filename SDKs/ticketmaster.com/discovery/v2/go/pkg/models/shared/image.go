@@ -11,26 +11,24 @@ import (
 type ImageRatioEnum string
 
 const (
-	ImageRatioEnumSixteen9 ImageRatioEnum = "16_9"
-	ImageRatioEnumThree2   ImageRatioEnum = "3_2"
-	ImageRatioEnumFour3    ImageRatioEnum = "4_3"
+	ImageRatioEnumZero ImageRatioEnum = "0"
 )
 
+func (e ImageRatioEnum) ToPointer() *ImageRatioEnum {
+	return &e
+}
+
 func (e *ImageRatioEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "16_9":
-		fallthrough
-	case "3_2":
-		fallthrough
-	case "4_3":
-		*e = ImageRatioEnum(s)
+	switch v {
+	case "0":
+		*e = ImageRatioEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageRatioEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageRatioEnum: %v", v)
 	}
 }
 

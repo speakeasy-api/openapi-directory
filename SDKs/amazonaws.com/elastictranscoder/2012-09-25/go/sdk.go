@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <fullname>AWS Elastic Transcoder Service</fullname> <p>The AWS Elastic Transcoder Service.</p>
 // https://docs.aws.amazon.com/elastictranscoder/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // CancelJob - <p>The CancelJob operation cancels an unfinished job.</p> <note> <p>You can only cancel a job that has a status of <code>Submitted</code>. To prevent a pipeline from starting to process a job while you're getting the job identifier, use <a>UpdatePipelineStatus</a> to temporarily pause the pipeline.</p> </note>
 func (s *SDK) CancelJob(ctx context.Context, request operations.CancelJobRequest) (*operations.CancelJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2012-09-25/jobs/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2012-09-25/jobs/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -558,7 +576,10 @@ func (s *SDK) CreatePreset(ctx context.Context, request operations.CreatePresetR
 // DeletePipeline - <p>The DeletePipeline operation removes a pipeline.</p> <p> You can only delete a pipeline that has never been used or that is not currently in use (doesn't contain any active jobs). If the pipeline is currently in use, <code>DeletePipeline</code> returns an error. </p>
 func (s *SDK) DeletePipeline(ctx context.Context, request operations.DeletePipelineRequest) (*operations.DeletePipelineResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2012-09-25/pipelines/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2012-09-25/pipelines/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -664,7 +685,10 @@ func (s *SDK) DeletePipeline(ctx context.Context, request operations.DeletePipel
 // DeletePreset - <p>The DeletePreset operation removes a preset that you've added in an AWS region.</p> <note> <p>You can't delete the default presets that are included with Elastic Transcoder.</p> </note>
 func (s *SDK) DeletePreset(ctx context.Context, request operations.DeletePresetRequest) (*operations.DeletePresetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2012-09-25/presets/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2012-09-25/presets/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -760,7 +784,10 @@ func (s *SDK) DeletePreset(ctx context.Context, request operations.DeletePresetR
 // ListJobsByPipeline - <p>The ListJobsByPipeline operation gets a list of the jobs currently in a pipeline.</p> <p>Elastic Transcoder returns all of the jobs currently in the specified pipeline. The response body contains one element for each job that satisfies the search criteria.</p>
 func (s *SDK) ListJobsByPipeline(ctx context.Context, request operations.ListJobsByPipelineRequest) (*operations.ListJobsByPipelineResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2012-09-25/jobsByPipeline/{PipelineId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2012-09-25/jobsByPipeline/{PipelineId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -860,7 +887,10 @@ func (s *SDK) ListJobsByPipeline(ctx context.Context, request operations.ListJob
 // ListJobsByStatus - The ListJobsByStatus operation gets a list of jobs that have a specified status. The response body contains one element for each job that satisfies the search criteria.
 func (s *SDK) ListJobsByStatus(ctx context.Context, request operations.ListJobsByStatusRequest) (*operations.ListJobsByStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2012-09-25/jobsByStatus/{Status}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2012-09-25/jobsByStatus/{Status}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1140,7 +1170,10 @@ func (s *SDK) ListPresets(ctx context.Context, request operations.ListPresetsReq
 // ReadJob - The ReadJob operation returns detailed information about a job.
 func (s *SDK) ReadJob(ctx context.Context, request operations.ReadJobRequest) (*operations.ReadJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2012-09-25/jobs/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2012-09-25/jobs/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1236,7 +1269,10 @@ func (s *SDK) ReadJob(ctx context.Context, request operations.ReadJobRequest) (*
 // ReadPipeline - The ReadPipeline operation gets detailed information about a pipeline.
 func (s *SDK) ReadPipeline(ctx context.Context, request operations.ReadPipelineRequest) (*operations.ReadPipelineResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2012-09-25/pipelines/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2012-09-25/pipelines/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1332,7 +1368,10 @@ func (s *SDK) ReadPipeline(ctx context.Context, request operations.ReadPipelineR
 // ReadPreset - The ReadPreset operation gets detailed information about a preset.
 func (s *SDK) ReadPreset(ctx context.Context, request operations.ReadPresetRequest) (*operations.ReadPresetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2012-09-25/presets/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2012-09-25/presets/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1426,6 +1465,8 @@ func (s *SDK) ReadPreset(ctx context.Context, request operations.ReadPresetReque
 }
 
 // TestRole - <p>The TestRole operation tests the IAM role used to create the pipeline.</p> <p>The <code>TestRole</code> action lets you determine whether the IAM role you are using has sufficient permissions to let Elastic Transcoder perform tasks associated with the transcoding process. The action attempts to assume the specified IAM role, checks read access to the input and output buckets, and tries to send a test notification to Amazon SNS topics that you specify.</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) TestRole(ctx context.Context, request operations.TestRoleRequest) (*operations.TestRoleResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/2012-09-25/roleTests"
@@ -1534,7 +1575,10 @@ func (s *SDK) TestRole(ctx context.Context, request operations.TestRoleRequest) 
 // UpdatePipeline - <p> Use the <code>UpdatePipeline</code> operation to update settings for a pipeline.</p> <important> <p>When you change pipeline settings, your changes take effect immediately. Jobs that you have already submitted and that Elastic Transcoder has not started to process are affected in addition to jobs that you submit after you change settings. </p> </important>
 func (s *SDK) UpdatePipeline(ctx context.Context, request operations.UpdatePipelineRequest) (*operations.UpdatePipelineResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2012-09-25/pipelines/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2012-09-25/pipelines/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1650,7 +1694,10 @@ func (s *SDK) UpdatePipeline(ctx context.Context, request operations.UpdatePipel
 // UpdatePipelineNotifications - <p>With the UpdatePipelineNotifications operation, you can update Amazon Simple Notification Service (Amazon SNS) notifications for a pipeline.</p> <p>When you update notifications for a pipeline, Elastic Transcoder returns the values that you specified in the request.</p>
 func (s *SDK) UpdatePipelineNotifications(ctx context.Context, request operations.UpdatePipelineNotificationsRequest) (*operations.UpdatePipelineNotificationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2012-09-25/pipelines/{Id}/notifications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2012-09-25/pipelines/{Id}/notifications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1766,7 +1813,10 @@ func (s *SDK) UpdatePipelineNotifications(ctx context.Context, request operation
 // UpdatePipelineStatus - <p>The UpdatePipelineStatus operation pauses or reactivates a pipeline, so that the pipeline stops or restarts the processing of jobs.</p> <p>Changing the pipeline status is useful if you want to cancel one or more jobs. You can't cancel jobs after Elastic Transcoder has started processing them; if you pause the pipeline to which you submitted the jobs, you have more time to get the job IDs for the jobs that you want to cancel, and to send a <a>CancelJob</a> request. </p>
 func (s *SDK) UpdatePipelineStatus(ctx context.Context, request operations.UpdatePipelineStatusRequest) (*operations.UpdatePipelineStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2012-09-25/pipelines/{Id}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2012-09-25/pipelines/{Id}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	GETDeleteEnvironmentConfigurationActionEnumDeleteEnvironmentConfiguration GETDeleteEnvironmentConfigurationActionEnum = "DeleteEnvironmentConfiguration"
 )
 
+func (e GETDeleteEnvironmentConfigurationActionEnum) ToPointer() *GETDeleteEnvironmentConfigurationActionEnum {
+	return &e
+}
+
 func (e *GETDeleteEnvironmentConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteEnvironmentConfiguration":
-		*e = GETDeleteEnvironmentConfigurationActionEnum(s)
+		*e = GETDeleteEnvironmentConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteEnvironmentConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteEnvironmentConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteEnvironmentConfigurationVersionEnumTwoThousandAndTen1201 GETDeleteEnvironmentConfigurationVersionEnum = "2010-12-01"
 )
 
+func (e GETDeleteEnvironmentConfigurationVersionEnum) ToPointer() *GETDeleteEnvironmentConfigurationVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteEnvironmentConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETDeleteEnvironmentConfigurationVersionEnum(s)
+		*e = GETDeleteEnvironmentConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteEnvironmentConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteEnvironmentConfigurationVersionEnum: %v", v)
 	}
 }
 

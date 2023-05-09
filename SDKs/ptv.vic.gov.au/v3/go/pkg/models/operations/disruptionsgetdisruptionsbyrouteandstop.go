@@ -17,19 +17,23 @@ const (
 	DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnumPlanned DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum = "planned"
 )
 
+func (e DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum) ToPointer() *DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum {
+	return &e
+}
+
 func (e *DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "planned":
-		*e = DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum(s)
+		*e = DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum: %v", v)
 	}
 }
 

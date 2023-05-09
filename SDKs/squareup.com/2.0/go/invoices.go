@@ -39,7 +39,10 @@ func newInvoices(defaultClient, securityClient HTTPClient, serverURL, language, 
 // You cannot cancel an invoice in the `DRAFT` state or in a terminal state: `PAID`, `REFUNDED`, `CANCELED`, or `FAILED`.
 func (s *invoices) CancelInvoice(ctx context.Context, request operations.CancelInvoiceRequest, security operations.CancelInvoiceSecurity) (*operations.CancelInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CancelInvoiceRequest", "json")
 	if err != nil {
@@ -155,7 +158,10 @@ func (s *invoices) CreateInvoice(ctx context.Context, request shared.CreateInvoi
 // invoice (you cannot delete a published invoice, including one that is scheduled for processing).
 func (s *invoices) DeleteInvoice(ctx context.Context, request operations.DeleteInvoiceRequest, security operations.DeleteInvoiceSecurity) (*operations.DeleteInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -204,7 +210,10 @@ func (s *invoices) DeleteInvoice(ctx context.Context, request operations.DeleteI
 // Retrieves an invoice by invoice ID.
 func (s *invoices) GetInvoice(ctx context.Context, request operations.GetInvoiceRequest, security operations.GetInvoiceSecurity) (*operations.GetInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -310,7 +319,10 @@ func (s *invoices) ListInvoices(ctx context.Context, request operations.ListInvo
 // invoice amount.
 func (s *invoices) PublishInvoice(ctx context.Context, request operations.PublishInvoiceRequest, security operations.PublishInvoiceSecurity) (*operations.PublishInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}/publish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}/publish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PublishInvoiceRequest", "json")
 	if err != nil {
@@ -429,7 +441,10 @@ func (s *invoices) SearchInvoices(ctx context.Context, request shared.SearchInvo
 // must provide the complete `custom_fields` list to update a custom field. Published invoices have additional restrictions.
 func (s *invoices) UpdateInvoice(ctx context.Context, request operations.UpdateInvoiceRequest, security operations.UpdateInvoiceSecurity) (*operations.UpdateInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/invoices/{invoice_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateInvoiceRequest", "json")
 	if err != nil {

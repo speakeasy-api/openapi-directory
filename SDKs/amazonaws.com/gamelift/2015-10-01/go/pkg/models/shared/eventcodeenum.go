@@ -46,12 +46,16 @@ const (
 	EventCodeEnumInstanceRecycled                           EventCodeEnum = "INSTANCE_RECYCLED"
 )
 
+func (e EventCodeEnum) ToPointer() *EventCodeEnum {
+	return &e
+}
+
 func (e *EventCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GENERIC_EVENT":
 		fallthrough
 	case "FLEET_CREATED":
@@ -119,9 +123,9 @@ func (e *EventCodeEnum) UnmarshalJSON(data []byte) error {
 	case "INSTANCE_INTERRUPTED":
 		fallthrough
 	case "INSTANCE_RECYCLED":
-		*e = EventCodeEnum(s)
+		*e = EventCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventCodeEnum: %v", v)
 	}
 }

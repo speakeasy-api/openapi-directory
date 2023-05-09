@@ -17,19 +17,23 @@ const (
 	UpcomingDfsSlatesByCompetitionFormatEnumXML  UpcomingDfsSlatesByCompetitionFormatEnum = "xml"
 )
 
+func (e UpcomingDfsSlatesByCompetitionFormatEnum) ToPointer() *UpcomingDfsSlatesByCompetitionFormatEnum {
+	return &e
+}
+
 func (e *UpcomingDfsSlatesByCompetitionFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = UpcomingDfsSlatesByCompetitionFormatEnum(s)
+		*e = UpcomingDfsSlatesByCompetitionFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpcomingDfsSlatesByCompetitionFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for UpcomingDfsSlatesByCompetitionFormatEnum: %v", v)
 	}
 }
 

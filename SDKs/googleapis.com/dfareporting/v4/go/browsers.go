@@ -34,7 +34,10 @@ func newBrowsers(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DfareportingBrowsersList - Retrieves a list of browsers.
 func (s *browsers) DfareportingBrowsersList(ctx context.Context, request operations.DfareportingBrowsersListRequest, security operations.DfareportingBrowsersListSecurity) (*operations.DfareportingBrowsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/browsers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/browsers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

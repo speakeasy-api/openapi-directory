@@ -17,19 +17,23 @@ const (
 	GetIntrospectionSchemaFormatEnumJSON GetIntrospectionSchemaFormatEnum = "JSON"
 )
 
+func (e GetIntrospectionSchemaFormatEnum) ToPointer() *GetIntrospectionSchemaFormatEnum {
+	return &e
+}
+
 func (e *GetIntrospectionSchemaFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SDL":
 		fallthrough
 	case "JSON":
-		*e = GetIntrospectionSchemaFormatEnum(s)
+		*e = GetIntrospectionSchemaFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIntrospectionSchemaFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIntrospectionSchemaFormatEnum: %v", v)
 	}
 }
 

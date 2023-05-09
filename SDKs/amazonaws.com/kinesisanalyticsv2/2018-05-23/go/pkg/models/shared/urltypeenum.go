@@ -14,18 +14,22 @@ const (
 	URLTypeEnumZeppelinUIURL     URLTypeEnum = "ZEPPELIN_UI_URL"
 )
 
+func (e URLTypeEnum) ToPointer() *URLTypeEnum {
+	return &e
+}
+
 func (e *URLTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FLINK_DASHBOARD_URL":
 		fallthrough
 	case "ZEPPELIN_UI_URL":
-		*e = URLTypeEnum(s)
+		*e = URLTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for URLTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for URLTypeEnum: %v", v)
 	}
 }

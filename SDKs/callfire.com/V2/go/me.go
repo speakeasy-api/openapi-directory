@@ -106,7 +106,10 @@ func (s *me) CreateAPICredential(ctx context.Context, request shared.APICredenti
 // Deletes a specified API credential. Currently, removes the ability to access the API. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
 func (s *me) DeleteAPICredential(ctx context.Context, request operations.DeleteAPICredentialRequest, security operations.DeleteAPICredentialSecurity) (*operations.DeleteAPICredentialResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/api/credentials/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/api/credentials/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -159,7 +162,10 @@ func (s *me) DeleteAPICredential(ctx context.Context, request operations.DeleteA
 // Disables a specified API credential. Currently, removes the ability to access the API. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
 func (s *me) DisableAPICredentials(ctx context.Context, request operations.DisableAPICredentialsRequest, security operations.DisableAPICredentialsSecurity) (*operations.DisableAPICredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/api/credentials/{id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/api/credentials/{id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -212,7 +218,10 @@ func (s *me) DisableAPICredentials(ctx context.Context, request operations.Disab
 // Enables a specified API credential. Currently, adds the ability to access the API. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
 func (s *me) EnableAPICredentials(ctx context.Context, request operations.EnableAPICredentialsRequest, security operations.EnableAPICredentialsSecurity) (*operations.EnableAPICredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/api/credentials/{id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/api/credentials/{id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -399,7 +408,10 @@ func (s *me) GetAccount(ctx context.Context, request operations.GetAccountReques
 // Returns an API credential instance for a given api credential id. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
 func (s *me) GetAPICredential(ctx context.Context, request operations.GetAPICredentialRequest, security operations.GetAPICredentialSecurity) (*operations.GetAPICredentialResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/api/credentials/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/api/credentials/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -464,7 +476,7 @@ func (s *me) GetAPICredential(ctx context.Context, request operations.GetAPICred
 
 // GetBillingPlanUsage - Find plan usage
 // Searches for the data of a billing plan usage for the user. Returns the data of a billing plan usage for the current month. For authentication use api credentials.
-func (s *me) GetBillingPlanUsage(ctx context.Context) (*operations.GetBillingPlanUsageResponse, error) {
+func (s *me) GetBillingPlanUsage(ctx context.Context, security operations.GetBillingPlanUsageSecurity) (*operations.GetBillingPlanUsageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/billing/plan-usage"
 
@@ -473,7 +485,7 @@ func (s *me) GetBillingPlanUsage(ctx context.Context) (*operations.GetBillingPla
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -527,7 +539,7 @@ func (s *me) GetBillingPlanUsage(ctx context.Context) (*operations.GetBillingPla
 
 // GetCallerIds - Find caller ids
 // Returns a list of verified caller ids. If the number is not shown in the list, then it is not verified. In this case sending of a verification code is required. For authentication use api credentials.
-func (s *me) GetCallerIds(ctx context.Context) (*operations.GetCallerIdsResponse, error) {
+func (s *me) GetCallerIds(ctx context.Context, security operations.GetCallerIdsSecurity) (*operations.GetCallerIdsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/callerids"
 
@@ -536,7 +548,7 @@ func (s *me) GetCallerIds(ctx context.Context) (*operations.GetCallerIdsResponse
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -659,7 +671,10 @@ func (s *me) GetCreditUsage(ctx context.Context, request operations.GetCreditUsa
 // Generates and sends a verification code to the phone number provided in the path. The verification code is delivered via a phone call. This code needs to be submitted to the verify caller id API endpoint to complete verification. For authentication use api credentials.
 func (s *me) SendVerificationCodeToCallerID(ctx context.Context, request operations.SendVerificationCodeToCallerIDRequest, security operations.SendVerificationCodeToCallerIDSecurity) (*operations.SendVerificationCodeToCallerIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/callerids/{callerid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/callerids/{callerid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -712,7 +727,10 @@ func (s *me) SendVerificationCodeToCallerID(ctx context.Context, request operati
 // With the verification code received from the Create caller id endpoint, a call to this endpoint is required to finish verification. For authentication use api credentials.
 func (s *me) VerifyCallerID(ctx context.Context, request operations.VerifyCallerIDRequest, security operations.VerifyCallerIDSecurity) (*operations.VerifyCallerIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/callerids/{callerid}/verification-code", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/callerids/{callerid}/verification-code", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CallerIDVerificationRequest", "json")
 	if err != nil {

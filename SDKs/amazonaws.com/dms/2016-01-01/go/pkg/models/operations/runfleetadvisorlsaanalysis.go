@@ -16,17 +16,21 @@ const (
 	RunFleetAdvisorLsaAnalysisXAmzTargetEnumAmazonDmSv20160101RunFleetAdvisorLsaAnalysis RunFleetAdvisorLsaAnalysisXAmzTargetEnum = "AmazonDMSv20160101.RunFleetAdvisorLsaAnalysis"
 )
 
+func (e RunFleetAdvisorLsaAnalysisXAmzTargetEnum) ToPointer() *RunFleetAdvisorLsaAnalysisXAmzTargetEnum {
+	return &e
+}
+
 func (e *RunFleetAdvisorLsaAnalysisXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.RunFleetAdvisorLsaAnalysis":
-		*e = RunFleetAdvisorLsaAnalysisXAmzTargetEnum(s)
+		*e = RunFleetAdvisorLsaAnalysisXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunFleetAdvisorLsaAnalysisXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RunFleetAdvisorLsaAnalysisXAmzTargetEnum: %v", v)
 	}
 }
 

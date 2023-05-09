@@ -16,21 +16,25 @@ const (
 	AttachmentSourceEnumUploadedContent   AttachmentSourceEnum = "UPLOADED_CONTENT"
 )
 
+func (e AttachmentSourceEnum) ToPointer() *AttachmentSourceEnum {
+	return &e
+}
+
 func (e *AttachmentSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOURCE_UNSPECIFIED":
 		fallthrough
 	case "DRIVE_FILE":
 		fallthrough
 	case "UPLOADED_CONTENT":
-		*e = AttachmentSourceEnum(s)
+		*e = AttachmentSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachmentSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachmentSourceEnum: %v", v)
 	}
 }
 

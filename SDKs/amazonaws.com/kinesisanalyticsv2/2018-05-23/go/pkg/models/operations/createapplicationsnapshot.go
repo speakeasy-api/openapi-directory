@@ -16,17 +16,21 @@ const (
 	CreateApplicationSnapshotXAmzTargetEnumKinesisAnalytics20180523CreateApplicationSnapshot CreateApplicationSnapshotXAmzTargetEnum = "KinesisAnalytics_20180523.CreateApplicationSnapshot"
 )
 
+func (e CreateApplicationSnapshotXAmzTargetEnum) ToPointer() *CreateApplicationSnapshotXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateApplicationSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20180523.CreateApplicationSnapshot":
-		*e = CreateApplicationSnapshotXAmzTargetEnum(s)
+		*e = CreateApplicationSnapshotXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateApplicationSnapshotXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateApplicationSnapshotXAmzTargetEnum: %v", v)
 	}
 }
 

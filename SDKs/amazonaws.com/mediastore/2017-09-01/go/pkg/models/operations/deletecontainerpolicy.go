@@ -16,17 +16,21 @@ const (
 	DeleteContainerPolicyXAmzTargetEnumMediaStore20170901DeleteContainerPolicy DeleteContainerPolicyXAmzTargetEnum = "MediaStore_20170901.DeleteContainerPolicy"
 )
 
+func (e DeleteContainerPolicyXAmzTargetEnum) ToPointer() *DeleteContainerPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteContainerPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MediaStore_20170901.DeleteContainerPolicy":
-		*e = DeleteContainerPolicyXAmzTargetEnum(s)
+		*e = DeleteContainerPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteContainerPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteContainerPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

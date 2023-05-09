@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/groundhog-day.com/1.2.1/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GroundhogRequest{
-        Slug: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Groundhogs.Groundhog(ctx, req)
+    res, err := s.Groundhogs.Groundhog(ctx, operations.GroundhogRequest{
+        Slug: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,19 +42,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### Groundhogs
+### [Groundhogs](docs/groundhogs/README.md)
 
-* `Groundhog` - Get a groundhog by slug
-* `Groundhogs` - Get all groundhogs
+* [Groundhog](docs/groundhogs/README.md#groundhog) - Get a groundhog by slug
+* [Groundhogs](docs/groundhogs/README.md#groundhogs) - Get all groundhogs
 
-### Info
+### [Info](docs/info/README.md)
 
-* `Root` - Root
-* `Spec` - Get JSON schema
+* [Root](docs/info/README.md#root) - Root
+* [Spec](docs/info/README.md#spec) - Get JSON schema
 
-### Predictions
+### [Predictions](docs/predictions/README.md)
 
-* `Predictions` - Get predictions for a given year
+* [Predictions](docs/predictions/README.md#predictions) - Get predictions for a given year
 <!-- End SDK Available Operations -->
 
 ### Maturity

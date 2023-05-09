@@ -16,21 +16,25 @@ const (
 	BackupRunBackupKindEnumPhysical                 BackupRunBackupKindEnum = "PHYSICAL"
 )
 
+func (e BackupRunBackupKindEnum) ToPointer() *BackupRunBackupKindEnum {
+	return &e
+}
+
 func (e *BackupRunBackupKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_BACKUP_KIND_UNSPECIFIED":
 		fallthrough
 	case "SNAPSHOT":
 		fallthrough
 	case "PHYSICAL":
-		*e = BackupRunBackupKindEnum(s)
+		*e = BackupRunBackupKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupRunBackupKindEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupRunBackupKindEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	BackupRunStatusEnumDeleted                       BackupRunStatusEnum = "DELETED"
 )
 
+func (e BackupRunStatusEnum) ToPointer() *BackupRunStatusEnum {
+	return &e
+}
+
 func (e *BackupRunStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_BACKUP_RUN_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ENQUEUED":
@@ -75,10 +83,10 @@ func (e *BackupRunStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETION_FAILED":
 		fallthrough
 	case "DELETED":
-		*e = BackupRunStatusEnum(s)
+		*e = BackupRunStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupRunStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupRunStatusEnum: %v", v)
 	}
 }
 
@@ -91,21 +99,25 @@ const (
 	BackupRunTypeEnumOnDemand                    BackupRunTypeEnum = "ON_DEMAND"
 )
 
+func (e BackupRunTypeEnum) ToPointer() *BackupRunTypeEnum {
+	return &e
+}
+
 func (e *BackupRunTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_BACKUP_RUN_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AUTOMATED":
 		fallthrough
 	case "ON_DEMAND":
-		*e = BackupRunTypeEnum(s)
+		*e = BackupRunTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupRunTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupRunTypeEnum: %v", v)
 	}
 }
 

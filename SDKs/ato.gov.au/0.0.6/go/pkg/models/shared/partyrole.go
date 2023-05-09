@@ -19,12 +19,16 @@ const (
 	PartyRolePartyRoleTypeEnumTrustee  PartyRolePartyRoleTypeEnum = "Trustee"
 )
 
+func (e PartyRolePartyRoleTypeEnum) ToPointer() *PartyRolePartyRoleTypeEnum {
+	return &e
+}
+
 func (e *PartyRolePartyRoleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Director":
 		fallthrough
 	case "Employee":
@@ -34,10 +38,10 @@ func (e *PartyRolePartyRoleTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Partner":
 		fallthrough
 	case "Trustee":
-		*e = PartyRolePartyRoleTypeEnum(s)
+		*e = PartyRolePartyRoleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartyRolePartyRoleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PartyRolePartyRoleTypeEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	PartyRoleRelatedPartyRoleTypeEnumTrust        PartyRoleRelatedPartyRoleTypeEnum = "Trust"
 )
 
+func (e PartyRoleRelatedPartyRoleTypeEnum) ToPointer() *PartyRoleRelatedPartyRoleTypeEnum {
+	return &e
+}
+
 func (e *PartyRoleRelatedPartyRoleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Association":
 		fallthrough
 	case "Company":
@@ -70,10 +78,10 @@ func (e *PartyRoleRelatedPartyRoleTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Partnership":
 		fallthrough
 	case "Trust":
-		*e = PartyRoleRelatedPartyRoleTypeEnum(s)
+		*e = PartyRoleRelatedPartyRoleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartyRoleRelatedPartyRoleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PartyRoleRelatedPartyRoleTypeEnum: %v", v)
 	}
 }
 
@@ -88,12 +96,16 @@ const (
 	PartyRoleRelationshipTypeEnumTrusteeship  PartyRoleRelationshipTypeEnum = "Trusteeship"
 )
 
+func (e PartyRoleRelationshipTypeEnum) ToPointer() *PartyRoleRelationshipTypeEnum {
+	return &e
+}
+
 func (e *PartyRoleRelationshipTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Directorship":
 		fallthrough
 	case "Employment":
@@ -103,10 +115,10 @@ func (e *PartyRoleRelationshipTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Partnership":
 		fallthrough
 	case "Trusteeship":
-		*e = PartyRoleRelationshipTypeEnum(s)
+		*e = PartyRoleRelationshipTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartyRoleRelationshipTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PartyRoleRelationshipTypeEnum: %v", v)
 	}
 }
 

@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/onsched.com/utility/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -45,10 +43,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### Health
+### [Health](docs/health/README.md)
 
-* `GetUtilityV1HealthHeartbeat`
-* `GetUtilityV1HealthThreadinfo`
+* [GetUtilityV1HealthHeartbeat](docs/health/README.md#getutilityv1healthheartbeat)
+* [GetUtilityV1HealthThreadinfo](docs/health/README.md#getutilityv1healththreadinfo)
 <!-- End SDK Available Operations -->
 
 ### Maturity

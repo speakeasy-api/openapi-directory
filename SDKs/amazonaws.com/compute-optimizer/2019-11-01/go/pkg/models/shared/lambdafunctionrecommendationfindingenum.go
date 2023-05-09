@@ -15,20 +15,24 @@ const (
 	LambdaFunctionRecommendationFindingEnumUnavailable  LambdaFunctionRecommendationFindingEnum = "Unavailable"
 )
 
+func (e LambdaFunctionRecommendationFindingEnum) ToPointer() *LambdaFunctionRecommendationFindingEnum {
+	return &e
+}
+
 func (e *LambdaFunctionRecommendationFindingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Optimized":
 		fallthrough
 	case "NotOptimized":
 		fallthrough
 	case "Unavailable":
-		*e = LambdaFunctionRecommendationFindingEnum(s)
+		*e = LambdaFunctionRecommendationFindingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LambdaFunctionRecommendationFindingEnum: %s", s)
+		return fmt.Errorf("invalid value for LambdaFunctionRecommendationFindingEnum: %v", v)
 	}
 }

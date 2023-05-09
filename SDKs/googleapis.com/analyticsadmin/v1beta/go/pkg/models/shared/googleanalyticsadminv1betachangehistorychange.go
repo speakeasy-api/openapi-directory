@@ -17,12 +17,16 @@ const (
 	GoogleAnalyticsAdminV1betaChangeHistoryChangeActionEnumDeleted               GoogleAnalyticsAdminV1betaChangeHistoryChangeActionEnum = "DELETED"
 )
 
+func (e GoogleAnalyticsAdminV1betaChangeHistoryChangeActionEnum) ToPointer() *GoogleAnalyticsAdminV1betaChangeHistoryChangeActionEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1betaChangeHistoryChangeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CREATED":
@@ -30,10 +34,10 @@ func (e *GoogleAnalyticsAdminV1betaChangeHistoryChangeActionEnum) UnmarshalJSON(
 	case "UPDATED":
 		fallthrough
 	case "DELETED":
-		*e = GoogleAnalyticsAdminV1betaChangeHistoryChangeActionEnum(s)
+		*e = GoogleAnalyticsAdminV1betaChangeHistoryChangeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaChangeHistoryChangeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaChangeHistoryChangeActionEnum: %v", v)
 	}
 }
 

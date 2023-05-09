@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -40,12 +41,14 @@ pkg/models/shared/workstationcluster.go
 pkg/models/shared/privateclusterconfig.go
 pkg/models/shared/listworkstationclustersresponse.go
 pkg/models/shared/workstationconfig.go
+pkg/models/shared/readinesscheck.go
 pkg/models/shared/persistentdirectory.go
 pkg/models/shared/gceregionalpersistentdisk.go
 pkg/models/shared/host.go
 pkg/models/shared/gceinstance.go
 pkg/models/shared/gceshieldedinstanceconfig.go
 pkg/models/shared/gceconfidentialinstanceconfig.go
+pkg/models/shared/accelerator.go
 pkg/models/shared/customerencryptionkey.go
 pkg/models/shared/container.go
 pkg/models/shared/listworkstationconfigsresponse.go
@@ -65,4 +68,6 @@ pkg/models/shared/startworkstationrequest.go
 pkg/models/shared/stopworkstationrequest.go
 pkg/models/shared/testiampermissionsresponse.go
 pkg/models/shared/testiampermissionsrequest.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -15,17 +15,21 @@ const (
 	GETDeleteSAMLProviderActionEnumDeleteSamlProvider GETDeleteSAMLProviderActionEnum = "DeleteSAMLProvider"
 )
 
+func (e GETDeleteSAMLProviderActionEnum) ToPointer() *GETDeleteSAMLProviderActionEnum {
+	return &e
+}
+
 func (e *GETDeleteSAMLProviderActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteSAMLProvider":
-		*e = GETDeleteSAMLProviderActionEnum(s)
+		*e = GETDeleteSAMLProviderActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteSAMLProviderActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteSAMLProviderActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteSAMLProviderVersionEnumTwoThousandAndTen0508 GETDeleteSAMLProviderVersionEnum = "2010-05-08"
 )
 
+func (e GETDeleteSAMLProviderVersionEnum) ToPointer() *GETDeleteSAMLProviderVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteSAMLProviderVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETDeleteSAMLProviderVersionEnum(s)
+		*e = GETDeleteSAMLProviderVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteSAMLProviderVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteSAMLProviderVersionEnum: %v", v)
 	}
 }
 

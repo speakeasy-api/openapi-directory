@@ -34,7 +34,10 @@ func newCustomchannels(defaultClient, securityClient HTTPClient, serverURL, lang
 // AdsenseCustomchannelsAdunitsList - List all ad units in the specified custom channel.
 func (s *customchannels) AdsenseCustomchannelsAdunitsList(ctx context.Context, request operations.AdsenseCustomchannelsAdunitsListRequest, security operations.AdsenseCustomchannelsAdunitsListSecurity) (*operations.AdsenseCustomchannelsAdunitsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels/{customChannelId}/adunits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels/{customChannelId}/adunits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *customchannels) AdsenseCustomchannelsAdunitsList(ctx context.Context, r
 // AdsenseCustomchannelsGet - Get the specified custom channel from the specified ad client.
 func (s *customchannels) AdsenseCustomchannelsGet(ctx context.Context, request operations.AdsenseCustomchannelsGetRequest, security operations.AdsenseCustomchannelsGetSecurity) (*operations.AdsenseCustomchannelsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels/{customChannelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels/{customChannelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *customchannels) AdsenseCustomchannelsGet(ctx context.Context, request o
 // AdsenseCustomchannelsList - List all custom channels in the specified ad client for this AdSense account.
 func (s *customchannels) AdsenseCustomchannelsList(ctx context.Context, request operations.AdsenseCustomchannelsListRequest, security operations.AdsenseCustomchannelsListSecurity) (*operations.AdsenseCustomchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/customchannels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

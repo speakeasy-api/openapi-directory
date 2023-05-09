@@ -42,7 +42,10 @@ func newFilings(defaultClient, securityClient HTTPClient, serverURL, language, s
 // result sets are approximate; you will want to page through the records until no records are returned.
 func (s *filings) GetCandidateCandidateIDFilings(ctx context.Context, request operations.GetCandidateCandidateIDFilingsRequest) (*operations.GetCandidateCandidateIDFilingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/filings/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/filings/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *filings) GetCandidateCandidateIDFilings(ctx context.Context, request op
 // result sets are approximate; you will want to page through the records until no records are returned.
 func (s *filings) GetCommitteeCommitteeIDFilings(ctx context.Context, request operations.GetCommitteeCommitteeIDFilingsRequest) (*operations.GetCommitteeCommitteeIDFilingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/filings/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/filings/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

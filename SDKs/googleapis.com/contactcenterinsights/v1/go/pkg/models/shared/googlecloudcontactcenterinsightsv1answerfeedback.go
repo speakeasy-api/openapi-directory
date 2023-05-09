@@ -17,12 +17,16 @@ const (
 	GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnumFullyCorrect                GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum = "FULLY_CORRECT"
 )
 
+func (e GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum) ToPointer() *GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum {
+	return &e
+}
+
 func (e *GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CORRECTNESS_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "NOT_CORRECT":
@@ -30,10 +34,10 @@ func (e *GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum) U
 	case "PARTIALLY_CORRECT":
 		fallthrough
 	case "FULLY_CORRECT":
-		*e = GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum(s)
+		*e = GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum: %v", v)
 	}
 }
 

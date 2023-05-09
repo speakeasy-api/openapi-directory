@@ -25,12 +25,16 @@ const (
 	EndpointTypesElementEnumInApp           EndpointTypesElementEnum = "IN_APP"
 )
 
+func (e EndpointTypesElementEnum) ToPointer() *EndpointTypesElementEnum {
+	return &e
+}
+
 func (e *EndpointTypesElementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUSH":
 		fallthrough
 	case "GCM":
@@ -56,9 +60,9 @@ func (e *EndpointTypesElementEnum) UnmarshalJSON(data []byte) error {
 	case "CUSTOM":
 		fallthrough
 	case "IN_APP":
-		*e = EndpointTypesElementEnum(s)
+		*e = EndpointTypesElementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointTypesElementEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointTypesElementEnum: %v", v)
 	}
 }

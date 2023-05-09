@@ -17,12 +17,16 @@ const (
 	GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnumDeviceOwner                   GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum = "DEVICE_OWNER"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OWNERSHIP_PRIVILEGE_UNSPECIFIED":
 		fallthrough
 	case "DEVICE_ADMINISTRATOR":
@@ -30,10 +34,10 @@ func (e *GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum
 	case "PROFILE_OWNER":
 		fallthrough
 	case "DEVICE_OWNER":
-		*e = GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum: %v", v)
 	}
 }
 

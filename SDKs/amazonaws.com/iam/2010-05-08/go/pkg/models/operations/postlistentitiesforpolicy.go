@@ -15,17 +15,21 @@ const (
 	POSTListEntitiesForPolicyActionEnumListEntitiesForPolicy POSTListEntitiesForPolicyActionEnum = "ListEntitiesForPolicy"
 )
 
+func (e POSTListEntitiesForPolicyActionEnum) ToPointer() *POSTListEntitiesForPolicyActionEnum {
+	return &e
+}
+
 func (e *POSTListEntitiesForPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListEntitiesForPolicy":
-		*e = POSTListEntitiesForPolicyActionEnum(s)
+		*e = POSTListEntitiesForPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListEntitiesForPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListEntitiesForPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTListEntitiesForPolicyVersionEnumTwoThousandAndTen0508 POSTListEntitiesForPolicyVersionEnum = "2010-05-08"
 )
 
+func (e POSTListEntitiesForPolicyVersionEnum) ToPointer() *POSTListEntitiesForPolicyVersionEnum {
+	return &e
+}
+
 func (e *POSTListEntitiesForPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTListEntitiesForPolicyVersionEnum(s)
+		*e = POSTListEntitiesForPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListEntitiesForPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListEntitiesForPolicyVersionEnum: %v", v)
 	}
 }
 

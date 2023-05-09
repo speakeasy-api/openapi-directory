@@ -16,17 +16,21 @@ const (
 	CreateImpersonationRoleXAmzTargetEnumWorkMailServiceCreateImpersonationRole CreateImpersonationRoleXAmzTargetEnum = "WorkMailService.CreateImpersonationRole"
 )
 
+func (e CreateImpersonationRoleXAmzTargetEnum) ToPointer() *CreateImpersonationRoleXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateImpersonationRoleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.CreateImpersonationRole":
-		*e = CreateImpersonationRoleXAmzTargetEnum(s)
+		*e = CreateImpersonationRoleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateImpersonationRoleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateImpersonationRoleXAmzTargetEnum: %v", v)
 	}
 }
 

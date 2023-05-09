@@ -16,17 +16,21 @@ const (
 	ListResolverDnssecConfigsXAmzTargetEnumRoute53ResolverListResolverDnssecConfigs ListResolverDnssecConfigsXAmzTargetEnum = "Route53Resolver.ListResolverDnssecConfigs"
 )
 
+func (e ListResolverDnssecConfigsXAmzTargetEnum) ToPointer() *ListResolverDnssecConfigsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListResolverDnssecConfigsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.ListResolverDnssecConfigs":
-		*e = ListResolverDnssecConfigsXAmzTargetEnum(s)
+		*e = ListResolverDnssecConfigsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListResolverDnssecConfigsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListResolverDnssecConfigsXAmzTargetEnum: %v", v)
 	}
 }
 

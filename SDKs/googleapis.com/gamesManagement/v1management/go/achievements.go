@@ -35,7 +35,10 @@ func newAchievements(defaultClient, securityClient HTTPClient, serverURL, langua
 // GamesManagementAchievementsReset - Resets the achievement with the given ID for the currently authenticated player. This method is only accessible to whitelisted tester accounts for your application.
 func (s *achievements) GamesManagementAchievementsReset(ctx context.Context, request operations.GamesManagementAchievementsResetRequest, security operations.GamesManagementAchievementsResetSecurity) (*operations.GamesManagementAchievementsResetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/achievements/{achievementId}/reset", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1management/achievements/{achievementId}/reset", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -170,7 +173,10 @@ func (s *achievements) GamesManagementAchievementsResetAllForAllPlayers(ctx cont
 // GamesManagementAchievementsResetForAllPlayers - Resets the achievement with the given ID for all players. This method is only available to user accounts for your developer console. Only draft achievements can be reset.
 func (s *achievements) GamesManagementAchievementsResetForAllPlayers(ctx context.Context, request operations.GamesManagementAchievementsResetForAllPlayersRequest, security operations.GamesManagementAchievementsResetForAllPlayersSecurity) (*operations.GamesManagementAchievementsResetForAllPlayersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/achievements/{achievementId}/resetForAllPlayers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1management/achievements/{achievementId}/resetForAllPlayers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

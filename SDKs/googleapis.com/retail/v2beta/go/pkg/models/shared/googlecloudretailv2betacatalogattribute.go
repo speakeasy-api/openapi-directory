@@ -16,21 +16,25 @@ const (
 	GoogleCloudRetailV2betaCatalogAttributeDynamicFacetableOptionEnumDynamicFacetableDisabled          GoogleCloudRetailV2betaCatalogAttributeDynamicFacetableOptionEnum = "DYNAMIC_FACETABLE_DISABLED"
 )
 
+func (e GoogleCloudRetailV2betaCatalogAttributeDynamicFacetableOptionEnum) ToPointer() *GoogleCloudRetailV2betaCatalogAttributeDynamicFacetableOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2betaCatalogAttributeDynamicFacetableOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DYNAMIC_FACETABLE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "DYNAMIC_FACETABLE_ENABLED":
 		fallthrough
 	case "DYNAMIC_FACETABLE_DISABLED":
-		*e = GoogleCloudRetailV2betaCatalogAttributeDynamicFacetableOptionEnum(s)
+		*e = GoogleCloudRetailV2betaCatalogAttributeDynamicFacetableOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeDynamicFacetableOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeDynamicFacetableOptionEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudRetailV2betaCatalogAttributeExactSearchableOptionEnumExactSearchableDisabled          GoogleCloudRetailV2betaCatalogAttributeExactSearchableOptionEnum = "EXACT_SEARCHABLE_DISABLED"
 )
 
+func (e GoogleCloudRetailV2betaCatalogAttributeExactSearchableOptionEnum) ToPointer() *GoogleCloudRetailV2betaCatalogAttributeExactSearchableOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2betaCatalogAttributeExactSearchableOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXACT_SEARCHABLE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "EXACT_SEARCHABLE_ENABLED":
 		fallthrough
 	case "EXACT_SEARCHABLE_DISABLED":
-		*e = GoogleCloudRetailV2betaCatalogAttributeExactSearchableOptionEnum(s)
+		*e = GoogleCloudRetailV2betaCatalogAttributeExactSearchableOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeExactSearchableOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeExactSearchableOptionEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	GoogleCloudRetailV2betaCatalogAttributeIndexableOptionEnumIndexableDisabled          GoogleCloudRetailV2betaCatalogAttributeIndexableOptionEnum = "INDEXABLE_DISABLED"
 )
 
+func (e GoogleCloudRetailV2betaCatalogAttributeIndexableOptionEnum) ToPointer() *GoogleCloudRetailV2betaCatalogAttributeIndexableOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2betaCatalogAttributeIndexableOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INDEXABLE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "INDEXABLE_ENABLED":
 		fallthrough
 	case "INDEXABLE_DISABLED":
-		*e = GoogleCloudRetailV2betaCatalogAttributeIndexableOptionEnum(s)
+		*e = GoogleCloudRetailV2betaCatalogAttributeIndexableOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeIndexableOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeIndexableOptionEnum: %v", v)
 	}
 }
 
@@ -97,21 +109,25 @@ const (
 	GoogleCloudRetailV2betaCatalogAttributeRecommendationsFilteringOptionEnumRecommendationsFilteringEnabled           GoogleCloudRetailV2betaCatalogAttributeRecommendationsFilteringOptionEnum = "RECOMMENDATIONS_FILTERING_ENABLED"
 )
 
+func (e GoogleCloudRetailV2betaCatalogAttributeRecommendationsFilteringOptionEnum) ToPointer() *GoogleCloudRetailV2betaCatalogAttributeRecommendationsFilteringOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2betaCatalogAttributeRecommendationsFilteringOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECOMMENDATIONS_FILTERING_OPTION_UNSPECIFIED":
 		fallthrough
 	case "RECOMMENDATIONS_FILTERING_DISABLED":
 		fallthrough
 	case "RECOMMENDATIONS_FILTERING_ENABLED":
-		*e = GoogleCloudRetailV2betaCatalogAttributeRecommendationsFilteringOptionEnum(s)
+		*e = GoogleCloudRetailV2betaCatalogAttributeRecommendationsFilteringOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeRecommendationsFilteringOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeRecommendationsFilteringOptionEnum: %v", v)
 	}
 }
 
@@ -124,21 +140,25 @@ const (
 	GoogleCloudRetailV2betaCatalogAttributeRetrievableOptionEnumRetrievableDisabled          GoogleCloudRetailV2betaCatalogAttributeRetrievableOptionEnum = "RETRIEVABLE_DISABLED"
 )
 
+func (e GoogleCloudRetailV2betaCatalogAttributeRetrievableOptionEnum) ToPointer() *GoogleCloudRetailV2betaCatalogAttributeRetrievableOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2betaCatalogAttributeRetrievableOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETRIEVABLE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "RETRIEVABLE_ENABLED":
 		fallthrough
 	case "RETRIEVABLE_DISABLED":
-		*e = GoogleCloudRetailV2betaCatalogAttributeRetrievableOptionEnum(s)
+		*e = GoogleCloudRetailV2betaCatalogAttributeRetrievableOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeRetrievableOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeRetrievableOptionEnum: %v", v)
 	}
 }
 
@@ -151,21 +171,25 @@ const (
 	GoogleCloudRetailV2betaCatalogAttributeSearchableOptionEnumSearchableDisabled          GoogleCloudRetailV2betaCatalogAttributeSearchableOptionEnum = "SEARCHABLE_DISABLED"
 )
 
+func (e GoogleCloudRetailV2betaCatalogAttributeSearchableOptionEnum) ToPointer() *GoogleCloudRetailV2betaCatalogAttributeSearchableOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2betaCatalogAttributeSearchableOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEARCHABLE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "SEARCHABLE_ENABLED":
 		fallthrough
 	case "SEARCHABLE_DISABLED":
-		*e = GoogleCloudRetailV2betaCatalogAttributeSearchableOptionEnum(s)
+		*e = GoogleCloudRetailV2betaCatalogAttributeSearchableOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeSearchableOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeSearchableOptionEnum: %v", v)
 	}
 }
 
@@ -196,21 +220,25 @@ const (
 	GoogleCloudRetailV2betaCatalogAttributeTypeEnumNumerical GoogleCloudRetailV2betaCatalogAttributeTypeEnum = "NUMERICAL"
 )
 
+func (e GoogleCloudRetailV2betaCatalogAttributeTypeEnum) ToPointer() *GoogleCloudRetailV2betaCatalogAttributeTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2betaCatalogAttributeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "TEXTUAL":
 		fallthrough
 	case "NUMERICAL":
-		*e = GoogleCloudRetailV2betaCatalogAttributeTypeEnum(s)
+		*e = GoogleCloudRetailV2betaCatalogAttributeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaCatalogAttributeTypeEnum: %v", v)
 	}
 }
 

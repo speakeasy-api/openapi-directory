@@ -14,18 +14,22 @@ const (
 	EnabledTypeEnumEnabled  EnabledTypeEnum = "Enabled"
 )
 
+func (e EnabledTypeEnum) ToPointer() *EnabledTypeEnum {
+	return &e
+}
+
 func (e *EnabledTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Disabled":
 		fallthrough
 	case "Enabled":
-		*e = EnabledTypeEnum(s)
+		*e = EnabledTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnabledTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnabledTypeEnum: %v", v)
 	}
 }

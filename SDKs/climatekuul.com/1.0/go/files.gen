@@ -8,6 +8,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -45,5 +46,12 @@ pkg/models/operations/confirmpaymentoftransaction3.go
 pkg/models/operations/confirmsplanting3.go
 pkg/models/shared/airtravelmultilegrequest.go
 pkg/models/shared/leg1.go
+docs/sdk/README.md
+docs/airtravelcoordinates/README.md
+docs/ecommercedelivery/README.md
+docs/requestapikey/README.md
+docs/roaddistance/README.md
+docs/urbandelivery/README.md
+docs/airtravelmultileg/README.md
 USAGE.md
 pkg/models/operations/options.go

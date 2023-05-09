@@ -22,19 +22,23 @@ const (
 	ItvPinAuthRequestCookieTypeEnumPersistent ItvPinAuthRequestCookieTypeEnum = "Persistent"
 )
 
+func (e ItvPinAuthRequestCookieTypeEnum) ToPointer() *ItvPinAuthRequestCookieTypeEnum {
+	return &e
+}
+
 func (e *ItvPinAuthRequestCookieTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Session":
 		fallthrough
 	case "Persistent":
-		*e = ItvPinAuthRequestCookieTypeEnum(s)
+		*e = ItvPinAuthRequestCookieTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItvPinAuthRequestCookieTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ItvPinAuthRequestCookieTypeEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ItvPinAuthRequestScopesEnumPlayback ItvPinAuthRequestScopesEnum = "Playback"
 )
 
+func (e ItvPinAuthRequestScopesEnum) ToPointer() *ItvPinAuthRequestScopesEnum {
+	return &e
+}
+
 func (e *ItvPinAuthRequestScopesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Catalog":
 		fallthrough
 	case "Commerce":
@@ -60,10 +68,10 @@ func (e *ItvPinAuthRequestScopesEnum) UnmarshalJSON(data []byte) error {
 	case "Settings":
 		fallthrough
 	case "Playback":
-		*e = ItvPinAuthRequestScopesEnum(s)
+		*e = ItvPinAuthRequestScopesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItvPinAuthRequestScopesEnum: %s", s)
+		return fmt.Errorf("invalid value for ItvPinAuthRequestScopesEnum: %v", v)
 	}
 }
 

@@ -35,10 +35,13 @@ func newBusinessLines(defaultClient, securityClient HTTPClient, serverURL, langu
 // DeleteBusinessLinesID - Delete a business line
 // Deletes a business line.
 //
-//	>"If you delete a business line linked to a [payment method](https://docs.adyen.com/development-resources/paymentmethodvariant#management-api), it can affect your merchant account's ability to use the [payment method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings). The business line is removed from all linked merchant accounts.
+//	>If you delete a business line linked to a [payment method](https://docs.adyen.com/development-resources/paymentmethodvariant#management-api), it can affect your merchant account's ability to use the [payment method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings). The business line is removed from all linked merchant accounts.
 func (s *businessLines) DeleteBusinessLinesID(ctx context.Context, request operations.DeleteBusinessLinesIDRequest, security operations.DeleteBusinessLinesIDSecurity) (*operations.DeleteBusinessLinesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/businessLines/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/businessLines/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -92,7 +95,10 @@ func (s *businessLines) DeleteBusinessLinesID(ctx context.Context, request opera
 // Returns the detail of a business line.
 func (s *businessLines) GetBusinessLinesID(ctx context.Context, request operations.GetBusinessLinesIDRequest, security operations.GetBusinessLinesIDSecurity) (*operations.GetBusinessLinesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/businessLines/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/businessLines/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -155,7 +161,10 @@ func (s *businessLines) GetBusinessLinesID(ctx context.Context, request operatio
 // Updates a business line.
 func (s *businessLines) PatchBusinessLinesID(ctx context.Context, request operations.PatchBusinessLinesIDRequest, security operations.PatchBusinessLinesIDSecurity) (*operations.PatchBusinessLinesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/businessLines/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/businessLines/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BusinessLineInfoUpdateInput", "json")
 	if err != nil {
@@ -224,7 +233,7 @@ func (s *businessLines) PatchBusinessLinesID(ctx context.Context, request operat
 // PostBusinessLines - Create a business line
 // Creates a business line.
 //
-// This resource contains information about your user's line of business, including their industry and their source of funds. Adyen uses this information to verify your users as required by payment industry regulations. Adyen informs you of the verification results through webhooks or API responses.
+// This resource contains information about your user's line of business, including their industry and their source of funds. Adyen uses this information to verify your users as required by payment industry regulations. Adyen informs you of the verification results through webhooks or API responses.>If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
 func (s *businessLines) PostBusinessLines(ctx context.Context, request shared.BusinessLineInfoInput, security operations.PostBusinessLinesSecurity) (*operations.PostBusinessLinesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/businessLines"

@@ -16,17 +16,21 @@ const (
 	DeregisterOnPremisesInstanceXAmzTargetEnumCodeDeploy20141006DeregisterOnPremisesInstance DeregisterOnPremisesInstanceXAmzTargetEnum = "CodeDeploy_20141006.DeregisterOnPremisesInstance"
 )
 
+func (e DeregisterOnPremisesInstanceXAmzTargetEnum) ToPointer() *DeregisterOnPremisesInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeregisterOnPremisesInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.DeregisterOnPremisesInstance":
-		*e = DeregisterOnPremisesInstanceXAmzTargetEnum(s)
+		*e = DeregisterOnPremisesInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeregisterOnPremisesInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeregisterOnPremisesInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

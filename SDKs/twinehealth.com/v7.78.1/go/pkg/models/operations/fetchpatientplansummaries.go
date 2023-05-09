@@ -19,12 +19,16 @@ const (
 	FetchPatientPlanSummariesIncludeEnumCurrentResults FetchPatientPlanSummariesIncludeEnum = "current_results"
 )
 
+func (e FetchPatientPlanSummariesIncludeEnum) ToPointer() *FetchPatientPlanSummariesIncludeEnum {
+	return &e
+}
+
 func (e *FetchPatientPlanSummariesIncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "actions":
 		fallthrough
 	case "bundles":
@@ -32,10 +36,10 @@ func (e *FetchPatientPlanSummariesIncludeEnum) UnmarshalJSON(data []byte) error 
 	case "patient":
 		fallthrough
 	case "current_results":
-		*e = FetchPatientPlanSummariesIncludeEnum(s)
+		*e = FetchPatientPlanSummariesIncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FetchPatientPlanSummariesIncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for FetchPatientPlanSummariesIncludeEnum: %v", v)
 	}
 }
 

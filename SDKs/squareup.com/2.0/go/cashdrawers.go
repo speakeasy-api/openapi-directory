@@ -36,7 +36,10 @@ func newCashDrawers(defaultClient, securityClient HTTPClient, serverURL, languag
 // Provides a paginated list of events for a single cash drawer shift.
 func (s *cashDrawers) ListCashDrawerShiftEvents(ctx context.Context, request operations.ListCashDrawerShiftEventsRequest, security operations.ListCashDrawerShiftEventsSecurity) (*operations.ListCashDrawerShiftEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cash-drawers/shifts/{shift_id}/events", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/cash-drawers/shifts/{shift_id}/events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -136,7 +139,10 @@ func (s *cashDrawers) ListCashDrawerShifts(ctx context.Context, request operatio
 // [ListCashDrawerShiftEvents](https://developer.squareup.com/reference/square_2021-08-18/cash-drawers-api/list-cash-drawer-shift-events) for a list of cash drawer shift events.
 func (s *cashDrawers) RetrieveCashDrawerShift(ctx context.Context, request operations.RetrieveCashDrawerShiftRequest, security operations.RetrieveCashDrawerShiftSecurity) (*operations.RetrieveCashDrawerShiftResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cash-drawers/shifts/{shift_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/cash-drawers/shifts/{shift_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

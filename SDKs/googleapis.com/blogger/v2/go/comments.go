@@ -34,7 +34,10 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 // BloggerCommentsGet - Gets a comment by blog id, post id and comment id.
 func (s *comments) BloggerCommentsGet(ctx context.Context, request operations.BloggerCommentsGetRequest, security operations.BloggerCommentsGetSecurity) (*operations.BloggerCommentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/blogs/{blogId}/posts/{postId}/comments/{commentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/blogs/{blogId}/posts/{postId}/comments/{commentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *comments) BloggerCommentsGet(ctx context.Context, request operations.Bl
 // BloggerCommentsList - Lists comments.
 func (s *comments) BloggerCommentsList(ctx context.Context, request operations.BloggerCommentsListRequest, security operations.BloggerCommentsListSecurity) (*operations.BloggerCommentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/blogs/{blogId}/posts/{postId}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/blogs/{blogId}/posts/{postId}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

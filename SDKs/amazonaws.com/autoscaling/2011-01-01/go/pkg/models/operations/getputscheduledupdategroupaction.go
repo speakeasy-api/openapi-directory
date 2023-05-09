@@ -16,17 +16,21 @@ const (
 	GETPutScheduledUpdateGroupActionActionEnumPutScheduledUpdateGroupAction GETPutScheduledUpdateGroupActionActionEnum = "PutScheduledUpdateGroupAction"
 )
 
+func (e GETPutScheduledUpdateGroupActionActionEnum) ToPointer() *GETPutScheduledUpdateGroupActionActionEnum {
+	return &e
+}
+
 func (e *GETPutScheduledUpdateGroupActionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PutScheduledUpdateGroupAction":
-		*e = GETPutScheduledUpdateGroupActionActionEnum(s)
+		*e = GETPutScheduledUpdateGroupActionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutScheduledUpdateGroupActionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutScheduledUpdateGroupActionActionEnum: %v", v)
 	}
 }
 
@@ -37,17 +41,21 @@ const (
 	GETPutScheduledUpdateGroupActionVersionEnumTwoThousandAndEleven0101 GETPutScheduledUpdateGroupActionVersionEnum = "2011-01-01"
 )
 
+func (e GETPutScheduledUpdateGroupActionVersionEnum) ToPointer() *GETPutScheduledUpdateGroupActionVersionEnum {
+	return &e
+}
+
 func (e *GETPutScheduledUpdateGroupActionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETPutScheduledUpdateGroupActionVersionEnum(s)
+		*e = GETPutScheduledUpdateGroupActionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutScheduledUpdateGroupActionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutScheduledUpdateGroupActionVersionEnum: %v", v)
 	}
 }
 

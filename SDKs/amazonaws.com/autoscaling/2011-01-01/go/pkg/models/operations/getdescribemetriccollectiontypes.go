@@ -15,17 +15,21 @@ const (
 	GETDescribeMetricCollectionTypesActionEnumDescribeMetricCollectionTypes GETDescribeMetricCollectionTypesActionEnum = "DescribeMetricCollectionTypes"
 )
 
+func (e GETDescribeMetricCollectionTypesActionEnum) ToPointer() *GETDescribeMetricCollectionTypesActionEnum {
+	return &e
+}
+
 func (e *GETDescribeMetricCollectionTypesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeMetricCollectionTypes":
-		*e = GETDescribeMetricCollectionTypesActionEnum(s)
+		*e = GETDescribeMetricCollectionTypesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeMetricCollectionTypesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeMetricCollectionTypesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeMetricCollectionTypesVersionEnumTwoThousandAndEleven0101 GETDescribeMetricCollectionTypesVersionEnum = "2011-01-01"
 )
 
+func (e GETDescribeMetricCollectionTypesVersionEnum) ToPointer() *GETDescribeMetricCollectionTypesVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeMetricCollectionTypesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETDescribeMetricCollectionTypesVersionEnum(s)
+		*e = GETDescribeMetricCollectionTypesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeMetricCollectionTypesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeMetricCollectionTypesVersionEnum: %v", v)
 	}
 }
 

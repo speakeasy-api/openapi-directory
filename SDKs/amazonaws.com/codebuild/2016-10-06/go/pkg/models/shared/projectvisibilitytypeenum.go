@@ -15,18 +15,22 @@ const (
 	ProjectVisibilityTypeEnumPrivate    ProjectVisibilityTypeEnum = "PRIVATE"
 )
 
+func (e ProjectVisibilityTypeEnum) ToPointer() *ProjectVisibilityTypeEnum {
+	return &e
+}
+
 func (e *ProjectVisibilityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLIC_READ":
 		fallthrough
 	case "PRIVATE":
-		*e = ProjectVisibilityTypeEnum(s)
+		*e = ProjectVisibilityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectVisibilityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectVisibilityTypeEnum: %v", v)
 	}
 }

@@ -26,12 +26,16 @@ const (
 	As2OutgoingMessageEntityProcessingResultEnumSendFailedConnectionRefused   As2OutgoingMessageEntityProcessingResultEnum = "send_failed_connection_refused"
 )
 
+func (e As2OutgoingMessageEntityProcessingResultEnum) ToPointer() *As2OutgoingMessageEntityProcessingResultEnum {
+	return &e
+}
+
 func (e *As2OutgoingMessageEntityProcessingResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "not_started":
 		fallthrough
 	case "send_failed":
@@ -55,10 +59,10 @@ func (e *As2OutgoingMessageEntityProcessingResultEnum) UnmarshalJSON(data []byte
 	case "send_failed_ssl_error":
 		fallthrough
 	case "send_failed_connection_refused":
-		*e = As2OutgoingMessageEntityProcessingResultEnum(s)
+		*e = As2OutgoingMessageEntityProcessingResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for As2OutgoingMessageEntityProcessingResultEnum: %s", s)
+		return fmt.Errorf("invalid value for As2OutgoingMessageEntityProcessingResultEnum: %v", v)
 	}
 }
 

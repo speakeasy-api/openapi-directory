@@ -18,12 +18,16 @@ const (
 	GoogleMapsPlayablelocationsV3PlayerReportReasonsEnumTemporarilyInaccessible      GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum = "TEMPORARILY_INACCESSIBLE"
 )
 
+func (e GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum) ToPointer() *GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum {
+	return &e
+}
+
 func (e *GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BAD_LOCATION_REASON_UNSPECIFIED":
 		fallthrough
 	case "OTHER":
@@ -35,10 +39,10 @@ func (e *GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum) UnmarshalJSON(dat
 	case "PERMANENTLY_CLOSED":
 		fallthrough
 	case "TEMPORARILY_INACCESSIBLE":
-		*e = GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum(s)
+		*e = GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleMapsPlayablelocationsV3PlayerReportReasonsEnum: %v", v)
 	}
 }
 

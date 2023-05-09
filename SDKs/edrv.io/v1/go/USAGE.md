@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.DeleteChargeStationRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.ChargeStations.DeleteChargeStation(ctx, req)
+    res, err := s.ChargeStations.DeleteChargeStation(ctx, operations.DeleteChargeStationRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    })
     if err != nil {
         log.Fatal(err)
     }

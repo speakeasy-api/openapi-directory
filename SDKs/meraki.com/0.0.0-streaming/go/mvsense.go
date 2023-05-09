@@ -34,7 +34,10 @@ func newMVSense(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Returns live state from camera of analytics zones
 func (s *mvSense) GetDeviceCameraAnalyticsLive(ctx context.Context, request operations.GetDeviceCameraAnalyticsLiveRequest) (*operations.GetDeviceCameraAnalyticsLiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/live", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/live", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *mvSense) GetDeviceCameraAnalyticsLive(ctx context.Context, request oper
 // Returns an overview of aggregate analytics data for a timespan
 func (s *mvSense) GetDeviceCameraAnalyticsOverview(ctx context.Context, request operations.GetDeviceCameraAnalyticsOverviewRequest) (*operations.GetDeviceCameraAnalyticsOverviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/overview", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/overview", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *mvSense) GetDeviceCameraAnalyticsOverview(ctx context.Context, request 
 // Returns most recent record for analytics zones
 func (s *mvSense) GetDeviceCameraAnalyticsRecent(ctx context.Context, request operations.GetDeviceCameraAnalyticsRecentRequest) (*operations.GetDeviceCameraAnalyticsRecentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/recent", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/recent", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,7 +186,10 @@ func (s *mvSense) GetDeviceCameraAnalyticsRecent(ctx context.Context, request op
 // Return historical records for analytic zones
 func (s *mvSense) GetDeviceCameraAnalyticsZoneHistory(ctx context.Context, request operations.GetDeviceCameraAnalyticsZoneHistoryRequest) (*operations.GetDeviceCameraAnalyticsZoneHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/zones/{zoneId}/history", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/zones/{zoneId}/history", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -226,7 +238,10 @@ func (s *mvSense) GetDeviceCameraAnalyticsZoneHistory(ctx context.Context, reque
 // Returns all configured analytic zones for this camera
 func (s *mvSense) GetDeviceCameraAnalyticsZones(ctx context.Context, request operations.GetDeviceCameraAnalyticsZonesRequest) (*operations.GetDeviceCameraAnalyticsZonesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/zones", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/analytics/zones", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

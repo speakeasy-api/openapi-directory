@@ -15,17 +15,21 @@ const (
 	POSTModifyTrafficMirrorFilterNetworkServicesActionEnumModifyTrafficMirrorFilterNetworkServices POSTModifyTrafficMirrorFilterNetworkServicesActionEnum = "ModifyTrafficMirrorFilterNetworkServices"
 )
 
+func (e POSTModifyTrafficMirrorFilterNetworkServicesActionEnum) ToPointer() *POSTModifyTrafficMirrorFilterNetworkServicesActionEnum {
+	return &e
+}
+
 func (e *POSTModifyTrafficMirrorFilterNetworkServicesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyTrafficMirrorFilterNetworkServices":
-		*e = POSTModifyTrafficMirrorFilterNetworkServicesActionEnum(s)
+		*e = POSTModifyTrafficMirrorFilterNetworkServicesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyTrafficMirrorFilterNetworkServicesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyTrafficMirrorFilterNetworkServicesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyTrafficMirrorFilterNetworkServicesVersionEnumTwoThousandAndSixteen1115 POSTModifyTrafficMirrorFilterNetworkServicesVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyTrafficMirrorFilterNetworkServicesVersionEnum) ToPointer() *POSTModifyTrafficMirrorFilterNetworkServicesVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyTrafficMirrorFilterNetworkServicesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyTrafficMirrorFilterNetworkServicesVersionEnum(s)
+		*e = POSTModifyTrafficMirrorFilterNetworkServicesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyTrafficMirrorFilterNetworkServicesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyTrafficMirrorFilterNetworkServicesVersionEnum: %v", v)
 	}
 }
 

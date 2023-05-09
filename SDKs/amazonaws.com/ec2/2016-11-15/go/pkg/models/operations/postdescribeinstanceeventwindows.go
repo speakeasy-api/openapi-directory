@@ -15,17 +15,21 @@ const (
 	POSTDescribeInstanceEventWindowsActionEnumDescribeInstanceEventWindows POSTDescribeInstanceEventWindowsActionEnum = "DescribeInstanceEventWindows"
 )
 
+func (e POSTDescribeInstanceEventWindowsActionEnum) ToPointer() *POSTDescribeInstanceEventWindowsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeInstanceEventWindowsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeInstanceEventWindows":
-		*e = POSTDescribeInstanceEventWindowsActionEnum(s)
+		*e = POSTDescribeInstanceEventWindowsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeInstanceEventWindowsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeInstanceEventWindowsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeInstanceEventWindowsVersionEnumTwoThousandAndSixteen1115 POSTDescribeInstanceEventWindowsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeInstanceEventWindowsVersionEnum) ToPointer() *POSTDescribeInstanceEventWindowsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeInstanceEventWindowsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeInstanceEventWindowsVersionEnum(s)
+		*e = POSTDescribeInstanceEventWindowsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeInstanceEventWindowsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeInstanceEventWindowsVersionEnum: %v", v)
 	}
 }
 

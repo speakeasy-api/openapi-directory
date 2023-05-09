@@ -15,17 +15,21 @@ const (
 	POSTCompleteLifecycleActionActionEnumCompleteLifecycleAction POSTCompleteLifecycleActionActionEnum = "CompleteLifecycleAction"
 )
 
+func (e POSTCompleteLifecycleActionActionEnum) ToPointer() *POSTCompleteLifecycleActionActionEnum {
+	return &e
+}
+
 func (e *POSTCompleteLifecycleActionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CompleteLifecycleAction":
-		*e = POSTCompleteLifecycleActionActionEnum(s)
+		*e = POSTCompleteLifecycleActionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCompleteLifecycleActionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCompleteLifecycleActionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCompleteLifecycleActionVersionEnumTwoThousandAndEleven0101 POSTCompleteLifecycleActionVersionEnum = "2011-01-01"
 )
 
+func (e POSTCompleteLifecycleActionVersionEnum) ToPointer() *POSTCompleteLifecycleActionVersionEnum {
+	return &e
+}
+
 func (e *POSTCompleteLifecycleActionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTCompleteLifecycleActionVersionEnum(s)
+		*e = POSTCompleteLifecycleActionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCompleteLifecycleActionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCompleteLifecycleActionVersionEnum: %v", v)
 	}
 }
 

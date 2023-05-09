@@ -17,12 +17,16 @@ const (
 	PlatformSummaryBetterAdsStatusEnumFailing PlatformSummaryBetterAdsStatusEnum = "FAILING"
 )
 
+func (e PlatformSummaryBetterAdsStatusEnum) ToPointer() *PlatformSummaryBetterAdsStatusEnum {
+	return &e
+}
+
 func (e *PlatformSummaryBetterAdsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "PASSING":
@@ -30,10 +34,10 @@ func (e *PlatformSummaryBetterAdsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "WARNING":
 		fallthrough
 	case "FAILING":
-		*e = PlatformSummaryBetterAdsStatusEnum(s)
+		*e = PlatformSummaryBetterAdsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlatformSummaryBetterAdsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PlatformSummaryBetterAdsStatusEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	PlatformSummaryFilterStatusEnumPending PlatformSummaryFilterStatusEnum = "PENDING"
 )
 
+func (e PlatformSummaryFilterStatusEnum) ToPointer() *PlatformSummaryFilterStatusEnum {
+	return &e
+}
+
 func (e *PlatformSummaryFilterStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "ON":
@@ -63,10 +71,10 @@ func (e *PlatformSummaryFilterStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PAUSED":
 		fallthrough
 	case "PENDING":
-		*e = PlatformSummaryFilterStatusEnum(s)
+		*e = PlatformSummaryFilterStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlatformSummaryFilterStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PlatformSummaryFilterStatusEnum: %v", v)
 	}
 }
 
@@ -79,12 +87,16 @@ const (
 	PlatformSummaryRegionEnumRegionC       PlatformSummaryRegionEnum = "REGION_C"
 )
 
+func (e PlatformSummaryRegionEnum) ToPointer() *PlatformSummaryRegionEnum {
+	return &e
+}
+
 func (e *PlatformSummaryRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGION_UNKNOWN":
 		fallthrough
 	case "REGION_A":
@@ -92,10 +104,10 @@ func (e *PlatformSummaryRegionEnum) UnmarshalJSON(data []byte) error {
 	case "REGION_B":
 		fallthrough
 	case "REGION_C":
-		*e = PlatformSummaryRegionEnum(s)
+		*e = PlatformSummaryRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlatformSummaryRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for PlatformSummaryRegionEnum: %v", v)
 	}
 }
 

@@ -16,20 +16,24 @@ const (
 	GroupTypeEnumClassStudents GroupTypeEnum = "classStudents"
 )
 
+func (e GroupTypeEnum) ToPointer() *GroupTypeEnum {
+	return &e
+}
+
 func (e *GroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "generic":
 		fallthrough
 	case "classTeachers":
 		fallthrough
 	case "classStudents":
-		*e = GroupTypeEnum(s)
+		*e = GroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupTypeEnum: %v", v)
 	}
 }

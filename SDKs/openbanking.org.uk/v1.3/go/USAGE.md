@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAtmsRequest{
-        IfModifiedSince: "corrupti",
-        IfNoneMatch: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.Atm.GetAtms(ctx, req)
+    res, err := s.Atm.GetAtms(ctx, operations.GetAtmsRequest{
+        IfModifiedSince: sdk.String("corrupti"),
+        IfNoneMatch: sdk.String("provident"),
+    })
     if err != nil {
         log.Fatal(err)
     }

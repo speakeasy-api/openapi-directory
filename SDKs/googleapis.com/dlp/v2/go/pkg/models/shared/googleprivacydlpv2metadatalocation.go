@@ -15,19 +15,23 @@ const (
 	GooglePrivacyDlpV2MetadataLocationTypeEnumStorageMetadata         GooglePrivacyDlpV2MetadataLocationTypeEnum = "STORAGE_METADATA"
 )
 
+func (e GooglePrivacyDlpV2MetadataLocationTypeEnum) ToPointer() *GooglePrivacyDlpV2MetadataLocationTypeEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2MetadataLocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METADATATYPE_UNSPECIFIED":
 		fallthrough
 	case "STORAGE_METADATA":
-		*e = GooglePrivacyDlpV2MetadataLocationTypeEnum(s)
+		*e = GooglePrivacyDlpV2MetadataLocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2MetadataLocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2MetadataLocationTypeEnum: %v", v)
 	}
 }
 

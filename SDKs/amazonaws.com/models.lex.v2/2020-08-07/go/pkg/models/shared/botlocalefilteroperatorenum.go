@@ -14,18 +14,22 @@ const (
 	BotLocaleFilterOperatorEnumEq BotLocaleFilterOperatorEnum = "EQ"
 )
 
+func (e BotLocaleFilterOperatorEnum) ToPointer() *BotLocaleFilterOperatorEnum {
+	return &e
+}
+
 func (e *BotLocaleFilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CO":
 		fallthrough
 	case "EQ":
-		*e = BotLocaleFilterOperatorEnum(s)
+		*e = BotLocaleFilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BotLocaleFilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for BotLocaleFilterOperatorEnum: %v", v)
 	}
 }

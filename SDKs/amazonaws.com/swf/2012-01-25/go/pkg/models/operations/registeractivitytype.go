@@ -16,17 +16,21 @@ const (
 	RegisterActivityTypeXAmzTargetEnumSimpleWorkflowServiceRegisterActivityType RegisterActivityTypeXAmzTargetEnum = "SimpleWorkflowService.RegisterActivityType"
 )
 
+func (e RegisterActivityTypeXAmzTargetEnum) ToPointer() *RegisterActivityTypeXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterActivityTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleWorkflowService.RegisterActivityType":
-		*e = RegisterActivityTypeXAmzTargetEnum(s)
+		*e = RegisterActivityTypeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterActivityTypeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterActivityTypeXAmzTargetEnum: %v", v)
 	}
 }
 

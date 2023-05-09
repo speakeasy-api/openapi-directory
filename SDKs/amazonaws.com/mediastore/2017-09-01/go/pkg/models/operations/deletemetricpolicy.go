@@ -16,17 +16,21 @@ const (
 	DeleteMetricPolicyXAmzTargetEnumMediaStore20170901DeleteMetricPolicy DeleteMetricPolicyXAmzTargetEnum = "MediaStore_20170901.DeleteMetricPolicy"
 )
 
+func (e DeleteMetricPolicyXAmzTargetEnum) ToPointer() *DeleteMetricPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteMetricPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MediaStore_20170901.DeleteMetricPolicy":
-		*e = DeleteMetricPolicyXAmzTargetEnum(s)
+		*e = DeleteMetricPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteMetricPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteMetricPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

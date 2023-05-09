@@ -13,23 +13,27 @@ type RetrieveSensitiveDetailsForACardRequest struct {
 	CardID string `pathParam:"style=simple,explode=false,name=card_id"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum = "429"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON13TypeEnumRateLimitedError RetrieveSensitiveDetailsForACardDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON13TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON13TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type RetrieveSensitiveDetailsForACardDefaultApplicationJSON13 struct {
 	Type       RetrieveSensitiveDetailsForACardDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnum = "403"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON12TypeEnumPrivateFeatureError RetrieveSensitiveDetailsForACardDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON12TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON12TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type RetrieveSensitiveDetailsForACardDefaultApplicationJSON12 struct {
 	Type   RetrieveSensitiveDetailsForACardDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnum = "404"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON11TypeEnumObjectNotFoundError RetrieveSensitiveDetailsForACardDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON11TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON11TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type RetrieveSensitiveDetailsForACardDefaultApplicationJSON11 struct {
 	Type   RetrieveSensitiveDetailsForACardDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnumFourHundred RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnum = "400"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnumFourHundred RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON10TypeEnumMalformedRequestError RetrieveSensitiveDetailsForACardDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON10TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON10TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type RetrieveSensitiveDetailsForACardDefaultApplicationJSON10 struct {
 	Type   RetrieveSensitiveDetailsForACardDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnumFourHundred RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnum = "400"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnumFourHundred RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON9TypeEnumInvalidParametersError RetrieveSensitiveDetailsForACardDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON9TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON9TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type RetrieveSensitiveDetailsForACardDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                          `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                          `json:"errors"`
 	Status RetrieveSensitiveDetailsForACardDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                            `json:"title"`
 	Type   RetrieveSensitiveDetailsForACardDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnum = "409"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON8TypeEnumInvalidOperationError RetrieveSensitiveDetailsForACardDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON8TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON8TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type RetrieveSensitiveDetailsForACardDefaultApplicationJSON8 struct {
 	Type   RetrieveSensitiveDetailsForACardDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnum = "401"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON7TypeEnumInvalidAPIKeyError RetrieveSensitiveDetailsForACardDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON7TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON7TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type RetrieveSensitiveDetailsForACardDefaultApplicationJSON7 struct {
 	Type   RetrieveSensitiveDetailsForACardDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnumFiveHundred RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnum = "500"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnumFiveHundred RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON6TypeEnumInternalServerError RetrieveSensitiveDetailsForACardDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON6TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON6TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type RetrieveSensitiveDetailsForACardDefaultApplicationJSON6 struct {
 	Type   RetrieveSensitiveDetailsForACardDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnum = "403"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON5TypeEnumInsufficientPermissionsError RetrieveSensitiveDetailsForACardDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON5TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON5TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type RetrieveSensitiveDetailsForACardDefaultApplicationJSON5 struct {
 	Type   RetrieveSensitiveDetailsForACardDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnum = "422"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError RetrieveSensitiveDetailsForACardDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON4TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON4TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type RetrieveSensitiveDetailsForACardDefaultApplicationJSON4 struct {
 	Type   RetrieveSensitiveDetailsForACardDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnum = "409"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON3TypeEnumIdempotencyConflictError RetrieveSensitiveDetailsForACardDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON3TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON3TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type RetrieveSensitiveDetailsForACardDefaultApplicationJSON3 struct {
 	Type   RetrieveSensitiveDetailsForACardDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnum = "403"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON2TypeEnumEnvironmentMismatchError RetrieveSensitiveDetailsForACardDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON2TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON2TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type RetrieveSensitiveDetailsForACardDefaultApplicationJSON2 struct {
 	Type   RetrieveSensitiveDetailsForACardDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnum string
+type RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnum int64
 
 const (
-	RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnum = "404"
+	RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	RetrieveSensitiveDetailsForACardDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError RetrieveSensitiveDetailsForACardDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e RetrieveSensitiveDetailsForACardDefaultApplicationJSON1TypeEnum) ToPointer() *RetrieveSensitiveDetailsForACardDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *RetrieveSensitiveDetailsForACardDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON1TypeEnum(s)
+		*e = RetrieveSensitiveDetailsForACardDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveSensitiveDetailsForACardDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

@@ -18,21 +18,25 @@ const (
 	PostClickwrapsRequestBodyUseWithBundlesEnumRequire   PostClickwrapsRequestBodyUseWithBundlesEnum = "require"
 )
 
+func (e PostClickwrapsRequestBodyUseWithBundlesEnum) ToPointer() *PostClickwrapsRequestBodyUseWithBundlesEnum {
+	return &e
+}
+
 func (e *PostClickwrapsRequestBodyUseWithBundlesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "available":
 		fallthrough
 	case "require":
-		*e = PostClickwrapsRequestBodyUseWithBundlesEnum(s)
+		*e = PostClickwrapsRequestBodyUseWithBundlesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostClickwrapsRequestBodyUseWithBundlesEnum: %s", s)
+		return fmt.Errorf("invalid value for PostClickwrapsRequestBodyUseWithBundlesEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	PostClickwrapsRequestBodyUseWithInboxesEnumRequire   PostClickwrapsRequestBodyUseWithInboxesEnum = "require"
 )
 
+func (e PostClickwrapsRequestBodyUseWithInboxesEnum) ToPointer() *PostClickwrapsRequestBodyUseWithInboxesEnum {
+	return &e
+}
+
 func (e *PostClickwrapsRequestBodyUseWithInboxesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "available":
 		fallthrough
 	case "require":
-		*e = PostClickwrapsRequestBodyUseWithInboxesEnum(s)
+		*e = PostClickwrapsRequestBodyUseWithInboxesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostClickwrapsRequestBodyUseWithInboxesEnum: %s", s)
+		return fmt.Errorf("invalid value for PostClickwrapsRequestBodyUseWithInboxesEnum: %v", v)
 	}
 }
 
@@ -71,19 +79,23 @@ const (
 	PostClickwrapsRequestBodyUseWithUsersEnumRequire PostClickwrapsRequestBodyUseWithUsersEnum = "require"
 )
 
+func (e PostClickwrapsRequestBodyUseWithUsersEnum) ToPointer() *PostClickwrapsRequestBodyUseWithUsersEnum {
+	return &e
+}
+
 func (e *PostClickwrapsRequestBodyUseWithUsersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "require":
-		*e = PostClickwrapsRequestBodyUseWithUsersEnum(s)
+		*e = PostClickwrapsRequestBodyUseWithUsersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostClickwrapsRequestBodyUseWithUsersEnum: %s", s)
+		return fmt.Errorf("invalid value for PostClickwrapsRequestBodyUseWithUsersEnum: %v", v)
 	}
 }
 

@@ -24,19 +24,23 @@ const (
 	CalculateRouteMatrixRequestBodyDistanceUnitEnumMiles      CalculateRouteMatrixRequestBodyDistanceUnitEnum = "Miles"
 )
 
+func (e CalculateRouteMatrixRequestBodyDistanceUnitEnum) ToPointer() *CalculateRouteMatrixRequestBodyDistanceUnitEnum {
+	return &e
+}
+
 func (e *CalculateRouteMatrixRequestBodyDistanceUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kilometers":
 		fallthrough
 	case "Miles":
-		*e = CalculateRouteMatrixRequestBodyDistanceUnitEnum(s)
+		*e = CalculateRouteMatrixRequestBodyDistanceUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalculateRouteMatrixRequestBodyDistanceUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for CalculateRouteMatrixRequestBodyDistanceUnitEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	CalculateRouteMatrixRequestBodyTravelModeEnumMotorcycle CalculateRouteMatrixRequestBodyTravelModeEnum = "Motorcycle"
 )
 
+func (e CalculateRouteMatrixRequestBodyTravelModeEnum) ToPointer() *CalculateRouteMatrixRequestBodyTravelModeEnum {
+	return &e
+}
+
 func (e *CalculateRouteMatrixRequestBodyTravelModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Car":
 		fallthrough
 	case "Truck":
@@ -66,10 +74,10 @@ func (e *CalculateRouteMatrixRequestBodyTravelModeEnum) UnmarshalJSON(data []byt
 	case "Bicycle":
 		fallthrough
 	case "Motorcycle":
-		*e = CalculateRouteMatrixRequestBodyTravelModeEnum(s)
+		*e = CalculateRouteMatrixRequestBodyTravelModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalculateRouteMatrixRequestBodyTravelModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CalculateRouteMatrixRequestBodyTravelModeEnum: %v", v)
 	}
 }
 

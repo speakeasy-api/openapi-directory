@@ -435,7 +435,10 @@ func (s *payrollAu) CreateTimesheet(ctx context.Context, request operations.Crea
 // GetEmployee - Retrieves an employee's detail by unique employee id
 func (s *payrollAu) GetEmployee(ctx context.Context, request operations.GetEmployeeRequest, security operations.GetEmployeeSecurity) (*operations.GetEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employees/{EmployeeID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Employees/{EmployeeID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -541,7 +544,10 @@ func (s *payrollAu) GetEmployees(ctx context.Context, request operations.GetEmpl
 // GetLeaveApplication - Retrieves a leave application by a unique leave application id
 func (s *payrollAu) GetLeaveApplication(ctx context.Context, request operations.GetLeaveApplicationRequest, security operations.GetLeaveApplicationSecurity) (*operations.GetLeaveApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/LeaveApplications/{LeaveApplicationID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/LeaveApplications/{LeaveApplicationID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -707,7 +713,10 @@ func (s *payrollAu) GetPayItems(ctx context.Context, request operations.GetPayIt
 // GetPayRun - Retrieves a pay run by using a unique pay run id
 func (s *payrollAu) GetPayRun(ctx context.Context, request operations.GetPayRunRequest, security operations.GetPayRunSecurity) (*operations.GetPayRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/PayRuns/{PayRunID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/PayRuns/{PayRunID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -813,7 +822,10 @@ func (s *payrollAu) GetPayRuns(ctx context.Context, request operations.GetPayRun
 // GetPayrollCalendar - Retrieves payroll calendar by using a unique payroll calendar ID
 func (s *payrollAu) GetPayrollCalendar(ctx context.Context, request operations.GetPayrollCalendarRequest, security operations.GetPayrollCalendarSecurity) (*operations.GetPayrollCalendarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/PayrollCalendars/{PayrollCalendarID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/PayrollCalendars/{PayrollCalendarID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -929,7 +941,10 @@ func (s *payrollAu) GetPayrollCalendars(ctx context.Context, request operations.
 // GetPayslip - Retrieves for a payslip by a unique payslip id
 func (s *payrollAu) GetPayslip(ctx context.Context, request operations.GetPayslipRequest, security operations.GetPayslipSecurity) (*operations.GetPayslipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Payslip/{PayslipID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Payslip/{PayslipID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1021,7 +1036,10 @@ func (s *payrollAu) GetSettings(ctx context.Context, request operations.GetSetti
 // GetSuperfund - Retrieves a superfund by using a unique superfund ID
 func (s *payrollAu) GetSuperfund(ctx context.Context, request operations.GetSuperfundRequest, security operations.GetSuperfundSecurity) (*operations.GetSuperfundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Superfunds/{SuperFundID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Superfunds/{SuperFundID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1187,7 +1205,10 @@ func (s *payrollAu) GetSuperfunds(ctx context.Context, request operations.GetSup
 // GetTimesheet - Retrieves a timesheet by using a unique timesheet id
 func (s *payrollAu) GetTimesheet(ctx context.Context, request operations.GetTimesheetRequest, security operations.GetTimesheetSecurity) (*operations.GetTimesheetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Timesheets/{TimesheetID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Timesheets/{TimesheetID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1294,7 +1315,10 @@ func (s *payrollAu) GetTimesheets(ctx context.Context, request operations.GetTim
 // Update properties on a single employee
 func (s *payrollAu) UpdateEmployee(ctx context.Context, request operations.UpdateEmployeeRequest, security operations.UpdateEmployeeSecurity) (*operations.UpdateEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Employees/{EmployeeID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Employees/{EmployeeID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1347,7 +1371,10 @@ func (s *payrollAu) UpdateEmployee(ctx context.Context, request operations.Updat
 // UpdateLeaveApplication - Updates a specific leave application
 func (s *payrollAu) UpdateLeaveApplication(ctx context.Context, request operations.UpdateLeaveApplicationRequest, security operations.UpdateLeaveApplicationSecurity) (*operations.UpdateLeaveApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/LeaveApplications/{LeaveApplicationID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/LeaveApplications/{LeaveApplicationID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1405,7 +1432,10 @@ func (s *payrollAu) UpdateLeaveApplication(ctx context.Context, request operatio
 // Update properties on a single PayRun
 func (s *payrollAu) UpdatePayRun(ctx context.Context, request operations.UpdatePayRunRequest, security operations.UpdatePayRunSecurity) (*operations.UpdatePayRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/PayRuns/{PayRunID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/PayRuns/{PayRunID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1459,7 +1489,10 @@ func (s *payrollAu) UpdatePayRun(ctx context.Context, request operations.UpdateP
 // Update lines on a single payslips
 func (s *payrollAu) UpdatePayslip(ctx context.Context, request operations.UpdatePayslipRequest, security operations.UpdatePayslipSecurity) (*operations.UpdatePayslipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Payslip/{PayslipID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Payslip/{PayslipID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1513,7 +1546,10 @@ func (s *payrollAu) UpdatePayslip(ctx context.Context, request operations.Update
 // Update properties on a single Superfund
 func (s *payrollAu) UpdateSuperfund(ctx context.Context, request operations.UpdateSuperfundRequest, security operations.UpdateSuperfundSecurity) (*operations.UpdateSuperfundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Superfunds/{SuperFundID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Superfunds/{SuperFundID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1567,7 +1603,10 @@ func (s *payrollAu) UpdateSuperfund(ctx context.Context, request operations.Upda
 // Update properties on a single timesheet
 func (s *payrollAu) UpdateTimesheet(ctx context.Context, request operations.UpdateTimesheetRequest, security operations.UpdateTimesheetSecurity) (*operations.UpdateTimesheetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Timesheets/{TimesheetID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Timesheets/{TimesheetID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

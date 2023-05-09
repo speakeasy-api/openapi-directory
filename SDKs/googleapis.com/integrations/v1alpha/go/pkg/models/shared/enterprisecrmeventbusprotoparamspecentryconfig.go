@@ -16,12 +16,16 @@ const (
 	EnterpriseCrmEventbusProtoParamSpecEntryConfigInputDisplayOptionEnumBooleanToggle   EnterpriseCrmEventbusProtoParamSpecEntryConfigInputDisplayOptionEnum = "BOOLEAN_TOGGLE"
 )
 
+func (e EnterpriseCrmEventbusProtoParamSpecEntryConfigInputDisplayOptionEnum) ToPointer() *EnterpriseCrmEventbusProtoParamSpecEntryConfigInputDisplayOptionEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoParamSpecEntryConfigInputDisplayOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "STRING_MULTI_LINE":
@@ -29,10 +33,10 @@ func (e *EnterpriseCrmEventbusProtoParamSpecEntryConfigInputDisplayOptionEnum) U
 	case "NUMBER_SLIDER":
 		fallthrough
 	case "BOOLEAN_TOGGLE":
-		*e = EnterpriseCrmEventbusProtoParamSpecEntryConfigInputDisplayOptionEnum(s)
+		*e = EnterpriseCrmEventbusProtoParamSpecEntryConfigInputDisplayOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoParamSpecEntryConfigInputDisplayOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoParamSpecEntryConfigInputDisplayOptionEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	EnterpriseCrmEventbusProtoParamSpecEntryConfigParameterNameOptionEnumValueIsParameterName    EnterpriseCrmEventbusProtoParamSpecEntryConfigParameterNameOptionEnum = "VALUE_IS_PARAMETER_NAME"
 )
 
+func (e EnterpriseCrmEventbusProtoParamSpecEntryConfigParameterNameOptionEnum) ToPointer() *EnterpriseCrmEventbusProtoParamSpecEntryConfigParameterNameOptionEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoParamSpecEntryConfigParameterNameOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT_NOT_PARAMETER_NAME":
 		fallthrough
 	case "IS_PARAMETER_NAME":
@@ -58,10 +66,10 @@ func (e *EnterpriseCrmEventbusProtoParamSpecEntryConfigParameterNameOptionEnum) 
 	case "KEY_IS_PARAMETER_NAME":
 		fallthrough
 	case "VALUE_IS_PARAMETER_NAME":
-		*e = EnterpriseCrmEventbusProtoParamSpecEntryConfigParameterNameOptionEnum(s)
+		*e = EnterpriseCrmEventbusProtoParamSpecEntryConfigParameterNameOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoParamSpecEntryConfigParameterNameOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoParamSpecEntryConfigParameterNameOptionEnum: %v", v)
 	}
 }
 

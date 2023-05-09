@@ -16,12 +16,16 @@ const (
 	TrafficMirrorFilterRuleFieldEnumDescription          TrafficMirrorFilterRuleFieldEnum = "description"
 )
 
+func (e TrafficMirrorFilterRuleFieldEnum) ToPointer() *TrafficMirrorFilterRuleFieldEnum {
+	return &e
+}
+
 func (e *TrafficMirrorFilterRuleFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "destination-port-range":
 		fallthrough
 	case "source-port-range":
@@ -29,9 +33,9 @@ func (e *TrafficMirrorFilterRuleFieldEnum) UnmarshalJSON(data []byte) error {
 	case "protocol":
 		fallthrough
 	case "description":
-		*e = TrafficMirrorFilterRuleFieldEnum(s)
+		*e = TrafficMirrorFilterRuleFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrafficMirrorFilterRuleFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for TrafficMirrorFilterRuleFieldEnum: %v", v)
 	}
 }

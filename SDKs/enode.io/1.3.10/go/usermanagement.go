@@ -34,7 +34,10 @@ func newUserManagement(defaultClient, securityClient HTTPClient, serverURL, lang
 // Deletes a User and all of their data permanently, and invalidates any associated sessions, authorization codes, and access/refresh tokens
 func (s *userManagement) DeleteUsersUserid(ctx context.Context, request operations.DeleteUsersUseridRequest, security operations.DeleteUsersUseridSecurity) (*operations.DeleteUsersUseridResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *userManagement) DeleteUsersUserid(ctx context.Context, request operatio
 // No webhook events will be generated for a deauthorized user.
 func (s *userManagement) DeleteUsersUseridAuthorization(ctx context.Context, request operations.DeleteUsersUseridAuthorizationRequest, security operations.DeleteUsersUseridAuthorizationSecurity) (*operations.DeleteUsersUseridAuthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/authorization", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userId}/authorization", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -110,7 +116,10 @@ func (s *userManagement) DeleteUsersUseridAuthorization(ctx context.Context, req
 // Creates an Enode Link session attached to the provided User ID. If this User does not exist, it will be created. The returned `linkState` gives the user short-lived access to Enode Link.
 func (s *userManagement) PostUsersUseridLink(ctx context.Context, request operations.PostUsersUseridLinkRequest, security operations.PostUsersUseridLinkSecurity) (*operations.PostUsersUseridLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userId}/link", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userId}/link", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

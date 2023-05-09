@@ -2,7 +2,7 @@
 
 package shared
 
-// ViewOffNadirInput - <p/>
+// ViewOffNadirInput - The input structure for specifying ViewOffNadir property filter. ViewOffNadir refers to the angle from the sensor between nadir (straight down) and the scene center. Measured in degrees (0-90).
 type ViewOffNadirInput struct {
 	LowerBound float32 `json:"LowerBound"`
 	UpperBound float32 `json:"UpperBound"`

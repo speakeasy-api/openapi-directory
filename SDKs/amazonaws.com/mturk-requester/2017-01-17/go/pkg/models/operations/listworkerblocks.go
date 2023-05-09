@@ -16,17 +16,21 @@ const (
 	ListWorkerBlocksXAmzTargetEnumMTurkRequesterServiceV20170117ListWorkerBlocks ListWorkerBlocksXAmzTargetEnum = "MTurkRequesterServiceV20170117.ListWorkerBlocks"
 )
 
+func (e ListWorkerBlocksXAmzTargetEnum) ToPointer() *ListWorkerBlocksXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListWorkerBlocksXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.ListWorkerBlocks":
-		*e = ListWorkerBlocksXAmzTargetEnum(s)
+		*e = ListWorkerBlocksXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListWorkerBlocksXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListWorkerBlocksXAmzTargetEnum: %v", v)
 	}
 }
 

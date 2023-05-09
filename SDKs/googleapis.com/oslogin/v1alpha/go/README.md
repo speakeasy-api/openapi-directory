@@ -13,38 +13,36 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/oslogin/v1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.OsloginUsersGetLoginProfileRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        Name: "corrupti",
-        OauthToken: "illum",
-        OperatingSystemType: "LINUX",
-        PrettyPrint: false,
-        ProjectID: "error",
-        QuotaUser: "deserunt",
-        SystemID: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-        View: "SECURITY_KEY",
-    }
-
     ctx := context.Background()
-    res, err := s.Users.OsloginUsersGetLoginProfile(ctx, req, operations.OsloginUsersGetLoginProfileSecurity{
+    res, err := s.Users.OsloginUsersGetLoginProfile(ctx, operations.OsloginUsersGetLoginProfileRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        Name: "Dallas Kassulke",
+        OauthToken: sdk.String("suscipit"),
+        OperatingSystemType: operations.OsloginUsersGetLoginProfileOperatingSystemTypeEnumLinux.ToPointer(),
+        PrettyPrint: sdk.Bool(false),
+        ProjectID: sdk.String("magnam"),
+        QuotaUser: sdk.String("debitis"),
+        SystemID: sdk.String("ipsa"),
+        UploadType: sdk.String("delectus"),
+        UploadProtocol: sdk.String("tempora"),
+        View: operations.OsloginUsersGetLoginProfileViewEnumBasic.ToPointer(),
+    }, operations.OsloginUsersGetLoginProfileSecurity{
         Option1: &operations.OsloginUsersGetLoginProfileSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -65,14 +63,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### Users
+### [Users](docs/users/README.md)
 
-* `OsloginUsersGetLoginProfile` - Retrieves the profile information used for logging in to a virtual machine on Google Compute Engine.
-* `OsloginUsersImportSSHPublicKey` - Adds an SSH public key and returns the profile information. Default POSIX account information is set when no username and UID exist as part of the login profile.
-* `OsloginUsersSSHPublicKeysCreate` - Create an SSH public key
-* `OsloginUsersSSHPublicKeysDelete` - Deletes an SSH public key.
-* `OsloginUsersSSHPublicKeysGet` - Retrieves an SSH public key.
-* `OsloginUsersSSHPublicKeysPatch` - Updates an SSH public key and returns the profile information. This method supports patch semantics.
+* [OsloginUsersGetLoginProfile](docs/users/README.md#osloginusersgetloginprofile) - Retrieves the profile information used for logging in to a virtual machine on Google Compute Engine.
+* [OsloginUsersImportSSHPublicKey](docs/users/README.md#osloginusersimportsshpublickey) - Adds an SSH public key and returns the profile information. Default POSIX account information is set when no username and UID exist as part of the login profile.
+* [OsloginUsersSSHPublicKeysCreate](docs/users/README.md#osloginuserssshpublickeyscreate) - Create an SSH public key
+* [OsloginUsersSSHPublicKeysDelete](docs/users/README.md#osloginuserssshpublickeysdelete) - Deletes an SSH public key.
+* [OsloginUsersSSHPublicKeysGet](docs/users/README.md#osloginuserssshpublickeysget) - Retrieves an SSH public key.
+* [OsloginUsersSSHPublicKeysPatch](docs/users/README.md#osloginuserssshpublickeyspatch) - Updates an SSH public key and returns the profile information. This method supports patch semantics.
 <!-- End SDK Available Operations -->
 
 ### Maturity

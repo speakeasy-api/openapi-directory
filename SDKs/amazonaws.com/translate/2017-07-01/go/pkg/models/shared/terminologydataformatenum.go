@@ -15,20 +15,24 @@ const (
 	TerminologyDataFormatEnumTsv TerminologyDataFormatEnum = "TSV"
 )
 
+func (e TerminologyDataFormatEnum) ToPointer() *TerminologyDataFormatEnum {
+	return &e
+}
+
 func (e *TerminologyDataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
 		fallthrough
 	case "TMX":
 		fallthrough
 	case "TSV":
-		*e = TerminologyDataFormatEnum(s)
+		*e = TerminologyDataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TerminologyDataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TerminologyDataFormatEnum: %v", v)
 	}
 }

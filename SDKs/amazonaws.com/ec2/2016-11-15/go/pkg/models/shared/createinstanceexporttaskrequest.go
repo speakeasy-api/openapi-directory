@@ -14,17 +14,21 @@ const (
 	CreateInstanceExportTaskRequestExportToS3TaskContainerFormatEnumOva CreateInstanceExportTaskRequestExportToS3TaskContainerFormatEnum = "ova"
 )
 
+func (e CreateInstanceExportTaskRequestExportToS3TaskContainerFormatEnum) ToPointer() *CreateInstanceExportTaskRequestExportToS3TaskContainerFormatEnum {
+	return &e
+}
+
 func (e *CreateInstanceExportTaskRequestExportToS3TaskContainerFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ova":
-		*e = CreateInstanceExportTaskRequestExportToS3TaskContainerFormatEnum(s)
+		*e = CreateInstanceExportTaskRequestExportToS3TaskContainerFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInstanceExportTaskRequestExportToS3TaskContainerFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInstanceExportTaskRequestExportToS3TaskContainerFormatEnum: %v", v)
 	}
 }
 
@@ -37,21 +41,25 @@ const (
 	CreateInstanceExportTaskRequestExportToS3TaskDiskImageFormatEnumVhd  CreateInstanceExportTaskRequestExportToS3TaskDiskImageFormatEnum = "VHD"
 )
 
+func (e CreateInstanceExportTaskRequestExportToS3TaskDiskImageFormatEnum) ToPointer() *CreateInstanceExportTaskRequestExportToS3TaskDiskImageFormatEnum {
+	return &e
+}
+
 func (e *CreateInstanceExportTaskRequestExportToS3TaskDiskImageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VMDK":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "VHD":
-		*e = CreateInstanceExportTaskRequestExportToS3TaskDiskImageFormatEnum(s)
+		*e = CreateInstanceExportTaskRequestExportToS3TaskDiskImageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInstanceExportTaskRequestExportToS3TaskDiskImageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInstanceExportTaskRequestExportToS3TaskDiskImageFormatEnum: %v", v)
 	}
 }
 
@@ -154,12 +162,16 @@ const (
 	CreateInstanceExportTaskRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateInstanceExportTaskRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateInstanceExportTaskRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateInstanceExportTaskRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateInstanceExportTaskRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -329,10 +341,10 @@ func (e *CreateInstanceExportTaskRequestTagSpecificationsResourceTypeEnum) Unmar
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateInstanceExportTaskRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateInstanceExportTaskRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInstanceExportTaskRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInstanceExportTaskRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 
@@ -357,21 +369,25 @@ const (
 	CreateInstanceExportTaskRequestTargetEnvironmentEnumMicrosoft CreateInstanceExportTaskRequestTargetEnvironmentEnum = "microsoft"
 )
 
+func (e CreateInstanceExportTaskRequestTargetEnvironmentEnum) ToPointer() *CreateInstanceExportTaskRequestTargetEnvironmentEnum {
+	return &e
+}
+
 func (e *CreateInstanceExportTaskRequestTargetEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "citrix":
 		fallthrough
 	case "vmware":
 		fallthrough
 	case "microsoft":
-		*e = CreateInstanceExportTaskRequestTargetEnvironmentEnum(s)
+		*e = CreateInstanceExportTaskRequestTargetEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInstanceExportTaskRequestTargetEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInstanceExportTaskRequestTargetEnvironmentEnum: %v", v)
 	}
 }
 

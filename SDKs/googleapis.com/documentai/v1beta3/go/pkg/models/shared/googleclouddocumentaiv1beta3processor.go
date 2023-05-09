@@ -21,12 +21,16 @@ const (
 	GoogleCloudDocumentaiV1beta3ProcessorStateEnumDeleting         GoogleCloudDocumentaiV1beta3ProcessorStateEnum = "DELETING"
 )
 
+func (e GoogleCloudDocumentaiV1beta3ProcessorStateEnum) ToPointer() *GoogleCloudDocumentaiV1beta3ProcessorStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1beta3ProcessorStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ENABLED":
@@ -42,10 +46,10 @@ func (e *GoogleCloudDocumentaiV1beta3ProcessorStateEnum) UnmarshalJSON(data []by
 	case "FAILED":
 		fallthrough
 	case "DELETING":
-		*e = GoogleCloudDocumentaiV1beta3ProcessorStateEnum(s)
+		*e = GoogleCloudDocumentaiV1beta3ProcessorStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1beta3ProcessorStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1beta3ProcessorStateEnum: %v", v)
 	}
 }
 
@@ -65,7 +69,7 @@ type GoogleCloudDocumentaiV1beta3Processor struct {
 	ProcessEndpoint *string `json:"processEndpoint,omitempty"`
 	// Output only. The state of the processor.
 	State *GoogleCloudDocumentaiV1beta3ProcessorStateEnum `json:"state,omitempty"`
-	// The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc. To get a list of processors types, see FetchProcessorTypes.
+	// The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`. To get a list of processor types, see FetchProcessorTypes.
 	Type *string `json:"type,omitempty"`
 }
 
@@ -79,6 +83,6 @@ type GoogleCloudDocumentaiV1beta3ProcessorInput struct {
 	DisplayName *string `json:"displayName,omitempty"`
 	// The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
 	KmsKeyName *string `json:"kmsKeyName,omitempty"`
-	// The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc. To get a list of processors types, see FetchProcessorTypes.
+	// The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`. To get a list of processor types, see FetchProcessorTypes.
 	Type *string `json:"type,omitempty"`
 }

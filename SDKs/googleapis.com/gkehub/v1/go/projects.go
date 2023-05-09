@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GkehubProjectsLocationsFeaturesCreate - Adds a new Feature.
 func (s *projects) GkehubProjectsLocationsFeaturesCreate(ctx context.Context, request operations.GkehubProjectsLocationsFeaturesCreateRequest, security operations.GkehubProjectsLocationsFeaturesCreateSecurity) (*operations.GkehubProjectsLocationsFeaturesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/features", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/features", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FeatureInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) GkehubProjectsLocationsFeaturesCreate(ctx context.Context, re
 // GkehubProjectsLocationsFeaturesList - Lists Features in a given project and location.
 func (s *projects) GkehubProjectsLocationsFeaturesList(ctx context.Context, request operations.GkehubProjectsLocationsFeaturesListRequest, security operations.GkehubProjectsLocationsFeaturesListSecurity) (*operations.GkehubProjectsLocationsFeaturesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/features", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/features", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) GkehubProjectsLocationsFeaturesList(ctx context.Context, requ
 // GkehubProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) GkehubProjectsLocationsList(ctx context.Context, request operations.GkehubProjectsLocationsListRequest, security operations.GkehubProjectsLocationsListSecurity) (*operations.GkehubProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) GkehubProjectsLocationsList(ctx context.Context, request oper
 // GkehubProjectsLocationsMembershipsBindingsCreate - Creates a MembershipBinding.
 func (s *projects) GkehubProjectsLocationsMembershipsBindingsCreate(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsBindingsCreateRequest, security operations.GkehubProjectsLocationsMembershipsBindingsCreateSecurity) (*operations.GkehubProjectsLocationsMembershipsBindingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bindings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bindings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MembershipBindingInput", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) GkehubProjectsLocationsMembershipsBindingsCreate(ctx context.
 // GkehubProjectsLocationsMembershipsBindingsList - Lists MembershipBindings.
 func (s *projects) GkehubProjectsLocationsMembershipsBindingsList(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsBindingsListRequest, security operations.GkehubProjectsLocationsMembershipsBindingsListSecurity) (*operations.GkehubProjectsLocationsMembershipsBindingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bindings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/bindings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) GkehubProjectsLocationsMembershipsBindingsList(ctx context.Co
 // GkehubProjectsLocationsMembershipsBindingsPatch - Updates a MembershipBinding.
 func (s *projects) GkehubProjectsLocationsMembershipsBindingsPatch(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsBindingsPatchRequest, security operations.GkehubProjectsLocationsMembershipsBindingsPatchSecurity) (*operations.GkehubProjectsLocationsMembershipsBindingsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MembershipBindingInput", "json")
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) GkehubProjectsLocationsMembershipsBindingsPatch(ctx context.C
 // GkehubProjectsLocationsMembershipsCreate - Creates a new Membership. **This is currently only supported for GKE clusters on Google Cloud**. To register other clusters, follow the instructions at https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
 func (s *projects) GkehubProjectsLocationsMembershipsCreate(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsCreateRequest, security operations.GkehubProjectsLocationsMembershipsCreateSecurity) (*operations.GkehubProjectsLocationsMembershipsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MembershipInput", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) GkehubProjectsLocationsMembershipsCreate(ctx context.Context,
 // GkehubProjectsLocationsMembershipsGenerateConnectManifest - Generates the manifest for deployment of the GKE connect agent. **This method is used internally by Google-provided libraries.** Most clients should not need to call this method directly.
 func (s *projects) GkehubProjectsLocationsMembershipsGenerateConnectManifest(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest, security operations.GkehubProjectsLocationsMembershipsGenerateConnectManifestSecurity) (*operations.GkehubProjectsLocationsMembershipsGenerateConnectManifestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:generateConnectManifest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:generateConnectManifest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) GkehubProjectsLocationsMembershipsGenerateConnectManifest(ctx
 // GkehubProjectsLocationsMembershipsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) GkehubProjectsLocationsMembershipsGetIamPolicy(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsGetIamPolicyRequest, security operations.GkehubProjectsLocationsMembershipsGetIamPolicySecurity) (*operations.GkehubProjectsLocationsMembershipsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -494,7 +521,10 @@ func (s *projects) GkehubProjectsLocationsMembershipsGetIamPolicy(ctx context.Co
 // GkehubProjectsLocationsMembershipsList - Lists Memberships in a given project and location.
 func (s *projects) GkehubProjectsLocationsMembershipsList(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsListRequest, security operations.GkehubProjectsLocationsMembershipsListSecurity) (*operations.GkehubProjectsLocationsMembershipsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +572,10 @@ func (s *projects) GkehubProjectsLocationsMembershipsList(ctx context.Context, r
 // GkehubProjectsLocationsMembershipsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) GkehubProjectsLocationsMembershipsSetIamPolicy(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsSetIamPolicyRequest, security operations.GkehubProjectsLocationsMembershipsSetIamPolicySecurity) (*operations.GkehubProjectsLocationsMembershipsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -597,7 +630,10 @@ func (s *projects) GkehubProjectsLocationsMembershipsSetIamPolicy(ctx context.Co
 // GkehubProjectsLocationsMembershipsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) GkehubProjectsLocationsMembershipsTestIamPermissions(ctx context.Context, request operations.GkehubProjectsLocationsMembershipsTestIamPermissionsRequest, security operations.GkehubProjectsLocationsMembershipsTestIamPermissionsSecurity) (*operations.GkehubProjectsLocationsMembershipsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -652,7 +688,10 @@ func (s *projects) GkehubProjectsLocationsMembershipsTestIamPermissions(ctx cont
 // GkehubProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) GkehubProjectsLocationsOperationsCancel(ctx context.Context, request operations.GkehubProjectsLocationsOperationsCancelRequest, security operations.GkehubProjectsLocationsOperationsCancelSecurity) (*operations.GkehubProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *projects) GkehubProjectsLocationsOperationsCancel(ctx context.Context, 
 // GkehubProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) GkehubProjectsLocationsOperationsList(ctx context.Context, request operations.GkehubProjectsLocationsOperationsListRequest, security operations.GkehubProjectsLocationsOperationsListSecurity) (*operations.GkehubProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -755,7 +797,10 @@ func (s *projects) GkehubProjectsLocationsOperationsList(ctx context.Context, re
 // GkehubProjectsLocationsScopesCreate - Creates a Scope.
 func (s *projects) GkehubProjectsLocationsScopesCreate(ctx context.Context, request operations.GkehubProjectsLocationsScopesCreateRequest, security operations.GkehubProjectsLocationsScopesCreateSecurity) (*operations.GkehubProjectsLocationsScopesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/scopes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/scopes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScopeInput", "json")
 	if err != nil {
@@ -810,7 +855,10 @@ func (s *projects) GkehubProjectsLocationsScopesCreate(ctx context.Context, requ
 // GkehubProjectsLocationsScopesDelete - Deletes a Scope.
 func (s *projects) GkehubProjectsLocationsScopesDelete(ctx context.Context, request operations.GkehubProjectsLocationsScopesDeleteRequest, security operations.GkehubProjectsLocationsScopesDeleteSecurity) (*operations.GkehubProjectsLocationsScopesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -858,7 +906,10 @@ func (s *projects) GkehubProjectsLocationsScopesDelete(ctx context.Context, requ
 // GkehubProjectsLocationsScopesGet - Returns the details of a Scope.
 func (s *projects) GkehubProjectsLocationsScopesGet(ctx context.Context, request operations.GkehubProjectsLocationsScopesGetRequest, security operations.GkehubProjectsLocationsScopesGetSecurity) (*operations.GkehubProjectsLocationsScopesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -906,7 +957,10 @@ func (s *projects) GkehubProjectsLocationsScopesGet(ctx context.Context, request
 // GkehubProjectsLocationsScopesList - Lists Scopes.
 func (s *projects) GkehubProjectsLocationsScopesList(ctx context.Context, request operations.GkehubProjectsLocationsScopesListRequest, security operations.GkehubProjectsLocationsScopesListSecurity) (*operations.GkehubProjectsLocationsScopesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/scopes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/scopes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

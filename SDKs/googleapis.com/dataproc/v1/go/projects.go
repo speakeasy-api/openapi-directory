@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DataprocProjectsLocationsBatchesCreate - Creates a batch workload that executes asynchronously.
 func (s *projects) DataprocProjectsLocationsBatchesCreate(ctx context.Context, request operations.DataprocProjectsLocationsBatchesCreateRequest, security operations.DataprocProjectsLocationsBatchesCreateSecurity) (*operations.DataprocProjectsLocationsBatchesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/batches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/batches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) DataprocProjectsLocationsBatchesCreate(ctx context.Context, r
 // DataprocProjectsLocationsBatchesList - Lists batch workloads.
 func (s *projects) DataprocProjectsLocationsBatchesList(ctx context.Context, request operations.DataprocProjectsLocationsBatchesListRequest, security operations.DataprocProjectsLocationsBatchesListSecurity) (*operations.DataprocProjectsLocationsBatchesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/batches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/batches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) DataprocProjectsLocationsBatchesList(ctx context.Context, req
 // DataprocProjectsRegionsAutoscalingPoliciesCreate - Creates new autoscaling policy.
 func (s *projects) DataprocProjectsRegionsAutoscalingPoliciesCreate(ctx context.Context, request operations.DataprocProjectsRegionsAutoscalingPoliciesCreateRequest, security operations.DataprocProjectsRegionsAutoscalingPoliciesCreateSecurity) (*operations.DataprocProjectsRegionsAutoscalingPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/autoscalingPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/autoscalingPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AutoscalingPolicyInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) DataprocProjectsRegionsAutoscalingPoliciesCreate(ctx context.
 // DataprocProjectsRegionsAutoscalingPoliciesList - Lists autoscaling policies in the project.
 func (s *projects) DataprocProjectsRegionsAutoscalingPoliciesList(ctx context.Context, request operations.DataprocProjectsRegionsAutoscalingPoliciesListRequest, security operations.DataprocProjectsRegionsAutoscalingPoliciesListSecurity) (*operations.DataprocProjectsRegionsAutoscalingPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/autoscalingPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/autoscalingPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) DataprocProjectsRegionsAutoscalingPoliciesList(ctx context.Co
 // DataprocProjectsRegionsClustersCreate - Creates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
 func (s *projects) DataprocProjectsRegionsClustersCreate(ctx context.Context, request operations.DataprocProjectsRegionsClustersCreateRequest, security operations.DataprocProjectsRegionsClustersCreateSecurity) (*operations.DataprocProjectsRegionsClustersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClusterInput", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) DataprocProjectsRegionsClustersCreate(ctx context.Context, re
 // DataprocProjectsRegionsClustersDelete - Deletes a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
 func (s *projects) DataprocProjectsRegionsClustersDelete(ctx context.Context, request operations.DataprocProjectsRegionsClustersDeleteRequest, security operations.DataprocProjectsRegionsClustersDeleteSecurity) (*operations.DataprocProjectsRegionsClustersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) DataprocProjectsRegionsClustersDelete(ctx context.Context, re
 // DataprocProjectsRegionsClustersDiagnose - Gets cluster diagnostic information. The returned Operation.metadata will be ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata). After the operation completes, Operation.response contains DiagnoseClusterResults (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
 func (s *projects) DataprocProjectsRegionsClustersDiagnose(ctx context.Context, request operations.DataprocProjectsRegionsClustersDiagnoseRequest, security operations.DataprocProjectsRegionsClustersDiagnoseSecurity) (*operations.DataprocProjectsRegionsClustersDiagnoseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:diagnose", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:diagnose", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DiagnoseClusterRequest", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) DataprocProjectsRegionsClustersDiagnose(ctx context.Context, 
 // DataprocProjectsRegionsClustersGet - Gets the resource representation for a cluster in a project.
 func (s *projects) DataprocProjectsRegionsClustersGet(ctx context.Context, request operations.DataprocProjectsRegionsClustersGetRequest, security operations.DataprocProjectsRegionsClustersGetSecurity) (*operations.DataprocProjectsRegionsClustersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) DataprocProjectsRegionsClustersGet(ctx context.Context, reque
 // DataprocProjectsRegionsClustersInjectCredentials - Inject encrypted credentials into all of the VMs in a cluster.The target cluster must be a personal auth cluster assigned to the user who is issuing the RPC.
 func (s *projects) DataprocProjectsRegionsClustersInjectCredentials(ctx context.Context, request operations.DataprocProjectsRegionsClustersInjectCredentialsRequest, security operations.DataprocProjectsRegionsClustersInjectCredentialsSecurity) (*operations.DataprocProjectsRegionsClustersInjectCredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{project}/{region}/{cluster}:injectCredentials", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{project}/{region}/{cluster}:injectCredentials", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InjectCredentialsRequest", "json")
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *projects) DataprocProjectsRegionsClustersInjectCredentials(ctx context.
 // DataprocProjectsRegionsClustersList - Lists all regions/{region}/clusters in a project alphabetically.
 func (s *projects) DataprocProjectsRegionsClustersList(ctx context.Context, request operations.DataprocProjectsRegionsClustersListRequest, security operations.DataprocProjectsRegionsClustersListSecurity) (*operations.DataprocProjectsRegionsClustersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -549,7 +579,10 @@ func (s *projects) DataprocProjectsRegionsClustersList(ctx context.Context, requ
 // DataprocProjectsRegionsClustersNodeGroupsCreate - Creates a node group in a cluster. The returned Operation.metadata is NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#nodegroupoperationmetadata).
 func (s *projects) DataprocProjectsRegionsClustersNodeGroupsCreate(ctx context.Context, request operations.DataprocProjectsRegionsClustersNodeGroupsCreateRequest, security operations.DataprocProjectsRegionsClustersNodeGroupsCreateSecurity) (*operations.DataprocProjectsRegionsClustersNodeGroupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/nodeGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/nodeGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NodeGroupInput", "json")
 	if err != nil {
@@ -604,7 +637,10 @@ func (s *projects) DataprocProjectsRegionsClustersNodeGroupsCreate(ctx context.C
 // DataprocProjectsRegionsClustersNodeGroupsResize - Resizes a node group in a cluster. The returned Operation.metadata is NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#nodegroupoperationmetadata).
 func (s *projects) DataprocProjectsRegionsClustersNodeGroupsResize(ctx context.Context, request operations.DataprocProjectsRegionsClustersNodeGroupsResizeRequest, security operations.DataprocProjectsRegionsClustersNodeGroupsResizeSecurity) (*operations.DataprocProjectsRegionsClustersNodeGroupsResizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resize", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resize", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResizeNodeGroupRequest", "json")
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *projects) DataprocProjectsRegionsClustersNodeGroupsResize(ctx context.C
 // DataprocProjectsRegionsClustersPatch - Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata). The cluster must be in a RUNNING state or an error is returned.
 func (s *projects) DataprocProjectsRegionsClustersPatch(ctx context.Context, request operations.DataprocProjectsRegionsClustersPatchRequest, security operations.DataprocProjectsRegionsClustersPatchSecurity) (*operations.DataprocProjectsRegionsClustersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClusterInput", "json")
 	if err != nil {
@@ -714,7 +753,10 @@ func (s *projects) DataprocProjectsRegionsClustersPatch(ctx context.Context, req
 // DataprocProjectsRegionsClustersRepair - Repairs a cluster.
 func (s *projects) DataprocProjectsRegionsClustersRepair(ctx context.Context, request operations.DataprocProjectsRegionsClustersRepairRequest, security operations.DataprocProjectsRegionsClustersRepairSecurity) (*operations.DataprocProjectsRegionsClustersRepairResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:repair", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:repair", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RepairClusterRequest", "json")
 	if err != nil {
@@ -769,7 +811,10 @@ func (s *projects) DataprocProjectsRegionsClustersRepair(ctx context.Context, re
 // DataprocProjectsRegionsClustersStart - Starts a cluster in a project.
 func (s *projects) DataprocProjectsRegionsClustersStart(ctx context.Context, request operations.DataprocProjectsRegionsClustersStartRequest, security operations.DataprocProjectsRegionsClustersStartSecurity) (*operations.DataprocProjectsRegionsClustersStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartClusterRequest", "json")
 	if err != nil {
@@ -824,7 +869,10 @@ func (s *projects) DataprocProjectsRegionsClustersStart(ctx context.Context, req
 // DataprocProjectsRegionsClustersStop - Stops a cluster in a project.
 func (s *projects) DataprocProjectsRegionsClustersStop(ctx context.Context, request operations.DataprocProjectsRegionsClustersStopRequest, security operations.DataprocProjectsRegionsClustersStopSecurity) (*operations.DataprocProjectsRegionsClustersStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StopClusterRequest", "json")
 	if err != nil {
@@ -879,7 +927,10 @@ func (s *projects) DataprocProjectsRegionsClustersStop(ctx context.Context, requ
 // DataprocProjectsRegionsJobsCancel - Starts a job cancellation request. To access the job resource after cancellation, call regions/{region}/jobs.list (https://cloud.google.com/dataproc/docs/reference/rest/v1/projects.regions.jobs/list) or regions/{region}/jobs.get (https://cloud.google.com/dataproc/docs/reference/rest/v1/projects.regions.jobs/get).
 func (s *projects) DataprocProjectsRegionsJobsCancel(ctx context.Context, request operations.DataprocProjectsRegionsJobsCancelRequest, security operations.DataprocProjectsRegionsJobsCancelSecurity) (*operations.DataprocProjectsRegionsJobsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -934,7 +985,10 @@ func (s *projects) DataprocProjectsRegionsJobsCancel(ctx context.Context, reques
 // DataprocProjectsRegionsJobsDelete - Deletes the job from the project. If the job is active, the delete fails, and the response returns FAILED_PRECONDITION.
 func (s *projects) DataprocProjectsRegionsJobsDelete(ctx context.Context, request operations.DataprocProjectsRegionsJobsDeleteRequest, security operations.DataprocProjectsRegionsJobsDeleteSecurity) (*operations.DataprocProjectsRegionsJobsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -982,7 +1036,10 @@ func (s *projects) DataprocProjectsRegionsJobsDelete(ctx context.Context, reques
 // DataprocProjectsRegionsJobsGet - Gets the resource representation for a job in a project.
 func (s *projects) DataprocProjectsRegionsJobsGet(ctx context.Context, request operations.DataprocProjectsRegionsJobsGetRequest, security operations.DataprocProjectsRegionsJobsGetSecurity) (*operations.DataprocProjectsRegionsJobsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1030,7 +1087,10 @@ func (s *projects) DataprocProjectsRegionsJobsGet(ctx context.Context, request o
 // DataprocProjectsRegionsJobsList - Lists regions/{region}/jobs in a project.
 func (s *projects) DataprocProjectsRegionsJobsList(ctx context.Context, request operations.DataprocProjectsRegionsJobsListRequest, security operations.DataprocProjectsRegionsJobsListSecurity) (*operations.DataprocProjectsRegionsJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1078,7 +1138,10 @@ func (s *projects) DataprocProjectsRegionsJobsList(ctx context.Context, request 
 // DataprocProjectsRegionsJobsPatch - Updates a job in a project.
 func (s *projects) DataprocProjectsRegionsJobsPatch(ctx context.Context, request operations.DataprocProjectsRegionsJobsPatchRequest, security operations.DataprocProjectsRegionsJobsPatchSecurity) (*operations.DataprocProjectsRegionsJobsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobInput", "json")
 	if err != nil {
@@ -1133,7 +1196,10 @@ func (s *projects) DataprocProjectsRegionsJobsPatch(ctx context.Context, request
 // DataprocProjectsRegionsJobsSubmit - Submits a job to a cluster.
 func (s *projects) DataprocProjectsRegionsJobsSubmit(ctx context.Context, request operations.DataprocProjectsRegionsJobsSubmitRequest, security operations.DataprocProjectsRegionsJobsSubmitSecurity) (*operations.DataprocProjectsRegionsJobsSubmitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs:submit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs:submit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubmitJobRequestInput", "json")
 	if err != nil {
@@ -1188,7 +1254,10 @@ func (s *projects) DataprocProjectsRegionsJobsSubmit(ctx context.Context, reques
 // DataprocProjectsRegionsJobsSubmitAsOperation - Submits job to a cluster.
 func (s *projects) DataprocProjectsRegionsJobsSubmitAsOperation(ctx context.Context, request operations.DataprocProjectsRegionsJobsSubmitAsOperationRequest, security operations.DataprocProjectsRegionsJobsSubmitAsOperationSecurity) (*operations.DataprocProjectsRegionsJobsSubmitAsOperationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs:submitAsOperation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/regions/{region}/jobs:submitAsOperation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubmitJobRequestInput", "json")
 	if err != nil {
@@ -1243,7 +1312,10 @@ func (s *projects) DataprocProjectsRegionsJobsSubmitAsOperation(ctx context.Cont
 // DataprocProjectsRegionsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
 func (s *projects) DataprocProjectsRegionsOperationsCancel(ctx context.Context, request operations.DataprocProjectsRegionsOperationsCancelRequest, security operations.DataprocProjectsRegionsOperationsCancelSecurity) (*operations.DataprocProjectsRegionsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1291,7 +1363,10 @@ func (s *projects) DataprocProjectsRegionsOperationsCancel(ctx context.Context, 
 // DataprocProjectsRegionsWorkflowTemplatesCreate - Creates new workflow template.
 func (s *projects) DataprocProjectsRegionsWorkflowTemplatesCreate(ctx context.Context, request operations.DataprocProjectsRegionsWorkflowTemplatesCreateRequest, security operations.DataprocProjectsRegionsWorkflowTemplatesCreateSecurity) (*operations.DataprocProjectsRegionsWorkflowTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/workflowTemplates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/workflowTemplates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WorkflowTemplateInput", "json")
 	if err != nil {
@@ -1346,7 +1421,10 @@ func (s *projects) DataprocProjectsRegionsWorkflowTemplatesCreate(ctx context.Co
 // DataprocProjectsRegionsWorkflowTemplatesDelete - Deletes a workflow template. It does not cancel in-progress workflows.
 func (s *projects) DataprocProjectsRegionsWorkflowTemplatesDelete(ctx context.Context, request operations.DataprocProjectsRegionsWorkflowTemplatesDeleteRequest, security operations.DataprocProjectsRegionsWorkflowTemplatesDeleteSecurity) (*operations.DataprocProjectsRegionsWorkflowTemplatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1394,7 +1472,10 @@ func (s *projects) DataprocProjectsRegionsWorkflowTemplatesDelete(ctx context.Co
 // DataprocProjectsRegionsWorkflowTemplatesGet - Retrieves the latest workflow template.Can retrieve previously instantiated template by specifying optional version parameter.
 func (s *projects) DataprocProjectsRegionsWorkflowTemplatesGet(ctx context.Context, request operations.DataprocProjectsRegionsWorkflowTemplatesGetRequest, security operations.DataprocProjectsRegionsWorkflowTemplatesGetSecurity) (*operations.DataprocProjectsRegionsWorkflowTemplatesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1442,7 +1523,10 @@ func (s *projects) DataprocProjectsRegionsWorkflowTemplatesGet(ctx context.Conte
 // DataprocProjectsRegionsWorkflowTemplatesGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) DataprocProjectsRegionsWorkflowTemplatesGetIamPolicy(ctx context.Context, request operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyRequest, security operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicySecurity) (*operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
@@ -1497,7 +1581,10 @@ func (s *projects) DataprocProjectsRegionsWorkflowTemplatesGetIamPolicy(ctx cont
 // DataprocProjectsRegionsWorkflowTemplatesInstantiate - Instantiates a template and begins execution.The returned Operation can be used to track execution of workflow by polling operations.get. The Operation will complete when entire workflow is finished.The running workflow can be aborted via operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned clusters to be deleted.The Operation.metadata will be WorkflowMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata). Also see Using WorkflowMetadata (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On successful completion, Operation.response will be Empty.
 func (s *projects) DataprocProjectsRegionsWorkflowTemplatesInstantiate(ctx context.Context, request operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateRequest, security operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateSecurity) (*operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:instantiate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:instantiate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstantiateWorkflowTemplateRequest", "json")
 	if err != nil {
@@ -1552,7 +1639,10 @@ func (s *projects) DataprocProjectsRegionsWorkflowTemplatesInstantiate(ctx conte
 // DataprocProjectsRegionsWorkflowTemplatesInstantiateInline - Instantiates a template and begins execution.This method is equivalent to executing the sequence CreateWorkflowTemplate, InstantiateWorkflowTemplate, DeleteWorkflowTemplate.The returned Operation can be used to track execution of workflow by polling operations.get. The Operation will complete when entire workflow is finished.The running workflow can be aborted via operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned clusters to be deleted.The Operation.metadata will be WorkflowMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata). Also see Using WorkflowMetadata (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On successful completion, Operation.response will be Empty.
 func (s *projects) DataprocProjectsRegionsWorkflowTemplatesInstantiateInline(ctx context.Context, request operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest, security operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineSecurity) (*operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/workflowTemplates:instantiateInline", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/workflowTemplates:instantiateInline", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WorkflowTemplateInput", "json")
 	if err != nil {
@@ -1607,7 +1697,10 @@ func (s *projects) DataprocProjectsRegionsWorkflowTemplatesInstantiateInline(ctx
 // DataprocProjectsRegionsWorkflowTemplatesList - Lists workflows that match the specified filter in the request.
 func (s *projects) DataprocProjectsRegionsWorkflowTemplatesList(ctx context.Context, request operations.DataprocProjectsRegionsWorkflowTemplatesListRequest, security operations.DataprocProjectsRegionsWorkflowTemplatesListSecurity) (*operations.DataprocProjectsRegionsWorkflowTemplatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/workflowTemplates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/workflowTemplates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1655,7 +1748,10 @@ func (s *projects) DataprocProjectsRegionsWorkflowTemplatesList(ctx context.Cont
 // DataprocProjectsRegionsWorkflowTemplatesSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
 func (s *projects) DataprocProjectsRegionsWorkflowTemplatesSetIamPolicy(ctx context.Context, request operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyRequest, security operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicySecurity) (*operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -1710,7 +1806,10 @@ func (s *projects) DataprocProjectsRegionsWorkflowTemplatesSetIamPolicy(ctx cont
 // DataprocProjectsRegionsWorkflowTemplatesTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) DataprocProjectsRegionsWorkflowTemplatesTestIamPermissions(ctx context.Context, request operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsRequest, security operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsSecurity) (*operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -1765,7 +1864,10 @@ func (s *projects) DataprocProjectsRegionsWorkflowTemplatesTestIamPermissions(ct
 // DataprocProjectsRegionsWorkflowTemplatesUpdate - Updates (replaces) workflow template. The updated template must contain version that matches the current server version.
 func (s *projects) DataprocProjectsRegionsWorkflowTemplatesUpdate(ctx context.Context, request operations.DataprocProjectsRegionsWorkflowTemplatesUpdateRequest, security operations.DataprocProjectsRegionsWorkflowTemplatesUpdateSecurity) (*operations.DataprocProjectsRegionsWorkflowTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WorkflowTemplateInput", "json")
 	if err != nil {

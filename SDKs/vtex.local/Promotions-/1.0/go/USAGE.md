@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -18,161 +18,155 @@ func main() {
         }),
     )
 
-    req := operations.CalculatediscountsandtaxesBundlesRequest{
+    ctx := context.Background()
+    res, err := s.Bundles.CalculatediscountsandtaxesBundles(ctx, operations.CalculatediscountsandtaxesBundlesRequest{
         Accept: "corrupti",
         CalculatediscountsandtaxesBundlesRequest: shared.CalculatediscountsandtaxesBundlesRequest{
             IsShoppingCart: false,
             Items: []shared.Item{
                 shared.Item{
-                    ID: "distinctio",
-                    Index: 844266,
+                    ID: "bd9d8d69-a674-4e0f-867c-c8796ed151a0",
+                    Index: 368241,
                     IsGift: false,
                     LogisticsInfos: []string{
-                        "nulla",
-                        "corrupti",
-                        "illum",
-                    },
-                    MeasurementUnit: "vel",
-                    Params: []shared.Param{
-                        shared.Param{
-                            Name: "deserunt",
-                            Value: "suscipit",
-                        },
-                        shared.Param{
-                            Name: "iure",
-                            Value: "magnam",
-                        },
-                        shared.Param{
-                            Name: "debitis",
-                            Value: "ipsa",
-                        },
-                    },
-                    PriceSheet: []string{
-                        "tempora",
-                        "suscipit",
-                        "molestiae",
-                        "minus",
-                    },
-                    PriceTags: []string{
-                        "voluptatum",
-                        "iusto",
-                        "excepturi",
-                        "nisi",
-                    },
-                    ProductSpecifications: []string{
-                        "temporibus",
-                        "ab",
-                        "quis",
-                        "veritatis",
-                    },
-                    Quantity: 648172,
-                    SellerID: "perferendis",
-                    UnitMultiplier: 368241,
-                },
-                shared.Item{
-                    ID: "repellendus",
-                    Index: 957156,
-                    IsGift: false,
-                    LogisticsInfos: []string{
+                        "sapiente",
+                        "quo",
                         "odit",
                         "at",
-                        "at",
-                        "maiores",
                     },
-                    MeasurementUnit: "molestiae",
+                    MeasurementUnit: "at",
                     Params: []shared.Param{
                         shared.Param{
-                            Name: "quod",
-                            Value: "esse",
-                        },
-                        shared.Param{
-                            Name: "totam",
+                            Name: "Bernadette Schmidt",
                             Value: "porro",
                         },
                         shared.Param{
-                            Name: "dolorum",
-                            Value: "dicta",
+                            Name: "Samuel Reichel",
+                            Value: "fugit",
                         },
                         shared.Param{
-                            Name: "nam",
-                            Value: "officia",
+                            Name: "Irvin Rosenbaum III",
+                            Value: "molestiae",
+                        },
+                        shared.Param{
+                            Name: "Norma Ryan",
+                            Value: "ipsum",
                         },
                     },
                     PriceSheet: []string{
-                        "fugit",
-                        "deleniti",
-                        "hic",
-                    },
-                    PriceTags: []string{
-                        "totam",
-                        "beatae",
-                        "commodi",
-                        "molestiae",
-                    },
-                    ProductSpecifications: []string{
-                        "qui",
-                        "impedit",
-                    },
-                    Quantity: 736918,
-                    SellerID: "esse",
-                    UnitMultiplier: 216550,
-                },
-                shared.Item{
-                    ID: "excepturi",
-                    Index: 135218,
-                    IsGift: false,
-                    LogisticsInfos: []string{
+                        "aspernatur",
+                        "perferendis",
                         "ad",
                     },
-                    MeasurementUnit: "natus",
-                    Params: []shared.Param{
-                        shared.Param{
-                            Name: "iste",
-                            Value: "dolor",
-                        },
+                    PriceTags: []string{
+                        "sed",
+                        "iste",
+                        "dolor",
                     },
-                    PriceSheet: []string{
+                    ProductSpecifications: []string{
                         "laboriosam",
                         "hic",
                         "saepe",
                     },
+                    Quantity: 681820,
+                    SellerID: "in",
+                    UnitMultiplier: 359508,
+                },
+                shared.Item{
+                    ID: "96eb10fa-aa23-452c-9955-907aff1a3a2f",
+                    Index: 653108,
+                    IsGift: false,
+                    LogisticsInfos: []string{
+                        "numquam",
+                        "commodi",
+                        "quam",
+                    },
+                    MeasurementUnit: "molestiae",
+                    Params: []shared.Param{
+                        shared.Param{
+                            Name: "Miss Eugene Hauck",
+                            Value: "enim",
+                        },
+                    },
+                    PriceSheet: []string{
+                        "quo",
+                    },
                     PriceTags: []string{
-                        "in",
-                        "corporis",
-                        "iste",
+                        "tenetur",
                     },
                     ProductSpecifications: []string{
-                        "saepe",
-                        "quidem",
+                        "id",
+                        "possimus",
                     },
-                    Quantity: 99280,
-                    SellerID: "ipsa",
-                    UnitMultiplier: 969810,
+                    Quantity: 13571,
+                    SellerID: "quasi",
+                    UnitMultiplier: 622846,
+                },
+                shared.Item{
+                    ID: "da1ffe78-f097-4b00-b4f1-5471b5e6e13b",
+                    Index: 565189,
+                    IsGift: false,
+                    LogisticsInfos: []string{
+                        "pariatur",
+                        "modi",
+                        "praesentium",
+                    },
+                    MeasurementUnit: "rem",
+                    Params: []shared.Param{
+                        shared.Param{
+                            Name: "Dr. Casey Mayer",
+                            Value: "enim",
+                        },
+                        shared.Param{
+                            Name: "Monique Spinka",
+                            Value: "distinctio",
+                        },
+                        shared.Param{
+                            Name: "Francisco Gleason",
+                            Value: "cupiditate",
+                        },
+                        shared.Param{
+                            Name: "Christopher Cummerata",
+                            Value: "alias",
+                        },
+                    },
+                    PriceSheet: []string{
+                        "dolorum",
+                    },
+                    PriceTags: []string{
+                        "tempora",
+                        "facilis",
+                        "tempore",
+                    },
+                    ProductSpecifications: []string{
+                        "delectus",
+                        "eum",
+                    },
+                    Quantity: 248753,
+                    SellerID: "eligendi",
+                    UnitMultiplier: 576157,
                 },
             },
-            Origin: "est",
+            Origin: "aliquid",
             Params: []shared.Param{
                 shared.Param{
-                    Name: "laborum",
-                    Value: "dolores",
+                    Name: "Perry Nikolaus",
+                    Value: "a",
                 },
                 shared.Param{
-                    Name: "dolorem",
-                    Value: "corporis",
+                    Name: "Arnold Kirlin",
+                    Value: "rerum",
                 },
                 shared.Param{
-                    Name: "explicabo",
-                    Value: "nobis",
+                    Name: "Valerie Runolfsson",
+                    Value: "aliquid",
                 },
             },
-            ProfileID: "enim",
-            SalesChannel: "omnis",
+            ProfileID: "laborum",
+            SalesChannel: "accusamus",
         },
-        ContentType: "nemo",
-    }
-
-    ctx := context.Background()
-    res, err := s.Bundles.CalculatediscountsandtaxesBundles(ctx, req)
+        ContentType: "non",
+    })
     if err != nil {
         log.Fatal(err)
     }

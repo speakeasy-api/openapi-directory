@@ -5,15 +5,19 @@ package shared
 type CreateClusterRequest struct {
 	AddressID                    string                        `json:"AddressId"`
 	Description                  *string                       `json:"Description,omitempty"`
+	ForceCreateJobs              *bool                         `json:"ForceCreateJobs,omitempty"`
 	ForwardingAddressID          *string                       `json:"ForwardingAddressId,omitempty"`
+	InitialClusterSize           *int64                        `json:"InitialClusterSize,omitempty"`
 	JobType                      JobTypeEnum                   `json:"JobType"`
 	KmsKeyARN                    *string                       `json:"KmsKeyARN,omitempty"`
+	LongTermPricingIds           []string                      `json:"LongTermPricingIds,omitempty"`
 	Notification                 *Notification                 `json:"Notification,omitempty"`
 	OnDeviceServiceConfiguration *OnDeviceServiceConfiguration `json:"OnDeviceServiceConfiguration,omitempty"`
 	RemoteManagement             *RemoteManagementEnum         `json:"RemoteManagement,omitempty"`
-	Resources                    JobResource                   `json:"Resources"`
-	RoleARN                      string                        `json:"RoleARN"`
+	Resources                    *JobResource                  `json:"Resources,omitempty"`
+	RoleARN                      *string                       `json:"RoleARN,omitempty"`
 	ShippingOption               ShippingOptionEnum            `json:"ShippingOption"`
+	SnowballCapacityPreference   *SnowballCapacityEnum         `json:"SnowballCapacityPreference,omitempty"`
 	SnowballType                 SnowballTypeEnum              `json:"SnowballType"`
 	TaxDocuments                 *TaxDocuments                 `json:"TaxDocuments,omitempty"`
 }

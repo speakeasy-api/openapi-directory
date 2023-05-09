@@ -17,12 +17,16 @@ const (
 	CalendarEventResourceAttributesAttendeesResponseStatusEnumAccepted    CalendarEventResourceAttributesAttendeesResponseStatusEnum = "accepted"
 )
 
+func (e CalendarEventResourceAttributesAttendeesResponseStatusEnum) ToPointer() *CalendarEventResourceAttributesAttendeesResponseStatusEnum {
+	return &e
+}
+
 func (e *CalendarEventResourceAttributesAttendeesResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "needsAction":
 		fallthrough
 	case "declined":
@@ -30,10 +34,10 @@ func (e *CalendarEventResourceAttributesAttendeesResponseStatusEnum) UnmarshalJS
 	case "tentative":
 		fallthrough
 	case "accepted":
-		*e = CalendarEventResourceAttributesAttendeesResponseStatusEnum(s)
+		*e = CalendarEventResourceAttributesAttendeesResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalendarEventResourceAttributesAttendeesResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CalendarEventResourceAttributesAttendeesResponseStatusEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	CalendarEventResourceAttributesTypeEnumVideoCall     CalendarEventResourceAttributesTypeEnum = "video-call"
 )
 
+func (e CalendarEventResourceAttributesTypeEnum) ToPointer() *CalendarEventResourceAttributesTypeEnum {
+	return &e
+}
+
 func (e *CalendarEventResourceAttributesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "plan-check-in":
 		fallthrough
 	case "reminder":
@@ -69,10 +77,10 @@ func (e *CalendarEventResourceAttributesTypeEnum) UnmarshalJSON(data []byte) err
 	case "office-visit":
 		fallthrough
 	case "video-call":
-		*e = CalendarEventResourceAttributesTypeEnum(s)
+		*e = CalendarEventResourceAttributesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalendarEventResourceAttributesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CalendarEventResourceAttributesTypeEnum: %v", v)
 	}
 }
 
@@ -129,17 +137,21 @@ const (
 	CalendarEventResourceTypeEnumCalendarEvent CalendarEventResourceTypeEnum = "calendar_event"
 )
 
+func (e CalendarEventResourceTypeEnum) ToPointer() *CalendarEventResourceTypeEnum {
+	return &e
+}
+
 func (e *CalendarEventResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "calendar_event":
-		*e = CalendarEventResourceTypeEnum(s)
+		*e = CalendarEventResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalendarEventResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CalendarEventResourceTypeEnum: %v", v)
 	}
 }
 

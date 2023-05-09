@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAssetRequest{
-        Aliases: false,
-        AssetID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Asset.GetAsset(ctx, req, operations.GetAssetSecurity{
+    res, err := s.Asset.GetAsset(ctx, operations.GetAssetRequest{
+        Aliases: sdk.Bool(false),
+        AssetID: "corrupti",
+    }, operations.GetAssetSecurity{
         Apikey: "YOUR_API_KEY_HERE",
     })
     if err != nil {

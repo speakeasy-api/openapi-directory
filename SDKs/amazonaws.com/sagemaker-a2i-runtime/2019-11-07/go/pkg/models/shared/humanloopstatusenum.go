@@ -17,12 +17,16 @@ const (
 	HumanLoopStatusEnumStopping   HumanLoopStatusEnum = "Stopping"
 )
 
+func (e HumanLoopStatusEnum) ToPointer() *HumanLoopStatusEnum {
+	return &e
+}
+
 func (e *HumanLoopStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InProgress":
 		fallthrough
 	case "Failed":
@@ -32,9 +36,9 @@ func (e *HumanLoopStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Stopped":
 		fallthrough
 	case "Stopping":
-		*e = HumanLoopStatusEnum(s)
+		*e = HumanLoopStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HumanLoopStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HumanLoopStatusEnum: %v", v)
 	}
 }

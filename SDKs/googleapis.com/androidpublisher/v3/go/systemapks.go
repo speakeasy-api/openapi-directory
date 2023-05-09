@@ -34,7 +34,10 @@ func newSystemapks(defaultClient, securityClient HTTPClient, serverURL, language
 // AndroidpublisherSystemapksVariantsCreate - Creates an APK which is suitable for inclusion in a system image from an already uploaded Android App Bundle.
 func (s *systemapks) AndroidpublisherSystemapksVariantsCreate(ctx context.Context, request operations.AndroidpublisherSystemapksVariantsCreateRequest, security operations.AndroidpublisherSystemapksVariantsCreateSecurity) (*operations.AndroidpublisherSystemapksVariantsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VariantInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *systemapks) AndroidpublisherSystemapksVariantsCreate(ctx context.Contex
 // AndroidpublisherSystemapksVariantsDownload - Downloads a previously created system APK which is suitable for inclusion in a system image.
 func (s *systemapks) AndroidpublisherSystemapksVariantsDownload(ctx context.Context, request operations.AndroidpublisherSystemapksVariantsDownloadRequest, security operations.AndroidpublisherSystemapksVariantsDownloadSecurity) (*operations.AndroidpublisherSystemapksVariantsDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}:download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}:download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *systemapks) AndroidpublisherSystemapksVariantsDownload(ctx context.Cont
 // AndroidpublisherSystemapksVariantsGet - Returns a previously created system APK variant.
 func (s *systemapks) AndroidpublisherSystemapksVariantsGet(ctx context.Context, request operations.AndroidpublisherSystemapksVariantsGetRequest, security operations.AndroidpublisherSystemapksVariantsGetSecurity) (*operations.AndroidpublisherSystemapksVariantsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *systemapks) AndroidpublisherSystemapksVariantsGet(ctx context.Context, 
 // AndroidpublisherSystemapksVariantsList - Returns the list of previously created system APK variants.
 func (s *systemapks) AndroidpublisherSystemapksVariantsList(ctx context.Context, request operations.AndroidpublisherSystemapksVariantsListRequest, security operations.AndroidpublisherSystemapksVariantsListSecurity) (*operations.AndroidpublisherSystemapksVariantsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

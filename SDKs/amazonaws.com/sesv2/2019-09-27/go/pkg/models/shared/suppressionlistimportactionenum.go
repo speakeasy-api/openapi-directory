@@ -15,18 +15,22 @@ const (
 	SuppressionListImportActionEnumPut    SuppressionListImportActionEnum = "PUT"
 )
 
+func (e SuppressionListImportActionEnum) ToPointer() *SuppressionListImportActionEnum {
+	return &e
+}
+
 func (e *SuppressionListImportActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELETE":
 		fallthrough
 	case "PUT":
-		*e = SuppressionListImportActionEnum(s)
+		*e = SuppressionListImportActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SuppressionListImportActionEnum: %s", s)
+		return fmt.Errorf("invalid value for SuppressionListImportActionEnum: %v", v)
 	}
 }

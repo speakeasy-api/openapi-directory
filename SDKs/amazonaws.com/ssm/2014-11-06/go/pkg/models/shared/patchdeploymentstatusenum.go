@@ -16,12 +16,16 @@ const (
 	PatchDeploymentStatusEnumExplicitRejected PatchDeploymentStatusEnum = "EXPLICIT_REJECTED"
 )
 
+func (e PatchDeploymentStatusEnum) ToPointer() *PatchDeploymentStatusEnum {
+	return &e
+}
+
 func (e *PatchDeploymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPROVED":
 		fallthrough
 	case "PENDING_APPROVAL":
@@ -29,9 +33,9 @@ func (e *PatchDeploymentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "EXPLICIT_APPROVED":
 		fallthrough
 	case "EXPLICIT_REJECTED":
-		*e = PatchDeploymentStatusEnum(s)
+		*e = PatchDeploymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchDeploymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchDeploymentStatusEnum: %v", v)
 	}
 }

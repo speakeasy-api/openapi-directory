@@ -17,12 +17,16 @@ const (
 	ProductFeedDataProductMatchTypeEnumProductMatchTypeCustomLabel      ProductFeedDataProductMatchTypeEnum = "PRODUCT_MATCH_TYPE_CUSTOM_LABEL"
 )
 
+func (e ProductFeedDataProductMatchTypeEnum) ToPointer() *ProductFeedDataProductMatchTypeEnum {
+	return &e
+}
+
 func (e *ProductFeedDataProductMatchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCT_MATCH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PRODUCT_MATCH_TYPE_ALL_PRODUCTS":
@@ -30,10 +34,10 @@ func (e *ProductFeedDataProductMatchTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PRODUCT_MATCH_TYPE_SPECIFIC_PRODUCTS":
 		fallthrough
 	case "PRODUCT_MATCH_TYPE_CUSTOM_LABEL":
-		*e = ProductFeedDataProductMatchTypeEnum(s)
+		*e = ProductFeedDataProductMatchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductFeedDataProductMatchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductFeedDataProductMatchTypeEnum: %v", v)
 	}
 }
 

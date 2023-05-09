@@ -16,17 +16,21 @@ const (
 	RevokeIPRulesXAmzTargetEnumWorkspacesServiceRevokeIPRules RevokeIPRulesXAmzTargetEnum = "WorkspacesService.RevokeIpRules"
 )
 
+func (e RevokeIPRulesXAmzTargetEnum) ToPointer() *RevokeIPRulesXAmzTargetEnum {
+	return &e
+}
+
 func (e *RevokeIPRulesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.RevokeIpRules":
-		*e = RevokeIPRulesXAmzTargetEnum(s)
+		*e = RevokeIPRulesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RevokeIPRulesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RevokeIPRulesXAmzTargetEnum: %v", v)
 	}
 }
 

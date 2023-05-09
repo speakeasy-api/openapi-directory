@@ -38,7 +38,10 @@ func newValuesInPast(defaultClient, securityClient HTTPClient, serverURL, langua
 // Gets the Values for a device at a given Date. The first Value found before the given Date is returned.
 func (s *valuesInPast) ValuesInPastGet(ctx context.Context, request operations.ValuesInPastGetRequest) (*operations.ValuesInPastGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/ValuesInPast/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/ValuesInPast/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

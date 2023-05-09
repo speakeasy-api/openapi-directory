@@ -13,19 +13,19 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/scideas.net/regression/1.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.RegressionAPIBody{
-        ConvertDateTo: "month",
+    ctx := context.Background()
+    res, err := s.PostRegressionAPI(ctx, shared.RegressionAPIBody{
+        ConvertDateTo: sdk.String("month"),
         Data: []map[string]interface{}{
             map[string]interface{}{
                 "distinctio": "quibusdam",
@@ -54,10 +54,7 @@ func main() {
         },
         Key: "abc123",
         OutcomeVariable: "sales",
-    }
-
-    ctx := context.Background()
-    res, err := s.PostRegressionAPI(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -72,9 +69,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `PostRegressionAPI` - Returns regression analysis.
+* [PostRegressionAPI](docs/sdk/README.md#postregressionapi) - Returns regression analysis.
 <!-- End SDK Available Operations -->
 
 ### Maturity

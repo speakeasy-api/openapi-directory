@@ -15,19 +15,23 @@ const (
 	GlobalPermissionPermissionEnumCreateCourse          GlobalPermissionPermissionEnum = "CREATE_COURSE"
 )
 
+func (e GlobalPermissionPermissionEnum) ToPointer() *GlobalPermissionPermissionEnum {
+	return &e
+}
+
 func (e *GlobalPermissionPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERMISSION_UNSPECIFIED":
 		fallthrough
 	case "CREATE_COURSE":
-		*e = GlobalPermissionPermissionEnum(s)
+		*e = GlobalPermissionPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GlobalPermissionPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for GlobalPermissionPermissionEnum: %v", v)
 	}
 }
 

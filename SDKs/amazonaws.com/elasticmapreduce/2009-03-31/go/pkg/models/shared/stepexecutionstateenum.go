@@ -19,12 +19,16 @@ const (
 	StepExecutionStateEnumInterrupted StepExecutionStateEnum = "INTERRUPTED"
 )
 
+func (e StepExecutionStateEnum) ToPointer() *StepExecutionStateEnum {
+	return &e
+}
+
 func (e *StepExecutionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "RUNNING":
@@ -38,9 +42,9 @@ func (e *StepExecutionStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "INTERRUPTED":
-		*e = StepExecutionStateEnum(s)
+		*e = StepExecutionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StepExecutionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for StepExecutionStateEnum: %v", v)
 	}
 }

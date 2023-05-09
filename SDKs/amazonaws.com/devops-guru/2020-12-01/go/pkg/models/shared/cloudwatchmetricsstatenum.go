@@ -20,12 +20,16 @@ const (
 	CloudWatchMetricsStatEnumP50         CloudWatchMetricsStatEnum = "p50"
 )
 
+func (e CloudWatchMetricsStatEnum) ToPointer() *CloudWatchMetricsStatEnum {
+	return &e
+}
+
 func (e *CloudWatchMetricsStatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Sum":
 		fallthrough
 	case "Average":
@@ -41,9 +45,9 @@ func (e *CloudWatchMetricsStatEnum) UnmarshalJSON(data []byte) error {
 	case "p90":
 		fallthrough
 	case "p50":
-		*e = CloudWatchMetricsStatEnum(s)
+		*e = CloudWatchMetricsStatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudWatchMetricsStatEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudWatchMetricsStatEnum: %v", v)
 	}
 }

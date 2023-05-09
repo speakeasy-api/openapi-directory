@@ -35,7 +35,10 @@ func newForms(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // FormsFormsBatchUpdate - Change the form with a batch of updates.
 func (s *forms) FormsFormsBatchUpdate(ctx context.Context, request operations.FormsFormsBatchUpdateRequest, security operations.FormsFormsBatchUpdateSecurity) (*operations.FormsFormsBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}:batchUpdate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}:batchUpdate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdateFormRequestInput", "json")
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *forms) FormsFormsCreate(ctx context.Context, request operations.FormsFo
 // FormsFormsGet - Get a form.
 func (s *forms) FormsFormsGet(ctx context.Context, request operations.FormsFormsGetRequest, security operations.FormsFormsGetSecurity) (*operations.FormsFormsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +199,10 @@ func (s *forms) FormsFormsGet(ctx context.Context, request operations.FormsForms
 // FormsFormsResponsesGet - Get one response from the form.
 func (s *forms) FormsFormsResponsesGet(ctx context.Context, request operations.FormsFormsResponsesGetRequest, security operations.FormsFormsResponsesGetSecurity) (*operations.FormsFormsResponsesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/responses/{responseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/responses/{responseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -241,7 +250,10 @@ func (s *forms) FormsFormsResponsesGet(ctx context.Context, request operations.F
 // FormsFormsResponsesList - List a form's responses.
 func (s *forms) FormsFormsResponsesList(ctx context.Context, request operations.FormsFormsResponsesListRequest, security operations.FormsFormsResponsesListSecurity) (*operations.FormsFormsResponsesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/responses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/responses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -289,7 +301,10 @@ func (s *forms) FormsFormsResponsesList(ctx context.Context, request operations.
 // FormsFormsWatchesCreate - Create a new watch. If a watch ID is provided, it must be unused. For each invoking project, the per form limit is one watch per Watch.EventType. A watch expires seven days after it is created (see Watch.expire_time).
 func (s *forms) FormsFormsWatchesCreate(ctx context.Context, request operations.FormsFormsWatchesCreateRequest, security operations.FormsFormsWatchesCreateSecurity) (*operations.FormsFormsWatchesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateWatchRequestInput", "json")
 	if err != nil {
@@ -344,7 +359,10 @@ func (s *forms) FormsFormsWatchesCreate(ctx context.Context, request operations.
 // FormsFormsWatchesDelete - Delete a watch.
 func (s *forms) FormsFormsWatchesDelete(ctx context.Context, request operations.FormsFormsWatchesDeleteRequest, security operations.FormsFormsWatchesDeleteSecurity) (*operations.FormsFormsWatchesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches/{watchId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches/{watchId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -392,7 +410,10 @@ func (s *forms) FormsFormsWatchesDelete(ctx context.Context, request operations.
 // FormsFormsWatchesList - Return a list of the watches owned by the invoking project. The maximum number of watches is two: For each invoker, the limit is one for each event type per form.
 func (s *forms) FormsFormsWatchesList(ctx context.Context, request operations.FormsFormsWatchesListRequest, security operations.FormsFormsWatchesListSecurity) (*operations.FormsFormsWatchesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -440,7 +461,10 @@ func (s *forms) FormsFormsWatchesList(ctx context.Context, request operations.Fo
 // FormsFormsWatchesRenew - Renew an existing watch for seven days. The state of the watch after renewal is `ACTIVE`, and the `expire_time` is seven days from the renewal. Renewing a watch in an error state (e.g. `SUSPENDED`) succeeds if the error is no longer present, but fail otherwise. After a watch has expired, RenewWatch returns `NOT_FOUND`.
 func (s *forms) FormsFormsWatchesRenew(ctx context.Context, request operations.FormsFormsWatchesRenewRequest, security operations.FormsFormsWatchesRenewSecurity) (*operations.FormsFormsWatchesRenewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches/{watchId}:renew", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/forms/{formId}/watches/{watchId}:renew", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -13,28 +13,25 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/walmart.com/inventory/1.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetInventoryRequest{
-        WmConsumerChannelType: "corrupti",
+    ctx := context.Background()
+    res, err := s.Inventory.GetInventory(ctx, operations.GetInventoryRequest{
+        WmConsumerChannelType: sdk.String("corrupti"),
         WmQosCorrelationID: "provident",
         WmSecAccessToken: "distinctio",
         WmSvcName: "quibusdam",
-        ShipNode: "unde",
+        ShipNode: sdk.String("unde"),
         Sku: "nulla",
-    }
-
-    ctx := context.Background()
-    res, err := s.Inventory.GetInventory(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -50,16 +47,16 @@ func main() {
 ## Available Resources and Operations
 
 
-### Inventory
+### [Inventory](docs/inventory/README.md)
 
-* `GetInventory` - Inventory
-* `GetMultiNodeInventoryForAllSkuAndAllShipNodes` - Multiple Item Inventory for All Ship Nodes
-* `GetMultiNodeInventoryForSkuAndAllShipnodes` - Single Item Inventory by Ship Node
-* `GetWFSInventory` - WFS Inventory
-* `UpdateBulkInventory` - Bulk Item Inventory Update
-* `UpdateInventoryForAnItemJSON` - Update inventory
-* `UpdateInventoryForAnItemRaw` - Update inventory
-* `UpdateMultiNodeInventory` - Update Item Inventory per Ship Node
+* [GetInventory](docs/inventory/README.md#getinventory) - Inventory
+* [GetMultiNodeInventoryForAllSkuAndAllShipNodes](docs/inventory/README.md#getmultinodeinventoryforallskuandallshipnodes) - Multiple Item Inventory for All Ship Nodes
+* [GetMultiNodeInventoryForSkuAndAllShipnodes](docs/inventory/README.md#getmultinodeinventoryforskuandallshipnodes) - Single Item Inventory by Ship Node
+* [GetWFSInventory](docs/inventory/README.md#getwfsinventory) - WFS Inventory
+* [UpdateBulkInventory](docs/inventory/README.md#updatebulkinventory) - Bulk Item Inventory Update
+* [UpdateInventoryForAnItemJSON](docs/inventory/README.md#updateinventoryforanitemjson) - Update inventory
+* [UpdateInventoryForAnItemRaw](docs/inventory/README.md#updateinventoryforanitemraw) - Update inventory
+* [UpdateMultiNodeInventory](docs/inventory/README.md#updatemultinodeinventory) - Update Item Inventory per Ship Node
 <!-- End SDK Available Operations -->
 
 ### Maturity

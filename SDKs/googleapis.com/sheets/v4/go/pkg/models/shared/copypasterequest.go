@@ -15,19 +15,23 @@ const (
 	CopyPasteRequestPasteOrientationEnumTranspose CopyPasteRequestPasteOrientationEnum = "TRANSPOSE"
 )
 
+func (e CopyPasteRequestPasteOrientationEnum) ToPointer() *CopyPasteRequestPasteOrientationEnum {
+	return &e
+}
+
 func (e *CopyPasteRequestPasteOrientationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NORMAL":
 		fallthrough
 	case "TRANSPOSE":
-		*e = CopyPasteRequestPasteOrientationEnum(s)
+		*e = CopyPasteRequestPasteOrientationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CopyPasteRequestPasteOrientationEnum: %s", s)
+		return fmt.Errorf("invalid value for CopyPasteRequestPasteOrientationEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	CopyPasteRequestPasteTypeEnumPasteConditionalFormatting CopyPasteRequestPasteTypeEnum = "PASTE_CONDITIONAL_FORMATTING"
 )
 
+func (e CopyPasteRequestPasteTypeEnum) ToPointer() *CopyPasteRequestPasteTypeEnum {
+	return &e
+}
+
 func (e *CopyPasteRequestPasteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PASTE_NORMAL":
 		fallthrough
 	case "PASTE_VALUES":
@@ -63,10 +71,10 @@ func (e *CopyPasteRequestPasteTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PASTE_DATA_VALIDATION":
 		fallthrough
 	case "PASTE_CONDITIONAL_FORMATTING":
-		*e = CopyPasteRequestPasteTypeEnum(s)
+		*e = CopyPasteRequestPasteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CopyPasteRequestPasteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CopyPasteRequestPasteTypeEnum: %v", v)
 	}
 }
 

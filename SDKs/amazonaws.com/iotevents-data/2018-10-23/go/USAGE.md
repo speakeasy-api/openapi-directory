@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,40 +17,38 @@ func main() {
         }),
     )
 
-    req := operations.BatchAcknowledgeAlarmRequest{
+    ctx := context.Background()
+    res, err := s.BatchAcknowledgeAlarm(ctx, operations.BatchAcknowledgeAlarmRequest{
         RequestBody: operations.BatchAcknowledgeAlarmRequestBody{
             AcknowledgeActionRequests: []shared.AcknowledgeAlarmActionRequest{
                 shared.AcknowledgeAlarmActionRequest{
                     AlarmModelName: "provident",
-                    KeyValue: "distinctio",
-                    Note: "quibusdam",
+                    KeyValue: sdk.String("distinctio"),
+                    Note: sdk.String("quibusdam"),
                     RequestID: "unde",
                 },
                 shared.AcknowledgeAlarmActionRequest{
                     AlarmModelName: "nulla",
-                    KeyValue: "corrupti",
-                    Note: "illum",
+                    KeyValue: sdk.String("corrupti"),
+                    Note: sdk.String("illum"),
                     RequestID: "vel",
                 },
                 shared.AcknowledgeAlarmActionRequest{
                     AlarmModelName: "error",
-                    KeyValue: "deserunt",
-                    Note: "suscipit",
+                    KeyValue: sdk.String("deserunt"),
+                    Note: sdk.String("suscipit"),
                     RequestID: "iure",
                 },
             },
         },
-        XAmzAlgorithm: "magnam",
-        XAmzContentSha256: "debitis",
-        XAmzCredential: "ipsa",
-        XAmzDate: "delectus",
-        XAmzSecurityToken: "tempora",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchAcknowledgeAlarm(ctx, req)
+        XAmzAlgorithm: sdk.String("magnam"),
+        XAmzContentSha256: sdk.String("debitis"),
+        XAmzCredential: sdk.String("ipsa"),
+        XAmzDate: sdk.String("delectus"),
+        XAmzSecurityToken: sdk.String("tempora"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("molestiae"),
+    })
     if err != nil {
         log.Fatal(err)
     }

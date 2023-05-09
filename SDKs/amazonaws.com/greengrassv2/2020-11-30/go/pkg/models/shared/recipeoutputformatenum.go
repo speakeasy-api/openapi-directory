@@ -14,18 +14,22 @@ const (
 	RecipeOutputFormatEnumYaml RecipeOutputFormatEnum = "YAML"
 )
 
+func (e RecipeOutputFormatEnum) ToPointer() *RecipeOutputFormatEnum {
+	return &e
+}
+
 func (e *RecipeOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JSON":
 		fallthrough
 	case "YAML":
-		*e = RecipeOutputFormatEnum(s)
+		*e = RecipeOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecipeOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RecipeOutputFormatEnum: %v", v)
 	}
 }

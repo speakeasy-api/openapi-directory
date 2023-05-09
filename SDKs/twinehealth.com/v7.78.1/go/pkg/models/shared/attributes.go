@@ -17,12 +17,16 @@ const (
 	AttributesAttendeesResponseStatusEnumAccepted    AttributesAttendeesResponseStatusEnum = "accepted"
 )
 
+func (e AttributesAttendeesResponseStatusEnum) ToPointer() *AttributesAttendeesResponseStatusEnum {
+	return &e
+}
+
 func (e *AttributesAttendeesResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "needsAction":
 		fallthrough
 	case "declined":
@@ -30,10 +34,10 @@ func (e *AttributesAttendeesResponseStatusEnum) UnmarshalJSON(data []byte) error
 	case "tentative":
 		fallthrough
 	case "accepted":
-		*e = AttributesAttendeesResponseStatusEnum(s)
+		*e = AttributesAttendeesResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttributesAttendeesResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AttributesAttendeesResponseStatusEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	AttributesTypeEnumVideoCall     AttributesTypeEnum = "video-call"
 )
 
+func (e AttributesTypeEnum) ToPointer() *AttributesTypeEnum {
+	return &e
+}
+
 func (e *AttributesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "plan-check-in":
 		fallthrough
 	case "reminder":
@@ -69,10 +77,10 @@ func (e *AttributesTypeEnum) UnmarshalJSON(data []byte) error {
 	case "office-visit":
 		fallthrough
 	case "video-call":
-		*e = AttributesTypeEnum(s)
+		*e = AttributesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttributesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttributesTypeEnum: %v", v)
 	}
 }
 

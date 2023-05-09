@@ -15,17 +15,21 @@ const (
 	POSTDeleteSubnetCidrReservationActionEnumDeleteSubnetCidrReservation POSTDeleteSubnetCidrReservationActionEnum = "DeleteSubnetCidrReservation"
 )
 
+func (e POSTDeleteSubnetCidrReservationActionEnum) ToPointer() *POSTDeleteSubnetCidrReservationActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteSubnetCidrReservationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteSubnetCidrReservation":
-		*e = POSTDeleteSubnetCidrReservationActionEnum(s)
+		*e = POSTDeleteSubnetCidrReservationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteSubnetCidrReservationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteSubnetCidrReservationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteSubnetCidrReservationVersionEnumTwoThousandAndSixteen1115 POSTDeleteSubnetCidrReservationVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteSubnetCidrReservationVersionEnum) ToPointer() *POSTDeleteSubnetCidrReservationVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteSubnetCidrReservationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteSubnetCidrReservationVersionEnum(s)
+		*e = POSTDeleteSubnetCidrReservationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteSubnetCidrReservationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteSubnetCidrReservationVersionEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	CreateNetworkInterfacePermissionResultInterfacePermissionPermissionEnumEipAssociate   CreateNetworkInterfacePermissionResultInterfacePermissionPermissionEnum = "EIP-ASSOCIATE"
 )
 
+func (e CreateNetworkInterfacePermissionResultInterfacePermissionPermissionEnum) ToPointer() *CreateNetworkInterfacePermissionResultInterfacePermissionPermissionEnum {
+	return &e
+}
+
 func (e *CreateNetworkInterfacePermissionResultInterfacePermissionPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTANCE-ATTACH":
 		fallthrough
 	case "EIP-ASSOCIATE":
-		*e = CreateNetworkInterfacePermissionResultInterfacePermissionPermissionEnum(s)
+		*e = CreateNetworkInterfacePermissionResultInterfacePermissionPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNetworkInterfacePermissionResultInterfacePermissionPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNetworkInterfacePermissionResultInterfacePermissionPermissionEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	CreateNetworkInterfacePermissionResultInterfacePermissionPermissionStateStateEnumRevoked  CreateNetworkInterfacePermissionResultInterfacePermissionPermissionStateStateEnum = "revoked"
 )
 
+func (e CreateNetworkInterfacePermissionResultInterfacePermissionPermissionStateStateEnum) ToPointer() *CreateNetworkInterfacePermissionResultInterfacePermissionPermissionStateStateEnum {
+	return &e
+}
+
 func (e *CreateNetworkInterfacePermissionResultInterfacePermissionPermissionStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "granted":
@@ -54,10 +62,10 @@ func (e *CreateNetworkInterfacePermissionResultInterfacePermissionPermissionStat
 	case "revoking":
 		fallthrough
 	case "revoked":
-		*e = CreateNetworkInterfacePermissionResultInterfacePermissionPermissionStateStateEnum(s)
+		*e = CreateNetworkInterfacePermissionResultInterfacePermissionPermissionStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNetworkInterfacePermissionResultInterfacePermissionPermissionStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNetworkInterfacePermissionResultInterfacePermissionPermissionStateStateEnum: %v", v)
 	}
 }
 

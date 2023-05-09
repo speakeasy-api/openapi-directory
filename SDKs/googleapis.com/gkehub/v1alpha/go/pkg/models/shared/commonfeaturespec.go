@@ -11,7 +11,7 @@ type CommonFeatureSpec struct {
 	// **Cloud Audit Logging**: Spec for Audit Logging Allowlisting.
 	Cloudauditlogging *CloudAuditLoggingFeatureSpec `json:"cloudauditlogging,omitempty"`
 	// **Fleet Observability**: The Hub-wide input for the FleetObservability feature.
-	Fleetobservability map[string]interface{} `json:"fleetobservability,omitempty"`
+	Fleetobservability *FleetObservabilityFeatureSpec `json:"fleetobservability,omitempty"`
 	// **Multi-cluster Ingress**: The configuration for the MultiClusterIngress feature.
 	Multiclusteringress *MultiClusterIngressFeatureSpec `json:"multiclusteringress,omitempty"`
 	// **Workload Certificate**: The Hub-wide input for the WorkloadCertificate feature.

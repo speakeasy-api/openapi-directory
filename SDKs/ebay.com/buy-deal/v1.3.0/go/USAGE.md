@@ -2,28 +2,25 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetDealItemsRequest{
-        XEbayCMarketplaceID: "corrupti",
-        CategoryIds: "provident",
-        Commissionable: "distinctio",
-        DeliveryCountry: "quibusdam",
-        Limit: "unde",
-        Offset: "nulla",
-    }
-
     ctx := context.Background()
-    res, err := s.DealItem.GetDealItems(ctx, req, operations.GetDealItemsSecurity{
+    res, err := s.DealItem.GetDealItems(ctx, operations.GetDealItemsRequest{
+        XEbayCMarketplaceID: "corrupti",
+        CategoryIds: sdk.String("provident"),
+        Commissionable: sdk.String("distinctio"),
+        DeliveryCountry: sdk.String("quibusdam"),
+        Limit: sdk.String("unde"),
+        Offset: sdk.String("nulla"),
+    }, operations.GetDealItemsSecurity{
         APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

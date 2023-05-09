@@ -25,21 +25,25 @@ const (
 	UpdateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnumCart       UpdateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnum = "cart"
 )
 
+func (e UpdateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnum) ToPointer() *UpdateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnum {
+	return &e
+}
+
 func (e *UpdateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "thanks_page":
 		fallthrough
 	case "cart":
-		*e = UpdateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnum(s)
+		*e = UpdateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInlineScriptTagRequestBodyInlineScriptTagDisplayScopeEnum: %v", v)
 	}
 }
 
@@ -52,17 +56,21 @@ const (
 	UpdateInlineScriptTagRequestBodyInlineScriptTagTriggerEventEnumObjectBuilded UpdateInlineScriptTagRequestBodyInlineScriptTagTriggerEventEnum = "object_builded"
 )
 
+func (e UpdateInlineScriptTagRequestBodyInlineScriptTagTriggerEventEnum) ToPointer() *UpdateInlineScriptTagRequestBodyInlineScriptTagTriggerEventEnum {
+	return &e
+}
+
 func (e *UpdateInlineScriptTagRequestBodyInlineScriptTagTriggerEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_builded":
-		*e = UpdateInlineScriptTagRequestBodyInlineScriptTagTriggerEventEnum(s)
+		*e = UpdateInlineScriptTagRequestBodyInlineScriptTagTriggerEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInlineScriptTagRequestBodyInlineScriptTagTriggerEventEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInlineScriptTagRequestBodyInlineScriptTagTriggerEventEnum: %v", v)
 	}
 }
 
@@ -108,21 +116,25 @@ const (
 	UpdateInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnumCart       UpdateInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum = "cart"
 )
 
+func (e UpdateInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum) ToPointer() *UpdateInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum {
+	return &e
+}
+
 func (e *UpdateInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "thanks_page":
 		fallthrough
 	case "cart":
-		*e = UpdateInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum(s)
+		*e = UpdateInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInlineScriptTag200ApplicationJSONInlineScriptTagDisplayScopeEnum: %v", v)
 	}
 }
 
@@ -135,17 +147,21 @@ const (
 	UpdateInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnumObjectBuilded UpdateInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum = "object_builded"
 )
 
+func (e UpdateInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum) ToPointer() *UpdateInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum {
+	return &e
+}
+
 func (e *UpdateInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_builded":
-		*e = UpdateInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum(s)
+		*e = UpdateInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInlineScriptTag200ApplicationJSONInlineScriptTagTriggerEventEnum: %v", v)
 	}
 }
 

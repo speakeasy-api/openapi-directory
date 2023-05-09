@@ -84,9 +84,13 @@ func (s *productsAPI) ProductsAPICount(ctx context.Context, request operations.P
 
 	return res, nil
 }
+
 func (s *productsAPI) ProductsAPIDeleteProduct(ctx context.Context, request operations.ProductsAPIDeleteProductRequest) (*operations.ProductsAPIDeleteProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ProductsApi/{serial}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/ProductsApi/{serial}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -119,9 +123,13 @@ func (s *productsAPI) ProductsAPIDeleteProduct(ctx context.Context, request oper
 
 	return res, nil
 }
+
 func (s *productsAPI) ProductsAPIDeleteProduct2(ctx context.Context, request operations.ProductsAPIDeleteProduct2Request) (*operations.ProductsAPIDeleteProduct2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/ProductsApi/{serial}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/ProductsApi/{serial}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -154,6 +162,7 @@ func (s *productsAPI) ProductsAPIDeleteProduct2(ctx context.Context, request ope
 
 	return res, nil
 }
+
 func (s *productsAPI) ProductsAPIFind(ctx context.Context, request operations.ProductsAPIFindRequest) (*operations.ProductsAPIFindResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ProductsApi/Find"
@@ -210,6 +219,7 @@ func (s *productsAPI) ProductsAPIFind(ctx context.Context, request operations.Pr
 
 	return res, nil
 }
+
 func (s *productsAPI) ProductsAPIList(ctx context.Context, request operations.ProductsAPIListRequest) (*operations.ProductsAPIListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ProductsApi/List"
@@ -266,6 +276,7 @@ func (s *productsAPI) ProductsAPIList(ctx context.Context, request operations.Pr
 
 	return res, nil
 }
+
 func (s *productsAPI) ProductsAPIPatchProduct(ctx context.Context, request operations.ProductsAPIPatchProductRequestBody) (*operations.ProductsAPIPatchProductResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ProductsApi"
@@ -309,6 +320,7 @@ func (s *productsAPI) ProductsAPIPatchProduct(ctx context.Context, request opera
 
 	return res, nil
 }
+
 func (s *productsAPI) ProductsAPIPatchProduct2(ctx context.Context, request operations.ProductsAPIPatchProduct2RequestBody) (*operations.ProductsAPIPatchProduct2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ProductsApi"
@@ -352,6 +364,7 @@ func (s *productsAPI) ProductsAPIPatchProduct2(ctx context.Context, request oper
 
 	return res, nil
 }
+
 func (s *productsAPI) ProductsAPISave(ctx context.Context, request operations.ProductsAPISaveRequestBody) (*operations.ProductsAPISaveResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/ProductsApi/Save"

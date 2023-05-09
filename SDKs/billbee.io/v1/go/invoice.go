@@ -5,8 +5,10 @@ package sdk
 import (
 	"context"
 	"fmt"
+	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -34,7 +36,10 @@ func newInvoice(defaultClient, securityClient HTTPClient, serverURL, language, s
 // OrderAPICreateInvoice - Create an invoice for an existing order. This request is extra throttled by order and api key to a maximum of 1 per 5 minutes.
 func (s *invoice) OrderAPICreateInvoice(ctx context.Context, request operations.OrderAPICreateInvoiceRequest) (*operations.OrderAPICreateInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/CreateInvoice/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/orders/CreateInvoice/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -67,19 +72,33 @@ func (s *invoice) OrderAPICreateInvoice(ctx context.Context, request operations.
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
+			var out *shared.RechnungsdruckWebAppControllersAPIAPIResultRechnungsdruckWebAppControllersAPIInvoice
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.OrderAPICreateInvoice200ApplicationJSONObject = out
+			res.RechnungsdruckWebAppControllersAPIAPIResultRechnungsdruckWebAppControllersAPIInvoice = out
 		case utils.MatchContentType(contentType, `text/json`):
-			var out map[string]interface{}
+			var out *shared.RechnungsdruckWebAppControllersAPIAPIResultRechnungsdruckWebAppControllersAPIInvoice
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.OrderAPICreateInvoice200TextJSONObject = out
+			res.RechnungsdruckWebAppControllersAPIAPIResultRechnungsdruckWebAppControllersAPIInvoice = out
+		case utils.MatchContentType(contentType, `application/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		case utils.MatchContentType(contentType, `text/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
 		}
 	}
 
@@ -122,19 +141,33 @@ func (s *invoice) OrderAPIGetInvoiceList(ctx context.Context, request operations
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
+			var out *shared.RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.OrderAPIGetInvoiceList200ApplicationJSONObject = out
+			res.RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = out
 		case utils.MatchContentType(contentType, `text/json`):
-			var out map[string]interface{}
+			var out *shared.RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.OrderAPIGetInvoiceList200TextJSONObject = out
+			res.RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = out
+		case utils.MatchContentType(contentType, `application/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		case utils.MatchContentType(contentType, `text/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
 		}
 	}
 

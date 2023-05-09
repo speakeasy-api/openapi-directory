@@ -14,18 +14,22 @@ const (
 	S3EncryptionOptionEnumSseKms S3EncryptionOptionEnum = "SSE_KMS"
 )
 
+func (e S3EncryptionOptionEnum) ToPointer() *S3EncryptionOptionEnum {
+	return &e
+}
+
 func (e *S3EncryptionOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSE_S3":
 		fallthrough
 	case "SSE_KMS":
-		*e = S3EncryptionOptionEnum(s)
+		*e = S3EncryptionOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for S3EncryptionOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for S3EncryptionOptionEnum: %v", v)
 	}
 }

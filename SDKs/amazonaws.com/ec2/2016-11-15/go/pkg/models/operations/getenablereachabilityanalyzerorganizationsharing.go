@@ -15,17 +15,21 @@ const (
 	GETEnableReachabilityAnalyzerOrganizationSharingActionEnumEnableReachabilityAnalyzerOrganizationSharing GETEnableReachabilityAnalyzerOrganizationSharingActionEnum = "EnableReachabilityAnalyzerOrganizationSharing"
 )
 
+func (e GETEnableReachabilityAnalyzerOrganizationSharingActionEnum) ToPointer() *GETEnableReachabilityAnalyzerOrganizationSharingActionEnum {
+	return &e
+}
+
 func (e *GETEnableReachabilityAnalyzerOrganizationSharingActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableReachabilityAnalyzerOrganizationSharing":
-		*e = GETEnableReachabilityAnalyzerOrganizationSharingActionEnum(s)
+		*e = GETEnableReachabilityAnalyzerOrganizationSharingActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableReachabilityAnalyzerOrganizationSharingActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableReachabilityAnalyzerOrganizationSharingActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETEnableReachabilityAnalyzerOrganizationSharingVersionEnumTwoThousandAndSixteen1115 GETEnableReachabilityAnalyzerOrganizationSharingVersionEnum = "2016-11-15"
 )
 
+func (e GETEnableReachabilityAnalyzerOrganizationSharingVersionEnum) ToPointer() *GETEnableReachabilityAnalyzerOrganizationSharingVersionEnum {
+	return &e
+}
+
 func (e *GETEnableReachabilityAnalyzerOrganizationSharingVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETEnableReachabilityAnalyzerOrganizationSharingVersionEnum(s)
+		*e = GETEnableReachabilityAnalyzerOrganizationSharingVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableReachabilityAnalyzerOrganizationSharingVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableReachabilityAnalyzerOrganizationSharingVersionEnum: %v", v)
 	}
 }
 

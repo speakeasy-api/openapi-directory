@@ -16,17 +16,21 @@ const (
 	PutNotificationChannelXAmzTargetEnumAwsfms20180101PutNotificationChannel PutNotificationChannelXAmzTargetEnum = "AWSFMS_20180101.PutNotificationChannel"
 )
 
+func (e PutNotificationChannelXAmzTargetEnum) ToPointer() *PutNotificationChannelXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutNotificationChannelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.PutNotificationChannel":
-		*e = PutNotificationChannelXAmzTargetEnum(s)
+		*e = PutNotificationChannelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutNotificationChannelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutNotificationChannelXAmzTargetEnum: %v", v)
 	}
 }
 

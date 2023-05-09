@@ -22,21 +22,25 @@ const (
 	PostAssetsReturnsSimulationBootstrapRequestBodyBootstrapMethodEnumStationaryBlock PostAssetsReturnsSimulationBootstrapRequestBodyBootstrapMethodEnum = "stationaryBlock"
 )
 
+func (e PostAssetsReturnsSimulationBootstrapRequestBodyBootstrapMethodEnum) ToPointer() *PostAssetsReturnsSimulationBootstrapRequestBodyBootstrapMethodEnum {
+	return &e
+}
+
 func (e *PostAssetsReturnsSimulationBootstrapRequestBodyBootstrapMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iid":
 		fallthrough
 	case "circularBlock":
 		fallthrough
 	case "stationaryBlock":
-		*e = PostAssetsReturnsSimulationBootstrapRequestBodyBootstrapMethodEnum(s)
+		*e = PostAssetsReturnsSimulationBootstrapRequestBodyBootstrapMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAssetsReturnsSimulationBootstrapRequestBodyBootstrapMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAssetsReturnsSimulationBootstrapRequestBodyBootstrapMethodEnum: %v", v)
 	}
 }
 
@@ -55,7 +59,7 @@ type PostAssetsReturnsSimulationBootstrapRequestBody struct {
 }
 
 type PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulationsAssets struct {
-	// assetReturns[t] is the simulated return of the i-th asset for the t-th time period, in percentage
+	// assetReturns[t] is the simulated return of the i-th asset for the t-th time period
 	AssetReturns []float64 `json:"assetReturns"`
 }
 

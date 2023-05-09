@@ -2,32 +2,31 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.CreateBehaviorInput{
-        BirthDate: "2021-10-25T05:21:43.948Z",
-        Country: "cr",
+    ctx := context.Background()
+    res, err := s.Behavior.ReportBehavior(ctx, shared.CreateBehaviorInput{
+        BirthDate: types.MustTimeFromString("2021-10-25T05:21:43.948Z"),
+        Country: shared.CreateBehaviorInputCountryEnumCr,
         DocumentID: "quibusdam",
-        DocumentType: "name",
+        DocumentType: shared.CreateBehaviorInputDocumentTypeEnumName,
         Email: "Karley_Stamm@hotmail.com",
-        FeedbackDate: "2022-03-26T09:37:56.283Z",
+        FeedbackDate: types.MustTimeFromString("2022-03-26T09:37:56.283Z"),
         FirstName: "Hunter",
         LastName: "Gulgowski",
-        PhoneNumber: "debitis",
-        Reason: "rape",
-    }
-
-    ctx := context.Background()
-    res, err := s.Behavior.ReportBehavior(ctx, req, operations.ReportBehaviorSecurity{
+        PhoneNumber: sdk.String("debitis"),
+        Reason: shared.CreateBehaviorInputReasonEnumRape,
+    }, operations.ReportBehaviorSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {

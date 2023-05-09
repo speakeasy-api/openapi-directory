@@ -14,18 +14,22 @@ const (
 	ResourcePermissionEnumMissingPermission ResourcePermissionEnum = "MISSING_PERMISSION"
 )
 
+func (e ResourcePermissionEnum) ToPointer() *ResourcePermissionEnum {
+	return &e
+}
+
 func (e *ResourcePermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FULL_PERMISSION":
 		fallthrough
 	case "MISSING_PERMISSION":
-		*e = ResourcePermissionEnum(s)
+		*e = ResourcePermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourcePermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourcePermissionEnum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // GetOrganization - Get one organization's data by id
 func (s *organizations) GetOrganization(ctx context.Context, request operations.GetOrganizationRequest) (*operations.GetOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -112,7 +115,10 @@ func (s *organizations) GetOrganizations(ctx context.Context, request operations
 // PatchOrganization - Update an organization's data
 func (s *organizations) PatchOrganization(ctx context.Context, request operations.PatchOrganizationRequest) (*operations.PatchOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

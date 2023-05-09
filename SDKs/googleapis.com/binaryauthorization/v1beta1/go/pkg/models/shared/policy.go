@@ -16,21 +16,25 @@ const (
 	PolicyGlobalPolicyEvaluationModeEnumDisable                               PolicyGlobalPolicyEvaluationModeEnum = "DISABLE"
 )
 
+func (e PolicyGlobalPolicyEvaluationModeEnum) ToPointer() *PolicyGlobalPolicyEvaluationModeEnum {
+	return &e
+}
+
 func (e *PolicyGlobalPolicyEvaluationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GLOBAL_POLICY_EVALUATION_MODE_UNSPECIFIED":
 		fallthrough
 	case "ENABLE":
 		fallthrough
 	case "DISABLE":
-		*e = PolicyGlobalPolicyEvaluationModeEnum(s)
+		*e = PolicyGlobalPolicyEvaluationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyGlobalPolicyEvaluationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyGlobalPolicyEvaluationModeEnum: %v", v)
 	}
 }
 

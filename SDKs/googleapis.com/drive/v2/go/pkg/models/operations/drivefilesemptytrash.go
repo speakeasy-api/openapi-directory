@@ -15,6 +15,8 @@ type DriveFilesEmptyTrashSecurity struct {
 type DriveFilesEmptyTrashRequest struct {
 	// Data format for the response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
+	// If set, empties the trash of the provided shared drive.
+	DriveID *string `queryParam:"style=form,explode=true,name=driveId"`
 	// Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself is not, the item will be placed under its owner's root.
 	EnforceSingleParent *bool `queryParam:"style=form,explode=true,name=enforceSingleParent"`
 	// Selector specifying which fields to include in a partial response.

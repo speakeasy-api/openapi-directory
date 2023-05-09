@@ -89,7 +89,10 @@ func (s *storage) StorageCreateFile(ctx context.Context, request operations.Stor
 // Delete a file by its unique ID. Only users with write permissions have access to delete this resource.
 func (s *storage) StorageDeleteFile(ctx context.Context, request operations.StorageDeleteFileRequest, security operations.StorageDeleteFileSecurity) (*operations.StorageDeleteFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +128,10 @@ func (s *storage) StorageDeleteFile(ctx context.Context, request operations.Stor
 // Get a file by its unique ID. This endpoint response returns a JSON object with the file metadata.
 func (s *storage) StorageGetFile(ctx context.Context, request operations.StorageGetFileRequest, security operations.StorageGetFileSecurity) (*operations.StorageGetFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +176,10 @@ func (s *storage) StorageGetFile(ctx context.Context, request operations.Storage
 // Get a file content by its unique ID. The endpoint response return with a 'Content-Disposition: attachment' header that tells the browser to start downloading the file to user downloads directory.
 func (s *storage) StorageGetFileDownload(ctx context.Context, request operations.StorageGetFileDownloadRequest, security operations.StorageGetFileDownloadSecurity) (*operations.StorageGetFileDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}/download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}/download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -206,7 +215,10 @@ func (s *storage) StorageGetFileDownload(ctx context.Context, request operations
 // Get a file preview image. Currently, this method supports preview for image files (jpg, png, and gif), other supported formats, like pdf, docs, slides, and spreadsheets, will return the file icon image. You can also pass query string arguments for cutting and resizing your preview image.
 func (s *storage) StorageGetFilePreview(ctx context.Context, request operations.StorageGetFilePreviewRequest, security operations.StorageGetFilePreviewSecurity) (*operations.StorageGetFilePreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}/preview", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}/preview", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -246,7 +258,10 @@ func (s *storage) StorageGetFilePreview(ctx context.Context, request operations.
 // Get a file content by its unique ID. This endpoint is similar to the download method but returns with no  'Content-Disposition: attachment' header.
 func (s *storage) StorageGetFileView(ctx context.Context, request operations.StorageGetFileViewRequest, security operations.StorageGetFileViewSecurity) (*operations.StorageGetFileViewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}/view", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}/view", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -331,7 +346,10 @@ func (s *storage) StorageListFiles(ctx context.Context, request operations.Stora
 // Update a file by its unique ID. Only users with write permissions have access to update this resource.
 func (s *storage) StorageUpdateFile(ctx context.Context, request operations.StorageUpdateFileRequest, security operations.StorageUpdateFileSecurity) (*operations.StorageUpdateFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/storage/files/{fileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

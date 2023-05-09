@@ -16,21 +16,25 @@ const (
 	EntitlementRelatedEntityTypeEnumAttraction EntitlementRelatedEntityTypeEnum = "attraction"
 )
 
+func (e EntitlementRelatedEntityTypeEnum) ToPointer() *EntitlementRelatedEntityTypeEnum {
+	return &e
+}
+
 func (e *EntitlementRelatedEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "event":
 		fallthrough
 	case "venue":
 		fallthrough
 	case "attraction":
-		*e = EntitlementRelatedEntityTypeEnum(s)
+		*e = EntitlementRelatedEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntitlementRelatedEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EntitlementRelatedEntityTypeEnum: %v", v)
 	}
 }
 
@@ -41,17 +45,21 @@ const (
 	EntitlementSourceEnumTicketmaster EntitlementSourceEnum = "ticketmaster"
 )
 
+func (e EntitlementSourceEnum) ToPointer() *EntitlementSourceEnum {
+	return &e
+}
+
 func (e *EntitlementSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ticketmaster":
-		*e = EntitlementSourceEnum(s)
+		*e = EntitlementSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntitlementSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for EntitlementSourceEnum: %v", v)
 	}
 }
 

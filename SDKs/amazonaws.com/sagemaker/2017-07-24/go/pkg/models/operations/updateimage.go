@@ -16,17 +16,21 @@ const (
 	UpdateImageXAmzTargetEnumSageMakerUpdateImage UpdateImageXAmzTargetEnum = "SageMaker.UpdateImage"
 )
 
+func (e UpdateImageXAmzTargetEnum) ToPointer() *UpdateImageXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateImageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.UpdateImage":
-		*e = UpdateImageXAmzTargetEnum(s)
+		*e = UpdateImageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateImageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateImageXAmzTargetEnum: %v", v)
 	}
 }
 

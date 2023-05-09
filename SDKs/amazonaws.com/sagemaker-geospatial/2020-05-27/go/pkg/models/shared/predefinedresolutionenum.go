@@ -15,20 +15,24 @@ const (
 	PredefinedResolutionEnumAverage PredefinedResolutionEnum = "AVERAGE"
 )
 
+func (e PredefinedResolutionEnum) ToPointer() *PredefinedResolutionEnum {
+	return &e
+}
+
 func (e *PredefinedResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HIGHEST":
 		fallthrough
 	case "LOWEST":
 		fallthrough
 	case "AVERAGE":
-		*e = PredefinedResolutionEnum(s)
+		*e = PredefinedResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PredefinedResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for PredefinedResolutionEnum: %v", v)
 	}
 }

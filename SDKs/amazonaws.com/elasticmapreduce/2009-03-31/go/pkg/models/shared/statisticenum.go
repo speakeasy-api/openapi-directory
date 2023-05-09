@@ -17,12 +17,16 @@ const (
 	StatisticEnumMaximum     StatisticEnum = "MAXIMUM"
 )
 
+func (e StatisticEnum) ToPointer() *StatisticEnum {
+	return &e
+}
+
 func (e *StatisticEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SAMPLE_COUNT":
 		fallthrough
 	case "AVERAGE":
@@ -32,9 +36,9 @@ func (e *StatisticEnum) UnmarshalJSON(data []byte) error {
 	case "MINIMUM":
 		fallthrough
 	case "MAXIMUM":
-		*e = StatisticEnum(s)
+		*e = StatisticEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatisticEnum: %s", s)
+		return fmt.Errorf("invalid value for StatisticEnum: %v", v)
 	}
 }

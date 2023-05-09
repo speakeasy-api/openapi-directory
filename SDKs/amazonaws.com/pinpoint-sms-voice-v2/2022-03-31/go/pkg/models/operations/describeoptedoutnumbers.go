@@ -16,17 +16,21 @@ const (
 	DescribeOptedOutNumbersXAmzTargetEnumPinpointSmsVoiceV2DescribeOptedOutNumbers DescribeOptedOutNumbersXAmzTargetEnum = "PinpointSMSVoiceV2.DescribeOptedOutNumbers"
 )
 
+func (e DescribeOptedOutNumbersXAmzTargetEnum) ToPointer() *DescribeOptedOutNumbersXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeOptedOutNumbersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.DescribeOptedOutNumbers":
-		*e = DescribeOptedOutNumbersXAmzTargetEnum(s)
+		*e = DescribeOptedOutNumbersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeOptedOutNumbersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeOptedOutNumbersXAmzTargetEnum: %v", v)
 	}
 }
 

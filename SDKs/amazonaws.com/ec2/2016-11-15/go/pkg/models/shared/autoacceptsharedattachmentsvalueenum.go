@@ -14,18 +14,22 @@ const (
 	AutoAcceptSharedAttachmentsValueEnumDisable AutoAcceptSharedAttachmentsValueEnum = "disable"
 )
 
+func (e AutoAcceptSharedAttachmentsValueEnum) ToPointer() *AutoAcceptSharedAttachmentsValueEnum {
+	return &e
+}
+
 func (e *AutoAcceptSharedAttachmentsValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = AutoAcceptSharedAttachmentsValueEnum(s)
+		*e = AutoAcceptSharedAttachmentsValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoAcceptSharedAttachmentsValueEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoAcceptSharedAttachmentsValueEnum: %v", v)
 	}
 }

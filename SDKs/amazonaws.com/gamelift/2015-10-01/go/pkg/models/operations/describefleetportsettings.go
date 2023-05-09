@@ -16,17 +16,21 @@ const (
 	DescribeFleetPortSettingsXAmzTargetEnumGameLiftDescribeFleetPortSettings DescribeFleetPortSettingsXAmzTargetEnum = "GameLift.DescribeFleetPortSettings"
 )
 
+func (e DescribeFleetPortSettingsXAmzTargetEnum) ToPointer() *DescribeFleetPortSettingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeFleetPortSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DescribeFleetPortSettings":
-		*e = DescribeFleetPortSettingsXAmzTargetEnum(s)
+		*e = DescribeFleetPortSettingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFleetPortSettingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFleetPortSettingsXAmzTargetEnum: %v", v)
 	}
 }
 

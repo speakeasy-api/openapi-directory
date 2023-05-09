@@ -25,12 +25,16 @@ const (
 	SnapshotStateEnumDeleting         SnapshotStateEnum = "DELETING"
 )
 
+func (e SnapshotStateEnum) ToPointer() *SnapshotStateEnum {
+	return &e
+}
+
 func (e *SnapshotStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -38,10 +42,10 @@ func (e *SnapshotStateEnum) UnmarshalJSON(data []byte) error {
 	case "READY":
 		fallthrough
 	case "DELETING":
-		*e = SnapshotStateEnum(s)
+		*e = SnapshotStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SnapshotStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SnapshotStateEnum: %v", v)
 	}
 }
 

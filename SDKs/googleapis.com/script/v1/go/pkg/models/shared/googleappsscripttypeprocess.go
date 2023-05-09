@@ -22,12 +22,16 @@ const (
 	GoogleAppsScriptTypeProcessProcessStatusEnumDelayed                  GoogleAppsScriptTypeProcessProcessStatusEnum = "DELAYED"
 )
 
+func (e GoogleAppsScriptTypeProcessProcessStatusEnum) ToPointer() *GoogleAppsScriptTypeProcessProcessStatusEnum {
+	return &e
+}
+
 func (e *GoogleAppsScriptTypeProcessProcessStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESS_STATUS_UNSPECIFIED":
 		fallthrough
 	case "RUNNING":
@@ -45,10 +49,10 @@ func (e *GoogleAppsScriptTypeProcessProcessStatusEnum) UnmarshalJSON(data []byte
 	case "UNKNOWN":
 		fallthrough
 	case "DELAYED":
-		*e = GoogleAppsScriptTypeProcessProcessStatusEnum(s)
+		*e = GoogleAppsScriptTypeProcessProcessStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsScriptTypeProcessProcessStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsScriptTypeProcessProcessStatusEnum: %v", v)
 	}
 }
 
@@ -68,12 +72,16 @@ const (
 	GoogleAppsScriptTypeProcessProcessTypeEnumBatchTask              GoogleAppsScriptTypeProcessProcessTypeEnum = "BATCH_TASK"
 )
 
+func (e GoogleAppsScriptTypeProcessProcessTypeEnum) ToPointer() *GoogleAppsScriptTypeProcessProcessTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsScriptTypeProcessProcessTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESS_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ADD_ON":
@@ -93,10 +101,10 @@ func (e *GoogleAppsScriptTypeProcessProcessTypeEnum) UnmarshalJSON(data []byte) 
 	case "MENU":
 		fallthrough
 	case "BATCH_TASK":
-		*e = GoogleAppsScriptTypeProcessProcessTypeEnum(s)
+		*e = GoogleAppsScriptTypeProcessProcessTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsScriptTypeProcessProcessTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsScriptTypeProcessProcessTypeEnum: %v", v)
 	}
 }
 
@@ -111,12 +119,16 @@ const (
 	GoogleAppsScriptTypeProcessUserAccessLevelEnumOwner                      GoogleAppsScriptTypeProcessUserAccessLevelEnum = "OWNER"
 )
 
+func (e GoogleAppsScriptTypeProcessUserAccessLevelEnum) ToPointer() *GoogleAppsScriptTypeProcessUserAccessLevelEnum {
+	return &e
+}
+
 func (e *GoogleAppsScriptTypeProcessUserAccessLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_ACCESS_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -126,10 +138,10 @@ func (e *GoogleAppsScriptTypeProcessUserAccessLevelEnum) UnmarshalJSON(data []by
 	case "WRITE":
 		fallthrough
 	case "OWNER":
-		*e = GoogleAppsScriptTypeProcessUserAccessLevelEnum(s)
+		*e = GoogleAppsScriptTypeProcessUserAccessLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsScriptTypeProcessUserAccessLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsScriptTypeProcessUserAccessLevelEnum: %v", v)
 	}
 }
 

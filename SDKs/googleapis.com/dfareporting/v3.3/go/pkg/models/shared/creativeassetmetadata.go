@@ -78,12 +78,16 @@ const (
 	CreativeAssetMetadataDetectedFeaturesEnumSvgFeImage             CreativeAssetMetadataDetectedFeaturesEnum = "SVG_FE_IMAGE"
 )
 
+func (e CreativeAssetMetadataDetectedFeaturesEnum) ToPointer() *CreativeAssetMetadataDetectedFeaturesEnum {
+	return &e
+}
+
 func (e *CreativeAssetMetadataDetectedFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSS_FONT_FACE":
 		fallthrough
 	case "CSS_BACKGROUND_SIZE":
@@ -215,10 +219,10 @@ func (e *CreativeAssetMetadataDetectedFeaturesEnum) UnmarshalJSON(data []byte) e
 	case "SVG_FILTERS":
 		fallthrough
 	case "SVG_FE_IMAGE":
-		*e = CreativeAssetMetadataDetectedFeaturesEnum(s)
+		*e = CreativeAssetMetadataDetectedFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetMetadataDetectedFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetMetadataDetectedFeaturesEnum: %v", v)
 	}
 }
 
@@ -252,12 +256,16 @@ const (
 	CreativeAssetMetadataWarnedValidationRulesEnumClickTagInRichMedia         CreativeAssetMetadataWarnedValidationRulesEnum = "CLICK_TAG_IN_RICH_MEDIA"
 )
 
+func (e CreativeAssetMetadataWarnedValidationRulesEnum) ToPointer() *CreativeAssetMetadataWarnedValidationRulesEnum {
+	return &e
+}
+
 func (e *CreativeAssetMetadataWarnedValidationRulesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLICK_TAG_NON_TOP_LEVEL":
 		fallthrough
 	case "CLICK_TAG_MISSING":
@@ -307,10 +315,10 @@ func (e *CreativeAssetMetadataWarnedValidationRulesEnum) UnmarshalJSON(data []by
 	case "SVG_INVALID":
 		fallthrough
 	case "CLICK_TAG_IN_RICH_MEDIA":
-		*e = CreativeAssetMetadataWarnedValidationRulesEnum(s)
+		*e = CreativeAssetMetadataWarnedValidationRulesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAssetMetadataWarnedValidationRulesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAssetMetadataWarnedValidationRulesEnum: %v", v)
 	}
 }
 

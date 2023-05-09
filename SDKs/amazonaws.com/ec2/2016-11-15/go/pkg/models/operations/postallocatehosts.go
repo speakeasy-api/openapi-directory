@@ -15,17 +15,21 @@ const (
 	POSTAllocateHostsActionEnumAllocateHosts POSTAllocateHostsActionEnum = "AllocateHosts"
 )
 
+func (e POSTAllocateHostsActionEnum) ToPointer() *POSTAllocateHostsActionEnum {
+	return &e
+}
+
 func (e *POSTAllocateHostsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AllocateHosts":
-		*e = POSTAllocateHostsActionEnum(s)
+		*e = POSTAllocateHostsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAllocateHostsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAllocateHostsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAllocateHostsVersionEnumTwoThousandAndSixteen1115 POSTAllocateHostsVersionEnum = "2016-11-15"
 )
 
+func (e POSTAllocateHostsVersionEnum) ToPointer() *POSTAllocateHostsVersionEnum {
+	return &e
+}
+
 func (e *POSTAllocateHostsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTAllocateHostsVersionEnum(s)
+		*e = POSTAllocateHostsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAllocateHostsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAllocateHostsVersionEnum: %v", v)
 	}
 }
 

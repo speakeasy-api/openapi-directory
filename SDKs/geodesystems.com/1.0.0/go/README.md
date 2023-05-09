@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/geodesystems.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MediaTabularExtractsheetRequest{
-        Arg1: "corrupti",
+    ctx := context.Background()
+    res, err := s.ServiceMediaTabularExtractsheet.MediaTabularExtractsheet(ctx, operations.MediaTabularExtractsheetRequest{
+        Arg1: sdk.String("corrupti"),
         Entryid: "provident",
         Output: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.ServiceMediaTabularExtractsheet.MediaTabularExtractsheet(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,969 +44,969 @@ func main() {
 ## Available Resources and Operations
 
 
-### ServiceMediaTabularExtractsheet
+### [ServiceMediaTabularExtractsheet](docs/servicemediatabularextractsheet/README.md)
 
-* `MediaTabularExtractsheet` - API for Extract sheets
+* [MediaTabularExtractsheet](docs/servicemediatabularextractsheet/README.md#mediatabularextractsheet) - API for Extract sheets
 
-### Type2017BoulderElectionExpenditures
+### [Type2017BoulderElectionExpenditures](docs/type2017boulderelectionexpenditures/README.md)
 
-* `Search2017BoulderElectionExpenditures` - Search API for '2017 Boulder Election Expenditures' entry type
+* [Search2017BoulderElectionExpenditures](docs/type2017boulderelectionexpenditures/README.md#search2017boulderelectionexpenditures) - Search API for '2017 Boulder Election Expenditures' entry type
 
-### TypeAny
+### [TypeAny](docs/typeany/README.md)
 
-* `SearchAny` - Search API for 'Any file type' entry type
+* [SearchAny](docs/typeany/README.md#searchany) - Search API for 'Any file type' entry type
 
-### TypeBeforeafter
+### [TypeBeforeafter](docs/typebeforeafter/README.md)
 
-* `SearchBeforeafter` - Search API for 'Before and After Images' entry type
+* [SearchBeforeafter](docs/typebeforeafter/README.md#searchbeforeafter) - Search API for 'Before and After Images' entry type
 
-### TypeBiblio
+### [TypeBiblio](docs/typebiblio/README.md)
 
-* `SearchBiblio` - Search API for 'Bibliographic Entry' entry type
+* [SearchBiblio](docs/typebiblio/README.md#searchbiblio) - Search API for 'Bibliographic Entry' entry type
 
-### TypeBioDicom
+### [TypeBioDicom](docs/typebiodicom/README.md)
 
-* `SearchBioDicom` - Search API for 'DICOM File' entry type
+* [SearchBioDicom](docs/typebiodicom/README.md#searchbiodicom) - Search API for 'DICOM File' entry type
 
-### TypeBioDicomTest
+### [TypeBioDicomTest](docs/typebiodicomtest/README.md)
 
-* `SearchBioDicomTest` - Search API for 'DICOM Test File' entry type
+* [SearchBioDicomTest](docs/typebiodicomtest/README.md#searchbiodicomtest) - Search API for 'DICOM Test File' entry type
 
-### TypeBioFasta
+### [TypeBioFasta](docs/typebiofasta/README.md)
 
-* `SearchBioFasta` - Search API for 'FASTA File' entry type
+* [SearchBioFasta](docs/typebiofasta/README.md#searchbiofasta) - Search API for 'FASTA File' entry type
 
-### TypeBioFastq
+### [TypeBioFastq](docs/typebiofastq/README.md)
 
-* `SearchBioFastq` - Search API for 'FASTQ File' entry type
+* [SearchBioFastq](docs/typebiofastq/README.md#searchbiofastq) - Search API for 'FASTQ File' entry type
 
-### TypeBioHmmerIndex
+### [TypeBioHmmerIndex](docs/typebiohmmerindex/README.md)
 
-* `SearchBioHmmerIndex` - Search API for 'HMMER Index File' entry type
+* [SearchBioHmmerIndex](docs/typebiohmmerindex/README.md#searchbiohmmerindex) - Search API for 'HMMER Index File' entry type
 
-### TypeBioOmeTiff
+### [TypeBioOmeTiff](docs/typebioometiff/README.md)
 
-* `SearchBioOmeTiff` - Search API for 'OME TIFF File' entry type
+* [SearchBioOmeTiff](docs/typebioometiff/README.md#searchbioometiff) - Search API for 'OME TIFF File' entry type
 
-### TypeBioOntologyAssay
+### [TypeBioOntologyAssay](docs/typebioontologyassay/README.md)
 
-* `SearchBioOntologyAssay` - Search API for 'Assay' entry type
+* [SearchBioOntologyAssay](docs/typebioontologyassay/README.md#searchbioontologyassay) - Search API for 'Assay' entry type
 
-### TypeBioOntologyCohort
+### [TypeBioOntologyCohort](docs/typebioontologycohort/README.md)
 
-* `SearchBioOntologyCohort` - Search API for 'Cohort' entry type
+* [SearchBioOntologyCohort](docs/typebioontologycohort/README.md#searchbioontologycohort) - Search API for 'Cohort' entry type
 
-### TypeBioOntologyPerson
+### [TypeBioOntologyPerson](docs/typebioontologyperson/README.md)
 
-* `SearchBioOntologyPerson` - Search API for 'Person' entry type
+* [SearchBioOntologyPerson](docs/typebioontologyperson/README.md#searchbioontologyperson) - Search API for 'Person' entry type
 
-### TypeBioOntologySample
+### [TypeBioOntologySample](docs/typebioontologysample/README.md)
 
-* `SearchBioOntologySample` - Search API for 'Sample' entry type
+* [SearchBioOntologySample](docs/typebioontologysample/README.md#searchbioontologysample) - Search API for 'Sample' entry type
 
-### TypeBioOntologySeries
+### [TypeBioOntologySeries](docs/typebioontologyseries/README.md)
 
-* `SearchBioOntologySeries` - Search API for 'Series' entry type
+* [SearchBioOntologySeries](docs/typebioontologyseries/README.md#searchbioontologyseries) - Search API for 'Series' entry type
 
-### TypeBioOntologyStudy
+### [TypeBioOntologyStudy](docs/typebioontologystudy/README.md)
 
-* `SearchBioOntologyStudy` - Search API for 'Study' entry type
+* [SearchBioOntologyStudy](docs/typebioontologystudy/README.md#searchbioontologystudy) - Search API for 'Study' entry type
 
-### TypeBioSam
+### [TypeBioSam](docs/typebiosam/README.md)
 
-* `SearchBioSam` - Search API for 'SAM Data' entry type
+* [SearchBioSam](docs/typebiosam/README.md#searchbiosam) - Search API for 'SAM Data' entry type
 
-### TypeBioSfPdb
+### [TypeBioSfPdb](docs/typebiosfpdb/README.md)
 
-* `SearchBioSfPdb` - Search API for 'PDB Protein File' entry type
+* [SearchBioSfPdb](docs/typebiosfpdb/README.md#searchbiosfpdb) - Search API for 'PDB Protein File' entry type
 
-### TypeBioSra
+### [TypeBioSra](docs/typebiosra/README.md)
 
-* `SearchBioSra` - Search API for 'Sequence Read Archive' entry type
+* [SearchBioSra](docs/typebiosra/README.md#searchbiosra) - Search API for 'Sequence Read Archive' entry type
 
-### TypeBioStockholm
+### [TypeBioStockholm](docs/typebiostockholm/README.md)
 
-* `SearchBioStockholm` - Search API for 'Stockholm File' entry type
+* [SearchBioStockholm](docs/typebiostockholm/README.md#searchbiostockholm) - Search API for 'Stockholm File' entry type
 
-### TypeBioTaxonomy
+### [TypeBioTaxonomy](docs/typebiotaxonomy/README.md)
 
-* `SearchBioTaxonomy` - Search API for 'Taxonomic Entry' entry type
+* [SearchBioTaxonomy](docs/typebiotaxonomy/README.md#searchbiotaxonomy) - Search API for 'Taxonomic Entry' entry type
 
-### TypeBlogentry
+### [TypeBlogentry](docs/typeblogentry/README.md)
 
-* `SearchBlogentry` - Search API for 'Weblog Entry' entry type
+* [SearchBlogentry](docs/typeblogentry/README.md#searchblogentry) - Search API for 'Weblog Entry' entry type
 
-### TypeBolderRentalHousing
+### [TypeBolderRentalHousing](docs/typebolderrentalhousing/README.md)
 
-* `SearchBolderRentalHousing` - Search API for 'Boulder Rental Housing' entry type
+* [SearchBolderRentalHousing](docs/typebolderrentalhousing/README.md#searchbolderrentalhousing) - Search API for 'Boulder Rental Housing' entry type
 
-### TypeBookmarks
+### [TypeBookmarks](docs/typebookmarks/README.md)
 
-* `SearchBookmarks` - Search API for 'Bookmarks' entry type
+* [SearchBookmarks](docs/typebookmarks/README.md#searchbookmarks) - Search API for 'Bookmarks' entry type
 
-### TypeBostonCrime
+### [TypeBostonCrime](docs/typebostoncrime/README.md)
 
-* `SearchBostonCrime` - Search API for 'Boston Crime' entry type
+* [SearchBostonCrime](docs/typebostoncrime/README.md#searchbostoncrime) - Search API for 'Boston Crime' entry type
 
-### TypeBoulder2017ElectionContributions
+### [TypeBoulder2017ElectionContributions](docs/typeboulder2017electioncontributions/README.md)
 
-* `SearchBoulder2017ElectionContributions` - Search API for 'Boulder 2017 Election Contributions' entry type
+* [SearchBoulder2017ElectionContributions](docs/typeboulder2017electioncontributions/README.md#searchboulder2017electioncontributions) - Search API for 'Boulder 2017 Election Contributions' entry type
 
-### TypeBoulderCampaignContributions
+### [TypeBoulderCampaignContributions](docs/typebouldercampaigncontributions/README.md)
 
-* `SearchBoulderCampaignContributions` - Search API for 'Boulder Campaign Contributions' entry type
+* [SearchBoulderCampaignContributions](docs/typebouldercampaigncontributions/README.md#searchbouldercampaigncontributions) - Search API for 'Boulder Campaign Contributions' entry type
 
-### TypeBoulderConsultingServices
+### [TypeBoulderConsultingServices](docs/typeboulderconsultingservices/README.md)
 
-* `SearchBoulderConsultingServices` - Search API for 'Boulder Consulting Services Database' entry type
+* [SearchBoulderConsultingServices](docs/typeboulderconsultingservices/README.md#searchboulderconsultingservices) - Search API for 'Boulder Consulting Services Database' entry type
 
-### TypeBoulderCountyVoterDetails
+### [TypeBoulderCountyVoterDetails](docs/typebouldercountyvoterdetails/README.md)
 
-* `SearchBoulderCountyVoterDetails` - Search API for 'Boulder County Voter Details' entry type
+* [SearchBoulderCountyVoterDetails](docs/typebouldercountyvoterdetails/README.md#searchbouldercountyvoterdetails) - Search API for 'Boulder County Voter Details' entry type
 
-### TypeBoulderCrimes
+### [TypeBoulderCrimes](docs/typebouldercrimes/README.md)
 
-* `SearchBoulderCrimes` - Search API for 'Boulder Crime Reports' entry type
+* [SearchBoulderCrimes](docs/typebouldercrimes/README.md#searchbouldercrimes) - Search API for 'Boulder Crime Reports' entry type
 
-### TypeBoulderEmails
+### [TypeBoulderEmails](docs/typeboulderemails/README.md)
 
-* `SearchBoulderEmails` - Search API for 'Boulder Council Emails' entry type
+* [SearchBoulderEmails](docs/typeboulderemails/README.md#searchboulderemails) - Search API for 'Boulder Council Emails' entry type
 
-### TypeBoulderEmployeeSalaries
+### [TypeBoulderEmployeeSalaries](docs/typeboulderemployeesalaries/README.md)
 
-* `SearchBoulderEmployeeSalaries` - Search API for 'Boulder Employee Salaries' entry type
+* [SearchBoulderEmployeeSalaries](docs/typeboulderemployeesalaries/README.md#searchboulderemployeesalaries) - Search API for 'Boulder Employee Salaries' entry type
 
-### TypeCalendar
+### [TypeCalendar](docs/typecalendar/README.md)
 
-* `SearchCalendar` - Search API for 'Calendar' entry type
+* [SearchCalendar](docs/typecalendar/README.md#searchcalendar) - Search API for 'Calendar' entry type
 
-### TypeCampaignDonors
+### [TypeCampaignDonors](docs/typecampaigndonors/README.md)
 
-* `SearchCampaignDonors` - Search API for 'Campaign Donors' entry type
+* [SearchCampaignDonors](docs/typecampaigndonors/README.md#searchcampaigndonors) - Search API for 'Campaign Donors' entry type
 
-### TypeCampaignExpenditures
+### [TypeCampaignExpenditures](docs/typecampaignexpenditures/README.md)
 
-* `SearchCampaignExpenditures` - Search API for 'Campaign Expenditures' entry type
+* [SearchCampaignExpenditures](docs/typecampaignexpenditures/README.md#searchcampaignexpenditures) - Search API for 'Campaign Expenditures' entry type
 
-### TypeCataloglink
+### [TypeCataloglink](docs/typecataloglink/README.md)
 
-* `SearchCataloglink` - Search API for 'Catalog Link' entry type
+* [SearchCataloglink](docs/typecataloglink/README.md#searchcataloglink) - Search API for 'Catalog Link' entry type
 
-### TypeCdmGrid
+### [TypeCdmGrid](docs/typecdmgrid/README.md)
 
-* `SearchCdmGrid` - Search API for 'Gridded Data File' entry type
+* [SearchCdmGrid](docs/typecdmgrid/README.md#searchcdmgrid) - Search API for 'Gridded Data File' entry type
 
-### TypeChatroom
+### [TypeChatroom](docs/typechatroom/README.md)
 
-* `SearchChatroom` - Search API for 'Chat Room' entry type
+* [SearchChatroom](docs/typechatroom/README.md#searchchatroom) - Search API for 'Chat Room' entry type
 
-### TypeColoradoWaterRights
+### [TypeColoradoWaterRights](docs/typecoloradowaterrights/README.md)
 
-* `SearchColoradoWaterRights` - Search API for 'Colorado Water Rights' entry type
+* [SearchColoradoWaterRights](docs/typecoloradowaterrights/README.md#searchcoloradowaterrights) - Search API for 'Colorado Water Rights' entry type
 
-### TypeCommitteeDonations
+### [TypeCommitteeDonations](docs/typecommitteedonations/README.md)
 
-* `SearchCommitteeDonations` - Search API for 'Committee Donations' entry type
+* [SearchCommitteeDonations](docs/typecommitteedonations/README.md#searchcommitteedonations) - Search API for 'Committee Donations' entry type
 
-### TypeCommunityDatahub
+### [TypeCommunityDatahub](docs/typecommunitydatahub/README.md)
 
-* `SearchCommunityDatahub` - Search API for 'Data Hub' entry type
+* [SearchCommunityDatahub](docs/typecommunitydatahub/README.md#searchcommunitydatahub) - Search API for 'Data Hub' entry type
 
-### TypeCommunityResource
+### [TypeCommunityResource](docs/typecommunityresource/README.md)
 
-* `SearchCommunityResource` - Search API for 'Facility' entry type
+* [SearchCommunityResource](docs/typecommunityresource/README.md#searchcommunityresource) - Search API for 'Facility' entry type
 
-### TypeConstructionPermits
+### [TypeConstructionPermits](docs/typeconstructionpermits/README.md)
 
-* `SearchConstructionPermits` - Search API for 'Construction Permits' entry type
+* [SearchConstructionPermits](docs/typeconstructionpermits/README.md#searchconstructionpermits) - Search API for 'Construction Permits' entry type
 
-### TypeContact
+### [TypeContact](docs/typecontact/README.md)
 
-* `SearchContact` - Search API for 'Contact List' entry type
+* [SearchContact](docs/typecontact/README.md#searchcontact) - Search API for 'Contact List' entry type
 
-### TypeDbCoIndicators
+### [TypeDbCoIndicators](docs/typedbcoindicators/README.md)
 
-* `SearchDbCoIndicators` - Search API for 'Colorado Health Indicators' entry type
+* [SearchDbCoIndicators](docs/typedbcoindicators/README.md#searchdbcoindicators) - Search API for 'Colorado Health Indicators' entry type
 
-### TypeEarthSatelliteLandsat
+### [TypeEarthSatelliteLandsat](docs/typeearthsatellitelandsat/README.md)
 
-* `SearchEarthSatelliteLandsat` - Search API for 'Landsat Satellite Data' entry type
+* [SearchEarthSatelliteLandsat](docs/typeearthsatellitelandsat/README.md#searchearthsatellitelandsat) - Search API for 'Landsat Satellite Data' entry type
 
-### TypeFaq
+### [TypeFaq](docs/typefaq/README.md)
 
-* `SearchFaq` - Search API for 'FAQ' entry type
+* [SearchFaq](docs/typefaq/README.md#searchfaq) - Search API for 'FAQ' entry type
 
-### TypeFecPacs
+### [TypeFecPacs](docs/typefecpacs/README.md)
 
-* `SearchFecPacs` - Search API for 'FEC PACs' entry type
+* [SearchFecPacs](docs/typefecpacs/README.md#searchfecpacs) - Search API for 'FEC PACs' entry type
 
-### TypeFeccandidates
+### [TypeFeccandidates](docs/typefeccandidates/README.md)
 
-* `SearchFeccandidates` - Search API for 'Candidates' entry type
+* [SearchFeccandidates](docs/typefeccandidates/README.md#searchfeccandidates) - Search API for 'Candidates' entry type
 
-### TypeFeed
+### [TypeFeed](docs/typefeed/README.md)
 
-* `SearchFeed` - Search API for 'RSS/ATOM Feed' entry type
+* [SearchFeed](docs/typefeed/README.md#searchfeed) - Search API for 'RSS/ATOM Feed' entry type
 
-### TypeFile
+### [TypeFile](docs/typefile/README.md)
 
-* `SearchFile` - Search API for 'File' entry type
+* [SearchFile](docs/typefile/README.md#searchfile) - Search API for 'File' entry type
 
-### TypeFitsData
+### [TypeFitsData](docs/typefitsdata/README.md)
 
-* `SearchFitsData` - Search API for 'FITS Data File' entry type
+* [SearchFitsData](docs/typefitsdata/README.md#searchfitsdata) - Search API for 'FITS Data File' entry type
 
-### TypeFtp
+### [TypeFtp](docs/typeftp/README.md)
 
-* `SearchFtp` - Search API for 'Remote FTP File View' entry type
+* [SearchFtp](docs/typeftp/README.md#searchftp) - Search API for 'Remote FTP File View' entry type
 
-### TypeGadgetsCountdown
+### [TypeGadgetsCountdown](docs/typegadgetscountdown/README.md)
 
-* `SearchGadgetsCountdown` - Search API for 'Countdown' entry type
+* [SearchGadgetsCountdown](docs/typegadgetscountdown/README.md#searchgadgetscountdown) - Search API for 'Countdown' entry type
 
-### TypeGadgetsStock
+### [TypeGadgetsStock](docs/typegadgetsstock/README.md)
 
-* `SearchGadgetsStock` - Search API for 'Stock Ticker' entry type
+* [SearchGadgetsStock](docs/typegadgetsstock/README.md#searchgadgetsstock) - Search API for 'Stock Ticker' entry type
 
-### TypeGadgetsWeather
+### [TypeGadgetsWeather](docs/typegadgetsweather/README.md)
 
-* `SearchGadgetsWeather` - Search API for 'Weather' entry type
+* [SearchGadgetsWeather](docs/typegadgetsweather/README.md#searchgadgetsweather) - Search API for 'Weather' entry type
 
-### TypeGazeteerCensusTracts
+### [TypeGazeteerCensusTracts](docs/typegazeteercensustracts/README.md)
 
-* `SearchGazeteerCensusTracts` - Search API for 'Census Tracts' entry type
+* [SearchGazeteerCensusTracts](docs/typegazeteercensustracts/README.md#searchgazeteercensustracts) - Search API for 'Census Tracts' entry type
 
-### TypeGazeteerCounties
+### [TypeGazeteerCounties](docs/typegazeteercounties/README.md)
 
-* `SearchGazeteerCounties` - Search API for 'Census Gazeteer Counties' entry type
+* [SearchGazeteerCounties](docs/typegazeteercounties/README.md#searchgazeteercounties) - Search API for 'Census Gazeteer Counties' entry type
 
-### TypeGeoGe
+### [TypeGeoGe](docs/typegeoge/README.md)
 
-* `SearchGeoGeojson` - Search API for 'GeoJson File' entry type
+* [SearchGeoGeojson](docs/typegeoge/README.md#searchgeogeojson) - Search API for 'GeoJson File' entry type
 
-### TypeGeoGeotiff
+### [TypeGeoGeotiff](docs/typegeogeotiff/README.md)
 
-* `SearchGeoGeotiff` - Search API for 'GeoTIFF' entry type
+* [SearchGeoGeotiff](docs/typegeogeotiff/README.md#searchgeogeotiff) - Search API for 'GeoTIFF' entry type
 
-### TypeGeoGpx
+### [TypeGeoGpx](docs/typegeogpx/README.md)
 
-* `SearchGeoGpx` - Search API for 'GPX GPS File' entry type
+* [SearchGeoGpx](docs/typegeogpx/README.md#searchgeogpx) - Search API for 'GPX GPS File' entry type
 
-### TypeGeoHdf5
+### [TypeGeoHdf5](docs/typegeohdf5/README.md)
 
-* `SearchGeoHdf5` - Search API for 'HDF5 File' entry type
+* [SearchGeoHdf5](docs/typegeohdf5/README.md#searchgeohdf5) - Search API for 'HDF5 File' entry type
 
-### TypeGeoKml
+### [TypeGeoKml](docs/typegeokml/README.md)
 
-* `SearchGeoKml` - Search API for 'KML/KMZ File' entry type
+* [SearchGeoKml](docs/typegeokml/README.md#searchgeokml) - Search API for 'KML/KMZ File' entry type
 
-### TypeGeoShapefile
+### [TypeGeoShapefile](docs/typegeoshapefile/README.md)
 
-* `SearchGeoShapefile` - Search API for 'Shapefile' entry type
+* [SearchGeoShapefile](docs/typegeoshapefile/README.md#searchgeoshapefile) - Search API for 'Shapefile' entry type
 
-### TypeGeoShapefileFips
+### [TypeGeoShapefileFips](docs/typegeoshapefilefips/README.md)
 
-* `SearchGeoShapefileFips` - Search API for 'Shapefile with FIPS Code' entry type
+* [SearchGeoShapefileFips](docs/typegeoshapefilefips/README.md#searchgeoshapefilefips) - Search API for 'Shapefile with FIPS Code' entry type
 
-### TypeGlossary
+### [TypeGlossary](docs/typeglossary/README.md)
 
-* `SearchGlossary` - Search API for 'Glossary' entry type
+* [SearchGlossary](docs/typeglossary/README.md#searchglossary) - Search API for 'Glossary' entry type
 
-### TypeGridaggregation
+### [TypeGridaggregation](docs/typegridaggregation/README.md)
 
-* `SearchGridaggregation` - Search API for 'Grid Aggregation' entry type
+* [SearchGridaggregation](docs/typegridaggregation/README.md#searchgridaggregation) - Search API for 'Grid Aggregation' entry type
 
-### TypeGroup
+### [TypeGroup](docs/typegroup/README.md)
 
-* `SearchGroup` - Search API for 'Folder' entry type
+* [SearchGroup](docs/typegroup/README.md#searchgroup) - Search API for 'Folder' entry type
 
-### TypeHipchatGroup
+### [TypeHipchatGroup](docs/typehipchatgroup/README.md)
 
-* `SearchHipchatGroup` - Search API for 'HipChat Group' entry type
+* [SearchHipchatGroup](docs/typehipchatgroup/README.md#searchhipchatgroup) - Search API for 'HipChat Group' entry type
 
-### TypeHomepage
+### [TypeHomepage](docs/typehomepage/README.md)
 
-* `SearchHomepage` - Search API for 'Home Page' entry type
+* [SearchHomepage](docs/typehomepage/README.md#searchhomepage) - Search API for 'Home Page' entry type
 
-### TypeIncident
+### [TypeIncident](docs/typeincident/README.md)
 
-* `SearchIncident` - Search API for 'Incident' entry type
+* [SearchIncident](docs/typeincident/README.md#searchincident) - Search API for 'Incident' entry type
 
-### TypeJeopardy
+### [TypeJeopardy](docs/typejeopardy/README.md)
 
-* `SearchJeopardy` - Search API for 'Jeopardy' entry type
+* [SearchJeopardy](docs/typejeopardy/README.md#searchjeopardy) - Search API for 'Jeopardy' entry type
 
-### TypeLatlonimage
+### [TypeLatlonimage](docs/typelatlonimage/README.md)
 
-* `SearchLatlonimage` - Search API for 'Lat-Lon Image' entry type
+* [SearchLatlonimage](docs/typelatlonimage/README.md#searchlatlonimage) - Search API for 'Lat-Lon Image' entry type
 
-### TypeLidarCollection
+### [TypeLidarCollection](docs/typelidarcollection/README.md)
 
-* `SearchLidarCollection` - Search API for 'LiDAR Collection' entry type
+* [SearchLidarCollection](docs/typelidarcollection/README.md#searchlidarcollection) - Search API for 'LiDAR Collection' entry type
 
-### TypeLidarLas
+### [TypeLidarLas](docs/typelidarlas/README.md)
 
-* `SearchLidarLas` - Search API for 'LAS Lidar Data' entry type
+* [SearchLidarLas](docs/typelidarlas/README.md#searchlidarlas) - Search API for 'LAS Lidar Data' entry type
 
-### TypeLidarLvis
+### [TypeLidarLvis](docs/typelidarlvis/README.md)
 
-* `SearchLidarLvis` - Search API for 'LVIS Lidar Data' entry type
+* [SearchLidarLvis](docs/typelidarlvis/README.md#searchlidarlvis) - Search API for 'LVIS Lidar Data' entry type
 
-### TypeLink
+### [TypeLink](docs/typelink/README.md)
 
-* `SearchLink` - Search API for 'Link' entry type
+* [SearchLink](docs/typelink/README.md#searchlink) - Search API for 'Link' entry type
 
-### TypeLocalfiles
+### [TypeLocalfiles](docs/typelocalfiles/README.md)
 
-* `SearchLocalfiles` - Search API for 'Server Side Files' entry type
+* [SearchLocalfiles](docs/typelocalfiles/README.md#searchlocalfiles) - Search API for 'Server Side Files' entry type
 
-### TypeLocations
+### [TypeLocations](docs/typelocations/README.md)
 
-* `SearchLocations` - Search API for 'Locations' entry type
+* [SearchLocations](docs/typelocations/README.md#searchlocations) - Search API for 'Locations' entry type
 
-### TypeMapGooglemap
+### [TypeMapGooglemap](docs/typemapgooglemap/README.md)
 
-* `SearchMapGooglemap` - Search API for 'Google Map URL' entry type
+* [SearchMapGooglemap](docs/typemapgooglemap/README.md#searchmapgooglemap) - Search API for 'Google Map URL' entry type
 
-### TypeMediaAudiofile
+### [TypeMediaAudiofile](docs/typemediaaudiofile/README.md)
 
-* `SearchMediaAudiofile` - Search API for 'Audio File' entry type
+* [SearchMediaAudiofile](docs/typemediaaudiofile/README.md#searchmediaaudiofile) - Search API for 'Audio File' entry type
 
-### TypeMediaImageloop
+### [TypeMediaImageloop](docs/typemediaimageloop/README.md)
 
-* `SearchMediaImageloop` - Search API for 'Image Loop' entry type
+* [SearchMediaImageloop](docs/typemediaimageloop/README.md#searchmediaimageloop) - Search API for 'Image Loop' entry type
 
-### TypeMediaPhotoalbum
+### [TypeMediaPhotoalbum](docs/typemediaphotoalbum/README.md)
 
-* `SearchMediaPhotoalbum` - Search API for 'Photo Album' entry type
+* [SearchMediaPhotoalbum](docs/typemediaphotoalbum/README.md#searchmediaphotoalbum) - Search API for 'Photo Album' entry type
 
-### TypeMediaVideoChannel
+### [TypeMediaVideoChannel](docs/typemediavideochannel/README.md)
 
-* `SearchMediaVideoChannel` - Search API for 'Video Channel' entry type
+* [SearchMediaVideoChannel](docs/typemediavideochannel/README.md#searchmediavideochannel) - Search API for 'Video Channel' entry type
 
-### TypeMediaVideoQuicktime
+### [TypeMediaVideoQuicktime](docs/typemediavideoquicktime/README.md)
 
-* `SearchMediaVideoQuicktime` - Search API for 'Quicktime Video' entry type
+* [SearchMediaVideoQuicktime](docs/typemediavideoquicktime/README.md#searchmediavideoquicktime) - Search API for 'Quicktime Video' entry type
 
-### TypeMediaYoutubevideo
+### [TypeMediaYoutubevideo](docs/typemediayoutubevideo/README.md)
 
-* `SearchMediaYoutubevideo` - Search API for 'YouTube Video' entry type
+* [SearchMediaYoutubevideo](docs/typemediayoutubevideo/README.md#searchmediayoutubevideo) - Search API for 'YouTube Video' entry type
 
-### TypeNotes
+### [TypeNotes](docs/typenotes/README.md)
 
-* `SearchNotes` - Search API for 'Notes' entry type
+* [SearchNotes](docs/typenotes/README.md#searchnotes) - Search API for 'Notes' entry type
 
-### TypeNotesJsonfile
+### [TypeNotesJsonfile](docs/typenotesjsonfile/README.md)
 
-* `SearchNotesJsonfile` - Search API for 'Json File' entry type
+* [SearchNotesJsonfile](docs/typenotesjsonfile/README.md#searchnotesjsonfile) - Search API for 'Json File' entry type
 
-### TypeNotesNote
+### [TypeNotesNote](docs/typenotesnote/README.md)
 
-* `SearchNotesNote` - Search API for 'Note' entry type
+* [SearchNotesNote](docs/typenotesnote/README.md#searchnotesnote) - Search API for 'Note' entry type
 
-### TypeNotesNotebook
+### [TypeNotesNotebook](docs/typenotesnotebook/README.md)
 
-* `SearchNotesNotebook` - Search API for 'Notebook' entry type
+* [SearchNotesNotebook](docs/typenotesnotebook/README.md#searchnotesnotebook) - Search API for 'Notebook' entry type
 
-### TypeNwsfeed
+### [TypeNwsfeed](docs/typenwsfeed/README.md)
 
-* `SearchNwsfeed` - Search API for 'NWS Forecast Feed' entry type
+* [SearchNwsfeed](docs/typenwsfeed/README.md#searchnwsfeed) - Search API for 'NWS Forecast Feed' entry type
 
-### TypeOpendaplink
+### [TypeOpendaplink](docs/typeopendaplink/README.md)
 
-* `SearchOpendaplink` - Search API for 'OPeNDAP Link' entry type
+* [SearchOpendaplink](docs/typeopendaplink/README.md#searchopendaplink) - Search API for 'OPeNDAP Link' entry type
 
-### TypeOwlClass
+### [TypeOwlClass](docs/typeowlclass/README.md)
 
-* `SearchOwlClass` - Search API for 'OWL Class' entry type
+* [SearchOwlClass](docs/typeowlclass/README.md#searchowlclass) - Search API for 'OWL Class' entry type
 
-### TypeOwlOntology
+### [TypeOwlOntology](docs/typeowlontology/README.md)
 
-* `SearchOwlOntology` - Search API for 'OWL Ontology' entry type
+* [SearchOwlOntology](docs/typeowlontology/README.md#searchowlontology) - Search API for 'OWL Ontology' entry type
 
-### TypePasteitentry
+### [TypePasteitentry](docs/typepasteitentry/README.md)
 
-* `SearchPasteitentry` - Search API for 'Paste Text Entry' entry type
+* [SearchPasteitentry](docs/typepasteitentry/README.md#searchpasteitentry) - Search API for 'Paste Text Entry' entry type
 
-### TypePointText
+### [TypePointText](docs/typepointtext/README.md)
 
-* `SearchPointText` - Search API for 'Text Point Data' entry type
+* [SearchPointText](docs/typepointtext/README.md#searchpointtext) - Search API for 'Text Point Data' entry type
 
-### TypePoliceStopData
+### [TypePoliceStopData](docs/typepolicestopdata/README.md)
 
-* `SearchPoliceStopData` - Search API for 'Police Stop Data' entry type
+* [SearchPoliceStopData](docs/typepolicestopdata/README.md#searchpolicestopdata) - Search API for 'Police Stop Data' entry type
 
-### TypePoll
+### [TypePoll](docs/typepoll/README.md)
 
-* `SearchPoll` - Search API for 'Poll' entry type
+* [SearchPoll](docs/typepoll/README.md#searchpoll) - Search API for 'Poll' entry type
 
-### TypeProjectCampaign
+### [TypeProjectCampaign](docs/typeprojectcampaign/README.md)
 
-* `SearchProjectCampaign` - Search API for 'Campaign' entry type
+* [SearchProjectCampaign](docs/typeprojectcampaign/README.md#searchprojectcampaign) - Search API for 'Campaign' entry type
 
-### TypeProjectCasestudy
+### [TypeProjectCasestudy](docs/typeprojectcasestudy/README.md)
 
-* `SearchProjectCasestudy` - Search API for 'Case Study' entry type
+* [SearchProjectCasestudy](docs/typeprojectcasestudy/README.md#searchprojectcasestudy) - Search API for 'Case Study' entry type
 
-### TypeProjectContribution
+### [TypeProjectContribution](docs/typeprojectcontribution/README.md)
 
-* `SearchProjectContribution` - Search API for 'Research Contribution' entry type
+* [SearchProjectContribution](docs/typeprojectcontribution/README.md#searchprojectcontribution) - Search API for 'Research Contribution' entry type
 
-### TypeProjectDataformat
+### [TypeProjectDataformat](docs/typeprojectdataformat/README.md)
 
-* `SearchProjectDataformat` - Search API for 'Data Format' entry type
+* [SearchProjectDataformat](docs/typeprojectdataformat/README.md#searchprojectdataformat) - Search API for 'Data Format' entry type
 
-### TypeProjectDataset
+### [TypeProjectDataset](docs/typeprojectdataset/README.md)
 
-* `SearchProjectDataset` - Search API for 'Dataset' entry type
+* [SearchProjectDataset](docs/typeprojectdataset/README.md#searchprojectdataset) - Search API for 'Dataset' entry type
 
-### TypeProjectDeployment
+### [TypeProjectDeployment](docs/typeprojectdeployment/README.md)
 
-* `SearchProjectDeployment` - Search API for 'Deployment' entry type
+* [SearchProjectDeployment](docs/typeprojectdeployment/README.md#searchprojectdeployment) - Search API for 'Deployment' entry type
 
-### TypeProjectExperiment
+### [TypeProjectExperiment](docs/typeprojectexperiment/README.md)
 
-* `SearchProjectExperiment` - Search API for 'Experiment' entry type
+* [SearchProjectExperiment](docs/typeprojectexperiment/README.md#searchprojectexperiment) - Search API for 'Experiment' entry type
 
-### TypeProjectFieldnote
+### [TypeProjectFieldnote](docs/typeprojectfieldnote/README.md)
 
-* `SearchProjectFieldnote` - Search API for 'Field Note' entry type
+* [SearchProjectFieldnote](docs/typeprojectfieldnote/README.md#searchprojectfieldnote) - Search API for 'Field Note' entry type
 
-### TypeProjectGpsControlpoints
+### [TypeProjectGpsControlpoints](docs/typeprojectgpscontrolpoints/README.md)
 
-* `SearchProjectGpsControlpoints` - Search API for 'Control Points File' entry type
+* [SearchProjectGpsControlpoints](docs/typeprojectgpscontrolpoints/README.md#searchprojectgpscontrolpoints) - Search API for 'Control Points File' entry type
 
-### TypeProjectGpsRaw
+### [TypeProjectGpsRaw](docs/typeprojectgpsraw/README.md)
 
-* `SearchProjectGpsRaw` - Search API for 'Raw GPS File' entry type
+* [SearchProjectGpsRaw](docs/typeprojectgpsraw/README.md#searchprojectgpsraw) - Search API for 'Raw GPS File' entry type
 
-### TypeProjectGpsRinex
+### [TypeProjectGpsRinex](docs/typeprojectgpsrinex/README.md)
 
-* `SearchProjectGpsRinex` - Search API for 'RINEX File' entry type
+* [SearchProjectGpsRinex](docs/typeprojectgpsrinex/README.md#searchprojectgpsrinex) - Search API for 'RINEX File' entry type
 
-### TypeProjectInstrument
+### [TypeProjectInstrument](docs/typeprojectinstrument/README.md)
 
-* `SearchProjectInstrument` - Search API for 'Instrument Data Collection' entry type
+* [SearchProjectInstrument](docs/typeprojectinstrument/README.md#searchprojectinstrument) - Search API for 'Instrument Data Collection' entry type
 
-### TypeProjectLearningResource
+### [TypeProjectLearningResource](docs/typeprojectlearningresource/README.md)
 
-* `SearchProjectLearningResource` - Search API for 'Teaching Resource' entry type
+* [SearchProjectLearningResource](docs/typeprojectlearningresource/README.md#searchprojectlearningresource) - Search API for 'Teaching Resource' entry type
 
-### TypeProjectMeeting
+### [TypeProjectMeeting](docs/typeprojectmeeting/README.md)
 
-* `SearchProjectMeeting` - Search API for 'Meeting' entry type
+* [SearchProjectMeeting](docs/typeprojectmeeting/README.md#searchprojectmeeting) - Search API for 'Meeting' entry type
 
-### TypeProjectOrganization
+### [TypeProjectOrganization](docs/typeprojectorganization/README.md)
 
-* `SearchProjectOrganization` - Search API for 'Organization' entry type
+* [SearchProjectOrganization](docs/typeprojectorganization/README.md#searchprojectorganization) - Search API for 'Organization' entry type
 
-### TypeProjectProgram
+### [TypeProjectProgram](docs/typeprojectprogram/README.md)
 
-* `SearchProjectProgram` - Search API for 'Program' entry type
+* [SearchProjectProgram](docs/typeprojectprogram/README.md#searchprojectprogram) - Search API for 'Program' entry type
 
-### TypeProjectProject
+### [TypeProjectProject](docs/typeprojectproject/README.md)
 
-* `SearchProjectProject` - Search API for 'Project' entry type
+* [SearchProjectProject](docs/typeprojectproject/README.md#searchprojectproject) - Search API for 'Project' entry type
 
-### TypeProjectService
+### [TypeProjectService](docs/typeprojectservice/README.md)
 
-* `SearchProjectService` - Search API for 'Data Access Service' entry type
+* [SearchProjectService](docs/typeprojectservice/README.md#searchprojectservice) - Search API for 'Data Access Service' entry type
 
-### TypeProjectSite
+### [TypeProjectSite](docs/typeprojectsite/README.md)
 
-* `SearchProjectSite` - Search API for 'Site' entry type
+* [SearchProjectSite](docs/typeprojectsite/README.md#searchprojectsite) - Search API for 'Site' entry type
 
-### TypeProjectSoftwarepackage
+### [TypeProjectSoftwarepackage](docs/typeprojectsoftwarepackage/README.md)
 
-* `SearchProjectSoftwarepackage` - Search API for 'Software Tool' entry type
+* [SearchProjectSoftwarepackage](docs/typeprojectsoftwarepackage/README.md#searchprojectsoftwarepackage) - Search API for 'Software Tool' entry type
 
-### TypeProjectStandardName
+### [TypeProjectStandardName](docs/typeprojectstandardname/README.md)
 
-* `SearchProjectStandardName` - Search API for 'Standard Parameter Name' entry type
+* [SearchProjectStandardName](docs/typeprojectstandardname/README.md#searchprojectstandardname) - Search API for 'Standard Parameter Name' entry type
 
-### TypeProjectSurveylocation
+### [TypeProjectSurveylocation](docs/typeprojectsurveylocation/README.md)
 
-* `SearchProjectSurveylocation` - Search API for 'Survey Location' entry type
+* [SearchProjectSurveylocation](docs/typeprojectsurveylocation/README.md#searchprojectsurveylocation) - Search API for 'Survey Location' entry type
 
-### TypeProjectTerm
+### [TypeProjectTerm](docs/typeprojectterm/README.md)
 
-* `SearchProjectTerm` - Search API for 'Vocabulary Term' entry type
+* [SearchProjectTerm](docs/typeprojectterm/README.md#searchprojectterm) - Search API for 'Vocabulary Term' entry type
 
-### TypeProjectVisit
+### [TypeProjectVisit](docs/typeprojectvisit/README.md)
 
-* `SearchProjectVisit` - Search API for 'Site Visit' entry type
+* [SearchProjectVisit](docs/typeprojectvisit/README.md#searchprojectvisit) - Search API for 'Site Visit' entry type
 
-### TypeProjectVocabulary
+### [TypeProjectVocabulary](docs/typeprojectvocabulary/README.md)
 
-* `SearchProjectVocabulary` - Search API for 'Vocabulary' entry type
+* [SearchProjectVocabulary](docs/typeprojectvocabulary/README.md#searchprojectvocabulary) - Search API for 'Vocabulary' entry type
 
-### TypePropertySales
+### [TypePropertySales](docs/typepropertysales/README.md)
 
-* `SearchPropertySales` - Search API for 'Property Sales' entry type
+* [SearchPropertySales](docs/typepropertysales/README.md#searchpropertysales) - Search API for 'Property Sales' entry type
 
-### TypePropertydb
+### [TypePropertydb](docs/typepropertydb/README.md)
 
-* `SearchPropertydb` - Search API for 'Property Database' entry type
+* [SearchPropertydb](docs/typepropertydb/README.md#searchpropertydb) - Search API for 'Property Database' entry type
 
-### TypePythonNotebook
+### [TypePythonNotebook](docs/typepythonnotebook/README.md)
 
-* `SearchPythonNotebook` - Search API for 'IPython Notebook file' entry type
+* [SearchPythonNotebook](docs/typepythonnotebook/README.md#searchpythonnotebook) - Search API for 'IPython Notebook file' entry type
 
-### TypeSlackTeam
+### [TypeSlackTeam](docs/typeslackteam/README.md)
 
-* `SearchSlackTeam` - Search API for 'Slack Team' entry type
+* [SearchSlackTeam](docs/typeslackteam/README.md#searchslackteam) - Search API for 'Slack Team' entry type
 
-### TypeStatusboard
+### [TypeStatusboard](docs/typestatusboard/README.md)
 
-* `SearchStatusboard` - Search API for 'Status Board' entry type
+* [SearchStatusboard](docs/typestatusboard/README.md#searchstatusboard) - Search API for 'Status Board' entry type
 
-### TypeSunrisesunset
+### [TypeSunrisesunset](docs/typesunrisesunset/README.md)
 
-* `SearchSunrisesunset` - Search API for 'Sunrise/Sunset Display' entry type
+* [SearchSunrisesunset](docs/typesunrisesunset/README.md#searchsunrisesunset) - Search API for 'Sunrise/Sunset Display' entry type
 
-### TypeTasks
+### [TypeTasks](docs/typetasks/README.md)
 
-* `SearchTasks` - Search API for 'Tasks' entry type
+* [SearchTasks](docs/typetasks/README.md#searchtasks) - Search API for 'Tasks' entry type
 
-### TypeTmdbmovies
+### [TypeTmdbmovies](docs/typetmdbmovies/README.md)
 
-* `SearchTmdbmovies` - Search API for 'Tmdb Movies' entry type
+* [SearchTmdbmovies](docs/typetmdbmovies/README.md#searchtmdbmovies) - Search API for 'Tmdb Movies' entry type
 
-### TypeTodo
+### [TypeTodo](docs/typetodo/README.md)
 
-* `SearchTodo` - Search API for 'Todo' entry type
+* [SearchTodo](docs/typetodo/README.md#searchtodo) - Search API for 'Todo' entry type
 
-### TypeTripEvent
+### [TypeTripEvent](docs/typetripevent/README.md)
 
-* `SearchTripEvent` - Search API for 'Event' entry type
+* [SearchTripEvent](docs/typetripevent/README.md#searchtripevent) - Search API for 'Event' entry type
 
-### TypeTripFlight
+### [TypeTripFlight](docs/typetripflight/README.md)
 
-* `SearchTripFlight` - Search API for 'Flight Leg' entry type
+* [SearchTripFlight](docs/typetripflight/README.md#searchtripflight) - Search API for 'Flight Leg' entry type
 
-### TypeTripHotel
+### [TypeTripHotel](docs/typetriphotel/README.md)
 
-* `SearchTripHotel` - Search API for 'Lodging' entry type
+* [SearchTripHotel](docs/typetriphotel/README.md#searchtriphotel) - Search API for 'Lodging' entry type
 
-### TypeTripReport
+### [TypeTripReport](docs/typetripreport/README.md)
 
-* `SearchTripReport` - Search API for 'Trip Report' entry type
+* [SearchTripReport](docs/typetripreport/README.md#searchtripreport) - Search API for 'Trip Report' entry type
 
-### TypeTripTrip
+### [TypeTripTrip](docs/typetriptrip/README.md)
 
-* `SearchTripTrip` - Search API for 'Trip' entry type
+* [SearchTripTrip](docs/typetriptrip/README.md#searchtriptrip) - Search API for 'Trip' entry type
 
-### TypeTypeAwcMetar
+### [TypeTypeAwcMetar](docs/typetypeawcmetar/README.md)
 
-* `SearchTypeAwcMetar` - Search API for 'AWC Weather Observations' entry type
+* [SearchTypeAwcMetar](docs/typetypeawcmetar/README.md#searchtypeawcmetar) - Search API for 'AWC Weather Observations' entry type
 
-### TypeTypeBizStockseries
+### [TypeTypeBizStockseries](docs/typetypebizstockseries/README.md)
 
-* `SearchTypeBizStockseries` - Search API for 'Stock Ticker Data' entry type
+* [SearchTypeBizStockseries](docs/typetypebizstockseries/README.md#searchtypebizstockseries) - Search API for 'Stock Ticker Data' entry type
 
-### TypeTypeBlsSeries
+### [TypeTypeBlsSeries](docs/typetypeblsseries/README.md)
 
-* `SearchTypeBlsSeries` - Search API for 'BLS Series' entry type
+* [SearchTypeBlsSeries](docs/typetypeblsseries/README.md#searchtypeblsseries) - Search API for 'BLS Series' entry type
 
-### TypeTypeBlsSurvey
+### [TypeTypeBlsSurvey](docs/typetypeblssurvey/README.md)
 
-* `SearchTypeBlsSurvey` - Search API for 'BLS Survey' entry type
+* [SearchTypeBlsSurvey](docs/typetypeblssurvey/README.md#searchtypeblssurvey) - Search API for 'BLS Survey' entry type
 
-### TypeTypeCensusAcs
+### [TypeTypeCensusAcs](docs/typetypecensusacs/README.md)
 
-* `SearchTypeCensusAcs` - Search API for 'US Census ACS Data' entry type
+* [SearchTypeCensusAcs](docs/typetypecensusacs/README.md#searchtypecensusacs) - Search API for 'US Census ACS Data' entry type
 
-### TypeTypeDaymet
+### [TypeTypeDaymet](docs/typetypedaymet/README.md)
 
-* `SearchTypeDaymet` - Search API for 'Daymet Daily Weather' entry type
+* [SearchTypeDaymet](docs/typetypedaymet/README.md#searchtypedaymet) - Search API for 'Daymet Daily Weather' entry type
 
-### TypeTypeDbTable
+### [TypeTypeDbTable](docs/typetypedbtable/README.md)
 
-* `SearchTypeDbTable` - Search API for 'Database Table' entry type
+* [SearchTypeDbTable](docs/typetypedbtable/README.md#searchtypedbtable) - Search API for 'Database Table' entry type
 
-### TypeTypeDocumentCsv
+### [TypeTypeDocumentCsv](docs/typetypedocumentcsv/README.md)
 
-* `SearchTypeDocumentCsv` - Search API for 'CSV File' entry type
+* [SearchTypeDocumentCsv](docs/typetypedocumentcsv/README.md#searchtypedocumentcsv) - Search API for 'CSV File' entry type
 
-### TypeTypeDocumentDoc
+### [TypeTypeDocumentDoc](docs/typetypedocumentdoc/README.md)
 
-* `SearchTypeDocumentDoc` - Search API for 'Word File' entry type
+* [SearchTypeDocumentDoc](docs/typetypedocumentdoc/README.md#searchtypedocumentdoc) - Search API for 'Word File' entry type
 
-### TypeTypeDocumentHTML
+### [TypeTypeDocumentHTML](docs/typetypedocumenthtml/README.md)
 
-* `SearchTypeDocumentHTML` - Search API for 'HTML File' entry type
+* [SearchTypeDocumentHTML](docs/typetypedocumenthtml/README.md#searchtypedocumenthtml) - Search API for 'HTML File' entry type
 
-### TypeTypeDocumentPdf
+### [TypeTypeDocumentPdf](docs/typetypedocumentpdf/README.md)
 
-* `SearchTypeDocumentPdf` - Search API for 'PDF File' entry type
+* [SearchTypeDocumentPdf](docs/typetypedocumentpdf/README.md#searchtypedocumentpdf) - Search API for 'PDF File' entry type
 
-### TypeTypeDocumentPpt
+### [TypeTypeDocumentPpt](docs/typetypedocumentppt/README.md)
 
-* `SearchTypeDocumentPpt` - Search API for 'Powerpoint File' entry type
+* [SearchTypeDocumentPpt](docs/typetypedocumentppt/README.md#searchtypedocumentppt) - Search API for 'Powerpoint File' entry type
 
-### TypeTypeDocumentXls
+### [TypeTypeDocumentXls](docs/typetypedocumentxls/README.md)
 
-* `SearchTypeDocumentXls` - Search API for 'Excel File' entry type
+* [SearchTypeDocumentXls](docs/typetypedocumentxls/README.md#searchtypedocumentxls) - Search API for 'Excel File' entry type
 
-### TypeTypeDrilsdownCasestudy
+### [TypeTypeDrilsdownCasestudy](docs/typetypedrilsdowncasestudy/README.md)
 
-* `SearchTypeDrilsdownCasestudy` - Search API for 'Drilsdown Case Study' entry type
+* [SearchTypeDrilsdownCasestudy](docs/typetypedrilsdowncasestudy/README.md#searchtypedrilsdowncasestudy) - Search API for 'Drilsdown Case Study' entry type
 
-### TypeTypeEdgarFiling
+### [TypeTypeEdgarFiling](docs/typetypeedgarfiling/README.md)
 
-* `SearchTypeEdgarFiling` - Search API for 'SEC EDGAR Filing' entry type
+* [SearchTypeEdgarFiling](docs/typetypeedgarfiling/README.md#searchtypeedgarfiling) - Search API for 'SEC EDGAR Filing' entry type
 
-### TypeTypeEiaCategory
+### [TypeTypeEiaCategory](docs/typetypeeiacategory/README.md)
 
-* `SearchTypeEiaCategory` - Search API for 'EIA Category' entry type
+* [SearchTypeEiaCategory](docs/typetypeeiacategory/README.md#searchtypeeiacategory) - Search API for 'EIA Category' entry type
 
-### TypeTypeEiaSeries
+### [TypeTypeEiaSeries](docs/typetypeeiaseries/README.md)
 
-* `SearchTypeEiaSeries` - Search API for 'EIA Series' entry type
+* [SearchTypeEiaSeries](docs/typetypeeiaseries/README.md#searchtypeeiaseries) - Search API for 'EIA Series' entry type
 
-### TypeTypeEsriFeatureserver
+### [TypeTypeEsriFeatureserver](docs/typetypeesrifeatureserver/README.md)
 
-* `SearchTypeEsriFeatureserver` - Search API for 'ESRI Feature Server' entry type
+* [SearchTypeEsriFeatureserver](docs/typetypeesrifeatureserver/README.md#searchtypeesrifeatureserver) - Search API for 'ESRI Feature Server' entry type
 
-### TypeTypeEsriGeometryserver
+### [TypeTypeEsriGeometryserver](docs/typetypeesrigeometryserver/README.md)
 
-* `SearchTypeEsriGeometryserver` - Search API for 'ESRI Geometry Server' entry type
+* [SearchTypeEsriGeometryserver](docs/typetypeesrigeometryserver/README.md#searchtypeesrigeometryserver) - Search API for 'ESRI Geometry Server' entry type
 
-### TypeTypeEsriGpserver
+### [TypeTypeEsriGpserver](docs/typetypeesrigpserver/README.md)
 
-* `SearchTypeEsriGpserver` - Search API for 'ESRI GP Server' entry type
+* [SearchTypeEsriGpserver](docs/typetypeesrigpserver/README.md#searchtypeesrigpserver) - Search API for 'ESRI GP Server' entry type
 
-### TypeTypeEsriImageserver
+### [TypeTypeEsriImageserver](docs/typetypeesriimageserver/README.md)
 
-* `SearchTypeEsriImageserver` - Search API for 'ESRI Image Server' entry type
+* [SearchTypeEsriImageserver](docs/typetypeesriimageserver/README.md#searchtypeesriimageserver) - Search API for 'ESRI Image Server' entry type
 
-### TypeTypeEsriLayer
+### [TypeTypeEsriLayer](docs/typetypeesrilayer/README.md)
 
-* `SearchTypeEsriLayer` - Search API for 'ESRI Layer' entry type
+* [SearchTypeEsriLayer](docs/typetypeesrilayer/README.md#searchtypeesrilayer) - Search API for 'ESRI Layer' entry type
 
-### TypeTypeEsriMapserver
+### [TypeTypeEsriMapserver](docs/typetypeesrimapserver/README.md)
 
-* `SearchTypeEsriMapserver` - Search API for 'ESRI Map Server' entry type
+* [SearchTypeEsriMapserver](docs/typetypeesrimapserver/README.md#searchtypeesrimapserver) - Search API for 'ESRI Map Server' entry type
 
-### TypeTypeEsriRestfolder
+### [TypeTypeEsriRestfolder](docs/typetypeesrirestfolder/README.md)
 
-* `SearchTypeEsriRestfolder` - Search API for 'ESRI Services Folder' entry type
+* [SearchTypeEsriRestfolder](docs/typetypeesrirestfolder/README.md#searchtypeesrirestfolder) - Search API for 'ESRI Services Folder' entry type
 
-### TypeTypeEsriRestserver
+### [TypeTypeEsriRestserver](docs/typetypeesrirestserver/README.md)
 
-* `SearchTypeEsriRestserver` - Search API for 'ESRI Web Server' entry type
+* [SearchTypeEsriRestserver](docs/typetypeesrirestserver/README.md#searchtypeesrirestserver) - Search API for 'ESRI Web Server' entry type
 
-### TypeTypeEsriRestservice
+### [TypeTypeEsriRestservice](docs/typetypeesrirestservice/README.md)
 
-* `SearchTypeEsriRestservice` - Search API for 'ESRI Rest Service' entry type
+* [SearchTypeEsriRestservice](docs/typetypeesrirestservice/README.md#searchtypeesrirestservice) - Search API for 'ESRI Rest Service' entry type
 
-### TypeTypeExtremes
+### [TypeTypeExtremes](docs/typetypeextremes/README.md)
 
-* `SearchTypeExtremes` - Search API for 'NOAA Extremes Data' entry type
+* [SearchTypeExtremes](docs/typetypeextremes/README.md#searchtypeextremes) - Search API for 'NOAA Extremes Data' entry type
 
-### TypeTypeFredCategory
+### [TypeTypeFredCategory](docs/typetypefredcategory/README.md)
 
-* `SearchTypeFredCategory` - Search API for 'FRED Category' entry type
+* [SearchTypeFredCategory](docs/typetypefredcategory/README.md#searchtypefredcategory) - Search API for 'FRED Category' entry type
 
-### TypeTypeFredSeries
+### [TypeTypeFredSeries](docs/typetypefredseries/README.md)
 
-* `SearchTypeFredSeries` - Search API for 'FRED Series' entry type
+* [SearchTypeFredSeries](docs/typetypefredseries/README.md#searchtypefredseries) - Search API for 'FRED Series' entry type
 
-### TypeTypeGtfsAgency
+### [TypeTypeGtfsAgency](docs/typetypegtfsagency/README.md)
 
-* `SearchTypeGtfsAgency` - Search API for 'Transit Agency' entry type
+* [SearchTypeGtfsAgency](docs/typetypegtfsagency/README.md#searchtypegtfsagency) - Search API for 'Transit Agency' entry type
 
-### TypeTypeGtfsRoute
+### [TypeTypeGtfsRoute](docs/typetypegtfsroute/README.md)
 
-* `SearchTypeGtfsRoute` - Search API for 'Transit Route' entry type
+* [SearchTypeGtfsRoute](docs/typetypegtfsroute/README.md#searchtypegtfsroute) - Search API for 'Transit Route' entry type
 
-### TypeTypeGtfsRoutes
+### [TypeTypeGtfsRoutes](docs/typetypegtfsroutes/README.md)
 
-* `SearchTypeGtfsRoutes` - Search API for 'Transit Route Collection' entry type
+* [SearchTypeGtfsRoutes](docs/typetypegtfsroutes/README.md#searchtypegtfsroutes) - Search API for 'Transit Route Collection' entry type
 
-### TypeTypeGtfsStop
+### [TypeTypeGtfsStop](docs/typetypegtfsstop/README.md)
 
-* `SearchTypeGtfsStop` - Search API for 'Transit Stop' entry type
+* [SearchTypeGtfsStop](docs/typetypegtfsstop/README.md#searchtypegtfsstop) - Search API for 'Transit Stop' entry type
 
-### TypeTypeGtfsStops
+### [TypeTypeGtfsStops](docs/typetypegtfsstops/README.md)
 
-* `SearchTypeGtfsStops` - Search API for 'Transit Stop Collection' entry type
+* [SearchTypeGtfsStops](docs/typetypegtfsstops/README.md#searchtypegtfsstops) - Search API for 'Transit Stop Collection' entry type
 
-### TypeTypeGtfsTrip
+### [TypeTypeGtfsTrip](docs/typetypegtfstrip/README.md)
 
-* `SearchTypeGtfsTrip` - Search API for 'Transit Trip' entry type
+* [SearchTypeGtfsTrip](docs/typetypegtfstrip/README.md#searchtypegtfstrip) - Search API for 'Transit Trip' entry type
 
-### TypeTypeHazarddata
+### [TypeTypeHazarddata](docs/typetypehazarddata/README.md)
 
-* `SearchTypeHazarddata` - Search API for 'Hazard Data' entry type
+* [SearchTypeHazarddata](docs/typetypehazarddata/README.md#searchtypehazarddata) - Search API for 'Hazard Data' entry type
 
-### TypeTypeHydroColorado
+### [TypeTypeHydroColorado](docs/typetypehydrocolorado/README.md)
 
-* `SearchTypeHydroColorado` - Search API for 'Colorado DNR Stream Gage' entry type
+* [SearchTypeHydroColorado](docs/typetypehydrocolorado/README.md#searchtypehydrocolorado) - Search API for 'Colorado DNR Stream Gage' entry type
 
-### TypeTypeIdvBundle
+### [TypeTypeIdvBundle](docs/typetypeidvbundle/README.md)
 
-* `SearchTypeIdvBundle` - Search API for 'IDV Bundle' entry type
+* [SearchTypeIdvBundle](docs/typetypeidvbundle/README.md#searchtypeidvbundle) - Search API for 'IDV Bundle' entry type
 
-### TypeTypeImage
+### [TypeTypeImage](docs/typetypeimage/README.md)
 
-* `SearchTypeImage` - Search API for 'Image' entry type
+* [SearchTypeImage](docs/typetypeimage/README.md#searchtypeimage) - Search API for 'Image' entry type
 
-### TypeTypeImageAirport
+### [TypeTypeImageAirport](docs/typetypeimageairport/README.md)
 
-* `SearchTypeImageAirport` - Search API for 'Airport Image' entry type
+* [SearchTypeImageAirport](docs/typetypeimageairport/README.md#searchtypeimageairport) - Search API for 'Airport Image' entry type
 
-### TypeTypeImageWebcam
+### [TypeTypeImageWebcam](docs/typetypeimagewebcam/README.md)
 
-* `SearchTypeImageWebcam` - Search API for 'Webcam' entry type
+* [SearchTypeImageWebcam](docs/typetypeimagewebcam/README.md#searchtypeimagewebcam) - Search API for 'Webcam' entry type
 
-### TypeTypeMb
+### [TypeTypeMb](docs/typetypemb/README.md)
 
-* `SearchTypeMb` - Search API for 'MB Bathymetry' entry type
+* [SearchTypeMb](docs/typetypemb/README.md#searchtypemb) - Search API for 'MB Bathymetry' entry type
 
-### TypeTypeMbCollection
+### [TypeTypeMbCollection](docs/typetypembcollection/README.md)
 
-* `SearchTypeMbCollection` - Search API for 'Bathymetry Collection' entry type
+* [SearchTypeMbCollection](docs/typetypembcollection/README.md#searchtypembcollection) - Search API for 'Bathymetry Collection' entry type
 
-### TypeTypeMbPointBasic
+### [TypeTypeMbPointBasic](docs/typetypembpointbasic/README.md)
 
-* `SearchTypeMbPointBasic` - Search API for 'Basic MB point file' entry type
+* [SearchTypeMbPointBasic](docs/typetypembpointbasic/README.md#searchtypembpointbasic) - Search API for 'Basic MB point file' entry type
 
-### TypeTypeMetametaDictionary
+### [TypeTypeMetametaDictionary](docs/typetypemetametadictionary/README.md)
 
-* `SearchTypeMetametaDictionary` - Search API for 'Metadata Dictionary' entry type
+* [SearchTypeMetametaDictionary](docs/typetypemetametadictionary/README.md#searchtypemetametadictionary) - Search API for 'Metadata Dictionary' entry type
 
-### TypeTypeMetametaField
+### [TypeTypeMetametaField](docs/typetypemetametafield/README.md)
 
-* `SearchTypeMetametaField` - Search API for 'Metadata Field' entry type
+* [SearchTypeMetametaField](docs/typetypemetametafield/README.md#searchtypemetametafield) - Search API for 'Metadata Field' entry type
 
-### TypeTypeNasaames
+### [TypeTypeNasaames](docs/typetypenasaames/README.md)
 
-* `SearchTypeNasaames` - Search API for 'NASA AMES File' entry type
+* [SearchTypeNasaames](docs/typetypenasaames/README.md#searchtypenasaames) - Search API for 'NASA AMES File' entry type
 
-### TypeTypeNcss
+### [TypeTypeNcss](docs/typetypencss/README.md)
 
-* `SearchTypeNcss` - Search API for 'NetCDF Point Subset' entry type
+* [SearchTypeNcss](docs/typetypencss/README.md#searchtypencss) - Search API for 'NetCDF Point Subset' entry type
 
-### TypeTypeNitf
+### [TypeTypeNitf](docs/typetypenitf/README.md)
 
-* `SearchTypeNitf` - Search API for 'NITF File' entry type
+* [SearchTypeNitf](docs/typetypenitf/README.md#searchtypenitf) - Search API for 'NITF File' entry type
 
-### TypeTypePointAmerifluxLevel2
+### [TypeTypePointAmerifluxLevel2](docs/typetypepointamerifluxlevel2/README.md)
 
-* `SearchTypePointAmerifluxLevel2` - Search API for 'Ameriflux Level 2 CSV File' entry type
+* [SearchTypePointAmerifluxLevel2](docs/typetypepointamerifluxlevel2/README.md#searchtypepointamerifluxlevel2) - Search API for 'Ameriflux Level 2 CSV File' entry type
 
-### TypeTypePointAmrcFinal
+### [TypeTypePointAmrcFinal](docs/typetypepointamrcfinal/README.md)
 
-* `SearchTypePointAmrcFinal` - Search API for 'AMRC Final QC Data' entry type
+* [SearchTypePointAmrcFinal](docs/typetypepointamrcfinal/README.md#searchtypepointamrcfinal) - Search API for 'AMRC Final QC Data' entry type
 
-### TypeTypePointAmrcFreewave
+### [TypeTypePointAmrcFreewave](docs/typetypepointamrcfreewave/README.md)
 
-* `SearchTypePointAmrcFreewave` - Search API for 'AMRC Freewave  Data' entry type
+* [SearchTypePointAmrcFreewave](docs/typetypepointamrcfreewave/README.md#searchtypepointamrcfreewave) - Search API for 'AMRC Freewave  Data' entry type
 
-### TypeTypePointCzo
+### [TypeTypePointCzo](docs/typetypepointczo/README.md)
 
-* `SearchTypePointCzo` - Search API for 'CZO Display File Format' entry type
+* [SearchTypePointCzo](docs/typetypepointczo/README.md#searchtypepointczo) - Search API for 'CZO Display File Format' entry type
 
-### TypeTypePointGcnet
+### [TypeTypePointGcnet](docs/typetypepointgcnet/README.md)
 
-* `SearchTypePointGcnet` - Search API for 'GC-Net Point Data' entry type
+* [SearchTypePointGcnet](docs/typetypepointgcnet/README.md#searchtypepointgcnet) - Search API for 'GC-Net Point Data' entry type
 
-### TypeTypePointGeomagIaga2002
+### [TypeTypePointGeomagIaga2002](docs/typetypepointgeomagiaga2002/README.md)
 
-* `SearchTypePointGeomagIaga2002` - Search API for 'IAGA 2002 Geomagnetism Data' entry type
+* [SearchTypePointGeomagIaga2002](docs/typetypepointgeomagiaga2002/README.md#searchtypepointgeomagiaga2002) - Search API for 'IAGA 2002 Geomagnetism Data' entry type
 
-### TypeTypePointHydroWaterml
+### [TypeTypePointHydroWaterml](docs/typetypepointhydrowaterml/README.md)
 
-* `SearchTypePointHydroWaterml` - Search API for 'WaterML' entry type
+* [SearchTypePointHydroWaterml](docs/typetypepointhydrowaterml/README.md#searchtypepointhydrowaterml) - Search API for 'WaterML' entry type
 
-### TypeTypePointIcebridgeAtmIcessn
+### [TypeTypePointIcebridgeAtmIcessn](docs/typetypepointicebridgeatmicessn/README.md)
 
-* `SearchTypePointIcebridgeAtmIcessn` - Search API for 'ATM Ice SSN Data' entry type
+* [SearchTypePointIcebridgeAtmIcessn](docs/typetypepointicebridgeatmicessn/README.md#searchtypepointicebridgeatmicessn) - Search API for 'ATM Ice SSN Data' entry type
 
-### TypeTypePointIcebridgeAtmQfit
+### [TypeTypePointIcebridgeAtmQfit](docs/typetypepointicebridgeatmqfit/README.md)
 
-* `SearchTypePointIcebridgeAtmQfit` - Search API for 'ATM QFIT Data' entry type
+* [SearchTypePointIcebridgeAtmQfit](docs/typetypepointicebridgeatmqfit/README.md#searchtypepointicebridgeatmqfit) - Search API for 'ATM QFIT Data' entry type
 
-### TypeTypePointIcebridgeMccordsIrmcr2
+### [TypeTypePointIcebridgeMccordsIrmcr2](docs/typetypepointicebridgemccordsirmcr2/README.md)
 
-* `SearchTypePointIcebridgeMccordsIrmcr2` - Search API for 'McCords Irmcr2 Data' entry type
+* [SearchTypePointIcebridgeMccordsIrmcr2](docs/typetypepointicebridgemccordsirmcr2/README.md#searchtypepointicebridgemccordsirmcr2) - Search API for 'McCords Irmcr2 Data' entry type
 
-### TypeTypePointIcebridgeMccordsIrmcr3
+### [TypeTypePointIcebridgeMccordsIrmcr3](docs/typetypepointicebridgemccordsirmcr3/README.md)
 
-* `SearchTypePointIcebridgeMccordsIrmcr3` - Search API for 'McCords Irmcr3 Data' entry type
+* [SearchTypePointIcebridgeMccordsIrmcr3](docs/typetypepointicebridgemccordsirmcr3/README.md#searchtypepointicebridgemccordsirmcr3) - Search API for 'McCords Irmcr3 Data' entry type
 
-### TypeTypePointIcebridgeParis
+### [TypeTypePointIcebridgeParis](docs/typetypepointicebridgeparis/README.md)
 
-* `SearchTypePointIcebridgeParis` - Search API for 'Paris Data' entry type
+* [SearchTypePointIcebridgeParis](docs/typetypepointicebridgeparis/README.md#searchtypepointicebridgeparis) - Search API for 'Paris Data' entry type
 
-### TypeTypePointIdv
+### [TypeTypePointIdv](docs/typetypepointidv/README.md)
 
-* `SearchTypePointIdv` - Search API for 'IDV Point File' entry type
+* [SearchTypePointIdv](docs/typetypepointidv/README.md#searchtypepointidv) - Search API for 'IDV Point File' entry type
 
-### TypeTypePointInline
+### [TypeTypePointInline](docs/typetypepointinline/README.md)
 
-* `SearchTypePointInline` - Search API for 'Inline Point File' entry type
+* [SearchTypePointInline](docs/typetypepointinline/README.md#searchtypepointinline) - Search API for 'Inline Point File' entry type
 
-### TypeTypePointNcdcClimate
+### [TypeTypePointNcdcClimate](docs/typetypepointncdcclimate/README.md)
 
-* `SearchTypePointNcdcClimate` - Search API for 'NC  DC Climate Data' entry type
+* [SearchTypePointNcdcClimate](docs/typetypepointncdcclimate/README.md#searchtypepointncdcclimate) - Search API for 'NC  DC Climate Data' entry type
 
-### TypeTypePointNetcdf
+### [TypeTypePointNetcdf](docs/typetypepointnetcdf/README.md)
 
-* `SearchTypePointNetcdf` - Search API for 'NetCDF Point File' entry type
+* [SearchTypePointNetcdf](docs/typetypepointnetcdf/README.md#searchtypepointnetcdf) - Search API for 'NetCDF Point File' entry type
 
-### TypeTypePointNoaaCarbon
+### [TypeTypePointNoaaCarbon](docs/typetypepointnoaacarbon/README.md)
 
-* `SearchTypePointNoaaCarbon` - Search API for 'NOAA Carbon Measurements' entry type
+* [SearchTypePointNoaaCarbon](docs/typetypepointnoaacarbon/README.md#searchtypepointnoaacarbon) - Search API for 'NOAA Carbon Measurements' entry type
 
-### TypeTypePointNoaaFlaskEvent
+### [TypeTypePointNoaaFlaskEvent](docs/typetypepointnoaaflaskevent/README.md)
 
-* `SearchTypePointNoaaFlaskEvent` - Search API for 'NOAA Flask Event Measurements' entry type
+* [SearchTypePointNoaaFlaskEvent](docs/typetypepointnoaaflaskevent/README.md#searchtypepointnoaaflaskevent) - Search API for 'NOAA Flask Event Measurements' entry type
 
-### TypeTypePointNoaaFlaskMonth
+### [TypeTypePointNoaaFlaskMonth](docs/typetypepointnoaaflaskmonth/README.md)
 
-* `SearchTypePointNoaaFlaskMonth` - Search API for 'NOAA Flask Month Measurements' entry type
+* [SearchTypePointNoaaFlaskMonth](docs/typetypepointnoaaflaskmonth/README.md#searchtypepointnoaaflaskmonth) - Search API for 'NOAA Flask Month Measurements' entry type
 
-### TypeTypePointNoaaMadis
+### [TypeTypePointNoaaMadis](docs/typetypepointnoaamadis/README.md)
 
-* `SearchTypePointNoaaMadis` - Search API for 'NOAA MADIS Point Data' entry type
+* [SearchTypePointNoaaMadis](docs/typetypepointnoaamadis/README.md#searchtypepointnoaamadis) - Search API for 'NOAA MADIS Point Data' entry type
 
-### TypeTypePointNoaaTower
+### [TypeTypePointNoaaTower](docs/typetypepointnoaatower/README.md)
 
-* `SearchTypePointNoaaTower` - Search API for 'NOAA Tower Network' entry type
+* [SearchTypePointNoaaTower](docs/typetypepointnoaatower/README.md#searchtypepointnoaatower) - Search API for 'NOAA Tower Network' entry type
 
-### TypeTypePointOceanCnv
+### [TypeTypePointOceanCnv](docs/typetypepointoceancnv/README.md)
 
-* `SearchTypePointOceanCnv` - Search API for 'SeaBird CNV Data' entry type
+* [SearchTypePointOceanCnv](docs/typetypepointoceancnv/README.md#searchtypepointoceancnv) - Search API for 'SeaBird CNV Data' entry type
 
-### TypeTypePointOceanCsvSadoTTS
+### [TypeTypePointOceanCsvSadoTTS](docs/typetypepointoceancsvsadotts/README.md)
 
-* `SearchTypePointOceanCsvSadoTTS` - Search API for 'SADO TTS Data' entry type
+* [SearchTypePointOceanCsvSadoTTS](docs/typetypepointoceancsvsadotts/README.md#searchtypepointoceancsvsadotts) - Search API for 'SADO TTS Data' entry type
 
-### TypeTypePointOceanCsvSadoMeteo
+### [TypeTypePointOceanCsvSadoMeteo](docs/typetypepointoceancsvsadometeo/README.md)
 
-* `SearchTypePointOceanCsvSadoMeteo` - Search API for 'SADO Meteo Data' entry type
+* [SearchTypePointOceanCsvSadoMeteo](docs/typetypepointoceancsvsadometeo/README.md#searchtypepointoceancsvsadometeo) - Search API for 'SADO Meteo Data' entry type
 
-### TypeTypePointOceanCsvSadoPosition
+### [TypeTypePointOceanCsvSadoPosition](docs/typetypepointoceancsvsadoposition/README.md)
 
-* `SearchTypePointOceanCsvSadoPosition` - Search API for 'SADO Position Data' entry type
+* [SearchTypePointOceanCsvSadoPosition](docs/typetypepointoceancsvsadoposition/README.md#searchtypepointoceancsvsadoposition) - Search API for 'SADO Position Data' entry type
 
-### TypeTypePointOceanNetcdfGlider
+### [TypeTypePointOceanNetcdfGlider](docs/typetypepointoceannetcdfglider/README.md)
 
-* `SearchTypePointOceanNetcdfGlider` - Search API for 'NetCDF Glider Data' entry type
+* [SearchTypePointOceanNetcdfGlider](docs/typetypepointoceannetcdfglider/README.md#searchtypepointoceannetcdfglider) - Search API for 'NetCDF Glider Data' entry type
 
-### TypeTypePointOceanNetcdfTrack
+### [TypeTypePointOceanNetcdfTrack](docs/typetypepointoceannetcdftrack/README.md)
 
-* `SearchTypePointOceanNetcdfTrack` - Search API for 'NetCDF Track Data' entry type
+* [SearchTypePointOceanNetcdfTrack](docs/typetypepointoceannetcdftrack/README.md#searchtypepointoceannetcdftrack) - Search API for 'NetCDF Track Data' entry type
 
-### TypeTypePointOceanOoiDmgx
+### [TypeTypePointOceanOoiDmgx](docs/typetypepointoceanooidmgx/README.md)
 
-* `SearchTypePointOceanOoiDmgx` - Search API for 'OOI Data' entry type
+* [SearchTypePointOceanOoiDmgx](docs/typetypepointoceanooidmgx/README.md#searchtypepointoceanooidmgx) - Search API for 'OOI Data' entry type
 
-### TypeTypePointOpenaq
+### [TypeTypePointOpenaq](docs/typetypepointopenaq/README.md)
 
-* `SearchTypePointOpenaq` - Search API for 'Open AQ Air Quality' entry type
+* [SearchTypePointOpenaq](docs/typetypepointopenaq/README.md#searchtypepointopenaq) - Search API for 'Open AQ Air Quality' entry type
 
-### TypeTypePointPboPositionTimeSeries
+### [TypeTypePointPboPositionTimeSeries](docs/typetypepointpbopositiontimeseries/README.md)
 
-* `SearchTypePointPboPositionTimeSeries` - Search API for 'PBO Position Time Series' entry type
+* [SearchTypePointPboPositionTimeSeries](docs/typetypepointpbopositiontimeseries/README.md#searchtypepointpbopositiontimeseries) - Search API for 'PBO Position Time Series' entry type
 
-### TypeTypePointSimpleRecords
+### [TypeTypePointSimpleRecords](docs/typetypepointsimplerecords/README.md)
 
-* `SearchTypePointSimpleRecords` - Search API for 'Simple Records' entry type
+* [SearchTypePointSimpleRecords](docs/typetypepointsimplerecords/README.md#searchtypepointsimplerecords) - Search API for 'Simple Records' entry type
 
-### TypeTypePointSnotel
+### [TypeTypePointSnotel](docs/typetypepointsnotel/README.md)
 
-* `SearchTypePointSnotel` - Search API for 'SNOTEL Snow Data' entry type
+* [SearchTypePointSnotel](docs/typetypepointsnotel/README.md#searchtypepointsnotel) - Search API for 'SNOTEL Snow Data' entry type
 
-### TypeTypePointText
+### [TypeTypePointText](docs/typetypepointtext/README.md)
 
-* `SearchTypePointText` - Search API for 'Record Text File' entry type
+* [SearchTypePointText](docs/typetypepointtext/README.md#searchtypepointtext) - Search API for 'Record Text File' entry type
 
-### TypeTypePointWsbbGgp
+### [TypeTypePointWsbbGgp](docs/typetypepointwsbbggp/README.md)
 
-* `SearchTypePointWsbbGgp` - Search API for 'Global Geodynamics GGP Format' entry type
+* [SearchTypePointWsbbGgp](docs/typetypepointwsbbggp/README.md#searchtypepointwsbbggp) - Search API for 'Global Geodynamics GGP Format' entry type
 
-### TypeTypePsdMonthlyClimateIndex
+### [TypeTypePsdMonthlyClimateIndex](docs/typetypepsdmonthlyclimateindex/README.md)
 
-* `SearchTypePsdMonthlyClimateIndex` - Search API for 'NOAA-ESRL-PSD Monthly Climate Index' entry type
+* [SearchTypePsdMonthlyClimateIndex](docs/typetypepsdmonthlyclimateindex/README.md#searchtypepsdmonthlyclimateindex) - Search API for 'NOAA-ESRL-PSD Monthly Climate Index' entry type
 
-### TypeTypeQuandlSeries
+### [TypeTypeQuandlSeries](docs/typetypequandlseries/README.md)
 
-* `SearchTypeQuandlSeries` - Search API for 'QUANDL Series' entry type
+* [SearchTypeQuandlSeries](docs/typetypequandlseries/README.md#searchtypequandlseries) - Search API for 'QUANDL Series' entry type
 
-### TypeTypeServiceGroup
+### [TypeTypeServiceGroup](docs/typetypeservicegroup/README.md)
 
-* `SearchTypeServiceGroup` - Search API for 'Service Group' entry type
+* [SearchTypeServiceGroup](docs/typetypeservicegroup/README.md#searchtypeservicegroup) - Search API for 'Service Group' entry type
 
-### TypeTypeServiceLink
+### [TypeTypeServiceLink](docs/typetypeservicelink/README.md)
 
-* `SearchTypeServiceLink` - Search API for 'Service Link' entry type
+* [SearchTypeServiceLink](docs/typetypeservicelink/README.md#searchtypeservicelink) - Search API for 'Service Link' entry type
 
-### TypeTypeSocrataSeries
+### [TypeTypeSocrataSeries](docs/typetypesocrataseries/README.md)
 
-* `SearchTypeSocrataSeries` - Search API for 'SOCRATA Series' entry type
+* [SearchTypeSocrataSeries](docs/typetypesocrataseries/README.md#searchtypesocrataseries) - Search API for 'SOCRATA Series' entry type
 
-### TypeTypeSoundingCod
+### [TypeTypeSoundingCod](docs/typetypesoundingcod/README.md)
 
-* `SearchTypeSoundingCod` - Search API for 'COD Sounding' entry type
+* [SearchTypeSoundingCod](docs/typetypesoundingcod/README.md#searchtypesoundingcod) - Search API for 'COD Sounding' entry type
 
-### TypeTypeSoundingFrd
+### [TypeTypeSoundingFrd](docs/typetypesoundingfrd/README.md)
 
-* `SearchTypeSoundingFrd` - Search API for 'FRD Sounding' entry type
+* [SearchTypeSoundingFrd](docs/typetypesoundingfrd/README.md#searchtypesoundingfrd) - Search API for 'FRD Sounding' entry type
 
-### TypeTypeSoundingGsd
+### [TypeTypeSoundingGsd](docs/typetypesoundinggsd/README.md)
 
-* `SearchTypeSoundingGsd` - Search API for 'GSD Sounding' entry type
+* [SearchTypeSoundingGsd](docs/typetypesoundinggsd/README.md#searchtypesoundinggsd) - Search API for 'GSD Sounding' entry type
 
-### TypeTypeSoundingWyoming
+### [TypeTypeSoundingWyoming](docs/typetypesoundingwyoming/README.md)
 
-* `SearchTypeSoundingWyoming` - Search API for 'UW Sounding' entry type
+* [SearchTypeSoundingWyoming](docs/typetypesoundingwyoming/README.md#searchtypesoundingwyoming) - Search API for 'UW Sounding' entry type
 
-### TypeTypeTmy
+### [TypeTypeTmy](docs/typetypetmy/README.md)
 
-* `SearchTypeTmy` - Search API for 'NREL TMY Data' entry type
+* [SearchTypeTmy](docs/typetypetmy/README.md#searchtypetmy) - Search API for 'NREL TMY Data' entry type
 
-### TypeTypeTweet
+### [TypeTypeTweet](docs/typetypetweet/README.md)
 
-* `SearchTypeTweet` - Search API for 'Tweet' entry type
+* [SearchTypeTweet](docs/typetypetweet/README.md#searchtypetweet) - Search API for 'Tweet' entry type
 
-### TypeTypeUsgsGauge
+### [TypeTypeUsgsGauge](docs/typetypeusgsgauge/README.md)
 
-* `SearchTypeUsgsGauge` - Search API for 'USGS Stream Gauge' entry type
+* [SearchTypeUsgsGauge](docs/typetypeusgsgauge/README.md#searchtypeusgsgauge) - Search API for 'USGS Stream Gauge' entry type
 
-### TypeTypeVirtual
+### [TypeTypeVirtual](docs/typetypevirtual/README.md)
 
-* `SearchTypeVirtual` - Search API for 'Virtual Group' entry type
+* [SearchTypeVirtual](docs/typetypevirtual/README.md#searchtypevirtual) - Search API for 'Virtual Group' entry type
 
-### TypeTypeWmsCapabilities
+### [TypeTypeWmsCapabilities](docs/typetypewmscapabilities/README.md)
 
-* `SearchTypeWmsCapabilities` - Search API for 'WMS Capabilities' entry type
+* [SearchTypeWmsCapabilities](docs/typetypewmscapabilities/README.md#searchtypewmscapabilities) - Search API for 'WMS Capabilities' entry type
 
-### TypeTypeWmsLayer
+### [TypeTypeWmsLayer](docs/typetypewmslayer/README.md)
 
-* `SearchTypeWmsLayer` - Search API for 'WMS Layer' entry type
+* [SearchTypeWmsLayer](docs/typetypewmslayer/README.md#searchtypewmslayer) - Search API for 'WMS Layer' entry type
 
-### TypeUfoSightings
+### [TypeUfoSightings](docs/typeufosightings/README.md)
 
-* `SearchUfoSightings` - Search API for 'Ufo Sightings' entry type
+* [SearchUfoSightings](docs/typeufosightings/README.md#searchufosightings) - Search API for 'Ufo Sightings' entry type
 
-### TypeUsPlaces
+### [TypeUsPlaces](docs/typeusplaces/README.md)
 
-* `SearchUsPlaces` - Search API for 'US Places' entry type
+* [SearchUsPlaces](docs/typeusplaces/README.md#searchusplaces) - Search API for 'US Places' entry type
 
-### TypeVoteYesno
+### [TypeVoteYesno](docs/typevoteyesno/README.md)
 
-* `SearchVoteYesno` - Search API for 'Simple Yes-No Vote' entry type
+* [SearchVoteYesno](docs/typevoteyesno/README.md#searchvoteyesno) - Search API for 'Simple Yes-No Vote' entry type
 
-### TypeWeblog
+### [TypeWeblog](docs/typeweblog/README.md)
 
-* `SearchWeblog` - Search API for 'Weblog' entry type
+* [SearchWeblog](docs/typeweblog/README.md#searchweblog) - Search API for 'Weblog' entry type
 
-### TypeWikipage
+### [TypeWikipage](docs/typewikipage/README.md)
 
-* `SearchWikipage` - Search API for 'Wiki Page' entry type
+* [SearchWikipage](docs/typewikipage/README.md#searchwikipage) - Search API for 'Wiki Page' entry type
 <!-- End SDK Available Operations -->
 
 ### Maturity

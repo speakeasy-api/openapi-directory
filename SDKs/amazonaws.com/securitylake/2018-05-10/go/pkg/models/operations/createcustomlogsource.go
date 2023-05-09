@@ -48,12 +48,16 @@ const (
 	CreateCustomLogSourceRequestBodyEventClassEnumVirtualMachineActivity CreateCustomLogSourceRequestBodyEventClassEnum = "VIRTUAL_MACHINE_ACTIVITY"
 )
 
+func (e CreateCustomLogSourceRequestBodyEventClassEnum) ToPointer() *CreateCustomLogSourceRequestBodyEventClassEnum {
+	return &e
+}
+
 func (e *CreateCustomLogSourceRequestBodyEventClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_ACTIVITY":
 		fallthrough
 	case "FILE_ACTIVITY":
@@ -119,10 +123,10 @@ func (e *CreateCustomLogSourceRequestBodyEventClassEnum) UnmarshalJSON(data []by
 	case "SMTP_ACTIVITY":
 		fallthrough
 	case "VIRTUAL_MACHINE_ACTIVITY":
-		*e = CreateCustomLogSourceRequestBodyEventClassEnum(s)
+		*e = CreateCustomLogSourceRequestBodyEventClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCustomLogSourceRequestBodyEventClassEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCustomLogSourceRequestBodyEventClassEnum: %v", v)
 	}
 }
 

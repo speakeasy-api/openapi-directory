@@ -21,12 +21,16 @@ const (
 	MetricDescriptorLaunchStageEnumDeprecated             MetricDescriptorLaunchStageEnum = "DEPRECATED"
 )
 
+func (e MetricDescriptorLaunchStageEnum) ToPointer() *MetricDescriptorLaunchStageEnum {
+	return &e
+}
+
 func (e *MetricDescriptorLaunchStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_STAGE_UNSPECIFIED":
 		fallthrough
 	case "UNIMPLEMENTED":
@@ -42,10 +46,10 @@ func (e *MetricDescriptorLaunchStageEnum) UnmarshalJSON(data []byte) error {
 	case "GA":
 		fallthrough
 	case "DEPRECATED":
-		*e = MetricDescriptorLaunchStageEnum(s)
+		*e = MetricDescriptorLaunchStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricDescriptorLaunchStageEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricDescriptorLaunchStageEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	MetricDescriptorMetricKindEnumCumulative            MetricDescriptorMetricKindEnum = "CUMULATIVE"
 )
 
+func (e MetricDescriptorMetricKindEnum) ToPointer() *MetricDescriptorMetricKindEnum {
+	return &e
+}
+
 func (e *MetricDescriptorMetricKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_KIND_UNSPECIFIED":
 		fallthrough
 	case "GAUGE":
@@ -72,10 +80,10 @@ func (e *MetricDescriptorMetricKindEnum) UnmarshalJSON(data []byte) error {
 	case "DELTA":
 		fallthrough
 	case "CUMULATIVE":
-		*e = MetricDescriptorMetricKindEnum(s)
+		*e = MetricDescriptorMetricKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricDescriptorMetricKindEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricDescriptorMetricKindEnum: %v", v)
 	}
 }
 
@@ -92,12 +100,16 @@ const (
 	MetricDescriptorValueTypeEnumMoney                MetricDescriptorValueTypeEnum = "MONEY"
 )
 
+func (e MetricDescriptorValueTypeEnum) ToPointer() *MetricDescriptorValueTypeEnum {
+	return &e
+}
+
 func (e *MetricDescriptorValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALUE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BOOL":
@@ -111,10 +123,10 @@ func (e *MetricDescriptorValueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DISTRIBUTION":
 		fallthrough
 	case "MONEY":
-		*e = MetricDescriptorValueTypeEnum(s)
+		*e = MetricDescriptorValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricDescriptorValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricDescriptorValueTypeEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 // DatatransferApplicationsGet - Retrieves information about an application for the given application ID.
 func (s *applications) DatatransferApplicationsGet(ctx context.Context, request operations.DatatransferApplicationsGetRequest, security operations.DatatransferApplicationsGetSecurity) (*operations.DatatransferApplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/datatransfer/v1/applications/{applicationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/datatransfer/v1/applications/{applicationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

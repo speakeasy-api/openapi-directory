@@ -16,17 +16,21 @@ const (
 	ListS3ResourcesXAmzTargetEnumMacieServiceListS3Resources ListS3ResourcesXAmzTargetEnum = "MacieService.ListS3Resources"
 )
 
+func (e ListS3ResourcesXAmzTargetEnum) ToPointer() *ListS3ResourcesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListS3ResourcesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MacieService.ListS3Resources":
-		*e = ListS3ResourcesXAmzTargetEnum(s)
+		*e = ListS3ResourcesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListS3ResourcesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListS3ResourcesXAmzTargetEnum: %v", v)
 	}
 }
 

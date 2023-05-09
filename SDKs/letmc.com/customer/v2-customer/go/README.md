@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/letmc.com/customer/v2-cus
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BranchControllerGetBranchesRequest{
+    ctx := context.Background()
+    res, err := s.BranchController.BranchControllerGetBranches(ctx, operations.BranchControllerGetBranchesRequest{
         Count: 548814,
         Offset: 592845,
         ShortName: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.BranchController.BranchControllerGetBranches(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,44 +44,44 @@ func main() {
 ## Available Resources and Operations
 
 
-### BranchController
+### [BranchController](docs/branchcontroller/README.md)
 
-* `BranchControllerGetBranches` - All branches defined for a company
-* `GetV2CustomerShortNameBranchBranchesBranchID` - Get a specific branch given its unique Object ID (OID)
+* [BranchControllerGetBranches](docs/branchcontroller/README.md#branchcontrollergetbranches) - All branches defined for a company
+* [GetV2CustomerShortNameBranchBranchesBranchID](docs/branchcontroller/README.md#getv2customershortnamebranchbranchesbranchid) - Get a specific branch given its unique Object ID (OID)
 
-### LandlordController
+### [LandlordController](docs/landlordcontroller/README.md)
 
-* `LandlordControllerCreateMaintenancePreference` - Post tenancy maintenance preferences:-
-* `LandlordControllerGetAccounts` - Get the accounting details for the landlord.
-* `LandlordControllerGetDocument` - Download a Document
-* `LandlordControllerGetInvetoryReport` - Generate a Inventory PDF for a tenancy
-* `LandlordControllerGetInvoice` - Get an invoice pdf belonging to the landlord.
-* `LandlordControllerGetLandlordCrmEntries` - Retrieve landlord's CRM ID
-* `LandlordControllerGetMaintenanceJobs` - Get Active maintenance jobs.
-* `LandlordControllerGetProfitLossReport` - Generate a Profit and Loss Report
-* `LandlordControllerGetRentArrears` - Rent Arrears
-* `LandlordControllerGetSASReport` - Generate a Self Assessment Tax Report
-* `LandlordControllerGetSettings` - Get contact details of all linked landlords.
-* `LandlordControllerGetSummaryDetails` - Get the summary details for the landlord.
-* `LandlordControllerGetTenancy` - Get tenancy details.
-* `LandlordControllerGetTenancyAgreementReport` - Generate a Tenancy Agreement Copy (PDF)
+* [LandlordControllerCreateMaintenancePreference](docs/landlordcontroller/README.md#landlordcontrollercreatemaintenancepreference) - Post tenancy maintenance preferences:-
+* [LandlordControllerGetAccounts](docs/landlordcontroller/README.md#landlordcontrollergetaccounts) - Get the accounting details for the landlord.
+* [LandlordControllerGetDocument](docs/landlordcontroller/README.md#landlordcontrollergetdocument) - Download a Document
+* [LandlordControllerGetInvetoryReport](docs/landlordcontroller/README.md#landlordcontrollergetinvetoryreport) - Generate a Inventory PDF for a tenancy
+* [LandlordControllerGetInvoice](docs/landlordcontroller/README.md#landlordcontrollergetinvoice) - Get an invoice pdf belonging to the landlord.
+* [LandlordControllerGetLandlordCrmEntries](docs/landlordcontroller/README.md#landlordcontrollergetlandlordcrmentries) - Retrieve landlord's CRM ID
+* [LandlordControllerGetMaintenanceJobs](docs/landlordcontroller/README.md#landlordcontrollergetmaintenancejobs) - Get Active maintenance jobs.
+* [LandlordControllerGetProfitLossReport](docs/landlordcontroller/README.md#landlordcontrollergetprofitlossreport) - Generate a Profit and Loss Report
+* [LandlordControllerGetRentArrears](docs/landlordcontroller/README.md#landlordcontrollergetrentarrears) - Rent Arrears
+* [LandlordControllerGetSASReport](docs/landlordcontroller/README.md#landlordcontrollergetsasreport) - Generate a Self Assessment Tax Report
+* [LandlordControllerGetSettings](docs/landlordcontroller/README.md#landlordcontrollergetsettings) - Get contact details of all linked landlords.
+* [LandlordControllerGetSummaryDetails](docs/landlordcontroller/README.md#landlordcontrollergetsummarydetails) - Get the summary details for the landlord.
+* [LandlordControllerGetTenancy](docs/landlordcontroller/README.md#landlordcontrollergettenancy) - Get tenancy details.
+* [LandlordControllerGetTenancyAgreementReport](docs/landlordcontroller/README.md#landlordcontrollergettenancyagreementreport) - Generate a Tenancy Agreement Copy (PDF)
 
-### PhotoController
+### [PhotoController](docs/photocontroller/README.md)
 
-* `PhotoControllerGetPhotoDownload` - Downloads the photo of a property given the photo ID.
+* [PhotoControllerGetPhotoDownload](docs/photocontroller/README.md#photocontrollergetphotodownload) - Downloads the photo of a property given the photo ID.
 
-### PropertyController
+### [PropertyController](docs/propertycontroller/README.md)
 
-* `PropertyControllerGetPropertiesPhotos` - A collection showing all the photos linked to a specific block, property or room
+* [PropertyControllerGetPropertiesPhotos](docs/propertycontroller/README.md#propertycontrollergetpropertiesphotos) - A collection showing all the photos linked to a specific block, property or room
 
-### SessionController
+### [SessionController](docs/sessioncontroller/README.md)
 
-* `SessionControllerChangePassword` - Change the password of a customer given their existing and new password.
-* `SessionControllerCreateLandlordLogin` - Send a request to the in-tray to create a landlord login.
-* `SessionControllerGetSessionInfo` - Gets information about the currently logged on customer.
-* `SessionControllerLogin` - Login as a customer given their username and password.
-* `SessionControllerLogout` - Logout a customer previously logged in via the Login endpoint.
-* `SessionControllerResetPassword` - Reset the customer's password. An email will be sent out to reset.
+* [SessionControllerChangePassword](docs/sessioncontroller/README.md#sessioncontrollerchangepassword) - Change the password of a customer given their existing and new password.
+* [SessionControllerCreateLandlordLogin](docs/sessioncontroller/README.md#sessioncontrollercreatelandlordlogin) - Send a request to the in-tray to create a landlord login.
+* [SessionControllerGetSessionInfo](docs/sessioncontroller/README.md#sessioncontrollergetsessioninfo) - Gets information about the currently logged on customer.
+* [SessionControllerLogin](docs/sessioncontroller/README.md#sessioncontrollerlogin) - Login as a customer given their username and password.
+* [SessionControllerLogout](docs/sessioncontroller/README.md#sessioncontrollerlogout) - Logout a customer previously logged in via the Login endpoint.
+* [SessionControllerResetPassword](docs/sessioncontroller/README.md#sessioncontrollerresetpassword) - Reset the customer's password. An email will be sent out to reset.
 <!-- End SDK Available Operations -->
 
 ### Maturity

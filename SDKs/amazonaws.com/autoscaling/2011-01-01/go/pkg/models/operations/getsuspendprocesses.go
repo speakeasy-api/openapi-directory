@@ -15,17 +15,21 @@ const (
 	GETSuspendProcessesActionEnumSuspendProcesses GETSuspendProcessesActionEnum = "SuspendProcesses"
 )
 
+func (e GETSuspendProcessesActionEnum) ToPointer() *GETSuspendProcessesActionEnum {
+	return &e
+}
+
 func (e *GETSuspendProcessesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SuspendProcesses":
-		*e = GETSuspendProcessesActionEnum(s)
+		*e = GETSuspendProcessesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSuspendProcessesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSuspendProcessesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSuspendProcessesVersionEnumTwoThousandAndEleven0101 GETSuspendProcessesVersionEnum = "2011-01-01"
 )
 
+func (e GETSuspendProcessesVersionEnum) ToPointer() *GETSuspendProcessesVersionEnum {
+	return &e
+}
+
 func (e *GETSuspendProcessesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETSuspendProcessesVersionEnum(s)
+		*e = GETSuspendProcessesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSuspendProcessesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSuspendProcessesVersionEnum: %v", v)
 	}
 }
 

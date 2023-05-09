@@ -35,7 +35,10 @@ func newAssets(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // PolyAssetsGet - Returns detailed information about an asset given its name. PRIVATE assets are returned only if the currently authenticated user (via OAuth token) is the author of the asset.
 func (s *assets) PolyAssetsGet(ctx context.Context, request operations.PolyAssetsGetRequest) (*operations.PolyAssetsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

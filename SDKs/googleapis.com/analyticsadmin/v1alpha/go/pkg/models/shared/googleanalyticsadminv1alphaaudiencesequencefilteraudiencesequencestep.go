@@ -17,12 +17,16 @@ const (
 	GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStepScopeEnumAudienceFilterScopeAcrossAllSessions GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStepScopeEnum = "AUDIENCE_FILTER_SCOPE_ACROSS_ALL_SESSIONS"
 )
 
+func (e GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStepScopeEnum) ToPointer() *GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStepScopeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStepScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUDIENCE_FILTER_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "AUDIENCE_FILTER_SCOPE_WITHIN_SAME_EVENT":
@@ -30,16 +34,16 @@ func (e *GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStepSc
 	case "AUDIENCE_FILTER_SCOPE_WITHIN_SAME_SESSION":
 		fallthrough
 	case "AUDIENCE_FILTER_SCOPE_ACROSS_ALL_SESSIONS":
-		*e = GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStepScopeEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStepScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStepScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStepScopeEnum: %v", v)
 	}
 }
 
 // GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStep - A condition that must occur in the specified step order for this user to match the sequence.
 type GoogleAnalyticsAdminV1alphaAudienceSequenceFilterAudienceSequenceStep struct {
-	// Optional. When set, this step must be satisfied within the constraint_duration of the previous step (i.e., t[i] - t[i-1] <= constraint_duration). If not set, there is no duration requirement (the duration is effectively unlimited). It is ignored for the first step.
+	// Optional. When set, this step must be satisfied within the constraint_duration of the previous step (For example, t[i] - t[i-1] <= constraint_duration). If not set, there is no duration requirement (the duration is effectively unlimited). It is ignored for the first step.
 	ConstraintDuration *string `json:"constraintDuration,omitempty"`
 	// A logical expression of Audience dimension, metric, or event filters.
 	FilterExpression *GoogleAnalyticsAdminV1alphaAudienceFilterExpression `json:"filterExpression,omitempty"`

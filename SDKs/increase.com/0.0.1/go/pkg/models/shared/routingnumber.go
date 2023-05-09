@@ -15,19 +15,23 @@ const (
 	RoutingNumberAchTransfersEnumNotSupported RoutingNumberAchTransfersEnum = "not_supported"
 )
 
+func (e RoutingNumberAchTransfersEnum) ToPointer() *RoutingNumberAchTransfersEnum {
+	return &e
+}
+
 func (e *RoutingNumberAchTransfersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "supported":
 		fallthrough
 	case "not_supported":
-		*e = RoutingNumberAchTransfersEnum(s)
+		*e = RoutingNumberAchTransfersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoutingNumberAchTransfersEnum: %s", s)
+		return fmt.Errorf("invalid value for RoutingNumberAchTransfersEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	RoutingNumberRealTimePaymentsTransfersEnumNotSupported RoutingNumberRealTimePaymentsTransfersEnum = "not_supported"
 )
 
+func (e RoutingNumberRealTimePaymentsTransfersEnum) ToPointer() *RoutingNumberRealTimePaymentsTransfersEnum {
+	return &e
+}
+
 func (e *RoutingNumberRealTimePaymentsTransfersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "supported":
 		fallthrough
 	case "not_supported":
-		*e = RoutingNumberRealTimePaymentsTransfersEnum(s)
+		*e = RoutingNumberRealTimePaymentsTransfersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoutingNumberRealTimePaymentsTransfersEnum: %s", s)
+		return fmt.Errorf("invalid value for RoutingNumberRealTimePaymentsTransfersEnum: %v", v)
 	}
 }
 
@@ -62,17 +70,21 @@ const (
 	RoutingNumberTypeEnumRoutingNumber RoutingNumberTypeEnum = "routing_number"
 )
 
+func (e RoutingNumberTypeEnum) ToPointer() *RoutingNumberTypeEnum {
+	return &e
+}
+
 func (e *RoutingNumberTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "routing_number":
-		*e = RoutingNumberTypeEnum(s)
+		*e = RoutingNumberTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoutingNumberTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RoutingNumberTypeEnum: %v", v)
 	}
 }
 
@@ -84,19 +96,23 @@ const (
 	RoutingNumberWireTransfersEnumNotSupported RoutingNumberWireTransfersEnum = "not_supported"
 )
 
+func (e RoutingNumberWireTransfersEnum) ToPointer() *RoutingNumberWireTransfersEnum {
+	return &e
+}
+
 func (e *RoutingNumberWireTransfersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "supported":
 		fallthrough
 	case "not_supported":
-		*e = RoutingNumberWireTransfersEnum(s)
+		*e = RoutingNumberWireTransfersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoutingNumberWireTransfersEnum: %s", s)
+		return fmt.Errorf("invalid value for RoutingNumberWireTransfersEnum: %v", v)
 	}
 }
 

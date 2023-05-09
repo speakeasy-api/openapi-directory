@@ -21,12 +21,16 @@ const (
 	ProtocolExceptionReasonEnumBusy         ProtocolExceptionReasonEnum = "busy"
 )
 
+func (e ProtocolExceptionReasonEnum) ToPointer() *ProtocolExceptionReasonEnum {
+	return &e
+}
+
 func (e *ProtocolExceptionReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unsupported":
 		fallthrough
 	case "unauthorized":
@@ -44,9 +48,9 @@ func (e *ProtocolExceptionReasonEnum) UnmarshalJSON(data []byte) error {
 	case "complex":
 		fallthrough
 	case "busy":
-		*e = ProtocolExceptionReasonEnum(s)
+		*e = ProtocolExceptionReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProtocolExceptionReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for ProtocolExceptionReasonEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	InferIcd10CMXAmzTargetEnumComprehendMedical20181030InferIcd10Cm InferIcd10CMXAmzTargetEnum = "ComprehendMedical_20181030.InferICD10CM"
 )
 
+func (e InferIcd10CMXAmzTargetEnum) ToPointer() *InferIcd10CMXAmzTargetEnum {
+	return &e
+}
+
 func (e *InferIcd10CMXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComprehendMedical_20181030.InferICD10CM":
-		*e = InferIcd10CMXAmzTargetEnum(s)
+		*e = InferIcd10CMXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InferIcd10CMXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for InferIcd10CMXAmzTargetEnum: %v", v)
 	}
 }
 

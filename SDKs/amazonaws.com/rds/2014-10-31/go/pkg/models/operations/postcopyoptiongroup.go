@@ -15,17 +15,21 @@ const (
 	POSTCopyOptionGroupActionEnumCopyOptionGroup POSTCopyOptionGroupActionEnum = "CopyOptionGroup"
 )
 
+func (e POSTCopyOptionGroupActionEnum) ToPointer() *POSTCopyOptionGroupActionEnum {
+	return &e
+}
+
 func (e *POSTCopyOptionGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CopyOptionGroup":
-		*e = POSTCopyOptionGroupActionEnum(s)
+		*e = POSTCopyOptionGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCopyOptionGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCopyOptionGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCopyOptionGroupVersionEnumTwoThousandAndFourteen1031 POSTCopyOptionGroupVersionEnum = "2014-10-31"
 )
 
+func (e POSTCopyOptionGroupVersionEnum) ToPointer() *POSTCopyOptionGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTCopyOptionGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTCopyOptionGroupVersionEnum(s)
+		*e = POSTCopyOptionGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCopyOptionGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCopyOptionGroupVersionEnum: %v", v)
 	}
 }
 

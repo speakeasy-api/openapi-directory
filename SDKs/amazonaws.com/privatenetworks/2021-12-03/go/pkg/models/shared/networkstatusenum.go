@@ -17,12 +17,16 @@ const (
 	NetworkStatusEnumDeleted        NetworkStatusEnum = "DELETED"
 )
 
+func (e NetworkStatusEnum) ToPointer() *NetworkStatusEnum {
+	return &e
+}
+
 func (e *NetworkStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATED":
 		fallthrough
 	case "PROVISIONING":
@@ -32,9 +36,9 @@ func (e *NetworkStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DEPROVISIONING":
 		fallthrough
 	case "DELETED":
-		*e = NetworkStatusEnum(s)
+		*e = NetworkStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkStatusEnum: %v", v)
 	}
 }

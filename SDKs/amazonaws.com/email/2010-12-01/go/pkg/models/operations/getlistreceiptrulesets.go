@@ -15,17 +15,21 @@ const (
 	GETListReceiptRuleSetsActionEnumListReceiptRuleSets GETListReceiptRuleSetsActionEnum = "ListReceiptRuleSets"
 )
 
+func (e GETListReceiptRuleSetsActionEnum) ToPointer() *GETListReceiptRuleSetsActionEnum {
+	return &e
+}
+
 func (e *GETListReceiptRuleSetsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListReceiptRuleSets":
-		*e = GETListReceiptRuleSetsActionEnum(s)
+		*e = GETListReceiptRuleSetsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListReceiptRuleSetsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListReceiptRuleSetsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListReceiptRuleSetsVersionEnumTwoThousandAndTen1201 GETListReceiptRuleSetsVersionEnum = "2010-12-01"
 )
 
+func (e GETListReceiptRuleSetsVersionEnum) ToPointer() *GETListReceiptRuleSetsVersionEnum {
+	return &e
+}
+
 func (e *GETListReceiptRuleSetsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETListReceiptRuleSetsVersionEnum(s)
+		*e = GETListReceiptRuleSetsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListReceiptRuleSetsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListReceiptRuleSetsVersionEnum: %v", v)
 	}
 }
 

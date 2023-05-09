@@ -13,16 +13,20 @@ const (
 	ElevationUnitEnumFeet ElevationUnitEnum = "FEET"
 )
 
+func (e ElevationUnitEnum) ToPointer() *ElevationUnitEnum {
+	return &e
+}
+
 func (e *ElevationUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEET":
-		*e = ElevationUnitEnum(s)
+		*e = ElevationUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ElevationUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for ElevationUnitEnum: %v", v)
 	}
 }

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,37 +17,35 @@ func main() {
         }),
     )
 
-    req := operations.AddNotificationChannelRequest{
+    ctx := context.Background()
+    res, err := s.AddNotificationChannel(ctx, operations.AddNotificationChannelRequest{
         RequestBody: operations.AddNotificationChannelRequestBody{
             Config: operations.AddNotificationChannelRequestBodyConfig{
                 Filters: &shared.NotificationFilterConfig{
                     MessageTypes: []shared.NotificationMessageTypeEnum{
-                        "NEW_ASSOCIATION",
-                        "SEVERITY_UPGRADED",
-                        "NEW_RECOMMENDATION",
+                        shared.NotificationMessageTypeEnumNewAssociation,
+                        shared.NotificationMessageTypeEnumSeverityUpgraded,
+                        shared.NotificationMessageTypeEnumNewRecommendation,
                     },
                     Severities: []shared.InsightSeverityEnum{
-                        "HIGH",
-                        "MEDIUM",
-                        "HIGH",
+                        shared.InsightSeverityEnumHigh,
+                        shared.InsightSeverityEnumMedium,
+                        shared.InsightSeverityEnumHigh,
                     },
                 },
                 Sns: &shared.SnsChannelConfig{
-                    TopicArn: "vel",
+                    TopicArn: sdk.String("vel"),
                 },
             },
         },
-        XAmzAlgorithm: "error",
-        XAmzContentSha256: "deserunt",
-        XAmzCredential: "suscipit",
-        XAmzDate: "iure",
-        XAmzSecurityToken: "magnam",
-        XAmzSignature: "debitis",
-        XAmzSignedHeaders: "ipsa",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddNotificationChannel(ctx, req)
+        XAmzAlgorithm: sdk.String("error"),
+        XAmzContentSha256: sdk.String("deserunt"),
+        XAmzCredential: sdk.String("suscipit"),
+        XAmzDate: sdk.String("iure"),
+        XAmzSecurityToken: sdk.String("magnam"),
+        XAmzSignature: sdk.String("debitis"),
+        XAmzSignedHeaders: sdk.String("ipsa"),
+    })
     if err != nil {
         log.Fatal(err)
     }

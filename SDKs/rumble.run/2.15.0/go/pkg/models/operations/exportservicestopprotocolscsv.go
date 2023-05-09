@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type ExportServicesTopProtocolsCSVSecurity struct {
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type ExportServicesTopProtocolsCSVResponse struct {
 	ContentType string
 	StatusCode  int

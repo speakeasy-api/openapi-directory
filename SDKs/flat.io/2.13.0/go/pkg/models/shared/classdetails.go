@@ -33,12 +33,16 @@ const (
 	ClassDetailsCleverSubjectEnumOther                       ClassDetailsCleverSubjectEnum = "other"
 )
 
+func (e ClassDetailsCleverSubjectEnum) ToPointer() *ClassDetailsCleverSubjectEnum {
+	return &e
+}
+
 func (e *ClassDetailsCleverSubjectEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "english/language arts":
 		fallthrough
 	case "math":
@@ -60,10 +64,10 @@ func (e *ClassDetailsCleverSubjectEnum) UnmarshalJSON(data []byte) error {
 	case "arts and music":
 		fallthrough
 	case "other":
-		*e = ClassDetailsCleverSubjectEnum(s)
+		*e = ClassDetailsCleverSubjectEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassDetailsCleverSubjectEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassDetailsCleverSubjectEnum: %v", v)
 	}
 }
 
@@ -111,19 +115,23 @@ const (
 	ClassDetailsIssuesSyncReasonEnumPersonalSubscription ClassDetailsIssuesSyncReasonEnum = "personalSubscription"
 )
 
+func (e ClassDetailsIssuesSyncReasonEnum) ToPointer() *ClassDetailsIssuesSyncReasonEnum {
+	return &e
+}
+
 func (e *ClassDetailsIssuesSyncReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "otherOrgnanization":
 		fallthrough
 	case "personalSubscription":
-		*e = ClassDetailsIssuesSyncReasonEnum(s)
+		*e = ClassDetailsIssuesSyncReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassDetailsIssuesSyncReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassDetailsIssuesSyncReasonEnum: %v", v)
 	}
 }
 

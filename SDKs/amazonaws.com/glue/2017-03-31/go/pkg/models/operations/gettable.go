@@ -16,17 +16,21 @@ const (
 	GetTableXAmzTargetEnumAwsGlueGetTable GetTableXAmzTargetEnum = "AWSGlue.GetTable"
 )
 
+func (e GetTableXAmzTargetEnum) ToPointer() *GetTableXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetTableXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetTable":
-		*e = GetTableXAmzTargetEnum(s)
+		*e = GetTableXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTableXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTableXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -46,6 +50,10 @@ type GetTableResponse struct {
 	ContentType string
 	// EntityNotFoundException
 	EntityNotFoundException interface{}
+	// FederationSourceException
+	FederationSourceException interface{}
+	// FederationSourceRetryableException
+	FederationSourceRetryableException interface{}
 	// Success
 	GetTableResponse *shared.GetTableResponse
 	// GlueEncryptionException

@@ -15,17 +15,21 @@ const (
 	POSTGetTemplateActionEnumGetTemplate POSTGetTemplateActionEnum = "GetTemplate"
 )
 
+func (e POSTGetTemplateActionEnum) ToPointer() *POSTGetTemplateActionEnum {
+	return &e
+}
+
 func (e *POSTGetTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetTemplate":
-		*e = POSTGetTemplateActionEnum(s)
+		*e = POSTGetTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetTemplateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetTemplateVersionEnumTwoThousandAndTen0515 POSTGetTemplateVersionEnum = "2010-05-15"
 )
 
+func (e POSTGetTemplateVersionEnum) ToPointer() *POSTGetTemplateVersionEnum {
+	return &e
+}
+
 func (e *POSTGetTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTGetTemplateVersionEnum(s)
+		*e = POSTGetTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetTemplateVersionEnum: %v", v)
 	}
 }
 

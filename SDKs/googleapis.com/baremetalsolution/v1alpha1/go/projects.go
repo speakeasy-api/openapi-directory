@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // BaremetalsolutionProjectsLocationsSubmitProvisioningConfig - Submit a provisiong configuration for a given project.
 func (s *projects) BaremetalsolutionProjectsLocationsSubmitProvisioningConfig(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest, security operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity) (*operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{project}/{location}:submitProvisioningConfig", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{project}/{location}:submitProvisioningConfig", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubmitProvisioningConfigRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsSubmitProvisioningConfig(ct
 // BaremetalsolutionProjectsProvisioningQuotasList - List the budget details to provision resources on a given project.
 func (s *projects) BaremetalsolutionProjectsProvisioningQuotasList(ctx context.Context, request operations.BaremetalsolutionProjectsProvisioningQuotasListRequest, security operations.BaremetalsolutionProjectsProvisioningQuotasListSecurity) (*operations.BaremetalsolutionProjectsProvisioningQuotasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/provisioningQuotas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/provisioningQuotas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

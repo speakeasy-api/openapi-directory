@@ -16,17 +16,21 @@ const (
 	DeleteVpcEndpointXAmzTargetEnumOpenSearchServerlessDeleteVpcEndpoint DeleteVpcEndpointXAmzTargetEnum = "OpenSearchServerless.DeleteVpcEndpoint"
 )
 
+func (e DeleteVpcEndpointXAmzTargetEnum) ToPointer() *DeleteVpcEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteVpcEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpenSearchServerless.DeleteVpcEndpoint":
-		*e = DeleteVpcEndpointXAmzTargetEnum(s)
+		*e = DeleteVpcEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVpcEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVpcEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	StartStackXAmzTargetEnumOpsWorks20130218StartStack StartStackXAmzTargetEnum = "OpsWorks_20130218.StartStack"
 )
 
+func (e StartStackXAmzTargetEnum) ToPointer() *StartStackXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartStackXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.StartStack":
-		*e = StartStackXAmzTargetEnum(s)
+		*e = StartStackXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartStackXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartStackXAmzTargetEnum: %v", v)
 	}
 }
 

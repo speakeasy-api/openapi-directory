@@ -19,12 +19,16 @@ const (
 	ModifyInstanceEventStartTimeResultEventCodeEnumInstanceStop       ModifyInstanceEventStartTimeResultEventCodeEnum = "instance-stop"
 )
 
+func (e ModifyInstanceEventStartTimeResultEventCodeEnum) ToPointer() *ModifyInstanceEventStartTimeResultEventCodeEnum {
+	return &e
+}
+
 func (e *ModifyInstanceEventStartTimeResultEventCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instance-reboot":
 		fallthrough
 	case "system-reboot":
@@ -34,10 +38,10 @@ func (e *ModifyInstanceEventStartTimeResultEventCodeEnum) UnmarshalJSON(data []b
 	case "instance-retirement":
 		fallthrough
 	case "instance-stop":
-		*e = ModifyInstanceEventStartTimeResultEventCodeEnum(s)
+		*e = ModifyInstanceEventStartTimeResultEventCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyInstanceEventStartTimeResultEventCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyInstanceEventStartTimeResultEventCodeEnum: %v", v)
 	}
 }
 

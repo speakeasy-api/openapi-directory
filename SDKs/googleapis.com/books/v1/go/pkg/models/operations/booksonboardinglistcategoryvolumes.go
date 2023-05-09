@@ -23,21 +23,25 @@ const (
 	BooksOnboardingListCategoryVolumesMaxAllowedMaturityRatingEnumNotMature                         BooksOnboardingListCategoryVolumesMaxAllowedMaturityRatingEnum = "not-mature"
 )
 
+func (e BooksOnboardingListCategoryVolumesMaxAllowedMaturityRatingEnum) ToPointer() *BooksOnboardingListCategoryVolumesMaxAllowedMaturityRatingEnum {
+	return &e
+}
+
 func (e *BooksOnboardingListCategoryVolumesMaxAllowedMaturityRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MAX_ALLOWED_MATURITY_RATING_UNDEFINED":
 		fallthrough
 	case "MATURE":
 		fallthrough
 	case "not-mature":
-		*e = BooksOnboardingListCategoryVolumesMaxAllowedMaturityRatingEnum(s)
+		*e = BooksOnboardingListCategoryVolumesMaxAllowedMaturityRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksOnboardingListCategoryVolumesMaxAllowedMaturityRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksOnboardingListCategoryVolumesMaxAllowedMaturityRatingEnum: %v", v)
 	}
 }
 

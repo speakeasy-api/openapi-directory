@@ -20,32 +20,36 @@ type BugtrackerGetSettingsRequest struct {
 }
 
 // BugtrackerGetSettingsDefaultApplicationJSONCodeEnum - The status code return by the API. It can be 400 or 404 or 409 or 500.
-type BugtrackerGetSettingsDefaultApplicationJSONCodeEnum string
+type BugtrackerGetSettingsDefaultApplicationJSONCodeEnum int64
 
 const (
-	BugtrackerGetSettingsDefaultApplicationJSONCodeEnumFourHundred        BugtrackerGetSettingsDefaultApplicationJSONCodeEnum = "400"
-	BugtrackerGetSettingsDefaultApplicationJSONCodeEnumFourHundredAndFour BugtrackerGetSettingsDefaultApplicationJSONCodeEnum = "404"
-	BugtrackerGetSettingsDefaultApplicationJSONCodeEnumFourHundredAndNine BugtrackerGetSettingsDefaultApplicationJSONCodeEnum = "409"
-	BugtrackerGetSettingsDefaultApplicationJSONCodeEnumFiveHundred        BugtrackerGetSettingsDefaultApplicationJSONCodeEnum = "500"
+	BugtrackerGetSettingsDefaultApplicationJSONCodeEnumFourHundred        BugtrackerGetSettingsDefaultApplicationJSONCodeEnum = 400
+	BugtrackerGetSettingsDefaultApplicationJSONCodeEnumFourHundredAndFour BugtrackerGetSettingsDefaultApplicationJSONCodeEnum = 404
+	BugtrackerGetSettingsDefaultApplicationJSONCodeEnumFourHundredAndNine BugtrackerGetSettingsDefaultApplicationJSONCodeEnum = 409
+	BugtrackerGetSettingsDefaultApplicationJSONCodeEnumFiveHundred        BugtrackerGetSettingsDefaultApplicationJSONCodeEnum = 500
 )
 
+func (e BugtrackerGetSettingsDefaultApplicationJSONCodeEnum) ToPointer() *BugtrackerGetSettingsDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *BugtrackerGetSettingsDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
+	switch v {
+	case 400:
 		fallthrough
-	case "404":
+	case 404:
 		fallthrough
-	case "409":
+	case 409:
 		fallthrough
-	case "500":
-		*e = BugtrackerGetSettingsDefaultApplicationJSONCodeEnum(s)
+	case 500:
+		*e = BugtrackerGetSettingsDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BugtrackerGetSettingsDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for BugtrackerGetSettingsDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -67,19 +71,23 @@ const (
 	BugtrackerGetSettings200ApplicationJSONEventTypesEnumNewAppReleased       BugtrackerGetSettings200ApplicationJSONEventTypesEnum = "newAppReleased"
 )
 
+func (e BugtrackerGetSettings200ApplicationJSONEventTypesEnum) ToPointer() *BugtrackerGetSettings200ApplicationJSONEventTypesEnum {
+	return &e
+}
+
 func (e *BugtrackerGetSettings200ApplicationJSONEventTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newCrashGroupCreated":
 		fallthrough
 	case "newAppReleased":
-		*e = BugtrackerGetSettings200ApplicationJSONEventTypesEnum(s)
+		*e = BugtrackerGetSettings200ApplicationJSONEventTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BugtrackerGetSettings200ApplicationJSONEventTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for BugtrackerGetSettings200ApplicationJSONEventTypesEnum: %v", v)
 	}
 }
 
@@ -92,21 +100,25 @@ const (
 	BugtrackerGetSettings200ApplicationJSONSettingsTypeEnumJira   BugtrackerGetSettings200ApplicationJSONSettingsTypeEnum = "jira"
 )
 
+func (e BugtrackerGetSettings200ApplicationJSONSettingsTypeEnum) ToPointer() *BugtrackerGetSettings200ApplicationJSONSettingsTypeEnum {
+	return &e
+}
+
 func (e *BugtrackerGetSettings200ApplicationJSONSettingsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "github":
 		fallthrough
 	case "vsts":
 		fallthrough
 	case "jira":
-		*e = BugtrackerGetSettings200ApplicationJSONSettingsTypeEnum(s)
+		*e = BugtrackerGetSettings200ApplicationJSONSettingsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BugtrackerGetSettings200ApplicationJSONSettingsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BugtrackerGetSettings200ApplicationJSONSettingsTypeEnum: %v", v)
 	}
 }
 
@@ -127,21 +139,25 @@ const (
 	BugtrackerGetSettings200ApplicationJSONStateEnumUnauthorized BugtrackerGetSettings200ApplicationJSONStateEnum = "unauthorized"
 )
 
+func (e BugtrackerGetSettings200ApplicationJSONStateEnum) ToPointer() *BugtrackerGetSettings200ApplicationJSONStateEnum {
+	return &e
+}
+
 func (e *BugtrackerGetSettings200ApplicationJSONStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
 		fallthrough
 	case "unauthorized":
-		*e = BugtrackerGetSettings200ApplicationJSONStateEnum(s)
+		*e = BugtrackerGetSettings200ApplicationJSONStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BugtrackerGetSettings200ApplicationJSONStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BugtrackerGetSettings200ApplicationJSONStateEnum: %v", v)
 	}
 }
 
@@ -154,21 +170,25 @@ const (
 	BugtrackerGetSettings200ApplicationJSONTypeEnumJira   BugtrackerGetSettings200ApplicationJSONTypeEnum = "jira"
 )
 
+func (e BugtrackerGetSettings200ApplicationJSONTypeEnum) ToPointer() *BugtrackerGetSettings200ApplicationJSONTypeEnum {
+	return &e
+}
+
 func (e *BugtrackerGetSettings200ApplicationJSONTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "github":
 		fallthrough
 	case "vsts":
 		fallthrough
 	case "jira":
-		*e = BugtrackerGetSettings200ApplicationJSONTypeEnum(s)
+		*e = BugtrackerGetSettings200ApplicationJSONTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BugtrackerGetSettings200ApplicationJSONTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BugtrackerGetSettings200ApplicationJSONTypeEnum: %v", v)
 	}
 }
 

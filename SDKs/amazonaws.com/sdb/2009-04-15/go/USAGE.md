@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,19 +16,17 @@ func main() {
         }),
     )
 
-    req := operations.GETCreateDomainRequest{
+    ctx := context.Background()
+    res, err := s.GETCreateDomain(ctx, operations.GETCreateDomainRequest{
         AWSAccessKeyID: "corrupti",
-        Action: "CreateDomain",
+        Action: operations.GETCreateDomainActionEnumCreateDomain,
         DomainName: "provident",
         Signature: "distinctio",
         SignatureMethod: "quibusdam",
         SignatureVersion: "unde",
         Timestamp: "nulla",
-        Version: "2009-04-15",
-    }
-
-    ctx := context.Background()
-    res, err := s.GETCreateDomain(ctx, req)
+        Version: operations.GETCreateDomainVersionEnumTwoThousandAndNine0415,
+    })
     if err != nil {
         log.Fatal(err)
     }

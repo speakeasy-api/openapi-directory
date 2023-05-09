@@ -36,7 +36,10 @@ func newChargers(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Instruct the charger to start or stop charging
 func (s *chargers) ControlChargerCharging(ctx context.Context, request operations.ControlChargerChargingRequest, security operations.ControlChargerChargingSecurity) (*operations.ControlChargerChargingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chargers/{chargerId}/charging", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/chargers/{chargerId}/charging", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -78,7 +81,10 @@ func (s *chargers) ControlChargerCharging(ctx context.Context, request operation
 // GetCharger - Get Charger
 func (s *chargers) GetCharger(ctx context.Context, request operations.GetChargerRequest, security operations.GetChargerSecurity) (*operations.GetChargerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/chargers/{chargerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/chargers/{chargerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

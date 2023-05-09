@@ -16,21 +16,25 @@ const (
 	GetAccountHolderResponseLegalEntityEnumNonProfit  GetAccountHolderResponseLegalEntityEnum = "NonProfit"
 )
 
+func (e GetAccountHolderResponseLegalEntityEnum) ToPointer() *GetAccountHolderResponseLegalEntityEnum {
+	return &e
+}
+
 func (e *GetAccountHolderResponseLegalEntityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Business":
 		fallthrough
 	case "Individual":
 		fallthrough
 	case "NonProfit":
-		*e = GetAccountHolderResponseLegalEntityEnum(s)
+		*e = GetAccountHolderResponseLegalEntityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAccountHolderResponseLegalEntityEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAccountHolderResponseLegalEntityEnum: %v", v)
 	}
 }
 
@@ -41,7 +45,7 @@ type GetAccountHolderResponse struct {
 	AccountHolderDetails *AccountHolderDetails `json:"accountHolderDetails,omitempty"`
 	AccountHolderStatus  *AccountHolderStatus  `json:"accountHolderStatus,omitempty"`
 	// A list of the accounts under the account holder.
-	Accounts []Account `json:"accounts,omitempty"`
+	Accounts []AccountWrapper `json:"accounts,omitempty"`
 	// The legal entity of the account holder.
 	LegalEntity *GetAccountHolderResponseLegalEntityEnum `json:"legalEntity,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.

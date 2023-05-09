@@ -19,12 +19,16 @@ const (
 	RobotDeploymentStepEnumFinished                   RobotDeploymentStepEnum = "Finished"
 )
 
+func (e RobotDeploymentStepEnum) ToPointer() *RobotDeploymentStepEnum {
+	return &e
+}
+
 func (e *RobotDeploymentStepEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Validating":
 		fallthrough
 	case "DownloadingExtracting":
@@ -38,9 +42,9 @@ func (e *RobotDeploymentStepEnum) UnmarshalJSON(data []byte) error {
 	case "ExecutingPostLaunch":
 		fallthrough
 	case "Finished":
-		*e = RobotDeploymentStepEnum(s)
+		*e = RobotDeploymentStepEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RobotDeploymentStepEnum: %s", s)
+		return fmt.Errorf("invalid value for RobotDeploymentStepEnum: %v", v)
 	}
 }

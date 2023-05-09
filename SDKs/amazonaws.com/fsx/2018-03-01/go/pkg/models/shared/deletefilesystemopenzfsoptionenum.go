@@ -13,16 +13,20 @@ const (
 	DeleteFileSystemOpenZFSOptionEnumDeleteChildVolumesAndSnapshots DeleteFileSystemOpenZFSOptionEnum = "DELETE_CHILD_VOLUMES_AND_SNAPSHOTS"
 )
 
+func (e DeleteFileSystemOpenZFSOptionEnum) ToPointer() *DeleteFileSystemOpenZFSOptionEnum {
+	return &e
+}
+
 func (e *DeleteFileSystemOpenZFSOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELETE_CHILD_VOLUMES_AND_SNAPSHOTS":
-		*e = DeleteFileSystemOpenZFSOptionEnum(s)
+		*e = DeleteFileSystemOpenZFSOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteFileSystemOpenZFSOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteFileSystemOpenZFSOptionEnum: %v", v)
 	}
 }

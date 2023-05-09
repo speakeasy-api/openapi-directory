@@ -9,23 +9,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum = "429"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13TypeEnumRateLimitedError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -57,23 +65,27 @@ type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13 struct {
 	Type       SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnumFourHundredAndThree SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnum = "403"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnumFourHundredAndThree SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -83,17 +95,21 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12TypeEnumPrivateFeatureError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -104,23 +120,27 @@ type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12 struct {
 	Type   SimulateATaxDocumentBeingCreatedDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnumFourHundredAndFour SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnum = "404"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnumFourHundredAndFour SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11TypeEnumObjectNotFoundError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -151,23 +175,27 @@ type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11 struct {
 	Type   SimulateATaxDocumentBeingCreatedDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnumFourHundred SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnum = "400"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnumFourHundred SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -177,17 +205,21 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10TypeEnumMalformedRequestError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -198,23 +230,27 @@ type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10 struct {
 	Type   SimulateATaxDocumentBeingCreatedDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnumFourHundred SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum = "400"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnumFourHundred SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -224,46 +260,54 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9TypeEnumInvalidParametersError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                          `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                          `json:"errors"`
 	Status SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                            `json:"title"`
 	Type   SimulateATaxDocumentBeingCreatedDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnumFourHundredAndNine SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnum = "409"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnumFourHundredAndNine SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8TypeEnumInvalidOperationError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -294,23 +342,27 @@ type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8 struct {
 	Type   SimulateATaxDocumentBeingCreatedDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnumFourHundredAndOne SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnum = "401"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnumFourHundredAndOne SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7TypeEnumInvalidAPIKeyError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -341,23 +397,27 @@ type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7 struct {
 	Type   SimulateATaxDocumentBeingCreatedDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnumFiveHundred SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnum = "500"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnumFiveHundred SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -367,17 +427,21 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6TypeEnumInternalServerError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -388,23 +452,27 @@ type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6 struct {
 	Type   SimulateATaxDocumentBeingCreatedDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnumFourHundredAndThree SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnum = "403"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnumFourHundredAndThree SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -414,17 +482,21 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5TypeEnumInsufficientPermissionsError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -435,23 +507,27 @@ type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5 struct {
 	Type   SimulateATaxDocumentBeingCreatedDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnum = "422"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -461,17 +537,21 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -482,23 +562,27 @@ type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4 struct {
 	Type   SimulateATaxDocumentBeingCreatedDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnumFourHundredAndNine SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnum = "409"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnumFourHundredAndNine SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -508,17 +592,21 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3TypeEnumIdempotencyConflictError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -529,23 +617,27 @@ type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3 struct {
 	Type   SimulateATaxDocumentBeingCreatedDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnumFourHundredAndThree SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnum = "403"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnumFourHundredAndThree SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -555,17 +647,21 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2TypeEnumEnvironmentMismatchError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -576,23 +672,27 @@ type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2 struct {
 	Type   SimulateATaxDocumentBeingCreatedDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnum string
+type SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnum int64
 
 const (
-	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnumFourHundredAndFour SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnum = "404"
+	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnumFourHundredAndFour SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -602,17 +702,21 @@ const (
 	SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1TypeEnum) ToPointer() *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1TypeEnum(s)
+		*e = SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

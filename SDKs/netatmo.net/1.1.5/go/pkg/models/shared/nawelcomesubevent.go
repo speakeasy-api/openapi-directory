@@ -16,21 +16,25 @@ const (
 	NAWelcomeSubEventTypeEnumVehicle NAWelcomeSubEventTypeEnum = "vehicle"
 )
 
+func (e NAWelcomeSubEventTypeEnum) ToPointer() *NAWelcomeSubEventTypeEnum {
+	return &e
+}
+
 func (e *NAWelcomeSubEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "human":
 		fallthrough
 	case "animal":
 		fallthrough
 	case "vehicle":
-		*e = NAWelcomeSubEventTypeEnum(s)
+		*e = NAWelcomeSubEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NAWelcomeSubEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NAWelcomeSubEventTypeEnum: %v", v)
 	}
 }
 

@@ -13,30 +13,27 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/shop-pro.jp/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateUsageChargeRequest{
+    ctx := context.Background()
+    res, err := s.ApplicationCharge.CreateUsageCharge(ctx, operations.CreateUsageChargeRequest{
         RequestBody: operations.CreateUsageChargeRequestBody{
             UsageCharge: &operations.CreateUsageChargeRequestBodyUsageCharge{
                 Description: "2019/4 メール送信分",
                 Point: 100,
             },
         },
-        XAppstoreUsageChargeToken: "corrupti",
+        XAppstoreUsageChargeToken: sdk.String("corrupti"),
         RecurringApplicationChargeID: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.ApplicationCharge.CreateUsageCharge(ctx, req, operations.CreateUsageChargeSecurity{
+    }, operations.CreateUsageChargeSecurity{
         OAuth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -54,38 +51,38 @@ func main() {
 ## Available Resources and Operations
 
 
-### ApplicationCharge
+### [ApplicationCharge](docs/applicationcharge/README.md)
 
-* `CreateUsageCharge` - 従量課金データの作成
-* `PostApplicationCharge` - アプリ内課金データの作成
+* [CreateUsageCharge](docs/applicationcharge/README.md#createusagecharge) - 従量課金データの作成
+* [PostApplicationCharge](docs/applicationcharge/README.md#postapplicationcharge) - アプリ内課金データの作成
 
-### InlineScript
+### [InlineScript](docs/inlinescript/README.md)
 
-* `CreateInlineScriptTag` - インラインスクリプトタグの登録
-* `DeleteInlineScriptTag` - インラインスクリプトタグの削除
-* `GetInlineScriptTag` - インラインスクリプトタグの取得
-* `GetInlineScriptTags` - インラインスクリプトタグの取得
-* `UpdateInlineScriptTag` - インラインスクリプトタグの更新
+* [CreateInlineScriptTag](docs/inlinescript/README.md#createinlinescripttag) - インラインスクリプトタグの登録
+* [DeleteInlineScriptTag](docs/inlinescript/README.md#deleteinlinescripttag) - インラインスクリプトタグの削除
+* [GetInlineScriptTag](docs/inlinescript/README.md#getinlinescripttag) - インラインスクリプトタグの取得
+* [GetInlineScriptTags](docs/inlinescript/README.md#getinlinescripttags) - インラインスクリプトタグの取得
+* [UpdateInlineScriptTag](docs/inlinescript/README.md#updateinlinescripttag) - インラインスクリプトタグの更新
 
-### Script
+### [Script](docs/script/README.md)
 
-* `CreateShopScriptTag` - スクリプトタグの作成
-* `DeleteScriptTag` - スクリプトタグの削除
-* `GetShopScriptTag` - スクリプトタグの取得
-* `GetShopScriptTags` - スクリプトタグの取得
-* `UpdateShopScriptTag` - スクリプトタグの更新
+* [CreateShopScriptTag](docs/script/README.md#createshopscripttag) - スクリプトタグの作成
+* [DeleteScriptTag](docs/script/README.md#deletescripttag) - スクリプトタグの削除
+* [GetShopScriptTag](docs/script/README.md#getshopscripttag) - スクリプトタグの取得
+* [GetShopScriptTags](docs/script/README.md#getshopscripttags) - スクリプトタグの取得
+* [UpdateShopScriptTag](docs/script/README.md#updateshopscripttag) - スクリプトタグの更新
 
-### ScriptDeprecated
+### [ScriptDeprecated](docs/scriptdeprecated/README.md)
 
-* `CreateScriptTag` - スクリプトタグの作成
-* `DeleteV1ScriptTagsScriptTagIDJSON` - スクリプトタグの削除
-* `GetScriptTag` - スクリプトタグの取得
-* `GetScriptTags` - スクリプトタグの取得
-* `UpdateScriptTag` - スクリプトタグの更新
+* [CreateScriptTag](docs/scriptdeprecated/README.md#createscripttag) - スクリプトタグの作成
+* [DeleteV1ScriptTagsScriptTagIDJSON](docs/scriptdeprecated/README.md#deletev1scripttagsscripttagidjson) - スクリプトタグの削除
+* [GetScriptTag](docs/scriptdeprecated/README.md#getscripttag) - スクリプトタグの取得
+* [GetScriptTags](docs/scriptdeprecated/README.md#getscripttags) - スクリプトタグの取得
+* [UpdateScriptTag](docs/scriptdeprecated/README.md#updatescripttag) - スクリプトタグの更新
 
-### Uninstallation
+### [Uninstallation](docs/uninstallation/README.md)
 
-* `DeleteInstallation` - アプリストアアプリのアンインストール
+* [DeleteInstallation](docs/uninstallation/README.md#deleteinstallation) - アプリストアアプリのアンインストール
 <!-- End SDK Available Operations -->
 
 ### Maturity

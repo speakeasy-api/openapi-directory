@@ -15,17 +15,21 @@ const (
 	POSTUpdateSigningCertificateActionEnumUpdateSigningCertificate POSTUpdateSigningCertificateActionEnum = "UpdateSigningCertificate"
 )
 
+func (e POSTUpdateSigningCertificateActionEnum) ToPointer() *POSTUpdateSigningCertificateActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateSigningCertificateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateSigningCertificate":
-		*e = POSTUpdateSigningCertificateActionEnum(s)
+		*e = POSTUpdateSigningCertificateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateSigningCertificateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateSigningCertificateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateSigningCertificateVersionEnumTwoThousandAndTen0508 POSTUpdateSigningCertificateVersionEnum = "2010-05-08"
 )
 
+func (e POSTUpdateSigningCertificateVersionEnum) ToPointer() *POSTUpdateSigningCertificateVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateSigningCertificateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTUpdateSigningCertificateVersionEnum(s)
+		*e = POSTUpdateSigningCertificateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateSigningCertificateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateSigningCertificateVersionEnum: %v", v)
 	}
 }
 

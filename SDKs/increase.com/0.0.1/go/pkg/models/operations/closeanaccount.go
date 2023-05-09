@@ -13,23 +13,27 @@ type CloseAnAccountRequest struct {
 	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
 }
 
-type CloseAnAccountDefaultApplicationJSON13StatusEnum string
+type CloseAnAccountDefaultApplicationJSON13StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CloseAnAccountDefaultApplicationJSON13StatusEnum = "429"
+	CloseAnAccountDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CloseAnAccountDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e CloseAnAccountDefaultApplicationJSON13StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = CloseAnAccountDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = CloseAnAccountDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	CloseAnAccountDefaultApplicationJSON13TypeEnumRateLimitedError CloseAnAccountDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON13TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = CloseAnAccountDefaultApplicationJSON13TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type CloseAnAccountDefaultApplicationJSON13 struct {
 	Type       CloseAnAccountDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type CloseAnAccountDefaultApplicationJSON12StatusEnum string
+type CloseAnAccountDefaultApplicationJSON12StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON12StatusEnumFourHundredAndThree CloseAnAccountDefaultApplicationJSON12StatusEnum = "403"
+	CloseAnAccountDefaultApplicationJSON12StatusEnumFourHundredAndThree CloseAnAccountDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e CloseAnAccountDefaultApplicationJSON12StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CloseAnAccountDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CloseAnAccountDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	CloseAnAccountDefaultApplicationJSON12TypeEnumPrivateFeatureError CloseAnAccountDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON12TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = CloseAnAccountDefaultApplicationJSON12TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type CloseAnAccountDefaultApplicationJSON12 struct {
 	Type   CloseAnAccountDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type CloseAnAccountDefaultApplicationJSON11StatusEnum string
+type CloseAnAccountDefaultApplicationJSON11StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON11StatusEnumFourHundredAndFour CloseAnAccountDefaultApplicationJSON11StatusEnum = "404"
+	CloseAnAccountDefaultApplicationJSON11StatusEnumFourHundredAndFour CloseAnAccountDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e CloseAnAccountDefaultApplicationJSON11StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CloseAnAccountDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CloseAnAccountDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	CloseAnAccountDefaultApplicationJSON11TypeEnumObjectNotFoundError CloseAnAccountDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON11TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = CloseAnAccountDefaultApplicationJSON11TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type CloseAnAccountDefaultApplicationJSON11 struct {
 	Type   CloseAnAccountDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type CloseAnAccountDefaultApplicationJSON10StatusEnum string
+type CloseAnAccountDefaultApplicationJSON10StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON10StatusEnumFourHundred CloseAnAccountDefaultApplicationJSON10StatusEnum = "400"
+	CloseAnAccountDefaultApplicationJSON10StatusEnumFourHundred CloseAnAccountDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e CloseAnAccountDefaultApplicationJSON10StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CloseAnAccountDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CloseAnAccountDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	CloseAnAccountDefaultApplicationJSON10TypeEnumMalformedRequestError CloseAnAccountDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON10TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = CloseAnAccountDefaultApplicationJSON10TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type CloseAnAccountDefaultApplicationJSON10 struct {
 	Type   CloseAnAccountDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type CloseAnAccountDefaultApplicationJSON9StatusEnum string
+type CloseAnAccountDefaultApplicationJSON9StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON9StatusEnumFourHundred CloseAnAccountDefaultApplicationJSON9StatusEnum = "400"
+	CloseAnAccountDefaultApplicationJSON9StatusEnumFourHundred CloseAnAccountDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e CloseAnAccountDefaultApplicationJSON9StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CloseAnAccountDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CloseAnAccountDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	CloseAnAccountDefaultApplicationJSON9TypeEnumInvalidParametersError CloseAnAccountDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON9TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = CloseAnAccountDefaultApplicationJSON9TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type CloseAnAccountDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                        `json:"errors,omitempty"`
+	Errors []map[string]interface{}                        `json:"errors"`
 	Status CloseAnAccountDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                          `json:"title"`
 	Type   CloseAnAccountDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type CloseAnAccountDefaultApplicationJSON8StatusEnum string
+type CloseAnAccountDefaultApplicationJSON8StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON8StatusEnumFourHundredAndNine CloseAnAccountDefaultApplicationJSON8StatusEnum = "409"
+	CloseAnAccountDefaultApplicationJSON8StatusEnumFourHundredAndNine CloseAnAccountDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e CloseAnAccountDefaultApplicationJSON8StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CloseAnAccountDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CloseAnAccountDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	CloseAnAccountDefaultApplicationJSON8TypeEnumInvalidOperationError CloseAnAccountDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON8TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = CloseAnAccountDefaultApplicationJSON8TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type CloseAnAccountDefaultApplicationJSON8 struct {
 	Type   CloseAnAccountDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type CloseAnAccountDefaultApplicationJSON7StatusEnum string
+type CloseAnAccountDefaultApplicationJSON7StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON7StatusEnumFourHundredAndOne CloseAnAccountDefaultApplicationJSON7StatusEnum = "401"
+	CloseAnAccountDefaultApplicationJSON7StatusEnumFourHundredAndOne CloseAnAccountDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e CloseAnAccountDefaultApplicationJSON7StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = CloseAnAccountDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = CloseAnAccountDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	CloseAnAccountDefaultApplicationJSON7TypeEnumInvalidAPIKeyError CloseAnAccountDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON7TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = CloseAnAccountDefaultApplicationJSON7TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type CloseAnAccountDefaultApplicationJSON7 struct {
 	Type   CloseAnAccountDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type CloseAnAccountDefaultApplicationJSON6StatusEnum string
+type CloseAnAccountDefaultApplicationJSON6StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON6StatusEnumFiveHundred CloseAnAccountDefaultApplicationJSON6StatusEnum = "500"
+	CloseAnAccountDefaultApplicationJSON6StatusEnumFiveHundred CloseAnAccountDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e CloseAnAccountDefaultApplicationJSON6StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = CloseAnAccountDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = CloseAnAccountDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	CloseAnAccountDefaultApplicationJSON6TypeEnumInternalServerError CloseAnAccountDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON6TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = CloseAnAccountDefaultApplicationJSON6TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type CloseAnAccountDefaultApplicationJSON6 struct {
 	Type   CloseAnAccountDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type CloseAnAccountDefaultApplicationJSON5StatusEnum string
+type CloseAnAccountDefaultApplicationJSON5StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON5StatusEnumFourHundredAndThree CloseAnAccountDefaultApplicationJSON5StatusEnum = "403"
+	CloseAnAccountDefaultApplicationJSON5StatusEnumFourHundredAndThree CloseAnAccountDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e CloseAnAccountDefaultApplicationJSON5StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CloseAnAccountDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CloseAnAccountDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	CloseAnAccountDefaultApplicationJSON5TypeEnumInsufficientPermissionsError CloseAnAccountDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON5TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = CloseAnAccountDefaultApplicationJSON5TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type CloseAnAccountDefaultApplicationJSON5 struct {
 	Type   CloseAnAccountDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type CloseAnAccountDefaultApplicationJSON4StatusEnum string
+type CloseAnAccountDefaultApplicationJSON4StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CloseAnAccountDefaultApplicationJSON4StatusEnum = "422"
+	CloseAnAccountDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CloseAnAccountDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e CloseAnAccountDefaultApplicationJSON4StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = CloseAnAccountDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = CloseAnAccountDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	CloseAnAccountDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError CloseAnAccountDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON4TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = CloseAnAccountDefaultApplicationJSON4TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type CloseAnAccountDefaultApplicationJSON4 struct {
 	Type   CloseAnAccountDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type CloseAnAccountDefaultApplicationJSON3StatusEnum string
+type CloseAnAccountDefaultApplicationJSON3StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON3StatusEnumFourHundredAndNine CloseAnAccountDefaultApplicationJSON3StatusEnum = "409"
+	CloseAnAccountDefaultApplicationJSON3StatusEnumFourHundredAndNine CloseAnAccountDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e CloseAnAccountDefaultApplicationJSON3StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CloseAnAccountDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CloseAnAccountDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	CloseAnAccountDefaultApplicationJSON3TypeEnumIdempotencyConflictError CloseAnAccountDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON3TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = CloseAnAccountDefaultApplicationJSON3TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type CloseAnAccountDefaultApplicationJSON3 struct {
 	Type   CloseAnAccountDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type CloseAnAccountDefaultApplicationJSON2StatusEnum string
+type CloseAnAccountDefaultApplicationJSON2StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON2StatusEnumFourHundredAndThree CloseAnAccountDefaultApplicationJSON2StatusEnum = "403"
+	CloseAnAccountDefaultApplicationJSON2StatusEnumFourHundredAndThree CloseAnAccountDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e CloseAnAccountDefaultApplicationJSON2StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CloseAnAccountDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CloseAnAccountDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	CloseAnAccountDefaultApplicationJSON2TypeEnumEnvironmentMismatchError CloseAnAccountDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON2TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = CloseAnAccountDefaultApplicationJSON2TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type CloseAnAccountDefaultApplicationJSON2 struct {
 	Type   CloseAnAccountDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type CloseAnAccountDefaultApplicationJSON1StatusEnum string
+type CloseAnAccountDefaultApplicationJSON1StatusEnum int64
 
 const (
-	CloseAnAccountDefaultApplicationJSON1StatusEnumFourHundredAndFour CloseAnAccountDefaultApplicationJSON1StatusEnum = "404"
+	CloseAnAccountDefaultApplicationJSON1StatusEnumFourHundredAndFour CloseAnAccountDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e CloseAnAccountDefaultApplicationJSON1StatusEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CloseAnAccountDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CloseAnAccountDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	CloseAnAccountDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError CloseAnAccountDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e CloseAnAccountDefaultApplicationJSON1TypeEnum) ToPointer() *CloseAnAccountDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *CloseAnAccountDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = CloseAnAccountDefaultApplicationJSON1TypeEnum(s)
+		*e = CloseAnAccountDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAnAccountDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

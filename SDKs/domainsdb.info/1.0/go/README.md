@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/domainsdb.info/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetDomainsTldZoneIDDownloadRequest{
-        APIKey: "corrupti",
-        Date: "provident",
-        ZoneID: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.Domains.GetDomainsTldZoneIDDownload(ctx, req)
+    res, err := s.Domains.GetDomainsTldZoneIDDownload(ctx, operations.GetDomainsTldZoneIDDownloadRequest{
+        APIKey: sdk.String("corrupti"),
+        Date: sdk.String("provident"),
+        ZoneID: "distinctio",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,25 +44,25 @@ func main() {
 ## Available Resources and Operations
 
 
-### Domains
+### [Domains](docs/domains/README.md)
 
-* `GetDomainsTldZoneIDDownload` - Download Whole Dataset for TLD
-* `GetDomainsTldZoneIDSearch` - Domains Search for TLD
-* `GetDomainsUpdatesAdded` - Get added domains, latest if date not specified
-* `GetDomainsUpdatesAddedDownload` - Download added domains, latest if date not specified
-* `GetDomainsUpdatesDeleted` - Get deleted domains, latest if date not specified
-* `GetDomainsUpdatesDeletedDownload` - Download deleted domains, latest if date not specified
-* `GetDomainsUpdatesList` - List of updates
-* `GetSearchDomainItem` - Domains Database Search
-* `GetTldDomainItem` - Get TLD records
+* [GetDomainsTldZoneIDDownload](docs/domains/README.md#getdomainstldzoneiddownload) - Download Whole Dataset for TLD
+* [GetDomainsTldZoneIDSearch](docs/domains/README.md#getdomainstldzoneidsearch) - Domains Search for TLD
+* [GetDomainsUpdatesAdded](docs/domains/README.md#getdomainsupdatesadded) - Get added domains, latest if date not specified
+* [GetDomainsUpdatesAddedDownload](docs/domains/README.md#getdomainsupdatesaddeddownload) - Download added domains, latest if date not specified
+* [GetDomainsUpdatesDeleted](docs/domains/README.md#getdomainsupdatesdeleted) - Get deleted domains, latest if date not specified
+* [GetDomainsUpdatesDeletedDownload](docs/domains/README.md#getdomainsupdatesdeleteddownload) - Download deleted domains, latest if date not specified
+* [GetDomainsUpdatesList](docs/domains/README.md#getdomainsupdateslist) - List of updates
+* [GetSearchDomainItem](docs/domains/README.md#getsearchdomainitem) - Domains Database Search
+* [GetTldDomainItem](docs/domains/README.md#gettlddomainitem) - Get TLD records
 
-### Info
+### [Info](docs/info/README.md)
 
-* `GetInfoTld` - Returns overall Tld info
-* `GetInfoTldZone` - Returns statistics for specific zone
-* `GetAPIInfoItem`
-* `GetStatisticsCollection` - Returns overall stagtistics
-* `GetStatisticsItem` - Returns statistics for specific zone
+* [GetInfoTld](docs/info/README.md#getinfotld) - Returns overall Tld info
+* [GetInfoTldZone](docs/info/README.md#getinfotldzone) - Returns statistics for specific zone
+* [GetAPIInfoItem](docs/info/README.md#getapiinfoitem)
+* [GetStatisticsCollection](docs/info/README.md#getstatisticscollection) - Returns overall stagtistics
+* [GetStatisticsItem](docs/info/README.md#getstatisticsitem) - Returns statistics for specific zone
 <!-- End SDK Available Operations -->
 
 ### Maturity

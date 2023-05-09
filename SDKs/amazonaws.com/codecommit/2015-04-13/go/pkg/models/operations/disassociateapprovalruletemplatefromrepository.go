@@ -16,17 +16,21 @@ const (
 	DisassociateApprovalRuleTemplateFromRepositoryXAmzTargetEnumCodeCommit20150413DisassociateApprovalRuleTemplateFromRepository DisassociateApprovalRuleTemplateFromRepositoryXAmzTargetEnum = "CodeCommit_20150413.DisassociateApprovalRuleTemplateFromRepository"
 )
 
+func (e DisassociateApprovalRuleTemplateFromRepositoryXAmzTargetEnum) ToPointer() *DisassociateApprovalRuleTemplateFromRepositoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateApprovalRuleTemplateFromRepositoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.DisassociateApprovalRuleTemplateFromRepository":
-		*e = DisassociateApprovalRuleTemplateFromRepositoryXAmzTargetEnum(s)
+		*e = DisassociateApprovalRuleTemplateFromRepositoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateApprovalRuleTemplateFromRepositoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateApprovalRuleTemplateFromRepositoryXAmzTargetEnum: %v", v)
 	}
 }
 

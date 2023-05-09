@@ -13,17 +13,21 @@ const (
 	WebhookCreateEventsEnumCall WebhookCreateEventsEnum = "CALL"
 )
 
+func (e WebhookCreateEventsEnum) ToPointer() *WebhookCreateEventsEnum {
+	return &e
+}
+
 func (e *WebhookCreateEventsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CALL":
-		*e = WebhookCreateEventsEnum(s)
+		*e = WebhookCreateEventsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookCreateEventsEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookCreateEventsEnum: %v", v)
 	}
 }
 
@@ -36,21 +40,25 @@ const (
 	WebhookCreateMetadataPolicyEnumBody   WebhookCreateMetadataPolicyEnum = "BODY"
 )
 
+func (e WebhookCreateMetadataPolicyEnum) ToPointer() *WebhookCreateMetadataPolicyEnum {
+	return &e
+}
+
 func (e *WebhookCreateMetadataPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "HEADER":
 		fallthrough
 	case "BODY":
-		*e = WebhookCreateMetadataPolicyEnum(s)
+		*e = WebhookCreateMetadataPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookCreateMetadataPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookCreateMetadataPolicyEnum: %v", v)
 	}
 }
 
@@ -61,17 +69,21 @@ const (
 	WebhookCreateSigningAlgoEnumHmacSha256 WebhookCreateSigningAlgoEnum = "HMAC_SHA256"
 )
 
+func (e WebhookCreateSigningAlgoEnum) ToPointer() *WebhookCreateSigningAlgoEnum {
+	return &e
+}
+
 func (e *WebhookCreateSigningAlgoEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HMAC_SHA256":
-		*e = WebhookCreateSigningAlgoEnum(s)
+		*e = WebhookCreateSigningAlgoEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookCreateSigningAlgoEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookCreateSigningAlgoEnum: %v", v)
 	}
 }
 

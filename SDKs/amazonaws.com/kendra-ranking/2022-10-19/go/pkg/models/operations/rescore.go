@@ -16,17 +16,21 @@ const (
 	RescoreXAmzTargetEnumAwsKendraRerankingFrontendServiceRescore RescoreXAmzTargetEnum = "AWSKendraRerankingFrontendService.Rescore"
 )
 
+func (e RescoreXAmzTargetEnum) ToPointer() *RescoreXAmzTargetEnum {
+	return &e
+}
+
 func (e *RescoreXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraRerankingFrontendService.Rescore":
-		*e = RescoreXAmzTargetEnum(s)
+		*e = RescoreXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RescoreXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RescoreXAmzTargetEnum: %v", v)
 	}
 }
 

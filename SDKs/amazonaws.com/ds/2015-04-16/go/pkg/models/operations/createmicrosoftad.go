@@ -16,17 +16,21 @@ const (
 	CreateMicrosoftADXAmzTargetEnumDirectoryService20150416CreateMicrosoftAd CreateMicrosoftADXAmzTargetEnum = "DirectoryService_20150416.CreateMicrosoftAD"
 )
 
+func (e CreateMicrosoftADXAmzTargetEnum) ToPointer() *CreateMicrosoftADXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateMicrosoftADXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.CreateMicrosoftAD":
-		*e = CreateMicrosoftADXAmzTargetEnum(s)
+		*e = CreateMicrosoftADXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateMicrosoftADXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateMicrosoftADXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	OntapDeploymentTypeEnumSingleAz1 OntapDeploymentTypeEnum = "SINGLE_AZ_1"
 )
 
+func (e OntapDeploymentTypeEnum) ToPointer() *OntapDeploymentTypeEnum {
+	return &e
+}
+
 func (e *OntapDeploymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MULTI_AZ_1":
 		fallthrough
 	case "SINGLE_AZ_1":
-		*e = OntapDeploymentTypeEnum(s)
+		*e = OntapDeploymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OntapDeploymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OntapDeploymentTypeEnum: %v", v)
 	}
 }

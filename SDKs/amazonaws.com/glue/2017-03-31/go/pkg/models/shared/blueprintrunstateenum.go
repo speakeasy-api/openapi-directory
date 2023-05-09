@@ -16,12 +16,16 @@ const (
 	BlueprintRunStateEnumRollingBack BlueprintRunStateEnum = "ROLLING_BACK"
 )
 
+func (e BlueprintRunStateEnum) ToPointer() *BlueprintRunStateEnum {
+	return &e
+}
+
 func (e *BlueprintRunStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "SUCCEEDED":
@@ -29,9 +33,9 @@ func (e *BlueprintRunStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "ROLLING_BACK":
-		*e = BlueprintRunStateEnum(s)
+		*e = BlueprintRunStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BlueprintRunStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BlueprintRunStateEnum: %v", v)
 	}
 }

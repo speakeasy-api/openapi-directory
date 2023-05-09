@@ -64,12 +64,16 @@ const (
 	PatientHealthResultResourceAttributesMetricTypeEnumInhalerUsage              PatientHealthResultResourceAttributesMetricTypeEnum = "inhaler_usage"
 )
 
+func (e PatientHealthResultResourceAttributesMetricTypeEnum) ToPointer() *PatientHealthResultResourceAttributesMetricTypeEnum {
+	return &e
+}
+
 func (e *PatientHealthResultResourceAttributesMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "blood_pressure_systolic":
 		fallthrough
 	case "blood_pressure_diastolic":
@@ -153,10 +157,10 @@ func (e *PatientHealthResultResourceAttributesMetricTypeEnum) UnmarshalJSON(data
 	case "respiratory_rate":
 		fallthrough
 	case "inhaler_usage":
-		*e = PatientHealthResultResourceAttributesMetricTypeEnum(s)
+		*e = PatientHealthResultResourceAttributesMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientHealthResultResourceAttributesMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientHealthResultResourceAttributesMetricTypeEnum: %v", v)
 	}
 }
 

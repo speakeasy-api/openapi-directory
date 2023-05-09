@@ -3,34 +3,11 @@
 package operations
 
 import (
-	"encoding/json"
-	"fmt"
 	"net/http"
 )
 
-// ListCategoriesIncludeSubcategoriesEnum
-type ListCategoriesIncludeSubcategoriesEnum string
-
-const (
-	ListCategoriesIncludeSubcategoriesEnumTrue ListCategoriesIncludeSubcategoriesEnum = "true"
-)
-
-func (e *ListCategoriesIncludeSubcategoriesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		*e = ListCategoriesIncludeSubcategoriesEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ListCategoriesIncludeSubcategoriesEnum: %s", s)
-	}
-}
-
 type ListCategoriesRequest struct {
-	IncludeSubcategories *ListCategoriesIncludeSubcategoriesEnum `queryParam:"style=form,explode=true,name=include_subcategories"`
+	IncludeSubcategories *bool `queryParam:"style=form,explode=true,name=include_subcategories"`
 }
 
 type ListCategories200ApplicationJSONCategoryListCategories struct {

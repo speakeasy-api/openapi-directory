@@ -16,17 +16,21 @@ const (
 	DescribeOperatingSystemsXAmzTargetEnumOpsWorks20130218DescribeOperatingSystems DescribeOperatingSystemsXAmzTargetEnum = "OpsWorks_20130218.DescribeOperatingSystems"
 )
 
+func (e DescribeOperatingSystemsXAmzTargetEnum) ToPointer() *DescribeOperatingSystemsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeOperatingSystemsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DescribeOperatingSystems":
-		*e = DescribeOperatingSystemsXAmzTargetEnum(s)
+		*e = DescribeOperatingSystemsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeOperatingSystemsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeOperatingSystemsXAmzTargetEnum: %v", v)
 	}
 }
 

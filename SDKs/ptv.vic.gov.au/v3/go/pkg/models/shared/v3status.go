@@ -8,26 +8,30 @@ import (
 )
 
 // V3StatusHealthEnum - API system health status (0=offline, 1=online)
-type V3StatusHealthEnum string
+type V3StatusHealthEnum int
 
 const (
-	V3StatusHealthEnumZero V3StatusHealthEnum = "0"
-	V3StatusHealthEnumOne  V3StatusHealthEnum = "1"
+	V3StatusHealthEnumZero V3StatusHealthEnum = 0
+	V3StatusHealthEnumOne  V3StatusHealthEnum = 1
 )
 
+func (e V3StatusHealthEnum) ToPointer() *V3StatusHealthEnum {
+	return &e
+}
+
 func (e *V3StatusHealthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = V3StatusHealthEnum(s)
+	case 1:
+		*e = V3StatusHealthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for V3StatusHealthEnum: %s", s)
+		return fmt.Errorf("invalid value for V3StatusHealthEnum: %v", v)
 	}
 }
 

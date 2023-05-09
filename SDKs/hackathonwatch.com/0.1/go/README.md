@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/hackathonwatch.com/0.1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GETHackathonsIDFormatRequest{
-        ID: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.Hackathons.GETHackathonsIDFormat(ctx, req)
+    res, err := s.Hackathons.GETHackathonsIDFormat(ctx, operations.GETHackathonsIDFormatRequest{
+        ID: 548814,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,15 +42,15 @@ func main() {
 ## Available Resources and Operations
 
 
-### Hackathons
+### [Hackathons](docs/hackathons/README.md)
 
-* `GETHackathonsIDFormat` - Return the detail of a given hackathon
-* `GETHackathonsComingFormat` - Return a list of coming hackathons
+* [GETHackathonsIDFormat](docs/hackathons/README.md#gethackathonsidformat) - Return the detail of a given hackathon
+* [GETHackathonsComingFormat](docs/hackathons/README.md#gethackathonscomingformat) - Return a list of coming hackathons
 
-### SwaggerDoc
+### [SwaggerDoc](docs/swaggerdoc/README.md)
 
-* `GETSwaggerDocFormat` - Swagger compatible API description
-* `GETSwaggerDocNameFormat` - Swagger compatible API description for specific API
+* [GETSwaggerDocFormat](docs/swaggerdoc/README.md#getswaggerdocformat) - Swagger compatible API description
+* [GETSwaggerDocNameFormat](docs/swaggerdoc/README.md#getswaggerdocnameformat) - Swagger compatible API description for specific API
 <!-- End SDK Available Operations -->
 
 ### Maturity

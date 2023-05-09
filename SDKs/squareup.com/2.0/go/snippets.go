@@ -39,7 +39,10 @@ func newSnippets(defaultClient, securityClient HTTPClient, serverURL, language, 
 // __Note:__ Square Online APIs are publicly available as part of an early access program. For more information, see [Early access program for Square Online APIs](https://developer.squareup.com/docs/online-api#early-access-program-for-square-online-apis).
 func (s *snippets) DeleteSnippet(ctx context.Context, request operations.DeleteSnippetRequest, security operations.DeleteSnippetSecurity) (*operations.DeleteSnippetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sites/{site_id}/snippet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/sites/{site_id}/snippet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -88,7 +91,10 @@ func (s *snippets) DeleteSnippet(ctx context.Context, request operations.DeleteS
 // __Note:__ Square Online APIs are publicly available as part of an early access program. For more information, see [Early access program for Square Online APIs](https://developer.squareup.com/docs/online-api#early-access-program-for-square-online-apis).
 func (s *snippets) RetrieveSnippet(ctx context.Context, request operations.RetrieveSnippetRequest, security operations.RetrieveSnippetSecurity) (*operations.RetrieveSnippetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sites/{site_id}/snippet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/sites/{site_id}/snippet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +144,10 @@ func (s *snippets) RetrieveSnippet(ctx context.Context, request operations.Retri
 // __Note:__ Square Online APIs are publicly available as part of an early access program. For more information, see [Early access program for Square Online APIs](https://developer.squareup.com/docs/online-api#early-access-program-for-square-online-apis).
 func (s *snippets) UpsertSnippet(ctx context.Context, request operations.UpsertSnippetRequest, security operations.UpsertSnippetSecurity) (*operations.UpsertSnippetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sites/{site_id}/snippet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/sites/{site_id}/snippet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpsertSnippetRequest", "json")
 	if err != nil {

@@ -73,7 +73,10 @@ func (s *holidays) AllHolidays(ctx context.Context, request operations.AllHolida
 // Creates or updates holidays through holiday ID.
 func (s *holidays) CreateUpdateHoliday(ctx context.Context, request operations.CreateUpdateHolidayRequest) (*operations.CreateUpdateHolidayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/holidays/{holidayId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/holidays/{holidayId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -121,7 +124,10 @@ func (s *holidays) CreateUpdateHoliday(ctx context.Context, request operations.C
 // Deletes given holidays set up in your store.
 func (s *holidays) Holiday(ctx context.Context, request operations.HolidayRequest) (*operations.HolidayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/holidays/{holidayId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/holidays/{holidayId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -159,7 +165,10 @@ func (s *holidays) Holiday(ctx context.Context, request operations.HolidayReques
 // Lists holiday's information by holiday ID.
 func (s *holidays) HolidayByID(ctx context.Context, request operations.HolidayByIDRequest) (*operations.HolidayByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/holidays/{holidayId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/holidays/{holidayId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

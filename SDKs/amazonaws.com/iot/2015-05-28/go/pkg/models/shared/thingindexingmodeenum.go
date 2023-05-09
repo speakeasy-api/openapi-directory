@@ -15,20 +15,24 @@ const (
 	ThingIndexingModeEnumRegistryAndShadow ThingIndexingModeEnum = "REGISTRY_AND_SHADOW"
 )
 
+func (e ThingIndexingModeEnum) ToPointer() *ThingIndexingModeEnum {
+	return &e
+}
+
 func (e *ThingIndexingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFF":
 		fallthrough
 	case "REGISTRY":
 		fallthrough
 	case "REGISTRY_AND_SHADOW":
-		*e = ThingIndexingModeEnum(s)
+		*e = ThingIndexingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThingIndexingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ThingIndexingModeEnum: %v", v)
 	}
 }

@@ -15,19 +15,23 @@ const (
 	ActionARealTimeDecisionParametersCardAuthorizationDecisionEnumDecline ActionARealTimeDecisionParametersCardAuthorizationDecisionEnum = "decline"
 )
 
+func (e ActionARealTimeDecisionParametersCardAuthorizationDecisionEnum) ToPointer() *ActionARealTimeDecisionParametersCardAuthorizationDecisionEnum {
+	return &e
+}
+
 func (e *ActionARealTimeDecisionParametersCardAuthorizationDecisionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "approve":
 		fallthrough
 	case "decline":
-		*e = ActionARealTimeDecisionParametersCardAuthorizationDecisionEnum(s)
+		*e = ActionARealTimeDecisionParametersCardAuthorizationDecisionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionARealTimeDecisionParametersCardAuthorizationDecisionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionARealTimeDecisionParametersCardAuthorizationDecisionEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	ActionARealTimeDecisionParametersDigitalWalletAuthenticationResultEnumFailure ActionARealTimeDecisionParametersDigitalWalletAuthenticationResultEnum = "failure"
 )
 
+func (e ActionARealTimeDecisionParametersDigitalWalletAuthenticationResultEnum) ToPointer() *ActionARealTimeDecisionParametersDigitalWalletAuthenticationResultEnum {
+	return &e
+}
+
 func (e *ActionARealTimeDecisionParametersDigitalWalletAuthenticationResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "failure":
-		*e = ActionARealTimeDecisionParametersDigitalWalletAuthenticationResultEnum(s)
+		*e = ActionARealTimeDecisionParametersDigitalWalletAuthenticationResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionARealTimeDecisionParametersDigitalWalletAuthenticationResultEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionARealTimeDecisionParametersDigitalWalletAuthenticationResultEnum: %v", v)
 	}
 }
 

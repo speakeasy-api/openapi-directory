@@ -26,17 +26,21 @@ const (
 	RsbycRequestBodyFormatEnumPdf RsbycRequestBodyFormatEnum = "pdf"
 )
 
+func (e RsbycRequestBodyFormatEnum) ToPointer() *RsbycRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *RsbycRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = RsbycRequestBodyFormatEnum(s)
+		*e = RsbycRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RsbycRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RsbycRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -56,17 +60,21 @@ const (
 	Rsbyc504ApplicationJSONErrorEnumGatewayTimeout Rsbyc504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Rsbyc504ApplicationJSONErrorEnum) ToPointer() *Rsbyc504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Rsbyc504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Rsbyc504ApplicationJSONErrorEnum(s)
+		*e = Rsbyc504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -76,17 +84,21 @@ const (
 	Rsbyc504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Rsbyc504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Rsbyc504ApplicationJSONErrorDescriptionEnum) ToPointer() *Rsbyc504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Rsbyc504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Rsbyc504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Rsbyc504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -102,17 +114,21 @@ const (
 	Rsbyc503ApplicationJSONErrorEnumServiceUnavailable Rsbyc503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Rsbyc503ApplicationJSONErrorEnum) ToPointer() *Rsbyc503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Rsbyc503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Rsbyc503ApplicationJSONErrorEnum(s)
+		*e = Rsbyc503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -122,17 +138,21 @@ const (
 	Rsbyc503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Rsbyc503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Rsbyc503ApplicationJSONErrorDescriptionEnum) ToPointer() *Rsbyc503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Rsbyc503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Rsbyc503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Rsbyc503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -148,17 +168,21 @@ const (
 	Rsbyc502ApplicationJSONErrorEnumBadGatewy Rsbyc502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Rsbyc502ApplicationJSONErrorEnum) ToPointer() *Rsbyc502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Rsbyc502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Rsbyc502ApplicationJSONErrorEnum(s)
+		*e = Rsbyc502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -168,17 +192,21 @@ const (
 	Rsbyc502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Rsbyc502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Rsbyc502ApplicationJSONErrorDescriptionEnum) ToPointer() *Rsbyc502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Rsbyc502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Rsbyc502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Rsbyc502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -194,17 +222,21 @@ const (
 	Rsbyc500ApplicationJSONErrorEnumInternalServerError Rsbyc500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Rsbyc500ApplicationJSONErrorEnum) ToPointer() *Rsbyc500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Rsbyc500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Rsbyc500ApplicationJSONErrorEnum(s)
+		*e = Rsbyc500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -214,17 +246,21 @@ const (
 	Rsbyc500ApplicationJSONErrorDescriptionEnumInternalServerError Rsbyc500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Rsbyc500ApplicationJSONErrorDescriptionEnum) ToPointer() *Rsbyc500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Rsbyc500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Rsbyc500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Rsbyc500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -241,19 +277,23 @@ const (
 	Rsbyc404ApplicationJSONErrorEnumURLNotFound    Rsbyc404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Rsbyc404ApplicationJSONErrorEnum) ToPointer() *Rsbyc404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Rsbyc404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Rsbyc404ApplicationJSONErrorEnum(s)
+		*e = Rsbyc404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -264,19 +304,23 @@ const (
 	Rsbyc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Rsbyc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Rsbyc404ApplicationJSONErrorDescriptionEnum) ToPointer() *Rsbyc404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Rsbyc404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Rsbyc404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Rsbyc404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -293,19 +337,23 @@ const (
 	Rsbyc401ApplicationJSONErrorEnumInvalidAuthorization  Rsbyc401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Rsbyc401ApplicationJSONErrorEnum) ToPointer() *Rsbyc401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Rsbyc401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Rsbyc401ApplicationJSONErrorEnum(s)
+		*e = Rsbyc401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -316,19 +364,23 @@ const (
 	Rsbyc401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Rsbyc401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Rsbyc401ApplicationJSONErrorDescriptionEnum) ToPointer() *Rsbyc401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Rsbyc401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Rsbyc401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Rsbyc401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -348,12 +400,16 @@ const (
 	Rsbyc400ApplicationJSONErrorEnumInvalidConsentid Rsbyc400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Rsbyc400ApplicationJSONErrorEnum) ToPointer() *Rsbyc400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Rsbyc400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -363,10 +419,10 @@ func (e *Rsbyc400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Rsbyc400ApplicationJSONErrorEnum(s)
+		*e = Rsbyc400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -380,12 +436,16 @@ const (
 	Rsbyc400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Rsbyc400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Rsbyc400ApplicationJSONErrorDescriptionEnum) ToPointer() *Rsbyc400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Rsbyc400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -395,10 +455,10 @@ func (e *Rsbyc400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Rsbyc400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Rsbyc400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Rsbyc400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Rsbyc400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

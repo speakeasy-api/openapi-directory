@@ -14,18 +14,22 @@ const (
 	SpendLimitNameEnumVoiceMessageMonthlySpendLimit SpendLimitNameEnum = "VOICE_MESSAGE_MONTHLY_SPEND_LIMIT"
 )
 
+func (e SpendLimitNameEnum) ToPointer() *SpendLimitNameEnum {
+	return &e
+}
+
 func (e *SpendLimitNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEXT_MESSAGE_MONTHLY_SPEND_LIMIT":
 		fallthrough
 	case "VOICE_MESSAGE_MONTHLY_SPEND_LIMIT":
-		*e = SpendLimitNameEnum(s)
+		*e = SpendLimitNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpendLimitNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SpendLimitNameEnum: %v", v)
 	}
 }

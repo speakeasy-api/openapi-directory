@@ -26,12 +26,16 @@ const (
 	PriceCoverageBucketAdvanceBookingWindowRangeEnumDays301To330                         PriceCoverageBucketAdvanceBookingWindowRangeEnum = "DAYS_301_TO_330"
 )
 
+func (e PriceCoverageBucketAdvanceBookingWindowRangeEnum) ToPointer() *PriceCoverageBucketAdvanceBookingWindowRangeEnum {
+	return &e
+}
+
 func (e *PriceCoverageBucketAdvanceBookingWindowRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADVANCE_BOOKING_WINDOW_RANGE_UNSPECIFIED":
 		fallthrough
 	case "ADVANCE_BOOKING_WINDOW_RANGE_UNKNOWN":
@@ -57,10 +61,10 @@ func (e *PriceCoverageBucketAdvanceBookingWindowRangeEnum) UnmarshalJSON(data []
 	case "DAYS_271_TO_300":
 		fallthrough
 	case "DAYS_301_TO_330":
-		*e = PriceCoverageBucketAdvanceBookingWindowRangeEnum(s)
+		*e = PriceCoverageBucketAdvanceBookingWindowRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PriceCoverageBucketAdvanceBookingWindowRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for PriceCoverageBucketAdvanceBookingWindowRangeEnum: %v", v)
 	}
 }
 
@@ -75,12 +79,16 @@ const (
 	PriceCoverageBucketLengthOfStayRangeEnumLengthOfStay15To30           PriceCoverageBucketLengthOfStayRangeEnum = "LENGTH_OF_STAY_15_TO_30"
 )
 
+func (e PriceCoverageBucketLengthOfStayRangeEnum) ToPointer() *PriceCoverageBucketLengthOfStayRangeEnum {
+	return &e
+}
+
 func (e *PriceCoverageBucketLengthOfStayRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LENGTH_OF_STAY_RANGE_UNSPECIFIED":
 		fallthrough
 	case "LENGTH_OF_STAY_RANGE_UNKNOWN":
@@ -90,10 +98,10 @@ func (e *PriceCoverageBucketLengthOfStayRangeEnum) UnmarshalJSON(data []byte) er
 	case "LENGTH_OF_STAY_8_TO_14":
 		fallthrough
 	case "LENGTH_OF_STAY_15_TO_30":
-		*e = PriceCoverageBucketLengthOfStayRangeEnum(s)
+		*e = PriceCoverageBucketLengthOfStayRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PriceCoverageBucketLengthOfStayRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for PriceCoverageBucketLengthOfStayRangeEnum: %v", v)
 	}
 }
 

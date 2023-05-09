@@ -16,12 +16,16 @@ const (
 	SnapshotLifecycleEnumAvailable SnapshotLifecycleEnum = "AVAILABLE"
 )
 
+func (e SnapshotLifecycleEnum) ToPointer() *SnapshotLifecycleEnum {
+	return &e
+}
+
 func (e *SnapshotLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "CREATING":
@@ -29,9 +33,9 @@ func (e *SnapshotLifecycleEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "AVAILABLE":
-		*e = SnapshotLifecycleEnum(s)
+		*e = SnapshotLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SnapshotLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for SnapshotLifecycleEnum: %v", v)
 	}
 }

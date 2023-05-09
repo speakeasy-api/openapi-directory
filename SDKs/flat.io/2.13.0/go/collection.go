@@ -45,7 +45,10 @@ func newCollection(defaultClient, securityClient HTTPClient, serverURL, language
 // You must have the capability `canAddScores` on the provided `collection` to perform the action.
 func (s *collection) AddScoreToCollection(ctx context.Context, request operations.AddScoreToCollectionRequest, security operations.AddScoreToCollectionSecurity) (*operations.AddScoreToCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/scores/{score}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/scores/{score}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -175,7 +178,10 @@ func (s *collection) CreateCollection(ctx context.Context, request shared.Collec
 // This method will schedule the deletion of the collection. Until deleted, the collection will be available in the `trash`.
 func (s *collection) DeleteCollection(ctx context.Context, request operations.DeleteCollectionRequest, security operations.DeleteCollectionSecurity) (*operations.DeleteCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collections/{collection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -226,7 +232,10 @@ func (s *collection) DeleteCollection(ctx context.Context, request operations.De
 // This can be used to *move* a score from one collection to another, or simply remove a score from one collection when this one is contained in multiple collections.
 func (s *collection) DeleteScoreFromCollection(ctx context.Context, request operations.DeleteScoreFromCollectionRequest, security operations.DeleteScoreFromCollectionSecurity) (*operations.DeleteScoreFromCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/scores/{score}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/scores/{score}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -279,7 +288,10 @@ func (s *collection) DeleteScoreFromCollection(ctx context.Context, request oper
 // EditCollection - Update a collection's metadata
 func (s *collection) EditCollection(ctx context.Context, request operations.EditCollectionRequest, security operations.EditCollectionSecurity) (*operations.EditCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collections/{collection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionModification", "json")
 	if err != nil {
@@ -344,7 +356,10 @@ func (s *collection) EditCollection(ctx context.Context, request operations.Edit
 // GetCollection - Get collection details
 func (s *collection) GetCollection(ctx context.Context, request operations.GetCollectionRequest, security operations.GetCollectionSecurity) (*operations.GetCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collections/{collection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +423,10 @@ func (s *collection) GetCollection(ctx context.Context, request operations.GetCo
 // If no sort option is provided, the scores are sorted by `modificationDate` `desc`.
 func (s *collection) ListCollectionScores(ctx context.Context, request operations.ListCollectionScoresRequest, security operations.ListCollectionScoresSecurity) (*operations.ListCollectionScoresResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/scores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/scores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -530,7 +548,10 @@ func (s *collection) ListCollections(ctx context.Context, request operations.Lis
 // This method will restore the collection by removing it from the `trash` and add it back to the `root` collection.
 func (s *collection) UntrashCollection(ctx context.Context, request operations.UntrashCollectionRequest, security operations.UntrashCollectionSecurity) (*operations.UntrashCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/untrash", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collections/{collection}/untrash", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

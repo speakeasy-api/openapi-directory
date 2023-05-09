@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,27 +16,25 @@ func main() {
         }),
     )
 
-    req := shared.RemoveBgJSON{
-        AddShadow: false,
-        BgColor: "corrupti",
-        BgImageURL: "provident",
-        Channels: "alpha",
-        Crop: false,
-        CropMargin: "quibusdam",
-        Format: "jpg",
-        ImageFileB64: "nulla",
-        ImageURL: "https://www.remove.bg/example-hd.jpg",
-        Position: "corrupti",
-        Roi: "illum",
-        Scale: "vel",
-        Semitransparency: false,
-        Size: "full",
-        Type: "product",
-        TypeLevel: "1",
-    }
-
     ctx := context.Background()
-    res, err := s.BackgroundRemoval.PostRemovebgForm(ctx, req)
+    res, err := s.BackgroundRemoval.PostRemovebgForm(ctx, shared.RemoveBgJSON{
+        AddShadow: sdk.Bool(false),
+        BgColor: sdk.String("corrupti"),
+        BgImageURL: sdk.String("provident"),
+        Channels: shared.RemoveBgJSONChannelsEnumAlpha.ToPointer(),
+        Crop: sdk.Bool(false),
+        CropMargin: sdk.String("quibusdam"),
+        Format: shared.RemoveBgJSONFormatEnumJpg.ToPointer(),
+        ImageFileB64: sdk.String("nulla"),
+        ImageURL: sdk.String("https://www.remove.bg/example-hd.jpg"),
+        Position: sdk.String("corrupti"),
+        Roi: sdk.String("illum"),
+        Scale: sdk.String("vel"),
+        Semitransparency: sdk.Bool(false),
+        Size: shared.RemoveBgJSONSizeEnumFull.ToPointer(),
+        Type: shared.RemoveBgJSONTypeEnumProduct.ToPointer(),
+        TypeLevel: shared.RemoveBgJSONTypeLevelEnumOne.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }

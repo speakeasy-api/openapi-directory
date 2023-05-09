@@ -16,17 +16,21 @@ const (
 	DescribeEventTopicsXAmzTargetEnumDirectoryService20150416DescribeEventTopics DescribeEventTopicsXAmzTargetEnum = "DirectoryService_20150416.DescribeEventTopics"
 )
 
+func (e DescribeEventTopicsXAmzTargetEnum) ToPointer() *DescribeEventTopicsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeEventTopicsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.DescribeEventTopics":
-		*e = DescribeEventTopicsXAmzTargetEnum(s)
+		*e = DescribeEventTopicsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeEventTopicsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeEventTopicsXAmzTargetEnum: %v", v)
 	}
 }
 

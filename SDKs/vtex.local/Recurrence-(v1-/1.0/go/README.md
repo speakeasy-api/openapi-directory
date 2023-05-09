@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Recurrence-(v1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -29,7 +29,8 @@ func main() {
         }),
     )
 
-    req := operations.AddrecurrenceitemRequest{
+    ctx := context.Background()
+    res, err := s.Miscellaneous.Addrecurrenceitem(ctx, operations.AddrecurrenceitemRequest{
         Accept: "application/json",
         ContentType: "application/json",
         RequestBody: []shared.AddrecurrenceitemRequest{
@@ -65,10 +66,7 @@ func main() {
             },
         },
         RecurrenceID: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Miscellaneous.Addrecurrenceitem(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -84,19 +82,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### Miscellaneous
+### [Miscellaneous](docs/miscellaneous/README.md)
 
-* `Addrecurrenceitem` - Add Subscription item
-* `GetRecurrencebyemail` - Get Subscriptions
-* `GetRecurrencebyrecurrenceID` - Get Subscription by recurrenceId
-* `Getpaymentaccounts` - Get payment accounts
-* `Getrecurrenceaddresses` - Get Subscription addresses
-* `Getrecurrencesettings` - Get Subscription settings
-* `Getselfrecurrence` - Get self Subscription
-* `Reindexrecurrence` - Reindex Subscription
-* `Updatepartialrecurrence` - Update partial Subscription
-* `Updaterecurrence` - Update Subscription
-* `Updaterecurrencesettings` - Update Subscription settings
+* [Addrecurrenceitem](docs/miscellaneous/README.md#addrecurrenceitem) - Add Subscription item
+* [GetRecurrencebyemail](docs/miscellaneous/README.md#getrecurrencebyemail) - Get Subscriptions
+* [GetRecurrencebyrecurrenceID](docs/miscellaneous/README.md#getrecurrencebyrecurrenceid) - Get Subscription by recurrenceId
+* [Getpaymentaccounts](docs/miscellaneous/README.md#getpaymentaccounts) - Get payment accounts
+* [Getrecurrenceaddresses](docs/miscellaneous/README.md#getrecurrenceaddresses) - Get Subscription addresses
+* [Getrecurrencesettings](docs/miscellaneous/README.md#getrecurrencesettings) - Get Subscription settings
+* [Getselfrecurrence](docs/miscellaneous/README.md#getselfrecurrence) - Get self Subscription
+* [Reindexrecurrence](docs/miscellaneous/README.md#reindexrecurrence) - Reindex Subscription
+* [Updatepartialrecurrence](docs/miscellaneous/README.md#updatepartialrecurrence) - Update partial Subscription
+* [Updaterecurrence](docs/miscellaneous/README.md#updaterecurrence) - Update Subscription
+* [Updaterecurrencesettings](docs/miscellaneous/README.md#updaterecurrencesettings) - Update Subscription settings
 <!-- End SDK Available Operations -->
 
 ### Maturity

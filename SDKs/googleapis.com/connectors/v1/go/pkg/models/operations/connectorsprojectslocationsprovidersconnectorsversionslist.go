@@ -23,21 +23,25 @@ const (
 	ConnectorsProjectsLocationsProvidersConnectorsVersionsListViewEnumConnectorVersionViewFull        ConnectorsProjectsLocationsProvidersConnectorsVersionsListViewEnum = "CONNECTOR_VERSION_VIEW_FULL"
 )
 
+func (e ConnectorsProjectsLocationsProvidersConnectorsVersionsListViewEnum) ToPointer() *ConnectorsProjectsLocationsProvidersConnectorsVersionsListViewEnum {
+	return &e
+}
+
 func (e *ConnectorsProjectsLocationsProvidersConnectorsVersionsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTOR_VERSION_VIEW_UNSPECIFIED":
 		fallthrough
 	case "CONNECTOR_VERSION_VIEW_BASIC":
 		fallthrough
 	case "CONNECTOR_VERSION_VIEW_FULL":
-		*e = ConnectorsProjectsLocationsProvidersConnectorsVersionsListViewEnum(s)
+		*e = ConnectorsProjectsLocationsProvidersConnectorsVersionsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectorsProjectsLocationsProvidersConnectorsVersionsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectorsProjectsLocationsProvidersConnectorsVersionsListViewEnum: %v", v)
 	}
 }
 

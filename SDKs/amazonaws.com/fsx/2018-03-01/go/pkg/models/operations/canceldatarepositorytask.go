@@ -16,17 +16,21 @@ const (
 	CancelDataRepositoryTaskXAmzTargetEnumAwsSimbaAPIServiceV20180301CancelDataRepositoryTask CancelDataRepositoryTaskXAmzTargetEnum = "AWSSimbaAPIService_v20180301.CancelDataRepositoryTask"
 )
 
+func (e CancelDataRepositoryTaskXAmzTargetEnum) ToPointer() *CancelDataRepositoryTaskXAmzTargetEnum {
+	return &e
+}
+
 func (e *CancelDataRepositoryTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.CancelDataRepositoryTask":
-		*e = CancelDataRepositoryTaskXAmzTargetEnum(s)
+		*e = CancelDataRepositoryTaskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelDataRepositoryTaskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelDataRepositoryTaskXAmzTargetEnum: %v", v)
 	}
 }
 

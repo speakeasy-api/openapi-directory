@@ -14,18 +14,22 @@ const (
 	NotifyWorkersFailureCodeEnumHardFailure NotifyWorkersFailureCodeEnum = "HardFailure"
 )
 
+func (e NotifyWorkersFailureCodeEnum) ToPointer() *NotifyWorkersFailureCodeEnum {
+	return &e
+}
+
 func (e *NotifyWorkersFailureCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SoftFailure":
 		fallthrough
 	case "HardFailure":
-		*e = NotifyWorkersFailureCodeEnum(s)
+		*e = NotifyWorkersFailureCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotifyWorkersFailureCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotifyWorkersFailureCodeEnum: %v", v)
 	}
 }

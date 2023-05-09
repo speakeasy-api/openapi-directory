@@ -15,20 +15,24 @@ const (
 	BootModeValuesEnumUefiPreferred BootModeValuesEnum = "uefi-preferred"
 )
 
+func (e BootModeValuesEnum) ToPointer() *BootModeValuesEnum {
+	return &e
+}
+
 func (e *BootModeValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy-bios":
 		fallthrough
 	case "uefi":
 		fallthrough
 	case "uefi-preferred":
-		*e = BootModeValuesEnum(s)
+		*e = BootModeValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BootModeValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for BootModeValuesEnum: %v", v)
 	}
 }

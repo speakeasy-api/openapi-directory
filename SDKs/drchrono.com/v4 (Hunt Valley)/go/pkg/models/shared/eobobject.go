@@ -21,12 +21,16 @@ const (
 	EOBObjectPaymentMethodEnumNon     EOBObjectPaymentMethodEnum = "NON"
 )
 
+func (e EOBObjectPaymentMethodEnum) ToPointer() *EOBObjectPaymentMethodEnum {
+	return &e
+}
+
 func (e *EOBObjectPaymentMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "ACH":
@@ -42,10 +46,10 @@ func (e *EOBObjectPaymentMethodEnum) UnmarshalJSON(data []byte) error {
 	case "VPAY":
 		fallthrough
 	case "NON":
-		*e = EOBObjectPaymentMethodEnum(s)
+		*e = EOBObjectPaymentMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EOBObjectPaymentMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for EOBObjectPaymentMethodEnum: %v", v)
 	}
 }
 

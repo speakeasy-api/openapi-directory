@@ -14,16 +14,20 @@ const (
 	MessageCode406AISEnumRequestedFormatsInvalid MessageCode406AISEnum = "REQUESTED_FORMATS_INVALID"
 )
 
+func (e MessageCode406AISEnum) ToPointer() *MessageCode406AISEnum {
+	return &e
+}
+
 func (e *MessageCode406AISEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUESTED_FORMATS_INVALID":
-		*e = MessageCode406AISEnum(s)
+		*e = MessageCode406AISEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageCode406AISEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageCode406AISEnum: %v", v)
 	}
 }

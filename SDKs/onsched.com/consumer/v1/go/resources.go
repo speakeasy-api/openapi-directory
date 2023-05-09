@@ -88,7 +88,10 @@ func (s *resources) GetConsumerV1Resources(ctx context.Context, request operatio
 // <p>Use this endpoint to return a <b>Resource</b> object. A valid <b>resource id</b> is required. Find resource id's by using the <i>GET consumer/v1/resources</i> endpoint. </p>
 func (s *resources) GetConsumerV1ResourcesID(ctx context.Context, request operations.GetConsumerV1ResourcesIDRequest) (*operations.GetConsumerV1ResourcesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/resources/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/consumer/v1/resources/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -134,7 +137,10 @@ func (s *resources) GetConsumerV1ResourcesID(ctx context.Context, request operat
 // <p>Resource linked services are used to explicitly define the services that can be booked for a specified resource. By default, all services are bookable for any resource. For more information: <a href="https://docs.onsched.com/docs/linked-services">Linked Services Overview</a></p>
 func (s *resources) GetConsumerV1ResourcesIDServices(ctx context.Context, request operations.GetConsumerV1ResourcesIDServicesRequest) (*operations.GetConsumerV1ResourcesIDServicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/resources/{id}/services", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/consumer/v1/resources/{id}/services", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

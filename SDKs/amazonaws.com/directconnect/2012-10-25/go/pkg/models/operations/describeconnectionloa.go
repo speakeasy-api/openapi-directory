@@ -16,17 +16,21 @@ const (
 	DescribeConnectionLoaXAmzTargetEnumOvertureServiceDescribeConnectionLoa DescribeConnectionLoaXAmzTargetEnum = "OvertureService.DescribeConnectionLoa"
 )
 
+func (e DescribeConnectionLoaXAmzTargetEnum) ToPointer() *DescribeConnectionLoaXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeConnectionLoaXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.DescribeConnectionLoa":
-		*e = DescribeConnectionLoaXAmzTargetEnum(s)
+		*e = DescribeConnectionLoaXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeConnectionLoaXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeConnectionLoaXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	RegisterCACertificateRequestBodyCertificateModeEnumSniOnly RegisterCACertificateRequestBodyCertificateModeEnum = "SNI_ONLY"
 )
 
+func (e RegisterCACertificateRequestBodyCertificateModeEnum) ToPointer() *RegisterCACertificateRequestBodyCertificateModeEnum {
+	return &e
+}
+
 func (e *RegisterCACertificateRequestBodyCertificateModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "SNI_ONLY":
-		*e = RegisterCACertificateRequestBodyCertificateModeEnum(s)
+		*e = RegisterCACertificateRequestBodyCertificateModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterCACertificateRequestBodyCertificateModeEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterCACertificateRequestBodyCertificateModeEnum: %v", v)
 	}
 }
 

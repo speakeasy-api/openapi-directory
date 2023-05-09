@@ -16,17 +16,21 @@ const (
 	DisassociateApplicationFleetXAmzTargetEnumPhotonAdminProxyServiceDisassociateApplicationFleet DisassociateApplicationFleetXAmzTargetEnum = "PhotonAdminProxyService.DisassociateApplicationFleet"
 )
 
+func (e DisassociateApplicationFleetXAmzTargetEnum) ToPointer() *DisassociateApplicationFleetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateApplicationFleetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.DisassociateApplicationFleet":
-		*e = DisassociateApplicationFleetXAmzTargetEnum(s)
+		*e = DisassociateApplicationFleetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateApplicationFleetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateApplicationFleetXAmzTargetEnum: %v", v)
 	}
 }
 

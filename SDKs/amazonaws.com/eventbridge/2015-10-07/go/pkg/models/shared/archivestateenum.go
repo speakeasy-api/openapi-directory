@@ -18,12 +18,16 @@ const (
 	ArchiveStateEnumUpdateFailed ArchiveStateEnum = "UPDATE_FAILED"
 )
 
+func (e ArchiveStateEnum) ToPointer() *ArchiveStateEnum {
+	return &e
+}
+
 func (e *ArchiveStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
@@ -35,9 +39,9 @@ func (e *ArchiveStateEnum) UnmarshalJSON(data []byte) error {
 	case "CREATE_FAILED":
 		fallthrough
 	case "UPDATE_FAILED":
-		*e = ArchiveStateEnum(s)
+		*e = ArchiveStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArchiveStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ArchiveStateEnum: %v", v)
 	}
 }

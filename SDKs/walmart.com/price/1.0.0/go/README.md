@@ -13,35 +13,50 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/walmart.com/price/1.0.0/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.OptCapProgramInPriceRequest{
-        RequestBody: operations.OptCapProgramInPriceRequestBody{
-            SubsidyEnrolled: false,
-            SubsidyPreference: false,
-        },
-        WmConsumerChannelType: "corrupti",
-        WmQosCorrelationID: "provident",
-        WmSecAccessToken: "distinctio",
-        WmSvcName: "quibusdam",
-    }
-
     ctx := context.Background()
-    res, err := s.Prices.OptCapProgramInPrice(ctx, req)
+    res, err := s.Prices.CreateStrategy(ctx, operations.CreateStrategyRequest{
+        RequestBody: operations.CreateStrategyRequestBody{
+            EnableRepricerForPromotion: sdk.Bool(true),
+            Enabled: sdk.Bool(true),
+            RepricerStrategy: sdk.String("Buy Box Strategy For testing"),
+            Strategies: []CreateStrategyRequestBodyStrategies{
+                operations.CreateStrategyRequestBodyStrategies{
+                    AdjustmentType: operations.CreateStrategyRequestBodyStrategiesAdjustmentTypeEnumPercentage.ToPointer(),
+                    AdjustmentValue: sdk.Float64(1.2),
+                    StrategyType: operations.CreateStrategyRequestBodyStrategiesStrategyTypeEnumCompetitivePrice.ToPointer(),
+                },
+                operations.CreateStrategyRequestBodyStrategies{
+                    AdjustmentType: operations.CreateStrategyRequestBodyStrategiesAdjustmentTypeEnumPercentage.ToPointer(),
+                    AdjustmentValue: sdk.Float64(1.2),
+                    StrategyType: operations.CreateStrategyRequestBodyStrategiesStrategyTypeEnumExternalPrice.ToPointer(),
+                },
+                operations.CreateStrategyRequestBodyStrategies{
+                    AdjustmentType: operations.CreateStrategyRequestBodyStrategiesAdjustmentTypeEnumPercentage.ToPointer(),
+                    AdjustmentValue: sdk.Float64(1.2),
+                    StrategyType: operations.CreateStrategyRequestBodyStrategiesStrategyTypeEnumExternalPrice.ToPointer(),
+                },
+            },
+        },
+        WmConsumerChannelType: sdk.String("illum"),
+        WmQosCorrelationID: "vel",
+        WmSecAccessToken: "error",
+        WmSvcName: "deserunt",
+    })
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.OptCapProgramInPrice200ApplicationJSONObject != nil {
+    if res.CreateStrategy200ApplicationJSONObject != nil {
         // handle response
     }
 }
@@ -52,11 +67,16 @@ func main() {
 ## Available Resources and Operations
 
 
-### Prices
+### [Prices](docs/prices/README.md)
 
-* `OptCapProgramInPrice` - Set up CAP SKU All
-* `PriceBulkUploads` - Update bulk prices (Multiple)
-* `UpdatePrice` - Update a price
+* [CreateStrategy](docs/prices/README.md#createstrategy) - Create Repricer Strategy
+* [DeleteStrategy](docs/prices/README.md#deletestrategy) - Delete Repricer Strategy
+* [GetRepricerFeed](docs/prices/README.md#getrepricerfeed) - Assign/Unassign items to/from Repricer Strategy
+* [GetStrategies](docs/prices/README.md#getstrategies) - List of Repricer Strategies
+* [OptCapProgramInPrice](docs/prices/README.md#optcapprograminprice) - Set up CAP SKU All
+* [PriceBulkUploads](docs/prices/README.md#pricebulkuploads) - Update bulk prices (Multiple)
+* [UpdatePrice](docs/prices/README.md#updateprice) - Update a price
+* [UpdateStrategy](docs/prices/README.md#updatestrategy) - Update Repricer Strategy
 <!-- End SDK Available Operations -->
 
 ### Maturity

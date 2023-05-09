@@ -16,17 +16,21 @@ const (
 	DeleteStorageVirtualMachineXAmzTargetEnumAwsSimbaAPIServiceV20180301DeleteStorageVirtualMachine DeleteStorageVirtualMachineXAmzTargetEnum = "AWSSimbaAPIService_v20180301.DeleteStorageVirtualMachine"
 )
 
+func (e DeleteStorageVirtualMachineXAmzTargetEnum) ToPointer() *DeleteStorageVirtualMachineXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteStorageVirtualMachineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.DeleteStorageVirtualMachine":
-		*e = DeleteStorageVirtualMachineXAmzTargetEnum(s)
+		*e = DeleteStorageVirtualMachineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteStorageVirtualMachineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteStorageVirtualMachineXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -8,6 +8,8 @@ type IamPolicyAnalysis struct {
 	AnalysisQuery *IamPolicyAnalysisQuery `json:"analysisQuery,omitempty"`
 	// A list of IamPolicyAnalysisResult that matches the analysis query, or empty if no result is found.
 	AnalysisResults []IamPolicyAnalysisResult `json:"analysisResults,omitempty"`
+	// A list of DeniedAccess, which contains all access tuples in the analysis_results that are denied by IAM deny policies. If no access tuples are denied, the list is empty. This is only populated when IamPolicyAnalysisQuery.Options.include_deny_policy_analysis is true.
+	DeniedAccesses []DeniedAccess `json:"deniedAccesses,omitempty"`
 	// Represents whether all entries in the analysis_results have been fully explored to answer the query.
 	FullyExplored *bool `json:"fullyExplored,omitempty"`
 	// A list of non-critical errors happened during the query handling.

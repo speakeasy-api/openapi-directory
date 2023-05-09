@@ -16,17 +16,21 @@ const (
 	NotifyWorkersXAmzTargetEnumMTurkRequesterServiceV20170117NotifyWorkers NotifyWorkersXAmzTargetEnum = "MTurkRequesterServiceV20170117.NotifyWorkers"
 )
 
+func (e NotifyWorkersXAmzTargetEnum) ToPointer() *NotifyWorkersXAmzTargetEnum {
+	return &e
+}
+
 func (e *NotifyWorkersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.NotifyWorkers":
-		*e = NotifyWorkersXAmzTargetEnum(s)
+		*e = NotifyWorkersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotifyWorkersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for NotifyWorkersXAmzTargetEnum: %v", v)
 	}
 }
 

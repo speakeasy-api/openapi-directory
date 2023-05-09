@@ -15,17 +15,21 @@ const (
 	POSTDecodeAuthorizationMessageActionEnumDecodeAuthorizationMessage POSTDecodeAuthorizationMessageActionEnum = "DecodeAuthorizationMessage"
 )
 
+func (e POSTDecodeAuthorizationMessageActionEnum) ToPointer() *POSTDecodeAuthorizationMessageActionEnum {
+	return &e
+}
+
 func (e *POSTDecodeAuthorizationMessageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DecodeAuthorizationMessage":
-		*e = POSTDecodeAuthorizationMessageActionEnum(s)
+		*e = POSTDecodeAuthorizationMessageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDecodeAuthorizationMessageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDecodeAuthorizationMessageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDecodeAuthorizationMessageVersionEnumTwoThousandAndEleven0615 POSTDecodeAuthorizationMessageVersionEnum = "2011-06-15"
 )
 
+func (e POSTDecodeAuthorizationMessageVersionEnum) ToPointer() *POSTDecodeAuthorizationMessageVersionEnum {
+	return &e
+}
+
 func (e *POSTDecodeAuthorizationMessageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-06-15":
-		*e = POSTDecodeAuthorizationMessageVersionEnum(s)
+		*e = POSTDecodeAuthorizationMessageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDecodeAuthorizationMessageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDecodeAuthorizationMessageVersionEnum: %v", v)
 	}
 }
 

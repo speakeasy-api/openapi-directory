@@ -15,17 +15,21 @@ const (
 	GETExportClientVpnClientCertificateRevocationListActionEnumExportClientVpnClientCertificateRevocationList GETExportClientVpnClientCertificateRevocationListActionEnum = "ExportClientVpnClientCertificateRevocationList"
 )
 
+func (e GETExportClientVpnClientCertificateRevocationListActionEnum) ToPointer() *GETExportClientVpnClientCertificateRevocationListActionEnum {
+	return &e
+}
+
 func (e *GETExportClientVpnClientCertificateRevocationListActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ExportClientVpnClientCertificateRevocationList":
-		*e = GETExportClientVpnClientCertificateRevocationListActionEnum(s)
+		*e = GETExportClientVpnClientCertificateRevocationListActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETExportClientVpnClientCertificateRevocationListActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETExportClientVpnClientCertificateRevocationListActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETExportClientVpnClientCertificateRevocationListVersionEnumTwoThousandAndSixteen1115 GETExportClientVpnClientCertificateRevocationListVersionEnum = "2016-11-15"
 )
 
+func (e GETExportClientVpnClientCertificateRevocationListVersionEnum) ToPointer() *GETExportClientVpnClientCertificateRevocationListVersionEnum {
+	return &e
+}
+
 func (e *GETExportClientVpnClientCertificateRevocationListVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETExportClientVpnClientCertificateRevocationListVersionEnum(s)
+		*e = GETExportClientVpnClientCertificateRevocationListVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETExportClientVpnClientCertificateRevocationListVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETExportClientVpnClientCertificateRevocationListVersionEnum: %v", v)
 	}
 }
 

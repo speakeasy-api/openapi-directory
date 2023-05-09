@@ -17,21 +17,25 @@ const (
 	EstimationCreateAPIModelStatusEnumRejected EstimationCreateAPIModelStatusEnum = "Rejected"
 )
 
+func (e EstimationCreateAPIModelStatusEnum) ToPointer() *EstimationCreateAPIModelStatusEnum {
+	return &e
+}
+
 func (e *EstimationCreateAPIModelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Draft":
 		fallthrough
 	case "Accepted":
 		fallthrough
 	case "Rejected":
-		*e = EstimationCreateAPIModelStatusEnum(s)
+		*e = EstimationCreateAPIModelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EstimationCreateAPIModelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EstimationCreateAPIModelStatusEnum: %v", v)
 	}
 }
 

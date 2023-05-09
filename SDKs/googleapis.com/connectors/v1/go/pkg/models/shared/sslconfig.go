@@ -15,19 +15,23 @@ const (
 	SslConfigClientCertTypeEnumPem                 SslConfigClientCertTypeEnum = "PEM"
 )
 
+func (e SslConfigClientCertTypeEnum) ToPointer() *SslConfigClientCertTypeEnum {
+	return &e
+}
+
 func (e *SslConfigClientCertTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PEM":
-		*e = SslConfigClientCertTypeEnum(s)
+		*e = SslConfigClientCertTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslConfigClientCertTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SslConfigClientCertTypeEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	SslConfigServerCertTypeEnumPem                 SslConfigServerCertTypeEnum = "PEM"
 )
 
+func (e SslConfigServerCertTypeEnum) ToPointer() *SslConfigServerCertTypeEnum {
+	return &e
+}
+
 func (e *SslConfigServerCertTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PEM":
-		*e = SslConfigServerCertTypeEnum(s)
+		*e = SslConfigServerCertTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslConfigServerCertTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SslConfigServerCertTypeEnum: %v", v)
 	}
 }
 
@@ -64,21 +72,25 @@ const (
 	SslConfigTrustModelEnumInsecure SslConfigTrustModelEnum = "INSECURE"
 )
 
+func (e SslConfigTrustModelEnum) ToPointer() *SslConfigTrustModelEnum {
+	return &e
+}
+
 func (e *SslConfigTrustModelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLIC":
 		fallthrough
 	case "PRIVATE":
 		fallthrough
 	case "INSECURE":
-		*e = SslConfigTrustModelEnum(s)
+		*e = SslConfigTrustModelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslConfigTrustModelEnum: %s", s)
+		return fmt.Errorf("invalid value for SslConfigTrustModelEnum: %v", v)
 	}
 }
 
@@ -91,21 +103,25 @@ const (
 	SslConfigTypeEnumMtls               SslConfigTypeEnum = "MTLS"
 )
 
+func (e SslConfigTypeEnum) ToPointer() *SslConfigTypeEnum {
+	return &e
+}
+
 func (e *SslConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TLS":
 		fallthrough
 	case "MTLS":
-		*e = SslConfigTypeEnum(s)
+		*e = SslConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SslConfigTypeEnum: %v", v)
 	}
 }
 

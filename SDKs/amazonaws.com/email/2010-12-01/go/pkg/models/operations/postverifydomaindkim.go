@@ -15,17 +15,21 @@ const (
 	POSTVerifyDomainDkimActionEnumVerifyDomainDkim POSTVerifyDomainDkimActionEnum = "VerifyDomainDkim"
 )
 
+func (e POSTVerifyDomainDkimActionEnum) ToPointer() *POSTVerifyDomainDkimActionEnum {
+	return &e
+}
+
 func (e *POSTVerifyDomainDkimActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VerifyDomainDkim":
-		*e = POSTVerifyDomainDkimActionEnum(s)
+		*e = POSTVerifyDomainDkimActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTVerifyDomainDkimActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTVerifyDomainDkimActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTVerifyDomainDkimVersionEnumTwoThousandAndTen1201 POSTVerifyDomainDkimVersionEnum = "2010-12-01"
 )
 
+func (e POSTVerifyDomainDkimVersionEnum) ToPointer() *POSTVerifyDomainDkimVersionEnum {
+	return &e
+}
+
 func (e *POSTVerifyDomainDkimVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTVerifyDomainDkimVersionEnum(s)
+		*e = POSTVerifyDomainDkimVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTVerifyDomainDkimVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTVerifyDomainDkimVersionEnum: %v", v)
 	}
 }
 

@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Amazon Web Services Snow Device Management documentation.
 // https://docs.aws.amazon.com/snow-device-management/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // CancelTask - <p>Sends a cancel request for a specified task. You can cancel a task only if it's still in a <code>QUEUED</code> state. Tasks that are already running can't be cancelled.</p> <note> <p>A task might still run if it's processed from the queue before the <code>CancelTask</code> operation changes the task's state.</p> </note>
 func (s *SDK) CancelTask(ctx context.Context, request operations.CancelTaskRequest) (*operations.CancelTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/task/{taskId}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/task/{taskId}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -326,7 +344,10 @@ func (s *SDK) CreateTask(ctx context.Context, request operations.CreateTaskReque
 // DescribeDevice - Checks device-specific information, such as the device type, software version, IP addresses, and lock status.
 func (s *SDK) DescribeDevice(ctx context.Context, request operations.DescribeDeviceRequest) (*operations.DescribeDeviceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/managed-device/{managedDeviceId}/describe", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/managed-device/{managedDeviceId}/describe", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -422,7 +443,10 @@ func (s *SDK) DescribeDevice(ctx context.Context, request operations.DescribeDev
 // DescribeDeviceEc2Instances - Checks the current state of the Amazon EC2 instances. The output is similar to <code>describeDevice</code>, but the results are sourced from the device cache in the Amazon Web Services Cloud and include a subset of the available fields.
 func (s *SDK) DescribeDeviceEc2Instances(ctx context.Context, request operations.DescribeDeviceEc2InstancesRequest) (*operations.DescribeDeviceEc2InstancesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/managed-device/{managedDeviceId}/resources/ec2/describe", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/managed-device/{managedDeviceId}/resources/ec2/describe", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -528,7 +552,10 @@ func (s *SDK) DescribeDeviceEc2Instances(ctx context.Context, request operations
 // DescribeExecution - Checks the status of a remote task running on one or more target devices.
 func (s *SDK) DescribeExecution(ctx context.Context, request operations.DescribeExecutionRequest) (*operations.DescribeExecutionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/task/{taskId}/execution/{managedDeviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/task/{taskId}/execution/{managedDeviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -624,7 +651,10 @@ func (s *SDK) DescribeExecution(ctx context.Context, request operations.Describe
 // DescribeTask - Checks the metadata for a given task on a device.
 func (s *SDK) DescribeTask(ctx context.Context, request operations.DescribeTaskRequest) (*operations.DescribeTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/task/{taskId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/task/{taskId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -720,7 +750,10 @@ func (s *SDK) DescribeTask(ctx context.Context, request operations.DescribeTaskR
 // ListDeviceResources - Returns a list of the Amazon Web Services resources available for a device. Currently, Amazon EC2 instances are the only supported resource type.
 func (s *SDK) ListDeviceResources(ctx context.Context, request operations.ListDeviceResourcesRequest) (*operations.ListDeviceResourcesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/managed-device/{managedDeviceId}/resources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/managed-device/{managedDeviceId}/resources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1010,7 +1043,10 @@ func (s *SDK) ListExecutions(ctx context.Context, request operations.ListExecuti
 // ListTagsForResource - Returns a list of tags for a managed device or task.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1176,7 +1212,10 @@ func (s *SDK) ListTasks(ctx context.Context, request operations.ListTasksRequest
 // TagResource - Adds or replaces tags on a device or task.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1253,7 +1292,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes a tag from a device or task.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

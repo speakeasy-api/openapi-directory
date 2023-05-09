@@ -16,17 +16,21 @@ const (
 	ListWhatIfAnalysesXAmzTargetEnumAmazonForecastListWhatIfAnalyses ListWhatIfAnalysesXAmzTargetEnum = "AmazonForecast.ListWhatIfAnalyses"
 )
 
+func (e ListWhatIfAnalysesXAmzTargetEnum) ToPointer() *ListWhatIfAnalysesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListWhatIfAnalysesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.ListWhatIfAnalyses":
-		*e = ListWhatIfAnalysesXAmzTargetEnum(s)
+		*e = ListWhatIfAnalysesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListWhatIfAnalysesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListWhatIfAnalysesXAmzTargetEnum: %v", v)
 	}
 }
 

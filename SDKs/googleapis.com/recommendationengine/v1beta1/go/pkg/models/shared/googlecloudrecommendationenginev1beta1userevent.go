@@ -17,12 +17,16 @@ const (
 	GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnumBatchUpload            GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum = "BATCH_UPLOAD"
 )
 
+func (e GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum) ToPointer() *GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVENT_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "AUTOML":
@@ -30,10 +34,10 @@ func (e *GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum) Unmarsh
 	case "ECOMMERCE":
 		fallthrough
 	case "BATCH_UPLOAD":
-		*e = GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum(s)
+		*e = GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommendationengineV1beta1UserEventEventSourceEnum: %v", v)
 	}
 }
 

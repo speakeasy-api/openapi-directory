@@ -16,17 +16,21 @@ const (
 	UpdateAuthEventFeedbackXAmzTargetEnumAwsCognitoIdentityProviderServiceUpdateAuthEventFeedback UpdateAuthEventFeedbackXAmzTargetEnum = "AWSCognitoIdentityProviderService.UpdateAuthEventFeedback"
 )
 
+func (e UpdateAuthEventFeedbackXAmzTargetEnum) ToPointer() *UpdateAuthEventFeedbackXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateAuthEventFeedbackXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.UpdateAuthEventFeedback":
-		*e = UpdateAuthEventFeedbackXAmzTargetEnum(s)
+		*e = UpdateAuthEventFeedbackXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAuthEventFeedbackXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAuthEventFeedbackXAmzTargetEnum: %v", v)
 	}
 }
 

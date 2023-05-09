@@ -39,12 +39,16 @@ const (
 	TeamsAddAppDefaultApplicationJSONErrorCodeEnumTooManyRequests     TeamsAddAppDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e TeamsAddAppDefaultApplicationJSONErrorCodeEnum) ToPointer() *TeamsAddAppDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *TeamsAddAppDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -58,10 +62,10 @@ func (e *TeamsAddAppDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []by
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = TeamsAddAppDefaultApplicationJSONErrorCodeEnum(s)
+		*e = TeamsAddAppDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsAddAppDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsAddAppDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -99,12 +103,16 @@ const (
 	TeamsAddApp201ApplicationJSONMemberPermissionsEnumTester    TeamsAddApp201ApplicationJSONMemberPermissionsEnum = "tester"
 )
 
+func (e TeamsAddApp201ApplicationJSONMemberPermissionsEnum) ToPointer() *TeamsAddApp201ApplicationJSONMemberPermissionsEnum {
+	return &e
+}
+
 func (e *TeamsAddApp201ApplicationJSONMemberPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
@@ -112,10 +120,10 @@ func (e *TeamsAddApp201ApplicationJSONMemberPermissionsEnum) UnmarshalJSON(data 
 	case "viewer":
 		fallthrough
 	case "tester":
-		*e = TeamsAddApp201ApplicationJSONMemberPermissionsEnum(s)
+		*e = TeamsAddApp201ApplicationJSONMemberPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsAddApp201ApplicationJSONMemberPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsAddApp201ApplicationJSONMemberPermissionsEnum: %v", v)
 	}
 }
 
@@ -128,21 +136,25 @@ const (
 	TeamsAddApp201ApplicationJSONOriginEnumCodepush  TeamsAddApp201ApplicationJSONOriginEnum = "codepush"
 )
 
+func (e TeamsAddApp201ApplicationJSONOriginEnum) ToPointer() *TeamsAddApp201ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *TeamsAddApp201ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
 		fallthrough
 	case "codepush":
-		*e = TeamsAddApp201ApplicationJSONOriginEnum(s)
+		*e = TeamsAddApp201ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsAddApp201ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsAddApp201ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -160,12 +172,16 @@ const (
 	TeamsAddApp201ApplicationJSONOsEnumCustom  TeamsAddApp201ApplicationJSONOsEnum = "Custom"
 )
 
+func (e TeamsAddApp201ApplicationJSONOsEnum) ToPointer() *TeamsAddApp201ApplicationJSONOsEnum {
+	return &e
+}
+
 func (e *TeamsAddApp201ApplicationJSONOsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Android":
 		fallthrough
 	case "iOS":
@@ -181,10 +197,10 @@ func (e *TeamsAddApp201ApplicationJSONOsEnum) UnmarshalJSON(data []byte) error {
 	case "Linux":
 		fallthrough
 	case "Custom":
-		*e = TeamsAddApp201ApplicationJSONOsEnum(s)
+		*e = TeamsAddApp201ApplicationJSONOsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsAddApp201ApplicationJSONOsEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsAddApp201ApplicationJSONOsEnum: %v", v)
 	}
 }
 
@@ -196,19 +212,23 @@ const (
 	TeamsAddApp201ApplicationJSONOwnerTypeEnumUser TeamsAddApp201ApplicationJSONOwnerTypeEnum = "user"
 )
 
+func (e TeamsAddApp201ApplicationJSONOwnerTypeEnum) ToPointer() *TeamsAddApp201ApplicationJSONOwnerTypeEnum {
+	return &e
+}
+
 func (e *TeamsAddApp201ApplicationJSONOwnerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "org":
 		fallthrough
 	case "user":
-		*e = TeamsAddApp201ApplicationJSONOwnerTypeEnum(s)
+		*e = TeamsAddApp201ApplicationJSONOwnerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsAddApp201ApplicationJSONOwnerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsAddApp201ApplicationJSONOwnerTypeEnum: %v", v)
 	}
 }
 
@@ -246,12 +266,16 @@ const (
 	TeamsAddApp201ApplicationJSONPlatformEnumCustom          TeamsAddApp201ApplicationJSONPlatformEnum = "Custom"
 )
 
+func (e TeamsAddApp201ApplicationJSONPlatformEnum) ToPointer() *TeamsAddApp201ApplicationJSONPlatformEnum {
+	return &e
+}
+
 func (e *TeamsAddApp201ApplicationJSONPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Java":
 		fallthrough
 	case "Objective-C-Swift":
@@ -275,10 +299,10 @@ func (e *TeamsAddApp201ApplicationJSONPlatformEnum) UnmarshalJSON(data []byte) e
 	case "Unknown":
 		fallthrough
 	case "Custom":
-		*e = TeamsAddApp201ApplicationJSONPlatformEnum(s)
+		*e = TeamsAddApp201ApplicationJSONPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsAddApp201ApplicationJSONPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsAddApp201ApplicationJSONPlatformEnum: %v", v)
 	}
 }
 
@@ -290,21 +314,25 @@ const (
 	TeamsAddApp201ApplicationJSONTeamPermissionsEnumViewer    TeamsAddApp201ApplicationJSONTeamPermissionsEnum = "viewer"
 )
 
+func (e TeamsAddApp201ApplicationJSONTeamPermissionsEnum) ToPointer() *TeamsAddApp201ApplicationJSONTeamPermissionsEnum {
+	return &e
+}
+
 func (e *TeamsAddApp201ApplicationJSONTeamPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
 		fallthrough
 	case "viewer":
-		*e = TeamsAddApp201ApplicationJSONTeamPermissionsEnum(s)
+		*e = TeamsAddApp201ApplicationJSONTeamPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsAddApp201ApplicationJSONTeamPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsAddApp201ApplicationJSONTeamPermissionsEnum: %v", v)
 	}
 }
 

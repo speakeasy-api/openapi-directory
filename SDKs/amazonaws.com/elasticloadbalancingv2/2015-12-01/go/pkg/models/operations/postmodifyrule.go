@@ -15,17 +15,21 @@ const (
 	POSTModifyRuleActionEnumModifyRule POSTModifyRuleActionEnum = "ModifyRule"
 )
 
+func (e POSTModifyRuleActionEnum) ToPointer() *POSTModifyRuleActionEnum {
+	return &e
+}
+
 func (e *POSTModifyRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyRule":
-		*e = POSTModifyRuleActionEnum(s)
+		*e = POSTModifyRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyRuleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyRuleVersionEnumTwoThousandAndFifteen1201 POSTModifyRuleVersionEnum = "2015-12-01"
 )
 
+func (e POSTModifyRuleVersionEnum) ToPointer() *POSTModifyRuleVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyRuleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = POSTModifyRuleVersionEnum(s)
+		*e = POSTModifyRuleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyRuleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyRuleVersionEnum: %v", v)
 	}
 }
 

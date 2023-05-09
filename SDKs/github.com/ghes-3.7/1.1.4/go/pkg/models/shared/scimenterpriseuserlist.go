@@ -13,17 +13,21 @@ const (
 	ScimEnterpriseUserListSchemasEnumUrnIetfParamsScimAPIMessages20ListResponse ScimEnterpriseUserListSchemasEnum = "urn:ietf:params:scim:api:messages:2.0:ListResponse"
 )
 
+func (e ScimEnterpriseUserListSchemasEnum) ToPointer() *ScimEnterpriseUserListSchemasEnum {
+	return &e
+}
+
 func (e *ScimEnterpriseUserListSchemasEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "urn:ietf:params:scim:api:messages:2.0:ListResponse":
-		*e = ScimEnterpriseUserListSchemasEnum(s)
+		*e = ScimEnterpriseUserListSchemasEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScimEnterpriseUserListSchemasEnum: %s", s)
+		return fmt.Errorf("invalid value for ScimEnterpriseUserListSchemasEnum: %v", v)
 	}
 }
 

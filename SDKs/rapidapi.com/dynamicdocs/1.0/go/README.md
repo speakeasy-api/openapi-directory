@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/rapidapi.com/dynamicdocs/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,23 +27,21 @@ func main() {
         }),
     )
 
-    req := operations.CompileRequest{
+    ctx := context.Background()
+    res, err := s.PDFGeneration.Compile(ctx, operations.CompileRequest{
         ContentType: "application/json",
         RequestBody: map[string]interface{}{
             "provident": "distinctio",
             "quibusdam": "unde",
             "nulla": "corrupti",
         },
-        DocFileName: "brilliantDocument",
-        DocURLExpiresIn: 3600,
-        LatexCompiler: "lualatex",
-        LatexRuns: 423655,
-        MainFileName: "inputFile.tex",
+        DocFileName: sdk.String("brilliantDocument"),
+        DocURLExpiresIn: sdk.Int64(3600),
+        LatexCompiler: operations.CompileLatexCompilerEnumLualatex.ToPointer(),
+        LatexRuns: sdk.Int64(423655),
+        MainFileName: sdk.String("inputFile.tex"),
         TemplateToken: "7a582350acb835ed",
-    }
-
-    ctx := context.Background()
-    res, err := s.PDFGeneration.Compile(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -60,9 +57,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### PDFGeneration
+### [PDFGeneration](docs/pdfgeneration/README.md)
 
-* `Compile` - Compile New Document PDF
+* [Compile](docs/pdfgeneration/README.md#compile) - Compile New Document PDF
 <!-- End SDK Available Operations -->
 
 ### Maturity

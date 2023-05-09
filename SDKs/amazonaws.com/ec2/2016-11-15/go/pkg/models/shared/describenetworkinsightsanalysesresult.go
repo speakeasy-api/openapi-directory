@@ -1766,21 +1766,25 @@ const (
 	DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesStatusEnumFailed    DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesStatusEnum = "failed"
 )
 
+func (e DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesStatusEnum) ToPointer() *DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesStatusEnum {
+	return &e
+}
+
 func (e *DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "succeeded":
 		fallthrough
 	case "failed":
-		*e = DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesStatusEnum(s)
+		*e = DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNetworkInsightsAnalysesResultNetworkInsightsAnalysesStatusEnum: %v", v)
 	}
 }
 

@@ -13,16 +13,20 @@ const (
 	TargetStorageTierEnumArchive TargetStorageTierEnum = "archive"
 )
 
+func (e TargetStorageTierEnum) ToPointer() *TargetStorageTierEnum {
+	return &e
+}
+
 func (e *TargetStorageTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "archive":
-		*e = TargetStorageTierEnum(s)
+		*e = TargetStorageTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetStorageTierEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetStorageTierEnum: %v", v)
 	}
 }

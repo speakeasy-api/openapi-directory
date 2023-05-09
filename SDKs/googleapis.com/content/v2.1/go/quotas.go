@@ -34,7 +34,10 @@ func newQuotas(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // ContentQuotasList - Lists the daily call quota and usage per method for your Merchant Center account.
 func (s *quotas) ContentQuotasList(ctx context.Context, request operations.ContentQuotasListRequest, security operations.ContentQuotasListSecurity) (*operations.ContentQuotasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/quotas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/quotas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

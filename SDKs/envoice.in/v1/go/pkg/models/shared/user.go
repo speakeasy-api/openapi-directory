@@ -16,21 +16,25 @@ const (
 	UserStatusEnumLocked    UserStatusEnum = "Locked"
 )
 
+func (e UserStatusEnum) ToPointer() *UserStatusEnum {
+	return &e
+}
+
 func (e *UserStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Normal":
 		fallthrough
 	case "Fraudlent":
 		fallthrough
 	case "Locked":
-		*e = UserStatusEnum(s)
+		*e = UserStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UserStatusEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	UserTypeEnumCollaborator        UserTypeEnum = "Collaborator"
 )
 
+func (e UserTypeEnum) ToPointer() *UserTypeEnum {
+	return &e
+}
+
 func (e *UserTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Anonymous":
 		fallthrough
 	case "Customer":
@@ -56,10 +64,10 @@ func (e *UserTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SystemAdministrator":
 		fallthrough
 	case "Collaborator":
-		*e = UserTypeEnum(s)
+		*e = UserTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserTypeEnum: %v", v)
 	}
 }
 
@@ -72,12 +80,16 @@ const (
 	UserYearsOfExperienceEnumSixPlus     UserYearsOfExperienceEnum = "SixPlus"
 )
 
+func (e UserYearsOfExperienceEnum) ToPointer() *UserYearsOfExperienceEnum {
+	return &e
+}
+
 func (e *UserYearsOfExperienceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "One":
 		fallthrough
 	case "OneToThree":
@@ -85,10 +97,10 @@ func (e *UserYearsOfExperienceEnum) UnmarshalJSON(data []byte) error {
 	case "ThreeToFive":
 		fallthrough
 	case "SixPlus":
-		*e = UserYearsOfExperienceEnum(s)
+		*e = UserYearsOfExperienceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserYearsOfExperienceEnum: %s", s)
+		return fmt.Errorf("invalid value for UserYearsOfExperienceEnum: %v", v)
 	}
 }
 

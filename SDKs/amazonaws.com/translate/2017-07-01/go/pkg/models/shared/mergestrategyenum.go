@@ -13,16 +13,20 @@ const (
 	MergeStrategyEnumOverwrite MergeStrategyEnum = "OVERWRITE"
 )
 
+func (e MergeStrategyEnum) ToPointer() *MergeStrategyEnum {
+	return &e
+}
+
 func (e *MergeStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OVERWRITE":
-		*e = MergeStrategyEnum(s)
+		*e = MergeStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MergeStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for MergeStrategyEnum: %v", v)
 	}
 }

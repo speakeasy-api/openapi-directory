@@ -89,7 +89,10 @@ func (s *functions) FunctionsCreate(ctx context.Context, request operations.Func
 // Trigger a function execution. The returned object will return you the current execution status. You can ping the `Get Execution` endpoint to get updates on the current execution status. Once this endpoint is called, your function execution process will start asynchronously.
 func (s *functions) FunctionsCreateExecution(ctx context.Context, request operations.FunctionsCreateExecutionRequest, security operations.FunctionsCreateExecutionSecurity) (*operations.FunctionsCreateExecutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *functions) FunctionsCreateExecution(ctx context.Context, request operat
 // Use the "command" param to set the entry point used to execute your code.
 func (s *functions) FunctionsCreateTag(ctx context.Context, request operations.FunctionsCreateTagRequest, security operations.FunctionsCreateTagSecurity) (*operations.FunctionsCreateTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -197,7 +203,10 @@ func (s *functions) FunctionsCreateTag(ctx context.Context, request operations.F
 // Delete a function by its unique ID.
 func (s *functions) FunctionsDelete(ctx context.Context, request operations.FunctionsDeleteRequest, security operations.FunctionsDeleteSecurity) (*operations.FunctionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -233,7 +242,10 @@ func (s *functions) FunctionsDelete(ctx context.Context, request operations.Func
 // Delete a code tag by its unique ID.
 func (s *functions) FunctionsDeleteTag(ctx context.Context, request operations.FunctionsDeleteTagRequest, security operations.FunctionsDeleteTagSecurity) (*operations.FunctionsDeleteTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags/{tagId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags/{tagId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -269,7 +281,10 @@ func (s *functions) FunctionsDeleteTag(ctx context.Context, request operations.F
 // Get a function by its unique ID.
 func (s *functions) FunctionsGet(ctx context.Context, request operations.FunctionsGetRequest, security operations.FunctionsGetSecurity) (*operations.FunctionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -314,7 +329,10 @@ func (s *functions) FunctionsGet(ctx context.Context, request operations.Functio
 // Get a function execution log by its unique ID.
 func (s *functions) FunctionsGetExecution(ctx context.Context, request operations.FunctionsGetExecutionRequest, security operations.FunctionsGetExecutionSecurity) (*operations.FunctionsGetExecutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions/{executionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions/{executionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -359,7 +377,10 @@ func (s *functions) FunctionsGetExecution(ctx context.Context, request operation
 // Get a code tag by its unique ID.
 func (s *functions) FunctionsGetTag(ctx context.Context, request operations.FunctionsGetTagRequest, security operations.FunctionsGetTagSecurity) (*operations.FunctionsGetTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags/{tagId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags/{tagId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -453,7 +474,10 @@ func (s *functions) FunctionsList(ctx context.Context, request operations.Functi
 // Get a list of all the current user function execution logs. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's executions. [Learn more about different API modes](/docs/admin).
 func (s *functions) FunctionsListExecutions(ctx context.Context, request operations.FunctionsListExecutionsRequest, security operations.FunctionsListExecutionsSecurity) (*operations.FunctionsListExecutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -502,7 +526,10 @@ func (s *functions) FunctionsListExecutions(ctx context.Context, request operati
 // Get a list of all the project's code tags. You can use the query params to filter your results.
 func (s *functions) FunctionsListTags(ctx context.Context, request operations.FunctionsListTagsRequest, security operations.FunctionsListTagsSecurity) (*operations.FunctionsListTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -551,7 +578,10 @@ func (s *functions) FunctionsListTags(ctx context.Context, request operations.Fu
 // Update function by its unique ID.
 func (s *functions) FunctionsUpdate(ctx context.Context, request operations.FunctionsUpdateRequest, security operations.FunctionsUpdateSecurity) (*operations.FunctionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -603,7 +633,10 @@ func (s *functions) FunctionsUpdate(ctx context.Context, request operations.Func
 // Update the function code tag ID using the unique function ID. Use this endpoint to switch the code tag that should be executed by the execution endpoint.
 func (s *functions) FunctionsUpdateTag(ctx context.Context, request operations.FunctionsUpdateTagRequest, security operations.FunctionsUpdateTagSecurity) (*operations.FunctionsUpdateTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tag", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/functions/{functionId}/tag", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

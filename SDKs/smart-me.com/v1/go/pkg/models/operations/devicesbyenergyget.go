@@ -30,12 +30,16 @@ const (
 	DevicesByEnergyGetMeterEnergyTypeEnumMeterTypeWmBusGateway  DevicesByEnergyGetMeterEnergyTypeEnum = "MeterTypeWMBusGateway"
 )
 
+func (e DevicesByEnergyGetMeterEnergyTypeEnum) ToPointer() *DevicesByEnergyGetMeterEnergyTypeEnum {
+	return &e
+}
+
 func (e *DevicesByEnergyGetMeterEnergyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MeterTypeUnknown":
 		fallthrough
 	case "MeterTypeElectricity":
@@ -65,10 +69,10 @@ func (e *DevicesByEnergyGetMeterEnergyTypeEnum) UnmarshalJSON(data []byte) error
 	case "MeterTypeVirtualMeter":
 		fallthrough
 	case "MeterTypeWMBusGateway":
-		*e = DevicesByEnergyGetMeterEnergyTypeEnum(s)
+		*e = DevicesByEnergyGetMeterEnergyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesByEnergyGetMeterEnergyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesByEnergyGetMeterEnergyTypeEnum: %v", v)
 	}
 }
 

@@ -85,7 +85,10 @@ func (s *appointments) GetSetupV1Appointments(ctx context.Context, request opera
 // <p>Use this endpoint to return an <b>Appointment</b> object. A valid <b>appointment id</b> is required. Find appointment id's by using the <i>GET​/setup​/v1​/appointments</i> endpoint.</p>
 func (s *appointments) GetSetupV1AppointmentsID(ctx context.Context, request operations.GetSetupV1AppointmentsIDRequest) (*operations.GetSetupV1AppointmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/appointments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/appointments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +133,10 @@ func (s *appointments) GetSetupV1AppointmentsID(ctx context.Context, request ope
 // <p>Use this endpoint to <b>Reassign</b> an appointment from one resource to another. The result returned is a single appointment that was reassigned to the target resource. A valid <b>appointment id</b> and <b>resource id</b> is required. Find appointment id's by using the <i>GET /setup/v1/appointments</i> endpoint, find resource id's by using the <i>GET ​/setup​/v1​/resources</i> endpoint.</p>
 func (s *appointments) PutSetupV1AppointmentsIDReassignResourceResourceID(ctx context.Context, request operations.PutSetupV1AppointmentsIDReassignResourceResourceIDRequest) (*operations.PutSetupV1AppointmentsIDReassignResourceResourceIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/appointments/{id}/reassign/resource/{resourceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/appointments/{id}/reassign/resource/{resourceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

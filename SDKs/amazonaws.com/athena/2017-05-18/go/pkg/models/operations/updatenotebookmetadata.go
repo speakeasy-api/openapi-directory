@@ -16,17 +16,21 @@ const (
 	UpdateNotebookMetadataXAmzTargetEnumAmazonAthenaUpdateNotebookMetadata UpdateNotebookMetadataXAmzTargetEnum = "AmazonAthena.UpdateNotebookMetadata"
 )
 
+func (e UpdateNotebookMetadataXAmzTargetEnum) ToPointer() *UpdateNotebookMetadataXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateNotebookMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.UpdateNotebookMetadata":
-		*e = UpdateNotebookMetadataXAmzTargetEnum(s)
+		*e = UpdateNotebookMetadataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNotebookMetadataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNotebookMetadataXAmzTargetEnum: %v", v)
 	}
 }
 

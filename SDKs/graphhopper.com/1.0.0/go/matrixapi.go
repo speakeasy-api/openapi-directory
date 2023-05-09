@@ -253,7 +253,10 @@ func (s *matrixAPI) GetMatrix(ctx context.Context, request operations.GetMatrixR
 // This endpoint returns the solution of a JSON submitted to the Batch Matrix endpoint. You can fetch it with the job_id, you have been sent.
 func (s *matrixAPI) GetMatrixSolution(ctx context.Context, request operations.GetMatrixSolutionRequest) (*operations.GetMatrixSolutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/matrix/solution/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/matrix/solution/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

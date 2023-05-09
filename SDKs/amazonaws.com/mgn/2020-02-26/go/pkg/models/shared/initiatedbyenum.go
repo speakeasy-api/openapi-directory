@@ -16,12 +16,16 @@ const (
 	InitiatedByEnumTerminate    InitiatedByEnum = "TERMINATE"
 )
 
+func (e InitiatedByEnum) ToPointer() *InitiatedByEnum {
+	return &e
+}
+
 func (e *InitiatedByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "START_TEST":
 		fallthrough
 	case "START_CUTOVER":
@@ -29,9 +33,9 @@ func (e *InitiatedByEnum) UnmarshalJSON(data []byte) error {
 	case "DIAGNOSTIC":
 		fallthrough
 	case "TERMINATE":
-		*e = InitiatedByEnum(s)
+		*e = InitiatedByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InitiatedByEnum: %s", s)
+		return fmt.Errorf("invalid value for InitiatedByEnum: %v", v)
 	}
 }

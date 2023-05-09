@@ -16,17 +16,21 @@ const (
 	GetSystemTemplateXAmzTargetEnumIotThingsGraphFrontEndServiceGetSystemTemplate GetSystemTemplateXAmzTargetEnum = "IotThingsGraphFrontEndService.GetSystemTemplate"
 )
 
+func (e GetSystemTemplateXAmzTargetEnum) ToPointer() *GetSystemTemplateXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSystemTemplateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.GetSystemTemplate":
-		*e = GetSystemTemplateXAmzTargetEnum(s)
+		*e = GetSystemTemplateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSystemTemplateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSystemTemplateXAmzTargetEnum: %v", v)
 	}
 }
 

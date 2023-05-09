@@ -17,12 +17,16 @@ const (
 	PatchTokenRequestBodyChannelEnumSms      PatchTokenRequestBodyChannelEnum = "sms"
 )
 
+func (e PatchTokenRequestBodyChannelEnum) ToPointer() *PatchTokenRequestBodyChannelEnum {
+	return &e
+}
+
 func (e *PatchTokenRequestBodyChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "physical":
 		fallthrough
 	case "slack":
@@ -30,10 +34,10 @@ func (e *PatchTokenRequestBodyChannelEnum) UnmarshalJSON(data []byte) error {
 	case "telegram":
 		fallthrough
 	case "sms":
-		*e = PatchTokenRequestBodyChannelEnum(s)
+		*e = PatchTokenRequestBodyChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchTokenRequestBodyChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchTokenRequestBodyChannelEnum: %v", v)
 	}
 }
 

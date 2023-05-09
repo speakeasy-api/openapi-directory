@@ -16,17 +16,21 @@ const (
 	DescribeSpendLimitsXAmzTargetEnumPinpointSmsVoiceV2DescribeSpendLimits DescribeSpendLimitsXAmzTargetEnum = "PinpointSMSVoiceV2.DescribeSpendLimits"
 )
 
+func (e DescribeSpendLimitsXAmzTargetEnum) ToPointer() *DescribeSpendLimitsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeSpendLimitsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.DescribeSpendLimits":
-		*e = DescribeSpendLimitsXAmzTargetEnum(s)
+		*e = DescribeSpendLimitsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSpendLimitsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSpendLimitsXAmzTargetEnum: %v", v)
 	}
 }
 

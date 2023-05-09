@@ -17,19 +17,23 @@ const (
 	UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnumPublicIP  UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum = "PUBLIC_IP"
 )
 
+func (e UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum) ToPointer() *UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum {
+	return &e
+}
+
 func (e *UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE_IP":
 		fallthrough
 	case "PUBLIC_IP":
-		*e = UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum(s)
+		*e = UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnumGp3 UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum = "GP3"
 )
 
+func (e UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum) ToPointer() *UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum {
+	return &e
+}
+
 func (e *UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GP2":
 		fallthrough
 	case "ST1":
 		fallthrough
 	case "GP3":
-		*e = UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum(s)
+		*e = UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum: %v", v)
 	}
 }
 
@@ -68,19 +76,23 @@ const (
 	UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnumCustom  UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum = "CUSTOM"
 )
 
+func (e UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum) ToPointer() *UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum {
+	return &e
+}
+
 func (e *UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "CUSTOM":
-		*e = UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum(s)
+		*e = UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum: %v", v)
 	}
 }
 

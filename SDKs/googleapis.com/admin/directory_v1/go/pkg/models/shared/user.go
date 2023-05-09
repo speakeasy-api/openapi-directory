@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// UserInput - The Directory API allows you to create and manage your account's users, user aliases, and user Gmail chat profile photos. For more information about common tasks, see the [User Accounts Developer's Guide](/admin-sdk/directory/v1/guides/manage-users.html) and the [User Aliases Developer's Guide](/admin-sdk/directory/v1/guides/manage-user-aliases.html).
+// UserInput - The Directory API allows you to create and manage your account's users, user aliases, and user Google profile photos. For more information about common tasks, see the [User Accounts Developer's Guide](/admin-sdk/directory/v1/guides/manage-users.html) and the [User Aliases Developer's Guide](/admin-sdk/directory/v1/guides/manage-user-aliases.html).
 type UserInput struct {
 	// The list of the user's addresses. The maximum allowed data size for this field is 10KB.
 	Addresses interface{} `json:"addresses,omitempty"`
@@ -67,7 +67,7 @@ type UserInput struct {
 	Websites interface{} `json:"websites,omitempty"`
 }
 
-// User - The Directory API allows you to create and manage your account's users, user aliases, and user Gmail chat profile photos. For more information about common tasks, see the [User Accounts Developer's Guide](/admin-sdk/directory/v1/guides/manage-users.html) and the [User Aliases Developer's Guide](/admin-sdk/directory/v1/guides/manage-user-aliases.html).
+// User - The Directory API allows you to create and manage your account's users, user aliases, and user Google profile photos. For more information about common tasks, see the [User Accounts Developer's Guide](/admin-sdk/directory/v1/guides/manage-users.html) and the [User Aliases Developer's Guide](/admin-sdk/directory/v1/guides/manage-user-aliases.html).
 type User struct {
 	// The list of the user's addresses. The maximum allowed data size for this field is 10KB.
 	Addresses interface{} `json:"addresses,omitempty"`

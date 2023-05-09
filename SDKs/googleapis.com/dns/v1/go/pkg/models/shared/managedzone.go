@@ -15,19 +15,23 @@ const (
 	ManagedZoneVisibilityEnumPrivate ManagedZoneVisibilityEnum = "private"
 )
 
+func (e ManagedZoneVisibilityEnum) ToPointer() *ManagedZoneVisibilityEnum {
+	return &e
+}
+
 func (e *ManagedZoneVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = ManagedZoneVisibilityEnum(s)
+		*e = ManagedZoneVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagedZoneVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagedZoneVisibilityEnum: %v", v)
 	}
 }
 

@@ -21,12 +21,16 @@ const (
 	GetBestPodcastsSortEnumListenScore          GetBestPodcastsSortEnum = "listen_score"
 )
 
+func (e GetBestPodcastsSortEnum) ToPointer() *GetBestPodcastsSortEnum {
+	return &e
+}
+
 func (e *GetBestPodcastsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "recent_added_first":
 		fallthrough
 	case "oldest_added_first":
@@ -36,10 +40,10 @@ func (e *GetBestPodcastsSortEnum) UnmarshalJSON(data []byte) error {
 	case "oldest_published_first":
 		fallthrough
 	case "listen_score":
-		*e = GetBestPodcastsSortEnum(s)
+		*e = GetBestPodcastsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBestPodcastsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBestPodcastsSortEnum: %v", v)
 	}
 }
 

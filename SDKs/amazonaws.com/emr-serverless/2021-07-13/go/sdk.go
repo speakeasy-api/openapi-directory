@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>Amazon EMR Serverless is a new deployment option for Amazon EMR. EMR Serverless provides a serverless runtime environment that simplifies running analytics applications using the latest open source frameworks such as Apache Spark and Apache Hive. With EMR Serverless, you don’t have to configure, optimize, secure, or operate clusters to run applications with these frameworks.</p> <p>The API reference to Amazon EMR Serverless is <code>emr-serverless</code>. The <code>emr-serverless</code> prefix is used in the following scenarios: </p> <ul> <li> <p>It is the prefix in the CLI commands for Amazon EMR Serverless. For example, <code>aws emr-serverless start-job-run</code>.</p> </li> <li> <p>It is the prefix before IAM policy actions for Amazon EMR Serverless. For example, <code>"Action": ["emr-serverless:StartJobRun"]</code>. For more information, see <a href="https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-actions">Policy actions for Amazon EMR Serverless</a>.</p> </li> <li> <p>It is the prefix used in Amazon EMR Serverless service endpoints. For example, <code>emr-serverless.us-east-2.amazonaws.com</code>.</p> </li> </ul>
 // https://docs.aws.amazon.com/emr-serverless/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // CancelJobRun - Cancels a job run.
 func (s *SDK) CancelJobRun(ctx context.Context, request operations.CancelJobRunRequest) (*operations.CancelJobRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns/{jobRunId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns/{jobRunId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -286,7 +304,10 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 // DeleteApplication - Deletes an application. An application has to be in a stopped or created state in order to be deleted.
 func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteApplicationRequest) (*operations.DeleteApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -362,7 +383,10 @@ func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteAp
 // GetApplication - Displays detailed information about a specified application.
 func (s *SDK) GetApplication(ctx context.Context, request operations.GetApplicationRequest) (*operations.GetApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -435,10 +459,13 @@ func (s *SDK) GetApplication(ctx context.Context, request operations.GetApplicat
 	return res, nil
 }
 
-// GetDashboardForJobRun - Returns a URL to access the job run dashboard.
+// GetDashboardForJobRun - Returns a URL to access the job run dashboard. The generated URL is valid for one hour, after which you must invoke the API again to generate a new URL.
 func (s *SDK) GetDashboardForJobRun(ctx context.Context, request operations.GetDashboardForJobRunRequest) (*operations.GetDashboardForJobRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns/{jobRunId}/dashboard", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns/{jobRunId}/dashboard", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -514,7 +541,10 @@ func (s *SDK) GetDashboardForJobRun(ctx context.Context, request operations.GetD
 // GetJobRun - Displays detailed information about a job run.
 func (s *SDK) GetJobRun(ctx context.Context, request operations.GetJobRunRequest) (*operations.GetJobRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns/{jobRunId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns/{jobRunId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -660,7 +690,10 @@ func (s *SDK) ListApplications(ctx context.Context, request operations.ListAppli
 // ListJobRuns - Lists job runs based on a set of parameters.
 func (s *SDK) ListJobRuns(ctx context.Context, request operations.ListJobRunsRequest) (*operations.ListJobRunsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -730,7 +763,10 @@ func (s *SDK) ListJobRuns(ctx context.Context, request operations.ListJobRunsReq
 // ListTagsForResource - Lists the tags assigned to the resources.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -806,7 +842,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // StartApplication - Starts a specified application and initializes initial capacity if configured.
 func (s *SDK) StartApplication(ctx context.Context, request operations.StartApplicationRequest) (*operations.StartApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -892,7 +931,10 @@ func (s *SDK) StartApplication(ctx context.Context, request operations.StartAppl
 // StartJobRun - Starts a job run.
 func (s *SDK) StartJobRun(ctx context.Context, request operations.StartJobRunRequest) (*operations.StartJobRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/jobruns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -988,7 +1030,10 @@ func (s *SDK) StartJobRun(ctx context.Context, request operations.StartJobRunReq
 // StopApplication - Stops a specified application and releases initial capacity if configured. All scheduled and running jobs must be completed or cancelled before stopping an application.
 func (s *SDK) StopApplication(ctx context.Context, request operations.StopApplicationRequest) (*operations.StopApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1061,10 +1106,13 @@ func (s *SDK) StopApplication(ctx context.Context, request operations.StopApplic
 	return res, nil
 }
 
-// TagResource - Assigns tags to resources. A tag is a label that you assign to an AWS resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize your AWS resources by attributes such as purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a specific resource based on the tags you've assigned to it.
+// TagResource - Assigns tags to resources. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize your Amazon Web Services resources by attributes such as purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a specific resource based on the tags you've assigned to it.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1150,7 +1198,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes tags from resources.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1230,7 +1281,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateApplication - Updates a specified application. An application has to be in a stopped or created state in order to be updated.
 func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateApplicationRequest) (*operations.UpdateApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -40,7 +40,10 @@ func newIndividuals(defaultClient, securityClient HTTPClient, serverURL, languag
 // Delete an individual with the specified identifier
 func (s *individuals) DeleteIndividualsPartyID(ctx context.Context, request operations.DeleteIndividualsPartyIDRequest) (*operations.DeleteIndividualsPartyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -181,7 +184,10 @@ func (s *individuals) GetIndividuals(ctx context.Context, request operations.Get
 // Retrieve an individual with the specified identifier
 func (s *individuals) GetIndividualsPartyID(ctx context.Context, request operations.GetIndividualsPartyIDRequest) (*operations.GetIndividualsPartyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -327,7 +333,10 @@ func (s *individuals) PostIndividuals(ctx context.Context, request operations.Po
 // Update an individual
 func (s *individuals) PutIndividualsPartyID(ctx context.Context, request operations.PutIndividualsPartyIDRequest) (*operations.PutIndividualsPartyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IndividualInput", "json")
 	if err != nil {

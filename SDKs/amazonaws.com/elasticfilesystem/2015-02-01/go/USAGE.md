@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,19 +17,20 @@ func main() {
         }),
     )
 
-    req := operations.CreateAccessPointRequest{
+    ctx := context.Background()
+    res, err := s.CreateAccessPoint(ctx, operations.CreateAccessPointRequest{
         RequestBody: operations.CreateAccessPointRequestBody{
             ClientToken: "corrupti",
             FileSystemID: "provident",
             PosixUser: &operations.CreateAccessPointRequestBodyPosixUser{
-                Gid: 715190,
+                Gid: sdk.Int64(715190),
                 SecondaryGids: []int64{
                     602763,
                     857946,
                     544883,
                     847252,
                 },
-                UID: 423655,
+                UID: sdk.Int64(423655),
             },
             RootDirectory: &operations.CreateAccessPointRequestBodyRootDirectory{
                 CreationInfo: &shared.CreationInfo{
@@ -37,7 +38,7 @@ func main() {
                     OwnerUID: 645894,
                     Permissions: "suscipit",
                 },
-                Path: "iure",
+                Path: sdk.String("iure"),
             },
             Tags: []shared.Tag{
                 shared.Tag{
@@ -50,17 +51,14 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "suscipit",
-        XAmzContentSha256: "molestiae",
-        XAmzCredential: "minus",
-        XAmzDate: "placeat",
-        XAmzSecurityToken: "voluptatum",
-        XAmzSignature: "iusto",
-        XAmzSignedHeaders: "excepturi",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateAccessPoint(ctx, req)
+        XAmzAlgorithm: sdk.String("suscipit"),
+        XAmzContentSha256: sdk.String("molestiae"),
+        XAmzCredential: sdk.String("minus"),
+        XAmzDate: sdk.String("placeat"),
+        XAmzSecurityToken: sdk.String("voluptatum"),
+        XAmzSignature: sdk.String("iusto"),
+        XAmzSignedHeaders: sdk.String("excepturi"),
+    })
     if err != nil {
         log.Fatal(err)
     }

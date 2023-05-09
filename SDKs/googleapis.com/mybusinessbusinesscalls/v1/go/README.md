@@ -13,37 +13,35 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/mybusiness
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Filter: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        PageSize: 423655,
-        PageToken: "error",
-        Parent: "deserunt",
-        PrettyPrint: false,
-        QuotaUser: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-    }
-
     ctx := context.Background()
-    res, err := s.Locations.MybusinessbusinesscallsLocationsBusinesscallsinsightsList(ctx, req)
+    res, err := s.Locations.MybusinessbusinesscallsLocationsBusinesscallsinsightsList(ctx, operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Filter: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PageSize: sdk.Int64(423655),
+        PageToken: sdk.String("error"),
+        Parent: "deserunt",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("suscipit"),
+        UploadType: sdk.String("iure"),
+        UploadProtocol: sdk.String("magnam"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -59,11 +57,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### Locations
+### [Locations](docs/locations/README.md)
 
-* `MybusinessbusinesscallsLocationsBusinesscallsinsightsList` - Returns insights for Business calls for a location.
-* `MybusinessbusinesscallsLocationsGetBusinesscallssettings` - Returns the Business calls settings resource for the given location.
-* `MybusinessbusinesscallsLocationsUpdateBusinesscallssettings` - Updates the Business call settings for the specified location.
+* [MybusinessbusinesscallsLocationsBusinesscallsinsightsList](docs/locations/README.md#mybusinessbusinesscallslocationsbusinesscallsinsightslist) - Returns insights for Business calls for a location.
+* [MybusinessbusinesscallsLocationsGetBusinesscallssettings](docs/locations/README.md#mybusinessbusinesscallslocationsgetbusinesscallssettings) - Returns the Business calls settings resource for the given location.
+* [MybusinessbusinesscallsLocationsUpdateBusinesscallssettings](docs/locations/README.md#mybusinessbusinesscallslocationsupdatebusinesscallssettings) - Updates the Business call settings for the specified location.
 <!-- End SDK Available Operations -->
 
 ### Maturity

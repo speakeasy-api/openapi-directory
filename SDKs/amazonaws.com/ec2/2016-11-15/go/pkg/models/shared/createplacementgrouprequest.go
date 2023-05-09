@@ -16,21 +16,25 @@ const (
 	CreatePlacementGroupRequestStrategyEnumPartition CreatePlacementGroupRequestStrategyEnum = "partition"
 )
 
+func (e CreatePlacementGroupRequestStrategyEnum) ToPointer() *CreatePlacementGroupRequestStrategyEnum {
+	return &e
+}
+
 func (e *CreatePlacementGroupRequestStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cluster":
 		fallthrough
 	case "spread":
 		fallthrough
 	case "partition":
-		*e = CreatePlacementGroupRequestStrategyEnum(s)
+		*e = CreatePlacementGroupRequestStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePlacementGroupRequestStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePlacementGroupRequestStrategyEnum: %v", v)
 	}
 }
 
@@ -125,12 +129,16 @@ const (
 	CreatePlacementGroupRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreatePlacementGroupRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreatePlacementGroupRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreatePlacementGroupRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreatePlacementGroupRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -300,10 +308,10 @@ func (e *CreatePlacementGroupRequestTagSpecificationsResourceTypeEnum) Unmarshal
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreatePlacementGroupRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreatePlacementGroupRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePlacementGroupRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePlacementGroupRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

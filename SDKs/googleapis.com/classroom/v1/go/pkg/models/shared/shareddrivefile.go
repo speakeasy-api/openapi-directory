@@ -17,12 +17,16 @@ const (
 	SharedDriveFileShareModeEnumStudentCopy      SharedDriveFileShareModeEnum = "STUDENT_COPY"
 )
 
+func (e SharedDriveFileShareModeEnum) ToPointer() *SharedDriveFileShareModeEnum {
+	return &e
+}
+
 func (e *SharedDriveFileShareModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_SHARE_MODE":
 		fallthrough
 	case "VIEW":
@@ -30,10 +34,10 @@ func (e *SharedDriveFileShareModeEnum) UnmarshalJSON(data []byte) error {
 	case "EDIT":
 		fallthrough
 	case "STUDENT_COPY":
-		*e = SharedDriveFileShareModeEnum(s)
+		*e = SharedDriveFileShareModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SharedDriveFileShareModeEnum: %s", s)
+		return fmt.Errorf("invalid value for SharedDriveFileShareModeEnum: %v", v)
 	}
 }
 

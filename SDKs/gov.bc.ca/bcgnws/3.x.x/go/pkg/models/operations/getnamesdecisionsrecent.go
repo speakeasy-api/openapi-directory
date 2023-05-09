@@ -9,26 +9,30 @@ import (
 )
 
 // GetNamesDecisionsRecentEmbedEnum - A flag to indicate whether to embed the corresponding 'feature' into each matching name
-type GetNamesDecisionsRecentEmbedEnum string
+type GetNamesDecisionsRecentEmbedEnum int64
 
 const (
-	GetNamesDecisionsRecentEmbedEnumZero GetNamesDecisionsRecentEmbedEnum = "0"
-	GetNamesDecisionsRecentEmbedEnumOne  GetNamesDecisionsRecentEmbedEnum = "1"
+	GetNamesDecisionsRecentEmbedEnumZero GetNamesDecisionsRecentEmbedEnum = 0
+	GetNamesDecisionsRecentEmbedEnumOne  GetNamesDecisionsRecentEmbedEnum = 1
 )
 
+func (e GetNamesDecisionsRecentEmbedEnum) ToPointer() *GetNamesDecisionsRecentEmbedEnum {
+	return &e
+}
+
 func (e *GetNamesDecisionsRecentEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = GetNamesDecisionsRecentEmbedEnum(s)
+	case 1:
+		*e = GetNamesDecisionsRecentEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesDecisionsRecentEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesDecisionsRecentEmbedEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	GetNamesDecisionsRecentOutputFormatEnumCsv  GetNamesDecisionsRecentOutputFormatEnum = "csv"
 )
 
+func (e GetNamesDecisionsRecentOutputFormatEnum) ToPointer() *GetNamesDecisionsRecentOutputFormatEnum {
+	return &e
+}
+
 func (e *GetNamesDecisionsRecentOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -55,55 +63,59 @@ func (e *GetNamesDecisionsRecentOutputFormatEnum) UnmarshalJSON(data []byte) err
 	case "kml":
 		fallthrough
 	case "csv":
-		*e = GetNamesDecisionsRecentOutputFormatEnum(s)
+		*e = GetNamesDecisionsRecentOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesDecisionsRecentOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesDecisionsRecentOutputFormatEnum: %v", v)
 	}
 }
 
 // GetNamesDecisionsRecentOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries.
-type GetNamesDecisionsRecentOutputSrsEnum string
+type GetNamesDecisionsRecentOutputSrsEnum int64
 
 const (
-	GetNamesDecisionsRecentOutputSrsEnumFourThousandThreeHundredAndTwentySix   GetNamesDecisionsRecentOutputSrsEnum = "4326"
-	GetNamesDecisionsRecentOutputSrsEnumFourThousandTwoHundredAndSixtyNine     GetNamesDecisionsRecentOutputSrsEnum = "4269"
-	GetNamesDecisionsRecentOutputSrsEnumThreeThousandAndFive                   GetNamesDecisionsRecentOutputSrsEnum = "3005"
-	GetNamesDecisionsRecentOutputSrsEnumThreeThousandEightHundredAndFiftySeven GetNamesDecisionsRecentOutputSrsEnum = "3857"
-	GetNamesDecisionsRecentOutputSrsEnumTwentySixThousandNineHundredAndSeven   GetNamesDecisionsRecentOutputSrsEnum = "26907"
-	GetNamesDecisionsRecentOutputSrsEnumTwentySixThousandNineHundredAndEight   GetNamesDecisionsRecentOutputSrsEnum = "26908"
-	GetNamesDecisionsRecentOutputSrsEnumTwentySixThousandNineHundredAndNine    GetNamesDecisionsRecentOutputSrsEnum = "26909"
-	GetNamesDecisionsRecentOutputSrsEnumTwentySixThousandNineHundredAndTen     GetNamesDecisionsRecentOutputSrsEnum = "26910"
-	GetNamesDecisionsRecentOutputSrsEnumTwentySixThousandNineHundredAndEleven  GetNamesDecisionsRecentOutputSrsEnum = "26911"
+	GetNamesDecisionsRecentOutputSrsEnumFourThousandThreeHundredAndTwentySix   GetNamesDecisionsRecentOutputSrsEnum = 4326
+	GetNamesDecisionsRecentOutputSrsEnumFourThousandTwoHundredAndSixtyNine     GetNamesDecisionsRecentOutputSrsEnum = 4269
+	GetNamesDecisionsRecentOutputSrsEnumThreeThousandAndFive                   GetNamesDecisionsRecentOutputSrsEnum = 3005
+	GetNamesDecisionsRecentOutputSrsEnumThreeThousandEightHundredAndFiftySeven GetNamesDecisionsRecentOutputSrsEnum = 3857
+	GetNamesDecisionsRecentOutputSrsEnumTwentySixThousandNineHundredAndSeven   GetNamesDecisionsRecentOutputSrsEnum = 26907
+	GetNamesDecisionsRecentOutputSrsEnumTwentySixThousandNineHundredAndEight   GetNamesDecisionsRecentOutputSrsEnum = 26908
+	GetNamesDecisionsRecentOutputSrsEnumTwentySixThousandNineHundredAndNine    GetNamesDecisionsRecentOutputSrsEnum = 26909
+	GetNamesDecisionsRecentOutputSrsEnumTwentySixThousandNineHundredAndTen     GetNamesDecisionsRecentOutputSrsEnum = 26910
+	GetNamesDecisionsRecentOutputSrsEnumTwentySixThousandNineHundredAndEleven  GetNamesDecisionsRecentOutputSrsEnum = 26911
 )
 
+func (e GetNamesDecisionsRecentOutputSrsEnum) ToPointer() *GetNamesDecisionsRecentOutputSrsEnum {
+	return &e
+}
+
 func (e *GetNamesDecisionsRecentOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "3857":
+	case 3857:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetNamesDecisionsRecentOutputSrsEnum(s)
+	case 26911:
+		*e = GetNamesDecisionsRecentOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesDecisionsRecentOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesDecisionsRecentOutputSrsEnum: %v", v)
 	}
 }
 
@@ -115,19 +127,23 @@ const (
 	GetNamesDecisionsRecentOutputStyleEnumDetail  GetNamesDecisionsRecentOutputStyleEnum = "detail"
 )
 
+func (e GetNamesDecisionsRecentOutputStyleEnum) ToPointer() *GetNamesDecisionsRecentOutputStyleEnum {
+	return &e
+}
+
 func (e *GetNamesDecisionsRecentOutputStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "summary":
 		fallthrough
 	case "detail":
-		*e = GetNamesDecisionsRecentOutputStyleEnum(s)
+		*e = GetNamesDecisionsRecentOutputStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesDecisionsRecentOutputStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesDecisionsRecentOutputStyleEnum: %v", v)
 	}
 }
 
@@ -140,21 +156,25 @@ const (
 	GetNamesDecisionsRecentSortByEnumDecisionDate GetNamesDecisionsRecentSortByEnum = "decisionDate"
 )
 
+func (e GetNamesDecisionsRecentSortByEnum) ToPointer() *GetNamesDecisionsRecentSortByEnum {
+	return &e
+}
+
 func (e *GetNamesDecisionsRecentSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "name":
 		fallthrough
 	case "featureType":
 		fallthrough
 	case "decisionDate":
-		*e = GetNamesDecisionsRecentSortByEnum(s)
+		*e = GetNamesDecisionsRecentSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesDecisionsRecentSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesDecisionsRecentSortByEnum: %v", v)
 	}
 }
 

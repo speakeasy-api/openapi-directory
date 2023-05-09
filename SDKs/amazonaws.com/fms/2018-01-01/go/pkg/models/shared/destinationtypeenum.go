@@ -15,20 +15,24 @@ const (
 	DestinationTypeEnumPrefixList DestinationTypeEnum = "PREFIX_LIST"
 )
 
+func (e DestinationTypeEnum) ToPointer() *DestinationTypeEnum {
+	return &e
+}
+
 func (e *DestinationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IPV4":
 		fallthrough
 	case "IPV6":
 		fallthrough
 	case "PREFIX_LIST":
-		*e = DestinationTypeEnum(s)
+		*e = DestinationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinationTypeEnum: %v", v)
 	}
 }

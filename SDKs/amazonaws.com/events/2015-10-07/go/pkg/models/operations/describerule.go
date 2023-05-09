@@ -16,17 +16,21 @@ const (
 	DescribeRuleXAmzTargetEnumAwsEventsDescribeRule DescribeRuleXAmzTargetEnum = "AWSEvents.DescribeRule"
 )
 
+func (e DescribeRuleXAmzTargetEnum) ToPointer() *DescribeRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.DescribeRule":
-		*e = DescribeRuleXAmzTargetEnum(s)
+		*e = DescribeRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeRuleXAmzTargetEnum: %v", v)
 	}
 }
 

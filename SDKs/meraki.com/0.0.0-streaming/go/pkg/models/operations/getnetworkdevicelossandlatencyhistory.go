@@ -17,21 +17,25 @@ const (
 	GetNetworkDeviceLossAndLatencyHistoryUplinkEnumWan2     GetNetworkDeviceLossAndLatencyHistoryUplinkEnum = "wan2"
 )
 
+func (e GetNetworkDeviceLossAndLatencyHistoryUplinkEnum) ToPointer() *GetNetworkDeviceLossAndLatencyHistoryUplinkEnum {
+	return &e
+}
+
 func (e *GetNetworkDeviceLossAndLatencyHistoryUplinkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cellular":
 		fallthrough
 	case "wan1":
 		fallthrough
 	case "wan2":
-		*e = GetNetworkDeviceLossAndLatencyHistoryUplinkEnum(s)
+		*e = GetNetworkDeviceLossAndLatencyHistoryUplinkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNetworkDeviceLossAndLatencyHistoryUplinkEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNetworkDeviceLossAndLatencyHistoryUplinkEnum: %v", v)
 	}
 }
 

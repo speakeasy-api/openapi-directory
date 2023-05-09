@@ -15,20 +15,24 @@ const (
 	FailoverStatusEnumCancelling  FailoverStatusEnum = "cancelling"
 )
 
+func (e FailoverStatusEnum) ToPointer() *FailoverStatusEnum {
+	return &e
+}
+
 func (e *FailoverStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "failing-over":
 		fallthrough
 	case "cancelling":
-		*e = FailoverStatusEnum(s)
+		*e = FailoverStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailoverStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FailoverStatusEnum: %v", v)
 	}
 }

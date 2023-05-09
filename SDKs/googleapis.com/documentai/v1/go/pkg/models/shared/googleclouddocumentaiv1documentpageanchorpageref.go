@@ -21,12 +21,16 @@ const (
 	GoogleCloudDocumentaiV1DocumentPageAnchorPageRefLayoutTypeEnumFormField             GoogleCloudDocumentaiV1DocumentPageAnchorPageRefLayoutTypeEnum = "FORM_FIELD"
 )
 
+func (e GoogleCloudDocumentaiV1DocumentPageAnchorPageRefLayoutTypeEnum) ToPointer() *GoogleCloudDocumentaiV1DocumentPageAnchorPageRefLayoutTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1DocumentPageAnchorPageRefLayoutTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAYOUT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BLOCK":
@@ -42,10 +46,10 @@ func (e *GoogleCloudDocumentaiV1DocumentPageAnchorPageRefLayoutTypeEnum) Unmarsh
 	case "TABLE":
 		fallthrough
 	case "FORM_FIELD":
-		*e = GoogleCloudDocumentaiV1DocumentPageAnchorPageRefLayoutTypeEnum(s)
+		*e = GoogleCloudDocumentaiV1DocumentPageAnchorPageRefLayoutTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1DocumentPageAnchorPageRefLayoutTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1DocumentPageAnchorPageRefLayoutTypeEnum: %v", v)
 	}
 }
 

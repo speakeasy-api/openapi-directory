@@ -16,17 +16,21 @@ const (
 	DescribeScalableTargetsXAmzTargetEnumAnyScaleFrontendServiceDescribeScalableTargets DescribeScalableTargetsXAmzTargetEnum = "AnyScaleFrontendService.DescribeScalableTargets"
 )
 
+func (e DescribeScalableTargetsXAmzTargetEnum) ToPointer() *DescribeScalableTargetsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeScalableTargetsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyScaleFrontendService.DescribeScalableTargets":
-		*e = DescribeScalableTargetsXAmzTargetEnum(s)
+		*e = DescribeScalableTargetsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeScalableTargetsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeScalableTargetsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	UpdateAnEventSubscriptionParametersStatusEnumDeleted  UpdateAnEventSubscriptionParametersStatusEnum = "deleted"
 )
 
+func (e UpdateAnEventSubscriptionParametersStatusEnum) ToPointer() *UpdateAnEventSubscriptionParametersStatusEnum {
+	return &e
+}
+
 func (e *UpdateAnEventSubscriptionParametersStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "disabled":
 		fallthrough
 	case "deleted":
-		*e = UpdateAnEventSubscriptionParametersStatusEnum(s)
+		*e = UpdateAnEventSubscriptionParametersStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnEventSubscriptionParametersStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnEventSubscriptionParametersStatusEnum: %v", v)
 	}
 }
 

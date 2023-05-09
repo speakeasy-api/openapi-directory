@@ -16,12 +16,16 @@ const (
 	ActivityStreamStatusEnumStopping ActivityStreamStatusEnum = "stopping"
 )
 
+func (e ActivityStreamStatusEnum) ToPointer() *ActivityStreamStatusEnum {
+	return &e
+}
+
 func (e *ActivityStreamStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stopped":
 		fallthrough
 	case "starting":
@@ -29,9 +33,9 @@ func (e *ActivityStreamStatusEnum) UnmarshalJSON(data []byte) error {
 	case "started":
 		fallthrough
 	case "stopping":
-		*e = ActivityStreamStatusEnum(s)
+		*e = ActivityStreamStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivityStreamStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivityStreamStatusEnum: %v", v)
 	}
 }

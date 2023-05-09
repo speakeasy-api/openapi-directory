@@ -15,17 +15,21 @@ const (
 	GETSetSecurityGroupsActionEnumSetSecurityGroups GETSetSecurityGroupsActionEnum = "SetSecurityGroups"
 )
 
+func (e GETSetSecurityGroupsActionEnum) ToPointer() *GETSetSecurityGroupsActionEnum {
+	return &e
+}
+
 func (e *GETSetSecurityGroupsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetSecurityGroups":
-		*e = GETSetSecurityGroupsActionEnum(s)
+		*e = GETSetSecurityGroupsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetSecurityGroupsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetSecurityGroupsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSetSecurityGroupsVersionEnumTwoThousandAndFifteen1201 GETSetSecurityGroupsVersionEnum = "2015-12-01"
 )
 
+func (e GETSetSecurityGroupsVersionEnum) ToPointer() *GETSetSecurityGroupsVersionEnum {
+	return &e
+}
+
 func (e *GETSetSecurityGroupsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = GETSetSecurityGroupsVersionEnum(s)
+		*e = GETSetSecurityGroupsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetSecurityGroupsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetSecurityGroupsVersionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateHTTPNamespaceXAmzTargetEnumRoute53AutoNamingV20170314UpdateHTTPNamespace UpdateHTTPNamespaceXAmzTargetEnum = "Route53AutoNaming_v20170314.UpdateHttpNamespace"
 )
 
+func (e UpdateHTTPNamespaceXAmzTargetEnum) ToPointer() *UpdateHTTPNamespaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateHTTPNamespaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53AutoNaming_v20170314.UpdateHttpNamespace":
-		*e = UpdateHTTPNamespaceXAmzTargetEnum(s)
+		*e = UpdateHTTPNamespaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateHTTPNamespaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateHTTPNamespaceXAmzTargetEnum: %v", v)
 	}
 }
 

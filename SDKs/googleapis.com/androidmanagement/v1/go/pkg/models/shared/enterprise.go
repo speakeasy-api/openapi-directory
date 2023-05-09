@@ -18,12 +18,16 @@ const (
 	EnterpriseEnabledNotificationTypesEnumUsageLogs                   EnterpriseEnabledNotificationTypesEnum = "USAGE_LOGS"
 )
 
+func (e EnterpriseEnabledNotificationTypesEnum) ToPointer() *EnterpriseEnabledNotificationTypesEnum {
+	return &e
+}
+
 func (e *EnterpriseEnabledNotificationTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOTIFICATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ENROLLMENT":
@@ -35,10 +39,10 @@ func (e *EnterpriseEnabledNotificationTypesEnum) UnmarshalJSON(data []byte) erro
 	case "COMMAND":
 		fallthrough
 	case "USAGE_LOGS":
-		*e = EnterpriseEnabledNotificationTypesEnum(s)
+		*e = EnterpriseEnabledNotificationTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseEnabledNotificationTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseEnabledNotificationTypesEnum: %v", v)
 	}
 }
 

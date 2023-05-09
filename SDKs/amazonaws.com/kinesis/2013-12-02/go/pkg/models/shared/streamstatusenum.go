@@ -16,12 +16,16 @@ const (
 	StreamStatusEnumUpdating StreamStatusEnum = "UPDATING"
 )
 
+func (e StreamStatusEnum) ToPointer() *StreamStatusEnum {
+	return &e
+}
+
 func (e *StreamStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "DELETING":
@@ -29,9 +33,9 @@ func (e *StreamStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE":
 		fallthrough
 	case "UPDATING":
-		*e = StreamStatusEnum(s)
+		*e = StreamStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamStatusEnum: %v", v)
 	}
 }

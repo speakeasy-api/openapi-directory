@@ -16,20 +16,24 @@ const (
 	EnabledOrganizationsEnumSelected EnabledOrganizationsEnum = "selected"
 )
 
+func (e EnabledOrganizationsEnum) ToPointer() *EnabledOrganizationsEnum {
+	return &e
+}
+
 func (e *EnabledOrganizationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "none":
 		fallthrough
 	case "selected":
-		*e = EnabledOrganizationsEnum(s)
+		*e = EnabledOrganizationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnabledOrganizationsEnum: %s", s)
+		return fmt.Errorf("invalid value for EnabledOrganizationsEnum: %v", v)
 	}
 }

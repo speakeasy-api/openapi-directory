@@ -16,17 +16,21 @@ const (
 	PutPermissionXAmzTargetEnumAwsEventsPutPermission PutPermissionXAmzTargetEnum = "AWSEvents.PutPermission"
 )
 
+func (e PutPermissionXAmzTargetEnum) ToPointer() *PutPermissionXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutPermissionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.PutPermission":
-		*e = PutPermissionXAmzTargetEnum(s)
+		*e = PutPermissionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutPermissionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutPermissionXAmzTargetEnum: %v", v)
 	}
 }
 

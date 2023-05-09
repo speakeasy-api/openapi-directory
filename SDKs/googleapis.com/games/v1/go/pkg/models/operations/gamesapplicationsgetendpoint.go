@@ -23,21 +23,25 @@ const (
 	GamesApplicationsGetEndPointEndPointTypeEnumProfileSettings         GamesApplicationsGetEndPointEndPointTypeEnum = "PROFILE_SETTINGS"
 )
 
+func (e GamesApplicationsGetEndPointEndPointTypeEnum) ToPointer() *GamesApplicationsGetEndPointEndPointTypeEnum {
+	return &e
+}
+
 func (e *GamesApplicationsGetEndPointEndPointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "END_POINT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PROFILE_CREATION":
 		fallthrough
 	case "PROFILE_SETTINGS":
-		*e = GamesApplicationsGetEndPointEndPointTypeEnum(s)
+		*e = GamesApplicationsGetEndPointEndPointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GamesApplicationsGetEndPointEndPointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GamesApplicationsGetEndPointEndPointTypeEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	GradebookSettingsCalculationTypeEnumWeightedCategories         GradebookSettingsCalculationTypeEnum = "WEIGHTED_CATEGORIES"
 )
 
+func (e GradebookSettingsCalculationTypeEnum) ToPointer() *GradebookSettingsCalculationTypeEnum {
+	return &e
+}
+
 func (e *GradebookSettingsCalculationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CALCULATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TOTAL_POINTS":
 		fallthrough
 	case "WEIGHTED_CATEGORIES":
-		*e = GradebookSettingsCalculationTypeEnum(s)
+		*e = GradebookSettingsCalculationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GradebookSettingsCalculationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GradebookSettingsCalculationTypeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	GradebookSettingsDisplaySettingEnumShowTeachersOnly          GradebookSettingsDisplaySettingEnum = "SHOW_TEACHERS_ONLY"
 )
 
+func (e GradebookSettingsDisplaySettingEnum) ToPointer() *GradebookSettingsDisplaySettingEnum {
+	return &e
+}
+
 func (e *GradebookSettingsDisplaySettingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISPLAY_SETTING_UNSPECIFIED":
 		fallthrough
 	case "SHOW_OVERALL_GRADE":
@@ -57,10 +65,10 @@ func (e *GradebookSettingsDisplaySettingEnum) UnmarshalJSON(data []byte) error {
 	case "HIDE_OVERALL_GRADE":
 		fallthrough
 	case "SHOW_TEACHERS_ONLY":
-		*e = GradebookSettingsDisplaySettingEnum(s)
+		*e = GradebookSettingsDisplaySettingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GradebookSettingsDisplaySettingEnum: %s", s)
+		return fmt.Errorf("invalid value for GradebookSettingsDisplaySettingEnum: %v", v)
 	}
 }
 

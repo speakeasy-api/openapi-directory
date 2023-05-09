@@ -29,12 +29,16 @@ const (
 	ChartDateTimeRuleTypeEnumYearMonthDay                     ChartDateTimeRuleTypeEnum = "YEAR_MONTH_DAY"
 )
 
+func (e ChartDateTimeRuleTypeEnum) ToPointer() *ChartDateTimeRuleTypeEnum {
+	return &e
+}
+
 func (e *ChartDateTimeRuleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHART_DATE_TIME_RULE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SECOND":
@@ -66,10 +70,10 @@ func (e *ChartDateTimeRuleTypeEnum) UnmarshalJSON(data []byte) error {
 	case "YEAR_QUARTER":
 		fallthrough
 	case "YEAR_MONTH_DAY":
-		*e = ChartDateTimeRuleTypeEnum(s)
+		*e = ChartDateTimeRuleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChartDateTimeRuleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChartDateTimeRuleTypeEnum: %v", v)
 	}
 }
 

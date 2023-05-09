@@ -19,12 +19,16 @@ const (
 	TaskResponseApprovalStatusEnumChangesRequested TaskResponseApprovalStatusEnum = "changes_requested"
 )
 
+func (e TaskResponseApprovalStatusEnum) ToPointer() *TaskResponseApprovalStatusEnum {
+	return &e
+}
+
 func (e *TaskResponseApprovalStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "approved":
@@ -32,10 +36,10 @@ func (e *TaskResponseApprovalStatusEnum) UnmarshalJSON(data []byte) error {
 	case "rejected":
 		fallthrough
 	case "changes_requested":
-		*e = TaskResponseApprovalStatusEnum(s)
+		*e = TaskResponseApprovalStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskResponseApprovalStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskResponseApprovalStatusEnum: %v", v)
 	}
 }
 
@@ -70,12 +74,16 @@ const (
 	TaskResponseAssigneeStatusEnumInbox    TaskResponseAssigneeStatusEnum = "inbox"
 )
 
+func (e TaskResponseAssigneeStatusEnum) ToPointer() *TaskResponseAssigneeStatusEnum {
+	return &e
+}
+
 func (e *TaskResponseAssigneeStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "today":
 		fallthrough
 	case "upcoming":
@@ -85,10 +93,10 @@ func (e *TaskResponseAssigneeStatusEnum) UnmarshalJSON(data []byte) error {
 	case "new":
 		fallthrough
 	case "inbox":
-		*e = TaskResponseAssigneeStatusEnum(s)
+		*e = TaskResponseAssigneeStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskResponseAssigneeStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskResponseAssigneeStatusEnum: %v", v)
 	}
 }
 
@@ -115,12 +123,16 @@ const (
 	TaskResponseParentResourceSubtypeEnumApproval    TaskResponseParentResourceSubtypeEnum = "approval"
 )
 
+func (e TaskResponseParentResourceSubtypeEnum) ToPointer() *TaskResponseParentResourceSubtypeEnum {
+	return &e
+}
+
 func (e *TaskResponseParentResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default_task":
 		fallthrough
 	case "milestone":
@@ -128,10 +140,10 @@ func (e *TaskResponseParentResourceSubtypeEnum) UnmarshalJSON(data []byte) error
 	case "section":
 		fallthrough
 	case "approval":
-		*e = TaskResponseParentResourceSubtypeEnum(s)
+		*e = TaskResponseParentResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskResponseParentResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskResponseParentResourceSubtypeEnum: %v", v)
 	}
 }
 
@@ -159,12 +171,16 @@ const (
 	TaskResponseResourceSubtypeEnumApproval    TaskResponseResourceSubtypeEnum = "approval"
 )
 
+func (e TaskResponseResourceSubtypeEnum) ToPointer() *TaskResponseResourceSubtypeEnum {
+	return &e
+}
+
 func (e *TaskResponseResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default_task":
 		fallthrough
 	case "milestone":
@@ -172,10 +188,10 @@ func (e *TaskResponseResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
 	case "section":
 		fallthrough
 	case "approval":
-		*e = TaskResponseResourceSubtypeEnum(s)
+		*e = TaskResponseResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskResponseResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskResponseResourceSubtypeEnum: %v", v)
 	}
 }
 

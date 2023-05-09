@@ -17,12 +17,16 @@ const (
 	GetBackendAPIResponseResourceConfigConflictResolutionResolutionStrategyEnumNone                  GetBackendAPIResponseResourceConfigConflictResolutionResolutionStrategyEnum = "NONE"
 )
 
+func (e GetBackendAPIResponseResourceConfigConflictResolutionResolutionStrategyEnum) ToPointer() *GetBackendAPIResponseResourceConfigConflictResolutionResolutionStrategyEnum {
+	return &e
+}
+
 func (e *GetBackendAPIResponseResourceConfigConflictResolutionResolutionStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPTIMISTIC_CONCURRENCY":
 		fallthrough
 	case "LAMBDA":
@@ -30,10 +34,10 @@ func (e *GetBackendAPIResponseResourceConfigConflictResolutionResolutionStrategy
 	case "AUTOMERGE":
 		fallthrough
 	case "NONE":
-		*e = GetBackendAPIResponseResourceConfigConflictResolutionResolutionStrategyEnum(s)
+		*e = GetBackendAPIResponseResourceConfigConflictResolutionResolutionStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBackendAPIResponseResourceConfigConflictResolutionResolutionStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBackendAPIResponseResourceConfigConflictResolutionResolutionStrategyEnum: %v", v)
 	}
 }
 
@@ -52,12 +56,16 @@ const (
 	GetBackendAPIResponseResourceConfigDefaultAuthTypeModeEnumOpenidConnect          GetBackendAPIResponseResourceConfigDefaultAuthTypeModeEnum = "OPENID_CONNECT"
 )
 
+func (e GetBackendAPIResponseResourceConfigDefaultAuthTypeModeEnum) ToPointer() *GetBackendAPIResponseResourceConfigDefaultAuthTypeModeEnum {
+	return &e
+}
+
 func (e *GetBackendAPIResponseResourceConfigDefaultAuthTypeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "API_KEY":
 		fallthrough
 	case "AWS_IAM":
@@ -65,10 +73,10 @@ func (e *GetBackendAPIResponseResourceConfigDefaultAuthTypeModeEnum) UnmarshalJS
 	case "AMAZON_COGNITO_USER_POOLS":
 		fallthrough
 	case "OPENID_CONNECT":
-		*e = GetBackendAPIResponseResourceConfigDefaultAuthTypeModeEnum(s)
+		*e = GetBackendAPIResponseResourceConfigDefaultAuthTypeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBackendAPIResponseResourceConfigDefaultAuthTypeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBackendAPIResponseResourceConfigDefaultAuthTypeModeEnum: %v", v)
 	}
 }
 

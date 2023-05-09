@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/circl.lu/hashlookup/1.2/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetChildrenRequest{
+    ctx := context.Background()
+    res, err := s.Default.GetChildren(ctx, operations.GetChildrenRequest{
         Count: 548814,
         Cursor: "provident",
         Sha1: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.Default.GetChildren(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,19 +44,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### Default
+### [Default](docs/default/README.md)
 
-* `GetChildren` - Return children from a given SHA1.  A number of element to return and an offset must be given. If not set it will be the 100 first elements. A cursor must be given to paginate over. The starting cursor is 0.
-* `GetInfo` - Info about the hashlookup database
-* `GetLookupMd5` - Lookup MD5.
-* `GetLookupSha1` - Lookup SHA-1.
-* `GetLookupSha256` - Lookup SHA-256.
-* `GetParents` - Return parents from a given SHA1. A number of element to return and an offset must be given. If not set it will be the 100 first elements. A cursor must be given to paginate over. The starting cursor is 0.
-* `GetSessionCreate` - Create a session key to keep search context. The session is attached to a name. After the session is created, the header `hashlookup_session` can be set to the session name.
-* `GetSessionMatches` - Return set of matching and non-matching hashes from a session.
-* `GetStattop` - Return the top 100 of most queried values.
-* `PostBulkmd5` - Bulk search of MD5 hashes in a JSON array with the key 'hashes'.
-* `PostBulksha1` - Bulk search of SHA1 hashes in a JSON array with the 'hashes'.
+* [GetChildren](docs/default/README.md#getchildren) - Return children from a given SHA1.  A number of element to return and an offset must be given. If not set it will be the 100 first elements. A cursor must be given to paginate over. The starting cursor is 0.
+* [GetInfo](docs/default/README.md#getinfo) - Info about the hashlookup database
+* [GetLookupMd5](docs/default/README.md#getlookupmd5) - Lookup MD5.
+* [GetLookupSha1](docs/default/README.md#getlookupsha1) - Lookup SHA-1.
+* [GetLookupSha256](docs/default/README.md#getlookupsha256) - Lookup SHA-256.
+* [GetParents](docs/default/README.md#getparents) - Return parents from a given SHA1. A number of element to return and an offset must be given. If not set it will be the 100 first elements. A cursor must be given to paginate over. The starting cursor is 0.
+* [GetSessionCreate](docs/default/README.md#getsessioncreate) - Create a session key to keep search context. The session is attached to a name. After the session is created, the header `hashlookup_session` can be set to the session name.
+* [GetSessionMatches](docs/default/README.md#getsessionmatches) - Return set of matching and non-matching hashes from a session.
+* [GetStattop](docs/default/README.md#getstattop) - Return the top 100 of most queried values.
+* [PostBulkmd5](docs/default/README.md#postbulkmd5) - Bulk search of MD5 hashes in a JSON array with the key 'hashes'.
+* [PostBulksha1](docs/default/README.md#postbulksha1) - Bulk search of SHA1 hashes in a JSON array with the 'hashes'.
 <!-- End SDK Available Operations -->
 
 ### Maturity

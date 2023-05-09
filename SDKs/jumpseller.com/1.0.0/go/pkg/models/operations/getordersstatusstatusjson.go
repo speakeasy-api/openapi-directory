@@ -19,12 +19,16 @@ const (
 	GetOrdersStatusStatusJSONStatusEnumPaid           GetOrdersStatusStatusJSONStatusEnum = "Paid"
 )
 
+func (e GetOrdersStatusStatusJSONStatusEnum) ToPointer() *GetOrdersStatusStatusJSONStatusEnum {
+	return &e
+}
+
 func (e *GetOrdersStatusStatusJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Abandoned":
 		fallthrough
 	case "Canceled":
@@ -32,10 +36,10 @@ func (e *GetOrdersStatusStatusJSONStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Pending Payment":
 		fallthrough
 	case "Paid":
-		*e = GetOrdersStatusStatusJSONStatusEnum(s)
+		*e = GetOrdersStatusStatusJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOrdersStatusStatusJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOrdersStatusStatusJSONStatusEnum: %v", v)
 	}
 }
 

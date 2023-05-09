@@ -16,21 +16,25 @@ const (
 	IndexItemRequestModeEnumAsynchronous IndexItemRequestModeEnum = "ASYNCHRONOUS"
 )
 
+func (e IndexItemRequestModeEnum) ToPointer() *IndexItemRequestModeEnum {
+	return &e
+}
+
 func (e *IndexItemRequestModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "SYNCHRONOUS":
 		fallthrough
 	case "ASYNCHRONOUS":
-		*e = IndexItemRequestModeEnum(s)
+		*e = IndexItemRequestModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IndexItemRequestModeEnum: %s", s)
+		return fmt.Errorf("invalid value for IndexItemRequestModeEnum: %v", v)
 	}
 }
 

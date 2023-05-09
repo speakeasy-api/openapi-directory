@@ -17,12 +17,16 @@ const (
 	SourceSplitShardDerivationModeEnumSourceDerivationModeSiblingOfCurrent SourceSplitShardDerivationModeEnum = "SOURCE_DERIVATION_MODE_SIBLING_OF_CURRENT"
 )
 
+func (e SourceSplitShardDerivationModeEnum) ToPointer() *SourceSplitShardDerivationModeEnum {
+	return &e
+}
+
 func (e *SourceSplitShardDerivationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOURCE_DERIVATION_MODE_UNKNOWN":
 		fallthrough
 	case "SOURCE_DERIVATION_MODE_INDEPENDENT":
@@ -30,10 +34,10 @@ func (e *SourceSplitShardDerivationModeEnum) UnmarshalJSON(data []byte) error {
 	case "SOURCE_DERIVATION_MODE_CHILD_OF_CURRENT":
 		fallthrough
 	case "SOURCE_DERIVATION_MODE_SIBLING_OF_CURRENT":
-		*e = SourceSplitShardDerivationModeEnum(s)
+		*e = SourceSplitShardDerivationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceSplitShardDerivationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceSplitShardDerivationModeEnum: %v", v)
 	}
 }
 

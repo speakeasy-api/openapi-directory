@@ -34,12 +34,16 @@ const (
 	VaultMattersListStateEnumDeleted          VaultMattersListStateEnum = "DELETED"
 )
 
+func (e VaultMattersListStateEnum) ToPointer() *VaultMattersListStateEnum {
+	return &e
+}
+
 func (e *VaultMattersListStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "OPEN":
@@ -47,10 +51,10 @@ func (e *VaultMattersListStateEnum) UnmarshalJSON(data []byte) error {
 	case "CLOSED":
 		fallthrough
 	case "DELETED":
-		*e = VaultMattersListStateEnum(s)
+		*e = VaultMattersListStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VaultMattersListStateEnum: %s", s)
+		return fmt.Errorf("invalid value for VaultMattersListStateEnum: %v", v)
 	}
 }
 
@@ -63,21 +67,25 @@ const (
 	VaultMattersListViewEnumFull            VaultMattersListViewEnum = "FULL"
 )
 
+func (e VaultMattersListViewEnum) ToPointer() *VaultMattersListViewEnum {
+	return &e
+}
+
 func (e *VaultMattersListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = VaultMattersListViewEnum(s)
+		*e = VaultMattersListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VaultMattersListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for VaultMattersListViewEnum: %v", v)
 	}
 }
 

@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -36,9 +37,14 @@ pkg/models/shared/submitresponse.go
 pkg/models/shared/submitrequest.go
 pkg/models/shared/payoutresponse.go
 pkg/models/shared/fraudresult.go
+pkg/models/shared/fraudcheckresultwrapper.go
 pkg/models/shared/fraudcheckresult.go
 pkg/models/shared/payoutrequest.go
 pkg/models/shared/fundsource.go
 pkg/models/shared/modifyresponse.go
 pkg/models/shared/modifyrequest.go
+docs/sdk/README.md
+docs/initialization/README.md
+docs/instantpayouts/README.md
+docs/reviewing/README.md
 USAGE.md

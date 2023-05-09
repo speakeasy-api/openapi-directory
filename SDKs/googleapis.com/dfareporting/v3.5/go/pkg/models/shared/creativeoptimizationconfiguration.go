@@ -18,12 +18,16 @@ const (
 	CreativeOptimizationConfigurationOptimizationModelEnumVideoCompletion        CreativeOptimizationConfigurationOptimizationModelEnum = "VIDEO_COMPLETION"
 )
 
+func (e CreativeOptimizationConfigurationOptimizationModelEnum) ToPointer() *CreativeOptimizationConfigurationOptimizationModelEnum {
+	return &e
+}
+
 func (e *CreativeOptimizationConfigurationOptimizationModelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLICK":
 		fallthrough
 	case "POST_CLICK":
@@ -33,10 +37,10 @@ func (e *CreativeOptimizationConfigurationOptimizationModelEnum) UnmarshalJSON(d
 	case "POST_CLICK_AND_IMPRESSION":
 		fallthrough
 	case "VIDEO_COMPLETION":
-		*e = CreativeOptimizationConfigurationOptimizationModelEnum(s)
+		*e = CreativeOptimizationConfigurationOptimizationModelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeOptimizationConfigurationOptimizationModelEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeOptimizationConfigurationOptimizationModelEnum: %v", v)
 	}
 }
 

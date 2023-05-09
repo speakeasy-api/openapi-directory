@@ -17,12 +17,16 @@ const (
 	DynamicTargetingKeyObjectTypeEnumObjectPlacement  DynamicTargetingKeyObjectTypeEnum = "OBJECT_PLACEMENT"
 )
 
+func (e DynamicTargetingKeyObjectTypeEnum) ToPointer() *DynamicTargetingKeyObjectTypeEnum {
+	return &e
+}
+
 func (e *DynamicTargetingKeyObjectTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OBJECT_ADVERTISER":
 		fallthrough
 	case "OBJECT_AD":
@@ -30,10 +34,10 @@ func (e *DynamicTargetingKeyObjectTypeEnum) UnmarshalJSON(data []byte) error {
 	case "OBJECT_CREATIVE":
 		fallthrough
 	case "OBJECT_PLACEMENT":
-		*e = DynamicTargetingKeyObjectTypeEnum(s)
+		*e = DynamicTargetingKeyObjectTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DynamicTargetingKeyObjectTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DynamicTargetingKeyObjectTypeEnum: %v", v)
 	}
 }
 

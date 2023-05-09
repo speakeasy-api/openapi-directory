@@ -16,17 +16,21 @@ const (
 	CreateWorkteamXAmzTargetEnumSageMakerCreateWorkteam CreateWorkteamXAmzTargetEnum = "SageMaker.CreateWorkteam"
 )
 
+func (e CreateWorkteamXAmzTargetEnum) ToPointer() *CreateWorkteamXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateWorkteamXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreateWorkteam":
-		*e = CreateWorkteamXAmzTargetEnum(s)
+		*e = CreateWorkteamXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWorkteamXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWorkteamXAmzTargetEnum: %v", v)
 	}
 }
 

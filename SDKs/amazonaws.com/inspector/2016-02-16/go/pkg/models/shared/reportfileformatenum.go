@@ -14,18 +14,22 @@ const (
 	ReportFileFormatEnumPdf  ReportFileFormatEnum = "PDF"
 )
 
+func (e ReportFileFormatEnum) ToPointer() *ReportFileFormatEnum {
+	return &e
+}
+
 func (e *ReportFileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTML":
 		fallthrough
 	case "PDF":
-		*e = ReportFileFormatEnum(s)
+		*e = ReportFileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportFileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportFileFormatEnum: %v", v)
 	}
 }

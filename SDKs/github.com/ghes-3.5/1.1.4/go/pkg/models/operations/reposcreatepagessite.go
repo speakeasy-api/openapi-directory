@@ -17,19 +17,23 @@ const (
 	ReposCreatePagesSiteRequestBody2BuildTypeEnumWorkflow ReposCreatePagesSiteRequestBody2BuildTypeEnum = "workflow"
 )
 
+func (e ReposCreatePagesSiteRequestBody2BuildTypeEnum) ToPointer() *ReposCreatePagesSiteRequestBody2BuildTypeEnum {
+	return &e
+}
+
 func (e *ReposCreatePagesSiteRequestBody2BuildTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy":
 		fallthrough
 	case "workflow":
-		*e = ReposCreatePagesSiteRequestBody2BuildTypeEnum(s)
+		*e = ReposCreatePagesSiteRequestBody2BuildTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBody2BuildTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBody2BuildTypeEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	ReposCreatePagesSiteRequestBody2SourcePathEnumRootDocs ReposCreatePagesSiteRequestBody2SourcePathEnum = "/docs"
 )
 
+func (e ReposCreatePagesSiteRequestBody2SourcePathEnum) ToPointer() *ReposCreatePagesSiteRequestBody2SourcePathEnum {
+	return &e
+}
+
 func (e *ReposCreatePagesSiteRequestBody2SourcePathEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "/":
 		fallthrough
 	case "/docs":
-		*e = ReposCreatePagesSiteRequestBody2SourcePathEnum(s)
+		*e = ReposCreatePagesSiteRequestBody2SourcePathEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBody2SourcePathEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBody2SourcePathEnum: %v", v)
 	}
 }
 
@@ -81,19 +89,23 @@ const (
 	ReposCreatePagesSiteRequestBody1BuildTypeEnumWorkflow ReposCreatePagesSiteRequestBody1BuildTypeEnum = "workflow"
 )
 
+func (e ReposCreatePagesSiteRequestBody1BuildTypeEnum) ToPointer() *ReposCreatePagesSiteRequestBody1BuildTypeEnum {
+	return &e
+}
+
 func (e *ReposCreatePagesSiteRequestBody1BuildTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy":
 		fallthrough
 	case "workflow":
-		*e = ReposCreatePagesSiteRequestBody1BuildTypeEnum(s)
+		*e = ReposCreatePagesSiteRequestBody1BuildTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBody1BuildTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBody1BuildTypeEnum: %v", v)
 	}
 }
 
@@ -105,19 +117,23 @@ const (
 	ReposCreatePagesSiteRequestBody1SourcePathEnumRootDocs ReposCreatePagesSiteRequestBody1SourcePathEnum = "/docs"
 )
 
+func (e ReposCreatePagesSiteRequestBody1SourcePathEnum) ToPointer() *ReposCreatePagesSiteRequestBody1SourcePathEnum {
+	return &e
+}
+
 func (e *ReposCreatePagesSiteRequestBody1SourcePathEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "/":
 		fallthrough
 	case "/docs":
-		*e = ReposCreatePagesSiteRequestBody1SourcePathEnum(s)
+		*e = ReposCreatePagesSiteRequestBody1SourcePathEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBody1SourcePathEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBody1SourcePathEnum: %v", v)
 	}
 }
 

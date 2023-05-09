@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,25 +17,23 @@ func main() {
         }),
     )
 
-    req := operations.DeleteScalingPolicyRequest{
+    ctx := context.Background()
+    res, err := s.DeleteScalingPolicy(ctx, operations.DeleteScalingPolicyRequest{
         DeleteScalingPolicyRequest: shared.DeleteScalingPolicyRequest{
             PolicyName: "corrupti",
             ResourceID: "provident",
-            ScalableDimension: "cassandra:table:ReadCapacityUnits",
-            ServiceNamespace: "kafka",
+            ScalableDimension: shared.ScalableDimensionEnumCassandraTableReadCapacityUnits,
+            ServiceNamespace: shared.ServiceNamespaceEnumKafka,
         },
-        XAmzAlgorithm: "unde",
-        XAmzContentSha256: "nulla",
-        XAmzCredential: "corrupti",
-        XAmzDate: "illum",
-        XAmzSecurityToken: "vel",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "deserunt",
-        XAmzTarget: "AnyScaleFrontendService.DeleteScalingPolicy",
-    }
-
-    ctx := context.Background()
-    res, err := s.DeleteScalingPolicy(ctx, req)
+        XAmzAlgorithm: sdk.String("unde"),
+        XAmzContentSha256: sdk.String("nulla"),
+        XAmzCredential: sdk.String("corrupti"),
+        XAmzDate: sdk.String("illum"),
+        XAmzSecurityToken: sdk.String("vel"),
+        XAmzSignature: sdk.String("error"),
+        XAmzSignedHeaders: sdk.String("deserunt"),
+        XAmzTarget: operations.DeleteScalingPolicyXAmzTargetEnumAnyScaleFrontendServiceDeleteScalingPolicy,
+    })
     if err != nil {
         log.Fatal(err)
     }

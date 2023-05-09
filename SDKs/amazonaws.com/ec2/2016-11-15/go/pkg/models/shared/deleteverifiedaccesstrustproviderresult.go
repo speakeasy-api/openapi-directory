@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions - The options for device-identity type trust provider.
+// DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions - The options for device-identity trust provider.
 type DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceOptions struct {
 	TenantID *string
 }
@@ -20,23 +20,27 @@ const (
 	DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnumCrowdstrike DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum = "crowdstrike"
 )
 
+func (e DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum) ToPointer() *DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "jamf":
 		fallthrough
 	case "crowdstrike":
-		*e = DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum(s)
+		*e = DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderDeviceTrustProviderTypeEnum: %v", v)
 	}
 }
 
-// DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions - The OpenID Connect details for an <code>oidc</code>-type, user-identity based trust provider.
+// DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions - The options for an OpenID Connect-compatible user-identity trust provider.
 type DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderOidcOptions struct {
 	AuthorizationEndpoint *string
 	ClientID              *string
@@ -61,19 +65,23 @@ const (
 	DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnumDevice DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum = "device"
 )
 
+func (e DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum) ToPointer() *DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "device":
-		*e = DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum(s)
+		*e = DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderTrustProviderTypeEnum: %v", v)
 	}
 }
 
@@ -85,23 +93,27 @@ const (
 	DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnumOidc              DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum = "oidc"
 )
 
+func (e DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum) ToPointer() *DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iam-identity-center":
 		fallthrough
 	case "oidc":
-		*e = DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum(s)
+		*e = DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProviderUserTrustProviderTypeEnum: %v", v)
 	}
 }
 
-// DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider - The ID of the Amazon Web Services Verified Access trust provider.
+// DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider - The ID of the Verified Access trust provider.
 type DeleteVerifiedAccessTrustProviderResultVerifiedAccessTrustProvider struct {
 	CreationTime                  *string
 	Description                   *string

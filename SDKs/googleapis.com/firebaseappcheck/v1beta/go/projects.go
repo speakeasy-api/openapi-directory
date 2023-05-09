@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // FirebaseappcheckProjectsAppsAppAttestConfigBatchGet - Atomically gets the AppAttestConfigs for the specified list of apps.
 func (s *projects) FirebaseappcheckProjectsAppsAppAttestConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/appAttestConfig:batchGet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/appAttestConfig:batchGet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) FirebaseappcheckProjectsAppsAppAttestConfigBatchGet(ctx conte
 // FirebaseappcheckProjectsAppsDebugTokensCreate - Creates a new DebugToken for the specified app. For security reasons, after the creation operation completes, the `token` field cannot be updated or retrieved, but you can revoke the debug token using DeleteDebugToken. Each app can have a maximum of 20 debug tokens.
 func (s *projects) FirebaseappcheckProjectsAppsDebugTokensCreate(ctx context.Context, request operations.FirebaseappcheckProjectsAppsDebugTokensCreateRequest, security operations.FirebaseappcheckProjectsAppsDebugTokensCreateSecurity) (*operations.FirebaseappcheckProjectsAppsDebugTokensCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/debugTokens", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/debugTokens", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaDebugToken", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) FirebaseappcheckProjectsAppsDebugTokensCreate(ctx context.Con
 // FirebaseappcheckProjectsAppsDebugTokensDelete - Deletes the specified DebugToken. A deleted debug token cannot be used to exchange for an App Check token. Use this method when you suspect the secret `token` has been compromised or when you no longer need the debug token.
 func (s *projects) FirebaseappcheckProjectsAppsDebugTokensDelete(ctx context.Context, request operations.FirebaseappcheckProjectsAppsDebugTokensDeleteRequest, security operations.FirebaseappcheckProjectsAppsDebugTokensDeleteSecurity) (*operations.FirebaseappcheckProjectsAppsDebugTokensDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) FirebaseappcheckProjectsAppsDebugTokensDelete(ctx context.Con
 // FirebaseappcheckProjectsAppsDebugTokensList - Lists all DebugTokens for the specified app. For security reasons, the `token` field is never populated in the response.
 func (s *projects) FirebaseappcheckProjectsAppsDebugTokensList(ctx context.Context, request operations.FirebaseappcheckProjectsAppsDebugTokensListRequest, security operations.FirebaseappcheckProjectsAppsDebugTokensListSecurity) (*operations.FirebaseappcheckProjectsAppsDebugTokensListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/debugTokens", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/debugTokens", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *projects) FirebaseappcheckProjectsAppsDebugTokensList(ctx context.Conte
 // FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGet - Atomically gets the DeviceCheckConfigs for the specified list of apps. For security reasons, the `private_key` field is never populated in the response.
 func (s *projects) FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/deviceCheckConfig:batchGet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/deviceCheckConfig:batchGet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +296,10 @@ func (s *projects) FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGet(ctx con
 // FirebaseappcheckProjectsAppsExchangeAppAttestAssertion - Accepts an App Attest assertion and an artifact previously obtained from ExchangeAppAttestAttestation and verifies those with Apple. If valid, returns an AppCheckToken.
 func (s *projects) FirebaseappcheckProjectsAppsExchangeAppAttestAssertion(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionRequest, security operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeAppAttestAssertion", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeAppAttestAssertion", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaExchangeAppAttestAssertionRequest", "json")
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeAppAttestAssertion(ctx co
 // FirebaseappcheckProjectsAppsExchangeAppAttestAttestation - Accepts an App Attest CBOR attestation and verifies it with Apple using your preconfigured team and bundle IDs. If valid, returns an attestation artifact that can later be exchanged for an AppCheckToken using ExchangeAppAttestAssertion. For convenience and performance, this method's response object will also contain an AppCheckToken (if the verification is successful).
 func (s *projects) FirebaseappcheckProjectsAppsExchangeAppAttestAttestation(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationRequest, security operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeAppAttestAttestation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeAppAttestAttestation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationRequest", "json")
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeAppAttestAttestation(ctx 
 // FirebaseappcheckProjectsAppsExchangeCustomToken - Validates a custom token signed using your project's Admin SDK service account credentials. If valid, returns an AppCheckToken.
 func (s *projects) FirebaseappcheckProjectsAppsExchangeCustomToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeCustomTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeCustomTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeCustomTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeCustomToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeCustomToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaExchangeCustomTokenRequest", "json")
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeCustomToken(ctx context.C
 // FirebaseappcheckProjectsAppsExchangeDebugToken - Validates a debug token secret that you have previously created using CreateDebugToken. If valid, returns an AppCheckToken. Note that a restrictive quota is enforced on this method to prevent accidental exposure of the app to abuse.
 func (s *projects) FirebaseappcheckProjectsAppsExchangeDebugToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeDebugTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeDebugTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeDebugTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeDebugToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeDebugToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaExchangeDebugTokenRequest", "json")
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeDebugToken(ctx context.Co
 // FirebaseappcheckProjectsAppsExchangeDeviceCheckToken - Accepts a [`device_token`](https://developer.apple.com/documentation/devicecheck/dcdevice) issued by DeviceCheck, and attempts to validate it with Apple. If valid, returns an AppCheckToken.
 func (s *projects) FirebaseappcheckProjectsAppsExchangeDeviceCheckToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeDeviceCheckToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeDeviceCheckToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaExchangeDeviceCheckTokenRequest", "json")
 	if err != nil {
@@ -556,7 +586,10 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeDeviceCheckToken(ctx cont
 // FirebaseappcheckProjectsAppsExchangePlayIntegrityToken - Validates an [integrity verdict response token from Play Integrity](https://developer.android.com/google/play/integrity/verdict#decrypt-verify). If valid, returns an AppCheckToken.
 func (s *projects) FirebaseappcheckProjectsAppsExchangePlayIntegrityToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangePlayIntegrityToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangePlayIntegrityToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaExchangePlayIntegrityTokenRequest", "json")
 	if err != nil {
@@ -611,7 +644,10 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangePlayIntegrityToken(ctx co
 // FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseToken - Validates a [reCAPTCHA Enterprise response token](https://cloud.google.com/recaptcha-enterprise/docs/create-assessment#retrieve_token). If valid, returns an App Check token AppCheckToken.
 func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeRecaptchaEnterpriseToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeRecaptchaEnterpriseToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaExchangeRecaptchaEnterpriseTokenRequest", "json")
 	if err != nil {
@@ -666,7 +702,10 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseToken(
 // FirebaseappcheckProjectsAppsExchangeRecaptchaToken - Validates a [reCAPTCHA v3 response token](https://developers.google.com/recaptcha/docs/v3). If valid, returns an AppCheckToken.
 func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeRecaptchaTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeRecaptchaTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeRecaptchaTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeRecaptchaToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeRecaptchaToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaExchangeRecaptchaTokenRequest", "json")
 	if err != nil {
@@ -721,7 +760,10 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaToken(ctx contex
 // FirebaseappcheckProjectsAppsExchangeRecaptchaV3Token - Validates a [reCAPTCHA v3 response token](https://developers.google.com/recaptcha/docs/v3). If valid, returns an AppCheckToken.
 func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaV3Token(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeRecaptchaV3Token", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeRecaptchaV3Token", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest", "json")
 	if err != nil {
@@ -776,7 +818,10 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeRecaptchaV3Token(ctx cont
 // FirebaseappcheckProjectsAppsExchangeSafetyNetToken - Validates a [SafetyNet token](https://developer.android.com/training/safetynet/attestation#request-attestation-step). If valid, returns an AppCheckToken.
 func (s *projects) FirebaseappcheckProjectsAppsExchangeSafetyNetToken(ctx context.Context, request operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenRequest, security operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenSecurity) (*operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeSafetyNetToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:exchangeSafetyNetToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest", "json")
 	if err != nil {
@@ -831,7 +876,10 @@ func (s *projects) FirebaseappcheckProjectsAppsExchangeSafetyNetToken(ctx contex
 // FirebaseappcheckProjectsAppsGenerateAppAttestChallenge - Generates a challenge that protects the integrity of an immediately following call to ExchangeAppAttestAttestation or ExchangeAppAttestAssertion. A challenge should not be reused for multiple calls.
 func (s *projects) FirebaseappcheckProjectsAppsGenerateAppAttestChallenge(ctx context.Context, request operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeRequest, security operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeSecurity) (*operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:generateAppAttestChallenge", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:generateAppAttestChallenge", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -886,7 +934,10 @@ func (s *projects) FirebaseappcheckProjectsAppsGenerateAppAttestChallenge(ctx co
 // FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallenge - Generates a challenge that protects the integrity of an immediately following integrity verdict request to the Play Integrity API. The next call to ExchangePlayIntegrityToken using the resulting integrity token will verify the presence and validity of the challenge. A challenge should not be reused for multiple calls.
 func (s *projects) FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallenge(ctx context.Context, request operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeRequest, security operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeSecurity) (*operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:generatePlayIntegrityChallenge", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{app}:generatePlayIntegrityChallenge", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -941,7 +992,10 @@ func (s *projects) FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallenge(ct
 // FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGet - Atomically gets the PlayIntegrityConfigs for the specified list of apps.
 func (s *projects) FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/playIntegrityConfig:batchGet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/playIntegrityConfig:batchGet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -989,7 +1043,10 @@ func (s *projects) FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGet(ctx c
 // FirebaseappcheckProjectsAppsRecaptchaConfigBatchGet - Atomically gets the RecaptchaConfigs for the specified list of apps. For security reasons, the `site_secret` field is never populated in the response.
 func (s *projects) FirebaseappcheckProjectsAppsRecaptchaConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsRecaptchaConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/recaptchaConfig:batchGet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/recaptchaConfig:batchGet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1037,7 +1094,10 @@ func (s *projects) FirebaseappcheckProjectsAppsRecaptchaConfigBatchGet(ctx conte
 // FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGet - Atomically gets the RecaptchaEnterpriseConfigs for the specified list of apps.
 func (s *projects) FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/recaptchaEnterpriseConfig:batchGet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/recaptchaEnterpriseConfig:batchGet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1085,7 +1145,10 @@ func (s *projects) FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGet
 // FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGet - Atomically gets the RecaptchaV3Configs for the specified list of apps. For security reasons, the `site_secret` field is never populated in the response.
 func (s *projects) FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/recaptchaV3Config:batchGet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/recaptchaV3Config:batchGet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1133,7 +1196,10 @@ func (s *projects) FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGet(ctx con
 // FirebaseappcheckProjectsAppsSafetyNetConfigBatchGet - Atomically gets the SafetyNetConfigs for the specified list of apps.
 func (s *projects) FirebaseappcheckProjectsAppsSafetyNetConfigBatchGet(ctx context.Context, request operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetRequest, security operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetSecurity) (*operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/safetyNetConfig:batchGet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps/-/safetyNetConfig:batchGet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1181,7 +1247,10 @@ func (s *projects) FirebaseappcheckProjectsAppsSafetyNetConfigBatchGet(ctx conte
 // FirebaseappcheckProjectsServicesBatchUpdate - Atomically updates the specified Service configurations.
 func (s *projects) FirebaseappcheckProjectsServicesBatchUpdate(ctx context.Context, request operations.FirebaseappcheckProjectsServicesBatchUpdateRequest, security operations.FirebaseappcheckProjectsServicesBatchUpdateSecurity) (*operations.FirebaseappcheckProjectsServicesBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/services:batchUpdate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/services:batchUpdate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaBatchUpdateServicesRequest", "json")
 	if err != nil {
@@ -1236,7 +1305,10 @@ func (s *projects) FirebaseappcheckProjectsServicesBatchUpdate(ctx context.Conte
 // FirebaseappcheckProjectsServicesGet - Gets the Service configuration for the specified service name.
 func (s *projects) FirebaseappcheckProjectsServicesGet(ctx context.Context, request operations.FirebaseappcheckProjectsServicesGetRequest, security operations.FirebaseappcheckProjectsServicesGetSecurity) (*operations.FirebaseappcheckProjectsServicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1284,7 +1356,10 @@ func (s *projects) FirebaseappcheckProjectsServicesGet(ctx context.Context, requ
 // FirebaseappcheckProjectsServicesList - Lists all Service configurations for the specified project. Only Services which were explicitly configured using UpdateService or BatchUpdateServices will be returned.
 func (s *projects) FirebaseappcheckProjectsServicesList(ctx context.Context, request operations.FirebaseappcheckProjectsServicesListRequest, security operations.FirebaseappcheckProjectsServicesListSecurity) (*operations.FirebaseappcheckProjectsServicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/services", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/services", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1332,7 +1407,10 @@ func (s *projects) FirebaseappcheckProjectsServicesList(ctx context.Context, req
 // FirebaseappcheckProjectsServicesPatch - Updates the specified Service configuration.
 func (s *projects) FirebaseappcheckProjectsServicesPatch(ctx context.Context, request operations.FirebaseappcheckProjectsServicesPatchRequest, security operations.FirebaseappcheckProjectsServicesPatchSecurity) (*operations.FirebaseappcheckProjectsServicesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaService", "json")
 	if err != nil {
@@ -1378,6 +1456,64 @@ func (s *projects) FirebaseappcheckProjectsServicesPatch(ctx context.Context, re
 			}
 
 			res.GoogleFirebaseAppcheckV1betaService = out
+		}
+	}
+
+	return res, nil
+}
+
+// FirebaseappcheckProjectsVerifyAppCheckToken - Verifies the given App Check token and returns token usage signals that callers may act upon. This method currently only supports App Check tokens exchanged from the following attestation providers: * Play Integrity API * App Attest * DeviceCheck (`DCDevice` tokens) * reCAPTCHA Enterprise * reCAPTCHA v3 * Custom providers App Check tokens exchanged from debug secrets are also supported. Calling this method on an otherwise valid App Check token with an unsupported provider will cause an HTTP 400 error to be returned. Returns whether this token was already consumed before this call. If this is the first time this method has seen the given App Check token, the field `already_consumed` will contain the value `false`. The given token will then be marked as `already_consumed` for all future invocations of this method for that token. Note that if the given App Check token is invalid, an HTTP 403 error is returned instead of a response object, regardless whether the token was already consumed. Currently, when evaluating whether an App Check token was already consumed, only calls to this exact method are counted. Use of the App Check token elsewhere will not mark the token as being already consumed.
+func (s *projects) FirebaseappcheckProjectsVerifyAppCheckToken(ctx context.Context, request operations.FirebaseappcheckProjectsVerifyAppCheckTokenRequest, security operations.FirebaseappcheckProjectsVerifyAppCheckTokenSecurity) (*operations.FirebaseappcheckProjectsVerifyAppCheckTokenResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{project}:verifyAppCheckToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenRequest", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.FirebaseappcheckProjectsVerifyAppCheckTokenResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse = out
 		}
 	}
 

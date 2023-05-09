@@ -14,19 +14,23 @@ const (
 	PodcastFiltersPodcastTypeEnumShows    PodcastFiltersPodcastTypeEnum = "shows"
 )
 
+func (e PodcastFiltersPodcastTypeEnum) ToPointer() *PodcastFiltersPodcastTypeEnum {
+	return &e
+}
+
 func (e *PodcastFiltersPodcastTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "podcasts":
 		fallthrough
 	case "shows":
-		*e = PodcastFiltersPodcastTypeEnum(s)
+		*e = PodcastFiltersPodcastTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PodcastFiltersPodcastTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PodcastFiltersPodcastTypeEnum: %v", v)
 	}
 }
 

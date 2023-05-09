@@ -14,18 +14,22 @@ const (
 	RepositoryAccessModeEnumVpc      RepositoryAccessModeEnum = "Vpc"
 )
 
+func (e RepositoryAccessModeEnum) ToPointer() *RepositoryAccessModeEnum {
+	return &e
+}
+
 func (e *RepositoryAccessModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Platform":
 		fallthrough
 	case "Vpc":
-		*e = RepositoryAccessModeEnum(s)
+		*e = RepositoryAccessModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryAccessModeEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryAccessModeEnum: %v", v)
 	}
 }

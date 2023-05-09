@@ -16,17 +16,21 @@ const (
 	StartStreamEncryptionXAmzTargetEnumKinesis20131202StartStreamEncryption StartStreamEncryptionXAmzTargetEnum = "Kinesis_20131202.StartStreamEncryption"
 )
 
+func (e StartStreamEncryptionXAmzTargetEnum) ToPointer() *StartStreamEncryptionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartStreamEncryptionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kinesis_20131202.StartStreamEncryption":
-		*e = StartStreamEncryptionXAmzTargetEnum(s)
+		*e = StartStreamEncryptionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartStreamEncryptionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartStreamEncryptionXAmzTargetEnum: %v", v)
 	}
 }
 

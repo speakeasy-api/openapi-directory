@@ -16,17 +16,21 @@ const (
 	StopAppReplicationXAmzTargetEnumAwsServerMigrationServiceV20161024StopAppReplication StopAppReplicationXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.StopAppReplication"
 )
 
+func (e StopAppReplicationXAmzTargetEnum) ToPointer() *StopAppReplicationXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopAppReplicationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.StopAppReplication":
-		*e = StopAppReplicationXAmzTargetEnum(s)
+		*e = StopAppReplicationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopAppReplicationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopAppReplicationXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	ConfigManagementBinauthzStateWebhookEnumError                      ConfigManagementBinauthzStateWebhookEnum = "ERROR"
 )
 
+func (e ConfigManagementBinauthzStateWebhookEnum) ToPointer() *ConfigManagementBinauthzStateWebhookEnum {
+	return &e
+}
+
 func (e *ConfigManagementBinauthzStateWebhookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -30,10 +34,10 @@ func (e *ConfigManagementBinauthzStateWebhookEnum) UnmarshalJSON(data []byte) er
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementBinauthzStateWebhookEnum(s)
+		*e = ConfigManagementBinauthzStateWebhookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementBinauthzStateWebhookEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementBinauthzStateWebhookEnum: %v", v)
 	}
 }
 

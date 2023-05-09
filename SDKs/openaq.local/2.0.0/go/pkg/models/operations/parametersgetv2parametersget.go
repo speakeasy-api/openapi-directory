@@ -17,19 +17,23 @@ const (
 	ParametersGetV2ParametersGetSortSortEnumDesc ParametersGetV2ParametersGetSortSortEnum = "desc"
 )
 
+func (e ParametersGetV2ParametersGetSortSortEnum) ToPointer() *ParametersGetV2ParametersGetSortSortEnum {
+	return &e
+}
+
 func (e *ParametersGetV2ParametersGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = ParametersGetV2ParametersGetSortSortEnum(s)
+		*e = ParametersGetV2ParametersGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParametersGetV2ParametersGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ParametersGetV2ParametersGetSortSortEnum: %v", v)
 	}
 }
 

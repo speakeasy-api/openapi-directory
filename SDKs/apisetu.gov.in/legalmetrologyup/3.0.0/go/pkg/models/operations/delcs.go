@@ -28,17 +28,21 @@ const (
 	DelcsRequestBodyFormatEnumPdf DelcsRequestBodyFormatEnum = "pdf"
 )
 
+func (e DelcsRequestBodyFormatEnum) ToPointer() *DelcsRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *DelcsRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = DelcsRequestBodyFormatEnum(s)
+		*e = DelcsRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DelcsRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for DelcsRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -58,17 +62,21 @@ const (
 	Delcs504ApplicationJSONErrorEnumGatewayTimeout Delcs504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Delcs504ApplicationJSONErrorEnum) ToPointer() *Delcs504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Delcs504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Delcs504ApplicationJSONErrorEnum(s)
+		*e = Delcs504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -78,17 +86,21 @@ const (
 	Delcs504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Delcs504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Delcs504ApplicationJSONErrorDescriptionEnum) ToPointer() *Delcs504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Delcs504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Delcs504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Delcs504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -104,17 +116,21 @@ const (
 	Delcs503ApplicationJSONErrorEnumServiceUnavailable Delcs503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Delcs503ApplicationJSONErrorEnum) ToPointer() *Delcs503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Delcs503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Delcs503ApplicationJSONErrorEnum(s)
+		*e = Delcs503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -124,17 +140,21 @@ const (
 	Delcs503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Delcs503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Delcs503ApplicationJSONErrorDescriptionEnum) ToPointer() *Delcs503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Delcs503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Delcs503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Delcs503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -150,17 +170,21 @@ const (
 	Delcs502ApplicationJSONErrorEnumBadGatewy Delcs502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Delcs502ApplicationJSONErrorEnum) ToPointer() *Delcs502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Delcs502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Delcs502ApplicationJSONErrorEnum(s)
+		*e = Delcs502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -170,17 +194,21 @@ const (
 	Delcs502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Delcs502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Delcs502ApplicationJSONErrorDescriptionEnum) ToPointer() *Delcs502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Delcs502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Delcs502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Delcs502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -196,17 +224,21 @@ const (
 	Delcs500ApplicationJSONErrorEnumInternalServerError Delcs500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Delcs500ApplicationJSONErrorEnum) ToPointer() *Delcs500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Delcs500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Delcs500ApplicationJSONErrorEnum(s)
+		*e = Delcs500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -216,17 +248,21 @@ const (
 	Delcs500ApplicationJSONErrorDescriptionEnumInternalServerError Delcs500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Delcs500ApplicationJSONErrorDescriptionEnum) ToPointer() *Delcs500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Delcs500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Delcs500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Delcs500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -243,19 +279,23 @@ const (
 	Delcs404ApplicationJSONErrorEnumURLNotFound    Delcs404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Delcs404ApplicationJSONErrorEnum) ToPointer() *Delcs404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Delcs404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Delcs404ApplicationJSONErrorEnum(s)
+		*e = Delcs404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -266,19 +306,23 @@ const (
 	Delcs404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Delcs404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Delcs404ApplicationJSONErrorDescriptionEnum) ToPointer() *Delcs404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Delcs404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Delcs404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Delcs404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -295,19 +339,23 @@ const (
 	Delcs401ApplicationJSONErrorEnumInvalidAuthorization  Delcs401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Delcs401ApplicationJSONErrorEnum) ToPointer() *Delcs401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Delcs401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Delcs401ApplicationJSONErrorEnum(s)
+		*e = Delcs401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -318,19 +366,23 @@ const (
 	Delcs401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Delcs401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Delcs401ApplicationJSONErrorDescriptionEnum) ToPointer() *Delcs401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Delcs401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Delcs401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Delcs401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -350,12 +402,16 @@ const (
 	Delcs400ApplicationJSONErrorEnumInvalidConsentid Delcs400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Delcs400ApplicationJSONErrorEnum) ToPointer() *Delcs400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Delcs400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -365,10 +421,10 @@ func (e *Delcs400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Delcs400ApplicationJSONErrorEnum(s)
+		*e = Delcs400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -382,12 +438,16 @@ const (
 	Delcs400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Delcs400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Delcs400ApplicationJSONErrorDescriptionEnum) ToPointer() *Delcs400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Delcs400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -397,10 +457,10 @@ func (e *Delcs400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Delcs400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Delcs400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Delcs400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Delcs400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

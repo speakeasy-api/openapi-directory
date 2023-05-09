@@ -17,19 +17,23 @@ const (
 	GetCallsCountDirectionEnumOutbound GetCallsCountDirectionEnum = "OUTBOUND"
 )
 
+func (e GetCallsCountDirectionEnum) ToPointer() *GetCallsCountDirectionEnum {
+	return &e
+}
+
 func (e *GetCallsCountDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INBOUND":
 		fallthrough
 	case "OUTBOUND":
-		*e = GetCallsCountDirectionEnum(s)
+		*e = GetCallsCountDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCallsCountDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCallsCountDirectionEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	GetCallsCountStatesEnumRemoteHeld   GetCallsCountStatesEnum = "REMOTE_HELD"
 )
 
+func (e GetCallsCountStatesEnum) ToPointer() *GetCallsCountStatesEnum {
+	return &e
+}
+
 func (e *GetCallsCountStatesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIALIZING":
 		fallthrough
 	case "RINGING":
@@ -59,10 +67,10 @@ func (e *GetCallsCountStatesEnum) UnmarshalJSON(data []byte) error {
 	case "HELD":
 		fallthrough
 	case "REMOTE_HELD":
-		*e = GetCallsCountStatesEnum(s)
+		*e = GetCallsCountStatesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCallsCountStatesEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCallsCountStatesEnum: %v", v)
 	}
 }
 

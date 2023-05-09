@@ -15,19 +15,23 @@ const (
 	InstanceMessageCodeEnumZoneDistributionUnbalanced InstanceMessageCodeEnum = "ZONE_DISTRIBUTION_UNBALANCED"
 )
 
+func (e InstanceMessageCodeEnum) ToPointer() *InstanceMessageCodeEnum {
+	return &e
+}
+
 func (e *InstanceMessageCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODE_UNSPECIFIED":
 		fallthrough
 	case "ZONE_DISTRIBUTION_UNBALANCED":
-		*e = InstanceMessageCodeEnum(s)
+		*e = InstanceMessageCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceMessageCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceMessageCodeEnum: %v", v)
 	}
 }
 

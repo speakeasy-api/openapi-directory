@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.AddApplicationCloudWatchLoggingOptionRequest{
+    ctx := context.Background()
+    res, err := s.AddApplicationCloudWatchLoggingOption(ctx, operations.AddApplicationCloudWatchLoggingOptionRequest{
         AddApplicationCloudWatchLoggingOptionRequest: shared.AddApplicationCloudWatchLoggingOptionRequest{
             ApplicationName: "corrupti",
             CloudWatchLoggingOption: shared.CloudWatchLoggingOption{
@@ -26,18 +27,15 @@ func main() {
             },
             CurrentApplicationVersionID: 844266,
         },
-        XAmzAlgorithm: "unde",
-        XAmzContentSha256: "nulla",
-        XAmzCredential: "corrupti",
-        XAmzDate: "illum",
-        XAmzSecurityToken: "vel",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "deserunt",
-        XAmzTarget: "KinesisAnalytics_20150814.AddApplicationCloudWatchLoggingOption",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddApplicationCloudWatchLoggingOption(ctx, req)
+        XAmzAlgorithm: sdk.String("unde"),
+        XAmzContentSha256: sdk.String("nulla"),
+        XAmzCredential: sdk.String("corrupti"),
+        XAmzDate: sdk.String("illum"),
+        XAmzSecurityToken: sdk.String("vel"),
+        XAmzSignature: sdk.String("error"),
+        XAmzSignedHeaders: sdk.String("deserunt"),
+        XAmzTarget: operations.AddApplicationCloudWatchLoggingOptionXAmzTargetEnumKinesisAnalytics20150814AddApplicationCloudWatchLoggingOption,
+    })
     if err != nil {
         log.Fatal(err)
     }

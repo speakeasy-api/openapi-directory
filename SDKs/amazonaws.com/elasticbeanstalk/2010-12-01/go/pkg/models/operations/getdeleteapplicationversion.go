@@ -15,17 +15,21 @@ const (
 	GETDeleteApplicationVersionActionEnumDeleteApplicationVersion GETDeleteApplicationVersionActionEnum = "DeleteApplicationVersion"
 )
 
+func (e GETDeleteApplicationVersionActionEnum) ToPointer() *GETDeleteApplicationVersionActionEnum {
+	return &e
+}
+
 func (e *GETDeleteApplicationVersionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteApplicationVersion":
-		*e = GETDeleteApplicationVersionActionEnum(s)
+		*e = GETDeleteApplicationVersionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteApplicationVersionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteApplicationVersionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteApplicationVersionVersionEnumTwoThousandAndTen1201 GETDeleteApplicationVersionVersionEnum = "2010-12-01"
 )
 
+func (e GETDeleteApplicationVersionVersionEnum) ToPointer() *GETDeleteApplicationVersionVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteApplicationVersionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETDeleteApplicationVersionVersionEnum(s)
+		*e = GETDeleteApplicationVersionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteApplicationVersionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteApplicationVersionVersionEnum: %v", v)
 	}
 }
 

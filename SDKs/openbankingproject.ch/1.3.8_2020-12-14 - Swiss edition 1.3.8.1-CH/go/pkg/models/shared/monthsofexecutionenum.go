@@ -24,12 +24,16 @@ const (
 	MonthsOfExecutionEnumTwelve MonthsOfExecutionEnum = "12"
 )
 
+func (e MonthsOfExecutionEnum) ToPointer() *MonthsOfExecutionEnum {
+	return &e
+}
+
 func (e *MonthsOfExecutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "2":
@@ -53,9 +57,9 @@ func (e *MonthsOfExecutionEnum) UnmarshalJSON(data []byte) error {
 	case "11":
 		fallthrough
 	case "12":
-		*e = MonthsOfExecutionEnum(s)
+		*e = MonthsOfExecutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonthsOfExecutionEnum: %s", s)
+		return fmt.Errorf("invalid value for MonthsOfExecutionEnum: %v", v)
 	}
 }

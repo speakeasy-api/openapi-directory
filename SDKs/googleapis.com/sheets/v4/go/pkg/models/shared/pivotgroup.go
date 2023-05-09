@@ -16,21 +16,25 @@ const (
 	PivotGroupSortOrderEnumDescending           PivotGroupSortOrderEnum = "DESCENDING"
 )
 
+func (e PivotGroupSortOrderEnum) ToPointer() *PivotGroupSortOrderEnum {
+	return &e
+}
+
 func (e *PivotGroupSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SORT_ORDER_UNSPECIFIED":
 		fallthrough
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = PivotGroupSortOrderEnum(s)
+		*e = PivotGroupSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PivotGroupSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for PivotGroupSortOrderEnum: %v", v)
 	}
 }
 

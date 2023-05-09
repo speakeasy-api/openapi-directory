@@ -16,17 +16,21 @@ const (
 	GetAccuracyMetricsXAmzTargetEnumAmazonForecastGetAccuracyMetrics GetAccuracyMetricsXAmzTargetEnum = "AmazonForecast.GetAccuracyMetrics"
 )
 
+func (e GetAccuracyMetricsXAmzTargetEnum) ToPointer() *GetAccuracyMetricsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAccuracyMetricsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.GetAccuracyMetrics":
-		*e = GetAccuracyMetricsXAmzTargetEnum(s)
+		*e = GetAccuracyMetricsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAccuracyMetricsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAccuracyMetricsXAmzTargetEnum: %v", v)
 	}
 }
 

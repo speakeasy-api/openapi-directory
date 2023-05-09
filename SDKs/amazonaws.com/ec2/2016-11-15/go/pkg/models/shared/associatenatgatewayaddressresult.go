@@ -19,12 +19,16 @@ const (
 	AssociateNatGatewayAddressResultNatGatewayAddressesStatusEnumFailed         AssociateNatGatewayAddressResultNatGatewayAddressesStatusEnum = "failed"
 )
 
+func (e AssociateNatGatewayAddressResultNatGatewayAddressesStatusEnum) ToPointer() *AssociateNatGatewayAddressResultNatGatewayAddressesStatusEnum {
+	return &e
+}
+
 func (e *AssociateNatGatewayAddressResultNatGatewayAddressesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "assigning":
 		fallthrough
 	case "unassigning":
@@ -36,10 +40,10 @@ func (e *AssociateNatGatewayAddressResultNatGatewayAddressesStatusEnum) Unmarsha
 	case "succeeded":
 		fallthrough
 	case "failed":
-		*e = AssociateNatGatewayAddressResultNatGatewayAddressesStatusEnum(s)
+		*e = AssociateNatGatewayAddressResultNatGatewayAddressesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateNatGatewayAddressResultNatGatewayAddressesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateNatGatewayAddressResultNatGatewayAddressesStatusEnum: %v", v)
 	}
 }
 

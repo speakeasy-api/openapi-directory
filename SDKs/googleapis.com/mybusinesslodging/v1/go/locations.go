@@ -34,7 +34,10 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // MybusinesslodgingLocationsGetLodging - Returns the Lodging of a specific location.
 func (s *locations) MybusinesslodgingLocationsGetLodging(ctx context.Context, request operations.MybusinesslodgingLocationsGetLodgingRequest) (*operations.MybusinesslodgingLocationsGetLodgingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *locations) MybusinesslodgingLocationsGetLodging(ctx context.Context, re
 // MybusinesslodgingLocationsLodgingGetGoogleUpdated - Returns the Google updated Lodging of a specific location.
 func (s *locations) MybusinesslodgingLocationsLodgingGetGoogleUpdated(ctx context.Context, request operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedRequest) (*operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getGoogleUpdated", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getGoogleUpdated", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *locations) MybusinesslodgingLocationsLodgingGetGoogleUpdated(ctx contex
 // MybusinesslodgingLocationsUpdateLodging - Updates the Lodging of a specific location.
 func (s *locations) MybusinesslodgingLocationsUpdateLodging(ctx context.Context, request operations.MybusinesslodgingLocationsUpdateLodgingRequest) (*operations.MybusinesslodgingLocationsUpdateLodgingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LodgingInput", "json")
 	if err != nil {

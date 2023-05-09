@@ -17,12 +17,16 @@ const (
 	StudentSubmissionCourseWorkTypeEnumMultipleChoiceQuestion    StudentSubmissionCourseWorkTypeEnum = "MULTIPLE_CHOICE_QUESTION"
 )
 
+func (e StudentSubmissionCourseWorkTypeEnum) ToPointer() *StudentSubmissionCourseWorkTypeEnum {
+	return &e
+}
+
 func (e *StudentSubmissionCourseWorkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COURSE_WORK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ASSIGNMENT":
@@ -30,10 +34,10 @@ func (e *StudentSubmissionCourseWorkTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SHORT_ANSWER_QUESTION":
 		fallthrough
 	case "MULTIPLE_CHOICE_QUESTION":
-		*e = StudentSubmissionCourseWorkTypeEnum(s)
+		*e = StudentSubmissionCourseWorkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StudentSubmissionCourseWorkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StudentSubmissionCourseWorkTypeEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	StudentSubmissionStateEnumReclaimedByStudent         StudentSubmissionStateEnum = "RECLAIMED_BY_STUDENT"
 )
 
+func (e StudentSubmissionStateEnum) ToPointer() *StudentSubmissionStateEnum {
+	return &e
+}
+
 func (e *StudentSubmissionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBMISSION_STATE_UNSPECIFIED":
 		fallthrough
 	case "NEW":
@@ -66,10 +74,10 @@ func (e *StudentSubmissionStateEnum) UnmarshalJSON(data []byte) error {
 	case "RETURNED":
 		fallthrough
 	case "RECLAIMED_BY_STUDENT":
-		*e = StudentSubmissionStateEnum(s)
+		*e = StudentSubmissionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StudentSubmissionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for StudentSubmissionStateEnum: %v", v)
 	}
 }
 

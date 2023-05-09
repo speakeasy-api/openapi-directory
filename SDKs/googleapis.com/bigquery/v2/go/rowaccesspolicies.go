@@ -34,7 +34,10 @@ func newRowAccessPolicies(defaultClient, securityClient HTTPClient, serverURL, l
 // BigqueryRowAccessPoliciesList - Lists all row access policies on the specified table.
 func (s *rowAccessPolicies) BigqueryRowAccessPoliciesList(ctx context.Context, request operations.BigqueryRowAccessPoliciesListRequest, security operations.BigqueryRowAccessPoliciesListSecurity) (*operations.BigqueryRowAccessPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/rowAccessPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/rowAccessPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

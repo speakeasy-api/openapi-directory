@@ -35,7 +35,10 @@ func newNote(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Retrieves a given note in VTEX DO, filtering by `noteId`.
 func (s *note) GetNote(ctx context.Context, request operations.GetNoteRequest) (*operations.GetNoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notes/{noteId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/notes/{noteId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

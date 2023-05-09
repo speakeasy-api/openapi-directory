@@ -16,17 +16,21 @@ const (
 	ListAssignmentsForHITXAmzTargetEnumMTurkRequesterServiceV20170117ListAssignmentsForHit ListAssignmentsForHITXAmzTargetEnum = "MTurkRequesterServiceV20170117.ListAssignmentsForHIT"
 )
 
+func (e ListAssignmentsForHITXAmzTargetEnum) ToPointer() *ListAssignmentsForHITXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListAssignmentsForHITXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.ListAssignmentsForHIT":
-		*e = ListAssignmentsForHITXAmzTargetEnum(s)
+		*e = ListAssignmentsForHITXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAssignmentsForHITXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAssignmentsForHITXAmzTargetEnum: %v", v)
 	}
 }
 

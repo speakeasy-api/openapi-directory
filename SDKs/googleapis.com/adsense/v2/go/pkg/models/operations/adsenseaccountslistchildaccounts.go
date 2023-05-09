@@ -39,7 +39,7 @@ type AdsenseAccountsListChildAccountsRequest struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The maximum number of accounts to include in the response, used for paging. If unspecified, at most 10000 accounts will be returned. The maximum value is 10000; values above 10000 will be coerced to 10000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-	// A page token, received from a previous `ListAccounts` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListAccounts` must match the call that provided the page token.
+	// A page token, received from a previous `ListChildAccounts` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListChildAccounts` must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Required. The parent account, which owns the child accounts. Format: accounts/{account}
 	Parent string `pathParam:"style=simple,explode=false,name=parent"`

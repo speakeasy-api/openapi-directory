@@ -15,17 +15,21 @@ const (
 	POSTDescribeDBClusterSnapshotAttributesActionEnumDescribeDbClusterSnapshotAttributes POSTDescribeDBClusterSnapshotAttributesActionEnum = "DescribeDBClusterSnapshotAttributes"
 )
 
+func (e POSTDescribeDBClusterSnapshotAttributesActionEnum) ToPointer() *POSTDescribeDBClusterSnapshotAttributesActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeDBClusterSnapshotAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeDBClusterSnapshotAttributes":
-		*e = POSTDescribeDBClusterSnapshotAttributesActionEnum(s)
+		*e = POSTDescribeDBClusterSnapshotAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeDBClusterSnapshotAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeDBClusterSnapshotAttributesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeDBClusterSnapshotAttributesVersionEnumTwoThousandAndFourteen1031 POSTDescribeDBClusterSnapshotAttributesVersionEnum = "2014-10-31"
 )
 
+func (e POSTDescribeDBClusterSnapshotAttributesVersionEnum) ToPointer() *POSTDescribeDBClusterSnapshotAttributesVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeDBClusterSnapshotAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTDescribeDBClusterSnapshotAttributesVersionEnum(s)
+		*e = POSTDescribeDBClusterSnapshotAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeDBClusterSnapshotAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeDBClusterSnapshotAttributesVersionEnum: %v", v)
 	}
 }
 

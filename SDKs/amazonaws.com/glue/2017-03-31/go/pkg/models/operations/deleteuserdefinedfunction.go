@@ -16,17 +16,21 @@ const (
 	DeleteUserDefinedFunctionXAmzTargetEnumAwsGlueDeleteUserDefinedFunction DeleteUserDefinedFunctionXAmzTargetEnum = "AWSGlue.DeleteUserDefinedFunction"
 )
 
+func (e DeleteUserDefinedFunctionXAmzTargetEnum) ToPointer() *DeleteUserDefinedFunctionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteUserDefinedFunctionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.DeleteUserDefinedFunction":
-		*e = DeleteUserDefinedFunctionXAmzTargetEnum(s)
+		*e = DeleteUserDefinedFunctionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteUserDefinedFunctionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteUserDefinedFunctionXAmzTargetEnum: %v", v)
 	}
 }
 

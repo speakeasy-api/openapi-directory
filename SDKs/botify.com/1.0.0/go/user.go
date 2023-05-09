@@ -35,7 +35,10 @@ func newUser(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // List all active projects for the user
 func (s *user) GetUserProjects(ctx context.Context, request operations.GetUserProjectsRequest) (*operations.GetUserProjectsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

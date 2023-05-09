@@ -16,21 +16,25 @@ const (
 	UserTypeEnumBot             UserTypeEnum = "BOT"
 )
 
+func (e UserTypeEnum) ToPointer() *UserTypeEnum {
+	return &e
+}
+
 func (e *UserTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "HUMAN":
 		fallthrough
 	case "BOT":
-		*e = UserTypeEnum(s)
+		*e = UserTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserTypeEnum: %v", v)
 	}
 }
 

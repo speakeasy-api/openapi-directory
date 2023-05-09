@@ -17,12 +17,16 @@ const (
 	ValueDescriptorMetricKindEnumCumulative            ValueDescriptorMetricKindEnum = "CUMULATIVE"
 )
 
+func (e ValueDescriptorMetricKindEnum) ToPointer() *ValueDescriptorMetricKindEnum {
+	return &e
+}
+
 func (e *ValueDescriptorMetricKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_KIND_UNSPECIFIED":
 		fallthrough
 	case "GAUGE":
@@ -30,10 +34,10 @@ func (e *ValueDescriptorMetricKindEnum) UnmarshalJSON(data []byte) error {
 	case "DELTA":
 		fallthrough
 	case "CUMULATIVE":
-		*e = ValueDescriptorMetricKindEnum(s)
+		*e = ValueDescriptorMetricKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValueDescriptorMetricKindEnum: %s", s)
+		return fmt.Errorf("invalid value for ValueDescriptorMetricKindEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	ValueDescriptorValueTypeEnumMoney                ValueDescriptorValueTypeEnum = "MONEY"
 )
 
+func (e ValueDescriptorValueTypeEnum) ToPointer() *ValueDescriptorValueTypeEnum {
+	return &e
+}
+
 func (e *ValueDescriptorValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALUE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BOOL":
@@ -69,10 +77,10 @@ func (e *ValueDescriptorValueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DISTRIBUTION":
 		fallthrough
 	case "MONEY":
-		*e = ValueDescriptorValueTypeEnum(s)
+		*e = ValueDescriptorValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValueDescriptorValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ValueDescriptorValueTypeEnum: %v", v)
 	}
 }
 

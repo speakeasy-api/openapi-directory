@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,22 +17,15 @@ func main() {
         }),
     )
 
-    req := operations.AssociateFirewallRuleGroupRequest{
+    ctx := context.Background()
+    res, err := s.AssociateFirewallRuleGroup(ctx, operations.AssociateFirewallRuleGroupRequest{
         AssociateFirewallRuleGroupRequest: shared.AssociateFirewallRuleGroupRequest{
             CreatorRequestID: "corrupti",
             FirewallRuleGroupID: "provident",
-            MutationProtection: "DISABLED",
-            Name: "quibusdam",
-            Priority: 602763,
+            MutationProtection: shared.MutationProtectionStatusEnumDisabled.ToPointer(),
+            Name: "Stuart Stiedemann",
+            Priority: 423655,
             Tags: []shared.Tag{
-                shared.Tag{
-                    Key: "corrupti",
-                    Value: "illum",
-                },
-                shared.Tag{
-                    Key: "vel",
-                    Value: "error",
-                },
                 shared.Tag{
                     Key: "deserunt",
                     Value: "suscipit",
@@ -41,21 +34,22 @@ func main() {
                     Key: "iure",
                     Value: "magnam",
                 },
+                shared.Tag{
+                    Key: "debitis",
+                    Value: "ipsa",
+                },
             },
-            VpcID: "debitis",
+            VpcID: "delectus",
         },
-        XAmzAlgorithm: "ipsa",
-        XAmzContentSha256: "delectus",
-        XAmzCredential: "tempora",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "molestiae",
-        XAmzSignature: "minus",
-        XAmzSignedHeaders: "placeat",
-        XAmzTarget: "Route53Resolver.AssociateFirewallRuleGroup",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateFirewallRuleGroup(ctx, req)
+        XAmzAlgorithm: sdk.String("tempora"),
+        XAmzContentSha256: sdk.String("suscipit"),
+        XAmzCredential: sdk.String("molestiae"),
+        XAmzDate: sdk.String("minus"),
+        XAmzSecurityToken: sdk.String("placeat"),
+        XAmzSignature: sdk.String("voluptatum"),
+        XAmzSignedHeaders: sdk.String("iusto"),
+        XAmzTarget: operations.AssociateFirewallRuleGroupXAmzTargetEnumRoute53ResolverAssociateFirewallRuleGroup,
+    })
     if err != nil {
         log.Fatal(err)
     }

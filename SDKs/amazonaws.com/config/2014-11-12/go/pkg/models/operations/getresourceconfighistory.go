@@ -16,17 +16,21 @@ const (
 	GetResourceConfigHistoryXAmzTargetEnumStarlingDoveServiceGetResourceConfigHistory GetResourceConfigHistoryXAmzTargetEnum = "StarlingDoveService.GetResourceConfigHistory"
 )
 
+func (e GetResourceConfigHistoryXAmzTargetEnum) ToPointer() *GetResourceConfigHistoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetResourceConfigHistoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.GetResourceConfigHistory":
-		*e = GetResourceConfigHistoryXAmzTargetEnum(s)
+		*e = GetResourceConfigHistoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResourceConfigHistoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResourceConfigHistoryXAmzTargetEnum: %v", v)
 	}
 }
 

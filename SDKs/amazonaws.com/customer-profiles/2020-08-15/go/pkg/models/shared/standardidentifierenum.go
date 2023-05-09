@@ -20,12 +20,16 @@ const (
 	StandardIdentifierEnumOrder      StandardIdentifierEnum = "ORDER"
 )
 
+func (e StandardIdentifierEnum) ToPointer() *StandardIdentifierEnum {
+	return &e
+}
+
 func (e *StandardIdentifierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROFILE":
 		fallthrough
 	case "ASSET":
@@ -41,9 +45,9 @@ func (e *StandardIdentifierEnum) UnmarshalJSON(data []byte) error {
 	case "NEW_ONLY":
 		fallthrough
 	case "ORDER":
-		*e = StandardIdentifierEnum(s)
+		*e = StandardIdentifierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StandardIdentifierEnum: %s", s)
+		return fmt.Errorf("invalid value for StandardIdentifierEnum: %v", v)
 	}
 }

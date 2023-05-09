@@ -34,7 +34,10 @@ func newUserUsageReport(defaultClient, securityClient HTTPClient, serverURL, lan
 // ReportsUserUsageReportGet - Retrieves a report which is a collection of properties and statistics for a set of users with the account. For more information, see the User Usage Report guide. For more information about the user report's parameters, see the Users Usage parameters reference guides.
 func (s *userUsageReport) ReportsUserUsageReportGet(ctx context.Context, request operations.ReportsUserUsageReportGetRequest, security operations.ReportsUserUsageReportGetSecurity) (*operations.ReportsUserUsageReportGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/usage/users/{userKey}/dates/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/usage/users/{userKey}/dates/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

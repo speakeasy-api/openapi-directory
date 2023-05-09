@@ -13,16 +13,20 @@ const (
 	RemediationTargetTypeEnumSsmDocument RemediationTargetTypeEnum = "SSM_DOCUMENT"
 )
 
+func (e RemediationTargetTypeEnum) ToPointer() *RemediationTargetTypeEnum {
+	return &e
+}
+
 func (e *RemediationTargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSM_DOCUMENT":
-		*e = RemediationTargetTypeEnum(s)
+		*e = RemediationTargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemediationTargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RemediationTargetTypeEnum: %v", v)
 	}
 }

@@ -13,16 +13,20 @@ const (
 	ImageFileTypeEnumPng ImageFileTypeEnum = "PNG"
 )
 
+func (e ImageFileTypeEnum) ToPointer() *ImageFileTypeEnum {
+	return &e
+}
+
 func (e *ImageFileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PNG":
-		*e = ImageFileTypeEnum(s)
+		*e = ImageFileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageFileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageFileTypeEnum: %v", v)
 	}
 }

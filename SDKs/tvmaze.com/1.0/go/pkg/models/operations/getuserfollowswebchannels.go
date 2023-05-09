@@ -16,17 +16,21 @@ const (
 	GetUserFollowsWebchannelsEmbedEnumWebchannel GetUserFollowsWebchannelsEmbedEnum = "webchannel"
 )
 
+func (e GetUserFollowsWebchannelsEmbedEnum) ToPointer() *GetUserFollowsWebchannelsEmbedEnum {
+	return &e
+}
+
 func (e *GetUserFollowsWebchannelsEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "webchannel":
-		*e = GetUserFollowsWebchannelsEmbedEnum(s)
+		*e = GetUserFollowsWebchannelsEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUserFollowsWebchannelsEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUserFollowsWebchannelsEmbedEnum: %v", v)
 	}
 }
 

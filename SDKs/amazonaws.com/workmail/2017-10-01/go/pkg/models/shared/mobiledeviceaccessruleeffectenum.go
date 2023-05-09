@@ -14,18 +14,22 @@ const (
 	MobileDeviceAccessRuleEffectEnumDeny  MobileDeviceAccessRuleEffectEnum = "DENY"
 )
 
+func (e MobileDeviceAccessRuleEffectEnum) ToPointer() *MobileDeviceAccessRuleEffectEnum {
+	return &e
+}
+
 func (e *MobileDeviceAccessRuleEffectEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = MobileDeviceAccessRuleEffectEnum(s)
+		*e = MobileDeviceAccessRuleEffectEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MobileDeviceAccessRuleEffectEnum: %s", s)
+		return fmt.Errorf("invalid value for MobileDeviceAccessRuleEffectEnum: %v", v)
 	}
 }

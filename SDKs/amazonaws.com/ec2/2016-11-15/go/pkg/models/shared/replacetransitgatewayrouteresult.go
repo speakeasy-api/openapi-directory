@@ -18,12 +18,16 @@ const (
 	ReplaceTransitGatewayRouteResultRouteStateEnumDeleted   ReplaceTransitGatewayRouteResultRouteStateEnum = "deleted"
 )
 
+func (e ReplaceTransitGatewayRouteResultRouteStateEnum) ToPointer() *ReplaceTransitGatewayRouteResultRouteStateEnum {
+	return &e
+}
+
 func (e *ReplaceTransitGatewayRouteResultRouteStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "active":
@@ -33,10 +37,10 @@ func (e *ReplaceTransitGatewayRouteResultRouteStateEnum) UnmarshalJSON(data []by
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = ReplaceTransitGatewayRouteResultRouteStateEnum(s)
+		*e = ReplaceTransitGatewayRouteResultRouteStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplaceTransitGatewayRouteResultRouteStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplaceTransitGatewayRouteResultRouteStateEnum: %v", v)
 	}
 }
 
@@ -52,12 +56,16 @@ const (
 	ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachmentsResourceTypeEnumTgwPeering           ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachmentsResourceTypeEnum = "tgw-peering"
 )
 
+func (e ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachmentsResourceTypeEnum) ToPointer() *ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachmentsResourceTypeEnum {
+	return &e
+}
+
 func (e *ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachmentsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "vpn":
@@ -69,10 +77,10 @@ func (e *ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachmentsResourceT
 	case "peering":
 		fallthrough
 	case "tgw-peering":
-		*e = ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachmentsResourceTypeEnum(s)
+		*e = ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachmentsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachmentsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplaceTransitGatewayRouteResultRouteTransitGatewayAttachmentsResourceTypeEnum: %v", v)
 	}
 }
 
@@ -91,19 +99,23 @@ const (
 	ReplaceTransitGatewayRouteResultRouteTypeEnumPropagated ReplaceTransitGatewayRouteResultRouteTypeEnum = "propagated"
 )
 
+func (e ReplaceTransitGatewayRouteResultRouteTypeEnum) ToPointer() *ReplaceTransitGatewayRouteResultRouteTypeEnum {
+	return &e
+}
+
 func (e *ReplaceTransitGatewayRouteResultRouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "static":
 		fallthrough
 	case "propagated":
-		*e = ReplaceTransitGatewayRouteResultRouteTypeEnum(s)
+		*e = ReplaceTransitGatewayRouteResultRouteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplaceTransitGatewayRouteResultRouteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplaceTransitGatewayRouteResultRouteTypeEnum: %v", v)
 	}
 }
 

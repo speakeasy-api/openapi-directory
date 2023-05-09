@@ -13,16 +13,20 @@ const (
 	NetworkResourceTypeEnumRadioUnit NetworkResourceTypeEnum = "RADIO_UNIT"
 )
 
+func (e NetworkResourceTypeEnum) ToPointer() *NetworkResourceTypeEnum {
+	return &e
+}
+
 func (e *NetworkResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RADIO_UNIT":
-		*e = NetworkResourceTypeEnum(s)
+		*e = NetworkResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkResourceTypeEnum: %v", v)
 	}
 }

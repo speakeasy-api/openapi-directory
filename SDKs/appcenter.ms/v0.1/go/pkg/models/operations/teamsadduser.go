@@ -39,12 +39,16 @@ const (
 	TeamsAddUserDefaultApplicationJSONErrorCodeEnumTooManyRequests     TeamsAddUserDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e TeamsAddUserDefaultApplicationJSONErrorCodeEnum) ToPointer() *TeamsAddUserDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *TeamsAddUserDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -58,10 +62,10 @@ func (e *TeamsAddUserDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []b
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = TeamsAddUserDefaultApplicationJSONErrorCodeEnum(s)
+		*e = TeamsAddUserDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsAddUserDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsAddUserDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -83,19 +87,23 @@ const (
 	TeamsAddUser201ApplicationJSONRoleEnumCollaborator TeamsAddUser201ApplicationJSONRoleEnum = "collaborator"
 )
 
+func (e TeamsAddUser201ApplicationJSONRoleEnum) ToPointer() *TeamsAddUser201ApplicationJSONRoleEnum {
+	return &e
+}
+
 func (e *TeamsAddUser201ApplicationJSONRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "maintainer":
 		fallthrough
 	case "collaborator":
-		*e = TeamsAddUser201ApplicationJSONRoleEnum(s)
+		*e = TeamsAddUser201ApplicationJSONRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsAddUser201ApplicationJSONRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsAddUser201ApplicationJSONRoleEnum: %v", v)
 	}
 }
 

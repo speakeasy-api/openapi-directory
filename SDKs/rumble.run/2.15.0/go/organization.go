@@ -94,7 +94,10 @@ func (s *organization) ClearBulkAssetTags(ctx context.Context, request shared.Se
 // CreateScan - Create a scan task for a given site
 func (s *organization) CreateScan(ctx context.Context, request operations.CreateScanRequest, security operations.CreateScanSecurity) (*operations.CreateScanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/sites/{site_id}/scan", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/sites/{site_id}/scan", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScanOptions", "json")
 	if err != nil {
@@ -209,7 +212,10 @@ func (s *organization) CreateSite(ctx context.Context, request shared.SiteOption
 // GetAgent - Get details for a single agent
 func (s *organization) GetAgent(ctx context.Context, request operations.GetAgentRequest, security operations.GetAgentSecurity) (*operations.GetAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/agents/{agent_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/agents/{agent_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -254,7 +260,7 @@ func (s *organization) GetAgent(ctx context.Context, request operations.GetAgent
 }
 
 // GetAgents - Get all agents
-func (s *organization) GetAgents(ctx context.Context) (*operations.GetAgentsResponse, error) {
+func (s *organization) GetAgents(ctx context.Context, security operations.GetAgentsSecurity) (*operations.GetAgentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/agents"
 
@@ -263,7 +269,7 @@ func (s *organization) GetAgents(ctx context.Context) (*operations.GetAgentsResp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -301,7 +307,10 @@ func (s *organization) GetAgents(ctx context.Context) (*operations.GetAgentsResp
 // GetAsset - Get asset details
 func (s *organization) GetAsset(ctx context.Context, request operations.GetAssetRequest, security operations.GetAssetSecurity) (*operations.GetAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/assets/{asset_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/assets/{asset_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -395,7 +404,7 @@ func (s *organization) GetAssets(ctx context.Context, request operations.GetAsse
 }
 
 // GetKey - Get API key details
-func (s *organization) GetKey(ctx context.Context) (*operations.GetKeyResponse, error) {
+func (s *organization) GetKey(ctx context.Context, security operations.GetKeySecurity) (*operations.GetKeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/key"
 
@@ -404,7 +413,7 @@ func (s *organization) GetKey(ctx context.Context) (*operations.GetKeyResponse, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -440,7 +449,7 @@ func (s *organization) GetKey(ctx context.Context) (*operations.GetKeyResponse, 
 }
 
 // GetOrganization - Get organization details
-func (s *organization) GetOrganization(ctx context.Context) (*operations.GetOrganizationResponse, error) {
+func (s *organization) GetOrganization(ctx context.Context, security operations.GetOrganizationSecurity) (*operations.GetOrganizationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org"
 
@@ -449,7 +458,7 @@ func (s *organization) GetOrganization(ctx context.Context) (*operations.GetOrga
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -487,7 +496,10 @@ func (s *organization) GetOrganization(ctx context.Context) (*operations.GetOrga
 // GetService - Get service details
 func (s *organization) GetService(ctx context.Context, request operations.GetServiceRequest, security operations.GetServiceSecurity) (*operations.GetServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/services/{service_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/services/{service_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -583,7 +595,10 @@ func (s *organization) GetServices(ctx context.Context, request operations.GetSe
 // GetSite - Get site details
 func (s *organization) GetSite(ctx context.Context, request operations.GetSiteRequest, security operations.GetSiteSecurity) (*operations.GetSiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/sites/{site_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/sites/{site_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -628,7 +643,7 @@ func (s *organization) GetSite(ctx context.Context, request operations.GetSiteRe
 }
 
 // GetSites - Get all sites
-func (s *organization) GetSites(ctx context.Context) (*operations.GetSitesResponse, error) {
+func (s *organization) GetSites(ctx context.Context, security operations.GetSitesSecurity) (*operations.GetSitesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/sites"
 
@@ -637,7 +652,7 @@ func (s *organization) GetSites(ctx context.Context) (*operations.GetSitesRespon
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -675,7 +690,10 @@ func (s *organization) GetSites(ctx context.Context) (*operations.GetSitesRespon
 // GetTask - Get task details
 func (s *organization) GetTask(ctx context.Context, request operations.GetTaskRequest, security operations.GetTaskSecurity) (*operations.GetTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -720,7 +738,10 @@ func (s *organization) GetTask(ctx context.Context, request operations.GetTaskRe
 // GetTaskChangeReport - Returns a temporary task change report data url
 func (s *organization) GetTaskChangeReport(ctx context.Context, request operations.GetTaskChangeReportRequest, security operations.GetTaskChangeReportSecurity) (*operations.GetTaskChangeReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}/changes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}/changes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -767,7 +788,10 @@ func (s *organization) GetTaskChangeReport(ctx context.Context, request operatio
 // GetTaskLog - Returns a temporary task log data url
 func (s *organization) GetTaskLog(ctx context.Context, request operations.GetTaskLogRequest, security operations.GetTaskLogSecurity) (*operations.GetTaskLogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}/log", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}/log", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -814,7 +838,10 @@ func (s *organization) GetTaskLog(ctx context.Context, request operations.GetTas
 // GetTaskScanData - Returns a temporary task scan data url
 func (s *organization) GetTaskScanData(ctx context.Context, request operations.GetTaskScanDataRequest, security operations.GetTaskScanDataSecurity) (*operations.GetTaskScanDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}/data", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}/data", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -910,7 +937,10 @@ func (s *organization) GetTasks(ctx context.Context, request operations.GetTasks
 // GetWirelessLAN - Get wireless LAN details
 func (s *organization) GetWirelessLAN(ctx context.Context, request operations.GetWirelessLANRequest, security operations.GetWirelessLANSecurity) (*operations.GetWirelessLANResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/wireless/{wireless_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/wireless/{wireless_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1004,7 +1034,10 @@ func (s *organization) GetWirelessLANs(ctx context.Context, request operations.G
 // HideTask - Signal that a completed task should be hidden
 func (s *organization) HideTask(ctx context.Context, request operations.HideTaskRequest, security operations.HideTaskSecurity) (*operations.HideTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}/hide", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}/hide", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1051,7 +1084,10 @@ func (s *organization) HideTask(ctx context.Context, request operations.HideTask
 // ImportNessusScanData - Import a Nessus scan data file into a site
 func (s *organization) ImportNessusScanData(ctx context.Context, request operations.ImportNessusScanDataRequest, security operations.ImportNessusScanDataSecurity) (*operations.ImportNessusScanDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/sites/{site_id}/import/nessus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/sites/{site_id}/import/nessus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1109,7 +1145,10 @@ func (s *organization) ImportNessusScanData(ctx context.Context, request operati
 // ImportScanData - Import a scan data file into a site
 func (s *organization) ImportScanData(ctx context.Context, request operations.ImportScanDataRequest, security operations.ImportScanDataSecurity) (*operations.ImportScanDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/sites/{site_id}/import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/sites/{site_id}/import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1167,7 +1206,10 @@ func (s *organization) ImportScanData(ctx context.Context, request operations.Im
 // RemoveAgent - Remove and uninstall an agent
 func (s *organization) RemoveAgent(ctx context.Context, request operations.RemoveAgentRequest, security operations.RemoveAgentSecurity) (*operations.RemoveAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/agents/{agent_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/agents/{agent_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1206,7 +1248,10 @@ func (s *organization) RemoveAgent(ctx context.Context, request operations.Remov
 // RemoveAsset - Remove an asset
 func (s *organization) RemoveAsset(ctx context.Context, request operations.RemoveAssetRequest, security operations.RemoveAssetSecurity) (*operations.RemoveAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/assets/{asset_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/assets/{asset_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1243,7 +1288,7 @@ func (s *organization) RemoveAsset(ctx context.Context, request operations.Remov
 }
 
 // RemoveKey - Remove the current API key
-func (s *organization) RemoveKey(ctx context.Context) (*operations.RemoveKeyResponse, error) {
+func (s *organization) RemoveKey(ctx context.Context, security operations.RemoveKeySecurity) (*operations.RemoveKeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/key"
 
@@ -1252,7 +1297,7 @@ func (s *organization) RemoveKey(ctx context.Context) (*operations.RemoveKeyResp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1282,7 +1327,10 @@ func (s *organization) RemoveKey(ctx context.Context) (*operations.RemoveKeyResp
 // RemoveService - Remove a service
 func (s *organization) RemoveService(ctx context.Context, request operations.RemoveServiceRequest, security operations.RemoveServiceSecurity) (*operations.RemoveServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/services/{service_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/services/{service_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1321,7 +1369,10 @@ func (s *organization) RemoveService(ctx context.Context, request operations.Rem
 // RemoveSite - Remove a site and associated assets
 func (s *organization) RemoveSite(ctx context.Context, request operations.RemoveSiteRequest, security operations.RemoveSiteSecurity) (*operations.RemoveSiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/sites/{site_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/sites/{site_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1360,7 +1411,10 @@ func (s *organization) RemoveSite(ctx context.Context, request operations.Remove
 // RemoveWirelessLAN - Remove a wireless LAN
 func (s *organization) RemoveWirelessLAN(ctx context.Context, request operations.RemoveWirelessLANRequest, security operations.RemoveWirelessLANSecurity) (*operations.RemoveWirelessLANResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/wireless/{wireless_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/wireless/{wireless_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1397,7 +1451,7 @@ func (s *organization) RemoveWirelessLAN(ctx context.Context, request operations
 }
 
 // RotateKey - Rotate the API key secret and return the updated key
-func (s *organization) RotateKey(ctx context.Context) (*operations.RotateKeyResponse, error) {
+func (s *organization) RotateKey(ctx context.Context, security operations.RotateKeySecurity) (*operations.RotateKeyResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/key/rotate"
 
@@ -1406,7 +1460,7 @@ func (s *organization) RotateKey(ctx context.Context) (*operations.RotateKeyResp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1444,7 +1498,10 @@ func (s *organization) RotateKey(ctx context.Context) (*operations.RotateKeyResp
 // StopTask - Signal that a task should be stopped or canceledThis will also remove recurring and scheduled tasks
 func (s *organization) StopTask(ctx context.Context, request operations.StopTaskRequest, security operations.StopTaskSecurity) (*operations.StopTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1491,7 +1548,10 @@ func (s *organization) StopTask(ctx context.Context, request operations.StopTask
 // UpdateAgentSite - Update the site associated with agent
 func (s *organization) UpdateAgentSite(ctx context.Context, request operations.UpdateAgentSiteRequest, security operations.UpdateAgentSiteSecurity) (*operations.UpdateAgentSiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/agents/{agent_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/agents/{agent_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AgentSiteID", "json")
 	if err != nil {
@@ -1548,7 +1608,10 @@ func (s *organization) UpdateAgentSite(ctx context.Context, request operations.U
 // UpdateAssetComments - Update asset comments
 func (s *organization) UpdateAssetComments(ctx context.Context, request operations.UpdateAssetCommentsRequest, security operations.UpdateAssetCommentsSecurity) (*operations.UpdateAssetCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/assets/{asset_id}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/assets/{asset_id}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssetComments", "json")
 	if err != nil {
@@ -1605,7 +1668,10 @@ func (s *organization) UpdateAssetComments(ctx context.Context, request operatio
 // UpdateAssetTags - Update asset tags
 func (s *organization) UpdateAssetTags(ctx context.Context, request operations.UpdateAssetTagsRequest, security operations.UpdateAssetTagsSecurity) (*operations.UpdateAssetTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/assets/{asset_id}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/assets/{asset_id}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssetTags", "json")
 	if err != nil {
@@ -1774,7 +1840,10 @@ func (s *organization) UpdateOrganization(ctx context.Context, request shared.Or
 // UpdateSite - Update a site definition
 func (s *organization) UpdateSite(ctx context.Context, request operations.UpdateSiteRequest, security operations.UpdateSiteSecurity) (*operations.UpdateSiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/sites/{site_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/sites/{site_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SiteOptions", "json")
 	if err != nil {
@@ -1831,7 +1900,10 @@ func (s *organization) UpdateSite(ctx context.Context, request operations.Update
 // UpdateTask - Update task parameters
 func (s *organization) UpdateTask(ctx context.Context, request operations.UpdateTaskRequest, security operations.UpdateTaskSecurity) (*operations.UpdateTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/tasks/{task_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Task", "json")
 	if err != nil {
@@ -1888,7 +1960,10 @@ func (s *organization) UpdateTask(ctx context.Context, request operations.Update
 // UpgradeAgent - Force an agent to update and restart
 func (s *organization) UpgradeAgent(ctx context.Context, request operations.UpgradeAgentRequest, security operations.UpgradeAgentSecurity) (*operations.UpgradeAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/org/agents/{agent_id}/update", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/org/agents/{agent_id}/update", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

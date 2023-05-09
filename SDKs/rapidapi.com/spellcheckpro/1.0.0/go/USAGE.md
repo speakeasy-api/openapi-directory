@@ -2,27 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CheckSpellingRussianRequest{
-        RequestBody: &operations.CheckSpellingRussianRequestBody{
-            LangCode: "ru",
-            Text: "Добрый вее!",
-        },
-        XRapidAPIKey: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.CheckSpellingRussian(ctx, req)
+    res, err := s.CheckSpellingRussian(ctx, operations.CheckSpellingRussianRequest{
+        RequestBody: &operations.CheckSpellingRussianRequestBody{
+            LangCode: sdk.String("ru"),
+            Text: sdk.String("Добрый вее!"),
+        },
+        XRapidAPIKey: sdk.String("corrupti"),
+    })
     if err != nil {
         log.Fatal(err)
     }

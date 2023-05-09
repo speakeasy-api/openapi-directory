@@ -16,17 +16,21 @@ const (
 	GetCertificatesXAmzTargetEnumLightsail20161128GetCertificates GetCertificatesXAmzTargetEnum = "Lightsail_20161128.GetCertificates"
 )
 
+func (e GetCertificatesXAmzTargetEnum) ToPointer() *GetCertificatesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCertificatesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetCertificates":
-		*e = GetCertificatesXAmzTargetEnum(s)
+		*e = GetCertificatesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCertificatesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCertificatesXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	ClientModeEnumAll         ClientModeEnum = "ALL"
 )
 
+func (e ClientModeEnum) ToPointer() *ClientModeEnum {
+	return &e
+}
+
 func (e *ClientModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOURCE":
 		fallthrough
 	case "DESTINATION":
 		fallthrough
 	case "ALL":
-		*e = ClientModeEnum(s)
+		*e = ClientModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClientModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClientModeEnum: %v", v)
 	}
 }

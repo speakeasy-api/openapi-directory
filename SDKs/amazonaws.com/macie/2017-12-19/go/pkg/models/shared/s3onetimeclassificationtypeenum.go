@@ -14,18 +14,22 @@ const (
 	S3OneTimeClassificationTypeEnumNone S3OneTimeClassificationTypeEnum = "NONE"
 )
 
+func (e S3OneTimeClassificationTypeEnum) ToPointer() *S3OneTimeClassificationTypeEnum {
+	return &e
+}
+
 func (e *S3OneTimeClassificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FULL":
 		fallthrough
 	case "NONE":
-		*e = S3OneTimeClassificationTypeEnum(s)
+		*e = S3OneTimeClassificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for S3OneTimeClassificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for S3OneTimeClassificationTypeEnum: %v", v)
 	}
 }

@@ -21,12 +21,16 @@ const (
 	GetSpacesSpaceIDFoldersIDInvoicesSortNameEnumTitle       GetSpacesSpaceIDFoldersIDInvoicesSortNameEnum = "Title"
 )
 
+func (e GetSpacesSpaceIDFoldersIDInvoicesSortNameEnum) ToPointer() *GetSpacesSpaceIDFoldersIDInvoicesSortNameEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDFoldersIDInvoicesSortNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DueDate":
 		fallthrough
 	case "PaymentDate":
@@ -38,10 +42,10 @@ func (e *GetSpacesSpaceIDFoldersIDInvoicesSortNameEnum) UnmarshalJSON(data []byt
 	case "Contracting":
 		fallthrough
 	case "Title":
-		*e = GetSpacesSpaceIDFoldersIDInvoicesSortNameEnum(s)
+		*e = GetSpacesSpaceIDFoldersIDInvoicesSortNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDInvoicesSortNameEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDInvoicesSortNameEnum: %v", v)
 	}
 }
 
@@ -53,19 +57,23 @@ const (
 	GetSpacesSpaceIDFoldersIDInvoicesSortOrderEnumDesc GetSpacesSpaceIDFoldersIDInvoicesSortOrderEnum = "desc"
 )
 
+func (e GetSpacesSpaceIDFoldersIDInvoicesSortOrderEnum) ToPointer() *GetSpacesSpaceIDFoldersIDInvoicesSortOrderEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDFoldersIDInvoicesSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetSpacesSpaceIDFoldersIDInvoicesSortOrderEnum(s)
+		*e = GetSpacesSpaceIDFoldersIDInvoicesSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDInvoicesSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDInvoicesSortOrderEnum: %v", v)
 	}
 }
 

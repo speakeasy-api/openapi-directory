@@ -15,17 +15,21 @@ const (
 	POSTDeleteClusterSecurityGroupActionEnumDeleteClusterSecurityGroup POSTDeleteClusterSecurityGroupActionEnum = "DeleteClusterSecurityGroup"
 )
 
+func (e POSTDeleteClusterSecurityGroupActionEnum) ToPointer() *POSTDeleteClusterSecurityGroupActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteClusterSecurityGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteClusterSecurityGroup":
-		*e = POSTDeleteClusterSecurityGroupActionEnum(s)
+		*e = POSTDeleteClusterSecurityGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteClusterSecurityGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteClusterSecurityGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteClusterSecurityGroupVersionEnumTwoThousandAndTwelve1201 POSTDeleteClusterSecurityGroupVersionEnum = "2012-12-01"
 )
 
+func (e POSTDeleteClusterSecurityGroupVersionEnum) ToPointer() *POSTDeleteClusterSecurityGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteClusterSecurityGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTDeleteClusterSecurityGroupVersionEnum(s)
+		*e = POSTDeleteClusterSecurityGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteClusterSecurityGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteClusterSecurityGroupVersionEnum: %v", v)
 	}
 }
 

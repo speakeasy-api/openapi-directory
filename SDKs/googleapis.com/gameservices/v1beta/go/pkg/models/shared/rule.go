@@ -19,12 +19,16 @@ const (
 	RuleActionEnumLog          RuleActionEnum = "LOG"
 )
 
+func (e RuleActionEnum) ToPointer() *RuleActionEnum {
+	return &e
+}
+
 func (e *RuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_ACTION":
 		fallthrough
 	case "ALLOW":
@@ -36,10 +40,10 @@ func (e *RuleActionEnum) UnmarshalJSON(data []byte) error {
 	case "DENY_WITH_LOG":
 		fallthrough
 	case "LOG":
-		*e = RuleActionEnum(s)
+		*e = RuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for RuleActionEnum: %v", v)
 	}
 }
 

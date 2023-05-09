@@ -16,21 +16,25 @@ const (
 	GoogleCloudRunV2VpcAccessEgressEnumPrivateRangesOnly    GoogleCloudRunV2VpcAccessEgressEnum = "PRIVATE_RANGES_ONLY"
 )
 
+func (e GoogleCloudRunV2VpcAccessEgressEnum) ToPointer() *GoogleCloudRunV2VpcAccessEgressEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2VpcAccessEgressEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VPC_EGRESS_UNSPECIFIED":
 		fallthrough
 	case "ALL_TRAFFIC":
 		fallthrough
 	case "PRIVATE_RANGES_ONLY":
-		*e = GoogleCloudRunV2VpcAccessEgressEnum(s)
+		*e = GoogleCloudRunV2VpcAccessEgressEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2VpcAccessEgressEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2VpcAccessEgressEnum: %v", v)
 	}
 }
 

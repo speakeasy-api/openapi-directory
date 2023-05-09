@@ -18,21 +18,25 @@ const (
 	ListZonalShiftsStatusEnumCanceled ListZonalShiftsStatusEnum = "CANCELED"
 )
 
+func (e ListZonalShiftsStatusEnum) ToPointer() *ListZonalShiftsStatusEnum {
+	return &e
+}
+
 func (e *ListZonalShiftsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "EXPIRED":
 		fallthrough
 	case "CANCELED":
-		*e = ListZonalShiftsStatusEnum(s)
+		*e = ListZonalShiftsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListZonalShiftsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListZonalShiftsStatusEnum: %v", v)
 	}
 }
 

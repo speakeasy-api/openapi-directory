@@ -16,17 +16,21 @@ const (
 	RegisterContainerImageXAmzTargetEnumLightsail20161128RegisterContainerImage RegisterContainerImageXAmzTargetEnum = "Lightsail_20161128.RegisterContainerImage"
 )
 
+func (e RegisterContainerImageXAmzTargetEnum) ToPointer() *RegisterContainerImageXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterContainerImageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.RegisterContainerImage":
-		*e = RegisterContainerImageXAmzTargetEnum(s)
+		*e = RegisterContainerImageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterContainerImageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterContainerImageXAmzTargetEnum: %v", v)
 	}
 }
 

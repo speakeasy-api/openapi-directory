@@ -14,18 +14,22 @@ const (
 	DeltaTargetCompressionTypeEnumSnappy       DeltaTargetCompressionTypeEnum = "snappy"
 )
 
+func (e DeltaTargetCompressionTypeEnum) ToPointer() *DeltaTargetCompressionTypeEnum {
+	return &e
+}
+
 func (e *DeltaTargetCompressionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uncompressed":
 		fallthrough
 	case "snappy":
-		*e = DeltaTargetCompressionTypeEnum(s)
+		*e = DeltaTargetCompressionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeltaTargetCompressionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeltaTargetCompressionTypeEnum: %v", v)
 	}
 }

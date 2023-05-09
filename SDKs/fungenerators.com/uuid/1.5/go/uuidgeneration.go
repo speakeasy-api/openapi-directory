@@ -77,7 +77,10 @@ func (s *uuidGeneration) GetUUID(ctx context.Context, request operations.GetUUID
 // GetUUIDVersionVersion - Generate a random UUID (v4).
 func (s *uuidGeneration) GetUUIDVersionVersion(ctx context.Context, request operations.GetUUIDVersionVersionRequest, security operations.GetUUIDVersionVersionSecurity) (*operations.GetUUIDVersionVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/uuid/version/{version}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/uuid/version/{version}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

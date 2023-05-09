@@ -20,12 +20,16 @@ const (
 	StringFilterMatchTypeEnumPartialRegexp        StringFilterMatchTypeEnum = "PARTIAL_REGEXP"
 )
 
+func (e StringFilterMatchTypeEnum) ToPointer() *StringFilterMatchTypeEnum {
+	return &e
+}
+
 func (e *StringFilterMatchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MATCH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EXACT":
@@ -39,10 +43,10 @@ func (e *StringFilterMatchTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FULL_REGEXP":
 		fallthrough
 	case "PARTIAL_REGEXP":
-		*e = StringFilterMatchTypeEnum(s)
+		*e = StringFilterMatchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StringFilterMatchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StringFilterMatchTypeEnum: %v", v)
 	}
 }
 

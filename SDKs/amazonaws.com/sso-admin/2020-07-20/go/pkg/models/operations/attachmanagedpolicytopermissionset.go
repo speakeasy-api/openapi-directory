@@ -16,17 +16,21 @@ const (
 	AttachManagedPolicyToPermissionSetXAmzTargetEnumSwbExternalServiceAttachManagedPolicyToPermissionSet AttachManagedPolicyToPermissionSetXAmzTargetEnum = "SWBExternalService.AttachManagedPolicyToPermissionSet"
 )
 
+func (e AttachManagedPolicyToPermissionSetXAmzTargetEnum) ToPointer() *AttachManagedPolicyToPermissionSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *AttachManagedPolicyToPermissionSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.AttachManagedPolicyToPermissionSet":
-		*e = AttachManagedPolicyToPermissionSetXAmzTargetEnum(s)
+		*e = AttachManagedPolicyToPermissionSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachManagedPolicyToPermissionSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachManagedPolicyToPermissionSetXAmzTargetEnum: %v", v)
 	}
 }
 

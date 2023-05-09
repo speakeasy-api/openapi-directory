@@ -16,17 +16,21 @@ const (
 	CreateProcessingJobXAmzTargetEnumSageMakerCreateProcessingJob CreateProcessingJobXAmzTargetEnum = "SageMaker.CreateProcessingJob"
 )
 
+func (e CreateProcessingJobXAmzTargetEnum) ToPointer() *CreateProcessingJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateProcessingJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreateProcessingJob":
-		*e = CreateProcessingJobXAmzTargetEnum(s)
+		*e = CreateProcessingJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProcessingJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProcessingJobXAmzTargetEnum: %v", v)
 	}
 }
 

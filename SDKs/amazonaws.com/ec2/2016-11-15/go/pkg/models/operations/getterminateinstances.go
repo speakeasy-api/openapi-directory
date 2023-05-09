@@ -15,17 +15,21 @@ const (
 	GETTerminateInstancesActionEnumTerminateInstances GETTerminateInstancesActionEnum = "TerminateInstances"
 )
 
+func (e GETTerminateInstancesActionEnum) ToPointer() *GETTerminateInstancesActionEnum {
+	return &e
+}
+
 func (e *GETTerminateInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TerminateInstances":
-		*e = GETTerminateInstancesActionEnum(s)
+		*e = GETTerminateInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTerminateInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTerminateInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETTerminateInstancesVersionEnumTwoThousandAndSixteen1115 GETTerminateInstancesVersionEnum = "2016-11-15"
 )
 
+func (e GETTerminateInstancesVersionEnum) ToPointer() *GETTerminateInstancesVersionEnum {
+	return &e
+}
+
 func (e *GETTerminateInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETTerminateInstancesVersionEnum(s)
+		*e = GETTerminateInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTerminateInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTerminateInstancesVersionEnum: %v", v)
 	}
 }
 

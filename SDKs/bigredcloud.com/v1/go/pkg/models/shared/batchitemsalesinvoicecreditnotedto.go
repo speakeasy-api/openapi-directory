@@ -10,29 +10,33 @@ import (
 // BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum - 1 - Create
 // 2 - Update
 // 3 - Delete
-type BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum string
+type BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum int
 
 const (
-	BatchItemSalesInvoiceCreditNoteDtoOpCodeEnumOne   BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum = "1"
-	BatchItemSalesInvoiceCreditNoteDtoOpCodeEnumTwo   BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum = "2"
-	BatchItemSalesInvoiceCreditNoteDtoOpCodeEnumThree BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum = "3"
+	BatchItemSalesInvoiceCreditNoteDtoOpCodeEnumOne   BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum = 1
+	BatchItemSalesInvoiceCreditNoteDtoOpCodeEnumTwo   BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum = 2
+	BatchItemSalesInvoiceCreditNoteDtoOpCodeEnumThree BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum = 3
 )
 
+func (e BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum) ToPointer() *BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum {
+	return &e
+}
+
 func (e *BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
-		*e = BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum(s)
+	case 3:
+		*e = BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchItemSalesInvoiceCreditNoteDtoOpCodeEnum: %v", v)
 	}
 }
 

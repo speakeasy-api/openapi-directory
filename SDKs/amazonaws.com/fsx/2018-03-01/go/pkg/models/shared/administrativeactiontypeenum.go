@@ -21,12 +21,16 @@ const (
 	AdministrativeActionTypeEnumVolumeRestore                 AdministrativeActionTypeEnum = "VOLUME_RESTORE"
 )
 
+func (e AdministrativeActionTypeEnum) ToPointer() *AdministrativeActionTypeEnum {
+	return &e
+}
+
 func (e *AdministrativeActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILE_SYSTEM_UPDATE":
 		fallthrough
 	case "STORAGE_OPTIMIZATION":
@@ -42,9 +46,9 @@ func (e *AdministrativeActionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "RELEASE_NFS_V3_LOCKS":
 		fallthrough
 	case "VOLUME_RESTORE":
-		*e = AdministrativeActionTypeEnum(s)
+		*e = AdministrativeActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdministrativeActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdministrativeActionTypeEnum: %v", v)
 	}
 }

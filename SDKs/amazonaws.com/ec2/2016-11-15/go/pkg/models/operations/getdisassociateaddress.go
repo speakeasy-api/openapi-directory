@@ -15,17 +15,21 @@ const (
 	GETDisassociateAddressActionEnumDisassociateAddress GETDisassociateAddressActionEnum = "DisassociateAddress"
 )
 
+func (e GETDisassociateAddressActionEnum) ToPointer() *GETDisassociateAddressActionEnum {
+	return &e
+}
+
 func (e *GETDisassociateAddressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateAddress":
-		*e = GETDisassociateAddressActionEnum(s)
+		*e = GETDisassociateAddressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateAddressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateAddressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisassociateAddressVersionEnumTwoThousandAndSixteen1115 GETDisassociateAddressVersionEnum = "2016-11-15"
 )
 
+func (e GETDisassociateAddressVersionEnum) ToPointer() *GETDisassociateAddressVersionEnum {
+	return &e
+}
+
 func (e *GETDisassociateAddressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDisassociateAddressVersionEnum(s)
+		*e = GETDisassociateAddressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateAddressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateAddressVersionEnum: %v", v)
 	}
 }
 

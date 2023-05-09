@@ -15,17 +15,21 @@ const (
 	GETGETShippingLabelActionEnumGetShippingLabel GETGETShippingLabelActionEnum = "GetShippingLabel"
 )
 
+func (e GETGETShippingLabelActionEnum) ToPointer() *GETGETShippingLabelActionEnum {
+	return &e
+}
+
 func (e *GETGETShippingLabelActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetShippingLabel":
-		*e = GETGETShippingLabelActionEnum(s)
+		*e = GETGETShippingLabelActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETShippingLabelActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETShippingLabelActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETShippingLabelOperationEnumGetShippingLabel GETGETShippingLabelOperationEnum = "GetShippingLabel"
 )
 
+func (e GETGETShippingLabelOperationEnum) ToPointer() *GETGETShippingLabelOperationEnum {
+	return &e
+}
+
 func (e *GETGETShippingLabelOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetShippingLabel":
-		*e = GETGETShippingLabelOperationEnum(s)
+		*e = GETGETShippingLabelOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETShippingLabelOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETShippingLabelOperationEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	GETGETShippingLabelVersionEnumTwoThousandAndTen0601 GETGETShippingLabelVersionEnum = "2010-06-01"
 )
 
+func (e GETGETShippingLabelVersionEnum) ToPointer() *GETGETShippingLabelVersionEnum {
+	return &e
+}
+
 func (e *GETGETShippingLabelVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-06-01":
-		*e = GETGETShippingLabelVersionEnum(s)
+		*e = GETGETShippingLabelVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETShippingLabelVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETShippingLabelVersionEnum: %v", v)
 	}
 }
 

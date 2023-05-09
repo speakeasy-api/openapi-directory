@@ -23,12 +23,16 @@ const (
 	MediaAttachmentTypeEnumPerformance MediaAttachmentTypeEnum = "performance"
 )
 
+func (e MediaAttachmentTypeEnum) ToPointer() *MediaAttachmentTypeEnum {
+	return &e
+}
+
 func (e *MediaAttachmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rich":
 		fallthrough
 	case "photo":
@@ -44,10 +48,10 @@ func (e *MediaAttachmentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "worksheet":
 		fallthrough
 	case "performance":
-		*e = MediaAttachmentTypeEnum(s)
+		*e = MediaAttachmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaAttachmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaAttachmentTypeEnum: %v", v)
 	}
 }
 

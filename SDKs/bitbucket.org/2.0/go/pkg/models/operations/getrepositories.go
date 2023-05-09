@@ -30,12 +30,16 @@ const (
 	GetRepositoriesRoleEnumOwner       GetRepositoriesRoleEnum = "owner"
 )
 
+func (e GetRepositoriesRoleEnum) ToPointer() *GetRepositoriesRoleEnum {
+	return &e
+}
+
 func (e *GetRepositoriesRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin":
 		fallthrough
 	case "contributor":
@@ -43,10 +47,10 @@ func (e *GetRepositoriesRoleEnum) UnmarshalJSON(data []byte) error {
 	case "member":
 		fallthrough
 	case "owner":
-		*e = GetRepositoriesRoleEnum(s)
+		*e = GetRepositoriesRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRepositoriesRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRepositoriesRoleEnum: %v", v)
 	}
 }
 

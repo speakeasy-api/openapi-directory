@@ -20,12 +20,16 @@ const (
 	ReposUpdateInvitationRequestBodyPermissionsEnumAdmin    ReposUpdateInvitationRequestBodyPermissionsEnum = "admin"
 )
 
+func (e ReposUpdateInvitationRequestBodyPermissionsEnum) ToPointer() *ReposUpdateInvitationRequestBodyPermissionsEnum {
+	return &e
+}
+
 func (e *ReposUpdateInvitationRequestBodyPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
@@ -35,10 +39,10 @@ func (e *ReposUpdateInvitationRequestBodyPermissionsEnum) UnmarshalJSON(data []b
 	case "triage":
 		fallthrough
 	case "admin":
-		*e = ReposUpdateInvitationRequestBodyPermissionsEnum(s)
+		*e = ReposUpdateInvitationRequestBodyPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInvitationRequestBodyPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInvitationRequestBodyPermissionsEnum: %v", v)
 	}
 }
 

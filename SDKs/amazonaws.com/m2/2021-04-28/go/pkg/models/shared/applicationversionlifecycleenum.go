@@ -15,20 +15,24 @@ const (
 	ApplicationVersionLifecycleEnumFailed    ApplicationVersionLifecycleEnum = "Failed"
 )
 
+func (e ApplicationVersionLifecycleEnum) ToPointer() *ApplicationVersionLifecycleEnum {
+	return &e
+}
+
 func (e *ApplicationVersionLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Creating":
 		fallthrough
 	case "Available":
 		fallthrough
 	case "Failed":
-		*e = ApplicationVersionLifecycleEnum(s)
+		*e = ApplicationVersionLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationVersionLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationVersionLifecycleEnum: %v", v)
 	}
 }

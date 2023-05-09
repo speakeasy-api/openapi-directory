@@ -15,17 +15,21 @@ const (
 	GETAttachVpnGatewayActionEnumAttachVpnGateway GETAttachVpnGatewayActionEnum = "AttachVpnGateway"
 )
 
+func (e GETAttachVpnGatewayActionEnum) ToPointer() *GETAttachVpnGatewayActionEnum {
+	return &e
+}
+
 func (e *GETAttachVpnGatewayActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AttachVpnGateway":
-		*e = GETAttachVpnGatewayActionEnum(s)
+		*e = GETAttachVpnGatewayActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAttachVpnGatewayActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAttachVpnGatewayActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAttachVpnGatewayVersionEnumTwoThousandAndSixteen1115 GETAttachVpnGatewayVersionEnum = "2016-11-15"
 )
 
+func (e GETAttachVpnGatewayVersionEnum) ToPointer() *GETAttachVpnGatewayVersionEnum {
+	return &e
+}
+
 func (e *GETAttachVpnGatewayVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETAttachVpnGatewayVersionEnum(s)
+		*e = GETAttachVpnGatewayVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAttachVpnGatewayVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAttachVpnGatewayVersionEnum: %v", v)
 	}
 }
 

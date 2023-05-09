@@ -16,17 +16,21 @@ const (
 	PutWebhookXAmzTargetEnumCodePipeline20150709PutWebhook PutWebhookXAmzTargetEnum = "CodePipeline_20150709.PutWebhook"
 )
 
+func (e PutWebhookXAmzTargetEnum) ToPointer() *PutWebhookXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutWebhookXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.PutWebhook":
-		*e = PutWebhookXAmzTargetEnum(s)
+		*e = PutWebhookXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutWebhookXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutWebhookXAmzTargetEnum: %v", v)
 	}
 }
 

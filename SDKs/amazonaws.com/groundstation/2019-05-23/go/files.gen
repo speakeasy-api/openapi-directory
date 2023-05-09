@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -69,6 +70,8 @@ pkg/models/shared/antennadownlinkconfig.go
 pkg/models/shared/dataflowendpointgroupidresponse.go
 pkg/models/shared/endpointdetails.go
 pkg/models/shared/securitydetails.go
+pkg/models/shared/capabilityhealthenum.go
+pkg/models/shared/capabilityhealthreasonenum.go
 pkg/models/shared/dataflowendpoint.go
 pkg/models/shared/endpointstatusenum.go
 pkg/models/shared/socketaddress.go
@@ -128,8 +131,8 @@ pkg/models/shared/satellitelistitem.go
 pkg/models/shared/listtagsforresourceresponse.go
 pkg/models/shared/registeragentresponse.go
 pkg/models/shared/componentversion.go
-pkg/models/shared/componenttypeenum.go
 pkg/models/shared/updateagentstatusresponse.go
 pkg/models/shared/componentstatusdata.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

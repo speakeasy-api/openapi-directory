@@ -16,17 +16,21 @@ const (
 	StartGUISessionXAmzTargetEnumLightsail20161128StartGuiSession StartGUISessionXAmzTargetEnum = "Lightsail_20161128.StartGUISession"
 )
 
+func (e StartGUISessionXAmzTargetEnum) ToPointer() *StartGUISessionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartGUISessionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.StartGUISession":
-		*e = StartGUISessionXAmzTargetEnum(s)
+		*e = StartGUISessionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartGUISessionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartGUISessionXAmzTargetEnum: %v", v)
 	}
 }
 

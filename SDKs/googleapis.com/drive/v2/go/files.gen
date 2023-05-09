@@ -16,6 +16,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -138,4 +139,19 @@ pkg/models/shared/commentreplylist.go
 pkg/models/shared/revision.go
 pkg/models/shared/revisionlist.go
 pkg/models/shared/teamdrivelist.go
+docs/sdk/README.md
+docs/about/README.md
+docs/apps/README.md
+docs/changes/README.md
+docs/channels/README.md
+docs/children/README.md
+docs/comments/README.md
+docs/drives/README.md
+docs/files/README.md
+docs/parents/README.md
+docs/permissions/README.md
+docs/properties/README.md
+docs/replies/README.md
+docs/revisions/README.md
+docs/teamdrives/README.md
 USAGE.md

@@ -16,17 +16,21 @@ const (
 	ExpireSessionXAmzTargetEnumPhotonAdminProxyServiceExpireSession ExpireSessionXAmzTargetEnum = "PhotonAdminProxyService.ExpireSession"
 )
 
+func (e ExpireSessionXAmzTargetEnum) ToPointer() *ExpireSessionXAmzTargetEnum {
+	return &e
+}
+
 func (e *ExpireSessionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.ExpireSession":
-		*e = ExpireSessionXAmzTargetEnum(s)
+		*e = ExpireSessionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExpireSessionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ExpireSessionXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTAdvertiseByoipCidrActionEnumAdvertiseByoipCidr POSTAdvertiseByoipCidrActionEnum = "AdvertiseByoipCidr"
 )
 
+func (e POSTAdvertiseByoipCidrActionEnum) ToPointer() *POSTAdvertiseByoipCidrActionEnum {
+	return &e
+}
+
 func (e *POSTAdvertiseByoipCidrActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AdvertiseByoipCidr":
-		*e = POSTAdvertiseByoipCidrActionEnum(s)
+		*e = POSTAdvertiseByoipCidrActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAdvertiseByoipCidrActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAdvertiseByoipCidrActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAdvertiseByoipCidrVersionEnumTwoThousandAndSixteen1115 POSTAdvertiseByoipCidrVersionEnum = "2016-11-15"
 )
 
+func (e POSTAdvertiseByoipCidrVersionEnum) ToPointer() *POSTAdvertiseByoipCidrVersionEnum {
+	return &e
+}
+
 func (e *POSTAdvertiseByoipCidrVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTAdvertiseByoipCidrVersionEnum(s)
+		*e = POSTAdvertiseByoipCidrVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAdvertiseByoipCidrVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAdvertiseByoipCidrVersionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateConnectionXAmzTargetEnumOvertureServiceUpdateConnection UpdateConnectionXAmzTargetEnum = "OvertureService.UpdateConnection"
 )
 
+func (e UpdateConnectionXAmzTargetEnum) ToPointer() *UpdateConnectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateConnectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.UpdateConnection":
-		*e = UpdateConnectionXAmzTargetEnum(s)
+		*e = UpdateConnectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateConnectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateConnectionXAmzTargetEnum: %v", v)
 	}
 }
 

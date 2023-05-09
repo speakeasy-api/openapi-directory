@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/sagemaker-f
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,7 +28,8 @@ func main() {
         }),
     )
 
-    req := operations.BatchGetRecordRequest{
+    ctx := context.Background()
+    res, err := s.BatchGetRecord(ctx, operations.BatchGetRecordRequest{
         RequestBody: operations.BatchGetRecordRequestBody{
             Identifiers: []shared.BatchGetRecordIdentifier{
                 shared.BatchGetRecordIdentifier{
@@ -72,17 +73,14 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "ab",
-        XAmzContentSha256: "quis",
-        XAmzCredential: "veritatis",
-        XAmzDate: "deserunt",
-        XAmzSecurityToken: "perferendis",
-        XAmzSignature: "ipsam",
-        XAmzSignedHeaders: "repellendus",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchGetRecord(ctx, req)
+        XAmzAlgorithm: sdk.String("ab"),
+        XAmzContentSha256: sdk.String("quis"),
+        XAmzCredential: sdk.String("veritatis"),
+        XAmzDate: sdk.String("deserunt"),
+        XAmzSecurityToken: sdk.String("perferendis"),
+        XAmzSignature: sdk.String("ipsam"),
+        XAmzSignedHeaders: sdk.String("repellendus"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -97,12 +95,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `BatchGetRecord` - Retrieves a batch of <code>Records</code> from a <code>FeatureGroup</code>.
-* `DeleteRecord` - Deletes a <code>Record</code> from a <code>FeatureGroup</code>. When the <code>DeleteRecord</code> API is called a new record will be added to the <code>OfflineStore</code> and the <code>Record</code> will be removed from the <code>OnlineStore</code>. This record will have a value of <code>True</code> in the <code>is_deleted</code> column.
-* `GetRecord` - Use for <code>OnlineStore</code> serving from a <code>FeatureStore</code>. Only the latest records stored in the <code>OnlineStore</code> can be retrieved. If no Record with <code>RecordIdentifierValue</code> is found, then an empty result is returned. 
-* `PutRecord` - Used for data ingestion into the <code>FeatureStore</code>. The <code>PutRecord</code> API writes to both the <code>OnlineStore</code> and <code>OfflineStore</code>. If the record is the latest record for the <code>recordIdentifier</code>, the record is written to both the <code>OnlineStore</code> and <code>OfflineStore</code>. If the record is a historic record, it is written only to the <code>OfflineStore</code>.
+* [BatchGetRecord](docs/sdk/README.md#batchgetrecord) - Retrieves a batch of <code>Records</code> from a <code>FeatureGroup</code>.
+* [DeleteRecord](docs/sdk/README.md#deleterecord) - <p>Deletes a <code>Record</code> from a <code>FeatureGroup</code> in the <code>OnlineStore</code>. Feature Store supports both <code>SOFT_DELETE</code> and <code>HARD_DELETE</code>. For <code>SOFT_DELETE</code> (default), feature columns are set to <code>null</code> and the record is no longer retrievable by <code>GetRecord</code> or <code>BatchGetRecord</code>. For<code> HARD_DELETE</code>, the complete <code>Record</code> is removed from the <code>OnlineStore</code>. In both cases, Feature Store appends the deleted record marker to the <code>OfflineStore</code> with feature values set to <code>null</code>, <code>is_deleted</code> value set to <code>True</code>, and <code>EventTime</code> set to the delete input <code>EventTime</code>.</p> <p>Note that the <code>EventTime</code> specified in <code>DeleteRecord</code> should be set later than the <code>EventTime</code> of the existing record in the <code>OnlineStore</code> for that <code>RecordIdentifer</code>. If it is not, the deletion does not occur:</p> <ul> <li> <p>For <code>SOFT_DELETE</code>, the existing (undeleted) record remains in the <code>OnlineStore</code>, though the delete record marker is still written to the <code>OfflineStore</code>.</p> </li> <li> <p> <code>HARD_DELETE</code> returns <code>EventTime</code>: <code>400 ValidationException</code> to indicate that the delete operation failed. No delete record marker is written to the <code>OfflineStore</code>.</p> </li> </ul>
+* [GetRecord](docs/sdk/README.md#getrecord) - Use for <code>OnlineStore</code> serving from a <code>FeatureStore</code>. Only the latest records stored in the <code>OnlineStore</code> can be retrieved. If no Record with <code>RecordIdentifierValue</code> is found, then an empty result is returned. 
+* [PutRecord](docs/sdk/README.md#putrecord) - Used for data ingestion into the <code>FeatureStore</code>. The <code>PutRecord</code> API writes to both the <code>OnlineStore</code> and <code>OfflineStore</code>. If the record is the latest record for the <code>recordIdentifier</code>, the record is written to both the <code>OnlineStore</code> and <code>OfflineStore</code>. If the record is a historic record, it is written only to the <code>OfflineStore</code>.
 <!-- End SDK Available Operations -->
 
 ### Maturity

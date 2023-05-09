@@ -21,12 +21,16 @@ const (
 	BlueGreenInfoPhaseEnumRollbackStarted   BlueGreenInfoPhaseEnum = "ROLLBACK_STARTED"
 )
 
+func (e BlueGreenInfoPhaseEnum) ToPointer() *BlueGreenInfoPhaseEnum {
+	return &e
+}
+
 func (e *BlueGreenInfoPhaseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PHASE_UNSPECIFIED":
 		fallthrough
 	case "UPDATE_STARTED":
@@ -42,10 +46,10 @@ func (e *BlueGreenInfoPhaseEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING_BLUE_POOL":
 		fallthrough
 	case "ROLLBACK_STARTED":
-		*e = BlueGreenInfoPhaseEnum(s)
+		*e = BlueGreenInfoPhaseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BlueGreenInfoPhaseEnum: %s", s)
+		return fmt.Errorf("invalid value for BlueGreenInfoPhaseEnum: %v", v)
 	}
 }
 

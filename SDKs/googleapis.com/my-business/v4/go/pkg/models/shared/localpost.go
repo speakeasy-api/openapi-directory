@@ -15,19 +15,23 @@ const (
 	LocalPostAlertTypeEnumCovid19              LocalPostAlertTypeEnum = "COVID_19"
 )
 
+func (e LocalPostAlertTypeEnum) ToPointer() *LocalPostAlertTypeEnum {
+	return &e
+}
+
 func (e *LocalPostAlertTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALERT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "COVID_19":
-		*e = LocalPostAlertTypeEnum(s)
+		*e = LocalPostAlertTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocalPostAlertTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LocalPostAlertTypeEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	LocalPostStateEnumProcessing                LocalPostStateEnum = "PROCESSING"
 )
 
+func (e LocalPostStateEnum) ToPointer() *LocalPostStateEnum {
+	return &e
+}
+
 func (e *LocalPostStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCAL_POST_STATE_UNSPECIFIED":
 		fallthrough
 	case "REJECTED":
@@ -54,10 +62,10 @@ func (e *LocalPostStateEnum) UnmarshalJSON(data []byte) error {
 	case "LIVE":
 		fallthrough
 	case "PROCESSING":
-		*e = LocalPostStateEnum(s)
+		*e = LocalPostStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocalPostStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LocalPostStateEnum: %v", v)
 	}
 }
 
@@ -72,12 +80,16 @@ const (
 	LocalPostTopicTypeEnumAlert                         LocalPostTopicTypeEnum = "ALERT"
 )
 
+func (e LocalPostTopicTypeEnum) ToPointer() *LocalPostTopicTypeEnum {
+	return &e
+}
+
 func (e *LocalPostTopicTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCAL_POST_TOPIC_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STANDARD":
@@ -87,10 +99,10 @@ func (e *LocalPostTopicTypeEnum) UnmarshalJSON(data []byte) error {
 	case "OFFER":
 		fallthrough
 	case "ALERT":
-		*e = LocalPostTopicTypeEnum(s)
+		*e = LocalPostTopicTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocalPostTopicTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LocalPostTopicTypeEnum: %v", v)
 	}
 }
 

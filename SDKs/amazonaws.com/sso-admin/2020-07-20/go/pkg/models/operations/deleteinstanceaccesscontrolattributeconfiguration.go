@@ -16,17 +16,21 @@ const (
 	DeleteInstanceAccessControlAttributeConfigurationXAmzTargetEnumSwbExternalServiceDeleteInstanceAccessControlAttributeConfiguration DeleteInstanceAccessControlAttributeConfigurationXAmzTargetEnum = "SWBExternalService.DeleteInstanceAccessControlAttributeConfiguration"
 )
 
+func (e DeleteInstanceAccessControlAttributeConfigurationXAmzTargetEnum) ToPointer() *DeleteInstanceAccessControlAttributeConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteInstanceAccessControlAttributeConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.DeleteInstanceAccessControlAttributeConfiguration":
-		*e = DeleteInstanceAccessControlAttributeConfigurationXAmzTargetEnum(s)
+		*e = DeleteInstanceAccessControlAttributeConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteInstanceAccessControlAttributeConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteInstanceAccessControlAttributeConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

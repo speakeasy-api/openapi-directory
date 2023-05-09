@@ -65,19 +65,23 @@ const (
 	RegisterJobDefinitionRequestBodyTypeEnumMultinode RegisterJobDefinitionRequestBodyTypeEnum = "multinode"
 )
 
+func (e RegisterJobDefinitionRequestBodyTypeEnum) ToPointer() *RegisterJobDefinitionRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *RegisterJobDefinitionRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "container":
 		fallthrough
 	case "multinode":
-		*e = RegisterJobDefinitionRequestBodyTypeEnum(s)
+		*e = RegisterJobDefinitionRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterJobDefinitionRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterJobDefinitionRequestBodyTypeEnum: %v", v)
 	}
 }
 

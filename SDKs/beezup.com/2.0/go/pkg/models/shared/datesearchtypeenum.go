@@ -16,20 +16,24 @@ const (
 	DateSearchTypeEnumMarketPlaceModification DateSearchTypeEnum = "MarketPlaceModification"
 )
 
+func (e DateSearchTypeEnum) ToPointer() *DateSearchTypeEnum {
+	return &e
+}
+
 func (e *DateSearchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Modification":
 		fallthrough
 	case "Purchase":
 		fallthrough
 	case "MarketPlaceModification":
-		*e = DateSearchTypeEnum(s)
+		*e = DateSearchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DateSearchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DateSearchTypeEnum: %v", v)
 	}
 }

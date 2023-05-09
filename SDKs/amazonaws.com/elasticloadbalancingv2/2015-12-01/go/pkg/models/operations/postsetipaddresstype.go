@@ -15,17 +15,21 @@ const (
 	POSTSetIPAddressTypeActionEnumSetIPAddressType POSTSetIPAddressTypeActionEnum = "SetIpAddressType"
 )
 
+func (e POSTSetIPAddressTypeActionEnum) ToPointer() *POSTSetIPAddressTypeActionEnum {
+	return &e
+}
+
 func (e *POSTSetIPAddressTypeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetIpAddressType":
-		*e = POSTSetIPAddressTypeActionEnum(s)
+		*e = POSTSetIPAddressTypeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetIPAddressTypeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetIPAddressTypeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSetIPAddressTypeVersionEnumTwoThousandAndFifteen1201 POSTSetIPAddressTypeVersionEnum = "2015-12-01"
 )
 
+func (e POSTSetIPAddressTypeVersionEnum) ToPointer() *POSTSetIPAddressTypeVersionEnum {
+	return &e
+}
+
 func (e *POSTSetIPAddressTypeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = POSTSetIPAddressTypeVersionEnum(s)
+		*e = POSTSetIPAddressTypeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetIPAddressTypeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetIPAddressTypeVersionEnum: %v", v)
 	}
 }
 

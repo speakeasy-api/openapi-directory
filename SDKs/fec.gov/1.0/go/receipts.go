@@ -39,7 +39,6 @@ func newReceipts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // This description is for both ​`/schedules​/schedule_a​/` and ​ `/schedules​/schedule_a​/{sub_id}​/`.
 //
 // This endpoint provides itemized receipts. Schedule A records describe itemized receipts, including contributions from individuals. If you are interested in contributions from an individual, use the `/schedules/schedule_a/` endpoint. For a more complete description of all Schedule A records visit [About receipts data](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/about-receipts-data/). If you are interested in our "is_individual" methodology visit our [methodology page](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/methodology/).
-//
 // ​The `/schedules​/schedule_a​/` endpoint is not paginated by page number. This endpoint uses keyset pagination to improve query performance and these indices are required to properly page through this large dataset. To request the next page, you should append the values found in the `last_indexes` object from pagination to the URL of your last request as additional parameters.
 // For example, when sorting by `contribution_receipt_date`, you might receive a page of results with the two scenarios of following pagination information:
 //
@@ -632,7 +631,6 @@ func (s *receipts) GetSchedulesScheduleAEfile(ctx context.Context, request opera
 // This description is for both ​`/schedules​/schedule_a​/` and ​ `/schedules​/schedule_a​/{sub_id}​/`.
 //
 // This endpoint provides itemized receipts. Schedule A records describe itemized receipts, including contributions from individuals. If you are interested in contributions from an individual, use the `/schedules/schedule_a/` endpoint. For a more complete description of all Schedule A records visit [About receipts data](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/about-receipts-data/). If you are interested in our "is_individual" methodology visit our [methodology page](https://www.fec.gov/campaign-finance-data/about-campaign-finance-data/methodology/).
-//
 // ​The `/schedules​/schedule_a​/` endpoint is not paginated by page number. This endpoint uses keyset pagination to improve query performance and these indices are required to properly page through this large dataset. To request the next page, you should append the values found in the `last_indexes` object from pagination to the URL of your last request as additional parameters.
 // For example, when sorting by `contribution_receipt_date`, you might receive a page of results with the two scenarios of following pagination information:
 //
@@ -675,7 +673,10 @@ func (s *receipts) GetSchedulesScheduleAEfile(ctx context.Context, request opera
 // ​The `/schedules​/schedule_a​/{sub_id}​/` endpoint returns a single transaction, but it does include a pagination object class. Please ignore the information in that object class.
 func (s *receipts) GetSchedulesScheduleASubID(ctx context.Context, request operations.GetSchedulesScheduleASubIDRequest) (*operations.GetSchedulesScheduleASubIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schedules/schedule_a/{sub_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/schedules/schedule_a/{sub_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

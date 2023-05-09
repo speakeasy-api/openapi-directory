@@ -15,17 +15,21 @@ const (
 	POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnumDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum = "DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation"
 )
 
+func (e POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum) ToPointer() *POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation":
-		*e = POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum(s)
+		*e = POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnumTwoThousandAndSixteen1115 POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum) ToPointer() *POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum(s)
+		*e = POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum: %v", v)
 	}
 }
 

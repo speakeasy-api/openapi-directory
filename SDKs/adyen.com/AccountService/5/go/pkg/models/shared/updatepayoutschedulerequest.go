@@ -20,21 +20,25 @@ const (
 	UpdatePayoutScheduleRequestActionEnumUpdate  UpdatePayoutScheduleRequestActionEnum = "UPDATE"
 )
 
+func (e UpdatePayoutScheduleRequestActionEnum) ToPointer() *UpdatePayoutScheduleRequestActionEnum {
+	return &e
+}
+
 func (e *UpdatePayoutScheduleRequestActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLOSE":
 		fallthrough
 	case "NOTHING":
 		fallthrough
 	case "UPDATE":
-		*e = UpdatePayoutScheduleRequestActionEnum(s)
+		*e = UpdatePayoutScheduleRequestActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePayoutScheduleRequestActionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePayoutScheduleRequestActionEnum: %v", v)
 	}
 }
 
@@ -53,15 +57,24 @@ const (
 	UpdatePayoutScheduleRequestScheduleEnumHold                           UpdatePayoutScheduleRequestScheduleEnum = "HOLD"
 	UpdatePayoutScheduleRequestScheduleEnumMonthly                        UpdatePayoutScheduleRequestScheduleEnum = "MONTHLY"
 	UpdatePayoutScheduleRequestScheduleEnumWeekly                         UpdatePayoutScheduleRequestScheduleEnum = "WEEKLY"
+	UpdatePayoutScheduleRequestScheduleEnumWeeklyMonToFriAu               UpdatePayoutScheduleRequestScheduleEnum = "WEEKLY_MON_TO_FRI_AU"
+	UpdatePayoutScheduleRequestScheduleEnumWeeklyMonToFriEu               UpdatePayoutScheduleRequestScheduleEnum = "WEEKLY_MON_TO_FRI_EU"
+	UpdatePayoutScheduleRequestScheduleEnumWeeklyMonToFriUs               UpdatePayoutScheduleRequestScheduleEnum = "WEEKLY_MON_TO_FRI_US"
 	UpdatePayoutScheduleRequestScheduleEnumWeeklyOnTueFriMidnight         UpdatePayoutScheduleRequestScheduleEnum = "WEEKLY_ON_TUE_FRI_MIDNIGHT"
+	UpdatePayoutScheduleRequestScheduleEnumWeeklySunToThuAu               UpdatePayoutScheduleRequestScheduleEnum = "WEEKLY_SUN_TO_THU_AU"
+	UpdatePayoutScheduleRequestScheduleEnumWeeklySunToThuUs               UpdatePayoutScheduleRequestScheduleEnum = "WEEKLY_SUN_TO_THU_US"
 )
 
+func (e UpdatePayoutScheduleRequestScheduleEnum) ToPointer() *UpdatePayoutScheduleRequestScheduleEnum {
+	return &e
+}
+
 func (e *UpdatePayoutScheduleRequestScheduleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BIWEEKLY_ON_1ST_AND_15TH_AT_MIDNIGHT":
 		fallthrough
 	case "DAILY":
@@ -80,11 +93,21 @@ func (e *UpdatePayoutScheduleRequestScheduleEnum) UnmarshalJSON(data []byte) err
 		fallthrough
 	case "WEEKLY":
 		fallthrough
+	case "WEEKLY_MON_TO_FRI_AU":
+		fallthrough
+	case "WEEKLY_MON_TO_FRI_EU":
+		fallthrough
+	case "WEEKLY_MON_TO_FRI_US":
+		fallthrough
 	case "WEEKLY_ON_TUE_FRI_MIDNIGHT":
-		*e = UpdatePayoutScheduleRequestScheduleEnum(s)
+		fallthrough
+	case "WEEKLY_SUN_TO_THU_AU":
+		fallthrough
+	case "WEEKLY_SUN_TO_THU_US":
+		*e = UpdatePayoutScheduleRequestScheduleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePayoutScheduleRequestScheduleEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePayoutScheduleRequestScheduleEnum: %v", v)
 	}
 }
 

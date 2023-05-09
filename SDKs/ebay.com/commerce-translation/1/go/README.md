@@ -13,30 +13,28 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ebay.com/commerce-transla
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.TranslateRequest{
-        From: "corrupti",
+    ctx := context.Background()
+    res, err := s.Language.Translate(ctx, shared.TranslateRequest{
+        From: sdk.String("corrupti"),
         Text: []string{
             "distinctio",
             "quibusdam",
             "unde",
         },
-        To: "nulla",
-        TranslationContext: "corrupti",
-    }
-
-    ctx := context.Background()
-    res, err := s.Language.Translate(ctx, req, operations.TranslateSecurity{
+        To: sdk.String("nulla"),
+        TranslationContext: sdk.String("corrupti"),
+    }, operations.TranslateSecurity{
         APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -54,9 +52,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Language
+### [Language](docs/language/README.md)
 
-* `Translate` - Translates input text inot a given language.
+* [Translate](docs/language/README.md#translate) - Translates input text inot a given language.
 <!-- End SDK Available Operations -->
 
 ### Maturity

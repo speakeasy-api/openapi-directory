@@ -16,20 +16,24 @@ const (
 	ClosestEnumAfter  ClosestEnum = "after"
 )
 
+func (e ClosestEnum) ToPointer() *ClosestEnum {
+	return &e
+}
+
 func (e *ClosestEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "either":
 		fallthrough
 	case "before":
 		fallthrough
 	case "after":
-		*e = ClosestEnum(s)
+		*e = ClosestEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClosestEnum: %s", s)
+		return fmt.Errorf("invalid value for ClosestEnum: %v", v)
 	}
 }

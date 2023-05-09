@@ -11,7 +11,7 @@ type RecurringDetailsResult struct {
 	// The date when the recurring details were created.
 	CreationDate *time.Time `json:"creationDate,omitempty"`
 	// Payment details stored for recurring payments.
-	Details []RecurringDetail `json:"details,omitempty"`
+	Details []RecurringDetailWrapper `json:"details,omitempty"`
 	// The most recent email for this shopper (if available).
 	LastKnownShopperEmail *string `json:"lastKnownShopperEmail,omitempty"`
 	// The reference you use to uniquely identify the shopper (e.g. user ID or account ID).

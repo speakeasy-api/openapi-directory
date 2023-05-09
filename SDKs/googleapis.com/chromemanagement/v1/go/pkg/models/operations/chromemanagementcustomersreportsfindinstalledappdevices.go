@@ -26,12 +26,16 @@ const (
 	ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnumAndroidApp         ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum = "ANDROID_APP"
 )
 
+func (e ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum) ToPointer() *ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum {
+	return &e
+}
+
 func (e *ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EXTENSION":
@@ -43,10 +47,10 @@ func (e *ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum) Unm
 	case "HOSTED_APP":
 		fallthrough
 	case "ANDROID_APP":
-		*e = ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum(s)
+		*e = ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChromemanagementCustomersReportsFindInstalledAppDevicesAppTypeEnum: %v", v)
 	}
 }
 

@@ -8,6 +8,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -93,5 +94,12 @@ pkg/models/shared/issuetokenrequest.go
 pkg/models/shared/sendtokenresponse.go
 pkg/models/shared/sendtokenrequest.go
 pkg/models/shared/getfaucetresponse.go
+docs/sdk/README.md
+docs/insight/README.md
+docs/jsonrpc/README.md
+docs/ntp1/README.md
+docs/testnetfaucet/README.md
+docs/testnetinsight/README.md
+docs/testnetntp1/README.md
 USAGE.md
 pkg/models/operations/options.go

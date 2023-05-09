@@ -14,18 +14,22 @@ const (
 	KnowledgeBaseTypeEnumCustom   KnowledgeBaseTypeEnum = "CUSTOM"
 )
 
+func (e KnowledgeBaseTypeEnum) ToPointer() *KnowledgeBaseTypeEnum {
+	return &e
+}
+
 func (e *KnowledgeBaseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXTERNAL":
 		fallthrough
 	case "CUSTOM":
-		*e = KnowledgeBaseTypeEnum(s)
+		*e = KnowledgeBaseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KnowledgeBaseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for KnowledgeBaseTypeEnum: %v", v)
 	}
 }

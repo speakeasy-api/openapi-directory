@@ -41,12 +41,16 @@ const (
 	DistributionGroupsPatchForOrgDefaultApplicationJSONErrorCodeEnumTooManyRequests     DistributionGroupsPatchForOrgDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DistributionGroupsPatchForOrgDefaultApplicationJSONErrorCodeEnum) ToPointer() *DistributionGroupsPatchForOrgDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DistributionGroupsPatchForOrgDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -60,10 +64,10 @@ func (e *DistributionGroupsPatchForOrgDefaultApplicationJSONErrorCodeEnum) Unmar
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DistributionGroupsPatchForOrgDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DistributionGroupsPatchForOrgDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsPatchForOrgDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsPatchForOrgDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -85,19 +89,23 @@ const (
 	DistributionGroupsPatchForOrg200ApplicationJSONOriginEnumHockeyapp DistributionGroupsPatchForOrg200ApplicationJSONOriginEnum = "hockeyapp"
 )
 
+func (e DistributionGroupsPatchForOrg200ApplicationJSONOriginEnum) ToPointer() *DistributionGroupsPatchForOrg200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *DistributionGroupsPatchForOrg200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = DistributionGroupsPatchForOrg200ApplicationJSONOriginEnum(s)
+		*e = DistributionGroupsPatchForOrg200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsPatchForOrg200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsPatchForOrg200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

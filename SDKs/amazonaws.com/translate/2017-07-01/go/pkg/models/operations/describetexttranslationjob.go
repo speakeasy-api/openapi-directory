@@ -16,17 +16,21 @@ const (
 	DescribeTextTranslationJobXAmzTargetEnumAwsShineFrontendService20170701DescribeTextTranslationJob DescribeTextTranslationJobXAmzTargetEnum = "AWSShineFrontendService_20170701.DescribeTextTranslationJob"
 )
 
+func (e DescribeTextTranslationJobXAmzTargetEnum) ToPointer() *DescribeTextTranslationJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTextTranslationJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShineFrontendService_20170701.DescribeTextTranslationJob":
-		*e = DescribeTextTranslationJobXAmzTargetEnum(s)
+		*e = DescribeTextTranslationJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTextTranslationJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTextTranslationJobXAmzTargetEnum: %v", v)
 	}
 }
 

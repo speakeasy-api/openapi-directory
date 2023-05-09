@@ -15,19 +15,23 @@ const (
 	MavenRepositoryPublicRepositoryEnumMavenCentral                MavenRepositoryPublicRepositoryEnum = "MAVEN_CENTRAL"
 )
 
+func (e MavenRepositoryPublicRepositoryEnum) ToPointer() *MavenRepositoryPublicRepositoryEnum {
+	return &e
+}
+
 func (e *MavenRepositoryPublicRepositoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLIC_REPOSITORY_UNSPECIFIED":
 		fallthrough
 	case "MAVEN_CENTRAL":
-		*e = MavenRepositoryPublicRepositoryEnum(s)
+		*e = MavenRepositoryPublicRepositoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MavenRepositoryPublicRepositoryEnum: %s", s)
+		return fmt.Errorf("invalid value for MavenRepositoryPublicRepositoryEnum: %v", v)
 	}
 }
 

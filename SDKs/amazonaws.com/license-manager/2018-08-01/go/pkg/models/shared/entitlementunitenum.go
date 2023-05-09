@@ -39,12 +39,16 @@ const (
 	EntitlementUnitEnumCountSecond     EntitlementUnitEnum = "Count/Second"
 )
 
+func (e EntitlementUnitEnum) ToPointer() *EntitlementUnitEnum {
+	return &e
+}
+
 func (e *EntitlementUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Count":
 		fallthrough
 	case "None":
@@ -98,9 +102,9 @@ func (e *EntitlementUnitEnum) UnmarshalJSON(data []byte) error {
 	case "Terabits/Second":
 		fallthrough
 	case "Count/Second":
-		*e = EntitlementUnitEnum(s)
+		*e = EntitlementUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntitlementUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for EntitlementUnitEnum: %v", v)
 	}
 }

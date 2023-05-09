@@ -17,12 +17,16 @@ const (
 	SQLIntegrationStateEnumReady            SQLIntegrationStateEnum = "READY"
 )
 
+func (e SQLIntegrationStateEnum) ToPointer() *SQLIntegrationStateEnum {
+	return &e
+}
+
 func (e *SQLIntegrationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -30,10 +34,10 @@ func (e *SQLIntegrationStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "READY":
-		*e = SQLIntegrationStateEnum(s)
+		*e = SQLIntegrationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SQLIntegrationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SQLIntegrationStateEnum: %v", v)
 	}
 }
 

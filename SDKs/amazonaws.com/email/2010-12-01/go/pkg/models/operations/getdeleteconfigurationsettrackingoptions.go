@@ -15,17 +15,21 @@ const (
 	GETDeleteConfigurationSetTrackingOptionsActionEnumDeleteConfigurationSetTrackingOptions GETDeleteConfigurationSetTrackingOptionsActionEnum = "DeleteConfigurationSetTrackingOptions"
 )
 
+func (e GETDeleteConfigurationSetTrackingOptionsActionEnum) ToPointer() *GETDeleteConfigurationSetTrackingOptionsActionEnum {
+	return &e
+}
+
 func (e *GETDeleteConfigurationSetTrackingOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteConfigurationSetTrackingOptions":
-		*e = GETDeleteConfigurationSetTrackingOptionsActionEnum(s)
+		*e = GETDeleteConfigurationSetTrackingOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteConfigurationSetTrackingOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteConfigurationSetTrackingOptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteConfigurationSetTrackingOptionsVersionEnumTwoThousandAndTen1201 GETDeleteConfigurationSetTrackingOptionsVersionEnum = "2010-12-01"
 )
 
+func (e GETDeleteConfigurationSetTrackingOptionsVersionEnum) ToPointer() *GETDeleteConfigurationSetTrackingOptionsVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteConfigurationSetTrackingOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETDeleteConfigurationSetTrackingOptionsVersionEnum(s)
+		*e = GETDeleteConfigurationSetTrackingOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteConfigurationSetTrackingOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteConfigurationSetTrackingOptionsVersionEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	BasicChartSeriesTargetAxisEnumRightAxis                         BasicChartSeriesTargetAxisEnum = "RIGHT_AXIS"
 )
 
+func (e BasicChartSeriesTargetAxisEnum) ToPointer() *BasicChartSeriesTargetAxisEnum {
+	return &e
+}
+
 func (e *BasicChartSeriesTargetAxisEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC_CHART_AXIS_POSITION_UNSPECIFIED":
 		fallthrough
 	case "BOTTOM_AXIS":
@@ -30,10 +34,10 @@ func (e *BasicChartSeriesTargetAxisEnum) UnmarshalJSON(data []byte) error {
 	case "LEFT_AXIS":
 		fallthrough
 	case "RIGHT_AXIS":
-		*e = BasicChartSeriesTargetAxisEnum(s)
+		*e = BasicChartSeriesTargetAxisEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BasicChartSeriesTargetAxisEnum: %s", s)
+		return fmt.Errorf("invalid value for BasicChartSeriesTargetAxisEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	BasicChartSeriesTypeEnumSteppedArea               BasicChartSeriesTypeEnum = "STEPPED_AREA"
 )
 
+func (e BasicChartSeriesTypeEnum) ToPointer() *BasicChartSeriesTypeEnum {
+	return &e
+}
+
 func (e *BasicChartSeriesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC_CHART_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BAR":
@@ -72,10 +80,10 @@ func (e *BasicChartSeriesTypeEnum) UnmarshalJSON(data []byte) error {
 	case "COMBO":
 		fallthrough
 	case "STEPPED_AREA":
-		*e = BasicChartSeriesTypeEnum(s)
+		*e = BasicChartSeriesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BasicChartSeriesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BasicChartSeriesTypeEnum: %v", v)
 	}
 }
 

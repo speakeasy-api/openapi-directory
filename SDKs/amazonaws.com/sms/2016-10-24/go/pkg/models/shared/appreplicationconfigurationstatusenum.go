@@ -14,18 +14,22 @@ const (
 	AppReplicationConfigurationStatusEnumConfigured    AppReplicationConfigurationStatusEnum = "CONFIGURED"
 )
 
+func (e AppReplicationConfigurationStatusEnum) ToPointer() *AppReplicationConfigurationStatusEnum {
+	return &e
+}
+
 func (e *AppReplicationConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_CONFIGURED":
 		fallthrough
 	case "CONFIGURED":
-		*e = AppReplicationConfigurationStatusEnum(s)
+		*e = AppReplicationConfigurationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppReplicationConfigurationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AppReplicationConfigurationStatusEnum: %v", v)
 	}
 }

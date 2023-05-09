@@ -98,12 +98,16 @@ const (
 	CreateCoipPoolRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateCoipPoolRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateCoipPoolRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateCoipPoolRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateCoipPoolRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateCoipPoolRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(d
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateCoipPoolRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateCoipPoolRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCoipPoolRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCoipPoolRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	AssociateElasticIPXAmzTargetEnumOpsWorks20130218AssociateElasticIP AssociateElasticIPXAmzTargetEnum = "OpsWorks_20130218.AssociateElasticIp"
 )
 
+func (e AssociateElasticIPXAmzTargetEnum) ToPointer() *AssociateElasticIPXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateElasticIPXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.AssociateElasticIp":
-		*e = AssociateElasticIPXAmzTargetEnum(s)
+		*e = AssociateElasticIPXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateElasticIPXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateElasticIPXAmzTargetEnum: %v", v)
 	}
 }
 

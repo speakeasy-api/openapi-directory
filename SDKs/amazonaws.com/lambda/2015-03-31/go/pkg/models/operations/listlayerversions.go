@@ -17,19 +17,23 @@ const (
 	ListLayerVersionsCompatibleArchitectureEnumArm64 ListLayerVersionsCompatibleArchitectureEnum = "arm64"
 )
 
+func (e ListLayerVersionsCompatibleArchitectureEnum) ToPointer() *ListLayerVersionsCompatibleArchitectureEnum {
+	return &e
+}
+
 func (e *ListLayerVersionsCompatibleArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "x86_64":
 		fallthrough
 	case "arm64":
-		*e = ListLayerVersionsCompatibleArchitectureEnum(s)
+		*e = ListLayerVersionsCompatibleArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLayerVersionsCompatibleArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLayerVersionsCompatibleArchitectureEnum: %v", v)
 	}
 }
 
@@ -65,14 +69,19 @@ const (
 	ListLayerVersionsCompatibleRuntimeEnumProvided     ListLayerVersionsCompatibleRuntimeEnum = "provided"
 	ListLayerVersionsCompatibleRuntimeEnumProvidedAl2  ListLayerVersionsCompatibleRuntimeEnum = "provided.al2"
 	ListLayerVersionsCompatibleRuntimeEnumNodejs18X    ListLayerVersionsCompatibleRuntimeEnum = "nodejs18.x"
+	ListLayerVersionsCompatibleRuntimeEnumPython310    ListLayerVersionsCompatibleRuntimeEnum = "python3.10"
 )
 
+func (e ListLayerVersionsCompatibleRuntimeEnum) ToPointer() *ListLayerVersionsCompatibleRuntimeEnum {
+	return &e
+}
+
 func (e *ListLayerVersionsCompatibleRuntimeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nodejs":
 		fallthrough
 	case "nodejs4.3":
@@ -128,10 +137,12 @@ func (e *ListLayerVersionsCompatibleRuntimeEnum) UnmarshalJSON(data []byte) erro
 	case "provided.al2":
 		fallthrough
 	case "nodejs18.x":
-		*e = ListLayerVersionsCompatibleRuntimeEnum(s)
+		fallthrough
+	case "python3.10":
+		*e = ListLayerVersionsCompatibleRuntimeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLayerVersionsCompatibleRuntimeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLayerVersionsCompatibleRuntimeEnum: %v", v)
 	}
 }
 

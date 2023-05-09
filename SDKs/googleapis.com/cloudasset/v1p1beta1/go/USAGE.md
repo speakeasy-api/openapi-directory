@@ -2,37 +2,35 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudassetIamPoliciesSearchAllRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
-        PageSize: 847252,
-        PageToken: "vel",
-        PrettyPrint: false,
-        Query: "error",
-        QuotaUser: "deserunt",
-        Scope: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-    }
-
     ctx := context.Background()
-    res, err := s.IamPolicies.CloudassetIamPoliciesSearchAll(ctx, req, operations.CloudassetIamPoliciesSearchAllSecurity{
+    res, err := s.IamPolicies.CloudassetIamPoliciesSearchAll(ctx, operations.CloudassetIamPoliciesSearchAllRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
+        PageSize: sdk.Int64(847252),
+        PageToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        Query: sdk.String("error"),
+        QuotaUser: sdk.String("deserunt"),
+        Scope: "suscipit",
+        UploadType: sdk.String("iure"),
+        UploadProtocol: sdk.String("magnam"),
+    }, operations.CloudassetIamPoliciesSearchAllSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

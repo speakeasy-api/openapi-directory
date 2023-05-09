@@ -16,17 +16,21 @@ const (
 	UpdatePoolXAmzTargetEnumPinpointSmsVoiceV2UpdatePool UpdatePoolXAmzTargetEnum = "PinpointSMSVoiceV2.UpdatePool"
 )
 
+func (e UpdatePoolXAmzTargetEnum) ToPointer() *UpdatePoolXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdatePoolXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.UpdatePool":
-		*e = UpdatePoolXAmzTargetEnum(s)
+		*e = UpdatePoolXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePoolXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePoolXAmzTargetEnum: %v", v)
 	}
 }
 

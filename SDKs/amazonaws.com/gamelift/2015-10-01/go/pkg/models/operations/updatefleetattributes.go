@@ -16,17 +16,21 @@ const (
 	UpdateFleetAttributesXAmzTargetEnumGameLiftUpdateFleetAttributes UpdateFleetAttributesXAmzTargetEnum = "GameLift.UpdateFleetAttributes"
 )
 
+func (e UpdateFleetAttributesXAmzTargetEnum) ToPointer() *UpdateFleetAttributesXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateFleetAttributesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.UpdateFleetAttributes":
-		*e = UpdateFleetAttributesXAmzTargetEnum(s)
+		*e = UpdateFleetAttributesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateFleetAttributesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateFleetAttributesXAmzTargetEnum: %v", v)
 	}
 }
 

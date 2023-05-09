@@ -241,7 +241,10 @@ func (s *settings) CloudsearchSettingsSearchapplicationsCreate(ctx context.Conte
 // CloudsearchSettingsSearchapplicationsDelete - Deletes a search application. **Note:** This API requires an admin account to execute.
 func (s *settings) CloudsearchSettingsSearchapplicationsDelete(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsDeleteRequest, security operations.CloudsearchSettingsSearchapplicationsDeleteSecurity) (*operations.CloudsearchSettingsSearchapplicationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -289,7 +292,10 @@ func (s *settings) CloudsearchSettingsSearchapplicationsDelete(ctx context.Conte
 // CloudsearchSettingsSearchapplicationsGet - Gets the specified search application. **Note:** This API requires an admin account to execute.
 func (s *settings) CloudsearchSettingsSearchapplicationsGet(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsGetRequest, security operations.CloudsearchSettingsSearchapplicationsGetSecurity) (*operations.CloudsearchSettingsSearchapplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -385,7 +391,10 @@ func (s *settings) CloudsearchSettingsSearchapplicationsList(ctx context.Context
 // CloudsearchSettingsSearchapplicationsPatch - Updates a search application. **Note:** This API requires an admin account to execute.
 func (s *settings) CloudsearchSettingsSearchapplicationsPatch(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsPatchRequest, security operations.CloudsearchSettingsSearchapplicationsPatchSecurity) (*operations.CloudsearchSettingsSearchapplicationsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchApplicationInput", "json")
 	if err != nil {
@@ -440,7 +449,10 @@ func (s *settings) CloudsearchSettingsSearchapplicationsPatch(ctx context.Contex
 // CloudsearchSettingsSearchapplicationsReset - Resets a search application to default settings. This will return an empty response. **Note:** This API requires an admin account to execute.
 func (s *settings) CloudsearchSettingsSearchapplicationsReset(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsResetRequest, security operations.CloudsearchSettingsSearchapplicationsResetSecurity) (*operations.CloudsearchSettingsSearchapplicationsResetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}:reset", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}:reset", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResetSearchApplicationRequest", "json")
 	if err != nil {
@@ -495,7 +507,10 @@ func (s *settings) CloudsearchSettingsSearchapplicationsReset(ctx context.Contex
 // CloudsearchSettingsSearchapplicationsUpdate - Updates a search application. **Note:** This API requires an admin account to execute.
 func (s *settings) CloudsearchSettingsSearchapplicationsUpdate(ctx context.Context, request operations.CloudsearchSettingsSearchapplicationsUpdateRequest, security operations.CloudsearchSettingsSearchapplicationsUpdateSecurity) (*operations.CloudsearchSettingsSearchapplicationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/settings/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchApplicationInput", "json")
 	if err != nil {

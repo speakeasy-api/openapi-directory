@@ -16,17 +16,21 @@ const (
 	AddTagsToResourceXAmzTargetEnumAmazonDmSv20160101AddTagsToResource AddTagsToResourceXAmzTargetEnum = "AmazonDMSv20160101.AddTagsToResource"
 )
 
+func (e AddTagsToResourceXAmzTargetEnum) ToPointer() *AddTagsToResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddTagsToResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.AddTagsToResource":
-		*e = AddTagsToResourceXAmzTargetEnum(s)
+		*e = AddTagsToResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddTagsToResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddTagsToResourceXAmzTargetEnum: %v", v)
 	}
 }
 

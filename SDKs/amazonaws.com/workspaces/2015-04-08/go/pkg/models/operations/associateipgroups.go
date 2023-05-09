@@ -16,17 +16,21 @@ const (
 	AssociateIPGroupsXAmzTargetEnumWorkspacesServiceAssociateIPGroups AssociateIPGroupsXAmzTargetEnum = "WorkspacesService.AssociateIpGroups"
 )
 
+func (e AssociateIPGroupsXAmzTargetEnum) ToPointer() *AssociateIPGroupsXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateIPGroupsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.AssociateIpGroups":
-		*e = AssociateIPGroupsXAmzTargetEnum(s)
+		*e = AssociateIPGroupsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateIPGroupsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateIPGroupsXAmzTargetEnum: %v", v)
 	}
 }
 

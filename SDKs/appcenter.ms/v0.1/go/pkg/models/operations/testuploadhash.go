@@ -21,21 +21,25 @@ const (
 	TestUploadHashTestCloudFileHashFileTypeEnumTestFile TestUploadHashTestCloudFileHashFileTypeEnum = "test-file"
 )
 
+func (e TestUploadHashTestCloudFileHashFileTypeEnum) ToPointer() *TestUploadHashTestCloudFileHashFileTypeEnum {
+	return &e
+}
+
 func (e *TestUploadHashTestCloudFileHashFileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dsym-file":
 		fallthrough
 	case "app-file":
 		fallthrough
 	case "test-file":
-		*e = TestUploadHashTestCloudFileHashFileTypeEnum(s)
+		*e = TestUploadHashTestCloudFileHashFileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestUploadHashTestCloudFileHashFileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TestUploadHashTestCloudFileHashFileTypeEnum: %v", v)
 	}
 }
 

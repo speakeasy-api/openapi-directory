@@ -16,17 +16,21 @@ const (
 	DescribeConnectionAliasPermissionsXAmzTargetEnumWorkspacesServiceDescribeConnectionAliasPermissions DescribeConnectionAliasPermissionsXAmzTargetEnum = "WorkspacesService.DescribeConnectionAliasPermissions"
 )
 
+func (e DescribeConnectionAliasPermissionsXAmzTargetEnum) ToPointer() *DescribeConnectionAliasPermissionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeConnectionAliasPermissionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.DescribeConnectionAliasPermissions":
-		*e = DescribeConnectionAliasPermissionsXAmzTargetEnum(s)
+		*e = DescribeConnectionAliasPermissionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeConnectionAliasPermissionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeConnectionAliasPermissionsXAmzTargetEnum: %v", v)
 	}
 }
 

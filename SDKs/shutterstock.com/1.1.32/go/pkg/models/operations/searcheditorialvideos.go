@@ -24,21 +24,25 @@ const (
 	SearchEditorialVideosResolutionEnumStandardDefinition SearchEditorialVideosResolutionEnum = "standard_definition"
 )
 
+func (e SearchEditorialVideosResolutionEnum) ToPointer() *SearchEditorialVideosResolutionEnum {
+	return &e
+}
+
 func (e *SearchEditorialVideosResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "4k":
 		fallthrough
 	case "high_definition":
 		fallthrough
 	case "standard_definition":
-		*e = SearchEditorialVideosResolutionEnum(s)
+		*e = SearchEditorialVideosResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchEditorialVideosResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchEditorialVideosResolutionEnum: %v", v)
 	}
 }
 
@@ -51,21 +55,25 @@ const (
 	SearchEditorialVideosSortEnumOldest   SearchEditorialVideosSortEnum = "oldest"
 )
 
+func (e SearchEditorialVideosSortEnum) ToPointer() *SearchEditorialVideosSortEnum {
+	return &e
+}
+
 func (e *SearchEditorialVideosSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "relevant":
 		fallthrough
 	case "newest":
 		fallthrough
 	case "oldest":
-		*e = SearchEditorialVideosSortEnum(s)
+		*e = SearchEditorialVideosSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchEditorialVideosSortEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchEditorialVideosSortEnum: %v", v)
 	}
 }
 

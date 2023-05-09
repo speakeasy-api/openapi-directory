@@ -14,18 +14,22 @@ const (
 	WorkGroupStateEnumDisabled WorkGroupStateEnum = "DISABLED"
 )
 
+func (e WorkGroupStateEnum) ToPointer() *WorkGroupStateEnum {
+	return &e
+}
+
 func (e *WorkGroupStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = WorkGroupStateEnum(s)
+		*e = WorkGroupStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkGroupStateEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkGroupStateEnum: %v", v)
 	}
 }

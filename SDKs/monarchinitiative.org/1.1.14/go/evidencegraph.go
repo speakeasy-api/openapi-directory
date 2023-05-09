@@ -36,7 +36,10 @@ func newEvidenceGraph(defaultClient, securityClient HTTPClient, serverURL, langu
 // Note that every association is assumed to have a unique ID
 func (s *evidenceGraph) GetEvidenceGraphObject(ctx context.Context, request operations.GetEvidenceGraphObjectRequest) (*operations.GetEvidenceGraphObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/evidence/graph/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/evidence/graph/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *evidenceGraph) GetEvidenceGraphObject(ctx context.Context, request oper
 // Note that every association is assumed to have a unique ID
 func (s *evidenceGraph) GetEvidenceGraphTable(ctx context.Context, request operations.GetEvidenceGraphTableRequest) (*operations.GetEvidenceGraphTableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/evidence/graph/{id}/table", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/evidence/graph/{id}/table", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,12 +16,16 @@ const (
 	LocationFeaturesEnumFunctions                  LocationFeaturesEnum = "FUNCTIONS"
 )
 
+func (e LocationFeaturesEnum) ToPointer() *LocationFeaturesEnum {
+	return &e
+}
+
 func (e *LocationFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCATION_FEATURE_UNSPECIFIED":
 		fallthrough
 	case "FIRESTORE":
@@ -29,10 +33,10 @@ func (e *LocationFeaturesEnum) UnmarshalJSON(data []byte) error {
 	case "DEFAULT_STORAGE":
 		fallthrough
 	case "FUNCTIONS":
-		*e = LocationFeaturesEnum(s)
+		*e = LocationFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocationFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for LocationFeaturesEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	LocationTypeEnumMultiRegional           LocationTypeEnum = "MULTI_REGIONAL"
 )
 
+func (e LocationTypeEnum) ToPointer() *LocationTypeEnum {
+	return &e
+}
+
 func (e *LocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "REGIONAL":
 		fallthrough
 	case "MULTI_REGIONAL":
-		*e = LocationTypeEnum(s)
+		*e = LocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LocationTypeEnum: %v", v)
 	}
 }
 

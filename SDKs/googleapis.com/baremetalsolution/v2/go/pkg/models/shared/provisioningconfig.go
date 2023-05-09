@@ -45,12 +45,16 @@ const (
 	ProvisioningConfigStateEnumFailed           ProvisioningConfigStateEnum = "FAILED"
 )
 
+func (e ProvisioningConfigStateEnum) ToPointer() *ProvisioningConfigStateEnum {
+	return &e
+}
+
 func (e *ProvisioningConfigStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "DRAFT":
@@ -66,10 +70,10 @@ func (e *ProvisioningConfigStateEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLED":
 		fallthrough
 	case "FAILED":
-		*e = ProvisioningConfigStateEnum(s)
+		*e = ProvisioningConfigStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisioningConfigStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisioningConfigStateEnum: %v", v)
 	}
 }
 

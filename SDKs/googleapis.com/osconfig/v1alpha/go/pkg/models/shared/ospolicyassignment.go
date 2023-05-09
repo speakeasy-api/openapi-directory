@@ -34,12 +34,16 @@ const (
 	OSPolicyAssignmentRolloutStateEnumSucceeded               OSPolicyAssignmentRolloutStateEnum = "SUCCEEDED"
 )
 
+func (e OSPolicyAssignmentRolloutStateEnum) ToPointer() *OSPolicyAssignmentRolloutStateEnum {
+	return &e
+}
+
 func (e *OSPolicyAssignmentRolloutStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLLOUT_STATE_UNSPECIFIED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -49,10 +53,10 @@ func (e *OSPolicyAssignmentRolloutStateEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLED":
 		fallthrough
 	case "SUCCEEDED":
-		*e = OSPolicyAssignmentRolloutStateEnum(s)
+		*e = OSPolicyAssignmentRolloutStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OSPolicyAssignmentRolloutStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OSPolicyAssignmentRolloutStateEnum: %v", v)
 	}
 }
 

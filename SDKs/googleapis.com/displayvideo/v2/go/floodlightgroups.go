@@ -34,7 +34,10 @@ func newFloodlightGroups(defaultClient, securityClient HTTPClient, serverURL, la
 // DisplayvideoFloodlightGroupsGet - Gets a Floodlight group.
 func (s *floodlightGroups) DisplayvideoFloodlightGroupsGet(ctx context.Context, request operations.DisplayvideoFloodlightGroupsGetRequest, security operations.DisplayvideoFloodlightGroupsGetSecurity) (*operations.DisplayvideoFloodlightGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/floodlightGroups/{floodlightGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/floodlightGroups/{floodlightGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

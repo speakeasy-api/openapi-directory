@@ -13,204 +13,212 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/datamigrat
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.DatamigrationProjectsLocationsConnectionProfilesCreate(ctx, operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ConnectionProfileInput: &shared.ConnectionProfileInput{
             Alloydb: &shared.AlloyDbConnectionProfileInput{
-                ClusterID: "provident",
+                ClusterID: sdk.String("provident"),
                 Settings: &shared.AlloyDbSettingsInput{
+                    EncryptionConfig: &shared.EncryptionConfig{
+                        KmsKeyName: sdk.String("distinctio"),
+                    },
                     InitialUser: &shared.UserPasswordInput{
-                        Password: "distinctio",
-                        User: "quibusdam",
+                        Password: sdk.String("quibusdam"),
+                        User: sdk.String("unde"),
                     },
                     Labels: map[string]string{
-                        "nulla": "corrupti",
-                        "illum": "vel",
-                        "error": "deserunt",
+                        "corrupti": "illum",
+                        "vel": "error",
+                        "deserunt": "suscipit",
+                        "iure": "magnam",
                     },
                     PrimaryInstanceSettings: &shared.PrimaryInstanceSettingsInput{
                         DatabaseFlags: map[string]string{
-                            "iure": "magnam",
-                            "debitis": "ipsa",
+                            "ipsa": "delectus",
+                            "tempora": "suscipit",
+                            "molestiae": "minus",
+                            "placeat": "voluptatum",
                         },
-                        ID: "delectus",
+                        ID: sdk.String("796ed151-a05d-4fc2-9df7-cc78ca1ba928"),
                         Labels: map[string]string{
-                            "suscipit": "molestiae",
-                            "minus": "placeat",
+                            "optio": "totam",
+                            "beatae": "commodi",
+                            "molestiae": "modi",
+                            "qui": "impedit",
                         },
                         MachineConfig: &shared.MachineConfig{
-                            CPUCount: 528895,
+                            CPUCount: sdk.Int(736918),
                         },
                     },
-                    VpcNetwork: "iusto",
+                    VpcNetwork: sdk.String("esse"),
                 },
             },
             Cloudsql: &shared.CloudSQLConnectionProfileInput{
                 Settings: &shared.CloudSQLSettingsInput{
-                    ActivationPolicy: "ALWAYS",
-                    AutoStorageIncrease: false,
-                    AvailabilityType: "ZONAL",
-                    CmekKeyName: "recusandae",
-                    Collation: "temporibus",
-                    DataDiskSizeGb: "ab",
-                    DataDiskType: "PD_SSD",
+                    ActivationPolicy: shared.CloudSQLSettingsActivationPolicyEnumSQLActivationPolicyUnspecified.ToPointer(),
+                    AutoStorageIncrease: sdk.Bool(false),
+                    AvailabilityType: shared.CloudSQLSettingsAvailabilityTypeEnumZonal.ToPointer(),
+                    CmekKeyName: sdk.String("aspernatur"),
+                    Collation: sdk.String("perferendis"),
+                    DataDiskSizeGb: sdk.String("ad"),
+                    DataDiskType: shared.CloudSQLSettingsDataDiskTypeEnumPdSsd.ToPointer(),
                     DatabaseFlags: map[string]string{
-                        "deserunt": "perferendis",
-                    },
-                    DatabaseVersion: "POSTGRES_9_6",
-                    IPConfig: &shared.SQLIPConfig{
-                        AuthorizedNetworks: []shared.SQLACLEntry{
-                            shared.SQLACLEntry{
-                                ExpireTime: "sapiente",
-                                Label: "quo",
-                                TTL: "odit",
-                                Value: "at",
-                            },
-                            shared.SQLACLEntry{
-                                ExpireTime: "at",
-                                Label: "maiores",
-                                TTL: "molestiae",
-                                Value: "quod",
-                            },
-                            shared.SQLACLEntry{
-                                ExpireTime: "quod",
-                                Label: "esse",
-                                TTL: "totam",
-                                Value: "porro",
-                            },
-                            shared.SQLACLEntry{
-                                ExpireTime: "dolorum",
-                                Label: "dicta",
-                                TTL: "nam",
-                                Value: "officia",
-                            },
-                        },
-                        EnableIpv4: false,
-                        PrivateNetwork: "occaecati",
-                        RequireSsl: false,
-                    },
-                    RootPassword: "fugit",
-                    SecondaryZone: "deleniti",
-                    SourceID: "hic",
-                    StorageAutoResizeLimit: "optio",
-                    Tier: "totam",
-                    UserLabels: map[string]string{
-                        "commodi": "molestiae",
-                    },
-                    Zone: "modi",
-                },
-            },
-            DisplayName: "qui",
-            Error: &shared.Status{
-                Code: 774234,
-                Details: []map[string]interface{}{
-                    map[string]interface{}{
-                        "ipsum": "excepturi",
-                        "aspernatur": "perferendis",
-                    },
-                    map[string]interface{}{
-                        "natus": "sed",
                         "iste": "dolor",
                     },
+                    DatabaseVersion: shared.CloudSQLSettingsDatabaseVersionEnumMysql80.ToPointer(),
+                    IPConfig: &shared.SQLIPConfig{
+                        AllocatedIPRange: sdk.String("laboriosam"),
+                        AuthorizedNetworks: []shared.SQLACLEntry{
+                            shared.SQLACLEntry{
+                                ExpireTime: sdk.String("saepe"),
+                                Label: sdk.String("fuga"),
+                                TTL: sdk.String("in"),
+                                Value: sdk.String("corporis"),
+                            },
+                            shared.SQLACLEntry{
+                                ExpireTime: sdk.String("iste"),
+                                Label: sdk.String("iure"),
+                                TTL: sdk.String("saepe"),
+                                Value: sdk.String("quidem"),
+                            },
+                            shared.SQLACLEntry{
+                                ExpireTime: sdk.String("architecto"),
+                                Label: sdk.String("ipsa"),
+                                TTL: sdk.String("reiciendis"),
+                                Value: sdk.String("est"),
+                            },
+                            shared.SQLACLEntry{
+                                ExpireTime: sdk.String("mollitia"),
+                                Label: sdk.String("laborum"),
+                                TTL: sdk.String("dolores"),
+                                Value: sdk.String("dolorem"),
+                            },
+                        },
+                        EnableIpv4: sdk.Bool(false),
+                        PrivateNetwork: sdk.String("corporis"),
+                        RequireSsl: sdk.Bool(false),
+                    },
+                    RootPassword: sdk.String("explicabo"),
+                    SecondaryZone: sdk.String("nobis"),
+                    SourceID: sdk.String("enim"),
+                    StorageAutoResizeLimit: sdk.String("omnis"),
+                    Tier: sdk.String("nemo"),
+                    UserLabels: map[string]string{
+                        "excepturi": "accusantium",
+                        "iure": "culpa",
+                    },
+                    Zone: sdk.String("doloribus"),
+                },
+            },
+            DisplayName: sdk.String("sapiente"),
+            Error: &shared.Status{
+                Code: sdk.Int(102044),
+                Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "laboriosam": "hic",
-                        "saepe": "fuga",
-                        "in": "corporis",
+                        "culpa": "consequuntur",
+                    },
+                    map[string]interface{}{
+                        "mollitia": "occaecati",
+                        "numquam": "commodi",
+                        "quam": "molestiae",
+                        "velit": "error",
+                    },
+                    map[string]interface{}{
+                        "quis": "vitae",
                     },
                 },
-                Message: "iste",
+                Message: sdk.String("laborum"),
             },
             Labels: map[string]string{
-                "saepe": "quidem",
-                "architecto": "ipsa",
+                "enim": "odit",
+                "quo": "sequi",
+                "tenetur": "ipsam",
             },
             Mysql: &shared.MySQLConnectionProfileInput{
-                CloudSQLID: "reiciendis",
-                Host: "est",
-                Password: "mollitia",
-                Port: 670638,
+                CloudSQLID: sdk.String("id"),
+                Host: sdk.String("possimus"),
+                Password: sdk.String("aut"),
+                Port: sdk.Int(97101),
                 Ssl: &shared.SslConfigInput{
-                    CaCertificate: "dolores",
-                    ClientCertificate: "dolorem",
-                    ClientKey: "corporis",
+                    CaCertificate: sdk.String("error"),
+                    ClientCertificate: sdk.String("temporibus"),
+                    ClientKey: sdk.String("laborum"),
                 },
-                Username: "Braulio60",
+                Username: sdk.String("Austyn_Witting46"),
             },
-            Name: "nemo",
+            Name: sdk.String("Jan Bednar"),
             Oracle: &shared.OracleConnectionProfileInput{
-                DatabaseService: "minima",
+                DatabaseService: sdk.String("cum"),
                 ForwardSSHConnectivity: &shared.ForwardSSHTunnelConnectivity{
-                    Hostname: "nippy-apse.info",
-                    Password: "culpa",
-                    Port: 988374,
-                    PrivateKey: "sapiente",
-                    Username: "Bart63",
+                    Hostname: sdk.String("agile-arch-rival.info"),
+                    Password: sdk.String("ut"),
+                    Port: sdk.Int(979587),
+                    PrivateKey: sdk.String("dicta"),
+                    Username: sdk.String("Floy.Gulgowski"),
                 },
-                Host: "consequuntur",
-                Password: "repellat",
-                Port: 653108,
+                Host: sdk.String("harum"),
+                Password: sdk.String("enim"),
+                Port: sdk.Int(880476),
                 PrivateConnectivity: &shared.PrivateConnectivity{
-                    PrivateConnection: "occaecati",
+                    PrivateConnection: sdk.String("commodi"),
                 },
                 StaticServiceIPConnectivity: map[string]interface{}{
-                    "commodi": "quam",
-                    "molestiae": "velit",
+                    "quae": "ipsum",
+                    "quidem": "molestias",
+                    "excepturi": "pariatur",
+                    "modi": "praesentium",
                 },
-                Username: "Linda.Cronin",
+                Username: sdk.String("Judah92"),
             },
             Postgresql: &shared.PostgreSQLConnectionProfileInput{
-                CloudSQLID: "laborum",
-                Host: "animi",
-                Password: "enim",
-                Port: 138183,
+                CloudSQLID: sdk.String("sint"),
+                Host: sdk.String("veritatis"),
+                Password: sdk.String("itaque"),
+                Port: sdk.Int(277718),
                 PrivateServiceConnectConnectivity: &shared.PrivateServiceConnectConnectivity{
-                    ServiceAttachment: "quo",
+                    ServiceAttachment: sdk.String("enim"),
                 },
                 Ssl: &shared.SslConfigInput{
-                    CaCertificate: "sequi",
-                    ClientCertificate: "tenetur",
-                    ClientKey: "ipsam",
+                    CaCertificate: sdk.String("consequatur"),
+                    ClientCertificate: sdk.String("est"),
+                    ClientKey: sdk.String("quibusdam"),
                 },
                 StaticIPConnectivity: map[string]interface{}{
-                    "possimus": "aut",
-                    "quasi": "error",
-                    "temporibus": "laborum",
+                    "deserunt": "distinctio",
                 },
-                Username: "Austyn_Witting46",
+                Username: sdk.String("Ron18"),
             },
-            Provider: "RDS",
-            State: "FAILED",
+            Provider: shared.ConnectionProfileProviderEnumCloudsql.ToPointer(),
+            State: shared.ConnectionProfileStateEnumUpdating.ToPointer(),
         },
-        AccessToken: "ipsa",
-        Alt: "media",
-        Callback: "voluptate",
-        ConnectionProfileID: "cum",
-        Fields: "perferendis",
-        Key: "doloremque",
-        OauthToken: "reprehenderit",
-        Parent: "ut",
-        PrettyPrint: false,
-        QuotaUser: "maiores",
-        RequestID: "dicta",
-        SkipValidation: false,
-        UploadType: "corporis",
-        UploadProtocol: "dolore",
-        ValidateOnly: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.DatamigrationProjectsLocationsConnectionProfilesCreate(ctx, req, operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity{
+        AccessToken: sdk.String("quos"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("magni"),
+        ConnectionProfileID: sdk.String("assumenda"),
+        Fields: sdk.String("ipsam"),
+        Key: sdk.String("alias"),
+        OauthToken: sdk.String("fugit"),
+        Parent: "dolorum",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("excepturi"),
+        RequestID: sdk.String("tempora"),
+        SkipValidation: sdk.Bool(false),
+        UploadType: sdk.String("facilis"),
+        UploadProtocol: sdk.String("tempore"),
+        ValidateOnly: sdk.Bool(false),
+    }, operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -229,42 +237,42 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `DatamigrationProjectsLocationsConnectionProfilesCreate` - Creates a new connection profile in a given project and location.
-* `DatamigrationProjectsLocationsConnectionProfilesList` - Retrieves a list of all connection profiles in a given project and location.
-* `DatamigrationProjectsLocationsConversionWorkspacesApply` - Applies draft tree onto a specific destination database.
-* `DatamigrationProjectsLocationsConversionWorkspacesCommit` - Marks all the data in the conversion workspace as committed.
-* `DatamigrationProjectsLocationsConversionWorkspacesConvert` - Creates a draft tree schema for the destination database.
-* `DatamigrationProjectsLocationsConversionWorkspacesCreate` - Creates a new conversion workspace in a given project and location.
-* `DatamigrationProjectsLocationsConversionWorkspacesDescribeConversionWorkspaceRevisions` - Retrieves a list of committed revisions of a specific conversion workspace.
-* `DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntities` - Describes the database entities tree for a specific conversion workspace and a specific tree type. Database entities are not resources like conversion workspaces or mapping rules, and they can't be created, updated or deleted. Instead, they are simple data objects describing the structure of the client database.
-* `DatamigrationProjectsLocationsConversionWorkspacesList` - Lists conversion workspaces in a given project and location.
-* `DatamigrationProjectsLocationsConversionWorkspacesMappingRulesImport` - Imports the mapping rules for a given conversion workspace. Supports various formats of external rules files.
-* `DatamigrationProjectsLocationsConversionWorkspacesRollback` - Rolls back a conversion workspace to the last committed snapshot.
-* `DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobs` - Searches/lists the background jobs for a specific conversion workspace. The background jobs are not resources like conversion workspaces or mapping rules, and they can't be created, updated or deleted. Instead, they are a way to expose the data plane jobs log.
-* `DatamigrationProjectsLocationsConversionWorkspacesSeed` - Imports a snapshot of the source database into the conversion workspace.
-* `DatamigrationProjectsLocationsFetchStaticIps` - Fetches a set of static IP addresses that need to be allowlisted by the customer when using the static-IP connectivity method.
-* `DatamigrationProjectsLocationsList` - Lists information about the supported locations for this service.
-* `DatamigrationProjectsLocationsMigrationJobsCreate` - Creates a new migration job in a given project and location.
-* `DatamigrationProjectsLocationsMigrationJobsGenerateSSHScript` - Generate a SSH configuration script to configure the reverse SSH connectivity.
-* `DatamigrationProjectsLocationsMigrationJobsGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `DatamigrationProjectsLocationsMigrationJobsList` - Lists migration jobs in a given project and location.
-* `DatamigrationProjectsLocationsMigrationJobsPatch` - Updates the parameters of a single migration job.
-* `DatamigrationProjectsLocationsMigrationJobsPromote` - Promote a migration job, stopping replication to the destination and promoting the destination to be a standalone database.
-* `DatamigrationProjectsLocationsMigrationJobsRestart` - Restart a stopped or failed migration job, resetting the destination instance to its original state and starting the migration process from scratch.
-* `DatamigrationProjectsLocationsMigrationJobsResume` - Resume a migration job that is currently stopped and is resumable (was stopped during CDC phase).
-* `DatamigrationProjectsLocationsMigrationJobsSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-* `DatamigrationProjectsLocationsMigrationJobsStart` - Start an already created migration job.
-* `DatamigrationProjectsLocationsMigrationJobsStop` - Stops a running migration job.
-* `DatamigrationProjectsLocationsMigrationJobsTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-* `DatamigrationProjectsLocationsMigrationJobsVerify` - Verify a migration job, making sure the destination can reach the source and that all configuration and prerequisites are met.
-* `DatamigrationProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `DatamigrationProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `DatamigrationProjectsLocationsPrivateConnectionsCreate` - Creates a new private connection in a given project and location.
-* `DatamigrationProjectsLocationsPrivateConnectionsDelete` - Deletes a single Database Migration Service private connection.
-* `DatamigrationProjectsLocationsPrivateConnectionsGet` - Gets details of a single private connection.
-* `DatamigrationProjectsLocationsPrivateConnectionsList` - Retrieves a list of private connections in a given project and location.
+* [DatamigrationProjectsLocationsConnectionProfilesCreate](docs/projects/README.md#datamigrationprojectslocationsconnectionprofilescreate) - Creates a new connection profile in a given project and location.
+* [DatamigrationProjectsLocationsConnectionProfilesList](docs/projects/README.md#datamigrationprojectslocationsconnectionprofileslist) - Retrieves a list of all connection profiles in a given project and location.
+* [DatamigrationProjectsLocationsConversionWorkspacesApply](docs/projects/README.md#datamigrationprojectslocationsconversionworkspacesapply) - Applies draft tree onto a specific destination database.
+* [DatamigrationProjectsLocationsConversionWorkspacesCommit](docs/projects/README.md#datamigrationprojectslocationsconversionworkspacescommit) - Marks all the data in the conversion workspace as committed.
+* [DatamigrationProjectsLocationsConversionWorkspacesConvert](docs/projects/README.md#datamigrationprojectslocationsconversionworkspacesconvert) - Creates a draft tree schema for the destination database.
+* [DatamigrationProjectsLocationsConversionWorkspacesCreate](docs/projects/README.md#datamigrationprojectslocationsconversionworkspacescreate) - Creates a new conversion workspace in a given project and location.
+* [DatamigrationProjectsLocationsConversionWorkspacesDescribeConversionWorkspaceRevisions](docs/projects/README.md#datamigrationprojectslocationsconversionworkspacesdescribeconversionworkspacerevisions) - Retrieves a list of committed revisions of a specific conversion workspace.
+* [DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntities](docs/projects/README.md#datamigrationprojectslocationsconversionworkspacesdescribedatabaseentities) - Describes the database entities tree for a specific conversion workspace and a specific tree type. Database entities are not resources like conversion workspaces or mapping rules, and they can't be created, updated or deleted. Instead, they are simple data objects describing the structure of the client database.
+* [DatamigrationProjectsLocationsConversionWorkspacesList](docs/projects/README.md#datamigrationprojectslocationsconversionworkspaceslist) - Lists conversion workspaces in a given project and location.
+* [DatamigrationProjectsLocationsConversionWorkspacesMappingRulesImport](docs/projects/README.md#datamigrationprojectslocationsconversionworkspacesmappingrulesimport) - Imports the mapping rules for a given conversion workspace. Supports various formats of external rules files.
+* [DatamigrationProjectsLocationsConversionWorkspacesRollback](docs/projects/README.md#datamigrationprojectslocationsconversionworkspacesrollback) - Rolls back a conversion workspace to the last committed snapshot.
+* [DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobs](docs/projects/README.md#datamigrationprojectslocationsconversionworkspacessearchbackgroundjobs) - Searches/lists the background jobs for a specific conversion workspace. The background jobs are not resources like conversion workspaces or mapping rules, and they can't be created, updated or deleted. Instead, they are a way to expose the data plane jobs log.
+* [DatamigrationProjectsLocationsConversionWorkspacesSeed](docs/projects/README.md#datamigrationprojectslocationsconversionworkspacesseed) - Imports a snapshot of the source database into the conversion workspace.
+* [DatamigrationProjectsLocationsFetchStaticIps](docs/projects/README.md#datamigrationprojectslocationsfetchstaticips) - Fetches a set of static IP addresses that need to be allowlisted by the customer when using the static-IP connectivity method.
+* [DatamigrationProjectsLocationsList](docs/projects/README.md#datamigrationprojectslocationslist) - Lists information about the supported locations for this service.
+* [DatamigrationProjectsLocationsMigrationJobsCreate](docs/projects/README.md#datamigrationprojectslocationsmigrationjobscreate) - Creates a new migration job in a given project and location.
+* [DatamigrationProjectsLocationsMigrationJobsGenerateSSHScript](docs/projects/README.md#datamigrationprojectslocationsmigrationjobsgeneratesshscript) - Generate a SSH configuration script to configure the reverse SSH connectivity.
+* [DatamigrationProjectsLocationsMigrationJobsList](docs/projects/README.md#datamigrationprojectslocationsmigrationjobslist) - Lists migration jobs in a given project and location.
+* [DatamigrationProjectsLocationsMigrationJobsPatch](docs/projects/README.md#datamigrationprojectslocationsmigrationjobspatch) - Updates the parameters of a single migration job.
+* [DatamigrationProjectsLocationsMigrationJobsPromote](docs/projects/README.md#datamigrationprojectslocationsmigrationjobspromote) - Promote a migration job, stopping replication to the destination and promoting the destination to be a standalone database.
+* [DatamigrationProjectsLocationsMigrationJobsRestart](docs/projects/README.md#datamigrationprojectslocationsmigrationjobsrestart) - Restart a stopped or failed migration job, resetting the destination instance to its original state and starting the migration process from scratch.
+* [DatamigrationProjectsLocationsMigrationJobsResume](docs/projects/README.md#datamigrationprojectslocationsmigrationjobsresume) - Resume a migration job that is currently stopped and is resumable (was stopped during CDC phase).
+* [DatamigrationProjectsLocationsMigrationJobsStart](docs/projects/README.md#datamigrationprojectslocationsmigrationjobsstart) - Start an already created migration job.
+* [DatamigrationProjectsLocationsMigrationJobsStop](docs/projects/README.md#datamigrationprojectslocationsmigrationjobsstop) - Stops a running migration job.
+* [DatamigrationProjectsLocationsMigrationJobsVerify](docs/projects/README.md#datamigrationprojectslocationsmigrationjobsverify) - Verify a migration job, making sure the destination can reach the source and that all configuration and prerequisites are met.
+* [DatamigrationProjectsLocationsOperationsCancel](docs/projects/README.md#datamigrationprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [DatamigrationProjectsLocationsOperationsList](docs/projects/README.md#datamigrationprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [DatamigrationProjectsLocationsPrivateConnectionsCreate](docs/projects/README.md#datamigrationprojectslocationsprivateconnectionscreate) - Creates a new private connection in a given project and location.
+* [DatamigrationProjectsLocationsPrivateConnectionsDelete](docs/projects/README.md#datamigrationprojectslocationsprivateconnectionsdelete) - Deletes a single Database Migration Service private connection.
+* [DatamigrationProjectsLocationsPrivateConnectionsGet](docs/projects/README.md#datamigrationprojectslocationsprivateconnectionsget) - Gets details of a single private connection.
+* [DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicy](docs/projects/README.md#datamigrationprojectslocationsprivateconnectionsgetiampolicy) - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* [DatamigrationProjectsLocationsPrivateConnectionsList](docs/projects/README.md#datamigrationprojectslocationsprivateconnectionslist) - Retrieves a list of private connections in a given project and location.
+* [DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicy](docs/projects/README.md#datamigrationprojectslocationsprivateconnectionssetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+* [DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissions](docs/projects/README.md#datamigrationprojectslocationsprivateconnectionstestiampermissions) - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 <!-- End SDK Available Operations -->
 
 ### Maturity

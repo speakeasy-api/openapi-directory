@@ -17,12 +17,16 @@ const (
 	PageBasedErrorCodeEnumInternalServerError                   PageBasedErrorCodeEnum = "INTERNAL_SERVER_ERROR"
 )
 
+func (e PageBasedErrorCodeEnum) ToPointer() *PageBasedErrorCodeEnum {
+	return &e
+}
+
 func (e *PageBasedErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEXTRACT_BAD_PAGE":
 		fallthrough
 	case "TEXTRACT_PROVISIONED_THROUGHPUT_EXCEEDED":
@@ -32,9 +36,9 @@ func (e *PageBasedErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "PAGE_SIZE_EXCEEDED":
 		fallthrough
 	case "INTERNAL_SERVER_ERROR":
-		*e = PageBasedErrorCodeEnum(s)
+		*e = PageBasedErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PageBasedErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for PageBasedErrorCodeEnum: %v", v)
 	}
 }

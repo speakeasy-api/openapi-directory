@@ -14,18 +14,22 @@ const (
 	DirectoryEditionEnumStandard   DirectoryEditionEnum = "Standard"
 )
 
+func (e DirectoryEditionEnum) ToPointer() *DirectoryEditionEnum {
+	return &e
+}
+
 func (e *DirectoryEditionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enterprise":
 		fallthrough
 	case "Standard":
-		*e = DirectoryEditionEnum(s)
+		*e = DirectoryEditionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryEditionEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryEditionEnum: %v", v)
 	}
 }

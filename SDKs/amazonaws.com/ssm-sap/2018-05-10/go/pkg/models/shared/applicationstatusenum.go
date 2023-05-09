@@ -20,12 +20,16 @@ const (
 	ApplicationStatusEnumUnknown     ApplicationStatusEnum = "UNKNOWN"
 )
 
+func (e ApplicationStatusEnum) ToPointer() *ApplicationStatusEnum {
+	return &e
+}
+
 func (e *ApplicationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVATED":
 		fallthrough
 	case "STARTING":
@@ -41,9 +45,9 @@ func (e *ApplicationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "UNKNOWN":
-		*e = ApplicationStatusEnum(s)
+		*e = ApplicationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationStatusEnum: %v", v)
 	}
 }

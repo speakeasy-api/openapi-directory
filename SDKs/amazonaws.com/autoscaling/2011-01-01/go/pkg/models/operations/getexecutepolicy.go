@@ -15,17 +15,21 @@ const (
 	GETExecutePolicyActionEnumExecutePolicy GETExecutePolicyActionEnum = "ExecutePolicy"
 )
 
+func (e GETExecutePolicyActionEnum) ToPointer() *GETExecutePolicyActionEnum {
+	return &e
+}
+
 func (e *GETExecutePolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ExecutePolicy":
-		*e = GETExecutePolicyActionEnum(s)
+		*e = GETExecutePolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETExecutePolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETExecutePolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETExecutePolicyVersionEnumTwoThousandAndEleven0101 GETExecutePolicyVersionEnum = "2011-01-01"
 )
 
+func (e GETExecutePolicyVersionEnum) ToPointer() *GETExecutePolicyVersionEnum {
+	return &e
+}
+
 func (e *GETExecutePolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETExecutePolicyVersionEnum(s)
+		*e = GETExecutePolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETExecutePolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETExecutePolicyVersionEnum: %v", v)
 	}
 }
 

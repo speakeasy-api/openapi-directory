@@ -16,17 +16,21 @@ const (
 	ListGroupsOlderThanOrderingIDXAmzTargetEnumAwsKendraFrontendServiceListGroupsOlderThanOrderingID ListGroupsOlderThanOrderingIDXAmzTargetEnum = "AWSKendraFrontendService.ListGroupsOlderThanOrderingId"
 )
 
+func (e ListGroupsOlderThanOrderingIDXAmzTargetEnum) ToPointer() *ListGroupsOlderThanOrderingIDXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListGroupsOlderThanOrderingIDXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.ListGroupsOlderThanOrderingId":
-		*e = ListGroupsOlderThanOrderingIDXAmzTargetEnum(s)
+		*e = ListGroupsOlderThanOrderingIDXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListGroupsOlderThanOrderingIDXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListGroupsOlderThanOrderingIDXAmzTargetEnum: %v", v)
 	}
 }
 

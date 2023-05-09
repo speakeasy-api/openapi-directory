@@ -16,17 +16,21 @@ const (
 	CreateWorkspaceImageXAmzTargetEnumWorkspacesServiceCreateWorkspaceImage CreateWorkspaceImageXAmzTargetEnum = "WorkspacesService.CreateWorkspaceImage"
 )
 
+func (e CreateWorkspaceImageXAmzTargetEnum) ToPointer() *CreateWorkspaceImageXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateWorkspaceImageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.CreateWorkspaceImage":
-		*e = CreateWorkspaceImageXAmzTargetEnum(s)
+		*e = CreateWorkspaceImageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWorkspaceImageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWorkspaceImageXAmzTargetEnum: %v", v)
 	}
 }
 

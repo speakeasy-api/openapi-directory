@@ -36,7 +36,10 @@ func newCurrencyExchangeRates(defaultClient, securityClient HTTPClient, serverUR
 // Adding currency exchange rates via API
 func (s *currencyExchangeRates) CreateExchangeRate(ctx context.Context, request operations.CreateExchangeRateRequest) (*operations.CreateExchangeRateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dictionaries/currency/{isoCode}/exchangeRate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dictionaries/currency/{isoCode}/exchangeRate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CurrencyHistoryDTO", "json")
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *currencyExchangeRates) CreateExchangeRate(ctx context.Context, request 
 // Returns currency exchange rates.
 func (s *currencyExchangeRates) GetByIsoCode(ctx context.Context, request operations.GetByIsoCodeRequest) (*operations.GetByIsoCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dictionaries/currency/{isoCode}/exchangeRate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dictionaries/currency/{isoCode}/exchangeRate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

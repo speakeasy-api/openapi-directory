@@ -16,17 +16,21 @@ const (
 	DeleteConditionalForwarderXAmzTargetEnumDirectoryService20150416DeleteConditionalForwarder DeleteConditionalForwarderXAmzTargetEnum = "DirectoryService_20150416.DeleteConditionalForwarder"
 )
 
+func (e DeleteConditionalForwarderXAmzTargetEnum) ToPointer() *DeleteConditionalForwarderXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteConditionalForwarderXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.DeleteConditionalForwarder":
-		*e = DeleteConditionalForwarderXAmzTargetEnum(s)
+		*e = DeleteConditionalForwarderXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteConditionalForwarderXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteConditionalForwarderXAmzTargetEnum: %v", v)
 	}
 }
 

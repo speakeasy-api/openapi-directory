@@ -243,7 +243,10 @@ func (s *bankFeeds) DeleteFeedConnections(ctx context.Context, request operation
 // By passing in a FeedConnection Id options, you can search for matching feed connections
 func (s *bankFeeds) GetFeedConnection(ctx context.Context, request operations.GetFeedConnectionRequest, security operations.GetFeedConnectionSecurity) (*operations.GetFeedConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/FeedConnections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/FeedConnections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +346,10 @@ func (s *bankFeeds) GetFeedConnections(ctx context.Context, request operations.G
 // By passing in a statement id, you can search for matching statements
 func (s *bankFeeds) GetStatement(ctx context.Context, request operations.GetStatementRequest, security operations.GetStatementSecurity) (*operations.GetStatementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Statements/{statementID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Statements/{statementID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

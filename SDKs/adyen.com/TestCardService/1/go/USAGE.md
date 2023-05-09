@@ -2,71 +2,69 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.CreateTestCardRangesRequest{
+    ctx := context.Background()
+    res, err := s.General.PostCreateTestCardRanges(ctx, shared.CreateTestCardRangesRequest{
         AccountCode: "corrupti",
         AccountTypeCode: "provident",
         TestCardRanges: []shared.TestCardRange{
             shared.TestCardRange{
                 Address: &shared.AvsAddress{
                     StreetAddress: "quibusdam",
-                    Zip: "unde",
+                    Zip: sdk.String("unde"),
                 },
                 CardHolderName: "nulla",
-                Cvc: "corrupti",
-                ExpiryMonth: "OCTOBER",
+                Cvc: sdk.String("corrupti"),
+                ExpiryMonth: shared.TestCardRangeExpiryMonthEnumOctober,
                 ExpiryYear: 423655,
                 RangeEnd: "error",
                 RangeStart: "deserunt",
-                ThreeDDirectoryServerResponse: "U",
-                ThreeDPassword: "iure",
-                ThreeDUsername: "magnam",
+                ThreeDDirectoryServerResponse: shared.TestCardRangeThreeDDirectoryServerResponseEnumU.ToPointer(),
+                ThreeDPassword: sdk.String("iure"),
+                ThreeDUsername: sdk.String("magnam"),
             },
             shared.TestCardRange{
                 Address: &shared.AvsAddress{
                     StreetAddress: "debitis",
-                    Zip: "ipsa",
+                    Zip: sdk.String("ipsa"),
                 },
                 CardHolderName: "delectus",
-                Cvc: "tempora",
-                ExpiryMonth: "JANUARY",
+                Cvc: sdk.String("tempora"),
+                ExpiryMonth: shared.TestCardRangeExpiryMonthEnumJanuary,
                 ExpiryYear: 477665,
                 RangeEnd: "minus",
                 RangeStart: "placeat",
-                ThreeDDirectoryServerResponse: "U",
-                ThreeDPassword: "iusto",
-                ThreeDUsername: "excepturi",
+                ThreeDDirectoryServerResponse: shared.TestCardRangeThreeDDirectoryServerResponseEnumU.ToPointer(),
+                ThreeDPassword: sdk.String("iusto"),
+                ThreeDUsername: sdk.String("excepturi"),
             },
             shared.TestCardRange{
                 Address: &shared.AvsAddress{
                     StreetAddress: "nisi",
-                    Zip: "recusandae",
+                    Zip: sdk.String("recusandae"),
                 },
                 CardHolderName: "temporibus",
-                Cvc: "ab",
-                ExpiryMonth: "JANUARY",
+                Cvc: sdk.String("ab"),
+                ExpiryMonth: shared.TestCardRangeExpiryMonthEnumJanuary,
                 ExpiryYear: 87129,
                 RangeEnd: "deserunt",
                 RangeStart: "perferendis",
-                ThreeDDirectoryServerResponse: "U",
-                ThreeDPassword: "repellendus",
-                ThreeDUsername: "sapiente",
+                ThreeDDirectoryServerResponse: shared.TestCardRangeThreeDDirectoryServerResponseEnumU.ToPointer(),
+                ThreeDPassword: sdk.String("repellendus"),
+                ThreeDUsername: sdk.String("sapiente"),
             },
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.General.PostCreateTestCardRanges(ctx, req, operations.PostCreateTestCardRangesSecurity{
+    }, operations.PostCreateTestCardRangesSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {

@@ -35,7 +35,10 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 // ResellerCustomersGet - Gets a customer account. Use this operation to see a customer account already in your reseller management, or to see the minimal account information for an existing customer that you do not manage. For more information about the API response for existing customers, see [retrieving a customer account](/admin-sdk/reseller/v1/how-tos/manage_customers#get_customer).
 func (s *customers) ResellerCustomersGet(ctx context.Context, request operations.ResellerCustomersGetRequest, security operations.ResellerCustomersGetSecurity) (*operations.ResellerCustomersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *customers) ResellerCustomersInsert(ctx context.Context, request operati
 // ResellerCustomersPatch - Updates a customer account's settings. This method supports patch semantics. You cannot update `customerType` via the Reseller API, but a `"team"` customer can verify their domain and become `customerType = "domain"`. For more information, see [Verify your domain to unlock Essentials features](https://support.google.com/a/answer/9122284).
 func (s *customers) ResellerCustomersPatch(ctx context.Context, request operations.ResellerCustomersPatchRequest, security operations.ResellerCustomersPatchSecurity) (*operations.ResellerCustomersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Customer", "json")
 	if err != nil {
@@ -193,7 +199,10 @@ func (s *customers) ResellerCustomersPatch(ctx context.Context, request operatio
 // ResellerCustomersUpdate - Updates a customer account's settings. You cannot update `customerType` via the Reseller API, but a `"team"` customer can verify their domain and become `customerType = "domain"`. For more information, see [update a customer's settings](/admin-sdk/reseller/v1/how-tos/manage_customers#update_customer).
 func (s *customers) ResellerCustomersUpdate(ctx context.Context, request operations.ResellerCustomersUpdateRequest, security operations.ResellerCustomersUpdateSecurity) (*operations.ResellerCustomersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/reseller/v1/customers/{customerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Customer", "json")
 	if err != nil {

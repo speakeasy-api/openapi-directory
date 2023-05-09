@@ -16,17 +16,21 @@ const (
 	DeleteHostXAmzTargetEnumComAmazonawsCodestarConnectionsCodeStarConnections20191201DeleteHost DeleteHostXAmzTargetEnum = "com.amazonaws.codestar.connections.CodeStar_connections_20191201.DeleteHost"
 )
 
+func (e DeleteHostXAmzTargetEnum) ToPointer() *DeleteHostXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteHostXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.codestar.connections.CodeStar_connections_20191201.DeleteHost":
-		*e = DeleteHostXAmzTargetEnum(s)
+		*e = DeleteHostXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteHostXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteHostXAmzTargetEnum: %v", v)
 	}
 }
 

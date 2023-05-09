@@ -15,20 +15,24 @@ const (
 	AutoScalingPolicyStateChangeReasonCodeEnumCleanupFailure   AutoScalingPolicyStateChangeReasonCodeEnum = "CLEANUP_FAILURE"
 )
 
+func (e AutoScalingPolicyStateChangeReasonCodeEnum) ToPointer() *AutoScalingPolicyStateChangeReasonCodeEnum {
+	return &e
+}
+
 func (e *AutoScalingPolicyStateChangeReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_REQUEST":
 		fallthrough
 	case "PROVISION_FAILURE":
 		fallthrough
 	case "CLEANUP_FAILURE":
-		*e = AutoScalingPolicyStateChangeReasonCodeEnum(s)
+		*e = AutoScalingPolicyStateChangeReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoScalingPolicyStateChangeReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoScalingPolicyStateChangeReasonCodeEnum: %v", v)
 	}
 }

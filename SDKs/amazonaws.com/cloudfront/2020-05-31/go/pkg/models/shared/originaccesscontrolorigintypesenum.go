@@ -14,18 +14,22 @@ const (
 	OriginAccessControlOriginTypesEnumMediastore OriginAccessControlOriginTypesEnum = "mediastore"
 )
 
+func (e OriginAccessControlOriginTypesEnum) ToPointer() *OriginAccessControlOriginTypesEnum {
+	return &e
+}
+
 func (e *OriginAccessControlOriginTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "s3":
 		fallthrough
 	case "mediastore":
-		*e = OriginAccessControlOriginTypesEnum(s)
+		*e = OriginAccessControlOriginTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OriginAccessControlOriginTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for OriginAccessControlOriginTypesEnum: %v", v)
 	}
 }

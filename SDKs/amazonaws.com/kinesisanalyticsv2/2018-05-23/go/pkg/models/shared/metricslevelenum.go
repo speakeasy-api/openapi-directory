@@ -16,12 +16,16 @@ const (
 	MetricsLevelEnumParallelism MetricsLevelEnum = "PARALLELISM"
 )
 
+func (e MetricsLevelEnum) ToPointer() *MetricsLevelEnum {
+	return &e
+}
+
 func (e *MetricsLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPLICATION":
 		fallthrough
 	case "TASK":
@@ -29,9 +33,9 @@ func (e *MetricsLevelEnum) UnmarshalJSON(data []byte) error {
 	case "OPERATOR":
 		fallthrough
 	case "PARALLELISM":
-		*e = MetricsLevelEnum(s)
+		*e = MetricsLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricsLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricsLevelEnum: %v", v)
 	}
 }

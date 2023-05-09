@@ -103,12 +103,16 @@ const (
 	SmsUniqueRequestGmtZoneEnumPacificKiritimati           SmsUniqueRequestGmtZoneEnum = "Pacific/Kiritimati"
 )
 
+func (e SmsUniqueRequestGmtZoneEnum) ToPointer() *SmsUniqueRequestGmtZoneEnum {
+	return &e
+}
+
 func (e *SmsUniqueRequestGmtZoneEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pacific/Midway":
 		fallthrough
 	case "America/Adak":
@@ -288,10 +292,10 @@ func (e *SmsUniqueRequestGmtZoneEnum) UnmarshalJSON(data []byte) error {
 	case "Pacific/Tongatapu":
 		fallthrough
 	case "Pacific/Kiritimati":
-		*e = SmsUniqueRequestGmtZoneEnum(s)
+		*e = SmsUniqueRequestGmtZoneEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SmsUniqueRequestGmtZoneEnum: %s", s)
+		return fmt.Errorf("invalid value for SmsUniqueRequestGmtZoneEnum: %v", v)
 	}
 }
 
@@ -301,17 +305,21 @@ const (
 	SmsUniqueRequestNumAzurEnumOne SmsUniqueRequestNumAzurEnum = "1"
 )
 
+func (e SmsUniqueRequestNumAzurEnum) ToPointer() *SmsUniqueRequestNumAzurEnum {
+	return &e
+}
+
 func (e *SmsUniqueRequestNumAzurEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
-		*e = SmsUniqueRequestNumAzurEnum(s)
+		*e = SmsUniqueRequestNumAzurEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SmsUniqueRequestNumAzurEnum: %s", s)
+		return fmt.Errorf("invalid value for SmsUniqueRequestNumAzurEnum: %v", v)
 	}
 }
 

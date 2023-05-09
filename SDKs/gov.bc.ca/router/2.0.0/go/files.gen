@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -39,4 +40,8 @@ pkg/models/operations/postrouteoutputformat.go
 pkg/models/operations/posttruckoptimalrouteoutputformat.go
 pkg/models/operations/posttruckrouteoutputformat.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/directions/README.md
+docs/distance/README.md
+docs/route/README.md
 USAGE.md

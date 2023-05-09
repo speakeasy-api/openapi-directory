@@ -15,21 +15,25 @@ const (
 	ContractualRelationshipLevelEnumPublic       ContractualRelationshipLevelEnum = "public"
 )
 
+func (e ContractualRelationshipLevelEnum) ToPointer() *ContractualRelationshipLevelEnum {
+	return &e
+}
+
 func (e *ContractualRelationshipLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = ContractualRelationshipLevelEnum(s)
+		*e = ContractualRelationshipLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContractualRelationshipLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ContractualRelationshipLevelEnum: %v", v)
 	}
 }
 

@@ -13,47 +13,48 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/contactcen
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreate(ctx, operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudContactcenterinsightsV1AnalysisInput: &shared.GoogleCloudContactcenterinsightsV1AnalysisInput{
             AnalysisResult: &shared.GoogleCloudContactcenterinsightsV1AnalysisResult{
                 CallAnalysisMetadata: &shared.GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadata{
                     Annotations: []shared.GoogleCloudContactcenterinsightsV1CallAnnotation{
                         shared.GoogleCloudContactcenterinsightsV1CallAnnotation{
                             AnnotationEndBoundary: &shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary{
-                                TranscriptIndex: 715190,
-                                WordIndex: 844266,
+                                TranscriptIndex: sdk.Int(715190),
+                                WordIndex: sdk.Int(844266),
                             },
                             AnnotationStartBoundary: &shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary{
-                                TranscriptIndex: 602763,
-                                WordIndex: 857946,
+                                TranscriptIndex: sdk.Int(602763),
+                                WordIndex: sdk.Int(857946),
                             },
-                            ChannelTag: 544883,
+                            ChannelTag: sdk.Int(544883),
                             EntityMentionData: &shared.GoogleCloudContactcenterinsightsV1EntityMentionData{
-                                EntityUniqueID: "illum",
+                                EntityUniqueID: sdk.String("illum"),
                                 Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                    Magnitude: 4236.55,
-                                    Score: 6235.64,
+                                    Magnitude: sdk.Float32(4236.55),
+                                    Score: sdk.Float32(6235.64),
                                 },
-                                Type: "PROPER",
+                                Type: shared.GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnumProper.ToPointer(),
                             },
                             HoldData: map[string]interface{}{
                                 "iure": "magnam",
                                 "debitis": "ipsa",
                             },
                             IntentMatchData: &shared.GoogleCloudContactcenterinsightsV1IntentMatchData{
-                                IntentUniqueID: "delectus",
+                                IntentUniqueID: sdk.String("delectus"),
                             },
                             InterruptionData: map[string]interface{}{
                                 "suscipit": "molestiae",
@@ -61,18 +62,18 @@ func main() {
                             },
                             IssueMatchData: &shared.GoogleCloudContactcenterinsightsV1IssueMatchData{
                                 IssueAssignment: &shared.GoogleCloudContactcenterinsightsV1IssueAssignment{
-                                    DisplayName: "voluptatum",
-                                    Issue: "iusto",
-                                    Score: 5680.45,
+                                    DisplayName: sdk.String("voluptatum"),
+                                    Issue: sdk.String("iusto"),
+                                    Score: sdk.Float64(5680.45),
                                 },
                             },
                             PhraseMatchData: &shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                                DisplayName: "nisi",
-                                PhraseMatcher: "recusandae",
+                                DisplayName: sdk.String("nisi"),
+                                PhraseMatcher: sdk.String("recusandae"),
                             },
                             SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 8360.79,
-                                Score: 710.36,
+                                Magnitude: sdk.Float32(8360.79),
+                                Score: sdk.Float32(710.36),
                             },
                             SilenceData: map[string]interface{}{
                                 "veritatis": "deserunt",
@@ -81,21 +82,21 @@ func main() {
                         },
                         shared.GoogleCloudContactcenterinsightsV1CallAnnotation{
                             AnnotationEndBoundary: &shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary{
-                                TranscriptIndex: 832620,
-                                WordIndex: 957156,
+                                TranscriptIndex: sdk.Int(832620),
+                                WordIndex: sdk.Int(957156),
                             },
                             AnnotationStartBoundary: &shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary{
-                                TranscriptIndex: 778157,
-                                WordIndex: 140350,
+                                TranscriptIndex: sdk.Int(778157),
+                                WordIndex: sdk.Int(140350),
                             },
-                            ChannelTag: 870013,
+                            ChannelTag: sdk.Int(870013),
                             EntityMentionData: &shared.GoogleCloudContactcenterinsightsV1EntityMentionData{
-                                EntityUniqueID: "at",
+                                EntityUniqueID: sdk.String("at"),
                                 Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                    Magnitude: 9786.19,
-                                    Score: 4736.08,
+                                    Magnitude: sdk.Float32(9786.19),
+                                    Score: sdk.Float32(4736.08),
                                 },
-                                Type: "COMMON",
+                                Type: shared.GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnumCommon.ToPointer(),
                             },
                             HoldData: map[string]interface{}{
                                 "esse": "totam",
@@ -104,7 +105,7 @@ func main() {
                                 "officia": "occaecati",
                             },
                             IntentMatchData: &shared.GoogleCloudContactcenterinsightsV1IntentMatchData{
-                                IntentUniqueID: "fugit",
+                                IntentUniqueID: sdk.String("fugit"),
                             },
                             InterruptionData: map[string]interface{}{
                                 "hic": "optio",
@@ -113,18 +114,18 @@ func main() {
                             },
                             IssueMatchData: &shared.GoogleCloudContactcenterinsightsV1IssueMatchData{
                                 IssueAssignment: &shared.GoogleCloudContactcenterinsightsV1IssueAssignment{
-                                    DisplayName: "modi",
-                                    Issue: "qui",
-                                    Score: 7742.34,
+                                    DisplayName: sdk.String("modi"),
+                                    Issue: sdk.String("qui"),
+                                    Score: sdk.Float64(7742.34),
                                 },
                             },
                             PhraseMatchData: &shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                                DisplayName: "cum",
-                                PhraseMatcher: "esse",
+                                DisplayName: sdk.String("cum"),
+                                PhraseMatcher: sdk.String("esse"),
                             },
                             SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 2165.5,
-                                Score: 5684.34,
+                                Magnitude: sdk.Float32(2165.5),
+                                Score: sdk.Float32(5684.34),
                             },
                             SilenceData: map[string]interface{}{
                                 "perferendis": "ad",
@@ -132,46 +133,46 @@ func main() {
                         },
                         shared.GoogleCloudContactcenterinsightsV1CallAnnotation{
                             AnnotationEndBoundary: &shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary{
-                                TranscriptIndex: 617636,
-                                WordIndex: 149675,
+                                TranscriptIndex: sdk.Int(617636),
+                                WordIndex: sdk.Int(149675),
                             },
                             AnnotationStartBoundary: &shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary{
-                                TranscriptIndex: 612096,
-                                WordIndex: 222321,
+                                TranscriptIndex: sdk.Int(612096),
+                                WordIndex: sdk.Int(222321),
                             },
-                            ChannelTag: 616934,
+                            ChannelTag: sdk.Int(616934),
                             EntityMentionData: &shared.GoogleCloudContactcenterinsightsV1EntityMentionData{
-                                EntityUniqueID: "laboriosam",
+                                EntityUniqueID: sdk.String("laboriosam"),
                                 Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                    Magnitude: 9437.49,
-                                    Score: 9025.99,
+                                    Magnitude: sdk.Float32(9437.49),
+                                    Score: sdk.Float32(9025.99),
                                 },
-                                Type: "COMMON",
+                                Type: shared.GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnumCommon.ToPointer(),
                             },
                             HoldData: map[string]interface{}{
                                 "corporis": "iste",
                                 "iure": "saepe",
                             },
                             IntentMatchData: &shared.GoogleCloudContactcenterinsightsV1IntentMatchData{
-                                IntentUniqueID: "quidem",
+                                IntentUniqueID: sdk.String("quidem"),
                             },
                             InterruptionData: map[string]interface{}{
                                 "ipsa": "reiciendis",
                             },
                             IssueMatchData: &shared.GoogleCloudContactcenterinsightsV1IssueMatchData{
                                 IssueAssignment: &shared.GoogleCloudContactcenterinsightsV1IssueAssignment{
-                                    DisplayName: "est",
-                                    Issue: "mollitia",
-                                    Score: 6706.38,
+                                    DisplayName: sdk.String("est"),
+                                    Issue: sdk.String("mollitia"),
+                                    Score: sdk.Float64(6706.38),
                                 },
                             },
                             PhraseMatchData: &shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                                DisplayName: "dolores",
-                                PhraseMatcher: "dolorem",
+                                DisplayName: sdk.String("dolores"),
+                                PhraseMatcher: sdk.String("dolorem"),
                             },
                             SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 3581.52,
-                                Score: 1289.26,
+                                Magnitude: sdk.Float32(3581.52),
+                                Score: sdk.Float32(1289.26),
                             },
                             SilenceData: map[string]interface{}{
                                 "enim": "omnis",
@@ -183,161 +184,162 @@ func main() {
                     },
                     Entities: map[string]shared.GoogleCloudContactcenterinsightsV1Entity{
                         "sapiente": shared.GoogleCloudContactcenterinsightsV1Entity{
-                            DisplayName: "architecto",
+                            DisplayName: sdk.String("architecto"),
                             Metadata: map[string]string{
                                 "dolorem": "culpa",
                                 "consequuntur": "repellat",
                                 "mollitia": "occaecati",
                             },
-                            Salience: 2532.91,
+                            Salience: sdk.Float32(2532.91),
                             Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 4143.69,
-                                Score: 4663.11,
+                                Magnitude: sdk.Float32(4143.69),
+                                Score: sdk.Float32(4663.11),
                             },
-                            Type: "CONSUMER_GOOD",
+                            Type: shared.GoogleCloudContactcenterinsightsV1EntityTypeEnumConsumerGood.ToPointer(),
                         },
                         "velit": shared.GoogleCloudContactcenterinsightsV1Entity{
-                            DisplayName: "error",
+                            DisplayName: sdk.String("error"),
                             Metadata: map[string]string{
                                 "quis": "vitae",
                             },
-                            Salience: 6747.52,
+                            Salience: sdk.Float32(6747.52),
                             Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 6563.3,
-                                Score: 3172.02,
+                                Magnitude: sdk.Float32(6563.3),
+                                Score: sdk.Float32(3172.02),
                             },
-                            Type: "PERSON",
+                            Type: shared.GoogleCloudContactcenterinsightsV1EntityTypeEnumPerson.ToPointer(),
                         },
                         "quo": shared.GoogleCloudContactcenterinsightsV1Entity{
-                            DisplayName: "sequi",
+                            DisplayName: sdk.String("sequi"),
                             Metadata: map[string]string{
                                 "ipsam": "id",
                                 "possimus": "aut",
                                 "quasi": "error",
                                 "temporibus": "laborum",
                             },
-                            Salience: 960.98,
+                            Salience: sdk.Float32(960.98),
                             Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 9719.45,
-                                Score: 9764.6,
+                                Magnitude: sdk.Float32(9719.45),
+                                Score: sdk.Float32(9764.6),
                             },
-                            Type: "NUMBER",
+                            Type: shared.GoogleCloudContactcenterinsightsV1EntityTypeEnumNumber.ToPointer(),
                         },
                         "nihil": shared.GoogleCloudContactcenterinsightsV1Entity{
-                            DisplayName: "praesentium",
+                            DisplayName: sdk.String("praesentium"),
                             Metadata: map[string]string{
                                 "ipsa": "omnis",
                                 "voluptate": "cum",
                                 "perferendis": "doloremque",
                                 "reprehenderit": "ut",
                             },
-                            Salience: 9795.87,
+                            Salience: sdk.Float32(9795.87),
                             Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 1201.96,
-                                Score: 3594.44,
+                                Magnitude: sdk.Float32(1201.96),
+                                Score: sdk.Float32(3594.44),
                             },
-                            Type: "ORGANIZATION",
+                            Type: shared.GoogleCloudContactcenterinsightsV1EntityTypeEnumOrganization.ToPointer(),
                         },
                     },
                     Intents: map[string]shared.GoogleCloudContactcenterinsightsV1Intent{
                         "dicta": shared.GoogleCloudContactcenterinsightsV1Intent{
-                            DisplayName: "harum",
-                            ID: "enim",
+                            DisplayName: sdk.String("harum"),
+                            ID: sdk.String("5e6e13b9-9d48-48e1-a91e-450ad2abd442"),
                         },
-                        "accusamus": shared.GoogleCloudContactcenterinsightsV1Intent{
-                            DisplayName: "commodi",
-                            ID: "repudiandae",
+                        "aliquid": shared.GoogleCloudContactcenterinsightsV1Intent{
+                            DisplayName: sdk.String("cupiditate"),
+                            ID: sdk.String("802d502a-94bb-44f6-bc96-9e9a3efa77df"),
                         },
                     },
                     IssueModelResult: &shared.GoogleCloudContactcenterinsightsV1IssueModelResult{
-                        IssueModel: "quae",
+                        IssueModel: sdk.String("rerum"),
                         Issues: []shared.GoogleCloudContactcenterinsightsV1IssueAssignment{
                             shared.GoogleCloudContactcenterinsightsV1IssueAssignment{
-                                DisplayName: "quidem",
-                                Issue: "molestias",
-                                Score: 5666.02,
+                                DisplayName: sdk.String("magnam"),
+                                Issue: sdk.String("cumque"),
+                                Score: sdk.Float64(8137.98),
                             },
                         },
                     },
                     PhraseMatchers: map[string]shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                        "modi": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                            DisplayName: "praesentium",
-                            PhraseMatcher: "rem",
+                        "aliquid": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
+                            DisplayName: sdk.String("laborum"),
+                            PhraseMatcher: sdk.String("accusamus"),
                         },
-                        "voluptates": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                            DisplayName: "quasi",
-                            PhraseMatcher: "repudiandae",
-                        },
-                        "sint": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                            DisplayName: "veritatis",
-                            PhraseMatcher: "itaque",
-                        },
-                        "incidunt": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                            DisplayName: "enim",
-                            PhraseMatcher: "consequatur",
+                        "non": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
+                            DisplayName: sdk.String("occaecati"),
+                            PhraseMatcher: sdk.String("enim"),
                         },
                     },
                     Sentiments: []shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment{
                         shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment{
-                            ChannelTag: 842342,
+                            ChannelTag: sdk.Int(965417),
                             SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 1317.97,
-                                Score: 6471.74,
+                                Magnitude: sdk.Float32(6925.32),
+                                Score: sdk.Float32(5884.65),
                             },
                         },
                         shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment{
-                            ChannelTag: 716327,
+                            ChannelTag: sdk.Int(725255),
                             SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 8413.86,
-                                Score: 2894.06,
+                                Magnitude: sdk.Float32(6596.69),
+                                Score: sdk.Float32(5013.24),
                             },
                         },
                         shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment{
-                            ChannelTag: 264730,
+                            ChannelTag: sdk.Int(533206),
                             SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 1831.91,
-                                Score: 3978.21,
+                                Magnitude: sdk.Float32(9560.84),
+                                Score: sdk.Float32(2305.33),
+                            },
+                        },
+                        shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment{
+                            ChannelTag: sdk.Int(643990),
+                            SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
+                                Magnitude: sdk.Float32(3948.69),
+                                Score: sdk.Float32(4238.55),
                             },
                         },
                     },
                 },
-                EndTime: "cupiditate",
+                EndTime: sdk.String("natus"),
             },
             AnnotatorSelector: &shared.GoogleCloudContactcenterinsightsV1AnnotatorSelector{
                 IssueModels: []string{
+                    "molestiae",
                     "perferendis",
-                    "magni",
-                    "assumenda",
+                    "nihil",
                 },
                 PhraseMatchers: []string{
-                    "alias",
-                    "fugit",
+                    "distinctio",
+                    "id",
                 },
-                RunEntityAnnotator: false,
-                RunIntentAnnotator: false,
-                RunInterruptionAnnotator: false,
-                RunIssueModelAnnotator: false,
-                RunPhraseMatcherAnnotator: false,
-                RunSentimentAnnotator: false,
-                RunSilenceAnnotator: false,
+                RunEntityAnnotator: sdk.Bool(false),
+                RunIntentAnnotator: sdk.Bool(false),
+                RunInterruptionAnnotator: sdk.Bool(false),
+                RunIssueModelAnnotator: sdk.Bool(false),
+                RunPhraseMatcherAnnotator: sdk.Bool(false),
+                RunSentimentAnnotator: sdk.Bool(false),
+                RunSilenceAnnotator: sdk.Bool(false),
+                RunSummarizationAnnotator: sdk.Bool(false),
+                SummarizationConfig: &shared.GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig{
+                    ConversationProfile: sdk.String("labore"),
+                    SummarizationModel: shared.GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfigSummarizationModelEnumSummarizationModelUnspecified.ToPointer(),
+                },
             },
-            Name: "dolorum",
+            Name: sdk.String("Ada Rohan"),
         },
-        AccessToken: "excepturi",
-        Alt: "json",
-        Callback: "facilis",
-        Fields: "tempore",
-        Key: "labore",
-        OauthToken: "delectus",
-        Parent: "eum",
-        PrettyPrint: false,
-        QuotaUser: "non",
-        UploadType: "eligendi",
-        UploadProtocol: "sint",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreate(ctx, req, operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateSecurity{
+        AccessToken: sdk.String("aspernatur"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("magnam"),
+        Fields: sdk.String("et"),
+        Key: sdk.String("excepturi"),
+        OauthToken: sdk.String("ullam"),
+        Parent: "provident",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("quos"),
+        UploadType: sdk.String("sint"),
+        UploadProtocol: sdk.String("accusantium"),
+    }, operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -356,31 +358,32 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `ContactcenterinsightsProjectsLocationsConversationsAnalysesCreate` - Creates an analysis. The long running operation is done when the analysis has completed.
-* `ContactcenterinsightsProjectsLocationsConversationsAnalysesList` - Lists analyses.
-* `ContactcenterinsightsProjectsLocationsConversationsBulkAnalyze` - Analyzes multiple conversations in a single request.
-* `ContactcenterinsightsProjectsLocationsConversationsCalculateStats` - Gets conversation statistics.
-* `ContactcenterinsightsProjectsLocationsConversationsCreate` - Creates a conversation.
-* `ContactcenterinsightsProjectsLocationsConversationsIngest` - Imports conversations and processes them according to the user's configuration.
-* `ContactcenterinsightsProjectsLocationsConversationsList` - Lists conversations.
-* `ContactcenterinsightsProjectsLocationsInsightsdataExport` - Export insights data to a destination defined in the request body.
-* `ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStats` - Gets an issue model's statistics.
-* `ContactcenterinsightsProjectsLocationsIssueModelsCreate` - Creates an issue model.
-* `ContactcenterinsightsProjectsLocationsIssueModelsDeploy` - Deploys an issue model. Returns an error if a model is already deployed. An issue model can only be used in analysis after it has been deployed.
-* `ContactcenterinsightsProjectsLocationsIssueModelsIssuesList` - Lists issues.
-* `ContactcenterinsightsProjectsLocationsIssueModelsList` - Lists issue models.
-* `ContactcenterinsightsProjectsLocationsIssueModelsUndeploy` - Undeploys an issue model. An issue model can not be used in analysis after it has been undeployed.
-* `ContactcenterinsightsProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `ContactcenterinsightsProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `ContactcenterinsightsProjectsLocationsPhraseMatchersCreate` - Creates a phrase matcher.
-* `ContactcenterinsightsProjectsLocationsPhraseMatchersList` - Lists phrase matchers.
-* `ContactcenterinsightsProjectsLocationsViewsCreate` - Creates a view.
-* `ContactcenterinsightsProjectsLocationsViewsDelete` - Deletes a view.
-* `ContactcenterinsightsProjectsLocationsViewsGet` - Gets a view.
-* `ContactcenterinsightsProjectsLocationsViewsList` - Lists views.
-* `ContactcenterinsightsProjectsLocationsViewsPatch` - Updates a view.
+* [ContactcenterinsightsProjectsLocationsConversationsAnalysesCreate](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationsanalysescreate) - Creates an analysis. The long running operation is done when the analysis has completed.
+* [ContactcenterinsightsProjectsLocationsConversationsAnalysesList](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationsanalyseslist) - Lists analyses.
+* [ContactcenterinsightsProjectsLocationsConversationsBulkAnalyze](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationsbulkanalyze) - Analyzes multiple conversations in a single request.
+* [ContactcenterinsightsProjectsLocationsConversationsCalculateStats](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationscalculatestats) - Gets conversation statistics.
+* [ContactcenterinsightsProjectsLocationsConversationsCreate](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationscreate) - Creates a conversation.
+* [ContactcenterinsightsProjectsLocationsConversationsIngest](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationsingest) - Imports conversations and processes them according to the user's configuration.
+* [ContactcenterinsightsProjectsLocationsConversationsList](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationslist) - Lists conversations.
+* [ContactcenterinsightsProjectsLocationsConversationsUpload](docs/projects/README.md#contactcenterinsightsprojectslocationsconversationsupload) - Create a longrunning conversation upload operation. This method differs from CreateConversation by allowing audio transcription and optional DLP redaction.
+* [ContactcenterinsightsProjectsLocationsInsightsdataExport](docs/projects/README.md#contactcenterinsightsprojectslocationsinsightsdataexport) - Export insights data to a destination defined in the request body.
+* [ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStats](docs/projects/README.md#contactcenterinsightsprojectslocationsissuemodelscalculateissuemodelstats) - Gets an issue model's statistics.
+* [ContactcenterinsightsProjectsLocationsIssueModelsCreate](docs/projects/README.md#contactcenterinsightsprojectslocationsissuemodelscreate) - Creates an issue model.
+* [ContactcenterinsightsProjectsLocationsIssueModelsDeploy](docs/projects/README.md#contactcenterinsightsprojectslocationsissuemodelsdeploy) - Deploys an issue model. Returns an error if a model is already deployed. An issue model can only be used in analysis after it has been deployed.
+* [ContactcenterinsightsProjectsLocationsIssueModelsIssuesList](docs/projects/README.md#contactcenterinsightsprojectslocationsissuemodelsissueslist) - Lists issues.
+* [ContactcenterinsightsProjectsLocationsIssueModelsList](docs/projects/README.md#contactcenterinsightsprojectslocationsissuemodelslist) - Lists issue models.
+* [ContactcenterinsightsProjectsLocationsIssueModelsUndeploy](docs/projects/README.md#contactcenterinsightsprojectslocationsissuemodelsundeploy) - Undeploys an issue model. An issue model can not be used in analysis after it has been undeployed.
+* [ContactcenterinsightsProjectsLocationsOperationsCancel](docs/projects/README.md#contactcenterinsightsprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [ContactcenterinsightsProjectsLocationsOperationsList](docs/projects/README.md#contactcenterinsightsprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [ContactcenterinsightsProjectsLocationsPhraseMatchersCreate](docs/projects/README.md#contactcenterinsightsprojectslocationsphrasematcherscreate) - Creates a phrase matcher.
+* [ContactcenterinsightsProjectsLocationsPhraseMatchersList](docs/projects/README.md#contactcenterinsightsprojectslocationsphrasematcherslist) - Lists phrase matchers.
+* [ContactcenterinsightsProjectsLocationsViewsCreate](docs/projects/README.md#contactcenterinsightsprojectslocationsviewscreate) - Creates a view.
+* [ContactcenterinsightsProjectsLocationsViewsDelete](docs/projects/README.md#contactcenterinsightsprojectslocationsviewsdelete) - Deletes a view.
+* [ContactcenterinsightsProjectsLocationsViewsGet](docs/projects/README.md#contactcenterinsightsprojectslocationsviewsget) - Gets a view.
+* [ContactcenterinsightsProjectsLocationsViewsList](docs/projects/README.md#contactcenterinsightsprojectslocationsviewslist) - Lists views.
+* [ContactcenterinsightsProjectsLocationsViewsPatch](docs/projects/README.md#contactcenterinsightsprojectslocationsviewspatch) - Updates a view.
 <!-- End SDK Available Operations -->
 
 ### Maturity

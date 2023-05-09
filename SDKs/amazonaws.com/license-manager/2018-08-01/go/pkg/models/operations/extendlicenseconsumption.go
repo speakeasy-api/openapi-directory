@@ -16,17 +16,21 @@ const (
 	ExtendLicenseConsumptionXAmzTargetEnumAwsLicenseManagerExtendLicenseConsumption ExtendLicenseConsumptionXAmzTargetEnum = "AWSLicenseManager.ExtendLicenseConsumption"
 )
 
+func (e ExtendLicenseConsumptionXAmzTargetEnum) ToPointer() *ExtendLicenseConsumptionXAmzTargetEnum {
+	return &e
+}
+
 func (e *ExtendLicenseConsumptionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLicenseManager.ExtendLicenseConsumption":
-		*e = ExtendLicenseConsumptionXAmzTargetEnum(s)
+		*e = ExtendLicenseConsumptionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExtendLicenseConsumptionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ExtendLicenseConsumptionXAmzTargetEnum: %v", v)
 	}
 }
 

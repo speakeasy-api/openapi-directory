@@ -15,20 +15,24 @@ const (
 	ProductViewSortByEnumCreationDate ProductViewSortByEnum = "CreationDate"
 )
 
+func (e ProductViewSortByEnum) ToPointer() *ProductViewSortByEnum {
+	return &e
+}
+
 func (e *ProductViewSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Title":
 		fallthrough
 	case "VersionCount":
 		fallthrough
 	case "CreationDate":
-		*e = ProductViewSortByEnum(s)
+		*e = ProductViewSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductViewSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductViewSortByEnum: %v", v)
 	}
 }

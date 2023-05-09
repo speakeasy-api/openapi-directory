@@ -16,17 +16,21 @@ const (
 	DeleteListenerXAmzTargetEnumGlobalAcceleratorV20180706DeleteListener DeleteListenerXAmzTargetEnum = "GlobalAccelerator_V20180706.DeleteListener"
 )
 
+func (e DeleteListenerXAmzTargetEnum) ToPointer() *DeleteListenerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteListenerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.DeleteListener":
-		*e = DeleteListenerXAmzTargetEnum(s)
+		*e = DeleteListenerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteListenerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteListenerXAmzTargetEnum: %v", v)
 	}
 }
 

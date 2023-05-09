@@ -16,12 +16,16 @@ const (
 	ReferenceImportJobItemStatusEnumFailed     ReferenceImportJobItemStatusEnum = "FAILED"
 )
 
+func (e ReferenceImportJobItemStatusEnum) ToPointer() *ReferenceImportJobItemStatusEnum {
+	return &e
+}
+
 func (e *ReferenceImportJobItemStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_STARTED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -29,9 +33,9 @@ func (e *ReferenceImportJobItemStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FINISHED":
 		fallthrough
 	case "FAILED":
-		*e = ReferenceImportJobItemStatusEnum(s)
+		*e = ReferenceImportJobItemStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReferenceImportJobItemStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReferenceImportJobItemStatusEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	DkimSigningKeyLengthEnumRsa2048Bit DkimSigningKeyLengthEnum = "RSA_2048_BIT"
 )
 
+func (e DkimSigningKeyLengthEnum) ToPointer() *DkimSigningKeyLengthEnum {
+	return &e
+}
+
 func (e *DkimSigningKeyLengthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RSA_1024_BIT":
 		fallthrough
 	case "RSA_2048_BIT":
-		*e = DkimSigningKeyLengthEnum(s)
+		*e = DkimSigningKeyLengthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DkimSigningKeyLengthEnum: %s", s)
+		return fmt.Errorf("invalid value for DkimSigningKeyLengthEnum: %v", v)
 	}
 }

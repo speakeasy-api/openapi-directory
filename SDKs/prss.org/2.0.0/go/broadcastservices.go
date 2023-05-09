@@ -95,7 +95,10 @@ func (s *broadcastServices) GetAPIV2Broadcastservices(ctx context.Context, reque
 // GetAPIV2BroadcastservicesID - Returns the broadcast service matching the given ID.
 func (s *broadcastServices) GetAPIV2BroadcastservicesID(ctx context.Context, request operations.GetAPIV2BroadcastservicesIDRequest, security operations.GetAPIV2BroadcastservicesIDSecurity) (*operations.GetAPIV2BroadcastservicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/broadcastservices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/broadcastservices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

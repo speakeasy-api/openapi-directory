@@ -15,20 +15,24 @@ const (
 	RenewTypeEnumMonthly RenewTypeEnum = "Monthly"
 )
 
+func (e RenewTypeEnum) ToPointer() *RenewTypeEnum {
+	return &e
+}
+
 func (e *RenewTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "Weekly":
 		fallthrough
 	case "Monthly":
-		*e = RenewTypeEnum(s)
+		*e = RenewTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RenewTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RenewTypeEnum: %v", v)
 	}
 }

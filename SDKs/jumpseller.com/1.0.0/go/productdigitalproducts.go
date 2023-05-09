@@ -35,7 +35,10 @@ func newProductDigitalProducts(defaultClient, securityClient HTTPClient, serverU
 // DeleteProductsIDDigitalProductsDigitalProductIDJSON - Delete a Product DigitalProduct.
 func (s *productDigitalProducts) DeleteProductsIDDigitalProductsDigitalProductIDJSON(ctx context.Context, request operations.DeleteProductsIDDigitalProductsDigitalProductIDJSONRequest) (*operations.DeleteProductsIDDigitalProductsDigitalProductIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/digital_products/{digital_product_id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/digital_products/{digital_product_id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *productDigitalProducts) DeleteProductsIDDigitalProductsDigitalProductID
 // GetProductsIDDigitalProductsJSON - Retrieve all Product DigitalProducts.
 func (s *productDigitalProducts) GetProductsIDDigitalProductsJSON(ctx context.Context, request operations.GetProductsIDDigitalProductsJSONRequest) (*operations.GetProductsIDDigitalProductsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/digital_products.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/digital_products.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -152,7 +158,10 @@ func (s *productDigitalProducts) GetProductsIDDigitalProductsJSON(ctx context.Co
 // GetProductsIDDigitalProductsCountJSON - Count all Product DigitalProducts.
 func (s *productDigitalProducts) GetProductsIDDigitalProductsCountJSON(ctx context.Context, request operations.GetProductsIDDigitalProductsCountJSONRequest) (*operations.GetProductsIDDigitalProductsCountJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/digital_products/count.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/digital_products/count.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -210,7 +219,10 @@ func (s *productDigitalProducts) GetProductsIDDigitalProductsCountJSON(ctx conte
 // GetProductsIDDigitalProductsDigitalProductIDJSON - Retrieve a single Product DigitalProduct.
 func (s *productDigitalProducts) GetProductsIDDigitalProductsDigitalProductIDJSON(ctx context.Context, request operations.GetProductsIDDigitalProductsDigitalProductIDJSONRequest) (*operations.GetProductsIDDigitalProductsDigitalProductIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/digital_products/{digital_product_id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/digital_products/{digital_product_id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -268,7 +280,10 @@ func (s *productDigitalProducts) GetProductsIDDigitalProductsDigitalProductIDJSO
 // PostProductsIDDigitalProductsJSON - Create a new Product DigitalProduct.
 func (s *productDigitalProducts) PostProductsIDDigitalProductsJSON(ctx context.Context, request operations.PostProductsIDDigitalProductsJSONRequest) (*operations.PostProductsIDDigitalProductsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/digital_products.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/digital_products.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DigitalProductEdit", "json")
 	if err != nil {

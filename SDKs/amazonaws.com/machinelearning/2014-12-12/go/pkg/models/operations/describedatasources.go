@@ -16,17 +16,21 @@ const (
 	DescribeDataSourcesXAmzTargetEnumAmazonMl20141212DescribeDataSources DescribeDataSourcesXAmzTargetEnum = "AmazonML_20141212.DescribeDataSources"
 )
 
+func (e DescribeDataSourcesXAmzTargetEnum) ToPointer() *DescribeDataSourcesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDataSourcesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.DescribeDataSources":
-		*e = DescribeDataSourcesXAmzTargetEnum(s)
+		*e = DescribeDataSourcesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDataSourcesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDataSourcesXAmzTargetEnum: %v", v)
 	}
 }
 

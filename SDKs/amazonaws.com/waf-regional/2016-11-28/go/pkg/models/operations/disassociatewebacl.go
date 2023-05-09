@@ -16,17 +16,21 @@ const (
 	DisassociateWebACLXAmzTargetEnumAwswafRegional20161128DisassociateWebACL DisassociateWebACLXAmzTargetEnum = "AWSWAF_Regional_20161128.DisassociateWebACL"
 )
 
+func (e DisassociateWebACLXAmzTargetEnum) ToPointer() *DisassociateWebACLXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateWebACLXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.DisassociateWebACL":
-		*e = DisassociateWebACLXAmzTargetEnum(s)
+		*e = DisassociateWebACLXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateWebACLXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateWebACLXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateCertificateXAmzTargetEnumTransferServiceUpdateCertificate UpdateCertificateXAmzTargetEnum = "TransferService.UpdateCertificate"
 )
 
+func (e UpdateCertificateXAmzTargetEnum) ToPointer() *UpdateCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.UpdateCertificate":
-		*e = UpdateCertificateXAmzTargetEnum(s)
+		*e = UpdateCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

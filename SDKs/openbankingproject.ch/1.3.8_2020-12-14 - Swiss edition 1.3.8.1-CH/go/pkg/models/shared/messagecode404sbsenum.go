@@ -14,16 +14,20 @@ const (
 	MessageCode404SBSEnumResourceUnknown MessageCode404SBSEnum = "RESOURCE_UNKNOWN"
 )
 
+func (e MessageCode404SBSEnum) ToPointer() *MessageCode404SBSEnum {
+	return &e
+}
+
 func (e *MessageCode404SBSEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE_UNKNOWN":
-		*e = MessageCode404SBSEnum(s)
+		*e = MessageCode404SBSEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageCode404SBSEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageCode404SBSEnum: %v", v)
 	}
 }

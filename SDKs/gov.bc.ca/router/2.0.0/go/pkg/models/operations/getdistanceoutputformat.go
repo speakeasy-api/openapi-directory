@@ -17,19 +17,23 @@ const (
 	GetDistanceOutputFormatCriteriaEnumFastest  GetDistanceOutputFormatCriteriaEnum = "fastest"
 )
 
+func (e GetDistanceOutputFormatCriteriaEnum) ToPointer() *GetDistanceOutputFormatCriteriaEnum {
+	return &e
+}
+
 func (e *GetDistanceOutputFormatCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shortest":
 		fallthrough
 	case "fastest":
-		*e = GetDistanceOutputFormatCriteriaEnum(s)
+		*e = GetDistanceOutputFormatCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDistanceOutputFormatCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDistanceOutputFormatCriteriaEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	GetDistanceOutputFormatDistanceUnitEnumMi GetDistanceOutputFormatDistanceUnitEnum = "mi"
 )
 
+func (e GetDistanceOutputFormatDistanceUnitEnum) ToPointer() *GetDistanceOutputFormatDistanceUnitEnum {
+	return &e
+}
+
 func (e *GetDistanceOutputFormatDistanceUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "km":
 		fallthrough
 	case "mi":
-		*e = GetDistanceOutputFormatDistanceUnitEnum(s)
+		*e = GetDistanceOutputFormatDistanceUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDistanceOutputFormatDistanceUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDistanceOutputFormatDistanceUnitEnum: %v", v)
 	}
 }
 
@@ -66,63 +74,71 @@ const (
 	GetDistanceOutputFormatOutputFormatEnumHTML GetDistanceOutputFormatOutputFormatEnum = "html"
 )
 
+func (e GetDistanceOutputFormatOutputFormatEnum) ToPointer() *GetDistanceOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetDistanceOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "kml":
 		fallthrough
 	case "html":
-		*e = GetDistanceOutputFormatOutputFormatEnum(s)
+		*e = GetDistanceOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDistanceOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDistanceOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 
 // GetDistanceOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
-type GetDistanceOutputFormatOutputSrsEnum string
+type GetDistanceOutputFormatOutputSrsEnum int64
 
 const (
-	GetDistanceOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetDistanceOutputFormatOutputSrsEnum = "4326"
-	GetDistanceOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetDistanceOutputFormatOutputSrsEnum = "4269"
-	GetDistanceOutputFormatOutputSrsEnumThreeThousandAndFive                  GetDistanceOutputFormatOutputSrsEnum = "3005"
-	GetDistanceOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetDistanceOutputFormatOutputSrsEnum = "26907"
-	GetDistanceOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetDistanceOutputFormatOutputSrsEnum = "26908"
-	GetDistanceOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetDistanceOutputFormatOutputSrsEnum = "26909"
-	GetDistanceOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetDistanceOutputFormatOutputSrsEnum = "26910"
-	GetDistanceOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetDistanceOutputFormatOutputSrsEnum = "26911"
+	GetDistanceOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetDistanceOutputFormatOutputSrsEnum = 4326
+	GetDistanceOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetDistanceOutputFormatOutputSrsEnum = 4269
+	GetDistanceOutputFormatOutputSrsEnumThreeThousandAndFive                  GetDistanceOutputFormatOutputSrsEnum = 3005
+	GetDistanceOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetDistanceOutputFormatOutputSrsEnum = 26907
+	GetDistanceOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetDistanceOutputFormatOutputSrsEnum = 26908
+	GetDistanceOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetDistanceOutputFormatOutputSrsEnum = 26909
+	GetDistanceOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetDistanceOutputFormatOutputSrsEnum = 26910
+	GetDistanceOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetDistanceOutputFormatOutputSrsEnum = 26911
 )
 
+func (e GetDistanceOutputFormatOutputSrsEnum) ToPointer() *GetDistanceOutputFormatOutputSrsEnum {
+	return &e
+}
+
 func (e *GetDistanceOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetDistanceOutputFormatOutputSrsEnum(s)
+	case 26911:
+		*e = GetDistanceOutputFormatOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDistanceOutputFormatOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDistanceOutputFormatOutputSrsEnum: %v", v)
 	}
 }
 

@@ -6,6 +6,11 @@ import (
 	"net/http"
 )
 
+type AccountGetPrefsSecurity struct {
+	Jwt     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-JWT"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
+}
+
 type AccountGetPrefsResponse struct {
 	ContentType string
 	StatusCode  int

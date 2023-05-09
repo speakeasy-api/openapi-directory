@@ -26,12 +26,16 @@ const (
 	BlockTypeEnumTableFooter      BlockTypeEnum = "TABLE_FOOTER"
 )
 
+func (e BlockTypeEnum) ToPointer() *BlockTypeEnum {
+	return &e
+}
+
 func (e *BlockTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KEY_VALUE_SET":
 		fallthrough
 	case "PAGE":
@@ -59,9 +63,9 @@ func (e *BlockTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TABLE_TITLE":
 		fallthrough
 	case "TABLE_FOOTER":
-		*e = BlockTypeEnum(s)
+		*e = BlockTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BlockTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BlockTypeEnum: %v", v)
 	}
 }

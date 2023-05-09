@@ -38,7 +38,10 @@ func newAllowedOriginsCompanyLevel(defaultClient, securityClient HTTPClient, ser
 // * Management API—API credentials read and write
 func (s *allowedOriginsCompanyLevel) DeleteCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginID(ctx context.Context, request operations.DeleteCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest, security operations.DeleteCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDSecurity) (*operations.DeleteCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -95,7 +98,10 @@ func (s *allowedOriginsCompanyLevel) DeleteCompaniesCompanyIDAPICredentialsAPICr
 // * Management API—API credentials read and write
 func (s *allowedOriginsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOrigins(ctx context.Context, request operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsRequest, security operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsSecurity) (*operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -161,7 +167,10 @@ func (s *allowedOriginsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICrede
 // * Management API—API credentials read and write
 func (s *allowedOriginsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginID(ctx context.Context, request operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest, security operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDSecurity) (*operations.GetCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -227,7 +236,10 @@ func (s *allowedOriginsCompanyLevel) GetCompaniesCompanyIDAPICredentialsAPICrede
 // * Management API—API credentials read and write
 func (s *allowedOriginsCompanyLevel) PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOrigins(ctx context.Context, request operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsRequest, security operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsSecurity) (*operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDAllowedOriginsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AllowedOrigin", "json")
 	if err != nil {

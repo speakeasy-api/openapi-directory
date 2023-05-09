@@ -16,17 +16,21 @@ const (
 	ListRunsXAmzTargetEnumDeviceFarm20150623ListRuns ListRunsXAmzTargetEnum = "DeviceFarm_20150623.ListRuns"
 )
 
+func (e ListRunsXAmzTargetEnum) ToPointer() *ListRunsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListRunsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.ListRuns":
-		*e = ListRunsXAmzTargetEnum(s)
+		*e = ListRunsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRunsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRunsXAmzTargetEnum: %v", v)
 	}
 }
 

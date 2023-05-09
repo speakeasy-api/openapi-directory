@@ -15,20 +15,24 @@ const (
 	NetworkTypeEnumDualStack NetworkTypeEnum = "dual_stack"
 )
 
+func (e NetworkTypeEnum) ToPointer() *NetworkTypeEnum {
+	return &e
+}
+
 func (e *NetworkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
 		fallthrough
 	case "dual_stack":
-		*e = NetworkTypeEnum(s)
+		*e = NetworkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkTypeEnum: %v", v)
 	}
 }

@@ -16,21 +16,25 @@ const (
 	PatchSpacesSpaceIDFoldersIDBankRequestBodyLevelEnumPublic       PatchSpacesSpaceIDFoldersIDBankRequestBodyLevelEnum = "public"
 )
 
+func (e PatchSpacesSpaceIDFoldersIDBankRequestBodyLevelEnum) ToPointer() *PatchSpacesSpaceIDFoldersIDBankRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersIDBankRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = PatchSpacesSpaceIDFoldersIDBankRequestBodyLevelEnum(s)
+		*e = PatchSpacesSpaceIDFoldersIDBankRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDBankRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDBankRequestBodyLevelEnum: %v", v)
 	}
 }
 

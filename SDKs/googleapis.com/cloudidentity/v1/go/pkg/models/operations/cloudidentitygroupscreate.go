@@ -33,21 +33,25 @@ const (
 	CloudidentityGroupsCreateInitialGroupConfigEnumEmpty                         CloudidentityGroupsCreateInitialGroupConfigEnum = "EMPTY"
 )
 
+func (e CloudidentityGroupsCreateInitialGroupConfigEnum) ToPointer() *CloudidentityGroupsCreateInitialGroupConfigEnum {
+	return &e
+}
+
 func (e *CloudidentityGroupsCreateInitialGroupConfigEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIAL_GROUP_CONFIG_UNSPECIFIED":
 		fallthrough
 	case "WITH_INITIAL_OWNER":
 		fallthrough
 	case "EMPTY":
-		*e = CloudidentityGroupsCreateInitialGroupConfigEnum(s)
+		*e = CloudidentityGroupsCreateInitialGroupConfigEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudidentityGroupsCreateInitialGroupConfigEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudidentityGroupsCreateInitialGroupConfigEnum: %v", v)
 	}
 }
 

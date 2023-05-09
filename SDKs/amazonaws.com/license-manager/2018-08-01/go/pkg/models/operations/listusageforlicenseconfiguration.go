@@ -16,17 +16,21 @@ const (
 	ListUsageForLicenseConfigurationXAmzTargetEnumAwsLicenseManagerListUsageForLicenseConfiguration ListUsageForLicenseConfigurationXAmzTargetEnum = "AWSLicenseManager.ListUsageForLicenseConfiguration"
 )
 
+func (e ListUsageForLicenseConfigurationXAmzTargetEnum) ToPointer() *ListUsageForLicenseConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListUsageForLicenseConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLicenseManager.ListUsageForLicenseConfiguration":
-		*e = ListUsageForLicenseConfigurationXAmzTargetEnum(s)
+		*e = ListUsageForLicenseConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListUsageForLicenseConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListUsageForLicenseConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

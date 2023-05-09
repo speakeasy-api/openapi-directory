@@ -19,12 +19,16 @@ const (
 	OrgsCreateCustomRoleRequestBodyBaseRoleEnumMaintain OrgsCreateCustomRoleRequestBodyBaseRoleEnum = "maintain"
 )
 
+func (e OrgsCreateCustomRoleRequestBodyBaseRoleEnum) ToPointer() *OrgsCreateCustomRoleRequestBodyBaseRoleEnum {
+	return &e
+}
+
 func (e *OrgsCreateCustomRoleRequestBodyBaseRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "triage":
@@ -32,10 +36,10 @@ func (e *OrgsCreateCustomRoleRequestBodyBaseRoleEnum) UnmarshalJSON(data []byte)
 	case "write":
 		fallthrough
 	case "maintain":
-		*e = OrgsCreateCustomRoleRequestBodyBaseRoleEnum(s)
+		*e = OrgsCreateCustomRoleRequestBodyBaseRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgsCreateCustomRoleRequestBodyBaseRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgsCreateCustomRoleRequestBodyBaseRoleEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyLevelEnumRegular      PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyLevelEnum = "regular"
 )
 
+func (e PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyLevelEnum) ToPointer() *PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
-		*e = PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyLevelEnum(s)
+		*e = PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyLevelEnum: %v", v)
 	}
 }
 
@@ -39,21 +43,25 @@ const (
 	PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyNotifyHowEnumSms  PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyNotifyHowEnum = "sms"
 )
 
+func (e PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyNotifyHowEnum) ToPointer() *PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyNotifyHowEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyNotifyHowEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "std":
 		fallthrough
 	case "mail":
 		fallthrough
 	case "sms":
-		*e = PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyNotifyHowEnum(s)
+		*e = PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyNotifyHowEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyNotifyHowEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequestBodyNotifyHowEnum: %v", v)
 	}
 }
 

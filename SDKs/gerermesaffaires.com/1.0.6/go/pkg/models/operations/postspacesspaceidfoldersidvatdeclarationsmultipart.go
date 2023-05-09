@@ -26,12 +26,16 @@ const (
 	PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartFormDataAccountingWorkbookEnumPermanent   PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartFormDataAccountingWorkbookEnum = "permanent"
 )
 
+func (e PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartFormDataAccountingWorkbookEnum) ToPointer() *PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartFormDataAccountingWorkbookEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartFormDataAccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -49,10 +53,10 @@ func (e *PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartFormDataAccountingWor
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartFormDataAccountingWorkbookEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartFormDataAccountingWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartFormDataAccountingWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartFormDataAccountingWorkbookEnum: %v", v)
 	}
 }
 

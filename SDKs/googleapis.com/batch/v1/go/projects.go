@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // BatchProjectsLocationsJobsCreate - Create a Job.
 func (s *projects) BatchProjectsLocationsJobsCreate(ctx context.Context, request operations.BatchProjectsLocationsJobsCreateRequest, security operations.BatchProjectsLocationsJobsCreateSecurity) (*operations.BatchProjectsLocationsJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) BatchProjectsLocationsJobsCreate(ctx context.Context, request
 // BatchProjectsLocationsJobsList - List all Jobs for a project within a region.
 func (s *projects) BatchProjectsLocationsJobsList(ctx context.Context, request operations.BatchProjectsLocationsJobsListRequest, security operations.BatchProjectsLocationsJobsListSecurity) (*operations.BatchProjectsLocationsJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) BatchProjectsLocationsJobsList(ctx context.Context, request o
 // BatchProjectsLocationsJobsTaskGroupsTasksList - List Tasks associated with a job.
 func (s *projects) BatchProjectsLocationsJobsTaskGroupsTasksList(ctx context.Context, request operations.BatchProjectsLocationsJobsTaskGroupsTasksListRequest, security operations.BatchProjectsLocationsJobsTaskGroupsTasksListSecurity) (*operations.BatchProjectsLocationsJobsTaskGroupsTasksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tasks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tasks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) BatchProjectsLocationsJobsTaskGroupsTasksList(ctx context.Con
 // BatchProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) BatchProjectsLocationsList(ctx context.Context, request operations.BatchProjectsLocationsListRequest, security operations.BatchProjectsLocationsListSecurity) (*operations.BatchProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *projects) BatchProjectsLocationsList(ctx context.Context, request opera
 // BatchProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) BatchProjectsLocationsOperationsCancel(ctx context.Context, request operations.BatchProjectsLocationsOperationsCancelRequest, security operations.BatchProjectsLocationsOperationsCancelSecurity) (*operations.BatchProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) BatchProjectsLocationsOperationsCancel(ctx context.Context, r
 // BatchProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) BatchProjectsLocationsOperationsDelete(ctx context.Context, request operations.BatchProjectsLocationsOperationsDeleteRequest, security operations.BatchProjectsLocationsOperationsDeleteSecurity) (*operations.BatchProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *projects) BatchProjectsLocationsOperationsDelete(ctx context.Context, r
 // BatchProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) BatchProjectsLocationsOperationsGet(ctx context.Context, request operations.BatchProjectsLocationsOperationsGetRequest, security operations.BatchProjectsLocationsOperationsGetSecurity) (*operations.BatchProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -384,7 +405,10 @@ func (s *projects) BatchProjectsLocationsOperationsGet(ctx context.Context, requ
 // BatchProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) BatchProjectsLocationsOperationsList(ctx context.Context, request operations.BatchProjectsLocationsOperationsListRequest, security operations.BatchProjectsLocationsOperationsListSecurity) (*operations.BatchProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -432,7 +456,10 @@ func (s *projects) BatchProjectsLocationsOperationsList(ctx context.Context, req
 // BatchProjectsLocationsStateReport - Report agent's state, e.g. agent status and tasks information
 func (s *projects) BatchProjectsLocationsStateReport(ctx context.Context, request operations.BatchProjectsLocationsStateReportRequest, security operations.BatchProjectsLocationsStateReportSecurity) (*operations.BatchProjectsLocationsStateReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/state:report", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/state:report", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportAgentStateRequest", "json")
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	GETGETVpnConnectionDeviceSampleConfigurationActionEnumGetVpnConnectionDeviceSampleConfiguration GETGETVpnConnectionDeviceSampleConfigurationActionEnum = "GetVpnConnectionDeviceSampleConfiguration"
 )
 
+func (e GETGETVpnConnectionDeviceSampleConfigurationActionEnum) ToPointer() *GETGETVpnConnectionDeviceSampleConfigurationActionEnum {
+	return &e
+}
+
 func (e *GETGETVpnConnectionDeviceSampleConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetVpnConnectionDeviceSampleConfiguration":
-		*e = GETGETVpnConnectionDeviceSampleConfigurationActionEnum(s)
+		*e = GETGETVpnConnectionDeviceSampleConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETVpnConnectionDeviceSampleConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETVpnConnectionDeviceSampleConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETVpnConnectionDeviceSampleConfigurationVersionEnumTwoThousandAndSixteen1115 GETGETVpnConnectionDeviceSampleConfigurationVersionEnum = "2016-11-15"
 )
 
+func (e GETGETVpnConnectionDeviceSampleConfigurationVersionEnum) ToPointer() *GETGETVpnConnectionDeviceSampleConfigurationVersionEnum {
+	return &e
+}
+
 func (e *GETGETVpnConnectionDeviceSampleConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETVpnConnectionDeviceSampleConfigurationVersionEnum(s)
+		*e = GETGETVpnConnectionDeviceSampleConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETVpnConnectionDeviceSampleConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETVpnConnectionDeviceSampleConfigurationVersionEnum: %v", v)
 	}
 }
 

@@ -18,21 +18,25 @@ const (
 	StopPointCrowdingDirectionEnumAll      StopPointCrowdingDirectionEnum = "all"
 )
 
+func (e StopPointCrowdingDirectionEnum) ToPointer() *StopPointCrowdingDirectionEnum {
+	return &e
+}
+
 func (e *StopPointCrowdingDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inbound":
 		fallthrough
 	case "outbound":
 		fallthrough
 	case "all":
-		*e = StopPointCrowdingDirectionEnum(s)
+		*e = StopPointCrowdingDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopPointCrowdingDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for StopPointCrowdingDirectionEnum: %v", v)
 	}
 }
 

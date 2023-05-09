@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,23 +17,21 @@ func main() {
         }),
     )
 
-    req := operations.AcceptDomainTransferFromAnotherAwsAccountRequest{
+    ctx := context.Background()
+    res, err := s.AcceptDomainTransferFromAnotherAwsAccount(ctx, operations.AcceptDomainTransferFromAnotherAwsAccountRequest{
         AcceptDomainTransferFromAnotherAwsAccountRequest: shared.AcceptDomainTransferFromAnotherAwsAccountRequest{
             DomainName: "corrupti",
             Password: "provident",
         },
-        XAmzAlgorithm: "distinctio",
-        XAmzContentSha256: "quibusdam",
-        XAmzCredential: "unde",
-        XAmzDate: "nulla",
-        XAmzSecurityToken: "corrupti",
-        XAmzSignature: "illum",
-        XAmzSignedHeaders: "vel",
-        XAmzTarget: "Route53Domains_v20140515.AcceptDomainTransferFromAnotherAwsAccount",
-    }
-
-    ctx := context.Background()
-    res, err := s.AcceptDomainTransferFromAnotherAwsAccount(ctx, req)
+        XAmzAlgorithm: sdk.String("distinctio"),
+        XAmzContentSha256: sdk.String("quibusdam"),
+        XAmzCredential: sdk.String("unde"),
+        XAmzDate: sdk.String("nulla"),
+        XAmzSecurityToken: sdk.String("corrupti"),
+        XAmzSignature: sdk.String("illum"),
+        XAmzSignedHeaders: sdk.String("vel"),
+        XAmzTarget: operations.AcceptDomainTransferFromAnotherAwsAccountXAmzTargetEnumRoute53DomainsV20140515AcceptDomainTransferFromAnotherAwsAccount,
+    })
     if err != nil {
         log.Fatal(err)
     }

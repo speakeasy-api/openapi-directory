@@ -8,22 +8,26 @@ import (
 )
 
 // VersionNumberEnum - Service version number. The current value is 1.
-type VersionNumberEnum string
+type VersionNumberEnum int64
 
 const (
-	VersionNumberEnumOne VersionNumberEnum = "1"
+	VersionNumberEnumOne VersionNumberEnum = 1
 )
 
+func (e VersionNumberEnum) ToPointer() *VersionNumberEnum {
+	return &e
+}
+
 func (e *VersionNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
-		*e = VersionNumberEnum(s)
+	switch v {
+	case 1:
+		*e = VersionNumberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VersionNumberEnum: %s", s)
+		return fmt.Errorf("invalid value for VersionNumberEnum: %v", v)
 	}
 }

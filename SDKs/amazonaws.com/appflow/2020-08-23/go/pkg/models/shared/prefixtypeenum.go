@@ -15,20 +15,24 @@ const (
 	PrefixTypeEnumPathAndFilename PrefixTypeEnum = "PATH_AND_FILENAME"
 )
 
+func (e PrefixTypeEnum) ToPointer() *PrefixTypeEnum {
+	return &e
+}
+
 func (e *PrefixTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILENAME":
 		fallthrough
 	case "PATH":
 		fallthrough
 	case "PATH_AND_FILENAME":
-		*e = PrefixTypeEnum(s)
+		*e = PrefixTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrefixTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PrefixTypeEnum: %v", v)
 	}
 }

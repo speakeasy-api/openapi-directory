@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -18,7 +18,8 @@ func main() {
         }),
     )
 
-    req := operations.AddrecurrenceitemRequest{
+    ctx := context.Background()
+    res, err := s.Miscellaneous.Addrecurrenceitem(ctx, operations.AddrecurrenceitemRequest{
         Accept: "application/json",
         ContentType: "application/json",
         RequestBody: []shared.AddrecurrenceitemRequest{
@@ -54,10 +55,7 @@ func main() {
             },
         },
         RecurrenceID: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Miscellaneous.Addrecurrenceitem(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

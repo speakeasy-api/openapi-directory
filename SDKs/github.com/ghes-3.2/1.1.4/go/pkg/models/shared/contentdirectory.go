@@ -22,12 +22,16 @@ const (
 	ContentDirectoryTypeEnumSymlink   ContentDirectoryTypeEnum = "symlink"
 )
 
+func (e ContentDirectoryTypeEnum) ToPointer() *ContentDirectoryTypeEnum {
+	return &e
+}
+
 func (e *ContentDirectoryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dir":
 		fallthrough
 	case "file":
@@ -35,10 +39,10 @@ func (e *ContentDirectoryTypeEnum) UnmarshalJSON(data []byte) error {
 	case "submodule":
 		fallthrough
 	case "symlink":
-		*e = ContentDirectoryTypeEnum(s)
+		*e = ContentDirectoryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentDirectoryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentDirectoryTypeEnum: %v", v)
 	}
 }
 

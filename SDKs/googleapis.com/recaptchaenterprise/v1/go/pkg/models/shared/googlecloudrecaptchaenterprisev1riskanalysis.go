@@ -20,12 +20,16 @@ const (
 	GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnumSuspectedChargeback             GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum = "SUSPECTED_CHARGEBACK"
 )
 
+func (e GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum) ToPointer() *GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLASSIFICATION_REASON_UNSPECIFIED":
 		fallthrough
 	case "AUTOMATION":
@@ -41,15 +45,17 @@ func (e *GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum) UnmarshalJSON(
 	case "SUSPECTED_CARDING":
 		fallthrough
 	case "SUSPECTED_CHARGEBACK":
-		*e = GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum(s)
+		*e = GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum: %v", v)
 	}
 }
 
 // GoogleCloudRecaptchaenterpriseV1RiskAnalysis - Risk analysis result for an event.
 type GoogleCloudRecaptchaenterpriseV1RiskAnalysis struct {
+	// Extended verdict reasons to be used for experimentation only. The set of possible reasons is subject to change.
+	ExtendedVerdictReasons []string `json:"extendedVerdictReasons,omitempty"`
 	// Reasons contributing to the risk analysis verdict.
 	Reasons []GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum `json:"reasons,omitempty"`
 	// Legitimate event score from 0.0 to 1.0. (1.0 means very likely legitimate traffic while 0.0 means very likely non-legitimate traffic).

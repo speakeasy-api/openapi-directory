@@ -37,7 +37,10 @@ func newTod(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Agent's TOD configuration
 func (s *tod) ProtocolTodGetArgs(ctx context.Context, request operations.ProtocolTodGetArgsRequest) (*operations.ProtocolTodGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/get/args", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/get/args", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *tod) ProtocolTodGetArgs(ctx context.Context, request operations.Protoco
 // Agent's TOD configuration
 func (s *tod) ProtocolTodGetConfig(ctx context.Context, request operations.ProtocolTodGetConfigRequest) (*operations.ProtocolTodGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/get/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/get/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *tod) ProtocolTodGetConfig(ctx context.Context, request operations.Proto
 // Statistics of fields indicated in the headers
 func (s *tod) ProtocolTodGetStatistics(ctx context.Context, request operations.ProtocolTodGetStatisticsRequest) (*operations.ProtocolTodGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/get/statistics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/get/statistics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +230,10 @@ func (s *tod) ProtocolTodGetStatsHdr(ctx context.Context) (*operations.ProtocolT
 // Trace 1 means enabled, 0 means not
 func (s *tod) ProtocolTodGetTrace(ctx context.Context, request operations.ProtocolTodGetTraceRequest) (*operations.ProtocolTodGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/get/trace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/get/trace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +279,10 @@ func (s *tod) ProtocolTodGetTrace(ctx context.Context, request operations.Protoc
 // Retrive time from server
 func (s *tod) ProtocolTodGettime(ctx context.Context, request operations.ProtocolTodGettimeRequest) (*operations.ProtocolTodGettimeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/gettime/server/{serverAddr}/port/{portNum}/script/{scriptName}/timeout/{timeSec}/retries/{numRetries}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/gettime/server/{serverAddr}/port/{portNum}/script/{scriptName}/timeout/{timeSec}/retries/{numRetries}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -313,7 +328,10 @@ func (s *tod) ProtocolTodGettime(ctx context.Context, request operations.Protoco
 // Agent's TOD configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *tod) ProtocolTodSetConfig(ctx context.Context, request operations.ProtocolTodSetConfigRequest) (*operations.ProtocolTodSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/set/config/{argument}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/set/config/{argument}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -360,7 +378,10 @@ func (s *tod) ProtocolTodSetConfig(ctx context.Context, request operations.Proto
 // 1 to enable, 0 to disable
 func (s *tod) ProtocolTodSetTrace(ctx context.Context, request operations.ProtocolTodSetTraceRequest) (*operations.ProtocolTodSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/set/trace/{enableOrNot}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tod/set/trace/{enableOrNot}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

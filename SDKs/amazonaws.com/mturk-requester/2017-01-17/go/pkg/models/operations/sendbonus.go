@@ -16,17 +16,21 @@ const (
 	SendBonusXAmzTargetEnumMTurkRequesterServiceV20170117SendBonus SendBonusXAmzTargetEnum = "MTurkRequesterServiceV20170117.SendBonus"
 )
 
+func (e SendBonusXAmzTargetEnum) ToPointer() *SendBonusXAmzTargetEnum {
+	return &e
+}
+
 func (e *SendBonusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.SendBonus":
-		*e = SendBonusXAmzTargetEnum(s)
+		*e = SendBonusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendBonusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SendBonusXAmzTargetEnum: %v", v)
 	}
 }
 

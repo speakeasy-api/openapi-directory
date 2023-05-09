@@ -22,12 +22,16 @@ const (
 	InboundAchTransferReturnReasonEnumCorporateCustomerAdvisedNotAuthorized                       InboundAchTransferReturnReasonEnum = "corporate_customer_advised_not_authorized"
 )
 
+func (e InboundAchTransferReturnReasonEnum) ToPointer() *InboundAchTransferReturnReasonEnum {
+	return &e
+}
+
 func (e *InboundAchTransferReturnReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "authorization_revoked_by_customer":
 		fallthrough
 	case "payment_stopped":
@@ -43,10 +47,10 @@ func (e *InboundAchTransferReturnReasonEnum) UnmarshalJSON(data []byte) error {
 	case "duplicate_entry":
 		fallthrough
 	case "corporate_customer_advised_not_authorized":
-		*e = InboundAchTransferReturnReasonEnum(s)
+		*e = InboundAchTransferReturnReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundAchTransferReturnReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundAchTransferReturnReasonEnum: %v", v)
 	}
 }
 
@@ -58,19 +62,23 @@ const (
 	InboundAchTransferReturnStatusEnumSubmitted         InboundAchTransferReturnStatusEnum = "submitted"
 )
 
+func (e InboundAchTransferReturnStatusEnum) ToPointer() *InboundAchTransferReturnStatusEnum {
+	return &e
+}
+
 func (e *InboundAchTransferReturnStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending_submitting":
 		fallthrough
 	case "submitted":
-		*e = InboundAchTransferReturnStatusEnum(s)
+		*e = InboundAchTransferReturnStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundAchTransferReturnStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundAchTransferReturnStatusEnum: %v", v)
 	}
 }
 
@@ -89,17 +97,21 @@ const (
 	InboundAchTransferReturnTypeEnumInboundAchTransferReturn InboundAchTransferReturnTypeEnum = "inbound_ach_transfer_return"
 )
 
+func (e InboundAchTransferReturnTypeEnum) ToPointer() *InboundAchTransferReturnTypeEnum {
+	return &e
+}
+
 func (e *InboundAchTransferReturnTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inbound_ach_transfer_return":
-		*e = InboundAchTransferReturnTypeEnum(s)
+		*e = InboundAchTransferReturnTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundAchTransferReturnTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundAchTransferReturnTypeEnum: %v", v)
 	}
 }
 

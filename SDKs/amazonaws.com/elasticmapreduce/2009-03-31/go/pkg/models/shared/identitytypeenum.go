@@ -14,18 +14,22 @@ const (
 	IdentityTypeEnumGroup IdentityTypeEnum = "GROUP"
 )
 
+func (e IdentityTypeEnum) ToPointer() *IdentityTypeEnum {
+	return &e
+}
+
 func (e *IdentityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER":
 		fallthrough
 	case "GROUP":
-		*e = IdentityTypeEnum(s)
+		*e = IdentityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IdentityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IdentityTypeEnum: %v", v)
 	}
 }

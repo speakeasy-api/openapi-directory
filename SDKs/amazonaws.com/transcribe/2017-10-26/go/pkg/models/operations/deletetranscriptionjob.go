@@ -16,17 +16,21 @@ const (
 	DeleteTranscriptionJobXAmzTargetEnumTranscribeDeleteTranscriptionJob DeleteTranscriptionJobXAmzTargetEnum = "Transcribe.DeleteTranscriptionJob"
 )
 
+func (e DeleteTranscriptionJobXAmzTargetEnum) ToPointer() *DeleteTranscriptionJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteTranscriptionJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Transcribe.DeleteTranscriptionJob":
-		*e = DeleteTranscriptionJobXAmzTargetEnum(s)
+		*e = DeleteTranscriptionJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTranscriptionJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTranscriptionJobXAmzTargetEnum: %v", v)
 	}
 }
 

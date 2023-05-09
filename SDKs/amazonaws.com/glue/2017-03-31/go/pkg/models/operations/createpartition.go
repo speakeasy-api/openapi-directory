@@ -16,17 +16,21 @@ const (
 	CreatePartitionXAmzTargetEnumAwsGlueCreatePartition CreatePartitionXAmzTargetEnum = "AWSGlue.CreatePartition"
 )
 
+func (e CreatePartitionXAmzTargetEnum) ToPointer() *CreatePartitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreatePartitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.CreatePartition":
-		*e = CreatePartitionXAmzTargetEnum(s)
+		*e = CreatePartitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePartitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePartitionXAmzTargetEnum: %v", v)
 	}
 }
 

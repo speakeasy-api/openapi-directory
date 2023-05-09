@@ -17,12 +17,16 @@ const (
 	AssetStateEnumFailed   AssetStateEnum = "FAILED"
 )
 
+func (e AssetStateEnum) ToPointer() *AssetStateEnum {
+	return &e
+}
+
 func (e *AssetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -32,9 +36,9 @@ func (e *AssetStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "FAILED":
-		*e = AssetStateEnum(s)
+		*e = AssetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AssetStateEnum: %v", v)
 	}
 }

@@ -30,12 +30,16 @@ const (
 	ListSystemsSortEnumPackagesUpdatable ListSystemsSortEnum = "packages_updatable"
 )
 
+func (e ListSystemsSortEnum) ToPointer() *ListSystemsSortEnum {
+	return &e
+}
+
 func (e *ListSystemsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "display_name":
@@ -57,10 +61,10 @@ func (e *ListSystemsSortEnum) UnmarshalJSON(data []byte) error {
 	case "packages_installed":
 		fallthrough
 	case "packages_updatable":
-		*e = ListSystemsSortEnum(s)
+		*e = ListSystemsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSystemsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSystemsSortEnum: %v", v)
 	}
 }
 

@@ -17,21 +17,25 @@ const (
 	InvitationClientManagementEnumAdn     InvitationClientManagementEnum = "adn"
 )
 
+func (e InvitationClientManagementEnum) ToPointer() *InvitationClientManagementEnum {
+	return &e
+}
+
 func (e *InvitationClientManagementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no":
 		fallthrough
 	case "manager":
 		fallthrough
 	case "adn":
-		*e = InvitationClientManagementEnum(s)
+		*e = InvitationClientManagementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationClientManagementEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationClientManagementEnum: %v", v)
 	}
 }
 
@@ -41,17 +45,21 @@ const (
 	InvitationCodeMethod3TypeEnumSms InvitationCodeMethod3TypeEnum = "SMS"
 )
 
+func (e InvitationCodeMethod3TypeEnum) ToPointer() *InvitationCodeMethod3TypeEnum {
+	return &e
+}
+
 func (e *InvitationCodeMethod3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SMS":
-		*e = InvitationCodeMethod3TypeEnum(s)
+		*e = InvitationCodeMethod3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationCodeMethod3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationCodeMethod3TypeEnum: %v", v)
 	}
 }
 
@@ -65,17 +73,21 @@ const (
 	InvitationCodeMethod2TypeEnumPayslip InvitationCodeMethod2TypeEnum = "payslip"
 )
 
+func (e InvitationCodeMethod2TypeEnum) ToPointer() *InvitationCodeMethod2TypeEnum {
+	return &e
+}
+
 func (e *InvitationCodeMethod2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "payslip":
-		*e = InvitationCodeMethod2TypeEnum(s)
+		*e = InvitationCodeMethod2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationCodeMethod2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationCodeMethod2TypeEnum: %v", v)
 	}
 }
 
@@ -90,17 +102,21 @@ const (
 	InvitationCodeMethod1TypeEnumManual InvitationCodeMethod1TypeEnum = "manual"
 )
 
+func (e InvitationCodeMethod1TypeEnum) ToPointer() *InvitationCodeMethod1TypeEnum {
+	return &e
+}
+
 func (e *InvitationCodeMethod1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manual":
-		*e = InvitationCodeMethod1TypeEnum(s)
+		*e = InvitationCodeMethod1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationCodeMethod1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationCodeMethod1TypeEnum: %v", v)
 	}
 }
 
@@ -208,19 +224,23 @@ const (
 	InvitationFoldersRightEnumWrite InvitationFoldersRightEnum = "write"
 )
 
+func (e InvitationFoldersRightEnum) ToPointer() *InvitationFoldersRightEnum {
+	return &e
+}
+
 func (e *InvitationFoldersRightEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = InvitationFoldersRightEnum(s)
+		*e = InvitationFoldersRightEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationFoldersRightEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationFoldersRightEnum: %v", v)
 	}
 }
 
@@ -243,19 +263,23 @@ const (
 	InvitationLinkMethodTypeEnumEmail  InvitationLinkMethodTypeEnum = "Email"
 )
 
+func (e InvitationLinkMethodTypeEnum) ToPointer() *InvitationLinkMethodTypeEnum {
+	return &e
+}
+
 func (e *InvitationLinkMethodTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Postal":
 		fallthrough
 	case "Email":
-		*e = InvitationLinkMethodTypeEnum(s)
+		*e = InvitationLinkMethodTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationLinkMethodTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationLinkMethodTypeEnum: %v", v)
 	}
 }
 
@@ -273,12 +297,16 @@ const (
 	InvitationPlayerEnumCollaborator InvitationPlayerEnum = "collaborator"
 )
 
+func (e InvitationPlayerEnum) ToPointer() *InvitationPlayerEnum {
+	return &e
+}
+
 func (e *InvitationPlayerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "guest":
 		fallthrough
 	case "owner":
@@ -288,10 +316,10 @@ func (e *InvitationPlayerEnum) UnmarshalJSON(data []byte) error {
 	case "assistant":
 		fallthrough
 	case "collaborator":
-		*e = InvitationPlayerEnum(s)
+		*e = InvitationPlayerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationPlayerEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationPlayerEnum: %v", v)
 	}
 }
 
@@ -310,12 +338,16 @@ const (
 	InvitationStatusEnumWaitingForInvitation        InvitationStatusEnum = "waiting for invitation"
 )
 
+func (e InvitationStatusEnum) ToPointer() *InvitationStatusEnum {
+	return &e
+}
+
 func (e *InvitationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sent":
 		fallthrough
 	case "accepted":
@@ -335,10 +367,10 @@ func (e *InvitationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "not sent":
 		fallthrough
 	case "waiting for invitation":
-		*e = InvitationStatusEnum(s)
+		*e = InvitationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationStatusEnum: %v", v)
 	}
 }
 

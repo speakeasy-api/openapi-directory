@@ -16,12 +16,16 @@ const (
 	TimeUnitsTypeEnumDays    TimeUnitsTypeEnum = "days"
 )
 
+func (e TimeUnitsTypeEnum) ToPointer() *TimeUnitsTypeEnum {
+	return &e
+}
+
 func (e *TimeUnitsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "seconds":
 		fallthrough
 	case "minutes":
@@ -29,9 +33,9 @@ func (e *TimeUnitsTypeEnum) UnmarshalJSON(data []byte) error {
 	case "hours":
 		fallthrough
 	case "days":
-		*e = TimeUnitsTypeEnum(s)
+		*e = TimeUnitsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimeUnitsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TimeUnitsTypeEnum: %v", v)
 	}
 }

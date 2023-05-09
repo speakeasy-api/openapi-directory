@@ -16,12 +16,16 @@ const (
 	JobStatusEnumFailed     JobStatusEnum = "Failed"
 )
 
+func (e JobStatusEnum) ToPointer() *JobStatusEnum {
+	return &e
+}
+
 func (e *JobStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Queued":
 		fallthrough
 	case "InProgress":
@@ -29,9 +33,9 @@ func (e *JobStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Complete":
 		fallthrough
 	case "Failed":
-		*e = JobStatusEnum(s)
+		*e = JobStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for JobStatusEnum: %v", v)
 	}
 }

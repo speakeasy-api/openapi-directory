@@ -36,7 +36,10 @@ func newTeamMember(defaultClient, securityClient HTTPClient, serverURL, language
 // Delete a team member for the specific project.
 func (s *teamMember) DeleteTeamMemberOfProject(ctx context.Context, request operations.DeleteTeamMemberOfProjectRequest) (*operations.DeleteTeamMemberOfProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers/{teammember_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers/{teammember_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -191,7 +194,10 @@ func (s *teamMember) DeleteTeamMemberOfProject(ctx context.Context, request oper
 // List team member of client project side.
 func (s *teamMember) GetTeamMemberListOfClientProject(ctx context.Context, request operations.GetTeamMemberListOfClientProjectRequest) (*operations.GetTeamMemberListOfClientProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teamMembersOfClientProject", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teamMembersOfClientProject", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,7 +352,10 @@ func (s *teamMember) GetTeamMemberListOfClientProject(ctx context.Context, reque
 // List team member of project.
 func (s *teamMember) GetTeamMemberListOfProject(ctx context.Context, request operations.GetTeamMemberListOfProjectRequest) (*operations.GetTeamMemberListOfProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -501,7 +510,10 @@ func (s *teamMember) GetTeamMemberListOfProject(ctx context.Context, request ope
 // Invite a team member or all the members of team template for the specific project.
 func (s *teamMember) PostTeamMemberOfProjectJSON(ctx context.Context, request operations.PostTeamMemberOfProjectJSONRequest) (*operations.PostTeamMemberOfProjectJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TeamMemberPO", "json")
 	if err != nil {
@@ -663,7 +675,10 @@ func (s *teamMember) PostTeamMemberOfProjectJSON(ctx context.Context, request op
 // Invite a team member or all the members of team template for the specific project.
 func (s *teamMember) PostTeamMemberOfProjectRaw(ctx context.Context, request operations.PostTeamMemberOfProjectRawRequest) (*operations.PostTeamMemberOfProjectRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -825,7 +840,10 @@ func (s *teamMember) PostTeamMemberOfProjectRaw(ctx context.Context, request ope
 // Deprecated, please use 1.1 Version
 func (s *teamMember) PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersJSON(ctx context.Context, request operations.PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersJSONRequest) (*operations.PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContactUserVO", "json")
 	if err != nil {
@@ -987,7 +1005,10 @@ func (s *teamMember) PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersJSON
 // Deprecated, please use 1.1 Version
 func (s *teamMember) PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersRaw(ctx context.Context, request operations.PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersRawRequest) (*operations.PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

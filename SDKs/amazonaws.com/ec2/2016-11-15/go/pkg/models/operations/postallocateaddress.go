@@ -15,17 +15,21 @@ const (
 	POSTAllocateAddressActionEnumAllocateAddress POSTAllocateAddressActionEnum = "AllocateAddress"
 )
 
+func (e POSTAllocateAddressActionEnum) ToPointer() *POSTAllocateAddressActionEnum {
+	return &e
+}
+
 func (e *POSTAllocateAddressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AllocateAddress":
-		*e = POSTAllocateAddressActionEnum(s)
+		*e = POSTAllocateAddressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAllocateAddressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAllocateAddressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAllocateAddressVersionEnumTwoThousandAndSixteen1115 POSTAllocateAddressVersionEnum = "2016-11-15"
 )
 
+func (e POSTAllocateAddressVersionEnum) ToPointer() *POSTAllocateAddressVersionEnum {
+	return &e
+}
+
 func (e *POSTAllocateAddressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTAllocateAddressVersionEnum(s)
+		*e = POSTAllocateAddressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAllocateAddressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAllocateAddressVersionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateDatasetGroupXAmzTargetEnumAmazonForecastUpdateDatasetGroup UpdateDatasetGroupXAmzTargetEnum = "AmazonForecast.UpdateDatasetGroup"
 )
 
+func (e UpdateDatasetGroupXAmzTargetEnum) ToPointer() *UpdateDatasetGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDatasetGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.UpdateDatasetGroup":
-		*e = UpdateDatasetGroupXAmzTargetEnum(s)
+		*e = UpdateDatasetGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDatasetGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDatasetGroupXAmzTargetEnum: %v", v)
 	}
 }
 

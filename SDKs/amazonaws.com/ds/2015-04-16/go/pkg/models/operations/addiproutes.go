@@ -16,17 +16,21 @@ const (
 	AddIPRoutesXAmzTargetEnumDirectoryService20150416AddIPRoutes AddIPRoutesXAmzTargetEnum = "DirectoryService_20150416.AddIpRoutes"
 )
 
+func (e AddIPRoutesXAmzTargetEnum) ToPointer() *AddIPRoutesXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddIPRoutesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.AddIpRoutes":
-		*e = AddIPRoutesXAmzTargetEnum(s)
+		*e = AddIPRoutesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddIPRoutesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddIPRoutesXAmzTargetEnum: %v", v)
 	}
 }
 

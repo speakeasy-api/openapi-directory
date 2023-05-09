@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,21 +17,22 @@ func main() {
         }),
     )
 
-    req := operations.CreateClusterRequest{
+    ctx := context.Background()
+    res, err := s.CreateCluster(ctx, operations.CreateClusterRequest{
         CreateClusterRequest: shared.CreateClusterRequest{
             AvailabilityZones: []string{
                 "provident",
                 "distinctio",
                 "quibusdam",
             },
-            ClusterEndpointEncryptionType: "TLS",
+            ClusterEndpointEncryptionType: shared.ClusterEndpointEncryptionTypeEnumTLS.ToPointer(),
             ClusterName: "nulla",
-            Description: "corrupti",
+            Description: sdk.String("corrupti"),
             IamRoleArn: "illum",
             NodeType: "vel",
-            NotificationTopicArn: "error",
-            ParameterGroupName: "deserunt",
-            PreferredMaintenanceWindow: "suscipit",
+            NotificationTopicArn: sdk.String("error"),
+            ParameterGroupName: sdk.String("deserunt"),
+            PreferredMaintenanceWindow: sdk.String("suscipit"),
             ReplicationFactor: 437587,
             SSESpecification: &shared.SSESpecification{
                 Enabled: false,
@@ -40,30 +41,27 @@ func main() {
                 "debitis",
                 "ipsa",
             },
-            SubnetGroupName: "delectus",
+            SubnetGroupName: sdk.String("delectus"),
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "suscipit",
-                    Value: "molestiae",
+                    Key: sdk.String("suscipit"),
+                    Value: sdk.String("molestiae"),
                 },
                 shared.Tag{
-                    Key: "minus",
-                    Value: "placeat",
+                    Key: sdk.String("minus"),
+                    Value: sdk.String("placeat"),
                 },
             },
         },
-        XAmzAlgorithm: "voluptatum",
-        XAmzContentSha256: "iusto",
-        XAmzCredential: "excepturi",
-        XAmzDate: "nisi",
-        XAmzSecurityToken: "recusandae",
-        XAmzSignature: "temporibus",
-        XAmzSignedHeaders: "ab",
-        XAmzTarget: "AmazonDAXV3.CreateCluster",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateCluster(ctx, req)
+        XAmzAlgorithm: sdk.String("voluptatum"),
+        XAmzContentSha256: sdk.String("iusto"),
+        XAmzCredential: sdk.String("excepturi"),
+        XAmzDate: sdk.String("nisi"),
+        XAmzSecurityToken: sdk.String("recusandae"),
+        XAmzSignature: sdk.String("temporibus"),
+        XAmzSignedHeaders: sdk.String("ab"),
+        XAmzTarget: operations.CreateClusterXAmzTargetEnumAmazonDaxv3CreateCluster,
+    })
     if err != nil {
         log.Fatal(err)
     }

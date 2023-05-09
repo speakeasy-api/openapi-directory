@@ -35,7 +35,10 @@ func newPublicListOfValuesLOV(defaultClient, securityClient HTTPClient, serverUR
 // GetPublicListOfValues - Get the list of values related to this list name
 func (s *publicListOfValuesLOV) GetPublicListOfValues(ctx context.Context, request operations.GetPublicListOfValuesRequest) (*operations.GetPublicListOfValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/public/lov/{listName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/public/lov/{listName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

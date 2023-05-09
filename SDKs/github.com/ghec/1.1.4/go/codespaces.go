@@ -40,7 +40,10 @@ func newCodespaces(defaultClient, securityClient HTTPClient, serverURL, language
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#add-a-selected-repository-to-a-user-secret - API method documentation
 func (s *codespaces) CodespacesAddRepositoryForSecretForAuthenticatedUser(ctx context.Context, request operations.CodespacesAddRepositoryForSecretForAuthenticatedUserRequest) (*operations.CodespacesAddRepositoryForSecretForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -93,7 +96,10 @@ func (s *codespaces) CodespacesAddRepositoryForSecretForAuthenticatedUser(ctx co
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#add-selected-repository-to-an-organization-secret - API method documentation
 func (s *codespaces) CodespacesAddSelectedRepoToOrgSecret(ctx context.Context, request operations.CodespacesAddSelectedRepoToOrgSecretRequest) (*operations.CodespacesAddSelectedRepoToOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -156,7 +162,10 @@ func (s *codespaces) CodespacesAddSelectedRepoToOrgSecret(ctx context.Context, r
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#list-machine-types-for-a-codespace - API method documentation
 func (s *codespaces) CodespacesCodespaceMachinesForAuthenticatedUser(ctx context.Context, request operations.CodespacesCodespaceMachinesForAuthenticatedUserRequest) (*operations.CodespacesCodespaceMachinesForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}/machines", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}/machines", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -385,7 +394,10 @@ func (s *codespaces) CodespacesCreateForAuthenticatedUser(ctx context.Context, r
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#create-or-update-an-organization-secret - API method documentation
 func (s *codespaces) CodespacesCreateOrUpdateOrgSecret(ctx context.Context, request operations.CodespacesCreateOrUpdateOrgSecretRequest) (*operations.CodespacesCreateOrUpdateOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -541,7 +553,10 @@ func (s *codespaces) CodespacesCreateOrUpdateOrgSecret(ctx context.Context, requ
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#create-or-update-a-repository-secret - API method documentation
 func (s *codespaces) CodespacesCreateOrUpdateRepoSecret(ctx context.Context, request operations.CodespacesCreateOrUpdateRepoSecretRequest) (*operations.CodespacesCreateOrUpdateRepoSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -679,7 +694,10 @@ func (s *codespaces) CodespacesCreateOrUpdateRepoSecret(ctx context.Context, req
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#create-or-update-a-secret-for-the-authenticated-user - API method documentation
 func (s *codespaces) CodespacesCreateOrUpdateSecretForAuthenticatedUser(ctx context.Context, request operations.CodespacesCreateOrUpdateSecretForAuthenticatedUserRequest) (*operations.CodespacesCreateOrUpdateSecretForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -760,7 +778,10 @@ func (s *codespaces) CodespacesCreateOrUpdateSecretForAuthenticatedUser(ctx cont
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#create-a-codespace-from-a-pull-request - API method documentation
 func (s *codespaces) CodespacesCreateWithPrForAuthenticatedUser(ctx context.Context, request operations.CodespacesCreateWithPrForAuthenticatedUserRequest) (*operations.CodespacesCreateWithPrForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/codespaces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/codespaces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -846,7 +867,10 @@ func (s *codespaces) CodespacesCreateWithPrForAuthenticatedUser(ctx context.Cont
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#create-a-codespace-in-a-repository - API method documentation
 func (s *codespaces) CodespacesCreateWithRepoForAuthenticatedUser(ctx context.Context, request operations.CodespacesCreateWithRepoForAuthenticatedUserRequest) (*operations.CodespacesCreateWithRepoForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -946,7 +970,10 @@ func (s *codespaces) CodespacesCreateWithRepoForAuthenticatedUser(ctx context.Co
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#delete-codespaces-billing-users - API method documentation
 func (s *codespaces) CodespacesDeleteCodespacesBillingUsers(ctx context.Context, request operations.CodespacesDeleteCodespacesBillingUsersRequest) (*operations.CodespacesDeleteCodespacesBillingUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/billing/selected_users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/billing/selected_users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1023,7 +1050,10 @@ func (s *codespaces) CodespacesDeleteCodespacesBillingUsers(ctx context.Context,
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#delete-a-codespace-for-the-authenticated-user - API method documentation
 func (s *codespaces) CodespacesDeleteForAuthenticatedUser(ctx context.Context, request operations.CodespacesDeleteForAuthenticatedUserRequest) (*operations.CodespacesDeleteForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1088,7 +1118,10 @@ func (s *codespaces) CodespacesDeleteForAuthenticatedUser(ctx context.Context, r
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces - API method documentation
 func (s *codespaces) CodespacesDeleteFromOrganization(ctx context.Context, request operations.CodespacesDeleteFromOrganizationRequest) (*operations.CodespacesDeleteFromOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/members/{username}/codespaces/{codespace_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/members/{username}/codespaces/{codespace_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1151,7 +1184,10 @@ func (s *codespaces) CodespacesDeleteFromOrganization(ctx context.Context, reque
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#delete-an-organization-secret - API method documentation
 func (s *codespaces) CodespacesDeleteOrgSecret(ctx context.Context, request operations.CodespacesDeleteOrgSecretRequest) (*operations.CodespacesDeleteOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1198,7 +1234,10 @@ func (s *codespaces) CodespacesDeleteOrgSecret(ctx context.Context, request oper
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#delete-a-repository-secret - API method documentation
 func (s *codespaces) CodespacesDeleteRepoSecret(ctx context.Context, request operations.CodespacesDeleteRepoSecretRequest) (*operations.CodespacesDeleteRepoSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1239,7 +1278,10 @@ func (s *codespaces) CodespacesDeleteRepoSecret(ctx context.Context, request ope
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#delete-a-secret-for-the-authenticated-user - API method documentation
 func (s *codespaces) CodespacesDeleteSecretForAuthenticatedUser(ctx context.Context, request operations.CodespacesDeleteSecretForAuthenticatedUserRequest) (*operations.CodespacesDeleteSecretForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1282,7 +1324,10 @@ func (s *codespaces) CodespacesDeleteSecretForAuthenticatedUser(ctx context.Cont
 // https://docs.github.com/enterprise-cloud@latest//rest/codespaces/codespaces#export-a-codespace-for-the-authenticated-user - API method documentation
 func (s *codespaces) CodespacesExportForAuthenticatedUser(ctx context.Context, request operations.CodespacesExportForAuthenticatedUserRequest) (*operations.CodespacesExportForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}/exports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}/exports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1356,7 +1401,10 @@ func (s *codespaces) CodespacesExportForAuthenticatedUser(ctx context.Context, r
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#get-codespaces-for-user-in-org - API method documentation
 func (s *codespaces) CodespacesGetCodespacesForUserInOrg(ctx context.Context, request operations.CodespacesGetCodespacesForUserInOrgRequest) (*operations.CodespacesGetCodespacesForUserInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/members/{username}/codespaces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/members/{username}/codespaces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1427,7 +1475,10 @@ func (s *codespaces) CodespacesGetCodespacesForUserInOrg(ctx context.Context, re
 // https://docs.github.com/enterprise-cloud@latest//rest/codespaces/codespaces#get-details-about-a-codespace-export - API method documentation
 func (s *codespaces) CodespacesGetExportDetailsForAuthenticatedUser(ctx context.Context, request operations.CodespacesGetExportDetailsForAuthenticatedUserRequest) (*operations.CodespacesGetExportDetailsForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}/exports/{export_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}/exports/{export_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1487,7 +1538,10 @@ func (s *codespaces) CodespacesGetExportDetailsForAuthenticatedUser(ctx context.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#get-a-codespace-for-the-authenticated-user - API method documentation
 func (s *codespaces) CodespacesGetForAuthenticatedUser(ctx context.Context, request operations.CodespacesGetForAuthenticatedUserRequest) (*operations.CodespacesGetForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1550,7 +1604,10 @@ func (s *codespaces) CodespacesGetForAuthenticatedUser(ctx context.Context, requ
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#get-an-organization-public-key - API method documentation
 func (s *codespaces) CodespacesGetOrgPublicKey(ctx context.Context, request operations.CodespacesGetOrgPublicKeyRequest) (*operations.CodespacesGetOrgPublicKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/public-key", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/public-key", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1597,7 +1654,10 @@ func (s *codespaces) CodespacesGetOrgPublicKey(ctx context.Context, request oper
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#get-an-organization-secret - API method documentation
 func (s *codespaces) CodespacesGetOrgSecret(ctx context.Context, request operations.CodespacesGetOrgSecretRequest) (*operations.CodespacesGetOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1695,7 +1755,10 @@ func (s *codespaces) CodespacesGetPublicKeyForAuthenticatedUser(ctx context.Cont
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#get-a-repository-public-key - API method documentation
 func (s *codespaces) CodespacesGetRepoPublicKey(ctx context.Context, request operations.CodespacesGetRepoPublicKeyRequest) (*operations.CodespacesGetRepoPublicKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/secrets/public-key", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/secrets/public-key", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1741,7 +1804,10 @@ func (s *codespaces) CodespacesGetRepoPublicKey(ctx context.Context, request ope
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#get-a-repository-secret - API method documentation
 func (s *codespaces) CodespacesGetRepoSecret(ctx context.Context, request operations.CodespacesGetRepoSecretRequest) (*operations.CodespacesGetRepoSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1791,7 +1857,10 @@ func (s *codespaces) CodespacesGetRepoSecret(ctx context.Context, request operat
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#get-a-secret-for-the-authenticated-user - API method documentation
 func (s *codespaces) CodespacesGetSecretForAuthenticatedUser(ctx context.Context, request operations.CodespacesGetSecretForAuthenticatedUserRequest) (*operations.CodespacesGetSecretForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1842,7 +1911,10 @@ func (s *codespaces) CodespacesGetSecretForAuthenticatedUser(ctx context.Context
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#list-devcontainers-in-a-repository-for-the-authenticated-user - API method documentation
 func (s *codespaces) CodespacesListDevcontainersInRepositoryForAuthenticatedUser(ctx context.Context, request operations.CodespacesListDevcontainersInRepositoryForAuthenticatedUserRequest) (*operations.CodespacesListDevcontainersInRepositoryForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/devcontainers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/devcontainers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1998,7 +2070,10 @@ func (s *codespaces) CodespacesListForAuthenticatedUser(ctx context.Context, req
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#list-in-organization - API method documentation
 func (s *codespaces) CodespacesListInOrganization(ctx context.Context, request operations.CodespacesListInOrganizationRequest) (*operations.CodespacesListInOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2069,7 +2144,10 @@ func (s *codespaces) CodespacesListInOrganization(ctx context.Context, request o
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#list-codespaces-in-a-repository-for-the-authenticated-user - API method documentation
 func (s *codespaces) CodespacesListInRepositoryForAuthenticatedUser(ctx context.Context, request operations.CodespacesListInRepositoryForAuthenticatedUserRequest) (*operations.CodespacesListInRepositoryForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2136,7 +2214,10 @@ func (s *codespaces) CodespacesListInRepositoryForAuthenticatedUser(ctx context.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#list-organization-secrets - API method documentation
 func (s *codespaces) CodespacesListOrgSecrets(ctx context.Context, request operations.CodespacesListOrgSecretsRequest) (*operations.CodespacesListOrgSecretsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2188,7 +2269,10 @@ func (s *codespaces) CodespacesListOrgSecrets(ctx context.Context, request opera
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#list-repository-secrets - API method documentation
 func (s *codespaces) CodespacesListRepoSecrets(ctx context.Context, request operations.CodespacesListRepoSecretsRequest) (*operations.CodespacesListRepoSecretsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/secrets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/secrets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2244,7 +2328,10 @@ func (s *codespaces) CodespacesListRepoSecrets(ctx context.Context, request oper
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#list-selected-repositories-for-a-user-secret - API method documentation
 func (s *codespaces) CodespacesListRepositoriesForSecretForAuthenticatedUser(ctx context.Context, request operations.CodespacesListRepositoriesForSecretForAuthenticatedUserRequest) (*operations.CodespacesListRepositoriesForSecretForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2363,7 +2450,10 @@ func (s *codespaces) CodespacesListSecretsForAuthenticatedUser(ctx context.Conte
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#list-selected-repositories-for-an-organization-secret - API method documentation
 func (s *codespaces) CodespacesListSelectedReposForOrgSecret(ctx context.Context, request operations.CodespacesListSelectedReposForOrgSecretRequest) (*operations.CodespacesListSelectedReposForOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2427,7 +2517,10 @@ func (s *codespaces) CodespacesListSelectedReposForOrgSecret(ctx context.Context
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#preview-attributes-for-a-new-codespace - API method documentation
 func (s *codespaces) CodespacesPreFlightWithRepoForAuthenticatedUser(ctx context.Context, request operations.CodespacesPreFlightWithRepoForAuthenticatedUserRequest) (*operations.CodespacesPreFlightWithRepoForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/new", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/new", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2499,7 +2592,10 @@ func (s *codespaces) CodespacesPreFlightWithRepoForAuthenticatedUser(ctx context
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces/codespaces#create-a-repository-from-an-unpublished-codespace - API method documentation
 func (s *codespaces) CodespacesPublishForAuthenticatedUser(ctx context.Context, request operations.CodespacesPublishForAuthenticatedUserRequest) (*operations.CodespacesPublishForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}/publish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}/publish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2581,7 +2677,10 @@ func (s *codespaces) CodespacesPublishForAuthenticatedUser(ctx context.Context, 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#remove-a-selected-repository-from-a-user-secret - API method documentation
 func (s *codespaces) CodespacesRemoveRepositoryForSecretForAuthenticatedUser(ctx context.Context, request operations.CodespacesRemoveRepositoryForSecretForAuthenticatedUserRequest) (*operations.CodespacesRemoveRepositoryForSecretForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2634,7 +2733,10 @@ func (s *codespaces) CodespacesRemoveRepositoryForSecretForAuthenticatedUser(ctx
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#remove-selected-repository-from-an-organization-secret - API method documentation
 func (s *codespaces) CodespacesRemoveSelectedRepoFromOrgSecret(ctx context.Context, request operations.CodespacesRemoveSelectedRepoFromOrgSecretRequest) (*operations.CodespacesRemoveSelectedRepoFromOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2697,7 +2799,10 @@ func (s *codespaces) CodespacesRemoveSelectedRepoFromOrgSecret(ctx context.Conte
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#list-available-machine-types-for-a-repository - API method documentation
 func (s *codespaces) CodespacesRepoMachinesForAuthenticatedUser(ctx context.Context, request operations.CodespacesRepoMachinesForAuthenticatedUserRequest) (*operations.CodespacesRepoMachinesForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/machines", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/codespaces/machines", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2765,7 +2870,10 @@ func (s *codespaces) CodespacesRepoMachinesForAuthenticatedUser(ctx context.Cont
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#set-codespaces-billing - API method documentation
 func (s *codespaces) CodespacesSetCodespacesBilling(ctx context.Context, request operations.CodespacesSetCodespacesBillingRequest) (*operations.CodespacesSetCodespacesBillingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/billing", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/billing", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2839,7 +2947,10 @@ func (s *codespaces) CodespacesSetCodespacesBilling(ctx context.Context, request
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#set-codespaces-billing-users - API method documentation
 func (s *codespaces) CodespacesSetCodespacesBillingUsers(ctx context.Context, request operations.CodespacesSetCodespacesBillingUsersRequest) (*operations.CodespacesSetCodespacesBillingUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/billing/selected_users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/billing/selected_users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2916,7 +3027,10 @@ func (s *codespaces) CodespacesSetCodespacesBillingUsers(ctx context.Context, re
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#set-selected-repositories-for-a-user-secret - API method documentation
 func (s *codespaces) CodespacesSetRepositoriesForSecretForAuthenticatedUser(ctx context.Context, request operations.CodespacesSetRepositoriesForSecretForAuthenticatedUserRequest) (*operations.CodespacesSetRepositoriesForSecretForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/secrets/{secret_name}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2979,7 +3093,10 @@ func (s *codespaces) CodespacesSetRepositoriesForSecretForAuthenticatedUser(ctx 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#set-selected-repositories-for-an-organization-secret - API method documentation
 func (s *codespaces) CodespacesSetSelectedReposForOrgSecret(ctx context.Context, request operations.CodespacesSetSelectedReposForOrgSecretRequest) (*operations.CodespacesSetSelectedReposForOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3042,7 +3159,10 @@ func (s *codespaces) CodespacesSetSelectedReposForOrgSecret(ctx context.Context,
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#start-a-codespace-for-the-authenticated-user - API method documentation
 func (s *codespaces) CodespacesStartForAuthenticatedUser(ctx context.Context, request operations.CodespacesStartForAuthenticatedUserRequest) (*operations.CodespacesStartForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}/start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}/start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3130,7 +3250,10 @@ func (s *codespaces) CodespacesStartForAuthenticatedUser(ctx context.Context, re
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#stop-a-codespace-for-the-authenticated-user - API method documentation
 func (s *codespaces) CodespacesStopForAuthenticatedUser(ctx context.Context, request operations.CodespacesStopForAuthenticatedUserRequest) (*operations.CodespacesStopForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3194,7 +3317,10 @@ func (s *codespaces) CodespacesStopForAuthenticatedUser(ctx context.Context, req
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces - API method documentation
 func (s *codespaces) CodespacesStopInOrganization(ctx context.Context, request operations.CodespacesStopInOrganizationRequest) (*operations.CodespacesStopInOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/members/{username}/codespaces/{codespace_name}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/members/{username}/codespaces/{codespace_name}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3263,7 +3389,10 @@ func (s *codespaces) CodespacesStopInOrganization(ctx context.Context, request o
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/codespaces#update-a-codespace-for-the-authenticated-user - API method documentation
 func (s *codespaces) CodespacesUpdateForAuthenticatedUser(ctx context.Context, request operations.CodespacesUpdateForAuthenticatedUserRequest) (*operations.CodespacesUpdateForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/codespaces/{codespace_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

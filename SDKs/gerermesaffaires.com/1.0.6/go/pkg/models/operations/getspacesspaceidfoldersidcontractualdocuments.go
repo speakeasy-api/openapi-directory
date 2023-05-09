@@ -22,12 +22,16 @@ const (
 	GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnumOther            GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum = "other"
 )
 
+func (e GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum) ToPointer() *GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "contract":
 		fallthrough
 	case "engagement-letter":
@@ -41,10 +45,10 @@ func (e *GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum) UnmarshalJSON(da
 	case "quotation":
 		fallthrough
 	case "other":
-		*e = GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum(s)
+		*e = GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDContractualDocumentsTypeEnum: %v", v)
 	}
 }
 

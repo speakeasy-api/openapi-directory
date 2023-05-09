@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/openchannel.io/market/2.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,13 +28,11 @@ func main() {
         }),
     )
 
-    req := operations.DeleteAppsAppIDRequest{
+    ctx := context.Background()
+    res, err := s.AppsFindAndModifyApps.DeleteAppsAppID(ctx, operations.DeleteAppsAppIDRequest{
         AppID: "corrupti",
         DeveloperID: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.AppsFindAndModifyApps.DeleteAppsAppID(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,122 +48,122 @@ func main() {
 ## Available Resources and Operations
 
 
-### AppsFindAndModifyApps
+### [AppsFindAndModifyApps](docs/appsfindandmodifyapps/README.md)
 
-* `DeleteAppsAppID` - Removes app and all versions
-* `DeleteAppsAppIDVersionsVersion` - Removes AppVersion
-* `GetApps` - Returns a paginated list of APPROVED or SUSPENDED apps
-* `GetAppsBySafeNameSafeName` - Returns a single APPROVED or SUSPENDED app
-* `GetAppsTextSearch` - Searches through the text of fields to find APPROVED or SUSPENDED apps
-* `GetAppsVersions` - Returns a paginated list of AppVersions
-* `GetAppsAppID` - Returns a single APPROVED or SUSPENDED app
-* `GetAppsAppIDVersionsVersion` - Returns a single AppVersion
-* `PatchAppsAppIDVersionsVersion` - Updates the app fields or creates a new version
-* `PostApps` - Adds a new app for this developer
-* `PostAppsAppIDLive` - Change the live app to another, previously approved version
-* `PostAppsAppIDPublish` - Publishes the current working version of the app to the marketplace
-* `PostAppsAppIDVersionsVersion` - Updates the app or creates a new version
-* `PostAppsAppIDVersionsVersionStatus` - Allows a developer or administrator to change the status of apps
+* [DeleteAppsAppID](docs/appsfindandmodifyapps/README.md#deleteappsappid) - Removes app and all versions
+* [DeleteAppsAppIDVersionsVersion](docs/appsfindandmodifyapps/README.md#deleteappsappidversionsversion) - Removes AppVersion
+* [GetApps](docs/appsfindandmodifyapps/README.md#getapps) - Returns a paginated list of APPROVED or SUSPENDED apps
+* [GetAppsBySafeNameSafeName](docs/appsfindandmodifyapps/README.md#getappsbysafenamesafename) - Returns a single APPROVED or SUSPENDED app
+* [GetAppsTextSearch](docs/appsfindandmodifyapps/README.md#getappstextsearch) - Searches through the text of fields to find APPROVED or SUSPENDED apps
+* [GetAppsVersions](docs/appsfindandmodifyapps/README.md#getappsversions) - Returns a paginated list of AppVersions
+* [GetAppsAppID](docs/appsfindandmodifyapps/README.md#getappsappid) - Returns a single APPROVED or SUSPENDED app
+* [GetAppsAppIDVersionsVersion](docs/appsfindandmodifyapps/README.md#getappsappidversionsversion) - Returns a single AppVersion
+* [PatchAppsAppIDVersionsVersion](docs/appsfindandmodifyapps/README.md#patchappsappidversionsversion) - Updates the app fields or creates a new version
+* [PostApps](docs/appsfindandmodifyapps/README.md#postapps) - Adds a new app for this developer
+* [PostAppsAppIDLive](docs/appsfindandmodifyapps/README.md#postappsappidlive) - Change the live app to another, previously approved version
+* [PostAppsAppIDPublish](docs/appsfindandmodifyapps/README.md#postappsappidpublish) - Publishes the current working version of the app to the marketplace
+* [PostAppsAppIDVersionsVersion](docs/appsfindandmodifyapps/README.md#postappsappidversionsversion) - Updates the app or creates a new version
+* [PostAppsAppIDVersionsVersionStatus](docs/appsfindandmodifyapps/README.md#postappsappidversionsversionstatus) - Allows a developer or administrator to change the status of apps
 
-### CustomGatewayProcessPaymentsAndRefunds
+### [CustomGatewayProcessPaymentsAndRefunds](docs/customgatewayprocesspaymentsandrefunds/README.md)
 
-* `PostCustomGatewayPaymentOwnershipID` - Adds a payment for an app on behalf of a user
-* `PostCustomGatewayRefundOwnershipID` - Fully or partially refund payment for an app on behalf of a user
+* [PostCustomGatewayPaymentOwnershipID](docs/customgatewayprocesspaymentsandrefunds/README.md#postcustomgatewaypaymentownershipid) - Adds a payment for an app on behalf of a user
+* [PostCustomGatewayRefundOwnershipID](docs/customgatewayprocesspaymentsandrefunds/README.md#postcustomgatewayrefundownershipid) - Fully or partially refund payment for an app on behalf of a user
 
-### DeveloperAccountsFindAndModifyDeveloperAccounts
+### [DeveloperAccountsFindAndModifyDeveloperAccounts](docs/developeraccountsfindandmodifydeveloperaccounts/README.md)
 
-* `DeleteDeveloperAccountsDeveloperAccountID` - Removes the developer account
-* `GetDeveloperAccounts` - Returns a paginated list of developerAccounts
-* `GetDeveloperAccountsDeveloperAccountID` - Returns a single developer account
-* `PatchDeveloperAccountsDeveloperAccountID` - Updates the developer account fields
-* `PostDeveloperAccountsDeveloperAccountID` - Updates the developer account or adds the developer account if it doesn't exist
+* [DeleteDeveloperAccountsDeveloperAccountID](docs/developeraccountsfindandmodifydeveloperaccounts/README.md#deletedeveloperaccountsdeveloperaccountid) - Removes the developer account
+* [GetDeveloperAccounts](docs/developeraccountsfindandmodifydeveloperaccounts/README.md#getdeveloperaccounts) - Returns a paginated list of developerAccounts
+* [GetDeveloperAccountsDeveloperAccountID](docs/developeraccountsfindandmodifydeveloperaccounts/README.md#getdeveloperaccountsdeveloperaccountid) - Returns a single developer account
+* [PatchDeveloperAccountsDeveloperAccountID](docs/developeraccountsfindandmodifydeveloperaccounts/README.md#patchdeveloperaccountsdeveloperaccountid) - Updates the developer account fields
+* [PostDeveloperAccountsDeveloperAccountID](docs/developeraccountsfindandmodifydeveloperaccounts/README.md#postdeveloperaccountsdeveloperaccountid) - Updates the developer account or adds the developer account if it doesn't exist
 
-### DevelopersFindAndModifyDevelopers
+### [DevelopersFindAndModifyDevelopers](docs/developersfindandmodifydevelopers/README.md)
 
-* `DeleteDevelopersDeveloperID` - Removes a single developer
-* `GetDevelopers` - Returns a paginated list of developers
-* `GetDevelopersDeveloperID` - Returns a single developer
-* `PatchDevelopersDeveloperID` - Updates the developer fields
-* `PostDevelopersDeveloperID` - Updates the developer record or adds the developer if it doesn't exist
+* [DeleteDevelopersDeveloperID](docs/developersfindandmodifydevelopers/README.md#deletedevelopersdeveloperid) - Removes a single developer
+* [GetDevelopers](docs/developersfindandmodifydevelopers/README.md#getdevelopers) - Returns a paginated list of developers
+* [GetDevelopersDeveloperID](docs/developersfindandmodifydevelopers/README.md#getdevelopersdeveloperid) - Returns a single developer
+* [PatchDevelopersDeveloperID](docs/developersfindandmodifydevelopers/README.md#patchdevelopersdeveloperid) - Updates the developer fields
+* [PostDevelopersDeveloperID](docs/developersfindandmodifydevelopers/README.md#postdevelopersdeveloperid) - Updates the developer record or adds the developer if it doesn't exist
 
-### EventsFindEvents
+### [EventsFindEvents](docs/eventsfindevents/README.md)
 
-* `GetEventsEventID` - Returns an event
+* [GetEventsEventID](docs/eventsfindevents/README.md#geteventseventid) - Returns an event
 
-### FilesUploadFiles
+### [FilesUploadFiles](docs/filesuploadfiles/README.md)
 
-* `GetFiles` - Returns a paginated list of files
-* `GetFilesByIDOrURL` - Get the details for a file.
-* `GetFilesDownload` - A signed URL for downloading a private file can be returned by providing the fileId.
-* `PostFiles` - Uploads a file.
-* `PostFilesURL` - Uploads a file from a URL
+* [GetFiles](docs/filesuploadfiles/README.md#getfiles) - Returns a paginated list of files
+* [GetFilesByIDOrURL](docs/filesuploadfiles/README.md#getfilesbyidorurl) - Get the details for a file.
+* [GetFilesDownload](docs/filesuploadfiles/README.md#getfilesdownload) - A signed URL for downloading a private file can be returned by providing the fileId.
+* [PostFiles](docs/filesuploadfiles/README.md#postfiles) - Uploads a file.
+* [PostFilesURL](docs/filesuploadfiles/README.md#postfilesurl) - Uploads a file from a URL
 
-### MarketsThisMarketplace
+### [MarketsThisMarketplace](docs/marketsthismarketplace/README.md)
 
-* `GetMarketsThis` - Returns the current marketplace
+* [GetMarketsThis](docs/marketsthismarketplace/README.md#getmarketsthis) - Returns the current marketplace
 
-### OwnershipFindOwnership
+### [OwnershipFindOwnership](docs/ownershipfindownership/README.md)
 
-* `GetOwnership` - Returns a paginated list of app licenses
-* `GetOwnershipOwnershipID` - Returns an ownership record
-* `PatchOwnershipOwnershipID` - Updates ownership fields
-* `PostOwnershipInstall` - Aquires an app license for a user (installs app)
-* `PostOwnershipUninstallOwnershipID` - Uninstalls a license for a particular user and app (uninstalls app)
-* `PostOwnershipOwnershipID` - Updates an ownership record
+* [GetOwnership](docs/ownershipfindownership/README.md#getownership) - Returns a paginated list of app licenses
+* [GetOwnershipOwnershipID](docs/ownershipfindownership/README.md#getownershipownershipid) - Returns an ownership record
+* [PatchOwnershipOwnershipID](docs/ownershipfindownership/README.md#patchownershipownershipid) - Updates ownership fields
+* [PostOwnershipInstall](docs/ownershipfindownership/README.md#postownershipinstall) - Aquires an app license for a user (installs app)
+* [PostOwnershipUninstallOwnershipID](docs/ownershipfindownership/README.md#postownershipuninstallownershipid) - Uninstalls a license for a particular user and app (uninstalls app)
+* [PostOwnershipOwnershipID](docs/ownershipfindownership/README.md#postownershipownershipid) - Updates an ownership record
 
-### PermissionAddAndRemovePermissions
+### [PermissionAddAndRemovePermissions](docs/permissionaddandremovepermissions/README.md)
 
-* `DeletePermissionAppsAppID` - Removes permission that allows the app to access this user's data
-* `GetPermissionAppsAppID` - Returns permission that allows the app to access this user's data
-* `PostPermissionAppsAppID` - Adds permission to allow the app to access this user's data
+* [DeletePermissionAppsAppID](docs/permissionaddandremovepermissions/README.md#deletepermissionappsappid) - Removes permission that allows the app to access this user's data
+* [GetPermissionAppsAppID](docs/permissionaddandremovepermissions/README.md#getpermissionappsappid) - Returns permission that allows the app to access this user's data
+* [PostPermissionAppsAppID](docs/permissionaddandremovepermissions/README.md#postpermissionappsappid) - Adds permission to allow the app to access this user's data
 
-### ReviewsFindAndModifyReviews
+### [ReviewsFindAndModifyReviews](docs/reviewsfindandmodifyreviews/README.md)
 
-* `DeleteReviewsReviewID` - Remove a review
-* `GetReviews` - Find reviews for a particular App and marketplace. Results are automatically paginated when limit is set
-* `GetReviewsReviewID` - Find a Review within a particular App and marketplace
-* `PatchReviewsReviewID` - Update a review fields
-* `PostReviews` - Post a review from a User and returns the new post
-* `PostReviewsReviewID` - Update a review from a User and returns the new post
+* [DeleteReviewsReviewID](docs/reviewsfindandmodifyreviews/README.md#deletereviewsreviewid) - Remove a review
+* [GetReviews](docs/reviewsfindandmodifyreviews/README.md#getreviews) - Find reviews for a particular App and marketplace. Results are automatically paginated when limit is set
+* [GetReviewsReviewID](docs/reviewsfindandmodifyreviews/README.md#getreviewsreviewid) - Find a Review within a particular App and marketplace
+* [PatchReviewsReviewID](docs/reviewsfindandmodifyreviews/README.md#patchreviewsreviewid) - Update a review fields
+* [PostReviews](docs/reviewsfindandmodifyreviews/README.md#postreviews) - Post a review from a User and returns the new post
+* [PostReviewsReviewID](docs/reviewsfindandmodifyreviews/README.md#postreviewsreviewid) - Update a review from a User and returns the new post
 
-### StatsFindMarketplaceStatistics
+### [StatsFindMarketplaceStatistics](docs/statsfindmarketplacestatistics/README.md)
 
-* `GetStatsSeriesPeriodFields` - Return a timeseries for a particular field
-* `GetStatsTotal` - Returns the total number of events for a particular field.
-* `PostStatsIncrementField` - Increments a statistics field
+* [GetStatsSeriesPeriodFields](docs/statsfindmarketplacestatistics/README.md#getstatsseriesperiodfields) - Return a timeseries for a particular field
+* [GetStatsTotal](docs/statsfindmarketplacestatistics/README.md#getstatstotal) - Returns the total number of events for a particular field.
+* [PostStatsIncrementField](docs/statsfindmarketplacestatistics/README.md#poststatsincrementfield) - Increments a statistics field
 
-### StripeGatewayProcessPaymentsAndRefunds
+### [StripeGatewayProcessPaymentsAndRefunds](docs/stripegatewayprocesspaymentsandrefunds/README.md)
 
-* `DeleteStripeGatewayDeveloperDeveloperIDAccountsStripeID` - Disconnects a developer's Stripe account
-* `DeleteStripeGatewayUserUserIDCardsCardID` - Removes a credit card for a user
-* `GetStripeGatewayDeveloperDeveloperIDAccounts` - Returns a developers connected Stripe accounts
-* `GetStripeGatewayUserUserIDCards` - Returns credit cards for this user
-* `PostStripeGatewayDeveloperDeveloperIDAccounts` - Generate a temporary URL to allow a developer to connect their Stripe account
-* `PostStripeGatewayUserUserIDCards` - Adds credit card for this user
-* `PostStripeGatewayUserUserIDCardsCardID` - Updates a credit card for this user
+* [DeleteStripeGatewayDeveloperDeveloperIDAccountsStripeID](docs/stripegatewayprocesspaymentsandrefunds/README.md#deletestripegatewaydeveloperdeveloperidaccountsstripeid) - Disconnects a developer's Stripe account
+* [DeleteStripeGatewayUserUserIDCardsCardID](docs/stripegatewayprocesspaymentsandrefunds/README.md#deletestripegatewayuseruseridcardscardid) - Removes a credit card for a user
+* [GetStripeGatewayDeveloperDeveloperIDAccounts](docs/stripegatewayprocesspaymentsandrefunds/README.md#getstripegatewaydeveloperdeveloperidaccounts) - Returns a developers connected Stripe accounts
+* [GetStripeGatewayUserUserIDCards](docs/stripegatewayprocesspaymentsandrefunds/README.md#getstripegatewayuseruseridcards) - Returns credit cards for this user
+* [PostStripeGatewayDeveloperDeveloperIDAccounts](docs/stripegatewayprocesspaymentsandrefunds/README.md#poststripegatewaydeveloperdeveloperidaccounts) - Generate a temporary URL to allow a developer to connect their Stripe account
+* [PostStripeGatewayUserUserIDCards](docs/stripegatewayprocesspaymentsandrefunds/README.md#poststripegatewayuseruseridcards) - Adds credit card for this user
+* [PostStripeGatewayUserUserIDCardsCardID](docs/stripegatewayprocesspaymentsandrefunds/README.md#poststripegatewayuseruseridcardscardid) - Updates a credit card for this user
 
-### TransactionsFindPaymentsAndRefunds
+### [TransactionsFindPaymentsAndRefunds](docs/transactionsfindpaymentsandrefunds/README.md)
 
-* `DeleteTransactionsTransactionID` - Deleted a transaction
-* `GetTransactions` - Returns a paginated list of transactions
-* `GetTransactionsTransactionID` - Returns a transaction
-* `PostTransactionsTransactionID` - Updates a transaction
+* [DeleteTransactionsTransactionID](docs/transactionsfindpaymentsandrefunds/README.md#deletetransactionstransactionid) - Deleted a transaction
+* [GetTransactions](docs/transactionsfindpaymentsandrefunds/README.md#gettransactions) - Returns a paginated list of transactions
+* [GetTransactionsTransactionID](docs/transactionsfindpaymentsandrefunds/README.md#gettransactionstransactionid) - Returns a transaction
+* [PostTransactionsTransactionID](docs/transactionsfindpaymentsandrefunds/README.md#posttransactionstransactionid) - Updates a transaction
 
-### UserAccountsFindAndModifyUserAccounts
+### [UserAccountsFindAndModifyUserAccounts](docs/useraccountsfindandmodifyuseraccounts/README.md)
 
-* `DeleteUserAccountsUserAccountID` - Removes the user account
-* `GetUserAccounts` - Returns a paginated list of userAccounts
-* `GetUserAccountsUserAccountID` - Returns a single user account
-* `PatchUserAccountsUserAccountID` - Updates the user account fields
-* `PostUserAccountsUserAccountID` - Updates the user account or adds the user account if it doesn't exist
+* [DeleteUserAccountsUserAccountID](docs/useraccountsfindandmodifyuseraccounts/README.md#deleteuseraccountsuseraccountid) - Removes the user account
+* [GetUserAccounts](docs/useraccountsfindandmodifyuseraccounts/README.md#getuseraccounts) - Returns a paginated list of userAccounts
+* [GetUserAccountsUserAccountID](docs/useraccountsfindandmodifyuseraccounts/README.md#getuseraccountsuseraccountid) - Returns a single user account
+* [PatchUserAccountsUserAccountID](docs/useraccountsfindandmodifyuseraccounts/README.md#patchuseraccountsuseraccountid) - Updates the user account fields
+* [PostUserAccountsUserAccountID](docs/useraccountsfindandmodifyuseraccounts/README.md#postuseraccountsuseraccountid) - Updates the user account or adds the user account if it doesn't exist
 
-### UsersFindAndModifyUsers
+### [UsersFindAndModifyUsers](docs/usersfindandmodifyusers/README.md)
 
-* `DeleteUsersUserID` - Removes a single user
-* `GetUsers` - Returns a paginated list of users
-* `GetUsersUserID` - Return a single user
-* `PatchUsersUserID` - Updates user fields
-* `PostUsersUserID` - Updates a single user or adds the user if they don't exist
+* [DeleteUsersUserID](docs/usersfindandmodifyusers/README.md#deleteusersuserid) - Removes a single user
+* [GetUsers](docs/usersfindandmodifyusers/README.md#getusers) - Returns a paginated list of users
+* [GetUsersUserID](docs/usersfindandmodifyusers/README.md#getusersuserid) - Return a single user
+* [PatchUsersUserID](docs/usersfindandmodifyusers/README.md#patchusersuserid) - Updates user fields
+* [PostUsersUserID](docs/usersfindandmodifyusers/README.md#postusersuserid) - Updates a single user or adds the user if they don't exist
 <!-- End SDK Available Operations -->
 
 ### Maturity

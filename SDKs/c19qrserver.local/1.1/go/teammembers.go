@@ -37,7 +37,10 @@ func newTeamMembers(defaultClient, securityClient HTTPClient, serverURL, languag
 // To preserve referential integrity in the database, the user account  will not be deleted from the database. Rather, the password will be set to the empty string, effectively preventing that user from logging in. Furthermore, all active sessions for that user will be deleted, as will any password reset tokens.
 func (s *teamMembers) DeleteUserUserID(ctx context.Context, request operations.DeleteUserUserIDRequest) (*operations.DeleteUserUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *teamMembers) DeleteUserUserID(ctx context.Context, request operations.D
 // Retrieve the information associated with a user's account
 func (s *teamMembers) GetUserUserID(ctx context.Context, request operations.GetUserUserIDRequest) (*operations.GetUserUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -19,12 +19,16 @@ const (
 	JobMessageMessageImportanceEnumJobMessageError             JobMessageMessageImportanceEnum = "JOB_MESSAGE_ERROR"
 )
 
+func (e JobMessageMessageImportanceEnum) ToPointer() *JobMessageMessageImportanceEnum {
+	return &e
+}
+
 func (e *JobMessageMessageImportanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_MESSAGE_IMPORTANCE_UNKNOWN":
 		fallthrough
 	case "JOB_MESSAGE_DEBUG":
@@ -36,10 +40,10 @@ func (e *JobMessageMessageImportanceEnum) UnmarshalJSON(data []byte) error {
 	case "JOB_MESSAGE_WARNING":
 		fallthrough
 	case "JOB_MESSAGE_ERROR":
-		*e = JobMessageMessageImportanceEnum(s)
+		*e = JobMessageMessageImportanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobMessageMessageImportanceEnum: %s", s)
+		return fmt.Errorf("invalid value for JobMessageMessageImportanceEnum: %v", v)
 	}
 }
 

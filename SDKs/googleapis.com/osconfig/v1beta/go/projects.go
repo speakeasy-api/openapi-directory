@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // OsconfigProjectsGuestPoliciesCreate - Create an OS Config guest policy.
 func (s *projects) OsconfigProjectsGuestPoliciesCreate(ctx context.Context, request operations.OsconfigProjectsGuestPoliciesCreateRequest, security operations.OsconfigProjectsGuestPoliciesCreateSecurity) (*operations.OsconfigProjectsGuestPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/guestPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/guestPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GuestPolicyInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) OsconfigProjectsGuestPoliciesCreate(ctx context.Context, requ
 // OsconfigProjectsGuestPoliciesList - Get a page of OS Config guest policies.
 func (s *projects) OsconfigProjectsGuestPoliciesList(ctx context.Context, request operations.OsconfigProjectsGuestPoliciesListRequest, security operations.OsconfigProjectsGuestPoliciesListSecurity) (*operations.OsconfigProjectsGuestPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/guestPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/guestPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) OsconfigProjectsGuestPoliciesList(ctx context.Context, reques
 // OsconfigProjectsPatchDeploymentsCreate - Create an OS Config patch deployment.
 func (s *projects) OsconfigProjectsPatchDeploymentsCreate(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsCreateRequest, security operations.OsconfigProjectsPatchDeploymentsCreateSecurity) (*operations.OsconfigProjectsPatchDeploymentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/patchDeployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/patchDeployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatchDeploymentInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) OsconfigProjectsPatchDeploymentsCreate(ctx context.Context, r
 // OsconfigProjectsPatchDeploymentsDelete - Delete an OS Config patch deployment.
 func (s *projects) OsconfigProjectsPatchDeploymentsDelete(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsDeleteRequest, security operations.OsconfigProjectsPatchDeploymentsDeleteSecurity) (*operations.OsconfigProjectsPatchDeploymentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) OsconfigProjectsPatchDeploymentsDelete(ctx context.Context, r
 // OsconfigProjectsPatchDeploymentsList - Get a page of OS Config patch deployments.
 func (s *projects) OsconfigProjectsPatchDeploymentsList(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsListRequest, security operations.OsconfigProjectsPatchDeploymentsListSecurity) (*operations.OsconfigProjectsPatchDeploymentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/patchDeployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/patchDeployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) OsconfigProjectsPatchDeploymentsList(ctx context.Context, req
 // OsconfigProjectsPatchDeploymentsPatch - Update an OS Config patch deployment.
 func (s *projects) OsconfigProjectsPatchDeploymentsPatch(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsPatchRequest, security operations.OsconfigProjectsPatchDeploymentsPatchSecurity) (*operations.OsconfigProjectsPatchDeploymentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatchDeploymentInput", "json")
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) OsconfigProjectsPatchDeploymentsPatch(ctx context.Context, re
 // OsconfigProjectsPatchDeploymentsPause - Change state of patch deployment to "PAUSED". Patch deployment in paused state doesn't generate patch jobs.
 func (s *projects) OsconfigProjectsPatchDeploymentsPause(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsPauseRequest, security operations.OsconfigProjectsPatchDeploymentsPauseSecurity) (*operations.OsconfigProjectsPatchDeploymentsPauseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:pause", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:pause", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) OsconfigProjectsPatchDeploymentsPause(ctx context.Context, re
 // OsconfigProjectsPatchDeploymentsResume - Change state of patch deployment back to "ACTIVE". Patch deployment in active state continues to generate patch jobs.
 func (s *projects) OsconfigProjectsPatchDeploymentsResume(ctx context.Context, request operations.OsconfigProjectsPatchDeploymentsResumeRequest, security operations.OsconfigProjectsPatchDeploymentsResumeSecurity) (*operations.OsconfigProjectsPatchDeploymentsResumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:resume", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:resume", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *projects) OsconfigProjectsPatchDeploymentsResume(ctx context.Context, r
 // OsconfigProjectsPatchJobsCancel - Cancel a patch job. The patch job must be active. Canceled patch jobs cannot be restarted.
 func (s *projects) OsconfigProjectsPatchJobsCancel(ctx context.Context, request operations.OsconfigProjectsPatchJobsCancelRequest, security operations.OsconfigProjectsPatchJobsCancelSecurity) (*operations.OsconfigProjectsPatchJobsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -508,7 +535,10 @@ func (s *projects) OsconfigProjectsPatchJobsCancel(ctx context.Context, request 
 // OsconfigProjectsPatchJobsExecute - Patch VM instances by creating and running a patch job.
 func (s *projects) OsconfigProjectsPatchJobsExecute(ctx context.Context, request operations.OsconfigProjectsPatchJobsExecuteRequest, security operations.OsconfigProjectsPatchJobsExecuteSecurity) (*operations.OsconfigProjectsPatchJobsExecuteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/patchJobs:execute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/patchJobs:execute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExecutePatchJobRequest", "json")
 	if err != nil {
@@ -563,7 +593,10 @@ func (s *projects) OsconfigProjectsPatchJobsExecute(ctx context.Context, request
 // OsconfigProjectsPatchJobsGet - Get the patch job. This can be used to track the progress of an ongoing patch job or review the details of completed jobs.
 func (s *projects) OsconfigProjectsPatchJobsGet(ctx context.Context, request operations.OsconfigProjectsPatchJobsGetRequest, security operations.OsconfigProjectsPatchJobsGetSecurity) (*operations.OsconfigProjectsPatchJobsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -611,7 +644,10 @@ func (s *projects) OsconfigProjectsPatchJobsGet(ctx context.Context, request ope
 // OsconfigProjectsPatchJobsInstanceDetailsList - Get a list of instance details for a given patch job.
 func (s *projects) OsconfigProjectsPatchJobsInstanceDetailsList(ctx context.Context, request operations.OsconfigProjectsPatchJobsInstanceDetailsListRequest, security operations.OsconfigProjectsPatchJobsInstanceDetailsListSecurity) (*operations.OsconfigProjectsPatchJobsInstanceDetailsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/instanceDetails", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/instanceDetails", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *projects) OsconfigProjectsPatchJobsInstanceDetailsList(ctx context.Cont
 // OsconfigProjectsPatchJobsList - Get a list of patch jobs.
 func (s *projects) OsconfigProjectsPatchJobsList(ctx context.Context, request operations.OsconfigProjectsPatchJobsListRequest, security operations.OsconfigProjectsPatchJobsListSecurity) (*operations.OsconfigProjectsPatchJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/patchJobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/patchJobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *projects) OsconfigProjectsPatchJobsList(ctx context.Context, request op
 // OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicy - Lookup the effective guest policy that applies to a VM instance. This lookup merges all policies that are assigned to the instance ancestry.
 func (s *projects) OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicy(ctx context.Context, request operations.OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyRequest, security operations.OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicySecurity) (*operations.OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{instance}:lookupEffectiveGuestPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{instance}:lookupEffectiveGuestPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LookupEffectiveGuestPolicyRequest", "json")
 	if err != nil {

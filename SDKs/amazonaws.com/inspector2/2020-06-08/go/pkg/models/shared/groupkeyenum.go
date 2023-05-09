@@ -17,12 +17,16 @@ const (
 	GroupKeyEnumEcrRepositoryName GroupKeyEnum = "ECR_REPOSITORY_NAME"
 )
 
+func (e GroupKeyEnum) ToPointer() *GroupKeyEnum {
+	return &e
+}
+
 func (e *GroupKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCAN_STATUS_CODE":
 		fallthrough
 	case "SCAN_STATUS_REASON":
@@ -32,9 +36,9 @@ func (e *GroupKeyEnum) UnmarshalJSON(data []byte) error {
 	case "RESOURCE_TYPE":
 		fallthrough
 	case "ECR_REPOSITORY_NAME":
-		*e = GroupKeyEnum(s)
+		*e = GroupKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupKeyEnum: %v", v)
 	}
 }

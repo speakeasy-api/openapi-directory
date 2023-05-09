@@ -41,12 +41,16 @@ const (
 	ReleasesCreateReleaseUpload404ApplicationJSONCodeEnumTooManyRequests     ReleasesCreateReleaseUpload404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesCreateReleaseUpload404ApplicationJSONCodeEnum) ToPointer() *ReleasesCreateReleaseUpload404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesCreateReleaseUpload404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -60,10 +64,10 @@ func (e *ReleasesCreateReleaseUpload404ApplicationJSONCodeEnum) UnmarshalJSON(da
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesCreateReleaseUpload404ApplicationJSONCodeEnum(s)
+		*e = ReleasesCreateReleaseUpload404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesCreateReleaseUpload404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesCreateReleaseUpload404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -86,12 +90,16 @@ const (
 	ReleasesCreateReleaseUpload400ApplicationJSONCodeEnumTooManyRequests     ReleasesCreateReleaseUpload400ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesCreateReleaseUpload400ApplicationJSONCodeEnum) ToPointer() *ReleasesCreateReleaseUpload400ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesCreateReleaseUpload400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -105,10 +113,10 @@ func (e *ReleasesCreateReleaseUpload400ApplicationJSONCodeEnum) UnmarshalJSON(da
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesCreateReleaseUpload400ApplicationJSONCodeEnum(s)
+		*e = ReleasesCreateReleaseUpload400ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesCreateReleaseUpload400ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesCreateReleaseUpload400ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

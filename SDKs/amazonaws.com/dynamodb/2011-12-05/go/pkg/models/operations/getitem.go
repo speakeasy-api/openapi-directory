@@ -16,17 +16,21 @@ const (
 	GetItemXAmzTargetEnumDynamoDb20111205GetItem GetItemXAmzTargetEnum = "DynamoDB_20111205.GetItem"
 )
 
+func (e GetItemXAmzTargetEnum) ToPointer() *GetItemXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetItemXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20111205.GetItem":
-		*e = GetItemXAmzTargetEnum(s)
+		*e = GetItemXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetItemXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetItemXAmzTargetEnum: %v", v)
 	}
 }
 

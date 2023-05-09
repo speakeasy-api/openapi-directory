@@ -26,12 +26,16 @@ const (
 	CategoryDTOSupportedClassesEnumProjectGroup    CategoryDTOSupportedClassesEnum = "PROJECT_GROUP"
 )
 
+func (e CategoryDTOSupportedClassesEnum) ToPointer() *CategoryDTOSupportedClassesEnum {
+	return &e
+}
+
 func (e *CategoryDTOSupportedClassesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECT":
 		fallthrough
 	case "QUOTE":
@@ -57,10 +61,10 @@ func (e *CategoryDTOSupportedClassesEnum) UnmarshalJSON(data []byte) error {
 	case "CUSTOMER_INVOICE":
 		fallthrough
 	case "PROJECT_GROUP":
-		*e = CategoryDTOSupportedClassesEnum(s)
+		*e = CategoryDTOSupportedClassesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CategoryDTOSupportedClassesEnum: %s", s)
+		return fmt.Errorf("invalid value for CategoryDTOSupportedClassesEnum: %v", v)
 	}
 }
 

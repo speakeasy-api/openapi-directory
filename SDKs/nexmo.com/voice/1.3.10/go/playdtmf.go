@@ -36,7 +36,10 @@ func newPlayDTMF(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Play DTMF tones into a call
 func (s *playDTMF) StartDTMF(ctx context.Context, request operations.StartDTMFRequest, security operations.StartDTMFSecurity) (*operations.StartDTMFResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}/dtmf", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{uuid}/dtmf", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DTMFRequest", "json")
 	if err != nil {

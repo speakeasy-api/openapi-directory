@@ -29,12 +29,16 @@ const (
 	FlowExecutionEventTypeEnumAcknowledgeTaskMessage     FlowExecutionEventTypeEnum = "ACKNOWLEDGE_TASK_MESSAGE"
 )
 
+func (e FlowExecutionEventTypeEnum) ToPointer() *FlowExecutionEventTypeEnum {
+	return &e
+}
+
 func (e *FlowExecutionEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXECUTION_STARTED":
 		fallthrough
 	case "EXECUTION_FAILED":
@@ -68,9 +72,9 @@ func (e *FlowExecutionEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "THING_ACTION_TASK_SUCCEEDED":
 		fallthrough
 	case "ACKNOWLEDGE_TASK_MESSAGE":
-		*e = FlowExecutionEventTypeEnum(s)
+		*e = FlowExecutionEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlowExecutionEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FlowExecutionEventTypeEnum: %v", v)
 	}
 }

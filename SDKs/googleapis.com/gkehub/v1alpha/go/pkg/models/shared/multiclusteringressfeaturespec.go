@@ -16,21 +16,25 @@ const (
 	MultiClusterIngressFeatureSpecBillingEnumAnthosLicense      MultiClusterIngressFeatureSpecBillingEnum = "ANTHOS_LICENSE"
 )
 
+func (e MultiClusterIngressFeatureSpecBillingEnum) ToPointer() *MultiClusterIngressFeatureSpecBillingEnum {
+	return &e
+}
+
 func (e *MultiClusterIngressFeatureSpecBillingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BILLING_UNSPECIFIED":
 		fallthrough
 	case "PAY_AS_YOU_GO":
 		fallthrough
 	case "ANTHOS_LICENSE":
-		*e = MultiClusterIngressFeatureSpecBillingEnum(s)
+		*e = MultiClusterIngressFeatureSpecBillingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MultiClusterIngressFeatureSpecBillingEnum: %s", s)
+		return fmt.Errorf("invalid value for MultiClusterIngressFeatureSpecBillingEnum: %v", v)
 	}
 }
 

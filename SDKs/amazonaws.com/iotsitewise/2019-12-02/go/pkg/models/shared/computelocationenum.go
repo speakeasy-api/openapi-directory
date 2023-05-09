@@ -14,18 +14,22 @@ const (
 	ComputeLocationEnumCloud ComputeLocationEnum = "CLOUD"
 )
 
+func (e ComputeLocationEnum) ToPointer() *ComputeLocationEnum {
+	return &e
+}
+
 func (e *ComputeLocationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EDGE":
 		fallthrough
 	case "CLOUD":
-		*e = ComputeLocationEnum(s)
+		*e = ComputeLocationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeLocationEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeLocationEnum: %v", v)
 	}
 }

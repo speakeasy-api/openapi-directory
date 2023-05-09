@@ -16,12 +16,16 @@ const (
 	ObjectTypeEnumEnumSymbolicLink ObjectTypeEnumEnum = "SYMBOLIC_LINK"
 )
 
+func (e ObjectTypeEnumEnum) ToPointer() *ObjectTypeEnumEnum {
+	return &e
+}
+
 func (e *ObjectTypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILE":
 		fallthrough
 	case "DIRECTORY":
@@ -29,9 +33,9 @@ func (e *ObjectTypeEnumEnum) UnmarshalJSON(data []byte) error {
 	case "GIT_LINK":
 		fallthrough
 	case "SYMBOLIC_LINK":
-		*e = ObjectTypeEnumEnum(s)
+		*e = ObjectTypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ObjectTypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ObjectTypeEnumEnum: %v", v)
 	}
 }

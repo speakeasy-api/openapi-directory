@@ -18,12 +18,16 @@ const (
 	DeliveredEnumOne   DeliveredEnum = "1"
 )
 
+func (e DeliveredEnum) ToPointer() *DeliveredEnum {
+	return &e
+}
+
 func (e *DeliveredEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
@@ -31,9 +35,9 @@ func (e *DeliveredEnum) UnmarshalJSON(data []byte) error {
 	case "0":
 		fallthrough
 	case "1":
-		*e = DeliveredEnum(s)
+		*e = DeliveredEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveredEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveredEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	POSTDeleteDBInstanceActionEnumDeleteDbInstance POSTDeleteDBInstanceActionEnum = "DeleteDBInstance"
 )
 
+func (e POSTDeleteDBInstanceActionEnum) ToPointer() *POSTDeleteDBInstanceActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteDBInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteDBInstance":
-		*e = POSTDeleteDBInstanceActionEnum(s)
+		*e = POSTDeleteDBInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteDBInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteDBInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteDBInstanceVersionEnumTwoThousandAndFourteen0901 POSTDeleteDBInstanceVersionEnum = "2014-09-01"
 )
 
+func (e POSTDeleteDBInstanceVersionEnum) ToPointer() *POSTDeleteDBInstanceVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-09-01":
-		*e = POSTDeleteDBInstanceVersionEnum(s)
+		*e = POSTDeleteDBInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteDBInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteDBInstanceVersionEnum: %v", v)
 	}
 }
 

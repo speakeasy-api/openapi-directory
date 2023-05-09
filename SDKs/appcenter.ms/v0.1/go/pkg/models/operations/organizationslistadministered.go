@@ -8,6 +8,10 @@ import (
 	"net/http"
 )
 
+type OrganizationsListAdministeredSecurity struct {
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
+}
+
 type OrganizationsListAdministeredDefaultApplicationJSONErrorCodeEnum string
 
 const (
@@ -20,12 +24,16 @@ const (
 	OrganizationsListAdministeredDefaultApplicationJSONErrorCodeEnumTooManyRequests     OrganizationsListAdministeredDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e OrganizationsListAdministeredDefaultApplicationJSONErrorCodeEnum) ToPointer() *OrganizationsListAdministeredDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *OrganizationsListAdministeredDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -39,10 +47,10 @@ func (e *OrganizationsListAdministeredDefaultApplicationJSONErrorCodeEnum) Unmar
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = OrganizationsListAdministeredDefaultApplicationJSONErrorCodeEnum(s)
+		*e = OrganizationsListAdministeredDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationsListAdministeredDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationsListAdministeredDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -64,19 +72,23 @@ const (
 	OrganizationsListAdministered200ApplicationJSONOrganizationsOriginEnumHockeyapp OrganizationsListAdministered200ApplicationJSONOrganizationsOriginEnum = "hockeyapp"
 )
 
+func (e OrganizationsListAdministered200ApplicationJSONOrganizationsOriginEnum) ToPointer() *OrganizationsListAdministered200ApplicationJSONOrganizationsOriginEnum {
+	return &e
+}
+
 func (e *OrganizationsListAdministered200ApplicationJSONOrganizationsOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = OrganizationsListAdministered200ApplicationJSONOrganizationsOriginEnum(s)
+		*e = OrganizationsListAdministered200ApplicationJSONOrganizationsOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationsListAdministered200ApplicationJSONOrganizationsOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationsListAdministered200ApplicationJSONOrganizationsOriginEnum: %v", v)
 	}
 }
 

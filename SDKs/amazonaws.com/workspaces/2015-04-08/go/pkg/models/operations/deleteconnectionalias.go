@@ -16,17 +16,21 @@ const (
 	DeleteConnectionAliasXAmzTargetEnumWorkspacesServiceDeleteConnectionAlias DeleteConnectionAliasXAmzTargetEnum = "WorkspacesService.DeleteConnectionAlias"
 )
 
+func (e DeleteConnectionAliasXAmzTargetEnum) ToPointer() *DeleteConnectionAliasXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteConnectionAliasXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.DeleteConnectionAlias":
-		*e = DeleteConnectionAliasXAmzTargetEnum(s)
+		*e = DeleteConnectionAliasXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteConnectionAliasXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteConnectionAliasXAmzTargetEnum: %v", v)
 	}
 }
 

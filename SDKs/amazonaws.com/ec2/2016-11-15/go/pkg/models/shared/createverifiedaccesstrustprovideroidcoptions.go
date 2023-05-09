@@ -2,7 +2,7 @@
 
 package shared
 
-// CreateVerifiedAccessTrustProviderOidcOptions - Options for an OIDC-based, user-identity type trust provider.
+// CreateVerifiedAccessTrustProviderOidcOptions - Describes the options when creating an Amazon Web Services Verified Access trust provider using the <code>user</code> type.
 type CreateVerifiedAccessTrustProviderOidcOptions struct {
 	AuthorizationEndpoint *string
 	ClientID              *string

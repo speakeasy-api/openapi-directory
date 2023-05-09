@@ -13,16 +13,20 @@ const (
 	DeletableCertificateBasedAuthPropertyEnumCertificateBasedAuthPropertiesCertificateAuthorityArn DeletableCertificateBasedAuthPropertyEnum = "CERTIFICATE_BASED_AUTH_PROPERTIES_CERTIFICATE_AUTHORITY_ARN"
 )
 
+func (e DeletableCertificateBasedAuthPropertyEnum) ToPointer() *DeletableCertificateBasedAuthPropertyEnum {
+	return &e
+}
+
 func (e *DeletableCertificateBasedAuthPropertyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERTIFICATE_BASED_AUTH_PROPERTIES_CERTIFICATE_AUTHORITY_ARN":
-		*e = DeletableCertificateBasedAuthPropertyEnum(s)
+		*e = DeletableCertificateBasedAuthPropertyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletableCertificateBasedAuthPropertyEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletableCertificateBasedAuthPropertyEnum: %v", v)
 	}
 }

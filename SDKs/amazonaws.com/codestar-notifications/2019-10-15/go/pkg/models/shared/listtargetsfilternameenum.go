@@ -15,20 +15,24 @@ const (
 	ListTargetsFilterNameEnumTargetStatus  ListTargetsFilterNameEnum = "TARGET_STATUS"
 )
 
+func (e ListTargetsFilterNameEnum) ToPointer() *ListTargetsFilterNameEnum {
+	return &e
+}
+
 func (e *ListTargetsFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_TYPE":
 		fallthrough
 	case "TARGET_ADDRESS":
 		fallthrough
 	case "TARGET_STATUS":
-		*e = ListTargetsFilterNameEnum(s)
+		*e = ListTargetsFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTargetsFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTargetsFilterNameEnum: %v", v)
 	}
 }

@@ -13,23 +13,27 @@ type RequestAStopPaymentOnACheckTransferRequest struct {
 	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum = "429"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13TypeEnumRateLimitedError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13 struct {
 	Type       RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnum = "403"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12TypeEnumPrivateFeatureError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12 struct {
 	Type   RequestAStopPaymentOnACheckTransferDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnum = "404"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11TypeEnumObjectNotFoundError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11 struct {
 	Type   RequestAStopPaymentOnACheckTransferDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnumFourHundred RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnum = "400"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnumFourHundred RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10TypeEnumMalformedRequestError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10 struct {
 	Type   RequestAStopPaymentOnACheckTransferDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnumFourHundred RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnum = "400"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnumFourHundred RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9TypeEnumInvalidParametersError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                             `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                             `json:"errors"`
 	Status RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                               `json:"title"`
 	Type   RequestAStopPaymentOnACheckTransferDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnum = "409"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8TypeEnumInvalidOperationError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8 struct {
 	Type   RequestAStopPaymentOnACheckTransferDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnum = "401"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7TypeEnumInvalidAPIKeyError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7 struct {
 	Type   RequestAStopPaymentOnACheckTransferDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnumFiveHundred RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnum = "500"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnumFiveHundred RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6TypeEnumInternalServerError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6 struct {
 	Type   RequestAStopPaymentOnACheckTransferDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnum = "403"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5TypeEnumInsufficientPermissionsError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5 struct {
 	Type   RequestAStopPaymentOnACheckTransferDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnum = "422"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4 struct {
 	Type   RequestAStopPaymentOnACheckTransferDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnum = "409"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3TypeEnumIdempotencyConflictError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3 struct {
 	Type   RequestAStopPaymentOnACheckTransferDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnum = "403"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2TypeEnumEnvironmentMismatchError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2 struct {
 	Type   RequestAStopPaymentOnACheckTransferDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnum string
+type RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnum int64
 
 const (
-	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnum = "404"
+	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1TypeEnum) ToPointer() *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1TypeEnum(s)
+		*e = RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

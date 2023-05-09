@@ -15,17 +15,21 @@ const (
 	POSTDescribeStorageActionEnumDescribeStorage POSTDescribeStorageActionEnum = "DescribeStorage"
 )
 
+func (e POSTDescribeStorageActionEnum) ToPointer() *POSTDescribeStorageActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeStorageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeStorage":
-		*e = POSTDescribeStorageActionEnum(s)
+		*e = POSTDescribeStorageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeStorageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeStorageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeStorageVersionEnumTwoThousandAndTwelve1201 POSTDescribeStorageVersionEnum = "2012-12-01"
 )
 
+func (e POSTDescribeStorageVersionEnum) ToPointer() *POSTDescribeStorageVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeStorageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTDescribeStorageVersionEnum(s)
+		*e = POSTDescribeStorageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeStorageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeStorageVersionEnum: %v", v)
 	}
 }
 

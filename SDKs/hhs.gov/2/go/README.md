@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/hhs.gov/2/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetResourcesCampaignsJSONRequest{
-        Max: 548814,
-        Offset: 592845,
-        Sort: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.Campaigns.GetResourcesCampaignsJSON(ctx, req)
+    res, err := s.Campaigns.GetResourcesCampaignsJSON(ctx, operations.GetResourcesCampaignsJSONRequest{
+        Max: sdk.Int(548814),
+        Offset: sdk.Int(592845),
+        Sort: sdk.String("distinctio"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,60 +44,60 @@ func main() {
 ## Available Resources and Operations
 
 
-### Campaigns
+### [Campaigns](docs/campaigns/README.md)
 
-* `GetResourcesCampaignsJSON` - Get Campaigns
-* `GetResourcesCampaignsIDJSON` - Get Campaign by ID
-* `GetResourcesCampaignsIDMediaJSON` - Get MediaItems by Campaign ID
-* `GetResourcesCampaignsIDSyndicateFormat` - Get MediaItems for Campaign
+* [GetResourcesCampaignsJSON](docs/campaigns/README.md#getresourcescampaignsjson) - Get Campaigns
+* [GetResourcesCampaignsIDJSON](docs/campaigns/README.md#getresourcescampaignsidjson) - Get Campaign by ID
+* [GetResourcesCampaignsIDMediaJSON](docs/campaigns/README.md#getresourcescampaignsidmediajson) - Get MediaItems by Campaign ID
+* [GetResourcesCampaignsIDSyndicateFormat](docs/campaigns/README.md#getresourcescampaignsidsyndicateformat) - Get MediaItems for Campaign
 
-### Languages
+### [Languages](docs/languages/README.md)
 
-* `GetResourcesLanguagesJSON` - Get Languages
-* `GetResourcesLanguagesIDJSON` - Get Language by ID
+* [GetResourcesLanguagesJSON](docs/languages/README.md#getresourceslanguagesjson) - Get Languages
+* [GetResourcesLanguagesIDJSON](docs/languages/README.md#getresourceslanguagesidjson) - Get Language by ID
 
-### Media
+### [Media](docs/media/README.md)
 
-* `GetResourcesMediaJSON` - Get MediaItems
-* `GetResourcesMediaFeaturedJSON` - Get the list of featured content in the syndication system
-* `GetResourcesMediaMostPopularMediaFormat` - Get MediaItems by popularity
-* `GetResourcesMediaSearchResultsJSON` - Get MediaItems by search query
-* `GetResourcesMediaIDJSON` - Get MediaItem by ID
-* `GetResourcesMediaIDContent` - Get content for MediaItem
-* `GetResourcesMediaIDEmbedJSON` - Get embed code for MediaItem
-* `GetResourcesMediaIDPreviewJpg` - Get Tag by ID
-* `GetResourcesMediaIDRelatedMediaFormat` - Get related MediaItems by ID
-* `GetResourcesMediaIDSyndicateFormat` - Get syndicated content for MediaItem
-* `GetResourcesMediaIDThumbnailJpg` - Get JPG thumbnail for MediaItem
-* `GetResourcesMediaIDYoutubeMetaDataJSON` - Get Youtube metadata for MediaItem
+* [GetResourcesMediaJSON](docs/media/README.md#getresourcesmediajson) - Get MediaItems
+* [GetResourcesMediaFeaturedJSON](docs/media/README.md#getresourcesmediafeaturedjson) - Get the list of featured content in the syndication system
+* [GetResourcesMediaMostPopularMediaFormat](docs/media/README.md#getresourcesmediamostpopularmediaformat) - Get MediaItems by popularity
+* [GetResourcesMediaSearchResultsJSON](docs/media/README.md#getresourcesmediasearchresultsjson) - Get MediaItems by search query
+* [GetResourcesMediaIDJSON](docs/media/README.md#getresourcesmediaidjson) - Get MediaItem by ID
+* [GetResourcesMediaIDContent](docs/media/README.md#getresourcesmediaidcontent) - Get content for MediaItem
+* [GetResourcesMediaIDEmbedJSON](docs/media/README.md#getresourcesmediaidembedjson) - Get embed code for MediaItem
+* [GetResourcesMediaIDPreviewJpg](docs/media/README.md#getresourcesmediaidpreviewjpg) - Get Tag by ID
+* [GetResourcesMediaIDRelatedMediaFormat](docs/media/README.md#getresourcesmediaidrelatedmediaformat) - Get related MediaItems by ID
+* [GetResourcesMediaIDSyndicateFormat](docs/media/README.md#getresourcesmediaidsyndicateformat) - Get syndicated content for MediaItem
+* [GetResourcesMediaIDThumbnailJpg](docs/media/README.md#getresourcesmediaidthumbnailjpg) - Get JPG thumbnail for MediaItem
+* [GetResourcesMediaIDYoutubeMetaDataJSON](docs/media/README.md#getresourcesmediaidyoutubemetadatajson) - Get Youtube metadata for MediaItem
 
-### MediaTypes
+### [MediaTypes](docs/mediatypes/README.md)
 
-* `GetResourcesMediaTypesFormat` - Get MediaTypes
+* [GetResourcesMediaTypesFormat](docs/mediatypes/README.md#getresourcesmediatypesformat) - Get MediaTypes
 
-### Resources
+### [Resources](docs/resources/README.md)
 
-* `GetResourcesJSON` - Get Resources by search query
+* [GetResourcesJSON](docs/resources/README.md#getresourcesjson) - Get Resources by search query
 
-### Sources
+### [Sources](docs/sources/README.md)
 
-* `GetResourcesSourcesJSON` - Get Sources
-* `GetResourcesSourcesIDJSON` - Get Source by ID
-* `GetResourcesSourcesIDSyndicateFormat` - Get MediaItems for Source
+* [GetResourcesSourcesJSON](docs/sources/README.md#getresourcessourcesjson) - Get Sources
+* [GetResourcesSourcesIDJSON](docs/sources/README.md#getresourcessourcesidjson) - Get Source by ID
+* [GetResourcesSourcesIDSyndicateFormat](docs/sources/README.md#getresourcessourcesidsyndicateformat) - Get MediaItems for Source
 
-### Tags
+### [Tags](docs/tags/README.md)
 
-* `GetResourcesTagsFormat` - Get Tags
-* `GetResourcesTagsTagLanguagesFormat` - Get TagLanguages
-* `GetResourcesTagsTagTypesFormat` - Get MediaItems for Tag
-* `GetResourcesTagsIDFormat` - Get Tag by ID
-* `GetResourcesTagsIDMediaFormat` - Get MediaItems for Tag
-* `GetResourcesTagsIDRelatedFormat` - Get related Tags by ID
-* `GetResourcesTagsIDSyndicateFormat` - Get MediaItems for Tag
+* [GetResourcesTagsFormat](docs/tags/README.md#getresourcestagsformat) - Get Tags
+* [GetResourcesTagsTagLanguagesFormat](docs/tags/README.md#getresourcestagstaglanguagesformat) - Get TagLanguages
+* [GetResourcesTagsTagTypesFormat](docs/tags/README.md#getresourcestagstagtypesformat) - Get MediaItems for Tag
+* [GetResourcesTagsIDFormat](docs/tags/README.md#getresourcestagsidformat) - Get Tag by ID
+* [GetResourcesTagsIDMediaFormat](docs/tags/README.md#getresourcestagsidmediaformat) - Get MediaItems for Tag
+* [GetResourcesTagsIDRelatedFormat](docs/tags/README.md#getresourcestagsidrelatedformat) - Get related Tags by ID
+* [GetResourcesTagsIDSyndicateFormat](docs/tags/README.md#getresourcestagsidsyndicateformat) - Get MediaItems for Tag
 
-### UserMediaLists
+### [UserMediaLists](docs/usermedialists/README.md)
 
-* `GetResourcesUserMediaListsIDJSON` - Get UserMediaList by ID
+* [GetResourcesUserMediaListsIDJSON](docs/usermedialists/README.md#getresourcesusermedialistsidjson) - Get UserMediaList by ID
 <!-- End SDK Available Operations -->
 
 ### Maturity

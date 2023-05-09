@@ -15,17 +15,21 @@ const (
 	GETModifyDBClusterActionEnumModifyDbCluster GETModifyDBClusterActionEnum = "ModifyDBCluster"
 )
 
+func (e GETModifyDBClusterActionEnum) ToPointer() *GETModifyDBClusterActionEnum {
+	return &e
+}
+
 func (e *GETModifyDBClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyDBCluster":
-		*e = GETModifyDBClusterActionEnum(s)
+		*e = GETModifyDBClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyDBClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyDBClusterActionEnum: %v", v)
 	}
 }
 
@@ -58,27 +62,33 @@ const (
 	GETModifyDBClusterVersionEnumTwoThousandAndFourteen1031 GETModifyDBClusterVersionEnum = "2014-10-31"
 )
 
+func (e GETModifyDBClusterVersionEnum) ToPointer() *GETModifyDBClusterVersionEnum {
+	return &e
+}
+
 func (e *GETModifyDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETModifyDBClusterVersionEnum(s)
+		*e = GETModifyDBClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyDBClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyDBClusterVersionEnum: %v", v)
 	}
 }
 
 type GETModifyDBClusterRequest struct {
 	Action GETModifyDBClusterActionEnum `queryParam:"style=form,explode=true,name=Action"`
-	// <p>The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster.</p> <p>Type: Integer</p> <p>Valid for: Multi-AZ DB clusters only</p>
+	// <p>The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster.</p> <p>Valid for: Multi-AZ DB clusters only</p>
 	AllocatedStorage *int64 `queryParam:"style=form,explode=true,name=AllocatedStorage"`
+	// <p>A value that indicates whether engine mode changes from <code>serverless</code> to <code>provisioned</code> are allowed.</p> <p>Constraints: You must allow engine mode changes when specifying a different value for the <code>EngineMode</code> parameter from the DB cluster's current engine mode.</p> <p>Valid for: Aurora Serverless v1 DB clusters only</p>
+	AllowEngineModeChange *bool `queryParam:"style=form,explode=true,name=AllowEngineModeChange"`
 	// <p>A value that indicates whether major version upgrades are allowed.</p> <p>Constraints: You must allow major version upgrades when specifying a value for the <code>EngineVersion</code> parameter that is a different major version than the DB cluster's current version.</p> <p>Valid for: Aurora DB clusters only</p>
 	AllowMajorVersionUpgrade *bool `queryParam:"style=form,explode=true,name=AllowMajorVersionUpgrade"`
-	// <p>A value that indicates whether the modifications in this request and any pending modifications are asynchronously applied as soon as possible, regardless of the <code>PreferredMaintenanceWindow</code> setting for the DB cluster. If this parameter is disabled, changes to the DB cluster are applied during the next maintenance window.</p> <p>The <code>ApplyImmediately</code> parameter only affects the <code>EnableIAMDatabaseAuthentication</code>, <code>MasterUserPassword</code>, and <code>NewDBClusterIdentifier</code> values. If the <code>ApplyImmediately</code> parameter is disabled, then changes to the <code>EnableIAMDatabaseAuthentication</code>, <code>MasterUserPassword</code>, and <code>NewDBClusterIdentifier</code> values are applied during the next maintenance window. All other changes are applied immediately, regardless of the value of the <code>ApplyImmediately</code> parameter.</p> <p>By default, this parameter is disabled.</p> <p>Valid for: Aurora DB clusters and Multi-AZ DB clusters</p>
+	// <p>A value that indicates whether the modifications in this request and any pending modifications are asynchronously applied as soon as possible, regardless of the <code>PreferredMaintenanceWindow</code> setting for the DB cluster. If this parameter is disabled, changes to the DB cluster are applied during the next maintenance window.</p> <p>Most modifications can be applied immediately or during the next scheduled maintenance window. Some modifications, such as turning on deletion protection and changing the master password, are applied immediately—regardless of when you choose to apply them.</p> <p>By default, this parameter is disabled.</p> <p>Valid for: Aurora DB clusters and Multi-AZ DB clusters</p>
 	ApplyImmediately *bool `queryParam:"style=form,explode=true,name=ApplyImmediately"`
 	// <p>A value that indicates whether minor engine upgrades are applied automatically to the DB cluster during the maintenance window. By default, minor engine upgrades are applied automatically.</p> <p>Valid for: Multi-AZ DB clusters only</p>
 	AutoMinorVersionUpgrade *bool `queryParam:"style=form,explode=true,name=AutoMinorVersionUpgrade"`
@@ -112,7 +122,9 @@ type GETModifyDBClusterRequest struct {
 	EnableIAMDatabaseAuthentication *bool `queryParam:"style=form,explode=true,name=EnableIAMDatabaseAuthentication"`
 	// <p>A value that indicates whether to turn on Performance Insights for the DB cluster.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Using Amazon Performance Insights</a> in the <i>Amazon RDS User Guide</i>.</p> <p>Valid for: Multi-AZ DB clusters only</p>
 	EnablePerformanceInsights *bool `queryParam:"style=form,explode=true,name=EnablePerformanceInsights"`
-	// <p>The version number of the database engine to which you want to upgrade. Changing this parameter results in an outage. The change is applied during the next maintenance window unless <code>ApplyImmediately</code> is enabled. </p> <p>If the cluster that you're modifying has one or more read replicas, all replicas must be running an engine version that's the same or later than the version you specify.</p> <p>To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3 (MySQL 8.0-compatible), use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code> </p> <p>To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code> </p> <p>To list all of the available engine versions for Aurora PostgreSQL, use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine aurora-postgresql --query "DBEngineVersions[].EngineVersion"</code> </p> <p>To list all of the available engine versions for RDS for MySQL, use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine mysql --query "DBEngineVersions[].EngineVersion"</code> </p> <p>To list all of the available engine versions for RDS for PostgreSQL, use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine postgres --query "DBEngineVersions[].EngineVersion"</code> </p> <p>Valid for: Aurora DB clusters and Multi-AZ DB clusters</p>
+	// <p>The DB engine mode of the DB cluster, either <code>provisioned</code> or <code>serverless</code>.</p> <note> <p>The DB engine mode can be modified only from <code>serverless</code> to <code>provisioned</code>.</p> </note> <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCluster.html"> CreateDBCluster</a>.</p> <p>Valid for: Aurora DB clusters only</p>
+	EngineMode *string `queryParam:"style=form,explode=true,name=EngineMode"`
+	// <p>The version number of the database engine to which you want to upgrade. Changing this parameter results in an outage. The change is applied during the next maintenance window unless <code>ApplyImmediately</code> is enabled.</p> <p>If the cluster that you're modifying has one or more read replicas, all replicas must be running an engine version that's the same or later than the version you specify.</p> <p>To list all of the available engine versions for Aurora MySQL, use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code> </p> <p>To list all of the available engine versions for Aurora PostgreSQL, use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine aurora-postgresql --query "DBEngineVersions[].EngineVersion"</code> </p> <p>To list all of the available engine versions for RDS for MySQL, use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine mysql --query "DBEngineVersions[].EngineVersion"</code> </p> <p>To list all of the available engine versions for RDS for PostgreSQL, use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine postgres --query "DBEngineVersions[].EngineVersion"</code> </p> <p>Valid for: Aurora DB clusters and Multi-AZ DB clusters</p>
 	EngineVersion *string `queryParam:"style=form,explode=true,name=EngineVersion"`
 	// <p>The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for each DB instance in the Multi-AZ DB cluster.</p> <p>For information about valid IOPS values, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS Provisioned IOPS storage</a> in the <i>Amazon RDS User Guide</i>.</p> <p>Constraints: Must be a multiple between .5 and 50 of the storage amount for the DB cluster.</p> <p>Valid for: Multi-AZ DB clusters only</p>
 	Iops *int64 `queryParam:"style=form,explode=true,name=Iops"`

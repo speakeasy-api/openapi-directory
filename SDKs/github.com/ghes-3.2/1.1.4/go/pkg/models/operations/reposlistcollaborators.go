@@ -18,21 +18,25 @@ const (
 	ReposListCollaboratorsAffiliationEnumAll     ReposListCollaboratorsAffiliationEnum = "all"
 )
 
+func (e ReposListCollaboratorsAffiliationEnum) ToPointer() *ReposListCollaboratorsAffiliationEnum {
+	return &e
+}
+
 func (e *ReposListCollaboratorsAffiliationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "outside":
 		fallthrough
 	case "direct":
 		fallthrough
 	case "all":
-		*e = ReposListCollaboratorsAffiliationEnum(s)
+		*e = ReposListCollaboratorsAffiliationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListCollaboratorsAffiliationEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListCollaboratorsAffiliationEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ReposListCollaboratorsPermissionEnumAdmin    ReposListCollaboratorsPermissionEnum = "admin"
 )
 
+func (e ReposListCollaboratorsPermissionEnum) ToPointer() *ReposListCollaboratorsPermissionEnum {
+	return &e
+}
+
 func (e *ReposListCollaboratorsPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pull":
 		fallthrough
 	case "triage":
@@ -62,10 +70,10 @@ func (e *ReposListCollaboratorsPermissionEnum) UnmarshalJSON(data []byte) error 
 	case "maintain":
 		fallthrough
 	case "admin":
-		*e = ReposListCollaboratorsPermissionEnum(s)
+		*e = ReposListCollaboratorsPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListCollaboratorsPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListCollaboratorsPermissionEnum: %v", v)
 	}
 }
 

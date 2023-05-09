@@ -34,7 +34,10 @@ func newEvents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // List the events for the network
 func (s *events) GetNetworkEvents(ctx context.Context, request operations.GetNetworkEventsRequest) (*operations.GetNetworkEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/events", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *events) GetNetworkEvents(ctx context.Context, request operations.GetNet
 // List the event type to human-readable description
 func (s *events) GetNetworkEventsEventTypes(ctx context.Context, request operations.GetNetworkEventsEventTypesRequest) (*operations.GetNetworkEventsEventTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/events/eventTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/events/eventTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GETUserContentByDateJSONRequest{
-        Date: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GETUserContentByDateJSON(ctx, req, operations.GETUserContentByDateJSONSecurity{
+    res, err := s.GETUserContentByDateJSON(ctx, operations.GETUserContentByDateJSONRequest{
+        Date: sdk.String("corrupti"),
+    }, operations.GETUserContentByDateJSONSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {

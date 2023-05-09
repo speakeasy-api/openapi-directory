@@ -17,12 +17,16 @@ const (
 	LanguageSpokenSpokenExceptionEnumDependentOnDayOfWeek LanguageSpokenSpokenExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LanguageSpokenSpokenExceptionEnum) ToPointer() *LanguageSpokenSpokenExceptionEnum {
+	return &e
+}
+
 func (e *LanguageSpokenSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *LanguageSpokenSpokenExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LanguageSpokenSpokenExceptionEnum(s)
+		*e = LanguageSpokenSpokenExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguageSpokenSpokenExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguageSpokenSpokenExceptionEnum: %v", v)
 	}
 }
 

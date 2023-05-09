@@ -15,20 +15,24 @@ const (
 	VpcAttributeNameEnumEnableNetworkAddressUsageMetrics VpcAttributeNameEnum = "enableNetworkAddressUsageMetrics"
 )
 
+func (e VpcAttributeNameEnum) ToPointer() *VpcAttributeNameEnum {
+	return &e
+}
+
 func (e *VpcAttributeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enableDnsSupport":
 		fallthrough
 	case "enableDnsHostnames":
 		fallthrough
 	case "enableNetworkAddressUsageMetrics":
-		*e = VpcAttributeNameEnum(s)
+		*e = VpcAttributeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VpcAttributeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for VpcAttributeNameEnum: %v", v)
 	}
 }

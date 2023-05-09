@@ -17,24 +17,28 @@ const (
 	CreateWorkloadShareRequestBodyPermissionTypeEnumContributor CreateWorkloadShareRequestBodyPermissionTypeEnum = "CONTRIBUTOR"
 )
 
+func (e CreateWorkloadShareRequestBodyPermissionTypeEnum) ToPointer() *CreateWorkloadShareRequestBodyPermissionTypeEnum {
+	return &e
+}
+
 func (e *CreateWorkloadShareRequestBodyPermissionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READONLY":
 		fallthrough
 	case "CONTRIBUTOR":
-		*e = CreateWorkloadShareRequestBodyPermissionTypeEnum(s)
+		*e = CreateWorkloadShareRequestBodyPermissionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWorkloadShareRequestBodyPermissionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWorkloadShareRequestBodyPermissionTypeEnum: %v", v)
 	}
 }
 
 type CreateWorkloadShareRequestBody struct {
-	// <p>A unique case-sensitive string used to ensure that this request is idempotent (executes only once).</p> <p>You should not reuse the same token for other requests. If you retry a request with the same client request token and the same parameters after it has completed successfully, the result of the original request is returned. </p> <important> <p>This token is listed as required, however, if you do not specify it, the Amazon Web Services SDKs automatically generate one for you. If you are not using the Amazon Web Services SDK or the CLI, you must provide this token or the request will fail.</p> </important>
+	// <p>A unique case-sensitive string used to ensure that this request is idempotent (executes only once).</p> <p>You should not reuse the same token for other requests. If you retry a request with the same client request token and the same parameters after the original request has completed successfully, the result of the original request is returned.</p> <important> <p>This token is listed as required, however, if you do not specify it, the Amazon Web Services SDKs automatically generate one for you. If you are not using the Amazon Web Services SDK or the CLI, you must provide this token or the request will fail.</p> </important>
 	ClientRequestToken string `json:"ClientRequestToken"`
 	// Permission granted on a workload share.
 	PermissionType CreateWorkloadShareRequestBodyPermissionTypeEnum `json:"PermissionType"`

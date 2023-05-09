@@ -35,7 +35,10 @@ func newSensitiveData(defaultClient, securityClient HTTPClient, serverURL, langu
 // Sends new or updated employee sensitive data information directly to Web Pay.
 func (s *sensitiveData) AddOrUpdateSensitiveData(ctx context.Context, request operations.AddOrUpdateSensitiveDataRequest, security operations.AddOrUpdateSensitiveDataSecurity) (*operations.AddOrUpdateSensitiveDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/sensitivedata", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/sensitivedata", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SensitiveData", "json")
 	if err != nil {
@@ -99,7 +102,10 @@ func (s *sensitiveData) AddOrUpdateSensitiveData(ctx context.Context, request op
 // Gets employee sensitive data information directly from Web Pay.
 func (s *sensitiveData) GetSensitiveData(ctx context.Context, request operations.GetSensitiveDataRequest, security operations.GetSensitiveDataSecurity) (*operations.GetSensitiveDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/sensitivedata", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/sensitivedata", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

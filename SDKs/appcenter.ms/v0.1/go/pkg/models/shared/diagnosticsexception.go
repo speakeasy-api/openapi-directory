@@ -22,12 +22,16 @@ const (
 	DiagnosticsExceptionFramesLanguageEnumUnknown      DiagnosticsExceptionFramesLanguageEnum = "Unknown"
 )
 
+func (e DiagnosticsExceptionFramesLanguageEnum) ToPointer() *DiagnosticsExceptionFramesLanguageEnum {
+	return &e
+}
+
 func (e *DiagnosticsExceptionFramesLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JavaScript":
 		fallthrough
 	case "CSharp":
@@ -45,10 +49,10 @@ func (e *DiagnosticsExceptionFramesLanguageEnum) UnmarshalJSON(data []byte) erro
 	case "Java":
 		fallthrough
 	case "Unknown":
-		*e = DiagnosticsExceptionFramesLanguageEnum(s)
+		*e = DiagnosticsExceptionFramesLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiagnosticsExceptionFramesLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for DiagnosticsExceptionFramesLanguageEnum: %v", v)
 	}
 }
 
@@ -95,12 +99,16 @@ const (
 	DiagnosticsExceptionPlatformEnumOther       DiagnosticsExceptionPlatformEnum = "other"
 )
 
+func (e DiagnosticsExceptionPlatformEnum) ToPointer() *DiagnosticsExceptionPlatformEnum {
+	return &e
+}
+
 func (e *DiagnosticsExceptionPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ios":
 		fallthrough
 	case "android":
@@ -114,10 +122,10 @@ func (e *DiagnosticsExceptionPlatformEnum) UnmarshalJSON(data []byte) error {
 	case "unity":
 		fallthrough
 	case "other":
-		*e = DiagnosticsExceptionPlatformEnum(s)
+		*e = DiagnosticsExceptionPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiagnosticsExceptionPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for DiagnosticsExceptionPlatformEnum: %v", v)
 	}
 }
 

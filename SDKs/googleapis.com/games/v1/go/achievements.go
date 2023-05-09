@@ -35,7 +35,10 @@ func newAchievements(defaultClient, securityClient HTTPClient, serverURL, langua
 // GamesAchievementsIncrement - Increments the steps of the achievement with the given ID for the currently authenticated player.
 func (s *achievements) GamesAchievementsIncrement(ctx context.Context, request operations.GamesAchievementsIncrementRequest, security operations.GamesAchievementsIncrementSecurity) (*operations.GamesAchievementsIncrementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/increment", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/increment", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *achievements) GamesAchievementsIncrement(ctx context.Context, request o
 // GamesAchievementsList - Lists the progress for all your application's achievements for the currently authenticated player.
 func (s *achievements) GamesAchievementsList(ctx context.Context, request operations.GamesAchievementsListRequest, security operations.GamesAchievementsListSecurity) (*operations.GamesAchievementsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/achievements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/achievements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *achievements) GamesAchievementsList(ctx context.Context, request operat
 // GamesAchievementsReveal - Sets the state of the achievement with the given ID to `REVEALED` for the currently authenticated player.
 func (s *achievements) GamesAchievementsReveal(ctx context.Context, request operations.GamesAchievementsRevealRequest, security operations.GamesAchievementsRevealSecurity) (*operations.GamesAchievementsRevealResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/reveal", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/reveal", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -179,7 +188,10 @@ func (s *achievements) GamesAchievementsReveal(ctx context.Context, request oper
 // GamesAchievementsSetStepsAtLeast - Sets the steps for the currently authenticated player towards unlocking an achievement. If the steps parameter is less than the current number of steps that the player already gained for the achievement, the achievement is not modified.
 func (s *achievements) GamesAchievementsSetStepsAtLeast(ctx context.Context, request operations.GamesAchievementsSetStepsAtLeastRequest, security operations.GamesAchievementsSetStepsAtLeastSecurity) (*operations.GamesAchievementsSetStepsAtLeastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/setStepsAtLeast", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/setStepsAtLeast", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -227,7 +239,10 @@ func (s *achievements) GamesAchievementsSetStepsAtLeast(ctx context.Context, req
 // GamesAchievementsUnlock - Unlocks this achievement for the currently authenticated player.
 func (s *achievements) GamesAchievementsUnlock(ctx context.Context, request operations.GamesAchievementsUnlockRequest, security operations.GamesAchievementsUnlockSecurity) (*operations.GamesAchievementsUnlockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/unlock", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/achievements/{achievementId}/unlock", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

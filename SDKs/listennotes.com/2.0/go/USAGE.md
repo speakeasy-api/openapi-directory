@@ -2,30 +2,28 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetBestPodcastsRequest{
-        XListenAPIKey: "corrupti",
-        GenreID: "provident",
-        Language: "distinctio",
-        Page: 844266,
-        PublisherRegion: "unde",
-        Region: "nulla",
-        SafeMode: "1",
-        Sort: "listen_score",
-    }
-
     ctx := context.Background()
-    res, err := s.DirectoryAPI.GetBestPodcasts(ctx, req)
+    res, err := s.DirectoryAPI.GetBestPodcasts(ctx, operations.GetBestPodcastsRequest{
+        XListenAPIKey: "corrupti",
+        GenreID: sdk.String("provident"),
+        Language: sdk.String("distinctio"),
+        Page: sdk.Int64(844266),
+        PublisherRegion: sdk.String("unde"),
+        Region: sdk.String("nulla"),
+        SafeMode: shared.SafeModeParamEnumOne.ToPointer(),
+        Sort: operations.GetBestPodcastsSortEnumListenScore.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }

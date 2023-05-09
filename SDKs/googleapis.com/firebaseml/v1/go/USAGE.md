@@ -2,39 +2,37 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FirebasemlOperationsCancelRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Operations.FirebasemlOperationsCancel(ctx, operations.FirebasemlOperationsCancelRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         RequestBody: map[string]interface{}{
             "distinctio": "quibusdam",
             "unde": "nulla",
             "corrupti": "illum",
         },
-        AccessToken: "vel",
-        Alt: "media",
-        Callback: "deserunt",
-        Fields: "suscipit",
-        Key: "iure",
-        Name: "magnam",
-        OauthToken: "debitis",
-        PrettyPrint: false,
-        QuotaUser: "ipsa",
-        UploadType: "delectus",
-        UploadProtocol: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.Operations.FirebasemlOperationsCancel(ctx, req, operations.FirebasemlOperationsCancelSecurity{
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("deserunt"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        Name: "Raquel Bednar",
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("molestiae"),
+        UploadType: sdk.String("minus"),
+        UploadProtocol: sdk.String("placeat"),
+    }, operations.FirebasemlOperationsCancelSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

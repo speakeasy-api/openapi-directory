@@ -15,17 +15,21 @@ const (
 	POSTPutScheduledUpdateGroupActionActionEnumPutScheduledUpdateGroupAction POSTPutScheduledUpdateGroupActionActionEnum = "PutScheduledUpdateGroupAction"
 )
 
+func (e POSTPutScheduledUpdateGroupActionActionEnum) ToPointer() *POSTPutScheduledUpdateGroupActionActionEnum {
+	return &e
+}
+
 func (e *POSTPutScheduledUpdateGroupActionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PutScheduledUpdateGroupAction":
-		*e = POSTPutScheduledUpdateGroupActionActionEnum(s)
+		*e = POSTPutScheduledUpdateGroupActionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPutScheduledUpdateGroupActionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPutScheduledUpdateGroupActionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTPutScheduledUpdateGroupActionVersionEnumTwoThousandAndEleven0101 POSTPutScheduledUpdateGroupActionVersionEnum = "2011-01-01"
 )
 
+func (e POSTPutScheduledUpdateGroupActionVersionEnum) ToPointer() *POSTPutScheduledUpdateGroupActionVersionEnum {
+	return &e
+}
+
 func (e *POSTPutScheduledUpdateGroupActionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTPutScheduledUpdateGroupActionVersionEnum(s)
+		*e = POSTPutScheduledUpdateGroupActionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPutScheduledUpdateGroupActionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPutScheduledUpdateGroupActionVersionEnum: %v", v)
 	}
 }
 

@@ -21,21 +21,25 @@ const (
 	OrgInvitationsUpdateRequestBodyRoleEnumMember       OrgInvitationsUpdateRequestBodyRoleEnum = "member"
 )
 
+func (e OrgInvitationsUpdateRequestBodyRoleEnum) ToPointer() *OrgInvitationsUpdateRequestBodyRoleEnum {
+	return &e
+}
+
 func (e *OrgInvitationsUpdateRequestBodyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin":
 		fallthrough
 	case "collaborator":
 		fallthrough
 	case "member":
-		*e = OrgInvitationsUpdateRequestBodyRoleEnum(s)
+		*e = OrgInvitationsUpdateRequestBodyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgInvitationsUpdateRequestBodyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgInvitationsUpdateRequestBodyRoleEnum: %v", v)
 	}
 }
 
@@ -66,12 +70,16 @@ const (
 	OrgInvitationsUpdateDefaultApplicationJSONErrorCodeEnumTooManyRequests     OrgInvitationsUpdateDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e OrgInvitationsUpdateDefaultApplicationJSONErrorCodeEnum) ToPointer() *OrgInvitationsUpdateDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *OrgInvitationsUpdateDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -85,10 +93,10 @@ func (e *OrgInvitationsUpdateDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = OrgInvitationsUpdateDefaultApplicationJSONErrorCodeEnum(s)
+		*e = OrgInvitationsUpdateDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgInvitationsUpdateDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgInvitationsUpdateDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

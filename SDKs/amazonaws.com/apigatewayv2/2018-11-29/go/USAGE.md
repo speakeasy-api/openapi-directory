@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,11 +16,12 @@ func main() {
         }),
     )
 
-    req := operations.CreateAPIRequest{
+    ctx := context.Background()
+    res, err := s.CreateAPI(ctx, operations.CreateAPIRequest{
         RequestBody: operations.CreateAPIRequestBody{
-            APIKeySelectionExpression: "corrupti",
+            APIKeySelectionExpression: sdk.String("corrupti"),
             CorsConfiguration: &operations.CreateAPIRequestBodyCorsConfiguration{
-                AllowCredentials: false,
+                AllowCredentials: sdk.Bool(false),
                 AllowHeaders: []string{
                     "distinctio",
                     "quibusdam",
@@ -44,36 +44,30 @@ func main() {
                     "tempora",
                     "suscipit",
                 },
-                MaxAge: 477665,
+                MaxAge: sdk.Int64(477665),
             },
-            CredentialsArn: "minus",
-            Description: "placeat",
-            DisableExecuteAPIEndpoint: false,
-            DisableSchemaValidation: false,
-            Name: "voluptatum",
-            ProtocolType: "WEBSOCKET",
-            RouteKey: "excepturi",
-            RouteSelectionExpression: "nisi",
+            CredentialsArn: sdk.String("minus"),
+            Description: sdk.String("placeat"),
+            DisableExecuteAPIEndpoint: sdk.Bool(false),
+            DisableSchemaValidation: sdk.Bool(false),
+            Name: "Ted Mante",
+            ProtocolType: operations.CreateAPIRequestBodyProtocolTypeEnumHTTP,
+            RouteKey: sdk.String("ab"),
+            RouteSelectionExpression: sdk.String("quis"),
             Tags: map[string]string{
-                "temporibus": "ab",
-                "quis": "veritatis",
                 "deserunt": "perferendis",
-                "ipsam": "repellendus",
             },
-            Target: "sapiente",
-            Version: "quo",
+            Target: sdk.String("ipsam"),
+            Version: sdk.String("repellendus"),
         },
-        XAmzAlgorithm: "odit",
-        XAmzContentSha256: "at",
-        XAmzCredential: "at",
-        XAmzDate: "maiores",
-        XAmzSecurityToken: "molestiae",
-        XAmzSignature: "quod",
-        XAmzSignedHeaders: "quod",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateAPI(ctx, req)
+        XAmzAlgorithm: sdk.String("sapiente"),
+        XAmzContentSha256: sdk.String("quo"),
+        XAmzCredential: sdk.String("odit"),
+        XAmzDate: sdk.String("at"),
+        XAmzSecurityToken: sdk.String("at"),
+        XAmzSignature: sdk.String("maiores"),
+        XAmzSignedHeaders: sdk.String("molestiae"),
+    })
     if err != nil {
         log.Fatal(err)
     }

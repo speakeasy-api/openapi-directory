@@ -173,7 +173,10 @@ func (s *image) GetImages(ctx context.Context, request operations.GetImagesReque
 // If that is not available, the `itunes` version should be used instead.
 func (s *image) GetImagesID(ctx context.Context, request operations.GetImagesIDRequest, security operations.GetImagesIDSecurity) (*operations.GetImagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/images/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/images/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

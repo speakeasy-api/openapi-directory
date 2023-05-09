@@ -16,21 +16,25 @@ const (
 	ListRepliesPolicyEnumNone     ListRepliesPolicyEnum = "none"
 )
 
+func (e ListRepliesPolicyEnum) ToPointer() *ListRepliesPolicyEnum {
+	return &e
+}
+
 func (e *ListRepliesPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "followed":
 		fallthrough
 	case "list":
 		fallthrough
 	case "none":
-		*e = ListRepliesPolicyEnum(s)
+		*e = ListRepliesPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRepliesPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRepliesPolicyEnum: %v", v)
 	}
 }
 

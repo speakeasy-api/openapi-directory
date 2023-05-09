@@ -16,104 +16,112 @@ const (
 	GetSearchVersionNumberAdditionalDataExtExtEnumJSON GetSearchVersionNumberAdditionalDataExtExtEnum = "json"
 )
 
+func (e GetSearchVersionNumberAdditionalDataExtExtEnum) ToPointer() *GetSearchVersionNumberAdditionalDataExtExtEnum {
+	return &e
+}
+
 func (e *GetSearchVersionNumberAdditionalDataExtExtEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
-		*e = GetSearchVersionNumberAdditionalDataExtExtEnum(s)
+		*e = GetSearchVersionNumberAdditionalDataExtExtEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSearchVersionNumberAdditionalDataExtExtEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSearchVersionNumberAdditionalDataExtExtEnum: %v", v)
 	}
 }
 
 // GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum - Defines the precision of the geometries.
-type GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum string
+type GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum int64
 
 const (
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumZero      GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "0"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumOne       GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "1"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumTwo       GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "2"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumThree     GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "3"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumFour      GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "4"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumFive      GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "5"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumSix       GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "6"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumSeven     GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "7"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumEight     GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "8"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumNine      GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "9"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumTen       GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "10"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumEleven    GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "11"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumTwelve    GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "12"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumThirteen  GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "13"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumFourteen  GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "14"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumFifteen   GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "15"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumSixteen   GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "16"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumSeventeen GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "17"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumEighteen  GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "18"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumNineteen  GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "19"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumTwenty    GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "20"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumTwentyOne GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "21"
-	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumTwentyTwo GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = "22"
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumZero      GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 0
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumOne       GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 1
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumTwo       GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 2
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumThree     GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 3
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumFour      GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 4
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumFive      GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 5
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumSix       GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 6
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumSeven     GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 7
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumEight     GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 8
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumNine      GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 9
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumTen       GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 10
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumEleven    GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 11
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumTwelve    GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 12
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumThirteen  GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 13
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumFourteen  GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 14
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumFifteen   GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 15
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumSixteen   GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 16
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumSeventeen GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 17
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumEighteen  GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 18
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumNineteen  GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 19
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumTwenty    GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 20
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumTwentyOne GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 21
+	GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumTwentyTwo GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum = 22
 )
 
+func (e GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum) ToPointer() *GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum {
+	return &e
+}
+
 func (e *GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "7":
+	case 7:
 		fallthrough
-	case "8":
+	case 8:
 		fallthrough
-	case "9":
+	case 9:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "11":
+	case 11:
 		fallthrough
-	case "12":
+	case 12:
 		fallthrough
-	case "13":
+	case 13:
 		fallthrough
-	case "14":
+	case 14:
 		fallthrough
-	case "15":
+	case 15:
 		fallthrough
-	case "16":
+	case 16:
 		fallthrough
-	case "17":
+	case 17:
 		fallthrough
-	case "18":
+	case 18:
 		fallthrough
-	case "19":
+	case 19:
 		fallthrough
-	case "20":
+	case 20:
 		fallthrough
-	case "21":
+	case 21:
 		fallthrough
-	case "22":
-		*e = GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum(s)
+	case 22:
+		*e = GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum: %v", v)
 	}
 }
 

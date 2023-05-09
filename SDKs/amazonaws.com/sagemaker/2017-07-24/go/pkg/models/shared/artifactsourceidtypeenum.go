@@ -16,12 +16,16 @@ const (
 	ArtifactSourceIDTypeEnumCustom    ArtifactSourceIDTypeEnum = "Custom"
 )
 
+func (e ArtifactSourceIDTypeEnum) ToPointer() *ArtifactSourceIDTypeEnum {
+	return &e
+}
+
 func (e *ArtifactSourceIDTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MD5Hash":
 		fallthrough
 	case "S3ETag":
@@ -29,9 +33,9 @@ func (e *ArtifactSourceIDTypeEnum) UnmarshalJSON(data []byte) error {
 	case "S3Version":
 		fallthrough
 	case "Custom":
-		*e = ArtifactSourceIDTypeEnum(s)
+		*e = ArtifactSourceIDTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArtifactSourceIDTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ArtifactSourceIDTypeEnum: %v", v)
 	}
 }

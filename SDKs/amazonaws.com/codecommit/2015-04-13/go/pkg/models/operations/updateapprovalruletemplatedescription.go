@@ -16,17 +16,21 @@ const (
 	UpdateApprovalRuleTemplateDescriptionXAmzTargetEnumCodeCommit20150413UpdateApprovalRuleTemplateDescription UpdateApprovalRuleTemplateDescriptionXAmzTargetEnum = "CodeCommit_20150413.UpdateApprovalRuleTemplateDescription"
 )
 
+func (e UpdateApprovalRuleTemplateDescriptionXAmzTargetEnum) ToPointer() *UpdateApprovalRuleTemplateDescriptionXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateApprovalRuleTemplateDescriptionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.UpdateApprovalRuleTemplateDescription":
-		*e = UpdateApprovalRuleTemplateDescriptionXAmzTargetEnum(s)
+		*e = UpdateApprovalRuleTemplateDescriptionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateApprovalRuleTemplateDescriptionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateApprovalRuleTemplateDescriptionXAmzTargetEnum: %v", v)
 	}
 }
 

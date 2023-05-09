@@ -15,17 +15,21 @@ const (
 	POSTDescribeVpcClassicLinkActionEnumDescribeVpcClassicLink POSTDescribeVpcClassicLinkActionEnum = "DescribeVpcClassicLink"
 )
 
+func (e POSTDescribeVpcClassicLinkActionEnum) ToPointer() *POSTDescribeVpcClassicLinkActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeVpcClassicLinkActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeVpcClassicLink":
-		*e = POSTDescribeVpcClassicLinkActionEnum(s)
+		*e = POSTDescribeVpcClassicLinkActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeVpcClassicLinkActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeVpcClassicLinkActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeVpcClassicLinkVersionEnumTwoThousandAndSixteen1115 POSTDescribeVpcClassicLinkVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeVpcClassicLinkVersionEnum) ToPointer() *POSTDescribeVpcClassicLinkVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeVpcClassicLinkVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeVpcClassicLinkVersionEnum(s)
+		*e = POSTDescribeVpcClassicLinkVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeVpcClassicLinkVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeVpcClassicLinkVersionEnum: %v", v)
 	}
 }
 

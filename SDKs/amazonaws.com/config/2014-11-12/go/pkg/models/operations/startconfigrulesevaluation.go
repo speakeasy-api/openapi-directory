@@ -16,17 +16,21 @@ const (
 	StartConfigRulesEvaluationXAmzTargetEnumStarlingDoveServiceStartConfigRulesEvaluation StartConfigRulesEvaluationXAmzTargetEnum = "StarlingDoveService.StartConfigRulesEvaluation"
 )
 
+func (e StartConfigRulesEvaluationXAmzTargetEnum) ToPointer() *StartConfigRulesEvaluationXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartConfigRulesEvaluationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.StartConfigRulesEvaluation":
-		*e = StartConfigRulesEvaluationXAmzTargetEnum(s)
+		*e = StartConfigRulesEvaluationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartConfigRulesEvaluationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartConfigRulesEvaluationXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -27,12 +27,16 @@ const (
 	PackageVersionPackageVersionMetadataPackageTypeEnumContainer PackageVersionPackageVersionMetadataPackageTypeEnum = "container"
 )
 
+func (e PackageVersionPackageVersionMetadataPackageTypeEnum) ToPointer() *PackageVersionPackageVersionMetadataPackageTypeEnum {
+	return &e
+}
+
 func (e *PackageVersionPackageVersionMetadataPackageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "npm":
 		fallthrough
 	case "maven":
@@ -44,10 +48,10 @@ func (e *PackageVersionPackageVersionMetadataPackageTypeEnum) UnmarshalJSON(data
 	case "nuget":
 		fallthrough
 	case "container":
-		*e = PackageVersionPackageVersionMetadataPackageTypeEnum(s)
+		*e = PackageVersionPackageVersionMetadataPackageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PackageVersionPackageVersionMetadataPackageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PackageVersionPackageVersionMetadataPackageTypeEnum: %v", v)
 	}
 }
 

@@ -110,7 +110,10 @@ func (s *accountMerchantLevel) GetMerchants(ctx context.Context, request operati
 // * Management API—Account read
 func (s *accountMerchantLevel) GetMerchantsMerchantID(ctx context.Context, request operations.GetMerchantsMerchantIDRequest, security operations.GetMerchantsMerchantIDSecurity) (*operations.GetMerchantsMerchantIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -257,7 +260,10 @@ func (s *accountMerchantLevel) PostMerchants(ctx context.Context, request shared
 // * Management API—Accounts read and write
 func (s *accountMerchantLevel) PostMerchantsMerchantIDActivate(ctx context.Context, request operations.PostMerchantsMerchantIDActivateRequest, security operations.PostMerchantsMerchantIDActivateSecurity) (*operations.PostMerchantsMerchantIDActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/activate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/activate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

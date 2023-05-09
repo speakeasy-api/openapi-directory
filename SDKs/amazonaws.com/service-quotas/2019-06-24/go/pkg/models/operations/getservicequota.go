@@ -16,17 +16,21 @@ const (
 	GetServiceQuotaXAmzTargetEnumServiceQuotasV20190624GetServiceQuota GetServiceQuotaXAmzTargetEnum = "ServiceQuotasV20190624.GetServiceQuota"
 )
 
+func (e GetServiceQuotaXAmzTargetEnum) ToPointer() *GetServiceQuotaXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetServiceQuotaXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ServiceQuotasV20190624.GetServiceQuota":
-		*e = GetServiceQuotaXAmzTargetEnum(s)
+		*e = GetServiceQuotaXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServiceQuotaXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServiceQuotaXAmzTargetEnum: %v", v)
 	}
 }
 

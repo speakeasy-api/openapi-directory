@@ -13,16 +13,20 @@ const (
 	AttachmentHashTypeEnumSha256 AttachmentHashTypeEnum = "Sha256"
 )
 
+func (e AttachmentHashTypeEnum) ToPointer() *AttachmentHashTypeEnum {
+	return &e
+}
+
 func (e *AttachmentHashTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Sha256":
-		*e = AttachmentHashTypeEnum(s)
+		*e = AttachmentHashTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachmentHashTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachmentHashTypeEnum: %v", v)
 	}
 }

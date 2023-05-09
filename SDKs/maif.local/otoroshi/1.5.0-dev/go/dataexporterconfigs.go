@@ -205,7 +205,10 @@ func (s *dataExporterConfigs) CreateDataExporterConfig(ctx context.Context, requ
 // Delete a data exporter config
 func (s *dataExporterConfigs) DeleteDataExporterConfig(ctx context.Context, request operations.DeleteDataExporterConfigRequest, security operations.DeleteDataExporterConfigSecurity) (*operations.DeleteDataExporterConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -310,7 +313,7 @@ func (s *dataExporterConfigs) DeletebulkDataExporterConfig(ctx context.Context, 
 
 // FindAllDataExporters - Get all data exporter configs
 // Get all data exporter configs
-func (s *dataExporterConfigs) FindAllDataExporters(ctx context.Context) (*operations.FindAllDataExportersResponse, error) {
+func (s *dataExporterConfigs) FindAllDataExporters(ctx context.Context, security operations.FindAllDataExportersSecurity) (*operations.FindAllDataExportersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/data-exporter-configs"
 
@@ -319,7 +322,7 @@ func (s *dataExporterConfigs) FindAllDataExporters(ctx context.Context) (*operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -362,7 +365,10 @@ func (s *dataExporterConfigs) FindAllDataExporters(ctx context.Context) (*operat
 // Get a data exporter config
 func (s *dataExporterConfigs) FindDataExporterConfigByID(ctx context.Context, request operations.FindDataExporterConfigByIDRequest, security operations.FindDataExporterConfigByIDSecurity) (*operations.FindDataExporterConfigByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -469,7 +475,10 @@ func (s *dataExporterConfigs) PatchBulkDataExporterConfig(ctx context.Context, r
 // Update a data exporter config with a diff
 func (s *dataExporterConfigs) PatchDataExporterConfig(ctx context.Context, request operations.PatchDataExporterConfigRequest, security operations.PatchDataExporterConfigSecurity) (*operations.PatchDataExporterConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -583,7 +592,10 @@ func (s *dataExporterConfigs) UpdateBulkDataExporterConfig(ctx context.Context, 
 // Update a data exporter config
 func (s *dataExporterConfigs) UpdateDataExporterConfig(ctx context.Context, request operations.UpdateDataExporterConfigRequest, security operations.UpdateDataExporterConfigSecurity) (*operations.UpdateDataExporterConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/data-exporter-configs/{dataExporterConfigId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DataExporterConfig", "json")
 	if err != nil {

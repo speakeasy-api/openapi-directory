@@ -23,21 +23,25 @@ const (
 	ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetViewEnumFull                 ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetViewEnum = "FULL"
 )
 
+func (e ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetViewEnum) ToPointer() *ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetViewEnum {
+	return &e
+}
+
 func (e *ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUOTA_VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetViewEnum(s)
+		*e = ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGetViewEnum: %v", v)
 	}
 }
 

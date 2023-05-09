@@ -16,21 +16,25 @@ const (
 	GroupsExportOptionsExportFormatEnumPst                     GroupsExportOptionsExportFormatEnum = "PST"
 )
 
+func (e GroupsExportOptionsExportFormatEnum) ToPointer() *GroupsExportOptionsExportFormatEnum {
+	return &e
+}
+
 func (e *GroupsExportOptionsExportFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXPORT_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "MBOX":
 		fallthrough
 	case "PST":
-		*e = GroupsExportOptionsExportFormatEnum(s)
+		*e = GroupsExportOptionsExportFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsExportOptionsExportFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsExportOptionsExportFormatEnum: %v", v)
 	}
 }
 

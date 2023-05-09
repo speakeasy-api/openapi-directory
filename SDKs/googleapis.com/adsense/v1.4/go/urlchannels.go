@@ -34,7 +34,10 @@ func newUrlchannels(defaultClient, securityClient HTTPClient, serverURL, languag
 // AdsenseUrlchannelsList - List all URL channels in the specified ad client for this AdSense account.
 func (s *urlchannels) AdsenseUrlchannelsList(ctx context.Context, request operations.AdsenseUrlchannelsListRequest, security operations.AdsenseUrlchannelsListSecurity) (*operations.AdsenseUrlchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/urlchannels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

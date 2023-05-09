@@ -16,20 +16,24 @@ const (
 	ConsumptionAvailabilityStatusEnumUnavailable ConsumptionAvailabilityStatusEnum = "Unavailable"
 )
 
+func (e ConsumptionAvailabilityStatusEnum) ToPointer() *ConsumptionAvailabilityStatusEnum {
+	return &e
+}
+
 func (e *ConsumptionAvailabilityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Available":
 		fallthrough
 	case "Degraded":
 		fallthrough
 	case "Unavailable":
-		*e = ConsumptionAvailabilityStatusEnum(s)
+		*e = ConsumptionAvailabilityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConsumptionAvailabilityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ConsumptionAvailabilityStatusEnum: %v", v)
 	}
 }

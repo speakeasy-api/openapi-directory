@@ -16,12 +16,16 @@ const (
 	S3BucketRegionEnumAfSouth1 S3BucketRegionEnum = "af-south-1"
 )
 
+func (e S3BucketRegionEnum) ToPointer() *S3BucketRegionEnum {
+	return &e
+}
+
 func (e *S3BucketRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ap-east-1":
 		fallthrough
 	case "me-south-1":
@@ -29,9 +33,9 @@ func (e *S3BucketRegionEnum) UnmarshalJSON(data []byte) error {
 	case "eu-south-1":
 		fallthrough
 	case "af-south-1":
-		*e = S3BucketRegionEnum(s)
+		*e = S3BucketRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for S3BucketRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for S3BucketRegionEnum: %v", v)
 	}
 }

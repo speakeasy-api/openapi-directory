@@ -16,17 +16,21 @@ const (
 	UpdateEndpointGroupXAmzTargetEnumGlobalAcceleratorV20180706UpdateEndpointGroup UpdateEndpointGroupXAmzTargetEnum = "GlobalAccelerator_V20180706.UpdateEndpointGroup"
 )
 
+func (e UpdateEndpointGroupXAmzTargetEnum) ToPointer() *UpdateEndpointGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateEndpointGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.UpdateEndpointGroup":
-		*e = UpdateEndpointGroupXAmzTargetEnum(s)
+		*e = UpdateEndpointGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateEndpointGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateEndpointGroupXAmzTargetEnum: %v", v)
 	}
 }
 

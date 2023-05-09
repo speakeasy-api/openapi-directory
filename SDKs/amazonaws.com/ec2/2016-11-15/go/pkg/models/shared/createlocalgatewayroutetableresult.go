@@ -15,19 +15,23 @@ const (
 	CreateLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnumCoip             CreateLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum = "coip"
 )
 
+func (e CreateLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum) ToPointer() *CreateLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum {
+	return &e
+}
+
 func (e *CreateLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "direct-vpc-routing":
 		fallthrough
 	case "coip":
-		*e = CreateLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum(s)
+		*e = CreateLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum: %v", v)
 	}
 }
 

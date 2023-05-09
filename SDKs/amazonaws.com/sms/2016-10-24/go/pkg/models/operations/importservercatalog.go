@@ -15,17 +15,21 @@ const (
 	ImportServerCatalogXAmzTargetEnumAwsServerMigrationServiceV20161024ImportServerCatalog ImportServerCatalogXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.ImportServerCatalog"
 )
 
+func (e ImportServerCatalogXAmzTargetEnum) ToPointer() *ImportServerCatalogXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportServerCatalogXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.ImportServerCatalog":
-		*e = ImportServerCatalogXAmzTargetEnum(s)
+		*e = ImportServerCatalogXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportServerCatalogXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportServerCatalogXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -27,12 +27,16 @@ const (
 	MitreAttackAdditionalTacticsEnumImpact              MitreAttackAdditionalTacticsEnum = "IMPACT"
 )
 
+func (e MitreAttackAdditionalTacticsEnum) ToPointer() *MitreAttackAdditionalTacticsEnum {
+	return &e
+}
+
 func (e *MitreAttackAdditionalTacticsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TACTIC_UNSPECIFIED":
 		fallthrough
 	case "RECONNAISSANCE":
@@ -62,10 +66,10 @@ func (e *MitreAttackAdditionalTacticsEnum) UnmarshalJSON(data []byte) error {
 	case "EXFILTRATION":
 		fallthrough
 	case "IMPACT":
-		*e = MitreAttackAdditionalTacticsEnum(s)
+		*e = MitreAttackAdditionalTacticsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MitreAttackAdditionalTacticsEnum: %s", s)
+		return fmt.Errorf("invalid value for MitreAttackAdditionalTacticsEnum: %v", v)
 	}
 }
 
@@ -110,12 +114,16 @@ const (
 	MitreAttackAdditionalTechniquesEnumDefaultAccounts                  MitreAttackAdditionalTechniquesEnum = "DEFAULT_ACCOUNTS"
 )
 
+func (e MitreAttackAdditionalTechniquesEnum) ToPointer() *MitreAttackAdditionalTechniquesEnum {
+	return &e
+}
+
 func (e *MitreAttackAdditionalTechniquesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TECHNIQUE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE_SCANNING":
@@ -187,10 +195,10 @@ func (e *MitreAttackAdditionalTechniquesEnum) UnmarshalJSON(data []byte) error {
 	case "ABUSE_ELEVATION_CONTROL_MECHANISM":
 		fallthrough
 	case "DEFAULT_ACCOUNTS":
-		*e = MitreAttackAdditionalTechniquesEnum(s)
+		*e = MitreAttackAdditionalTechniquesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MitreAttackAdditionalTechniquesEnum: %s", s)
+		return fmt.Errorf("invalid value for MitreAttackAdditionalTechniquesEnum: %v", v)
 	}
 }
 
@@ -215,12 +223,16 @@ const (
 	MitreAttackPrimaryTacticEnumImpact              MitreAttackPrimaryTacticEnum = "IMPACT"
 )
 
+func (e MitreAttackPrimaryTacticEnum) ToPointer() *MitreAttackPrimaryTacticEnum {
+	return &e
+}
+
 func (e *MitreAttackPrimaryTacticEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TACTIC_UNSPECIFIED":
 		fallthrough
 	case "RECONNAISSANCE":
@@ -250,10 +262,10 @@ func (e *MitreAttackPrimaryTacticEnum) UnmarshalJSON(data []byte) error {
 	case "EXFILTRATION":
 		fallthrough
 	case "IMPACT":
-		*e = MitreAttackPrimaryTacticEnum(s)
+		*e = MitreAttackPrimaryTacticEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MitreAttackPrimaryTacticEnum: %s", s)
+		return fmt.Errorf("invalid value for MitreAttackPrimaryTacticEnum: %v", v)
 	}
 }
 
@@ -298,12 +310,16 @@ const (
 	MitreAttackPrimaryTechniquesEnumDefaultAccounts                  MitreAttackPrimaryTechniquesEnum = "DEFAULT_ACCOUNTS"
 )
 
+func (e MitreAttackPrimaryTechniquesEnum) ToPointer() *MitreAttackPrimaryTechniquesEnum {
+	return &e
+}
+
 func (e *MitreAttackPrimaryTechniquesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TECHNIQUE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE_SCANNING":
@@ -375,10 +391,10 @@ func (e *MitreAttackPrimaryTechniquesEnum) UnmarshalJSON(data []byte) error {
 	case "ABUSE_ELEVATION_CONTROL_MECHANISM":
 		fallthrough
 	case "DEFAULT_ACCOUNTS":
-		*e = MitreAttackPrimaryTechniquesEnum(s)
+		*e = MitreAttackPrimaryTechniquesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MitreAttackPrimaryTechniquesEnum: %s", s)
+		return fmt.Errorf("invalid value for MitreAttackPrimaryTechniquesEnum: %v", v)
 	}
 }
 

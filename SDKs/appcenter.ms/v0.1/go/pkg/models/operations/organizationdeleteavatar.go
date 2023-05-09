@@ -29,12 +29,16 @@ const (
 	OrganizationDeleteAvatarDefaultApplicationJSONErrorCodeEnumTooManyRequests     OrganizationDeleteAvatarDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e OrganizationDeleteAvatarDefaultApplicationJSONErrorCodeEnum) ToPointer() *OrganizationDeleteAvatarDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *OrganizationDeleteAvatarDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -48,10 +52,10 @@ func (e *OrganizationDeleteAvatarDefaultApplicationJSONErrorCodeEnum) UnmarshalJ
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = OrganizationDeleteAvatarDefaultApplicationJSONErrorCodeEnum(s)
+		*e = OrganizationDeleteAvatarDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationDeleteAvatarDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationDeleteAvatarDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -73,19 +77,23 @@ const (
 	OrganizationDeleteAvatar200ApplicationJSONOriginEnumHockeyapp OrganizationDeleteAvatar200ApplicationJSONOriginEnum = "hockeyapp"
 )
 
+func (e OrganizationDeleteAvatar200ApplicationJSONOriginEnum) ToPointer() *OrganizationDeleteAvatar200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *OrganizationDeleteAvatar200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = OrganizationDeleteAvatar200ApplicationJSONOriginEnum(s)
+		*e = OrganizationDeleteAvatar200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationDeleteAvatar200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationDeleteAvatar200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

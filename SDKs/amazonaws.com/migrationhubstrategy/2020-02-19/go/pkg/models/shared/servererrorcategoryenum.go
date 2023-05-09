@@ -17,12 +17,16 @@ const (
 	ServerErrorCategoryEnumOtherError        ServerErrorCategoryEnum = "OTHER_ERROR"
 )
 
+func (e ServerErrorCategoryEnum) ToPointer() *ServerErrorCategoryEnum {
+	return &e
+}
+
 func (e *ServerErrorCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTIVITY_ERROR":
 		fallthrough
 	case "CREDENTIAL_ERROR":
@@ -32,9 +36,9 @@ func (e *ServerErrorCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "ARCHITECTURE_ERROR":
 		fallthrough
 	case "OTHER_ERROR":
-		*e = ServerErrorCategoryEnum(s)
+		*e = ServerErrorCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServerErrorCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for ServerErrorCategoryEnum: %v", v)
 	}
 }

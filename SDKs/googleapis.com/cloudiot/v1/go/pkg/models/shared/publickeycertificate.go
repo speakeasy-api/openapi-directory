@@ -15,19 +15,23 @@ const (
 	PublicKeyCertificateFormatEnumX509CertificatePem                    PublicKeyCertificateFormatEnum = "X509_CERTIFICATE_PEM"
 )
 
+func (e PublicKeyCertificateFormatEnum) ToPointer() *PublicKeyCertificateFormatEnum {
+	return &e
+}
+
 func (e *PublicKeyCertificateFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_PUBLIC_KEY_CERTIFICATE_FORMAT":
 		fallthrough
 	case "X509_CERTIFICATE_PEM":
-		*e = PublicKeyCertificateFormatEnum(s)
+		*e = PublicKeyCertificateFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublicKeyCertificateFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PublicKeyCertificateFormatEnum: %v", v)
 	}
 }
 

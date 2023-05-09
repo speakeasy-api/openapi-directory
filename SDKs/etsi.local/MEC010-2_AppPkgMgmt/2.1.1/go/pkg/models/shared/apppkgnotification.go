@@ -14,19 +14,23 @@ const (
 	AppPkgNotificationOperationalStateEnumEnabled  AppPkgNotificationOperationalStateEnum = "ENABLED"
 )
 
+func (e AppPkgNotificationOperationalStateEnum) ToPointer() *AppPkgNotificationOperationalStateEnum {
+	return &e
+}
+
 func (e *AppPkgNotificationOperationalStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
-		*e = AppPkgNotificationOperationalStateEnum(s)
+		*e = AppPkgNotificationOperationalStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPkgNotificationOperationalStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPkgNotificationOperationalStateEnum: %v", v)
 	}
 }
 

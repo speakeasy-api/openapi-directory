@@ -2,146 +2,144 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.WebmastersSearchanalyticsQueryRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Searchanalytics.WebmastersSearchanalyticsQuery(ctx, operations.WebmastersSearchanalyticsQueryRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         SearchAnalyticsQueryRequest: &shared.SearchAnalyticsQueryRequest{
-            AggregationType: "BY_PROPERTY",
-            DataState: "ALL",
+            AggregationType: shared.SearchAnalyticsQueryRequestAggregationTypeEnumByProperty.ToPointer(),
+            DataState: shared.SearchAnalyticsQueryRequestDataStateEnumAll.ToPointer(),
             DimensionFilterGroups: []shared.APIDimensionFilterGroup{
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
-                            Dimension: "SEARCH_APPEARANCE",
-                            Expression: "corrupti",
-                            Operator: "EXCLUDING_REGEX",
+                            Dimension: shared.APIDimensionFilterDimensionEnumSearchAppearance.ToPointer(),
+                            Expression: sdk.String("corrupti"),
+                            Operator: shared.APIDimensionFilterOperatorEnumExcludingRegex.ToPointer(),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "COUNTRY",
-                            Expression: "error",
-                            Operator: "NOT_CONTAINS",
+                            Dimension: shared.APIDimensionFilterDimensionEnumCountry.ToPointer(),
+                            Expression: sdk.String("error"),
+                            Operator: shared.APIDimensionFilterOperatorEnumNotContains.ToPointer(),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "PAGE",
-                            Expression: "iure",
-                            Operator: "NOT_EQUALS",
+                            Dimension: shared.APIDimensionFilterDimensionEnumPage.ToPointer(),
+                            Expression: sdk.String("iure"),
+                            Operator: shared.APIDimensionFilterOperatorEnumNotEquals.ToPointer(),
                         },
                     },
-                    GroupType: "AND",
+                    GroupType: shared.APIDimensionFilterGroupGroupTypeEnumAnd.ToPointer(),
                 },
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
-                            Dimension: "QUERY",
-                            Expression: "delectus",
-                            Operator: "NOT_EQUALS",
+                            Dimension: shared.APIDimensionFilterDimensionEnumQuery.ToPointer(),
+                            Expression: sdk.String("delectus"),
+                            Operator: shared.APIDimensionFilterOperatorEnumNotEquals.ToPointer(),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "PAGE",
-                            Expression: "molestiae",
-                            Operator: "INCLUDING_REGEX",
+                            Dimension: shared.APIDimensionFilterDimensionEnumPage.ToPointer(),
+                            Expression: sdk.String("molestiae"),
+                            Operator: shared.APIDimensionFilterOperatorEnumIncludingRegex.ToPointer(),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "SEARCH_APPEARANCE",
-                            Expression: "voluptatum",
-                            Operator: "CONTAINS",
+                            Dimension: shared.APIDimensionFilterDimensionEnumSearchAppearance.ToPointer(),
+                            Expression: sdk.String("voluptatum"),
+                            Operator: shared.APIDimensionFilterOperatorEnumContains.ToPointer(),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "COUNTRY",
-                            Expression: "nisi",
-                            Operator: "EXCLUDING_REGEX",
+                            Dimension: shared.APIDimensionFilterDimensionEnumCountry.ToPointer(),
+                            Expression: sdk.String("nisi"),
+                            Operator: shared.APIDimensionFilterOperatorEnumExcludingRegex.ToPointer(),
                         },
                     },
-                    GroupType: "AND",
+                    GroupType: shared.APIDimensionFilterGroupGroupTypeEnumAnd.ToPointer(),
                 },
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
-                            Dimension: "QUERY",
-                            Expression: "quis",
-                            Operator: "EQUALS",
+                            Dimension: shared.APIDimensionFilterDimensionEnumQuery.ToPointer(),
+                            Expression: sdk.String("quis"),
+                            Operator: shared.APIDimensionFilterOperatorEnumEquals.ToPointer(),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "DEVICE",
-                            Expression: "perferendis",
-                            Operator: "CONTAINS",
+                            Dimension: shared.APIDimensionFilterDimensionEnumDevice.ToPointer(),
+                            Expression: sdk.String("perferendis"),
+                            Operator: shared.APIDimensionFilterOperatorEnumContains.ToPointer(),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "SEARCH_APPEARANCE",
-                            Expression: "sapiente",
-                            Operator: "INCLUDING_REGEX",
+                            Dimension: shared.APIDimensionFilterDimensionEnumSearchAppearance.ToPointer(),
+                            Expression: sdk.String("sapiente"),
+                            Operator: shared.APIDimensionFilterOperatorEnumIncludingRegex.ToPointer(),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "QUERY",
-                            Expression: "at",
-                            Operator: "EXCLUDING_REGEX",
+                            Dimension: shared.APIDimensionFilterDimensionEnumQuery.ToPointer(),
+                            Expression: sdk.String("at"),
+                            Operator: shared.APIDimensionFilterOperatorEnumExcludingRegex.ToPointer(),
                         },
                     },
-                    GroupType: "AND",
+                    GroupType: shared.APIDimensionFilterGroupGroupTypeEnumAnd.ToPointer(),
                 },
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
-                            Dimension: "COUNTRY",
-                            Expression: "quod",
-                            Operator: "INCLUDING_REGEX",
+                            Dimension: shared.APIDimensionFilterDimensionEnumCountry.ToPointer(),
+                            Expression: sdk.String("quod"),
+                            Operator: shared.APIDimensionFilterOperatorEnumIncludingRegex.ToPointer(),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "COUNTRY",
-                            Expression: "totam",
-                            Operator: "INCLUDING_REGEX",
+                            Dimension: shared.APIDimensionFilterDimensionEnumCountry.ToPointer(),
+                            Expression: sdk.String("totam"),
+                            Operator: shared.APIDimensionFilterOperatorEnumIncludingRegex.ToPointer(),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "DEVICE",
-                            Expression: "dicta",
-                            Operator: "INCLUDING_REGEX",
+                            Dimension: shared.APIDimensionFilterDimensionEnumDevice.ToPointer(),
+                            Expression: sdk.String("dicta"),
+                            Operator: shared.APIDimensionFilterOperatorEnumIncludingRegex.ToPointer(),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "DEVICE",
-                            Expression: "occaecati",
-                            Operator: "EQUALS",
+                            Dimension: shared.APIDimensionFilterDimensionEnumDevice.ToPointer(),
+                            Expression: sdk.String("occaecati"),
+                            Operator: shared.APIDimensionFilterOperatorEnumEquals.ToPointer(),
                         },
                     },
-                    GroupType: "AND",
+                    GroupType: shared.APIDimensionFilterGroupGroupTypeEnumAnd.ToPointer(),
                 },
             },
             Dimensions: []shared.SearchAnalyticsQueryRequestDimensionsEnum{
-                "SEARCH_APPEARANCE",
-                "DEVICE",
-                "COUNTRY",
+                shared.SearchAnalyticsQueryRequestDimensionsEnumSearchAppearance,
+                shared.SearchAnalyticsQueryRequestDimensionsEnumDevice,
+                shared.SearchAnalyticsQueryRequestDimensionsEnumCountry,
             },
-            EndDate: "beatae",
-            RowLimit: 414662,
-            SearchType: "VIDEO",
-            StartDate: "modi",
-            StartRow: 186332,
-            Type: "DISCOVER",
+            EndDate: sdk.String("beatae"),
+            RowLimit: sdk.Int(414662),
+            SearchType: shared.SearchAnalyticsQueryRequestSearchTypeEnumVideo.ToPointer(),
+            StartDate: sdk.String("modi"),
+            StartRow: sdk.Int(186332),
+            Type: shared.SearchAnalyticsQueryRequestTypeEnumDiscover.ToPointer(),
         },
-        AccessToken: "cum",
-        Alt: "media",
-        Callback: "ipsum",
-        Fields: "excepturi",
-        Key: "aspernatur",
-        OauthToken: "perferendis",
-        PrettyPrint: false,
-        QuotaUser: "ad",
+        AccessToken: sdk.String("cum"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("ipsum"),
+        Fields: sdk.String("excepturi"),
+        Key: sdk.String("aspernatur"),
+        OauthToken: sdk.String("perferendis"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("ad"),
         SiteURL: "natus",
-        UploadType: "sed",
-        UploadProtocol: "iste",
-    }
-
-    ctx := context.Background()
-    res, err := s.Searchanalytics.WebmastersSearchanalyticsQuery(ctx, req, operations.WebmastersSearchanalyticsQuerySecurity{
+        UploadType: sdk.String("sed"),
+        UploadProtocol: sdk.String("iste"),
+    }, operations.WebmastersSearchanalyticsQuerySecurity{
         Option1: &operations.WebmastersSearchanalyticsQuerySecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

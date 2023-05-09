@@ -16,12 +16,16 @@ const (
 	SettingsStatusEnumFailed      SettingsStatusEnum = "FAILED"
 )
 
+func (e SettingsStatusEnum) ToPointer() *SettingsStatusEnum {
+	return &e
+}
+
 func (e *SettingsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIALIZED":
 		fallthrough
 	case "PENDING":
@@ -29,9 +33,9 @@ func (e *SettingsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "COMPLETED":
 		fallthrough
 	case "FAILED":
-		*e = SettingsStatusEnum(s)
+		*e = SettingsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SettingsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SettingsStatusEnum: %v", v)
 	}
 }

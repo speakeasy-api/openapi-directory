@@ -16,19 +16,23 @@ const (
 	GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnumPng GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum = "png"
 )
 
+func (e GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum) ToPointer() *GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "jpg":
 		fallthrough
 	case "png":
-		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum(s)
+		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnumLabels GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum = "labels"
 )
 
+func (e GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum) ToPointer() *GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "basic":
 		fallthrough
 	case "hybrid":
 		fallthrough
 	case "labels":
-		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum(s)
+		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum: %v", v)
 	}
 }
 
@@ -67,64 +75,76 @@ const (
 	GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnumNight GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum = "night"
 )
 
+func (e GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum) ToPointer() *GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "main":
 		fallthrough
 	case "night":
-		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum(s)
+		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum: %v", v)
 	}
 }
 
 // GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum - Tile dimensions in pixels. <em>512</em> is only available for the <em>main</em> style and <em>basic</em> or <em>labels</em> layers.
-type GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum string
+type GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum int64
 
 const (
-	GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnumTwoHundredAndFiftySix GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum = "256"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnumFiveHundredAndTwelve  GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum = "512"
+	GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnumTwoHundredAndFiftySix GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum = 256
+	GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnumFiveHundredAndTwelve  GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum = 512
 )
 
+func (e GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum) ToPointer() *GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "256":
+	switch v {
+	case 256:
 		fallthrough
-	case "512":
-		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum(s)
+	case 512:
+		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum: %v", v)
 	}
 }
 
 // GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum - Version of the service to call. The current version is 1.
-type GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum string
+type GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum int64
 
 const (
-	GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnumOne GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum = "1"
+	GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnumOne GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum = 1
 )
 
+func (e GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum) ToPointer() *GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
-		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum(s)
+	switch v {
+	case 1:
+		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum: %v", v)
 	}
 }
 
@@ -136,106 +156,114 @@ const (
 	GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnumIn      GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum = "IN"
 )
 
+func (e GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum) ToPointer() *GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unified":
 		fallthrough
 	case "IN":
-		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum(s)
+		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum: %v", v)
 	}
 }
 
 // GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum - Zoom level of tile to be rendered
-type GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum string
+type GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum int64
 
 const (
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumZero      GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "0"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumOne       GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "1"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumTwo       GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "2"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumThree     GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "3"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumFour      GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "4"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumFive      GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "5"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumSix       GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "6"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumSeven     GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "7"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumEight     GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "8"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumNine      GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "9"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumTen       GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "10"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumEleven    GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "11"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumTwelve    GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "12"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumThirteen  GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "13"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumFourteen  GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "14"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumFifteen   GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "15"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumSixteen   GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "16"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumSeventeen GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "17"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumEighteen  GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "18"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumNineteen  GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "19"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumTwenty    GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "20"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumTwentyOne GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "21"
-	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumTwentyTwo GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = "22"
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumZero      GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 0
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumOne       GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 1
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumTwo       GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 2
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumThree     GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 3
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumFour      GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 4
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumFive      GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 5
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumSix       GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 6
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumSeven     GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 7
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumEight     GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 8
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumNine      GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 9
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumTen       GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 10
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumEleven    GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 11
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumTwelve    GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 12
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumThirteen  GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 13
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumFourteen  GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 14
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumFifteen   GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 15
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumSixteen   GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 16
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumSeventeen GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 17
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumEighteen  GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 18
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumNineteen  GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 19
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumTwenty    GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 20
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumTwentyOne GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 21
+	GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnumTwentyTwo GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum = 22
 )
 
+func (e GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum) ToPointer() *GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "7":
+	case 7:
 		fallthrough
-	case "8":
+	case 8:
 		fallthrough
-	case "9":
+	case 9:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "11":
+	case 11:
 		fallthrough
-	case "12":
+	case 12:
 		fallthrough
-	case "13":
+	case 13:
 		fallthrough
-	case "14":
+	case 14:
 		fallthrough
-	case "15":
+	case 15:
 		fallthrough
-	case "16":
+	case 16:
 		fallthrough
-	case "17":
+	case 17:
 		fallthrough
-	case "18":
+	case 18:
 		fallthrough
-	case "19":
+	case 19:
 		fallthrough
-	case "20":
+	case 20:
 		fallthrough
-	case "21":
+	case 21:
 		fallthrough
-	case "22":
-		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum(s)
+	case 22:
+		*e = GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum: %v", v)
 	}
 }
 

@@ -87,7 +87,10 @@ func (s *crmActivities) GetV2CrmActivitiesJSON(ctx context.Context, request oper
 // Fetches a crm activity, by ID only.
 func (s *crmActivities) GetV2CrmActivitiesIDJSON(ctx context.Context, request operations.GetV2CrmActivitiesIDJSONRequest) (*operations.GetV2CrmActivitiesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/crm_activities/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/crm_activities/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -35,7 +35,10 @@ func newReferenceData(defaultClient, securityClient HTTPClient, serverURL, langu
 // List all aircraft types or one specific aircraft type.
 func (s *referenceData) ReferencesAircraftByAircraftCodeGet(ctx context.Context, request operations.ReferencesAircraftByAircraftCodeGetRequest, security operations.ReferencesAircraftByAircraftCodeGetSecurity) (*operations.ReferencesAircraftByAircraftCodeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/aircraft/{aircraftCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/references/aircraft/{aircraftCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -86,7 +89,10 @@ func (s *referenceData) ReferencesAircraftByAircraftCodeGet(ctx context.Context,
 // List all airlines or one specific airline.
 func (s *referenceData) ReferencesAirlinesByAirlineCodeGet(ctx context.Context, request operations.ReferencesAirlinesByAirlineCodeGetRequest, security operations.ReferencesAirlinesByAirlineCodeGetSecurity) (*operations.ReferencesAirlinesByAirlineCodeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/airlines/{airlineCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/references/airlines/{airlineCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *referenceData) ReferencesAirlinesByAirlineCodeGet(ctx context.Context, 
 // List all airports or one specific airport. All airports response is very large. It is possible to request the response in a specific language.
 func (s *referenceData) ReferencesAirportsByAirportCodeGet(ctx context.Context, request operations.ReferencesAirportsByAirportCodeGetRequest, security operations.ReferencesAirportsByAirportCodeGetSecurity) (*operations.ReferencesAirportsByAirportCodeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/airports/{airportCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/references/airports/{airportCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -188,7 +197,10 @@ func (s *referenceData) ReferencesAirportsByAirportCodeGet(ctx context.Context, 
 // List the 5 closest airports to the given latitude and longitude, irrespective of the radius of the reference point.
 func (s *referenceData) ReferencesAirportsNearestByLatitudeAndLongitudeGet(ctx context.Context, request operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest, security operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetSecurity) (*operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/airports/nearest/{latitude},{longitude}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/references/airports/nearest/{latitude},{longitude}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,7 +251,10 @@ func (s *referenceData) ReferencesAirportsNearestByLatitudeAndLongitudeGet(ctx c
 // List all cities or one specific city. It is possible to request the response in a specific language.
 func (s *referenceData) ReferencesCitiesByCityCodeGet(ctx context.Context, request operations.ReferencesCitiesByCityCodeGetRequest, security operations.ReferencesCitiesByCityCodeGetSecurity) (*operations.ReferencesCitiesByCityCodeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/cities/{cityCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/references/cities/{cityCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -290,7 +305,10 @@ func (s *referenceData) ReferencesCitiesByCityCodeGet(ctx context.Context, reque
 // List all countries or one specific country. It is possible to request the response in a specific language.
 func (s *referenceData) ReferencesCountriesByCountryCodeGet(ctx context.Context, request operations.ReferencesCountriesByCountryCodeGetRequest, security operations.ReferencesCountriesByCountryCodeGetSecurity) (*operations.ReferencesCountriesByCountryCodeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/references/countries/{countryCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/references/countries/{countryCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

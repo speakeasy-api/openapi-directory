@@ -16,19 +16,23 @@ const (
 	CompileLatexCompilerEnumLualatex CompileLatexCompilerEnum = "lualatex"
 )
 
+func (e CompileLatexCompilerEnum) ToPointer() *CompileLatexCompilerEnum {
+	return &e
+}
+
 func (e *CompileLatexCompilerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdflatex":
 		fallthrough
 	case "lualatex":
-		*e = CompileLatexCompilerEnum(s)
+		*e = CompileLatexCompilerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompileLatexCompilerEnum: %s", s)
+		return fmt.Errorf("invalid value for CompileLatexCompilerEnum: %v", v)
 	}
 }
 

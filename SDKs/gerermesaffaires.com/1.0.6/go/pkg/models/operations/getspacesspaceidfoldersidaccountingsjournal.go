@@ -50,12 +50,16 @@ const (
 	GetSpacesSpaceIDFoldersIDAccountingsJournal200ApplicationJSONWorkbookEnumPermanent   GetSpacesSpaceIDFoldersIDAccountingsJournal200ApplicationJSONWorkbookEnum = "permanent"
 )
 
+func (e GetSpacesSpaceIDFoldersIDAccountingsJournal200ApplicationJSONWorkbookEnum) ToPointer() *GetSpacesSpaceIDFoldersIDAccountingsJournal200ApplicationJSONWorkbookEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDFoldersIDAccountingsJournal200ApplicationJSONWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -73,10 +77,10 @@ func (e *GetSpacesSpaceIDFoldersIDAccountingsJournal200ApplicationJSONWorkbookEn
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = GetSpacesSpaceIDFoldersIDAccountingsJournal200ApplicationJSONWorkbookEnum(s)
+		*e = GetSpacesSpaceIDFoldersIDAccountingsJournal200ApplicationJSONWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDAccountingsJournal200ApplicationJSONWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDAccountingsJournal200ApplicationJSONWorkbookEnum: %v", v)
 	}
 }
 

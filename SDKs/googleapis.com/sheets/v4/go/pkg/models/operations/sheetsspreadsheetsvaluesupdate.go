@@ -38,19 +38,23 @@ const (
 	SheetsSpreadsheetsValuesUpdateResponseDateTimeRenderOptionEnumFormattedString SheetsSpreadsheetsValuesUpdateResponseDateTimeRenderOptionEnum = "FORMATTED_STRING"
 )
 
+func (e SheetsSpreadsheetsValuesUpdateResponseDateTimeRenderOptionEnum) ToPointer() *SheetsSpreadsheetsValuesUpdateResponseDateTimeRenderOptionEnum {
+	return &e
+}
+
 func (e *SheetsSpreadsheetsValuesUpdateResponseDateTimeRenderOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERIAL_NUMBER":
 		fallthrough
 	case "FORMATTED_STRING":
-		*e = SheetsSpreadsheetsValuesUpdateResponseDateTimeRenderOptionEnum(s)
+		*e = SheetsSpreadsheetsValuesUpdateResponseDateTimeRenderOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesUpdateResponseDateTimeRenderOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesUpdateResponseDateTimeRenderOptionEnum: %v", v)
 	}
 }
 
@@ -63,21 +67,25 @@ const (
 	SheetsSpreadsheetsValuesUpdateResponseValueRenderOptionEnumFormula          SheetsSpreadsheetsValuesUpdateResponseValueRenderOptionEnum = "FORMULA"
 )
 
+func (e SheetsSpreadsheetsValuesUpdateResponseValueRenderOptionEnum) ToPointer() *SheetsSpreadsheetsValuesUpdateResponseValueRenderOptionEnum {
+	return &e
+}
+
 func (e *SheetsSpreadsheetsValuesUpdateResponseValueRenderOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMATTED_VALUE":
 		fallthrough
 	case "UNFORMATTED_VALUE":
 		fallthrough
 	case "FORMULA":
-		*e = SheetsSpreadsheetsValuesUpdateResponseValueRenderOptionEnum(s)
+		*e = SheetsSpreadsheetsValuesUpdateResponseValueRenderOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesUpdateResponseValueRenderOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesUpdateResponseValueRenderOptionEnum: %v", v)
 	}
 }
 
@@ -90,21 +98,25 @@ const (
 	SheetsSpreadsheetsValuesUpdateValueInputOptionEnumUserEntered                 SheetsSpreadsheetsValuesUpdateValueInputOptionEnum = "USER_ENTERED"
 )
 
+func (e SheetsSpreadsheetsValuesUpdateValueInputOptionEnum) ToPointer() *SheetsSpreadsheetsValuesUpdateValueInputOptionEnum {
+	return &e
+}
+
 func (e *SheetsSpreadsheetsValuesUpdateValueInputOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INPUT_VALUE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "USER_ENTERED":
-		*e = SheetsSpreadsheetsValuesUpdateValueInputOptionEnum(s)
+		*e = SheetsSpreadsheetsValuesUpdateValueInputOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesUpdateValueInputOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesUpdateValueInputOptionEnum: %v", v)
 	}
 }
 

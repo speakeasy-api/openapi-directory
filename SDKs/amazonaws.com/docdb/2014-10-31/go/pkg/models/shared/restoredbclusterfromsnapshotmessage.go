@@ -6,6 +6,7 @@ package shared
 type RestoreDBClusterFromSnapshotMessage struct {
 	AvailabilityZones           []string
 	DBClusterIdentifier         string
+	DBClusterParameterGroupName *string
 	DBSubnetGroupName           *string
 	DeletionProtection          *bool
 	EnableCloudwatchLogsExports []string

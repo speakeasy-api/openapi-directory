@@ -18,12 +18,16 @@ const (
 	TypeHintEnumDecimal   TypeHintEnum = "DECIMAL"
 )
 
+func (e TypeHintEnum) ToPointer() *TypeHintEnum {
+	return &e
+}
+
 func (e *TypeHintEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JSON":
 		fallthrough
 	case "UUID":
@@ -35,9 +39,9 @@ func (e *TypeHintEnum) UnmarshalJSON(data []byte) error {
 	case "TIME":
 		fallthrough
 	case "DECIMAL":
-		*e = TypeHintEnum(s)
+		*e = TypeHintEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TypeHintEnum: %s", s)
+		return fmt.Errorf("invalid value for TypeHintEnum: %v", v)
 	}
 }

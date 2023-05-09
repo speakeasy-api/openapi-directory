@@ -14,18 +14,22 @@ const (
 	PredictiveScalingMaxCapacityBreachBehaviorEnumIncreaseMaxCapacity PredictiveScalingMaxCapacityBreachBehaviorEnum = "IncreaseMaxCapacity"
 )
 
+func (e PredictiveScalingMaxCapacityBreachBehaviorEnum) ToPointer() *PredictiveScalingMaxCapacityBreachBehaviorEnum {
+	return &e
+}
+
 func (e *PredictiveScalingMaxCapacityBreachBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HonorMaxCapacity":
 		fallthrough
 	case "IncreaseMaxCapacity":
-		*e = PredictiveScalingMaxCapacityBreachBehaviorEnum(s)
+		*e = PredictiveScalingMaxCapacityBreachBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PredictiveScalingMaxCapacityBreachBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for PredictiveScalingMaxCapacityBreachBehaviorEnum: %v", v)
 	}
 }

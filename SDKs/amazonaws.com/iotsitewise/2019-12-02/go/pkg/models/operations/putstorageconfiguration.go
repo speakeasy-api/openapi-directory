@@ -17,19 +17,23 @@ const (
 	PutStorageConfigurationRequestBodyDisassociatedDataStorageEnumDisabled PutStorageConfigurationRequestBodyDisassociatedDataStorageEnum = "DISABLED"
 )
 
+func (e PutStorageConfigurationRequestBodyDisassociatedDataStorageEnum) ToPointer() *PutStorageConfigurationRequestBodyDisassociatedDataStorageEnum {
+	return &e
+}
+
 func (e *PutStorageConfigurationRequestBodyDisassociatedDataStorageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = PutStorageConfigurationRequestBodyDisassociatedDataStorageEnum(s)
+		*e = PutStorageConfigurationRequestBodyDisassociatedDataStorageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutStorageConfigurationRequestBodyDisassociatedDataStorageEnum: %s", s)
+		return fmt.Errorf("invalid value for PutStorageConfigurationRequestBodyDisassociatedDataStorageEnum: %v", v)
 	}
 }
 
@@ -52,19 +56,23 @@ const (
 	PutStorageConfigurationRequestBodyStorageTypeEnumMultiLayerStorage      PutStorageConfigurationRequestBodyStorageTypeEnum = "MULTI_LAYER_STORAGE"
 )
 
+func (e PutStorageConfigurationRequestBodyStorageTypeEnum) ToPointer() *PutStorageConfigurationRequestBodyStorageTypeEnum {
+	return &e
+}
+
 func (e *PutStorageConfigurationRequestBodyStorageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SITEWISE_DEFAULT_STORAGE":
 		fallthrough
 	case "MULTI_LAYER_STORAGE":
-		*e = PutStorageConfigurationRequestBodyStorageTypeEnum(s)
+		*e = PutStorageConfigurationRequestBodyStorageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutStorageConfigurationRequestBodyStorageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutStorageConfigurationRequestBodyStorageTypeEnum: %v", v)
 	}
 }
 

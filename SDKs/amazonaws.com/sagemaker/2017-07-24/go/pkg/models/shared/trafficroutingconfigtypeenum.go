@@ -15,20 +15,24 @@ const (
 	TrafficRoutingConfigTypeEnumLinear    TrafficRoutingConfigTypeEnum = "LINEAR"
 )
 
+func (e TrafficRoutingConfigTypeEnum) ToPointer() *TrafficRoutingConfigTypeEnum {
+	return &e
+}
+
 func (e *TrafficRoutingConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL_AT_ONCE":
 		fallthrough
 	case "CANARY":
 		fallthrough
 	case "LINEAR":
-		*e = TrafficRoutingConfigTypeEnum(s)
+		*e = TrafficRoutingConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrafficRoutingConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrafficRoutingConfigTypeEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	OSPolicyResourceExecResourceExecInterpreterEnumPowershell             OSPolicyResourceExecResourceExecInterpreterEnum = "POWERSHELL"
 )
 
+func (e OSPolicyResourceExecResourceExecInterpreterEnum) ToPointer() *OSPolicyResourceExecResourceExecInterpreterEnum {
+	return &e
+}
+
 func (e *OSPolicyResourceExecResourceExecInterpreterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERPRETER_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -30,10 +34,10 @@ func (e *OSPolicyResourceExecResourceExecInterpreterEnum) UnmarshalJSON(data []b
 	case "SHELL":
 		fallthrough
 	case "POWERSHELL":
-		*e = OSPolicyResourceExecResourceExecInterpreterEnum(s)
+		*e = OSPolicyResourceExecResourceExecInterpreterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OSPolicyResourceExecResourceExecInterpreterEnum: %s", s)
+		return fmt.Errorf("invalid value for OSPolicyResourceExecResourceExecInterpreterEnum: %v", v)
 	}
 }
 

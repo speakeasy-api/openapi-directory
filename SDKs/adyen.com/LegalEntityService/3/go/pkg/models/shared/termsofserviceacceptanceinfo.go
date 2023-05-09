@@ -21,12 +21,16 @@ const (
 	TermsOfServiceAcceptanceInfoTypeEnumAdyenIssuing              TermsOfServiceAcceptanceInfoTypeEnum = "adyenIssuing"
 )
 
+func (e TermsOfServiceAcceptanceInfoTypeEnum) ToPointer() *TermsOfServiceAcceptanceInfoTypeEnum {
+	return &e
+}
+
 func (e *TermsOfServiceAcceptanceInfoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "adyenAccount":
 		fallthrough
 	case "adyenCapital":
@@ -40,10 +44,10 @@ func (e *TermsOfServiceAcceptanceInfoTypeEnum) UnmarshalJSON(data []byte) error 
 	case "adyenFranchisee":
 		fallthrough
 	case "adyenIssuing":
-		*e = TermsOfServiceAcceptanceInfoTypeEnum(s)
+		*e = TermsOfServiceAcceptanceInfoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TermsOfServiceAcceptanceInfoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TermsOfServiceAcceptanceInfoTypeEnum: %v", v)
 	}
 }
 

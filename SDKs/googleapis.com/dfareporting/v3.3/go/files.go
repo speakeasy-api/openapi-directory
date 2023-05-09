@@ -34,7 +34,10 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DfareportingFilesGet - Retrieves a report file by its report ID and file ID. This method supports media download.
 func (s *files) DfareportingFilesGet(ctx context.Context, request operations.DfareportingFilesGetRequest, security operations.DfareportingFilesGetSecurity) (*operations.DfareportingFilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/files/{fileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/files/{fileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *files) DfareportingFilesGet(ctx context.Context, request operations.Dfa
 // DfareportingFilesList - Lists files for a user profile.
 func (s *files) DfareportingFilesList(ctx context.Context, request operations.DfareportingFilesListRequest, security operations.DfareportingFilesListSecurity) (*operations.DfareportingFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

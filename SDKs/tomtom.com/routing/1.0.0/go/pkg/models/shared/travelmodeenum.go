@@ -21,12 +21,16 @@ const (
 	TravelModeEnumPedestrian TravelModeEnum = "pedestrian"
 )
 
+func (e TravelModeEnum) ToPointer() *TravelModeEnum {
+	return &e
+}
+
 func (e *TravelModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "car":
 		fallthrough
 	case "truck":
@@ -42,9 +46,9 @@ func (e *TravelModeEnum) UnmarshalJSON(data []byte) error {
 	case "bicycle":
 		fallthrough
 	case "pedestrian":
-		*e = TravelModeEnum(s)
+		*e = TravelModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TravelModeEnum: %s", s)
+		return fmt.Errorf("invalid value for TravelModeEnum: %v", v)
 	}
 }

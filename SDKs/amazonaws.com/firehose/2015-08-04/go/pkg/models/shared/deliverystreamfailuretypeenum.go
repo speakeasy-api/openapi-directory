@@ -27,12 +27,16 @@ const (
 	DeliveryStreamFailureTypeEnumUnknownError              DeliveryStreamFailureTypeEnum = "UNKNOWN_ERROR"
 )
 
+func (e DeliveryStreamFailureTypeEnum) ToPointer() *DeliveryStreamFailureTypeEnum {
+	return &e
+}
+
 func (e *DeliveryStreamFailureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETIRE_KMS_GRANT_FAILED":
 		fallthrough
 	case "CREATE_KMS_GRANT_FAILED":
@@ -62,9 +66,9 @@ func (e *DeliveryStreamFailureTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SECURITY_GROUP_ACCESS_DENIED":
 		fallthrough
 	case "UNKNOWN_ERROR":
-		*e = DeliveryStreamFailureTypeEnum(s)
+		*e = DeliveryStreamFailureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryStreamFailureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryStreamFailureTypeEnum: %v", v)
 	}
 }

@@ -2,7 +2,7 @@
 
 package shared
 
-// ViewSunElevationInput - <p/>
+// ViewSunElevationInput - The input structure for specifying ViewSunElevation angle property filter.
 type ViewSunElevationInput struct {
 	LowerBound float32 `json:"LowerBound"`
 	UpperBound float32 `json:"UpperBound"`

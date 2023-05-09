@@ -10,8 +10,7 @@ import (
 type RollbackDetails struct {
 	InstancesToUpdateOnRollback  *int64
 	PercentageCompleteOnRollback *int64
-	// Reports progress on replacing instances in an Auto Scaling group that has a warm pool. This includes separate details for instances in the warm pool and instances in the Auto Scaling group (the live pool).
-	ProgressDetailsOnRollback *InstanceRefreshProgressDetails
-	RollbackReason            *string
-	RollbackStartTime         *time.Time
+	ProgressDetailsOnRollback    *InstanceRefreshProgressDetails
+	RollbackReason               *string
+	RollbackStartTime            *time.Time
 }

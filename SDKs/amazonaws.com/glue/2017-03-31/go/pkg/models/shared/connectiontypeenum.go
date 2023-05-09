@@ -19,12 +19,16 @@ const (
 	ConnectionTypeEnumCustom      ConnectionTypeEnum = "CUSTOM"
 )
 
+func (e ConnectionTypeEnum) ToPointer() *ConnectionTypeEnum {
+	return &e
+}
+
 func (e *ConnectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JDBC":
 		fallthrough
 	case "SFTP":
@@ -38,9 +42,9 @@ func (e *ConnectionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MARKETPLACE":
 		fallthrough
 	case "CUSTOM":
-		*e = ConnectionTypeEnum(s)
+		*e = ConnectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionTypeEnum: %v", v)
 	}
 }

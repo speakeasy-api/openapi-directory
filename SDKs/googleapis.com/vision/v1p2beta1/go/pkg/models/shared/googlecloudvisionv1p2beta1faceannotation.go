@@ -19,12 +19,16 @@ const (
 	GoogleCloudVisionV1p2beta1FaceAnnotationAngerLikelihoodEnumVeryLikely   GoogleCloudVisionV1p2beta1FaceAnnotationAngerLikelihoodEnum = "VERY_LIKELY"
 )
 
+func (e GoogleCloudVisionV1p2beta1FaceAnnotationAngerLikelihoodEnum) ToPointer() *GoogleCloudVisionV1p2beta1FaceAnnotationAngerLikelihoodEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p2beta1FaceAnnotationAngerLikelihoodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -36,10 +40,10 @@ func (e *GoogleCloudVisionV1p2beta1FaceAnnotationAngerLikelihoodEnum) UnmarshalJ
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GoogleCloudVisionV1p2beta1FaceAnnotationAngerLikelihoodEnum(s)
+		*e = GoogleCloudVisionV1p2beta1FaceAnnotationAngerLikelihoodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationAngerLikelihoodEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationAngerLikelihoodEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	GoogleCloudVisionV1p2beta1FaceAnnotationBlurredLikelihoodEnumVeryLikely   GoogleCloudVisionV1p2beta1FaceAnnotationBlurredLikelihoodEnum = "VERY_LIKELY"
 )
 
+func (e GoogleCloudVisionV1p2beta1FaceAnnotationBlurredLikelihoodEnum) ToPointer() *GoogleCloudVisionV1p2beta1FaceAnnotationBlurredLikelihoodEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p2beta1FaceAnnotationBlurredLikelihoodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -72,10 +80,10 @@ func (e *GoogleCloudVisionV1p2beta1FaceAnnotationBlurredLikelihoodEnum) Unmarsha
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GoogleCloudVisionV1p2beta1FaceAnnotationBlurredLikelihoodEnum(s)
+		*e = GoogleCloudVisionV1p2beta1FaceAnnotationBlurredLikelihoodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationBlurredLikelihoodEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationBlurredLikelihoodEnum: %v", v)
 	}
 }
 
@@ -91,12 +99,16 @@ const (
 	GoogleCloudVisionV1p2beta1FaceAnnotationHeadwearLikelihoodEnumVeryLikely   GoogleCloudVisionV1p2beta1FaceAnnotationHeadwearLikelihoodEnum = "VERY_LIKELY"
 )
 
+func (e GoogleCloudVisionV1p2beta1FaceAnnotationHeadwearLikelihoodEnum) ToPointer() *GoogleCloudVisionV1p2beta1FaceAnnotationHeadwearLikelihoodEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p2beta1FaceAnnotationHeadwearLikelihoodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -108,10 +120,10 @@ func (e *GoogleCloudVisionV1p2beta1FaceAnnotationHeadwearLikelihoodEnum) Unmarsh
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GoogleCloudVisionV1p2beta1FaceAnnotationHeadwearLikelihoodEnum(s)
+		*e = GoogleCloudVisionV1p2beta1FaceAnnotationHeadwearLikelihoodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationHeadwearLikelihoodEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationHeadwearLikelihoodEnum: %v", v)
 	}
 }
 
@@ -127,12 +139,16 @@ const (
 	GoogleCloudVisionV1p2beta1FaceAnnotationJoyLikelihoodEnumVeryLikely   GoogleCloudVisionV1p2beta1FaceAnnotationJoyLikelihoodEnum = "VERY_LIKELY"
 )
 
+func (e GoogleCloudVisionV1p2beta1FaceAnnotationJoyLikelihoodEnum) ToPointer() *GoogleCloudVisionV1p2beta1FaceAnnotationJoyLikelihoodEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p2beta1FaceAnnotationJoyLikelihoodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -144,10 +160,10 @@ func (e *GoogleCloudVisionV1p2beta1FaceAnnotationJoyLikelihoodEnum) UnmarshalJSO
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GoogleCloudVisionV1p2beta1FaceAnnotationJoyLikelihoodEnum(s)
+		*e = GoogleCloudVisionV1p2beta1FaceAnnotationJoyLikelihoodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationJoyLikelihoodEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationJoyLikelihoodEnum: %v", v)
 	}
 }
 
@@ -163,12 +179,16 @@ const (
 	GoogleCloudVisionV1p2beta1FaceAnnotationSorrowLikelihoodEnumVeryLikely   GoogleCloudVisionV1p2beta1FaceAnnotationSorrowLikelihoodEnum = "VERY_LIKELY"
 )
 
+func (e GoogleCloudVisionV1p2beta1FaceAnnotationSorrowLikelihoodEnum) ToPointer() *GoogleCloudVisionV1p2beta1FaceAnnotationSorrowLikelihoodEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p2beta1FaceAnnotationSorrowLikelihoodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -180,10 +200,10 @@ func (e *GoogleCloudVisionV1p2beta1FaceAnnotationSorrowLikelihoodEnum) Unmarshal
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GoogleCloudVisionV1p2beta1FaceAnnotationSorrowLikelihoodEnum(s)
+		*e = GoogleCloudVisionV1p2beta1FaceAnnotationSorrowLikelihoodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationSorrowLikelihoodEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationSorrowLikelihoodEnum: %v", v)
 	}
 }
 
@@ -199,12 +219,16 @@ const (
 	GoogleCloudVisionV1p2beta1FaceAnnotationSurpriseLikelihoodEnumVeryLikely   GoogleCloudVisionV1p2beta1FaceAnnotationSurpriseLikelihoodEnum = "VERY_LIKELY"
 )
 
+func (e GoogleCloudVisionV1p2beta1FaceAnnotationSurpriseLikelihoodEnum) ToPointer() *GoogleCloudVisionV1p2beta1FaceAnnotationSurpriseLikelihoodEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p2beta1FaceAnnotationSurpriseLikelihoodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -216,10 +240,10 @@ func (e *GoogleCloudVisionV1p2beta1FaceAnnotationSurpriseLikelihoodEnum) Unmarsh
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GoogleCloudVisionV1p2beta1FaceAnnotationSurpriseLikelihoodEnum(s)
+		*e = GoogleCloudVisionV1p2beta1FaceAnnotationSurpriseLikelihoodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationSurpriseLikelihoodEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationSurpriseLikelihoodEnum: %v", v)
 	}
 }
 
@@ -235,12 +259,16 @@ const (
 	GoogleCloudVisionV1p2beta1FaceAnnotationUnderExposedLikelihoodEnumVeryLikely   GoogleCloudVisionV1p2beta1FaceAnnotationUnderExposedLikelihoodEnum = "VERY_LIKELY"
 )
 
+func (e GoogleCloudVisionV1p2beta1FaceAnnotationUnderExposedLikelihoodEnum) ToPointer() *GoogleCloudVisionV1p2beta1FaceAnnotationUnderExposedLikelihoodEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p2beta1FaceAnnotationUnderExposedLikelihoodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -252,10 +280,10 @@ func (e *GoogleCloudVisionV1p2beta1FaceAnnotationUnderExposedLikelihoodEnum) Unm
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GoogleCloudVisionV1p2beta1FaceAnnotationUnderExposedLikelihoodEnum(s)
+		*e = GoogleCloudVisionV1p2beta1FaceAnnotationUnderExposedLikelihoodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationUnderExposedLikelihoodEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationUnderExposedLikelihoodEnum: %v", v)
 	}
 }
 

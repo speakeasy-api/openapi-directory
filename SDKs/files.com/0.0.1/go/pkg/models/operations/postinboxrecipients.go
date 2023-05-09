@@ -20,8 +20,6 @@ type PostInboxRecipientsRequestBody struct {
 	Recipient string `multipartForm:"name=recipient"`
 	// Set to true to share the link with the recipient upon creation.
 	ShareAfterCreate *bool `multipartForm:"name=share_after_create"`
-	// User ID.  Provide a value of `0` to operate the current session's user.
-	UserID *int `multipartForm:"name=user_id"`
 }
 
 type PostInboxRecipientsResponse struct {

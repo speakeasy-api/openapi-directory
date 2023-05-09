@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // NetworksecurityProjectsLocationsAddressGroupsAddItems - Adds items to an address group.
 func (s *projects) NetworksecurityProjectsLocationsAddressGroupsAddItems(ctx context.Context, request operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsRequest, security operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsSecurity) (*operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{addressGroup}:addItems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{addressGroup}:addItems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddAddressGroupItemsRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) NetworksecurityProjectsLocationsAddressGroupsAddItems(ctx con
 // NetworksecurityProjectsLocationsAddressGroupsCloneItems - Clones items from one address group to another.
 func (s *projects) NetworksecurityProjectsLocationsAddressGroupsCloneItems(ctx context.Context, request operations.NetworksecurityProjectsLocationsAddressGroupsCloneItemsRequest, security operations.NetworksecurityProjectsLocationsAddressGroupsCloneItemsSecurity) (*operations.NetworksecurityProjectsLocationsAddressGroupsCloneItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{addressGroup}:cloneItems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{addressGroup}:cloneItems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CloneAddressGroupItemsRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) NetworksecurityProjectsLocationsAddressGroupsCloneItems(ctx c
 // NetworksecurityProjectsLocationsAddressGroupsCreate - Creates a new address group in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsAddressGroupsCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsAddressGroupsCreateRequest, security operations.NetworksecurityProjectsLocationsAddressGroupsCreateSecurity) (*operations.NetworksecurityProjectsLocationsAddressGroupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/addressGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/addressGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddressGroupInput", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *projects) NetworksecurityProjectsLocationsAddressGroupsCreate(ctx conte
 // NetworksecurityProjectsLocationsAddressGroupsList - Lists address groups in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsAddressGroupsList(ctx context.Context, request operations.NetworksecurityProjectsLocationsAddressGroupsListRequest, security operations.NetworksecurityProjectsLocationsAddressGroupsListSecurity) (*operations.NetworksecurityProjectsLocationsAddressGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/addressGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/addressGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) NetworksecurityProjectsLocationsAddressGroupsList(ctx context
 // NetworksecurityProjectsLocationsAddressGroupsListReferences - Lists references of an address group.
 func (s *projects) NetworksecurityProjectsLocationsAddressGroupsListReferences(ctx context.Context, request operations.NetworksecurityProjectsLocationsAddressGroupsListReferencesRequest, security operations.NetworksecurityProjectsLocationsAddressGroupsListReferencesSecurity) (*operations.NetworksecurityProjectsLocationsAddressGroupsListReferencesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{addressGroup}:listReferences", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{addressGroup}:listReferences", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) NetworksecurityProjectsLocationsAddressGroupsListReferences(c
 // NetworksecurityProjectsLocationsAddressGroupsRemoveItems - Removes items from an address group.
 func (s *projects) NetworksecurityProjectsLocationsAddressGroupsRemoveItems(ctx context.Context, request operations.NetworksecurityProjectsLocationsAddressGroupsRemoveItemsRequest, security operations.NetworksecurityProjectsLocationsAddressGroupsRemoveItemsSecurity) (*operations.NetworksecurityProjectsLocationsAddressGroupsRemoveItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{addressGroup}:removeItems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{addressGroup}:removeItems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveAddressGroupItemsRequest", "json")
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *projects) NetworksecurityProjectsLocationsAddressGroupsRemoveItems(ctx 
 // NetworksecurityProjectsLocationsAuthorizationPoliciesCreate - Creates a new AuthorizationPolicy in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsAuthorizationPoliciesCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest, security operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity) (*operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/authorizationPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/authorizationPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthorizationPolicyInput", "json")
 	if err != nil {
@@ -405,7 +426,10 @@ func (s *projects) NetworksecurityProjectsLocationsAuthorizationPoliciesCreate(c
 // NetworksecurityProjectsLocationsAuthorizationPoliciesList - Lists AuthorizationPolicies in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsAuthorizationPoliciesList(ctx context.Context, request operations.NetworksecurityProjectsLocationsAuthorizationPoliciesListRequest, security operations.NetworksecurityProjectsLocationsAuthorizationPoliciesListSecurity) (*operations.NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/authorizationPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/authorizationPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *projects) NetworksecurityProjectsLocationsAuthorizationPoliciesList(ctx
 // NetworksecurityProjectsLocationsClientTLSPoliciesCreate - Creates a new ClientTlsPolicy in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsClientTLSPoliciesCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsClientTLSPoliciesCreateRequest, security operations.NetworksecurityProjectsLocationsClientTLSPoliciesCreateSecurity) (*operations.NetworksecurityProjectsLocationsClientTLSPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/clientTlsPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/clientTlsPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientTLSPolicyInput", "json")
 	if err != nil {
@@ -508,7 +535,10 @@ func (s *projects) NetworksecurityProjectsLocationsClientTLSPoliciesCreate(ctx c
 // NetworksecurityProjectsLocationsClientTLSPoliciesList - Lists ClientTlsPolicies in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsClientTLSPoliciesList(ctx context.Context, request operations.NetworksecurityProjectsLocationsClientTLSPoliciesListRequest, security operations.NetworksecurityProjectsLocationsClientTLSPoliciesListSecurity) (*operations.NetworksecurityProjectsLocationsClientTLSPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/clientTlsPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/clientTlsPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -556,7 +586,10 @@ func (s *projects) NetworksecurityProjectsLocationsClientTLSPoliciesList(ctx con
 // NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreate - Creates a new GatewaySecurityPolicy in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateRequest, security operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateSecurity) (*operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/gatewaySecurityPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/gatewaySecurityPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GatewaySecurityPolicyInput", "json")
 	if err != nil {
@@ -611,7 +644,10 @@ func (s *projects) NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreate
 // NetworksecurityProjectsLocationsGatewaySecurityPoliciesList - Lists GatewaySecurityPolicies in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsGatewaySecurityPoliciesList(ctx context.Context, request operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListRequest, security operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListSecurity) (*operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/gatewaySecurityPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/gatewaySecurityPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *projects) NetworksecurityProjectsLocationsGatewaySecurityPoliciesList(c
 // NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreate - Creates a new GatewaySecurityPolicy in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest, security operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateSecurity) (*operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/rules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/rules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GatewaySecurityPolicyRuleInput", "json")
 	if err != nil {
@@ -714,7 +753,10 @@ func (s *projects) NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesC
 // NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesList - Lists GatewaySecurityPolicyRules in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesList(ctx context.Context, request operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListRequest, security operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListSecurity) (*operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/rules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/rules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -762,7 +804,10 @@ func (s *projects) NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesL
 // NetworksecurityProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) NetworksecurityProjectsLocationsList(ctx context.Context, request operations.NetworksecurityProjectsLocationsListRequest, security operations.NetworksecurityProjectsLocationsListSecurity) (*operations.NetworksecurityProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -810,7 +855,10 @@ func (s *projects) NetworksecurityProjectsLocationsList(ctx context.Context, req
 // NetworksecurityProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) NetworksecurityProjectsLocationsOperationsCancel(ctx context.Context, request operations.NetworksecurityProjectsLocationsOperationsCancelRequest, security operations.NetworksecurityProjectsLocationsOperationsCancelSecurity) (*operations.NetworksecurityProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -865,7 +913,10 @@ func (s *projects) NetworksecurityProjectsLocationsOperationsCancel(ctx context.
 // NetworksecurityProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) NetworksecurityProjectsLocationsOperationsList(ctx context.Context, request operations.NetworksecurityProjectsLocationsOperationsListRequest, security operations.NetworksecurityProjectsLocationsOperationsListSecurity) (*operations.NetworksecurityProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -913,7 +964,10 @@ func (s *projects) NetworksecurityProjectsLocationsOperationsList(ctx context.Co
 // NetworksecurityProjectsLocationsServerTLSPoliciesCreate - Creates a new ServerTlsPolicy in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesCreateRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesCreateSecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/serverTlsPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/serverTlsPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServerTLSPolicyInput", "json")
 	if err != nil {
@@ -968,7 +1022,10 @@ func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesCreate(ctx c
 // NetworksecurityProjectsLocationsServerTLSPoliciesGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesGetIamPolicy(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesGetIamPolicyRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesGetIamPolicySecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1016,7 +1073,10 @@ func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesGetIamPolicy
 // NetworksecurityProjectsLocationsServerTLSPoliciesList - Lists ServerTlsPolicies in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesList(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesListRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesListSecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/serverTlsPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/serverTlsPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1064,7 +1124,10 @@ func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesList(ctx con
 // NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicy(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicyRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicySecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1SetIamPolicyRequest", "json")
 	if err != nil {
@@ -1119,7 +1182,10 @@ func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicy
 // NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermissions(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermissionsRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermissionsSecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -1174,7 +1240,10 @@ func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermi
 // NetworksecurityProjectsLocationsTLSInspectionPoliciesCreate - Creates a new TlsInspectionPolicy in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsTLSInspectionPoliciesCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesCreateRequest, security operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesCreateSecurity) (*operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/tlsInspectionPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/tlsInspectionPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TLSInspectionPolicyInput", "json")
 	if err != nil {
@@ -1229,7 +1298,10 @@ func (s *projects) NetworksecurityProjectsLocationsTLSInspectionPoliciesCreate(c
 // NetworksecurityProjectsLocationsTLSInspectionPoliciesList - Lists TlsInspectionPolicies in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsTLSInspectionPoliciesList(ctx context.Context, request operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesListRequest, security operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesListSecurity) (*operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/tlsInspectionPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/tlsInspectionPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1277,7 +1349,10 @@ func (s *projects) NetworksecurityProjectsLocationsTLSInspectionPoliciesList(ctx
 // NetworksecurityProjectsLocationsURLListsCreate - Creates a new UrlList in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsURLListsCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsURLListsCreateRequest, security operations.NetworksecurityProjectsLocationsURLListsCreateSecurity) (*operations.NetworksecurityProjectsLocationsURLListsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/urlLists", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/urlLists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "URLListInput", "json")
 	if err != nil {
@@ -1332,7 +1407,10 @@ func (s *projects) NetworksecurityProjectsLocationsURLListsCreate(ctx context.Co
 // NetworksecurityProjectsLocationsURLListsDelete - Deletes a single UrlList.
 func (s *projects) NetworksecurityProjectsLocationsURLListsDelete(ctx context.Context, request operations.NetworksecurityProjectsLocationsURLListsDeleteRequest, security operations.NetworksecurityProjectsLocationsURLListsDeleteSecurity) (*operations.NetworksecurityProjectsLocationsURLListsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1380,7 +1458,10 @@ func (s *projects) NetworksecurityProjectsLocationsURLListsDelete(ctx context.Co
 // NetworksecurityProjectsLocationsURLListsGet - Gets details of a single UrlList.
 func (s *projects) NetworksecurityProjectsLocationsURLListsGet(ctx context.Context, request operations.NetworksecurityProjectsLocationsURLListsGetRequest, security operations.NetworksecurityProjectsLocationsURLListsGetSecurity) (*operations.NetworksecurityProjectsLocationsURLListsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1428,7 +1509,10 @@ func (s *projects) NetworksecurityProjectsLocationsURLListsGet(ctx context.Conte
 // NetworksecurityProjectsLocationsURLListsList - Lists UrlLists in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsURLListsList(ctx context.Context, request operations.NetworksecurityProjectsLocationsURLListsListRequest, security operations.NetworksecurityProjectsLocationsURLListsListSecurity) (*operations.NetworksecurityProjectsLocationsURLListsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/urlLists", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/urlLists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1476,7 +1560,10 @@ func (s *projects) NetworksecurityProjectsLocationsURLListsList(ctx context.Cont
 // NetworksecurityProjectsLocationsURLListsPatch - Updates the parameters of a single UrlList.
 func (s *projects) NetworksecurityProjectsLocationsURLListsPatch(ctx context.Context, request operations.NetworksecurityProjectsLocationsURLListsPatchRequest, security operations.NetworksecurityProjectsLocationsURLListsPatchSecurity) (*operations.NetworksecurityProjectsLocationsURLListsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "URLListInput", "json")
 	if err != nil {

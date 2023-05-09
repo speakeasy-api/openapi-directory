@@ -14,18 +14,22 @@ const (
 	MultiRegionKeyTypeEnumReplica MultiRegionKeyTypeEnum = "REPLICA"
 )
 
+func (e MultiRegionKeyTypeEnum) ToPointer() *MultiRegionKeyTypeEnum {
+	return &e
+}
+
 func (e *MultiRegionKeyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIMARY":
 		fallthrough
 	case "REPLICA":
-		*e = MultiRegionKeyTypeEnum(s)
+		*e = MultiRegionKeyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MultiRegionKeyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MultiRegionKeyTypeEnum: %v", v)
 	}
 }

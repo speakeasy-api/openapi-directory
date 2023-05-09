@@ -39,7 +39,10 @@ func newGoals(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Requests to add/remove followers, if successful, will return the complete updated goal record, described above.
 func (s *goals) AddFollowers(ctx context.Context, request operations.AddFollowersRequest) (*operations.AddFollowersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/addFollowers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/addFollowers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -199,7 +202,10 @@ func (s *goals) CreateGoal(ctx context.Context, request operations.CreateGoalReq
 // Creates and adds a goal metric to a specified goal. Note that this replaces an existing goal metric if one already exists.
 func (s *goals) CreateGoalMetric(ctx context.Context, request operations.CreateGoalMetricRequest) (*operations.CreateGoalMetricResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/setMetric", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/setMetric", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -280,7 +286,10 @@ func (s *goals) CreateGoalMetric(ctx context.Context, request operations.CreateG
 // Returns an empty data record.
 func (s *goals) DeleteGoal(ctx context.Context, request operations.DeleteGoalRequest) (*operations.DeleteGoalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -349,7 +358,10 @@ func (s *goals) DeleteGoal(ctx context.Context, request operations.DeleteGoalReq
 // Returns the complete goal record for a single goal.
 func (s *goals) GetGoal(ctx context.Context, request operations.GetGoalRequest) (*operations.GetGoalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -487,7 +499,10 @@ func (s *goals) GetGoals(ctx context.Context, request operations.GetGoalsRequest
 // Returns a compact representation of all of the parent goals of a goal.
 func (s *goals) GetParentGoalsForGoal(ctx context.Context, request operations.GetParentGoalsForGoalRequest) (*operations.GetParentGoalsForGoalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/parentGoals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/parentGoals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -558,7 +573,10 @@ func (s *goals) GetParentGoalsForGoal(ctx context.Context, request operations.Ge
 // Requests to add/remove followers, if successful, will return the complete updated goal record, described above.
 func (s *goals) RemoveFollowers(ctx context.Context, request operations.RemoveFollowersRequest) (*operations.RemoveFollowersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/removeFollowers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/removeFollowers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -641,7 +659,10 @@ func (s *goals) RemoveFollowers(ctx context.Context, request operations.RemoveFo
 // Returns the complete updated goal record.
 func (s *goals) UpdateGoal(ctx context.Context, request operations.UpdateGoalRequest) (*operations.UpdateGoalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -721,7 +742,10 @@ func (s *goals) UpdateGoal(ctx context.Context, request operations.UpdateGoalReq
 // Returns the complete updated goal metric record.
 func (s *goals) UpdateGoalMetric(ctx context.Context, request operations.UpdateGoalMetricRequest) (*operations.UpdateGoalMetricResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/setMetricCurrentValue", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/goals/{goal_gid}/setMetricCurrentValue", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -18,21 +18,25 @@ const (
 	MediaAssetAttributesAttachmentTypeEnumSegmentList MediaAssetAttributesAttachmentTypeEnum = "SegmentList"
 )
 
+func (e MediaAssetAttributesAttachmentTypeEnum) ToPointer() *MediaAssetAttributesAttachmentTypeEnum {
+	return &e
+}
+
 func (e *MediaAssetAttributesAttachmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Image":
 		fallthrough
 	case "Segment":
 		fallthrough
 	case "SegmentList":
-		*e = MediaAssetAttributesAttachmentTypeEnum(s)
+		*e = MediaAssetAttributesAttachmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaAssetAttributesAttachmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaAssetAttributesAttachmentTypeEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	MediaAssetAttributesStyleEnumWaveformData     MediaAssetAttributesStyleEnum = "waveform_data"
 )
 
+func (e MediaAssetAttributesStyleEnum) ToPointer() *MediaAssetAttributesStyleEnum {
+	return &e
+}
+
 func (e *MediaAssetAttributesStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "info":
 		fallthrough
 	case "itunes":
@@ -85,10 +93,10 @@ func (e *MediaAssetAttributesStyleEnum) UnmarshalJSON(data []byte) error {
 	case "thumb":
 		fallthrough
 	case "waveform_data":
-		*e = MediaAssetAttributesStyleEnum(s)
+		*e = MediaAssetAttributesStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaAssetAttributesStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaAssetAttributesStyleEnum: %v", v)
 	}
 }
 

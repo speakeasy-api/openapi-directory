@@ -16,17 +16,21 @@ const (
 	AssociateMemberToGroupXAmzTargetEnumWorkMailServiceAssociateMemberToGroup AssociateMemberToGroupXAmzTargetEnum = "WorkMailService.AssociateMemberToGroup"
 )
 
+func (e AssociateMemberToGroupXAmzTargetEnum) ToPointer() *AssociateMemberToGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateMemberToGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.AssociateMemberToGroup":
-		*e = AssociateMemberToGroupXAmzTargetEnum(s)
+		*e = AssociateMemberToGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateMemberToGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateMemberToGroupXAmzTargetEnum: %v", v)
 	}
 }
 

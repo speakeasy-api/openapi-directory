@@ -15,17 +15,21 @@ const (
 	POSTDescribeVpcEndpointConnectionNotificationsActionEnumDescribeVpcEndpointConnectionNotifications POSTDescribeVpcEndpointConnectionNotificationsActionEnum = "DescribeVpcEndpointConnectionNotifications"
 )
 
+func (e POSTDescribeVpcEndpointConnectionNotificationsActionEnum) ToPointer() *POSTDescribeVpcEndpointConnectionNotificationsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeVpcEndpointConnectionNotificationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeVpcEndpointConnectionNotifications":
-		*e = POSTDescribeVpcEndpointConnectionNotificationsActionEnum(s)
+		*e = POSTDescribeVpcEndpointConnectionNotificationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeVpcEndpointConnectionNotificationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeVpcEndpointConnectionNotificationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeVpcEndpointConnectionNotificationsVersionEnumTwoThousandAndSixteen1115 POSTDescribeVpcEndpointConnectionNotificationsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeVpcEndpointConnectionNotificationsVersionEnum) ToPointer() *POSTDescribeVpcEndpointConnectionNotificationsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeVpcEndpointConnectionNotificationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeVpcEndpointConnectionNotificationsVersionEnum(s)
+		*e = POSTDescribeVpcEndpointConnectionNotificationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeVpcEndpointConnectionNotificationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeVpcEndpointConnectionNotificationsVersionEnum: %v", v)
 	}
 }
 

@@ -10,7 +10,7 @@ type LustreFileSystemConfiguration struct {
 	// A recurring daily time, in the format <code>HH:MM</code>. <code>HH</code> is the zero-padded hour of the day (0-23), and <code>MM</code> is the zero-padded minute of the hour. For example, <code>05:00</code> specifies 5 AM daily.
 	DailyAutomaticBackupStartTime *string                  `json:"DailyAutomaticBackupStartTime,omitempty"`
 	DataCompressionType           *DataCompressionTypeEnum `json:"DataCompressionType,omitempty"`
-	// <p>The data repository configuration object for Lustre file systems returned in the response of the <code>CreateFileSystem</code> operation.</p> <p>This data type is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use .</p>
+	// <p>The data repository configuration object for Lustre file systems returned in the response of the <code>CreateFileSystem</code> operation.</p> <p>This data type is not supported on file systems with a data repository association. For file systems with a data repository association, see .</p>
 	DataRepositoryConfiguration *DataRepositoryConfiguration   `json:"DataRepositoryConfiguration,omitempty"`
 	DeploymentType              *LustreDeploymentTypeEnum      `json:"DeploymentType,omitempty"`
 	DriveCacheType              *DriveCacheTypeEnum            `json:"DriveCacheType,omitempty"`

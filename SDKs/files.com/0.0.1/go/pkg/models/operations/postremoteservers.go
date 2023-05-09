@@ -18,21 +18,25 @@ const (
 	PostRemoteServersRequestBodyFilesAgentPermissionSetEnumWriteOnly PostRemoteServersRequestBodyFilesAgentPermissionSetEnum = "write_only"
 )
 
+func (e PostRemoteServersRequestBodyFilesAgentPermissionSetEnum) ToPointer() *PostRemoteServersRequestBodyFilesAgentPermissionSetEnum {
+	return &e
+}
+
 func (e *PostRemoteServersRequestBodyFilesAgentPermissionSetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read_write":
 		fallthrough
 	case "read_only":
 		fallthrough
 	case "write_only":
-		*e = PostRemoteServersRequestBodyFilesAgentPermissionSetEnum(s)
+		*e = PostRemoteServersRequestBodyFilesAgentPermissionSetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostRemoteServersRequestBodyFilesAgentPermissionSetEnum: %s", s)
+		return fmt.Errorf("invalid value for PostRemoteServersRequestBodyFilesAgentPermissionSetEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	PostRemoteServersRequestBodyOneDriveAccountTypeEnumBusinessOther PostRemoteServersRequestBodyOneDriveAccountTypeEnum = "business_other"
 )
 
+func (e PostRemoteServersRequestBodyOneDriveAccountTypeEnum) ToPointer() *PostRemoteServersRequestBodyOneDriveAccountTypeEnum {
+	return &e
+}
+
 func (e *PostRemoteServersRequestBodyOneDriveAccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "personal":
 		fallthrough
 	case "business_other":
-		*e = PostRemoteServersRequestBodyOneDriveAccountTypeEnum(s)
+		*e = PostRemoteServersRequestBodyOneDriveAccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostRemoteServersRequestBodyOneDriveAccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostRemoteServersRequestBodyOneDriveAccountTypeEnum: %v", v)
 	}
 }
 
@@ -68,19 +76,23 @@ const (
 	PostRemoteServersRequestBodyServerCertificateEnumAllowAny     PostRemoteServersRequestBodyServerCertificateEnum = "allow_any"
 )
 
+func (e PostRemoteServersRequestBodyServerCertificateEnum) ToPointer() *PostRemoteServersRequestBodyServerCertificateEnum {
+	return &e
+}
+
 func (e *PostRemoteServersRequestBodyServerCertificateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "require_match":
 		fallthrough
 	case "allow_any":
-		*e = PostRemoteServersRequestBodyServerCertificateEnum(s)
+		*e = PostRemoteServersRequestBodyServerCertificateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostRemoteServersRequestBodyServerCertificateEnum: %s", s)
+		return fmt.Errorf("invalid value for PostRemoteServersRequestBodyServerCertificateEnum: %v", v)
 	}
 }
 
@@ -108,12 +120,16 @@ const (
 	PostRemoteServersRequestBodyServerTypeEnumFilebase           PostRemoteServersRequestBodyServerTypeEnum = "filebase"
 )
 
+func (e PostRemoteServersRequestBodyServerTypeEnum) ToPointer() *PostRemoteServersRequestBodyServerTypeEnum {
+	return &e
+}
+
 func (e *PostRemoteServersRequestBodyServerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ftp":
 		fallthrough
 	case "sftp":
@@ -149,10 +165,10 @@ func (e *PostRemoteServersRequestBodyServerTypeEnum) UnmarshalJSON(data []byte) 
 	case "files_agent":
 		fallthrough
 	case "filebase":
-		*e = PostRemoteServersRequestBodyServerTypeEnum(s)
+		*e = PostRemoteServersRequestBodyServerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostRemoteServersRequestBodyServerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostRemoteServersRequestBodyServerTypeEnum: %v", v)
 	}
 }
 
@@ -166,12 +182,16 @@ const (
 	PostRemoteServersRequestBodySslEnumNever           PostRemoteServersRequestBodySslEnum = "never"
 )
 
+func (e PostRemoteServersRequestBodySslEnum) ToPointer() *PostRemoteServersRequestBodySslEnum {
+	return &e
+}
+
 func (e *PostRemoteServersRequestBodySslEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "if_available":
 		fallthrough
 	case "require":
@@ -179,10 +199,10 @@ func (e *PostRemoteServersRequestBodySslEnum) UnmarshalJSON(data []byte) error {
 	case "require_implicit":
 		fallthrough
 	case "never":
-		*e = PostRemoteServersRequestBodySslEnum(s)
+		*e = PostRemoteServersRequestBodySslEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostRemoteServersRequestBodySslEnum: %s", s)
+		return fmt.Errorf("invalid value for PostRemoteServersRequestBodySslEnum: %v", v)
 	}
 }
 

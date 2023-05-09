@@ -18,12 +18,16 @@ const (
 	NodeHealthEnumUnhealthyMaintenance NodeHealthEnum = "UNHEALTHY_MAINTENANCE"
 )
 
+func (e NodeHealthEnum) ToPointer() *NodeHealthEnum {
+	return &e
+}
+
 func (e *NodeHealthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEALTH_UNSPECIFIED":
 		fallthrough
 	case "HEALTHY":
@@ -33,10 +37,10 @@ func (e *NodeHealthEnum) UnmarshalJSON(data []byte) error {
 	case "UNHEALTHY_TENSORFLOW":
 		fallthrough
 	case "UNHEALTHY_MAINTENANCE":
-		*e = NodeHealthEnum(s)
+		*e = NodeHealthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodeHealthEnum: %s", s)
+		return fmt.Errorf("invalid value for NodeHealthEnum: %v", v)
 	}
 }
 
@@ -83,12 +87,16 @@ const (
 	NodeAPIVersionEnumV2                    NodeAPIVersionEnum = "V2"
 )
 
+func (e NodeAPIVersionEnum) ToPointer() *NodeAPIVersionEnum {
+	return &e
+}
+
 func (e *NodeAPIVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "API_VERSION_UNSPECIFIED":
 		fallthrough
 	case "V1_ALPHA1":
@@ -98,10 +106,10 @@ func (e *NodeAPIVersionEnum) UnmarshalJSON(data []byte) error {
 	case "V2_ALPHA1":
 		fallthrough
 	case "V2":
-		*e = NodeAPIVersionEnum(s)
+		*e = NodeAPIVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodeAPIVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for NodeAPIVersionEnum: %v", v)
 	}
 }
 
@@ -126,12 +134,16 @@ const (
 	NodeStateEnumUnhiding         NodeStateEnum = "UNHIDING"
 )
 
+func (e NodeStateEnum) ToPointer() *NodeStateEnum {
+	return &e
+}
+
 func (e *NodeStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -161,10 +173,10 @@ func (e *NodeStateEnum) UnmarshalJSON(data []byte) error {
 	case "HIDDEN":
 		fallthrough
 	case "UNHIDING":
-		*e = NodeStateEnum(s)
+		*e = NodeStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodeStateEnum: %s", s)
+		return fmt.Errorf("invalid value for NodeStateEnum: %v", v)
 	}
 }
 

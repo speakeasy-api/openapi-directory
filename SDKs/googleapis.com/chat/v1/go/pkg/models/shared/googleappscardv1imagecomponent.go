@@ -6,7 +6,7 @@ package shared
 type GoogleAppsCardV1ImageComponent struct {
 	// The accessibility label for the image.
 	AltText *string `json:"altText,omitempty"`
-	// Represents the complete border style applied to items in a widget.
+	// The style options for the border of a card or widget, including the border type and color.
 	BorderStyle *GoogleAppsCardV1BorderStyle `json:"borderStyle,omitempty"`
 	// Represents the crop style applied to an image. For example, here's how to apply a 16 by 9 aspect ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 } ```
 	CropStyle *GoogleAppsCardV1ImageCropStyle `json:"cropStyle,omitempty"`

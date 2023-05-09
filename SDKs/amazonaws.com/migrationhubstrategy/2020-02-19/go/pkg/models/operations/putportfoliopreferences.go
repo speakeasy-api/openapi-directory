@@ -18,21 +18,25 @@ const (
 	PutPortfolioPreferencesRequestBodyApplicationModeEnumUnknown PutPortfolioPreferencesRequestBodyApplicationModeEnum = "UNKNOWN"
 )
 
+func (e PutPortfolioPreferencesRequestBodyApplicationModeEnum) ToPointer() *PutPortfolioPreferencesRequestBodyApplicationModeEnum {
+	return &e
+}
+
 func (e *PutPortfolioPreferencesRequestBodyApplicationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "KNOWN":
 		fallthrough
 	case "UNKNOWN":
-		*e = PutPortfolioPreferencesRequestBodyApplicationModeEnum(s)
+		*e = PutPortfolioPreferencesRequestBodyApplicationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutPortfolioPreferencesRequestBodyApplicationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutPortfolioPreferencesRequestBodyApplicationModeEnum: %v", v)
 	}
 }
 

@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getstateabb
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetstateabbreviationRequest{
+    ctx := context.Background()
+    res, err := s.StateDataStandardization.Getstateabbreviation(ctx, operations.GetstateabbreviationRequest{
         License: "corrupti",
         State: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.StateDataStandardization.Getstateabbreviation(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### StateDataStandardization
+### [StateDataStandardization](docs/statedatastandardization/README.md)
 
-* `Getstateabbreviation` - Gets a two-letter abbreviation for a state or province name data
+* [Getstateabbreviation](docs/statedatastandardization/README.md#getstateabbreviation) - Gets a two-letter abbreviation for a state or province name data
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,17 +16,21 @@ const (
 	GetCelebrityInfoXAmzTargetEnumRekognitionServiceGetCelebrityInfo GetCelebrityInfoXAmzTargetEnum = "RekognitionService.GetCelebrityInfo"
 )
 
+func (e GetCelebrityInfoXAmzTargetEnum) ToPointer() *GetCelebrityInfoXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCelebrityInfoXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.GetCelebrityInfo":
-		*e = GetCelebrityInfoXAmzTargetEnum(s)
+		*e = GetCelebrityInfoXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCelebrityInfoXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCelebrityInfoXAmzTargetEnum: %v", v)
 	}
 }
 

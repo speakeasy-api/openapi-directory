@@ -44,7 +44,10 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 // corresponding to `Code.CANCELLED`.
 func (s *operationsT) CloudprivatecatalogproducerOperationsCancel(ctx context.Context, request operations.CloudprivatecatalogproducerOperationsCancelRequest, security operations.CloudprivatecatalogproducerOperationsCancelSecurity) (*operations.CloudprivatecatalogproducerOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

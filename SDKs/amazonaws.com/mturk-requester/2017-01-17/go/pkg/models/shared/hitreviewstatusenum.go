@@ -16,12 +16,16 @@ const (
 	HITReviewStatusEnumReviewedInappropriate HITReviewStatusEnum = "ReviewedInappropriate"
 )
 
+func (e HITReviewStatusEnum) ToPointer() *HITReviewStatusEnum {
+	return &e
+}
+
 func (e *HITReviewStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NotReviewed":
 		fallthrough
 	case "MarkedForReview":
@@ -29,9 +33,9 @@ func (e *HITReviewStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ReviewedAppropriate":
 		fallthrough
 	case "ReviewedInappropriate":
-		*e = HITReviewStatusEnum(s)
+		*e = HITReviewStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HITReviewStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HITReviewStatusEnum: %v", v)
 	}
 }

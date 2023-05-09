@@ -14,18 +14,22 @@ const (
 	CompressionEnumEnumDisabled CompressionEnumEnum = "DISABLED"
 )
 
+func (e CompressionEnumEnum) ToPointer() *CompressionEnumEnum {
+	return &e
+}
+
 func (e *CompressionEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ZLIB":
 		fallthrough
 	case "DISABLED":
-		*e = CompressionEnumEnum(s)
+		*e = CompressionEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompressionEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for CompressionEnumEnum: %v", v)
 	}
 }

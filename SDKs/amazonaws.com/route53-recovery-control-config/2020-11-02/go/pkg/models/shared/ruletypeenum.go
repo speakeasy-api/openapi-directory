@@ -16,20 +16,24 @@ const (
 	RuleTypeEnumOr      RuleTypeEnum = "OR"
 )
 
+func (e RuleTypeEnum) ToPointer() *RuleTypeEnum {
+	return &e
+}
+
 func (e *RuleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATLEAST":
 		fallthrough
 	case "AND":
 		fallthrough
 	case "OR":
-		*e = RuleTypeEnum(s)
+		*e = RuleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RuleTypeEnum: %v", v)
 	}
 }

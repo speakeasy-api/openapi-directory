@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // PolicysimulatorProjectsLocationsReplaysOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) PolicysimulatorProjectsLocationsReplaysOperationsList(ctx context.Context, request operations.PolicysimulatorProjectsLocationsReplaysOperationsListRequest, security operations.PolicysimulatorProjectsLocationsReplaysOperationsListSecurity) (*operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	GETDeleteVerifiedAccessTrustProviderActionEnumDeleteVerifiedAccessTrustProvider GETDeleteVerifiedAccessTrustProviderActionEnum = "DeleteVerifiedAccessTrustProvider"
 )
 
+func (e GETDeleteVerifiedAccessTrustProviderActionEnum) ToPointer() *GETDeleteVerifiedAccessTrustProviderActionEnum {
+	return &e
+}
+
 func (e *GETDeleteVerifiedAccessTrustProviderActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteVerifiedAccessTrustProvider":
-		*e = GETDeleteVerifiedAccessTrustProviderActionEnum(s)
+		*e = GETDeleteVerifiedAccessTrustProviderActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVerifiedAccessTrustProviderActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVerifiedAccessTrustProviderActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteVerifiedAccessTrustProviderVersionEnumTwoThousandAndSixteen1115 GETDeleteVerifiedAccessTrustProviderVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteVerifiedAccessTrustProviderVersionEnum) ToPointer() *GETDeleteVerifiedAccessTrustProviderVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteVerifiedAccessTrustProviderVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteVerifiedAccessTrustProviderVersionEnum(s)
+		*e = GETDeleteVerifiedAccessTrustProviderVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVerifiedAccessTrustProviderVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVerifiedAccessTrustProviderVersionEnum: %v", v)
 	}
 }
 
@@ -56,7 +64,7 @@ type GETDeleteVerifiedAccessTrustProviderRequest struct {
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
-	// The ID of the Amazon Web Services Verified Access trust provider.
+	// The ID of the Verified Access trust provider.
 	VerifiedAccessTrustProviderID string                                          `queryParam:"style=form,explode=true,name=VerifiedAccessTrustProviderId"`
 	Version                       GETDeleteVerifiedAccessTrustProviderVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	XAmzAlgorithm                 *string                                         `header:"style=simple,explode=false,name=X-Amz-Algorithm"`

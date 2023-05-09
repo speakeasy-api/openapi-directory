@@ -14,18 +14,22 @@ const (
 	TargetInstanceTypeRightSizingMethodEnumBasic TargetInstanceTypeRightSizingMethodEnum = "BASIC"
 )
 
+func (e TargetInstanceTypeRightSizingMethodEnum) ToPointer() *TargetInstanceTypeRightSizingMethodEnum {
+	return &e
+}
+
 func (e *TargetInstanceTypeRightSizingMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "BASIC":
-		*e = TargetInstanceTypeRightSizingMethodEnum(s)
+		*e = TargetInstanceTypeRightSizingMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetInstanceTypeRightSizingMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetInstanceTypeRightSizingMethodEnum: %v", v)
 	}
 }

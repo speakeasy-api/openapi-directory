@@ -16,17 +16,21 @@ const (
 	SuggestFormatEnumSDK SuggestFormatEnum = "sdk"
 )
 
+func (e SuggestFormatEnum) ToPointer() *SuggestFormatEnum {
+	return &e
+}
+
 func (e *SuggestFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sdk":
-		*e = SuggestFormatEnum(s)
+		*e = SuggestFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SuggestFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for SuggestFormatEnum: %v", v)
 	}
 }
 
@@ -37,17 +41,21 @@ const (
 	SuggestPrettyEnumTrue SuggestPrettyEnum = "true"
 )
 
+func (e SuggestPrettyEnum) ToPointer() *SuggestPrettyEnum {
+	return &e
+}
+
 func (e *SuggestPrettyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
-		*e = SuggestPrettyEnum(s)
+		*e = SuggestPrettyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SuggestPrettyEnum: %s", s)
+		return fmt.Errorf("invalid value for SuggestPrettyEnum: %v", v)
 	}
 }
 

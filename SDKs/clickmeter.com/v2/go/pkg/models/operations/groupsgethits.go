@@ -19,12 +19,16 @@ const (
 	GroupsGetHitsFilterEnumConversions GroupsGetHitsFilterEnum = "conversions"
 )
 
+func (e GroupsGetHitsFilterEnum) ToPointer() *GroupsGetHitsFilterEnum {
+	return &e
+}
+
 func (e *GroupsGetHitsFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spiders":
 		fallthrough
 	case "uniques":
@@ -32,10 +36,10 @@ func (e *GroupsGetHitsFilterEnum) UnmarshalJSON(data []byte) error {
 	case "nonuniques":
 		fallthrough
 	case "conversions":
-		*e = GroupsGetHitsFilterEnum(s)
+		*e = GroupsGetHitsFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsGetHitsFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsGetHitsFilterEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	GroupsGetHitsTimeframeEnumCustom        GroupsGetHitsTimeframeEnum = "custom"
 )
 
+func (e GroupsGetHitsTimeframeEnum) ToPointer() *GroupsGetHitsTimeframeEnum {
+	return &e
+}
+
 func (e *GroupsGetHitsTimeframeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yesterday":
 		fallthrough
 	case "last7":
@@ -80,10 +88,10 @@ func (e *GroupsGetHitsTimeframeEnum) UnmarshalJSON(data []byte) error {
 	case "last180":
 		fallthrough
 	case "custom":
-		*e = GroupsGetHitsTimeframeEnum(s)
+		*e = GroupsGetHitsTimeframeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsGetHitsTimeframeEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsGetHitsTimeframeEnum: %v", v)
 	}
 }
 

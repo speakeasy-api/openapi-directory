@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/hubapi.com/crm/v3/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveRequest{
+    ctx := context.Background()
+    res, err := s.Cards.DeleteCrmV3ExtensionsCardsAppIDCardIDArchive(ctx, operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveRequest{
         AppID: 548814,
         CardID: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.Cards.DeleteCrmV3ExtensionsCardsAppIDCardIDArchive(ctx, req, operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveSecurity{
+    }, operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchiveSecurity{
         DeveloperHapikey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -48,17 +45,17 @@ func main() {
 ## Available Resources and Operations
 
 
-### Cards
+### [Cards](docs/cards/README.md)
 
-* `DeleteCrmV3ExtensionsCardsAppIDCardIDArchive` - Delete a card
-* `GetCrmV3ExtensionsCardsAppIDCardIDGetByID` - Get a card.
-* `GetCrmV3ExtensionsCardsAppIDGetAll` - Get all cards
-* `PatchCrmV3ExtensionsCardsAppIDCardIDUpdate` - Update a card
-* `PostCrmV3ExtensionsCardsAppIDCreate` - Create a new card
+* [DeleteCrmV3ExtensionsCardsAppIDCardIDArchive](docs/cards/README.md#deletecrmv3extensionscardsappidcardidarchive) - Delete a card
+* [GetCrmV3ExtensionsCardsAppIDCardIDGetByID](docs/cards/README.md#getcrmv3extensionscardsappidcardidgetbyid) - Get a card.
+* [GetCrmV3ExtensionsCardsAppIDGetAll](docs/cards/README.md#getcrmv3extensionscardsappidgetall) - Get all cards
+* [PatchCrmV3ExtensionsCardsAppIDCardIDUpdate](docs/cards/README.md#patchcrmv3extensionscardsappidcardidupdate) - Update a card
+* [PostCrmV3ExtensionsCardsAppIDCreate](docs/cards/README.md#postcrmv3extensionscardsappidcreate) - Create a new card
 
-### SampleResponse
+### [SampleResponse](docs/sampleresponse/README.md)
 
-* `GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponse` - Get sample card detail response
+* [GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponse](docs/sampleresponse/README.md#getcrmv3extensionscardssampleresponsegetcardssampleresponse) - Get sample card detail response
 <!-- End SDK Available Operations -->
 
 ### Maturity

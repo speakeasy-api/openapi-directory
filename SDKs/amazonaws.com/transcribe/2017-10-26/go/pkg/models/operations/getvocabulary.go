@@ -16,17 +16,21 @@ const (
 	GetVocabularyXAmzTargetEnumTranscribeGetVocabulary GetVocabularyXAmzTargetEnum = "Transcribe.GetVocabulary"
 )
 
+func (e GetVocabularyXAmzTargetEnum) ToPointer() *GetVocabularyXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetVocabularyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Transcribe.GetVocabulary":
-		*e = GetVocabularyXAmzTargetEnum(s)
+		*e = GetVocabularyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVocabularyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVocabularyXAmzTargetEnum: %v", v)
 	}
 }
 

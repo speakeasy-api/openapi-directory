@@ -16,17 +16,21 @@ const (
 	LaunchAppXAmzTargetEnumAwsServerMigrationServiceV20161024LaunchApp LaunchAppXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.LaunchApp"
 )
 
+func (e LaunchAppXAmzTargetEnum) ToPointer() *LaunchAppXAmzTargetEnum {
+	return &e
+}
+
 func (e *LaunchAppXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.LaunchApp":
-		*e = LaunchAppXAmzTargetEnum(s)
+		*e = LaunchAppXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LaunchAppXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for LaunchAppXAmzTargetEnum: %v", v)
 	}
 }
 

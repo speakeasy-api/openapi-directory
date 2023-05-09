@@ -19,12 +19,16 @@ const (
 	Icd10CMTraitNameEnumLowConfidence    Icd10CMTraitNameEnum = "LOW_CONFIDENCE"
 )
 
+func (e Icd10CMTraitNameEnum) ToPointer() *Icd10CMTraitNameEnum {
+	return &e
+}
+
 func (e *Icd10CMTraitNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEGATION":
 		fallthrough
 	case "DIAGNOSIS":
@@ -38,9 +42,9 @@ func (e *Icd10CMTraitNameEnum) UnmarshalJSON(data []byte) error {
 	case "HYPOTHETICAL":
 		fallthrough
 	case "LOW_CONFIDENCE":
-		*e = Icd10CMTraitNameEnum(s)
+		*e = Icd10CMTraitNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Icd10CMTraitNameEnum: %s", s)
+		return fmt.Errorf("invalid value for Icd10CMTraitNameEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	ModificationResourceEnumEnumComputeType ModificationResourceEnumEnum = "COMPUTE_TYPE"
 )
 
+func (e ModificationResourceEnumEnum) ToPointer() *ModificationResourceEnumEnum {
+	return &e
+}
+
 func (e *ModificationResourceEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROOT_VOLUME":
 		fallthrough
 	case "USER_VOLUME":
 		fallthrough
 	case "COMPUTE_TYPE":
-		*e = ModificationResourceEnumEnum(s)
+		*e = ModificationResourceEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModificationResourceEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ModificationResourceEnumEnum: %v", v)
 	}
 }

@@ -9,47 +9,55 @@ import (
 )
 
 // HolidayFederalEnum - Whether this holiday is observed by federally-regulated industries.
-type HolidayFederalEnum string
+type HolidayFederalEnum int64
 
 const (
-	HolidayFederalEnumOne  HolidayFederalEnum = "1"
-	HolidayFederalEnumZero HolidayFederalEnum = "0"
+	HolidayFederalEnumOne  HolidayFederalEnum = 1
+	HolidayFederalEnumZero HolidayFederalEnum = 0
 )
 
+func (e HolidayFederalEnum) ToPointer() *HolidayFederalEnum {
+	return &e
+}
+
 func (e *HolidayFederalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "0":
-		*e = HolidayFederalEnum(s)
+	case 0:
+		*e = HolidayFederalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HolidayFederalEnum: %s", s)
+		return fmt.Errorf("invalid value for HolidayFederalEnum: %v", v)
 	}
 }
 
 // HolidayOptionalEnum - Whether this is a province-wide statutory holiday, or one that is optional for employers.
-type HolidayOptionalEnum string
+type HolidayOptionalEnum int64
 
 const (
-	HolidayOptionalEnumOne HolidayOptionalEnum = "1"
+	HolidayOptionalEnumOne HolidayOptionalEnum = 1
 )
 
+func (e HolidayOptionalEnum) ToPointer() *HolidayOptionalEnum {
+	return &e
+}
+
 func (e *HolidayOptionalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
-		*e = HolidayOptionalEnum(s)
+	switch v {
+	case 1:
+		*e = HolidayOptionalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HolidayOptionalEnum: %s", s)
+		return fmt.Errorf("invalid value for HolidayOptionalEnum: %v", v)
 	}
 }
 

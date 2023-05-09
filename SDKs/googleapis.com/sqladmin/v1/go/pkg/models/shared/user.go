@@ -17,12 +17,16 @@ const (
 	UserDualPasswordTypeEnumDualPassword                UserDualPasswordTypeEnum = "DUAL_PASSWORD"
 )
 
+func (e UserDualPasswordTypeEnum) ToPointer() *UserDualPasswordTypeEnum {
+	return &e
+}
+
 func (e *UserDualPasswordTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DUAL_PASSWORD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NO_MODIFY_DUAL_PASSWORD":
@@ -30,10 +34,10 @@ func (e *UserDualPasswordTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NO_DUAL_PASSWORD":
 		fallthrough
 	case "DUAL_PASSWORD":
-		*e = UserDualPasswordTypeEnum(s)
+		*e = UserDualPasswordTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserDualPasswordTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserDualPasswordTypeEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	UserTypeEnumCloudIamServiceAccount UserTypeEnum = "CLOUD_IAM_SERVICE_ACCOUNT"
 )
 
+func (e UserTypeEnum) ToPointer() *UserTypeEnum {
+	return &e
+}
+
 func (e *UserTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUILT_IN":
 		fallthrough
 	case "CLOUD_IAM_USER":
 		fallthrough
 	case "CLOUD_IAM_SERVICE_ACCOUNT":
-		*e = UserTypeEnum(s)
+		*e = UserTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserTypeEnum: %v", v)
 	}
 }
 

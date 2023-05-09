@@ -7,50 +7,54 @@ import (
 	"fmt"
 )
 
-type SocialFriendsPlatformFriendDestinyMembershipTypeEnum string
+type SocialFriendsPlatformFriendDestinyMembershipTypeEnum int
 
 const (
-	SocialFriendsPlatformFriendDestinyMembershipTypeEnumZero                   SocialFriendsPlatformFriendDestinyMembershipTypeEnum = "0"
-	SocialFriendsPlatformFriendDestinyMembershipTypeEnumOne                    SocialFriendsPlatformFriendDestinyMembershipTypeEnum = "1"
-	SocialFriendsPlatformFriendDestinyMembershipTypeEnumTwo                    SocialFriendsPlatformFriendDestinyMembershipTypeEnum = "2"
-	SocialFriendsPlatformFriendDestinyMembershipTypeEnumThree                  SocialFriendsPlatformFriendDestinyMembershipTypeEnum = "3"
-	SocialFriendsPlatformFriendDestinyMembershipTypeEnumFour                   SocialFriendsPlatformFriendDestinyMembershipTypeEnum = "4"
-	SocialFriendsPlatformFriendDestinyMembershipTypeEnumFive                   SocialFriendsPlatformFriendDestinyMembershipTypeEnum = "5"
-	SocialFriendsPlatformFriendDestinyMembershipTypeEnumSix                    SocialFriendsPlatformFriendDestinyMembershipTypeEnum = "6"
-	SocialFriendsPlatformFriendDestinyMembershipTypeEnumTen                    SocialFriendsPlatformFriendDestinyMembershipTypeEnum = "10"
-	SocialFriendsPlatformFriendDestinyMembershipTypeEnumTwoHundredAndFiftyFour SocialFriendsPlatformFriendDestinyMembershipTypeEnum = "254"
-	SocialFriendsPlatformFriendDestinyMembershipTypeEnumMinus1                 SocialFriendsPlatformFriendDestinyMembershipTypeEnum = "-1"
+	SocialFriendsPlatformFriendDestinyMembershipTypeEnumZero                   SocialFriendsPlatformFriendDestinyMembershipTypeEnum = 0
+	SocialFriendsPlatformFriendDestinyMembershipTypeEnumOne                    SocialFriendsPlatformFriendDestinyMembershipTypeEnum = 1
+	SocialFriendsPlatformFriendDestinyMembershipTypeEnumTwo                    SocialFriendsPlatformFriendDestinyMembershipTypeEnum = 2
+	SocialFriendsPlatformFriendDestinyMembershipTypeEnumThree                  SocialFriendsPlatformFriendDestinyMembershipTypeEnum = 3
+	SocialFriendsPlatformFriendDestinyMembershipTypeEnumFour                   SocialFriendsPlatformFriendDestinyMembershipTypeEnum = 4
+	SocialFriendsPlatformFriendDestinyMembershipTypeEnumFive                   SocialFriendsPlatformFriendDestinyMembershipTypeEnum = 5
+	SocialFriendsPlatformFriendDestinyMembershipTypeEnumSix                    SocialFriendsPlatformFriendDestinyMembershipTypeEnum = 6
+	SocialFriendsPlatformFriendDestinyMembershipTypeEnumTen                    SocialFriendsPlatformFriendDestinyMembershipTypeEnum = 10
+	SocialFriendsPlatformFriendDestinyMembershipTypeEnumTwoHundredAndFiftyFour SocialFriendsPlatformFriendDestinyMembershipTypeEnum = 254
+	SocialFriendsPlatformFriendDestinyMembershipTypeEnumMinus1                 SocialFriendsPlatformFriendDestinyMembershipTypeEnum = -1
 )
 
+func (e SocialFriendsPlatformFriendDestinyMembershipTypeEnum) ToPointer() *SocialFriendsPlatformFriendDestinyMembershipTypeEnum {
+	return &e
+}
+
 func (e *SocialFriendsPlatformFriendDestinyMembershipTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "254":
+	case 254:
 		fallthrough
-	case "-1":
-		*e = SocialFriendsPlatformFriendDestinyMembershipTypeEnum(s)
+	case -1:
+		*e = SocialFriendsPlatformFriendDestinyMembershipTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SocialFriendsPlatformFriendDestinyMembershipTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SocialFriendsPlatformFriendDestinyMembershipTypeEnum: %v", v)
 	}
 }
 

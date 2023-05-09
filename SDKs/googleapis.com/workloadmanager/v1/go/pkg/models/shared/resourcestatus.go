@@ -17,12 +17,16 @@ const (
 	ResourceStatusStateEnumDeleting         ResourceStatusStateEnum = "DELETING"
 )
 
+func (e ResourceStatusStateEnum) ToPointer() *ResourceStatusStateEnum {
+	return &e
+}
+
 func (e *ResourceStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -30,10 +34,10 @@ func (e *ResourceStatusStateEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE":
 		fallthrough
 	case "DELETING":
-		*e = ResourceStatusStateEnum(s)
+		*e = ResourceStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceStatusStateEnum: %v", v)
 	}
 }
 

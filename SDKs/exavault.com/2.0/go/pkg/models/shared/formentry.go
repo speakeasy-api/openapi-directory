@@ -16,19 +16,23 @@ const (
 	FormEntryAttributesStatusEnumCompleted FormEntryAttributesStatusEnum = "completed"
 )
 
+func (e FormEntryAttributesStatusEnum) ToPointer() *FormEntryAttributesStatusEnum {
+	return &e
+}
+
 func (e *FormEntryAttributesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "completed":
-		*e = FormEntryAttributesStatusEnum(s)
+		*e = FormEntryAttributesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FormEntryAttributesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FormEntryAttributesStatusEnum: %v", v)
 	}
 }
 

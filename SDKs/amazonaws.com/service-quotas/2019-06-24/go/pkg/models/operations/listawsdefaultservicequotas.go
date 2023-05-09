@@ -16,17 +16,21 @@ const (
 	ListAWSDefaultServiceQuotasXAmzTargetEnumServiceQuotasV20190624ListAwsDefaultServiceQuotas ListAWSDefaultServiceQuotasXAmzTargetEnum = "ServiceQuotasV20190624.ListAWSDefaultServiceQuotas"
 )
 
+func (e ListAWSDefaultServiceQuotasXAmzTargetEnum) ToPointer() *ListAWSDefaultServiceQuotasXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListAWSDefaultServiceQuotasXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ServiceQuotasV20190624.ListAWSDefaultServiceQuotas":
-		*e = ListAWSDefaultServiceQuotasXAmzTargetEnum(s)
+		*e = ListAWSDefaultServiceQuotasXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAWSDefaultServiceQuotasXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAWSDefaultServiceQuotasXAmzTargetEnum: %v", v)
 	}
 }
 

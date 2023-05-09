@@ -16,17 +16,21 @@ const (
 	PutLifecyclePolicyXAmzTargetEnumAmazonEc2ContainerRegistryV20150921PutLifecyclePolicy PutLifecyclePolicyXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.PutLifecyclePolicy"
 )
 
+func (e PutLifecyclePolicyXAmzTargetEnum) ToPointer() *PutLifecyclePolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutLifecyclePolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.PutLifecyclePolicy":
-		*e = PutLifecyclePolicyXAmzTargetEnum(s)
+		*e = PutLifecyclePolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutLifecyclePolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutLifecyclePolicyXAmzTargetEnum: %v", v)
 	}
 }
 

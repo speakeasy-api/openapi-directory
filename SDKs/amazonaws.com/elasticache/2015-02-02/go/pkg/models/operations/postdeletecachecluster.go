@@ -15,17 +15,21 @@ const (
 	POSTDeleteCacheClusterActionEnumDeleteCacheCluster POSTDeleteCacheClusterActionEnum = "DeleteCacheCluster"
 )
 
+func (e POSTDeleteCacheClusterActionEnum) ToPointer() *POSTDeleteCacheClusterActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteCacheClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteCacheCluster":
-		*e = POSTDeleteCacheClusterActionEnum(s)
+		*e = POSTDeleteCacheClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteCacheClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteCacheClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteCacheClusterVersionEnumTwoThousandAndFifteen0202 POSTDeleteCacheClusterVersionEnum = "2015-02-02"
 )
 
+func (e POSTDeleteCacheClusterVersionEnum) ToPointer() *POSTDeleteCacheClusterVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteCacheClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTDeleteCacheClusterVersionEnum(s)
+		*e = POSTDeleteCacheClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteCacheClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteCacheClusterVersionEnum: %v", v)
 	}
 }
 

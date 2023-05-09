@@ -23,21 +23,25 @@ const (
 	AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetFilterEnumCel                    AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetFilterEnum = "CEL"
 )
 
+func (e AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetFilterEnum) ToPointer() *AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetFilterEnum {
+	return &e
+}
+
 func (e *AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEVEL_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "AS_DEFINED":
 		fallthrough
 	case "CEL":
-		*e = AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetFilterEnum(s)
+		*e = AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetFilterEnum: %v", v)
 	}
 }
 

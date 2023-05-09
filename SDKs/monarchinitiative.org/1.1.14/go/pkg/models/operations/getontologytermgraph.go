@@ -18,12 +18,16 @@ const (
 	GetOntologyTermGraphGraphTypeEnumNeighborhoodLimitedGraph   GetOntologyTermGraphGraphTypeEnum = "neighborhood_limited_graph"
 )
 
+func (e GetOntologyTermGraphGraphTypeEnum) ToPointer() *GetOntologyTermGraphGraphTypeEnum {
+	return &e
+}
+
 func (e *GetOntologyTermGraphGraphTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "topology_graph":
 		fallthrough
 	case "regulates_transitivity_graph":
@@ -31,10 +35,10 @@ func (e *GetOntologyTermGraphGraphTypeEnum) UnmarshalJSON(data []byte) error {
 	case "neighborhood_graph":
 		fallthrough
 	case "neighborhood_limited_graph":
-		*e = GetOntologyTermGraphGraphTypeEnum(s)
+		*e = GetOntologyTermGraphGraphTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOntologyTermGraphGraphTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOntologyTermGraphGraphTypeEnum: %v", v)
 	}
 }
 

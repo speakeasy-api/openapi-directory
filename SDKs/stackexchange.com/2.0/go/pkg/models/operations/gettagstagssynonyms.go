@@ -16,19 +16,23 @@ const (
 	GetTagsTagsSynonymsOrderEnumAsc  GetTagsTagsSynonymsOrderEnum = "asc"
 )
 
+func (e GetTagsTagsSynonymsOrderEnum) ToPointer() *GetTagsTagsSynonymsOrderEnum {
+	return &e
+}
+
 func (e *GetTagsTagsSynonymsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetTagsTagsSynonymsOrderEnum(s)
+		*e = GetTagsTagsSynonymsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTagsTagsSynonymsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTagsTagsSynonymsOrderEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	GetTagsTagsSynonymsSortEnumActivity GetTagsTagsSynonymsSortEnum = "activity"
 )
 
+func (e GetTagsTagsSynonymsSortEnum) ToPointer() *GetTagsTagsSynonymsSortEnum {
+	return &e
+}
+
 func (e *GetTagsTagsSynonymsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creation":
 		fallthrough
 	case "applied":
 		fallthrough
 	case "activity":
-		*e = GetTagsTagsSynonymsSortEnum(s)
+		*e = GetTagsTagsSynonymsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTagsTagsSynonymsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTagsTagsSynonymsSortEnum: %v", v)
 	}
 }
 

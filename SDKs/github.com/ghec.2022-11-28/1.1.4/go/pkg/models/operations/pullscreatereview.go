@@ -31,21 +31,25 @@ const (
 	PullsCreateReviewRequestBodyEventEnumComment        PullsCreateReviewRequestBodyEventEnum = "COMMENT"
 )
 
+func (e PullsCreateReviewRequestBodyEventEnum) ToPointer() *PullsCreateReviewRequestBodyEventEnum {
+	return &e
+}
+
 func (e *PullsCreateReviewRequestBodyEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPROVE":
 		fallthrough
 	case "REQUEST_CHANGES":
 		fallthrough
 	case "COMMENT":
-		*e = PullsCreateReviewRequestBodyEventEnum(s)
+		*e = PullsCreateReviewRequestBodyEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullsCreateReviewRequestBodyEventEnum: %s", s)
+		return fmt.Errorf("invalid value for PullsCreateReviewRequestBodyEventEnum: %v", v)
 	}
 }
 

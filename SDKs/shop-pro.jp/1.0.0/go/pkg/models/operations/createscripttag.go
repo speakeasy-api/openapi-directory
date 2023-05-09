@@ -27,12 +27,16 @@ const (
 	CreateScriptTagRequestBodyScriptTagDisplayScopeEnumCart       CreateScriptTagRequestBodyScriptTagDisplayScopeEnum = "cart"
 )
 
+func (e CreateScriptTagRequestBodyScriptTagDisplayScopeEnum) ToPointer() *CreateScriptTagRequestBodyScriptTagDisplayScopeEnum {
+	return &e
+}
+
 func (e *CreateScriptTagRequestBodyScriptTagDisplayScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "shop":
@@ -40,10 +44,10 @@ func (e *CreateScriptTagRequestBodyScriptTagDisplayScopeEnum) UnmarshalJSON(data
 	case "thanks_page":
 		fallthrough
 	case "cart":
-		*e = CreateScriptTagRequestBodyScriptTagDisplayScopeEnum(s)
+		*e = CreateScriptTagRequestBodyScriptTagDisplayScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateScriptTagRequestBodyScriptTagDisplayScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateScriptTagRequestBodyScriptTagDisplayScopeEnum: %v", v)
 	}
 }
 
@@ -80,12 +84,16 @@ const (
 	CreateScriptTag200ApplicationJSONScriptTagDisplayScopeEnumCart       CreateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum = "cart"
 )
 
+func (e CreateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum) ToPointer() *CreateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum {
+	return &e
+}
+
 func (e *CreateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "shop":
@@ -93,10 +101,10 @@ func (e *CreateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum) UnmarshalJS
 	case "thanks_page":
 		fallthrough
 	case "cart":
-		*e = CreateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum(s)
+		*e = CreateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateScriptTag200ApplicationJSONScriptTagDisplayScopeEnum: %v", v)
 	}
 }
 

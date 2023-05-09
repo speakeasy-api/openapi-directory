@@ -37,7 +37,10 @@ func newPolicy(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Creates a new policy from scratch.
 func (s *policy) PolicyCreateOrUpdate(ctx context.Context, request operations.PolicyCreateOrUpdateRequest) (*operations.PolicyCreateOrUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PolicySaveRequest", "json")
 	if err != nil {
@@ -91,7 +94,10 @@ func (s *policy) PolicyCreateOrUpdate(ctx context.Context, request operations.Po
 // Deletes a specific policy of the account by its ID.
 func (s *policy) PolicyDelete(ctx context.Context, request operations.PolicyDeleteRequest) (*operations.PolicyDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -186,7 +192,10 @@ func (s *policy) PolicyEvaluate(ctx context.Context, request operations.PolicyEv
 // Retrieves general information of a policy by its ID.
 func (s *policy) PolicyGet(ctx context.Context, request operations.PolicyGetRequest) (*operations.PolicyGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -280,7 +289,10 @@ func (s *policy) PolicyList(ctx context.Context, request operations.PolicyListRe
 // Updates an existing policy at your account.
 func (s *policy) PutAPIPolicyEnginePoliciesID(ctx context.Context, request operations.PutAPIPolicyEnginePoliciesIDRequest) (*operations.PutAPIPolicyEnginePoliciesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/policy-engine/policies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PolicySaveRequest", "json")
 	if err != nil {

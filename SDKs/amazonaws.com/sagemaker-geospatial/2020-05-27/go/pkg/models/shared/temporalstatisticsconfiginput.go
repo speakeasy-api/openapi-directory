@@ -2,7 +2,7 @@
 
 package shared
 
-// TemporalStatisticsConfigInput - <p/>
+// TemporalStatisticsConfigInput - The structure representing the configuration for Temporal Statistics operation.
 type TemporalStatisticsConfigInput struct {
 	GroupBy     *GroupByEnum             `json:"GroupBy,omitempty"`
 	Statistics  []TemporalStatisticsEnum `json:"Statistics"`

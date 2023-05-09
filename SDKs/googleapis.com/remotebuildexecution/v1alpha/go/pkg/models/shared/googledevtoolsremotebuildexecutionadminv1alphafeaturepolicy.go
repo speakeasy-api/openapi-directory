@@ -17,12 +17,16 @@ const (
 	GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnumActionHermeticityBestEffort  GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum = "ACTION_HERMETICITY_BEST_EFFORT"
 )
 
+func (e GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum) ToPointer() *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum {
+	return &e
+}
+
 func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_HERMETICITY_UNSPECIFIED":
 		fallthrough
 	case "ACTION_HERMETICITY_OFF":
@@ -30,10 +34,10 @@ func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermet
 	case "ACTION_HERMETICITY_ENFORCED":
 		fallthrough
 	case "ACTION_HERMETICITY_BEST_EFFORT":
-		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum(s)
+		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnumActionIsolationEnforced    GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum = "ACTION_ISOLATION_ENFORCED"
 )
 
+func (e GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum) ToPointer() *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum {
+	return &e
+}
+
 func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_ISOLATION_UNSPECIFIED":
 		fallthrough
 	case "ACTION_ISOLATION_OFF":
 		fallthrough
 	case "ACTION_ISOLATION_ENFORCED":
-		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum(s)
+		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum: %v", v)
 	}
 }
 
@@ -75,12 +83,16 @@ const (
 	GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnumLinuxExecutionHardenedGvisorOrTerminal GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum = "LINUX_EXECUTION_HARDENED_GVISOR_OR_TERMINAL"
 )
 
+func (e GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum) ToPointer() *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum {
+	return &e
+}
+
 func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINUX_EXECUTION_UNSPECIFIED":
 		fallthrough
 	case "LINUX_EXECUTION_FORBIDDEN":
@@ -90,10 +102,10 @@ func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecuti
 	case "LINUX_EXECUTION_HARDENED_GVISOR":
 		fallthrough
 	case "LINUX_EXECUTION_HARDENED_GVISOR_OR_TERMINAL":
-		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum(s)
+		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum: %v", v)
 	}
 }
 
@@ -106,21 +118,25 @@ const (
 	GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnumOff                       GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum = "OFF"
 )
 
+func (e GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum) ToPointer() *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum {
+	return &e
+}
+
 func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINUX_ISOLATION_UNSPECIFIED":
 		fallthrough
 	case "GVISOR":
 		fallthrough
 	case "OFF":
-		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum(s)
+		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum: %v", v)
 	}
 }
 
@@ -132,19 +148,23 @@ const (
 	GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnumMacExecutionForbidden   GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum = "MAC_EXECUTION_FORBIDDEN"
 )
 
+func (e GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum) ToPointer() *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum {
+	return &e
+}
+
 func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MAC_EXECUTION_UNSPECIFIED":
 		fallthrough
 	case "MAC_EXECUTION_FORBIDDEN":
-		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum(s)
+		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum: %v", v)
 	}
 }
 
@@ -157,21 +177,25 @@ const (
 	GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVMVerificationEnumVMVerificationOff         GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVMVerificationEnum = "VM_VERIFICATION_OFF"
 )
 
+func (e GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVMVerificationEnum) ToPointer() *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVMVerificationEnum {
+	return &e
+}
+
 func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVMVerificationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VM_VERIFICATION_UNSPECIFIED":
 		fallthrough
 	case "VM_VERIFICATION_GCP_TOKEN":
 		fallthrough
 	case "VM_VERIFICATION_OFF":
-		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVMVerificationEnum(s)
+		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVMVerificationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVMVerificationEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVMVerificationEnum: %v", v)
 	}
 }
 
@@ -185,12 +209,16 @@ const (
 	GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnumWindowsExecutionTerminal     GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum = "WINDOWS_EXECUTION_TERMINAL"
 )
 
+func (e GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum) ToPointer() *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum {
+	return &e
+}
+
 func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WINDOWS_EXECUTION_UNSPECIFIED":
 		fallthrough
 	case "WINDOWS_EXECUTION_FORBIDDEN":
@@ -198,10 +226,10 @@ func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecu
 	case "WINDOWS_EXECUTION_UNRESTRICTED":
 		fallthrough
 	case "WINDOWS_EXECUTION_TERMINAL":
-		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum(s)
+		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum: %v", v)
 	}
 }
 

@@ -15,18 +15,22 @@ const (
 	SearchResourcesComparatorEnumNe SearchResourcesComparatorEnum = "NE"
 )
 
+func (e SearchResourcesComparatorEnum) ToPointer() *SearchResourcesComparatorEnum {
+	return &e
+}
+
 func (e *SearchResourcesComparatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQ":
 		fallthrough
 	case "NE":
-		*e = SearchResourcesComparatorEnum(s)
+		*e = SearchResourcesComparatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchResourcesComparatorEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchResourcesComparatorEnum: %v", v)
 	}
 }

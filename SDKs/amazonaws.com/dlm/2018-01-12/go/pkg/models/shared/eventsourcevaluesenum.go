@@ -13,16 +13,20 @@ const (
 	EventSourceValuesEnumManagedCwe EventSourceValuesEnum = "MANAGED_CWE"
 )
 
+func (e EventSourceValuesEnum) ToPointer() *EventSourceValuesEnum {
+	return &e
+}
+
 func (e *EventSourceValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANAGED_CWE":
-		*e = EventSourceValuesEnum(s)
+		*e = EventSourceValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventSourceValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for EventSourceValuesEnum: %v", v)
 	}
 }

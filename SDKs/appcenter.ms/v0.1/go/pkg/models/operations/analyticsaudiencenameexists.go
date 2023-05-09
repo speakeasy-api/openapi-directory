@@ -33,12 +33,16 @@ const (
 	AnalyticsAudienceNameExistsDefaultApplicationJSONErrorCodeEnumTooManyRequests     AnalyticsAudienceNameExistsDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AnalyticsAudienceNameExistsDefaultApplicationJSONErrorCodeEnum) ToPointer() *AnalyticsAudienceNameExistsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AnalyticsAudienceNameExistsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *AnalyticsAudienceNameExistsDefaultApplicationJSONErrorCodeEnum) Unmarsh
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AnalyticsAudienceNameExistsDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AnalyticsAudienceNameExistsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsAudienceNameExistsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsAudienceNameExistsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

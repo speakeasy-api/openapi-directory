@@ -14,18 +14,22 @@ const (
 	RedirectActionStatusCodeEnumEnumHttp302 RedirectActionStatusCodeEnumEnum = "HTTP_302"
 )
 
+func (e RedirectActionStatusCodeEnumEnum) ToPointer() *RedirectActionStatusCodeEnumEnum {
+	return &e
+}
+
 func (e *RedirectActionStatusCodeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP_301":
 		fallthrough
 	case "HTTP_302":
-		*e = RedirectActionStatusCodeEnumEnum(s)
+		*e = RedirectActionStatusCodeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RedirectActionStatusCodeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for RedirectActionStatusCodeEnumEnum: %v", v)
 	}
 }

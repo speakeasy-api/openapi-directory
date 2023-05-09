@@ -23,12 +23,16 @@ const (
 	PeoplePeopleUpdateContactSourcesEnumReadSourceTypeDomainContact PeoplePeopleUpdateContactSourcesEnum = "READ_SOURCE_TYPE_DOMAIN_CONTACT"
 )
 
+func (e PeoplePeopleUpdateContactSourcesEnum) ToPointer() *PeoplePeopleUpdateContactSourcesEnum {
+	return &e
+}
+
 func (e *PeoplePeopleUpdateContactSourcesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READ_SOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "READ_SOURCE_TYPE_PROFILE":
@@ -36,10 +40,10 @@ func (e *PeoplePeopleUpdateContactSourcesEnum) UnmarshalJSON(data []byte) error 
 	case "READ_SOURCE_TYPE_CONTACT":
 		fallthrough
 	case "READ_SOURCE_TYPE_DOMAIN_CONTACT":
-		*e = PeoplePeopleUpdateContactSourcesEnum(s)
+		*e = PeoplePeopleUpdateContactSourcesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PeoplePeopleUpdateContactSourcesEnum: %s", s)
+		return fmt.Errorf("invalid value for PeoplePeopleUpdateContactSourcesEnum: %v", v)
 	}
 }
 

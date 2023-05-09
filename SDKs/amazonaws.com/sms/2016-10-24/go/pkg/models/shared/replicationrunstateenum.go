@@ -19,12 +19,16 @@ const (
 	ReplicationRunStateEnumDeleted   ReplicationRunStateEnum = "DELETED"
 )
 
+func (e ReplicationRunStateEnum) ToPointer() *ReplicationRunStateEnum {
+	return &e
+}
+
 func (e *ReplicationRunStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "MISSED":
@@ -38,9 +42,9 @@ func (e *ReplicationRunStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "DELETED":
-		*e = ReplicationRunStateEnum(s)
+		*e = ReplicationRunStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicationRunStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicationRunStateEnum: %v", v)
 	}
 }

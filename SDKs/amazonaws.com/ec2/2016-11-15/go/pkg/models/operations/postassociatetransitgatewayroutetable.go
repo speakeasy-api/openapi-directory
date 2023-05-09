@@ -15,17 +15,21 @@ const (
 	POSTAssociateTransitGatewayRouteTableActionEnumAssociateTransitGatewayRouteTable POSTAssociateTransitGatewayRouteTableActionEnum = "AssociateTransitGatewayRouteTable"
 )
 
+func (e POSTAssociateTransitGatewayRouteTableActionEnum) ToPointer() *POSTAssociateTransitGatewayRouteTableActionEnum {
+	return &e
+}
+
 func (e *POSTAssociateTransitGatewayRouteTableActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssociateTransitGatewayRouteTable":
-		*e = POSTAssociateTransitGatewayRouteTableActionEnum(s)
+		*e = POSTAssociateTransitGatewayRouteTableActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssociateTransitGatewayRouteTableActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssociateTransitGatewayRouteTableActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAssociateTransitGatewayRouteTableVersionEnumTwoThousandAndSixteen1115 POSTAssociateTransitGatewayRouteTableVersionEnum = "2016-11-15"
 )
 
+func (e POSTAssociateTransitGatewayRouteTableVersionEnum) ToPointer() *POSTAssociateTransitGatewayRouteTableVersionEnum {
+	return &e
+}
+
 func (e *POSTAssociateTransitGatewayRouteTableVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTAssociateTransitGatewayRouteTableVersionEnum(s)
+		*e = POSTAssociateTransitGatewayRouteTableVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssociateTransitGatewayRouteTableVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssociateTransitGatewayRouteTableVersionEnum: %v", v)
 	}
 }
 

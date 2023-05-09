@@ -16,21 +16,25 @@ const (
 	SasPortalNrqzValidationStateEnumFinal            SasPortalNrqzValidationStateEnum = "FINAL"
 )
 
+func (e SasPortalNrqzValidationStateEnum) ToPointer() *SasPortalNrqzValidationStateEnum {
+	return &e
+}
+
 func (e *SasPortalNrqzValidationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "DRAFT":
 		fallthrough
 	case "FINAL":
-		*e = SasPortalNrqzValidationStateEnum(s)
+		*e = SasPortalNrqzValidationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SasPortalNrqzValidationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SasPortalNrqzValidationStateEnum: %v", v)
 	}
 }
 

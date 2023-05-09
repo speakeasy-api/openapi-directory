@@ -15,17 +15,21 @@ const (
 	POSTRemoveClientIDFromOpenIDConnectProviderActionEnumRemoveClientIDFromOpenIDConnectProvider POSTRemoveClientIDFromOpenIDConnectProviderActionEnum = "RemoveClientIDFromOpenIDConnectProvider"
 )
 
+func (e POSTRemoveClientIDFromOpenIDConnectProviderActionEnum) ToPointer() *POSTRemoveClientIDFromOpenIDConnectProviderActionEnum {
+	return &e
+}
+
 func (e *POSTRemoveClientIDFromOpenIDConnectProviderActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RemoveClientIDFromOpenIDConnectProvider":
-		*e = POSTRemoveClientIDFromOpenIDConnectProviderActionEnum(s)
+		*e = POSTRemoveClientIDFromOpenIDConnectProviderActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRemoveClientIDFromOpenIDConnectProviderActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRemoveClientIDFromOpenIDConnectProviderActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRemoveClientIDFromOpenIDConnectProviderVersionEnumTwoThousandAndTen0508 POSTRemoveClientIDFromOpenIDConnectProviderVersionEnum = "2010-05-08"
 )
 
+func (e POSTRemoveClientIDFromOpenIDConnectProviderVersionEnum) ToPointer() *POSTRemoveClientIDFromOpenIDConnectProviderVersionEnum {
+	return &e
+}
+
 func (e *POSTRemoveClientIDFromOpenIDConnectProviderVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTRemoveClientIDFromOpenIDConnectProviderVersionEnum(s)
+		*e = POSTRemoveClientIDFromOpenIDConnectProviderVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRemoveClientIDFromOpenIDConnectProviderVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRemoveClientIDFromOpenIDConnectProviderVersionEnum: %v", v)
 	}
 }
 

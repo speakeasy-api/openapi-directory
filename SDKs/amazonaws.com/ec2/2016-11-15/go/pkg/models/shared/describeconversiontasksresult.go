@@ -14,17 +14,21 @@ const (
 	DescribeConversionTasksResultConversionTasksImportInstancePlatformEnumWindows DescribeConversionTasksResultConversionTasksImportInstancePlatformEnum = "Windows"
 )
 
+func (e DescribeConversionTasksResultConversionTasksImportInstancePlatformEnum) ToPointer() *DescribeConversionTasksResultConversionTasksImportInstancePlatformEnum {
+	return &e
+}
+
 func (e *DescribeConversionTasksResultConversionTasksImportInstancePlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Windows":
-		*e = DescribeConversionTasksResultConversionTasksImportInstancePlatformEnum(s)
+		*e = DescribeConversionTasksResultConversionTasksImportInstancePlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeConversionTasksResultConversionTasksImportInstancePlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeConversionTasksResultConversionTasksImportInstancePlatformEnum: %v", v)
 	}
 }
 
@@ -37,21 +41,25 @@ const (
 	DescribeConversionTasksResultConversionTasksImportInstanceVolumesImageFormatEnumVhd  DescribeConversionTasksResultConversionTasksImportInstanceVolumesImageFormatEnum = "VHD"
 )
 
+func (e DescribeConversionTasksResultConversionTasksImportInstanceVolumesImageFormatEnum) ToPointer() *DescribeConversionTasksResultConversionTasksImportInstanceVolumesImageFormatEnum {
+	return &e
+}
+
 func (e *DescribeConversionTasksResultConversionTasksImportInstanceVolumesImageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VMDK":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "VHD":
-		*e = DescribeConversionTasksResultConversionTasksImportInstanceVolumesImageFormatEnum(s)
+		*e = DescribeConversionTasksResultConversionTasksImportInstanceVolumesImageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeConversionTasksResultConversionTasksImportInstanceVolumesImageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeConversionTasksResultConversionTasksImportInstanceVolumesImageFormatEnum: %v", v)
 	}
 }
 
@@ -97,21 +105,25 @@ const (
 	DescribeConversionTasksResultConversionTasksImportVolumeImageFormatEnumVhd  DescribeConversionTasksResultConversionTasksImportVolumeImageFormatEnum = "VHD"
 )
 
+func (e DescribeConversionTasksResultConversionTasksImportVolumeImageFormatEnum) ToPointer() *DescribeConversionTasksResultConversionTasksImportVolumeImageFormatEnum {
+	return &e
+}
+
 func (e *DescribeConversionTasksResultConversionTasksImportVolumeImageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VMDK":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "VHD":
-		*e = DescribeConversionTasksResultConversionTasksImportVolumeImageFormatEnum(s)
+		*e = DescribeConversionTasksResultConversionTasksImportVolumeImageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeConversionTasksResultConversionTasksImportVolumeImageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeConversionTasksResultConversionTasksImportVolumeImageFormatEnum: %v", v)
 	}
 }
 
@@ -148,12 +160,16 @@ const (
 	DescribeConversionTasksResultConversionTasksStateEnumCompleted  DescribeConversionTasksResultConversionTasksStateEnum = "completed"
 )
 
+func (e DescribeConversionTasksResultConversionTasksStateEnum) ToPointer() *DescribeConversionTasksResultConversionTasksStateEnum {
+	return &e
+}
+
 func (e *DescribeConversionTasksResultConversionTasksStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "cancelling":
@@ -161,10 +177,10 @@ func (e *DescribeConversionTasksResultConversionTasksStateEnum) UnmarshalJSON(da
 	case "cancelled":
 		fallthrough
 	case "completed":
-		*e = DescribeConversionTasksResultConversionTasksStateEnum(s)
+		*e = DescribeConversionTasksResultConversionTasksStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeConversionTasksResultConversionTasksStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeConversionTasksResultConversionTasksStateEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetWorkGroupXAmzTargetEnumAmazonAthenaGetWorkGroup GetWorkGroupXAmzTargetEnum = "AmazonAthena.GetWorkGroup"
 )
 
+func (e GetWorkGroupXAmzTargetEnum) ToPointer() *GetWorkGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetWorkGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.GetWorkGroup":
-		*e = GetWorkGroupXAmzTargetEnum(s)
+		*e = GetWorkGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkGroupXAmzTargetEnum: %v", v)
 	}
 }
 

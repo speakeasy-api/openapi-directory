@@ -23,19 +23,23 @@ const (
 	UpdateResolverRequestBodyKindEnumPipeline UpdateResolverRequestBodyKindEnum = "PIPELINE"
 )
 
+func (e UpdateResolverRequestBodyKindEnum) ToPointer() *UpdateResolverRequestBodyKindEnum {
+	return &e
+}
+
 func (e *UpdateResolverRequestBodyKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNIT":
 		fallthrough
 	case "PIPELINE":
-		*e = UpdateResolverRequestBodyKindEnum(s)
+		*e = UpdateResolverRequestBodyKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateResolverRequestBodyKindEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateResolverRequestBodyKindEnum: %v", v)
 	}
 }
 

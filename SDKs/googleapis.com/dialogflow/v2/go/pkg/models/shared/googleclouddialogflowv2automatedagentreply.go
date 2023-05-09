@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowV2AutomatedAgentReplyAutomatedAgentReplyTypeEnumFinal                              GoogleCloudDialogflowV2AutomatedAgentReplyAutomatedAgentReplyTypeEnum = "FINAL"
 )
 
+func (e GoogleCloudDialogflowV2AutomatedAgentReplyAutomatedAgentReplyTypeEnum) ToPointer() *GoogleCloudDialogflowV2AutomatedAgentReplyAutomatedAgentReplyTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2AutomatedAgentReplyAutomatedAgentReplyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTOMATED_AGENT_REPLY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PARTIAL":
 		fallthrough
 	case "FINAL":
-		*e = GoogleCloudDialogflowV2AutomatedAgentReplyAutomatedAgentReplyTypeEnum(s)
+		*e = GoogleCloudDialogflowV2AutomatedAgentReplyAutomatedAgentReplyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2AutomatedAgentReplyAutomatedAgentReplyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2AutomatedAgentReplyAutomatedAgentReplyTypeEnum: %v", v)
 	}
 }
 

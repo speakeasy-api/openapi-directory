@@ -15,20 +15,24 @@ const (
 	CostCategorySplitChargeMethodEnumEven         CostCategorySplitChargeMethodEnum = "EVEN"
 )
 
+func (e CostCategorySplitChargeMethodEnum) ToPointer() *CostCategorySplitChargeMethodEnum {
+	return &e
+}
+
 func (e *CostCategorySplitChargeMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIXED":
 		fallthrough
 	case "PROPORTIONAL":
 		fallthrough
 	case "EVEN":
-		*e = CostCategorySplitChargeMethodEnum(s)
+		*e = CostCategorySplitChargeMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CostCategorySplitChargeMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CostCategorySplitChargeMethodEnum: %v", v)
 	}
 }

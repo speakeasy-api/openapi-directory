@@ -21,12 +21,16 @@ const (
 	DocumentUploadStatusAttributesStatusEnumError      DocumentUploadStatusAttributesStatusEnum = "error"
 )
 
+func (e DocumentUploadStatusAttributesStatusEnum) ToPointer() *DocumentUploadStatusAttributesStatusEnum {
+	return &e
+}
+
 func (e *DocumentUploadStatusAttributesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "uploaded":
@@ -40,10 +44,10 @@ func (e *DocumentUploadStatusAttributesStatusEnum) UnmarshalJSON(data []byte) er
 	case "vbms":
 		fallthrough
 	case "error":
-		*e = DocumentUploadStatusAttributesStatusEnum(s)
+		*e = DocumentUploadStatusAttributesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentUploadStatusAttributesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentUploadStatusAttributesStatusEnum: %v", v)
 	}
 }
 

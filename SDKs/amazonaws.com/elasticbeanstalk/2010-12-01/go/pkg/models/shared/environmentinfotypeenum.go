@@ -14,18 +14,22 @@ const (
 	EnvironmentInfoTypeEnumBundle EnvironmentInfoTypeEnum = "bundle"
 )
 
+func (e EnvironmentInfoTypeEnum) ToPointer() *EnvironmentInfoTypeEnum {
+	return &e
+}
+
 func (e *EnvironmentInfoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tail":
 		fallthrough
 	case "bundle":
-		*e = EnvironmentInfoTypeEnum(s)
+		*e = EnvironmentInfoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentInfoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentInfoTypeEnum: %v", v)
 	}
 }

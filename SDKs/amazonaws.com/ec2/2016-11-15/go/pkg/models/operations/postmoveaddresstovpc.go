@@ -15,17 +15,21 @@ const (
 	POSTMoveAddressToVpcActionEnumMoveAddressToVpc POSTMoveAddressToVpcActionEnum = "MoveAddressToVpc"
 )
 
+func (e POSTMoveAddressToVpcActionEnum) ToPointer() *POSTMoveAddressToVpcActionEnum {
+	return &e
+}
+
 func (e *POSTMoveAddressToVpcActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MoveAddressToVpc":
-		*e = POSTMoveAddressToVpcActionEnum(s)
+		*e = POSTMoveAddressToVpcActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTMoveAddressToVpcActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTMoveAddressToVpcActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTMoveAddressToVpcVersionEnumTwoThousandAndSixteen1115 POSTMoveAddressToVpcVersionEnum = "2016-11-15"
 )
 
+func (e POSTMoveAddressToVpcVersionEnum) ToPointer() *POSTMoveAddressToVpcVersionEnum {
+	return &e
+}
+
 func (e *POSTMoveAddressToVpcVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTMoveAddressToVpcVersionEnum(s)
+		*e = POSTMoveAddressToVpcVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTMoveAddressToVpcVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTMoveAddressToVpcVersionEnum: %v", v)
 	}
 }
 

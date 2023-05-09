@@ -14,17 +14,21 @@ const (
 	DKLocalAccountIdentificationTypeEnumDkLocal DKLocalAccountIdentificationTypeEnum = "dkLocal"
 )
 
+func (e DKLocalAccountIdentificationTypeEnum) ToPointer() *DKLocalAccountIdentificationTypeEnum {
+	return &e
+}
+
 func (e *DKLocalAccountIdentificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dkLocal":
-		*e = DKLocalAccountIdentificationTypeEnum(s)
+		*e = DKLocalAccountIdentificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DKLocalAccountIdentificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DKLocalAccountIdentificationTypeEnum: %v", v)
 	}
 }
 

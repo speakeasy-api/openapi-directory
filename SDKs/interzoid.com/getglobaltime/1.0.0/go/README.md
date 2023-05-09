@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getglobalti
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetglobaltimeRequest{
+    ctx := context.Background()
+    res, err := s.CurrentGlobalTime.Getglobaltime(ctx, operations.GetglobaltimeRequest{
         License: "corrupti",
         Locale: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.CurrentGlobalTime.Getglobaltime(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### CurrentGlobalTime
+### [CurrentGlobalTime](docs/currentglobaltime/README.md)
 
-* `Getglobaltime` - Gets the current time for a global locale
+* [Getglobaltime](docs/currentglobaltime/README.md#getglobaltime) - Gets the current time for a global locale
 <!-- End SDK Available Operations -->
 
 ### Maturity

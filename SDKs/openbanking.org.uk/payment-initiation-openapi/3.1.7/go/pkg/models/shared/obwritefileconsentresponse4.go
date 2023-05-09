@@ -16,19 +16,23 @@ const (
 	OBWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnumSingle OBWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
+func (e OBWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum) ToPointer() *OBWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum {
+	return &e
+}
+
 func (e *OBWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Any":
 		fallthrough
 	case "Single":
-		*e = OBWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum(s)
+		*e = OBWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteFileConsentResponse4DataAuthorisationAuthorisationTypeEnum: %v", v)
 	}
 }
 
@@ -116,12 +120,16 @@ const (
 	OBWriteFileConsentResponse4DataStatusEnumRejected              OBWriteFileConsentResponse4DataStatusEnum = "Rejected"
 )
 
+func (e OBWriteFileConsentResponse4DataStatusEnum) ToPointer() *OBWriteFileConsentResponse4DataStatusEnum {
+	return &e
+}
+
 func (e *OBWriteFileConsentResponse4DataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authorised":
 		fallthrough
 	case "AwaitingAuthorisation":
@@ -131,10 +139,10 @@ func (e *OBWriteFileConsentResponse4DataStatusEnum) UnmarshalJSON(data []byte) e
 	case "Consumed":
 		fallthrough
 	case "Rejected":
-		*e = OBWriteFileConsentResponse4DataStatusEnum(s)
+		*e = OBWriteFileConsentResponse4DataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteFileConsentResponse4DataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteFileConsentResponse4DataStatusEnum: %v", v)
 	}
 }
 

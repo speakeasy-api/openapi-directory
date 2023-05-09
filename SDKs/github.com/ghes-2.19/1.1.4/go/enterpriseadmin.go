@@ -206,7 +206,10 @@ func (s *enterpriseAdmin) EnterpriseAdminCreateGlobalWebhook(ctx context.Context
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#create-an-impersonation-oauth-token - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminCreateImpersonationOAuthToken(ctx context.Context, request operations.EnterpriseAdminCreateImpersonationOAuthTokenRequest) (*operations.EnterpriseAdminCreateImpersonationOAuthTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{username}/authorizations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/users/{username}/authorizations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -480,7 +483,10 @@ func (s *enterpriseAdmin) EnterpriseAdminCreateUser(ctx context.Context, request
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#delete-a-global-webhook - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminDeleteGlobalWebhook(ctx context.Context, request operations.EnterpriseAdminDeleteGlobalWebhookRequest) (*operations.EnterpriseAdminDeleteGlobalWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/hooks/{hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/hooks/{hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -518,7 +524,10 @@ func (s *enterpriseAdmin) EnterpriseAdminDeleteGlobalWebhook(ctx context.Context
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#delete-an-impersonation-oauth-token - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminDeleteImpersonationOAuthToken(ctx context.Context, request operations.EnterpriseAdminDeleteImpersonationOAuthTokenRequest) (*operations.EnterpriseAdminDeleteImpersonationOAuthTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{username}/authorizations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/users/{username}/authorizations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -555,7 +564,10 @@ func (s *enterpriseAdmin) EnterpriseAdminDeleteImpersonationOAuthToken(ctx conte
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#delete-a-personal-access-token - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminDeletePersonalAccessToken(ctx context.Context, request operations.EnterpriseAdminDeletePersonalAccessTokenRequest) (*operations.EnterpriseAdminDeletePersonalAccessTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/tokens/{token_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/tokens/{token_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -598,7 +610,10 @@ func (s *enterpriseAdmin) EnterpriseAdminDeletePersonalAccessToken(ctx context.C
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#delete-a-pre-receive-environment - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminDeletePreReceiveEnvironment(ctx context.Context, request operations.EnterpriseAdminDeletePreReceiveEnvironmentRequest) (*operations.EnterpriseAdminDeletePreReceiveEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-environments/{pre_receive_environment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-environments/{pre_receive_environment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -644,7 +659,10 @@ func (s *enterpriseAdmin) EnterpriseAdminDeletePreReceiveEnvironment(ctx context
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#delete-a-pre-receive-hook - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminDeletePreReceiveHook(ctx context.Context, request operations.EnterpriseAdminDeletePreReceiveHookRequest) (*operations.EnterpriseAdminDeletePreReceiveHookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -680,7 +698,10 @@ func (s *enterpriseAdmin) EnterpriseAdminDeletePreReceiveHook(ctx context.Contex
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#delete-a-public-key - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminDeletePublicKey(ctx context.Context, request operations.EnterpriseAdminDeletePublicKeyRequest) (*operations.EnterpriseAdminDeletePublicKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/keys/{key_ids}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/keys/{key_ids}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -719,7 +740,10 @@ func (s *enterpriseAdmin) EnterpriseAdminDeletePublicKey(ctx context.Context, re
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#delete-a-user - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminDeleteUser(ctx context.Context, request operations.EnterpriseAdminDeleteUserRequest) (*operations.EnterpriseAdminDeleteUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/users/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -756,7 +780,10 @@ func (s *enterpriseAdmin) EnterpriseAdminDeleteUser(ctx context.Context, request
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#demote-a-site-administrator - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminDemoteSiteAdministrator(ctx context.Context, request operations.EnterpriseAdminDemoteSiteAdministratorRequest) (*operations.EnterpriseAdminDemoteSiteAdministratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/site_admin", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/site_admin", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1041,7 +1068,10 @@ func (s *enterpriseAdmin) EnterpriseAdminGetConfigurationStatus(ctx context.Cont
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#get-the-download-status-for-a-pre-receive-environment - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminGetDownloadStatusForPreReceiveEnvironment(ctx context.Context, request operations.EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentRequest) (*operations.EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-environments/{pre_receive_environment_id}/downloads/latest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-environments/{pre_receive_environment_id}/downloads/latest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1086,7 +1116,10 @@ func (s *enterpriseAdmin) EnterpriseAdminGetDownloadStatusForPreReceiveEnvironme
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#get-a-global-webhook - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminGetGlobalWebhook(ctx context.Context, request operations.EnterpriseAdminGetGlobalWebhookRequest) (*operations.EnterpriseAdminGetGlobalWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/hooks/{hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/hooks/{hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1449,7 +1482,10 @@ func (s *enterpriseAdmin) EnterpriseAdminGetPagesStats(ctx context.Context) (*op
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#get-a-pre-receive-environment - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminGetPreReceiveEnvironment(ctx context.Context, request operations.EnterpriseAdminGetPreReceiveEnvironmentRequest) (*operations.EnterpriseAdminGetPreReceiveEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-environments/{pre_receive_environment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-environments/{pre_receive_environment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1494,7 +1530,10 @@ func (s *enterpriseAdmin) EnterpriseAdminGetPreReceiveEnvironment(ctx context.Co
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#get-a-pre-receive-hook - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminGetPreReceiveHook(ctx context.Context, request operations.EnterpriseAdminGetPreReceiveHookRequest) (*operations.EnterpriseAdminGetPreReceiveHookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1539,7 +1578,10 @@ func (s *enterpriseAdmin) EnterpriseAdminGetPreReceiveHook(ctx context.Context, 
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#get-a-pre-receive-hook-for-an-organization - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminGetPreReceiveHookForOrg(ctx context.Context, request operations.EnterpriseAdminGetPreReceiveHookForOrgRequest) (*operations.EnterpriseAdminGetPreReceiveHookForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1584,7 +1626,10 @@ func (s *enterpriseAdmin) EnterpriseAdminGetPreReceiveHookForOrg(ctx context.Con
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#get-a-pre-receive-hook-for-a-repository - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminGetPreReceiveHookForRepo(ctx context.Context, request operations.EnterpriseAdminGetPreReceiveHookForRepoRequest) (*operations.EnterpriseAdminGetPreReceiveHookForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2013,7 +2058,10 @@ func (s *enterpriseAdmin) EnterpriseAdminListPreReceiveHooks(ctx context.Context
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#list-pre-receive-hooks-for-an-organization - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminListPreReceiveHooksForOrg(ctx context.Context, request operations.EnterpriseAdminListPreReceiveHooksForOrgRequest) (*operations.EnterpriseAdminListPreReceiveHooksForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/pre-receive-hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/pre-receive-hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2063,7 +2111,10 @@ func (s *enterpriseAdmin) EnterpriseAdminListPreReceiveHooksForOrg(ctx context.C
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#list-pre-receive-hooks-for-a-repository - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminListPreReceiveHooksForRepo(ctx context.Context, request operations.EnterpriseAdminListPreReceiveHooksForRepoRequest) (*operations.EnterpriseAdminListPreReceiveHooksForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pre-receive-hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pre-receive-hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2164,7 +2215,10 @@ func (s *enterpriseAdmin) EnterpriseAdminListPublicKeys(ctx context.Context, req
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#ping-a-global-webhook - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminPingGlobalWebhook(ctx context.Context, request operations.EnterpriseAdminPingGlobalWebhookRequest) (*operations.EnterpriseAdminPingGlobalWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/hooks/{hook_id}/pings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/hooks/{hook_id}/pings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2203,7 +2257,10 @@ func (s *enterpriseAdmin) EnterpriseAdminPingGlobalWebhook(ctx context.Context, 
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#promote-a-user-to-be-a-site-administrator - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminPromoteUserToBeSiteAdministrator(ctx context.Context, request operations.EnterpriseAdminPromoteUserToBeSiteAdministratorRequest) (*operations.EnterpriseAdminPromoteUserToBeSiteAdministratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/site_admin", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/site_admin", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2296,7 +2353,10 @@ func (s *enterpriseAdmin) EnterpriseAdminRemoveAuthorizedSSHKey(ctx context.Cont
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#remove-pre-receive-hook-enforcement-for-an-organization - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminRemovePreReceiveHookEnforcementForOrg(ctx context.Context, request operations.EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest) (*operations.EnterpriseAdminRemovePreReceiveHookEnforcementForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2344,7 +2404,10 @@ func (s *enterpriseAdmin) EnterpriseAdminRemovePreReceiveHookEnforcementForOrg(c
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#remove-pre-receive-hook-enforcement-for-a-repository - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminRemovePreReceiveHookEnforcementForRepo(ctx context.Context, request operations.EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest) (*operations.EnterpriseAdminRemovePreReceiveHookEnforcementForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2483,7 +2546,10 @@ func (s *enterpriseAdmin) EnterpriseAdminStartConfigurationProcess(ctx context.C
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#start-a-pre-receive-environment-download - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminStartPreReceiveEnvironmentDownload(ctx context.Context, request operations.EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest) (*operations.EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-environments/{pre_receive_environment_id}/downloads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-environments/{pre_receive_environment_id}/downloads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2543,7 +2609,10 @@ func (s *enterpriseAdmin) EnterpriseAdminStartPreReceiveEnvironmentDownload(ctx 
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#suspend-a-user - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminSuspendUser(ctx context.Context, request operations.EnterpriseAdminSuspendUserRequest) (*operations.EnterpriseAdminSuspendUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/suspended", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/suspended", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2587,7 +2656,10 @@ func (s *enterpriseAdmin) EnterpriseAdminSuspendUser(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#sync-ldap-mapping-for-a-team - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminSyncLdapMappingForTeam(ctx context.Context, request operations.EnterpriseAdminSyncLdapMappingForTeamRequest) (*operations.EnterpriseAdminSyncLdapMappingForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/ldap/teams/{team_id}/sync", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/ldap/teams/{team_id}/sync", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2633,7 +2705,10 @@ func (s *enterpriseAdmin) EnterpriseAdminSyncLdapMappingForTeam(ctx context.Cont
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#sync-ldap-mapping-for-a-user - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminSyncLdapMappingForUser(ctx context.Context, request operations.EnterpriseAdminSyncLdapMappingForUserRequest) (*operations.EnterpriseAdminSyncLdapMappingForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/ldap/users/{username}/sync", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/ldap/users/{username}/sync", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2679,7 +2754,10 @@ func (s *enterpriseAdmin) EnterpriseAdminSyncLdapMappingForUser(ctx context.Cont
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#unsuspend-a-user - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminUnsuspendUser(ctx context.Context, request operations.EnterpriseAdminUnsuspendUserRequest) (*operations.EnterpriseAdminUnsuspendUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/suspended", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/suspended", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2723,7 +2801,10 @@ func (s *enterpriseAdmin) EnterpriseAdminUnsuspendUser(ctx context.Context, requ
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#update-a-global-webhook - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminUpdateGlobalWebhook(ctx context.Context, request operations.EnterpriseAdminUpdateGlobalWebhookRequest) (*operations.EnterpriseAdminUpdateGlobalWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/hooks/{hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/hooks/{hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2780,7 +2861,10 @@ func (s *enterpriseAdmin) EnterpriseAdminUpdateGlobalWebhook(ctx context.Context
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#update-ldap-mapping-for-a-team - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminUpdateLdapMappingForTeam(ctx context.Context, request operations.EnterpriseAdminUpdateLdapMappingForTeamRequest) (*operations.EnterpriseAdminUpdateLdapMappingForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/ldap/teams/{team_id}/mapping", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/ldap/teams/{team_id}/mapping", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2832,7 +2916,10 @@ func (s *enterpriseAdmin) EnterpriseAdminUpdateLdapMappingForTeam(ctx context.Co
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#update-ldap-mapping-for-a-user - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminUpdateLdapMappingForUser(ctx context.Context, request operations.EnterpriseAdminUpdateLdapMappingForUserRequest) (*operations.EnterpriseAdminUpdateLdapMappingForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/ldap/users/{username}/mapping", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/ldap/users/{username}/mapping", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2884,7 +2971,10 @@ func (s *enterpriseAdmin) EnterpriseAdminUpdateLdapMappingForUser(ctx context.Co
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#update-an-organization-name - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminUpdateOrgName(ctx context.Context, request operations.EnterpriseAdminUpdateOrgNameRequest) (*operations.EnterpriseAdminUpdateOrgNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/organizations/{org}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/organizations/{org}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2940,7 +3030,10 @@ func (s *enterpriseAdmin) EnterpriseAdminUpdateOrgName(ctx context.Context, requ
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#update-a-pre-receive-environment - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminUpdatePreReceiveEnvironment(ctx context.Context, request operations.EnterpriseAdminUpdatePreReceiveEnvironmentRequest) (*operations.EnterpriseAdminUpdatePreReceiveEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-environments/{pre_receive_environment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-environments/{pre_receive_environment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3002,7 +3095,10 @@ func (s *enterpriseAdmin) EnterpriseAdminUpdatePreReceiveEnvironment(ctx context
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#update-a-pre-receive-hook - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminUpdatePreReceiveHook(ctx context.Context, request operations.EnterpriseAdminUpdatePreReceiveHookRequest) (*operations.EnterpriseAdminUpdatePreReceiveHookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3055,7 +3151,10 @@ func (s *enterpriseAdmin) EnterpriseAdminUpdatePreReceiveHook(ctx context.Contex
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#update-pre-receive-hook-enforcement-for-an-organization - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminUpdatePreReceiveHookEnforcementForOrg(ctx context.Context, request operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest) (*operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3108,7 +3207,10 @@ func (s *enterpriseAdmin) EnterpriseAdminUpdatePreReceiveHookEnforcementForOrg(c
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#update-pre-receive-hook-enforcement-for-a-repository - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminUpdatePreReceiveHookEnforcementForRepo(ctx context.Context, request operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequest) (*operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3160,7 +3262,10 @@ func (s *enterpriseAdmin) EnterpriseAdminUpdatePreReceiveHookEnforcementForRepo(
 // https://docs.github.com/enterprise-server@2.19/rest/reference/enterprise-admin#update-the-username-for-a-user - API method documentation
 func (s *enterpriseAdmin) EnterpriseAdminUpdateUsernameForUser(ctx context.Context, request operations.EnterpriseAdminUpdateUsernameForUserRequest) (*operations.EnterpriseAdminUpdateUsernameForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/users/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/users/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

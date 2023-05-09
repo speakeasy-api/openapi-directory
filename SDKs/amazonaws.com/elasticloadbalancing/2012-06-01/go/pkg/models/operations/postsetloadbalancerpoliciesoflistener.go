@@ -15,17 +15,21 @@ const (
 	POSTSetLoadBalancerPoliciesOfListenerActionEnumSetLoadBalancerPoliciesOfListener POSTSetLoadBalancerPoliciesOfListenerActionEnum = "SetLoadBalancerPoliciesOfListener"
 )
 
+func (e POSTSetLoadBalancerPoliciesOfListenerActionEnum) ToPointer() *POSTSetLoadBalancerPoliciesOfListenerActionEnum {
+	return &e
+}
+
 func (e *POSTSetLoadBalancerPoliciesOfListenerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetLoadBalancerPoliciesOfListener":
-		*e = POSTSetLoadBalancerPoliciesOfListenerActionEnum(s)
+		*e = POSTSetLoadBalancerPoliciesOfListenerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetLoadBalancerPoliciesOfListenerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetLoadBalancerPoliciesOfListenerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSetLoadBalancerPoliciesOfListenerVersionEnumTwoThousandAndTwelve0601 POSTSetLoadBalancerPoliciesOfListenerVersionEnum = "2012-06-01"
 )
 
+func (e POSTSetLoadBalancerPoliciesOfListenerVersionEnum) ToPointer() *POSTSetLoadBalancerPoliciesOfListenerVersionEnum {
+	return &e
+}
+
 func (e *POSTSetLoadBalancerPoliciesOfListenerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = POSTSetLoadBalancerPoliciesOfListenerVersionEnum(s)
+		*e = POSTSetLoadBalancerPoliciesOfListenerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetLoadBalancerPoliciesOfListenerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetLoadBalancerPoliciesOfListenerVersionEnum: %v", v)
 	}
 }
 

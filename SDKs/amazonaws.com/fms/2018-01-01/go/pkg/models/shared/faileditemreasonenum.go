@@ -18,12 +18,16 @@ const (
 	FailedItemReasonEnumNotValidAccountID    FailedItemReasonEnum = "NOT_VALID_ACCOUNT_ID"
 )
 
+func (e FailedItemReasonEnum) ToPointer() *FailedItemReasonEnum {
+	return &e
+}
+
 func (e *FailedItemReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_VALID_ARN":
 		fallthrough
 	case "NOT_VALID_PARTITION":
@@ -35,9 +39,9 @@ func (e *FailedItemReasonEnum) UnmarshalJSON(data []byte) error {
 	case "NOT_VALID_RESOURCE_TYPE":
 		fallthrough
 	case "NOT_VALID_ACCOUNT_ID":
-		*e = FailedItemReasonEnum(s)
+		*e = FailedItemReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailedItemReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for FailedItemReasonEnum: %v", v)
 	}
 }

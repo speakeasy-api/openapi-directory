@@ -15,17 +15,21 @@ const (
 	POSTBatchDescribeTypeConfigurationsActionEnumBatchDescribeTypeConfigurations POSTBatchDescribeTypeConfigurationsActionEnum = "BatchDescribeTypeConfigurations"
 )
 
+func (e POSTBatchDescribeTypeConfigurationsActionEnum) ToPointer() *POSTBatchDescribeTypeConfigurationsActionEnum {
+	return &e
+}
+
 func (e *POSTBatchDescribeTypeConfigurationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BatchDescribeTypeConfigurations":
-		*e = POSTBatchDescribeTypeConfigurationsActionEnum(s)
+		*e = POSTBatchDescribeTypeConfigurationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTBatchDescribeTypeConfigurationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTBatchDescribeTypeConfigurationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTBatchDescribeTypeConfigurationsVersionEnumTwoThousandAndTen0515 POSTBatchDescribeTypeConfigurationsVersionEnum = "2010-05-15"
 )
 
+func (e POSTBatchDescribeTypeConfigurationsVersionEnum) ToPointer() *POSTBatchDescribeTypeConfigurationsVersionEnum {
+	return &e
+}
+
 func (e *POSTBatchDescribeTypeConfigurationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTBatchDescribeTypeConfigurationsVersionEnum(s)
+		*e = POSTBatchDescribeTypeConfigurationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTBatchDescribeTypeConfigurationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTBatchDescribeTypeConfigurationsVersionEnum: %v", v)
 	}
 }
 

@@ -13,18 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/apisetu.gov.in/epramanhp/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AgcerRequestBody{
+    ctx := context.Background()
+    res, err := s.APIs.Agcer(ctx, operations.AgcerRequestBody{
         CertificateParameters: &operations.AgcerRequestBodyCertificateParameters{
             Name: "4 Characters of Name",
             RefNo: "XXXX/XX/2017",
@@ -33,47 +35,44 @@ func main() {
             Consent: shared.ConsentArtifactSchemaConsent{
                 ConsentID: "ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba",
                 Data: shared.ConsentArtifactSchemaConsentData{
-                    ID: "corrupti",
+                    ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
                 },
                 DataConsumer: shared.ConsentArtifactSchemaConsentDataConsumer{
-                    ID: "provident",
+                    ID: "a05dfc2d-df7c-4c78-8a1b-a928fc816742",
                 },
                 DataProvider: shared.ConsentArtifactSchemaConsentDataProvider{
-                    ID: "distinctio",
+                    ID: "cb739205-9293-496f-aa75-96eb10faaa23",
                 },
                 Permission: shared.ConsentArtifactSchemaConsentPermission{
-                    Access: "quibusdam",
+                    Access: "corporis",
                     DateRange: shared.ConsentArtifactSchemaConsentPermissionDateRange{
-                        From: "2021-04-14T16:47:33.722Z",
-                        To: "2021-04-22T12:08:58.275Z",
+                        From: types.MustTimeFromString("2022-04-01T23:59:21.675Z"),
+                        To: types.MustTimeFromString("2022-05-24T03:24:11.703Z"),
                     },
                     Frequency: shared.ConsentArtifactSchemaConsentPermissionFrequency{
-                        Repeats: 4236.55,
-                        Unit: "error",
-                        Value: 6458.94,
+                        Repeats: 3637.11,
+                        Unit: "minima",
+                        Value: 5701.97,
                     },
                 },
                 Purpose: shared.ConsentArtifactSchemaConsentPurpose{
-                    Description: "suscipit",
+                    Description: "accusantium",
                 },
-                Timestamp: "2022-09-14T09:35:47.986Z",
+                Timestamp: types.MustTimeFromString("2022-05-14T11:45:33.094Z"),
                 User: shared.ConsentArtifactSchemaConsentUser{
-                    Email: "Anahi38@hotmail.com",
-                    IDNumber: "molestiae",
-                    IDType: "minus",
-                    Mobile: "645-598-0306 x03897",
+                    Email: "Veronica.Brakus@hotmail.com",
+                    IDNumber: "culpa",
+                    IDType: "consequuntur",
+                    Mobile: "752.544.2613 x16631",
                 },
             },
             Signature: shared.ConsentArtifactSchemaSignature{
-                Signature: "odit",
+                Signature: "quo",
             },
         },
-        Format: "pdf",
+        Format: operations.AgcerRequestBodyFormatEnumPdf,
         TxnID: "f7f1469c-29b0-4325-9dfc-c567200a70f7",
-    }
-
-    ctx := context.Background()
-    res, err := s.APIs.Agcer(ctx, req, operations.AgcerSecurity{
+    }, operations.AgcerSecurity{
         APIKey: "YOUR_API_KEY_HERE",
         ClientID: "YOUR_API_KEY_HERE",
     })
@@ -92,22 +91,22 @@ func main() {
 ## Available Resources and Operations
 
 
-### APIs
+### [APIs](docs/apis/README.md)
 
-* `Agcer` - Agriculture/ Agriculturist Certificate
-* `Bacer` - Backward Area Certificate
-* `Bhcer` - Bonafide Certificate
-* `Chcer` - Character Certificate
-* `Dccer` - Dogra Class Certificate
-* `Ffcer` - Freedom Fighter Certificate
-* `Incer` - Income Certificate
-* `Lhcer` - Legal Heir Certificate
-* `Mncer` - Minority Certificate
-* `Obcer` - OBC Certificate
-* `Psprt` - Passport/ Passport Verification
-* `Racer` - Rural Area Certificate
-* `Rmcer` - Marriage Certificate
-* `Shcer` - SC/ST  Certificate
+* [Agcer](docs/apis/README.md#agcer) - Agriculture/ Agriculturist Certificate
+* [Bacer](docs/apis/README.md#bacer) - Backward Area Certificate
+* [Bhcer](docs/apis/README.md#bhcer) - Bonafide Certificate
+* [Chcer](docs/apis/README.md#chcer) - Character Certificate
+* [Dccer](docs/apis/README.md#dccer) - Dogra Class Certificate
+* [Ffcer](docs/apis/README.md#ffcer) - Freedom Fighter Certificate
+* [Incer](docs/apis/README.md#incer) - Income Certificate
+* [Lhcer](docs/apis/README.md#lhcer) - Legal Heir Certificate
+* [Mncer](docs/apis/README.md#mncer) - Minority Certificate
+* [Obcer](docs/apis/README.md#obcer) - OBC Certificate
+* [Psprt](docs/apis/README.md#psprt) - Passport/ Passport Verification
+* [Racer](docs/apis/README.md#racer) - Rural Area Certificate
+* [Rmcer](docs/apis/README.md#rmcer) - Marriage Certificate
+* [Shcer](docs/apis/README.md#shcer) - SC/ST  Certificate
 <!-- End SDK Available Operations -->
 
 ### Maturity

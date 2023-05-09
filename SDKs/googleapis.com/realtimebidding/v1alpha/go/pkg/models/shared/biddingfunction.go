@@ -16,21 +16,25 @@ const (
 	BiddingFunctionStateEnumArchived         BiddingFunctionStateEnum = "ARCHIVED"
 )
 
+func (e BiddingFunctionStateEnum) ToPointer() *BiddingFunctionStateEnum {
+	return &e
+}
+
 func (e *BiddingFunctionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "ARCHIVED":
-		*e = BiddingFunctionStateEnum(s)
+		*e = BiddingFunctionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BiddingFunctionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BiddingFunctionStateEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	BiddingFunctionTypeEnumFledgeBiddingFunction               BiddingFunctionTypeEnum = "FLEDGE_BIDDING_FUNCTION"
 )
 
+func (e BiddingFunctionTypeEnum) ToPointer() *BiddingFunctionTypeEnum {
+	return &e
+}
+
 func (e *BiddingFunctionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FUNCTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TURTLEDOVE_SIMULATION_BIDDING_FUNCTION":
 		fallthrough
 	case "FLEDGE_BIDDING_FUNCTION":
-		*e = BiddingFunctionTypeEnum(s)
+		*e = BiddingFunctionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BiddingFunctionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BiddingFunctionTypeEnum: %v", v)
 	}
 }
 

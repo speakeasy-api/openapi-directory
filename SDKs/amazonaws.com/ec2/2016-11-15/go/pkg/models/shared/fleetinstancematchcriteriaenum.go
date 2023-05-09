@@ -13,16 +13,20 @@ const (
 	FleetInstanceMatchCriteriaEnumOpen FleetInstanceMatchCriteriaEnum = "open"
 )
 
+func (e FleetInstanceMatchCriteriaEnum) ToPointer() *FleetInstanceMatchCriteriaEnum {
+	return &e
+}
+
 func (e *FleetInstanceMatchCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
-		*e = FleetInstanceMatchCriteriaEnum(s)
+		*e = FleetInstanceMatchCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FleetInstanceMatchCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for FleetInstanceMatchCriteriaEnum: %v", v)
 	}
 }

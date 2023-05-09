@@ -15,17 +15,21 @@ const (
 	POSTUnassignPrivateIPAddressesActionEnumUnassignPrivateIPAddresses POSTUnassignPrivateIPAddressesActionEnum = "UnassignPrivateIpAddresses"
 )
 
+func (e POSTUnassignPrivateIPAddressesActionEnum) ToPointer() *POSTUnassignPrivateIPAddressesActionEnum {
+	return &e
+}
+
 func (e *POSTUnassignPrivateIPAddressesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UnassignPrivateIpAddresses":
-		*e = POSTUnassignPrivateIPAddressesActionEnum(s)
+		*e = POSTUnassignPrivateIPAddressesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUnassignPrivateIPAddressesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUnassignPrivateIPAddressesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUnassignPrivateIPAddressesVersionEnumTwoThousandAndSixteen1115 POSTUnassignPrivateIPAddressesVersionEnum = "2016-11-15"
 )
 
+func (e POSTUnassignPrivateIPAddressesVersionEnum) ToPointer() *POSTUnassignPrivateIPAddressesVersionEnum {
+	return &e
+}
+
 func (e *POSTUnassignPrivateIPAddressesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTUnassignPrivateIPAddressesVersionEnum(s)
+		*e = POSTUnassignPrivateIPAddressesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUnassignPrivateIPAddressesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUnassignPrivateIPAddressesVersionEnum: %v", v)
 	}
 }
 

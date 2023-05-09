@@ -16,21 +16,25 @@ const (
 	LoadBalancerBackendHealthCheckFirewallStateEnumMisconfigured                       LoadBalancerBackendHealthCheckFirewallStateEnum = "MISCONFIGURED"
 )
 
+func (e LoadBalancerBackendHealthCheckFirewallStateEnum) ToPointer() *LoadBalancerBackendHealthCheckFirewallStateEnum {
+	return &e
+}
+
 func (e *LoadBalancerBackendHealthCheckFirewallStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEALTH_CHECK_FIREWALL_STATE_UNSPECIFIED":
 		fallthrough
 	case "CONFIGURED":
 		fallthrough
 	case "MISCONFIGURED":
-		*e = LoadBalancerBackendHealthCheckFirewallStateEnum(s)
+		*e = LoadBalancerBackendHealthCheckFirewallStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoadBalancerBackendHealthCheckFirewallStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LoadBalancerBackendHealthCheckFirewallStateEnum: %v", v)
 	}
 }
 

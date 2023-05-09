@@ -14,17 +14,21 @@ const (
 	HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnumAcknowledged HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum = "ACKNOWLEDGED"
 )
 
+func (e HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum) ToPointer() *HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum {
+	return &e
+}
+
 func (e *HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACKNOWLEDGED":
-		*e = HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum(s)
+		*e = HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HIPHealthInformationRequestAcknowledgementHiRequestSessionStatusEnum: %v", v)
 	}
 }
 

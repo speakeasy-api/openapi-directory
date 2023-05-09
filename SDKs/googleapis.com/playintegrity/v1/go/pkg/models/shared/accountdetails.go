@@ -17,12 +17,16 @@ const (
 	AccountDetailsAppLicensingVerdictEnumUnevaluated AccountDetailsAppLicensingVerdictEnum = "UNEVALUATED"
 )
 
+func (e AccountDetailsAppLicensingVerdictEnum) ToPointer() *AccountDetailsAppLicensingVerdictEnum {
+	return &e
+}
+
 func (e *AccountDetailsAppLicensingVerdictEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "LICENSED":
@@ -30,10 +34,10 @@ func (e *AccountDetailsAppLicensingVerdictEnum) UnmarshalJSON(data []byte) error
 	case "UNLICENSED":
 		fallthrough
 	case "UNEVALUATED":
-		*e = AccountDetailsAppLicensingVerdictEnum(s)
+		*e = AccountDetailsAppLicensingVerdictEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountDetailsAppLicensingVerdictEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountDetailsAppLicensingVerdictEnum: %v", v)
 	}
 }
 

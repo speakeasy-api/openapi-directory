@@ -16,12 +16,16 @@ const (
 	VpcEndpointStatusEnumFailed   VpcEndpointStatusEnum = "FAILED"
 )
 
+func (e VpcEndpointStatusEnum) ToPointer() *VpcEndpointStatusEnum {
+	return &e
+}
+
 func (e *VpcEndpointStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "DELETING":
@@ -29,9 +33,9 @@ func (e *VpcEndpointStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE":
 		fallthrough
 	case "FAILED":
-		*e = VpcEndpointStatusEnum(s)
+		*e = VpcEndpointStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VpcEndpointStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for VpcEndpointStatusEnum: %v", v)
 	}
 }

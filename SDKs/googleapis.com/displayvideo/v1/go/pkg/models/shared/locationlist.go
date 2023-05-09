@@ -16,21 +16,25 @@ const (
 	LocationListLocationTypeEnumTargetingLocationTypeRegional    LocationListLocationTypeEnum = "TARGETING_LOCATION_TYPE_REGIONAL"
 )
 
+func (e LocationListLocationTypeEnum) ToPointer() *LocationListLocationTypeEnum {
+	return &e
+}
+
 func (e *LocationListLocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGETING_LOCATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TARGETING_LOCATION_TYPE_PROXIMITY":
 		fallthrough
 	case "TARGETING_LOCATION_TYPE_REGIONAL":
-		*e = LocationListLocationTypeEnum(s)
+		*e = LocationListLocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocationListLocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LocationListLocationTypeEnum: %v", v)
 	}
 }
 

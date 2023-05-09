@@ -16,17 +16,21 @@ const (
 	DeleteSubnetGroupXAmzTargetEnumAmazonDaxv3DeleteSubnetGroup DeleteSubnetGroupXAmzTargetEnum = "AmazonDAXV3.DeleteSubnetGroup"
 )
 
+func (e DeleteSubnetGroupXAmzTargetEnum) ToPointer() *DeleteSubnetGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteSubnetGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDAXV3.DeleteSubnetGroup":
-		*e = DeleteSubnetGroupXAmzTargetEnum(s)
+		*e = DeleteSubnetGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSubnetGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSubnetGroupXAmzTargetEnum: %v", v)
 	}
 }
 

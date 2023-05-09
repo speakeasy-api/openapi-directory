@@ -17,14 +17,19 @@ const (
 	EffectiveDeploymentExecutionStatusEnumTimedOut   EffectiveDeploymentExecutionStatusEnum = "TIMED_OUT"
 	EffectiveDeploymentExecutionStatusEnumCanceled   EffectiveDeploymentExecutionStatusEnum = "CANCELED"
 	EffectiveDeploymentExecutionStatusEnumRejected   EffectiveDeploymentExecutionStatusEnum = "REJECTED"
+	EffectiveDeploymentExecutionStatusEnumSucceeded  EffectiveDeploymentExecutionStatusEnum = "SUCCEEDED"
 )
 
+func (e EffectiveDeploymentExecutionStatusEnum) ToPointer() *EffectiveDeploymentExecutionStatusEnum {
+	return &e
+}
+
 func (e *EffectiveDeploymentExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "QUEUED":
@@ -38,9 +43,11 @@ func (e *EffectiveDeploymentExecutionStatusEnum) UnmarshalJSON(data []byte) erro
 	case "CANCELED":
 		fallthrough
 	case "REJECTED":
-		*e = EffectiveDeploymentExecutionStatusEnum(s)
+		fallthrough
+	case "SUCCEEDED":
+		*e = EffectiveDeploymentExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EffectiveDeploymentExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EffectiveDeploymentExecutionStatusEnum: %v", v)
 	}
 }

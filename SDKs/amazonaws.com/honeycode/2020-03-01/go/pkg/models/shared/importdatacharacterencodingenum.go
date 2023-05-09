@@ -18,12 +18,16 @@ const (
 	ImportDataCharacterEncodingEnumUtf16    ImportDataCharacterEncodingEnum = "UTF-16"
 )
 
+func (e ImportDataCharacterEncodingEnum) ToPointer() *ImportDataCharacterEncodingEnum {
+	return &e
+}
+
 func (e *ImportDataCharacterEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UTF-8":
 		fallthrough
 	case "US-ASCII":
@@ -35,9 +39,9 @@ func (e *ImportDataCharacterEncodingEnum) UnmarshalJSON(data []byte) error {
 	case "UTF-16LE":
 		fallthrough
 	case "UTF-16":
-		*e = ImportDataCharacterEncodingEnum(s)
+		*e = ImportDataCharacterEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportDataCharacterEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportDataCharacterEncodingEnum: %v", v)
 	}
 }

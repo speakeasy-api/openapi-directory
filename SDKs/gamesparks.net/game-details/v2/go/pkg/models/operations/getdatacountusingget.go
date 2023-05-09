@@ -21,12 +21,16 @@ const (
 	GETDataCountUsingGETQueryNameEnumAverageSessionDuration  GETDataCountUsingGETQueryNameEnum = "averageSessionDuration"
 )
 
+func (e GETDataCountUsingGETQueryNameEnum) ToPointer() *GETDataCountUsingGETQueryNameEnum {
+	return &e
+}
+
 func (e *GETDataCountUsingGETQueryNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "activeUsersNow":
 		fallthrough
 	case "dailyActiveUsers":
@@ -38,10 +42,10 @@ func (e *GETDataCountUsingGETQueryNameEnum) UnmarshalJSON(data []byte) error {
 	case "monthlyActiveUsers":
 		fallthrough
 	case "averageSessionDuration":
-		*e = GETDataCountUsingGETQueryNameEnum(s)
+		*e = GETDataCountUsingGETQueryNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDataCountUsingGETQueryNameEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDataCountUsingGETQueryNameEnum: %v", v)
 	}
 }
 
@@ -53,19 +57,23 @@ const (
 	GETDataCountUsingGETStageEnumPreview GETDataCountUsingGETStageEnum = "PREVIEW"
 )
 
+func (e GETDataCountUsingGETStageEnum) ToPointer() *GETDataCountUsingGETStageEnum {
+	return &e
+}
+
 func (e *GETDataCountUsingGETStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "PREVIEW":
-		*e = GETDataCountUsingGETStageEnum(s)
+		*e = GETDataCountUsingGETStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDataCountUsingGETStageEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDataCountUsingGETStageEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTUpdateServiceSpecificCredentialActionEnumUpdateServiceSpecificCredential POSTUpdateServiceSpecificCredentialActionEnum = "UpdateServiceSpecificCredential"
 )
 
+func (e POSTUpdateServiceSpecificCredentialActionEnum) ToPointer() *POSTUpdateServiceSpecificCredentialActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateServiceSpecificCredentialActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateServiceSpecificCredential":
-		*e = POSTUpdateServiceSpecificCredentialActionEnum(s)
+		*e = POSTUpdateServiceSpecificCredentialActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateServiceSpecificCredentialActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateServiceSpecificCredentialActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateServiceSpecificCredentialVersionEnumTwoThousandAndTen0508 POSTUpdateServiceSpecificCredentialVersionEnum = "2010-05-08"
 )
 
+func (e POSTUpdateServiceSpecificCredentialVersionEnum) ToPointer() *POSTUpdateServiceSpecificCredentialVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateServiceSpecificCredentialVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTUpdateServiceSpecificCredentialVersionEnum(s)
+		*e = POSTUpdateServiceSpecificCredentialVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateServiceSpecificCredentialVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateServiceSpecificCredentialVersionEnum: %v", v)
 	}
 }
 

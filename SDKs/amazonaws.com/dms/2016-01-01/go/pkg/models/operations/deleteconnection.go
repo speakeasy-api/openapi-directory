@@ -16,17 +16,21 @@ const (
 	DeleteConnectionXAmzTargetEnumAmazonDmSv20160101DeleteConnection DeleteConnectionXAmzTargetEnum = "AmazonDMSv20160101.DeleteConnection"
 )
 
+func (e DeleteConnectionXAmzTargetEnum) ToPointer() *DeleteConnectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteConnectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.DeleteConnection":
-		*e = DeleteConnectionXAmzTargetEnum(s)
+		*e = DeleteConnectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteConnectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteConnectionXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	MediaFileDeliveryTypeEnumDownload    MediaFileDeliveryTypeEnum = "Download"
 )
 
+func (e MediaFileDeliveryTypeEnum) ToPointer() *MediaFileDeliveryTypeEnum {
+	return &e
+}
+
 func (e *MediaFileDeliveryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Stream":
 		fallthrough
 	case "Progressive":
 		fallthrough
 	case "Download":
-		*e = MediaFileDeliveryTypeEnum(s)
+		*e = MediaFileDeliveryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaFileDeliveryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaFileDeliveryTypeEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	MediaFileResolutionEnum1Unknown  MediaFileResolutionEnum1 = "Unknown"
 )
 
+func (e MediaFileResolutionEnum1) ToPointer() *MediaFileResolutionEnum1 {
+	return &e
+}
+
 func (e *MediaFileResolutionEnum1) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SD":
 		fallthrough
 	case "HD-720":
@@ -63,10 +71,10 @@ func (e *MediaFileResolutionEnum1) UnmarshalJSON(data []byte) error {
 	case "External":
 		fallthrough
 	case "Unknown":
-		*e = MediaFileResolutionEnum1(s)
+		*e = MediaFileResolutionEnum1(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaFileResolutionEnum1: %s", s)
+		return fmt.Errorf("invalid value for MediaFileResolutionEnum1: %v", v)
 	}
 }
 

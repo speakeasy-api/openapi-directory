@@ -15,17 +15,21 @@ const (
 	POSTUpdateSAMLProviderActionEnumUpdateSamlProvider POSTUpdateSAMLProviderActionEnum = "UpdateSAMLProvider"
 )
 
+func (e POSTUpdateSAMLProviderActionEnum) ToPointer() *POSTUpdateSAMLProviderActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateSAMLProviderActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateSAMLProvider":
-		*e = POSTUpdateSAMLProviderActionEnum(s)
+		*e = POSTUpdateSAMLProviderActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateSAMLProviderActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateSAMLProviderActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateSAMLProviderVersionEnumTwoThousandAndTen0508 POSTUpdateSAMLProviderVersionEnum = "2010-05-08"
 )
 
+func (e POSTUpdateSAMLProviderVersionEnum) ToPointer() *POSTUpdateSAMLProviderVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateSAMLProviderVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTUpdateSAMLProviderVersionEnum(s)
+		*e = POSTUpdateSAMLProviderVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateSAMLProviderVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateSAMLProviderVersionEnum: %v", v)
 	}
 }
 

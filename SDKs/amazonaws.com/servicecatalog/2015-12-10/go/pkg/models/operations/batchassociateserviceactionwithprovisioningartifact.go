@@ -16,17 +16,21 @@ const (
 	BatchAssociateServiceActionWithProvisioningArtifactXAmzTargetEnumAws242ServiceCatalogServiceBatchAssociateServiceActionWithProvisioningArtifact BatchAssociateServiceActionWithProvisioningArtifactXAmzTargetEnum = "AWS242ServiceCatalogService.BatchAssociateServiceActionWithProvisioningArtifact"
 )
 
+func (e BatchAssociateServiceActionWithProvisioningArtifactXAmzTargetEnum) ToPointer() *BatchAssociateServiceActionWithProvisioningArtifactXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchAssociateServiceActionWithProvisioningArtifactXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.BatchAssociateServiceActionWithProvisioningArtifact":
-		*e = BatchAssociateServiceActionWithProvisioningArtifactXAmzTargetEnum(s)
+		*e = BatchAssociateServiceActionWithProvisioningArtifactXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchAssociateServiceActionWithProvisioningArtifactXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchAssociateServiceActionWithProvisioningArtifactXAmzTargetEnum: %v", v)
 	}
 }
 

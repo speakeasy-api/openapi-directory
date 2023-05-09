@@ -25,12 +25,16 @@ const (
 	DailyMetricTimeSeriesDailyMetricEnumBusinessFoodMenuClicks           DailyMetricTimeSeriesDailyMetricEnum = "BUSINESS_FOOD_MENU_CLICKS"
 )
 
+func (e DailyMetricTimeSeriesDailyMetricEnum) ToPointer() *DailyMetricTimeSeriesDailyMetricEnum {
+	return &e
+}
+
 func (e *DailyMetricTimeSeriesDailyMetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAILY_METRIC_UNKNOWN":
 		fallthrough
 	case "BUSINESS_IMPRESSIONS_DESKTOP_MAPS":
@@ -54,10 +58,10 @@ func (e *DailyMetricTimeSeriesDailyMetricEnum) UnmarshalJSON(data []byte) error 
 	case "BUSINESS_FOOD_ORDERS":
 		fallthrough
 	case "BUSINESS_FOOD_MENU_CLICKS":
-		*e = DailyMetricTimeSeriesDailyMetricEnum(s)
+		*e = DailyMetricTimeSeriesDailyMetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DailyMetricTimeSeriesDailyMetricEnum: %s", s)
+		return fmt.Errorf("invalid value for DailyMetricTimeSeriesDailyMetricEnum: %v", v)
 	}
 }
 

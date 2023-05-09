@@ -16,12 +16,16 @@ const (
 	HdfsDataTransferProtectionEnumPrivacy        HdfsDataTransferProtectionEnum = "PRIVACY"
 )
 
+func (e HdfsDataTransferProtectionEnum) ToPointer() *HdfsDataTransferProtectionEnum {
+	return &e
+}
+
 func (e *HdfsDataTransferProtectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "AUTHENTICATION":
@@ -29,9 +33,9 @@ func (e *HdfsDataTransferProtectionEnum) UnmarshalJSON(data []byte) error {
 	case "INTEGRITY":
 		fallthrough
 	case "PRIVACY":
-		*e = HdfsDataTransferProtectionEnum(s)
+		*e = HdfsDataTransferProtectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HdfsDataTransferProtectionEnum: %s", s)
+		return fmt.Errorf("invalid value for HdfsDataTransferProtectionEnum: %v", v)
 	}
 }

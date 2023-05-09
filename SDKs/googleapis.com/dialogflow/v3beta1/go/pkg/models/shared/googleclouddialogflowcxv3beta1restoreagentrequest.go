@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowCxV3beta1RestoreAgentRequestRestoreOptionEnumFallback                 GoogleCloudDialogflowCxV3beta1RestoreAgentRequestRestoreOptionEnum = "FALLBACK"
 )
 
+func (e GoogleCloudDialogflowCxV3beta1RestoreAgentRequestRestoreOptionEnum) ToPointer() *GoogleCloudDialogflowCxV3beta1RestoreAgentRequestRestoreOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3beta1RestoreAgentRequestRestoreOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESTORE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "KEEP":
 		fallthrough
 	case "FALLBACK":
-		*e = GoogleCloudDialogflowCxV3beta1RestoreAgentRequestRestoreOptionEnum(s)
+		*e = GoogleCloudDialogflowCxV3beta1RestoreAgentRequestRestoreOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1RestoreAgentRequestRestoreOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1RestoreAgentRequestRestoreOptionEnum: %v", v)
 	}
 }
 

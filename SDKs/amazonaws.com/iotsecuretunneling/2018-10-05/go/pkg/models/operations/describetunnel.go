@@ -16,17 +16,21 @@ const (
 	DescribeTunnelXAmzTargetEnumIoTSecuredTunnelingDescribeTunnel DescribeTunnelXAmzTargetEnum = "IoTSecuredTunneling.DescribeTunnel"
 )
 
+func (e DescribeTunnelXAmzTargetEnum) ToPointer() *DescribeTunnelXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTunnelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IoTSecuredTunneling.DescribeTunnel":
-		*e = DescribeTunnelXAmzTargetEnum(s)
+		*e = DescribeTunnelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTunnelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTunnelXAmzTargetEnum: %v", v)
 	}
 }
 

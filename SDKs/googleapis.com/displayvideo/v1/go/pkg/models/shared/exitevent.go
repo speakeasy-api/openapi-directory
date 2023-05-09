@@ -16,21 +16,25 @@ const (
 	ExitEventTypeEnumExitEventTypeBackup      ExitEventTypeEnum = "EXIT_EVENT_TYPE_BACKUP"
 )
 
+func (e ExitEventTypeEnum) ToPointer() *ExitEventTypeEnum {
+	return &e
+}
+
 func (e *ExitEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXIT_EVENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EXIT_EVENT_TYPE_DEFAULT":
 		fallthrough
 	case "EXIT_EVENT_TYPE_BACKUP":
-		*e = ExitEventTypeEnum(s)
+		*e = ExitEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExitEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExitEventTypeEnum: %v", v)
 	}
 }
 

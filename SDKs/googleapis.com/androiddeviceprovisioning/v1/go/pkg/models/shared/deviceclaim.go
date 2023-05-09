@@ -15,19 +15,23 @@ const (
 	DeviceClaimAdditionalServiceEnumDeviceProtection             DeviceClaimAdditionalServiceEnum = "DEVICE_PROTECTION"
 )
 
+func (e DeviceClaimAdditionalServiceEnum) ToPointer() *DeviceClaimAdditionalServiceEnum {
+	return &e
+}
+
 func (e *DeviceClaimAdditionalServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADDITIONAL_SERVICE_UNSPECIFIED":
 		fallthrough
 	case "DEVICE_PROTECTION":
-		*e = DeviceClaimAdditionalServiceEnum(s)
+		*e = DeviceClaimAdditionalServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceClaimAdditionalServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceClaimAdditionalServiceEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	DeviceClaimSectionTypeEnumSectionTypeZeroTouch   DeviceClaimSectionTypeEnum = "SECTION_TYPE_ZERO_TOUCH"
 )
 
+func (e DeviceClaimSectionTypeEnum) ToPointer() *DeviceClaimSectionTypeEnum {
+	return &e
+}
+
 func (e *DeviceClaimSectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SECTION_TYPE_SIM_LOCK":
 		fallthrough
 	case "SECTION_TYPE_ZERO_TOUCH":
-		*e = DeviceClaimSectionTypeEnum(s)
+		*e = DeviceClaimSectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceClaimSectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceClaimSectionTypeEnum: %v", v)
 	}
 }
 

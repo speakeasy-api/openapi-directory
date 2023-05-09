@@ -16,21 +16,25 @@ const (
 	TaskSchedulingErrorCategoryEnumUnmapped    TaskSchedulingErrorCategoryEnum = "unmapped"
 )
 
+func (e TaskSchedulingErrorCategoryEnum) ToPointer() *TaskSchedulingErrorCategoryEnum {
+	return &e
+}
+
 func (e *TaskSchedulingErrorCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "usererror":
 		fallthrough
 	case "servererror":
 		fallthrough
 	case "unmapped":
-		*e = TaskSchedulingErrorCategoryEnum(s)
+		*e = TaskSchedulingErrorCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskSchedulingErrorCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskSchedulingErrorCategoryEnum: %v", v)
 	}
 }
 

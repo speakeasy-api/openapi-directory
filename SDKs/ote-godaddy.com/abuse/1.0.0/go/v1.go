@@ -97,7 +97,10 @@ func (s *v1) CreateTicket(ctx context.Context, request shared.AbuseTicketCreate)
 // GetTicketInfo - Return the abuse ticket data for a given ticket id
 func (s *v1) GetTicketInfo(ctx context.Context, request operations.GetTicketInfoRequest) (*operations.GetTicketInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/abuse/tickets/{ticketId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/abuse/tickets/{ticketId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

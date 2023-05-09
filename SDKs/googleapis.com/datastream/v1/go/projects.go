@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DatastreamProjectsLocationsConnectionProfilesCreate - Use this method to create a connection profile in a project and location.
 func (s *projects) DatastreamProjectsLocationsConnectionProfilesCreate(ctx context.Context, request operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest, security operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity) (*operations.DatastreamProjectsLocationsConnectionProfilesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectionProfiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectionProfiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionProfileInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) DatastreamProjectsLocationsConnectionProfilesCreate(ctx conte
 // DatastreamProjectsLocationsConnectionProfilesDiscover - Use this method to discover a connection profile. The discover API call exposes the data objects and metadata belonging to the profile. Typically, a request returns children data objects of a parent data object that's optionally supplied in the request.
 func (s *projects) DatastreamProjectsLocationsConnectionProfilesDiscover(ctx context.Context, request operations.DatastreamProjectsLocationsConnectionProfilesDiscoverRequest, security operations.DatastreamProjectsLocationsConnectionProfilesDiscoverSecurity) (*operations.DatastreamProjectsLocationsConnectionProfilesDiscoverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectionProfiles:discover", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectionProfiles:discover", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DiscoverConnectionProfileRequestInput", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) DatastreamProjectsLocationsConnectionProfilesDiscover(ctx con
 // DatastreamProjectsLocationsConnectionProfilesList - Use this method to list connection profiles created in a project and location.
 func (s *projects) DatastreamProjectsLocationsConnectionProfilesList(ctx context.Context, request operations.DatastreamProjectsLocationsConnectionProfilesListRequest, security operations.DatastreamProjectsLocationsConnectionProfilesListSecurity) (*operations.DatastreamProjectsLocationsConnectionProfilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectionProfiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectionProfiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) DatastreamProjectsLocationsConnectionProfilesList(ctx context
 // DatastreamProjectsLocationsFetchStaticIps - The FetchStaticIps API call exposes the static IP addresses used by Datastream.
 func (s *projects) DatastreamProjectsLocationsFetchStaticIps(ctx context.Context, request operations.DatastreamProjectsLocationsFetchStaticIpsRequest, security operations.DatastreamProjectsLocationsFetchStaticIpsSecurity) (*operations.DatastreamProjectsLocationsFetchStaticIpsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:fetchStaticIps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:fetchStaticIps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) DatastreamProjectsLocationsFetchStaticIps(ctx context.Context
 // DatastreamProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) DatastreamProjectsLocationsList(ctx context.Context, request operations.DatastreamProjectsLocationsListRequest, security operations.DatastreamProjectsLocationsListSecurity) (*operations.DatastreamProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) DatastreamProjectsLocationsList(ctx context.Context, request 
 // DatastreamProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) DatastreamProjectsLocationsOperationsCancel(ctx context.Context, request operations.DatastreamProjectsLocationsOperationsCancelRequest, security operations.DatastreamProjectsLocationsOperationsCancelSecurity) (*operations.DatastreamProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) DatastreamProjectsLocationsOperationsCancel(ctx context.Conte
 // DatastreamProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) DatastreamProjectsLocationsOperationsList(ctx context.Context, request operations.DatastreamProjectsLocationsOperationsListRequest, security operations.DatastreamProjectsLocationsOperationsListSecurity) (*operations.DatastreamProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) DatastreamProjectsLocationsOperationsList(ctx context.Context
 // DatastreamProjectsLocationsPrivateConnectionsCreate - Use this method to create a private connectivity configuration.
 func (s *projects) DatastreamProjectsLocationsPrivateConnectionsCreate(ctx context.Context, request operations.DatastreamProjectsLocationsPrivateConnectionsCreateRequest, security operations.DatastreamProjectsLocationsPrivateConnectionsCreateSecurity) (*operations.DatastreamProjectsLocationsPrivateConnectionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/privateConnections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/privateConnections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PrivateConnectionInput", "json")
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) DatastreamProjectsLocationsPrivateConnectionsCreate(ctx conte
 // DatastreamProjectsLocationsPrivateConnectionsList - Use this method to list private connectivity configurations in a project and location.
 func (s *projects) DatastreamProjectsLocationsPrivateConnectionsList(ctx context.Context, request operations.DatastreamProjectsLocationsPrivateConnectionsListRequest, security operations.DatastreamProjectsLocationsPrivateConnectionsListSecurity) (*operations.DatastreamProjectsLocationsPrivateConnectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/privateConnections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/privateConnections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -494,7 +521,10 @@ func (s *projects) DatastreamProjectsLocationsPrivateConnectionsList(ctx context
 // DatastreamProjectsLocationsPrivateConnectionsRoutesCreate - Use this method to create a route for a private connectivity configuration in a project and location.
 func (s *projects) DatastreamProjectsLocationsPrivateConnectionsRoutesCreate(ctx context.Context, request operations.DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest, security operations.DatastreamProjectsLocationsPrivateConnectionsRoutesCreateSecurity) (*operations.DatastreamProjectsLocationsPrivateConnectionsRoutesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/routes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/routes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RouteInput", "json")
 	if err != nil {
@@ -549,7 +579,10 @@ func (s *projects) DatastreamProjectsLocationsPrivateConnectionsRoutesCreate(ctx
 // DatastreamProjectsLocationsPrivateConnectionsRoutesList - Use this method to list routes created for a private connectivity configuration in a project and location.
 func (s *projects) DatastreamProjectsLocationsPrivateConnectionsRoutesList(ctx context.Context, request operations.DatastreamProjectsLocationsPrivateConnectionsRoutesListRequest, security operations.DatastreamProjectsLocationsPrivateConnectionsRoutesListSecurity) (*operations.DatastreamProjectsLocationsPrivateConnectionsRoutesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/routes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/routes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -597,7 +630,10 @@ func (s *projects) DatastreamProjectsLocationsPrivateConnectionsRoutesList(ctx c
 // DatastreamProjectsLocationsStreamsCreate - Use this method to create a stream.
 func (s *projects) DatastreamProjectsLocationsStreamsCreate(ctx context.Context, request operations.DatastreamProjectsLocationsStreamsCreateRequest, security operations.DatastreamProjectsLocationsStreamsCreateSecurity) (*operations.DatastreamProjectsLocationsStreamsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/streams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/streams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StreamInput", "json")
 	if err != nil {
@@ -652,7 +688,10 @@ func (s *projects) DatastreamProjectsLocationsStreamsCreate(ctx context.Context,
 // DatastreamProjectsLocationsStreamsDelete - Use this method to delete a stream.
 func (s *projects) DatastreamProjectsLocationsStreamsDelete(ctx context.Context, request operations.DatastreamProjectsLocationsStreamsDeleteRequest, security operations.DatastreamProjectsLocationsStreamsDeleteSecurity) (*operations.DatastreamProjectsLocationsStreamsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -700,7 +739,10 @@ func (s *projects) DatastreamProjectsLocationsStreamsDelete(ctx context.Context,
 // DatastreamProjectsLocationsStreamsList - Use this method to list streams in a project and location.
 func (s *projects) DatastreamProjectsLocationsStreamsList(ctx context.Context, request operations.DatastreamProjectsLocationsStreamsListRequest, security operations.DatastreamProjectsLocationsStreamsListSecurity) (*operations.DatastreamProjectsLocationsStreamsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/streams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/streams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -748,7 +790,10 @@ func (s *projects) DatastreamProjectsLocationsStreamsList(ctx context.Context, r
 // DatastreamProjectsLocationsStreamsObjectsGet - Use this method to get details about a stream object.
 func (s *projects) DatastreamProjectsLocationsStreamsObjectsGet(ctx context.Context, request operations.DatastreamProjectsLocationsStreamsObjectsGetRequest, security operations.DatastreamProjectsLocationsStreamsObjectsGetSecurity) (*operations.DatastreamProjectsLocationsStreamsObjectsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -796,7 +841,10 @@ func (s *projects) DatastreamProjectsLocationsStreamsObjectsGet(ctx context.Cont
 // DatastreamProjectsLocationsStreamsObjectsList - Use this method to list the objects of a specific stream.
 func (s *projects) DatastreamProjectsLocationsStreamsObjectsList(ctx context.Context, request operations.DatastreamProjectsLocationsStreamsObjectsListRequest, security operations.DatastreamProjectsLocationsStreamsObjectsListSecurity) (*operations.DatastreamProjectsLocationsStreamsObjectsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/objects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/objects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -844,7 +892,10 @@ func (s *projects) DatastreamProjectsLocationsStreamsObjectsList(ctx context.Con
 // DatastreamProjectsLocationsStreamsObjectsLookup - Use this method to look up a stream object by its source object identifier.
 func (s *projects) DatastreamProjectsLocationsStreamsObjectsLookup(ctx context.Context, request operations.DatastreamProjectsLocationsStreamsObjectsLookupRequest, security operations.DatastreamProjectsLocationsStreamsObjectsLookupSecurity) (*operations.DatastreamProjectsLocationsStreamsObjectsLookupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/objects:lookup", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/objects:lookup", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LookupStreamObjectRequest", "json")
 	if err != nil {
@@ -899,7 +950,10 @@ func (s *projects) DatastreamProjectsLocationsStreamsObjectsLookup(ctx context.C
 // DatastreamProjectsLocationsStreamsObjectsStartBackfillJob - Use this method to start a backfill job for the specified stream object.
 func (s *projects) DatastreamProjectsLocationsStreamsObjectsStartBackfillJob(ctx context.Context, request operations.DatastreamProjectsLocationsStreamsObjectsStartBackfillJobRequest, security operations.DatastreamProjectsLocationsStreamsObjectsStartBackfillJobSecurity) (*operations.DatastreamProjectsLocationsStreamsObjectsStartBackfillJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{object}:startBackfillJob", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{object}:startBackfillJob", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -954,7 +1008,10 @@ func (s *projects) DatastreamProjectsLocationsStreamsObjectsStartBackfillJob(ctx
 // DatastreamProjectsLocationsStreamsObjectsStopBackfillJob - Use this method to stop a backfill job for the specified stream object.
 func (s *projects) DatastreamProjectsLocationsStreamsObjectsStopBackfillJob(ctx context.Context, request operations.DatastreamProjectsLocationsStreamsObjectsStopBackfillJobRequest, security operations.DatastreamProjectsLocationsStreamsObjectsStopBackfillJobSecurity) (*operations.DatastreamProjectsLocationsStreamsObjectsStopBackfillJobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{object}:stopBackfillJob", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{object}:stopBackfillJob", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1009,7 +1066,10 @@ func (s *projects) DatastreamProjectsLocationsStreamsObjectsStopBackfillJob(ctx 
 // DatastreamProjectsLocationsStreamsPatch - Use this method to update the configuration of a stream.
 func (s *projects) DatastreamProjectsLocationsStreamsPatch(ctx context.Context, request operations.DatastreamProjectsLocationsStreamsPatchRequest, security operations.DatastreamProjectsLocationsStreamsPatchSecurity) (*operations.DatastreamProjectsLocationsStreamsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StreamInput", "json")
 	if err != nil {

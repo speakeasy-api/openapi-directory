@@ -35,9 +35,14 @@ func newMarketplacesOrdersBatches(defaultClient, securityClient HTTPClient, serv
 // ChangeOrderList - [DEPRECATED] Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call)
 // The purpose of this operation is to reduce the amount of request to the API.
 // Max 100 items per call.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersBatches) ChangeOrderList(ctx context.Context, request operations.ChangeOrderListRequest) (*operations.ChangeOrderListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/batches/changeOrders/{changeOrderType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/batches/changeOrders/{changeOrderType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangeOrderListRequest", "json")
 	if err != nil {
@@ -106,6 +111,8 @@ func (s *marketplacesOrdersBatches) ChangeOrderList(ctx context.Context, request
 
 // ClearMerchantOrderInfoList - [DEPRECATED] Send a batch of operations to clear an Order's merchant information (max 100 items per call)
 // The purpose of this operation is to reduce the amount of request to the API.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersBatches) ClearMerchantOrderInfoList(ctx context.Context, request shared.ClearMerchantOrderInfoListRequest) (*operations.ClearMerchantOrderInfoListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/batches/clearMerchantOrderInfos"
@@ -173,6 +180,8 @@ func (s *marketplacesOrdersBatches) ClearMerchantOrderInfoList(ctx context.Conte
 
 // SetMerchantOrderInfoList - [DEPRECATED] Send a batch of operations to set an Order's merchant information  (max 100 items per call)
 // The purpose of this operation is to reduce the amount of request to the API.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersBatches) SetMerchantOrderInfoList(ctx context.Context, request shared.SetMerchantOrderInfoListRequest) (*operations.SetMerchantOrderInfoListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/batches/setMerchantOrderInfos"

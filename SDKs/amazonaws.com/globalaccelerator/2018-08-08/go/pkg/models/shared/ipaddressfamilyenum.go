@@ -14,18 +14,22 @@ const (
 	IPAddressFamilyEnumIPv6 IPAddressFamilyEnum = "IPv6"
 )
 
+func (e IPAddressFamilyEnum) ToPointer() *IPAddressFamilyEnum {
+	return &e
+}
+
 func (e *IPAddressFamilyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IPv4":
 		fallthrough
 	case "IPv6":
-		*e = IPAddressFamilyEnum(s)
+		*e = IPAddressFamilyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IPAddressFamilyEnum: %s", s)
+		return fmt.Errorf("invalid value for IPAddressFamilyEnum: %v", v)
 	}
 }

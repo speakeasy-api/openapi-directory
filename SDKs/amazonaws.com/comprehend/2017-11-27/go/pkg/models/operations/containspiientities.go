@@ -16,17 +16,21 @@ const (
 	ContainsPiiEntitiesXAmzTargetEnumComprehend20171127ContainsPiiEntities ContainsPiiEntitiesXAmzTargetEnum = "Comprehend_20171127.ContainsPiiEntities"
 )
 
+func (e ContainsPiiEntitiesXAmzTargetEnum) ToPointer() *ContainsPiiEntitiesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ContainsPiiEntitiesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.ContainsPiiEntities":
-		*e = ContainsPiiEntitiesXAmzTargetEnum(s)
+		*e = ContainsPiiEntitiesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainsPiiEntitiesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainsPiiEntitiesXAmzTargetEnum: %v", v)
 	}
 }
 

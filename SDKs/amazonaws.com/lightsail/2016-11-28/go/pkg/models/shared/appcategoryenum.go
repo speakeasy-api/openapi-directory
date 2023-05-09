@@ -13,16 +13,20 @@ const (
 	AppCategoryEnumLfR AppCategoryEnum = "LfR"
 )
 
+func (e AppCategoryEnum) ToPointer() *AppCategoryEnum {
+	return &e
+}
+
 func (e *AppCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LfR":
-		*e = AppCategoryEnum(s)
+		*e = AppCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for AppCategoryEnum: %v", v)
 	}
 }

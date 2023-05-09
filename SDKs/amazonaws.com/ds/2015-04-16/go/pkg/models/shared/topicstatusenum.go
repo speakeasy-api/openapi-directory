@@ -16,12 +16,16 @@ const (
 	TopicStatusEnumDeleted       TopicStatusEnum = "Deleted"
 )
 
+func (e TopicStatusEnum) ToPointer() *TopicStatusEnum {
+	return &e
+}
+
 func (e *TopicStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Registered":
 		fallthrough
 	case "Topic not found":
@@ -29,9 +33,9 @@ func (e *TopicStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Failed":
 		fallthrough
 	case "Deleted":
-		*e = TopicStatusEnum(s)
+		*e = TopicStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TopicStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TopicStatusEnum: %v", v)
 	}
 }

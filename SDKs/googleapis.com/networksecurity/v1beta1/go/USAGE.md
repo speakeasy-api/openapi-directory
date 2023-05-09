@@ -2,42 +2,40 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.NetworksecurityProjectsLocationsAddressGroupsAddItems(ctx, operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AddAddressGroupItemsRequest: &shared.AddAddressGroupItemsRequest{
             Items: []string{
                 "distinctio",
                 "quibusdam",
                 "unde",
             },
-            RequestID: "nulla",
+            RequestID: sdk.String("nulla"),
         },
-        AccessToken: "corrupti",
+        AccessToken: sdk.String("corrupti"),
         AddressGroup: "illum",
-        Alt: "media",
-        Callback: "error",
-        Fields: "deserunt",
-        Key: "suscipit",
-        OauthToken: "iure",
-        PrettyPrint: false,
-        QuotaUser: "magnam",
-        UploadType: "debitis",
-        UploadProtocol: "ipsa",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.NetworksecurityProjectsLocationsAddressGroupsAddItems(ctx, req, operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsSecurity{
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("error"),
+        Fields: sdk.String("deserunt"),
+        Key: sdk.String("suscipit"),
+        OauthToken: sdk.String("iure"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("magnam"),
+        UploadType: sdk.String("debitis"),
+        UploadProtocol: sdk.String("ipsa"),
+    }, operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

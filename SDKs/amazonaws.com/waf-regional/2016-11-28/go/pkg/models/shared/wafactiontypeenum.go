@@ -15,20 +15,24 @@ const (
 	WafActionTypeEnumCount WafActionTypeEnum = "COUNT"
 )
 
+func (e WafActionTypeEnum) ToPointer() *WafActionTypeEnum {
+	return &e
+}
+
 func (e *WafActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BLOCK":
 		fallthrough
 	case "ALLOW":
 		fallthrough
 	case "COUNT":
-		*e = WafActionTypeEnum(s)
+		*e = WafActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WafActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WafActionTypeEnum: %v", v)
 	}
 }

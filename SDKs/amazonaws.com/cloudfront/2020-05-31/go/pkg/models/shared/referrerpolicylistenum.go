@@ -20,12 +20,16 @@ const (
 	ReferrerPolicyListEnumUnsafeURL                   ReferrerPolicyListEnum = "unsafe-url"
 )
 
+func (e ReferrerPolicyListEnum) ToPointer() *ReferrerPolicyListEnum {
+	return &e
+}
+
 func (e *ReferrerPolicyListEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no-referrer":
 		fallthrough
 	case "no-referrer-when-downgrade":
@@ -41,9 +45,9 @@ func (e *ReferrerPolicyListEnum) UnmarshalJSON(data []byte) error {
 	case "strict-origin-when-cross-origin":
 		fallthrough
 	case "unsafe-url":
-		*e = ReferrerPolicyListEnum(s)
+		*e = ReferrerPolicyListEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReferrerPolicyListEnum: %s", s)
+		return fmt.Errorf("invalid value for ReferrerPolicyListEnum: %v", v)
 	}
 }

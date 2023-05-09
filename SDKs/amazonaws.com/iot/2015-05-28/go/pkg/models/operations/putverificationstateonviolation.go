@@ -18,12 +18,16 @@ const (
 	PutVerificationStateOnViolationRequestBodyVerificationStateEnumUnknown        PutVerificationStateOnViolationRequestBodyVerificationStateEnum = "UNKNOWN"
 )
 
+func (e PutVerificationStateOnViolationRequestBodyVerificationStateEnum) ToPointer() *PutVerificationStateOnViolationRequestBodyVerificationStateEnum {
+	return &e
+}
+
 func (e *PutVerificationStateOnViolationRequestBodyVerificationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FALSE_POSITIVE":
 		fallthrough
 	case "BENIGN_POSITIVE":
@@ -31,10 +35,10 @@ func (e *PutVerificationStateOnViolationRequestBodyVerificationStateEnum) Unmars
 	case "TRUE_POSITIVE":
 		fallthrough
 	case "UNKNOWN":
-		*e = PutVerificationStateOnViolationRequestBodyVerificationStateEnum(s)
+		*e = PutVerificationStateOnViolationRequestBodyVerificationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutVerificationStateOnViolationRequestBodyVerificationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PutVerificationStateOnViolationRequestBodyVerificationStateEnum: %v", v)
 	}
 }
 

@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nordigen.com/2.0 (v2)/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,17 +27,15 @@ func main() {
         }),
     )
 
-    req := operations.AccountsBalancesRetrieveRequest{
-        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-    }
-
     ctx := context.Background()
-    res, err := s.Accounts.AccountsBalancesRetrieve(ctx, req)
+    res, err := s.Accounts.RetrieveAccountBalancesV2(ctx, operations.RetrieveAccountBalancesV2Request{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    })
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.StatusCode == http.StatusOK {
+    if res.RetrieveAccountBalancesV2200ApplicationJSONObject != nil {
         // handle response
     }
 }
@@ -49,68 +46,77 @@ func main() {
 ## Available Resources and Operations
 
 
-### Accounts
+### [Accounts](docs/accounts/README.md)
 
-* `AccountsBalancesRetrieve` - Access account balances.
+* [RetrieveAccountBalancesV2](docs/accounts/README.md#retrieveaccountbalancesv2) - Access account balances.
 
 Balances will be returned in Berlin Group PSD2 format.
-* `AccountsDetailsRetrieve` - Access account details.
+* [RetrieveAccountDetailsV2](docs/accounts/README.md#retrieveaccountdetailsv2) - Access account details.
 
 Account details will be returned in Berlin Group PSD2 format.
-* `AccountsTransactionsRetrieve` - Access account transactions.
-
-Transactions will be returned in Berlin Group PSD2 format.
-* `RetrieveAccountMetadata` - Access account metadata.
+* [RetrieveAccountMetadata](docs/accounts/README.md#retrieveaccountmetadata) - Access account metadata.
 
 Information about the account record, such as the processing status and IBAN.
 
 Account status is recalculated based on the error count in the latest req.
+* [RetrieveAccountTransactionsV22](docs/accounts/README.md#retrieveaccounttransactionsv22) - Access account transactions.
 
-### Agreements
+Transactions will be returned in Berlin Group PSD2 format.
 
-* `AcceptEUA` - Accept an end-user agreement via the API
-* `CreateEUAV2` - Create an end user agreement
-* `DeleteEUAByIDV2` - Delete an end user agreement
-* `RetrieveEUAByIDV2` - Retrieve end user agreement by ID
-* `RetrieveAllEUAsForAnEndUserV2` - Retrieve all end user agreements belonging to the company
+### [Agreements](docs/agreements/README.md)
 
-### Institutions
+* [AcceptEUA](docs/agreements/README.md#accepteua) - Accept an end-user agreement via the API
+* [CreateEUAV2](docs/agreements/README.md#createeuav2) - API endpoints related to end-user agreements.
+* [DeleteEUAByIDV2](docs/agreements/README.md#deleteeuabyidv2) - Delete an end user agreement
+* [RetrieveEUAByIDV2](docs/agreements/README.md#retrieveeuabyidv2) - Retrieve end user agreement by ID
+* [RetrieveAllEUAsForAnEndUserV2](docs/agreements/README.md#retrievealleuasforanenduserv2) - API endpoints related to end-user agreements.
 
-* `RetrieveAllSupportedInstitutionsInAGivenCountry` - List all available institutions
-* `RetrieveInstitution` - Get details about a specific Institution
+### [Institutions](docs/institutions/README.md)
 
-### Payments
+* [RetrieveAllSupportedInstitutionsInAGivenCountry](docs/institutions/README.md#retrieveallsupportedinstitutionsinagivencountry) - List all available institutions
+* [RetrieveInstitution](docs/institutions/README.md#retrieveinstitution) - Get details about a specific Institution
 
-* `CreatePaymentForm` - Create payment
-* `CreatePaymentJSON` - Create payment
-* `CreatePaymentMultipart` - Create payment
-* `DeletePeriodicPayment` - Delete periodic payment
-* `ListMinimumRequiredFieldsForInstitution` - List minimum required fields for institution
-* `ListPayments` - Retrieve all payments belonging to the company
-* `PaymentsCreditorsCreateForm` - API endpoints related to creditor accounts.
-* `PaymentsCreditorsCreateJSON` - API endpoints related to creditor accounts.
-* `PaymentsCreditorsCreateMultipart` - API endpoints related to creditor accounts.
-* `PaymentsCreditorsDestroy` - API endpoints related to creditor accounts.
-* `PaymentsCreditorsList` - API endpoints related to creditor accounts.
-* `PaymentsCreditorsRetrieve` - API endpoints related to creditor accounts.
-* `RetrieveAllPaymentCreditorAccounts` - Retrieve all payment creditor accounts
-* `RetrievePayment` - Retrieve payment
+### [Payments](docs/payments/README.md)
 
-### Premium
+* [CreatePaymentForm](docs/payments/README.md#createpaymentform) - Create payment
+* [CreatePaymentJSON](docs/payments/README.md#createpaymentjson) - Create payment
+* [CreatePaymentMultipart](docs/payments/README.md#createpaymentmultipart) - Create payment
+* [DeletePeriodicPayment](docs/payments/README.md#deleteperiodicpayment) - Delete periodic payment
+* [ListMinimumRequiredFieldsForInstitution](docs/payments/README.md#listminimumrequiredfieldsforinstitution) - List minimum required fields for institution
+* [ListPayments](docs/payments/README.md#listpayments) - Retrieve all payments belonging to the company
+* [PaymentsCreditorsCreateForm](docs/payments/README.md#paymentscreditorscreateform) - API endpoints related to creditor accounts.
+* [PaymentsCreditorsCreateJSON](docs/payments/README.md#paymentscreditorscreatejson) - API endpoints related to creditor accounts.
+* [PaymentsCreditorsCreateMultipart](docs/payments/README.md#paymentscreditorscreatemultipart) - API endpoints related to creditor accounts.
+* [PaymentsCreditorsDestroy](docs/payments/README.md#paymentscreditorsdestroy) - API endpoints related to creditor accounts.
+* [PaymentsCreditorsList](docs/payments/README.md#paymentscreditorslist) - API endpoints related to creditor accounts.
+* [PaymentsCreditorsRetrieve](docs/payments/README.md#paymentscreditorsretrieve) - API endpoints related to creditor accounts.
+* [PaymentsSubmitCreateForm](docs/payments/README.md#paymentssubmitcreateform) - Initiate the payment on bank's side.
 
-* `RetrieveAccountTransactionsV2` - Access account premium transactions.
+Complete the payment and return payment details as a response.
+* [PaymentsSubmitCreateJSON](docs/payments/README.md#paymentssubmitcreatejson) - Initiate the payment on bank's side.
 
-### Requisitions
+Complete the payment and return payment details as a response.
+* [PaymentsSubmitCreateMultipart](docs/payments/README.md#paymentssubmitcreatemultipart) - Initiate the payment on bank's side.
 
-* `DeleteRequisitionByIDV2` - Delete requisition and its end user agreement
-* `RequisitionByID` - Retrieve a requisition by ID
-* `RequisitionCreated` - Create a new requisition
-* `RetrieveAllRequisitions` - Retrieve all requisitions belonging to the company
+Complete the payment and return payment details as a response.
+* [RetrieveAllPaymentCreditorAccounts](docs/payments/README.md#retrieveallpaymentcreditoraccounts) - Retrieve all payment creditor accounts
+* [RetrievePayment](docs/payments/README.md#retrievepayment) - Retrieve payment
 
-### Token
+### [Premium](docs/premium/README.md)
 
-* `JWTObtain` - Obtain JWT pair
-* `JWTRefresh` - Refresh access token
+* [RetrieveAccountTransactionsV2](docs/premium/README.md#retrieveaccounttransactionsv2) - Access account premium transactions.
+
+### [Requisitions](docs/requisitions/README.md)
+
+* [DeleteRequisitionByIDV2](docs/requisitions/README.md#deleterequisitionbyidv2) - Delete requisition and its end user agreement
+* [RequisitionByID](docs/requisitions/README.md#requisitionbyid) - Retrieve a requisition by ID
+* [RequisitionCreated](docs/requisitions/README.md#requisitioncreated) - Create a new requisition
+* [RetrieveAllRequisitions](docs/requisitions/README.md#retrieveallrequisitions) - Retrieve all requisitions belonging to the company
+
+### [Token](docs/token/README.md)
+
+* [JWTObtain](docs/token/README.md#jwtobtain) - Obtain JWT pair
+* [JWTRefresh](docs/token/README.md#jwtrefresh) - Refresh access token
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -14,18 +14,22 @@ const (
 	ConnectionModeEnumPrivate ConnectionModeEnum = "Private"
 )
 
+func (e ConnectionModeEnum) ToPointer() *ConnectionModeEnum {
+	return &e
+}
+
 func (e *ConnectionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Public":
 		fallthrough
 	case "Private":
-		*e = ConnectionModeEnum(s)
+		*e = ConnectionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionModeEnum: %v", v)
 	}
 }

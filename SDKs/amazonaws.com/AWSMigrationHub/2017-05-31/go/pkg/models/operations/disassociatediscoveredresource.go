@@ -16,17 +16,21 @@ const (
 	DisassociateDiscoveredResourceXAmzTargetEnumAwsMigrationHubDisassociateDiscoveredResource DisassociateDiscoveredResourceXAmzTargetEnum = "AWSMigrationHub.DisassociateDiscoveredResource"
 )
 
+func (e DisassociateDiscoveredResourceXAmzTargetEnum) ToPointer() *DisassociateDiscoveredResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateDiscoveredResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHub.DisassociateDiscoveredResource":
-		*e = DisassociateDiscoveredResourceXAmzTargetEnum(s)
+		*e = DisassociateDiscoveredResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateDiscoveredResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateDiscoveredResourceXAmzTargetEnum: %v", v)
 	}
 }
 

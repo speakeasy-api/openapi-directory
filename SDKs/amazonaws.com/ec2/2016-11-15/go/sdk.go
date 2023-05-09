@@ -38,6 +38,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <fullname>Amazon Elastic Compute Cloud</fullname> <p>Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the Amazon Web Services Cloud. Using Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications faster. Amazon Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the Amazon Web Services Cloud where you can launch Amazon Web Services resources in a virtual network that you've defined. Amazon Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances. EBS volumes are highly available and reliable storage volumes that can be attached to any running instance and used like a hard drive.</p> <p>To learn more, see the following resources:</p> <ul> <li> <p>Amazon EC2: <a href="http://aws.amazon.com/ec2">Amazon EC2 product page</a>, <a href="https://docs.aws.amazon.com/ec2/index.html">Amazon EC2 documentation</a> </p> </li> <li> <p>Amazon EBS: <a href="http://aws.amazon.com/ebs">Amazon EBS product page</a>, <a href="https://docs.aws.amazon.com/ebs/index.html">Amazon EBS documentation</a> </p> </li> <li> <p>Amazon VPC: <a href="http://aws.amazon.com/vpc">Amazon VPC product page</a>, <a href="https://docs.aws.amazon.com/vpc/index.html">Amazon VPC documentation</a> </p> </li> <li> <p>VPN: <a href="http://aws.amazon.com/vpn">VPN product page</a>, <a href="https://docs.aws.amazon.com/vpn/index.html">VPN documentation</a> </p> </li> </ul>
 // https://docs.aws.amazon.com/ec2/ - Amazon Web Services documentation
 type SDK struct {
@@ -1398,7 +1413,7 @@ func (s *SDK) GETAttachInternetGateway(ctx context.Context, request operations.G
 	return res, nil
 }
 
-// GETAttachVerifiedAccessTrustProvider - A trust provider is a third-party entity that creates, maintains, and manages identity information for users and devices. One or more trust providers can be attached to an Amazon Web Services Verified Access instance.
+// GETAttachVerifiedAccessTrustProvider - Attaches the specified Amazon Web Services Verified Access trust provider to the specified Amazon Web Services Verified Access instance.
 func (s *SDK) GETAttachVerifiedAccessTrustProvider(ctx context.Context, request operations.GETAttachVerifiedAccessTrustProviderRequest) (*operations.GETAttachVerifiedAccessTrustProviderResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=AttachVerifiedAccessTrustProvider"
@@ -8064,7 +8079,7 @@ func (s *SDK) GETDetachNetworkInterface(ctx context.Context, request operations.
 	return res, nil
 }
 
-// GETDetachVerifiedAccessTrustProvider - Detach a trust provider from an Amazon Web Services Verified Access instance.
+// GETDetachVerifiedAccessTrustProvider - Detaches the specified Amazon Web Services Verified Access trust provider from the specified Amazon Web Services Verified Access instance.
 func (s *SDK) GETDetachVerifiedAccessTrustProvider(ctx context.Context, request operations.GETDetachVerifiedAccessTrustProviderRequest) (*operations.GETDetachVerifiedAccessTrustProviderResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DetachVerifiedAccessTrustProvider"
@@ -11360,6 +11375,56 @@ func (s *SDK) GETGETVpnConnectionDeviceTypes(ctx context.Context, request operat
 	return res, nil
 }
 
+// GETGETVpnTunnelReplacementStatus - Get details of available tunnel endpoint maintenance.
+func (s *SDK) GETGETVpnTunnelReplacementStatus(ctx context.Context, request operations.GETGETVpnTunnelReplacementStatusRequest) (*operations.GETGETVpnTunnelReplacementStatusResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#Action=GetVpnTunnelReplacementStatus"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GETGETVpnTunnelReplacementStatusResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `text/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
 // GETImportClientVpnClientCertificateRevocationList - <p>Uploads a client certificate revocation list to the specified Client VPN endpoint. Uploading a client certificate revocation list overwrites the existing client certificate revocation list.</p> <p>Uploading a client certificate revocation list resets existing client connections.</p>
 func (s *SDK) GETImportClientVpnClientCertificateRevocationList(ctx context.Context, request operations.GETImportClientVpnClientCertificateRevocationListRequest) (*operations.GETImportClientVpnClientCertificateRevocationListResponse, error) {
 	baseURL := s._serverURL
@@ -12883,7 +12948,7 @@ func (s *SDK) GETModifyTransitGatewayVpcAttachment(ctx context.Context, request 
 	return res, nil
 }
 
-// GETModifyVerifiedAccessEndpoint - Modifies the configuration of an Amazon Web Services Verified Access endpoint.
+// GETModifyVerifiedAccessEndpoint - Modifies the configuration of the specified Amazon Web Services Verified Access endpoint.
 func (s *SDK) GETModifyVerifiedAccessEndpoint(ctx context.Context, request operations.GETModifyVerifiedAccessEndpointRequest) (*operations.GETModifyVerifiedAccessEndpointResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyVerifiedAccessEndpoint"
@@ -12933,7 +12998,7 @@ func (s *SDK) GETModifyVerifiedAccessEndpoint(ctx context.Context, request opera
 	return res, nil
 }
 
-// GETModifyVerifiedAccessEndpointPolicy - Modifies the specified Verified Access endpoint policy.
+// GETModifyVerifiedAccessEndpointPolicy - Modifies the specified Amazon Web Services Verified Access endpoint policy.
 func (s *SDK) GETModifyVerifiedAccessEndpointPolicy(ctx context.Context, request operations.GETModifyVerifiedAccessEndpointPolicyRequest) (*operations.GETModifyVerifiedAccessEndpointPolicyResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyVerifiedAccessEndpointPolicy"
@@ -12983,7 +13048,7 @@ func (s *SDK) GETModifyVerifiedAccessEndpointPolicy(ctx context.Context, request
 	return res, nil
 }
 
-// GETModifyVerifiedAccessGroup - Modifies the specified Verified Access group configuration.
+// GETModifyVerifiedAccessGroup - Modifies the specified Amazon Web Services Verified Access group configuration.
 func (s *SDK) GETModifyVerifiedAccessGroup(ctx context.Context, request operations.GETModifyVerifiedAccessGroupRequest) (*operations.GETModifyVerifiedAccessGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyVerifiedAccessGroup"
@@ -13033,7 +13098,7 @@ func (s *SDK) GETModifyVerifiedAccessGroup(ctx context.Context, request operatio
 	return res, nil
 }
 
-// GETModifyVerifiedAccessGroupPolicy - Modifies the specified Verified Access group policy.
+// GETModifyVerifiedAccessGroupPolicy - Modifies the specified Amazon Web Services Verified Access group policy.
 func (s *SDK) GETModifyVerifiedAccessGroupPolicy(ctx context.Context, request operations.GETModifyVerifiedAccessGroupPolicyRequest) (*operations.GETModifyVerifiedAccessGroupPolicyResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyVerifiedAccessGroupPolicy"
@@ -13083,7 +13148,7 @@ func (s *SDK) GETModifyVerifiedAccessGroupPolicy(ctx context.Context, request op
 	return res, nil
 }
 
-// GETModifyVerifiedAccessInstance - Modifies the configuration of the specified Verified Access instance.
+// GETModifyVerifiedAccessInstance - Modifies the configuration of the specified Amazon Web Services Verified Access instance.
 func (s *SDK) GETModifyVerifiedAccessInstance(ctx context.Context, request operations.GETModifyVerifiedAccessInstanceRequest) (*operations.GETModifyVerifiedAccessInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyVerifiedAccessInstance"
@@ -14959,6 +15024,56 @@ func (s *SDK) GETReplaceTransitGatewayRoute(ctx context.Context, request operati
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GETReplaceTransitGatewayRouteResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `text/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
+// GETReplaceVpnTunnel - Trigger replacement of specified VPN tunnel.
+func (s *SDK) GETReplaceVpnTunnel(ctx context.Context, request operations.GETReplaceVpnTunnelRequest) (*operations.GETReplaceVpnTunnelResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ReplaceVpnTunnel"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GETReplaceVpnTunnelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -18029,7 +18144,7 @@ func (s *SDK) POSTAttachNetworkInterface(ctx context.Context, request operations
 	return res, nil
 }
 
-// POSTAttachVerifiedAccessTrustProvider - A trust provider is a third-party entity that creates, maintains, and manages identity information for users and devices. One or more trust providers can be attached to an Amazon Web Services Verified Access instance.
+// POSTAttachVerifiedAccessTrustProvider - Attaches the specified Amazon Web Services Verified Access trust provider to the specified Amazon Web Services Verified Access instance.
 func (s *SDK) POSTAttachVerifiedAccessTrustProvider(ctx context.Context, request operations.POSTAttachVerifiedAccessTrustProviderRequest) (*operations.POSTAttachVerifiedAccessTrustProviderResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=AttachVerifiedAccessTrustProvider"
@@ -23123,7 +23238,7 @@ func (s *SDK) POSTCreateVerifiedAccessEndpoint(ctx context.Context, request oper
 	return res, nil
 }
 
-// POSTCreateVerifiedAccessGroup - An Amazon Web Services Verified Access group is a collection of Amazon Web Services Verified Access endpoints who's associated applications have similar security requirements. Each instance within an Amazon Web Services Verified Access group shares an Amazon Web Services Verified Access policy. For example, you can group all Amazon Web Services Verified Access instances associated with “sales” applications together and use one common Amazon Web Services Verified Access policy.
+// POSTCreateVerifiedAccessGroup - An Amazon Web Services Verified Access group is a collection of Amazon Web Services Verified Access endpoints who's associated applications have similar security requirements. Each instance within a Verified Access group shares an Verified Access policy. For example, you can group all Verified Access instances associated with "sales" applications together and use one common Verified Access policy.
 func (s *SDK) POSTCreateVerifiedAccessGroup(ctx context.Context, request operations.POSTCreateVerifiedAccessGroupRequest) (*operations.POSTCreateVerifiedAccessGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateVerifiedAccessGroup"
@@ -23237,7 +23352,7 @@ func (s *SDK) POSTCreateVerifiedAccessInstance(ctx context.Context, request oper
 	return res, nil
 }
 
-// POSTCreateVerifiedAccessTrustProvider - A trust provider is a third-party entity that creates, maintains, and manages identity information for users and devices. When an application request is made, the identity information sent by the trust provider will be evaluated by Amazon Web Services Verified Access, before allowing or denying the application request.
+// POSTCreateVerifiedAccessTrustProvider - A trust provider is a third-party entity that creates, maintains, and manages identity information for users and devices. When an application request is made, the identity information sent by the trust provider is evaluated by Verified Access before allowing or denying the application request.
 func (s *SDK) POSTCreateVerifiedAccessTrustProvider(ctx context.Context, request operations.POSTCreateVerifiedAccessTrustProviderRequest) (*operations.POSTCreateVerifiedAccessTrustProviderResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateVerifiedAccessTrustProvider"
@@ -35123,7 +35238,7 @@ func (s *SDK) POSTDescribeTrunkInterfaceAssociations(ctx context.Context, reques
 	return res, nil
 }
 
-// POSTDescribeVerifiedAccessEndpoints - Describe Amazon Web Services Verified Access endpoints.
+// POSTDescribeVerifiedAccessEndpoints - Describes the specified Amazon Web Services Verified Access endpoints.
 func (s *SDK) POSTDescribeVerifiedAccessEndpoints(ctx context.Context, request operations.POSTDescribeVerifiedAccessEndpointsRequest) (*operations.POSTDescribeVerifiedAccessEndpointsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeVerifiedAccessEndpoints"
@@ -35180,7 +35295,7 @@ func (s *SDK) POSTDescribeVerifiedAccessEndpoints(ctx context.Context, request o
 	return res, nil
 }
 
-// POSTDescribeVerifiedAccessGroups - Describe details of existing Verified Access groups.
+// POSTDescribeVerifiedAccessGroups - Describes the specified Verified Access groups.
 func (s *SDK) POSTDescribeVerifiedAccessGroups(ctx context.Context, request operations.POSTDescribeVerifiedAccessGroupsRequest) (*operations.POSTDescribeVerifiedAccessGroupsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeVerifiedAccessGroups"
@@ -35237,7 +35352,7 @@ func (s *SDK) POSTDescribeVerifiedAccessGroups(ctx context.Context, request oper
 	return res, nil
 }
 
-// POSTDescribeVerifiedAccessInstanceLoggingConfigurations - Describes the current logging configuration for the Amazon Web Services Verified Access instances.
+// POSTDescribeVerifiedAccessInstanceLoggingConfigurations - Describes the specified Amazon Web Services Verified Access instances.
 func (s *SDK) POSTDescribeVerifiedAccessInstanceLoggingConfigurations(ctx context.Context, request operations.POSTDescribeVerifiedAccessInstanceLoggingConfigurationsRequest) (*operations.POSTDescribeVerifiedAccessInstanceLoggingConfigurationsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeVerifiedAccessInstanceLoggingConfigurations"
@@ -35294,7 +35409,7 @@ func (s *SDK) POSTDescribeVerifiedAccessInstanceLoggingConfigurations(ctx contex
 	return res, nil
 }
 
-// POSTDescribeVerifiedAccessInstances - Describe Verified Access instances.
+// POSTDescribeVerifiedAccessInstances - Describes the specified Amazon Web Services Verified Access instances.
 func (s *SDK) POSTDescribeVerifiedAccessInstances(ctx context.Context, request operations.POSTDescribeVerifiedAccessInstancesRequest) (*operations.POSTDescribeVerifiedAccessInstancesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeVerifiedAccessInstances"
@@ -35351,7 +35466,7 @@ func (s *SDK) POSTDescribeVerifiedAccessInstances(ctx context.Context, request o
 	return res, nil
 }
 
-// POSTDescribeVerifiedAccessTrustProviders - Describe details of existing Verified Access trust providers.
+// POSTDescribeVerifiedAccessTrustProviders - Describes the specified Amazon Web Services Verified Access trust providers.
 func (s *SDK) POSTDescribeVerifiedAccessTrustProviders(ctx context.Context, request operations.POSTDescribeVerifiedAccessTrustProvidersRequest) (*operations.POSTDescribeVerifiedAccessTrustProvidersResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeVerifiedAccessTrustProviders"
@@ -36530,7 +36645,7 @@ func (s *SDK) POSTDetachNetworkInterface(ctx context.Context, request operations
 	return res, nil
 }
 
-// POSTDetachVerifiedAccessTrustProvider - Detach a trust provider from an Amazon Web Services Verified Access instance.
+// POSTDetachVerifiedAccessTrustProvider - Detaches the specified Amazon Web Services Verified Access trust provider from the specified Amazon Web Services Verified Access instance.
 func (s *SDK) POSTDetachVerifiedAccessTrustProvider(ctx context.Context, request operations.POSTDetachVerifiedAccessTrustProviderRequest) (*operations.POSTDetachVerifiedAccessTrustProviderResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DetachVerifiedAccessTrustProvider"
@@ -41549,6 +41664,63 @@ func (s *SDK) POSTGetVpnConnectionDeviceTypes(ctx context.Context, request opera
 	return res, nil
 }
 
+// POSTGetVpnTunnelReplacementStatus - Get details of available tunnel endpoint maintenance.
+func (s *SDK) POSTGetVpnTunnelReplacementStatus(ctx context.Context, request operations.POSTGetVpnTunnelReplacementStatusRequest) (*operations.POSTGetVpnTunnelReplacementStatusResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#Action=GetVpnTunnelReplacementStatus"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.POSTGetVpnTunnelReplacementStatusResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `text/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
 // POSTImportClientVpnClientCertificateRevocationList - <p>Uploads a client certificate revocation list to the specified Client VPN endpoint. Uploading a client certificate revocation list overwrites the existing client certificate revocation list.</p> <p>Uploading a client certificate revocation list resets existing client connections.</p>
 func (s *SDK) POSTImportClientVpnClientCertificateRevocationList(ctx context.Context, request operations.POSTImportClientVpnClientCertificateRevocationListRequest) (*operations.POSTImportClientVpnClientCertificateRevocationListResponse, error) {
 	baseURL := s._serverURL
@@ -44393,7 +44565,7 @@ func (s *SDK) POSTModifyTransitGatewayVpcAttachment(ctx context.Context, request
 	return res, nil
 }
 
-// POSTModifyVerifiedAccessEndpoint - Modifies the configuration of an Amazon Web Services Verified Access endpoint.
+// POSTModifyVerifiedAccessEndpoint - Modifies the configuration of the specified Amazon Web Services Verified Access endpoint.
 func (s *SDK) POSTModifyVerifiedAccessEndpoint(ctx context.Context, request operations.POSTModifyVerifiedAccessEndpointRequest) (*operations.POSTModifyVerifiedAccessEndpointResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyVerifiedAccessEndpoint"
@@ -44450,7 +44622,7 @@ func (s *SDK) POSTModifyVerifiedAccessEndpoint(ctx context.Context, request oper
 	return res, nil
 }
 
-// POSTModifyVerifiedAccessEndpointPolicy - Modifies the specified Verified Access endpoint policy.
+// POSTModifyVerifiedAccessEndpointPolicy - Modifies the specified Amazon Web Services Verified Access endpoint policy.
 func (s *SDK) POSTModifyVerifiedAccessEndpointPolicy(ctx context.Context, request operations.POSTModifyVerifiedAccessEndpointPolicyRequest) (*operations.POSTModifyVerifiedAccessEndpointPolicyResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyVerifiedAccessEndpointPolicy"
@@ -44507,7 +44679,7 @@ func (s *SDK) POSTModifyVerifiedAccessEndpointPolicy(ctx context.Context, reques
 	return res, nil
 }
 
-// POSTModifyVerifiedAccessGroup - Modifies the specified Verified Access group configuration.
+// POSTModifyVerifiedAccessGroup - Modifies the specified Amazon Web Services Verified Access group configuration.
 func (s *SDK) POSTModifyVerifiedAccessGroup(ctx context.Context, request operations.POSTModifyVerifiedAccessGroupRequest) (*operations.POSTModifyVerifiedAccessGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyVerifiedAccessGroup"
@@ -44564,7 +44736,7 @@ func (s *SDK) POSTModifyVerifiedAccessGroup(ctx context.Context, request operati
 	return res, nil
 }
 
-// POSTModifyVerifiedAccessGroupPolicy - Modifies the specified Verified Access group policy.
+// POSTModifyVerifiedAccessGroupPolicy - Modifies the specified Amazon Web Services Verified Access group policy.
 func (s *SDK) POSTModifyVerifiedAccessGroupPolicy(ctx context.Context, request operations.POSTModifyVerifiedAccessGroupPolicyRequest) (*operations.POSTModifyVerifiedAccessGroupPolicyResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyVerifiedAccessGroupPolicy"
@@ -44621,7 +44793,7 @@ func (s *SDK) POSTModifyVerifiedAccessGroupPolicy(ctx context.Context, request o
 	return res, nil
 }
 
-// POSTModifyVerifiedAccessInstance - Modifies the configuration of the specified Verified Access instance.
+// POSTModifyVerifiedAccessInstance - Modifies the configuration of the specified Amazon Web Services Verified Access instance.
 func (s *SDK) POSTModifyVerifiedAccessInstance(ctx context.Context, request operations.POSTModifyVerifiedAccessInstanceRequest) (*operations.POSTModifyVerifiedAccessInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyVerifiedAccessInstance"
@@ -47112,6 +47284,63 @@ func (s *SDK) POSTReplaceTransitGatewayRoute(ctx context.Context, request operat
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.POSTReplaceTransitGatewayRouteResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `text/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
+// POSTReplaceVpnTunnel - Trigger replacement of specified VPN tunnel.
+func (s *SDK) POSTReplaceVpnTunnel(ctx context.Context, request operations.POSTReplaceVpnTunnelRequest) (*operations.POSTReplaceVpnTunnelResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ReplaceVpnTunnel"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.POSTReplaceVpnTunnelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

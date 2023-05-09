@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // MlProjectsExplain - Performs explanation on the data in the request. {% dynamic include "/ai-platform/includes/___explain-request" %}
 func (s *projects) MlProjectsExplain(ctx context.Context, request operations.MlProjectsExplainRequest, security operations.MlProjectsExplainSecurity) (*operations.MlProjectsExplainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:explain", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:explain", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudMlV1ExplainRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) MlProjectsExplain(ctx context.Context, request operations.MlP
 // MlProjectsGetConfig - Get the service account information associated with your project. You need this information in order to grant the service account permissions for the Google Cloud Storage location where you put your model training code for training the model with Google Cloud Machine Learning.
 func (s *projects) MlProjectsGetConfig(ctx context.Context, request operations.MlProjectsGetConfigRequest, security operations.MlProjectsGetConfigSecurity) (*operations.MlProjectsGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getConfig", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getConfig", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) MlProjectsGetConfig(ctx context.Context, request operations.M
 // MlProjectsJobsCreate - Creates a training or a batch prediction job.
 func (s *projects) MlProjectsJobsCreate(ctx context.Context, request operations.MlProjectsJobsCreateRequest, security operations.MlProjectsJobsCreateSecurity) (*operations.MlProjectsJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudMlV1JobInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) MlProjectsJobsCreate(ctx context.Context, request operations.
 // MlProjectsJobsList - Lists the jobs in the project. If there are no jobs that match the request parameters, the list request returns an empty response body: {}.
 func (s *projects) MlProjectsJobsList(ctx context.Context, request operations.MlProjectsJobsListRequest, security operations.MlProjectsJobsListSecurity) (*operations.MlProjectsJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) MlProjectsJobsList(ctx context.Context, request operations.Ml
 // MlProjectsLocationsList - List all locations that provides at least one type of CMLE capability.
 func (s *projects) MlProjectsLocationsList(ctx context.Context, request operations.MlProjectsLocationsListRequest, security operations.MlProjectsLocationsListSecurity) (*operations.MlProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) MlProjectsLocationsList(ctx context.Context, request operatio
 // MlProjectsLocationsStudiesCreate - Creates a study.
 func (s *projects) MlProjectsLocationsStudiesCreate(ctx context.Context, request operations.MlProjectsLocationsStudiesCreateRequest, security operations.MlProjectsLocationsStudiesCreateSecurity) (*operations.MlProjectsLocationsStudiesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/studies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/studies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudMlV1StudyInput", "json")
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) MlProjectsLocationsStudiesCreate(ctx context.Context, request
 // MlProjectsLocationsStudiesList - Lists all the studies in a region for an associated project.
 func (s *projects) MlProjectsLocationsStudiesList(ctx context.Context, request operations.MlProjectsLocationsStudiesListRequest, security operations.MlProjectsLocationsStudiesListSecurity) (*operations.MlProjectsLocationsStudiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/studies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/studies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) MlProjectsLocationsStudiesList(ctx context.Context, request o
 // MlProjectsLocationsStudiesTrialsAddMeasurement - Adds a measurement of the objective metrics to a trial. This measurement is assumed to have been taken before the trial is complete.
 func (s *projects) MlProjectsLocationsStudiesTrialsAddMeasurement(ctx context.Context, request operations.MlProjectsLocationsStudiesTrialsAddMeasurementRequest, security operations.MlProjectsLocationsStudiesTrialsAddMeasurementSecurity) (*operations.MlProjectsLocationsStudiesTrialsAddMeasurementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:addMeasurement", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:addMeasurement", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudMlV1AddTrialMeasurementRequest", "json")
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) MlProjectsLocationsStudiesTrialsAddMeasurement(ctx context.Co
 // MlProjectsLocationsStudiesTrialsCheckEarlyStoppingState - Checks whether a trial should stop or not. Returns a long-running operation. When the operation is successful, it will contain a CheckTrialEarlyStoppingStateResponse.
 func (s *projects) MlProjectsLocationsStudiesTrialsCheckEarlyStoppingState(ctx context.Context, request operations.MlProjectsLocationsStudiesTrialsCheckEarlyStoppingStateRequest, security operations.MlProjectsLocationsStudiesTrialsCheckEarlyStoppingStateSecurity) (*operations.MlProjectsLocationsStudiesTrialsCheckEarlyStoppingStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:checkEarlyStoppingState", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:checkEarlyStoppingState", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *projects) MlProjectsLocationsStudiesTrialsCheckEarlyStoppingState(ctx c
 // MlProjectsLocationsStudiesTrialsComplete - Marks a trial as complete.
 func (s *projects) MlProjectsLocationsStudiesTrialsComplete(ctx context.Context, request operations.MlProjectsLocationsStudiesTrialsCompleteRequest, security operations.MlProjectsLocationsStudiesTrialsCompleteSecurity) (*operations.MlProjectsLocationsStudiesTrialsCompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:complete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:complete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudMlV1CompleteTrialRequest", "json")
 	if err != nil {
@@ -556,7 +586,10 @@ func (s *projects) MlProjectsLocationsStudiesTrialsComplete(ctx context.Context,
 // MlProjectsLocationsStudiesTrialsCreate - Adds a user provided trial to a study.
 func (s *projects) MlProjectsLocationsStudiesTrialsCreate(ctx context.Context, request operations.MlProjectsLocationsStudiesTrialsCreateRequest, security operations.MlProjectsLocationsStudiesTrialsCreateSecurity) (*operations.MlProjectsLocationsStudiesTrialsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/trials", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/trials", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudMlV1TrialInput", "json")
 	if err != nil {
@@ -611,7 +644,10 @@ func (s *projects) MlProjectsLocationsStudiesTrialsCreate(ctx context.Context, r
 // MlProjectsLocationsStudiesTrialsList - Lists the trials associated with a study.
 func (s *projects) MlProjectsLocationsStudiesTrialsList(ctx context.Context, request operations.MlProjectsLocationsStudiesTrialsListRequest, security operations.MlProjectsLocationsStudiesTrialsListSecurity) (*operations.MlProjectsLocationsStudiesTrialsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/trials", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/trials", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *projects) MlProjectsLocationsStudiesTrialsList(ctx context.Context, req
 // MlProjectsLocationsStudiesTrialsListOptimalTrials - Lists the pareto-optimal trials for multi-objective study or the optimal trials for single-objective study. The definition of pareto-optimal can be checked in wiki page. https://en.wikipedia.org/wiki/Pareto_efficiency
 func (s *projects) MlProjectsLocationsStudiesTrialsListOptimalTrials(ctx context.Context, request operations.MlProjectsLocationsStudiesTrialsListOptimalTrialsRequest, security operations.MlProjectsLocationsStudiesTrialsListOptimalTrialsSecurity) (*operations.MlProjectsLocationsStudiesTrialsListOptimalTrialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/trials:listOptimalTrials", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/trials:listOptimalTrials", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -714,7 +753,10 @@ func (s *projects) MlProjectsLocationsStudiesTrialsListOptimalTrials(ctx context
 // MlProjectsLocationsStudiesTrialsStop - Stops a trial.
 func (s *projects) MlProjectsLocationsStudiesTrialsStop(ctx context.Context, request operations.MlProjectsLocationsStudiesTrialsStopRequest, security operations.MlProjectsLocationsStudiesTrialsStopSecurity) (*operations.MlProjectsLocationsStudiesTrialsStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -769,7 +811,10 @@ func (s *projects) MlProjectsLocationsStudiesTrialsStop(ctx context.Context, req
 // MlProjectsLocationsStudiesTrialsSuggest - Adds one or more trials to a study, with parameter values suggested by AI Platform Vizier. Returns a long-running operation associated with the generation of trial suggestions. When this long-running operation succeeds, it will contain a SuggestTrialsResponse.
 func (s *projects) MlProjectsLocationsStudiesTrialsSuggest(ctx context.Context, request operations.MlProjectsLocationsStudiesTrialsSuggestRequest, security operations.MlProjectsLocationsStudiesTrialsSuggestSecurity) (*operations.MlProjectsLocationsStudiesTrialsSuggestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/trials:suggest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/trials:suggest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudMlV1SuggestTrialsRequest", "json")
 	if err != nil {
@@ -824,7 +869,10 @@ func (s *projects) MlProjectsLocationsStudiesTrialsSuggest(ctx context.Context, 
 // MlProjectsModelsCreate - Creates a model which will later contain one or more versions. You must add at least one version before you can request predictions from the model. Add versions by calling projects.models.versions.create.
 func (s *projects) MlProjectsModelsCreate(ctx context.Context, request operations.MlProjectsModelsCreateRequest, security operations.MlProjectsModelsCreateSecurity) (*operations.MlProjectsModelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudMlV1ModelInput", "json")
 	if err != nil {
@@ -879,7 +927,10 @@ func (s *projects) MlProjectsModelsCreate(ctx context.Context, request operation
 // MlProjectsModelsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) MlProjectsModelsGetIamPolicy(ctx context.Context, request operations.MlProjectsModelsGetIamPolicyRequest, security operations.MlProjectsModelsGetIamPolicySecurity) (*operations.MlProjectsModelsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -927,7 +978,10 @@ func (s *projects) MlProjectsModelsGetIamPolicy(ctx context.Context, request ope
 // MlProjectsModelsList - Lists the models in a project. Each project can contain multiple models, and each model can have multiple versions. If there are no models that match the request parameters, the list request returns an empty response body: {}.
 func (s *projects) MlProjectsModelsList(ctx context.Context, request operations.MlProjectsModelsListRequest, security operations.MlProjectsModelsListSecurity) (*operations.MlProjectsModelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -975,7 +1029,10 @@ func (s *projects) MlProjectsModelsList(ctx context.Context, request operations.
 // MlProjectsModelsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) MlProjectsModelsSetIamPolicy(ctx context.Context, request operations.MlProjectsModelsSetIamPolicyRequest, security operations.MlProjectsModelsSetIamPolicySecurity) (*operations.MlProjectsModelsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1SetIamPolicyRequest", "json")
 	if err != nil {
@@ -1030,7 +1087,10 @@ func (s *projects) MlProjectsModelsSetIamPolicy(ctx context.Context, request ope
 // MlProjectsModelsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) MlProjectsModelsTestIamPermissions(ctx context.Context, request operations.MlProjectsModelsTestIamPermissionsRequest, security operations.MlProjectsModelsTestIamPermissionsSecurity) (*operations.MlProjectsModelsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -1085,7 +1145,10 @@ func (s *projects) MlProjectsModelsTestIamPermissions(ctx context.Context, reque
 // MlProjectsModelsVersionsCreate - Creates a new version of a model from a trained TensorFlow model. If the version created in the cloud by this call is the first deployed version of the specified model, it will be made the default version of the model. When you add a version to a model that already has one or more versions, the default version does not automatically change. If you want a new version to be the default, you must call projects.models.versions.setDefault.
 func (s *projects) MlProjectsModelsVersionsCreate(ctx context.Context, request operations.MlProjectsModelsVersionsCreateRequest, security operations.MlProjectsModelsVersionsCreateSecurity) (*operations.MlProjectsModelsVersionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudMlV1VersionInput", "json")
 	if err != nil {
@@ -1140,7 +1203,10 @@ func (s *projects) MlProjectsModelsVersionsCreate(ctx context.Context, request o
 // MlProjectsModelsVersionsDelete - Deletes a model version. Each model can have multiple versions deployed and in use at any given time. Use this method to remove a single version. Note: You cannot delete the version that is set as the default version of the model unless it is the only remaining version.
 func (s *projects) MlProjectsModelsVersionsDelete(ctx context.Context, request operations.MlProjectsModelsVersionsDeleteRequest, security operations.MlProjectsModelsVersionsDeleteSecurity) (*operations.MlProjectsModelsVersionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1188,7 +1254,10 @@ func (s *projects) MlProjectsModelsVersionsDelete(ctx context.Context, request o
 // MlProjectsModelsVersionsList - Gets basic information about all the versions of a model. If you expect that a model has many versions, or if you need to handle only a limited number of results at a time, you can request that the list be retrieved in batches (called pages). If there are no versions that match the request parameters, the list request returns an empty response body: {}.
 func (s *projects) MlProjectsModelsVersionsList(ctx context.Context, request operations.MlProjectsModelsVersionsListRequest, security operations.MlProjectsModelsVersionsListSecurity) (*operations.MlProjectsModelsVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1236,7 +1305,10 @@ func (s *projects) MlProjectsModelsVersionsList(ctx context.Context, request ope
 // MlProjectsModelsVersionsPatch - Updates the specified Version resource. Currently the only update-able fields are `description`, `requestLoggingConfig`, `autoScaling.minNodes`, and `manualScaling.nodes`.
 func (s *projects) MlProjectsModelsVersionsPatch(ctx context.Context, request operations.MlProjectsModelsVersionsPatchRequest, security operations.MlProjectsModelsVersionsPatchSecurity) (*operations.MlProjectsModelsVersionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudMlV1VersionInput", "json")
 	if err != nil {
@@ -1291,7 +1363,10 @@ func (s *projects) MlProjectsModelsVersionsPatch(ctx context.Context, request op
 // MlProjectsModelsVersionsSetDefault - Designates a version to be the default for the model. The default version is used for prediction requests made against the model that don't specify a version. The first version to be created for a model is automatically set as the default. You must make any subsequent changes to the default version setting manually using this method.
 func (s *projects) MlProjectsModelsVersionsSetDefault(ctx context.Context, request operations.MlProjectsModelsVersionsSetDefaultRequest, security operations.MlProjectsModelsVersionsSetDefaultSecurity) (*operations.MlProjectsModelsVersionsSetDefaultResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setDefault", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setDefault", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1346,7 +1421,10 @@ func (s *projects) MlProjectsModelsVersionsSetDefault(ctx context.Context, reque
 // MlProjectsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) MlProjectsOperationsCancel(ctx context.Context, request operations.MlProjectsOperationsCancelRequest, security operations.MlProjectsOperationsCancelSecurity) (*operations.MlProjectsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1401,7 +1479,10 @@ func (s *projects) MlProjectsOperationsCancel(ctx context.Context, request opera
 // MlProjectsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) MlProjectsOperationsGet(ctx context.Context, request operations.MlProjectsOperationsGetRequest, security operations.MlProjectsOperationsGetSecurity) (*operations.MlProjectsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1449,7 +1530,10 @@ func (s *projects) MlProjectsOperationsGet(ctx context.Context, request operatio
 // MlProjectsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) MlProjectsOperationsList(ctx context.Context, request operations.MlProjectsOperationsListRequest, security operations.MlProjectsOperationsListSecurity) (*operations.MlProjectsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1497,7 +1581,10 @@ func (s *projects) MlProjectsOperationsList(ctx context.Context, request operati
 // MlProjectsPredict - Performs online prediction on the data in the request. {% dynamic include "/ai-platform/includes/___predict-request" %}
 func (s *projects) MlProjectsPredict(ctx context.Context, request operations.MlProjectsPredictRequest, security operations.MlProjectsPredictSecurity) (*operations.MlProjectsPredictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:predict", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:predict", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudMlV1PredictRequest", "json")
 	if err != nil {

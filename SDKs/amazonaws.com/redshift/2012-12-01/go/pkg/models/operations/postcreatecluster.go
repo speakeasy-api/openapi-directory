@@ -15,17 +15,21 @@ const (
 	POSTCreateClusterActionEnumCreateCluster POSTCreateClusterActionEnum = "CreateCluster"
 )
 
+func (e POSTCreateClusterActionEnum) ToPointer() *POSTCreateClusterActionEnum {
+	return &e
+}
+
 func (e *POSTCreateClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateCluster":
-		*e = POSTCreateClusterActionEnum(s)
+		*e = POSTCreateClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateClusterVersionEnumTwoThousandAndTwelve1201 POSTCreateClusterVersionEnum = "2012-12-01"
 )
 
+func (e POSTCreateClusterVersionEnum) ToPointer() *POSTCreateClusterVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTCreateClusterVersionEnum(s)
+		*e = POSTCreateClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateClusterVersionEnum: %v", v)
 	}
 }
 

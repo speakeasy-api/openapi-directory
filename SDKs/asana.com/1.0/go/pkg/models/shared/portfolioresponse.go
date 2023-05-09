@@ -33,12 +33,16 @@ const (
 	PortfolioResponseColorEnumLightWarmGray PortfolioResponseColorEnum = "light-warm-gray"
 )
 
+func (e PortfolioResponseColorEnum) ToPointer() *PortfolioResponseColorEnum {
+	return &e
+}
+
 func (e *PortfolioResponseColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dark-pink":
 		fallthrough
 	case "dark-green":
@@ -74,10 +78,10 @@ func (e *PortfolioResponseColorEnum) UnmarshalJSON(data []byte) error {
 	case "light-purple":
 		fallthrough
 	case "light-warm-gray":
-		*e = PortfolioResponseColorEnum(s)
+		*e = PortfolioResponseColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PortfolioResponseColorEnum: %s", s)
+		return fmt.Errorf("invalid value for PortfolioResponseColorEnum: %v", v)
 	}
 }
 
@@ -91,21 +95,25 @@ const (
 	PortfolioResponseCurrentStatusUpdateResourceSubtypeEnumGoalStatusUpdate      PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum = "goal_status_update"
 )
 
+func (e PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum) ToPointer() *PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum {
+	return &e
+}
+
 func (e *PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "project_status_update":
 		fallthrough
 	case "portfolio_status_update":
 		fallthrough
 	case "goal_status_update":
-		*e = PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum(s)
+		*e = PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum: %v", v)
 	}
 }
 

@@ -22,21 +22,25 @@ const (
 	CreatePotRequestBodyPotCurrencyEnumUsd CreatePotRequestBodyPotCurrencyEnum = "USD"
 )
 
+func (e CreatePotRequestBodyPotCurrencyEnum) ToPointer() *CreatePotRequestBodyPotCurrencyEnum {
+	return &e
+}
+
 func (e *CreatePotRequestBodyPotCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GBP":
 		fallthrough
 	case "CAD":
 		fallthrough
 	case "USD":
-		*e = CreatePotRequestBodyPotCurrencyEnum(s)
+		*e = CreatePotRequestBodyPotCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePotRequestBodyPotCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePotRequestBodyPotCurrencyEnum: %v", v)
 	}
 }
 
@@ -47,19 +51,23 @@ const (
 	CreatePotRequestBodyStatusEnumInactive CreatePotRequestBodyStatusEnum = "inactive"
 )
 
+func (e CreatePotRequestBodyStatusEnum) ToPointer() *CreatePotRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *CreatePotRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = CreatePotRequestBodyStatusEnum(s)
+		*e = CreatePotRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePotRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePotRequestBodyStatusEnum: %v", v)
 	}
 }
 
@@ -109,19 +117,23 @@ const (
 	CreatePot409ApplicationJSONStatusEnumComplete   CreatePot409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e CreatePot409ApplicationJSONStatusEnum) ToPointer() *CreatePot409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *CreatePot409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = CreatePot409ApplicationJSONStatusEnum(s)
+		*e = CreatePot409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePot409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePot409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -168,21 +180,25 @@ const (
 	CreatePot201ApplicationJSONPotCurrencyEnumUsd CreatePot201ApplicationJSONPotCurrencyEnum = "USD"
 )
 
+func (e CreatePot201ApplicationJSONPotCurrencyEnum) ToPointer() *CreatePot201ApplicationJSONPotCurrencyEnum {
+	return &e
+}
+
 func (e *CreatePot201ApplicationJSONPotCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GBP":
 		fallthrough
 	case "CAD":
 		fallthrough
 	case "USD":
-		*e = CreatePot201ApplicationJSONPotCurrencyEnum(s)
+		*e = CreatePot201ApplicationJSONPotCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePot201ApplicationJSONPotCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePot201ApplicationJSONPotCurrencyEnum: %v", v)
 	}
 }
 
@@ -193,19 +209,23 @@ const (
 	CreatePot201ApplicationJSONStatusEnumInactive CreatePot201ApplicationJSONStatusEnum = "inactive"
 )
 
+func (e CreatePot201ApplicationJSONStatusEnum) ToPointer() *CreatePot201ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *CreatePot201ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = CreatePot201ApplicationJSONStatusEnum(s)
+		*e = CreatePot201ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePot201ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePot201ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

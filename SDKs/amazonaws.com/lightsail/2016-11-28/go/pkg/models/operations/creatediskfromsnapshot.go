@@ -16,17 +16,21 @@ const (
 	CreateDiskFromSnapshotXAmzTargetEnumLightsail20161128CreateDiskFromSnapshot CreateDiskFromSnapshotXAmzTargetEnum = "Lightsail_20161128.CreateDiskFromSnapshot"
 )
 
+func (e CreateDiskFromSnapshotXAmzTargetEnum) ToPointer() *CreateDiskFromSnapshotXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateDiskFromSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.CreateDiskFromSnapshot":
-		*e = CreateDiskFromSnapshotXAmzTargetEnum(s)
+		*e = CreateDiskFromSnapshotXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDiskFromSnapshotXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDiskFromSnapshotXAmzTargetEnum: %v", v)
 	}
 }
 

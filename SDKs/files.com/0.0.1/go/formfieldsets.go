@@ -37,7 +37,10 @@ func newFormFieldSets(defaultClient, securityClient HTTPClient, serverURL, langu
 // Delete Form Field Set
 func (s *formFieldSets) DeleteFormFieldSetsID(ctx context.Context, request operations.DeleteFormFieldSetsIDRequest) (*operations.DeleteFormFieldSetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/form_field_sets/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/form_field_sets/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *formFieldSets) GetFormFieldSets(ctx context.Context, request operations
 // Show Form Field Set
 func (s *formFieldSets) GetFormFieldSetsID(ctx context.Context, request operations.GetFormFieldSetsIDRequest) (*operations.GetFormFieldSetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/form_field_sets/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/form_field_sets/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *formFieldSets) GetFormFieldSetsID(ctx context.Context, request operatio
 // Update Form Field Set
 func (s *formFieldSets) PatchFormFieldSetsID(ctx context.Context, request operations.PatchFormFieldSetsIDRequest) (*operations.PatchFormFieldSetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/form_field_sets/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/form_field_sets/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatchFormFieldSets", "json")
 	if err != nil {

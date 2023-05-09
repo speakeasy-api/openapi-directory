@@ -15,20 +15,24 @@ const (
 	AdvancedSecurityModeTypeEnumEnforced AdvancedSecurityModeTypeEnum = "ENFORCED"
 )
 
+func (e AdvancedSecurityModeTypeEnum) ToPointer() *AdvancedSecurityModeTypeEnum {
+	return &e
+}
+
 func (e *AdvancedSecurityModeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFF":
 		fallthrough
 	case "AUDIT":
 		fallthrough
 	case "ENFORCED":
-		*e = AdvancedSecurityModeTypeEnum(s)
+		*e = AdvancedSecurityModeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdvancedSecurityModeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdvancedSecurityModeTypeEnum: %v", v)
 	}
 }

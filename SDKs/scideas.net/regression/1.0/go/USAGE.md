@@ -2,19 +2,19 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.RegressionAPIBody{
-        ConvertDateTo: "month",
+    ctx := context.Background()
+    res, err := s.PostRegressionAPI(ctx, shared.RegressionAPIBody{
+        ConvertDateTo: sdk.String("month"),
         Data: []map[string]interface{}{
             map[string]interface{}{
                 "distinctio": "quibusdam",
@@ -43,10 +43,7 @@ func main() {
         },
         Key: "abc123",
         OutcomeVariable: "sales",
-    }
-
-    ctx := context.Background()
-    res, err := s.PostRegressionAPI(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

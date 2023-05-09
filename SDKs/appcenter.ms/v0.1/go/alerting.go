@@ -34,7 +34,10 @@ func newAlerting(defaultClient, securityClient HTTPClient, serverURL, language, 
 // BugTrackerGetRepoIssueFromCrash - Get project issue related to a crash group
 func (s *alerting) BugTrackerGetRepoIssueFromCrash(ctx context.Context, request operations.BugTrackerGetRepoIssueFromCrashRequest, security operations.BugTrackerGetRepoIssueFromCrashSecurity) (*operations.BugTrackerGetRepoIssueFromCrashResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/bugtracker/crashGroup/{crash_group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/bugtracker/crashGroup/{crash_group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -88,7 +91,10 @@ func (s *alerting) BugTrackerGetRepoIssueFromCrash(ctx context.Context, request 
 // BugtrackerGetSettings - Get bug tracker settings for a particular app
 func (s *alerting) BugtrackerGetSettings(ctx context.Context, request operations.BugtrackerGetSettingsRequest, security operations.BugtrackerGetSettingsSecurity) (*operations.BugtrackerGetSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/bugtracker", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/bugtracker", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -142,7 +148,10 @@ func (s *alerting) BugtrackerGetSettings(ctx context.Context, request operations
 // NotificationsGetAppEmailSettings - Get Email notification settings of user for a particular app
 func (s *alerting) NotificationsGetAppEmailSettings(ctx context.Context, request operations.NotificationsGetAppEmailSettingsRequest, security operations.NotificationsGetAppEmailSettingsSecurity) (*operations.NotificationsGetAppEmailSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/notifications/emailSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/notifications/emailSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -194,7 +203,7 @@ func (s *alerting) NotificationsGetAppEmailSettings(ctx context.Context, request
 }
 
 // NotificationsGetUserEmailSettings - Get Default email notification settings for the user
-func (s *alerting) NotificationsGetUserEmailSettings(ctx context.Context) (*operations.NotificationsGetUserEmailSettingsResponse, error) {
+func (s *alerting) NotificationsGetUserEmailSettings(ctx context.Context, security operations.NotificationsGetUserEmailSettingsSecurity) (*operations.NotificationsGetUserEmailSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user/notifications/emailSettings"
 
@@ -203,7 +212,7 @@ func (s *alerting) NotificationsGetUserEmailSettings(ctx context.Context) (*oper
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -250,7 +259,10 @@ func (s *alerting) NotificationsGetUserEmailSettings(ctx context.Context) (*oper
 // WebhooksList - Get web hooks configured for a particular app
 func (s *alerting) WebhooksList(ctx context.Context, request operations.WebhooksListRequest, security operations.WebhooksListSecurity) (*operations.WebhooksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

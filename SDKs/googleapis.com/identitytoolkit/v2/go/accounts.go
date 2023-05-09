@@ -306,3 +306,278 @@ func (s *accounts) IdentitytoolkitAccountsMfaSignInStart(ctx context.Context, re
 
 	return res, nil
 }
+
+// IdentitytoolkitAccountsPasskeyEnrollmentFinalize - Finishes enrolling a passkey credential for the user.
+func (s *accounts) IdentitytoolkitAccountsPasskeyEnrollmentFinalize(ctx context.Context, request operations.IdentitytoolkitAccountsPasskeyEnrollmentFinalizeRequest, security operations.IdentitytoolkitAccountsPasskeyEnrollmentFinalizeSecurity) (*operations.IdentitytoolkitAccountsPasskeyEnrollmentFinalizeResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/accounts/passkeyEnrollment:finalize"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitV2FinalizePasskeyEnrollmentRequest", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.IdentitytoolkitAccountsPasskeyEnrollmentFinalizeResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudIdentitytoolkitV2FinalizePasskeyEnrollmentResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudIdentitytoolkitV2FinalizePasskeyEnrollmentResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// IdentitytoolkitAccountsPasskeyEnrollmentStart - Step one of the passkey enrollment process. Returns a challenge and parameters for creation of the passkey credential.
+func (s *accounts) IdentitytoolkitAccountsPasskeyEnrollmentStart(ctx context.Context, request operations.IdentitytoolkitAccountsPasskeyEnrollmentStartRequest, security operations.IdentitytoolkitAccountsPasskeyEnrollmentStartSecurity) (*operations.IdentitytoolkitAccountsPasskeyEnrollmentStartResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/accounts/passkeyEnrollment:start"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitV2StartPasskeyEnrollmentRequest", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.IdentitytoolkitAccountsPasskeyEnrollmentStartResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudIdentitytoolkitV2StartPasskeyEnrollmentResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudIdentitytoolkitV2StartPasskeyEnrollmentResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// IdentitytoolkitAccountsPasskeySignInFinalize - Verifies the passkey assertion and signs the user in.
+func (s *accounts) IdentitytoolkitAccountsPasskeySignInFinalize(ctx context.Context, request operations.IdentitytoolkitAccountsPasskeySignInFinalizeRequest, security operations.IdentitytoolkitAccountsPasskeySignInFinalizeSecurity) (*operations.IdentitytoolkitAccountsPasskeySignInFinalizeResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/accounts/passkeySignIn:finalize"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitV2FinalizePasskeySignInRequest", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.IdentitytoolkitAccountsPasskeySignInFinalizeResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudIdentitytoolkitV2FinalizePasskeySignInResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudIdentitytoolkitV2FinalizePasskeySignInResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// IdentitytoolkitAccountsPasskeySignInStart - Creates and returns the passkey challenge
+func (s *accounts) IdentitytoolkitAccountsPasskeySignInStart(ctx context.Context, request operations.IdentitytoolkitAccountsPasskeySignInStartRequest, security operations.IdentitytoolkitAccountsPasskeySignInStartSecurity) (*operations.IdentitytoolkitAccountsPasskeySignInStartResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/accounts/passkeySignIn:start"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitV2StartPasskeySignInRequest", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.IdentitytoolkitAccountsPasskeySignInStartResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudIdentitytoolkitV2StartPasskeySignInResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudIdentitytoolkitV2StartPasskeySignInResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// IdentitytoolkitAccountsRevokeToken - Revokes a user's token from an Identity Provider (IdP). This is done by manually providing an IdP credential, and the token types for revocation. An [API key](https://cloud.google.com/docs/authentication/api-keys) is required in the request in order to identify the Google Cloud project.
+func (s *accounts) IdentitytoolkitAccountsRevokeToken(ctx context.Context, request operations.IdentitytoolkitAccountsRevokeTokenRequest, security operations.IdentitytoolkitAccountsRevokeTokenSecurity) (*operations.IdentitytoolkitAccountsRevokeTokenResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/accounts:revokeToken"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIdentitytoolkitV2RevokeTokenRequest", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.IdentitytoolkitAccountsRevokeTokenResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudIdentitytoolkitV2RevokeTokenResponse = out
+		}
+	}
+
+	return res, nil
+}

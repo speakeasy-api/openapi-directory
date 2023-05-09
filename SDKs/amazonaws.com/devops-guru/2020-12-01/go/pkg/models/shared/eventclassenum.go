@@ -17,12 +17,16 @@ const (
 	EventClassEnumSchemaChange   EventClassEnum = "SCHEMA_CHANGE"
 )
 
+func (e EventClassEnum) ToPointer() *EventClassEnum {
+	return &e
+}
+
 func (e *EventClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INFRASTRUCTURE":
 		fallthrough
 	case "DEPLOYMENT":
@@ -32,9 +36,9 @@ func (e *EventClassEnum) UnmarshalJSON(data []byte) error {
 	case "CONFIG_CHANGE":
 		fallthrough
 	case "SCHEMA_CHANGE":
-		*e = EventClassEnum(s)
+		*e = EventClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventClassEnum: %s", s)
+		return fmt.Errorf("invalid value for EventClassEnum: %v", v)
 	}
 }

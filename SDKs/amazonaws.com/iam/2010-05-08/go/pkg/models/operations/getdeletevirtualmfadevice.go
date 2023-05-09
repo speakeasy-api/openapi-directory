@@ -15,17 +15,21 @@ const (
 	GETDeleteVirtualMFADeviceActionEnumDeleteVirtualMfaDevice GETDeleteVirtualMFADeviceActionEnum = "DeleteVirtualMFADevice"
 )
 
+func (e GETDeleteVirtualMFADeviceActionEnum) ToPointer() *GETDeleteVirtualMFADeviceActionEnum {
+	return &e
+}
+
 func (e *GETDeleteVirtualMFADeviceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteVirtualMFADevice":
-		*e = GETDeleteVirtualMFADeviceActionEnum(s)
+		*e = GETDeleteVirtualMFADeviceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVirtualMFADeviceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVirtualMFADeviceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteVirtualMFADeviceVersionEnumTwoThousandAndTen0508 GETDeleteVirtualMFADeviceVersionEnum = "2010-05-08"
 )
 
+func (e GETDeleteVirtualMFADeviceVersionEnum) ToPointer() *GETDeleteVirtualMFADeviceVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteVirtualMFADeviceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETDeleteVirtualMFADeviceVersionEnum(s)
+		*e = GETDeleteVirtualMFADeviceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVirtualMFADeviceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVirtualMFADeviceVersionEnum: %v", v)
 	}
 }
 

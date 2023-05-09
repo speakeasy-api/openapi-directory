@@ -24,12 +24,16 @@ const (
 	NotificationSettingNotificationTypesEnumVoiceOfMerchantUpdated      NotificationSettingNotificationTypesEnum = "VOICE_OF_MERCHANT_UPDATED"
 )
 
+func (e NotificationSettingNotificationTypesEnum) ToPointer() *NotificationSettingNotificationTypesEnum {
+	return &e
+}
+
 func (e *NotificationSettingNotificationTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOTIFICATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_UPDATE":
@@ -53,10 +57,10 @@ func (e *NotificationSettingNotificationTypesEnum) UnmarshalJSON(data []byte) er
 	case "LOSS_OF_VOICE_OF_MERCHANT":
 		fallthrough
 	case "VOICE_OF_MERCHANT_UPDATED":
-		*e = NotificationSettingNotificationTypesEnum(s)
+		*e = NotificationSettingNotificationTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationSettingNotificationTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationSettingNotificationTypesEnum: %v", v)
 	}
 }
 

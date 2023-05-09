@@ -35,7 +35,10 @@ func newMarketingEventsExternal(defaultClient, securityClient HTTPClient, server
 
 func (s *marketingEventsExternal) DeleteMarketingV3MarketingEventsEventsExternalEventIDArchive(ctx context.Context, request operations.DeleteMarketingV3MarketingEventsEventsExternalEventIDArchiveRequest, security operations.DeleteMarketingV3MarketingEventsEventsExternalEventIDArchiveSecurity) (*operations.DeleteMarketingV3MarketingEventsEventsExternalEventIDArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -80,9 +83,13 @@ func (s *marketingEventsExternal) DeleteMarketingV3MarketingEventsEventsExternal
 
 	return res, nil
 }
+
 func (s *marketingEventsExternal) GetMarketingV3MarketingEventsEventsExternalEventIDGetByID(ctx context.Context, request operations.GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDRequest, security operations.GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDSecurity) (*operations.GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -136,9 +143,13 @@ func (s *marketingEventsExternal) GetMarketingV3MarketingEventsEventsExternalEve
 
 	return res, nil
 }
+
 func (s *marketingEventsExternal) PatchMarketingV3MarketingEventsEventsExternalEventIDUpdate(ctx context.Context, request operations.PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateRequest, security operations.PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateSecurity) (*operations.PatchMarketingV3MarketingEventsEventsExternalEventIDUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MarketingEventUpdateRequestParams", "json")
 	if err != nil {
@@ -202,6 +213,7 @@ func (s *marketingEventsExternal) PatchMarketingV3MarketingEventsEventsExternalE
 
 	return res, nil
 }
+
 func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsDeleteArchiveBatch(ctx context.Context, request shared.BatchInputMarketingEventExternalUniqueIdentifier, security operations.PostMarketingV3MarketingEventsEventsDeleteArchiveBatchSecurity) (*operations.PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/marketing/v3/marketing-events/events/delete"
@@ -254,6 +266,7 @@ func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsDeleteArch
 
 	return res, nil
 }
+
 func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsUpsertDoUpsert(ctx context.Context, request shared.BatchInputMarketingEventCreateRequestParams, security operations.PostMarketingV3MarketingEventsEventsUpsertDoUpsertSecurity) (*operations.PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/marketing/v3/marketing-events/events/upsert"
@@ -316,9 +329,13 @@ func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsUpsertDoUp
 
 	return res, nil
 }
+
 func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancel(ctx context.Context, request operations.PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancelRequest, security operations.PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancelSecurity) (*operations.PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -372,9 +389,13 @@ func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsExternalEv
 
 	return res, nil
 }
+
 func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsExternalEventIDCompleteComplete(ctx context.Context, request operations.PostMarketingV3MarketingEventsEventsExternalEventIDCompleteCompleteRequest, security operations.PostMarketingV3MarketingEventsEventsExternalEventIDCompleteCompleteSecurity) (*operations.PostMarketingV3MarketingEventsEventsExternalEventIDCompleteCompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}/complete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}/complete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MarketingEventCompleteRequestParams", "json")
 	if err != nil {
@@ -438,9 +459,13 @@ func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsExternalEv
 
 	return res, nil
 }
+
 func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateEmailUpsertDoEmailUpsertByID(ctx context.Context, request operations.PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateEmailUpsertDoEmailUpsertByIDRequest, security operations.PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateEmailUpsertDoEmailUpsertByIDSecurity) (*operations.PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateEmailUpsertDoEmailUpsertByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}/{subscriberState}/email-upsert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}/{subscriberState}/email-upsert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchInputMarketingEventEmailSubscriber", "json")
 	if err != nil {
@@ -494,9 +519,13 @@ func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsExternalEv
 
 	return res, nil
 }
+
 func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByID(ctx context.Context, request operations.PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByIDRequest, security operations.PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByIDSecurity) (*operations.PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}/{subscriberState}/upsert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}/{subscriberState}/upsert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchInputMarketingEventSubscriber", "json")
 	if err != nil {
@@ -550,6 +579,7 @@ func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsExternalEv
 
 	return res, nil
 }
+
 func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsCreate(ctx context.Context, request shared.MarketingEventCreateRequestParams, security operations.PostMarketingV3MarketingEventsEventsCreateSecurity) (*operations.PostMarketingV3MarketingEventsEventsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/marketing/v3/marketing-events/events"
@@ -612,9 +642,13 @@ func (s *marketingEventsExternal) PostMarketingV3MarketingEventsEventsCreate(ctx
 
 	return res, nil
 }
+
 func (s *marketingEventsExternal) PutMarketingV3MarketingEventsEventsExternalEventIDReplace(ctx context.Context, request operations.PutMarketingV3MarketingEventsEventsExternalEventIDReplaceRequest, security operations.PutMarketingV3MarketingEventsEventsExternalEventIDReplaceSecurity) (*operations.PutMarketingV3MarketingEventsEventsExternalEventIDReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MarketingEventCreateRequestParams", "json")
 	if err != nil {

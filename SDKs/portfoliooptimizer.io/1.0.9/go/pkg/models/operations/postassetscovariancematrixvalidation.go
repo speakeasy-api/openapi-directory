@@ -25,12 +25,16 @@ const (
 	PostAssetsCovarianceMatrixValidation200ApplicationJSONMessageEnumInvalidCovarianceMatrixNonPositiveSemiDefiniteMatrix PostAssetsCovarianceMatrixValidation200ApplicationJSONMessageEnum = "invalid covariance matrix - non positive semi-definite matrix"
 )
 
+func (e PostAssetsCovarianceMatrixValidation200ApplicationJSONMessageEnum) ToPointer() *PostAssetsCovarianceMatrixValidation200ApplicationJSONMessageEnum {
+	return &e
+}
+
 func (e *PostAssetsCovarianceMatrixValidation200ApplicationJSONMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "valid covariance matrix":
 		fallthrough
 	case "invalid covariance matrix - non symmetric matrix":
@@ -38,10 +42,10 @@ func (e *PostAssetsCovarianceMatrixValidation200ApplicationJSONMessageEnum) Unma
 	case "invalid covariance matrix - non positive diagonal elements":
 		fallthrough
 	case "invalid covariance matrix - non positive semi-definite matrix":
-		*e = PostAssetsCovarianceMatrixValidation200ApplicationJSONMessageEnum(s)
+		*e = PostAssetsCovarianceMatrixValidation200ApplicationJSONMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAssetsCovarianceMatrixValidation200ApplicationJSONMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAssetsCovarianceMatrixValidation200ApplicationJSONMessageEnum: %v", v)
 	}
 }
 

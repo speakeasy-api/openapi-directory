@@ -13,26 +13,24 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/RecurringServic
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.DisableRequest{
-        Contract: "corrupti",
-        MerchantAccount: "provident",
-        RecurringDetailReference: "distinctio",
-        ShopperReference: "quibusdam",
-    }
-
     ctx := context.Background()
-    res, err := s.General.PostDisable(ctx, req, operations.PostDisableSecurity{
+    res, err := s.General.PostDisable(ctx, shared.DisableRequest{
+        Contract: sdk.String("corrupti"),
+        MerchantAccount: "provident",
+        RecurringDetailReference: sdk.String("distinctio"),
+        ShopperReference: "quibusdam",
+    }, operations.PostDisableSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {
@@ -50,12 +48,12 @@ func main() {
 ## Available Resources and Operations
 
 
-### General
+### [General](docs/general/README.md)
 
-* `PostDisable` - Disable stored payment details
-* `PostListRecurringDetails` - Get stored payment details
-* `PostNotifyShopper` - Ask issuer to notify the shopper
-* `PostScheduleAccountUpdater` - Schedule running the Account Updater
+* [PostDisable](docs/general/README.md#postdisable) - Disable stored payment details
+* [PostListRecurringDetails](docs/general/README.md#postlistrecurringdetails) - Get stored payment details
+* [PostNotifyShopper](docs/general/README.md#postnotifyshopper) - Ask issuer to notify the shopper
+* [PostScheduleAccountUpdater](docs/general/README.md#postscheduleaccountupdater) - Schedule running the Account Updater
 <!-- End SDK Available Operations -->
 
 ### Maturity

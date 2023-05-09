@@ -37,7 +37,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Delete Project
 func (s *projects) DeleteProjectsID(ctx context.Context, request operations.DeleteProjectsIDRequest) (*operations.DeleteProjectsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *projects) GetProjects(ctx context.Context, request operations.GetProjec
 // Show Project
 func (s *projects) GetProjectsID(ctx context.Context, request operations.GetProjectsIDRequest) (*operations.GetProjectsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *projects) GetProjectsID(ctx context.Context, request operations.GetProj
 // Update Project
 func (s *projects) PatchProjectsID(ctx context.Context, request operations.PatchProjectsIDRequest) (*operations.PatchProjectsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

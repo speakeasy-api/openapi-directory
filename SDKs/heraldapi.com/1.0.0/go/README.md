@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/heraldapi.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.GetApplicationsApplicationIDRequest{
-        ApplicationID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-    }
-
     ctx := context.Background()
-    res, err := s.Applications.GetApplicationsApplicationID(ctx, req)
+    res, err := s.Applications.GetApplicationsApplicationID(ctx, operations.GetApplicationsApplicationIDRequest{
+        ApplicationID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,62 +46,62 @@ func main() {
 ## Available Resources and Operations
 
 
-### Applications
+### [Applications](docs/applications/README.md)
 
-* `GetApplicationsApplicationID` - /applications/{application_id}
-* `PostApplications` - /applications
-* `PutApplicationsApplicationID` - /applications/{application_id}
+* [GetApplicationsApplicationID](docs/applications/README.md#getapplicationsapplicationid) - /applications/{application_id}
+* [PostApplications](docs/applications/README.md#postapplications) - /applications
+* [PutApplicationsApplicationID](docs/applications/README.md#putapplicationsapplicationid) - /applications/{application_id}
 
-### Auth
+### [Auth](docs/auth/README.md)
 
-* `PostAuthToken` - /auth/token
+* [PostAuthToken](docs/auth/README.md#postauthtoken) - /auth/token
 
-### Classifications
+### [Classifications](docs/classifications/README.md)
 
-* `GetClassifications` - /classifications/naics_index_entries
+* [GetClassifications](docs/classifications/README.md#getclassifications) - /classifications/naics_index_entries
 
-### CoverageParameters
+### [CoverageParameters](docs/coverageparameters/README.md)
 
-* `GetCoverageParameters` - /coverage_parameters
+* [GetCoverageParameters](docs/coverageparameters/README.md#getcoverageparameters) - /coverage_parameters
 
-### Files
+### [Files](docs/files/README.md)
 
-* `GetFilesFileID` - /files/{file_id}
-* `PostFilesFileIDGetTemporaryLink` - /files/{file_id}/get_temporary_link
+* [GetFilesFileID](docs/files/README.md#getfilesfileid) - /files/{file_id}
+* [PostFilesFileIDGetTemporaryLink](docs/files/README.md#postfilesfileidgettemporarylink) - /files/{file_id}/get_temporary_link
 
-### Institutions
+### [Institutions](docs/institutions/README.md)
 
-* `GetInstitutions` - /institutions
+* [GetInstitutions](docs/institutions/README.md#getinstitutions) - /institutions
 
-### Policies
+### [Policies](docs/policies/README.md)
 
-* `GetPoliciesPolicyID` - /policies/{policy_id}
-* `PostPolicies` - /policies
+* [GetPoliciesPolicyID](docs/policies/README.md#getpoliciespolicyid) - /policies/{policy_id}
+* [PostPolicies](docs/policies/README.md#postpolicies) - /policies
 
-### Producers
+### [Producers](docs/producers/README.md)
 
-* `GetProducers` - /producers
+* [GetProducers](docs/producers/README.md#getproducers) - /producers
 
-### Products
+### [Products](docs/products/README.md)
 
-* `GetProducts` - /products
+* [GetProducts](docs/products/README.md#getproducts) - /products
 
-### Quotes
+### [Quotes](docs/quotes/README.md)
 
-* `GetQuotesQuoteID` - /quotes/{quote_id}
+* [GetQuotesQuoteID](docs/quotes/README.md#getquotesquoteid) - /quotes/{quote_id}
 
-### RiskParameters
+### [RiskParameters](docs/riskparameters/README.md)
 
-* `GetRiskParameters` - /risk_parameters
+* [GetRiskParameters](docs/riskparameters/README.md#getriskparameters) - /risk_parameters
 
-### Submissions
+### [Submissions](docs/submissions/README.md)
 
-* `GetSubmissionsSubmissionID` - /submissions/{submission_id}
-* `PostSubmissions` - /submissions
+* [GetSubmissionsSubmissionID](docs/submissions/README.md#getsubmissionssubmissionid) - /submissions/{submission_id}
+* [PostSubmissions](docs/submissions/README.md#postsubmissions) - /submissions
 
-### WelcomeAndHealthCheck
+### [WelcomeAndHealthCheck](docs/welcomeandhealthcheck/README.md)
 
-* `Get` - /
+* [Get](docs/welcomeandhealthcheck/README.md#get) - /
 <!-- End SDK Available Operations -->
 
 ### Maturity

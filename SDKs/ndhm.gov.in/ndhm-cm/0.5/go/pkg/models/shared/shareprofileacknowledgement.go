@@ -14,19 +14,23 @@ const (
 	ShareProfileAcknowledgementStatusEnumFailure ShareProfileAcknowledgementStatusEnum = "FAILURE"
 )
 
+func (e ShareProfileAcknowledgementStatusEnum) ToPointer() *ShareProfileAcknowledgementStatusEnum {
+	return &e
+}
+
 func (e *ShareProfileAcknowledgementStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESS":
 		fallthrough
 	case "FAILURE":
-		*e = ShareProfileAcknowledgementStatusEnum(s)
+		*e = ShareProfileAcknowledgementStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareProfileAcknowledgementStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareProfileAcknowledgementStatusEnum: %v", v)
 	}
 }
 

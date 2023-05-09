@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/truanon.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetProfileRequest{
-        ID: "{{your-member-id}}",
-        Service: "{{service-identifier}}",
-    }
-
     ctx := context.Background()
-    res, err := s.GetProfile(ctx, req)
+    res, err := s.GetProfile(ctx, operations.GetProfileRequest{
+        ID: sdk.String("{{your-member-id}}"),
+        Service: sdk.String("{{service-identifier}}"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,10 +42,10 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetProfile` - Get Profile
-* `GetToken` - Get Token
+* [GetProfile](docs/sdk/README.md#getprofile) - Get Profile
+* [GetToken](docs/sdk/README.md#gettoken) - Get Token
 <!-- End SDK Available Operations -->
 
 ### Maturity

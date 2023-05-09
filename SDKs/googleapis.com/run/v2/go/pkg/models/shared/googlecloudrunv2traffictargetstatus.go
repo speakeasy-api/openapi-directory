@@ -16,21 +16,25 @@ const (
 	GoogleCloudRunV2TrafficTargetStatusTypeEnumTrafficTargetAllocationTypeRevision    GoogleCloudRunV2TrafficTargetStatusTypeEnum = "TRAFFIC_TARGET_ALLOCATION_TYPE_REVISION"
 )
 
+func (e GoogleCloudRunV2TrafficTargetStatusTypeEnum) ToPointer() *GoogleCloudRunV2TrafficTargetStatusTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2TrafficTargetStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRAFFIC_TARGET_ALLOCATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TRAFFIC_TARGET_ALLOCATION_TYPE_LATEST":
 		fallthrough
 	case "TRAFFIC_TARGET_ALLOCATION_TYPE_REVISION":
-		*e = GoogleCloudRunV2TrafficTargetStatusTypeEnum(s)
+		*e = GoogleCloudRunV2TrafficTargetStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2TrafficTargetStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2TrafficTargetStatusTypeEnum: %v", v)
 	}
 }
 

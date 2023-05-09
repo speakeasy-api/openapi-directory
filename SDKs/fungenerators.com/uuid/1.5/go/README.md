@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/fungenerators.com/uuid/1.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetUUIDRequest{
-        Count: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.UUIDGeneration.GetUUID(ctx, req, operations.GetUUIDSecurity{
+    res, err := s.UUIDGeneration.GetUUID(ctx, operations.GetUUIDRequest{
+        Count: sdk.Int64(548814),
+    }, operations.GetUUIDSecurity{
         XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -47,14 +44,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### UUIDGeneration
+### [UUIDGeneration](docs/uuidgeneration/README.md)
 
-* `GetUUID` - Generate a random UUID (v4).
-* `GetUUIDVersionVersion` - Generate a random UUID (v4).
+* [GetUUID](docs/uuidgeneration/README.md#getuuid) - Generate a random UUID (v4).
+* [GetUUIDVersionVersion](docs/uuidgeneration/README.md#getuuidversionversion) - Generate a random UUID (v4).
 
-### UUIDParsing
+### [UUIDParsing](docs/uuidparsing/README.md)
 
-* `PostUUID` - Parse a UUID string and return its version and check whether it is valid.
+* [PostUUID](docs/uuidparsing/README.md#postuuid) - Parse a UUID string and return its version and check whether it is valid.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.RotoballerArticlesRequest{
-        Format: "json",
-    }
-
     ctx := context.Background()
-    res, err := s.RotoballerArticles(ctx, req)
+    res, err := s.RotoballerArticles(ctx, operations.RotoballerArticlesRequest{
+        Format: operations.RotoballerArticlesFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -16,17 +16,21 @@ const (
 	OverridePullRequestApprovalRulesXAmzTargetEnumCodeCommit20150413OverridePullRequestApprovalRules OverridePullRequestApprovalRulesXAmzTargetEnum = "CodeCommit_20150413.OverridePullRequestApprovalRules"
 )
 
+func (e OverridePullRequestApprovalRulesXAmzTargetEnum) ToPointer() *OverridePullRequestApprovalRulesXAmzTargetEnum {
+	return &e
+}
+
 func (e *OverridePullRequestApprovalRulesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.OverridePullRequestApprovalRules":
-		*e = OverridePullRequestApprovalRulesXAmzTargetEnum(s)
+		*e = OverridePullRequestApprovalRulesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OverridePullRequestApprovalRulesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for OverridePullRequestApprovalRulesXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -287,7 +287,10 @@ func (s *payments) CreatePaymentMultipart(ctx context.Context, request shared.Pa
 // DeletePeriodicPayment - Delete periodic payment
 func (s *payments) DeletePeriodicPayment(ctx context.Context, request operations.DeletePeriodicPaymentRequest) (*operations.DeletePeriodicPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/{id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/{id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -381,7 +384,10 @@ func (s *payments) DeletePeriodicPayment(ctx context.Context, request operations
 // ListMinimumRequiredFieldsForInstitution - List minimum required fields for institution
 func (s *payments) ListMinimumRequiredFieldsForInstitution(ctx context.Context, request operations.ListMinimumRequiredFieldsForInstitutionRequest) (*operations.ListMinimumRequiredFieldsForInstitutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/fields/{institution_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/fields/{institution_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -695,7 +701,10 @@ func (s *payments) PaymentsCreditorsCreateMultipart(ctx context.Context, request
 // PaymentsCreditorsDestroy - API endpoints related to creditor accounts.
 func (s *payments) PaymentsCreditorsDestroy(ctx context.Context, request operations.PaymentsCreditorsDestroyRequest) (*operations.PaymentsCreditorsDestroyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/creditors/{id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/creditors/{id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -778,7 +787,10 @@ func (s *payments) PaymentsCreditorsList(ctx context.Context, request operations
 // PaymentsCreditorsRetrieve - API endpoints related to creditor accounts.
 func (s *payments) PaymentsCreditorsRetrieve(ctx context.Context, request operations.PaymentsCreditorsRetrieveRequest) (*operations.PaymentsCreditorsRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/creditors/{id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/creditors/{id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -813,6 +825,183 @@ func (s *payments) PaymentsCreditorsRetrieve(ctx context.Context, request operat
 			}
 
 			res.CreditorAccount = out
+		}
+	}
+
+	return res, nil
+}
+
+// PaymentsSubmitCreateForm - Initiate the payment on bank's side.
+//
+// Complete the payment and return payment details as a response.
+func (s *payments) PaymentsSubmitCreateForm(ctx context.Context, request operations.PaymentsSubmitCreateFormRequest) (*operations.PaymentsSubmitCreateFormResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/{id}/submit/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentReadRequest1", "form")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PaymentsSubmitCreateFormResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaymentRead
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaymentRead = out
+		}
+	}
+
+	return res, nil
+}
+
+// PaymentsSubmitCreateJSON - Initiate the payment on bank's side.
+//
+// Complete the payment and return payment details as a response.
+func (s *payments) PaymentsSubmitCreateJSON(ctx context.Context, request operations.PaymentsSubmitCreateJSONRequest) (*operations.PaymentsSubmitCreateJSONResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/{id}/submit/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentReadRequest", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PaymentsSubmitCreateJSONResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaymentRead
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaymentRead = out
+		}
+	}
+
+	return res, nil
+}
+
+// PaymentsSubmitCreateMultipart - Initiate the payment on bank's side.
+//
+// Complete the payment and return payment details as a response.
+func (s *payments) PaymentsSubmitCreateMultipart(ctx context.Context, request operations.PaymentsSubmitCreateMultipartRequest) (*operations.PaymentsSubmitCreateMultipartResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/{id}/submit/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentReadRequest1", "multipart")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PaymentsSubmitCreateMultipartResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaymentRead
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaymentRead = out
 		}
 	}
 
@@ -896,7 +1085,10 @@ func (s *payments) RetrieveAllPaymentCreditorAccounts(ctx context.Context) (*ope
 // RetrievePayment - Retrieve payment
 func (s *payments) RetrievePayment(ctx context.Context, request operations.RetrievePaymentRequest) (*operations.RetrievePaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/{id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/payments/{id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

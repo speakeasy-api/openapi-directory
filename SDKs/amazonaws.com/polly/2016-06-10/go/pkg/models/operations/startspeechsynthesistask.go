@@ -17,19 +17,23 @@ const (
 	StartSpeechSynthesisTaskRequestBodyEngineEnumNeural   StartSpeechSynthesisTaskRequestBodyEngineEnum = "neural"
 )
 
+func (e StartSpeechSynthesisTaskRequestBodyEngineEnum) ToPointer() *StartSpeechSynthesisTaskRequestBodyEngineEnum {
+	return &e
+}
+
 func (e *StartSpeechSynthesisTaskRequestBodyEngineEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "neural":
-		*e = StartSpeechSynthesisTaskRequestBodyEngineEnum(s)
+		*e = StartSpeechSynthesisTaskRequestBodyEngineEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartSpeechSynthesisTaskRequestBodyEngineEnum: %s", s)
+		return fmt.Errorf("invalid value for StartSpeechSynthesisTaskRequestBodyEngineEnum: %v", v)
 	}
 }
 
@@ -75,12 +79,16 @@ const (
 	StartSpeechSynthesisTaskRequestBodyLanguageCodeEnumFiFi    StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum = "fi-FI"
 )
 
+func (e StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum) ToPointer() *StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum {
+	return &e
+}
+
 func (e *StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "arb":
 		fallthrough
 	case "cmn-CN":
@@ -152,10 +160,10 @@ func (e *StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum) UnmarshalJSON(data
 	case "ar-AE":
 		fallthrough
 	case "fi-FI":
-		*e = StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum(s)
+		*e = StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StartSpeechSynthesisTaskRequestBodyLanguageCodeEnum: %v", v)
 	}
 }
 
@@ -169,12 +177,16 @@ const (
 	StartSpeechSynthesisTaskRequestBodyOutputFormatEnumPcm       StartSpeechSynthesisTaskRequestBodyOutputFormatEnum = "pcm"
 )
 
+func (e StartSpeechSynthesisTaskRequestBodyOutputFormatEnum) ToPointer() *StartSpeechSynthesisTaskRequestBodyOutputFormatEnum {
+	return &e
+}
+
 func (e *StartSpeechSynthesisTaskRequestBodyOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "mp3":
@@ -182,10 +194,10 @@ func (e *StartSpeechSynthesisTaskRequestBodyOutputFormatEnum) UnmarshalJSON(data
 	case "ogg_vorbis":
 		fallthrough
 	case "pcm":
-		*e = StartSpeechSynthesisTaskRequestBodyOutputFormatEnum(s)
+		*e = StartSpeechSynthesisTaskRequestBodyOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartSpeechSynthesisTaskRequestBodyOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for StartSpeechSynthesisTaskRequestBodyOutputFormatEnum: %v", v)
 	}
 }
 
@@ -197,19 +209,23 @@ const (
 	StartSpeechSynthesisTaskRequestBodyTextTypeEnumText StartSpeechSynthesisTaskRequestBodyTextTypeEnum = "text"
 )
 
+func (e StartSpeechSynthesisTaskRequestBodyTextTypeEnum) ToPointer() *StartSpeechSynthesisTaskRequestBodyTextTypeEnum {
+	return &e
+}
+
 func (e *StartSpeechSynthesisTaskRequestBodyTextTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ssml":
 		fallthrough
 	case "text":
-		*e = StartSpeechSynthesisTaskRequestBodyTextTypeEnum(s)
+		*e = StartSpeechSynthesisTaskRequestBodyTextTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartSpeechSynthesisTaskRequestBodyTextTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StartSpeechSynthesisTaskRequestBodyTextTypeEnum: %v", v)
 	}
 }
 
@@ -307,12 +323,16 @@ const (
 	StartSpeechSynthesisTaskRequestBodyVoiceIDEnumTomoko    StartSpeechSynthesisTaskRequestBodyVoiceIDEnum = "Tomoko"
 )
 
+func (e StartSpeechSynthesisTaskRequestBodyVoiceIDEnum) ToPointer() *StartSpeechSynthesisTaskRequestBodyVoiceIDEnum {
+	return &e
+}
+
 func (e *StartSpeechSynthesisTaskRequestBodyVoiceIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Aditi":
 		fallthrough
 	case "Amy":
@@ -488,10 +508,10 @@ func (e *StartSpeechSynthesisTaskRequestBodyVoiceIDEnum) UnmarshalJSON(data []by
 	case "Kazuha":
 		fallthrough
 	case "Tomoko":
-		*e = StartSpeechSynthesisTaskRequestBodyVoiceIDEnum(s)
+		*e = StartSpeechSynthesisTaskRequestBodyVoiceIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartSpeechSynthesisTaskRequestBodyVoiceIDEnum: %s", s)
+		return fmt.Errorf("invalid value for StartSpeechSynthesisTaskRequestBodyVoiceIDEnum: %v", v)
 	}
 }
 

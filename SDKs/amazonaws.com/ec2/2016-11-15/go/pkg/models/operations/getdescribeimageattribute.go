@@ -15,17 +15,21 @@ const (
 	GETDescribeImageAttributeActionEnumDescribeImageAttribute GETDescribeImageAttributeActionEnum = "DescribeImageAttribute"
 )
 
+func (e GETDescribeImageAttributeActionEnum) ToPointer() *GETDescribeImageAttributeActionEnum {
+	return &e
+}
+
 func (e *GETDescribeImageAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeImageAttribute":
-		*e = GETDescribeImageAttributeActionEnum(s)
+		*e = GETDescribeImageAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeImageAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeImageAttributeActionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	GETDescribeImageAttributeAttributeEnumImdsSupport        GETDescribeImageAttributeAttributeEnum = "imdsSupport"
 )
 
+func (e GETDescribeImageAttributeAttributeEnum) ToPointer() *GETDescribeImageAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETDescribeImageAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "description":
 		fallthrough
 	case "kernel":
@@ -76,10 +84,10 @@ func (e *GETDescribeImageAttributeAttributeEnum) UnmarshalJSON(data []byte) erro
 	case "lastLaunchedTime":
 		fallthrough
 	case "imdsSupport":
-		*e = GETDescribeImageAttributeAttributeEnum(s)
+		*e = GETDescribeImageAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeImageAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeImageAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -90,17 +98,21 @@ const (
 	GETDescribeImageAttributeVersionEnumTwoThousandAndSixteen1115 GETDescribeImageAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeImageAttributeVersionEnum) ToPointer() *GETDescribeImageAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeImageAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeImageAttributeVersionEnum(s)
+		*e = GETDescribeImageAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeImageAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeImageAttributeVersionEnum: %v", v)
 	}
 }
 

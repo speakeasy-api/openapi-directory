@@ -15,20 +15,24 @@ const (
 	LookbackPeriodInDaysEnumSixtyDays  LookbackPeriodInDaysEnum = "SIXTY_DAYS"
 )
 
+func (e LookbackPeriodInDaysEnum) ToPointer() *LookbackPeriodInDaysEnum {
+	return &e
+}
+
 func (e *LookbackPeriodInDaysEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVEN_DAYS":
 		fallthrough
 	case "THIRTY_DAYS":
 		fallthrough
 	case "SIXTY_DAYS":
-		*e = LookbackPeriodInDaysEnum(s)
+		*e = LookbackPeriodInDaysEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LookbackPeriodInDaysEnum: %s", s)
+		return fmt.Errorf("invalid value for LookbackPeriodInDaysEnum: %v", v)
 	}
 }

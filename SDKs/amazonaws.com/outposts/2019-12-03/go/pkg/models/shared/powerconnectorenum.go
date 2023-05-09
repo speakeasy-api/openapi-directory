@@ -16,12 +16,16 @@ const (
 	PowerConnectorEnumAh532P6W PowerConnectorEnum = "AH532P6W"
 )
 
+func (e PowerConnectorEnum) ToPointer() *PowerConnectorEnum {
+	return &e
+}
+
 func (e *PowerConnectorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "L6_30P":
 		fallthrough
 	case "IEC309":
@@ -29,9 +33,9 @@ func (e *PowerConnectorEnum) UnmarshalJSON(data []byte) error {
 	case "AH530P7W":
 		fallthrough
 	case "AH532P6W":
-		*e = PowerConnectorEnum(s)
+		*e = PowerConnectorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PowerConnectorEnum: %s", s)
+		return fmt.Errorf("invalid value for PowerConnectorEnum: %v", v)
 	}
 }

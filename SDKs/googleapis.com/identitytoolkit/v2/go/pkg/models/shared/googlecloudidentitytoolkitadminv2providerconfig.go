@@ -17,12 +17,16 @@ const (
 	GoogleCloudIdentitytoolkitAdminV2ProviderConfigStateEnumMandatory           GoogleCloudIdentitytoolkitAdminV2ProviderConfigStateEnum = "MANDATORY"
 )
 
+func (e GoogleCloudIdentitytoolkitAdminV2ProviderConfigStateEnum) ToPointer() *GoogleCloudIdentitytoolkitAdminV2ProviderConfigStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudIdentitytoolkitAdminV2ProviderConfigStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MFA_STATE_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
@@ -30,10 +34,10 @@ func (e *GoogleCloudIdentitytoolkitAdminV2ProviderConfigStateEnum) UnmarshalJSON
 	case "ENABLED":
 		fallthrough
 	case "MANDATORY":
-		*e = GoogleCloudIdentitytoolkitAdminV2ProviderConfigStateEnum(s)
+		*e = GoogleCloudIdentitytoolkitAdminV2ProviderConfigStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIdentitytoolkitAdminV2ProviderConfigStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIdentitytoolkitAdminV2ProviderConfigStateEnum: %v", v)
 	}
 }
 

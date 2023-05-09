@@ -18,12 +18,16 @@ const (
 	UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnumUDP      UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum = "udp"
 )
 
+func (e UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum) ToPointer() *UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum {
+	return &e
+}
+
 func (e *UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "icmp-ping":
@@ -31,10 +35,10 @@ func (e *UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum
 	case "tcp":
 		fallthrough
 	case "udp":
-		*e = UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum(s)
+		*e = UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkOneToOneNatRulesRequestBodyRulesAllowedInboundProtocolEnum: %v", v)
 	}
 }
 
@@ -55,19 +59,23 @@ const (
 	UpdateNetworkOneToOneNatRulesRequestBodyRulesUplinkEnumInternet2 UpdateNetworkOneToOneNatRulesRequestBodyRulesUplinkEnum = "internet2"
 )
 
+func (e UpdateNetworkOneToOneNatRulesRequestBodyRulesUplinkEnum) ToPointer() *UpdateNetworkOneToOneNatRulesRequestBodyRulesUplinkEnum {
+	return &e
+}
+
 func (e *UpdateNetworkOneToOneNatRulesRequestBodyRulesUplinkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internet1":
 		fallthrough
 	case "internet2":
-		*e = UpdateNetworkOneToOneNatRulesRequestBodyRulesUplinkEnum(s)
+		*e = UpdateNetworkOneToOneNatRulesRequestBodyRulesUplinkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkOneToOneNatRulesRequestBodyRulesUplinkEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkOneToOneNatRulesRequestBodyRulesUplinkEnum: %v", v)
 	}
 }
 

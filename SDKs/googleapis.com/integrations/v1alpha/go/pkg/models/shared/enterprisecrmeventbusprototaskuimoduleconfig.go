@@ -33,12 +33,16 @@ const (
 	EnterpriseCrmEventbusProtoTaskUIModuleConfigModuleIDEnumGenericConnectorTask     EnterpriseCrmEventbusProtoTaskUIModuleConfigModuleIDEnum = "GENERIC_CONNECTOR_TASK"
 )
 
+func (e EnterpriseCrmEventbusProtoTaskUIModuleConfigModuleIDEnum) ToPointer() *EnterpriseCrmEventbusProtoTaskUIModuleConfigModuleIDEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoTaskUIModuleConfigModuleIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_TASK_MODULE":
 		fallthrough
 	case "LABEL":
@@ -78,10 +82,10 @@ func (e *EnterpriseCrmEventbusProtoTaskUIModuleConfigModuleIDEnum) UnmarshalJSON
 	case "CLOUD_SQL":
 		fallthrough
 	case "GENERIC_CONNECTOR_TASK":
-		*e = EnterpriseCrmEventbusProtoTaskUIModuleConfigModuleIDEnum(s)
+		*e = EnterpriseCrmEventbusProtoTaskUIModuleConfigModuleIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskUIModuleConfigModuleIDEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoTaskUIModuleConfigModuleIDEnum: %v", v)
 	}
 }
 

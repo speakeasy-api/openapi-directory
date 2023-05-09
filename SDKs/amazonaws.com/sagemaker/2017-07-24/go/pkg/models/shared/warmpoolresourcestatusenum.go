@@ -16,12 +16,16 @@ const (
 	WarmPoolResourceStatusEnumInUse      WarmPoolResourceStatusEnum = "InUse"
 )
 
+func (e WarmPoolResourceStatusEnum) ToPointer() *WarmPoolResourceStatusEnum {
+	return &e
+}
+
 func (e *WarmPoolResourceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Available":
 		fallthrough
 	case "Terminated":
@@ -29,9 +33,9 @@ func (e *WarmPoolResourceStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Reused":
 		fallthrough
 	case "InUse":
-		*e = WarmPoolResourceStatusEnum(s)
+		*e = WarmPoolResourceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WarmPoolResourceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WarmPoolResourceStatusEnum: %v", v)
 	}
 }

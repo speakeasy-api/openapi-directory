@@ -18,12 +18,16 @@ const (
 	PolicyStatusEnumUnresponsive PolicyStatusEnum = "unresponsive"
 )
 
+func (e PolicyStatusEnum) ToPointer() *PolicyStatusEnum {
+	return &e
+}
+
 func (e *PolicyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "under_review":
@@ -35,10 +39,10 @@ func (e *PolicyStatusEnum) UnmarshalJSON(data []byte) error {
 	case "cancelled":
 		fallthrough
 	case "unresponsive":
-		*e = PolicyStatusEnum(s)
+		*e = PolicyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyStatusEnum: %v", v)
 	}
 }
 

@@ -29,12 +29,16 @@ const (
 	MediationReportSpecDimensionFilterDimensionEnumServingRestriction   MediationReportSpecDimensionFilterDimensionEnum = "SERVING_RESTRICTION"
 )
 
+func (e MediationReportSpecDimensionFilterDimensionEnum) ToPointer() *MediationReportSpecDimensionFilterDimensionEnum {
+	return &e
+}
+
 func (e *MediationReportSpecDimensionFilterDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "DATE":
@@ -66,10 +70,10 @@ func (e *MediationReportSpecDimensionFilterDimensionEnum) UnmarshalJSON(data []b
 	case "APP_VERSION_NAME":
 		fallthrough
 	case "SERVING_RESTRICTION":
-		*e = MediationReportSpecDimensionFilterDimensionEnum(s)
+		*e = MediationReportSpecDimensionFilterDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediationReportSpecDimensionFilterDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for MediationReportSpecDimensionFilterDimensionEnum: %v", v)
 	}
 }
 

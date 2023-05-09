@@ -30,17 +30,21 @@ const (
 	CtcerRequestBodyFormatEnumPdf CtcerRequestBodyFormatEnum = "pdf"
 )
 
+func (e CtcerRequestBodyFormatEnum) ToPointer() *CtcerRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *CtcerRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = CtcerRequestBodyFormatEnum(s)
+		*e = CtcerRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CtcerRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CtcerRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -60,17 +64,21 @@ const (
 	Ctcer504ApplicationJSONErrorEnumGatewayTimeout Ctcer504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Ctcer504ApplicationJSONErrorEnum) ToPointer() *Ctcer504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ctcer504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Ctcer504ApplicationJSONErrorEnum(s)
+		*e = Ctcer504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -80,17 +88,21 @@ const (
 	Ctcer504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Ctcer504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Ctcer504ApplicationJSONErrorDescriptionEnum) ToPointer() *Ctcer504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ctcer504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Ctcer504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ctcer504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -106,17 +118,21 @@ const (
 	Ctcer503ApplicationJSONErrorEnumServiceUnavailable Ctcer503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Ctcer503ApplicationJSONErrorEnum) ToPointer() *Ctcer503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ctcer503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Ctcer503ApplicationJSONErrorEnum(s)
+		*e = Ctcer503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -126,17 +142,21 @@ const (
 	Ctcer503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Ctcer503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Ctcer503ApplicationJSONErrorDescriptionEnum) ToPointer() *Ctcer503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ctcer503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Ctcer503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ctcer503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -152,17 +172,21 @@ const (
 	Ctcer502ApplicationJSONErrorEnumBadGatewy Ctcer502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Ctcer502ApplicationJSONErrorEnum) ToPointer() *Ctcer502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ctcer502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Ctcer502ApplicationJSONErrorEnum(s)
+		*e = Ctcer502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -172,17 +196,21 @@ const (
 	Ctcer502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Ctcer502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Ctcer502ApplicationJSONErrorDescriptionEnum) ToPointer() *Ctcer502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ctcer502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Ctcer502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ctcer502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -198,17 +226,21 @@ const (
 	Ctcer500ApplicationJSONErrorEnumInternalServerError Ctcer500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Ctcer500ApplicationJSONErrorEnum) ToPointer() *Ctcer500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ctcer500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Ctcer500ApplicationJSONErrorEnum(s)
+		*e = Ctcer500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -218,17 +250,21 @@ const (
 	Ctcer500ApplicationJSONErrorDescriptionEnumInternalServerError Ctcer500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Ctcer500ApplicationJSONErrorDescriptionEnum) ToPointer() *Ctcer500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ctcer500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Ctcer500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ctcer500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -245,19 +281,23 @@ const (
 	Ctcer404ApplicationJSONErrorEnumURLNotFound    Ctcer404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Ctcer404ApplicationJSONErrorEnum) ToPointer() *Ctcer404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ctcer404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Ctcer404ApplicationJSONErrorEnum(s)
+		*e = Ctcer404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -268,19 +308,23 @@ const (
 	Ctcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Ctcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Ctcer404ApplicationJSONErrorDescriptionEnum) ToPointer() *Ctcer404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ctcer404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Ctcer404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ctcer404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -297,19 +341,23 @@ const (
 	Ctcer401ApplicationJSONErrorEnumInvalidAuthorization  Ctcer401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Ctcer401ApplicationJSONErrorEnum) ToPointer() *Ctcer401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ctcer401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Ctcer401ApplicationJSONErrorEnum(s)
+		*e = Ctcer401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -320,19 +368,23 @@ const (
 	Ctcer401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Ctcer401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Ctcer401ApplicationJSONErrorDescriptionEnum) ToPointer() *Ctcer401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ctcer401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Ctcer401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ctcer401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -352,12 +404,16 @@ const (
 	Ctcer400ApplicationJSONErrorEnumInvalidConsentid Ctcer400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Ctcer400ApplicationJSONErrorEnum) ToPointer() *Ctcer400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ctcer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -367,10 +423,10 @@ func (e *Ctcer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Ctcer400ApplicationJSONErrorEnum(s)
+		*e = Ctcer400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -384,12 +440,16 @@ const (
 	Ctcer400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Ctcer400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Ctcer400ApplicationJSONErrorDescriptionEnum) ToPointer() *Ctcer400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ctcer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -399,10 +459,10 @@ func (e *Ctcer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Ctcer400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ctcer400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ctcer400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ctcer400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // TexttospeechProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) TexttospeechProjectsLocationsOperationsGet(ctx context.Context, request operations.TexttospeechProjectsLocationsOperationsGetRequest, security operations.TexttospeechProjectsLocationsOperationsGetSecurity) (*operations.TexttospeechProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) TexttospeechProjectsLocationsOperationsGet(ctx context.Contex
 // TexttospeechProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) TexttospeechProjectsLocationsOperationsList(ctx context.Context, request operations.TexttospeechProjectsLocationsOperationsListRequest, security operations.TexttospeechProjectsLocationsOperationsListSecurity) (*operations.TexttospeechProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *projects) TexttospeechProjectsLocationsOperationsList(ctx context.Conte
 // TexttospeechProjectsLocationsSynthesizeLongAudio - Synthesizes long form text asynchronously.
 func (s *projects) TexttospeechProjectsLocationsSynthesizeLongAudio(ctx context.Context, request operations.TexttospeechProjectsLocationsSynthesizeLongAudioRequest, security operations.TexttospeechProjectsLocationsSynthesizeLongAudioSecurity) (*operations.TexttospeechProjectsLocationsSynthesizeLongAudioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:synthesizeLongAudio", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:synthesizeLongAudio", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SynthesizeLongAudioRequest", "json")
 	if err != nil {

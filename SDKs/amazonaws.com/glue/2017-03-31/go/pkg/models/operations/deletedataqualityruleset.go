@@ -16,17 +16,21 @@ const (
 	DeleteDataQualityRulesetXAmzTargetEnumAwsGlueDeleteDataQualityRuleset DeleteDataQualityRulesetXAmzTargetEnum = "AWSGlue.DeleteDataQualityRuleset"
 )
 
+func (e DeleteDataQualityRulesetXAmzTargetEnum) ToPointer() *DeleteDataQualityRulesetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDataQualityRulesetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.DeleteDataQualityRuleset":
-		*e = DeleteDataQualityRulesetXAmzTargetEnum(s)
+		*e = DeleteDataQualityRulesetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDataQualityRulesetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDataQualityRulesetXAmzTargetEnum: %v", v)
 	}
 }
 

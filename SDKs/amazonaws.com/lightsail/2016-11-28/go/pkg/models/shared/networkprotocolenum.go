@@ -16,12 +16,16 @@ const (
 	NetworkProtocolEnumIcmp NetworkProtocolEnum = "icmp"
 )
 
+func (e NetworkProtocolEnum) ToPointer() *NetworkProtocolEnum {
+	return &e
+}
+
 func (e *NetworkProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "all":
@@ -29,9 +33,9 @@ func (e *NetworkProtocolEnum) UnmarshalJSON(data []byte) error {
 	case "udp":
 		fallthrough
 	case "icmp":
-		*e = NetworkProtocolEnum(s)
+		*e = NetworkProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkProtocolEnum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newMXPortForwardingRules(defaultClient, securityClient HTTPClient, serverUR
 // Return the port forwarding rules for an MX network
 func (s *mxPortForwardingRules) GetNetworkPortForwardingRules(ctx context.Context, request operations.GetNetworkPortForwardingRulesRequest) (*operations.GetNetworkPortForwardingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/portForwardingRules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/portForwardingRules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *mxPortForwardingRules) GetNetworkPortForwardingRules(ctx context.Contex
 // Update the port forwarding rules for an MX network
 func (s *mxPortForwardingRules) UpdateNetworkPortForwardingRules(ctx context.Context, request operations.UpdateNetworkPortForwardingRulesRequest) (*operations.UpdateNetworkPortForwardingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/portForwardingRules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/portForwardingRules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

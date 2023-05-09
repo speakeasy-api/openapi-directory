@@ -15,19 +15,23 @@ const (
 	ActivityContentDetailsPromotedItemCtaTypeEnumVisitAdvertiserSite ActivityContentDetailsPromotedItemCtaTypeEnum = "visitAdvertiserSite"
 )
 
+func (e ActivityContentDetailsPromotedItemCtaTypeEnum) ToPointer() *ActivityContentDetailsPromotedItemCtaTypeEnum {
+	return &e
+}
+
 func (e *ActivityContentDetailsPromotedItemCtaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ctaTypeUnspecified":
 		fallthrough
 	case "visitAdvertiserSite":
-		*e = ActivityContentDetailsPromotedItemCtaTypeEnum(s)
+		*e = ActivityContentDetailsPromotedItemCtaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivityContentDetailsPromotedItemCtaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivityContentDetailsPromotedItemCtaTypeEnum: %v", v)
 	}
 }
 

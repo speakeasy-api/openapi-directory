@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/service-quo
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,24 +27,22 @@ func main() {
         }),
     )
 
-    req := operations.AssociateServiceQuotaTemplateRequest{
+    ctx := context.Background()
+    res, err := s.AssociateServiceQuotaTemplate(ctx, operations.AssociateServiceQuotaTemplateRequest{
         RequestBody: map[string]interface{}{
             "provident": "distinctio",
             "quibusdam": "unde",
             "nulla": "corrupti",
         },
-        XAmzAlgorithm: "illum",
-        XAmzContentSha256: "vel",
-        XAmzCredential: "error",
-        XAmzDate: "deserunt",
-        XAmzSecurityToken: "suscipit",
-        XAmzSignature: "iure",
-        XAmzSignedHeaders: "magnam",
-        XAmzTarget: "ServiceQuotasV20190624.AssociateServiceQuotaTemplate",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateServiceQuotaTemplate(ctx, req)
+        XAmzAlgorithm: sdk.String("illum"),
+        XAmzContentSha256: sdk.String("vel"),
+        XAmzCredential: sdk.String("error"),
+        XAmzDate: sdk.String("deserunt"),
+        XAmzSecurityToken: sdk.String("suscipit"),
+        XAmzSignature: sdk.String("iure"),
+        XAmzSignedHeaders: sdk.String("magnam"),
+        XAmzTarget: operations.AssociateServiceQuotaTemplateXAmzTargetEnumServiceQuotasV20190624AssociateServiceQuotaTemplate,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -60,27 +57,27 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AssociateServiceQuotaTemplate` - Associates your quota request template with your organization. When a new account is created in your organization, the quota increase requests in the template are automatically applied to the account. You can add a quota increase request for any adjustable quota to your template.
-* `DeleteServiceQuotaIncreaseRequestFromTemplate` - Deletes the quota increase request for the specified quota from your quota request template.
-* `DisassociateServiceQuotaTemplate` - Disables your quota request template. After a template is disabled, the quota increase requests in the template are not applied to new accounts in your organization. Disabling a quota request template does not apply its quota increase requests.
-* `GetAWSDefaultServiceQuota` - Retrieves the default value for the specified quota. The default value does not reflect any quota increases.
-* `GetAssociationForServiceQuotaTemplate` - Retrieves the status of the association for the quota request template.
-* `GetRequestedServiceQuotaChange` - Retrieves information about the specified quota increase request.
-* `GetServiceQuota` - Retrieves the applied quota value for the specified quota. For some quotas, only the default values are available. If the applied quota value is not available for a quota, the quota is not retrieved.
-* `GetServiceQuotaIncreaseRequestFromTemplate` - Retrieves information about the specified quota increase request in your quota request template.
-* `ListAWSDefaultServiceQuotas` - Lists the default values for the quotas for the specified AWS service. A default value does not reflect any quota increases.
-* `ListRequestedServiceQuotaChangeHistory` - Retrieves the quota increase requests for the specified service.
-* `ListRequestedServiceQuotaChangeHistoryByQuota` - Retrieves the quota increase requests for the specified quota.
-* `ListServiceQuotaIncreaseRequestsInTemplate` - Lists the quota increase requests in the specified quota request template.
-* `ListServiceQuotas` - Lists the applied quota values for the specified AWS service. For some quotas, only the default values are available. If the applied quota value is not available for a quota, the quota is not retrieved.
-* `ListServices` - Lists the names and codes for the services integrated with Service Quotas.
-* `ListTagsForResource` - Returns a list of the tags assigned to the specified applied quota.
-* `PutServiceQuotaIncreaseRequestIntoTemplate` - Adds a quota increase request to your quota request template.
-* `RequestServiceQuotaIncrease` - Submits a quota increase request for the specified quota.
-* `TagResource` - Adds tags to the specified applied quota. You can include one or more tags to add to the quota.
-* `UntagResource` - Removes tags from the specified applied quota. You can specify one or more tags to remove.
+* [AssociateServiceQuotaTemplate](docs/sdk/README.md#associateservicequotatemplate) - Associates your quota request template with your organization. When a new account is created in your organization, the quota increase requests in the template are automatically applied to the account. You can add a quota increase request for any adjustable quota to your template.
+* [DeleteServiceQuotaIncreaseRequestFromTemplate](docs/sdk/README.md#deleteservicequotaincreaserequestfromtemplate) - Deletes the quota increase request for the specified quota from your quota request template.
+* [DisassociateServiceQuotaTemplate](docs/sdk/README.md#disassociateservicequotatemplate) - Disables your quota request template. After a template is disabled, the quota increase requests in the template are not applied to new accounts in your organization. Disabling a quota request template does not apply its quota increase requests.
+* [GetAWSDefaultServiceQuota](docs/sdk/README.md#getawsdefaultservicequota) - Retrieves the default value for the specified quota. The default value does not reflect any quota increases.
+* [GetAssociationForServiceQuotaTemplate](docs/sdk/README.md#getassociationforservicequotatemplate) - Retrieves the status of the association for the quota request template.
+* [GetRequestedServiceQuotaChange](docs/sdk/README.md#getrequestedservicequotachange) - Retrieves information about the specified quota increase request.
+* [GetServiceQuota](docs/sdk/README.md#getservicequota) - Retrieves the applied quota value for the specified quota. For some quotas, only the default values are available. If the applied quota value is not available for a quota, the quota is not retrieved.
+* [GetServiceQuotaIncreaseRequestFromTemplate](docs/sdk/README.md#getservicequotaincreaserequestfromtemplate) - Retrieves information about the specified quota increase request in your quota request template.
+* [ListAWSDefaultServiceQuotas](docs/sdk/README.md#listawsdefaultservicequotas) - Lists the default values for the quotas for the specified AWS service. A default value does not reflect any quota increases.
+* [ListRequestedServiceQuotaChangeHistory](docs/sdk/README.md#listrequestedservicequotachangehistory) - Retrieves the quota increase requests for the specified service.
+* [ListRequestedServiceQuotaChangeHistoryByQuota](docs/sdk/README.md#listrequestedservicequotachangehistorybyquota) - Retrieves the quota increase requests for the specified quota.
+* [ListServiceQuotaIncreaseRequestsInTemplate](docs/sdk/README.md#listservicequotaincreaserequestsintemplate) - Lists the quota increase requests in the specified quota request template.
+* [ListServiceQuotas](docs/sdk/README.md#listservicequotas) - Lists the applied quota values for the specified AWS service. For some quotas, only the default values are available. If the applied quota value is not available for a quota, the quota is not retrieved.
+* [ListServices](docs/sdk/README.md#listservices) - Lists the names and codes for the services integrated with Service Quotas.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Returns a list of the tags assigned to the specified applied quota.
+* [PutServiceQuotaIncreaseRequestIntoTemplate](docs/sdk/README.md#putservicequotaincreaserequestintotemplate) - Adds a quota increase request to your quota request template.
+* [RequestServiceQuotaIncrease](docs/sdk/README.md#requestservicequotaincrease) - Submits a quota increase request for the specified quota.
+* [TagResource](docs/sdk/README.md#tagresource) - Adds tags to the specified applied quota. You can include one or more tags to add to the quota.
+* [UntagResource](docs/sdk/README.md#untagresource) - Removes tags from the specified applied quota. You can specify one or more tags to remove.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Amplify enables developers to develop and deploy cloud-powered mobile and web apps. The Amplify Console provides a continuous delivery and hosting service for web applications. For more information, see the <a href="https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html">Amplify Console User Guide</a>. The Amplify Framework is a comprehensive set of SDKs, libraries, tools, and documentation for client app development. For more information, see the <a href="https://docs.amplify.aws/">Amplify Framework.</a>
 // https://docs.aws.amazon.com/amplify/ - Amazon Web Services documentation
 type SDK struct {
@@ -220,7 +235,10 @@ func (s *SDK) CreateApp(ctx context.Context, request operations.CreateAppRequest
 // CreateBackendEnvironment -  Creates a new backend environment for an Amplify app.
 func (s *SDK) CreateBackendEnvironment(ctx context.Context, request operations.CreateBackendEnvironmentRequest) (*operations.CreateBackendEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/backendenvironments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/backendenvironments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -326,7 +344,10 @@ func (s *SDK) CreateBackendEnvironment(ctx context.Context, request operations.C
 // CreateBranch -  Creates a new branch for an Amplify app.
 func (s *SDK) CreateBranch(ctx context.Context, request operations.CreateBranchRequest) (*operations.CreateBranchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -442,7 +463,10 @@ func (s *SDK) CreateBranch(ctx context.Context, request operations.CreateBranchR
 // CreateDeployment -  Creates a deployment for a manually deployed Amplify app. Manually deployed apps are not connected to a repository.
 func (s *SDK) CreateDeployment(ctx context.Context, request operations.CreateDeploymentRequest) (*operations.CreateDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -538,7 +562,10 @@ func (s *SDK) CreateDeployment(ctx context.Context, request operations.CreateDep
 // CreateDomainAssociation -  Creates a new domain association for an Amplify app. This action associates a custom domain with the Amplify app
 func (s *SDK) CreateDomainAssociation(ctx context.Context, request operations.CreateDomainAssociationRequest) (*operations.CreateDomainAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/domains", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/domains", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -654,7 +681,10 @@ func (s *SDK) CreateDomainAssociation(ctx context.Context, request operations.Cr
 // CreateWebhook -  Creates a new webhook on an Amplify app.
 func (s *SDK) CreateWebhook(ctx context.Context, request operations.CreateWebhookRequest) (*operations.CreateWebhookResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -770,7 +800,10 @@ func (s *SDK) CreateWebhook(ctx context.Context, request operations.CreateWebhoo
 // DeleteApp -  Deletes an existing Amplify app specified by an app ID.
 func (s *SDK) DeleteApp(ctx context.Context, request operations.DeleteAppRequest) (*operations.DeleteAppResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -866,7 +899,10 @@ func (s *SDK) DeleteApp(ctx context.Context, request operations.DeleteAppRequest
 // DeleteBackendEnvironment -  Deletes a backend environment for an Amplify app.
 func (s *SDK) DeleteBackendEnvironment(ctx context.Context, request operations.DeleteBackendEnvironmentRequest) (*operations.DeleteBackendEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/backendenvironments/{environmentName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/backendenvironments/{environmentName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -962,7 +998,10 @@ func (s *SDK) DeleteBackendEnvironment(ctx context.Context, request operations.D
 // DeleteBranch -  Deletes a branch for an Amplify app.
 func (s *SDK) DeleteBranch(ctx context.Context, request operations.DeleteBranchRequest) (*operations.DeleteBranchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1058,7 +1097,10 @@ func (s *SDK) DeleteBranch(ctx context.Context, request operations.DeleteBranchR
 // DeleteDomainAssociation -  Deletes a domain association for an Amplify app.
 func (s *SDK) DeleteDomainAssociation(ctx context.Context, request operations.DeleteDomainAssociationRequest) (*operations.DeleteDomainAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/domains/{domainName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/domains/{domainName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1154,7 +1196,10 @@ func (s *SDK) DeleteDomainAssociation(ctx context.Context, request operations.De
 // DeleteJob -  Deletes a job for a branch of an Amplify app.
 func (s *SDK) DeleteJob(ctx context.Context, request operations.DeleteJobRequest) (*operations.DeleteJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1250,7 +1295,10 @@ func (s *SDK) DeleteJob(ctx context.Context, request operations.DeleteJobRequest
 // DeleteWebhook -  Deletes a webhook.
 func (s *SDK) DeleteWebhook(ctx context.Context, request operations.DeleteWebhookRequest) (*operations.DeleteWebhookResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhookId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhookId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1346,7 +1394,10 @@ func (s *SDK) DeleteWebhook(ctx context.Context, request operations.DeleteWebhoo
 // GenerateAccessLogs -  Returns the website access logs for a specific time range using a presigned URL.
 func (s *SDK) GenerateAccessLogs(ctx context.Context, request operations.GenerateAccessLogsRequest) (*operations.GenerateAccessLogsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/accesslogs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/accesslogs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1442,7 +1493,10 @@ func (s *SDK) GenerateAccessLogs(ctx context.Context, request operations.Generat
 // GetApp -  Returns an existing Amplify app by appID.
 func (s *SDK) GetApp(ctx context.Context, request operations.GetAppRequest) (*operations.GetAppResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1528,7 +1582,10 @@ func (s *SDK) GetApp(ctx context.Context, request operations.GetAppRequest) (*op
 // GetArtifactURL -  Returns the artifact info that corresponds to an artifact id.
 func (s *SDK) GetArtifactURL(ctx context.Context, request operations.GetArtifactURLRequest) (*operations.GetArtifactURLResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/artifacts/{artifactId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1624,7 +1681,10 @@ func (s *SDK) GetArtifactURL(ctx context.Context, request operations.GetArtifact
 // GetBackendEnvironment -  Returns a backend environment for an Amplify app.
 func (s *SDK) GetBackendEnvironment(ctx context.Context, request operations.GetBackendEnvironmentRequest) (*operations.GetBackendEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/backendenvironments/{environmentName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/backendenvironments/{environmentName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1710,7 +1770,10 @@ func (s *SDK) GetBackendEnvironment(ctx context.Context, request operations.GetB
 // GetBranch -  Returns a branch for an Amplify app.
 func (s *SDK) GetBranch(ctx context.Context, request operations.GetBranchRequest) (*operations.GetBranchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1796,7 +1859,10 @@ func (s *SDK) GetBranch(ctx context.Context, request operations.GetBranchRequest
 // GetDomainAssociation -  Returns the domain information for an Amplify app.
 func (s *SDK) GetDomainAssociation(ctx context.Context, request operations.GetDomainAssociationRequest) (*operations.GetDomainAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/domains/{domainName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/domains/{domainName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1882,7 +1948,10 @@ func (s *SDK) GetDomainAssociation(ctx context.Context, request operations.GetDo
 // GetJob -  Returns a job for a branch of an Amplify app.
 func (s *SDK) GetJob(ctx context.Context, request operations.GetJobRequest) (*operations.GetJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1978,7 +2047,10 @@ func (s *SDK) GetJob(ctx context.Context, request operations.GetJobRequest) (*op
 // GetWebhook -  Returns the webhook information that corresponds to a specified webhook ID.
 func (s *SDK) GetWebhook(ctx context.Context, request operations.GetWebhookRequest) (*operations.GetWebhookResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhookId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhookId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2154,7 +2226,10 @@ func (s *SDK) ListApps(ctx context.Context, request operations.ListAppsRequest) 
 // ListArtifacts -  Returns a list of artifacts for a specified app, branch, and job.
 func (s *SDK) ListArtifacts(ctx context.Context, request operations.ListArtifactsRequest) (*operations.ListArtifactsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/jobs/{jobId}/artifacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/jobs/{jobId}/artifacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2244,7 +2319,10 @@ func (s *SDK) ListArtifacts(ctx context.Context, request operations.ListArtifact
 // ListBackendEnvironments -  Lists the backend environments for an Amplify app.
 func (s *SDK) ListBackendEnvironments(ctx context.Context, request operations.ListBackendEnvironmentsRequest) (*operations.ListBackendEnvironmentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/backendenvironments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/backendenvironments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2324,7 +2402,10 @@ func (s *SDK) ListBackendEnvironments(ctx context.Context, request operations.Li
 // ListBranches -  Lists the branches of an Amplify app.
 func (s *SDK) ListBranches(ctx context.Context, request operations.ListBranchesRequest) (*operations.ListBranchesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2404,7 +2485,10 @@ func (s *SDK) ListBranches(ctx context.Context, request operations.ListBranchesR
 // ListDomainAssociations -  Returns the domain associations for an Amplify app.
 func (s *SDK) ListDomainAssociations(ctx context.Context, request operations.ListDomainAssociationsRequest) (*operations.ListDomainAssociationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/domains", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/domains", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2484,7 +2568,10 @@ func (s *SDK) ListDomainAssociations(ctx context.Context, request operations.Lis
 // ListJobs -  Lists the jobs for a branch of an Amplify app.
 func (s *SDK) ListJobs(ctx context.Context, request operations.ListJobsRequest) (*operations.ListJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2574,7 +2661,10 @@ func (s *SDK) ListJobs(ctx context.Context, request operations.ListJobsRequest) 
 // ListTagsForResource -  Returns a list of tags for a specified Amazon Resource Name (ARN).
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2650,7 +2740,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // ListWebhooks -  Returns a list of webhooks for an Amplify app.
 func (s *SDK) ListWebhooks(ctx context.Context, request operations.ListWebhooksRequest) (*operations.ListWebhooksResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2740,7 +2833,10 @@ func (s *SDK) ListWebhooks(ctx context.Context, request operations.ListWebhooksR
 // StartDeployment -  Starts a deployment for a manually deployed app. Manually deployed apps are not connected to a repository.
 func (s *SDK) StartDeployment(ctx context.Context, request operations.StartDeploymentRequest) (*operations.StartDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/deployments/start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/deployments/start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2846,7 +2942,10 @@ func (s *SDK) StartDeployment(ctx context.Context, request operations.StartDeplo
 // StartJob -  Starts a new job for a branch of an Amplify app.
 func (s *SDK) StartJob(ctx context.Context, request operations.StartJobRequest) (*operations.StartJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2952,7 +3051,10 @@ func (s *SDK) StartJob(ctx context.Context, request operations.StartJobRequest) 
 // StopJob -  Stops a job that is in progress for a branch of an Amplify app.
 func (s *SDK) StopJob(ctx context.Context, request operations.StopJobRequest) (*operations.StopJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/jobs/{jobId}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}/jobs/{jobId}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3048,7 +3150,10 @@ func (s *SDK) StopJob(ctx context.Context, request operations.StopJobRequest) (*
 // TagResource -  Tags the resource with a tag key and value.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3134,7 +3239,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource -  Untags a resource with a specified Amazon Resource Name (ARN).
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3214,7 +3322,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateApp -  Updates an existing Amplify app.
 func (s *SDK) UpdateApp(ctx context.Context, request operations.UpdateAppRequest) (*operations.UpdateAppResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3310,7 +3421,10 @@ func (s *SDK) UpdateApp(ctx context.Context, request operations.UpdateAppRequest
 // UpdateBranch -  Updates a branch for an Amplify app.
 func (s *SDK) UpdateBranch(ctx context.Context, request operations.UpdateBranchRequest) (*operations.UpdateBranchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/branches/{branchName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3416,7 +3530,10 @@ func (s *SDK) UpdateBranch(ctx context.Context, request operations.UpdateBranchR
 // UpdateDomainAssociation -  Creates a new domain association for an Amplify app.
 func (s *SDK) UpdateDomainAssociation(ctx context.Context, request operations.UpdateDomainAssociationRequest) (*operations.UpdateDomainAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/domains/{domainName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}/domains/{domainName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3522,7 +3639,10 @@ func (s *SDK) UpdateDomainAssociation(ctx context.Context, request operations.Up
 // UpdateWebhook -  Updates a webhook.
 func (s *SDK) UpdateWebhook(ctx context.Context, request operations.UpdateWebhookRequest) (*operations.UpdateWebhookResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhookId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhookId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

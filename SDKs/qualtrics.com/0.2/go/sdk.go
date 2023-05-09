@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Work with Qualtrics surveys, distributions and response events
 type SDK struct {
 
@@ -96,7 +111,10 @@ func New(opts ...SDKOption) *SDK {
 // Creates a contact in a given mailing list
 func (s *SDK) CreateContactInMailinglist(ctx context.Context, request operations.CreateContactInMailinglistRequest) (*operations.CreateContactInMailinglistResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/directories/{DirectoryId}/mailinglists/{MailingListId}/contacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/directories/{DirectoryId}/mailinglists/{MailingListId}/contacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateContactInMailingList", "json")
 	if err != nil {
@@ -237,7 +255,10 @@ func (s *SDK) GetDistributions(ctx context.Context, request operations.GetDistri
 // Get event subscriptions
 func (s *SDK) GetEventSubscriptions(ctx context.Context, request operations.GetEventSubscriptionsRequest) (*operations.GetEventSubscriptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/eventsubscriptions/{SubscriptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/eventsubscriptions/{SubscriptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -282,7 +303,10 @@ func (s *SDK) GetEventSubscriptions(ctx context.Context, request operations.GetE
 // Gets a single Qualtrics survey speficied by its ID
 func (s *SDK) GetSurvey(ctx context.Context, request operations.GetSurveyRequest) (*operations.GetSurveyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/survey-definitions/{SurveyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/survey-definitions/{SurveyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -328,7 +352,10 @@ func (s *SDK) GetSurvey(ctx context.Context, request operations.GetSurveyRequest
 // Retrieves all the individual links for a given distribution
 func (s *SDK) Retrievedistributionlinks(ctx context.Context, request operations.RetrievedistributionlinksRequest) (*operations.RetrievedistributionlinksResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/distributions/{DistributionId}/links", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/distributions/{DistributionId}/links", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -13,26 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amentum.space/global-magn
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AppAPIWMMEndpointsWMMMagneticFieldRequest{
+    ctx := context.Background()
+    res, err := s.AppAPIWMMEndpointsWMMMagneticField(ctx, operations.AppAPIWMMEndpointsWMMMagneticFieldRequest{
         Altitude: 10,
         Latitude: 80,
         Longitude: 100,
         Year: 2020.5,
-    }
-
-    ctx := context.Background()
-    res, err := s.AppAPIWMMEndpointsWMMMagneticField(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,9 +44,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AppAPIWMMEndpointsWMMMagneticField` - Calculate magnetic declination, inclination, total field intensity, and grid variation
+* [AppAPIWMMEndpointsWMMMagneticField](docs/sdk/README.md#appapiwmmendpointswmmmagneticfield) - Calculate magnetic declination, inclination, total field intensity, and grid variation
 
 <!-- End SDK Available Operations -->
 

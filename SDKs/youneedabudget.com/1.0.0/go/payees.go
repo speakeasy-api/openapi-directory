@@ -36,7 +36,10 @@ func newPayees(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Returns a single payee
 func (s *payees) GetPayeeByID(ctx context.Context, request operations.GetPayeeByIDRequest) (*operations.GetPayeeByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/payees/{payee_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/payees/{payee_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -93,7 +96,10 @@ func (s *payees) GetPayeeByID(ctx context.Context, request operations.GetPayeeBy
 // Returns all payees
 func (s *payees) GetPayees(ctx context.Context, request operations.GetPayeesRequest) (*operations.GetPayeesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/payees", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/payees", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

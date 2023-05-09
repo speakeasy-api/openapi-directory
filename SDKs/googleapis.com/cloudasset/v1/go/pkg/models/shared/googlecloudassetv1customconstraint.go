@@ -16,21 +16,25 @@ const (
 	GoogleCloudAssetV1CustomConstraintActionTypeEnumDeny                  GoogleCloudAssetV1CustomConstraintActionTypeEnum = "DENY"
 )
 
+func (e GoogleCloudAssetV1CustomConstraintActionTypeEnum) ToPointer() *GoogleCloudAssetV1CustomConstraintActionTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssetV1CustomConstraintActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = GoogleCloudAssetV1CustomConstraintActionTypeEnum(s)
+		*e = GoogleCloudAssetV1CustomConstraintActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssetV1CustomConstraintActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssetV1CustomConstraintActionTypeEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	GoogleCloudAssetV1CustomConstraintMethodTypesEnumDelete                GoogleCloudAssetV1CustomConstraintMethodTypesEnum = "DELETE"
 )
 
+func (e GoogleCloudAssetV1CustomConstraintMethodTypesEnum) ToPointer() *GoogleCloudAssetV1CustomConstraintMethodTypesEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssetV1CustomConstraintMethodTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METHOD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CREATE":
@@ -56,10 +64,10 @@ func (e *GoogleCloudAssetV1CustomConstraintMethodTypesEnum) UnmarshalJSON(data [
 	case "UPDATE":
 		fallthrough
 	case "DELETE":
-		*e = GoogleCloudAssetV1CustomConstraintMethodTypesEnum(s)
+		*e = GoogleCloudAssetV1CustomConstraintMethodTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssetV1CustomConstraintMethodTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssetV1CustomConstraintMethodTypesEnum: %v", v)
 	}
 }
 

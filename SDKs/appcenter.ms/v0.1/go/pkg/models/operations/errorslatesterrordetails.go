@@ -34,12 +34,16 @@ const (
 	ErrorsLatestErrorDetailsDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsLatestErrorDetailsDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsLatestErrorDetailsDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsLatestErrorDetailsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsLatestErrorDetailsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -53,10 +57,10 @@ func (e *ErrorsLatestErrorDetailsDefaultApplicationJSONErrorCodeEnum) UnmarshalJ
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsLatestErrorDetailsDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsLatestErrorDetailsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsLatestErrorDetailsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsLatestErrorDetailsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -85,12 +89,16 @@ const (
 	ErrorsLatestErrorDetails200ApplicationJSONReasonFramesLanguageEnumUnknown      ErrorsLatestErrorDetails200ApplicationJSONReasonFramesLanguageEnum = "Unknown"
 )
 
+func (e ErrorsLatestErrorDetails200ApplicationJSONReasonFramesLanguageEnum) ToPointer() *ErrorsLatestErrorDetails200ApplicationJSONReasonFramesLanguageEnum {
+	return &e
+}
+
 func (e *ErrorsLatestErrorDetails200ApplicationJSONReasonFramesLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JavaScript":
 		fallthrough
 	case "CSharp":
@@ -108,10 +116,10 @@ func (e *ErrorsLatestErrorDetails200ApplicationJSONReasonFramesLanguageEnum) Unm
 	case "Java":
 		fallthrough
 	case "Unknown":
-		*e = ErrorsLatestErrorDetails200ApplicationJSONReasonFramesLanguageEnum(s)
+		*e = ErrorsLatestErrorDetails200ApplicationJSONReasonFramesLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsLatestErrorDetails200ApplicationJSONReasonFramesLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsLatestErrorDetails200ApplicationJSONReasonFramesLanguageEnum: %v", v)
 	}
 }
 

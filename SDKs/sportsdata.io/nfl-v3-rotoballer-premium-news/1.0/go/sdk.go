@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 type SDK struct {
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
@@ -105,7 +120,10 @@ func New(opts ...SDKOption) *SDK {
 // PremiumNews - Premium News
 func (s *SDK) PremiumNews(ctx context.Context, request operations.PremiumNewsRequest) (*operations.PremiumNewsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNews", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNews", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +167,10 @@ func (s *SDK) PremiumNews(ctx context.Context, request operations.PremiumNewsReq
 // PremiumNewsByDate - Premium News by Date
 func (s *SDK) PremiumNewsByDate(ctx context.Context, request operations.PremiumNewsByDateRequest) (*operations.PremiumNewsByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNewsByDate/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNewsByDate/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +214,10 @@ func (s *SDK) PremiumNewsByDate(ctx context.Context, request operations.PremiumN
 // PremiumNewsByPlayer - Premium News by Player
 func (s *SDK) PremiumNewsByPlayer(ctx context.Context, request operations.PremiumNewsByPlayerRequest) (*operations.PremiumNewsByPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNewsByPlayerID/{playerid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNewsByPlayerID/{playerid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -237,7 +261,10 @@ func (s *SDK) PremiumNewsByPlayer(ctx context.Context, request operations.Premiu
 // PremiumNewsByTeam - Premium News by Team
 func (s *SDK) PremiumNewsByTeam(ctx context.Context, request operations.PremiumNewsByTeamRequest) (*operations.PremiumNewsByTeamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNewsByTeam/{team}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/RotoBallerPremiumNewsByTeam/{team}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

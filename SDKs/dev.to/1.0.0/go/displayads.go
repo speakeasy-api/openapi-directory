@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -62,7 +63,15 @@ func (s *displayAds) GetAPIDisplayAds(ctx context.Context) (*operations.GetAPIDi
 	}
 	switch {
 	case httpRes.StatusCode == 200:
-		fallthrough
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.DisplayAd
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DisplayAds = out
+		}
 	case httpRes.StatusCode == 401:
 	}
 
@@ -73,7 +82,10 @@ func (s *displayAds) GetAPIDisplayAds(ctx context.Context) (*operations.GetAPIDi
 // This endpoint allows the client to retrieve a single display ad, via its id.
 func (s *displayAds) GetAPIDisplayAdsID(ctx context.Context, request operations.GetAPIDisplayAdsIDRequest) (*operations.GetAPIDisplayAdsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/display_ads/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/display_ads/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -111,7 +123,7 @@ func (s *displayAds) GetAPIDisplayAdsID(ctx context.Context, request operations.
 
 // PostAPIDisplayAds - display ads
 // This endpoint allows the client to create a new display ad.
-func (s *displayAds) PostAPIDisplayAds(ctx context.Context, request operations.PostAPIDisplayAdsRequestBody) (*operations.PostAPIDisplayAdsResponse, error) {
+func (s *displayAds) PostAPIDisplayAds(ctx context.Context, request map[string]interface{}) (*operations.PostAPIDisplayAdsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/display_ads"
 
@@ -147,7 +159,15 @@ func (s *displayAds) PostAPIDisplayAds(ctx context.Context, request operations.P
 	}
 	switch {
 	case httpRes.StatusCode == 200:
-		fallthrough
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostAPIDisplayAds200ApplicationJSONObject = out
+		}
 	case httpRes.StatusCode == 401:
 		fallthrough
 	case httpRes.StatusCode == 422:
@@ -160,7 +180,10 @@ func (s *displayAds) PostAPIDisplayAds(ctx context.Context, request operations.P
 // This endpoint allows the client to update the attributes of a single display ad, via its id.
 func (s *displayAds) PutAPIDisplayAdsID(ctx context.Context, request operations.PutAPIDisplayAdsIDRequest) (*operations.PutAPIDisplayAdsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/display_ads/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/display_ads/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -194,7 +217,15 @@ func (s *displayAds) PutAPIDisplayAdsID(ctx context.Context, request operations.
 	}
 	switch {
 	case httpRes.StatusCode == 200:
-		fallthrough
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PutAPIDisplayAdsID200ApplicationJSONObject = out
+		}
 	case httpRes.StatusCode == 401:
 		fallthrough
 	case httpRes.StatusCode == 404:
@@ -207,7 +238,10 @@ func (s *displayAds) PutAPIDisplayAdsID(ctx context.Context, request operations.
 // This endpoint allows the client to remove a display ad from rotation by un-publishing it.
 func (s *displayAds) PutAPIDisplayAdsIDUnpublish(ctx context.Context, request operations.PutAPIDisplayAdsIDUnpublishRequest) (*operations.PutAPIDisplayAdsIDUnpublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/display_ads/{id}/unpublish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/display_ads/{id}/unpublish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

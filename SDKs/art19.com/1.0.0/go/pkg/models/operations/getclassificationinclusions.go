@@ -25,12 +25,16 @@ const (
 	GetClassificationInclusionsClassificationTypeEnumMediaRating       GetClassificationInclusionsClassificationTypeEnum = "MediaRating"
 )
 
+func (e GetClassificationInclusionsClassificationTypeEnum) ToPointer() *GetClassificationInclusionsClassificationTypeEnum {
+	return &e
+}
+
 func (e *GetClassificationInclusionsClassificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AlternateFeedType":
 		fallthrough
 	case "Genre":
@@ -40,10 +44,10 @@ func (e *GetClassificationInclusionsClassificationTypeEnum) UnmarshalJSON(data [
 	case "Language":
 		fallthrough
 	case "MediaRating":
-		*e = GetClassificationInclusionsClassificationTypeEnum(s)
+		*e = GetClassificationInclusionsClassificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetClassificationInclusionsClassificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetClassificationInclusionsClassificationTypeEnum: %v", v)
 	}
 }
 
@@ -56,21 +60,25 @@ const (
 	GetClassificationInclusionsClassifiedTypeEnumEpisode GetClassificationInclusionsClassifiedTypeEnum = "Episode"
 )
 
+func (e GetClassificationInclusionsClassifiedTypeEnum) ToPointer() *GetClassificationInclusionsClassifiedTypeEnum {
+	return &e
+}
+
 func (e *GetClassificationInclusionsClassifiedTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Series":
 		fallthrough
 	case "Season":
 		fallthrough
 	case "Episode":
-		*e = GetClassificationInclusionsClassifiedTypeEnum(s)
+		*e = GetClassificationInclusionsClassifiedTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetClassificationInclusionsClassifiedTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetClassificationInclusionsClassifiedTypeEnum: %v", v)
 	}
 }
 
@@ -82,21 +90,25 @@ const (
 	GetClassificationInclusionsSortEnumPosition            GetClassificationInclusionsSortEnum = "position"
 )
 
+func (e GetClassificationInclusionsSortEnum) ToPointer() *GetClassificationInclusionsSortEnum {
+	return &e
+}
+
 func (e *GetClassificationInclusionsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "classification_value":
 		fallthrough
 	case "created_at":
 		fallthrough
 	case "position":
-		*e = GetClassificationInclusionsSortEnum(s)
+		*e = GetClassificationInclusionsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetClassificationInclusionsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetClassificationInclusionsSortEnum: %v", v)
 	}
 }
 

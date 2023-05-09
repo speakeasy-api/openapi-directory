@@ -2,54 +2,52 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrust(ctx, operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AttachTrustRequest: &shared.AttachTrustRequest{
             Trust: &shared.Trust{
-                CreateTime: "provident",
-                LastKnownTrustConnectedHeartbeatTime: "distinctio",
-                SelectiveAuthentication: false,
-                State: "DISCONNECTED",
-                StateDescription: "unde",
+                CreateTime: sdk.String("provident"),
+                LastKnownTrustConnectedHeartbeatTime: sdk.String("distinctio"),
+                SelectiveAuthentication: sdk.Bool(false),
+                State: shared.TrustStateEnumDisconnected.ToPointer(),
+                StateDescription: sdk.String("unde"),
                 TargetDNSIPAddresses: []string{
                     "corrupti",
                     "illum",
                     "vel",
                     "error",
                 },
-                TargetDomainName: "deserunt",
-                TrustDirection: "INBOUND",
-                TrustHandshakeSecret: "iure",
-                TrustType: "TRUST_TYPE_UNSPECIFIED",
-                UpdateTime: "debitis",
+                TargetDomainName: sdk.String("deserunt"),
+                TrustDirection: shared.TrustTrustDirectionEnumInbound.ToPointer(),
+                TrustHandshakeSecret: sdk.String("iure"),
+                TrustType: shared.TrustTrustTypeEnumTrustTypeUnspecified.ToPointer(),
+                UpdateTime: sdk.String("debitis"),
             },
         },
-        AccessToken: "ipsa",
-        Alt: "proto",
-        Callback: "tempora",
-        Fields: "suscipit",
-        Key: "molestiae",
-        Name: "minus",
-        OauthToken: "placeat",
-        PrettyPrint: false,
-        QuotaUser: "voluptatum",
-        UploadType: "iusto",
-        UploadProtocol: "excepturi",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrust(ctx, req, operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity{
+        AccessToken: sdk.String("ipsa"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("tempora"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("molestiae"),
+        Name: "Irving Lehner",
+        OauthToken: sdk.String("nisi"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("recusandae"),
+        UploadType: sdk.String("temporibus"),
+        UploadProtocol: sdk.String("ab"),
+    }, operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

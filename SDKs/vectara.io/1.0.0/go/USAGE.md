@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,77 +17,61 @@ func main() {
         }),
     )
 
-    req := operations.CreateCorpusRequest{
+    ctx := context.Background()
+    res, err := s.AdminService.CreateCorpus(ctx, operations.CreateCorpusRequest{
         AdminCreateCorpusRequest: shared.AdminCreateCorpusRequest{
             Corpus: &shared.AdminCorpus{
                 CustomDimensions: []shared.AdminDimension{
                     shared.AdminDimension{
-                        Description: "provident",
-                        IndexingDefault: 7151.9,
-                        Name: "quibusdam",
-                        ServingDefault: 6027.63,
+                        Description: sdk.String("provident"),
+                        IndexingDefault: sdk.Float64(7151.9),
+                        Name: sdk.String("Stuart Stiedemann"),
+                        ServingDefault: sdk.Float64(4236.55),
                     },
                     shared.AdminDimension{
-                        Description: "nulla",
-                        IndexingDefault: 5448.83,
-                        Name: "illum",
-                        ServingDefault: 4236.55,
+                        Description: sdk.String("error"),
+                        IndexingDefault: sdk.Float64(6458.94),
+                        Name: sdk.String("Willie Gulgowski DVM"),
+                        ServingDefault: sdk.Float64(2726.56),
                     },
                     shared.AdminDimension{
-                        Description: "error",
-                        IndexingDefault: 6458.94,
-                        Name: "suscipit",
-                        ServingDefault: 4375.87,
+                        Description: sdk.String("suscipit"),
+                        IndexingDefault: sdk.Float64(4776.65),
+                        Name: sdk.String("Irving Lehner"),
+                        ServingDefault: sdk.Float64(3927.85),
                     },
                 },
-                Description: "magnam",
-                DtProvision: "debitis",
-                Enabled: false,
-                EncoderID: "ipsa",
-                Encrypted: false,
+                Description: sdk.String("recusandae"),
+                DtProvision: sdk.String("temporibus"),
+                Enabled: sdk.Bool(false),
+                EncoderID: sdk.String("ab"),
+                Encrypted: sdk.Bool(false),
                 FilterAttributes: []shared.AdminFilterAttribute{
                     shared.AdminFilterAttribute{
-                        Description: "tempora",
-                        Indexed: false,
-                        Level: "FILTER_ATTRIBUTE_LEVEL__DOCUMENT",
-                        Name: "molestiae",
-                        Type: "FILTER_ATTRIBUTE_TYPE__TEXT",
+                        Description: sdk.String("veritatis"),
+                        Indexed: sdk.Bool(false),
+                        Level: shared.AdminFilterAttributeLevelEnumFilterAttributeLevelDocument.ToPointer(),
+                        Name: sdk.String("Roberta Sipes"),
+                        Type: shared.AdminFilterAttributeTypeEnumFilterAttributeTypeUndefined.ToPointer(),
                     },
                     shared.AdminFilterAttribute{
-                        Description: "placeat",
-                        Indexed: false,
-                        Level: "FILTER_ATTRIBUTE_LEVEL__DOCUMENT",
-                        Name: "iusto",
-                        Type: "FILTER_ATTRIBUTE_TYPE__REAL",
-                    },
-                    shared.AdminFilterAttribute{
-                        Description: "nisi",
-                        Indexed: false,
-                        Level: "FILTER_ATTRIBUTE_LEVEL__DOCUMENT_PART",
-                        Name: "temporibus",
-                        Type: "FILTER_ATTRIBUTE_TYPE__UNDEFINED",
-                    },
-                    shared.AdminFilterAttribute{
-                        Description: "quis",
-                        Indexed: false,
-                        Level: "FILTER_ATTRIBUTE_LEVEL__UNDEFINED",
-                        Name: "deserunt",
-                        Type: "FILTER_ATTRIBUTE_TYPE__UNDEFINED",
+                        Description: sdk.String("at"),
+                        Indexed: sdk.Bool(false),
+                        Level: shared.AdminFilterAttributeLevelEnumFilterAttributeLevelDocumentPart.ToPointer(),
+                        Name: sdk.String("Javier Schmidt"),
+                        Type: shared.AdminFilterAttributeTypeEnumFilterAttributeTypeReal.ToPointer(),
                     },
                 },
-                ID: 368241,
-                MetadataMaxBytes: 832620,
-                Name: "sapiente",
-                SwapIenc: false,
-                SwapQenc: false,
-                Textless: false,
+                ID: sdk.Int64(780529),
+                MetadataMaxBytes: sdk.Int64(678880),
+                Name: sdk.String("Antoinette Nikolaus"),
+                SwapIenc: sdk.Bool(false),
+                SwapQenc: sdk.Bool(false),
+                Textless: sdk.Bool(false),
             },
         },
-        CustomerID: 778157,
-    }
-
-    ctx := context.Background()
-    res, err := s.AdminService.CreateCorpus(ctx, req)
+        CustomerID: 537373,
+    })
     if err != nil {
         log.Fatal(err)
     }

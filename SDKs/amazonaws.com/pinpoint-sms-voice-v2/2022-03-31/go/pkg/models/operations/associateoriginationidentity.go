@@ -16,17 +16,21 @@ const (
 	AssociateOriginationIdentityXAmzTargetEnumPinpointSmsVoiceV2AssociateOriginationIdentity AssociateOriginationIdentityXAmzTargetEnum = "PinpointSMSVoiceV2.AssociateOriginationIdentity"
 )
 
+func (e AssociateOriginationIdentityXAmzTargetEnum) ToPointer() *AssociateOriginationIdentityXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateOriginationIdentityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.AssociateOriginationIdentity":
-		*e = AssociateOriginationIdentityXAmzTargetEnum(s)
+		*e = AssociateOriginationIdentityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateOriginationIdentityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateOriginationIdentityXAmzTargetEnum: %v", v)
 	}
 }
 

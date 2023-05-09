@@ -18,24 +18,28 @@ const (
 	GetTransactionsByCategoryTypeEnumUnapproved    GetTransactionsByCategoryTypeEnum = "unapproved"
 )
 
+func (e GetTransactionsByCategoryTypeEnum) ToPointer() *GetTransactionsByCategoryTypeEnum {
+	return &e
+}
+
 func (e *GetTransactionsByCategoryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uncategorized":
 		fallthrough
 	case "unapproved":
-		*e = GetTransactionsByCategoryTypeEnum(s)
+		*e = GetTransactionsByCategoryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTransactionsByCategoryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTransactionsByCategoryTypeEnum: %v", v)
 	}
 }
 
 type GetTransactionsByCategoryRequest struct {
-	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
 	// The id of the category
 	CategoryID string `pathParam:"style=simple,explode=false,name=category_id"`

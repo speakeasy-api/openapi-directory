@@ -16,12 +16,16 @@ const (
 	LustreAccessAuditLogLevelEnumWarnError LustreAccessAuditLogLevelEnum = "WARN_ERROR"
 )
 
+func (e LustreAccessAuditLogLevelEnum) ToPointer() *LustreAccessAuditLogLevelEnum {
+	return &e
+}
+
 func (e *LustreAccessAuditLogLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "WARN_ONLY":
@@ -29,9 +33,9 @@ func (e *LustreAccessAuditLogLevelEnum) UnmarshalJSON(data []byte) error {
 	case "ERROR_ONLY":
 		fallthrough
 	case "WARN_ERROR":
-		*e = LustreAccessAuditLogLevelEnum(s)
+		*e = LustreAccessAuditLogLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LustreAccessAuditLogLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for LustreAccessAuditLogLevelEnum: %v", v)
 	}
 }

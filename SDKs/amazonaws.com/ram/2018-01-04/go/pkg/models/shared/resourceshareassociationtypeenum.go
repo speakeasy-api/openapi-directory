@@ -14,18 +14,22 @@ const (
 	ResourceShareAssociationTypeEnumResource  ResourceShareAssociationTypeEnum = "RESOURCE"
 )
 
+func (e ResourceShareAssociationTypeEnum) ToPointer() *ResourceShareAssociationTypeEnum {
+	return &e
+}
+
 func (e *ResourceShareAssociationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRINCIPAL":
 		fallthrough
 	case "RESOURCE":
-		*e = ResourceShareAssociationTypeEnum(s)
+		*e = ResourceShareAssociationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceShareAssociationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceShareAssociationTypeEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	ListDistributedGrantsXAmzTargetEnumAwsLicenseManagerListDistributedGrants ListDistributedGrantsXAmzTargetEnum = "AWSLicenseManager.ListDistributedGrants"
 )
 
+func (e ListDistributedGrantsXAmzTargetEnum) ToPointer() *ListDistributedGrantsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListDistributedGrantsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLicenseManager.ListDistributedGrants":
-		*e = ListDistributedGrantsXAmzTargetEnum(s)
+		*e = ListDistributedGrantsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDistributedGrantsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDistributedGrantsXAmzTargetEnum: %v", v)
 	}
 }
 

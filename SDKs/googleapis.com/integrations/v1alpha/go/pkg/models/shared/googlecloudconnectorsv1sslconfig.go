@@ -15,19 +15,23 @@ const (
 	GoogleCloudConnectorsV1SslConfigClientCertTypeEnumPem                 GoogleCloudConnectorsV1SslConfigClientCertTypeEnum = "PEM"
 )
 
+func (e GoogleCloudConnectorsV1SslConfigClientCertTypeEnum) ToPointer() *GoogleCloudConnectorsV1SslConfigClientCertTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudConnectorsV1SslConfigClientCertTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PEM":
-		*e = GoogleCloudConnectorsV1SslConfigClientCertTypeEnum(s)
+		*e = GoogleCloudConnectorsV1SslConfigClientCertTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1SslConfigClientCertTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1SslConfigClientCertTypeEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	GoogleCloudConnectorsV1SslConfigServerCertTypeEnumPem                 GoogleCloudConnectorsV1SslConfigServerCertTypeEnum = "PEM"
 )
 
+func (e GoogleCloudConnectorsV1SslConfigServerCertTypeEnum) ToPointer() *GoogleCloudConnectorsV1SslConfigServerCertTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudConnectorsV1SslConfigServerCertTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PEM":
-		*e = GoogleCloudConnectorsV1SslConfigServerCertTypeEnum(s)
+		*e = GoogleCloudConnectorsV1SslConfigServerCertTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1SslConfigServerCertTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1SslConfigServerCertTypeEnum: %v", v)
 	}
 }
 
@@ -64,21 +72,25 @@ const (
 	GoogleCloudConnectorsV1SslConfigTrustModelEnumInsecure GoogleCloudConnectorsV1SslConfigTrustModelEnum = "INSECURE"
 )
 
+func (e GoogleCloudConnectorsV1SslConfigTrustModelEnum) ToPointer() *GoogleCloudConnectorsV1SslConfigTrustModelEnum {
+	return &e
+}
+
 func (e *GoogleCloudConnectorsV1SslConfigTrustModelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLIC":
 		fallthrough
 	case "PRIVATE":
 		fallthrough
 	case "INSECURE":
-		*e = GoogleCloudConnectorsV1SslConfigTrustModelEnum(s)
+		*e = GoogleCloudConnectorsV1SslConfigTrustModelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1SslConfigTrustModelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1SslConfigTrustModelEnum: %v", v)
 	}
 }
 
@@ -91,21 +103,25 @@ const (
 	GoogleCloudConnectorsV1SslConfigTypeEnumMtls               GoogleCloudConnectorsV1SslConfigTypeEnum = "MTLS"
 )
 
+func (e GoogleCloudConnectorsV1SslConfigTypeEnum) ToPointer() *GoogleCloudConnectorsV1SslConfigTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudConnectorsV1SslConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TLS":
 		fallthrough
 	case "MTLS":
-		*e = GoogleCloudConnectorsV1SslConfigTypeEnum(s)
+		*e = GoogleCloudConnectorsV1SslConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1SslConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1SslConfigTypeEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabetEnumAlphaNumeric                       GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabetEnum = "ALPHA_NUMERIC"
 )
 
+func (e GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabetEnum) ToPointer() *GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabetEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED":
 		fallthrough
 	case "NUMERIC":
@@ -33,10 +37,10 @@ func (e *GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabetEnum) Unmarsha
 	case "UPPER_CASE_ALPHA_NUMERIC":
 		fallthrough
 	case "ALPHA_NUMERIC":
-		*e = GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabetEnum(s)
+		*e = GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabetEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabetEnum: %v", v)
 	}
 }
 

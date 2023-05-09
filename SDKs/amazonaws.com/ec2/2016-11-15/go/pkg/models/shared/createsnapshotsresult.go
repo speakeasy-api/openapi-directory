@@ -19,12 +19,16 @@ const (
 	CreateSnapshotsResultSnapshotsStateEnumRecovering  CreateSnapshotsResultSnapshotsStateEnum = "recovering"
 )
 
+func (e CreateSnapshotsResultSnapshotsStateEnum) ToPointer() *CreateSnapshotsResultSnapshotsStateEnum {
+	return &e
+}
+
 func (e *CreateSnapshotsResultSnapshotsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "completed":
@@ -34,10 +38,10 @@ func (e *CreateSnapshotsResultSnapshotsStateEnum) UnmarshalJSON(data []byte) err
 	case "recoverable":
 		fallthrough
 	case "recovering":
-		*e = CreateSnapshotsResultSnapshotsStateEnum(s)
+		*e = CreateSnapshotsResultSnapshotsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSnapshotsResultSnapshotsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSnapshotsResultSnapshotsStateEnum: %v", v)
 	}
 }
 

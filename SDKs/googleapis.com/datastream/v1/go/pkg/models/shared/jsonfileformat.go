@@ -16,21 +16,25 @@ const (
 	JSONFileFormatCompressionEnumGzip                       JSONFileFormatCompressionEnum = "GZIP"
 )
 
+func (e JSONFileFormatCompressionEnum) ToPointer() *JSONFileFormatCompressionEnum {
+	return &e
+}
+
 func (e *JSONFileFormatCompressionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JSON_COMPRESSION_UNSPECIFIED":
 		fallthrough
 	case "NO_COMPRESSION":
 		fallthrough
 	case "GZIP":
-		*e = JSONFileFormatCompressionEnum(s)
+		*e = JSONFileFormatCompressionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JSONFileFormatCompressionEnum: %s", s)
+		return fmt.Errorf("invalid value for JSONFileFormatCompressionEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	JSONFileFormatSchemaFileFormatEnumAvroSchemaFile              JSONFileFormatSchemaFileFormatEnum = "AVRO_SCHEMA_FILE"
 )
 
+func (e JSONFileFormatSchemaFileFormatEnum) ToPointer() *JSONFileFormatSchemaFileFormatEnum {
+	return &e
+}
+
 func (e *JSONFileFormatSchemaFileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCHEMA_FILE_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "NO_SCHEMA_FILE":
 		fallthrough
 	case "AVRO_SCHEMA_FILE":
-		*e = JSONFileFormatSchemaFileFormatEnum(s)
+		*e = JSONFileFormatSchemaFileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JSONFileFormatSchemaFileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for JSONFileFormatSchemaFileFormatEnum: %v", v)
 	}
 }
 

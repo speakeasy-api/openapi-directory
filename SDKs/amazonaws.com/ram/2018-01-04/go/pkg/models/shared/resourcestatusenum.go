@@ -17,12 +17,16 @@ const (
 	ResourceStatusEnumPending                   ResourceStatusEnum = "PENDING"
 )
 
+func (e ResourceStatusEnum) ToPointer() *ResourceStatusEnum {
+	return &e
+}
+
 func (e *ResourceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "ZONAL_RESOURCE_INACCESSIBLE":
@@ -32,9 +36,9 @@ func (e *ResourceStatusEnum) UnmarshalJSON(data []byte) error {
 	case "UNAVAILABLE":
 		fallthrough
 	case "PENDING":
-		*e = ResourceStatusEnum(s)
+		*e = ResourceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceStatusEnum: %v", v)
 	}
 }

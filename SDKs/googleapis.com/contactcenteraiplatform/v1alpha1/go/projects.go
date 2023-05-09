@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ContactcenteraiplatformProjectsLocationsContactCentersCreate - Creates a new ContactCenter in a given project and location.
 func (s *projects) ContactcenteraiplatformProjectsLocationsContactCentersCreate(ctx context.Context, request operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateRequest, security operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateSecurity) (*operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/contactCenters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/contactCenters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContactCenterInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) ContactcenteraiplatformProjectsLocationsContactCentersCreate(
 // ContactcenteraiplatformProjectsLocationsContactCentersList - Lists ContactCenters in a given project and location.
 func (s *projects) ContactcenteraiplatformProjectsLocationsContactCentersList(ctx context.Context, request operations.ContactcenteraiplatformProjectsLocationsContactCentersListRequest, security operations.ContactcenteraiplatformProjectsLocationsContactCentersListSecurity) (*operations.ContactcenteraiplatformProjectsLocationsContactCentersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/contactCenters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/contactCenters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) ContactcenteraiplatformProjectsLocationsContactCentersList(ct
 // ContactcenteraiplatformProjectsLocationsContactCentersPatch - Updates the parameters of a single ContactCenter.
 func (s *projects) ContactcenteraiplatformProjectsLocationsContactCentersPatch(ctx context.Context, request operations.ContactcenteraiplatformProjectsLocationsContactCentersPatchRequest, security operations.ContactcenteraiplatformProjectsLocationsContactCentersPatchSecurity) (*operations.ContactcenteraiplatformProjectsLocationsContactCentersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContactCenterInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) ContactcenteraiplatformProjectsLocationsContactCentersPatch(c
 // ContactcenteraiplatformProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) ContactcenteraiplatformProjectsLocationsList(ctx context.Context, request operations.ContactcenteraiplatformProjectsLocationsListRequest, security operations.ContactcenteraiplatformProjectsLocationsListSecurity) (*operations.ContactcenteraiplatformProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) ContactcenteraiplatformProjectsLocationsList(ctx context.Cont
 // ContactcenteraiplatformProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) ContactcenteraiplatformProjectsLocationsOperationsCancel(ctx context.Context, request operations.ContactcenteraiplatformProjectsLocationsOperationsCancelRequest, security operations.ContactcenteraiplatformProjectsLocationsOperationsCancelSecurity) (*operations.ContactcenteraiplatformProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) ContactcenteraiplatformProjectsLocationsOperationsCancel(ctx 
 // ContactcenteraiplatformProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) ContactcenteraiplatformProjectsLocationsOperationsDelete(ctx context.Context, request operations.ContactcenteraiplatformProjectsLocationsOperationsDeleteRequest, security operations.ContactcenteraiplatformProjectsLocationsOperationsDeleteSecurity) (*operations.ContactcenteraiplatformProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) ContactcenteraiplatformProjectsLocationsOperationsDelete(ctx 
 // ContactcenteraiplatformProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) ContactcenteraiplatformProjectsLocationsOperationsGet(ctx context.Context, request operations.ContactcenteraiplatformProjectsLocationsOperationsGetRequest, security operations.ContactcenteraiplatformProjectsLocationsOperationsGetSecurity) (*operations.ContactcenteraiplatformProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) ContactcenteraiplatformProjectsLocationsOperationsGet(ctx con
 // ContactcenteraiplatformProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) ContactcenteraiplatformProjectsLocationsOperationsList(ctx context.Context, request operations.ContactcenteraiplatformProjectsLocationsOperationsListRequest, security operations.ContactcenteraiplatformProjectsLocationsOperationsListSecurity) (*operations.ContactcenteraiplatformProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -439,7 +463,10 @@ func (s *projects) ContactcenteraiplatformProjectsLocationsOperationsList(ctx co
 // ContactcenteraiplatformProjectsLocationsQueryContactCenterQuota - Queries the contact center quota, an aggregation over all the projects, that belongs to the billing account, which the input project belongs to.
 func (s *projects) ContactcenteraiplatformProjectsLocationsQueryContactCenterQuota(ctx context.Context, request operations.ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaRequest, security operations.ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaSecurity) (*operations.ContactcenteraiplatformProjectsLocationsQueryContactCenterQuotaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}:queryContactCenterQuota", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}:queryContactCenterQuota", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

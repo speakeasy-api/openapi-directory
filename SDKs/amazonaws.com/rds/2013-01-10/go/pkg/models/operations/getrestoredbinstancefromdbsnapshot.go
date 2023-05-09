@@ -15,17 +15,21 @@ const (
 	GETRestoreDBInstanceFromDBSnapshotActionEnumRestoreDbInstanceFromDbSnapshot GETRestoreDBInstanceFromDBSnapshotActionEnum = "RestoreDBInstanceFromDBSnapshot"
 )
 
+func (e GETRestoreDBInstanceFromDBSnapshotActionEnum) ToPointer() *GETRestoreDBInstanceFromDBSnapshotActionEnum {
+	return &e
+}
+
 func (e *GETRestoreDBInstanceFromDBSnapshotActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RestoreDBInstanceFromDBSnapshot":
-		*e = GETRestoreDBInstanceFromDBSnapshotActionEnum(s)
+		*e = GETRestoreDBInstanceFromDBSnapshotActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestoreDBInstanceFromDBSnapshotActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestoreDBInstanceFromDBSnapshotActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRestoreDBInstanceFromDBSnapshotVersionEnumTwoThousandAndThirteen0110 GETRestoreDBInstanceFromDBSnapshotVersionEnum = "2013-01-10"
 )
 
+func (e GETRestoreDBInstanceFromDBSnapshotVersionEnum) ToPointer() *GETRestoreDBInstanceFromDBSnapshotVersionEnum {
+	return &e
+}
+
 func (e *GETRestoreDBInstanceFromDBSnapshotVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-10":
-		*e = GETRestoreDBInstanceFromDBSnapshotVersionEnum(s)
+		*e = GETRestoreDBInstanceFromDBSnapshotVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestoreDBInstanceFromDBSnapshotVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestoreDBInstanceFromDBSnapshotVersionEnum: %v", v)
 	}
 }
 

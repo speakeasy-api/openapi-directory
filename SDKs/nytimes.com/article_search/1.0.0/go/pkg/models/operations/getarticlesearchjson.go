@@ -17,19 +17,23 @@ const (
 	GetArticlesearchJSONSortEnumOldest GetArticlesearchJSONSortEnum = "oldest"
 )
 
+func (e GetArticlesearchJSONSortEnum) ToPointer() *GetArticlesearchJSONSortEnum {
+	return &e
+}
+
 func (e *GetArticlesearchJSONSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "oldest":
-		*e = GetArticlesearchJSONSortEnum(s)
+		*e = GetArticlesearchJSONSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetArticlesearchJSONSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetArticlesearchJSONSortEnum: %v", v)
 	}
 }
 

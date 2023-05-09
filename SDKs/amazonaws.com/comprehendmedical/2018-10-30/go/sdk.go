@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK -  Comprehend Medical; extracts structured information from unstructured clinical text. Use these actions to gain insight in your documents.
 // https://docs.aws.amazon.com/comprehendmedical/ - Amazon Web Services documentation
 type SDK struct {
@@ -592,6 +607,8 @@ func (s *SDK) DescribeSNOMEDCTInferenceJob(ctx context.Context, request operatio
 }
 
 // DetectEntities - <p>The <code>DetectEntities</code> operation is deprecated. You should use the <a>DetectEntitiesV2</a> operation instead.</p> <p> Inspects the clinical text for a variety of medical entities and returns specific information about them such as entity category, location, and confidence score on that information .</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DetectEntities(ctx context.Context, request operations.DetectEntitiesRequest) (*operations.DetectEntitiesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=ComprehendMedical_20181030.DetectEntities"

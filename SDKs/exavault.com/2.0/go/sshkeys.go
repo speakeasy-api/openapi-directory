@@ -93,7 +93,10 @@ func (s *sshKeys) AddSSHKey(ctx context.Context, request operations.AddSSHKeyReq
 // Delete the specified SSH key. This will not delete or deactivate the user tied to the key.
 func (s *sshKeys) DeleteSSHKey(ctx context.Context, request operations.DeleteSSHKeyRequest) (*operations.DeleteSSHKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ssh-keys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ssh-keys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -131,7 +134,10 @@ func (s *sshKeys) DeleteSSHKey(ctx context.Context, request operations.DeleteSSH
 // Return the information for a single SSH Key
 func (s *sshKeys) GetSSHKey(ctx context.Context, request operations.GetSSHKeyRequest) (*operations.GetSSHKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ssh-keys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ssh-keys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

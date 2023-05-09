@@ -16,12 +16,16 @@ const (
 	ActionExecutionStatusEnumFailed     ActionExecutionStatusEnum = "Failed"
 )
 
+func (e ActionExecutionStatusEnum) ToPointer() *ActionExecutionStatusEnum {
+	return &e
+}
+
 func (e *ActionExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InProgress":
 		fallthrough
 	case "Abandoned":
@@ -29,9 +33,9 @@ func (e *ActionExecutionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Succeeded":
 		fallthrough
 	case "Failed":
-		*e = ActionExecutionStatusEnum(s)
+		*e = ActionExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionExecutionStatusEnum: %v", v)
 	}
 }

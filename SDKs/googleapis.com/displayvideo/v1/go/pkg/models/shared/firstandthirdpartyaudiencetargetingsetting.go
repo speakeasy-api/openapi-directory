@@ -43,12 +43,16 @@ const (
 	FirstAndThirdPartyAudienceTargetingSettingRecencyEnumRecency365Days   FirstAndThirdPartyAudienceTargetingSettingRecencyEnum = "RECENCY_365_DAYS"
 )
 
+func (e FirstAndThirdPartyAudienceTargetingSettingRecencyEnum) ToPointer() *FirstAndThirdPartyAudienceTargetingSettingRecencyEnum {
+	return &e
+}
+
 func (e *FirstAndThirdPartyAudienceTargetingSettingRecencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECENCY_NO_LIMIT":
 		fallthrough
 	case "RECENCY_1_MINUTE":
@@ -108,10 +112,10 @@ func (e *FirstAndThirdPartyAudienceTargetingSettingRecencyEnum) UnmarshalJSON(da
 	case "RECENCY_270_DAYS":
 		fallthrough
 	case "RECENCY_365_DAYS":
-		*e = FirstAndThirdPartyAudienceTargetingSettingRecencyEnum(s)
+		*e = FirstAndThirdPartyAudienceTargetingSettingRecencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirstAndThirdPartyAudienceTargetingSettingRecencyEnum: %s", s)
+		return fmt.Errorf("invalid value for FirstAndThirdPartyAudienceTargetingSettingRecencyEnum: %v", v)
 	}
 }
 

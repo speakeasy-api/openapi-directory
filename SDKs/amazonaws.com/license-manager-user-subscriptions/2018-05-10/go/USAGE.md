@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,28 +17,26 @@ func main() {
         }),
     )
 
-    req := operations.AssociateUserRequest{
+    ctx := context.Background()
+    res, err := s.AssociateUser(ctx, operations.AssociateUserRequest{
         RequestBody: operations.AssociateUserRequestBody{
-            Domain: "corrupti",
+            Domain: sdk.String("corrupti"),
             IdentityProvider: operations.AssociateUserRequestBodyIdentityProvider{
                 ActiveDirectoryIdentityProvider: &shared.ActiveDirectoryIdentityProvider{
-                    DirectoryID: "provident",
+                    DirectoryID: sdk.String("provident"),
                 },
             },
             InstanceID: "distinctio",
             Username: "Rosalinda_Mitchell84",
         },
-        XAmzAlgorithm: "vel",
-        XAmzContentSha256: "error",
-        XAmzCredential: "deserunt",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "iure",
-        XAmzSignature: "magnam",
-        XAmzSignedHeaders: "debitis",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateUser(ctx, req)
+        XAmzAlgorithm: sdk.String("vel"),
+        XAmzContentSha256: sdk.String("error"),
+        XAmzCredential: sdk.String("deserunt"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("iure"),
+        XAmzSignature: sdk.String("magnam"),
+        XAmzSignedHeaders: sdk.String("debitis"),
+    })
     if err != nil {
         log.Fatal(err)
     }

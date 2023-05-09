@@ -15,17 +15,21 @@ const (
 	GETSelectActionEnumSelect GETSelectActionEnum = "Select"
 )
 
+func (e GETSelectActionEnum) ToPointer() *GETSelectActionEnum {
+	return &e
+}
+
 func (e *GETSelectActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Select":
-		*e = GETSelectActionEnum(s)
+		*e = GETSelectActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSelectActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSelectActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSelectVersionEnumTwoThousandAndNine0415 GETSelectVersionEnum = "2009-04-15"
 )
 
+func (e GETSelectVersionEnum) ToPointer() *GETSelectVersionEnum {
+	return &e
+}
+
 func (e *GETSelectVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2009-04-15":
-		*e = GETSelectVersionEnum(s)
+		*e = GETSelectVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSelectVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSelectVersionEnum: %v", v)
 	}
 }
 

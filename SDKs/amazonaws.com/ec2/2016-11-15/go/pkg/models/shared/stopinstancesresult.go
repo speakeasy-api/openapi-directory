@@ -19,12 +19,16 @@ const (
 	StopInstancesResultStoppingInstancesCurrentStateNameEnumStopped      StopInstancesResultStoppingInstancesCurrentStateNameEnum = "stopped"
 )
 
+func (e StopInstancesResultStoppingInstancesCurrentStateNameEnum) ToPointer() *StopInstancesResultStoppingInstancesCurrentStateNameEnum {
+	return &e
+}
+
 func (e *StopInstancesResultStoppingInstancesCurrentStateNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "running":
@@ -36,10 +40,10 @@ func (e *StopInstancesResultStoppingInstancesCurrentStateNameEnum) UnmarshalJSON
 	case "stopping":
 		fallthrough
 	case "stopped":
-		*e = StopInstancesResultStoppingInstancesCurrentStateNameEnum(s)
+		*e = StopInstancesResultStoppingInstancesCurrentStateNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopInstancesResultStoppingInstancesCurrentStateNameEnum: %s", s)
+		return fmt.Errorf("invalid value for StopInstancesResultStoppingInstancesCurrentStateNameEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	StopInstancesResultStoppingInstancesPreviousStateNameEnumStopped      StopInstancesResultStoppingInstancesPreviousStateNameEnum = "stopped"
 )
 
+func (e StopInstancesResultStoppingInstancesPreviousStateNameEnum) ToPointer() *StopInstancesResultStoppingInstancesPreviousStateNameEnum {
+	return &e
+}
+
 func (e *StopInstancesResultStoppingInstancesPreviousStateNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "running":
@@ -78,10 +86,10 @@ func (e *StopInstancesResultStoppingInstancesPreviousStateNameEnum) UnmarshalJSO
 	case "stopping":
 		fallthrough
 	case "stopped":
-		*e = StopInstancesResultStoppingInstancesPreviousStateNameEnum(s)
+		*e = StopInstancesResultStoppingInstancesPreviousStateNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopInstancesResultStoppingInstancesPreviousStateNameEnum: %s", s)
+		return fmt.Errorf("invalid value for StopInstancesResultStoppingInstancesPreviousStateNameEnum: %v", v)
 	}
 }
 

@@ -18,21 +18,25 @@ const (
 	ProjectsListOrderEnumViews         ProjectsListOrderEnum = "views"
 )
 
+func (e ProjectsListOrderEnum) ToPointer() *ProjectsListOrderEnum {
+	return &e
+}
+
 func (e *ProjectsListOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "published_date":
 		fallthrough
 	case "modified_date":
 		fallthrough
 	case "views":
-		*e = ProjectsListOrderEnum(s)
+		*e = ProjectsListOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectsListOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectsListOrderEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	ProjectsListOrderDirectionEnumDesc ProjectsListOrderDirectionEnum = "desc"
 )
 
+func (e ProjectsListOrderDirectionEnum) ToPointer() *ProjectsListOrderDirectionEnum {
+	return &e
+}
+
 func (e *ProjectsListOrderDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = ProjectsListOrderDirectionEnum(s)
+		*e = ProjectsListOrderDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectsListOrderDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectsListOrderDirectionEnum: %v", v)
 	}
 }
 

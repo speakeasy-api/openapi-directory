@@ -15,20 +15,24 @@ const (
 	NamespaceFilterNameEnumHTTPName NamespaceFilterNameEnum = "HTTP_NAME"
 )
 
+func (e NamespaceFilterNameEnum) ToPointer() *NamespaceFilterNameEnum {
+	return &e
+}
+
 func (e *NamespaceFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE":
 		fallthrough
 	case "NAME":
 		fallthrough
 	case "HTTP_NAME":
-		*e = NamespaceFilterNameEnum(s)
+		*e = NamespaceFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NamespaceFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for NamespaceFilterNameEnum: %v", v)
 	}
 }

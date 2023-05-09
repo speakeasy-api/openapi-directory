@@ -16,21 +16,25 @@ const (
 	RestoreConfigClusterResourceConflictPolicyEnumUseBackupVersion                         RestoreConfigClusterResourceConflictPolicyEnum = "USE_BACKUP_VERSION"
 )
 
+func (e RestoreConfigClusterResourceConflictPolicyEnum) ToPointer() *RestoreConfigClusterResourceConflictPolicyEnum {
+	return &e
+}
+
 func (e *RestoreConfigClusterResourceConflictPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLUSTER_RESOURCE_CONFLICT_POLICY_UNSPECIFIED":
 		fallthrough
 	case "USE_EXISTING_VERSION":
 		fallthrough
 	case "USE_BACKUP_VERSION":
-		*e = RestoreConfigClusterResourceConflictPolicyEnum(s)
+		*e = RestoreConfigClusterResourceConflictPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RestoreConfigClusterResourceConflictPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for RestoreConfigClusterResourceConflictPolicyEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	RestoreConfigNamespacedResourceRestoreModeEnumFailOnConflict                           RestoreConfigNamespacedResourceRestoreModeEnum = "FAIL_ON_CONFLICT"
 )
 
+func (e RestoreConfigNamespacedResourceRestoreModeEnum) ToPointer() *RestoreConfigNamespacedResourceRestoreModeEnum {
+	return &e
+}
+
 func (e *RestoreConfigNamespacedResourceRestoreModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED":
 		fallthrough
 	case "DELETE_AND_RESTORE":
 		fallthrough
 	case "FAIL_ON_CONFLICT":
-		*e = RestoreConfigNamespacedResourceRestoreModeEnum(s)
+		*e = RestoreConfigNamespacedResourceRestoreModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RestoreConfigNamespacedResourceRestoreModeEnum: %s", s)
+		return fmt.Errorf("invalid value for RestoreConfigNamespacedResourceRestoreModeEnum: %v", v)
 	}
 }
 
@@ -71,12 +79,16 @@ const (
 	RestoreConfigVolumeDataRestorePolicyEnumNoVolumeDataRestoration            RestoreConfigVolumeDataRestorePolicyEnum = "NO_VOLUME_DATA_RESTORATION"
 )
 
+func (e RestoreConfigVolumeDataRestorePolicyEnum) ToPointer() *RestoreConfigVolumeDataRestorePolicyEnum {
+	return &e
+}
+
 func (e *RestoreConfigVolumeDataRestorePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VOLUME_DATA_RESTORE_POLICY_UNSPECIFIED":
 		fallthrough
 	case "RESTORE_VOLUME_DATA_FROM_BACKUP":
@@ -84,10 +96,10 @@ func (e *RestoreConfigVolumeDataRestorePolicyEnum) UnmarshalJSON(data []byte) er
 	case "REUSE_VOLUME_HANDLE_FROM_BACKUP":
 		fallthrough
 	case "NO_VOLUME_DATA_RESTORATION":
-		*e = RestoreConfigVolumeDataRestorePolicyEnum(s)
+		*e = RestoreConfigVolumeDataRestorePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RestoreConfigVolumeDataRestorePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for RestoreConfigVolumeDataRestorePolicyEnum: %v", v)
 	}
 }
 

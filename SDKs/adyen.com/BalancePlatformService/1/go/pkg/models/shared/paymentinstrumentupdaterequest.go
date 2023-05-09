@@ -38,12 +38,16 @@ const (
 	PaymentInstrumentUpdateRequestStatusEnumDiscarded PaymentInstrumentUpdateRequestStatusEnum = "discarded"
 )
 
+func (e PaymentInstrumentUpdateRequestStatusEnum) ToPointer() *PaymentInstrumentUpdateRequestStatusEnum {
+	return &e
+}
+
 func (e *PaymentInstrumentUpdateRequestStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Closed":
@@ -61,10 +65,10 @@ func (e *PaymentInstrumentUpdateRequestStatusEnum) UnmarshalJSON(data []byte) er
 	case "blocked":
 		fallthrough
 	case "discarded":
-		*e = PaymentInstrumentUpdateRequestStatusEnum(s)
+		*e = PaymentInstrumentUpdateRequestStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentInstrumentUpdateRequestStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentInstrumentUpdateRequestStatusEnum: %v", v)
 	}
 }
 

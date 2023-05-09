@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,7 +16,8 @@ func main() {
         }),
     )
 
-    req := operations.AcceptEulasRequest{
+    ctx := context.Background()
+    res, err := s.AcceptEulas(ctx, operations.AcceptEulasRequest{
         RequestBody: operations.AcceptEulasRequestBody{
             EulaIds: []string{
                 "provident",
@@ -25,19 +25,16 @@ func main() {
                 "quibusdam",
             },
         },
-        XAmzAlgorithm: "unde",
-        XAmzClientToken: "nulla",
-        XAmzContentSha256: "corrupti",
-        XAmzCredential: "illum",
-        XAmzDate: "vel",
-        XAmzSecurityToken: "error",
-        XAmzSignature: "deserunt",
-        XAmzSignedHeaders: "suscipit",
+        XAmzAlgorithm: sdk.String("unde"),
+        XAmzClientToken: sdk.String("nulla"),
+        XAmzContentSha256: sdk.String("corrupti"),
+        XAmzCredential: sdk.String("illum"),
+        XAmzDate: sdk.String("vel"),
+        XAmzSecurityToken: sdk.String("error"),
+        XAmzSignature: sdk.String("deserunt"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
         StudioID: "iure",
-    }
-
-    ctx := context.Background()
-    res, err := s.AcceptEulas(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

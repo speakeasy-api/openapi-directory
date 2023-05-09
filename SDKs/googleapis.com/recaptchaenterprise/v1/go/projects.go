@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // RecaptchaenterpriseProjectsAssessmentsAnnotate - Annotates a previously created Assessment to provide additional information on whether the event turned out to be authentic or fraudulent.
 func (s *projects) RecaptchaenterpriseProjectsAssessmentsAnnotate(ctx context.Context, request operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest, security operations.RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity) (*operations.RecaptchaenterpriseProjectsAssessmentsAnnotateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:annotate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:annotate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) RecaptchaenterpriseProjectsAssessmentsAnnotate(ctx context.Co
 // RecaptchaenterpriseProjectsAssessmentsCreate - Creates an Assessment of the likelihood an event is legitimate.
 func (s *projects) RecaptchaenterpriseProjectsAssessmentsCreate(ctx context.Context, request operations.RecaptchaenterpriseProjectsAssessmentsCreateRequest, security operations.RecaptchaenterpriseProjectsAssessmentsCreateSecurity) (*operations.RecaptchaenterpriseProjectsAssessmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assessments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assessments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1AssessmentInput", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) RecaptchaenterpriseProjectsAssessmentsCreate(ctx context.Cont
 // RecaptchaenterpriseProjectsFirewallpoliciesCreate - Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA Enterprise actions can be executed. A project may have a maximum of 1000 policies.
 func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesCreate(ctx context.Context, request operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateRequest, security operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateSecurity) (*operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/firewallpolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/firewallpolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1FirewallPolicy", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesCreate(ctx context
 // RecaptchaenterpriseProjectsFirewallpoliciesList - Returns the list of all firewall policies that belong to a project.
 func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesList(ctx context.Context, request operations.RecaptchaenterpriseProjectsFirewallpoliciesListRequest, security operations.RecaptchaenterpriseProjectsFirewallpoliciesListSecurity) (*operations.RecaptchaenterpriseProjectsFirewallpoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/firewallpolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/firewallpolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesList(ctx context.C
 // RecaptchaenterpriseProjectsKeysCreate - Creates a new reCAPTCHA Enterprise key.
 func (s *projects) RecaptchaenterpriseProjectsKeysCreate(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysCreateRequest, security operations.RecaptchaenterpriseProjectsKeysCreateSecurity) (*operations.RecaptchaenterpriseProjectsKeysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1KeyInput", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *projects) RecaptchaenterpriseProjectsKeysCreate(ctx context.Context, re
 // RecaptchaenterpriseProjectsKeysDelete - Deletes the specified key.
 func (s *projects) RecaptchaenterpriseProjectsKeysDelete(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysDeleteRequest, security operations.RecaptchaenterpriseProjectsKeysDeleteSecurity) (*operations.RecaptchaenterpriseProjectsKeysDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *projects) RecaptchaenterpriseProjectsKeysDelete(ctx context.Context, re
 // RecaptchaenterpriseProjectsKeysGetMetrics - Get some aggregated metrics for a Key. This data can be used to build dashboards.
 func (s *projects) RecaptchaenterpriseProjectsKeysGetMetrics(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysGetMetricsRequest, security operations.RecaptchaenterpriseProjectsKeysGetMetricsSecurity) (*operations.RecaptchaenterpriseProjectsKeysGetMetricsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) RecaptchaenterpriseProjectsKeysGetMetrics(ctx context.Context
 // RecaptchaenterpriseProjectsKeysList - Returns the list of all keys that belong to a project.
 func (s *projects) RecaptchaenterpriseProjectsKeysList(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysListRequest, security operations.RecaptchaenterpriseProjectsKeysListSecurity) (*operations.RecaptchaenterpriseProjectsKeysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) RecaptchaenterpriseProjectsKeysList(ctx context.Context, requ
 // RecaptchaenterpriseProjectsKeysMigrate - Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise. Once a key is migrated, it can be used from either product. SiteVerify requests are billed as CreateAssessment calls. You must be authenticated as one of the current owners of the reCAPTCHA Site Key, and your user must have the reCAPTCHA Enterprise Admin IAM role in the destination project.
 func (s *projects) RecaptchaenterpriseProjectsKeysMigrate(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysMigrateRequest, security operations.RecaptchaenterpriseProjectsKeysMigrateSecurity) (*operations.RecaptchaenterpriseProjectsKeysMigrateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:migrate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:migrate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest", "json")
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *projects) RecaptchaenterpriseProjectsKeysMigrate(ctx context.Context, r
 // RecaptchaenterpriseProjectsKeysPatch - Updates the specified key.
 func (s *projects) RecaptchaenterpriseProjectsKeysPatch(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysPatchRequest, security operations.RecaptchaenterpriseProjectsKeysPatchSecurity) (*operations.RecaptchaenterpriseProjectsKeysPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1KeyInput", "json")
 	if err != nil {
@@ -556,7 +586,10 @@ func (s *projects) RecaptchaenterpriseProjectsKeysPatch(ctx context.Context, req
 // RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKey - Returns the secret key related to the specified public key. You must use the legacy secret key only in a 3rd party integration with legacy reCAPTCHA.
 func (s *projects) RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKey(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyRequest, security operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeySecurity) (*operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{key}:retrieveLegacySecretKey", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{key}:retrieveLegacySecretKey", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -604,7 +637,10 @@ func (s *projects) RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKey(ctx co
 // RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearch - Search group memberships related to a given account.
 func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearch(ctx context.Context, request operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchRequest, security operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchSecurity) (*operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{project}/relatedaccountgroupmemberships:search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{project}/relatedaccountgroupmemberships:search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest", "json")
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSear
 // RecaptchaenterpriseProjectsRelatedaccountgroupsList - List groups of related accounts.
 func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupsList(ctx context.Context, request operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListRequest, security operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListSecurity) (*operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/relatedaccountgroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/relatedaccountgroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupsList(ctx conte
 // RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsList - Get memberships in a group of related accounts.
 func (s *projects) RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsList(ctx context.Context, request operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListRequest, security operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListSecurity) (*operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

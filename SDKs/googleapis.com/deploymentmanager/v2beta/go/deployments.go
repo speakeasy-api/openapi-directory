@@ -34,7 +34,10 @@ func newDeployments(defaultClient, securityClient HTTPClient, serverURL, languag
 // DeploymentmanagerDeploymentsCancelPreview - Cancels and removes the preview currently associated with the deployment.
 func (s *deployments) DeploymentmanagerDeploymentsCancelPreview(ctx context.Context, request operations.DeploymentmanagerDeploymentsCancelPreviewRequest, security operations.DeploymentmanagerDeploymentsCancelPreviewSecurity) (*operations.DeploymentmanagerDeploymentsCancelPreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}/cancelPreview", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}/cancelPreview", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeploymentsCancelPreviewRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *deployments) DeploymentmanagerDeploymentsCancelPreview(ctx context.Cont
 // DeploymentmanagerDeploymentsDelete - Deletes a deployment and all of the resources in the deployment.
 func (s *deployments) DeploymentmanagerDeploymentsDelete(ctx context.Context, request operations.DeploymentmanagerDeploymentsDeleteRequest, security operations.DeploymentmanagerDeploymentsDeleteSecurity) (*operations.DeploymentmanagerDeploymentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *deployments) DeploymentmanagerDeploymentsDelete(ctx context.Context, re
 // DeploymentmanagerDeploymentsGet - Gets information about a specific deployment.
 func (s *deployments) DeploymentmanagerDeploymentsGet(ctx context.Context, request operations.DeploymentmanagerDeploymentsGetRequest, security operations.DeploymentmanagerDeploymentsGetSecurity) (*operations.DeploymentmanagerDeploymentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *deployments) DeploymentmanagerDeploymentsGet(ctx context.Context, reque
 // DeploymentmanagerDeploymentsGetIamPolicy - Gets the access control policy for a resource. May be empty if no such policy or resource exists.
 func (s *deployments) DeploymentmanagerDeploymentsGetIamPolicy(ctx context.Context, request operations.DeploymentmanagerDeploymentsGetIamPolicyRequest, security operations.DeploymentmanagerDeploymentsGetIamPolicySecurity) (*operations.DeploymentmanagerDeploymentsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{resource}/getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{resource}/getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *deployments) DeploymentmanagerDeploymentsGetIamPolicy(ctx context.Conte
 // DeploymentmanagerDeploymentsInsert - Creates a deployment and all of the resources described by the deployment manifest.
 func (s *deployments) DeploymentmanagerDeploymentsInsert(ctx context.Context, request operations.DeploymentmanagerDeploymentsInsertRequest, security operations.DeploymentmanagerDeploymentsInsertSecurity) (*operations.DeploymentmanagerDeploymentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Deployment", "json")
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *deployments) DeploymentmanagerDeploymentsInsert(ctx context.Context, re
 // DeploymentmanagerDeploymentsList - Lists all deployments for a given project.
 func (s *deployments) DeploymentmanagerDeploymentsList(ctx context.Context, request operations.DeploymentmanagerDeploymentsListRequest, security operations.DeploymentmanagerDeploymentsListSecurity) (*operations.DeploymentmanagerDeploymentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *deployments) DeploymentmanagerDeploymentsList(ctx context.Context, requ
 // DeploymentmanagerDeploymentsPatch - Patches a deployment and all of the resources described by the deployment manifest.
 func (s *deployments) DeploymentmanagerDeploymentsPatch(ctx context.Context, request operations.DeploymentmanagerDeploymentsPatchRequest, security operations.DeploymentmanagerDeploymentsPatchSecurity) (*operations.DeploymentmanagerDeploymentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Deployment1", "json")
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *deployments) DeploymentmanagerDeploymentsPatch(ctx context.Context, req
 // DeploymentmanagerDeploymentsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy.
 func (s *deployments) DeploymentmanagerDeploymentsSetIamPolicy(ctx context.Context, request operations.DeploymentmanagerDeploymentsSetIamPolicyRequest, security operations.DeploymentmanagerDeploymentsSetIamPolicySecurity) (*operations.DeploymentmanagerDeploymentsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{resource}/setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{resource}/setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GlobalSetPolicyRequest", "json")
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *deployments) DeploymentmanagerDeploymentsSetIamPolicy(ctx context.Conte
 // DeploymentmanagerDeploymentsStop - Stops an ongoing operation. This does not roll back any work that has already been completed, but prevents any new work from being started.
 func (s *deployments) DeploymentmanagerDeploymentsStop(ctx context.Context, request operations.DeploymentmanagerDeploymentsStopRequest, security operations.DeploymentmanagerDeploymentsStopSecurity) (*operations.DeploymentmanagerDeploymentsStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeploymentsStopRequest", "json")
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *deployments) DeploymentmanagerDeploymentsStop(ctx context.Context, requ
 // DeploymentmanagerDeploymentsTestIamPermissions - Returns permissions that a caller has on the specified resource.
 func (s *deployments) DeploymentmanagerDeploymentsTestIamPermissions(ctx context.Context, request operations.DeploymentmanagerDeploymentsTestIamPermissionsRequest, security operations.DeploymentmanagerDeploymentsTestIamPermissionsSecurity) (*operations.DeploymentmanagerDeploymentsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{resource}/testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{resource}/testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestPermissionsRequest", "json")
 	if err != nil {
@@ -556,7 +586,10 @@ func (s *deployments) DeploymentmanagerDeploymentsTestIamPermissions(ctx context
 // DeploymentmanagerDeploymentsUpdate - Updates a deployment and all of the resources described by the deployment manifest.
 func (s *deployments) DeploymentmanagerDeploymentsUpdate(ctx context.Context, request operations.DeploymentmanagerDeploymentsUpdateRequest, security operations.DeploymentmanagerDeploymentsUpdateSecurity) (*operations.DeploymentmanagerDeploymentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Deployment1", "json")
 	if err != nil {

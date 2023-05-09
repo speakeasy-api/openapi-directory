@@ -16,17 +16,21 @@ const (
 	DescribeConfigurationRecordersXAmzTargetEnumStarlingDoveServiceDescribeConfigurationRecorders DescribeConfigurationRecordersXAmzTargetEnum = "StarlingDoveService.DescribeConfigurationRecorders"
 )
 
+func (e DescribeConfigurationRecordersXAmzTargetEnum) ToPointer() *DescribeConfigurationRecordersXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeConfigurationRecordersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DescribeConfigurationRecorders":
-		*e = DescribeConfigurationRecordersXAmzTargetEnum(s)
+		*e = DescribeConfigurationRecordersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeConfigurationRecordersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeConfigurationRecordersXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	TeamHittingVsStartingPitcherFormatEnumJSON TeamHittingVsStartingPitcherFormatEnum = "JSON"
 )
 
+func (e TeamHittingVsStartingPitcherFormatEnum) ToPointer() *TeamHittingVsStartingPitcherFormatEnum {
+	return &e
+}
+
 func (e *TeamHittingVsStartingPitcherFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = TeamHittingVsStartingPitcherFormatEnum(s)
+		*e = TeamHittingVsStartingPitcherFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamHittingVsStartingPitcherFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamHittingVsStartingPitcherFormatEnum: %v", v)
 	}
 }
 

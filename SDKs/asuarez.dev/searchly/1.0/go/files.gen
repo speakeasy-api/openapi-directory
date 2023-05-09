@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -18,4 +19,7 @@ pkg/models/operations/srcsearchlyapiv1controllerssimilaritybysong.go
 pkg/models/operations/srcsearchlyapiv1controllerssongsearch.go
 pkg/models/shared/apiresponsesimilarity.go
 pkg/models/shared/apiresponsesong.go
+docs/sdk/README.md
+docs/similarity/README.md
+docs/song/README.md
 USAGE.md

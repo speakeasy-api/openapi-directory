@@ -16,17 +16,21 @@ const (
 	DescribeServerXAmzTargetEnumTransferServiceDescribeServer DescribeServerXAmzTargetEnum = "TransferService.DescribeServer"
 )
 
+func (e DescribeServerXAmzTargetEnum) ToPointer() *DescribeServerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeServerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.DescribeServer":
-		*e = DescribeServerXAmzTargetEnum(s)
+		*e = DescribeServerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeServerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeServerXAmzTargetEnum: %v", v)
 	}
 }
 

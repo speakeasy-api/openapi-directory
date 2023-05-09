@@ -15,20 +15,24 @@ const (
 	AntipatternReportStatusEnumSuccess    AntipatternReportStatusEnum = "SUCCESS"
 )
 
+func (e AntipatternReportStatusEnum) ToPointer() *AntipatternReportStatusEnum {
+	return &e
+}
+
 func (e *AntipatternReportStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILED":
 		fallthrough
 	case "IN_PROGRESS":
 		fallthrough
 	case "SUCCESS":
-		*e = AntipatternReportStatusEnum(s)
+		*e = AntipatternReportStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AntipatternReportStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AntipatternReportStatusEnum: %v", v)
 	}
 }

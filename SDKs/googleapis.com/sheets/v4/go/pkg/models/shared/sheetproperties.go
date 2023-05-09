@@ -17,12 +17,16 @@ const (
 	SheetPropertiesSheetTypeEnumDataSource           SheetPropertiesSheetTypeEnum = "DATA_SOURCE"
 )
 
+func (e SheetPropertiesSheetTypeEnum) ToPointer() *SheetPropertiesSheetTypeEnum {
+	return &e
+}
+
 func (e *SheetPropertiesSheetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHEET_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GRID":
@@ -30,10 +34,10 @@ func (e *SheetPropertiesSheetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "OBJECT":
 		fallthrough
 	case "DATA_SOURCE":
-		*e = SheetPropertiesSheetTypeEnum(s)
+		*e = SheetPropertiesSheetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SheetPropertiesSheetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SheetPropertiesSheetTypeEnum: %v", v)
 	}
 }
 

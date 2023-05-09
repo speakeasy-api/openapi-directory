@@ -16,21 +16,25 @@ const (
 	ImportRulesJobDetailsFileFormatEnumImportRulesFileFormatOratopgConfigFile        ImportRulesJobDetailsFileFormatEnum = "IMPORT_RULES_FILE_FORMAT_ORATOPG_CONFIG_FILE"
 )
 
+func (e ImportRulesJobDetailsFileFormatEnum) ToPointer() *ImportRulesJobDetailsFileFormatEnum {
+	return &e
+}
+
 func (e *ImportRulesJobDetailsFileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORT_RULES_FILE_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "IMPORT_RULES_FILE_FORMAT_HARBOUR_BRIDGE_SESSION_FILE":
 		fallthrough
 	case "IMPORT_RULES_FILE_FORMAT_ORATOPG_CONFIG_FILE":
-		*e = ImportRulesJobDetailsFileFormatEnum(s)
+		*e = ImportRulesJobDetailsFileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportRulesJobDetailsFileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportRulesJobDetailsFileFormatEnum: %v", v)
 	}
 }
 

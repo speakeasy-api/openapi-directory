@@ -28,12 +28,16 @@ const (
 	BehaviorCountryEnumBr BehaviorCountryEnum = "br"
 )
 
+func (e BehaviorCountryEnum) ToPointer() *BehaviorCountryEnum {
+	return &e
+}
+
 func (e *BehaviorCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "co":
 		fallthrough
 	case "ve":
@@ -59,10 +63,10 @@ func (e *BehaviorCountryEnum) UnmarshalJSON(data []byte) error {
 	case "pa":
 		fallthrough
 	case "br":
-		*e = BehaviorCountryEnum(s)
+		*e = BehaviorCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BehaviorCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for BehaviorCountryEnum: %v", v)
 	}
 }
 
@@ -99,12 +103,16 @@ const (
 	BehaviorDocumentTypeEnumRuc                    BehaviorDocumentTypeEnum = "ruc"
 )
 
+func (e BehaviorDocumentTypeEnum) ToPointer() *BehaviorDocumentTypeEnum {
+	return &e
+}
+
 func (e *BehaviorDocumentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "national-id":
 		fallthrough
 	case "passport":
@@ -158,10 +166,10 @@ func (e *BehaviorDocumentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "driver-license":
 		fallthrough
 	case "ruc":
-		*e = BehaviorDocumentTypeEnum(s)
+		*e = BehaviorDocumentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BehaviorDocumentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BehaviorDocumentTypeEnum: %v", v)
 	}
 }
 

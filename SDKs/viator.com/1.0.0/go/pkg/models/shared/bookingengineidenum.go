@@ -25,12 +25,16 @@ const (
 	BookingEngineIDEnumFreesaleOnRequestBe BookingEngineIDEnum = "FreesaleOnRequestBE"
 )
 
+func (e BookingEngineIDEnum) ToPointer() *BookingEngineIDEnum {
+	return &e
+}
+
 func (e *BookingEngineIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FreesaleBE":
 		fallthrough
 	case "UnconditionalBE":
@@ -38,9 +42,9 @@ func (e *BookingEngineIDEnum) UnmarshalJSON(data []byte) error {
 	case "DeferredCRMBE":
 		fallthrough
 	case "FreesaleOnRequestBE":
-		*e = BookingEngineIDEnum(s)
+		*e = BookingEngineIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BookingEngineIDEnum: %s", s)
+		return fmt.Errorf("invalid value for BookingEngineIDEnum: %v", v)
 	}
 }

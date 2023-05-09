@@ -28,21 +28,25 @@ const (
 	StatusUpdateResponseResourceSubtypeEnumGoalStatusUpdate      StatusUpdateResponseResourceSubtypeEnum = "goal_status_update"
 )
 
+func (e StatusUpdateResponseResourceSubtypeEnum) ToPointer() *StatusUpdateResponseResourceSubtypeEnum {
+	return &e
+}
+
 func (e *StatusUpdateResponseResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "project_status_update":
 		fallthrough
 	case "portfolio_status_update":
 		fallthrough
 	case "goal_status_update":
-		*e = StatusUpdateResponseResourceSubtypeEnum(s)
+		*e = StatusUpdateResponseResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusUpdateResponseResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusUpdateResponseResourceSubtypeEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	StatusUpdateResponseStatusTypeEnumDropped  StatusUpdateResponseStatusTypeEnum = "dropped"
 )
 
+func (e StatusUpdateResponseStatusTypeEnum) ToPointer() *StatusUpdateResponseStatusTypeEnum {
+	return &e
+}
+
 func (e *StatusUpdateResponseStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on_track":
 		fallthrough
 	case "at_risk":
@@ -84,10 +92,10 @@ func (e *StatusUpdateResponseStatusTypeEnum) UnmarshalJSON(data []byte) error {
 	case "missed":
 		fallthrough
 	case "dropped":
-		*e = StatusUpdateResponseStatusTypeEnum(s)
+		*e = StatusUpdateResponseStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusUpdateResponseStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusUpdateResponseStatusTypeEnum: %v", v)
 	}
 }
 

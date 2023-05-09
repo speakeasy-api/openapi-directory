@@ -30,12 +30,16 @@ const (
 	HistogramResultSearchTypeEnumBaseCompensationUnit  HistogramResultSearchTypeEnum = "BASE_COMPENSATION_UNIT"
 )
 
+func (e HistogramResultSearchTypeEnum) ToPointer() *HistogramResultSearchTypeEnum {
+	return &e
+}
+
 func (e *HistogramResultSearchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEARCH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "COMPANY_ID":
@@ -69,10 +73,10 @@ func (e *HistogramResultSearchTypeEnum) UnmarshalJSON(data []byte) error {
 	case "COMPANY_DISPLAY_NAME":
 		fallthrough
 	case "BASE_COMPENSATION_UNIT":
-		*e = HistogramResultSearchTypeEnum(s)
+		*e = HistogramResultSearchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HistogramResultSearchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HistogramResultSearchTypeEnum: %v", v)
 	}
 }
 

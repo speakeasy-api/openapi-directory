@@ -17,19 +17,23 @@ const (
 	PutAccountPreferencesRequestBodyResourceIDTypeEnumShortID PutAccountPreferencesRequestBodyResourceIDTypeEnum = "SHORT_ID"
 )
 
+func (e PutAccountPreferencesRequestBodyResourceIDTypeEnum) ToPointer() *PutAccountPreferencesRequestBodyResourceIDTypeEnum {
+	return &e
+}
+
 func (e *PutAccountPreferencesRequestBodyResourceIDTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LONG_ID":
 		fallthrough
 	case "SHORT_ID":
-		*e = PutAccountPreferencesRequestBodyResourceIDTypeEnum(s)
+		*e = PutAccountPreferencesRequestBodyResourceIDTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutAccountPreferencesRequestBodyResourceIDTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutAccountPreferencesRequestBodyResourceIDTypeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	InsertionOrderBudgetAutomationTypeEnumInsertionOrderAutomationTypeBidBudget   InsertionOrderBudgetAutomationTypeEnum = "INSERTION_ORDER_AUTOMATION_TYPE_BID_BUDGET"
 )
 
+func (e InsertionOrderBudgetAutomationTypeEnum) ToPointer() *InsertionOrderBudgetAutomationTypeEnum {
+	return &e
+}
+
 func (e *InsertionOrderBudgetAutomationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSERTION_ORDER_AUTOMATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INSERTION_ORDER_AUTOMATION_TYPE_BUDGET":
@@ -30,10 +34,10 @@ func (e *InsertionOrderBudgetAutomationTypeEnum) UnmarshalJSON(data []byte) erro
 	case "INSERTION_ORDER_AUTOMATION_TYPE_NONE":
 		fallthrough
 	case "INSERTION_ORDER_AUTOMATION_TYPE_BID_BUDGET":
-		*e = InsertionOrderBudgetAutomationTypeEnum(s)
+		*e = InsertionOrderBudgetAutomationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InsertionOrderBudgetAutomationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InsertionOrderBudgetAutomationTypeEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	InsertionOrderBudgetBudgetUnitEnumBudgetUnitImpressions InsertionOrderBudgetBudgetUnitEnum = "BUDGET_UNIT_IMPRESSIONS"
 )
 
+func (e InsertionOrderBudgetBudgetUnitEnum) ToPointer() *InsertionOrderBudgetBudgetUnitEnum {
+	return &e
+}
+
 func (e *InsertionOrderBudgetBudgetUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUDGET_UNIT_UNSPECIFIED":
 		fallthrough
 	case "BUDGET_UNIT_CURRENCY":
 		fallthrough
 	case "BUDGET_UNIT_IMPRESSIONS":
-		*e = InsertionOrderBudgetBudgetUnitEnum(s)
+		*e = InsertionOrderBudgetBudgetUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InsertionOrderBudgetBudgetUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for InsertionOrderBudgetBudgetUnitEnum: %v", v)
 	}
 }
 

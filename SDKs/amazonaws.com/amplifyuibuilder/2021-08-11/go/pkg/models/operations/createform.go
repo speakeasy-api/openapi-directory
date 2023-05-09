@@ -13,6 +13,7 @@ type CreateFormRequestBodyFormToCreate struct {
 	DataType          *shared.FormDataTypeConfig         `json:"dataType,omitempty"`
 	Fields            map[string]shared.FieldConfig      `json:"fields,omitempty"`
 	FormActionType    *shared.FormActionTypeEnum         `json:"formActionType,omitempty"`
+	LabelDecorator    *shared.LabelDecoratorEnum         `json:"labelDecorator,omitempty"`
 	Name              *string                            `json:"name,omitempty"`
 	SchemaVersion     *string                            `json:"schemaVersion,omitempty"`
 	SectionalElements map[string]shared.SectionalElement `json:"sectionalElements,omitempty"`

@@ -16,17 +16,21 @@ const (
 	UpdateAPIDestinationXAmzTargetEnumAwsEventsUpdateAPIDestination UpdateAPIDestinationXAmzTargetEnum = "AWSEvents.UpdateApiDestination"
 )
 
+func (e UpdateAPIDestinationXAmzTargetEnum) ToPointer() *UpdateAPIDestinationXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateAPIDestinationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.UpdateApiDestination":
-		*e = UpdateAPIDestinationXAmzTargetEnum(s)
+		*e = UpdateAPIDestinationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAPIDestinationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAPIDestinationXAmzTargetEnum: %v", v)
 	}
 }
 

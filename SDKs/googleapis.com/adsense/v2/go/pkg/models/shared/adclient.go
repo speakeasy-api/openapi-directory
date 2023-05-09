@@ -17,12 +17,16 @@ const (
 	AdClientStateEnumRequiresReview   AdClientStateEnum = "REQUIRES_REVIEW"
 )
 
+func (e AdClientStateEnum) ToPointer() *AdClientStateEnum {
+	return &e
+}
+
 func (e *AdClientStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "READY":
@@ -30,10 +34,10 @@ func (e *AdClientStateEnum) UnmarshalJSON(data []byte) error {
 	case "GETTING_READY":
 		fallthrough
 	case "REQUIRES_REVIEW":
-		*e = AdClientStateEnum(s)
+		*e = AdClientStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdClientStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AdClientStateEnum: %v", v)
 	}
 }
 

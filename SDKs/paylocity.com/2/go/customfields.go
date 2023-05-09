@@ -35,7 +35,10 @@ func newCustomFields(defaultClient, securityClient HTTPClient, serverURL, langua
 // Get All Custom Fields for the selected company
 func (s *customFields) GetAllCustomFieldsByCategory(ctx context.Context, request operations.GetAllCustomFieldsByCategoryRequest, security operations.GetAllCustomFieldsByCategorySecurity) (*operations.GetAllCustomFieldsByCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/customfields/{category}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/customfields/{category}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

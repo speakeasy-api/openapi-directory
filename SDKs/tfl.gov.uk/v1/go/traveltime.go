@@ -34,7 +34,10 @@ func newTravelTime(defaultClient, securityClient HTTPClient, serverURL, language
 // TravelTimeGetCompareOverlay - Gets the TravelTime overlay.
 func (s *travelTime) TravelTimeGetCompareOverlay(ctx context.Context, request operations.TravelTimeGetCompareOverlayRequest) (*operations.TravelTimeGetCompareOverlayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/TravelTimes/compareOverlay/{z}/mapcenter/{mapCenterLat}/{mapCenterLon}/pinlocation/{pinLat}/{pinLon}/dimensions/{width}/{height}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/TravelTimes/compareOverlay/{z}/mapcenter/{mapCenterLat}/{mapCenterLon}/pinlocation/{pinLat}/{pinLon}/dimensions/{width}/{height}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -103,7 +106,10 @@ func (s *travelTime) TravelTimeGetCompareOverlay(ctx context.Context, request op
 // TravelTimeGetOverlay - Gets the TravelTime overlay.
 func (s *travelTime) TravelTimeGetOverlay(ctx context.Context, request operations.TravelTimeGetOverlayRequest) (*operations.TravelTimeGetOverlayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/TravelTimes/overlay/{z}/mapcenter/{mapCenterLat}/{mapCenterLon}/pinlocation/{pinLat}/{pinLon}/dimensions/{width}/{height}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/TravelTimes/overlay/{z}/mapcenter/{mapCenterLat}/{mapCenterLon}/pinlocation/{pinLat}/{pinLon}/dimensions/{width}/{height}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

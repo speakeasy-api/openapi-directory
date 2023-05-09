@@ -23,21 +23,25 @@ const (
 	GetSpacesSpaceIDFoldersIDSections200ApplicationJSONStateEnumHidden   GetSpacesSpaceIDFoldersIDSections200ApplicationJSONStateEnum = "hidden"
 )
 
+func (e GetSpacesSpaceIDFoldersIDSections200ApplicationJSONStateEnum) ToPointer() *GetSpacesSpaceIDFoldersIDSections200ApplicationJSONStateEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDFoldersIDSections200ApplicationJSONStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "folded":
 		fallthrough
 	case "unfolded":
 		fallthrough
 	case "hidden":
-		*e = GetSpacesSpaceIDFoldersIDSections200ApplicationJSONStateEnum(s)
+		*e = GetSpacesSpaceIDFoldersIDSections200ApplicationJSONStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDSections200ApplicationJSONStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDSections200ApplicationJSONStateEnum: %v", v)
 	}
 }
 

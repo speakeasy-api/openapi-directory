@@ -16,17 +16,21 @@ const (
 	DisableUserXAmzTargetEnumPhotonAdminProxyServiceDisableUser DisableUserXAmzTargetEnum = "PhotonAdminProxyService.DisableUser"
 )
 
+func (e DisableUserXAmzTargetEnum) ToPointer() *DisableUserXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisableUserXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.DisableUser":
-		*e = DisableUserXAmzTargetEnum(s)
+		*e = DisableUserXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableUserXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableUserXAmzTargetEnum: %v", v)
 	}
 }
 

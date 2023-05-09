@@ -34,7 +34,10 @@ func newCreatives(defaultClient, securityClient HTTPClient, serverURL, language,
 // DfareportingCreativesGet - Gets one creative by ID.
 func (s *creatives) DfareportingCreativesGet(ctx context.Context, request operations.DfareportingCreativesGetRequest, security operations.DfareportingCreativesGetSecurity) (*operations.DfareportingCreativesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *creatives) DfareportingCreativesGet(ctx context.Context, request operat
 // DfareportingCreativesInsert - Inserts a new creative.
 func (s *creatives) DfareportingCreativesInsert(ctx context.Context, request operations.DfareportingCreativesInsertRequest, security operations.DfareportingCreativesInsertSecurity) (*operations.DfareportingCreativesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Creative", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *creatives) DfareportingCreativesInsert(ctx context.Context, request ope
 // DfareportingCreativesList - Retrieves a list of creatives, possibly filtered. This method supports paging.
 func (s *creatives) DfareportingCreativesList(ctx context.Context, request operations.DfareportingCreativesListRequest, security operations.DfareportingCreativesListSecurity) (*operations.DfareportingCreativesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *creatives) DfareportingCreativesList(ctx context.Context, request opera
 // DfareportingCreativesPatch - Updates an existing creative. This method supports patch semantics.
 func (s *creatives) DfareportingCreativesPatch(ctx context.Context, request operations.DfareportingCreativesPatchRequest, security operations.DfareportingCreativesPatchSecurity) (*operations.DfareportingCreativesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Creative", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *creatives) DfareportingCreativesPatch(ctx context.Context, request oper
 // DfareportingCreativesUpdate - Updates an existing creative.
 func (s *creatives) DfareportingCreativesUpdate(ctx context.Context, request operations.DfareportingCreativesUpdateRequest, security operations.DfareportingCreativesUpdateSecurity) (*operations.DfareportingCreativesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creatives", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Creative", "json")
 	if err != nil {

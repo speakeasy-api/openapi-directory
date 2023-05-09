@@ -16,21 +16,25 @@ const (
 	BusinessChainAssignedTargetingOptionDetailsProximityRadiusUnitEnumDistanceUnitKilometers  BusinessChainAssignedTargetingOptionDetailsProximityRadiusUnitEnum = "DISTANCE_UNIT_KILOMETERS"
 )
 
+func (e BusinessChainAssignedTargetingOptionDetailsProximityRadiusUnitEnum) ToPointer() *BusinessChainAssignedTargetingOptionDetailsProximityRadiusUnitEnum {
+	return &e
+}
+
 func (e *BusinessChainAssignedTargetingOptionDetailsProximityRadiusUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISTANCE_UNIT_UNSPECIFIED":
 		fallthrough
 	case "DISTANCE_UNIT_MILES":
 		fallthrough
 	case "DISTANCE_UNIT_KILOMETERS":
-		*e = BusinessChainAssignedTargetingOptionDetailsProximityRadiusUnitEnum(s)
+		*e = BusinessChainAssignedTargetingOptionDetailsProximityRadiusUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BusinessChainAssignedTargetingOptionDetailsProximityRadiusUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for BusinessChainAssignedTargetingOptionDetailsProximityRadiusUnitEnum: %v", v)
 	}
 }
 

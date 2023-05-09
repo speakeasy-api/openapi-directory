@@ -23,12 +23,16 @@ const (
 	UserPlatformEnumRefreshToken  UserPlatformEnum = "refresh_token"
 )
 
+func (e UserPlatformEnum) ToPointer() *UserPlatformEnum {
+	return &e
+}
+
 func (e *UserPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "web":
 		fallthrough
 	case "iPad":
@@ -48,10 +52,10 @@ func (e *UserPlatformEnum) UnmarshalJSON(data []byte) error {
 	case "transfer":
 		fallthrough
 	case "refresh_token":
-		*e = UserPlatformEnum(s)
+		*e = UserPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for UserPlatformEnum: %v", v)
 	}
 }
 

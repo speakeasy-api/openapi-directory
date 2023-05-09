@@ -2,7 +2,7 @@
 
 package shared
 
-// PropertyFilter - <p/>
+// PropertyFilter - The structure representing a single PropertyFilter.
 type PropertyFilter struct {
 	Property Property `json:"Property"`
 }

@@ -24,19 +24,23 @@ const (
 	CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptionsDynamicRoutingEnumDisable CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptionsDynamicRoutingEnum = "disable"
 )
 
+func (e CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptionsDynamicRoutingEnum) ToPointer() *CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptionsDynamicRoutingEnum {
+	return &e
+}
+
 func (e *CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptionsDynamicRoutingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptionsDynamicRoutingEnum(s)
+		*e = CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptionsDynamicRoutingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptionsDynamicRoutingEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentOptionsDynamicRoutingEnum: %v", v)
 	}
 }
 
@@ -72,12 +76,16 @@ const (
 	CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnumFailing           CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnum = "failing"
 )
 
+func (e CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnum) ToPointer() *CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnum {
+	return &e
+}
+
 func (e *CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "initiating":
 		fallthrough
 	case "initiatingRequest":
@@ -103,10 +111,10 @@ func (e *CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachm
 	case "rejecting":
 		fallthrough
 	case "failing":
-		*e = CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnum(s)
+		*e = CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStateEnum: %v", v)
 	}
 }
 

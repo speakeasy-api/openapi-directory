@@ -17,21 +17,25 @@ const (
 	GetGlobalwinescoresLatestColorEnumPink  GetGlobalwinescoresLatestColorEnum = "pink"
 )
 
+func (e GetGlobalwinescoresLatestColorEnum) ToPointer() *GetGlobalwinescoresLatestColorEnum {
+	return &e
+}
+
 func (e *GetGlobalwinescoresLatestColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "red":
 		fallthrough
 	case "white":
 		fallthrough
 	case "pink":
-		*e = GetGlobalwinescoresLatestColorEnum(s)
+		*e = GetGlobalwinescoresLatestColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGlobalwinescoresLatestColorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGlobalwinescoresLatestColorEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	GetGlobalwinescoresLatestOrderingEnumMinusScore GetGlobalwinescoresLatestOrderingEnum = "-score"
 )
 
+func (e GetGlobalwinescoresLatestOrderingEnum) ToPointer() *GetGlobalwinescoresLatestOrderingEnum {
+	return &e
+}
+
 func (e *GetGlobalwinescoresLatestOrderingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "date":
 		fallthrough
 	case "-date":
@@ -58,10 +66,10 @@ func (e *GetGlobalwinescoresLatestOrderingEnum) UnmarshalJSON(data []byte) error
 	case "score":
 		fallthrough
 	case "-score":
-		*e = GetGlobalwinescoresLatestOrderingEnum(s)
+		*e = GetGlobalwinescoresLatestOrderingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGlobalwinescoresLatestOrderingEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGlobalwinescoresLatestOrderingEnum: %v", v)
 	}
 }
 

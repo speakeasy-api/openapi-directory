@@ -17,19 +17,23 @@ const (
 	GetOfferingsOfferingIDUsersFacilitatorsEnumFalse GetOfferingsOfferingIDUsersFacilitatorsEnum = "false"
 )
 
+func (e GetOfferingsOfferingIDUsersFacilitatorsEnum) ToPointer() *GetOfferingsOfferingIDUsersFacilitatorsEnum {
+	return &e
+}
+
 func (e *GetOfferingsOfferingIDUsersFacilitatorsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetOfferingsOfferingIDUsersFacilitatorsEnum(s)
+		*e = GetOfferingsOfferingIDUsersFacilitatorsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOfferingsOfferingIDUsersFacilitatorsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOfferingsOfferingIDUsersFacilitatorsEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	GetOfferingsOfferingIDUsersLearnersEnumFalse GetOfferingsOfferingIDUsersLearnersEnum = "false"
 )
 
+func (e GetOfferingsOfferingIDUsersLearnersEnum) ToPointer() *GetOfferingsOfferingIDUsersLearnersEnum {
+	return &e
+}
+
 func (e *GetOfferingsOfferingIDUsersLearnersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetOfferingsOfferingIDUsersLearnersEnum(s)
+		*e = GetOfferingsOfferingIDUsersLearnersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOfferingsOfferingIDUsersLearnersEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOfferingsOfferingIDUsersLearnersEnum: %v", v)
 	}
 }
 
@@ -65,19 +73,23 @@ const (
 	GetOfferingsOfferingIDUsersMarkersEnumFalse GetOfferingsOfferingIDUsersMarkersEnum = "false"
 )
 
+func (e GetOfferingsOfferingIDUsersMarkersEnum) ToPointer() *GetOfferingsOfferingIDUsersMarkersEnum {
+	return &e
+}
+
 func (e *GetOfferingsOfferingIDUsersMarkersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetOfferingsOfferingIDUsersMarkersEnum(s)
+		*e = GetOfferingsOfferingIDUsersMarkersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOfferingsOfferingIDUsersMarkersEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOfferingsOfferingIDUsersMarkersEnum: %v", v)
 	}
 }
 

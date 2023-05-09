@@ -34,7 +34,10 @@ func newBillingProfiles(defaultClient, securityClient HTTPClient, serverURL, lan
 // DfareportingBillingProfilesGet - Gets one billing profile by ID.
 func (s *billingProfiles) DfareportingBillingProfilesGet(ctx context.Context, request operations.DfareportingBillingProfilesGetRequest, security operations.DfareportingBillingProfilesGetSecurity) (*operations.DfareportingBillingProfilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *billingProfiles) DfareportingBillingProfilesGet(ctx context.Context, re
 // DfareportingBillingProfilesList - Retrieves a list of billing profiles, possibly filtered. This method supports paging.
 func (s *billingProfiles) DfareportingBillingProfilesList(ctx context.Context, request operations.DfareportingBillingProfilesListRequest, security operations.DfareportingBillingProfilesListSecurity) (*operations.DfareportingBillingProfilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *billingProfiles) DfareportingBillingProfilesList(ctx context.Context, r
 // DfareportingBillingProfilesUpdate - Updates an existing billing profile.
 func (s *billingProfiles) DfareportingBillingProfilesUpdate(ctx context.Context, request operations.DfareportingBillingProfilesUpdateRequest, security operations.DfareportingBillingProfilesUpdateSecurity) (*operations.DfareportingBillingProfilesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillingProfile", "json")
 	if err != nil {

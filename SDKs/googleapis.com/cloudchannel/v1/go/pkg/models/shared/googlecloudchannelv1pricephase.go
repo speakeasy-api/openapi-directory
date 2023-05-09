@@ -17,12 +17,16 @@ const (
 	GoogleCloudChannelV1PricePhasePeriodTypeEnumYear                  GoogleCloudChannelV1PricePhasePeriodTypeEnum = "YEAR"
 )
 
+func (e GoogleCloudChannelV1PricePhasePeriodTypeEnum) ToPointer() *GoogleCloudChannelV1PricePhasePeriodTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1PricePhasePeriodTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERIOD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DAY":
@@ -30,10 +34,10 @@ func (e *GoogleCloudChannelV1PricePhasePeriodTypeEnum) UnmarshalJSON(data []byte
 	case "MONTH":
 		fallthrough
 	case "YEAR":
-		*e = GoogleCloudChannelV1PricePhasePeriodTypeEnum(s)
+		*e = GoogleCloudChannelV1PricePhasePeriodTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1PricePhasePeriodTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1PricePhasePeriodTypeEnum: %v", v)
 	}
 }
 

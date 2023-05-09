@@ -34,12 +34,16 @@ const (
 	BloggerCommentsGetViewEnumAdmin               BloggerCommentsGetViewEnum = "ADMIN"
 )
 
+func (e BloggerCommentsGetViewEnum) ToPointer() *BloggerCommentsGetViewEnum {
+	return &e
+}
+
 func (e *BloggerCommentsGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_TYPE_UNSPECIFIED":
 		fallthrough
 	case "READER":
@@ -47,10 +51,10 @@ func (e *BloggerCommentsGetViewEnum) UnmarshalJSON(data []byte) error {
 	case "AUTHOR":
 		fallthrough
 	case "ADMIN":
-		*e = BloggerCommentsGetViewEnum(s)
+		*e = BloggerCommentsGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerCommentsGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerCommentsGetViewEnum: %v", v)
 	}
 }
 

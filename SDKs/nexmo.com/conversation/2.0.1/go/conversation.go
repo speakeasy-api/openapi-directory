@@ -86,7 +86,10 @@ func (s *conversation) CreateConversation(ctx context.Context, request operation
 // DeleteConversation - Delete a conversation
 func (s *conversation) DeleteConversation(ctx context.Context, request operations.DeleteConversationRequest) (*operations.DeleteConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -131,6 +134,8 @@ func (s *conversation) DeleteConversation(ctx context.Context, request operation
 // This endpoint is **DEPRECATED**. Please use [/v0.2/conversations](/api/conversation.v2#get-conversations).
 //
 // List all conversations associated with your application. This endpoint required an admin JWT. To find all conversations for the currently logged in user, see [GET /users/:id/conversations](#getuserConversations)
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *conversation) ListConversations(ctx context.Context, request operations.ListConversationsRequest) (*operations.ListConversationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/conversations"
@@ -195,7 +200,10 @@ func (s *conversation) RecordConversation(ctx context.Context, request operation
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/record", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}/record", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -241,7 +249,10 @@ func (s *conversation) RecordConversation(ctx context.Context, request operation
 // ReplaceConversation - Update a conversation
 func (s *conversation) ReplaceConversation(ctx context.Context, request operations.ReplaceConversationRequest) (*operations.ReplaceConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -292,7 +303,10 @@ func (s *conversation) ReplaceConversation(ctx context.Context, request operatio
 // RetrieveConversation - Retrieve a conversation
 func (s *conversation) RetrieveConversation(ctx context.Context, request operations.RetrieveConversationRequest) (*operations.RetrieveConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/conversations/{conversation_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

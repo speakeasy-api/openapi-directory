@@ -15,17 +15,21 @@ const (
 	POSTModifyVpnConnectionActionEnumModifyVpnConnection POSTModifyVpnConnectionActionEnum = "ModifyVpnConnection"
 )
 
+func (e POSTModifyVpnConnectionActionEnum) ToPointer() *POSTModifyVpnConnectionActionEnum {
+	return &e
+}
+
 func (e *POSTModifyVpnConnectionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVpnConnection":
-		*e = POSTModifyVpnConnectionActionEnum(s)
+		*e = POSTModifyVpnConnectionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyVpnConnectionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyVpnConnectionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyVpnConnectionVersionEnumTwoThousandAndSixteen1115 POSTModifyVpnConnectionVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyVpnConnectionVersionEnum) ToPointer() *POSTModifyVpnConnectionVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyVpnConnectionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyVpnConnectionVersionEnum(s)
+		*e = POSTModifyVpnConnectionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyVpnConnectionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyVpnConnectionVersionEnum: %v", v)
 	}
 }
 

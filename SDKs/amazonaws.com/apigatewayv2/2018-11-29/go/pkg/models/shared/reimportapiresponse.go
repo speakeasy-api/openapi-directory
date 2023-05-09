@@ -26,19 +26,23 @@ const (
 	ReimportAPIResponseProtocolTypeEnumHTTP      ReimportAPIResponseProtocolTypeEnum = "HTTP"
 )
 
+func (e ReimportAPIResponseProtocolTypeEnum) ToPointer() *ReimportAPIResponseProtocolTypeEnum {
+	return &e
+}
+
 func (e *ReimportAPIResponseProtocolTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEBSOCKET":
 		fallthrough
 	case "HTTP":
-		*e = ReimportAPIResponseProtocolTypeEnum(s)
+		*e = ReimportAPIResponseProtocolTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReimportAPIResponseProtocolTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReimportAPIResponseProtocolTypeEnum: %v", v)
 	}
 }
 

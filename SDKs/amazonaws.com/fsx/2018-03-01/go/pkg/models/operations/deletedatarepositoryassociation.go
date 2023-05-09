@@ -16,17 +16,21 @@ const (
 	DeleteDataRepositoryAssociationXAmzTargetEnumAwsSimbaAPIServiceV20180301DeleteDataRepositoryAssociation DeleteDataRepositoryAssociationXAmzTargetEnum = "AWSSimbaAPIService_v20180301.DeleteDataRepositoryAssociation"
 )
 
+func (e DeleteDataRepositoryAssociationXAmzTargetEnum) ToPointer() *DeleteDataRepositoryAssociationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDataRepositoryAssociationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.DeleteDataRepositoryAssociation":
-		*e = DeleteDataRepositoryAssociationXAmzTargetEnum(s)
+		*e = DeleteDataRepositoryAssociationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDataRepositoryAssociationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDataRepositoryAssociationXAmzTargetEnum: %v", v)
 	}
 }
 

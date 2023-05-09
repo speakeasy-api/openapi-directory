@@ -16,17 +16,21 @@ const (
 	GetDistributionMetricDataXAmzTargetEnumLightsail20161128GetDistributionMetricData GetDistributionMetricDataXAmzTargetEnum = "Lightsail_20161128.GetDistributionMetricData"
 )
 
+func (e GetDistributionMetricDataXAmzTargetEnum) ToPointer() *GetDistributionMetricDataXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDistributionMetricDataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetDistributionMetricData":
-		*e = GetDistributionMetricDataXAmzTargetEnum(s)
+		*e = GetDistributionMetricDataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDistributionMetricDataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDistributionMetricDataXAmzTargetEnum: %v", v)
 	}
 }
 

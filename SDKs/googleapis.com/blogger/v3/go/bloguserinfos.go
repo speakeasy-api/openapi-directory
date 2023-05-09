@@ -34,7 +34,10 @@ func newBlogUserInfos(defaultClient, securityClient HTTPClient, serverURL, langu
 // BloggerBlogUserInfosGet - Gets one blog and user info pair by blog id and user id.
 func (s *blogUserInfos) BloggerBlogUserInfosGet(ctx context.Context, request operations.BloggerBlogUserInfosGetRequest, security operations.BloggerBlogUserInfosGetSecurity) (*operations.BloggerBlogUserInfosGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/users/{userId}/blogs/{blogId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/users/{userId}/blogs/{blogId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

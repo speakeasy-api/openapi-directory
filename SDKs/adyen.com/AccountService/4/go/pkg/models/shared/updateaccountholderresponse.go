@@ -16,21 +16,25 @@ const (
 	UpdateAccountHolderResponseLegalEntityEnumNonProfit  UpdateAccountHolderResponseLegalEntityEnum = "NonProfit"
 )
 
+func (e UpdateAccountHolderResponseLegalEntityEnum) ToPointer() *UpdateAccountHolderResponseLegalEntityEnum {
+	return &e
+}
+
 func (e *UpdateAccountHolderResponseLegalEntityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Business":
 		fallthrough
 	case "Individual":
 		fallthrough
 	case "NonProfit":
-		*e = UpdateAccountHolderResponseLegalEntityEnum(s)
+		*e = UpdateAccountHolderResponseLegalEntityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAccountHolderResponseLegalEntityEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAccountHolderResponseLegalEntityEnum: %v", v)
 	}
 }
 
@@ -43,7 +47,7 @@ type UpdateAccountHolderResponse struct {
 	// The description of the account holder.
 	Description *string `json:"description,omitempty"`
 	// in case the account holder has not been updated, contains account holder fields, that did not pass the validation.
-	InvalidFields []ErrorFieldType `json:"invalidFields,omitempty"`
+	InvalidFields []ErrorFieldTypeWrapper `json:"invalidFields,omitempty"`
 	// The legal entity of the account holder.
 	LegalEntity *UpdateAccountHolderResponseLegalEntityEnum `json:"legalEntity,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
@@ -55,6 +59,6 @@ type UpdateAccountHolderResponse struct {
 	// * **false**: The processing of the request is immediately attempted; it may result in an error if the providing service is unavailable.
 	SubmittedAsync *bool `json:"submittedAsync,omitempty"`
 	// A list of the fields updated through the request.
-	UpdatedFields []FieldType            `json:"updatedFields,omitempty"`
+	UpdatedFields []FieldTypeWrapper     `json:"updatedFields,omitempty"`
 	Verification  *KYCVerificationResult `json:"verification,omitempty"`
 }

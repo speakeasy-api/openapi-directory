@@ -14,18 +14,22 @@ const (
 	CertificateBasedAuthStatusEnumEnumEnabled  CertificateBasedAuthStatusEnumEnum = "ENABLED"
 )
 
+func (e CertificateBasedAuthStatusEnumEnum) ToPointer() *CertificateBasedAuthStatusEnumEnum {
+	return &e
+}
+
 func (e *CertificateBasedAuthStatusEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
-		*e = CertificateBasedAuthStatusEnumEnum(s)
+		*e = CertificateBasedAuthStatusEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateBasedAuthStatusEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateBasedAuthStatusEnumEnum: %v", v)
 	}
 }

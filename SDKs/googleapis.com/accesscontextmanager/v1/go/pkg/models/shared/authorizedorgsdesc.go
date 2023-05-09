@@ -16,21 +16,25 @@ const (
 	AuthorizedOrgsDescAssetTypeEnumAssetTypeCredentialStrength AuthorizedOrgsDescAssetTypeEnum = "ASSET_TYPE_CREDENTIAL_STRENGTH"
 )
 
+func (e AuthorizedOrgsDescAssetTypeEnum) ToPointer() *AuthorizedOrgsDescAssetTypeEnum {
+	return &e
+}
+
 func (e *AuthorizedOrgsDescAssetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSET_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ASSET_TYPE_DEVICE":
 		fallthrough
 	case "ASSET_TYPE_CREDENTIAL_STRENGTH":
-		*e = AuthorizedOrgsDescAssetTypeEnum(s)
+		*e = AuthorizedOrgsDescAssetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizedOrgsDescAssetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizedOrgsDescAssetTypeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	AuthorizedOrgsDescAuthorizationDirectionEnumAuthorizationDirectionFrom        AuthorizedOrgsDescAuthorizationDirectionEnum = "AUTHORIZATION_DIRECTION_FROM"
 )
 
+func (e AuthorizedOrgsDescAuthorizationDirectionEnum) ToPointer() *AuthorizedOrgsDescAuthorizationDirectionEnum {
+	return &e
+}
+
 func (e *AuthorizedOrgsDescAuthorizationDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTHORIZATION_DIRECTION_UNSPECIFIED":
 		fallthrough
 	case "AUTHORIZATION_DIRECTION_TO":
 		fallthrough
 	case "AUTHORIZATION_DIRECTION_FROM":
-		*e = AuthorizedOrgsDescAuthorizationDirectionEnum(s)
+		*e = AuthorizedOrgsDescAuthorizationDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizedOrgsDescAuthorizationDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizedOrgsDescAuthorizationDirectionEnum: %v", v)
 	}
 }
 
@@ -69,19 +77,23 @@ const (
 	AuthorizedOrgsDescAuthorizationTypeEnumAuthorizationTypeTrust       AuthorizedOrgsDescAuthorizationTypeEnum = "AUTHORIZATION_TYPE_TRUST"
 )
 
+func (e AuthorizedOrgsDescAuthorizationTypeEnum) ToPointer() *AuthorizedOrgsDescAuthorizationTypeEnum {
+	return &e
+}
+
 func (e *AuthorizedOrgsDescAuthorizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTHORIZATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AUTHORIZATION_TYPE_TRUST":
-		*e = AuthorizedOrgsDescAuthorizationTypeEnum(s)
+		*e = AuthorizedOrgsDescAuthorizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizedOrgsDescAuthorizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizedOrgsDescAuthorizationTypeEnum: %v", v)
 	}
 }
 

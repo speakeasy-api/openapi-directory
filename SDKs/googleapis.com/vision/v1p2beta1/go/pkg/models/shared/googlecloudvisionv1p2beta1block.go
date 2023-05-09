@@ -19,12 +19,16 @@ const (
 	GoogleCloudVisionV1p2beta1BlockBlockTypeEnumBarcode GoogleCloudVisionV1p2beta1BlockBlockTypeEnum = "BARCODE"
 )
 
+func (e GoogleCloudVisionV1p2beta1BlockBlockTypeEnum) ToPointer() *GoogleCloudVisionV1p2beta1BlockBlockTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p2beta1BlockBlockTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "TEXT":
@@ -36,10 +40,10 @@ func (e *GoogleCloudVisionV1p2beta1BlockBlockTypeEnum) UnmarshalJSON(data []byte
 	case "RULER":
 		fallthrough
 	case "BARCODE":
-		*e = GoogleCloudVisionV1p2beta1BlockBlockTypeEnum(s)
+		*e = GoogleCloudVisionV1p2beta1BlockBlockTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1BlockBlockTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1BlockBlockTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetPolicyXAmzTargetEnumAcmPrivateCaGetPolicy GetPolicyXAmzTargetEnum = "ACMPrivateCA.GetPolicy"
 )
 
+func (e GetPolicyXAmzTargetEnum) ToPointer() *GetPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACMPrivateCA.GetPolicy":
-		*e = GetPolicyXAmzTargetEnum(s)
+		*e = GetPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

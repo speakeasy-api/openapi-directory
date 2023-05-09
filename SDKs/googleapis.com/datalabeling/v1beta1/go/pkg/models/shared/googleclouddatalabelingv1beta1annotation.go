@@ -16,21 +16,25 @@ const (
 	GoogleCloudDatalabelingV1beta1AnnotationAnnotationSentimentEnumPositive                       GoogleCloudDatalabelingV1beta1AnnotationAnnotationSentimentEnum = "POSITIVE"
 )
 
+func (e GoogleCloudDatalabelingV1beta1AnnotationAnnotationSentimentEnum) ToPointer() *GoogleCloudDatalabelingV1beta1AnnotationAnnotationSentimentEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1AnnotationAnnotationSentimentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANNOTATION_SENTIMENT_UNSPECIFIED":
 		fallthrough
 	case "NEGATIVE":
 		fallthrough
 	case "POSITIVE":
-		*e = GoogleCloudDatalabelingV1beta1AnnotationAnnotationSentimentEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1AnnotationAnnotationSentimentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1AnnotationAnnotationSentimentEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1AnnotationAnnotationSentimentEnum: %v", v)
 	}
 }
 
@@ -42,19 +46,23 @@ const (
 	GoogleCloudDatalabelingV1beta1AnnotationAnnotationSourceEnumOperator                    GoogleCloudDatalabelingV1beta1AnnotationAnnotationSourceEnum = "OPERATOR"
 )
 
+func (e GoogleCloudDatalabelingV1beta1AnnotationAnnotationSourceEnum) ToPointer() *GoogleCloudDatalabelingV1beta1AnnotationAnnotationSourceEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1AnnotationAnnotationSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANNOTATION_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "OPERATOR":
-		*e = GoogleCloudDatalabelingV1beta1AnnotationAnnotationSourceEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1AnnotationAnnotationSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1AnnotationAnnotationSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1AnnotationAnnotationSourceEnum: %v", v)
 	}
 }
 

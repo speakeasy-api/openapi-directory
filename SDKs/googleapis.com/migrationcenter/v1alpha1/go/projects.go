@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // MigrationcenterProjectsLocationsAssetsAggregateValues - Aggregates the requested fields based on provided function.
 func (s *projects) MigrationcenterProjectsLocationsAssetsAggregateValues(ctx context.Context, request operations.MigrationcenterProjectsLocationsAssetsAggregateValuesRequest, security operations.MigrationcenterProjectsLocationsAssetsAggregateValuesSecurity) (*operations.MigrationcenterProjectsLocationsAssetsAggregateValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/assets:aggregateValues", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/assets:aggregateValues", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AggregateAssetsValuesRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) MigrationcenterProjectsLocationsAssetsAggregateValues(ctx con
 // MigrationcenterProjectsLocationsAssetsBatchDelete - Deletes list of Assets.
 func (s *projects) MigrationcenterProjectsLocationsAssetsBatchDelete(ctx context.Context, request operations.MigrationcenterProjectsLocationsAssetsBatchDeleteRequest, security operations.MigrationcenterProjectsLocationsAssetsBatchDeleteSecurity) (*operations.MigrationcenterProjectsLocationsAssetsBatchDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/assets:batchDelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/assets:batchDelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchDeleteAssetsRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) MigrationcenterProjectsLocationsAssetsBatchDelete(ctx context
 // MigrationcenterProjectsLocationsAssetsBatchUpdate - Updates the parameters of a list of assets.
 func (s *projects) MigrationcenterProjectsLocationsAssetsBatchUpdate(ctx context.Context, request operations.MigrationcenterProjectsLocationsAssetsBatchUpdateRequest, security operations.MigrationcenterProjectsLocationsAssetsBatchUpdateSecurity) (*operations.MigrationcenterProjectsLocationsAssetsBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/assets:batchUpdate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/assets:batchUpdate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdateAssetsRequestInput", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *projects) MigrationcenterProjectsLocationsAssetsBatchUpdate(ctx context
 // MigrationcenterProjectsLocationsAssetsList - Lists all the assets in a given project and location.
 func (s *projects) MigrationcenterProjectsLocationsAssetsList(ctx context.Context, request operations.MigrationcenterProjectsLocationsAssetsListRequest, security operations.MigrationcenterProjectsLocationsAssetsListSecurity) (*operations.MigrationcenterProjectsLocationsAssetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/assets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/assets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) MigrationcenterProjectsLocationsAssetsList(ctx context.Contex
 // MigrationcenterProjectsLocationsAssetsReportAssetFrames - Reports a set of frames.
 func (s *projects) MigrationcenterProjectsLocationsAssetsReportAssetFrames(ctx context.Context, request operations.MigrationcenterProjectsLocationsAssetsReportAssetFramesRequest, security operations.MigrationcenterProjectsLocationsAssetsReportAssetFramesSecurity) (*operations.MigrationcenterProjectsLocationsAssetsReportAssetFramesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/assets:reportAssetFrames", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/assets:reportAssetFrames", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Frames", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *projects) MigrationcenterProjectsLocationsAssetsReportAssetFrames(ctx c
 // MigrationcenterProjectsLocationsGroupsAddAssets - Adds assets to a group.
 func (s *projects) MigrationcenterProjectsLocationsGroupsAddAssets(ctx context.Context, request operations.MigrationcenterProjectsLocationsGroupsAddAssetsRequest, security operations.MigrationcenterProjectsLocationsGroupsAddAssetsSecurity) (*operations.MigrationcenterProjectsLocationsGroupsAddAssetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{group}:addAssets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{group}:addAssets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddAssetsToGroupRequest", "json")
 	if err != nil {
@@ -357,7 +375,10 @@ func (s *projects) MigrationcenterProjectsLocationsGroupsAddAssets(ctx context.C
 // MigrationcenterProjectsLocationsGroupsCreate - Creates a new group in a given project and location.
 func (s *projects) MigrationcenterProjectsLocationsGroupsCreate(ctx context.Context, request operations.MigrationcenterProjectsLocationsGroupsCreateRequest, security operations.MigrationcenterProjectsLocationsGroupsCreateSecurity) (*operations.MigrationcenterProjectsLocationsGroupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupInput", "json")
 	if err != nil {
@@ -412,7 +433,10 @@ func (s *projects) MigrationcenterProjectsLocationsGroupsCreate(ctx context.Cont
 // MigrationcenterProjectsLocationsGroupsList - Lists all groups in a given project and location.
 func (s *projects) MigrationcenterProjectsLocationsGroupsList(ctx context.Context, request operations.MigrationcenterProjectsLocationsGroupsListRequest, security operations.MigrationcenterProjectsLocationsGroupsListSecurity) (*operations.MigrationcenterProjectsLocationsGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -460,7 +484,10 @@ func (s *projects) MigrationcenterProjectsLocationsGroupsList(ctx context.Contex
 // MigrationcenterProjectsLocationsGroupsRemoveAssets - Removes assets from a group.
 func (s *projects) MigrationcenterProjectsLocationsGroupsRemoveAssets(ctx context.Context, request operations.MigrationcenterProjectsLocationsGroupsRemoveAssetsRequest, security operations.MigrationcenterProjectsLocationsGroupsRemoveAssetsSecurity) (*operations.MigrationcenterProjectsLocationsGroupsRemoveAssetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{group}:removeAssets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{group}:removeAssets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveAssetsFromGroupRequest", "json")
 	if err != nil {
@@ -515,7 +542,10 @@ func (s *projects) MigrationcenterProjectsLocationsGroupsRemoveAssets(ctx contex
 // MigrationcenterProjectsLocationsImportJobsCreate - Creates an import job.
 func (s *projects) MigrationcenterProjectsLocationsImportJobsCreate(ctx context.Context, request operations.MigrationcenterProjectsLocationsImportJobsCreateRequest, security operations.MigrationcenterProjectsLocationsImportJobsCreateSecurity) (*operations.MigrationcenterProjectsLocationsImportJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/importJobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/importJobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportJobInput", "json")
 	if err != nil {
@@ -570,7 +600,10 @@ func (s *projects) MigrationcenterProjectsLocationsImportJobsCreate(ctx context.
 // MigrationcenterProjectsLocationsImportJobsImportDataFilesCreate - Creates an import data file.
 func (s *projects) MigrationcenterProjectsLocationsImportJobsImportDataFilesCreate(ctx context.Context, request operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesCreateRequest, security operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesCreateSecurity) (*operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/importDataFiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/importDataFiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportDataFileInput", "json")
 	if err != nil {
@@ -625,7 +658,10 @@ func (s *projects) MigrationcenterProjectsLocationsImportJobsImportDataFilesCrea
 // MigrationcenterProjectsLocationsImportJobsImportDataFilesList - List import data files.
 func (s *projects) MigrationcenterProjectsLocationsImportJobsImportDataFilesList(ctx context.Context, request operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesListRequest, security operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesListSecurity) (*operations.MigrationcenterProjectsLocationsImportJobsImportDataFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/importDataFiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/importDataFiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -673,7 +709,10 @@ func (s *projects) MigrationcenterProjectsLocationsImportJobsImportDataFilesList
 // MigrationcenterProjectsLocationsImportJobsList - Lists all import jobs.
 func (s *projects) MigrationcenterProjectsLocationsImportJobsList(ctx context.Context, request operations.MigrationcenterProjectsLocationsImportJobsListRequest, security operations.MigrationcenterProjectsLocationsImportJobsListSecurity) (*operations.MigrationcenterProjectsLocationsImportJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/importJobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/importJobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -721,7 +760,10 @@ func (s *projects) MigrationcenterProjectsLocationsImportJobsList(ctx context.Co
 // MigrationcenterProjectsLocationsImportJobsRun - Runs an import job.
 func (s *projects) MigrationcenterProjectsLocationsImportJobsRun(ctx context.Context, request operations.MigrationcenterProjectsLocationsImportJobsRunRequest, security operations.MigrationcenterProjectsLocationsImportJobsRunSecurity) (*operations.MigrationcenterProjectsLocationsImportJobsRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:run", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:run", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunImportJobRequest", "json")
 	if err != nil {
@@ -776,7 +818,10 @@ func (s *projects) MigrationcenterProjectsLocationsImportJobsRun(ctx context.Con
 // MigrationcenterProjectsLocationsImportJobsValidate - Validates an import job.
 func (s *projects) MigrationcenterProjectsLocationsImportJobsValidate(ctx context.Context, request operations.MigrationcenterProjectsLocationsImportJobsValidateRequest, security operations.MigrationcenterProjectsLocationsImportJobsValidateSecurity) (*operations.MigrationcenterProjectsLocationsImportJobsValidateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:validate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:validate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ValidateImportJobRequest", "json")
 	if err != nil {
@@ -831,7 +876,10 @@ func (s *projects) MigrationcenterProjectsLocationsImportJobsValidate(ctx contex
 // MigrationcenterProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) MigrationcenterProjectsLocationsList(ctx context.Context, request operations.MigrationcenterProjectsLocationsListRequest, security operations.MigrationcenterProjectsLocationsListSecurity) (*operations.MigrationcenterProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -879,7 +927,10 @@ func (s *projects) MigrationcenterProjectsLocationsList(ctx context.Context, req
 // MigrationcenterProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) MigrationcenterProjectsLocationsOperationsCancel(ctx context.Context, request operations.MigrationcenterProjectsLocationsOperationsCancelRequest, security operations.MigrationcenterProjectsLocationsOperationsCancelSecurity) (*operations.MigrationcenterProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -934,7 +985,10 @@ func (s *projects) MigrationcenterProjectsLocationsOperationsCancel(ctx context.
 // MigrationcenterProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) MigrationcenterProjectsLocationsOperationsList(ctx context.Context, request operations.MigrationcenterProjectsLocationsOperationsListRequest, security operations.MigrationcenterProjectsLocationsOperationsListSecurity) (*operations.MigrationcenterProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -982,7 +1036,10 @@ func (s *projects) MigrationcenterProjectsLocationsOperationsList(ctx context.Co
 // MigrationcenterProjectsLocationsPreferenceSetsCreate - Creates a new preference set in a given project and location.
 func (s *projects) MigrationcenterProjectsLocationsPreferenceSetsCreate(ctx context.Context, request operations.MigrationcenterProjectsLocationsPreferenceSetsCreateRequest, security operations.MigrationcenterProjectsLocationsPreferenceSetsCreateSecurity) (*operations.MigrationcenterProjectsLocationsPreferenceSetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/preferenceSets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/preferenceSets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PreferenceSetInput", "json")
 	if err != nil {
@@ -1037,7 +1094,10 @@ func (s *projects) MigrationcenterProjectsLocationsPreferenceSetsCreate(ctx cont
 // MigrationcenterProjectsLocationsPreferenceSetsList - Lists all the preference sets in a given project and location.
 func (s *projects) MigrationcenterProjectsLocationsPreferenceSetsList(ctx context.Context, request operations.MigrationcenterProjectsLocationsPreferenceSetsListRequest, security operations.MigrationcenterProjectsLocationsPreferenceSetsListSecurity) (*operations.MigrationcenterProjectsLocationsPreferenceSetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/preferenceSets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/preferenceSets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1082,10 +1142,231 @@ func (s *projects) MigrationcenterProjectsLocationsPreferenceSetsList(ctx contex
 	return res, nil
 }
 
+// MigrationcenterProjectsLocationsReportConfigsCreate - Creates a report configuration.
+func (s *projects) MigrationcenterProjectsLocationsReportConfigsCreate(ctx context.Context, request operations.MigrationcenterProjectsLocationsReportConfigsCreateRequest, security operations.MigrationcenterProjectsLocationsReportConfigsCreateSecurity) (*operations.MigrationcenterProjectsLocationsReportConfigsCreateResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/reportConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportConfigInput", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.MigrationcenterProjectsLocationsReportConfigsCreateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// MigrationcenterProjectsLocationsReportConfigsList - Lists ReportConfigs in a given project and location.
+func (s *projects) MigrationcenterProjectsLocationsReportConfigsList(ctx context.Context, request operations.MigrationcenterProjectsLocationsReportConfigsListRequest, security operations.MigrationcenterProjectsLocationsReportConfigsListSecurity) (*operations.MigrationcenterProjectsLocationsReportConfigsListResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/reportConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.MigrationcenterProjectsLocationsReportConfigsListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListReportConfigsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListReportConfigsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// MigrationcenterProjectsLocationsReportConfigsReportsCreate - Creates a report.
+func (s *projects) MigrationcenterProjectsLocationsReportConfigsReportsCreate(ctx context.Context, request operations.MigrationcenterProjectsLocationsReportConfigsReportsCreateRequest, security operations.MigrationcenterProjectsLocationsReportConfigsReportsCreateSecurity) (*operations.MigrationcenterProjectsLocationsReportConfigsReportsCreateResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportInput", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.MigrationcenterProjectsLocationsReportConfigsReportsCreateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// MigrationcenterProjectsLocationsReportConfigsReportsList - Lists Reports in a given ReportConfig.
+func (s *projects) MigrationcenterProjectsLocationsReportConfigsReportsList(ctx context.Context, request operations.MigrationcenterProjectsLocationsReportConfigsReportsListRequest, security operations.MigrationcenterProjectsLocationsReportConfigsReportsListSecurity) (*operations.MigrationcenterProjectsLocationsReportConfigsReportsListResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.MigrationcenterProjectsLocationsReportConfigsReportsListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListReportsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListReportsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // MigrationcenterProjectsLocationsSourcesCreate - Creates a new source in a given project and location.
 func (s *projects) MigrationcenterProjectsLocationsSourcesCreate(ctx context.Context, request operations.MigrationcenterProjectsLocationsSourcesCreateRequest, security operations.MigrationcenterProjectsLocationsSourcesCreateSecurity) (*operations.MigrationcenterProjectsLocationsSourcesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/sources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/sources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SourceInput", "json")
 	if err != nil {
@@ -1140,7 +1421,10 @@ func (s *projects) MigrationcenterProjectsLocationsSourcesCreate(ctx context.Con
 // MigrationcenterProjectsLocationsSourcesDelete - Deletes a source.
 func (s *projects) MigrationcenterProjectsLocationsSourcesDelete(ctx context.Context, request operations.MigrationcenterProjectsLocationsSourcesDeleteRequest, security operations.MigrationcenterProjectsLocationsSourcesDeleteSecurity) (*operations.MigrationcenterProjectsLocationsSourcesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1185,10 +1469,13 @@ func (s *projects) MigrationcenterProjectsLocationsSourcesDelete(ctx context.Con
 	return res, nil
 }
 
-// MigrationcenterProjectsLocationsSourcesGet - Gets the details of a source.
-func (s *projects) MigrationcenterProjectsLocationsSourcesGet(ctx context.Context, request operations.MigrationcenterProjectsLocationsSourcesGetRequest, security operations.MigrationcenterProjectsLocationsSourcesGetSecurity) (*operations.MigrationcenterProjectsLocationsSourcesGetResponse, error) {
+// MigrationcenterProjectsLocationsSourcesErrorFramesGet - Gets the details of an error frame.
+func (s *projects) MigrationcenterProjectsLocationsSourcesErrorFramesGet(ctx context.Context, request operations.MigrationcenterProjectsLocationsSourcesErrorFramesGetRequest, security operations.MigrationcenterProjectsLocationsSourcesErrorFramesGetSecurity) (*operations.MigrationcenterProjectsLocationsSourcesErrorFramesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1212,7 +1499,7 @@ func (s *projects) MigrationcenterProjectsLocationsSourcesGet(ctx context.Contex
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.MigrationcenterProjectsLocationsSourcesGetResponse{
+	res := &operations.MigrationcenterProjectsLocationsSourcesErrorFramesGetResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -1221,12 +1508,63 @@ func (s *projects) MigrationcenterProjectsLocationsSourcesGet(ctx context.Contex
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Source
+			var out *shared.ErrorFrame
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Source = out
+			res.ErrorFrame = out
+		}
+	}
+
+	return res, nil
+}
+
+// MigrationcenterProjectsLocationsSourcesErrorFramesList - Lists all error frames in a given source and location.
+func (s *projects) MigrationcenterProjectsLocationsSourcesErrorFramesList(ctx context.Context, request operations.MigrationcenterProjectsLocationsSourcesErrorFramesListRequest, security operations.MigrationcenterProjectsLocationsSourcesErrorFramesListSecurity) (*operations.MigrationcenterProjectsLocationsSourcesErrorFramesListResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/errorFrames", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.MigrationcenterProjectsLocationsSourcesErrorFramesListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListErrorFramesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListErrorFramesResponse = out
 		}
 	}
 
@@ -1236,7 +1574,10 @@ func (s *projects) MigrationcenterProjectsLocationsSourcesGet(ctx context.Contex
 // MigrationcenterProjectsLocationsSourcesList - Lists all the sources in a given project and location.
 func (s *projects) MigrationcenterProjectsLocationsSourcesList(ctx context.Context, request operations.MigrationcenterProjectsLocationsSourcesListRequest, security operations.MigrationcenterProjectsLocationsSourcesListSecurity) (*operations.MigrationcenterProjectsLocationsSourcesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/sources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/sources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1284,7 +1625,10 @@ func (s *projects) MigrationcenterProjectsLocationsSourcesList(ctx context.Conte
 // MigrationcenterProjectsLocationsSourcesPatch - Updates the parameters of a source.
 func (s *projects) MigrationcenterProjectsLocationsSourcesPatch(ctx context.Context, request operations.MigrationcenterProjectsLocationsSourcesPatchRequest, security operations.MigrationcenterProjectsLocationsSourcesPatchSecurity) (*operations.MigrationcenterProjectsLocationsSourcesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SourceInput", "json")
 	if err != nil {

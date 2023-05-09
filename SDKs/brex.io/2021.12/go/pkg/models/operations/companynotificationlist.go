@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/types"
 )
 
+type CompanyNotificationListSecurity struct {
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
+}
+
 // CompanyNotificationListDefaultApplicationJSON - Detailed information about the error
 type CompanyNotificationListDefaultApplicationJSON struct {
 	Code    int     `json:"code"`

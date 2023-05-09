@@ -15,19 +15,23 @@ const (
 	InstallFailureEventFailureReasonEnumTimeout InstallFailureEventFailureReasonEnum = "timeout"
 )
 
+func (e InstallFailureEventFailureReasonEnum) ToPointer() *InstallFailureEventFailureReasonEnum {
+	return &e
+}
+
 func (e *InstallFailureEventFailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "timeout":
-		*e = InstallFailureEventFailureReasonEnum(s)
+		*e = InstallFailureEventFailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstallFailureEventFailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for InstallFailureEventFailureReasonEnum: %v", v)
 	}
 }
 

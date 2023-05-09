@@ -14,18 +14,22 @@ const (
 	RequestCancelActivityTaskFailedCauseEnumOperationNotPermitted RequestCancelActivityTaskFailedCauseEnum = "OPERATION_NOT_PERMITTED"
 )
 
+func (e RequestCancelActivityTaskFailedCauseEnum) ToPointer() *RequestCancelActivityTaskFailedCauseEnum {
+	return &e
+}
+
 func (e *RequestCancelActivityTaskFailedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVITY_ID_UNKNOWN":
 		fallthrough
 	case "OPERATION_NOT_PERMITTED":
-		*e = RequestCancelActivityTaskFailedCauseEnum(s)
+		*e = RequestCancelActivityTaskFailedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestCancelActivityTaskFailedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestCancelActivityTaskFailedCauseEnum: %v", v)
 	}
 }

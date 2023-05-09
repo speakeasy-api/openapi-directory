@@ -66,12 +66,16 @@ const (
 	DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetTargetingTypeEnumTargetingTypeContentGenre                 DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetTargetingTypeEnum = "TARGETING_TYPE_CONTENT_GENRE"
 )
 
+func (e DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetTargetingTypeEnum) ToPointer() *DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetTargetingTypeEnum {
+	return &e
+}
+
 func (e *DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetTargetingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGETING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TARGETING_TYPE_CHANNEL":
@@ -163,10 +167,10 @@ func (e *DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetTargeti
 	case "TARGETING_TYPE_AUDIO_CONTENT_TYPE":
 		fallthrough
 	case "TARGETING_TYPE_CONTENT_GENRE":
-		*e = DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetTargetingTypeEnum(s)
+		*e = DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetTargetingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetTargetingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetTargetingTypeEnum: %v", v)
 	}
 }
 

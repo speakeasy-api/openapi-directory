@@ -16,21 +16,25 @@ const (
 	ClusterUpdateDesiredDatapathProviderEnumAdvancedDatapath            ClusterUpdateDesiredDatapathProviderEnum = "ADVANCED_DATAPATH"
 )
 
+func (e ClusterUpdateDesiredDatapathProviderEnum) ToPointer() *ClusterUpdateDesiredDatapathProviderEnum {
+	return &e
+}
+
 func (e *ClusterUpdateDesiredDatapathProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATAPATH_PROVIDER_UNSPECIFIED":
 		fallthrough
 	case "LEGACY_DATAPATH":
 		fallthrough
 	case "ADVANCED_DATAPATH":
-		*e = ClusterUpdateDesiredDatapathProviderEnum(s)
+		*e = ClusterUpdateDesiredDatapathProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterUpdateDesiredDatapathProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterUpdateDesiredDatapathProviderEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	ClusterUpdateDesiredPrivateIpv6GoogleAccessEnumPrivateIpv6GoogleAccessBidirectional ClusterUpdateDesiredPrivateIpv6GoogleAccessEnum = "PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL"
 )
 
+func (e ClusterUpdateDesiredPrivateIpv6GoogleAccessEnum) ToPointer() *ClusterUpdateDesiredPrivateIpv6GoogleAccessEnum {
+	return &e
+}
+
 func (e *ClusterUpdateDesiredPrivateIpv6GoogleAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED":
 		fallthrough
 	case "PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED":
@@ -57,10 +65,10 @@ func (e *ClusterUpdateDesiredPrivateIpv6GoogleAccessEnum) UnmarshalJSON(data []b
 	case "PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE":
 		fallthrough
 	case "PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL":
-		*e = ClusterUpdateDesiredPrivateIpv6GoogleAccessEnum(s)
+		*e = ClusterUpdateDesiredPrivateIpv6GoogleAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterUpdateDesiredPrivateIpv6GoogleAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterUpdateDesiredPrivateIpv6GoogleAccessEnum: %v", v)
 	}
 }
 
@@ -73,26 +81,32 @@ const (
 	ClusterUpdateDesiredStackTypeEnumIpv4Ipv6             ClusterUpdateDesiredStackTypeEnum = "IPV4_IPV6"
 )
 
+func (e ClusterUpdateDesiredStackTypeEnum) ToPointer() *ClusterUpdateDesiredStackTypeEnum {
+	return &e
+}
+
 func (e *ClusterUpdateDesiredStackTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STACK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IPV4":
 		fallthrough
 	case "IPV4_IPV6":
-		*e = ClusterUpdateDesiredStackTypeEnum(s)
+		*e = ClusterUpdateDesiredStackTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterUpdateDesiredStackTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterUpdateDesiredStackTypeEnum: %v", v)
 	}
 }
 
 // ClusterUpdate - ClusterUpdate describes an update to the cluster. Exactly one update can be applied to a cluster with each request, so at most one field can be provided.
 type ClusterUpdate struct {
+	// AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the ClusterUpdate message.
+	AdditionalPodRangesConfig *AdditionalPodRangesConfig `json:"additionalPodRangesConfig,omitempty"`
 	// Configuration for the addons that can be automatically spun up in the cluster, enabling additional functionality.
 	DesiredAddonsConfig *AddonsConfig `json:"desiredAddonsConfig,omitempty"`
 	// Configuration for returning group information from authenticators.
@@ -113,6 +127,8 @@ type ClusterUpdate struct {
 	DesiredDNSConfig *DNSConfig `json:"desiredDnsConfig,omitempty"`
 	// Enable/Disable private endpoint for the cluster's master.
 	DesiredEnablePrivateEndpoint *bool `json:"desiredEnablePrivateEndpoint,omitempty"`
+	// Fleet is the fleet configuration for the cluster.
+	DesiredFleet *Fleet `json:"desiredFleet,omitempty"`
 	// GatewayAPIConfig contains the desired config of Gateway API on this cluster.
 	DesiredGatewayAPIConfig *GatewayAPIConfig `json:"desiredGatewayApiConfig,omitempty"`
 	// GcfsConfig contains configurations of Google Container File System (image streaming).
@@ -173,4 +189,6 @@ type ClusterUpdate struct {
 	DesiredWorkloadIdentityConfig *WorkloadIdentityConfig `json:"desiredWorkloadIdentityConfig,omitempty"`
 	// The current etag of the cluster. If an etag is provided and does not match the current etag of the cluster, update will be blocked and an ABORTED error will be returned.
 	Etag *string `json:"etag,omitempty"`
+	// AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the ClusterUpdate message.
+	RemovedAdditionalPodRangesConfig *AdditionalPodRangesConfig `json:"removedAdditionalPodRangesConfig,omitempty"`
 }

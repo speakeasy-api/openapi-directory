@@ -14,19 +14,23 @@ const (
 	GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnumFineGrainedAccessControl GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnum = "FINE_GRAINED_ACCESS_CONTROL"
 )
 
+func (e GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnum) ToPointer() *GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POLICY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FINE_GRAINED_ACCESS_CONTROL":
-		*e = GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnum(s)
+		*e = GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1beta1TaxonomyActivatedPolicyTypesEnum: %v", v)
 	}
 }
 

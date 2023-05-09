@@ -15,18 +15,22 @@ const (
 	DistributionEnumByLogStream DistributionEnum = "ByLogStream"
 )
 
+func (e DistributionEnum) ToPointer() *DistributionEnum {
+	return &e
+}
+
 func (e *DistributionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Random":
 		fallthrough
 	case "ByLogStream":
-		*e = DistributionEnum(s)
+		*e = DistributionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionEnum: %v", v)
 	}
 }

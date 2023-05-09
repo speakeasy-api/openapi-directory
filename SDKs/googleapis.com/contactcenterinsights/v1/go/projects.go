@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ContactcenterinsightsProjectsLocationsConversationsAnalysesCreate - Creates an analysis. The long running operation is done when the analysis has completed.
 func (s *projects) ContactcenterinsightsProjectsLocationsConversationsAnalysesCreate(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest, security operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateSecurity) (*operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/analyses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/analyses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudContactcenterinsightsV1AnalysisInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsConversationsAnalysesCr
 // ContactcenterinsightsProjectsLocationsConversationsAnalysesList - Lists analyses.
 func (s *projects) ContactcenterinsightsProjectsLocationsConversationsAnalysesList(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesListRequest, security operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesListSecurity) (*operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/analyses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/analyses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsConversationsAnalysesLi
 // ContactcenterinsightsProjectsLocationsConversationsBulkAnalyze - Analyzes multiple conversations in a single request.
 func (s *projects) ContactcenterinsightsProjectsLocationsConversationsBulkAnalyze(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsConversationsBulkAnalyzeRequest, security operations.ContactcenterinsightsProjectsLocationsConversationsBulkAnalyzeSecurity) (*operations.ContactcenterinsightsProjectsLocationsConversationsBulkAnalyzeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversations:bulkAnalyze", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversations:bulkAnalyze", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsConversationsBulkAnalyz
 // ContactcenterinsightsProjectsLocationsConversationsCalculateStats - Gets conversation statistics.
 func (s *projects) ContactcenterinsightsProjectsLocationsConversationsCalculateStats(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsConversationsCalculateStatsRequest, security operations.ContactcenterinsightsProjectsLocationsConversationsCalculateStatsSecurity) (*operations.ContactcenterinsightsProjectsLocationsConversationsCalculateStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location}/conversations:calculateStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{location}/conversations:calculateStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsConversationsCalculateS
 // ContactcenterinsightsProjectsLocationsConversationsCreate - Creates a conversation.
 func (s *projects) ContactcenterinsightsProjectsLocationsConversationsCreate(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsConversationsCreateRequest, security operations.ContactcenterinsightsProjectsLocationsConversationsCreateSecurity) (*operations.ContactcenterinsightsProjectsLocationsConversationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudContactcenterinsightsV1ConversationInput", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsConversationsCreate(ctx
 // ContactcenterinsightsProjectsLocationsConversationsIngest - Imports conversations and processes them according to the user's configuration.
 func (s *projects) ContactcenterinsightsProjectsLocationsConversationsIngest(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsConversationsIngestRequest, security operations.ContactcenterinsightsProjectsLocationsConversationsIngestSecurity) (*operations.ContactcenterinsightsProjectsLocationsConversationsIngestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversations:ingest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversations:ingest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudContactcenterinsightsV1IngestConversationsRequest", "json")
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsConversationsIngest(ctx
 // ContactcenterinsightsProjectsLocationsConversationsList - Lists conversations.
 func (s *projects) ContactcenterinsightsProjectsLocationsConversationsList(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsConversationsListRequest, security operations.ContactcenterinsightsProjectsLocationsConversationsListSecurity) (*operations.ContactcenterinsightsProjectsLocationsConversationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -395,10 +416,71 @@ func (s *projects) ContactcenterinsightsProjectsLocationsConversationsList(ctx c
 	return res, nil
 }
 
+// ContactcenterinsightsProjectsLocationsConversationsUpload - Create a longrunning conversation upload operation. This method differs from CreateConversation by allowing audio transcription and optional DLP redaction.
+func (s *projects) ContactcenterinsightsProjectsLocationsConversationsUpload(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsConversationsUploadRequest, security operations.ContactcenterinsightsProjectsLocationsConversationsUploadSecurity) (*operations.ContactcenterinsightsProjectsLocationsConversationsUploadResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversations:upload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudContactcenterinsightsV1UploadConversationRequestInput", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ContactcenterinsightsProjectsLocationsConversationsUploadResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleLongrunningOperation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleLongrunningOperation = out
+		}
+	}
+
+	return res, nil
+}
+
 // ContactcenterinsightsProjectsLocationsInsightsdataExport - Export insights data to a destination defined in the request body.
 func (s *projects) ContactcenterinsightsProjectsLocationsInsightsdataExport(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsInsightsdataExportRequest, security operations.ContactcenterinsightsProjectsLocationsInsightsdataExportSecurity) (*operations.ContactcenterinsightsProjectsLocationsInsightsdataExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/insightsdata:export", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/insightsdata:export", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest", "json")
 	if err != nil {
@@ -453,7 +535,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsInsightsdataExport(ctx 
 // ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStats - Gets an issue model's statistics.
 func (s *projects) ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStats(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsRequest, security operations.ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsSecurity) (*operations.ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{issueModel}:calculateIssueModelStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{issueModel}:calculateIssueModelStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -501,7 +586,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsIssueModelsCalculateIss
 // ContactcenterinsightsProjectsLocationsIssueModelsCreate - Creates an issue model.
 func (s *projects) ContactcenterinsightsProjectsLocationsIssueModelsCreate(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsIssueModelsCreateRequest, security operations.ContactcenterinsightsProjectsLocationsIssueModelsCreateSecurity) (*operations.ContactcenterinsightsProjectsLocationsIssueModelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/issueModels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/issueModels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudContactcenterinsightsV1IssueModelInput", "json")
 	if err != nil {
@@ -556,7 +644,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsIssueModelsCreate(ctx c
 // ContactcenterinsightsProjectsLocationsIssueModelsDeploy - Deploys an issue model. Returns an error if a model is already deployed. An issue model can only be used in analysis after it has been deployed.
 func (s *projects) ContactcenterinsightsProjectsLocationsIssueModelsDeploy(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsIssueModelsDeployRequest, security operations.ContactcenterinsightsProjectsLocationsIssueModelsDeploySecurity) (*operations.ContactcenterinsightsProjectsLocationsIssueModelsDeployResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:deploy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:deploy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudContactcenterinsightsV1DeployIssueModelRequest", "json")
 	if err != nil {
@@ -611,7 +702,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsIssueModelsDeploy(ctx c
 // ContactcenterinsightsProjectsLocationsIssueModelsIssuesList - Lists issues.
 func (s *projects) ContactcenterinsightsProjectsLocationsIssueModelsIssuesList(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsIssueModelsIssuesListRequest, security operations.ContactcenterinsightsProjectsLocationsIssueModelsIssuesListSecurity) (*operations.ContactcenterinsightsProjectsLocationsIssueModelsIssuesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/issues", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/issues", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -659,7 +753,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsIssueModelsIssuesList(c
 // ContactcenterinsightsProjectsLocationsIssueModelsList - Lists issue models.
 func (s *projects) ContactcenterinsightsProjectsLocationsIssueModelsList(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsIssueModelsListRequest, security operations.ContactcenterinsightsProjectsLocationsIssueModelsListSecurity) (*operations.ContactcenterinsightsProjectsLocationsIssueModelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/issueModels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/issueModels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -707,7 +804,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsIssueModelsList(ctx con
 // ContactcenterinsightsProjectsLocationsIssueModelsUndeploy - Undeploys an issue model. An issue model can not be used in analysis after it has been undeployed.
 func (s *projects) ContactcenterinsightsProjectsLocationsIssueModelsUndeploy(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsIssueModelsUndeployRequest, security operations.ContactcenterinsightsProjectsLocationsIssueModelsUndeploySecurity) (*operations.ContactcenterinsightsProjectsLocationsIssueModelsUndeployResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:undeploy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:undeploy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudContactcenterinsightsV1UndeployIssueModelRequest", "json")
 	if err != nil {
@@ -762,7 +862,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsIssueModelsUndeploy(ctx
 // ContactcenterinsightsProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) ContactcenterinsightsProjectsLocationsOperationsCancel(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsOperationsCancelRequest, security operations.ContactcenterinsightsProjectsLocationsOperationsCancelSecurity) (*operations.ContactcenterinsightsProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -810,7 +913,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsOperationsCancel(ctx co
 // ContactcenterinsightsProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) ContactcenterinsightsProjectsLocationsOperationsList(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsOperationsListRequest, security operations.ContactcenterinsightsProjectsLocationsOperationsListSecurity) (*operations.ContactcenterinsightsProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -858,7 +964,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsOperationsList(ctx cont
 // ContactcenterinsightsProjectsLocationsPhraseMatchersCreate - Creates a phrase matcher.
 func (s *projects) ContactcenterinsightsProjectsLocationsPhraseMatchersCreate(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsPhraseMatchersCreateRequest, security operations.ContactcenterinsightsProjectsLocationsPhraseMatchersCreateSecurity) (*operations.ContactcenterinsightsProjectsLocationsPhraseMatchersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/phraseMatchers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/phraseMatchers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudContactcenterinsightsV1PhraseMatcherInput", "json")
 	if err != nil {
@@ -913,7 +1022,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsPhraseMatchersCreate(ct
 // ContactcenterinsightsProjectsLocationsPhraseMatchersList - Lists phrase matchers.
 func (s *projects) ContactcenterinsightsProjectsLocationsPhraseMatchersList(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsPhraseMatchersListRequest, security operations.ContactcenterinsightsProjectsLocationsPhraseMatchersListSecurity) (*operations.ContactcenterinsightsProjectsLocationsPhraseMatchersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/phraseMatchers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/phraseMatchers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -961,7 +1073,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsPhraseMatchersList(ctx 
 // ContactcenterinsightsProjectsLocationsViewsCreate - Creates a view.
 func (s *projects) ContactcenterinsightsProjectsLocationsViewsCreate(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsViewsCreateRequest, security operations.ContactcenterinsightsProjectsLocationsViewsCreateSecurity) (*operations.ContactcenterinsightsProjectsLocationsViewsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/views", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/views", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudContactcenterinsightsV1ViewInput", "json")
 	if err != nil {
@@ -1016,7 +1131,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsViewsCreate(ctx context
 // ContactcenterinsightsProjectsLocationsViewsDelete - Deletes a view.
 func (s *projects) ContactcenterinsightsProjectsLocationsViewsDelete(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsViewsDeleteRequest, security operations.ContactcenterinsightsProjectsLocationsViewsDeleteSecurity) (*operations.ContactcenterinsightsProjectsLocationsViewsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1064,7 +1182,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsViewsDelete(ctx context
 // ContactcenterinsightsProjectsLocationsViewsGet - Gets a view.
 func (s *projects) ContactcenterinsightsProjectsLocationsViewsGet(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsViewsGetRequest, security operations.ContactcenterinsightsProjectsLocationsViewsGetSecurity) (*operations.ContactcenterinsightsProjectsLocationsViewsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1112,7 +1233,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsViewsGet(ctx context.Co
 // ContactcenterinsightsProjectsLocationsViewsList - Lists views.
 func (s *projects) ContactcenterinsightsProjectsLocationsViewsList(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsViewsListRequest, security operations.ContactcenterinsightsProjectsLocationsViewsListSecurity) (*operations.ContactcenterinsightsProjectsLocationsViewsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/views", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/views", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1160,7 +1284,10 @@ func (s *projects) ContactcenterinsightsProjectsLocationsViewsList(ctx context.C
 // ContactcenterinsightsProjectsLocationsViewsPatch - Updates a view.
 func (s *projects) ContactcenterinsightsProjectsLocationsViewsPatch(ctx context.Context, request operations.ContactcenterinsightsProjectsLocationsViewsPatchRequest, security operations.ContactcenterinsightsProjectsLocationsViewsPatchSecurity) (*operations.ContactcenterinsightsProjectsLocationsViewsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudContactcenterinsightsV1ViewInput", "json")
 	if err != nil {

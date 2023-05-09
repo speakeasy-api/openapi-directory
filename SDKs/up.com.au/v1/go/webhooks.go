@@ -41,7 +41,10 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 // deleted, webhook events will no longer be sent to the configured URL.
 func (s *webhooks) DeleteWebhooksID(ctx context.Context, request operations.DeleteWebhooksIDRequest) (*operations.DeleteWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +132,10 @@ func (s *webhooks) GetWebhooks(ctx context.Context, request operations.GetWebhoo
 // Retrieve a specific webhook by providing its unique identifier.
 func (s *webhooks) GetWebhooksID(ctx context.Context, request operations.GetWebhooksIDRequest) (*operations.GetWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -179,7 +185,10 @@ func (s *webhooks) GetWebhooksID(ctx context.Context, request operations.GetWebh
 // period of time.
 func (s *webhooks) GetWebhooksWebhookIDLogs(ctx context.Context, request operations.GetWebhooksWebhookIDLogsRequest) (*operations.GetWebhooksWebhookIDLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhookId}/logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhookId}/logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -301,7 +310,10 @@ func (s *webhooks) PostWebhooks(ctx context.Context, request shared.CreateWebhoo
 // asynchronously and its data is returned in the response to this request.
 func (s *webhooks) PostWebhooksWebhookIDPing(ctx context.Context, request operations.PostWebhooksWebhookIDPingRequest) (*operations.PostWebhooksWebhookIDPingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhookId}/ping", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhookId}/ping", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

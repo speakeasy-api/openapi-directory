@@ -18,12 +18,16 @@ const (
 	PrepareTransactionRequestBodyVariationEnumBaeume     PrepareTransactionRequestBodyVariationEnum = "baeume"
 )
 
+func (e PrepareTransactionRequestBodyVariationEnum) ToPointer() *PrepareTransactionRequestBodyVariationEnum {
+	return &e
+}
+
 func (e *PrepareTransactionRequestBodyVariationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gsb":
 		fallthrough
 	case "erzeugung":
@@ -33,10 +37,10 @@ func (e *PrepareTransactionRequestBodyVariationEnum) UnmarshalJSON(data []byte) 
 	case "co2":
 		fallthrough
 	case "baeume":
-		*e = PrepareTransactionRequestBodyVariationEnum(s)
+		*e = PrepareTransactionRequestBodyVariationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrepareTransactionRequestBodyVariationEnum: %s", s)
+		return fmt.Errorf("invalid value for PrepareTransactionRequestBodyVariationEnum: %v", v)
 	}
 }
 

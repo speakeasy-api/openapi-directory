@@ -12,4 +12,5 @@ type SourceProperties struct {
 	Os                      *Os                  `json:"os,omitempty"`
 	RAMBytes                *int64               `json:"ramBytes,omitempty"`
 	RecommendedInstanceType *string              `json:"recommendedInstanceType,omitempty"`
+	SupportsNitroInstances  *bool                `json:"supportsNitroInstances,omitempty"`
 }

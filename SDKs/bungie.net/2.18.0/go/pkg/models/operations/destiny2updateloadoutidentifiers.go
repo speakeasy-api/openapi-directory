@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type Destiny2UpdateLoadoutIdentifiersSecurity struct {
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 // Destiny2UpdateLoadoutIdentifiers200Wildcard - Look at the Response property for more information about the nature of this response
 type Destiny2UpdateLoadoutIdentifiers200Wildcard struct {
 	DetailedErrorTrace *string

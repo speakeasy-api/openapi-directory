@@ -22,12 +22,16 @@ const (
 	LanguageTypeEnumPhp     LanguageTypeEnum = "PHP"
 )
 
+func (e LanguageTypeEnum) ToPointer() *LanguageTypeEnum {
+	return &e
+}
+
 func (e *LanguageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JAVA":
 		fallthrough
 	case "PYTHON":
@@ -47,9 +51,9 @@ func (e *LanguageTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BASE":
 		fallthrough
 	case "PHP":
-		*e = LanguageTypeEnum(s)
+		*e = LanguageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguageTypeEnum: %v", v)
 	}
 }

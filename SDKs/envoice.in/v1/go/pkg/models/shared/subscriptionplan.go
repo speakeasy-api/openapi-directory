@@ -19,12 +19,16 @@ const (
 	SubscriptionPlanFeaturesEnumCname        SubscriptionPlanFeaturesEnum = "Cname"
 )
 
+func (e SubscriptionPlanFeaturesEnum) ToPointer() *SubscriptionPlanFeaturesEnum {
+	return &e
+}
+
 func (e *SubscriptionPlanFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Api":
 		fallthrough
 	case "Teams":
@@ -36,10 +40,10 @@ func (e *SubscriptionPlanFeaturesEnum) UnmarshalJSON(data []byte) error {
 	case "PaymentLinks":
 		fallthrough
 	case "Cname":
-		*e = SubscriptionPlanFeaturesEnum(s)
+		*e = SubscriptionPlanFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionPlanFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionPlanFeaturesEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	SubscriptionPlanRecurrenceEnumYearly  SubscriptionPlanRecurrenceEnum = "Yearly"
 )
 
+func (e SubscriptionPlanRecurrenceEnum) ToPointer() *SubscriptionPlanRecurrenceEnum {
+	return &e
+}
+
 func (e *SubscriptionPlanRecurrenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Monthly":
 		fallthrough
 	case "Yearly":
-		*e = SubscriptionPlanRecurrenceEnum(s)
+		*e = SubscriptionPlanRecurrenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionPlanRecurrenceEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionPlanRecurrenceEnum: %v", v)
 	}
 }
 
@@ -76,12 +84,16 @@ const (
 	SubscriptionPlanStatusEnumFraudlent    SubscriptionPlanStatusEnum = "Fraudlent"
 )
 
+func (e SubscriptionPlanStatusEnum) ToPointer() *SubscriptionPlanStatusEnum {
+	return &e
+}
+
 func (e *SubscriptionPlanStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ActiveTrial":
 		fallthrough
 	case "ExpiredTrial":
@@ -91,10 +103,10 @@ func (e *SubscriptionPlanStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Canceled":
 		fallthrough
 	case "Fraudlent":
-		*e = SubscriptionPlanStatusEnum(s)
+		*e = SubscriptionPlanStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionPlanStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionPlanStatusEnum: %v", v)
 	}
 }
 
@@ -105,19 +117,23 @@ const (
 	SubscriptionPlanSystemCancelationReasonEnumFraud            SubscriptionPlanSystemCancelationReasonEnum = "Fraud"
 )
 
+func (e SubscriptionPlanSystemCancelationReasonEnum) ToPointer() *SubscriptionPlanSystemCancelationReasonEnum {
+	return &e
+}
+
 func (e *SubscriptionPlanSystemCancelationReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FailToCaptureFee":
 		fallthrough
 	case "Fraud":
-		*e = SubscriptionPlanSystemCancelationReasonEnum(s)
+		*e = SubscriptionPlanSystemCancelationReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionPlanSystemCancelationReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionPlanSystemCancelationReasonEnum: %v", v)
 	}
 }
 

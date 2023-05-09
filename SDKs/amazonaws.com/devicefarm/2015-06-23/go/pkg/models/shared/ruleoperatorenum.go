@@ -20,12 +20,16 @@ const (
 	RuleOperatorEnumContains            RuleOperatorEnum = "CONTAINS"
 )
 
+func (e RuleOperatorEnum) ToPointer() *RuleOperatorEnum {
+	return &e
+}
+
 func (e *RuleOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUALS":
 		fallthrough
 	case "LESS_THAN":
@@ -41,9 +45,9 @@ func (e *RuleOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "NOT_IN":
 		fallthrough
 	case "CONTAINS":
-		*e = RuleOperatorEnum(s)
+		*e = RuleOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuleOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for RuleOperatorEnum: %v", v)
 	}
 }

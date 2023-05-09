@@ -15,20 +15,24 @@ const (
 	WaveHealthStatusEnumError   WaveHealthStatusEnum = "ERROR"
 )
 
+func (e WaveHealthStatusEnum) ToPointer() *WaveHealthStatusEnum {
+	return &e
+}
+
 func (e *WaveHealthStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEALTHY":
 		fallthrough
 	case "LAGGING":
 		fallthrough
 	case "ERROR":
-		*e = WaveHealthStatusEnum(s)
+		*e = WaveHealthStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WaveHealthStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WaveHealthStatusEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	POSTDisassociateIpamResourceDiscoveryActionEnumDisassociateIpamResourceDiscovery POSTDisassociateIpamResourceDiscoveryActionEnum = "DisassociateIpamResourceDiscovery"
 )
 
+func (e POSTDisassociateIpamResourceDiscoveryActionEnum) ToPointer() *POSTDisassociateIpamResourceDiscoveryActionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateIpamResourceDiscoveryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateIpamResourceDiscovery":
-		*e = POSTDisassociateIpamResourceDiscoveryActionEnum(s)
+		*e = POSTDisassociateIpamResourceDiscoveryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateIpamResourceDiscoveryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateIpamResourceDiscoveryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisassociateIpamResourceDiscoveryVersionEnumTwoThousandAndSixteen1115 POSTDisassociateIpamResourceDiscoveryVersionEnum = "2016-11-15"
 )
 
+func (e POSTDisassociateIpamResourceDiscoveryVersionEnum) ToPointer() *POSTDisassociateIpamResourceDiscoveryVersionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateIpamResourceDiscoveryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDisassociateIpamResourceDiscoveryVersionEnum(s)
+		*e = POSTDisassociateIpamResourceDiscoveryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateIpamResourceDiscoveryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateIpamResourceDiscoveryVersionEnum: %v", v)
 	}
 }
 

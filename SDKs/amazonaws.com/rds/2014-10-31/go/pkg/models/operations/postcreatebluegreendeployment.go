@@ -15,17 +15,21 @@ const (
 	POSTCreateBlueGreenDeploymentActionEnumCreateBlueGreenDeployment POSTCreateBlueGreenDeploymentActionEnum = "CreateBlueGreenDeployment"
 )
 
+func (e POSTCreateBlueGreenDeploymentActionEnum) ToPointer() *POSTCreateBlueGreenDeploymentActionEnum {
+	return &e
+}
+
 func (e *POSTCreateBlueGreenDeploymentActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateBlueGreenDeployment":
-		*e = POSTCreateBlueGreenDeploymentActionEnum(s)
+		*e = POSTCreateBlueGreenDeploymentActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateBlueGreenDeploymentActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateBlueGreenDeploymentActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateBlueGreenDeploymentVersionEnumTwoThousandAndFourteen1031 POSTCreateBlueGreenDeploymentVersionEnum = "2014-10-31"
 )
 
+func (e POSTCreateBlueGreenDeploymentVersionEnum) ToPointer() *POSTCreateBlueGreenDeploymentVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateBlueGreenDeploymentVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTCreateBlueGreenDeploymentVersionEnum(s)
+		*e = POSTCreateBlueGreenDeploymentVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateBlueGreenDeploymentVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateBlueGreenDeploymentVersionEnum: %v", v)
 	}
 }
 

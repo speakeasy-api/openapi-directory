@@ -15,17 +15,21 @@ const (
 	POSTStartDBInstanceActionEnumStartDbInstance POSTStartDBInstanceActionEnum = "StartDBInstance"
 )
 
+func (e POSTStartDBInstanceActionEnum) ToPointer() *POSTStartDBInstanceActionEnum {
+	return &e
+}
+
 func (e *POSTStartDBInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartDBInstance":
-		*e = POSTStartDBInstanceActionEnum(s)
+		*e = POSTStartDBInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartDBInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartDBInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTStartDBInstanceVersionEnumTwoThousandAndFourteen1031 POSTStartDBInstanceVersionEnum = "2014-10-31"
 )
 
+func (e POSTStartDBInstanceVersionEnum) ToPointer() *POSTStartDBInstanceVersionEnum {
+	return &e
+}
+
 func (e *POSTStartDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTStartDBInstanceVersionEnum(s)
+		*e = POSTStartDBInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartDBInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartDBInstanceVersionEnum: %v", v)
 	}
 }
 

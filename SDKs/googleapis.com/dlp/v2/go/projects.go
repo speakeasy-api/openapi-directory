@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DlpProjectsLocationsContentDeidentify - De-identifies potentially sensitive info from a ContentItem. This method has limits on input size and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn more. When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated.
 func (s *projects) DlpProjectsLocationsContentDeidentify(ctx context.Context, request operations.DlpProjectsLocationsContentDeidentifyRequest, security operations.DlpProjectsLocationsContentDeidentifySecurity) (*operations.DlpProjectsLocationsContentDeidentifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/content:deidentify", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/content:deidentify", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePrivacyDlpV2DeidentifyContentRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) DlpProjectsLocationsContentDeidentify(ctx context.Context, re
 // DlpProjectsLocationsContentInspect - Finds potentially sensitive info in content. This method has limits on input size, processing time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs/inspecting-text,
 func (s *projects) DlpProjectsLocationsContentInspect(ctx context.Context, request operations.DlpProjectsLocationsContentInspectRequest, security operations.DlpProjectsLocationsContentInspectSecurity) (*operations.DlpProjectsLocationsContentInspectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/content:inspect", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/content:inspect", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePrivacyDlpV2InspectContentRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) DlpProjectsLocationsContentInspect(ctx context.Context, reque
 // DlpProjectsLocationsContentReidentify - Re-identifies content that has been de-identified. See https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example to learn more.
 func (s *projects) DlpProjectsLocationsContentReidentify(ctx context.Context, request operations.DlpProjectsLocationsContentReidentifyRequest, security operations.DlpProjectsLocationsContentReidentifySecurity) (*operations.DlpProjectsLocationsContentReidentifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/content:reidentify", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/content:reidentify", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePrivacyDlpV2ReidentifyContentRequest", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *projects) DlpProjectsLocationsContentReidentify(ctx context.Context, re
 // DlpProjectsLocationsDeidentifyTemplatesCreate - Creates a DeidentifyTemplate for reusing frequently used configuration for de-identifying content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
 func (s *projects) DlpProjectsLocationsDeidentifyTemplatesCreate(ctx context.Context, request operations.DlpProjectsLocationsDeidentifyTemplatesCreateRequest, security operations.DlpProjectsLocationsDeidentifyTemplatesCreateSecurity) (*operations.DlpProjectsLocationsDeidentifyTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/deidentifyTemplates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/deidentifyTemplates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePrivacyDlpV2CreateDeidentifyTemplateRequestInput", "json")
 	if err != nil {
@@ -254,7 +266,10 @@ func (s *projects) DlpProjectsLocationsDeidentifyTemplatesCreate(ctx context.Con
 // DlpProjectsLocationsDeidentifyTemplatesList - Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
 func (s *projects) DlpProjectsLocationsDeidentifyTemplatesList(ctx context.Context, request operations.DlpProjectsLocationsDeidentifyTemplatesListRequest, security operations.DlpProjectsLocationsDeidentifyTemplatesListSecurity) (*operations.DlpProjectsLocationsDeidentifyTemplatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/deidentifyTemplates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/deidentifyTemplates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *projects) DlpProjectsLocationsDeidentifyTemplatesList(ctx context.Conte
 // DlpProjectsLocationsDlpJobsCancel - Starts asynchronous cancellation on a long-running DlpJob. The server makes a best effort to cancel the DlpJob, but success is not guaranteed. See https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
 func (s *projects) DlpProjectsLocationsDlpJobsCancel(ctx context.Context, request operations.DlpProjectsLocationsDlpJobsCancelRequest, security operations.DlpProjectsLocationsDlpJobsCancelSecurity) (*operations.DlpProjectsLocationsDlpJobsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -357,7 +375,10 @@ func (s *projects) DlpProjectsLocationsDlpJobsCancel(ctx context.Context, reques
 // DlpProjectsLocationsDlpJobsCreate - Creates a new job to inspect storage or calculate risk metrics. See https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the system will automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated.
 func (s *projects) DlpProjectsLocationsDlpJobsCreate(ctx context.Context, request operations.DlpProjectsLocationsDlpJobsCreateRequest, security operations.DlpProjectsLocationsDlpJobsCreateSecurity) (*operations.DlpProjectsLocationsDlpJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/dlpJobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/dlpJobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePrivacyDlpV2CreateDlpJobRequest", "json")
 	if err != nil {
@@ -412,7 +433,10 @@ func (s *projects) DlpProjectsLocationsDlpJobsCreate(ctx context.Context, reques
 // DlpProjectsLocationsDlpJobsFinish - Finish a running hybrid DlpJob. Triggers the finalization steps and running of any enabled actions that have not yet run.
 func (s *projects) DlpProjectsLocationsDlpJobsFinish(ctx context.Context, request operations.DlpProjectsLocationsDlpJobsFinishRequest, security operations.DlpProjectsLocationsDlpJobsFinishSecurity) (*operations.DlpProjectsLocationsDlpJobsFinishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:finish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:finish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -467,7 +491,10 @@ func (s *projects) DlpProjectsLocationsDlpJobsFinish(ctx context.Context, reques
 // DlpProjectsLocationsDlpJobsList - Lists DlpJobs that match the specified filter in the request. See https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
 func (s *projects) DlpProjectsLocationsDlpJobsList(ctx context.Context, request operations.DlpProjectsLocationsDlpJobsListRequest, security operations.DlpProjectsLocationsDlpJobsListSecurity) (*operations.DlpProjectsLocationsDlpJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/dlpJobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/dlpJobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -515,7 +542,10 @@ func (s *projects) DlpProjectsLocationsDlpJobsList(ctx context.Context, request 
 // DlpProjectsLocationsImageRedact - Redacts potentially sensitive info from an image. This method has limits on input size, processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated.
 func (s *projects) DlpProjectsLocationsImageRedact(ctx context.Context, request operations.DlpProjectsLocationsImageRedactRequest, security operations.DlpProjectsLocationsImageRedactSecurity) (*operations.DlpProjectsLocationsImageRedactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/image:redact", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/image:redact", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePrivacyDlpV2RedactImageRequest", "json")
 	if err != nil {
@@ -570,7 +600,10 @@ func (s *projects) DlpProjectsLocationsImageRedact(ctx context.Context, request 
 // DlpProjectsLocationsInspectTemplatesCreate - Creates an InspectTemplate for reusing frequently used configuration for inspecting content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
 func (s *projects) DlpProjectsLocationsInspectTemplatesCreate(ctx context.Context, request operations.DlpProjectsLocationsInspectTemplatesCreateRequest, security operations.DlpProjectsLocationsInspectTemplatesCreateSecurity) (*operations.DlpProjectsLocationsInspectTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/inspectTemplates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/inspectTemplates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePrivacyDlpV2CreateInspectTemplateRequestInput", "json")
 	if err != nil {
@@ -625,7 +658,10 @@ func (s *projects) DlpProjectsLocationsInspectTemplatesCreate(ctx context.Contex
 // DlpProjectsLocationsInspectTemplatesList - Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
 func (s *projects) DlpProjectsLocationsInspectTemplatesList(ctx context.Context, request operations.DlpProjectsLocationsInspectTemplatesListRequest, security operations.DlpProjectsLocationsInspectTemplatesListSecurity) (*operations.DlpProjectsLocationsInspectTemplatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/inspectTemplates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/inspectTemplates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -673,7 +709,10 @@ func (s *projects) DlpProjectsLocationsInspectTemplatesList(ctx context.Context,
 // DlpProjectsLocationsJobTriggersActivate - Activate a job trigger. Causes the immediate execute of a trigger instead of waiting on the trigger event to occur.
 func (s *projects) DlpProjectsLocationsJobTriggersActivate(ctx context.Context, request operations.DlpProjectsLocationsJobTriggersActivateRequest, security operations.DlpProjectsLocationsJobTriggersActivateSecurity) (*operations.DlpProjectsLocationsJobTriggersActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:activate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:activate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -728,7 +767,10 @@ func (s *projects) DlpProjectsLocationsJobTriggersActivate(ctx context.Context, 
 // DlpProjectsLocationsJobTriggersCreate - Creates a job trigger to run DLP actions such as scanning storage for sensitive information on a set schedule. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
 func (s *projects) DlpProjectsLocationsJobTriggersCreate(ctx context.Context, request operations.DlpProjectsLocationsJobTriggersCreateRequest, security operations.DlpProjectsLocationsJobTriggersCreateSecurity) (*operations.DlpProjectsLocationsJobTriggersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/jobTriggers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/jobTriggers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePrivacyDlpV2CreateJobTriggerRequestInput", "json")
 	if err != nil {
@@ -783,7 +825,10 @@ func (s *projects) DlpProjectsLocationsJobTriggersCreate(ctx context.Context, re
 // DlpProjectsLocationsJobTriggersHybridInspect - Inspect hybrid content and store findings to a trigger. The inspection will be processed asynchronously. To review the findings monitor the jobs within the trigger.
 func (s *projects) DlpProjectsLocationsJobTriggersHybridInspect(ctx context.Context, request operations.DlpProjectsLocationsJobTriggersHybridInspectRequest, security operations.DlpProjectsLocationsJobTriggersHybridInspectSecurity) (*operations.DlpProjectsLocationsJobTriggersHybridInspectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:hybridInspect", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:hybridInspect", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePrivacyDlpV2HybridInspectJobTriggerRequest", "json")
 	if err != nil {
@@ -838,7 +883,10 @@ func (s *projects) DlpProjectsLocationsJobTriggersHybridInspect(ctx context.Cont
 // DlpProjectsLocationsJobTriggersList - Lists job triggers. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
 func (s *projects) DlpProjectsLocationsJobTriggersList(ctx context.Context, request operations.DlpProjectsLocationsJobTriggersListRequest, security operations.DlpProjectsLocationsJobTriggersListSecurity) (*operations.DlpProjectsLocationsJobTriggersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/jobTriggers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/jobTriggers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -886,7 +934,10 @@ func (s *projects) DlpProjectsLocationsJobTriggersList(ctx context.Context, requ
 // DlpProjectsStoredInfoTypesCreate - Creates a pre-built stored infoType to be used for inspection. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
 func (s *projects) DlpProjectsStoredInfoTypesCreate(ctx context.Context, request operations.DlpProjectsStoredInfoTypesCreateRequest, security operations.DlpProjectsStoredInfoTypesCreateSecurity) (*operations.DlpProjectsStoredInfoTypesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/storedInfoTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/storedInfoTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePrivacyDlpV2CreateStoredInfoTypeRequest", "json")
 	if err != nil {
@@ -941,7 +992,10 @@ func (s *projects) DlpProjectsStoredInfoTypesCreate(ctx context.Context, request
 // DlpProjectsStoredInfoTypesDelete - Deletes a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
 func (s *projects) DlpProjectsStoredInfoTypesDelete(ctx context.Context, request operations.DlpProjectsStoredInfoTypesDeleteRequest, security operations.DlpProjectsStoredInfoTypesDeleteSecurity) (*operations.DlpProjectsStoredInfoTypesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -989,7 +1043,10 @@ func (s *projects) DlpProjectsStoredInfoTypesDelete(ctx context.Context, request
 // DlpProjectsStoredInfoTypesGet - Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
 func (s *projects) DlpProjectsStoredInfoTypesGet(ctx context.Context, request operations.DlpProjectsStoredInfoTypesGetRequest, security operations.DlpProjectsStoredInfoTypesGetSecurity) (*operations.DlpProjectsStoredInfoTypesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1037,7 +1094,10 @@ func (s *projects) DlpProjectsStoredInfoTypesGet(ctx context.Context, request op
 // DlpProjectsStoredInfoTypesList - Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
 func (s *projects) DlpProjectsStoredInfoTypesList(ctx context.Context, request operations.DlpProjectsStoredInfoTypesListRequest, security operations.DlpProjectsStoredInfoTypesListSecurity) (*operations.DlpProjectsStoredInfoTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/storedInfoTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/storedInfoTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1085,7 +1145,10 @@ func (s *projects) DlpProjectsStoredInfoTypesList(ctx context.Context, request o
 // DlpProjectsStoredInfoTypesPatch - Updates the stored infoType by creating a new version. The existing version will continue to be used until the new version is ready. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
 func (s *projects) DlpProjectsStoredInfoTypesPatch(ctx context.Context, request operations.DlpProjectsStoredInfoTypesPatchRequest, security operations.DlpProjectsStoredInfoTypesPatchSecurity) (*operations.DlpProjectsStoredInfoTypesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePrivacyDlpV2UpdateStoredInfoTypeRequest", "json")
 	if err != nil {

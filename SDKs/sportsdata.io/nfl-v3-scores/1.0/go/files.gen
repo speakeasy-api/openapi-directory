@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -25,11 +26,14 @@ pkg/models/operations/playerdetailsbyfreeagents.go
 pkg/models/operations/playerdetailsbyplayer.go
 pkg/models/operations/playerdetailsbyrookiedraftyear.go
 pkg/models/operations/playerdetailsbyteam.go
+pkg/models/operations/playersbyteambasic.go
 pkg/models/operations/referees.go
 pkg/models/operations/schedule.go
+pkg/models/operations/schedulebasic.go
 pkg/models/operations/scoresbydate.go
 pkg/models/operations/scoresbyseason.go
 pkg/models/operations/scoresbyweek.go
+pkg/models/operations/scoresbyweekbasic.go
 pkg/models/operations/scoresbyweeksimulation.go
 pkg/models/operations/seasoncurrent.go
 pkg/models/operations/seasonlastcompleted.go
@@ -41,6 +45,7 @@ pkg/models/operations/teamgamestats.go
 pkg/models/operations/teamseasonstats.go
 pkg/models/operations/teamsactive.go
 pkg/models/operations/teamsall.go
+pkg/models/operations/teamsbasic.go
 pkg/models/operations/teamsbyseason.go
 pkg/models/operations/timeframes.go
 pkg/models/operations/weekcurrent.go
@@ -59,11 +64,15 @@ pkg/models/shared/playerseason.go
 pkg/models/shared/scoringdetail.go
 pkg/models/shared/referee.go
 pkg/models/shared/schedule.go
+pkg/models/shared/schedulebasic.go
 pkg/models/shared/score.go
+pkg/models/shared/scorebasic.go
 pkg/models/shared/standing.go
 pkg/models/shared/teamgame.go
 pkg/models/shared/teamseason.go
 pkg/models/shared/team.go
+pkg/models/shared/teambasic.go
 pkg/models/shared/timeframe.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

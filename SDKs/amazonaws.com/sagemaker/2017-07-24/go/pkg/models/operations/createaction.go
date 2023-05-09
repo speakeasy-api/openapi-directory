@@ -16,17 +16,21 @@ const (
 	CreateActionXAmzTargetEnumSageMakerCreateAction CreateActionXAmzTargetEnum = "SageMaker.CreateAction"
 )
 
+func (e CreateActionXAmzTargetEnum) ToPointer() *CreateActionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateActionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreateAction":
-		*e = CreateActionXAmzTargetEnum(s)
+		*e = CreateActionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateActionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateActionXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	ProvinceOptionalEnumFalse ProvinceOptionalEnum = "false"
 )
 
+func (e ProvinceOptionalEnum) ToPointer() *ProvinceOptionalEnum {
+	return &e
+}
+
 func (e *ProvinceOptionalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "0":
@@ -32,10 +36,10 @@ func (e *ProvinceOptionalEnum) UnmarshalJSON(data []byte) error {
 	case "true":
 		fallthrough
 	case "false":
-		*e = ProvinceOptionalEnum(s)
+		*e = ProvinceOptionalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvinceOptionalEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvinceOptionalEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	ProvinceProvinceIDEnumYt ProvinceProvinceIDEnum = "YT"
 )
 
+func (e ProvinceProvinceIDEnum) ToPointer() *ProvinceProvinceIDEnum {
+	return &e
+}
+
 func (e *ProvinceProvinceIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AB":
 		fallthrough
 	case "BC":
@@ -89,10 +97,10 @@ func (e *ProvinceProvinceIDEnum) UnmarshalJSON(data []byte) error {
 	case "SK":
 		fallthrough
 	case "YT":
-		*e = ProvinceProvinceIDEnum(s)
+		*e = ProvinceProvinceIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvinceProvinceIDEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvinceProvinceIDEnum: %v", v)
 	}
 }
 

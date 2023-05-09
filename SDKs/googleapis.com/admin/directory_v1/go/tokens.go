@@ -34,7 +34,10 @@ func newTokens(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DirectoryTokensDelete - Deletes all access tokens issued by a user for an application.
 func (s *tokens) DirectoryTokensDelete(ctx context.Context, request operations.DirectoryTokensDeleteRequest, security operations.DirectoryTokensDeleteSecurity) (*operations.DirectoryTokensDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/tokens/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/tokens/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *tokens) DirectoryTokensDelete(ctx context.Context, request operations.D
 // DirectoryTokensGet - Gets information about an access token issued by a user.
 func (s *tokens) DirectoryTokensGet(ctx context.Context, request operations.DirectoryTokensGetRequest, security operations.DirectoryTokensGetSecurity) (*operations.DirectoryTokensGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/tokens/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/tokens/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *tokens) DirectoryTokensGet(ctx context.Context, request operations.Dire
 // DirectoryTokensList - Returns the set of tokens specified user has issued to 3rd party applications.
 func (s *tokens) DirectoryTokensList(ctx context.Context, request operations.DirectoryTokensListRequest, security operations.DirectoryTokensListSecurity) (*operations.DirectoryTokensListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/tokens", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/tokens", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

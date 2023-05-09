@@ -25,21 +25,25 @@ const (
 	PostSpacesRequestBodyTypeEnumAssociation PostSpacesRequestBodyTypeEnum = "association"
 )
 
+func (e PostSpacesRequestBodyTypeEnum) ToPointer() *PostSpacesRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *PostSpacesRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enterprise":
 		fallthrough
 	case "company":
 		fallthrough
 	case "association":
-		*e = PostSpacesRequestBodyTypeEnum(s)
+		*e = PostSpacesRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesRequestBodyTypeEnum: %v", v)
 	}
 }
 

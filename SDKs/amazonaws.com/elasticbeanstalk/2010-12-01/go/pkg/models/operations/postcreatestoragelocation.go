@@ -15,17 +15,21 @@ const (
 	POSTCreateStorageLocationActionEnumCreateStorageLocation POSTCreateStorageLocationActionEnum = "CreateStorageLocation"
 )
 
+func (e POSTCreateStorageLocationActionEnum) ToPointer() *POSTCreateStorageLocationActionEnum {
+	return &e
+}
+
 func (e *POSTCreateStorageLocationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateStorageLocation":
-		*e = POSTCreateStorageLocationActionEnum(s)
+		*e = POSTCreateStorageLocationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateStorageLocationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateStorageLocationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateStorageLocationVersionEnumTwoThousandAndTen1201 POSTCreateStorageLocationVersionEnum = "2010-12-01"
 )
 
+func (e POSTCreateStorageLocationVersionEnum) ToPointer() *POSTCreateStorageLocationVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateStorageLocationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTCreateStorageLocationVersionEnum(s)
+		*e = POSTCreateStorageLocationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateStorageLocationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateStorageLocationVersionEnum: %v", v)
 	}
 }
 

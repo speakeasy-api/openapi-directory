@@ -17,12 +17,16 @@ const (
 	PrivateConnectionProvisioningFailureCauseEnumValidation              PrivateConnectionProvisioningFailureCauseEnum = "VALIDATION"
 )
 
+func (e PrivateConnectionProvisioningFailureCauseEnum) ToPointer() *PrivateConnectionProvisioningFailureCauseEnum {
+	return &e
+}
+
 func (e *PrivateConnectionProvisioningFailureCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTOR_AUTHENTICATION":
 		fallthrough
 	case "CONNECTOR_SERVER":
@@ -32,9 +36,9 @@ func (e *PrivateConnectionProvisioningFailureCauseEnum) UnmarshalJSON(data []byt
 	case "ACCESS_DENIED":
 		fallthrough
 	case "VALIDATION":
-		*e = PrivateConnectionProvisioningFailureCauseEnum(s)
+		*e = PrivateConnectionProvisioningFailureCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrivateConnectionProvisioningFailureCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for PrivateConnectionProvisioningFailureCauseEnum: %v", v)
 	}
 }

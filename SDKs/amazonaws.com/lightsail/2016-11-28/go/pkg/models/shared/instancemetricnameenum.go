@@ -21,12 +21,16 @@ const (
 	InstanceMetricNameEnumMetadataNoToken           InstanceMetricNameEnum = "MetadataNoToken"
 )
 
+func (e InstanceMetricNameEnum) ToPointer() *InstanceMetricNameEnum {
+	return &e
+}
+
 func (e *InstanceMetricNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CPUUtilization":
 		fallthrough
 	case "NetworkIn":
@@ -44,9 +48,9 @@ func (e *InstanceMetricNameEnum) UnmarshalJSON(data []byte) error {
 	case "BurstCapacityPercentage":
 		fallthrough
 	case "MetadataNoToken":
-		*e = InstanceMetricNameEnum(s)
+		*e = InstanceMetricNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceMetricNameEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceMetricNameEnum: %v", v)
 	}
 }

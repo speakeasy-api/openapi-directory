@@ -15,20 +15,24 @@ const (
 	EvidenceFinderBackfillStatusEnumCompleted  EvidenceFinderBackfillStatusEnum = "COMPLETED"
 )
 
+func (e EvidenceFinderBackfillStatusEnum) ToPointer() *EvidenceFinderBackfillStatusEnum {
+	return &e
+}
+
 func (e *EvidenceFinderBackfillStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_STARTED":
 		fallthrough
 	case "IN_PROGRESS":
 		fallthrough
 	case "COMPLETED":
-		*e = EvidenceFinderBackfillStatusEnum(s)
+		*e = EvidenceFinderBackfillStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EvidenceFinderBackfillStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EvidenceFinderBackfillStatusEnum: %v", v)
 	}
 }

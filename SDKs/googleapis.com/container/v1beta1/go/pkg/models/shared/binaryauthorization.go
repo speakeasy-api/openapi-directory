@@ -16,21 +16,25 @@ const (
 	BinaryAuthorizationEvaluationModeEnumProjectSingletonPolicyEnforce BinaryAuthorizationEvaluationModeEnum = "PROJECT_SINGLETON_POLICY_ENFORCE"
 )
 
+func (e BinaryAuthorizationEvaluationModeEnum) ToPointer() *BinaryAuthorizationEvaluationModeEnum {
+	return &e
+}
+
 func (e *BinaryAuthorizationEvaluationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVALUATION_MODE_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "PROJECT_SINGLETON_POLICY_ENFORCE":
-		*e = BinaryAuthorizationEvaluationModeEnum(s)
+		*e = BinaryAuthorizationEvaluationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BinaryAuthorizationEvaluationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for BinaryAuthorizationEvaluationModeEnum: %v", v)
 	}
 }
 

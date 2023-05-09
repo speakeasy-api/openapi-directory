@@ -32,12 +32,16 @@ const (
 	DataRangeRangeEnumLast60Days       DataRangeRangeEnum = "LAST_60_DAYS"
 )
 
+func (e DataRangeRangeEnum) ToPointer() *DataRangeRangeEnum {
+	return &e
+}
+
 func (e *DataRangeRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RANGE_UNSPECIFIED":
 		fallthrough
 	case "CUSTOM_DATES":
@@ -75,10 +79,10 @@ func (e *DataRangeRangeEnum) UnmarshalJSON(data []byte) error {
 	case "LAST_14_DAYS":
 		fallthrough
 	case "LAST_60_DAYS":
-		*e = DataRangeRangeEnum(s)
+		*e = DataRangeRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataRangeRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataRangeRangeEnum: %v", v)
 	}
 }
 

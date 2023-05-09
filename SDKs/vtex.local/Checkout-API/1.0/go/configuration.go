@@ -41,7 +41,10 @@ func newConfiguration(defaultClient, securityClient HTTPClient, serverURL, langu
 // **Important**: **Request Body** must always be sent with empty value "{ }" in this endpoint.
 func (s *configuration) ClearorderFormMessages(ctx context.Context, request operations.ClearorderFormMessagesRequest) (*operations.ClearorderFormMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/messages/clear", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/messages/clear", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

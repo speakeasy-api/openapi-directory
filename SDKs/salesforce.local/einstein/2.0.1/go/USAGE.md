@@ -2,27 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GenerateTokenV2RequestBody{
-        Assertion: "SOME_ASSERTION_STRING",
-        GrantType: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-        RefreshToken: "SomeRefreshToken",
-        Scope: "offline",
-        ValidFor: 120,
-    }
-
     ctx := context.Background()
-    res, err := s.Authorization.GenerateTokenV2(ctx, req)
+    res, err := s.Authorization.GenerateTokenV2(ctx, operations.GenerateTokenV2RequestBody{
+        Assertion: sdk.String("SOME_ASSERTION_STRING"),
+        GrantType: operations.GenerateTokenV2RequestBodyGrantTypeEnumUrnIetfParamsOauthGrantTypeJwtBearer.ToPointer(),
+        RefreshToken: sdk.String("SomeRefreshToken"),
+        Scope: sdk.String("offline"),
+        ValidFor: sdk.Int(120),
+    })
     if err != nil {
         log.Fatal(err)
     }

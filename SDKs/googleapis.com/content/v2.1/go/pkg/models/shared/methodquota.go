@@ -2,7 +2,7 @@
 
 package shared
 
-// MethodQuota - The quota information per method in the Content API. Includes only methods with current usage greater than zero for your account.
+// MethodQuota - The quota information per method in the Content API.
 type MethodQuota struct {
 	// The method name, for example `products.list`. Method name does not contain version because quota can be shared between different API versions of the same method.
 	Method *string `json:"method,omitempty"`

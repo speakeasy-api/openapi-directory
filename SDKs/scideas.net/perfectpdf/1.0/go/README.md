@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/scideas.net/perfectpdf/1.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.PerfectpdfAPIBody{
+    ctx := context.Background()
+    res, err := s.PostPerfectpdfAPI(ctx, shared.PerfectpdfAPIBody{
         APIKey: "abc123",
         HTML: "<!doctype html><html><head><meta charset="UTF-8"><title>my title</title><script src="script.js"></script></head><body><div>My PDF</div></body></html>",
-    }
-
-    ctx := context.Background()
-    res, err := s.PostPerfectpdfAPI(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,9 +42,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `PostPerfectpdfAPI` - Returns PDF document.
+* [PostPerfectpdfAPI](docs/sdk/README.md#postperfectpdfapi) - Returns PDF document.
 <!-- End SDK Available Operations -->
 
 ### Maturity

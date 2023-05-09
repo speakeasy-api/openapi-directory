@@ -15,17 +15,21 @@ const (
 	POSTCreateReceiptRuleActionEnumCreateReceiptRule POSTCreateReceiptRuleActionEnum = "CreateReceiptRule"
 )
 
+func (e POSTCreateReceiptRuleActionEnum) ToPointer() *POSTCreateReceiptRuleActionEnum {
+	return &e
+}
+
 func (e *POSTCreateReceiptRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateReceiptRule":
-		*e = POSTCreateReceiptRuleActionEnum(s)
+		*e = POSTCreateReceiptRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateReceiptRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateReceiptRuleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateReceiptRuleVersionEnumTwoThousandAndTen1201 POSTCreateReceiptRuleVersionEnum = "2010-12-01"
 )
 
+func (e POSTCreateReceiptRuleVersionEnum) ToPointer() *POSTCreateReceiptRuleVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateReceiptRuleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTCreateReceiptRuleVersionEnum(s)
+		*e = POSTCreateReceiptRuleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateReceiptRuleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateReceiptRuleVersionEnum: %v", v)
 	}
 }
 

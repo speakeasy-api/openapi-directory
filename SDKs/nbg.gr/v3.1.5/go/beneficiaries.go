@@ -35,7 +35,10 @@ func newBeneficiaries(defaultClient, securityClient HTTPClient, serverURL, langu
 // Get Beneficiaries by Account ID
 func (s *beneficiaries) GetAccountsAccountIDBeneficiaries(ctx context.Context, request operations.GetAccountsAccountIDBeneficiariesRequest, security operations.GetAccountsAccountIDBeneficiariesSecurity) (*operations.GetAccountsAccountIDBeneficiariesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/beneficiaries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/beneficiaries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

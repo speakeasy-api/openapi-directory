@@ -18,21 +18,25 @@ const (
 	ListResourceTypesRequestBodyResourceRegionScopeEnumGlobal   ListResourceTypesRequestBodyResourceRegionScopeEnum = "GLOBAL"
 )
 
+func (e ListResourceTypesRequestBodyResourceRegionScopeEnum) ToPointer() *ListResourceTypesRequestBodyResourceRegionScopeEnum {
+	return &e
+}
+
 func (e *ListResourceTypesRequestBodyResourceRegionScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "REGIONAL":
 		fallthrough
 	case "GLOBAL":
-		*e = ListResourceTypesRequestBodyResourceRegionScopeEnum(s)
+		*e = ListResourceTypesRequestBodyResourceRegionScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListResourceTypesRequestBodyResourceRegionScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListResourceTypesRequestBodyResourceRegionScopeEnum: %v", v)
 	}
 }
 

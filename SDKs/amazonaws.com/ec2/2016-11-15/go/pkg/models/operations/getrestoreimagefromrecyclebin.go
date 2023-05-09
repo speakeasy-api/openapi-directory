@@ -15,17 +15,21 @@ const (
 	GETRestoreImageFromRecycleBinActionEnumRestoreImageFromRecycleBin GETRestoreImageFromRecycleBinActionEnum = "RestoreImageFromRecycleBin"
 )
 
+func (e GETRestoreImageFromRecycleBinActionEnum) ToPointer() *GETRestoreImageFromRecycleBinActionEnum {
+	return &e
+}
+
 func (e *GETRestoreImageFromRecycleBinActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RestoreImageFromRecycleBin":
-		*e = GETRestoreImageFromRecycleBinActionEnum(s)
+		*e = GETRestoreImageFromRecycleBinActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestoreImageFromRecycleBinActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestoreImageFromRecycleBinActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRestoreImageFromRecycleBinVersionEnumTwoThousandAndSixteen1115 GETRestoreImageFromRecycleBinVersionEnum = "2016-11-15"
 )
 
+func (e GETRestoreImageFromRecycleBinVersionEnum) ToPointer() *GETRestoreImageFromRecycleBinVersionEnum {
+	return &e
+}
+
 func (e *GETRestoreImageFromRecycleBinVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETRestoreImageFromRecycleBinVersionEnum(s)
+		*e = GETRestoreImageFromRecycleBinVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestoreImageFromRecycleBinVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestoreImageFromRecycleBinVersionEnum: %v", v)
 	}
 }
 

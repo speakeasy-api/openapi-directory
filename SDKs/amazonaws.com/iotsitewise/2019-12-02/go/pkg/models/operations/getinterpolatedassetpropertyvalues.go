@@ -18,21 +18,25 @@ const (
 	GetInterpolatedAssetPropertyValuesQualityEnumUncertain GetInterpolatedAssetPropertyValuesQualityEnum = "UNCERTAIN"
 )
 
+func (e GetInterpolatedAssetPropertyValuesQualityEnum) ToPointer() *GetInterpolatedAssetPropertyValuesQualityEnum {
+	return &e
+}
+
 func (e *GetInterpolatedAssetPropertyValuesQualityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GOOD":
 		fallthrough
 	case "BAD":
 		fallthrough
 	case "UNCERTAIN":
-		*e = GetInterpolatedAssetPropertyValuesQualityEnum(s)
+		*e = GetInterpolatedAssetPropertyValuesQualityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInterpolatedAssetPropertyValuesQualityEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInterpolatedAssetPropertyValuesQualityEnum: %v", v)
 	}
 }
 

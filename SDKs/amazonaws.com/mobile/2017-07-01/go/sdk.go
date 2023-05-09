@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK -  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those resources.
 // https://docs.aws.amazon.com/mobile/ - Amazon Web Services documentation
 type SDK struct {
@@ -244,7 +259,10 @@ func (s *SDK) CreateProject(ctx context.Context, request operations.CreateProjec
 // DeleteProject -  Delets a project in AWS Mobile Hub.
 func (s *SDK) DeleteProject(ctx context.Context, request operations.DeleteProjectRequest) (*operations.DeleteProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -340,7 +358,10 @@ func (s *SDK) DeleteProject(ctx context.Context, request operations.DeleteProjec
 // DescribeBundle -  Get the bundle details for the requested bundle id.
 func (s *SDK) DescribeBundle(ctx context.Context, request operations.DescribeBundleRequest) (*operations.DescribeBundleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bundles/{bundleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bundles/{bundleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -556,7 +577,10 @@ func (s *SDK) DescribeProject(ctx context.Context, request operations.DescribePr
 // ExportBundle -  Generates customized software development kit (SDK) and or tool packages used to integrate mobile web or mobile app clients with backend AWS resources.
 func (s *SDK) ExportBundle(ctx context.Context, request operations.ExportBundleRequest) (*operations.ExportBundleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bundles/{bundleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bundles/{bundleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -666,7 +690,10 @@ func (s *SDK) ExportBundle(ctx context.Context, request operations.ExportBundleR
 // ExportProject -  Exports project configuration to a snapshot which can be downloaded and shared. Note that mobile app push credentials are encrypted in exported projects, so they can only be shared successfully within the same AWS account.
 func (s *SDK) ExportProject(ctx context.Context, request operations.ExportProjectRequest) (*operations.ExportProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/exports/{projectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/exports/{projectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -2,29 +2,26 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TaxRatesByCountryCodeRequest{
-        CountryCode: "US",
-        Date: "2020-09-02",
-        Domain: "api.taxrates.io",
-        Filter: "corrupti",
-        ProductCodes: "C010",
-        Province: "provident",
-        Zip: "71642",
-    }
-
     ctx := context.Background()
-    res, err := s.V1Tax.TaxRatesByCountryCode(ctx, req)
+    res, err := s.V1Tax.TaxRatesByCountryCode(ctx, operations.TaxRatesByCountryCodeRequest{
+        CountryCode: sdk.String("US"),
+        Date: sdk.String("2020-09-02"),
+        Domain: sdk.String("api.taxrates.io"),
+        Filter: sdk.String("corrupti"),
+        ProductCodes: sdk.String("C010"),
+        Province: sdk.String("provident"),
+        Zip: sdk.String("71642"),
+    })
     if err != nil {
         log.Fatal(err)
     }

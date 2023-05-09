@@ -23,12 +23,16 @@ const (
 	DimensionFilterOperatorEnumInList              DimensionFilterOperatorEnum = "IN_LIST"
 )
 
+func (e DimensionFilterOperatorEnum) ToPointer() *DimensionFilterOperatorEnum {
+	return &e
+}
+
 func (e *DimensionFilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATOR_UNSPECIFIED":
 		fallthrough
 	case "REGEXP":
@@ -48,10 +52,10 @@ func (e *DimensionFilterOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "NUMERIC_LESS_THAN":
 		fallthrough
 	case "IN_LIST":
-		*e = DimensionFilterOperatorEnum(s)
+		*e = DimensionFilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DimensionFilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for DimensionFilterOperatorEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	ChartDataAggregateTypeEnumSum                           ChartDataAggregateTypeEnum = "SUM"
 )
 
+func (e ChartDataAggregateTypeEnum) ToPointer() *ChartDataAggregateTypeEnum {
+	return &e
+}
+
 func (e *ChartDataAggregateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHART_AGGREGATE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AVERAGE":
@@ -39,10 +43,10 @@ func (e *ChartDataAggregateTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MIN":
 		fallthrough
 	case "SUM":
-		*e = ChartDataAggregateTypeEnum(s)
+		*e = ChartDataAggregateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChartDataAggregateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChartDataAggregateTypeEnum: %v", v)
 	}
 }
 

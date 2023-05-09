@@ -16,21 +16,25 @@ const (
 	GoogleCloudIntegrationsV1alphaTriggerConfigNextTasksExecutionPolicyEnumRunFirstMatch                       GoogleCloudIntegrationsV1alphaTriggerConfigNextTasksExecutionPolicyEnum = "RUN_FIRST_MATCH"
 )
 
+func (e GoogleCloudIntegrationsV1alphaTriggerConfigNextTasksExecutionPolicyEnum) ToPointer() *GoogleCloudIntegrationsV1alphaTriggerConfigNextTasksExecutionPolicyEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaTriggerConfigNextTasksExecutionPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEXT_TASKS_EXECUTION_POLICY_UNSPECIFIED":
 		fallthrough
 	case "RUN_ALL_MATCH":
 		fallthrough
 	case "RUN_FIRST_MATCH":
-		*e = GoogleCloudIntegrationsV1alphaTriggerConfigNextTasksExecutionPolicyEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaTriggerConfigNextTasksExecutionPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTriggerConfigNextTasksExecutionPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTriggerConfigNextTasksExecutionPolicyEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	GoogleCloudIntegrationsV1alphaTriggerConfigTriggerTypeEnumCloudScheduler         GoogleCloudIntegrationsV1alphaTriggerConfigTriggerTypeEnum = "CLOUD_SCHEDULER"
 )
 
+func (e GoogleCloudIntegrationsV1alphaTriggerConfigTriggerTypeEnum) ToPointer() *GoogleCloudIntegrationsV1alphaTriggerConfigTriggerTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaTriggerConfigTriggerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRIGGER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CRON":
@@ -66,10 +74,10 @@ func (e *GoogleCloudIntegrationsV1alphaTriggerConfigTriggerTypeEnum) UnmarshalJS
 	case "SFDC_CDC_CHANNEL":
 		fallthrough
 	case "CLOUD_SCHEDULER":
-		*e = GoogleCloudIntegrationsV1alphaTriggerConfigTriggerTypeEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaTriggerConfigTriggerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTriggerConfigTriggerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTriggerConfigTriggerTypeEnum: %v", v)
 	}
 }
 

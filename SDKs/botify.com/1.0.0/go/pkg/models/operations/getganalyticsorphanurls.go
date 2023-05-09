@@ -17,19 +17,23 @@ const (
 	GetGanalyticsOrphanURLsMediumEnumSocial  GetGanalyticsOrphanURLsMediumEnum = "social"
 )
 
+func (e GetGanalyticsOrphanURLsMediumEnum) ToPointer() *GetGanalyticsOrphanURLsMediumEnum {
+	return &e
+}
+
 func (e *GetGanalyticsOrphanURLsMediumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "organic":
 		fallthrough
 	case "social":
-		*e = GetGanalyticsOrphanURLsMediumEnum(s)
+		*e = GetGanalyticsOrphanURLsMediumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGanalyticsOrphanURLsMediumEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGanalyticsOrphanURLsMediumEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	GetGanalyticsOrphanURLsSourceEnumYandex     GetGanalyticsOrphanURLsSourceEnum = "yandex"
 )
 
+func (e GetGanalyticsOrphanURLsSourceEnum) ToPointer() *GetGanalyticsOrphanURLsSourceEnum {
+	return &e
+}
+
 func (e *GetGanalyticsOrphanURLsSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "aol":
@@ -92,10 +100,10 @@ func (e *GetGanalyticsOrphanURLsSourceEnum) UnmarshalJSON(data []byte) error {
 	case "yahoo":
 		fallthrough
 	case "yandex":
-		*e = GetGanalyticsOrphanURLsSourceEnum(s)
+		*e = GetGanalyticsOrphanURLsSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGanalyticsOrphanURLsSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGanalyticsOrphanURLsSourceEnum: %v", v)
 	}
 }
 

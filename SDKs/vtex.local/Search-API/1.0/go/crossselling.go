@@ -48,7 +48,10 @@ func (s *crossSelling) ProductSearchAccessories(ctx context.Context, request ope
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/accessories/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/accessories/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -100,7 +103,10 @@ func (s *crossSelling) ProductSearchShowTogether(ctx context.Context, request op
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/showtogether/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/showtogether/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -152,7 +158,10 @@ func (s *crossSelling) ProductSearchSimilars(ctx context.Context, request operat
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/similars/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/similars/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -204,7 +213,10 @@ func (s *crossSelling) ProductSearchSuggestions(ctx context.Context, request ope
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/suggestions/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/suggestions/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -256,7 +268,10 @@ func (s *crossSelling) ProductSearchWhoBoughtAlsoBought(ctx context.Context, req
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/whoboughtalsobought/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/whoboughtalsobought/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -317,7 +332,10 @@ func (s *crossSelling) ProductSearchWhoSawAlsoBought(ctx context.Context, reques
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/whosawalsobought/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/whosawalsobought/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -378,7 +396,10 @@ func (s *crossSelling) ProductSearchWhoSawAlsoSaw(ctx context.Context, request o
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/whosawalsosaw/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/crossselling/whosawalsosaw/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

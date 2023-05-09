@@ -32,7 +32,10 @@ func newCollectionChangeset(defaultClient, securityClient HTTPClient, serverURL,
 
 func (s *collectionChangeset) GetCollectionChangeset(ctx context.Context, request operations.GetCollectionChangesetRequest) (*operations.GetCollectionChangesetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bid}/collections/{cid}/changeset", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/buckets/{bid}/collections/{cid}/changeset", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

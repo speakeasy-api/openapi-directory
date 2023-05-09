@@ -16,17 +16,21 @@ const (
 	PutAggregationAuthorizationXAmzTargetEnumStarlingDoveServicePutAggregationAuthorization PutAggregationAuthorizationXAmzTargetEnum = "StarlingDoveService.PutAggregationAuthorization"
 )
 
+func (e PutAggregationAuthorizationXAmzTargetEnum) ToPointer() *PutAggregationAuthorizationXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutAggregationAuthorizationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.PutAggregationAuthorization":
-		*e = PutAggregationAuthorizationXAmzTargetEnum(s)
+		*e = PutAggregationAuthorizationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutAggregationAuthorizationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutAggregationAuthorizationXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -13,189 +13,168 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudtrace
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudtraceProjectsPatchTracesRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.CloudtraceProjectsPatchTraces(ctx, operations.CloudtraceProjectsPatchTracesRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         Traces: &shared.Traces{
             Traces: []shared.Trace{
                 shared.Trace{
-                    ProjectID: "distinctio",
+                    ProjectID: sdk.String("distinctio"),
                     Spans: []shared.TraceSpan{
                         shared.TraceSpan{
-                            EndTime: "unde",
-                            Kind: "RPC_CLIENT",
+                            EndTime: sdk.String("unde"),
+                            Kind: shared.TraceSpanKindEnumRPCClient.ToPointer(),
                             Labels: map[string]string{
                                 "illum": "vel",
                                 "error": "deserunt",
                                 "suscipit": "iure",
                             },
-                            Name: "magnam",
-                            ParentSpanID: "debitis",
-                            SpanID: "ipsa",
-                            StartTime: "delectus",
+                            Name: sdk.String("Raquel Bednar"),
+                            ParentSpanID: sdk.String("suscipit"),
+                            SpanID: sdk.String("molestiae"),
+                            StartTime: sdk.String("minus"),
                         },
                         shared.TraceSpan{
-                            EndTime: "tempora",
-                            Kind: "RPC_SERVER",
+                            EndTime: sdk.String("placeat"),
+                            Kind: shared.TraceSpanKindEnumRPCServer.ToPointer(),
                             Labels: map[string]string{
-                                "minus": "placeat",
-                                "voluptatum": "iusto",
+                                "excepturi": "nisi",
+                                "recusandae": "temporibus",
                             },
-                            Name: "excepturi",
-                            ParentSpanID: "nisi",
-                            SpanID: "recusandae",
-                            StartTime: "temporibus",
+                            Name: sdk.String("Erica Bogisich III"),
+                            ParentSpanID: sdk.String("repellendus"),
+                            SpanID: sdk.String("sapiente"),
+                            StartTime: sdk.String("quo"),
                         },
                         shared.TraceSpan{
-                            EndTime: "ab",
-                            Kind: "RPC_SERVER",
-                            Labels: map[string]string{
-                                "deserunt": "perferendis",
-                            },
-                            Name: "ipsam",
-                            ParentSpanID: "repellendus",
-                            SpanID: "sapiente",
-                            StartTime: "quo",
-                        },
-                        shared.TraceSpan{
-                            EndTime: "odit",
-                            Kind: "RPC_CLIENT",
+                            EndTime: sdk.String("odit"),
+                            Kind: shared.TraceSpanKindEnumRPCClient.ToPointer(),
                             Labels: map[string]string{
                                 "maiores": "molestiae",
                                 "quod": "quod",
                                 "esse": "totam",
                                 "porro": "dolorum",
                             },
-                            Name: "dicta",
-                            ParentSpanID: "nam",
-                            SpanID: "officia",
-                            StartTime: "occaecati",
+                            Name: sdk.String("Antoinette Nikolaus"),
+                            ParentSpanID: sdk.String("deleniti"),
+                            SpanID: sdk.String("hic"),
+                            StartTime: sdk.String("optio"),
+                        },
+                        shared.TraceSpan{
+                            EndTime: sdk.String("totam"),
+                            Kind: shared.TraceSpanKindEnumSpanKindUnspecified.ToPointer(),
+                            Labels: map[string]string{
+                                "molestiae": "modi",
+                                "qui": "impedit",
+                            },
+                            Name: sdk.String("Cory Emmerich"),
+                            ParentSpanID: sdk.String("perferendis"),
+                            SpanID: sdk.String("ad"),
+                            StartTime: sdk.String("natus"),
                         },
                     },
-                    TraceID: "fugit",
+                    TraceID: sdk.String("sed"),
                 },
                 shared.Trace{
-                    ProjectID: "deleniti",
+                    ProjectID: sdk.String("iste"),
                     Spans: []shared.TraceSpan{
                         shared.TraceSpan{
-                            EndTime: "optio",
-                            Kind: "RPC_SERVER",
+                            EndTime: sdk.String("natus"),
+                            Kind: shared.TraceSpanKindEnumRPCServer.ToPointer(),
                             Labels: map[string]string{
-                                "commodi": "molestiae",
+                                "saepe": "fuga",
+                                "in": "corporis",
+                                "iste": "iure",
+                                "saepe": "quidem",
                             },
-                            Name: "modi",
-                            ParentSpanID: "qui",
-                            SpanID: "impedit",
-                            StartTime: "cum",
-                        },
-                        shared.TraceSpan{
-                            EndTime: "esse",
-                            Kind: "SPAN_KIND_UNSPECIFIED",
-                            Labels: map[string]string{
-                                "aspernatur": "perferendis",
-                                "ad": "natus",
-                                "sed": "iste",
-                            },
-                            Name: "dolor",
-                            ParentSpanID: "natus",
-                            SpanID: "laboriosam",
-                            StartTime: "hic",
-                        },
-                        shared.TraceSpan{
-                            EndTime: "saepe",
-                            Kind: "RPC_CLIENT",
-                            Labels: map[string]string{
-                                "corporis": "iste",
-                                "iure": "saepe",
-                            },
-                            Name: "quidem",
-                            ParentSpanID: "architecto",
-                            SpanID: "ipsa",
-                            StartTime: "reiciendis",
-                        },
-                        shared.TraceSpan{
-                            EndTime: "est",
-                            Kind: "RPC_SERVER",
-                            Labels: map[string]string{
-                                "dolores": "dolorem",
-                                "corporis": "explicabo",
-                                "nobis": "enim",
-                            },
-                            Name: "omnis",
-                            ParentSpanID: "nemo",
-                            SpanID: "minima",
-                            StartTime: "excepturi",
+                            Name: sdk.String("Brenda Wisozk"),
+                            ParentSpanID: sdk.String("laborum"),
+                            SpanID: sdk.String("dolores"),
+                            StartTime: sdk.String("dolorem"),
                         },
                     },
-                    TraceID: "accusantium",
+                    TraceID: sdk.String("corporis"),
                 },
                 shared.Trace{
-                    ProjectID: "iure",
+                    ProjectID: sdk.String("explicabo"),
                     Spans: []shared.TraceSpan{
                         shared.TraceSpan{
-                            EndTime: "doloribus",
-                            Kind: "RPC_CLIENT",
+                            EndTime: sdk.String("enim"),
+                            Kind: shared.TraceSpanKindEnumRPCServer.ToPointer(),
                             Labels: map[string]string{
-                                "mollitia": "dolorem",
+                                "minima": "excepturi",
+                                "accusantium": "iure",
                             },
-                            Name: "culpa",
-                            ParentSpanID: "consequuntur",
-                            SpanID: "repellat",
-                            StartTime: "mollitia",
+                            Name: sdk.String("Miss Aubrey Williamson"),
+                            ParentSpanID: sdk.String("culpa"),
+                            SpanID: sdk.String("consequuntur"),
+                            StartTime: sdk.String("repellat"),
                         },
                         shared.TraceSpan{
-                            EndTime: "occaecati",
-                            Kind: "SPAN_KIND_UNSPECIFIED",
+                            EndTime: sdk.String("mollitia"),
+                            Kind: shared.TraceSpanKindEnumRPCServer.ToPointer(),
                             Labels: map[string]string{
-                                "quam": "molestiae",
-                                "velit": "error",
+                                "commodi": "quam",
+                                "molestiae": "velit",
                             },
-                            Name: "quia",
-                            ParentSpanID: "quis",
-                            SpanID: "vitae",
-                            StartTime: "laborum",
+                            Name: sdk.String("Miss Eugene Hauck"),
+                            ParentSpanID: sdk.String("enim"),
+                            SpanID: sdk.String("odit"),
+                            StartTime: sdk.String("quo"),
                         },
                         shared.TraceSpan{
-                            EndTime: "animi",
-                            Kind: "SPAN_KIND_UNSPECIFIED",
+                            EndTime: sdk.String("sequi"),
+                            Kind: shared.TraceSpanKindEnumRPCClient.ToPointer(),
                             Labels: map[string]string{
-                                "quo": "sequi",
+                                "id": "possimus",
+                                "aut": "quasi",
                             },
-                            Name: "tenetur",
-                            ParentSpanID: "ipsam",
-                            SpanID: "id",
-                            StartTime: "possimus",
+                            Name: sdk.String("Dr. Jake Pacocha"),
+                            ParentSpanID: sdk.String("vero"),
+                            SpanID: sdk.String("nihil"),
+                            StartTime: sdk.String("praesentium"),
+                        },
+                        shared.TraceSpan{
+                            EndTime: sdk.String("voluptatibus"),
+                            Kind: shared.TraceSpanKindEnumSpanKindUnspecified.ToPointer(),
+                            Labels: map[string]string{
+                                "voluptate": "cum",
+                                "perferendis": "doloremque",
+                                "reprehenderit": "ut",
+                            },
+                            Name: sdk.String("Willie Hessel"),
+                            ParentSpanID: sdk.String("dicta"),
+                            SpanID: sdk.String("harum"),
+                            StartTime: sdk.String("enim"),
                         },
                     },
-                    TraceID: "aut",
+                    TraceID: sdk.String("accusamus"),
                 },
             },
         },
-        AccessToken: "quasi",
-        Alt: "media",
-        Callback: "temporibus",
-        Fields: "laborum",
-        Key: "quasi",
-        OauthToken: "reiciendis",
-        PrettyPrint: false,
-        ProjectID: "voluptatibus",
-        QuotaUser: "vero",
-        UploadType: "nihil",
-        UploadProtocol: "praesentium",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.CloudtraceProjectsPatchTraces(ctx, req, operations.CloudtraceProjectsPatchTracesSecurity{
+        AccessToken: sdk.String("commodi"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quae"),
+        Fields: sdk.String("ipsum"),
+        Key: sdk.String("quidem"),
+        OauthToken: sdk.String("molestias"),
+        PrettyPrint: sdk.Bool(false),
+        ProjectID: "excepturi",
+        QuotaUser: sdk.String("pariatur"),
+        UploadType: sdk.String("modi"),
+        UploadProtocol: sdk.String("praesentium"),
+    }, operations.CloudtraceProjectsPatchTracesSecurity{
         Option1: &operations.CloudtraceProjectsPatchTracesSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -216,11 +195,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `CloudtraceProjectsPatchTraces` - Sends new traces to Cloud Trace or updates existing traces. If the ID of a trace that you send matches that of an existing trace, any fields in the existing trace and its spans are overwritten by the provided values, and any new fields provided are merged with the existing trace data. If the ID does not match, a new trace is created.
-* `CloudtraceProjectsTracesGet` - Gets a single trace by its ID.
-* `CloudtraceProjectsTracesList` - Returns a list of traces that match the specified filter conditions.
+* [CloudtraceProjectsPatchTraces](docs/projects/README.md#cloudtraceprojectspatchtraces) - Sends new traces to Cloud Trace or updates existing traces. If the ID of a trace that you send matches that of an existing trace, any fields in the existing trace and its spans are overwritten by the provided values, and any new fields provided are merged with the existing trace data. If the ID does not match, a new trace is created.
+* [CloudtraceProjectsTracesGet](docs/projects/README.md#cloudtraceprojectstracesget) - Gets a single trace by its ID.
+* [CloudtraceProjectsTracesList](docs/projects/README.md#cloudtraceprojectstraceslist) - Returns a list of traces that match the specified filter conditions.
 <!-- End SDK Available Operations -->
 
 ### Maturity

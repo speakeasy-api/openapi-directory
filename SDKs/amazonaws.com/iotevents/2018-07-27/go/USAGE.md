@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateAlarmModelRequest{
+    ctx := context.Background()
+    res, err := s.CreateAlarmModel(ctx, operations.CreateAlarmModelRequest{
         RequestBody: operations.CreateAlarmModelRequestBody{
             AlarmCapabilities: &operations.CreateAlarmModelRequestBodyAlarmCapabilities{
                 AcknowledgeFlow: &shared.AcknowledgeFlow{
@@ -32,23 +33,23 @@ func main() {
                     shared.AlarmAction{
                         DynamoDB: &shared.DynamoDBAction{
                             HashKeyField: "provident",
-                            HashKeyType: "distinctio",
+                            HashKeyType: sdk.String("distinctio"),
                             HashKeyValue: "quibusdam",
-                            Operation: "unde",
+                            Operation: sdk.String("unde"),
                             Payload: &shared.Payload{
                                 ContentExpression: "nulla",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
-                            PayloadField: "illum",
-                            RangeKeyField: "vel",
-                            RangeKeyType: "error",
-                            RangeKeyValue: "deserunt",
+                            PayloadField: sdk.String("illum"),
+                            RangeKeyField: sdk.String("vel"),
+                            RangeKeyType: sdk.String("error"),
+                            RangeKeyValue: sdk.String("deserunt"),
                             TableName: "suscipit",
                         },
                         DynamoDBv2: &shared.DynamoDBv2Action{
                             Payload: &shared.Payload{
                                 ContentExpression: "iure",
-                                Type: "STRING",
+                                Type: shared.PayloadTypeEnumString,
                             },
                             TableName: "debitis",
                         },
@@ -56,33 +57,33 @@ func main() {
                             DeliveryStreamName: "ipsa",
                             Payload: &shared.Payload{
                                 ContentExpression: "delectus",
-                                Type: "STRING",
+                                Type: shared.PayloadTypeEnumString,
                             },
-                            Separator: "suscipit",
+                            Separator: sdk.String("suscipit"),
                         },
                         IotEvents: &shared.IotEventsAction{
                             InputName: "molestiae",
                             Payload: &shared.Payload{
                                 ContentExpression: "minus",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
                         },
                         IotSiteWise: &shared.IotSiteWiseAction{
-                            AssetID: "voluptatum",
-                            EntryID: "iusto",
-                            PropertyAlias: "excepturi",
-                            PropertyID: "nisi",
+                            AssetID: sdk.String("voluptatum"),
+                            EntryID: sdk.String("iusto"),
+                            PropertyAlias: sdk.String("excepturi"),
+                            PropertyID: sdk.String("nisi"),
                             PropertyValue: &shared.AssetPropertyValue{
-                                Quality: "recusandae",
+                                Quality: sdk.String("recusandae"),
                                 Timestamp: &shared.AssetPropertyTimestamp{
-                                    OffsetInNanos: "temporibus",
+                                    OffsetInNanos: sdk.String("temporibus"),
                                     TimeInSeconds: "ab",
                                 },
                                 Value: &shared.AssetPropertyVariant{
-                                    BooleanValue: "quis",
-                                    DoubleValue: "veritatis",
-                                    IntegerValue: "deserunt",
-                                    StringValue: "perferendis",
+                                    BooleanValue: sdk.String("quis"),
+                                    DoubleValue: sdk.String("veritatis"),
+                                    IntegerValue: sdk.String("deserunt"),
+                                    StringValue: sdk.String("perferendis"),
                                 },
                             },
                         },
@@ -90,52 +91,52 @@ func main() {
                             MqttTopic: "ipsam",
                             Payload: &shared.Payload{
                                 ContentExpression: "repellendus",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
                         },
                         Lambda: &shared.LambdaAction{
                             FunctionArn: "quo",
                             Payload: &shared.Payload{
                                 ContentExpression: "odit",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
                         },
                         Sns: &shared.SNSTopicPublishAction{
                             Payload: &shared.Payload{
                                 ContentExpression: "at",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
                             TargetArn: "molestiae",
                         },
                         Sqs: &shared.SqsAction{
                             Payload: &shared.Payload{
                                 ContentExpression: "quod",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
                             QueueURL: "esse",
-                            UseBase64: false,
+                            UseBase64: sdk.Bool(false),
                         },
                     },
                     shared.AlarmAction{
                         DynamoDB: &shared.DynamoDBAction{
                             HashKeyField: "totam",
-                            HashKeyType: "porro",
+                            HashKeyType: sdk.String("porro"),
                             HashKeyValue: "dolorum",
-                            Operation: "dicta",
+                            Operation: sdk.String("dicta"),
                             Payload: &shared.Payload{
                                 ContentExpression: "nam",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
-                            PayloadField: "occaecati",
-                            RangeKeyField: "fugit",
-                            RangeKeyType: "deleniti",
-                            RangeKeyValue: "hic",
+                            PayloadField: sdk.String("occaecati"),
+                            RangeKeyField: sdk.String("fugit"),
+                            RangeKeyType: sdk.String("deleniti"),
+                            RangeKeyValue: sdk.String("hic"),
                             TableName: "optio",
                         },
                         DynamoDBv2: &shared.DynamoDBv2Action{
                             Payload: &shared.Payload{
                                 ContentExpression: "totam",
-                                Type: "STRING",
+                                Type: shared.PayloadTypeEnumString,
                             },
                             TableName: "commodi",
                         },
@@ -143,33 +144,33 @@ func main() {
                             DeliveryStreamName: "molestiae",
                             Payload: &shared.Payload{
                                 ContentExpression: "modi",
-                                Type: "STRING",
+                                Type: shared.PayloadTypeEnumString,
                             },
-                            Separator: "impedit",
+                            Separator: sdk.String("impedit"),
                         },
                         IotEvents: &shared.IotEventsAction{
                             InputName: "cum",
                             Payload: &shared.Payload{
                                 ContentExpression: "esse",
-                                Type: "STRING",
+                                Type: shared.PayloadTypeEnumString,
                             },
                         },
                         IotSiteWise: &shared.IotSiteWiseAction{
-                            AssetID: "excepturi",
-                            EntryID: "aspernatur",
-                            PropertyAlias: "perferendis",
-                            PropertyID: "ad",
+                            AssetID: sdk.String("excepturi"),
+                            EntryID: sdk.String("aspernatur"),
+                            PropertyAlias: sdk.String("perferendis"),
+                            PropertyID: sdk.String("ad"),
                             PropertyValue: &shared.AssetPropertyValue{
-                                Quality: "natus",
+                                Quality: sdk.String("natus"),
                                 Timestamp: &shared.AssetPropertyTimestamp{
-                                    OffsetInNanos: "sed",
+                                    OffsetInNanos: sdk.String("sed"),
                                     TimeInSeconds: "iste",
                                 },
                                 Value: &shared.AssetPropertyVariant{
-                                    BooleanValue: "dolor",
-                                    DoubleValue: "natus",
-                                    IntegerValue: "laboriosam",
-                                    StringValue: "hic",
+                                    BooleanValue: sdk.String("dolor"),
+                                    DoubleValue: sdk.String("natus"),
+                                    IntegerValue: sdk.String("laboriosam"),
+                                    StringValue: sdk.String("hic"),
                                 },
                             },
                         },
@@ -177,52 +178,52 @@ func main() {
                             MqttTopic: "saepe",
                             Payload: &shared.Payload{
                                 ContentExpression: "fuga",
-                                Type: "STRING",
+                                Type: shared.PayloadTypeEnumString,
                             },
                         },
                         Lambda: &shared.LambdaAction{
                             FunctionArn: "corporis",
                             Payload: &shared.Payload{
                                 ContentExpression: "iste",
-                                Type: "STRING",
+                                Type: shared.PayloadTypeEnumString,
                             },
                         },
                         Sns: &shared.SNSTopicPublishAction{
                             Payload: &shared.Payload{
                                 ContentExpression: "saepe",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
                             TargetArn: "architecto",
                         },
                         Sqs: &shared.SqsAction{
                             Payload: &shared.Payload{
                                 ContentExpression: "ipsa",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
                             QueueURL: "est",
-                            UseBase64: false,
+                            UseBase64: sdk.Bool(false),
                         },
                     },
                     shared.AlarmAction{
                         DynamoDB: &shared.DynamoDBAction{
                             HashKeyField: "mollitia",
-                            HashKeyType: "laborum",
+                            HashKeyType: sdk.String("laborum"),
                             HashKeyValue: "dolores",
-                            Operation: "dolorem",
+                            Operation: sdk.String("dolorem"),
                             Payload: &shared.Payload{
                                 ContentExpression: "corporis",
-                                Type: "STRING",
+                                Type: shared.PayloadTypeEnumString,
                             },
-                            PayloadField: "nobis",
-                            RangeKeyField: "enim",
-                            RangeKeyType: "omnis",
-                            RangeKeyValue: "nemo",
+                            PayloadField: sdk.String("nobis"),
+                            RangeKeyField: sdk.String("enim"),
+                            RangeKeyType: sdk.String("omnis"),
+                            RangeKeyValue: sdk.String("nemo"),
                             TableName: "minima",
                         },
                         DynamoDBv2: &shared.DynamoDBv2Action{
                             Payload: &shared.Payload{
                                 ContentExpression: "excepturi",
-                                Type: "STRING",
+                                Type: shared.PayloadTypeEnumString,
                             },
                             TableName: "iure",
                         },
@@ -230,33 +231,33 @@ func main() {
                             DeliveryStreamName: "culpa",
                             Payload: &shared.Payload{
                                 ContentExpression: "doloribus",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
-                            Separator: "architecto",
+                            Separator: sdk.String("architecto"),
                         },
                         IotEvents: &shared.IotEventsAction{
                             InputName: "mollitia",
                             Payload: &shared.Payload{
                                 ContentExpression: "dolorem",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
                         },
                         IotSiteWise: &shared.IotSiteWiseAction{
-                            AssetID: "consequuntur",
-                            EntryID: "repellat",
-                            PropertyAlias: "mollitia",
-                            PropertyID: "occaecati",
+                            AssetID: sdk.String("consequuntur"),
+                            EntryID: sdk.String("repellat"),
+                            PropertyAlias: sdk.String("mollitia"),
+                            PropertyID: sdk.String("occaecati"),
                             PropertyValue: &shared.AssetPropertyValue{
-                                Quality: "numquam",
+                                Quality: sdk.String("numquam"),
                                 Timestamp: &shared.AssetPropertyTimestamp{
-                                    OffsetInNanos: "commodi",
+                                    OffsetInNanos: sdk.String("commodi"),
                                     TimeInSeconds: "quam",
                                 },
                                 Value: &shared.AssetPropertyVariant{
-                                    BooleanValue: "molestiae",
-                                    DoubleValue: "velit",
-                                    IntegerValue: "error",
-                                    StringValue: "quia",
+                                    BooleanValue: sdk.String("molestiae"),
+                                    DoubleValue: sdk.String("velit"),
+                                    IntegerValue: sdk.String("error"),
+                                    StringValue: sdk.String("quia"),
                                 },
                             },
                         },
@@ -264,35 +265,35 @@ func main() {
                             MqttTopic: "quis",
                             Payload: &shared.Payload{
                                 ContentExpression: "vitae",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
                         },
                         Lambda: &shared.LambdaAction{
                             FunctionArn: "animi",
                             Payload: &shared.Payload{
                                 ContentExpression: "enim",
-                                Type: "STRING",
+                                Type: shared.PayloadTypeEnumString,
                             },
                         },
                         Sns: &shared.SNSTopicPublishAction{
                             Payload: &shared.Payload{
                                 ContentExpression: "quo",
-                                Type: "STRING",
+                                Type: shared.PayloadTypeEnumString,
                             },
                             TargetArn: "tenetur",
                         },
                         Sqs: &shared.SqsAction{
                             Payload: &shared.Payload{
                                 ContentExpression: "ipsam",
-                                Type: "JSON",
+                                Type: shared.PayloadTypeEnumJSON,
                             },
                             QueueURL: "possimus",
-                            UseBase64: false,
+                            UseBase64: sdk.Bool(false),
                         },
                     },
                 },
             },
-            AlarmModelDescription: "aut",
+            AlarmModelDescription: sdk.String("aut"),
             AlarmModelName: "quasi",
             AlarmNotification: &operations.CreateAlarmModelRequestBodyAlarmNotification{
                 NotificationActions: []shared.NotificationAction{
@@ -302,15 +303,15 @@ func main() {
                                 FunctionArn: "temporibus",
                                 Payload: &shared.Payload{
                                     ContentExpression: "laborum",
-                                    Type: "STRING",
+                                    Type: shared.PayloadTypeEnumString,
                                 },
                             },
                         },
                         EmailConfigurations: []shared.EmailConfiguration{
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "voluptatibus",
-                                    Subject: "vero",
+                                    AdditionalMessage: sdk.String("voluptatibus"),
+                                    Subject: sdk.String("vero"),
                                 },
                                 From: "nihil",
                                 Recipients: shared.EmailRecipients{
@@ -318,19 +319,19 @@ func main() {
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "voluptatibus",
-                                                UserID: "ipsa",
+                                                UserID: sdk.String("ipsa"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "omnis",
-                                                UserID: "voluptate",
+                                                UserID: sdk.String("voluptate"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "cum",
-                                                UserID: "perferendis",
+                                                UserID: sdk.String("perferendis"),
                                             },
                                         },
                                     },
@@ -338,8 +339,8 @@ func main() {
                             },
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "doloremque",
-                                    Subject: "reprehenderit",
+                                    AdditionalMessage: sdk.String("doloremque"),
+                                    Subject: sdk.String("reprehenderit"),
                                 },
                                 From: "ut",
                                 Recipients: shared.EmailRecipients{
@@ -347,25 +348,25 @@ func main() {
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "dicta",
-                                                UserID: "corporis",
+                                                UserID: sdk.String("corporis"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "dolore",
-                                                UserID: "iusto",
+                                                UserID: sdk.String("iusto"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "dicta",
-                                                UserID: "harum",
+                                                UserID: sdk.String("harum"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "enim",
-                                                UserID: "accusamus",
+                                                UserID: sdk.String("accusamus"),
                                             },
                                         },
                                     },
@@ -373,8 +374,8 @@ func main() {
                             },
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "commodi",
-                                    Subject: "repudiandae",
+                                    AdditionalMessage: sdk.String("commodi"),
+                                    Subject: sdk.String("repudiandae"),
                                 },
                                 From: "quae",
                                 Recipients: shared.EmailRecipients{
@@ -382,7 +383,7 @@ func main() {
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "quidem",
-                                                UserID: "molestias",
+                                                UserID: sdk.String("molestias"),
                                             },
                                         },
                                     },
@@ -390,8 +391,8 @@ func main() {
                             },
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "excepturi",
-                                    Subject: "pariatur",
+                                    AdditionalMessage: sdk.String("excepturi"),
+                                    Subject: sdk.String("pariatur"),
                                 },
                                 From: "modi",
                                 Recipients: shared.EmailRecipients{
@@ -399,19 +400,19 @@ func main() {
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "rem",
-                                                UserID: "voluptates",
+                                                UserID: sdk.String("voluptates"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "quasi",
-                                                UserID: "repudiandae",
+                                                UserID: sdk.String("repudiandae"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "sint",
-                                                UserID: "veritatis",
+                                                UserID: sdk.String("veritatis"),
                                             },
                                         },
                                     },
@@ -420,88 +421,88 @@ func main() {
                         },
                         SmsConfigurations: []shared.SMSConfiguration{
                             shared.SMSConfiguration{
-                                AdditionalMessage: "incidunt",
+                                AdditionalMessage: sdk.String("incidunt"),
                                 Recipients: []shared.RecipientDetail{
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "consequatur",
-                                            UserID: "est",
+                                            UserID: sdk.String("est"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "quibusdam",
-                                            UserID: "explicabo",
+                                            UserID: sdk.String("explicabo"),
                                         },
                                     },
                                 },
-                                SenderID: "deserunt",
+                                SenderID: sdk.String("deserunt"),
                             },
                             shared.SMSConfiguration{
-                                AdditionalMessage: "distinctio",
+                                AdditionalMessage: sdk.String("distinctio"),
                                 Recipients: []shared.RecipientDetail{
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "labore",
-                                            UserID: "modi",
+                                            UserID: sdk.String("modi"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "qui",
-                                            UserID: "aliquid",
+                                            UserID: sdk.String("aliquid"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "cupiditate",
-                                            UserID: "quos",
+                                            UserID: sdk.String("quos"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "perferendis",
-                                            UserID: "magni",
+                                            UserID: sdk.String("magni"),
                                         },
                                     },
                                 },
-                                SenderID: "assumenda",
+                                SenderID: sdk.String("assumenda"),
                             },
                             shared.SMSConfiguration{
-                                AdditionalMessage: "ipsam",
+                                AdditionalMessage: sdk.String("ipsam"),
                                 Recipients: []shared.RecipientDetail{
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "fugit",
-                                            UserID: "dolorum",
+                                            UserID: sdk.String("dolorum"),
                                         },
                                     },
                                 },
-                                SenderID: "excepturi",
+                                SenderID: sdk.String("excepturi"),
                             },
                             shared.SMSConfiguration{
-                                AdditionalMessage: "tempora",
+                                AdditionalMessage: sdk.String("tempora"),
                                 Recipients: []shared.RecipientDetail{
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "tempore",
-                                            UserID: "labore",
+                                            UserID: sdk.String("labore"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "delectus",
-                                            UserID: "eum",
+                                            UserID: sdk.String("eum"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "non",
-                                            UserID: "eligendi",
+                                            UserID: sdk.String("eligendi"),
                                         },
                                     },
                                 },
-                                SenderID: "sint",
+                                SenderID: sdk.String("sint"),
                             },
                         },
                     },
@@ -511,15 +512,15 @@ func main() {
                                 FunctionArn: "aliquid",
                                 Payload: &shared.Payload{
                                     ContentExpression: "provident",
-                                    Type: "JSON",
+                                    Type: shared.PayloadTypeEnumJSON,
                                 },
                             },
                         },
                         EmailConfigurations: []shared.EmailConfiguration{
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "officia",
-                                    Subject: "dolor",
+                                    AdditionalMessage: sdk.String("officia"),
+                                    Subject: sdk.String("dolor"),
                                 },
                                 From: "debitis",
                                 Recipients: shared.EmailRecipients{
@@ -527,25 +528,25 @@ func main() {
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "dolorum",
-                                                UserID: "in",
+                                                UserID: sdk.String("in"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "in",
-                                                UserID: "illum",
+                                                UserID: sdk.String("illum"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "maiores",
-                                                UserID: "rerum",
+                                                UserID: sdk.String("rerum"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "dicta",
-                                                UserID: "magnam",
+                                                UserID: sdk.String("magnam"),
                                             },
                                         },
                                     },
@@ -553,8 +554,8 @@ func main() {
                             },
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "cumque",
-                                    Subject: "facere",
+                                    AdditionalMessage: sdk.String("cumque"),
+                                    Subject: sdk.String("facere"),
                                 },
                                 From: "ea",
                                 Recipients: shared.EmailRecipients{
@@ -562,13 +563,13 @@ func main() {
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "laborum",
-                                                UserID: "accusamus",
+                                                UserID: sdk.String("accusamus"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "non",
-                                                UserID: "occaecati",
+                                                UserID: sdk.String("occaecati"),
                                             },
                                         },
                                     },
@@ -576,8 +577,8 @@ func main() {
                             },
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "enim",
-                                    Subject: "accusamus",
+                                    AdditionalMessage: sdk.String("enim"),
+                                    Subject: sdk.String("accusamus"),
                                 },
                                 From: "delectus",
                                 Recipients: shared.EmailRecipients{
@@ -585,19 +586,19 @@ func main() {
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "provident",
-                                                UserID: "nam",
+                                                UserID: sdk.String("nam"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "id",
-                                                UserID: "blanditiis",
+                                                UserID: sdk.String("blanditiis"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "deleniti",
-                                                UserID: "sapiente",
+                                                UserID: sdk.String("sapiente"),
                                             },
                                         },
                                     },
@@ -606,22 +607,22 @@ func main() {
                         },
                         SmsConfigurations: []shared.SMSConfiguration{
                             shared.SMSConfiguration{
-                                AdditionalMessage: "deserunt",
+                                AdditionalMessage: sdk.String("deserunt"),
                                 Recipients: []shared.RecipientDetail{
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "vel",
-                                            UserID: "natus",
+                                            UserID: sdk.String("natus"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "omnis",
-                                            UserID: "molestiae",
+                                            UserID: sdk.String("molestiae"),
                                         },
                                     },
                                 },
-                                SenderID: "perferendis",
+                                SenderID: sdk.String("perferendis"),
                             },
                         },
                     },
@@ -631,15 +632,15 @@ func main() {
                                 FunctionArn: "nihil",
                                 Payload: &shared.Payload{
                                     ContentExpression: "magnam",
-                                    Type: "JSON",
+                                    Type: shared.PayloadTypeEnumJSON,
                                 },
                             },
                         },
                         EmailConfigurations: []shared.EmailConfiguration{
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "labore",
-                                    Subject: "labore",
+                                    AdditionalMessage: sdk.String("labore"),
+                                    Subject: sdk.String("labore"),
                                 },
                                 From: "suscipit",
                                 Recipients: shared.EmailRecipients{
@@ -647,19 +648,19 @@ func main() {
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "nobis",
-                                                UserID: "eum",
+                                                UserID: sdk.String("eum"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "vero",
-                                                UserID: "aspernatur",
+                                                UserID: sdk.String("aspernatur"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "architecto",
-                                                UserID: "magnam",
+                                                UserID: sdk.String("magnam"),
                                             },
                                         },
                                     },
@@ -667,8 +668,8 @@ func main() {
                             },
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "et",
-                                    Subject: "excepturi",
+                                    AdditionalMessage: sdk.String("et"),
+                                    Subject: sdk.String("excepturi"),
                                 },
                                 From: "ullam",
                                 Recipients: shared.EmailRecipients{
@@ -676,19 +677,19 @@ func main() {
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "quos",
-                                                UserID: "sint",
+                                                UserID: sdk.String("sint"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "accusantium",
-                                                UserID: "mollitia",
+                                                UserID: sdk.String("mollitia"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "reiciendis",
-                                                UserID: "mollitia",
+                                                UserID: sdk.String("mollitia"),
                                             },
                                         },
                                     },
@@ -696,8 +697,8 @@ func main() {
                             },
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "ad",
-                                    Subject: "eum",
+                                    AdditionalMessage: sdk.String("ad"),
+                                    Subject: sdk.String("eum"),
                                 },
                                 From: "dolor",
                                 Recipients: shared.EmailRecipients{
@@ -705,25 +706,25 @@ func main() {
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "odit",
-                                                UserID: "nemo",
+                                                UserID: sdk.String("nemo"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "quasi",
-                                                UserID: "iure",
+                                                UserID: sdk.String("iure"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "doloribus",
-                                                UserID: "debitis",
+                                                UserID: sdk.String("debitis"),
                                             },
                                         },
                                         shared.RecipientDetail{
                                             SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "eius",
-                                                UserID: "maxime",
+                                                UserID: sdk.String("maxime"),
                                             },
                                         },
                                     },
@@ -732,82 +733,82 @@ func main() {
                         },
                         SmsConfigurations: []shared.SMSConfiguration{
                             shared.SMSConfiguration{
-                                AdditionalMessage: "facilis",
+                                AdditionalMessage: sdk.String("facilis"),
                                 Recipients: []shared.RecipientDetail{
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "architecto",
-                                            UserID: "architecto",
+                                            UserID: sdk.String("architecto"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "repudiandae",
-                                            UserID: "ullam",
+                                            UserID: sdk.String("ullam"),
                                         },
                                     },
                                 },
-                                SenderID: "expedita",
+                                SenderID: sdk.String("expedita"),
                             },
                             shared.SMSConfiguration{
-                                AdditionalMessage: "nihil",
+                                AdditionalMessage: sdk.String("nihil"),
                                 Recipients: []shared.RecipientDetail{
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "quibusdam",
-                                            UserID: "sed",
+                                            UserID: sdk.String("sed"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "saepe",
-                                            UserID: "pariatur",
+                                            UserID: sdk.String("pariatur"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "accusantium",
-                                            UserID: "consequuntur",
+                                            UserID: sdk.String("consequuntur"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "praesentium",
-                                            UserID: "natus",
+                                            UserID: sdk.String("natus"),
                                         },
                                     },
                                 },
-                                SenderID: "magni",
+                                SenderID: sdk.String("magni"),
                             },
                             shared.SMSConfiguration{
-                                AdditionalMessage: "sunt",
+                                AdditionalMessage: sdk.String("sunt"),
                                 Recipients: []shared.RecipientDetail{
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "illum",
-                                            UserID: "pariatur",
+                                            UserID: sdk.String("pariatur"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "maxime",
-                                            UserID: "ea",
+                                            UserID: sdk.String("ea"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "excepturi",
-                                            UserID: "odit",
+                                            UserID: sdk.String("odit"),
                                         },
                                     },
                                     shared.RecipientDetail{
                                         SsoIdentity: &shared.SSOIdentity{
                                             IdentityStoreID: "ea",
-                                            UserID: "accusantium",
+                                            UserID: sdk.String("accusantium"),
                                         },
                                     },
                                 },
-                                SenderID: "ab",
+                                SenderID: sdk.String("ab"),
                             },
                         },
                     },
@@ -815,14 +816,14 @@ func main() {
             },
             AlarmRule: operations.CreateAlarmModelRequestBodyAlarmRule{
                 SimpleRule: &shared.SimpleRule{
-                    ComparisonOperator: "NOT_EQUAL",
+                    ComparisonOperator: shared.ComparisonOperatorEnumNotEqual,
                     InputProperty: "quidem",
                     Threshold: "ipsam",
                 },
             },
-            Key: "voluptate",
+            Key: sdk.String("voluptate"),
             RoleArn: "autem",
-            Severity: 722056,
+            Severity: sdk.Int64(722056),
             Tags: []shared.Tag{
                 shared.Tag{
                     Key: "pariatur",
@@ -830,17 +831,14 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "voluptatibus",
-        XAmzContentSha256: "perferendis",
-        XAmzCredential: "fugiat",
-        XAmzDate: "amet",
-        XAmzSecurityToken: "aut",
-        XAmzSignature: "cumque",
-        XAmzSignedHeaders: "corporis",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateAlarmModel(ctx, req)
+        XAmzAlgorithm: sdk.String("voluptatibus"),
+        XAmzContentSha256: sdk.String("perferendis"),
+        XAmzCredential: sdk.String("fugiat"),
+        XAmzDate: sdk.String("amet"),
+        XAmzSecurityToken: sdk.String("aut"),
+        XAmzSignature: sdk.String("cumque"),
+        XAmzSignedHeaders: sdk.String("corporis"),
+    })
     if err != nil {
         log.Fatal(err)
     }

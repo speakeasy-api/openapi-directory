@@ -16,17 +16,21 @@ const (
 	CheckDomainTransferabilityXAmzTargetEnumRoute53DomainsV20140515CheckDomainTransferability CheckDomainTransferabilityXAmzTargetEnum = "Route53Domains_v20140515.CheckDomainTransferability"
 )
 
+func (e CheckDomainTransferabilityXAmzTargetEnum) ToPointer() *CheckDomainTransferabilityXAmzTargetEnum {
+	return &e
+}
+
 func (e *CheckDomainTransferabilityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.CheckDomainTransferability":
-		*e = CheckDomainTransferabilityXAmzTargetEnum(s)
+		*e = CheckDomainTransferabilityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckDomainTransferabilityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckDomainTransferabilityXAmzTargetEnum: %v", v)
 	}
 }
 

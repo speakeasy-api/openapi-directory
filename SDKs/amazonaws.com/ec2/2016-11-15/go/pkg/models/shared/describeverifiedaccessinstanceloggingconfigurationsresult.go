@@ -15,19 +15,23 @@ const (
 	DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogsDeliveryStatusCodeEnumFailed  DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogsDeliveryStatusCodeEnum = "failed"
 )
 
+func (e DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogsDeliveryStatusCodeEnum) ToPointer() *DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogsDeliveryStatusCodeEnum {
+	return &e
+}
+
 func (e *DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogsDeliveryStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "failed":
-		*e = DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogsDeliveryStatusCodeEnum(s)
+		*e = DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogsDeliveryStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogsDeliveryStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsCloudWatchLogsDeliveryStatusCodeEnum: %v", v)
 	}
 }
 
@@ -52,19 +56,23 @@ const (
 	DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnumFailed  DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum = "failed"
 )
 
+func (e DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum) ToPointer() *DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum {
+	return &e
+}
+
 func (e *DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "failed":
-		*e = DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum(s)
+		*e = DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum: %v", v)
 	}
 }
 
@@ -89,19 +97,23 @@ const (
 	DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3DeliveryStatusCodeEnumFailed  DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3DeliveryStatusCodeEnum = "failed"
 )
 
+func (e DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3DeliveryStatusCodeEnum) ToPointer() *DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3DeliveryStatusCodeEnum {
+	return &e
+}
+
 func (e *DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3DeliveryStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "failed":
-		*e = DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3DeliveryStatusCodeEnum(s)
+		*e = DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3DeliveryStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3DeliveryStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVerifiedAccessInstanceLoggingConfigurationsResultLoggingConfigurationsAccessLogsS3DeliveryStatusCodeEnum: %v", v)
 	}
 }
 

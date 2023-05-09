@@ -17,45 +17,53 @@ const (
 	UserAttributesRoleEnumMaster UserAttributesRoleEnum = "master"
 )
 
+func (e UserAttributesRoleEnum) ToPointer() *UserAttributesRoleEnum {
+	return &e
+}
+
 func (e *UserAttributesRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "admin":
 		fallthrough
 	case "master":
-		*e = UserAttributesRoleEnum(s)
+		*e = UserAttributesRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserAttributesRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for UserAttributesRoleEnum: %v", v)
 	}
 }
 
 // UserAttributesStatusEnum - Indicates user activity status. `0` means the user is locked and cannot log in. `1` means the user is active and can log in.
-type UserAttributesStatusEnum string
+type UserAttributesStatusEnum int
 
 const (
-	UserAttributesStatusEnumZero UserAttributesStatusEnum = "0"
-	UserAttributesStatusEnumOne  UserAttributesStatusEnum = "1"
+	UserAttributesStatusEnumZero UserAttributesStatusEnum = 0
+	UserAttributesStatusEnumOne  UserAttributesStatusEnum = 1
 )
 
+func (e UserAttributesStatusEnum) ToPointer() *UserAttributesStatusEnum {
+	return &e
+}
+
 func (e *UserAttributesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = UserAttributesStatusEnum(s)
+	case 1:
+		*e = UserAttributesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserAttributesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UserAttributesStatusEnum: %v", v)
 	}
 }
 

@@ -20,32 +20,36 @@ type NotificationsGetAppEmailSettingsRequest struct {
 }
 
 // NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum - The status code return by the API. It can be 400 or 404 or 409 or 500.
-type NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum string
+type NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum int64
 
 const (
-	NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnumFourHundred        NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum = "400"
-	NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnumFourHundredAndFour NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum = "404"
-	NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnumFourHundredAndNine NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum = "409"
-	NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnumFiveHundred        NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum = "500"
+	NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnumFourHundred        NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum = 400
+	NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnumFourHundredAndFour NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum = 404
+	NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnumFourHundredAndNine NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum = 409
+	NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnumFiveHundred        NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum = 500
 )
 
+func (e NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum) ToPointer() *NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
+	switch v {
+	case 400:
 		fallthrough
-	case "404":
+	case 404:
 		fallthrough
-	case "409":
+	case 409:
 		fallthrough
-	case "500":
-		*e = NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum(s)
+	case 500:
+		*e = NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationsGetAppEmailSettingsDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -69,12 +73,16 @@ const (
 	NotificationsGetAppEmailSettings200ApplicationJSONSettingsDefaultValueEnumDailyAndIndividual NotificationsGetAppEmailSettings200ApplicationJSONSettingsDefaultValueEnum = "DailyAndIndividual"
 )
 
+func (e NotificationsGetAppEmailSettings200ApplicationJSONSettingsDefaultValueEnum) ToPointer() *NotificationsGetAppEmailSettings200ApplicationJSONSettingsDefaultValueEnum {
+	return &e
+}
+
 func (e *NotificationsGetAppEmailSettings200ApplicationJSONSettingsDefaultValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Disabled":
 		fallthrough
 	case "Individual":
@@ -82,10 +90,10 @@ func (e *NotificationsGetAppEmailSettings200ApplicationJSONSettingsDefaultValueE
 	case "Daily":
 		fallthrough
 	case "DailyAndIndividual":
-		*e = NotificationsGetAppEmailSettings200ApplicationJSONSettingsDefaultValueEnum(s)
+		*e = NotificationsGetAppEmailSettings200ApplicationJSONSettingsDefaultValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationsGetAppEmailSettings200ApplicationJSONSettingsDefaultValueEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationsGetAppEmailSettings200ApplicationJSONSettingsDefaultValueEnum: %v", v)
 	}
 }
 
@@ -96,17 +104,21 @@ const (
 	NotificationsGetAppEmailSettings200ApplicationJSONSettingsEventTypeEnumCrashNewCrashGroupCreated NotificationsGetAppEmailSettings200ApplicationJSONSettingsEventTypeEnum = "crash_newCrashGroupCreated"
 )
 
+func (e NotificationsGetAppEmailSettings200ApplicationJSONSettingsEventTypeEnum) ToPointer() *NotificationsGetAppEmailSettings200ApplicationJSONSettingsEventTypeEnum {
+	return &e
+}
+
 func (e *NotificationsGetAppEmailSettings200ApplicationJSONSettingsEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crash_newCrashGroupCreated":
-		*e = NotificationsGetAppEmailSettings200ApplicationJSONSettingsEventTypeEnum(s)
+		*e = NotificationsGetAppEmailSettings200ApplicationJSONSettingsEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationsGetAppEmailSettings200ApplicationJSONSettingsEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationsGetAppEmailSettings200ApplicationJSONSettingsEventTypeEnum: %v", v)
 	}
 }
 
@@ -121,12 +133,16 @@ const (
 	NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnumDefault            NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnum = "Default"
 )
 
+func (e NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnum) ToPointer() *NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnum {
+	return &e
+}
+
 func (e *NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Disabled":
 		fallthrough
 	case "Individual":
@@ -136,10 +152,10 @@ func (e *NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnum) Un
 	case "DailyAndIndividual":
 		fallthrough
 	case "Default":
-		*e = NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnum(s)
+		*e = NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationsGetAppEmailSettings200ApplicationJSONSettingsValueEnum: %v", v)
 	}
 }
 

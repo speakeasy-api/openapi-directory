@@ -7,38 +7,42 @@ import (
 	"fmt"
 )
 
-type BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum string
+type BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum int
 
 const (
-	BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnumZero  BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum = "0"
-	BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnumOne   BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum = "1"
-	BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnumTwo   BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum = "2"
-	BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnumThree BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum = "3"
-	BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnumFour  BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum = "4"
-	BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnumFive  BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum = "5"
+	BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnumZero  BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum = 0
+	BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnumOne   BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum = 1
+	BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnumTwo   BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum = 2
+	BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnumThree BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum = 3
+	BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnumFour  BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum = 4
+	BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnumFive  BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum = 5
 )
 
+func (e BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum) ToPointer() *BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum {
+	return &e
+}
+
 func (e *BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
-		*e = BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum(s)
+	case 5:
+		*e = BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelsLayoutTemplateTypeEnum: %v", v)
 	}
 }
 

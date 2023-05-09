@@ -16,17 +16,21 @@ const (
 	CreateRealtimeEndpointXAmzTargetEnumAmazonMl20141212CreateRealtimeEndpoint CreateRealtimeEndpointXAmzTargetEnum = "AmazonML_20141212.CreateRealtimeEndpoint"
 )
 
+func (e CreateRealtimeEndpointXAmzTargetEnum) ToPointer() *CreateRealtimeEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateRealtimeEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.CreateRealtimeEndpoint":
-		*e = CreateRealtimeEndpointXAmzTargetEnum(s)
+		*e = CreateRealtimeEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRealtimeEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRealtimeEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

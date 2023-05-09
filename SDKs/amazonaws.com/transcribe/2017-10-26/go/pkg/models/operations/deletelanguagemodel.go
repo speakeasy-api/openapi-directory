@@ -16,17 +16,21 @@ const (
 	DeleteLanguageModelXAmzTargetEnumTranscribeDeleteLanguageModel DeleteLanguageModelXAmzTargetEnum = "Transcribe.DeleteLanguageModel"
 )
 
+func (e DeleteLanguageModelXAmzTargetEnum) ToPointer() *DeleteLanguageModelXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteLanguageModelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Transcribe.DeleteLanguageModel":
-		*e = DeleteLanguageModelXAmzTargetEnum(s)
+		*e = DeleteLanguageModelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLanguageModelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLanguageModelXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -30,12 +30,16 @@ const (
 	ComponentClsEnumRadioComponent     ComponentClsEnum = "radioComponent"
 )
 
+func (e ComponentClsEnum) ToPointer() *ComponentClsEnum {
+	return &e
+}
+
 func (e *ComponentClsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "labelComponent":
 		fallthrough
 	case "numberComponent":
@@ -69,10 +73,10 @@ func (e *ComponentClsEnum) UnmarshalJSON(data []byte) error {
 	case "checkboxComponent":
 		fallthrough
 	case "radioComponent":
-		*e = ComponentClsEnum(s)
+		*e = ComponentClsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComponentClsEnum: %s", s)
+		return fmt.Errorf("invalid value for ComponentClsEnum: %v", v)
 	}
 }
 

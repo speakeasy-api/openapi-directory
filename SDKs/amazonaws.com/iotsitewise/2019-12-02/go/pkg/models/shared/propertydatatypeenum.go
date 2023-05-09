@@ -17,12 +17,16 @@ const (
 	PropertyDataTypeEnumStruct  PropertyDataTypeEnum = "STRUCT"
 )
 
+func (e PropertyDataTypeEnum) ToPointer() *PropertyDataTypeEnum {
+	return &e
+}
+
 func (e *PropertyDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRING":
 		fallthrough
 	case "INTEGER":
@@ -32,9 +36,9 @@ func (e *PropertyDataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BOOLEAN":
 		fallthrough
 	case "STRUCT":
-		*e = PropertyDataTypeEnum(s)
+		*e = PropertyDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyDataTypeEnum: %v", v)
 	}
 }

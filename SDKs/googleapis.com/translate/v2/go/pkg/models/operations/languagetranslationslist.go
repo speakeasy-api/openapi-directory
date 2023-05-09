@@ -33,19 +33,23 @@ const (
 	LanguageTranslationsListFormatEnumText LanguageTranslationsListFormatEnum = "text"
 )
 
+func (e LanguageTranslationsListFormatEnum) ToPointer() *LanguageTranslationsListFormatEnum {
+	return &e
+}
+
 func (e *LanguageTranslationsListFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "html":
 		fallthrough
 	case "text":
-		*e = LanguageTranslationsListFormatEnum(s)
+		*e = LanguageTranslationsListFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LanguageTranslationsListFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LanguageTranslationsListFormatEnum: %v", v)
 	}
 }
 

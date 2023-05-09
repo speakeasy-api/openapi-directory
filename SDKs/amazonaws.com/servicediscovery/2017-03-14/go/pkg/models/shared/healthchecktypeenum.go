@@ -15,20 +15,24 @@ const (
 	HealthCheckTypeEnumTCP   HealthCheckTypeEnum = "TCP"
 )
 
+func (e HealthCheckTypeEnum) ToPointer() *HealthCheckTypeEnum {
+	return &e
+}
+
 func (e *HealthCheckTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP":
 		fallthrough
 	case "HTTPS":
 		fallthrough
 	case "TCP":
-		*e = HealthCheckTypeEnum(s)
+		*e = HealthCheckTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HealthCheckTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HealthCheckTypeEnum: %v", v)
 	}
 }

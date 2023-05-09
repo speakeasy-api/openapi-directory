@@ -16,12 +16,16 @@ const (
 	AmiSortByEnumAffectedInstances AmiSortByEnum = "AFFECTED_INSTANCES"
 )
 
+func (e AmiSortByEnum) ToPointer() *AmiSortByEnum {
+	return &e
+}
+
 func (e *AmiSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRITICAL":
 		fallthrough
 	case "HIGH":
@@ -29,9 +33,9 @@ func (e *AmiSortByEnum) UnmarshalJSON(data []byte) error {
 	case "ALL":
 		fallthrough
 	case "AFFECTED_INSTANCES":
-		*e = AmiSortByEnum(s)
+		*e = AmiSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AmiSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for AmiSortByEnum: %v", v)
 	}
 }

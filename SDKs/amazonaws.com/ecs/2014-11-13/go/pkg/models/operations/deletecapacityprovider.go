@@ -16,17 +16,21 @@ const (
 	DeleteCapacityProviderXAmzTargetEnumAmazonEc2ContainerServiceV20141113DeleteCapacityProvider DeleteCapacityProviderXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.DeleteCapacityProvider"
 )
 
+func (e DeleteCapacityProviderXAmzTargetEnum) ToPointer() *DeleteCapacityProviderXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteCapacityProviderXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.DeleteCapacityProvider":
-		*e = DeleteCapacityProviderXAmzTargetEnum(s)
+		*e = DeleteCapacityProviderXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteCapacityProviderXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteCapacityProviderXAmzTargetEnum: %v", v)
 	}
 }
 

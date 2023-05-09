@@ -2,31 +2,32 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MirrorAccountsInsertRequest{
+    ctx := context.Background()
+    res, err := s.Accounts.MirrorAccountsInsert(ctx, operations.MirrorAccountsInsertRequest{
         Account: &shared.Account{
             AuthTokens: []shared.AuthToken{
                 shared.AuthToken{
-                    AuthToken: "provident",
-                    Type: "distinctio",
+                    AuthToken: sdk.String("provident"),
+                    Type: sdk.String("distinctio"),
                 },
                 shared.AuthToken{
-                    AuthToken: "quibusdam",
-                    Type: "unde",
+                    AuthToken: sdk.String("quibusdam"),
+                    Type: sdk.String("unde"),
                 },
                 shared.AuthToken{
-                    AuthToken: "nulla",
-                    Type: "corrupti",
+                    AuthToken: sdk.String("nulla"),
+                    Type: sdk.String("corrupti"),
                 },
             },
             Features: []string{
@@ -35,32 +36,29 @@ func main() {
                 "deserunt",
                 "suscipit",
             },
-            Password: "iure",
+            Password: sdk.String("iure"),
             UserData: []shared.UserData{
                 shared.UserData{
-                    Key: "debitis",
-                    Value: "ipsa",
+                    Key: sdk.String("debitis"),
+                    Value: sdk.String("ipsa"),
                 },
                 shared.UserData{
-                    Key: "delectus",
-                    Value: "tempora",
+                    Key: sdk.String("delectus"),
+                    Value: sdk.String("tempora"),
                 },
             },
         },
         AccountName: "suscipit",
         AccountType: "molestiae",
-        Alt: "json",
-        Fields: "minus",
-        Key: "placeat",
-        OauthToken: "voluptatum",
-        PrettyPrint: false,
-        QuotaUser: "iusto",
-        UserIP: "excepturi",
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("minus"),
+        Key: sdk.String("placeat"),
+        OauthToken: sdk.String("voluptatum"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iusto"),
+        UserIP: sdk.String("excepturi"),
         UserToken: "nisi",
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.MirrorAccountsInsert(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

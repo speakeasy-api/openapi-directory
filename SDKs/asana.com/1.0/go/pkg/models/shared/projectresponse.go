@@ -33,12 +33,16 @@ const (
 	ProjectResponseColorEnumLightWarmGray ProjectResponseColorEnum = "light-warm-gray"
 )
 
+func (e ProjectResponseColorEnum) ToPointer() *ProjectResponseColorEnum {
+	return &e
+}
+
 func (e *ProjectResponseColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dark-pink":
 		fallthrough
 	case "dark-green":
@@ -74,10 +78,10 @@ func (e *ProjectResponseColorEnum) UnmarshalJSON(data []byte) error {
 	case "light-purple":
 		fallthrough
 	case "light-warm-gray":
-		*e = ProjectResponseColorEnum(s)
+		*e = ProjectResponseColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectResponseColorEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectResponseColorEnum: %v", v)
 	}
 }
 
@@ -101,12 +105,16 @@ const (
 	ProjectResponseCurrentStatusColorEnumBlue   ProjectResponseCurrentStatusColorEnum = "blue"
 )
 
+func (e ProjectResponseCurrentStatusColorEnum) ToPointer() *ProjectResponseCurrentStatusColorEnum {
+	return &e
+}
+
 func (e *ProjectResponseCurrentStatusColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "green":
 		fallthrough
 	case "yellow":
@@ -114,10 +122,10 @@ func (e *ProjectResponseCurrentStatusColorEnum) UnmarshalJSON(data []byte) error
 	case "red":
 		fallthrough
 	case "blue":
-		*e = ProjectResponseCurrentStatusColorEnum(s)
+		*e = ProjectResponseCurrentStatusColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectResponseCurrentStatusColorEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectResponseCurrentStatusColorEnum: %v", v)
 	}
 }
 
@@ -155,21 +163,25 @@ const (
 	ProjectResponseCurrentStatusUpdateResourceSubtypeEnumGoalStatusUpdate      ProjectResponseCurrentStatusUpdateResourceSubtypeEnum = "goal_status_update"
 )
 
+func (e ProjectResponseCurrentStatusUpdateResourceSubtypeEnum) ToPointer() *ProjectResponseCurrentStatusUpdateResourceSubtypeEnum {
+	return &e
+}
+
 func (e *ProjectResponseCurrentStatusUpdateResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "project_status_update":
 		fallthrough
 	case "portfolio_status_update":
 		fallthrough
 	case "goal_status_update":
-		*e = ProjectResponseCurrentStatusUpdateResourceSubtypeEnum(s)
+		*e = ProjectResponseCurrentStatusUpdateResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectResponseCurrentStatusUpdateResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectResponseCurrentStatusUpdateResourceSubtypeEnum: %v", v)
 	}
 }
 
@@ -196,12 +208,16 @@ const (
 	ProjectResponseDefaultViewEnumTimeline ProjectResponseDefaultViewEnum = "timeline"
 )
 
+func (e ProjectResponseDefaultViewEnum) ToPointer() *ProjectResponseDefaultViewEnum {
+	return &e
+}
+
 func (e *ProjectResponseDefaultViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "list":
 		fallthrough
 	case "board":
@@ -209,10 +225,10 @@ func (e *ProjectResponseDefaultViewEnum) UnmarshalJSON(data []byte) error {
 	case "calendar":
 		fallthrough
 	case "timeline":
-		*e = ProjectResponseDefaultViewEnum(s)
+		*e = ProjectResponseDefaultViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectResponseDefaultViewEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectResponseDefaultViewEnum: %v", v)
 	}
 }
 
@@ -254,12 +270,16 @@ const (
 	ProjectResponseIconEnumCoins          ProjectResponseIconEnum = "coins"
 )
 
+func (e ProjectResponseIconEnum) ToPointer() *ProjectResponseIconEnum {
+	return &e
+}
+
 func (e *ProjectResponseIconEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "list":
 		fallthrough
 	case "board":
@@ -323,10 +343,10 @@ func (e *ProjectResponseIconEnum) UnmarshalJSON(data []byte) error {
 	case "ticket":
 		fallthrough
 	case "coins":
-		*e = ProjectResponseIconEnum(s)
+		*e = ProjectResponseIconEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectResponseIconEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectResponseIconEnum: %v", v)
 	}
 }
 

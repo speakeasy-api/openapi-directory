@@ -13,17 +13,21 @@ const (
 	AddressV1CountryCodeEnumUsa AddressV1CountryCodeEnum = "USA"
 )
 
+func (e AddressV1CountryCodeEnum) ToPointer() *AddressV1CountryCodeEnum {
+	return &e
+}
+
 func (e *AddressV1CountryCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USA":
-		*e = AddressV1CountryCodeEnum(s)
+		*e = AddressV1CountryCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddressV1CountryCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AddressV1CountryCodeEnum: %v", v)
 	}
 }
 
@@ -83,12 +87,16 @@ const (
 	AddressV1StateEnumWy AddressV1StateEnum = "WY"
 )
 
+func (e AddressV1StateEnum) ToPointer() *AddressV1StateEnum {
+	return &e
+}
+
 func (e *AddressV1StateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL":
 		fallthrough
 	case "AK":
@@ -190,10 +198,10 @@ func (e *AddressV1StateEnum) UnmarshalJSON(data []byte) error {
 	case "WI":
 		fallthrough
 	case "WY":
-		*e = AddressV1StateEnum(s)
+		*e = AddressV1StateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddressV1StateEnum: %s", s)
+		return fmt.Errorf("invalid value for AddressV1StateEnum: %v", v)
 	}
 }
 

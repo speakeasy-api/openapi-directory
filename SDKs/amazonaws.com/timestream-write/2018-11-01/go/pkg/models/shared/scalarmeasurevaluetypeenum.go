@@ -17,12 +17,16 @@ const (
 	ScalarMeasureValueTypeEnumTimestamp ScalarMeasureValueTypeEnum = "TIMESTAMP"
 )
 
+func (e ScalarMeasureValueTypeEnum) ToPointer() *ScalarMeasureValueTypeEnum {
+	return &e
+}
+
 func (e *ScalarMeasureValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOUBLE":
 		fallthrough
 	case "BIGINT":
@@ -32,9 +36,9 @@ func (e *ScalarMeasureValueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "VARCHAR":
 		fallthrough
 	case "TIMESTAMP":
-		*e = ScalarMeasureValueTypeEnum(s)
+		*e = ScalarMeasureValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScalarMeasureValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScalarMeasureValueTypeEnum: %v", v)
 	}
 }

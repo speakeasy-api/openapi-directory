@@ -20,12 +20,16 @@ const (
 	ColumnNameEnumValue               ColumnNameEnum = "VALUE"
 )
 
+func (e ColumnNameEnum) ToPointer() *ColumnNameEnum {
+	return &e
+}
+
 func (e *ColumnNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALIAS":
 		fallthrough
 	case "ASSET_ID":
@@ -41,9 +45,9 @@ func (e *ColumnNameEnum) UnmarshalJSON(data []byte) error {
 	case "QUALITY":
 		fallthrough
 	case "VALUE":
-		*e = ColumnNameEnum(s)
+		*e = ColumnNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ColumnNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ColumnNameEnum: %v", v)
 	}
 }

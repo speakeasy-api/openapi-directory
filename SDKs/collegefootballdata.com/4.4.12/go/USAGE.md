@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,19 +16,17 @@ func main() {
         }),
     )
 
-    req := operations.GetLinesRequest{
-        Away: "corrupti",
-        Conference: "provident",
-        GameID: 715190,
-        Home: "quibusdam",
-        SeasonType: "unde",
-        Team: "nulla",
-        Week: 544883,
-        Year: 847252,
-    }
-
     ctx := context.Background()
-    res, err := s.Betting.GetLines(ctx, req)
+    res, err := s.Betting.GetLines(ctx, operations.GetLinesRequest{
+        Away: sdk.String("corrupti"),
+        Conference: sdk.String("provident"),
+        GameID: sdk.Int64(715190),
+        Home: sdk.String("quibusdam"),
+        SeasonType: sdk.String("unde"),
+        Team: sdk.String("nulla"),
+        Week: sdk.Int64(544883),
+        Year: sdk.Int64(847252),
+    })
     if err != nil {
         log.Fatal(err)
     }

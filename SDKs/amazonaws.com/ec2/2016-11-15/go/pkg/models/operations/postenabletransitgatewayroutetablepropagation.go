@@ -15,17 +15,21 @@ const (
 	POSTEnableTransitGatewayRouteTablePropagationActionEnumEnableTransitGatewayRouteTablePropagation POSTEnableTransitGatewayRouteTablePropagationActionEnum = "EnableTransitGatewayRouteTablePropagation"
 )
 
+func (e POSTEnableTransitGatewayRouteTablePropagationActionEnum) ToPointer() *POSTEnableTransitGatewayRouteTablePropagationActionEnum {
+	return &e
+}
+
 func (e *POSTEnableTransitGatewayRouteTablePropagationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableTransitGatewayRouteTablePropagation":
-		*e = POSTEnableTransitGatewayRouteTablePropagationActionEnum(s)
+		*e = POSTEnableTransitGatewayRouteTablePropagationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableTransitGatewayRouteTablePropagationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableTransitGatewayRouteTablePropagationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTEnableTransitGatewayRouteTablePropagationVersionEnumTwoThousandAndSixteen1115 POSTEnableTransitGatewayRouteTablePropagationVersionEnum = "2016-11-15"
 )
 
+func (e POSTEnableTransitGatewayRouteTablePropagationVersionEnum) ToPointer() *POSTEnableTransitGatewayRouteTablePropagationVersionEnum {
+	return &e
+}
+
 func (e *POSTEnableTransitGatewayRouteTablePropagationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTEnableTransitGatewayRouteTablePropagationVersionEnum(s)
+		*e = POSTEnableTransitGatewayRouteTablePropagationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableTransitGatewayRouteTablePropagationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableTransitGatewayRouteTablePropagationVersionEnum: %v", v)
 	}
 }
 

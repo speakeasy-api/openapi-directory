@@ -16,17 +16,21 @@ const (
 	ListDocumentMetadataHistoryXAmzTargetEnumAmazonSsmListDocumentMetadataHistory ListDocumentMetadataHistoryXAmzTargetEnum = "AmazonSSM.ListDocumentMetadataHistory"
 )
 
+func (e ListDocumentMetadataHistoryXAmzTargetEnum) ToPointer() *ListDocumentMetadataHistoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListDocumentMetadataHistoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.ListDocumentMetadataHistory":
-		*e = ListDocumentMetadataHistoryXAmzTargetEnum(s)
+		*e = ListDocumentMetadataHistoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentMetadataHistoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentMetadataHistoryXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.BatchGetItemRequest{
+    ctx := context.Background()
+    res, err := s.BatchGetItem(ctx, operations.BatchGetItemRequest{
         BatchGetItemInput: shared.BatchGetItemInput{
             RequestItems: map[string]shared.KeysAndAttributes{
                 "provident": shared.KeysAndAttributes{
@@ -26,21 +27,21 @@ func main() {
                         "unde",
                         "nulla",
                     },
-                    ConsistentRead: false,
+                    ConsistentRead: sdk.Bool(false),
                     Keys: []shared.Key{
                         shared.Key{
                             HashKeyElement: shared.AttributeValue{
-                                B: "illum",
+                                B: sdk.String("illum"),
                                 Bs: []string{
                                     "error",
                                     "deserunt",
                                 },
-                                N: "suscipit",
+                                N: sdk.String("suscipit"),
                                 Ns: []string{
                                     "magnam",
                                     "debitis",
                                 },
-                                S: "ipsa",
+                                S: sdk.String("ipsa"),
                                 Ss: []string{
                                     "tempora",
                                     "suscipit",
@@ -49,20 +50,20 @@ func main() {
                                 },
                             },
                             RangeKeyElement: &shared.AttributeValue{
-                                B: "placeat",
+                                B: sdk.String("placeat"),
                                 Bs: []string{
                                     "iusto",
                                     "excepturi",
                                     "nisi",
                                 },
-                                N: "recusandae",
+                                N: sdk.String("recusandae"),
                                 Ns: []string{
                                     "ab",
                                     "quis",
                                     "veritatis",
                                     "deserunt",
                                 },
-                                S: "perferendis",
+                                S: sdk.String("perferendis"),
                                 Ss: []string{
                                     "repellendus",
                                     "sapiente",
@@ -71,18 +72,18 @@ func main() {
                         },
                         shared.Key{
                             HashKeyElement: shared.AttributeValue{
-                                B: "quo",
+                                B: sdk.String("quo"),
                                 Bs: []string{
                                     "at",
                                 },
-                                N: "at",
+                                N: sdk.String("at"),
                                 Ns: []string{
                                     "molestiae",
                                     "quod",
                                     "quod",
                                     "esse",
                                 },
-                                S: "totam",
+                                S: sdk.String("totam"),
                                 Ss: []string{
                                     "dolorum",
                                     "dicta",
@@ -91,18 +92,18 @@ func main() {
                                 },
                             },
                             RangeKeyElement: &shared.AttributeValue{
-                                B: "occaecati",
+                                B: sdk.String("occaecati"),
                                 Bs: []string{
                                     "deleniti",
                                 },
-                                N: "hic",
+                                N: sdk.String("hic"),
                                 Ns: []string{
                                     "totam",
                                     "beatae",
                                     "commodi",
                                     "molestiae",
                                 },
-                                S: "modi",
+                                S: sdk.String("modi"),
                                 Ss: []string{
                                     "impedit",
                                 },
@@ -110,33 +111,33 @@ func main() {
                         },
                         shared.Key{
                             HashKeyElement: shared.AttributeValue{
-                                B: "cum",
+                                B: sdk.String("cum"),
                                 Bs: []string{
                                     "ipsum",
                                     "excepturi",
                                 },
-                                N: "aspernatur",
+                                N: sdk.String("aspernatur"),
                                 Ns: []string{
                                     "ad",
                                 },
-                                S: "natus",
+                                S: sdk.String("natus"),
                                 Ss: []string{
                                     "iste",
                                 },
                             },
                             RangeKeyElement: &shared.AttributeValue{
-                                B: "dolor",
+                                B: sdk.String("dolor"),
                                 Bs: []string{
                                     "laboriosam",
                                     "hic",
                                     "saepe",
                                 },
-                                N: "fuga",
+                                N: sdk.String("fuga"),
                                 Ns: []string{
                                     "corporis",
                                     "iste",
                                 },
-                                S: "iure",
+                                S: sdk.String("iure"),
                                 Ss: []string{
                                     "quidem",
                                     "architecto",
@@ -153,22 +154,22 @@ func main() {
                         "dolores",
                         "dolorem",
                     },
-                    ConsistentRead: false,
+                    ConsistentRead: sdk.Bool(false),
                     Keys: []shared.Key{
                         shared.Key{
                             HashKeyElement: shared.AttributeValue{
-                                B: "explicabo",
+                                B: sdk.String("explicabo"),
                                 Bs: []string{
                                     "enim",
                                     "omnis",
                                     "nemo",
                                     "minima",
                                 },
-                                N: "excepturi",
+                                N: sdk.String("excepturi"),
                                 Ns: []string{
                                     "iure",
                                 },
-                                S: "culpa",
+                                S: sdk.String("culpa"),
                                 Ss: []string{
                                     "sapiente",
                                     "architecto",
@@ -177,17 +178,17 @@ func main() {
                                 },
                             },
                             RangeKeyElement: &shared.AttributeValue{
-                                B: "culpa",
+                                B: sdk.String("culpa"),
                                 Bs: []string{
                                     "repellat",
                                 },
-                                N: "mollitia",
+                                N: sdk.String("mollitia"),
                                 Ns: []string{
                                     "numquam",
                                     "commodi",
                                     "quam",
                                 },
-                                S: "molestiae",
+                                S: sdk.String("molestiae"),
                                 Ss: []string{
                                     "error",
                                 },
@@ -195,17 +196,17 @@ func main() {
                         },
                         shared.Key{
                             HashKeyElement: shared.AttributeValue{
-                                B: "quia",
+                                B: sdk.String("quia"),
                                 Bs: []string{
                                     "vitae",
                                     "laborum",
                                 },
-                                N: "animi",
+                                N: sdk.String("animi"),
                                 Ns: []string{
                                     "odit",
                                     "quo",
                                 },
-                                S: "sequi",
+                                S: sdk.String("sequi"),
                                 Ss: []string{
                                     "ipsam",
                                     "id",
@@ -214,20 +215,20 @@ func main() {
                                 },
                             },
                             RangeKeyElement: &shared.AttributeValue{
-                                B: "quasi",
+                                B: sdk.String("quasi"),
                                 Bs: []string{
                                     "temporibus",
                                     "laborum",
                                     "quasi",
                                 },
-                                N: "reiciendis",
+                                N: sdk.String("reiciendis"),
                                 Ns: []string{
                                     "vero",
                                     "nihil",
                                     "praesentium",
                                     "voluptatibus",
                                 },
-                                S: "ipsa",
+                                S: sdk.String("ipsa"),
                                 Ss: []string{
                                     "voluptate",
                                     "cum",
@@ -242,39 +243,39 @@ func main() {
                         "ut",
                         "maiores",
                     },
-                    ConsistentRead: false,
+                    ConsistentRead: sdk.Bool(false),
                     Keys: []shared.Key{
                         shared.Key{
                             HashKeyElement: shared.AttributeValue{
-                                B: "corporis",
+                                B: sdk.String("corporis"),
                                 Bs: []string{
                                     "iusto",
                                     "dicta",
                                 },
-                                N: "harum",
+                                N: sdk.String("harum"),
                                 Ns: []string{
                                     "accusamus",
                                     "commodi",
                                 },
-                                S: "repudiandae",
+                                S: sdk.String("repudiandae"),
                                 Ss: []string{
                                     "ipsum",
                                 },
                             },
                             RangeKeyElement: &shared.AttributeValue{
-                                B: "quidem",
+                                B: sdk.String("quidem"),
                                 Bs: []string{
                                     "excepturi",
                                     "pariatur",
                                     "modi",
                                 },
-                                N: "praesentium",
+                                N: sdk.String("praesentium"),
                                 Ns: []string{
                                     "voluptates",
                                     "quasi",
                                     "repudiandae",
                                 },
-                                S: "sint",
+                                S: sdk.String("sint"),
                                 Ss: []string{
                                     "itaque",
                                 },
@@ -284,19 +285,16 @@ func main() {
                 },
             },
         },
-        RequestItems: "incidunt",
-        XAmzAlgorithm: "enim",
-        XAmzContentSha256: "consequatur",
-        XAmzCredential: "est",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "explicabo",
-        XAmzSignature: "deserunt",
-        XAmzSignedHeaders: "distinctio",
-        XAmzTarget: "DynamoDB_20111205.BatchGetItem",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchGetItem(ctx, req)
+        RequestItems: sdk.String("incidunt"),
+        XAmzAlgorithm: sdk.String("enim"),
+        XAmzContentSha256: sdk.String("consequatur"),
+        XAmzCredential: sdk.String("est"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("explicabo"),
+        XAmzSignature: sdk.String("deserunt"),
+        XAmzSignedHeaders: sdk.String("distinctio"),
+        XAmzTarget: operations.BatchGetItemXAmzTargetEnumDynamoDb20111205BatchGetItem,
+    })
     if err != nil {
         log.Fatal(err)
     }

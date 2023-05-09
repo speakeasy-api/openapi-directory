@@ -34,7 +34,10 @@ func newMetros(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DfareportingMetrosList - Retrieves a list of metros.
 func (s *metros) DfareportingMetrosList(ctx context.Context, request operations.DfareportingMetrosListRequest, security operations.DfareportingMetrosListSecurity) (*operations.DfareportingMetrosListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/metros", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/metros", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

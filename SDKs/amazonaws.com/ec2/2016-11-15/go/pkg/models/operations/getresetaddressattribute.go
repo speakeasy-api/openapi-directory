@@ -15,17 +15,21 @@ const (
 	GETResetAddressAttributeActionEnumResetAddressAttribute GETResetAddressAttributeActionEnum = "ResetAddressAttribute"
 )
 
+func (e GETResetAddressAttributeActionEnum) ToPointer() *GETResetAddressAttributeActionEnum {
+	return &e
+}
+
 func (e *GETResetAddressAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetAddressAttribute":
-		*e = GETResetAddressAttributeActionEnum(s)
+		*e = GETResetAddressAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetAddressAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetAddressAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETResetAddressAttributeAttributeEnumDomainName GETResetAddressAttributeAttributeEnum = "domain-name"
 )
 
+func (e GETResetAddressAttributeAttributeEnum) ToPointer() *GETResetAddressAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETResetAddressAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "domain-name":
-		*e = GETResetAddressAttributeAttributeEnum(s)
+		*e = GETResetAddressAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetAddressAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetAddressAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	GETResetAddressAttributeVersionEnumTwoThousandAndSixteen1115 GETResetAddressAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETResetAddressAttributeVersionEnum) ToPointer() *GETResetAddressAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETResetAddressAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETResetAddressAttributeVersionEnum(s)
+		*e = GETResetAddressAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetAddressAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetAddressAttributeVersionEnum: %v", v)
 	}
 }
 

@@ -17,21 +17,25 @@ const (
 	UpdateNetworkVlanRequestBodyDhcpHandlingEnumRunADhcpServer             UpdateNetworkVlanRequestBodyDhcpHandlingEnum = "Run a DHCP server"
 )
 
+func (e UpdateNetworkVlanRequestBodyDhcpHandlingEnum) ToPointer() *UpdateNetworkVlanRequestBodyDhcpHandlingEnum {
+	return &e
+}
+
 func (e *UpdateNetworkVlanRequestBodyDhcpHandlingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Do not respond to DHCP requests":
 		fallthrough
 	case "Relay DHCP to another server":
 		fallthrough
 	case "Run a DHCP server":
-		*e = UpdateNetworkVlanRequestBodyDhcpHandlingEnum(s)
+		*e = UpdateNetworkVlanRequestBodyDhcpHandlingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkVlanRequestBodyDhcpHandlingEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkVlanRequestBodyDhcpHandlingEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	UpdateNetworkVlanRequestBodyDhcpLeaseTimeEnumFourHours     UpdateNetworkVlanRequestBodyDhcpLeaseTimeEnum = "4 hours"
 )
 
+func (e UpdateNetworkVlanRequestBodyDhcpLeaseTimeEnum) ToPointer() *UpdateNetworkVlanRequestBodyDhcpLeaseTimeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkVlanRequestBodyDhcpLeaseTimeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1 day":
 		fallthrough
 	case "1 hour":
@@ -64,10 +72,10 @@ func (e *UpdateNetworkVlanRequestBodyDhcpLeaseTimeEnum) UnmarshalJSON(data []byt
 	case "30 minutes":
 		fallthrough
 	case "4 hours":
-		*e = UpdateNetworkVlanRequestBodyDhcpLeaseTimeEnum(s)
+		*e = UpdateNetworkVlanRequestBodyDhcpLeaseTimeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkVlanRequestBodyDhcpLeaseTimeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkVlanRequestBodyDhcpLeaseTimeEnum: %v", v)
 	}
 }
 
@@ -81,12 +89,16 @@ const (
 	UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnumText    UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnum = "text"
 )
 
+func (e UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnum) ToPointer() *UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hex":
 		fallthrough
 	case "integer":
@@ -94,10 +106,10 @@ func (e *UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnum) UnmarshalJSON(data []b
 	case "ip":
 		fallthrough
 	case "text":
-		*e = UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnum(s)
+		*e = UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkVlanRequestBodyDhcpOptionsTypeEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTDeleteServiceLinkedRoleActionEnumDeleteServiceLinkedRole POSTDeleteServiceLinkedRoleActionEnum = "DeleteServiceLinkedRole"
 )
 
+func (e POSTDeleteServiceLinkedRoleActionEnum) ToPointer() *POSTDeleteServiceLinkedRoleActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteServiceLinkedRoleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteServiceLinkedRole":
-		*e = POSTDeleteServiceLinkedRoleActionEnum(s)
+		*e = POSTDeleteServiceLinkedRoleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteServiceLinkedRoleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteServiceLinkedRoleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteServiceLinkedRoleVersionEnumTwoThousandAndTen0508 POSTDeleteServiceLinkedRoleVersionEnum = "2010-05-08"
 )
 
+func (e POSTDeleteServiceLinkedRoleVersionEnum) ToPointer() *POSTDeleteServiceLinkedRoleVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteServiceLinkedRoleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTDeleteServiceLinkedRoleVersionEnum(s)
+		*e = POSTDeleteServiceLinkedRoleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteServiceLinkedRoleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteServiceLinkedRoleVersionEnum: %v", v)
 	}
 }
 

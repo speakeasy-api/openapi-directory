@@ -25,12 +25,16 @@ const (
 	NumberOrderStatusEnumRejected          NumberOrderStatusEnum = "REJECTED"
 )
 
+func (e NumberOrderStatusEnum) ToPointer() *NumberOrderStatusEnum {
+	return &e
+}
+
 func (e *NumberOrderStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "FINISHED":
@@ -54,10 +58,10 @@ func (e *NumberOrderStatusEnum) UnmarshalJSON(data []byte) error {
 	case "APPROVE_TIER_TWO":
 		fallthrough
 	case "REJECTED":
-		*e = NumberOrderStatusEnum(s)
+		*e = NumberOrderStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NumberOrderStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for NumberOrderStatusEnum: %v", v)
 	}
 }
 

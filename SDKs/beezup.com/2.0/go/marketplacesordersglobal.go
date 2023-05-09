@@ -34,6 +34,8 @@ func newMarketplacesOrdersGlobal(defaultClient, securityClient HTTPClient, serve
 
 // GetMarketplaceAccountsSynchronization - [DEPRECATED] Get current synchronization status between your marketplaces and BeezUP accounts
 // Use /orders/v3
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersGlobal) GetMarketplaceAccountsSynchronization(ctx context.Context, request operations.GetMarketplaceAccountsSynchronizationRequest) (*operations.GetMarketplaceAccountsSynchronizationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/status"
@@ -99,6 +101,8 @@ func (s *marketplacesOrdersGlobal) GetMarketplaceAccountsSynchronization(ctx con
 }
 
 // GetOrderIndex - [DEPRECATED] Get all actions you can do on the order API
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersGlobal) GetOrderIndex(ctx context.Context, request operations.GetOrderIndexRequest) (*operations.GetOrderIndexResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/"
@@ -158,6 +162,8 @@ func (s *marketplacesOrdersGlobal) GetOrderIndex(ctx context.Context, request op
 }
 
 // HarvestAll - [DEPRECATED] Send harvest request to all your marketplaces
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersGlobal) HarvestAll(ctx context.Context, request operations.HarvestAllRequest) (*operations.HarvestAllResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/harvest"

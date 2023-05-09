@@ -16,17 +16,21 @@ const (
 	DeregisterWebhookWithThirdPartyXAmzTargetEnumCodePipeline20150709DeregisterWebhookWithThirdParty DeregisterWebhookWithThirdPartyXAmzTargetEnum = "CodePipeline_20150709.DeregisterWebhookWithThirdParty"
 )
 
+func (e DeregisterWebhookWithThirdPartyXAmzTargetEnum) ToPointer() *DeregisterWebhookWithThirdPartyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeregisterWebhookWithThirdPartyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.DeregisterWebhookWithThirdParty":
-		*e = DeregisterWebhookWithThirdPartyXAmzTargetEnum(s)
+		*e = DeregisterWebhookWithThirdPartyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeregisterWebhookWithThirdPartyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeregisterWebhookWithThirdPartyXAmzTargetEnum: %v", v)
 	}
 }
 

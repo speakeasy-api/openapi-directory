@@ -17,19 +17,23 @@ const (
 	PullsCreateReviewCommentRequestBodySideEnumRight PullsCreateReviewCommentRequestBodySideEnum = "RIGHT"
 )
 
+func (e PullsCreateReviewCommentRequestBodySideEnum) ToPointer() *PullsCreateReviewCommentRequestBodySideEnum {
+	return &e
+}
+
 func (e *PullsCreateReviewCommentRequestBodySideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEFT":
 		fallthrough
 	case "RIGHT":
-		*e = PullsCreateReviewCommentRequestBodySideEnum(s)
+		*e = PullsCreateReviewCommentRequestBodySideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullsCreateReviewCommentRequestBodySideEnum: %s", s)
+		return fmt.Errorf("invalid value for PullsCreateReviewCommentRequestBodySideEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	PullsCreateReviewCommentRequestBodyStartSideEnumSide  PullsCreateReviewCommentRequestBodyStartSideEnum = "side"
 )
 
+func (e PullsCreateReviewCommentRequestBodyStartSideEnum) ToPointer() *PullsCreateReviewCommentRequestBodyStartSideEnum {
+	return &e
+}
+
 func (e *PullsCreateReviewCommentRequestBodyStartSideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEFT":
 		fallthrough
 	case "RIGHT":
 		fallthrough
 	case "side":
-		*e = PullsCreateReviewCommentRequestBodyStartSideEnum(s)
+		*e = PullsCreateReviewCommentRequestBodyStartSideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullsCreateReviewCommentRequestBodyStartSideEnum: %s", s)
+		return fmt.Errorf("invalid value for PullsCreateReviewCommentRequestBodyStartSideEnum: %v", v)
 	}
 }
 

@@ -27,12 +27,16 @@ const (
 	OperatingSystemEnumAmazonLinux2023       OperatingSystemEnum = "AMAZON_LINUX_2023"
 )
 
+func (e OperatingSystemEnum) ToPointer() *OperatingSystemEnum {
+	return &e
+}
+
 func (e *OperatingSystemEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WINDOWS":
 		fallthrough
 	case "AMAZON_LINUX":
@@ -62,9 +66,9 @@ func (e *OperatingSystemEnum) UnmarshalJSON(data []byte) error {
 	case "ALMA_LINUX":
 		fallthrough
 	case "AMAZON_LINUX_2023":
-		*e = OperatingSystemEnum(s)
+		*e = OperatingSystemEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperatingSystemEnum: %s", s)
+		return fmt.Errorf("invalid value for OperatingSystemEnum: %v", v)
 	}
 }

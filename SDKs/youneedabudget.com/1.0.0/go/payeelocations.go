@@ -36,7 +36,10 @@ func newPayeeLocations(defaultClient, securityClient HTTPClient, serverURL, lang
 // Returns a single payee location
 func (s *payeeLocations) GetPayeeLocationByID(ctx context.Context, request operations.GetPayeeLocationByIDRequest) (*operations.GetPayeeLocationByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/payee_locations/{payee_location_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/payee_locations/{payee_location_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -93,7 +96,10 @@ func (s *payeeLocations) GetPayeeLocationByID(ctx context.Context, request opera
 // Returns all payee locations
 func (s *payeeLocations) GetPayeeLocations(ctx context.Context, request operations.GetPayeeLocationsRequest) (*operations.GetPayeeLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/payee_locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/payee_locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -150,7 +156,10 @@ func (s *payeeLocations) GetPayeeLocations(ctx context.Context, request operatio
 // Returns all payee locations for a specified payee
 func (s *payeeLocations) GetPayeeLocationsByPayee(ctx context.Context, request operations.GetPayeeLocationsByPayeeRequest) (*operations.GetPayeeLocationsByPayeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/payees/{payee_id}/payee_locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/payees/{payee_id}/payee_locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

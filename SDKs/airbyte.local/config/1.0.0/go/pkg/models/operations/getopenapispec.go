@@ -11,5 +11,5 @@ type GetOpenAPISpecResponse struct {
 	StatusCode  int
 	RawResponse *http.Response
 	// Returns the openapi specification file
-	GetOpenAPISpec200TextPlainBinaryString *string
+	GetOpenAPISpec200TextPlainBinaryString []byte
 }

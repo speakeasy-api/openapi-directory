@@ -16,21 +16,25 @@ const (
 	ScenarioTypeEnumDebt       ScenarioTypeEnum = "debt"
 )
 
+func (e ScenarioTypeEnum) ToPointer() *ScenarioTypeEnum {
+	return &e
+}
+
 func (e *ScenarioTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no-interest":
 		fallthrough
 	case "savings":
 		fallthrough
 	case "debt":
-		*e = ScenarioTypeEnum(s)
+		*e = ScenarioTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScenarioTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScenarioTypeEnum: %v", v)
 	}
 }
 

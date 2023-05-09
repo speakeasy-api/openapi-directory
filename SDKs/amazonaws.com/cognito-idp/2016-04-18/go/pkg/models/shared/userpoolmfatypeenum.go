@@ -15,20 +15,24 @@ const (
 	UserPoolMfaTypeEnumOptional UserPoolMfaTypeEnum = "OPTIONAL"
 )
 
+func (e UserPoolMfaTypeEnum) ToPointer() *UserPoolMfaTypeEnum {
+	return &e
+}
+
 func (e *UserPoolMfaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFF":
 		fallthrough
 	case "ON":
 		fallthrough
 	case "OPTIONAL":
-		*e = UserPoolMfaTypeEnum(s)
+		*e = UserPoolMfaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserPoolMfaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserPoolMfaTypeEnum: %v", v)
 	}
 }

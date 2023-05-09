@@ -15,20 +15,24 @@ const (
 	EncryptionOptionEnumCseKms EncryptionOptionEnum = "CSE_KMS"
 )
 
+func (e EncryptionOptionEnum) ToPointer() *EncryptionOptionEnum {
+	return &e
+}
+
 func (e *EncryptionOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSE_S3":
 		fallthrough
 	case "SSE_KMS":
 		fallthrough
 	case "CSE_KMS":
-		*e = EncryptionOptionEnum(s)
+		*e = EncryptionOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EncryptionOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EncryptionOptionEnum: %v", v)
 	}
 }

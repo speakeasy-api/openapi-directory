@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/tl-api.azurewebsites.net/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,26 +27,24 @@ func main() {
         }),
     )
 
-    req := []shared.MeasureUnitDTO{
-        shared.MeasureUnitDTO{
-            ID: 592845,
-            Name: "distinctio",
-            Type: "quibusdam",
-        },
-        shared.MeasureUnitDTO{
-            ID: 602763,
-            Name: "nulla",
-            Type: "corrupti",
-        },
-        shared.MeasureUnitDTO{
-            ID: 847252,
-            Name: "vel",
-            Type: "error",
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.Article.ArticleAddMeasureUnit(ctx, req)
+    res, err := s.Article.ArticleAddMeasureUnit(ctx, []shared.MeasureUnitDTO{
+        shared.MeasureUnitDTO{
+            ID: sdk.Int(592845),
+            Name: sdk.String("Ellis Mitchell"),
+            Type: sdk.String("illum"),
+        },
+        shared.MeasureUnitDTO{
+            ID: sdk.Int(423655),
+            Name: sdk.String("Doug Hoppe"),
+            Type: sdk.String("debitis"),
+        },
+        shared.MeasureUnitDTO{
+            ID: sdk.Int(56713),
+            Name: sdk.String("Ricky Hoppe"),
+            Type: sdk.String("placeat"),
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -63,80 +60,80 @@ func main() {
 ## Available Resources and Operations
 
 
-### Article
+### [Article](docs/article/README.md)
 
-* `ArticleAddMeasureUnit` - Add measure unit
-* `ArticleDelete` - Delete article from the system
+* [ArticleAddMeasureUnit](docs/article/README.md#articleaddmeasureunit) - Add measure unit
+* [ArticleDelete](docs/article/README.md#articledelete) - Delete article from the system
             
-* `ArticleGetAddons`
-* `ArticleGetMeasureUnits` - Get mesure units
-* `ArticleGetRevenueAccounts` - Get Revenue Accounts 
-* `ArticleGymArticleDetails` - Get Gym specific properties for article
+* [ArticleGetAddons](docs/article/README.md#articlegetaddons)
+* [ArticleGetMeasureUnits](docs/article/README.md#articlegetmeasureunits) - Get mesure units
+* [ArticleGetRevenueAccounts](docs/article/README.md#articlegetrevenueaccounts) - Get Revenue Accounts 
+* [ArticleGymArticleDetails](docs/article/README.md#articlegymarticledetails) - Get Gym specific properties for article
             
-* `ArticlePost` - Add new article
+* [ArticlePost](docs/article/README.md#articlepost) - Add new article
             
-* `ArticlePut` - update existing article
+* [ArticlePut](docs/article/README.md#articleput) - update existing article
             
-* `ArticleSearch` - Search articles
+* [ArticleSearch](docs/article/README.md#articlesearch) - Search articles
 It will only return basic information of article
             
-* `ArticleUpdateArticleGymDetails` - Add article details that associate with a Gym
+* [ArticleUpdateArticleGymDetails](docs/article/README.md#articleupdatearticlegymdetails) - Add article details that associate with a Gym
             
-* `ArticleUpdateStatus` - Deactivate existing article 
-* `ArticleGet` - Get article details
+* [ArticleUpdateStatus](docs/article/README.md#articleupdatestatus) - Deactivate existing article 
+* [ArticleGet](docs/article/README.md#articleget) - Get article details
 This will return all properties related to article entity
             
 
-### Auth
+### [Auth](docs/auth/README.md)
 
-* `AuthLogin` - Authenticate and provide token for autherizations.
+* [AuthLogin](docs/auth/README.md#authlogin) - Authenticate and provide token for autherizations.
             
 
-### Gym
+### [Gym](docs/gym/README.md)
 
-* `GymGet` - Get gym details
+* [GymGet](docs/gym/README.md#gymget) - Get gym details
 This will return all properties related to gym entity
             
 
-### Membership
+### [Membership](docs/membership/README.md)
 
-* `MembershipGet` - Get all of the members details
+* [MembershipGet](docs/membership/README.md#membershipget) - Get all of the members details
 This will return all properties related to member entity
             
-* `MembershipPost` - Add new Member
+* [MembershipPost](docs/membership/README.md#membershippost) - Add new Member
             
 
-### Package
+### [Package](docs/package/README.md)
 
-* `PackageDelete` - Delete existing package
+* [PackageDelete](docs/package/README.md#packagedelete) - Delete existing package
             
-* `PackageGet` - Get package details by packageId
+* [PackageGet](docs/package/README.md#packageget) - Get package details by packageId
             
-* `PackagePost` - Insert new package into the system
+* [PackagePost](docs/package/README.md#packagepost) - Insert new package into the system
             
-* `PackagePut` - Update existing package by its ID
+* [PackagePut](docs/package/README.md#packageput) - Update existing package by its ID
             
-* `PackageSearch` - Search packages
+* [PackageSearch](docs/package/README.md#packagesearch) - Search packages
             
-* `PackageUpdateStatus` - Status update of existing package 
+* [PackageUpdateStatus](docs/package/README.md#packageupdatestatus) - Status update of existing package 
 
-### Status
+### [Status](docs/status/README.md)
 
-* `StatusGet` - Get the current status of message
+* [StatusGet](docs/status/README.md#statusget) - Get the current status of message
 
-### Test
+### [Test](docs/test/README.md)
 
-* `TestGet` - Get the all Test objects.
+* [TestGet](docs/test/README.md#testget) - Get the all Test objects.
             
 
-### User
+### [User](docs/user/README.md)
 
-* `UserGet` - Get all Users detail
+* [UserGet](docs/user/README.md#userget) - Get all Users detail
 This will return all properties related to User entity
             
-* `UserRegisterUser` - Register a new User
+* [UserRegisterUser](docs/user/README.md#userregisteruser) - Register a new User
             
-* `UserUpdateUser` - Update an exsisting User
+* [UserUpdateUser](docs/user/README.md#userupdateuser) - Update an exsisting User
             
 <!-- End SDK Available Operations -->
 

@@ -17,12 +17,16 @@ const (
 	ChartAxisViewWindowOptionsViewWindowModeEnumPretty                    ChartAxisViewWindowOptionsViewWindowModeEnum = "PRETTY"
 )
 
+func (e ChartAxisViewWindowOptionsViewWindowModeEnum) ToPointer() *ChartAxisViewWindowOptionsViewWindowModeEnum {
+	return &e
+}
+
 func (e *ChartAxisViewWindowOptionsViewWindowModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT_VIEW_WINDOW_MODE":
 		fallthrough
 	case "VIEW_WINDOW_MODE_UNSUPPORTED":
@@ -30,10 +34,10 @@ func (e *ChartAxisViewWindowOptionsViewWindowModeEnum) UnmarshalJSON(data []byte
 	case "EXPLICIT":
 		fallthrough
 	case "PRETTY":
-		*e = ChartAxisViewWindowOptionsViewWindowModeEnum(s)
+		*e = ChartAxisViewWindowOptionsViewWindowModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChartAxisViewWindowOptionsViewWindowModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChartAxisViewWindowOptionsViewWindowModeEnum: %v", v)
 	}
 }
 

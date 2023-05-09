@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/cloudrf.com/2.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.InterferenceRequest{
-        Name: "corrupti",
-        Network: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.Analyse.Interference(ctx, req, operations.InterferenceSecurity{
+    res, err := s.Analyse.Interference(ctx, operations.InterferenceRequest{
+        Name: "Terrence Rau",
+        Network: "nulla",
+    }, operations.InterferenceSecurity{
         APIKeyAuth: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -48,25 +45,25 @@ func main() {
 ## Available Resources and Operations
 
 
-### Analyse
+### [Analyse](docs/analyse/README.md)
 
-* `Interference` - Find the best server for overlapping coverage
-* `Mesh` - Merge sites into a super layer.
-* `Network` - Find the best server for somewhere
+* [Interference](docs/analyse/README.md#interference) - Find the best server for overlapping coverage
+* [Mesh](docs/analyse/README.md#mesh) - Merge sites into a super layer.
+* [Network](docs/analyse/README.md#network) - Find the best server for somewhere
 
-### Create
+### [Create](docs/create/README.md)
 
-* `Area` - Create a point-to-multipoint heatmap
-* `Path` - Point-to-point path profile analysis (Tx to Rx)
-* `Points` - Point-to-multipoint path profile analysis (Many Tx, one Rx)
+* [Area](docs/create/README.md#area) - Create a point-to-multipoint heatmap
+* [Path](docs/create/README.md#path) - Point-to-point path profile analysis (Tx to Rx)
+* [Points](docs/create/README.md#points) - Point-to-multipoint path profile analysis (Many Tx, one Rx)
 
-### Manage
+### [Manage](docs/manage/README.md)
 
-* `AddClutter` - Upload clutter data as GeoJSON
-* `Delete` - Delete a calculation from the database.
-* `DeleteNetwork` - Delete an entire network
-* `Export` - Export a calculation in a GIS file format
-* `List` - List calculations from your archive
+* [AddClutter](docs/manage/README.md#addclutter) - Upload clutter data as GeoJSON
+* [Delete](docs/manage/README.md#delete) - Delete a calculation from the database.
+* [DeleteNetwork](docs/manage/README.md#deletenetwork) - Delete an entire network
+* [Export](docs/manage/README.md#export) - Export a calculation in a GIS file format
+* [List](docs/manage/README.md#list) - List calculations from your archive
 <!-- End SDK Available Operations -->
 
 ### Maturity

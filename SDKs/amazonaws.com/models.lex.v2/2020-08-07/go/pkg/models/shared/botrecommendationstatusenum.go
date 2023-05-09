@@ -21,12 +21,16 @@ const (
 	BotRecommendationStatusEnumStopped     BotRecommendationStatusEnum = "Stopped"
 )
 
+func (e BotRecommendationStatusEnum) ToPointer() *BotRecommendationStatusEnum {
+	return &e
+}
+
 func (e *BotRecommendationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Processing":
 		fallthrough
 	case "Deleting":
@@ -44,9 +48,9 @@ func (e *BotRecommendationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Stopping":
 		fallthrough
 	case "Stopped":
-		*e = BotRecommendationStatusEnum(s)
+		*e = BotRecommendationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BotRecommendationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BotRecommendationStatusEnum: %v", v)
 	}
 }

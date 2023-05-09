@@ -16,19 +16,23 @@ const (
 	UpdateNetworkSsidL3FirewallRulesRequestBodyRulesPolicyEnumDeny  UpdateNetworkSsidL3FirewallRulesRequestBodyRulesPolicyEnum = "deny"
 )
 
+func (e UpdateNetworkSsidL3FirewallRulesRequestBodyRulesPolicyEnum) ToPointer() *UpdateNetworkSsidL3FirewallRulesRequestBodyRulesPolicyEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSsidL3FirewallRulesRequestBodyRulesPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "allow":
 		fallthrough
 	case "deny":
-		*e = UpdateNetworkSsidL3FirewallRulesRequestBodyRulesPolicyEnum(s)
+		*e = UpdateNetworkSsidL3FirewallRulesRequestBodyRulesPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSsidL3FirewallRulesRequestBodyRulesPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSsidL3FirewallRulesRequestBodyRulesPolicyEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnumUDP   UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnum = "udp"
 )
 
+func (e UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnum) ToPointer() *UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "icmp":
@@ -58,10 +66,10 @@ func (e *UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnum) Unmarshal
 	case "tcp":
 		fallthrough
 	case "udp":
-		*e = UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnum(s)
+		*e = UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSsidL3FirewallRulesRequestBodyRulesProtocolEnum: %v", v)
 	}
 }
 

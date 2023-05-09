@@ -15,17 +15,21 @@ const (
 	GETTagQueueActionEnumTagQueue GETTagQueueActionEnum = "TagQueue"
 )
 
+func (e GETTagQueueActionEnum) ToPointer() *GETTagQueueActionEnum {
+	return &e
+}
+
 func (e *GETTagQueueActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TagQueue":
-		*e = GETTagQueueActionEnum(s)
+		*e = GETTagQueueActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTagQueueActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTagQueueActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETTagQueueVersionEnumTwoThousandAndTwelve1105 GETTagQueueVersionEnum = "2012-11-05"
 )
 
+func (e GETTagQueueVersionEnum) ToPointer() *GETTagQueueVersionEnum {
+	return &e
+}
+
 func (e *GETTagQueueVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = GETTagQueueVersionEnum(s)
+		*e = GETTagQueueVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTagQueueVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTagQueueVersionEnum: %v", v)
 	}
 }
 

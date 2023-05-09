@@ -17,19 +17,23 @@ const (
 	ListCollaborationsMemberStatusEnumActive  ListCollaborationsMemberStatusEnum = "ACTIVE"
 )
 
+func (e ListCollaborationsMemberStatusEnum) ToPointer() *ListCollaborationsMemberStatusEnum {
+	return &e
+}
+
 func (e *ListCollaborationsMemberStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVITED":
 		fallthrough
 	case "ACTIVE":
-		*e = ListCollaborationsMemberStatusEnum(s)
+		*e = ListCollaborationsMemberStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCollaborationsMemberStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCollaborationsMemberStatusEnum: %v", v)
 	}
 }
 

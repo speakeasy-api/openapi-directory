@@ -14,18 +14,22 @@ const (
 	PipeTargetInvocationTypeEnumFireAndForget   PipeTargetInvocationTypeEnum = "FIRE_AND_FORGET"
 )
 
+func (e PipeTargetInvocationTypeEnum) ToPointer() *PipeTargetInvocationTypeEnum {
+	return &e
+}
+
 func (e *PipeTargetInvocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUEST_RESPONSE":
 		fallthrough
 	case "FIRE_AND_FORGET":
-		*e = PipeTargetInvocationTypeEnum(s)
+		*e = PipeTargetInvocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PipeTargetInvocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PipeTargetInvocationTypeEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	ReminderProfileReminderTemplateTypeEnumAutoCall ReminderProfileReminderTemplateTypeEnum = "auto_call"
 )
 
+func (e ReminderProfileReminderTemplateTypeEnum) ToPointer() *ReminderProfileReminderTemplateTypeEnum {
+	return &e
+}
+
 func (e *ReminderProfileReminderTemplateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "email":
 		fallthrough
 	case "sms":
@@ -30,10 +34,10 @@ func (e *ReminderProfileReminderTemplateTypeEnum) UnmarshalJSON(data []byte) err
 	case "phone":
 		fallthrough
 	case "auto_call":
-		*e = ReminderProfileReminderTemplateTypeEnum(s)
+		*e = ReminderProfileReminderTemplateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReminderProfileReminderTemplateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReminderProfileReminderTemplateTypeEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ReminderProfileReminderTemplateUnitEnumWeeks   ReminderProfileReminderTemplateUnitEnum = "weeks"
 )
 
+func (e ReminderProfileReminderTemplateUnitEnum) ToPointer() *ReminderProfileReminderTemplateUnitEnum {
+	return &e
+}
+
 func (e *ReminderProfileReminderTemplateUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minutes":
 		fallthrough
 	case "hours":
@@ -60,10 +68,10 @@ func (e *ReminderProfileReminderTemplateUnitEnum) UnmarshalJSON(data []byte) err
 	case "days":
 		fallthrough
 	case "weeks":
-		*e = ReminderProfileReminderTemplateUnitEnum(s)
+		*e = ReminderProfileReminderTemplateUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReminderProfileReminderTemplateUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for ReminderProfileReminderTemplateUnitEnum: %v", v)
 	}
 }
 

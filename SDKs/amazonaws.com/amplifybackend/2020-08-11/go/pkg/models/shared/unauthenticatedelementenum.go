@@ -15,20 +15,24 @@ const (
 	UnAuthenticatedElementEnumDelete          UnAuthenticatedElementEnum = "DELETE"
 )
 
+func (e UnAuthenticatedElementEnum) ToPointer() *UnAuthenticatedElementEnum {
+	return &e
+}
+
 func (e *UnAuthenticatedElementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READ":
 		fallthrough
 	case "CREATE_AND_UPDATE":
 		fallthrough
 	case "DELETE":
-		*e = UnAuthenticatedElementEnum(s)
+		*e = UnAuthenticatedElementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UnAuthenticatedElementEnum: %s", s)
+		return fmt.Errorf("invalid value for UnAuthenticatedElementEnum: %v", v)
 	}
 }

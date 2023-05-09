@@ -25,12 +25,16 @@ const (
 	OrgsUpdateRequestBodyDefaultRepositoryPermissionEnumNone  OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum = "none"
 )
 
+func (e OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum) ToPointer() *OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum {
+	return &e
+}
+
 func (e *OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
@@ -38,10 +42,10 @@ func (e *OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum) UnmarshalJSON(dat
 	case "admin":
 		fallthrough
 	case "none":
-		*e = OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum(s)
+		*e = OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgsUpdateRequestBodyDefaultRepositoryPermissionEnum: %v", v)
 	}
 }
 
@@ -58,21 +62,25 @@ const (
 	OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnumNone    OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum = "none"
 )
 
+func (e OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum) ToPointer() *OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum {
+	return &e
+}
+
 func (e *OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "private":
 		fallthrough
 	case "none":
-		*e = OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum(s)
+		*e = OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgsUpdateRequestBodyMembersAllowedRepositoryCreationTypeEnum: %v", v)
 	}
 }
 

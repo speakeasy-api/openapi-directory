@@ -2,89 +2,87 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FirebasedynamiclinksManagedShortLinksCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.ManagedShortLinks.FirebasedynamiclinksManagedShortLinksCreate(ctx, operations.FirebasedynamiclinksManagedShortLinksCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         CreateManagedShortLinkRequest: &shared.CreateManagedShortLinkRequest{
             DynamicLinkInfo: &shared.DynamicLinkInfo{
                 AnalyticsInfo: &shared.AnalyticsInfo{
                     GooglePlayAnalytics: &shared.GooglePlayAnalytics{
-                        Gclid: "provident",
-                        UtmCampaign: "distinctio",
-                        UtmContent: "quibusdam",
-                        UtmMedium: "unde",
-                        UtmSource: "nulla",
-                        UtmTerm: "corrupti",
+                        Gclid: sdk.String("provident"),
+                        UtmCampaign: sdk.String("distinctio"),
+                        UtmContent: sdk.String("quibusdam"),
+                        UtmMedium: sdk.String("unde"),
+                        UtmSource: sdk.String("nulla"),
+                        UtmTerm: sdk.String("corrupti"),
                     },
                     ItunesConnectAnalytics: &shared.ITunesConnectAnalytics{
-                        At: "illum",
-                        Ct: "vel",
-                        Mt: "error",
-                        Pt: "deserunt",
+                        At: sdk.String("illum"),
+                        Ct: sdk.String("vel"),
+                        Mt: sdk.String("error"),
+                        Pt: sdk.String("deserunt"),
                     },
                 },
                 AndroidInfo: &shared.AndroidInfo{
-                    AndroidFallbackLink: "suscipit",
-                    AndroidLink: "iure",
-                    AndroidMinPackageVersionCode: "magnam",
-                    AndroidPackageName: "debitis",
+                    AndroidFallbackLink: sdk.String("suscipit"),
+                    AndroidLink: sdk.String("iure"),
+                    AndroidMinPackageVersionCode: sdk.String("magnam"),
+                    AndroidPackageName: sdk.String("debitis"),
                 },
                 DesktopInfo: &shared.DesktopInfo{
-                    DesktopFallbackLink: "ipsa",
+                    DesktopFallbackLink: sdk.String("ipsa"),
                 },
-                DomainURIPrefix: "delectus",
-                DynamicLinkDomain: "tempora",
+                DomainURIPrefix: sdk.String("delectus"),
+                DynamicLinkDomain: sdk.String("tempora"),
                 IosInfo: &shared.IosInfo{
-                    IosAppStoreID: "suscipit",
-                    IosBundleID: "molestiae",
-                    IosCustomScheme: "minus",
-                    IosFallbackLink: "placeat",
-                    IosIpadBundleID: "voluptatum",
-                    IosIpadFallbackLink: "iusto",
-                    IosMinimumVersion: "excepturi",
+                    IosAppStoreID: sdk.String("suscipit"),
+                    IosBundleID: sdk.String("molestiae"),
+                    IosCustomScheme: sdk.String("minus"),
+                    IosFallbackLink: sdk.String("placeat"),
+                    IosIpadBundleID: sdk.String("voluptatum"),
+                    IosIpadFallbackLink: sdk.String("iusto"),
+                    IosMinimumVersion: sdk.String("excepturi"),
                 },
-                Link: "nisi",
+                Link: sdk.String("nisi"),
                 NavigationInfo: &shared.NavigationInfo{
-                    EnableForcedRedirect: false,
+                    EnableForcedRedirect: sdk.Bool(false),
                 },
                 SocialMetaTagInfo: &shared.SocialMetaTagInfo{
-                    SocialDescription: "recusandae",
-                    SocialImageLink: "temporibus",
-                    SocialTitle: "ab",
+                    SocialDescription: sdk.String("recusandae"),
+                    SocialImageLink: sdk.String("temporibus"),
+                    SocialTitle: sdk.String("ab"),
                 },
             },
-            LongDynamicLink: "quis",
-            Name: "veritatis",
-            SDKVersion: "deserunt",
+            LongDynamicLink: sdk.String("quis"),
+            Name: sdk.String("Iris Aufderhar"),
+            SDKVersion: sdk.String("sapiente"),
             Suffix: &shared.Suffix{
-                CustomSuffix: "perferendis",
-                Option: "UNGUESSABLE",
+                CustomSuffix: sdk.String("quo"),
+                Option: shared.SuffixOptionEnumOptionUnspecified.ToPointer(),
             },
         },
-        AccessToken: "repellendus",
-        Alt: "proto",
-        Callback: "quo",
-        Fields: "odit",
-        Key: "at",
-        OauthToken: "at",
-        PrettyPrint: false,
-        QuotaUser: "maiores",
-        UploadType: "molestiae",
-        UploadProtocol: "quod",
-    }
-
-    ctx := context.Background()
-    res, err := s.ManagedShortLinks.FirebasedynamiclinksManagedShortLinksCreate(ctx, req, operations.FirebasedynamiclinksManagedShortLinksCreateSecurity{
+        AccessToken: sdk.String("at"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("maiores"),
+        Fields: sdk.String("molestiae"),
+        Key: sdk.String("quod"),
+        OauthToken: sdk.String("quod"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("esse"),
+        UploadType: sdk.String("totam"),
+        UploadProtocol: sdk.String("porro"),
+    }, operations.FirebasedynamiclinksManagedShortLinksCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -36,7 +36,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Delete project article
 func (s *projects) PrivateProjectArticleDelete(ctx context.Context, request operations.PrivateProjectArticleDeleteRequest, security operations.PrivateProjectArticleDeleteSecurity) (*operations.PrivateProjectArticleDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/articles/{article_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/articles/{article_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -88,7 +91,10 @@ func (s *projects) PrivateProjectArticleDelete(ctx context.Context, request oper
 // Project article details
 func (s *projects) PrivateProjectArticleDetails(ctx context.Context, request operations.PrivateProjectArticleDetailsRequest, security operations.PrivateProjectArticleDetailsSecurity) (*operations.PrivateProjectArticleDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/articles/{article_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/articles/{article_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -148,7 +154,10 @@ func (s *projects) PrivateProjectArticleDetails(ctx context.Context, request ope
 // Project article file details
 func (s *projects) PrivateProjectArticleFile(ctx context.Context, request operations.PrivateProjectArticleFileRequest, security operations.PrivateProjectArticleFileSecurity) (*operations.PrivateProjectArticleFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/articles/{article_id}/files/{file_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/articles/{article_id}/files/{file_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -208,7 +217,10 @@ func (s *projects) PrivateProjectArticleFile(ctx context.Context, request operat
 // List article files
 func (s *projects) PrivateProjectArticleFiles(ctx context.Context, request operations.PrivateProjectArticleFilesRequest, security operations.PrivateProjectArticleFilesSecurity) (*operations.PrivateProjectArticleFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/articles/{article_id}/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/articles/{article_id}/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -268,7 +280,10 @@ func (s *projects) PrivateProjectArticleFiles(ctx context.Context, request opera
 // Create a new Article and associate it with this project
 func (s *projects) PrivateProjectArticlesCreate(ctx context.Context, request operations.PrivateProjectArticlesCreateRequest, security operations.PrivateProjectArticlesCreateSecurity) (*operations.PrivateProjectArticlesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/articles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/articles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArticleProjectCreate", "json")
 	if err != nil {
@@ -344,7 +359,10 @@ func (s *projects) PrivateProjectArticlesCreate(ctx context.Context, request ope
 // List project articles
 func (s *projects) PrivateProjectArticlesList(ctx context.Context, request operations.PrivateProjectArticlesListRequest, security operations.PrivateProjectArticlesListSecurity) (*operations.PrivateProjectArticlesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/articles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/articles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +426,10 @@ func (s *projects) PrivateProjectArticlesList(ctx context.Context, request opera
 // Remove project collaborator
 func (s *projects) PrivateProjectCollaboratorDelete(ctx context.Context, request operations.PrivateProjectCollaboratorDeleteRequest, security operations.PrivateProjectCollaboratorDeleteSecurity) (*operations.PrivateProjectCollaboratorDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/collaborators/{user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/collaborators/{user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -460,7 +481,10 @@ func (s *projects) PrivateProjectCollaboratorDelete(ctx context.Context, request
 // Invite users to collaborate on project or view the project
 func (s *projects) PrivateProjectCollaboratorsInvite(ctx context.Context, request operations.PrivateProjectCollaboratorsInviteRequest, security operations.PrivateProjectCollaboratorsInviteSecurity) (*operations.PrivateProjectCollaboratorsInviteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/collaborators", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/collaborators", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectCollaboratorInvite", "json")
 	if err != nil {
@@ -530,7 +554,10 @@ func (s *projects) PrivateProjectCollaboratorsInvite(ctx context.Context, reques
 // List Project collaborators and invited users
 func (s *projects) PrivateProjectCollaboratorsList(ctx context.Context, request operations.PrivateProjectCollaboratorsListRequest, security operations.PrivateProjectCollaboratorsListSecurity) (*operations.PrivateProjectCollaboratorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/collaborators", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/collaborators", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -662,7 +689,10 @@ func (s *projects) PrivateProjectCreate(ctx context.Context, request shared.Proj
 // When a group project is deleted, all the articles and files are deleted as well. Only project owner, group admin and above can delete a project.
 func (s *projects) PrivateProjectDelete(ctx context.Context, request operations.PrivateProjectDeleteRequest, security operations.PrivateProjectDeleteSecurity) (*operations.PrivateProjectDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -712,7 +742,10 @@ func (s *projects) PrivateProjectDelete(ctx context.Context, request operations.
 // View a private project
 func (s *projects) PrivateProjectDetails(ctx context.Context, request operations.PrivateProjectDetailsRequest, security operations.PrivateProjectDetailsSecurity) (*operations.PrivateProjectDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -772,7 +805,10 @@ func (s *projects) PrivateProjectDetails(ctx context.Context, request operations
 // Please note: project's owner cannot leave the project.
 func (s *projects) PrivateProjectLeave(ctx context.Context, request operations.PrivateProjectLeaveRequest, security operations.PrivateProjectLeaveSecurity) (*operations.PrivateProjectLeaveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/leave", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/leave", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -823,7 +859,10 @@ func (s *projects) PrivateProjectLeave(ctx context.Context, request operations.P
 // PrivateProjectNote - Project note details
 func (s *projects) PrivateProjectNote(ctx context.Context, request operations.PrivateProjectNoteRequest, security operations.PrivateProjectNoteSecurity) (*operations.PrivateProjectNoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/notes/{note_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/notes/{note_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -882,7 +921,10 @@ func (s *projects) PrivateProjectNote(ctx context.Context, request operations.Pr
 // PrivateProjectNoteDelete - Delete project note
 func (s *projects) PrivateProjectNoteDelete(ctx context.Context, request operations.PrivateProjectNoteDeleteRequest, security operations.PrivateProjectNoteDeleteSecurity) (*operations.PrivateProjectNoteDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/notes/{note_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/notes/{note_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -931,7 +973,10 @@ func (s *projects) PrivateProjectNoteDelete(ctx context.Context, request operati
 // PrivateProjectNoteUpdate - Update project note
 func (s *projects) PrivateProjectNoteUpdate(ctx context.Context, request operations.PrivateProjectNoteUpdateRequest, security operations.PrivateProjectNoteUpdateSecurity) (*operations.PrivateProjectNoteUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/notes/{note_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/notes/{note_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectNoteCreate", "json")
 	if err != nil {
@@ -994,7 +1039,10 @@ func (s *projects) PrivateProjectNoteUpdate(ctx context.Context, request operati
 // Create a new project note
 func (s *projects) PrivateProjectNotesCreate(ctx context.Context, request operations.PrivateProjectNotesCreateRequest, security operations.PrivateProjectNotesCreateSecurity) (*operations.PrivateProjectNotesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/notes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/notes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectNoteCreate", "json")
 	if err != nil {
@@ -1066,7 +1114,10 @@ func (s *projects) PrivateProjectNotesCreate(ctx context.Context, request operat
 // List project notes
 func (s *projects) PrivateProjectNotesList(ctx context.Context, request operations.PrivateProjectNotesListRequest, security operations.PrivateProjectNotesListSecurity) (*operations.PrivateProjectNotesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/notes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/notes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1130,7 +1181,10 @@ func (s *projects) PrivateProjectNotesList(ctx context.Context, request operatio
 // Publish a project. Possible after all items inside it are public
 func (s *projects) PrivateProjectPublish(ctx context.Context, request operations.PrivateProjectPublishRequest, security operations.PrivateProjectPublishSecurity) (*operations.PrivateProjectPublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/publish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}/publish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1190,7 +1244,10 @@ func (s *projects) PrivateProjectPublish(ctx context.Context, request operations
 // Updating an project by passing body parameters; request can also be made with the PATCH method.
 func (s *projects) PrivateProjectUpdate(ctx context.Context, request operations.PrivateProjectUpdateRequest, security operations.PrivateProjectUpdateSecurity) (*operations.PrivateProjectUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectUpdate", "json")
 	if err != nil {
@@ -1370,7 +1427,10 @@ func (s *projects) PrivateProjectsSearch(ctx context.Context, request shared.Pro
 // List articles in project
 func (s *projects) ProjectArticles(ctx context.Context, request operations.ProjectArticlesRequest) (*operations.ProjectArticlesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/articles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/articles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1420,7 +1480,10 @@ func (s *projects) ProjectArticles(ctx context.Context, request operations.Proje
 // View a project
 func (s *projects) ProjectDetails(ctx context.Context, request operations.ProjectDetailsRequest) (*operations.ProjectDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

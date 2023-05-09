@@ -16,17 +16,21 @@ const (
 	DescribeInboundDmarcSettingsXAmzTargetEnumWorkMailServiceDescribeInboundDmarcSettings DescribeInboundDmarcSettingsXAmzTargetEnum = "WorkMailService.DescribeInboundDmarcSettings"
 )
 
+func (e DescribeInboundDmarcSettingsXAmzTargetEnum) ToPointer() *DescribeInboundDmarcSettingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeInboundDmarcSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.DescribeInboundDmarcSettings":
-		*e = DescribeInboundDmarcSettingsXAmzTargetEnum(s)
+		*e = DescribeInboundDmarcSettingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInboundDmarcSettingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInboundDmarcSettingsXAmzTargetEnum: %v", v)
 	}
 }
 

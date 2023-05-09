@@ -202,7 +202,10 @@ func (s *bt) CheckUserToken(ctx context.Context, request operations.CheckUserTok
 // GetPlanByToken - Returns all the plans available for BT flow including additional description data.
 func (s *bt) GetPlanByToken(ctx context.Context, request operations.GetPlanByTokenRequest) (*operations.GetPlanByTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bt/plan/{token}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bt/plan/{token}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -22,12 +22,16 @@ const (
 	TransformationToolNameEnumNativeSQLServerBackupRestore            TransformationToolNameEnum = "Native SQL Server Backup/Restore"
 )
 
+func (e TransformationToolNameEnum) ToPointer() *TransformationToolNameEnum {
+	return &e
+}
+
 func (e *TransformationToolNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "App2Container":
 		fallthrough
 	case "Porting Assistant For .NET":
@@ -47,9 +51,9 @@ func (e *TransformationToolNameEnum) UnmarshalJSON(data []byte) error {
 	case "Database Migration Service":
 		fallthrough
 	case "Native SQL Server Backup/Restore":
-		*e = TransformationToolNameEnum(s)
+		*e = TransformationToolNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransformationToolNameEnum: %s", s)
+		return fmt.Errorf("invalid value for TransformationToolNameEnum: %v", v)
 	}
 }

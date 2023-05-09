@@ -23,12 +23,16 @@ const (
 	ExecutionStateEnumInitializing     ExecutionStateEnum = "INITIALIZING"
 )
 
+func (e ExecutionStateEnum) ToPointer() *ExecutionStateEnum {
+	return &e
+}
+
 func (e *ExecutionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "QUEUED":
@@ -48,10 +52,10 @@ func (e *ExecutionStateEnum) UnmarshalJSON(data []byte) error {
 	case "EXPIRED":
 		fallthrough
 	case "INITIALIZING":
-		*e = ExecutionStateEnum(s)
+		*e = ExecutionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionStateEnum: %v", v)
 	}
 }
 

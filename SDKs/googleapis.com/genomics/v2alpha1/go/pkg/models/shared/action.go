@@ -21,12 +21,16 @@ const (
 	ActionFlagsEnumBlockExternalNetwork        ActionFlagsEnum = "BLOCK_EXTERNAL_NETWORK"
 )
 
+func (e ActionFlagsEnum) ToPointer() *ActionFlagsEnum {
+	return &e
+}
+
 func (e *ActionFlagsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FLAG_UNSPECIFIED":
 		fallthrough
 	case "IGNORE_EXIT_STATUS":
@@ -44,10 +48,10 @@ func (e *ActionFlagsEnum) UnmarshalJSON(data []byte) error {
 	case "DISABLE_STANDARD_ERROR_CAPTURE":
 		fallthrough
 	case "BLOCK_EXTERNAL_NETWORK":
-		*e = ActionFlagsEnum(s)
+		*e = ActionFlagsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionFlagsEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionFlagsEnum: %v", v)
 	}
 }
 

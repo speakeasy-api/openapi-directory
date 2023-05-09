@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -31,4 +32,6 @@ pkg/models/shared/v1beta1quotabucket.go
 pkg/models/shared/v1beta1listproduceroverridesresponse.go
 pkg/models/shared/v1beta1listconsumerquotametricsresponse.go
 pkg/models/shared/v1beta1consumerquotametric.go
+docs/sdk/README.md
+docs/services/README.md
 USAGE.md

@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Headless-CMS-A
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAllContentTypesRequest{
-        BuilderID: "faststore",
-    }
-
     ctx := context.Background()
-    res, err := s.Pages.GetAllContentTypes(ctx, req)
+    res, err := s.Pages.GetAllContentTypes(ctx, operations.GetAllContentTypesRequest{
+        BuilderID: "faststore",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,11 +42,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### Pages
+### [Pages](docs/pages/README.md)
 
-* `GetAllContentTypes` - Get all Content Types
-* `GetCMSpage` - Get CMS page
-* `GetPagesbyContentType` - Get all CMS pages by Content Type
+* [GetAllContentTypes](docs/pages/README.md#getallcontenttypes) - Get all Content Types
+* [GetCMSpage](docs/pages/README.md#getcmspage) - Get CMS page
+* [GetPagesbyContentType](docs/pages/README.md#getpagesbycontenttype) - Get all CMS pages by Content Type
 <!-- End SDK Available Operations -->
 
 ### Maturity

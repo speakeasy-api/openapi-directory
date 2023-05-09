@@ -14,16 +14,20 @@ const (
 	FlightOfferSourceEnumGds FlightOfferSourceEnum = "GDS"
 )
 
+func (e FlightOfferSourceEnum) ToPointer() *FlightOfferSourceEnum {
+	return &e
+}
+
 func (e *FlightOfferSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GDS":
-		*e = FlightOfferSourceEnum(s)
+		*e = FlightOfferSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlightOfferSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for FlightOfferSourceEnum: %v", v)
 	}
 }

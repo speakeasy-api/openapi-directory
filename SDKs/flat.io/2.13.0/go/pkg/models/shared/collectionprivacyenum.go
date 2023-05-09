@@ -15,16 +15,20 @@ const (
 	CollectionPrivacyEnumPrivate CollectionPrivacyEnum = "private"
 )
 
+func (e CollectionPrivacyEnum) ToPointer() *CollectionPrivacyEnum {
+	return &e
+}
+
 func (e *CollectionPrivacyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private":
-		*e = CollectionPrivacyEnum(s)
+		*e = CollectionPrivacyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CollectionPrivacyEnum: %s", s)
+		return fmt.Errorf("invalid value for CollectionPrivacyEnum: %v", v)
 	}
 }

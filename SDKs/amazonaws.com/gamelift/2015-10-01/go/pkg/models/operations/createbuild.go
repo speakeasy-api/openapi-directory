@@ -16,17 +16,21 @@ const (
 	CreateBuildXAmzTargetEnumGameLiftCreateBuild CreateBuildXAmzTargetEnum = "GameLift.CreateBuild"
 )
 
+func (e CreateBuildXAmzTargetEnum) ToPointer() *CreateBuildXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateBuildXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.CreateBuild":
-		*e = CreateBuildXAmzTargetEnum(s)
+		*e = CreateBuildXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBuildXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBuildXAmzTargetEnum: %v", v)
 	}
 }
 

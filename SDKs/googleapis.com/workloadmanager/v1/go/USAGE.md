@@ -2,84 +2,76 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.WorkloadmanagerProjectsLocationsEvaluationsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.WorkloadmanagerProjectsLocationsEvaluationsCreate(ctx, operations.WorkloadmanagerProjectsLocationsEvaluationsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         EvaluationInput: &shared.EvaluationInput{
-            Description: "provident",
+            Description: sdk.String("provident"),
             Labels: map[string]string{
                 "quibusdam": "unde",
                 "nulla": "corrupti",
                 "illum": "vel",
             },
-            Name: "error",
+            Name: sdk.String("Doug Hoppe"),
             ResourceFilter: &shared.ResourceFilter{
                 GceInstanceFilter: &shared.GceInstanceFilter{
                     ServiceAccounts: []string{
+                        "ipsa",
+                        "delectus",
+                        "tempora",
                         "suscipit",
-                        "iure",
-                        "magnam",
                     },
                 },
                 InclusionLabels: map[string]string{
-                    "ipsa": "delectus",
-                    "tempora": "suscipit",
-                    "molestiae": "minus",
-                    "placeat": "voluptatum",
+                    "minus": "placeat",
+                    "voluptatum": "iusto",
                 },
                 ResourceIDPatterns: []string{
-                    "excepturi",
                     "nisi",
+                    "recusandae",
+                    "temporibus",
                 },
                 Scopes: []string{
-                    "temporibus",
-                    "ab",
                     "quis",
-                    "veritatis",
                 },
             },
             ResourceStatus: &shared.ResourceStatus{
                 RulesNewerVersions: []string{
-                    "perferendis",
-                    "ipsam",
-                    "repellendus",
+                    "deserunt",
                 },
-                State: "DELETING",
+                State: shared.ResourceStatusStateEnumStateUnspecified.ToPointer(),
             },
             RuleNames: []string{
-                "odit",
-                "at",
-                "at",
-                "maiores",
+                "repellendus",
+                "sapiente",
             },
+            Schedule: sdk.String("quo"),
         },
-        AccessToken: "molestiae",
-        Alt: "proto",
-        Callback: "quod",
-        EvaluationID: "esse",
-        Fields: "totam",
-        Key: "porro",
-        OauthToken: "dolorum",
-        Parent: "dicta",
-        PrettyPrint: false,
-        QuotaUser: "nam",
-        RequestID: "officia",
-        UploadType: "occaecati",
-        UploadProtocol: "fugit",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.WorkloadmanagerProjectsLocationsEvaluationsCreate(ctx, req, operations.WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity{
+        AccessToken: sdk.String("odit"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("at"),
+        EvaluationID: sdk.String("maiores"),
+        Fields: sdk.String("molestiae"),
+        Key: sdk.String("quod"),
+        OauthToken: sdk.String("quod"),
+        Parent: "esse",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("totam"),
+        RequestID: sdk.String("porro"),
+        UploadType: sdk.String("dolorum"),
+        UploadProtocol: sdk.String("dicta"),
+    }, operations.WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

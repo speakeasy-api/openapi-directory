@@ -35,7 +35,10 @@ func newContributor(defaultClient, securityClient HTTPClient, serverURL, languag
 // Return the content of the selected contributor.
 func (s *contributor) GetContributor(ctx context.Context, request operations.GetContributorRequest, security operations.GetContributorSecurity) (*operations.GetContributorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributor/{contributorId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contributor/{contributorId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

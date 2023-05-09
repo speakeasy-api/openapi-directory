@@ -90,7 +90,10 @@ func (s *accounts) MybusinessaccountmanagementAccountsCreate(ctx context.Context
 // MybusinessaccountmanagementAccountsGet - Gets the specified account. Returns `NOT_FOUND` if the account does not exist or if the caller does not have access rights to it.
 func (s *accounts) MybusinessaccountmanagementAccountsGet(ctx context.Context, request operations.MybusinessaccountmanagementAccountsGetRequest) (*operations.MybusinessaccountmanagementAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *accounts) MybusinessaccountmanagementAccountsGet(ctx context.Context, r
 // MybusinessaccountmanagementAccountsInvitationsAccept - Accepts the specified invitation.
 func (s *accounts) MybusinessaccountmanagementAccountsInvitationsAccept(ctx context.Context, request operations.MybusinessaccountmanagementAccountsInvitationsAcceptRequest) (*operations.MybusinessaccountmanagementAccountsInvitationsAcceptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:accept", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:accept", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -193,7 +199,10 @@ func (s *accounts) MybusinessaccountmanagementAccountsInvitationsAccept(ctx cont
 // MybusinessaccountmanagementAccountsInvitationsDecline - Declines the specified invitation.
 func (s *accounts) MybusinessaccountmanagementAccountsInvitationsDecline(ctx context.Context, request operations.MybusinessaccountmanagementAccountsInvitationsDeclineRequest) (*operations.MybusinessaccountmanagementAccountsInvitationsDeclineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:decline", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:decline", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -248,7 +257,10 @@ func (s *accounts) MybusinessaccountmanagementAccountsInvitationsDecline(ctx con
 // MybusinessaccountmanagementAccountsInvitationsList - Lists pending invitations for the specified account.
 func (s *accounts) MybusinessaccountmanagementAccountsInvitationsList(ctx context.Context, request operations.MybusinessaccountmanagementAccountsInvitationsListRequest) (*operations.MybusinessaccountmanagementAccountsInvitationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/invitations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/invitations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

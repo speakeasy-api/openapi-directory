@@ -16,12 +16,16 @@ const (
 	DatePartitionDelimiterValueEnumNone       DatePartitionDelimiterValueEnum = "NONE"
 )
 
+func (e DatePartitionDelimiterValueEnum) ToPointer() *DatePartitionDelimiterValueEnum {
+	return &e
+}
+
 func (e *DatePartitionDelimiterValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SLASH":
 		fallthrough
 	case "UNDERSCORE":
@@ -29,9 +33,9 @@ func (e *DatePartitionDelimiterValueEnum) UnmarshalJSON(data []byte) error {
 	case "DASH":
 		fallthrough
 	case "NONE":
-		*e = DatePartitionDelimiterValueEnum(s)
+		*e = DatePartitionDelimiterValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatePartitionDelimiterValueEnum: %s", s)
+		return fmt.Errorf("invalid value for DatePartitionDelimiterValueEnum: %v", v)
 	}
 }

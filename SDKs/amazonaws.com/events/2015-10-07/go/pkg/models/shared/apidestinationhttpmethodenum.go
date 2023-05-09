@@ -19,12 +19,16 @@ const (
 	APIDestinationHTTPMethodEnumDelete  APIDestinationHTTPMethodEnum = "DELETE"
 )
 
+func (e APIDestinationHTTPMethodEnum) ToPointer() *APIDestinationHTTPMethodEnum {
+	return &e
+}
+
 func (e *APIDestinationHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POST":
 		fallthrough
 	case "GET":
@@ -38,9 +42,9 @@ func (e *APIDestinationHTTPMethodEnum) UnmarshalJSON(data []byte) error {
 	case "PATCH":
 		fallthrough
 	case "DELETE":
-		*e = APIDestinationHTTPMethodEnum(s)
+		*e = APIDestinationHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIDestinationHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for APIDestinationHTTPMethodEnum: %v", v)
 	}
 }

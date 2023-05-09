@@ -28,12 +28,16 @@ const (
 	KkidChorelistPutWhereDayEnumToday     KkidChorelistPutWhereDayEnum = "Today"
 )
 
+func (e KkidChorelistPutWhereDayEnum) ToPointer() *KkidChorelistPutWhereDayEnum {
+	return &e
+}
+
 func (e *KkidChorelistPutWhereDayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Sunday":
 		fallthrough
 	case "Monday":
@@ -51,10 +55,10 @@ func (e *KkidChorelistPutWhereDayEnum) UnmarshalJSON(data []byte) error {
 	case "Weekly":
 		fallthrough
 	case "Today":
-		*e = KkidChorelistPutWhereDayEnum(s)
+		*e = KkidChorelistPutWhereDayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KkidChorelistPutWhereDayEnum: %s", s)
+		return fmt.Errorf("invalid value for KkidChorelistPutWhereDayEnum: %v", v)
 	}
 }
 

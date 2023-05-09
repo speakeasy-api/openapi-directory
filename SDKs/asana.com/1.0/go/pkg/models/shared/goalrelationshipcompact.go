@@ -15,19 +15,23 @@ const (
 	GoalRelationshipCompactResourceSubtypeEnumSupportingWork GoalRelationshipCompactResourceSubtypeEnum = "supporting_work"
 )
 
+func (e GoalRelationshipCompactResourceSubtypeEnum) ToPointer() *GoalRelationshipCompactResourceSubtypeEnum {
+	return &e
+}
+
 func (e *GoalRelationshipCompactResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "subgoal":
 		fallthrough
 	case "supporting_work":
-		*e = GoalRelationshipCompactResourceSubtypeEnum(s)
+		*e = GoalRelationshipCompactResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoalRelationshipCompactResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoalRelationshipCompactResourceSubtypeEnum: %v", v)
 	}
 }
 

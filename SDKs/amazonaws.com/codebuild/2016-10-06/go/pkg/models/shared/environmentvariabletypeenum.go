@@ -15,20 +15,24 @@ const (
 	EnvironmentVariableTypeEnumSecretsManager EnvironmentVariableTypeEnum = "SECRETS_MANAGER"
 )
 
+func (e EnvironmentVariableTypeEnum) ToPointer() *EnvironmentVariableTypeEnum {
+	return &e
+}
+
 func (e *EnvironmentVariableTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLAINTEXT":
 		fallthrough
 	case "PARAMETER_STORE":
 		fallthrough
 	case "SECRETS_MANAGER":
-		*e = EnvironmentVariableTypeEnum(s)
+		*e = EnvironmentVariableTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentVariableTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentVariableTypeEnum: %v", v)
 	}
 }

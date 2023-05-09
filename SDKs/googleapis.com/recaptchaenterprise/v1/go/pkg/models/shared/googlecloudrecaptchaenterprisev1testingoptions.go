@@ -16,21 +16,25 @@ const (
 	GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallengeEnumUnsolvableChallenge         GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallengeEnum = "UNSOLVABLE_CHALLENGE"
 )
 
+func (e GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallengeEnum) ToPointer() *GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallengeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallengeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TESTING_CHALLENGE_UNSPECIFIED":
 		fallthrough
 	case "NOCAPTCHA":
 		fallthrough
 	case "UNSOLVABLE_CHALLENGE":
-		*e = GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallengeEnum(s)
+		*e = GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallengeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallengeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallengeEnum: %v", v)
 	}
 }
 

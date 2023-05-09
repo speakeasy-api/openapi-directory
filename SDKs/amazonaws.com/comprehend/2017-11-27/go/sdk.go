@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Amazon Comprehend is an Amazon Web Services service for gaining insight into the content of documents. Use these actions to determine the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the predominant language used, and more.
 // https://docs.aws.amazon.com/comprehend/ - Amazon Web Services documentation
 type SDK struct {
@@ -1055,7 +1070,7 @@ func (s *SDK) CreateDataset(ctx context.Context, request operations.CreateDatase
 	return res, nil
 }
 
-// CreateDocumentClassifier - Creates a new document classifier that you can use to categorize documents. To create a classifier, you provide a set of training documents that labeled with the categories that you want to use. After the classifier is trained you can use it to categorize a set of labeled documents into the categories. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-document-classification.html">Document Classification</a> in the Comprehend Developer Guide.
+// CreateDocumentClassifier - Creates a new document classifier that you can use to categorize documents. To create a classifier, you provide a set of training documents that are labeled with the categories that you want to use. For more information, see <a href="https://docs.aws.amazon.com/comprehend/latest/dg/training-classifier-model.html">Training classifier models</a> in the Comprehend Developer Guide.
 func (s *SDK) CreateDocumentClassifier(ctx context.Context, request operations.CreateDocumentClassifierRequest) (*operations.CreateDocumentClassifierResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Comprehend_20171127.CreateDocumentClassifier"
@@ -6484,6 +6499,16 @@ func (s *SDK) StartDocumentClassificationJob(ctx context.Context, request operat
 				return nil, err
 			}
 
+			res.ResourceInUseException = out
+		}
+	case httpRes.StatusCode == 487:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
 			res.InternalServerException = out
 		}
 	}
@@ -6583,6 +6608,16 @@ func (s *SDK) StartDominantLanguageDetectionJob(ctx context.Context, request ope
 			res.TooManyTagsException = out
 		}
 	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ResourceInUseException = out
+		}
+	case httpRes.StatusCode == 485:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out interface{}
@@ -6716,6 +6751,16 @@ func (s *SDK) StartEntitiesDetectionJob(ctx context.Context, request operations.
 				return nil, err
 			}
 
+			res.ResourceInUseException = out
+		}
+	case httpRes.StatusCode == 487:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
 			res.InternalServerException = out
 		}
 	}
@@ -6815,6 +6860,16 @@ func (s *SDK) StartEventsDetectionJob(ctx context.Context, request operations.St
 			res.TooManyTagsException = out
 		}
 	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ResourceInUseException = out
+		}
+	case httpRes.StatusCode == 485:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out interface{}
@@ -7034,6 +7089,16 @@ func (s *SDK) StartKeyPhrasesDetectionJob(ctx context.Context, request operation
 				return nil, err
 			}
 
+			res.ResourceInUseException = out
+		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
 			res.InternalServerException = out
 		}
 	}
@@ -7133,6 +7198,16 @@ func (s *SDK) StartPiiEntitiesDetectionJob(ctx context.Context, request operatio
 			res.TooManyTagsException = out
 		}
 	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ResourceInUseException = out
+		}
+	case httpRes.StatusCode == 485:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out interface{}
@@ -7246,6 +7321,16 @@ func (s *SDK) StartSentimentDetectionJob(ctx context.Context, request operations
 				return nil, err
 			}
 
+			res.ResourceInUseException = out
+		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
 			res.InternalServerException = out
 		}
 	}
@@ -7352,6 +7437,16 @@ func (s *SDK) StartTargetedSentimentDetectionJob(ctx context.Context, request op
 				return nil, err
 			}
 
+			res.ResourceInUseException = out
+		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
 			res.InternalServerException = out
 		}
 	}
@@ -7451,6 +7546,16 @@ func (s *SDK) StartTopicsDetectionJob(ctx context.Context, request operations.St
 			res.TooManyTagsException = out
 		}
 	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ResourceInUseException = out
+		}
+	case httpRes.StatusCode == 485:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out interface{}

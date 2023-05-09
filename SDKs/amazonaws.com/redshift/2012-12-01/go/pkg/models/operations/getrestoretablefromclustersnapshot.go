@@ -15,17 +15,21 @@ const (
 	GETRestoreTableFromClusterSnapshotActionEnumRestoreTableFromClusterSnapshot GETRestoreTableFromClusterSnapshotActionEnum = "RestoreTableFromClusterSnapshot"
 )
 
+func (e GETRestoreTableFromClusterSnapshotActionEnum) ToPointer() *GETRestoreTableFromClusterSnapshotActionEnum {
+	return &e
+}
+
 func (e *GETRestoreTableFromClusterSnapshotActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RestoreTableFromClusterSnapshot":
-		*e = GETRestoreTableFromClusterSnapshotActionEnum(s)
+		*e = GETRestoreTableFromClusterSnapshotActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestoreTableFromClusterSnapshotActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestoreTableFromClusterSnapshotActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRestoreTableFromClusterSnapshotVersionEnumTwoThousandAndTwelve1201 GETRestoreTableFromClusterSnapshotVersionEnum = "2012-12-01"
 )
 
+func (e GETRestoreTableFromClusterSnapshotVersionEnum) ToPointer() *GETRestoreTableFromClusterSnapshotVersionEnum {
+	return &e
+}
+
 func (e *GETRestoreTableFromClusterSnapshotVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETRestoreTableFromClusterSnapshotVersionEnum(s)
+		*e = GETRestoreTableFromClusterSnapshotVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestoreTableFromClusterSnapshotVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestoreTableFromClusterSnapshotVersionEnum: %v", v)
 	}
 }
 

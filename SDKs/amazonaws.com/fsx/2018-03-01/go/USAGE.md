@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,28 +17,26 @@ func main() {
         }),
     )
 
-    req := operations.AssociateFileSystemAliasesRequest{
+    ctx := context.Background()
+    res, err := s.AssociateFileSystemAliases(ctx, operations.AssociateFileSystemAliasesRequest{
         AssociateFileSystemAliasesRequest: shared.AssociateFileSystemAliasesRequest{
             Aliases: []string{
                 "provident",
                 "distinctio",
                 "quibusdam",
             },
-            ClientRequestToken: "unde",
+            ClientRequestToken: sdk.String("unde"),
             FileSystemID: "nulla",
         },
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "illum",
-        XAmzCredential: "vel",
-        XAmzDate: "error",
-        XAmzSecurityToken: "deserunt",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "iure",
-        XAmzTarget: "AWSSimbaAPIService_v20180301.AssociateFileSystemAliases",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateFileSystemAliases(ctx, req)
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("illum"),
+        XAmzCredential: sdk.String("vel"),
+        XAmzDate: sdk.String("error"),
+        XAmzSecurityToken: sdk.String("deserunt"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("iure"),
+        XAmzTarget: operations.AssociateFileSystemAliasesXAmzTargetEnumAwsSimbaAPIServiceV20180301AssociateFileSystemAliases,
+    })
     if err != nil {
         log.Fatal(err)
     }

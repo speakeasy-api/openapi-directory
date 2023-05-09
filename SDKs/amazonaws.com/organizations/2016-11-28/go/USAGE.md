@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,22 +17,20 @@ func main() {
         }),
     )
 
-    req := operations.AcceptHandshakeRequest{
+    ctx := context.Background()
+    res, err := s.AcceptHandshake(ctx, operations.AcceptHandshakeRequest{
         AcceptHandshakeRequest: shared.AcceptHandshakeRequest{
             HandshakeID: "corrupti",
         },
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-        XAmzTarget: "AWSOrganizationsV20161128.AcceptHandshake",
-    }
-
-    ctx := context.Background()
-    res, err := s.AcceptHandshake(ctx, req)
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+        XAmzTarget: operations.AcceptHandshakeXAmzTargetEnumAwsOrganizationsV20161128AcceptHandshake,
+    })
     if err != nil {
         log.Fatal(err)
     }

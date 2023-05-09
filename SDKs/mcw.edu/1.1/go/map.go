@@ -35,7 +35,10 @@ func newMap(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // GETChromosomeByAssemblyUsingGET - Return a list of chromosomes
 func (s *mapT) GETChromosomeByAssemblyUsingGET(ctx context.Context, request operations.GETChromosomeByAssemblyUsingGETRequest) (*operations.GETChromosomeByAssemblyUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/maps/chr/{chromosome}/{mapKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/maps/chr/{chromosome}/{mapKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *mapT) GETChromosomeByAssemblyUsingGET(ctx context.Context, request oper
 // GETChromosomesByAssemblyUsingGET - Return a list of chromosomes
 func (s *mapT) GETChromosomesByAssemblyUsingGET(ctx context.Context, request operations.GETChromosomesByAssemblyUsingGETRequest) (*operations.GETChromosomesByAssemblyUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/maps/chr/{mapKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/maps/chr/{mapKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -133,7 +139,10 @@ func (s *mapT) GETChromosomesByAssemblyUsingGET(ctx context.Context, request ope
 // GETMapsBySpeciesUsingGET - Return a list of assemblies
 func (s *mapT) GETMapsBySpeciesUsingGET(ctx context.Context, request operations.GETMapsBySpeciesUsingGETRequest) (*operations.GETMapsBySpeciesUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/maps/{speciesTypeKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/maps/{speciesTypeKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

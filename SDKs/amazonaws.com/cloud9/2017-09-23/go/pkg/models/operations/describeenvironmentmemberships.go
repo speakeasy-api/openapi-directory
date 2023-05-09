@@ -16,17 +16,21 @@ const (
 	DescribeEnvironmentMembershipsXAmzTargetEnumAwsCloud9WorkspaceManagementServiceDescribeEnvironmentMemberships DescribeEnvironmentMembershipsXAmzTargetEnum = "AWSCloud9WorkspaceManagementService.DescribeEnvironmentMemberships"
 )
 
+func (e DescribeEnvironmentMembershipsXAmzTargetEnum) ToPointer() *DescribeEnvironmentMembershipsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeEnvironmentMembershipsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCloud9WorkspaceManagementService.DescribeEnvironmentMemberships":
-		*e = DescribeEnvironmentMembershipsXAmzTargetEnum(s)
+		*e = DescribeEnvironmentMembershipsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeEnvironmentMembershipsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeEnvironmentMembershipsXAmzTargetEnum: %v", v)
 	}
 }
 

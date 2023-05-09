@@ -222,7 +222,10 @@ func (s *orders) CreateOrder(ctx context.Context, request shared.CreateOrderRequ
 // Using a delayed capture payment with `PayOrder` completes the approved payment.
 func (s *orders) PayOrder(ctx context.Context, request operations.PayOrderRequest, security operations.PayOrderSecurity) (*operations.PayOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/orders/{order_id}/pay", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/orders/{order_id}/pay", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayOrderRequest", "json")
 	if err != nil {
@@ -349,7 +352,10 @@ func (s *orders) SearchOrders(ctx context.Context, request shared.SearchOrdersRe
 // Retrieves an [Order](https://developer.squareup.com/reference/square_2021-08-18/objects/Order) by ID.
 func (s *orders) GetV2OrdersOrderID(ctx context.Context, request operations.GetV2OrdersOrderIDRequest, security operations.GetV2OrdersOrderIDSecurity) (*operations.GetV2OrdersOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/orders/{order_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/orders/{order_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +414,10 @@ func (s *orders) GetV2OrdersOrderID(ctx context.Context, request operations.GetV
 // [Pay for Orders](https://developer.squareup.com/docs/orders-api/pay-for-orders).
 func (s *orders) PutV2OrdersOrderID(ctx context.Context, request operations.PutV2OrdersOrderIDRequest, security operations.PutV2OrdersOrderIDSecurity) (*operations.PutV2OrdersOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/orders/{order_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/orders/{order_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateOrderRequest", "json")
 	if err != nil {

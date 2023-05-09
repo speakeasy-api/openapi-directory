@@ -14,18 +14,22 @@ const (
 	SegmentTypeEnumImport      SegmentTypeEnum = "IMPORT"
 )
 
+func (e SegmentTypeEnum) ToPointer() *SegmentTypeEnum {
+	return &e
+}
+
 func (e *SegmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSIONAL":
 		fallthrough
 	case "IMPORT":
-		*e = SegmentTypeEnum(s)
+		*e = SegmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SegmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SegmentTypeEnum: %v", v)
 	}
 }

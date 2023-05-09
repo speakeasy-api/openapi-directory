@@ -7,26 +7,30 @@ import (
 	"fmt"
 )
 
-type GroundhogActiveEnum string
+type GroundhogActiveEnum int64
 
 const (
-	GroundhogActiveEnumZero GroundhogActiveEnum = "0"
-	GroundhogActiveEnumOne  GroundhogActiveEnum = "1"
+	GroundhogActiveEnumZero GroundhogActiveEnum = 0
+	GroundhogActiveEnumOne  GroundhogActiveEnum = 1
 )
 
+func (e GroundhogActiveEnum) ToPointer() *GroundhogActiveEnum {
+	return &e
+}
+
 func (e *GroundhogActiveEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = GroundhogActiveEnum(s)
+	case 1:
+		*e = GroundhogActiveEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroundhogActiveEnum: %s", s)
+		return fmt.Errorf("invalid value for GroundhogActiveEnum: %v", v)
 	}
 }
 

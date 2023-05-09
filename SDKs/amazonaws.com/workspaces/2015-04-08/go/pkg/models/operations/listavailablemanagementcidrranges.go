@@ -16,17 +16,21 @@ const (
 	ListAvailableManagementCidrRangesXAmzTargetEnumWorkspacesServiceListAvailableManagementCidrRanges ListAvailableManagementCidrRangesXAmzTargetEnum = "WorkspacesService.ListAvailableManagementCidrRanges"
 )
 
+func (e ListAvailableManagementCidrRangesXAmzTargetEnum) ToPointer() *ListAvailableManagementCidrRangesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListAvailableManagementCidrRangesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.ListAvailableManagementCidrRanges":
-		*e = ListAvailableManagementCidrRangesXAmzTargetEnum(s)
+		*e = ListAvailableManagementCidrRangesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAvailableManagementCidrRangesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAvailableManagementCidrRangesXAmzTargetEnum: %v", v)
 	}
 }
 

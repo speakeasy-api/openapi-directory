@@ -2,43 +2,44 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.VisionFilesAnnotateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Files.VisionFilesAnnotate(ctx, operations.VisionFilesAnnotateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest: &shared.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest{
-            Parent: "provident",
+            Parent: sdk.String("provident"),
             Requests: []shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
                 shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p1beta1Feature{
                         shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 602763,
-                            Model: "nulla",
-                            Type: "SAFE_SEARCH_DETECTION",
+                            MaxResults: sdk.Int(602763),
+                            Model: sdk.String("nulla"),
+                            Type: shared.GoogleCloudVisionV1p1beta1FeatureTypeEnumSafeSearchDetection.ToPointer(),
                         },
                         shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 847252,
-                            Model: "vel",
-                            Type: "IMAGE_PROPERTIES",
+                            MaxResults: sdk.Int(847252),
+                            Model: sdk.String("vel"),
+                            Type: shared.GoogleCloudVisionV1p1beta1FeatureTypeEnumImageProperties.ToPointer(),
                         },
                         shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 645894,
-                            Model: "suscipit",
-                            Type: "TEXT_DETECTION",
+                            MaxResults: sdk.Int(645894),
+                            Model: sdk.String("suscipit"),
+                            Type: shared.GoogleCloudVisionV1p1beta1FeatureTypeEnumTextDetection.ToPointer(),
                         },
                         shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 297534,
-                            Model: "debitis",
-                            Type: "TYPE_UNSPECIFIED",
+                            MaxResults: sdk.Int(297534),
+                            Model: sdk.String("debitis"),
+                            Type: shared.GoogleCloudVisionV1p1beta1FeatureTypeEnumTypeUnspecified.ToPointer(),
                         },
                     },
                     ImageContext: &shared.GoogleCloudVisionV1p1beta1ImageContext{
@@ -58,41 +59,41 @@ func main() {
                         },
                         LatLongRect: &shared.GoogleCloudVisionV1p1beta1LatLongRect{
                             MaxLatLng: &shared.LatLng{
-                                Latitude: 9255.97,
-                                Longitude: 8360.79,
+                                Latitude: sdk.Float64(9255.97),
+                                Longitude: sdk.Float64(8360.79),
                             },
                             MinLatLng: &shared.LatLng{
-                                Latitude: 710.36,
-                                Longitude: 3373.96,
+                                Latitude: sdk.Float64(710.36),
+                                Longitude: sdk.Float64(3373.96),
                             },
                         },
                         ProductSearchParams: &shared.GoogleCloudVisionV1p1beta1ProductSearchParams{
                             BoundingPoly: &shared.GoogleCloudVisionV1p1beta1BoundingPoly{
                                 NormalizedVertices: []shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
                                     shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
-                                        X: 6481.72,
-                                        Y: 202.18,
+                                        X: sdk.Float32(6481.72),
+                                        Y: sdk.Float32(202.18),
                                     },
                                 },
                                 Vertices: []shared.GoogleCloudVisionV1p1beta1Vertex{
                                     shared.GoogleCloudVisionV1p1beta1Vertex{
-                                        X: 832620,
-                                        Y: 957156,
+                                        X: sdk.Int(832620),
+                                        Y: sdk.Int(957156),
                                     },
                                     shared.GoogleCloudVisionV1p1beta1Vertex{
-                                        X: 778157,
-                                        Y: 140350,
+                                        X: sdk.Int(778157),
+                                        Y: sdk.Int(140350),
                                     },
                                 },
                             },
-                            Filter: "at",
+                            Filter: sdk.String("at"),
                             ProductCategories: []string{
                                 "maiores",
                                 "molestiae",
                                 "quod",
                                 "quod",
                             },
-                            ProductSet: "esse",
+                            ProductSet: sdk.String("esse"),
                         },
                         TextDetectionParams: &shared.GoogleCloudVisionV1p1beta1TextDetectionParams{
                             AdvancedOcrOptions: []string{
@@ -100,18 +101,18 @@ func main() {
                                 "dolorum",
                                 "dicta",
                             },
-                            EnableTextDetectionConfidenceScore: false,
+                            EnableTextDetectionConfidenceScore: sdk.Bool(false),
                         },
                         WebDetectionParams: &shared.GoogleCloudVisionV1p1beta1WebDetectionParams{
-                            IncludeGeoResults: false,
+                            IncludeGeoResults: sdk.Bool(false),
                         },
                     },
                     InputConfig: &shared.GoogleCloudVisionV1p1beta1InputConfig{
-                        Content: "nam",
+                        Content: sdk.String("nam"),
                         GcsSource: &shared.GoogleCloudVisionV1p1beta1GcsSource{
-                            URI: "https://oily-cephalopod.name",
+                            URI: sdk.String("https://oily-cephalopod.name"),
                         },
-                        MimeType: "hic",
+                        MimeType: sdk.String("hic"),
                     },
                     Pages: []int{
                         521848,
@@ -123,14 +124,14 @@ func main() {
                 shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p1beta1Feature{
                         shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 186332,
-                            Model: "impedit",
-                            Type: "CROP_HINTS",
+                            MaxResults: sdk.Int(186332),
+                            Model: sdk.String("impedit"),
+                            Type: shared.GoogleCloudVisionV1p1beta1FeatureTypeEnumCropHints.ToPointer(),
                         },
                         shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 456150,
-                            Model: "ipsum",
-                            Type: "SAFE_SEARCH_DETECTION",
+                            MaxResults: sdk.Int(456150),
+                            Model: sdk.String("ipsum"),
+                            Type: shared.GoogleCloudVisionV1p1beta1FeatureTypeEnumSafeSearchDetection.ToPointer(),
                         },
                     },
                     ImageContext: &shared.GoogleCloudVisionV1p1beta1ImageContext{
@@ -145,65 +146,65 @@ func main() {
                         },
                         LatLongRect: &shared.GoogleCloudVisionV1p1beta1LatLongRect{
                             MaxLatLng: &shared.LatLng{
-                                Latitude: 6120.96,
-                                Longitude: 2223.21,
+                                Latitude: sdk.Float64(6120.96),
+                                Longitude: sdk.Float64(2223.21),
                             },
                             MinLatLng: &shared.LatLng{
-                                Latitude: 6169.34,
-                                Longitude: 3864.89,
+                                Latitude: sdk.Float64(6169.34),
+                                Longitude: sdk.Float64(3864.89),
                             },
                         },
                         ProductSearchParams: &shared.GoogleCloudVisionV1p1beta1ProductSearchParams{
                             BoundingPoly: &shared.GoogleCloudVisionV1p1beta1BoundingPoly{
                                 NormalizedVertices: []shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
                                     shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
-                                        X: 9025.99,
-                                        Y: 6818.2,
+                                        X: sdk.Float32(9025.99),
+                                        Y: sdk.Float32(6818.2),
                                     },
                                     shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
-                                        X: 4499.5,
-                                        Y: 3595.08,
+                                        X: sdk.Float32(4499.5),
+                                        Y: sdk.Float32(3595.08),
                                     },
                                     shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
-                                        X: 6130.64,
-                                        Y: 4370.32,
+                                        X: sdk.Float32(6130.64),
+                                        Y: sdk.Float32(4370.32),
                                     },
                                     shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
-                                        X: 9023.49,
-                                        Y: 6976.31,
+                                        X: sdk.Float32(9023.49),
+                                        Y: sdk.Float32(6976.31),
                                     },
                                 },
                                 Vertices: []shared.GoogleCloudVisionV1p1beta1Vertex{
                                     shared.GoogleCloudVisionV1p1beta1Vertex{
-                                        X: 60225,
-                                        Y: 969810,
+                                        X: sdk.Int(60225),
+                                        Y: sdk.Int(969810),
                                     },
                                 },
                             },
-                            Filter: "est",
+                            Filter: sdk.String("est"),
                             ProductCategories: []string{
                                 "laborum",
                                 "dolores",
                                 "dolorem",
                             },
-                            ProductSet: "corporis",
+                            ProductSet: sdk.String("corporis"),
                         },
                         TextDetectionParams: &shared.GoogleCloudVisionV1p1beta1TextDetectionParams{
                             AdvancedOcrOptions: []string{
                                 "nobis",
                             },
-                            EnableTextDetectionConfidenceScore: false,
+                            EnableTextDetectionConfidenceScore: sdk.Bool(false),
                         },
                         WebDetectionParams: &shared.GoogleCloudVisionV1p1beta1WebDetectionParams{
-                            IncludeGeoResults: false,
+                            IncludeGeoResults: sdk.Bool(false),
                         },
                     },
                     InputConfig: &shared.GoogleCloudVisionV1p1beta1InputConfig{
-                        Content: "enim",
+                        Content: sdk.String("enim"),
                         GcsSource: &shared.GoogleCloudVisionV1p1beta1GcsSource{
-                            URI: "https://gummy-expedition.name",
+                            URI: sdk.String("https://gummy-expedition.name"),
                         },
-                        MimeType: "accusantium",
+                        MimeType: sdk.String("accusantium"),
                     },
                     Pages: []int{
                         634274,
@@ -213,24 +214,24 @@ func main() {
                 shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p1beta1Feature{
                         shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 102044,
-                            Model: "mollitia",
-                            Type: "LANDMARK_DETECTION",
+                            MaxResults: sdk.Int(102044),
+                            Model: sdk.String("mollitia"),
+                            Type: shared.GoogleCloudVisionV1p1beta1FeatureTypeEnumLandmarkDetection.ToPointer(),
                         },
                         shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 635059,
-                            Model: "consequuntur",
-                            Type: "OBJECT_LOCALIZATION",
+                            MaxResults: sdk.Int(635059),
+                            Model: sdk.String("consequuntur"),
+                            Type: shared.GoogleCloudVisionV1p1beta1FeatureTypeEnumObjectLocalization.ToPointer(),
                         },
                         shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 653108,
-                            Model: "occaecati",
-                            Type: "LOGO_DETECTION",
+                            MaxResults: sdk.Int(653108),
+                            Model: sdk.String("occaecati"),
+                            Type: shared.GoogleCloudVisionV1p1beta1FeatureTypeEnumLogoDetection.ToPointer(),
                         },
                         shared.GoogleCloudVisionV1p1beta1Feature{
-                            MaxResults: 414369,
-                            Model: "quam",
-                            Type: "DOCUMENT_TEXT_DETECTION",
+                            MaxResults: sdk.Int(414369),
+                            Model: sdk.String("quam"),
+                            Type: shared.GoogleCloudVisionV1p1beta1FeatureTypeEnumDocumentTextDetection.ToPointer(),
                         },
                     },
                     ImageContext: &shared.GoogleCloudVisionV1p1beta1ImageContext{
@@ -244,66 +245,66 @@ func main() {
                         },
                         LatLongRect: &shared.GoogleCloudVisionV1p1beta1LatLongRect{
                             MaxLatLng: &shared.LatLng{
-                                Latitude: 1103.75,
-                                Longitude: 6747.52,
+                                Latitude: sdk.Float64(1103.75),
+                                Longitude: sdk.Float64(6747.52),
                             },
                             MinLatLng: &shared.LatLng{
-                                Latitude: 6563.3,
-                                Longitude: 3172.02,
+                                Latitude: sdk.Float64(6563.3),
+                                Longitude: sdk.Float64(3172.02),
                             },
                         },
                         ProductSearchParams: &shared.GoogleCloudVisionV1p1beta1ProductSearchParams{
                             BoundingPoly: &shared.GoogleCloudVisionV1p1beta1BoundingPoly{
                                 NormalizedVertices: []shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
                                     shared.GoogleCloudVisionV1p1beta1NormalizedVertex{
-                                        X: 7783.46,
-                                        Y: 1965.82,
+                                        X: sdk.Float32(7783.46),
+                                        Y: sdk.Float32(1965.82),
                                     },
                                 },
                                 Vertices: []shared.GoogleCloudVisionV1p1beta1Vertex{
                                     shared.GoogleCloudVisionV1p1beta1Vertex{
-                                        X: 368725,
-                                        Y: 662527,
+                                        X: sdk.Int(368725),
+                                        Y: sdk.Int(662527),
                                     },
                                     shared.GoogleCloudVisionV1p1beta1Vertex{
-                                        X: 820994,
-                                        Y: 13571,
+                                        X: sdk.Int(820994),
+                                        Y: sdk.Int(13571),
                                     },
                                     shared.GoogleCloudVisionV1p1beta1Vertex{
-                                        X: 97101,
-                                        Y: 622846,
+                                        X: sdk.Int(97101),
+                                        Y: sdk.Int(622846),
                                     },
                                     shared.GoogleCloudVisionV1p1beta1Vertex{
-                                        X: 837945,
-                                        Y: 673660,
+                                        X: sdk.Int(837945),
+                                        Y: sdk.Int(673660),
                                     },
                                 },
                             },
-                            Filter: "quasi",
+                            Filter: sdk.String("quasi"),
                             ProductCategories: []string{
                                 "voluptatibus",
                                 "vero",
                                 "nihil",
                                 "praesentium",
                             },
-                            ProductSet: "voluptatibus",
+                            ProductSet: sdk.String("voluptatibus"),
                         },
                         TextDetectionParams: &shared.GoogleCloudVisionV1p1beta1TextDetectionParams{
                             AdvancedOcrOptions: []string{
                                 "omnis",
                             },
-                            EnableTextDetectionConfidenceScore: false,
+                            EnableTextDetectionConfidenceScore: sdk.Bool(false),
                         },
                         WebDetectionParams: &shared.GoogleCloudVisionV1p1beta1WebDetectionParams{
-                            IncludeGeoResults: false,
+                            IncludeGeoResults: sdk.Bool(false),
                         },
                     },
                     InputConfig: &shared.GoogleCloudVisionV1p1beta1InputConfig{
-                        Content: "voluptate",
+                        Content: sdk.String("voluptate"),
                         GcsSource: &shared.GoogleCloudVisionV1p1beta1GcsSource{
-                            URI: "https://agile-arch-rival.info",
+                            URI: sdk.String("https://agile-arch-rival.info"),
                         },
-                        MimeType: "ut",
+                        MimeType: sdk.String("ut"),
                     },
                     Pages: []int{
                         120196,
@@ -314,20 +315,17 @@ func main() {
                 },
             },
         },
-        AccessToken: "dicta",
-        Alt: "proto",
-        Callback: "enim",
-        Fields: "accusamus",
-        Key: "commodi",
-        OauthToken: "repudiandae",
-        PrettyPrint: false,
-        QuotaUser: "quae",
-        UploadType: "ipsum",
-        UploadProtocol: "quidem",
-    }
-
-    ctx := context.Background()
-    res, err := s.Files.VisionFilesAnnotate(ctx, req, operations.VisionFilesAnnotateSecurity{
+        AccessToken: sdk.String("dicta"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("enim"),
+        Fields: sdk.String("accusamus"),
+        Key: sdk.String("commodi"),
+        OauthToken: sdk.String("repudiandae"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("quae"),
+        UploadType: sdk.String("ipsum"),
+        UploadProtocol: sdk.String("quidem"),
+    }, operations.VisionFilesAnnotateSecurity{
         Option1: &operations.VisionFilesAnnotateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

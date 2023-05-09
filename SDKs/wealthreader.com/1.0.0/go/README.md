@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/wealthreader.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -41,11 +39,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### EntityData
+### [EntityData](docs/entitydata/README.md)
 
-* `GetEntities` - Obtiene el listado de entidades soportadas
-* `GetErrorCodes` - Listado de códigos de error
-* `PostEntities` - Obtiene los activos financieros y el detalle de su composición
+* [GetEntities](docs/entitydata/README.md#getentities) - Obtiene el listado de entidades soportadas
+* [GetErrorCodes](docs/entitydata/README.md#geterrorcodes) - Listado de códigos de error
+* [PostEntities](docs/entitydata/README.md#postentities) - Obtiene los activos financieros y el detalle de su composición
 <!-- End SDK Available Operations -->
 
 ### Maturity

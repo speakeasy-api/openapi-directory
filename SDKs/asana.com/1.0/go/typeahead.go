@@ -71,7 +71,10 @@ func newTypeahead(defaultClient, securityClient HTTPClient, serverURL, language,
 // projects that are relevant for the requesting user's api token.
 func (s *typeahead) TypeaheadForWorkspace(ctx context.Context, request operations.TypeaheadForWorkspaceRequest) (*operations.TypeaheadForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/typeahead", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/typeahead", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -37,7 +37,10 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // <strong>Notes:</strong><ul><li>Password set is only supported by API Resellers setting subaccount passwords.</li><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v1) ChangePassword(ctx context.Context, request operations.ChangePasswordRequest) (*operations.ChangePasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}/factors/password", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}/factors/password", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Secret", "json")
 	if err != nil {
@@ -446,7 +449,10 @@ func (s *v1) CreateSubaccountRaw(ctx context.Context, request []byte) (*operatio
 // <strong>Notes:</strong><ul><li>Shopper deletion is not supported in OTE</li><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v1) Delete(ctx context.Context, request operations.DeleteRequest) (*operations.DeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -574,7 +580,10 @@ func (s *v1) Delete(ctx context.Context, request operations.DeleteRequest) (*ope
 // <strong>Notes:</strong><ul><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v1) Get(ctx context.Context, request operations.GetRequest) (*operations.GetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -735,7 +744,10 @@ func (s *v1) Get(ctx context.Context, request operations.GetRequest) (*operation
 // <strong>Notes:</strong><ul><li>**shopperId** is **not the same** as **customerId**. **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v1) GetStatus(ctx context.Context, request operations.GetStatusRequest) (*operations.GetStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -898,7 +910,10 @@ func (s *v1) GetStatus(ctx context.Context, request operations.GetStatusRequest)
 // <strong>Notes:</strong><ul><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v1) UpdateJSON(ctx context.Context, request operations.UpdateJSONRequest) (*operations.UpdateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShopperUpdate", "json")
 	if err != nil {
@@ -1067,7 +1082,10 @@ func (s *v1) UpdateJSON(ctx context.Context, request operations.UpdateJSONReques
 // <strong>Notes:</strong><ul><li>**shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)</li></ul>
 func (s *v1) UpdateRaw(ctx context.Context, request operations.UpdateRawRequest) (*operations.UpdateRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/shoppers/{shopperId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

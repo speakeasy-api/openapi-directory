@@ -16,17 +16,21 @@ const (
 	StartExportTaskXAmzTargetEnumAwsPoseidonServiceV20151101StartExportTask StartExportTaskXAmzTargetEnum = "AWSPoseidonService_V2015_11_01.StartExportTask"
 )
 
+func (e StartExportTaskXAmzTargetEnum) ToPointer() *StartExportTaskXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartExportTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPoseidonService_V2015_11_01.StartExportTask":
-		*e = StartExportTaskXAmzTargetEnum(s)
+		*e = StartExportTaskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartExportTaskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartExportTaskXAmzTargetEnum: %v", v)
 	}
 }
 

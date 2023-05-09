@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -44,4 +45,8 @@ pkg/models/shared/featureidproto.go
 pkg/models/shared/office.go
 pkg/models/shared/geographicdivision.go
 pkg/models/shared/representativeinfodata.go
+docs/sdk/README.md
+docs/divisions/README.md
+docs/elections/README.md
+docs/representatives/README.md
 USAGE.md

@@ -16,17 +16,21 @@ const (
 	CreateRemoteAccessSessionXAmzTargetEnumDeviceFarm20150623CreateRemoteAccessSession CreateRemoteAccessSessionXAmzTargetEnum = "DeviceFarm_20150623.CreateRemoteAccessSession"
 )
 
+func (e CreateRemoteAccessSessionXAmzTargetEnum) ToPointer() *CreateRemoteAccessSessionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateRemoteAccessSessionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.CreateRemoteAccessSession":
-		*e = CreateRemoteAccessSessionXAmzTargetEnum(s)
+		*e = CreateRemoteAccessSessionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRemoteAccessSessionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRemoteAccessSessionXAmzTargetEnum: %v", v)
 	}
 }
 

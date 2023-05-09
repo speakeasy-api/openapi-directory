@@ -90,7 +90,10 @@ func (s *devices) CloudidentityDevicesCreate(ctx context.Context, request operat
 // CloudidentityDevicesDeviceUsersApprove - Approves device to access user data.
 func (s *devices) CloudidentityDevicesDeviceUsersApprove(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersApproveRequest, security operations.CloudidentityDevicesDeviceUsersApproveSecurity) (*operations.CloudidentityDevicesDeviceUsersApproveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:approve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:approve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest", "json")
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *devices) CloudidentityDevicesDeviceUsersApprove(ctx context.Context, re
 // CloudidentityDevicesDeviceUsersBlock - Blocks device from accessing user data
 func (s *devices) CloudidentityDevicesDeviceUsersBlock(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersBlockRequest, security operations.CloudidentityDevicesDeviceUsersBlockSecurity) (*operations.CloudidentityDevicesDeviceUsersBlockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:block", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:block", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest", "json")
 	if err != nil {
@@ -200,7 +206,10 @@ func (s *devices) CloudidentityDevicesDeviceUsersBlock(ctx context.Context, requ
 // CloudidentityDevicesDeviceUsersCancelWipe - Cancels an unfinished user account wipe. This operation can be used to cancel device wipe in the gap between the wipe operation returning success and the device being wiped.
 func (s *devices) CloudidentityDevicesDeviceUsersCancelWipe(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersCancelWipeRequest, security operations.CloudidentityDevicesDeviceUsersCancelWipeSecurity) (*operations.CloudidentityDevicesDeviceUsersCancelWipeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancelWipe", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancelWipe", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest", "json")
 	if err != nil {
@@ -255,7 +264,10 @@ func (s *devices) CloudidentityDevicesDeviceUsersCancelWipe(ctx context.Context,
 // CloudidentityDevicesDeviceUsersClientStatesList - Lists the client states for the given search query.
 func (s *devices) CloudidentityDevicesDeviceUsersClientStatesList(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersClientStatesListRequest, security operations.CloudidentityDevicesDeviceUsersClientStatesListSecurity) (*operations.CloudidentityDevicesDeviceUsersClientStatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientStates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientStates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -303,7 +315,10 @@ func (s *devices) CloudidentityDevicesDeviceUsersClientStatesList(ctx context.Co
 // CloudidentityDevicesDeviceUsersList - Lists/Searches DeviceUsers.
 func (s *devices) CloudidentityDevicesDeviceUsersList(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersListRequest, security operations.CloudidentityDevicesDeviceUsersListSecurity) (*operations.CloudidentityDevicesDeviceUsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deviceUsers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deviceUsers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +366,10 @@ func (s *devices) CloudidentityDevicesDeviceUsersList(ctx context.Context, reque
 // CloudidentityDevicesDeviceUsersLookup - Looks up resource names of the DeviceUsers associated with the caller's credentials, as well as the properties provided in the request. This method must be called with end-user credentials with the scope: https://www.googleapis.com/auth/cloud-identity.devices.lookup If multiple properties are provided, only DeviceUsers having all of these properties are considered as matches - i.e. the query behaves like an AND. Different platforms require different amounts of information from the caller to ensure that the DeviceUser is uniquely identified. - iOS: No properties need to be passed, the caller's credentials are sufficient to identify the corresponding DeviceUser. - Android: Specifying the 'android_id' field is required. - Desktop: Specifying the 'raw_resource_id' field is required.
 func (s *devices) CloudidentityDevicesDeviceUsersLookup(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersLookupRequest, security operations.CloudidentityDevicesDeviceUsersLookupSecurity) (*operations.CloudidentityDevicesDeviceUsersLookupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:lookup", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:lookup", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -399,7 +417,10 @@ func (s *devices) CloudidentityDevicesDeviceUsersLookup(ctx context.Context, req
 // CloudidentityDevicesDeviceUsersWipe - Wipes the user's account on a device. Other data on the device that is not associated with the user's work account is not affected. For example, if a Gmail app is installed on a device that is used for personal and work purposes, and the user is logged in to the Gmail app with their personal account as well as their work account, wiping the "deviceUser" by their work administrator will not affect their personal account within Gmail or other apps such as Photos.
 func (s *devices) CloudidentityDevicesDeviceUsersWipe(ctx context.Context, request operations.CloudidentityDevicesDeviceUsersWipeRequest, security operations.CloudidentityDevicesDeviceUsersWipeSecurity) (*operations.CloudidentityDevicesDeviceUsersWipeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:wipe", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:wipe", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest", "json")
 	if err != nil {

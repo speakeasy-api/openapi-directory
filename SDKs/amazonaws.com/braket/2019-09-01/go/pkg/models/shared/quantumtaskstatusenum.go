@@ -19,12 +19,16 @@ const (
 	QuantumTaskStatusEnumCancelled  QuantumTaskStatusEnum = "CANCELLED"
 )
 
+func (e QuantumTaskStatusEnum) ToPointer() *QuantumTaskStatusEnum {
+	return &e
+}
+
 func (e *QuantumTaskStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATED":
 		fallthrough
 	case "QUEUED":
@@ -38,9 +42,9 @@ func (e *QuantumTaskStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLING":
 		fallthrough
 	case "CANCELLED":
-		*e = QuantumTaskStatusEnum(s)
+		*e = QuantumTaskStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QuantumTaskStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for QuantumTaskStatusEnum: %v", v)
 	}
 }

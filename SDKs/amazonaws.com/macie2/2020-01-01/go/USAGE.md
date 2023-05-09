@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,23 +16,21 @@ func main() {
         }),
     )
 
-    req := operations.AcceptInvitationRequest{
-        RequestBody: operations.AcceptInvitationRequestBody{
-            AdministratorAccountID: "corrupti",
-            InvitationID: "provident",
-            MasterAccount: "distinctio",
-        },
-        XAmzAlgorithm: "quibusdam",
-        XAmzContentSha256: "unde",
-        XAmzCredential: "nulla",
-        XAmzDate: "corrupti",
-        XAmzSecurityToken: "illum",
-        XAmzSignature: "vel",
-        XAmzSignedHeaders: "error",
-    }
-
     ctx := context.Background()
-    res, err := s.AcceptInvitation(ctx, req)
+    res, err := s.AcceptInvitation(ctx, operations.AcceptInvitationRequest{
+        RequestBody: operations.AcceptInvitationRequestBody{
+            AdministratorAccountID: sdk.String("corrupti"),
+            InvitationID: "provident",
+            MasterAccount: sdk.String("distinctio"),
+        },
+        XAmzAlgorithm: sdk.String("quibusdam"),
+        XAmzContentSha256: sdk.String("unde"),
+        XAmzCredential: sdk.String("nulla"),
+        XAmzDate: sdk.String("corrupti"),
+        XAmzSecurityToken: sdk.String("illum"),
+        XAmzSignature: sdk.String("vel"),
+        XAmzSignedHeaders: sdk.String("error"),
+    })
     if err != nil {
         log.Fatal(err)
     }

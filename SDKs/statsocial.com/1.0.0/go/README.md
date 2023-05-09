@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/statsocial.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.GetApplicationsStatusRequest{
-        Key: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Application.GetApplicationsStatus(ctx, req)
+    res, err := s.Application.GetApplicationsStatus(ctx, operations.GetApplicationsStatusRequest{
+        Key: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,37 +46,37 @@ func main() {
 ## Available Resources and Operations
 
 
-### Application
+### [Application](docs/application/README.md)
 
-* `GetApplicationsStatus` - Used to understand API usage
+* [GetApplicationsStatus](docs/application/README.md#getapplicationsstatus) - Used to understand API usage
 
-### CustomReports
+### [CustomReports](docs/customreports/README.md)
 
-* `GetReportsCustomCreate` - Step 3 of executing custom report
-* `GetReportsCustomGenerate` - Step 1 of executing custom report
-* `GetReportsCustomInsert` - Step 2 of executing custom report
-* `PostReportsCustomCreate` - Step 3 of executing custom report
-* `PostReportsCustomGenerate` - Step 1 of executing custom report
-* `PostReportsCustomInsert` - Step 2 of executing custom report
+* [GetReportsCustomCreate](docs/customreports/README.md#getreportscustomcreate) - Step 3 of executing custom report
+* [GetReportsCustomGenerate](docs/customreports/README.md#getreportscustomgenerate) - Step 1 of executing custom report
+* [GetReportsCustomInsert](docs/customreports/README.md#getreportscustominsert) - Step 2 of executing custom report
+* [PostReportsCustomCreate](docs/customreports/README.md#postreportscustomcreate) - Step 3 of executing custom report
+* [PostReportsCustomGenerate](docs/customreports/README.md#postreportscustomgenerate) - Step 1 of executing custom report
+* [PostReportsCustomInsert](docs/customreports/README.md#postreportscustominsert) - Step 2 of executing custom report
 
-### FollowerReports
+### [FollowerReports](docs/followerreports/README.md)
 
-* `GetReportsTwitterCreate` - Used to create twitter follower report
-* `PostReportsTwitterCreate` - Used to create twitter follower report
+* [GetReportsTwitterCreate](docs/followerreports/README.md#getreportstwittercreate) - Used to create twitter follower report
+* [PostReportsTwitterCreate](docs/followerreports/README.md#postreportstwittercreate) - Used to create twitter follower report
 
-### Reports
+### [Reports](docs/reports/README.md)
 
-* `GetReports` - Obtain report output
-* `GetReportsDates` - Get report dates available for a specific report
-* `GetReportsStatus` - Get list of generated reports
-* `PostReports` - Obtain report output
-* `PostReportsDates` - Get report dates available for a specific report
-* `PostReportsStatus` - Get list of generated reports
+* [GetReports](docs/reports/README.md#getreports) - Obtain report output
+* [GetReportsDates](docs/reports/README.md#getreportsdates) - Get report dates available for a specific report
+* [GetReportsStatus](docs/reports/README.md#getreportsstatus) - Get list of generated reports
+* [PostReports](docs/reports/README.md#postreports) - Obtain report output
+* [PostReportsDates](docs/reports/README.md#postreportsdates) - Get report dates available for a specific report
+* [PostReportsStatus](docs/reports/README.md#postreportsstatus) - Get list of generated reports
 
-### TweetReports
+### [TweetReports](docs/tweetreports/README.md)
 
-* `GetReportsTweetCreate` - Used to create tweet reports
-* `PostReportsTweetCreate` - Used to create tweet reports
+* [GetReportsTweetCreate](docs/tweetreports/README.md#getreportstweetcreate) - Used to create tweet reports
+* [PostReportsTweetCreate](docs/tweetreports/README.md#postreportstweetcreate) - Used to create tweet reports
 <!-- End SDK Available Operations -->
 
 ### Maturity

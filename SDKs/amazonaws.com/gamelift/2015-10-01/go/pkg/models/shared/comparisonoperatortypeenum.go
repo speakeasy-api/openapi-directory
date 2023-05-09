@@ -16,12 +16,16 @@ const (
 	ComparisonOperatorTypeEnumLessThanOrEqualToThreshold    ComparisonOperatorTypeEnum = "LessThanOrEqualToThreshold"
 )
 
+func (e ComparisonOperatorTypeEnum) ToPointer() *ComparisonOperatorTypeEnum {
+	return &e
+}
+
 func (e *ComparisonOperatorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GreaterThanOrEqualToThreshold":
 		fallthrough
 	case "GreaterThanThreshold":
@@ -29,9 +33,9 @@ func (e *ComparisonOperatorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LessThanThreshold":
 		fallthrough
 	case "LessThanOrEqualToThreshold":
-		*e = ComparisonOperatorTypeEnum(s)
+		*e = ComparisonOperatorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComparisonOperatorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComparisonOperatorTypeEnum: %v", v)
 	}
 }

@@ -138,7 +138,10 @@ func (s *appKeys) Getappkeysfromaccount(ctx context.Context, request operations.
 // Activates or deactivates an `appKey` by its ID.
 func (s *appKeys) Updateappkey(ctx context.Context, request operations.UpdateappkeyRequest) (*operations.UpdateappkeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/vlm/appkeys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/vlm/appkeys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateappkeyRequest", "json")
 	if err != nil {

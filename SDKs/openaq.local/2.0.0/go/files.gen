@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -66,4 +67,7 @@ pkg/models/shared/tilejson.go
 pkg/models/shared/openaqprojectsresult.go
 pkg/models/shared/projectsrow.go
 pkg/models/shared/projectparameterdetails.go
+docs/sdk/README.md
+docs/v1/README.md
+docs/v2/README.md
 USAGE.md

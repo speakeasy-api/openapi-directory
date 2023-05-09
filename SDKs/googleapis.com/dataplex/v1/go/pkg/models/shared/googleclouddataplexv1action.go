@@ -17,12 +17,16 @@ const (
 	GoogleCloudDataplexV1ActionCategoryEnumDataDiscovery       GoogleCloudDataplexV1ActionCategoryEnum = "DATA_DISCOVERY"
 )
 
+func (e GoogleCloudDataplexV1ActionCategoryEnum) ToPointer() *GoogleCloudDataplexV1ActionCategoryEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1ActionCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "RESOURCE_MANAGEMENT":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDataplexV1ActionCategoryEnum) UnmarshalJSON(data []byte) err
 	case "SECURITY_POLICY":
 		fallthrough
 	case "DATA_DISCOVERY":
-		*e = GoogleCloudDataplexV1ActionCategoryEnum(s)
+		*e = GoogleCloudDataplexV1ActionCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ActionCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ActionCategoryEnum: %v", v)
 	}
 }
 

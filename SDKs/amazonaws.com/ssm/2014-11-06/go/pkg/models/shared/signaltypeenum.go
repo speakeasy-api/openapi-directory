@@ -17,12 +17,16 @@ const (
 	SignalTypeEnumResume    SignalTypeEnum = "Resume"
 )
 
+func (e SignalTypeEnum) ToPointer() *SignalTypeEnum {
+	return &e
+}
+
 func (e *SignalTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Approve":
 		fallthrough
 	case "Reject":
@@ -32,9 +36,9 @@ func (e *SignalTypeEnum) UnmarshalJSON(data []byte) error {
 	case "StopStep":
 		fallthrough
 	case "Resume":
-		*e = SignalTypeEnum(s)
+		*e = SignalTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SignalTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SignalTypeEnum: %v", v)
 	}
 }

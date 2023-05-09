@@ -19,12 +19,16 @@ const (
 	WebhookEventTypeEnumEnumPing               WebhookEventTypeEnumEnum = "PING"
 )
 
+func (e WebhookEventTypeEnumEnum) ToPointer() *WebhookEventTypeEnumEnum {
+	return &e
+}
+
 func (e *WebhookEventTypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRANSACTION_CREATED":
 		fallthrough
 	case "TRANSACTION_SETTLED":
@@ -32,9 +36,9 @@ func (e *WebhookEventTypeEnumEnum) UnmarshalJSON(data []byte) error {
 	case "TRANSACTION_DELETED":
 		fallthrough
 	case "PING":
-		*e = WebhookEventTypeEnumEnum(s)
+		*e = WebhookEventTypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookEventTypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookEventTypeEnumEnum: %v", v)
 	}
 }

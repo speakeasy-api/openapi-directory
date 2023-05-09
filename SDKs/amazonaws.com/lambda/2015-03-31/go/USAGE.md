@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,27 +16,25 @@ func main() {
         }),
     )
 
-    req := operations.AddLayerVersionPermissionRequest{
+    ctx := context.Background()
+    res, err := s.AddLayerVersionPermission(ctx, operations.AddLayerVersionPermissionRequest{
         LayerName: "corrupti",
         RequestBody: operations.AddLayerVersionPermissionRequestBody{
             Action: "provident",
-            OrganizationID: "distinctio",
+            OrganizationID: sdk.String("distinctio"),
             Principal: "quibusdam",
             StatementID: "unde",
         },
-        RevisionID: "nulla",
+        RevisionID: sdk.String("nulla"),
         VersionNumber: 544883,
-        XAmzAlgorithm: "illum",
-        XAmzContentSha256: "vel",
-        XAmzCredential: "error",
-        XAmzDate: "deserunt",
-        XAmzSecurityToken: "suscipit",
-        XAmzSignature: "iure",
-        XAmzSignedHeaders: "magnam",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddLayerVersionPermission(ctx, req)
+        XAmzAlgorithm: sdk.String("illum"),
+        XAmzContentSha256: sdk.String("vel"),
+        XAmzCredential: sdk.String("error"),
+        XAmzDate: sdk.String("deserunt"),
+        XAmzSecurityToken: sdk.String("suscipit"),
+        XAmzSignature: sdk.String("iure"),
+        XAmzSignedHeaders: sdk.String("magnam"),
+    })
     if err != nil {
         log.Fatal(err)
     }

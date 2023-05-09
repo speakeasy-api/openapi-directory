@@ -14,18 +14,22 @@ const (
 	EcsResourceRequirementTypeEnumInferenceAccelerator EcsResourceRequirementTypeEnum = "InferenceAccelerator"
 )
 
+func (e EcsResourceRequirementTypeEnum) ToPointer() *EcsResourceRequirementTypeEnum {
+	return &e
+}
+
 func (e *EcsResourceRequirementTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GPU":
 		fallthrough
 	case "InferenceAccelerator":
-		*e = EcsResourceRequirementTypeEnum(s)
+		*e = EcsResourceRequirementTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EcsResourceRequirementTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EcsResourceRequirementTypeEnum: %v", v)
 	}
 }

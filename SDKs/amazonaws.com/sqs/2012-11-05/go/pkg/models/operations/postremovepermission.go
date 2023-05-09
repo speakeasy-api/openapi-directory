@@ -15,17 +15,21 @@ const (
 	POSTRemovePermissionActionEnumRemovePermission POSTRemovePermissionActionEnum = "RemovePermission"
 )
 
+func (e POSTRemovePermissionActionEnum) ToPointer() *POSTRemovePermissionActionEnum {
+	return &e
+}
+
 func (e *POSTRemovePermissionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RemovePermission":
-		*e = POSTRemovePermissionActionEnum(s)
+		*e = POSTRemovePermissionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRemovePermissionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRemovePermissionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRemovePermissionVersionEnumTwoThousandAndTwelve1105 POSTRemovePermissionVersionEnum = "2012-11-05"
 )
 
+func (e POSTRemovePermissionVersionEnum) ToPointer() *POSTRemovePermissionVersionEnum {
+	return &e
+}
+
 func (e *POSTRemovePermissionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = POSTRemovePermissionVersionEnum(s)
+		*e = POSTRemovePermissionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRemovePermissionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRemovePermissionVersionEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	GroupByAttributeEnumResourceType GroupByAttributeEnum = "RESOURCE_TYPE"
 )
 
+func (e GroupByAttributeEnum) ToPointer() *GroupByAttributeEnum {
+	return &e
+}
+
 func (e *GroupByAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_ID":
 		fallthrough
 	case "REGION":
 		fallthrough
 	case "RESOURCE_TYPE":
-		*e = GroupByAttributeEnum(s)
+		*e = GroupByAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupByAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupByAttributeEnum: %v", v)
 	}
 }

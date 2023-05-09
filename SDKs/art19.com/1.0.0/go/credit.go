@@ -99,7 +99,10 @@ func (s *credit) GetCredits(ctx context.Context, request operations.GetCreditsRe
 // GetCreditsID - Get a specific credit
 func (s *credit) GetCreditsID(ctx context.Context, request operations.GetCreditsIDRequest, security operations.GetCreditsIDSecurity) (*operations.GetCreditsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/credits/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/credits/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

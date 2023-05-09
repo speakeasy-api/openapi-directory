@@ -16,21 +16,25 @@ const (
 	ApplicationPolicyAlwaysOnVpnLockdownExemptionEnumVpnLockdownExemption                    ApplicationPolicyAlwaysOnVpnLockdownExemptionEnum = "VPN_LOCKDOWN_EXEMPTION"
 )
 
+func (e ApplicationPolicyAlwaysOnVpnLockdownExemptionEnum) ToPointer() *ApplicationPolicyAlwaysOnVpnLockdownExemptionEnum {
+	return &e
+}
+
 func (e *ApplicationPolicyAlwaysOnVpnLockdownExemptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALWAYS_ON_VPN_LOCKDOWN_EXEMPTION_UNSPECIFIED":
 		fallthrough
 	case "VPN_LOCKDOWN_ENFORCED":
 		fallthrough
 	case "VPN_LOCKDOWN_EXEMPTION":
-		*e = ApplicationPolicyAlwaysOnVpnLockdownExemptionEnum(s)
+		*e = ApplicationPolicyAlwaysOnVpnLockdownExemptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationPolicyAlwaysOnVpnLockdownExemptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationPolicyAlwaysOnVpnLockdownExemptionEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	ApplicationPolicyAutoUpdateModeEnumAutoUpdateHighPriority    ApplicationPolicyAutoUpdateModeEnum = "AUTO_UPDATE_HIGH_PRIORITY"
 )
 
+func (e ApplicationPolicyAutoUpdateModeEnum) ToPointer() *ApplicationPolicyAutoUpdateModeEnum {
+	return &e
+}
+
 func (e *ApplicationPolicyAutoUpdateModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTO_UPDATE_MODE_UNSPECIFIED":
 		fallthrough
 	case "AUTO_UPDATE_DEFAULT":
@@ -57,10 +65,10 @@ func (e *ApplicationPolicyAutoUpdateModeEnum) UnmarshalJSON(data []byte) error {
 	case "AUTO_UPDATE_POSTPONED":
 		fallthrough
 	case "AUTO_UPDATE_HIGH_PRIORITY":
-		*e = ApplicationPolicyAutoUpdateModeEnum(s)
+		*e = ApplicationPolicyAutoUpdateModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationPolicyAutoUpdateModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationPolicyAutoUpdateModeEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	ApplicationPolicyConnectedWorkAndPersonalAppEnumConnectedWorkAndPersonalAppAllowed     ApplicationPolicyConnectedWorkAndPersonalAppEnum = "CONNECTED_WORK_AND_PERSONAL_APP_ALLOWED"
 )
 
+func (e ApplicationPolicyConnectedWorkAndPersonalAppEnum) ToPointer() *ApplicationPolicyConnectedWorkAndPersonalAppEnum {
+	return &e
+}
+
 func (e *ApplicationPolicyConnectedWorkAndPersonalAppEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTED_WORK_AND_PERSONAL_APP_UNSPECIFIED":
 		fallthrough
 	case "CONNECTED_WORK_AND_PERSONAL_APP_DISALLOWED":
 		fallthrough
 	case "CONNECTED_WORK_AND_PERSONAL_APP_ALLOWED":
-		*e = ApplicationPolicyConnectedWorkAndPersonalAppEnum(s)
+		*e = ApplicationPolicyConnectedWorkAndPersonalAppEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationPolicyConnectedWorkAndPersonalAppEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationPolicyConnectedWorkAndPersonalAppEnum: %v", v)
 	}
 }
 
@@ -101,12 +113,16 @@ const (
 	ApplicationPolicyDefaultPermissionPolicyEnumDeny                        ApplicationPolicyDefaultPermissionPolicyEnum = "DENY"
 )
 
+func (e ApplicationPolicyDefaultPermissionPolicyEnum) ToPointer() *ApplicationPolicyDefaultPermissionPolicyEnum {
+	return &e
+}
+
 func (e *ApplicationPolicyDefaultPermissionPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERMISSION_POLICY_UNSPECIFIED":
 		fallthrough
 	case "PROMPT":
@@ -114,10 +130,10 @@ func (e *ApplicationPolicyDefaultPermissionPolicyEnum) UnmarshalJSON(data []byte
 	case "GRANT":
 		fallthrough
 	case "DENY":
-		*e = ApplicationPolicyDefaultPermissionPolicyEnum(s)
+		*e = ApplicationPolicyDefaultPermissionPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationPolicyDefaultPermissionPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationPolicyDefaultPermissionPolicyEnum: %v", v)
 	}
 }
 
@@ -135,12 +151,16 @@ const (
 	ApplicationPolicyDelegatedScopesEnumSecurityLogs              ApplicationPolicyDelegatedScopesEnum = "SECURITY_LOGS"
 )
 
+func (e ApplicationPolicyDelegatedScopesEnum) ToPointer() *ApplicationPolicyDelegatedScopesEnum {
+	return &e
+}
+
 func (e *ApplicationPolicyDelegatedScopesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELEGATED_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "CERT_INSTALL":
@@ -158,10 +178,10 @@ func (e *ApplicationPolicyDelegatedScopesEnum) UnmarshalJSON(data []byte) error 
 	case "NETWORK_ACTIVITY_LOGS":
 		fallthrough
 	case "SECURITY_LOGS":
-		*e = ApplicationPolicyDelegatedScopesEnum(s)
+		*e = ApplicationPolicyDelegatedScopesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationPolicyDelegatedScopesEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationPolicyDelegatedScopesEnum: %v", v)
 	}
 }
 
@@ -178,12 +198,16 @@ const (
 	ApplicationPolicyInstallTypeEnumKiosk                  ApplicationPolicyInstallTypeEnum = "KIOSK"
 )
 
+func (e ApplicationPolicyInstallTypeEnum) ToPointer() *ApplicationPolicyInstallTypeEnum {
+	return &e
+}
+
 func (e *ApplicationPolicyInstallTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTALL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PREINSTALLED":
@@ -197,10 +221,10 @@ func (e *ApplicationPolicyInstallTypeEnum) UnmarshalJSON(data []byte) error {
 	case "REQUIRED_FOR_SETUP":
 		fallthrough
 	case "KIOSK":
-		*e = ApplicationPolicyInstallTypeEnum(s)
+		*e = ApplicationPolicyInstallTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationPolicyInstallTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationPolicyInstallTypeEnum: %v", v)
 	}
 }
 
@@ -213,21 +237,25 @@ const (
 	ApplicationPolicyWorkProfileWidgetsEnumWorkProfileWidgetsDisallowed  ApplicationPolicyWorkProfileWidgetsEnum = "WORK_PROFILE_WIDGETS_DISALLOWED"
 )
 
+func (e ApplicationPolicyWorkProfileWidgetsEnum) ToPointer() *ApplicationPolicyWorkProfileWidgetsEnum {
+	return &e
+}
+
 func (e *ApplicationPolicyWorkProfileWidgetsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORK_PROFILE_WIDGETS_UNSPECIFIED":
 		fallthrough
 	case "WORK_PROFILE_WIDGETS_ALLOWED":
 		fallthrough
 	case "WORK_PROFILE_WIDGETS_DISALLOWED":
-		*e = ApplicationPolicyWorkProfileWidgetsEnum(s)
+		*e = ApplicationPolicyWorkProfileWidgetsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationPolicyWorkProfileWidgetsEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationPolicyWorkProfileWidgetsEnum: %v", v)
 	}
 }
 

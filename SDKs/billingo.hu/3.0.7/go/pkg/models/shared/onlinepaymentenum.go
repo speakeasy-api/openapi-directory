@@ -16,12 +16,16 @@ const (
 	OnlinePaymentEnumNo        OnlinePaymentEnum = "no"
 )
 
+func (e OnlinePaymentEnum) ToPointer() *OnlinePaymentEnum {
+	return &e
+}
+
 func (e *OnlinePaymentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Barion":
@@ -29,9 +33,9 @@ func (e *OnlinePaymentEnum) UnmarshalJSON(data []byte) error {
 	case "SimplePay":
 		fallthrough
 	case "no":
-		*e = OnlinePaymentEnum(s)
+		*e = OnlinePaymentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OnlinePaymentEnum: %s", s)
+		return fmt.Errorf("invalid value for OnlinePaymentEnum: %v", v)
 	}
 }

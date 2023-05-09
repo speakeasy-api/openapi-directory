@@ -75,9 +75,13 @@ func (s *console) GetAemProductInfo(ctx context.Context) (*operations.GetAemProd
 
 	return res, nil
 }
+
 func (s *console) GetBundleInfo(ctx context.Context, request operations.GetBundleInfoRequest) (*operations.GetBundleInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/system/console/bundles/{name}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/system/console/bundles/{name}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,6 +132,7 @@ func (s *console) GetBundleInfo(ctx context.Context, request operations.GetBundl
 
 	return res, nil
 }
+
 func (s *console) GetConfigMgr(ctx context.Context) (*operations.GetConfigMgrResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/system/console/configMgr"
@@ -172,9 +177,13 @@ func (s *console) GetConfigMgr(ctx context.Context) (*operations.GetConfigMgrRes
 
 	return res, nil
 }
+
 func (s *console) PostBundle(ctx context.Context, request operations.PostBundleRequest) (*operations.PostBundleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/system/console/bundles/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/system/console/bundles/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -209,9 +218,13 @@ func (s *console) PostBundle(ctx context.Context, request operations.PostBundleR
 
 	return res, nil
 }
+
 func (s *console) PostJmxRepository(ctx context.Context, request operations.PostJmxRepositoryRequest) (*operations.PostJmxRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/system/console/jmx/com.adobe.granite:type=Repository/op/{action}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/system/console/jmx/com.adobe.granite:type=Repository/op/{action}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -242,6 +255,7 @@ func (s *console) PostJmxRepository(ctx context.Context, request operations.Post
 
 	return res, nil
 }
+
 func (s *console) PostSamlConfiguration(ctx context.Context, request operations.PostSamlConfigurationRequest) (*operations.PostSamlConfigurationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/system/console/configMgr/com.adobe.granite.auth.saml.SamlAuthenticationHandler"

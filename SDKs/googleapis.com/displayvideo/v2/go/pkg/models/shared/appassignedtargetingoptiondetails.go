@@ -24,12 +24,16 @@ const (
 	AppAssignedTargetingOptionDetailsAppPlatformEnumAppPlatformGenericCtv   AppAssignedTargetingOptionDetailsAppPlatformEnum = "APP_PLATFORM_GENERIC_CTV"
 )
 
+func (e AppAssignedTargetingOptionDetailsAppPlatformEnum) ToPointer() *AppAssignedTargetingOptionDetailsAppPlatformEnum {
+	return &e
+}
+
 func (e *AppAssignedTargetingOptionDetailsAppPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP_PLATFORM_UNSPECIFIED":
 		fallthrough
 	case "APP_PLATFORM_IOS":
@@ -51,10 +55,10 @@ func (e *AppAssignedTargetingOptionDetailsAppPlatformEnum) UnmarshalJSON(data []
 	case "APP_PLATFORM_ANDROID_TV":
 		fallthrough
 	case "APP_PLATFORM_GENERIC_CTV":
-		*e = AppAssignedTargetingOptionDetailsAppPlatformEnum(s)
+		*e = AppAssignedTargetingOptionDetailsAppPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppAssignedTargetingOptionDetailsAppPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for AppAssignedTargetingOptionDetailsAppPlatformEnum: %v", v)
 	}
 }
 

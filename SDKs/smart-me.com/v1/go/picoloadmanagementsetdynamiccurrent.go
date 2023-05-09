@@ -34,7 +34,10 @@ func newPicoLoadmanagementSetDynamicCurrent(defaultClient, securityClient HTTPCl
 // PicoLoadmanagementSetDynamicCurrentPost - Sets the dynamic current of a load management group or a single station.
 func (s *picoLoadmanagementSetDynamicCurrent) PicoLoadmanagementSetDynamicCurrentPost(ctx context.Context, request operations.PicoLoadmanagementSetDynamicCurrentPostRequest) (*operations.PicoLoadmanagementSetDynamicCurrentPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pico/loadmanagementgroup/current/{serial}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pico/loadmanagementgroup/current/{serial}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

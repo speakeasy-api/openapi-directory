@@ -17,12 +17,16 @@ const (
 	GooglePrivacyDlpV2JobTriggerStatusEnumCancelled         GooglePrivacyDlpV2JobTriggerStatusEnum = "CANCELLED"
 )
 
+func (e GooglePrivacyDlpV2JobTriggerStatusEnum) ToPointer() *GooglePrivacyDlpV2JobTriggerStatusEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2JobTriggerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "HEALTHY":
@@ -30,10 +34,10 @@ func (e *GooglePrivacyDlpV2JobTriggerStatusEnum) UnmarshalJSON(data []byte) erro
 	case "PAUSED":
 		fallthrough
 	case "CANCELLED":
-		*e = GooglePrivacyDlpV2JobTriggerStatusEnum(s)
+		*e = GooglePrivacyDlpV2JobTriggerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2JobTriggerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2JobTriggerStatusEnum: %v", v)
 	}
 }
 

@@ -35,12 +35,16 @@ const (
 	ClassroomCoursesListCourseStatesEnumSuspended              ClassroomCoursesListCourseStatesEnum = "SUSPENDED"
 )
 
+func (e ClassroomCoursesListCourseStatesEnum) ToPointer() *ClassroomCoursesListCourseStatesEnum {
+	return &e
+}
+
 func (e *ClassroomCoursesListCourseStatesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COURSE_STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -52,10 +56,10 @@ func (e *ClassroomCoursesListCourseStatesEnum) UnmarshalJSON(data []byte) error 
 	case "DECLINED":
 		fallthrough
 	case "SUSPENDED":
-		*e = ClassroomCoursesListCourseStatesEnum(s)
+		*e = ClassroomCoursesListCourseStatesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassroomCoursesListCourseStatesEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassroomCoursesListCourseStatesEnum: %v", v)
 	}
 }
 

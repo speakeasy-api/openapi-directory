@@ -15,20 +15,24 @@ const (
 	PluginNameValueEnumPglogical    PluginNameValueEnum = "pglogical"
 )
 
+func (e PluginNameValueEnum) ToPointer() *PluginNameValueEnum {
+	return &e
+}
+
 func (e *PluginNameValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no-preference":
 		fallthrough
 	case "test-decoding":
 		fallthrough
 	case "pglogical":
-		*e = PluginNameValueEnum(s)
+		*e = PluginNameValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PluginNameValueEnum: %s", s)
+		return fmt.Errorf("invalid value for PluginNameValueEnum: %v", v)
 	}
 }

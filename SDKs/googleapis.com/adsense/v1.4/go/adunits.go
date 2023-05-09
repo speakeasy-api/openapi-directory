@@ -34,7 +34,10 @@ func newAdunits(defaultClient, securityClient HTTPClient, serverURL, language, s
 // AdsenseAdunitsCustomchannelsList - List all custom channels which the specified ad unit belongs to.
 func (s *adunits) AdsenseAdunitsCustomchannelsList(ctx context.Context, request operations.AdsenseAdunitsCustomchannelsListRequest, security operations.AdsenseAdunitsCustomchannelsListSecurity) (*operations.AdsenseAdunitsCustomchannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits/{adUnitId}/customchannels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits/{adUnitId}/customchannels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *adunits) AdsenseAdunitsCustomchannelsList(ctx context.Context, request 
 // AdsenseAdunitsGet - Gets the specified ad unit in the specified ad client.
 func (s *adunits) AdsenseAdunitsGet(ctx context.Context, request operations.AdsenseAdunitsGetRequest, security operations.AdsenseAdunitsGetSecurity) (*operations.AdsenseAdunitsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits/{adUnitId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits/{adUnitId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *adunits) AdsenseAdunitsGet(ctx context.Context, request operations.Adse
 // AdsenseAdunitsGetAdCode - Get ad code for the specified ad unit.
 func (s *adunits) AdsenseAdunitsGetAdCode(ctx context.Context, request operations.AdsenseAdunitsGetAdCodeRequest, security operations.AdsenseAdunitsGetAdCodeSecurity) (*operations.AdsenseAdunitsGetAdCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits/{adUnitId}/adcode", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits/{adUnitId}/adcode", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -178,7 +187,10 @@ func (s *adunits) AdsenseAdunitsGetAdCode(ctx context.Context, request operation
 // AdsenseAdunitsList - List all ad units in the specified ad client for this AdSense account.
 func (s *adunits) AdsenseAdunitsList(ctx context.Context, request operations.AdsenseAdunitsListRequest, security operations.AdsenseAdunitsListSecurity) (*operations.AdsenseAdunitsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}/adunits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

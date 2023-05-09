@@ -15,18 +15,22 @@ const (
 	CloudWatchLogsInitialPositionEnumEndOfFile   CloudWatchLogsInitialPositionEnum = "end_of_file"
 )
 
+func (e CloudWatchLogsInitialPositionEnum) ToPointer() *CloudWatchLogsInitialPositionEnum {
+	return &e
+}
+
 func (e *CloudWatchLogsInitialPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "start_of_file":
 		fallthrough
 	case "end_of_file":
-		*e = CloudWatchLogsInitialPositionEnum(s)
+		*e = CloudWatchLogsInitialPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudWatchLogsInitialPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudWatchLogsInitialPositionEnum: %v", v)
 	}
 }

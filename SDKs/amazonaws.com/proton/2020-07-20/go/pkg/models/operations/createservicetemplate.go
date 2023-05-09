@@ -16,17 +16,21 @@ const (
 	CreateServiceTemplateXAmzTargetEnumAwsProton20200720CreateServiceTemplate CreateServiceTemplateXAmzTargetEnum = "AwsProton20200720.CreateServiceTemplate"
 )
 
+func (e CreateServiceTemplateXAmzTargetEnum) ToPointer() *CreateServiceTemplateXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateServiceTemplateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.CreateServiceTemplate":
-		*e = CreateServiceTemplateXAmzTargetEnum(s)
+		*e = CreateServiceTemplateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateServiceTemplateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateServiceTemplateXAmzTargetEnum: %v", v)
 	}
 }
 

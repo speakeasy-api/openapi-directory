@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/patrowl.local/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CleanScanPageRequest{
-        ScanID: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.PatrowlEngine.CleanScanPage(ctx, req)
+    res, err := s.PatrowlEngine.CleanScanPage(ctx, operations.CleanScanPageRequest{
+        ScanID: 548814,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,22 +42,22 @@ func main() {
 ## Available Resources and Operations
 
 
-### PatrowlEngine
+### [PatrowlEngine](docs/patrowlengine/README.md)
 
-* `CleanScanPage` - Clean scan
-* `CleanScansPage` - Clean all scans
-* `GetFindingPage` - Get findings on finished scans
-* `StartScanPage` - Start a new scan
-* `StatusScanPage` - Status of a scan
-* `StatusScansPage` - Status on all scans
-* `StopScanPage` - Stop a scan
-* `StopScansPage` - Stop all scans
-* `GetDefaultPage` - Index page
-* `GetInfoPage` - Engine info page
-* `GetLivenessPage` - Liveness page
-* `GetReadinessPage` - Readiness page
-* `GetTestPage` - Test page
-* `ReloadConfigurationPage` - Configuration reloading page
+* [CleanScanPage](docs/patrowlengine/README.md#cleanscanpage) - Clean scan
+* [CleanScansPage](docs/patrowlengine/README.md#cleanscanspage) - Clean all scans
+* [GetFindingPage](docs/patrowlengine/README.md#getfindingpage) - Get findings on finished scans
+* [StartScanPage](docs/patrowlengine/README.md#startscanpage) - Start a new scan
+* [StatusScanPage](docs/patrowlengine/README.md#statusscanpage) - Status of a scan
+* [StatusScansPage](docs/patrowlengine/README.md#statusscanspage) - Status on all scans
+* [StopScanPage](docs/patrowlengine/README.md#stopscanpage) - Stop a scan
+* [StopScansPage](docs/patrowlengine/README.md#stopscanspage) - Stop all scans
+* [GetDefaultPage](docs/patrowlengine/README.md#getdefaultpage) - Index page
+* [GetInfoPage](docs/patrowlengine/README.md#getinfopage) - Engine info page
+* [GetLivenessPage](docs/patrowlengine/README.md#getlivenesspage) - Liveness page
+* [GetReadinessPage](docs/patrowlengine/README.md#getreadinesspage) - Readiness page
+* [GetTestPage](docs/patrowlengine/README.md#gettestpage) - Test page
+* [ReloadConfigurationPage](docs/patrowlengine/README.md#reloadconfigurationpage) - Configuration reloading page
 <!-- End SDK Available Operations -->
 
 ### Maturity

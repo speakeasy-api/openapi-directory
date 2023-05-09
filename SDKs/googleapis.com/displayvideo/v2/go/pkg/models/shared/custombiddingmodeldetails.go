@@ -18,12 +18,16 @@ const (
 	CustomBiddingModelDetailsReadinessStateEnumReadinessStateNoValidScript    CustomBiddingModelDetailsReadinessStateEnum = "READINESS_STATE_NO_VALID_SCRIPT"
 )
 
+func (e CustomBiddingModelDetailsReadinessStateEnum) ToPointer() *CustomBiddingModelDetailsReadinessStateEnum {
+	return &e
+}
+
 func (e *CustomBiddingModelDetailsReadinessStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READINESS_STATE_UNSPECIFIED":
 		fallthrough
 	case "READINESS_STATE_ACTIVE":
@@ -33,10 +37,10 @@ func (e *CustomBiddingModelDetailsReadinessStateEnum) UnmarshalJSON(data []byte)
 	case "READINESS_STATE_TRAINING":
 		fallthrough
 	case "READINESS_STATE_NO_VALID_SCRIPT":
-		*e = CustomBiddingModelDetailsReadinessStateEnum(s)
+		*e = CustomBiddingModelDetailsReadinessStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomBiddingModelDetailsReadinessStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomBiddingModelDetailsReadinessStateEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	CustomBiddingModelDetailsSuspensionStateEnumSuspensionStateSuspended   CustomBiddingModelDetailsSuspensionStateEnum = "SUSPENSION_STATE_SUSPENDED"
 )
 
+func (e CustomBiddingModelDetailsSuspensionStateEnum) ToPointer() *CustomBiddingModelDetailsSuspensionStateEnum {
+	return &e
+}
+
 func (e *CustomBiddingModelDetailsSuspensionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUSPENSION_STATE_UNSPECIFIED":
 		fallthrough
 	case "SUSPENSION_STATE_ENABLED":
@@ -63,10 +71,10 @@ func (e *CustomBiddingModelDetailsSuspensionStateEnum) UnmarshalJSON(data []byte
 	case "SUSPENSION_STATE_DORMANT":
 		fallthrough
 	case "SUSPENSION_STATE_SUSPENDED":
-		*e = CustomBiddingModelDetailsSuspensionStateEnum(s)
+		*e = CustomBiddingModelDetailsSuspensionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomBiddingModelDetailsSuspensionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomBiddingModelDetailsSuspensionStateEnum: %v", v)
 	}
 }
 

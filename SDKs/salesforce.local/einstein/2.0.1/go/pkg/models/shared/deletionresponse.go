@@ -19,12 +19,16 @@ const (
 	DeletionResponseStatusOfTheDeletionEnumRetry                           DeletionResponseStatusOfTheDeletionEnum = "RETRY"
 )
 
+func (e DeletionResponseStatusOfTheDeletionEnum) ToPointer() *DeletionResponseStatusOfTheDeletionEnum {
+	return &e
+}
+
 func (e *DeletionResponseStatusOfTheDeletionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUEUED":
 		fallthrough
 	case "RUNNING":
@@ -38,10 +42,10 @@ func (e *DeletionResponseStatusOfTheDeletionEnum) UnmarshalJSON(data []byte) err
 	case "FAILED":
 		fallthrough
 	case "RETRY":
-		*e = DeletionResponseStatusOfTheDeletionEnum(s)
+		*e = DeletionResponseStatusOfTheDeletionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletionResponseStatusOfTheDeletionEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletionResponseStatusOfTheDeletionEnum: %v", v)
 	}
 }
 
@@ -52,19 +56,23 @@ const (
 	DeletionResponseObjectThatSBeingDeletedEnumModel   DeletionResponseObjectThatSBeingDeletedEnum = "MODEL"
 )
 
+func (e DeletionResponseObjectThatSBeingDeletedEnum) ToPointer() *DeletionResponseObjectThatSBeingDeletedEnum {
+	return &e
+}
+
 func (e *DeletionResponseObjectThatSBeingDeletedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATASET":
 		fallthrough
 	case "MODEL":
-		*e = DeletionResponseObjectThatSBeingDeletedEnum(s)
+		*e = DeletionResponseObjectThatSBeingDeletedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletionResponseObjectThatSBeingDeletedEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletionResponseObjectThatSBeingDeletedEnum: %v", v)
 	}
 }
 

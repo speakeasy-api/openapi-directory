@@ -16,21 +16,25 @@ const (
 	ValidateAttestationOccurrenceResponseResultEnumAttestationNotVerifiable ValidateAttestationOccurrenceResponseResultEnum = "ATTESTATION_NOT_VERIFIABLE"
 )
 
+func (e ValidateAttestationOccurrenceResponseResultEnum) ToPointer() *ValidateAttestationOccurrenceResponseResultEnum {
+	return &e
+}
+
 func (e *ValidateAttestationOccurrenceResponseResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESULT_UNSPECIFIED":
 		fallthrough
 	case "VERIFIED":
 		fallthrough
 	case "ATTESTATION_NOT_VERIFIABLE":
-		*e = ValidateAttestationOccurrenceResponseResultEnum(s)
+		*e = ValidateAttestationOccurrenceResponseResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidateAttestationOccurrenceResponseResultEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidateAttestationOccurrenceResponseResultEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetIceServerConfigRequestBodyServiceEnumTurn GetIceServerConfigRequestBodyServiceEnum = "TURN"
 )
 
+func (e GetIceServerConfigRequestBodyServiceEnum) ToPointer() *GetIceServerConfigRequestBodyServiceEnum {
+	return &e
+}
+
 func (e *GetIceServerConfigRequestBodyServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TURN":
-		*e = GetIceServerConfigRequestBodyServiceEnum(s)
+		*e = GetIceServerConfigRequestBodyServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIceServerConfigRequestBodyServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIceServerConfigRequestBodyServiceEnum: %v", v)
 	}
 }
 

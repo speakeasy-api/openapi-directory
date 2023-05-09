@@ -36,7 +36,10 @@ func newContinuousProject(defaultClient, securityClient HTTPClient, serverURL, l
 // Add a new document to your continuous project. If the name already exists, it will update the existing document. In most scenarios, this operation will also trigger auto-translation of your document, via MT and/or TM.
 func (s *continuousProject) AddDocument(ctx context.Context, request operations.AddDocumentRequest) (*operations.AddDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddOrUpdateDocumentRequest", "json")
 	if err != nil {
@@ -88,7 +91,10 @@ func (s *continuousProject) AddDocument(ctx context.Context, request operations.
 // Save/collect analytics data from Active widget
 func (s *continuousProject) CollectAnalytics(ctx context.Context, request operations.CollectAnalyticsRequest) (*operations.CollectAnalyticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/collect-analytics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/collect-analytics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AnalyticsCollection", "json")
 	if err != nil {
@@ -140,7 +146,10 @@ func (s *continuousProject) CollectAnalytics(ctx context.Context, request operat
 // Complete continuous project
 func (s *continuousProject) Complete(ctx context.Context, request operations.CompleteRequest) (*operations.CompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/complete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/complete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *continuousProject) Complete(ctx context.Context, request operations.Com
 // Complete a continuous project document. Per your project settings, a continuous project document can be target language-specific or project-wide for all target languages of the project.
 func (s *continuousProject) CompleteContinuousDocument(ctx context.Context, request operations.CompleteContinuousDocumentRequest) (*operations.CompleteContinuousDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/documents/{documentId}/complete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/documents/{documentId}/complete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *continuousProject) CompleteContinuousDocument(ctx context.Context, requ
 // Complete continuous project language
 func (s *continuousProject) CompleteLanguage(ctx context.Context, request operations.CompleteLanguageRequest) (*operations.CompleteLanguageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/languages/{targetLanguage}/complete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/languages/{targetLanguage}/complete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -285,7 +300,10 @@ func (s *continuousProject) CompleteLanguage(ctx context.Context, request operat
 // Create a new widget for your Active project to be used in your website. Most website-specific configuration is provided via widgets. This does not create a new Active project, just a separate widget.
 func (s *continuousProject) CreateActiveWidget(ctx context.Context, request operations.CreateActiveWidgetRequest) (*operations.CreateActiveWidgetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/widgets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/widgets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ActiveWidget", "json")
 	if err != nil {
@@ -399,7 +417,10 @@ func (s *continuousProject) CreateContinuousProject(ctx context.Context, request
 // Create subscription for continuous project
 func (s *continuousProject) CreateSubscription(ctx context.Context, request operations.CreateSubscriptionRequest) (*operations.CreateSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/subscription", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/subscription", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Subscription", "json")
 	if err != nil {
@@ -466,7 +487,10 @@ func (s *continuousProject) CreateSubscription(ctx context.Context, request oper
 // Delete a single widget for this Active project
 func (s *continuousProject) DeleteActiveWidget(ctx context.Context, request operations.DeleteActiveWidgetRequest) (*operations.DeleteActiveWidgetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/widgets/{widgetId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/widgets/{widgetId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -521,7 +545,10 @@ func (s *continuousProject) DeleteActiveWidget(ctx context.Context, request oper
 // Delete an existing continuous project. Your project will be cancelled, and you will still be charged for the amount of translations we have done for you so far.
 func (s *continuousProject) DeleteContinuousProject(ctx context.Context, request operations.DeleteContinuousProjectRequest) (*operations.DeleteContinuousProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -576,7 +603,10 @@ func (s *continuousProject) DeleteContinuousProject(ctx context.Context, request
 // Delete subscription for continuous project
 func (s *continuousProject) DeleteSubscription(ctx context.Context, request operations.DeleteSubscriptionRequest) (*operations.DeleteSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/subscription", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/subscription", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -633,7 +663,10 @@ func (s *continuousProject) DeleteSubscription(ctx context.Context, request oper
 // View the details of an Active widget to be used in your website. Most website-specific configuration is provided via widgets.
 func (s *continuousProject) GetActiveWidget(ctx context.Context, request operations.GetActiveWidgetRequest) (*operations.GetActiveWidgetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/widgets/{widgetId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/widgets/{widgetId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -688,7 +721,10 @@ func (s *continuousProject) GetActiveWidget(ctx context.Context, request operati
 // View a list of widgets in your Active project to be used in your website. Most website-specific configuration is provided via widgets.
 func (s *continuousProject) GetActiveWidgets(ctx context.Context, request operations.GetActiveWidgetsRequest) (*operations.GetActiveWidgetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/widgets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/widgets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -743,7 +779,10 @@ func (s *continuousProject) GetActiveWidgets(ctx context.Context, request operat
 // Get JWT token to be used in analytics dashboards
 func (s *continuousProject) GetAnalyticsToken(ctx context.Context, request operations.GetAnalyticsTokenRequest) (*operations.GetAnalyticsTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/analytics-token", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/analytics-token", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -788,7 +827,10 @@ func (s *continuousProject) GetAnalyticsToken(ctx context.Context, request opera
 // View the details of a continuous project.
 func (s *continuousProject) GetContinuousProject(ctx context.Context, request operations.GetContinuousProjectRequest) (*operations.GetContinuousProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -843,7 +885,10 @@ func (s *continuousProject) GetContinuousProject(ctx context.Context, request op
 // View the details of a source document in continuous translation project.
 func (s *continuousProject) GetContinuousProjectDocument(ctx context.Context, request operations.GetContinuousProjectDocumentRequest) (*operations.GetContinuousProjectDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -898,7 +943,10 @@ func (s *continuousProject) GetContinuousProjectDocument(ctx context.Context, re
 // Monitor the translation progress of a document in a continuous project in real-time.
 func (s *continuousProject) GetContinuousProjectDocumentProgress(ctx context.Context, request operations.GetContinuousProjectDocumentProgressRequest) (*operations.GetContinuousProjectDocumentProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/{documentId}/progress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/{documentId}/progress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -957,7 +1005,10 @@ func (s *continuousProject) GetContinuousProjectDocumentProgress(ctx context.Con
 // View the documents under this continuous project
 func (s *continuousProject) GetContinuousProjectDocuments(ctx context.Context, request operations.GetContinuousProjectDocumentsRequest) (*operations.GetContinuousProjectDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1016,7 +1067,10 @@ func (s *continuousProject) GetContinuousProjectDocuments(ctx context.Context, r
 // Get real-time access to a continuous project's invoices.
 func (s *continuousProject) GetContinuousProjectInvoices(ctx context.Context, request operations.GetContinuousProjectInvoicesRequest) (*operations.GetContinuousProjectInvoicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/invoices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/invoices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1071,7 +1125,10 @@ func (s *continuousProject) GetContinuousProjectInvoices(ctx context.Context, re
 // Monitor the translation progress of an ongoing continuous project in real-time.
 func (s *continuousProject) GetContinuousProjectProgress(ctx context.Context, request operations.GetContinuousProjectProgressRequest) (*operations.GetContinuousProjectProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/progress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/progress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1179,7 +1236,10 @@ func (s *continuousProject) GetContinuousProjects(ctx context.Context, request o
 // Get a new quote for provided document in continuous project. Per your project settings, a continuous project document can be target language-specific or project-wide for all target languages of the project.
 func (s *continuousProject) GetQuoteForDocument(ctx context.Context, request operations.GetQuoteForDocumentRequest) (*operations.GetQuoteForDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/documents/{documentId}/quote", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/documents/{documentId}/quote", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1240,7 +1300,10 @@ func (s *continuousProject) GetQuoteForDocument(ctx context.Context, request ope
 // Get a new quote for provided documents in continuous project
 func (s *continuousProject) GetQuoteForDocuments(ctx context.Context, request operations.GetQuoteForDocumentsRequest) (*operations.GetQuoteForDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/documents/quote", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/documents/quote", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetQuotesForDocumentsBody", "json")
 	if err != nil {
@@ -1308,7 +1371,10 @@ func (s *continuousProject) GetQuoteForDocuments(ctx context.Context, request op
 // Get a new quote for provided target language in continuous project
 func (s *continuousProject) GetQuoteForLanguage(ctx context.Context, request operations.GetQuoteForLanguageRequest) (*operations.GetQuoteForLanguageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/languages/{targetLanguage}/quote", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/languages/{targetLanguage}/quote", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1369,7 +1435,10 @@ func (s *continuousProject) GetQuoteForLanguage(ctx context.Context, request ope
 // Get a new quote for provided target languages in continuous project
 func (s *continuousProject) GetQuoteForLanguages(ctx context.Context, request operations.GetQuoteForLanguagesRequest) (*operations.GetQuoteForLanguagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/languages/quote", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/languages/quote", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetQuotesForLanguagesBody", "json")
 	if err != nil {
@@ -1437,7 +1506,10 @@ func (s *continuousProject) GetQuoteForLanguages(ctx context.Context, request op
 // Get subscription for continuous project
 func (s *continuousProject) GetSubscription(ctx context.Context, request operations.GetSubscriptionRequest) (*operations.GetSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/subscription", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/subscription", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1494,7 +1566,10 @@ func (s *continuousProject) GetSubscription(ctx context.Context, request operati
 // Get continuous project document progress for multiple IDs
 func (s *continuousProject) PostContinuousProjectDocumentProgress(ctx context.Context, request operations.PostContinuousProjectDocumentProgressRequest) (*operations.PostContinuousProjectDocumentProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/progress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/progress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContinuousProjectDocumentProgressBody", "json")
 	if err != nil {
@@ -1556,7 +1631,10 @@ func (s *continuousProject) PostContinuousProjectDocumentProgress(ctx context.Co
 // Reset the public token used with your Active widget. This token is used when communicating from your environment to MotaWord systems for translation, analytics and meta.
 func (s *continuousProject) ResetActiveWidgetToken(ctx context.Context, request operations.ResetActiveWidgetTokenRequest) (*operations.ResetActiveWidgetTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/widgets/{widgetId}/reset-token", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/widgets/{widgetId}/reset-token", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1611,7 +1689,10 @@ func (s *continuousProject) ResetActiveWidgetToken(ctx context.Context, request 
 // Instantly translate your content with your existing TM and MT resources. This is the primary endpoint to translate your files and content on the fly, especially in CI/CD environments. This is a complex endpoint that is configured in your Active or Continuous Project dashboards. For instance, you can configure whether to use your TM, or translate missing strings via MT and then post-edit those new translations. There are various scenarios you can establish via a set of configurations.
 func (s *continuousProject) Translate(ctx context.Context, request operations.TranslateRequest) (*operations.TranslateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/translate/{targetLanguage}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/translate/{targetLanguage}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstantTranslationRequest", "json")
 	if err != nil {
@@ -1663,7 +1744,10 @@ func (s *continuousProject) Translate(ctx context.Context, request operations.Tr
 // Update Active widget settings.
 func (s *continuousProject) UpdateActiveWidget(ctx context.Context, request operations.UpdateActiveWidgetRequest) (*operations.UpdateActiveWidgetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/widgets/{widgetId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/widgets/{widgetId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ActiveWidget", "json")
 	if err != nil {
@@ -1725,7 +1809,10 @@ func (s *continuousProject) UpdateActiveWidget(ctx context.Context, request oper
 // Update the details and settings of continuous project.
 func (s *continuousProject) UpdateContinuousProject(ctx context.Context, request operations.UpdateContinuousProjectRequest) (*operations.UpdateContinuousProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContinuousProjectUpdateContent", "json")
 	if err != nil {
@@ -1787,7 +1874,10 @@ func (s *continuousProject) UpdateContinuousProject(ctx context.Context, request
 // Update source document in your continuous project. In most scenarios, this operation will also trigger auto-translation of your document, via MT and/or TM.
 func (s *continuousProject) UpdateDocument(ctx context.Context, request operations.UpdateDocumentRequest) (*operations.UpdateDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddOrUpdateDocumentRequest", "json")
 	if err != nil {
@@ -1839,7 +1929,10 @@ func (s *continuousProject) UpdateDocument(ctx context.Context, request operatio
 // Update subscription for continuous project
 func (s *continuousProject) UpdateSubscription(ctx context.Context, request operations.UpdateSubscriptionRequest) (*operations.UpdateSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/subscription", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/subscription", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Subscription", "json")
 	if err != nil {
@@ -1906,7 +1999,10 @@ func (s *continuousProject) UpdateSubscription(ctx context.Context, request oper
 // Update subscription payment method for continuous project
 func (s *continuousProject) UpdateSubscriptionPaymentMethod(ctx context.Context, request operations.UpdateSubscriptionPaymentMethodRequest) (*operations.UpdateSubscriptionPaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/subscription/payment", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{id}/subscription/payment", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Subscription", "json")
 	if err != nil {

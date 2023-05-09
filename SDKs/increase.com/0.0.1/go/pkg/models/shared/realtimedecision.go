@@ -16,19 +16,23 @@ const (
 	RealTimeDecisionCardAuthorizationDecisionEnumDecline RealTimeDecisionCardAuthorizationDecisionEnum = "decline"
 )
 
+func (e RealTimeDecisionCardAuthorizationDecisionEnum) ToPointer() *RealTimeDecisionCardAuthorizationDecisionEnum {
+	return &e
+}
+
 func (e *RealTimeDecisionCardAuthorizationDecisionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "approve":
 		fallthrough
 	case "decline":
-		*e = RealTimeDecisionCardAuthorizationDecisionEnum(s)
+		*e = RealTimeDecisionCardAuthorizationDecisionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealTimeDecisionCardAuthorizationDecisionEnum: %s", s)
+		return fmt.Errorf("invalid value for RealTimeDecisionCardAuthorizationDecisionEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	RealTimeDecisionCardAuthorizationNetworkEnumVisa RealTimeDecisionCardAuthorizationNetworkEnum = "visa"
 )
 
+func (e RealTimeDecisionCardAuthorizationNetworkEnum) ToPointer() *RealTimeDecisionCardAuthorizationNetworkEnum {
+	return &e
+}
+
 func (e *RealTimeDecisionCardAuthorizationNetworkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "visa":
-		*e = RealTimeDecisionCardAuthorizationNetworkEnum(s)
+		*e = RealTimeDecisionCardAuthorizationNetworkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealTimeDecisionCardAuthorizationNetworkEnum: %s", s)
+		return fmt.Errorf("invalid value for RealTimeDecisionCardAuthorizationNetworkEnum: %v", v)
 	}
 }
 
@@ -67,12 +75,16 @@ const (
 	RealTimeDecisionCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnumNonSecureTransaction                                    RealTimeDecisionCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum = "non_secure_transaction"
 )
 
+func (e RealTimeDecisionCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum) ToPointer() *RealTimeDecisionCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum {
+	return &e
+}
+
 func (e *RealTimeDecisionCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mail_phone_order":
 		fallthrough
 	case "recurring":
@@ -88,10 +100,10 @@ func (e *RealTimeDecisionCardAuthorizationNetworkDetailsVisaElectronicCommerceIn
 	case "non_authenticated_security_transaction":
 		fallthrough
 	case "non_secure_transaction":
-		*e = RealTimeDecisionCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum(s)
+		*e = RealTimeDecisionCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealTimeDecisionCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for RealTimeDecisionCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum: %v", v)
 	}
 }
 
@@ -110,12 +122,16 @@ const (
 	RealTimeDecisionCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnumIntegratedCircuitCardNoCvv RealTimeDecisionCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum = "integrated_circuit_card_no_cvv"
 )
 
+func (e RealTimeDecisionCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum) ToPointer() *RealTimeDecisionCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum {
+	return &e
+}
+
 func (e *RealTimeDecisionCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manual":
 		fallthrough
 	case "magnetic_stripe_no_cvv":
@@ -133,10 +149,10 @@ func (e *RealTimeDecisionCardAuthorizationNetworkDetailsVisaPointOfServiceEntryM
 	case "contactless_magnetic_stripe":
 		fallthrough
 	case "integrated_circuit_card_no_cvv":
-		*e = RealTimeDecisionCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum(s)
+		*e = RealTimeDecisionCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealTimeDecisionCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum: %s", s)
+		return fmt.Errorf("invalid value for RealTimeDecisionCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum: %v", v)
 	}
 }
 
@@ -195,21 +211,25 @@ const (
 	RealTimeDecisionCategoryEnumDigitalWalletAuthenticationRequested RealTimeDecisionCategoryEnum = "digital_wallet_authentication_requested"
 )
 
+func (e RealTimeDecisionCategoryEnum) ToPointer() *RealTimeDecisionCategoryEnum {
+	return &e
+}
+
 func (e *RealTimeDecisionCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card_authorization_requested":
 		fallthrough
 	case "digital_wallet_token_requested":
 		fallthrough
 	case "digital_wallet_authentication_requested":
-		*e = RealTimeDecisionCategoryEnum(s)
+		*e = RealTimeDecisionCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealTimeDecisionCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for RealTimeDecisionCategoryEnum: %v", v)
 	}
 }
 
@@ -221,19 +241,23 @@ const (
 	RealTimeDecisionDigitalWalletAuthenticationChannelEnumEmail RealTimeDecisionDigitalWalletAuthenticationChannelEnum = "email"
 )
 
+func (e RealTimeDecisionDigitalWalletAuthenticationChannelEnum) ToPointer() *RealTimeDecisionDigitalWalletAuthenticationChannelEnum {
+	return &e
+}
+
 func (e *RealTimeDecisionDigitalWalletAuthenticationChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sms":
 		fallthrough
 	case "email":
-		*e = RealTimeDecisionDigitalWalletAuthenticationChannelEnum(s)
+		*e = RealTimeDecisionDigitalWalletAuthenticationChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealTimeDecisionDigitalWalletAuthenticationChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for RealTimeDecisionDigitalWalletAuthenticationChannelEnum: %v", v)
 	}
 }
 
@@ -245,19 +269,23 @@ const (
 	RealTimeDecisionDigitalWalletAuthenticationDigitalWalletEnumGooglePay RealTimeDecisionDigitalWalletAuthenticationDigitalWalletEnum = "google_pay"
 )
 
+func (e RealTimeDecisionDigitalWalletAuthenticationDigitalWalletEnum) ToPointer() *RealTimeDecisionDigitalWalletAuthenticationDigitalWalletEnum {
+	return &e
+}
+
 func (e *RealTimeDecisionDigitalWalletAuthenticationDigitalWalletEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "apple_pay":
 		fallthrough
 	case "google_pay":
-		*e = RealTimeDecisionDigitalWalletAuthenticationDigitalWalletEnum(s)
+		*e = RealTimeDecisionDigitalWalletAuthenticationDigitalWalletEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealTimeDecisionDigitalWalletAuthenticationDigitalWalletEnum: %s", s)
+		return fmt.Errorf("invalid value for RealTimeDecisionDigitalWalletAuthenticationDigitalWalletEnum: %v", v)
 	}
 }
 
@@ -269,19 +297,23 @@ const (
 	RealTimeDecisionDigitalWalletAuthenticationResultEnumFailure RealTimeDecisionDigitalWalletAuthenticationResultEnum = "failure"
 )
 
+func (e RealTimeDecisionDigitalWalletAuthenticationResultEnum) ToPointer() *RealTimeDecisionDigitalWalletAuthenticationResultEnum {
+	return &e
+}
+
 func (e *RealTimeDecisionDigitalWalletAuthenticationResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "failure":
-		*e = RealTimeDecisionDigitalWalletAuthenticationResultEnum(s)
+		*e = RealTimeDecisionDigitalWalletAuthenticationResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealTimeDecisionDigitalWalletAuthenticationResultEnum: %s", s)
+		return fmt.Errorf("invalid value for RealTimeDecisionDigitalWalletAuthenticationResultEnum: %v", v)
 	}
 }
 
@@ -311,19 +343,23 @@ const (
 	RealTimeDecisionDigitalWalletTokenDecisionEnumDecline RealTimeDecisionDigitalWalletTokenDecisionEnum = "decline"
 )
 
+func (e RealTimeDecisionDigitalWalletTokenDecisionEnum) ToPointer() *RealTimeDecisionDigitalWalletTokenDecisionEnum {
+	return &e
+}
+
 func (e *RealTimeDecisionDigitalWalletTokenDecisionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "approve":
 		fallthrough
 	case "decline":
-		*e = RealTimeDecisionDigitalWalletTokenDecisionEnum(s)
+		*e = RealTimeDecisionDigitalWalletTokenDecisionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealTimeDecisionDigitalWalletTokenDecisionEnum: %s", s)
+		return fmt.Errorf("invalid value for RealTimeDecisionDigitalWalletTokenDecisionEnum: %v", v)
 	}
 }
 
@@ -335,19 +371,23 @@ const (
 	RealTimeDecisionDigitalWalletTokenDigitalWalletEnumGooglePay RealTimeDecisionDigitalWalletTokenDigitalWalletEnum = "google_pay"
 )
 
+func (e RealTimeDecisionDigitalWalletTokenDigitalWalletEnum) ToPointer() *RealTimeDecisionDigitalWalletTokenDigitalWalletEnum {
+	return &e
+}
+
 func (e *RealTimeDecisionDigitalWalletTokenDigitalWalletEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "apple_pay":
 		fallthrough
 	case "google_pay":
-		*e = RealTimeDecisionDigitalWalletTokenDigitalWalletEnum(s)
+		*e = RealTimeDecisionDigitalWalletTokenDigitalWalletEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealTimeDecisionDigitalWalletTokenDigitalWalletEnum: %s", s)
+		return fmt.Errorf("invalid value for RealTimeDecisionDigitalWalletTokenDigitalWalletEnum: %v", v)
 	}
 }
 
@@ -372,21 +412,25 @@ const (
 	RealTimeDecisionStatusEnumTimedOut  RealTimeDecisionStatusEnum = "timed_out"
 )
 
+func (e RealTimeDecisionStatusEnum) ToPointer() *RealTimeDecisionStatusEnum {
+	return &e
+}
+
 func (e *RealTimeDecisionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "responded":
 		fallthrough
 	case "timed_out":
-		*e = RealTimeDecisionStatusEnum(s)
+		*e = RealTimeDecisionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealTimeDecisionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RealTimeDecisionStatusEnum: %v", v)
 	}
 }
 
@@ -397,17 +441,21 @@ const (
 	RealTimeDecisionTypeEnumRealTimeDecision RealTimeDecisionTypeEnum = "real_time_decision"
 )
 
+func (e RealTimeDecisionTypeEnum) ToPointer() *RealTimeDecisionTypeEnum {
+	return &e
+}
+
 func (e *RealTimeDecisionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "real_time_decision":
-		*e = RealTimeDecisionTypeEnum(s)
+		*e = RealTimeDecisionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RealTimeDecisionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RealTimeDecisionTypeEnum: %v", v)
 	}
 }
 

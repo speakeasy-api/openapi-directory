@@ -17,12 +17,16 @@ const (
 	ConferenceHangupResponseMessageEnumConferenceHangupFailedConferenceNotFound ConferenceHangupResponseMessageEnum = "Conference Hangup Failed -- Conference not found"
 )
 
+func (e ConferenceHangupResponseMessageEnum) ToPointer() *ConferenceHangupResponseMessageEnum {
+	return &e
+}
+
 func (e *ConferenceHangupResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Conference Hangup Executed":
 		fallthrough
 	case "ConferenceName Parameter must be present":
@@ -30,10 +34,10 @@ func (e *ConferenceHangupResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "MemberID Parameter must be present":
 		fallthrough
 	case "Conference Hangup Failed -- Conference not found":
-		*e = ConferenceHangupResponseMessageEnum(s)
+		*e = ConferenceHangupResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConferenceHangupResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ConferenceHangupResponseMessageEnum: %v", v)
 	}
 }
 

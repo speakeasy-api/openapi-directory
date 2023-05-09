@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -34,4 +35,6 @@ pkg/models/shared/boundingbox.go
 pkg/models/shared/customvisionerror.go
 pkg/models/shared/imageurl.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/imagepredictionapi/README.md
 USAGE.md

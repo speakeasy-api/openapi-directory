@@ -19,12 +19,16 @@ const (
 	TflAPIPresentationEntitiesRoadProjectPhaseEnumComplete          TflAPIPresentationEntitiesRoadProjectPhaseEnum = "Complete"
 )
 
+func (e TflAPIPresentationEntitiesRoadProjectPhaseEnum) ToPointer() *TflAPIPresentationEntitiesRoadProjectPhaseEnum {
+	return &e
+}
+
 func (e *TflAPIPresentationEntitiesRoadProjectPhaseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unscoped":
 		fallthrough
 	case "Concept":
@@ -36,10 +40,10 @@ func (e *TflAPIPresentationEntitiesRoadProjectPhaseEnum) UnmarshalJSON(data []by
 	case "Construction":
 		fallthrough
 	case "Complete":
-		*e = TflAPIPresentationEntitiesRoadProjectPhaseEnum(s)
+		*e = TflAPIPresentationEntitiesRoadProjectPhaseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesRoadProjectPhaseEnum: %s", s)
+		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesRoadProjectPhaseEnum: %v", v)
 	}
 }
 

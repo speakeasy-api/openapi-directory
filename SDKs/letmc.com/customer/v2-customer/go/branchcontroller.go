@@ -35,7 +35,10 @@ func newBranchController(defaultClient, securityClient HTTPClient, serverURL, la
 // BranchControllerGetBranches - All branches defined for a company
 func (s *branchController) BranchControllerGetBranches(ctx context.Context, request operations.BranchControllerGetBranchesRequest) (*operations.BranchControllerGetBranchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/branch/branches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/branch/branches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -104,7 +107,10 @@ func (s *branchController) BranchControllerGetBranches(ctx context.Context, requ
 // GetV2CustomerShortNameBranchBranchesBranchID - Get a specific branch given its unique Object ID (OID)
 func (s *branchController) GetV2CustomerShortNameBranchBranchesBranchID(ctx context.Context, request operations.GetV2CustomerShortNameBranchBranchesBranchIDRequest) (*operations.GetV2CustomerShortNameBranchBranchesBranchIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/branch/branches/{branchID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/branch/branches/{branchID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

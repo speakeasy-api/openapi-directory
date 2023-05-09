@@ -15,20 +15,24 @@ const (
 	HealthStateEnumUnhealthy HealthStateEnum = "UNHEALTHY"
 )
 
+func (e HealthStateEnum) ToPointer() *HealthStateEnum {
+	return &e
+}
+
 func (e *HealthStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIAL":
 		fallthrough
 	case "HEALTHY":
 		fallthrough
 	case "UNHEALTHY":
-		*e = HealthStateEnum(s)
+		*e = HealthStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HealthStateEnum: %s", s)
+		return fmt.Errorf("invalid value for HealthStateEnum: %v", v)
 	}
 }

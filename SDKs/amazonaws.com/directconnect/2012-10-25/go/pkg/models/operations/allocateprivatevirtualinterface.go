@@ -16,17 +16,21 @@ const (
 	AllocatePrivateVirtualInterfaceXAmzTargetEnumOvertureServiceAllocatePrivateVirtualInterface AllocatePrivateVirtualInterfaceXAmzTargetEnum = "OvertureService.AllocatePrivateVirtualInterface"
 )
 
+func (e AllocatePrivateVirtualInterfaceXAmzTargetEnum) ToPointer() *AllocatePrivateVirtualInterfaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *AllocatePrivateVirtualInterfaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.AllocatePrivateVirtualInterface":
-		*e = AllocatePrivateVirtualInterfaceXAmzTargetEnum(s)
+		*e = AllocatePrivateVirtualInterfaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllocatePrivateVirtualInterfaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AllocatePrivateVirtualInterfaceXAmzTargetEnum: %v", v)
 	}
 }
 

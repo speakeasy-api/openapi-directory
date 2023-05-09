@@ -16,17 +16,21 @@ const (
 	UpdateMobileDeviceAccessRuleXAmzTargetEnumWorkMailServiceUpdateMobileDeviceAccessRule UpdateMobileDeviceAccessRuleXAmzTargetEnum = "WorkMailService.UpdateMobileDeviceAccessRule"
 )
 
+func (e UpdateMobileDeviceAccessRuleXAmzTargetEnum) ToPointer() *UpdateMobileDeviceAccessRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateMobileDeviceAccessRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.UpdateMobileDeviceAccessRule":
-		*e = UpdateMobileDeviceAccessRuleXAmzTargetEnum(s)
+		*e = UpdateMobileDeviceAccessRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMobileDeviceAccessRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMobileDeviceAccessRuleXAmzTargetEnum: %v", v)
 	}
 }
 

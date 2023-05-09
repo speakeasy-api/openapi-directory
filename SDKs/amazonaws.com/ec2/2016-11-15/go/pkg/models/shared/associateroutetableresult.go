@@ -18,12 +18,16 @@ const (
 	AssociateRouteTableResultAssociationStateStateEnumFailed         AssociateRouteTableResultAssociationStateStateEnum = "failed"
 )
 
+func (e AssociateRouteTableResultAssociationStateStateEnum) ToPointer() *AssociateRouteTableResultAssociationStateStateEnum {
+	return &e
+}
+
 func (e *AssociateRouteTableResultAssociationStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -33,10 +37,10 @@ func (e *AssociateRouteTableResultAssociationStateStateEnum) UnmarshalJSON(data 
 	case "disassociated":
 		fallthrough
 	case "failed":
-		*e = AssociateRouteTableResultAssociationStateStateEnum(s)
+		*e = AssociateRouteTableResultAssociationStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateRouteTableResultAssociationStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateRouteTableResultAssociationStateStateEnum: %v", v)
 	}
 }
 

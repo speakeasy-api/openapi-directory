@@ -15,17 +15,21 @@ const (
 	POSTCreateNetworkInsightsAccessScopeActionEnumCreateNetworkInsightsAccessScope POSTCreateNetworkInsightsAccessScopeActionEnum = "CreateNetworkInsightsAccessScope"
 )
 
+func (e POSTCreateNetworkInsightsAccessScopeActionEnum) ToPointer() *POSTCreateNetworkInsightsAccessScopeActionEnum {
+	return &e
+}
+
 func (e *POSTCreateNetworkInsightsAccessScopeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateNetworkInsightsAccessScope":
-		*e = POSTCreateNetworkInsightsAccessScopeActionEnum(s)
+		*e = POSTCreateNetworkInsightsAccessScopeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateNetworkInsightsAccessScopeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateNetworkInsightsAccessScopeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateNetworkInsightsAccessScopeVersionEnumTwoThousandAndSixteen1115 POSTCreateNetworkInsightsAccessScopeVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateNetworkInsightsAccessScopeVersionEnum) ToPointer() *POSTCreateNetworkInsightsAccessScopeVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateNetworkInsightsAccessScopeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateNetworkInsightsAccessScopeVersionEnum(s)
+		*e = POSTCreateNetworkInsightsAccessScopeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateNetworkInsightsAccessScopeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateNetworkInsightsAccessScopeVersionEnum: %v", v)
 	}
 }
 

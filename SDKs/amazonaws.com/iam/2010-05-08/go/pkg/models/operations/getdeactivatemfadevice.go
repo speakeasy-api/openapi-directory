@@ -15,17 +15,21 @@ const (
 	GETDeactivateMFADeviceActionEnumDeactivateMfaDevice GETDeactivateMFADeviceActionEnum = "DeactivateMFADevice"
 )
 
+func (e GETDeactivateMFADeviceActionEnum) ToPointer() *GETDeactivateMFADeviceActionEnum {
+	return &e
+}
+
 func (e *GETDeactivateMFADeviceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeactivateMFADevice":
-		*e = GETDeactivateMFADeviceActionEnum(s)
+		*e = GETDeactivateMFADeviceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeactivateMFADeviceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeactivateMFADeviceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeactivateMFADeviceVersionEnumTwoThousandAndTen0508 GETDeactivateMFADeviceVersionEnum = "2010-05-08"
 )
 
+func (e GETDeactivateMFADeviceVersionEnum) ToPointer() *GETDeactivateMFADeviceVersionEnum {
+	return &e
+}
+
 func (e *GETDeactivateMFADeviceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETDeactivateMFADeviceVersionEnum(s)
+		*e = GETDeactivateMFADeviceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeactivateMFADeviceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeactivateMFADeviceVersionEnum: %v", v)
 	}
 }
 

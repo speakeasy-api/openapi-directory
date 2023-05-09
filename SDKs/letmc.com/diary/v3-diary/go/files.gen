@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -41,6 +42,7 @@ pkg/models/shared/linkedpropertiesmodel.go
 pkg/models/shared/linkedlandlordmodel.go
 pkg/models/shared/latesttenancymodel.go
 pkg/models/shared/linkedtenantmodel.go
+pkg/models/shared/linkedguestmodel.go
 pkg/models/shared/diaryappointmenttypemodelresults.go
 pkg/models/shared/diaryappointmenttypemodel.go
 pkg/models/shared/diaryappointmentmodelresults.go
@@ -49,4 +51,7 @@ pkg/models/shared/diaryguestdetails.go
 pkg/models/shared/guestdiaryparametersresultsmodel.go
 pkg/models/shared/basehypermedialink.go
 pkg/models/shared/guestdiaryparametersmodel.go
+docs/sdk/README.md
+docs/companycontroller/README.md
+docs/diarycontroller/README.md
 USAGE.md

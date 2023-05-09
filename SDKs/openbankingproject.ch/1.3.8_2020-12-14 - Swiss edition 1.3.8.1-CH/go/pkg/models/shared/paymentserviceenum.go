@@ -21,20 +21,24 @@ const (
 	PaymentServiceEnumPeriodicPayments PaymentServiceEnum = "periodic-payments"
 )
 
+func (e PaymentServiceEnum) ToPointer() *PaymentServiceEnum {
+	return &e
+}
+
 func (e *PaymentServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "payments":
 		fallthrough
 	case "bulk-payments":
 		fallthrough
 	case "periodic-payments":
-		*e = PaymentServiceEnum(s)
+		*e = PaymentServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentServiceEnum: %v", v)
 	}
 }

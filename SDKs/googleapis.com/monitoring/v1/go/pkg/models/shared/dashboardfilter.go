@@ -19,12 +19,16 @@ const (
 	DashboardFilterFilterTypeEnumGroup                 DashboardFilterFilterTypeEnum = "GROUP"
 )
 
+func (e DashboardFilterFilterTypeEnum) ToPointer() *DashboardFilterFilterTypeEnum {
+	return &e
+}
+
 func (e *DashboardFilterFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILTER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RESOURCE_LABEL":
@@ -36,10 +40,10 @@ func (e *DashboardFilterFilterTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SYSTEM_METADATA_LABEL":
 		fallthrough
 	case "GROUP":
-		*e = DashboardFilterFilterTypeEnum(s)
+		*e = DashboardFilterFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DashboardFilterFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DashboardFilterFilterTypeEnum: %v", v)
 	}
 }
 

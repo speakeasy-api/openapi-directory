@@ -15,17 +15,21 @@ const (
 	POSTResetInstanceAttributeActionEnumResetInstanceAttribute POSTResetInstanceAttributeActionEnum = "ResetInstanceAttribute"
 )
 
+func (e POSTResetInstanceAttributeActionEnum) ToPointer() *POSTResetInstanceAttributeActionEnum {
+	return &e
+}
+
 func (e *POSTResetInstanceAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetInstanceAttribute":
-		*e = POSTResetInstanceAttributeActionEnum(s)
+		*e = POSTResetInstanceAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetInstanceAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetInstanceAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTResetInstanceAttributeVersionEnumTwoThousandAndSixteen1115 POSTResetInstanceAttributeVersionEnum = "2016-11-15"
 )
 
+func (e POSTResetInstanceAttributeVersionEnum) ToPointer() *POSTResetInstanceAttributeVersionEnum {
+	return &e
+}
+
 func (e *POSTResetInstanceAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTResetInstanceAttributeVersionEnum(s)
+		*e = POSTResetInstanceAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetInstanceAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetInstanceAttributeVersionEnum: %v", v)
 	}
 }
 

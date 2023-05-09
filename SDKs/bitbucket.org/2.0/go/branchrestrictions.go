@@ -43,7 +43,10 @@ func newBranchRestrictions(defaultClient, securityClient HTTPClient, serverURL, 
 // Deletes an existing branch restriction rule.
 func (s *branchRestrictions) DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *branchRestrictions) DeleteRepositoriesWorkspaceRepoSlugBranchRestrictio
 // repository.
 func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictions(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest, security operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -157,7 +163,10 @@ func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictions(
 // Returns a specific branch restriction rule.
 func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictionsID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -255,7 +264,10 @@ func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictionsI
 // but the resulting behavior may be surprising.
 func (s *branchRestrictions) PostRepositoriesWorkspaceRepoSlugBranchRestrictions(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest, security operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -328,7 +340,10 @@ func (s *branchRestrictions) PostRepositoriesWorkspaceRepoSlugBranchRestrictions
 // See [`POST`](/cloud/bitbucket/rest/api-group-branch-restrictions/#api-repositories-workspace-repo-slug-branch-restrictions-post) for details.
 func (s *branchRestrictions) PutRepositoriesWorkspaceRepoSlugBranchRestrictionsID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

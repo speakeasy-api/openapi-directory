@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/mlb-v3-stat
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.AreGamesInProgressRequest{
-        Format: "JSON",
-    }
-
     ctx := context.Background()
-    res, err := s.AreGamesInProgress(ctx, req)
+    res, err := s.AreGamesInProgress(ctx, operations.AreGamesInProgressRequest{
+        Format: operations.AreGamesInProgressFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,42 +45,42 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AreGamesInProgress` - Are Games In Progress
-* `BatterVsPitcherStats` - Batter vs. Pitcher Stats
-* `BoxScore` - Box Score
-* `BoxScoresByDate` - Box Scores by Date
-* `BoxScoresByDateDelta` - Box Scores by Date Delta
-* `CurrentSeason` - Current Season
-* `DfsSlatesByDate` - DFS Slates by Date
-* `GamesByDate` - Games by Date
-* `News` - News
-* `NewsByDate` - News by Date
-* `NewsByPlayer` - News by Player
-* `PlayerDetailsByActive` - Player Details by Active
-* `PlayerDetailsByFreeAgents` - Player Details by Free Agents
-* `PlayerDetailsByPlayer` - Player Details by Player
-* `PlayerGameLogsBySeason` - Player Game Logs By Season
-* `PlayerGameStatsByDate` - Player Game Stats by Date
-* `PlayerGameStatsByPlayer` - Player Game Stats by Player
-* `PlayerSeasonAwayStats` - Player Season Away Stats
-* `PlayerSeasonHomeStats` - Player Season Home Stats
-* `PlayerSeasonSplitStats` - Player Season Split Stats
-* `PlayerSeasonStats` - Player Season Stats
-* `PlayerSeasonStatsByPlayer` - Player Season Stats By Player
-* `PlayerSeasonStatsByTeam` - Player Season Stats by Team
-* `PlayerSeasonStatsSplitByTeam` - Player Season Stats Split By Team
-* `PlayersByTeam` - Players by Team
-* `Schedules` - Schedules
-* `Stadiums` - Stadiums
-* `Standings` - Standings
-* `TeamGameLogsBySeason` - Team Game Logs By Season
-* `TeamGameStatsByDate` - Team Game Stats by Date
-* `TeamHittingVsStartingPitcher` - Team Hitting vs. Starting Pitcher
-* `TeamSeasonStats` - Team Season Stats
-* `TeamsActive` - Teams (Active)
-* `TeamsAll` - Teams (All)
+* [AreGamesInProgress](docs/sdk/README.md#aregamesinprogress) - Are Games In Progress
+* [BatterVsPitcherStats](docs/sdk/README.md#battervspitcherstats) - Batter vs. Pitcher Stats
+* [BoxScore](docs/sdk/README.md#boxscore) - Box Score
+* [BoxScoresByDate](docs/sdk/README.md#boxscoresbydate) - Box Scores by Date
+* [BoxScoresByDateDelta](docs/sdk/README.md#boxscoresbydatedelta) - Box Scores by Date Delta
+* [CurrentSeason](docs/sdk/README.md#currentseason) - Current Season
+* [DfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - DFS Slates by Date
+* [GamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [News](docs/sdk/README.md#news) - News
+* [NewsByDate](docs/sdk/README.md#newsbydate) - News by Date
+* [NewsByPlayer](docs/sdk/README.md#newsbyplayer) - News by Player
+* [PlayerDetailsByActive](docs/sdk/README.md#playerdetailsbyactive) - Player Details by Active
+* [PlayerDetailsByFreeAgents](docs/sdk/README.md#playerdetailsbyfreeagents) - Player Details by Free Agents
+* [PlayerDetailsByPlayer](docs/sdk/README.md#playerdetailsbyplayer) - Player Details by Player
+* [PlayerGameLogsBySeason](docs/sdk/README.md#playergamelogsbyseason) - Player Game Logs By Season
+* [PlayerGameStatsByDate](docs/sdk/README.md#playergamestatsbydate) - Player Game Stats by Date
+* [PlayerGameStatsByPlayer](docs/sdk/README.md#playergamestatsbyplayer) - Player Game Stats by Player
+* [PlayerSeasonAwayStats](docs/sdk/README.md#playerseasonawaystats) - Player Season Away Stats
+* [PlayerSeasonHomeStats](docs/sdk/README.md#playerseasonhomestats) - Player Season Home Stats
+* [PlayerSeasonSplitStats](docs/sdk/README.md#playerseasonsplitstats) - Player Season Split Stats
+* [PlayerSeasonStats](docs/sdk/README.md#playerseasonstats) - Player Season Stats
+* [PlayerSeasonStatsByPlayer](docs/sdk/README.md#playerseasonstatsbyplayer) - Player Season Stats By Player
+* [PlayerSeasonStatsByTeam](docs/sdk/README.md#playerseasonstatsbyteam) - Player Season Stats by Team
+* [PlayerSeasonStatsSplitByTeam](docs/sdk/README.md#playerseasonstatssplitbyteam) - Player Season Stats Split By Team
+* [PlayersByTeam](docs/sdk/README.md#playersbyteam) - Players by Team
+* [Schedules](docs/sdk/README.md#schedules) - Schedules
+* [Stadiums](docs/sdk/README.md#stadiums) - Stadiums
+* [Standings](docs/sdk/README.md#standings) - Standings
+* [TeamGameLogsBySeason](docs/sdk/README.md#teamgamelogsbyseason) - Team Game Logs By Season
+* [TeamGameStatsByDate](docs/sdk/README.md#teamgamestatsbydate) - Team Game Stats by Date
+* [TeamHittingVsStartingPitcher](docs/sdk/README.md#teamhittingvsstartingpitcher) - Team Hitting vs. Starting Pitcher
+* [TeamSeasonStats](docs/sdk/README.md#teamseasonstats) - Team Season Stats
+* [TeamsActive](docs/sdk/README.md#teamsactive) - Teams (Active)
+* [TeamsAll](docs/sdk/README.md#teamsall) - Teams (All)
 <!-- End SDK Available Operations -->
 
 ### Maturity

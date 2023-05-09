@@ -16,17 +16,21 @@ const (
 	DescribeReportCreationXAmzTargetEnumResourceGroupsTaggingApi20170126DescribeReportCreation DescribeReportCreationXAmzTargetEnum = "ResourceGroupsTaggingAPI_20170126.DescribeReportCreation"
 )
 
+func (e DescribeReportCreationXAmzTargetEnum) ToPointer() *DescribeReportCreationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeReportCreationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResourceGroupsTaggingAPI_20170126.DescribeReportCreation":
-		*e = DescribeReportCreationXAmzTargetEnum(s)
+		*e = DescribeReportCreationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReportCreationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReportCreationXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -32,7 +33,7 @@ func newErrors(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // GetErrors - Get errors
 // Returns with all of the error page types for this project
-func (s *errors) GetErrors(ctx context.Context) (*operations.GetErrorsResponse, error) {
+func (s *errors) GetErrors(ctx context.Context, security operations.GetErrorsSecurity) (*operations.GetErrorsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/errors"
 
@@ -41,7 +42,7 @@ func (s *errors) GetErrors(ctx context.Context) (*operations.GetErrorsResponse, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -13,31 +13,29 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/adsensehos
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AdsensehostAccountsAdclientsGetRequest{
+    ctx := context.Background()
+    res, err := s.Accounts.AdsensehostAccountsAdclientsGet(ctx, operations.AdsensehostAccountsAdclientsGetRequest{
         AccountID: "corrupti",
         AdClientID: "provident",
-        Alt: "json",
-        Fields: "quibusdam",
-        Key: "unde",
-        OauthToken: "nulla",
-        PrettyPrint: false,
-        QuotaUser: "corrupti",
-        UserIP: "illum",
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.AdsensehostAccountsAdclientsGet(ctx, req, operations.AdsensehostAccountsAdclientsGetSecurity{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("quibusdam"),
+        Key: sdk.String("unde"),
+        OauthToken: sdk.String("nulla"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("corrupti"),
+        UserIP: sdk.String("illum"),
+    }, operations.AdsensehostAccountsAdclientsGetSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -56,49 +54,49 @@ func main() {
 ## Available Resources and Operations
 
 
-### Accounts
+### [Accounts](docs/accounts/README.md)
 
-* `AdsensehostAccountsAdclientsGet` - Get information about one of the ad clients in the specified publisher's AdSense account.
-* `AdsensehostAccountsAdclientsList` - List all hosted ad clients in the specified hosted account.
-* `AdsensehostAccountsAdunitsDelete` - Delete the specified ad unit from the specified publisher AdSense account.
-* `AdsensehostAccountsAdunitsGet` - Get the specified host ad unit in this AdSense account.
-* `AdsensehostAccountsAdunitsGetAdCode` - Get ad code for the specified ad unit, attaching the specified host custom channels.
-* `AdsensehostAccountsAdunitsInsert` - Insert the supplied ad unit into the specified publisher AdSense account.
-* `AdsensehostAccountsAdunitsList` - List all ad units in the specified publisher's AdSense account.
-* `AdsensehostAccountsAdunitsPatch` - Update the supplied ad unit in the specified publisher AdSense account. This method supports patch semantics.
-* `AdsensehostAccountsAdunitsUpdate` - Update the supplied ad unit in the specified publisher AdSense account.
-* `AdsensehostAccountsGet` - Get information about the selected associated AdSense account.
-* `AdsensehostAccountsList` - List hosted accounts associated with this AdSense account by ad client id.
-* `AdsensehostAccountsReportsGenerate` - Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
+* [AdsensehostAccountsAdclientsGet](docs/accounts/README.md#adsensehostaccountsadclientsget) - Get information about one of the ad clients in the specified publisher's AdSense account.
+* [AdsensehostAccountsAdclientsList](docs/accounts/README.md#adsensehostaccountsadclientslist) - List all hosted ad clients in the specified hosted account.
+* [AdsensehostAccountsAdunitsDelete](docs/accounts/README.md#adsensehostaccountsadunitsdelete) - Delete the specified ad unit from the specified publisher AdSense account.
+* [AdsensehostAccountsAdunitsGet](docs/accounts/README.md#adsensehostaccountsadunitsget) - Get the specified host ad unit in this AdSense account.
+* [AdsensehostAccountsAdunitsGetAdCode](docs/accounts/README.md#adsensehostaccountsadunitsgetadcode) - Get ad code for the specified ad unit, attaching the specified host custom channels.
+* [AdsensehostAccountsAdunitsInsert](docs/accounts/README.md#adsensehostaccountsadunitsinsert) - Insert the supplied ad unit into the specified publisher AdSense account.
+* [AdsensehostAccountsAdunitsList](docs/accounts/README.md#adsensehostaccountsadunitslist) - List all ad units in the specified publisher's AdSense account.
+* [AdsensehostAccountsAdunitsPatch](docs/accounts/README.md#adsensehostaccountsadunitspatch) - Update the supplied ad unit in the specified publisher AdSense account. This method supports patch semantics.
+* [AdsensehostAccountsAdunitsUpdate](docs/accounts/README.md#adsensehostaccountsadunitsupdate) - Update the supplied ad unit in the specified publisher AdSense account.
+* [AdsensehostAccountsGet](docs/accounts/README.md#adsensehostaccountsget) - Get information about the selected associated AdSense account.
+* [AdsensehostAccountsList](docs/accounts/README.md#adsensehostaccountslist) - List hosted accounts associated with this AdSense account by ad client id.
+* [AdsensehostAccountsReportsGenerate](docs/accounts/README.md#adsensehostaccountsreportsgenerate) - Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
 
-### Adclients
+### [Adclients](docs/adclients/README.md)
 
-* `AdsensehostAdclientsGet` - Get information about one of the ad clients in the Host AdSense account.
-* `AdsensehostAdclientsList` - List all host ad clients in this AdSense account.
+* [AdsensehostAdclientsGet](docs/adclients/README.md#adsensehostadclientsget) - Get information about one of the ad clients in the Host AdSense account.
+* [AdsensehostAdclientsList](docs/adclients/README.md#adsensehostadclientslist) - List all host ad clients in this AdSense account.
 
-### Associationsessions
+### [Associationsessions](docs/associationsessions/README.md)
 
-* `AdsensehostAssociationsessionsStart` - Create an association session for initiating an association with an AdSense user.
-* `AdsensehostAssociationsessionsVerify` - Verify an association session after the association callback returns from AdSense signup.
+* [AdsensehostAssociationsessionsStart](docs/associationsessions/README.md#adsensehostassociationsessionsstart) - Create an association session for initiating an association with an AdSense user.
+* [AdsensehostAssociationsessionsVerify](docs/associationsessions/README.md#adsensehostassociationsessionsverify) - Verify an association session after the association callback returns from AdSense signup.
 
-### Customchannels
+### [Customchannels](docs/customchannels/README.md)
 
-* `AdsensehostCustomchannelsDelete` - Delete a specific custom channel from the host AdSense account.
-* `AdsensehostCustomchannelsGet` - Get a specific custom channel from the host AdSense account.
-* `AdsensehostCustomchannelsInsert` - Add a new custom channel to the host AdSense account.
-* `AdsensehostCustomchannelsList` - List all host custom channels in this AdSense account.
-* `AdsensehostCustomchannelsPatch` - Update a custom channel in the host AdSense account. This method supports patch semantics.
-* `AdsensehostCustomchannelsUpdate` - Update a custom channel in the host AdSense account.
+* [AdsensehostCustomchannelsDelete](docs/customchannels/README.md#adsensehostcustomchannelsdelete) - Delete a specific custom channel from the host AdSense account.
+* [AdsensehostCustomchannelsGet](docs/customchannels/README.md#adsensehostcustomchannelsget) - Get a specific custom channel from the host AdSense account.
+* [AdsensehostCustomchannelsInsert](docs/customchannels/README.md#adsensehostcustomchannelsinsert) - Add a new custom channel to the host AdSense account.
+* [AdsensehostCustomchannelsList](docs/customchannels/README.md#adsensehostcustomchannelslist) - List all host custom channels in this AdSense account.
+* [AdsensehostCustomchannelsPatch](docs/customchannels/README.md#adsensehostcustomchannelspatch) - Update a custom channel in the host AdSense account. This method supports patch semantics.
+* [AdsensehostCustomchannelsUpdate](docs/customchannels/README.md#adsensehostcustomchannelsupdate) - Update a custom channel in the host AdSense account.
 
-### Reports
+### [Reports](docs/reports/README.md)
 
-* `AdsensehostReportsGenerate` - Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
+* [AdsensehostReportsGenerate](docs/reports/README.md#adsensehostreportsgenerate) - Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
 
-### Urlchannels
+### [Urlchannels](docs/urlchannels/README.md)
 
-* `AdsensehostUrlchannelsDelete` - Delete a URL channel from the host AdSense account.
-* `AdsensehostUrlchannelsInsert` - Add a new URL channel to the host AdSense account.
-* `AdsensehostUrlchannelsList` - List all host URL channels in the host AdSense account.
+* [AdsensehostUrlchannelsDelete](docs/urlchannels/README.md#adsensehosturlchannelsdelete) - Delete a URL channel from the host AdSense account.
+* [AdsensehostUrlchannelsInsert](docs/urlchannels/README.md#adsensehosturlchannelsinsert) - Add a new URL channel to the host AdSense account.
+* [AdsensehostUrlchannelsList](docs/urlchannels/README.md#adsensehosturlchannelslist) - List all host URL channels in the host AdSense account.
 <!-- End SDK Available Operations -->
 
 ### Maturity

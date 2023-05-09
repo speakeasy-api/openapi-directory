@@ -14,18 +14,22 @@ const (
 	ParameterApplyTypeEnumDynamic ParameterApplyTypeEnum = "dynamic"
 )
 
+func (e ParameterApplyTypeEnum) ToPointer() *ParameterApplyTypeEnum {
+	return &e
+}
+
 func (e *ParameterApplyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "static":
 		fallthrough
 	case "dynamic":
-		*e = ParameterApplyTypeEnum(s)
+		*e = ParameterApplyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParameterApplyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParameterApplyTypeEnum: %v", v)
 	}
 }

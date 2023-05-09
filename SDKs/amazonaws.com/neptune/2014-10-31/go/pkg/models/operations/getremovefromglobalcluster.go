@@ -15,17 +15,21 @@ const (
 	GETRemoveFromGlobalClusterActionEnumRemoveFromGlobalCluster GETRemoveFromGlobalClusterActionEnum = "RemoveFromGlobalCluster"
 )
 
+func (e GETRemoveFromGlobalClusterActionEnum) ToPointer() *GETRemoveFromGlobalClusterActionEnum {
+	return &e
+}
+
 func (e *GETRemoveFromGlobalClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RemoveFromGlobalCluster":
-		*e = GETRemoveFromGlobalClusterActionEnum(s)
+		*e = GETRemoveFromGlobalClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRemoveFromGlobalClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRemoveFromGlobalClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRemoveFromGlobalClusterVersionEnumTwoThousandAndFourteen1031 GETRemoveFromGlobalClusterVersionEnum = "2014-10-31"
 )
 
+func (e GETRemoveFromGlobalClusterVersionEnum) ToPointer() *GETRemoveFromGlobalClusterVersionEnum {
+	return &e
+}
+
 func (e *GETRemoveFromGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETRemoveFromGlobalClusterVersionEnum(s)
+		*e = GETRemoveFromGlobalClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRemoveFromGlobalClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRemoveFromGlobalClusterVersionEnum: %v", v)
 	}
 }
 

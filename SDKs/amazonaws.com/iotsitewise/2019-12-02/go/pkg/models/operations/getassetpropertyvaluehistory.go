@@ -18,19 +18,23 @@ const (
 	GetAssetPropertyValueHistoryTimeOrderingEnumDescending GetAssetPropertyValueHistoryTimeOrderingEnum = "DESCENDING"
 )
 
+func (e GetAssetPropertyValueHistoryTimeOrderingEnum) ToPointer() *GetAssetPropertyValueHistoryTimeOrderingEnum {
+	return &e
+}
+
 func (e *GetAssetPropertyValueHistoryTimeOrderingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = GetAssetPropertyValueHistoryTimeOrderingEnum(s)
+		*e = GetAssetPropertyValueHistoryTimeOrderingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAssetPropertyValueHistoryTimeOrderingEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAssetPropertyValueHistoryTimeOrderingEnum: %v", v)
 	}
 }
 

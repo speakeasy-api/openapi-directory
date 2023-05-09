@@ -16,17 +16,21 @@ const (
 	DeleteUserPoolClientXAmzTargetEnumAwsCognitoIdentityProviderServiceDeleteUserPoolClient DeleteUserPoolClientXAmzTargetEnum = "AWSCognitoIdentityProviderService.DeleteUserPoolClient"
 )
 
+func (e DeleteUserPoolClientXAmzTargetEnum) ToPointer() *DeleteUserPoolClientXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteUserPoolClientXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.DeleteUserPoolClient":
-		*e = DeleteUserPoolClientXAmzTargetEnum(s)
+		*e = DeleteUserPoolClientXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteUserPoolClientXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteUserPoolClientXAmzTargetEnum: %v", v)
 	}
 }
 

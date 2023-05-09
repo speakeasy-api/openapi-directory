@@ -15,17 +15,21 @@ const (
 	GETDeleteServiceSpecificCredentialActionEnumDeleteServiceSpecificCredential GETDeleteServiceSpecificCredentialActionEnum = "DeleteServiceSpecificCredential"
 )
 
+func (e GETDeleteServiceSpecificCredentialActionEnum) ToPointer() *GETDeleteServiceSpecificCredentialActionEnum {
+	return &e
+}
+
 func (e *GETDeleteServiceSpecificCredentialActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteServiceSpecificCredential":
-		*e = GETDeleteServiceSpecificCredentialActionEnum(s)
+		*e = GETDeleteServiceSpecificCredentialActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteServiceSpecificCredentialActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteServiceSpecificCredentialActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteServiceSpecificCredentialVersionEnumTwoThousandAndTen0508 GETDeleteServiceSpecificCredentialVersionEnum = "2010-05-08"
 )
 
+func (e GETDeleteServiceSpecificCredentialVersionEnum) ToPointer() *GETDeleteServiceSpecificCredentialVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteServiceSpecificCredentialVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETDeleteServiceSpecificCredentialVersionEnum(s)
+		*e = GETDeleteServiceSpecificCredentialVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteServiceSpecificCredentialVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteServiceSpecificCredentialVersionEnum: %v", v)
 	}
 }
 

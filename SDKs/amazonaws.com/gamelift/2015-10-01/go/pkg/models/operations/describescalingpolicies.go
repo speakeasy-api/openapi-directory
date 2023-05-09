@@ -16,17 +16,21 @@ const (
 	DescribeScalingPoliciesXAmzTargetEnumGameLiftDescribeScalingPolicies DescribeScalingPoliciesXAmzTargetEnum = "GameLift.DescribeScalingPolicies"
 )
 
+func (e DescribeScalingPoliciesXAmzTargetEnum) ToPointer() *DescribeScalingPoliciesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeScalingPoliciesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DescribeScalingPolicies":
-		*e = DescribeScalingPoliciesXAmzTargetEnum(s)
+		*e = DescribeScalingPoliciesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeScalingPoliciesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeScalingPoliciesXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -23,12 +23,16 @@ const (
 	AggregationTypeEnumLambdaLayer       AggregationTypeEnum = "LAMBDA_LAYER"
 )
 
+func (e AggregationTypeEnum) ToPointer() *AggregationTypeEnum {
+	return &e
+}
+
 func (e *AggregationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FINDING_TYPE":
 		fallthrough
 	case "PACKAGE":
@@ -50,9 +54,9 @@ func (e *AggregationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AWS_LAMBDA_FUNCTION":
 		fallthrough
 	case "LAMBDA_LAYER":
-		*e = AggregationTypeEnum(s)
+		*e = AggregationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregationTypeEnum: %v", v)
 	}
 }

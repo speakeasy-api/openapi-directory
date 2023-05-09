@@ -20,12 +20,16 @@ const (
 	DataKeyPairSpecEnumSm2           DataKeyPairSpecEnum = "SM2"
 )
 
+func (e DataKeyPairSpecEnum) ToPointer() *DataKeyPairSpecEnum {
+	return &e
+}
+
 func (e *DataKeyPairSpecEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RSA_2048":
 		fallthrough
 	case "RSA_3072":
@@ -41,9 +45,9 @@ func (e *DataKeyPairSpecEnum) UnmarshalJSON(data []byte) error {
 	case "ECC_SECG_P256K1":
 		fallthrough
 	case "SM2":
-		*e = DataKeyPairSpecEnum(s)
+		*e = DataKeyPairSpecEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataKeyPairSpecEnum: %s", s)
+		return fmt.Errorf("invalid value for DataKeyPairSpecEnum: %v", v)
 	}
 }

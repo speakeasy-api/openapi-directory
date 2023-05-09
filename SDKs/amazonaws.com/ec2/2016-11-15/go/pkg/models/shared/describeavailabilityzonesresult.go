@@ -21,21 +21,25 @@ const (
 	DescribeAvailabilityZonesResultAvailabilityZonesOptInStatusEnumNotOptedIn       DescribeAvailabilityZonesResultAvailabilityZonesOptInStatusEnum = "not-opted-in"
 )
 
+func (e DescribeAvailabilityZonesResultAvailabilityZonesOptInStatusEnum) ToPointer() *DescribeAvailabilityZonesResultAvailabilityZonesOptInStatusEnum {
+	return &e
+}
+
 func (e *DescribeAvailabilityZonesResultAvailabilityZonesOptInStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "opt-in-not-required":
 		fallthrough
 	case "opted-in":
 		fallthrough
 	case "not-opted-in":
-		*e = DescribeAvailabilityZonesResultAvailabilityZonesOptInStatusEnum(s)
+		*e = DescribeAvailabilityZonesResultAvailabilityZonesOptInStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAvailabilityZonesResultAvailabilityZonesOptInStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAvailabilityZonesResultAvailabilityZonesOptInStatusEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	DescribeAvailabilityZonesResultAvailabilityZonesStateEnumUnavailable DescribeAvailabilityZonesResultAvailabilityZonesStateEnum = "unavailable"
 )
 
+func (e DescribeAvailabilityZonesResultAvailabilityZonesStateEnum) ToPointer() *DescribeAvailabilityZonesResultAvailabilityZonesStateEnum {
+	return &e
+}
+
 func (e *DescribeAvailabilityZonesResultAvailabilityZonesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "information":
@@ -62,10 +70,10 @@ func (e *DescribeAvailabilityZonesResultAvailabilityZonesStateEnum) UnmarshalJSO
 	case "impaired":
 		fallthrough
 	case "unavailable":
-		*e = DescribeAvailabilityZonesResultAvailabilityZonesStateEnum(s)
+		*e = DescribeAvailabilityZonesResultAvailabilityZonesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAvailabilityZonesResultAvailabilityZonesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAvailabilityZonesResultAvailabilityZonesStateEnum: %v", v)
 	}
 }
 

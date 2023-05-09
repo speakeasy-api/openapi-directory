@@ -15,19 +15,23 @@ const (
 	MigrationWarningCodeEnumAdaptationWarning      MigrationWarningCodeEnum = "ADAPTATION_WARNING"
 )
 
+func (e MigrationWarningCodeEnum) ToPointer() *MigrationWarningCodeEnum {
+	return &e
+}
+
 func (e *MigrationWarningCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WARNING_CODE_UNSPECIFIED":
 		fallthrough
 	case "ADAPTATION_WARNING":
-		*e = MigrationWarningCodeEnum(s)
+		*e = MigrationWarningCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationWarningCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationWarningCodeEnum: %v", v)
 	}
 }
 

@@ -91,7 +91,10 @@ func (s *loans) GetSchedulesScheduleC(ctx context.Context, request operations.Ge
 // The committee continues to report the loan until it is repaid.
 func (s *loans) GetSchedulesScheduleCSubID(ctx context.Context, request operations.GetSchedulesScheduleCSubIDRequest) (*operations.GetSchedulesScheduleCSubIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schedules/schedule_c/{sub_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/schedules/schedule_c/{sub_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

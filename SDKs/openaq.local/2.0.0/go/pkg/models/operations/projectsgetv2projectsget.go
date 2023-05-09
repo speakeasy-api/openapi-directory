@@ -20,12 +20,16 @@ const (
 	ProjectsGetV2ProjectsGetOrderByProjectsOrderEnumLastUpdated  ProjectsGetV2ProjectsGetOrderByProjectsOrderEnum = "lastUpdated"
 )
 
+func (e ProjectsGetV2ProjectsGetOrderByProjectsOrderEnum) ToPointer() *ProjectsGetV2ProjectsGetOrderByProjectsOrderEnum {
+	return &e
+}
+
 func (e *ProjectsGetV2ProjectsGetOrderByProjectsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "name":
@@ -35,10 +39,10 @@ func (e *ProjectsGetV2ProjectsGetOrderByProjectsOrderEnum) UnmarshalJSON(data []
 	case "firstUpdated":
 		fallthrough
 	case "lastUpdated":
-		*e = ProjectsGetV2ProjectsGetOrderByProjectsOrderEnum(s)
+		*e = ProjectsGetV2ProjectsGetOrderByProjectsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectsGetV2ProjectsGetOrderByProjectsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectsGetV2ProjectsGetOrderByProjectsOrderEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	ProjectsGetV2ProjectsGetSortSortEnumDesc ProjectsGetV2ProjectsGetSortSortEnum = "desc"
 )
 
+func (e ProjectsGetV2ProjectsGetSortSortEnum) ToPointer() *ProjectsGetV2ProjectsGetSortSortEnum {
+	return &e
+}
+
 func (e *ProjectsGetV2ProjectsGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = ProjectsGetV2ProjectsGetSortSortEnum(s)
+		*e = ProjectsGetV2ProjectsGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectsGetV2ProjectsGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectsGetV2ProjectsGetSortSortEnum: %v", v)
 	}
 }
 

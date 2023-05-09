@@ -16,21 +16,25 @@ const (
 	EventRecordFailureFailureCauseEnumInvalidUpdateValue                 EventRecordFailureFailureCauseEnum = "INVALID_UPDATE_VALUE"
 )
 
+func (e EventRecordFailureFailureCauseEnum) ToPointer() *EventRecordFailureFailureCauseEnum {
+	return &e
+}
+
 func (e *EventRecordFailureFailureCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVENT_UPDATE_FAILURE_CAUSE_UNSPECIFIED":
 		fallthrough
 	case "NOT_FOUND":
 		fallthrough
 	case "INVALID_UPDATE_VALUE":
-		*e = EventRecordFailureFailureCauseEnum(s)
+		*e = EventRecordFailureFailureCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventRecordFailureFailureCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for EventRecordFailureFailureCauseEnum: %v", v)
 	}
 }
 

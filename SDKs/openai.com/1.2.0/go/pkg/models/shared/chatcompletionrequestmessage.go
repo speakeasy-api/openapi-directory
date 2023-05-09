@@ -16,21 +16,25 @@ const (
 	ChatCompletionRequestMessageRoleEnumAssistant ChatCompletionRequestMessageRoleEnum = "assistant"
 )
 
+func (e ChatCompletionRequestMessageRoleEnum) ToPointer() *ChatCompletionRequestMessageRoleEnum {
+	return &e
+}
+
 func (e *ChatCompletionRequestMessageRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "system":
 		fallthrough
 	case "user":
 		fallthrough
 	case "assistant":
-		*e = ChatCompletionRequestMessageRoleEnum(s)
+		*e = ChatCompletionRequestMessageRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChatCompletionRequestMessageRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for ChatCompletionRequestMessageRoleEnum: %v", v)
 	}
 }
 

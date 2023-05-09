@@ -14,17 +14,21 @@ const (
 	ProgramInformationBatchFormatEnumRadiodns ProgramInformationBatchFormatEnum = "radiodns"
 )
 
+func (e ProgramInformationBatchFormatEnum) ToPointer() *ProgramInformationBatchFormatEnum {
+	return &e
+}
+
 func (e *ProgramInformationBatchFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "radiodns":
-		*e = ProgramInformationBatchFormatEnum(s)
+		*e = ProgramInformationBatchFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProgramInformationBatchFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ProgramInformationBatchFormatEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	ProgramInformationBatchStatusEnumSuccessful ProgramInformationBatchStatusEnum = "successful"
 )
 
+func (e ProgramInformationBatchStatusEnum) ToPointer() *ProgramInformationBatchStatusEnum {
+	return &e
+}
+
 func (e *ProgramInformationBatchStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "queued":
 		fallthrough
 	case "processing":
@@ -59,10 +67,10 @@ func (e *ProgramInformationBatchStatusEnum) UnmarshalJSON(data []byte) error {
 	case "failed":
 		fallthrough
 	case "successful":
-		*e = ProgramInformationBatchStatusEnum(s)
+		*e = ProgramInformationBatchStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProgramInformationBatchStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProgramInformationBatchStatusEnum: %v", v)
 	}
 }
 

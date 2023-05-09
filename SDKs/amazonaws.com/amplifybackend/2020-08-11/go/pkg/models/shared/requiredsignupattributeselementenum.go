@@ -29,12 +29,16 @@ const (
 	RequiredSignUpAttributesElementEnumZoneInfo          RequiredSignUpAttributesElementEnum = "ZONE_INFO"
 )
 
+func (e RequiredSignUpAttributesElementEnum) ToPointer() *RequiredSignUpAttributesElementEnum {
+	return &e
+}
+
 func (e *RequiredSignUpAttributesElementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADDRESS":
 		fallthrough
 	case "BIRTHDATE":
@@ -68,9 +72,9 @@ func (e *RequiredSignUpAttributesElementEnum) UnmarshalJSON(data []byte) error {
 	case "WEBSITE":
 		fallthrough
 	case "ZONE_INFO":
-		*e = RequiredSignUpAttributesElementEnum(s)
+		*e = RequiredSignUpAttributesElementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequiredSignUpAttributesElementEnum: %s", s)
+		return fmt.Errorf("invalid value for RequiredSignUpAttributesElementEnum: %v", v)
 	}
 }

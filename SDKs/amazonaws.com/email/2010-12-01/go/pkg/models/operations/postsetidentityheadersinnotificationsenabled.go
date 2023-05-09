@@ -15,17 +15,21 @@ const (
 	POSTSetIdentityHeadersInNotificationsEnabledActionEnumSetIdentityHeadersInNotificationsEnabled POSTSetIdentityHeadersInNotificationsEnabledActionEnum = "SetIdentityHeadersInNotificationsEnabled"
 )
 
+func (e POSTSetIdentityHeadersInNotificationsEnabledActionEnum) ToPointer() *POSTSetIdentityHeadersInNotificationsEnabledActionEnum {
+	return &e
+}
+
 func (e *POSTSetIdentityHeadersInNotificationsEnabledActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetIdentityHeadersInNotificationsEnabled":
-		*e = POSTSetIdentityHeadersInNotificationsEnabledActionEnum(s)
+		*e = POSTSetIdentityHeadersInNotificationsEnabledActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetIdentityHeadersInNotificationsEnabledActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetIdentityHeadersInNotificationsEnabledActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSetIdentityHeadersInNotificationsEnabledVersionEnumTwoThousandAndTen1201 POSTSetIdentityHeadersInNotificationsEnabledVersionEnum = "2010-12-01"
 )
 
+func (e POSTSetIdentityHeadersInNotificationsEnabledVersionEnum) ToPointer() *POSTSetIdentityHeadersInNotificationsEnabledVersionEnum {
+	return &e
+}
+
 func (e *POSTSetIdentityHeadersInNotificationsEnabledVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTSetIdentityHeadersInNotificationsEnabledVersionEnum(s)
+		*e = POSTSetIdentityHeadersInNotificationsEnabledVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetIdentityHeadersInNotificationsEnabledVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetIdentityHeadersInNotificationsEnabledVersionEnum: %v", v)
 	}
 }
 

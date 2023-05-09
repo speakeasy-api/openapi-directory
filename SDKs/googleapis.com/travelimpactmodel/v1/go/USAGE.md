@@ -2,70 +2,68 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TravelimpactmodelFlightsComputeFlightEmissionsRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Flights.TravelimpactmodelFlightsComputeFlightEmissions(ctx, operations.TravelimpactmodelFlightsComputeFlightEmissionsRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ComputeFlightEmissionsRequest: &shared.ComputeFlightEmissionsRequest{
             Flights: []shared.Flight{
                 shared.Flight{
                     DepartureDate: &shared.Date{
-                        Day: 715190,
-                        Month: 844266,
-                        Year: 602763,
+                        Day: sdk.Int(715190),
+                        Month: sdk.Int(844266),
+                        Year: sdk.Int(602763),
                     },
-                    Destination: "nulla",
-                    FlightNumber: 544883,
-                    OperatingCarrierCode: "illum",
-                    Origin: "vel",
+                    Destination: sdk.String("nulla"),
+                    FlightNumber: sdk.Int(544883),
+                    OperatingCarrierCode: sdk.String("illum"),
+                    Origin: sdk.String("vel"),
                 },
                 shared.Flight{
                     DepartureDate: &shared.Date{
-                        Day: 623564,
-                        Month: 645894,
-                        Year: 384382,
+                        Day: sdk.Int(623564),
+                        Month: sdk.Int(645894),
+                        Year: sdk.Int(384382),
                     },
-                    Destination: "iure",
-                    FlightNumber: 297534,
-                    OperatingCarrierCode: "debitis",
-                    Origin: "ipsa",
+                    Destination: sdk.String("iure"),
+                    FlightNumber: sdk.Int(297534),
+                    OperatingCarrierCode: sdk.String("debitis"),
+                    Origin: sdk.String("ipsa"),
                 },
                 shared.Flight{
                     DepartureDate: &shared.Date{
-                        Day: 963663,
-                        Month: 272656,
-                        Year: 383441,
+                        Day: sdk.Int(963663),
+                        Month: sdk.Int(272656),
+                        Year: sdk.Int(383441),
                     },
-                    Destination: "molestiae",
-                    FlightNumber: 791725,
-                    OperatingCarrierCode: "placeat",
-                    Origin: "voluptatum",
+                    Destination: sdk.String("molestiae"),
+                    FlightNumber: sdk.Int(791725),
+                    OperatingCarrierCode: sdk.String("placeat"),
+                    Origin: sdk.String("voluptatum"),
                 },
             },
         },
-        AccessToken: "iusto",
-        Alt: "media",
-        Callback: "nisi",
-        Fields: "recusandae",
-        Key: "temporibus",
-        OauthToken: "ab",
-        PrettyPrint: false,
-        QuotaUser: "quis",
-        UploadType: "veritatis",
-        UploadProtocol: "deserunt",
-    }
-
-    ctx := context.Background()
-    res, err := s.Flights.TravelimpactmodelFlightsComputeFlightEmissions(ctx, req)
+        AccessToken: sdk.String("iusto"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("nisi"),
+        Fields: sdk.String("recusandae"),
+        Key: sdk.String("temporibus"),
+        OauthToken: sdk.String("ab"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("quis"),
+        UploadType: sdk.String("veritatis"),
+        UploadProtocol: sdk.String("deserunt"),
+    })
     if err != nil {
         log.Fatal(err)
     }

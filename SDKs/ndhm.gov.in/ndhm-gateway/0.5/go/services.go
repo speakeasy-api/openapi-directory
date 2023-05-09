@@ -36,7 +36,10 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 // This API is meant for displaying the bridge service details by the serviceId provided .
 func (s *services) GetV05HiServicesServiceID(ctx context.Context, request operations.GetV05HiServicesServiceIDRequest) (*operations.GetV05HiServicesServiceIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.5/hi-services/{service-id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.5/hi-services/{service-id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

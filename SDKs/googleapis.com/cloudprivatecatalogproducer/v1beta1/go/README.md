@@ -13,41 +13,39 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudpriva
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudprivatecatalogproducerCatalogsAssociationsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Catalogs.CloudprivatecatalogproducerCatalogsAssociationsCreate(ctx, operations.CloudprivatecatalogproducerCatalogsAssociationsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest: &shared.GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest{
             Association: &shared.GoogleCloudPrivatecatalogproducerV1beta1Association{
-                CreateTime: "provident",
-                Name: "distinctio",
-                Resource: "quibusdam",
+                CreateTime: sdk.String("provident"),
+                Name: sdk.String("Ellis Mitchell"),
+                Resource: sdk.String("illum"),
             },
         },
-        AccessToken: "unde",
-        Alt: "proto",
-        Callback: "corrupti",
-        Fields: "illum",
-        Key: "vel",
-        OauthToken: "error",
-        Parent: "deserunt",
-        PrettyPrint: false,
-        QuotaUser: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Catalogs.CloudprivatecatalogproducerCatalogsAssociationsCreate(ctx, req, operations.CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity{
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("deserunt"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        OauthToken: sdk.String("magnam"),
+        Parent: "debitis",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("ipsa"),
+        UploadType: sdk.String("delectus"),
+        UploadProtocol: sdk.String("tempora"),
+    }, operations.CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -66,37 +64,37 @@ func main() {
 ## Available Resources and Operations
 
 
-### Catalogs
+### [Catalogs](docs/catalogs/README.md)
 
-* `CloudprivatecatalogproducerCatalogsAssociationsCreate` - Creates an Association instance under a given Catalog.
-* `CloudprivatecatalogproducerCatalogsAssociationsList` - Lists all Association resources under a catalog.
-* `CloudprivatecatalogproducerCatalogsCreate` - Creates a new Catalog resource.
-* `CloudprivatecatalogproducerCatalogsGetIamPolicy` - Gets IAM policy for the specified Catalog.
-* `CloudprivatecatalogproducerCatalogsList` - Lists Catalog resources that the producer has access to, within the
+* [CloudprivatecatalogproducerCatalogsAssociationsCreate](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsassociationscreate) - Creates an Association instance under a given Catalog.
+* [CloudprivatecatalogproducerCatalogsAssociationsList](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsassociationslist) - Lists all Association resources under a catalog.
+* [CloudprivatecatalogproducerCatalogsCreate](docs/catalogs/README.md#cloudprivatecatalogproducercatalogscreate) - Creates a new Catalog resource.
+* [CloudprivatecatalogproducerCatalogsGetIamPolicy](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsgetiampolicy) - Gets IAM policy for the specified Catalog.
+* [CloudprivatecatalogproducerCatalogsList](docs/catalogs/README.md#cloudprivatecatalogproducercatalogslist) - Lists Catalog resources that the producer has access to, within the
 scope of the parent resource.
-* `CloudprivatecatalogproducerCatalogsProductsCopy` - Copies a Product under another Catalog.
-* `CloudprivatecatalogproducerCatalogsProductsCreate` - Creates a Product instance under a given Catalog.
-* `CloudprivatecatalogproducerCatalogsProductsIconsUpload` - Creates an Icon instance under a given Product.
+* [CloudprivatecatalogproducerCatalogsProductsCopy](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsproductscopy) - Copies a Product under another Catalog.
+* [CloudprivatecatalogproducerCatalogsProductsCreate](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsproductscreate) - Creates a Product instance under a given Catalog.
+* [CloudprivatecatalogproducerCatalogsProductsIconsUpload](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsproductsiconsupload) - Creates an Icon instance under a given Product.
 If Product only has a default icon, a new Icon
 instance is created and associated with the given Product.
 If Product already has a non-default icon, the action creates
 a new Icon instance, associates the newly created
 Icon with the given Product and deletes the old icon.
-* `CloudprivatecatalogproducerCatalogsProductsList` - Lists Product resources that the producer has access to, within the
+* [CloudprivatecatalogproducerCatalogsProductsList](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsproductslist) - Lists Product resources that the producer has access to, within the
 scope of the parent catalog.
-* `CloudprivatecatalogproducerCatalogsProductsVersionsCreate` - Creates a Version instance under a given Product.
-* `CloudprivatecatalogproducerCatalogsProductsVersionsDelete` - Hard deletes a Version.
-* `CloudprivatecatalogproducerCatalogsProductsVersionsGet` - Returns the requested Version resource.
-* `CloudprivatecatalogproducerCatalogsProductsVersionsList` - Lists Version resources that the producer has access to, within the
+* [CloudprivatecatalogproducerCatalogsProductsVersionsCreate](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsproductsversionscreate) - Creates a Version instance under a given Product.
+* [CloudprivatecatalogproducerCatalogsProductsVersionsDelete](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsproductsversionsdelete) - Hard deletes a Version.
+* [CloudprivatecatalogproducerCatalogsProductsVersionsGet](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsproductsversionsget) - Returns the requested Version resource.
+* [CloudprivatecatalogproducerCatalogsProductsVersionsList](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsproductsversionslist) - Lists Version resources that the producer has access to, within the
 scope of the parent Product.
-* `CloudprivatecatalogproducerCatalogsProductsVersionsPatch` - Updates a specific Version resource.
-* `CloudprivatecatalogproducerCatalogsSetIamPolicy` - Sets the IAM policy for the specified Catalog.
-* `CloudprivatecatalogproducerCatalogsTestIamPermissions` - Tests the IAM permissions for the specified Catalog.
-* `CloudprivatecatalogproducerCatalogsUndelete` - Undeletes a deleted Catalog and all resources under it.
+* [CloudprivatecatalogproducerCatalogsProductsVersionsPatch](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsproductsversionspatch) - Updates a specific Version resource.
+* [CloudprivatecatalogproducerCatalogsSetIamPolicy](docs/catalogs/README.md#cloudprivatecatalogproducercatalogssetiampolicy) - Sets the IAM policy for the specified Catalog.
+* [CloudprivatecatalogproducerCatalogsTestIamPermissions](docs/catalogs/README.md#cloudprivatecatalogproducercatalogstestiampermissions) - Tests the IAM permissions for the specified Catalog.
+* [CloudprivatecatalogproducerCatalogsUndelete](docs/catalogs/README.md#cloudprivatecatalogproducercatalogsundelete) - Undeletes a deleted Catalog and all resources under it.
 
-### Operations
+### [Operations](docs/operations/README.md)
 
-* `CloudprivatecatalogproducerOperationsCancel` - Starts asynchronous cancellation on a long-running operation.  The server
+* [CloudprivatecatalogproducerOperationsCancel](docs/operations/README.md#cloudprivatecatalogproduceroperationscancel) - Starts asynchronous cancellation on a long-running operation.  The server
 makes a best effort to cancel the operation, but success is not
 guaranteed.  If the server doesn't support this method, it returns
 `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
@@ -106,7 +104,7 @@ operation completed despite cancellation. On successful cancellation,
 the operation is not deleted; instead, it becomes an operation with
 an Operation.error value with a google.rpc.Status.code of 1,
 corresponding to `Code.CANCELLED`.
-* `CloudprivatecatalogproducerOperationsList` - Lists operations that match the specified filter in the request. If the
+* [CloudprivatecatalogproducerOperationsList](docs/operations/README.md#cloudprivatecatalogproduceroperationslist) - Lists operations that match the specified filter in the request. If the
 server doesn't support this method, it returns `UNIMPLEMENTED`.
 
 NOTE: the `name` binding allows API services to override the binding

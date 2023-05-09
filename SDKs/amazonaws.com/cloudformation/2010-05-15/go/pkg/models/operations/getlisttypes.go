@@ -16,17 +16,21 @@ const (
 	GETListTypesActionEnumListTypes GETListTypesActionEnum = "ListTypes"
 )
 
+func (e GETListTypesActionEnum) ToPointer() *GETListTypesActionEnum {
+	return &e
+}
+
 func (e *GETListTypesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListTypes":
-		*e = GETListTypesActionEnum(s)
+		*e = GETListTypesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypesActionEnum: %v", v)
 	}
 }
 
@@ -38,19 +42,23 @@ const (
 	GETListTypesDeprecatedStatusEnumDeprecated GETListTypesDeprecatedStatusEnum = "DEPRECATED"
 )
 
+func (e GETListTypesDeprecatedStatusEnum) ToPointer() *GETListTypesDeprecatedStatusEnum {
+	return &e
+}
+
 func (e *GETListTypesDeprecatedStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "DEPRECATED":
-		*e = GETListTypesDeprecatedStatusEnum(s)
+		*e = GETListTypesDeprecatedStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypesDeprecatedStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypesDeprecatedStatusEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	GETListTypesProvisioningTypeEnumFullyMutable     GETListTypesProvisioningTypeEnum = "FULLY_MUTABLE"
 )
 
+func (e GETListTypesProvisioningTypeEnum) ToPointer() *GETListTypesProvisioningTypeEnum {
+	return &e
+}
+
 func (e *GETListTypesProvisioningTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NON_PROVISIONABLE":
 		fallthrough
 	case "IMMUTABLE":
 		fallthrough
 	case "FULLY_MUTABLE":
-		*e = GETListTypesProvisioningTypeEnum(s)
+		*e = GETListTypesProvisioningTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypesProvisioningTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypesProvisioningTypeEnum: %v", v)
 	}
 }
 
@@ -97,21 +109,25 @@ const (
 	GETListTypesTypeEnumHook     GETListTypesTypeEnum = "HOOK"
 )
 
+func (e GETListTypesTypeEnum) ToPointer() *GETListTypesTypeEnum {
+	return &e
+}
+
 func (e *GETListTypesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = GETListTypesTypeEnum(s)
+		*e = GETListTypesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypesTypeEnum: %v", v)
 	}
 }
 
@@ -122,17 +138,21 @@ const (
 	GETListTypesVersionEnumTwoThousandAndTen0515 GETListTypesVersionEnum = "2010-05-15"
 )
 
+func (e GETListTypesVersionEnum) ToPointer() *GETListTypesVersionEnum {
+	return &e
+}
+
 func (e *GETListTypesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETListTypesVersionEnum(s)
+		*e = GETListTypesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypesVersionEnum: %v", v)
 	}
 }
 
@@ -144,19 +164,23 @@ const (
 	GETListTypesVisibilityEnumPrivate GETListTypesVisibilityEnum = "PRIVATE"
 )
 
+func (e GETListTypesVisibilityEnum) ToPointer() *GETListTypesVisibilityEnum {
+	return &e
+}
+
 func (e *GETListTypesVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLIC":
 		fallthrough
 	case "PRIVATE":
-		*e = GETListTypesVisibilityEnum(s)
+		*e = GETListTypesVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypesVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypesVisibilityEnum: %v", v)
 	}
 }
 

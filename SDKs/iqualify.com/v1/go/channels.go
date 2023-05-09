@@ -35,7 +35,10 @@ func newChannels(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Removes a learner from the specified group channel.
 func (s *channels) DeleteOfferingsOfferingIDChannelsChannelIDLearners(ctx context.Context, request operations.DeleteOfferingsOfferingIDChannelsChannelIDLearnersRequest) (*operations.DeleteOfferingsOfferingIDChannelsChannelIDLearnersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/channels/{channelId}/learners", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/channels/{channelId}/learners", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -97,7 +100,10 @@ func (s *channels) DeleteOfferingsOfferingIDChannelsChannelIDLearners(ctx contex
 // Responds with a list of comments made in any posts in a specified channel, within an offering.
 func (s *channels) GetOfferingsOfferingIDAnalyticsChannelsChannelIDComments(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsChannelsChannelIDCommentsRequest) (*operations.GetOfferingsOfferingIDAnalyticsChannelsChannelIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/channels/{channelId}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/channels/{channelId}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -156,7 +162,10 @@ func (s *channels) GetOfferingsOfferingIDAnalyticsChannelsChannelIDComments(ctx 
 // Responds with a list of posts made in a specified channel, within an offering.
 func (s *channels) GetOfferingsOfferingIDAnalyticsChannelsChannelIDPosts(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsChannelsChannelIDPostsRequest) (*operations.GetOfferingsOfferingIDAnalyticsChannelsChannelIDPostsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/channels/{channelId}/posts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/channels/{channelId}/posts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,7 +224,10 @@ func (s *channels) GetOfferingsOfferingIDAnalyticsChannelsChannelIDPosts(ctx con
 // Responds with a list of replies to comments in any posts in a specified channel, within an offering.
 func (s *channels) GetOfferingsOfferingIDAnalyticsChannelsChannelIDReplies(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsChannelsChannelIDRepliesRequest) (*operations.GetOfferingsOfferingIDAnalyticsChannelsChannelIDRepliesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/channels/{channelId}/replies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/channels/{channelId}/replies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -274,7 +286,10 @@ func (s *channels) GetOfferingsOfferingIDAnalyticsChannelsChannelIDReplies(ctx c
 // Responds with a list of channels in an offering.
 func (s *channels) GetOfferingsOfferingIDChannels(ctx context.Context, request operations.GetOfferingsOfferingIDChannelsRequest) (*operations.GetOfferingsOfferingIDChannelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/channels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/channels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -333,7 +348,10 @@ func (s *channels) GetOfferingsOfferingIDChannels(ctx context.Context, request o
 // Finds all learners in a specified group channel.
 func (s *channels) GetOfferingsOfferingIDChannelsChannelIDLearners(ctx context.Context, request operations.GetOfferingsOfferingIDChannelsChannelIDLearnersRequest) (*operations.GetOfferingsOfferingIDChannelsChannelIDLearnersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/channels/{channelId}/learners", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/channels/{channelId}/learners", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -394,7 +412,10 @@ func (s *channels) GetOfferingsOfferingIDChannelsChannelIDLearners(ctx context.C
 // Updates a channel in an offering.
 func (s *channels) PatchOfferingsOfferingIDChannelsChannelID(ctx context.Context, request operations.PatchOfferingsOfferingIDChannelsChannelIDRequest) (*operations.PatchOfferingsOfferingIDChannelsChannelIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/channels/{channelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/channels/{channelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {
@@ -465,7 +486,10 @@ func (s *channels) PatchOfferingsOfferingIDChannelsChannelID(ctx context.Context
 // Adds new channel to the specified offering.
 func (s *channels) PostOfferingsOfferingIDChannels(ctx context.Context, request operations.PostOfferingsOfferingIDChannelsRequest) (*operations.PostOfferingsOfferingIDChannelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/channels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/channels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChannelRequired", "json")
 	if err != nil {
@@ -536,7 +560,10 @@ func (s *channels) PostOfferingsOfferingIDChannels(ctx context.Context, request 
 // Adds a learner to a specified group channel.
 func (s *channels) PostOfferingsOfferingIDChannelsChannelIDLearners(ctx context.Context, request operations.PostOfferingsOfferingIDChannelsChannelIDLearnersRequest) (*operations.PostOfferingsOfferingIDChannelsChannelIDLearnersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/channels/{channelId}/learners", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/channels/{channelId}/learners", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

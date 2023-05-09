@@ -16,21 +16,25 @@ const (
 	CloudSQLSettingsActivationPolicyEnumNever                          CloudSQLSettingsActivationPolicyEnum = "NEVER"
 )
 
+func (e CloudSQLSettingsActivationPolicyEnum) ToPointer() *CloudSQLSettingsActivationPolicyEnum {
+	return &e
+}
+
 func (e *CloudSQLSettingsActivationPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_ACTIVATION_POLICY_UNSPECIFIED":
 		fallthrough
 	case "ALWAYS":
 		fallthrough
 	case "NEVER":
-		*e = CloudSQLSettingsActivationPolicyEnum(s)
+		*e = CloudSQLSettingsActivationPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudSQLSettingsActivationPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudSQLSettingsActivationPolicyEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	CloudSQLSettingsAvailabilityTypeEnumRegional                       CloudSQLSettingsAvailabilityTypeEnum = "REGIONAL"
 )
 
+func (e CloudSQLSettingsAvailabilityTypeEnum) ToPointer() *CloudSQLSettingsAvailabilityTypeEnum {
+	return &e
+}
+
 func (e *CloudSQLSettingsAvailabilityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_AVAILABILITY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ZONAL":
 		fallthrough
 	case "REGIONAL":
-		*e = CloudSQLSettingsAvailabilityTypeEnum(s)
+		*e = CloudSQLSettingsAvailabilityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudSQLSettingsAvailabilityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudSQLSettingsAvailabilityTypeEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	CloudSQLSettingsDataDiskTypeEnumPdHdd                      CloudSQLSettingsDataDiskTypeEnum = "PD_HDD"
 )
 
+func (e CloudSQLSettingsDataDiskTypeEnum) ToPointer() *CloudSQLSettingsDataDiskTypeEnum {
+	return &e
+}
+
 func (e *CloudSQLSettingsDataDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_DATA_DISK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PD_SSD":
 		fallthrough
 	case "PD_HDD":
-		*e = CloudSQLSettingsDataDiskTypeEnum(s)
+		*e = CloudSQLSettingsDataDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudSQLSettingsDataDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudSQLSettingsDataDiskTypeEnum: %v", v)
 	}
 }
 
@@ -104,12 +116,16 @@ const (
 	CloudSQLSettingsDatabaseVersionEnumPostgres14                    CloudSQLSettingsDatabaseVersionEnum = "POSTGRES_14"
 )
 
+func (e CloudSQLSettingsDatabaseVersionEnum) ToPointer() *CloudSQLSettingsDatabaseVersionEnum {
+	return &e
+}
+
 func (e *CloudSQLSettingsDatabaseVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_DATABASE_VERSION_UNSPECIFIED":
 		fallthrough
 	case "MYSQL_5_6":
@@ -129,10 +145,10 @@ func (e *CloudSQLSettingsDatabaseVersionEnum) UnmarshalJSON(data []byte) error {
 	case "POSTGRES_13":
 		fallthrough
 	case "POSTGRES_14":
-		*e = CloudSQLSettingsDatabaseVersionEnum(s)
+		*e = CloudSQLSettingsDatabaseVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudSQLSettingsDatabaseVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudSQLSettingsDatabaseVersionEnum: %v", v)
 	}
 }
 

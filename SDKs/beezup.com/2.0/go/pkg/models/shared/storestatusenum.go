@@ -19,20 +19,24 @@ const (
 	StoreStatusEnumUserBlocked   StoreStatusEnum = "UserBlocked"
 )
 
+func (e StoreStatusEnum) ToPointer() *StoreStatusEnum {
+	return &e
+}
+
 func (e *StoreStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "SystemBlocked":
 		fallthrough
 	case "UserBlocked":
-		*e = StoreStatusEnum(s)
+		*e = StoreStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreStatusEnum: %v", v)
 	}
 }

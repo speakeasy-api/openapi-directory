@@ -15,17 +15,21 @@ const (
 	GETTestRenderTemplateActionEnumTestRenderTemplate GETTestRenderTemplateActionEnum = "TestRenderTemplate"
 )
 
+func (e GETTestRenderTemplateActionEnum) ToPointer() *GETTestRenderTemplateActionEnum {
+	return &e
+}
+
 func (e *GETTestRenderTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TestRenderTemplate":
-		*e = GETTestRenderTemplateActionEnum(s)
+		*e = GETTestRenderTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTestRenderTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTestRenderTemplateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETTestRenderTemplateVersionEnumTwoThousandAndTen1201 GETTestRenderTemplateVersionEnum = "2010-12-01"
 )
 
+func (e GETTestRenderTemplateVersionEnum) ToPointer() *GETTestRenderTemplateVersionEnum {
+	return &e
+}
+
 func (e *GETTestRenderTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETTestRenderTemplateVersionEnum(s)
+		*e = GETTestRenderTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTestRenderTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTestRenderTemplateVersionEnum: %v", v)
 	}
 }
 

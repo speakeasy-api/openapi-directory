@@ -15,20 +15,24 @@ const (
 	PortfolioShareTypeEnumAwsOrganizations  PortfolioShareTypeEnum = "AWS_ORGANIZATIONS"
 )
 
+func (e PortfolioShareTypeEnum) ToPointer() *PortfolioShareTypeEnum {
+	return &e
+}
+
 func (e *PortfolioShareTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORTED":
 		fallthrough
 	case "AWS_SERVICECATALOG":
 		fallthrough
 	case "AWS_ORGANIZATIONS":
-		*e = PortfolioShareTypeEnum(s)
+		*e = PortfolioShareTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PortfolioShareTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PortfolioShareTypeEnum: %v", v)
 	}
 }

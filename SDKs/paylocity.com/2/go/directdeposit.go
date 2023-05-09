@@ -35,7 +35,10 @@ func newDirectDeposit(defaultClient, securityClient HTTPClient, serverURL, langu
 // Get All Direct Deposit returns main direct deposit and all additional direct depositsfor the selected employee.
 func (s *directDeposit) GetAllDirectDeposit(ctx context.Context, request operations.GetAllDirectDepositRequest, security operations.GetAllDirectDepositSecurity) (*operations.GetAllDirectDepositResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/directDeposit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/directDeposit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

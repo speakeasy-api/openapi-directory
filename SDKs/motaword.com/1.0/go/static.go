@@ -65,13 +65,13 @@ func (s *static) GetEndpoints(ctx context.Context) (*operations.GetEndpointsResp
 	switch {
 	case httpRes.StatusCode == 200:
 		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
+		case utils.MatchContentType(contentType, `text/yaml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
-			res.GetEndpoints200ApplicationJSONObject = out
+			res.Body = out
 		}
 	default:
 		switch {

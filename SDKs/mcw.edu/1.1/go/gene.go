@@ -36,7 +36,10 @@ func newGene(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // GETAllAnnotatedGenesUsingGET - Return a list of genes annotated to an ontology term
 func (s *gene) GETAllAnnotatedGenesUsingGET(ctx context.Context, request operations.GETAllAnnotatedGenesUsingGETRequest) (*operations.GETAllAnnotatedGenesUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/annotation/{accId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/annotation/{accId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -143,7 +146,10 @@ func (s *gene) GetAnnotatedGenesUsingPOST(ctx context.Context, request shared.An
 // GETGeneAllelesUsingGET - Return a list of gene alleles
 func (s *gene) GETGeneAllelesUsingGET(ctx context.Context, request operations.GETGeneAllelesUsingGETRequest) (*operations.GETGeneAllelesUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/allele/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/allele/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +198,10 @@ func (s *gene) GETGeneAllelesUsingGET(ctx context.Context, request operations.GE
 // GETGeneByMapKeyUsingGET - Return a list of all genes with position information for an assembly
 func (s *gene) GETGeneByMapKeyUsingGET(ctx context.Context, request operations.GETGeneByMapKeyUsingGETRequest) (*operations.GETGeneByMapKeyUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/map/{mapKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/map/{mapKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -241,7 +250,10 @@ func (s *gene) GETGeneByMapKeyUsingGET(ctx context.Context, request operations.G
 // GETGeneByRgdIDUsingGET - Get a gene record by RGD ID
 func (s *gene) GETGeneByRgdIDUsingGET(ctx context.Context, request operations.GETGeneByRgdIDUsingGETRequest) (*operations.GETGeneByRgdIDUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -290,7 +302,10 @@ func (s *gene) GETGeneByRgdIDUsingGET(ctx context.Context, request operations.GE
 // GETGeneBySymbolUsingGET - Get a gene record by symbol and species type key
 func (s *gene) GETGeneBySymbolUsingGET(ctx context.Context, request operations.GETGeneBySymbolUsingGETRequest) (*operations.GETGeneBySymbolUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/{symbol}/{speciesTypeKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/{symbol}/{speciesTypeKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -339,7 +354,10 @@ func (s *gene) GETGeneBySymbolUsingGET(ctx context.Context, request operations.G
 // GETGeneOrthologsUsingGET - Return a list of gene orthologs
 func (s *gene) GETGeneOrthologsUsingGET(ctx context.Context, request operations.GETGeneOrthologsUsingGETRequest) (*operations.GETGeneOrthologsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/orthologs/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/orthologs/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -388,7 +406,10 @@ func (s *gene) GETGeneOrthologsUsingGET(ctx context.Context, request operations.
 // GETGenesAnnotatedUsingGET - Return a list of genes annotated to an ontology term
 func (s *gene) GETGenesAnnotatedUsingGET(ctx context.Context, request operations.GETGenesAnnotatedUsingGETRequest) (*operations.GETGenesAnnotatedUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/annotation/{accId}/{speciesTypeKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/annotation/{accId}/{speciesTypeKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -437,7 +458,10 @@ func (s *gene) GETGenesAnnotatedUsingGET(ctx context.Context, request operations
 // GETGenesByAffyIDUsingGET - Return a list of genes for an affymetrix ID
 func (s *gene) GETGenesByAffyIDUsingGET(ctx context.Context, request operations.GETGenesByAffyIDUsingGETRequest) (*operations.GETGenesByAffyIDUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/affyId/{affyId}/{speciesTypeKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/affyId/{affyId}/{speciesTypeKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -486,7 +510,10 @@ func (s *gene) GETGenesByAffyIDUsingGET(ctx context.Context, request operations.
 // GETGenesByAliasSymbolUsingGET - Return a list of genes for an alias and species
 func (s *gene) GETGenesByAliasSymbolUsingGET(ctx context.Context, request operations.GETGenesByAliasSymbolUsingGETRequest) (*operations.GETGenesByAliasSymbolUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/alias/{aliasSymbol}/{speciesTypeKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/alias/{aliasSymbol}/{speciesTypeKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -535,7 +562,10 @@ func (s *gene) GETGenesByAliasSymbolUsingGET(ctx context.Context, request operat
 // GETGenesByKeywordUsingGET - Return a list of genes by keyword and species type key
 func (s *gene) GETGenesByKeywordUsingGET(ctx context.Context, request operations.GETGenesByKeywordUsingGETRequest) (*operations.GETGenesByKeywordUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/keyword/{keyword}/{speciesTypeKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/keyword/{keyword}/{speciesTypeKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -584,7 +614,10 @@ func (s *gene) GETGenesByKeywordUsingGET(ctx context.Context, request operations
 // GETGenesByPositionUsingGET - Return a list of genes position and map key
 func (s *gene) GETGenesByPositionUsingGET(ctx context.Context, request operations.GETGenesByPositionUsingGETRequest) (*operations.GETGenesByPositionUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/{chr}/{start}/{stop}/{mapKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/{chr}/{start}/{stop}/{mapKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -633,7 +666,10 @@ func (s *gene) GETGenesByPositionUsingGET(ctx context.Context, request operation
 // GETGenesBySpeciesUsingGET - Return a list of all genes for a species in RGD
 func (s *gene) GETGenesBySpeciesUsingGET(ctx context.Context, request operations.GETGenesBySpeciesUsingGETRequest) (*operations.GETGenesBySpeciesUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/species/{speciesTypeKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/species/{speciesTypeKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -682,7 +718,10 @@ func (s *gene) GETGenesBySpeciesUsingGET(ctx context.Context, request operations
 // GETGenesInRegionUsingGET - Return a list of genes in region
 func (s *gene) GETGenesInRegionUsingGET(ctx context.Context, request operations.GETGenesInRegionUsingGETRequest) (*operations.GETGenesInRegionUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/region/{chr}/{start}/{stop}/{mapKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/region/{chr}/{start}/{stop}/{mapKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -731,7 +770,10 @@ func (s *gene) GETGenesInRegionUsingGET(ctx context.Context, request operations.
 // GETMappedGenesByPositionUsingGET - Return a list of genes position and map key
 func (s *gene) GETMappedGenesByPositionUsingGET(ctx context.Context, request operations.GETMappedGenesByPositionUsingGETRequest) (*operations.GETMappedGenesByPositionUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genes/mapped/{chr}/{start}/{stop}/{mapKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genes/mapped/{chr}/{start}/{stop}/{mapKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

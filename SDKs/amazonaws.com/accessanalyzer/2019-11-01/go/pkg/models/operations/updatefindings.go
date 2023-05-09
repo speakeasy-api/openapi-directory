@@ -16,19 +16,23 @@ const (
 	UpdateFindingsRequestBodyStatusEnumArchived UpdateFindingsRequestBodyStatusEnum = "ARCHIVED"
 )
 
+func (e UpdateFindingsRequestBodyStatusEnum) ToPointer() *UpdateFindingsRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *UpdateFindingsRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "ARCHIVED":
-		*e = UpdateFindingsRequestBodyStatusEnum(s)
+		*e = UpdateFindingsRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateFindingsRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateFindingsRequestBodyStatusEnum: %v", v)
 	}
 }
 

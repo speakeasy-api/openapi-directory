@@ -105,7 +105,10 @@ func (s *automationRuns) GetAutomationRuns(ctx context.Context, request operatio
 // Show Automation Run
 func (s *automationRuns) GetAutomationRunsID(ctx context.Context, request operations.GetAutomationRunsIDRequest) (*operations.GetAutomationRunsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation_runs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation_runs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

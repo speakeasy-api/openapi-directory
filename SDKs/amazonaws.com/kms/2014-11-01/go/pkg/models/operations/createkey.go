@@ -16,17 +16,21 @@ const (
 	CreateKeyXAmzTargetEnumTrentServiceCreateKey CreateKeyXAmzTargetEnum = "TrentService.CreateKey"
 )
 
+func (e CreateKeyXAmzTargetEnum) ToPointer() *CreateKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.CreateKey":
-		*e = CreateKeyXAmzTargetEnum(s)
+		*e = CreateKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateKeyXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -7,22 +7,41 @@ import (
 	"fmt"
 )
 
-// PaymentReadPaymentProductEnum - Payment product
+// PaymentReadPaymentProductEnum - * `T2P` - target-2-payments
+// * `SCT` - sepa-credit-transfers
+// * `ISCT` - instant-sepa-credit-transfer
+// * `CBCT` - cross-border-credit-transfers
+// * `BACS` - Back Payment Scheme
+// * `CHAPS` - CHAPS Payment Scheme
+// * `FPS` - Faster Payment Scheme
+// * `SWIFT` - Swift Payment Service
+// * `BT` - Balance Transfer
+// * `MT` - Money Transfer
 type PaymentReadPaymentProductEnum string
 
 const (
-	PaymentReadPaymentProductEnumT2P  PaymentReadPaymentProductEnum = "T2P"
-	PaymentReadPaymentProductEnumSct  PaymentReadPaymentProductEnum = "SCT"
-	PaymentReadPaymentProductEnumIsct PaymentReadPaymentProductEnum = "ISCT"
-	PaymentReadPaymentProductEnumCbct PaymentReadPaymentProductEnum = "CBCT"
+	PaymentReadPaymentProductEnumT2P   PaymentReadPaymentProductEnum = "T2P"
+	PaymentReadPaymentProductEnumSct   PaymentReadPaymentProductEnum = "SCT"
+	PaymentReadPaymentProductEnumIsct  PaymentReadPaymentProductEnum = "ISCT"
+	PaymentReadPaymentProductEnumCbct  PaymentReadPaymentProductEnum = "CBCT"
+	PaymentReadPaymentProductEnumBacs  PaymentReadPaymentProductEnum = "BACS"
+	PaymentReadPaymentProductEnumChaps PaymentReadPaymentProductEnum = "CHAPS"
+	PaymentReadPaymentProductEnumFps   PaymentReadPaymentProductEnum = "FPS"
+	PaymentReadPaymentProductEnumSwift PaymentReadPaymentProductEnum = "SWIFT"
+	PaymentReadPaymentProductEnumBt    PaymentReadPaymentProductEnum = "BT"
+	PaymentReadPaymentProductEnumMt    PaymentReadPaymentProductEnum = "MT"
 )
 
+func (e PaymentReadPaymentProductEnum) ToPointer() *PaymentReadPaymentProductEnum {
+	return &e
+}
+
 func (e *PaymentReadPaymentProductEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "T2P":
 		fallthrough
 	case "SCT":
@@ -30,14 +49,42 @@ func (e *PaymentReadPaymentProductEnum) UnmarshalJSON(data []byte) error {
 	case "ISCT":
 		fallthrough
 	case "CBCT":
-		*e = PaymentReadPaymentProductEnum(s)
+		fallthrough
+	case "BACS":
+		fallthrough
+	case "CHAPS":
+		fallthrough
+	case "FPS":
+		fallthrough
+	case "SWIFT":
+		fallthrough
+	case "BT":
+		fallthrough
+	case "MT":
+		*e = PaymentReadPaymentProductEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentReadPaymentProductEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentReadPaymentProductEnum: %v", v)
 	}
 }
 
-// PaymentReadPaymentStatusEnum - Payment end to end identification
+// PaymentReadPaymentStatusEnum - * `INIT` - Initiated. Payment has been initiated.
+// * `ERRE` - ExecutionError. We experienced error on payment execution.
+// * `ERRS` - StatusError. We experienced error retrieving payment status. Try again.
+// * `ACCC` - AcceptedSettlementCompleted. Settlement on the creditor's account has been completed
+// * `ACCP` - AcceptedCustomerProfile. Preceding check of technical validation was successful. Customer profile check was successful
+// * `ACSC` - AcceptedSettlementCompleted. Settlement on the debtor’s account has been completed
+// * `ACSP` - AcceptedSettlementInProcess. All preceding checks such as technical validation and customer profile were successful and therefore the payment initiation has been accepted for execution
+// * `ACTC` - AcceptedTechnicalValidation. Authentication and syntactical and semantical validation are successful
+// * `ACWC` - AcceptedWithChange. Instruction is accepted but a change will be made, such as date or remittance not sent
+// * `ACWP` - AcceptedWithoutPosting. Payment instruction included in the credit transfer is accepted without being posted to the creditor customer’s account
+// * `RCVD` - Received. Payment initiation has been received by the receiving agent
+// * `PDNG` - Pending. Payment initiation or individual transaction included in the payment initiation is pending. Further checks and status update will be performed
+// * `RJCT` - Rejected. Payment initiation or individual transaction included in the payment initiation has been rejected.
+// * `CANC` - Cancelled. Payment initiation has been cancelled before execution
+// * `ACFC` - AcceptedFundsChecked. Pre-ceeding check of technical validation and customer profile was successful and an automatic funds check was positive
+// * `PATC` - PartiallyAcceptedTechnicalCorrect. The payment initiation needs multiple authentications, where some but not yet all have been performed
+// * `PART` - PartiallyAccepted. A number of transactions have been accepted, whereas another number of transactions have not yet achieved 'accepted' status
 type PaymentReadPaymentStatusEnum string
 
 const (
@@ -60,12 +107,16 @@ const (
 	PaymentReadPaymentStatusEnumPart PaymentReadPaymentStatusEnum = "PART"
 )
 
+func (e PaymentReadPaymentStatusEnum) ToPointer() *PaymentReadPaymentStatusEnum {
+	return &e
+}
+
 func (e *PaymentReadPaymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INIT":
 		fallthrough
 	case "ERRE":
@@ -99,14 +150,16 @@ func (e *PaymentReadPaymentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PATC":
 		fallthrough
 	case "PART":
-		*e = PaymentReadPaymentStatusEnum(s)
+		*e = PaymentReadPaymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentReadPaymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentReadPaymentStatusEnum: %v", v)
 	}
 }
 
-// PaymentReadPaymentTypeEnum - Payment Type
+// PaymentReadPaymentTypeEnum - * `single-payment` - payment
+// * `bulk-payment` - bulk-payments
+// * `periodic-payment` - periodic-payments
 type PaymentReadPaymentTypeEnum string
 
 const (
@@ -115,28 +168,34 @@ const (
 	PaymentReadPaymentTypeEnumPeriodicPayment PaymentReadPaymentTypeEnum = "periodic-payment"
 )
 
+func (e PaymentReadPaymentTypeEnum) ToPointer() *PaymentReadPaymentTypeEnum {
+	return &e
+}
+
 func (e *PaymentReadPaymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "single-payment":
 		fallthrough
 	case "bulk-payment":
 		fallthrough
 	case "periodic-payment":
-		*e = PaymentReadPaymentTypeEnum(s)
+		*e = PaymentReadPaymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentReadPaymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentReadPaymentTypeEnum: %v", v)
 	}
 }
 
 // PaymentRead - PaymentReadSerializer.
 type PaymentRead struct {
 	// Registered creditor account
-	CreditorAccount string `json:"creditor_account"`
+	CreditorAccount *string `json:"creditor_account,omitempty"`
+	// Creditor account
+	CreditorObject *CreditorAccountWrite `json:"creditor_object,omitempty"`
 	// Payment Custom Payment ID
 	CustomPaymentID *string `json:"custom_payment_id,omitempty"`
 	// Debtor account write serializer.
@@ -148,10 +207,43 @@ type PaymentRead struct {
 	// Payment ID
 	PaymentID *string `json:"payment_id,omitempty"`
 	// Payment product
+	//
+	// * `T2P` - target-2-payments
+	// * `SCT` - sepa-credit-transfers
+	// * `ISCT` - instant-sepa-credit-transfer
+	// * `CBCT` - cross-border-credit-transfers
+	// * `BACS` - Back Payment Scheme
+	// * `CHAPS` - CHAPS Payment Scheme
+	// * `FPS` - Faster Payment Scheme
+	// * `SWIFT` - Swift Payment Service
+	// * `BT` - Balance Transfer
+	// * `MT` - Money Transfer
 	PaymentProduct *PaymentReadPaymentProductEnum `json:"payment_product,omitempty"`
 	// Payment end to end identification
+	//
+	// * `INIT` - Initiated. Payment has been initiated.
+	// * `ERRE` - ExecutionError. We experienced error on payment execution.
+	// * `ERRS` - StatusError. We experienced error retrieving payment status. Try again.
+	// * `ACCC` - AcceptedSettlementCompleted. Settlement on the creditor's account has been completed
+	// * `ACCP` - AcceptedCustomerProfile. Preceding check of technical validation was successful. Customer profile check was successful
+	// * `ACSC` - AcceptedSettlementCompleted. Settlement on the debtor’s account has been completed
+	// * `ACSP` - AcceptedSettlementInProcess. All preceding checks such as technical validation and customer profile were successful and therefore the payment initiation has been accepted for execution
+	// * `ACTC` - AcceptedTechnicalValidation. Authentication and syntactical and semantical validation are successful
+	// * `ACWC` - AcceptedWithChange. Instruction is accepted but a change will be made, such as date or remittance not sent
+	// * `ACWP` - AcceptedWithoutPosting. Payment instruction included in the credit transfer is accepted without being posted to the creditor customer’s account
+	// * `RCVD` - Received. Payment initiation has been received by the receiving agent
+	// * `PDNG` - Pending. Payment initiation or individual transaction included in the payment initiation is pending. Further checks and status update will be performed
+	// * `RJCT` - Rejected. Payment initiation or individual transaction included in the payment initiation has been rejected.
+	// * `CANC` - Cancelled. Payment initiation has been cancelled before execution
+	// * `ACFC` - AcceptedFundsChecked. Pre-ceeding check of technical validation and customer profile was successful and an automatic funds check was positive
+	// * `PATC` - PartiallyAcceptedTechnicalCorrect. The payment initiation needs multiple authentications, where some but not yet all have been performed
+	// * `PART` - PartiallyAccepted. A number of transactions have been accepted, whereas another number of transactions have not yet achieved 'accepted' status
 	PaymentStatus *PaymentReadPaymentStatusEnum `json:"payment_status,omitempty"`
 	// Payment Type
+	//
+	// * `single-payment` - payment
+	// * `bulk-payment` - bulk-payments
+	// * `periodic-payment` - periodic-payments
 	PaymentType *PaymentReadPaymentTypeEnum `json:"payment_type,omitempty"`
 	// Redirect URL to your application after payment is done
 	Redirect string `json:"redirect"`

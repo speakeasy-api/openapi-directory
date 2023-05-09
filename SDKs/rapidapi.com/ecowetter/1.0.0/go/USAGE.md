@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetPublicHistoryRequest{
-        From: "corrupti",
-        Q: "provident",
-        To: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.Default.GetPublicHistory(ctx, req)
+    res, err := s.Default.GetPublicHistory(ctx, operations.GetPublicHistoryRequest{
+        From: sdk.String("corrupti"),
+        Q: sdk.String("provident"),
+        To: sdk.String("distinctio"),
+    })
     if err != nil {
         log.Fatal(err)
     }

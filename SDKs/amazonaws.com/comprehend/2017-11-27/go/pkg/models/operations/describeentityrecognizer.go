@@ -16,17 +16,21 @@ const (
 	DescribeEntityRecognizerXAmzTargetEnumComprehend20171127DescribeEntityRecognizer DescribeEntityRecognizerXAmzTargetEnum = "Comprehend_20171127.DescribeEntityRecognizer"
 )
 
+func (e DescribeEntityRecognizerXAmzTargetEnum) ToPointer() *DescribeEntityRecognizerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeEntityRecognizerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.DescribeEntityRecognizer":
-		*e = DescribeEntityRecognizerXAmzTargetEnum(s)
+		*e = DescribeEntityRecognizerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeEntityRecognizerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeEntityRecognizerXAmzTargetEnum: %v", v)
 	}
 }
 

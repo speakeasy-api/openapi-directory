@@ -23,12 +23,16 @@ const (
 	DoubleVerifyDisplayViewabilityIabEnumIabViewedRate30PercentHigher DoubleVerifyDisplayViewabilityIabEnum = "IAB_VIEWED_RATE_30_PERCENT_HIGHER"
 )
 
+func (e DoubleVerifyDisplayViewabilityIabEnum) ToPointer() *DoubleVerifyDisplayViewabilityIabEnum {
+	return &e
+}
+
 func (e *DoubleVerifyDisplayViewabilityIabEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IAB_VIEWED_RATE_UNSPECIFIED":
 		fallthrough
 	case "IAB_VIEWED_RATE_80_PERCENT_HIGHER":
@@ -48,10 +52,10 @@ func (e *DoubleVerifyDisplayViewabilityIabEnum) UnmarshalJSON(data []byte) error
 	case "IAB_VIEWED_RATE_40_PERCENT_HIGHER":
 		fallthrough
 	case "IAB_VIEWED_RATE_30_PERCENT_HIGHER":
-		*e = DoubleVerifyDisplayViewabilityIabEnum(s)
+		*e = DoubleVerifyDisplayViewabilityIabEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoubleVerifyDisplayViewabilityIabEnum: %s", s)
+		return fmt.Errorf("invalid value for DoubleVerifyDisplayViewabilityIabEnum: %v", v)
 	}
 }
 
@@ -65,12 +69,16 @@ const (
 	DoubleVerifyDisplayViewabilityViewableDuringEnumAverageViewDuration15Sec       DoubleVerifyDisplayViewabilityViewableDuringEnum = "AVERAGE_VIEW_DURATION_15_SEC"
 )
 
+func (e DoubleVerifyDisplayViewabilityViewableDuringEnum) ToPointer() *DoubleVerifyDisplayViewabilityViewableDuringEnum {
+	return &e
+}
+
 func (e *DoubleVerifyDisplayViewabilityViewableDuringEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVERAGE_VIEW_DURATION_UNSPECIFIED":
 		fallthrough
 	case "AVERAGE_VIEW_DURATION_5_SEC":
@@ -78,10 +86,10 @@ func (e *DoubleVerifyDisplayViewabilityViewableDuringEnum) UnmarshalJSON(data []
 	case "AVERAGE_VIEW_DURATION_10_SEC":
 		fallthrough
 	case "AVERAGE_VIEW_DURATION_15_SEC":
-		*e = DoubleVerifyDisplayViewabilityViewableDuringEnum(s)
+		*e = DoubleVerifyDisplayViewabilityViewableDuringEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoubleVerifyDisplayViewabilityViewableDuringEnum: %s", s)
+		return fmt.Errorf("invalid value for DoubleVerifyDisplayViewabilityViewableDuringEnum: %v", v)
 	}
 }
 

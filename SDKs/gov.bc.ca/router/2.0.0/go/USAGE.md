@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,21 +17,19 @@ func main() {
         }),
     )
 
-    req := operations.GetDirectionsOutputFormatRequest{
-        CorrectSide: false,
-        Criteria: "fastest",
-        Departure: "2021-07-27T21:52:56.087Z",
-        Disable: "quibusdam",
-        DistanceUnit: "mi",
-        OutputFormat: "html",
-        OutputSRS: "26908",
-        Points: "illum",
-        RoundTrip: false,
-        RouteDescription: "vel",
-    }
-
     ctx := context.Background()
-    res, err := s.Directions.GetDirectionsOutputFormat(ctx, req)
+    res, err := s.Directions.GetDirectionsOutputFormat(ctx, operations.GetDirectionsOutputFormatRequest{
+        CorrectSide: sdk.Bool(false),
+        Criteria: operations.GetDirectionsOutputFormatCriteriaEnumFastest.ToPointer(),
+        Departure: types.MustTimeFromString("2021-07-27T21:52:56.087Z"),
+        Disable: sdk.String("quibusdam"),
+        DistanceUnit: operations.GetDirectionsOutputFormatDistanceUnitEnumMi.ToPointer(),
+        OutputFormat: operations.GetDirectionsOutputFormatOutputFormatEnumHTML,
+        OutputSRS: operations.GetDirectionsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight.ToPointer(),
+        Points: "illum",
+        RoundTrip: sdk.Bool(false),
+        RouteDescription: sdk.String("vel"),
+    })
     if err != nil {
         log.Fatal(err)
     }

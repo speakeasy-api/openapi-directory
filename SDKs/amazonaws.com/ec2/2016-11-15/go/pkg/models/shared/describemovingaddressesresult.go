@@ -15,19 +15,23 @@ const (
 	DescribeMovingAddressesResultMovingAddressStatusesMoveStatusEnumRestoringToClassic DescribeMovingAddressesResultMovingAddressStatusesMoveStatusEnum = "restoringToClassic"
 )
 
+func (e DescribeMovingAddressesResultMovingAddressStatusesMoveStatusEnum) ToPointer() *DescribeMovingAddressesResultMovingAddressStatusesMoveStatusEnum {
+	return &e
+}
+
 func (e *DescribeMovingAddressesResultMovingAddressStatusesMoveStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "movingToVpc":
 		fallthrough
 	case "restoringToClassic":
-		*e = DescribeMovingAddressesResultMovingAddressStatusesMoveStatusEnum(s)
+		*e = DescribeMovingAddressesResultMovingAddressStatusesMoveStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeMovingAddressesResultMovingAddressStatusesMoveStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeMovingAddressesResultMovingAddressStatusesMoveStatusEnum: %v", v)
 	}
 }
 

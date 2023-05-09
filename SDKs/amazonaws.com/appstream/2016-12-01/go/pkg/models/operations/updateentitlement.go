@@ -16,17 +16,21 @@ const (
 	UpdateEntitlementXAmzTargetEnumPhotonAdminProxyServiceUpdateEntitlement UpdateEntitlementXAmzTargetEnum = "PhotonAdminProxyService.UpdateEntitlement"
 )
 
+func (e UpdateEntitlementXAmzTargetEnum) ToPointer() *UpdateEntitlementXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateEntitlementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.UpdateEntitlement":
-		*e = UpdateEntitlementXAmzTargetEnum(s)
+		*e = UpdateEntitlementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateEntitlementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateEntitlementXAmzTargetEnum: %v", v)
 	}
 }
 

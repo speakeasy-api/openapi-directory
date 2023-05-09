@@ -25,6 +25,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - RiteKit API is based on REST principles.
 //
 // # Authentication uses standard OAuth 2.0 process
@@ -317,7 +332,10 @@ func (s *SDK) EmojiSuggestions(ctx context.Context, request operations.EmojiSugg
 // Returns historical stats for a given hashtag from the last 30 days
 func (s *SDK) HashtagHistory(ctx context.Context, request operations.HashtagHistoryRequest) (*operations.HashtagHistoryResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/stats/history/{hashtag}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/stats/history/{hashtag}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

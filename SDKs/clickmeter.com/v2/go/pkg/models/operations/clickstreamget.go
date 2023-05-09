@@ -20,12 +20,16 @@ const (
 	ClickStreamGetFilterEnumConversions ClickStreamGetFilterEnum = "conversions"
 )
 
+func (e ClickStreamGetFilterEnum) ToPointer() *ClickStreamGetFilterEnum {
+	return &e
+}
+
 func (e *ClickStreamGetFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "spiders":
@@ -35,10 +39,10 @@ func (e *ClickStreamGetFilterEnum) UnmarshalJSON(data []byte) error {
 	case "nonuniques":
 		fallthrough
 	case "conversions":
-		*e = ClickStreamGetFilterEnum(s)
+		*e = ClickStreamGetFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClickStreamGetFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for ClickStreamGetFilterEnum: %v", v)
 	}
 }
 

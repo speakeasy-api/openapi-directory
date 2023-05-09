@@ -16,17 +16,21 @@ const (
 	CreateFleetLocationsXAmzTargetEnumGameLiftCreateFleetLocations CreateFleetLocationsXAmzTargetEnum = "GameLift.CreateFleetLocations"
 )
 
+func (e CreateFleetLocationsXAmzTargetEnum) ToPointer() *CreateFleetLocationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateFleetLocationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.CreateFleetLocations":
-		*e = CreateFleetLocationsXAmzTargetEnum(s)
+		*e = CreateFleetLocationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFleetLocationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFleetLocationsXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -54,6 +58,8 @@ type CreateFleetLocationsResponse struct {
 	InvalidFleetStatusException interface{}
 	// InvalidRequestException
 	InvalidRequestException interface{}
+	// LimitExceededException
+	LimitExceededException interface{}
 	// NotFoundException
 	NotFoundException interface{}
 	StatusCode        int

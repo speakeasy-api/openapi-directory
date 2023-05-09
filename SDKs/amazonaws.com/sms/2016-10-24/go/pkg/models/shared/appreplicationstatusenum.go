@@ -28,12 +28,16 @@ const (
 	AppReplicationStatusEnumReplicationStopped         AppReplicationStatusEnum = "REPLICATION_STOPPED"
 )
 
+func (e AppReplicationStatusEnum) ToPointer() *AppReplicationStatusEnum {
+	return &e
+}
+
 func (e *AppReplicationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READY_FOR_CONFIGURATION":
 		fallthrough
 	case "CONFIGURATION_IN_PROGRESS":
@@ -65,9 +69,9 @@ func (e *AppReplicationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "REPLICATION_STOP_FAILED":
 		fallthrough
 	case "REPLICATION_STOPPED":
-		*e = AppReplicationStatusEnum(s)
+		*e = AppReplicationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppReplicationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AppReplicationStatusEnum: %v", v)
 	}
 }

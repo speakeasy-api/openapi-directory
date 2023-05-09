@@ -16,17 +16,21 @@ const (
 	RemoveIPRoutesXAmzTargetEnumDirectoryService20150416RemoveIPRoutes RemoveIPRoutesXAmzTargetEnum = "DirectoryService_20150416.RemoveIpRoutes"
 )
 
+func (e RemoveIPRoutesXAmzTargetEnum) ToPointer() *RemoveIPRoutesXAmzTargetEnum {
+	return &e
+}
+
 func (e *RemoveIPRoutesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.RemoveIpRoutes":
-		*e = RemoveIPRoutesXAmzTargetEnum(s)
+		*e = RemoveIPRoutesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveIPRoutesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveIPRoutesXAmzTargetEnum: %v", v)
 	}
 }
 

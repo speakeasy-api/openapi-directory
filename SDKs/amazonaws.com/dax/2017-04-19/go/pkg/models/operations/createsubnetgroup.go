@@ -16,17 +16,21 @@ const (
 	CreateSubnetGroupXAmzTargetEnumAmazonDaxv3CreateSubnetGroup CreateSubnetGroupXAmzTargetEnum = "AmazonDAXV3.CreateSubnetGroup"
 )
 
+func (e CreateSubnetGroupXAmzTargetEnum) ToPointer() *CreateSubnetGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateSubnetGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDAXV3.CreateSubnetGroup":
-		*e = CreateSubnetGroupXAmzTargetEnum(s)
+		*e = CreateSubnetGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSubnetGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSubnetGroupXAmzTargetEnum: %v", v)
 	}
 }
 

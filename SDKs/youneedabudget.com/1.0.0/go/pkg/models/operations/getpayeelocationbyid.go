@@ -8,7 +8,7 @@ import (
 )
 
 type GetPayeeLocationByIDRequest struct {
-	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
 	// id of payee location
 	PayeeLocationID string `pathParam:"style=simple,explode=false,name=payee_location_id"`

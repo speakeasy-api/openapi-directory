@@ -22,12 +22,16 @@ const (
 	FleetStatusEnumNotFound    FleetStatusEnum = "NOT_FOUND"
 )
 
+func (e FleetStatusEnum) ToPointer() *FleetStatusEnum {
+	return &e
+}
+
 func (e *FleetStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEW":
 		fallthrough
 	case "DOWNLOADING":
@@ -47,9 +51,9 @@ func (e *FleetStatusEnum) UnmarshalJSON(data []byte) error {
 	case "TERMINATED":
 		fallthrough
 	case "NOT_FOUND":
-		*e = FleetStatusEnum(s)
+		*e = FleetStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FleetStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FleetStatusEnum: %v", v)
 	}
 }

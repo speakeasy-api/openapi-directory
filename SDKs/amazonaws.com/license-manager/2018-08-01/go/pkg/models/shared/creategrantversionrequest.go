@@ -7,6 +7,7 @@ type CreateGrantVersionRequest struct {
 	ClientToken       string                 `json:"ClientToken"`
 	GrantArn          string                 `json:"GrantArn"`
 	GrantName         *string                `json:"GrantName,omitempty"`
+	Options           *Options               `json:"Options,omitempty"`
 	SourceVersion     *string                `json:"SourceVersion,omitempty"`
 	Status            *GrantStatusEnum       `json:"Status,omitempty"`
 	StatusReason      *string                `json:"StatusReason,omitempty"`

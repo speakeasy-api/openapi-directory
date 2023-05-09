@@ -15,17 +15,21 @@ const (
 	POSTCreateEnvironmentActionEnumCreateEnvironment POSTCreateEnvironmentActionEnum = "CreateEnvironment"
 )
 
+func (e POSTCreateEnvironmentActionEnum) ToPointer() *POSTCreateEnvironmentActionEnum {
+	return &e
+}
+
 func (e *POSTCreateEnvironmentActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateEnvironment":
-		*e = POSTCreateEnvironmentActionEnum(s)
+		*e = POSTCreateEnvironmentActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateEnvironmentActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateEnvironmentActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateEnvironmentVersionEnumTwoThousandAndTen1201 POSTCreateEnvironmentVersionEnum = "2010-12-01"
 )
 
+func (e POSTCreateEnvironmentVersionEnum) ToPointer() *POSTCreateEnvironmentVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateEnvironmentVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTCreateEnvironmentVersionEnum(s)
+		*e = POSTCreateEnvironmentVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateEnvironmentVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateEnvironmentVersionEnum: %v", v)
 	}
 }
 

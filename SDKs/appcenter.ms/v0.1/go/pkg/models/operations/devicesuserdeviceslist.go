@@ -8,6 +8,10 @@ import (
 	"net/http"
 )
 
+type DevicesUserDevicesListSecurity struct {
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
+}
+
 type DevicesUserDevicesList403ApplicationJSONCodeEnum string
 
 const (
@@ -20,12 +24,16 @@ const (
 	DevicesUserDevicesList403ApplicationJSONCodeEnumTooManyRequests     DevicesUserDevicesList403ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesUserDevicesList403ApplicationJSONCodeEnum) ToPointer() *DevicesUserDevicesList403ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *DevicesUserDevicesList403ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -39,10 +47,10 @@ func (e *DevicesUserDevicesList403ApplicationJSONCodeEnum) UnmarshalJSON(data []
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesUserDevicesList403ApplicationJSONCodeEnum(s)
+		*e = DevicesUserDevicesList403ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesUserDevicesList403ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesUserDevicesList403ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -64,12 +72,16 @@ const (
 	DevicesUserDevicesList400ApplicationJSONCodeEnumTooManyRequests     DevicesUserDevicesList400ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesUserDevicesList400ApplicationJSONCodeEnum) ToPointer() *DevicesUserDevicesList400ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *DevicesUserDevicesList400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -83,10 +95,10 @@ func (e *DevicesUserDevicesList400ApplicationJSONCodeEnum) UnmarshalJSON(data []
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesUserDevicesList400ApplicationJSONCodeEnum(s)
+		*e = DevicesUserDevicesList400ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesUserDevicesList400ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesUserDevicesList400ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

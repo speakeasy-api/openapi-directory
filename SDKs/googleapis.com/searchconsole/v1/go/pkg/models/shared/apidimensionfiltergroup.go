@@ -13,17 +13,21 @@ const (
 	APIDimensionFilterGroupGroupTypeEnumAnd APIDimensionFilterGroupGroupTypeEnum = "AND"
 )
 
+func (e APIDimensionFilterGroupGroupTypeEnum) ToPointer() *APIDimensionFilterGroupGroupTypeEnum {
+	return &e
+}
+
 func (e *APIDimensionFilterGroupGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AND":
-		*e = APIDimensionFilterGroupGroupTypeEnum(s)
+		*e = APIDimensionFilterGroupGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIDimensionFilterGroupGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for APIDimensionFilterGroupGroupTypeEnum: %v", v)
 	}
 }
 

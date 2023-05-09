@@ -22,12 +22,16 @@ const (
 	UpdateTableBorderPropertiesRequestBorderPositionEnumTop             UpdateTableBorderPropertiesRequestBorderPositionEnum = "TOP"
 )
 
+func (e UpdateTableBorderPropertiesRequestBorderPositionEnum) ToPointer() *UpdateTableBorderPropertiesRequestBorderPositionEnum {
+	return &e
+}
+
 func (e *UpdateTableBorderPropertiesRequestBorderPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "BOTTOM":
@@ -45,10 +49,10 @@ func (e *UpdateTableBorderPropertiesRequestBorderPositionEnum) UnmarshalJSON(dat
 	case "RIGHT":
 		fallthrough
 	case "TOP":
-		*e = UpdateTableBorderPropertiesRequestBorderPositionEnum(s)
+		*e = UpdateTableBorderPropertiesRequestBorderPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateTableBorderPropertiesRequestBorderPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateTableBorderPropertiesRequestBorderPositionEnum: %v", v)
 	}
 }
 

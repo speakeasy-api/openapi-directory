@@ -16,17 +16,21 @@ const (
 	UpdateLogPatternXAmzTargetEnumEc2WindowsBarleyServiceUpdateLogPattern UpdateLogPatternXAmzTargetEnum = "EC2WindowsBarleyService.UpdateLogPattern"
 )
 
+func (e UpdateLogPatternXAmzTargetEnum) ToPointer() *UpdateLogPatternXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateLogPatternXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2WindowsBarleyService.UpdateLogPattern":
-		*e = UpdateLogPatternXAmzTargetEnum(s)
+		*e = UpdateLogPatternXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateLogPatternXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateLogPatternXAmzTargetEnum: %v", v)
 	}
 }
 

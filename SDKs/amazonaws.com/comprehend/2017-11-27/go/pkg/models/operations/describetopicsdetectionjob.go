@@ -16,17 +16,21 @@ const (
 	DescribeTopicsDetectionJobXAmzTargetEnumComprehend20171127DescribeTopicsDetectionJob DescribeTopicsDetectionJobXAmzTargetEnum = "Comprehend_20171127.DescribeTopicsDetectionJob"
 )
 
+func (e DescribeTopicsDetectionJobXAmzTargetEnum) ToPointer() *DescribeTopicsDetectionJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTopicsDetectionJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.DescribeTopicsDetectionJob":
-		*e = DescribeTopicsDetectionJobXAmzTargetEnum(s)
+		*e = DescribeTopicsDetectionJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTopicsDetectionJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTopicsDetectionJobXAmzTargetEnum: %v", v)
 	}
 }
 

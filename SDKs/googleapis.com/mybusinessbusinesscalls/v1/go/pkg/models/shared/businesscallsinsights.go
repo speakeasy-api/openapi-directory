@@ -15,19 +15,23 @@ const (
 	BusinessCallsInsightsMetricTypeEnumAggregateCount        BusinessCallsInsightsMetricTypeEnum = "AGGREGATE_COUNT"
 )
 
+func (e BusinessCallsInsightsMetricTypeEnum) ToPointer() *BusinessCallsInsightsMetricTypeEnum {
+	return &e
+}
+
 func (e *BusinessCallsInsightsMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AGGREGATE_COUNT":
-		*e = BusinessCallsInsightsMetricTypeEnum(s)
+		*e = BusinessCallsInsightsMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BusinessCallsInsightsMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BusinessCallsInsightsMetricTypeEnum: %v", v)
 	}
 }
 

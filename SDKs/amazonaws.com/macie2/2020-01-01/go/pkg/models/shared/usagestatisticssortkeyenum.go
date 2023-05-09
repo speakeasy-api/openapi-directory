@@ -17,12 +17,16 @@ const (
 	UsageStatisticsSortKeyEnumFreeTrialStartDate UsageStatisticsSortKeyEnum = "freeTrialStartDate"
 )
 
+func (e UsageStatisticsSortKeyEnum) ToPointer() *UsageStatisticsSortKeyEnum {
+	return &e
+}
+
 func (e *UsageStatisticsSortKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "accountId":
 		fallthrough
 	case "total":
@@ -30,9 +34,9 @@ func (e *UsageStatisticsSortKeyEnum) UnmarshalJSON(data []byte) error {
 	case "serviceLimitValue":
 		fallthrough
 	case "freeTrialStartDate":
-		*e = UsageStatisticsSortKeyEnum(s)
+		*e = UsageStatisticsSortKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageStatisticsSortKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageStatisticsSortKeyEnum: %v", v)
 	}
 }

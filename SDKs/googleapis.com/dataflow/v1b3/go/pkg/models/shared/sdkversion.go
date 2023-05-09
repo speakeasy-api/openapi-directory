@@ -18,12 +18,16 @@ const (
 	SDKVersionSDKSupportStatusEnumUnsupported SDKVersionSDKSupportStatusEnum = "UNSUPPORTED"
 )
 
+func (e SDKVersionSDKSupportStatusEnum) ToPointer() *SDKVersionSDKSupportStatusEnum {
+	return &e
+}
+
 func (e *SDKVersionSDKSupportStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "SUPPORTED":
@@ -33,10 +37,10 @@ func (e *SDKVersionSDKSupportStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DEPRECATED":
 		fallthrough
 	case "UNSUPPORTED":
-		*e = SDKVersionSDKSupportStatusEnum(s)
+		*e = SDKVersionSDKSupportStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SDKVersionSDKSupportStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SDKVersionSDKSupportStatusEnum: %v", v)
 	}
 }
 

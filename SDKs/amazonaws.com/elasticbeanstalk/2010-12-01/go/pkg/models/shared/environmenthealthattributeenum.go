@@ -20,12 +20,16 @@ const (
 	EnvironmentHealthAttributeEnumRefreshedAt        EnvironmentHealthAttributeEnum = "RefreshedAt"
 )
 
+func (e EnvironmentHealthAttributeEnum) ToPointer() *EnvironmentHealthAttributeEnum {
+	return &e
+}
+
 func (e *EnvironmentHealthAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Status":
 		fallthrough
 	case "Color":
@@ -41,9 +45,9 @@ func (e *EnvironmentHealthAttributeEnum) UnmarshalJSON(data []byte) error {
 	case "HealthStatus":
 		fallthrough
 	case "RefreshedAt":
-		*e = EnvironmentHealthAttributeEnum(s)
+		*e = EnvironmentHealthAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentHealthAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentHealthAttributeEnum: %v", v)
 	}
 }

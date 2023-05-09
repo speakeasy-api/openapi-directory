@@ -7,8 +7,46 @@ import (
 	"fmt"
 )
 
+// WorkflowCallLogLevelEnum - Optional. Describes the level of platform logging to apply to calls and call responses during executions of this workflow. If both the workflow and the execution specify a logging level, the execution level takes precedence.
+type WorkflowCallLogLevelEnum string
+
+const (
+	WorkflowCallLogLevelEnumCallLogLevelUnspecified WorkflowCallLogLevelEnum = "CALL_LOG_LEVEL_UNSPECIFIED"
+	WorkflowCallLogLevelEnumLogAllCalls             WorkflowCallLogLevelEnum = "LOG_ALL_CALLS"
+	WorkflowCallLogLevelEnumLogErrorsOnly           WorkflowCallLogLevelEnum = "LOG_ERRORS_ONLY"
+	WorkflowCallLogLevelEnumLogNone                 WorkflowCallLogLevelEnum = "LOG_NONE"
+)
+
+func (e WorkflowCallLogLevelEnum) ToPointer() *WorkflowCallLogLevelEnum {
+	return &e
+}
+
+func (e *WorkflowCallLogLevelEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "CALL_LOG_LEVEL_UNSPECIFIED":
+		fallthrough
+	case "LOG_ALL_CALLS":
+		fallthrough
+	case "LOG_ERRORS_ONLY":
+		fallthrough
+	case "LOG_NONE":
+		*e = WorkflowCallLogLevelEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for WorkflowCallLogLevelEnum: %v", v)
+	}
+}
+
 // WorkflowInput - Workflow program to be executed by Workflows.
 type WorkflowInput struct {
+	// Optional. Describes the level of platform logging to apply to calls and call responses during executions of this workflow. If both the workflow and the execution specify a logging level, the execution level takes precedence.
+	CallLogLevel *WorkflowCallLogLevelEnum `json:"callLogLevel,omitempty"`
+	// Optional. The resource name of a KMS crypto key used to encrypt or decrypt the data associated with the workflow. Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} Using `-` as a wildcard for the `{project}` or not providing one at all will infer the project from the account. If not provided, data associated with the workflow will not be CMEK-encrypted.
+	CryptoKeyName *string `json:"cryptoKeyName,omitempty"`
 	// Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
 	Description *string `json:"description,omitempty"`
 	// Labels associated with this workflow. Labels can contain at most 64 entries. Keys and values can be no longer than 63 characters and can only contain lowercase letters, numeric characters, underscores, and dashes. Label keys must start with a letter. International characters are allowed.
@@ -19,6 +57,8 @@ type WorkflowInput struct {
 	ServiceAccount *string `json:"serviceAccount,omitempty"`
 	// Workflow code to be executed. The size limit is 128KB.
 	SourceContents *string `json:"sourceContents,omitempty"`
+	// Describes an error related to the current state of the workflow.
+	StateError *StateError `json:"stateError,omitempty"`
 }
 
 // WorkflowStateEnum - Output only. State of the workflow deployment.
@@ -27,28 +67,39 @@ type WorkflowStateEnum string
 const (
 	WorkflowStateEnumStateUnspecified WorkflowStateEnum = "STATE_UNSPECIFIED"
 	WorkflowStateEnumActive           WorkflowStateEnum = "ACTIVE"
+	WorkflowStateEnumUnavailable      WorkflowStateEnum = "UNAVAILABLE"
 )
 
+func (e WorkflowStateEnum) ToPointer() *WorkflowStateEnum {
+	return &e
+}
+
 func (e *WorkflowStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
-		*e = WorkflowStateEnum(s)
+		fallthrough
+	case "UNAVAILABLE":
+		*e = WorkflowStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkflowStateEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkflowStateEnum: %v", v)
 	}
 }
 
 // Workflow - Workflow program to be executed by Workflows.
 type Workflow struct {
+	// Optional. Describes the level of platform logging to apply to calls and call responses during executions of this workflow. If both the workflow and the execution specify a logging level, the execution level takes precedence.
+	CallLogLevel *WorkflowCallLogLevelEnum `json:"callLogLevel,omitempty"`
 	// Output only. The timestamp for when the workflow was created.
 	CreateTime *string `json:"createTime,omitempty"`
+	// Optional. The resource name of a KMS crypto key used to encrypt or decrypt the data associated with the workflow. Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} Using `-` as a wildcard for the `{project}` or not providing one at all will infer the project from the account. If not provided, data associated with the workflow will not be CMEK-encrypted.
+	CryptoKeyName *string `json:"cryptoKeyName,omitempty"`
 	// Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
 	Description *string `json:"description,omitempty"`
 	// Labels associated with this workflow. Labels can contain at most 64 entries. Keys and values can be no longer than 63 characters and can only contain lowercase letters, numeric characters, underscores, and dashes. Label keys must start with a letter. International characters are allowed.
@@ -65,6 +116,8 @@ type Workflow struct {
 	SourceContents *string `json:"sourceContents,omitempty"`
 	// Output only. State of the workflow deployment.
 	State *WorkflowStateEnum `json:"state,omitempty"`
+	// Describes an error related to the current state of the workflow.
+	StateError *StateError `json:"stateError,omitempty"`
 	// Output only. The timestamp for when the workflow was last updated.
 	UpdateTime *string `json:"updateTime,omitempty"`
 }

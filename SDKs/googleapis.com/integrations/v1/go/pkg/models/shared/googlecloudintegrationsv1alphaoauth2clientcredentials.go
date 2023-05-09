@@ -17,12 +17,16 @@ const (
 	GoogleCloudIntegrationsV1alphaOAuth2ClientCredentialsRequestTypeEnumEncodedHeader          GoogleCloudIntegrationsV1alphaOAuth2ClientCredentialsRequestTypeEnum = "ENCODED_HEADER"
 )
 
+func (e GoogleCloudIntegrationsV1alphaOAuth2ClientCredentialsRequestTypeEnum) ToPointer() *GoogleCloudIntegrationsV1alphaOAuth2ClientCredentialsRequestTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaOAuth2ClientCredentialsRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUEST_TYPE_UNSPECIFIED":
 		fallthrough
 	case "REQUEST_BODY":
@@ -30,10 +34,10 @@ func (e *GoogleCloudIntegrationsV1alphaOAuth2ClientCredentialsRequestTypeEnum) U
 	case "QUERY_PARAMETERS":
 		fallthrough
 	case "ENCODED_HEADER":
-		*e = GoogleCloudIntegrationsV1alphaOAuth2ClientCredentialsRequestTypeEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaOAuth2ClientCredentialsRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaOAuth2ClientCredentialsRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaOAuth2ClientCredentialsRequestTypeEnum: %v", v)
 	}
 }
 

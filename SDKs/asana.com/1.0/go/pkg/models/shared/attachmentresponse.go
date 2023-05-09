@@ -19,12 +19,16 @@ const (
 	AttachmentResponseParentResourceSubtypeEnumApproval    AttachmentResponseParentResourceSubtypeEnum = "approval"
 )
 
+func (e AttachmentResponseParentResourceSubtypeEnum) ToPointer() *AttachmentResponseParentResourceSubtypeEnum {
+	return &e
+}
+
 func (e *AttachmentResponseParentResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default_task":
 		fallthrough
 	case "milestone":
@@ -32,10 +36,10 @@ func (e *AttachmentResponseParentResourceSubtypeEnum) UnmarshalJSON(data []byte)
 	case "section":
 		fallthrough
 	case "approval":
-		*e = AttachmentResponseParentResourceSubtypeEnum(s)
+		*e = AttachmentResponseParentResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachmentResponseParentResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachmentResponseParentResourceSubtypeEnum: %v", v)
 	}
 }
 

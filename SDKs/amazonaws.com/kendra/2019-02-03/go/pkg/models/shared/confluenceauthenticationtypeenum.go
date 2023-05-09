@@ -14,18 +14,22 @@ const (
 	ConfluenceAuthenticationTypeEnumPat       ConfluenceAuthenticationTypeEnum = "PAT"
 )
 
+func (e ConfluenceAuthenticationTypeEnum) ToPointer() *ConfluenceAuthenticationTypeEnum {
+	return &e
+}
+
 func (e *ConfluenceAuthenticationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP_BASIC":
 		fallthrough
 	case "PAT":
-		*e = ConfluenceAuthenticationTypeEnum(s)
+		*e = ConfluenceAuthenticationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfluenceAuthenticationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfluenceAuthenticationTypeEnum: %v", v)
 	}
 }

@@ -29,12 +29,16 @@ const (
 	DevicesRemoveUserDevice404ApplicationJSONCodeEnumTooManyRequests     DevicesRemoveUserDevice404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesRemoveUserDevice404ApplicationJSONCodeEnum) ToPointer() *DevicesRemoveUserDevice404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *DevicesRemoveUserDevice404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -48,10 +52,10 @@ func (e *DevicesRemoveUserDevice404ApplicationJSONCodeEnum) UnmarshalJSON(data [
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesRemoveUserDevice404ApplicationJSONCodeEnum(s)
+		*e = DevicesRemoveUserDevice404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesRemoveUserDevice404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesRemoveUserDevice404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -73,12 +77,16 @@ const (
 	DevicesRemoveUserDevice403ApplicationJSONCodeEnumTooManyRequests     DevicesRemoveUserDevice403ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesRemoveUserDevice403ApplicationJSONCodeEnum) ToPointer() *DevicesRemoveUserDevice403ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *DevicesRemoveUserDevice403ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -92,10 +100,10 @@ func (e *DevicesRemoveUserDevice403ApplicationJSONCodeEnum) UnmarshalJSON(data [
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesRemoveUserDevice403ApplicationJSONCodeEnum(s)
+		*e = DevicesRemoveUserDevice403ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesRemoveUserDevice403ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesRemoveUserDevice403ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

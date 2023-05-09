@@ -16,21 +16,25 @@ const (
 	RoutingCurbsideStrictnessEnumStrict RoutingCurbsideStrictnessEnum = "strict"
 )
 
+func (e RoutingCurbsideStrictnessEnum) ToPointer() *RoutingCurbsideStrictnessEnum {
+	return &e
+}
+
 func (e *RoutingCurbsideStrictnessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ignore":
 		fallthrough
 	case "soft":
 		fallthrough
 	case "strict":
-		*e = RoutingCurbsideStrictnessEnum(s)
+		*e = RoutingCurbsideStrictnessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoutingCurbsideStrictnessEnum: %s", s)
+		return fmt.Errorf("invalid value for RoutingCurbsideStrictnessEnum: %v", v)
 	}
 }
 
@@ -42,19 +46,23 @@ const (
 	RoutingNetworkDataProviderEnumTomtom        RoutingNetworkDataProviderEnum = "tomtom"
 )
 
+func (e RoutingNetworkDataProviderEnum) ToPointer() *RoutingNetworkDataProviderEnum {
+	return &e
+}
+
 func (e *RoutingNetworkDataProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "openstreetmap":
 		fallthrough
 	case "tomtom":
-		*e = RoutingNetworkDataProviderEnum(s)
+		*e = RoutingNetworkDataProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoutingNetworkDataProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for RoutingNetworkDataProviderEnum: %v", v)
 	}
 }
 
@@ -69,12 +77,16 @@ const (
 	RoutingSnapPreventionsEnumFerry    RoutingSnapPreventionsEnum = "ferry"
 )
 
+func (e RoutingSnapPreventionsEnum) ToPointer() *RoutingSnapPreventionsEnum {
+	return &e
+}
+
 func (e *RoutingSnapPreventionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "motorway":
 		fallthrough
 	case "trunk":
@@ -86,10 +98,10 @@ func (e *RoutingSnapPreventionsEnum) UnmarshalJSON(data []byte) error {
 	case "tunnel":
 		fallthrough
 	case "ferry":
-		*e = RoutingSnapPreventionsEnum(s)
+		*e = RoutingSnapPreventionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoutingSnapPreventionsEnum: %s", s)
+		return fmt.Errorf("invalid value for RoutingSnapPreventionsEnum: %v", v)
 	}
 }
 

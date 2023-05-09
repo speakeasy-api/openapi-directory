@@ -9,41 +9,45 @@ import (
 )
 
 // RotatePagesV1RequestBodyAngleEnum - The angle of rotation of the pages. Positive angles rotate the pages clockwise. Negative angles rotate the pages counter-clockwise.
-type RotatePagesV1RequestBodyAngleEnum string
+type RotatePagesV1RequestBodyAngleEnum int
 
 const (
-	RotatePagesV1RequestBodyAngleEnumZero                 RotatePagesV1RequestBodyAngleEnum = "0"
-	RotatePagesV1RequestBodyAngleEnumNinety               RotatePagesV1RequestBodyAngleEnum = "90"
-	RotatePagesV1RequestBodyAngleEnumOneHundredAndEighty  RotatePagesV1RequestBodyAngleEnum = "180"
-	RotatePagesV1RequestBodyAngleEnumTwoHundredAndSeventy RotatePagesV1RequestBodyAngleEnum = "270"
-	RotatePagesV1RequestBodyAngleEnumMinus90              RotatePagesV1RequestBodyAngleEnum = "-90"
-	RotatePagesV1RequestBodyAngleEnumMinus180             RotatePagesV1RequestBodyAngleEnum = "-180"
-	RotatePagesV1RequestBodyAngleEnumMinus270             RotatePagesV1RequestBodyAngleEnum = "-270"
+	RotatePagesV1RequestBodyAngleEnumZero                 RotatePagesV1RequestBodyAngleEnum = 0
+	RotatePagesV1RequestBodyAngleEnumNinety               RotatePagesV1RequestBodyAngleEnum = 90
+	RotatePagesV1RequestBodyAngleEnumOneHundredAndEighty  RotatePagesV1RequestBodyAngleEnum = 180
+	RotatePagesV1RequestBodyAngleEnumTwoHundredAndSeventy RotatePagesV1RequestBodyAngleEnum = 270
+	RotatePagesV1RequestBodyAngleEnumMinus90              RotatePagesV1RequestBodyAngleEnum = -90
+	RotatePagesV1RequestBodyAngleEnumMinus180             RotatePagesV1RequestBodyAngleEnum = -180
+	RotatePagesV1RequestBodyAngleEnumMinus270             RotatePagesV1RequestBodyAngleEnum = -270
 )
 
+func (e RotatePagesV1RequestBodyAngleEnum) ToPointer() *RotatePagesV1RequestBodyAngleEnum {
+	return &e
+}
+
 func (e *RotatePagesV1RequestBodyAngleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "90":
+	case 90:
 		fallthrough
-	case "180":
+	case 180:
 		fallthrough
-	case "270":
+	case 270:
 		fallthrough
-	case "-90":
+	case -90:
 		fallthrough
-	case "-180":
+	case -180:
 		fallthrough
-	case "-270":
-		*e = RotatePagesV1RequestBodyAngleEnum(s)
+	case -270:
+		*e = RotatePagesV1RequestBodyAngleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RotatePagesV1RequestBodyAngleEnum: %s", s)
+		return fmt.Errorf("invalid value for RotatePagesV1RequestBodyAngleEnum: %v", v)
 	}
 }
 

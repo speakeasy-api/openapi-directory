@@ -15,17 +15,21 @@ const (
 	CreateTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnumGre CreateTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum = "gre"
 )
 
+func (e CreateTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum) ToPointer() *CreateTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum {
+	return &e
+}
+
 func (e *CreateTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gre":
-		*e = CreateTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum(s)
+		*e = CreateTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	CreateTransitGatewayConnectResultTransitGatewayConnectStateEnumFailing           CreateTransitGatewayConnectResultTransitGatewayConnectStateEnum = "failing"
 )
 
+func (e CreateTransitGatewayConnectResultTransitGatewayConnectStateEnum) ToPointer() *CreateTransitGatewayConnectResultTransitGatewayConnectStateEnum {
+	return &e
+}
+
 func (e *CreateTransitGatewayConnectResultTransitGatewayConnectStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "initiating":
 		fallthrough
 	case "initiatingRequest":
@@ -84,10 +92,10 @@ func (e *CreateTransitGatewayConnectResultTransitGatewayConnectStateEnum) Unmars
 	case "rejecting":
 		fallthrough
 	case "failing":
-		*e = CreateTransitGatewayConnectResultTransitGatewayConnectStateEnum(s)
+		*e = CreateTransitGatewayConnectResultTransitGatewayConnectStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTransitGatewayConnectResultTransitGatewayConnectStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTransitGatewayConnectResultTransitGatewayConnectStateEnum: %v", v)
 	}
 }
 

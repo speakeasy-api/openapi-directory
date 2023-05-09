@@ -37,7 +37,10 @@ func newWebhookSubscriptions(defaultClient, securityClient HTTPClient, serverURL
 // Deletes a webhook subscription. This operation is not reversible without contacting support. This operation can be called multiple times successfully.
 func (s *webhookSubscriptions) DeleteV2WebhookSubscriptionsID(ctx context.Context, request operations.DeleteV2WebhookSubscriptionsIDRequest) (*operations.DeleteV2WebhookSubscriptionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/webhook_subscriptions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/webhook_subscriptions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -122,7 +125,10 @@ func (s *webhookSubscriptions) GetV2WebhookSubscriptions(ctx context.Context, re
 // Fetches a webhook subscription, by ID only.
 func (s *webhookSubscriptions) GetV2WebhookSubscriptionsID(ctx context.Context, request operations.GetV2WebhookSubscriptionsIDRequest) (*operations.GetV2WebhookSubscriptionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/webhook_subscriptions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/webhook_subscriptions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +230,10 @@ func (s *webhookSubscriptions) PostV2WebhookSubscriptions(ctx context.Context, r
 // Request must be made with a valid Oauth token or API key.
 func (s *webhookSubscriptions) PutV2WebhookSubscriptionsID(ctx context.Context, request operations.PutV2WebhookSubscriptionsIDRequest) (*operations.PutV2WebhookSubscriptionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/webhook_subscriptions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/webhook_subscriptions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

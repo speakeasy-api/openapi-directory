@@ -18,12 +18,16 @@ const (
 	WorldGenerationJobErrorCodeEnumAllWorldGenerationFailed WorldGenerationJobErrorCodeEnum = "AllWorldGenerationFailed"
 )
 
+func (e WorldGenerationJobErrorCodeEnum) ToPointer() *WorldGenerationJobErrorCodeEnum {
+	return &e
+}
+
 func (e *WorldGenerationJobErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InternalServiceError":
 		fallthrough
 	case "LimitExceeded":
@@ -35,9 +39,9 @@ func (e *WorldGenerationJobErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "InvalidInput":
 		fallthrough
 	case "AllWorldGenerationFailed":
-		*e = WorldGenerationJobErrorCodeEnum(s)
+		*e = WorldGenerationJobErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorldGenerationJobErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for WorldGenerationJobErrorCodeEnum: %v", v)
 	}
 }

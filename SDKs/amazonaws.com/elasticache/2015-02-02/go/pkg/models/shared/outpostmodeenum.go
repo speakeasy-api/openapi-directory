@@ -14,18 +14,22 @@ const (
 	OutpostModeEnumCrossOutpost  OutpostModeEnum = "cross-outpost"
 )
 
+func (e OutpostModeEnum) ToPointer() *OutpostModeEnum {
+	return &e
+}
+
 func (e *OutpostModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "single-outpost":
 		fallthrough
 	case "cross-outpost":
-		*e = OutpostModeEnum(s)
+		*e = OutpostModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutpostModeEnum: %s", s)
+		return fmt.Errorf("invalid value for OutpostModeEnum: %v", v)
 	}
 }

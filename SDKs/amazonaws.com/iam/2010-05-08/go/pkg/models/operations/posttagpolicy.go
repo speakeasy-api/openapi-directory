@@ -15,17 +15,21 @@ const (
 	POSTTagPolicyActionEnumTagPolicy POSTTagPolicyActionEnum = "TagPolicy"
 )
 
+func (e POSTTagPolicyActionEnum) ToPointer() *POSTTagPolicyActionEnum {
+	return &e
+}
+
 func (e *POSTTagPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TagPolicy":
-		*e = POSTTagPolicyActionEnum(s)
+		*e = POSTTagPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTagPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTagPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTTagPolicyVersionEnumTwoThousandAndTen0508 POSTTagPolicyVersionEnum = "2010-05-08"
 )
 
+func (e POSTTagPolicyVersionEnum) ToPointer() *POSTTagPolicyVersionEnum {
+	return &e
+}
+
 func (e *POSTTagPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTTagPolicyVersionEnum(s)
+		*e = POSTTagPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTagPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTagPolicyVersionEnum: %v", v)
 	}
 }
 

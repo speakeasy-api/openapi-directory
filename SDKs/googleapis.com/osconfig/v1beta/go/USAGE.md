@@ -2,19 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.OsconfigProjectsGuestPoliciesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.OsconfigProjectsGuestPoliciesCreate(ctx, operations.OsconfigProjectsGuestPoliciesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GuestPolicyInput: &shared.GuestPolicyInput{
             Assignment: &shared.Assignment{
                 GroupLabels: []shared.AssignmentGroupLabel{
@@ -50,9 +51,9 @@ func main() {
                 },
                 OsTypes: []shared.AssignmentOsType{
                     shared.AssignmentOsType{
-                        OsArchitecture: "deserunt",
-                        OsShortName: "perferendis",
-                        OsVersion: "ipsam",
+                        OsArchitecture: sdk.String("deserunt"),
+                        OsShortName: sdk.String("perferendis"),
+                        OsVersion: sdk.String("ipsam"),
                     },
                 },
                 Zones: []string{
@@ -62,633 +63,309 @@ func main() {
                     "at",
                 },
             },
-            Description: "at",
-            Etag: "maiores",
-            Name: "molestiae",
+            Description: sdk.String("at"),
+            Etag: sdk.String("maiores"),
+            Name: sdk.String("Bernadette Schmidt"),
             PackageRepositories: []shared.PackageRepository{
                 shared.PackageRepository{
                     Apt: &shared.AptRepository{
-                        ArchiveType: "DEB_SRC",
+                        ArchiveType: shared.AptRepositoryArchiveTypeEnumDebSrc.ToPointer(),
                         Components: []string{
-                            "totam",
-                            "porro",
+                            "nam",
                         },
-                        Distribution: "dolorum",
-                        GpgKey: "dicta",
-                        URI: "https://posh-muffin.com",
+                        Distribution: sdk.String("officia"),
+                        GpgKey: sdk.String("occaecati"),
+                        URI: sdk.String("http://miserly-usage.net"),
                     },
                     Goo: &shared.GooRepository{
-                        Name: "deleniti",
-                        URL: "hic",
+                        Name: sdk.String("Jack Johns"),
+                        URL: sdk.String("qui"),
                     },
                     Yum: &shared.YumRepository{
-                        BaseURL: "optio",
-                        DisplayName: "totam",
+                        BaseURL: sdk.String("impedit"),
+                        DisplayName: sdk.String("cum"),
                         GpgKeys: []string{
-                            "commodi",
-                        },
-                        ID: "molestiae",
-                    },
-                    Zypper: &shared.ZypperRepository{
-                        BaseURL: "modi",
-                        DisplayName: "qui",
-                        GpgKeys: []string{
-                            "cum",
-                            "esse",
                             "ipsum",
                             "excepturi",
                         },
-                        ID: "aspernatur",
+                        ID: sdk.String("20592939-6fea-4759-aeb1-0faaa2352c59"),
+                    },
+                    Zypper: &shared.ZypperRepository{
+                        BaseURL: sdk.String("nemo"),
+                        DisplayName: sdk.String("minima"),
+                        GpgKeys: []string{
+                            "accusantium",
+                            "iure",
+                            "culpa",
+                        },
+                        ID: sdk.String("ff1a3a2f-a946-4773-9251-aa52c3f5ad01"),
                     },
                 },
                 shared.PackageRepository{
                     Apt: &shared.AptRepository{
-                        ArchiveType: "ARCHIVE_TYPE_UNSPECIFIED",
+                        ArchiveType: shared.AptRepositoryArchiveTypeEnumDeb.ToPointer(),
                         Components: []string{
-                            "natus",
-                            "sed",
-                        },
-                        Distribution: "iste",
-                        GpgKey: "dolor",
-                        URI: "https://hoarse-upper.org",
-                    },
-                    Goo: &shared.GooRepository{
-                        Name: "fuga",
-                        URL: "in",
-                    },
-                    Yum: &shared.YumRepository{
-                        BaseURL: "corporis",
-                        DisplayName: "iste",
-                        GpgKeys: []string{
-                            "saepe",
-                            "quidem",
-                        },
-                        ID: "architecto",
-                    },
-                    Zypper: &shared.ZypperRepository{
-                        BaseURL: "ipsa",
-                        DisplayName: "reiciendis",
-                        GpgKeys: []string{
-                            "mollitia",
-                            "laborum",
-                            "dolores",
-                        },
-                        ID: "dolorem",
-                    },
-                },
-                shared.PackageRepository{
-                    Apt: &shared.AptRepository{
-                        ArchiveType: "DEB",
-                        Components: []string{
-                            "nobis",
-                        },
-                        Distribution: "enim",
-                        GpgKey: "omnis",
-                        URI: "http://general-mobster.com",
-                    },
-                    Goo: &shared.GooRepository{
-                        Name: "iure",
-                        URL: "culpa",
-                    },
-                    Yum: &shared.YumRepository{
-                        BaseURL: "doloribus",
-                        DisplayName: "sapiente",
-                        GpgKeys: []string{
-                            "mollitia",
-                        },
-                        ID: "dolorem",
-                    },
-                    Zypper: &shared.ZypperRepository{
-                        BaseURL: "culpa",
-                        DisplayName: "consequuntur",
-                        GpgKeys: []string{
-                            "mollitia",
-                            "occaecati",
-                            "numquam",
-                            "commodi",
-                        },
-                        ID: "quam",
-                    },
-                },
-                shared.PackageRepository{
-                    Apt: &shared.AptRepository{
-                        ArchiveType: "DEB",
-                        Components: []string{
-                            "error",
-                        },
-                        Distribution: "quia",
-                        GpgKey: "quis",
-                        URI: "http://quixotic-physics.biz",
-                    },
-                    Goo: &shared.GooRepository{
-                        Name: "odit",
-                        URL: "quo",
-                    },
-                    Yum: &shared.YumRepository{
-                        BaseURL: "sequi",
-                        DisplayName: "tenetur",
-                        GpgKeys: []string{
-                            "id",
-                            "possimus",
-                        },
-                        ID: "aut",
-                    },
-                    Zypper: &shared.ZypperRepository{
-                        BaseURL: "quasi",
-                        DisplayName: "error",
-                        GpgKeys: []string{
                             "laborum",
                             "quasi",
                             "reiciendis",
                             "voluptatibus",
                         },
-                        ID: "vero",
+                        Distribution: sdk.String("vero"),
+                        GpgKey: sdk.String("nihil"),
+                        URI: sdk.String("https://witty-avocado.name"),
+                    },
+                    Goo: &shared.GooRepository{
+                        Name: sdk.String("Ms. Karla Aufderhar"),
+                        URL: sdk.String("maiores"),
+                    },
+                    Yum: &shared.YumRepository{
+                        BaseURL: sdk.String("dicta"),
+                        DisplayName: sdk.String("corporis"),
+                        GpgKeys: []string{
+                            "iusto",
+                            "dicta",
+                        },
+                        ID: sdk.String("b5e6e13b-99d4-488e-9e91-e450ad2abd44"),
+                    },
+                    Zypper: &shared.ZypperRepository{
+                        BaseURL: sdk.String("qui"),
+                        DisplayName: sdk.String("aliquid"),
+                        GpgKeys: []string{
+                            "quos",
+                            "perferendis",
+                            "magni",
+                        },
+                        ID: sdk.String("d502a94b-b4f6-43c9-a9e9-a3efa77dfb14"),
+                    },
+                },
+                shared.PackageRepository{
+                    Apt: &shared.AptRepository{
+                        ArchiveType: shared.AptRepositoryArchiveTypeEnumDebSrc.ToPointer(),
+                        Components: []string{
+                            "ea",
+                            "aliquid",
+                            "laborum",
+                            "accusamus",
+                        },
+                        Distribution: sdk.String("non"),
+                        GpgKey: sdk.String("occaecati"),
+                        URI: sdk.String("http://uncomfortable-wait.net"),
+                    },
+                    Goo: &shared.GooRepository{
+                        Name: sdk.String("Marco Olson"),
+                        URL: sdk.String("sapiente"),
+                    },
+                    Yum: &shared.YumRepository{
+                        BaseURL: sdk.String("amet"),
+                        DisplayName: sdk.String("deserunt"),
+                        GpgKeys: []string{
+                            "vel",
+                            "natus",
+                        },
+                        ID: sdk.String("97074ba4-469b-46e2-9419-59890afa563e"),
+                    },
+                    Zypper: &shared.ZypperRepository{
+                        BaseURL: sdk.String("odit"),
+                        DisplayName: sdk.String("nemo"),
+                        GpgKeys: []string{
+                            "iure",
+                        },
+                        ID: sdk.String("fe4c8b71-1e5b-47fd-aed0-28921cddc692"),
+                    },
+                },
+                shared.PackageRepository{
+                    Apt: &shared.AptRepository{
+                        ArchiveType: shared.AptRepositoryArchiveTypeEnumDeb.ToPointer(),
+                        Components: []string{
+                            "ab",
+                        },
+                        Distribution: sdk.String("maiores"),
+                        GpgKey: sdk.String("quidem"),
+                        URI: sdk.String("http://jealous-hearing.net"),
+                    },
+                    Goo: &shared.GooRepository{
+                        Name: sdk.String("Meredith Hickle PhD"),
+                        URL: sdk.String("amet"),
+                    },
+                    Yum: &shared.YumRepository{
+                        BaseURL: sdk.String("aut"),
+                        DisplayName: sdk.String("cumque"),
+                        GpgKeys: []string{
+                            "hic",
+                            "libero",
+                        },
+                        ID: sdk.String("b2587053-202c-473d-9fe9-b90c28909b3f"),
+                    },
+                    Zypper: &shared.ZypperRepository{
+                        BaseURL: sdk.String("earum"),
+                        DisplayName: sdk.String("modi"),
+                        GpgKeys: []string{
+                            "dolorum",
+                            "deleniti",
+                            "pariatur",
+                        },
+                        ID: sdk.String("9cbf4863-3323-4f9b-b7f3-a4100674ebf6"),
                     },
                 },
             },
             Packages: []shared.Package{
                 shared.Package{
-                    DesiredState: "UPDATED",
-                    Manager: "GOO",
-                    Name: "ipsa",
+                    DesiredState: shared.PackageDesiredStateEnumDesiredStateUnspecified.ToPointer(),
+                    Manager: shared.PackageManagerEnumYum.ToPointer(),
+                    Name: sdk.String("Ginger Bergstrom"),
                 },
                 shared.Package{
-                    DesiredState: "UPDATED",
-                    Manager: "APT",
-                    Name: "cum",
+                    DesiredState: shared.PackageDesiredStateEnumInstalled.ToPointer(),
+                    Manager: shared.PackageManagerEnumApt.ToPointer(),
+                    Name: sdk.String("Alfredo Mohr"),
+                },
+                shared.Package{
+                    DesiredState: shared.PackageDesiredStateEnumRemoved.ToPointer(),
+                    Manager: shared.PackageManagerEnumApt.ToPointer(),
+                    Name: sdk.String("Tamara Ondricka"),
                 },
             },
             Recipes: []shared.SoftwareRecipe{
                 shared.SoftwareRecipe{
                     Artifacts: []shared.SoftwareRecipeArtifact{
                         shared.SoftwareRecipeArtifact{
-                            AllowInsecure: false,
+                            AllowInsecure: sdk.Bool(false),
                             Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "reprehenderit",
-                                Generation: "ut",
-                                Object: "maiores",
+                                Bucket: sdk.String("amet"),
+                                Generation: sdk.String("optio"),
+                                Object: sdk.String("accusamus"),
                             },
-                            ID: "dicta",
+                            ID: sdk.String("5e6a95d8-a0d4-446c-a2af-7a73cf3be453"),
                             Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "corporis",
-                                URI: "http://lazy-butterfly.net",
+                                Checksum: sdk.String("sapiente"),
+                                URI: sdk.String("https://knowing-amenity.net"),
                             },
                         },
                     },
-                    DesiredState: "INSTALLED",
+                    DesiredState: shared.SoftwareRecipeDesiredStateEnumDesiredStateUnspecified.ToPointer(),
                     InstallSteps: []shared.SoftwareRecipeStep{
                         shared.SoftwareRecipeStep{
                             ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "commodi",
-                                Destination: "repudiandae",
-                                Type: "ARCHIVE_TYPE_UNSPECIFIED",
+                                ArtifactID: sdk.String("vel"),
+                                Destination: sdk.String("libero"),
+                                Type: shared.SoftwareRecipeStepExtractArchiveTypeEnumTarGzip.ToPointer(),
                             },
                             DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "ipsum",
+                                ArtifactID: sdk.String("deserunt"),
                             },
                             FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "quidem",
-                                Destination: "molestias",
-                                Overwrite: false,
-                                Permissions: "excepturi",
+                                ArtifactID: sdk.String("quam"),
+                                Destination: sdk.String("ipsum"),
+                                Overwrite: sdk.Bool(false),
+                                Permissions: sdk.String("incidunt"),
                             },
                             FileExec: &shared.SoftwareRecipeStepExecFile{
                                 AllowedExitCodes: []int{
-                                    265389,
-                                    508969,
-                                    523248,
-                                    916723,
+                                    586784,
                                 },
                                 Args: []string{
-                                    "repudiandae",
+                                    "pariatur",
+                                    "soluta",
+                                    "dicta",
+                                    "laborum",
                                 },
-                                ArtifactID: "sint",
-                                LocalPath: "veritatis",
+                                ArtifactID: sdk.String("totam"),
+                                LocalPath: sdk.String("incidunt"),
                             },
                             MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
                                 AllowedExitCodes: []int{
-                                    277718,
-                                    318569,
-                                    9356,
-                                    667411,
+                                    174909,
                                 },
-                                ArtifactID: "quibusdam",
+                                ArtifactID: sdk.String("distinctio"),
                                 Flags: []string{
-                                    "deserunt",
+                                    "aliquid",
+                                    "quam",
+                                    "molestias",
                                 },
                             },
                             RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "distinctio",
+                                ArtifactID: sdk.String("temporibus"),
                             },
                             ScriptRun: &shared.SoftwareRecipeStepRunScript{
                                 AllowedExitCodes: []int{
-                                    289406,
-                                    264730,
-                                    183191,
-                                    397821,
+                                    204865,
                                 },
-                                Interpreter: "SHELL",
-                                Script: "quos",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "perferendis",
-                                Destination: "magni",
-                                Type: "TAR_XZ",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "ipsam",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "alias",
-                                Destination: "fugit",
-                                Overwrite: false,
-                                Permissions: "dolorum",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    270008,
-                                    703737,
-                                    735194,
-                                },
-                                Args: []string{
-                                    "delectus",
-                                    "eum",
-                                },
-                                ArtifactID: "non",
-                                LocalPath: "eligendi",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    396098,
-                                    592042,
-                                    896039,
-                                },
-                                ArtifactID: "sint",
-                                Flags: []string{
-                                    "dolor",
-                                    "debitis",
-                                    "a",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "dolorum",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    449198,
-                                    846409,
-                                },
-                                Interpreter: "POWERSHELL",
-                                Script: "rerum",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "dicta",
-                                Destination: "magnam",
-                                Type: "TAR_XZ",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "facere",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "ea",
-                                Destination: "aliquid",
-                                Overwrite: false,
-                                Permissions: "laborum",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    249796,
-                                    581273,
-                                    313218,
-                                    881736,
-                                },
-                                Args: []string{
-                                    "quidem",
-                                    "provident",
-                                    "nam",
-                                    "id",
-                                },
-                                ArtifactID: "blanditiis",
-                                LocalPath: "deleniti",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    230533,
-                                    643990,
-                                    394869,
-                                    423855,
-                                },
-                                ArtifactID: "natus",
-                                Flags: []string{
-                                    "molestiae",
-                                    "perferendis",
-                                    "nihil",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "magnam",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    660174,
-                                    287991,
-                                    290077,
-                                },
-                                Interpreter: "SHELL",
-                                Script: "natus",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "nobis",
-                                Destination: "eum",
-                                Type: "ZIP",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "aspernatur",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "architecto",
-                                Destination: "magnam",
-                                Overwrite: false,
-                                Permissions: "et",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    354047,
-                                    590873,
-                                    551816,
-                                },
-                                Args: []string{
-                                    "accusantium",
-                                    "mollitia",
-                                    "reiciendis",
-                                },
-                                ArtifactID: "mollitia",
-                                LocalPath: "ad",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    221262,
-                                    896547,
-                                },
-                                ArtifactID: "odit",
-                                Flags: []string{
-                                    "quasi",
-                                    "iure",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "doloribus",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    260341,
-                                    806194,
-                                    537023,
-                                    703889,
-                                },
-                                Interpreter: "SHELL",
-                                Script: "architecto",
+                                Interpreter: shared.SoftwareRecipeStepRunScriptInterpreterEnumInterpreterUnspecified.ToPointer(),
+                                Script: sdk.String("magni"),
                             },
                         },
                     },
-                    Name: "architecto",
+                    Name: sdk.String("Ashley Hermiston"),
                     UpdateSteps: []shared.SoftwareRecipeStep{
                         shared.SoftwareRecipeStep{
                             ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "ullam",
-                                Destination: "expedita",
-                                Type: "TAR_BZIP",
+                                ArtifactID: sdk.String("cumque"),
+                                Destination: sdk.String("soluta"),
+                                Type: shared.SoftwareRecipeStepExtractArchiveTypeEnumTarXz.ToPointer(),
                             },
                             DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "repellat",
+                                ArtifactID: sdk.String("et"),
                             },
                             FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "quibusdam",
-                                Destination: "sed",
-                                Overwrite: false,
-                                Permissions: "saepe",
+                                ArtifactID: sdk.String("saepe"),
+                                Destination: sdk.String("ipsum"),
+                                Overwrite: sdk.Bool(false),
+                                Permissions: sdk.String("veritatis"),
                             },
                             FileExec: &shared.SoftwareRecipeStepExecFile{
                                 AllowedExitCodes: []int{
-                                    37559,
-                                    162493,
-                                    508315,
-                                    615560,
+                                    552193,
+                                    731694,
+                                    584476,
                                 },
                                 Args: []string{
-                                    "sunt",
-                                },
-                                ArtifactID: "quo",
-                                LocalPath: "illum",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    807319,
-                                    411397,
-                                    569101,
-                                    139972,
-                                },
-                                ArtifactID: "ea",
-                                Flags: []string{
-                                    "ab",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "maiores",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    373291,
-                                    453543,
-                                    420075,
-                                },
-                                Interpreter: "POWERSHELL",
-                                Script: "eaque",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "pariatur",
-                                Destination: "nemo",
-                                Type: "ZIP",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "perferendis",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "fugiat",
-                                Destination: "amet",
-                                Overwrite: false,
-                                Permissions: "aut",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    359978,
-                                    944124,
-                                    729991,
-                                    749999,
-                                },
-                                Args: []string{
-                                    "quis",
-                                },
-                                ArtifactID: "totam",
-                                LocalPath: "dignissimos",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    338985,
-                                },
-                                ArtifactID: "nesciunt",
-                                Flags: []string{
-                                    "perferendis",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "dolores",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    463451,
-                                    223924,
-                                    874573,
-                                    345352,
-                                },
-                                Interpreter: "POWERSHELL",
-                                Script: "recusandae",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "omnis",
-                                Destination: "facilis",
-                                Type: "TAR_LZMA",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "voluptatem",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "porro",
-                                Destination: "consequuntur",
-                                Overwrite: false,
-                                Permissions: "blanditiis",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    50370,
-                                    577229,
-                                    699098,
-                                },
-                                Args: []string{
-                                    "asperiores",
-                                },
-                                ArtifactID: "earum",
-                                LocalPath: "modi",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    679091,
-                                    535633,
-                                    864282,
-                                },
-                                ArtifactID: "provident",
-                                Flags: []string{
-                                    "libero",
                                     "delectus",
-                                    "quaerat",
-                                    "quos",
                                 },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "aliquid",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    209843,
-                                },
-                                Interpreter: "INTERPRETER_UNSPECIFIED",
-                                Script: "qui",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "ipsum",
-                                Destination: "hic",
-                                Type: "TAR_BZIP",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "cum",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "voluptate",
-                                Destination: "dignissimos",
-                                Overwrite: false,
-                                Permissions: "reiciendis",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    680545,
-                                },
-                                Args: []string{
-                                    "veritatis",
-                                    "ipsa",
-                                },
-                                ArtifactID: "ipsa",
-                                LocalPath: "iure",
+                                ArtifactID: sdk.String("dolorem"),
+                                LocalPath: sdk.String("dolore"),
                             },
                             MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
                                 AllowedExitCodes: []int{
-                                    311796,
-                                    881005,
+                                    240829,
+                                    677263,
                                 },
-                                ArtifactID: "quidem",
+                                ArtifactID: sdk.String("architecto"),
                                 Flags: []string{
-                                    "voluptas",
-                                    "natus",
-                                    "eos",
-                                    "atque",
+                                    "aut",
                                 },
                             },
                             RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "sit",
+                                ArtifactID: sdk.String("quas"),
                             },
                             ScriptRun: &shared.SoftwareRecipeStepRunScript{
                                 AllowedExitCodes: []int{
-                                    67249,
-                                    743835,
-                                    679393,
-                                    478596,
+                                    9240,
+                                    669917,
+                                    833038,
+                                    785153,
                                 },
-                                Interpreter: "SHELL",
-                                Script: "dolorum",
+                                Interpreter: shared.SoftwareRecipeStepRunScriptInterpreterEnumPowershell.ToPointer(),
+                                Script: sdk.String("ut"),
                             },
                         },
                     },
-                    Version: "deleniti",
+                    Version: sdk.String("facilis"),
                 },
             },
         },
-        AccessToken: "omnis",
-        Alt: "proto",
-        Callback: "distinctio",
-        Fields: "asperiores",
-        GuestPolicyID: "nihil",
-        Key: "ipsum",
-        OauthToken: "voluptate",
-        Parent: "id",
-        PrettyPrint: false,
-        QuotaUser: "saepe",
-        UploadType: "eius",
-        UploadProtocol: "aspernatur",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.OsconfigProjectsGuestPoliciesCreate(ctx, req, operations.OsconfigProjectsGuestPoliciesCreateSecurity{
+        AccessToken: sdk.String("cupiditate"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("quae"),
+        Fields: sdk.String("laudantium"),
+        GuestPolicyID: sdk.String("odio"),
+        Key: sdk.String("occaecati"),
+        OauthToken: sdk.String("voluptatibus"),
+        Parent: "quisquam",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("vero"),
+        UploadType: sdk.String("omnis"),
+        UploadProtocol: sdk.String("quis"),
+    }, operations.OsconfigProjectsGuestPoliciesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetAPIV1PushSubscriptionSecurity struct {
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type GetAPIV1PushSubscriptionResponse struct {
 	ContentType string
 	// Not Found

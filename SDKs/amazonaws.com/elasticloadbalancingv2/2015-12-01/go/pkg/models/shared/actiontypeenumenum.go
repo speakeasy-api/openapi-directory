@@ -17,12 +17,16 @@ const (
 	ActionTypeEnumEnumFixedResponse       ActionTypeEnumEnum = "fixed-response"
 )
 
+func (e ActionTypeEnumEnum) ToPointer() *ActionTypeEnumEnum {
+	return &e
+}
+
 func (e *ActionTypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "forward":
 		fallthrough
 	case "authenticate-oidc":
@@ -32,9 +36,9 @@ func (e *ActionTypeEnumEnum) UnmarshalJSON(data []byte) error {
 	case "redirect":
 		fallthrough
 	case "fixed-response":
-		*e = ActionTypeEnumEnum(s)
+		*e = ActionTypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionTypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionTypeEnumEnum: %v", v)
 	}
 }

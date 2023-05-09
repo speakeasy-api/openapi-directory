@@ -16,21 +16,25 @@ const (
 	PaginationAuthScopeEnumSettings PaginationAuthScopeEnum = "Settings"
 )
 
+func (e PaginationAuthScopeEnum) ToPointer() *PaginationAuthScopeEnum {
+	return &e
+}
+
 func (e *PaginationAuthScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Catalog":
 		fallthrough
 	case "Commerce":
 		fallthrough
 	case "Settings":
-		*e = PaginationAuthScopeEnum(s)
+		*e = PaginationAuthScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaginationAuthScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for PaginationAuthScopeEnum: %v", v)
 	}
 }
 
@@ -42,19 +46,23 @@ const (
 	PaginationAuthTypeEnumUserProfile PaginationAuthTypeEnum = "UserProfile"
 )
 
+func (e PaginationAuthTypeEnum) ToPointer() *PaginationAuthTypeEnum {
+	return &e
+}
+
 func (e *PaginationAuthTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UserAccount":
 		fallthrough
 	case "UserProfile":
-		*e = PaginationAuthTypeEnum(s)
+		*e = PaginationAuthTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaginationAuthTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PaginationAuthTypeEnum: %v", v)
 	}
 }
 

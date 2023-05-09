@@ -16,17 +16,21 @@ const (
 	DescribeEmergencyContactSettingsXAmzTargetEnumAwsShield20160616DescribeEmergencyContactSettings DescribeEmergencyContactSettingsXAmzTargetEnum = "AWSShield_20160616.DescribeEmergencyContactSettings"
 )
 
+func (e DescribeEmergencyContactSettingsXAmzTargetEnum) ToPointer() *DescribeEmergencyContactSettingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeEmergencyContactSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.DescribeEmergencyContactSettings":
-		*e = DescribeEmergencyContactSettingsXAmzTargetEnum(s)
+		*e = DescribeEmergencyContactSettingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeEmergencyContactSettingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeEmergencyContactSettingsXAmzTargetEnum: %v", v)
 	}
 }
 

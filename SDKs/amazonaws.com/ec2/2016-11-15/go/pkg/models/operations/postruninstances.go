@@ -15,17 +15,21 @@ const (
 	POSTRunInstancesActionEnumRunInstances POSTRunInstancesActionEnum = "RunInstances"
 )
 
+func (e POSTRunInstancesActionEnum) ToPointer() *POSTRunInstancesActionEnum {
+	return &e
+}
+
 func (e *POSTRunInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RunInstances":
-		*e = POSTRunInstancesActionEnum(s)
+		*e = POSTRunInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRunInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRunInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRunInstancesVersionEnumTwoThousandAndSixteen1115 POSTRunInstancesVersionEnum = "2016-11-15"
 )
 
+func (e POSTRunInstancesVersionEnum) ToPointer() *POSTRunInstancesVersionEnum {
+	return &e
+}
+
 func (e *POSTRunInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTRunInstancesVersionEnum(s)
+		*e = POSTRunInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRunInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRunInstancesVersionEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newOntology(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GetOntologySubset - Returns meta data of an ontology subset (slim)
 func (s *ontology) GetOntologySubset(ctx context.Context, request operations.GetOntologySubsetRequest) (*operations.GetOntologySubsetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontology/subset/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ontology/subset/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -69,7 +72,10 @@ func (s *ontology) GetOntologySubset(ctx context.Context, request operations.Get
 // GetOntologyTerm - Returns meta data of an ontology term
 func (s *ontology) GetOntologyTerm(ctx context.Context, request operations.GetOntologyTermRequest) (*operations.GetOntologyTermResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontology/term/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ontology/term/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -104,7 +110,10 @@ func (s *ontology) GetOntologyTerm(ctx context.Context, request operations.GetOn
 // GetOntologyTermGraph - Returns graph of an ontology term
 func (s *ontology) GetOntologyTermGraph(ctx context.Context, request operations.GetOntologyTermGraphRequest) (*operations.GetOntologyTermGraphResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontology/term/{id}/graph", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ontology/term/{id}/graph", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -143,7 +152,10 @@ func (s *ontology) GetOntologyTermGraph(ctx context.Context, request operations.
 // GetOntologyTermSubgraph - Extract a subgraph from an ontology term
 func (s *ontology) GetOntologyTermSubgraph(ctx context.Context, request operations.GetOntologyTermSubgraphRequest) (*operations.GetOntologyTermSubgraphResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontology/term/{id}/subgraph", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ontology/term/{id}/subgraph", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -182,7 +194,10 @@ func (s *ontology) GetOntologyTermSubgraph(ctx context.Context, request operatio
 // GetOntologyTermSubsets - Returns subsets (slims) associated to an ontology term
 func (s *ontology) GetOntologyTermSubsets(ctx context.Context, request operations.GetOntologyTermSubsetsRequest) (*operations.GetOntologyTermSubsetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontology/term/{id}/subsets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ontology/term/{id}/subsets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +232,10 @@ func (s *ontology) GetOntologyTermSubsets(ctx context.Context, request operation
 // GetOntologyTermsSharedAncestor - Returns the ancestor ontology terms shared by two ontology terms
 func (s *ontology) GetOntologyTermsSharedAncestor(ctx context.Context, request operations.GetOntologyTermsSharedAncestorRequest) (*operations.GetOntologyTermsSharedAncestorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontology/shared/{subject}/{object}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ontology/shared/{subject}/{object}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

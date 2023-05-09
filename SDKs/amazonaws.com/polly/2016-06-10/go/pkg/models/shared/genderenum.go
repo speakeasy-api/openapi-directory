@@ -14,18 +14,22 @@ const (
 	GenderEnumMale   GenderEnum = "Male"
 )
 
+func (e GenderEnum) ToPointer() *GenderEnum {
+	return &e
+}
+
 func (e *GenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Female":
 		fallthrough
 	case "Male":
-		*e = GenderEnum(s)
+		*e = GenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GenderEnum: %s", s)
+		return fmt.Errorf("invalid value for GenderEnum: %v", v)
 	}
 }

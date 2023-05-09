@@ -15,20 +15,24 @@ const (
 	ScopeNameEnumResourceArn  ScopeNameEnum = "ResourceArn"
 )
 
+func (e ScopeNameEnum) ToPointer() *ScopeNameEnum {
+	return &e
+}
+
 func (e *ScopeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Organization":
 		fallthrough
 	case "AccountId":
 		fallthrough
 	case "ResourceArn":
-		*e = ScopeNameEnum(s)
+		*e = ScopeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScopeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ScopeNameEnum: %v", v)
 	}
 }

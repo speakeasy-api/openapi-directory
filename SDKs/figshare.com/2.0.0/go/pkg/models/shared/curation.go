@@ -17,12 +17,16 @@ const (
 	CurationStatusEnumClosed   CurationStatusEnum = "closed"
 )
 
+func (e CurationStatusEnum) ToPointer() *CurationStatusEnum {
+	return &e
+}
+
 func (e *CurationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "approved":
@@ -30,10 +34,10 @@ func (e *CurationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "rejected":
 		fallthrough
 	case "closed":
-		*e = CurationStatusEnum(s)
+		*e = CurationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CurationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CurationStatusEnum: %v", v)
 	}
 }
 

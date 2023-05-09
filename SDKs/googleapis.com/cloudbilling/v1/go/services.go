@@ -83,7 +83,10 @@ func (s *services) CloudbillingServicesList(ctx context.Context, request operati
 // CloudbillingServicesSkusList - Lists all publicly available SKUs for a given cloud service.
 func (s *services) CloudbillingServicesSkusList(ctx context.Context, request operations.CloudbillingServicesSkusListRequest, security operations.CloudbillingServicesSkusListSecurity) (*operations.CloudbillingServicesSkusListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/skus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/skus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

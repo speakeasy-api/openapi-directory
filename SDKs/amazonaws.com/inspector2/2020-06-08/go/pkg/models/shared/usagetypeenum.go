@@ -16,12 +16,16 @@ const (
 	UsageTypeEnumLambdaFunctionHours UsageTypeEnum = "LAMBDA_FUNCTION_HOURS"
 )
 
+func (e UsageTypeEnum) ToPointer() *UsageTypeEnum {
+	return &e
+}
+
 func (e *UsageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2_INSTANCE_HOURS":
 		fallthrough
 	case "ECR_INITIAL_SCAN":
@@ -29,9 +33,9 @@ func (e *UsageTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ECR_RESCAN":
 		fallthrough
 	case "LAMBDA_FUNCTION_HOURS":
-		*e = UsageTypeEnum(s)
+		*e = UsageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageTypeEnum: %v", v)
 	}
 }

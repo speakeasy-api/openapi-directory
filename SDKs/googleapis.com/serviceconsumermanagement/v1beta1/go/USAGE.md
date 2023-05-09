@@ -2,97 +2,91 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Services.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverrides(ctx, operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         V1Beta1ImportProducerOverridesRequest: &shared.V1Beta1ImportProducerOverridesRequest{
-            Force: false,
+            Force: sdk.Bool(false),
             ForceOnly: []shared.V1Beta1ImportProducerOverridesRequestForceOnlyEnum{
-                "LIMIT_DECREASE_PERCENTAGE_TOO_HIGH",
-                "LIMIT_DECREASE_PERCENTAGE_TOO_HIGH",
-                "LIMIT_DECREASE_BELOW_USAGE",
+                shared.V1Beta1ImportProducerOverridesRequestForceOnlyEnumLimitDecreasePercentageTooHigh,
+                shared.V1Beta1ImportProducerOverridesRequestForceOnlyEnumLimitDecreasePercentageTooHigh,
+                shared.V1Beta1ImportProducerOverridesRequestForceOnlyEnumLimitDecreaseBelowUsage,
             },
             InlineSource: &shared.V1Beta1OverrideInlineSource{
                 Overrides: []shared.V1Beta1QuotaOverride{
                     shared.V1Beta1QuotaOverride{
-                        AdminOverrideAncestor: "corrupti",
+                        AdminOverrideAncestor: sdk.String("corrupti"),
                         Dimensions: map[string]string{
                             "vel": "error",
                             "deserunt": "suscipit",
                             "iure": "magnam",
                             "debitis": "ipsa",
                         },
-                        Metric: "delectus",
-                        Name: "tempora",
-                        OverrideValue: "suscipit",
-                        Unit: "molestiae",
+                        Metric: sdk.String("delectus"),
+                        Name: sdk.String("Laurie Kreiger"),
+                        OverrideValue: sdk.String("voluptatum"),
+                        Unit: sdk.String("iusto"),
                     },
                     shared.V1Beta1QuotaOverride{
-                        AdminOverrideAncestor: "minus",
+                        AdminOverrideAncestor: sdk.String("excepturi"),
                         Dimensions: map[string]string{
-                            "voluptatum": "iusto",
-                            "excepturi": "nisi",
                             "recusandae": "temporibus",
                             "ab": "quis",
                         },
-                        Metric: "veritatis",
-                        Name: "deserunt",
-                        OverrideValue: "perferendis",
-                        Unit: "ipsam",
+                        Metric: sdk.String("veritatis"),
+                        Name: sdk.String("Christopher Hills"),
+                        OverrideValue: sdk.String("quo"),
+                        Unit: sdk.String("odit"),
                     },
                     shared.V1Beta1QuotaOverride{
-                        AdminOverrideAncestor: "repellendus",
+                        AdminOverrideAncestor: sdk.String("at"),
                         Dimensions: map[string]string{
-                            "quo": "odit",
-                            "at": "at",
                             "maiores": "molestiae",
                             "quod": "quod",
+                            "esse": "totam",
+                            "porro": "dolorum",
                         },
-                        Metric: "esse",
-                        Name: "totam",
-                        OverrideValue: "porro",
-                        Unit: "dolorum",
+                        Metric: sdk.String("dicta"),
+                        Name: sdk.String("Luke McCullough"),
+                        OverrideValue: sdk.String("hic"),
+                        Unit: sdk.String("optio"),
                     },
                     shared.V1Beta1QuotaOverride{
-                        AdminOverrideAncestor: "dicta",
+                        AdminOverrideAncestor: sdk.String("totam"),
                         Dimensions: map[string]string{
-                            "officia": "occaecati",
-                            "fugit": "deleniti",
-                            "hic": "optio",
+                            "commodi": "molestiae",
                         },
-                        Metric: "totam",
-                        Name: "beatae",
-                        OverrideValue: "commodi",
-                        Unit: "molestiae",
+                        Metric: sdk.String("modi"),
+                        Name: sdk.String("Krista Rippin"),
+                        OverrideValue: sdk.String("excepturi"),
+                        Unit: sdk.String("aspernatur"),
                     },
                 },
             },
         },
-        AccessToken: "modi",
-        Alt: "json",
-        Callback: "impedit",
-        Fields: "cum",
-        Key: "esse",
-        OauthToken: "ipsum",
-        Parent: "excepturi",
-        PrettyPrint: false,
-        QuotaUser: "aspernatur",
-        UploadType: "perferendis",
-        UploadProtocol: "ad",
-    }
-
-    ctx := context.Background()
-    res, err := s.Services.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverrides(ctx, req, operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesSecurity{
+        AccessToken: sdk.String("perferendis"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("natus"),
+        Fields: sdk.String("sed"),
+        Key: sdk.String("iste"),
+        OauthToken: sdk.String("dolor"),
+        Parent: "natus",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("laboriosam"),
+        UploadType: sdk.String("hic"),
+        UploadProtocol: sdk.String("saepe"),
+    }, operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

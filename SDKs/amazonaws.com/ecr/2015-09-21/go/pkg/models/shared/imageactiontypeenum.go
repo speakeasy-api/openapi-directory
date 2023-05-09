@@ -13,16 +13,20 @@ const (
 	ImageActionTypeEnumExpire ImageActionTypeEnum = "EXPIRE"
 )
 
+func (e ImageActionTypeEnum) ToPointer() *ImageActionTypeEnum {
+	return &e
+}
+
 func (e *ImageActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXPIRE":
-		*e = ImageActionTypeEnum(s)
+		*e = ImageActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageActionTypeEnum: %v", v)
 	}
 }

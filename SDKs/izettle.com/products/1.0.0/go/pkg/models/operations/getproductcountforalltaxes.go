@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetProductCountForAllTaxesSecurity struct {
+	ZettleOauth string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetProductCountForAllTaxesResponse struct {
 	ContentType string
 	StatusCode  int

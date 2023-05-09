@@ -13,17 +13,21 @@ const (
 	UserSchemasEnumUrnIetfParamsScimSchemasCore20User UserSchemasEnum = "urn:ietf:params:scim:schemas:core:2.0:User"
 )
 
+func (e UserSchemasEnum) ToPointer() *UserSchemasEnum {
+	return &e
+}
+
 func (e *UserSchemasEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "urn:ietf:params:scim:schemas:core:2.0:User":
-		*e = UserSchemasEnum(s)
+		*e = UserSchemasEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserSchemasEnum: %s", s)
+		return fmt.Errorf("invalid value for UserSchemasEnum: %v", v)
 	}
 }
 

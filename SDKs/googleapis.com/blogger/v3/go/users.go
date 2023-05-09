@@ -34,7 +34,10 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // BloggerUsersGet - Gets one user by user_id.
 func (s *users) BloggerUsersGet(ctx context.Context, request operations.BloggerUsersGetRequest, security operations.BloggerUsersGetSecurity) (*operations.BloggerUsersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/users/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/users/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

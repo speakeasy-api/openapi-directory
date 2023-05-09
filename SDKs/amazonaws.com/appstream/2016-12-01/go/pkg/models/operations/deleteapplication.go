@@ -16,17 +16,21 @@ const (
 	DeleteApplicationXAmzTargetEnumPhotonAdminProxyServiceDeleteApplication DeleteApplicationXAmzTargetEnum = "PhotonAdminProxyService.DeleteApplication"
 )
 
+func (e DeleteApplicationXAmzTargetEnum) ToPointer() *DeleteApplicationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteApplicationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.DeleteApplication":
-		*e = DeleteApplicationXAmzTargetEnum(s)
+		*e = DeleteApplicationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteApplicationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteApplicationXAmzTargetEnum: %v", v)
 	}
 }
 

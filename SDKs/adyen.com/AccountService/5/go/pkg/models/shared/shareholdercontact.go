@@ -22,21 +22,25 @@ const (
 	ShareholderContactShareholderTypeEnumSignatory  ShareholderContactShareholderTypeEnum = "Signatory"
 )
 
+func (e ShareholderContactShareholderTypeEnum) ToPointer() *ShareholderContactShareholderTypeEnum {
+	return &e
+}
+
 func (e *ShareholderContactShareholderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Controller":
 		fallthrough
 	case "Owner":
 		fallthrough
 	case "Signatory":
-		*e = ShareholderContactShareholderTypeEnum(s)
+		*e = ShareholderContactShareholderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareholderContactShareholderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareholderContactShareholderTypeEnum: %v", v)
 	}
 }
 

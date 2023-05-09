@@ -36,7 +36,10 @@ func newMode(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // ModeArrivals - Gets the next arrival predictions for all stops of a given mode
 func (s *mode) ModeArrivals(ctx context.Context, request operations.ModeArrivalsRequest) (*operations.ModeArrivalsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Mode/{mode}/Arrivals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Mode/{mode}/Arrivals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

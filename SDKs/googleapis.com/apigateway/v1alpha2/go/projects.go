@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ApigatewayProjectsLocationsGatewaysGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) ApigatewayProjectsLocationsGatewaysGetIamPolicy(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyRequest, security operations.ApigatewayProjectsLocationsGatewaysGetIamPolicySecurity) (*operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysGetIamPolicy(ctx context.C
 // ApigatewayProjectsLocationsGatewaysSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) ApigatewayProjectsLocationsGatewaysSetIamPolicy(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysSetIamPolicyRequest, security operations.ApigatewayProjectsLocationsGatewaysSetIamPolicySecurity) (*operations.ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApigatewaySetIamPolicyRequest", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysSetIamPolicy(ctx context.C
 // ApigatewayProjectsLocationsGatewaysTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) ApigatewayProjectsLocationsGatewaysTestIamPermissions(ctx context.Context, request operations.ApigatewayProjectsLocationsGatewaysTestIamPermissionsRequest, security operations.ApigatewayProjectsLocationsGatewaysTestIamPermissionsSecurity) (*operations.ApigatewayProjectsLocationsGatewaysTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApigatewayTestIamPermissionsRequest", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) ApigatewayProjectsLocationsGatewaysTestIamPermissions(ctx con
 // ApigatewayProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) ApigatewayProjectsLocationsList(ctx context.Context, request operations.ApigatewayProjectsLocationsListRequest, security operations.ApigatewayProjectsLocationsListSecurity) (*operations.ApigatewayProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) ApigatewayProjectsLocationsList(ctx context.Context, request 
 // ApigatewayProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) ApigatewayProjectsLocationsOperationsCancel(ctx context.Context, request operations.ApigatewayProjectsLocationsOperationsCancelRequest, security operations.ApigatewayProjectsLocationsOperationsCancelSecurity) (*operations.ApigatewayProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) ApigatewayProjectsLocationsOperationsCancel(ctx context.Conte
 // ApigatewayProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) ApigatewayProjectsLocationsOperationsDelete(ctx context.Context, request operations.ApigatewayProjectsLocationsOperationsDeleteRequest, security operations.ApigatewayProjectsLocationsOperationsDeleteSecurity) (*operations.ApigatewayProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) ApigatewayProjectsLocationsOperationsDelete(ctx context.Conte
 // ApigatewayProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) ApigatewayProjectsLocationsOperationsGet(ctx context.Context, request operations.ApigatewayProjectsLocationsOperationsGetRequest, security operations.ApigatewayProjectsLocationsOperationsGetSecurity) (*operations.ApigatewayProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) ApigatewayProjectsLocationsOperationsGet(ctx context.Context,
 // ApigatewayProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) ApigatewayProjectsLocationsOperationsList(ctx context.Context, request operations.ApigatewayProjectsLocationsOperationsListRequest, security operations.ApigatewayProjectsLocationsOperationsListSecurity) (*operations.ApigatewayProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha2/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

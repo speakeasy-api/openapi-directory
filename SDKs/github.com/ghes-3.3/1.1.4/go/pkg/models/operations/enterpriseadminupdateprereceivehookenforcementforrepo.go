@@ -18,21 +18,25 @@ const (
 	EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnumTesting  EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum = "testing"
 )
 
+func (e EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum) ToPointer() *EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum {
+	return &e
+}
+
 func (e *EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
 		fallthrough
 	case "testing":
-		*e = EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum(s)
+		*e = EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBodyEnforcementEnum: %v", v)
 	}
 }
 

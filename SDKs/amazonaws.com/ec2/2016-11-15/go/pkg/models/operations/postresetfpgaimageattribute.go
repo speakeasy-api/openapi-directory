@@ -15,17 +15,21 @@ const (
 	POSTResetFpgaImageAttributeActionEnumResetFpgaImageAttribute POSTResetFpgaImageAttributeActionEnum = "ResetFpgaImageAttribute"
 )
 
+func (e POSTResetFpgaImageAttributeActionEnum) ToPointer() *POSTResetFpgaImageAttributeActionEnum {
+	return &e
+}
+
 func (e *POSTResetFpgaImageAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetFpgaImageAttribute":
-		*e = POSTResetFpgaImageAttributeActionEnum(s)
+		*e = POSTResetFpgaImageAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetFpgaImageAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetFpgaImageAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTResetFpgaImageAttributeVersionEnumTwoThousandAndSixteen1115 POSTResetFpgaImageAttributeVersionEnum = "2016-11-15"
 )
 
+func (e POSTResetFpgaImageAttributeVersionEnum) ToPointer() *POSTResetFpgaImageAttributeVersionEnum {
+	return &e
+}
+
 func (e *POSTResetFpgaImageAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTResetFpgaImageAttributeVersionEnum(s)
+		*e = POSTResetFpgaImageAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetFpgaImageAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetFpgaImageAttributeVersionEnum: %v", v)
 	}
 }
 

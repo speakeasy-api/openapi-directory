@@ -13,16 +13,20 @@ const (
 	AssessmentReportDestinationTypeEnumS3 AssessmentReportDestinationTypeEnum = "S3"
 )
 
+func (e AssessmentReportDestinationTypeEnum) ToPointer() *AssessmentReportDestinationTypeEnum {
+	return &e
+}
+
 func (e *AssessmentReportDestinationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "S3":
-		*e = AssessmentReportDestinationTypeEnum(s)
+		*e = AssessmentReportDestinationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssessmentReportDestinationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssessmentReportDestinationTypeEnum: %v", v)
 	}
 }

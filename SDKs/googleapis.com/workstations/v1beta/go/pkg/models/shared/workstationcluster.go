@@ -8,6 +8,8 @@ type WorkstationCluster struct {
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// Output only. Status conditions describing the current resource state.
 	Conditions []Status `json:"conditions,omitempty"`
+	// Output only. The private IP address of the control plane for this cluster. Workstation VMs need access to this IP address to work with the service, so make sure that your firewall rules allow egress from the workstation VMs to this address.
+	ControlPlaneIP *string `json:"controlPlaneIp,omitempty"`
 	// Output only. Time when this resource was created.
 	CreateTime *string `json:"createTime,omitempty"`
 	// Output only. Whether this resource is in degraded mode, in which case it may require user action to restore full functionality. Details can be found in the `conditions` field.
@@ -16,7 +18,7 @@ type WorkstationCluster struct {
 	DeleteTime *string `json:"deleteTime,omitempty"`
 	// Human-readable name for this resource.
 	DisplayName *string `json:"displayName,omitempty"`
-	// Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+	// Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
 	Etag *string `json:"etag,omitempty"`
 	// Client-specified labels that are applied to the resource and that are also propagated to the underlying Compute Engine resources.
 	Labels map[string]string `json:"labels,omitempty"`
@@ -42,7 +44,7 @@ type WorkstationClusterInput struct {
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// Human-readable name for this resource.
 	DisplayName *string `json:"displayName,omitempty"`
-	// Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+	// Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
 	Etag *string `json:"etag,omitempty"`
 	// Client-specified labels that are applied to the resource and that are also propagated to the underlying Compute Engine resources.
 	Labels map[string]string `json:"labels,omitempty"`

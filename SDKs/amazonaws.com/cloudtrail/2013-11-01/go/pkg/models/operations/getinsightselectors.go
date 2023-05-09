@@ -16,17 +16,21 @@ const (
 	GetInsightSelectorsXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101GetInsightSelectors GetInsightSelectorsXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetInsightSelectors"
 )
 
+func (e GetInsightSelectorsXAmzTargetEnum) ToPointer() *GetInsightSelectorsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetInsightSelectorsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetInsightSelectors":
-		*e = GetInsightSelectorsXAmzTargetEnum(s)
+		*e = GetInsightSelectorsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInsightSelectorsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInsightSelectorsXAmzTargetEnum: %v", v)
 	}
 }
 

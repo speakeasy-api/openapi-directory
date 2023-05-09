@@ -25,12 +25,16 @@ const (
 	ServerStatusEnumTerminated       ServerStatusEnum = "TERMINATED"
 )
 
+func (e ServerStatusEnum) ToPointer() *ServerStatusEnum {
+	return &e
+}
+
 func (e *ServerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BACKING_UP":
 		fallthrough
 	case "CONNECTION_LOST":
@@ -56,9 +60,9 @@ func (e *ServerStatusEnum) UnmarshalJSON(data []byte) error {
 	case "UNHEALTHY":
 		fallthrough
 	case "TERMINATED":
-		*e = ServerStatusEnum(s)
+		*e = ServerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ServerStatusEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETGETSSHPublicKeyActionEnumGetSSHPublicKey GETGETSSHPublicKeyActionEnum = "GetSSHPublicKey"
 )
 
+func (e GETGETSSHPublicKeyActionEnum) ToPointer() *GETGETSSHPublicKeyActionEnum {
+	return &e
+}
+
 func (e *GETGETSSHPublicKeyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetSSHPublicKey":
-		*e = GETGETSSHPublicKeyActionEnum(s)
+		*e = GETGETSSHPublicKeyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETSSHPublicKeyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETSSHPublicKeyActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETGETSSHPublicKeyEncodingEnumPem GETGETSSHPublicKeyEncodingEnum = "PEM"
 )
 
+func (e GETGETSSHPublicKeyEncodingEnum) ToPointer() *GETGETSSHPublicKeyEncodingEnum {
+	return &e
+}
+
 func (e *GETGETSSHPublicKeyEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSH":
 		fallthrough
 	case "PEM":
-		*e = GETGETSSHPublicKeyEncodingEnum(s)
+		*e = GETGETSSHPublicKeyEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETSSHPublicKeyEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETSSHPublicKeyEncodingEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETGETSSHPublicKeyVersionEnumTwoThousandAndTen0508 GETGETSSHPublicKeyVersionEnum = "2010-05-08"
 )
 
+func (e GETGETSSHPublicKeyVersionEnum) ToPointer() *GETGETSSHPublicKeyVersionEnum {
+	return &e
+}
+
 func (e *GETGETSSHPublicKeyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETGETSSHPublicKeyVersionEnum(s)
+		*e = GETGETSSHPublicKeyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETSSHPublicKeyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETSSHPublicKeyVersionEnum: %v", v)
 	}
 }
 

@@ -27,12 +27,16 @@ const (
 	AggregationCrossSeriesReducerEnumReducePercentile05 AggregationCrossSeriesReducerEnum = "REDUCE_PERCENTILE_05"
 )
 
+func (e AggregationCrossSeriesReducerEnum) ToPointer() *AggregationCrossSeriesReducerEnum {
+	return &e
+}
+
 func (e *AggregationCrossSeriesReducerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REDUCE_NONE":
 		fallthrough
 	case "REDUCE_MEAN":
@@ -60,10 +64,10 @@ func (e *AggregationCrossSeriesReducerEnum) UnmarshalJSON(data []byte) error {
 	case "REDUCE_PERCENTILE_50":
 		fallthrough
 	case "REDUCE_PERCENTILE_05":
-		*e = AggregationCrossSeriesReducerEnum(s)
+		*e = AggregationCrossSeriesReducerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregationCrossSeriesReducerEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregationCrossSeriesReducerEnum: %v", v)
 	}
 }
 
@@ -92,12 +96,16 @@ const (
 	AggregationPerSeriesAlignerEnumAlignPercentChange AggregationPerSeriesAlignerEnum = "ALIGN_PERCENT_CHANGE"
 )
 
+func (e AggregationPerSeriesAlignerEnum) ToPointer() *AggregationPerSeriesAlignerEnum {
+	return &e
+}
+
 func (e *AggregationPerSeriesAlignerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALIGN_NONE":
 		fallthrough
 	case "ALIGN_DELTA":
@@ -135,10 +143,10 @@ func (e *AggregationPerSeriesAlignerEnum) UnmarshalJSON(data []byte) error {
 	case "ALIGN_PERCENTILE_05":
 		fallthrough
 	case "ALIGN_PERCENT_CHANGE":
-		*e = AggregationPerSeriesAlignerEnum(s)
+		*e = AggregationPerSeriesAlignerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregationPerSeriesAlignerEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregationPerSeriesAlignerEnum: %v", v)
 	}
 }
 

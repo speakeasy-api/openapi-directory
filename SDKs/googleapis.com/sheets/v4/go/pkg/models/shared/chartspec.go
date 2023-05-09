@@ -18,12 +18,16 @@ const (
 	ChartSpecHiddenDimensionStrategyEnumShowAll                                 ChartSpecHiddenDimensionStrategyEnum = "SHOW_ALL"
 )
 
+func (e ChartSpecHiddenDimensionStrategyEnum) ToPointer() *ChartSpecHiddenDimensionStrategyEnum {
+	return &e
+}
+
 func (e *ChartSpecHiddenDimensionStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHART_HIDDEN_DIMENSION_STRATEGY_UNSPECIFIED":
 		fallthrough
 	case "SKIP_HIDDEN_ROWS_AND_COLUMNS":
@@ -33,10 +37,10 @@ func (e *ChartSpecHiddenDimensionStrategyEnum) UnmarshalJSON(data []byte) error 
 	case "SKIP_HIDDEN_COLUMNS":
 		fallthrough
 	case "SHOW_ALL":
-		*e = ChartSpecHiddenDimensionStrategyEnum(s)
+		*e = ChartSpecHiddenDimensionStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChartSpecHiddenDimensionStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for ChartSpecHiddenDimensionStrategyEnum: %v", v)
 	}
 }
 

@@ -21,12 +21,16 @@ const (
 	AccountActiveAdSummaryActiveAdsLimitTierEnumActiveAdsTier1M   AccountActiveAdSummaryActiveAdsLimitTierEnum = "ACTIVE_ADS_TIER_1M"
 )
 
+func (e AccountActiveAdSummaryActiveAdsLimitTierEnum) ToPointer() *AccountActiveAdSummaryActiveAdsLimitTierEnum {
+	return &e
+}
+
 func (e *AccountActiveAdSummaryActiveAdsLimitTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE_ADS_TIER_40K":
 		fallthrough
 	case "ACTIVE_ADS_TIER_75K":
@@ -42,10 +46,10 @@ func (e *AccountActiveAdSummaryActiveAdsLimitTierEnum) UnmarshalJSON(data []byte
 	case "ACTIVE_ADS_TIER_750K":
 		fallthrough
 	case "ACTIVE_ADS_TIER_1M":
-		*e = AccountActiveAdSummaryActiveAdsLimitTierEnum(s)
+		*e = AccountActiveAdSummaryActiveAdsLimitTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountActiveAdSummaryActiveAdsLimitTierEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountActiveAdSummaryActiveAdsLimitTierEnum: %v", v)
 	}
 }
 

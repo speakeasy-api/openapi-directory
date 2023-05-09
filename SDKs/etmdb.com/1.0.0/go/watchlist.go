@@ -42,7 +42,10 @@ func newWatchlist(defaultClient, securityClient HTTPClient, serverURL, language,
 // [ref]: https://etmdb.com/en/movies/watchlist/id
 func (s *watchlist) WatchlistSearchRead(ctx context.Context, request operations.WatchlistSearchReadRequest) (*operations.WatchlistSearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/watchlist/search/{movie_title}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/watchlist/search/{movie_title}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -88,7 +91,10 @@ func (s *watchlist) WatchlistSearchRead(ctx context.Context, request operations.
 // [ref]: https://etmdb.com/en/movies/watchlist/id
 func (s *watchlist) WatchlistSearchallRead(ctx context.Context, request operations.WatchlistSearchallReadRequest) (*operations.WatchlistSearchallReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/watchlist/searchall/{param}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/watchlist/searchall/{param}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

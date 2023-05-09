@@ -93,7 +93,7 @@ func (s *locations) CreateLocation(ctx context.Context, request shared.CreateLoc
 // Many Square API endpoints require a `location_id` parameter.
 // The `id` field of the [`Location`](https://developer.squareup.com/reference/square_2021-08-18/objects/Location) objects returned by this
 // endpoint correspond to that `location_id` parameter.
-func (s *locations) ListLocations(ctx context.Context) (*operations.ListLocationsResponse, error) {
+func (s *locations) ListLocations(ctx context.Context, security operations.ListLocationsSecurity) (*operations.ListLocationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/locations"
 
@@ -102,7 +102,7 @@ func (s *locations) ListLocations(ctx context.Context) (*operations.ListLocation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -142,7 +142,10 @@ func (s *locations) ListLocations(ctx context.Context) (*operations.ListLocation
 // main location.
 func (s *locations) RetrieveLocation(ctx context.Context, request operations.RetrieveLocationRequest, security operations.RetrieveLocationSecurity) (*operations.RetrieveLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,7 +190,10 @@ func (s *locations) RetrieveLocation(ctx context.Context, request operations.Ret
 // Updates a location.
 func (s *locations) UpdateLocation(ctx context.Context, request operations.UpdateLocationRequest, security operations.UpdateLocationSecurity) (*operations.UpdateLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateLocationRequest", "json")
 	if err != nil {

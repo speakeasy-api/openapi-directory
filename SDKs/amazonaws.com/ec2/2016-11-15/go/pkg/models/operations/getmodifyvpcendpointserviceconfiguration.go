@@ -15,17 +15,21 @@ const (
 	GETModifyVpcEndpointServiceConfigurationActionEnumModifyVpcEndpointServiceConfiguration GETModifyVpcEndpointServiceConfigurationActionEnum = "ModifyVpcEndpointServiceConfiguration"
 )
 
+func (e GETModifyVpcEndpointServiceConfigurationActionEnum) ToPointer() *GETModifyVpcEndpointServiceConfigurationActionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcEndpointServiceConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVpcEndpointServiceConfiguration":
-		*e = GETModifyVpcEndpointServiceConfigurationActionEnum(s)
+		*e = GETModifyVpcEndpointServiceConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcEndpointServiceConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcEndpointServiceConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyVpcEndpointServiceConfigurationVersionEnumTwoThousandAndSixteen1115 GETModifyVpcEndpointServiceConfigurationVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVpcEndpointServiceConfigurationVersionEnum) ToPointer() *GETModifyVpcEndpointServiceConfigurationVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcEndpointServiceConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVpcEndpointServiceConfigurationVersionEnum(s)
+		*e = GETModifyVpcEndpointServiceConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcEndpointServiceConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcEndpointServiceConfigurationVersionEnum: %v", v)
 	}
 }
 

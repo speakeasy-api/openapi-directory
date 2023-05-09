@@ -21,12 +21,16 @@ const (
 	ExternalEventEntityEventTypeEnumPendingWork      ExternalEventEntityEventTypeEnum = "pending_work"
 )
 
+func (e ExternalEventEntityEventTypeEnum) ToPointer() *ExternalEventEntityEventTypeEnum {
+	return &e
+}
+
 func (e *ExternalEventEntityEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ldap_sync":
 		fallthrough
 	case "remote_server_sync":
@@ -40,10 +44,10 @@ func (e *ExternalEventEntityEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "client_log":
 		fallthrough
 	case "pending_work":
-		*e = ExternalEventEntityEventTypeEnum(s)
+		*e = ExternalEventEntityEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExternalEventEntityEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExternalEventEntityEventTypeEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	ExternalEventEntityStatusEnumSkipped        ExternalEventEntityStatusEnum = "skipped"
 )
 
+func (e ExternalEventEntityStatusEnum) ToPointer() *ExternalEventEntityStatusEnum {
+	return &e
+}
+
 func (e *ExternalEventEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "failure":
@@ -73,10 +81,10 @@ func (e *ExternalEventEntityStatusEnum) UnmarshalJSON(data []byte) error {
 	case "in_progress":
 		fallthrough
 	case "skipped":
-		*e = ExternalEventEntityStatusEnum(s)
+		*e = ExternalEventEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExternalEventEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExternalEventEntityStatusEnum: %v", v)
 	}
 }
 

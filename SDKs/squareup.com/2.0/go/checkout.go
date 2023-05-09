@@ -37,7 +37,10 @@ func newCheckout(defaultClient, securityClient HTTPClient, serverURL, language, 
 // payment processing workflow hosted on connect.squareup.com.
 func (s *checkout) CreateCheckout(ctx context.Context, request operations.CreateCheckoutRequest, security operations.CreateCheckoutSecurity) (*operations.CreateCheckoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/checkouts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/checkouts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCheckoutRequest", "json")
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	POSTDescribeVolumeAttributeActionEnumDescribeVolumeAttribute POSTDescribeVolumeAttributeActionEnum = "DescribeVolumeAttribute"
 )
 
+func (e POSTDescribeVolumeAttributeActionEnum) ToPointer() *POSTDescribeVolumeAttributeActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeVolumeAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeVolumeAttribute":
-		*e = POSTDescribeVolumeAttributeActionEnum(s)
+		*e = POSTDescribeVolumeAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeVolumeAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeVolumeAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeVolumeAttributeVersionEnumTwoThousandAndSixteen1115 POSTDescribeVolumeAttributeVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeVolumeAttributeVersionEnum) ToPointer() *POSTDescribeVolumeAttributeVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeVolumeAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeVolumeAttributeVersionEnum(s)
+		*e = POSTDescribeVolumeAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeVolumeAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeVolumeAttributeVersionEnum: %v", v)
 	}
 }
 

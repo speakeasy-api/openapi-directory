@@ -17,29 +17,33 @@ type GetFoodIngredientSearchPhpSecurity struct {
 //
 // **Example**
 // > ```&limit=3```
-type GetFoodIngredientSearchPhpLimitEnum string
+type GetFoodIngredientSearchPhpLimitEnum int64
 
 const (
-	GetFoodIngredientSearchPhpLimitEnumOne   GetFoodIngredientSearchPhpLimitEnum = "1"
-	GetFoodIngredientSearchPhpLimitEnumTwo   GetFoodIngredientSearchPhpLimitEnum = "2"
-	GetFoodIngredientSearchPhpLimitEnumThree GetFoodIngredientSearchPhpLimitEnum = "3"
+	GetFoodIngredientSearchPhpLimitEnumOne   GetFoodIngredientSearchPhpLimitEnum = 1
+	GetFoodIngredientSearchPhpLimitEnumTwo   GetFoodIngredientSearchPhpLimitEnum = 2
+	GetFoodIngredientSearchPhpLimitEnumThree GetFoodIngredientSearchPhpLimitEnum = 3
 )
 
+func (e GetFoodIngredientSearchPhpLimitEnum) ToPointer() *GetFoodIngredientSearchPhpLimitEnum {
+	return &e
+}
+
 func (e *GetFoodIngredientSearchPhpLimitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
-		*e = GetFoodIngredientSearchPhpLimitEnum(s)
+	case 3:
+		*e = GetFoodIngredientSearchPhpLimitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFoodIngredientSearchPhpLimitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFoodIngredientSearchPhpLimitEnum: %v", v)
 	}
 }
 

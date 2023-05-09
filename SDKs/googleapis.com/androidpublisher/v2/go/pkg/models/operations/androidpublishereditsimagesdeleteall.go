@@ -29,12 +29,16 @@ const (
 	AndroidpublisherEditsImagesDeleteallImageTypeEnumWearScreenshots      AndroidpublisherEditsImagesDeleteallImageTypeEnum = "wearScreenshots"
 )
 
+func (e AndroidpublisherEditsImagesDeleteallImageTypeEnum) ToPointer() *AndroidpublisherEditsImagesDeleteallImageTypeEnum {
+	return &e
+}
+
 func (e *AndroidpublisherEditsImagesDeleteallImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "featureGraphic":
 		fallthrough
 	case "icon":
@@ -52,10 +56,10 @@ func (e *AndroidpublisherEditsImagesDeleteallImageTypeEnum) UnmarshalJSON(data [
 	case "tvScreenshots":
 		fallthrough
 	case "wearScreenshots":
-		*e = AndroidpublisherEditsImagesDeleteallImageTypeEnum(s)
+		*e = AndroidpublisherEditsImagesDeleteallImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidpublisherEditsImagesDeleteallImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidpublisherEditsImagesDeleteallImageTypeEnum: %v", v)
 	}
 }
 

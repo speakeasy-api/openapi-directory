@@ -24,12 +24,16 @@ const (
 	GetpublicdataRequiredDataEnumRain        GetpublicdataRequiredDataEnum = "rain"
 )
 
+func (e GetpublicdataRequiredDataEnum) ToPointer() *GetpublicdataRequiredDataEnum {
+	return &e
+}
+
 func (e *GetpublicdataRequiredDataEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "temperature":
 		fallthrough
 	case "humidity":
@@ -39,10 +43,10 @@ func (e *GetpublicdataRequiredDataEnum) UnmarshalJSON(data []byte) error {
 	case "wind":
 		fallthrough
 	case "rain":
-		*e = GetpublicdataRequiredDataEnum(s)
+		*e = GetpublicdataRequiredDataEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetpublicdataRequiredDataEnum: %s", s)
+		return fmt.Errorf("invalid value for GetpublicdataRequiredDataEnum: %v", v)
 	}
 }
 

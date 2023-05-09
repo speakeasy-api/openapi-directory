@@ -17,12 +17,16 @@ const (
 	InvideoPositionCornerPositionEnumBottomRight InvideoPositionCornerPositionEnum = "bottomRight"
 )
 
+func (e InvideoPositionCornerPositionEnum) ToPointer() *InvideoPositionCornerPositionEnum {
+	return &e
+}
+
 func (e *InvideoPositionCornerPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "topLeft":
 		fallthrough
 	case "topRight":
@@ -30,10 +34,10 @@ func (e *InvideoPositionCornerPositionEnum) UnmarshalJSON(data []byte) error {
 	case "bottomLeft":
 		fallthrough
 	case "bottomRight":
-		*e = InvideoPositionCornerPositionEnum(s)
+		*e = InvideoPositionCornerPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvideoPositionCornerPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for InvideoPositionCornerPositionEnum: %v", v)
 	}
 }
 
@@ -44,17 +48,21 @@ const (
 	InvideoPositionTypeEnumCorner InvideoPositionTypeEnum = "corner"
 )
 
+func (e InvideoPositionTypeEnum) ToPointer() *InvideoPositionTypeEnum {
+	return &e
+}
+
 func (e *InvideoPositionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "corner":
-		*e = InvideoPositionTypeEnum(s)
+		*e = InvideoPositionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvideoPositionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvideoPositionTypeEnum: %v", v)
 	}
 }
 

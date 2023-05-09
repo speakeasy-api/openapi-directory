@@ -15,17 +15,21 @@ const (
 	GETDetachNetworkInterfaceActionEnumDetachNetworkInterface GETDetachNetworkInterfaceActionEnum = "DetachNetworkInterface"
 )
 
+func (e GETDetachNetworkInterfaceActionEnum) ToPointer() *GETDetachNetworkInterfaceActionEnum {
+	return &e
+}
+
 func (e *GETDetachNetworkInterfaceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DetachNetworkInterface":
-		*e = GETDetachNetworkInterfaceActionEnum(s)
+		*e = GETDetachNetworkInterfaceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetachNetworkInterfaceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetachNetworkInterfaceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDetachNetworkInterfaceVersionEnumTwoThousandAndSixteen1115 GETDetachNetworkInterfaceVersionEnum = "2016-11-15"
 )
 
+func (e GETDetachNetworkInterfaceVersionEnum) ToPointer() *GETDetachNetworkInterfaceVersionEnum {
+	return &e
+}
+
 func (e *GETDetachNetworkInterfaceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDetachNetworkInterfaceVersionEnum(s)
+		*e = GETDetachNetworkInterfaceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetachNetworkInterfaceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetachNetworkInterfaceVersionEnum: %v", v)
 	}
 }
 

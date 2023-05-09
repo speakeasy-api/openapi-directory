@@ -16,17 +16,21 @@ const (
 	AcceptDomainTransferFromAnotherAwsAccountXAmzTargetEnumRoute53DomainsV20140515AcceptDomainTransferFromAnotherAwsAccount AcceptDomainTransferFromAnotherAwsAccountXAmzTargetEnum = "Route53Domains_v20140515.AcceptDomainTransferFromAnotherAwsAccount"
 )
 
+func (e AcceptDomainTransferFromAnotherAwsAccountXAmzTargetEnum) ToPointer() *AcceptDomainTransferFromAnotherAwsAccountXAmzTargetEnum {
+	return &e
+}
+
 func (e *AcceptDomainTransferFromAnotherAwsAccountXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.AcceptDomainTransferFromAnotherAwsAccount":
-		*e = AcceptDomainTransferFromAnotherAwsAccountXAmzTargetEnum(s)
+		*e = AcceptDomainTransferFromAnotherAwsAccountXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AcceptDomainTransferFromAnotherAwsAccountXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AcceptDomainTransferFromAnotherAwsAccountXAmzTargetEnum: %v", v)
 	}
 }
 

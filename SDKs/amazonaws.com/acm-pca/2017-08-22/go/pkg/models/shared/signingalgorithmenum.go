@@ -18,12 +18,16 @@ const (
 	SigningAlgorithmEnumSha512Withrsa   SigningAlgorithmEnum = "SHA512WITHRSA"
 )
 
+func (e SigningAlgorithmEnum) ToPointer() *SigningAlgorithmEnum {
+	return &e
+}
+
 func (e *SigningAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHA256WITHECDSA":
 		fallthrough
 	case "SHA384WITHECDSA":
@@ -35,9 +39,9 @@ func (e *SigningAlgorithmEnum) UnmarshalJSON(data []byte) error {
 	case "SHA384WITHRSA":
 		fallthrough
 	case "SHA512WITHRSA":
-		*e = SigningAlgorithmEnum(s)
+		*e = SigningAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SigningAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for SigningAlgorithmEnum: %v", v)
 	}
 }

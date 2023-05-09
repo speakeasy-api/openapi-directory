@@ -16,21 +16,25 @@ const (
 	SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnumWithdrawalRightService         SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum = "WITHDRAWAL_RIGHT_SERVICE"
 )
 
+func (e SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum) ToPointer() *SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum {
+	return &e
+}
+
 func (e *SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WITHDRAWAL_RIGHT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "WITHDRAWAL_RIGHT_DIGITAL_CONTENT":
 		fallthrough
 	case "WITHDRAWAL_RIGHT_SERVICE":
-		*e = SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum(s)
+		*e = SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum: %v", v)
 	}
 }
 

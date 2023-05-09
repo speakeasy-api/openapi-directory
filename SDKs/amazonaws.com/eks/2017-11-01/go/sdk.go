@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>Amazon Elastic Kubernetes Service (Amazon EKS) is a managed service that makes it easy for you to run Kubernetes on Amazon Web Services without needing to stand up or maintain your own Kubernetes control plane. Kubernetes is an open-source system for automating the deployment, scaling, and management of containerized applications. </p> <p>Amazon EKS runs up-to-date versions of the open-source Kubernetes software, so you can use all the existing plugins and tooling from the Kubernetes community. Applications running on Amazon EKS are fully compatible with applications running on any standard Kubernetes environment, whether running in on-premises data centers or public clouds. This means that you can easily migrate any standard Kubernetes application to Amazon EKS without any code modification required.</p>
 // https://docs.aws.amazon.com/eks/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // AssociateEncryptionConfig - <p>Associate encryption configuration to an existing cluster.</p> <p>You can use this API to enable encryption on existing clusters which do not have encryption already enabled. This allows you to implement a defense-in-depth security strategy without migrating applications to new Amazon EKS clusters.</p>
 func (s *SDK) AssociateEncryptionConfig(ctx context.Context, request operations.AssociateEncryptionConfigRequest) (*operations.AssociateEncryptionConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/encryption-config/associate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/encryption-config/associate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -230,7 +248,10 @@ func (s *SDK) AssociateEncryptionConfig(ctx context.Context, request operations.
 // AssociateIdentityProviderConfig - <p>Associate an identity provider configuration to a cluster.</p> <p>If you want to authenticate identities using an identity provider, you can create an identity provider configuration and associate it to your cluster. After configuring authentication to your cluster you can create Kubernetes <code>roles</code> and <code>clusterroles</code> to assign permissions to the roles, and then bind the roles to the identities using Kubernetes <code>rolebindings</code> and <code>clusterrolebindings</code>. For more information see <a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">Using RBAC Authorization</a> in the Kubernetes documentation.</p>
 func (s *SDK) AssociateIdentityProviderConfig(ctx context.Context, request operations.AssociateIdentityProviderConfigRequest) (*operations.AssociateIdentityProviderConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/identity-provider-configs/associate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/identity-provider-configs/associate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -346,7 +367,10 @@ func (s *SDK) AssociateIdentityProviderConfig(ctx context.Context, request opera
 // CreateAddon - <p>Creates an Amazon EKS add-on.</p> <p>Amazon EKS add-ons help to automate the provisioning and lifecycle management of common operational software for Amazon EKS clusters. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html">Amazon EKS add-ons</a> in the <i>Amazon EKS User Guide</i>.</p>
 func (s *SDK) CreateAddon(ctx context.Context, request operations.CreateAddonRequest) (*operations.CreateAddonResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/addons", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/addons", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -588,7 +612,10 @@ func (s *SDK) CreateCluster(ctx context.Context, request operations.CreateCluste
 // CreateFargateProfile - <p>Creates an Fargate profile for your Amazon EKS cluster. You must have at least one Fargate profile in a cluster to be able to run pods on Fargate.</p> <p>The Fargate profile allows an administrator to declare which pods run on Fargate and specify which pods run on which Fargate profile. This declaration is done through the profile’s selectors. Each profile can have up to five selectors that contain a namespace and labels. A namespace is required for every selector. The label field consists of multiple optional key-value pairs. Pods that match the selectors are scheduled on Fargate. If a to-be-scheduled pod matches any of the selectors in the Fargate profile, then that pod is run on Fargate.</p> <p>When you create a Fargate profile, you must specify a pod execution role to use with the pods that are scheduled with the profile. This role is added to the cluster's Kubernetes <a href="https://kubernetes.io/docs/admin/authorization/rbac/">Role Based Access Control</a> (RBAC) for authorization so that the <code>kubelet</code> that is running on the Fargate infrastructure can register with your Amazon EKS cluster so that it can appear in your cluster as a node. The pod execution role also provides IAM permissions to the Fargate infrastructure to allow read access to Amazon ECR image repositories. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/pod-execution-role.html">Pod Execution Role</a> in the <i>Amazon EKS User Guide</i>.</p> <p>Fargate profiles are immutable. However, you can create a new updated profile to replace an existing profile and then delete the original after the updated profile has finished creating.</p> <p>If any Fargate profiles in a cluster are in the <code>DELETING</code> status, you must wait for that Fargate profile to finish deleting before you can create any other profiles in that cluster.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html">Fargate Profile</a> in the <i>Amazon EKS User Guide</i>.</p>
 func (s *SDK) CreateFargateProfile(ctx context.Context, request operations.CreateFargateProfileRequest) (*operations.CreateFargateProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/fargate-profiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/fargate-profiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -704,7 +731,10 @@ func (s *SDK) CreateFargateProfile(ctx context.Context, request operations.Creat
 // CreateNodegroup - <p>Creates a managed node group for an Amazon EKS cluster. You can only create a node group for your cluster that is equal to the current Kubernetes version for the cluster. All node groups are created with the latest AMI release version for the respective minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch template. For more information about using launch templates, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html">Launch template support</a>.</p> <p>An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are managed by Amazon Web Services for an Amazon EKS cluster. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html">Managed node groups</a> in the <i>Amazon EKS User Guide</i>.</p> <note> <p>Windows AMI types are only supported for commercial Regions that support Windows Amazon EKS.</p> </note>
 func (s *SDK) CreateNodegroup(ctx context.Context, request operations.CreateNodegroupRequest) (*operations.CreateNodegroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/node-groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/node-groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -830,7 +860,10 @@ func (s *SDK) CreateNodegroup(ctx context.Context, request operations.CreateNode
 // DeleteAddon - <p>Delete an Amazon EKS add-on.</p> <p>When you remove the add-on, it will also be deleted from the cluster. You can always manually start an add-on on the cluster using the Kubernetes API.</p>
 func (s *SDK) DeleteAddon(ctx context.Context, request operations.DeleteAddonRequest) (*operations.DeleteAddonResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/addons/{addonName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/addons/{addonName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -930,7 +963,10 @@ func (s *SDK) DeleteAddon(ctx context.Context, request operations.DeleteAddonReq
 // DeleteCluster - <p>Deletes the Amazon EKS cluster control plane.</p> <p>If you have active services in your cluster that are associated with a load balancer, you must delete those services before deleting the cluster so that the load balancers are deleted properly. Otherwise, you can have orphaned resources in your VPC that prevent you from being able to delete the VPC. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/delete-cluster.html">Deleting a Cluster</a> in the <i>Amazon EKS User Guide</i>.</p> <p>If you have managed node groups or Fargate profiles attached to the cluster, you must delete them first. For more information, see <a>DeleteNodegroup</a> and <a>DeleteFargateProfile</a>.</p>
 func (s *SDK) DeleteCluster(ctx context.Context, request operations.DeleteClusterRequest) (*operations.DeleteClusterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1026,7 +1062,10 @@ func (s *SDK) DeleteCluster(ctx context.Context, request operations.DeleteCluste
 // DeleteFargateProfile - <p>Deletes an Fargate profile.</p> <p>When you delete a Fargate profile, any pods running on Fargate that were created with the profile are deleted. If those pods match another Fargate profile, then they are scheduled on Fargate with that profile. If they no longer match any Fargate profiles, then they are not scheduled on Fargate and they may remain in a pending state.</p> <p>Only one Fargate profile in a cluster can be in the <code>DELETING</code> status at a time. You must wait for a Fargate profile to finish deleting before you can delete any other profiles in that cluster.</p>
 func (s *SDK) DeleteFargateProfile(ctx context.Context, request operations.DeleteFargateProfileRequest) (*operations.DeleteFargateProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/fargate-profiles/{fargateProfileName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/fargate-profiles/{fargateProfileName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1112,7 +1151,10 @@ func (s *SDK) DeleteFargateProfile(ctx context.Context, request operations.Delet
 // DeleteNodegroup - Deletes an Amazon EKS node group for a cluster.
 func (s *SDK) DeleteNodegroup(ctx context.Context, request operations.DeleteNodegroupRequest) (*operations.DeleteNodegroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/node-groups/{nodegroupName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/node-groups/{nodegroupName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1218,7 +1260,10 @@ func (s *SDK) DeleteNodegroup(ctx context.Context, request operations.DeleteNode
 // DeregisterCluster - Deregisters a connected cluster to remove it from the Amazon EKS control plane.
 func (s *SDK) DeregisterCluster(ctx context.Context, request operations.DeregisterClusterRequest) (*operations.DeregisterClusterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cluster-registrations/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cluster-registrations/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1324,7 +1369,10 @@ func (s *SDK) DeregisterCluster(ctx context.Context, request operations.Deregist
 // DescribeAddon - Describes an Amazon EKS add-on.
 func (s *SDK) DescribeAddon(ctx context.Context, request operations.DescribeAddonRequest) (*operations.DescribeAddonResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/addons/{addonName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/addons/{addonName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1580,7 +1628,10 @@ func (s *SDK) DescribeAddonVersions(ctx context.Context, request operations.Desc
 // DescribeCluster - <p>Returns descriptive information about an Amazon EKS cluster.</p> <p>The API server endpoint and certificate authority data returned by this operation are required for <code>kubelet</code> and <code>kubectl</code> to communicate with your Kubernetes API server. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html">Create a kubeconfig for Amazon EKS</a>.</p> <note> <p>The API server endpoint and certificate authority data aren't available until the cluster reaches the <code>ACTIVE</code> state.</p> </note>
 func (s *SDK) DescribeCluster(ctx context.Context, request operations.DescribeClusterRequest) (*operations.DescribeClusterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1666,7 +1717,10 @@ func (s *SDK) DescribeCluster(ctx context.Context, request operations.DescribeCl
 // DescribeFargateProfile - Returns descriptive information about an Fargate profile.
 func (s *SDK) DescribeFargateProfile(ctx context.Context, request operations.DescribeFargateProfileRequest) (*operations.DescribeFargateProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/fargate-profiles/{fargateProfileName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/fargate-profiles/{fargateProfileName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1752,7 +1806,10 @@ func (s *SDK) DescribeFargateProfile(ctx context.Context, request operations.Des
 // DescribeIdentityProviderConfig - Returns descriptive information about an identity provider configuration.
 func (s *SDK) DescribeIdentityProviderConfig(ctx context.Context, request operations.DescribeIdentityProviderConfigRequest) (*operations.DescribeIdentityProviderConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/identity-provider-configs/describe", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/identity-provider-configs/describe", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1858,7 +1915,10 @@ func (s *SDK) DescribeIdentityProviderConfig(ctx context.Context, request operat
 // DescribeNodegroup - Returns descriptive information about an Amazon EKS node group.
 func (s *SDK) DescribeNodegroup(ctx context.Context, request operations.DescribeNodegroupRequest) (*operations.DescribeNodegroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/node-groups/{nodegroupName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/node-groups/{nodegroupName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1954,7 +2014,10 @@ func (s *SDK) DescribeNodegroup(ctx context.Context, request operations.Describe
 // DescribeUpdate - <p>Returns descriptive information about an update against your Amazon EKS cluster or associated managed node group or Amazon EKS add-on.</p> <p>When the status of the update is <code>Succeeded</code>, the update is complete. If an update fails, the status is <code>Failed</code>, and an error detail explains the reason for the failure.</p>
 func (s *SDK) DescribeUpdate(ctx context.Context, request operations.DescribeUpdateRequest) (*operations.DescribeUpdateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/updates/{updateId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/updates/{updateId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2044,7 +2107,10 @@ func (s *SDK) DescribeUpdate(ctx context.Context, request operations.DescribeUpd
 // DisassociateIdentityProviderConfig - Disassociates an identity provider configuration from a cluster. If you disassociate an identity provider from your cluster, users included in the provider can no longer access the cluster. However, you can still access the cluster with Amazon Web Services IAM users.
 func (s *SDK) DisassociateIdentityProviderConfig(ctx context.Context, request operations.DisassociateIdentityProviderConfigRequest) (*operations.DisassociateIdentityProviderConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/identity-provider-configs/disassociate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/identity-provider-configs/disassociate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2160,7 +2226,10 @@ func (s *SDK) DisassociateIdentityProviderConfig(ctx context.Context, request op
 // ListAddons - Lists the available add-ons.
 func (s *SDK) ListAddons(ctx context.Context, request operations.ListAddonsRequest) (*operations.ListAddonsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/addons", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/addons", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2350,7 +2419,10 @@ func (s *SDK) ListClusters(ctx context.Context, request operations.ListClustersR
 // ListFargateProfiles - Lists the Fargate profiles associated with the specified cluster in your Amazon Web Services account in the specified Region.
 func (s *SDK) ListFargateProfiles(ctx context.Context, request operations.ListFargateProfilesRequest) (*operations.ListFargateProfilesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/fargate-profiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/fargate-profiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2440,7 +2512,10 @@ func (s *SDK) ListFargateProfiles(ctx context.Context, request operations.ListFa
 // ListIdentityProviderConfigs - A list of identity provider configurations.
 func (s *SDK) ListIdentityProviderConfigs(ctx context.Context, request operations.ListIdentityProviderConfigsRequest) (*operations.ListIdentityProviderConfigsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/identity-provider-configs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/identity-provider-configs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2540,7 +2615,10 @@ func (s *SDK) ListIdentityProviderConfigs(ctx context.Context, request operation
 // ListNodegroups - Lists the Amazon EKS managed node groups associated with the specified cluster in your Amazon Web Services account in the specified Region. Self-managed node groups are not listed.
 func (s *SDK) ListNodegroups(ctx context.Context, request operations.ListNodegroupsRequest) (*operations.ListNodegroupsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/node-groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/node-groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2640,7 +2718,10 @@ func (s *SDK) ListNodegroups(ctx context.Context, request operations.ListNodegro
 // ListTagsForResource - List the tags for an Amazon EKS resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2706,7 +2787,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // ListUpdates - Lists the updates associated with an Amazon EKS cluster or managed node group in your Amazon Web Services account, in the specified Region.
 func (s *SDK) ListUpdates(ctx context.Context, request operations.ListUpdatesRequest) (*operations.ListUpdatesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/updates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/updates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2932,7 +3016,10 @@ func (s *SDK) RegisterCluster(ctx context.Context, request operations.RegisterCl
 // TagResource - Associates the specified tags to a resource with the specified <code>resourceArn</code>. If existing tags on a resource are not specified in the request parameters, they are not changed. When a resource is deleted, the tags associated with that resource are deleted as well. Tags that you create for Amazon EKS resources do not propagate to any other resources associated with the cluster. For example, if you tag a cluster with this operation, that tag does not automatically propagate to the subnets and nodes associated with the cluster.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3008,7 +3095,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Deletes specified tags from a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3078,7 +3168,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAddon - Updates an Amazon EKS add-on.
 func (s *SDK) UpdateAddon(ctx context.Context, request operations.UpdateAddonRequest) (*operations.UpdateAddonResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/addons/{addonName}/update", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/addons/{addonName}/update", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3194,7 +3287,10 @@ func (s *SDK) UpdateAddon(ctx context.Context, request operations.UpdateAddonReq
 // UpdateClusterConfig - <p>Updates an Amazon EKS cluster configuration. Your cluster continues to function during the update. The response output includes an update ID that you can use to track the status of your cluster update with the <a>DescribeUpdate</a> API operation.</p> <p>You can use this API operation to enable or disable exporting the Kubernetes control plane logs for your cluster to CloudWatch Logs. By default, cluster control plane logs aren't exported to CloudWatch Logs. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Cluster Control Plane Logs</a> in the <i> <i>Amazon EKS User Guide</i> </i>.</p> <note> <p>CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs. For more information, see <a href="http://aws.amazon.com/cloudwatch/pricing/">CloudWatch Pricing</a>.</p> </note> <p>You can also use this API operation to enable or disable public and private access to your cluster's Kubernetes API server endpoint. By default, public access is enabled, and private access is disabled. For more information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">Amazon EKS cluster endpoint access control</a> in the <i> <i>Amazon EKS User Guide</i> </i>. </p> <important> <p>You can't update the subnets or security group IDs for an existing cluster.</p> </important> <p>Cluster updates are asynchronous, and they should finish within a few minutes. During an update, the cluster status moves to <code>UPDATING</code> (this status transition is eventually consistent). When the update is complete (either <code>Failed</code> or <code>Successful</code>), the cluster status moves to <code>Active</code>.</p>
 func (s *SDK) UpdateClusterConfig(ctx context.Context, request operations.UpdateClusterConfigRequest) (*operations.UpdateClusterConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/update-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/update-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3310,7 +3406,10 @@ func (s *SDK) UpdateClusterConfig(ctx context.Context, request operations.Update
 // UpdateClusterVersion - <p>Updates an Amazon EKS cluster to the specified Kubernetes version. Your cluster continues to function during the update. The response output includes an update ID that you can use to track the status of your cluster update with the <a>DescribeUpdate</a> API operation.</p> <p>Cluster updates are asynchronous, and they should finish within a few minutes. During an update, the cluster status moves to <code>UPDATING</code> (this status transition is eventually consistent). When the update is complete (either <code>Failed</code> or <code>Successful</code>), the cluster status moves to <code>Active</code>.</p> <p>If your cluster has managed node groups attached to it, all of your node groups’ Kubernetes versions must match the cluster’s Kubernetes version in order to update the cluster to a new Kubernetes version.</p>
 func (s *SDK) UpdateClusterVersion(ctx context.Context, request operations.UpdateClusterVersionRequest) (*operations.UpdateClusterVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/updates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/updates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3426,7 +3525,10 @@ func (s *SDK) UpdateClusterVersion(ctx context.Context, request operations.Updat
 // UpdateNodegroupConfig - Updates an Amazon EKS managed node group configuration. Your node group continues to function during the update. The response output includes an update ID that you can use to track the status of your node group update with the <a>DescribeUpdate</a> API operation. Currently you can update the Kubernetes labels for a node group or the scaling configuration.
 func (s *SDK) UpdateNodegroupConfig(ctx context.Context, request operations.UpdateNodegroupConfigRequest) (*operations.UpdateNodegroupConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/node-groups/{nodegroupName}/update-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/node-groups/{nodegroupName}/update-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3542,7 +3644,10 @@ func (s *SDK) UpdateNodegroupConfig(ctx context.Context, request operations.Upda
 // UpdateNodegroupVersion - <p>Updates the Kubernetes version or AMI version of an Amazon EKS managed node group.</p> <p>You can update a node group using a launch template only if the node group was originally deployed with a launch template. If you need to update a custom AMI in a node group that was deployed with a launch template, then update your custom AMI, specify the new ID in a new version of the launch template, and then update the node group to the new version of the launch template.</p> <p>If you update without a launch template, then you can update to the latest available AMI version of a node group's current Kubernetes version by not specifying a Kubernetes version in the request. You can update to the latest AMI version of your cluster's current Kubernetes version by specifying your cluster's Kubernetes version in the request. For information about Linux versions, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-linux-ami-versions.html">Amazon EKS optimized Amazon Linux AMI versions</a> in the <i>Amazon EKS User Guide</i>. For information about Windows versions, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-ami-versions-windows.html">Amazon EKS optimized Windows AMI versions</a> in the <i>Amazon EKS User Guide</i>. </p> <p>You cannot roll back a node group to an earlier Kubernetes version or AMI version.</p> <p>When a node in a managed node group is terminated due to a scaling action or update, the pods in that node are drained first. Amazon EKS attempts to drain the nodes gracefully and will fail if it is unable to do so. You can <code>force</code> the update if Amazon EKS is unable to drain the nodes as a result of a pod disruption budget issue.</p>
 func (s *SDK) UpdateNodegroupVersion(ctx context.Context, request operations.UpdateNodegroupVersionRequest) (*operations.UpdateNodegroupVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/node-groups/{nodegroupName}/update-version", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clusters/{name}/node-groups/{nodegroupName}/update-version", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

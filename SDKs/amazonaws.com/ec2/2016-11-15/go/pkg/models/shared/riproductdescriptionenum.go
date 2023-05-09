@@ -16,12 +16,16 @@ const (
 	RIProductDescriptionEnumWindowsAmazonVpc   RIProductDescriptionEnum = "Windows (Amazon VPC)"
 )
 
+func (e RIProductDescriptionEnum) ToPointer() *RIProductDescriptionEnum {
+	return &e
+}
+
 func (e *RIProductDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Linux/UNIX":
 		fallthrough
 	case "Linux/UNIX (Amazon VPC)":
@@ -29,9 +33,9 @@ func (e *RIProductDescriptionEnum) UnmarshalJSON(data []byte) error {
 	case "Windows":
 		fallthrough
 	case "Windows (Amazon VPC)":
-		*e = RIProductDescriptionEnum(s)
+		*e = RIProductDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RIProductDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for RIProductDescriptionEnum: %v", v)
 	}
 }

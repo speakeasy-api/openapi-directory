@@ -15,21 +15,25 @@ const (
 	GetOrderOrderStatusEnumCompleted GetOrderOrderStatusEnum = "Completed"
 )
 
+func (e GetOrderOrderStatusEnum) ToPointer() *GetOrderOrderStatusEnum {
+	return &e
+}
+
 func (e *GetOrderOrderStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Cancelled":
 		fallthrough
 	case "Completed":
-		*e = GetOrderOrderStatusEnum(s)
+		*e = GetOrderOrderStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOrderOrderStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOrderOrderStatusEnum: %v", v)
 	}
 }
 

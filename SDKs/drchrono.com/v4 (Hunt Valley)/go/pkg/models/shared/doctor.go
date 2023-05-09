@@ -262,12 +262,16 @@ const (
 	DoctorCountryEnumQa DoctorCountryEnum = "QA"
 )
 
+func (e DoctorCountryEnum) ToPointer() *DoctorCountryEnum {
+	return &e
+}
+
 func (e *DoctorCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BD":
 		fallthrough
 	case "WF":
@@ -765,10 +769,10 @@ func (e *DoctorCountryEnum) UnmarshalJSON(data []byte) error {
 	case "UA":
 		fallthrough
 	case "QA":
-		*e = DoctorCountryEnum(s)
+		*e = DoctorCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoctorCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for DoctorCountryEnum: %v", v)
 	}
 }
 
@@ -785,12 +789,16 @@ const (
 	DoctorJobTitleEnumOther                        DoctorJobTitleEnum = "Other"
 )
 
+func (e DoctorJobTitleEnum) ToPointer() *DoctorJobTitleEnum {
+	return &e
+}
+
 func (e *DoctorJobTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Provider/Staff (Private Practice)":
@@ -806,10 +814,10 @@ func (e *DoctorJobTitleEnum) UnmarshalJSON(data []byte) error {
 	case "Consultant":
 		fallthrough
 	case "Other":
-		*e = DoctorJobTitleEnum(s)
+		*e = DoctorJobTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoctorJobTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for DoctorJobTitleEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	HubContentStatusEnumDeleteFailed HubContentStatusEnum = "DeleteFailed"
 )
 
+func (e HubContentStatusEnum) ToPointer() *HubContentStatusEnum {
+	return &e
+}
+
 func (e *HubContentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Available":
 		fallthrough
 	case "Importing":
@@ -32,9 +36,9 @@ func (e *HubContentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ImportFailed":
 		fallthrough
 	case "DeleteFailed":
-		*e = HubContentStatusEnum(s)
+		*e = HubContentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HubContentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HubContentStatusEnum: %v", v)
 	}
 }

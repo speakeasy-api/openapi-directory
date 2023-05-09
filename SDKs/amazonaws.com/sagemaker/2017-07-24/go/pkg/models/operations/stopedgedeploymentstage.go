@@ -16,17 +16,21 @@ const (
 	StopEdgeDeploymentStageXAmzTargetEnumSageMakerStopEdgeDeploymentStage StopEdgeDeploymentStageXAmzTargetEnum = "SageMaker.StopEdgeDeploymentStage"
 )
 
+func (e StopEdgeDeploymentStageXAmzTargetEnum) ToPointer() *StopEdgeDeploymentStageXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopEdgeDeploymentStageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.StopEdgeDeploymentStage":
-		*e = StopEdgeDeploymentStageXAmzTargetEnum(s)
+		*e = StopEdgeDeploymentStageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopEdgeDeploymentStageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopEdgeDeploymentStageXAmzTargetEnum: %v", v)
 	}
 }
 

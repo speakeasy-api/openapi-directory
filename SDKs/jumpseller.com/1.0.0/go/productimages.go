@@ -35,7 +35,10 @@ func newProductImages(defaultClient, securityClient HTTPClient, serverURL, langu
 // DeleteProductsIDImagesImageIDJSON - Delete a Product Image.
 func (s *productImages) DeleteProductsIDImagesImageIDJSON(ctx context.Context, request operations.DeleteProductsIDImagesImageIDJSONRequest) (*operations.DeleteProductsIDImagesImageIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/images/{image_id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/images/{image_id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *productImages) DeleteProductsIDImagesImageIDJSON(ctx context.Context, r
 // GetProductsIDImagesJSON - Retrieve all Product Images.
 func (s *productImages) GetProductsIDImagesJSON(ctx context.Context, request operations.GetProductsIDImagesJSONRequest) (*operations.GetProductsIDImagesJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/images.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/images.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -152,7 +158,10 @@ func (s *productImages) GetProductsIDImagesJSON(ctx context.Context, request ope
 // GetProductsIDImagesCountJSON - Count all Product Images.
 func (s *productImages) GetProductsIDImagesCountJSON(ctx context.Context, request operations.GetProductsIDImagesCountJSONRequest) (*operations.GetProductsIDImagesCountJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/images/count.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/images/count.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -210,7 +219,10 @@ func (s *productImages) GetProductsIDImagesCountJSON(ctx context.Context, reques
 // GetProductsIDImagesImageIDJSON - Retrieve a single Product Image.
 func (s *productImages) GetProductsIDImagesImageIDJSON(ctx context.Context, request operations.GetProductsIDImagesImageIDJSONRequest) (*operations.GetProductsIDImagesImageIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/images/{image_id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/images/{image_id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -268,7 +280,10 @@ func (s *productImages) GetProductsIDImagesImageIDJSON(ctx context.Context, requ
 // PostProductsIDImagesJSON - Create a new Product Image.
 func (s *productImages) PostProductsIDImagesJSON(ctx context.Context, request operations.PostProductsIDImagesJSONRequest) (*operations.PostProductsIDImagesJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}/images.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}/images.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageEdit", "json")
 	if err != nil {

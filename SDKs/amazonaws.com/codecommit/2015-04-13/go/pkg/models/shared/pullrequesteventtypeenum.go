@@ -21,12 +21,16 @@ const (
 	PullRequestEventTypeEnumPullRequestApprovalStateChanged   PullRequestEventTypeEnum = "PULL_REQUEST_APPROVAL_STATE_CHANGED"
 )
 
+func (e PullRequestEventTypeEnum) ToPointer() *PullRequestEventTypeEnum {
+	return &e
+}
+
 func (e *PullRequestEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PULL_REQUEST_CREATED":
 		fallthrough
 	case "PULL_REQUEST_STATUS_CHANGED":
@@ -44,9 +48,9 @@ func (e *PullRequestEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PULL_REQUEST_APPROVAL_RULE_OVERRIDDEN":
 		fallthrough
 	case "PULL_REQUEST_APPROVAL_STATE_CHANGED":
-		*e = PullRequestEventTypeEnum(s)
+		*e = PullRequestEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullRequestEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PullRequestEventTypeEnum: %v", v)
 	}
 }

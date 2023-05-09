@@ -18,12 +18,16 @@ const (
 	AttributeMetadataValueTypeEnumRepeatedEnum                  AttributeMetadataValueTypeEnum = "REPEATED_ENUM"
 )
 
+func (e AttributeMetadataValueTypeEnum) ToPointer() *AttributeMetadataValueTypeEnum {
+	return &e
+}
+
 func (e *AttributeMetadataValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTRIBUTE_VALUE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BOOL":
@@ -33,10 +37,10 @@ func (e *AttributeMetadataValueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "URL":
 		fallthrough
 	case "REPEATED_ENUM":
-		*e = AttributeMetadataValueTypeEnum(s)
+		*e = AttributeMetadataValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttributeMetadataValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttributeMetadataValueTypeEnum: %v", v)
 	}
 }
 

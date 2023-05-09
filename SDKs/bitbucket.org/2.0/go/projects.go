@@ -46,7 +46,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ```
 func (s *projects) DeleteWorkspacesWorkspaceProjectsProjectKey(ctx context.Context, request operations.DeleteWorkspacesWorkspaceProjectsProjectKeyRequest, security operations.DeleteWorkspacesWorkspaceProjectsProjectKeySecurity) (*operations.DeleteWorkspacesWorkspaceProjectsProjectKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -101,7 +104,10 @@ func (s *projects) DeleteWorkspacesWorkspaceProjectsProjectKey(ctx context.Conte
 // ```
 func (s *projects) DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser(ctx context.Context, request operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest, security operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserSecurity) (*operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -151,7 +157,10 @@ func (s *projects) DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSe
 // Returns the requested project.
 func (s *projects) GetWorkspacesWorkspaceProjectsProjectKey(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest, security operations.GetWorkspacesWorkspaceProjectsProjectKeySecurity) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -241,7 +250,10 @@ func (s *projects) GetWorkspacesWorkspaceProjectsProjectKey(ctx context.Context,
 // ```
 func (s *projects) GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewers(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersRequest, security operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSecurity) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/default-reviewers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/default-reviewers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -310,7 +322,10 @@ func (s *projects) GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewers(ctx 
 // ```
 func (s *projects) GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest, security operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserSecurity) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -432,7 +447,10 @@ func (s *projects) GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelec
 // ```
 func (s *projects) PostWorkspacesWorkspaceProjects(ctx context.Context, request operations.PostWorkspacesWorkspaceProjectsRequest, security operations.PostWorkspacesWorkspaceProjectsSecurity) (*operations.PostWorkspacesWorkspaceProjectsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -522,7 +540,10 @@ func (s *projects) PostWorkspacesWorkspaceProjects(ctx context.Context, request 
 // response.
 func (s *projects) PutWorkspacesWorkspaceProjectsProjectKey(ctx context.Context, request operations.PutWorkspacesWorkspaceProjectsProjectKeyRequest, security operations.PutWorkspacesWorkspaceProjectsProjectKeySecurity) (*operations.PutWorkspacesWorkspaceProjectsProjectKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -602,7 +623,10 @@ func (s *projects) PutWorkspacesWorkspaceProjectsProjectKey(ctx context.Context,
 // ```
 func (s *projects) PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser(ctx context.Context, request operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest, security operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserSecurity) (*operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

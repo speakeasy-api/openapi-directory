@@ -16,17 +16,21 @@ const (
 	ListBudgetsForResourceXAmzTargetEnumAws242ServiceCatalogServiceListBudgetsForResource ListBudgetsForResourceXAmzTargetEnum = "AWS242ServiceCatalogService.ListBudgetsForResource"
 )
 
+func (e ListBudgetsForResourceXAmzTargetEnum) ToPointer() *ListBudgetsForResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListBudgetsForResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.ListBudgetsForResource":
-		*e = ListBudgetsForResourceXAmzTargetEnum(s)
+		*e = ListBudgetsForResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListBudgetsForResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListBudgetsForResourceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -22,12 +22,16 @@ const (
 	HeterogeneousTargetDatabaseEngineEnumMongoDb            HeterogeneousTargetDatabaseEngineEnum = "MongoDB"
 )
 
+func (e HeterogeneousTargetDatabaseEngineEnum) ToPointer() *HeterogeneousTargetDatabaseEngineEnum {
+	return &e
+}
+
 func (e *HeterogeneousTargetDatabaseEngineEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None specified":
 		fallthrough
 	case "Amazon Aurora":
@@ -47,9 +51,9 @@ func (e *HeterogeneousTargetDatabaseEngineEnum) UnmarshalJSON(data []byte) error
 	case "Db2 LUW":
 		fallthrough
 	case "MongoDB":
-		*e = HeterogeneousTargetDatabaseEngineEnum(s)
+		*e = HeterogeneousTargetDatabaseEngineEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HeterogeneousTargetDatabaseEngineEnum: %s", s)
+		return fmt.Errorf("invalid value for HeterogeneousTargetDatabaseEngineEnum: %v", v)
 	}
 }

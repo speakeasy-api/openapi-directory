@@ -81,7 +81,10 @@ func (s *currencies) GetCurrencies(ctx context.Context) (*operations.GetCurrenci
 // Gets a particular currency by its ID.
 func (s *currencies) GetCurrenciesID(ctx context.Context, request operations.GetCurrenciesIDRequest) (*operations.GetCurrenciesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/currencies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/currencies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

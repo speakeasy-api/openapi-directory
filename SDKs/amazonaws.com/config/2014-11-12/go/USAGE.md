@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,45 +17,43 @@ func main() {
         }),
     )
 
-    req := operations.BatchGetAggregateResourceConfigRequest{
+    ctx := context.Background()
+    res, err := s.BatchGetAggregateResourceConfig(ctx, operations.BatchGetAggregateResourceConfigRequest{
         BatchGetAggregateResourceConfigRequest: shared.BatchGetAggregateResourceConfigRequest{
             ConfigurationAggregatorName: "corrupti",
             ResourceIdentifiers: []shared.AggregateResourceIdentifier{
                 shared.AggregateResourceIdentifier{
                     ResourceID: "distinctio",
-                    ResourceName: "quibusdam",
-                    ResourceType: "AWS::DataSync::LocationNFS",
+                    ResourceName: sdk.String("quibusdam"),
+                    ResourceType: shared.ResourceTypeEnumAwsIoTEventsDetectorModel,
                     SourceAccountID: "nulla",
                     SourceRegion: "corrupti",
                 },
                 shared.AggregateResourceIdentifier{
                     ResourceID: "illum",
-                    ResourceName: "vel",
-                    ResourceType: "AWS::GuardDuty::IPSet",
+                    ResourceName: sdk.String("vel"),
+                    ResourceType: shared.ResourceTypeEnumAwsImageBuilderDistributionConfiguration,
                     SourceAccountID: "deserunt",
                     SourceRegion: "suscipit",
                 },
                 shared.AggregateResourceIdentifier{
                     ResourceID: "iure",
-                    ResourceName: "magnam",
-                    ResourceType: "AWS::IoTSiteWise::Dashboard",
+                    ResourceName: sdk.String("magnam"),
+                    ResourceType: shared.ResourceTypeEnumAwsIoTAccountAuditConfiguration,
                     SourceAccountID: "ipsa",
                     SourceRegion: "delectus",
                 },
             },
         },
-        XAmzAlgorithm: "tempora",
-        XAmzContentSha256: "suscipit",
-        XAmzCredential: "molestiae",
-        XAmzDate: "minus",
-        XAmzSecurityToken: "placeat",
-        XAmzSignature: "voluptatum",
-        XAmzSignedHeaders: "iusto",
-        XAmzTarget: "StarlingDoveService.BatchGetAggregateResourceConfig",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchGetAggregateResourceConfig(ctx, req)
+        XAmzAlgorithm: sdk.String("tempora"),
+        XAmzContentSha256: sdk.String("suscipit"),
+        XAmzCredential: sdk.String("molestiae"),
+        XAmzDate: sdk.String("minus"),
+        XAmzSecurityToken: sdk.String("placeat"),
+        XAmzSignature: sdk.String("voluptatum"),
+        XAmzSignedHeaders: sdk.String("iusto"),
+        XAmzTarget: operations.BatchGetAggregateResourceConfigXAmzTargetEnumStarlingDoveServiceBatchGetAggregateResourceConfig,
+    })
     if err != nil {
         log.Fatal(err)
     }

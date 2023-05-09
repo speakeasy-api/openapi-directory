@@ -16,19 +16,23 @@ const (
 	IndividualNameDirectionEnumRightToLeft IndividualNameDirectionEnum = "right-to-left"
 )
 
+func (e IndividualNameDirectionEnum) ToPointer() *IndividualNameDirectionEnum {
+	return &e
+}
+
 func (e *IndividualNameDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "left-to-right":
 		fallthrough
 	case "right-to-left":
-		*e = IndividualNameDirectionEnum(s)
+		*e = IndividualNameDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IndividualNameDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for IndividualNameDirectionEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	IndividualNameNamePrefixEnumMs IndividualNameNamePrefixEnum = "Ms"
 )
 
+func (e IndividualNameNamePrefixEnum) ToPointer() *IndividualNameNamePrefixEnum {
+	return &e
+}
+
 func (e *IndividualNameNamePrefixEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Mr":
 		fallthrough
 	case "Ms":
-		*e = IndividualNameNamePrefixEnum(s)
+		*e = IndividualNameNamePrefixEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IndividualNameNamePrefixEnum: %s", s)
+		return fmt.Errorf("invalid value for IndividualNameNamePrefixEnum: %v", v)
 	}
 }
 
@@ -64,19 +72,23 @@ const (
 	IndividualNameNameTypeEnumPrincipalName IndividualNameNameTypeEnum = "Principal Name"
 )
 
+func (e IndividualNameNameTypeEnum) ToPointer() *IndividualNameNameTypeEnum {
+	return &e
+}
+
 func (e *IndividualNameNameTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Alias":
 		fallthrough
 	case "Principal Name":
-		*e = IndividualNameNameTypeEnum(s)
+		*e = IndividualNameNameTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IndividualNameNameTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IndividualNameNameTypeEnum: %v", v)
 	}
 }
 

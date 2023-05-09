@@ -20,21 +20,25 @@ const (
 	TeamsUpdatePermissionsRequestBodyPermissionsEnumViewer    TeamsUpdatePermissionsRequestBodyPermissionsEnum = "viewer"
 )
 
+func (e TeamsUpdatePermissionsRequestBodyPermissionsEnum) ToPointer() *TeamsUpdatePermissionsRequestBodyPermissionsEnum {
+	return &e
+}
+
 func (e *TeamsUpdatePermissionsRequestBodyPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
 		fallthrough
 	case "viewer":
-		*e = TeamsUpdatePermissionsRequestBodyPermissionsEnum(s)
+		*e = TeamsUpdatePermissionsRequestBodyPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsUpdatePermissionsRequestBodyPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsUpdatePermissionsRequestBodyPermissionsEnum: %v", v)
 	}
 }
 
@@ -65,12 +69,16 @@ const (
 	TeamsUpdatePermissionsDefaultApplicationJSONErrorCodeEnumTooManyRequests     TeamsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e TeamsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum) ToPointer() *TeamsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *TeamsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -84,10 +92,10 @@ func (e *TeamsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSO
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = TeamsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum(s)
+		*e = TeamsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -125,12 +133,16 @@ const (
 	TeamsUpdatePermissions200ApplicationJSONMemberPermissionsEnumTester    TeamsUpdatePermissions200ApplicationJSONMemberPermissionsEnum = "tester"
 )
 
+func (e TeamsUpdatePermissions200ApplicationJSONMemberPermissionsEnum) ToPointer() *TeamsUpdatePermissions200ApplicationJSONMemberPermissionsEnum {
+	return &e
+}
+
 func (e *TeamsUpdatePermissions200ApplicationJSONMemberPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
@@ -138,10 +150,10 @@ func (e *TeamsUpdatePermissions200ApplicationJSONMemberPermissionsEnum) Unmarsha
 	case "viewer":
 		fallthrough
 	case "tester":
-		*e = TeamsUpdatePermissions200ApplicationJSONMemberPermissionsEnum(s)
+		*e = TeamsUpdatePermissions200ApplicationJSONMemberPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsUpdatePermissions200ApplicationJSONMemberPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsUpdatePermissions200ApplicationJSONMemberPermissionsEnum: %v", v)
 	}
 }
 
@@ -154,21 +166,25 @@ const (
 	TeamsUpdatePermissions200ApplicationJSONOriginEnumCodepush  TeamsUpdatePermissions200ApplicationJSONOriginEnum = "codepush"
 )
 
+func (e TeamsUpdatePermissions200ApplicationJSONOriginEnum) ToPointer() *TeamsUpdatePermissions200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *TeamsUpdatePermissions200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
 		fallthrough
 	case "codepush":
-		*e = TeamsUpdatePermissions200ApplicationJSONOriginEnum(s)
+		*e = TeamsUpdatePermissions200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsUpdatePermissions200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsUpdatePermissions200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -186,12 +202,16 @@ const (
 	TeamsUpdatePermissions200ApplicationJSONOsEnumCustom  TeamsUpdatePermissions200ApplicationJSONOsEnum = "Custom"
 )
 
+func (e TeamsUpdatePermissions200ApplicationJSONOsEnum) ToPointer() *TeamsUpdatePermissions200ApplicationJSONOsEnum {
+	return &e
+}
+
 func (e *TeamsUpdatePermissions200ApplicationJSONOsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Android":
 		fallthrough
 	case "iOS":
@@ -207,10 +227,10 @@ func (e *TeamsUpdatePermissions200ApplicationJSONOsEnum) UnmarshalJSON(data []by
 	case "Linux":
 		fallthrough
 	case "Custom":
-		*e = TeamsUpdatePermissions200ApplicationJSONOsEnum(s)
+		*e = TeamsUpdatePermissions200ApplicationJSONOsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsUpdatePermissions200ApplicationJSONOsEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsUpdatePermissions200ApplicationJSONOsEnum: %v", v)
 	}
 }
 
@@ -222,19 +242,23 @@ const (
 	TeamsUpdatePermissions200ApplicationJSONOwnerTypeEnumUser TeamsUpdatePermissions200ApplicationJSONOwnerTypeEnum = "user"
 )
 
+func (e TeamsUpdatePermissions200ApplicationJSONOwnerTypeEnum) ToPointer() *TeamsUpdatePermissions200ApplicationJSONOwnerTypeEnum {
+	return &e
+}
+
 func (e *TeamsUpdatePermissions200ApplicationJSONOwnerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "org":
 		fallthrough
 	case "user":
-		*e = TeamsUpdatePermissions200ApplicationJSONOwnerTypeEnum(s)
+		*e = TeamsUpdatePermissions200ApplicationJSONOwnerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsUpdatePermissions200ApplicationJSONOwnerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsUpdatePermissions200ApplicationJSONOwnerTypeEnum: %v", v)
 	}
 }
 
@@ -272,12 +296,16 @@ const (
 	TeamsUpdatePermissions200ApplicationJSONPlatformEnumCustom          TeamsUpdatePermissions200ApplicationJSONPlatformEnum = "Custom"
 )
 
+func (e TeamsUpdatePermissions200ApplicationJSONPlatformEnum) ToPointer() *TeamsUpdatePermissions200ApplicationJSONPlatformEnum {
+	return &e
+}
+
 func (e *TeamsUpdatePermissions200ApplicationJSONPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Java":
 		fallthrough
 	case "Objective-C-Swift":
@@ -301,10 +329,10 @@ func (e *TeamsUpdatePermissions200ApplicationJSONPlatformEnum) UnmarshalJSON(dat
 	case "Unknown":
 		fallthrough
 	case "Custom":
-		*e = TeamsUpdatePermissions200ApplicationJSONPlatformEnum(s)
+		*e = TeamsUpdatePermissions200ApplicationJSONPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsUpdatePermissions200ApplicationJSONPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsUpdatePermissions200ApplicationJSONPlatformEnum: %v", v)
 	}
 }
 
@@ -316,21 +344,25 @@ const (
 	TeamsUpdatePermissions200ApplicationJSONTeamPermissionsEnumViewer    TeamsUpdatePermissions200ApplicationJSONTeamPermissionsEnum = "viewer"
 )
 
+func (e TeamsUpdatePermissions200ApplicationJSONTeamPermissionsEnum) ToPointer() *TeamsUpdatePermissions200ApplicationJSONTeamPermissionsEnum {
+	return &e
+}
+
 func (e *TeamsUpdatePermissions200ApplicationJSONTeamPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
 		fallthrough
 	case "viewer":
-		*e = TeamsUpdatePermissions200ApplicationJSONTeamPermissionsEnum(s)
+		*e = TeamsUpdatePermissions200ApplicationJSONTeamPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsUpdatePermissions200ApplicationJSONTeamPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsUpdatePermissions200ApplicationJSONTeamPermissionsEnum: %v", v)
 	}
 }
 

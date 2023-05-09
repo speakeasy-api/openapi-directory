@@ -89,7 +89,10 @@ func (s *isOs) GetIsos(ctx context.Context, request operations.GetIsosRequest) (
 // Returns a specific ISO object.
 func (s *isOs) GetIsosID(ctx context.Context, request operations.GetIsosIDRequest) (*operations.GetIsosIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/isos/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/isos/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

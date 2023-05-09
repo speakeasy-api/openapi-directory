@@ -27,19 +27,23 @@ const (
 	CreateSinglePaymentIntentRequestBodyPaymentTypeEnumElectronicFundTransfer CreateSinglePaymentIntentRequestBodyPaymentTypeEnum = "electronic_fund_transfer"
 )
 
+func (e CreateSinglePaymentIntentRequestBodyPaymentTypeEnum) ToPointer() *CreateSinglePaymentIntentRequestBodyPaymentTypeEnum {
+	return &e
+}
+
 func (e *CreateSinglePaymentIntentRequestBodyPaymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card":
 		fallthrough
 	case "electronic_fund_transfer":
-		*e = CreateSinglePaymentIntentRequestBodyPaymentTypeEnum(s)
+		*e = CreateSinglePaymentIntentRequestBodyPaymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSinglePaymentIntentRequestBodyPaymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSinglePaymentIntentRequestBodyPaymentTypeEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	CreateSinglePaymentIntentRequestBodyPurposeEnumInvest CreateSinglePaymentIntentRequestBodyPurposeEnum = "invest"
 )
 
+func (e CreateSinglePaymentIntentRequestBodyPurposeEnum) ToPointer() *CreateSinglePaymentIntentRequestBodyPurposeEnum {
+	return &e
+}
+
 func (e *CreateSinglePaymentIntentRequestBodyPurposeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cash":
 		fallthrough
 	case "invest":
-		*e = CreateSinglePaymentIntentRequestBodyPurposeEnum(s)
+		*e = CreateSinglePaymentIntentRequestBodyPurposeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSinglePaymentIntentRequestBodyPurposeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSinglePaymentIntentRequestBodyPurposeEnum: %v", v)
 	}
 }
 
@@ -74,21 +82,25 @@ const (
 	CreateSinglePaymentIntentRequestBodyServiceProviderEnumNone      CreateSinglePaymentIntentRequestBodyServiceProviderEnum = "none"
 )
 
+func (e CreateSinglePaymentIntentRequestBodyServiceProviderEnum) ToPointer() *CreateSinglePaymentIntentRequestBodyServiceProviderEnum {
+	return &e
+}
+
 func (e *CreateSinglePaymentIntentRequestBodyServiceProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stripe":
 		fallthrough
 	case "truelayer":
 		fallthrough
 	case "none":
-		*e = CreateSinglePaymentIntentRequestBodyServiceProviderEnum(s)
+		*e = CreateSinglePaymentIntentRequestBodyServiceProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSinglePaymentIntentRequestBodyServiceProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSinglePaymentIntentRequestBodyServiceProviderEnum: %v", v)
 	}
 }
 
@@ -145,19 +157,23 @@ const (
 	CreateSinglePaymentIntent409ApplicationJSONStatusEnumComplete   CreateSinglePaymentIntent409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e CreateSinglePaymentIntent409ApplicationJSONStatusEnum) ToPointer() *CreateSinglePaymentIntent409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *CreateSinglePaymentIntent409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = CreateSinglePaymentIntent409ApplicationJSONStatusEnum(s)
+		*e = CreateSinglePaymentIntent409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSinglePaymentIntent409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSinglePaymentIntent409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -210,19 +226,23 @@ const (
 	CreateSinglePaymentIntent201ApplicationJSONPaymentTypeEnumElectronicFundTransfer CreateSinglePaymentIntent201ApplicationJSONPaymentTypeEnum = "electronic_fund_transfer"
 )
 
+func (e CreateSinglePaymentIntent201ApplicationJSONPaymentTypeEnum) ToPointer() *CreateSinglePaymentIntent201ApplicationJSONPaymentTypeEnum {
+	return &e
+}
+
 func (e *CreateSinglePaymentIntent201ApplicationJSONPaymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card":
 		fallthrough
 	case "electronic_fund_transfer":
-		*e = CreateSinglePaymentIntent201ApplicationJSONPaymentTypeEnum(s)
+		*e = CreateSinglePaymentIntent201ApplicationJSONPaymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSinglePaymentIntent201ApplicationJSONPaymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSinglePaymentIntent201ApplicationJSONPaymentTypeEnum: %v", v)
 	}
 }
 
@@ -233,19 +253,23 @@ const (
 	CreateSinglePaymentIntent201ApplicationJSONPurposeEnumInvest CreateSinglePaymentIntent201ApplicationJSONPurposeEnum = "invest"
 )
 
+func (e CreateSinglePaymentIntent201ApplicationJSONPurposeEnum) ToPointer() *CreateSinglePaymentIntent201ApplicationJSONPurposeEnum {
+	return &e
+}
+
 func (e *CreateSinglePaymentIntent201ApplicationJSONPurposeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cash":
 		fallthrough
 	case "invest":
-		*e = CreateSinglePaymentIntent201ApplicationJSONPurposeEnum(s)
+		*e = CreateSinglePaymentIntent201ApplicationJSONPurposeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSinglePaymentIntent201ApplicationJSONPurposeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSinglePaymentIntent201ApplicationJSONPurposeEnum: %v", v)
 	}
 }
 
@@ -257,21 +281,25 @@ const (
 	CreateSinglePaymentIntent201ApplicationJSONServiceProviderEnumNone      CreateSinglePaymentIntent201ApplicationJSONServiceProviderEnum = "none"
 )
 
+func (e CreateSinglePaymentIntent201ApplicationJSONServiceProviderEnum) ToPointer() *CreateSinglePaymentIntent201ApplicationJSONServiceProviderEnum {
+	return &e
+}
+
 func (e *CreateSinglePaymentIntent201ApplicationJSONServiceProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stripe":
 		fallthrough
 	case "truelayer":
 		fallthrough
 	case "none":
-		*e = CreateSinglePaymentIntent201ApplicationJSONServiceProviderEnum(s)
+		*e = CreateSinglePaymentIntent201ApplicationJSONServiceProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSinglePaymentIntent201ApplicationJSONServiceProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSinglePaymentIntent201ApplicationJSONServiceProviderEnum: %v", v)
 	}
 }
 
@@ -297,21 +325,25 @@ const (
 	CreateSinglePaymentIntent201ApplicationJSONStatusEnumSucceeded           CreateSinglePaymentIntent201ApplicationJSONStatusEnum = "succeeded"
 )
 
+func (e CreateSinglePaymentIntent201ApplicationJSONStatusEnum) ToPointer() *CreateSinglePaymentIntent201ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *CreateSinglePaymentIntent201ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending_confirmation":
 		fallthrough
 	case "processing":
 		fallthrough
 	case "succeeded":
-		*e = CreateSinglePaymentIntent201ApplicationJSONStatusEnum(s)
+		*e = CreateSinglePaymentIntent201ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSinglePaymentIntent201ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSinglePaymentIntent201ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

@@ -16,19 +16,23 @@ const (
 	GetSuggestedEditsOrderEnumAsc  GetSuggestedEditsOrderEnum = "asc"
 )
 
+func (e GetSuggestedEditsOrderEnum) ToPointer() *GetSuggestedEditsOrderEnum {
+	return &e
+}
+
 func (e *GetSuggestedEditsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetSuggestedEditsOrderEnum(s)
+		*e = GetSuggestedEditsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSuggestedEditsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSuggestedEditsOrderEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	GetSuggestedEditsSortEnumRejection GetSuggestedEditsSortEnum = "rejection"
 )
 
+func (e GetSuggestedEditsSortEnum) ToPointer() *GetSuggestedEditsSortEnum {
+	return &e
+}
+
 func (e *GetSuggestedEditsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creation":
 		fallthrough
 	case "approval":
 		fallthrough
 	case "rejection":
-		*e = GetSuggestedEditsSortEnum(s)
+		*e = GetSuggestedEditsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSuggestedEditsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSuggestedEditsSortEnum: %v", v)
 	}
 }
 

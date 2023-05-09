@@ -18,12 +18,16 @@ const (
 	AdURLTypeEnumAdURLTypeBeaconSkip                    AdURLTypeEnum = "AD_URL_TYPE_BEACON_SKIP"
 )
 
+func (e AdURLTypeEnum) ToPointer() *AdURLTypeEnum {
+	return &e
+}
+
 func (e *AdURLTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AD_URL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AD_URL_TYPE_BEACON_IMPRESSION":
@@ -33,10 +37,10 @@ func (e *AdURLTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AD_URL_TYPE_BEACON_CLICK":
 		fallthrough
 	case "AD_URL_TYPE_BEACON_SKIP":
-		*e = AdURLTypeEnum(s)
+		*e = AdURLTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdURLTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdURLTypeEnum: %v", v)
 	}
 }
 

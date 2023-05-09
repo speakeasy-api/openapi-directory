@@ -16,17 +16,21 @@ const (
 	AllocateStaticIPXAmzTargetEnumLightsail20161128AllocateStaticIP AllocateStaticIPXAmzTargetEnum = "Lightsail_20161128.AllocateStaticIp"
 )
 
+func (e AllocateStaticIPXAmzTargetEnum) ToPointer() *AllocateStaticIPXAmzTargetEnum {
+	return &e
+}
+
 func (e *AllocateStaticIPXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.AllocateStaticIp":
-		*e = AllocateStaticIPXAmzTargetEnum(s)
+		*e = AllocateStaticIPXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllocateStaticIPXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AllocateStaticIPXAmzTargetEnum: %v", v)
 	}
 }
 

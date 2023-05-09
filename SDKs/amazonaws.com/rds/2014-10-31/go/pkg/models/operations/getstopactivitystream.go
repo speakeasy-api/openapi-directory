@@ -15,17 +15,21 @@ const (
 	GETStopActivityStreamActionEnumStopActivityStream GETStopActivityStreamActionEnum = "StopActivityStream"
 )
 
+func (e GETStopActivityStreamActionEnum) ToPointer() *GETStopActivityStreamActionEnum {
+	return &e
+}
+
 func (e *GETStopActivityStreamActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StopActivityStream":
-		*e = GETStopActivityStreamActionEnum(s)
+		*e = GETStopActivityStreamActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStopActivityStreamActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStopActivityStreamActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETStopActivityStreamVersionEnumTwoThousandAndFourteen1031 GETStopActivityStreamVersionEnum = "2014-10-31"
 )
 
+func (e GETStopActivityStreamVersionEnum) ToPointer() *GETStopActivityStreamVersionEnum {
+	return &e
+}
+
 func (e *GETStopActivityStreamVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETStopActivityStreamVersionEnum(s)
+		*e = GETStopActivityStreamVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStopActivityStreamVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStopActivityStreamVersionEnum: %v", v)
 	}
 }
 

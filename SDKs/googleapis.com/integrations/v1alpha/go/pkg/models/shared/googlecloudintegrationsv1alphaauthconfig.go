@@ -25,12 +25,16 @@ const (
 	GoogleCloudIntegrationsV1alphaAuthConfigCredentialTypeEnumOidcToken                      GoogleCloudIntegrationsV1alphaAuthConfigCredentialTypeEnum = "OIDC_TOKEN"
 )
 
+func (e GoogleCloudIntegrationsV1alphaAuthConfigCredentialTypeEnum) ToPointer() *GoogleCloudIntegrationsV1alphaAuthConfigCredentialTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaAuthConfigCredentialTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREDENTIAL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "USERNAME_AND_PASSWORD":
@@ -54,10 +58,10 @@ func (e *GoogleCloudIntegrationsV1alphaAuthConfigCredentialTypeEnum) UnmarshalJS
 	case "CLIENT_CERTIFICATE_ONLY":
 		fallthrough
 	case "OIDC_TOKEN":
-		*e = GoogleCloudIntegrationsV1alphaAuthConfigCredentialTypeEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaAuthConfigCredentialTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaAuthConfigCredentialTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaAuthConfigCredentialTypeEnum: %v", v)
 	}
 }
 
@@ -74,12 +78,16 @@ const (
 	GoogleCloudIntegrationsV1alphaAuthConfigStateEnumUnsupported      GoogleCloudIntegrationsV1alphaAuthConfigStateEnum = "UNSUPPORTED"
 )
 
+func (e GoogleCloudIntegrationsV1alphaAuthConfigStateEnum) ToPointer() *GoogleCloudIntegrationsV1alphaAuthConfigStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaAuthConfigStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "VALID":
@@ -93,10 +101,10 @@ func (e *GoogleCloudIntegrationsV1alphaAuthConfigStateEnum) UnmarshalJSON(data [
 	case "UNAUTHORIZED":
 		fallthrough
 	case "UNSUPPORTED":
-		*e = GoogleCloudIntegrationsV1alphaAuthConfigStateEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaAuthConfigStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaAuthConfigStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaAuthConfigStateEnum: %v", v)
 	}
 }
 
@@ -109,21 +117,25 @@ const (
 	GoogleCloudIntegrationsV1alphaAuthConfigVisibilityEnumClientVisible                   GoogleCloudIntegrationsV1alphaAuthConfigVisibilityEnum = "CLIENT_VISIBLE"
 )
 
+func (e GoogleCloudIntegrationsV1alphaAuthConfigVisibilityEnum) ToPointer() *GoogleCloudIntegrationsV1alphaAuthConfigVisibilityEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaAuthConfigVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTH_CONFIG_VISIBILITY_UNSPECIFIED":
 		fallthrough
 	case "PRIVATE":
 		fallthrough
 	case "CLIENT_VISIBLE":
-		*e = GoogleCloudIntegrationsV1alphaAuthConfigVisibilityEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaAuthConfigVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaAuthConfigVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaAuthConfigVisibilityEnum: %v", v)
 	}
 }
 

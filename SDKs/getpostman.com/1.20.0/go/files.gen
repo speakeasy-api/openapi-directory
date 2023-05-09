@@ -14,6 +14,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -80,4 +81,17 @@ pkg/models/operations/createworkspace.go
 pkg/models/operations/deleteworkspace.go
 pkg/models/operations/singleworkspace.go
 pkg/models/operations/updateworkspace.go
+docs/sdk/README.md
+docs/api/README.md
+docs/apiversion/README.md
+docs/collections/README.md
+docs/environments/README.md
+docs/import/README.md
+docs/mocks/README.md
+docs/monitors/README.md
+docs/relations/README.md
+docs/schema/README.md
+docs/user/README.md
+docs/webhooks/README.md
+docs/workspaces/README.md
 USAGE.md

@@ -21,12 +21,16 @@ const (
 	ServiceMeshDataPlaneManagementStateEnumDegraded                  ServiceMeshDataPlaneManagementStateEnum = "DEGRADED"
 )
 
+func (e ServiceMeshDataPlaneManagementStateEnum) ToPointer() *ServiceMeshDataPlaneManagementStateEnum {
+	return &e
+}
+
 func (e *ServiceMeshDataPlaneManagementStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIFECYCLE_STATE_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
@@ -42,10 +46,10 @@ func (e *ServiceMeshDataPlaneManagementStateEnum) UnmarshalJSON(data []byte) err
 	case "NEEDS_ATTENTION":
 		fallthrough
 	case "DEGRADED":
-		*e = ServiceMeshDataPlaneManagementStateEnum(s)
+		*e = ServiceMeshDataPlaneManagementStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceMeshDataPlaneManagementStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceMeshDataPlaneManagementStateEnum: %v", v)
 	}
 }
 

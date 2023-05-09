@@ -19,12 +19,16 @@ const (
 	EnableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnumTgwPeering           EnableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnum = "tgw-peering"
 )
 
+func (e EnableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnum) ToPointer() *EnableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnum {
+	return &e
+}
+
 func (e *EnableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "vpn":
@@ -36,10 +40,10 @@ func (e *EnableTransitGatewayRouteTablePropagationResultPropagationResourceTypeE
 	case "peering":
 		fallthrough
 	case "tgw-peering":
-		*e = EnableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnum(s)
+		*e = EnableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnableTransitGatewayRouteTablePropagationResultPropagationResourceTypeEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	EnableTransitGatewayRouteTablePropagationResultPropagationStateEnumDisabled  EnableTransitGatewayRouteTablePropagationResultPropagationStateEnum = "disabled"
 )
 
+func (e EnableTransitGatewayRouteTablePropagationResultPropagationStateEnum) ToPointer() *EnableTransitGatewayRouteTablePropagationResultPropagationStateEnum {
+	return &e
+}
+
 func (e *EnableTransitGatewayRouteTablePropagationResultPropagationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabling":
 		fallthrough
 	case "enabled":
@@ -66,10 +74,10 @@ func (e *EnableTransitGatewayRouteTablePropagationResultPropagationStateEnum) Un
 	case "disabling":
 		fallthrough
 	case "disabled":
-		*e = EnableTransitGatewayRouteTablePropagationResultPropagationStateEnum(s)
+		*e = EnableTransitGatewayRouteTablePropagationResultPropagationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnableTransitGatewayRouteTablePropagationResultPropagationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for EnableTransitGatewayRouteTablePropagationResultPropagationStateEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	ModelPackageGroupStatusEnumDeleteFailed ModelPackageGroupStatusEnum = "DeleteFailed"
 )
 
+func (e ModelPackageGroupStatusEnum) ToPointer() *ModelPackageGroupStatusEnum {
+	return &e
+}
+
 func (e *ModelPackageGroupStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "InProgress":
@@ -35,9 +39,9 @@ func (e *ModelPackageGroupStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Deleting":
 		fallthrough
 	case "DeleteFailed":
-		*e = ModelPackageGroupStatusEnum(s)
+		*e = ModelPackageGroupStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelPackageGroupStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelPackageGroupStatusEnum: %v", v)
 	}
 }

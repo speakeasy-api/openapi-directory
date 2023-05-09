@@ -15,17 +15,21 @@ const (
 	POSTSetIdentityFeedbackForwardingEnabledActionEnumSetIdentityFeedbackForwardingEnabled POSTSetIdentityFeedbackForwardingEnabledActionEnum = "SetIdentityFeedbackForwardingEnabled"
 )
 
+func (e POSTSetIdentityFeedbackForwardingEnabledActionEnum) ToPointer() *POSTSetIdentityFeedbackForwardingEnabledActionEnum {
+	return &e
+}
+
 func (e *POSTSetIdentityFeedbackForwardingEnabledActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetIdentityFeedbackForwardingEnabled":
-		*e = POSTSetIdentityFeedbackForwardingEnabledActionEnum(s)
+		*e = POSTSetIdentityFeedbackForwardingEnabledActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetIdentityFeedbackForwardingEnabledActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetIdentityFeedbackForwardingEnabledActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSetIdentityFeedbackForwardingEnabledVersionEnumTwoThousandAndTen1201 POSTSetIdentityFeedbackForwardingEnabledVersionEnum = "2010-12-01"
 )
 
+func (e POSTSetIdentityFeedbackForwardingEnabledVersionEnum) ToPointer() *POSTSetIdentityFeedbackForwardingEnabledVersionEnum {
+	return &e
+}
+
 func (e *POSTSetIdentityFeedbackForwardingEnabledVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTSetIdentityFeedbackForwardingEnabledVersionEnum(s)
+		*e = POSTSetIdentityFeedbackForwardingEnabledVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetIdentityFeedbackForwardingEnabledVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetIdentityFeedbackForwardingEnabledVersionEnum: %v", v)
 	}
 }
 

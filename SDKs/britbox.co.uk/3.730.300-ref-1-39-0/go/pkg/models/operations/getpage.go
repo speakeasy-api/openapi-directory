@@ -35,21 +35,25 @@ const (
 	GetPageItemDetailExpandEnumAncestors GetPageItemDetailExpandEnum = "ancestors"
 )
 
+func (e GetPageItemDetailExpandEnum) ToPointer() *GetPageItemDetailExpandEnum {
+	return &e
+}
+
 func (e *GetPageItemDetailExpandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "children":
 		fallthrough
 	case "ancestors":
-		*e = GetPageItemDetailExpandEnum(s)
+		*e = GetPageItemDetailExpandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPageItemDetailExpandEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPageItemDetailExpandEnum: %v", v)
 	}
 }
 
@@ -75,19 +79,23 @@ const (
 	GetPageItemDetailSelectSeasonEnumLatest GetPageItemDetailSelectSeasonEnum = "latest"
 )
 
+func (e GetPageItemDetailSelectSeasonEnum) ToPointer() *GetPageItemDetailSelectSeasonEnum {
+	return &e
+}
+
 func (e *GetPageItemDetailSelectSeasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "first":
 		fallthrough
 	case "latest":
-		*e = GetPageItemDetailSelectSeasonEnum(s)
+		*e = GetPageItemDetailSelectSeasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPageItemDetailSelectSeasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPageItemDetailSelectSeasonEnum: %v", v)
 	}
 }
 
@@ -101,19 +109,23 @@ const (
 	GetPageTextEntryFormatEnumHTML     GetPageTextEntryFormatEnum = "html"
 )
 
+func (e GetPageTextEntryFormatEnum) ToPointer() *GetPageTextEntryFormatEnum {
+	return &e
+}
+
 func (e *GetPageTextEntryFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "markdown":
 		fallthrough
 	case "html":
-		*e = GetPageTextEntryFormatEnum(s)
+		*e = GetPageTextEntryFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPageTextEntryFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPageTextEntryFormatEnum: %v", v)
 	}
 }
 

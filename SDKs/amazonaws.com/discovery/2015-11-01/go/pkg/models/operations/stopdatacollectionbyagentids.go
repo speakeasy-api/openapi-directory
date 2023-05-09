@@ -16,17 +16,21 @@ const (
 	StopDataCollectionByAgentIdsXAmzTargetEnumAwsPoseidonServiceV20151101StopDataCollectionByAgentIds StopDataCollectionByAgentIdsXAmzTargetEnum = "AWSPoseidonService_V2015_11_01.StopDataCollectionByAgentIds"
 )
 
+func (e StopDataCollectionByAgentIdsXAmzTargetEnum) ToPointer() *StopDataCollectionByAgentIdsXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopDataCollectionByAgentIdsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPoseidonService_V2015_11_01.StopDataCollectionByAgentIds":
-		*e = StopDataCollectionByAgentIdsXAmzTargetEnum(s)
+		*e = StopDataCollectionByAgentIdsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopDataCollectionByAgentIdsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopDataCollectionByAgentIdsXAmzTargetEnum: %v", v)
 	}
 }
 

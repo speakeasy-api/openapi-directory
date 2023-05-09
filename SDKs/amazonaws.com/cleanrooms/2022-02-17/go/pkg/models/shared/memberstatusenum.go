@@ -16,12 +16,16 @@ const (
 	MemberStatusEnumRemoved MemberStatusEnum = "REMOVED"
 )
 
+func (e MemberStatusEnum) ToPointer() *MemberStatusEnum {
+	return &e
+}
+
 func (e *MemberStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVITED":
 		fallthrough
 	case "ACTIVE":
@@ -29,9 +33,9 @@ func (e *MemberStatusEnum) UnmarshalJSON(data []byte) error {
 	case "LEFT":
 		fallthrough
 	case "REMOVED":
-		*e = MemberStatusEnum(s)
+		*e = MemberStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MemberStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MemberStatusEnum: %v", v)
 	}
 }

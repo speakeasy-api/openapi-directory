@@ -16,17 +16,21 @@ const (
 	StopCompilationJobXAmzTargetEnumSageMakerStopCompilationJob StopCompilationJobXAmzTargetEnum = "SageMaker.StopCompilationJob"
 )
 
+func (e StopCompilationJobXAmzTargetEnum) ToPointer() *StopCompilationJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopCompilationJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.StopCompilationJob":
-		*e = StopCompilationJobXAmzTargetEnum(s)
+		*e = StopCompilationJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopCompilationJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopCompilationJobXAmzTargetEnum: %v", v)
 	}
 }
 

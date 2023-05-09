@@ -15,20 +15,24 @@ const (
 	RecommendationPreferenceNameEnumExternalMetricsPreference     RecommendationPreferenceNameEnum = "ExternalMetricsPreference"
 )
 
+func (e RecommendationPreferenceNameEnum) ToPointer() *RecommendationPreferenceNameEnum {
+	return &e
+}
+
 func (e *RecommendationPreferenceNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnhancedInfrastructureMetrics":
 		fallthrough
 	case "InferredWorkloadTypes":
 		fallthrough
 	case "ExternalMetricsPreference":
-		*e = RecommendationPreferenceNameEnum(s)
+		*e = RecommendationPreferenceNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecommendationPreferenceNameEnum: %s", s)
+		return fmt.Errorf("invalid value for RecommendationPreferenceNameEnum: %v", v)
 	}
 }

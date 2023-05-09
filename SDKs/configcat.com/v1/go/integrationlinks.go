@@ -35,7 +35,10 @@ func newIntegrationLinks(defaultClient, securityClient HTTPClient, serverURL, la
 // AddOrUpdateIntegrationLink - Add or update Integration link
 func (s *integrationLinks) AddOrUpdateIntegrationLink(ctx context.Context, request operations.AddOrUpdateIntegrationLinkRequest) (*operations.AddOrUpdateIntegrationLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/integrationLinks/{integrationLinkType}/{key}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/integrationLinks/{integrationLinkType}/{key}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddOrUpdateIntegrationLinkModel", "json")
 	if err != nil {
@@ -100,7 +103,10 @@ func (s *integrationLinks) AddOrUpdateIntegrationLink(ctx context.Context, reque
 // DeleteIntegrationLink - Delete Integration link
 func (s *integrationLinks) DeleteIntegrationLink(ctx context.Context, request operations.DeleteIntegrationLinkRequest) (*operations.DeleteIntegrationLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/integrationLinks/{integrationLinkType}/{key}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/integrationLinks/{integrationLinkType}/{key}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -158,7 +164,10 @@ func (s *integrationLinks) DeleteIntegrationLink(ctx context.Context, request op
 // GetIntegrationLinkDetails - Get Integration link
 func (s *integrationLinks) GetIntegrationLinkDetails(ctx context.Context, request operations.GetIntegrationLinkDetailsRequest) (*operations.GetIntegrationLinkDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/integrationLink/{integrationLinkType}/{key}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/integrationLink/{integrationLinkType}/{key}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -212,9 +221,13 @@ func (s *integrationLinks) GetIntegrationLinkDetails(ctx context.Context, reques
 
 	return res, nil
 }
+
 func (s *integrationLinks) JiraAddOrUpdateIntegrationLink(ctx context.Context, request operations.JiraAddOrUpdateIntegrationLinkRequest) (*operations.JiraAddOrUpdateIntegrationLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/jira/environments/{environmentId}/settings/{settingId}/integrationLinks/{key}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/jira/environments/{environmentId}/settings/{settingId}/integrationLinks/{key}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddOrUpdateJiraIntegrationLinkModel", "json")
 	if err != nil {
@@ -275,6 +288,7 @@ func (s *integrationLinks) JiraAddOrUpdateIntegrationLink(ctx context.Context, r
 
 	return res, nil
 }
+
 func (s *integrationLinks) PostV1JiraConnect(ctx context.Context, request shared.ConnectRequest) (*operations.PostV1JiraConnectResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/jira/Connect"

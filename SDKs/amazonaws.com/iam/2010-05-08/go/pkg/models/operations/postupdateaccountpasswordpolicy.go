@@ -15,17 +15,21 @@ const (
 	POSTUpdateAccountPasswordPolicyActionEnumUpdateAccountPasswordPolicy POSTUpdateAccountPasswordPolicyActionEnum = "UpdateAccountPasswordPolicy"
 )
 
+func (e POSTUpdateAccountPasswordPolicyActionEnum) ToPointer() *POSTUpdateAccountPasswordPolicyActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateAccountPasswordPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateAccountPasswordPolicy":
-		*e = POSTUpdateAccountPasswordPolicyActionEnum(s)
+		*e = POSTUpdateAccountPasswordPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateAccountPasswordPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateAccountPasswordPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateAccountPasswordPolicyVersionEnumTwoThousandAndTen0508 POSTUpdateAccountPasswordPolicyVersionEnum = "2010-05-08"
 )
 
+func (e POSTUpdateAccountPasswordPolicyVersionEnum) ToPointer() *POSTUpdateAccountPasswordPolicyVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateAccountPasswordPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTUpdateAccountPasswordPolicyVersionEnum(s)
+		*e = POSTUpdateAccountPasswordPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateAccountPasswordPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateAccountPasswordPolicyVersionEnum: %v", v)
 	}
 }
 

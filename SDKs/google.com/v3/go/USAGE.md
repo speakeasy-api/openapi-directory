@@ -2,22 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TravelpartnerAccountsAccountLinksCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Accounts.TravelpartnerAccountsAccountLinksCreate(ctx, operations.TravelpartnerAccountsAccountLinksCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AccountLink: &shared.AccountLink{
             AccountLinkTarget: &shared.AccountLinkTarget{
-                AllHotels: false,
+                AllHotels: sdk.Bool(false),
                 HotelList: &shared.HotelList{
                     PartnerHotelIds: []string{
                         "distinctio",
@@ -26,25 +27,22 @@ func main() {
                     },
                 },
             },
-            GoogleAdsCustomerName: "nulla",
-            Name: "corrupti",
-            Status: "APPROVED",
+            GoogleAdsCustomerName: sdk.String("nulla"),
+            Name: sdk.String("Dallas Kassulke"),
+            Status: shared.AccountLinkStatusEnumAccountLinkStatusUnknown.ToPointer(),
         },
-        AccessToken: "vel",
-        Alt: "media",
-        Callback: "deserunt",
-        Fields: "suscipit",
-        Key: "iure",
-        OauthToken: "magnam",
-        Parent: "debitis",
-        PrettyPrint: false,
-        QuotaUser: "ipsa",
-        UploadType: "delectus",
-        UploadProtocol: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.TravelpartnerAccountsAccountLinksCreate(ctx, req)
+        AccessToken: sdk.String("iure"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("debitis"),
+        Fields: sdk.String("ipsa"),
+        Key: sdk.String("delectus"),
+        OauthToken: sdk.String("tempora"),
+        Parent: "suscipit",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("molestiae"),
+        UploadType: sdk.String("minus"),
+        UploadProtocol: sdk.String("placeat"),
+    })
     if err != nil {
         log.Fatal(err)
     }

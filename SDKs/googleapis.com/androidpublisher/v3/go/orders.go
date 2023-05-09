@@ -33,7 +33,10 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // AndroidpublisherOrdersRefund - Refunds a user's subscription or in-app purchase order. Orders older than 1 year cannot be refunded.
 func (s *orders) AndroidpublisherOrdersRefund(ctx context.Context, request operations.AndroidpublisherOrdersRefundRequest, security operations.AndroidpublisherOrdersRefundSecurity) (*operations.AndroidpublisherOrdersRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/orders/{orderId}:refund", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/orders/{orderId}:refund", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

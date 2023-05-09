@@ -15,17 +15,21 @@ const (
 	POSTModifyDBInstanceActionEnumModifyDbInstance POSTModifyDBInstanceActionEnum = "ModifyDBInstance"
 )
 
+func (e POSTModifyDBInstanceActionEnum) ToPointer() *POSTModifyDBInstanceActionEnum {
+	return &e
+}
+
 func (e *POSTModifyDBInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyDBInstance":
-		*e = POSTModifyDBInstanceActionEnum(s)
+		*e = POSTModifyDBInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyDBInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyDBInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyDBInstanceVersionEnumTwoThousandAndThirteen0212 POSTModifyDBInstanceVersionEnum = "2013-02-12"
 )
 
+func (e POSTModifyDBInstanceVersionEnum) ToPointer() *POSTModifyDBInstanceVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = POSTModifyDBInstanceVersionEnum(s)
+		*e = POSTModifyDBInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyDBInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyDBInstanceVersionEnum: %v", v)
 	}
 }
 

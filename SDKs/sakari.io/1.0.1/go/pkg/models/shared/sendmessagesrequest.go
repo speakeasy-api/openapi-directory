@@ -31,19 +31,23 @@ const (
 	SendMessagesRequestTypeEnumMms SendMessagesRequestTypeEnum = "MMS"
 )
 
+func (e SendMessagesRequestTypeEnum) ToPointer() *SendMessagesRequestTypeEnum {
+	return &e
+}
+
 func (e *SendMessagesRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SMS":
 		fallthrough
 	case "MMS":
-		*e = SendMessagesRequestTypeEnum(s)
+		*e = SendMessagesRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendMessagesRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SendMessagesRequestTypeEnum: %v", v)
 	}
 }
 

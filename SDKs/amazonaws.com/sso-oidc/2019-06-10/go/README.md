@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/sso-oidc/20
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,15 +27,16 @@ func main() {
         }),
     )
 
-    req := operations.CreateTokenRequest{
+    ctx := context.Background()
+    res, err := s.CreateToken(ctx, operations.CreateTokenRequest{
         RequestBody: operations.CreateTokenRequestBody{
             ClientID: "corrupti",
             ClientSecret: "provident",
-            Code: "distinctio",
-            DeviceCode: "quibusdam",
+            Code: sdk.String("distinctio"),
+            DeviceCode: sdk.String("quibusdam"),
             GrantType: "unde",
-            RedirectURI: "nulla",
-            RefreshToken: "corrupti",
+            RedirectURI: sdk.String("nulla"),
+            RefreshToken: sdk.String("corrupti"),
             Scope: []string{
                 "vel",
                 "error",
@@ -44,17 +44,14 @@ func main() {
                 "suscipit",
             },
         },
-        XAmzAlgorithm: "iure",
-        XAmzContentSha256: "magnam",
-        XAmzCredential: "debitis",
-        XAmzDate: "ipsa",
-        XAmzSecurityToken: "delectus",
-        XAmzSignature: "tempora",
-        XAmzSignedHeaders: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateToken(ctx, req)
+        XAmzAlgorithm: sdk.String("iure"),
+        XAmzContentSha256: sdk.String("magnam"),
+        XAmzCredential: sdk.String("debitis"),
+        XAmzDate: sdk.String("ipsa"),
+        XAmzSecurityToken: sdk.String("delectus"),
+        XAmzSignature: sdk.String("tempora"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -69,11 +66,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateToken` - Creates and returns an access token for the authorized client. The access token issued will be used to fetch short-term credentials for the assigned roles in the AWS account.
-* `RegisterClient` - Registers a client with IAM Identity Center. This allows clients to initiate device authorization. The output should be persisted for reuse through many authentication requests.
-* `StartDeviceAuthorization` - Initiates device authorization by requesting a pair of verification codes from the authorization service.
+* [CreateToken](docs/sdk/README.md#createtoken) - Creates and returns an access token for the authorized client. The access token issued will be used to fetch short-term credentials for the assigned roles in the AWS account.
+* [RegisterClient](docs/sdk/README.md#registerclient) - Registers a client with IAM Identity Center. This allows clients to initiate device authorization. The output should be persisted for reuse through many authentication requests.
+* [StartDeviceAuthorization](docs/sdk/README.md#startdeviceauthorization) - Initiates device authorization by requesting a pair of verification codes from the authorization service.
 <!-- End SDK Available Operations -->
 
 ### Maturity

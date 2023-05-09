@@ -24,12 +24,16 @@ const (
 	LoadBalancerMetricNameEnumRequestCount                   LoadBalancerMetricNameEnum = "RequestCount"
 )
 
+func (e LoadBalancerMetricNameEnum) ToPointer() *LoadBalancerMetricNameEnum {
+	return &e
+}
+
 func (e *LoadBalancerMetricNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ClientTLSNegotiationErrorCount":
 		fallthrough
 	case "HealthyHostCount":
@@ -53,9 +57,9 @@ func (e *LoadBalancerMetricNameEnum) UnmarshalJSON(data []byte) error {
 	case "RejectedConnectionCount":
 		fallthrough
 	case "RequestCount":
-		*e = LoadBalancerMetricNameEnum(s)
+		*e = LoadBalancerMetricNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoadBalancerMetricNameEnum: %s", s)
+		return fmt.Errorf("invalid value for LoadBalancerMetricNameEnum: %v", v)
 	}
 }

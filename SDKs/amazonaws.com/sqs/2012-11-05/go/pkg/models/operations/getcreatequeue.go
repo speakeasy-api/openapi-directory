@@ -15,17 +15,21 @@ const (
 	GETCreateQueueActionEnumCreateQueue GETCreateQueueActionEnum = "CreateQueue"
 )
 
+func (e GETCreateQueueActionEnum) ToPointer() *GETCreateQueueActionEnum {
+	return &e
+}
+
 func (e *GETCreateQueueActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateQueue":
-		*e = GETCreateQueueActionEnum(s)
+		*e = GETCreateQueueActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateQueueActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateQueueActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateQueueVersionEnumTwoThousandAndTwelve1105 GETCreateQueueVersionEnum = "2012-11-05"
 )
 
+func (e GETCreateQueueVersionEnum) ToPointer() *GETCreateQueueVersionEnum {
+	return &e
+}
+
 func (e *GETCreateQueueVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = GETCreateQueueVersionEnum(s)
+		*e = GETCreateQueueVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateQueueVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateQueueVersionEnum: %v", v)
 	}
 }
 

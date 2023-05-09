@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -84,4 +85,6 @@ pkg/models/shared/querymetadatarequest.go
 pkg/models/shared/removeiampolicyresponse.go
 pkg/models/shared/removeiampolicyrequest.go
 pkg/models/shared/restoreservicerequest.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -18,21 +18,25 @@ const (
 	ListActiveViolationsBehaviorCriteriaTypeEnumMachineLearning ListActiveViolationsBehaviorCriteriaTypeEnum = "MACHINE_LEARNING"
 )
 
+func (e ListActiveViolationsBehaviorCriteriaTypeEnum) ToPointer() *ListActiveViolationsBehaviorCriteriaTypeEnum {
+	return &e
+}
+
 func (e *ListActiveViolationsBehaviorCriteriaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATIC":
 		fallthrough
 	case "STATISTICAL":
 		fallthrough
 	case "MACHINE_LEARNING":
-		*e = ListActiveViolationsBehaviorCriteriaTypeEnum(s)
+		*e = ListActiveViolationsBehaviorCriteriaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListActiveViolationsBehaviorCriteriaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListActiveViolationsBehaviorCriteriaTypeEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	ListActiveViolationsVerificationStateEnumUnknown        ListActiveViolationsVerificationStateEnum = "UNKNOWN"
 )
 
+func (e ListActiveViolationsVerificationStateEnum) ToPointer() *ListActiveViolationsVerificationStateEnum {
+	return &e
+}
+
 func (e *ListActiveViolationsVerificationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FALSE_POSITIVE":
 		fallthrough
 	case "BENIGN_POSITIVE":
@@ -59,10 +67,10 @@ func (e *ListActiveViolationsVerificationStateEnum) UnmarshalJSON(data []byte) e
 	case "TRUE_POSITIVE":
 		fallthrough
 	case "UNKNOWN":
-		*e = ListActiveViolationsVerificationStateEnum(s)
+		*e = ListActiveViolationsVerificationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListActiveViolationsVerificationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ListActiveViolationsVerificationStateEnum: %v", v)
 	}
 }
 

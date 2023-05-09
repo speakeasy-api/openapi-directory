@@ -20,12 +20,16 @@ const (
 	VideoStatusFailureReasonEnumUploadAborted VideoStatusFailureReasonEnum = "uploadAborted"
 )
 
+func (e VideoStatusFailureReasonEnum) ToPointer() *VideoStatusFailureReasonEnum {
+	return &e
+}
+
 func (e *VideoStatusFailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "conversion":
 		fallthrough
 	case "invalidFile":
@@ -37,10 +41,10 @@ func (e *VideoStatusFailureReasonEnum) UnmarshalJSON(data []byte) error {
 	case "codec":
 		fallthrough
 	case "uploadAborted":
-		*e = VideoStatusFailureReasonEnum(s)
+		*e = VideoStatusFailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoStatusFailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoStatusFailureReasonEnum: %v", v)
 	}
 }
 
@@ -52,19 +56,23 @@ const (
 	VideoStatusLicenseEnumCreativeCommon VideoStatusLicenseEnum = "creativeCommon"
 )
 
+func (e VideoStatusLicenseEnum) ToPointer() *VideoStatusLicenseEnum {
+	return &e
+}
+
 func (e *VideoStatusLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "youtube":
 		fallthrough
 	case "creativeCommon":
-		*e = VideoStatusLicenseEnum(s)
+		*e = VideoStatusLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoStatusLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoStatusLicenseEnum: %v", v)
 	}
 }
 
@@ -77,21 +85,25 @@ const (
 	VideoStatusPrivacyStatusEnumPrivate  VideoStatusPrivacyStatusEnum = "private"
 )
 
+func (e VideoStatusPrivacyStatusEnum) ToPointer() *VideoStatusPrivacyStatusEnum {
+	return &e
+}
+
 func (e *VideoStatusPrivacyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "unlisted":
 		fallthrough
 	case "private":
-		*e = VideoStatusPrivacyStatusEnum(s)
+		*e = VideoStatusPrivacyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoStatusPrivacyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoStatusPrivacyStatusEnum: %v", v)
 	}
 }
 
@@ -111,12 +123,16 @@ const (
 	VideoStatusRejectionReasonEnumLegal                    VideoStatusRejectionReasonEnum = "legal"
 )
 
+func (e VideoStatusRejectionReasonEnum) ToPointer() *VideoStatusRejectionReasonEnum {
+	return &e
+}
+
 func (e *VideoStatusRejectionReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "copyright":
 		fallthrough
 	case "inappropriate":
@@ -136,10 +152,10 @@ func (e *VideoStatusRejectionReasonEnum) UnmarshalJSON(data []byte) error {
 	case "trademark":
 		fallthrough
 	case "legal":
-		*e = VideoStatusRejectionReasonEnum(s)
+		*e = VideoStatusRejectionReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoStatusRejectionReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoStatusRejectionReasonEnum: %v", v)
 	}
 }
 
@@ -154,12 +170,16 @@ const (
 	VideoStatusUploadStatusEnumDeleted   VideoStatusUploadStatusEnum = "deleted"
 )
 
+func (e VideoStatusUploadStatusEnum) ToPointer() *VideoStatusUploadStatusEnum {
+	return &e
+}
+
 func (e *VideoStatusUploadStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uploaded":
 		fallthrough
 	case "processed":
@@ -169,10 +189,10 @@ func (e *VideoStatusUploadStatusEnum) UnmarshalJSON(data []byte) error {
 	case "rejected":
 		fallthrough
 	case "deleted":
-		*e = VideoStatusUploadStatusEnum(s)
+		*e = VideoStatusUploadStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoStatusUploadStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoStatusUploadStatusEnum: %v", v)
 	}
 }
 

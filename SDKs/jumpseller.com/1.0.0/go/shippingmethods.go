@@ -36,7 +36,10 @@ func newShippingMethods(defaultClient, securityClient HTTPClient, serverURL, lan
 // DeleteShippingMethodsIDJSON - Delete an existing Shipping Method.
 func (s *shippingMethods) DeleteShippingMethodsIDJSON(ctx context.Context, request operations.DeleteShippingMethodsIDJSONRequest) (*operations.DeleteShippingMethodsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shipping_methods/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/shipping_methods/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -143,7 +146,10 @@ func (s *shippingMethods) GetShippingMethodsJSON(ctx context.Context, request op
 // GetShippingMethodsIDJSON - Retrieve a single Shipping Method.
 func (s *shippingMethods) GetShippingMethodsIDJSON(ctx context.Context, request operations.GetShippingMethodsIDJSONRequest) (*operations.GetShippingMethodsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shipping_methods/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/shipping_methods/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -269,7 +275,10 @@ func (s *shippingMethods) PostShippingMethodsJSON(ctx context.Context, request o
 // PutShippingMethodsIDJSON - Update a Shipping Method.
 func (s *shippingMethods) PutShippingMethodsIDJSON(ctx context.Context, request operations.PutShippingMethodsIDJSONRequest) (*operations.PutShippingMethodsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shipping_methods/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/shipping_methods/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShippingMethodEdit", "json")
 	if err != nil {

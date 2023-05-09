@@ -13,39 +13,37 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/analytics/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AnalyticsDataGetRequest{
-        Alt: "atom",
-        Dimensions: "corrupti",
-        EndDate: "provident",
-        Fields: "distinctio",
-        Filters: "quibusdam",
-        Ids: "unde",
-        Key: "nulla",
-        MaxResults: 544883,
-        Metrics: "illum",
-        OauthToken: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        Segment: "deserunt",
-        Sort: "suscipit",
-        StartDate: "iure",
-        StartIndex: 297534,
-        UserIP: "debitis",
-    }
-
     ctx := context.Background()
-    res, err := s.Data.AnalyticsDataGet(ctx, req, operations.AnalyticsDataGetSecurity{
+    res, err := s.Data.AnalyticsDataGet(ctx, operations.AnalyticsDataGetRequest{
+        Alt: shared.AltEnumAtom.ToPointer(),
+        Dimensions: sdk.String("corrupti"),
+        EndDate: "provident",
+        Fields: sdk.String("distinctio"),
+        Filters: sdk.String("quibusdam"),
+        Ids: "unde",
+        Key: sdk.String("nulla"),
+        MaxResults: sdk.Int64(544883),
+        Metrics: "illum",
+        OauthToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        Segment: sdk.String("deserunt"),
+        Sort: sdk.String("suscipit"),
+        StartDate: "iure",
+        StartIndex: sdk.Int64(297534),
+        UserIP: sdk.String("debitis"),
+    }, operations.AnalyticsDataGetSecurity{
         Option1: &operations.AnalyticsDataGetSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -66,17 +64,17 @@ func main() {
 ## Available Resources and Operations
 
 
-### Data
+### [Data](docs/data/README.md)
 
-* `AnalyticsDataGet` - Returns Analytics report data for a view (profile).
+* [AnalyticsDataGet](docs/data/README.md#analyticsdataget) - Returns Analytics report data for a view (profile).
 
-### Management
+### [Management](docs/management/README.md)
 
-* `AnalyticsManagementAccountsList` - Lists all accounts to which the user has access.
-* `AnalyticsManagementGoalsList` - Lists goals to which the user has access.
-* `AnalyticsManagementProfilesList` - Lists views (profiles) to which the user has access.
-* `AnalyticsManagementSegmentsList` - Lists advanced segments to which the user has access.
-* `AnalyticsManagementWebpropertiesList` - Lists web properties to which the user has access.
+* [AnalyticsManagementAccountsList](docs/management/README.md#analyticsmanagementaccountslist) - Lists all accounts to which the user has access.
+* [AnalyticsManagementGoalsList](docs/management/README.md#analyticsmanagementgoalslist) - Lists goals to which the user has access.
+* [AnalyticsManagementProfilesList](docs/management/README.md#analyticsmanagementprofileslist) - Lists views (profiles) to which the user has access.
+* [AnalyticsManagementSegmentsList](docs/management/README.md#analyticsmanagementsegmentslist) - Lists advanced segments to which the user has access.
+* [AnalyticsManagementWebpropertiesList](docs/management/README.md#analyticsmanagementwebpropertieslist) - Lists web properties to which the user has access.
 <!-- End SDK Available Operations -->
 
 ### Maturity

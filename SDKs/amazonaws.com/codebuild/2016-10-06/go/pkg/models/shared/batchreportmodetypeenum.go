@@ -14,18 +14,22 @@ const (
 	BatchReportModeTypeEnumReportAggregatedBatch  BatchReportModeTypeEnum = "REPORT_AGGREGATED_BATCH"
 )
 
+func (e BatchReportModeTypeEnum) ToPointer() *BatchReportModeTypeEnum {
+	return &e
+}
+
 func (e *BatchReportModeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPORT_INDIVIDUAL_BUILDS":
 		fallthrough
 	case "REPORT_AGGREGATED_BATCH":
-		*e = BatchReportModeTypeEnum(s)
+		*e = BatchReportModeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchReportModeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchReportModeTypeEnum: %v", v)
 	}
 }

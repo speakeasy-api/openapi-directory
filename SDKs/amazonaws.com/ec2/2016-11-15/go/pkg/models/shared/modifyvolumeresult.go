@@ -18,12 +18,16 @@ const (
 	ModifyVolumeResultVolumeModificationModificationStateEnumFailed     ModifyVolumeResultVolumeModificationModificationStateEnum = "failed"
 )
 
+func (e ModifyVolumeResultVolumeModificationModificationStateEnum) ToPointer() *ModifyVolumeResultVolumeModificationModificationStateEnum {
+	return &e
+}
+
 func (e *ModifyVolumeResultVolumeModificationModificationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "modifying":
 		fallthrough
 	case "optimizing":
@@ -31,10 +35,10 @@ func (e *ModifyVolumeResultVolumeModificationModificationStateEnum) UnmarshalJSO
 	case "completed":
 		fallthrough
 	case "failed":
-		*e = ModifyVolumeResultVolumeModificationModificationStateEnum(s)
+		*e = ModifyVolumeResultVolumeModificationModificationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVolumeResultVolumeModificationModificationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVolumeResultVolumeModificationModificationStateEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	ModifyVolumeResultVolumeModificationOriginalVolumeTypeEnumGp3      ModifyVolumeResultVolumeModificationOriginalVolumeTypeEnum = "gp3"
 )
 
+func (e ModifyVolumeResultVolumeModificationOriginalVolumeTypeEnum) ToPointer() *ModifyVolumeResultVolumeModificationOriginalVolumeTypeEnum {
+	return &e
+}
+
 func (e *ModifyVolumeResultVolumeModificationOriginalVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -70,10 +78,10 @@ func (e *ModifyVolumeResultVolumeModificationOriginalVolumeTypeEnum) UnmarshalJS
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = ModifyVolumeResultVolumeModificationOriginalVolumeTypeEnum(s)
+		*e = ModifyVolumeResultVolumeModificationOriginalVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVolumeResultVolumeModificationOriginalVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVolumeResultVolumeModificationOriginalVolumeTypeEnum: %v", v)
 	}
 }
 
@@ -90,12 +98,16 @@ const (
 	ModifyVolumeResultVolumeModificationTargetVolumeTypeEnumGp3      ModifyVolumeResultVolumeModificationTargetVolumeTypeEnum = "gp3"
 )
 
+func (e ModifyVolumeResultVolumeModificationTargetVolumeTypeEnum) ToPointer() *ModifyVolumeResultVolumeModificationTargetVolumeTypeEnum {
+	return &e
+}
+
 func (e *ModifyVolumeResultVolumeModificationTargetVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -109,10 +121,10 @@ func (e *ModifyVolumeResultVolumeModificationTargetVolumeTypeEnum) UnmarshalJSON
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = ModifyVolumeResultVolumeModificationTargetVolumeTypeEnum(s)
+		*e = ModifyVolumeResultVolumeModificationTargetVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVolumeResultVolumeModificationTargetVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVolumeResultVolumeModificationTargetVolumeTypeEnum: %v", v)
 	}
 }
 

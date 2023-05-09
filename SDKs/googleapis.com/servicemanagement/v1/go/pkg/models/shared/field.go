@@ -17,12 +17,16 @@ const (
 	FieldCardinalityEnumCardinalityRepeated FieldCardinalityEnum = "CARDINALITY_REPEATED"
 )
 
+func (e FieldCardinalityEnum) ToPointer() *FieldCardinalityEnum {
+	return &e
+}
+
 func (e *FieldCardinalityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CARDINALITY_UNKNOWN":
 		fallthrough
 	case "CARDINALITY_OPTIONAL":
@@ -30,10 +34,10 @@ func (e *FieldCardinalityEnum) UnmarshalJSON(data []byte) error {
 	case "CARDINALITY_REQUIRED":
 		fallthrough
 	case "CARDINALITY_REPEATED":
-		*e = FieldCardinalityEnum(s)
+		*e = FieldCardinalityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldCardinalityEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldCardinalityEnum: %v", v)
 	}
 }
 
@@ -62,12 +66,16 @@ const (
 	FieldKindEnumTypeSint64   FieldKindEnum = "TYPE_SINT64"
 )
 
+func (e FieldKindEnum) ToPointer() *FieldKindEnum {
+	return &e
+}
+
 func (e *FieldKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNKNOWN":
 		fallthrough
 	case "TYPE_DOUBLE":
@@ -105,10 +113,10 @@ func (e *FieldKindEnum) UnmarshalJSON(data []byte) error {
 	case "TYPE_SINT32":
 		fallthrough
 	case "TYPE_SINT64":
-		*e = FieldKindEnum(s)
+		*e = FieldKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldKindEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldKindEnum: %v", v)
 	}
 }
 

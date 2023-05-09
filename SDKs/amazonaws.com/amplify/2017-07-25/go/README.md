@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/amplify/201
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,89 +28,89 @@ func main() {
         }),
     )
 
-    req := operations.CreateAppRequest{
+    ctx := context.Background()
+    res, err := s.CreateApp(ctx, operations.CreateAppRequest{
         RequestBody: operations.CreateAppRequestBody{
-            AccessToken: "corrupti",
+            AccessToken: sdk.String("corrupti"),
             AutoBranchCreationConfig: &operations.CreateAppRequestBodyAutoBranchCreationConfig{
-                BasicAuthCredentials: "provident",
-                BuildSpec: "distinctio",
-                EnableAutoBuild: false,
-                EnableBasicAuth: false,
-                EnablePerformanceMode: false,
-                EnablePullRequestPreview: false,
+                BasicAuthCredentials: sdk.String("provident"),
+                BuildSpec: sdk.String("distinctio"),
+                EnableAutoBuild: sdk.Bool(false),
+                EnableBasicAuth: sdk.Bool(false),
+                EnablePerformanceMode: sdk.Bool(false),
+                EnablePullRequestPreview: sdk.Bool(false),
                 EnvironmentVariables: map[string]string{
                     "unde": "nulla",
                     "corrupti": "illum",
                     "vel": "error",
                     "deserunt": "suscipit",
                 },
-                Framework: "iure",
-                PullRequestEnvironmentName: "magnam",
-                Stage: "PULL_REQUEST",
+                Framework: sdk.String("iure"),
+                PullRequestEnvironmentName: sdk.String("magnam"),
+                Stage: shared.StageEnumPullRequest.ToPointer(),
             },
             AutoBranchCreationPatterns: []string{
                 "delectus",
             },
-            BasicAuthCredentials: "tempora",
-            BuildSpec: "suscipit",
-            CustomHeaders: "molestiae",
+            BasicAuthCredentials: sdk.String("tempora"),
+            BuildSpec: sdk.String("suscipit"),
+            CustomHeaders: sdk.String("molestiae"),
             CustomRules: []shared.CustomRule{
                 shared.CustomRule{
-                    Condition: "placeat",
+                    Condition: sdk.String("placeat"),
                     Source: "voluptatum",
-                    Status: "iusto",
+                    Status: sdk.String("iusto"),
                     Target: "excepturi",
                 },
                 shared.CustomRule{
-                    Condition: "nisi",
+                    Condition: sdk.String("nisi"),
                     Source: "recusandae",
-                    Status: "temporibus",
+                    Status: sdk.String("temporibus"),
                     Target: "ab",
                 },
                 shared.CustomRule{
-                    Condition: "quis",
+                    Condition: sdk.String("quis"),
                     Source: "veritatis",
-                    Status: "deserunt",
+                    Status: sdk.String("deserunt"),
                     Target: "perferendis",
                 },
                 shared.CustomRule{
-                    Condition: "ipsam",
+                    Condition: sdk.String("ipsam"),
                     Source: "repellendus",
-                    Status: "sapiente",
+                    Status: sdk.String("sapiente"),
                     Target: "quo",
                 },
             },
-            Description: "odit",
-            EnableAutoBranchCreation: false,
-            EnableBasicAuth: false,
-            EnableBranchAutoBuild: false,
-            EnableBranchAutoDeletion: false,
+            Description: sdk.String("odit"),
+            EnableAutoBranchCreation: sdk.Bool(false),
+            EnableBasicAuth: sdk.Bool(false),
+            EnableBranchAutoBuild: sdk.Bool(false),
+            EnableBranchAutoDeletion: sdk.Bool(false),
             EnvironmentVariables: map[string]string{
                 "at": "maiores",
                 "molestiae": "quod",
                 "quod": "esse",
                 "totam": "porro",
             },
-            IamServiceRoleArn: "dolorum",
-            Name: "dicta",
-            OauthToken: "nam",
-            Platform: "WEB_DYNAMIC",
-            Repository: "occaecati",
+            IamServiceRoleArn: sdk.String("dolorum"),
+            Name: "Antoinette Nikolaus",
+            OauthToken: sdk.String("deleniti"),
+            Platform: operations.CreateAppRequestBodyPlatformEnumWebCompute.ToPointer(),
+            Repository: sdk.String("optio"),
             Tags: map[string]string{
-                "deleniti": "hic",
+                "beatae": "commodi",
+                "molestiae": "modi",
+                "qui": "impedit",
             },
         },
-        XAmzAlgorithm: "optio",
-        XAmzContentSha256: "totam",
-        XAmzCredential: "beatae",
-        XAmzDate: "commodi",
-        XAmzSecurityToken: "molestiae",
-        XAmzSignature: "modi",
-        XAmzSignedHeaders: "qui",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateApp(ctx, req)
+        XAmzAlgorithm: sdk.String("cum"),
+        XAmzContentSha256: sdk.String("esse"),
+        XAmzCredential: sdk.String("ipsum"),
+        XAmzDate: sdk.String("excepturi"),
+        XAmzSecurityToken: sdk.String("aspernatur"),
+        XAmzSignature: sdk.String("perferendis"),
+        XAmzSignedHeaders: sdk.String("ad"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -125,45 +125,45 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateApp` -  Creates a new Amplify app. 
-* `CreateBackendEnvironment` -  Creates a new backend environment for an Amplify app. 
-* `CreateBranch` -  Creates a new branch for an Amplify app. 
-* `CreateDeployment` -  Creates a deployment for a manually deployed Amplify app. Manually deployed apps are not connected to a repository. 
-* `CreateDomainAssociation` -  Creates a new domain association for an Amplify app. This action associates a custom domain with the Amplify app 
-* `CreateWebhook` -  Creates a new webhook on an Amplify app. 
-* `DeleteApp` -  Deletes an existing Amplify app specified by an app ID. 
-* `DeleteBackendEnvironment` -  Deletes a backend environment for an Amplify app. 
-* `DeleteBranch` -  Deletes a branch for an Amplify app. 
-* `DeleteDomainAssociation` -  Deletes a domain association for an Amplify app. 
-* `DeleteJob` -  Deletes a job for a branch of an Amplify app. 
-* `DeleteWebhook` -  Deletes a webhook. 
-* `GenerateAccessLogs` -  Returns the website access logs for a specific time range using a presigned URL. 
-* `GetApp` -  Returns an existing Amplify app by appID. 
-* `GetArtifactURL` -  Returns the artifact info that corresponds to an artifact id. 
-* `GetBackendEnvironment` -  Returns a backend environment for an Amplify app. 
-* `GetBranch` -  Returns a branch for an Amplify app. 
-* `GetDomainAssociation` -  Returns the domain information for an Amplify app. 
-* `GetJob` -  Returns a job for a branch of an Amplify app. 
-* `GetWebhook` -  Returns the webhook information that corresponds to a specified webhook ID. 
-* `ListApps` -  Returns a list of the existing Amplify apps. 
-* `ListArtifacts` -  Returns a list of artifacts for a specified app, branch, and job. 
-* `ListBackendEnvironments` -  Lists the backend environments for an Amplify app. 
-* `ListBranches` -  Lists the branches of an Amplify app. 
-* `ListDomainAssociations` -  Returns the domain associations for an Amplify app. 
-* `ListJobs` -  Lists the jobs for a branch of an Amplify app. 
-* `ListTagsForResource` -  Returns a list of tags for a specified Amazon Resource Name (ARN). 
-* `ListWebhooks` -  Returns a list of webhooks for an Amplify app. 
-* `StartDeployment` -  Starts a deployment for a manually deployed app. Manually deployed apps are not connected to a repository. 
-* `StartJob` -  Starts a new job for a branch of an Amplify app. 
-* `StopJob` -  Stops a job that is in progress for a branch of an Amplify app. 
-* `TagResource` -  Tags the resource with a tag key and value. 
-* `UntagResource` -  Untags a resource with a specified Amazon Resource Name (ARN). 
-* `UpdateApp` -  Updates an existing Amplify app. 
-* `UpdateBranch` -  Updates a branch for an Amplify app. 
-* `UpdateDomainAssociation` -  Creates a new domain association for an Amplify app.
-* `UpdateWebhook` -  Updates a webhook. 
+* [CreateApp](docs/sdk/README.md#createapp) -  Creates a new Amplify app. 
+* [CreateBackendEnvironment](docs/sdk/README.md#createbackendenvironment) -  Creates a new backend environment for an Amplify app. 
+* [CreateBranch](docs/sdk/README.md#createbranch) -  Creates a new branch for an Amplify app. 
+* [CreateDeployment](docs/sdk/README.md#createdeployment) -  Creates a deployment for a manually deployed Amplify app. Manually deployed apps are not connected to a repository. 
+* [CreateDomainAssociation](docs/sdk/README.md#createdomainassociation) -  Creates a new domain association for an Amplify app. This action associates a custom domain with the Amplify app 
+* [CreateWebhook](docs/sdk/README.md#createwebhook) -  Creates a new webhook on an Amplify app. 
+* [DeleteApp](docs/sdk/README.md#deleteapp) -  Deletes an existing Amplify app specified by an app ID. 
+* [DeleteBackendEnvironment](docs/sdk/README.md#deletebackendenvironment) -  Deletes a backend environment for an Amplify app. 
+* [DeleteBranch](docs/sdk/README.md#deletebranch) -  Deletes a branch for an Amplify app. 
+* [DeleteDomainAssociation](docs/sdk/README.md#deletedomainassociation) -  Deletes a domain association for an Amplify app. 
+* [DeleteJob](docs/sdk/README.md#deletejob) -  Deletes a job for a branch of an Amplify app. 
+* [DeleteWebhook](docs/sdk/README.md#deletewebhook) -  Deletes a webhook. 
+* [GenerateAccessLogs](docs/sdk/README.md#generateaccesslogs) -  Returns the website access logs for a specific time range using a presigned URL. 
+* [GetApp](docs/sdk/README.md#getapp) -  Returns an existing Amplify app by appID. 
+* [GetArtifactURL](docs/sdk/README.md#getartifacturl) -  Returns the artifact info that corresponds to an artifact id. 
+* [GetBackendEnvironment](docs/sdk/README.md#getbackendenvironment) -  Returns a backend environment for an Amplify app. 
+* [GetBranch](docs/sdk/README.md#getbranch) -  Returns a branch for an Amplify app. 
+* [GetDomainAssociation](docs/sdk/README.md#getdomainassociation) -  Returns the domain information for an Amplify app. 
+* [GetJob](docs/sdk/README.md#getjob) -  Returns a job for a branch of an Amplify app. 
+* [GetWebhook](docs/sdk/README.md#getwebhook) -  Returns the webhook information that corresponds to a specified webhook ID. 
+* [ListApps](docs/sdk/README.md#listapps) -  Returns a list of the existing Amplify apps. 
+* [ListArtifacts](docs/sdk/README.md#listartifacts) -  Returns a list of artifacts for a specified app, branch, and job. 
+* [ListBackendEnvironments](docs/sdk/README.md#listbackendenvironments) -  Lists the backend environments for an Amplify app. 
+* [ListBranches](docs/sdk/README.md#listbranches) -  Lists the branches of an Amplify app. 
+* [ListDomainAssociations](docs/sdk/README.md#listdomainassociations) -  Returns the domain associations for an Amplify app. 
+* [ListJobs](docs/sdk/README.md#listjobs) -  Lists the jobs for a branch of an Amplify app. 
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) -  Returns a list of tags for a specified Amazon Resource Name (ARN). 
+* [ListWebhooks](docs/sdk/README.md#listwebhooks) -  Returns a list of webhooks for an Amplify app. 
+* [StartDeployment](docs/sdk/README.md#startdeployment) -  Starts a deployment for a manually deployed app. Manually deployed apps are not connected to a repository. 
+* [StartJob](docs/sdk/README.md#startjob) -  Starts a new job for a branch of an Amplify app. 
+* [StopJob](docs/sdk/README.md#stopjob) -  Stops a job that is in progress for a branch of an Amplify app. 
+* [TagResource](docs/sdk/README.md#tagresource) -  Tags the resource with a tag key and value. 
+* [UntagResource](docs/sdk/README.md#untagresource) -  Untags a resource with a specified Amazon Resource Name (ARN). 
+* [UpdateApp](docs/sdk/README.md#updateapp) -  Updates an existing Amplify app. 
+* [UpdateBranch](docs/sdk/README.md#updatebranch) -  Updates a branch for an Amplify app. 
+* [UpdateDomainAssociation](docs/sdk/README.md#updatedomainassociation) -  Creates a new domain association for an Amplify app.
+* [UpdateWebhook](docs/sdk/README.md#updatewebhook) -  Updates a webhook. 
 <!-- End SDK Available Operations -->
 
 ### Maturity

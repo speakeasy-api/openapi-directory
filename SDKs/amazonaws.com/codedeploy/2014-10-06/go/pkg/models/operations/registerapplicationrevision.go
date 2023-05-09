@@ -16,17 +16,21 @@ const (
 	RegisterApplicationRevisionXAmzTargetEnumCodeDeploy20141006RegisterApplicationRevision RegisterApplicationRevisionXAmzTargetEnum = "CodeDeploy_20141006.RegisterApplicationRevision"
 )
 
+func (e RegisterApplicationRevisionXAmzTargetEnum) ToPointer() *RegisterApplicationRevisionXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterApplicationRevisionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.RegisterApplicationRevision":
-		*e = RegisterApplicationRevisionXAmzTargetEnum(s)
+		*e = RegisterApplicationRevisionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterApplicationRevisionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterApplicationRevisionXAmzTargetEnum: %v", v)
 	}
 }
 

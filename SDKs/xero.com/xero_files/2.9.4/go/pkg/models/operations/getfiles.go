@@ -22,21 +22,25 @@ const (
 	GetFilesSortEnumCreatedDateUtc GetFilesSortEnum = "CreatedDateUTC"
 )
 
+func (e GetFilesSortEnum) ToPointer() *GetFilesSortEnum {
+	return &e
+}
+
 func (e *GetFilesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "Size":
 		fallthrough
 	case "CreatedDateUTC":
-		*e = GetFilesSortEnum(s)
+		*e = GetFilesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFilesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFilesSortEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CreateModelXAmzTargetEnumAwsLookoutEquipmentFrontendServiceCreateModel CreateModelXAmzTargetEnum = "AWSLookoutEquipmentFrontendService.CreateModel"
 )
 
+func (e CreateModelXAmzTargetEnum) ToPointer() *CreateModelXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateModelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLookoutEquipmentFrontendService.CreateModel":
-		*e = CreateModelXAmzTargetEnum(s)
+		*e = CreateModelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateModelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateModelXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	IPDiscoveryEnumIpv6 IPDiscoveryEnum = "ipv6"
 )
 
+func (e IPDiscoveryEnum) ToPointer() *IPDiscoveryEnum {
+	return &e
+}
+
 func (e *IPDiscoveryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
-		*e = IPDiscoveryEnum(s)
+		*e = IPDiscoveryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IPDiscoveryEnum: %s", s)
+		return fmt.Errorf("invalid value for IPDiscoveryEnum: %v", v)
 	}
 }

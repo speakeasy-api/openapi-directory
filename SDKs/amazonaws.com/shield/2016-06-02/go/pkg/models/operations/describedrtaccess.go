@@ -16,17 +16,21 @@ const (
 	DescribeDRTAccessXAmzTargetEnumAwsShield20160616DescribeDrtAccess DescribeDRTAccessXAmzTargetEnum = "AWSShield_20160616.DescribeDRTAccess"
 )
 
+func (e DescribeDRTAccessXAmzTargetEnum) ToPointer() *DescribeDRTAccessXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDRTAccessXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.DescribeDRTAccess":
-		*e = DescribeDRTAccessXAmzTargetEnum(s)
+		*e = DescribeDRTAccessXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDRTAccessXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDRTAccessXAmzTargetEnum: %v", v)
 	}
 }
 

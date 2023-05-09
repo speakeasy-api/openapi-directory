@@ -21,7 +21,7 @@ type CreateArtifactVersionJSONRequest struct {
 	// * Web Services Description Language (`WSDL`)
 	// * XML Schema (`XSD`)
 	//
-	ContentCreateRequest shared.ContentCreateRequest `request:"mediaType=application/vnd.create.extended+json"`
+	ArtifactContent shared.ArtifactContent `request:"mediaType=application/vnd.create.extended+json"`
 	// Specifies the artifact description of this new version of the artifact content. Description must be ASCII-only string. If this is not provided, the server will extract the description from the artifact content.
 	XRegistryDescription *string `header:"style=simple,explode=false,name=X-Registry-Description"`
 	// Specifies the artifact description of this new version of the artifact content. Value of this must be Base64 encoded string. If this is not provided, the server will extract the description from the artifact content.

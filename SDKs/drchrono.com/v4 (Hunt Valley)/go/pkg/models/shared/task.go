@@ -21,12 +21,16 @@ const (
 	TaskAssociatedTaskItemTypeEnumCommunication TaskAssociatedTaskItemTypeEnum = "Communication"
 )
 
+func (e TaskAssociatedTaskItemTypeEnum) ToPointer() *TaskAssociatedTaskItemTypeEnum {
+	return &e
+}
+
 func (e *TaskAssociatedTaskItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Patient":
 		fallthrough
 	case "Appointment":
@@ -42,10 +46,10 @@ func (e *TaskAssociatedTaskItemTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Lab result":
 		fallthrough
 	case "Communication":
-		*e = TaskAssociatedTaskItemTypeEnum(s)
+		*e = TaskAssociatedTaskItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskAssociatedTaskItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskAssociatedTaskItemTypeEnum: %v", v)
 	}
 }
 
@@ -85,12 +89,16 @@ const (
 	TaskPriorityEnumForty  TaskPriorityEnum = "40"
 )
 
+func (e TaskPriorityEnum) ToPointer() *TaskPriorityEnum {
+	return &e
+}
+
 func (e *TaskPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "10":
 		fallthrough
 	case "20":
@@ -98,10 +106,10 @@ func (e *TaskPriorityEnum) UnmarshalJSON(data []byte) error {
 	case "30":
 		fallthrough
 	case "40":
-		*e = TaskPriorityEnum(s)
+		*e = TaskPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskPriorityEnum: %v", v)
 	}
 }
 

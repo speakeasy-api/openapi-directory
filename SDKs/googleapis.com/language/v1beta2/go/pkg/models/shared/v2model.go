@@ -16,21 +16,25 @@ const (
 	V2ModelContentCategoriesVersionEnumV2                                  V2ModelContentCategoriesVersionEnum = "V2"
 )
 
+func (e V2ModelContentCategoriesVersionEnum) ToPointer() *V2ModelContentCategoriesVersionEnum {
+	return &e
+}
+
 func (e *V2ModelContentCategoriesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_CATEGORIES_VERSION_UNSPECIFIED":
 		fallthrough
 	case "V1":
 		fallthrough
 	case "V2":
-		*e = V2ModelContentCategoriesVersionEnum(s)
+		*e = V2ModelContentCategoriesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for V2ModelContentCategoriesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for V2ModelContentCategoriesVersionEnum: %v", v)
 	}
 }
 

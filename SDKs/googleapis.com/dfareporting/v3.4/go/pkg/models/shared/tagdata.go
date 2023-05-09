@@ -33,12 +33,16 @@ const (
 	TagDataFormatEnumPlacementTagTrackingThirdPartyMeasurement      TagDataFormatEnum = "PLACEMENT_TAG_TRACKING_THIRD_PARTY_MEASUREMENT"
 )
 
+func (e TagDataFormatEnum) ToPointer() *TagDataFormatEnum {
+	return &e
+}
+
 func (e *TagDataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACEMENT_TAG_STANDARD":
 		fallthrough
 	case "PLACEMENT_TAG_IFRAME_JAVASCRIPT":
@@ -78,10 +82,10 @@ func (e *TagDataFormatEnum) UnmarshalJSON(data []byte) error {
 	case "PLACEMENT_TAG_INSTREAM_VIDEO_PREFETCH_VAST_4":
 		fallthrough
 	case "PLACEMENT_TAG_TRACKING_THIRD_PARTY_MEASUREMENT":
-		*e = TagDataFormatEnum(s)
+		*e = TagDataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagDataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TagDataFormatEnum: %v", v)
 	}
 }
 

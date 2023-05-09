@@ -18,12 +18,16 @@ const (
 	SearchFreetextRequestBodySearchTypesEnumRecommendation SearchFreetextRequestBodySearchTypesEnum = "RECOMMENDATION"
 )
 
+func (e SearchFreetextRequestBodySearchTypesEnum) ToPointer() *SearchFreetextRequestBodySearchTypesEnum {
+	return &e
+}
+
 func (e *SearchFreetextRequestBodySearchTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCT":
 		fallthrough
 	case "DESTINATION":
@@ -31,10 +35,10 @@ func (e *SearchFreetextRequestBodySearchTypesEnum) UnmarshalJSON(data []byte) er
 	case "ATTRACTION":
 		fallthrough
 	case "RECOMMENDATION":
-		*e = SearchFreetextRequestBodySearchTypesEnum(s)
+		*e = SearchFreetextRequestBodySearchTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchFreetextRequestBodySearchTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchFreetextRequestBodySearchTypesEnum: %v", v)
 	}
 }
 

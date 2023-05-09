@@ -15,17 +15,21 @@ const (
 	POSTCreateSnapshotCopyGrantActionEnumCreateSnapshotCopyGrant POSTCreateSnapshotCopyGrantActionEnum = "CreateSnapshotCopyGrant"
 )
 
+func (e POSTCreateSnapshotCopyGrantActionEnum) ToPointer() *POSTCreateSnapshotCopyGrantActionEnum {
+	return &e
+}
+
 func (e *POSTCreateSnapshotCopyGrantActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateSnapshotCopyGrant":
-		*e = POSTCreateSnapshotCopyGrantActionEnum(s)
+		*e = POSTCreateSnapshotCopyGrantActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateSnapshotCopyGrantActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateSnapshotCopyGrantActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateSnapshotCopyGrantVersionEnumTwoThousandAndTwelve1201 POSTCreateSnapshotCopyGrantVersionEnum = "2012-12-01"
 )
 
+func (e POSTCreateSnapshotCopyGrantVersionEnum) ToPointer() *POSTCreateSnapshotCopyGrantVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateSnapshotCopyGrantVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTCreateSnapshotCopyGrantVersionEnum(s)
+		*e = POSTCreateSnapshotCopyGrantVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateSnapshotCopyGrantVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateSnapshotCopyGrantVersionEnum: %v", v)
 	}
 }
 

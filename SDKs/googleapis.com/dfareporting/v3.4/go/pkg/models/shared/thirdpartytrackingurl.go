@@ -32,12 +32,16 @@ const (
 	ThirdPartyTrackingURLThirdPartyURLTypeEnumVideoProgress             ThirdPartyTrackingURLThirdPartyURLTypeEnum = "VIDEO_PROGRESS"
 )
 
+func (e ThirdPartyTrackingURLThirdPartyURLTypeEnum) ToPointer() *ThirdPartyTrackingURLThirdPartyURLTypeEnum {
+	return &e
+}
+
 func (e *ThirdPartyTrackingURLThirdPartyURLTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPRESSION":
 		fallthrough
 	case "CLICK_TRACKING":
@@ -75,10 +79,10 @@ func (e *ThirdPartyTrackingURLThirdPartyURLTypeEnum) UnmarshalJSON(data []byte) 
 	case "VIDEO_SKIP":
 		fallthrough
 	case "VIDEO_PROGRESS":
-		*e = ThirdPartyTrackingURLThirdPartyURLTypeEnum(s)
+		*e = ThirdPartyTrackingURLThirdPartyURLTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThirdPartyTrackingURLThirdPartyURLTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ThirdPartyTrackingURLThirdPartyURLTypeEnum: %v", v)
 	}
 }
 

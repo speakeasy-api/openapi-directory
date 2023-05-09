@@ -14,18 +14,22 @@ const (
 	SortEnumDesc SortEnum = "DESC"
 )
 
+func (e SortEnum) ToPointer() *SortEnum {
+	return &e
+}
+
 func (e *SortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASC":
 		fallthrough
 	case "DESC":
-		*e = SortEnum(s)
+		*e = SortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortEnum: %s", s)
+		return fmt.Errorf("invalid value for SortEnum: %v", v)
 	}
 }

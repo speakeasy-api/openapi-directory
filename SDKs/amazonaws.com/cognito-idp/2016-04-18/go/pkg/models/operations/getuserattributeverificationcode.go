@@ -16,17 +16,21 @@ const (
 	GetUserAttributeVerificationCodeXAmzTargetEnumAwsCognitoIdentityProviderServiceGetUserAttributeVerificationCode GetUserAttributeVerificationCodeXAmzTargetEnum = "AWSCognitoIdentityProviderService.GetUserAttributeVerificationCode"
 )
 
+func (e GetUserAttributeVerificationCodeXAmzTargetEnum) ToPointer() *GetUserAttributeVerificationCodeXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetUserAttributeVerificationCodeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.GetUserAttributeVerificationCode":
-		*e = GetUserAttributeVerificationCodeXAmzTargetEnum(s)
+		*e = GetUserAttributeVerificationCodeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUserAttributeVerificationCodeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUserAttributeVerificationCodeXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	DeletionTaskStatusTypeEnumNotStarted DeletionTaskStatusTypeEnum = "NOT_STARTED"
 )
 
+func (e DeletionTaskStatusTypeEnum) ToPointer() *DeletionTaskStatusTypeEnum {
+	return &e
+}
+
 func (e *DeletionTaskStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCEEDED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -29,9 +33,9 @@ func (e *DeletionTaskStatusTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "NOT_STARTED":
-		*e = DeletionTaskStatusTypeEnum(s)
+		*e = DeletionTaskStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletionTaskStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletionTaskStatusTypeEnum: %v", v)
 	}
 }

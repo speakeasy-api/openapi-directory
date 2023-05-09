@@ -16,12 +16,16 @@ const (
 	AutoSnapshotStatusEnumNotFound   AutoSnapshotStatusEnum = "NotFound"
 )
 
+func (e AutoSnapshotStatusEnum) ToPointer() *AutoSnapshotStatusEnum {
+	return &e
+}
+
 func (e *AutoSnapshotStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Success":
 		fallthrough
 	case "Failed":
@@ -29,9 +33,9 @@ func (e *AutoSnapshotStatusEnum) UnmarshalJSON(data []byte) error {
 	case "InProgress":
 		fallthrough
 	case "NotFound":
-		*e = AutoSnapshotStatusEnum(s)
+		*e = AutoSnapshotStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoSnapshotStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoSnapshotStatusEnum: %v", v)
 	}
 }

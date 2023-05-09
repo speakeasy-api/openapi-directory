@@ -18,21 +18,25 @@ const (
 	ProjectsListForRepoStateEnumAll    ProjectsListForRepoStateEnum = "all"
 )
 
+func (e ProjectsListForRepoStateEnum) ToPointer() *ProjectsListForRepoStateEnum {
+	return &e
+}
+
 func (e *ProjectsListForRepoStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "all":
-		*e = ProjectsListForRepoStateEnum(s)
+		*e = ProjectsListForRepoStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectsListForRepoStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectsListForRepoStateEnum: %v", v)
 	}
 }
 

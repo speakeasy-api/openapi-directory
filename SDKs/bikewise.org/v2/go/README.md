@@ -13,30 +13,27 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/bikewise.org/v2/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GETVersionIncidentsFormatRequest{
-        IncidentType: "unconfirmed",
-        OccurredAfter: 592845,
-        OccurredBefore: 715190,
-        Page: 844266,
-        PerPage: 602763,
-        Proximity: "nulla",
-        ProximitySquare: 544883,
-        Query: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.Incidents.GETVersionIncidentsFormat(ctx, req)
+    res, err := s.Incidents.GETVersionIncidentsFormat(ctx, operations.GETVersionIncidentsFormatRequest{
+        IncidentType: operations.GETVersionIncidentsFormatIncidentTypeEnumUnconfirmed.ToPointer(),
+        OccurredAfter: sdk.Int(592845),
+        OccurredBefore: sdk.Int(715190),
+        Page: sdk.Int(844266),
+        PerPage: sdk.Int(602763),
+        Proximity: sdk.String("nulla"),
+        ProximitySquare: sdk.Int(544883),
+        Query: sdk.String("illum"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -52,15 +49,15 @@ func main() {
 ## Available Resources and Operations
 
 
-### Incidents
+### [Incidents](docs/incidents/README.md)
 
-* `GETVersionIncidentsFormat` - Paginated incidents matching parameters
-* `GETVersionIncidentsIDFormat`
+* [GETVersionIncidentsFormat](docs/incidents/README.md#getversionincidentsformat) - Paginated incidents matching parameters
+* [GETVersionIncidentsIDFormat](docs/incidents/README.md#getversionincidentsidformat)
 
-### Locations
+### [Locations](docs/locations/README.md)
 
-* `GETVersionLocationsFormat` - Unpaginated geojson response
-* `GETVersionLocationsMarkersFormat` - Unpaginated geojson response with simplestyled markers
+* [GETVersionLocationsFormat](docs/locations/README.md#getversionlocationsformat) - Unpaginated geojson response
+* [GETVersionLocationsMarkersFormat](docs/locations/README.md#getversionlocationsmarkersformat) - Unpaginated geojson response with simplestyled markers
 <!-- End SDK Available Operations -->
 
 ### Maturity

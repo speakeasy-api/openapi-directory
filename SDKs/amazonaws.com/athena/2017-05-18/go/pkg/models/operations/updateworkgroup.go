@@ -16,17 +16,21 @@ const (
 	UpdateWorkGroupXAmzTargetEnumAmazonAthenaUpdateWorkGroup UpdateWorkGroupXAmzTargetEnum = "AmazonAthena.UpdateWorkGroup"
 )
 
+func (e UpdateWorkGroupXAmzTargetEnum) ToPointer() *UpdateWorkGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateWorkGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.UpdateWorkGroup":
-		*e = UpdateWorkGroupXAmzTargetEnum(s)
+		*e = UpdateWorkGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateWorkGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateWorkGroupXAmzTargetEnum: %v", v)
 	}
 }
 

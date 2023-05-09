@@ -19,12 +19,16 @@ const (
 	CreateALimitParametersIntervalEnumAllTime     CreateALimitParametersIntervalEnum = "all_time"
 )
 
+func (e CreateALimitParametersIntervalEnum) ToPointer() *CreateALimitParametersIntervalEnum {
+	return &e
+}
+
 func (e *CreateALimitParametersIntervalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "transaction":
 		fallthrough
 	case "day":
@@ -36,10 +40,10 @@ func (e *CreateALimitParametersIntervalEnum) UnmarshalJSON(data []byte) error {
 	case "year":
 		fallthrough
 	case "all_time":
-		*e = CreateALimitParametersIntervalEnum(s)
+		*e = CreateALimitParametersIntervalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateALimitParametersIntervalEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateALimitParametersIntervalEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	CreateALimitParametersMetricEnumVolume CreateALimitParametersMetricEnum = "volume"
 )
 
+func (e CreateALimitParametersMetricEnum) ToPointer() *CreateALimitParametersMetricEnum {
+	return &e
+}
+
 func (e *CreateALimitParametersMetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "count":
 		fallthrough
 	case "volume":
-		*e = CreateALimitParametersMetricEnum(s)
+		*e = CreateALimitParametersMetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateALimitParametersMetricEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateALimitParametersMetricEnum: %v", v)
 	}
 }
 

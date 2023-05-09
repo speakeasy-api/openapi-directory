@@ -30,12 +30,16 @@ const (
 	PaymentMethodFieldsTypeEnumServipag      PaymentMethodFieldsTypeEnum = "servipag"
 )
 
+func (e PaymentMethodFieldsTypeEnum) ToPointer() *PaymentMethodFieldsTypeEnum {
+	return &e
+}
+
 func (e *PaymentMethodFieldsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manual":
 		fallthrough
 	case "paypal":
@@ -69,10 +73,10 @@ func (e *PaymentMethodFieldsTypeEnum) UnmarshalJSON(data []byte) error {
 	case "payu":
 		fallthrough
 	case "servipag":
-		*e = PaymentMethodFieldsTypeEnum(s)
+		*e = PaymentMethodFieldsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentMethodFieldsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentMethodFieldsTypeEnum: %v", v)
 	}
 }
 

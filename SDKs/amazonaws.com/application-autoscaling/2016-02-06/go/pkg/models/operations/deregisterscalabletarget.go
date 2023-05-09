@@ -16,17 +16,21 @@ const (
 	DeregisterScalableTargetXAmzTargetEnumAnyScaleFrontendServiceDeregisterScalableTarget DeregisterScalableTargetXAmzTargetEnum = "AnyScaleFrontendService.DeregisterScalableTarget"
 )
 
+func (e DeregisterScalableTargetXAmzTargetEnum) ToPointer() *DeregisterScalableTargetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeregisterScalableTargetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyScaleFrontendService.DeregisterScalableTarget":
-		*e = DeregisterScalableTargetXAmzTargetEnum(s)
+		*e = DeregisterScalableTargetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeregisterScalableTargetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeregisterScalableTargetXAmzTargetEnum: %v", v)
 	}
 }
 

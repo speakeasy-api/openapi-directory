@@ -16,21 +16,25 @@ const (
 	GoogleAppsCardV1GridItemLayoutEnumTextAbove                 GoogleAppsCardV1GridItemLayoutEnum = "TEXT_ABOVE"
 )
 
+func (e GoogleAppsCardV1GridItemLayoutEnum) ToPointer() *GoogleAppsCardV1GridItemLayoutEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1GridItemLayoutEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GRID_ITEM_LAYOUT_UNSPECIFIED":
 		fallthrough
 	case "TEXT_BELOW":
 		fallthrough
 	case "TEXT_ABOVE":
-		*e = GoogleAppsCardV1GridItemLayoutEnum(s)
+		*e = GoogleAppsCardV1GridItemLayoutEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1GridItemLayoutEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1GridItemLayoutEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	RecordStartParametersFileFormatEnumMp3 RecordStartParametersFileFormatEnum = "mp3"
 )
 
+func (e RecordStartParametersFileFormatEnum) ToPointer() *RecordStartParametersFileFormatEnum {
+	return &e
+}
+
 func (e *RecordStartParametersFileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "wav":
 		fallthrough
 	case "mp3":
-		*e = RecordStartParametersFileFormatEnum(s)
+		*e = RecordStartParametersFileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecordStartParametersFileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RecordStartParametersFileFormatEnum: %v", v)
 	}
 }
 

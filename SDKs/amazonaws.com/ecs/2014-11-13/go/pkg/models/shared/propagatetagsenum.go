@@ -15,20 +15,24 @@ const (
 	PropagateTagsEnumNone           PropagateTagsEnum = "NONE"
 )
 
+func (e PropagateTagsEnum) ToPointer() *PropagateTagsEnum {
+	return &e
+}
+
 func (e *PropagateTagsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TASK_DEFINITION":
 		fallthrough
 	case "SERVICE":
 		fallthrough
 	case "NONE":
-		*e = PropagateTagsEnum(s)
+		*e = PropagateTagsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropagateTagsEnum: %s", s)
+		return fmt.Errorf("invalid value for PropagateTagsEnum: %v", v)
 	}
 }

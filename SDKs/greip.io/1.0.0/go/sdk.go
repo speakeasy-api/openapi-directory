@@ -28,8 +28,23 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
-// SDK - This documentation shows how to use Greip API, By highlighting the API methods, options and some other features that allow you to get the most of this API.
-// https://docs.greip.io - Find more info here
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
+// SDK - This documentation shows how to use Greip API, by highlighting the API methods, options and some other features that allow you to get the most of this API.
+// https://docs.greip.io - API Documentaion
 type SDK struct {
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
@@ -93,6 +108,94 @@ func New(opts ...SDKOption) *SDK {
 	}
 
 	return sdk
+}
+
+// GetASNLookup - ASNLookup endpoint: This method helps you lookup any AS Number. It returns the type, organisation details, routes, etc.
+// https://docs.greip.io/methods/asn-lookup-api - Greip API - ASN Lookup
+func (s *SDK) GetASNLookup(ctx context.Context, request operations.GetASNLookupRequest) (*operations.GetASNLookupResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/ASNLookup"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetASNLookupResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		fallthrough
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
+}
+
+// GetBINLookup - This method helps you validate any BIN/IIN number and retrieve the full details related to the bank, brand, type, scheme, country, etc.
+// https://docs.greip.io/methods/bin-iin-validation - Greip API - BIN/IIN Validation
+func (s *SDK) GetBINLookup(ctx context.Context, request operations.GetBINLookupRequest) (*operations.GetBINLookupResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/BINLookup"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetBINLookupResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		fallthrough
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
 }
 
 // GetBulkLookup - BulkLookup endpoint: Returns the geolocation data of multiple IP Addresses.
@@ -183,7 +286,7 @@ func (s *SDK) GetCountry(ctx context.Context, request operations.GetCountryReque
 	return res, nil
 }
 
-// GetGeoIP - GeoIP endpoint: Returns the geolocation data of the visitor.
+// GetGeoIP - Returns the geolocation data of the visitor.
 // https://docs.greip.io/methods/retrieve-visitor-info - Greip API - Retrieve Visitor Info
 func (s *SDK) GetGeoIP(ctx context.Context, request operations.GetGeoIPRequest) (*operations.GetGeoIPResponse, error) {
 	baseURL := s._serverURL
@@ -227,7 +330,7 @@ func (s *SDK) GetGeoIP(ctx context.Context, request operations.GetGeoIPRequest) 
 	return res, nil
 }
 
-// GetIPLookup - IPLookup endpoint: Returns the geolocation data of a specific IP Address.
+// GetIPLookup - Returns the geolocation data of a specific IP Address.
 // https://docs.greip.io/methods/lookup-ip-address - Greip API - Lookup IP Address
 func (s *SDK) GetIPLookup(ctx context.Context, request operations.GetIPLookupRequest) (*operations.GetIPLookupResponse, error) {
 	baseURL := s._serverURL
@@ -300,6 +403,94 @@ func (s *SDK) GetBadWords(ctx context.Context, request operations.GetBadWordsReq
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetBadWordsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		fallthrough
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
+}
+
+// GetValidateEmail - This method can be used as an extra-layer of your system for validating email addresses.
+// https://docs.greip.io/methods/data-validation/email-validation - Greip API - Email Validation
+func (s *SDK) GetValidateEmail(ctx context.Context, request operations.GetValidateEmailRequest) (*operations.GetValidateEmailResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/validateEmail"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetValidateEmailResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		fallthrough
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
+}
+
+// GetValidatePhone - This method can be used as an extra-layer of your system for validating phone numbers.
+// https://docs.greip.io/methods/data-validation/phone-number-validation - Greip API - Phone Number Validation
+func (s *SDK) GetValidatePhone(ctx context.Context, request operations.GetValidatePhoneRequest) (*operations.GetValidatePhoneResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/validatePhone"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetValidatePhoneResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

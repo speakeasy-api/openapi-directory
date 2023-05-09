@@ -16,17 +16,21 @@ const (
 	DeleteRemediationExceptionsXAmzTargetEnumStarlingDoveServiceDeleteRemediationExceptions DeleteRemediationExceptionsXAmzTargetEnum = "StarlingDoveService.DeleteRemediationExceptions"
 )
 
+func (e DeleteRemediationExceptionsXAmzTargetEnum) ToPointer() *DeleteRemediationExceptionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteRemediationExceptionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DeleteRemediationExceptions":
-		*e = DeleteRemediationExceptionsXAmzTargetEnum(s)
+		*e = DeleteRemediationExceptionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRemediationExceptionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRemediationExceptionsXAmzTargetEnum: %v", v)
 	}
 }
 

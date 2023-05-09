@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type TokensForceDropsRepairSecurity struct {
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 // TokensForceDropsRepair200Wildcard - Look at the Response property for more information about the nature of this response
 type TokensForceDropsRepair200Wildcard struct {
 	DetailedErrorTrace *string

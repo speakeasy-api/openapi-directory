@@ -52,7 +52,10 @@ func newAccessTokens(defaultClient, securityClient HTTPClient, serverURL, langua
 // Deletes a personal access token permanently. This cannot be undone.
 func (s *accessTokens) DeleteV2AccessTokensUUID(ctx context.Context, request operations.DeleteV2AccessTokensUUIDRequest) (*operations.DeleteV2AccessTokensUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/access-tokens/{uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/access-tokens/{uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -169,7 +172,10 @@ func (s *accessTokens) GetV2AccessTokens(ctx context.Context, request operations
 // Returns a personal access token by UUID.
 func (s *accessTokens) GetV2AccessTokensUUID(ctx context.Context, request operations.GetV2AccessTokensUUIDRequest) (*operations.GetV2AccessTokensUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/access-tokens/{uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/access-tokens/{uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -227,7 +233,10 @@ func (s *accessTokens) GetV2AccessTokensUUID(ctx context.Context, request operat
 // token's label or enable/disable it.
 func (s *accessTokens) PatchV2AccessTokensUUID(ctx context.Context, request operations.PatchV2AccessTokensUUIDRequest) (*operations.PatchV2AccessTokensUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/access-tokens/{uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/access-tokens/{uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatchAccessTokenRequest", "json")
 	if err != nil {

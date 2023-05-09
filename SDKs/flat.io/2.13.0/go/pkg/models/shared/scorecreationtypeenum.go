@@ -16,20 +16,24 @@ const (
 	ScoreCreationTypeEnumOther       ScoreCreationTypeEnum = "other"
 )
 
+func (e ScoreCreationTypeEnum) ToPointer() *ScoreCreationTypeEnum {
+	return &e
+}
+
 func (e *ScoreCreationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "original":
 		fallthrough
 	case "arrangement":
 		fallthrough
 	case "other":
-		*e = ScoreCreationTypeEnum(s)
+		*e = ScoreCreationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScoreCreationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScoreCreationTypeEnum: %v", v)
 	}
 }

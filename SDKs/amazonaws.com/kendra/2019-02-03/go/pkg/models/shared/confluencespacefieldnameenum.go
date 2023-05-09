@@ -16,12 +16,16 @@ const (
 	ConfluenceSpaceFieldNameEnumURL        ConfluenceSpaceFieldNameEnum = "URL"
 )
 
+func (e ConfluenceSpaceFieldNameEnum) ToPointer() *ConfluenceSpaceFieldNameEnum {
+	return &e
+}
+
 func (e *ConfluenceSpaceFieldNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISPLAY_URL":
 		fallthrough
 	case "ITEM_TYPE":
@@ -29,9 +33,9 @@ func (e *ConfluenceSpaceFieldNameEnum) UnmarshalJSON(data []byte) error {
 	case "SPACE_KEY":
 		fallthrough
 	case "URL":
-		*e = ConfluenceSpaceFieldNameEnum(s)
+		*e = ConfluenceSpaceFieldNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfluenceSpaceFieldNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfluenceSpaceFieldNameEnum: %v", v)
 	}
 }

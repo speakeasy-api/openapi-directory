@@ -15,19 +15,23 @@ const (
 	OutputUnitsEnumImperial OutputUnitsEnum = "imperial"
 )
 
+func (e OutputUnitsEnum) ToPointer() *OutputUnitsEnum {
+	return &e
+}
+
 func (e *OutputUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "metric":
 		fallthrough
 	case "imperial":
-		*e = OutputUnitsEnum(s)
+		*e = OutputUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutputUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for OutputUnitsEnum: %v", v)
 	}
 }
 

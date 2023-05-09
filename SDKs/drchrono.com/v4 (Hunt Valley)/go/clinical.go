@@ -155,7 +155,10 @@ func (s *clinical) AllergiesList(ctx context.Context, request operations.Allergi
 // AllergiesPartialUpdate - Update an existing patient allergy
 func (s *clinical) AllergiesPartialUpdate(ctx context.Context, request operations.AllergiesPartialUpdateRequest, security operations.AllergiesPartialUpdateSecurity) (*operations.AllergiesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/allergies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/allergies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -206,7 +209,10 @@ func (s *clinical) AllergiesPartialUpdate(ctx context.Context, request operation
 // AllergiesRead - Retrieve an existing patient allergy
 func (s *clinical) AllergiesRead(ctx context.Context, request operations.AllergiesReadRequest, security operations.AllergiesReadSecurity) (*operations.AllergiesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/allergies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/allergies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -265,7 +271,10 @@ func (s *clinical) AllergiesRead(ctx context.Context, request operations.Allergi
 // AllergiesUpdate - Update an existing patient allergy
 func (s *clinical) AllergiesUpdate(ctx context.Context, request operations.AllergiesUpdateRequest, security operations.AllergiesUpdateSecurity) (*operations.AllergiesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/allergies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/allergies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -375,7 +384,10 @@ func (s *clinical) AmendmentsCreate(ctx context.Context, request operations.Amen
 // AmendmentsDelete - Delete an existing patient amendment, you can only interact with amendments created by your API application
 func (s *clinical) AmendmentsDelete(ctx context.Context, request operations.AmendmentsDeleteRequest, security operations.AmendmentsDeleteSecurity) (*operations.AmendmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -485,7 +497,10 @@ func (s *clinical) AmendmentsList(ctx context.Context, request operations.Amendm
 // AmendmentsPartialUpdate - Update an existing patient amendment, you can only interact with amendments created by your API application
 func (s *clinical) AmendmentsPartialUpdate(ctx context.Context, request operations.AmendmentsPartialUpdateRequest, security operations.AmendmentsPartialUpdateSecurity) (*operations.AmendmentsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -536,7 +551,10 @@ func (s *clinical) AmendmentsPartialUpdate(ctx context.Context, request operatio
 // AmendmentsRead - Retrieve an existing patient amendment, you can only interact with amendments created by your API application
 func (s *clinical) AmendmentsRead(ctx context.Context, request operations.AmendmentsReadRequest, security operations.AmendmentsReadSecurity) (*operations.AmendmentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -595,7 +613,10 @@ func (s *clinical) AmendmentsRead(ctx context.Context, request operations.Amendm
 // AmendmentsUpdate - Update an existing patient amendment, you can only interact with amendments created by your API application
 func (s *clinical) AmendmentsUpdate(ctx context.Context, request operations.AmendmentsUpdateRequest, security operations.AmendmentsUpdateSecurity) (*operations.AmendmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/amendments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -705,7 +726,10 @@ func (s *clinical) AppointmentProfilesCreate(ctx context.Context, request operat
 // AppointmentProfilesDelete - Delete an existing appointment profile
 func (s *clinical) AppointmentProfilesDelete(ctx context.Context, request operations.AppointmentProfilesDeleteRequest, security operations.AppointmentProfilesDeleteSecurity) (*operations.AppointmentProfilesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -815,7 +839,10 @@ func (s *clinical) AppointmentProfilesList(ctx context.Context, request operatio
 // AppointmentProfilesPartialUpdate - Update an existing appointment profile
 func (s *clinical) AppointmentProfilesPartialUpdate(ctx context.Context, request operations.AppointmentProfilesPartialUpdateRequest, security operations.AppointmentProfilesPartialUpdateSecurity) (*operations.AppointmentProfilesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -866,7 +893,10 @@ func (s *clinical) AppointmentProfilesPartialUpdate(ctx context.Context, request
 // AppointmentProfilesRead - Retrieve an existing appointment profile
 func (s *clinical) AppointmentProfilesRead(ctx context.Context, request operations.AppointmentProfilesReadRequest, security operations.AppointmentProfilesReadSecurity) (*operations.AppointmentProfilesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -925,7 +955,10 @@ func (s *clinical) AppointmentProfilesRead(ctx context.Context, request operatio
 // AppointmentProfilesUpdate - Update an existing appointment profile
 func (s *clinical) AppointmentProfilesUpdate(ctx context.Context, request operations.AppointmentProfilesUpdateRequest, security operations.AppointmentProfilesUpdateSecurity) (*operations.AppointmentProfilesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/appointment_profiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1035,7 +1068,10 @@ func (s *clinical) AppointmentTemplatesCreate(ctx context.Context, request opera
 // AppointmentTemplatesDelete - Delete an existing appointment template
 func (s *clinical) AppointmentTemplatesDelete(ctx context.Context, request operations.AppointmentTemplatesDeleteRequest, security operations.AppointmentTemplatesDeleteSecurity) (*operations.AppointmentTemplatesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1145,7 +1181,10 @@ func (s *clinical) AppointmentTemplatesList(ctx context.Context, request operati
 // AppointmentTemplatesPartialUpdate - Update an existing appointment template
 func (s *clinical) AppointmentTemplatesPartialUpdate(ctx context.Context, request operations.AppointmentTemplatesPartialUpdateRequest, security operations.AppointmentTemplatesPartialUpdateSecurity) (*operations.AppointmentTemplatesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -1196,7 +1235,10 @@ func (s *clinical) AppointmentTemplatesPartialUpdate(ctx context.Context, reques
 // AppointmentTemplatesRead - Retrieve an existing appointment template
 func (s *clinical) AppointmentTemplatesRead(ctx context.Context, request operations.AppointmentTemplatesReadRequest, security operations.AppointmentTemplatesReadSecurity) (*operations.AppointmentTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1255,7 +1297,10 @@ func (s *clinical) AppointmentTemplatesRead(ctx context.Context, request operati
 // AppointmentTemplatesUpdate - Update an existing appointment template
 func (s *clinical) AppointmentTemplatesUpdate(ctx context.Context, request operations.AppointmentTemplatesUpdateRequest, security operations.AppointmentTemplatesUpdateSecurity) (*operations.AppointmentTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/appointment_templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1367,7 +1412,10 @@ func (s *clinical) AppointmentsCreate(ctx context.Context, request operations.Ap
 // AppointmentsDelete - Delete an existing appointment or break
 func (s *clinical) AppointmentsDelete(ctx context.Context, request operations.AppointmentsDeleteRequest, security operations.AppointmentsDeleteSecurity) (*operations.AppointmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1478,7 +1526,10 @@ func (s *clinical) AppointmentsList(ctx context.Context, request operations.Appo
 // AppointmentsPartialUpdate - Update an existing appointment or break
 func (s *clinical) AppointmentsPartialUpdate(ctx context.Context, request operations.AppointmentsPartialUpdateRequest, security operations.AppointmentsPartialUpdateSecurity) (*operations.AppointmentsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -1531,7 +1582,10 @@ func (s *clinical) AppointmentsPartialUpdate(ctx context.Context, request operat
 // AppointmentsRead - Retrieve an existing appointment or break
 func (s *clinical) AppointmentsRead(ctx context.Context, request operations.AppointmentsReadRequest, security operations.AppointmentsReadSecurity) (*operations.AppointmentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1590,7 +1644,10 @@ func (s *clinical) AppointmentsRead(ctx context.Context, request operations.Appo
 // AppointmentsUpdate - Update an existing appointment or break
 func (s *clinical) AppointmentsUpdate(ctx context.Context, request operations.AppointmentsUpdateRequest, security operations.AppointmentsUpdateSecurity) (*operations.AppointmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/appointments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1702,7 +1759,10 @@ func (s *clinical) CarePlansList(ctx context.Context, request operations.CarePla
 // CarePlansRead - Retrieve an existing care plan
 func (s *clinical) CarePlansRead(ctx context.Context, request operations.CarePlansReadRequest, security operations.CarePlansReadSecurity) (*operations.CarePlansReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/care_plans/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/care_plans/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1757,6 +1817,7 @@ func (s *clinical) CarePlansRead(ctx context.Context, request operations.CarePla
 
 	return res, nil
 }
+
 func (s *clinical) CareTeamMembersList(ctx context.Context, request operations.CareTeamMembersListRequest, security operations.CareTeamMembersListSecurity) (*operations.CareTeamMembersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/care_team_members"
@@ -1814,9 +1875,13 @@ func (s *clinical) CareTeamMembersList(ctx context.Context, request operations.C
 
 	return res, nil
 }
+
 func (s *clinical) CareTeamMembersRead(ctx context.Context, request operations.CareTeamMembersReadRequest, security operations.CareTeamMembersReadSecurity) (*operations.CareTeamMembersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/care_team_members/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/care_team_members/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1993,7 +2058,10 @@ func (s *clinical) ClaimBillingNotesList(ctx context.Context, request operations
 // ClaimBillingNotesRead - Retrieve an existing billing note
 func (s *clinical) ClaimBillingNotesRead(ctx context.Context, request operations.ClaimBillingNotesReadRequest, security operations.ClaimBillingNotesReadSecurity) (*operations.ClaimBillingNotesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/claim_billing_notes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/claim_billing_notes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2111,7 +2179,10 @@ func (s *clinical) ClinicalNoteFieldTypesList(ctx context.Context, request opera
 // ClinicalNoteFieldTypesRead - Retrieve an existing clinial note field type
 func (s *clinical) ClinicalNoteFieldTypesRead(ctx context.Context, request operations.ClinicalNoteFieldTypesReadRequest, security operations.ClinicalNoteFieldTypesReadSecurity) (*operations.ClinicalNoteFieldTypesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_types/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_types/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2288,7 +2359,10 @@ func (s *clinical) ClinicalNoteFieldValuesList(ctx context.Context, request oper
 // ClinicalNoteFieldValuesPartialUpdate - Update an existing clinical note field value
 func (s *clinical) ClinicalNoteFieldValuesPartialUpdate(ctx context.Context, request operations.ClinicalNoteFieldValuesPartialUpdateRequest, security operations.ClinicalNoteFieldValuesPartialUpdateSecurity) (*operations.ClinicalNoteFieldValuesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_values/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_values/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -2339,7 +2413,10 @@ func (s *clinical) ClinicalNoteFieldValuesPartialUpdate(ctx context.Context, req
 // ClinicalNoteFieldValuesRead - Retrieve an existing clinical note field value
 func (s *clinical) ClinicalNoteFieldValuesRead(ctx context.Context, request operations.ClinicalNoteFieldValuesReadRequest, security operations.ClinicalNoteFieldValuesReadSecurity) (*operations.ClinicalNoteFieldValuesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_values/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_values/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2398,7 +2475,10 @@ func (s *clinical) ClinicalNoteFieldValuesRead(ctx context.Context, request oper
 // ClinicalNoteFieldValuesUpdate - Update an existing clinical note field value
 func (s *clinical) ClinicalNoteFieldValuesUpdate(ctx context.Context, request operations.ClinicalNoteFieldValuesUpdateRequest, security operations.ClinicalNoteFieldValuesUpdateSecurity) (*operations.ClinicalNoteFieldValuesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_values/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_field_values/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2508,7 +2588,10 @@ func (s *clinical) ClinicalNoteTemplatesList(ctx context.Context, request operat
 // ClinicalNoteTemplatesRead - Retrieve an existing clinical note tempalte
 func (s *clinical) ClinicalNoteTemplatesRead(ctx context.Context, request operations.ClinicalNoteTemplatesReadRequest, security operations.ClinicalNoteTemplatesReadSecurity) (*operations.ClinicalNoteTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/clinical_note_templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2563,6 +2646,7 @@ func (s *clinical) ClinicalNoteTemplatesRead(ctx context.Context, request operat
 
 	return res, nil
 }
+
 func (s *clinical) ClinicalNotesList(ctx context.Context, request operations.ClinicalNotesListRequest, security operations.ClinicalNotesListSecurity) (*operations.ClinicalNotesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/clinical_notes"
@@ -2620,9 +2704,13 @@ func (s *clinical) ClinicalNotesList(ctx context.Context, request operations.Cli
 
 	return res, nil
 }
+
 func (s *clinical) ClinicalNotesRead(ctx context.Context, request operations.ClinicalNotesReadRequest, security operations.ClinicalNotesReadSecurity) (*operations.ClinicalNotesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/clinical_notes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/clinical_notes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2681,7 +2769,10 @@ func (s *clinical) ClinicalNotesRead(ctx context.Context, request operations.Cli
 // ConsentFormsApplyToAppointment - Assign (apply) a consent form to appointment
 func (s *clinical) ConsentFormsApplyToAppointment(ctx context.Context, request operations.ConsentFormsApplyToAppointmentRequest, security operations.ConsentFormsApplyToAppointmentSecurity) (*operations.ConsentFormsApplyToAppointmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}/apply_to_appointment", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}/apply_to_appointment", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2850,7 +2941,10 @@ func (s *clinical) ConsentFormsList(ctx context.Context, request operations.Cons
 // ConsentFormsPartialUpdate - Update an existing patient consent form
 func (s *clinical) ConsentFormsPartialUpdate(ctx context.Context, request operations.ConsentFormsPartialUpdateRequest, security operations.ConsentFormsPartialUpdateSecurity) (*operations.ConsentFormsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -2901,7 +2995,10 @@ func (s *clinical) ConsentFormsPartialUpdate(ctx context.Context, request operat
 // ConsentFormsRead - Retrieve an existing patient consent form
 func (s *clinical) ConsentFormsRead(ctx context.Context, request operations.ConsentFormsReadRequest, security operations.ConsentFormsReadSecurity) (*operations.ConsentFormsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2960,7 +3057,10 @@ func (s *clinical) ConsentFormsRead(ctx context.Context, request operations.Cons
 // ConsentFormsUnapplyFromAppointment - Unassign (unapply) a consent form from appointment
 func (s *clinical) ConsentFormsUnapplyFromAppointment(ctx context.Context, request operations.ConsentFormsUnapplyFromAppointmentRequest, security operations.ConsentFormsUnapplyFromAppointmentSecurity) (*operations.ConsentFormsUnapplyFromAppointmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}/unapply_from_appointment", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}/unapply_from_appointment", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3011,7 +3111,10 @@ func (s *clinical) ConsentFormsUnapplyFromAppointment(ctx context.Context, reque
 // ConsentFormsUpdate - Update an existing patient consent form
 func (s *clinical) ConsentFormsUpdate(ctx context.Context, request operations.ConsentFormsUpdateRequest, security operations.ConsentFormsUpdateSecurity) (*operations.ConsentFormsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/consent_forms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3180,7 +3283,10 @@ func (s *clinical) CustomAppointmentFieldsList(ctx context.Context, request oper
 // CustomAppointmentFieldsPartialUpdate - Update an existing custom appointment field
 func (s *clinical) CustomAppointmentFieldsPartialUpdate(ctx context.Context, request operations.CustomAppointmentFieldsPartialUpdateRequest, security operations.CustomAppointmentFieldsPartialUpdateSecurity) (*operations.CustomAppointmentFieldsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_appointment_fields/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/custom_appointment_fields/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -3231,7 +3337,10 @@ func (s *clinical) CustomAppointmentFieldsPartialUpdate(ctx context.Context, req
 // CustomAppointmentFieldsRead - Retrieve an existing custom appointment field
 func (s *clinical) CustomAppointmentFieldsRead(ctx context.Context, request operations.CustomAppointmentFieldsReadRequest, security operations.CustomAppointmentFieldsReadSecurity) (*operations.CustomAppointmentFieldsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_appointment_fields/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/custom_appointment_fields/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3290,7 +3399,10 @@ func (s *clinical) CustomAppointmentFieldsRead(ctx context.Context, request oper
 // CustomAppointmentFieldsUpdate - Update an existing custom appointment field
 func (s *clinical) CustomAppointmentFieldsUpdate(ctx context.Context, request operations.CustomAppointmentFieldsUpdateRequest, security operations.CustomAppointmentFieldsUpdateSecurity) (*operations.CustomAppointmentFieldsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_appointment_fields/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/custom_appointment_fields/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3459,7 +3571,10 @@ func (s *clinical) CustomDemographicsList(ctx context.Context, request operation
 // CustomDemographicsPartialUpdate - Update an existing custom demographics field
 func (s *clinical) CustomDemographicsPartialUpdate(ctx context.Context, request operations.CustomDemographicsPartialUpdateRequest, security operations.CustomDemographicsPartialUpdateSecurity) (*operations.CustomDemographicsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_demographics/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/custom_demographics/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -3510,7 +3625,10 @@ func (s *clinical) CustomDemographicsPartialUpdate(ctx context.Context, request 
 // CustomDemographicsRead - Retrieve an existing custom demographics field
 func (s *clinical) CustomDemographicsRead(ctx context.Context, request operations.CustomDemographicsReadRequest, security operations.CustomDemographicsReadSecurity) (*operations.CustomDemographicsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_demographics/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/custom_demographics/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3569,7 +3687,10 @@ func (s *clinical) CustomDemographicsRead(ctx context.Context, request operation
 // CustomDemographicsUpdate - Update an existing custom demographics field
 func (s *clinical) CustomDemographicsUpdate(ctx context.Context, request operations.CustomDemographicsUpdateRequest, security operations.CustomDemographicsUpdateSecurity) (*operations.CustomDemographicsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_demographics/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/custom_demographics/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -3679,7 +3800,10 @@ func (s *clinical) CustomVitalsList(ctx context.Context, request operations.Cust
 // CustomVitalsRead - Retrieve an existing custom vital type
 func (s *clinical) CustomVitalsRead(ctx context.Context, request operations.CustomVitalsReadRequest, security operations.CustomVitalsReadSecurity) (*operations.CustomVitalsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_vitals/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/custom_vitals/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3797,7 +3921,10 @@ func (s *clinical) DocumentsCreate(ctx context.Context, request operations.Docum
 // DocumentsDelete - Delete an existing appointment template
 func (s *clinical) DocumentsDelete(ctx context.Context, request operations.DocumentsDeleteRequest, security operations.DocumentsDeleteSecurity) (*operations.DocumentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3907,7 +4034,10 @@ func (s *clinical) DocumentsList(ctx context.Context, request operations.Documen
 // DocumentsPartialUpdate - Update an existing appointment template
 func (s *clinical) DocumentsPartialUpdate(ctx context.Context, request operations.DocumentsPartialUpdateRequest, security operations.DocumentsPartialUpdateSecurity) (*operations.DocumentsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -3958,7 +4088,10 @@ func (s *clinical) DocumentsPartialUpdate(ctx context.Context, request operation
 // DocumentsRead - Retrieve an existing appointment template
 func (s *clinical) DocumentsRead(ctx context.Context, request operations.DocumentsReadRequest, security operations.DocumentsReadSecurity) (*operations.DocumentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4017,7 +4150,10 @@ func (s *clinical) DocumentsRead(ctx context.Context, request operations.Documen
 // DocumentsUpdate - Update an existing appointment template
 func (s *clinical) DocumentsUpdate(ctx context.Context, request operations.DocumentsUpdateRequest, security operations.DocumentsUpdateSecurity) (*operations.DocumentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -4186,7 +4322,10 @@ func (s *clinical) EobsList(ctx context.Context, request operations.EobsListRequ
 // EobsRead - Retrieve an existing EOB object
 func (s *clinical) EobsRead(ctx context.Context, request operations.EobsReadRequest, security operations.EobsReadSecurity) (*operations.EobsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/eobs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/eobs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4241,6 +4380,7 @@ func (s *clinical) EobsRead(ctx context.Context, request operations.EobsReadRequ
 
 	return res, nil
 }
+
 func (s *clinical) FeeSchedulesList(ctx context.Context, request operations.FeeSchedulesListRequest, security operations.FeeSchedulesListSecurity) (*operations.FeeSchedulesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/fee_schedules"
@@ -4298,9 +4438,13 @@ func (s *clinical) FeeSchedulesList(ctx context.Context, request operations.FeeS
 
 	return res, nil
 }
+
 func (s *clinical) FeeSchedulesRead(ctx context.Context, request operations.FeeSchedulesReadRequest, security operations.FeeSchedulesReadSecurity) (*operations.FeeSchedulesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/fee_schedules/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/fee_schedules/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4418,7 +4562,10 @@ func (s *clinical) ImplantableDevicesList(ctx context.Context, request operation
 // ImplantableDevicesRead - Retrieve an existing implantable device
 func (s *clinical) ImplantableDevicesRead(ctx context.Context, request operations.ImplantableDevicesReadRequest, security operations.ImplantableDevicesReadSecurity) (*operations.ImplantableDevicesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/implantable_devices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/implantable_devices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4473,6 +4620,7 @@ func (s *clinical) ImplantableDevicesRead(ctx context.Context, request operation
 
 	return res, nil
 }
+
 func (s *clinical) InsurancesList(ctx context.Context, request operations.InsurancesListRequest, security operations.InsurancesListSecurity) (*operations.InsurancesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/insurances"
@@ -4530,9 +4678,13 @@ func (s *clinical) InsurancesList(ctx context.Context, request operations.Insura
 
 	return res, nil
 }
+
 func (s *clinical) InsurancesRead(ctx context.Context, request operations.InsurancesReadRequest, security operations.InsurancesReadSecurity) (*operations.InsurancesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/insurances/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/insurances/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4656,7 +4808,10 @@ func (s *clinical) LabDocumentsCreate(ctx context.Context, request operations.La
 // LabDocumentsDelete - Delete an existing lab order document
 func (s *clinical) LabDocumentsDelete(ctx context.Context, request operations.LabDocumentsDeleteRequest, security operations.LabDocumentsDeleteSecurity) (*operations.LabDocumentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4766,7 +4921,10 @@ func (s *clinical) LabDocumentsList(ctx context.Context, request operations.LabD
 // LabDocumentsPartialUpdate - Update an existing lab order document
 func (s *clinical) LabDocumentsPartialUpdate(ctx context.Context, request operations.LabDocumentsPartialUpdateRequest, security operations.LabDocumentsPartialUpdateSecurity) (*operations.LabDocumentsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -4817,7 +4975,10 @@ func (s *clinical) LabDocumentsPartialUpdate(ctx context.Context, request operat
 // LabDocumentsRead - Retrieve an existing lab order document
 func (s *clinical) LabDocumentsRead(ctx context.Context, request operations.LabDocumentsReadRequest, security operations.LabDocumentsReadSecurity) (*operations.LabDocumentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4876,7 +5037,10 @@ func (s *clinical) LabDocumentsRead(ctx context.Context, request operations.LabD
 // LabDocumentsUpdate - Update an existing lab order document
 func (s *clinical) LabDocumentsUpdate(ctx context.Context, request operations.LabDocumentsUpdateRequest, security operations.LabDocumentsUpdateSecurity) (*operations.LabDocumentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -4992,7 +5156,10 @@ func (s *clinical) LabOrdersCreate(ctx context.Context, request operations.LabOr
 // LabOrdersDelete - Delete an existing lab order
 func (s *clinical) LabOrdersDelete(ctx context.Context, request operations.LabOrdersDeleteRequest, security operations.LabOrdersDeleteSecurity) (*operations.LabOrdersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5102,7 +5269,10 @@ func (s *clinical) LabOrdersList(ctx context.Context, request operations.LabOrde
 // LabOrdersPartialUpdate - Update an existing lab order
 func (s *clinical) LabOrdersPartialUpdate(ctx context.Context, request operations.LabOrdersPartialUpdateRequest, security operations.LabOrdersPartialUpdateSecurity) (*operations.LabOrdersPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -5153,7 +5323,10 @@ func (s *clinical) LabOrdersPartialUpdate(ctx context.Context, request operation
 // LabOrdersRead - Retrieve an existing lab order
 func (s *clinical) LabOrdersRead(ctx context.Context, request operations.LabOrdersReadRequest, security operations.LabOrdersReadSecurity) (*operations.LabOrdersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5208,6 +5381,7 @@ func (s *clinical) LabOrdersRead(ctx context.Context, request operations.LabOrde
 
 	return res, nil
 }
+
 func (s *clinical) LabOrdersSummaryList(ctx context.Context, request operations.LabOrdersSummaryListRequest, security operations.LabOrdersSummaryListSecurity) (*operations.LabOrdersSummaryListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/lab_orders_summary"
@@ -5265,9 +5439,13 @@ func (s *clinical) LabOrdersSummaryList(ctx context.Context, request operations.
 
 	return res, nil
 }
+
 func (s *clinical) LabOrdersSummaryRead(ctx context.Context, request operations.LabOrdersSummaryReadRequest, security operations.LabOrdersSummaryReadSecurity) (*operations.LabOrdersSummaryReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders_summary/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_orders_summary/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5326,7 +5504,10 @@ func (s *clinical) LabOrdersSummaryRead(ctx context.Context, request operations.
 // LabOrdersUpdate - Update an existing lab order
 func (s *clinical) LabOrdersUpdate(ctx context.Context, request operations.LabOrdersUpdateRequest, security operations.LabOrdersUpdateSecurity) (*operations.LabOrdersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_orders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -5442,7 +5623,10 @@ func (s *clinical) LabResultsCreate(ctx context.Context, request operations.LabR
 // LabResultsDelete - Delete an existing lab result
 func (s *clinical) LabResultsDelete(ctx context.Context, request operations.LabResultsDeleteRequest, security operations.LabResultsDeleteSecurity) (*operations.LabResultsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5552,7 +5736,10 @@ func (s *clinical) LabResultsList(ctx context.Context, request operations.LabRes
 // LabResultsPartialUpdate - Update an existing lab result
 func (s *clinical) LabResultsPartialUpdate(ctx context.Context, request operations.LabResultsPartialUpdateRequest, security operations.LabResultsPartialUpdateSecurity) (*operations.LabResultsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -5603,7 +5790,10 @@ func (s *clinical) LabResultsPartialUpdate(ctx context.Context, request operatio
 // LabResultsRead - Retrieve an existing lab result
 func (s *clinical) LabResultsRead(ctx context.Context, request operations.LabResultsReadRequest, security operations.LabResultsReadSecurity) (*operations.LabResultsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5662,7 +5852,10 @@ func (s *clinical) LabResultsRead(ctx context.Context, request operations.LabRes
 // LabResultsUpdate - Update an existing lab result
 func (s *clinical) LabResultsUpdate(ctx context.Context, request operations.LabResultsUpdateRequest, security operations.LabResultsUpdateSecurity) (*operations.LabResultsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_results/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -5778,7 +5971,10 @@ func (s *clinical) LabTestsCreate(ctx context.Context, request operations.LabTes
 // LabTestsDelete - Delete an existing lab test
 func (s *clinical) LabTestsDelete(ctx context.Context, request operations.LabTestsDeleteRequest, security operations.LabTestsDeleteSecurity) (*operations.LabTestsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5888,7 +6084,10 @@ func (s *clinical) LabTestsList(ctx context.Context, request operations.LabTests
 // LabTestsPartialUpdate - Update an existing lab test
 func (s *clinical) LabTestsPartialUpdate(ctx context.Context, request operations.LabTestsPartialUpdateRequest, security operations.LabTestsPartialUpdateSecurity) (*operations.LabTestsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -5939,7 +6138,10 @@ func (s *clinical) LabTestsPartialUpdate(ctx context.Context, request operations
 // LabTestsRead - Retrieve an existing lab test
 func (s *clinical) LabTestsRead(ctx context.Context, request operations.LabTestsReadRequest, security operations.LabTestsReadSecurity) (*operations.LabTestsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5998,7 +6200,10 @@ func (s *clinical) LabTestsRead(ctx context.Context, request operations.LabTests
 // LabTestsUpdate - Update an existing lab test
 func (s *clinical) LabTestsUpdate(ctx context.Context, request operations.LabTestsUpdateRequest, security operations.LabTestsUpdateSecurity) (*operations.LabTestsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/lab_tests/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -6049,7 +6254,10 @@ func (s *clinical) LabTestsUpdate(ctx context.Context, request operations.LabTes
 // MedicationsAppendToPharmacyNote - Append a message to the "pharmacy_note" section of the prescription, in a new paragraph
 func (s *clinical) MedicationsAppendToPharmacyNote(ctx context.Context, request operations.MedicationsAppendToPharmacyNoteRequest, security operations.MedicationsAppendToPharmacyNoteSecurity) (*operations.MedicationsAppendToPharmacyNoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}/append_to_pharmacy_note", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}/append_to_pharmacy_note", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -6218,7 +6426,10 @@ func (s *clinical) MedicationsList(ctx context.Context, request operations.Medic
 // MedicationsPartialUpdate - Update an existing patient medications
 func (s *clinical) MedicationsPartialUpdate(ctx context.Context, request operations.MedicationsPartialUpdateRequest, security operations.MedicationsPartialUpdateSecurity) (*operations.MedicationsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -6269,7 +6480,10 @@ func (s *clinical) MedicationsPartialUpdate(ctx context.Context, request operati
 // MedicationsRead - Retrieve an existing patient medications
 func (s *clinical) MedicationsRead(ctx context.Context, request operations.MedicationsReadRequest, security operations.MedicationsReadSecurity) (*operations.MedicationsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6328,7 +6542,10 @@ func (s *clinical) MedicationsRead(ctx context.Context, request operations.Medic
 // MedicationsUpdate - Update an existing patient medications
 func (s *clinical) MedicationsUpdate(ctx context.Context, request operations.MedicationsUpdateRequest, security operations.MedicationsUpdateSecurity) (*operations.MedicationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/medications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -6497,7 +6714,10 @@ func (s *clinical) PatientCommunicationsList(ctx context.Context, request operat
 // PatientCommunicationsPartialUpdate - Update an existing patient communication for CQM
 func (s *clinical) PatientCommunicationsPartialUpdate(ctx context.Context, request operations.PatientCommunicationsPartialUpdateRequest, security operations.PatientCommunicationsPartialUpdateSecurity) (*operations.PatientCommunicationsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_communications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_communications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -6548,7 +6768,10 @@ func (s *clinical) PatientCommunicationsPartialUpdate(ctx context.Context, reque
 // PatientCommunicationsRead - Retrieve an existing patient communication for CQM
 func (s *clinical) PatientCommunicationsRead(ctx context.Context, request operations.PatientCommunicationsReadRequest, security operations.PatientCommunicationsReadSecurity) (*operations.PatientCommunicationsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_communications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_communications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6607,7 +6830,10 @@ func (s *clinical) PatientCommunicationsRead(ctx context.Context, request operat
 // PatientCommunicationsUpdate - Update an existing patient communication for CQM
 func (s *clinical) PatientCommunicationsUpdate(ctx context.Context, request operations.PatientCommunicationsUpdateRequest, security operations.PatientCommunicationsUpdateSecurity) (*operations.PatientCommunicationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_communications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_communications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -6776,7 +7002,10 @@ func (s *clinical) PatientFlagTypesList(ctx context.Context, request operations.
 // PatientFlagTypesPartialUpdate - Update an existing patient flag type
 func (s *clinical) PatientFlagTypesPartialUpdate(ctx context.Context, request operations.PatientFlagTypesPartialUpdateRequest, security operations.PatientFlagTypesPartialUpdateSecurity) (*operations.PatientFlagTypesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_flag_types/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_flag_types/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -6827,7 +7056,10 @@ func (s *clinical) PatientFlagTypesPartialUpdate(ctx context.Context, request op
 // PatientFlagTypesRead - Retrieve an existing patient flag type
 func (s *clinical) PatientFlagTypesRead(ctx context.Context, request operations.PatientFlagTypesReadRequest, security operations.PatientFlagTypesReadSecurity) (*operations.PatientFlagTypesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_flag_types/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_flag_types/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6886,7 +7118,10 @@ func (s *clinical) PatientFlagTypesRead(ctx context.Context, request operations.
 // PatientFlagTypesUpdate - Update an existing patient flag type
 func (s *clinical) PatientFlagTypesUpdate(ctx context.Context, request operations.PatientFlagTypesUpdateRequest, security operations.PatientFlagTypesUpdateSecurity) (*operations.PatientFlagTypesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_flag_types/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_flag_types/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -7055,7 +7290,10 @@ func (s *clinical) PatientInterventionsList(ctx context.Context, request operati
 // PatientInterventionsPartialUpdate - Update an existing patient intervention for CQM
 func (s *clinical) PatientInterventionsPartialUpdate(ctx context.Context, request operations.PatientInterventionsPartialUpdateRequest, security operations.PatientInterventionsPartialUpdateSecurity) (*operations.PatientInterventionsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_interventions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_interventions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -7106,7 +7344,10 @@ func (s *clinical) PatientInterventionsPartialUpdate(ctx context.Context, reques
 // PatientInterventionsRead - Retrieve an existing patient intervention for CQM
 func (s *clinical) PatientInterventionsRead(ctx context.Context, request operations.PatientInterventionsReadRequest, security operations.PatientInterventionsReadSecurity) (*operations.PatientInterventionsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_interventions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_interventions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7165,7 +7406,10 @@ func (s *clinical) PatientInterventionsRead(ctx context.Context, request operati
 // PatientInterventionsUpdate - Update an existing patient intervention for CQM
 func (s *clinical) PatientInterventionsUpdate(ctx context.Context, request operations.PatientInterventionsUpdateRequest, security operations.PatientInterventionsUpdateSecurity) (*operations.PatientInterventionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_interventions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_interventions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -7212,6 +7456,7 @@ func (s *clinical) PatientInterventionsUpdate(ctx context.Context, request opera
 
 	return res, nil
 }
+
 func (s *clinical) PatientLabResultsCreate(ctx context.Context, request operations.PatientLabResultsCreateRequest, security operations.PatientLabResultsCreateSecurity) (*operations.PatientLabResultsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_lab_results"
@@ -7269,9 +7514,13 @@ func (s *clinical) PatientLabResultsCreate(ctx context.Context, request operatio
 
 	return res, nil
 }
+
 func (s *clinical) PatientLabResultsDelete(ctx context.Context, request operations.PatientLabResultsDeleteRequest, security operations.PatientLabResultsDeleteSecurity) (*operations.PatientLabResultsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -7318,6 +7567,7 @@ func (s *clinical) PatientLabResultsDelete(ctx context.Context, request operatio
 
 	return res, nil
 }
+
 func (s *clinical) PatientLabResultsList(ctx context.Context, request operations.PatientLabResultsListRequest, security operations.PatientLabResultsListSecurity) (*operations.PatientLabResultsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_lab_results"
@@ -7375,9 +7625,13 @@ func (s *clinical) PatientLabResultsList(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *clinical) PatientLabResultsPartialUpdate(ctx context.Context, request operations.PatientLabResultsPartialUpdateRequest, security operations.PatientLabResultsPartialUpdateSecurity) (*operations.PatientLabResultsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -7424,9 +7678,13 @@ func (s *clinical) PatientLabResultsPartialUpdate(ctx context.Context, request o
 
 	return res, nil
 }
+
 func (s *clinical) PatientLabResultsRead(ctx context.Context, request operations.PatientLabResultsReadRequest, security operations.PatientLabResultsReadSecurity) (*operations.PatientLabResultsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7481,9 +7739,13 @@ func (s *clinical) PatientLabResultsRead(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *clinical) PatientLabResultsUpdate(ctx context.Context, request operations.PatientLabResultsUpdateRequest, security operations.PatientLabResultsUpdateSecurity) (*operations.PatientLabResultsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_lab_results/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -7530,6 +7792,7 @@ func (s *clinical) PatientLabResultsUpdate(ctx context.Context, request operatio
 
 	return res, nil
 }
+
 func (s *clinical) PatientMessagesCreate(ctx context.Context, request operations.PatientMessagesCreateRequest, security operations.PatientMessagesCreateSecurity) (*operations.PatientMessagesCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_messages"
@@ -7587,6 +7850,7 @@ func (s *clinical) PatientMessagesCreate(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *clinical) PatientMessagesList(ctx context.Context, request operations.PatientMessagesListRequest, security operations.PatientMessagesListSecurity) (*operations.PatientMessagesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_messages"
@@ -7644,9 +7908,13 @@ func (s *clinical) PatientMessagesList(ctx context.Context, request operations.P
 
 	return res, nil
 }
+
 func (s *clinical) PatientMessagesPartialUpdate(ctx context.Context, request operations.PatientMessagesPartialUpdateRequest, security operations.PatientMessagesPartialUpdateSecurity) (*operations.PatientMessagesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_messages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_messages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -7693,9 +7961,13 @@ func (s *clinical) PatientMessagesPartialUpdate(ctx context.Context, request ope
 
 	return res, nil
 }
+
 func (s *clinical) PatientMessagesRead(ctx context.Context, request operations.PatientMessagesReadRequest, security operations.PatientMessagesReadSecurity) (*operations.PatientMessagesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_messages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_messages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7750,9 +8022,13 @@ func (s *clinical) PatientMessagesRead(ctx context.Context, request operations.P
 
 	return res, nil
 }
+
 func (s *clinical) PatientMessagesUpdate(ctx context.Context, request operations.PatientMessagesUpdateRequest, security operations.PatientMessagesUpdateSecurity) (*operations.PatientMessagesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_messages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_messages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -7921,7 +8197,10 @@ func (s *clinical) PatientPhysicalExamsList(ctx context.Context, request operati
 // PatientPhysicalExamsPartialUpdate - Update an existing patient physical exam for CQM
 func (s *clinical) PatientPhysicalExamsPartialUpdate(ctx context.Context, request operations.PatientPhysicalExamsPartialUpdateRequest, security operations.PatientPhysicalExamsPartialUpdateSecurity) (*operations.PatientPhysicalExamsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_physical_exams/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_physical_exams/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -7972,7 +8251,10 @@ func (s *clinical) PatientPhysicalExamsPartialUpdate(ctx context.Context, reques
 // PatientPhysicalExamsRead - Retrieve an existing patient physical exam for CQM
 func (s *clinical) PatientPhysicalExamsRead(ctx context.Context, request operations.PatientPhysicalExamsReadRequest, security operations.PatientPhysicalExamsReadSecurity) (*operations.PatientPhysicalExamsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_physical_exams/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_physical_exams/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8031,7 +8313,10 @@ func (s *clinical) PatientPhysicalExamsRead(ctx context.Context, request operati
 // PatientPhysicalExamsUpdate - Update an existing patient physical exam for CQM
 func (s *clinical) PatientPhysicalExamsUpdate(ctx context.Context, request operations.PatientPhysicalExamsUpdateRequest, security operations.PatientPhysicalExamsUpdateSecurity) (*operations.PatientPhysicalExamsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_physical_exams/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_physical_exams/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -8078,6 +8363,7 @@ func (s *clinical) PatientPhysicalExamsUpdate(ctx context.Context, request opera
 
 	return res, nil
 }
+
 func (s *clinical) PatientRiskAssessmentsCreate(ctx context.Context, request operations.PatientRiskAssessmentsCreateRequest, security operations.PatientRiskAssessmentsCreateSecurity) (*operations.PatientRiskAssessmentsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_risk_assessments"
@@ -8135,6 +8421,7 @@ func (s *clinical) PatientRiskAssessmentsCreate(ctx context.Context, request ope
 
 	return res, nil
 }
+
 func (s *clinical) PatientRiskAssessmentsList(ctx context.Context, request operations.PatientRiskAssessmentsListRequest, security operations.PatientRiskAssessmentsListSecurity) (*operations.PatientRiskAssessmentsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patient_risk_assessments"
@@ -8192,9 +8479,13 @@ func (s *clinical) PatientRiskAssessmentsList(ctx context.Context, request opera
 
 	return res, nil
 }
+
 func (s *clinical) PatientRiskAssessmentsPartialUpdate(ctx context.Context, request operations.PatientRiskAssessmentsPartialUpdateRequest, security operations.PatientRiskAssessmentsPartialUpdateSecurity) (*operations.PatientRiskAssessmentsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_risk_assessments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_risk_assessments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -8241,9 +8532,13 @@ func (s *clinical) PatientRiskAssessmentsPartialUpdate(ctx context.Context, requ
 
 	return res, nil
 }
+
 func (s *clinical) PatientRiskAssessmentsRead(ctx context.Context, request operations.PatientRiskAssessmentsReadRequest, security operations.PatientRiskAssessmentsReadSecurity) (*operations.PatientRiskAssessmentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_risk_assessments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_risk_assessments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8298,9 +8593,13 @@ func (s *clinical) PatientRiskAssessmentsRead(ctx context.Context, request opera
 
 	return res, nil
 }
+
 func (s *clinical) PatientRiskAssessmentsUpdate(ctx context.Context, request operations.PatientRiskAssessmentsUpdateRequest, security operations.PatientRiskAssessmentsUpdateSecurity) (*operations.PatientRiskAssessmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_risk_assessments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_risk_assessments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -8469,7 +8768,10 @@ func (s *clinical) PatientVaccineRecordsList(ctx context.Context, request operat
 // PatientVaccineRecordsPartialUpdate - Update an existing patient vaccine records
 func (s *clinical) PatientVaccineRecordsPartialUpdate(ctx context.Context, request operations.PatientVaccineRecordsPartialUpdateRequest, security operations.PatientVaccineRecordsPartialUpdateSecurity) (*operations.PatientVaccineRecordsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_vaccine_records/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_vaccine_records/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -8520,7 +8822,10 @@ func (s *clinical) PatientVaccineRecordsPartialUpdate(ctx context.Context, reque
 // PatientVaccineRecordsRead - Retrieve an existing patient vaccine records
 func (s *clinical) PatientVaccineRecordsRead(ctx context.Context, request operations.PatientVaccineRecordsReadRequest, security operations.PatientVaccineRecordsReadSecurity) (*operations.PatientVaccineRecordsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_vaccine_records/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_vaccine_records/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8579,7 +8884,10 @@ func (s *clinical) PatientVaccineRecordsRead(ctx context.Context, request operat
 // PatientVaccineRecordsUpdate - Update an existing patient vaccine records
 func (s *clinical) PatientVaccineRecordsUpdate(ctx context.Context, request operations.PatientVaccineRecordsUpdateRequest, security operations.PatientVaccineRecordsUpdateSecurity) (*operations.PatientVaccineRecordsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_vaccine_records/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_vaccine_records/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -8630,7 +8938,10 @@ func (s *clinical) PatientVaccineRecordsUpdate(ctx context.Context, request oper
 // PatientsCcda - Retrieve patient CCDA
 func (s *clinical) PatientsCcda(ctx context.Context, request operations.PatientsCcdaRequest, security operations.PatientsCcdaSecurity) (*operations.PatientsCcdaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/ccda", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/ccda", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -8748,7 +9059,10 @@ func (s *clinical) PatientsCreate(ctx context.Context, request operations.Patien
 // PatientsDelete - Delete an existing patient
 func (s *clinical) PatientsDelete(ctx context.Context, request operations.PatientsDeleteRequest, security operations.PatientsDeleteSecurity) (*operations.PatientsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -8858,7 +9172,10 @@ func (s *clinical) PatientsList(ctx context.Context, request operations.Patients
 // PatientsOnpatientAccessCreate - Send new onpatient invite to patient
 func (s *clinical) PatientsOnpatientAccessCreate(ctx context.Context, request operations.PatientsOnpatientAccessCreateRequest, security operations.PatientsOnpatientAccessCreateSecurity) (*operations.PatientsOnpatientAccessCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/onpatient_access", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/onpatient_access", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -8917,7 +9234,10 @@ func (s *clinical) PatientsOnpatientAccessCreate(ctx context.Context, request op
 // PatientsOnpatientAccessDelete - Revoke sent onpatient invites
 func (s *clinical) PatientsOnpatientAccessDelete(ctx context.Context, request operations.PatientsOnpatientAccessDeleteRequest, security operations.PatientsOnpatientAccessDeleteSecurity) (*operations.PatientsOnpatientAccessDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/onpatient_access", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/onpatient_access", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -8968,7 +9288,10 @@ func (s *clinical) PatientsOnpatientAccessDelete(ctx context.Context, request op
 // PatientsOnpatientAccessRead - Retrieve or search existing onpatient access invites
 func (s *clinical) PatientsOnpatientAccessRead(ctx context.Context, request operations.PatientsOnpatientAccessReadRequest, security operations.PatientsOnpatientAccessReadSecurity) (*operations.PatientsOnpatientAccessReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/onpatient_access", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/onpatient_access", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9027,7 +9350,10 @@ func (s *clinical) PatientsOnpatientAccessRead(ctx context.Context, request oper
 // PatientsPartialUpdate - Update an existing patient
 func (s *clinical) PatientsPartialUpdate(ctx context.Context, request operations.PatientsPartialUpdateRequest, security operations.PatientsPartialUpdateSecurity) (*operations.PatientsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -9078,7 +9404,10 @@ func (s *clinical) PatientsPartialUpdate(ctx context.Context, request operations
 // PatientsQrda1 - Retrieve patient QRDA1
 func (s *clinical) PatientsQrda1(ctx context.Context, request operations.PatientsQrda1Request, security operations.PatientsQrda1Security) (*operations.PatientsQrda1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/qrda1", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}/qrda1", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9137,7 +9466,10 @@ func (s *clinical) PatientsQrda1(ctx context.Context, request operations.Patient
 // PatientsRead - Retrieve an existing patient
 func (s *clinical) PatientsRead(ctx context.Context, request operations.PatientsReadRequest, security operations.PatientsReadSecurity) (*operations.PatientsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9192,6 +9524,7 @@ func (s *clinical) PatientsRead(ctx context.Context, request operations.Patients
 
 	return res, nil
 }
+
 func (s *clinical) PatientsSummaryCreate(ctx context.Context, request operations.PatientsSummaryCreateRequest, security operations.PatientsSummaryCreateSecurity) (*operations.PatientsSummaryCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patients_summary"
@@ -9249,9 +9582,13 @@ func (s *clinical) PatientsSummaryCreate(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *clinical) PatientsSummaryDelete(ctx context.Context, request operations.PatientsSummaryDeleteRequest, security operations.PatientsSummaryDeleteSecurity) (*operations.PatientsSummaryDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -9298,6 +9635,7 @@ func (s *clinical) PatientsSummaryDelete(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *clinical) PatientsSummaryList(ctx context.Context, request operations.PatientsSummaryListRequest, security operations.PatientsSummaryListSecurity) (*operations.PatientsSummaryListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/patients_summary"
@@ -9355,9 +9693,13 @@ func (s *clinical) PatientsSummaryList(ctx context.Context, request operations.P
 
 	return res, nil
 }
+
 func (s *clinical) PatientsSummaryPartialUpdate(ctx context.Context, request operations.PatientsSummaryPartialUpdateRequest, security operations.PatientsSummaryPartialUpdateSecurity) (*operations.PatientsSummaryPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -9404,9 +9746,13 @@ func (s *clinical) PatientsSummaryPartialUpdate(ctx context.Context, request ope
 
 	return res, nil
 }
+
 func (s *clinical) PatientsSummaryRead(ctx context.Context, request operations.PatientsSummaryReadRequest, security operations.PatientsSummaryReadSecurity) (*operations.PatientsSummaryReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9461,9 +9807,13 @@ func (s *clinical) PatientsSummaryRead(ctx context.Context, request operations.P
 
 	return res, nil
 }
+
 func (s *clinical) PatientsSummaryUpdate(ctx context.Context, request operations.PatientsSummaryUpdateRequest, security operations.PatientsSummaryUpdateSecurity) (*operations.PatientsSummaryUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients_summary/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -9514,7 +9864,10 @@ func (s *clinical) PatientsSummaryUpdate(ctx context.Context, request operations
 // PatientsUpdate - Update an existing patient
 func (s *clinical) PatientsUpdate(ctx context.Context, request operations.PatientsUpdateRequest, security operations.PatientsUpdateSecurity) (*operations.PatientsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patients/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -9624,7 +9977,10 @@ func (s *clinical) PrescriptionMessagesList(ctx context.Context, request operati
 // PrescriptionMessagesRead - Retrieve an existing prescription message
 func (s *clinical) PrescriptionMessagesRead(ctx context.Context, request operations.PrescriptionMessagesReadRequest, security operations.PrescriptionMessagesReadSecurity) (*operations.PrescriptionMessagesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/prescription_messages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/prescription_messages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9801,7 +10157,10 @@ func (s *clinical) ProblemsList(ctx context.Context, request operations.Problems
 // ProblemsPartialUpdate - Update an existing patient problems
 func (s *clinical) ProblemsPartialUpdate(ctx context.Context, request operations.ProblemsPartialUpdateRequest, security operations.ProblemsPartialUpdateSecurity) (*operations.ProblemsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/problems/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/problems/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -9852,7 +10211,10 @@ func (s *clinical) ProblemsPartialUpdate(ctx context.Context, request operations
 // ProblemsRead - Retrieve an existing patient problems
 func (s *clinical) ProblemsRead(ctx context.Context, request operations.ProblemsReadRequest, security operations.ProblemsReadSecurity) (*operations.ProblemsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/problems/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/problems/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -9911,7 +10273,10 @@ func (s *clinical) ProblemsRead(ctx context.Context, request operations.Problems
 // ProblemsUpdate - Update an existing patient problems
 func (s *clinical) ProblemsUpdate(ctx context.Context, request operations.ProblemsUpdateRequest, security operations.ProblemsUpdateSecurity) (*operations.ProblemsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/problems/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/problems/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -10021,7 +10386,10 @@ func (s *clinical) ReminderProfilesCreate(ctx context.Context, request operation
 // ReminderProfilesDelete - Delete an existing reminder profile
 func (s *clinical) ReminderProfilesDelete(ctx context.Context, request operations.ReminderProfilesDeleteRequest, security operations.ReminderProfilesDeleteSecurity) (*operations.ReminderProfilesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -10131,7 +10499,10 @@ func (s *clinical) ReminderProfilesList(ctx context.Context, request operations.
 // ReminderProfilesPartialUpdate - Update an existing reminder profile
 func (s *clinical) ReminderProfilesPartialUpdate(ctx context.Context, request operations.ReminderProfilesPartialUpdateRequest, security operations.ReminderProfilesPartialUpdateSecurity) (*operations.ReminderProfilesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -10182,7 +10553,10 @@ func (s *clinical) ReminderProfilesPartialUpdate(ctx context.Context, request op
 // ReminderProfilesRead - Retrieve an existing reminder profile
 func (s *clinical) ReminderProfilesRead(ctx context.Context, request operations.ReminderProfilesReadRequest, security operations.ReminderProfilesReadSecurity) (*operations.ReminderProfilesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10241,7 +10615,10 @@ func (s *clinical) ReminderProfilesRead(ctx context.Context, request operations.
 // ReminderProfilesUpdate - Update an existing reminder profile
 func (s *clinical) ReminderProfilesUpdate(ctx context.Context, request operations.ReminderProfilesUpdateRequest, security operations.ReminderProfilesUpdateSecurity) (*operations.ReminderProfilesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/reminder_profiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -10296,7 +10673,7 @@ func (s *clinical) ReminderProfilesUpdate(ctx context.Context, request operation
 // - When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results`
 //
 // - Update `/api/lab_orders` status
-func (s *clinical) SublabsCreate(ctx context.Context) (*operations.SublabsCreateResponse, error) {
+func (s *clinical) SublabsCreate(ctx context.Context, security operations.SublabsCreateSecurity) (*operations.SublabsCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/sublabs"
 
@@ -10305,7 +10682,7 @@ func (s *clinical) SublabsCreate(ctx context.Context) (*operations.SublabsCreate
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -10353,7 +10730,10 @@ func (s *clinical) SublabsCreate(ctx context.Context) (*operations.SublabsCreate
 // SublabsDelete - Delete an existing sub vendor
 func (s *clinical) SublabsDelete(ctx context.Context, request operations.SublabsDeleteRequest, security operations.SublabsDeleteSecurity) (*operations.SublabsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -10459,7 +10839,10 @@ func (s *clinical) SublabsList(ctx context.Context, request operations.SublabsLi
 // SublabsPartialUpdate - Update an existing sub vendor
 func (s *clinical) SublabsPartialUpdate(ctx context.Context, request operations.SublabsPartialUpdateRequest, security operations.SublabsPartialUpdateSecurity) (*operations.SublabsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -10506,7 +10889,10 @@ func (s *clinical) SublabsPartialUpdate(ctx context.Context, request operations.
 // SublabsRead - Retrieve an existing sub vendor
 func (s *clinical) SublabsRead(ctx context.Context, request operations.SublabsReadRequest, security operations.SublabsReadSecurity) (*operations.SublabsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -10561,7 +10947,10 @@ func (s *clinical) SublabsRead(ctx context.Context, request operations.SublabsRe
 // SublabsUpdate - Update an existing sub vendor
 func (s *clinical) SublabsUpdate(ctx context.Context, request operations.SublabsUpdateRequest, security operations.SublabsUpdateSecurity) (*operations.SublabsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/sublabs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

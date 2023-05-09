@@ -35,7 +35,10 @@ func newConversation(defaultClient, securityClient HTTPClient, serverURL, langua
 // List all order conversations of an order by its order ID.
 func (s *conversation) GetConversation(ctx context.Context, request operations.GetConversationRequest) (*operations.GetConversationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/conversation-message", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/oms/pvt/orders/{orderId}/conversation-message", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

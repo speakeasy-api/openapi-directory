@@ -16,21 +16,25 @@ const (
 	OrganizationLifecycleStateEnumDeleteRequested           OrganizationLifecycleStateEnum = "DELETE_REQUESTED"
 )
 
+func (e OrganizationLifecycleStateEnum) ToPointer() *OrganizationLifecycleStateEnum {
+	return &e
+}
+
 func (e *OrganizationLifecycleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIFECYCLE_STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "DELETE_REQUESTED":
-		*e = OrganizationLifecycleStateEnum(s)
+		*e = OrganizationLifecycleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationLifecycleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationLifecycleStateEnum: %v", v)
 	}
 }
 

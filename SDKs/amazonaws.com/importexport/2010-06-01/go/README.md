@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/importexpor
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,21 +27,19 @@ func main() {
         }),
     )
 
-    req := operations.GETCancelJobRequest{
-        APIVersion: "corrupti",
+    ctx := context.Background()
+    res, err := s.GETCancelJob(ctx, operations.GETCancelJobRequest{
+        APIVersion: sdk.String("corrupti"),
         AWSAccessKeyID: "provident",
-        Action: "CancelJob",
+        Action: operations.GETCancelJobActionEnumCancelJob,
         JobID: "distinctio",
-        Operation: "CancelJob",
+        Operation: operations.GETCancelJobOperationEnumCancelJob,
         Signature: "quibusdam",
         SignatureMethod: "unde",
         SignatureVersion: "nulla",
         Timestamp: "corrupti",
-        Version: "2010-06-01",
-    }
-
-    ctx := context.Background()
-    res, err := s.GETCancelJob(ctx, req)
+        Version: operations.GETCancelJobVersionEnumTwoThousandAndTen0601,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -57,20 +54,20 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GETCancelJob` - This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already started or is complete.
-* `GETCreateJob` - This operation initiates the process of scheduling an upload or download of your data. You include in the request a manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in other operations, a signature that you use to identify your storage device, and the address where you should ship your storage device.
-* `GETGETShippingLabel` - This operation generates a pre-paid UPS shipping label that you will use to ship your device to AWS for processing.
-* `GETGETStatus` - This operation returns information about a job, including where the job is in the processing pipeline, the status of the results, and the signature value associated with the job. You can only return information about jobs you own.
-* `GETListJobs` - This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the ListJobs operation would return Test2 followed by Test1.
-* `GETUpdateJob` - You use this operation to change the parameters specified in the original manifest file by supplying a new manifest file. The manifest file attached to this request replaces the original manifest file. You can only use the operation after a CreateJob request but before the data transfer starts and you can only use it on jobs you own.
-* `POSTCancelJob` - This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already started or is complete.
-* `POSTCreateJob` - This operation initiates the process of scheduling an upload or download of your data. You include in the request a manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in other operations, a signature that you use to identify your storage device, and the address where you should ship your storage device.
-* `POSTGetShippingLabel` - This operation generates a pre-paid UPS shipping label that you will use to ship your device to AWS for processing.
-* `POSTGetStatus` - This operation returns information about a job, including where the job is in the processing pipeline, the status of the results, and the signature value associated with the job. You can only return information about jobs you own.
-* `POSTListJobs` - This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the ListJobs operation would return Test2 followed by Test1.
-* `POSTUpdateJob` - You use this operation to change the parameters specified in the original manifest file by supplying a new manifest file. The manifest file attached to this request replaces the original manifest file. You can only use the operation after a CreateJob request but before the data transfer starts and you can only use it on jobs you own.
+* [GETCancelJob](docs/sdk/README.md#getcanceljob) - This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already started or is complete.
+* [GETCreateJob](docs/sdk/README.md#getcreatejob) - This operation initiates the process of scheduling an upload or download of your data. You include in the request a manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in other operations, a signature that you use to identify your storage device, and the address where you should ship your storage device.
+* [GETGETShippingLabel](docs/sdk/README.md#getgetshippinglabel) - This operation generates a pre-paid UPS shipping label that you will use to ship your device to AWS for processing.
+* [GETGETStatus](docs/sdk/README.md#getgetstatus) - This operation returns information about a job, including where the job is in the processing pipeline, the status of the results, and the signature value associated with the job. You can only return information about jobs you own.
+* [GETListJobs](docs/sdk/README.md#getlistjobs) - This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the ListJobs operation would return Test2 followed by Test1.
+* [GETUpdateJob](docs/sdk/README.md#getupdatejob) - You use this operation to change the parameters specified in the original manifest file by supplying a new manifest file. The manifest file attached to this request replaces the original manifest file. You can only use the operation after a CreateJob request but before the data transfer starts and you can only use it on jobs you own.
+* [POSTCancelJob](docs/sdk/README.md#postcanceljob) - This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already started or is complete.
+* [POSTCreateJob](docs/sdk/README.md#postcreatejob) - This operation initiates the process of scheduling an upload or download of your data. You include in the request a manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in other operations, a signature that you use to identify your storage device, and the address where you should ship your storage device.
+* [POSTGetShippingLabel](docs/sdk/README.md#postgetshippinglabel) - This operation generates a pre-paid UPS shipping label that you will use to ship your device to AWS for processing.
+* [POSTGetStatus](docs/sdk/README.md#postgetstatus) - This operation returns information about a job, including where the job is in the processing pipeline, the status of the results, and the signature value associated with the job. You can only return information about jobs you own.
+* [POSTListJobs](docs/sdk/README.md#postlistjobs) - This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the ListJobs operation would return Test2 followed by Test1.
+* [POSTUpdateJob](docs/sdk/README.md#postupdatejob) - You use this operation to change the parameters specified in the original manifest file by supplying a new manifest file. The manifest file attached to this request replaces the original manifest file. You can only use the operation after a CreateJob request but before the data transfer starts and you can only use it on jobs you own.
 <!-- End SDK Available Operations -->
 
 ### Maturity

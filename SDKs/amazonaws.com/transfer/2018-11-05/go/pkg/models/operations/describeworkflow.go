@@ -16,17 +16,21 @@ const (
 	DescribeWorkflowXAmzTargetEnumTransferServiceDescribeWorkflow DescribeWorkflowXAmzTargetEnum = "TransferService.DescribeWorkflow"
 )
 
+func (e DescribeWorkflowXAmzTargetEnum) ToPointer() *DescribeWorkflowXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeWorkflowXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.DescribeWorkflow":
-		*e = DescribeWorkflowXAmzTargetEnum(s)
+		*e = DescribeWorkflowXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeWorkflowXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeWorkflowXAmzTargetEnum: %v", v)
 	}
 }
 

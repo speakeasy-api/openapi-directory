@@ -23,12 +23,16 @@ const (
 	KkidApnsPostPriorityEnumCritical      KkidApnsPostPriorityEnum = "critical"
 )
 
+func (e KkidApnsPostPriorityEnum) ToPointer() *KkidApnsPostPriorityEnum {
+	return &e
+}
+
 func (e *KkidApnsPostPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "passive":
 		fallthrough
 	case "active":
@@ -36,10 +40,10 @@ func (e *KkidApnsPostPriorityEnum) UnmarshalJSON(data []byte) error {
 	case "time-sensitive":
 		fallthrough
 	case "critical":
-		*e = KkidApnsPostPriorityEnum(s)
+		*e = KkidApnsPostPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KkidApnsPostPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for KkidApnsPostPriorityEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	KkidApnsPostSectionEnumWishList        KkidApnsPostSectionEnum = "WishList"
 )
 
+func (e KkidApnsPostSectionEnum) ToPointer() *KkidApnsPostSectionEnum {
+	return &e
+}
+
 func (e *KkidApnsPostSectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Chores":
 		fallthrough
 	case "Chores-New":
@@ -72,10 +80,10 @@ func (e *KkidApnsPostSectionEnum) UnmarshalJSON(data []byte) error {
 	case "Allowance-New":
 		fallthrough
 	case "WishList":
-		*e = KkidApnsPostSectionEnum(s)
+		*e = KkidApnsPostSectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KkidApnsPostSectionEnum: %s", s)
+		return fmt.Errorf("invalid value for KkidApnsPostSectionEnum: %v", v)
 	}
 }
 
@@ -89,12 +97,16 @@ const (
 	KkidApnsPostToolEnumSend        KkidApnsPostToolEnum = "send"
 )
 
+func (e KkidApnsPostToolEnum) ToPointer() *KkidApnsPostToolEnum {
+	return &e
+}
+
 func (e *KkidApnsPostToolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "register":
 		fallthrough
 	case "subscribe":
@@ -102,10 +114,10 @@ func (e *KkidApnsPostToolEnum) UnmarshalJSON(data []byte) error {
 	case "unsubscribe":
 		fallthrough
 	case "send":
-		*e = KkidApnsPostToolEnum(s)
+		*e = KkidApnsPostToolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KkidApnsPostToolEnum: %s", s)
+		return fmt.Errorf("invalid value for KkidApnsPostToolEnum: %v", v)
 	}
 }
 

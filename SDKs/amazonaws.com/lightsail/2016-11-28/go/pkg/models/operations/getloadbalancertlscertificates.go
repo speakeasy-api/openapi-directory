@@ -16,17 +16,21 @@ const (
 	GetLoadBalancerTLSCertificatesXAmzTargetEnumLightsail20161128GetLoadBalancerTLSCertificates GetLoadBalancerTLSCertificatesXAmzTargetEnum = "Lightsail_20161128.GetLoadBalancerTlsCertificates"
 )
 
+func (e GetLoadBalancerTLSCertificatesXAmzTargetEnum) ToPointer() *GetLoadBalancerTLSCertificatesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetLoadBalancerTLSCertificatesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetLoadBalancerTlsCertificates":
-		*e = GetLoadBalancerTLSCertificatesXAmzTargetEnum(s)
+		*e = GetLoadBalancerTLSCertificatesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLoadBalancerTLSCertificatesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLoadBalancerTLSCertificatesXAmzTargetEnum: %v", v)
 	}
 }
 

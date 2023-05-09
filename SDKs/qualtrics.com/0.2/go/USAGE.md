@@ -2,30 +2,28 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateContactInMailinglistRequest{
+    ctx := context.Background()
+    res, err := s.CreateContactInMailinglist(ctx, operations.CreateContactInMailinglistRequest{
         CreateContactInMailingList: shared.CreateContactInMailingList{
-            Email: "Larue_Rau85@yahoo.com",
-            FirstName: "Karley",
-            LastName: "Stamm",
-            Unsubscribed: false,
+            Email: sdk.String("Larue_Rau85@yahoo.com"),
+            FirstName: sdk.String("Karley"),
+            LastName: sdk.String("Stamm"),
+            Unsubscribed: sdk.Bool(false),
         },
         DirectoryID: "vel",
         MailingListID: "error",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateContactInMailinglist(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

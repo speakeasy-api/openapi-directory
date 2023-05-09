@@ -41,12 +41,16 @@ const (
 	IdentificationDataTypeEnumConstitutionalDocument     IdentificationDataTypeEnum = "constitutionalDocument"
 )
 
+func (e IdentificationDataTypeEnum) ToPointer() *IdentificationDataTypeEnum {
+	return &e
+}
+
 func (e *IdentificationDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bankStatement":
 		fallthrough
 	case "driversLicense":
@@ -72,10 +76,10 @@ func (e *IdentificationDataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "proofOfIndustry":
 		fallthrough
 	case "constitutionalDocument":
-		*e = IdentificationDataTypeEnum(s)
+		*e = IdentificationDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IdentificationDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IdentificationDataTypeEnum: %v", v)
 	}
 }
 

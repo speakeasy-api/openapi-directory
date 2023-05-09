@@ -16,12 +16,16 @@ const (
 	CrawlerHistoryStateEnumStopped   CrawlerHistoryStateEnum = "STOPPED"
 )
 
+func (e CrawlerHistoryStateEnum) ToPointer() *CrawlerHistoryStateEnum {
+	return &e
+}
+
 func (e *CrawlerHistoryStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "COMPLETED":
@@ -29,9 +33,9 @@ func (e *CrawlerHistoryStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "STOPPED":
-		*e = CrawlerHistoryStateEnum(s)
+		*e = CrawlerHistoryStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrawlerHistoryStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CrawlerHistoryStateEnum: %v", v)
 	}
 }

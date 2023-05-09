@@ -15,20 +15,24 @@ const (
 	SenderIDFilterNameEnumMessageType    SenderIDFilterNameEnum = "message-type"
 )
 
+func (e SenderIDFilterNameEnum) ToPointer() *SenderIDFilterNameEnum {
+	return &e
+}
+
 func (e *SenderIDFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sender-id":
 		fallthrough
 	case "iso-country-code":
 		fallthrough
 	case "message-type":
-		*e = SenderIDFilterNameEnum(s)
+		*e = SenderIDFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SenderIDFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SenderIDFilterNameEnum: %v", v)
 	}
 }

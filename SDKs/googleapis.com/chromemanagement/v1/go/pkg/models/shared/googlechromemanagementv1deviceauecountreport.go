@@ -26,12 +26,16 @@ const (
 	GoogleChromeManagementV1DeviceAueCountReportAueMonthEnumDecember         GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum = "DECEMBER"
 )
 
+func (e GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum) ToPointer() *GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MONTH_UNSPECIFIED":
 		fallthrough
 	case "JANUARY":
@@ -57,10 +61,10 @@ func (e *GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum) UnmarshalJSON
 	case "NOVEMBER":
 		fallthrough
 	case "DECEMBER":
-		*e = GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum(s)
+		*e = GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTModifyClusterIamRolesActionEnumModifyClusterIamRoles POSTModifyClusterIamRolesActionEnum = "ModifyClusterIamRoles"
 )
 
+func (e POSTModifyClusterIamRolesActionEnum) ToPointer() *POSTModifyClusterIamRolesActionEnum {
+	return &e
+}
+
 func (e *POSTModifyClusterIamRolesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyClusterIamRoles":
-		*e = POSTModifyClusterIamRolesActionEnum(s)
+		*e = POSTModifyClusterIamRolesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyClusterIamRolesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyClusterIamRolesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyClusterIamRolesVersionEnumTwoThousandAndTwelve1201 POSTModifyClusterIamRolesVersionEnum = "2012-12-01"
 )
 
+func (e POSTModifyClusterIamRolesVersionEnum) ToPointer() *POSTModifyClusterIamRolesVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyClusterIamRolesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTModifyClusterIamRolesVersionEnum(s)
+		*e = POSTModifyClusterIamRolesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyClusterIamRolesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyClusterIamRolesVersionEnum: %v", v)
 	}
 }
 

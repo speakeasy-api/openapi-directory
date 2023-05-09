@@ -17,12 +17,16 @@ const (
 	QueryStateStringEnumExpired            QueryStateStringEnum = "EXPIRED"
 )
 
+func (e QueryStateStringEnum) ToPointer() *QueryStateStringEnum {
+	return &e
+}
+
 func (e *QueryStateStringEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "WORKUNITS_AVAILABLE":
@@ -32,9 +36,9 @@ func (e *QueryStateStringEnum) UnmarshalJSON(data []byte) error {
 	case "FINISHED":
 		fallthrough
 	case "EXPIRED":
-		*e = QueryStateStringEnum(s)
+		*e = QueryStateStringEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryStateStringEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryStateStringEnum: %v", v)
 	}
 }

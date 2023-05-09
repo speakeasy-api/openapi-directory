@@ -23,21 +23,25 @@ const (
 	AdexchangebuyerCreativesListStatusFilterEnumNotChecked  AdexchangebuyerCreativesListStatusFilterEnum = "not_checked"
 )
 
+func (e AdexchangebuyerCreativesListStatusFilterEnum) ToPointer() *AdexchangebuyerCreativesListStatusFilterEnum {
+	return &e
+}
+
 func (e *AdexchangebuyerCreativesListStatusFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "approved":
 		fallthrough
 	case "disapproved":
 		fallthrough
 	case "not_checked":
-		*e = AdexchangebuyerCreativesListStatusFilterEnum(s)
+		*e = AdexchangebuyerCreativesListStatusFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdexchangebuyerCreativesListStatusFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for AdexchangebuyerCreativesListStatusFilterEnum: %v", v)
 	}
 }
 

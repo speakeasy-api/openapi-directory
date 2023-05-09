@@ -16,17 +16,21 @@ const (
 	UpdateStudioXAmzTargetEnumElasticMapReduceUpdateStudio UpdateStudioXAmzTargetEnum = "ElasticMapReduce.UpdateStudio"
 )
 
+func (e UpdateStudioXAmzTargetEnum) ToPointer() *UpdateStudioXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateStudioXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.UpdateStudio":
-		*e = UpdateStudioXAmzTargetEnum(s)
+		*e = UpdateStudioXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateStudioXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateStudioXAmzTargetEnum: %v", v)
 	}
 }
 

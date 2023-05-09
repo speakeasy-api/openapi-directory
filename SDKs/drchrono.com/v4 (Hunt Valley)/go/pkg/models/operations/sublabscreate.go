@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type SublabsCreateSecurity struct {
+	DrchronoOauth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type SublabsCreateResponse struct {
 	ContentType string
 	// Created

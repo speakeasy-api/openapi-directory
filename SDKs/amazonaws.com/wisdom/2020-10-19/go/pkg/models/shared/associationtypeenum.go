@@ -13,16 +13,20 @@ const (
 	AssociationTypeEnumKnowledgeBase AssociationTypeEnum = "KNOWLEDGE_BASE"
 )
 
+func (e AssociationTypeEnum) ToPointer() *AssociationTypeEnum {
+	return &e
+}
+
 func (e *AssociationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KNOWLEDGE_BASE":
-		*e = AssociationTypeEnum(s)
+		*e = AssociationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociationTypeEnum: %v", v)
 	}
 }

@@ -20,17 +20,21 @@ const (
 	AddTagsToVaultOperationEnumAdd AddTagsToVaultOperationEnum = "add"
 )
 
+func (e AddTagsToVaultOperationEnum) ToPointer() *AddTagsToVaultOperationEnum {
+	return &e
+}
+
 func (e *AddTagsToVaultOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "add":
-		*e = AddTagsToVaultOperationEnum(s)
+		*e = AddTagsToVaultOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddTagsToVaultOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for AddTagsToVaultOperationEnum: %v", v)
 	}
 }
 

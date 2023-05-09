@@ -15,17 +15,21 @@ const (
 	POSTModifyDBParameterGroupActionEnumModifyDbParameterGroup POSTModifyDBParameterGroupActionEnum = "ModifyDBParameterGroup"
 )
 
+func (e POSTModifyDBParameterGroupActionEnum) ToPointer() *POSTModifyDBParameterGroupActionEnum {
+	return &e
+}
+
 func (e *POSTModifyDBParameterGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyDBParameterGroup":
-		*e = POSTModifyDBParameterGroupActionEnum(s)
+		*e = POSTModifyDBParameterGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyDBParameterGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyDBParameterGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyDBParameterGroupVersionEnumTwoThousandAndFourteen1031 POSTModifyDBParameterGroupVersionEnum = "2014-10-31"
 )
 
+func (e POSTModifyDBParameterGroupVersionEnum) ToPointer() *POSTModifyDBParameterGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyDBParameterGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTModifyDBParameterGroupVersionEnum(s)
+		*e = POSTModifyDBParameterGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyDBParameterGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyDBParameterGroupVersionEnum: %v", v)
 	}
 }
 

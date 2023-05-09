@@ -16,21 +16,25 @@ const (
 	ImportResponseStateEnumFinishedFailed  ImportResponseStateEnum = "FINISHED_FAILED"
 )
 
+func (e ImportResponseStateEnum) ToPointer() *ImportResponseStateEnum {
+	return &e
+}
+
 func (e *ImportResponseStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORTING":
 		fallthrough
 	case "FINISHED_SUCCESS":
 		fallthrough
 	case "FINISHED_FAILED":
-		*e = ImportResponseStateEnum(s)
+		*e = ImportResponseStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportResponseStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportResponseStateEnum: %v", v)
 	}
 }
 

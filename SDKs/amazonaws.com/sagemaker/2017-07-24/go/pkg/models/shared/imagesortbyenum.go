@@ -15,20 +15,24 @@ const (
 	ImageSortByEnumImageName        ImageSortByEnum = "IMAGE_NAME"
 )
 
+func (e ImageSortByEnum) ToPointer() *ImageSortByEnum {
+	return &e
+}
+
 func (e *ImageSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATION_TIME":
 		fallthrough
 	case "LAST_MODIFIED_TIME":
 		fallthrough
 	case "IMAGE_NAME":
-		*e = ImageSortByEnum(s)
+		*e = ImageSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageSortByEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETGETContextKeysForCustomPolicyActionEnumGetContextKeysForCustomPolicy GETGETContextKeysForCustomPolicyActionEnum = "GetContextKeysForCustomPolicy"
 )
 
+func (e GETGETContextKeysForCustomPolicyActionEnum) ToPointer() *GETGETContextKeysForCustomPolicyActionEnum {
+	return &e
+}
+
 func (e *GETGETContextKeysForCustomPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetContextKeysForCustomPolicy":
-		*e = GETGETContextKeysForCustomPolicyActionEnum(s)
+		*e = GETGETContextKeysForCustomPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETContextKeysForCustomPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETContextKeysForCustomPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETContextKeysForCustomPolicyVersionEnumTwoThousandAndTen0508 GETGETContextKeysForCustomPolicyVersionEnum = "2010-05-08"
 )
 
+func (e GETGETContextKeysForCustomPolicyVersionEnum) ToPointer() *GETGETContextKeysForCustomPolicyVersionEnum {
+	return &e
+}
+
 func (e *GETGETContextKeysForCustomPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETGETContextKeysForCustomPolicyVersionEnum(s)
+		*e = GETGETContextKeysForCustomPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETContextKeysForCustomPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETContextKeysForCustomPolicyVersionEnum: %v", v)
 	}
 }
 

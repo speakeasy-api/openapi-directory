@@ -27,17 +27,21 @@ const (
 	SessionActivityEntryTypeEnumSessionActivity SessionActivityEntryTypeEnum = "sessionActivity"
 )
 
+func (e SessionActivityEntryTypeEnum) ToPointer() *SessionActivityEntryTypeEnum {
+	return &e
+}
+
 func (e *SessionActivityEntryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sessionActivity":
-		*e = SessionActivityEntryTypeEnum(s)
+		*e = SessionActivityEntryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SessionActivityEntryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SessionActivityEntryTypeEnum: %v", v)
 	}
 }
 

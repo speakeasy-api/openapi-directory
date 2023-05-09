@@ -8,6 +8,10 @@ import (
 	"net/http"
 )
 
+type GetInlineScriptTagsSecurity struct {
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 // GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum - インラインスクリプトを出力するページ。
 //
 // - `all`: カートの途中のページと注文完了ページの両方
@@ -21,21 +25,25 @@ const (
 	GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnumCart       GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum = "cart"
 )
 
+func (e GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum) ToPointer() *GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum {
+	return &e
+}
+
 func (e *GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "thanks_page":
 		fallthrough
 	case "cart":
-		*e = GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum(s)
+		*e = GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum: %v", v)
 	}
 }
 
@@ -48,17 +56,21 @@ const (
 	GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnumObjectBuilded GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnum = "object_builded"
 )
 
+func (e GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnum) ToPointer() *GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnum {
+	return &e
+}
+
 func (e *GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_builded":
-		*e = GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnum(s)
+		*e = GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnum: %v", v)
 	}
 }
 

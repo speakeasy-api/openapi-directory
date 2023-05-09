@@ -151,7 +151,10 @@ func (s *scripts) CreateScript(ctx context.Context, request shared.Script, secur
 // Delete a script
 func (s *scripts) DeleteScript(ctx context.Context, request operations.DeleteScriptRequest, security operations.DeleteScriptSecurity) (*operations.DeleteScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -199,7 +202,7 @@ func (s *scripts) DeleteScript(ctx context.Context, request operations.DeleteScr
 
 // FindAllScripts - Get all scripts
 // Get all scripts
-func (s *scripts) FindAllScripts(ctx context.Context) (*operations.FindAllScriptsResponse, error) {
+func (s *scripts) FindAllScripts(ctx context.Context, security operations.FindAllScriptsSecurity) (*operations.FindAllScriptsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/scripts"
 
@@ -208,7 +211,7 @@ func (s *scripts) FindAllScripts(ctx context.Context) (*operations.FindAllScript
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -251,7 +254,10 @@ func (s *scripts) FindAllScripts(ctx context.Context) (*operations.FindAllScript
 // Get a script
 func (s *scripts) FindScriptByID(ctx context.Context, request operations.FindScriptByIDRequest, security operations.FindScriptByIDSecurity) (*operations.FindScriptByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -301,7 +307,10 @@ func (s *scripts) FindScriptByID(ctx context.Context, request operations.FindScr
 // Update a script with a diff
 func (s *scripts) PatchScript(ctx context.Context, request operations.PatchScriptRequest, security operations.PatchScriptSecurity) (*operations.PatchScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -358,7 +367,10 @@ func (s *scripts) PatchScript(ctx context.Context, request operations.PatchScrip
 // Update a script
 func (s *scripts) UpdateScript(ctx context.Context, request operations.UpdateScriptRequest, security operations.UpdateScriptSecurity) (*operations.UpdateScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/scripts/{scriptId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Script", "json")
 	if err != nil {

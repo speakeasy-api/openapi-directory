@@ -2,14 +2,22 @@
 
 package shared
 
+type CreateOrUpdateTemplateRequestMargin struct {
+	Bottom *int64 `json:"bottom,omitempty"`
+	Left   *int64 `json:"left,omitempty"`
+	Right  *int64 `json:"right,omitempty"`
+	Top    *int64 `json:"top,omitempty"`
+}
+
 type CreateOrUpdateTemplateRequest struct {
 	Components []map[string]interface{} `json:"components"`
 	CSS        string                   `json:"css"`
 	FooterHTML *string                  `json:"footer_html,omitempty"`
 	// An enumeration.
-	Format     FormatEnum `json:"format"`
-	HeaderHTML *string    `json:"header_html,omitempty"`
-	Name       string     `json:"name"`
+	Format     FormatEnum                           `json:"format"`
+	HeaderHTML *string                              `json:"header_html,omitempty"`
+	Margin     *CreateOrUpdateTemplateRequestMargin `json:"margin,omitempty"`
+	Name       string                               `json:"name"`
 	// An enumeration.
 	Orientation    OrientationEnum        `json:"orientation"`
 	PreviewPayload map[string]interface{} `json:"preview_payload"`

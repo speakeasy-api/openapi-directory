@@ -16,21 +16,25 @@ const (
 	GoogleAnalyticsAdminV1alphaAudienceExclusionDurationModeEnumExcludePermanently                       GoogleAnalyticsAdminV1alphaAudienceExclusionDurationModeEnum = "EXCLUDE_PERMANENTLY"
 )
 
+func (e GoogleAnalyticsAdminV1alphaAudienceExclusionDurationModeEnum) ToPointer() *GoogleAnalyticsAdminV1alphaAudienceExclusionDurationModeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaAudienceExclusionDurationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUDIENCE_EXCLUSION_DURATION_MODE_UNSPECIFIED":
 		fallthrough
 	case "EXCLUDE_TEMPORARILY":
 		fallthrough
 	case "EXCLUDE_PERMANENTLY":
-		*e = GoogleAnalyticsAdminV1alphaAudienceExclusionDurationModeEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaAudienceExclusionDurationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAudienceExclusionDurationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAudienceExclusionDurationModeEnum: %v", v)
 	}
 }
 

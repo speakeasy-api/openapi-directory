@@ -13,36 +13,34 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/games/v1/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GamesAchievementDefinitionsListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        Language: "corrupti",
-        MaxResults: 847252,
-        OauthToken: "vel",
-        PageToken: "error",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.AchievementDefinitions.GamesAchievementDefinitionsList(ctx, req, operations.GamesAchievementDefinitionsListSecurity{
+    res, err := s.AchievementDefinitions.GamesAchievementDefinitionsList(ctx, operations.GamesAchievementDefinitionsListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        Language: sdk.String("corrupti"),
+        MaxResults: sdk.Int64(847252),
+        OauthToken: sdk.String("vel"),
+        PageToken: sdk.String("error"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("iure"),
+    }, operations.GamesAchievementDefinitionsListSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -61,69 +59,69 @@ func main() {
 ## Available Resources and Operations
 
 
-### AchievementDefinitions
+### [AchievementDefinitions](docs/achievementdefinitions/README.md)
 
-* `GamesAchievementDefinitionsList` - Lists all the achievement definitions for your application.
+* [GamesAchievementDefinitionsList](docs/achievementdefinitions/README.md#gamesachievementdefinitionslist) - Lists all the achievement definitions for your application.
 
-### Achievements
+### [Achievements](docs/achievements/README.md)
 
-* `GamesAchievementsIncrement` - Increments the steps of the achievement with the given ID for the currently authenticated player.
-* `GamesAchievementsList` - Lists the progress for all your application's achievements for the currently authenticated player.
-* `GamesAchievementsReveal` - Sets the state of the achievement with the given ID to `REVEALED` for the currently authenticated player.
-* `GamesAchievementsSetStepsAtLeast` - Sets the steps for the currently authenticated player towards unlocking an achievement. If the steps parameter is less than the current number of steps that the player already gained for the achievement, the achievement is not modified.
-* `GamesAchievementsUnlock` - Unlocks this achievement for the currently authenticated player.
-* `GamesAchievementsUpdateMultiple` - Updates multiple achievements for the currently authenticated player.
+* [GamesAchievementsIncrement](docs/achievements/README.md#gamesachievementsincrement) - Increments the steps of the achievement with the given ID for the currently authenticated player.
+* [GamesAchievementsList](docs/achievements/README.md#gamesachievementslist) - Lists the progress for all your application's achievements for the currently authenticated player.
+* [GamesAchievementsReveal](docs/achievements/README.md#gamesachievementsreveal) - Sets the state of the achievement with the given ID to `REVEALED` for the currently authenticated player.
+* [GamesAchievementsSetStepsAtLeast](docs/achievements/README.md#gamesachievementssetstepsatleast) - Sets the steps for the currently authenticated player towards unlocking an achievement. If the steps parameter is less than the current number of steps that the player already gained for the achievement, the achievement is not modified.
+* [GamesAchievementsUnlock](docs/achievements/README.md#gamesachievementsunlock) - Unlocks this achievement for the currently authenticated player.
+* [GamesAchievementsUpdateMultiple](docs/achievements/README.md#gamesachievementsupdatemultiple) - Updates multiple achievements for the currently authenticated player.
 
-### Applications
+### [Applications](docs/applications/README.md)
 
-* `GamesApplicationsGet` - Retrieves the metadata of the application with the given ID. If the requested application is not available for the specified `platformType`, the returned response will not include any instance data.
-* `GamesApplicationsGetEndPoint` - Returns a URL for the requested end point type.
-* `GamesApplicationsPlayed` - Indicate that the currently authenticated user is playing your application.
-* `GamesApplicationsVerify` - Verifies the auth token provided with this request is for the application with the specified ID, and returns the ID of the player it was granted for.
+* [GamesApplicationsGet](docs/applications/README.md#gamesapplicationsget) - Retrieves the metadata of the application with the given ID. If the requested application is not available for the specified `platformType`, the returned response will not include any instance data.
+* [GamesApplicationsGetEndPoint](docs/applications/README.md#gamesapplicationsgetendpoint) - Returns a URL for the requested end point type.
+* [GamesApplicationsPlayed](docs/applications/README.md#gamesapplicationsplayed) - Indicate that the currently authenticated user is playing your application.
+* [GamesApplicationsVerify](docs/applications/README.md#gamesapplicationsverify) - Verifies the auth token provided with this request is for the application with the specified ID, and returns the ID of the player it was granted for.
 
-### Events
+### [Events](docs/events/README.md)
 
-* `GamesEventsListByPlayer` - Returns a list showing the current progress on events in this application for the currently authenticated user.
-* `GamesEventsListDefinitions` - Returns a list of the event definitions in this application.
-* `GamesEventsRecord` - Records a batch of changes to the number of times events have occurred for the currently authenticated user of this application.
+* [GamesEventsListByPlayer](docs/events/README.md#gameseventslistbyplayer) - Returns a list showing the current progress on events in this application for the currently authenticated user.
+* [GamesEventsListDefinitions](docs/events/README.md#gameseventslistdefinitions) - Returns a list of the event definitions in this application.
+* [GamesEventsRecord](docs/events/README.md#gameseventsrecord) - Records a batch of changes to the number of times events have occurred for the currently authenticated user of this application.
 
-### Leaderboards
+### [Leaderboards](docs/leaderboards/README.md)
 
-* `GamesLeaderboardsGet` - Retrieves the metadata of the leaderboard with the given ID.
-* `GamesLeaderboardsList` - Lists all the leaderboard metadata for your application.
+* [GamesLeaderboardsGet](docs/leaderboards/README.md#gamesleaderboardsget) - Retrieves the metadata of the leaderboard with the given ID.
+* [GamesLeaderboardsList](docs/leaderboards/README.md#gamesleaderboardslist) - Lists all the leaderboard metadata for your application.
 
-### Metagame
+### [Metagame](docs/metagame/README.md)
 
-* `GamesMetagameGetMetagameConfig` - Return the metagame configuration data for the calling application.
-* `GamesMetagameListCategoriesByPlayer` - List play data aggregated per category for the player corresponding to `playerId`.
+* [GamesMetagameGetMetagameConfig](docs/metagame/README.md#gamesmetagamegetmetagameconfig) - Return the metagame configuration data for the calling application.
+* [GamesMetagameListCategoriesByPlayer](docs/metagame/README.md#gamesmetagamelistcategoriesbyplayer) - List play data aggregated per category for the player corresponding to `playerId`.
 
-### Players
+### [Players](docs/players/README.md)
 
-* `GamesPlayersGet` - Retrieves the Player resource with the given ID. To retrieve the player for the currently authenticated user, set `playerId` to `me`.
-* `GamesPlayersGetMultipleApplicationPlayerIds` - Get the application player ids for the currently authenticated player across all requested games by the same developer as the calling application. This will only return ids for players that actually have an id (scoped or otherwise) with that game.
-* `GamesPlayersGetScopedPlayerIds` - Retrieves scoped player identifiers for currently authenticated user.
-* `GamesPlayersList` - Get the collection of players for the currently authenticated user.
+* [GamesPlayersGet](docs/players/README.md#gamesplayersget) - Retrieves the Player resource with the given ID. To retrieve the player for the currently authenticated user, set `playerId` to `me`.
+* [GamesPlayersGetMultipleApplicationPlayerIds](docs/players/README.md#gamesplayersgetmultipleapplicationplayerids) - Get the application player ids for the currently authenticated player across all requested games by the same developer as the calling application. This will only return ids for players that actually have an id (scoped or otherwise) with that game.
+* [GamesPlayersGetScopedPlayerIds](docs/players/README.md#gamesplayersgetscopedplayerids) - Retrieves scoped player identifiers for currently authenticated user.
+* [GamesPlayersList](docs/players/README.md#gamesplayerslist) - Get the collection of players for the currently authenticated user.
 
-### Revisions
+### [Revisions](docs/revisions/README.md)
 
-* `GamesRevisionsCheck` - Checks whether the games client is out of date.
+* [GamesRevisionsCheck](docs/revisions/README.md#gamesrevisionscheck) - Checks whether the games client is out of date.
 
-### Scores
+### [Scores](docs/scores/README.md)
 
-* `GamesScoresGet` - Get high scores, and optionally ranks, in leaderboards for the currently authenticated player. For a specific time span, `leaderboardId` can be set to `ALL` to retrieve data for all leaderboards in a given time span. `NOTE: You cannot ask for 'ALL' leaderboards and 'ALL' timeSpans in the same request; only one parameter may be set to 'ALL'.
-* `GamesScoresList` - Lists the scores in a leaderboard, starting from the top.
-* `GamesScoresListWindow` - Lists the scores in a leaderboard around (and including) a player's score.
-* `GamesScoresSubmit` - Submits a score to the specified leaderboard.
-* `GamesScoresSubmitMultiple` - Submits multiple scores to leaderboards.
+* [GamesScoresGet](docs/scores/README.md#gamesscoresget) - Get high scores, and optionally ranks, in leaderboards for the currently authenticated player. For a specific time span, `leaderboardId` can be set to `ALL` to retrieve data for all leaderboards in a given time span. `NOTE: You cannot ask for 'ALL' leaderboards and 'ALL' timeSpans in the same request; only one parameter may be set to 'ALL'.
+* [GamesScoresList](docs/scores/README.md#gamesscoreslist) - Lists the scores in a leaderboard, starting from the top.
+* [GamesScoresListWindow](docs/scores/README.md#gamesscoreslistwindow) - Lists the scores in a leaderboard around (and including) a player's score.
+* [GamesScoresSubmit](docs/scores/README.md#gamesscoressubmit) - Submits a score to the specified leaderboard.
+* [GamesScoresSubmitMultiple](docs/scores/README.md#gamesscoressubmitmultiple) - Submits multiple scores to leaderboards.
 
-### Snapshots
+### [Snapshots](docs/snapshots/README.md)
 
-* `GamesSnapshotsGet` - Retrieves the metadata for a given snapshot ID.
-* `GamesSnapshotsList` - Retrieves a list of snapshots created by your application for the player corresponding to the player ID.
+* [GamesSnapshotsGet](docs/snapshots/README.md#gamessnapshotsget) - Retrieves the metadata for a given snapshot ID.
+* [GamesSnapshotsList](docs/snapshots/README.md#gamessnapshotslist) - Retrieves a list of snapshots created by your application for the player corresponding to the player ID.
 
-### Stats
+### [Stats](docs/stats/README.md)
 
-* `GamesStatsGet` - Returns engagement and spend statistics in this application for the currently authenticated user.
+* [GamesStatsGet](docs/stats/README.md#gamesstatsget) - Returns engagement and spend statistics in this application for the currently authenticated user.
 <!-- End SDK Available Operations -->
 
 ### Maturity

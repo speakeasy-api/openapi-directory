@@ -14,18 +14,22 @@ const (
 	CertificateAuthorityTypeEnumSubordinate CertificateAuthorityTypeEnum = "SUBORDINATE"
 )
 
+func (e CertificateAuthorityTypeEnum) ToPointer() *CertificateAuthorityTypeEnum {
+	return &e
+}
+
 func (e *CertificateAuthorityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROOT":
 		fallthrough
 	case "SUBORDINATE":
-		*e = CertificateAuthorityTypeEnum(s)
+		*e = CertificateAuthorityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateAuthorityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateAuthorityTypeEnum: %v", v)
 	}
 }

@@ -6,7 +6,7 @@ package shared
 type CloudDlpInspection struct {
 	// Whether Cloud DLP scanned the complete resource or a sampled subset.
 	FullScan *bool `json:"fullScan,omitempty"`
-	// The [type of information](https://cloud.google.com/dlp/docs/infotypes-reference) found, for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
+	// The type of information (or *[infoType](https://cloud.google.com/dlp/docs/infotypes-reference)*) found, for example, `EMAIL_ADDRESS` or `STREET_ADDRESS`.
 	InfoType *string `json:"infoType,omitempty"`
 	// The number of times Cloud DLP found this infoType within this job and resource.
 	InfoTypeCount *string `json:"infoTypeCount,omitempty"`

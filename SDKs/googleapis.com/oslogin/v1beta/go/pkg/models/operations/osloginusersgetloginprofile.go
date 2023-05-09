@@ -45,21 +45,25 @@ const (
 	OsloginUsersGetLoginProfileViewEnumSecurityKey                 OsloginUsersGetLoginProfileViewEnum = "SECURITY_KEY"
 )
 
+func (e OsloginUsersGetLoginProfileViewEnum) ToPointer() *OsloginUsersGetLoginProfileViewEnum {
+	return &e
+}
+
 func (e *OsloginUsersGetLoginProfileViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOGIN_PROFILE_VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "SECURITY_KEY":
-		*e = OsloginUsersGetLoginProfileViewEnum(s)
+		*e = OsloginUsersGetLoginProfileViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OsloginUsersGetLoginProfileViewEnum: %s", s)
+		return fmt.Errorf("invalid value for OsloginUsersGetLoginProfileViewEnum: %v", v)
 	}
 }
 

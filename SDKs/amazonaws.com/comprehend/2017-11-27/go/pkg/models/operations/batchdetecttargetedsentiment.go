@@ -16,17 +16,21 @@ const (
 	BatchDetectTargetedSentimentXAmzTargetEnumComprehend20171127BatchDetectTargetedSentiment BatchDetectTargetedSentimentXAmzTargetEnum = "Comprehend_20171127.BatchDetectTargetedSentiment"
 )
 
+func (e BatchDetectTargetedSentimentXAmzTargetEnum) ToPointer() *BatchDetectTargetedSentimentXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchDetectTargetedSentimentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.BatchDetectTargetedSentiment":
-		*e = BatchDetectTargetedSentimentXAmzTargetEnum(s)
+		*e = BatchDetectTargetedSentimentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchDetectTargetedSentimentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchDetectTargetedSentimentXAmzTargetEnum: %v", v)
 	}
 }
 

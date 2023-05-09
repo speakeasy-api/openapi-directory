@@ -16,17 +16,21 @@ const (
 	GetStaticIpsXAmzTargetEnumLightsail20161128GetStaticIps GetStaticIpsXAmzTargetEnum = "Lightsail_20161128.GetStaticIps"
 )
 
+func (e GetStaticIpsXAmzTargetEnum) ToPointer() *GetStaticIpsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetStaticIpsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetStaticIps":
-		*e = GetStaticIpsXAmzTargetEnum(s)
+		*e = GetStaticIpsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetStaticIpsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetStaticIpsXAmzTargetEnum: %v", v)
 	}
 }
 

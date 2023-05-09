@@ -15,21 +15,25 @@ const (
 	CustomerInvoiceDTOStatusEnumSent     CustomerInvoiceDTOStatusEnum = "SENT"
 )
 
+func (e CustomerInvoiceDTOStatusEnum) ToPointer() *CustomerInvoiceDTOStatusEnum {
+	return &e
+}
+
 func (e *CustomerInvoiceDTOStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_READY":
 		fallthrough
 	case "READY":
 		fallthrough
 	case "SENT":
-		*e = CustomerInvoiceDTOStatusEnum(s)
+		*e = CustomerInvoiceDTOStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomerInvoiceDTOStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomerInvoiceDTOStatusEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	CustomerInvoiceDTOTypeEnumCreditNote CustomerInvoiceDTOTypeEnum = "CREDIT_NOTE"
 )
 
+func (e CustomerInvoiceDTOTypeEnum) ToPointer() *CustomerInvoiceDTOTypeEnum {
+	return &e
+}
+
 func (e *CustomerInvoiceDTOTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FINAL":
 		fallthrough
 	case "DRAFT":
 		fallthrough
 	case "CREDIT_NOTE":
-		*e = CustomerInvoiceDTOTypeEnum(s)
+		*e = CustomerInvoiceDTOTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomerInvoiceDTOTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomerInvoiceDTOTypeEnum: %v", v)
 	}
 }
 
@@ -66,19 +74,23 @@ const (
 	CustomerInvoiceDTOVatCalculationRuleEnumByNetTotal CustomerInvoiceDTOVatCalculationRuleEnum = "BY_NET_TOTAL"
 )
 
+func (e CustomerInvoiceDTOVatCalculationRuleEnum) ToPointer() *CustomerInvoiceDTOVatCalculationRuleEnum {
+	return &e
+}
+
 func (e *CustomerInvoiceDTOVatCalculationRuleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUM_ITEMS":
 		fallthrough
 	case "BY_NET_TOTAL":
-		*e = CustomerInvoiceDTOVatCalculationRuleEnum(s)
+		*e = CustomerInvoiceDTOVatCalculationRuleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomerInvoiceDTOVatCalculationRuleEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomerInvoiceDTOVatCalculationRuleEnum: %v", v)
 	}
 }
 

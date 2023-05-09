@@ -85,7 +85,10 @@ func (s *programs) GetAPIV2ProgramsSearch(ctx context.Context, request operation
 // GetAPIV2ProgramsID - Returns the program matching the given ID.
 func (s *programs) GetAPIV2ProgramsID(ctx context.Context, request operations.GetAPIV2ProgramsIDRequest, security operations.GetAPIV2ProgramsIDSecurity) (*operations.GetAPIV2ProgramsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/programs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/programs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

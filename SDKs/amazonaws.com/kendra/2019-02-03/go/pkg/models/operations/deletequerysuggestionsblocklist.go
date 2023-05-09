@@ -16,17 +16,21 @@ const (
 	DeleteQuerySuggestionsBlockListXAmzTargetEnumAwsKendraFrontendServiceDeleteQuerySuggestionsBlockList DeleteQuerySuggestionsBlockListXAmzTargetEnum = "AWSKendraFrontendService.DeleteQuerySuggestionsBlockList"
 )
 
+func (e DeleteQuerySuggestionsBlockListXAmzTargetEnum) ToPointer() *DeleteQuerySuggestionsBlockListXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteQuerySuggestionsBlockListXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.DeleteQuerySuggestionsBlockList":
-		*e = DeleteQuerySuggestionsBlockListXAmzTargetEnum(s)
+		*e = DeleteQuerySuggestionsBlockListXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteQuerySuggestionsBlockListXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteQuerySuggestionsBlockListXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/clubhouseapi.com/1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetCheckForUpdateRequest{
-        IsTestflight: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.GetCheckForUpdate(ctx, req)
+    res, err := s.GetCheckForUpdate(ctx, operations.GetCheckForUpdateRequest{
+        IsTestflight: sdk.Int64(548814),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -44,49 +41,49 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetCheckForUpdate` - Clubhouse uses this to check for updates when app is not installed from App Store (eg TestFlight)
-* `GetGetActionableNotifications` - get actionable notifications (the bell again)
-* `GetGetAllTopics` - gets all topics.
-* `GetGetChannels` - get all channels
-* `GetGetEvents` - the Upcoming for You page
-* `GetGetNotifications` - get notifications (the bell icon)
-* `GetGetSettings` - get notification settings
-* `GetGetSuggestedFollowsAll` - gets suggested follows during signup
-* `GetGetUsersForTopic` - looks up users by topic.
-* `GetGetWelcomeChannel` - called during signup
-* `PostCallPhoneNumberAuth` - Call phone number auth.
-* `PostCheckWaitlistStatus` - checks waitlist status.
-* `PostCompletePhoneNumberAuth` - Call phone number auth.
-* `PostCreateChannel` - creates a channel
-* `PostFollow` - follows a user
-* `PostGetClub` - gets club by id
-* `PostGetClubsForTopic` - looks up clubs by topic.
-* `PostGetCreateChannelTargets` - is fetched when you tap Create Room
-* `PostGetFollowing` - get a list of the users and clubs that this user is following. Returned users have bios truncated to ~80 characters.
-* `PostGetOnlineFriends` - gets online friends on the app homepage.
-* `PostGetProfile` - looks up user profile by ID.
-* `PostGetReleaseNotes` - gets release notes.
-* `PostGetSuggestedClubInvites` - find users to invite to clubs based on phone number
-* `PostGetSuggestedFollowsFriendsOnly` - find people to follow by uploading contacts during signup
-* `PostGetSuggestedFollowsSimilar` - find similar users. (The Sparkles button on Clubhouse's profile page)
-* `PostGetSuggestedInvites` - find users to invite based on phone number.
-* `PostGetSuggestedSpeakers` - gets suggested users when you start a private room
-* `PostGetTopic` - looks up topic by ID.
-* `PostInviteFromWaitlist` - wave to another user on the waitlist to give them access
-* `PostInviteToApp` - invite a user to the app, using one of your invites
-* `PostJoinChannel` - join a channel.
-* `PostLeaveChannel` - leave a channel.
-* `PostMe` - gets user
-* `PostRecordActionTrails` - analytics
-* `PostRefreshToken` - gets an access_token from a refresh_token.
-* `PostResendPhoneNumberAuth` - Resend phone number auth.
-* `PostSearchClubs` - search clubs.
-* `PostSearchUsers` - search for users
-* `PostStartPhoneNumberAuth` - Starts phone number auth.
-* `PostUpdateNotifications` - updates notification during signup.
-* `PostUpdateUsername` - edits username.
+* [GetCheckForUpdate](docs/sdk/README.md#getcheckforupdate) - Clubhouse uses this to check for updates when app is not installed from App Store (eg TestFlight)
+* [GetGetActionableNotifications](docs/sdk/README.md#getgetactionablenotifications) - get actionable notifications (the bell again)
+* [GetGetAllTopics](docs/sdk/README.md#getgetalltopics) - gets all topics.
+* [GetGetChannels](docs/sdk/README.md#getgetchannels) - get all channels
+* [GetGetEvents](docs/sdk/README.md#getgetevents) - the Upcoming for You page
+* [GetGetNotifications](docs/sdk/README.md#getgetnotifications) - get notifications (the bell icon)
+* [GetGetSettings](docs/sdk/README.md#getgetsettings) - get notification settings
+* [GetGetSuggestedFollowsAll](docs/sdk/README.md#getgetsuggestedfollowsall) - gets suggested follows during signup
+* [GetGetUsersForTopic](docs/sdk/README.md#getgetusersfortopic) - looks up users by topic.
+* [GetGetWelcomeChannel](docs/sdk/README.md#getgetwelcomechannel) - called during signup
+* [PostCallPhoneNumberAuth](docs/sdk/README.md#postcallphonenumberauth) - Call phone number auth.
+* [PostCheckWaitlistStatus](docs/sdk/README.md#postcheckwaitliststatus) - checks waitlist status.
+* [PostCompletePhoneNumberAuth](docs/sdk/README.md#postcompletephonenumberauth) - Call phone number auth.
+* [PostCreateChannel](docs/sdk/README.md#postcreatechannel) - creates a channel
+* [PostFollow](docs/sdk/README.md#postfollow) - follows a user
+* [PostGetClub](docs/sdk/README.md#postgetclub) - gets club by id
+* [PostGetClubsForTopic](docs/sdk/README.md#postgetclubsfortopic) - looks up clubs by topic.
+* [PostGetCreateChannelTargets](docs/sdk/README.md#postgetcreatechanneltargets) - is fetched when you tap Create Room
+* [PostGetFollowing](docs/sdk/README.md#postgetfollowing) - get a list of the users and clubs that this user is following. Returned users have bios truncated to ~80 characters.
+* [PostGetOnlineFriends](docs/sdk/README.md#postgetonlinefriends) - gets online friends on the app homepage.
+* [PostGetProfile](docs/sdk/README.md#postgetprofile) - looks up user profile by ID.
+* [PostGetReleaseNotes](docs/sdk/README.md#postgetreleasenotes) - gets release notes.
+* [PostGetSuggestedClubInvites](docs/sdk/README.md#postgetsuggestedclubinvites) - find users to invite to clubs based on phone number
+* [PostGetSuggestedFollowsFriendsOnly](docs/sdk/README.md#postgetsuggestedfollowsfriendsonly) - find people to follow by uploading contacts during signup
+* [PostGetSuggestedFollowsSimilar](docs/sdk/README.md#postgetsuggestedfollowssimilar) - find similar users. (The Sparkles button on Clubhouse's profile page)
+* [PostGetSuggestedInvites](docs/sdk/README.md#postgetsuggestedinvites) - find users to invite based on phone number.
+* [PostGetSuggestedSpeakers](docs/sdk/README.md#postgetsuggestedspeakers) - gets suggested users when you start a private room
+* [PostGetTopic](docs/sdk/README.md#postgettopic) - looks up topic by ID.
+* [PostInviteFromWaitlist](docs/sdk/README.md#postinvitefromwaitlist) - wave to another user on the waitlist to give them access
+* [PostInviteToApp](docs/sdk/README.md#postinvitetoapp) - invite a user to the app, using one of your invites
+* [PostJoinChannel](docs/sdk/README.md#postjoinchannel) - join a channel.
+* [PostLeaveChannel](docs/sdk/README.md#postleavechannel) - leave a channel.
+* [PostMe](docs/sdk/README.md#postme) - gets user
+* [PostRecordActionTrails](docs/sdk/README.md#postrecordactiontrails) - analytics
+* [PostRefreshToken](docs/sdk/README.md#postrefreshtoken) - gets an access_token from a refresh_token.
+* [PostResendPhoneNumberAuth](docs/sdk/README.md#postresendphonenumberauth) - Resend phone number auth.
+* [PostSearchClubs](docs/sdk/README.md#postsearchclubs) - search clubs.
+* [PostSearchUsers](docs/sdk/README.md#postsearchusers) - search for users
+* [PostStartPhoneNumberAuth](docs/sdk/README.md#poststartphonenumberauth) - Starts phone number auth.
+* [PostUpdateNotifications](docs/sdk/README.md#postupdatenotifications) - updates notification during signup.
+* [PostUpdateUsername](docs/sdk/README.md#postupdateusername) - edits username.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,12 +16,16 @@ const (
 	SNOMEDCTEntityTypeEnumTreatmentName SNOMEDCTEntityTypeEnum = "TREATMENT_NAME"
 )
 
+func (e SNOMEDCTEntityTypeEnum) ToPointer() *SNOMEDCTEntityTypeEnum {
+	return &e
+}
+
 func (e *SNOMEDCTEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DX_NAME":
 		fallthrough
 	case "TEST_NAME":
@@ -29,9 +33,9 @@ func (e *SNOMEDCTEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PROCEDURE_NAME":
 		fallthrough
 	case "TREATMENT_NAME":
-		*e = SNOMEDCTEntityTypeEnum(s)
+		*e = SNOMEDCTEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SNOMEDCTEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SNOMEDCTEntityTypeEnum: %v", v)
 	}
 }

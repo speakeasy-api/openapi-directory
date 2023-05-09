@@ -20,12 +20,16 @@ const (
 	ShortCustomFieldFieldTypeEnumDropdownLargeList ShortCustomFieldFieldTypeEnum = "dropdown_large_list"
 )
 
+func (e ShortCustomFieldFieldTypeEnum) ToPointer() *ShortCustomFieldFieldTypeEnum {
+	return &e
+}
+
 func (e *ShortCustomFieldFieldTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "textarea":
@@ -39,10 +43,10 @@ func (e *ShortCustomFieldFieldTypeEnum) UnmarshalJSON(data []byte) error {
 	case "date":
 		fallthrough
 	case "dropdown_large_list":
-		*e = ShortCustomFieldFieldTypeEnum(s)
+		*e = ShortCustomFieldFieldTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShortCustomFieldFieldTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShortCustomFieldFieldTypeEnum: %v", v)
 	}
 }
 

@@ -2,26 +2,27 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DatacatalogCatalogSearchRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Catalog.DatacatalogCatalogSearch(ctx, operations.DatacatalogCatalogSearchRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudDatacatalogV1beta1SearchCatalogRequest: &shared.GoogleCloudDatacatalogV1beta1SearchCatalogRequest{
-            OrderBy: "provident",
-            PageSize: 715190,
-            PageToken: "quibusdam",
-            Query: "unde",
+            OrderBy: sdk.String("provident"),
+            PageSize: sdk.Int(715190),
+            PageToken: sdk.String("quibusdam"),
+            Query: sdk.String("unde"),
             Scope: &shared.GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope{
-                IncludeGcpPublicDatasets: false,
+                IncludeGcpPublicDatasets: sdk.Bool(false),
                 IncludeOrgIds: []string{
                     "corrupti",
                     "illum",
@@ -41,20 +42,17 @@ func main() {
                 },
             },
         },
-        AccessToken: "molestiae",
-        Alt: "proto",
-        Callback: "placeat",
-        Fields: "voluptatum",
-        Key: "iusto",
-        OauthToken: "excepturi",
-        PrettyPrint: false,
-        QuotaUser: "nisi",
-        UploadType: "recusandae",
-        UploadProtocol: "temporibus",
-    }
-
-    ctx := context.Background()
-    res, err := s.Catalog.DatacatalogCatalogSearch(ctx, req, operations.DatacatalogCatalogSearchSecurity{
+        AccessToken: sdk.String("molestiae"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("placeat"),
+        Fields: sdk.String("voluptatum"),
+        Key: sdk.String("iusto"),
+        OauthToken: sdk.String("excepturi"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("nisi"),
+        UploadType: sdk.String("recusandae"),
+        UploadProtocol: sdk.String("temporibus"),
+    }, operations.DatacatalogCatalogSearchSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

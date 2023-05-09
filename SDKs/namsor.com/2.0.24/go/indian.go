@@ -36,7 +36,10 @@ func newIndian(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // CastegroupIndianFull - [USES 10 UNITS PER NAME] Infer the likely Indian name castegroup of a personal full name.
 func (s *indian) CastegroupIndianFull(ctx context.Context, request operations.CastegroupIndianFullRequest, security operations.CastegroupIndianFullSecurity) (*operations.CastegroupIndianFullResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/castegroupIndianFull/{subDivisionIso31662}/{personalNameFull}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/castegroupIndianFull/{subDivisionIso31662}/{personalNameFull}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -139,7 +142,10 @@ func (s *indian) CastegroupIndianFullBatch(ctx context.Context, request shared.B
 // Religion - [USES 10 UNITS PER NAME] Infer the likely religion of a personal Indian full name, provided the Indian state or Union territory (NB/ this can be inferred using the subclassification endpoint).
 func (s *indian) Religion(ctx context.Context, request operations.ReligionRequest, security operations.ReligionSecurity) (*operations.ReligionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/religionIndianFull/{subDivisionIso31662}/{personalNameFull}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/religionIndianFull/{subDivisionIso31662}/{personalNameFull}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -242,7 +248,10 @@ func (s *indian) ReligionIndianFullBatch(ctx context.Context, request shared.Bat
 // SubclassificationIndian - [USES 10 UNITS PER NAME] Infer the likely Indian state of Union territory according to ISO 3166-2:IN based on the name.
 func (s *indian) SubclassificationIndian(ctx context.Context, request operations.SubclassificationIndianRequest, security operations.SubclassificationIndianSecurity) (*operations.SubclassificationIndianResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/subclassificationIndian/{firstName}/{lastName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/subclassificationIndian/{firstName}/{lastName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -331,6 +340,112 @@ func (s *indian) SubclassificationIndianBatch(ctx context.Context, request share
 			}
 
 			res.BatchFirstLastNameGeoSubclassificationOut = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+	}
+
+	return res, nil
+}
+
+// SubclassificationIndianFull - [USES 10 UNITS PER NAME] Infer the likely Indian state of Union territory according to ISO 3166-2:IN based on the name.
+func (s *indian) SubclassificationIndianFull(ctx context.Context, request operations.SubclassificationIndianFullRequest, security operations.SubclassificationIndianFullSecurity) (*operations.SubclassificationIndianFullResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/subclassificationIndianFull/{fullName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SubclassificationIndianFullResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PersonalNameGeoSubclassificationOut
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PersonalNameGeoSubclassificationOut = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+	}
+
+	return res, nil
+}
+
+// SubclassificationIndianFullBatch - [USES 10 UNITS PER NAME] Infer the likely Indian state of Union territory according to ISO 3166-2:IN based on a list of up to 100 names.
+func (s *indian) SubclassificationIndianFullBatch(ctx context.Context, request shared.BatchPersonalNameGeoIn, security operations.SubclassificationIndianFullBatchSecurity) (*operations.SubclassificationIndianFullBatchResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/subclassificationIndianFullBatch"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SubclassificationIndianFullBatchResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BatchPersonalNameGeoSubclassificationOut
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BatchPersonalNameGeoSubclassificationOut = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough

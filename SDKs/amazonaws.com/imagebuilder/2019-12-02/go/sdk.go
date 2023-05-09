@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - EC2 Image Builder is a fully managed Amazon Web Services service that makes it easier to automate the creation, management, and deployment of customized, secure, and up-to-date "golden" server images that are pre-installed and pre-configured with software and settings to meet specific IT standards.
 // https://docs.aws.amazon.com/imagebuilder/ - Amazon Web Services documentation
 type SDK struct {
@@ -745,7 +760,7 @@ func (s *SDK) CreateDistributionConfiguration(ctx context.Context, request opera
 	return res, nil
 }
 
-// CreateImage -  Creates a new image. This request will create a new image along with all of the configured output resources defined in the distribution configuration. You must specify exactly one recipe for your image, using either a ContainerRecipeArn or an ImageRecipeArn.
+// CreateImage - Creates a new image. This request will create a new image along with all of the configured output resources defined in the distribution configuration. You must specify exactly one recipe for your image, using either a ContainerRecipeArn or an ImageRecipeArn.
 func (s *SDK) CreateImage(ctx context.Context, request operations.CreateImageRequest) (*operations.CreateImageResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/CreateImage"
@@ -891,7 +906,7 @@ func (s *SDK) CreateImage(ctx context.Context, request operations.CreateImageReq
 	return res, nil
 }
 
-// CreateImagePipeline -  Creates a new image pipeline. Image pipelines enable you to automate the creation and distribution of images.
+// CreateImagePipeline - Creates a new image pipeline. Image pipelines enable you to automate the creation and distribution of images.
 func (s *SDK) CreateImagePipeline(ctx context.Context, request operations.CreateImagePipelineRequest) (*operations.CreateImagePipelineResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/CreateImagePipeline"
@@ -1047,7 +1062,7 @@ func (s *SDK) CreateImagePipeline(ctx context.Context, request operations.Create
 	return res, nil
 }
 
-// CreateImageRecipe -  Creates a new image recipe. Image recipes define how images are configured, tested, and assessed.
+// CreateImageRecipe - Creates a new image recipe. Image recipes define how images are configured, tested, and assessed.
 func (s *SDK) CreateImageRecipe(ctx context.Context, request operations.CreateImageRecipeRequest) (*operations.CreateImageRecipeResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/CreateImageRecipe"
@@ -1213,7 +1228,7 @@ func (s *SDK) CreateImageRecipe(ctx context.Context, request operations.CreateIm
 	return res, nil
 }
 
-// CreateInfrastructureConfiguration -  Creates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
+// CreateInfrastructureConfiguration - Creates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
 func (s *SDK) CreateInfrastructureConfiguration(ctx context.Context, request operations.CreateInfrastructureConfigurationRequest) (*operations.CreateInfrastructureConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/CreateInfrastructureConfiguration"
@@ -1369,7 +1384,7 @@ func (s *SDK) CreateInfrastructureConfiguration(ctx context.Context, request ope
 	return res, nil
 }
 
-// DeleteComponent -  Deletes a component build version.
+// DeleteComponent - Deletes a component build version.
 func (s *SDK) DeleteComponent(ctx context.Context, request operations.DeleteComponentRequest) (*operations.DeleteComponentResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/DeleteComponent#componentBuildVersionArn"
@@ -1609,7 +1624,7 @@ func (s *SDK) DeleteContainerRecipe(ctx context.Context, request operations.Dele
 	return res, nil
 }
 
-// DeleteDistributionConfiguration -  Deletes a distribution configuration.
+// DeleteDistributionConfiguration - Deletes a distribution configuration.
 func (s *SDK) DeleteDistributionConfiguration(ctx context.Context, request operations.DeleteDistributionConfigurationRequest) (*operations.DeleteDistributionConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/DeleteDistributionConfiguration#distributionConfigurationArn"
@@ -1849,7 +1864,7 @@ func (s *SDK) DeleteImage(ctx context.Context, request operations.DeleteImageReq
 	return res, nil
 }
 
-// DeleteImagePipeline -  Deletes an image pipeline.
+// DeleteImagePipeline - Deletes an image pipeline.
 func (s *SDK) DeleteImagePipeline(ctx context.Context, request operations.DeleteImagePipelineRequest) (*operations.DeleteImagePipelineResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/DeleteImagePipeline#imagePipelineArn"
@@ -1969,7 +1984,7 @@ func (s *SDK) DeleteImagePipeline(ctx context.Context, request operations.Delete
 	return res, nil
 }
 
-// DeleteImageRecipe -  Deletes an image recipe.
+// DeleteImageRecipe - Deletes an image recipe.
 func (s *SDK) DeleteImageRecipe(ctx context.Context, request operations.DeleteImageRecipeRequest) (*operations.DeleteImageRecipeResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/DeleteImageRecipe#imageRecipeArn"
@@ -2089,7 +2104,7 @@ func (s *SDK) DeleteImageRecipe(ctx context.Context, request operations.DeleteIm
 	return res, nil
 }
 
-// DeleteInfrastructureConfiguration -  Deletes an infrastructure configuration.
+// DeleteInfrastructureConfiguration - Deletes an infrastructure configuration.
 func (s *SDK) DeleteInfrastructureConfiguration(ctx context.Context, request operations.DeleteInfrastructureConfigurationRequest) (*operations.DeleteInfrastructureConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/DeleteInfrastructureConfiguration#infrastructureConfigurationArn"
@@ -2209,7 +2224,7 @@ func (s *SDK) DeleteInfrastructureConfiguration(ctx context.Context, request ope
 	return res, nil
 }
 
-// GetComponent -  Gets a component object.
+// GetComponent - Gets a component object.
 func (s *SDK) GetComponent(ctx context.Context, request operations.GetComponentRequest) (*operations.GetComponentResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/GetComponent#componentBuildVersionArn"
@@ -2319,7 +2334,7 @@ func (s *SDK) GetComponent(ctx context.Context, request operations.GetComponentR
 	return res, nil
 }
 
-// GetComponentPolicy -  Gets a component policy.
+// GetComponentPolicy - Gets a component policy.
 func (s *SDK) GetComponentPolicy(ctx context.Context, request operations.GetComponentPolicyRequest) (*operations.GetComponentPolicyResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/GetComponentPolicy#componentArn"
@@ -2649,7 +2664,7 @@ func (s *SDK) GetContainerRecipePolicy(ctx context.Context, request operations.G
 	return res, nil
 }
 
-// GetDistributionConfiguration -  Gets a distribution configuration.
+// GetDistributionConfiguration - Gets a distribution configuration.
 func (s *SDK) GetDistributionConfiguration(ctx context.Context, request operations.GetDistributionConfigurationRequest) (*operations.GetDistributionConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/GetDistributionConfiguration#distributionConfigurationArn"
@@ -2759,7 +2774,7 @@ func (s *SDK) GetDistributionConfiguration(ctx context.Context, request operatio
 	return res, nil
 }
 
-// GetImage -  Gets an image.
+// GetImage - Gets an image.
 func (s *SDK) GetImage(ctx context.Context, request operations.GetImageRequest) (*operations.GetImageResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/GetImage#imageBuildVersionArn"
@@ -2869,7 +2884,7 @@ func (s *SDK) GetImage(ctx context.Context, request operations.GetImageRequest) 
 	return res, nil
 }
 
-// GetImagePipeline -  Gets an image pipeline.
+// GetImagePipeline - Gets an image pipeline.
 func (s *SDK) GetImagePipeline(ctx context.Context, request operations.GetImagePipelineRequest) (*operations.GetImagePipelineResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/GetImagePipeline#imagePipelineArn"
@@ -2979,7 +2994,7 @@ func (s *SDK) GetImagePipeline(ctx context.Context, request operations.GetImageP
 	return res, nil
 }
 
-// GetImagePolicy -  Gets an image policy.
+// GetImagePolicy - Gets an image policy.
 func (s *SDK) GetImagePolicy(ctx context.Context, request operations.GetImagePolicyRequest) (*operations.GetImagePolicyResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/GetImagePolicy#imageArn"
@@ -3089,7 +3104,7 @@ func (s *SDK) GetImagePolicy(ctx context.Context, request operations.GetImagePol
 	return res, nil
 }
 
-// GetImageRecipe -  Gets an image recipe.
+// GetImageRecipe - Gets an image recipe.
 func (s *SDK) GetImageRecipe(ctx context.Context, request operations.GetImageRecipeRequest) (*operations.GetImageRecipeResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/GetImageRecipe#imageRecipeArn"
@@ -3199,7 +3214,7 @@ func (s *SDK) GetImageRecipe(ctx context.Context, request operations.GetImageRec
 	return res, nil
 }
 
-// GetImageRecipePolicy -  Gets an image recipe policy.
+// GetImageRecipePolicy - Gets an image recipe policy.
 func (s *SDK) GetImageRecipePolicy(ctx context.Context, request operations.GetImageRecipePolicyRequest) (*operations.GetImageRecipePolicyResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/GetImageRecipePolicy#imageRecipeArn"
@@ -3309,7 +3324,7 @@ func (s *SDK) GetImageRecipePolicy(ctx context.Context, request operations.GetIm
 	return res, nil
 }
 
-// GetInfrastructureConfiguration -  Gets an infrastructure configuration.
+// GetInfrastructureConfiguration - Gets an infrastructure configuration.
 func (s *SDK) GetInfrastructureConfiguration(ctx context.Context, request operations.GetInfrastructureConfigurationRequest) (*operations.GetInfrastructureConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/GetInfrastructureConfiguration#infrastructureConfigurationArn"
@@ -3353,6 +3368,226 @@ func (s *SDK) GetInfrastructureConfiguration(ctx context.Context, request operat
 			}
 
 			res.GetInfrastructureConfigurationResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ClientException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceUnavailableException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidRequestException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ForbiddenException = out
+		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CallRateLimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkflowExecution - Get the runtime information that was logged for a specific runtime instance of the workflow.
+func (s *SDK) GetWorkflowExecution(ctx context.Context, request operations.GetWorkflowExecutionRequest) (*operations.GetWorkflowExecutionResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/GetWorkflowExecution#workflowExecutionId"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkflowExecutionResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetWorkflowExecutionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetWorkflowExecutionResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ClientException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceUnavailableException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidRequestException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ForbiddenException = out
+		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CallRateLimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkflowStepExecution - Get the runtime information that was logged for a specific runtime instance of the workflow step.
+func (s *SDK) GetWorkflowStepExecution(ctx context.Context, request operations.GetWorkflowStepExecutionRequest) (*operations.GetWorkflowStepExecutionResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/GetWorkflowStepExecution#stepExecutionId"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkflowStepExecutionResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetWorkflowStepExecutionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetWorkflowStepExecutionResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -3661,7 +3896,7 @@ func (s *SDK) ImportVMImage(ctx context.Context, request operations.ImportVMImag
 	return res, nil
 }
 
-// ListComponentBuildVersions - <p> Returns the list of component build versions for the specified semantic version.</p> <note> <p>The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.</p> <p> <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.</p> </note>
+// ListComponentBuildVersions - <p>Returns the list of component build versions for the specified semantic version.</p> <note> <p>The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.</p> <p> <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most recent versions or nodes when selecting the base image or components for your recipe. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.</p> </note>
 func (s *SDK) ListComponentBuildVersions(ctx context.Context, request operations.ListComponentBuildVersionsRequest) (*operations.ListComponentBuildVersionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ListComponentBuildVersions"
@@ -4181,7 +4416,7 @@ func (s *SDK) ListDistributionConfigurations(ctx context.Context, request operat
 	return res, nil
 }
 
-// ListImageBuildVersions -  Returns a list of image build versions.
+// ListImageBuildVersions - Returns a list of image build versions.
 func (s *SDK) ListImageBuildVersions(ctx context.Context, request operations.ListImageBuildVersionsRequest) (*operations.ListImageBuildVersionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ListImageBuildVersions"
@@ -4721,7 +4956,7 @@ func (s *SDK) ListImagePipelines(ctx context.Context, request operations.ListIma
 	return res, nil
 }
 
-// ListImageRecipes -  Returns a list of image recipes.
+// ListImageRecipes - Returns a list of image recipes.
 func (s *SDK) ListImageRecipes(ctx context.Context, request operations.ListImageRecipesRequest) (*operations.ListImageRecipesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ListImageRecipes"
@@ -4775,6 +5010,266 @@ func (s *SDK) ListImageRecipes(ctx context.Context, request operations.ListImage
 			}
 
 			res.ListImageRecipesResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ClientException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceUnavailableException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidRequestException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidPaginationTokenException = out
+		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ForbiddenException = out
+		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CallRateLimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListImageScanFindingAggregations - <p>Returns a list of image scan aggregations for your account. You can filter by the type of key that Image Builder uses to group results. For example, if you want to get a list of findings by severity level for one of your pipelines, you might specify your pipeline with the <code>imagePipelineArn</code> filter. If you don't specify a filter, Image Builder returns an aggregation for your account.</p> <p>To streamline results, you can use the following filters in your request:</p> <ul> <li> <p> <code>accountId</code> </p> </li> <li> <p> <code>imageBuildVersionArn</code> </p> </li> <li> <p> <code>imagePipelineArn</code> </p> </li> <li> <p> <code>vulnerabilityId</code> </p> </li> </ul>
+func (s *SDK) ListImageScanFindingAggregations(ctx context.Context, request operations.ListImageScanFindingAggregationsRequest) (*operations.ListImageScanFindingAggregationsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/ListImageScanFindingAggregations"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListImageScanFindingAggregationsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListImageScanFindingAggregationsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListImageScanFindingAggregationsResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ClientException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceUnavailableException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidRequestException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidPaginationTokenException = out
+		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ForbiddenException = out
+		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CallRateLimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListImageScanFindings - Returns a list of image scan findings for your account.
+func (s *SDK) ListImageScanFindings(ctx context.Context, request operations.ListImageScanFindingsRequest) (*operations.ListImageScanFindingsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/ListImageScanFindings"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListImageScanFindingsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListImageScanFindingsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListImageScanFindingsResponse = out
 		}
 	case httpRes.StatusCode == 480:
 		switch {
@@ -4981,7 +5476,7 @@ func (s *SDK) ListImages(ctx context.Context, request operations.ListImagesReque
 	return res, nil
 }
 
-// ListInfrastructureConfigurations -  Returns a list of infrastructure configurations.
+// ListInfrastructureConfigurations - Returns a list of infrastructure configurations.
 func (s *SDK) ListInfrastructureConfigurations(ctx context.Context, request operations.ListInfrastructureConfigurationsRequest) (*operations.ListInfrastructureConfigurationsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/ListInfrastructureConfigurations"
@@ -5111,10 +5606,13 @@ func (s *SDK) ListInfrastructureConfigurations(ctx context.Context, request oper
 	return res, nil
 }
 
-// ListTagsForResource -  Returns the list of tags for the specified resource.
+// ListTagsForResource - Returns the list of tags for the specified resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5187,7 +5685,267 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 	return res, nil
 }
 
-// PutComponentPolicy -  Applies a policy to a component. We recommend that you call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html">CreateResourceShare</a> to share resources. If you call the Image Builder API <code>PutComponentPolicy</code>, you must also call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html">PromoteResourceShareCreatedFromPolicy</a> in order for the resource to be visible to all principals with whom the resource is shared.
+// ListWorkflowExecutions - Returns a list of workflow runtime instance metadata objects for a specific image build version.
+func (s *SDK) ListWorkflowExecutions(ctx context.Context, request operations.ListWorkflowExecutionsRequest) (*operations.ListWorkflowExecutionsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/ListWorkflowExecutions"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListWorkflowExecutionsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListWorkflowExecutionsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListWorkflowExecutionsResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ClientException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceUnavailableException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidRequestException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidPaginationTokenException = out
+		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ForbiddenException = out
+		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CallRateLimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListWorkflowStepExecutions - Shows runtime data for each step in a runtime instance of the workflow that you specify in the request.
+func (s *SDK) ListWorkflowStepExecutions(ctx context.Context, request operations.ListWorkflowStepExecutionsRequest) (*operations.ListWorkflowStepExecutionsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/ListWorkflowStepExecutions"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListWorkflowStepExecutionsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListWorkflowStepExecutionsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListWorkflowStepExecutionsResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ClientException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceUnavailableException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidRequestException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidPaginationTokenException = out
+		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ForbiddenException = out
+		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CallRateLimitExceededException = out
+		}
+	}
+
+	return res, nil
+}
+
+// PutComponentPolicy - Applies a policy to a component. We recommend that you call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html">CreateResourceShare</a> to share resources. If you call the Image Builder API <code>PutComponentPolicy</code>, you must also call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html">PromoteResourceShareCreatedFromPolicy</a> in order for the resource to be visible to all principals with whom the resource is shared.
 func (s *SDK) PutComponentPolicy(ctx context.Context, request operations.PutComponentPolicyRequest) (*operations.PutComponentPolicyResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/PutComponentPolicy"
@@ -5595,7 +6353,7 @@ func (s *SDK) PutImagePolicy(ctx context.Context, request operations.PutImagePol
 	return res, nil
 }
 
-// PutImageRecipePolicy -  Applies a policy to an image recipe. We recommend that you call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html">CreateResourceShare</a> to share resources. If you call the Image Builder API <code>PutImageRecipePolicy</code>, you must also call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html">PromoteResourceShareCreatedFromPolicy</a> in order for the resource to be visible to all principals with whom the resource is shared.
+// PutImageRecipePolicy - Applies a policy to an image recipe. We recommend that you call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html">CreateResourceShare</a> to share resources. If you call the Image Builder API <code>PutImageRecipePolicy</code>, you must also call the RAM API <a href="https://docs.aws.amazon.com/ram/latest/APIReference/API_PromoteResourceShareCreatedFromPolicy.html">PromoteResourceShareCreatedFromPolicy</a> in order for the resource to be visible to all principals with whom the resource is shared.
 func (s *SDK) PutImageRecipePolicy(ctx context.Context, request operations.PutImageRecipePolicyRequest) (*operations.PutImageRecipePolicyResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/PutImageRecipePolicy"
@@ -5731,7 +6489,7 @@ func (s *SDK) PutImageRecipePolicy(ctx context.Context, request operations.PutIm
 	return res, nil
 }
 
-// StartImagePipelineExecution -  Manually triggers a pipeline to create an image.
+// StartImagePipelineExecution - Manually triggers a pipeline to create an image.
 func (s *SDK) StartImagePipelineExecution(ctx context.Context, request operations.StartImagePipelineExecutionRequest) (*operations.StartImagePipelineExecutionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/StartImagePipelineExecution"
@@ -5877,10 +6635,13 @@ func (s *SDK) StartImagePipelineExecution(ctx context.Context, request operation
 	return res, nil
 }
 
-// TagResource -  Adds a tag to a resource.
+// TagResource - Adds a tag to a resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5963,10 +6724,13 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 	return res, nil
 }
 
-// UntagResource -  Removes a tag from a resource.
+// UntagResource - Removes a tag from a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -6043,7 +6807,7 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 	return res, nil
 }
 
-// UpdateDistributionConfiguration -  Updates a new distribution configuration. Distribution configurations define and configure the outputs of your pipeline.
+// UpdateDistributionConfiguration - Updates a new distribution configuration. Distribution configurations define and configure the outputs of your pipeline.
 func (s *SDK) UpdateDistributionConfiguration(ctx context.Context, request operations.UpdateDistributionConfigurationRequest) (*operations.UpdateDistributionConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/UpdateDistributionConfiguration"
@@ -6189,7 +6953,7 @@ func (s *SDK) UpdateDistributionConfiguration(ctx context.Context, request opera
 	return res, nil
 }
 
-// UpdateImagePipeline - <p> Updates an image pipeline. Image pipelines enable you to automate the creation and distribution of images.</p> <note> <p>UpdateImagePipeline does not support selective updates for the pipeline. You must specify all of the required properties in the update request, not just the properties that have changed.</p> </note>
+// UpdateImagePipeline - <p>Updates an image pipeline. Image pipelines enable you to automate the creation and distribution of images.</p> <note> <p>UpdateImagePipeline does not support selective updates for the pipeline. You must specify all of the required properties in the update request, not just the properties that have changed.</p> </note>
 func (s *SDK) UpdateImagePipeline(ctx context.Context, request operations.UpdateImagePipelineRequest) (*operations.UpdateImagePipelineResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/UpdateImagePipeline"
@@ -6325,7 +7089,7 @@ func (s *SDK) UpdateImagePipeline(ctx context.Context, request operations.Update
 	return res, nil
 }
 
-// UpdateInfrastructureConfiguration -  Updates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
+// UpdateInfrastructureConfiguration - Updates a new infrastructure configuration. An infrastructure configuration defines the environment in which your image will be built and tested.
 func (s *SDK) UpdateInfrastructureConfiguration(ctx context.Context, request operations.UpdateInfrastructureConfigurationRequest) (*operations.UpdateInfrastructureConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/UpdateInfrastructureConfiguration"

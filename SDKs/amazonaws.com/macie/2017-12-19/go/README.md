@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/macie/2017-
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,22 +28,20 @@ func main() {
         }),
     )
 
-    req := operations.AssociateMemberAccountRequest{
+    ctx := context.Background()
+    res, err := s.AssociateMemberAccount(ctx, operations.AssociateMemberAccountRequest{
         AssociateMemberAccountRequest: shared.AssociateMemberAccountRequest{
             MemberAccountID: "corrupti",
         },
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-        XAmzTarget: "MacieService.AssociateMemberAccount",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateMemberAccount(ctx, req)
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+        XAmzTarget: operations.AssociateMemberAccountXAmzTargetEnumMacieServiceAssociateMemberAccount,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -58,15 +56,15 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AssociateMemberAccount` - (Discontinued) Associates a specified Amazon Web Services account with Amazon Macie Classic as a member account.
-* `AssociateS3Resources` - (Discontinued) Associates specified S3 resources with Amazon Macie Classic for monitoring and data classification. If <code>memberAccountId</code> isn't specified, the action associates specified S3 resources with Macie Classic for the current Macie Classic administrator account. If <code>memberAccountId</code> is specified, the action associates specified S3 resources with Macie Classic for the specified member account.
-* `DisassociateMemberAccount` - (Discontinued) Removes the specified member account from Amazon Macie Classic.
-* `DisassociateS3Resources` - (Discontinued) Removes specified S3 resources from being monitored by Amazon Macie Classic. If <code>memberAccountId</code> isn't specified, the action removes specified S3 resources from Macie Classic for the current Macie Classic administrator account. If <code>memberAccountId</code> is specified, the action removes specified S3 resources from Macie Classic for the specified member account.
-* `ListMemberAccounts` - (Discontinued) Lists all Amazon Macie Classic member accounts for the current Macie Classic administrator account.
-* `ListS3Resources` - (Discontinued) Lists all the S3 resources associated with Amazon Macie Classic. If <code>memberAccountId</code> isn't specified, the action lists the S3 resources associated with Macie Classic for the current Macie Classic administrator account. If <code>memberAccountId</code> is specified, the action lists the S3 resources associated with Macie Classic for the specified member account. 
-* `UpdateS3Resources` - (Discontinued) Updates the classification types for the specified S3 resources. If <code>memberAccountId</code> isn't specified, the action updates the classification types of the S3 resources associated with Amazon Macie Classic for the current Macie Classic administrator account. If <code>memberAccountId</code> is specified, the action updates the classification types of the S3 resources associated with Macie Classic for the specified member account.
+* [AssociateMemberAccount](docs/sdk/README.md#associatememberaccount) - (Discontinued) Associates a specified Amazon Web Services account with Amazon Macie Classic as a member account.
+* [AssociateS3Resources](docs/sdk/README.md#associates3resources) - (Discontinued) Associates specified S3 resources with Amazon Macie Classic for monitoring and data classification. If <code>memberAccountId</code> isn't specified, the action associates specified S3 resources with Macie Classic for the current Macie Classic administrator account. If <code>memberAccountId</code> is specified, the action associates specified S3 resources with Macie Classic for the specified member account.
+* [DisassociateMemberAccount](docs/sdk/README.md#disassociatememberaccount) - (Discontinued) Removes the specified member account from Amazon Macie Classic.
+* [DisassociateS3Resources](docs/sdk/README.md#disassociates3resources) - (Discontinued) Removes specified S3 resources from being monitored by Amazon Macie Classic. If <code>memberAccountId</code> isn't specified, the action removes specified S3 resources from Macie Classic for the current Macie Classic administrator account. If <code>memberAccountId</code> is specified, the action removes specified S3 resources from Macie Classic for the specified member account.
+* [ListMemberAccounts](docs/sdk/README.md#listmemberaccounts) - (Discontinued) Lists all Amazon Macie Classic member accounts for the current Macie Classic administrator account.
+* [ListS3Resources](docs/sdk/README.md#lists3resources) - (Discontinued) Lists all the S3 resources associated with Amazon Macie Classic. If <code>memberAccountId</code> isn't specified, the action lists the S3 resources associated with Macie Classic for the current Macie Classic administrator account. If <code>memberAccountId</code> is specified, the action lists the S3 resources associated with Macie Classic for the specified member account. 
+* [UpdateS3Resources](docs/sdk/README.md#updates3resources) - (Discontinued) Updates the classification types for the specified S3 resources. If <code>memberAccountId</code> isn't specified, the action updates the classification types of the S3 resources associated with Amazon Macie Classic for the current Macie Classic administrator account. If <code>memberAccountId</code> is specified, the action updates the classification types of the S3 resources associated with Macie Classic for the specified member account.
 <!-- End SDK Available Operations -->
 
 ### Maturity

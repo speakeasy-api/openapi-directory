@@ -16,21 +16,25 @@ const (
 	ServiceStateEnumEnabled          ServiceStateEnum = "ENABLED"
 )
 
+func (e ServiceStateEnum) ToPointer() *ServiceStateEnum {
+	return &e
+}
+
 func (e *ServiceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
-		*e = ServiceStateEnum(s)
+		*e = ServiceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceStateEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CreateVolumeXAmzTargetEnumAwsSimbaAPIServiceV20180301CreateVolume CreateVolumeXAmzTargetEnum = "AWSSimbaAPIService_v20180301.CreateVolume"
 )
 
+func (e CreateVolumeXAmzTargetEnum) ToPointer() *CreateVolumeXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateVolumeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.CreateVolume":
-		*e = CreateVolumeXAmzTargetEnum(s)
+		*e = CreateVolumeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVolumeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVolumeXAmzTargetEnum: %v", v)
 	}
 }
 

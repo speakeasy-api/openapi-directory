@@ -17,12 +17,16 @@ const (
 	ChargeBearerEnumSlev ChargeBearerEnum = "SLEV"
 )
 
+func (e ChargeBearerEnum) ToPointer() *ChargeBearerEnum {
+	return &e
+}
+
 func (e *ChargeBearerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEBT":
 		fallthrough
 	case "CRED":
@@ -30,9 +34,9 @@ func (e *ChargeBearerEnum) UnmarshalJSON(data []byte) error {
 	case "SHAR":
 		fallthrough
 	case "SLEV":
-		*e = ChargeBearerEnum(s)
+		*e = ChargeBearerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChargeBearerEnum: %s", s)
+		return fmt.Errorf("invalid value for ChargeBearerEnum: %v", v)
 	}
 }

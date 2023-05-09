@@ -23,12 +23,16 @@ const (
 	PropertyFilterOpEnumNotIn               PropertyFilterOpEnum = "NOT_IN"
 )
 
+func (e PropertyFilterOpEnum) ToPointer() *PropertyFilterOpEnum {
+	return &e
+}
+
 func (e *PropertyFilterOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATOR_UNSPECIFIED":
 		fallthrough
 	case "LESS_THAN":
@@ -48,10 +52,10 @@ func (e *PropertyFilterOpEnum) UnmarshalJSON(data []byte) error {
 	case "HAS_ANCESTOR":
 		fallthrough
 	case "NOT_IN":
-		*e = PropertyFilterOpEnum(s)
+		*e = PropertyFilterOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyFilterOpEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyFilterOpEnum: %v", v)
 	}
 }
 

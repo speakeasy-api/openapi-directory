@@ -23,21 +23,25 @@ const (
 	GetSpacesSpaceIDFoldersIDRequiredDocuments200ApplicationJSONStatusEnumEnded     GetSpacesSpaceIDFoldersIDRequiredDocuments200ApplicationJSONStatusEnum = "ended"
 )
 
+func (e GetSpacesSpaceIDFoldersIDRequiredDocuments200ApplicationJSONStatusEnum) ToPointer() *GetSpacesSpaceIDFoldersIDRequiredDocuments200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDFoldersIDRequiredDocuments200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "waiting":
 		fallthrough
 	case "validated":
 		fallthrough
 	case "ended":
-		*e = GetSpacesSpaceIDFoldersIDRequiredDocuments200ApplicationJSONStatusEnum(s)
+		*e = GetSpacesSpaceIDFoldersIDRequiredDocuments200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDRequiredDocuments200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDRequiredDocuments200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

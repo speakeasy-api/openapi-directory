@@ -14,18 +14,22 @@ const (
 	RootAccessEnumDisabled RootAccessEnum = "Disabled"
 )
 
+func (e RootAccessEnum) ToPointer() *RootAccessEnum {
+	return &e
+}
+
 func (e *RootAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
-		*e = RootAccessEnum(s)
+		*e = RootAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RootAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for RootAccessEnum: %v", v)
 	}
 }

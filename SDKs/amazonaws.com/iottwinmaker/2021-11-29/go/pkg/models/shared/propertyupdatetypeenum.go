@@ -15,20 +15,24 @@ const (
 	PropertyUpdateTypeEnumCreate PropertyUpdateTypeEnum = "CREATE"
 )
 
+func (e PropertyUpdateTypeEnum) ToPointer() *PropertyUpdateTypeEnum {
+	return &e
+}
+
 func (e *PropertyUpdateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPDATE":
 		fallthrough
 	case "DELETE":
 		fallthrough
 	case "CREATE":
-		*e = PropertyUpdateTypeEnum(s)
+		*e = PropertyUpdateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyUpdateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyUpdateTypeEnum: %v", v)
 	}
 }

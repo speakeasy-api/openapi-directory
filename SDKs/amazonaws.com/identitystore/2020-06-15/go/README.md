@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/identitysto
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,24 +28,22 @@ func main() {
         }),
     )
 
-    req := operations.CreateGroupRequest{
+    ctx := context.Background()
+    res, err := s.CreateGroup(ctx, operations.CreateGroupRequest{
         CreateGroupRequest: shared.CreateGroupRequest{
-            Description: "corrupti",
-            DisplayName: "provident",
+            Description: sdk.String("corrupti"),
+            DisplayName: sdk.String("provident"),
             IdentityStoreID: "distinctio",
         },
-        XAmzAlgorithm: "quibusdam",
-        XAmzContentSha256: "unde",
-        XAmzCredential: "nulla",
-        XAmzDate: "corrupti",
-        XAmzSecurityToken: "illum",
-        XAmzSignature: "vel",
-        XAmzSignedHeaders: "error",
-        XAmzTarget: "AWSIdentityStore.CreateGroup",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateGroup(ctx, req)
+        XAmzAlgorithm: sdk.String("quibusdam"),
+        XAmzContentSha256: sdk.String("unde"),
+        XAmzCredential: sdk.String("nulla"),
+        XAmzDate: sdk.String("corrupti"),
+        XAmzSecurityToken: sdk.String("illum"),
+        XAmzSignature: sdk.String("vel"),
+        XAmzSignedHeaders: sdk.String("error"),
+        XAmzTarget: operations.CreateGroupXAmzTargetEnumAwsIdentityStoreCreateGroup,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -60,27 +58,27 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateGroup` - Creates a group within the specified identity store.
-* `CreateGroupMembership` - Creates a relationship between a member and a group. The following identifiers must be specified: <code>GroupId</code>, <code>IdentityStoreId</code>, and <code>MemberId</code>.
-* `CreateUser` - Creates a new user within the specified identity store.
-* `DeleteGroup` - Delete a group within an identity store given <code>GroupId</code>.
-* `DeleteGroupMembership` - Delete a membership within a group given <code>MembershipId</code>.
-* `DeleteUser` - Deletes a user within an identity store given <code>UserId</code>.
-* `DescribeGroup` - Retrieves the group metadata and attributes from <code>GroupId</code> in an identity store.
-* `DescribeGroupMembership` - Retrieves membership metadata and attributes from <code>MembershipId</code> in an identity store.
-* `DescribeUser` - Retrieves the user metadata and attributes from the <code>UserId</code> in an identity store.
-* `GetGroupID` - Retrieves <code>GroupId</code> in an identity store.
-* `GetGroupMembershipID` - Retrieves the <code>MembershipId</code> in an identity store.
-* `GetUserID` - Retrieves the <code>UserId</code> in an identity store.
-* `IsMemberInGroups` - Checks the user's membership in all requested groups and returns if the member exists in all queried groups.
-* `ListGroupMemberships` - For the specified group in the specified identity store, returns the list of all <code>GroupMembership</code> objects and returns results in paginated form.
-* `ListGroupMembershipsForMember` - For the specified member in the specified identity store, returns the list of all <code>GroupMembership</code> objects and returns results in paginated form.
-* `ListGroups` - Lists all groups in the identity store. Returns a paginated list of complete <code>Group</code> objects. Filtering for a <code>Group</code> by the <code>DisplayName</code> attribute is deprecated. Instead, use the <code>GetGroupId</code> API action.
-* `ListUsers` - Lists all users in the identity store. Returns a paginated list of complete <code>User</code> objects. Filtering for a <code>User</code> by the <code>UserName</code> attribute is deprecated. Instead, use the <code>GetUserId</code> API action.
-* `UpdateGroup` - For the specified group in the specified identity store, updates the group metadata and attributes.
-* `UpdateUser` - For the specified user in the specified identity store, updates the user metadata and attributes.
+* [CreateGroup](docs/sdk/README.md#creategroup) - Creates a group within the specified identity store.
+* [CreateGroupMembership](docs/sdk/README.md#creategroupmembership) - Creates a relationship between a member and a group. The following identifiers must be specified: <code>GroupId</code>, <code>IdentityStoreId</code>, and <code>MemberId</code>.
+* [CreateUser](docs/sdk/README.md#createuser) - Creates a user within the specified identity store.
+* [DeleteGroup](docs/sdk/README.md#deletegroup) - Delete a group within an identity store given <code>GroupId</code>.
+* [DeleteGroupMembership](docs/sdk/README.md#deletegroupmembership) - Delete a membership within a group given <code>MembershipId</code>.
+* [DeleteUser](docs/sdk/README.md#deleteuser) - Deletes a user within an identity store given <code>UserId</code>.
+* [DescribeGroup](docs/sdk/README.md#describegroup) - Retrieves the group metadata and attributes from <code>GroupId</code> in an identity store.
+* [DescribeGroupMembership](docs/sdk/README.md#describegroupmembership) - Retrieves membership metadata and attributes from <code>MembershipId</code> in an identity store.
+* [DescribeUser](docs/sdk/README.md#describeuser) - Retrieves the user metadata and attributes from the <code>UserId</code> in an identity store.
+* [GetGroupID](docs/sdk/README.md#getgroupid) - Retrieves <code>GroupId</code> in an identity store.
+* [GetGroupMembershipID](docs/sdk/README.md#getgroupmembershipid) - Retrieves the <code>MembershipId</code> in an identity store.
+* [GetUserID](docs/sdk/README.md#getuserid) - Retrieves the <code>UserId</code> in an identity store.
+* [IsMemberInGroups](docs/sdk/README.md#ismemberingroups) - Checks the user's membership in all requested groups and returns if the member exists in all queried groups.
+* [ListGroupMemberships](docs/sdk/README.md#listgroupmemberships) - For the specified group in the specified identity store, returns the list of all <code>GroupMembership</code> objects and returns results in paginated form.
+* [ListGroupMembershipsForMember](docs/sdk/README.md#listgroupmembershipsformember) - For the specified member in the specified identity store, returns the list of all <code>GroupMembership</code> objects and returns results in paginated form.
+* [ListGroups](docs/sdk/README.md#listgroups) - Lists all groups in the identity store. Returns a paginated list of complete <code>Group</code> objects. Filtering for a <code>Group</code> by the <code>DisplayName</code> attribute is deprecated. Instead, use the <code>GetGroupId</code> API action.
+* [ListUsers](docs/sdk/README.md#listusers) - Lists all users in the identity store. Returns a paginated list of complete <code>User</code> objects. Filtering for a <code>User</code> by the <code>UserName</code> attribute is deprecated. Instead, use the <code>GetUserId</code> API action.
+* [UpdateGroup](docs/sdk/README.md#updategroup) - For the specified group in the specified identity store, updates the group metadata and attributes.
+* [UpdateUser](docs/sdk/README.md#updateuser) - For the specified user in the specified identity store, updates the user metadata and attributes.
 <!-- End SDK Available Operations -->
 
 ### Maturity

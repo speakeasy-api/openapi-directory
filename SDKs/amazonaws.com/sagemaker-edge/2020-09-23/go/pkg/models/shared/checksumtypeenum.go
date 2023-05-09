@@ -13,16 +13,20 @@ const (
 	ChecksumTypeEnumSha1 ChecksumTypeEnum = "SHA1"
 )
 
+func (e ChecksumTypeEnum) ToPointer() *ChecksumTypeEnum {
+	return &e
+}
+
 func (e *ChecksumTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHA1":
-		*e = ChecksumTypeEnum(s)
+		*e = ChecksumTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChecksumTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChecksumTypeEnum: %v", v)
 	}
 }

@@ -30,12 +30,16 @@ const (
 	OpaqueColorThemeColorEnumBackground2               OpaqueColorThemeColorEnum = "BACKGROUND2"
 )
 
+func (e OpaqueColorThemeColorEnum) ToPointer() *OpaqueColorThemeColorEnum {
+	return &e
+}
+
 func (e *OpaqueColorThemeColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THEME_COLOR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DARK1":
@@ -69,10 +73,10 @@ func (e *OpaqueColorThemeColorEnum) UnmarshalJSON(data []byte) error {
 	case "TEXT2":
 		fallthrough
 	case "BACKGROUND2":
-		*e = OpaqueColorThemeColorEnum(s)
+		*e = OpaqueColorThemeColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpaqueColorThemeColorEnum: %s", s)
+		return fmt.Errorf("invalid value for OpaqueColorThemeColorEnum: %v", v)
 	}
 }
 

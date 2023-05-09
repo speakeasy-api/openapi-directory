@@ -202,7 +202,7 @@ func (s *authentication) Token(ctx context.Context, request operations.TokenRequ
 // Use this endpoint to retrieve a user's profile in case you are unable to parse an ID Token or you've not already obtained enough details from the ID Token via the Token Endpoint.
 //
 // http://openid.net/specs/openid-connect-core-1_0.html#UserInfo - OIDC UserInfo Endpoint
-func (s *authentication) UserInfo(ctx context.Context) (*operations.UserInfoResponse, error) {
+func (s *authentication) UserInfo(ctx context.Context, security operations.UserInfoSecurity) (*operations.UserInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/userinfo"
 
@@ -211,7 +211,7 @@ func (s *authentication) UserInfo(ctx context.Context) (*operations.UserInfoResp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

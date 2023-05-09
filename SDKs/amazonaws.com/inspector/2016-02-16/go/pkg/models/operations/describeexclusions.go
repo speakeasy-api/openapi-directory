@@ -16,17 +16,21 @@ const (
 	DescribeExclusionsXAmzTargetEnumInspectorServiceDescribeExclusions DescribeExclusionsXAmzTargetEnum = "InspectorService.DescribeExclusions"
 )
 
+func (e DescribeExclusionsXAmzTargetEnum) ToPointer() *DescribeExclusionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeExclusionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InspectorService.DescribeExclusions":
-		*e = DescribeExclusionsXAmzTargetEnum(s)
+		*e = DescribeExclusionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeExclusionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeExclusionsXAmzTargetEnum: %v", v)
 	}
 }
 

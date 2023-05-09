@@ -16,17 +16,21 @@ const (
 	GetTableMetadataXAmzTargetEnumAmazonAthenaGetTableMetadata GetTableMetadataXAmzTargetEnum = "AmazonAthena.GetTableMetadata"
 )
 
+func (e GetTableMetadataXAmzTargetEnum) ToPointer() *GetTableMetadataXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetTableMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.GetTableMetadata":
-		*e = GetTableMetadataXAmzTargetEnum(s)
+		*e = GetTableMetadataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTableMetadataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTableMetadataXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -46,21 +46,25 @@ const (
 	UpdateProfileRequestBodyGenderEnumUnspecified UpdateProfileRequestBodyGenderEnum = "UNSPECIFIED"
 )
 
+func (e UpdateProfileRequestBodyGenderEnum) ToPointer() *UpdateProfileRequestBodyGenderEnum {
+	return &e
+}
+
 func (e *UpdateProfileRequestBodyGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MALE":
 		fallthrough
 	case "FEMALE":
 		fallthrough
 	case "UNSPECIFIED":
-		*e = UpdateProfileRequestBodyGenderEnum(s)
+		*e = UpdateProfileRequestBodyGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateProfileRequestBodyGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateProfileRequestBodyGenderEnum: %v", v)
 	}
 }
 
@@ -87,21 +91,25 @@ const (
 	UpdateProfileRequestBodyPartyTypeEnumOther      UpdateProfileRequestBodyPartyTypeEnum = "OTHER"
 )
 
+func (e UpdateProfileRequestBodyPartyTypeEnum) ToPointer() *UpdateProfileRequestBodyPartyTypeEnum {
+	return &e
+}
+
 func (e *UpdateProfileRequestBodyPartyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INDIVIDUAL":
 		fallthrough
 	case "BUSINESS":
 		fallthrough
 	case "OTHER":
-		*e = UpdateProfileRequestBodyPartyTypeEnum(s)
+		*e = UpdateProfileRequestBodyPartyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateProfileRequestBodyPartyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateProfileRequestBodyPartyTypeEnum: %v", v)
 	}
 }
 

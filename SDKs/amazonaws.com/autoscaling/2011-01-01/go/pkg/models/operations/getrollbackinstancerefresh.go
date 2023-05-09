@@ -15,17 +15,21 @@ const (
 	GETRollbackInstanceRefreshActionEnumRollbackInstanceRefresh GETRollbackInstanceRefreshActionEnum = "RollbackInstanceRefresh"
 )
 
+func (e GETRollbackInstanceRefreshActionEnum) ToPointer() *GETRollbackInstanceRefreshActionEnum {
+	return &e
+}
+
 func (e *GETRollbackInstanceRefreshActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RollbackInstanceRefresh":
-		*e = GETRollbackInstanceRefreshActionEnum(s)
+		*e = GETRollbackInstanceRefreshActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRollbackInstanceRefreshActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRollbackInstanceRefreshActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRollbackInstanceRefreshVersionEnumTwoThousandAndEleven0101 GETRollbackInstanceRefreshVersionEnum = "2011-01-01"
 )
 
+func (e GETRollbackInstanceRefreshVersionEnum) ToPointer() *GETRollbackInstanceRefreshVersionEnum {
+	return &e
+}
+
 func (e *GETRollbackInstanceRefreshVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETRollbackInstanceRefreshVersionEnum(s)
+		*e = GETRollbackInstanceRefreshVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRollbackInstanceRefreshVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRollbackInstanceRefreshVersionEnum: %v", v)
 	}
 }
 

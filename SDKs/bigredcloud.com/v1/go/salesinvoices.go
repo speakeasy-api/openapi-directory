@@ -35,7 +35,10 @@ func newSalesInvoices(defaultClient, securityClient HTTPClient, serverURL, langu
 // SalesInvoicesDelete - Removes an existing Sales Invoice.
 func (s *salesInvoices) SalesInvoicesDelete(ctx context.Context, request operations.SalesInvoicesDeleteRequest) (*operations.SalesInvoicesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesInvoices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/salesInvoices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -291,7 +294,10 @@ func (s *salesInvoices) SalesInvoicesProcessBatch(ctx context.Context, request [
 // SalesInvoicesPut - Updates an existing Sales Invoice.
 func (s *salesInvoices) SalesInvoicesPut(ctx context.Context, request operations.SalesInvoicesPutRequest) (*operations.SalesInvoicesPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesInvoices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/salesInvoices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SalesInvoiceCreditNoteDto", "json")
 	if err != nil {
@@ -345,7 +351,10 @@ func (s *salesInvoices) SalesInvoicesPut(ctx context.Context, request operations
 // GetV1SalesInvoicesID - Returns information about a single Sales Invoice.
 func (s *salesInvoices) GetV1SalesInvoicesID(ctx context.Context, request operations.GetV1SalesInvoicesIDRequest) (*operations.GetV1SalesInvoicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesInvoices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/salesInvoices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

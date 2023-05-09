@@ -16,17 +16,21 @@ const (
 	DescribeDataSourceXAmzTargetEnumAwsKendraFrontendServiceDescribeDataSource DescribeDataSourceXAmzTargetEnum = "AWSKendraFrontendService.DescribeDataSource"
 )
 
+func (e DescribeDataSourceXAmzTargetEnum) ToPointer() *DescribeDataSourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDataSourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.DescribeDataSource":
-		*e = DescribeDataSourceXAmzTargetEnum(s)
+		*e = DescribeDataSourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDataSourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDataSourceXAmzTargetEnum: %v", v)
 	}
 }
 

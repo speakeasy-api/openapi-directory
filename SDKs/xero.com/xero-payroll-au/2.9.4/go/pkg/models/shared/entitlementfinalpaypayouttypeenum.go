@@ -14,18 +14,22 @@ const (
 	EntitlementFinalPayPayoutTypeEnumPaidout    EntitlementFinalPayPayoutTypeEnum = "PAIDOUT"
 )
 
+func (e EntitlementFinalPayPayoutTypeEnum) ToPointer() *EntitlementFinalPayPayoutTypeEnum {
+	return &e
+}
+
 func (e *EntitlementFinalPayPayoutTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOTPAIDOUT":
 		fallthrough
 	case "PAIDOUT":
-		*e = EntitlementFinalPayPayoutTypeEnum(s)
+		*e = EntitlementFinalPayPayoutTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntitlementFinalPayPayoutTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EntitlementFinalPayPayoutTypeEnum: %v", v)
 	}
 }

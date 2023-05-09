@@ -19,12 +19,16 @@ const (
 	RestrictionChangeFeatureEnumFileOrganizerCanShareFolders RestrictionChangeFeatureEnum = "FILE_ORGANIZER_CAN_SHARE_FOLDERS"
 )
 
+func (e RestrictionChangeFeatureEnum) ToPointer() *RestrictionChangeFeatureEnum {
+	return &e
+}
+
 func (e *RestrictionChangeFeatureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEATURE_UNSPECIFIED":
 		fallthrough
 	case "SHARING_OUTSIDE_DOMAIN":
@@ -36,10 +40,10 @@ func (e *RestrictionChangeFeatureEnum) UnmarshalJSON(data []byte) error {
 	case "DRIVE_FILE_STREAM":
 		fallthrough
 	case "FILE_ORGANIZER_CAN_SHARE_FOLDERS":
-		*e = RestrictionChangeFeatureEnum(s)
+		*e = RestrictionChangeFeatureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RestrictionChangeFeatureEnum: %s", s)
+		return fmt.Errorf("invalid value for RestrictionChangeFeatureEnum: %v", v)
 	}
 }
 
@@ -52,21 +56,25 @@ const (
 	RestrictionChangeNewRestrictionEnumFullyRestricted        RestrictionChangeNewRestrictionEnum = "FULLY_RESTRICTED"
 )
 
+func (e RestrictionChangeNewRestrictionEnum) ToPointer() *RestrictionChangeNewRestrictionEnum {
+	return &e
+}
+
 func (e *RestrictionChangeNewRestrictionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESTRICTION_UNSPECIFIED":
 		fallthrough
 	case "UNRESTRICTED":
 		fallthrough
 	case "FULLY_RESTRICTED":
-		*e = RestrictionChangeNewRestrictionEnum(s)
+		*e = RestrictionChangeNewRestrictionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RestrictionChangeNewRestrictionEnum: %s", s)
+		return fmt.Errorf("invalid value for RestrictionChangeNewRestrictionEnum: %v", v)
 	}
 }
 

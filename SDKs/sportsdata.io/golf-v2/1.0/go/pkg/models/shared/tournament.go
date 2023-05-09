@@ -13,6 +13,7 @@ type Tournament struct {
 	IsOver                 *bool    `json:"IsOver,omitempty"`
 	Location               *string  `json:"Location,omitempty"`
 	Name                   *string  `json:"Name,omitempty"`
+	OddsCoverage           *string  `json:"OddsCoverage,omitempty"`
 	Par                    *int64   `json:"Par,omitempty"`
 	Purse                  *float64 `json:"Purse,omitempty"`
 	Rounds                 []Round  `json:"Rounds,omitempty"`

@@ -4,7 +4,7 @@ package shared
 
 // GoogleCloudVisionV1p1beta1TextDetectionParams - Parameters for text detections. This is used to control TEXT_DETECTION and DOCUMENT_TEXT_DETECTION features.
 type GoogleCloudVisionV1p1beta1TextDetectionParams struct {
-	// A list of advanced OCR options to fine-tune OCR behavior.
+	// A list of advanced OCR options to further fine-tune OCR behavior. Current valid values are: - `legacy_layout`: a heuristics layout detection algorithm, which serves as an alternative to the current ML-based layout detection algorithm. Customers can choose the best suitable layout algorithm based on their situation.
 	AdvancedOcrOptions []string `json:"advancedOcrOptions,omitempty"`
 	// By default, Cloud Vision API only includes confidence score for DOCUMENT_TEXT_DETECTION result. Set the flag to true to include confidence score for TEXT_DETECTION as well.
 	EnableTextDetectionConfidenceScore *bool `json:"enableTextDetectionConfidenceScore,omitempty"`

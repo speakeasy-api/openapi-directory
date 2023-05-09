@@ -16,12 +16,16 @@ const (
 	ConfigurationItemTypeEnumApplication ConfigurationItemTypeEnum = "APPLICATION"
 )
 
+func (e ConfigurationItemTypeEnum) ToPointer() *ConfigurationItemTypeEnum {
+	return &e
+}
+
 func (e *ConfigurationItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVER":
 		fallthrough
 	case "PROCESS":
@@ -29,9 +33,9 @@ func (e *ConfigurationItemTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CONNECTION":
 		fallthrough
 	case "APPLICATION":
-		*e = ConfigurationItemTypeEnum(s)
+		*e = ConfigurationItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigurationItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigurationItemTypeEnum: %v", v)
 	}
 }

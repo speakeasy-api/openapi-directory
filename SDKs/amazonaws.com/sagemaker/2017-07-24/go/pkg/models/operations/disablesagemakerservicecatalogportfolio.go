@@ -15,17 +15,21 @@ const (
 	DisableSagemakerServicecatalogPortfolioXAmzTargetEnumSageMakerDisableSagemakerServicecatalogPortfolio DisableSagemakerServicecatalogPortfolioXAmzTargetEnum = "SageMaker.DisableSagemakerServicecatalogPortfolio"
 )
 
+func (e DisableSagemakerServicecatalogPortfolioXAmzTargetEnum) ToPointer() *DisableSagemakerServicecatalogPortfolioXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisableSagemakerServicecatalogPortfolioXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DisableSagemakerServicecatalogPortfolio":
-		*e = DisableSagemakerServicecatalogPortfolioXAmzTargetEnum(s)
+		*e = DisableSagemakerServicecatalogPortfolioXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableSagemakerServicecatalogPortfolioXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableSagemakerServicecatalogPortfolioXAmzTargetEnum: %v", v)
 	}
 }
 

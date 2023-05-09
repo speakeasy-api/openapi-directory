@@ -63,14 +63,19 @@ const (
 	UpdateFunctionConfigurationRequestBodyRuntimeEnumProvided     UpdateFunctionConfigurationRequestBodyRuntimeEnum = "provided"
 	UpdateFunctionConfigurationRequestBodyRuntimeEnumProvidedAl2  UpdateFunctionConfigurationRequestBodyRuntimeEnum = "provided.al2"
 	UpdateFunctionConfigurationRequestBodyRuntimeEnumNodejs18X    UpdateFunctionConfigurationRequestBodyRuntimeEnum = "nodejs18.x"
+	UpdateFunctionConfigurationRequestBodyRuntimeEnumPython310    UpdateFunctionConfigurationRequestBodyRuntimeEnum = "python3.10"
 )
 
+func (e UpdateFunctionConfigurationRequestBodyRuntimeEnum) ToPointer() *UpdateFunctionConfigurationRequestBodyRuntimeEnum {
+	return &e
+}
+
 func (e *UpdateFunctionConfigurationRequestBodyRuntimeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nodejs":
 		fallthrough
 	case "nodejs4.3":
@@ -126,10 +131,12 @@ func (e *UpdateFunctionConfigurationRequestBodyRuntimeEnum) UnmarshalJSON(data [
 	case "provided.al2":
 		fallthrough
 	case "nodejs18.x":
-		*e = UpdateFunctionConfigurationRequestBodyRuntimeEnum(s)
+		fallthrough
+	case "python3.10":
+		*e = UpdateFunctionConfigurationRequestBodyRuntimeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateFunctionConfigurationRequestBodyRuntimeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateFunctionConfigurationRequestBodyRuntimeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CreateHsmXAmzTargetEnumBaldrAPIServiceCreateHsm CreateHsmXAmzTargetEnum = "BaldrApiService.CreateHsm"
 )
 
+func (e CreateHsmXAmzTargetEnum) ToPointer() *CreateHsmXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateHsmXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BaldrApiService.CreateHsm":
-		*e = CreateHsmXAmzTargetEnum(s)
+		*e = CreateHsmXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateHsmXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateHsmXAmzTargetEnum: %v", v)
 	}
 }
 

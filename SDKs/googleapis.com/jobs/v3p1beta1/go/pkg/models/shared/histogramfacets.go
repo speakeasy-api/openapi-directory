@@ -29,12 +29,16 @@ const (
 	HistogramFacetsSimpleHistogramFacetsEnumBaseCompensationUnit  HistogramFacetsSimpleHistogramFacetsEnum = "BASE_COMPENSATION_UNIT"
 )
 
+func (e HistogramFacetsSimpleHistogramFacetsEnum) ToPointer() *HistogramFacetsSimpleHistogramFacetsEnum {
+	return &e
+}
+
 func (e *HistogramFacetsSimpleHistogramFacetsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEARCH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "COMPANY_ID":
@@ -68,10 +72,10 @@ func (e *HistogramFacetsSimpleHistogramFacetsEnum) UnmarshalJSON(data []byte) er
 	case "COMPANY_DISPLAY_NAME":
 		fallthrough
 	case "BASE_COMPENSATION_UNIT":
-		*e = HistogramFacetsSimpleHistogramFacetsEnum(s)
+		*e = HistogramFacetsSimpleHistogramFacetsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HistogramFacetsSimpleHistogramFacetsEnum: %s", s)
+		return fmt.Errorf("invalid value for HistogramFacetsSimpleHistogramFacetsEnum: %v", v)
 	}
 }
 

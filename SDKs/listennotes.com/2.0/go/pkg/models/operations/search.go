@@ -10,50 +10,58 @@ import (
 )
 
 // SearchSafeModeEnum - Whether or not to exclude podcasts/episodes with explicit language. 1 is yes and 0 is no. It works only when **type** is *episode* or *podcast*.
-type SearchSafeModeEnum string
+type SearchSafeModeEnum int64
 
 const (
-	SearchSafeModeEnumZero SearchSafeModeEnum = "0"
-	SearchSafeModeEnumOne  SearchSafeModeEnum = "1"
+	SearchSafeModeEnumZero SearchSafeModeEnum = 0
+	SearchSafeModeEnumOne  SearchSafeModeEnum = 1
 )
 
+func (e SearchSafeModeEnum) ToPointer() *SearchSafeModeEnum {
+	return &e
+}
+
 func (e *SearchSafeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = SearchSafeModeEnum(s)
+	case 1:
+		*e = SearchSafeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchSafeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchSafeModeEnum: %v", v)
 	}
 }
 
 // SearchSortByDateEnum - Sort by date or not? If 0, then sort by relevance. If 1, then sort by date.
-type SearchSortByDateEnum string
+type SearchSortByDateEnum int64
 
 const (
-	SearchSortByDateEnumZero SearchSortByDateEnum = "0"
-	SearchSortByDateEnumOne  SearchSortByDateEnum = "1"
+	SearchSortByDateEnumZero SearchSortByDateEnum = 0
+	SearchSortByDateEnumOne  SearchSortByDateEnum = 1
 )
 
+func (e SearchSortByDateEnum) ToPointer() *SearchSortByDateEnum {
+	return &e
+}
+
 func (e *SearchSortByDateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = SearchSortByDateEnum(s)
+	case 1:
+		*e = SearchSortByDateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchSortByDateEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchSortByDateEnum: %v", v)
 	}
 }
 
@@ -66,45 +74,53 @@ const (
 	SearchTypeEnumCurated SearchTypeEnum = "curated"
 )
 
+func (e SearchTypeEnum) ToPointer() *SearchTypeEnum {
+	return &e
+}
+
 func (e *SearchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "episode":
 		fallthrough
 	case "podcast":
 		fallthrough
 	case "curated":
-		*e = SearchTypeEnum(s)
+		*e = SearchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchTypeEnum: %v", v)
 	}
 }
 
 // SearchUniquePodcastsEnum - Whether or not to keep only one episode per podcast in search results. 1 is yes and 0 is no. It works only when **type** is *episode*.
-type SearchUniquePodcastsEnum string
+type SearchUniquePodcastsEnum int64
 
 const (
-	SearchUniquePodcastsEnumZero SearchUniquePodcastsEnum = "0"
-	SearchUniquePodcastsEnumOne  SearchUniquePodcastsEnum = "1"
+	SearchUniquePodcastsEnumZero SearchUniquePodcastsEnum = 0
+	SearchUniquePodcastsEnumOne  SearchUniquePodcastsEnum = 1
 )
 
+func (e SearchUniquePodcastsEnum) ToPointer() *SearchUniquePodcastsEnum {
+	return &e
+}
+
 func (e *SearchUniquePodcastsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = SearchUniquePodcastsEnum(s)
+	case 1:
+		*e = SearchUniquePodcastsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchUniquePodcastsEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchUniquePodcastsEnum: %v", v)
 	}
 }
 
@@ -145,6 +161,9 @@ type SearchRequest struct {
 	// A comma-delimited string to search only in specific fields. Allowed values are title, description, author, and audio. If not specified, then search every fields.
 	//
 	OnlyIn *string `queryParam:"style=form,explode=true,name=only_in"`
+	// The maximum number of search results per page. A valid value should be an integer between 1 and 10 (inclusive).
+	//
+	PageSize *int64 `queryParam:"style=form,explode=true,name=page_size"`
 	// Only show episodes/podcasts/curated lists published after this timestamp (in milliseconds). If **published_before** & **published_after** are used at the same time, **published_before** should be bigger than **published_after**.
 	//
 	PublishedAfter *int64 `queryParam:"style=form,explode=true,name=published_after"`

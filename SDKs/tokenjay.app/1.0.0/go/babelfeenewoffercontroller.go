@@ -128,9 +128,13 @@ func (s *babelFeeNewOfferController) DoCreateBabelBox(ctx context.Context, reque
 
 	return res, nil
 }
+
 func (s *babelFeeNewOfferController) ErgoPayCreateBabelBox(ctx context.Context, request operations.ErgoPayCreateBabelBoxRequest) (*operations.ErgoPayCreateBabelBoxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/createbabel/{address}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/createbabel/{address}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -218,6 +222,7 @@ func (s *babelFeeNewOfferController) ErgoPayCreateBabelBox(ctx context.Context, 
 
 	return res, nil
 }
+
 func (s *babelFeeNewOfferController) GetBabelFeeNewOffer(ctx context.Context) (*operations.GetBabelFeeNewOfferResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mosaik/babelfee/newoffer"
@@ -304,6 +309,7 @@ func (s *babelFeeNewOfferController) GetBabelFeeNewOffer(ctx context.Context) (*
 
 	return res, nil
 }
+
 func (s *babelFeeNewOfferController) ReplaceTokenAmountInputFields(ctx context.Context, request map[string]map[string]interface{}) (*operations.ReplaceTokenAmountInputFieldsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mosaik/babelfee/newoffer/new-input"

@@ -16,17 +16,21 @@ const (
 	UpdateFeatureMetadataXAmzTargetEnumSageMakerUpdateFeatureMetadata UpdateFeatureMetadataXAmzTargetEnum = "SageMaker.UpdateFeatureMetadata"
 )
 
+func (e UpdateFeatureMetadataXAmzTargetEnum) ToPointer() *UpdateFeatureMetadataXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateFeatureMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.UpdateFeatureMetadata":
-		*e = UpdateFeatureMetadataXAmzTargetEnum(s)
+		*e = UpdateFeatureMetadataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateFeatureMetadataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateFeatureMetadataXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ApprovalStatusEnumRejected ApprovalStatusEnum = "Rejected"
 )
 
+func (e ApprovalStatusEnum) ToPointer() *ApprovalStatusEnum {
+	return &e
+}
+
 func (e *ApprovalStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Approved":
 		fallthrough
 	case "Rejected":
-		*e = ApprovalStatusEnum(s)
+		*e = ApprovalStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApprovalStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApprovalStatusEnum: %v", v)
 	}
 }

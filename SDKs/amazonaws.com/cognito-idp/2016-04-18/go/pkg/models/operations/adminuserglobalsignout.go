@@ -16,17 +16,21 @@ const (
 	AdminUserGlobalSignOutXAmzTargetEnumAwsCognitoIdentityProviderServiceAdminUserGlobalSignOut AdminUserGlobalSignOutXAmzTargetEnum = "AWSCognitoIdentityProviderService.AdminUserGlobalSignOut"
 )
 
+func (e AdminUserGlobalSignOutXAmzTargetEnum) ToPointer() *AdminUserGlobalSignOutXAmzTargetEnum {
+	return &e
+}
+
 func (e *AdminUserGlobalSignOutXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.AdminUserGlobalSignOut":
-		*e = AdminUserGlobalSignOutXAmzTargetEnum(s)
+		*e = AdminUserGlobalSignOutXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminUserGlobalSignOutXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminUserGlobalSignOutXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,18 +15,22 @@ const (
 	ProvisionedResourceEngineEnumTerraform      ProvisionedResourceEngineEnum = "TERRAFORM"
 )
 
+func (e ProvisionedResourceEngineEnum) ToPointer() *ProvisionedResourceEngineEnum {
+	return &e
+}
+
 func (e *ProvisionedResourceEngineEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLOUDFORMATION":
 		fallthrough
 	case "TERRAFORM":
-		*e = ProvisionedResourceEngineEnum(s)
+		*e = ProvisionedResourceEngineEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionedResourceEngineEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionedResourceEngineEnum: %v", v)
 	}
 }

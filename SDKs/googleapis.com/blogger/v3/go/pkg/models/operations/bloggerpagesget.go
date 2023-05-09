@@ -34,12 +34,16 @@ const (
 	BloggerPagesGetViewEnumAdmin               BloggerPagesGetViewEnum = "ADMIN"
 )
 
+func (e BloggerPagesGetViewEnum) ToPointer() *BloggerPagesGetViewEnum {
+	return &e
+}
+
 func (e *BloggerPagesGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_TYPE_UNSPECIFIED":
 		fallthrough
 	case "READER":
@@ -47,10 +51,10 @@ func (e *BloggerPagesGetViewEnum) UnmarshalJSON(data []byte) error {
 	case "AUTHOR":
 		fallthrough
 	case "ADMIN":
-		*e = BloggerPagesGetViewEnum(s)
+		*e = BloggerPagesGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerPagesGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerPagesGetViewEnum: %v", v)
 	}
 }
 

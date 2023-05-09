@@ -37,7 +37,10 @@ func newLanguageExamples(defaultClient, securityClient HTTPClient, serverURL, la
 // Returns all the examples for the specified dataset,
 func (s *languageExamples) GetExamples(ctx context.Context, request operations.GetExamplesRequest, security operations.GetExamplesSecurity) (*operations.GetExamplesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}/examples", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}/examples", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,7 +190,10 @@ func (s *languageExamples) ProvideFeedback(ctx context.Context, request operatio
 // Adds examples from a .csv, .tsv, or .json file to a dataset.
 func (s *languageExamples) UpdateDatasetAsync(ctx context.Context, request operations.UpdateDatasetAsyncRequest, security operations.UpdateDatasetAsyncSecurity) (*operations.UpdateDatasetAsyncResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}/upload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}/upload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

@@ -13,16 +13,20 @@ const (
 	AssetTypeEnumEc2Instance AssetTypeEnum = "ec2-instance"
 )
 
+func (e AssetTypeEnum) ToPointer() *AssetTypeEnum {
+	return &e
+}
+
 func (e *AssetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ec2-instance":
-		*e = AssetTypeEnum(s)
+		*e = AssetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssetTypeEnum: %v", v)
 	}
 }

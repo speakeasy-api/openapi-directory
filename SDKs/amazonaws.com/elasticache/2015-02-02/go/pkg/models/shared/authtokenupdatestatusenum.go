@@ -14,18 +14,22 @@ const (
 	AuthTokenUpdateStatusEnumRotating AuthTokenUpdateStatusEnum = "ROTATING"
 )
 
+func (e AuthTokenUpdateStatusEnum) ToPointer() *AuthTokenUpdateStatusEnum {
+	return &e
+}
+
 func (e *AuthTokenUpdateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SETTING":
 		fallthrough
 	case "ROTATING":
-		*e = AuthTokenUpdateStatusEnum(s)
+		*e = AuthTokenUpdateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthTokenUpdateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthTokenUpdateStatusEnum: %v", v)
 	}
 }

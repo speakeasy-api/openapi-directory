@@ -21,21 +21,25 @@ const (
 	EvaluateRebalanceSwitchInstructionRequestTypeEnumPortfolio EvaluateRebalanceSwitchInstructionRequestTypeEnum = "portfolio"
 )
 
+func (e EvaluateRebalanceSwitchInstructionRequestTypeEnum) ToPointer() *EvaluateRebalanceSwitchInstructionRequestTypeEnum {
+	return &e
+}
+
 func (e *EvaluateRebalanceSwitchInstructionRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pot":
 		fallthrough
 	case "investor":
 		fallthrough
 	case "portfolio":
-		*e = EvaluateRebalanceSwitchInstructionRequestTypeEnum(s)
+		*e = EvaluateRebalanceSwitchInstructionRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EvaluateRebalanceSwitchInstructionRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EvaluateRebalanceSwitchInstructionRequestTypeEnum: %v", v)
 	}
 }
 
@@ -79,19 +83,23 @@ const (
 	EvaluateRebalance409ApplicationJSONStatusEnumComplete   EvaluateRebalance409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e EvaluateRebalance409ApplicationJSONStatusEnum) ToPointer() *EvaluateRebalance409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *EvaluateRebalance409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = EvaluateRebalance409ApplicationJSONStatusEnum(s)
+		*e = EvaluateRebalance409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EvaluateRebalance409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EvaluateRebalance409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -148,12 +156,16 @@ const (
 	EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnumNoHoldings          EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum = "no_holdings"
 )
 
+func (e EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum) ToPointer() *EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum {
+	return &e
+}
+
 func (e *EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "eligible":
 		fallthrough
 	case "ineligible":
@@ -163,10 +175,10 @@ func (e *EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividua
 	case "negative_holdings":
 		fallthrough
 	case "no_holdings":
-		*e = EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum(s)
+		*e = EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPotEachIndividualPotDetailsOnTheRebalanceRequestRebalanceEligibilityStatusEnum: %v", v)
 	}
 }
 

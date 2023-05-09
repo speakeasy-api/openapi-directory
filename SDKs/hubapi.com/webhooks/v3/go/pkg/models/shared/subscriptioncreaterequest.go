@@ -35,14 +35,35 @@ const (
 	SubscriptionCreateRequestEventTypeEnumConversationNewMessage      SubscriptionCreateRequestEventTypeEnum = "conversation.newMessage"
 	SubscriptionCreateRequestEventTypeEnumConversationPrivacyDeletion SubscriptionCreateRequestEventTypeEnum = "conversation.privacyDeletion"
 	SubscriptionCreateRequestEventTypeEnumConversationPropertyChange  SubscriptionCreateRequestEventTypeEnum = "conversation.propertyChange"
+	SubscriptionCreateRequestEventTypeEnumContactMerge                SubscriptionCreateRequestEventTypeEnum = "contact.merge"
+	SubscriptionCreateRequestEventTypeEnumCompanyMerge                SubscriptionCreateRequestEventTypeEnum = "company.merge"
+	SubscriptionCreateRequestEventTypeEnumDealMerge                   SubscriptionCreateRequestEventTypeEnum = "deal.merge"
+	SubscriptionCreateRequestEventTypeEnumTicketMerge                 SubscriptionCreateRequestEventTypeEnum = "ticket.merge"
+	SubscriptionCreateRequestEventTypeEnumProductMerge                SubscriptionCreateRequestEventTypeEnum = "product.merge"
+	SubscriptionCreateRequestEventTypeEnumLineItemMerge               SubscriptionCreateRequestEventTypeEnum = "line_item.merge"
+	SubscriptionCreateRequestEventTypeEnumContactRestore              SubscriptionCreateRequestEventTypeEnum = "contact.restore"
+	SubscriptionCreateRequestEventTypeEnumCompanyRestore              SubscriptionCreateRequestEventTypeEnum = "company.restore"
+	SubscriptionCreateRequestEventTypeEnumDealRestore                 SubscriptionCreateRequestEventTypeEnum = "deal.restore"
+	SubscriptionCreateRequestEventTypeEnumTicketRestore               SubscriptionCreateRequestEventTypeEnum = "ticket.restore"
+	SubscriptionCreateRequestEventTypeEnumProductRestore              SubscriptionCreateRequestEventTypeEnum = "product.restore"
+	SubscriptionCreateRequestEventTypeEnumLineItemRestore             SubscriptionCreateRequestEventTypeEnum = "line_item.restore"
+	SubscriptionCreateRequestEventTypeEnumContactAssociationChange    SubscriptionCreateRequestEventTypeEnum = "contact.associationChange"
+	SubscriptionCreateRequestEventTypeEnumCompanyAssociationChange    SubscriptionCreateRequestEventTypeEnum = "company.associationChange"
+	SubscriptionCreateRequestEventTypeEnumDealAssociationChange       SubscriptionCreateRequestEventTypeEnum = "deal.associationChange"
+	SubscriptionCreateRequestEventTypeEnumTicketAssociationChange     SubscriptionCreateRequestEventTypeEnum = "ticket.associationChange"
+	SubscriptionCreateRequestEventTypeEnumLineItemAssociationChange   SubscriptionCreateRequestEventTypeEnum = "line_item.associationChange"
 )
 
+func (e SubscriptionCreateRequestEventTypeEnum) ToPointer() *SubscriptionCreateRequestEventTypeEnum {
+	return &e
+}
+
 func (e *SubscriptionCreateRequestEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "contact.propertyChange":
 		fallthrough
 	case "company.propertyChange":
@@ -90,10 +111,44 @@ func (e *SubscriptionCreateRequestEventTypeEnum) UnmarshalJSON(data []byte) erro
 	case "conversation.privacyDeletion":
 		fallthrough
 	case "conversation.propertyChange":
-		*e = SubscriptionCreateRequestEventTypeEnum(s)
+		fallthrough
+	case "contact.merge":
+		fallthrough
+	case "company.merge":
+		fallthrough
+	case "deal.merge":
+		fallthrough
+	case "ticket.merge":
+		fallthrough
+	case "product.merge":
+		fallthrough
+	case "line_item.merge":
+		fallthrough
+	case "contact.restore":
+		fallthrough
+	case "company.restore":
+		fallthrough
+	case "deal.restore":
+		fallthrough
+	case "ticket.restore":
+		fallthrough
+	case "product.restore":
+		fallthrough
+	case "line_item.restore":
+		fallthrough
+	case "contact.associationChange":
+		fallthrough
+	case "company.associationChange":
+		fallthrough
+	case "deal.associationChange":
+		fallthrough
+	case "ticket.associationChange":
+		fallthrough
+	case "line_item.associationChange":
+		*e = SubscriptionCreateRequestEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionCreateRequestEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionCreateRequestEventTypeEnum: %v", v)
 	}
 }
 

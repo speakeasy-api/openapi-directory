@@ -26,21 +26,25 @@ const (
 	AccountLabelLabelTypeEnumAutomatic            AccountLabelLabelTypeEnum = "AUTOMATIC"
 )
 
+func (e AccountLabelLabelTypeEnum) ToPointer() *AccountLabelLabelTypeEnum {
+	return &e
+}
+
 func (e *AccountLabelLabelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LABEL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MANUAL":
 		fallthrough
 	case "AUTOMATIC":
-		*e = AccountLabelLabelTypeEnum(s)
+		*e = AccountLabelLabelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountLabelLabelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountLabelLabelTypeEnum: %v", v)
 	}
 }
 

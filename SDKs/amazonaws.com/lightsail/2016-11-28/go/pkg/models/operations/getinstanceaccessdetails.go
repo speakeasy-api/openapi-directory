@@ -16,17 +16,21 @@ const (
 	GetInstanceAccessDetailsXAmzTargetEnumLightsail20161128GetInstanceAccessDetails GetInstanceAccessDetailsXAmzTargetEnum = "Lightsail_20161128.GetInstanceAccessDetails"
 )
 
+func (e GetInstanceAccessDetailsXAmzTargetEnum) ToPointer() *GetInstanceAccessDetailsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetInstanceAccessDetailsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetInstanceAccessDetails":
-		*e = GetInstanceAccessDetailsXAmzTargetEnum(s)
+		*e = GetInstanceAccessDetailsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInstanceAccessDetailsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInstanceAccessDetailsXAmzTargetEnum: %v", v)
 	}
 }
 

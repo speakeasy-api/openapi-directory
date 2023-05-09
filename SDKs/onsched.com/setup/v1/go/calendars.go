@@ -36,7 +36,10 @@ func newCalendars(defaultClient, securityClient HTTPClient, serverURL, language,
 // <p>Use this endpoint to permanently <b>Delete</b> a calendar block. A valid <b>calendarBlock id</b> is required.</p>
 func (s *calendars) DeleteSetupV1CalendarsBlockID(ctx context.Context, request operations.DeleteSetupV1CalendarsBlockIDRequest) (*operations.DeleteSetupV1CalendarsBlockIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/block/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/block/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *calendars) DeleteSetupV1CalendarsBlockID(ctx context.Context, request o
 // <p>Use this endpoint to <b>Delete</b> a calendar object. A valid <b>calendar id</b> is required. The calendar is not permanently deleted and can be recovered by using the <i>PUT ​/setup​/v1​/calendars​/{id}​/recover </i>endpoint.</p>
 func (s *calendars) DeleteSetupV1CalendarsID(ctx context.Context, request operations.DeleteSetupV1CalendarsIDRequest) (*operations.DeleteSetupV1CalendarsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -175,7 +181,10 @@ func (s *calendars) GetSetupV1Calendars(ctx context.Context, request operations.
 // <p>Use this endpoint to return a <b>Calendar Block</b>. A valid <b>calendarBlock id</b> is required. </p>
 func (s *calendars) GetSetupV1CalendarsBlocksID(ctx context.Context, request operations.GetSetupV1CalendarsBlocksIDRequest) (*operations.GetSetupV1CalendarsBlocksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/blocks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/blocks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -220,7 +229,10 @@ func (s *calendars) GetSetupV1CalendarsBlocksID(ctx context.Context, request ope
 // <p>Use this endpoint to return a <b>Calendar</b> object. A valid <b>calendar id</b> is required.</p>
 func (s *calendars) GetSetupV1CalendarsID(ctx context.Context, request operations.GetSetupV1CalendarsIDRequest) (*operations.GetSetupV1CalendarsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -265,7 +277,10 @@ func (s *calendars) GetSetupV1CalendarsID(ctx context.Context, request operation
 // <p>Use this endpoint to return a <b>List of Calendar Blocks</b> for the requested calendar. A valid <b>calendar id</b> is required. </p>
 func (s *calendars) GetSetupV1CalendarsIDBlocks(ctx context.Context, request operations.GetSetupV1CalendarsIDBlocksRequest) (*operations.GetSetupV1CalendarsIDBlocksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}/blocks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}/blocks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -319,7 +334,10 @@ func (s *calendars) GetSetupV1CalendarsIDBlocks(ctx context.Context, request ope
 // <p>Use this endpoint to return a <b>List of Linked Services</b> of a calendar object. A valid <b>calendar id</b> is required. Find calendar id's by using the <i>GET /setup/v1/calendars</i> endpoint.</p>
 func (s *calendars) GetSetupV1CalendarsIDServices(ctx context.Context, request operations.GetSetupV1CalendarsIDServicesRequest) (*operations.GetSetupV1CalendarsIDServicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}/services", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}/services", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -451,7 +469,10 @@ func (s *calendars) PostSetupV1Calendars(ctx context.Context, request shared.Sch
 // </p>
 func (s *calendars) PostSetupV1CalendarsIDBlock(ctx context.Context, request operations.PostSetupV1CalendarsIDBlockRequest) (*operations.PostSetupV1CalendarsIDBlockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}/block", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}/block", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CalendarBlockInputModel", "json")
 	if err != nil {
@@ -503,7 +524,10 @@ func (s *calendars) PostSetupV1CalendarsIDBlock(ctx context.Context, request ope
 // <p>Use this endpoint to <b>Create</b> a Calendar Block. A valid <b>calendarBlock id</b> is required. Refer to the <i>POST ​/setup​/v1​/calendars​/{id}​/block</i> endpoint for fieldnames and details.</p>
 func (s *calendars) PutSetupV1CalendarsBlockID(ctx context.Context, request operations.PutSetupV1CalendarsBlockIDRequest) (*operations.PutSetupV1CalendarsBlockIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/block/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/block/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CalendarBlockUpdateModel", "json")
 	if err != nil {
@@ -555,7 +579,10 @@ func (s *calendars) PutSetupV1CalendarsBlockID(ctx context.Context, request oper
 // <p>Use this endpoint to <b>Update</b> a calendar object. A valid <b>calendar id</b> is required. When your company was created a calendar object was automatically created with 24-hour weekly availability. Its <b>name = Main</b>, the <b>type = resource</b> and by default the <b>interval = 30 mins</b>. We are currently supporting resource calendar type. Other types were part of our Legacy Application and has no relevance in the API product.</p>
 func (s *calendars) PutSetupV1CalendarsID(ctx context.Context, request operations.PutSetupV1CalendarsIDRequest) (*operations.PutSetupV1CalendarsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScheduleUpdateModel", "json")
 	if err != nil {
@@ -607,7 +634,10 @@ func (s *calendars) PutSetupV1CalendarsID(ctx context.Context, request operation
 // <p>Use this endpoint to <b>Recover</b> a previously deleted calendar object. A valid <b>calendar id</b> is required.</p>
 func (s *calendars) PutSetupV1CalendarsIDRecover(ctx context.Context, request operations.PutSetupV1CalendarsIDRecoverRequest) (*operations.PutSetupV1CalendarsIDRecoverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}/recover", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/calendars/{id}/recover", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

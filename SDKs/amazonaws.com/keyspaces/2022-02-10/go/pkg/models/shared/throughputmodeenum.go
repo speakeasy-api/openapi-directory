@@ -14,18 +14,22 @@ const (
 	ThroughputModeEnumProvisioned   ThroughputModeEnum = "PROVISIONED"
 )
 
+func (e ThroughputModeEnum) ToPointer() *ThroughputModeEnum {
+	return &e
+}
+
 func (e *ThroughputModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PAY_PER_REQUEST":
 		fallthrough
 	case "PROVISIONED":
-		*e = ThroughputModeEnum(s)
+		*e = ThroughputModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThroughputModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ThroughputModeEnum: %v", v)
 	}
 }

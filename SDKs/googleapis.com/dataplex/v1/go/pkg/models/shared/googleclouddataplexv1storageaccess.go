@@ -16,21 +16,25 @@ const (
 	GoogleCloudDataplexV1StorageAccessReadEnumManaged               GoogleCloudDataplexV1StorageAccessReadEnum = "MANAGED"
 )
 
+func (e GoogleCloudDataplexV1StorageAccessReadEnum) ToPointer() *GoogleCloudDataplexV1StorageAccessReadEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1StorageAccessReadEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_MODE_UNSPECIFIED":
 		fallthrough
 	case "DIRECT":
 		fallthrough
 	case "MANAGED":
-		*e = GoogleCloudDataplexV1StorageAccessReadEnum(s)
+		*e = GoogleCloudDataplexV1StorageAccessReadEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1StorageAccessReadEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1StorageAccessReadEnum: %v", v)
 	}
 }
 

@@ -16,20 +16,24 @@ const (
 	IntegrationLinkTypeEnumMonday IntegrationLinkTypeEnum = "monday"
 )
 
+func (e IntegrationLinkTypeEnum) ToPointer() *IntegrationLinkTypeEnum {
+	return &e
+}
+
 func (e *IntegrationLinkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "trello":
 		fallthrough
 	case "jira":
 		fallthrough
 	case "monday":
-		*e = IntegrationLinkTypeEnum(s)
+		*e = IntegrationLinkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegrationLinkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegrationLinkTypeEnum: %v", v)
 	}
 }

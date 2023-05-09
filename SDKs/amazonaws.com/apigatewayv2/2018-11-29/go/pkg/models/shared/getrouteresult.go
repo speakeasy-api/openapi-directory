@@ -17,12 +17,16 @@ const (
 	GetRouteResultAuthorizationTypeEnumJwt    GetRouteResultAuthorizationTypeEnum = "JWT"
 )
 
+func (e GetRouteResultAuthorizationTypeEnum) ToPointer() *GetRouteResultAuthorizationTypeEnum {
+	return &e
+}
+
 func (e *GetRouteResultAuthorizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "AWS_IAM":
@@ -30,10 +34,10 @@ func (e *GetRouteResultAuthorizationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CUSTOM":
 		fallthrough
 	case "JWT":
-		*e = GetRouteResultAuthorizationTypeEnum(s)
+		*e = GetRouteResultAuthorizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRouteResultAuthorizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRouteResultAuthorizationTypeEnum: %v", v)
 	}
 }
 

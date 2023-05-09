@@ -20,12 +20,16 @@ const (
 	AudioConfigAudioEncodingEnumAlaw                     AudioConfigAudioEncodingEnum = "ALAW"
 )
 
+func (e AudioConfigAudioEncodingEnum) ToPointer() *AudioConfigAudioEncodingEnum {
+	return &e
+}
+
 func (e *AudioConfigAudioEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUDIO_ENCODING_UNSPECIFIED":
 		fallthrough
 	case "LINEAR16":
@@ -39,10 +43,10 @@ func (e *AudioConfigAudioEncodingEnum) UnmarshalJSON(data []byte) error {
 	case "MULAW":
 		fallthrough
 	case "ALAW":
-		*e = AudioConfigAudioEncodingEnum(s)
+		*e = AudioConfigAudioEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AudioConfigAudioEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for AudioConfigAudioEncodingEnum: %v", v)
 	}
 }
 

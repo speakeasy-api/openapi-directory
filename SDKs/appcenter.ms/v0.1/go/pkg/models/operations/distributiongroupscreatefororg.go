@@ -39,12 +39,16 @@ const (
 	DistributionGroupsCreateForOrgDefaultApplicationJSONErrorCodeEnumTooManyRequests     DistributionGroupsCreateForOrgDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DistributionGroupsCreateForOrgDefaultApplicationJSONErrorCodeEnum) ToPointer() *DistributionGroupsCreateForOrgDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DistributionGroupsCreateForOrgDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -58,10 +62,10 @@ func (e *DistributionGroupsCreateForOrgDefaultApplicationJSONErrorCodeEnum) Unma
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DistributionGroupsCreateForOrgDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DistributionGroupsCreateForOrgDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsCreateForOrgDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsCreateForOrgDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -83,19 +87,23 @@ const (
 	DistributionGroupsCreateForOrg201ApplicationJSONOriginEnumHockeyapp DistributionGroupsCreateForOrg201ApplicationJSONOriginEnum = "hockeyapp"
 )
 
+func (e DistributionGroupsCreateForOrg201ApplicationJSONOriginEnum) ToPointer() *DistributionGroupsCreateForOrg201ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *DistributionGroupsCreateForOrg201ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = DistributionGroupsCreateForOrg201ApplicationJSONOriginEnum(s)
+		*e = DistributionGroupsCreateForOrg201ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsCreateForOrg201ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsCreateForOrg201ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

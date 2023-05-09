@@ -21,19 +21,23 @@ const (
 	GetScoreCommentsDirectionEnumDesc GetScoreCommentsDirectionEnum = "desc"
 )
 
+func (e GetScoreCommentsDirectionEnum) ToPointer() *GetScoreCommentsDirectionEnum {
+	return &e
+}
+
 func (e *GetScoreCommentsDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetScoreCommentsDirectionEnum(s)
+		*e = GetScoreCommentsDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetScoreCommentsDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetScoreCommentsDirectionEnum: %v", v)
 	}
 }
 
@@ -44,17 +48,21 @@ const (
 	GetScoreCommentsSortEnumDate GetScoreCommentsSortEnum = "date"
 )
 
+func (e GetScoreCommentsSortEnum) ToPointer() *GetScoreCommentsSortEnum {
+	return &e
+}
+
 func (e *GetScoreCommentsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "date":
-		*e = GetScoreCommentsSortEnum(s)
+		*e = GetScoreCommentsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetScoreCommentsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetScoreCommentsSortEnum: %v", v)
 	}
 }
 
@@ -66,19 +74,23 @@ const (
 	GetScoreCommentsTypeEnumInline   GetScoreCommentsTypeEnum = "inline"
 )
 
+func (e GetScoreCommentsTypeEnum) ToPointer() *GetScoreCommentsTypeEnum {
+	return &e
+}
+
 func (e *GetScoreCommentsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "document":
 		fallthrough
 	case "inline":
-		*e = GetScoreCommentsTypeEnum(s)
+		*e = GetScoreCommentsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetScoreCommentsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetScoreCommentsTypeEnum: %v", v)
 	}
 }
 

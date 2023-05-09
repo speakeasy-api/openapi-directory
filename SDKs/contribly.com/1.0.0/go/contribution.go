@@ -37,7 +37,10 @@ func newContribution(defaultClient, securityClient HTTPClient, serverURL, langua
 // DeleteContributionsID - Delete this contribution
 func (s *contribution) DeleteContributionsID(ctx context.Context, request operations.DeleteContributionsIDRequest) (*operations.DeleteContributionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contributions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -226,7 +229,10 @@ func (s *contribution) GetContributions(ctx context.Context, request operations.
 // GetContributionsID - Get a single contribution by id
 func (s *contribution) GetContributionsID(ctx context.Context, request operations.GetContributionsIDRequest) (*operations.GetContributionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contributions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -272,7 +278,10 @@ func (s *contribution) GetContributionsID(ctx context.Context, request operation
 // Returns a list of user ids of users who have liked this conribution
 func (s *contribution) GetContributionsIDLikes(ctx context.Context, request operations.GetContributionsIDLikesRequest) (*operations.GetContributionsIDLikesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/likes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/likes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -316,7 +325,10 @@ func (s *contribution) GetContributionsIDLikes(ctx context.Context, request oper
 // GetExportsID - Get a single export job; poll to follow export progress.
 func (s *contribution) GetExportsID(ctx context.Context, request operations.GetExportsIDRequest) (*operations.GetExportsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/exports/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/exports/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -416,7 +428,10 @@ func (s *contribution) PostContributions(ctx context.Context, request shared.Con
 // Allows end users to bring potential issues with publicly visible content to the attention of moderators.
 func (s *contribution) PostContributionsIDFlag(ctx context.Context, request operations.PostContributionsIDFlagRequest) (*operations.PostContributionsIDFlagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/flag", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/flag", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Flag", "json")
 	if err != nil {
@@ -470,7 +485,10 @@ func (s *contribution) PostContributionsIDFlag(ctx context.Context, request oper
 // PostContributionsIDLike - Allows a user to mark a contribution as liked
 func (s *contribution) PostContributionsIDLike(ctx context.Context, request operations.PostContributionsIDLikeRequest) (*operations.PostContributionsIDLikeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/like", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/like", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -515,7 +533,10 @@ func (s *contribution) PostContributionsIDLike(ctx context.Context, request oper
 // Allows the contribution to approved of rejected.
 func (s *contribution) PostContributionsIDModerate(ctx context.Context, request operations.PostContributionsIDModerateRequest) (*operations.PostContributionsIDModerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/moderate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contributions/{id}/moderate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModerationHistoryItemSubmission", "json")
 	if err != nil {

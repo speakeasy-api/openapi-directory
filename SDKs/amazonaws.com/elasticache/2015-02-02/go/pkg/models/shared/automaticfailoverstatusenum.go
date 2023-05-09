@@ -16,12 +16,16 @@ const (
 	AutomaticFailoverStatusEnumDisabling AutomaticFailoverStatusEnum = "disabling"
 )
 
+func (e AutomaticFailoverStatusEnum) ToPointer() *AutomaticFailoverStatusEnum {
+	return &e
+}
+
 func (e *AutomaticFailoverStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
@@ -29,9 +33,9 @@ func (e *AutomaticFailoverStatusEnum) UnmarshalJSON(data []byte) error {
 	case "enabling":
 		fallthrough
 	case "disabling":
-		*e = AutomaticFailoverStatusEnum(s)
+		*e = AutomaticFailoverStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutomaticFailoverStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AutomaticFailoverStatusEnum: %v", v)
 	}
 }

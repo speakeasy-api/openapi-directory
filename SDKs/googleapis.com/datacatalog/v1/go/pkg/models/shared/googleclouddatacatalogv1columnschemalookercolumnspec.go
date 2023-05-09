@@ -19,12 +19,16 @@ const (
 	GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnumParameter                   GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum = "PARAMETER"
 )
 
+func (e GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum) ToPointer() *GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOOKER_COLUMN_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DIMENSION":
@@ -36,10 +40,10 @@ func (e *GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum) Unmarshal
 	case "MEASURE":
 		fallthrough
 	case "PARAMETER":
-		*e = GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum(s)
+		*e = GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum: %v", v)
 	}
 }
 

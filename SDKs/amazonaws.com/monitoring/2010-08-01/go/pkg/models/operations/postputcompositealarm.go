@@ -15,17 +15,21 @@ const (
 	POSTPutCompositeAlarmActionEnumPutCompositeAlarm POSTPutCompositeAlarmActionEnum = "PutCompositeAlarm"
 )
 
+func (e POSTPutCompositeAlarmActionEnum) ToPointer() *POSTPutCompositeAlarmActionEnum {
+	return &e
+}
+
 func (e *POSTPutCompositeAlarmActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PutCompositeAlarm":
-		*e = POSTPutCompositeAlarmActionEnum(s)
+		*e = POSTPutCompositeAlarmActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPutCompositeAlarmActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPutCompositeAlarmActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTPutCompositeAlarmVersionEnumTwoThousandAndTen0801 POSTPutCompositeAlarmVersionEnum = "2010-08-01"
 )
 
+func (e POSTPutCompositeAlarmVersionEnum) ToPointer() *POSTPutCompositeAlarmVersionEnum {
+	return &e
+}
+
 func (e *POSTPutCompositeAlarmVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = POSTPutCompositeAlarmVersionEnum(s)
+		*e = POSTPutCompositeAlarmVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPutCompositeAlarmVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPutCompositeAlarmVersionEnum: %v", v)
 	}
 }
 

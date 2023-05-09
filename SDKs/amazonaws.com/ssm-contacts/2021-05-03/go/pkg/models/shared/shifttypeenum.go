@@ -14,18 +14,22 @@ const (
 	ShiftTypeEnumOverridden ShiftTypeEnum = "OVERRIDDEN"
 )
 
+func (e ShiftTypeEnum) ToPointer() *ShiftTypeEnum {
+	return &e
+}
+
 func (e *ShiftTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGULAR":
 		fallthrough
 	case "OVERRIDDEN":
-		*e = ShiftTypeEnum(s)
+		*e = ShiftTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShiftTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShiftTypeEnum: %v", v)
 	}
 }

@@ -145,7 +145,10 @@ func (s *alerts) AlertcenterAlertsBatchUndelete(ctx context.Context, request ope
 // AlertcenterAlertsDelete - Marks the specified alert for deletion. An alert that has been marked for deletion is removed from Alert Center after 30 days. Marking an alert for deletion has no effect on an alert which has already been marked for deletion. Attempting to mark a nonexistent alert for deletion results in a `NOT_FOUND` error.
 func (s *alerts) AlertcenterAlertsDelete(ctx context.Context, request operations.AlertcenterAlertsDeleteRequest, security operations.AlertcenterAlertsDeleteSecurity) (*operations.AlertcenterAlertsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -193,7 +196,10 @@ func (s *alerts) AlertcenterAlertsDelete(ctx context.Context, request operations
 // AlertcenterAlertsFeedbackCreate - Creates new feedback for an alert. Attempting to create a feedback for a non-existent alert returns `NOT_FOUND` error. Attempting to create a feedback for an alert that is marked for deletion returns `FAILED_PRECONDITION' error.
 func (s *alerts) AlertcenterAlertsFeedbackCreate(ctx context.Context, request operations.AlertcenterAlertsFeedbackCreateRequest, security operations.AlertcenterAlertsFeedbackCreateSecurity) (*operations.AlertcenterAlertsFeedbackCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}/feedback", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}/feedback", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AlertFeedback", "json")
 	if err != nil {
@@ -248,7 +254,10 @@ func (s *alerts) AlertcenterAlertsFeedbackCreate(ctx context.Context, request op
 // AlertcenterAlertsFeedbackList - Lists all the feedback for an alert. Attempting to list feedbacks for a non-existent alert returns `NOT_FOUND` error.
 func (s *alerts) AlertcenterAlertsFeedbackList(ctx context.Context, request operations.AlertcenterAlertsFeedbackListRequest, security operations.AlertcenterAlertsFeedbackListSecurity) (*operations.AlertcenterAlertsFeedbackListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}/feedback", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}/feedback", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -296,7 +305,10 @@ func (s *alerts) AlertcenterAlertsFeedbackList(ctx context.Context, request oper
 // AlertcenterAlertsGet - Gets the specified alert. Attempting to get a nonexistent alert returns `NOT_FOUND` error.
 func (s *alerts) AlertcenterAlertsGet(ctx context.Context, request operations.AlertcenterAlertsGetRequest, security operations.AlertcenterAlertsGetSecurity) (*operations.AlertcenterAlertsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -344,7 +356,10 @@ func (s *alerts) AlertcenterAlertsGet(ctx context.Context, request operations.Al
 // AlertcenterAlertsGetMetadata - Returns the metadata of an alert. Attempting to get metadata for a non-existent alert returns `NOT_FOUND` error.
 func (s *alerts) AlertcenterAlertsGetMetadata(ctx context.Context, request operations.AlertcenterAlertsGetMetadataRequest, security operations.AlertcenterAlertsGetMetadataSecurity) (*operations.AlertcenterAlertsGetMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}/metadata", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}/metadata", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -440,7 +455,10 @@ func (s *alerts) AlertcenterAlertsList(ctx context.Context, request operations.A
 // AlertcenterAlertsUndelete - Restores, or "undeletes", an alert that was marked for deletion within the past 30 days. Attempting to undelete an alert which was marked for deletion over 30 days ago (which has been removed from the Alert Center database) or a nonexistent alert returns a `NOT_FOUND` error. Attempting to undelete an alert which has not been marked for deletion has no effect.
 func (s *alerts) AlertcenterAlertsUndelete(ctx context.Context, request operations.AlertcenterAlertsUndeleteRequest, security operations.AlertcenterAlertsUndeleteSecurity) (*operations.AlertcenterAlertsUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}:undelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/alerts/{alertId}:undelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UndeleteAlertRequest", "json")
 	if err != nil {

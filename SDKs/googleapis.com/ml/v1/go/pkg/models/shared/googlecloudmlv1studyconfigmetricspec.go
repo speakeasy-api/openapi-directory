@@ -16,21 +16,25 @@ const (
 	GoogleCloudMlV1StudyConfigMetricSpecGoalEnumMinimize            GoogleCloudMlV1StudyConfigMetricSpecGoalEnum = "MINIMIZE"
 )
 
+func (e GoogleCloudMlV1StudyConfigMetricSpecGoalEnum) ToPointer() *GoogleCloudMlV1StudyConfigMetricSpecGoalEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1StudyConfigMetricSpecGoalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GOAL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MAXIMIZE":
 		fallthrough
 	case "MINIMIZE":
-		*e = GoogleCloudMlV1StudyConfigMetricSpecGoalEnum(s)
+		*e = GoogleCloudMlV1StudyConfigMetricSpecGoalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1StudyConfigMetricSpecGoalEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1StudyConfigMetricSpecGoalEnum: %v", v)
 	}
 }
 

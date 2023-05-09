@@ -18,21 +18,25 @@ const (
 	CreateRobotRequestBodyArchitectureEnumArmhf CreateRobotRequestBodyArchitectureEnum = "ARMHF"
 )
 
+func (e CreateRobotRequestBodyArchitectureEnum) ToPointer() *CreateRobotRequestBodyArchitectureEnum {
+	return &e
+}
+
 func (e *CreateRobotRequestBodyArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "X86_64":
 		fallthrough
 	case "ARM64":
 		fallthrough
 	case "ARMHF":
-		*e = CreateRobotRequestBodyArchitectureEnum(s)
+		*e = CreateRobotRequestBodyArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRobotRequestBodyArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRobotRequestBodyArchitectureEnum: %v", v)
 	}
 }
 

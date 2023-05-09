@@ -138,7 +138,10 @@ func (s *accounts) AnalyticsadminAccountsProvisionAccountTicket(ctx context.Cont
 // AnalyticsadminAccountsSearchChangeHistoryEvents - Searches through all changes to an account or its children given the specified set of filters.
 func (s *accounts) AnalyticsadminAccountsSearchChangeHistoryEvents(ctx context.Context, request operations.AnalyticsadminAccountsSearchChangeHistoryEventsRequest, security operations.AnalyticsadminAccountsSearchChangeHistoryEventsSecurity) (*operations.AnalyticsadminAccountsSearchChangeHistoryEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{account}:searchChangeHistoryEvents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{account}:searchChangeHistoryEvents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequest", "json")
 	if err != nil {

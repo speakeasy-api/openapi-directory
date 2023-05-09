@@ -2,27 +2,25 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteAddressRequest{
+    ctx := context.Background()
+    res, err := s.AddressRequests.DeleteAddress(ctx, operations.DeleteAddressRequest{
         Authorization: "q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m",
         DeleteAddressRequest: shared.DeleteAddressRequest{
             Ethereumaddress: "corrupti",
             Password: "provident",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.AddressRequests.DeleteAddress(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

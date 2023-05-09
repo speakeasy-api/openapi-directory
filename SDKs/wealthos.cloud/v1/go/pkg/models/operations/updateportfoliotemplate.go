@@ -60,19 +60,23 @@ const (
 	UpdatePortfolioTemplate409ApplicationJSONStatusEnumComplete   UpdatePortfolioTemplate409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e UpdatePortfolioTemplate409ApplicationJSONStatusEnum) ToPointer() *UpdatePortfolioTemplate409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *UpdatePortfolioTemplate409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = UpdatePortfolioTemplate409ApplicationJSONStatusEnum(s)
+		*e = UpdatePortfolioTemplate409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePortfolioTemplate409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePortfolioTemplate409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

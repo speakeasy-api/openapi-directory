@@ -13,16 +13,20 @@ const (
 	PreloadDataTypeEnumSynthea PreloadDataTypeEnum = "SYNTHEA"
 )
 
+func (e PreloadDataTypeEnum) ToPointer() *PreloadDataTypeEnum {
+	return &e
+}
+
 func (e *PreloadDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYNTHEA":
-		*e = PreloadDataTypeEnum(s)
+		*e = PreloadDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PreloadDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PreloadDataTypeEnum: %v", v)
 	}
 }

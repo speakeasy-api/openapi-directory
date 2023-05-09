@@ -23,21 +23,25 @@ const (
 	UnliWithoutApplicationnkApplicationProviderEnumWhatsapp        UnliWithoutApplicationnkApplicationProviderEnum = "whatsapp"
 )
 
+func (e UnliWithoutApplicationnkApplicationProviderEnum) ToPointer() *UnliWithoutApplicationnkApplicationProviderEnum {
+	return &e
+}
+
 func (e *UnliWithoutApplicationnkApplicationProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "messenger":
 		fallthrough
 	case "viber_service_msg":
 		fallthrough
 	case "whatsapp":
-		*e = UnliWithoutApplicationnkApplicationProviderEnum(s)
+		*e = UnliWithoutApplicationnkApplicationProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UnliWithoutApplicationnkApplicationProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for UnliWithoutApplicationnkApplicationProviderEnum: %v", v)
 	}
 }
 

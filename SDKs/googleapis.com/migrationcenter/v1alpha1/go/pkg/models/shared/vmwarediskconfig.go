@@ -22,12 +22,16 @@ const (
 	VmwareDiskConfigBackingTypeEnumBackingTypeSesparseV2  VmwareDiskConfigBackingTypeEnum = "BACKING_TYPE_SESPARSE_V2"
 )
 
+func (e VmwareDiskConfigBackingTypeEnum) ToPointer() *VmwareDiskConfigBackingTypeEnum {
+	return &e
+}
+
 func (e *VmwareDiskConfigBackingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BACKING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BACKING_TYPE_FLAT_V1":
@@ -45,10 +49,10 @@ func (e *VmwareDiskConfigBackingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BACKING_TYPE_SESPARSE_V1":
 		fallthrough
 	case "BACKING_TYPE_SESPARSE_V2":
-		*e = VmwareDiskConfigBackingTypeEnum(s)
+		*e = VmwareDiskConfigBackingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VmwareDiskConfigBackingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VmwareDiskConfigBackingTypeEnum: %v", v)
 	}
 }
 

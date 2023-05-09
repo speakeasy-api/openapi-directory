@@ -15,17 +15,21 @@ const (
 	POSTModifyHostsActionEnumModifyHosts POSTModifyHostsActionEnum = "ModifyHosts"
 )
 
+func (e POSTModifyHostsActionEnum) ToPointer() *POSTModifyHostsActionEnum {
+	return &e
+}
+
 func (e *POSTModifyHostsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyHosts":
-		*e = POSTModifyHostsActionEnum(s)
+		*e = POSTModifyHostsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyHostsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyHostsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyHostsVersionEnumTwoThousandAndSixteen1115 POSTModifyHostsVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyHostsVersionEnum) ToPointer() *POSTModifyHostsVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyHostsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyHostsVersionEnum(s)
+		*e = POSTModifyHostsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyHostsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyHostsVersionEnum: %v", v)
 	}
 }
 

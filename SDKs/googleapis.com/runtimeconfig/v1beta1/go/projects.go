@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // RuntimeconfigProjectsConfigsCreate - Creates a new RuntimeConfig resource. The configuration name must be unique within project.
 func (s *projects) RuntimeconfigProjectsConfigsCreate(ctx context.Context, request operations.RuntimeconfigProjectsConfigsCreateRequest, security operations.RuntimeconfigProjectsConfigsCreateSecurity) (*operations.RuntimeconfigProjectsConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/configs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/configs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RuntimeConfig", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) RuntimeconfigProjectsConfigsCreate(ctx context.Context, reque
 // RuntimeconfigProjectsConfigsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) RuntimeconfigProjectsConfigsGetIamPolicy(ctx context.Context, request operations.RuntimeconfigProjectsConfigsGetIamPolicyRequest, security operations.RuntimeconfigProjectsConfigsGetIamPolicySecurity) (*operations.RuntimeconfigProjectsConfigsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) RuntimeconfigProjectsConfigsGetIamPolicy(ctx context.Context,
 // RuntimeconfigProjectsConfigsList - Lists all the RuntimeConfig resources within project.
 func (s *projects) RuntimeconfigProjectsConfigsList(ctx context.Context, request operations.RuntimeconfigProjectsConfigsListRequest, security operations.RuntimeconfigProjectsConfigsListSecurity) (*operations.RuntimeconfigProjectsConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/configs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/configs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) RuntimeconfigProjectsConfigsList(ctx context.Context, request
 // RuntimeconfigProjectsConfigsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) RuntimeconfigProjectsConfigsSetIamPolicy(ctx context.Context, request operations.RuntimeconfigProjectsConfigsSetIamPolicyRequest, security operations.RuntimeconfigProjectsConfigsSetIamPolicySecurity) (*operations.RuntimeconfigProjectsConfigsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) RuntimeconfigProjectsConfigsSetIamPolicy(ctx context.Context,
 // RuntimeconfigProjectsConfigsVariablesCreate - Creates a variable within the given configuration. You cannot create a variable with a name that is a prefix of an existing variable name, or a name that has an existing variable name as a prefix. To learn more about creating a variable, read the [Setting and Getting Data](/deployment-manager/runtime-configurator/set-and-get-variables) documentation.
 func (s *projects) RuntimeconfigProjectsConfigsVariablesCreate(ctx context.Context, request operations.RuntimeconfigProjectsConfigsVariablesCreateRequest, security operations.RuntimeconfigProjectsConfigsVariablesCreateSecurity) (*operations.RuntimeconfigProjectsConfigsVariablesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Variable", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) RuntimeconfigProjectsConfigsVariablesCreate(ctx context.Conte
 // RuntimeconfigProjectsConfigsVariablesList - Lists variables within given a configuration, matching any provided filters. This only lists variable names, not the values, unless `return_values` is true, in which case only variables that user has IAM permission to GetVariable will be returned.
 func (s *projects) RuntimeconfigProjectsConfigsVariablesList(ctx context.Context, request operations.RuntimeconfigProjectsConfigsVariablesListRequest, security operations.RuntimeconfigProjectsConfigsVariablesListSecurity) (*operations.RuntimeconfigProjectsConfigsVariablesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) RuntimeconfigProjectsConfigsVariablesList(ctx context.Context
 // RuntimeconfigProjectsConfigsVariablesUpdate - Updates an existing variable with a new value.
 func (s *projects) RuntimeconfigProjectsConfigsVariablesUpdate(ctx context.Context, request operations.RuntimeconfigProjectsConfigsVariablesUpdateRequest, security operations.RuntimeconfigProjectsConfigsVariablesUpdateSecurity) (*operations.RuntimeconfigProjectsConfigsVariablesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Variable", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) RuntimeconfigProjectsConfigsVariablesUpdate(ctx context.Conte
 // RuntimeconfigProjectsConfigsVariablesWatch - Watches a specific variable and waits for a change in the variable's value. When there is a change, this method returns the new value or times out. If a variable is deleted while being watched, the `variableState` state is set to `DELETED` and the method returns the last known variable `value`. If you set the deadline for watching to a larger value than internal timeout (60 seconds), the current variable value is returned and the `variableState` will be `VARIABLE_STATE_UNSPECIFIED`. To learn more about creating a watcher, read the [Watching a Variable for Changes](/deployment-manager/runtime-configurator/watching-a-variable) documentation.
 func (s *projects) RuntimeconfigProjectsConfigsVariablesWatch(ctx context.Context, request operations.RuntimeconfigProjectsConfigsVariablesWatchRequest, security operations.RuntimeconfigProjectsConfigsVariablesWatchSecurity) (*operations.RuntimeconfigProjectsConfigsVariablesWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:watch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:watch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WatchVariableRequest", "json")
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *projects) RuntimeconfigProjectsConfigsVariablesWatch(ctx context.Contex
 // RuntimeconfigProjectsConfigsWaitersCreate - Creates a Waiter resource. This operation returns a long-running Operation resource which can be polled for completion. However, a waiter with the given name will exist (and can be retrieved) prior to the operation completing. If the operation fails, the failed Waiter resource will still exist and must be deleted prior to subsequent creation attempts.
 func (s *projects) RuntimeconfigProjectsConfigsWaitersCreate(ctx context.Context, request operations.RuntimeconfigProjectsConfigsWaitersCreateRequest, security operations.RuntimeconfigProjectsConfigsWaitersCreateSecurity) (*operations.RuntimeconfigProjectsConfigsWaitersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/waiters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/waiters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Waiter", "json")
 	if err != nil {
@@ -508,7 +535,10 @@ func (s *projects) RuntimeconfigProjectsConfigsWaitersCreate(ctx context.Context
 // RuntimeconfigProjectsConfigsWaitersDelete - Deletes the waiter with the specified name.
 func (s *projects) RuntimeconfigProjectsConfigsWaitersDelete(ctx context.Context, request operations.RuntimeconfigProjectsConfigsWaitersDeleteRequest, security operations.RuntimeconfigProjectsConfigsWaitersDeleteSecurity) (*operations.RuntimeconfigProjectsConfigsWaitersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -556,7 +586,10 @@ func (s *projects) RuntimeconfigProjectsConfigsWaitersDelete(ctx context.Context
 // RuntimeconfigProjectsConfigsWaitersGet - Gets information about a single waiter.
 func (s *projects) RuntimeconfigProjectsConfigsWaitersGet(ctx context.Context, request operations.RuntimeconfigProjectsConfigsWaitersGetRequest, security operations.RuntimeconfigProjectsConfigsWaitersGetSecurity) (*operations.RuntimeconfigProjectsConfigsWaitersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -604,7 +637,10 @@ func (s *projects) RuntimeconfigProjectsConfigsWaitersGet(ctx context.Context, r
 // RuntimeconfigProjectsConfigsWaitersList - List waiters within the given configuration.
 func (s *projects) RuntimeconfigProjectsConfigsWaitersList(ctx context.Context, request operations.RuntimeconfigProjectsConfigsWaitersListRequest, security operations.RuntimeconfigProjectsConfigsWaitersListSecurity) (*operations.RuntimeconfigProjectsConfigsWaitersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/waiters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/waiters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -652,7 +688,10 @@ func (s *projects) RuntimeconfigProjectsConfigsWaitersList(ctx context.Context, 
 // RuntimeconfigProjectsConfigsWaitersTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) RuntimeconfigProjectsConfigsWaitersTestIamPermissions(ctx context.Context, request operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest, security operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsSecurity) (*operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {

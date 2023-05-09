@@ -22,19 +22,23 @@ const (
 	GetCallsOrderEnumDesc GetCallsOrderEnum = "desc"
 )
 
+func (e GetCallsOrderEnum) ToPointer() *GetCallsOrderEnum {
+	return &e
+}
+
 func (e *GetCallsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetCallsOrderEnum(s)
+		*e = GetCallsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCallsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCallsOrderEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	GetCallsStatusEnumUnanswered GetCallsStatusEnum = "unanswered"
 )
 
+func (e GetCallsStatusEnum) ToPointer() *GetCallsStatusEnum {
+	return &e
+}
+
 func (e *GetCallsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "started":
 		fallthrough
 	case "ringing":
@@ -82,10 +90,10 @@ func (e *GetCallsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "timeout":
 		fallthrough
 	case "unanswered":
-		*e = GetCallsStatusEnum(s)
+		*e = GetCallsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCallsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCallsStatusEnum: %v", v)
 	}
 }
 

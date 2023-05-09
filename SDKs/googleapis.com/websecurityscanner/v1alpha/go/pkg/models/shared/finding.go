@@ -25,12 +25,16 @@ const (
 	FindingFindingTypeEnumMismatchingSecurityHeaderValues FindingFindingTypeEnum = "MISMATCHING_SECURITY_HEADER_VALUES"
 )
 
+func (e FindingFindingTypeEnum) ToPointer() *FindingFindingTypeEnum {
+	return &e
+}
+
 func (e *FindingFindingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FINDING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MIXED_CONTENT":
@@ -54,10 +58,10 @@ func (e *FindingFindingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MISSPELLED_SECURITY_HEADER_NAME":
 		fallthrough
 	case "MISMATCHING_SECURITY_HEADER_VALUES":
-		*e = FindingFindingTypeEnum(s)
+		*e = FindingFindingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingFindingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingFindingTypeEnum: %v", v)
 	}
 }
 

@@ -37,12 +37,16 @@ const (
 	DataSetTypeEnumUsSalesAndUseTaxRecords                      DataSetTypeEnum = "us_sales_and_use_tax_records"
 )
 
+func (e DataSetTypeEnum) ToPointer() *DataSetTypeEnum {
+	return &e
+}
+
 func (e *DataSetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer_subscriber_hourly_monthly_subscriptions":
 		fallthrough
 	case "customer_subscriber_annual_subscriptions":
@@ -92,9 +96,9 @@ func (e *DataSetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "sales_compensation_billed_revenue":
 		fallthrough
 	case "us_sales_and_use_tax_records":
-		*e = DataSetTypeEnum(s)
+		*e = DataSetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSetTypeEnum: %v", v)
 	}
 }

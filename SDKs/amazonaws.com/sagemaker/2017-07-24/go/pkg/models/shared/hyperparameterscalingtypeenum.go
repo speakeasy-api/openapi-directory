@@ -16,12 +16,16 @@ const (
 	HyperParameterScalingTypeEnumReverseLogarithmic HyperParameterScalingTypeEnum = "ReverseLogarithmic"
 )
 
+func (e HyperParameterScalingTypeEnum) ToPointer() *HyperParameterScalingTypeEnum {
+	return &e
+}
+
 func (e *HyperParameterScalingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Auto":
 		fallthrough
 	case "Linear":
@@ -29,9 +33,9 @@ func (e *HyperParameterScalingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Logarithmic":
 		fallthrough
 	case "ReverseLogarithmic":
-		*e = HyperParameterScalingTypeEnum(s)
+		*e = HyperParameterScalingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HyperParameterScalingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HyperParameterScalingTypeEnum: %v", v)
 	}
 }

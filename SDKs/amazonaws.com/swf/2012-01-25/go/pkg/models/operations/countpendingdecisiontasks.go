@@ -16,17 +16,21 @@ const (
 	CountPendingDecisionTasksXAmzTargetEnumSimpleWorkflowServiceCountPendingDecisionTasks CountPendingDecisionTasksXAmzTargetEnum = "SimpleWorkflowService.CountPendingDecisionTasks"
 )
 
+func (e CountPendingDecisionTasksXAmzTargetEnum) ToPointer() *CountPendingDecisionTasksXAmzTargetEnum {
+	return &e
+}
+
 func (e *CountPendingDecisionTasksXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleWorkflowService.CountPendingDecisionTasks":
-		*e = CountPendingDecisionTasksXAmzTargetEnum(s)
+		*e = CountPendingDecisionTasksXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CountPendingDecisionTasksXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CountPendingDecisionTasksXAmzTargetEnum: %v", v)
 	}
 }
 

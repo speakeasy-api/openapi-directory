@@ -16,12 +16,16 @@ const (
 	DNSRecordIPTypeEnumServiceDefined DNSRecordIPTypeEnum = "service-defined"
 )
 
+func (e DNSRecordIPTypeEnum) ToPointer() *DNSRecordIPTypeEnum {
+	return &e
+}
+
 func (e *DNSRecordIPTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "dualstack":
@@ -29,9 +33,9 @@ func (e *DNSRecordIPTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ipv6":
 		fallthrough
 	case "service-defined":
-		*e = DNSRecordIPTypeEnum(s)
+		*e = DNSRecordIPTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DNSRecordIPTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DNSRecordIPTypeEnum: %v", v)
 	}
 }

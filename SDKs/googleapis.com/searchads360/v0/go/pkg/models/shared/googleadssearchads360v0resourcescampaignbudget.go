@@ -17,12 +17,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignBudgetDeliveryMethodEnumAccelerated GoogleAdsSearchads360V0ResourcesCampaignBudgetDeliveryMethodEnum = "ACCELERATED"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignBudgetDeliveryMethodEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignBudgetDeliveryMethodEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignBudgetDeliveryMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -30,10 +34,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignBudgetDeliveryMethodEnum) Unmar
 	case "STANDARD":
 		fallthrough
 	case "ACCELERATED":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignBudgetDeliveryMethodEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCampaignBudgetDeliveryMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignBudgetDeliveryMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignBudgetDeliveryMethodEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignBudgetPeriodEnumCustomPeriod GoogleAdsSearchads360V0ResourcesCampaignBudgetPeriodEnum = "CUSTOM_PERIOD"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignBudgetPeriodEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignBudgetPeriodEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignBudgetPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -63,10 +71,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignBudgetPeriodEnum) UnmarshalJSON
 	case "FIXED_DAILY":
 		fallthrough
 	case "CUSTOM_PERIOD":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignBudgetPeriodEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCampaignBudgetPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignBudgetPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignBudgetPeriodEnum: %v", v)
 	}
 }
 

@@ -25,19 +25,23 @@ const (
 	ReviewCommentSideEnumRight ReviewCommentSideEnum = "RIGHT"
 )
 
+func (e ReviewCommentSideEnum) ToPointer() *ReviewCommentSideEnum {
+	return &e
+}
+
 func (e *ReviewCommentSideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEFT":
 		fallthrough
 	case "RIGHT":
-		*e = ReviewCommentSideEnum(s)
+		*e = ReviewCommentSideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReviewCommentSideEnum: %s", s)
+		return fmt.Errorf("invalid value for ReviewCommentSideEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	ReviewCommentStartSideEnumRight ReviewCommentStartSideEnum = "RIGHT"
 )
 
+func (e ReviewCommentStartSideEnum) ToPointer() *ReviewCommentStartSideEnum {
+	return &e
+}
+
 func (e *ReviewCommentStartSideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEFT":
 		fallthrough
 	case "RIGHT":
-		*e = ReviewCommentStartSideEnum(s)
+		*e = ReviewCommentStartSideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReviewCommentStartSideEnum: %s", s)
+		return fmt.Errorf("invalid value for ReviewCommentStartSideEnum: %v", v)
 	}
 }
 

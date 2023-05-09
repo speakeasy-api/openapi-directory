@@ -13,12 +13,13 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/scheduler/2
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -28,153 +29,152 @@ func main() {
         }),
     )
 
-    req := operations.CreateScheduleRequest{
-        Name: "corrupti",
+    ctx := context.Background()
+    res, err := s.CreateSchedule(ctx, operations.CreateScheduleRequest{
+        Name: "Terrence Rau",
         RequestBody: operations.CreateScheduleRequestBody{
-            ClientToken: "provident",
-            Description: "distinctio",
-            EndDate: "2021-03-11T23:22:42.658Z",
+            ClientToken: sdk.String("nulla"),
+            Description: sdk.String("corrupti"),
+            EndDate: types.MustTimeFromString("2021-09-24T02:21:06.409Z"),
             FlexibleTimeWindow: operations.CreateScheduleRequestBodyFlexibleTimeWindow{
-                MaximumWindowInMinutes: 857946,
-                Mode: "FLEXIBLE",
+                MaximumWindowInMinutes: sdk.Int64(623564),
+                Mode: shared.FlexibleTimeWindowModeEnumFlexible.ToPointer(),
             },
-            GroupName: "illum",
-            KmsKeyArn: "vel",
-            ScheduleExpression: "error",
-            ScheduleExpressionTimezone: "deserunt",
-            StartDate: "2022-07-25T06:44:09.184Z",
-            State: "ENABLED",
+            GroupName: sdk.String("suscipit"),
+            KmsKeyArn: sdk.String("iure"),
+            ScheduleExpression: "magnam",
+            ScheduleExpressionTimezone: sdk.String("debitis"),
+            StartDate: types.MustTimeFromString("2022-01-14T06:18:51.036Z"),
+            State: operations.CreateScheduleRequestBodyStateEnumEnabled.ToPointer(),
             Target: operations.CreateScheduleRequestBodyTarget{
-                Arn: "debitis",
+                Arn: sdk.String("suscipit"),
                 DeadLetterConfig: &shared.DeadLetterConfig{
-                    Arn: "ipsa",
+                    Arn: sdk.String("molestiae"),
                 },
                 EcsParameters: &shared.EcsParameters{
                     CapacityProviderStrategy: []shared.CapacityProviderStrategyItem{
                         shared.CapacityProviderStrategyItem{
-                            Base: 272656,
-                            CapacityProvider: "suscipit",
-                            Weight: 477665,
+                            Base: sdk.Int64(812169),
+                            CapacityProvider: "voluptatum",
+                            Weight: sdk.Int64(479977),
                         },
                         shared.CapacityProviderStrategyItem{
-                            Base: 791725,
-                            CapacityProvider: "placeat",
-                            Weight: 528895,
+                            Base: sdk.Int64(568045),
+                            CapacityProvider: "nisi",
+                            Weight: sdk.Int64(925597),
                         },
                         shared.CapacityProviderStrategyItem{
-                            Base: 479977,
-                            CapacityProvider: "excepturi",
-                            Weight: 392785,
+                            Base: sdk.Int64(836079),
+                            CapacityProvider: "ab",
+                            Weight: sdk.Int64(337396),
                         },
                         shared.CapacityProviderStrategyItem{
-                            Base: 925597,
-                            CapacityProvider: "temporibus",
-                            Weight: 71036,
+                            Base: sdk.Int64(87129),
+                            CapacityProvider: "deserunt",
+                            Weight: sdk.Int64(20218),
                         },
                     },
-                    EnableECSManagedTags: false,
-                    EnableExecuteCommand: false,
-                    Group: "quis",
-                    LaunchType: "EC2",
+                    EnableECSManagedTags: sdk.Bool(false),
+                    EnableExecuteCommand: sdk.Bool(false),
+                    Group: sdk.String("ipsam"),
+                    LaunchType: shared.LaunchTypeEnumExternal.ToPointer(),
                     NetworkConfiguration: &shared.NetworkConfiguration{
                         AwsvpcConfiguration: &shared.AwsVpcConfiguration{
-                            AssignPublicIP: "DISABLED",
+                            AssignPublicIP: shared.AssignPublicIPEnumDisabled.ToPointer(),
                             SecurityGroups: []string{
-                                "ipsam",
-                            },
-                            Subnets: []string{
-                                "sapiente",
-                                "quo",
                                 "odit",
                                 "at",
+                                "at",
+                                "maiores",
+                            },
+                            Subnets: []string{
+                                "quod",
+                                "quod",
                             },
                         },
                     },
                     PlacementConstraints: []shared.PlacementConstraint{
                         shared.PlacementConstraint{
-                            Expression: "maiores",
-                            Type: "distinctInstance",
+                            Expression: sdk.String("totam"),
+                            Type: shared.PlacementConstraintTypeEnumMemberOf.ToPointer(),
                         },
                         shared.PlacementConstraint{
-                            Expression: "quod",
-                            Type: "memberOf",
-                        },
-                        shared.PlacementConstraint{
-                            Expression: "esse",
-                            Type: "memberOf",
-                        },
-                        shared.PlacementConstraint{
-                            Expression: "porro",
-                            Type: "memberOf",
+                            Expression: sdk.String("dolorum"),
+                            Type: shared.PlacementConstraintTypeEnumDistinctInstance.ToPointer(),
                         },
                     },
                     PlacementStrategy: []shared.PlacementStrategy{
                         shared.PlacementStrategy{
-                            Field: "nam",
-                            Type: "spread",
+                            Field: sdk.String("officia"),
+                            Type: shared.PlacementStrategyTypeEnumSpread.ToPointer(),
+                        },
+                        shared.PlacementStrategy{
+                            Field: sdk.String("fugit"),
+                            Type: shared.PlacementStrategyTypeEnumSpread.ToPointer(),
+                        },
+                        shared.PlacementStrategy{
+                            Field: sdk.String("hic"),
+                            Type: shared.PlacementStrategyTypeEnumBinpack.ToPointer(),
                         },
                     },
-                    PlatformVersion: "occaecati",
-                    PropagateTags: "TASK_DEFINITION",
-                    ReferenceID: "fugit",
+                    PlatformVersion: sdk.String("totam"),
+                    PropagateTags: shared.PropagateTagsEnumTaskDefinition.ToPointer(),
+                    ReferenceID: sdk.String("beatae"),
                     Tags: []map[string]string{
                         map[string]string{
-                            "optio": "totam",
-                            "beatae": "commodi",
-                            "molestiae": "modi",
-                            "qui": "impedit",
+                            "modi": "qui",
+                            "impedit": "cum",
                         },
                         map[string]string{
-                            "esse": "ipsum",
-                            "excepturi": "aspernatur",
-                            "perferendis": "ad",
-                        },
-                        map[string]string{
-                            "sed": "iste",
-                            "dolor": "natus",
-                            "laboriosam": "hic",
+                            "ipsum": "excepturi",
+                            "aspernatur": "perferendis",
                         },
                     },
-                    TaskCount: 902599,
-                    TaskDefinitionArn: "fuga",
+                    TaskCount: sdk.Int64(324141),
+                    TaskDefinitionArn: "natus",
                 },
                 EventBridgeParameters: &shared.EventBridgeParameters{
-                    DetailType: "in",
-                    Source: "corporis",
+                    DetailType: "sed",
+                    Source: "iste",
                 },
-                Input: "iste",
+                Input: sdk.String("dolor"),
                 KinesisParameters: &shared.KinesisParameters{
-                    PartitionKey: "iure",
+                    PartitionKey: "natus",
                 },
                 RetryPolicy: &shared.RetryPolicy{
-                    MaximumEventAgeInSeconds: 902349,
-                    MaximumRetryAttempts: 697631,
+                    MaximumEventAgeInSeconds: sdk.Int64(386489),
+                    MaximumRetryAttempts: sdk.Int64(943749),
                 },
-                RoleArn: "architecto",
+                RoleArn: sdk.String("saepe"),
                 SageMakerPipelineParameters: &shared.SageMakerPipelineParameters{
                     PipelineParameterList: []shared.SageMakerPipelineParameter{
                         shared.SageMakerPipelineParameter{
-                            Name: "reiciendis",
-                            Value: "est",
+                            Name: "Stacy Moore",
+                            Value: "quidem",
+                        },
+                        shared.SageMakerPipelineParameter{
+                            Name: "Brenda Wisozk",
+                            Value: "laborum",
+                        },
+                        shared.SageMakerPipelineParameter{
+                            Name: "Connie Herzog",
+                            Value: "enim",
                         },
                     },
                 },
                 SqsParameters: &shared.SqsParameters{
-                    MessageGroupID: "mollitia",
+                    MessageGroupID: sdk.String("omnis"),
                 },
             },
         },
-        XAmzAlgorithm: "laborum",
-        XAmzContentSha256: "dolores",
-        XAmzCredential: "dolorem",
-        XAmzDate: "corporis",
-        XAmzSecurityToken: "explicabo",
-        XAmzSignature: "nobis",
-        XAmzSignedHeaders: "enim",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateSchedule(ctx, req)
+        XAmzAlgorithm: sdk.String("nemo"),
+        XAmzContentSha256: sdk.String("minima"),
+        XAmzCredential: sdk.String("excepturi"),
+        XAmzDate: sdk.String("accusantium"),
+        XAmzSecurityToken: sdk.String("iure"),
+        XAmzSignature: sdk.String("culpa"),
+        XAmzSignedHeaders: sdk.String("doloribus"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -189,20 +189,20 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateSchedule` - Creates the specified schedule.
-* `CreateScheduleGroup` - Creates the specified schedule group.
-* `DeleteSchedule` - Deletes the specified schedule.
-* `DeleteScheduleGroup` - <p>Deletes the specified schedule group. Deleting a schedule group results in EventBridge Scheduler deleting all schedules associated with the group. When you delete a group, it remains in a <code>DELETING</code> state until all of its associated schedules are deleted. Schedules associated with the group that are set to run while the schedule group is in the process of being deleted might continue to invoke their targets until the schedule group and its associated schedules are deleted.</p> <note> <p> This operation is eventually consistent. </p> </note>
-* `GetSchedule` - Retrieves the specified schedule.
-* `GetScheduleGroup` - Retrieves the specified schedule group.
-* `ListScheduleGroups` - Returns a paginated list of your schedule groups.
-* `ListSchedules` - Returns a paginated list of your EventBridge Scheduler schedules.
-* `ListTagsForResource` - Lists the tags associated with the Scheduler resource.
-* `TagResource` - Assigns one or more tags (key-value pairs) to the specified EventBridge Scheduler resource. You can only assign tags to schedule groups.
-* `UntagResource` - Removes one or more tags from the specified EventBridge Scheduler schedule group.
-* `UpdateSchedule` - <p> Updates the specified schedule. When you call <code>UpdateSchedule</code>, EventBridge Scheduler uses all values, including empty values, specified in the request and overrides the existing schedule. This is by design. This means that if you do not set an optional field in your request, that field will be set to its system-default value after the update. </p> <p> Before calling this operation, we recommend that you call the <code>GetSchedule</code> API operation and make a note of all optional parameters for your <code>UpdateSchedule</code> call. </p>
+* [CreateSchedule](docs/sdk/README.md#createschedule) - Creates the specified schedule.
+* [CreateScheduleGroup](docs/sdk/README.md#createschedulegroup) - Creates the specified schedule group.
+* [DeleteSchedule](docs/sdk/README.md#deleteschedule) - Deletes the specified schedule.
+* [DeleteScheduleGroup](docs/sdk/README.md#deleteschedulegroup) - <p>Deletes the specified schedule group. Deleting a schedule group results in EventBridge Scheduler deleting all schedules associated with the group. When you delete a group, it remains in a <code>DELETING</code> state until all of its associated schedules are deleted. Schedules associated with the group that are set to run while the schedule group is in the process of being deleted might continue to invoke their targets until the schedule group and its associated schedules are deleted.</p> <note> <p> This operation is eventually consistent. </p> </note>
+* [GetSchedule](docs/sdk/README.md#getschedule) - Retrieves the specified schedule.
+* [GetScheduleGroup](docs/sdk/README.md#getschedulegroup) - Retrieves the specified schedule group.
+* [ListScheduleGroups](docs/sdk/README.md#listschedulegroups) - Returns a paginated list of your schedule groups.
+* [ListSchedules](docs/sdk/README.md#listschedules) - Returns a paginated list of your EventBridge Scheduler schedules.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the tags associated with the Scheduler resource.
+* [TagResource](docs/sdk/README.md#tagresource) - Assigns one or more tags (key-value pairs) to the specified EventBridge Scheduler resource. You can only assign tags to schedule groups.
+* [UntagResource](docs/sdk/README.md#untagresource) - Removes one or more tags from the specified EventBridge Scheduler schedule group.
+* [UpdateSchedule](docs/sdk/README.md#updateschedule) - <p> Updates the specified schedule. When you call <code>UpdateSchedule</code>, EventBridge Scheduler uses all values, including empty values, specified in the request and overrides the existing schedule. This is by design. This means that if you do not set an optional field in your request, that field will be set to its system-default value after the update. </p> <p> Before calling this operation, we recommend that you call the <code>GetSchedule</code> API operation and make a note of all optional parameters for your <code>UpdateSchedule</code> call. </p>
 <!-- End SDK Available Operations -->
 
 ### Maturity

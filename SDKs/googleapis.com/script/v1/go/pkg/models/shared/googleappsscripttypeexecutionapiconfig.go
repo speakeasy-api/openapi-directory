@@ -18,12 +18,16 @@ const (
 	GoogleAppsScriptTypeExecutionAPIConfigAccessEnumAnyoneAnonymous GoogleAppsScriptTypeExecutionAPIConfigAccessEnum = "ANYONE_ANONYMOUS"
 )
 
+func (e GoogleAppsScriptTypeExecutionAPIConfigAccessEnum) ToPointer() *GoogleAppsScriptTypeExecutionAPIConfigAccessEnum {
+	return &e
+}
+
 func (e *GoogleAppsScriptTypeExecutionAPIConfigAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_ACCESS":
 		fallthrough
 	case "MYSELF":
@@ -33,10 +37,10 @@ func (e *GoogleAppsScriptTypeExecutionAPIConfigAccessEnum) UnmarshalJSON(data []
 	case "ANYONE":
 		fallthrough
 	case "ANYONE_ANONYMOUS":
-		*e = GoogleAppsScriptTypeExecutionAPIConfigAccessEnum(s)
+		*e = GoogleAppsScriptTypeExecutionAPIConfigAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsScriptTypeExecutionAPIConfigAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsScriptTypeExecutionAPIConfigAccessEnum: %v", v)
 	}
 }
 

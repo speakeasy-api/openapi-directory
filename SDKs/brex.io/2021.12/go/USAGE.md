@@ -2,31 +2,28 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CompanyAlternativeSearchRequest{
-        RequestBody: &operations.CompanyAlternativeSearchRequestBody{
-            Address: "5786 Little Streets",
-            Name: "vel",
-            Number: "error",
-            Phone: "1-542-909-2347 x8545",
-            URL: "nisi",
-            Vat: "recusandae",
-        },
-        Country: "temporibus",
-    }
-
     ctx := context.Background()
-    res, err := s.V1Company.CompanyAlternativeSearch(ctx, req, operations.CompanyAlternativeSearchSecurity{
+    res, err := s.V1Company.CompanyAlternativeSearch(ctx, operations.CompanyAlternativeSearchRequest{
+        RequestBody: &operations.CompanyAlternativeSearchRequestBody{
+            Address: sdk.String("5786 Little Streets"),
+            Name: sdk.String("Sabrina Oberbrunner"),
+            Number: sdk.String("magnam"),
+            Phone: sdk.String("1-292-547-8545 x39803"),
+            URL: sdk.String("veritatis"),
+            Vat: sdk.String("deserunt"),
+        },
+        Country: "perferendis",
+    }, operations.CompanyAlternativeSearchSecurity{
         UserKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {

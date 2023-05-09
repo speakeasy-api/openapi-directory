@@ -2,26 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRequest{
-        Format: "xml",
+    ctx := context.Background()
+    res, err := s.Get(ctx, operations.GetRequest{
+        Format: operations.GetFormatEnumXML.ToPointer(),
         IP: "provident",
         Key: "distinctio",
-        Package: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Get(ctx, req)
+        Package: sdk.String("quibusdam"),
+    })
     if err != nil {
         log.Fatal(err)
     }

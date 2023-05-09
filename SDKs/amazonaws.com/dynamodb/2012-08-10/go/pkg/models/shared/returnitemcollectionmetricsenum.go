@@ -14,18 +14,22 @@ const (
 	ReturnItemCollectionMetricsEnumNone ReturnItemCollectionMetricsEnum = "NONE"
 )
 
+func (e ReturnItemCollectionMetricsEnum) ToPointer() *ReturnItemCollectionMetricsEnum {
+	return &e
+}
+
 func (e *ReturnItemCollectionMetricsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIZE":
 		fallthrough
 	case "NONE":
-		*e = ReturnItemCollectionMetricsEnum(s)
+		*e = ReturnItemCollectionMetricsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReturnItemCollectionMetricsEnum: %s", s)
+		return fmt.Errorf("invalid value for ReturnItemCollectionMetricsEnum: %v", v)
 	}
 }

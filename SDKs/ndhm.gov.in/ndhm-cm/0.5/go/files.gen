@@ -13,6 +13,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -113,4 +114,16 @@ pkg/models/shared/patientgenderenum.go
 pkg/models/shared/patientauthinitrequest.go
 pkg/models/shared/patientauthrequester.go
 pkg/models/shared/authenticationmodeenum.go
+docs/sdk/README.md
+docs/consent/README.md
+docs/dataflow/README.md
+docs/discovery/README.md
+docs/hipfacing/README.md
+docs/hiufacing/README.md
+docs/identification/README.md
+docs/link/README.md
+docs/monitoring/README.md
+docs/profile/README.md
+docs/subscriptions/README.md
+docs/userauth/README.md
 USAGE.md

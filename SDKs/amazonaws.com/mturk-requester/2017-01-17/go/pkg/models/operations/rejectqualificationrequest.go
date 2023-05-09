@@ -16,17 +16,21 @@ const (
 	RejectQualificationRequestXAmzTargetEnumMTurkRequesterServiceV20170117RejectQualificationRequest RejectQualificationRequestXAmzTargetEnum = "MTurkRequesterServiceV20170117.RejectQualificationRequest"
 )
 
+func (e RejectQualificationRequestXAmzTargetEnum) ToPointer() *RejectQualificationRequestXAmzTargetEnum {
+	return &e
+}
+
 func (e *RejectQualificationRequestXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.RejectQualificationRequest":
-		*e = RejectQualificationRequestXAmzTargetEnum(s)
+		*e = RejectQualificationRequestXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RejectQualificationRequestXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RejectQualificationRequestXAmzTargetEnum: %v", v)
 	}
 }
 

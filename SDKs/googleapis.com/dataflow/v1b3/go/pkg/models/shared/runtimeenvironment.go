@@ -16,21 +16,25 @@ const (
 	RuntimeEnvironmentIPConfigurationEnumWorkerIPPrivate     RuntimeEnvironmentIPConfigurationEnum = "WORKER_IP_PRIVATE"
 )
 
+func (e RuntimeEnvironmentIPConfigurationEnum) ToPointer() *RuntimeEnvironmentIPConfigurationEnum {
+	return &e
+}
+
 func (e *RuntimeEnvironmentIPConfigurationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORKER_IP_UNSPECIFIED":
 		fallthrough
 	case "WORKER_IP_PUBLIC":
 		fallthrough
 	case "WORKER_IP_PRIVATE":
-		*e = RuntimeEnvironmentIPConfigurationEnum(s)
+		*e = RuntimeEnvironmentIPConfigurationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuntimeEnvironmentIPConfigurationEnum: %s", s)
+		return fmt.Errorf("invalid value for RuntimeEnvironmentIPConfigurationEnum: %v", v)
 	}
 }
 

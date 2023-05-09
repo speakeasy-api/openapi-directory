@@ -14,18 +14,22 @@ const (
 	StopActionEnumSkipEvaluation  StopActionEnum = "SKIP_EVALUATION"
 )
 
+func (e StopActionEnum) ToPointer() *StopActionEnum {
+	return &e
+}
+
 func (e *StopActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "START_EVALUATION":
 		fallthrough
 	case "SKIP_EVALUATION":
-		*e = StopActionEnum(s)
+		*e = StopActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopActionEnum: %s", s)
+		return fmt.Errorf("invalid value for StopActionEnum: %v", v)
 	}
 }

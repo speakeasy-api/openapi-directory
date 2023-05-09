@@ -15,17 +15,21 @@ const (
 	POSTRejectTransitGatewayPeeringAttachmentActionEnumRejectTransitGatewayPeeringAttachment POSTRejectTransitGatewayPeeringAttachmentActionEnum = "RejectTransitGatewayPeeringAttachment"
 )
 
+func (e POSTRejectTransitGatewayPeeringAttachmentActionEnum) ToPointer() *POSTRejectTransitGatewayPeeringAttachmentActionEnum {
+	return &e
+}
+
 func (e *POSTRejectTransitGatewayPeeringAttachmentActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RejectTransitGatewayPeeringAttachment":
-		*e = POSTRejectTransitGatewayPeeringAttachmentActionEnum(s)
+		*e = POSTRejectTransitGatewayPeeringAttachmentActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRejectTransitGatewayPeeringAttachmentActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRejectTransitGatewayPeeringAttachmentActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRejectTransitGatewayPeeringAttachmentVersionEnumTwoThousandAndSixteen1115 POSTRejectTransitGatewayPeeringAttachmentVersionEnum = "2016-11-15"
 )
 
+func (e POSTRejectTransitGatewayPeeringAttachmentVersionEnum) ToPointer() *POSTRejectTransitGatewayPeeringAttachmentVersionEnum {
+	return &e
+}
+
 func (e *POSTRejectTransitGatewayPeeringAttachmentVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTRejectTransitGatewayPeeringAttachmentVersionEnum(s)
+		*e = POSTRejectTransitGatewayPeeringAttachmentVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRejectTransitGatewayPeeringAttachmentVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRejectTransitGatewayPeeringAttachmentVersionEnum: %v", v)
 	}
 }
 

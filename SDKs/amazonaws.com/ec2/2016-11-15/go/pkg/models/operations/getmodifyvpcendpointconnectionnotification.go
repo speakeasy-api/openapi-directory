@@ -15,17 +15,21 @@ const (
 	GETModifyVpcEndpointConnectionNotificationActionEnumModifyVpcEndpointConnectionNotification GETModifyVpcEndpointConnectionNotificationActionEnum = "ModifyVpcEndpointConnectionNotification"
 )
 
+func (e GETModifyVpcEndpointConnectionNotificationActionEnum) ToPointer() *GETModifyVpcEndpointConnectionNotificationActionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcEndpointConnectionNotificationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVpcEndpointConnectionNotification":
-		*e = GETModifyVpcEndpointConnectionNotificationActionEnum(s)
+		*e = GETModifyVpcEndpointConnectionNotificationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcEndpointConnectionNotificationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcEndpointConnectionNotificationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyVpcEndpointConnectionNotificationVersionEnumTwoThousandAndSixteen1115 GETModifyVpcEndpointConnectionNotificationVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVpcEndpointConnectionNotificationVersionEnum) ToPointer() *GETModifyVpcEndpointConnectionNotificationVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcEndpointConnectionNotificationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVpcEndpointConnectionNotificationVersionEnum(s)
+		*e = GETModifyVpcEndpointConnectionNotificationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcEndpointConnectionNotificationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcEndpointConnectionNotificationVersionEnum: %v", v)
 	}
 }
 

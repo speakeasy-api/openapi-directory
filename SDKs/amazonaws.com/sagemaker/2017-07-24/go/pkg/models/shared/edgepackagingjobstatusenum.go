@@ -18,12 +18,16 @@ const (
 	EdgePackagingJobStatusEnumStopped    EdgePackagingJobStatusEnum = "STOPPED"
 )
 
+func (e EdgePackagingJobStatusEnum) ToPointer() *EdgePackagingJobStatusEnum {
+	return &e
+}
+
 func (e *EdgePackagingJobStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STARTING":
 		fallthrough
 	case "INPROGRESS":
@@ -35,9 +39,9 @@ func (e *EdgePackagingJobStatusEnum) UnmarshalJSON(data []byte) error {
 	case "STOPPING":
 		fallthrough
 	case "STOPPED":
-		*e = EdgePackagingJobStatusEnum(s)
+		*e = EdgePackagingJobStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EdgePackagingJobStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EdgePackagingJobStatusEnum: %v", v)
 	}
 }

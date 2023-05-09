@@ -34,7 +34,10 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 // Status of all arrivals at a given airport up to 4 hours from the provided date time.
 func (s *operationsT) OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet(ctx context.Context, request operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest, security operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetSecurity) (*operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/arrivals/{airportCode}/{fromDateTime}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/arrivals/{airportCode}/{fromDateTime}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *operationsT) OperationsFlightstatusArrivalsByAirportCodeAndFromDateTime
 // Status of a particular flight (boarding, delayed, etc.).
 func (s *operationsT) OperationsFlightstatusByFlightNumberAndDateGet(ctx context.Context, request operations.OperationsFlightstatusByFlightNumberAndDateGetRequest, security operations.OperationsFlightstatusByFlightNumberAndDateGetSecurity) (*operations.OperationsFlightstatusByFlightNumberAndDateGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/{flightNumber}/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/{flightNumber}/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -136,7 +142,10 @@ func (s *operationsT) OperationsFlightstatusByFlightNumberAndDateGet(ctx context
 // Status of all departures from a given airport up to 4 hours from the provided date time.
 func (s *operationsT) OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet(ctx context.Context, request operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetRequest, security operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetSecurity) (*operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/departures/{airportCode}/{fromDateTime}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/departures/{airportCode}/{fromDateTime}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,7 +196,10 @@ func (s *operationsT) OperationsFlightstatusDeparturesByAirportCodeAndFromDateTi
 // Status of flights between a given origin and destination on a given date.
 func (s *operationsT) OperationsFlightstatusRouteDateByOriginAndDestinationGet(ctx context.Context, request operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest, security operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetSecurity) (*operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/route/{origin}/{destination}/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/operations/flightstatus/route/{origin}/{destination}/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -238,7 +250,10 @@ func (s *operationsT) OperationsFlightstatusRouteDateByOriginAndDestinationGet(c
 // Scheduled flights between given airports on a given date.
 func (s *operationsT) OperationsSchedulesFromDateTimeByOriginAndDestinationGet(ctx context.Context, request operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest, security operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetSecurity) (*operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/operations/schedules/{origin}/{destination}/{fromDateTime}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/operations/schedules/{origin}/{destination}/{fromDateTime}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

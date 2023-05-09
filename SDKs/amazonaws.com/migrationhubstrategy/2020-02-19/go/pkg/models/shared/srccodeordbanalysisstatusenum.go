@@ -19,12 +19,16 @@ const (
 	SrcCodeOrDbAnalysisStatusEnumConfigured             SrcCodeOrDbAnalysisStatusEnum = "CONFIGURED"
 )
 
+func (e SrcCodeOrDbAnalysisStatusEnum) ToPointer() *SrcCodeOrDbAnalysisStatusEnum {
+	return &e
+}
+
 func (e *SrcCodeOrDbAnalysisStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANALYSIS_TO_BE_SCHEDULED":
 		fallthrough
 	case "ANALYSIS_STARTED":
@@ -38,9 +42,9 @@ func (e *SrcCodeOrDbAnalysisStatusEnum) UnmarshalJSON(data []byte) error {
 	case "UNCONFIGURED":
 		fallthrough
 	case "CONFIGURED":
-		*e = SrcCodeOrDbAnalysisStatusEnum(s)
+		*e = SrcCodeOrDbAnalysisStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SrcCodeOrDbAnalysisStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SrcCodeOrDbAnalysisStatusEnum: %v", v)
 	}
 }

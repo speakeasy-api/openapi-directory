@@ -16,17 +16,21 @@ const (
 	PutImageXAmzTargetEnumAmazonEc2ContainerRegistryV20150921PutImage PutImageXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.PutImage"
 )
 
+func (e PutImageXAmzTargetEnum) ToPointer() *PutImageXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutImageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.PutImage":
-		*e = PutImageXAmzTargetEnum(s)
+		*e = PutImageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutImageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutImageXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	AccountActivityActivityLevelEnumTypicalStrong            AccountActivityActivityLevelEnum = "TYPICAL_STRONG"
 )
 
+func (e AccountActivityActivityLevelEnum) ToPointer() *AccountActivityActivityLevelEnum {
+	return &e
+}
+
 func (e *AccountActivityActivityLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVITY_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "UNEVALUATED":
@@ -36,10 +40,10 @@ func (e *AccountActivityActivityLevelEnum) UnmarshalJSON(data []byte) error {
 	case "TYPICAL_BASIC":
 		fallthrough
 	case "TYPICAL_STRONG":
-		*e = AccountActivityActivityLevelEnum(s)
+		*e = AccountActivityActivityLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountActivityActivityLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountActivityActivityLevelEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ListRequestedServiceQuotaChangeHistoryByQuotaXAmzTargetEnumServiceQuotasV20190624ListRequestedServiceQuotaChangeHistoryByQuota ListRequestedServiceQuotaChangeHistoryByQuotaXAmzTargetEnum = "ServiceQuotasV20190624.ListRequestedServiceQuotaChangeHistoryByQuota"
 )
 
+func (e ListRequestedServiceQuotaChangeHistoryByQuotaXAmzTargetEnum) ToPointer() *ListRequestedServiceQuotaChangeHistoryByQuotaXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListRequestedServiceQuotaChangeHistoryByQuotaXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ServiceQuotasV20190624.ListRequestedServiceQuotaChangeHistoryByQuota":
-		*e = ListRequestedServiceQuotaChangeHistoryByQuotaXAmzTargetEnum(s)
+		*e = ListRequestedServiceQuotaChangeHistoryByQuotaXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRequestedServiceQuotaChangeHistoryByQuotaXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRequestedServiceQuotaChangeHistoryByQuotaXAmzTargetEnum: %v", v)
 	}
 }
 

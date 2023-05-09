@@ -16,12 +16,16 @@ const (
 	VideoTargetingExcludedPositionTypesEnumPostroll                VideoTargetingExcludedPositionTypesEnum = "POSTROLL"
 )
 
+func (e VideoTargetingExcludedPositionTypesEnum) ToPointer() *VideoTargetingExcludedPositionTypesEnum {
+	return &e
+}
+
 func (e *VideoTargetingExcludedPositionTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POSITION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PREROLL":
@@ -29,10 +33,10 @@ func (e *VideoTargetingExcludedPositionTypesEnum) UnmarshalJSON(data []byte) err
 	case "MIDROLL":
 		fallthrough
 	case "POSTROLL":
-		*e = VideoTargetingExcludedPositionTypesEnum(s)
+		*e = VideoTargetingExcludedPositionTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoTargetingExcludedPositionTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoTargetingExcludedPositionTypesEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	VideoTargetingTargetedPositionTypesEnumPostroll                VideoTargetingTargetedPositionTypesEnum = "POSTROLL"
 )
 
+func (e VideoTargetingTargetedPositionTypesEnum) ToPointer() *VideoTargetingTargetedPositionTypesEnum {
+	return &e
+}
+
 func (e *VideoTargetingTargetedPositionTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POSITION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PREROLL":
@@ -58,10 +66,10 @@ func (e *VideoTargetingTargetedPositionTypesEnum) UnmarshalJSON(data []byte) err
 	case "MIDROLL":
 		fallthrough
 	case "POSTROLL":
-		*e = VideoTargetingTargetedPositionTypesEnum(s)
+		*e = VideoTargetingTargetedPositionTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoTargetingTargetedPositionTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoTargetingTargetedPositionTypesEnum: %v", v)
 	}
 }
 

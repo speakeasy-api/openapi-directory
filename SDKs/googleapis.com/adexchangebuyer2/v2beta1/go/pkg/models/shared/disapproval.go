@@ -115,12 +115,16 @@ const (
 	DisapprovalReasonEnumExperimentalMedicalTreatment         DisapprovalReasonEnum = "EXPERIMENTAL_MEDICAL_TREATMENT"
 )
 
+func (e DisapprovalReasonEnum) ToPointer() *DisapprovalReasonEnum {
+	return &e
+}
+
 func (e *DisapprovalReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LENGTH_OF_IMAGE_ANIMATION":
 		fallthrough
 	case "BROKEN_URL":
@@ -324,10 +328,10 @@ func (e *DisapprovalReasonEnum) UnmarshalJSON(data []byte) error {
 	case "BAIL_BONDS":
 		fallthrough
 	case "EXPERIMENTAL_MEDICAL_TREATMENT":
-		*e = DisapprovalReasonEnum(s)
+		*e = DisapprovalReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisapprovalReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for DisapprovalReasonEnum: %v", v)
 	}
 }
 

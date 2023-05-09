@@ -16,17 +16,21 @@ const (
 	ListCostCategoryDefinitionsXAmzTargetEnumAwsInsightsIndexServiceListCostCategoryDefinitions ListCostCategoryDefinitionsXAmzTargetEnum = "AWSInsightsIndexService.ListCostCategoryDefinitions"
 )
 
+func (e ListCostCategoryDefinitionsXAmzTargetEnum) ToPointer() *ListCostCategoryDefinitionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCostCategoryDefinitionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSInsightsIndexService.ListCostCategoryDefinitions":
-		*e = ListCostCategoryDefinitionsXAmzTargetEnum(s)
+		*e = ListCostCategoryDefinitionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCostCategoryDefinitionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCostCategoryDefinitionsXAmzTargetEnum: %v", v)
 	}
 }
 

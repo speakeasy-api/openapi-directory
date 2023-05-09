@@ -34,7 +34,10 @@ func newCustomerShares(defaultClient, securityClient HTTPClient, serverURL, lang
 // DeleteStoreShare - Delete a share of a store to another user
 func (s *customerShares) DeleteStoreShare(ctx context.Context, request operations.DeleteStoreShareRequest) (*operations.DeleteStoreShareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/shares/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/shares/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *customerShares) DeleteStoreShare(ctx context.Context, request operation
 // GetStoreShares - Get shares related to this store
 func (s *customerShares) GetStoreShares(ctx context.Context, request operations.GetStoreSharesRequest) (*operations.GetStoreSharesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/shares", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/shares", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -142,7 +148,10 @@ func (s *customerShares) GetStoreShares(ctx context.Context, request operations.
 // ShareStore - Share a store to another user
 func (s *customerShares) ShareStore(ctx context.Context, request operations.ShareStoreRequest) (*operations.ShareStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/shares", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/shares", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {

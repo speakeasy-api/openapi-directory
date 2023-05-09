@@ -90,7 +90,10 @@ func (s *jobs) YoutubereportingJobsCreate(ctx context.Context, request operation
 // YoutubereportingJobsDelete - Deletes a job.
 func (s *jobs) YoutubereportingJobsDelete(ctx context.Context, request operations.YoutubereportingJobsDeleteRequest, security operations.YoutubereportingJobsDeleteSecurity) (*operations.YoutubereportingJobsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *jobs) YoutubereportingJobsDelete(ctx context.Context, request operation
 // YoutubereportingJobsGet - Gets a job.
 func (s *jobs) YoutubereportingJobsGet(ctx context.Context, request operations.YoutubereportingJobsGetRequest, security operations.YoutubereportingJobsGetSecurity) (*operations.YoutubereportingJobsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -234,7 +240,10 @@ func (s *jobs) YoutubereportingJobsList(ctx context.Context, request operations.
 // YoutubereportingJobsReportsGet - Gets the metadata of a specific report.
 func (s *jobs) YoutubereportingJobsReportsGet(ctx context.Context, request operations.YoutubereportingJobsReportsGetRequest, security operations.YoutubereportingJobsReportsGetSecurity) (*operations.YoutubereportingJobsReportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}/reports/{reportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}/reports/{reportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -282,7 +291,10 @@ func (s *jobs) YoutubereportingJobsReportsGet(ctx context.Context, request opera
 // YoutubereportingJobsReportsList - Lists reports created by a specific job. Returns NOT_FOUND if the job does not exist.
 func (s *jobs) YoutubereportingJobsReportsList(ctx context.Context, request operations.YoutubereportingJobsReportsListRequest, security operations.YoutubereportingJobsReportsListSecurity) (*operations.YoutubereportingJobsReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}/reports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/jobs/{jobId}/reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

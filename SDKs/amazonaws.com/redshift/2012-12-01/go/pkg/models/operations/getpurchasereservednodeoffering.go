@@ -15,17 +15,21 @@ const (
 	GETPurchaseReservedNodeOfferingActionEnumPurchaseReservedNodeOffering GETPurchaseReservedNodeOfferingActionEnum = "PurchaseReservedNodeOffering"
 )
 
+func (e GETPurchaseReservedNodeOfferingActionEnum) ToPointer() *GETPurchaseReservedNodeOfferingActionEnum {
+	return &e
+}
+
 func (e *GETPurchaseReservedNodeOfferingActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PurchaseReservedNodeOffering":
-		*e = GETPurchaseReservedNodeOfferingActionEnum(s)
+		*e = GETPurchaseReservedNodeOfferingActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPurchaseReservedNodeOfferingActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPurchaseReservedNodeOfferingActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETPurchaseReservedNodeOfferingVersionEnumTwoThousandAndTwelve1201 GETPurchaseReservedNodeOfferingVersionEnum = "2012-12-01"
 )
 
+func (e GETPurchaseReservedNodeOfferingVersionEnum) ToPointer() *GETPurchaseReservedNodeOfferingVersionEnum {
+	return &e
+}
+
 func (e *GETPurchaseReservedNodeOfferingVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETPurchaseReservedNodeOfferingVersionEnum(s)
+		*e = GETPurchaseReservedNodeOfferingVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPurchaseReservedNodeOfferingVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPurchaseReservedNodeOfferingVersionEnum: %v", v)
 	}
 }
 

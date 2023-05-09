@@ -16,12 +16,16 @@ const (
 	IdentifierTypeEnumHealthID         IdentifierTypeEnum = "HEALTH_ID"
 )
 
+func (e IdentifierTypeEnum) ToPointer() *IdentifierTypeEnum {
+	return &e
+}
+
 func (e *IdentifierTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MOBILE":
 		fallthrough
 	case "MR":
@@ -29,9 +33,9 @@ func (e *IdentifierTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NDHM_HEALTH_NUMBER":
 		fallthrough
 	case "HEALTH_ID":
-		*e = IdentifierTypeEnum(s)
+		*e = IdentifierTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IdentifierTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IdentifierTypeEnum: %v", v)
 	}
 }

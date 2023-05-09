@@ -32,17 +32,21 @@ const (
 	GetAtms503ErrorObjectDescriptionEnumTheServiceIsTemporarilyUnavailable GetAtms503ErrorObjectDescriptionEnum = "The service is temporarily unavailable."
 )
 
+func (e GetAtms503ErrorObjectDescriptionEnum) ToPointer() *GetAtms503ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetAtms503ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "The service is temporarily unavailable.":
-		*e = GetAtms503ErrorObjectDescriptionEnum(s)
+		*e = GetAtms503ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms503ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms503ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -52,17 +56,21 @@ const (
 	GetAtms503ErrorObjectStatusEnumFiveHundredAndThree GetAtms503ErrorObjectStatusEnum = "503"
 )
 
+func (e GetAtms503ErrorObjectStatusEnum) ToPointer() *GetAtms503ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetAtms503ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "503":
-		*e = GetAtms503ErrorObjectStatusEnum(s)
+		*e = GetAtms503ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms503ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms503ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -72,17 +80,21 @@ const (
 	GetAtms503ErrorObjectTitleEnumServiceTemporarilyUnavailable GetAtms503ErrorObjectTitleEnum = "Service temporarily unavailable"
 )
 
+func (e GetAtms503ErrorObjectTitleEnum) ToPointer() *GetAtms503ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetAtms503ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Service temporarily unavailable":
-		*e = GetAtms503ErrorObjectTitleEnum(s)
+		*e = GetAtms503ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms503ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms503ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -99,17 +111,21 @@ const (
 	GetAtms500ErrorObjectDescriptionEnumAnErrorOccurredOnTheServerNoFurtherInformationIsAvailable GetAtms500ErrorObjectDescriptionEnum = "An error occurred on the server. No further information is available."
 )
 
+func (e GetAtms500ErrorObjectDescriptionEnum) ToPointer() *GetAtms500ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetAtms500ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "An error occurred on the server. No further information is available.":
-		*e = GetAtms500ErrorObjectDescriptionEnum(s)
+		*e = GetAtms500ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms500ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms500ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -119,17 +135,21 @@ const (
 	GetAtms500ErrorObjectStatusEnumFiveHundred GetAtms500ErrorObjectStatusEnum = "500"
 )
 
+func (e GetAtms500ErrorObjectStatusEnum) ToPointer() *GetAtms500ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetAtms500ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "500":
-		*e = GetAtms500ErrorObjectStatusEnum(s)
+		*e = GetAtms500ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms500ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms500ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -139,17 +159,21 @@ const (
 	GetAtms500ErrorObjectTitleEnumInternalServerError GetAtms500ErrorObjectTitleEnum = "Internal server error"
 )
 
+func (e GetAtms500ErrorObjectTitleEnum) ToPointer() *GetAtms500ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetAtms500ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = GetAtms500ErrorObjectTitleEnum(s)
+		*e = GetAtms500ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms500ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms500ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -166,17 +190,21 @@ const (
 	GetAtms429ErrorObjectDescriptionEnumYouHaveRequestedThisResourceTooOftenSlowDown GetAtms429ErrorObjectDescriptionEnum = "You have requested this resource too often. Slow down."
 )
 
+func (e GetAtms429ErrorObjectDescriptionEnum) ToPointer() *GetAtms429ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetAtms429ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "You have requested this resource too often. Slow down.":
-		*e = GetAtms429ErrorObjectDescriptionEnum(s)
+		*e = GetAtms429ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms429ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms429ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -186,17 +214,21 @@ const (
 	GetAtms429ErrorObjectStatusEnumFourHundredAndTwentyNine GetAtms429ErrorObjectStatusEnum = "429"
 )
 
+func (e GetAtms429ErrorObjectStatusEnum) ToPointer() *GetAtms429ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetAtms429ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "429":
-		*e = GetAtms429ErrorObjectStatusEnum(s)
+		*e = GetAtms429ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms429ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms429ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -206,17 +238,21 @@ const (
 	GetAtms429ErrorObjectTitleEnumTooManyRequests GetAtms429ErrorObjectTitleEnum = "Too many requests"
 )
 
+func (e GetAtms429ErrorObjectTitleEnum) ToPointer() *GetAtms429ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetAtms429ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Too many requests":
-		*e = GetAtms429ErrorObjectTitleEnum(s)
+		*e = GetAtms429ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms429ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms429ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -233,17 +269,21 @@ const (
 	GetAtms408ErrorObjectDescriptionEnumYourClientHasFailedToSubmitARequestAndATimeoutHasOccurred GetAtms408ErrorObjectDescriptionEnum = "Your client has failed to submit a request, and a timeout has occurred."
 )
 
+func (e GetAtms408ErrorObjectDescriptionEnum) ToPointer() *GetAtms408ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetAtms408ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Your client has failed to submit a request, and a timeout has occurred.":
-		*e = GetAtms408ErrorObjectDescriptionEnum(s)
+		*e = GetAtms408ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms408ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms408ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -253,17 +293,21 @@ const (
 	GetAtms408ErrorObjectStatusEnumFourHundredAndEight GetAtms408ErrorObjectStatusEnum = "408"
 )
 
+func (e GetAtms408ErrorObjectStatusEnum) ToPointer() *GetAtms408ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetAtms408ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "408":
-		*e = GetAtms408ErrorObjectStatusEnum(s)
+		*e = GetAtms408ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms408ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms408ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	GetAtms408ErrorObjectTitleEnumClientTimeout GetAtms408ErrorObjectTitleEnum = "Client timeout"
 )
 
+func (e GetAtms408ErrorObjectTitleEnum) ToPointer() *GetAtms408ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetAtms408ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Client timeout":
-		*e = GetAtms408ErrorObjectTitleEnum(s)
+		*e = GetAtms408ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms408ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms408ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -300,17 +348,21 @@ const (
 	GetAtms400ErrorObjectDescriptionEnumYouHaveSentARequestWhichCouldNotBeUnderstood GetAtms400ErrorObjectDescriptionEnum = "You have sent a request which could not be understood."
 )
 
+func (e GetAtms400ErrorObjectDescriptionEnum) ToPointer() *GetAtms400ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetAtms400ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "You have sent a request which could not be understood.":
-		*e = GetAtms400ErrorObjectDescriptionEnum(s)
+		*e = GetAtms400ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms400ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms400ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	GetAtms400ErrorObjectStatusEnumFourHundred GetAtms400ErrorObjectStatusEnum = "400"
 )
 
+func (e GetAtms400ErrorObjectStatusEnum) ToPointer() *GetAtms400ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetAtms400ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "400":
-		*e = GetAtms400ErrorObjectStatusEnum(s)
+		*e = GetAtms400ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms400ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms400ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -340,17 +396,21 @@ const (
 	GetAtms400ErrorObjectTitleEnumBadRequest GetAtms400ErrorObjectTitleEnum = "Bad request"
 )
 
+func (e GetAtms400ErrorObjectTitleEnum) ToPointer() *GetAtms400ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetAtms400ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Bad request":
-		*e = GetAtms400ErrorObjectTitleEnum(s)
+		*e = GetAtms400ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms400ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms400ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -382,12 +442,16 @@ const (
 	GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMATMServicesEnumPinChange                 GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMATMServicesEnum = "PINChange"
 )
 
+func (e GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMATMServicesEnum) ToPointer() *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMATMServicesEnum {
+	return &e
+}
+
 func (e *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMATMServicesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Balance":
 		fallthrough
 	case "BillPayments":
@@ -417,10 +481,10 @@ func (e *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMATMServicesEnu
 	case "PINActivation":
 		fallthrough
 	case "PINChange":
-		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMATMServicesEnum(s)
+		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMATMServicesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMATMServicesEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMATMServicesEnum: %v", v)
 	}
 }
 
@@ -440,12 +504,16 @@ const (
 	GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMAccessibilityTypesEnumWheelchairAccess  GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMAccessibilityTypesEnum = "WheelchairAccess"
 )
 
+func (e GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMAccessibilityTypesEnum) ToPointer() *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMAccessibilityTypesEnum {
+	return &e
+}
+
 func (e *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMAccessibilityTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AudioCashMachine":
 		fallthrough
 	case "AutomaticDoors":
@@ -465,10 +533,10 @@ func (e *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMAccessibilityT
 	case "LowerLevelCounter":
 		fallthrough
 	case "WheelchairAccess":
-		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMAccessibilityTypesEnum(s)
+		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMAccessibilityTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMAccessibilityTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMAccessibilityTypesEnum: %v", v)
 	}
 }
 
@@ -537,12 +605,16 @@ const (
 	GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMLocationCategoryEnumUniversityOrCollege       GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMLocationCategoryEnum = "UniversityOrCollege"
 )
 
+func (e GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMLocationCategoryEnum) ToPointer() *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMLocationCategoryEnum {
+	return &e
+}
+
 func (e *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMLocationCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Airport":
 		fallthrough
 	case "BankSpecialisedOutlet":
@@ -608,10 +680,10 @@ func (e *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMLocationCatego
 	case "UndergroundRailwayStation":
 		fallthrough
 	case "UniversityOrCollege":
-		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMLocationCategoryEnum(s)
+		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMLocationCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMLocationCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMLocationCategoryEnum: %v", v)
 	}
 }
 
@@ -626,12 +698,16 @@ const (
 	GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMMinimumValueDispensedEnumPound100 GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMMinimumValueDispensedEnum = "£100"
 )
 
+func (e GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMMinimumValueDispensedEnum) ToPointer() *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMMinimumValueDispensedEnum {
+	return &e
+}
+
 func (e *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMMinimumValueDispensedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "£5":
 		fallthrough
 	case "£10":
@@ -641,10 +717,10 @@ func (e *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMMinimumValueDi
 	case "£50":
 		fallthrough
 	case "£100":
-		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMMinimumValueDispensedEnum(s)
+		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMMinimumValueDispensedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMMinimumValueDispensedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMMinimumValueDispensedEnum: %v", v)
 	}
 }
 
@@ -656,19 +732,23 @@ const (
 	GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMOrganisationBrandTrademarkIPOCodeEnumEu GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMOrganisationBrandTrademarkIPOCodeEnum = "EU"
 )
 
+func (e GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMOrganisationBrandTrademarkIPOCodeEnum) ToPointer() *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMOrganisationBrandTrademarkIPOCodeEnum {
+	return &e
+}
+
 func (e *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMOrganisationBrandTrademarkIPOCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UK":
 		fallthrough
 	case "EU":
-		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMOrganisationBrandTrademarkIPOCodeEnum(s)
+		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMOrganisationBrandTrademarkIPOCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMOrganisationBrandTrademarkIPOCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONATMOrganisationBrandTrademarkIPOCodeEnum: %v", v)
 	}
 }
 
@@ -741,17 +821,21 @@ const (
 	GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnumUseOfTheApIsAndAnyRelatedDataWillBeSubjectToTheTermsOfTheOpenLicenceAndSubjectToTermsAndConditions GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum = "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions"
 )
 
+func (e GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum) ToPointer() *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum {
+	return &e
+}
+
 func (e *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions":
-		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum(s)
+		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum: %v", v)
 	}
 }
 
@@ -762,17 +846,21 @@ const (
 	GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnumHTTPSWwwOpenbankingOrgUkOpenLicence GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum = "https://www.openbanking.org.uk/open-licence"
 )
 
+func (e GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum) ToPointer() *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum {
+	return &e
+}
+
 func (e *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "https://www.openbanking.org.uk/open-licence":
-		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum(s)
+		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum: %v", v)
 	}
 }
 
@@ -783,17 +871,21 @@ const (
 	GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnumHTTPSWwwOpenbankingOrgUkTerms GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum = "https://www.openbanking.org.uk/terms"
 )
 
+func (e GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum) ToPointer() *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum {
+	return &e
+}
+
 func (e *GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "https://www.openbanking.org.uk/terms":
-		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum(s)
+		*e = GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum: %v", v)
 	}
 }
 

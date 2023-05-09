@@ -16,17 +16,21 @@ const (
 	ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnumCodeCommit20150413ListAssociatedApprovalRuleTemplatesForRepository ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum = "CodeCommit_20150413.ListAssociatedApprovalRuleTemplatesForRepository"
 )
 
+func (e ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum) ToPointer() *ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.ListAssociatedApprovalRuleTemplatesForRepository":
-		*e = ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum(s)
+		*e = ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum: %v", v)
 	}
 }
 

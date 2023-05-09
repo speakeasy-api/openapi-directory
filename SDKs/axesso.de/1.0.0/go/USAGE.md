@@ -2,26 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.KeywordSearchRequest{
+    ctx := context.Background()
+    res, err := s.Amz.KeywordSearch(ctx, operations.KeywordSearchRequest{
         DomainCode: "corrupti",
         Keyword: "provident",
-        NumberOfProducts: 715190,
-        SortBy: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Amz.KeywordSearch(ctx, req)
+        NumberOfProducts: sdk.Int64(715190),
+        SortBy: sdk.String("quibusdam"),
+    })
     if err != nil {
         log.Fatal(err)
     }

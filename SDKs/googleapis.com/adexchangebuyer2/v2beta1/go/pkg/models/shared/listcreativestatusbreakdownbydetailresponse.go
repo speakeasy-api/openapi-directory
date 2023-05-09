@@ -23,12 +23,16 @@ const (
 	ListCreativeStatusBreakdownByDetailResponseDetailTypeEnumGvlID                 ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum = "GVL_ID"
 )
 
+func (e ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum) ToPointer() *ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum {
+	return &e
+}
+
 func (e *ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DETAIL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CREATIVE_ATTRIBUTE":
@@ -48,10 +52,10 @@ func (e *ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum) UnmarshalJSO
 	case "VENDOR_DOMAIN":
 		fallthrough
 	case "GVL_ID":
-		*e = ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum(s)
+		*e = ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnumDependentOnDayOfWeek EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum) ToPointer() *EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum {
+	return &e
+}
+
 func (e *EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum) UnmarshalJSON(dat
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum(s)
+		*e = EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	EnergyEfficiencyEnergyConservationProgramExceptionEnumDependentOnDayOfWeek EnergyEfficiencyEnergyConservationProgramExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnergyEfficiencyEnergyConservationProgramExceptionEnum) ToPointer() *EnergyEfficiencyEnergyConservationProgramExceptionEnum {
+	return &e
+}
+
 func (e *EnergyEfficiencyEnergyConservationProgramExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *EnergyEfficiencyEnergyConservationProgramExceptionEnum) UnmarshalJSON(d
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnergyEfficiencyEnergyConservationProgramExceptionEnum(s)
+		*e = EnergyEfficiencyEnergyConservationProgramExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnergyEfficiencyEnergyConservationProgramExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnergyEfficiencyEnergyConservationProgramExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnumDependentOnDayOfWeek EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum) ToPointer() *EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum {
+	return &e
+}
+
 func (e *EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum) U
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum(s)
+		*e = EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	EnergyEfficiencyEnergyEfficientLightingExceptionEnumDependentOnDayOfWeek EnergyEfficiencyEnergyEfficientLightingExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnergyEfficiencyEnergyEfficientLightingExceptionEnum) ToPointer() *EnergyEfficiencyEnergyEfficientLightingExceptionEnum {
+	return &e
+}
+
 func (e *EnergyEfficiencyEnergyEfficientLightingExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *EnergyEfficiencyEnergyEfficientLightingExceptionEnum) UnmarshalJSON(dat
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnergyEfficiencyEnergyEfficientLightingExceptionEnum(s)
+		*e = EnergyEfficiencyEnergyEfficientLightingExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnergyEfficiencyEnergyEfficientLightingExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnergyEfficiencyEnergyEfficientLightingExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	EnergyEfficiencyEnergySavingThermostatsExceptionEnumDependentOnDayOfWeek EnergyEfficiencyEnergySavingThermostatsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnergyEfficiencyEnergySavingThermostatsExceptionEnum) ToPointer() *EnergyEfficiencyEnergySavingThermostatsExceptionEnum {
+	return &e
+}
+
 func (e *EnergyEfficiencyEnergySavingThermostatsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *EnergyEfficiencyEnergySavingThermostatsExceptionEnum) UnmarshalJSON(dat
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnergyEfficiencyEnergySavingThermostatsExceptionEnum(s)
+		*e = EnergyEfficiencyEnergySavingThermostatsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnergyEfficiencyEnergySavingThermostatsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnergyEfficiencyEnergySavingThermostatsExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnumDependentOnDayOfWeek EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum) ToPointer() *EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum {
+	return &e
+}
+
 func (e *EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum) Un
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum(s)
+		*e = EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum: %v", v)
 	}
 }
 
@@ -225,12 +249,16 @@ const (
 	EnergyEfficiencyGreenBuildingDesignExceptionEnumDependentOnDayOfWeek EnergyEfficiencyGreenBuildingDesignExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnergyEfficiencyGreenBuildingDesignExceptionEnum) ToPointer() *EnergyEfficiencyGreenBuildingDesignExceptionEnum {
+	return &e
+}
+
 func (e *EnergyEfficiencyGreenBuildingDesignExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -238,10 +266,10 @@ func (e *EnergyEfficiencyGreenBuildingDesignExceptionEnum) UnmarshalJSON(data []
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnergyEfficiencyGreenBuildingDesignExceptionEnum(s)
+		*e = EnergyEfficiencyGreenBuildingDesignExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnergyEfficiencyGreenBuildingDesignExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnergyEfficiencyGreenBuildingDesignExceptionEnum: %v", v)
 	}
 }
 

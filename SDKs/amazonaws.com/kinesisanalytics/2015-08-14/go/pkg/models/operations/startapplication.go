@@ -16,17 +16,21 @@ const (
 	StartApplicationXAmzTargetEnumKinesisAnalytics20150814StartApplication StartApplicationXAmzTargetEnum = "KinesisAnalytics_20150814.StartApplication"
 )
 
+func (e StartApplicationXAmzTargetEnum) ToPointer() *StartApplicationXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartApplicationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20150814.StartApplication":
-		*e = StartApplicationXAmzTargetEnum(s)
+		*e = StartApplicationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartApplicationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartApplicationXAmzTargetEnum: %v", v)
 	}
 }
 

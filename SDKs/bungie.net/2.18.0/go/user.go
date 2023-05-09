@@ -80,7 +80,10 @@ func (s *user) UserGetAvailableThemes(ctx context.Context) (*operations.UserGetA
 // UserGetBungieNetUserByID - Loads a bungienet user by membership id.
 func (s *user) UserGetBungieNetUserByID(ctx context.Context, request operations.UserGetBungieNetUserByIDRequest) (*operations.UserGetBungieNetUserByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/GetBungieNetUserById/{id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/User/GetBungieNetUserById/{id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,7 +127,10 @@ func (s *user) UserGetBungieNetUserByID(ctx context.Context, request operations.
 // UserGetCredentialTypesForTargetAccount - Returns a list of credential types attached to the requested account
 func (s *user) UserGetCredentialTypesForTargetAccount(ctx context.Context, request operations.UserGetCredentialTypesForTargetAccountRequest) (*operations.UserGetCredentialTypesForTargetAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/GetCredentialTypesForTargetAccount/{membershipId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/User/GetCredentialTypesForTargetAccount/{membershipId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -168,7 +174,10 @@ func (s *user) UserGetCredentialTypesForTargetAccount(ctx context.Context, reque
 // UserGetMembershipDataByID - Returns a list of accounts associated with the supplied membership ID and membership type. This will include all linked accounts (even when hidden) if supplied credentials permit it.
 func (s *user) UserGetMembershipDataByID(ctx context.Context, request operations.UserGetMembershipDataByIDRequest) (*operations.UserGetMembershipDataByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/GetMembershipsById/{membershipId}/{membershipType}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/User/GetMembershipsById/{membershipId}/{membershipType}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -210,7 +219,7 @@ func (s *user) UserGetMembershipDataByID(ctx context.Context, request operations
 }
 
 // UserGetMembershipDataForCurrentUser - Returns a list of accounts associated with signed in user. This is useful for OAuth implementations that do not give you access to the token response.
-func (s *user) UserGetMembershipDataForCurrentUser(ctx context.Context) (*operations.UserGetMembershipDataForCurrentUserResponse, error) {
+func (s *user) UserGetMembershipDataForCurrentUser(ctx context.Context, security operations.UserGetMembershipDataForCurrentUserSecurity) (*operations.UserGetMembershipDataForCurrentUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/User/GetMembershipsForCurrentUser/"
 
@@ -219,7 +228,7 @@ func (s *user) UserGetMembershipDataForCurrentUser(ctx context.Context) (*operat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -256,7 +265,10 @@ func (s *user) UserGetMembershipDataForCurrentUser(ctx context.Context) (*operat
 // UserGetMembershipFromHardLinkedCredential - Gets any hard linked membership given a credential. Only works for credentials that are public (just SteamID64 right now). Cross Save aware.
 func (s *user) UserGetMembershipFromHardLinkedCredential(ctx context.Context, request operations.UserGetMembershipFromHardLinkedCredentialRequest) (*operations.UserGetMembershipFromHardLinkedCredentialResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/GetMembershipFromHardLinkedCredential/{crType}/{credential}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/User/GetMembershipFromHardLinkedCredential/{crType}/{credential}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -300,7 +312,10 @@ func (s *user) UserGetMembershipFromHardLinkedCredential(ctx context.Context, re
 // UserGetSanitizedPlatformDisplayNames - Gets a list of all display names linked to this membership id but sanitized (profanity filtered). Obeys all visibility rules of calling user and is heavily cached.
 func (s *user) UserGetSanitizedPlatformDisplayNames(ctx context.Context, request operations.UserGetSanitizedPlatformDisplayNamesRequest) (*operations.UserGetSanitizedPlatformDisplayNamesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/GetSanitizedPlatformDisplayNames/{membershipId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/User/GetSanitizedPlatformDisplayNames/{membershipId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -344,7 +359,10 @@ func (s *user) UserGetSanitizedPlatformDisplayNames(ctx context.Context, request
 // UserSearchByGlobalNamePost - Given the prefix of a global display name, returns all users who share that name.
 func (s *user) UserSearchByGlobalNamePost(ctx context.Context, request operations.UserSearchByGlobalNamePostRequest) (*operations.UserSearchByGlobalNamePostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/Search/GlobalName/{page}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/User/Search/GlobalName/{page}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -388,7 +406,10 @@ func (s *user) UserSearchByGlobalNamePost(ctx context.Context, request operation
 // UserSearchByGlobalNamePrefix - [OBSOLETE] Do not use this to search users, use SearchByGlobalNamePost instead.
 func (s *user) UserSearchByGlobalNamePrefix(ctx context.Context, request operations.UserSearchByGlobalNamePrefixRequest) (*operations.UserSearchByGlobalNamePrefixResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/User/Search/Prefix/{displayNamePrefix}/{page}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/User/Search/Prefix/{displayNamePrefix}/{page}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

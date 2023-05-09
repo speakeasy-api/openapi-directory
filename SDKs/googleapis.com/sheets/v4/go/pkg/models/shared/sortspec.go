@@ -16,21 +16,25 @@ const (
 	SortSpecSortOrderEnumDescending           SortSpecSortOrderEnum = "DESCENDING"
 )
 
+func (e SortSpecSortOrderEnum) ToPointer() *SortSpecSortOrderEnum {
+	return &e
+}
+
 func (e *SortSpecSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SORT_ORDER_UNSPECIFIED":
 		fallthrough
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = SortSpecSortOrderEnum(s)
+		*e = SortSpecSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortSpecSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for SortSpecSortOrderEnum: %v", v)
 	}
 }
 

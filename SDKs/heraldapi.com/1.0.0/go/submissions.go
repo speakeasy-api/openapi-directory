@@ -37,7 +37,10 @@ func newSubmissions(defaultClient, securityClient HTTPClient, serverURL, languag
 // Get the latest details for a specific [submission](https://www.heraldapi.com/docs/submission).
 func (s *submissions) GetSubmissionsSubmissionID(ctx context.Context, request operations.GetSubmissionsSubmissionIDRequest) (*operations.GetSubmissionsSubmissionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/submissions/{submission_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/submissions/{submission_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

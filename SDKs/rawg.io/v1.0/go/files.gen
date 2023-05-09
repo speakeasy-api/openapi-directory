@@ -11,6 +11,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -77,4 +78,14 @@ pkg/models/shared/store.go
 pkg/models/shared/storesingle.go
 pkg/models/shared/tag.go
 pkg/models/shared/tagsingle.go
+docs/sdk/README.md
+docs/creatorroles/README.md
+docs/creators/README.md
+docs/developers/README.md
+docs/games/README.md
+docs/genres/README.md
+docs/platforms/README.md
+docs/publishers/README.md
+docs/stores/README.md
+docs/tags/README.md
 USAGE.md

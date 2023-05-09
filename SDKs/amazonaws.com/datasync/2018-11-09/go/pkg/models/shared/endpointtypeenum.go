@@ -15,20 +15,24 @@ const (
 	EndpointTypeEnumFips        EndpointTypeEnum = "FIPS"
 )
 
+func (e EndpointTypeEnum) ToPointer() *EndpointTypeEnum {
+	return &e
+}
+
 func (e *EndpointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLIC":
 		fallthrough
 	case "PRIVATE_LINK":
 		fallthrough
 	case "FIPS":
-		*e = EndpointTypeEnum(s)
+		*e = EndpointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointTypeEnum: %v", v)
 	}
 }

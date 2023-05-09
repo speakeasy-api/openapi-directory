@@ -19,12 +19,16 @@ const (
 	CollectionTypeEnumTrash           CollectionTypeEnum = "trash"
 )
 
+func (e CollectionTypeEnum) ToPointer() *CollectionTypeEnum {
+	return &e
+}
+
 func (e *CollectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "root":
 		fallthrough
 	case "regular":
@@ -34,9 +38,9 @@ func (e *CollectionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "sharedWithGroup":
 		fallthrough
 	case "trash":
-		*e = CollectionTypeEnum(s)
+		*e = CollectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CollectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CollectionTypeEnum: %v", v)
 	}
 }

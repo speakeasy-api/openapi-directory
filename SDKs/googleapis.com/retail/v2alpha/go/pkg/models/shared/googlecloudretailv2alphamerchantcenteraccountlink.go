@@ -17,12 +17,16 @@ const (
 	GoogleCloudRetailV2alphaMerchantCenterAccountLinkStateEnumFailed           GoogleCloudRetailV2alphaMerchantCenterAccountLinkStateEnum = "FAILED"
 )
 
+func (e GoogleCloudRetailV2alphaMerchantCenterAccountLinkStateEnum) ToPointer() *GoogleCloudRetailV2alphaMerchantCenterAccountLinkStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaMerchantCenterAccountLinkStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -30,16 +34,16 @@ func (e *GoogleCloudRetailV2alphaMerchantCenterAccountLinkStateEnum) UnmarshalJS
 	case "ACTIVE":
 		fallthrough
 	case "FAILED":
-		*e = GoogleCloudRetailV2alphaMerchantCenterAccountLinkStateEnum(s)
+		*e = GoogleCloudRetailV2alphaMerchantCenterAccountLinkStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaMerchantCenterAccountLinkStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaMerchantCenterAccountLinkStateEnum: %v", v)
 	}
 }
 
-// GoogleCloudRetailV2alphaMerchantCenterAccountLink - Represents a link between a Merchant Center account and a branch. Once a link is established, products from the linked merchant center account will be streamed to the linked branch. LINT.IfChange(MerchantCenterAccountLink)
+// GoogleCloudRetailV2alphaMerchantCenterAccountLink - Represents a link between a Merchant Center account and a branch. After a link is established, products from the linked Merchant Center account are streamed to the linked branch.
 type GoogleCloudRetailV2alphaMerchantCenterAccountLink struct {
-	// Required. The branch id (e.g. 0/1/2) within the catalog that products from merchant_center_account_id are streamed to. When updating this field, an empty value will use the currently configured default branch. However, changing the default branch later on won't change the linked branch here. A single branch id can only have one linked merchant center account id.
+	// Required. The branch ID (e.g. 0/1/2) within the catalog that products from merchant_center_account_id are streamed to. When updating this field, an empty value will use the currently configured default branch. However, changing the default branch later on won't change the linked branch here. A single branch ID can only have one linked Merchant Center account ID.
 	BranchID *string `json:"branchId,omitempty"`
 	// Criteria for the Merchant Center feeds to be ingested via the link. All offers will be ingested if the list is empty. Otherwise the offers will be ingested from selected feeds.
 	FeedFilters []GoogleCloudRetailV2alphaMerchantCenterAccountLinkMerchantCenterFeedFilter `json:"feedFilters,omitempty"`
@@ -53,15 +57,15 @@ type GoogleCloudRetailV2alphaMerchantCenterAccountLink struct {
 	MerchantCenterAccountID *string `json:"merchantCenterAccountId,omitempty"`
 	// Output only. Immutable. Full resource name of the Merchant Center Account Link, such as `projects/*/locations/global/catalogs/default_catalog/merchantCenterAccountLinks/merchant_center_account_link`.
 	Name *string `json:"name,omitempty"`
-	// Output only. GCP project ID.
+	// Output only. Google Cloud project ID.
 	ProjectID *string `json:"projectId,omitempty"`
 	// Output only. Represents the state of the link.
 	State *GoogleCloudRetailV2alphaMerchantCenterAccountLinkStateEnum `json:"state,omitempty"`
 }
 
-// GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput - Represents a link between a Merchant Center account and a branch. Once a link is established, products from the linked merchant center account will be streamed to the linked branch. LINT.IfChange(MerchantCenterAccountLink)
+// GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput - Represents a link between a Merchant Center account and a branch. After a link is established, products from the linked Merchant Center account are streamed to the linked branch.
 type GoogleCloudRetailV2alphaMerchantCenterAccountLinkInput struct {
-	// Required. The branch id (e.g. 0/1/2) within the catalog that products from merchant_center_account_id are streamed to. When updating this field, an empty value will use the currently configured default branch. However, changing the default branch later on won't change the linked branch here. A single branch id can only have one linked merchant center account id.
+	// Required. The branch ID (e.g. 0/1/2) within the catalog that products from merchant_center_account_id are streamed to. When updating this field, an empty value will use the currently configured default branch. However, changing the default branch later on won't change the linked branch here. A single branch ID can only have one linked Merchant Center account ID.
 	BranchID *string `json:"branchId,omitempty"`
 	// Criteria for the Merchant Center feeds to be ingested via the link. All offers will be ingested if the list is empty. Otherwise the offers will be ingested from selected feeds.
 	FeedFilters []GoogleCloudRetailV2alphaMerchantCenterAccountLinkMerchantCenterFeedFilter `json:"feedFilters,omitempty"`

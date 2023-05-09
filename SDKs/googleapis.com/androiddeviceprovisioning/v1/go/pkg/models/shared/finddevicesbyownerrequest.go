@@ -16,21 +16,25 @@ const (
 	FindDevicesByOwnerRequestSectionTypeEnumSectionTypeZeroTouch   FindDevicesByOwnerRequestSectionTypeEnum = "SECTION_TYPE_ZERO_TOUCH"
 )
 
+func (e FindDevicesByOwnerRequestSectionTypeEnum) ToPointer() *FindDevicesByOwnerRequestSectionTypeEnum {
+	return &e
+}
+
 func (e *FindDevicesByOwnerRequestSectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SECTION_TYPE_SIM_LOCK":
 		fallthrough
 	case "SECTION_TYPE_ZERO_TOUCH":
-		*e = FindDevicesByOwnerRequestSectionTypeEnum(s)
+		*e = FindDevicesByOwnerRequestSectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindDevicesByOwnerRequestSectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FindDevicesByOwnerRequestSectionTypeEnum: %v", v)
 	}
 }
 

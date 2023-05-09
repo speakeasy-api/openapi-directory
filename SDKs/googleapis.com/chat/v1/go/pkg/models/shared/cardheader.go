@@ -16,21 +16,25 @@ const (
 	CardHeaderImageStyleEnumAvatar                CardHeaderImageStyleEnum = "AVATAR"
 )
 
+func (e CardHeaderImageStyleEnum) ToPointer() *CardHeaderImageStyleEnum {
+	return &e
+}
+
 func (e *CardHeaderImageStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMAGE_STYLE_UNSPECIFIED":
 		fallthrough
 	case "IMAGE":
 		fallthrough
 	case "AVATAR":
-		*e = CardHeaderImageStyleEnum(s)
+		*e = CardHeaderImageStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CardHeaderImageStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for CardHeaderImageStyleEnum: %v", v)
 	}
 }
 

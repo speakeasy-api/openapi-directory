@@ -14,18 +14,22 @@ const (
 	DisassociatedDataStorageStateEnumDisabled DisassociatedDataStorageStateEnum = "DISABLED"
 )
 
+func (e DisassociatedDataStorageStateEnum) ToPointer() *DisassociatedDataStorageStateEnum {
+	return &e
+}
+
 func (e *DisassociatedDataStorageStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = DisassociatedDataStorageStateEnum(s)
+		*e = DisassociatedDataStorageStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociatedDataStorageStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociatedDataStorageStateEnum: %v", v)
 	}
 }

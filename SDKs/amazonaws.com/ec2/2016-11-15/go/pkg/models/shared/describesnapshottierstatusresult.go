@@ -23,12 +23,16 @@ const (
 	DescribeSnapshotTierStatusResultSnapshotTierStatusesLastTieringOperationStatusEnumPermanentRestoreFailed     DescribeSnapshotTierStatusResultSnapshotTierStatusesLastTieringOperationStatusEnum = "permanent-restore-failed"
 )
 
+func (e DescribeSnapshotTierStatusResultSnapshotTierStatusesLastTieringOperationStatusEnum) ToPointer() *DescribeSnapshotTierStatusResultSnapshotTierStatusesLastTieringOperationStatusEnum {
+	return &e
+}
+
 func (e *DescribeSnapshotTierStatusResultSnapshotTierStatusesLastTieringOperationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "archival-in-progress":
 		fallthrough
 	case "archival-completed":
@@ -46,10 +50,10 @@ func (e *DescribeSnapshotTierStatusResultSnapshotTierStatusesLastTieringOperatio
 	case "permanent-restore-completed":
 		fallthrough
 	case "permanent-restore-failed":
-		*e = DescribeSnapshotTierStatusResultSnapshotTierStatusesLastTieringOperationStatusEnum(s)
+		*e = DescribeSnapshotTierStatusResultSnapshotTierStatusesLastTieringOperationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSnapshotTierStatusResultSnapshotTierStatusesLastTieringOperationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSnapshotTierStatusResultSnapshotTierStatusesLastTieringOperationStatusEnum: %v", v)
 	}
 }
 
@@ -64,12 +68,16 @@ const (
 	DescribeSnapshotTierStatusResultSnapshotTierStatusesStatusEnumRecovering  DescribeSnapshotTierStatusResultSnapshotTierStatusesStatusEnum = "recovering"
 )
 
+func (e DescribeSnapshotTierStatusResultSnapshotTierStatusesStatusEnum) ToPointer() *DescribeSnapshotTierStatusResultSnapshotTierStatusesStatusEnum {
+	return &e
+}
+
 func (e *DescribeSnapshotTierStatusResultSnapshotTierStatusesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "completed":
@@ -79,10 +87,10 @@ func (e *DescribeSnapshotTierStatusResultSnapshotTierStatusesStatusEnum) Unmarsh
 	case "recoverable":
 		fallthrough
 	case "recovering":
-		*e = DescribeSnapshotTierStatusResultSnapshotTierStatusesStatusEnum(s)
+		*e = DescribeSnapshotTierStatusResultSnapshotTierStatusesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSnapshotTierStatusResultSnapshotTierStatusesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSnapshotTierStatusResultSnapshotTierStatusesStatusEnum: %v", v)
 	}
 }
 
@@ -94,19 +102,23 @@ const (
 	DescribeSnapshotTierStatusResultSnapshotTierStatusesStorageTierEnumStandard DescribeSnapshotTierStatusResultSnapshotTierStatusesStorageTierEnum = "standard"
 )
 
+func (e DescribeSnapshotTierStatusResultSnapshotTierStatusesStorageTierEnum) ToPointer() *DescribeSnapshotTierStatusResultSnapshotTierStatusesStorageTierEnum {
+	return &e
+}
+
 func (e *DescribeSnapshotTierStatusResultSnapshotTierStatusesStorageTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "archive":
 		fallthrough
 	case "standard":
-		*e = DescribeSnapshotTierStatusResultSnapshotTierStatusesStorageTierEnum(s)
+		*e = DescribeSnapshotTierStatusResultSnapshotTierStatusesStorageTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSnapshotTierStatusResultSnapshotTierStatusesStorageTierEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSnapshotTierStatusResultSnapshotTierStatusesStorageTierEnum: %v", v)
 	}
 }
 

@@ -49,21 +49,25 @@ const (
 	PostVolumes201ApplicationJSONActionStatusEnumError   PostVolumes201ApplicationJSONActionStatusEnum = "error"
 )
 
+func (e PostVolumes201ApplicationJSONActionStatusEnum) ToPointer() *PostVolumes201ApplicationJSONActionStatusEnum {
+	return &e
+}
+
 func (e *PostVolumes201ApplicationJSONActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostVolumes201ApplicationJSONActionStatusEnum(s)
+		*e = PostVolumes201ApplicationJSONActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostVolumes201ApplicationJSONActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostVolumes201ApplicationJSONActionStatusEnum: %v", v)
 	}
 }
 
@@ -120,19 +124,23 @@ const (
 	PostVolumes201ApplicationJSONVolumeStatusEnumAvailable PostVolumes201ApplicationJSONVolumeStatusEnum = "available"
 )
 
+func (e PostVolumes201ApplicationJSONVolumeStatusEnum) ToPointer() *PostVolumes201ApplicationJSONVolumeStatusEnum {
+	return &e
+}
+
 func (e *PostVolumes201ApplicationJSONVolumeStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creating":
 		fallthrough
 	case "available":
-		*e = PostVolumes201ApplicationJSONVolumeStatusEnum(s)
+		*e = PostVolumes201ApplicationJSONVolumeStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostVolumes201ApplicationJSONVolumeStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostVolumes201ApplicationJSONVolumeStatusEnum: %v", v)
 	}
 }
 

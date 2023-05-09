@@ -15,17 +15,21 @@ const (
 	DescribeHostReservationsResultHostReservationSetCurrencyCodeEnumUsd DescribeHostReservationsResultHostReservationSetCurrencyCodeEnum = "USD"
 )
 
+func (e DescribeHostReservationsResultHostReservationSetCurrencyCodeEnum) ToPointer() *DescribeHostReservationsResultHostReservationSetCurrencyCodeEnum {
+	return &e
+}
+
 func (e *DescribeHostReservationsResultHostReservationSetCurrencyCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
-		*e = DescribeHostReservationsResultHostReservationSetCurrencyCodeEnum(s)
+		*e = DescribeHostReservationsResultHostReservationSetCurrencyCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHostReservationsResultHostReservationSetCurrencyCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHostReservationsResultHostReservationSetCurrencyCodeEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	DescribeHostReservationsResultHostReservationSetPaymentOptionEnumNoUpfront      DescribeHostReservationsResultHostReservationSetPaymentOptionEnum = "NoUpfront"
 )
 
+func (e DescribeHostReservationsResultHostReservationSetPaymentOptionEnum) ToPointer() *DescribeHostReservationsResultHostReservationSetPaymentOptionEnum {
+	return &e
+}
+
 func (e *DescribeHostReservationsResultHostReservationSetPaymentOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AllUpfront":
 		fallthrough
 	case "PartialUpfront":
 		fallthrough
 	case "NoUpfront":
-		*e = DescribeHostReservationsResultHostReservationSetPaymentOptionEnum(s)
+		*e = DescribeHostReservationsResultHostReservationSetPaymentOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHostReservationsResultHostReservationSetPaymentOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHostReservationsResultHostReservationSetPaymentOptionEnum: %v", v)
 	}
 }
 
@@ -66,12 +74,16 @@ const (
 	DescribeHostReservationsResultHostReservationSetStateEnumRetired        DescribeHostReservationsResultHostReservationSetStateEnum = "retired"
 )
 
+func (e DescribeHostReservationsResultHostReservationSetStateEnum) ToPointer() *DescribeHostReservationsResultHostReservationSetStateEnum {
+	return &e
+}
+
 func (e *DescribeHostReservationsResultHostReservationSetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "payment-pending":
 		fallthrough
 	case "payment-failed":
@@ -79,10 +91,10 @@ func (e *DescribeHostReservationsResultHostReservationSetStateEnum) UnmarshalJSO
 	case "active":
 		fallthrough
 	case "retired":
-		*e = DescribeHostReservationsResultHostReservationSetStateEnum(s)
+		*e = DescribeHostReservationsResultHostReservationSetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHostReservationsResultHostReservationSetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHostReservationsResultHostReservationSetStateEnum: %v", v)
 	}
 }
 

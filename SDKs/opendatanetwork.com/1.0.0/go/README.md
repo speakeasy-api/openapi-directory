@@ -13,27 +13,24 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/opendatanetwork.com/1.0.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateAMapRequest{
-        XAppToken: "corrupti",
-        AppToken: "provident",
-        Constraint: "distinctio",
+    ctx := context.Background()
+    res, err := s.CreateAMap(ctx, operations.CreateAMapRequest{
+        XAppToken: sdk.String("corrupti"),
+        AppToken: sdk.String("provident"),
+        Constraint: sdk.String("distinctio"),
         EntityID: "quibusdam",
         Variable: "unde",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateAMap(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,17 +45,17 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateAMap` - Create a map
-* `FindAllAvailableDataForSomeEntities` - Find all available data for some entities
-* `FindTheRelativesOfAnEntity` - Find the relatives of an entity
-* `GetEntities` - Get Entities
-* `GetConstraintPermutationsForEntities` - Get constraint permutations for entities
-* `GetDatasets` - Get datasets
-* `GetQuestions` - Get questions
-* `GetSuggestions` - Get suggestions
-* `GetValuesForVariables` - Get values for variables
+* [CreateAMap](docs/sdk/README.md#createamap) - Create a map
+* [FindAllAvailableDataForSomeEntities](docs/sdk/README.md#findallavailabledataforsomeentities) - Find all available data for some entities
+* [FindTheRelativesOfAnEntity](docs/sdk/README.md#findtherelativesofanentity) - Find the relatives of an entity
+* [GetEntities](docs/sdk/README.md#getentities) - Get Entities
+* [GetConstraintPermutationsForEntities](docs/sdk/README.md#getconstraintpermutationsforentities) - Get constraint permutations for entities
+* [GetDatasets](docs/sdk/README.md#getdatasets) - Get datasets
+* [GetQuestions](docs/sdk/README.md#getquestions) - Get questions
+* [GetSuggestions](docs/sdk/README.md#getsuggestions) - Get suggestions
+* [GetValuesForVariables](docs/sdk/README.md#getvaluesforvariables) - Get values for variables
 <!-- End SDK Available Operations -->
 
 ### Maturity

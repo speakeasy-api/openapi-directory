@@ -19,12 +19,16 @@ const (
 	StageSummaryStateEnumExecutionStateCancelled  StageSummaryStateEnum = "EXECUTION_STATE_CANCELLED"
 )
 
+func (e StageSummaryStateEnum) ToPointer() *StageSummaryStateEnum {
+	return &e
+}
+
 func (e *StageSummaryStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXECUTION_STATE_UNKNOWN":
 		fallthrough
 	case "EXECUTION_STATE_NOT_STARTED":
@@ -36,10 +40,10 @@ func (e *StageSummaryStateEnum) UnmarshalJSON(data []byte) error {
 	case "EXECUTION_STATE_FAILED":
 		fallthrough
 	case "EXECUTION_STATE_CANCELLED":
-		*e = StageSummaryStateEnum(s)
+		*e = StageSummaryStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StageSummaryStateEnum: %s", s)
+		return fmt.Errorf("invalid value for StageSummaryStateEnum: %v", v)
 	}
 }
 

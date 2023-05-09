@@ -17,19 +17,23 @@ const (
 	CreateApplicationRequestBodyTypeEnumMessages CreateApplicationRequestBodyTypeEnum = "messages"
 )
 
+func (e CreateApplicationRequestBodyTypeEnum) ToPointer() *CreateApplicationRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *CreateApplicationRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "voice":
 		fallthrough
 	case "messages":
-		*e = CreateApplicationRequestBodyTypeEnum(s)
+		*e = CreateApplicationRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateApplicationRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateApplicationRequestBodyTypeEnum: %v", v)
 	}
 }
 

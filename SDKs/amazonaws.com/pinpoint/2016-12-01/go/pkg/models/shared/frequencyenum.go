@@ -19,12 +19,16 @@ const (
 	FrequencyEnumInAppEvent FrequencyEnum = "IN_APP_EVENT"
 )
 
+func (e FrequencyEnum) ToPointer() *FrequencyEnum {
+	return &e
+}
+
 func (e *FrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONCE":
 		fallthrough
 	case "HOURLY":
@@ -38,9 +42,9 @@ func (e *FrequencyEnum) UnmarshalJSON(data []byte) error {
 	case "EVENT":
 		fallthrough
 	case "IN_APP_EVENT":
-		*e = FrequencyEnum(s)
+		*e = FrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for FrequencyEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	DetailTypeEnumFull  DetailTypeEnum = "FULL"
 )
 
+func (e DetailTypeEnum) ToPointer() *DetailTypeEnum {
+	return &e
+}
+
 func (e *DetailTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = DetailTypeEnum(s)
+		*e = DetailTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetailTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DetailTypeEnum: %v", v)
 	}
 }

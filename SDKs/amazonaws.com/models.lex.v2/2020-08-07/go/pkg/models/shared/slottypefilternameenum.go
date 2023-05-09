@@ -14,18 +14,22 @@ const (
 	SlotTypeFilterNameEnumExternalSourceType SlotTypeFilterNameEnum = "ExternalSourceType"
 )
 
+func (e SlotTypeFilterNameEnum) ToPointer() *SlotTypeFilterNameEnum {
+	return &e
+}
+
 func (e *SlotTypeFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SlotTypeName":
 		fallthrough
 	case "ExternalSourceType":
-		*e = SlotTypeFilterNameEnum(s)
+		*e = SlotTypeFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SlotTypeFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SlotTypeFilterNameEnum: %v", v)
 	}
 }

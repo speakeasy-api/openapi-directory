@@ -83,7 +83,10 @@ func (s *genres) GenresList(ctx context.Context, request operations.GenresListRe
 // GenresRead - Get details of the genre.
 func (s *genres) GenresRead(ctx context.Context, request operations.GenresReadRequest) (*operations.GenresReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/genres/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/genres/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

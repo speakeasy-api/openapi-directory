@@ -16,17 +16,21 @@ const (
 	ListMobileDeviceAccessOverridesXAmzTargetEnumWorkMailServiceListMobileDeviceAccessOverrides ListMobileDeviceAccessOverridesXAmzTargetEnum = "WorkMailService.ListMobileDeviceAccessOverrides"
 )
 
+func (e ListMobileDeviceAccessOverridesXAmzTargetEnum) ToPointer() *ListMobileDeviceAccessOverridesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListMobileDeviceAccessOverridesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.ListMobileDeviceAccessOverrides":
-		*e = ListMobileDeviceAccessOverridesXAmzTargetEnum(s)
+		*e = ListMobileDeviceAccessOverridesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListMobileDeviceAccessOverridesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListMobileDeviceAccessOverridesXAmzTargetEnum: %v", v)
 	}
 }
 

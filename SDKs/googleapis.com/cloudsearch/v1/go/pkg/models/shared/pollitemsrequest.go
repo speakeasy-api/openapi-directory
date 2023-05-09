@@ -17,12 +17,16 @@ const (
 	PollItemsRequestStatusCodesEnumAccepted        PollItemsRequestStatusCodesEnum = "ACCEPTED"
 )
 
+func (e PollItemsRequestStatusCodesEnum) ToPointer() *PollItemsRequestStatusCodesEnum {
+	return &e
+}
+
 func (e *PollItemsRequestStatusCodesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODE_UNSPECIFIED":
 		fallthrough
 	case "ERROR":
@@ -32,10 +36,10 @@ func (e *PollItemsRequestStatusCodesEnum) UnmarshalJSON(data []byte) error {
 	case "NEW_ITEM":
 		fallthrough
 	case "ACCEPTED":
-		*e = PollItemsRequestStatusCodesEnum(s)
+		*e = PollItemsRequestStatusCodesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PollItemsRequestStatusCodesEnum: %s", s)
+		return fmt.Errorf("invalid value for PollItemsRequestStatusCodesEnum: %v", v)
 	}
 }
 

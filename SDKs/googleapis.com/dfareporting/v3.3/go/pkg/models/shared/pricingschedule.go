@@ -17,21 +17,25 @@ const (
 	PricingScheduleCapCostOptionEnumCapCostCumulative PricingScheduleCapCostOptionEnum = "CAP_COST_CUMULATIVE"
 )
 
+func (e PricingScheduleCapCostOptionEnum) ToPointer() *PricingScheduleCapCostOptionEnum {
+	return &e
+}
+
 func (e *PricingScheduleCapCostOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAP_COST_NONE":
 		fallthrough
 	case "CAP_COST_MONTHLY":
 		fallthrough
 	case "CAP_COST_CUMULATIVE":
-		*e = PricingScheduleCapCostOptionEnum(s)
+		*e = PricingScheduleCapCostOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PricingScheduleCapCostOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PricingScheduleCapCostOptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	PricingSchedulePricingTypeEnumPricingTypeCpmActiveview       PricingSchedulePricingTypeEnum = "PRICING_TYPE_CPM_ACTIVEVIEW"
 )
 
+func (e PricingSchedulePricingTypeEnum) ToPointer() *PricingSchedulePricingTypeEnum {
+	return &e
+}
+
 func (e *PricingSchedulePricingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICING_TYPE_CPM":
 		fallthrough
 	case "PRICING_TYPE_CPC":
@@ -64,10 +72,10 @@ func (e *PricingSchedulePricingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PRICING_TYPE_FLAT_RATE_CLICKS":
 		fallthrough
 	case "PRICING_TYPE_CPM_ACTIVEVIEW":
-		*e = PricingSchedulePricingTypeEnum(s)
+		*e = PricingSchedulePricingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PricingSchedulePricingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PricingSchedulePricingTypeEnum: %v", v)
 	}
 }
 

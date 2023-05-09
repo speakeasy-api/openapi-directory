@@ -14,18 +14,22 @@ const (
 	CostCategoryRuleTypeEnumInheritedValue CostCategoryRuleTypeEnum = "INHERITED_VALUE"
 )
 
+func (e CostCategoryRuleTypeEnum) ToPointer() *CostCategoryRuleTypeEnum {
+	return &e
+}
+
 func (e *CostCategoryRuleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGULAR":
 		fallthrough
 	case "INHERITED_VALUE":
-		*e = CostCategoryRuleTypeEnum(s)
+		*e = CostCategoryRuleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CostCategoryRuleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CostCategoryRuleTypeEnum: %v", v)
 	}
 }

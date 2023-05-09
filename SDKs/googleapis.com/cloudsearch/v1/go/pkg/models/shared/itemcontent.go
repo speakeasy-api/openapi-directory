@@ -16,12 +16,16 @@ const (
 	ItemContentContentFormatEnumRaw         ItemContentContentFormatEnum = "RAW"
 )
 
+func (e ItemContentContentFormatEnum) ToPointer() *ItemContentContentFormatEnum {
+	return &e
+}
+
 func (e *ItemContentContentFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "HTML":
@@ -29,10 +33,10 @@ func (e *ItemContentContentFormatEnum) UnmarshalJSON(data []byte) error {
 	case "TEXT":
 		fallthrough
 	case "RAW":
-		*e = ItemContentContentFormatEnum(s)
+		*e = ItemContentContentFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItemContentContentFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ItemContentContentFormatEnum: %v", v)
 	}
 }
 

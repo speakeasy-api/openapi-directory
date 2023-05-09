@@ -15,17 +15,21 @@ const (
 	GETSetActiveReceiptRuleSetActionEnumSetActiveReceiptRuleSet GETSetActiveReceiptRuleSetActionEnum = "SetActiveReceiptRuleSet"
 )
 
+func (e GETSetActiveReceiptRuleSetActionEnum) ToPointer() *GETSetActiveReceiptRuleSetActionEnum {
+	return &e
+}
+
 func (e *GETSetActiveReceiptRuleSetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetActiveReceiptRuleSet":
-		*e = GETSetActiveReceiptRuleSetActionEnum(s)
+		*e = GETSetActiveReceiptRuleSetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetActiveReceiptRuleSetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetActiveReceiptRuleSetActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSetActiveReceiptRuleSetVersionEnumTwoThousandAndTen1201 GETSetActiveReceiptRuleSetVersionEnum = "2010-12-01"
 )
 
+func (e GETSetActiveReceiptRuleSetVersionEnum) ToPointer() *GETSetActiveReceiptRuleSetVersionEnum {
+	return &e
+}
+
 func (e *GETSetActiveReceiptRuleSetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETSetActiveReceiptRuleSetVersionEnum(s)
+		*e = GETSetActiveReceiptRuleSetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetActiveReceiptRuleSetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetActiveReceiptRuleSetVersionEnum: %v", v)
 	}
 }
 

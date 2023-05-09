@@ -17,12 +17,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingNegativeGeoTargetTypeEnumPresence           GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingNegativeGeoTargetTypeEnum = "PRESENCE"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingNegativeGeoTargetTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingNegativeGeoTargetTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingNegativeGeoTargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -30,10 +34,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingNegativeGeo
 	case "PRESENCE_OR_INTEREST":
 		fallthrough
 	case "PRESENCE":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingNegativeGeoTargetTypeEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingNegativeGeoTargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingNegativeGeoTargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingNegativeGeoTargetTypeEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingPositiveGeoTargetTypeEnumPresence           GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingPositiveGeoTargetTypeEnum = "PRESENCE"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingPositiveGeoTargetTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingPositiveGeoTargetTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingPositiveGeoTargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -63,10 +71,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingPositiveGeo
 	case "SEARCH_INTEREST":
 		fallthrough
 	case "PRESENCE":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingPositiveGeoTargetTypeEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingPositiveGeoTargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingPositiveGeoTargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSettingPositiveGeoTargetTypeEnum: %v", v)
 	}
 }
 

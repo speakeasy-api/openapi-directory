@@ -21,12 +21,16 @@ const (
 	ImageCreateResultStatusEnumErrorUnknown        ImageCreateResultStatusEnum = "ErrorUnknown"
 )
 
+func (e ImageCreateResultStatusEnum) ToPointer() *ImageCreateResultStatusEnum {
+	return &e
+}
+
 func (e *ImageCreateResultStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "OKDuplicate":
@@ -44,10 +48,10 @@ func (e *ImageCreateResultStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ErrorTagLimitExceed":
 		fallthrough
 	case "ErrorUnknown":
-		*e = ImageCreateResultStatusEnum(s)
+		*e = ImageCreateResultStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageCreateResultStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageCreateResultStatusEnum: %v", v)
 	}
 }
 

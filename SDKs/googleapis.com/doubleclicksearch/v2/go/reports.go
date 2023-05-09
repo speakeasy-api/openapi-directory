@@ -90,7 +90,10 @@ func (s *reports) DoubleclicksearchReportsGenerate(ctx context.Context, request 
 // DoubleclicksearchReportsGet - Polls for the status of a report request.
 func (s *reports) DoubleclicksearchReportsGet(ctx context.Context, request operations.DoubleclicksearchReportsGetRequest, security operations.DoubleclicksearchReportsGetSecurity) (*operations.DoubleclicksearchReportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/reports/{reportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/reports/{reportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *reports) DoubleclicksearchReportsGet(ctx context.Context, request opera
 // DoubleclicksearchReportsGetFile - Downloads a report file encoded in UTF-8.
 func (s *reports) DoubleclicksearchReportsGetFile(ctx context.Context, request operations.DoubleclicksearchReportsGetFileRequest, security operations.DoubleclicksearchReportsGetFileSecurity) (*operations.DoubleclicksearchReportsGetFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/reports/{reportId}/files/{reportFragment}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/reports/{reportId}/files/{reportFragment}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,7 +183,10 @@ func (s *reports) DoubleclicksearchReportsGetFile(ctx context.Context, request o
 // DoubleclicksearchReportsGetIDMappingFile - Downloads a csv file(encoded in UTF-8) that contains ID mappings between legacy SA360 and new SA360. The file includes all children entities of the given advertiser(e.g. engine accounts, campaigns, ad groups, etc.) that exist in both legacy SA360 and new SA360.
 func (s *reports) DoubleclicksearchReportsGetIDMappingFile(ctx context.Context, request operations.DoubleclicksearchReportsGetIDMappingFileRequest, security operations.DoubleclicksearchReportsGetIDMappingFileSecurity) (*operations.DoubleclicksearchReportsGetIDMappingFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/idmapping", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/idmapping", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

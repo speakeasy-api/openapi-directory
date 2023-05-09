@@ -17,12 +17,16 @@ const (
 	EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnumDependentOnDayOfWeek EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum) ToPointer() *EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum {
+	return &e
+}
+
 func (e *EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum) Unmar
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum(s)
+		*e = EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnumDependentOnDayOfWeek EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum) ToPointer() *EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum {
+	return &e
+}
+
 func (e *EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum) UnmarshalJSON
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum(s)
+		*e = EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnumDependentOnDayOfWeek EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum) ToPointer() *EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum {
+	return &e
+}
+
 func (e *EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum) Unmars
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum(s)
+		*e = EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnumDependentOnDayOfWeek EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum) ToPointer() *EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum {
+	return &e
+}
+
 func (e *EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum) Unmar
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum(s)
+		*e = EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnumDependentOnDayOfWeek EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum) ToPointer() *EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum {
+	return &e
+}
+
 func (e *EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum) Unmarsha
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum(s)
+		*e = EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnumDependentOnDayOfWeek EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum) ToPointer() *EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum {
+	return &e
+}
+
 func (e *EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum) UnmarshalJSON(
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum(s)
+		*e = EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum: %v", v)
 	}
 }
 

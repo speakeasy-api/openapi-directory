@@ -20,12 +20,16 @@ const (
 	WmxSitemapTypeEnumOceanfront     WmxSitemapTypeEnum = "OCEANFRONT"
 )
 
+func (e WmxSitemapTypeEnum) ToPointer() *WmxSitemapTypeEnum {
+	return &e
+}
+
 func (e *WmxSitemapTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_SITEMAP":
 		fallthrough
 	case "URL_LIST":
@@ -39,10 +43,10 @@ func (e *WmxSitemapTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PATTERN_SITEMAP":
 		fallthrough
 	case "OCEANFRONT":
-		*e = WmxSitemapTypeEnum(s)
+		*e = WmxSitemapTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WmxSitemapTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WmxSitemapTypeEnum: %v", v)
 	}
 }
 

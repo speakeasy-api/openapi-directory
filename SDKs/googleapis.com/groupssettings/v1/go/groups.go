@@ -34,7 +34,10 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GroupsSettingsGroupsGet - Gets one resource by id.
 func (s *groups) GroupsSettingsGroupsGet(ctx context.Context, request operations.GroupsSettingsGroupsGetRequest, security operations.GroupsSettingsGroupsGetSecurity) (*operations.GroupsSettingsGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{groupUniqueId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{groupUniqueId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *groups) GroupsSettingsGroupsGet(ctx context.Context, request operations
 // GroupsSettingsGroupsPatch - Updates an existing resource. This method supports patch semantics.
 func (s *groups) GroupsSettingsGroupsPatch(ctx context.Context, request operations.GroupsSettingsGroupsPatchRequest, security operations.GroupsSettingsGroupsPatchSecurity) (*operations.GroupsSettingsGroupsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{groupUniqueId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{groupUniqueId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Groups", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *groups) GroupsSettingsGroupsPatch(ctx context.Context, request operatio
 // GroupsSettingsGroupsUpdate - Updates an existing resource.
 func (s *groups) GroupsSettingsGroupsUpdate(ctx context.Context, request operations.GroupsSettingsGroupsUpdateRequest, security operations.GroupsSettingsGroupsUpdateSecurity) (*operations.GroupsSettingsGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{groupUniqueId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{groupUniqueId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Groups", "json")
 	if err != nil {

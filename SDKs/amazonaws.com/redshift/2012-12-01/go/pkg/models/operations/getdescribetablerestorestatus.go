@@ -15,17 +15,21 @@ const (
 	GETDescribeTableRestoreStatusActionEnumDescribeTableRestoreStatus GETDescribeTableRestoreStatusActionEnum = "DescribeTableRestoreStatus"
 )
 
+func (e GETDescribeTableRestoreStatusActionEnum) ToPointer() *GETDescribeTableRestoreStatusActionEnum {
+	return &e
+}
+
 func (e *GETDescribeTableRestoreStatusActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeTableRestoreStatus":
-		*e = GETDescribeTableRestoreStatusActionEnum(s)
+		*e = GETDescribeTableRestoreStatusActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeTableRestoreStatusActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeTableRestoreStatusActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeTableRestoreStatusVersionEnumTwoThousandAndTwelve1201 GETDescribeTableRestoreStatusVersionEnum = "2012-12-01"
 )
 
+func (e GETDescribeTableRestoreStatusVersionEnum) ToPointer() *GETDescribeTableRestoreStatusVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeTableRestoreStatusVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETDescribeTableRestoreStatusVersionEnum(s)
+		*e = GETDescribeTableRestoreStatusVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeTableRestoreStatusVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeTableRestoreStatusVersionEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	RiskEnumNotApplicable RiskEnum = "NOT_APPLICABLE"
 )
 
+func (e RiskEnum) ToPointer() *RiskEnum {
+	return &e
+}
+
 func (e *RiskEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNANSWERED":
 		fallthrough
 	case "HIGH":
@@ -33,9 +37,9 @@ func (e *RiskEnum) UnmarshalJSON(data []byte) error {
 	case "NONE":
 		fallthrough
 	case "NOT_APPLICABLE":
-		*e = RiskEnum(s)
+		*e = RiskEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RiskEnum: %s", s)
+		return fmt.Errorf("invalid value for RiskEnum: %v", v)
 	}
 }

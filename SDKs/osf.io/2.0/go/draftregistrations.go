@@ -43,7 +43,10 @@ func newDraftRegistrations(defaultClient, securityClient HTTPClient, serverURL, 
 // If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes]() to understand why this request may have failed.
 func (s *draftRegistrations) DeleteDraftRegistrationsDraftID(ctx context.Context, request operations.DeleteDraftRegistrationsDraftIDRequest) (*operations.DeleteDraftRegistrationsDraftIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -88,7 +91,10 @@ func (s *draftRegistrations) DeleteDraftRegistrationsDraftID(ctx context.Context
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *draftRegistrations) DraftRegistrationContributorsCreate(ctx context.Context, request operations.DraftRegistrationContributorsCreateRequest) (*operations.DraftRegistrationContributorsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/contributors/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/contributors/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -136,7 +142,10 @@ func (s *draftRegistrations) DraftRegistrationContributorsCreate(ctx context.Con
 // Contributors are categorized as either "bibliographic" or "non-bibliographic". From a permissions standpoint, both are the same, but bibliographic contributors are included in citations and are listed on the project overview page on the OSF, while non-bibliographic contributors are not.
 func (s *draftRegistrations) DraftRegistrationContributorsList(ctx context.Context, request operations.DraftRegistrationContributorsListRequest) (*operations.DraftRegistrationContributorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/contributors/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/contributors/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -299,7 +308,10 @@ func (s *draftRegistrations) DraftRegistrationsRead(ctx context.Context) (*opera
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *draftRegistrations) GetDraftRegistrationsDraftID(ctx context.Context, request operations.GetDraftRegistrationsDraftIDRequest) (*operations.GetDraftRegistrationsDraftIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -348,7 +360,10 @@ func (s *draftRegistrations) GetDraftRegistrationsDraftID(ctx context.Context, r
 // Contributors are categorized as either "bibliographic" or "non-bibliographic". From a permissions standpoint, both are the same, but bibliographic contributors are included in citations and are listed on the project overview page on the OSF, while non-bibliographic contributors are not.
 func (s *draftRegistrations) GetDraftRegistrationsDraftIDContributorsUserID(ctx context.Context, request operations.GetDraftRegistrationsDraftIDContributorsUserIDRequest) (*operations.GetDraftRegistrationsDraftIDContributorsUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/contributors/{user_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/contributors/{user_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -384,7 +399,10 @@ func (s *draftRegistrations) GetDraftRegistrationsDraftIDContributorsUserID(ctx 
 // Once a properly authenticated user has marked their registration as affiliated with an institution, that institution and any others added will appear in this list.
 func (s *draftRegistrations) GetDraftRegistrationsDraftIDInstitutions(ctx context.Context, request operations.GetDraftRegistrationsDraftIDInstitutionsRequest) (*operations.GetDraftRegistrationsDraftIDInstitutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/institutions/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/institutions/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -438,7 +456,10 @@ func (s *draftRegistrations) GetDraftRegistrationsDraftIDInstitutions(ctx contex
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *draftRegistrations) NodesDraftRegistrationsRead(ctx context.Context, request operations.NodesDraftRegistrationsReadRequest) (*operations.NodesDraftRegistrationsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/draft_registrations/{draft_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/draft_registrations/{draft_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -483,7 +504,10 @@ func (s *draftRegistrations) NodesDraftRegistrationsRead(ctx context.Context, re
 // This retrieves a list of subjects associated with a Draft Registration. Subjects are formatted here in a flat paginated list, but are hierarchical and nested by specificity of subject matter.
 func (s *draftRegistrations) NodesDraftRegistrationsSubjects(ctx context.Context, request operations.NodesDraftRegistrationsSubjectsRequest) (*operations.NodesDraftRegistrationsSubjectsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/subjects/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/subjects/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -533,7 +557,10 @@ func (s *draftRegistrations) NodesDraftRegistrationsSubjects(ctx context.Context
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *draftRegistrations) PatchDraftRegistrationsDraftID(ctx context.Context, request operations.PatchDraftRegistrationsDraftIDRequest) (*operations.PatchDraftRegistrationsDraftIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/draft_registrations/{draft_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

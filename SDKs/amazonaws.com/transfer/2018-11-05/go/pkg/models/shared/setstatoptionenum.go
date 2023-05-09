@@ -14,18 +14,22 @@ const (
 	SetStatOptionEnumEnableNoOp SetStatOptionEnum = "ENABLE_NO_OP"
 )
 
+func (e SetStatOptionEnum) ToPointer() *SetStatOptionEnum {
+	return &e
+}
+
 func (e *SetStatOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "ENABLE_NO_OP":
-		*e = SetStatOptionEnum(s)
+		*e = SetStatOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetStatOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SetStatOptionEnum: %v", v)
 	}
 }

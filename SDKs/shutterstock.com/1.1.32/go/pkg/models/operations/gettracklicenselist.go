@@ -23,21 +23,25 @@ const (
 	GetTrackLicenseListDownloadAvailabilityEnumNonDownloadable GetTrackLicenseListDownloadAvailabilityEnum = "non_downloadable"
 )
 
+func (e GetTrackLicenseListDownloadAvailabilityEnum) ToPointer() *GetTrackLicenseListDownloadAvailabilityEnum {
+	return &e
+}
+
 func (e *GetTrackLicenseListDownloadAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "downloadable":
 		fallthrough
 	case "non_downloadable":
-		*e = GetTrackLicenseListDownloadAvailabilityEnum(s)
+		*e = GetTrackLicenseListDownloadAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTrackLicenseListDownloadAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTrackLicenseListDownloadAvailabilityEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	GetTrackLicenseListSortEnumOldest GetTrackLicenseListSortEnum = "oldest"
 )
 
+func (e GetTrackLicenseListSortEnum) ToPointer() *GetTrackLicenseListSortEnum {
+	return &e
+}
+
 func (e *GetTrackLicenseListSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "oldest":
-		*e = GetTrackLicenseListSortEnum(s)
+		*e = GetTrackLicenseListSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTrackLicenseListSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTrackLicenseListSortEnum: %v", v)
 	}
 }
 

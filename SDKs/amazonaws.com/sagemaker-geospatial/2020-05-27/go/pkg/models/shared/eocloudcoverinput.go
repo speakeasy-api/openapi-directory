@@ -2,7 +2,7 @@
 
 package shared
 
-// EoCloudCoverInput - <p/>
+// EoCloudCoverInput - The structure representing the EoCloudCover filter.
 type EoCloudCoverInput struct {
 	LowerBound float32 `json:"LowerBound"`
 	UpperBound float32 `json:"UpperBound"`

@@ -17,19 +17,23 @@ const (
 	UpcomingScheduleByPlayerFormatEnumJSON UpcomingScheduleByPlayerFormatEnum = "json"
 )
 
+func (e UpcomingScheduleByPlayerFormatEnum) ToPointer() *UpcomingScheduleByPlayerFormatEnum {
+	return &e
+}
+
 func (e *UpcomingScheduleByPlayerFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xml":
 		fallthrough
 	case "json":
-		*e = UpcomingScheduleByPlayerFormatEnum(s)
+		*e = UpcomingScheduleByPlayerFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpcomingScheduleByPlayerFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for UpcomingScheduleByPlayerFormatEnum: %v", v)
 	}
 }
 

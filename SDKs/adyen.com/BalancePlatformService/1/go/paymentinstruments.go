@@ -36,7 +36,10 @@ func newPaymentInstruments(defaultClient, securityClient HTTPClient, serverURL, 
 // Returns the details of a payment instrument.
 func (s *paymentInstruments) GetPaymentInstrumentsID(ctx context.Context, request operations.GetPaymentInstrumentsIDRequest, security operations.GetPaymentInstrumentsIDSecurity) (*operations.GetPaymentInstrumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -95,11 +98,18 @@ func (s *paymentInstruments) GetPaymentInstrumentsID(ctx context.Context, reques
 	return res, nil
 }
 
-// GetPaymentInstrumentsIDReveal - Get the reveal information of a payment instrument
-// Returns the reveal information of a payment instrument.
+// GetPaymentInstrumentsIDReveal - Get the PAN of a payment instrument
+// Returns the primary account number (PAN) of a payment instrument.
+//
+// To make this request, your API credential must have the following [role](https://docs.adyen.com/issuing/manage-access/api-credentials-web-service#api-permissions):
+//
+// * Balance Platform BCL PCI role
 func (s *paymentInstruments) GetPaymentInstrumentsIDReveal(ctx context.Context, request operations.GetPaymentInstrumentsIDRevealRequest, security operations.GetPaymentInstrumentsIDRevealSecurity) (*operations.GetPaymentInstrumentsIDRevealResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}/reveal", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}/reveal", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -162,7 +172,10 @@ func (s *paymentInstruments) GetPaymentInstrumentsIDReveal(ctx context.Context, 
 // Returns a list of transaction rules associated with a payment instrument.
 func (s *paymentInstruments) GetPaymentInstrumentsIDTransactionRules(ctx context.Context, request operations.GetPaymentInstrumentsIDTransactionRulesRequest, security operations.GetPaymentInstrumentsIDTransactionRulesSecurity) (*operations.GetPaymentInstrumentsIDTransactionRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}/transactionRules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}/transactionRules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +238,10 @@ func (s *paymentInstruments) GetPaymentInstrumentsIDTransactionRules(ctx context
 // Updates a payment instrument. Once a payment instrument is already active, you can only update its status. However, for cards created with **inactive** status, you can still update the balance account associated with the card.
 func (s *paymentInstruments) PatchPaymentInstrumentsID(ctx context.Context, request operations.PatchPaymentInstrumentsIDRequest, security operations.PatchPaymentInstrumentsIDSecurity) (*operations.PatchPaymentInstrumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentInstrumentUpdateRequest", "json")
 	if err != nil {

@@ -23,12 +23,16 @@ const (
 	GetContentAspectIDAspectIDEnumArchOic  GetContentAspectIDAspectIDEnum = "arch_oic"
 )
 
+func (e GetContentAspectIDAspectIDEnum) ToPointer() *GetContentAspectIDAspectIDEnum {
+	return &e
+}
+
 func (e *GetContentAspectIDAspectIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "complete":
 		fallthrough
 	case "corpreg":
@@ -46,10 +50,10 @@ func (e *GetContentAspectIDAspectIDEnum) UnmarshalJSON(data []byte) error {
 	case "hscr":
 		fallthrough
 	case "arch_oic":
-		*e = GetContentAspectIDAspectIDEnum(s)
+		*e = GetContentAspectIDAspectIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetContentAspectIDAspectIDEnum: %s", s)
+		return fmt.Errorf("invalid value for GetContentAspectIDAspectIDEnum: %v", v)
 	}
 }
 

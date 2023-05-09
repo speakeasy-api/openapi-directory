@@ -19,12 +19,16 @@ const (
 	MetricFormattingTypeEnumTime                  MetricFormattingTypeEnum = "TIME"
 )
 
+func (e MetricFormattingTypeEnum) ToPointer() *MetricFormattingTypeEnum {
+	return &e
+}
+
 func (e *MetricFormattingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INTEGER":
@@ -36,10 +40,10 @@ func (e *MetricFormattingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PERCENT":
 		fallthrough
 	case "TIME":
-		*e = MetricFormattingTypeEnum(s)
+		*e = MetricFormattingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricFormattingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricFormattingTypeEnum: %v", v)
 	}
 }
 

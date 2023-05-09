@@ -16,17 +16,21 @@ const (
 	DeregisterMailDomainXAmzTargetEnumWorkMailServiceDeregisterMailDomain DeregisterMailDomainXAmzTargetEnum = "WorkMailService.DeregisterMailDomain"
 )
 
+func (e DeregisterMailDomainXAmzTargetEnum) ToPointer() *DeregisterMailDomainXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeregisterMailDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.DeregisterMailDomain":
-		*e = DeregisterMailDomainXAmzTargetEnum(s)
+		*e = DeregisterMailDomainXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeregisterMailDomainXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeregisterMailDomainXAmzTargetEnum: %v", v)
 	}
 }
 

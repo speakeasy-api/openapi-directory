@@ -16,17 +16,21 @@ const (
 	DeleteEndpointGroupXAmzTargetEnumGlobalAcceleratorV20180706DeleteEndpointGroup DeleteEndpointGroupXAmzTargetEnum = "GlobalAccelerator_V20180706.DeleteEndpointGroup"
 )
 
+func (e DeleteEndpointGroupXAmzTargetEnum) ToPointer() *DeleteEndpointGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteEndpointGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.DeleteEndpointGroup":
-		*e = DeleteEndpointGroupXAmzTargetEnum(s)
+		*e = DeleteEndpointGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteEndpointGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteEndpointGroupXAmzTargetEnum: %v", v)
 	}
 }
 

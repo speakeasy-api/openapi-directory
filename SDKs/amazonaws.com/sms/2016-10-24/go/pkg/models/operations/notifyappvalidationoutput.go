@@ -16,17 +16,21 @@ const (
 	NotifyAppValidationOutputXAmzTargetEnumAwsServerMigrationServiceV20161024NotifyAppValidationOutput NotifyAppValidationOutputXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.NotifyAppValidationOutput"
 )
 
+func (e NotifyAppValidationOutputXAmzTargetEnum) ToPointer() *NotifyAppValidationOutputXAmzTargetEnum {
+	return &e
+}
+
 func (e *NotifyAppValidationOutputXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.NotifyAppValidationOutput":
-		*e = NotifyAppValidationOutputXAmzTargetEnum(s)
+		*e = NotifyAppValidationOutputXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotifyAppValidationOutputXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for NotifyAppValidationOutputXAmzTargetEnum: %v", v)
 	}
 }
 

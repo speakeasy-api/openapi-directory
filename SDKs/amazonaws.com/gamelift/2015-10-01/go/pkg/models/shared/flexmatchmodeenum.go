@@ -14,18 +14,22 @@ const (
 	FlexMatchModeEnumWithQueue  FlexMatchModeEnum = "WITH_QUEUE"
 )
 
+func (e FlexMatchModeEnum) ToPointer() *FlexMatchModeEnum {
+	return &e
+}
+
 func (e *FlexMatchModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDALONE":
 		fallthrough
 	case "WITH_QUEUE":
-		*e = FlexMatchModeEnum(s)
+		*e = FlexMatchModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlexMatchModeEnum: %s", s)
+		return fmt.Errorf("invalid value for FlexMatchModeEnum: %v", v)
 	}
 }

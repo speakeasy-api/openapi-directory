@@ -16,21 +16,25 @@ const (
 	EkmConnectionKeyManagementModeEnumCloudKms                     EkmConnectionKeyManagementModeEnum = "CLOUD_KMS"
 )
 
+func (e EkmConnectionKeyManagementModeEnum) ToPointer() *EkmConnectionKeyManagementModeEnum {
+	return &e
+}
+
 func (e *EkmConnectionKeyManagementModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KEY_MANAGEMENT_MODE_UNSPECIFIED":
 		fallthrough
 	case "MANUAL":
 		fallthrough
 	case "CLOUD_KMS":
-		*e = EkmConnectionKeyManagementModeEnum(s)
+		*e = EkmConnectionKeyManagementModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EkmConnectionKeyManagementModeEnum: %s", s)
+		return fmt.Errorf("invalid value for EkmConnectionKeyManagementModeEnum: %v", v)
 	}
 }
 

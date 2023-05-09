@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,37 +17,35 @@ func main() {
         }),
     )
 
-    req := operations.AssociateEntitiesToExperienceRequest{
+    ctx := context.Background()
+    res, err := s.AssociateEntitiesToExperience(ctx, operations.AssociateEntitiesToExperienceRequest{
         AssociateEntitiesToExperienceRequest: shared.AssociateEntitiesToExperienceRequest{
             EntityList: []shared.EntityConfiguration{
                 shared.EntityConfiguration{
                     EntityID: "provident",
-                    EntityType: "GROUP",
+                    EntityType: shared.EntityTypeEnumGroup,
                 },
                 shared.EntityConfiguration{
                     EntityID: "quibusdam",
-                    EntityType: "GROUP",
+                    EntityType: shared.EntityTypeEnumGroup,
                 },
                 shared.EntityConfiguration{
                     EntityID: "nulla",
-                    EntityType: "GROUP",
+                    EntityType: shared.EntityTypeEnumGroup,
                 },
             },
-            ID: "illum",
-            IndexID: "vel",
+            ID: "d69a674e-0f46-47cc-8796-ed151a05dfc2",
+            IndexID: "at",
         },
-        XAmzAlgorithm: "error",
-        XAmzContentSha256: "deserunt",
-        XAmzCredential: "suscipit",
-        XAmzDate: "iure",
-        XAmzSecurityToken: "magnam",
-        XAmzSignature: "debitis",
-        XAmzSignedHeaders: "ipsa",
-        XAmzTarget: "AWSKendraFrontendService.AssociateEntitiesToExperience",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateEntitiesToExperience(ctx, req)
+        XAmzAlgorithm: sdk.String("at"),
+        XAmzContentSha256: sdk.String("maiores"),
+        XAmzCredential: sdk.String("molestiae"),
+        XAmzDate: sdk.String("quod"),
+        XAmzSecurityToken: sdk.String("quod"),
+        XAmzSignature: sdk.String("esse"),
+        XAmzSignedHeaders: sdk.String("totam"),
+        XAmzTarget: operations.AssociateEntitiesToExperienceXAmzTargetEnumAwsKendraFrontendServiceAssociateEntitiesToExperience,
+    })
     if err != nil {
         log.Fatal(err)
     }

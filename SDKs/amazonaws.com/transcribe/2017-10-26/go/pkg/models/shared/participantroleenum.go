@@ -14,18 +14,22 @@ const (
 	ParticipantRoleEnumCustomer ParticipantRoleEnum = "CUSTOMER"
 )
 
+func (e ParticipantRoleEnum) ToPointer() *ParticipantRoleEnum {
+	return &e
+}
+
 func (e *ParticipantRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGENT":
 		fallthrough
 	case "CUSTOMER":
-		*e = ParticipantRoleEnum(s)
+		*e = ParticipantRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParticipantRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for ParticipantRoleEnum: %v", v)
 	}
 }

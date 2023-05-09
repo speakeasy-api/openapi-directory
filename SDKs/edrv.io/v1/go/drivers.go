@@ -34,7 +34,10 @@ func newDrivers(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DeleteDriver - Delete a driver
 func (s *drivers) DeleteDriver(ctx context.Context, request operations.DeleteDriverRequest) (*operations.DeleteDriverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/drivers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/drivers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,7 +72,10 @@ func (s *drivers) DeleteDriver(ctx context.Context, request operations.DeleteDri
 // GetDriver - Get a driver's data
 func (s *drivers) GetDriver(ctx context.Context, request operations.GetDriverRequest) (*operations.GetDriverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/drivers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/drivers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -157,7 +163,10 @@ func (s *drivers) GetDrivers(ctx context.Context, request operations.GetDriversR
 // PatchDriver - Update a driver's data
 func (s *drivers) PatchDriver(ctx context.Context, request operations.PatchDriverRequest) (*operations.PatchDriverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/drivers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/drivers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

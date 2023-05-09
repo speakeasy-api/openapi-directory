@@ -17,19 +17,23 @@ const (
 	AddWebhookAddWebhookRequestBodyResponseVersionEnumV2 AddWebhookAddWebhookRequestBodyResponseVersionEnum = "v2"
 )
 
+func (e AddWebhookAddWebhookRequestBodyResponseVersionEnum) ToPointer() *AddWebhookAddWebhookRequestBodyResponseVersionEnum {
+	return &e
+}
+
 func (e *AddWebhookAddWebhookRequestBodyResponseVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "v1":
 		fallthrough
 	case "v2":
-		*e = AddWebhookAddWebhookRequestBodyResponseVersionEnum(s)
+		*e = AddWebhookAddWebhookRequestBodyResponseVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddWebhookAddWebhookRequestBodyResponseVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for AddWebhookAddWebhookRequestBodyResponseVersionEnum: %v", v)
 	}
 }
 

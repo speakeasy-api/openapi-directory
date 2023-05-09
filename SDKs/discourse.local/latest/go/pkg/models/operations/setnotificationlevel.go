@@ -17,12 +17,16 @@ const (
 	SetNotificationLevelRequestBodyNotificationLevelEnumThree SetNotificationLevelRequestBodyNotificationLevelEnum = "3"
 )
 
+func (e SetNotificationLevelRequestBodyNotificationLevelEnum) ToPointer() *SetNotificationLevelRequestBodyNotificationLevelEnum {
+	return &e
+}
+
 func (e *SetNotificationLevelRequestBodyNotificationLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "0":
 		fallthrough
 	case "1":
@@ -30,10 +34,10 @@ func (e *SetNotificationLevelRequestBodyNotificationLevelEnum) UnmarshalJSON(dat
 	case "2":
 		fallthrough
 	case "3":
-		*e = SetNotificationLevelRequestBodyNotificationLevelEnum(s)
+		*e = SetNotificationLevelRequestBodyNotificationLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetNotificationLevelRequestBodyNotificationLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for SetNotificationLevelRequestBodyNotificationLevelEnum: %v", v)
 	}
 }
 

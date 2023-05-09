@@ -16,17 +16,21 @@ const (
 	StopRemoteAccessSessionXAmzTargetEnumDeviceFarm20150623StopRemoteAccessSession StopRemoteAccessSessionXAmzTargetEnum = "DeviceFarm_20150623.StopRemoteAccessSession"
 )
 
+func (e StopRemoteAccessSessionXAmzTargetEnum) ToPointer() *StopRemoteAccessSessionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopRemoteAccessSessionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.StopRemoteAccessSession":
-		*e = StopRemoteAccessSessionXAmzTargetEnum(s)
+		*e = StopRemoteAccessSessionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopRemoteAccessSessionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopRemoteAccessSessionXAmzTargetEnum: %v", v)
 	}
 }
 

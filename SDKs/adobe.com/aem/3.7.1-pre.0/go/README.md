@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adobe.com/aem/3.7.1-pre.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -46,71 +44,71 @@ func main() {
 ## Available Resources and Operations
 
 
-### Console
+### [Console](docs/console/README.md)
 
-* `GetAemProductInfo`
-* `GetBundleInfo`
-* `GetConfigMgr`
-* `PostBundle`
-* `PostJmxRepository`
-* `PostSamlConfiguration`
+* [GetAemProductInfo](docs/console/README.md#getaemproductinfo)
+* [GetBundleInfo](docs/console/README.md#getbundleinfo)
+* [GetConfigMgr](docs/console/README.md#getconfigmgr)
+* [PostBundle](docs/console/README.md#postbundle)
+* [PostJmxRepository](docs/console/README.md#postjmxrepository)
+* [PostSamlConfiguration](docs/console/README.md#postsamlconfiguration)
 
-### Cq
+### [Cq](docs/cq/README.md)
 
-* `GetLoginPage`
-* `PostCqActions`
+* [GetLoginPage](docs/cq/README.md#getloginpage)
+* [PostCqActions](docs/cq/README.md#postcqactions)
 
-### Crx
+### [Crx](docs/crx/README.md)
 
-* `GetCrxdeStatus`
-* `GetInstallStatus`
-* `GetPackageManagerServlet`
-* `PostPackageService`
-* `PostPackageServiceJSON`
-* `PostPackageUpdate`
-* `PostSetPassword`
+* [GetCrxdeStatus](docs/crx/README.md#getcrxdestatus)
+* [GetInstallStatus](docs/crx/README.md#getinstallstatus)
+* [GetPackageManagerServlet](docs/crx/README.md#getpackagemanagerservlet)
+* [PostPackageService](docs/crx/README.md#postpackageservice)
+* [PostPackageServiceJSON](docs/crx/README.md#postpackageservicejson)
+* [PostPackageUpdate](docs/crx/README.md#postpackageupdate)
+* [PostSetPassword](docs/crx/README.md#postsetpassword)
 
-### Custom
+### [Custom](docs/custom/README.md)
 
-* `GetAemHealthCheck`
-* `PostConfigAemHealthCheckServlet`
-* `PostConfigAemPasswordReset`
+* [GetAemHealthCheck](docs/custom/README.md#getaemhealthcheck)
+* [PostConfigAemHealthCheckServlet](docs/custom/README.md#postconfigaemhealthcheckservlet)
+* [PostConfigAemPasswordReset](docs/custom/README.md#postconfigaempasswordreset)
 
-### Granite
+### [Granite](docs/granite/README.md)
 
-* `SslSetup`
+* [SslSetup](docs/granite/README.md#sslsetup)
 
-### Sling
+### [Sling](docs/sling/README.md)
 
-* `DeleteAgent`
-* `DeleteNode`
-* `GetAgent`
-* `GetAgents`
-* `GetAuthorizableKeystore`
-* `GetKeystore`
-* `GetNode`
-* `GetPackage`
-* `GetPackageFilter`
-* `GetQuery`
-* `GetTruststore`
-* `GetTruststoreInfo`
-* `PostAgent`
-* `PostAuthorizableKeystore`
-* `PostAuthorizables`
-* `PostConfigAdobeGraniteSamlAuthenticationHandler`
-* `PostConfigApacheFelixJettyBasedHTTPService`
-* `PostConfigApacheHTTPComponentsProxyConfiguration`
-* `PostConfigApacheSlingDavExServlet`
-* `PostConfigApacheSlingGetServlet`
-* `PostConfigApacheSlingReferrerFilter`
-* `PostConfigProperty`
-* `PostNode`
-* `PostNodeRw`
-* `PostPath`
-* `PostQuery`
-* `PostTreeActivation`
-* `PostTruststore`
-* `PostTruststorePkcs12`
+* [DeleteAgent](docs/sling/README.md#deleteagent)
+* [DeleteNode](docs/sling/README.md#deletenode)
+* [GetAgent](docs/sling/README.md#getagent)
+* [GetAgents](docs/sling/README.md#getagents)
+* [GetAuthorizableKeystore](docs/sling/README.md#getauthorizablekeystore)
+* [GetKeystore](docs/sling/README.md#getkeystore)
+* [GetNode](docs/sling/README.md#getnode)
+* [GetPackage](docs/sling/README.md#getpackage)
+* [GetPackageFilter](docs/sling/README.md#getpackagefilter)
+* [GetQuery](docs/sling/README.md#getquery)
+* [GetTruststore](docs/sling/README.md#gettruststore)
+* [GetTruststoreInfo](docs/sling/README.md#gettruststoreinfo)
+* [PostAgent](docs/sling/README.md#postagent)
+* [PostAuthorizableKeystore](docs/sling/README.md#postauthorizablekeystore)
+* [PostAuthorizables](docs/sling/README.md#postauthorizables)
+* [PostConfigAdobeGraniteSamlAuthenticationHandler](docs/sling/README.md#postconfigadobegranitesamlauthenticationhandler)
+* [PostConfigApacheFelixJettyBasedHTTPService](docs/sling/README.md#postconfigapachefelixjettybasedhttpservice)
+* [PostConfigApacheHTTPComponentsProxyConfiguration](docs/sling/README.md#postconfigapachehttpcomponentsproxyconfiguration)
+* [PostConfigApacheSlingDavExServlet](docs/sling/README.md#postconfigapacheslingdavexservlet)
+* [PostConfigApacheSlingGetServlet](docs/sling/README.md#postconfigapacheslinggetservlet)
+* [PostConfigApacheSlingReferrerFilter](docs/sling/README.md#postconfigapacheslingreferrerfilter)
+* [PostConfigProperty](docs/sling/README.md#postconfigproperty)
+* [PostNode](docs/sling/README.md#postnode)
+* [PostNodeRw](docs/sling/README.md#postnoderw)
+* [PostPath](docs/sling/README.md#postpath)
+* [PostQuery](docs/sling/README.md#postquery)
+* [PostTreeActivation](docs/sling/README.md#posttreeactivation)
+* [PostTruststore](docs/sling/README.md#posttruststore)
+* [PostTruststorePkcs12](docs/sling/README.md#posttruststorepkcs12)
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -21,12 +21,16 @@ const (
 	InvoiceRecurringAPIModelDayOfWeekEnumSaturday  InvoiceRecurringAPIModelDayOfWeekEnum = "Saturday"
 )
 
+func (e InvoiceRecurringAPIModelDayOfWeekEnum) ToPointer() *InvoiceRecurringAPIModelDayOfWeekEnum {
+	return &e
+}
+
 func (e *InvoiceRecurringAPIModelDayOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Sunday":
 		fallthrough
 	case "Monday":
@@ -40,10 +44,10 @@ func (e *InvoiceRecurringAPIModelDayOfWeekEnum) UnmarshalJSON(data []byte) error
 	case "Friday":
 		fallthrough
 	case "Saturday":
-		*e = InvoiceRecurringAPIModelDayOfWeekEnum(s)
+		*e = InvoiceRecurringAPIModelDayOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvoiceRecurringAPIModelDayOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for InvoiceRecurringAPIModelDayOfWeekEnum: %v", v)
 	}
 }
 
@@ -57,12 +61,16 @@ const (
 	InvoiceRecurringAPIModelRecurrancePatternEnumYearly  InvoiceRecurringAPIModelRecurrancePatternEnum = "Yearly"
 )
 
+func (e InvoiceRecurringAPIModelRecurrancePatternEnum) ToPointer() *InvoiceRecurringAPIModelRecurrancePatternEnum {
+	return &e
+}
+
 func (e *InvoiceRecurringAPIModelRecurrancePatternEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Daily":
 		fallthrough
 	case "Weekly":
@@ -70,10 +78,10 @@ func (e *InvoiceRecurringAPIModelRecurrancePatternEnum) UnmarshalJSON(data []byt
 	case "Monthly":
 		fallthrough
 	case "Yearly":
-		*e = InvoiceRecurringAPIModelRecurrancePatternEnum(s)
+		*e = InvoiceRecurringAPIModelRecurrancePatternEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvoiceRecurringAPIModelRecurrancePatternEnum: %s", s)
+		return fmt.Errorf("invalid value for InvoiceRecurringAPIModelRecurrancePatternEnum: %v", v)
 	}
 }
 
@@ -87,12 +95,16 @@ const (
 	InvoiceRecurringAPIModelStatusEnumFinished  InvoiceRecurringAPIModelStatusEnum = "Finished"
 )
 
+func (e InvoiceRecurringAPIModelStatusEnum) ToPointer() *InvoiceRecurringAPIModelStatusEnum {
+	return &e
+}
+
 func (e *InvoiceRecurringAPIModelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "Active":
@@ -100,10 +112,10 @@ func (e *InvoiceRecurringAPIModelStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Cancelled":
 		fallthrough
 	case "Finished":
-		*e = InvoiceRecurringAPIModelStatusEnum(s)
+		*e = InvoiceRecurringAPIModelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvoiceRecurringAPIModelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InvoiceRecurringAPIModelStatusEnum: %v", v)
 	}
 }
 

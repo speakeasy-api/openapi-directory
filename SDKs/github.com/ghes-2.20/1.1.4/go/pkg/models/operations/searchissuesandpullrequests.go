@@ -26,12 +26,16 @@ const (
 	SearchIssuesAndPullRequestsSortEnumUpdated               SearchIssuesAndPullRequestsSortEnum = "updated"
 )
 
+func (e SearchIssuesAndPullRequestsSortEnum) ToPointer() *SearchIssuesAndPullRequestsSortEnum {
+	return &e
+}
+
 func (e *SearchIssuesAndPullRequestsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "comments":
 		fallthrough
 	case "reactions":
@@ -53,10 +57,10 @@ func (e *SearchIssuesAndPullRequestsSortEnum) UnmarshalJSON(data []byte) error {
 	case "created":
 		fallthrough
 	case "updated":
-		*e = SearchIssuesAndPullRequestsSortEnum(s)
+		*e = SearchIssuesAndPullRequestsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchIssuesAndPullRequestsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchIssuesAndPullRequestsSortEnum: %v", v)
 	}
 }
 

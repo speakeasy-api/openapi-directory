@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/iot-jobs-da
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,22 +27,20 @@ func main() {
         }),
     )
 
-    req := operations.DescribeJobExecutionRequest{
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "provident",
-        XAmzCredential: "distinctio",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "unde",
-        XAmzSignature: "nulla",
-        XAmzSignedHeaders: "corrupti",
-        ExecutionNumber: 847252,
-        IncludeJobDocument: false,
+    ctx := context.Background()
+    res, err := s.DescribeJobExecution(ctx, operations.DescribeJobExecutionRequest{
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("provident"),
+        XAmzCredential: sdk.String("distinctio"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("unde"),
+        XAmzSignature: sdk.String("nulla"),
+        XAmzSignedHeaders: sdk.String("corrupti"),
+        ExecutionNumber: sdk.Int64(847252),
+        IncludeJobDocument: sdk.Bool(false),
         JobID: "vel",
         ThingName: "error",
-    }
-
-    ctx := context.Background()
-    res, err := s.DescribeJobExecution(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -58,12 +55,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DescribeJobExecution` - Gets details of a job execution.
-* `GetPendingJobExecutions` - Gets the list of all jobs for a thing that are not in a terminal status.
-* `StartNextPendingJobExecution` - Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a thing.
-* `UpdateJobExecution` - Updates the status of a job execution.
+* [DescribeJobExecution](docs/sdk/README.md#describejobexecution) - Gets details of a job execution.
+* [GetPendingJobExecutions](docs/sdk/README.md#getpendingjobexecutions) - Gets the list of all jobs for a thing that are not in a terminal status.
+* [StartNextPendingJobExecution](docs/sdk/README.md#startnextpendingjobexecution) - Gets and starts the next pending (status IN_PROGRESS or QUEUED) job execution for a thing.
+* [UpdateJobExecution](docs/sdk/README.md#updatejobexecution) - Updates the status of a job execution.
 <!-- End SDK Available Operations -->
 
 ### Maturity

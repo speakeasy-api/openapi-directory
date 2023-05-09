@@ -16,21 +16,25 @@ const (
 	CaPoolTierEnumDevops          CaPoolTierEnum = "DEVOPS"
 )
 
+func (e CaPoolTierEnum) ToPointer() *CaPoolTierEnum {
+	return &e
+}
+
 func (e *CaPoolTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIER_UNSPECIFIED":
 		fallthrough
 	case "ENTERPRISE":
 		fallthrough
 	case "DEVOPS":
-		*e = CaPoolTierEnum(s)
+		*e = CaPoolTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CaPoolTierEnum: %s", s)
+		return fmt.Errorf("invalid value for CaPoolTierEnum: %v", v)
 	}
 }
 

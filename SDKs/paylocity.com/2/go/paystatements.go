@@ -35,7 +35,10 @@ func newPayStatements(defaultClient, securityClient HTTPClient, serverURL, langu
 // Get pay statement details API will return employee pay statement details data currently available in Web Pay for the specified year.
 func (s *payStatements) GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYear(ctx context.Context, request operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearRequest, security operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearSecurity) (*operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/details/{year}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/details/{year}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,7 +104,10 @@ func (s *payStatements) GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYea
 // Get pay statement details API will return employee pay statement detail data currently available in Web Pay for the specified year and check date.
 func (s *payStatements) GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDate(ctx context.Context, request operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateRequest, security operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateSecurity) (*operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/details/{year}/{checkDate}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/details/{year}/{checkDate}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -167,7 +173,10 @@ func (s *payStatements) GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYea
 // Get pay statement summary API will return employee pay statement summary data currently available in Web Pay for the specified year.
 func (s *payStatements) GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYear(ctx context.Context, request operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest, security operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearSecurity) (*operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/summary/{year}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/summary/{year}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +242,10 @@ func (s *payStatements) GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYe
 // Get pay statement summary API will return employee pay statement summary data currently available in Web Pay for the specified year and check date.
 func (s *payStatements) GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDate(ctx context.Context, request operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest, security operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateSecurity) (*operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/summary/{year}/{checkDate}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/summary/{year}/{checkDate}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

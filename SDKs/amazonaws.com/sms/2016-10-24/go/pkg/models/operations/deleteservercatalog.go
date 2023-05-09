@@ -15,17 +15,21 @@ const (
 	DeleteServerCatalogXAmzTargetEnumAwsServerMigrationServiceV20161024DeleteServerCatalog DeleteServerCatalogXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.DeleteServerCatalog"
 )
 
+func (e DeleteServerCatalogXAmzTargetEnum) ToPointer() *DeleteServerCatalogXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteServerCatalogXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.DeleteServerCatalog":
-		*e = DeleteServerCatalogXAmzTargetEnum(s)
+		*e = DeleteServerCatalogXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteServerCatalogXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteServerCatalogXAmzTargetEnum: %v", v)
 	}
 }
 

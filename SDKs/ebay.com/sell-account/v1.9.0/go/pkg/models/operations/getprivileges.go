@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetPrivilegesSecurity struct {
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetPrivilegesResponse struct {
 	ContentType string
 	// Success

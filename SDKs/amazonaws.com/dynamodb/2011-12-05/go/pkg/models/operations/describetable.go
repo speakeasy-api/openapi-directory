@@ -16,17 +16,21 @@ const (
 	DescribeTableXAmzTargetEnumDynamoDb20111205DescribeTable DescribeTableXAmzTargetEnum = "DynamoDB_20111205.DescribeTable"
 )
 
+func (e DescribeTableXAmzTargetEnum) ToPointer() *DescribeTableXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTableXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20111205.DescribeTable":
-		*e = DescribeTableXAmzTargetEnum(s)
+		*e = DescribeTableXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTableXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTableXAmzTargetEnum: %v", v)
 	}
 }
 

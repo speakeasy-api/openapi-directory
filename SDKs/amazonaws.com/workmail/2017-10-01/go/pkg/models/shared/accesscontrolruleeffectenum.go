@@ -14,18 +14,22 @@ const (
 	AccessControlRuleEffectEnumDeny  AccessControlRuleEffectEnum = "DENY"
 )
 
+func (e AccessControlRuleEffectEnum) ToPointer() *AccessControlRuleEffectEnum {
+	return &e
+}
+
 func (e *AccessControlRuleEffectEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = AccessControlRuleEffectEnum(s)
+		*e = AccessControlRuleEffectEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessControlRuleEffectEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessControlRuleEffectEnum: %v", v)
 	}
 }

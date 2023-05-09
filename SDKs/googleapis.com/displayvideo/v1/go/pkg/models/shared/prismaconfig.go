@@ -20,12 +20,16 @@ const (
 	PrismaConfigPrismaTypeEnumPrismaTypeFee         PrismaConfigPrismaTypeEnum = "PRISMA_TYPE_FEE"
 )
 
+func (e PrismaConfigPrismaTypeEnum) ToPointer() *PrismaConfigPrismaTypeEnum {
+	return &e
+}
+
 func (e *PrismaConfigPrismaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRISMA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PRISMA_TYPE_DISPLAY":
@@ -39,10 +43,10 @@ func (e *PrismaConfigPrismaTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PRISMA_TYPE_SOCIAL":
 		fallthrough
 	case "PRISMA_TYPE_FEE":
-		*e = PrismaConfigPrismaTypeEnum(s)
+		*e = PrismaConfigPrismaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrismaConfigPrismaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PrismaConfigPrismaTypeEnum: %v", v)
 	}
 }
 

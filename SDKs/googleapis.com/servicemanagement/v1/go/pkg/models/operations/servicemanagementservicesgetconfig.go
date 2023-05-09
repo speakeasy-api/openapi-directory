@@ -44,19 +44,23 @@ const (
 	ServicemanagementServicesGetConfigViewEnumFull  ServicemanagementServicesGetConfigViewEnum = "FULL"
 )
 
+func (e ServicemanagementServicesGetConfigViewEnum) ToPointer() *ServicemanagementServicesGetConfigViewEnum {
+	return &e
+}
+
 func (e *ServicemanagementServicesGetConfigViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = ServicemanagementServicesGetConfigViewEnum(s)
+		*e = ServicemanagementServicesGetConfigViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServicemanagementServicesGetConfigViewEnum: %s", s)
+		return fmt.Errorf("invalid value for ServicemanagementServicesGetConfigViewEnum: %v", v)
 	}
 }
 

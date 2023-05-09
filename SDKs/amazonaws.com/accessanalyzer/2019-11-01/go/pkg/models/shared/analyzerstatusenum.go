@@ -16,12 +16,16 @@ const (
 	AnalyzerStatusEnumFailed   AnalyzerStatusEnum = "FAILED"
 )
 
+func (e AnalyzerStatusEnum) ToPointer() *AnalyzerStatusEnum {
+	return &e
+}
+
 func (e *AnalyzerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "CREATING":
@@ -29,9 +33,9 @@ func (e *AnalyzerStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DISABLED":
 		fallthrough
 	case "FAILED":
-		*e = AnalyzerStatusEnum(s)
+		*e = AnalyzerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyzerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyzerStatusEnum: %v", v)
 	}
 }

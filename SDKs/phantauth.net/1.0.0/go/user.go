@@ -51,7 +51,10 @@ func newUser(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // The members of a team are users randomly generated from the team name.
 func (s *user) GetUserUsername(ctx context.Context, request operations.GetUserUsernameRequest) (*operations.GetUserUsernameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -99,7 +102,10 @@ func (s *user) GetUserUsername(ctx context.Context, request operations.GetUserUs
 // Generating an access token, for example, will let you avoid authentication, and immediately call an operation requiring the access token.
 func (s *user) GetUserUsernameTokenKind(ctx context.Context, request operations.GetUserUsernameTokenKindRequest) (*operations.GetUserUsernameTokenKindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/{username}/token/{kind}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/{username}/token/{kind}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

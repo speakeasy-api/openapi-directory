@@ -14,18 +14,22 @@ const (
 	QueryIdentifiersEnclosingOptionEnumNone         QueryIdentifiersEnclosingOptionEnum = "NONE"
 )
 
+func (e QueryIdentifiersEnclosingOptionEnum) ToPointer() *QueryIdentifiersEnclosingOptionEnum {
+	return &e
+}
+
 func (e *QueryIdentifiersEnclosingOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOUBLE_QUOTES":
 		fallthrough
 	case "NONE":
-		*e = QueryIdentifiersEnclosingOptionEnum(s)
+		*e = QueryIdentifiersEnclosingOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryIdentifiersEnclosingOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryIdentifiersEnclosingOptionEnum: %v", v)
 	}
 }

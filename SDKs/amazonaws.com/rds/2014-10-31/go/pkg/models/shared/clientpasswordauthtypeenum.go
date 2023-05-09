@@ -16,12 +16,16 @@ const (
 	ClientPasswordAuthTypeEnumSQLServerAuthentication ClientPasswordAuthTypeEnum = "SQL_SERVER_AUTHENTICATION"
 )
 
+func (e ClientPasswordAuthTypeEnum) ToPointer() *ClientPasswordAuthTypeEnum {
+	return &e
+}
+
 func (e *ClientPasswordAuthTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MYSQL_NATIVE_PASSWORD":
 		fallthrough
 	case "POSTGRES_SCRAM_SHA_256":
@@ -29,9 +33,9 @@ func (e *ClientPasswordAuthTypeEnum) UnmarshalJSON(data []byte) error {
 	case "POSTGRES_MD5":
 		fallthrough
 	case "SQL_SERVER_AUTHENTICATION":
-		*e = ClientPasswordAuthTypeEnum(s)
+		*e = ClientPasswordAuthTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClientPasswordAuthTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClientPasswordAuthTypeEnum: %v", v)
 	}
 }

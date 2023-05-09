@@ -17,21 +17,25 @@ const (
 	SiteEntityBundleActivityNotificationsEnumPerBundleSetting SiteEntityBundleActivityNotificationsEnum = "per_bundle_setting"
 )
 
+func (e SiteEntityBundleActivityNotificationsEnum) ToPointer() *SiteEntityBundleActivityNotificationsEnum {
+	return &e
+}
+
 func (e *SiteEntityBundleActivityNotificationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "never":
 		fallthrough
 	case "always":
 		fallthrough
 	case "per_bundle_setting":
-		*e = SiteEntityBundleActivityNotificationsEnum(s)
+		*e = SiteEntityBundleActivityNotificationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteEntityBundleActivityNotificationsEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteEntityBundleActivityNotificationsEnum: %v", v)
 	}
 }
 
@@ -44,21 +48,25 @@ const (
 	SiteEntityBundleRegistrationNotificationsEnumPerBundleSetting SiteEntityBundleRegistrationNotificationsEnum = "per_bundle_setting"
 )
 
+func (e SiteEntityBundleRegistrationNotificationsEnum) ToPointer() *SiteEntityBundleRegistrationNotificationsEnum {
+	return &e
+}
+
 func (e *SiteEntityBundleRegistrationNotificationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "never":
 		fallthrough
 	case "always":
 		fallthrough
 	case "per_bundle_setting":
-		*e = SiteEntityBundleRegistrationNotificationsEnum(s)
+		*e = SiteEntityBundleRegistrationNotificationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteEntityBundleRegistrationNotificationsEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteEntityBundleRegistrationNotificationsEnum: %v", v)
 	}
 }
 
@@ -71,21 +79,25 @@ const (
 	SiteEntityBundleUploadReceiptNotificationsEnumPerBundleSetting SiteEntityBundleUploadReceiptNotificationsEnum = "per_bundle_setting"
 )
 
+func (e SiteEntityBundleUploadReceiptNotificationsEnum) ToPointer() *SiteEntityBundleUploadReceiptNotificationsEnum {
+	return &e
+}
+
 func (e *SiteEntityBundleUploadReceiptNotificationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "never":
 		fallthrough
 	case "always":
 		fallthrough
 	case "per_bundle_setting":
-		*e = SiteEntityBundleUploadReceiptNotificationsEnum(s)
+		*e = SiteEntityBundleUploadReceiptNotificationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteEntityBundleUploadReceiptNotificationsEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteEntityBundleUploadReceiptNotificationsEnum: %v", v)
 	}
 }
 
@@ -98,21 +110,25 @@ const (
 	SiteEntityDomainLetsencryptChainEnumDstRootCaX3 SiteEntityDomainLetsencryptChainEnum = "dst_root_ca_x3"
 )
 
+func (e SiteEntityDomainLetsencryptChainEnum) ToPointer() *SiteEntityDomainLetsencryptChainEnum {
+	return &e
+}
+
 func (e *SiteEntityDomainLetsencryptChainEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "isrg_root_x1":
 		fallthrough
 	case "dst_root_ca_x3":
-		*e = SiteEntityDomainLetsencryptChainEnum(s)
+		*e = SiteEntityDomainLetsencryptChainEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteEntityDomainLetsencryptChainEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteEntityDomainLetsencryptChainEnum: %v", v)
 	}
 }
 
@@ -125,21 +141,25 @@ const (
 	SiteEntityOfficeIntegrationTypeEnumDisabled   SiteEntityOfficeIntegrationTypeEnum = "disabled"
 )
 
+func (e SiteEntityOfficeIntegrationTypeEnum) ToPointer() *SiteEntityOfficeIntegrationTypeEnum {
+	return &e
+}
+
 func (e *SiteEntityOfficeIntegrationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "only_office":
 		fallthrough
 	case "office_365":
 		fallthrough
 	case "disabled":
-		*e = SiteEntityOfficeIntegrationTypeEnum(s)
+		*e = SiteEntityOfficeIntegrationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteEntityOfficeIntegrationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteEntityOfficeIntegrationTypeEnum: %v", v)
 	}
 }
 
@@ -152,21 +172,25 @@ const (
 	SiteEntityRequire2faUserTypeEnumSiteAdmins          SiteEntityRequire2faUserTypeEnum = "site_admins"
 )
 
+func (e SiteEntityRequire2faUserTypeEnum) ToPointer() *SiteEntityRequire2faUserTypeEnum {
+	return &e
+}
+
 func (e *SiteEntityRequire2faUserTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "folder_and_site_admins":
 		fallthrough
 	case "site_admins":
-		*e = SiteEntityRequire2faUserTypeEnum(s)
+		*e = SiteEntityRequire2faUserTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteEntityRequire2faUserTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteEntityRequire2faUserTypeEnum: %v", v)
 	}
 }
 
@@ -179,21 +203,25 @@ const (
 	SiteEntitySftpHostKeyTypeEnumCustom   SiteEntitySftpHostKeyTypeEnum = "custom"
 )
 
+func (e SiteEntitySftpHostKeyTypeEnum) ToPointer() *SiteEntitySftpHostKeyTypeEnum {
+	return &e
+}
+
 func (e *SiteEntitySftpHostKeyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "exavault":
 		fallthrough
 	case "custom":
-		*e = SiteEntitySftpHostKeyTypeEnum(s)
+		*e = SiteEntitySftpHostKeyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteEntitySftpHostKeyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteEntitySftpHostKeyTypeEnum: %v", v)
 	}
 }
 
@@ -206,21 +234,25 @@ const (
 	SiteEntityWelcomeScreenEnumDisabled SiteEntityWelcomeScreenEnum = "disabled"
 )
 
+func (e SiteEntityWelcomeScreenEnum) ToPointer() *SiteEntityWelcomeScreenEnum {
+	return &e
+}
+
 func (e *SiteEntityWelcomeScreenEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "hidden":
 		fallthrough
 	case "disabled":
-		*e = SiteEntityWelcomeScreenEnum(s)
+		*e = SiteEntityWelcomeScreenEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteEntityWelcomeScreenEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteEntityWelcomeScreenEnum: %v", v)
 	}
 }
 
@@ -394,10 +426,6 @@ type SiteEntity struct {
 	OncehubLink *string `json:"oncehub_link,omitempty"`
 	// Use servers in the USA only?
 	OptOutGlobal *bool `json:"opt_out_global,omitempty"`
-	// Last time the site was notified about an overage
-	OverageNotifiedAt *time.Time `json:"overage_notified_at,omitempty"`
-	// Notify site email of overages?
-	OverageNotify *bool `json:"overage_notify,omitempty"`
 	// Is this site's billing overdue?
 	Overdue *bool `json:"overdue,omitempty"`
 	// Shortest password length for users

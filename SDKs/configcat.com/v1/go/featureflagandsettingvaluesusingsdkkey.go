@@ -52,7 +52,10 @@ func newFeatureFlagAndSettingValuesUsingSDKKey(defaultClient, securityClient HTT
 // evaluation order. You can read more about these rules [here](https://configcat.com/docs/advanced/targeting/).
 func (s *featureFlagAndSettingValuesUsingSDKKey) GetSettingValueBySdkkey(ctx context.Context, request operations.GetSettingValueBySdkkeyRequest) (*operations.GetSettingValueBySdkkeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingKeyOrId}/value", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingKeyOrId}/value", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -158,7 +161,10 @@ func (s *featureFlagAndSettingValuesUsingSDKKey) GetSettingValueBySdkkey(ctx con
 // ```
 func (s *featureFlagAndSettingValuesUsingSDKKey) ReplaceSettingValueBySdkkey(ctx context.Context, request operations.ReplaceSettingValueBySdkkeyRequest) (*operations.ReplaceSettingValueBySdkkeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingKeyOrId}/value", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingKeyOrId}/value", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSettingValueModel", "json")
 	if err != nil {
@@ -293,7 +299,10 @@ func (s *featureFlagAndSettingValuesUsingSDKKey) ReplaceSettingValueBySdkkey(ctx
 // ```
 func (s *featureFlagAndSettingValuesUsingSDKKey) UpdateSettingValueBySdkkey(ctx context.Context, request operations.UpdateSettingValueBySdkkeyRequest) (*operations.UpdateSettingValueBySdkkeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingKeyOrId}/value", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingKeyOrId}/value", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JSONPatchInput", "json")
 	if err != nil {

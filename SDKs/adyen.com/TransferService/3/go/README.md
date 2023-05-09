@@ -13,30 +13,28 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/TransferService
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetTransactionsRequest{
-        AccountHolderID: "corrupti",
-        BalanceAccountID: "provident",
-        BalancePlatform: "distinctio",
-        CreatedSince: "2021-03-11T23:22:42.658Z",
-        CreatedUntil: "2021-05-14T08:28:11.899Z",
-        Cursor: "illum",
-        Limit: 423655,
-        PaymentInstrumentID: "error",
-    }
-
     ctx := context.Background()
-    res, err := s.Transactions.GetTransactions(ctx, req, operations.GetTransactionsSecurity{
+    res, err := s.Transactions.GetTransactions(ctx, operations.GetTransactionsRequest{
+        AccountHolderID: sdk.String("corrupti"),
+        BalanceAccountID: sdk.String("provident"),
+        BalancePlatform: sdk.String("distinctio"),
+        CreatedSince: types.MustTimeFromString("2021-03-11T23:22:42.658Z"),
+        CreatedUntil: types.MustTimeFromString("2021-05-14T08:28:11.899Z"),
+        Cursor: sdk.String("illum"),
+        Limit: sdk.Int(423655),
+        PaymentInstrumentID: sdk.String("error"),
+    }, operations.GetTransactionsSecurity{
         APIKeyAuth: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -54,14 +52,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### Transactions
+### [Transactions](docs/transactions/README.md)
 
-* `GetTransactions` - Get all transactions
-* `GetTransactionsID` - Get a transaction
+* [GetTransactions](docs/transactions/README.md#gettransactions) - Get all transactions
+* [GetTransactionsID](docs/transactions/README.md#gettransactionsid) - Get a transaction
 
-### Transfers
+### [Transfers](docs/transfers/README.md)
 
-* `PostTransfers` - Transfer funds
+* [PostTransfers](docs/transfers/README.md#posttransfers) - Transfer funds
 <!-- End SDK Available Operations -->
 
 ### Maturity

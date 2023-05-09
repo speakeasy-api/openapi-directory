@@ -12,6 +12,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -119,6 +120,7 @@ pkg/models/shared/denymaintenanceperiod.go
 pkg/models/shared/databaseflags.go
 pkg/models/shared/backupconfiguration.go
 pkg/models/shared/backupretentionsettings.go
+pkg/models/shared/advancedmachinefeatures.go
 pkg/models/shared/sqlactivedirectoryconfig.go
 pkg/models/shared/sqlscheduledmaintenance.go
 pkg/models/shared/replicaconfiguration.go
@@ -159,4 +161,15 @@ pkg/models/shared/sqlserveruserdetails.go
 pkg/models/shared/userpasswordvalidationpolicy.go
 pkg/models/shared/passwordstatus.go
 pkg/models/shared/userslistresponse.go
+docs/sdk/README.md
+docs/backupruns/README.md
+docs/connect/README.md
+docs/databases/README.md
+docs/flags/README.md
+docs/instances/README.md
+docs/operations/README.md
+docs/projects/README.md
+docs/sslcerts/README.md
+docs/tiers/README.md
+docs/users/README.md
 USAGE.md

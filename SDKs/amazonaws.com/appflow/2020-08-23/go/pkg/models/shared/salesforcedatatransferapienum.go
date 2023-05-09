@@ -15,20 +15,24 @@ const (
 	SalesforceDataTransferAPIEnumRestSync  SalesforceDataTransferAPIEnum = "REST_SYNC"
 )
 
+func (e SalesforceDataTransferAPIEnum) ToPointer() *SalesforceDataTransferAPIEnum {
+	return &e
+}
+
 func (e *SalesforceDataTransferAPIEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTOMATIC":
 		fallthrough
 	case "BULKV2":
 		fallthrough
 	case "REST_SYNC":
-		*e = SalesforceDataTransferAPIEnum(s)
+		*e = SalesforceDataTransferAPIEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SalesforceDataTransferAPIEnum: %s", s)
+		return fmt.Errorf("invalid value for SalesforceDataTransferAPIEnum: %v", v)
 	}
 }

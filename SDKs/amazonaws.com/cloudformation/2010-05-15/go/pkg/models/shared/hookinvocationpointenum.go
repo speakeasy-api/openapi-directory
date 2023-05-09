@@ -13,16 +13,20 @@ const (
 	HookInvocationPointEnumPreProvision HookInvocationPointEnum = "PRE_PROVISION"
 )
 
+func (e HookInvocationPointEnum) ToPointer() *HookInvocationPointEnum {
+	return &e
+}
+
 func (e *HookInvocationPointEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRE_PROVISION":
-		*e = HookInvocationPointEnum(s)
+		*e = HookInvocationPointEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HookInvocationPointEnum: %s", s)
+		return fmt.Errorf("invalid value for HookInvocationPointEnum: %v", v)
 	}
 }

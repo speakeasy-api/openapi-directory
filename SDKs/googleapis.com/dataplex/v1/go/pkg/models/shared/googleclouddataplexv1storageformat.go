@@ -16,21 +16,25 @@ const (
 	GoogleCloudDataplexV1StorageFormatCompressionFormatEnumBzip2                        GoogleCloudDataplexV1StorageFormatCompressionFormatEnum = "BZIP2"
 )
 
+func (e GoogleCloudDataplexV1StorageFormatCompressionFormatEnum) ToPointer() *GoogleCloudDataplexV1StorageFormatCompressionFormatEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1StorageFormatCompressionFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPRESSION_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "GZIP":
 		fallthrough
 	case "BZIP2":
-		*e = GoogleCloudDataplexV1StorageFormatCompressionFormatEnum(s)
+		*e = GoogleCloudDataplexV1StorageFormatCompressionFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1StorageFormatCompressionFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1StorageFormatCompressionFormatEnum: %v", v)
 	}
 }
 
@@ -67,12 +71,16 @@ const (
 	GoogleCloudDataplexV1StorageFormatFormatEnumUnknown           GoogleCloudDataplexV1StorageFormatFormatEnum = "UNKNOWN"
 )
 
+func (e GoogleCloudDataplexV1StorageFormatFormatEnum) ToPointer() *GoogleCloudDataplexV1StorageFormatFormatEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1StorageFormatFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMAT_UNSPECIFIED":
 		fallthrough
 	case "PARQUET":
@@ -98,10 +106,10 @@ func (e *GoogleCloudDataplexV1StorageFormatFormatEnum) UnmarshalJSON(data []byte
 	case "OTHER":
 		fallthrough
 	case "UNKNOWN":
-		*e = GoogleCloudDataplexV1StorageFormatFormatEnum(s)
+		*e = GoogleCloudDataplexV1StorageFormatFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1StorageFormatFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1StorageFormatFormatEnum: %v", v)
 	}
 }
 

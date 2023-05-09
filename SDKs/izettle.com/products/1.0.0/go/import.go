@@ -34,7 +34,10 @@ func newImport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GetLatestImportStatus - Get status for latest import
 func (s *importT) GetLatestImportStatus(ctx context.Context, request operations.GetLatestImportStatusRequest, security operations.GetLatestImportStatusSecurity) (*operations.GetLatestImportStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *importT) GetLatestImportStatus(ctx context.Context, request operations.
 // GetStatusByUUID - Get status for an import
 func (s *importT) GetStatusByUUID(ctx context.Context, request operations.GetStatusByUUIDRequest, security operations.GetStatusByUUIDSecurity) (*operations.GetStatusByUUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/status/{importUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/status/{importUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,7 +130,10 @@ func (s *importT) GetStatusByUUID(ctx context.Context, request operations.GetSta
 // ImportLibraryV2 - Import library items
 func (s *importT) ImportLibraryV2(ctx context.Context, request operations.ImportLibraryV2Request, security operations.ImportLibraryV2Security) (*operations.ImportLibraryV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/v2", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/v2", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkImportRequest", "json")
 	if err != nil {

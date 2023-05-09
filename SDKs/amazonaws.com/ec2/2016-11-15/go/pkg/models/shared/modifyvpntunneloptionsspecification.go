@@ -39,23 +39,24 @@ type ModifyVpnTunnelOptionsSpecificationPhase2IntegrityAlgorithms struct {
 
 // ModifyVpnTunnelOptionsSpecification - The Amazon Web Services Site-to-Site VPN tunnel options to modify.
 type ModifyVpnTunnelOptionsSpecification struct {
-	DPDTimeoutAction           *string
-	DPDTimeoutSeconds          *int64
-	IKEVersions                []ModifyVpnTunnelOptionsSpecificationIKEVersions
-	LogOptions                 *VpnTunnelLogOptionsSpecification
-	Phase1DHGroupNumbers       []ModifyVpnTunnelOptionsSpecificationPhase1DHGroupNumbers
-	Phase1EncryptionAlgorithms []ModifyVpnTunnelOptionsSpecificationPhase1EncryptionAlgorithms
-	Phase1IntegrityAlgorithms  []ModifyVpnTunnelOptionsSpecificationPhase1IntegrityAlgorithms
-	Phase1LifetimeSeconds      *int64
-	Phase2DHGroupNumbers       []ModifyVpnTunnelOptionsSpecificationPhase2DHGroupNumbers
-	Phase2EncryptionAlgorithms []ModifyVpnTunnelOptionsSpecificationPhase2EncryptionAlgorithms
-	Phase2IntegrityAlgorithms  []ModifyVpnTunnelOptionsSpecificationPhase2IntegrityAlgorithms
-	Phase2LifetimeSeconds      *int64
-	PreSharedKey               *string
-	RekeyFuzzPercentage        *int64
-	RekeyMarginTimeSeconds     *int64
-	ReplayWindowSize           *int64
-	StartupAction              *string
-	TunnelInsideCidr           *string
-	TunnelInsideIpv6Cidr       *string
+	DPDTimeoutAction             *string
+	DPDTimeoutSeconds            *int64
+	EnableTunnelLifecycleControl *bool
+	IKEVersions                  []ModifyVpnTunnelOptionsSpecificationIKEVersions
+	LogOptions                   *VpnTunnelLogOptionsSpecification
+	Phase1DHGroupNumbers         []ModifyVpnTunnelOptionsSpecificationPhase1DHGroupNumbers
+	Phase1EncryptionAlgorithms   []ModifyVpnTunnelOptionsSpecificationPhase1EncryptionAlgorithms
+	Phase1IntegrityAlgorithms    []ModifyVpnTunnelOptionsSpecificationPhase1IntegrityAlgorithms
+	Phase1LifetimeSeconds        *int64
+	Phase2DHGroupNumbers         []ModifyVpnTunnelOptionsSpecificationPhase2DHGroupNumbers
+	Phase2EncryptionAlgorithms   []ModifyVpnTunnelOptionsSpecificationPhase2EncryptionAlgorithms
+	Phase2IntegrityAlgorithms    []ModifyVpnTunnelOptionsSpecificationPhase2IntegrityAlgorithms
+	Phase2LifetimeSeconds        *int64
+	PreSharedKey                 *string
+	RekeyFuzzPercentage          *int64
+	RekeyMarginTimeSeconds       *int64
+	ReplayWindowSize             *int64
+	StartupAction                *string
+	TunnelInsideCidr             *string
+	TunnelInsideIpv6Cidr         *string
 }

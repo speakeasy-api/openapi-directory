@@ -16,17 +16,21 @@ const (
 	CopyBackupXAmzTargetEnumAwsSimbaAPIServiceV20180301CopyBackup CopyBackupXAmzTargetEnum = "AWSSimbaAPIService_v20180301.CopyBackup"
 )
 
+func (e CopyBackupXAmzTargetEnum) ToPointer() *CopyBackupXAmzTargetEnum {
+	return &e
+}
+
 func (e *CopyBackupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.CopyBackup":
-		*e = CopyBackupXAmzTargetEnum(s)
+		*e = CopyBackupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CopyBackupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CopyBackupXAmzTargetEnum: %v", v)
 	}
 }
 

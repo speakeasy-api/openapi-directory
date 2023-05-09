@@ -2,7 +2,7 @@
 
 package shared
 
-// SearchRecord - A single resource returned as part of the <a>Search</a> API response.
+// SearchRecord - A single resource returned as part of the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API response.
 type SearchRecord struct {
 	// A hosted endpoint for real-time inference.
 	Endpoint   *Endpoint   `json:"Endpoint,omitempty"`

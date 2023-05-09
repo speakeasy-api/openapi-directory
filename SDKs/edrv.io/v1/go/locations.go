@@ -34,7 +34,10 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // DeleteLocation - Delete a location
 func (s *locations) DeleteLocation(ctx context.Context, request operations.DeleteLocationRequest) (*operations.DeleteLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/location/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/location/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,7 +72,10 @@ func (s *locations) DeleteLocation(ctx context.Context, request operations.Delet
 // GetLocation - Get a location's data
 func (s *locations) GetLocation(ctx context.Context, request operations.GetLocationRequest) (*operations.GetLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/location/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/location/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +155,10 @@ func (s *locations) GetLocations(ctx context.Context, request operations.GetLoca
 // PatchLocation - Update a location's data
 func (s *locations) PatchLocation(ctx context.Context, request operations.PatchLocationRequest) (*operations.PatchLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/location/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/location/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

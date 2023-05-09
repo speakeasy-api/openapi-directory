@@ -35,7 +35,10 @@ func newTeamdrives(defaultClient, securityClient HTTPClient, serverURL, language
 // DriveTeamdrivesDelete - Deprecated use drives.delete instead.
 func (s *teamdrives) DriveTeamdrivesDelete(ctx context.Context, request operations.DriveTeamdrivesDeleteRequest, security operations.DriveTeamdrivesDeleteSecurity) (*operations.DriveTeamdrivesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teamdrives/{teamDriveId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teamdrives/{teamDriveId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *teamdrives) DriveTeamdrivesDelete(ctx context.Context, request operatio
 // DriveTeamdrivesGet - Deprecated use drives.get instead.
 func (s *teamdrives) DriveTeamdrivesGet(ctx context.Context, request operations.DriveTeamdrivesGetRequest, security operations.DriveTeamdrivesGetSecurity) (*operations.DriveTeamdrivesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teamdrives/{teamDriveId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teamdrives/{teamDriveId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *teamdrives) DriveTeamdrivesList(ctx context.Context, request operations
 // DriveTeamdrivesUpdate - Deprecated use drives.update instead.
 func (s *teamdrives) DriveTeamdrivesUpdate(ctx context.Context, request operations.DriveTeamdrivesUpdateRequest, security operations.DriveTeamdrivesUpdateSecurity) (*operations.DriveTeamdrivesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teamdrives/{teamDriveId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teamdrives/{teamDriveId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TeamDrive", "json")
 	if err != nil {

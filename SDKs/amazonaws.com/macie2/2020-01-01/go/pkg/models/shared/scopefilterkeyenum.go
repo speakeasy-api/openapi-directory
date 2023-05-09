@@ -17,12 +17,16 @@ const (
 	ScopeFilterKeyEnumObjectKey              ScopeFilterKeyEnum = "OBJECT_KEY"
 )
 
+func (e ScopeFilterKeyEnum) ToPointer() *ScopeFilterKeyEnum {
+	return &e
+}
+
 func (e *ScopeFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OBJECT_EXTENSION":
 		fallthrough
 	case "OBJECT_LAST_MODIFIED_DATE":
@@ -30,9 +34,9 @@ func (e *ScopeFilterKeyEnum) UnmarshalJSON(data []byte) error {
 	case "OBJECT_SIZE":
 		fallthrough
 	case "OBJECT_KEY":
-		*e = ScopeFilterKeyEnum(s)
+		*e = ScopeFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScopeFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for ScopeFilterKeyEnum: %v", v)
 	}
 }

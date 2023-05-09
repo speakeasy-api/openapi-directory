@@ -15,17 +15,21 @@ const (
 	GETGETGroupsForCapacityReservationActionEnumGetGroupsForCapacityReservation GETGETGroupsForCapacityReservationActionEnum = "GetGroupsForCapacityReservation"
 )
 
+func (e GETGETGroupsForCapacityReservationActionEnum) ToPointer() *GETGETGroupsForCapacityReservationActionEnum {
+	return &e
+}
+
 func (e *GETGETGroupsForCapacityReservationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetGroupsForCapacityReservation":
-		*e = GETGETGroupsForCapacityReservationActionEnum(s)
+		*e = GETGETGroupsForCapacityReservationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETGroupsForCapacityReservationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETGroupsForCapacityReservationActionEnum: %v", v)
 	}
 }
 
@@ -36,23 +40,27 @@ const (
 	GETGETGroupsForCapacityReservationVersionEnumTwoThousandAndSixteen1115 GETGETGroupsForCapacityReservationVersionEnum = "2016-11-15"
 )
 
+func (e GETGETGroupsForCapacityReservationVersionEnum) ToPointer() *GETGETGroupsForCapacityReservationVersionEnum {
+	return &e
+}
+
 func (e *GETGETGroupsForCapacityReservationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETGroupsForCapacityReservationVersionEnum(s)
+		*e = GETGETGroupsForCapacityReservationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETGroupsForCapacityReservationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETGroupsForCapacityReservationVersionEnum: %v", v)
 	}
 }
 
 type GETGETGroupsForCapacityReservationRequest struct {
 	Action GETGETGroupsForCapacityReservationActionEnum `queryParam:"style=form,explode=true,name=Action"`
-	// The ID of the Capacity Reservation.
+	// The ID of the Capacity Reservation. If you specify a Capacity Reservation that is shared with you, the operation returns only Capacity Reservation groups that you own.
 	CapacityReservationID string `queryParam:"style=form,explode=true,name=CapacityReservationId"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`

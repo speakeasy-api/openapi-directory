@@ -15,20 +15,24 @@ const (
 	RuleTypeOptionEnumRecursive RuleTypeOptionEnum = "RECURSIVE"
 )
 
+func (e RuleTypeOptionEnum) ToPointer() *RuleTypeOptionEnum {
+	return &e
+}
+
 func (e *RuleTypeOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORWARD":
 		fallthrough
 	case "SYSTEM":
 		fallthrough
 	case "RECURSIVE":
-		*e = RuleTypeOptionEnum(s)
+		*e = RuleTypeOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuleTypeOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for RuleTypeOptionEnum: %v", v)
 	}
 }

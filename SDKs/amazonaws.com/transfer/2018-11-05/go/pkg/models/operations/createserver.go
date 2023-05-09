@@ -16,17 +16,21 @@ const (
 	CreateServerXAmzTargetEnumTransferServiceCreateServer CreateServerXAmzTargetEnum = "TransferService.CreateServer"
 )
 
+func (e CreateServerXAmzTargetEnum) ToPointer() *CreateServerXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateServerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.CreateServer":
-		*e = CreateServerXAmzTargetEnum(s)
+		*e = CreateServerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateServerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateServerXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	RewardProgramResourceAttributesBudgetUnitEnumCredit RewardProgramResourceAttributesBudgetUnitEnum = "credit"
 )
 
+func (e RewardProgramResourceAttributesBudgetUnitEnum) ToPointer() *RewardProgramResourceAttributesBudgetUnitEnum {
+	return &e
+}
+
 func (e *RewardProgramResourceAttributesBudgetUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dollar":
 		fallthrough
 	case "point":
 		fallthrough
 	case "credit":
-		*e = RewardProgramResourceAttributesBudgetUnitEnum(s)
+		*e = RewardProgramResourceAttributesBudgetUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RewardProgramResourceAttributesBudgetUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for RewardProgramResourceAttributesBudgetUnitEnum: %v", v)
 	}
 }
 

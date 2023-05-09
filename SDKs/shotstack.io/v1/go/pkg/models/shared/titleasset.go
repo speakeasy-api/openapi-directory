@@ -34,12 +34,16 @@ const (
 	TitleAssetPositionEnumCenter      TitleAssetPositionEnum = "center"
 )
 
+func (e TitleAssetPositionEnum) ToPointer() *TitleAssetPositionEnum {
+	return &e
+}
+
 func (e *TitleAssetPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "top":
 		fallthrough
 	case "topRight":
@@ -57,10 +61,10 @@ func (e *TitleAssetPositionEnum) UnmarshalJSON(data []byte) error {
 	case "topLeft":
 		fallthrough
 	case "center":
-		*e = TitleAssetPositionEnum(s)
+		*e = TitleAssetPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TitleAssetPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for TitleAssetPositionEnum: %v", v)
 	}
 }
 
@@ -87,12 +91,16 @@ const (
 	TitleAssetSizeEnumXxLarge TitleAssetSizeEnum = "xx-large"
 )
 
+func (e TitleAssetSizeEnum) ToPointer() *TitleAssetSizeEnum {
+	return &e
+}
+
 func (e *TitleAssetSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xx-small":
 		fallthrough
 	case "x-small":
@@ -106,10 +114,10 @@ func (e *TitleAssetSizeEnum) UnmarshalJSON(data []byte) error {
 	case "x-large":
 		fallthrough
 	case "xx-large":
-		*e = TitleAssetSizeEnum(s)
+		*e = TitleAssetSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TitleAssetSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for TitleAssetSizeEnum: %v", v)
 	}
 }
 
@@ -142,12 +150,16 @@ const (
 	TitleAssetStyleEnumSubtitle    TitleAssetStyleEnum = "subtitle"
 )
 
+func (e TitleAssetStyleEnum) ToPointer() *TitleAssetStyleEnum {
+	return &e
+}
+
 func (e *TitleAssetStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimal":
 		fallthrough
 	case "blockbuster":
@@ -167,10 +179,10 @@ func (e *TitleAssetStyleEnum) UnmarshalJSON(data []byte) error {
 	case "future":
 		fallthrough
 	case "subtitle":
-		*e = TitleAssetStyleEnum(s)
+		*e = TitleAssetStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TitleAssetStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for TitleAssetStyleEnum: %v", v)
 	}
 }
 

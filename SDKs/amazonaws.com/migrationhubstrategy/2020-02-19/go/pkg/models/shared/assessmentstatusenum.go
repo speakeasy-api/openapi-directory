@@ -16,12 +16,16 @@ const (
 	AssessmentStatusEnumStopped    AssessmentStatusEnum = "STOPPED"
 )
 
+func (e AssessmentStatusEnum) ToPointer() *AssessmentStatusEnum {
+	return &e
+}
+
 func (e *AssessmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "COMPLETE":
@@ -29,9 +33,9 @@ func (e *AssessmentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "STOPPED":
-		*e = AssessmentStatusEnum(s)
+		*e = AssessmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssessmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AssessmentStatusEnum: %v", v)
 	}
 }

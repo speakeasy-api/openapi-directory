@@ -37,7 +37,10 @@ func newMessageReactions(defaultClient, securityClient HTTPClient, serverURL, la
 // Delete Message Reaction
 func (s *messageReactions) DeleteMessageReactionsID(ctx context.Context, request operations.DeleteMessageReactionsIDRequest) (*operations.DeleteMessageReactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/message_reactions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/message_reactions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *messageReactions) GetMessageReactions(ctx context.Context, request oper
 // Show Message Reaction
 func (s *messageReactions) GetMessageReactionsID(ctx context.Context, request operations.GetMessageReactionsIDRequest) (*operations.GetMessageReactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/message_reactions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/message_reactions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

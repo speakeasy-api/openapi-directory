@@ -14,18 +14,22 @@ const (
 	ConfigRuleComplianceSummaryGroupKeyEnumAwsRegion ConfigRuleComplianceSummaryGroupKeyEnum = "AWS_REGION"
 )
 
+func (e ConfigRuleComplianceSummaryGroupKeyEnum) ToPointer() *ConfigRuleComplianceSummaryGroupKeyEnum {
+	return &e
+}
+
 func (e *ConfigRuleComplianceSummaryGroupKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_ID":
 		fallthrough
 	case "AWS_REGION":
-		*e = ConfigRuleComplianceSummaryGroupKeyEnum(s)
+		*e = ConfigRuleComplianceSummaryGroupKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigRuleComplianceSummaryGroupKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigRuleComplianceSummaryGroupKeyEnum: %v", v)
 	}
 }

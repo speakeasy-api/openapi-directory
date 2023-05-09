@@ -14,18 +14,22 @@ const (
 	CollectorStatusEnumActive       CollectorStatusEnum = "ACTIVE"
 )
 
+func (e CollectorStatusEnum) ToPointer() *CollectorStatusEnum {
+	return &e
+}
+
 func (e *CollectorStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNREGISTERED":
 		fallthrough
 	case "ACTIVE":
-		*e = CollectorStatusEnum(s)
+		*e = CollectorStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CollectorStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CollectorStatusEnum: %v", v)
 	}
 }

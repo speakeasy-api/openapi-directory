@@ -16,17 +16,21 @@ const (
 	CreateProtectionGroupXAmzTargetEnumAwsShield20160616CreateProtectionGroup CreateProtectionGroupXAmzTargetEnum = "AWSShield_20160616.CreateProtectionGroup"
 )
 
+func (e CreateProtectionGroupXAmzTargetEnum) ToPointer() *CreateProtectionGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateProtectionGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.CreateProtectionGroup":
-		*e = CreateProtectionGroupXAmzTargetEnum(s)
+		*e = CreateProtectionGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProtectionGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProtectionGroupXAmzTargetEnum: %v", v)
 	}
 }
 

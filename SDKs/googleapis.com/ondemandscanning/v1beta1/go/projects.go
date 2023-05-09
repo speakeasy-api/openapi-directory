@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // OndemandscanningProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) OndemandscanningProjectsLocationsOperationsCancel(ctx context.Context, request operations.OndemandscanningProjectsLocationsOperationsCancelRequest, security operations.OndemandscanningProjectsLocationsOperationsCancelSecurity) (*operations.OndemandscanningProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) OndemandscanningProjectsLocationsOperationsCancel(ctx context
 // OndemandscanningProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) OndemandscanningProjectsLocationsOperationsDelete(ctx context.Context, request operations.OndemandscanningProjectsLocationsOperationsDeleteRequest, security operations.OndemandscanningProjectsLocationsOperationsDeleteSecurity) (*operations.OndemandscanningProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *projects) OndemandscanningProjectsLocationsOperationsDelete(ctx context
 // OndemandscanningProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) OndemandscanningProjectsLocationsOperationsGet(ctx context.Context, request operations.OndemandscanningProjectsLocationsOperationsGetRequest, security operations.OndemandscanningProjectsLocationsOperationsGetSecurity) (*operations.OndemandscanningProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -178,7 +187,10 @@ func (s *projects) OndemandscanningProjectsLocationsOperationsGet(ctx context.Co
 // OndemandscanningProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) OndemandscanningProjectsLocationsOperationsList(ctx context.Context, request operations.OndemandscanningProjectsLocationsOperationsListRequest, security operations.OndemandscanningProjectsLocationsOperationsListSecurity) (*operations.OndemandscanningProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -226,7 +238,10 @@ func (s *projects) OndemandscanningProjectsLocationsOperationsList(ctx context.C
 // OndemandscanningProjectsLocationsOperationsWait - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
 func (s *projects) OndemandscanningProjectsLocationsOperationsWait(ctx context.Context, request operations.OndemandscanningProjectsLocationsOperationsWaitRequest, security operations.OndemandscanningProjectsLocationsOperationsWaitSecurity) (*operations.OndemandscanningProjectsLocationsOperationsWaitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:wait", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:wait", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -274,7 +289,10 @@ func (s *projects) OndemandscanningProjectsLocationsOperationsWait(ctx context.C
 // OndemandscanningProjectsLocationsScansAnalyzePackages - Initiates an analysis of the provided packages.
 func (s *projects) OndemandscanningProjectsLocationsScansAnalyzePackages(ctx context.Context, request operations.OndemandscanningProjectsLocationsScansAnalyzePackagesRequest, security operations.OndemandscanningProjectsLocationsScansAnalyzePackagesSecurity) (*operations.OndemandscanningProjectsLocationsScansAnalyzePackagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/scans:analyzePackages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/scans:analyzePackages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AnalyzePackagesRequest", "json")
 	if err != nil {
@@ -329,7 +347,10 @@ func (s *projects) OndemandscanningProjectsLocationsScansAnalyzePackages(ctx con
 // OndemandscanningProjectsLocationsScansVulnerabilitiesList - Lists vulnerabilities resulting from a successfully completed scan.
 func (s *projects) OndemandscanningProjectsLocationsScansVulnerabilitiesList(ctx context.Context, request operations.OndemandscanningProjectsLocationsScansVulnerabilitiesListRequest, security operations.OndemandscanningProjectsLocationsScansVulnerabilitiesListSecurity) (*operations.OndemandscanningProjectsLocationsScansVulnerabilitiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/vulnerabilities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/vulnerabilities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

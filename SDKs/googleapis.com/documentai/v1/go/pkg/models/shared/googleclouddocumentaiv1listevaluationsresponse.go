@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleCloudDocumentaiV1ListEvaluationsResponse - The response from ListEvaluations.
+// GoogleCloudDocumentaiV1ListEvaluationsResponse - The response from `ListEvaluations`.
 type GoogleCloudDocumentaiV1ListEvaluationsResponse struct {
 	// The evaluations requested.
 	Evaluations []GoogleCloudDocumentaiV1Evaluation `json:"evaluations,omitempty"`

@@ -16,17 +16,21 @@ const (
 	RetryBuildXAmzTargetEnumCodeBuild20161006RetryBuild RetryBuildXAmzTargetEnum = "CodeBuild_20161006.RetryBuild"
 )
 
+func (e RetryBuildXAmzTargetEnum) ToPointer() *RetryBuildXAmzTargetEnum {
+	return &e
+}
+
 func (e *RetryBuildXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.RetryBuild":
-		*e = RetryBuildXAmzTargetEnum(s)
+		*e = RetryBuildXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetryBuildXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RetryBuildXAmzTargetEnum: %v", v)
 	}
 }
 

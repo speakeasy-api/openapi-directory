@@ -16,17 +16,21 @@ const (
 	GetDomainDetailXAmzTargetEnumRoute53DomainsV20140515GetDomainDetail GetDomainDetailXAmzTargetEnum = "Route53Domains_v20140515.GetDomainDetail"
 )
 
+func (e GetDomainDetailXAmzTargetEnum) ToPointer() *GetDomainDetailXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDomainDetailXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.GetDomainDetail":
-		*e = GetDomainDetailXAmzTargetEnum(s)
+		*e = GetDomainDetailXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDomainDetailXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDomainDetailXAmzTargetEnum: %v", v)
 	}
 }
 

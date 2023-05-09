@@ -15,17 +15,21 @@ const (
 	GETModifyAquaConfigurationActionEnumModifyAquaConfiguration GETModifyAquaConfigurationActionEnum = "ModifyAquaConfiguration"
 )
 
+func (e GETModifyAquaConfigurationActionEnum) ToPointer() *GETModifyAquaConfigurationActionEnum {
+	return &e
+}
+
 func (e *GETModifyAquaConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyAquaConfiguration":
-		*e = GETModifyAquaConfigurationActionEnum(s)
+		*e = GETModifyAquaConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyAquaConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyAquaConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETModifyAquaConfigurationAquaConfigurationStatusEnumAuto     GETModifyAquaConfigurationAquaConfigurationStatusEnum = "auto"
 )
 
+func (e GETModifyAquaConfigurationAquaConfigurationStatusEnum) ToPointer() *GETModifyAquaConfigurationAquaConfigurationStatusEnum {
+	return &e
+}
+
 func (e *GETModifyAquaConfigurationAquaConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
 		fallthrough
 	case "auto":
-		*e = GETModifyAquaConfigurationAquaConfigurationStatusEnum(s)
+		*e = GETModifyAquaConfigurationAquaConfigurationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyAquaConfigurationAquaConfigurationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyAquaConfigurationAquaConfigurationStatusEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETModifyAquaConfigurationVersionEnumTwoThousandAndTwelve1201 GETModifyAquaConfigurationVersionEnum = "2012-12-01"
 )
 
+func (e GETModifyAquaConfigurationVersionEnum) ToPointer() *GETModifyAquaConfigurationVersionEnum {
+	return &e
+}
+
 func (e *GETModifyAquaConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETModifyAquaConfigurationVersionEnum(s)
+		*e = GETModifyAquaConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyAquaConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyAquaConfigurationVersionEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	ManageEventActionEnumDelete ManageEventActionEnum = "delete"
 )
 
+func (e ManageEventActionEnum) ToPointer() *ManageEventActionEnum {
+	return &e
+}
+
 func (e *ManageEventActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "create":
 		fallthrough
 	case "fire":
@@ -29,10 +33,10 @@ func (e *ManageEventActionEnum) UnmarshalJSON(data []byte) error {
 	case "change":
 		fallthrough
 	case "delete":
-		*e = ManageEventActionEnum(s)
+		*e = ManageEventActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManageEventActionEnum: %s", s)
+		return fmt.Errorf("invalid value for ManageEventActionEnum: %v", v)
 	}
 }
 

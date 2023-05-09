@@ -18,12 +18,16 @@ const (
 	SNOMEDCTAttributeTypeEnumTestUnit        SNOMEDCTAttributeTypeEnum = "TEST_UNIT"
 )
 
+func (e SNOMEDCTAttributeTypeEnum) ToPointer() *SNOMEDCTAttributeTypeEnum {
+	return &e
+}
+
 func (e *SNOMEDCTAttributeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACUITY":
 		fallthrough
 	case "QUALITY":
@@ -35,9 +39,9 @@ func (e *SNOMEDCTAttributeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TEST_VALUE":
 		fallthrough
 	case "TEST_UNIT":
-		*e = SNOMEDCTAttributeTypeEnum(s)
+		*e = SNOMEDCTAttributeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SNOMEDCTAttributeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SNOMEDCTAttributeTypeEnum: %v", v)
 	}
 }

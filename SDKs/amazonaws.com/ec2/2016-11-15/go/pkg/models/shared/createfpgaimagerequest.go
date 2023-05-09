@@ -98,12 +98,16 @@ const (
 	CreateFpgaImageRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateFpgaImageRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateFpgaImageRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateFpgaImageRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateFpgaImageRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateFpgaImageRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateFpgaImageRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateFpgaImageRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFpgaImageRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFpgaImageRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

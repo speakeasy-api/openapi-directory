@@ -31,12 +31,16 @@ const (
 	DateRangeRelativeDateRangeEnumLast60Days      DateRangeRelativeDateRangeEnum = "LAST_60_DAYS"
 )
 
+func (e DateRangeRelativeDateRangeEnum) ToPointer() *DateRangeRelativeDateRangeEnum {
+	return &e
+}
+
 func (e *DateRangeRelativeDateRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TODAY":
 		fallthrough
 	case "YESTERDAY":
@@ -70,10 +74,10 @@ func (e *DateRangeRelativeDateRangeEnum) UnmarshalJSON(data []byte) error {
 	case "LAST_14_DAYS":
 		fallthrough
 	case "LAST_60_DAYS":
-		*e = DateRangeRelativeDateRangeEnum(s)
+		*e = DateRangeRelativeDateRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DateRangeRelativeDateRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for DateRangeRelativeDateRangeEnum: %v", v)
 	}
 }
 

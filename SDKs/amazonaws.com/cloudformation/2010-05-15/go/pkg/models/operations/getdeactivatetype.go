@@ -15,17 +15,21 @@ const (
 	GETDeactivateTypeActionEnumDeactivateType GETDeactivateTypeActionEnum = "DeactivateType"
 )
 
+func (e GETDeactivateTypeActionEnum) ToPointer() *GETDeactivateTypeActionEnum {
+	return &e
+}
+
 func (e *GETDeactivateTypeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeactivateType":
-		*e = GETDeactivateTypeActionEnum(s)
+		*e = GETDeactivateTypeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeactivateTypeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeactivateTypeActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETDeactivateTypeTypeEnumHook     GETDeactivateTypeTypeEnum = "HOOK"
 )
 
+func (e GETDeactivateTypeTypeEnum) ToPointer() *GETDeactivateTypeTypeEnum {
+	return &e
+}
+
 func (e *GETDeactivateTypeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = GETDeactivateTypeTypeEnum(s)
+		*e = GETDeactivateTypeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeactivateTypeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeactivateTypeTypeEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETDeactivateTypeVersionEnumTwoThousandAndTen0515 GETDeactivateTypeVersionEnum = "2010-05-15"
 )
 
+func (e GETDeactivateTypeVersionEnum) ToPointer() *GETDeactivateTypeVersionEnum {
+	return &e
+}
+
 func (e *GETDeactivateTypeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETDeactivateTypeVersionEnum(s)
+		*e = GETDeactivateTypeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeactivateTypeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeactivateTypeVersionEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	ContainerConditionEnumHealthy  ContainerConditionEnum = "HEALTHY"
 )
 
+func (e ContainerConditionEnum) ToPointer() *ContainerConditionEnum {
+	return &e
+}
+
 func (e *ContainerConditionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "START":
 		fallthrough
 	case "COMPLETE":
@@ -29,9 +33,9 @@ func (e *ContainerConditionEnum) UnmarshalJSON(data []byte) error {
 	case "SUCCESS":
 		fallthrough
 	case "HEALTHY":
-		*e = ContainerConditionEnum(s)
+		*e = ContainerConditionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerConditionEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerConditionEnum: %v", v)
 	}
 }

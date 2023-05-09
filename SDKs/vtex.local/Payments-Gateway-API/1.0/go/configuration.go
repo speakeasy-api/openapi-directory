@@ -36,7 +36,10 @@ func newConfiguration(defaultClient, securityClient HTTPClient, serverURL, langu
 // Returns associated data for the specified affiliation Id, like name and implementation, for example.
 func (s *configuration) AffiliationByID(ctx context.Context, request operations.AffiliationByIDRequest) (*operations.AffiliationByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/affiliations/{affiliationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pvt/affiliations/{affiliationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -257,7 +260,10 @@ func (s *configuration) InsertRule(ctx context.Context, request operations.Inser
 // Update Rule.
 func (s *configuration) PutRuleByID(ctx context.Context, request operations.PutRuleByIDRequest) (*operations.PutRuleByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/rules/{ruleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pvt/rules/{ruleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RuleByIDRequest", "json")
 	if err != nil {
@@ -305,7 +311,10 @@ func (s *configuration) PutRuleByID(ctx context.Context, request operations.PutR
 // Deletes rules by specified Id.
 func (s *configuration) Rule(ctx context.Context, request operations.RuleRequest) (*operations.RuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/rules/{ruleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pvt/rules/{ruleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -343,7 +352,10 @@ func (s *configuration) Rule(ctx context.Context, request operations.RuleRequest
 // Returns rule by specified RuleId.
 func (s *configuration) RuleByID(ctx context.Context, request operations.RuleByIDRequest) (*operations.RuleByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/rules/{ruleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pvt/rules/{ruleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -419,7 +431,10 @@ func (s *configuration) Rules(ctx context.Context, request operations.RulesReque
 // Returns all affiliations.
 func (s *configuration) UpdateAffiliation(ctx context.Context, request operations.UpdateAffiliationRequest) (*operations.UpdateAffiliationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/affiliations/{affiliationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pvt/affiliations/{affiliationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAffiliationRequest", "json")
 	if err != nil {

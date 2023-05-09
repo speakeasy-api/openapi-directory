@@ -16,17 +16,21 @@ const (
 	DescribeSecurityConfigurationXAmzTargetEnumElasticMapReduceDescribeSecurityConfiguration DescribeSecurityConfigurationXAmzTargetEnum = "ElasticMapReduce.DescribeSecurityConfiguration"
 )
 
+func (e DescribeSecurityConfigurationXAmzTargetEnum) ToPointer() *DescribeSecurityConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeSecurityConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.DescribeSecurityConfiguration":
-		*e = DescribeSecurityConfigurationXAmzTargetEnum(s)
+		*e = DescribeSecurityConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSecurityConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSecurityConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

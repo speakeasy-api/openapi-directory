@@ -21,19 +21,23 @@ const (
 	KkidShareGetLinkEnumHTTPSKhomeKumpeappsComPortalChoresTodayPhp KkidShareGetLinkEnum = "https://khome.kumpeapps.com/portal/chores-today.php"
 )
 
+func (e KkidShareGetLinkEnum) ToPointer() *KkidShareGetLinkEnum {
+	return &e
+}
+
 func (e *KkidShareGetLinkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "https://khome.kumpeapps.com/portal/wish-list.php":
 		fallthrough
 	case "https://khome.kumpeapps.com/portal/chores-today.php":
-		*e = KkidShareGetLinkEnum(s)
+		*e = KkidShareGetLinkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KkidShareGetLinkEnum: %s", s)
+		return fmt.Errorf("invalid value for KkidShareGetLinkEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	KkidShareGetScopeEnumChoresAdmin   KkidShareGetScopeEnum = "ChoresAdmin"
 )
 
+func (e KkidShareGetScopeEnum) ToPointer() *KkidShareGetScopeEnum {
+	return &e
+}
+
 func (e *KkidShareGetScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WishList":
 		fallthrough
 	case "WishListAdmin":
@@ -60,10 +68,10 @@ func (e *KkidShareGetScopeEnum) UnmarshalJSON(data []byte) error {
 	case "Chores":
 		fallthrough
 	case "ChoresAdmin":
-		*e = KkidShareGetScopeEnum(s)
+		*e = KkidShareGetScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KkidShareGetScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for KkidShareGetScopeEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	KkidShareGetScope2EnumChoresAdmin   KkidShareGetScope2Enum = "ChoresAdmin"
 )
 
+func (e KkidShareGetScope2Enum) ToPointer() *KkidShareGetScope2Enum {
+	return &e
+}
+
 func (e *KkidShareGetScope2Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WishList":
 		fallthrough
 	case "WishListAdmin":
@@ -90,10 +102,10 @@ func (e *KkidShareGetScope2Enum) UnmarshalJSON(data []byte) error {
 	case "Chores":
 		fallthrough
 	case "ChoresAdmin":
-		*e = KkidShareGetScope2Enum(s)
+		*e = KkidShareGetScope2Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KkidShareGetScope2Enum: %s", s)
+		return fmt.Errorf("invalid value for KkidShareGetScope2Enum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	KkidShareGetScope3EnumChoresAdmin   KkidShareGetScope3Enum = "ChoresAdmin"
 )
 
+func (e KkidShareGetScope3Enum) ToPointer() *KkidShareGetScope3Enum {
+	return &e
+}
+
 func (e *KkidShareGetScope3Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WishList":
 		fallthrough
 	case "WishListAdmin":
@@ -120,10 +136,10 @@ func (e *KkidShareGetScope3Enum) UnmarshalJSON(data []byte) error {
 	case "Chores":
 		fallthrough
 	case "ChoresAdmin":
-		*e = KkidShareGetScope3Enum(s)
+		*e = KkidShareGetScope3Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KkidShareGetScope3Enum: %s", s)
+		return fmt.Errorf("invalid value for KkidShareGetScope3Enum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	KkidShareGetScope4EnumChoresAdmin   KkidShareGetScope4Enum = "ChoresAdmin"
 )
 
+func (e KkidShareGetScope4Enum) ToPointer() *KkidShareGetScope4Enum {
+	return &e
+}
+
 func (e *KkidShareGetScope4Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WishList":
 		fallthrough
 	case "WishListAdmin":
@@ -150,10 +170,10 @@ func (e *KkidShareGetScope4Enum) UnmarshalJSON(data []byte) error {
 	case "Chores":
 		fallthrough
 	case "ChoresAdmin":
-		*e = KkidShareGetScope4Enum(s)
+		*e = KkidShareGetScope4Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KkidShareGetScope4Enum: %s", s)
+		return fmt.Errorf("invalid value for KkidShareGetScope4Enum: %v", v)
 	}
 }
 

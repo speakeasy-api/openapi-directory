@@ -14,18 +14,22 @@ const (
 	StopTypeEnumCancel   StopTypeEnum = "Cancel"
 )
 
+func (e StopTypeEnum) ToPointer() *StopTypeEnum {
+	return &e
+}
+
 func (e *StopTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Complete":
 		fallthrough
 	case "Cancel":
-		*e = StopTypeEnum(s)
+		*e = StopTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StopTypeEnum: %v", v)
 	}
 }

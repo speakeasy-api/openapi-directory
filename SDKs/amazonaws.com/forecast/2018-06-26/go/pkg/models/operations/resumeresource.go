@@ -16,17 +16,21 @@ const (
 	ResumeResourceXAmzTargetEnumAmazonForecastResumeResource ResumeResourceXAmzTargetEnum = "AmazonForecast.ResumeResource"
 )
 
+func (e ResumeResourceXAmzTargetEnum) ToPointer() *ResumeResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *ResumeResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.ResumeResource":
-		*e = ResumeResourceXAmzTargetEnum(s)
+		*e = ResumeResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResumeResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ResumeResourceXAmzTargetEnum: %v", v)
 	}
 }
 

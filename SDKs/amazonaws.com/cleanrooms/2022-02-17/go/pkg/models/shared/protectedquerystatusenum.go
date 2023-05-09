@@ -19,12 +19,16 @@ const (
 	ProtectedQueryStatusEnumTimedOut   ProtectedQueryStatusEnum = "TIMED_OUT"
 )
 
+func (e ProtectedQueryStatusEnum) ToPointer() *ProtectedQueryStatusEnum {
+	return &e
+}
+
 func (e *ProtectedQueryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBMITTED":
 		fallthrough
 	case "STARTED":
@@ -38,9 +42,9 @@ func (e *ProtectedQueryStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SUCCESS":
 		fallthrough
 	case "TIMED_OUT":
-		*e = ProtectedQueryStatusEnum(s)
+		*e = ProtectedQueryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProtectedQueryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProtectedQueryStatusEnum: %v", v)
 	}
 }

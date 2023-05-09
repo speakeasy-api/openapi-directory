@@ -13,16 +13,20 @@ const (
 	OnDemandProvisioningAllocationStrategyEnumLowestPrice OnDemandProvisioningAllocationStrategyEnum = "lowest-price"
 )
 
+func (e OnDemandProvisioningAllocationStrategyEnum) ToPointer() *OnDemandProvisioningAllocationStrategyEnum {
+	return &e
+}
+
 func (e *OnDemandProvisioningAllocationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lowest-price":
-		*e = OnDemandProvisioningAllocationStrategyEnum(s)
+		*e = OnDemandProvisioningAllocationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OnDemandProvisioningAllocationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for OnDemandProvisioningAllocationStrategyEnum: %v", v)
 	}
 }

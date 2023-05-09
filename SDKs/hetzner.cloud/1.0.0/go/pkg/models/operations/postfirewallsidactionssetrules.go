@@ -16,19 +16,23 @@ const (
 	PostFirewallsIDActionsSetRulesSetRulesRequestRuleDirectionEnumOut PostFirewallsIDActionsSetRulesSetRulesRequestRuleDirectionEnum = "out"
 )
 
+func (e PostFirewallsIDActionsSetRulesSetRulesRequestRuleDirectionEnum) ToPointer() *PostFirewallsIDActionsSetRulesSetRulesRequestRuleDirectionEnum {
+	return &e
+}
+
 func (e *PostFirewallsIDActionsSetRulesSetRulesRequestRuleDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "in":
 		fallthrough
 	case "out":
-		*e = PostFirewallsIDActionsSetRulesSetRulesRequestRuleDirectionEnum(s)
+		*e = PostFirewallsIDActionsSetRulesSetRulesRequestRuleDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsIDActionsSetRulesSetRulesRequestRuleDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsIDActionsSetRulesSetRulesRequestRuleDirectionEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	PostFirewallsIDActionsSetRulesSetRulesRequestRuleProtocolEnumGre  PostFirewallsIDActionsSetRulesSetRulesRequestRuleProtocolEnum = "gre"
 )
 
+func (e PostFirewallsIDActionsSetRulesSetRulesRequestRuleProtocolEnum) ToPointer() *PostFirewallsIDActionsSetRulesSetRulesRequestRuleProtocolEnum {
+	return &e
+}
+
 func (e *PostFirewallsIDActionsSetRulesSetRulesRequestRuleProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "udp":
@@ -58,10 +66,10 @@ func (e *PostFirewallsIDActionsSetRulesSetRulesRequestRuleProtocolEnum) Unmarsha
 	case "esp":
 		fallthrough
 	case "gre":
-		*e = PostFirewallsIDActionsSetRulesSetRulesRequestRuleProtocolEnum(s)
+		*e = PostFirewallsIDActionsSetRulesSetRulesRequestRuleProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsIDActionsSetRulesSetRulesRequestRuleProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsIDActionsSetRulesSetRulesRequestRuleProtocolEnum: %v", v)
 	}
 }
 
@@ -115,21 +123,25 @@ const (
 	PostFirewallsIDActionsSetRulesActionsResponseActionStatusEnumError   PostFirewallsIDActionsSetRulesActionsResponseActionStatusEnum = "error"
 )
 
+func (e PostFirewallsIDActionsSetRulesActionsResponseActionStatusEnum) ToPointer() *PostFirewallsIDActionsSetRulesActionsResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostFirewallsIDActionsSetRulesActionsResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostFirewallsIDActionsSetRulesActionsResponseActionStatusEnum(s)
+		*e = PostFirewallsIDActionsSetRulesActionsResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsIDActionsSetRulesActionsResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsIDActionsSetRulesActionsResponseActionStatusEnum: %v", v)
 	}
 }
 

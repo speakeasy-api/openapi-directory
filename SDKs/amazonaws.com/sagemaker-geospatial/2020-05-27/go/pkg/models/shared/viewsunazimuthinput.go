@@ -2,7 +2,7 @@
 
 package shared
 
-// ViewSunAzimuthInput - <p/>
+// ViewSunAzimuthInput - The input structure for specifying ViewSunAzimuth property filter. ViewSunAzimuth refers to the Sun azimuth angle. From the scene center point on the ground, this is the angle between truth north and the sun. Measured clockwise in degrees (0-360).
 type ViewSunAzimuthInput struct {
 	LowerBound float32 `json:"LowerBound"`
 	UpperBound float32 `json:"UpperBound"`

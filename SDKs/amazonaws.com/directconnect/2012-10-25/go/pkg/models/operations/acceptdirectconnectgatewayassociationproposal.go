@@ -16,17 +16,21 @@ const (
 	AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnumOvertureServiceAcceptDirectConnectGatewayAssociationProposal AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum = "OvertureService.AcceptDirectConnectGatewayAssociationProposal"
 )
 
+func (e AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum) ToPointer() *AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum {
+	return &e
+}
+
 func (e *AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.AcceptDirectConnectGatewayAssociationProposal":
-		*e = AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum(s)
+		*e = AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum: %v", v)
 	}
 }
 

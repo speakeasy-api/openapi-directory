@@ -23,6 +23,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Portfolio Optimizer is a [Web API](https://en.wikipedia.org/wiki/Web_API) to analyze and optimize investment portfolios (collection of financial assets such as stocks, bonds, ETFs, crypto-currencies) using modern portfolio theory algorithms (mean-variance, VaR, etc.).
 //
 // # API General Information
@@ -111,23 +126,26 @@ func String(s string) *string { return &s }
 //
 // https://docs.portfoliooptimizer.io/ - External documentation
 type SDK struct {
-	AssetsAnalysis                    *assetsAnalysis
-	AssetsCorrelationMatrix           *assetsCorrelationMatrix
-	AssetsCovarianceMatrix            *assetsCovarianceMatrix
-	AssetsKurtosis                    *assetsKurtosis
-	AssetsPrices                      *assetsPrices
-	AssetsReturns                     *assetsReturns
-	AssetsReturnsSimulation           *assetsReturnsSimulation
-	AssetsSkewness                    *assetsSkewness
-	AssetsVariance                    *assetsVariance
-	AssetsVolatility                  *assetsVolatility
-	Factors                           *factors
-	PortfolioAnalysis                 *portfolioAnalysis
-	PortfolioAnalysisSharpeRatio      *portfolioAnalysisSharpeRatio
-	PortfolioConstruction             *portfolioConstruction
-	PortfolioOptimization             *portfolioOptimization
-	PortfolioOptimizationMeanVariance *portfolioOptimizationMeanVariance
-	PortfolioSimulation               *portfolioSimulation
+	AssetsAnalysis                          *assetsAnalysis
+	AssetsCorrelationMatrix                 *assetsCorrelationMatrix
+	AssetsCovarianceMatrix                  *assetsCovarianceMatrix
+	AssetsKurtosis                          *assetsKurtosis
+	AssetsMonteCarloReturnsSimulation       *assetsMonteCarloReturnsSimulation
+	AssetsPrices                            *assetsPrices
+	AssetsReturns                           *assetsReturns
+	AssetsReturnsSimulation                 *assetsReturnsSimulation
+	AssetsSkewness                          *assetsSkewness
+	AssetsVariance                          *assetsVariance
+	AssetsVolatility                        *assetsVolatility
+	Factors                                 *factors
+	PortfolioAnalysis                       *portfolioAnalysis
+	PortfolioAnalysisConditionalValueAtRisk *portfolioAnalysisConditionalValueAtRisk
+	PortfolioAnalysisSharpeRatio            *portfolioAnalysisSharpeRatio
+	PortfolioAnalysisValueAtRisk            *portfolioAnalysisValueAtRisk
+	PortfolioConstruction                   *portfolioConstruction
+	PortfolioOptimization                   *portfolioOptimization
+	PortfolioOptimizationMeanVariance       *portfolioOptimizationMeanVariance
+	PortfolioSimulation                     *portfolioSimulation
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
 	_defaultClient  HTTPClient
@@ -236,6 +254,15 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.AssetsMonteCarloReturnsSimulation = newAssetsMonteCarloReturnsSimulation(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.AssetsPrices = newAssetsPrices(
 		sdk._defaultClient,
 		sdk._securityClient,
@@ -308,7 +335,25 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.PortfolioAnalysisConditionalValueAtRisk = newPortfolioAnalysisConditionalValueAtRisk(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.PortfolioAnalysisSharpeRatio = newPortfolioAnalysisSharpeRatio(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.PortfolioAnalysisValueAtRisk = newPortfolioAnalysisValueAtRisk(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

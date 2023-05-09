@@ -16,21 +16,25 @@ const (
 	PatchSpacesSpaceIDFoldersIDProfessionalVehicleRequestBodyLevelEnumPublic       PatchSpacesSpaceIDFoldersIDProfessionalVehicleRequestBodyLevelEnum = "public"
 )
 
+func (e PatchSpacesSpaceIDFoldersIDProfessionalVehicleRequestBodyLevelEnum) ToPointer() *PatchSpacesSpaceIDFoldersIDProfessionalVehicleRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersIDProfessionalVehicleRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = PatchSpacesSpaceIDFoldersIDProfessionalVehicleRequestBodyLevelEnum(s)
+		*e = PatchSpacesSpaceIDFoldersIDProfessionalVehicleRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDProfessionalVehicleRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDProfessionalVehicleRequestBodyLevelEnum: %v", v)
 	}
 }
 

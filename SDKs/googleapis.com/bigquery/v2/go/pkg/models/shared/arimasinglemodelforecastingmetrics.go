@@ -19,12 +19,16 @@ const (
 	ArimaSingleModelForecastingMetricsSeasonalPeriodsEnumYearly                        ArimaSingleModelForecastingMetricsSeasonalPeriodsEnum = "YEARLY"
 )
 
+func (e ArimaSingleModelForecastingMetricsSeasonalPeriodsEnum) ToPointer() *ArimaSingleModelForecastingMetricsSeasonalPeriodsEnum {
+	return &e
+}
+
 func (e *ArimaSingleModelForecastingMetricsSeasonalPeriodsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEASONAL_PERIOD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NO_SEASONALITY":
@@ -38,10 +42,10 @@ func (e *ArimaSingleModelForecastingMetricsSeasonalPeriodsEnum) UnmarshalJSON(da
 	case "QUARTERLY":
 		fallthrough
 	case "YEARLY":
-		*e = ArimaSingleModelForecastingMetricsSeasonalPeriodsEnum(s)
+		*e = ArimaSingleModelForecastingMetricsSeasonalPeriodsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArimaSingleModelForecastingMetricsSeasonalPeriodsEnum: %s", s)
+		return fmt.Errorf("invalid value for ArimaSingleModelForecastingMetricsSeasonalPeriodsEnum: %v", v)
 	}
 }
 

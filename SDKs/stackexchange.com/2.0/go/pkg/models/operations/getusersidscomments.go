@@ -16,19 +16,23 @@ const (
 	GetUsersIdsCommentsOrderEnumAsc  GetUsersIdsCommentsOrderEnum = "asc"
 )
 
+func (e GetUsersIdsCommentsOrderEnum) ToPointer() *GetUsersIdsCommentsOrderEnum {
+	return &e
+}
+
 func (e *GetUsersIdsCommentsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetUsersIdsCommentsOrderEnum(s)
+		*e = GetUsersIdsCommentsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUsersIdsCommentsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUsersIdsCommentsOrderEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	GetUsersIdsCommentsSortEnumVotes    GetUsersIdsCommentsSortEnum = "votes"
 )
 
+func (e GetUsersIdsCommentsSortEnum) ToPointer() *GetUsersIdsCommentsSortEnum {
+	return &e
+}
+
 func (e *GetUsersIdsCommentsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creation":
 		fallthrough
 	case "votes":
-		*e = GetUsersIdsCommentsSortEnum(s)
+		*e = GetUsersIdsCommentsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUsersIdsCommentsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUsersIdsCommentsSortEnum: %v", v)
 	}
 }
 

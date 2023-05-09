@@ -2,23 +2,25 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.CreatePermitRequest{
+    ctx := context.Background()
+    res, err := s.General.PostCreatePermit(ctx, shared.CreatePermitRequest{
         MerchantAccount: "corrupti",
         Permits: []shared.Permit{
             shared.Permit{
-                PartnerID: "distinctio",
-                ProfileReference: "quibusdam",
+                PartnerID: sdk.String("distinctio"),
+                ProfileReference: sdk.String("quibusdam"),
                 Restriction: &shared.PermitRestriction{
                     MaxAmount: &shared.Amount{
                         Currency: "unde",
@@ -28,14 +30,14 @@ func main() {
                         Currency: "corrupti",
                         Value: 847252,
                     },
-                    SingleUse: false,
+                    SingleUse: sdk.Bool(false),
                 },
-                ResultKey: "vel",
-                ValidTillDate: "2021-09-16T11:56:06.019Z",
+                ResultKey: sdk.String("vel"),
+                ValidTillDate: types.MustTimeFromString("2021-09-16T11:56:06.019Z"),
             },
             shared.Permit{
-                PartnerID: "suscipit",
-                ProfileReference: "iure",
+                PartnerID: sdk.String("suscipit"),
+                ProfileReference: sdk.String("iure"),
                 Restriction: &shared.PermitRestriction{
                     MaxAmount: &shared.Amount{
                         Currency: "magnam",
@@ -45,14 +47,14 @@ func main() {
                         Currency: "ipsa",
                         Value: 963663,
                     },
-                    SingleUse: false,
+                    SingleUse: sdk.Bool(false),
                 },
-                ResultKey: "tempora",
-                ValidTillDate: "2022-07-10T15:39:12.517Z",
+                ResultKey: sdk.String("tempora"),
+                ValidTillDate: types.MustTimeFromString("2022-07-10T15:39:12.517Z"),
             },
             shared.Permit{
-                PartnerID: "minus",
-                ProfileReference: "placeat",
+                PartnerID: sdk.String("minus"),
+                ProfileReference: sdk.String("placeat"),
                 Restriction: &shared.PermitRestriction{
                     MaxAmount: &shared.Amount{
                         Currency: "voluptatum",
@@ -62,18 +64,15 @@ func main() {
                         Currency: "excepturi",
                         Value: 392785,
                     },
-                    SingleUse: false,
+                    SingleUse: sdk.Bool(false),
                 },
-                ResultKey: "recusandae",
-                ValidTillDate: "2022-10-15T05:10:19.629Z",
+                ResultKey: sdk.String("recusandae"),
+                ValidTillDate: types.MustTimeFromString("2022-10-15T05:10:19.629Z"),
             },
         },
         RecurringDetailReference: "quis",
         ShopperReference: "veritatis",
-    }
-
-    ctx := context.Background()
-    res, err := s.General.PostCreatePermit(ctx, req, operations.PostCreatePermitSecurity{
+    }, operations.PostCreatePermitSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {

@@ -21,14 +21,19 @@ const (
 	GrantAppLevelPermissionsEnumCanManagePublicListing        GrantAppLevelPermissionsEnum = "CAN_MANAGE_PUBLIC_LISTING"
 	GrantAppLevelPermissionsEnumCanManageDraftApps            GrantAppLevelPermissionsEnum = "CAN_MANAGE_DRAFT_APPS"
 	GrantAppLevelPermissionsEnumCanManageOrders               GrantAppLevelPermissionsEnum = "CAN_MANAGE_ORDERS"
+	GrantAppLevelPermissionsEnumCanManageAppContent           GrantAppLevelPermissionsEnum = "CAN_MANAGE_APP_CONTENT"
 )
 
+func (e GrantAppLevelPermissionsEnum) ToPointer() *GrantAppLevelPermissionsEnum {
+	return &e
+}
+
 func (e *GrantAppLevelPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP_LEVEL_PERMISSION_UNSPECIFIED":
 		fallthrough
 	case "CAN_ACCESS_APP":
@@ -50,10 +55,12 @@ func (e *GrantAppLevelPermissionsEnum) UnmarshalJSON(data []byte) error {
 	case "CAN_MANAGE_DRAFT_APPS":
 		fallthrough
 	case "CAN_MANAGE_ORDERS":
-		*e = GrantAppLevelPermissionsEnum(s)
+		fallthrough
+	case "CAN_MANAGE_APP_CONTENT":
+		*e = GrantAppLevelPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GrantAppLevelPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for GrantAppLevelPermissionsEnum: %v", v)
 	}
 }
 

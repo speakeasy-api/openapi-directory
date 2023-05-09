@@ -19,12 +19,16 @@ const (
 	IdentityResolutionJobStatusEnumFailed         IdentityResolutionJobStatusEnum = "FAILED"
 )
 
+func (e IdentityResolutionJobStatusEnum) ToPointer() *IdentityResolutionJobStatusEnum {
+	return &e
+}
+
 func (e *IdentityResolutionJobStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "PREPROCESSING":
@@ -38,9 +42,9 @@ func (e *IdentityResolutionJobStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PARTIAL_SUCCESS":
 		fallthrough
 	case "FAILED":
-		*e = IdentityResolutionJobStatusEnum(s)
+		*e = IdentityResolutionJobStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IdentityResolutionJobStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for IdentityResolutionJobStatusEnum: %v", v)
 	}
 }

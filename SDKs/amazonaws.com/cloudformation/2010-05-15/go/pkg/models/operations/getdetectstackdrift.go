@@ -15,17 +15,21 @@ const (
 	GETDetectStackDriftActionEnumDetectStackDrift GETDetectStackDriftActionEnum = "DetectStackDrift"
 )
 
+func (e GETDetectStackDriftActionEnum) ToPointer() *GETDetectStackDriftActionEnum {
+	return &e
+}
+
 func (e *GETDetectStackDriftActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DetectStackDrift":
-		*e = GETDetectStackDriftActionEnum(s)
+		*e = GETDetectStackDriftActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetectStackDriftActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetectStackDriftActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDetectStackDriftVersionEnumTwoThousandAndTen0515 GETDetectStackDriftVersionEnum = "2010-05-15"
 )
 
+func (e GETDetectStackDriftVersionEnum) ToPointer() *GETDetectStackDriftVersionEnum {
+	return &e
+}
+
 func (e *GETDetectStackDriftVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETDetectStackDriftVersionEnum(s)
+		*e = GETDetectStackDriftVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetectStackDriftVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetectStackDriftVersionEnum: %v", v)
 	}
 }
 

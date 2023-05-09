@@ -17,12 +17,16 @@ const (
 	DataUploadFrequencyEnumPt1H  DataUploadFrequencyEnum = "PT1H"
 )
 
+func (e DataUploadFrequencyEnum) ToPointer() *DataUploadFrequencyEnum {
+	return &e
+}
+
 func (e *DataUploadFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PT5M":
 		fallthrough
 	case "PT10M":
@@ -32,9 +36,9 @@ func (e *DataUploadFrequencyEnum) UnmarshalJSON(data []byte) error {
 	case "PT30M":
 		fallthrough
 	case "PT1H":
-		*e = DataUploadFrequencyEnum(s)
+		*e = DataUploadFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataUploadFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for DataUploadFrequencyEnum: %v", v)
 	}
 }

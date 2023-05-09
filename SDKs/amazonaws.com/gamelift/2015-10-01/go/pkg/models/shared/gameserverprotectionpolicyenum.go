@@ -14,18 +14,22 @@ const (
 	GameServerProtectionPolicyEnumFullProtection GameServerProtectionPolicyEnum = "FULL_PROTECTION"
 )
 
+func (e GameServerProtectionPolicyEnum) ToPointer() *GameServerProtectionPolicyEnum {
+	return &e
+}
+
 func (e *GameServerProtectionPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_PROTECTION":
 		fallthrough
 	case "FULL_PROTECTION":
-		*e = GameServerProtectionPolicyEnum(s)
+		*e = GameServerProtectionPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GameServerProtectionPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for GameServerProtectionPolicyEnum: %v", v)
 	}
 }

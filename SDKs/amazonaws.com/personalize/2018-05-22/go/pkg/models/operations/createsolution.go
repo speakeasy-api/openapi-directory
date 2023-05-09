@@ -16,17 +16,21 @@ const (
 	CreateSolutionXAmzTargetEnumAmazonPersonalizeCreateSolution CreateSolutionXAmzTargetEnum = "AmazonPersonalize.CreateSolution"
 )
 
+func (e CreateSolutionXAmzTargetEnum) ToPointer() *CreateSolutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateSolutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.CreateSolution":
-		*e = CreateSolutionXAmzTargetEnum(s)
+		*e = CreateSolutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSolutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSolutionXAmzTargetEnum: %v", v)
 	}
 }
 

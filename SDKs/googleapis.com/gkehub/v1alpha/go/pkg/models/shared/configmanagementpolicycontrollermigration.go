@@ -16,21 +16,25 @@ const (
 	ConfigManagementPolicyControllerMigrationStageEnumPocoManaged      ConfigManagementPolicyControllerMigrationStageEnum = "POCO_MANAGED"
 )
 
+func (e ConfigManagementPolicyControllerMigrationStageEnum) ToPointer() *ConfigManagementPolicyControllerMigrationStageEnum {
+	return &e
+}
+
 func (e *ConfigManagementPolicyControllerMigrationStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STAGE_UNSPECIFIED":
 		fallthrough
 	case "ACM_MANAGED":
 		fallthrough
 	case "POCO_MANAGED":
-		*e = ConfigManagementPolicyControllerMigrationStageEnum(s)
+		*e = ConfigManagementPolicyControllerMigrationStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementPolicyControllerMigrationStageEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementPolicyControllerMigrationStageEnum: %v", v)
 	}
 }
 

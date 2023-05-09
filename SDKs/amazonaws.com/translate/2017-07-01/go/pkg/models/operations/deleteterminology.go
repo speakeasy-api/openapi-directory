@@ -16,17 +16,21 @@ const (
 	DeleteTerminologyXAmzTargetEnumAwsShineFrontendService20170701DeleteTerminology DeleteTerminologyXAmzTargetEnum = "AWSShineFrontendService_20170701.DeleteTerminology"
 )
 
+func (e DeleteTerminologyXAmzTargetEnum) ToPointer() *DeleteTerminologyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteTerminologyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShineFrontendService_20170701.DeleteTerminology":
-		*e = DeleteTerminologyXAmzTargetEnum(s)
+		*e = DeleteTerminologyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTerminologyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTerminologyXAmzTargetEnum: %v", v)
 	}
 }
 

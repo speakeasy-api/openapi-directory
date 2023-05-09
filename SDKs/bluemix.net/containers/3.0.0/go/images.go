@@ -36,7 +36,10 @@ func newImages(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Remove a Docker image from the private Bluemix registry that is identified by the image ID (corresponding IBM Containers command: `cf ic rmi <image>`).
 func (s *images) DeleteImagesID(ctx context.Context, request operations.DeleteImagesIDRequest) (*operations.DeleteImagesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/images/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/images/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -130,7 +133,10 @@ func (s *images) GetImagesJSON(ctx context.Context, request operations.GetImages
 // This endpoint returns detailed information about a Docker image that is stored in the private Bluemix registry of an organization (corresponding IBM Containers command: `cf ic inspect <image_name_or_id>`).
 func (s *images) GetImagesNameOrIDJSON(ctx context.Context, request operations.GetImagesNameOrIDJSONRequest) (*operations.GetImagesNameOrIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/images/{name_or_id}/json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/images/{name_or_id}/json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

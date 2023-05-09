@@ -14,17 +14,21 @@ const (
 	DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworksNetworkTypeEnumVpc DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworksNetworkTypeEnum = "vpc"
 )
 
+func (e DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworksNetworkTypeEnum) ToPointer() *DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworksNetworkTypeEnum {
+	return &e
+}
+
 func (e *DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworksNetworkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
-		*e = DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworksNetworkTypeEnum(s)
+		*e = DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworksNetworkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworksNetworkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworksNetworkTypeEnum: %v", v)
 	}
 }
 
@@ -59,21 +63,25 @@ const (
 	DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsTypeEnumFederatedAuthentication        DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsTypeEnum = "federated-authentication"
 )
 
+func (e DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsTypeEnum) ToPointer() *DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsTypeEnum {
+	return &e
+}
+
 func (e *DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "certificate-authentication":
 		fallthrough
 	case "directory-service-authentication":
 		fallthrough
 	case "federated-authentication":
-		*e = DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsTypeEnum(s)
+		*e = DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptionsTypeEnum: %v", v)
 	}
 }
 
@@ -93,19 +101,23 @@ const (
 	DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptionsStatusCodeEnumApplied  DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptionsStatusCodeEnum = "applied"
 )
 
+func (e DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptionsStatusCodeEnum) ToPointer() *DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptionsStatusCodeEnum {
+	return &e
+}
+
 func (e *DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptionsStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "applying":
 		fallthrough
 	case "applied":
-		*e = DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptionsStatusCodeEnum(s)
+		*e = DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptionsStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptionsStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptionsStatusCodeEnum: %v", v)
 	}
 }
 
@@ -145,12 +157,16 @@ const (
 	DescribeClientVpnEndpointsResultClientVpnEndpointsStatusCodeEnumDeleted          DescribeClientVpnEndpointsResultClientVpnEndpointsStatusCodeEnum = "deleted"
 )
 
+func (e DescribeClientVpnEndpointsResultClientVpnEndpointsStatusCodeEnum) ToPointer() *DescribeClientVpnEndpointsResultClientVpnEndpointsStatusCodeEnum {
+	return &e
+}
+
 func (e *DescribeClientVpnEndpointsResultClientVpnEndpointsStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending-associate":
 		fallthrough
 	case "available":
@@ -158,10 +174,10 @@ func (e *DescribeClientVpnEndpointsResultClientVpnEndpointsStatusCodeEnum) Unmar
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = DescribeClientVpnEndpointsResultClientVpnEndpointsStatusCodeEnum(s)
+		*e = DescribeClientVpnEndpointsResultClientVpnEndpointsStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeClientVpnEndpointsResultClientVpnEndpointsStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeClientVpnEndpointsResultClientVpnEndpointsStatusCodeEnum: %v", v)
 	}
 }
 
@@ -185,19 +201,23 @@ const (
 	DescribeClientVpnEndpointsResultClientVpnEndpointsTransportProtocolEnumUDP DescribeClientVpnEndpointsResultClientVpnEndpointsTransportProtocolEnum = "udp"
 )
 
+func (e DescribeClientVpnEndpointsResultClientVpnEndpointsTransportProtocolEnum) ToPointer() *DescribeClientVpnEndpointsResultClientVpnEndpointsTransportProtocolEnum {
+	return &e
+}
+
 func (e *DescribeClientVpnEndpointsResultClientVpnEndpointsTransportProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "udp":
-		*e = DescribeClientVpnEndpointsResultClientVpnEndpointsTransportProtocolEnum(s)
+		*e = DescribeClientVpnEndpointsResultClientVpnEndpointsTransportProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeClientVpnEndpointsResultClientVpnEndpointsTransportProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeClientVpnEndpointsResultClientVpnEndpointsTransportProtocolEnum: %v", v)
 	}
 }
 
@@ -208,17 +228,21 @@ const (
 	DescribeClientVpnEndpointsResultClientVpnEndpointsVpnProtocolEnumOpenvpn DescribeClientVpnEndpointsResultClientVpnEndpointsVpnProtocolEnum = "openvpn"
 )
 
+func (e DescribeClientVpnEndpointsResultClientVpnEndpointsVpnProtocolEnum) ToPointer() *DescribeClientVpnEndpointsResultClientVpnEndpointsVpnProtocolEnum {
+	return &e
+}
+
 func (e *DescribeClientVpnEndpointsResultClientVpnEndpointsVpnProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "openvpn":
-		*e = DescribeClientVpnEndpointsResultClientVpnEndpointsVpnProtocolEnum(s)
+		*e = DescribeClientVpnEndpointsResultClientVpnEndpointsVpnProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeClientVpnEndpointsResultClientVpnEndpointsVpnProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeClientVpnEndpointsResultClientVpnEndpointsVpnProtocolEnum: %v", v)
 	}
 }
 

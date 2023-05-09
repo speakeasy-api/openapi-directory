@@ -20,12 +20,16 @@ const (
 	TriggerStateEnumUpdating     TriggerStateEnum = "UPDATING"
 )
 
+func (e TriggerStateEnum) ToPointer() *TriggerStateEnum {
+	return &e
+}
+
 func (e *TriggerStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATED":
@@ -41,9 +45,9 @@ func (e *TriggerStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "UPDATING":
-		*e = TriggerStateEnum(s)
+		*e = TriggerStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TriggerStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TriggerStateEnum: %v", v)
 	}
 }

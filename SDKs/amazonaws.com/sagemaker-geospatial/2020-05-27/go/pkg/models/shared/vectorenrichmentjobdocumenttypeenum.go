@@ -13,16 +13,20 @@ const (
 	VectorEnrichmentJobDocumentTypeEnumCsv VectorEnrichmentJobDocumentTypeEnum = "CSV"
 )
 
+func (e VectorEnrichmentJobDocumentTypeEnum) ToPointer() *VectorEnrichmentJobDocumentTypeEnum {
+	return &e
+}
+
 func (e *VectorEnrichmentJobDocumentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
-		*e = VectorEnrichmentJobDocumentTypeEnum(s)
+		*e = VectorEnrichmentJobDocumentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VectorEnrichmentJobDocumentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VectorEnrichmentJobDocumentTypeEnum: %v", v)
 	}
 }

@@ -36,7 +36,10 @@ func newBusinessUsers(defaultClient, securityClient HTTPClient, serverURL, langu
 // <p>Use this endpoint to permanently <b>Delete</b> a Business User. A valid <b>businessUser id</b> is required.</p>
 func (s *businessUsers) DeleteSetupV1BusinessusersID(ctx context.Context, request operations.DeleteSetupV1BusinessusersIDRequest) (*operations.DeleteSetupV1BusinessusersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -170,7 +173,10 @@ func (s *businessUsers) GetSetupV1BusinessusersPermissions(ctx context.Context, 
 // <p>Use this endpoint to return a <b>List of Companies</b> associated with the business users email requested. A business user <b>email</b> address is required. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
 func (s *businessUsers) GetSetupV1BusinessusersEmailCompanies(ctx context.Context, request operations.GetSetupV1BusinessusersEmailCompaniesRequest) (*operations.GetSetupV1BusinessusersEmailCompaniesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{email}/companies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{email}/companies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -219,7 +225,10 @@ func (s *businessUsers) GetSetupV1BusinessusersEmailCompanies(ctx context.Contex
 // <p>Use this endpoint to return a <b>Business User</b> object. A valid <b>businessUser id</b> is required. Find businessUser id's using the <i>GET /setup/v1/businessusers</i> endpoint.</p>
 func (s *businessUsers) GetSetupV1BusinessusersID(ctx context.Context, request operations.GetSetupV1BusinessusersIDRequest) (*operations.GetSetupV1BusinessusersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -322,7 +331,10 @@ func (s *businessUsers) PostSetupV1Businessusers(ctx context.Context, request sh
 //	<b>Business Roles Include: bizowner</b> (Business Owner), <b>bizadmin</b> (Business Administrator), <b>bizresource</b> (Business User - Bookable Resource).</p>
 func (s *businessUsers) PutSetupV1BusinessusersID(ctx context.Context, request operations.PutSetupV1BusinessusersIDRequest) (*operations.PutSetupV1BusinessusersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/businessusers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BusinessUserUpdateModel", "json")
 	if err != nil {

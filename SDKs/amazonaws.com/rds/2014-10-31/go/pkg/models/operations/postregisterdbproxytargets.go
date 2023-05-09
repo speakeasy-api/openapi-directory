@@ -15,17 +15,21 @@ const (
 	POSTRegisterDBProxyTargetsActionEnumRegisterDbProxyTargets POSTRegisterDBProxyTargetsActionEnum = "RegisterDBProxyTargets"
 )
 
+func (e POSTRegisterDBProxyTargetsActionEnum) ToPointer() *POSTRegisterDBProxyTargetsActionEnum {
+	return &e
+}
+
 func (e *POSTRegisterDBProxyTargetsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RegisterDBProxyTargets":
-		*e = POSTRegisterDBProxyTargetsActionEnum(s)
+		*e = POSTRegisterDBProxyTargetsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRegisterDBProxyTargetsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRegisterDBProxyTargetsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRegisterDBProxyTargetsVersionEnumTwoThousandAndFourteen1031 POSTRegisterDBProxyTargetsVersionEnum = "2014-10-31"
 )
 
+func (e POSTRegisterDBProxyTargetsVersionEnum) ToPointer() *POSTRegisterDBProxyTargetsVersionEnum {
+	return &e
+}
+
 func (e *POSTRegisterDBProxyTargetsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTRegisterDBProxyTargetsVersionEnum(s)
+		*e = POSTRegisterDBProxyTargetsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRegisterDBProxyTargetsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRegisterDBProxyTargetsVersionEnum: %v", v)
 	}
 }
 

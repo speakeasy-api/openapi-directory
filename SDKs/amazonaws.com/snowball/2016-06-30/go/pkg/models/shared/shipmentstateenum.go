@@ -14,18 +14,22 @@ const (
 	ShipmentStateEnumReturned ShipmentStateEnum = "RETURNED"
 )
 
+func (e ShipmentStateEnum) ToPointer() *ShipmentStateEnum {
+	return &e
+}
+
 func (e *ShipmentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECEIVED":
 		fallthrough
 	case "RETURNED":
-		*e = ShipmentStateEnum(s)
+		*e = ShipmentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShipmentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ShipmentStateEnum: %v", v)
 	}
 }

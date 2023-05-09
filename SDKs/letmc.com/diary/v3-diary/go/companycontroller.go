@@ -35,7 +35,10 @@ func newCompanyController(defaultClient, securityClient HTTPClient, serverURL, l
 // CompanyControllerGetBranches - All branches defined for a company
 func (s *companyController) CompanyControllerGetBranches(ctx context.Context, request operations.CompanyControllerGetBranchesRequest) (*operations.CompanyControllerGetBranchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/company/branches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/company/branches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -104,7 +107,10 @@ func (s *companyController) CompanyControllerGetBranches(ctx context.Context, re
 // GetV3DiaryShortNameCompanyBranchesBranchID - Get a specific branch given its unique Object ID (OID)
 func (s *companyController) GetV3DiaryShortNameCompanyBranchesBranchID(ctx context.Context, request operations.GetV3DiaryShortNameCompanyBranchesBranchIDRequest) (*operations.GetV3DiaryShortNameCompanyBranchesBranchIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/company/branches/{branchID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/diary/{shortName}/company/branches/{branchID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

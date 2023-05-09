@@ -16,21 +16,25 @@ const (
 	HangoutsChatExportOptionsExportFormatEnumPst                     HangoutsChatExportOptionsExportFormatEnum = "PST"
 )
 
+func (e HangoutsChatExportOptionsExportFormatEnum) ToPointer() *HangoutsChatExportOptionsExportFormatEnum {
+	return &e
+}
+
 func (e *HangoutsChatExportOptionsExportFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXPORT_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "MBOX":
 		fallthrough
 	case "PST":
-		*e = HangoutsChatExportOptionsExportFormatEnum(s)
+		*e = HangoutsChatExportOptionsExportFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HangoutsChatExportOptionsExportFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for HangoutsChatExportOptionsExportFormatEnum: %v", v)
 	}
 }
 

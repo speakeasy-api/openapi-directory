@@ -96,7 +96,10 @@ func (s *sessions) CreateCreditSession(ctx context.Context, request shared.Sessi
 // Read more on **[Read an existing payment session](https://docs.klarna.com/klarna-payments/other-actions/check-the-details-of-a-payment-session/)**.
 func (s *sessions) ReadCreditSession(ctx context.Context, request operations.ReadCreditSessionRequest) (*operations.ReadCreditSessionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payments/v1/sessions/{session_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payments/v1/sessions/{session_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *sessions) ReadCreditSession(ctx context.Context, request operations.Rea
 // Read more on **[Update an existing payment session](https://docs.klarna.com/klarna-payments/other-actions/update-the-cart/)**.
 func (s *sessions) UpdateCreditSession(ctx context.Context, request operations.UpdateCreditSessionRequest) (*operations.UpdateCreditSessionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payments/v1/sessions/{session_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payments/v1/sessions/{session_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SessionInput", "json")
 	if err != nil {

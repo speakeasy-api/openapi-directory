@@ -21,12 +21,16 @@ const (
 	UptimeCheckIPRegionEnumUsaVirginia       UptimeCheckIPRegionEnum = "USA_VIRGINIA"
 )
 
+func (e UptimeCheckIPRegionEnum) ToPointer() *UptimeCheckIPRegionEnum {
+	return &e
+}
+
 func (e *UptimeCheckIPRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGION_UNSPECIFIED":
 		fallthrough
 	case "USA":
@@ -42,10 +46,10 @@ func (e *UptimeCheckIPRegionEnum) UnmarshalJSON(data []byte) error {
 	case "USA_IOWA":
 		fallthrough
 	case "USA_VIRGINIA":
-		*e = UptimeCheckIPRegionEnum(s)
+		*e = UptimeCheckIPRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UptimeCheckIPRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for UptimeCheckIPRegionEnum: %v", v)
 	}
 }
 

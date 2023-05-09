@@ -16,17 +16,21 @@ const (
 	UpdateComponentXAmzTargetEnumEc2WindowsBarleyServiceUpdateComponent UpdateComponentXAmzTargetEnum = "EC2WindowsBarleyService.UpdateComponent"
 )
 
+func (e UpdateComponentXAmzTargetEnum) ToPointer() *UpdateComponentXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateComponentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2WindowsBarleyService.UpdateComponent":
-		*e = UpdateComponentXAmzTargetEnum(s)
+		*e = UpdateComponentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateComponentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateComponentXAmzTargetEnum: %v", v)
 	}
 }
 

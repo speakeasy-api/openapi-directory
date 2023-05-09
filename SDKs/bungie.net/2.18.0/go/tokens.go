@@ -36,7 +36,10 @@ func newTokens(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // TokensApplyMissingPartnerOffersWithoutClaim - Apply a partner offer to the targeted user. This endpoint does not claim a new offer, but any already claimed offers will be applied to the game if not already.
 func (s *tokens) TokensApplyMissingPartnerOffersWithoutClaim(ctx context.Context, request operations.TokensApplyMissingPartnerOffersWithoutClaimRequest, security operations.TokensApplyMissingPartnerOffersWithoutClaimSecurity) (*operations.TokensApplyMissingPartnerOffersWithoutClaimResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Tokens/Partner/ApplyMissingOffers/{partnerApplicationId}/{targetBnetMembershipId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Tokens/Partner/ApplyMissingOffers/{partnerApplicationId}/{targetBnetMembershipId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -78,7 +81,7 @@ func (s *tokens) TokensApplyMissingPartnerOffersWithoutClaim(ctx context.Context
 }
 
 // TokensClaimPartnerOffer - Claim a partner offer as the authenticated user.
-func (s *tokens) TokensClaimPartnerOffer(ctx context.Context) (*operations.TokensClaimPartnerOfferResponse, error) {
+func (s *tokens) TokensClaimPartnerOffer(ctx context.Context, security operations.TokensClaimPartnerOfferSecurity) (*operations.TokensClaimPartnerOfferResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Tokens/Partner/ClaimOffer/"
 
@@ -87,7 +90,7 @@ func (s *tokens) TokensClaimPartnerOffer(ctx context.Context) (*operations.Token
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -122,7 +125,7 @@ func (s *tokens) TokensClaimPartnerOffer(ctx context.Context) (*operations.Token
 }
 
 // TokensForceDropsRepair - Twitch Drops self-repair function - scans twitch for drops not marked as fulfilled and resyncs them.
-func (s *tokens) TokensForceDropsRepair(ctx context.Context) (*operations.TokensForceDropsRepairResponse, error) {
+func (s *tokens) TokensForceDropsRepair(ctx context.Context, security operations.TokensForceDropsRepairSecurity) (*operations.TokensForceDropsRepairResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/Tokens/Partner/ForceDropsRepair/"
 
@@ -131,7 +134,7 @@ func (s *tokens) TokensForceDropsRepair(ctx context.Context) (*operations.Tokens
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -168,7 +171,10 @@ func (s *tokens) TokensForceDropsRepair(ctx context.Context) (*operations.Tokens
 // TokensGetBungieRewardsForPlatformUser - Returns the bungie rewards for the targeted user when a platform membership Id and Type are used.
 func (s *tokens) TokensGetBungieRewardsForPlatformUser(ctx context.Context, request operations.TokensGetBungieRewardsForPlatformUserRequest, security operations.TokensGetBungieRewardsForPlatformUserSecurity) (*operations.TokensGetBungieRewardsForPlatformUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Tokens/Rewards/GetRewardsForPlatformUser/{membershipId}/{membershipType}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Tokens/Rewards/GetRewardsForPlatformUser/{membershipId}/{membershipType}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -212,7 +218,10 @@ func (s *tokens) TokensGetBungieRewardsForPlatformUser(ctx context.Context, requ
 // TokensGetBungieRewardsForUser - Returns the bungie rewards for the targeted user.
 func (s *tokens) TokensGetBungieRewardsForUser(ctx context.Context, request operations.TokensGetBungieRewardsForUserRequest, security operations.TokensGetBungieRewardsForUserSecurity) (*operations.TokensGetBungieRewardsForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Tokens/Rewards/GetRewardsForUser/{membershipId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Tokens/Rewards/GetRewardsForUser/{membershipId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -300,7 +309,10 @@ func (s *tokens) TokensGetBungieRewardsList(ctx context.Context) (*operations.To
 // TokensGetPartnerOfferSkuHistory - Returns the partner sku and offer history of the targeted user. Elevated permissions are required to see users that are not yourself.
 func (s *tokens) TokensGetPartnerOfferSkuHistory(ctx context.Context, request operations.TokensGetPartnerOfferSkuHistoryRequest, security operations.TokensGetPartnerOfferSkuHistorySecurity) (*operations.TokensGetPartnerOfferSkuHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Tokens/Partner/History/{partnerApplicationId}/{targetBnetMembershipId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Tokens/Partner/History/{partnerApplicationId}/{targetBnetMembershipId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -344,7 +356,10 @@ func (s *tokens) TokensGetPartnerOfferSkuHistory(ctx context.Context, request op
 // TokensGetPartnerRewardHistory - Returns the partner rewards history of the targeted user, both partner offers and Twitch drops.
 func (s *tokens) TokensGetPartnerRewardHistory(ctx context.Context, request operations.TokensGetPartnerRewardHistoryRequest, security operations.TokensGetPartnerRewardHistorySecurity) (*operations.TokensGetPartnerRewardHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Tokens/Partner/History/{targetBnetMembershipId}/Application/{partnerApplicationId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Tokens/Partner/History/{targetBnetMembershipId}/Application/{partnerApplicationId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

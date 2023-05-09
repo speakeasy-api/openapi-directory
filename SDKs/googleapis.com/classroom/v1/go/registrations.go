@@ -90,7 +90,10 @@ func (s *registrations) ClassroomRegistrationsCreate(ctx context.Context, reques
 // ClassroomRegistrationsDelete - Deletes a `Registration`, causing Classroom to stop sending notifications for that `Registration`.
 func (s *registrations) ClassroomRegistrationsDelete(ctx context.Context, request operations.ClassroomRegistrationsDeleteRequest, security operations.ClassroomRegistrationsDeleteSecurity) (*operations.ClassroomRegistrationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/registrations/{registrationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/registrations/{registrationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

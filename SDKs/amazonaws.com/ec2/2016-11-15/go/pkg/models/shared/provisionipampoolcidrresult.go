@@ -15,19 +15,23 @@ const (
 	ProvisionIpamPoolCidrResultIpamPoolCidrFailureReasonCodeEnumLimitExceeded    ProvisionIpamPoolCidrResultIpamPoolCidrFailureReasonCodeEnum = "limit-exceeded"
 )
 
+func (e ProvisionIpamPoolCidrResultIpamPoolCidrFailureReasonCodeEnum) ToPointer() *ProvisionIpamPoolCidrResultIpamPoolCidrFailureReasonCodeEnum {
+	return &e
+}
+
 func (e *ProvisionIpamPoolCidrResultIpamPoolCidrFailureReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cidr-not-available":
 		fallthrough
 	case "limit-exceeded":
-		*e = ProvisionIpamPoolCidrResultIpamPoolCidrFailureReasonCodeEnum(s)
+		*e = ProvisionIpamPoolCidrResultIpamPoolCidrFailureReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionIpamPoolCidrResultIpamPoolCidrFailureReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionIpamPoolCidrResultIpamPoolCidrFailureReasonCodeEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	ProvisionIpamPoolCidrResultIpamPoolCidrStateEnumFailedImport       ProvisionIpamPoolCidrResultIpamPoolCidrStateEnum = "failed-import"
 )
 
+func (e ProvisionIpamPoolCidrResultIpamPoolCidrStateEnum) ToPointer() *ProvisionIpamPoolCidrResultIpamPoolCidrStateEnum {
+	return &e
+}
+
 func (e *ProvisionIpamPoolCidrResultIpamPoolCidrStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending-provision":
 		fallthrough
 	case "provisioned":
@@ -72,10 +80,10 @@ func (e *ProvisionIpamPoolCidrResultIpamPoolCidrStateEnum) UnmarshalJSON(data []
 	case "pending-import":
 		fallthrough
 	case "failed-import":
-		*e = ProvisionIpamPoolCidrResultIpamPoolCidrStateEnum(s)
+		*e = ProvisionIpamPoolCidrResultIpamPoolCidrStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionIpamPoolCidrResultIpamPoolCidrStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionIpamPoolCidrResultIpamPoolCidrStateEnum: %v", v)
 	}
 }
 

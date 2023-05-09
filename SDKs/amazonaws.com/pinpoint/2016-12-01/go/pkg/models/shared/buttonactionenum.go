@@ -15,20 +15,24 @@ const (
 	ButtonActionEnumClose    ButtonActionEnum = "CLOSE"
 )
 
+func (e ButtonActionEnum) ToPointer() *ButtonActionEnum {
+	return &e
+}
+
 func (e *ButtonActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINK":
 		fallthrough
 	case "DEEP_LINK":
 		fallthrough
 	case "CLOSE":
-		*e = ButtonActionEnum(s)
+		*e = ButtonActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ButtonActionEnum: %s", s)
+		return fmt.Errorf("invalid value for ButtonActionEnum: %v", v)
 	}
 }

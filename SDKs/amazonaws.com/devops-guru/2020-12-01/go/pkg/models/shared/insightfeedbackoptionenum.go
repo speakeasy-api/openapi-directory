@@ -17,12 +17,16 @@ const (
 	InsightFeedbackOptionEnumDataIncorrect        InsightFeedbackOptionEnum = "DATA_INCORRECT"
 )
 
+func (e InsightFeedbackOptionEnum) ToPointer() *InsightFeedbackOptionEnum {
+	return &e
+}
+
 func (e *InsightFeedbackOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALID_COLLECTION":
 		fallthrough
 	case "RECOMMENDATION_USEFUL":
@@ -32,9 +36,9 @@ func (e *InsightFeedbackOptionEnum) UnmarshalJSON(data []byte) error {
 	case "DATA_NOISY_ANOMALY":
 		fallthrough
 	case "DATA_INCORRECT":
-		*e = InsightFeedbackOptionEnum(s)
+		*e = InsightFeedbackOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InsightFeedbackOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for InsightFeedbackOptionEnum: %v", v)
 	}
 }

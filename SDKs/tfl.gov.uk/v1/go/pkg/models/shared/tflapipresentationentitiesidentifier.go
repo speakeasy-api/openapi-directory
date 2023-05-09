@@ -20,12 +20,16 @@ const (
 	TflAPIPresentationEntitiesIdentifierRouteTypeEnumStreetspaceRoute   TflAPIPresentationEntitiesIdentifierRouteTypeEnum = "Streetspace Route"
 )
 
+func (e TflAPIPresentationEntitiesIdentifierRouteTypeEnum) ToPointer() *TflAPIPresentationEntitiesIdentifierRouteTypeEnum {
+	return &e
+}
+
 func (e *TflAPIPresentationEntitiesIdentifierRouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unknown":
 		fallthrough
 	case "All":
@@ -41,10 +45,10 @@ func (e *TflAPIPresentationEntitiesIdentifierRouteTypeEnum) UnmarshalJSON(data [
 	case "Central London Grid":
 		fallthrough
 	case "Streetspace Route":
-		*e = TflAPIPresentationEntitiesIdentifierRouteTypeEnum(s)
+		*e = TflAPIPresentationEntitiesIdentifierRouteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesIdentifierRouteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesIdentifierRouteTypeEnum: %v", v)
 	}
 }
 
@@ -60,12 +64,16 @@ const (
 	TflAPIPresentationEntitiesIdentifierStatusEnumNotOpen                                    TflAPIPresentationEntitiesIdentifierStatusEnum = "Not Open"
 )
 
+func (e TflAPIPresentationEntitiesIdentifierStatusEnum) ToPointer() *TflAPIPresentationEntitiesIdentifierStatusEnum {
+	return &e
+}
+
 func (e *TflAPIPresentationEntitiesIdentifierStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unknown":
 		fallthrough
 	case "All":
@@ -79,10 +87,10 @@ func (e *TflAPIPresentationEntitiesIdentifierStatusEnum) UnmarshalJSON(data []by
 	case "Planned - Subject to feasibility and consultation.":
 		fallthrough
 	case "Not Open":
-		*e = TflAPIPresentationEntitiesIdentifierStatusEnum(s)
+		*e = TflAPIPresentationEntitiesIdentifierStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesIdentifierStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesIdentifierStatusEnum: %v", v)
 	}
 }
 

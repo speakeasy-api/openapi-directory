@@ -14,18 +14,22 @@ const (
 	ConditionOutcomeEnumFalse ConditionOutcomeEnum = "False"
 )
 
+func (e ConditionOutcomeEnum) ToPointer() *ConditionOutcomeEnum {
+	return &e
+}
+
 func (e *ConditionOutcomeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "True":
 		fallthrough
 	case "False":
-		*e = ConditionOutcomeEnum(s)
+		*e = ConditionOutcomeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConditionOutcomeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConditionOutcomeEnum: %v", v)
 	}
 }

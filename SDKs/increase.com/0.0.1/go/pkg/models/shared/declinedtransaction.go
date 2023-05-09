@@ -20,12 +20,16 @@ const (
 	DeclinedTransactionCurrencyEnumUsd DeclinedTransactionCurrencyEnum = "USD"
 )
 
+func (e DeclinedTransactionCurrencyEnum) ToPointer() *DeclinedTransactionCurrencyEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -37,10 +41,38 @@ func (e *DeclinedTransactionCurrencyEnum) UnmarshalJSON(data []byte) error {
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = DeclinedTransactionCurrencyEnum(s)
+		*e = DeclinedTransactionCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionCurrencyEnum: %v", v)
+	}
+}
+
+// DeclinedTransactionRouteTypeEnum - The type of the route this Declined Transaction came through.
+type DeclinedTransactionRouteTypeEnum string
+
+const (
+	DeclinedTransactionRouteTypeEnumAccountNumber DeclinedTransactionRouteTypeEnum = "account_number"
+	DeclinedTransactionRouteTypeEnumCard          DeclinedTransactionRouteTypeEnum = "card"
+)
+
+func (e DeclinedTransactionRouteTypeEnum) ToPointer() *DeclinedTransactionRouteTypeEnum {
+	return &e
+}
+
+func (e *DeclinedTransactionRouteTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "account_number":
+		fallthrough
+	case "card":
+		*e = DeclinedTransactionRouteTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for DeclinedTransactionRouteTypeEnum: %v", v)
 	}
 }
 
@@ -54,19 +86,24 @@ const (
 	DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumCreditEntryRefusedByReceiver DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "credit_entry_refused_by_receiver"
 	DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumDuplicateReturn              DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "duplicate_return"
 	DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumEntityNotActive              DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "entity_not_active"
-	DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumTransactionNotAllowed        DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "transaction_not_allowed"
 	DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumGroupLocked                  DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "group_locked"
 	DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumInsufficientFunds            DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "insufficient_funds"
+	DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumMisroutedReturn              DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "misrouted_return"
 	DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumNoAchRoute                   DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "no_ach_route"
 	DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumOriginatorRequest            DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "originator_request"
+	DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumTransactionNotAllowed        DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "transaction_not_allowed"
 )
 
+func (e DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum) ToPointer() *DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ach_route_canceled":
 		fallthrough
 	case "ach_route_disabled":
@@ -79,19 +116,21 @@ func (e *DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum) Unmar
 		fallthrough
 	case "entity_not_active":
 		fallthrough
-	case "transaction_not_allowed":
-		fallthrough
 	case "group_locked":
 		fallthrough
 	case "insufficient_funds":
 		fallthrough
+	case "misrouted_return":
+		fallthrough
 	case "no_ach_route":
 		fallthrough
 	case "originator_request":
-		*e = DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum(s)
+		fallthrough
+	case "transaction_not_allowed":
+		*e = DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum: %v", v)
 	}
 }
 
@@ -122,12 +161,16 @@ const (
 	DeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnumUsd DeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum = "USD"
 )
 
+func (e DeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum) ToPointer() *DeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -139,10 +182,10 @@ func (e *DeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum) Un
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = DeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum(s)
+		*e = DeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum: %v", v)
 	}
 }
 
@@ -153,17 +196,21 @@ const (
 	DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnumVisa DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum = "visa"
 )
 
+func (e DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum) ToPointer() *DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "visa":
-		*e = DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum(s)
+		*e = DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum: %v", v)
 	}
 }
 
@@ -181,12 +228,16 @@ const (
 	DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnumNonSecureTransaction                                    DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum = "non_secure_transaction"
 )
 
+func (e DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum) ToPointer() *DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mail_phone_order":
 		fallthrough
 	case "recurring":
@@ -202,10 +253,10 @@ func (e *DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVi
 	case "non_authenticated_security_transaction":
 		fallthrough
 	case "non_secure_transaction":
-		*e = DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum(s)
+		*e = DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum: %v", v)
 	}
 }
 
@@ -224,12 +275,16 @@ const (
 	DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnumIntegratedCircuitCardNoCvv DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum = "integrated_circuit_card_no_cvv"
 )
 
+func (e DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum) ToPointer() *DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manual":
 		fallthrough
 	case "magnetic_stripe_no_cvv":
@@ -247,10 +302,10 @@ func (e *DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVi
 	case "contactless_magnetic_stripe":
 		fallthrough
 	case "integrated_circuit_card_no_cvv":
-		*e = DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum(s)
+		*e = DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum: %v", v)
 	}
 }
 
@@ -272,24 +327,30 @@ type DeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetails struc
 type DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum string
 
 const (
-	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumCardNotActive               DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "card_not_active"
-	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumEntityNotActive             DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "entity_not_active"
-	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumGroupLocked                 DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "group_locked"
-	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumInsufficientFunds           DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "insufficient_funds"
-	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumCvv2Mismatch                DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "cvv2_mismatch"
-	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumTransactionNotAllowed       DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "transaction_not_allowed"
-	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumBreachesLimit               DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "breaches_limit"
-	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumWebhookDeclined             DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "webhook_declined"
-	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumWebhookTimedOut             DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "webhook_timed_out"
-	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumDeclinedByStandInProcessing DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "declined_by_stand_in_processing"
+	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumCardNotActive                DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "card_not_active"
+	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumEntityNotActive              DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "entity_not_active"
+	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumGroupLocked                  DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "group_locked"
+	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumInsufficientFunds            DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "insufficient_funds"
+	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumCvv2Mismatch                 DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "cvv2_mismatch"
+	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumTransactionNotAllowed        DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "transaction_not_allowed"
+	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumBreachesLimit                DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "breaches_limit"
+	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumWebhookDeclined              DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "webhook_declined"
+	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumWebhookTimedOut              DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "webhook_timed_out"
+	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumDeclinedByStandInProcessing  DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "declined_by_stand_in_processing"
+	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumInvalidPhysicalCard          DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "invalid_physical_card"
+	DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumMissingOriginalAuthorization DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "missing_original_authorization"
 )
 
+func (e DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum) ToPointer() *DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card_not_active":
 		fallthrough
 	case "entity_not_active":
@@ -309,10 +370,14 @@ func (e *DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum) Unma
 	case "webhook_timed_out":
 		fallthrough
 	case "declined_by_stand_in_processing":
-		*e = DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum(s)
+		fallthrough
+	case "invalid_physical_card":
+		fallthrough
+	case "missing_original_authorization":
+		*e = DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum: %v", v)
 	}
 }
 
@@ -358,12 +423,16 @@ const (
 	DeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnumUsd DeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum = "USD"
 )
 
+func (e DeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum) ToPointer() *DeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -375,10 +444,10 @@ func (e *DeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurren
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = DeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum(s)
+		*e = DeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum: %v", v)
 	}
 }
 
@@ -409,12 +478,16 @@ const (
 	DeclinedTransactionDeclinedTransactionSourceCategoryEnumOther                                  DeclinedTransactionDeclinedTransactionSourceCategoryEnum = "other"
 )
 
+func (e DeclinedTransactionDeclinedTransactionSourceCategoryEnum) ToPointer() *DeclinedTransactionDeclinedTransactionSourceCategoryEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionDeclinedTransactionSourceCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ach_decline":
 		fallthrough
 	case "card_decline":
@@ -428,10 +501,10 @@ func (e *DeclinedTransactionDeclinedTransactionSourceCategoryEnum) UnmarshalJSON
 	case "card_route_decline":
 		fallthrough
 	case "other":
-		*e = DeclinedTransactionDeclinedTransactionSourceCategoryEnum(s)
+		*e = DeclinedTransactionDeclinedTransactionSourceCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCategoryEnum: %v", v)
 	}
 }
 
@@ -450,14 +523,20 @@ const (
 	DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnumReferToImage          DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum = "refer_to_image"
 	DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnumStopPaymentRequested  DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum = "stop_payment_requested"
 	DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnumReturned              DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum = "returned"
+	DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnumDuplicatePresentment  DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum = "duplicate_presentment"
+	DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnumNotAuthorized         DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum = "not_authorized"
 )
 
+func (e DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum) ToPointer() *DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ach_route_canceled":
 		fallthrough
 	case "ach_route_disabled":
@@ -479,10 +558,14 @@ func (e *DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum) Unm
 	case "stop_payment_requested":
 		fallthrough
 	case "returned":
-		*e = DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum(s)
+		fallthrough
+	case "duplicate_presentment":
+		fallthrough
+	case "not_authorized":
+		*e = DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum: %v", v)
 	}
 }
 
@@ -507,12 +590,16 @@ const (
 	DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnumUsd DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum = "USD"
 )
 
+func (e DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum) ToPointer() *DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -524,10 +611,10 @@ func (e *DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTran
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum(s)
+		*e = DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum: %v", v)
 	}
 }
 
@@ -542,12 +629,16 @@ const (
 	DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnumRealTimePaymentsNotEnabled DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum = "real_time_payments_not_enabled"
 )
 
+func (e DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum) ToPointer() *DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account_number_canceled":
 		fallthrough
 	case "account_number_disabled":
@@ -557,10 +648,10 @@ func (e *DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTran
 	case "entity_not_active":
 		fallthrough
 	case "real_time_payments_not_enabled":
-		*e = DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum(s)
+		*e = DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum: %v", v)
 	}
 }
 
@@ -652,17 +743,21 @@ const (
 	DeclinedTransactionTypeEnumDeclinedTransaction DeclinedTransactionTypeEnum = "declined_transaction"
 )
 
+func (e DeclinedTransactionTypeEnum) ToPointer() *DeclinedTransactionTypeEnum {
+	return &e
+}
+
 func (e *DeclinedTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "declined_transaction":
-		*e = DeclinedTransactionTypeEnum(s)
+		*e = DeclinedTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeclinedTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeclinedTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -683,7 +778,7 @@ type DeclinedTransaction struct {
 	// The identifier for the route this Declined Transaction came through. Routes are things like cards and ACH details.
 	RouteID string `json:"route_id"`
 	// The type of the route this Declined Transaction came through.
-	RouteType string `json:"route_type"`
+	RouteType DeclinedTransactionRouteTypeEnum `json:"route_type"`
 	// This is an object giving more details on the network-level event that caused the Declined Transaction. For example, for a card transaction this lists the merchant's industry and location. Note that for backwards compatibility reasons, additional undocumented keys may appear in this object. These should be treated as deprecated and will be removed in the future.
 	Source DeclinedTransactionDeclinedTransactionSource `json:"source"`
 	// A constant representing the object's type. For this resource it will always be `declined_transaction`.

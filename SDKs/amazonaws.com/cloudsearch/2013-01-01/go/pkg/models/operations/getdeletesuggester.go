@@ -15,17 +15,21 @@ const (
 	GETDeleteSuggesterActionEnumDeleteSuggester GETDeleteSuggesterActionEnum = "DeleteSuggester"
 )
 
+func (e GETDeleteSuggesterActionEnum) ToPointer() *GETDeleteSuggesterActionEnum {
+	return &e
+}
+
 func (e *GETDeleteSuggesterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteSuggester":
-		*e = GETDeleteSuggesterActionEnum(s)
+		*e = GETDeleteSuggesterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteSuggesterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteSuggesterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteSuggesterVersionEnumTwoThousandAndThirteen0101 GETDeleteSuggesterVersionEnum = "2013-01-01"
 )
 
+func (e GETDeleteSuggesterVersionEnum) ToPointer() *GETDeleteSuggesterVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteSuggesterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = GETDeleteSuggesterVersionEnum(s)
+		*e = GETDeleteSuggesterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteSuggesterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteSuggesterVersionEnum: %v", v)
 	}
 }
 

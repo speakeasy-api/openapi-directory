@@ -14,18 +14,22 @@ const (
 	ObjectStorageServerProtocolEnumHTTP  ObjectStorageServerProtocolEnum = "HTTP"
 )
 
+func (e ObjectStorageServerProtocolEnum) ToPointer() *ObjectStorageServerProtocolEnum {
+	return &e
+}
+
 func (e *ObjectStorageServerProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTPS":
 		fallthrough
 	case "HTTP":
-		*e = ObjectStorageServerProtocolEnum(s)
+		*e = ObjectStorageServerProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ObjectStorageServerProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for ObjectStorageServerProtocolEnum: %v", v)
 	}
 }

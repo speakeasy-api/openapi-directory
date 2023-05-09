@@ -16,12 +16,16 @@ const (
 	SSEStatusEnumDisabled  SSEStatusEnum = "DISABLED"
 )
 
+func (e SSEStatusEnum) ToPointer() *SSEStatusEnum {
+	return &e
+}
+
 func (e *SSEStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLING":
 		fallthrough
 	case "ENABLED":
@@ -29,9 +33,9 @@ func (e *SSEStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DISABLING":
 		fallthrough
 	case "DISABLED":
-		*e = SSEStatusEnum(s)
+		*e = SSEStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SSEStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SSEStatusEnum: %v", v)
 	}
 }

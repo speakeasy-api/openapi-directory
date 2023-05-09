@@ -16,17 +16,21 @@ const (
 	CreateConditionalForwarderXAmzTargetEnumDirectoryService20150416CreateConditionalForwarder CreateConditionalForwarderXAmzTargetEnum = "DirectoryService_20150416.CreateConditionalForwarder"
 )
 
+func (e CreateConditionalForwarderXAmzTargetEnum) ToPointer() *CreateConditionalForwarderXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateConditionalForwarderXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.CreateConditionalForwarder":
-		*e = CreateConditionalForwarderXAmzTargetEnum(s)
+		*e = CreateConditionalForwarderXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateConditionalForwarderXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateConditionalForwarderXAmzTargetEnum: %v", v)
 	}
 }
 

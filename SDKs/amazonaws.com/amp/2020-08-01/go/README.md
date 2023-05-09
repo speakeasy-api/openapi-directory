@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/amp/2020-08
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,23 +27,21 @@ func main() {
         }),
     )
 
-    req := operations.CreateAlertManagerDefinitionRequest{
+    ctx := context.Background()
+    res, err := s.CreateAlertManagerDefinition(ctx, operations.CreateAlertManagerDefinitionRequest{
         RequestBody: operations.CreateAlertManagerDefinitionRequestBody{
-            ClientToken: "corrupti",
+            ClientToken: sdk.String("corrupti"),
             Data: "provident",
         },
-        XAmzAlgorithm: "distinctio",
-        XAmzContentSha256: "quibusdam",
-        XAmzCredential: "unde",
-        XAmzDate: "nulla",
-        XAmzSecurityToken: "corrupti",
-        XAmzSignature: "illum",
-        XAmzSignedHeaders: "vel",
+        XAmzAlgorithm: sdk.String("distinctio"),
+        XAmzContentSha256: sdk.String("quibusdam"),
+        XAmzCredential: sdk.String("unde"),
+        XAmzDate: sdk.String("nulla"),
+        XAmzSecurityToken: sdk.String("corrupti"),
+        XAmzSignature: sdk.String("illum"),
+        XAmzSignedHeaders: sdk.String("vel"),
         WorkspaceID: "error",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateAlertManagerDefinition(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -59,29 +56,29 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateAlertManagerDefinition` - Create an alert manager definition.
-* `CreateLoggingConfiguration` - Create logging configuration.
-* `CreateRuleGroupsNamespace` - Create a rule group namespace.
-* `CreateWorkspace` - Creates a new AMP workspace.
-* `DeleteAlertManagerDefinition` - Deletes an alert manager definition.
-* `DeleteLoggingConfiguration` - Delete logging configuration.
-* `DeleteRuleGroupsNamespace` - Delete a rule groups namespace.
-* `DeleteWorkspace` - Deletes an AMP workspace.
-* `DescribeAlertManagerDefinition` - Describes an alert manager definition.
-* `DescribeLoggingConfiguration` - Describes logging configuration.
-* `DescribeRuleGroupsNamespace` - Describe a rule groups namespace.
-* `DescribeWorkspace` - Describes an existing AMP workspace.
-* `ListRuleGroupsNamespaces` - Lists rule groups namespaces.
-* `ListTagsForResource` - Lists the tags you have assigned to the resource.
-* `ListWorkspaces` - Lists all AMP workspaces, including workspaces being created or deleted.
-* `PutAlertManagerDefinition` - Update an alert manager definition.
-* `PutRuleGroupsNamespace` - Update a rule groups namespace.
-* `TagResource` - Creates tags for the specified resource.
-* `UntagResource` - Deletes tags from the specified resource.
-* `UpdateLoggingConfiguration` - Update logging configuration.
-* `UpdateWorkspaceAlias` - Updates an AMP workspace alias.
+* [CreateAlertManagerDefinition](docs/sdk/README.md#createalertmanagerdefinition) - Create an alert manager definition.
+* [CreateLoggingConfiguration](docs/sdk/README.md#createloggingconfiguration) - Create logging configuration.
+* [CreateRuleGroupsNamespace](docs/sdk/README.md#createrulegroupsnamespace) - Create a rule group namespace.
+* [CreateWorkspace](docs/sdk/README.md#createworkspace) - Creates a new AMP workspace.
+* [DeleteAlertManagerDefinition](docs/sdk/README.md#deletealertmanagerdefinition) - Deletes an alert manager definition.
+* [DeleteLoggingConfiguration](docs/sdk/README.md#deleteloggingconfiguration) - Delete logging configuration.
+* [DeleteRuleGroupsNamespace](docs/sdk/README.md#deleterulegroupsnamespace) - Delete a rule groups namespace.
+* [DeleteWorkspace](docs/sdk/README.md#deleteworkspace) - Deletes an AMP workspace.
+* [DescribeAlertManagerDefinition](docs/sdk/README.md#describealertmanagerdefinition) - Describes an alert manager definition.
+* [DescribeLoggingConfiguration](docs/sdk/README.md#describeloggingconfiguration) - Describes logging configuration.
+* [DescribeRuleGroupsNamespace](docs/sdk/README.md#describerulegroupsnamespace) - Describe a rule groups namespace.
+* [DescribeWorkspace](docs/sdk/README.md#describeworkspace) - Describes an existing AMP workspace.
+* [ListRuleGroupsNamespaces](docs/sdk/README.md#listrulegroupsnamespaces) - Lists rule groups namespaces.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the tags you have assigned to the resource.
+* [ListWorkspaces](docs/sdk/README.md#listworkspaces) - Lists all AMP workspaces, including workspaces being created or deleted.
+* [PutAlertManagerDefinition](docs/sdk/README.md#putalertmanagerdefinition) - Update an alert manager definition.
+* [PutRuleGroupsNamespace](docs/sdk/README.md#putrulegroupsnamespace) - Update a rule groups namespace.
+* [TagResource](docs/sdk/README.md#tagresource) - Creates tags for the specified resource.
+* [UntagResource](docs/sdk/README.md#untagresource) - Deletes tags from the specified resource.
+* [UpdateLoggingConfiguration](docs/sdk/README.md#updateloggingconfiguration) - Update logging configuration.
+* [UpdateWorkspaceAlias](docs/sdk/README.md#updateworkspacealias) - Updates an AMP workspace alias.
 <!-- End SDK Available Operations -->
 
 ### Maturity

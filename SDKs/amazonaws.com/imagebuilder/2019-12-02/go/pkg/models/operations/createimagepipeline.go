@@ -9,6 +9,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// CreateImagePipelineRequestBodyImageScanningConfiguration - Contains settings for Image Builder image resource and container image scans.
+type CreateImagePipelineRequestBodyImageScanningConfiguration struct {
+	EcrConfiguration     *shared.EcrConfiguration `json:"ecrConfiguration,omitempty"`
+	ImageScanningEnabled *bool                    `json:"imageScanningEnabled,omitempty"`
+}
+
 // CreateImagePipelineRequestBodyImageTestsConfiguration - Configure image tests for your pipeline build. Tests run after building the image, to verify that the AMI or container image is valid before distributing it.
 type CreateImagePipelineRequestBodyImageTestsConfiguration struct {
 	ImageTestsEnabled *bool  `json:"imageTestsEnabled,omitempty"`
@@ -22,7 +28,7 @@ type CreateImagePipelineRequestBodySchedule struct {
 	Timezone                        *string                                     `json:"timezone,omitempty"`
 }
 
-// CreateImagePipelineRequestBodyStatusEnum -  The status of the image pipeline.
+// CreateImagePipelineRequestBodyStatusEnum - The status of the image pipeline.
 type CreateImagePipelineRequestBodyStatusEnum string
 
 const (
@@ -30,46 +36,52 @@ const (
 	CreateImagePipelineRequestBodyStatusEnumEnabled  CreateImagePipelineRequestBodyStatusEnum = "ENABLED"
 )
 
+func (e CreateImagePipelineRequestBodyStatusEnum) ToPointer() *CreateImagePipelineRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *CreateImagePipelineRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
-		*e = CreateImagePipelineRequestBodyStatusEnum(s)
+		*e = CreateImagePipelineRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateImagePipelineRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateImagePipelineRequestBodyStatusEnum: %v", v)
 	}
 }
 
 type CreateImagePipelineRequestBody struct {
-	//  The idempotency token used to make this request idempotent.
+	// The idempotency token used to make this request idempotent.
 	ClientToken string `json:"clientToken"`
 	// The Amazon Resource Name (ARN) of the container recipe that is used to configure images created by this container pipeline.
 	ContainerRecipeArn *string `json:"containerRecipeArn,omitempty"`
-	//  The description of the image pipeline.
+	// The description of the image pipeline.
 	Description *string `json:"description,omitempty"`
-	//  The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute images created by this image pipeline.
+	// The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute images created by this image pipeline.
 	DistributionConfigurationArn *string `json:"distributionConfigurationArn,omitempty"`
-	//  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+	// Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
 	EnhancedImageMetadataEnabled *bool `json:"enhancedImageMetadataEnabled,omitempty"`
-	//  The Amazon Resource Name (ARN) of the image recipe that will be used to configure images created by this image pipeline.
+	// The Amazon Resource Name (ARN) of the image recipe that will be used to configure images created by this image pipeline.
 	ImageRecipeArn *string `json:"imageRecipeArn,omitempty"`
+	// Contains settings for Image Builder image resource and container image scans.
+	ImageScanningConfiguration *CreateImagePipelineRequestBodyImageScanningConfiguration `json:"imageScanningConfiguration,omitempty"`
 	// Configure image tests for your pipeline build. Tests run after building the image, to verify that the AMI or container image is valid before distributing it.
 	ImageTestsConfiguration *CreateImagePipelineRequestBodyImageTestsConfiguration `json:"imageTestsConfiguration,omitempty"`
-	//  The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images created by this image pipeline.
+	// The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images created by this image pipeline.
 	InfrastructureConfigurationArn string `json:"infrastructureConfigurationArn"`
-	//  The name of the image pipeline.
+	// The name of the image pipeline.
 	Name string `json:"name"`
 	// A schedule configures how often and when a pipeline will automatically create a new image.
 	Schedule *CreateImagePipelineRequestBodySchedule `json:"schedule,omitempty"`
-	//  The status of the image pipeline.
+	// The status of the image pipeline.
 	Status *CreateImagePipelineRequestBodyStatusEnum `json:"status,omitempty"`
-	//  The tags of the image pipeline.
+	// The tags of the image pipeline.
 	Tags map[string]string `json:"tags,omitempty"`
 }
 

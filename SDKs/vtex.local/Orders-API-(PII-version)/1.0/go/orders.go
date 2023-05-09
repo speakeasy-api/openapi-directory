@@ -44,7 +44,10 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // > The `Cancel order` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).
 func (s *orders) CancelOrder2(ctx context.Context, request operations.CancelOrder2Request) (*operations.CancelOrder2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -433,7 +436,10 @@ func (s *orders) CancelOrder2(ctx context.Context, request operations.CancelOrde
 // | `value` | integer | Order Value |
 func (s *orders) GetOrder2(ctx context.Context, request operations.GetOrder2Request) (*operations.GetOrder2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -968,7 +974,10 @@ func (s *orders) ListOrders2(ctx context.Context, request operations.ListOrders2
 // > The `Change order workflow status` resource is needed to use this API request. This is included in `OMS - Full access` and `IntegrationProfile - Fulfillment Oms`, among other default roles available in the Admin. Learn more about the [License manager roles and resources](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc#).
 func (s *orders) StartHandling2(ctx context.Context, request operations.StartHandling2Request) (*operations.StartHandling2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/actions/start-handling", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/orders/pvt/document/{orderId}/actions/start-handling", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -15,19 +15,23 @@ const (
 	CreativeGroupAssignmentCreativeGroupNumberEnumCreativeGroupTwo CreativeGroupAssignmentCreativeGroupNumberEnum = "CREATIVE_GROUP_TWO"
 )
 
+func (e CreativeGroupAssignmentCreativeGroupNumberEnum) ToPointer() *CreativeGroupAssignmentCreativeGroupNumberEnum {
+	return &e
+}
+
 func (e *CreativeGroupAssignmentCreativeGroupNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_GROUP_ONE":
 		fallthrough
 	case "CREATIVE_GROUP_TWO":
-		*e = CreativeGroupAssignmentCreativeGroupNumberEnum(s)
+		*e = CreativeGroupAssignmentCreativeGroupNumberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeGroupAssignmentCreativeGroupNumberEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeGroupAssignmentCreativeGroupNumberEnum: %v", v)
 	}
 }
 

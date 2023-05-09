@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.CancelBookingRequest{
-        BookingID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Bookings.CancelBooking(ctx, req)
+    res, err := s.Bookings.CancelBooking(ctx, operations.CancelBookingRequest{
+        BookingID: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

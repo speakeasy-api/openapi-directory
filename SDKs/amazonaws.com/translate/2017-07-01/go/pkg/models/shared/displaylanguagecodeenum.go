@@ -22,12 +22,16 @@ const (
 	DisplayLanguageCodeEnumZhTw DisplayLanguageCodeEnum = "zh-TW"
 )
 
+func (e DisplayLanguageCodeEnum) ToPointer() *DisplayLanguageCodeEnum {
+	return &e
+}
+
 func (e *DisplayLanguageCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "de":
 		fallthrough
 	case "en":
@@ -47,9 +51,9 @@ func (e *DisplayLanguageCodeEnum) UnmarshalJSON(data []byte) error {
 	case "zh":
 		fallthrough
 	case "zh-TW":
-		*e = DisplayLanguageCodeEnum(s)
+		*e = DisplayLanguageCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisplayLanguageCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisplayLanguageCodeEnum: %v", v)
 	}
 }

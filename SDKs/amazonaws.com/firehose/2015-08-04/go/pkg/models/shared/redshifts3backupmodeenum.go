@@ -14,18 +14,22 @@ const (
 	RedshiftS3BackupModeEnumEnabled  RedshiftS3BackupModeEnum = "Enabled"
 )
 
+func (e RedshiftS3BackupModeEnum) ToPointer() *RedshiftS3BackupModeEnum {
+	return &e
+}
+
 func (e *RedshiftS3BackupModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Disabled":
 		fallthrough
 	case "Enabled":
-		*e = RedshiftS3BackupModeEnum(s)
+		*e = RedshiftS3BackupModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RedshiftS3BackupModeEnum: %s", s)
+		return fmt.Errorf("invalid value for RedshiftS3BackupModeEnum: %v", v)
 	}
 }

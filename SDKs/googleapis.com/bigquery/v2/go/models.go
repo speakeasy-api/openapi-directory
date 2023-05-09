@@ -34,7 +34,10 @@ func newModels(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // BigqueryModelsDelete - Deletes the model specified by modelId from the dataset.
 func (s *models) BigqueryModelsDelete(ctx context.Context, request operations.BigqueryModelsDeleteRequest, security operations.BigqueryModelsDeleteSecurity) (*operations.BigqueryModelsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models/{modelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models/{modelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *models) BigqueryModelsDelete(ctx context.Context, request operations.Bi
 // BigqueryModelsGet - Gets the specified model resource by model ID.
 func (s *models) BigqueryModelsGet(ctx context.Context, request operations.BigqueryModelsGetRequest, security operations.BigqueryModelsGetSecurity) (*operations.BigqueryModelsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models/{modelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models/{modelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *models) BigqueryModelsGet(ctx context.Context, request operations.Bigqu
 // BigqueryModelsList - Lists all models in the specified dataset. Requires the READER dataset role. After retrieving the list of models, you can get information about a particular model by calling the models.get method.
 func (s *models) BigqueryModelsList(ctx context.Context, request operations.BigqueryModelsListRequest, security operations.BigqueryModelsListSecurity) (*operations.BigqueryModelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +178,10 @@ func (s *models) BigqueryModelsList(ctx context.Context, request operations.Bigq
 // BigqueryModelsPatch - Patch specific fields in the specified model.
 func (s *models) BigqueryModelsPatch(ctx context.Context, request operations.BigqueryModelsPatchRequest, security operations.BigqueryModelsPatchSecurity) (*operations.BigqueryModelsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models/{modelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/models/{modelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModelInput", "json")
 	if err != nil {

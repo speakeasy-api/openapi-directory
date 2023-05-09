@@ -15,20 +15,24 @@ const (
 	WorkspaceBundleStateEnumError     WorkspaceBundleStateEnum = "ERROR"
 )
 
+func (e WorkspaceBundleStateEnum) ToPointer() *WorkspaceBundleStateEnum {
+	return &e
+}
+
 func (e *WorkspaceBundleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "PENDING":
 		fallthrough
 	case "ERROR":
-		*e = WorkspaceBundleStateEnum(s)
+		*e = WorkspaceBundleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkspaceBundleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkspaceBundleStateEnum: %v", v)
 	}
 }

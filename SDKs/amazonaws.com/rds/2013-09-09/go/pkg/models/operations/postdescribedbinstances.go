@@ -15,17 +15,21 @@ const (
 	POSTDescribeDBInstancesActionEnumDescribeDbInstances POSTDescribeDBInstancesActionEnum = "DescribeDBInstances"
 )
 
+func (e POSTDescribeDBInstancesActionEnum) ToPointer() *POSTDescribeDBInstancesActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeDBInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeDBInstances":
-		*e = POSTDescribeDBInstancesActionEnum(s)
+		*e = POSTDescribeDBInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeDBInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeDBInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeDBInstancesVersionEnumTwoThousandAndThirteen0909 POSTDescribeDBInstancesVersionEnum = "2013-09-09"
 )
 
+func (e POSTDescribeDBInstancesVersionEnum) ToPointer() *POSTDescribeDBInstancesVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeDBInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-09-09":
-		*e = POSTDescribeDBInstancesVersionEnum(s)
+		*e = POSTDescribeDBInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeDBInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeDBInstancesVersionEnum: %v", v)
 	}
 }
 

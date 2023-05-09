@@ -2,7 +2,8 @@
 
 package shared
 
-// CanvasAppSettings - The SageMaker Canvas app settings.
+// CanvasAppSettings - The SageMaker Canvas application settings.
 type CanvasAppSettings struct {
+	ModelRegisterSettings         *ModelRegisterSettings         `json:"ModelRegisterSettings,omitempty"`
 	TimeSeriesForecastingSettings *TimeSeriesForecastingSettings `json:"TimeSeriesForecastingSettings,omitempty"`
 }

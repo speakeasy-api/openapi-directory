@@ -16,17 +16,21 @@ const (
 	BatchDeleteDocumentXAmzTargetEnumAwsKendraFrontendServiceBatchDeleteDocument BatchDeleteDocumentXAmzTargetEnum = "AWSKendraFrontendService.BatchDeleteDocument"
 )
 
+func (e BatchDeleteDocumentXAmzTargetEnum) ToPointer() *BatchDeleteDocumentXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchDeleteDocumentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.BatchDeleteDocument":
-		*e = BatchDeleteDocumentXAmzTargetEnum(s)
+		*e = BatchDeleteDocumentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchDeleteDocumentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchDeleteDocumentXAmzTargetEnum: %v", v)
 	}
 }
 

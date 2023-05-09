@@ -35,7 +35,10 @@ func newChains(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // MybusinessChainsGet - Gets the specified chain. Returns `NOT_FOUND` if the chain does not exist.
 func (s *chains) MybusinessChainsGet(ctx context.Context, request operations.MybusinessChainsGetRequest) (*operations.MybusinessChainsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

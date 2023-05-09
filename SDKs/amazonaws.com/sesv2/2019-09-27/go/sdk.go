@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <fullname>Amazon SES API v2</fullname> <p> <a href="http://aws.amazon.com/ses">Amazon SES</a> is an Amazon Web Services service that you can use to send email messages to your customers.</p> <p>If you're new to Amazon SES API v2, you might find it helpful to review the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/">Amazon Simple Email Service Developer Guide</a>. The <i>Amazon SES Developer Guide</i> provides information and code samples that demonstrate how to use Amazon SES API v2 features programmatically.</p>
 // https://docs.aws.amazon.com/email/ - Amazon Web Services documentation
 type SDK struct {
@@ -326,7 +341,10 @@ func (s *SDK) CreateConfigurationSet(ctx context.Context, request operations.Cre
 // CreateConfigurationSetEventDestination - <p>Create an event destination. <i>Events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p> <p>A single configuration set can include more than one event destination.</p>
 func (s *SDK) CreateConfigurationSetEventDestination(ctx context.Context, request operations.CreateConfigurationSetEventDestinationRequest) (*operations.CreateConfigurationSetEventDestinationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/event-destinations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/event-destinations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -432,7 +450,10 @@ func (s *SDK) CreateConfigurationSetEventDestination(ctx context.Context, reques
 // CreateContact - Creates a contact, which is an end-user who is receiving the email, and adds them to a contact list.
 func (s *SDK) CreateContact(ctx context.Context, request operations.CreateContactRequest) (*operations.CreateContactResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}/contacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}/contacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1098,7 +1119,10 @@ func (s *SDK) CreateEmailIdentity(ctx context.Context, request operations.Create
 // CreateEmailIdentityPolicy - <p>Creates the specified sending authorization policy for the given identity (an email address or a domain).</p> <note> <p>This API is for the identity owner only. If you have not verified the identity, this API will return an error.</p> </note> <p>Sending authorization is a feature that enables an identity owner to authorize other senders to use its identities. For information about using sending authorization, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html">Amazon SES Developer Guide</a>.</p> <p>You can execute this operation no more than once per second.</p>
 func (s *SDK) CreateEmailIdentityPolicy(ctx context.Context, request operations.CreateEmailIdentityPolicyRequest) (*operations.CreateEmailIdentityPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/policies/{PolicyName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/policies/{PolicyName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1386,7 +1410,10 @@ func (s *SDK) CreateImportJob(ctx context.Context, request operations.CreateImpo
 // DeleteConfigurationSet - <p>Delete an existing configuration set.</p> <p> <i>Configuration sets</i> are groups of rules that you can apply to the emails you send. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email.</p>
 func (s *SDK) DeleteConfigurationSet(ctx context.Context, request operations.DeleteConfigurationSetRequest) (*operations.DeleteConfigurationSetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1472,7 +1499,10 @@ func (s *SDK) DeleteConfigurationSet(ctx context.Context, request operations.Del
 // DeleteConfigurationSetEventDestination - <p>Delete an event destination.</p> <p> <i>Events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>
 func (s *SDK) DeleteConfigurationSetEventDestination(ctx context.Context, request operations.DeleteConfigurationSetEventDestinationRequest) (*operations.DeleteConfigurationSetEventDestinationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/event-destinations/{EventDestinationName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/event-destinations/{EventDestinationName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1548,7 +1578,10 @@ func (s *SDK) DeleteConfigurationSetEventDestination(ctx context.Context, reques
 // DeleteContact - Removes a contact from a contact list.
 func (s *SDK) DeleteContact(ctx context.Context, request operations.DeleteContactRequest) (*operations.DeleteContactResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}/contacts/{EmailAddress}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}/contacts/{EmailAddress}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1624,7 +1657,10 @@ func (s *SDK) DeleteContact(ctx context.Context, request operations.DeleteContac
 // DeleteContactList - Deletes a contact list and all of the contacts on that list.
 func (s *SDK) DeleteContactList(ctx context.Context, request operations.DeleteContactListRequest) (*operations.DeleteContactListResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1710,7 +1746,10 @@ func (s *SDK) DeleteContactList(ctx context.Context, request operations.DeleteCo
 // DeleteCustomVerificationEmailTemplate - <p>Deletes an existing custom verification email template.</p> <p>For more information about custom verification email templates, see <a href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.</p> <p>You can execute this operation no more than once per second.</p>
 func (s *SDK) DeleteCustomVerificationEmailTemplate(ctx context.Context, request operations.DeleteCustomVerificationEmailTemplateRequest) (*operations.DeleteCustomVerificationEmailTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/custom-verification-email-templates/{TemplateName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/custom-verification-email-templates/{TemplateName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1786,7 +1825,10 @@ func (s *SDK) DeleteCustomVerificationEmailTemplate(ctx context.Context, request
 // DeleteDedicatedIPPool - Delete a dedicated IP pool.
 func (s *SDK) DeleteDedicatedIPPool(ctx context.Context, request operations.DeleteDedicatedIPPoolRequest) (*operations.DeleteDedicatedIPPoolResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/dedicated-ip-pools/{PoolName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/dedicated-ip-pools/{PoolName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1872,7 +1914,10 @@ func (s *SDK) DeleteDedicatedIPPool(ctx context.Context, request operations.Dele
 // DeleteEmailIdentity - Deletes an email identity. An identity can be either an email address or a domain name.
 func (s *SDK) DeleteEmailIdentity(ctx context.Context, request operations.DeleteEmailIdentityRequest) (*operations.DeleteEmailIdentityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1958,7 +2003,10 @@ func (s *SDK) DeleteEmailIdentity(ctx context.Context, request operations.Delete
 // DeleteEmailIdentityPolicy - <p>Deletes the specified sending authorization policy for the given identity (an email address or a domain). This API returns successfully even if a policy with the specified name does not exist.</p> <note> <p>This API is for the identity owner only. If you have not verified the identity, this API will return an error.</p> </note> <p>Sending authorization is a feature that enables an identity owner to authorize other senders to use its identities. For information about using sending authorization, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html">Amazon SES Developer Guide</a>.</p> <p>You can execute this operation no more than once per second.</p>
 func (s *SDK) DeleteEmailIdentityPolicy(ctx context.Context, request operations.DeleteEmailIdentityPolicyRequest) (*operations.DeleteEmailIdentityPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/policies/{PolicyName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/policies/{PolicyName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2034,7 +2082,10 @@ func (s *SDK) DeleteEmailIdentityPolicy(ctx context.Context, request operations.
 // DeleteEmailTemplate - <p>Deletes an email template.</p> <p>You can execute this operation no more than once per second.</p>
 func (s *SDK) DeleteEmailTemplate(ctx context.Context, request operations.DeleteEmailTemplateRequest) (*operations.DeleteEmailTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/templates/{TemplateName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/templates/{TemplateName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2110,7 +2161,10 @@ func (s *SDK) DeleteEmailTemplate(ctx context.Context, request operations.Delete
 // DeleteSuppressedDestination - Removes an email address from the suppression list for your account.
 func (s *SDK) DeleteSuppressedDestination(ctx context.Context, request operations.DeleteSuppressedDestinationRequest) (*operations.DeleteSuppressedDestinationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/suppression/addresses/{EmailAddress}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/suppression/addresses/{EmailAddress}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2332,7 +2386,10 @@ func (s *SDK) GetBlacklistReports(ctx context.Context, request operations.GetBla
 // GetConfigurationSet - <p>Get information about an existing configuration set, including the dedicated IP pool that it's associated with, whether or not it's enabled for sending email, and more.</p> <p> <i>Configuration sets</i> are groups of rules that you can apply to the emails you send. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email.</p>
 func (s *SDK) GetConfigurationSet(ctx context.Context, request operations.GetConfigurationSetRequest) (*operations.GetConfigurationSetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2408,7 +2465,10 @@ func (s *SDK) GetConfigurationSet(ctx context.Context, request operations.GetCon
 // GetConfigurationSetEventDestinations - <p>Retrieve a list of event destinations that are associated with a configuration set.</p> <p> <i>Events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>
 func (s *SDK) GetConfigurationSetEventDestinations(ctx context.Context, request operations.GetConfigurationSetEventDestinationsRequest) (*operations.GetConfigurationSetEventDestinationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/event-destinations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/event-destinations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2484,7 +2544,10 @@ func (s *SDK) GetConfigurationSetEventDestinations(ctx context.Context, request 
 // GetContact - Returns a contact from a contact list.
 func (s *SDK) GetContact(ctx context.Context, request operations.GetContactRequest) (*operations.GetContactResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}/contacts/{EmailAddress}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}/contacts/{EmailAddress}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2560,7 +2623,10 @@ func (s *SDK) GetContact(ctx context.Context, request operations.GetContactReque
 // GetContactList - Returns contact list metadata. It does not return any information about the contacts present in the list.
 func (s *SDK) GetContactList(ctx context.Context, request operations.GetContactListRequest) (*operations.GetContactListResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2636,7 +2702,10 @@ func (s *SDK) GetContactList(ctx context.Context, request operations.GetContactL
 // GetCustomVerificationEmailTemplate - <p>Returns the custom email verification template for the template name you specify.</p> <p>For more information about custom verification email templates, see <a href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.</p> <p>You can execute this operation no more than once per second.</p>
 func (s *SDK) GetCustomVerificationEmailTemplate(ctx context.Context, request operations.GetCustomVerificationEmailTemplateRequest) (*operations.GetCustomVerificationEmailTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/custom-verification-email-templates/{TemplateName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/custom-verification-email-templates/{TemplateName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2712,7 +2781,10 @@ func (s *SDK) GetCustomVerificationEmailTemplate(ctx context.Context, request op
 // GetDedicatedIP - Get information about a dedicated IP address, including the name of the dedicated IP pool that it's associated with, as well information about the automatic warm-up process for the address.
 func (s *SDK) GetDedicatedIP(ctx context.Context, request operations.GetDedicatedIPRequest) (*operations.GetDedicatedIPResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/dedicated-ips/{IP}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/dedicated-ips/{IP}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2788,7 +2860,10 @@ func (s *SDK) GetDedicatedIP(ctx context.Context, request operations.GetDedicate
 // GetDedicatedIPPool - Retrieve information about the dedicated pool.
 func (s *SDK) GetDedicatedIPPool(ctx context.Context, request operations.GetDedicatedIPPoolRequest) (*operations.GetDedicatedIPPoolResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/dedicated-ip-pools/{PoolName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/dedicated-ip-pools/{PoolName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3020,7 +3095,10 @@ func (s *SDK) GetDeliverabilityDashboardOptions(ctx context.Context, request ope
 // GetDeliverabilityTestReport - Retrieve the results of a predictive inbox placement test.
 func (s *SDK) GetDeliverabilityTestReport(ctx context.Context, request operations.GetDeliverabilityTestReportRequest) (*operations.GetDeliverabilityTestReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/deliverability-dashboard/test-reports/{ReportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/deliverability-dashboard/test-reports/{ReportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3096,7 +3174,10 @@ func (s *SDK) GetDeliverabilityTestReport(ctx context.Context, request operation
 // GetDomainDeliverabilityCampaign - Retrieve all the deliverability data for a specific campaign. This data is available for a campaign only if the campaign sent email by using a domain that the Deliverability dashboard is enabled for.
 func (s *SDK) GetDomainDeliverabilityCampaign(ctx context.Context, request operations.GetDomainDeliverabilityCampaignRequest) (*operations.GetDomainDeliverabilityCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/deliverability-dashboard/campaigns/{CampaignId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/deliverability-dashboard/campaigns/{CampaignId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3172,7 +3253,10 @@ func (s *SDK) GetDomainDeliverabilityCampaign(ctx context.Context, request opera
 // GetDomainStatisticsReport - Retrieve inbox placement and engagement rates for the domains that you use to send email.
 func (s *SDK) GetDomainStatisticsReport(ctx context.Context, request operations.GetDomainStatisticsReportRequest) (*operations.GetDomainStatisticsReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/deliverability-dashboard/statistics-report/{Domain}#StartDate&EndDate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/deliverability-dashboard/statistics-report/{Domain}#StartDate&EndDate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3252,7 +3336,10 @@ func (s *SDK) GetDomainStatisticsReport(ctx context.Context, request operations.
 // GetEmailIdentity - Provides information about a specific identity, including the identity's verification status, sending authorization policies, its DKIM authentication status, and its custom Mail-From settings.
 func (s *SDK) GetEmailIdentity(ctx context.Context, request operations.GetEmailIdentityRequest) (*operations.GetEmailIdentityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3328,7 +3415,10 @@ func (s *SDK) GetEmailIdentity(ctx context.Context, request operations.GetEmailI
 // GetEmailIdentityPolicies - <p>Returns the requested sending authorization policies for the given identity (an email address or a domain). The policies are returned as a map of policy names to policy contents. You can retrieve a maximum of 20 policies at a time.</p> <note> <p>This API is for the identity owner only. If you have not verified the identity, this API will return an error.</p> </note> <p>Sending authorization is a feature that enables an identity owner to authorize other senders to use its identities. For information about using sending authorization, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html">Amazon SES Developer Guide</a>.</p> <p>You can execute this operation no more than once per second.</p>
 func (s *SDK) GetEmailIdentityPolicies(ctx context.Context, request operations.GetEmailIdentityPoliciesRequest) (*operations.GetEmailIdentityPoliciesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/policies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/policies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3404,7 +3494,10 @@ func (s *SDK) GetEmailIdentityPolicies(ctx context.Context, request operations.G
 // GetEmailTemplate - <p>Displays the template object (which includes the subject line, HTML part and text part) for the template you specify.</p> <p>You can execute this operation no more than once per second.</p>
 func (s *SDK) GetEmailTemplate(ctx context.Context, request operations.GetEmailTemplateRequest) (*operations.GetEmailTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/templates/{TemplateName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/templates/{TemplateName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3480,7 +3573,10 @@ func (s *SDK) GetEmailTemplate(ctx context.Context, request operations.GetEmailT
 // GetImportJob - Provides information about an import job.
 func (s *SDK) GetImportJob(ctx context.Context, request operations.GetImportJobRequest) (*operations.GetImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/import-jobs/{JobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/import-jobs/{JobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3556,7 +3652,10 @@ func (s *SDK) GetImportJob(ctx context.Context, request operations.GetImportJobR
 // GetSuppressedDestination - Retrieves information about a specific email address that's on the suppression list for your account.
 func (s *SDK) GetSuppressedDestination(ctx context.Context, request operations.GetSuppressedDestinationRequest) (*operations.GetSuppressedDestinationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/suppression/addresses/{EmailAddress}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/suppression/addresses/{EmailAddress}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3772,7 +3871,10 @@ func (s *SDK) ListContactLists(ctx context.Context, request operations.ListConta
 // ListContacts - Lists the contacts present in a specific contact list.
 func (s *SDK) ListContacts(ctx context.Context, request operations.ListContactsRequest) (*operations.ListContactsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}/contacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}/contacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4082,7 +4184,10 @@ func (s *SDK) ListDeliverabilityTestReports(ctx context.Context, request operati
 // ListDomainDeliverabilityCampaigns - Retrieve deliverability data for all the campaigns that used a specific domain to send email during a specified time range. This data is available for a domain only if you enabled the Deliverability dashboard for the domain.
 func (s *SDK) ListDomainDeliverabilityCampaigns(ctx context.Context, request operations.ListDomainDeliverabilityCampaignsRequest) (*operations.ListDomainDeliverabilityCampaignsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/deliverability-dashboard/domains/{SubscribedDomain}/campaigns#StartDate&EndDate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/deliverability-dashboard/domains/{SubscribedDomain}/campaigns#StartDate&EndDate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5022,7 +5127,10 @@ func (s *SDK) PutAccountVdmAttributes(ctx context.Context, request operations.Pu
 // PutConfigurationSetDeliveryOptions - Associate a configuration set with a dedicated IP pool. You can use dedicated IP pools to create groups of dedicated IP addresses for sending specific types of email.
 func (s *SDK) PutConfigurationSetDeliveryOptions(ctx context.Context, request operations.PutConfigurationSetDeliveryOptionsRequest) (*operations.PutConfigurationSetDeliveryOptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/delivery-options", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/delivery-options", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5108,7 +5216,10 @@ func (s *SDK) PutConfigurationSetDeliveryOptions(ctx context.Context, request op
 // PutConfigurationSetReputationOptions - Enable or disable collection of reputation metrics for emails that you send using a particular configuration set in a specific Amazon Web Services Region.
 func (s *SDK) PutConfigurationSetReputationOptions(ctx context.Context, request operations.PutConfigurationSetReputationOptionsRequest) (*operations.PutConfigurationSetReputationOptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/reputation-options", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/reputation-options", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5194,7 +5305,10 @@ func (s *SDK) PutConfigurationSetReputationOptions(ctx context.Context, request 
 // PutConfigurationSetSendingOptions - Enable or disable email sending for messages that use a particular configuration set in a specific Amazon Web Services Region.
 func (s *SDK) PutConfigurationSetSendingOptions(ctx context.Context, request operations.PutConfigurationSetSendingOptionsRequest) (*operations.PutConfigurationSetSendingOptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/sending", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/sending", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5280,7 +5394,10 @@ func (s *SDK) PutConfigurationSetSendingOptions(ctx context.Context, request ope
 // PutConfigurationSetSuppressionOptions - Specify the account suppression list preferences for a configuration set.
 func (s *SDK) PutConfigurationSetSuppressionOptions(ctx context.Context, request operations.PutConfigurationSetSuppressionOptionsRequest) (*operations.PutConfigurationSetSuppressionOptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/suppression-options", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/suppression-options", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5366,7 +5483,10 @@ func (s *SDK) PutConfigurationSetSuppressionOptions(ctx context.Context, request
 // PutConfigurationSetTrackingOptions - Specify a custom domain to use for open and click tracking elements in email that you send.
 func (s *SDK) PutConfigurationSetTrackingOptions(ctx context.Context, request operations.PutConfigurationSetTrackingOptionsRequest) (*operations.PutConfigurationSetTrackingOptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/tracking-options", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/tracking-options", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5452,7 +5572,10 @@ func (s *SDK) PutConfigurationSetTrackingOptions(ctx context.Context, request op
 // PutConfigurationSetVdmOptions - <p>Specify VDM preferences for email that you send using the configuration set.</p> <p>You can execute this operation no more than once per second.</p>
 func (s *SDK) PutConfigurationSetVdmOptions(ctx context.Context, request operations.PutConfigurationSetVdmOptionsRequest) (*operations.PutConfigurationSetVdmOptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/vdm-options", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/vdm-options", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5538,7 +5661,10 @@ func (s *SDK) PutConfigurationSetVdmOptions(ctx context.Context, request operati
 // PutDedicatedIPInPool - <p>Move a dedicated IP address to an existing dedicated IP pool.</p> <note> <p>The dedicated IP address that you specify must already exist, and must be associated with your Amazon Web Services account. </p> <p>The dedicated IP pool you specify must already exist. You can create a new pool by using the <code>CreateDedicatedIpPool</code> operation.</p> </note>
 func (s *SDK) PutDedicatedIPInPool(ctx context.Context, request operations.PutDedicatedIPInPoolRequest) (*operations.PutDedicatedIPInPoolResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/dedicated-ips/{IP}/pool", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/dedicated-ips/{IP}/pool", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5624,7 +5750,10 @@ func (s *SDK) PutDedicatedIPInPool(ctx context.Context, request operations.PutDe
 // PutDedicatedIPWarmupAttributes - <p/>
 func (s *SDK) PutDedicatedIPWarmupAttributes(ctx context.Context, request operations.PutDedicatedIPWarmupAttributesRequest) (*operations.PutDedicatedIPWarmupAttributesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/dedicated-ips/{IP}/warmup", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/dedicated-ips/{IP}/warmup", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5816,7 +5945,10 @@ func (s *SDK) PutDeliverabilityDashboardOption(ctx context.Context, request oper
 // PutEmailIdentityConfigurationSetAttributes - Used to associate a configuration set with an email identity.
 func (s *SDK) PutEmailIdentityConfigurationSetAttributes(ctx context.Context, request operations.PutEmailIdentityConfigurationSetAttributesRequest) (*operations.PutEmailIdentityConfigurationSetAttributesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/configuration-set", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/configuration-set", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5902,7 +6034,10 @@ func (s *SDK) PutEmailIdentityConfigurationSetAttributes(ctx context.Context, re
 // PutEmailIdentityDkimAttributes - Used to enable or disable DKIM authentication for an email identity.
 func (s *SDK) PutEmailIdentityDkimAttributes(ctx context.Context, request operations.PutEmailIdentityDkimAttributesRequest) (*operations.PutEmailIdentityDkimAttributesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/dkim", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/dkim", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5988,7 +6123,10 @@ func (s *SDK) PutEmailIdentityDkimAttributes(ctx context.Context, request operat
 // PutEmailIdentityDkimSigningAttributes - <p>Used to configure or change the DKIM authentication settings for an email domain identity. You can use this operation to do any of the following:</p> <ul> <li> <p>Update the signing attributes for an identity that uses Bring Your Own DKIM (BYODKIM).</p> </li> <li> <p>Update the key length that should be used for Easy DKIM.</p> </li> <li> <p>Change from using no DKIM authentication to using Easy DKIM.</p> </li> <li> <p>Change from using no DKIM authentication to using BYODKIM.</p> </li> <li> <p>Change from using Easy DKIM to using BYODKIM.</p> </li> <li> <p>Change from using BYODKIM to using Easy DKIM.</p> </li> </ul>
 func (s *SDK) PutEmailIdentityDkimSigningAttributes(ctx context.Context, request operations.PutEmailIdentityDkimSigningAttributesRequest) (*operations.PutEmailIdentityDkimSigningAttributesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/email/identities/{EmailIdentity}/dkim/signing", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/email/identities/{EmailIdentity}/dkim/signing", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6074,7 +6212,10 @@ func (s *SDK) PutEmailIdentityDkimSigningAttributes(ctx context.Context, request
 // PutEmailIdentityFeedbackAttributes - <p>Used to enable or disable feedback forwarding for an identity. This setting determines what happens when an identity is used to send an email that results in a bounce or complaint event.</p> <p>If the value is <code>true</code>, you receive email notifications when bounce or complaint events occur. These notifications are sent to the address that you specified in the <code>Return-Path</code> header of the original email.</p> <p>You're required to have a method of tracking bounces and complaints. If you haven't set up another mechanism for receiving bounce or complaint notifications (for example, by setting up an event destination), you receive an email notification when these events occur (even if this setting is disabled).</p>
 func (s *SDK) PutEmailIdentityFeedbackAttributes(ctx context.Context, request operations.PutEmailIdentityFeedbackAttributesRequest) (*operations.PutEmailIdentityFeedbackAttributesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/feedback", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/feedback", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6160,7 +6301,10 @@ func (s *SDK) PutEmailIdentityFeedbackAttributes(ctx context.Context, request op
 // PutEmailIdentityMailFromAttributes - Used to enable or disable the custom Mail-From domain configuration for an email identity.
 func (s *SDK) PutEmailIdentityMailFromAttributes(ctx context.Context, request operations.PutEmailIdentityMailFromAttributesRequest) (*operations.PutEmailIdentityMailFromAttributesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/mail-from", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/mail-from", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6816,7 +6960,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // TestRenderEmailTemplate - <p>Creates a preview of the MIME content of an email when provided with a template and a set of replacement data.</p> <p>You can execute this operation no more than once per second.</p>
 func (s *SDK) TestRenderEmailTemplate(ctx context.Context, request operations.TestRenderEmailTemplateRequest) (*operations.TestRenderEmailTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/templates/{TemplateName}/render", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/templates/{TemplateName}/render", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6992,7 +7139,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateConfigurationSetEventDestination - <p>Update the configuration of an event destination for a configuration set.</p> <p> <i>Events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>
 func (s *SDK) UpdateConfigurationSetEventDestination(ctx context.Context, request operations.UpdateConfigurationSetEventDestinationRequest) (*operations.UpdateConfigurationSetEventDestinationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/event-destinations/{EventDestinationName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/configuration-sets/{ConfigurationSetName}/event-destinations/{EventDestinationName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7078,7 +7228,10 @@ func (s *SDK) UpdateConfigurationSetEventDestination(ctx context.Context, reques
 // UpdateContact - Updates a contact's preferences for a list. It is not necessary to specify all existing topic preferences in the TopicPreferences object, just the ones that need updating.
 func (s *SDK) UpdateContact(ctx context.Context, request operations.UpdateContactRequest) (*operations.UpdateContactResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}/contacts/{EmailAddress}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}/contacts/{EmailAddress}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7174,7 +7327,10 @@ func (s *SDK) UpdateContact(ctx context.Context, request operations.UpdateContac
 // UpdateContactList - Updates contact list metadata. This operation does a complete replacement.
 func (s *SDK) UpdateContactList(ctx context.Context, request operations.UpdateContactListRequest) (*operations.UpdateContactListResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/contact-lists/{ContactListName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7270,7 +7426,10 @@ func (s *SDK) UpdateContactList(ctx context.Context, request operations.UpdateCo
 // UpdateCustomVerificationEmailTemplate - <p>Updates an existing custom verification email template.</p> <p>For more information about custom verification email templates, see <a href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.</p> <p>You can execute this operation no more than once per second.</p>
 func (s *SDK) UpdateCustomVerificationEmailTemplate(ctx context.Context, request operations.UpdateCustomVerificationEmailTemplateRequest) (*operations.UpdateCustomVerificationEmailTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/custom-verification-email-templates/{TemplateName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/custom-verification-email-templates/{TemplateName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7356,7 +7515,10 @@ func (s *SDK) UpdateCustomVerificationEmailTemplate(ctx context.Context, request
 // UpdateEmailIdentityPolicy - <p>Updates the specified sending authorization policy for the given identity (an email address or a domain). This API returns successfully even if a policy with the specified name does not exist.</p> <note> <p>This API is for the identity owner only. If you have not verified the identity, this API will return an error.</p> </note> <p>Sending authorization is a feature that enables an identity owner to authorize other senders to use its identities. For information about using sending authorization, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-authorization.html">Amazon SES Developer Guide</a>.</p> <p>You can execute this operation no more than once per second.</p>
 func (s *SDK) UpdateEmailIdentityPolicy(ctx context.Context, request operations.UpdateEmailIdentityPolicyRequest) (*operations.UpdateEmailIdentityPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/policies/{PolicyName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/identities/{EmailIdentity}/policies/{PolicyName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7442,7 +7604,10 @@ func (s *SDK) UpdateEmailIdentityPolicy(ctx context.Context, request operations.
 // UpdateEmailTemplate - <p>Updates an email template. Email templates enable you to send personalized email to one or more destinations in a single API operation. For more information, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html">Amazon SES Developer Guide</a>.</p> <p>You can execute this operation no more than once per second.</p>
 func (s *SDK) UpdateEmailTemplate(ctx context.Context, request operations.UpdateEmailTemplateRequest) (*operations.UpdateEmailTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email/templates/{TemplateName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email/templates/{TemplateName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

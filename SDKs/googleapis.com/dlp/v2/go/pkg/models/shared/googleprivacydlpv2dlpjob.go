@@ -20,12 +20,16 @@ const (
 	GooglePrivacyDlpV2DlpJobStateEnumActive              GooglePrivacyDlpV2DlpJobStateEnum = "ACTIVE"
 )
 
+func (e GooglePrivacyDlpV2DlpJobStateEnum) ToPointer() *GooglePrivacyDlpV2DlpJobStateEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2DlpJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -39,10 +43,10 @@ func (e *GooglePrivacyDlpV2DlpJobStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "ACTIVE":
-		*e = GooglePrivacyDlpV2DlpJobStateEnum(s)
+		*e = GooglePrivacyDlpV2DlpJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2DlpJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2DlpJobStateEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	GooglePrivacyDlpV2DlpJobTypeEnumRiskAnalysisJob       GooglePrivacyDlpV2DlpJobTypeEnum = "RISK_ANALYSIS_JOB"
 )
 
+func (e GooglePrivacyDlpV2DlpJobTypeEnum) ToPointer() *GooglePrivacyDlpV2DlpJobTypeEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2DlpJobTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DLP_JOB_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INSPECT_JOB":
 		fallthrough
 	case "RISK_ANALYSIS_JOB":
-		*e = GooglePrivacyDlpV2DlpJobTypeEnum(s)
+		*e = GooglePrivacyDlpV2DlpJobTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2DlpJobTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2DlpJobTypeEnum: %v", v)
 	}
 }
 

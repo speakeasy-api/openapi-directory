@@ -16,17 +16,21 @@ const (
 	GetQualificationScoreXAmzTargetEnumMTurkRequesterServiceV20170117GetQualificationScore GetQualificationScoreXAmzTargetEnum = "MTurkRequesterServiceV20170117.GetQualificationScore"
 )
 
+func (e GetQualificationScoreXAmzTargetEnum) ToPointer() *GetQualificationScoreXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetQualificationScoreXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.GetQualificationScore":
-		*e = GetQualificationScoreXAmzTargetEnum(s)
+		*e = GetQualificationScoreXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetQualificationScoreXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetQualificationScoreXAmzTargetEnum: %v", v)
 	}
 }
 

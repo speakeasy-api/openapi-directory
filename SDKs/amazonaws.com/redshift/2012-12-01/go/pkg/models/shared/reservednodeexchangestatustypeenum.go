@@ -18,12 +18,16 @@ const (
 	ReservedNodeExchangeStatusTypeEnumFailed     ReservedNodeExchangeStatusTypeEnum = "FAILED"
 )
 
+func (e ReservedNodeExchangeStatusTypeEnum) ToPointer() *ReservedNodeExchangeStatusTypeEnum {
+	return &e
+}
+
 func (e *ReservedNodeExchangeStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUESTED":
 		fallthrough
 	case "PENDING":
@@ -35,9 +39,9 @@ func (e *ReservedNodeExchangeStatusTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = ReservedNodeExchangeStatusTypeEnum(s)
+		*e = ReservedNodeExchangeStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservedNodeExchangeStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservedNodeExchangeStatusTypeEnum: %v", v)
 	}
 }

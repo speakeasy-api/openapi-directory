@@ -16,17 +16,21 @@ const (
 	CreateActivationXAmzTargetEnumAmazonSsmCreateActivation CreateActivationXAmzTargetEnum = "AmazonSSM.CreateActivation"
 )
 
+func (e CreateActivationXAmzTargetEnum) ToPointer() *CreateActivationXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateActivationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.CreateActivation":
-		*e = CreateActivationXAmzTargetEnum(s)
+		*e = CreateActivationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateActivationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateActivationXAmzTargetEnum: %v", v)
 	}
 }
 

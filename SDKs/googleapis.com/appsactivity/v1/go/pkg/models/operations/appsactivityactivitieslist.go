@@ -22,19 +22,23 @@ const (
 	AppsactivityActivitiesListGroupingStrategyEnumNone    AppsactivityActivitiesListGroupingStrategyEnum = "none"
 )
 
+func (e AppsactivityActivitiesListGroupingStrategyEnum) ToPointer() *AppsactivityActivitiesListGroupingStrategyEnum {
+	return &e
+}
+
 func (e *AppsactivityActivitiesListGroupingStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "driveUi":
 		fallthrough
 	case "none":
-		*e = AppsactivityActivitiesListGroupingStrategyEnum(s)
+		*e = AppsactivityActivitiesListGroupingStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsactivityActivitiesListGroupingStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsactivityActivitiesListGroupingStrategyEnum: %v", v)
 	}
 }
 

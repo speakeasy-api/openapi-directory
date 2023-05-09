@@ -35,7 +35,10 @@ func newPayment(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DeleteCreditCard - Delete credit card
 func (s *payment) DeleteCreditCard(ctx context.Context, request operations.DeleteCreditCardRequest) (*operations.DeleteCreditCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment/{cardId}/delete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payment/{cardId}/delete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *payment) DeleteCreditCard(ctx context.Context, request operations.Delet
 // GetCreditCard - View saved credit card
 func (s *payment) GetCreditCard(ctx context.Context, request operations.GetCreditCardRequest) (*operations.GetCreditCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment/{cardId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payment/{cardId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *payment) GetCreditCard(ctx context.Context, request operations.GetCredi
 // Reset the payment code used to bypass credit card payment. This will invalidate your current payment code and your users should be aware of this change while ordering translations.
 func (s *payment) ResetCardPaymentCode(ctx context.Context, request operations.ResetCardPaymentCodeRequest) (*operations.ResetCardPaymentCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment/{cardId}/reset-payment-code", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payment/{cardId}/reset-payment-code", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

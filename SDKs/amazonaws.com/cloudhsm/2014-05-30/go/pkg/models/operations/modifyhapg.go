@@ -16,17 +16,21 @@ const (
 	ModifyHapgXAmzTargetEnumCloudHsmFrontendServiceModifyHapg ModifyHapgXAmzTargetEnum = "CloudHsmFrontendService.ModifyHapg"
 )
 
+func (e ModifyHapgXAmzTargetEnum) ToPointer() *ModifyHapgXAmzTargetEnum {
+	return &e
+}
+
 func (e *ModifyHapgXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CloudHsmFrontendService.ModifyHapg":
-		*e = ModifyHapgXAmzTargetEnum(s)
+		*e = ModifyHapgXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyHapgXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyHapgXAmzTargetEnum: %v", v)
 	}
 }
 

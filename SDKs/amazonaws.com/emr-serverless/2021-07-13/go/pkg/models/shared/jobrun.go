@@ -8,15 +8,17 @@ import (
 
 // JobRun - Information about a job run. A job run is a unit of work, such as a Spark JAR, Hive query, or SparkSQL query, that you submit to an EMR Serverless application.
 type JobRun struct {
-	ApplicationID          string                  `json:"applicationId"`
-	Arn                    string                  `json:"arn"`
-	ConfigurationOverrides *ConfigurationOverrides `json:"configurationOverrides,omitempty"`
-	CreatedAt              time.Time               `json:"createdAt"`
-	CreatedBy              string                  `json:"createdBy"`
-	ExecutionRole          string                  `json:"executionRole"`
-	JobDriver              JobDriver               `json:"jobDriver"`
-	JobRunID               string                  `json:"jobRunId"`
-	Name                   *string                 `json:"name,omitempty"`
+	ApplicationID             string                  `json:"applicationId"`
+	Arn                       string                  `json:"arn"`
+	BilledResourceUtilization *ResourceUtilization    `json:"billedResourceUtilization,omitempty"`
+	ConfigurationOverrides    *ConfigurationOverrides `json:"configurationOverrides,omitempty"`
+	CreatedAt                 time.Time               `json:"createdAt"`
+	CreatedBy                 string                  `json:"createdBy"`
+	ExecutionRole             string                  `json:"executionRole"`
+	ExecutionTimeoutMinutes   *int64                  `json:"executionTimeoutMinutes,omitempty"`
+	JobDriver                 JobDriver               `json:"jobDriver"`
+	JobRunID                  string                  `json:"jobRunId"`
+	Name                      *string                 `json:"name,omitempty"`
 	// The network configuration for customer VPC connectivity.
 	NetworkConfiguration          *NetworkConfiguration     `json:"networkConfiguration,omitempty"`
 	ReleaseLabel                  string                    `json:"releaseLabel"`

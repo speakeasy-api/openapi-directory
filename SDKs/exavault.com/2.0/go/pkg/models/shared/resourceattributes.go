@@ -8,30 +8,6 @@ import (
 	"time"
 )
 
-// ResourceAttributesPreviewableEnum - Can resource be previewed. Property equals `null` if resource `type` is dir.
-type ResourceAttributesPreviewableEnum string
-
-const (
-	ResourceAttributesPreviewableEnumTrue  ResourceAttributesPreviewableEnum = "true"
-	ResourceAttributesPreviewableEnumFalse ResourceAttributesPreviewableEnum = "false"
-)
-
-func (e *ResourceAttributesPreviewableEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = ResourceAttributesPreviewableEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ResourceAttributesPreviewableEnum: %s", s)
-	}
-}
-
 // ResourceAttributesTypeEnum - Type of the resource.
 type ResourceAttributesTypeEnum string
 
@@ -40,19 +16,23 @@ const (
 	ResourceAttributesTypeEnumDir  ResourceAttributesTypeEnum = "dir"
 )
 
+func (e ResourceAttributesTypeEnum) ToPointer() *ResourceAttributesTypeEnum {
+	return &e
+}
+
 func (e *ResourceAttributesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "file":
 		fallthrough
 	case "dir":
-		*e = ResourceAttributesTypeEnum(s)
+		*e = ResourceAttributesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceAttributesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceAttributesTypeEnum: %v", v)
 	}
 }
 
@@ -79,7 +59,7 @@ type ResourceAttributes struct {
 	// Full path to the resource.
 	Path *string `json:"path,omitempty"`
 	// Can resource be previewed. Property equals `null` if resource `type` is dir.
-	Previewable *ResourceAttributesPreviewableEnum `json:"previewable,omitempty"`
+	Previewable *bool `json:"previewable,omitempty"`
 	// Resource size in bytes
 	Size *int64 `json:"size,omitempty"`
 	// Type of the resource.

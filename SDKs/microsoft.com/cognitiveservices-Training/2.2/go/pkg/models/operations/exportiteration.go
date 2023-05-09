@@ -19,12 +19,16 @@ const (
 	ExportIterationFlavorEnumOnnx12  ExportIterationFlavorEnum = "ONNX12"
 )
 
+func (e ExportIterationFlavorEnum) ToPointer() *ExportIterationFlavorEnum {
+	return &e
+}
+
 func (e *ExportIterationFlavorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Linux":
 		fallthrough
 	case "Windows":
@@ -32,10 +36,10 @@ func (e *ExportIterationFlavorEnum) UnmarshalJSON(data []byte) error {
 	case "ONNX10":
 		fallthrough
 	case "ONNX12":
-		*e = ExportIterationFlavorEnum(s)
+		*e = ExportIterationFlavorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportIterationFlavorEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportIterationFlavorEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	ExportIterationPlatformEnumOnnx       ExportIterationPlatformEnum = "ONNX"
 )
 
+func (e ExportIterationPlatformEnum) ToPointer() *ExportIterationPlatformEnum {
+	return &e
+}
+
 func (e *ExportIterationPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CoreML":
 		fallthrough
 	case "TensorFlow":
@@ -62,10 +70,10 @@ func (e *ExportIterationPlatformEnum) UnmarshalJSON(data []byte) error {
 	case "DockerFile":
 		fallthrough
 	case "ONNX":
-		*e = ExportIterationPlatformEnum(s)
+		*e = ExportIterationPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportIterationPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportIterationPlatformEnum: %v", v)
 	}
 }
 

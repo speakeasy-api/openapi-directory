@@ -32,19 +32,23 @@ const (
 	StorageObjectsUpdateProjectionEnumNoACL StorageObjectsUpdateProjectionEnum = "noAcl"
 )
 
+func (e StorageObjectsUpdateProjectionEnum) ToPointer() *StorageObjectsUpdateProjectionEnum {
+	return &e
+}
+
 func (e *StorageObjectsUpdateProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "full":
 		fallthrough
 	case "noAcl":
-		*e = StorageObjectsUpdateProjectionEnum(s)
+		*e = StorageObjectsUpdateProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageObjectsUpdateProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageObjectsUpdateProjectionEnum: %v", v)
 	}
 }
 

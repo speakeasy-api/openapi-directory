@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerMatchConfidenceLevelEnumHigh                            GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerMatchConfidenceLevelEnum = "HIGH"
 )
 
+func (e GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerMatchConfidenceLevelEnum) ToPointer() *GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerMatchConfidenceLevelEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerMatchConfidenceLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MATCH_CONFIDENCE_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "LOW":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerMatchConfidenceLevelE
 	case "MEDIUM":
 		fallthrough
 	case "HIGH":
-		*e = GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerMatchConfidenceLevelEnum(s)
+		*e = GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerMatchConfidenceLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerMatchConfidenceLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswerMatchConfidenceLevelEnum: %v", v)
 	}
 }
 

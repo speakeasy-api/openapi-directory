@@ -15,19 +15,23 @@ const (
 	GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsReservationTypeEnumExplicit GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsReservationTypeEnum = "explicit"
 )
 
+func (e GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsReservationTypeEnum) ToPointer() *GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsReservationTypeEnum {
+	return &e
+}
+
 func (e *GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsReservationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "prefix":
 		fallthrough
 	case "explicit":
-		*e = GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsReservationTypeEnum(s)
+		*e = GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsReservationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsReservationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSubnetCidrReservationsResultSubnetIpv4CidrReservationsReservationTypeEnum: %v", v)
 	}
 }
 
@@ -56,19 +60,23 @@ const (
 	GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsReservationTypeEnumExplicit GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsReservationTypeEnum = "explicit"
 )
 
+func (e GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsReservationTypeEnum) ToPointer() *GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsReservationTypeEnum {
+	return &e
+}
+
 func (e *GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsReservationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "prefix":
 		fallthrough
 	case "explicit":
-		*e = GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsReservationTypeEnum(s)
+		*e = GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsReservationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsReservationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSubnetCidrReservationsResultSubnetIpv6CidrReservationsReservationTypeEnum: %v", v)
 	}
 }
 

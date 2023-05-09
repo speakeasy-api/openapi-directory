@@ -38,7 +38,10 @@ func newProfile(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Creates one if it doesn't exist, overwrites one if it does.
 func (s *profile) BookmarkItem(ctx context.Context, request operations.BookmarkItemRequest, security operations.BookmarkItemSecurity) (*operations.BookmarkItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -108,7 +111,10 @@ func (s *profile) BookmarkItem(ctx context.Context, request operations.BookmarkI
 // DeleteItemBookmark - Unbookmark an item under the active profile.
 func (s *profile) DeleteItemBookmark(ctx context.Context, request operations.DeleteItemBookmarkRequest, security operations.DeleteItemBookmarkSecurity) (*operations.DeleteItemBookmarkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -452,7 +458,10 @@ func (s *profile) GetContinueWatchingList(ctx context.Context, request operation
 // GetItemBookmark - Get the bookmark for an item under the active profile.
 func (s *profile) GetItemBookmark(ctx context.Context, request operations.GetItemBookmarkRequest, security operations.GetItemBookmarkSecurity) (*operations.GetItemBookmarkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/profile/bookmarks/{itemId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -522,7 +531,10 @@ func (s *profile) GetItemBookmark(ctx context.Context, request operations.GetIte
 // GetItemRating - Get the rating info for an item under the active profile.
 func (s *profile) GetItemRating(ctx context.Context, request operations.GetItemRatingRequest, security operations.GetItemRatingSecurity) (*operations.GetItemRatingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/ratings/{itemId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/profile/ratings/{itemId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -592,7 +604,10 @@ func (s *profile) GetItemRating(ctx context.Context, request operations.GetItemR
 // GetItemWatchedStatus - Get the watched status info for an item under the active profile.
 func (s *profile) GetItemWatchedStatus(ctx context.Context, request operations.GetItemWatchedStatusRequest, security operations.GetItemWatchedStatusSecurity) (*operations.GetItemWatchedStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/watched/{itemId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/profile/watched/{itemId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -673,7 +688,10 @@ func (s *profile) GetItemWatchedStatus(ctx context.Context, request operations.G
 // If the response does not contain a `next` property then no item was found.
 func (s *profile) GetNextPlaybackItem(ctx context.Context, request operations.GetNextPlaybackItemRequest, security operations.GetNextPlaybackItemSecurity) (*operations.GetNextPlaybackItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/items/{itemId}/next", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/profile/items/{itemId}/next", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1095,7 +1113,10 @@ func (s *profile) GetWatchedList(ctx context.Context, request operations.GetWatc
 // Creates one if it doesn't exist, overwrites one if it does.
 func (s *profile) RateItem(ctx context.Context, request operations.RateItemRequest, security operations.RateItemSecurity) (*operations.RateItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/ratings/{itemId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/profile/ratings/{itemId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1169,7 +1190,10 @@ func (s *profile) RateItem(ctx context.Context, request operations.RateItemReque
 // Creates one if it doesn't exist, overwrites one if it does.
 func (s *profile) SetItemWatchedStatus(ctx context.Context, request operations.SetItemWatchedStatusRequest, security operations.SetItemWatchedStatusSecurity) (*operations.SetItemWatchedStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/profile/watched/{itemId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/profile/watched/{itemId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

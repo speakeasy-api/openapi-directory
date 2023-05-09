@@ -14,18 +14,22 @@ const (
 	InputOntapVolumeTypeEnumDp InputOntapVolumeTypeEnum = "DP"
 )
 
+func (e InputOntapVolumeTypeEnum) ToPointer() *InputOntapVolumeTypeEnum {
+	return &e
+}
+
 func (e *InputOntapVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RW":
 		fallthrough
 	case "DP":
-		*e = InputOntapVolumeTypeEnum(s)
+		*e = InputOntapVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InputOntapVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InputOntapVolumeTypeEnum: %v", v)
 	}
 }

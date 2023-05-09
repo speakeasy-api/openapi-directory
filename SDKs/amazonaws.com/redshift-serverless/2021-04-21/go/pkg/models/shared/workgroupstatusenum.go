@@ -16,12 +16,16 @@ const (
 	WorkgroupStatusEnumDeleting  WorkgroupStatusEnum = "DELETING"
 )
 
+func (e WorkgroupStatusEnum) ToPointer() *WorkgroupStatusEnum {
+	return &e
+}
+
 func (e *WorkgroupStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "AVAILABLE":
@@ -29,9 +33,9 @@ func (e *WorkgroupStatusEnum) UnmarshalJSON(data []byte) error {
 	case "MODIFYING":
 		fallthrough
 	case "DELETING":
-		*e = WorkgroupStatusEnum(s)
+		*e = WorkgroupStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkgroupStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkgroupStatusEnum: %v", v)
 	}
 }

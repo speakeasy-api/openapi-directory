@@ -19,21 +19,25 @@ const (
 	CreateMerchantWebhookRequestCommunicationFormatEnumSoap CreateMerchantWebhookRequestCommunicationFormatEnum = "soap"
 )
 
+func (e CreateMerchantWebhookRequestCommunicationFormatEnum) ToPointer() *CreateMerchantWebhookRequestCommunicationFormatEnum {
+	return &e
+}
+
 func (e *CreateMerchantWebhookRequestCommunicationFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "http":
 		fallthrough
 	case "json":
 		fallthrough
 	case "soap":
-		*e = CreateMerchantWebhookRequestCommunicationFormatEnum(s)
+		*e = CreateMerchantWebhookRequestCommunicationFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateMerchantWebhookRequestCommunicationFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateMerchantWebhookRequestCommunicationFormatEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	CreateMerchantWebhookRequestNetworkTypeEnumPublic CreateMerchantWebhookRequestNetworkTypeEnum = "PUBLIC"
 )
 
+func (e CreateMerchantWebhookRequestNetworkTypeEnum) ToPointer() *CreateMerchantWebhookRequestNetworkTypeEnum {
+	return &e
+}
+
 func (e *CreateMerchantWebhookRequestNetworkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCAL":
 		fallthrough
 	case "PUBLIC":
-		*e = CreateMerchantWebhookRequestNetworkTypeEnum(s)
+		*e = CreateMerchantWebhookRequestNetworkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateMerchantWebhookRequestNetworkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateMerchantWebhookRequestNetworkTypeEnum: %v", v)
 	}
 }
 
@@ -84,12 +92,16 @@ const (
 	CreateMerchantWebhookRequestSslVersionEnumTlSv13 CreateMerchantWebhookRequestSslVersionEnum = "TLSv1.3"
 )
 
+func (e CreateMerchantWebhookRequestSslVersionEnum) ToPointer() *CreateMerchantWebhookRequestSslVersionEnum {
+	return &e
+}
+
 func (e *CreateMerchantWebhookRequestSslVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP":
 		fallthrough
 	case "SSL":
@@ -105,10 +117,10 @@ func (e *CreateMerchantWebhookRequestSslVersionEnum) UnmarshalJSON(data []byte) 
 	case "TLSv1.2":
 		fallthrough
 	case "TLSv1.3":
-		*e = CreateMerchantWebhookRequestSslVersionEnum(s)
+		*e = CreateMerchantWebhookRequestSslVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateMerchantWebhookRequestSslVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateMerchantWebhookRequestSslVersionEnum: %v", v)
 	}
 }
 

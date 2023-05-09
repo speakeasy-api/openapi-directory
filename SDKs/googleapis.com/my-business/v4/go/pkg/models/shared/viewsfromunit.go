@@ -17,12 +17,16 @@ const (
 	ViewsFromUnitBeachViewExceptionEnumDependentOnDayOfWeek ViewsFromUnitBeachViewExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ViewsFromUnitBeachViewExceptionEnum) ToPointer() *ViewsFromUnitBeachViewExceptionEnum {
+	return &e
+}
+
 func (e *ViewsFromUnitBeachViewExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *ViewsFromUnitBeachViewExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ViewsFromUnitBeachViewExceptionEnum(s)
+		*e = ViewsFromUnitBeachViewExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViewsFromUnitBeachViewExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ViewsFromUnitBeachViewExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ViewsFromUnitCityViewExceptionEnumDependentOnDayOfWeek ViewsFromUnitCityViewExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ViewsFromUnitCityViewExceptionEnum) ToPointer() *ViewsFromUnitCityViewExceptionEnum {
+	return &e
+}
+
 func (e *ViewsFromUnitCityViewExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *ViewsFromUnitCityViewExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ViewsFromUnitCityViewExceptionEnum(s)
+		*e = ViewsFromUnitCityViewExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViewsFromUnitCityViewExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ViewsFromUnitCityViewExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	ViewsFromUnitGardenViewExceptionEnumDependentOnDayOfWeek ViewsFromUnitGardenViewExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ViewsFromUnitGardenViewExceptionEnum) ToPointer() *ViewsFromUnitGardenViewExceptionEnum {
+	return &e
+}
+
 func (e *ViewsFromUnitGardenViewExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *ViewsFromUnitGardenViewExceptionEnum) UnmarshalJSON(data []byte) error 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ViewsFromUnitGardenViewExceptionEnum(s)
+		*e = ViewsFromUnitGardenViewExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViewsFromUnitGardenViewExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ViewsFromUnitGardenViewExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	ViewsFromUnitLakeViewExceptionEnumDependentOnDayOfWeek ViewsFromUnitLakeViewExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ViewsFromUnitLakeViewExceptionEnum) ToPointer() *ViewsFromUnitLakeViewExceptionEnum {
+	return &e
+}
+
 func (e *ViewsFromUnitLakeViewExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *ViewsFromUnitLakeViewExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ViewsFromUnitLakeViewExceptionEnum(s)
+		*e = ViewsFromUnitLakeViewExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViewsFromUnitLakeViewExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ViewsFromUnitLakeViewExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	ViewsFromUnitLandmarkViewExceptionEnumDependentOnDayOfWeek ViewsFromUnitLandmarkViewExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ViewsFromUnitLandmarkViewExceptionEnum) ToPointer() *ViewsFromUnitLandmarkViewExceptionEnum {
+	return &e
+}
+
 func (e *ViewsFromUnitLandmarkViewExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *ViewsFromUnitLandmarkViewExceptionEnum) UnmarshalJSON(data []byte) erro
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ViewsFromUnitLandmarkViewExceptionEnum(s)
+		*e = ViewsFromUnitLandmarkViewExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViewsFromUnitLandmarkViewExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ViewsFromUnitLandmarkViewExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	ViewsFromUnitOceanViewExceptionEnumDependentOnDayOfWeek ViewsFromUnitOceanViewExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ViewsFromUnitOceanViewExceptionEnum) ToPointer() *ViewsFromUnitOceanViewExceptionEnum {
+	return &e
+}
+
 func (e *ViewsFromUnitOceanViewExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *ViewsFromUnitOceanViewExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ViewsFromUnitOceanViewExceptionEnum(s)
+		*e = ViewsFromUnitOceanViewExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViewsFromUnitOceanViewExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ViewsFromUnitOceanViewExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	ViewsFromUnitPoolViewExceptionEnumDependentOnDayOfWeek ViewsFromUnitPoolViewExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ViewsFromUnitPoolViewExceptionEnum) ToPointer() *ViewsFromUnitPoolViewExceptionEnum {
+	return &e
+}
+
 func (e *ViewsFromUnitPoolViewExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *ViewsFromUnitPoolViewExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ViewsFromUnitPoolViewExceptionEnum(s)
+		*e = ViewsFromUnitPoolViewExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViewsFromUnitPoolViewExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ViewsFromUnitPoolViewExceptionEnum: %v", v)
 	}
 }
 
@@ -227,12 +255,16 @@ const (
 	ViewsFromUnitValleyViewExceptionEnumDependentOnDayOfWeek ViewsFromUnitValleyViewExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ViewsFromUnitValleyViewExceptionEnum) ToPointer() *ViewsFromUnitValleyViewExceptionEnum {
+	return &e
+}
+
 func (e *ViewsFromUnitValleyViewExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -240,10 +272,10 @@ func (e *ViewsFromUnitValleyViewExceptionEnum) UnmarshalJSON(data []byte) error 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ViewsFromUnitValleyViewExceptionEnum(s)
+		*e = ViewsFromUnitValleyViewExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViewsFromUnitValleyViewExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ViewsFromUnitValleyViewExceptionEnum: %v", v)
 	}
 }
 

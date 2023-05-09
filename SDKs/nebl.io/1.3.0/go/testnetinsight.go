@@ -36,7 +36,10 @@ func newTestnetInsight(defaultClient, securityClient HTTPClient, serverURL, lang
 // Returns NEBL address object containing information on a specific address
 func (s *testnetInsight) TestnetGetAddress(ctx context.Context, request operations.TestnetGetAddressRequest) (*operations.TestnetGetAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *testnetInsight) TestnetGetAddress(ctx context.Context, request operatio
 // Returns NEBL address balance in satoshis
 func (s *testnetInsight) TestnetGetAddressBalance(ctx context.Context, request operations.TestnetGetAddressBalanceRequest) (*operations.TestnetGetAddressBalanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/balance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/balance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -126,7 +132,10 @@ func (s *testnetInsight) TestnetGetAddressBalance(ctx context.Context, request o
 // Returns total NEBL received by address in satoshis
 func (s *testnetInsight) TestnetGetAddressTotalReceived(ctx context.Context, request operations.TestnetGetAddressTotalReceivedRequest) (*operations.TestnetGetAddressTotalReceivedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/totalReceived", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/totalReceived", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +180,10 @@ func (s *testnetInsight) TestnetGetAddressTotalReceived(ctx context.Context, req
 // Returns total NEBL sent by address in satoshis
 func (s *testnetInsight) TestnetGetAddressTotalSent(ctx context.Context, request operations.TestnetGetAddressTotalSentRequest) (*operations.TestnetGetAddressTotalSentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/totalSent", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/totalSent", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -216,7 +228,10 @@ func (s *testnetInsight) TestnetGetAddressTotalSent(ctx context.Context, request
 // Returns NEBL address unconfirmed balance in satoshis
 func (s *testnetInsight) TestnetGetAddressUnconfirmedBalance(ctx context.Context, request operations.TestnetGetAddressUnconfirmedBalanceRequest) (*operations.TestnetGetAddressUnconfirmedBalanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/unconfirmedBalance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/unconfirmedBalance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,7 +276,10 @@ func (s *testnetInsight) TestnetGetAddressUnconfirmedBalance(ctx context.Context
 // Returns information on each Unspent Transaction Output contained at an address
 func (s *testnetInsight) TestnetGetAddressUtxos(ctx context.Context, request operations.TestnetGetAddressUtxosRequest) (*operations.TestnetGetAddressUtxosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/utxo", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ins/addr/{address}/utxo", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -306,7 +324,10 @@ func (s *testnetInsight) TestnetGetAddressUtxos(ctx context.Context, request ope
 // Returns blockchain data for a given block based upon the block hash
 func (s *testnetInsight) TestnetGetBlock(ctx context.Context, request operations.TestnetGetBlockRequest) (*operations.TestnetGetBlockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/block/{blockhash}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ins/block/{blockhash}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +372,10 @@ func (s *testnetInsight) TestnetGetBlock(ctx context.Context, request operations
 // Returns the block hash of a block at a given block index
 func (s *testnetInsight) TestnetGetBlockIndex(ctx context.Context, request operations.TestnetGetBlockIndexRequest) (*operations.TestnetGetBlockIndexResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/block-index/{blockindex}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ins/block-index/{blockindex}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -396,7 +420,10 @@ func (s *testnetInsight) TestnetGetBlockIndex(ctx context.Context, request opera
 // Returns raw transaction hex representing a NEBL transaction
 func (s *testnetInsight) TestnetGetRawTx(ctx context.Context, request operations.TestnetGetRawTxRequest) (*operations.TestnetGetRawTxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/rawtx/{txid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ins/rawtx/{txid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -535,7 +562,10 @@ func (s *testnetInsight) TestnetGetSync(ctx context.Context) (*operations.Testne
 // Returns NEBL transaction object representing a NEBL transaction
 func (s *testnetInsight) TestnetGetTx(ctx context.Context, request operations.TestnetGetTxRequest) (*operations.TestnetGetTxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ins/tx/{txid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ins/tx/{txid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

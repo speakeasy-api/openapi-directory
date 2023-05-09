@@ -14,18 +14,22 @@ const (
 	RelatedItemTypeEnumComment RelatedItemTypeEnum = "Comment"
 )
 
+func (e RelatedItemTypeEnum) ToPointer() *RelatedItemTypeEnum {
+	return &e
+}
+
 func (e *RelatedItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Contact":
 		fallthrough
 	case "Comment":
-		*e = RelatedItemTypeEnum(s)
+		*e = RelatedItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RelatedItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RelatedItemTypeEnum: %v", v)
 	}
 }

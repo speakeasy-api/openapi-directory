@@ -21,12 +21,16 @@ const (
 	ItemTypeEnumTask             ItemTypeEnum = "TASK"
 )
 
+func (e ItemTypeEnum) ToPointer() *ItemTypeEnum {
+	return &e
+}
+
 func (e *ItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANALYSIS":
 		fallthrough
 	case "INCIDENT":
@@ -44,9 +48,9 @@ func (e *ItemTypeEnum) UnmarshalJSON(data []byte) error {
 	case "INVOLVED_RESOURCE":
 		fallthrough
 	case "TASK":
-		*e = ItemTypeEnum(s)
+		*e = ItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ItemTypeEnum: %v", v)
 	}
 }

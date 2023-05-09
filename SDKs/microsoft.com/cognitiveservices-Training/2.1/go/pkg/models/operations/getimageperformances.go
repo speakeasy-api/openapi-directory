@@ -17,19 +17,23 @@ const (
 	GetImagePerformancesOrderByEnumOldest GetImagePerformancesOrderByEnum = "Oldest"
 )
 
+func (e GetImagePerformancesOrderByEnum) ToPointer() *GetImagePerformancesOrderByEnum {
+	return &e
+}
+
 func (e *GetImagePerformancesOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Newest":
 		fallthrough
 	case "Oldest":
-		*e = GetImagePerformancesOrderByEnum(s)
+		*e = GetImagePerformancesOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImagePerformancesOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImagePerformancesOrderByEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	ControlResponseEnumIgnore   ControlResponseEnum = "IGNORE"
 )
 
+func (e ControlResponseEnum) ToPointer() *ControlResponseEnum {
+	return &e
+}
+
 func (e *ControlResponseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANUAL":
 		fallthrough
 	case "AUTOMATE":
@@ -29,9 +33,9 @@ func (e *ControlResponseEnum) UnmarshalJSON(data []byte) error {
 	case "DEFER":
 		fallthrough
 	case "IGNORE":
-		*e = ControlResponseEnum(s)
+		*e = ControlResponseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ControlResponseEnum: %s", s)
+		return fmt.Errorf("invalid value for ControlResponseEnum: %v", v)
 	}
 }

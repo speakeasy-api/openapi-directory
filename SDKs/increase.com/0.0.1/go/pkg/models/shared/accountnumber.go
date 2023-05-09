@@ -17,21 +17,25 @@ const (
 	AccountNumberStatusEnumCanceled AccountNumberStatusEnum = "canceled"
 )
 
+func (e AccountNumberStatusEnum) ToPointer() *AccountNumberStatusEnum {
+	return &e
+}
+
 func (e *AccountNumberStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "disabled":
 		fallthrough
 	case "canceled":
-		*e = AccountNumberStatusEnum(s)
+		*e = AccountNumberStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountNumberStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountNumberStatusEnum: %v", v)
 	}
 }
 
@@ -42,17 +46,21 @@ const (
 	AccountNumberTypeEnumAccountNumber AccountNumberTypeEnum = "account_number"
 )
 
+func (e AccountNumberTypeEnum) ToPointer() *AccountNumberTypeEnum {
+	return &e
+}
+
 func (e *AccountNumberTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account_number":
-		*e = AccountNumberTypeEnum(s)
+		*e = AccountNumberTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountNumberTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountNumberTypeEnum: %v", v)
 	}
 }
 

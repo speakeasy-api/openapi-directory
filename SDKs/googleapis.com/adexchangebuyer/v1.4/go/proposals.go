@@ -35,7 +35,10 @@ func newProposals(defaultClient, securityClient HTTPClient, serverURL, language,
 // AdexchangebuyerProposalsGet - Get a proposal given its id
 func (s *proposals) AdexchangebuyerProposalsGet(ctx context.Context, request operations.AdexchangebuyerProposalsGetRequest, security operations.AdexchangebuyerProposalsGetSecurity) (*operations.AdexchangebuyerProposalsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *proposals) AdexchangebuyerProposalsInsert(ctx context.Context, request 
 // AdexchangebuyerProposalsPatch - Update the given proposal. This method supports patch semantics.
 func (s *proposals) AdexchangebuyerProposalsPatch(ctx context.Context, request operations.AdexchangebuyerProposalsPatchRequest, security operations.AdexchangebuyerProposalsPatchSecurity) (*operations.AdexchangebuyerProposalsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/{revisionNumber}/{updateAction}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/{revisionNumber}/{updateAction}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Proposal", "json")
 	if err != nil {
@@ -241,7 +247,10 @@ func (s *proposals) AdexchangebuyerProposalsSearch(ctx context.Context, request 
 // AdexchangebuyerProposalsSetupcomplete - Update the given proposal to indicate that setup has been completed.
 func (s *proposals) AdexchangebuyerProposalsSetupcomplete(ctx context.Context, request operations.AdexchangebuyerProposalsSetupcompleteRequest, security operations.AdexchangebuyerProposalsSetupcompleteSecurity) (*operations.AdexchangebuyerProposalsSetupcompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/setupcomplete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/setupcomplete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -280,7 +289,10 @@ func (s *proposals) AdexchangebuyerProposalsSetupcomplete(ctx context.Context, r
 // AdexchangebuyerProposalsUpdate - Update the given proposal
 func (s *proposals) AdexchangebuyerProposalsUpdate(ctx context.Context, request operations.AdexchangebuyerProposalsUpdateRequest, security operations.AdexchangebuyerProposalsUpdateSecurity) (*operations.AdexchangebuyerProposalsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/{revisionNumber}/{updateAction}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/{revisionNumber}/{updateAction}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Proposal", "json")
 	if err != nil {

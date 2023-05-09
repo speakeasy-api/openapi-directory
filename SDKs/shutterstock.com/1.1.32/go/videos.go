@@ -36,7 +36,10 @@ func newVideos(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // This endpoint adds one or more videos to a collection by video IDs.
 func (s *videos) AddVideoCollectionItems(ctx context.Context, request operations.AddVideoCollectionItemsRequest, security operations.AddVideoCollectionItemsSecurity) (*operations.AddVideoCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionItemRequest", "json")
 	if err != nil {
@@ -150,7 +153,10 @@ func (s *videos) CreateVideoCollection(ctx context.Context, request shared.Colle
 // This endpoint deletes a collection.
 func (s *videos) DeleteVideoCollection(ctx context.Context, request operations.DeleteVideoCollectionRequest, security operations.DeleteVideoCollectionSecurity) (*operations.DeleteVideoCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -194,7 +200,10 @@ func (s *videos) DeleteVideoCollection(ctx context.Context, request operations.D
 // This endpoint removes one or more videos from a collection.
 func (s *videos) DeleteVideoCollectionItems(ctx context.Context, request operations.DeleteVideoCollectionItemsRequest, security operations.DeleteVideoCollectionItemsSecurity) (*operations.DeleteVideoCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -242,7 +251,10 @@ func (s *videos) DeleteVideoCollectionItems(ctx context.Context, request operati
 // This endpoint redownloads videos that you have already received a license for.
 func (s *videos) DownloadVideos(ctx context.Context, request operations.DownloadVideosRequest, security operations.DownloadVideosSecurity) (*operations.DownloadVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/licenses/{id}/downloads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/videos/licenses/{id}/downloads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RedownloadVideo", "json")
 	if err != nil {
@@ -302,7 +314,10 @@ func (s *videos) DownloadVideos(ctx context.Context, request operations.Download
 // This endpoint searches for videos that are similar to a video that you specify.
 func (s *videos) FindSimilarVideos(ctx context.Context, request operations.FindSimilarVideosRequest, security operations.FindSimilarVideosSecurity) (*operations.FindSimilarVideosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/{id}/similar", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/videos/{id}/similar", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -356,7 +371,10 @@ func (s *videos) FindSimilarVideos(ctx context.Context, request operations.FindS
 // This endpoint gets more detailed information about a featured video collection, including its cover video and timestamps for its creation and most recent update. To get the videos, use `GET /v2/videos/collections/featured/{id}/items`.
 func (s *videos) GetFeaturedVideoCollection(ctx context.Context, request operations.GetFeaturedVideoCollectionRequest, security operations.GetFeaturedVideoCollectionSecurity) (*operations.GetFeaturedVideoCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/featured/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/featured/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -412,7 +430,10 @@ func (s *videos) GetFeaturedVideoCollection(ctx context.Context, request operati
 // This endpoint lists the IDs of videos in a featured collection and the date that each was added.
 func (s *videos) GetFeaturedVideoCollectionItems(ctx context.Context, request operations.GetFeaturedVideoCollectionItemsRequest, security operations.GetFeaturedVideoCollectionItemsSecurity) (*operations.GetFeaturedVideoCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/featured/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/featured/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -571,7 +592,10 @@ func (s *videos) GetUpdatedVideos(ctx context.Context, request operations.GetUpd
 // This endpoint shows information about a video, including URLs to previews and the sizes that it is available in.
 func (s *videos) GetVideo(ctx context.Context, request operations.GetVideoRequest, security operations.GetVideoSecurity) (*operations.GetVideoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/videos/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -627,7 +651,10 @@ func (s *videos) GetVideo(ctx context.Context, request operations.GetVideoReques
 // This endpoint gets more detailed information about a collection, including the timestamp for its creation and the number of videos in it. To get the videos in collections, use GET /v2/videos/collections/{id}/items.
 func (s *videos) GetVideoCollection(ctx context.Context, request operations.GetVideoCollectionRequest, security operations.GetVideoCollectionSecurity) (*operations.GetVideoCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -683,7 +710,10 @@ func (s *videos) GetVideoCollection(ctx context.Context, request operations.GetV
 // This endpoint lists the IDs of videos in a collection and the date that each was added.
 func (s *videos) GetVideoCollectionItems(ctx context.Context, request operations.GetVideoCollectionItemsRequest, security operations.GetVideoCollectionItemsSecurity) (*operations.GetVideoCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1073,7 +1103,10 @@ func (s *videos) ListVideoCategories(ctx context.Context, request operations.Lis
 // This endpoint sets a new name for a collection.
 func (s *videos) RenameVideoCollection(ctx context.Context, request operations.RenameVideoCollectionRequest, security operations.RenameVideoCollectionSecurity) (*operations.RenameVideoCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/videos/collections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionUpdateRequest", "json")
 	if err != nil {

@@ -18,19 +18,23 @@ const (
 	MetalsSpotRatioHistoryGETFormatEnumXML  MetalsSpotRatioHistoryGETFormatEnum = "xml"
 )
 
+func (e MetalsSpotRatioHistoryGETFormatEnum) ToPointer() *MetalsSpotRatioHistoryGETFormatEnum {
+	return &e
+}
+
 func (e *MetalsSpotRatioHistoryGETFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = MetalsSpotRatioHistoryGETFormatEnum(s)
+		*e = MetalsSpotRatioHistoryGETFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetalsSpotRatioHistoryGETFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MetalsSpotRatioHistoryGETFormatEnum: %v", v)
 	}
 }
 

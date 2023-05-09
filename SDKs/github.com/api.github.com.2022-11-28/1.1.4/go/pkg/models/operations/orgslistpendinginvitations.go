@@ -18,21 +18,25 @@ const (
 	OrgsListPendingInvitationsInvitationSourceEnumScim   OrgsListPendingInvitationsInvitationSourceEnum = "scim"
 )
 
+func (e OrgsListPendingInvitationsInvitationSourceEnum) ToPointer() *OrgsListPendingInvitationsInvitationSourceEnum {
+	return &e
+}
+
 func (e *OrgsListPendingInvitationsInvitationSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "member":
 		fallthrough
 	case "scim":
-		*e = OrgsListPendingInvitationsInvitationSourceEnum(s)
+		*e = OrgsListPendingInvitationsInvitationSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgsListPendingInvitationsInvitationSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgsListPendingInvitationsInvitationSourceEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	OrgsListPendingInvitationsRoleEnumHiringManager  OrgsListPendingInvitationsRoleEnum = "hiring_manager"
 )
 
+func (e OrgsListPendingInvitationsRoleEnum) ToPointer() *OrgsListPendingInvitationsRoleEnum {
+	return &e
+}
+
 func (e *OrgsListPendingInvitationsRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "admin":
@@ -62,10 +70,10 @@ func (e *OrgsListPendingInvitationsRoleEnum) UnmarshalJSON(data []byte) error {
 	case "billing_manager":
 		fallthrough
 	case "hiring_manager":
-		*e = OrgsListPendingInvitationsRoleEnum(s)
+		*e = OrgsListPendingInvitationsRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgsListPendingInvitationsRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgsListPendingInvitationsRoleEnum: %v", v)
 	}
 }
 

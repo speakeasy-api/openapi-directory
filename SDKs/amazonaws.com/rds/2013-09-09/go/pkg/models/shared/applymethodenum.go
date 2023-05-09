@@ -14,18 +14,22 @@ const (
 	ApplyMethodEnumPendingReboot ApplyMethodEnum = "pending-reboot"
 )
 
+func (e ApplyMethodEnum) ToPointer() *ApplyMethodEnum {
+	return &e
+}
+
 func (e *ApplyMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "immediate":
 		fallthrough
 	case "pending-reboot":
-		*e = ApplyMethodEnum(s)
+		*e = ApplyMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplyMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplyMethodEnum: %v", v)
 	}
 }

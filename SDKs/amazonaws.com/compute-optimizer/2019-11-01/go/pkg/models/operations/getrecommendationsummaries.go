@@ -16,17 +16,21 @@ const (
 	GetRecommendationSummariesXAmzTargetEnumComputeOptimizerServiceGetRecommendationSummaries GetRecommendationSummariesXAmzTargetEnum = "ComputeOptimizerService.GetRecommendationSummaries"
 )
 
+func (e GetRecommendationSummariesXAmzTargetEnum) ToPointer() *GetRecommendationSummariesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRecommendationSummariesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComputeOptimizerService.GetRecommendationSummaries":
-		*e = GetRecommendationSummariesXAmzTargetEnum(s)
+		*e = GetRecommendationSummariesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRecommendationSummariesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRecommendationSummariesXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DeactivateEventSourceXAmzTargetEnumAwsEventsDeactivateEventSource DeactivateEventSourceXAmzTargetEnum = "AWSEvents.DeactivateEventSource"
 )
 
+func (e DeactivateEventSourceXAmzTargetEnum) ToPointer() *DeactivateEventSourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeactivateEventSourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.DeactivateEventSource":
-		*e = DeactivateEventSourceXAmzTargetEnum(s)
+		*e = DeactivateEventSourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeactivateEventSourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeactivateEventSourceXAmzTargetEnum: %v", v)
 	}
 }
 

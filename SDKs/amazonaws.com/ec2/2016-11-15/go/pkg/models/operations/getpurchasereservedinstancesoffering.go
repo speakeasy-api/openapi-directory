@@ -16,17 +16,21 @@ const (
 	GETPurchaseReservedInstancesOfferingActionEnumPurchaseReservedInstancesOffering GETPurchaseReservedInstancesOfferingActionEnum = "PurchaseReservedInstancesOffering"
 )
 
+func (e GETPurchaseReservedInstancesOfferingActionEnum) ToPointer() *GETPurchaseReservedInstancesOfferingActionEnum {
+	return &e
+}
+
 func (e *GETPurchaseReservedInstancesOfferingActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PurchaseReservedInstancesOffering":
-		*e = GETPurchaseReservedInstancesOfferingActionEnum(s)
+		*e = GETPurchaseReservedInstancesOfferingActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPurchaseReservedInstancesOfferingActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPurchaseReservedInstancesOfferingActionEnum: %v", v)
 	}
 }
 
@@ -37,17 +41,21 @@ const (
 	GETPurchaseReservedInstancesOfferingLimitPriceCurrencyCodeEnumUsd GETPurchaseReservedInstancesOfferingLimitPriceCurrencyCodeEnum = "USD"
 )
 
+func (e GETPurchaseReservedInstancesOfferingLimitPriceCurrencyCodeEnum) ToPointer() *GETPurchaseReservedInstancesOfferingLimitPriceCurrencyCodeEnum {
+	return &e
+}
+
 func (e *GETPurchaseReservedInstancesOfferingLimitPriceCurrencyCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
-		*e = GETPurchaseReservedInstancesOfferingLimitPriceCurrencyCodeEnum(s)
+		*e = GETPurchaseReservedInstancesOfferingLimitPriceCurrencyCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPurchaseReservedInstancesOfferingLimitPriceCurrencyCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPurchaseReservedInstancesOfferingLimitPriceCurrencyCodeEnum: %v", v)
 	}
 }
 
@@ -64,17 +72,21 @@ const (
 	GETPurchaseReservedInstancesOfferingVersionEnumTwoThousandAndSixteen1115 GETPurchaseReservedInstancesOfferingVersionEnum = "2016-11-15"
 )
 
+func (e GETPurchaseReservedInstancesOfferingVersionEnum) ToPointer() *GETPurchaseReservedInstancesOfferingVersionEnum {
+	return &e
+}
+
 func (e *GETPurchaseReservedInstancesOfferingVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETPurchaseReservedInstancesOfferingVersionEnum(s)
+		*e = GETPurchaseReservedInstancesOfferingVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPurchaseReservedInstancesOfferingVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPurchaseReservedInstancesOfferingVersionEnum: %v", v)
 	}
 }
 

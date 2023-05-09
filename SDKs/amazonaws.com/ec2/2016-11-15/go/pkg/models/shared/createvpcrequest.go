@@ -16,21 +16,25 @@ const (
 	CreateVpcRequestInstanceTenancyEnumHost      CreateVpcRequestInstanceTenancyEnum = "host"
 )
 
+func (e CreateVpcRequestInstanceTenancyEnum) ToPointer() *CreateVpcRequestInstanceTenancyEnum {
+	return &e
+}
+
 func (e *CreateVpcRequestInstanceTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = CreateVpcRequestInstanceTenancyEnum(s)
+		*e = CreateVpcRequestInstanceTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcRequestInstanceTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcRequestInstanceTenancyEnum: %v", v)
 	}
 }
 
@@ -125,12 +129,16 @@ const (
 	CreateVpcRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateVpcRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateVpcRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateVpcRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateVpcRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -300,10 +308,10 @@ func (e *CreateVpcRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data [
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateVpcRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateVpcRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

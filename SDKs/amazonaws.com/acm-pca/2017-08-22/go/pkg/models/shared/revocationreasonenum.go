@@ -20,12 +20,16 @@ const (
 	RevocationReasonEnumAACompromise                   RevocationReasonEnum = "A_A_COMPROMISE"
 )
 
+func (e RevocationReasonEnum) ToPointer() *RevocationReasonEnum {
+	return &e
+}
+
 func (e *RevocationReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "KEY_COMPROMISE":
@@ -41,9 +45,9 @@ func (e *RevocationReasonEnum) UnmarshalJSON(data []byte) error {
 	case "PRIVILEGE_WITHDRAWN":
 		fallthrough
 	case "A_A_COMPROMISE":
-		*e = RevocationReasonEnum(s)
+		*e = RevocationReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RevocationReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for RevocationReasonEnum: %v", v)
 	}
 }

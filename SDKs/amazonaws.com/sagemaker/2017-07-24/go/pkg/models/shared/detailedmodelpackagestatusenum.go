@@ -16,12 +16,16 @@ const (
 	DetailedModelPackageStatusEnumFailed     DetailedModelPackageStatusEnum = "Failed"
 )
 
+func (e DetailedModelPackageStatusEnum) ToPointer() *DetailedModelPackageStatusEnum {
+	return &e
+}
+
 func (e *DetailedModelPackageStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NotStarted":
 		fallthrough
 	case "InProgress":
@@ -29,9 +33,9 @@ func (e *DetailedModelPackageStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Completed":
 		fallthrough
 	case "Failed":
-		*e = DetailedModelPackageStatusEnum(s)
+		*e = DetailedModelPackageStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetailedModelPackageStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DetailedModelPackageStatusEnum: %v", v)
 	}
 }

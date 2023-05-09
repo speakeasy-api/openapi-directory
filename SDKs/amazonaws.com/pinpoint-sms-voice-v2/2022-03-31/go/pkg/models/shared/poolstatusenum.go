@@ -15,20 +15,24 @@ const (
 	PoolStatusEnumDeleting PoolStatusEnum = "DELETING"
 )
 
+func (e PoolStatusEnum) ToPointer() *PoolStatusEnum {
+	return &e
+}
+
 func (e *PoolStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "DELETING":
-		*e = PoolStatusEnum(s)
+		*e = PoolStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolStatusEnum: %v", v)
 	}
 }

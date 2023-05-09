@@ -13,24 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nytimes.com/most_popular_
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GETMostemailedSectionTimePeriodJSONRequest{
-        Section: "Public Editor",
-        TimePeriod: "7",
-    }
-
     ctx := context.Background()
-    res, err := s.GETMostemailedSectionTimePeriodJSON(ctx, req, operations.GETMostemailedSectionTimePeriodJSONSecurity{
+    res, err := s.GETMostemailedSectionTimePeriodJSON(ctx, operations.GETMostemailedSectionTimePeriodJSONRequest{
+        Section: shared.SectionEnumPublicEditor,
+        TimePeriod: shared.TimePeriodEnumSeven,
+    }, operations.GETMostemailedSectionTimePeriodJSONSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -47,11 +45,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GETMostemailedSectionTimePeriodJSON` - Most Emailed by Section & Time Period
-* `GETMostsharedSectionTimePeriodJSON` - Most Shared by Section & Time Period
-* `GETMostviewedSectionTimePeriodJSON` - Most Viewed by Section & Time Period
+* [GETMostemailedSectionTimePeriodJSON](docs/sdk/README.md#getmostemailedsectiontimeperiodjson) - Most Emailed by Section & Time Period
+* [GETMostsharedSectionTimePeriodJSON](docs/sdk/README.md#getmostsharedsectiontimeperiodjson) - Most Shared by Section & Time Period
+* [GETMostviewedSectionTimePeriodJSON](docs/sdk/README.md#getmostviewedsectiontimeperiodjson) - Most Viewed by Section & Time Period
 <!-- End SDK Available Operations -->
 
 ### Maturity

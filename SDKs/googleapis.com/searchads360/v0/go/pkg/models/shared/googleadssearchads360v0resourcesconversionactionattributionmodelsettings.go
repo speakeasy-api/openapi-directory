@@ -22,12 +22,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsAttributionModelEnumGoogleSearchAttributionDataDriven    GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsAttributionModelEnum = "GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsAttributionModelEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsAttributionModelEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsAttributionModelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -45,10 +49,10 @@ func (e *GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSetting
 	case "GOOGLE_SEARCH_ATTRIBUTION_POSITION_BASED":
 		fallthrough
 	case "GOOGLE_SEARCH_ATTRIBUTION_DATA_DRIVEN":
-		*e = GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsAttributionModelEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsAttributionModelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsAttributionModelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsAttributionModelEnum: %v", v)
 	}
 }
 
@@ -64,12 +68,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsDataDrivenModelStatusEnumNeverGenerated GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsDataDrivenModelStatusEnum = "NEVER_GENERATED"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsDataDrivenModelStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsDataDrivenModelStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsDataDrivenModelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -81,10 +89,10 @@ func (e *GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSetting
 	case "EXPIRED":
 		fallthrough
 	case "NEVER_GENERATED":
-		*e = GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsDataDrivenModelStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsDataDrivenModelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsDataDrivenModelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettingsDataDrivenModelStatusEnum: %v", v)
 	}
 }
 

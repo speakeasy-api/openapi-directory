@@ -15,20 +15,24 @@ const (
 	AccessEnumBlocked  AccessEnum = "blocked"
 )
 
+func (e AccessEnum) ToPointer() *AccessEnum {
+	return &e
+}
+
 func (e *AccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "playable":
 		fallthrough
 	case "preview":
 		fallthrough
 	case "blocked":
-		*e = AccessEnum(s)
+		*e = AccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessEnum: %v", v)
 	}
 }

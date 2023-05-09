@@ -17,21 +17,25 @@ const (
 	TravelTimeGetCompareOverlayDirectionEnumTo      TravelTimeGetCompareOverlayDirectionEnum = "To"
 )
 
+func (e TravelTimeGetCompareOverlayDirectionEnum) ToPointer() *TravelTimeGetCompareOverlayDirectionEnum {
+	return &e
+}
+
 func (e *TravelTimeGetCompareOverlayDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Average":
 		fallthrough
 	case "From":
 		fallthrough
 	case "To":
-		*e = TravelTimeGetCompareOverlayDirectionEnum(s)
+		*e = TravelTimeGetCompareOverlayDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TravelTimeGetCompareOverlayDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for TravelTimeGetCompareOverlayDirectionEnum: %v", v)
 	}
 }
 

@@ -16,19 +16,23 @@ const (
 	LineRouteServiceTypesEnumNight   LineRouteServiceTypesEnum = "Night"
 )
 
+func (e LineRouteServiceTypesEnum) ToPointer() *LineRouteServiceTypesEnum {
+	return &e
+}
+
 func (e *LineRouteServiceTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Regular":
 		fallthrough
 	case "Night":
-		*e = LineRouteServiceTypesEnum(s)
+		*e = LineRouteServiceTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineRouteServiceTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for LineRouteServiceTypesEnum: %v", v)
 	}
 }
 

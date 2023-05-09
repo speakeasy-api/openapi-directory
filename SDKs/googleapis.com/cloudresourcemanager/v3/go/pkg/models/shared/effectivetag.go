@@ -6,9 +6,9 @@ package shared
 type EffectiveTag struct {
 	// Indicates the inheritance status of a tag value attached to the given resource. If the tag value is inherited from one of the resource's ancestors, inherited will be true. If false, then the tag value is directly attached to the resource, inherited will be false.
 	Inherited *bool `json:"inherited,omitempty"`
-	// The namespaced_name of the TagKey. Now only supported in the format of `{organization_id}/{tag_key_short_name}`. Other formats will be supported when we add non-org parented tags.
+	// The namespaced name of the TagKey. Can be in the form `{organization_id}/{tag_key_short_name}` or `{project_id}/{tag_key_short_name}` or `{project_number}/{tag_key_short_name}`.
 	NamespacedTagKey *string `json:"namespacedTagKey,omitempty"`
-	// Namespaced name of the TagValue. Now only supported in the format `{organization_id}/{tag_key_short_name}/{tag_value_short_name}`. Other formats will be supported when we add non-org parented tags.
+	// The namespaced name of the TagValue. Can be in the form `{organization_id}/{tag_key_short_name}/{tag_value_short_name}` or `{project_id}/{tag_key_short_name}/{tag_value_short_name}` or `{project_number}/{tag_key_short_name}/{tag_value_short_name}`.
 	NamespacedTagValue *string `json:"namespacedTagValue,omitempty"`
 	// The name of the TagKey, in the format `tagKeys/{id}`, such as `tagKeys/123`.
 	TagKey *string `json:"tagKey,omitempty"`

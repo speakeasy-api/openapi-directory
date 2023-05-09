@@ -16,21 +16,25 @@ const (
 	SourceSplitResponseOutcomeEnumSourceSplitOutcomeSplittingHappened SourceSplitResponseOutcomeEnum = "SOURCE_SPLIT_OUTCOME_SPLITTING_HAPPENED"
 )
 
+func (e SourceSplitResponseOutcomeEnum) ToPointer() *SourceSplitResponseOutcomeEnum {
+	return &e
+}
+
 func (e *SourceSplitResponseOutcomeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOURCE_SPLIT_OUTCOME_UNKNOWN":
 		fallthrough
 	case "SOURCE_SPLIT_OUTCOME_USE_CURRENT":
 		fallthrough
 	case "SOURCE_SPLIT_OUTCOME_SPLITTING_HAPPENED":
-		*e = SourceSplitResponseOutcomeEnum(s)
+		*e = SourceSplitResponseOutcomeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceSplitResponseOutcomeEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceSplitResponseOutcomeEnum: %v", v)
 	}
 }
 

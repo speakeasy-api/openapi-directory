@@ -110,7 +110,10 @@ func (s *accountCompanyLevel) GetCompanies(ctx context.Context, request operatio
 // * Management API—Account read
 func (s *accountCompanyLevel) GetCompaniesCompanyID(ctx context.Context, request operations.GetCompaniesCompanyIDRequest, security operations.GetCompaniesCompanyIDSecurity) (*operations.GetCompaniesCompanyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +179,10 @@ func (s *accountCompanyLevel) GetCompaniesCompanyID(ctx context.Context, request
 // * Management API—Account read
 func (s *accountCompanyLevel) GetCompaniesCompanyIDMerchants(ctx context.Context, request operations.GetCompaniesCompanyIDMerchantsRequest, security operations.GetCompaniesCompanyIDMerchantsSecurity) (*operations.GetCompaniesCompanyIDMerchantsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/merchants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/merchants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

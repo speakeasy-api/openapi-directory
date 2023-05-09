@@ -16,17 +16,21 @@ const (
 	CopyBackupToRegionXAmzTargetEnumBaldrAPIServiceCopyBackupToRegion CopyBackupToRegionXAmzTargetEnum = "BaldrApiService.CopyBackupToRegion"
 )
 
+func (e CopyBackupToRegionXAmzTargetEnum) ToPointer() *CopyBackupToRegionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CopyBackupToRegionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BaldrApiService.CopyBackupToRegion":
-		*e = CopyBackupToRegionXAmzTargetEnum(s)
+		*e = CopyBackupToRegionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CopyBackupToRegionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CopyBackupToRegionXAmzTargetEnum: %v", v)
 	}
 }
 

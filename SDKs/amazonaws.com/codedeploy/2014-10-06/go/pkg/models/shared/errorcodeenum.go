@@ -46,12 +46,16 @@ const (
 	ErrorCodeEnumCloudformationStackFailure              ErrorCodeEnum = "CLOUDFORMATION_STACK_FAILURE"
 )
 
+func (e ErrorCodeEnum) ToPointer() *ErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGENT_ISSUE":
 		fallthrough
 	case "ALARM_ACTIVE":
@@ -119,9 +123,9 @@ func (e *ErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "TIMEOUT":
 		fallthrough
 	case "CLOUDFORMATION_STACK_FAILURE":
-		*e = ErrorCodeEnum(s)
+		*e = ErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorCodeEnum: %v", v)
 	}
 }

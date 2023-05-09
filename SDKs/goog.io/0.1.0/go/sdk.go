@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - # Intoduction
 //
 // This is the OpenAPI V3 documentation for https://api.goog.io
@@ -186,7 +201,10 @@ func New(opts ...SDKOption) *SDK {
 // json: a the html source of the results page
 func (s *SDK) Crawl(ctx context.Context, request operations.CrawlRequest) (*operations.CrawlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/crawl/{query}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/crawl/{query}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -298,7 +316,10 @@ func (s *SDK) GetTheStatusOfTheAPIService(ctx context.Context) (*operations.GetT
 // json: a list of results with the link, description, and title for each result
 func (s *SDK) Images(ctx context.Context, request operations.ImagesRequest) (*operations.ImagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/images/{query}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/images/{query}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -362,7 +383,10 @@ func (s *SDK) Images(ctx context.Context, request operations.ImagesRequest) (*op
 // json: {"feed": { "title" : "trump" ...} , "entites": [ {"title" : "Trump doubles down on divisive messaging in speech to honor Independence Day - CNN", "links": []} ...]}
 func (s *SDK) News(ctx context.Context, request operations.NewsRequest) (*operations.NewsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/news/{query}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/news/{query}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -428,7 +452,10 @@ func (s *SDK) News(ctx context.Context, request operations.NewsRequest) (*operat
 // json: a list of results with the link, description, and title for each result
 func (s *SDK) Search(ctx context.Context, request operations.SearchRequest) (*operations.SearchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/search/{query}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/search/{query}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

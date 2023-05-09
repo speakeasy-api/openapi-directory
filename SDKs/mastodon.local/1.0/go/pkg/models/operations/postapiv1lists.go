@@ -22,21 +22,25 @@ const (
 	PostAPIV1ListsRequestBodyRepliesPolicyEnumNone     PostAPIV1ListsRequestBodyRepliesPolicyEnum = "none"
 )
 
+func (e PostAPIV1ListsRequestBodyRepliesPolicyEnum) ToPointer() *PostAPIV1ListsRequestBodyRepliesPolicyEnum {
+	return &e
+}
+
 func (e *PostAPIV1ListsRequestBodyRepliesPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "followed":
 		fallthrough
 	case "list":
 		fallthrough
 	case "none":
-		*e = PostAPIV1ListsRequestBodyRepliesPolicyEnum(s)
+		*e = PostAPIV1ListsRequestBodyRepliesPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAPIV1ListsRequestBodyRepliesPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAPIV1ListsRequestBodyRepliesPolicyEnum: %v", v)
 	}
 }
 

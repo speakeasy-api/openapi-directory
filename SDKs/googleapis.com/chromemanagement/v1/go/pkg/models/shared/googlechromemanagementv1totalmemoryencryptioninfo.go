@@ -17,12 +17,16 @@ const (
 	GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnumMemoryEncryptionAlgorithmAesXts256   GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnum = "MEMORY_ENCRYPTION_ALGORITHM_AES_XTS_256"
 )
 
+func (e GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnum) ToPointer() *GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEMORY_ENCRYPTION_ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "MEMORY_ENCRYPTION_ALGORITHM_UNKNOWN":
@@ -30,10 +34,10 @@ func (e *GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnu
 	case "MEMORY_ENCRYPTION_ALGORITHM_AES_XTS_128":
 		fallthrough
 	case "MEMORY_ENCRYPTION_ALGORITHM_AES_XTS_256":
-		*e = GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnum(s)
+		*e = GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionAlgorithmEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnumMemoryEncryptionStateMktme       GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum = "MEMORY_ENCRYPTION_STATE_MKTME"
 )
 
+func (e GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum) ToPointer() *GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEMORY_ENCRYPTION_STATE_UNSPECIFIED":
 		fallthrough
 	case "MEMORY_ENCRYPTION_STATE_UNKNOWN":
@@ -63,10 +71,10 @@ func (e *GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum) U
 	case "MEMORY_ENCRYPTION_STATE_TME":
 		fallthrough
 	case "MEMORY_ENCRYPTION_STATE_MKTME":
-		*e = GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum(s)
+		*e = GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1TotalMemoryEncryptionInfoEncryptionStateEnum: %v", v)
 	}
 }
 

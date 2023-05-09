@@ -18,12 +18,16 @@ const (
 	CustomBiddingModelReadinessStateReadinessStateEnumReadinessStateNoValidScript    CustomBiddingModelReadinessStateReadinessStateEnum = "READINESS_STATE_NO_VALID_SCRIPT"
 )
 
+func (e CustomBiddingModelReadinessStateReadinessStateEnum) ToPointer() *CustomBiddingModelReadinessStateReadinessStateEnum {
+	return &e
+}
+
 func (e *CustomBiddingModelReadinessStateReadinessStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READINESS_STATE_UNSPECIFIED":
 		fallthrough
 	case "READINESS_STATE_ACTIVE":
@@ -33,10 +37,10 @@ func (e *CustomBiddingModelReadinessStateReadinessStateEnum) UnmarshalJSON(data 
 	case "READINESS_STATE_TRAINING":
 		fallthrough
 	case "READINESS_STATE_NO_VALID_SCRIPT":
-		*e = CustomBiddingModelReadinessStateReadinessStateEnum(s)
+		*e = CustomBiddingModelReadinessStateReadinessStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomBiddingModelReadinessStateReadinessStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomBiddingModelReadinessStateReadinessStateEnum: %v", v)
 	}
 }
 

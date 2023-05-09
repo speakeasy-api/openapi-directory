@@ -15,21 +15,25 @@ const (
 	LogoTypeEnumScreenshot LogoTypeEnum = "SCREENSHOT"
 )
 
+func (e LogoTypeEnum) ToPointer() *LogoTypeEnum {
+	return &e
+}
+
 func (e *LogoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOGO":
 		fallthrough
 	case "BANNER":
 		fallthrough
 	case "SCREENSHOT":
-		*e = LogoTypeEnum(s)
+		*e = LogoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LogoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LogoTypeEnum: %v", v)
 	}
 }
 

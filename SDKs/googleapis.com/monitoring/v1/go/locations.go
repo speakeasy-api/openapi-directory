@@ -83,7 +83,10 @@ func (s *locations) MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMon
 // MonitoringLocationsGlobalMetricsScopesProjectsCreate - Adds a MonitoredProject with the given project ID to the specified Metrics Scope.
 func (s *locations) MonitoringLocationsGlobalMetricsScopesProjectsCreate(ctx context.Context, request operations.MonitoringLocationsGlobalMetricsScopesProjectsCreateRequest, security operations.MonitoringLocationsGlobalMetricsScopesProjectsCreateSecurity) (*operations.MonitoringLocationsGlobalMetricsScopesProjectsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MonitoredProjectInput", "json")
 	if err != nil {

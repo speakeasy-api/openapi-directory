@@ -22,12 +22,16 @@ const (
 	RevocationDetailsRevocationStateEnumAttributeAuthorityCompromise   RevocationDetailsRevocationStateEnum = "ATTRIBUTE_AUTHORITY_COMPROMISE"
 )
 
+func (e RevocationDetailsRevocationStateEnum) ToPointer() *RevocationDetailsRevocationStateEnum {
+	return &e
+}
+
 func (e *RevocationDetailsRevocationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVOCATION_REASON_UNSPECIFIED":
 		fallthrough
 	case "KEY_COMPROMISE":
@@ -45,10 +49,10 @@ func (e *RevocationDetailsRevocationStateEnum) UnmarshalJSON(data []byte) error 
 	case "PRIVILEGE_WITHDRAWN":
 		fallthrough
 	case "ATTRIBUTE_AUTHORITY_COMPROMISE":
-		*e = RevocationDetailsRevocationStateEnum(s)
+		*e = RevocationDetailsRevocationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RevocationDetailsRevocationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RevocationDetailsRevocationStateEnum: %v", v)
 	}
 }
 

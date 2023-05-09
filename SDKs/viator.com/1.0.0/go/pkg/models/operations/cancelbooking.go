@@ -28,17 +28,21 @@ const (
 	CancelBooking404ApplicationJSONCodeEnumNotFound CancelBooking404ApplicationJSONCodeEnum = "NOT_FOUND"
 )
 
+func (e CancelBooking404ApplicationJSONCodeEnum) ToPointer() *CancelBooking404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *CancelBooking404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_FOUND":
-		*e = CancelBooking404ApplicationJSONCodeEnum(s)
+		*e = CancelBooking404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelBooking404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelBooking404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -49,17 +53,21 @@ const (
 	CancelBooking404ApplicationJSONMessageEnumBookingNotFound CancelBooking404ApplicationJSONMessageEnum = "Booking not found"
 )
 
+func (e CancelBooking404ApplicationJSONMessageEnum) ToPointer() *CancelBooking404ApplicationJSONMessageEnum {
+	return &e
+}
+
 func (e *CancelBooking404ApplicationJSONMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Booking not found":
-		*e = CancelBooking404ApplicationJSONMessageEnum(s)
+		*e = CancelBooking404ApplicationJSONMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelBooking404ApplicationJSONMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelBooking404ApplicationJSONMessageEnum: %v", v)
 	}
 }
 
@@ -80,17 +88,21 @@ const (
 	CancelBooking400ApplicationJSONCodeEnumBadRequest CancelBooking400ApplicationJSONCodeEnum = "BAD_REQUEST"
 )
 
+func (e CancelBooking400ApplicationJSONCodeEnum) ToPointer() *CancelBooking400ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *CancelBooking400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BAD_REQUEST":
-		*e = CancelBooking400ApplicationJSONCodeEnum(s)
+		*e = CancelBooking400ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelBooking400ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelBooking400ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -100,17 +112,21 @@ const (
 	CancelBooking400ApplicationJSONMessageEnumMissingCancellationReason CancelBooking400ApplicationJSONMessageEnum = "Missing cancellation reason"
 )
 
+func (e CancelBooking400ApplicationJSONMessageEnum) ToPointer() *CancelBooking400ApplicationJSONMessageEnum {
+	return &e
+}
+
 func (e *CancelBooking400ApplicationJSONMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Missing cancellation reason":
-		*e = CancelBooking400ApplicationJSONMessageEnum(s)
+		*e = CancelBooking400ApplicationJSONMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelBooking400ApplicationJSONMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelBooking400ApplicationJSONMessageEnum: %v", v)
 	}
 }
 

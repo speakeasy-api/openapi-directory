@@ -35,7 +35,10 @@ func newChargeStations(defaultClient, securityClient HTTPClient, serverURL, lang
 // DeleteChargeStation - Use to delete a charge station
 func (s *chargeStations) DeleteChargeStation(ctx context.Context, request operations.DeleteChargeStationRequest) (*operations.DeleteChargeStationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -72,7 +75,10 @@ func (s *chargeStations) DeleteChargeStation(ctx context.Context, request operat
 // GetChargeStation - Get a single charge station's data
 func (s *chargeStations) GetChargeStation(ctx context.Context, request operations.GetChargeStationRequest) (*operations.GetChargeStationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -111,7 +117,10 @@ func (s *chargeStations) GetChargeStation(ctx context.Context, request operation
 // GetChargeStationConnectors - List connectors for a chargestation
 func (s *chargeStations) GetChargeStationConnectors(ctx context.Context, request operations.GetChargeStationConnectorsRequest) (*operations.GetChargeStationConnectorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}/connectors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}/connectors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +200,10 @@ func (s *chargeStations) GetChargeStations(ctx context.Context, request operatio
 // PatchChargeStation - Update a charge station's data
 func (s *chargeStations) PatchChargeStation(ctx context.Context, request operations.PatchChargeStationRequest) (*operations.PatchChargeStationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/chargestations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Schema1", "json")
 	if err != nil {

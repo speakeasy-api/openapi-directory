@@ -34,7 +34,10 @@ func newGeneratedapks(defaultClient, securityClient HTTPClient, serverURL, langu
 // AndroidpublisherGeneratedapksDownload - Downloads a single signed APK generated from an app bundle.
 func (s *generatedapks) AndroidpublisherGeneratedapksDownload(ctx context.Context, request operations.AndroidpublisherGeneratedapksDownloadRequest, security operations.AndroidpublisherGeneratedapksDownloadSecurity) (*operations.AndroidpublisherGeneratedapksDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/generatedApks/{versionCode}/downloads/{downloadId}:download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/generatedApks/{versionCode}/downloads/{downloadId}:download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *generatedapks) AndroidpublisherGeneratedapksDownload(ctx context.Contex
 // AndroidpublisherGeneratedapksList - Returns download metadata for all APKs that were generated from a given app bundle.
 func (s *generatedapks) AndroidpublisherGeneratedapksList(ctx context.Context, request operations.AndroidpublisherGeneratedapksListRequest, security operations.AndroidpublisherGeneratedapksListSecurity) (*operations.AndroidpublisherGeneratedapksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/generatedApks/{versionCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/generatedApks/{versionCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,33 +16,37 @@ const (
 	GceRegionalPersistentDiskReclaimPolicyEnumRetain                   GceRegionalPersistentDiskReclaimPolicyEnum = "RETAIN"
 )
 
+func (e GceRegionalPersistentDiskReclaimPolicyEnum) ToPointer() *GceRegionalPersistentDiskReclaimPolicyEnum {
+	return &e
+}
+
 func (e *GceRegionalPersistentDiskReclaimPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECLAIM_POLICY_UNSPECIFIED":
 		fallthrough
 	case "DELETE":
 		fallthrough
 	case "RETAIN":
-		*e = GceRegionalPersistentDiskReclaimPolicyEnum(s)
+		*e = GceRegionalPersistentDiskReclaimPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GceRegionalPersistentDiskReclaimPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for GceRegionalPersistentDiskReclaimPolicyEnum: %v", v)
 	}
 }
 
 // GceRegionalPersistentDisk - A PersistentDirectory backed by a Compute Engine regional persistent disk.
 type GceRegionalPersistentDisk struct {
-	// Type of the disk to use.
+	// Type of the disk to use. Defaults to pd-standard.
 	DiskType *string `json:"diskType,omitempty"`
-	// Type of file system that the disk should be formatted with. The workstation image must support this file system type. Must be empty if source_snapshot is set.
+	// Type of file system that the disk should be formatted with. The workstation image must support this file system type. Must be empty if source_snapshot is set. Defaults to ext4.
 	FsType *string `json:"fsType,omitempty"`
 	// What should happen to the disk after the workstation is deleted. Defaults to DELETE.
 	ReclaimPolicy *GceRegionalPersistentDiskReclaimPolicyEnum `json:"reclaimPolicy,omitempty"`
-	// Size of the disk in GB. Must be empty if source_snapshot is set.
+	// Size of the disk in GB. Must be empty if source_snapshot is set. Defaults to 200.
 	SizeGb *int `json:"sizeGb,omitempty"`
 	// Name of the snapshot to use as the source for the disk. If set, size_gb and fs_type must be empty.
 	SourceSnapshot *string `json:"sourceSnapshot,omitempty"`

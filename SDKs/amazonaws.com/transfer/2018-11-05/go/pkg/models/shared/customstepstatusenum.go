@@ -14,18 +14,22 @@ const (
 	CustomStepStatusEnumFailure CustomStepStatusEnum = "FAILURE"
 )
 
+func (e CustomStepStatusEnum) ToPointer() *CustomStepStatusEnum {
+	return &e
+}
+
 func (e *CustomStepStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESS":
 		fallthrough
 	case "FAILURE":
-		*e = CustomStepStatusEnum(s)
+		*e = CustomStepStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomStepStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomStepStatusEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	DescribePullRequestEventsXAmzTargetEnumCodeCommit20150413DescribePullRequestEvents DescribePullRequestEventsXAmzTargetEnum = "CodeCommit_20150413.DescribePullRequestEvents"
 )
 
+func (e DescribePullRequestEventsXAmzTargetEnum) ToPointer() *DescribePullRequestEventsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribePullRequestEventsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.DescribePullRequestEvents":
-		*e = DescribePullRequestEventsXAmzTargetEnum(s)
+		*e = DescribePullRequestEventsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribePullRequestEventsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribePullRequestEventsXAmzTargetEnum: %v", v)
 	}
 }
 

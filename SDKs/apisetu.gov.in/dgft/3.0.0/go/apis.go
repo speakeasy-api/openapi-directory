@@ -34,7 +34,10 @@ func newAPIs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Description of Importer-Exporter Code (IEC) Verification API.
 func (s *apIs) ImporterExporterCodeVerificationAPI(ctx context.Context, request operations.ImporterExporterCodeVerificationAPIRequest, security operations.ImporterExporterCodeVerificationAPISecurity) (*operations.ImporterExporterCodeVerificationAPIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/iec/{iec}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/iec/{iec}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

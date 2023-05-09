@@ -13,16 +13,20 @@ const (
 	MedicalContentIdentificationTypeEnumPhi MedicalContentIdentificationTypeEnum = "PHI"
 )
 
+func (e MedicalContentIdentificationTypeEnum) ToPointer() *MedicalContentIdentificationTypeEnum {
+	return &e
+}
+
 func (e *MedicalContentIdentificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PHI":
-		*e = MedicalContentIdentificationTypeEnum(s)
+		*e = MedicalContentIdentificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MedicalContentIdentificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MedicalContentIdentificationTypeEnum: %v", v)
 	}
 }

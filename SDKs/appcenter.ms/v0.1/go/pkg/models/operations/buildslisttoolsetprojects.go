@@ -22,12 +22,16 @@ const (
 	BuildsListToolsetProjectsOsEnumMacOs   BuildsListToolsetProjectsOsEnum = "macOS"
 )
 
+func (e BuildsListToolsetProjectsOsEnum) ToPointer() *BuildsListToolsetProjectsOsEnum {
+	return &e
+}
+
 func (e *BuildsListToolsetProjectsOsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iOS":
 		fallthrough
 	case "Android":
@@ -35,10 +39,10 @@ func (e *BuildsListToolsetProjectsOsEnum) UnmarshalJSON(data []byte) error {
 	case "Windows":
 		fallthrough
 	case "macOS":
-		*e = BuildsListToolsetProjectsOsEnum(s)
+		*e = BuildsListToolsetProjectsOsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuildsListToolsetProjectsOsEnum: %s", s)
+		return fmt.Errorf("invalid value for BuildsListToolsetProjectsOsEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	BuildsListToolsetProjectsPlatformEnumUwp             BuildsListToolsetProjectsPlatformEnum = "UWP"
 )
 
+func (e BuildsListToolsetProjectsPlatformEnum) ToPointer() *BuildsListToolsetProjectsPlatformEnum {
+	return &e
+}
+
 func (e *BuildsListToolsetProjectsPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Objective-C-Swift":
 		fallthrough
 	case "React-Native":
@@ -68,10 +76,10 @@ func (e *BuildsListToolsetProjectsPlatformEnum) UnmarshalJSON(data []byte) error
 	case "Java":
 		fallthrough
 	case "UWP":
-		*e = BuildsListToolsetProjectsPlatformEnum(s)
+		*e = BuildsListToolsetProjectsPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuildsListToolsetProjectsPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for BuildsListToolsetProjectsPlatformEnum: %v", v)
 	}
 }
 
@@ -155,12 +163,16 @@ const (
 	BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTypeEnumGenerated BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTypeEnum = "Generated"
 )
 
+func (e BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTypeEnum) ToPointer() *BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTypeEnum {
+	return &e
+}
+
 func (e *BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Appium":
 		fallthrough
 	case "Calabash":
@@ -170,10 +182,10 @@ func (e *BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTy
 	case "UITest":
 		fallthrough
 	case "Generated":
-		*e = BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTypeEnum(s)
+		*e = BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BuildsListToolsetProjects200ApplicationJSONTestcloudProjectsFrameworkTypeEnum: %v", v)
 	}
 }
 

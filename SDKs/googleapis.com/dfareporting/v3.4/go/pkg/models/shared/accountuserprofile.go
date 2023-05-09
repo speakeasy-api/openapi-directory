@@ -16,21 +16,25 @@ const (
 	AccountUserProfileTraffickerTypeEnumExternalTrafficker    AccountUserProfileTraffickerTypeEnum = "EXTERNAL_TRAFFICKER"
 )
 
+func (e AccountUserProfileTraffickerTypeEnum) ToPointer() *AccountUserProfileTraffickerTypeEnum {
+	return &e
+}
+
 func (e *AccountUserProfileTraffickerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_NON_TRAFFICKER":
 		fallthrough
 	case "INTERNAL_TRAFFICKER":
 		fallthrough
 	case "EXTERNAL_TRAFFICKER":
-		*e = AccountUserProfileTraffickerTypeEnum(s)
+		*e = AccountUserProfileTraffickerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountUserProfileTraffickerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountUserProfileTraffickerTypeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	AccountUserProfileUserAccessTypeEnumReadOnlySuperUser     AccountUserProfileUserAccessTypeEnum = "READ_ONLY_SUPER_USER"
 )
 
+func (e AccountUserProfileUserAccessTypeEnum) ToPointer() *AccountUserProfileUserAccessTypeEnum {
+	return &e
+}
+
 func (e *AccountUserProfileUserAccessTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NORMAL_USER":
 		fallthrough
 	case "SUPER_USER":
@@ -57,10 +65,10 @@ func (e *AccountUserProfileUserAccessTypeEnum) UnmarshalJSON(data []byte) error 
 	case "INTERNAL_ADMINISTRATOR":
 		fallthrough
 	case "READ_ONLY_SUPER_USER":
-		*e = AccountUserProfileUserAccessTypeEnum(s)
+		*e = AccountUserProfileUserAccessTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountUserProfileUserAccessTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountUserProfileUserAccessTypeEnum: %v", v)
 	}
 }
 

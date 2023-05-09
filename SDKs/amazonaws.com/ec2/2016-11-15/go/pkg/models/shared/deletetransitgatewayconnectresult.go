@@ -15,17 +15,21 @@ const (
 	DeleteTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnumGre DeleteTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum = "gre"
 )
 
+func (e DeleteTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum) ToPointer() *DeleteTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gre":
-		*e = DeleteTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum(s)
+		*e = DeleteTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayConnectResultTransitGatewayConnectOptionsProtocolEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	DeleteTransitGatewayConnectResultTransitGatewayConnectStateEnumFailing           DeleteTransitGatewayConnectResultTransitGatewayConnectStateEnum = "failing"
 )
 
+func (e DeleteTransitGatewayConnectResultTransitGatewayConnectStateEnum) ToPointer() *DeleteTransitGatewayConnectResultTransitGatewayConnectStateEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayConnectResultTransitGatewayConnectStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "initiating":
 		fallthrough
 	case "initiatingRequest":
@@ -84,10 +92,10 @@ func (e *DeleteTransitGatewayConnectResultTransitGatewayConnectStateEnum) Unmars
 	case "rejecting":
 		fallthrough
 	case "failing":
-		*e = DeleteTransitGatewayConnectResultTransitGatewayConnectStateEnum(s)
+		*e = DeleteTransitGatewayConnectResultTransitGatewayConnectStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayConnectResultTransitGatewayConnectStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayConnectResultTransitGatewayConnectStateEnum: %v", v)
 	}
 }
 

@@ -14,17 +14,21 @@ const (
 	CZLocalAccountIdentificationTypeEnumCzLocal CZLocalAccountIdentificationTypeEnum = "czLocal"
 )
 
+func (e CZLocalAccountIdentificationTypeEnum) ToPointer() *CZLocalAccountIdentificationTypeEnum {
+	return &e
+}
+
 func (e *CZLocalAccountIdentificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "czLocal":
-		*e = CZLocalAccountIdentificationTypeEnum(s)
+		*e = CZLocalAccountIdentificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CZLocalAccountIdentificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CZLocalAccountIdentificationTypeEnum: %v", v)
 	}
 }
 

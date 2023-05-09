@@ -20,12 +20,16 @@ const (
 	RegionalTaxRateInfoStreamingTaxTypeEnumStreamingTaxTypeTelcoAudioMultiChannel RegionalTaxRateInfoStreamingTaxTypeEnum = "STREAMING_TAX_TYPE_TELCO_AUDIO_MULTI_CHANNEL"
 )
 
+func (e RegionalTaxRateInfoStreamingTaxTypeEnum) ToPointer() *RegionalTaxRateInfoStreamingTaxTypeEnum {
+	return &e
+}
+
 func (e *RegionalTaxRateInfoStreamingTaxTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STREAMING_TAX_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STREAMING_TAX_TYPE_TELCO_VIDEO_RENTAL":
@@ -39,10 +43,10 @@ func (e *RegionalTaxRateInfoStreamingTaxTypeEnum) UnmarshalJSON(data []byte) err
 	case "STREAMING_TAX_TYPE_TELCO_AUDIO_SALES":
 		fallthrough
 	case "STREAMING_TAX_TYPE_TELCO_AUDIO_MULTI_CHANNEL":
-		*e = RegionalTaxRateInfoStreamingTaxTypeEnum(s)
+		*e = RegionalTaxRateInfoStreamingTaxTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegionalTaxRateInfoStreamingTaxTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RegionalTaxRateInfoStreamingTaxTypeEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	RegionalTaxRateInfoTaxTierEnumTaxTierLiveOrBroadcast1 RegionalTaxRateInfoTaxTierEnum = "TAX_TIER_LIVE_OR_BROADCAST_1"
 )
 
+func (e RegionalTaxRateInfoTaxTierEnum) ToPointer() *RegionalTaxRateInfoTaxTierEnum {
+	return &e
+}
+
 func (e *RegionalTaxRateInfoTaxTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TAX_TIER_UNSPECIFIED":
 		fallthrough
 	case "TAX_TIER_BOOKS_1":
@@ -75,10 +83,10 @@ func (e *RegionalTaxRateInfoTaxTierEnum) UnmarshalJSON(data []byte) error {
 	case "TAX_TIER_MUSIC_OR_AUDIO_1":
 		fallthrough
 	case "TAX_TIER_LIVE_OR_BROADCAST_1":
-		*e = RegionalTaxRateInfoTaxTierEnum(s)
+		*e = RegionalTaxRateInfoTaxTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegionalTaxRateInfoTaxTierEnum: %s", s)
+		return fmt.Errorf("invalid value for RegionalTaxRateInfoTaxTierEnum: %v", v)
 	}
 }
 

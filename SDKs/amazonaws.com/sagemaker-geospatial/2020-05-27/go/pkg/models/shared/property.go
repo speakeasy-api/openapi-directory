@@ -2,7 +2,7 @@
 
 package shared
 
-// Property - <p/>
+// Property - Represents a single searchable property to search on.
 type Property struct {
 	EoCloudCover          *EoCloudCoverInput          `json:"EoCloudCover,omitempty"`
 	LandsatCloudCoverLand *LandsatCloudCoverLandInput `json:"LandsatCloudCoverLand,omitempty"`

@@ -82,7 +82,10 @@ func (s *cards) Cards(ctx context.Context) (*operations.CardsResponse, error) {
 // Find a defined card thatusing its global id
 func (s *cards) FindPetsByTags(ctx context.Context, request operations.FindPetsByTagsRequest) (*operations.FindPetsByTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cards/{cardId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cards/{cardId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -123,9 +126,13 @@ func (s *cards) FindPetsByTags(ctx context.Context, request operations.FindPetsB
 
 	return res, nil
 }
+
 func (s *cards) GetSetsSetCardLocalID(ctx context.Context, request operations.GetSetsSetCardLocalIDRequest) (*operations.GetSetsSetCardLocalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sets/{set}/{cardLocalId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sets/{set}/{cardLocalId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

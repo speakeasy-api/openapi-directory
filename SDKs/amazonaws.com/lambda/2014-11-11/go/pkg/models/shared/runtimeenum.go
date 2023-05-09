@@ -13,16 +13,20 @@ const (
 	RuntimeEnumNodejs RuntimeEnum = "nodejs"
 )
 
+func (e RuntimeEnum) ToPointer() *RuntimeEnum {
+	return &e
+}
+
 func (e *RuntimeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nodejs":
-		*e = RuntimeEnum(s)
+		*e = RuntimeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuntimeEnum: %s", s)
+		return fmt.Errorf("invalid value for RuntimeEnum: %v", v)
 	}
 }

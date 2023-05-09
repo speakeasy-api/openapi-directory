@@ -18,12 +18,16 @@ const (
 	InstanceAttributeBlockDeviceMappingsEbsStatusEnumDetached  InstanceAttributeBlockDeviceMappingsEbsStatusEnum = "detached"
 )
 
+func (e InstanceAttributeBlockDeviceMappingsEbsStatusEnum) ToPointer() *InstanceAttributeBlockDeviceMappingsEbsStatusEnum {
+	return &e
+}
+
 func (e *InstanceAttributeBlockDeviceMappingsEbsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -31,10 +35,10 @@ func (e *InstanceAttributeBlockDeviceMappingsEbsStatusEnum) UnmarshalJSON(data [
 	case "detaching":
 		fallthrough
 	case "detached":
-		*e = InstanceAttributeBlockDeviceMappingsEbsStatusEnum(s)
+		*e = InstanceAttributeBlockDeviceMappingsEbsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceAttributeBlockDeviceMappingsEbsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceAttributeBlockDeviceMappingsEbsStatusEnum: %v", v)
 	}
 }
 
@@ -106,19 +110,23 @@ const (
 	InstanceAttributeProductCodesProductCodeTypeEnumMarketplace InstanceAttributeProductCodesProductCodeTypeEnum = "marketplace"
 )
 
+func (e InstanceAttributeProductCodesProductCodeTypeEnum) ToPointer() *InstanceAttributeProductCodesProductCodeTypeEnum {
+	return &e
+}
+
 func (e *InstanceAttributeProductCodesProductCodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "devpay":
 		fallthrough
 	case "marketplace":
-		*e = InstanceAttributeProductCodesProductCodeTypeEnum(s)
+		*e = InstanceAttributeProductCodesProductCodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceAttributeProductCodesProductCodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceAttributeProductCodesProductCodeTypeEnum: %v", v)
 	}
 }
 

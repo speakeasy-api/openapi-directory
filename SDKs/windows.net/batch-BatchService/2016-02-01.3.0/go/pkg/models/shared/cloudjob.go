@@ -21,12 +21,16 @@ const (
 	CloudJobPreviousStateEnumDeleting    CloudJobPreviousStateEnum = "deleting"
 )
 
+func (e CloudJobPreviousStateEnum) ToPointer() *CloudJobPreviousStateEnum {
+	return &e
+}
+
 func (e *CloudJobPreviousStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "disabling":
@@ -40,10 +44,10 @@ func (e *CloudJobPreviousStateEnum) UnmarshalJSON(data []byte) error {
 	case "completed":
 		fallthrough
 	case "deleting":
-		*e = CloudJobPreviousStateEnum(s)
+		*e = CloudJobPreviousStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudJobPreviousStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudJobPreviousStateEnum: %v", v)
 	}
 }
 
@@ -60,12 +64,16 @@ const (
 	CloudJobStateEnumDeleting    CloudJobStateEnum = "deleting"
 )
 
+func (e CloudJobStateEnum) ToPointer() *CloudJobStateEnum {
+	return &e
+}
+
 func (e *CloudJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "disabling":
@@ -79,10 +87,10 @@ func (e *CloudJobStateEnum) UnmarshalJSON(data []byte) error {
 	case "completed":
 		fallthrough
 	case "deleting":
-		*e = CloudJobStateEnum(s)
+		*e = CloudJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudJobStateEnum: %v", v)
 	}
 }
 

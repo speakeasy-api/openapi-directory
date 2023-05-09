@@ -25,12 +25,16 @@ const (
 	GamesScoresGetIncludeRankTypeEnumFriends                    GamesScoresGetIncludeRankTypeEnum = "FRIENDS"
 )
 
+func (e GamesScoresGetIncludeRankTypeEnum) ToPointer() *GamesScoresGetIncludeRankTypeEnum {
+	return &e
+}
+
 func (e *GamesScoresGetIncludeRankTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INCLUDE_RANK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ALL":
@@ -40,10 +44,10 @@ func (e *GamesScoresGetIncludeRankTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SOCIAL":
 		fallthrough
 	case "FRIENDS":
-		*e = GamesScoresGetIncludeRankTypeEnum(s)
+		*e = GamesScoresGetIncludeRankTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GamesScoresGetIncludeRankTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GamesScoresGetIncludeRankTypeEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	GamesScoresGetTimeSpanEnumDaily                    GamesScoresGetTimeSpanEnum = "DAILY"
 )
 
+func (e GamesScoresGetTimeSpanEnum) ToPointer() *GamesScoresGetTimeSpanEnum {
+	return &e
+}
+
 func (e *GamesScoresGetTimeSpanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCORE_TIME_SPAN_UNSPECIFIED":
 		fallthrough
 	case "ALL":
@@ -73,10 +81,10 @@ func (e *GamesScoresGetTimeSpanEnum) UnmarshalJSON(data []byte) error {
 	case "WEEKLY":
 		fallthrough
 	case "DAILY":
-		*e = GamesScoresGetTimeSpanEnum(s)
+		*e = GamesScoresGetTimeSpanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GamesScoresGetTimeSpanEnum: %s", s)
+		return fmt.Errorf("invalid value for GamesScoresGetTimeSpanEnum: %v", v)
 	}
 }
 

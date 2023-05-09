@@ -14,16 +14,20 @@ const (
 	RequestTransferActionParamEnumTransfer RequestTransferActionParamEnum = "transfer"
 )
 
+func (e RequestTransferActionParamEnum) ToPointer() *RequestTransferActionParamEnum {
+	return &e
+}
+
 func (e *RequestTransferActionParamEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "transfer":
-		*e = RequestTransferActionParamEnum(s)
+		*e = RequestTransferActionParamEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestTransferActionParamEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestTransferActionParamEnum: %v", v)
 	}
 }

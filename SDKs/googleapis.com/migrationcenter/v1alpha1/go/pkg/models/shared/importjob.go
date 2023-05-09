@@ -21,12 +21,16 @@ const (
 	ImportJobStateEnumImportJobStateReady            ImportJobStateEnum = "IMPORT_JOB_STATE_READY"
 )
 
+func (e ImportJobStateEnum) ToPointer() *ImportJobStateEnum {
+	return &e
+}
+
 func (e *ImportJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORT_JOB_STATE_UNSPECIFIED":
 		fallthrough
 	case "IMPORT_JOB_STATE_PENDING":
@@ -42,10 +46,10 @@ func (e *ImportJobStateEnum) UnmarshalJSON(data []byte) error {
 	case "IMPORT_JOB_STATE_FAILED_VALIDATION":
 		fallthrough
 	case "IMPORT_JOB_STATE_READY":
-		*e = ImportJobStateEnum(s)
+		*e = ImportJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportJobStateEnum: %v", v)
 	}
 }
 

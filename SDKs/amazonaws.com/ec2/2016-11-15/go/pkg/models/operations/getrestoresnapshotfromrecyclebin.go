@@ -15,17 +15,21 @@ const (
 	GETRestoreSnapshotFromRecycleBinActionEnumRestoreSnapshotFromRecycleBin GETRestoreSnapshotFromRecycleBinActionEnum = "RestoreSnapshotFromRecycleBin"
 )
 
+func (e GETRestoreSnapshotFromRecycleBinActionEnum) ToPointer() *GETRestoreSnapshotFromRecycleBinActionEnum {
+	return &e
+}
+
 func (e *GETRestoreSnapshotFromRecycleBinActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RestoreSnapshotFromRecycleBin":
-		*e = GETRestoreSnapshotFromRecycleBinActionEnum(s)
+		*e = GETRestoreSnapshotFromRecycleBinActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestoreSnapshotFromRecycleBinActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestoreSnapshotFromRecycleBinActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRestoreSnapshotFromRecycleBinVersionEnumTwoThousandAndSixteen1115 GETRestoreSnapshotFromRecycleBinVersionEnum = "2016-11-15"
 )
 
+func (e GETRestoreSnapshotFromRecycleBinVersionEnum) ToPointer() *GETRestoreSnapshotFromRecycleBinVersionEnum {
+	return &e
+}
+
 func (e *GETRestoreSnapshotFromRecycleBinVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETRestoreSnapshotFromRecycleBinVersionEnum(s)
+		*e = GETRestoreSnapshotFromRecycleBinVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestoreSnapshotFromRecycleBinVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestoreSnapshotFromRecycleBinVersionEnum: %v", v)
 	}
 }
 

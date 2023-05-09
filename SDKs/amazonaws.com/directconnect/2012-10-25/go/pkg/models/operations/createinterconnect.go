@@ -16,17 +16,21 @@ const (
 	CreateInterconnectXAmzTargetEnumOvertureServiceCreateInterconnect CreateInterconnectXAmzTargetEnum = "OvertureService.CreateInterconnect"
 )
 
+func (e CreateInterconnectXAmzTargetEnum) ToPointer() *CreateInterconnectXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateInterconnectXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.CreateInterconnect":
-		*e = CreateInterconnectXAmzTargetEnum(s)
+		*e = CreateInterconnectXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInterconnectXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInterconnectXAmzTargetEnum: %v", v)
 	}
 }
 

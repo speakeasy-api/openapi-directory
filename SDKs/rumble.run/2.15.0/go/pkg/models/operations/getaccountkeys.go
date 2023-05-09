@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetAccountKeysSecurity struct {
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type GetAccountKeysResponse struct {
 	// array of keys
 	APIKeys     []shared.APIKey

@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type DeleteSecurity struct {
+	APIKeyAuth string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+}
+
 type DeleteResponse struct {
 	ContentType string
 	StatusCode  int

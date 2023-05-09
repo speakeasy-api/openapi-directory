@@ -86,6 +86,7 @@ func (s *codeReferences) PostV1CodeReferences(ctx context.Context, request share
 
 	return res, nil
 }
+
 func (s *codeReferences) PostV1CodeReferencesDeleteReports(ctx context.Context, request shared.DeleteRepositoryReportsRequest) (*operations.PostV1CodeReferencesDeleteReportsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/code-references/delete-reports"

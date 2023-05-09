@@ -32,19 +32,23 @@ const (
 	PostSpacesIDPersonsRequestBodySexEnumFemale PostSpacesIDPersonsRequestBodySexEnum = "female"
 )
 
+func (e PostSpacesIDPersonsRequestBodySexEnum) ToPointer() *PostSpacesIDPersonsRequestBodySexEnum {
+	return &e
+}
+
 func (e *PostSpacesIDPersonsRequestBodySexEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
-		*e = PostSpacesIDPersonsRequestBodySexEnum(s)
+		*e = PostSpacesIDPersonsRequestBodySexEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesIDPersonsRequestBodySexEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesIDPersonsRequestBodySexEnum: %v", v)
 	}
 }
 

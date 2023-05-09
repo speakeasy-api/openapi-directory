@@ -15,20 +15,24 @@ const (
 	WindowsDeploymentTypeEnumSingleAz2 WindowsDeploymentTypeEnum = "SINGLE_AZ_2"
 )
 
+func (e WindowsDeploymentTypeEnum) ToPointer() *WindowsDeploymentTypeEnum {
+	return &e
+}
+
 func (e *WindowsDeploymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MULTI_AZ_1":
 		fallthrough
 	case "SINGLE_AZ_1":
 		fallthrough
 	case "SINGLE_AZ_2":
-		*e = WindowsDeploymentTypeEnum(s)
+		*e = WindowsDeploymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WindowsDeploymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WindowsDeploymentTypeEnum: %v", v)
 	}
 }

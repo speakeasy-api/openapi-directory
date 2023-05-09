@@ -15,17 +15,21 @@ const (
 	POSTModifyInstanceCreditSpecificationActionEnumModifyInstanceCreditSpecification POSTModifyInstanceCreditSpecificationActionEnum = "ModifyInstanceCreditSpecification"
 )
 
+func (e POSTModifyInstanceCreditSpecificationActionEnum) ToPointer() *POSTModifyInstanceCreditSpecificationActionEnum {
+	return &e
+}
+
 func (e *POSTModifyInstanceCreditSpecificationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyInstanceCreditSpecification":
-		*e = POSTModifyInstanceCreditSpecificationActionEnum(s)
+		*e = POSTModifyInstanceCreditSpecificationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyInstanceCreditSpecificationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyInstanceCreditSpecificationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyInstanceCreditSpecificationVersionEnumTwoThousandAndSixteen1115 POSTModifyInstanceCreditSpecificationVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyInstanceCreditSpecificationVersionEnum) ToPointer() *POSTModifyInstanceCreditSpecificationVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyInstanceCreditSpecificationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyInstanceCreditSpecificationVersionEnum(s)
+		*e = POSTModifyInstanceCreditSpecificationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyInstanceCreditSpecificationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyInstanceCreditSpecificationVersionEnum: %v", v)
 	}
 }
 

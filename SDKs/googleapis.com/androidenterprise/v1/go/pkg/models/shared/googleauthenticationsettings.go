@@ -16,21 +16,25 @@ const (
 	GoogleAuthenticationSettingsDedicatedDevicesAllowedEnumAllowed                            GoogleAuthenticationSettingsDedicatedDevicesAllowedEnum = "allowed"
 )
 
+func (e GoogleAuthenticationSettingsDedicatedDevicesAllowedEnum) ToPointer() *GoogleAuthenticationSettingsDedicatedDevicesAllowedEnum {
+	return &e
+}
+
 func (e *GoogleAuthenticationSettingsDedicatedDevicesAllowedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dedicatedDevicesAllowedUnspecified":
 		fallthrough
 	case "disallowed":
 		fallthrough
 	case "allowed":
-		*e = GoogleAuthenticationSettingsDedicatedDevicesAllowedEnum(s)
+		*e = GoogleAuthenticationSettingsDedicatedDevicesAllowedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAuthenticationSettingsDedicatedDevicesAllowedEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAuthenticationSettingsDedicatedDevicesAllowedEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleAuthenticationSettingsGoogleAuthenticationRequiredEnumRequired                                GoogleAuthenticationSettingsGoogleAuthenticationRequiredEnum = "required"
 )
 
+func (e GoogleAuthenticationSettingsGoogleAuthenticationRequiredEnum) ToPointer() *GoogleAuthenticationSettingsGoogleAuthenticationRequiredEnum {
+	return &e
+}
+
 func (e *GoogleAuthenticationSettingsGoogleAuthenticationRequiredEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "googleAuthenticationRequiredUnspecified":
 		fallthrough
 	case "notRequired":
 		fallthrough
 	case "required":
-		*e = GoogleAuthenticationSettingsGoogleAuthenticationRequiredEnum(s)
+		*e = GoogleAuthenticationSettingsGoogleAuthenticationRequiredEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAuthenticationSettingsGoogleAuthenticationRequiredEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAuthenticationSettingsGoogleAuthenticationRequiredEnum: %v", v)
 	}
 }
 

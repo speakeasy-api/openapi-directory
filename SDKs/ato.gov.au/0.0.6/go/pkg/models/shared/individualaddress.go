@@ -17,21 +17,25 @@ const (
 	IndividualAddressAddressTypeEnumPrincipalPlaceOfResidence IndividualAddressAddressTypeEnum = "Principal Place of Residence"
 )
 
+func (e IndividualAddressAddressTypeEnum) ToPointer() *IndividualAddressAddressTypeEnum {
+	return &e
+}
+
 func (e *IndividualAddressAddressTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Mailing":
 		fallthrough
 	case "Principal Place of Business":
 		fallthrough
 	case "Principal Place of Residence":
-		*e = IndividualAddressAddressTypeEnum(s)
+		*e = IndividualAddressAddressTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IndividualAddressAddressTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IndividualAddressAddressTypeEnum: %v", v)
 	}
 }
 

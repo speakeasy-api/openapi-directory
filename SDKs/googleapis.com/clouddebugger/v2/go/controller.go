@@ -35,7 +35,10 @@ func newController(defaultClient, securityClient HTTPClient, serverURL, language
 // ClouddebuggerControllerDebuggeesBreakpointsList - Returns the list of all active breakpoints for the debuggee. The breakpoint specification (`location`, `condition`, and `expressions` fields) is semantically immutable, although the field values may change. For example, an agent may update the location line number to reflect the actual line where the breakpoint was set, but this doesn't change the breakpoint semantics. This means that an agent does not need to check if a breakpoint has changed when it encounters the same breakpoint on a successive call. Moreover, an agent should remember the breakpoints that are completed until the controller removes them from the active list to avoid setting those breakpoints again.
 func (s *controller) ClouddebuggerControllerDebuggeesBreakpointsList(ctx context.Context, request operations.ClouddebuggerControllerDebuggeesBreakpointsListRequest, security operations.ClouddebuggerControllerDebuggeesBreakpointsListSecurity) (*operations.ClouddebuggerControllerDebuggeesBreakpointsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/controller/debuggees/{debuggeeId}/breakpoints", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/controller/debuggees/{debuggeeId}/breakpoints", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *controller) ClouddebuggerControllerDebuggeesBreakpointsList(ctx context
 // ClouddebuggerControllerDebuggeesBreakpointsUpdate - Updates the breakpoint state or mutable fields. The entire Breakpoint message must be sent back to the controller service. Updates to active breakpoint fields are only allowed if the new value does not change the breakpoint specification. Updates to the `location`, `condition` and `expressions` fields should not alter the breakpoint semantics. These may only make changes such as canonicalizing a value or snapping the location to the correct line of code.
 func (s *controller) ClouddebuggerControllerDebuggeesBreakpointsUpdate(ctx context.Context, request operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateRequest, security operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateSecurity) (*operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/controller/debuggees/{debuggeeId}/breakpoints/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/controller/debuggees/{debuggeeId}/breakpoints/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateActiveBreakpointRequest", "json")
 	if err != nil {

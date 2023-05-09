@@ -15,20 +15,24 @@ const (
 	EcrScanFrequencyEnumContinuousScan EcrScanFrequencyEnum = "CONTINUOUS_SCAN"
 )
 
+func (e EcrScanFrequencyEnum) ToPointer() *EcrScanFrequencyEnum {
+	return &e
+}
+
 func (e *EcrScanFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANUAL":
 		fallthrough
 	case "SCAN_ON_PUSH":
 		fallthrough
 	case "CONTINUOUS_SCAN":
-		*e = EcrScanFrequencyEnum(s)
+		*e = EcrScanFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EcrScanFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for EcrScanFrequencyEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	BatchMeterUsageXAmzTargetEnumAwsmpMeteringServiceBatchMeterUsage BatchMeterUsageXAmzTargetEnum = "AWSMPMeteringService.BatchMeterUsage"
 )
 
+func (e BatchMeterUsageXAmzTargetEnum) ToPointer() *BatchMeterUsageXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchMeterUsageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMPMeteringService.BatchMeterUsage":
-		*e = BatchMeterUsageXAmzTargetEnum(s)
+		*e = BatchMeterUsageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchMeterUsageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchMeterUsageXAmzTargetEnum: %v", v)
 	}
 }
 

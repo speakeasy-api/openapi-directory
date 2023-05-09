@@ -84,19 +84,23 @@ const (
 	GetPotPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnumElectronicFundTransfer GetPotPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum = "electronic_fund_transfer"
 )
 
+func (e GetPotPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum) ToPointer() *GetPotPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum {
+	return &e
+}
+
 func (e *GetPotPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card":
 		fallthrough
 	case "electronic_fund_transfer":
-		*e = GetPotPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum(s)
+		*e = GetPotPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPotPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPotPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum: %v", v)
 	}
 }
 
@@ -107,19 +111,23 @@ const (
 	GetPotPayments200ApplicationJSONRootTypeForPaymentsPurposeEnumInvest GetPotPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum = "invest"
 )
 
+func (e GetPotPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum) ToPointer() *GetPotPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum {
+	return &e
+}
+
 func (e *GetPotPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cash":
 		fallthrough
 	case "invest":
-		*e = GetPotPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum(s)
+		*e = GetPotPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPotPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPotPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum: %v", v)
 	}
 }
 
@@ -131,21 +139,25 @@ const (
 	GetPotPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnumNone      GetPotPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum = "none"
 )
 
+func (e GetPotPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum) ToPointer() *GetPotPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum {
+	return &e
+}
+
 func (e *GetPotPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stripe":
 		fallthrough
 	case "truelayer":
 		fallthrough
 	case "none":
-		*e = GetPotPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum(s)
+		*e = GetPotPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPotPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPotPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum: %v", v)
 	}
 }
 
@@ -166,12 +178,16 @@ const (
 	GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnumFailed              GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnum = "failed"
 )
 
+func (e GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnum) ToPointer() *GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnum {
+	return &e
+}
+
 func (e *GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending_confirmation":
 		fallthrough
 	case "processing":
@@ -181,10 +197,10 @@ func (e *GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnum) Unmarsha
 	case "cancelled":
 		fallthrough
 	case "failed":
-		*e = GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnum(s)
+		*e = GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPotPayments200ApplicationJSONRootTypeForPaymentsStatusEnum: %v", v)
 	}
 }
 

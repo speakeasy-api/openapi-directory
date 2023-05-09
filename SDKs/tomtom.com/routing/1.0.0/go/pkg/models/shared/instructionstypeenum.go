@@ -16,20 +16,24 @@ const (
 	InstructionsTypeEnumTagged InstructionsTypeEnum = "tagged"
 )
 
+func (e InstructionsTypeEnum) ToPointer() *InstructionsTypeEnum {
+	return &e
+}
+
 func (e *InstructionsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "coded":
 		fallthrough
 	case "text":
 		fallthrough
 	case "tagged":
-		*e = InstructionsTypeEnum(s)
+		*e = InstructionsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstructionsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstructionsTypeEnum: %v", v)
 	}
 }

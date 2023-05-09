@@ -15,20 +15,24 @@ const (
 	NotebookInstanceLifecycleConfigSortKeyEnumLastModifiedTime NotebookInstanceLifecycleConfigSortKeyEnum = "LastModifiedTime"
 )
 
+func (e NotebookInstanceLifecycleConfigSortKeyEnum) ToPointer() *NotebookInstanceLifecycleConfigSortKeyEnum {
+	return &e
+}
+
 func (e *NotebookInstanceLifecycleConfigSortKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "CreationTime":
 		fallthrough
 	case "LastModifiedTime":
-		*e = NotebookInstanceLifecycleConfigSortKeyEnum(s)
+		*e = NotebookInstanceLifecycleConfigSortKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotebookInstanceLifecycleConfigSortKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for NotebookInstanceLifecycleConfigSortKeyEnum: %v", v)
 	}
 }

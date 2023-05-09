@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/application.v2/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -29,44 +29,45 @@ func main() {
         }),
     )
 
-    req := operations.CreateApplicationRequestBody{
+    ctx := context.Background()
+    res, err := s.CreateApplication(ctx, operations.CreateApplicationRequestBody{
         Capabilities: &shared.Capabilities{
             Meetings: &shared.MeetingsCapability{
                 Webhooks: &shared.MeetingsCapabilityWebhooks{
                     RecordingChanged: &shared.MeetingsCapabilityWebhooksRecordingChanged{
-                        Address: "https://example.com/webhooks/event",
-                        HTTPMethod: "POST",
+                        Address: sdk.String("https://example.com/webhooks/event"),
+                        HTTPMethod: shared.MeetingsCapabilityWebhooksRecordingChangedHTTPMethodEnumPost.ToPointer(),
                     },
                     RoomChanged: &shared.MeetingsCapabilityWebhooksRoomChanged{
-                        Address: "https://example.com/webhooks/event",
-                        HTTPMethod: "POST",
+                        Address: sdk.String("https://example.com/webhooks/event"),
+                        HTTPMethod: shared.MeetingsCapabilityWebhooksRoomChangedHTTPMethodEnumPost.ToPointer(),
                     },
                     SessionChanged: &shared.MeetingsCapabilityWebhooksSessionChanged{
-                        Address: "https://example.com/webhooks/event",
-                        HTTPMethod: "POST",
+                        Address: sdk.String("https://example.com/webhooks/event"),
+                        HTTPMethod: shared.MeetingsCapabilityWebhooksSessionChangedHTTPMethodEnumPost.ToPointer(),
                     },
                 },
             },
             Messages: &shared.MessagesCapability{
-                Version: "corrupti",
+                Version: sdk.String("corrupti"),
                 Webhooks: &shared.MessagesCapabilityWebhooks{
                     InboundURL: &shared.MessagesCapabilityWebhooksInboundURL{
-                        Address: "https://example.com/webhooks/inbound",
-                        HTTPMethod: "POST",
+                        Address: sdk.String("https://example.com/webhooks/inbound"),
+                        HTTPMethod: shared.MessagesCapabilityWebhooksInboundURLHTTPMethodEnumPost.ToPointer(),
                     },
                     StatusURL: &shared.MessagesCapabilityWebhooksStatusURL{
-                        Address: "https://example.com/webhooks/status",
-                        HTTPMethod: "POST",
+                        Address: sdk.String("https://example.com/webhooks/status"),
+                        HTTPMethod: shared.MessagesCapabilityWebhooksStatusURLHTTPMethodEnumPost.ToPointer(),
                     },
                 },
             },
             Rtc: &shared.RtcCapability{
-                LegPersistenceTime: 5,
-                SignedCallbacks: true,
+                LegPersistenceTime: sdk.Int(5),
+                SignedCallbacks: sdk.Bool(true),
                 Webhooks: &shared.RtcCapabilityWebhooks{
                     EventURL: &shared.RtcCapabilityWebhooksEventURL{
-                        Address: "https://example.com/webhooks/event",
-                        HTTPMethod: "POST",
+                        Address: sdk.String("https://example.com/webhooks/event"),
+                        HTTPMethod: shared.RtcCapabilityWebhooksEventURLHTTPMethodEnumPost.ToPointer(),
                     },
                 },
             },
@@ -76,55 +77,55 @@ func main() {
                 "corrupti": "illum",
             },
             Verify: &shared.VerifyCapability{
-                Version: "v2",
+                Version: shared.VerifyCapabilityVersionEnumV2.ToPointer(),
                 Webhooks: &shared.VerifyCapabilityWebhooks{
                     StatusURL: &shared.VerifyCapabilityWebhooksStatusURL{
-                        Address: "https://example.com/webhooks/event",
-                        HTTPMethod: "POST",
+                        Address: sdk.String("https://example.com/webhooks/event"),
+                        HTTPMethod: shared.VerifyCapabilityWebhooksStatusURLHTTPMethodEnumPost.ToPointer(),
                     },
                 },
             },
             Voice: &shared.VoiceCapability{
-                ConversationTTL: 30,
+                ConversationTTL: sdk.Int64(30),
                 Payments: &shared.VoiceCapabilityPayments{
                     Gateways: []shared.VoiceCapabilityPaymentsGateways{
                         shared.VoiceCapabilityPaymentsGateways{
-                            Credential: "26f2a89e-6fcd-11ed-a1eb-0242ac120002",
-                            Mode: "live",
-                            Type: "Stripe",
+                            Credential: sdk.String("26f2a89e-6fcd-11ed-a1eb-0242ac120002"),
+                            Mode: shared.VoiceCapabilityPaymentsGatewaysModeEnumLive.ToPointer(),
+                            Type: sdk.String("Stripe"),
                         },
                         shared.VoiceCapabilityPaymentsGateways{
-                            Credential: "26f2a89e-6fcd-11ed-a1eb-0242ac120002",
-                            Mode: "live",
-                            Type: "Stripe",
+                            Credential: sdk.String("26f2a89e-6fcd-11ed-a1eb-0242ac120002"),
+                            Mode: shared.VoiceCapabilityPaymentsGatewaysModeEnumLive.ToPointer(),
+                            Type: sdk.String("Stripe"),
                         },
                     },
                 },
-                SignedCallbacks: true,
+                SignedCallbacks: sdk.Bool(true),
                 Webhooks: &shared.VoiceCapabilityWebhooks{
                     AnswerURL: &shared.VoiceCapabilityWebhooksAnswerURL{
-                        Address: "https://example.com/webhooks/answer",
-                        ConnectionTimeout: 500,
-                        HTTPMethod: "POST",
-                        SocketTimeout: 3000,
+                        Address: sdk.String("https://example.com/webhooks/answer"),
+                        ConnectionTimeout: sdk.Int64(500),
+                        HTTPMethod: shared.VoiceCapabilityWebhooksAnswerURLHTTPMethodEnumPost.ToPointer(),
+                        SocketTimeout: sdk.Int64(3000),
                     },
                     EventURL: &shared.VoiceCapabilityWebhooksEventURL{
-                        Address: "https://example.com/webhooks/event",
-                        ConnectionTimeout: 500,
-                        HTTPMethod: "POST",
-                        SocketTimeout: 3000,
+                        Address: sdk.String("https://example.com/webhooks/event"),
+                        ConnectionTimeout: sdk.Int64(500),
+                        HTTPMethod: shared.VoiceCapabilityWebhooksEventURLHTTPMethodEnumPost.ToPointer(),
+                        SocketTimeout: sdk.Int64(3000),
                     },
                     FallbackAnswerURL: &shared.VoiceCapabilityWebhooksFallbackAnswerURL{
-                        Address: "https://fallback.example.com/webhooks/answer",
-                        ConnectionTimeout: 500,
-                        HTTPMethod: "POST",
-                        SocketTimeout: 3000,
+                        Address: sdk.String("https://fallback.example.com/webhooks/answer"),
+                        ConnectionTimeout: sdk.Int64(500),
+                        HTTPMethod: shared.VoiceCapabilityWebhooksFallbackAnswerURLHTTPMethodEnumPost.ToPointer(),
+                        SocketTimeout: sdk.Int64(3000),
                     },
                 },
             },
         },
         Keys: &operations.CreateApplicationRequestBodyKeys{
-            PublicKey: "-----BEGIN PUBLIC KEY-----
+            PublicKey: sdk.String("-----BEGIN PUBLIC KEY-----
         MIIBIjANBgkqhkiG9w0BAQEFAAOCA
         KOxjsU4pf/sMFi9N0jqcSLcjxu33G
         d/vynKnlw9SENi+UZR44GdjGdmfm1
@@ -133,16 +134,13 @@ func main() {
         OUNhPx2LhuLmgwWSRS4L5W851Xe3f
         UQIDAQAB
         -----END PUBLIC KEY-----
-        ",
+        "),
         },
         Name: "Demo Application",
         Privacy: &operations.CreateApplicationRequestBodyPrivacy{
-            ImproveAi: true,
+            ImproveAi: sdk.Bool(true),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateApplication(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -157,13 +155,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateApplication` - Create an application
-* `DeleteApplication` - Delete an application
-* `GetApplication` - Get an application
-* `ListApplication` - List available applications
-* `UpdateApplication` - Update an application
+* [CreateApplication](docs/sdk/README.md#createapplication) - Create an application
+* [DeleteApplication](docs/sdk/README.md#deleteapplication) - Delete an application
+* [GetApplication](docs/sdk/README.md#getapplication) - Get an application
+* [ListApplication](docs/sdk/README.md#listapplication) - List available applications
+* [UpdateApplication](docs/sdk/README.md#updateapplication) - Update an application
 <!-- End SDK Available Operations -->
 
 ### Maturity

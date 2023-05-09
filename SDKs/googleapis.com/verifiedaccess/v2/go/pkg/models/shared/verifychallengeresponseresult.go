@@ -18,12 +18,16 @@ const (
 	VerifyChallengeResponseResultKeyTrustLevelEnumChromeBrowserOsKey       VerifyChallengeResponseResultKeyTrustLevelEnum = "CHROME_BROWSER_OS_KEY"
 )
 
+func (e VerifyChallengeResponseResultKeyTrustLevelEnum) ToPointer() *VerifyChallengeResponseResultKeyTrustLevelEnum {
+	return &e
+}
+
 func (e *VerifyChallengeResponseResultKeyTrustLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KEY_TRUST_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "CHROME_OS_VERIFIED_MODE":
@@ -33,10 +37,10 @@ func (e *VerifyChallengeResponseResultKeyTrustLevelEnum) UnmarshalJSON(data []by
 	case "CHROME_BROWSER_HW_KEY":
 		fallthrough
 	case "CHROME_BROWSER_OS_KEY":
-		*e = VerifyChallengeResponseResultKeyTrustLevelEnum(s)
+		*e = VerifyChallengeResponseResultKeyTrustLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyChallengeResponseResultKeyTrustLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyChallengeResponseResultKeyTrustLevelEnum: %v", v)
 	}
 }
 
@@ -46,8 +50,10 @@ type VerifyChallengeResponseResult struct {
 	CustomerID *string `json:"customerId,omitempty"`
 	// Device permanent id is returned in this field (for the machine response only).
 	DevicePermanentID *string `json:"devicePermanentId,omitempty"`
-	// Device signal in json string representation.
+	// Deprecated. Device signal in json string representation. Prefer using `device_signals` instead.
 	DeviceSignal *string `json:"deviceSignal,omitempty"`
+	// The device signals as reported by Chrome.
+	DeviceSignals *DeviceSignals `json:"deviceSignals,omitempty"`
 	// Device attested key trust level.
 	KeyTrustLevel *VerifyChallengeResponseResultKeyTrustLevelEnum `json:"keyTrustLevel,omitempty"`
 	// Certificate Signing Request (in the SPKAC format, base64 encoded) is returned in this field. This field will be set only if device has included CSR in its challenge response. (the option to include CSR is now available for both user and machine responses)

@@ -24,19 +24,23 @@ const (
 	IterationClassificationTypeEnumMultilabel IterationClassificationTypeEnum = "Multilabel"
 )
 
+func (e IterationClassificationTypeEnum) ToPointer() *IterationClassificationTypeEnum {
+	return &e
+}
+
 func (e *IterationClassificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Multiclass":
 		fallthrough
 	case "Multilabel":
-		*e = IterationClassificationTypeEnum(s)
+		*e = IterationClassificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IterationClassificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IterationClassificationTypeEnum: %v", v)
 	}
 }
 

@@ -13,28 +13,26 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ljaero.com/dflight/V 1.0.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest{
+    ctx := context.Background()
+    res, err := s.Aerodromes.AerodromesByDistanceUsV1AerodromesDistanceQueryPost(ctx, operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest{
         AerodromesByDistance: shared.AerodromesByDistance{
             Distance: 592845,
             Latitude: 844266,
             Longitude: 857946,
         },
-        XAPIKey: "corrupti",
-    }
-
-    ctx := context.Background()
-    res, err := s.Aerodromes.AerodromesByDistanceUsV1AerodromesDistanceQueryPost(ctx, req)
+        XAPIKey: sdk.String("corrupti"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -50,53 +48,53 @@ func main() {
 ## Available Resources and Operations
 
 
-### Aerodromes
+### [Aerodromes](docs/aerodromes/README.md)
 
-* `AerodromesByDistanceUsV1AerodromesDistanceQueryPost` - Retrieve aerodromes within given distance of location.
-* `AerodromesByPolyUsV1AerodromesPolygonQueryPost` - Retrieve aerodromes located within given area.
-* `AerodromesByRouteUsV1AerodromesRouteQueryPost` - Retrieve aerodromes found along a route.
+* [AerodromesByDistanceUsV1AerodromesDistanceQueryPost](docs/aerodromes/README.md#aerodromesbydistanceusv1aerodromesdistancequerypost) - Retrieve aerodromes within given distance of location.
+* [AerodromesByPolyUsV1AerodromesPolygonQueryPost](docs/aerodromes/README.md#aerodromesbypolyusv1aerodromespolygonquerypost) - Retrieve aerodromes located within given area.
+* [AerodromesByRouteUsV1AerodromesRouteQueryPost](docs/aerodromes/README.md#aerodromesbyrouteusv1aerodromesroutequerypost) - Retrieve aerodromes found along a route.
 
-### Airspace
+### [Airspace](docs/airspace/README.md)
 
-* `AspByDistanceUsV1AirspaceDistanceQueryPost` - Retrieve all requested types of airspace located within given distance of location.
-* `AspByPolyUsV1AirspacePolygonQueryPost` - Retrieve all requested types of airspace located within given GeoJSON Polygon.
-* `AspByRouteUsV1AirspaceRouteQueryPost` - Retrieve all requested types of airspace traversed by route.
+* [AspByDistanceUsV1AirspaceDistanceQueryPost](docs/airspace/README.md#aspbydistanceusv1airspacedistancequerypost) - Retrieve all requested types of airspace located within given distance of location.
+* [AspByPolyUsV1AirspacePolygonQueryPost](docs/airspace/README.md#aspbypolyusv1airspacepolygonquerypost) - Retrieve all requested types of airspace located within given GeoJSON Polygon.
+* [AspByRouteUsV1AirspaceRouteQueryPost](docs/airspace/README.md#aspbyrouteusv1airspaceroutequerypost) - Retrieve all requested types of airspace traversed by route.
 
-### FlightRestrictions
+### [FlightRestrictions](docs/flightrestrictions/README.md)
 
-* `TfrByDistanceUsV1RestrictionsDistanceQueryPost` - Retrieve flight restrictions applicable within given distance of location.
-* `TfrByPolyUsV1RestrictionsPolygonQueryPost` - Retrieve flight restrictions applicable within given area.
-* `TfrByRouteUsV1RestrictionsRouteQueryPost` - Retrieve flight restrictions applicable along route.
+* [TfrByDistanceUsV1RestrictionsDistanceQueryPost](docs/flightrestrictions/README.md#tfrbydistanceusv1restrictionsdistancequerypost) - Retrieve flight restrictions applicable within given distance of location.
+* [TfrByPolyUsV1RestrictionsPolygonQueryPost](docs/flightrestrictions/README.md#tfrbypolyusv1restrictionspolygonquerypost) - Retrieve flight restrictions applicable within given area.
+* [TfrByRouteUsV1RestrictionsRouteQueryPost](docs/flightrestrictions/README.md#tfrbyrouteusv1restrictionsroutequerypost) - Retrieve flight restrictions applicable along route.
 
-### RestrictedPublicVenues
+### [RestrictedPublicVenues](docs/restrictedpublicvenues/README.md)
 
-* `VenByDistanceUsV1VenuesDistanceQueryPost` - Retrieve all restricted public venues located within given distance of location.
-* `VenByPolyUsV1VenuesPolygonQueryPost` - Retrieve all restricted public venues located within given GeoJSON Polygon.
-* `VenByRouteUsV1VenuesRouteQueryPost` - Retrieve all restricted public venues traversed by route.
+* [VenByDistanceUsV1VenuesDistanceQueryPost](docs/restrictedpublicvenues/README.md#venbydistanceusv1venuesdistancequerypost) - Retrieve all restricted public venues located within given distance of location.
+* [VenByPolyUsV1VenuesPolygonQueryPost](docs/restrictedpublicvenues/README.md#venbypolyusv1venuespolygonquerypost) - Retrieve all restricted public venues located within given GeoJSON Polygon.
+* [VenByRouteUsV1VenuesRouteQueryPost](docs/restrictedpublicvenues/README.md#venbyrouteusv1venuesroutequerypost) - Retrieve all restricted public venues traversed by route.
 
-### SpecialSecurityAreas
+### [SpecialSecurityAreas](docs/specialsecurityareas/README.md)
 
-* `SsaByDistanceUsV1SsaDistanceQueryPost` - Retrieve all special security areas located within given distance of location.
-* `SsaByPolyUsV1SsaPolygonQueryPost` - Retrieve all special security areas located within given GeoJSON Polygon.
-* `SsaByRouteUsV1SsaRouteQueryPost` - Retrieve all special security areas traversed by route.
+* [SsaByDistanceUsV1SsaDistanceQueryPost](docs/specialsecurityareas/README.md#ssabydistanceusv1ssadistancequerypost) - Retrieve all special security areas located within given distance of location.
+* [SsaByPolyUsV1SsaPolygonQueryPost](docs/specialsecurityareas/README.md#ssabypolyusv1ssapolygonquerypost) - Retrieve all special security areas located within given GeoJSON Polygon.
+* [SsaByRouteUsV1SsaRouteQueryPost](docs/specialsecurityareas/README.md#ssabyrouteusv1ssaroutequerypost) - Retrieve all special security areas traversed by route.
 
-### SurfaceObstacles
+### [SurfaceObstacles](docs/surfaceobstacles/README.md)
 
-* `ObstaclesByDistanceUsV1ObstaclesDistanceQueryPost` - Retrieve obstacles within given distance of location.
-* `ObstaclesByPolyUsV1ObstaclesPolygonQueryPost` - Retrieve obstacles located within given area.
-* `ObstaclesByRouteUsV1ObstaclesRouteQueryPost` - Retrieve obstacles found along a route.
+* [ObstaclesByDistanceUsV1ObstaclesDistanceQueryPost](docs/surfaceobstacles/README.md#obstaclesbydistanceusv1obstaclesdistancequerypost) - Retrieve obstacles within given distance of location.
+* [ObstaclesByPolyUsV1ObstaclesPolygonQueryPost](docs/surfaceobstacles/README.md#obstaclesbypolyusv1obstaclespolygonquerypost) - Retrieve obstacles located within given area.
+* [ObstaclesByRouteUsV1ObstaclesRouteQueryPost](docs/surfaceobstacles/README.md#obstaclesbyrouteusv1obstaclesroutequerypost) - Retrieve obstacles found along a route.
 
-### UASOperatingAreas
+### [UASOperatingAreas](docs/uasoperatingareas/README.md)
 
-* `UoaByDistanceUsV1UoaDistanceQueryPost` - Retrieve UAS Operating Areas (UOAs) found within given distance of location.
-* `UoaByPolyUsV1UoaPolygonQueryPost` - Retrieve UAS Operating Areas (UOAs) found within given area.
-* `UoaByRouteUsV1UoaRouteQueryPost` - Retrieve UAS Operating Areas (UOAs) found along route.
+* [UoaByDistanceUsV1UoaDistanceQueryPost](docs/uasoperatingareas/README.md#uoabydistanceusv1uoadistancequerypost) - Retrieve UAS Operating Areas (UOAs) found within given distance of location.
+* [UoaByPolyUsV1UoaPolygonQueryPost](docs/uasoperatingareas/README.md#uoabypolyusv1uoapolygonquerypost) - Retrieve UAS Operating Areas (UOAs) found within given area.
+* [UoaByRouteUsV1UoaRouteQueryPost](docs/uasoperatingareas/README.md#uoabyrouteusv1uoaroutequerypost) - Retrieve UAS Operating Areas (UOAs) found along route.
 
-### Weather
+### [Weather](docs/weather/README.md)
 
-* `WxByDistanceUsV1WxForecastDistanceQueryPost` - Retrieve forecast values within given distance of location for all requested weather elements and time periods.
-* `WxByPolyUsV1WxForecastPolygonQueryPost` - Retrieve forecast values within given GeoJSON polygon for all requested weather elements and time periods.
-* `WxByRouteUsV1WxForecastRouteQueryPost` - Retrieve forecast values along a route for all requested weather elements and time periods.
+* [WxByDistanceUsV1WxForecastDistanceQueryPost](docs/weather/README.md#wxbydistanceusv1wxforecastdistancequerypost) - Retrieve forecast values within given distance of location for all requested weather elements and time periods.
+* [WxByPolyUsV1WxForecastPolygonQueryPost](docs/weather/README.md#wxbypolyusv1wxforecastpolygonquerypost) - Retrieve forecast values within given GeoJSON polygon for all requested weather elements and time periods.
+* [WxByRouteUsV1WxForecastRouteQueryPost](docs/weather/README.md#wxbyrouteusv1wxforecastroutequerypost) - Retrieve forecast values along a route for all requested weather elements and time periods.
 <!-- End SDK Available Operations -->
 
 ### Maturity

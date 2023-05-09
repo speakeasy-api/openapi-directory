@@ -15,17 +15,21 @@ const (
 	POSTDescribeChangeSetHooksActionEnumDescribeChangeSetHooks POSTDescribeChangeSetHooksActionEnum = "DescribeChangeSetHooks"
 )
 
+func (e POSTDescribeChangeSetHooksActionEnum) ToPointer() *POSTDescribeChangeSetHooksActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeChangeSetHooksActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeChangeSetHooks":
-		*e = POSTDescribeChangeSetHooksActionEnum(s)
+		*e = POSTDescribeChangeSetHooksActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeChangeSetHooksActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeChangeSetHooksActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeChangeSetHooksVersionEnumTwoThousandAndTen0515 POSTDescribeChangeSetHooksVersionEnum = "2010-05-15"
 )
 
+func (e POSTDescribeChangeSetHooksVersionEnum) ToPointer() *POSTDescribeChangeSetHooksVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeChangeSetHooksVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTDescribeChangeSetHooksVersionEnum(s)
+		*e = POSTDescribeChangeSetHooksVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeChangeSetHooksVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeChangeSetHooksVersionEnum: %v", v)
 	}
 }
 

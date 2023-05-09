@@ -16,21 +16,25 @@ const (
 	EnrollmentTokenAllowPersonalUsageEnumPersonalUsageDisallowed       EnrollmentTokenAllowPersonalUsageEnum = "PERSONAL_USAGE_DISALLOWED"
 )
 
+func (e EnrollmentTokenAllowPersonalUsageEnum) ToPointer() *EnrollmentTokenAllowPersonalUsageEnum {
+	return &e
+}
+
 func (e *EnrollmentTokenAllowPersonalUsageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOW_PERSONAL_USAGE_UNSPECIFIED":
 		fallthrough
 	case "PERSONAL_USAGE_ALLOWED":
 		fallthrough
 	case "PERSONAL_USAGE_DISALLOWED":
-		*e = EnrollmentTokenAllowPersonalUsageEnum(s)
+		*e = EnrollmentTokenAllowPersonalUsageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnrollmentTokenAllowPersonalUsageEnum: %s", s)
+		return fmt.Errorf("invalid value for EnrollmentTokenAllowPersonalUsageEnum: %v", v)
 	}
 }
 

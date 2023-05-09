@@ -18,12 +18,16 @@ const (
 	PlanDataTypeOfPlanBasedOnTheSourceEnumDatasetDownload PlanDataTypeOfPlanBasedOnTheSourceEnum = "DATASET_DOWNLOAD"
 )
 
+func (e PlanDataTypeOfPlanBasedOnTheSourceEnum) ToPointer() *PlanDataTypeOfPlanBasedOnTheSourceEnum {
+	return &e
+}
+
 func (e *PlanDataTypeOfPlanBasedOnTheSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STARTER":
 		fallthrough
 	case "SFDC_1M_EDITION":
@@ -35,10 +39,10 @@ func (e *PlanDataTypeOfPlanBasedOnTheSourceEnum) UnmarshalJSON(data []byte) erro
 	case "GOLD":
 		fallthrough
 	case "DATASET_DOWNLOAD":
-		*e = PlanDataTypeOfPlanBasedOnTheSourceEnum(s)
+		*e = PlanDataTypeOfPlanBasedOnTheSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlanDataTypeOfPlanBasedOnTheSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for PlanDataTypeOfPlanBasedOnTheSourceEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	PlanDataServiceThatProvisionedThePlanEnumSfAutoProvisionBound PlanDataServiceThatProvisionedThePlanEnum = "SF_AUTO_PROVISION_BOUND"
 )
 
+func (e PlanDataServiceThatProvisionedThePlanEnum) ToPointer() *PlanDataServiceThatProvisionedThePlanEnum {
+	return &e
+}
+
 func (e *PlanDataServiceThatProvisionedThePlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SALESFORCE":
 		fallthrough
 	case "HEROKU":
@@ -64,10 +72,10 @@ func (e *PlanDataServiceThatProvisionedThePlanEnum) UnmarshalJSON(data []byte) e
 	case "SF_AUTO_PROVISION":
 		fallthrough
 	case "SF_AUTO_PROVISION_BOUND":
-		*e = PlanDataServiceThatProvisionedThePlanEnum(s)
+		*e = PlanDataServiceThatProvisionedThePlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlanDataServiceThatProvisionedThePlanEnum: %s", s)
+		return fmt.Errorf("invalid value for PlanDataServiceThatProvisionedThePlanEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	PlacementGroupPlacementGroupTypeEnumPlacementRoadblock PlacementGroupPlacementGroupTypeEnum = "PLACEMENT_ROADBLOCK"
 )
 
+func (e PlacementGroupPlacementGroupTypeEnum) ToPointer() *PlacementGroupPlacementGroupTypeEnum {
+	return &e
+}
+
 func (e *PlacementGroupPlacementGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACEMENT_PACKAGE":
 		fallthrough
 	case "PLACEMENT_ROADBLOCK":
-		*e = PlacementGroupPlacementGroupTypeEnum(s)
+		*e = PlacementGroupPlacementGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlacementGroupPlacementGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlacementGroupPlacementGroupTypeEnum: %v", v)
 	}
 }
 

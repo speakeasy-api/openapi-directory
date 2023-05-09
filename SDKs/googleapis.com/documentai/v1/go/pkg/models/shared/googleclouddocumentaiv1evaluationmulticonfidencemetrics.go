@@ -15,19 +15,23 @@ const (
 	GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetricsMetricsTypeEnumAggregate              GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetricsMetricsTypeEnum = "AGGREGATE"
 )
 
+func (e GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetricsMetricsTypeEnum) ToPointer() *GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetricsMetricsTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetricsMetricsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRICS_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AGGREGATE":
-		*e = GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetricsMetricsTypeEnum(s)
+		*e = GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetricsMetricsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetricsMetricsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetricsMetricsTypeEnum: %v", v)
 	}
 }
 

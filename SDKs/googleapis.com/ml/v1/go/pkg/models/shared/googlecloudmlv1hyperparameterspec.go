@@ -16,21 +16,25 @@ const (
 	GoogleCloudMlV1HyperparameterSpecAlgorithmEnumRandomSearch         GoogleCloudMlV1HyperparameterSpecAlgorithmEnum = "RANDOM_SEARCH"
 )
 
+func (e GoogleCloudMlV1HyperparameterSpecAlgorithmEnum) ToPointer() *GoogleCloudMlV1HyperparameterSpecAlgorithmEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1HyperparameterSpecAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "GRID_SEARCH":
 		fallthrough
 	case "RANDOM_SEARCH":
-		*e = GoogleCloudMlV1HyperparameterSpecAlgorithmEnum(s)
+		*e = GoogleCloudMlV1HyperparameterSpecAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1HyperparameterSpecAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1HyperparameterSpecAlgorithmEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudMlV1HyperparameterSpecGoalEnumMinimize            GoogleCloudMlV1HyperparameterSpecGoalEnum = "MINIMIZE"
 )
 
+func (e GoogleCloudMlV1HyperparameterSpecGoalEnum) ToPointer() *GoogleCloudMlV1HyperparameterSpecGoalEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1HyperparameterSpecGoalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GOAL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MAXIMIZE":
 		fallthrough
 	case "MINIMIZE":
-		*e = GoogleCloudMlV1HyperparameterSpecGoalEnum(s)
+		*e = GoogleCloudMlV1HyperparameterSpecGoalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1HyperparameterSpecGoalEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1HyperparameterSpecGoalEnum: %v", v)
 	}
 }
 

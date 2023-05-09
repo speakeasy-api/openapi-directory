@@ -17,19 +17,23 @@ const (
 	ReposListPublicVisibilityEnumPublic ReposListPublicVisibilityEnum = "public"
 )
 
+func (e ReposListPublicVisibilityEnum) ToPointer() *ReposListPublicVisibilityEnum {
+	return &e
+}
+
 func (e *ReposListPublicVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "public":
-		*e = ReposListPublicVisibilityEnum(s)
+		*e = ReposListPublicVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListPublicVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListPublicVisibilityEnum: %v", v)
 	}
 }
 

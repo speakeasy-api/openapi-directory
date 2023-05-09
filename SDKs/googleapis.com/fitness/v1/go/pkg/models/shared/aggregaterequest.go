@@ -22,12 +22,16 @@ const (
 	AggregateRequestFilteredDataQualityStandardEnumDataQualityBloodGlucoseIso151972013 AggregateRequestFilteredDataQualityStandardEnum = "dataQualityBloodGlucoseIso151972013"
 )
 
+func (e AggregateRequestFilteredDataQualityStandardEnum) ToPointer() *AggregateRequestFilteredDataQualityStandardEnum {
+	return &e
+}
+
 func (e *AggregateRequestFilteredDataQualityStandardEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dataQualityUnknown":
 		fallthrough
 	case "dataQualityBloodPressureEsh2002":
@@ -47,10 +51,10 @@ func (e *AggregateRequestFilteredDataQualityStandardEnum) UnmarshalJSON(data []b
 	case "dataQualityBloodGlucoseIso151972003":
 		fallthrough
 	case "dataQualityBloodGlucoseIso151972013":
-		*e = AggregateRequestFilteredDataQualityStandardEnum(s)
+		*e = AggregateRequestFilteredDataQualityStandardEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregateRequestFilteredDataQualityStandardEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregateRequestFilteredDataQualityStandardEnum: %v", v)
 	}
 }
 

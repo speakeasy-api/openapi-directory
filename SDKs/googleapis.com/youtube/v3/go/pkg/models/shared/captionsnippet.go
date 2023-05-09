@@ -18,12 +18,16 @@ const (
 	CaptionSnippetAudioTrackTypeEnumDescriptive CaptionSnippetAudioTrackTypeEnum = "descriptive"
 )
 
+func (e CaptionSnippetAudioTrackTypeEnum) ToPointer() *CaptionSnippetAudioTrackTypeEnum {
+	return &e
+}
+
 func (e *CaptionSnippetAudioTrackTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "primary":
@@ -31,10 +35,10 @@ func (e *CaptionSnippetAudioTrackTypeEnum) UnmarshalJSON(data []byte) error {
 	case "commentary":
 		fallthrough
 	case "descriptive":
-		*e = CaptionSnippetAudioTrackTypeEnum(s)
+		*e = CaptionSnippetAudioTrackTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CaptionSnippetAudioTrackTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CaptionSnippetAudioTrackTypeEnum: %v", v)
 	}
 }
 
@@ -47,21 +51,25 @@ const (
 	CaptionSnippetFailureReasonEnumProcessingFailed  CaptionSnippetFailureReasonEnum = "processingFailed"
 )
 
+func (e CaptionSnippetFailureReasonEnum) ToPointer() *CaptionSnippetFailureReasonEnum {
+	return &e
+}
+
 func (e *CaptionSnippetFailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknownFormat":
 		fallthrough
 	case "unsupportedFormat":
 		fallthrough
 	case "processingFailed":
-		*e = CaptionSnippetFailureReasonEnum(s)
+		*e = CaptionSnippetFailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CaptionSnippetFailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for CaptionSnippetFailureReasonEnum: %v", v)
 	}
 }
 
@@ -74,21 +82,25 @@ const (
 	CaptionSnippetStatusEnumFailed  CaptionSnippetStatusEnum = "failed"
 )
 
+func (e CaptionSnippetStatusEnum) ToPointer() *CaptionSnippetStatusEnum {
+	return &e
+}
+
 func (e *CaptionSnippetStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "serving":
 		fallthrough
 	case "syncing":
 		fallthrough
 	case "failed":
-		*e = CaptionSnippetStatusEnum(s)
+		*e = CaptionSnippetStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CaptionSnippetStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CaptionSnippetStatusEnum: %v", v)
 	}
 }
 
@@ -101,21 +113,25 @@ const (
 	CaptionSnippetTrackKindEnumForced   CaptionSnippetTrackKindEnum = "forced"
 )
 
+func (e CaptionSnippetTrackKindEnum) ToPointer() *CaptionSnippetTrackKindEnum {
+	return &e
+}
+
 func (e *CaptionSnippetTrackKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "ASR":
 		fallthrough
 	case "forced":
-		*e = CaptionSnippetTrackKindEnum(s)
+		*e = CaptionSnippetTrackKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CaptionSnippetTrackKindEnum: %s", s)
+		return fmt.Errorf("invalid value for CaptionSnippetTrackKindEnum: %v", v)
 	}
 }
 

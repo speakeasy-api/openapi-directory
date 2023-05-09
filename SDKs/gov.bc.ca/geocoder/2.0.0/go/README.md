@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/gov.bc.ca/geocoder/2.0.0/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,43 +27,41 @@ func main() {
         }),
     )
 
-    req := operations.GetAddressesOutputFormatRequest{
-        AddressString: "corrupti",
-        AutoComplete: false,
-        Bbox: "provident",
-        Brief: false,
-        Centre: "distinctio",
-        CivicNumber: "quibusdam",
-        CivicNumberSuffix: "unde",
-        Echo: false,
-        Extrapolate: false,
-        Interpolation: "none",
-        Localities: "corrupti",
-        LocalityName: "illum",
-        LocationDescriptor: "frontDoorPoint",
-        MatchPrecision: "error",
-        MatchPrecisionNot: "deserunt",
-        MaxDistance: 3843.82,
-        MaxResults: 437587,
-        MinScore: 297534,
-        NotLocalities: "debitis",
-        OutputFormat: "json",
-        OutputSRS: "26911",
-        ParcelPoint: "tempora",
-        ProvinceCode: "suscipit",
-        SetBack: 477665,
-        SiteName: "minus",
-        StreetDirection: "SE",
-        StreetName: "voluptatum",
-        StreetQualifier: "iusto",
-        StreetType: "excepturi",
-        UnitDesignator: "PAD",
-        UnitNumber: "recusandae",
-        UnitNumberSuffix: "temporibus",
-    }
-
     ctx := context.Background()
-    res, err := s.Intersections.GetAddressesOutputFormat(ctx, req)
+    res, err := s.Intersections.GetAddressesOutputFormat(ctx, operations.GetAddressesOutputFormatRequest{
+        AddressString: sdk.String("corrupti"),
+        AutoComplete: sdk.Bool(false),
+        Bbox: sdk.String("provident"),
+        Brief: sdk.Bool(false),
+        Centre: sdk.String("distinctio"),
+        CivicNumber: sdk.String("quibusdam"),
+        CivicNumberSuffix: sdk.String("unde"),
+        Echo: sdk.Bool(false),
+        Extrapolate: sdk.Bool(false),
+        Interpolation: operations.GetAddressesOutputFormatInterpolationEnumNone.ToPointer(),
+        Localities: sdk.String("corrupti"),
+        LocalityName: sdk.String("illum"),
+        LocationDescriptor: operations.GetAddressesOutputFormatLocationDescriptorEnumFrontDoorPoint.ToPointer(),
+        MatchPrecision: sdk.String("error"),
+        MatchPrecisionNot: sdk.String("deserunt"),
+        MaxDistance: sdk.Float64(3843.82),
+        MaxResults: sdk.Int64(437587),
+        MinScore: sdk.Int64(297534),
+        NotLocalities: sdk.String("debitis"),
+        OutputFormat: operations.GetAddressesOutputFormatOutputFormatEnumJSON,
+        OutputSRS: operations.GetAddressesOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven.ToPointer(),
+        ParcelPoint: sdk.String("tempora"),
+        ProvinceCode: sdk.String("suscipit"),
+        SetBack: sdk.Int64(477665),
+        SiteName: sdk.String("minus"),
+        StreetDirection: operations.GetAddressesOutputFormatStreetDirectionEnumSe.ToPointer(),
+        StreetName: sdk.String("voluptatum"),
+        StreetQualifier: sdk.String("iusto"),
+        StreetType: sdk.String("excepturi"),
+        UnitDesignator: operations.GetAddressesOutputFormatUnitDesignatorEnumPad.ToPointer(),
+        UnitNumber: sdk.String("recusandae"),
+        UnitNumberSuffix: sdk.String("temporibus"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -80,34 +77,34 @@ func main() {
 ## Available Resources and Operations
 
 
-### Intersections
+### [Intersections](docs/intersections/README.md)
 
-* `GetAddressesOutputFormat` - Geocode an address
-* `GetIntersectionsNearOutputFormat` - Find intersections near to a geographic point
-* `GetIntersectionsNearestOutputFormat` - Find nearest intersection to a geographic point
-* `GetIntersectionsWithinOutputFormat` - Find intersections in a geographic area
-* `GetIntersectionsIntersectionIDOutputFormat` - Get an intersection by its unique ID
+* [GetAddressesOutputFormat](docs/intersections/README.md#getaddressesoutputformat) - Geocode an address
+* [GetIntersectionsNearOutputFormat](docs/intersections/README.md#getintersectionsnearoutputformat) - Find intersections near to a geographic point
+* [GetIntersectionsNearestOutputFormat](docs/intersections/README.md#getintersectionsnearestoutputformat) - Find nearest intersection to a geographic point
+* [GetIntersectionsWithinOutputFormat](docs/intersections/README.md#getintersectionswithinoutputformat) - Find intersections in a geographic area
+* [GetIntersectionsIntersectionIDOutputFormat](docs/intersections/README.md#getintersectionsintersectionidoutputformat) - Get an intersection by its unique ID
 
-### Occupants
+### [Occupants](docs/occupants/README.md)
 
-* `GetOccupantsAddressesOutputFormat` - Geocode an address and identify site occupants
-* `GetOccupantsNearOutputFormat` - Find occupants of sites near to a geographic point
-* `GetOccupantsNearestOutputFormat` - Find occupants of the site nearest to a geographic point
-* `GetOccupantsWithinOutputFormat` - Find occupants of sites in a geographic area
-* `GetOccupantsOccupantIDOutputFormat` - Get an occupant (of a site) by its unique ID
+* [GetOccupantsAddressesOutputFormat](docs/occupants/README.md#getoccupantsaddressesoutputformat) - Geocode an address and identify site occupants
+* [GetOccupantsNearOutputFormat](docs/occupants/README.md#getoccupantsnearoutputformat) - Find occupants of sites near to a geographic point
+* [GetOccupantsNearestOutputFormat](docs/occupants/README.md#getoccupantsnearestoutputformat) - Find occupants of the site nearest to a geographic point
+* [GetOccupantsWithinOutputFormat](docs/occupants/README.md#getoccupantswithinoutputformat) - Find occupants of sites in a geographic area
+* [GetOccupantsOccupantIDOutputFormat](docs/occupants/README.md#getoccupantsoccupantidoutputformat) - Get an occupant (of a site) by its unique ID
 
-### Parcels
+### [Parcels](docs/parcels/README.md)
 
-* `GetParcelsPidsSiteIDOutputFormat` - Get a comma-separated string of all pids for a given site
+* [GetParcelsPidsSiteIDOutputFormat](docs/parcels/README.md#getparcelspidssiteidoutputformat) - Get a comma-separated string of all pids for a given site
 
-### Sites
+### [Sites](docs/sites/README.md)
 
-* `GetAddressesOutputFormat` - Geocode an address
-* `GetSitesNearOutputFormat` - Find sites near to a geographic point
-* `GetSitesNearestOutputFormat` - Find the site nearest to a geographic point
-* `GetSitesWithinOutputFormat` - Find sites in a geographic area
-* `GetSitesSiteIDOutputFormat` - Get a site by its unique ID
-* `GetSitesSiteIDSubsitesOutputFormat` - Represents all subsites of a given site
+* [GetAddressesOutputFormat](docs/sites/README.md#getaddressesoutputformat) - Geocode an address
+* [GetSitesNearOutputFormat](docs/sites/README.md#getsitesnearoutputformat) - Find sites near to a geographic point
+* [GetSitesNearestOutputFormat](docs/sites/README.md#getsitesnearestoutputformat) - Find the site nearest to a geographic point
+* [GetSitesWithinOutputFormat](docs/sites/README.md#getsiteswithinoutputformat) - Find sites in a geographic area
+* [GetSitesSiteIDOutputFormat](docs/sites/README.md#getsitessiteidoutputformat) - Get a site by its unique ID
+* [GetSitesSiteIDSubsitesOutputFormat](docs/sites/README.md#getsitessiteidsubsitesoutputformat) - Represents all subsites of a given site
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -37,7 +37,10 @@ func newFileComments(defaultClient, securityClient HTTPClient, serverURL, langua
 // Delete File Comment
 func (s *fileComments) DeleteFileCommentsID(ctx context.Context, request operations.DeleteFileCommentsIDRequest) (*operations.DeleteFileCommentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file_comments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file_comments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -93,7 +96,10 @@ func (s *fileComments) DeleteFileCommentsID(ctx context.Context, request operati
 // List File Comments by path
 func (s *fileComments) FileCommentListForPath(ctx context.Context, request operations.FileCommentListForPathRequest) (*operations.FileCommentListForPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file_comments/files/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file_comments/files/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -161,7 +167,10 @@ func (s *fileComments) FileCommentListForPath(ctx context.Context, request opera
 // Update File Comment
 func (s *fileComments) PatchFileCommentsID(ctx context.Context, request operations.PatchFileCommentsIDRequest) (*operations.PatchFileCommentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file_comments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file_comments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

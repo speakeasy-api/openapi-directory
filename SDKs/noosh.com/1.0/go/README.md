@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/noosh.com/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetBillingRecipientsRequest{
-        WorkgroupID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Contact.GetBillingRecipients(ctx, req)
+    res, err := s.Contact.GetBillingRecipients(ctx, operations.GetBillingRecipientsRequest{
+        WorkgroupID: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,203 +42,203 @@ func main() {
 ## Available Resources and Operations
 
 
-### Contact
+### [Contact](docs/contact/README.md)
 
-* `GetBillingRecipients` - List Billing Recipients
-* `GetContactList` - List the contacts
-* `GetContactUserInfo` - Contact Info
+* [GetBillingRecipients](docs/contact/README.md#getbillingrecipients) - List Billing Recipients
+* [GetContactList](docs/contact/README.md#getcontactlist) - List the contacts
+* [GetContactUserInfo](docs/contact/README.md#getcontactuserinfo) - Contact Info
 
-### Country
+### [Country](docs/country/README.md)
 
-* `GetCountryList` - List all countries
+* [GetCountryList](docs/country/README.md#getcountrylist) - List all countries
 
-### DeactivationReason
+### [DeactivationReason](docs/deactivationreason/README.md)
 
-* `GetDeactivationReasonList` - List all deactivation reasons
+* [GetDeactivationReasonList](docs/deactivationreason/README.md#getdeactivationreasonlist) - List all deactivation reasons
 
-### Estimate
+### [Estimate](docs/estimate/README.md)
 
-* `GetEstimate` - Get a specific estimate of project
-* `GetEstimateList` - List the Estimates
-* `PostEstimateJSON` - Create a Estimate
-* `PostEstimateRaw` - Create a Estimate
+* [GetEstimate](docs/estimate/README.md#getestimate) - Get a specific estimate of project
+* [GetEstimateList](docs/estimate/README.md#getestimatelist) - List the Estimates
+* [PostEstimateJSON](docs/estimate/README.md#postestimatejson) - Create a Estimate
+* [PostEstimateRaw](docs/estimate/README.md#postestimateraw) - Create a Estimate
 
-### ExchangeRate
+### [ExchangeRate](docs/exchangerate/README.md)
 
-* `GetExchangeRateList` - Get Exchange Rate List
-* `PostExchangeRateJSON` - Create Exchange Rates
-* `PostExchangeRateRaw` - Create Exchange Rates
+* [GetExchangeRateList](docs/exchangerate/README.md#getexchangeratelist) - Get Exchange Rate List
+* [PostExchangeRateJSON](docs/exchangerate/README.md#postexchangeratejson) - Create Exchange Rates
+* [PostExchangeRateRaw](docs/exchangerate/README.md#postexchangerateraw) - Create Exchange Rates
 
-### File
+### [File](docs/file/README.md)
 
-* `GetFile` - Get File from Project.  Works for Regular and Remote Files
-* `GetFileTags` - List Tags from Workgroup and Project.
-* `GetFiles` - List Files from Project.  Works for Regular and Remote Files
-* `UploadFile` - Upload File to Project.  A multipart/form-data request with a name "file"
+* [GetFile](docs/file/README.md#getfile) - Get File from Project.  Works for Regular and Remote Files
+* [GetFileTags](docs/file/README.md#getfiletags) - List Tags from Workgroup and Project.
+* [GetFiles](docs/file/README.md#getfiles) - List Files from Project.  Works for Regular and Remote Files
+* [UploadFile](docs/file/README.md#uploadfile) - Upload File to Project.  A multipart/form-data request with a name "file"
 
-### Invoice
+### [Invoice](docs/invoice/README.md)
 
-* `GetInvoice` - List a specific invoice of project Level
-* `GetInvoiceFiles` - List files of invoice Level
-* `GetInvoices` - List invoices by a specific order
+* [GetInvoice](docs/invoice/README.md#getinvoice) - List a specific invoice of project Level
+* [GetInvoiceFiles](docs/invoice/README.md#getinvoicefiles) - List files of invoice Level
+* [GetInvoices](docs/invoice/README.md#getinvoices) - List invoices by a specific order
 
-### MyInfo
+### [MyInfo](docs/myinfo/README.md)
 
-* `GetAutomaticInvitationList` - List current user's automatic invitations info 
-* `GetTeamTemplateDetail` - Get current user's team template detal info 
-* `GetTeamTemplateList` - List current user's team templates info 
-* `UploadProfileImage` - Upload Profile Image.  A multipart/form-data request with a name "file"
+* [GetAutomaticInvitationList](docs/myinfo/README.md#getautomaticinvitationlist) - List current user's automatic invitations info 
+* [GetTeamTemplateDetail](docs/myinfo/README.md#getteamtemplatedetail) - Get current user's team template detal info 
+* [GetTeamTemplateList](docs/myinfo/README.md#getteamtemplatelist) - List current user's team templates info 
+* [UploadProfileImage](docs/myinfo/README.md#uploadprofileimage) - Upload Profile Image.  A multipart/form-data request with a name "file"
 
-### Order
+### [Order](docs/order/README.md)
 
-* `GetBuyOrder` - Get a specific buy order
-* `GetBuyOrderList` - List the buy orders
-* `GetBuyOrderListOfWorkgroup` - List the buy orders of workgroup
-* `GetBuyOrderOfWorkgroup` - Get a specific buy order of workgroup
-* `GetOrder` - Get a specific buy/sell order
-* `GetSellOrder` - Get a specific sell order
-* `GetSellOrderList` - List the sell orders
-* `GetSellOrderListOfWorkgroup` - List the sell orders of workgrop
-* `GetSellOrderOfWorkgroup` - Get a specific sell order
-* `PostBuyOrderJSON` - Create a quick buy order
-* `PostBuyOrderRaw` - Create a quick buy order
-* `PutBuyOrderJSON` - Update a specific buy order
-* `PutBuyOrderRaw` - Update a specific buy order
-* `PutSellOrderJSON` - Update / Accept or Reject a specific sell order
-* `PutSellOrderRaw` - Update / Accept or Reject a specific sell order
+* [GetBuyOrder](docs/order/README.md#getbuyorder) - Get a specific buy order
+* [GetBuyOrderList](docs/order/README.md#getbuyorderlist) - List the buy orders
+* [GetBuyOrderListOfWorkgroup](docs/order/README.md#getbuyorderlistofworkgroup) - List the buy orders of workgroup
+* [GetBuyOrderOfWorkgroup](docs/order/README.md#getbuyorderofworkgroup) - Get a specific buy order of workgroup
+* [GetOrder](docs/order/README.md#getorder) - Get a specific buy/sell order
+* [GetSellOrder](docs/order/README.md#getsellorder) - Get a specific sell order
+* [GetSellOrderList](docs/order/README.md#getsellorderlist) - List the sell orders
+* [GetSellOrderListOfWorkgroup](docs/order/README.md#getsellorderlistofworkgroup) - List the sell orders of workgrop
+* [GetSellOrderOfWorkgroup](docs/order/README.md#getsellorderofworkgroup) - Get a specific sell order
+* [PostBuyOrderJSON](docs/order/README.md#postbuyorderjson) - Create a quick buy order
+* [PostBuyOrderRaw](docs/order/README.md#postbuyorderraw) - Create a quick buy order
+* [PutBuyOrderJSON](docs/order/README.md#putbuyorderjson) - Update a specific buy order
+* [PutBuyOrderRaw](docs/order/README.md#putbuyorderraw) - Update a specific buy order
+* [PutSellOrderJSON](docs/order/README.md#putsellorderjson) - Update / Accept or Reject a specific sell order
+* [PutSellOrderRaw](docs/order/README.md#putsellorderraw) - Update / Accept or Reject a specific sell order
 
-### Project
+### [Project](docs/project/README.md)
 
-* `AttachProjectJSON` - Attach children projects to specific Project
-* `AttachProjectRaw` - Attach children projects to specific Project
-* `DeleteProject` - Archieve a specific Project
-* `GetProject` - Get a specific Project
-* `GetProjectList` - List the projects
-* `PatchProjectJSON` - Patch a specific Project
-* `PatchProjectRaw` - Patch a specific Project
-* `PostProjectJSON` - Create a Project
-* `PostProjectRaw` - Create a Project
-* `PutProjectJSON` - Update a specific Project
-* `PutProjectRaw` - Update a specific Project
+* [AttachProjectJSON](docs/project/README.md#attachprojectjson) - Attach children projects to specific Project
+* [AttachProjectRaw](docs/project/README.md#attachprojectraw) - Attach children projects to specific Project
+* [DeleteProject](docs/project/README.md#deleteproject) - Archieve a specific Project
+* [GetProject](docs/project/README.md#getproject) - Get a specific Project
+* [GetProjectList](docs/project/README.md#getprojectlist) - List the projects
+* [PatchProjectJSON](docs/project/README.md#patchprojectjson) - Patch a specific Project
+* [PatchProjectRaw](docs/project/README.md#patchprojectraw) - Patch a specific Project
+* [PostProjectJSON](docs/project/README.md#postprojectjson) - Create a Project
+* [PostProjectRaw](docs/project/README.md#postprojectraw) - Create a Project
+* [PutProjectJSON](docs/project/README.md#putprojectjson) - Update a specific Project
+* [PutProjectRaw](docs/project/README.md#putprojectraw) - Update a specific Project
 
-### ProjectCategory
+### [ProjectCategory](docs/projectcategory/README.md)
 
-* `GetProjectCategoryList` - List the project categories
-* `GetProjectCategoryListOfClient` - List the project categories of client side
+* [GetProjectCategoryList](docs/projectcategory/README.md#getprojectcategorylist) - List the project categories
+* [GetProjectCategoryListOfClient](docs/projectcategory/README.md#getprojectcategorylistofclient) - List the project categories of client side
 
-### ProjectStatus
+### [ProjectStatus](docs/projectstatus/README.md)
 
-* `GetProjectStatus` - List the project status
-* `GetProjectStatusOfClient` - List the project status of client
+* [GetProjectStatus](docs/projectstatus/README.md#getprojectstatus) - List the project status
+* [GetProjectStatusOfClient](docs/projectstatus/README.md#getprojectstatusofclient) - List the project status of client
 
-### Quote
+### [Quote](docs/quote/README.md)
 
-* `GetQuote` - Get a specific quote of project
-* `GetQuoteList` - List the quotes
-* `GetQuoteStateList` - List the quote states
-* `GetV1WorkgroupsWorkgroupIDQuotes` - List the quotes of workgroup level
-* `PutQuoteJSON` - Accept / Reject a Quote
-* `PutQuoteRaw` - Accept / Reject a Quote
+* [GetQuote](docs/quote/README.md#getquote) - Get a specific quote of project
+* [GetQuoteList](docs/quote/README.md#getquotelist) - List the quotes
+* [GetQuoteStateList](docs/quote/README.md#getquotestatelist) - List the quote states
+* [GetV1WorkgroupsWorkgroupIDQuotes](docs/quote/README.md#getv1workgroupsworkgroupidquotes) - List the quotes of workgroup level
+* [PutQuoteJSON](docs/quote/README.md#putquotejson) - Accept / Reject a Quote
+* [PutQuoteRaw](docs/quote/README.md#putquoteraw) - Accept / Reject a Quote
 
-### Rfe
+### [Rfe](docs/rfe/README.md)
 
-* `GetRfe` - Get a specific Rfe
-* `GetRfeList` - List the RFES
-* `PostRfeJSON` - Create a RFE
-* `PostRfeRaw` - Create a RFE
+* [GetRfe](docs/rfe/README.md#getrfe) - Get a specific Rfe
+* [GetRfeList](docs/rfe/README.md#getrfelist) - List the RFES
+* [PostRfeJSON](docs/rfe/README.md#postrfejson) - Create a RFE
+* [PostRfeRaw](docs/rfe/README.md#postrferaw) - Create a RFE
 
-### Rfq
+### [Rfq](docs/rfq/README.md)
 
-* `GetRfq` - Get a specific Rfq
-* `GetRfqList` - List the rfqs
+* [GetRfq](docs/rfq/README.md#getrfq) - Get a specific Rfq
+* [GetRfqList](docs/rfq/README.md#getrfqlist) - List the rfqs
 
-### Shipment
+### [Shipment](docs/shipment/README.md)
 
-* `GetShipment` - Get a specific shipment.
-* `GetShipmentList` - List shipments of project
-* `PostShipmentJSON` - Create a shipment
-* `PostShipmentRaw` - Create a shipment
-* `PutShipmentLocationJSON` - Update a specific shipment location
-* `PutShipmentLocationRaw` - Update a specific shipment location
+* [GetShipment](docs/shipment/README.md#getshipment) - Get a specific shipment.
+* [GetShipmentList](docs/shipment/README.md#getshipmentlist) - List shipments of project
+* [PostShipmentJSON](docs/shipment/README.md#postshipmentjson) - Create a shipment
+* [PostShipmentRaw](docs/shipment/README.md#postshipmentraw) - Create a shipment
+* [PutShipmentLocationJSON](docs/shipment/README.md#putshipmentlocationjson) - Update a specific shipment location
+* [PutShipmentLocationRaw](docs/shipment/README.md#putshipmentlocationraw) - Update a specific shipment location
 
-### Spec
+### [Spec](docs/spec/README.md)
 
-* `GetProductTypeListOfWorkgroup` - Get product type of workgroup level
-* `GetSpec` - List a specific spec of project Level
-* `GetSpecList` - List specs of project Level
-* `GetSpecProductTypeListOfWorkgroup` - Get product type of spec level by workgroupId
-* `GetSpecTypeFields` - Get Spec Type Fields
-* `GetV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecID` - List a specific spec of project Level
-* `GetV1WorkgroupsWorkgroupIDSpecTypesSpecTypeIDSpecTypeFields` - Get Spec Type Fields
-* `PostSpecProductTypeListOfWorkgroupJSON` - Register product types for spec types
-* `PostSpecProductTypeListOfWorkgroupRaw` - Register product types for spec types
-* `PostSpecJSON` - Create a Spec
-* `PostSpecRaw` - Create a Spec
-* `PutSpecJSON` - Update a specific Spec
-* `PutSpecRaw` - Update a specific Spec
-* `PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDJSON` - Update a specific Spec
-* `PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDRaw` - Update a specific Spec
+* [GetProductTypeListOfWorkgroup](docs/spec/README.md#getproducttypelistofworkgroup) - Get product type of workgroup level
+* [GetSpec](docs/spec/README.md#getspec) - List a specific spec of project Level
+* [GetSpecList](docs/spec/README.md#getspeclist) - List specs of project Level
+* [GetSpecProductTypeListOfWorkgroup](docs/spec/README.md#getspecproducttypelistofworkgroup) - Get product type of spec level by workgroupId
+* [GetSpecTypeFields](docs/spec/README.md#getspectypefields) - Get Spec Type Fields
+* [GetV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecID](docs/spec/README.md#getv1workgroupsworkgroupidprojectsprojectidspecsspecid) - List a specific spec of project Level
+* [GetV1WorkgroupsWorkgroupIDSpecTypesSpecTypeIDSpecTypeFields](docs/spec/README.md#getv1workgroupsworkgroupidspectypesspectypeidspectypefields) - Get Spec Type Fields
+* [PostSpecProductTypeListOfWorkgroupJSON](docs/spec/README.md#postspecproducttypelistofworkgroupjson) - Register product types for spec types
+* [PostSpecProductTypeListOfWorkgroupRaw](docs/spec/README.md#postspecproducttypelistofworkgroupraw) - Register product types for spec types
+* [PostSpecJSON](docs/spec/README.md#postspecjson) - Create a Spec
+* [PostSpecRaw](docs/spec/README.md#postspecraw) - Create a Spec
+* [PutSpecJSON](docs/spec/README.md#putspecjson) - Update a specific Spec
+* [PutSpecRaw](docs/spec/README.md#putspecraw) - Update a specific Spec
+* [PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDJSON](docs/spec/README.md#putv1workgroupsworkgroupidprojectsprojectidspecsspecidjson) - Update a specific Spec
+* [PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDRaw](docs/spec/README.md#putv1workgroupsworkgroupidprojectsprojectidspecsspecidraw) - Update a specific Spec
 
-### SpecTemplate
+### [SpecTemplate](docs/spectemplate/README.md)
 
-* `GetSpecTemplate` - Get a specific Spec Template
-* `GetSpecTemplateList` - List Spec Templates of Workgroup Level 
+* [GetSpecTemplate](docs/spectemplate/README.md#getspectemplate) - Get a specific Spec Template
+* [GetSpecTemplateList](docs/spectemplate/README.md#getspectemplatelist) - List Spec Templates of Workgroup Level 
 
-### Task
+### [Task](docs/task/README.md)
 
-* `TaskPriorityList` - Get default task priority list
-* `GetCustomTaskTypesOfWg` - Get custom task types of workgroup level
-* `GetDefaultTaskStatusList` - Get default task status list
-* `GetTaskListOfProject` - Get task list of project level
-* `GetTaskListOfWorkgroup` - Get task list of workgroup level
-* `GetTaskOfProject` - Get a sepcific task of project level
-* `GetTaskOfWorkgroup` - Get a sepcific task of workgroup level
-* `GetTaskTypesOfWorkgroup` - Get task types of workgroup level
-* `GetWgTaskStatusListOfWorkgroup` - Get custom task status of workgroup level
-* `PostTaskForProjectJSON` - Create a new task
-* `PostTaskForProjectRaw` - Create a new task
+* [TaskPriorityList](docs/task/README.md#taskprioritylist) - Get default task priority list
+* [GetCustomTaskTypesOfWg](docs/task/README.md#getcustomtasktypesofwg) - Get custom task types of workgroup level
+* [GetDefaultTaskStatusList](docs/task/README.md#getdefaulttaskstatuslist) - Get default task status list
+* [GetTaskListOfProject](docs/task/README.md#gettasklistofproject) - Get task list of project level
+* [GetTaskListOfWorkgroup](docs/task/README.md#gettasklistofworkgroup) - Get task list of workgroup level
+* [GetTaskOfProject](docs/task/README.md#gettaskofproject) - Get a sepcific task of project level
+* [GetTaskOfWorkgroup](docs/task/README.md#gettaskofworkgroup) - Get a sepcific task of workgroup level
+* [GetTaskTypesOfWorkgroup](docs/task/README.md#gettasktypesofworkgroup) - Get task types of workgroup level
+* [GetWgTaskStatusListOfWorkgroup](docs/task/README.md#getwgtaskstatuslistofworkgroup) - Get custom task status of workgroup level
+* [PostTaskForProjectJSON](docs/task/README.md#posttaskforprojectjson) - Create a new task
+* [PostTaskForProjectRaw](docs/task/README.md#posttaskforprojectraw) - Create a new task
 
-### TeamMember
+### [TeamMember](docs/teammember/README.md)
 
-* `DeleteTeamMemberOfProject` - Delete a team member for the specific project.
-* `GetTeamMemberListOfClientProject` - List team member of client project side.
-* `GetTeamMemberListOfProject` - List team member of project.
-* `PostTeamMemberOfProjectJSON` - Invite a team member or all the members of team template for the specific project.
-* `PostTeamMemberOfProjectRaw` - Invite a team member or all the members of team template for the specific project.
-* `PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersJSON` - Deprecated, please use 1.1 Version
-* `PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersRaw` - Deprecated, please use 1.1 Version
+* [DeleteTeamMemberOfProject](docs/teammember/README.md#deleteteammemberofproject) - Delete a team member for the specific project.
+* [GetTeamMemberListOfClientProject](docs/teammember/README.md#getteammemberlistofclientproject) - List team member of client project side.
+* [GetTeamMemberListOfProject](docs/teammember/README.md#getteammemberlistofproject) - List team member of project.
+* [PostTeamMemberOfProjectJSON](docs/teammember/README.md#postteammemberofprojectjson) - Invite a team member or all the members of team template for the specific project.
+* [PostTeamMemberOfProjectRaw](docs/teammember/README.md#postteammemberofprojectraw) - Invite a team member or all the members of team template for the specific project.
+* [PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersJSON](docs/teammember/README.md#postv1workgroupsworkgroupidprojectsprojectidteammembersjson) - Deprecated, please use 1.1 Version
+* [PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersRaw](docs/teammember/README.md#postv1workgroupsworkgroupidprojectsprojectidteammembersraw) - Deprecated, please use 1.1 Version
 
-### TeamMemberRole
+### [TeamMemberRole](docs/teammemberrole/README.md)
 
-* `GetMemberRoles` - List all the role options for the user
+* [GetMemberRoles](docs/teammemberrole/README.md#getmemberroles) - List all the role options for the user
 
-### TimeCard
+### [TimeCard](docs/timecard/README.md)
 
-* `GetMyTimeCard` - Get a specific my time cards
-* `GetMyTimeCardList` - List my time cards
-* `GetReceivedTimeCard` - List a specific received time cards
-* `GetReceivedTimeCardList` - List received time cards
+* [GetMyTimeCard](docs/timecard/README.md#getmytimecard) - Get a specific my time cards
+* [GetMyTimeCardList](docs/timecard/README.md#getmytimecardlist) - List my time cards
+* [GetReceivedTimeCard](docs/timecard/README.md#getreceivedtimecard) - List a specific received time cards
+* [GetReceivedTimeCardList](docs/timecard/README.md#getreceivedtimecardlist) - List received time cards
 
-### UserFields
+### [UserFields](docs/userfields/README.md)
 
-* `GetProjectHomeUserFieldListOfClient` - List projec home user fields of client workgroup
-* `GetProjectHomeUserFieldsList` - List projec home user fields
+* [GetProjectHomeUserFieldListOfClient](docs/userfields/README.md#getprojecthomeuserfieldlistofclient) - List projec home user fields of client workgroup
+* [GetProjectHomeUserFieldsList](docs/userfields/README.md#getprojecthomeuserfieldslist) - List projec home user fields
 
-### Workgroup
+### [Workgroup](docs/workgroup/README.md)
 
-* `GetClientWorkgroupList` - List client workgroups
-* `GetSpecificClientWorkgroup` - Get a specific client workgroups
-* `GetSupplierWorkgroupDetail` - Get the specific supplier of My Group
-* `GetSupplierWorkgroupList` - List supplier workgroups
-* `GetWorkgroupDetail` - Detail workgroup info
-* `GetWorkgroupList` - List the workgroups
-* `PutWorkgroupJSON` - Update a specific Workgroup
-* `PutWorkgroupRaw` - Update a specific Workgroup
+* [GetClientWorkgroupList](docs/workgroup/README.md#getclientworkgrouplist) - List client workgroups
+* [GetSpecificClientWorkgroup](docs/workgroup/README.md#getspecificclientworkgroup) - Get a specific client workgroups
+* [GetSupplierWorkgroupDetail](docs/workgroup/README.md#getsupplierworkgroupdetail) - Get the specific supplier of My Group
+* [GetSupplierWorkgroupList](docs/workgroup/README.md#getsupplierworkgrouplist) - List supplier workgroups
+* [GetWorkgroupDetail](docs/workgroup/README.md#getworkgroupdetail) - Detail workgroup info
+* [GetWorkgroupList](docs/workgroup/README.md#getworkgrouplist) - List the workgroups
+* [PutWorkgroupJSON](docs/workgroup/README.md#putworkgroupjson) - Update a specific Workgroup
+* [PutWorkgroupRaw](docs/workgroup/README.md#putworkgroupraw) - Update a specific Workgroup
 
-### WorkgroupMembers
+### [WorkgroupMembers](docs/workgroupmembers/README.md)
 
-* `GetWorkgroupMemberInfo` - Workgroup Member Info
-* `GetWorkgroupMemberList` - List the workgroup members
+* [GetWorkgroupMemberInfo](docs/workgroupmembers/README.md#getworkgroupmemberinfo) - Workgroup Member Info
+* [GetWorkgroupMemberList](docs/workgroupmembers/README.md#getworkgroupmemberlist) - List the workgroup members
 <!-- End SDK Available Operations -->
 
 ### Maturity

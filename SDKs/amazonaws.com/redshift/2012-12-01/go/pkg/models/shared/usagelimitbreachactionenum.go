@@ -15,20 +15,24 @@ const (
 	UsageLimitBreachActionEnumDisable    UsageLimitBreachActionEnum = "disable"
 )
 
+func (e UsageLimitBreachActionEnum) ToPointer() *UsageLimitBreachActionEnum {
+	return &e
+}
+
 func (e *UsageLimitBreachActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "log":
 		fallthrough
 	case "emit-metric":
 		fallthrough
 	case "disable":
-		*e = UsageLimitBreachActionEnum(s)
+		*e = UsageLimitBreachActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageLimitBreachActionEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageLimitBreachActionEnum: %v", v)
 	}
 }

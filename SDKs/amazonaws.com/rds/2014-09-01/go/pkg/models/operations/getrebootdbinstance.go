@@ -15,17 +15,21 @@ const (
 	GETRebootDBInstanceActionEnumRebootDbInstance GETRebootDBInstanceActionEnum = "RebootDBInstance"
 )
 
+func (e GETRebootDBInstanceActionEnum) ToPointer() *GETRebootDBInstanceActionEnum {
+	return &e
+}
+
 func (e *GETRebootDBInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RebootDBInstance":
-		*e = GETRebootDBInstanceActionEnum(s)
+		*e = GETRebootDBInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRebootDBInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRebootDBInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRebootDBInstanceVersionEnumTwoThousandAndFourteen0901 GETRebootDBInstanceVersionEnum = "2014-09-01"
 )
 
+func (e GETRebootDBInstanceVersionEnum) ToPointer() *GETRebootDBInstanceVersionEnum {
+	return &e
+}
+
 func (e *GETRebootDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-09-01":
-		*e = GETRebootDBInstanceVersionEnum(s)
+		*e = GETRebootDBInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRebootDBInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRebootDBInstanceVersionEnum: %v", v)
 	}
 }
 

@@ -24,12 +24,16 @@ const (
 	GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnumHours                      GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum = "HOURS"
 )
 
+func (e GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum) ToPointer() *GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEASUREMENT_UNIT_UNSPECIFIED":
 		fallthrough
 	case "STANDARD":
@@ -51,10 +55,10 @@ func (e *GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum) UnmarshalJSO
 	case "MINUTES":
 		fallthrough
 	case "HOURS":
-		*e = GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum(s)
+		*e = GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaCustomMetricMeasurementUnitEnum: %v", v)
 	}
 }
 
@@ -66,21 +70,25 @@ const (
 	GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnumRevenueData                     GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum = "REVENUE_DATA"
 )
 
+func (e GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum) ToPointer() *GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESTRICTED_METRIC_TYPE_UNSPECIFIED":
 		fallthrough
 	case "COST_DATA":
 		fallthrough
 	case "REVENUE_DATA":
-		*e = GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum(s)
+		*e = GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaCustomMetricRestrictedMetricTypeEnum: %v", v)
 	}
 }
 
@@ -92,19 +100,23 @@ const (
 	GoogleAnalyticsAdminV1betaCustomMetricScopeEnumEvent                  GoogleAnalyticsAdminV1betaCustomMetricScopeEnum = "EVENT"
 )
 
+func (e GoogleAnalyticsAdminV1betaCustomMetricScopeEnum) ToPointer() *GoogleAnalyticsAdminV1betaCustomMetricScopeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1betaCustomMetricScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "EVENT":
-		*e = GoogleAnalyticsAdminV1betaCustomMetricScopeEnum(s)
+		*e = GoogleAnalyticsAdminV1betaCustomMetricScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaCustomMetricScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaCustomMetricScopeEnum: %v", v)
 	}
 }
 

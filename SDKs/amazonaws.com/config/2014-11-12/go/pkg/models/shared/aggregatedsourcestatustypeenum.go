@@ -15,20 +15,24 @@ const (
 	AggregatedSourceStatusTypeEnumOutdated  AggregatedSourceStatusTypeEnum = "OUTDATED"
 )
 
+func (e AggregatedSourceStatusTypeEnum) ToPointer() *AggregatedSourceStatusTypeEnum {
+	return &e
+}
+
 func (e *AggregatedSourceStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILED":
 		fallthrough
 	case "SUCCEEDED":
 		fallthrough
 	case "OUTDATED":
-		*e = AggregatedSourceStatusTypeEnum(s)
+		*e = AggregatedSourceStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregatedSourceStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregatedSourceStatusTypeEnum: %v", v)
 	}
 }

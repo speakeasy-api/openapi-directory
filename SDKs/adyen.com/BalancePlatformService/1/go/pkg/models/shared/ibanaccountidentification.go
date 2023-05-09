@@ -14,21 +14,25 @@ const (
 	IbanAccountIdentificationTypeEnumIban IbanAccountIdentificationTypeEnum = "iban"
 )
 
+func (e IbanAccountIdentificationTypeEnum) ToPointer() *IbanAccountIdentificationTypeEnum {
+	return &e
+}
+
 func (e *IbanAccountIdentificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iban":
-		*e = IbanAccountIdentificationTypeEnum(s)
+		*e = IbanAccountIdentificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IbanAccountIdentificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IbanAccountIdentificationTypeEnum: %v", v)
 	}
 }
 
-// IbanAccountIdentification - Bank account identification.
+// IbanAccountIdentification - Contains the business account details. Returned when you create a payment instrument with `type` **bankAccount**.
 type IbanAccountIdentification struct {
 	// The international bank account number as defined in the [ISO-13616](https://www.iso.org/standard/81090.html) standard.
 	Iban string `json:"iban"`

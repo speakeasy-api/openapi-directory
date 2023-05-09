@@ -16,17 +16,21 @@ const (
 	RestoreWorkspaceXAmzTargetEnumWorkspacesServiceRestoreWorkspace RestoreWorkspaceXAmzTargetEnum = "WorkspacesService.RestoreWorkspace"
 )
 
+func (e RestoreWorkspaceXAmzTargetEnum) ToPointer() *RestoreWorkspaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *RestoreWorkspaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.RestoreWorkspace":
-		*e = RestoreWorkspaceXAmzTargetEnum(s)
+		*e = RestoreWorkspaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RestoreWorkspaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RestoreWorkspaceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -13,16 +13,20 @@ const (
 	AccessPolicyTypeEnumData AccessPolicyTypeEnum = "data"
 )
 
+func (e AccessPolicyTypeEnum) ToPointer() *AccessPolicyTypeEnum {
+	return &e
+}
+
 func (e *AccessPolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "data":
-		*e = AccessPolicyTypeEnum(s)
+		*e = AccessPolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessPolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessPolicyTypeEnum: %v", v)
 	}
 }

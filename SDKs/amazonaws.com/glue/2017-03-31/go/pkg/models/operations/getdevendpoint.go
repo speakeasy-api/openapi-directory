@@ -16,17 +16,21 @@ const (
 	GetDevEndpointXAmzTargetEnumAwsGlueGetDevEndpoint GetDevEndpointXAmzTargetEnum = "AWSGlue.GetDevEndpoint"
 )
 
+func (e GetDevEndpointXAmzTargetEnum) ToPointer() *GetDevEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDevEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetDevEndpoint":
-		*e = GetDevEndpointXAmzTargetEnum(s)
+		*e = GetDevEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDevEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDevEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

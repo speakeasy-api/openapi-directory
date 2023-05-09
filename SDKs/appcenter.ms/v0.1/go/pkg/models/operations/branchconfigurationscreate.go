@@ -19,19 +19,23 @@ const (
 	BranchConfigurationsCreateRequestBodyArtifactVersioningBuildNumberFormatEnumTimestamp BranchConfigurationsCreateRequestBodyArtifactVersioningBuildNumberFormatEnum = "timestamp"
 )
 
+func (e BranchConfigurationsCreateRequestBodyArtifactVersioningBuildNumberFormatEnum) ToPointer() *BranchConfigurationsCreateRequestBodyArtifactVersioningBuildNumberFormatEnum {
+	return &e
+}
+
 func (e *BranchConfigurationsCreateRequestBodyArtifactVersioningBuildNumberFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "buildId":
 		fallthrough
 	case "timestamp":
-		*e = BranchConfigurationsCreateRequestBodyArtifactVersioningBuildNumberFormatEnum(s)
+		*e = BranchConfigurationsCreateRequestBodyArtifactVersioningBuildNumberFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BranchConfigurationsCreateRequestBodyArtifactVersioningBuildNumberFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for BranchConfigurationsCreateRequestBodyArtifactVersioningBuildNumberFormatEnum: %v", v)
 	}
 }
 
@@ -162,21 +166,25 @@ const (
 	BranchConfigurationsCreateRequestBodyTriggerEnumManual     BranchConfigurationsCreateRequestBodyTriggerEnum = "manual"
 )
 
+func (e BranchConfigurationsCreateRequestBodyTriggerEnum) ToPointer() *BranchConfigurationsCreateRequestBodyTriggerEnum {
+	return &e
+}
+
 func (e *BranchConfigurationsCreateRequestBodyTriggerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "continous":
 		fallthrough
 	case "continuous":
 		fallthrough
 	case "manual":
-		*e = BranchConfigurationsCreateRequestBodyTriggerEnum(s)
+		*e = BranchConfigurationsCreateRequestBodyTriggerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BranchConfigurationsCreateRequestBodyTriggerEnum: %s", s)
+		return fmt.Errorf("invalid value for BranchConfigurationsCreateRequestBodyTriggerEnum: %v", v)
 	}
 }
 
@@ -212,19 +220,23 @@ const (
 	BranchConfigurationsCreate200ApplicationJSONArtifactVersioningBuildNumberFormatEnumTimestamp BranchConfigurationsCreate200ApplicationJSONArtifactVersioningBuildNumberFormatEnum = "timestamp"
 )
 
+func (e BranchConfigurationsCreate200ApplicationJSONArtifactVersioningBuildNumberFormatEnum) ToPointer() *BranchConfigurationsCreate200ApplicationJSONArtifactVersioningBuildNumberFormatEnum {
+	return &e
+}
+
 func (e *BranchConfigurationsCreate200ApplicationJSONArtifactVersioningBuildNumberFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "buildId":
 		fallthrough
 	case "timestamp":
-		*e = BranchConfigurationsCreate200ApplicationJSONArtifactVersioningBuildNumberFormatEnum(s)
+		*e = BranchConfigurationsCreate200ApplicationJSONArtifactVersioningBuildNumberFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BranchConfigurationsCreate200ApplicationJSONArtifactVersioningBuildNumberFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for BranchConfigurationsCreate200ApplicationJSONArtifactVersioningBuildNumberFormatEnum: %v", v)
 	}
 }
 
@@ -355,21 +367,25 @@ const (
 	BranchConfigurationsCreate200ApplicationJSONTriggerEnumManual     BranchConfigurationsCreate200ApplicationJSONTriggerEnum = "manual"
 )
 
+func (e BranchConfigurationsCreate200ApplicationJSONTriggerEnum) ToPointer() *BranchConfigurationsCreate200ApplicationJSONTriggerEnum {
+	return &e
+}
+
 func (e *BranchConfigurationsCreate200ApplicationJSONTriggerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "continous":
 		fallthrough
 	case "continuous":
 		fallthrough
 	case "manual":
-		*e = BranchConfigurationsCreate200ApplicationJSONTriggerEnum(s)
+		*e = BranchConfigurationsCreate200ApplicationJSONTriggerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BranchConfigurationsCreate200ApplicationJSONTriggerEnum: %s", s)
+		return fmt.Errorf("invalid value for BranchConfigurationsCreate200ApplicationJSONTriggerEnum: %v", v)
 	}
 }
 

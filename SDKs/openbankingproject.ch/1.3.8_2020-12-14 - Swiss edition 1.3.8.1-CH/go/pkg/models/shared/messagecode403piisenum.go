@@ -17,12 +17,16 @@ const (
 	MessageCode403PIISEnumResourceExpired MessageCode403PIISEnum = "RESOURCE_EXPIRED"
 )
 
+func (e MessageCode403PIISEnum) ToPointer() *MessageCode403PIISEnum {
+	return &e
+}
+
 func (e *MessageCode403PIISEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONSENT_UNKNOWN":
 		fallthrough
 	case "SERVICE_BLOCKED":
@@ -30,9 +34,9 @@ func (e *MessageCode403PIISEnum) UnmarshalJSON(data []byte) error {
 	case "RESOURCE_UNKNOWN":
 		fallthrough
 	case "RESOURCE_EXPIRED":
-		*e = MessageCode403PIISEnum(s)
+		*e = MessageCode403PIISEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageCode403PIISEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageCode403PIISEnum: %v", v)
 	}
 }

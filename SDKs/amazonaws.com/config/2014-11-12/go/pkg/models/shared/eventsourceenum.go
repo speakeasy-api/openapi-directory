@@ -13,16 +13,20 @@ const (
 	EventSourceEnumAwsConfig EventSourceEnum = "aws.config"
 )
 
+func (e EventSourceEnum) ToPointer() *EventSourceEnum {
+	return &e
+}
+
 func (e *EventSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "aws.config":
-		*e = EventSourceEnum(s)
+		*e = EventSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for EventSourceEnum: %v", v)
 	}
 }

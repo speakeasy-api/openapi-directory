@@ -14,18 +14,22 @@ const (
 	StackInstanceFilterNameEnumLastOperationID StackInstanceFilterNameEnum = "LAST_OPERATION_ID"
 )
 
+func (e StackInstanceFilterNameEnum) ToPointer() *StackInstanceFilterNameEnum {
+	return &e
+}
+
 func (e *StackInstanceFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DETAILED_STATUS":
 		fallthrough
 	case "LAST_OPERATION_ID":
-		*e = StackInstanceFilterNameEnum(s)
+		*e = StackInstanceFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StackInstanceFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for StackInstanceFilterNameEnum: %v", v)
 	}
 }

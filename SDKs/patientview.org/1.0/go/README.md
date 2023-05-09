@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/patientview.org/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetBasicUserInformationRequest{
-        Token: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.AuthController.GetBasicUserInformation(ctx, req)
+    res, err := s.AuthController.GetBasicUserInformation(ctx, operations.GetBasicUserInformationRequest{
+        Token: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,35 +42,35 @@ func main() {
 ## Available Resources and Operations
 
 
-### AuthController
+### [AuthController](docs/authcontroller/README.md)
 
-* `GetBasicUserInformation` - Get Basic User Information
-* `LogIn` - Log In
-* `LogOut` - Log Out
+* [GetBasicUserInformation](docs/authcontroller/README.md#getbasicuserinformation) - Get Basic User Information
+* [LogIn](docs/authcontroller/README.md#login) - Log In
+* [LogOut](docs/authcontroller/README.md#logout) - Log Out
 
-### ObservationController
+### [ObservationController](docs/observationcontroller/README.md)
 
-* `GetObservationsByCode` - Get Observations of a Certain Type For a User
-* `GetObservationsByCodes` - Get Observations of Multiple Types For a User
-* `GetPatientEnteredObservationsByCode` - Get patient entered Observations of a Certain Type For a User
+* [GetObservationsByCode](docs/observationcontroller/README.md#getobservationsbycode) - Get Observations of a Certain Type For a User
+* [GetObservationsByCodes](docs/observationcontroller/README.md#getobservationsbycodes) - Get Observations of Multiple Types For a User
+* [GetPatientEnteredObservationsByCode](docs/observationcontroller/README.md#getpatiententeredobservationsbycode) - Get patient entered Observations of a Certain Type For a User
 
-### ObservationHeadingController
+### [ObservationHeadingController](docs/observationheadingcontroller/README.md)
 
-* `GetAvailableObservationHeadings` - Get Available Observations Types For a User
-* `GetPatientEnteredObservationHeadings` - Get Available Patient Entered Observations Types For a User
+* [GetAvailableObservationHeadings](docs/observationheadingcontroller/README.md#getavailableobservationheadings) - Get Available Observations Types For a User
+* [GetPatientEnteredObservationHeadings](docs/observationheadingcontroller/README.md#getpatiententeredobservationheadings) - Get Available Patient Entered Observations Types For a User
 
-### PatientController
+### [PatientController](docs/patientcontroller/README.md)
 
-* `GetBasicPatientDetails` - Get Basic Patient Information
+* [GetBasicPatientDetails](docs/patientcontroller/README.md#getbasicpatientdetails) - Get Basic Patient Information
 
-### PatientManagementController
+### [PatientManagementController](docs/patientmanagementcontroller/README.md)
 
-* `GetPatientManagement` - getPatientManagement
-* `GetPatientManagementDiagnoses` - getPatientManagementDiagnoses
-* `GetPatientManagementLookupTypes` - getPatientManagementLookupTypes
-* `SavePatientManagement` - savePatientManagement
-* `SavePatientManagementSurgeries` - savePatientManagementSurgeries
-* `ValidatePatientManagement` - validatePatientManagement
+* [GetPatientManagement](docs/patientmanagementcontroller/README.md#getpatientmanagement) - getPatientManagement
+* [GetPatientManagementDiagnoses](docs/patientmanagementcontroller/README.md#getpatientmanagementdiagnoses) - getPatientManagementDiagnoses
+* [GetPatientManagementLookupTypes](docs/patientmanagementcontroller/README.md#getpatientmanagementlookuptypes) - getPatientManagementLookupTypes
+* [SavePatientManagement](docs/patientmanagementcontroller/README.md#savepatientmanagement) - savePatientManagement
+* [SavePatientManagementSurgeries](docs/patientmanagementcontroller/README.md#savepatientmanagementsurgeries) - savePatientManagementSurgeries
+* [ValidatePatientManagement](docs/patientmanagementcontroller/README.md#validatepatientmanagement) - validatePatientManagement
 <!-- End SDK Available Operations -->
 
 ### Maturity

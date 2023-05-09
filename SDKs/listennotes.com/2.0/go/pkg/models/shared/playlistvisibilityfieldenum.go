@@ -16,20 +16,24 @@ const (
 	PlaylistVisibilityFieldEnumPrivate  PlaylistVisibilityFieldEnum = "private"
 )
 
+func (e PlaylistVisibilityFieldEnum) ToPointer() *PlaylistVisibilityFieldEnum {
+	return &e
+}
+
 func (e *PlaylistVisibilityFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "unlisted":
 		fallthrough
 	case "private":
-		*e = PlaylistVisibilityFieldEnum(s)
+		*e = PlaylistVisibilityFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlaylistVisibilityFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for PlaylistVisibilityFieldEnum: %v", v)
 	}
 }

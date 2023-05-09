@@ -34,7 +34,10 @@ func newAPIUsage(defaultClient, securityClient HTTPClient, serverURL, language, 
 // List the API requests made by an organization
 func (s *apiUsage) GetOrganizationAPIRequests(ctx context.Context, request operations.GetOrganizationAPIRequestsRequest) (*operations.GetOrganizationAPIRequestsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/apiRequests", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/apiRequests", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *apiUsage) GetOrganizationAPIRequests(ctx context.Context, request opera
 // Return an aggregated overview of API requests data
 func (s *apiUsage) GetOrganizationAPIRequestsOverview(ctx context.Context, request operations.GetOrganizationAPIRequestsOverviewRequest) (*operations.GetOrganizationAPIRequestsOverviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/apiRequests/overview", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/apiRequests/overview", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

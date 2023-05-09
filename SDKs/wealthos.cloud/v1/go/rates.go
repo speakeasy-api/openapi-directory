@@ -37,7 +37,10 @@ func newRates(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Returns rate details of the requested rate type.
 func (s *rates) GetRates(ctx context.Context, request operations.GetRatesRequest, security operations.GetRatesSecurity) (*operations.GetRatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/rates/v1/{rate_type}/getAll", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/rates/v1/{rate_type}/getAll", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

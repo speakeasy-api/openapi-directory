@@ -15,17 +15,21 @@ const (
 	GETTerminateClientVpnConnectionsActionEnumTerminateClientVpnConnections GETTerminateClientVpnConnectionsActionEnum = "TerminateClientVpnConnections"
 )
 
+func (e GETTerminateClientVpnConnectionsActionEnum) ToPointer() *GETTerminateClientVpnConnectionsActionEnum {
+	return &e
+}
+
 func (e *GETTerminateClientVpnConnectionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TerminateClientVpnConnections":
-		*e = GETTerminateClientVpnConnectionsActionEnum(s)
+		*e = GETTerminateClientVpnConnectionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTerminateClientVpnConnectionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTerminateClientVpnConnectionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETTerminateClientVpnConnectionsVersionEnumTwoThousandAndSixteen1115 GETTerminateClientVpnConnectionsVersionEnum = "2016-11-15"
 )
 
+func (e GETTerminateClientVpnConnectionsVersionEnum) ToPointer() *GETTerminateClientVpnConnectionsVersionEnum {
+	return &e
+}
+
 func (e *GETTerminateClientVpnConnectionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETTerminateClientVpnConnectionsVersionEnum(s)
+		*e = GETTerminateClientVpnConnectionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTerminateClientVpnConnectionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTerminateClientVpnConnectionsVersionEnum: %v", v)
 	}
 }
 

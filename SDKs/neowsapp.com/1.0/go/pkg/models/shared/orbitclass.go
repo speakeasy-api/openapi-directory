@@ -33,12 +33,16 @@ const (
 	OrbitClassOrbitClassTypeEnumJFc OrbitClassOrbitClassTypeEnum = "JFc"
 )
 
+func (e OrbitClassOrbitClassTypeEnum) ToPointer() *OrbitClassOrbitClassTypeEnum {
+	return &e
+}
+
 func (e *OrbitClassOrbitClassTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IEO":
 		fallthrough
 	case "ATE":
@@ -80,10 +84,10 @@ func (e *OrbitClassOrbitClassTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CTC":
 		fallthrough
 	case "JFc":
-		*e = OrbitClassOrbitClassTypeEnum(s)
+		*e = OrbitClassOrbitClassTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrbitClassOrbitClassTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrbitClassOrbitClassTypeEnum: %v", v)
 	}
 }
 

@@ -100,7 +100,10 @@ func (s *taxes) CreateTaxRates(ctx context.Context, request shared.TaxRatesCreat
 // DeleteTaxRate - Delete a single tax rate
 func (s *taxes) DeleteTaxRate(ctx context.Context, request operations.DeleteTaxRateRequest, security operations.DeleteTaxRateSecurity) (*operations.DeleteTaxRateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +140,7 @@ func (s *taxes) DeleteTaxRate(ctx context.Context, request operations.DeleteTaxR
 }
 
 // GetProductCountForAllTaxes - Get all tax rates and a count of products associated with each
-func (s *taxes) GetProductCountForAllTaxes(ctx context.Context) (*operations.GetProductCountForAllTaxesResponse, error) {
+func (s *taxes) GetProductCountForAllTaxes(ctx context.Context, security operations.GetProductCountForAllTaxesSecurity) (*operations.GetProductCountForAllTaxesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes/count"
 
@@ -146,7 +149,7 @@ func (s *taxes) GetProductCountForAllTaxes(ctx context.Context) (*operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -184,7 +187,10 @@ func (s *taxes) GetProductCountForAllTaxes(ctx context.Context) (*operations.Get
 // GetTaxRate - Get a single tax rate
 func (s *taxes) GetTaxRate(ctx context.Context, request operations.GetTaxRateRequest, security operations.GetTaxRateSecurity) (*operations.GetTaxRateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,7 +235,7 @@ func (s *taxes) GetTaxRate(ctx context.Context, request operations.GetTaxRateReq
 }
 
 // GetTaxRates - Get all available tax rates
-func (s *taxes) GetTaxRates(ctx context.Context) (*operations.GetTaxRatesResponse, error) {
+func (s *taxes) GetTaxRates(ctx context.Context, security operations.GetTaxRatesSecurity) (*operations.GetTaxRatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes"
 
@@ -238,7 +244,7 @@ func (s *taxes) GetTaxRates(ctx context.Context) (*operations.GetTaxRatesRespons
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -274,7 +280,7 @@ func (s *taxes) GetTaxRates(ctx context.Context) (*operations.GetTaxRatesRespons
 }
 
 // GetTaxSettings - Get the organization tax settings
-func (s *taxes) GetTaxSettings(ctx context.Context) (*operations.GetTaxSettingsResponse, error) {
+func (s *taxes) GetTaxSettings(ctx context.Context, security operations.GetTaxSettingsSecurity) (*operations.GetTaxSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes/settings"
 
@@ -283,7 +289,7 @@ func (s *taxes) GetTaxSettings(ctx context.Context) (*operations.GetTaxSettingsR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -386,7 +392,10 @@ func (s *taxes) SetTaxationMode(ctx context.Context, request shared.TaxSettingsU
 // UpdateTaxRate - Update a single tax rate
 func (s *taxes) UpdateTaxRate(ctx context.Context, request operations.UpdateTaxRateRequest, security operations.UpdateTaxRateSecurity) (*operations.UpdateTaxRateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaxRateUpdateRequest", "json")
 	if err != nil {

@@ -16,12 +16,16 @@ const (
 	HITypeEnumEnumDiagnosticReport HITypeEnumEnum = "DiagnosticReport"
 )
 
+func (e HITypeEnumEnum) ToPointer() *HITypeEnumEnum {
+	return &e
+}
+
 func (e *HITypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPConsultation":
 		fallthrough
 	case "Prescription":
@@ -29,9 +33,9 @@ func (e *HITypeEnumEnum) UnmarshalJSON(data []byte) error {
 	case "DischargeSummary":
 		fallthrough
 	case "DiagnosticReport":
-		*e = HITypeEnumEnum(s)
+		*e = HITypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HITypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for HITypeEnumEnum: %v", v)
 	}
 }

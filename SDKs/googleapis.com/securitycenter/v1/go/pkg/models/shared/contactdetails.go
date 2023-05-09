@@ -2,7 +2,7 @@
 
 package shared
 
-// ContactDetails - The details pertaining to specific contacts
+// ContactDetails - Details about specific contacts
 type ContactDetails struct {
 	// A list of contacts
 	Contacts []Contact `json:"contacts,omitempty"`

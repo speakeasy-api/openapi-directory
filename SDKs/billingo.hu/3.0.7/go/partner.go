@@ -134,7 +134,10 @@ func (s *partner) CreatePartner(ctx context.Context, request shared.PartnerUpser
 // Delete an existing partner.
 func (s *partner) DeletePartner(ctx context.Context, request operations.DeletePartnerRequest) (*operations.DeletePartnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/partners/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/partners/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -202,7 +205,10 @@ func (s *partner) DeletePartner(ctx context.Context, request operations.DeletePa
 // Retrieves the details of an existing partner.
 func (s *partner) GetPartner(ctx context.Context, request operations.GetPartnerRequest) (*operations.GetPartnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/partners/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/partners/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -378,7 +384,10 @@ func (s *partner) ListPartner(ctx context.Context, request operations.ListPartne
 // Update an existing partner. Returns a partner object if the update is succeded.
 func (s *partner) UpdatePartner(ctx context.Context, request operations.UpdatePartnerRequest) (*operations.UpdatePartnerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/partners/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/partners/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PartnerUpsert", "json")
 	if err != nil {

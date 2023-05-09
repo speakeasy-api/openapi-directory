@@ -2,47 +2,45 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FileProjectsLocationsBackupsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.FileProjectsLocationsBackupsCreate(ctx, operations.FileProjectsLocationsBackupsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         BackupInput: &shared.BackupInput{
-            Description: "provident",
-            KmsKey: "distinctio",
+            Description: sdk.String("provident"),
+            KmsKey: sdk.String("distinctio"),
             Labels: map[string]string{
                 "unde": "nulla",
                 "corrupti": "illum",
                 "vel": "error",
                 "deserunt": "suscipit",
             },
-            SourceFileShare: "iure",
-            SourceInstance: "magnam",
+            SourceFileShare: sdk.String("iure"),
+            SourceInstance: sdk.String("magnam"),
         },
-        AccessToken: "debitis",
-        Alt: "json",
-        BackupID: "delectus",
-        Callback: "tempora",
-        Fields: "suscipit",
-        Key: "molestiae",
-        OauthToken: "minus",
+        AccessToken: sdk.String("debitis"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        BackupID: sdk.String("delectus"),
+        Callback: sdk.String("tempora"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("molestiae"),
+        OauthToken: sdk.String("minus"),
         Parent: "placeat",
-        PrettyPrint: false,
-        QuotaUser: "voluptatum",
-        UploadType: "iusto",
-        UploadProtocol: "excepturi",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.FileProjectsLocationsBackupsCreate(ctx, req, operations.FileProjectsLocationsBackupsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("voluptatum"),
+        UploadType: sdk.String("iusto"),
+        UploadProtocol: sdk.String("excepturi"),
+    }, operations.FileProjectsLocationsBackupsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

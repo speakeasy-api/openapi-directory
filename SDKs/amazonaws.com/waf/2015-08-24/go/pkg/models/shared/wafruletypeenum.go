@@ -15,20 +15,24 @@ const (
 	WafRuleTypeEnumGroup     WafRuleTypeEnum = "GROUP"
 )
 
+func (e WafRuleTypeEnum) ToPointer() *WafRuleTypeEnum {
+	return &e
+}
+
 func (e *WafRuleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGULAR":
 		fallthrough
 	case "RATE_BASED":
 		fallthrough
 	case "GROUP":
-		*e = WafRuleTypeEnum(s)
+		*e = WafRuleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WafRuleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WafRuleTypeEnum: %v", v)
 	}
 }

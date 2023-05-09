@@ -28,14 +28,19 @@ const (
 	OperationOperationTypeEnumSetNodePoolSize       OperationOperationTypeEnum = "SET_NODE_POOL_SIZE"
 	OperationOperationTypeEnumSetNetworkPolicy      OperationOperationTypeEnum = "SET_NETWORK_POLICY"
 	OperationOperationTypeEnumSetMaintenancePolicy  OperationOperationTypeEnum = "SET_MAINTENANCE_POLICY"
+	OperationOperationTypeEnumResizeCluster         OperationOperationTypeEnum = "RESIZE_CLUSTER"
 )
 
+func (e OperationOperationTypeEnum) ToPointer() *OperationOperationTypeEnum {
+	return &e
+}
+
 func (e *OperationOperationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "CREATE_CLUSTER":
@@ -69,10 +74,12 @@ func (e *OperationOperationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SET_NETWORK_POLICY":
 		fallthrough
 	case "SET_MAINTENANCE_POLICY":
-		*e = OperationOperationTypeEnum(s)
+		fallthrough
+	case "RESIZE_CLUSTER":
+		*e = OperationOperationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperationOperationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OperationOperationTypeEnum: %v", v)
 	}
 }
 
@@ -87,12 +94,16 @@ const (
 	OperationStatusEnumAborting          OperationStatusEnum = "ABORTING"
 )
 
+func (e OperationStatusEnum) ToPointer() *OperationStatusEnum {
+	return &e
+}
+
 func (e *OperationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -102,10 +113,10 @@ func (e *OperationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DONE":
 		fallthrough
 	case "ABORTING":
-		*e = OperationStatusEnum(s)
+		*e = OperationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OperationStatusEnum: %v", v)
 	}
 }
 
@@ -129,7 +140,7 @@ type Operation struct {
 	OperationType *OperationOperationTypeEnum `json:"operationType,omitempty"`
 	// Information about operation (or operation stage) progress.
 	Progress *OperationProgress `json:"progress,omitempty"`
-	// Server-defined URL for the resource.
+	// Server-defined URI for the operation. Example: `https://container.googleapis.com/v1alpha1/projects/123/locations/us-central1/operations/operation-123`.
 	SelfLink *string `json:"selfLink,omitempty"`
 	// [Output only] The time the operation started, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
 	StartTime *string `json:"startTime,omitempty"`
@@ -137,7 +148,7 @@ type Operation struct {
 	Status *OperationStatusEnum `json:"status,omitempty"`
 	// Output only. If an error has occurred, a textual description of the error. Deprecated. Use field error instead.
 	StatusMessage *string `json:"statusMessage,omitempty"`
-	// Server-defined URL for the target of the operation.
+	// Server-defined URI for the target of the operation. The format of this is a URI to the resource being modified (such as a cluster, node pool, or node). For node pool repairs, there may be multiple nodes being repaired, but only one will be the target. Examples: - `https://container.googleapis.com/v1beta1/projects/123/locations/us-central1/clusters/my-cluster` - `https://container.googleapis.com/v1beta1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np` - `https://container.googleapis.com/v1beta1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`
 	TargetLink *string `json:"targetLink,omitempty"`
 	// The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation is taking place. This field is deprecated, use location instead.
 	Zone *string `json:"zone,omitempty"`

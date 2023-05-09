@@ -16,17 +16,21 @@ const (
 	RunStatementXAmzTargetEnumAwsGlueRunStatement RunStatementXAmzTargetEnum = "AWSGlue.RunStatement"
 )
 
+func (e RunStatementXAmzTargetEnum) ToPointer() *RunStatementXAmzTargetEnum {
+	return &e
+}
+
 func (e *RunStatementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.RunStatement":
-		*e = RunStatementXAmzTargetEnum(s)
+		*e = RunStatementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunStatementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RunStatementXAmzTargetEnum: %v", v)
 	}
 }
 

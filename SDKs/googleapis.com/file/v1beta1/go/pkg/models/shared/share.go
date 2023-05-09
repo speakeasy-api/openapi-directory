@@ -17,12 +17,16 @@ const (
 	ShareStateEnumDeleting         ShareStateEnum = "DELETING"
 )
 
+func (e ShareStateEnum) ToPointer() *ShareStateEnum {
+	return &e
+}
+
 func (e *ShareStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -30,15 +34,17 @@ func (e *ShareStateEnum) UnmarshalJSON(data []byte) error {
 	case "READY":
 		fallthrough
 	case "DELETING":
-		*e = ShareStateEnum(s)
+		*e = ShareStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareStateEnum: %v", v)
 	}
 }
 
 // Share - A Filestore share.
 type Share struct {
+	// Immutable. Full name of the Cloud Filestore Backup resource that this Share is restored from, in the format of projects/{project_id}/locations/{location_id}/backups/{backup_id}. Empty, if the Share is created from scratch and not restored from a backup.
+	Backup *string `json:"backup,omitempty"`
 	// File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes. Must be greater than 0.
 	CapacityGb *string `json:"capacityGb,omitempty"`
 	// Output only. The time when the share was created.
@@ -59,6 +65,8 @@ type Share struct {
 
 // ShareInput - A Filestore share.
 type ShareInput struct {
+	// Immutable. Full name of the Cloud Filestore Backup resource that this Share is restored from, in the format of projects/{project_id}/locations/{location_id}/backups/{backup_id}. Empty, if the Share is created from scratch and not restored from a backup.
+	Backup *string `json:"backup,omitempty"`
 	// File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes. Must be greater than 0.
 	CapacityGb *string `json:"capacityGb,omitempty"`
 	// A description of the share with 2048 characters or less. Requests with longer descriptions will be rejected.

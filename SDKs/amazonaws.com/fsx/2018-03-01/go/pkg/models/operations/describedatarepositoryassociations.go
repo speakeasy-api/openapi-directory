@@ -16,17 +16,21 @@ const (
 	DescribeDataRepositoryAssociationsXAmzTargetEnumAwsSimbaAPIServiceV20180301DescribeDataRepositoryAssociations DescribeDataRepositoryAssociationsXAmzTargetEnum = "AWSSimbaAPIService_v20180301.DescribeDataRepositoryAssociations"
 )
 
+func (e DescribeDataRepositoryAssociationsXAmzTargetEnum) ToPointer() *DescribeDataRepositoryAssociationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDataRepositoryAssociationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.DescribeDataRepositoryAssociations":
-		*e = DescribeDataRepositoryAssociationsXAmzTargetEnum(s)
+		*e = DescribeDataRepositoryAssociationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDataRepositoryAssociationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDataRepositoryAssociationsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	DataReplicationInitiationStepStatusEnumSkipped    DataReplicationInitiationStepStatusEnum = "SKIPPED"
 )
 
+func (e DataReplicationInitiationStepStatusEnum) ToPointer() *DataReplicationInitiationStepStatusEnum {
+	return &e
+}
+
 func (e *DataReplicationInitiationStepStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_STARTED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -32,9 +36,9 @@ func (e *DataReplicationInitiationStepStatusEnum) UnmarshalJSON(data []byte) err
 	case "FAILED":
 		fallthrough
 	case "SKIPPED":
-		*e = DataReplicationInitiationStepStatusEnum(s)
+		*e = DataReplicationInitiationStepStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataReplicationInitiationStepStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DataReplicationInitiationStepStatusEnum: %v", v)
 	}
 }

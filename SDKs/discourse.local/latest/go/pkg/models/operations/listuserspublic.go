@@ -15,17 +15,21 @@ const (
 	ListUsersPublicAscEnumTrue ListUsersPublicAscEnum = "true"
 )
 
+func (e ListUsersPublicAscEnum) ToPointer() *ListUsersPublicAscEnum {
+	return &e
+}
+
 func (e *ListUsersPublicAscEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
-		*e = ListUsersPublicAscEnum(s)
+		*e = ListUsersPublicAscEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListUsersPublicAscEnum: %s", s)
+		return fmt.Errorf("invalid value for ListUsersPublicAscEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	ListUsersPublicOrderEnumDaysVisited   ListUsersPublicOrderEnum = "days_visited"
 )
 
+func (e ListUsersPublicOrderEnum) ToPointer() *ListUsersPublicOrderEnum {
+	return &e
+}
+
 func (e *ListUsersPublicOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "likes_received":
 		fallthrough
 	case "likes_given":
@@ -61,10 +69,10 @@ func (e *ListUsersPublicOrderEnum) UnmarshalJSON(data []byte) error {
 	case "posts_read":
 		fallthrough
 	case "days_visited":
-		*e = ListUsersPublicOrderEnum(s)
+		*e = ListUsersPublicOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListUsersPublicOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ListUsersPublicOrderEnum: %v", v)
 	}
 }
 
@@ -80,12 +88,16 @@ const (
 	ListUsersPublicPeriodEnumAll       ListUsersPublicPeriodEnum = "all"
 )
 
+func (e ListUsersPublicPeriodEnum) ToPointer() *ListUsersPublicPeriodEnum {
+	return &e
+}
+
 func (e *ListUsersPublicPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "daily":
 		fallthrough
 	case "weekly":
@@ -97,10 +109,10 @@ func (e *ListUsersPublicPeriodEnum) UnmarshalJSON(data []byte) error {
 	case "yearly":
 		fallthrough
 	case "all":
-		*e = ListUsersPublicPeriodEnum(s)
+		*e = ListUsersPublicPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListUsersPublicPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for ListUsersPublicPeriodEnum: %v", v)
 	}
 }
 

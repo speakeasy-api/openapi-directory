@@ -36,7 +36,10 @@ func newFileActions(defaultClient, securityClient HTTPClient, serverURL, languag
 // Begin file upload
 func (s *fileActions) FileActionBeginUpload(ctx context.Context, request operations.FileActionBeginUploadRequest) (*operations.FileActionBeginUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file_actions/begin_upload/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file_actions/begin_upload/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -107,7 +110,10 @@ func (s *fileActions) FileActionBeginUpload(ctx context.Context, request operati
 // Copy file/folder
 func (s *fileActions) FileActionCopy(ctx context.Context, request operations.FileActionCopyRequest) (*operations.FileActionCopyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file_actions/copy/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file_actions/copy/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -181,7 +187,10 @@ func (s *fileActions) FileActionCopy(ctx context.Context, request operations.Fil
 // Find file/folder by path
 func (s *fileActions) FileActionFind(ctx context.Context, request operations.FileActionFindRequest) (*operations.FileActionFindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file_actions/metadata/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file_actions/metadata/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -249,7 +258,10 @@ func (s *fileActions) FileActionFind(ctx context.Context, request operations.Fil
 // Move file/folder
 func (s *fileActions) FileActionMove(ctx context.Context, request operations.FileActionMoveRequest) (*operations.FileActionMoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file_actions/move/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file_actions/move/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

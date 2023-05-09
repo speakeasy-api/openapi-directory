@@ -34,7 +34,10 @@ func newShoppingadsprogram(defaultClient, securityClient HTTPClient, serverURL, 
 // ContentShoppingadsprogramGet - Retrieves the status and review eligibility for the Shopping Ads program. Returns errors and warnings if they require action to resolve, will become disapprovals, or impact impressions. Use `accountstatuses` to view all issues for an account.
 func (s *shoppingadsprogram) ContentShoppingadsprogramGet(ctx context.Context, request operations.ContentShoppingadsprogramGetRequest, security operations.ContentShoppingadsprogramGetSecurity) (*operations.ContentShoppingadsprogramGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shoppingadsprogram", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shoppingadsprogram", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *shoppingadsprogram) ContentShoppingadsprogramGet(ctx context.Context, r
 // ContentShoppingadsprogramRequestreview - Requests a review of Shopping ads in a specific region. This method is only available to selected merchants.
 func (s *shoppingadsprogram) ContentShoppingadsprogramRequestreview(ctx context.Context, request operations.ContentShoppingadsprogramRequestreviewRequest, security operations.ContentShoppingadsprogramRequestreviewSecurity) (*operations.ContentShoppingadsprogramRequestreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shoppingadsprogram/requestreview", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shoppingadsprogram/requestreview", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestReviewShoppingAdsRequest", "json")
 	if err != nil {

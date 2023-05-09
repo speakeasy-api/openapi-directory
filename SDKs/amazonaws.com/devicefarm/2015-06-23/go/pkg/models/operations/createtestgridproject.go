@@ -16,17 +16,21 @@ const (
 	CreateTestGridProjectXAmzTargetEnumDeviceFarm20150623CreateTestGridProject CreateTestGridProjectXAmzTargetEnum = "DeviceFarm_20150623.CreateTestGridProject"
 )
 
+func (e CreateTestGridProjectXAmzTargetEnum) ToPointer() *CreateTestGridProjectXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateTestGridProjectXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.CreateTestGridProject":
-		*e = CreateTestGridProjectXAmzTargetEnum(s)
+		*e = CreateTestGridProjectXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTestGridProjectXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTestGridProjectXAmzTargetEnum: %v", v)
 	}
 }
 

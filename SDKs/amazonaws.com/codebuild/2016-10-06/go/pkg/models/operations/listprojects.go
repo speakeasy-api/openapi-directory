@@ -16,17 +16,21 @@ const (
 	ListProjectsXAmzTargetEnumCodeBuild20161006ListProjects ListProjectsXAmzTargetEnum = "CodeBuild_20161006.ListProjects"
 )
 
+func (e ListProjectsXAmzTargetEnum) ToPointer() *ListProjectsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListProjectsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.ListProjects":
-		*e = ListProjectsXAmzTargetEnum(s)
+		*e = ListProjectsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListProjectsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListProjectsXAmzTargetEnum: %v", v)
 	}
 }
 

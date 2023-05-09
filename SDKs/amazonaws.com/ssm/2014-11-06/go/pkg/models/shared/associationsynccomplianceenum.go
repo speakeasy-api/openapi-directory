@@ -14,18 +14,22 @@ const (
 	AssociationSyncComplianceEnumManual AssociationSyncComplianceEnum = "MANUAL"
 )
 
+func (e AssociationSyncComplianceEnum) ToPointer() *AssociationSyncComplianceEnum {
+	return &e
+}
+
 func (e *AssociationSyncComplianceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTO":
 		fallthrough
 	case "MANUAL":
-		*e = AssociationSyncComplianceEnum(s)
+		*e = AssociationSyncComplianceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociationSyncComplianceEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociationSyncComplianceEnum: %v", v)
 	}
 }

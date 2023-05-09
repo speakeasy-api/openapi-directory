@@ -16,17 +16,21 @@ const (
 	BatchGetDevEndpointsXAmzTargetEnumAwsGlueBatchGetDevEndpoints BatchGetDevEndpointsXAmzTargetEnum = "AWSGlue.BatchGetDevEndpoints"
 )
 
+func (e BatchGetDevEndpointsXAmzTargetEnum) ToPointer() *BatchGetDevEndpointsXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchGetDevEndpointsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.BatchGetDevEndpoints":
-		*e = BatchGetDevEndpointsXAmzTargetEnum(s)
+		*e = BatchGetDevEndpointsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetDevEndpointsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetDevEndpointsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	SlotTypeCategoryEnumComposite       SlotTypeCategoryEnum = "Composite"
 )
 
+func (e SlotTypeCategoryEnum) ToPointer() *SlotTypeCategoryEnum {
+	return &e
+}
+
 func (e *SlotTypeCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Custom":
 		fallthrough
 	case "Extended":
@@ -29,9 +33,9 @@ func (e *SlotTypeCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "ExternalGrammar":
 		fallthrough
 	case "Composite":
-		*e = SlotTypeCategoryEnum(s)
+		*e = SlotTypeCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SlotTypeCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SlotTypeCategoryEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	OriginAccessControlSigningBehaviorsEnumNoOverride OriginAccessControlSigningBehaviorsEnum = "no-override"
 )
 
+func (e OriginAccessControlSigningBehaviorsEnum) ToPointer() *OriginAccessControlSigningBehaviorsEnum {
+	return &e
+}
+
 func (e *OriginAccessControlSigningBehaviorsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "never":
 		fallthrough
 	case "always":
 		fallthrough
 	case "no-override":
-		*e = OriginAccessControlSigningBehaviorsEnum(s)
+		*e = OriginAccessControlSigningBehaviorsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OriginAccessControlSigningBehaviorsEnum: %s", s)
+		return fmt.Errorf("invalid value for OriginAccessControlSigningBehaviorsEnum: %v", v)
 	}
 }

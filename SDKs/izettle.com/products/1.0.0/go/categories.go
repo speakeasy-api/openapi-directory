@@ -34,7 +34,10 @@ func newCategories(defaultClient, securityClient HTTPClient, serverURL, language
 // CreateCategories - Create a new category
 func (s *categories) CreateCategories(ctx context.Context, request operations.CreateCategoriesRequest, security operations.CreateCategoriesSecurity) (*operations.CreateCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/categories/v2", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/categories/v2", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCategoriesRequest", "json")
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *categories) CreateCategories(ctx context.Context, request operations.Cr
 // DeleteCategory - Delete a category
 func (s *categories) DeleteCategory(ctx context.Context, request operations.DeleteCategoryRequest, security operations.DeleteCategorySecurity) (*operations.DeleteCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/categories/v2/{categoryUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/categories/v2/{categoryUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -120,7 +126,10 @@ func (s *categories) DeleteCategory(ctx context.Context, request operations.Dele
 // GetProductTypes - Retrieve all categories
 func (s *categories) GetProductTypes(ctx context.Context, request operations.GetProductTypesRequest, security operations.GetProductTypesSecurity) (*operations.GetProductTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/categories/v2", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/categories/v2", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -164,7 +173,10 @@ func (s *categories) GetProductTypes(ctx context.Context, request operations.Get
 // RenameCategory - Rename a category
 func (s *categories) RenameCategory(ctx context.Context, request operations.RenameCategoryRequest, security operations.RenameCategorySecurity) (*operations.RenameCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/categories/v2/{categoryUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/categories/v2/{categoryUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RenameCategoryRequest", "json")
 	if err != nil {

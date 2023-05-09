@@ -14,18 +14,22 @@ const (
 	StateMachineStatusEnumDeleting StateMachineStatusEnum = "DELETING"
 )
 
+func (e StateMachineStatusEnum) ToPointer() *StateMachineStatusEnum {
+	return &e
+}
+
 func (e *StateMachineStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "DELETING":
-		*e = StateMachineStatusEnum(s)
+		*e = StateMachineStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StateMachineStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StateMachineStatusEnum: %v", v)
 	}
 }

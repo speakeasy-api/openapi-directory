@@ -25,12 +25,16 @@ const (
 	ParametersTypeEnumPathAttribution               ParametersTypeEnum = "PATH_ATTRIBUTION"
 )
 
+func (e ParametersTypeEnum) ToPointer() *ParametersTypeEnum {
+	return &e
+}
+
 func (e *ParametersTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPORT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STANDARD":
@@ -54,10 +58,10 @@ func (e *ParametersTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FULL_PATH":
 		fallthrough
 	case "PATH_ATTRIBUTION":
-		*e = ParametersTypeEnum(s)
+		*e = ParametersTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParametersTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParametersTypeEnum: %v", v)
 	}
 }
 

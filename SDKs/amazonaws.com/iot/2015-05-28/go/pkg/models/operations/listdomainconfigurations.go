@@ -18,21 +18,25 @@ const (
 	ListDomainConfigurationsServiceTypeEnumJobs               ListDomainConfigurationsServiceTypeEnum = "JOBS"
 )
 
+func (e ListDomainConfigurationsServiceTypeEnum) ToPointer() *ListDomainConfigurationsServiceTypeEnum {
+	return &e
+}
+
 func (e *ListDomainConfigurationsServiceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA":
 		fallthrough
 	case "CREDENTIAL_PROVIDER":
 		fallthrough
 	case "JOBS":
-		*e = ListDomainConfigurationsServiceTypeEnum(s)
+		*e = ListDomainConfigurationsServiceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDomainConfigurationsServiceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDomainConfigurationsServiceTypeEnum: %v", v)
 	}
 }
 

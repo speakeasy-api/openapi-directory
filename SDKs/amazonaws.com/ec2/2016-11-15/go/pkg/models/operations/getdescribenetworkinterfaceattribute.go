@@ -15,17 +15,21 @@ const (
 	GETDescribeNetworkInterfaceAttributeActionEnumDescribeNetworkInterfaceAttribute GETDescribeNetworkInterfaceAttributeActionEnum = "DescribeNetworkInterfaceAttribute"
 )
 
+func (e GETDescribeNetworkInterfaceAttributeActionEnum) ToPointer() *GETDescribeNetworkInterfaceAttributeActionEnum {
+	return &e
+}
+
 func (e *GETDescribeNetworkInterfaceAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeNetworkInterfaceAttribute":
-		*e = GETDescribeNetworkInterfaceAttributeActionEnum(s)
+		*e = GETDescribeNetworkInterfaceAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeNetworkInterfaceAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeNetworkInterfaceAttributeActionEnum: %v", v)
 	}
 }
 
@@ -39,12 +43,16 @@ const (
 	GETDescribeNetworkInterfaceAttributeAttributeEnumAttachment      GETDescribeNetworkInterfaceAttributeAttributeEnum = "attachment"
 )
 
+func (e GETDescribeNetworkInterfaceAttributeAttributeEnum) ToPointer() *GETDescribeNetworkInterfaceAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETDescribeNetworkInterfaceAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "description":
 		fallthrough
 	case "groupSet":
@@ -52,10 +60,10 @@ func (e *GETDescribeNetworkInterfaceAttributeAttributeEnum) UnmarshalJSON(data [
 	case "sourceDestCheck":
 		fallthrough
 	case "attachment":
-		*e = GETDescribeNetworkInterfaceAttributeAttributeEnum(s)
+		*e = GETDescribeNetworkInterfaceAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeNetworkInterfaceAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeNetworkInterfaceAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -66,17 +74,21 @@ const (
 	GETDescribeNetworkInterfaceAttributeVersionEnumTwoThousandAndSixteen1115 GETDescribeNetworkInterfaceAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeNetworkInterfaceAttributeVersionEnum) ToPointer() *GETDescribeNetworkInterfaceAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeNetworkInterfaceAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeNetworkInterfaceAttributeVersionEnum(s)
+		*e = GETDescribeNetworkInterfaceAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeNetworkInterfaceAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeNetworkInterfaceAttributeVersionEnum: %v", v)
 	}
 }
 

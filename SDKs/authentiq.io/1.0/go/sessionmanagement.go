@@ -38,7 +38,10 @@ func newSessionManagement(defaultClient, securityClient HTTPClient, serverURL, l
 // http://openid.net/specs/openid-connect-session-1_0.html#OPiframe - OIDC OP Session Management Iframe
 func (s *sessionManagement) AuthorizeIframe(ctx context.Context, request operations.AuthorizeIframeRequest) (*operations.AuthorizeIframeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{client_id}/iframe", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{client_id}/iframe", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

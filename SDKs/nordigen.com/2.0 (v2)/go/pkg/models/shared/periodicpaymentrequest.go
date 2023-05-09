@@ -8,7 +8,8 @@ import (
 	"openapi/pkg/types"
 )
 
-// PeriodicPaymentRequestExecutionRuleEnum - Behavior when periodic payment dates fall on holiday.
+// PeriodicPaymentRequestExecutionRuleEnum - * `following` - following
+// * `preceding` - preceding
 type PeriodicPaymentRequestExecutionRuleEnum string
 
 const (
@@ -16,22 +17,35 @@ const (
 	PeriodicPaymentRequestExecutionRuleEnumPreceding PeriodicPaymentRequestExecutionRuleEnum = "preceding"
 )
 
+func (e PeriodicPaymentRequestExecutionRuleEnum) ToPointer() *PeriodicPaymentRequestExecutionRuleEnum {
+	return &e
+}
+
 func (e *PeriodicPaymentRequestExecutionRuleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "following":
 		fallthrough
 	case "preceding":
-		*e = PeriodicPaymentRequestExecutionRuleEnum(s)
+		*e = PeriodicPaymentRequestExecutionRuleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PeriodicPaymentRequestExecutionRuleEnum: %s", s)
+		return fmt.Errorf("invalid value for PeriodicPaymentRequestExecutionRuleEnum: %v", v)
 	}
 }
 
+// PeriodicPaymentRequestFrequencyEnum - * `Daily` - Daily
+// * `Weekly` - Weekly
+// * `EveryTwoWeeks` - EveryTwoWeeks
+// * `Monthly` - Monthly
+// * `EveryTwoMonths` - EveryTwoMonths
+// * `Quarterly` - Quarterly
+// * `SemiAnnual` - SemiAnnual
+// * `Annual` - Annual
+// * `MonthlyVariable` - MonthlyVariable
 type PeriodicPaymentRequestFrequencyEnum string
 
 const (
@@ -46,12 +60,16 @@ const (
 	PeriodicPaymentRequestFrequencyEnumMonthlyVariable PeriodicPaymentRequestFrequencyEnum = "MonthlyVariable"
 )
 
+func (e PeriodicPaymentRequestFrequencyEnum) ToPointer() *PeriodicPaymentRequestFrequencyEnum {
+	return &e
+}
+
 func (e *PeriodicPaymentRequestFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Daily":
 		fallthrough
 	case "Weekly":
@@ -69,10 +87,10 @@ func (e *PeriodicPaymentRequestFrequencyEnum) UnmarshalJSON(data []byte) error {
 	case "Annual":
 		fallthrough
 	case "MonthlyVariable":
-		*e = PeriodicPaymentRequestFrequencyEnum(s)
+		*e = PeriodicPaymentRequestFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PeriodicPaymentRequestFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for PeriodicPaymentRequestFrequencyEnum: %v", v)
 	}
 }
 
@@ -81,6 +99,9 @@ type PeriodicPaymentRequest struct {
 	DayOfExecution *string     `json:"day_of_execution,omitempty"`
 	EndDate        *types.Date `json:"end_date,omitempty"`
 	// Behavior when periodic payment dates fall on holiday.
+	//
+	// * `following` - following
+	// * `preceding` - preceding
 	ExecutionRule *PeriodicPaymentRequestExecutionRuleEnum `json:"execution_rule,omitempty"`
 	Frequency     *PeriodicPaymentRequestFrequencyEnum     `json:"frequency,omitempty"`
 	StartDate     types.Date                               `json:"start_date"`

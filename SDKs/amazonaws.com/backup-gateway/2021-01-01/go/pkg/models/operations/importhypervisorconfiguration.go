@@ -16,17 +16,21 @@ const (
 	ImportHypervisorConfigurationXAmzTargetEnumBackupOnPremisesV20210101ImportHypervisorConfiguration ImportHypervisorConfigurationXAmzTargetEnum = "BackupOnPremises_v20210101.ImportHypervisorConfiguration"
 )
 
+func (e ImportHypervisorConfigurationXAmzTargetEnum) ToPointer() *ImportHypervisorConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportHypervisorConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.ImportHypervisorConfiguration":
-		*e = ImportHypervisorConfigurationXAmzTargetEnum(s)
+		*e = ImportHypervisorConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportHypervisorConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportHypervisorConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

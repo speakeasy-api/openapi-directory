@@ -15,19 +15,23 @@ const (
 	DatabaseDumpDatabaseTypeEnumMysql                   DatabaseDumpDatabaseTypeEnum = "MYSQL"
 )
 
+func (e DatabaseDumpDatabaseTypeEnum) ToPointer() *DatabaseDumpDatabaseTypeEnum {
+	return &e
+}
+
 func (e *DatabaseDumpDatabaseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATABASE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MYSQL":
-		*e = DatabaseDumpDatabaseTypeEnum(s)
+		*e = DatabaseDumpDatabaseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseDumpDatabaseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseDumpDatabaseTypeEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	DatabaseDumpTypeEnumAvro            DatabaseDumpTypeEnum = "AVRO"
 )
 
+func (e DatabaseDumpTypeEnum) ToPointer() *DatabaseDumpTypeEnum {
+	return &e
+}
+
 func (e *DatabaseDumpTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "MYSQL":
 		fallthrough
 	case "AVRO":
-		*e = DatabaseDumpTypeEnum(s)
+		*e = DatabaseDumpTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseDumpTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseDumpTypeEnum: %v", v)
 	}
 }
 

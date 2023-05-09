@@ -19,12 +19,16 @@ const (
 	GuaranteedOrderStatusEntityStatusEnumEntityStatusScheduledForDeletion GuaranteedOrderStatusEntityStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
+func (e GuaranteedOrderStatusEntityStatusEnum) ToPointer() *GuaranteedOrderStatusEntityStatusEnum {
+	return &e
+}
+
 func (e *GuaranteedOrderStatusEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ENTITY_STATUS_ACTIVE":
@@ -36,10 +40,10 @@ func (e *GuaranteedOrderStatusEntityStatusEnum) UnmarshalJSON(data []byte) error
 	case "ENTITY_STATUS_PAUSED":
 		fallthrough
 	case "ENTITY_STATUS_SCHEDULED_FOR_DELETION":
-		*e = GuaranteedOrderStatusEntityStatusEnum(s)
+		*e = GuaranteedOrderStatusEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuaranteedOrderStatusEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GuaranteedOrderStatusEntityStatusEnum: %v", v)
 	}
 }
 
@@ -60,21 +64,25 @@ const (
 	GuaranteedOrderStatusConfigStatusEnumCompleted                              GuaranteedOrderStatusConfigStatusEnum = "COMPLETED"
 )
 
+func (e GuaranteedOrderStatusConfigStatusEnum) ToPointer() *GuaranteedOrderStatusConfigStatusEnum {
+	return &e
+}
+
 func (e *GuaranteedOrderStatusConfigStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GUARANTEED_ORDER_CONFIG_STATUS_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
 		fallthrough
 	case "COMPLETED":
-		*e = GuaranteedOrderStatusConfigStatusEnum(s)
+		*e = GuaranteedOrderStatusConfigStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuaranteedOrderStatusConfigStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GuaranteedOrderStatusConfigStatusEnum: %v", v)
 	}
 }
 

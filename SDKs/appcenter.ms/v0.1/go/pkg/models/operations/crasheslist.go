@@ -22,19 +22,23 @@ const (
 	CrashesListErrorTypeEnumHandledErrors  CrashesListErrorTypeEnum = "HandledErrors"
 )
 
+func (e CrashesListErrorTypeEnum) ToPointer() *CrashesListErrorTypeEnum {
+	return &e
+}
+
 func (e *CrashesListErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CrashingErrors":
 		fallthrough
 	case "HandledErrors":
-		*e = CrashesListErrorTypeEnum(s)
+		*e = CrashesListErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrashesListErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CrashesListErrorTypeEnum: %v", v)
 	}
 }
 

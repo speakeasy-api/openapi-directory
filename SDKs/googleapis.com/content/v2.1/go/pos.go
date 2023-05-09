@@ -90,7 +90,10 @@ func (s *pos) ContentPosCustombatch(ctx context.Context, request operations.Cont
 // ContentPosDelete - Deletes a store for the given merchant.
 func (s *pos) ContentPosDelete(ctx context.Context, request operations.ContentPosDeleteRequest, security operations.ContentPosDeleteSecurity) (*operations.ContentPosDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store/{storeCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store/{storeCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +132,10 @@ func (s *pos) ContentPosDelete(ctx context.Context, request operations.ContentPo
 // ContentPosGet - Retrieves information about the given store.
 func (s *pos) ContentPosGet(ctx context.Context, request operations.ContentPosGetRequest, security operations.ContentPosGetSecurity) (*operations.ContentPosGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store/{storeCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store/{storeCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,7 +183,10 @@ func (s *pos) ContentPosGet(ctx context.Context, request operations.ContentPosGe
 // ContentPosInsert - Creates a store for the given merchant.
 func (s *pos) ContentPosInsert(ctx context.Context, request operations.ContentPosInsertRequest, security operations.ContentPosInsertSecurity) (*operations.ContentPosInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PosStore", "json")
 	if err != nil {
@@ -232,7 +241,10 @@ func (s *pos) ContentPosInsert(ctx context.Context, request operations.ContentPo
 // ContentPosInventory - Submit inventory for the given merchant.
 func (s *pos) ContentPosInventory(ctx context.Context, request operations.ContentPosInventoryRequest, security operations.ContentPosInventorySecurity) (*operations.ContentPosInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/inventory", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/inventory", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PosInventoryRequest", "json")
 	if err != nil {
@@ -287,7 +299,10 @@ func (s *pos) ContentPosInventory(ctx context.Context, request operations.Conten
 // ContentPosList - Lists the stores of the target merchant.
 func (s *pos) ContentPosList(ctx context.Context, request operations.ContentPosListRequest, security operations.ContentPosListSecurity) (*operations.ContentPosListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/store", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -335,7 +350,10 @@ func (s *pos) ContentPosList(ctx context.Context, request operations.ContentPosL
 // ContentPosSale - Submit a sale event for the given merchant.
 func (s *pos) ContentPosSale(ctx context.Context, request operations.ContentPosSaleRequest, security operations.ContentPosSaleSecurity) (*operations.ContentPosSaleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/sale", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pos/{targetMerchantId}/sale", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PosSaleRequest", "json")
 	if err != nil {

@@ -38,12 +38,16 @@ const (
 	ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -57,10 +61,10 @@ func (e *ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnu
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsGroupErrorFreeDevicePercentagesDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

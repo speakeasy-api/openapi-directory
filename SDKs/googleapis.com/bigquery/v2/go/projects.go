@@ -35,7 +35,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // BigqueryProjectsGetServiceAccount - Returns the email address of the service account for your project used for interactions with Google Cloud KMS.
 func (s *projects) BigqueryProjectsGetServiceAccount(ctx context.Context, request operations.BigqueryProjectsGetServiceAccountRequest, security operations.BigqueryProjectsGetServiceAccountSecurity) (*operations.BigqueryProjectsGetServiceAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/serviceAccount", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/serviceAccount", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

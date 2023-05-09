@@ -20,12 +20,16 @@ const (
 	MatchOptionEnumGreaterThanOrEqual MatchOptionEnum = "GREATER_THAN_OR_EQUAL"
 )
 
+func (e MatchOptionEnum) ToPointer() *MatchOptionEnum {
+	return &e
+}
+
 func (e *MatchOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUALS":
 		fallthrough
 	case "ABSENT":
@@ -41,9 +45,9 @@ func (e *MatchOptionEnum) UnmarshalJSON(data []byte) error {
 	case "CASE_INSENSITIVE":
 		fallthrough
 	case "GREATER_THAN_OR_EQUAL":
-		*e = MatchOptionEnum(s)
+		*e = MatchOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MatchOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for MatchOptionEnum: %v", v)
 	}
 }

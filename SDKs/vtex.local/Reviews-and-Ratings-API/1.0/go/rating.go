@@ -34,7 +34,10 @@ func newRating(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Retrieves the rating of a specific product.
 func (s *rating) GetProductRating(ctx context.Context, request operations.GetProductRatingRequest) (*operations.GetProductRatingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rating/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/rating/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

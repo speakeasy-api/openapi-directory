@@ -20,12 +20,16 @@ const (
 	ListThingRegistrationTasksStatusEnumCancelling ListThingRegistrationTasksStatusEnum = "Cancelling"
 )
 
+func (e ListThingRegistrationTasksStatusEnum) ToPointer() *ListThingRegistrationTasksStatusEnum {
+	return &e
+}
+
 func (e *ListThingRegistrationTasksStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InProgress":
 		fallthrough
 	case "Completed":
@@ -35,10 +39,10 @@ func (e *ListThingRegistrationTasksStatusEnum) UnmarshalJSON(data []byte) error 
 	case "Cancelled":
 		fallthrough
 	case "Cancelling":
-		*e = ListThingRegistrationTasksStatusEnum(s)
+		*e = ListThingRegistrationTasksStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListThingRegistrationTasksStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListThingRegistrationTasksStatusEnum: %v", v)
 	}
 }
 

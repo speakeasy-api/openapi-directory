@@ -23,12 +23,16 @@ const (
 	GetAPIV1DonationsCarbonCalculateTransportationMethodEnumSea   GetAPIV1DonationsCarbonCalculateTransportationMethodEnum = "sea"
 )
 
+func (e GetAPIV1DonationsCarbonCalculateTransportationMethodEnum) ToPointer() *GetAPIV1DonationsCarbonCalculateTransportationMethodEnum {
+	return &e
+}
+
 func (e *GetAPIV1DonationsCarbonCalculateTransportationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "air":
 		fallthrough
 	case "truck":
@@ -36,10 +40,10 @@ func (e *GetAPIV1DonationsCarbonCalculateTransportationMethodEnum) UnmarshalJSON
 	case "rail":
 		fallthrough
 	case "sea":
-		*e = GetAPIV1DonationsCarbonCalculateTransportationMethodEnum(s)
+		*e = GetAPIV1DonationsCarbonCalculateTransportationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAPIV1DonationsCarbonCalculateTransportationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAPIV1DonationsCarbonCalculateTransportationMethodEnum: %v", v)
 	}
 }
 

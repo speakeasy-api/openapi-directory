@@ -25,12 +25,16 @@ const (
 	GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTypeEnumIpv6Pool       GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTypeEnum = "ipv6-pool"
 )
 
+func (e GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTypeEnum) ToPointer() *GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTypeEnum {
+	return &e
+}
+
 func (e *GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "subnet":
@@ -40,10 +44,10 @@ func (e *GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResource
 	case "public-ipv4-pool":
 		fallthrough
 	case "ipv6-pool":
-		*e = GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTypeEnum(s)
+		*e = GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTypeEnum: %v", v)
 	}
 }
 

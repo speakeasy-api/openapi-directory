@@ -15,6 +15,7 @@ type DesignerTemplate struct {
 	Format     FormatEnum `json:"format"`
 	HeaderHTML *string    `json:"header_html,omitempty"`
 	ID         *string    `json:"id,omitempty"`
+	Margin     Margin     `json:"margin"`
 	Name       string     `json:"name"`
 	// An enumeration.
 	Orientation    OrientationEnum        `json:"orientation"`

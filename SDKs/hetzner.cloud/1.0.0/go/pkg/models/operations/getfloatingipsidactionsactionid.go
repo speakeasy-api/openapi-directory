@@ -39,21 +39,25 @@ const (
 	GetFloatingIpsIDActionsActionIDActionResponseActionStatusEnumError   GetFloatingIpsIDActionsActionIDActionResponseActionStatusEnum = "error"
 )
 
+func (e GetFloatingIpsIDActionsActionIDActionResponseActionStatusEnum) ToPointer() *GetFloatingIpsIDActionsActionIDActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *GetFloatingIpsIDActionsActionIDActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = GetFloatingIpsIDActionsActionIDActionResponseActionStatusEnum(s)
+		*e = GetFloatingIpsIDActionsActionIDActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFloatingIpsIDActionsActionIDActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFloatingIpsIDActionsActionIDActionResponseActionStatusEnum: %v", v)
 	}
 }
 

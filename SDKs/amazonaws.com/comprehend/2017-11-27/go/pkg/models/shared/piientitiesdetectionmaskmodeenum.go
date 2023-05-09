@@ -14,18 +14,22 @@ const (
 	PiiEntitiesDetectionMaskModeEnumReplaceWithPiiEntityType PiiEntitiesDetectionMaskModeEnum = "REPLACE_WITH_PII_ENTITY_TYPE"
 )
 
+func (e PiiEntitiesDetectionMaskModeEnum) ToPointer() *PiiEntitiesDetectionMaskModeEnum {
+	return &e
+}
+
 func (e *PiiEntitiesDetectionMaskModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MASK":
 		fallthrough
 	case "REPLACE_WITH_PII_ENTITY_TYPE":
-		*e = PiiEntitiesDetectionMaskModeEnum(s)
+		*e = PiiEntitiesDetectionMaskModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PiiEntitiesDetectionMaskModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PiiEntitiesDetectionMaskModeEnum: %v", v)
 	}
 }

@@ -20,12 +20,16 @@ const (
 	ListKeywordsForDataSourceSourceEnumManual         ListKeywordsForDataSourceSourceEnum = "MANUAL"
 )
 
+func (e ListKeywordsForDataSourceSourceEnum) ToPointer() *ListKeywordsForDataSourceSourceEnum {
+	return &e
+}
+
 func (e *ListKeywordsForDataSourceSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_Cloudtrail":
 		fallthrough
 	case "AWS_Config":
@@ -35,10 +39,10 @@ func (e *ListKeywordsForDataSourceSourceEnum) UnmarshalJSON(data []byte) error {
 	case "AWS_API_Call":
 		fallthrough
 	case "MANUAL":
-		*e = ListKeywordsForDataSourceSourceEnum(s)
+		*e = ListKeywordsForDataSourceSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListKeywordsForDataSourceSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ListKeywordsForDataSourceSourceEnum: %v", v)
 	}
 }
 

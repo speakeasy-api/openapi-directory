@@ -16,17 +16,21 @@ const (
 	StopApplicationXAmzTargetEnumKinesisAnalytics20150814StopApplication StopApplicationXAmzTargetEnum = "KinesisAnalytics_20150814.StopApplication"
 )
 
+func (e StopApplicationXAmzTargetEnum) ToPointer() *StopApplicationXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopApplicationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20150814.StopApplication":
-		*e = StopApplicationXAmzTargetEnum(s)
+		*e = StopApplicationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopApplicationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopApplicationXAmzTargetEnum: %v", v)
 	}
 }
 

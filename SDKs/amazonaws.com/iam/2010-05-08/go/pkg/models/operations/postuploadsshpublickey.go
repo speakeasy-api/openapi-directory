@@ -15,17 +15,21 @@ const (
 	POSTUploadSSHPublicKeyActionEnumUploadSSHPublicKey POSTUploadSSHPublicKeyActionEnum = "UploadSSHPublicKey"
 )
 
+func (e POSTUploadSSHPublicKeyActionEnum) ToPointer() *POSTUploadSSHPublicKeyActionEnum {
+	return &e
+}
+
 func (e *POSTUploadSSHPublicKeyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UploadSSHPublicKey":
-		*e = POSTUploadSSHPublicKeyActionEnum(s)
+		*e = POSTUploadSSHPublicKeyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUploadSSHPublicKeyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUploadSSHPublicKeyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUploadSSHPublicKeyVersionEnumTwoThousandAndTen0508 POSTUploadSSHPublicKeyVersionEnum = "2010-05-08"
 )
 
+func (e POSTUploadSSHPublicKeyVersionEnum) ToPointer() *POSTUploadSSHPublicKeyVersionEnum {
+	return &e
+}
+
 func (e *POSTUploadSSHPublicKeyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTUploadSSHPublicKeyVersionEnum(s)
+		*e = POSTUploadSSHPublicKeyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUploadSSHPublicKeyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUploadSSHPublicKeyVersionEnum: %v", v)
 	}
 }
 

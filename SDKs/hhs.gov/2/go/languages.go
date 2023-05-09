@@ -89,7 +89,10 @@ func (s *languages) GetResourcesLanguagesJSON(ctx context.Context, request opera
 // Information about a specific language
 func (s *languages) GetResourcesLanguagesIDJSON(ctx context.Context, request operations.GetResourcesLanguagesIDJSONRequest) (*operations.GetResourcesLanguagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/languages/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/resources/languages/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -35,7 +35,10 @@ func newFolder(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Gets the Values for a folder or a meter
 func (s *folder) FolderGet(ctx context.Context, request operations.FolderGetRequest) (*operations.FolderGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/Folder/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/Folder/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

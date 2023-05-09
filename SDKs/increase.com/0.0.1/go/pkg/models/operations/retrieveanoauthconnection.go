@@ -13,23 +13,27 @@ type RetrieveAnOauthConnectionRequest struct {
 	OauthConnectionID string `pathParam:"style=simple,explode=false,name=oauth_connection_id"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum = "429"
+	RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON13TypeEnumRateLimitedError RetrieveAnOauthConnectionDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON13TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON13TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type RetrieveAnOauthConnectionDefaultApplicationJSON13 struct {
 	Type       RetrieveAnOauthConnectionDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnum = "403"
+	RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON12TypeEnumPrivateFeatureError RetrieveAnOauthConnectionDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON12TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON12TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type RetrieveAnOauthConnectionDefaultApplicationJSON12 struct {
 	Type   RetrieveAnOauthConnectionDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnum = "404"
+	RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON11TypeEnumObjectNotFoundError RetrieveAnOauthConnectionDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON11TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON11TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type RetrieveAnOauthConnectionDefaultApplicationJSON11 struct {
 	Type   RetrieveAnOauthConnectionDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnumFourHundred RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnum = "400"
+	RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnumFourHundred RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON10TypeEnumMalformedRequestError RetrieveAnOauthConnectionDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON10TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON10TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type RetrieveAnOauthConnectionDefaultApplicationJSON10 struct {
 	Type   RetrieveAnOauthConnectionDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnumFourHundred RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnum = "400"
+	RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnumFourHundred RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON9TypeEnumInvalidParametersError RetrieveAnOauthConnectionDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON9TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON9TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type RetrieveAnOauthConnectionDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                   `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                   `json:"errors"`
 	Status RetrieveAnOauthConnectionDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                     `json:"title"`
 	Type   RetrieveAnOauthConnectionDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnum = "409"
+	RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON8TypeEnumInvalidOperationError RetrieveAnOauthConnectionDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON8TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON8TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type RetrieveAnOauthConnectionDefaultApplicationJSON8 struct {
 	Type   RetrieveAnOauthConnectionDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnum = "401"
+	RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON7TypeEnumInvalidAPIKeyError RetrieveAnOauthConnectionDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON7TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON7TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type RetrieveAnOauthConnectionDefaultApplicationJSON7 struct {
 	Type   RetrieveAnOauthConnectionDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnumFiveHundred RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnum = "500"
+	RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnumFiveHundred RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON6TypeEnumInternalServerError RetrieveAnOauthConnectionDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON6TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON6TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type RetrieveAnOauthConnectionDefaultApplicationJSON6 struct {
 	Type   RetrieveAnOauthConnectionDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnum = "403"
+	RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON5TypeEnumInsufficientPermissionsError RetrieveAnOauthConnectionDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON5TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON5TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type RetrieveAnOauthConnectionDefaultApplicationJSON5 struct {
 	Type   RetrieveAnOauthConnectionDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnum = "422"
+	RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError RetrieveAnOauthConnectionDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON4TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON4TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type RetrieveAnOauthConnectionDefaultApplicationJSON4 struct {
 	Type   RetrieveAnOauthConnectionDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnum = "409"
+	RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON3TypeEnumIdempotencyConflictError RetrieveAnOauthConnectionDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON3TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON3TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type RetrieveAnOauthConnectionDefaultApplicationJSON3 struct {
 	Type   RetrieveAnOauthConnectionDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnum = "403"
+	RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON2TypeEnumEnvironmentMismatchError RetrieveAnOauthConnectionDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON2TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON2TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type RetrieveAnOauthConnectionDefaultApplicationJSON2 struct {
 	Type   RetrieveAnOauthConnectionDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnum string
+type RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnum int64
 
 const (
-	RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnum = "404"
+	RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	RetrieveAnOauthConnectionDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError RetrieveAnOauthConnectionDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e RetrieveAnOauthConnectionDefaultApplicationJSON1TypeEnum) ToPointer() *RetrieveAnOauthConnectionDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnOauthConnectionDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = RetrieveAnOauthConnectionDefaultApplicationJSON1TypeEnum(s)
+		*e = RetrieveAnOauthConnectionDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnOauthConnectionDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

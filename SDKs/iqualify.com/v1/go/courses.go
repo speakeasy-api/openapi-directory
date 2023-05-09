@@ -93,7 +93,10 @@ func (s *courses) GetCourses(ctx context.Context) (*operations.GetCoursesRespons
 // Responds with a course matching the contentId.
 func (s *courses) GetCoursesContentID(ctx context.Context, request operations.GetCoursesContentIDRequest) (*operations.GetCoursesContentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -152,7 +155,10 @@ func (s *courses) GetCoursesContentID(ctx context.Context, request operations.Ge
 // Responds with all activations for the contentId provided.
 func (s *courses) GetCoursesContentIDActivations(ctx context.Context, request operations.GetCoursesContentIDActivationsRequest) (*operations.GetCoursesContentIDActivationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}/activations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}/activations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -211,7 +217,10 @@ func (s *courses) GetCoursesContentIDActivations(ctx context.Context, request op
 // Responds with users who have access to a specific course by contentId.
 func (s *courses) GetCoursesContentIDPermissions(ctx context.Context, request operations.GetCoursesContentIDPermissionsRequest) (*operations.GetCoursesContentIDPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}/permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/courses/{contentId}/permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -270,7 +279,10 @@ func (s *courses) GetCoursesContentIDPermissions(ctx context.Context, request op
 // Provide a user with access to a specific course by rootContentId.
 func (s *courses) PostCoursesRootContentIDPermissionsUserEmail(ctx context.Context, request operations.PostCoursesRootContentIDPermissionsUserEmailRequest) (*operations.PostCoursesRootContentIDPermissionsUserEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/courses/{rootContentId}/permissions/{userEmail}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/courses/{rootContentId}/permissions/{userEmail}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

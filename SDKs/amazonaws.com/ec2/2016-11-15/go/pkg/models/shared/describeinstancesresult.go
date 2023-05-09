@@ -25,12 +25,16 @@ const (
 	DescribeInstancesResultReservationsInstancesArchitectureEnumArm64Mac DescribeInstancesResultReservationsInstancesArchitectureEnum = "arm64_mac"
 )
 
+func (e DescribeInstancesResultReservationsInstancesArchitectureEnum) ToPointer() *DescribeInstancesResultReservationsInstancesArchitectureEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "i386":
 		fallthrough
 	case "x86_64":
@@ -40,10 +44,10 @@ func (e *DescribeInstancesResultReservationsInstancesArchitectureEnum) Unmarshal
 	case "x86_64_mac":
 		fallthrough
 	case "arm64_mac":
-		*e = DescribeInstancesResultReservationsInstancesArchitectureEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesArchitectureEnum: %v", v)
 	}
 }
 
@@ -57,12 +61,16 @@ const (
 	DescribeInstancesResultReservationsInstancesBlockDeviceMappingsEbsStatusEnumDetached  DescribeInstancesResultReservationsInstancesBlockDeviceMappingsEbsStatusEnum = "detached"
 )
 
+func (e DescribeInstancesResultReservationsInstancesBlockDeviceMappingsEbsStatusEnum) ToPointer() *DescribeInstancesResultReservationsInstancesBlockDeviceMappingsEbsStatusEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesBlockDeviceMappingsEbsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -70,10 +78,10 @@ func (e *DescribeInstancesResultReservationsInstancesBlockDeviceMappingsEbsStatu
 	case "detaching":
 		fallthrough
 	case "detached":
-		*e = DescribeInstancesResultReservationsInstancesBlockDeviceMappingsEbsStatusEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesBlockDeviceMappingsEbsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesBlockDeviceMappingsEbsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesBlockDeviceMappingsEbsStatusEnum: %v", v)
 	}
 }
 
@@ -100,21 +108,25 @@ const (
 	DescribeInstancesResultReservationsInstancesBootModeEnumUefiPreferred DescribeInstancesResultReservationsInstancesBootModeEnum = "uefi-preferred"
 )
 
+func (e DescribeInstancesResultReservationsInstancesBootModeEnum) ToPointer() *DescribeInstancesResultReservationsInstancesBootModeEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesBootModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy-bios":
 		fallthrough
 	case "uefi":
 		fallthrough
 	case "uefi-preferred":
-		*e = DescribeInstancesResultReservationsInstancesBootModeEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesBootModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesBootModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesBootModeEnum: %v", v)
 	}
 }
 
@@ -126,19 +138,23 @@ const (
 	DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnumNone DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum = "none"
 )
 
+func (e DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum) ToPointer() *DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "none":
-		*e = DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum: %v", v)
 	}
 }
 
@@ -168,19 +184,23 @@ const (
 	DescribeInstancesResultReservationsInstancesCurrentInstanceBootModeEnumUefi       DescribeInstancesResultReservationsInstancesCurrentInstanceBootModeEnum = "uefi"
 )
 
+func (e DescribeInstancesResultReservationsInstancesCurrentInstanceBootModeEnum) ToPointer() *DescribeInstancesResultReservationsInstancesCurrentInstanceBootModeEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesCurrentInstanceBootModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy-bios":
 		fallthrough
 	case "uefi":
-		*e = DescribeInstancesResultReservationsInstancesCurrentInstanceBootModeEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesCurrentInstanceBootModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesCurrentInstanceBootModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesCurrentInstanceBootModeEnum: %v", v)
 	}
 }
 
@@ -218,19 +238,23 @@ const (
 	DescribeInstancesResultReservationsInstancesHypervisorEnumXen DescribeInstancesResultReservationsInstancesHypervisorEnum = "xen"
 )
 
+func (e DescribeInstancesResultReservationsInstancesHypervisorEnum) ToPointer() *DescribeInstancesResultReservationsInstancesHypervisorEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesHypervisorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ovm":
 		fallthrough
 	case "xen":
-		*e = DescribeInstancesResultReservationsInstancesHypervisorEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesHypervisorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesHypervisorEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesHypervisorEnum: %v", v)
 	}
 }
 
@@ -248,19 +272,23 @@ const (
 	DescribeInstancesResultReservationsInstancesInstanceLifecycleEnumScheduled DescribeInstancesResultReservationsInstancesInstanceLifecycleEnum = "scheduled"
 )
 
+func (e DescribeInstancesResultReservationsInstancesInstanceLifecycleEnum) ToPointer() *DescribeInstancesResultReservationsInstancesInstanceLifecycleEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesInstanceLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spot":
 		fallthrough
 	case "scheduled":
-		*e = DescribeInstancesResultReservationsInstancesInstanceLifecycleEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesInstanceLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesInstanceLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesInstanceLifecycleEnum: %v", v)
 	}
 }
 
@@ -906,14 +934,23 @@ const (
 	DescribeInstancesResultReservationsInstancesInstanceTypeEnumR7g12xlarge     DescribeInstancesResultReservationsInstancesInstanceTypeEnum = "r7g.12xlarge"
 	DescribeInstancesResultReservationsInstancesInstanceTypeEnumR7g16xlarge     DescribeInstancesResultReservationsInstancesInstanceTypeEnum = "r7g.16xlarge"
 	DescribeInstancesResultReservationsInstancesInstanceTypeEnumR7gMetal        DescribeInstancesResultReservationsInstancesInstanceTypeEnum = "r7g.metal"
+	DescribeInstancesResultReservationsInstancesInstanceTypeEnumC6inMetal       DescribeInstancesResultReservationsInstancesInstanceTypeEnum = "c6in.metal"
+	DescribeInstancesResultReservationsInstancesInstanceTypeEnumM6inMetal       DescribeInstancesResultReservationsInstancesInstanceTypeEnum = "m6in.metal"
+	DescribeInstancesResultReservationsInstancesInstanceTypeEnumM6idnMetal      DescribeInstancesResultReservationsInstancesInstanceTypeEnum = "m6idn.metal"
+	DescribeInstancesResultReservationsInstancesInstanceTypeEnumR6inMetal       DescribeInstancesResultReservationsInstancesInstanceTypeEnum = "r6in.metal"
+	DescribeInstancesResultReservationsInstancesInstanceTypeEnumR6idnMetal      DescribeInstancesResultReservationsInstancesInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e DescribeInstancesResultReservationsInstancesInstanceTypeEnum) ToPointer() *DescribeInstancesResultReservationsInstancesInstanceTypeEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -2189,10 +2226,20 @@ func (e *DescribeInstancesResultReservationsInstancesInstanceTypeEnum) Unmarshal
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = DescribeInstancesResultReservationsInstancesInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = DescribeInstancesResultReservationsInstancesInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -2209,19 +2256,23 @@ const (
 	DescribeInstancesResultReservationsInstancesMaintenanceOptionsAutoRecoveryEnumDefault  DescribeInstancesResultReservationsInstancesMaintenanceOptionsAutoRecoveryEnum = "default"
 )
 
+func (e DescribeInstancesResultReservationsInstancesMaintenanceOptionsAutoRecoveryEnum) ToPointer() *DescribeInstancesResultReservationsInstancesMaintenanceOptionsAutoRecoveryEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesMaintenanceOptionsAutoRecoveryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "default":
-		*e = DescribeInstancesResultReservationsInstancesMaintenanceOptionsAutoRecoveryEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesMaintenanceOptionsAutoRecoveryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMaintenanceOptionsAutoRecoveryEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMaintenanceOptionsAutoRecoveryEnum: %v", v)
 	}
 }
 
@@ -2238,19 +2289,23 @@ const (
 	DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPEndpointEnumEnabled  DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPEndpointEnum = "enabled"
 )
 
+func (e DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPEndpointEnum) ToPointer() *DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPEndpointEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPEndpointEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPEndpointEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPEndpointEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPEndpointEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPEndpointEnum: %v", v)
 	}
 }
 
@@ -2262,19 +2317,23 @@ const (
 	DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPProtocolIpv6EnumEnabled  DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPProtocolIpv6Enum = "enabled"
 )
 
+func (e DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPProtocolIpv6Enum) ToPointer() *DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPProtocolIpv6Enum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPProtocolIpv6Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPProtocolIpv6Enum(s)
+		*e = DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPProtocolIpv6Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPProtocolIpv6Enum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPProtocolIpv6Enum: %v", v)
 	}
 }
 
@@ -2286,19 +2345,23 @@ const (
 	DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPTokensEnumRequired DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPTokensEnum = "required"
 )
 
+func (e DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPTokensEnum) ToPointer() *DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPTokensEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPTokensEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "optional":
 		fallthrough
 	case "required":
-		*e = DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPTokensEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPTokensEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPTokensEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMetadataOptionsHTTPTokensEnum: %v", v)
 	}
 }
 
@@ -2310,19 +2373,23 @@ const (
 	DescribeInstancesResultReservationsInstancesMetadataOptionsInstanceMetadataTagsEnumEnabled  DescribeInstancesResultReservationsInstancesMetadataOptionsInstanceMetadataTagsEnum = "enabled"
 )
 
+func (e DescribeInstancesResultReservationsInstancesMetadataOptionsInstanceMetadataTagsEnum) ToPointer() *DescribeInstancesResultReservationsInstancesMetadataOptionsInstanceMetadataTagsEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesMetadataOptionsInstanceMetadataTagsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = DescribeInstancesResultReservationsInstancesMetadataOptionsInstanceMetadataTagsEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesMetadataOptionsInstanceMetadataTagsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMetadataOptionsInstanceMetadataTagsEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMetadataOptionsInstanceMetadataTagsEnum: %v", v)
 	}
 }
 
@@ -2334,19 +2401,23 @@ const (
 	DescribeInstancesResultReservationsInstancesMetadataOptionsStateEnumApplied DescribeInstancesResultReservationsInstancesMetadataOptionsStateEnum = "applied"
 )
 
+func (e DescribeInstancesResultReservationsInstancesMetadataOptionsStateEnum) ToPointer() *DescribeInstancesResultReservationsInstancesMetadataOptionsStateEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesMetadataOptionsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "applied":
-		*e = DescribeInstancesResultReservationsInstancesMetadataOptionsStateEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesMetadataOptionsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMetadataOptionsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMetadataOptionsStateEnum: %v", v)
 	}
 }
 
@@ -2370,12 +2441,16 @@ const (
 	DescribeInstancesResultReservationsInstancesMonitoringStateEnumPending   DescribeInstancesResultReservationsInstancesMonitoringStateEnum = "pending"
 )
 
+func (e DescribeInstancesResultReservationsInstancesMonitoringStateEnum) ToPointer() *DescribeInstancesResultReservationsInstancesMonitoringStateEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesMonitoringStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "disabling":
@@ -2383,10 +2458,10 @@ func (e *DescribeInstancesResultReservationsInstancesMonitoringStateEnum) Unmars
 	case "enabled":
 		fallthrough
 	case "pending":
-		*e = DescribeInstancesResultReservationsInstancesMonitoringStateEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesMonitoringStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMonitoringStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesMonitoringStateEnum: %v", v)
 	}
 }
 
@@ -2414,12 +2489,16 @@ const (
 	DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachmentStatusEnumDetached  DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachmentStatusEnum = "detached"
 )
 
+func (e DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachmentStatusEnum) ToPointer() *DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachmentStatusEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -2427,10 +2506,10 @@ func (e *DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachment
 	case "detaching":
 		fallthrough
 	case "detached":
-		*e = DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachmentStatusEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesNetworkInterfacesAttachmentStatusEnum: %v", v)
 	}
 }
 
@@ -2493,12 +2572,16 @@ const (
 	DescribeInstancesResultReservationsInstancesNetworkInterfacesStatusEnumDetaching  DescribeInstancesResultReservationsInstancesNetworkInterfacesStatusEnum = "detaching"
 )
 
+func (e DescribeInstancesResultReservationsInstancesNetworkInterfacesStatusEnum) ToPointer() *DescribeInstancesResultReservationsInstancesNetworkInterfacesStatusEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesNetworkInterfacesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "associated":
@@ -2508,10 +2591,10 @@ func (e *DescribeInstancesResultReservationsInstancesNetworkInterfacesStatusEnum
 	case "in-use":
 		fallthrough
 	case "detaching":
-		*e = DescribeInstancesResultReservationsInstancesNetworkInterfacesStatusEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesNetworkInterfacesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesNetworkInterfacesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesNetworkInterfacesStatusEnum: %v", v)
 	}
 }
 
@@ -2546,21 +2629,25 @@ const (
 	DescribeInstancesResultReservationsInstancesPlacementTenancyEnumHost      DescribeInstancesResultReservationsInstancesPlacementTenancyEnum = "host"
 )
 
+func (e DescribeInstancesResultReservationsInstancesPlacementTenancyEnum) ToPointer() *DescribeInstancesResultReservationsInstancesPlacementTenancyEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesPlacementTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = DescribeInstancesResultReservationsInstancesPlacementTenancyEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesPlacementTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesPlacementTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesPlacementTenancyEnum: %v", v)
 	}
 }
 
@@ -2584,17 +2671,21 @@ const (
 	DescribeInstancesResultReservationsInstancesPlatformEnumWindows DescribeInstancesResultReservationsInstancesPlatformEnum = "Windows"
 )
 
+func (e DescribeInstancesResultReservationsInstancesPlatformEnum) ToPointer() *DescribeInstancesResultReservationsInstancesPlatformEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Windows":
-		*e = DescribeInstancesResultReservationsInstancesPlatformEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesPlatformEnum: %v", v)
 	}
 }
 
@@ -2606,19 +2697,23 @@ const (
 	DescribeInstancesResultReservationsInstancesPrivateDNSNameOptionsHostnameTypeEnumResourceName DescribeInstancesResultReservationsInstancesPrivateDNSNameOptionsHostnameTypeEnum = "resource-name"
 )
 
+func (e DescribeInstancesResultReservationsInstancesPrivateDNSNameOptionsHostnameTypeEnum) ToPointer() *DescribeInstancesResultReservationsInstancesPrivateDNSNameOptionsHostnameTypeEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesPrivateDNSNameOptionsHostnameTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ip-name":
 		fallthrough
 	case "resource-name":
-		*e = DescribeInstancesResultReservationsInstancesPrivateDNSNameOptionsHostnameTypeEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesPrivateDNSNameOptionsHostnameTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesPrivateDNSNameOptionsHostnameTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesPrivateDNSNameOptionsHostnameTypeEnum: %v", v)
 	}
 }
 
@@ -2637,19 +2732,23 @@ const (
 	DescribeInstancesResultReservationsInstancesProductCodesProductCodeTypeEnumMarketplace DescribeInstancesResultReservationsInstancesProductCodesProductCodeTypeEnum = "marketplace"
 )
 
+func (e DescribeInstancesResultReservationsInstancesProductCodesProductCodeTypeEnum) ToPointer() *DescribeInstancesResultReservationsInstancesProductCodesProductCodeTypeEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesProductCodesProductCodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "devpay":
 		fallthrough
 	case "marketplace":
-		*e = DescribeInstancesResultReservationsInstancesProductCodesProductCodeTypeEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesProductCodesProductCodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesProductCodesProductCodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesProductCodesProductCodeTypeEnum: %v", v)
 	}
 }
 
@@ -2667,19 +2766,23 @@ const (
 	DescribeInstancesResultReservationsInstancesRootDeviceTypeEnumInstanceStore DescribeInstancesResultReservationsInstancesRootDeviceTypeEnum = "instance-store"
 )
 
+func (e DescribeInstancesResultReservationsInstancesRootDeviceTypeEnum) ToPointer() *DescribeInstancesResultReservationsInstancesRootDeviceTypeEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesRootDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ebs":
 		fallthrough
 	case "instance-store":
-		*e = DescribeInstancesResultReservationsInstancesRootDeviceTypeEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesRootDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesRootDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesRootDeviceTypeEnum: %v", v)
 	}
 }
 
@@ -2701,12 +2804,16 @@ const (
 	DescribeInstancesResultReservationsInstancesStateNameEnumStopped      DescribeInstancesResultReservationsInstancesStateNameEnum = "stopped"
 )
 
+func (e DescribeInstancesResultReservationsInstancesStateNameEnum) ToPointer() *DescribeInstancesResultReservationsInstancesStateNameEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesStateNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "running":
@@ -2718,10 +2825,10 @@ func (e *DescribeInstancesResultReservationsInstancesStateNameEnum) UnmarshalJSO
 	case "stopping":
 		fallthrough
 	case "stopped":
-		*e = DescribeInstancesResultReservationsInstancesStateNameEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesStateNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesStateNameEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesStateNameEnum: %v", v)
 	}
 }
 
@@ -2751,19 +2858,23 @@ const (
 	DescribeInstancesResultReservationsInstancesVirtualizationTypeEnumParavirtual DescribeInstancesResultReservationsInstancesVirtualizationTypeEnum = "paravirtual"
 )
 
+func (e DescribeInstancesResultReservationsInstancesVirtualizationTypeEnum) ToPointer() *DescribeInstancesResultReservationsInstancesVirtualizationTypeEnum {
+	return &e
+}
+
 func (e *DescribeInstancesResultReservationsInstancesVirtualizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hvm":
 		fallthrough
 	case "paravirtual":
-		*e = DescribeInstancesResultReservationsInstancesVirtualizationTypeEnum(s)
+		*e = DescribeInstancesResultReservationsInstancesVirtualizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesVirtualizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancesResultReservationsInstancesVirtualizationTypeEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	ContentInstreamPositionTargetingOptionDetailsContentInstreamPositionEnumContentInstreamPositionUnknown     ContentInstreamPositionTargetingOptionDetailsContentInstreamPositionEnum = "CONTENT_INSTREAM_POSITION_UNKNOWN"
 )
 
+func (e ContentInstreamPositionTargetingOptionDetailsContentInstreamPositionEnum) ToPointer() *ContentInstreamPositionTargetingOptionDetailsContentInstreamPositionEnum {
+	return &e
+}
+
 func (e *ContentInstreamPositionTargetingOptionDetailsContentInstreamPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_INSTREAM_POSITION_UNSPECIFIED":
 		fallthrough
 	case "CONTENT_INSTREAM_POSITION_PRE_ROLL":
@@ -33,10 +37,10 @@ func (e *ContentInstreamPositionTargetingOptionDetailsContentInstreamPositionEnu
 	case "CONTENT_INSTREAM_POSITION_POST_ROLL":
 		fallthrough
 	case "CONTENT_INSTREAM_POSITION_UNKNOWN":
-		*e = ContentInstreamPositionTargetingOptionDetailsContentInstreamPositionEnum(s)
+		*e = ContentInstreamPositionTargetingOptionDetailsContentInstreamPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentInstreamPositionTargetingOptionDetailsContentInstreamPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentInstreamPositionTargetingOptionDetailsContentInstreamPositionEnum: %v", v)
 	}
 }
 

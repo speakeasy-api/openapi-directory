@@ -15,17 +15,21 @@ const (
 	GETUpdateTemplateActionEnumUpdateTemplate GETUpdateTemplateActionEnum = "UpdateTemplate"
 )
 
+func (e GETUpdateTemplateActionEnum) ToPointer() *GETUpdateTemplateActionEnum {
+	return &e
+}
+
 func (e *GETUpdateTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateTemplate":
-		*e = GETUpdateTemplateActionEnum(s)
+		*e = GETUpdateTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateTemplateActionEnum: %v", v)
 	}
 }
 
@@ -44,17 +48,21 @@ const (
 	GETUpdateTemplateVersionEnumTwoThousandAndTen1201 GETUpdateTemplateVersionEnum = "2010-12-01"
 )
 
+func (e GETUpdateTemplateVersionEnum) ToPointer() *GETUpdateTemplateVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETUpdateTemplateVersionEnum(s)
+		*e = GETUpdateTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateTemplateVersionEnum: %v", v)
 	}
 }
 

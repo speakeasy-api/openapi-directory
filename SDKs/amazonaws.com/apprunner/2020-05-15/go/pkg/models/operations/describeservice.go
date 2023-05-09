@@ -16,17 +16,21 @@ const (
 	DescribeServiceXAmzTargetEnumAppRunnerDescribeService DescribeServiceXAmzTargetEnum = "AppRunner.DescribeService"
 )
 
+func (e DescribeServiceXAmzTargetEnum) ToPointer() *DescribeServiceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeServiceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppRunner.DescribeService":
-		*e = DescribeServiceXAmzTargetEnum(s)
+		*e = DescribeServiceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeServiceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeServiceXAmzTargetEnum: %v", v)
 	}
 }
 

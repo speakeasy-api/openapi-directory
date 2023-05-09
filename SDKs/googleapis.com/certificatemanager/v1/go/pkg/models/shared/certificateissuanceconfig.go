@@ -16,21 +16,25 @@ const (
 	CertificateIssuanceConfigKeyAlgorithmEnumEcdsaP256               CertificateIssuanceConfigKeyAlgorithmEnum = "ECDSA_P256"
 )
 
+func (e CertificateIssuanceConfigKeyAlgorithmEnum) ToPointer() *CertificateIssuanceConfigKeyAlgorithmEnum {
+	return &e
+}
+
 func (e *CertificateIssuanceConfigKeyAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KEY_ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "RSA_2048":
 		fallthrough
 	case "ECDSA_P256":
-		*e = CertificateIssuanceConfigKeyAlgorithmEnum(s)
+		*e = CertificateIssuanceConfigKeyAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateIssuanceConfigKeyAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateIssuanceConfigKeyAlgorithmEnum: %v", v)
 	}
 }
 

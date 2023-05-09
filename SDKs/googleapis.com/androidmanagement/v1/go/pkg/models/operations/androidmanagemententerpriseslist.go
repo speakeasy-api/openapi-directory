@@ -22,19 +22,23 @@ const (
 	AndroidmanagementEnterprisesListViewEnumBasic                     AndroidmanagementEnterprisesListViewEnum = "BASIC"
 )
 
+func (e AndroidmanagementEnterprisesListViewEnum) ToPointer() *AndroidmanagementEnterprisesListViewEnum {
+	return &e
+}
+
 func (e *AndroidmanagementEnterprisesListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTERPRISE_VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
-		*e = AndroidmanagementEnterprisesListViewEnum(s)
+		*e = AndroidmanagementEnterprisesListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidmanagementEnterprisesListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidmanagementEnterprisesListViewEnum: %v", v)
 	}
 }
 

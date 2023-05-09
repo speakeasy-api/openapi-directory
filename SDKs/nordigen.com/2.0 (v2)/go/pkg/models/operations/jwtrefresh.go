@@ -13,6 +13,8 @@ type JWTRefreshResponse struct {
 	JWTRefresh401ApplicationJSONObject map[string]interface{}
 	// IP Access denied
 	JWTRefresh403ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	JWTRefresh429ApplicationJSONObject map[string]interface{}
 	// Refresh access token.
 	SpectacularJWTRefresh *shared.SpectacularJWTRefresh
 	StatusCode            int

@@ -16,17 +16,21 @@ const (
 	UpdateServerEngineAttributesXAmzTargetEnumOpsWorksCmV20161101UpdateServerEngineAttributes UpdateServerEngineAttributesXAmzTargetEnum = "OpsWorksCM_V2016_11_01.UpdateServerEngineAttributes"
 )
 
+func (e UpdateServerEngineAttributesXAmzTargetEnum) ToPointer() *UpdateServerEngineAttributesXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateServerEngineAttributesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorksCM_V2016_11_01.UpdateServerEngineAttributes":
-		*e = UpdateServerEngineAttributesXAmzTargetEnum(s)
+		*e = UpdateServerEngineAttributesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateServerEngineAttributesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateServerEngineAttributesXAmzTargetEnum: %v", v)
 	}
 }
 

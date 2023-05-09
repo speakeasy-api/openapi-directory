@@ -17,12 +17,16 @@ const (
 	WebAppDisplayModeEnumFullScreen             WebAppDisplayModeEnum = "FULL_SCREEN"
 )
 
+func (e WebAppDisplayModeEnum) ToPointer() *WebAppDisplayModeEnum {
+	return &e
+}
+
 func (e *WebAppDisplayModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISPLAY_MODE_UNSPECIFIED":
 		fallthrough
 	case "MINIMAL_UI":
@@ -30,10 +34,10 @@ func (e *WebAppDisplayModeEnum) UnmarshalJSON(data []byte) error {
 	case "STANDALONE":
 		fallthrough
 	case "FULL_SCREEN":
-		*e = WebAppDisplayModeEnum(s)
+		*e = WebAppDisplayModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebAppDisplayModeEnum: %s", s)
+		return fmt.Errorf("invalid value for WebAppDisplayModeEnum: %v", v)
 	}
 }
 

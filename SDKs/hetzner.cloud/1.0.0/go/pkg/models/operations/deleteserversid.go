@@ -37,21 +37,25 @@ const (
 	DeleteServersID200ApplicationJSONActionStatusEnumError   DeleteServersID200ApplicationJSONActionStatusEnum = "error"
 )
 
+func (e DeleteServersID200ApplicationJSONActionStatusEnum) ToPointer() *DeleteServersID200ApplicationJSONActionStatusEnum {
+	return &e
+}
+
 func (e *DeleteServersID200ApplicationJSONActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = DeleteServersID200ApplicationJSONActionStatusEnum(s)
+		*e = DeleteServersID200ApplicationJSONActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteServersID200ApplicationJSONActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteServersID200ApplicationJSONActionStatusEnum: %v", v)
 	}
 }
 

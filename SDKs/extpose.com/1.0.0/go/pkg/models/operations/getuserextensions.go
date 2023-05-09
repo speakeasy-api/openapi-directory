@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetUserExtensionsSecurity struct {
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+}
+
 type GetUserExtensionsResponse struct {
 	ContentType string
 	// successful operation

@@ -36,7 +36,10 @@ func newBikePoint(defaultClient, securityClient HTTPClient, serverURL, language,
 // BikePointGet - Gets the bike point with the given id.
 func (s *bikePoint) BikePointGet(ctx context.Context, request operations.BikePointGetRequest) (*operations.BikePointGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/BikePoint/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/BikePoint/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

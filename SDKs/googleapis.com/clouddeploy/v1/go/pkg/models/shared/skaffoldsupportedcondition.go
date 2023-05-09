@@ -17,12 +17,16 @@ const (
 	SkaffoldSupportedConditionSkaffoldSupportStateEnumSkaffoldSupportStateUnsupported     SkaffoldSupportedConditionSkaffoldSupportStateEnum = "SKAFFOLD_SUPPORT_STATE_UNSUPPORTED"
 )
 
+func (e SkaffoldSupportedConditionSkaffoldSupportStateEnum) ToPointer() *SkaffoldSupportedConditionSkaffoldSupportStateEnum {
+	return &e
+}
+
 func (e *SkaffoldSupportedConditionSkaffoldSupportStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SKAFFOLD_SUPPORT_STATE_UNSPECIFIED":
 		fallthrough
 	case "SKAFFOLD_SUPPORT_STATE_SUPPORTED":
@@ -30,10 +34,10 @@ func (e *SkaffoldSupportedConditionSkaffoldSupportStateEnum) UnmarshalJSON(data 
 	case "SKAFFOLD_SUPPORT_STATE_MAINTENANCE_MODE":
 		fallthrough
 	case "SKAFFOLD_SUPPORT_STATE_UNSUPPORTED":
-		*e = SkaffoldSupportedConditionSkaffoldSupportStateEnum(s)
+		*e = SkaffoldSupportedConditionSkaffoldSupportStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SkaffoldSupportedConditionSkaffoldSupportStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SkaffoldSupportedConditionSkaffoldSupportStateEnum: %v", v)
 	}
 }
 

@@ -100,12 +100,16 @@ const (
 	TransitionInEnumZoom                   TransitionInEnum = "zoom"
 )
 
+func (e TransitionInEnum) ToPointer() *TransitionInEnum {
+	return &e
+}
+
 func (e *TransitionInEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fade":
 		fallthrough
 	case "fadeSlow":
@@ -227,10 +231,10 @@ func (e *TransitionInEnum) UnmarshalJSON(data []byte) error {
 	case "shuffleTopLeftFast":
 		fallthrough
 	case "zoom":
-		*e = TransitionInEnum(s)
+		*e = TransitionInEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransitionInEnum: %s", s)
+		return fmt.Errorf("invalid value for TransitionInEnum: %v", v)
 	}
 }
 
@@ -327,12 +331,16 @@ const (
 	TransitionOutEnumZoom                   TransitionOutEnum = "zoom"
 )
 
+func (e TransitionOutEnum) ToPointer() *TransitionOutEnum {
+	return &e
+}
+
 func (e *TransitionOutEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fade":
 		fallthrough
 	case "fadeSlow":
@@ -454,10 +462,10 @@ func (e *TransitionOutEnum) UnmarshalJSON(data []byte) error {
 	case "shuffleTopLeftFast":
 		fallthrough
 	case "zoom":
-		*e = TransitionOutEnum(s)
+		*e = TransitionOutEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransitionOutEnum: %s", s)
+		return fmt.Errorf("invalid value for TransitionOutEnum: %v", v)
 	}
 }
 

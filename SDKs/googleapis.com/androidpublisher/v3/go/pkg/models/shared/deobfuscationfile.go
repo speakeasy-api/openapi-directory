@@ -16,21 +16,25 @@ const (
 	DeobfuscationFileSymbolTypeEnumNativeCode                       DeobfuscationFileSymbolTypeEnum = "nativeCode"
 )
 
+func (e DeobfuscationFileSymbolTypeEnum) ToPointer() *DeobfuscationFileSymbolTypeEnum {
+	return &e
+}
+
 func (e *DeobfuscationFileSymbolTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deobfuscationFileTypeUnspecified":
 		fallthrough
 	case "proguard":
 		fallthrough
 	case "nativeCode":
-		*e = DeobfuscationFileSymbolTypeEnum(s)
+		*e = DeobfuscationFileSymbolTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeobfuscationFileSymbolTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeobfuscationFileSymbolTypeEnum: %v", v)
 	}
 }
 

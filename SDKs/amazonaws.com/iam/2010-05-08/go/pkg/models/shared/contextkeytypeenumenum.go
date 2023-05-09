@@ -24,12 +24,16 @@ const (
 	ContextKeyTypeEnumEnumDateList    ContextKeyTypeEnumEnum = "dateList"
 )
 
+func (e ContextKeyTypeEnumEnum) ToPointer() *ContextKeyTypeEnumEnum {
+	return &e
+}
+
 func (e *ContextKeyTypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "string":
 		fallthrough
 	case "stringList":
@@ -53,9 +57,9 @@ func (e *ContextKeyTypeEnumEnum) UnmarshalJSON(data []byte) error {
 	case "date":
 		fallthrough
 	case "dateList":
-		*e = ContextKeyTypeEnumEnum(s)
+		*e = ContextKeyTypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContextKeyTypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ContextKeyTypeEnumEnum: %v", v)
 	}
 }

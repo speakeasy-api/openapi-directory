@@ -23,12 +23,16 @@ const (
 	ThemeColorPairColorTypeEnumLink                      ThemeColorPairColorTypeEnum = "LINK"
 )
 
+func (e ThemeColorPairColorTypeEnum) ToPointer() *ThemeColorPairColorTypeEnum {
+	return &e
+}
+
 func (e *ThemeColorPairColorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THEME_COLOR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TEXT":
@@ -48,10 +52,10 @@ func (e *ThemeColorPairColorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ACCENT6":
 		fallthrough
 	case "LINK":
-		*e = ThemeColorPairColorTypeEnum(s)
+		*e = ThemeColorPairColorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThemeColorPairColorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ThemeColorPairColorTypeEnum: %v", v)
 	}
 }
 

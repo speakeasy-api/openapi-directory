@@ -16,21 +16,25 @@ const (
 	CrossProfilePoliciesCrossProfileCopyPasteEnumCrossProfileCopyPasteAllowed     CrossProfilePoliciesCrossProfileCopyPasteEnum = "CROSS_PROFILE_COPY_PASTE_ALLOWED"
 )
 
+func (e CrossProfilePoliciesCrossProfileCopyPasteEnum) ToPointer() *CrossProfilePoliciesCrossProfileCopyPasteEnum {
+	return &e
+}
+
 func (e *CrossProfilePoliciesCrossProfileCopyPasteEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CROSS_PROFILE_COPY_PASTE_UNSPECIFIED":
 		fallthrough
 	case "COPY_FROM_WORK_TO_PERSONAL_DISALLOWED":
 		fallthrough
 	case "CROSS_PROFILE_COPY_PASTE_ALLOWED":
-		*e = CrossProfilePoliciesCrossProfileCopyPasteEnum(s)
+		*e = CrossProfilePoliciesCrossProfileCopyPasteEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrossProfilePoliciesCrossProfileCopyPasteEnum: %s", s)
+		return fmt.Errorf("invalid value for CrossProfilePoliciesCrossProfileCopyPasteEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	CrossProfilePoliciesCrossProfileDataSharingEnumCrossProfileDataSharingAllowed          CrossProfilePoliciesCrossProfileDataSharingEnum = "CROSS_PROFILE_DATA_SHARING_ALLOWED"
 )
 
+func (e CrossProfilePoliciesCrossProfileDataSharingEnum) ToPointer() *CrossProfilePoliciesCrossProfileDataSharingEnum {
+	return &e
+}
+
 func (e *CrossProfilePoliciesCrossProfileDataSharingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CROSS_PROFILE_DATA_SHARING_UNSPECIFIED":
 		fallthrough
 	case "CROSS_PROFILE_DATA_SHARING_DISALLOWED":
@@ -57,10 +65,10 @@ func (e *CrossProfilePoliciesCrossProfileDataSharingEnum) UnmarshalJSON(data []b
 	case "DATA_SHARING_FROM_WORK_TO_PERSONAL_DISALLOWED":
 		fallthrough
 	case "CROSS_PROFILE_DATA_SHARING_ALLOWED":
-		*e = CrossProfilePoliciesCrossProfileDataSharingEnum(s)
+		*e = CrossProfilePoliciesCrossProfileDataSharingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrossProfilePoliciesCrossProfileDataSharingEnum: %s", s)
+		return fmt.Errorf("invalid value for CrossProfilePoliciesCrossProfileDataSharingEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	CrossProfilePoliciesShowWorkContactsInPersonalProfileEnumShowWorkContactsInPersonalProfileAllowed     CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum = "SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED"
 )
 
+func (e CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum) ToPointer() *CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum {
+	return &e
+}
+
 func (e *CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_UNSPECIFIED":
 		fallthrough
 	case "SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED":
 		fallthrough
 	case "SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED":
-		*e = CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum(s)
+		*e = CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum: %s", s)
+		return fmt.Errorf("invalid value for CrossProfilePoliciesShowWorkContactsInPersonalProfileEnum: %v", v)
 	}
 }
 
@@ -100,21 +112,25 @@ const (
 	CrossProfilePoliciesWorkProfileWidgetsDefaultEnumWorkProfileWidgetsDefaultDisallowed  CrossProfilePoliciesWorkProfileWidgetsDefaultEnum = "WORK_PROFILE_WIDGETS_DEFAULT_DISALLOWED"
 )
 
+func (e CrossProfilePoliciesWorkProfileWidgetsDefaultEnum) ToPointer() *CrossProfilePoliciesWorkProfileWidgetsDefaultEnum {
+	return &e
+}
+
 func (e *CrossProfilePoliciesWorkProfileWidgetsDefaultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORK_PROFILE_WIDGETS_DEFAULT_UNSPECIFIED":
 		fallthrough
 	case "WORK_PROFILE_WIDGETS_DEFAULT_ALLOWED":
 		fallthrough
 	case "WORK_PROFILE_WIDGETS_DEFAULT_DISALLOWED":
-		*e = CrossProfilePoliciesWorkProfileWidgetsDefaultEnum(s)
+		*e = CrossProfilePoliciesWorkProfileWidgetsDefaultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrossProfilePoliciesWorkProfileWidgetsDefaultEnum: %s", s)
+		return fmt.Errorf("invalid value for CrossProfilePoliciesWorkProfileWidgetsDefaultEnum: %v", v)
 	}
 }
 

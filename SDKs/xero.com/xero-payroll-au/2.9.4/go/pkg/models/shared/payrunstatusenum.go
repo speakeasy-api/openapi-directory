@@ -14,18 +14,22 @@ const (
 	PayRunStatusEnumPosted PayRunStatusEnum = "POSTED"
 )
 
+func (e PayRunStatusEnum) ToPointer() *PayRunStatusEnum {
+	return &e
+}
+
 func (e *PayRunStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DRAFT":
 		fallthrough
 	case "POSTED":
-		*e = PayRunStatusEnum(s)
+		*e = PayRunStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PayRunStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PayRunStatusEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	POSTIndexDocumentsActionEnumIndexDocuments POSTIndexDocumentsActionEnum = "IndexDocuments"
 )
 
+func (e POSTIndexDocumentsActionEnum) ToPointer() *POSTIndexDocumentsActionEnum {
+	return &e
+}
+
 func (e *POSTIndexDocumentsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IndexDocuments":
-		*e = POSTIndexDocumentsActionEnum(s)
+		*e = POSTIndexDocumentsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTIndexDocumentsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTIndexDocumentsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTIndexDocumentsVersionEnumTwoThousandAndThirteen0101 POSTIndexDocumentsVersionEnum = "2013-01-01"
 )
 
+func (e POSTIndexDocumentsVersionEnum) ToPointer() *POSTIndexDocumentsVersionEnum {
+	return &e
+}
+
 func (e *POSTIndexDocumentsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = POSTIndexDocumentsVersionEnum(s)
+		*e = POSTIndexDocumentsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTIndexDocumentsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTIndexDocumentsVersionEnum: %v", v)
 	}
 }
 

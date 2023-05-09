@@ -18,12 +18,16 @@ const (
 	TargetHealthStateEnumEnumUnavailable TargetHealthStateEnumEnum = "unavailable"
 )
 
+func (e TargetHealthStateEnumEnum) ToPointer() *TargetHealthStateEnumEnum {
+	return &e
+}
+
 func (e *TargetHealthStateEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "initial":
 		fallthrough
 	case "healthy":
@@ -35,9 +39,9 @@ func (e *TargetHealthStateEnumEnum) UnmarshalJSON(data []byte) error {
 	case "draining":
 		fallthrough
 	case "unavailable":
-		*e = TargetHealthStateEnumEnum(s)
+		*e = TargetHealthStateEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetHealthStateEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetHealthStateEnumEnum: %v", v)
 	}
 }

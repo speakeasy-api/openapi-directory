@@ -6,6 +6,11 @@ import (
 	"net/http"
 )
 
+type GetProjectSecurity struct {
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
+}
+
 type GetProjectResponse struct {
 	ContentType string
 	StatusCode  int

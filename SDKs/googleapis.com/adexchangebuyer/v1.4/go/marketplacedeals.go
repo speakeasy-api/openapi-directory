@@ -34,7 +34,10 @@ func newMarketplacedeals(defaultClient, securityClient HTTPClient, serverURL, la
 // AdexchangebuyerMarketplacedealsDelete - Delete the specified deals from the proposal
 func (s *marketplacedeals) AdexchangebuyerMarketplacedealsDelete(ctx context.Context, request operations.AdexchangebuyerMarketplacedealsDeleteRequest, security operations.AdexchangebuyerMarketplacedealsDeleteSecurity) (*operations.AdexchangebuyerMarketplacedealsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals/delete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals/delete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteOrderDealsRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *marketplacedeals) AdexchangebuyerMarketplacedealsDelete(ctx context.Con
 // AdexchangebuyerMarketplacedealsInsert - Add new deals for the specified proposal
 func (s *marketplacedeals) AdexchangebuyerMarketplacedealsInsert(ctx context.Context, request operations.AdexchangebuyerMarketplacedealsInsertRequest, security operations.AdexchangebuyerMarketplacedealsInsertSecurity) (*operations.AdexchangebuyerMarketplacedealsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals/insert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals/insert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddOrderDealsRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *marketplacedeals) AdexchangebuyerMarketplacedealsInsert(ctx context.Con
 // AdexchangebuyerMarketplacedealsList - List all the deals for a given proposal
 func (s *marketplacedeals) AdexchangebuyerMarketplacedealsList(ctx context.Context, request operations.AdexchangebuyerMarketplacedealsListRequest, security operations.AdexchangebuyerMarketplacedealsListSecurity) (*operations.AdexchangebuyerMarketplacedealsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *marketplacedeals) AdexchangebuyerMarketplacedealsList(ctx context.Conte
 // AdexchangebuyerMarketplacedealsUpdate - Replaces all the deals in the proposal with the passed in deals
 func (s *marketplacedeals) AdexchangebuyerMarketplacedealsUpdate(ctx context.Context, request operations.AdexchangebuyerMarketplacedealsUpdateRequest, security operations.AdexchangebuyerMarketplacedealsUpdateSecurity) (*operations.AdexchangebuyerMarketplacedealsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals/update", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/proposals/{proposalId}/deals/update", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditAllOrderDealsRequest", "json")
 	if err != nil {

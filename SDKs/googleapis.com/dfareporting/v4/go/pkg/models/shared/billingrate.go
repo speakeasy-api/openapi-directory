@@ -45,12 +45,16 @@ const (
 	BillingRateTypeEnumAdvancedDisplayAdServing   BillingRateTypeEnum = "ADVANCED_DISPLAY_AD_SERVING"
 )
 
+func (e BillingRateTypeEnum) ToPointer() *BillingRateTypeEnum {
+	return &e
+}
+
 func (e *BillingRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AD_SERVING":
 		fallthrough
 	case "CLICKS":
@@ -114,10 +118,10 @@ func (e *BillingRateTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AUDIO_AD_SERVING":
 		fallthrough
 	case "ADVANCED_DISPLAY_AD_SERVING":
-		*e = BillingRateTypeEnum(s)
+		*e = BillingRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingRateTypeEnum: %v", v)
 	}
 }
 
@@ -131,12 +135,16 @@ const (
 	BillingRateUnitOfMeasureEnumP2C BillingRateUnitOfMeasureEnum = "P2C"
 )
 
+func (e BillingRateUnitOfMeasureEnum) ToPointer() *BillingRateUnitOfMeasureEnum {
+	return &e
+}
+
 func (e *BillingRateUnitOfMeasureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CPM":
 		fallthrough
 	case "CPC":
@@ -144,10 +152,10 @@ func (e *BillingRateUnitOfMeasureEnum) UnmarshalJSON(data []byte) error {
 	case "EA":
 		fallthrough
 	case "P2C":
-		*e = BillingRateUnitOfMeasureEnum(s)
+		*e = BillingRateUnitOfMeasureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingRateUnitOfMeasureEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingRateUnitOfMeasureEnum: %v", v)
 	}
 }
 

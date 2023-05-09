@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -46,6 +47,7 @@ pkg/models/operations/getprovisionedconcurrencyconfig.go
 pkg/models/operations/getruntimemanagementconfig.go
 pkg/models/operations/invoke.go
 pkg/models/operations/invokeasync.go
+pkg/models/operations/invokewithresponsestream.go
 pkg/models/operations/listaliases.go
 pkg/models/operations/listcodesigningconfigs.go
 pkg/models/operations/listeventsourcemappings.go
@@ -127,6 +129,7 @@ pkg/models/shared/environmenterror.go
 pkg/models/shared/deadletterconfig.go
 pkg/models/shared/architectureenum.go
 pkg/models/shared/createfunctionurlconfigresponse.go
+pkg/models/shared/invokemodeenum.go
 pkg/models/shared/cors.go
 pkg/models/shared/functionurlauthtypeenum.go
 pkg/models/shared/getaccountsettingsresponse.go
@@ -150,6 +153,10 @@ pkg/models/shared/getruntimemanagementconfigresponse.go
 pkg/models/shared/updateruntimeonenum.go
 pkg/models/shared/invocationresponse.go
 pkg/models/shared/invokeasyncresponse.go
+pkg/models/shared/invokewithresponsestreamresponse.go
+pkg/models/shared/invokewithresponsestreamresponseevent.go
+pkg/models/shared/invokeresponsestreamupdate.go
+pkg/models/shared/invokewithresponsestreamcompleteevent.go
 pkg/models/shared/listaliasesresponse.go
 pkg/models/shared/listcodesigningconfigsresponse.go
 pkg/models/shared/listeventsourcemappingsresponse.go
@@ -173,4 +180,5 @@ pkg/models/shared/putruntimemanagementconfigresponse.go
 pkg/models/shared/updatecodesigningconfigresponse.go
 pkg/models/shared/updatefunctionurlconfigresponse.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

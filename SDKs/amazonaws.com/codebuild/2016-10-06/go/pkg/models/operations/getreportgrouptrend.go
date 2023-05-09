@@ -16,17 +16,21 @@ const (
 	GetReportGroupTrendXAmzTargetEnumCodeBuild20161006GetReportGroupTrend GetReportGroupTrendXAmzTargetEnum = "CodeBuild_20161006.GetReportGroupTrend"
 )
 
+func (e GetReportGroupTrendXAmzTargetEnum) ToPointer() *GetReportGroupTrendXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetReportGroupTrendXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.GetReportGroupTrend":
-		*e = GetReportGroupTrendXAmzTargetEnum(s)
+		*e = GetReportGroupTrendXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetReportGroupTrendXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetReportGroupTrendXAmzTargetEnum: %v", v)
 	}
 }
 

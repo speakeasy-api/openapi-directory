@@ -13,25 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/DataProtectionS
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.SubjectErasureByPspReferenceRequest{
-        ForceErasure: false,
-        MerchantAccount: "corrupti",
-        PspReference: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.General.PostRequestSubjectErasure(ctx, req, operations.PostRequestSubjectErasureSecurity{
+    res, err := s.General.PostRequestSubjectErasure(ctx, shared.SubjectErasureByPspReferenceRequest{
+        ForceErasure: sdk.Bool(false),
+        MerchantAccount: sdk.String("corrupti"),
+        PspReference: sdk.String("provident"),
+    }, operations.PostRequestSubjectErasureSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {
@@ -49,9 +47,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### General
+### [General](docs/general/README.md)
 
-* `PostRequestSubjectErasure` - Submit a Subject Erasure Request.
+* [PostRequestSubjectErasure](docs/general/README.md#postrequestsubjecterasure) - Submit a Subject Erasure Request.
 <!-- End SDK Available Operations -->
 
 ### Maturity

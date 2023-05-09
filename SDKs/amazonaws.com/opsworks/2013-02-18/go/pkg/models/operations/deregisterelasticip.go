@@ -16,17 +16,21 @@ const (
 	DeregisterElasticIPXAmzTargetEnumOpsWorks20130218DeregisterElasticIP DeregisterElasticIPXAmzTargetEnum = "OpsWorks_20130218.DeregisterElasticIp"
 )
 
+func (e DeregisterElasticIPXAmzTargetEnum) ToPointer() *DeregisterElasticIPXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeregisterElasticIPXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DeregisterElasticIp":
-		*e = DeregisterElasticIPXAmzTargetEnum(s)
+		*e = DeregisterElasticIPXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeregisterElasticIPXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeregisterElasticIPXAmzTargetEnum: %v", v)
 	}
 }
 

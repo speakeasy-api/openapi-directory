@@ -472,7 +472,10 @@ func (s *domesticScheduledPayments) CreateDomesticScheduledPaymentsRaw(ctx conte
 // GetDomesticScheduledPaymentConsentsConsentID - Get Domestic Scheduled Payment Consents
 func (s *domesticScheduledPayments) GetDomesticScheduledPaymentConsentsConsentID(ctx context.Context, request operations.GetDomesticScheduledPaymentConsentsConsentIDRequest, security operations.GetDomesticScheduledPaymentConsentsConsentIDSecurity) (*operations.GetDomesticScheduledPaymentConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-scheduled-payment-consents/{ConsentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domestic-scheduled-payment-consents/{ConsentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -569,7 +572,10 @@ func (s *domesticScheduledPayments) GetDomesticScheduledPaymentConsentsConsentID
 // GetDomesticScheduledPaymentsDomesticScheduledPaymentID - Get Domestic Scheduled Payments
 func (s *domesticScheduledPayments) GetDomesticScheduledPaymentsDomesticScheduledPaymentID(ctx context.Context, request operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIDRequest, security operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIDSecurity) (*operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-scheduled-payments/{DomesticScheduledPaymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domestic-scheduled-payments/{DomesticScheduledPaymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

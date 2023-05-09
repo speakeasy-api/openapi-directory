@@ -36,7 +36,10 @@ func newDevices(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DeleteDevicesID - Delete a Device
 func (s *devices) DeleteDevicesID(ctx context.Context, request operations.DeleteDevicesIDRequest) (*operations.DeleteDevicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -175,7 +178,10 @@ func (s *devices) PostDevices(ctx context.Context, request shared.Device) (*oper
 // PutDevicesID - Update a Device
 func (s *devices) PutDevicesID(ctx context.Context, request operations.PutDevicesIDRequest) (*operations.PutDevicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Device", "json")
 	if err != nil {
@@ -229,7 +235,10 @@ func (s *devices) PutDevicesID(ctx context.Context, request operations.PutDevice
 // PutDevicesIDAccumulators - Update total distance and hours of the Device
 func (s *devices) PutDevicesIDAccumulators(ctx context.Context, request operations.PutDevicesIDAccumulatorsRequest) (*operations.PutDevicesIDAccumulatorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{id}/accumulators", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{id}/accumulators", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceAccumulators", "json")
 	if err != nil {

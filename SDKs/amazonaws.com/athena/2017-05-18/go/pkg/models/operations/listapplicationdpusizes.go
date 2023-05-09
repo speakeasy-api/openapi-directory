@@ -16,17 +16,21 @@ const (
 	ListApplicationDPUSizesXAmzTargetEnumAmazonAthenaListApplicationDpuSizes ListApplicationDPUSizesXAmzTargetEnum = "AmazonAthena.ListApplicationDPUSizes"
 )
 
+func (e ListApplicationDPUSizesXAmzTargetEnum) ToPointer() *ListApplicationDPUSizesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListApplicationDPUSizesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.ListApplicationDPUSizes":
-		*e = ListApplicationDPUSizesXAmzTargetEnum(s)
+		*e = ListApplicationDPUSizesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListApplicationDPUSizesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListApplicationDPUSizesXAmzTargetEnum: %v", v)
 	}
 }
 

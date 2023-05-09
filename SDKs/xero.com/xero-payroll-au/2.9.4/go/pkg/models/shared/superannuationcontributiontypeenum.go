@@ -16,12 +16,16 @@ const (
 	SuperannuationContributionTypeEnumEmployee           SuperannuationContributionTypeEnum = "EMPLOYEE"
 )
 
+func (e SuperannuationContributionTypeEnum) ToPointer() *SuperannuationContributionTypeEnum {
+	return &e
+}
+
 func (e *SuperannuationContributionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SGC":
 		fallthrough
 	case "SALARYSACRIFICE":
@@ -29,9 +33,9 @@ func (e *SuperannuationContributionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "EMPLOYERADDITIONAL":
 		fallthrough
 	case "EMPLOYEE":
-		*e = SuperannuationContributionTypeEnum(s)
+		*e = SuperannuationContributionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SuperannuationContributionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SuperannuationContributionTypeEnum: %v", v)
 	}
 }

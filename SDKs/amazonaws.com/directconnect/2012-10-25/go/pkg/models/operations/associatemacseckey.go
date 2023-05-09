@@ -16,17 +16,21 @@ const (
 	AssociateMacSecKeyXAmzTargetEnumOvertureServiceAssociateMacSecKey AssociateMacSecKeyXAmzTargetEnum = "OvertureService.AssociateMacSecKey"
 )
 
+func (e AssociateMacSecKeyXAmzTargetEnum) ToPointer() *AssociateMacSecKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateMacSecKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.AssociateMacSecKey":
-		*e = AssociateMacSecKeyXAmzTargetEnum(s)
+		*e = AssociateMacSecKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateMacSecKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateMacSecKeyXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	VehicleMotStatusEnumValid               VehicleMotStatusEnum = "Valid"
 )
 
+func (e VehicleMotStatusEnum) ToPointer() *VehicleMotStatusEnum {
+	return &e
+}
+
 func (e *VehicleMotStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No details held by DVLA":
 		fallthrough
 	case "No results returned":
@@ -31,10 +35,10 @@ func (e *VehicleMotStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Not valid":
 		fallthrough
 	case "Valid":
-		*e = VehicleMotStatusEnum(s)
+		*e = VehicleMotStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VehicleMotStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for VehicleMotStatusEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	VehicleTaxStatusEnumUntaxed              VehicleTaxStatusEnum = "Untaxed"
 )
 
+func (e VehicleTaxStatusEnum) ToPointer() *VehicleTaxStatusEnum {
+	return &e
+}
+
 func (e *VehicleTaxStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Not Taxed for on Road Use":
 		fallthrough
 	case "SORN":
@@ -61,10 +69,10 @@ func (e *VehicleTaxStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Taxed":
 		fallthrough
 	case "Untaxed":
-		*e = VehicleTaxStatusEnum(s)
+		*e = VehicleTaxStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VehicleTaxStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for VehicleTaxStatusEnum: %v", v)
 	}
 }
 

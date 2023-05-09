@@ -37,7 +37,10 @@ func newFulfillment(defaultClient, securityClient HTTPClient, serverURL, languag
 // This request can be used to implement auto complete functionality when a customer needs to fill in an address.
 func (s *fulfillment) GetAddressByPostalCode(ctx context.Context, request operations.GetAddressByPostalCodeRequest) (*operations.GetAddressByPostalCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/postal-code/{countryCode}/{postalCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/postal-code/{countryCode}/{postalCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -34,7 +34,10 @@ func newPlacementStrategies(defaultClient, securityClient HTTPClient, serverURL,
 // DfareportingPlacementStrategiesDelete - Deletes an existing placement strategy.
 func (s *placementStrategies) DfareportingPlacementStrategiesDelete(ctx context.Context, request operations.DfareportingPlacementStrategiesDeleteRequest, security operations.DfareportingPlacementStrategiesDeleteSecurity) (*operations.DfareportingPlacementStrategiesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *placementStrategies) DfareportingPlacementStrategiesDelete(ctx context.
 // DfareportingPlacementStrategiesGet - Gets one placement strategy by ID.
 func (s *placementStrategies) DfareportingPlacementStrategiesGet(ctx context.Context, request operations.DfareportingPlacementStrategiesGetRequest, security operations.DfareportingPlacementStrategiesGetSecurity) (*operations.DfareportingPlacementStrategiesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *placementStrategies) DfareportingPlacementStrategiesGet(ctx context.Con
 // DfareportingPlacementStrategiesInsert - Inserts a new placement strategy.
 func (s *placementStrategies) DfareportingPlacementStrategiesInsert(ctx context.Context, request operations.DfareportingPlacementStrategiesInsertRequest, security operations.DfareportingPlacementStrategiesInsertSecurity) (*operations.DfareportingPlacementStrategiesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlacementStrategy", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *placementStrategies) DfareportingPlacementStrategiesInsert(ctx context.
 // DfareportingPlacementStrategiesList - Retrieves a list of placement strategies, possibly filtered. This method supports paging.
 func (s *placementStrategies) DfareportingPlacementStrategiesList(ctx context.Context, request operations.DfareportingPlacementStrategiesListRequest, security operations.DfareportingPlacementStrategiesListSecurity) (*operations.DfareportingPlacementStrategiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *placementStrategies) DfareportingPlacementStrategiesList(ctx context.Co
 // DfareportingPlacementStrategiesPatch - Updates an existing placement strategy. This method supports patch semantics.
 func (s *placementStrategies) DfareportingPlacementStrategiesPatch(ctx context.Context, request operations.DfareportingPlacementStrategiesPatchRequest, security operations.DfareportingPlacementStrategiesPatchSecurity) (*operations.DfareportingPlacementStrategiesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlacementStrategy", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *placementStrategies) DfareportingPlacementStrategiesPatch(ctx context.C
 // DfareportingPlacementStrategiesUpdate - Updates an existing placement strategy.
 func (s *placementStrategies) DfareportingPlacementStrategiesUpdate(ctx context.Context, request operations.DfareportingPlacementStrategiesUpdateRequest, security operations.DfareportingPlacementStrategiesUpdateSecurity) (*operations.DfareportingPlacementStrategiesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placementStrategies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PlacementStrategy", "json")
 	if err != nil {

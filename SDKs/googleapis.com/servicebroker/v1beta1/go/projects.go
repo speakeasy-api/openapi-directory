@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ServicebrokerProjectsBrokersCreate - CreateBroker creates a Broker.
 func (s *projects) ServicebrokerProjectsBrokersCreate(ctx context.Context, request operations.ServicebrokerProjectsBrokersCreateRequest, security operations.ServicebrokerProjectsBrokersCreateSecurity) (*operations.ServicebrokerProjectsBrokersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/brokers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/brokers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudServicebrokerV1beta1Broker", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) ServicebrokerProjectsBrokersCreate(ctx context.Context, reque
 // ServicebrokerProjectsBrokersInstancesBindingsList - Lists all the bindings in the instance.
 func (s *projects) ServicebrokerProjectsBrokersInstancesBindingsList(ctx context.Context, request operations.ServicebrokerProjectsBrokersInstancesBindingsListRequest, security operations.ServicebrokerProjectsBrokersInstancesBindingsListSecurity) (*operations.ServicebrokerProjectsBrokersInstancesBindingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/bindings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/bindings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -139,7 +145,10 @@ func (s *projects) ServicebrokerProjectsBrokersInstancesBindingsList(ctx context
 // Hence the path is a standard Google API URL.
 func (s *projects) ServicebrokerProjectsBrokersInstancesList(ctx context.Context, request operations.ServicebrokerProjectsBrokersInstancesListRequest, security operations.ServicebrokerProjectsBrokersInstancesListSecurity) (*operations.ServicebrokerProjectsBrokersInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,7 +196,10 @@ func (s *projects) ServicebrokerProjectsBrokersInstancesList(ctx context.Context
 // ServicebrokerProjectsBrokersList - ListBrokers lists brokers.
 func (s *projects) ServicebrokerProjectsBrokersList(ctx context.Context, request operations.ServicebrokerProjectsBrokersListRequest, security operations.ServicebrokerProjectsBrokersListSecurity) (*operations.ServicebrokerProjectsBrokersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/brokers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/brokers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -237,7 +249,10 @@ func (s *projects) ServicebrokerProjectsBrokersList(ctx context.Context, request
 // Note, that Service producer API is separate from Broker API.
 func (s *projects) ServicebrokerProjectsBrokersV2CatalogList(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2CatalogListRequest, security operations.ServicebrokerProjectsBrokersV2CatalogListSecurity) (*operations.ServicebrokerProjectsBrokersV2CatalogListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/v2/catalog", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/v2/catalog", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -296,7 +311,10 @@ func (s *projects) ServicebrokerProjectsBrokersV2CatalogList(ctx context.Context
 // HTTP 409 status code will be returned.
 func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesCreate(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesCreateRequest, security operations.ServicebrokerProjectsBrokersV2ServiceInstancesCreateSecurity) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/v2/service_instances/{instance_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/v2/service_instances/{instance_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudServicebrokerV1beta1ServiceInstance", "json")
 	if err != nil {
@@ -352,7 +370,10 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesCreate(ctx cont
 // See CreateServiceInstance for possible response codes.
 func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesPatch(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest, security operations.ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudServicebrokerV1beta1ServiceInstance", "json")
 	if err != nil {
@@ -408,7 +429,10 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesPatch(ctx conte
 // See ProviServiceInstance for async operation details.
 func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreate(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest, security operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateSecurity) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/service_bindings/{binding_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/service_bindings/{binding_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudServicebrokerV1beta1Binding", "json")
 	if err != nil {
@@ -466,7 +490,10 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindings
 // If binding does not exist HTTP 410 status will be returned.
 func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest, security operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteSecurity) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -514,7 +541,10 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindings
 // ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGet - GetBinding returns the binding information.
 func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGet(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetRequest, security operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetSecurity) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -563,7 +593,10 @@ func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindings
 // Only last (or current) operation can be polled.
 func (s *projects) ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperation(ctx context.Context, request operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest, security operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity) (*operations.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/last_operation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}/last_operation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

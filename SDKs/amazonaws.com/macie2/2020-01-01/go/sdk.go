@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Amazon Macie
 // https://docs.aws.amazon.com/macie2/ - Amazon Web Services documentation
 type SDK struct {
@@ -1374,7 +1389,10 @@ func (s *SDK) DeclineInvitations(ctx context.Context, request operations.Decline
 // DeleteAllowList - Deletes an allow list.
 func (s *SDK) DeleteAllowList(ctx context.Context, request operations.DeleteAllowListRequest) (*operations.DeleteAllowListResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/allow-lists/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/allow-lists/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1474,7 +1492,10 @@ func (s *SDK) DeleteAllowList(ctx context.Context, request operations.DeleteAllo
 // DeleteCustomDataIdentifier - Soft deletes a custom data identifier.
 func (s *SDK) DeleteCustomDataIdentifier(ctx context.Context, request operations.DeleteCustomDataIdentifierRequest) (*operations.DeleteCustomDataIdentifierResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom-data-identifiers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom-data-identifiers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1590,7 +1611,10 @@ func (s *SDK) DeleteCustomDataIdentifier(ctx context.Context, request operations
 // DeleteFindingsFilter - Deletes a findings filter.
 func (s *SDK) DeleteFindingsFilter(ctx context.Context, request operations.DeleteFindingsFilterRequest) (*operations.DeleteFindingsFilterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/findingsfilters/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/findingsfilters/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1832,7 +1856,10 @@ func (s *SDK) DeleteInvitations(ctx context.Context, request operations.DeleteIn
 // DeleteMember - Deletes the association between an Amazon Macie administrator account and an account.
 func (s *SDK) DeleteMember(ctx context.Context, request operations.DeleteMemberRequest) (*operations.DeleteMemberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/members/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/members/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2078,7 +2105,10 @@ func (s *SDK) DescribeBuckets(ctx context.Context, request operations.DescribeBu
 // DescribeClassificationJob - Retrieves the status and settings for a classification job.
 func (s *SDK) DescribeClassificationJob(ctx context.Context, request operations.DescribeClassificationJobRequest) (*operations.DescribeClassificationJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2778,7 +2808,10 @@ func (s *SDK) DisassociateFromMasterAccount(ctx context.Context, request operati
 // DisassociateMember - Disassociates an Amazon Macie administrator account from a member account.
 func (s *SDK) DisassociateMember(ctx context.Context, request operations.DisassociateMemberRequest) (*operations.DisassociateMemberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/members/disassociate/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/members/disassociate/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3262,7 +3295,10 @@ func (s *SDK) GetAdministratorAccount(ctx context.Context, request operations.Ge
 // GetAllowList - Retrieves the settings and status of an allow list.
 func (s *SDK) GetAllowList(ctx context.Context, request operations.GetAllowListRequest) (*operations.GetAllowListResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/allow-lists/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/allow-lists/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3686,7 +3722,10 @@ func (s *SDK) GetClassificationExportConfiguration(ctx context.Context, request 
 // GetClassificationScope - Retrieves the classification scope settings for an account.
 func (s *SDK) GetClassificationScope(ctx context.Context, request operations.GetClassificationScopeRequest) (*operations.GetClassificationScopeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classification-scopes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/classification-scopes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3782,7 +3821,10 @@ func (s *SDK) GetClassificationScope(ctx context.Context, request operations.Get
 // GetCustomDataIdentifier - Retrieves the criteria and other settings for a custom data identifier.
 func (s *SDK) GetCustomDataIdentifier(ctx context.Context, request operations.GetCustomDataIdentifierRequest) (*operations.GetCustomDataIdentifierResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom-data-identifiers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom-data-identifiers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4150,7 +4192,10 @@ func (s *SDK) GetFindings(ctx context.Context, request operations.GetFindingsReq
 // GetFindingsFilter - Retrieves the criteria and other settings for a findings filter.
 func (s *SDK) GetFindingsFilter(ctx context.Context, request operations.GetFindingsFilterRequest) (*operations.GetFindingsFilterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/findingsfilters/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/findingsfilters/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4730,7 +4775,10 @@ func (s *SDK) GetMasterAccount(ctx context.Context, request operations.GetMaster
 // GetMember - Retrieves information about an account that's associated with an Amazon Macie administrator account.
 func (s *SDK) GetMember(ctx context.Context, request operations.GetMemberRequest) (*operations.GetMemberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/members/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/members/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5042,7 +5090,10 @@ func (s *SDK) GetRevealConfiguration(ctx context.Context, request operations.Get
 // GetSensitiveDataOccurrences - Retrieves occurrences of sensitive data reported by a finding.
 func (s *SDK) GetSensitiveDataOccurrences(ctx context.Context, request operations.GetSensitiveDataOccurrencesRequest) (*operations.GetSensitiveDataOccurrencesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/findings/{findingId}/reveal", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/findings/{findingId}/reveal", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5148,7 +5199,10 @@ func (s *SDK) GetSensitiveDataOccurrences(ctx context.Context, request operation
 // GetSensitiveDataOccurrencesAvailability - Checks whether occurrences of sensitive data can be retrieved for a finding.
 func (s *SDK) GetSensitiveDataOccurrencesAvailability(ctx context.Context, request operations.GetSensitiveDataOccurrencesAvailabilityRequest) (*operations.GetSensitiveDataOccurrencesAvailabilityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/findings/{findingId}/reveal/availability", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/findings/{findingId}/reveal/availability", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5234,7 +5288,10 @@ func (s *SDK) GetSensitiveDataOccurrencesAvailability(ctx context.Context, reque
 // GetSensitivityInspectionTemplate -  <p>Retrieves the settings for the sensitivity inspection template for an account.</p>
 func (s *SDK) GetSensitivityInspectionTemplate(ctx context.Context, request operations.GetSensitivityInspectionTemplateRequest) (*operations.GetSensitivityInspectionTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/sensitivity-inspections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/templates/sensitivity-inspections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7000,7 +7057,10 @@ func (s *SDK) ListSensitivityInspectionTemplates(ctx context.Context, request op
 // ListTagsForResource - Retrieves the tags (keys and values) that are associated with an Amazon Macie resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7428,7 +7488,10 @@ func (s *SDK) SearchResources(ctx context.Context, request operations.SearchReso
 // TagResource - Adds or updates one or more tags (keys and values) that are associated with an Amazon Macie resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7610,7 +7673,10 @@ func (s *SDK) TestCustomDataIdentifier(ctx context.Context, request operations.T
 // UntagResource - Removes one or more tags (keys and values) from an Amazon Macie resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -7660,7 +7726,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAllowList - Updates the settings for an allow list.
 func (s *SDK) UpdateAllowList(ctx context.Context, request operations.UpdateAllowListRequest) (*operations.UpdateAllowListResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/allow-lists/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/allow-lists/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7862,7 +7931,10 @@ func (s *SDK) UpdateAutomatedDiscoveryConfiguration(ctx context.Context, request
 // UpdateClassificationJob - Changes the status of a classification job.
 func (s *SDK) UpdateClassificationJob(ctx context.Context, request operations.UpdateClassificationJobRequest) (*operations.UpdateClassificationJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7988,7 +8060,10 @@ func (s *SDK) UpdateClassificationJob(ctx context.Context, request operations.Up
 // UpdateClassificationScope - Updates the classification scope settings for an account.
 func (s *SDK) UpdateClassificationScope(ctx context.Context, request operations.UpdateClassificationScopeRequest) (*operations.UpdateClassificationScopeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classification-scopes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/classification-scopes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8094,7 +8169,10 @@ func (s *SDK) UpdateClassificationScope(ctx context.Context, request operations.
 // UpdateFindingsFilter - Updates the criteria and other settings for a findings filter.
 func (s *SDK) UpdateFindingsFilter(ctx context.Context, request operations.UpdateFindingsFilterRequest) (*operations.UpdateFindingsFilterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/findingsfilters/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/findingsfilters/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8346,7 +8424,10 @@ func (s *SDK) UpdateMacieSession(ctx context.Context, request operations.UpdateM
 // UpdateMemberSession - Enables an Amazon Macie administrator to suspend or re-enable Macie for a member account.
 func (s *SDK) UpdateMemberSession(ctx context.Context, request operations.UpdateMemberSessionRequest) (*operations.UpdateMemberSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/macie/members/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/macie/members/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8934,7 +9015,10 @@ func (s *SDK) UpdateRevealConfiguration(ctx context.Context, request operations.
 // UpdateSensitivityInspectionTemplate -  <p>Updates the settings for the sensitivity inspection template for an account.</p>
 func (s *SDK) UpdateSensitivityInspectionTemplate(ctx context.Context, request operations.UpdateSensitivityInspectionTemplateRequest) (*operations.UpdateSensitivityInspectionTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/sensitivity-inspections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/templates/sensitivity-inspections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

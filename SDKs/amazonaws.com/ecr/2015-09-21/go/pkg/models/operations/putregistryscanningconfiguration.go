@@ -16,17 +16,21 @@ const (
 	PutRegistryScanningConfigurationXAmzTargetEnumAmazonEc2ContainerRegistryV20150921PutRegistryScanningConfiguration PutRegistryScanningConfigurationXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.PutRegistryScanningConfiguration"
 )
 
+func (e PutRegistryScanningConfigurationXAmzTargetEnum) ToPointer() *PutRegistryScanningConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutRegistryScanningConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.PutRegistryScanningConfiguration":
-		*e = PutRegistryScanningConfigurationXAmzTargetEnum(s)
+		*e = PutRegistryScanningConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutRegistryScanningConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutRegistryScanningConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

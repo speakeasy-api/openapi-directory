@@ -14,18 +14,22 @@ const (
 	BatchJobDependencyTypeEnumSequential BatchJobDependencyTypeEnum = "SEQUENTIAL"
 )
 
+func (e BatchJobDependencyTypeEnum) ToPointer() *BatchJobDependencyTypeEnum {
+	return &e
+}
+
 func (e *BatchJobDependencyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "N_TO_N":
 		fallthrough
 	case "SEQUENTIAL":
-		*e = BatchJobDependencyTypeEnum(s)
+		*e = BatchJobDependencyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchJobDependencyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchJobDependencyTypeEnum: %v", v)
 	}
 }

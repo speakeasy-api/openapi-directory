@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,24 +17,22 @@ func main() {
         }),
     )
 
-    req := operations.AddAssociationRequest{
+    ctx := context.Background()
+    res, err := s.AddAssociation(ctx, operations.AddAssociationRequest{
         AddAssociationRequest: shared.AddAssociationRequest{
-            AssociationType: "DerivedFrom",
+            AssociationType: shared.AssociationEdgeTypeEnumDerivedFrom.ToPointer(),
             DestinationArn: "provident",
             SourceArn: "distinctio",
         },
-        XAmzAlgorithm: "quibusdam",
-        XAmzContentSha256: "unde",
-        XAmzCredential: "nulla",
-        XAmzDate: "corrupti",
-        XAmzSecurityToken: "illum",
-        XAmzSignature: "vel",
-        XAmzSignedHeaders: "error",
-        XAmzTarget: "SageMaker.AddAssociation",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddAssociation(ctx, req)
+        XAmzAlgorithm: sdk.String("quibusdam"),
+        XAmzContentSha256: sdk.String("unde"),
+        XAmzCredential: sdk.String("nulla"),
+        XAmzDate: sdk.String("corrupti"),
+        XAmzSecurityToken: sdk.String("illum"),
+        XAmzSignature: sdk.String("vel"),
+        XAmzSignedHeaders: sdk.String("error"),
+        XAmzTarget: operations.AddAssociationXAmzTargetEnumSageMakerAddAssociation,
+    })
     if err != nil {
         log.Fatal(err)
     }

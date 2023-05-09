@@ -23,19 +23,23 @@ const (
 	UpdateReportDefinitionRequestBodyFormatEnumParquet UpdateReportDefinitionRequestBodyFormatEnum = "PARQUET"
 )
 
+func (e UpdateReportDefinitionRequestBodyFormatEnum) ToPointer() *UpdateReportDefinitionRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *UpdateReportDefinitionRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
 		fallthrough
 	case "PARQUET":
-		*e = UpdateReportDefinitionRequestBodyFormatEnum(s)
+		*e = UpdateReportDefinitionRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateReportDefinitionRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateReportDefinitionRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -48,21 +52,25 @@ const (
 	UpdateReportDefinitionRequestBodyReportFrequencyEnumAll     UpdateReportDefinitionRequestBodyReportFrequencyEnum = "ALL"
 )
 
+func (e UpdateReportDefinitionRequestBodyReportFrequencyEnum) ToPointer() *UpdateReportDefinitionRequestBodyReportFrequencyEnum {
+	return &e
+}
+
 func (e *UpdateReportDefinitionRequestBodyReportFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MONTHLY":
 		fallthrough
 	case "DAILY":
 		fallthrough
 	case "ALL":
-		*e = UpdateReportDefinitionRequestBodyReportFrequencyEnum(s)
+		*e = UpdateReportDefinitionRequestBodyReportFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateReportDefinitionRequestBodyReportFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateReportDefinitionRequestBodyReportFrequencyEnum: %v", v)
 	}
 }
 

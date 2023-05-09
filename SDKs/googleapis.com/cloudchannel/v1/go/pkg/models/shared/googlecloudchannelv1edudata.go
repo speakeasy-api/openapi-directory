@@ -21,12 +21,16 @@ const (
 	GoogleCloudChannelV1EduDataInstituteSizeEnumSize10001OrMore          GoogleCloudChannelV1EduDataInstituteSizeEnum = "SIZE_10001_OR_MORE"
 )
 
+func (e GoogleCloudChannelV1EduDataInstituteSizeEnum) ToPointer() *GoogleCloudChannelV1EduDataInstituteSizeEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1EduDataInstituteSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTITUTE_SIZE_UNSPECIFIED":
 		fallthrough
 	case "SIZE_1_100":
@@ -42,10 +46,10 @@ func (e *GoogleCloudChannelV1EduDataInstituteSizeEnum) UnmarshalJSON(data []byte
 	case "SIZE_5001_10000":
 		fallthrough
 	case "SIZE_10001_OR_MORE":
-		*e = GoogleCloudChannelV1EduDataInstituteSizeEnum(s)
+		*e = GoogleCloudChannelV1EduDataInstituteSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1EduDataInstituteSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1EduDataInstituteSizeEnum: %v", v)
 	}
 }
 
@@ -58,21 +62,25 @@ const (
 	GoogleCloudChannelV1EduDataInstituteTypeEnumUniversity               GoogleCloudChannelV1EduDataInstituteTypeEnum = "UNIVERSITY"
 )
 
+func (e GoogleCloudChannelV1EduDataInstituteTypeEnum) ToPointer() *GoogleCloudChannelV1EduDataInstituteTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1EduDataInstituteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTITUTE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "K12":
 		fallthrough
 	case "UNIVERSITY":
-		*e = GoogleCloudChannelV1EduDataInstituteTypeEnum(s)
+		*e = GoogleCloudChannelV1EduDataInstituteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1EduDataInstituteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1EduDataInstituteTypeEnum: %v", v)
 	}
 }
 

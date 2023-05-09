@@ -15,19 +15,23 @@ const (
 	CallParametersAsyncAmdStatusCallbackMethodEnumGet  CallParametersAsyncAmdStatusCallbackMethodEnum = "GET"
 )
 
+func (e CallParametersAsyncAmdStatusCallbackMethodEnum) ToPointer() *CallParametersAsyncAmdStatusCallbackMethodEnum {
+	return &e
+}
+
 func (e *CallParametersAsyncAmdStatusCallbackMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POST":
 		fallthrough
 	case "GET":
-		*e = CallParametersAsyncAmdStatusCallbackMethodEnum(s)
+		*e = CallParametersAsyncAmdStatusCallbackMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallParametersAsyncAmdStatusCallbackMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CallParametersAsyncAmdStatusCallbackMethodEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	CallParametersMachineDetectionEnumDetectMessageEnd CallParametersMachineDetectionEnum = "DetectMessageEnd"
 )
 
+func (e CallParametersMachineDetectionEnum) ToPointer() *CallParametersMachineDetectionEnum {
+	return &e
+}
+
 func (e *CallParametersMachineDetectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enable":
 		fallthrough
 	case "DetectMessageEnd":
-		*e = CallParametersMachineDetectionEnum(s)
+		*e = CallParametersMachineDetectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallParametersMachineDetectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CallParametersMachineDetectionEnum: %v", v)
 	}
 }
 

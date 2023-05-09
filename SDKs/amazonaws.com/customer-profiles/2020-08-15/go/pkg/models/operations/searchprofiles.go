@@ -17,19 +17,23 @@ const (
 	SearchProfilesRequestBodyLogicalOperatorEnumOr  SearchProfilesRequestBodyLogicalOperatorEnum = "OR"
 )
 
+func (e SearchProfilesRequestBodyLogicalOperatorEnum) ToPointer() *SearchProfilesRequestBodyLogicalOperatorEnum {
+	return &e
+}
+
 func (e *SearchProfilesRequestBodyLogicalOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AND":
 		fallthrough
 	case "OR":
-		*e = SearchProfilesRequestBodyLogicalOperatorEnum(s)
+		*e = SearchProfilesRequestBodyLogicalOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchProfilesRequestBodyLogicalOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchProfilesRequestBodyLogicalOperatorEnum: %v", v)
 	}
 }
 

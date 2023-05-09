@@ -17,19 +17,23 @@ const (
 	GetUntaggedImagesOrderByEnumOldest GetUntaggedImagesOrderByEnum = "Oldest"
 )
 
+func (e GetUntaggedImagesOrderByEnum) ToPointer() *GetUntaggedImagesOrderByEnum {
+	return &e
+}
+
 func (e *GetUntaggedImagesOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Newest":
 		fallthrough
 	case "Oldest":
-		*e = GetUntaggedImagesOrderByEnum(s)
+		*e = GetUntaggedImagesOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUntaggedImagesOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUntaggedImagesOrderByEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	TimesheetStatusEnumRequested TimesheetStatusEnum = "REQUESTED"
 )
 
+func (e TimesheetStatusEnum) ToPointer() *TimesheetStatusEnum {
+	return &e
+}
+
 func (e *TimesheetStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DRAFT":
 		fallthrough
 	case "PROCESSED":
@@ -32,9 +36,9 @@ func (e *TimesheetStatusEnum) UnmarshalJSON(data []byte) error {
 	case "REJECTED":
 		fallthrough
 	case "REQUESTED":
-		*e = TimesheetStatusEnum(s)
+		*e = TimesheetStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimesheetStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TimesheetStatusEnum: %v", v)
 	}
 }

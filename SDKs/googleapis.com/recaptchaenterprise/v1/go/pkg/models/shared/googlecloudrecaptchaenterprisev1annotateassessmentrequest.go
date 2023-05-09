@@ -18,12 +18,16 @@ const (
 	GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnumPasswordIncorrect     GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum = "PASSWORD_INCORRECT"
 )
 
+func (e GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum) ToPointer() *GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANNOTATION_UNSPECIFIED":
 		fallthrough
 	case "LEGITIMATE":
@@ -33,10 +37,10 @@ func (e *GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum
 	case "PASSWORD_CORRECT":
 		fallthrough
 	case "PASSWORD_INCORRECT":
-		*e = GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum(s)
+		*e = GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum: %v", v)
 	}
 }
 
@@ -60,12 +64,16 @@ const (
 	GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnumSocialSpam          GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum = "SOCIAL_SPAM"
 )
 
+func (e GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum) ToPointer() *GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REASON_UNSPECIFIED":
 		fallthrough
 	case "CHARGEBACK":
@@ -95,10 +103,10 @@ func (e *GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum) U
 	case "INCORRECT_PASSWORD":
 		fallthrough
 	case "SOCIAL_SPAM":
-		*e = GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum(s)
+		*e = GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum: %v", v)
 	}
 }
 

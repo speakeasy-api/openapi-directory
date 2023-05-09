@@ -16,21 +16,25 @@ const (
 	CourseWorkAssigneeModeEnumIndividualStudents      CourseWorkAssigneeModeEnum = "INDIVIDUAL_STUDENTS"
 )
 
+func (e CourseWorkAssigneeModeEnum) ToPointer() *CourseWorkAssigneeModeEnum {
+	return &e
+}
+
 func (e *CourseWorkAssigneeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSIGNEE_MODE_UNSPECIFIED":
 		fallthrough
 	case "ALL_STUDENTS":
 		fallthrough
 	case "INDIVIDUAL_STUDENTS":
-		*e = CourseWorkAssigneeModeEnum(s)
+		*e = CourseWorkAssigneeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CourseWorkAssigneeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CourseWorkAssigneeModeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	CourseWorkStateEnumDeleted                    CourseWorkStateEnum = "DELETED"
 )
 
+func (e CourseWorkStateEnum) ToPointer() *CourseWorkStateEnum {
+	return &e
+}
+
 func (e *CourseWorkStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COURSE_WORK_STATE_UNSPECIFIED":
 		fallthrough
 	case "PUBLISHED":
@@ -57,10 +65,10 @@ func (e *CourseWorkStateEnum) UnmarshalJSON(data []byte) error {
 	case "DRAFT":
 		fallthrough
 	case "DELETED":
-		*e = CourseWorkStateEnum(s)
+		*e = CourseWorkStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CourseWorkStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CourseWorkStateEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	CourseWorkSubmissionModificationModeEnumModifiable                            CourseWorkSubmissionModificationModeEnum = "MODIFIABLE"
 )
 
+func (e CourseWorkSubmissionModificationModeEnum) ToPointer() *CourseWorkSubmissionModificationModeEnum {
+	return &e
+}
+
 func (e *CourseWorkSubmissionModificationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBMISSION_MODIFICATION_MODE_UNSPECIFIED":
 		fallthrough
 	case "MODIFIABLE_UNTIL_TURNED_IN":
 		fallthrough
 	case "MODIFIABLE":
-		*e = CourseWorkSubmissionModificationModeEnum(s)
+		*e = CourseWorkSubmissionModificationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CourseWorkSubmissionModificationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CourseWorkSubmissionModificationModeEnum: %v", v)
 	}
 }
 
@@ -101,12 +113,16 @@ const (
 	CourseWorkWorkTypeEnumMultipleChoiceQuestion    CourseWorkWorkTypeEnum = "MULTIPLE_CHOICE_QUESTION"
 )
 
+func (e CourseWorkWorkTypeEnum) ToPointer() *CourseWorkWorkTypeEnum {
+	return &e
+}
+
 func (e *CourseWorkWorkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COURSE_WORK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ASSIGNMENT":
@@ -114,10 +130,10 @@ func (e *CourseWorkWorkTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SHORT_ANSWER_QUESTION":
 		fallthrough
 	case "MULTIPLE_CHOICE_QUESTION":
-		*e = CourseWorkWorkTypeEnum(s)
+		*e = CourseWorkWorkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CourseWorkWorkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CourseWorkWorkTypeEnum: %v", v)
 	}
 }
 

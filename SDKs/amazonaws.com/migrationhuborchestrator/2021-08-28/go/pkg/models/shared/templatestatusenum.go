@@ -13,16 +13,20 @@ const (
 	TemplateStatusEnumCreated TemplateStatusEnum = "CREATED"
 )
 
+func (e TemplateStatusEnum) ToPointer() *TemplateStatusEnum {
+	return &e
+}
+
 func (e *TemplateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATED":
-		*e = TemplateStatusEnum(s)
+		*e = TemplateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemplateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TemplateStatusEnum: %v", v)
 	}
 }

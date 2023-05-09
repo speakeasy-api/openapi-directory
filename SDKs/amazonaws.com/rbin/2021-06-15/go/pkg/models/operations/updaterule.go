@@ -17,19 +17,23 @@ const (
 	UpdateRuleRequestBodyResourceTypeEnumEc2Image    UpdateRuleRequestBodyResourceTypeEnum = "EC2_IMAGE"
 )
 
+func (e UpdateRuleRequestBodyResourceTypeEnum) ToPointer() *UpdateRuleRequestBodyResourceTypeEnum {
+	return &e
+}
+
 func (e *UpdateRuleRequestBodyResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EBS_SNAPSHOT":
 		fallthrough
 	case "EC2_IMAGE":
-		*e = UpdateRuleRequestBodyResourceTypeEnum(s)
+		*e = UpdateRuleRequestBodyResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateRuleRequestBodyResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateRuleRequestBodyResourceTypeEnum: %v", v)
 	}
 }
 

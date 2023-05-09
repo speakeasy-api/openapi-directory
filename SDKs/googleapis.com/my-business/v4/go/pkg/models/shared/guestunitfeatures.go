@@ -17,12 +17,16 @@ const (
 	GuestUnitFeaturesBungalowOrVillaExceptionEnumDependentOnDayOfWeek GuestUnitFeaturesBungalowOrVillaExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e GuestUnitFeaturesBungalowOrVillaExceptionEnum) ToPointer() *GuestUnitFeaturesBungalowOrVillaExceptionEnum {
+	return &e
+}
+
 func (e *GuestUnitFeaturesBungalowOrVillaExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *GuestUnitFeaturesBungalowOrVillaExceptionEnum) UnmarshalJSON(data []byt
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = GuestUnitFeaturesBungalowOrVillaExceptionEnum(s)
+		*e = GuestUnitFeaturesBungalowOrVillaExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestUnitFeaturesBungalowOrVillaExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestUnitFeaturesBungalowOrVillaExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	GuestUnitFeaturesConnectingUnitAvailableExceptionEnumDependentOnDayOfWeek GuestUnitFeaturesConnectingUnitAvailableExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e GuestUnitFeaturesConnectingUnitAvailableExceptionEnum) ToPointer() *GuestUnitFeaturesConnectingUnitAvailableExceptionEnum {
+	return &e
+}
+
 func (e *GuestUnitFeaturesConnectingUnitAvailableExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *GuestUnitFeaturesConnectingUnitAvailableExceptionEnum) UnmarshalJSON(da
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = GuestUnitFeaturesConnectingUnitAvailableExceptionEnum(s)
+		*e = GuestUnitFeaturesConnectingUnitAvailableExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestUnitFeaturesConnectingUnitAvailableExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestUnitFeaturesConnectingUnitAvailableExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	GuestUnitFeaturesExecutiveFloorExceptionEnumDependentOnDayOfWeek GuestUnitFeaturesExecutiveFloorExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e GuestUnitFeaturesExecutiveFloorExceptionEnum) ToPointer() *GuestUnitFeaturesExecutiveFloorExceptionEnum {
+	return &e
+}
+
 func (e *GuestUnitFeaturesExecutiveFloorExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *GuestUnitFeaturesExecutiveFloorExceptionEnum) UnmarshalJSON(data []byte
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = GuestUnitFeaturesExecutiveFloorExceptionEnum(s)
+		*e = GuestUnitFeaturesExecutiveFloorExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestUnitFeaturesExecutiveFloorExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestUnitFeaturesExecutiveFloorExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnumDependentOnDayOfWeek GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum) ToPointer() *GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum {
+	return &e
+}
+
 func (e *GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum) UnmarshalJSON(dat
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum(s)
+		*e = GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	GuestUnitFeaturesMaxChildOccupantsCountExceptionEnumDependentOnDayOfWeek GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum) ToPointer() *GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum {
+	return &e
+}
+
 func (e *GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum) UnmarshalJSON(dat
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum(s)
+		*e = GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	GuestUnitFeaturesMaxOccupantsCountExceptionEnumDependentOnDayOfWeek GuestUnitFeaturesMaxOccupantsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e GuestUnitFeaturesMaxOccupantsCountExceptionEnum) ToPointer() *GuestUnitFeaturesMaxOccupantsCountExceptionEnum {
+	return &e
+}
+
 func (e *GuestUnitFeaturesMaxOccupantsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *GuestUnitFeaturesMaxOccupantsCountExceptionEnum) UnmarshalJSON(data []b
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = GuestUnitFeaturesMaxOccupantsCountExceptionEnum(s)
+		*e = GuestUnitFeaturesMaxOccupantsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestUnitFeaturesMaxOccupantsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestUnitFeaturesMaxOccupantsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	GuestUnitFeaturesPrivateHomeExceptionEnumDependentOnDayOfWeek GuestUnitFeaturesPrivateHomeExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e GuestUnitFeaturesPrivateHomeExceptionEnum) ToPointer() *GuestUnitFeaturesPrivateHomeExceptionEnum {
+	return &e
+}
+
 func (e *GuestUnitFeaturesPrivateHomeExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *GuestUnitFeaturesPrivateHomeExceptionEnum) UnmarshalJSON(data []byte) e
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = GuestUnitFeaturesPrivateHomeExceptionEnum(s)
+		*e = GuestUnitFeaturesPrivateHomeExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestUnitFeaturesPrivateHomeExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestUnitFeaturesPrivateHomeExceptionEnum: %v", v)
 	}
 }
 
@@ -227,12 +255,16 @@ const (
 	GuestUnitFeaturesSuiteExceptionEnumDependentOnDayOfWeek GuestUnitFeaturesSuiteExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e GuestUnitFeaturesSuiteExceptionEnum) ToPointer() *GuestUnitFeaturesSuiteExceptionEnum {
+	return &e
+}
+
 func (e *GuestUnitFeaturesSuiteExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -240,10 +272,10 @@ func (e *GuestUnitFeaturesSuiteExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = GuestUnitFeaturesSuiteExceptionEnum(s)
+		*e = GuestUnitFeaturesSuiteExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestUnitFeaturesSuiteExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestUnitFeaturesSuiteExceptionEnum: %v", v)
 	}
 }
 
@@ -256,21 +288,25 @@ const (
 	GuestUnitFeaturesTierEnumDeluxeUnit          GuestUnitFeaturesTierEnum = "DELUXE_UNIT"
 )
 
+func (e GuestUnitFeaturesTierEnum) ToPointer() *GuestUnitFeaturesTierEnum {
+	return &e
+}
+
 func (e *GuestUnitFeaturesTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNIT_TIER_UNSPECIFIED":
 		fallthrough
 	case "STANDARD_UNIT":
 		fallthrough
 	case "DELUXE_UNIT":
-		*e = GuestUnitFeaturesTierEnum(s)
+		*e = GuestUnitFeaturesTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestUnitFeaturesTierEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestUnitFeaturesTierEnum: %v", v)
 	}
 }
 
@@ -284,12 +320,16 @@ const (
 	GuestUnitFeaturesTierExceptionEnumDependentOnDayOfWeek GuestUnitFeaturesTierExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e GuestUnitFeaturesTierExceptionEnum) ToPointer() *GuestUnitFeaturesTierExceptionEnum {
+	return &e
+}
+
 func (e *GuestUnitFeaturesTierExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -297,10 +337,10 @@ func (e *GuestUnitFeaturesTierExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = GuestUnitFeaturesTierExceptionEnum(s)
+		*e = GuestUnitFeaturesTierExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestUnitFeaturesTierExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestUnitFeaturesTierExceptionEnum: %v", v)
 	}
 }
 

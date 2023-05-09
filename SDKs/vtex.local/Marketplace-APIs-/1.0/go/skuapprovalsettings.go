@@ -173,7 +173,10 @@ func (s *skuApprovalSettings) GetautoApprovevaluefromconfig(ctx context.Context,
 // -`autoApprove`, for every SKU received from a given seller to be approved automatically, regardless of the Matcher Score.
 func (s *skuApprovalSettings) Getselleraccountconfig(ctx context.Context, request operations.GetselleraccountconfigRequest) (*operations.GetselleraccountconfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggestions/configuration/seller/{sellerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suggestions/configuration/seller/{sellerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +220,10 @@ func (s *skuApprovalSettings) Getselleraccountconfig(ctx context.Context, reques
 // The request includes all the details necessary to implement the chosen approval settings.
 func (s *skuApprovalSettings) Putselleraccountconfig(ctx context.Context, request operations.PutselleraccountconfigRequest) (*operations.PutselleraccountconfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggestions/configuration/seller/{sellerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suggestions/configuration/seller/{sellerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PutselleraccountconfigRequest", "json")
 	if err != nil {
@@ -395,7 +401,10 @@ func (s *skuApprovalSettings) Saveautoapproveforaccount(ctx context.Context, req
 // This endpoint enables the auto approve setting to received SKUs from a specific seller. Be aware that once enabling the rule through this request, all received SKUs from that seller will be automatically approved on your store, regardless of the Matcher Score.
 func (s *skuApprovalSettings) Saveautoapproveforaccountseller(ctx context.Context, request operations.SaveautoapproveforaccountsellerRequest) (*operations.SaveautoapproveforaccountsellerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggestions/configuration/autoapproval/toggle/seller/{sellerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suggestions/configuration/autoapproval/toggle/seller/{sellerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SaveautoapproveforaccountsellerRequest", "json")
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	GETReplaceTransitGatewayRouteActionEnumReplaceTransitGatewayRoute GETReplaceTransitGatewayRouteActionEnum = "ReplaceTransitGatewayRoute"
 )
 
+func (e GETReplaceTransitGatewayRouteActionEnum) ToPointer() *GETReplaceTransitGatewayRouteActionEnum {
+	return &e
+}
+
 func (e *GETReplaceTransitGatewayRouteActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReplaceTransitGatewayRoute":
-		*e = GETReplaceTransitGatewayRouteActionEnum(s)
+		*e = GETReplaceTransitGatewayRouteActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReplaceTransitGatewayRouteActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReplaceTransitGatewayRouteActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETReplaceTransitGatewayRouteVersionEnumTwoThousandAndSixteen1115 GETReplaceTransitGatewayRouteVersionEnum = "2016-11-15"
 )
 
+func (e GETReplaceTransitGatewayRouteVersionEnum) ToPointer() *GETReplaceTransitGatewayRouteVersionEnum {
+	return &e
+}
+
 func (e *GETReplaceTransitGatewayRouteVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETReplaceTransitGatewayRouteVersionEnum(s)
+		*e = GETReplaceTransitGatewayRouteVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReplaceTransitGatewayRouteVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReplaceTransitGatewayRouteVersionEnum: %v", v)
 	}
 }
 

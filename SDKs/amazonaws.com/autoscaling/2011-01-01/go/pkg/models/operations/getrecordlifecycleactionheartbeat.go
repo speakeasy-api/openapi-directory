@@ -15,17 +15,21 @@ const (
 	GETRecordLifecycleActionHeartbeatActionEnumRecordLifecycleActionHeartbeat GETRecordLifecycleActionHeartbeatActionEnum = "RecordLifecycleActionHeartbeat"
 )
 
+func (e GETRecordLifecycleActionHeartbeatActionEnum) ToPointer() *GETRecordLifecycleActionHeartbeatActionEnum {
+	return &e
+}
+
 func (e *GETRecordLifecycleActionHeartbeatActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RecordLifecycleActionHeartbeat":
-		*e = GETRecordLifecycleActionHeartbeatActionEnum(s)
+		*e = GETRecordLifecycleActionHeartbeatActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRecordLifecycleActionHeartbeatActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRecordLifecycleActionHeartbeatActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRecordLifecycleActionHeartbeatVersionEnumTwoThousandAndEleven0101 GETRecordLifecycleActionHeartbeatVersionEnum = "2011-01-01"
 )
 
+func (e GETRecordLifecycleActionHeartbeatVersionEnum) ToPointer() *GETRecordLifecycleActionHeartbeatVersionEnum {
+	return &e
+}
+
 func (e *GETRecordLifecycleActionHeartbeatVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETRecordLifecycleActionHeartbeatVersionEnum(s)
+		*e = GETRecordLifecycleActionHeartbeatVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRecordLifecycleActionHeartbeatVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRecordLifecycleActionHeartbeatVersionEnum: %v", v)
 	}
 }
 

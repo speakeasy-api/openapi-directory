@@ -16,21 +16,25 @@ const (
 	LinkTypeEnumParentLinkedSpan LinkTypeEnum = "PARENT_LINKED_SPAN"
 )
 
+func (e LinkTypeEnum) ToPointer() *LinkTypeEnum {
+	return &e
+}
+
 func (e *LinkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "CHILD_LINKED_SPAN":
 		fallthrough
 	case "PARENT_LINKED_SPAN":
-		*e = LinkTypeEnum(s)
+		*e = LinkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LinkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LinkTypeEnum: %v", v)
 	}
 }
 

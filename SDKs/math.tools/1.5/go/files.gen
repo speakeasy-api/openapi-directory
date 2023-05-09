@@ -11,6 +11,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -46,4 +47,14 @@ pkg/models/operations/getnumbersprimefactors.go
 pkg/models/operations/getnumberscardinal.go
 pkg/models/operations/getnumberscurrency.go
 pkg/models/operations/getnumbersordinal.go
+docs/sdk/README.md
+docs/baseconversion/README.md
+docs/numberchecks/README.md
+docs/numberfacts/README.md
+docs/numbergeneration/README.md
+docs/numbersystemsconversion/README.md
+docs/numberoftheday/README.md
+docs/pi/README.md
+docs/prime/README.md
+docs/spell/README.md
 USAGE.md

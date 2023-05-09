@@ -17,12 +17,16 @@ const (
 	DirectoryChromeosdevicesCommandResultResultEnumSuccess                      DirectoryChromeosdevicesCommandResultResultEnum = "SUCCESS"
 )
 
+func (e DirectoryChromeosdevicesCommandResultResultEnum) ToPointer() *DirectoryChromeosdevicesCommandResultResultEnum {
+	return &e
+}
+
 func (e *DirectoryChromeosdevicesCommandResultResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMAND_RESULT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IGNORED":
@@ -30,10 +34,10 @@ func (e *DirectoryChromeosdevicesCommandResultResultEnum) UnmarshalJSON(data []b
 	case "FAILURE":
 		fallthrough
 	case "SUCCESS":
-		*e = DirectoryChromeosdevicesCommandResultResultEnum(s)
+		*e = DirectoryChromeosdevicesCommandResultResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryChromeosdevicesCommandResultResultEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryChromeosdevicesCommandResultResultEnum: %v", v)
 	}
 }
 

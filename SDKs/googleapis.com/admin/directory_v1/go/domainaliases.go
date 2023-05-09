@@ -34,7 +34,10 @@ func newDomainAliases(defaultClient, securityClient HTTPClient, serverURL, langu
 // DirectoryDomainAliasesDelete - Deletes a domain Alias of the customer.
 func (s *domainAliases) DirectoryDomainAliasesDelete(ctx context.Context, request operations.DirectoryDomainAliasesDeleteRequest, security operations.DirectoryDomainAliasesDeleteSecurity) (*operations.DirectoryDomainAliasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domainaliases/{domainAliasName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domainaliases/{domainAliasName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *domainAliases) DirectoryDomainAliasesDelete(ctx context.Context, reques
 // DirectoryDomainAliasesGet - Retrieves a domain alias of the customer.
 func (s *domainAliases) DirectoryDomainAliasesGet(ctx context.Context, request operations.DirectoryDomainAliasesGetRequest, security operations.DirectoryDomainAliasesGetSecurity) (*operations.DirectoryDomainAliasesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domainaliases/{domainAliasName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domainaliases/{domainAliasName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *domainAliases) DirectoryDomainAliasesGet(ctx context.Context, request o
 // DirectoryDomainAliasesInsert - Inserts a domain alias of the customer.
 func (s *domainAliases) DirectoryDomainAliasesInsert(ctx context.Context, request operations.DirectoryDomainAliasesInsertRequest, security operations.DirectoryDomainAliasesInsertSecurity) (*operations.DirectoryDomainAliasesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domainaliases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domainaliases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DomainAlias", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *domainAliases) DirectoryDomainAliasesInsert(ctx context.Context, reques
 // DirectoryDomainAliasesList - Lists the domain aliases of the customer.
 func (s *domainAliases) DirectoryDomainAliasesList(ctx context.Context, request operations.DirectoryDomainAliasesListRequest, security operations.DirectoryDomainAliasesListSecurity) (*operations.DirectoryDomainAliasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domainaliases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/domainaliases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

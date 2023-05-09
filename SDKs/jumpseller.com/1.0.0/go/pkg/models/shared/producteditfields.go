@@ -15,19 +15,23 @@ const (
 	ProductEditFieldsPackageFormatEnumCylinder ProductEditFieldsPackageFormatEnum = "cylinder"
 )
 
+func (e ProductEditFieldsPackageFormatEnum) ToPointer() *ProductEditFieldsPackageFormatEnum {
+	return &e
+}
+
 func (e *ProductEditFieldsPackageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "box":
 		fallthrough
 	case "cylinder":
-		*e = ProductEditFieldsPackageFormatEnum(s)
+		*e = ProductEditFieldsPackageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductEditFieldsPackageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductEditFieldsPackageFormatEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	ProductEditFieldsStatusEnumDisabled     ProductEditFieldsStatusEnum = "disabled"
 )
 
+func (e ProductEditFieldsStatusEnum) ToPointer() *ProductEditFieldsStatusEnum {
+	return &e
+}
+
 func (e *ProductEditFieldsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "not-available":
 		fallthrough
 	case "disabled":
-		*e = ProductEditFieldsStatusEnum(s)
+		*e = ProductEditFieldsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductEditFieldsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductEditFieldsStatusEnum: %v", v)
 	}
 }
 

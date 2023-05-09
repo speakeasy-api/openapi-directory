@@ -97,7 +97,10 @@ func (s *domains) GetCmsV3DomainsGetPage(ctx context.Context, request operations
 // Returns a single domains with the id specified.
 func (s *domains) GetCmsV3DomainsDomainIDGetByID(ctx context.Context, request operations.GetCmsV3DomainsDomainIDGetByIDRequest, security operations.GetCmsV3DomainsDomainIDGetByIDSecurity) (*operations.GetCmsV3DomainsDomainIDGetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cms/v3/domains/{domainId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cms/v3/domains/{domainId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

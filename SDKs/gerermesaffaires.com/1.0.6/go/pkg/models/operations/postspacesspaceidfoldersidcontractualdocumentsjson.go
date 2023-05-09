@@ -28,12 +28,16 @@ const (
 	PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2AccountingWorkbookEnumPermanent   PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2AccountingWorkbookEnum = "permanent"
 )
 
+func (e PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2AccountingWorkbookEnum) ToPointer() *PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2AccountingWorkbookEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2AccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -51,10 +55,10 @@ func (e *PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2Accountin
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2AccountingWorkbookEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2AccountingWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2AccountingWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2AccountingWorkbookEnum: %v", v)
 	}
 }
 
@@ -81,12 +85,16 @@ const (
 	PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2TypeEnumOther            PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2TypeEnum = "other"
 )
 
+func (e PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2TypeEnum) ToPointer() *PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "contract":
 		fallthrough
 	case "engagement-letter":
@@ -100,10 +108,10 @@ func (e *PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2TypeEnum)
 	case "quotation":
 		fallthrough
 	case "other":
-		*e = PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2TypeEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -134,12 +142,16 @@ const (
 	PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON1TypeEnumOther            PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON1TypeEnum = "other"
 )
 
+func (e PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON1TypeEnum) ToPointer() *PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "contract":
 		fallthrough
 	case "engagement-letter":
@@ -153,10 +165,10 @@ func (e *PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON1TypeEnum)
 	case "quotation":
 		fallthrough
 	case "other":
-		*e = PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON1TypeEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDContractualDocumentsApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

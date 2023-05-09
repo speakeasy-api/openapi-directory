@@ -16,17 +16,21 @@ const (
 	BatchGetReportsXAmzTargetEnumCodeBuild20161006BatchGetReports BatchGetReportsXAmzTargetEnum = "CodeBuild_20161006.BatchGetReports"
 )
 
+func (e BatchGetReportsXAmzTargetEnum) ToPointer() *BatchGetReportsXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchGetReportsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.BatchGetReports":
-		*e = BatchGetReportsXAmzTargetEnum(s)
+		*e = BatchGetReportsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetReportsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetReportsXAmzTargetEnum: %v", v)
 	}
 }
 

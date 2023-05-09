@@ -15,17 +15,21 @@ const (
 	POSTDescribeSSLPoliciesActionEnumDescribeSslPolicies POSTDescribeSSLPoliciesActionEnum = "DescribeSSLPolicies"
 )
 
+func (e POSTDescribeSSLPoliciesActionEnum) ToPointer() *POSTDescribeSSLPoliciesActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeSSLPoliciesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeSSLPolicies":
-		*e = POSTDescribeSSLPoliciesActionEnum(s)
+		*e = POSTDescribeSSLPoliciesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeSSLPoliciesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeSSLPoliciesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeSSLPoliciesVersionEnumTwoThousandAndFifteen1201 POSTDescribeSSLPoliciesVersionEnum = "2015-12-01"
 )
 
+func (e POSTDescribeSSLPoliciesVersionEnum) ToPointer() *POSTDescribeSSLPoliciesVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeSSLPoliciesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = POSTDescribeSSLPoliciesVersionEnum(s)
+		*e = POSTDescribeSSLPoliciesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeSSLPoliciesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeSSLPoliciesVersionEnum: %v", v)
 	}
 }
 

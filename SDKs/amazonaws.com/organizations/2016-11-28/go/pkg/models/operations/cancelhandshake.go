@@ -16,17 +16,21 @@ const (
 	CancelHandshakeXAmzTargetEnumAwsOrganizationsV20161128CancelHandshake CancelHandshakeXAmzTargetEnum = "AWSOrganizationsV20161128.CancelHandshake"
 )
 
+func (e CancelHandshakeXAmzTargetEnum) ToPointer() *CancelHandshakeXAmzTargetEnum {
+	return &e
+}
+
 func (e *CancelHandshakeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.CancelHandshake":
-		*e = CancelHandshakeXAmzTargetEnum(s)
+		*e = CancelHandshakeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelHandshakeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelHandshakeXAmzTargetEnum: %v", v)
 	}
 }
 

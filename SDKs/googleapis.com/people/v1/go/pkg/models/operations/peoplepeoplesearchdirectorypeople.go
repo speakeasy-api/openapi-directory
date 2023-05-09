@@ -21,19 +21,23 @@ const (
 	PeoplePeopleSearchDirectoryPeopleMergeSourcesEnumDirectoryMergeSourceTypeContact     PeoplePeopleSearchDirectoryPeopleMergeSourcesEnum = "DIRECTORY_MERGE_SOURCE_TYPE_CONTACT"
 )
 
+func (e PeoplePeopleSearchDirectoryPeopleMergeSourcesEnum) ToPointer() *PeoplePeopleSearchDirectoryPeopleMergeSourcesEnum {
+	return &e
+}
+
 func (e *PeoplePeopleSearchDirectoryPeopleMergeSourcesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIRECTORY_MERGE_SOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DIRECTORY_MERGE_SOURCE_TYPE_CONTACT":
-		*e = PeoplePeopleSearchDirectoryPeopleMergeSourcesEnum(s)
+		*e = PeoplePeopleSearchDirectoryPeopleMergeSourcesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PeoplePeopleSearchDirectoryPeopleMergeSourcesEnum: %s", s)
+		return fmt.Errorf("invalid value for PeoplePeopleSearchDirectoryPeopleMergeSourcesEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	PeoplePeopleSearchDirectoryPeopleSourcesEnumDirectorySourceTypeDomainProfile PeoplePeopleSearchDirectoryPeopleSourcesEnum = "DIRECTORY_SOURCE_TYPE_DOMAIN_PROFILE"
 )
 
+func (e PeoplePeopleSearchDirectoryPeopleSourcesEnum) ToPointer() *PeoplePeopleSearchDirectoryPeopleSourcesEnum {
+	return &e
+}
+
 func (e *PeoplePeopleSearchDirectoryPeopleSourcesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIRECTORY_SOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DIRECTORY_SOURCE_TYPE_DOMAIN_CONTACT":
 		fallthrough
 	case "DIRECTORY_SOURCE_TYPE_DOMAIN_PROFILE":
-		*e = PeoplePeopleSearchDirectoryPeopleSourcesEnum(s)
+		*e = PeoplePeopleSearchDirectoryPeopleSourcesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PeoplePeopleSearchDirectoryPeopleSourcesEnum: %s", s)
+		return fmt.Errorf("invalid value for PeoplePeopleSearchDirectoryPeopleSourcesEnum: %v", v)
 	}
 }
 

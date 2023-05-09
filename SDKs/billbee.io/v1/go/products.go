@@ -97,7 +97,10 @@ func (s *products) ArticleCreateArticle(ctx context.Context, request shared.Bill
 // ArticleDeleteArticle - Deletes a product
 func (s *products) ArticleDeleteArticle(ctx context.Context, request operations.ArticleDeleteArticleRequest) (*operations.ArticleDeleteArticleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -148,7 +151,10 @@ func (s *products) ArticleDeleteArticle(ctx context.Context, request operations.
 // ArticleDeleteImage - Deletes a single image by id
 func (s *products) ArticleDeleteImage(ctx context.Context, request operations.ArticleDeleteImageRequest) (*operations.ArticleDeleteImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/images/{imageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/products/images/{imageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -199,7 +205,10 @@ func (s *products) ArticleDeleteImage(ctx context.Context, request operations.Ar
 // ArticleDeleteImageFromProduct - Deletes a single image from a product
 func (s *products) ArticleDeleteImageFromProduct(ctx context.Context, request operations.ArticleDeleteImageFromProductRequest) (*operations.ArticleDeleteImageFromProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -250,7 +259,10 @@ func (s *products) ArticleDeleteImageFromProduct(ctx context.Context, request op
 // ArticleGetArticle - Queries a single article by id or by sku
 func (s *products) ArticleGetArticle(ctx context.Context, request operations.ArticleGetArticleRequest) (*operations.ArticleGetArticleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -356,7 +368,10 @@ func (s *products) ArticleGetCategory(ctx context.Context) (*operations.ArticleG
 // ArticleGetCustomField - Queries a single custom field
 func (s *products) ArticleGetCustomField(ctx context.Context, request operations.ArticleGetCustomFieldRequest) (*operations.ArticleGetCustomFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/custom-fields/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/products/custom-fields/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -490,7 +505,10 @@ func (s *products) ArticleGetCustomFields(ctx context.Context, request operation
 // ArticleGetImage - Returns a single image by id
 func (s *products) ArticleGetImage(ctx context.Context, request operations.ArticleGetImageRequest) (*operations.ArticleGetImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/images/{imageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/products/images/{imageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -555,7 +573,10 @@ func (s *products) ArticleGetImage(ctx context.Context, request operations.Artic
 // ArticleGetImageFromProduct - Returns a single image by id
 func (s *products) ArticleGetImageFromProduct(ctx context.Context, request operations.ArticleGetImageFromProductRequest) (*operations.ArticleGetImageFromProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -620,7 +641,10 @@ func (s *products) ArticleGetImageFromProduct(ctx context.Context, request opera
 // ArticleGetImages - Returns a list of all images of the product
 func (s *products) ArticleGetImages(ctx context.Context, request operations.ArticleGetImagesRequest) (*operations.ArticleGetImagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -925,7 +949,10 @@ func (s *products) ArticleGetStocks(ctx context.Context) (*operations.ArticleGet
 // ArticlePatchArticle - Updates one or more fields of a product
 func (s *products) ArticlePatchArticle(ctx context.Context, request operations.ArticlePatchArticleRequest) (*operations.ArticlePatchArticleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -986,7 +1013,10 @@ func (s *products) ArticlePatchArticle(ctx context.Context, request operations.A
 // ArticlePutImageForm - Add or update an existing image of a product
 func (s *products) ArticlePutImageForm(ctx context.Context, request operations.ArticlePutImageFormRequest) (*operations.ArticlePutImageFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel", "form")
 	if err != nil {
@@ -1061,7 +1091,10 @@ func (s *products) ArticlePutImageForm(ctx context.Context, request operations.A
 // ArticlePutImageJSON - Add or update an existing image of a product
 func (s *products) ArticlePutImageJSON(ctx context.Context, request operations.ArticlePutImageJSONRequest) (*operations.ArticlePutImageJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel", "json")
 	if err != nil {
@@ -1136,7 +1169,10 @@ func (s *products) ArticlePutImageJSON(ctx context.Context, request operations.A
 // ArticlePutImageRaw - Add or update an existing image of a product
 func (s *products) ArticlePutImageRaw(ctx context.Context, request operations.ArticlePutImageRawRequest) (*operations.ArticlePutImageRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/products/{productId}/images/{imageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

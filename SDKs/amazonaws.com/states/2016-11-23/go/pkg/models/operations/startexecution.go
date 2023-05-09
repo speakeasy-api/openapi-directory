@@ -16,17 +16,21 @@ const (
 	StartExecutionXAmzTargetEnumAwsStepFunctionsStartExecution StartExecutionXAmzTargetEnum = "AWSStepFunctions.StartExecution"
 )
 
+func (e StartExecutionXAmzTargetEnum) ToPointer() *StartExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSStepFunctions.StartExecution":
-		*e = StartExecutionXAmzTargetEnum(s)
+		*e = StartExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTGetFlowLogsIntegrationTemplateActionEnumGetFlowLogsIntegrationTemplate POSTGetFlowLogsIntegrationTemplateActionEnum = "GetFlowLogsIntegrationTemplate"
 )
 
+func (e POSTGetFlowLogsIntegrationTemplateActionEnum) ToPointer() *POSTGetFlowLogsIntegrationTemplateActionEnum {
+	return &e
+}
+
 func (e *POSTGetFlowLogsIntegrationTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetFlowLogsIntegrationTemplate":
-		*e = POSTGetFlowLogsIntegrationTemplateActionEnum(s)
+		*e = POSTGetFlowLogsIntegrationTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetFlowLogsIntegrationTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetFlowLogsIntegrationTemplateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetFlowLogsIntegrationTemplateVersionEnumTwoThousandAndSixteen1115 POSTGetFlowLogsIntegrationTemplateVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetFlowLogsIntegrationTemplateVersionEnum) ToPointer() *POSTGetFlowLogsIntegrationTemplateVersionEnum {
+	return &e
+}
+
 func (e *POSTGetFlowLogsIntegrationTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetFlowLogsIntegrationTemplateVersionEnum(s)
+		*e = POSTGetFlowLogsIntegrationTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetFlowLogsIntegrationTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetFlowLogsIntegrationTemplateVersionEnum: %v", v)
 	}
 }
 

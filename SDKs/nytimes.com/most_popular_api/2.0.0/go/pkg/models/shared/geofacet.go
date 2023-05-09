@@ -15,60 +15,44 @@ const (
 	GeoFacet2EnumUnknown GeoFacet2Enum = ""
 )
 
-func (e *GeoFacet2Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "":
-		*e = GeoFacet2Enum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GeoFacet2Enum: %s", s)
-	}
+func (e GeoFacet2Enum) ToPointer() *GeoFacet2Enum {
+	return &e
 }
 
-type GeoFacet1Enum string
-
-const (
-	GeoFacet1EnumUnknown GeoFacet1Enum = ""
-)
-
-func (e *GeoFacet1Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+func (e *GeoFacet2Enum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
-		*e = GeoFacet1Enum(s)
+		*e = GeoFacet2Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GeoFacet1Enum: %s", s)
+		return fmt.Errorf("invalid value for GeoFacet2Enum: %v", v)
 	}
 }
 
 type GeoFacetType string
 
 const (
-	GeoFacetTypeGeoFacet1Enum GeoFacetType = "GeoFacet_1_Enum"
+	GeoFacetTypeArrayOfany    GeoFacetType = "arrayOfany"
 	GeoFacetTypeGeoFacet2Enum GeoFacetType = "GeoFacet_2_Enum"
 )
 
 type GeoFacet struct {
-	GeoFacet1Enum *GeoFacet1Enum
+	ArrayOfany    []interface{}
 	GeoFacet2Enum *GeoFacet2Enum
 
 	Type GeoFacetType
 }
 
-func CreateGeoFacetGeoFacet1Enum(geoFacet1Enum GeoFacet1Enum) GeoFacet {
-	typ := GeoFacetTypeGeoFacet1Enum
+func CreateGeoFacetArrayOfany(arrayOfany []interface{}) GeoFacet {
+	typ := GeoFacetTypeArrayOfany
 
 	return GeoFacet{
-		GeoFacet1Enum: &geoFacet1Enum,
-		Type:          typ,
+		ArrayOfany: arrayOfany,
+		Type:       typ,
 	}
 }
 
@@ -84,12 +68,12 @@ func CreateGeoFacetGeoFacet2Enum(geoFacet2Enum GeoFacet2Enum) GeoFacet {
 func (u *GeoFacet) UnmarshalJSON(data []byte) error {
 	var d *json.Decoder
 
-	geoFacet1Enum := new(GeoFacet1Enum)
+	arrayOfany := []interface{}{}
 	d = json.NewDecoder(bytes.NewReader(data))
 	d.DisallowUnknownFields()
-	if err := d.Decode(&geoFacet1Enum); err == nil {
-		u.GeoFacet1Enum = geoFacet1Enum
-		u.Type = GeoFacetTypeGeoFacet1Enum
+	if err := d.Decode(&arrayOfany); err == nil {
+		u.ArrayOfany = arrayOfany
+		u.Type = GeoFacetTypeArrayOfany
 		return nil
 	}
 
@@ -106,8 +90,8 @@ func (u *GeoFacet) UnmarshalJSON(data []byte) error {
 }
 
 func (u GeoFacet) MarshalJSON() ([]byte, error) {
-	if u.GeoFacet1Enum != nil {
-		return json.Marshal(u.GeoFacet1Enum)
+	if u.ArrayOfany != nil {
+		return json.Marshal(u.ArrayOfany)
 	}
 
 	if u.GeoFacet2Enum != nil {

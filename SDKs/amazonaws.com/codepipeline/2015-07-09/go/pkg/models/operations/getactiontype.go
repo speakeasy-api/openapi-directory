@@ -16,17 +16,21 @@ const (
 	GetActionTypeXAmzTargetEnumCodePipeline20150709GetActionType GetActionTypeXAmzTargetEnum = "CodePipeline_20150709.GetActionType"
 )
 
+func (e GetActionTypeXAmzTargetEnum) ToPointer() *GetActionTypeXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetActionTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.GetActionType":
-		*e = GetActionTypeXAmzTargetEnum(s)
+		*e = GetActionTypeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetActionTypeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetActionTypeXAmzTargetEnum: %v", v)
 	}
 }
 

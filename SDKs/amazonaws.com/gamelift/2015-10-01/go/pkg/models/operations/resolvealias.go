@@ -16,17 +16,21 @@ const (
 	ResolveAliasXAmzTargetEnumGameLiftResolveAlias ResolveAliasXAmzTargetEnum = "GameLift.ResolveAlias"
 )
 
+func (e ResolveAliasXAmzTargetEnum) ToPointer() *ResolveAliasXAmzTargetEnum {
+	return &e
+}
+
 func (e *ResolveAliasXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.ResolveAlias":
-		*e = ResolveAliasXAmzTargetEnum(s)
+		*e = ResolveAliasXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResolveAliasXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ResolveAliasXAmzTargetEnum: %v", v)
 	}
 }
 

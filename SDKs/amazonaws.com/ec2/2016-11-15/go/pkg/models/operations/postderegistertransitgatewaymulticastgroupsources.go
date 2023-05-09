@@ -15,17 +15,21 @@ const (
 	POSTDeregisterTransitGatewayMulticastGroupSourcesActionEnumDeregisterTransitGatewayMulticastGroupSources POSTDeregisterTransitGatewayMulticastGroupSourcesActionEnum = "DeregisterTransitGatewayMulticastGroupSources"
 )
 
+func (e POSTDeregisterTransitGatewayMulticastGroupSourcesActionEnum) ToPointer() *POSTDeregisterTransitGatewayMulticastGroupSourcesActionEnum {
+	return &e
+}
+
 func (e *POSTDeregisterTransitGatewayMulticastGroupSourcesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeregisterTransitGatewayMulticastGroupSources":
-		*e = POSTDeregisterTransitGatewayMulticastGroupSourcesActionEnum(s)
+		*e = POSTDeregisterTransitGatewayMulticastGroupSourcesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeregisterTransitGatewayMulticastGroupSourcesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeregisterTransitGatewayMulticastGroupSourcesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeregisterTransitGatewayMulticastGroupSourcesVersionEnumTwoThousandAndSixteen1115 POSTDeregisterTransitGatewayMulticastGroupSourcesVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeregisterTransitGatewayMulticastGroupSourcesVersionEnum) ToPointer() *POSTDeregisterTransitGatewayMulticastGroupSourcesVersionEnum {
+	return &e
+}
+
 func (e *POSTDeregisterTransitGatewayMulticastGroupSourcesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeregisterTransitGatewayMulticastGroupSourcesVersionEnum(s)
+		*e = POSTDeregisterTransitGatewayMulticastGroupSourcesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeregisterTransitGatewayMulticastGroupSourcesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeregisterTransitGatewayMulticastGroupSourcesVersionEnum: %v", v)
 	}
 }
 

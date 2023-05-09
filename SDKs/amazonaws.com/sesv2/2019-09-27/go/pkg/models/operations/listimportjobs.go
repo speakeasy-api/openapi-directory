@@ -17,19 +17,23 @@ const (
 	ListImportJobsRequestBodyImportDestinationTypeEnumContactList     ListImportJobsRequestBodyImportDestinationTypeEnum = "CONTACT_LIST"
 )
 
+func (e ListImportJobsRequestBodyImportDestinationTypeEnum) ToPointer() *ListImportJobsRequestBodyImportDestinationTypeEnum {
+	return &e
+}
+
 func (e *ListImportJobsRequestBodyImportDestinationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUPPRESSION_LIST":
 		fallthrough
 	case "CONTACT_LIST":
-		*e = ListImportJobsRequestBodyImportDestinationTypeEnum(s)
+		*e = ListImportJobsRequestBodyImportDestinationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListImportJobsRequestBodyImportDestinationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListImportJobsRequestBodyImportDestinationTypeEnum: %v", v)
 	}
 }
 

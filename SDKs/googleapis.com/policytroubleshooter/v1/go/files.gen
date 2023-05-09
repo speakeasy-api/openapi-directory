@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -27,4 +28,6 @@ pkg/models/shared/altenum.go
 pkg/models/shared/googlecloudpolicytroubleshooterv1troubleshootiampolicyrequest.go
 pkg/models/shared/googlecloudpolicytroubleshooterv1accesstuple.go
 pkg/models/shared/xgafvenum.go
+docs/sdk/README.md
+docs/iam/README.md
 USAGE.md

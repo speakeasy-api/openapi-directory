@@ -334,6 +334,7 @@ func (s *pad) CheckTokenUsingPOST(ctx context.Context) (*operations.CheckTokenUs
 
 	return res, nil
 }
+
 func (s *pad) CreateDiffHTMLUsingGET(ctx context.Context, request operations.CreateDiffHTMLUsingGETRequest) (*operations.CreateDiffHTMLUsingGETResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createDiffHTML"
@@ -410,6 +411,7 @@ func (s *pad) CreateDiffHTMLUsingGET(ctx context.Context, request operations.Cre
 
 	return res, nil
 }
+
 func (s *pad) CreateDiffHTMLUsingPOST(ctx context.Context, request operations.CreateDiffHTMLUsingPOSTRequest) (*operations.CreateDiffHTMLUsingPOSTResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createDiffHTML"

@@ -111,7 +111,10 @@ func (s *customerStores) CreateStore(ctx context.Context, request shared.CreateS
 // DeleteStore - Delete a store
 func (s *customerStores) DeleteStore(ctx context.Context, request operations.DeleteStoreRequest) (*operations.DeleteStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -158,7 +161,10 @@ func (s *customerStores) DeleteStore(ctx context.Context, request operations.Del
 // GetStore - Get store's information
 func (s *customerStores) GetStore(ctx context.Context, request operations.GetStoreRequest) (*operations.GetStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -279,7 +285,10 @@ func (s *customerStores) GetStores(ctx context.Context, request operations.GetSt
 // Update some store's information. FYI, you cannot change the country.
 func (s *customerStores) UpdateStore(ctx context.Context, request operations.UpdateStoreRequest) (*operations.UpdateStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateStoreRequest", "json")
 	if err != nil {

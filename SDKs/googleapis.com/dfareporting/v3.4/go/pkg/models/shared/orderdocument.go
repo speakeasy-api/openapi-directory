@@ -17,19 +17,23 @@ const (
 	OrderDocumentTypeEnumPlanningOrderTypeChangeOrder    OrderDocumentTypeEnum = "PLANNING_ORDER_TYPE_CHANGE_ORDER"
 )
 
+func (e OrderDocumentTypeEnum) ToPointer() *OrderDocumentTypeEnum {
+	return &e
+}
+
 func (e *OrderDocumentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLANNING_ORDER_TYPE_INSERTION_ORDER":
 		fallthrough
 	case "PLANNING_ORDER_TYPE_CHANGE_ORDER":
-		*e = OrderDocumentTypeEnum(s)
+		*e = OrderDocumentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderDocumentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderDocumentTypeEnum: %v", v)
 	}
 }
 

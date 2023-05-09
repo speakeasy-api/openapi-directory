@@ -21,12 +21,16 @@ const (
 	CertificateActionTypeEnumSanDrop                  CertificateActionTypeEnum = "SAN_DROP"
 )
 
+func (e CertificateActionTypeEnum) ToPointer() *CertificateActionTypeEnum {
+	return &e
+}
+
 func (e *CertificateActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERTIFICATE_ISSUED":
 		fallthrough
 	case "CERTIFICATE_ORDER_CANCELED":
@@ -44,10 +48,10 @@ func (e *CertificateActionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ORG_VALIDATION_COMPLETE":
 		fallthrough
 	case "SAN_DROP":
-		*e = CertificateActionTypeEnum(s)
+		*e = CertificateActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateActionTypeEnum: %v", v)
 	}
 }
 

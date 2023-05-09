@@ -15,20 +15,24 @@ const (
 	ScheduleStateEnumFailed    ScheduleStateEnum = "FAILED"
 )
 
+func (e ScheduleStateEnum) ToPointer() *ScheduleStateEnum {
+	return &e
+}
+
 func (e *ScheduleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODIFYING":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "FAILED":
-		*e = ScheduleStateEnum(s)
+		*e = ScheduleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScheduleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ScheduleStateEnum: %v", v)
 	}
 }

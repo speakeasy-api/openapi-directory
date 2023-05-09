@@ -14,18 +14,22 @@ const (
 	BucketMetricNameEnumNumberOfObjects BucketMetricNameEnum = "NumberOfObjects"
 )
 
+func (e BucketMetricNameEnum) ToPointer() *BucketMetricNameEnum {
+	return &e
+}
+
 func (e *BucketMetricNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BucketSizeBytes":
 		fallthrough
 	case "NumberOfObjects":
-		*e = BucketMetricNameEnum(s)
+		*e = BucketMetricNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BucketMetricNameEnum: %s", s)
+		return fmt.Errorf("invalid value for BucketMetricNameEnum: %v", v)
 	}
 }

@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getareacode
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetareacodefromnumberRequest{
+    ctx := context.Background()
+    res, err := s.AreaCodeInformation.Getareacodefromnumber(ctx, operations.GetareacodefromnumberRequest{
         License: "corrupti",
         Number: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.AreaCodeInformation.Getareacodefromnumber(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### AreaCodeInformation
+### [AreaCodeInformation](docs/areacodeinformation/README.md)
 
-* `Getareacodefromnumber` - Gets area code information from a telephone number
+* [Getareacodefromnumber](docs/areacodeinformation/README.md#getareacodefromnumber) - Gets area code information from a telephone number
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -2,7 +2,7 @@
 
 package shared
 
-// ExportErrorDetailsOutput - <p/>
+// ExportErrorDetailsOutput - The structure representing the errors in an export EarthObservationJob operation.
 type ExportErrorDetailsOutput struct {
 	Message *string              `json:"Message,omitempty"`
 	Type    *ExportErrorTypeEnum `json:"Type,omitempty"`

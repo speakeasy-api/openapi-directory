@@ -17,19 +17,23 @@ const (
 	ListEarthObservationJobsRequestBodySortOrderEnumDescending ListEarthObservationJobsRequestBodySortOrderEnum = "DESCENDING"
 )
 
+func (e ListEarthObservationJobsRequestBodySortOrderEnum) ToPointer() *ListEarthObservationJobsRequestBodySortOrderEnum {
+	return &e
+}
+
 func (e *ListEarthObservationJobsRequestBodySortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = ListEarthObservationJobsRequestBodySortOrderEnum(s)
+		*e = ListEarthObservationJobsRequestBodySortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEarthObservationJobsRequestBodySortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEarthObservationJobsRequestBodySortOrderEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ListEarthObservationJobsRequestBodyStatusEqualsEnumDeleted      ListEarthObservationJobsRequestBodyStatusEqualsEnum = "DELETED"
 )
 
+func (e ListEarthObservationJobsRequestBodyStatusEqualsEnum) ToPointer() *ListEarthObservationJobsRequestBodyStatusEqualsEnum {
+	return &e
+}
+
 func (e *ListEarthObservationJobsRequestBodyStatusEqualsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIALIZING":
 		fallthrough
 	case "IN_PROGRESS":
@@ -68,10 +76,10 @@ func (e *ListEarthObservationJobsRequestBodyStatusEqualsEnum) UnmarshalJSON(data
 	case "DELETING":
 		fallthrough
 	case "DELETED":
-		*e = ListEarthObservationJobsRequestBodyStatusEqualsEnum(s)
+		*e = ListEarthObservationJobsRequestBodyStatusEqualsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEarthObservationJobsRequestBodyStatusEqualsEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEarthObservationJobsRequestBodyStatusEqualsEnum: %v", v)
 	}
 }
 

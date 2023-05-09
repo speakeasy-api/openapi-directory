@@ -17,12 +17,16 @@ const (
 	PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnumDependentOnDayOfWeek PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum) ToPointer() *PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum {
+	return &e
+}
+
 func (e *PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum) U
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum(s)
+		*e = PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PhysicalDistancingCommonAreasPhysicalDistancingArrangedExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	PhysicalDistancingPhysicalDistancingRequiredExceptionEnumDependentOnDayOfWeek PhysicalDistancingPhysicalDistancingRequiredExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PhysicalDistancingPhysicalDistancingRequiredExceptionEnum) ToPointer() *PhysicalDistancingPhysicalDistancingRequiredExceptionEnum {
+	return &e
+}
+
 func (e *PhysicalDistancingPhysicalDistancingRequiredExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *PhysicalDistancingPhysicalDistancingRequiredExceptionEnum) UnmarshalJSO
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PhysicalDistancingPhysicalDistancingRequiredExceptionEnum(s)
+		*e = PhysicalDistancingPhysicalDistancingRequiredExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PhysicalDistancingPhysicalDistancingRequiredExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PhysicalDistancingPhysicalDistancingRequiredExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	PhysicalDistancingSafetyDividersExceptionEnumDependentOnDayOfWeek PhysicalDistancingSafetyDividersExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PhysicalDistancingSafetyDividersExceptionEnum) ToPointer() *PhysicalDistancingSafetyDividersExceptionEnum {
+	return &e
+}
+
 func (e *PhysicalDistancingSafetyDividersExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *PhysicalDistancingSafetyDividersExceptionEnum) UnmarshalJSON(data []byt
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PhysicalDistancingSafetyDividersExceptionEnum(s)
+		*e = PhysicalDistancingSafetyDividersExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PhysicalDistancingSafetyDividersExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PhysicalDistancingSafetyDividersExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnumDependentOnDayOfWeek PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum) ToPointer() *PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum {
+	return &e
+}
+
 func (e *PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum) UnmarshalJS
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum(s)
+		*e = PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PhysicalDistancingSharedAreasLimitedOccupancyExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnumDependentOnDayOfWeek PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum) ToPointer() *PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum {
+	return &e
+}
+
 func (e *PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum) Unmarsha
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum(s)
+		*e = PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PhysicalDistancingWellnessAreasHavePrivateSpacesExceptionEnum: %v", v)
 	}
 }
 

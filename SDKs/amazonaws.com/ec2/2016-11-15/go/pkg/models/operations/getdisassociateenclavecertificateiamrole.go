@@ -15,17 +15,21 @@ const (
 	GETDisassociateEnclaveCertificateIamRoleActionEnumDisassociateEnclaveCertificateIamRole GETDisassociateEnclaveCertificateIamRoleActionEnum = "DisassociateEnclaveCertificateIamRole"
 )
 
+func (e GETDisassociateEnclaveCertificateIamRoleActionEnum) ToPointer() *GETDisassociateEnclaveCertificateIamRoleActionEnum {
+	return &e
+}
+
 func (e *GETDisassociateEnclaveCertificateIamRoleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateEnclaveCertificateIamRole":
-		*e = GETDisassociateEnclaveCertificateIamRoleActionEnum(s)
+		*e = GETDisassociateEnclaveCertificateIamRoleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateEnclaveCertificateIamRoleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateEnclaveCertificateIamRoleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisassociateEnclaveCertificateIamRoleVersionEnumTwoThousandAndSixteen1115 GETDisassociateEnclaveCertificateIamRoleVersionEnum = "2016-11-15"
 )
 
+func (e GETDisassociateEnclaveCertificateIamRoleVersionEnum) ToPointer() *GETDisassociateEnclaveCertificateIamRoleVersionEnum {
+	return &e
+}
+
 func (e *GETDisassociateEnclaveCertificateIamRoleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDisassociateEnclaveCertificateIamRoleVersionEnum(s)
+		*e = GETDisassociateEnclaveCertificateIamRoleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateEnclaveCertificateIamRoleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateEnclaveCertificateIamRoleVersionEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	GoogleCloudDialogflowCxV3beta1ExperimentStateEnumRolloutFailed    GoogleCloudDialogflowCxV3beta1ExperimentStateEnum = "ROLLOUT_FAILED"
 )
 
+func (e GoogleCloudDialogflowCxV3beta1ExperimentStateEnum) ToPointer() *GoogleCloudDialogflowCxV3beta1ExperimentStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3beta1ExperimentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "DRAFT":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDialogflowCxV3beta1ExperimentStateEnum) UnmarshalJSON(data [
 	case "DONE":
 		fallthrough
 	case "ROLLOUT_FAILED":
-		*e = GoogleCloudDialogflowCxV3beta1ExperimentStateEnum(s)
+		*e = GoogleCloudDialogflowCxV3beta1ExperimentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ExperimentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ExperimentStateEnum: %v", v)
 	}
 }
 

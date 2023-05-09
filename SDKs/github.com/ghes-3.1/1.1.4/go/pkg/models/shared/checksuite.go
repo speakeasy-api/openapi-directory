@@ -20,12 +20,16 @@ const (
 	CheckSuiteConclusionEnumActionRequired CheckSuiteConclusionEnum = "action_required"
 )
 
+func (e CheckSuiteConclusionEnum) ToPointer() *CheckSuiteConclusionEnum {
+	return &e
+}
+
 func (e *CheckSuiteConclusionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "failure":
@@ -39,10 +43,10 @@ func (e *CheckSuiteConclusionEnum) UnmarshalJSON(data []byte) error {
 	case "timed_out":
 		fallthrough
 	case "action_required":
-		*e = CheckSuiteConclusionEnum(s)
+		*e = CheckSuiteConclusionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckSuiteConclusionEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckSuiteConclusionEnum: %v", v)
 	}
 }
 
@@ -54,21 +58,25 @@ const (
 	CheckSuiteStatusEnumCompleted  CheckSuiteStatusEnum = "completed"
 )
 
+func (e CheckSuiteStatusEnum) ToPointer() *CheckSuiteStatusEnum {
+	return &e
+}
+
 func (e *CheckSuiteStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "queued":
 		fallthrough
 	case "in_progress":
 		fallthrough
 	case "completed":
-		*e = CheckSuiteStatusEnum(s)
+		*e = CheckSuiteStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckSuiteStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckSuiteStatusEnum: %v", v)
 	}
 }
 

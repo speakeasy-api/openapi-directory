@@ -16,17 +16,21 @@ const (
 	DeleteResolverEndpointXAmzTargetEnumRoute53ResolverDeleteResolverEndpoint DeleteResolverEndpointXAmzTargetEnum = "Route53Resolver.DeleteResolverEndpoint"
 )
 
+func (e DeleteResolverEndpointXAmzTargetEnum) ToPointer() *DeleteResolverEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteResolverEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.DeleteResolverEndpoint":
-		*e = DeleteResolverEndpointXAmzTargetEnum(s)
+		*e = DeleteResolverEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteResolverEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteResolverEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

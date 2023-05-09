@@ -36,7 +36,10 @@ func newTransferInstruments(defaultClient, securityClient HTTPClient, serverURL,
 // Deletes a transfer instrument.
 func (s *transferInstruments) DeleteTransferInstrumentsID(ctx context.Context, request operations.DeleteTransferInstrumentsIDRequest, security operations.DeleteTransferInstrumentsIDSecurity) (*operations.DeleteTransferInstrumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *transferInstruments) DeleteTransferInstrumentsID(ctx context.Context, r
 // Returns the details of a transfer instrument.
 func (s *transferInstruments) GetTransferInstrumentsID(ctx context.Context, request operations.GetTransferInstrumentsIDRequest, security operations.GetTransferInstrumentsIDSecurity) (*operations.GetTransferInstrumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -153,7 +159,10 @@ func (s *transferInstruments) GetTransferInstrumentsID(ctx context.Context, requ
 // Updates a transfer instrument.
 func (s *transferInstruments) PatchTransferInstrumentsID(ctx context.Context, request operations.PatchTransferInstrumentsIDRequest, security operations.PatchTransferInstrumentsIDSecurity) (*operations.PatchTransferInstrumentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferInstrumentInfo", "json")
 	if err != nil {

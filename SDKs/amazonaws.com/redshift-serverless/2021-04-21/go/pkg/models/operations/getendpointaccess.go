@@ -16,17 +16,21 @@ const (
 	GetEndpointAccessXAmzTargetEnumRedshiftServerlessGetEndpointAccess GetEndpointAccessXAmzTargetEnum = "RedshiftServerless.GetEndpointAccess"
 )
 
+func (e GetEndpointAccessXAmzTargetEnum) ToPointer() *GetEndpointAccessXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetEndpointAccessXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.GetEndpointAccess":
-		*e = GetEndpointAccessXAmzTargetEnum(s)
+		*e = GetEndpointAccessXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEndpointAccessXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEndpointAccessXAmzTargetEnum: %v", v)
 	}
 }
 

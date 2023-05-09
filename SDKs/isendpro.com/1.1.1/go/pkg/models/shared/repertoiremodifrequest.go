@@ -15,19 +15,23 @@ const (
 	REPERTOIREmodifrequestRepertoireEditEnumDel REPERTOIREmodifrequestRepertoireEditEnum = "del"
 )
 
+func (e REPERTOIREmodifrequestRepertoireEditEnum) ToPointer() *REPERTOIREmodifrequestRepertoireEditEnum {
+	return &e
+}
+
 func (e *REPERTOIREmodifrequestRepertoireEditEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "add":
 		fallthrough
 	case "del":
-		*e = REPERTOIREmodifrequestRepertoireEditEnum(s)
+		*e = REPERTOIREmodifrequestRepertoireEditEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for REPERTOIREmodifrequestRepertoireEditEnum: %s", s)
+		return fmt.Errorf("invalid value for REPERTOIREmodifrequestRepertoireEditEnum: %v", v)
 	}
 }
 

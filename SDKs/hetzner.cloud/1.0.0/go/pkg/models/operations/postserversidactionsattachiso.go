@@ -43,21 +43,25 @@ const (
 	PostServersIDActionsAttachIsoActionResponseActionStatusEnumError   PostServersIDActionsAttachIsoActionResponseActionStatusEnum = "error"
 )
 
+func (e PostServersIDActionsAttachIsoActionResponseActionStatusEnum) ToPointer() *PostServersIDActionsAttachIsoActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostServersIDActionsAttachIsoActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostServersIDActionsAttachIsoActionResponseActionStatusEnum(s)
+		*e = PostServersIDActionsAttachIsoActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersIDActionsAttachIsoActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersIDActionsAttachIsoActionResponseActionStatusEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	RebuildWorkspacesXAmzTargetEnumWorkspacesServiceRebuildWorkspaces RebuildWorkspacesXAmzTargetEnum = "WorkspacesService.RebuildWorkspaces"
 )
 
+func (e RebuildWorkspacesXAmzTargetEnum) ToPointer() *RebuildWorkspacesXAmzTargetEnum {
+	return &e
+}
+
 func (e *RebuildWorkspacesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.RebuildWorkspaces":
-		*e = RebuildWorkspacesXAmzTargetEnum(s)
+		*e = RebuildWorkspacesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RebuildWorkspacesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RebuildWorkspacesXAmzTargetEnum: %v", v)
 	}
 }
 

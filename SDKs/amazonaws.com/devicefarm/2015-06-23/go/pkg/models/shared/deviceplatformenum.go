@@ -14,18 +14,22 @@ const (
 	DevicePlatformEnumIos     DevicePlatformEnum = "IOS"
 )
 
+func (e DevicePlatformEnum) ToPointer() *DevicePlatformEnum {
+	return &e
+}
+
 func (e *DevicePlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANDROID":
 		fallthrough
 	case "IOS":
-		*e = DevicePlatformEnum(s)
+		*e = DevicePlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicePlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicePlatformEnum: %v", v)
 	}
 }

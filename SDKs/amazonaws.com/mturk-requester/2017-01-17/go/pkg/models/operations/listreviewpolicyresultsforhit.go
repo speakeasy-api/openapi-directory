@@ -16,17 +16,21 @@ const (
 	ListReviewPolicyResultsForHITXAmzTargetEnumMTurkRequesterServiceV20170117ListReviewPolicyResultsForHit ListReviewPolicyResultsForHITXAmzTargetEnum = "MTurkRequesterServiceV20170117.ListReviewPolicyResultsForHIT"
 )
 
+func (e ListReviewPolicyResultsForHITXAmzTargetEnum) ToPointer() *ListReviewPolicyResultsForHITXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListReviewPolicyResultsForHITXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.ListReviewPolicyResultsForHIT":
-		*e = ListReviewPolicyResultsForHITXAmzTargetEnum(s)
+		*e = ListReviewPolicyResultsForHITXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListReviewPolicyResultsForHITXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListReviewPolicyResultsForHITXAmzTargetEnum: %v", v)
 	}
 }
 

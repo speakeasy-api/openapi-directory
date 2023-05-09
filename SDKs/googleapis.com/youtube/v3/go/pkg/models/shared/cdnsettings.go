@@ -16,21 +16,25 @@ const (
 	CdnSettingsFrameRateEnumVariable  CdnSettingsFrameRateEnum = "variable"
 )
 
+func (e CdnSettingsFrameRateEnum) ToPointer() *CdnSettingsFrameRateEnum {
+	return &e
+}
+
 func (e *CdnSettingsFrameRateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "30fps":
 		fallthrough
 	case "60fps":
 		fallthrough
 	case "variable":
-		*e = CdnSettingsFrameRateEnum(s)
+		*e = CdnSettingsFrameRateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CdnSettingsFrameRateEnum: %s", s)
+		return fmt.Errorf("invalid value for CdnSettingsFrameRateEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	CdnSettingsIngestionTypeEnumHls    CdnSettingsIngestionTypeEnum = "hls"
 )
 
+func (e CdnSettingsIngestionTypeEnum) ToPointer() *CdnSettingsIngestionTypeEnum {
+	return &e
+}
+
 func (e *CdnSettingsIngestionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rtmp":
 		fallthrough
 	case "dash":
@@ -57,10 +65,10 @@ func (e *CdnSettingsIngestionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "webrtc":
 		fallthrough
 	case "hls":
-		*e = CdnSettingsIngestionTypeEnum(s)
+		*e = CdnSettingsIngestionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CdnSettingsIngestionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CdnSettingsIngestionTypeEnum: %v", v)
 	}
 }
 
@@ -78,12 +86,16 @@ const (
 	CdnSettingsResolutionEnumVariable                        CdnSettingsResolutionEnum = "variable"
 )
 
+func (e CdnSettingsResolutionEnum) ToPointer() *CdnSettingsResolutionEnum {
+	return &e
+}
+
 func (e *CdnSettingsResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "240p":
 		fallthrough
 	case "360p":
@@ -99,10 +111,10 @@ func (e *CdnSettingsResolutionEnum) UnmarshalJSON(data []byte) error {
 	case "2160p":
 		fallthrough
 	case "variable":
-		*e = CdnSettingsResolutionEnum(s)
+		*e = CdnSettingsResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CdnSettingsResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for CdnSettingsResolutionEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	TargetWindowTargetWindowOptionEnumCustom        TargetWindowTargetWindowOptionEnum = "CUSTOM"
 )
 
+func (e TargetWindowTargetWindowOptionEnum) ToPointer() *TargetWindowTargetWindowOptionEnum {
+	return &e
+}
+
 func (e *TargetWindowTargetWindowOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEW_WINDOW":
 		fallthrough
 	case "CURRENT_WINDOW":
 		fallthrough
 	case "CUSTOM":
-		*e = TargetWindowTargetWindowOptionEnum(s)
+		*e = TargetWindowTargetWindowOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetWindowTargetWindowOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetWindowTargetWindowOptionEnum: %v", v)
 	}
 }
 

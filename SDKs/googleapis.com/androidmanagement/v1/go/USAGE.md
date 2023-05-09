@@ -2,102 +2,99 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AndroidmanagementEnterprisesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Enterprises.AndroidmanagementEnterprisesCreate(ctx, operations.AndroidmanagementEnterprisesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         Enterprise: &shared.Enterprise{
-            AppAutoApprovalEnabled: false,
+            AppAutoApprovalEnabled: sdk.Bool(false),
             ContactInfo: &shared.ContactInfo{
-                ContactEmail: "provident",
-                DataProtectionOfficerEmail: "distinctio",
-                DataProtectionOfficerName: "quibusdam",
-                DataProtectionOfficerPhone: "unde",
-                EuRepresentativeEmail: "nulla",
-                EuRepresentativeName: "corrupti",
-                EuRepresentativePhone: "illum",
+                ContactEmail: sdk.String("provident"),
+                DataProtectionOfficerEmail: sdk.String("distinctio"),
+                DataProtectionOfficerName: sdk.String("quibusdam"),
+                DataProtectionOfficerPhone: sdk.String("unde"),
+                EuRepresentativeEmail: sdk.String("nulla"),
+                EuRepresentativeName: sdk.String("corrupti"),
+                EuRepresentativePhone: sdk.String("illum"),
             },
             EnabledNotificationTypes: []shared.EnterpriseEnabledNotificationTypesEnum{
-                "STATUS_REPORT",
-                "STATUS_REPORT",
+                shared.EnterpriseEnabledNotificationTypesEnumStatusReport,
+                shared.EnterpriseEnabledNotificationTypesEnumStatusReport,
             },
-            EnterpriseDisplayName: "suscipit",
+            EnterpriseDisplayName: sdk.String("suscipit"),
             Logo: &shared.ExternalData{
-                Sha256Hash: "iure",
-                URL: "magnam",
+                Sha256Hash: sdk.String("iure"),
+                URL: sdk.String("magnam"),
             },
-            Name: "debitis",
-            PrimaryColor: 56713,
-            PubsubTopic: "delectus",
+            Name: sdk.String("Larry Windler"),
+            PrimaryColor: sdk.Int(477665),
+            PubsubTopic: sdk.String("minus"),
             SigninDetails: []shared.SigninDetail{
                 shared.SigninDetail{
-                    AllowPersonalUsage: "PERSONAL_USAGE_ALLOWED",
-                    QrCode: "molestiae",
-                    SigninEnrollmentToken: "minus",
-                    SigninURL: "placeat",
+                    AllowPersonalUsage: shared.SigninDetailAllowPersonalUsageEnumPersonalUsageAllowed.ToPointer(),
+                    QrCode: sdk.String("iusto"),
+                    SigninEnrollmentToken: sdk.String("excepturi"),
+                    SigninURL: sdk.String("nisi"),
                 },
                 shared.SigninDetail{
-                    AllowPersonalUsage: "PERSONAL_USAGE_ALLOWED",
-                    QrCode: "iusto",
-                    SigninEnrollmentToken: "excepturi",
-                    SigninURL: "nisi",
+                    AllowPersonalUsage: shared.SigninDetailAllowPersonalUsageEnumPersonalUsageDisallowed.ToPointer(),
+                    QrCode: sdk.String("temporibus"),
+                    SigninEnrollmentToken: sdk.String("ab"),
+                    SigninURL: sdk.String("quis"),
+                },
+                shared.SigninDetail{
+                    AllowPersonalUsage: shared.SigninDetailAllowPersonalUsageEnumAllowPersonalUsageUnspecified.ToPointer(),
+                    QrCode: sdk.String("deserunt"),
+                    SigninEnrollmentToken: sdk.String("perferendis"),
+                    SigninURL: sdk.String("ipsam"),
+                },
+                shared.SigninDetail{
+                    AllowPersonalUsage: shared.SigninDetailAllowPersonalUsageEnumPersonalUsageDisallowed.ToPointer(),
+                    QrCode: sdk.String("sapiente"),
+                    SigninEnrollmentToken: sdk.String("quo"),
+                    SigninURL: sdk.String("odit"),
                 },
             },
             TermsAndConditions: []shared.TermsAndConditions{
                 shared.TermsAndConditions{
                     Content: &shared.UserFacingMessage{
-                        DefaultMessage: "temporibus",
+                        DefaultMessage: sdk.String("at"),
                         LocalizedMessages: map[string]string{
-                            "quis": "veritatis",
-                        },
-                    },
-                    Header: &shared.UserFacingMessage{
-                        DefaultMessage: "deserunt",
-                        LocalizedMessages: map[string]string{
-                            "ipsam": "repellendus",
-                        },
-                    },
-                },
-                shared.TermsAndConditions{
-                    Content: &shared.UserFacingMessage{
-                        DefaultMessage: "sapiente",
-                        LocalizedMessages: map[string]string{
-                            "odit": "at",
-                            "at": "maiores",
                             "molestiae": "quod",
                             "quod": "esse",
+                            "totam": "porro",
+                            "dolorum": "dicta",
                         },
                     },
                     Header: &shared.UserFacingMessage{
-                        DefaultMessage: "totam",
+                        DefaultMessage: sdk.String("nam"),
                         LocalizedMessages: map[string]string{
-                            "dolorum": "dicta",
-                            "nam": "officia",
                             "occaecati": "fugit",
                             "deleniti": "hic",
+                            "optio": "totam",
                         },
                     },
                 },
                 shared.TermsAndConditions{
                     Content: &shared.UserFacingMessage{
-                        DefaultMessage: "optio",
+                        DefaultMessage: sdk.String("beatae"),
                         LocalizedMessages: map[string]string{
-                            "beatae": "commodi",
                             "molestiae": "modi",
                             "qui": "impedit",
                         },
                     },
                     Header: &shared.UserFacingMessage{
-                        DefaultMessage: "cum",
+                        DefaultMessage: sdk.String("cum"),
                         LocalizedMessages: map[string]string{
                             "ipsum": "excepturi",
                             "aspernatur": "perferendis",
@@ -106,7 +103,7 @@ func main() {
                 },
                 shared.TermsAndConditions{
                     Content: &shared.UserFacingMessage{
-                        DefaultMessage: "ad",
+                        DefaultMessage: sdk.String("ad"),
                         LocalizedMessages: map[string]string{
                             "sed": "iste",
                             "dolor": "natus",
@@ -114,7 +111,7 @@ func main() {
                         },
                     },
                     Header: &shared.UserFacingMessage{
-                        DefaultMessage: "saepe",
+                        DefaultMessage: sdk.String("saepe"),
                         LocalizedMessages: map[string]string{
                             "in": "corporis",
                             "iste": "iure",
@@ -122,26 +119,39 @@ func main() {
                         },
                     },
                 },
+                shared.TermsAndConditions{
+                    Content: &shared.UserFacingMessage{
+                        DefaultMessage: sdk.String("architecto"),
+                        LocalizedMessages: map[string]string{
+                            "reiciendis": "est",
+                        },
+                    },
+                    Header: &shared.UserFacingMessage{
+                        DefaultMessage: sdk.String("mollitia"),
+                        LocalizedMessages: map[string]string{
+                            "dolores": "dolorem",
+                            "corporis": "explicabo",
+                            "nobis": "enim",
+                        },
+                    },
+                },
             },
         },
-        AccessToken: "architecto",
-        AgreementAccepted: false,
-        Alt: "json",
-        Callback: "reiciendis",
-        EnterpriseToken: "est",
-        Fields: "mollitia",
-        Key: "laborum",
-        OauthToken: "dolores",
-        PrettyPrint: false,
-        ProjectID: "dolorem",
-        QuotaUser: "corporis",
-        SignupURLName: "explicabo",
-        UploadType: "nobis",
-        UploadProtocol: "enim",
-    }
-
-    ctx := context.Background()
-    res, err := s.Enterprises.AndroidmanagementEnterprisesCreate(ctx, req, operations.AndroidmanagementEnterprisesCreateSecurity{
+        AccessToken: sdk.String("omnis"),
+        AgreementAccepted: sdk.Bool(false),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("minima"),
+        EnterpriseToken: sdk.String("excepturi"),
+        Fields: sdk.String("accusantium"),
+        Key: sdk.String("iure"),
+        OauthToken: sdk.String("culpa"),
+        PrettyPrint: sdk.Bool(false),
+        ProjectID: sdk.String("doloribus"),
+        QuotaUser: sdk.String("sapiente"),
+        SignupURLName: sdk.String("architecto"),
+        UploadType: sdk.String("mollitia"),
+        UploadProtocol: sdk.String("dolorem"),
+    }, operations.AndroidmanagementEnterprisesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

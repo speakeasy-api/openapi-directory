@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type DeleteAPIV1ListsSecurity struct {
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type DeleteAPIV1ListsResponse struct {
 	ContentType string
 	// Invalid or missing Authorization header

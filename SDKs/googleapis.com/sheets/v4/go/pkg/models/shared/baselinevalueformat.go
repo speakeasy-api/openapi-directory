@@ -16,21 +16,25 @@ const (
 	BaselineValueFormatComparisonTypeEnumPercentageDifference    BaselineValueFormatComparisonTypeEnum = "PERCENTAGE_DIFFERENCE"
 )
 
+func (e BaselineValueFormatComparisonTypeEnum) ToPointer() *BaselineValueFormatComparisonTypeEnum {
+	return &e
+}
+
 func (e *BaselineValueFormatComparisonTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPARISON_TYPE_UNDEFINED":
 		fallthrough
 	case "ABSOLUTE_DIFFERENCE":
 		fallthrough
 	case "PERCENTAGE_DIFFERENCE":
-		*e = BaselineValueFormatComparisonTypeEnum(s)
+		*e = BaselineValueFormatComparisonTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BaselineValueFormatComparisonTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BaselineValueFormatComparisonTypeEnum: %v", v)
 	}
 }
 

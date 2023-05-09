@@ -22,12 +22,16 @@ const (
 	PolicyControllerOnClusterStateStateEnumSuspended                 PolicyControllerOnClusterStateStateEnum = "SUSPENDED"
 )
 
+func (e PolicyControllerOnClusterStateStateEnum) ToPointer() *PolicyControllerOnClusterStateStateEnum {
+	return &e
+}
+
 func (e *PolicyControllerOnClusterStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIFECYCLE_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -45,10 +49,10 @@ func (e *PolicyControllerOnClusterStateStateEnum) UnmarshalJSON(data []byte) err
 	case "HUB_ERROR":
 		fallthrough
 	case "SUSPENDED":
-		*e = PolicyControllerOnClusterStateStateEnum(s)
+		*e = PolicyControllerOnClusterStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyControllerOnClusterStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyControllerOnClusterStateStateEnum: %v", v)
 	}
 }
 

@@ -21,17 +21,21 @@ const (
 	CreateIntegrationWorkflowRequestBodyWorkflowTypeEnumAppflowIntegration CreateIntegrationWorkflowRequestBodyWorkflowTypeEnum = "APPFLOW_INTEGRATION"
 )
 
+func (e CreateIntegrationWorkflowRequestBodyWorkflowTypeEnum) ToPointer() *CreateIntegrationWorkflowRequestBodyWorkflowTypeEnum {
+	return &e
+}
+
 func (e *CreateIntegrationWorkflowRequestBodyWorkflowTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPFLOW_INTEGRATION":
-		*e = CreateIntegrationWorkflowRequestBodyWorkflowTypeEnum(s)
+		*e = CreateIntegrationWorkflowRequestBodyWorkflowTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIntegrationWorkflowRequestBodyWorkflowTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIntegrationWorkflowRequestBodyWorkflowTypeEnum: %v", v)
 	}
 }
 

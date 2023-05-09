@@ -15,17 +15,21 @@ const (
 	GETDetachClassicLinkVpcActionEnumDetachClassicLinkVpc GETDetachClassicLinkVpcActionEnum = "DetachClassicLinkVpc"
 )
 
+func (e GETDetachClassicLinkVpcActionEnum) ToPointer() *GETDetachClassicLinkVpcActionEnum {
+	return &e
+}
+
 func (e *GETDetachClassicLinkVpcActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DetachClassicLinkVpc":
-		*e = GETDetachClassicLinkVpcActionEnum(s)
+		*e = GETDetachClassicLinkVpcActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetachClassicLinkVpcActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetachClassicLinkVpcActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDetachClassicLinkVpcVersionEnumTwoThousandAndSixteen1115 GETDetachClassicLinkVpcVersionEnum = "2016-11-15"
 )
 
+func (e GETDetachClassicLinkVpcVersionEnum) ToPointer() *GETDetachClassicLinkVpcVersionEnum {
+	return &e
+}
+
 func (e *GETDetachClassicLinkVpcVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDetachClassicLinkVpcVersionEnum(s)
+		*e = GETDetachClassicLinkVpcVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetachClassicLinkVpcVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetachClassicLinkVpcVersionEnum: %v", v)
 	}
 }
 

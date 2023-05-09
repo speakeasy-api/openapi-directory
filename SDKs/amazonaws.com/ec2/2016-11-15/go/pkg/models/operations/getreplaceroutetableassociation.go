@@ -15,17 +15,21 @@ const (
 	GETReplaceRouteTableAssociationActionEnumReplaceRouteTableAssociation GETReplaceRouteTableAssociationActionEnum = "ReplaceRouteTableAssociation"
 )
 
+func (e GETReplaceRouteTableAssociationActionEnum) ToPointer() *GETReplaceRouteTableAssociationActionEnum {
+	return &e
+}
+
 func (e *GETReplaceRouteTableAssociationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReplaceRouteTableAssociation":
-		*e = GETReplaceRouteTableAssociationActionEnum(s)
+		*e = GETReplaceRouteTableAssociationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReplaceRouteTableAssociationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReplaceRouteTableAssociationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETReplaceRouteTableAssociationVersionEnumTwoThousandAndSixteen1115 GETReplaceRouteTableAssociationVersionEnum = "2016-11-15"
 )
 
+func (e GETReplaceRouteTableAssociationVersionEnum) ToPointer() *GETReplaceRouteTableAssociationVersionEnum {
+	return &e
+}
+
 func (e *GETReplaceRouteTableAssociationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETReplaceRouteTableAssociationVersionEnum(s)
+		*e = GETReplaceRouteTableAssociationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReplaceRouteTableAssociationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReplaceRouteTableAssociationVersionEnum: %v", v)
 	}
 }
 

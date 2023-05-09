@@ -24,12 +24,16 @@ const (
 	FormatEnumRowset     FormatEnum = "ROWSET"
 )
 
+func (e FormatEnum) ToPointer() *FormatEnum {
+	return &e
+}
+
 func (e *FormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTO":
 		fallthrough
 	case "NUMBER":
@@ -53,9 +57,9 @@ func (e *FormatEnum) UnmarshalJSON(data []byte) error {
 	case "ROWLINK":
 		fallthrough
 	case "ROWSET":
-		*e = FormatEnum(s)
+		*e = FormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FormatEnum: %s", s)
+		return fmt.Errorf("invalid value for FormatEnum: %v", v)
 	}
 }

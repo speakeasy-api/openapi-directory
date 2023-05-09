@@ -15,20 +15,24 @@ const (
 	DeductionTypeCalculationTypeEnumPosttax     DeductionTypeCalculationTypeEnum = "POSTTAX"
 )
 
+func (e DeductionTypeCalculationTypeEnum) ToPointer() *DeductionTypeCalculationTypeEnum {
+	return &e
+}
+
 func (e *DeductionTypeCalculationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIXEDAMOUNT":
 		fallthrough
 	case "PRETAX":
 		fallthrough
 	case "POSTTAX":
-		*e = DeductionTypeCalculationTypeEnum(s)
+		*e = DeductionTypeCalculationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeductionTypeCalculationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeductionTypeCalculationTypeEnum: %v", v)
 	}
 }

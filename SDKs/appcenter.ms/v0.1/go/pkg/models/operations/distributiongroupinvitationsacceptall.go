@@ -24,12 +24,16 @@ const (
 	DistributionGroupInvitationsAcceptAllDefaultApplicationJSONErrorCodeEnumTooManyRequests     DistributionGroupInvitationsAcceptAllDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DistributionGroupInvitationsAcceptAllDefaultApplicationJSONErrorCodeEnum) ToPointer() *DistributionGroupInvitationsAcceptAllDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DistributionGroupInvitationsAcceptAllDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -43,10 +47,10 @@ func (e *DistributionGroupInvitationsAcceptAllDefaultApplicationJSONErrorCodeEnu
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DistributionGroupInvitationsAcceptAllDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DistributionGroupInvitationsAcceptAllDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupInvitationsAcceptAllDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupInvitationsAcceptAllDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

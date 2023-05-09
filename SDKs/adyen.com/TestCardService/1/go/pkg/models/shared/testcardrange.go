@@ -39,12 +39,16 @@ const (
 	TestCardRangeExpiryMonthEnumSeptember TestCardRangeExpiryMonthEnum = "SEPTEMBER"
 )
 
+func (e TestCardRangeExpiryMonthEnum) ToPointer() *TestCardRangeExpiryMonthEnum {
+	return &e
+}
+
 func (e *TestCardRangeExpiryMonthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APRIL":
 		fallthrough
 	case "AUGUST":
@@ -68,10 +72,10 @@ func (e *TestCardRangeExpiryMonthEnum) UnmarshalJSON(data []byte) error {
 	case "OCTOBER":
 		fallthrough
 	case "SEPTEMBER":
-		*e = TestCardRangeExpiryMonthEnum(s)
+		*e = TestCardRangeExpiryMonthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestCardRangeExpiryMonthEnum: %s", s)
+		return fmt.Errorf("invalid value for TestCardRangeExpiryMonthEnum: %v", v)
 	}
 }
 
@@ -88,21 +92,25 @@ const (
 	TestCardRangeThreeDDirectoryServerResponseEnumY TestCardRangeThreeDDirectoryServerResponseEnum = "Y"
 )
 
+func (e TestCardRangeThreeDDirectoryServerResponseEnum) ToPointer() *TestCardRangeThreeDDirectoryServerResponseEnum {
+	return &e
+}
+
 func (e *TestCardRangeThreeDDirectoryServerResponseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "N":
 		fallthrough
 	case "U":
 		fallthrough
 	case "Y":
-		*e = TestCardRangeThreeDDirectoryServerResponseEnum(s)
+		*e = TestCardRangeThreeDDirectoryServerResponseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestCardRangeThreeDDirectoryServerResponseEnum: %s", s)
+		return fmt.Errorf("invalid value for TestCardRangeThreeDDirectoryServerResponseEnum: %v", v)
 	}
 }
 

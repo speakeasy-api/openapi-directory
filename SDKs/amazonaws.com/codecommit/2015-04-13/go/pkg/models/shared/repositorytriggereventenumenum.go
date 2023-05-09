@@ -16,12 +16,16 @@ const (
 	RepositoryTriggerEventEnumEnumDeleteReference RepositoryTriggerEventEnumEnum = "deleteReference"
 )
 
+func (e RepositoryTriggerEventEnumEnum) ToPointer() *RepositoryTriggerEventEnumEnum {
+	return &e
+}
+
 func (e *RepositoryTriggerEventEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "updateReference":
@@ -29,9 +33,9 @@ func (e *RepositoryTriggerEventEnumEnum) UnmarshalJSON(data []byte) error {
 	case "createReference":
 		fallthrough
 	case "deleteReference":
-		*e = RepositoryTriggerEventEnumEnum(s)
+		*e = RepositoryTriggerEventEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryTriggerEventEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryTriggerEventEnumEnum: %v", v)
 	}
 }

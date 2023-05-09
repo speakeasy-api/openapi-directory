@@ -14,18 +14,22 @@ const (
 	ElevationReferenceEnumAmsl ElevationReferenceEnum = "AMSL"
 )
 
+func (e ElevationReferenceEnum) ToPointer() *ElevationReferenceEnum {
+	return &e
+}
+
 func (e *ElevationReferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGL":
 		fallthrough
 	case "AMSL":
-		*e = ElevationReferenceEnum(s)
+		*e = ElevationReferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ElevationReferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for ElevationReferenceEnum: %v", v)
 	}
 }

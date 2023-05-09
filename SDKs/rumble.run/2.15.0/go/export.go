@@ -35,7 +35,7 @@ func newExport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // ExportAssetTopHWCSV - Top asset hardware products as CSV
-func (s *export) ExportAssetTopHWCSV(ctx context.Context) (*operations.ExportAssetTopHWCSVResponse, error) {
+func (s *export) ExportAssetTopHWCSV(ctx context.Context, security operations.ExportAssetTopHWCSVSecurity) (*operations.ExportAssetTopHWCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/assets/top.hw.csv"
 
@@ -44,7 +44,7 @@ func (s *export) ExportAssetTopHWCSV(ctx context.Context) (*operations.ExportAss
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *export) ExportAssetTopHWCSV(ctx context.Context) (*operations.ExportAss
 }
 
 // ExportAssetTopOSCSV - Top asset operating systems as CSV
-func (s *export) ExportAssetTopOSCSV(ctx context.Context) (*operations.ExportAssetTopOSCSVResponse, error) {
+func (s *export) ExportAssetTopOSCSV(ctx context.Context, security operations.ExportAssetTopOSCSVSecurity) (*operations.ExportAssetTopOSCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/assets/top.os.csv"
 
@@ -89,7 +89,7 @@ func (s *export) ExportAssetTopOSCSV(ctx context.Context) (*operations.ExportAss
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,7 +125,7 @@ func (s *export) ExportAssetTopOSCSV(ctx context.Context) (*operations.ExportAss
 }
 
 // ExportAssetTopTagsCSV - Top asset tags as CSV
-func (s *export) ExportAssetTopTagsCSV(ctx context.Context) (*operations.ExportAssetTopTagsCSVResponse, error) {
+func (s *export) ExportAssetTopTagsCSV(ctx context.Context, security operations.ExportAssetTopTagsCSVSecurity) (*operations.ExportAssetTopTagsCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/assets/top.tags.csv"
 
@@ -134,7 +134,7 @@ func (s *export) ExportAssetTopTagsCSV(ctx context.Context) (*operations.ExportA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -170,7 +170,7 @@ func (s *export) ExportAssetTopTagsCSV(ctx context.Context) (*operations.ExportA
 }
 
 // ExportAssetTopTypesCSV - Top asset types as CSV
-func (s *export) ExportAssetTopTypesCSV(ctx context.Context) (*operations.ExportAssetTopTypesCSVResponse, error) {
+func (s *export) ExportAssetTopTypesCSV(ctx context.Context, security operations.ExportAssetTopTypesCSVSecurity) (*operations.ExportAssetTopTypesCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/assets/top.types.csv"
 
@@ -179,7 +179,7 @@ func (s *export) ExportAssetTopTypesCSV(ctx context.Context) (*operations.Export
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -348,9 +348,9 @@ func (s *export) ExportAssetsJSONL(ctx context.Context, request operations.Expor
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []byte
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
 			res.ExportAssetsJSONL200ApplicationJSONBinaryString = out
@@ -544,9 +544,9 @@ func (s *export) ExportServicesJSONL(ctx context.Context, request operations.Exp
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []byte
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
 			res.ExportServicesJSONL200ApplicationJSONBinaryString = out
@@ -558,7 +558,7 @@ func (s *export) ExportServicesJSONL(ctx context.Context, request operations.Exp
 }
 
 // ExportServicesTopProductsCSV - Top service products as CSV
-func (s *export) ExportServicesTopProductsCSV(ctx context.Context) (*operations.ExportServicesTopProductsCSVResponse, error) {
+func (s *export) ExportServicesTopProductsCSV(ctx context.Context, security operations.ExportServicesTopProductsCSVSecurity) (*operations.ExportServicesTopProductsCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/services/top.products.csv"
 
@@ -567,7 +567,7 @@ func (s *export) ExportServicesTopProductsCSV(ctx context.Context) (*operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -603,7 +603,7 @@ func (s *export) ExportServicesTopProductsCSV(ctx context.Context) (*operations.
 }
 
 // ExportServicesTopProtocolsCSV - Top service protocols as CSV
-func (s *export) ExportServicesTopProtocolsCSV(ctx context.Context) (*operations.ExportServicesTopProtocolsCSVResponse, error) {
+func (s *export) ExportServicesTopProtocolsCSV(ctx context.Context, security operations.ExportServicesTopProtocolsCSVSecurity) (*operations.ExportServicesTopProtocolsCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/services/top.protocols.csv"
 
@@ -612,7 +612,7 @@ func (s *export) ExportServicesTopProtocolsCSV(ctx context.Context) (*operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -648,7 +648,7 @@ func (s *export) ExportServicesTopProtocolsCSV(ctx context.Context) (*operations
 }
 
 // ExportServicesTopTCPCSV - Top TCP services as CSV
-func (s *export) ExportServicesTopTCPCSV(ctx context.Context) (*operations.ExportServicesTopTCPCSVResponse, error) {
+func (s *export) ExportServicesTopTCPCSV(ctx context.Context, security operations.ExportServicesTopTCPCSVSecurity) (*operations.ExportServicesTopTCPCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/services/top.tcp.csv"
 
@@ -657,7 +657,7 @@ func (s *export) ExportServicesTopTCPCSV(ctx context.Context) (*operations.Expor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -693,7 +693,7 @@ func (s *export) ExportServicesTopTCPCSV(ctx context.Context) (*operations.Expor
 }
 
 // ExportServicesTopUDPCSV - Top UDP services as CSV
-func (s *export) ExportServicesTopUDPCSV(ctx context.Context) (*operations.ExportServicesTopUDPCSVResponse, error) {
+func (s *export) ExportServicesTopUDPCSV(ctx context.Context, security operations.ExportServicesTopUDPCSVSecurity) (*operations.ExportServicesTopUDPCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/org/services/top.udp.csv"
 
@@ -702,7 +702,7 @@ func (s *export) ExportServicesTopUDPCSV(ctx context.Context) (*operations.Expor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -738,7 +738,7 @@ func (s *export) ExportServicesTopUDPCSV(ctx context.Context) (*operations.Expor
 }
 
 // ExportSitesCSV - Site list as CSV
-func (s *export) ExportSitesCSV(ctx context.Context) (*operations.ExportSitesCSVResponse, error) {
+func (s *export) ExportSitesCSV(ctx context.Context, security operations.ExportSitesCSVSecurity) (*operations.ExportSitesCSVResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export/org/sites.csv"
 
@@ -747,7 +747,7 @@ func (s *export) ExportSitesCSV(ctx context.Context) (*operations.ExportSitesCSV
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -867,9 +867,9 @@ func (s *export) ExportSitesJSONL(ctx context.Context, request operations.Export
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []byte
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
 			res.ExportSitesJSONL200ApplicationJSONBinaryString = out
@@ -1063,9 +1063,9 @@ func (s *export) ExportWirelessJSONL(ctx context.Context, request operations.Exp
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []byte
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
 			res.ExportWirelessJSONL200ApplicationJSONBinaryString = out

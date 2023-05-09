@@ -16,17 +16,21 @@ const (
 	GetSecurityConfigurationsXAmzTargetEnumAwsGlueGetSecurityConfigurations GetSecurityConfigurationsXAmzTargetEnum = "AWSGlue.GetSecurityConfigurations"
 )
 
+func (e GetSecurityConfigurationsXAmzTargetEnum) ToPointer() *GetSecurityConfigurationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSecurityConfigurationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetSecurityConfigurations":
-		*e = GetSecurityConfigurationsXAmzTargetEnum(s)
+		*e = GetSecurityConfigurationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSecurityConfigurationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSecurityConfigurationsXAmzTargetEnum: %v", v)
 	}
 }
 

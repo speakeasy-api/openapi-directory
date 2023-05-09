@@ -18,12 +18,16 @@ const (
 	FileV1FormatEnumPng FileV1FormatEnum = "png"
 )
 
+func (e FileV1FormatEnum) ToPointer() *FileV1FormatEnum {
+	return &e
+}
+
 func (e *FileV1FormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
 		fallthrough
 	case "csv":
@@ -31,10 +35,10 @@ func (e *FileV1FormatEnum) UnmarshalJSON(data []byte) error {
 	case "jpg":
 		fallthrough
 	case "png":
-		*e = FileV1FormatEnum(s)
+		*e = FileV1FormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileV1FormatEnum: %s", s)
+		return fmt.Errorf("invalid value for FileV1FormatEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	FileV1StatusEnumDeleted   FileV1StatusEnum = "deleted"
 )
 
+func (e FileV1StatusEnum) ToPointer() *FileV1StatusEnum {
+	return &e
+}
+
 func (e *FileV1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "deleted":
-		*e = FileV1StatusEnum(s)
+		*e = FileV1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileV1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FileV1StatusEnum: %v", v)
 	}
 }
 
@@ -72,12 +80,16 @@ const (
 	FileV1TypeEnumApplicationSummary FileV1TypeEnum = "application_summary"
 )
 
+func (e FileV1TypeEnum) ToPointer() *FileV1TypeEnum {
+	return &e
+}
+
 func (e *FileV1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "quote_summary":
 		fallthrough
 	case "policy_specimen":
@@ -85,10 +97,10 @@ func (e *FileV1TypeEnum) UnmarshalJSON(data []byte) error {
 	case "cyber_risk_assement":
 		fallthrough
 	case "application_summary":
-		*e = FileV1TypeEnum(s)
+		*e = FileV1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileV1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FileV1TypeEnum: %v", v)
 	}
 }
 

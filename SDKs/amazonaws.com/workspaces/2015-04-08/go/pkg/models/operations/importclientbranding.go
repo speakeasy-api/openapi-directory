@@ -16,17 +16,21 @@ const (
 	ImportClientBrandingXAmzTargetEnumWorkspacesServiceImportClientBranding ImportClientBrandingXAmzTargetEnum = "WorkspacesService.ImportClientBranding"
 )
 
+func (e ImportClientBrandingXAmzTargetEnum) ToPointer() *ImportClientBrandingXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportClientBrandingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.ImportClientBranding":
-		*e = ImportClientBrandingXAmzTargetEnum(s)
+		*e = ImportClientBrandingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportClientBrandingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportClientBrandingXAmzTargetEnum: %v", v)
 	}
 }
 

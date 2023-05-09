@@ -16,17 +16,21 @@ const (
 	ListComplianceStatusXAmzTargetEnumAwsfms20180101ListComplianceStatus ListComplianceStatusXAmzTargetEnum = "AWSFMS_20180101.ListComplianceStatus"
 )
 
+func (e ListComplianceStatusXAmzTargetEnum) ToPointer() *ListComplianceStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListComplianceStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.ListComplianceStatus":
-		*e = ListComplianceStatusXAmzTargetEnum(s)
+		*e = ListComplianceStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListComplianceStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListComplianceStatusXAmzTargetEnum: %v", v)
 	}
 }
 

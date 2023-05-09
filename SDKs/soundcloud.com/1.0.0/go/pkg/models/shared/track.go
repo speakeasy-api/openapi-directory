@@ -14,29 +14,33 @@ import (
 type TrackAccessEnum string
 
 const (
-	TrackAccessEnumPlayable TrackAccessEnum = "playable"
-	TrackAccessEnumPreview  TrackAccessEnum = "preview"
-	TrackAccessEnumBlocked  TrackAccessEnum = "blocked"
-	TrackAccessEnumNull     TrackAccessEnum = "null"
+	TrackAccessEnumPlayable               TrackAccessEnum = "playable"
+	TrackAccessEnumPreview                TrackAccessEnum = "preview"
+	TrackAccessEnumBlocked                TrackAccessEnum = "blocked"
+	TrackAccessEnumLessThanNilGreaterThan TrackAccessEnum = "<nil>"
 )
 
+func (e TrackAccessEnum) ToPointer() *TrackAccessEnum {
+	return &e
+}
+
 func (e *TrackAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "playable":
 		fallthrough
 	case "preview":
 		fallthrough
 	case "blocked":
 		fallthrough
-	case "null":
-		*e = TrackAccessEnum(s)
+	case "<nil>":
+		*e = TrackAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrackAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for TrackAccessEnum: %v", v)
 	}
 }
 

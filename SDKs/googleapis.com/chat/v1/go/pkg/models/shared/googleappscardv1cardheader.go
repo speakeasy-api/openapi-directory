@@ -15,19 +15,23 @@ const (
 	GoogleAppsCardV1CardHeaderImageTypeEnumCircle GoogleAppsCardV1CardHeaderImageTypeEnum = "CIRCLE"
 )
 
+func (e GoogleAppsCardV1CardHeaderImageTypeEnum) ToPointer() *GoogleAppsCardV1CardHeaderImageTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1CardHeaderImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQUARE":
 		fallthrough
 	case "CIRCLE":
-		*e = GoogleAppsCardV1CardHeaderImageTypeEnum(s)
+		*e = GoogleAppsCardV1CardHeaderImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1CardHeaderImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1CardHeaderImageTypeEnum: %v", v)
 	}
 }
 

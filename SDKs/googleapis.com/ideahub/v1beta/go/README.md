@@ -13,49 +13,47 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/ideahub/v1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Platforms.IdeahubPlatformsPropertiesIdeaActivitiesCreate(ctx, operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleSearchIdeahubV1betaIdeaActivity: &shared.GoogleSearchIdeahubV1betaIdeaActivity{
             Ideas: []string{
                 "distinctio",
                 "quibusdam",
                 "unde",
             },
-            Name: "nulla",
+            Name: sdk.String("Johnnie Stamm"),
             Topics: []string{
-                "illum",
-                "vel",
-                "error",
+                "suscipit",
+                "iure",
+                "magnam",
             },
-            Type: "POST_DELETED",
-            URI: "http://innocent-effect.org",
+            Type: shared.GoogleSearchIdeahubV1betaIdeaActivityTypeEnumPostUnpublished.ToPointer(),
+            URI: sdk.String("http://whirlwind-diver.info"),
         },
-        AccessToken: "ipsa",
-        Alt: "proto",
-        Callback: "tempora",
-        Fields: "suscipit",
-        Key: "molestiae",
-        OauthToken: "minus",
-        Parent: "placeat",
-        PrettyPrint: false,
-        QuotaUser: "voluptatum",
-        UploadType: "iusto",
-        UploadProtocol: "excepturi",
-    }
-
-    ctx := context.Background()
-    res, err := s.Platforms.IdeahubPlatformsPropertiesIdeaActivitiesCreate(ctx, req)
+        AccessToken: sdk.String("molestiae"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("placeat"),
+        Fields: sdk.String("voluptatum"),
+        Key: sdk.String("iusto"),
+        OauthToken: sdk.String("excepturi"),
+        Parent: "nisi",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("recusandae"),
+        UploadType: sdk.String("temporibus"),
+        UploadProtocol: sdk.String("ab"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -71,12 +69,12 @@ func main() {
 ## Available Resources and Operations
 
 
-### Platforms
+### [Platforms](docs/platforms/README.md)
 
-* `IdeahubPlatformsPropertiesIdeaActivitiesCreate` - Creates an idea activity entry.
-* `IdeahubPlatformsPropertiesIdeasList` - List ideas for a given Creator and filter and sort options.
-* `IdeahubPlatformsPropertiesLocalesList` - Returns which locales ideas are available in for a given Creator.
-* `IdeahubPlatformsPropertiesTopicStatesPatch` - Update a topic state resource.
+* [IdeahubPlatformsPropertiesIdeaActivitiesCreate](docs/platforms/README.md#ideahubplatformspropertiesideaactivitiescreate) - Creates an idea activity entry.
+* [IdeahubPlatformsPropertiesIdeasList](docs/platforms/README.md#ideahubplatformspropertiesideaslist) - List ideas for a given Creator and filter and sort options.
+* [IdeahubPlatformsPropertiesLocalesList](docs/platforms/README.md#ideahubplatformspropertieslocaleslist) - Returns which locales ideas are available in for a given Creator.
+* [IdeahubPlatformsPropertiesTopicStatesPatch](docs/platforms/README.md#ideahubplatformspropertiestopicstatespatch) - Update a topic state resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

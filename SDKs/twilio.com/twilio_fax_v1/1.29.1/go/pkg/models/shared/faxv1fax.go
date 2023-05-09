@@ -16,19 +16,23 @@ const (
 	FaxV1FaxDirectionEnumOutbound FaxV1FaxDirectionEnum = "outbound"
 )
 
+func (e FaxV1FaxDirectionEnum) ToPointer() *FaxV1FaxDirectionEnum {
+	return &e
+}
+
 func (e *FaxV1FaxDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inbound":
 		fallthrough
 	case "outbound":
-		*e = FaxV1FaxDirectionEnum(s)
+		*e = FaxV1FaxDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FaxV1FaxDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for FaxV1FaxDirectionEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	FaxV1FaxQualityEnumSuperfine FaxV1FaxQualityEnum = "superfine"
 )
 
+func (e FaxV1FaxQualityEnum) ToPointer() *FaxV1FaxQualityEnum {
+	return &e
+}
+
 func (e *FaxV1FaxQualityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "fine":
 		fallthrough
 	case "superfine":
-		*e = FaxV1FaxQualityEnum(s)
+		*e = FaxV1FaxQualityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FaxV1FaxQualityEnum: %s", s)
+		return fmt.Errorf("invalid value for FaxV1FaxQualityEnum: %v", v)
 	}
 }
 
@@ -75,12 +83,16 @@ const (
 	FaxV1FaxStatusEnumCanceled   FaxV1FaxStatusEnum = "canceled"
 )
 
+func (e FaxV1FaxStatusEnum) ToPointer() *FaxV1FaxStatusEnum {
+	return &e
+}
+
 func (e *FaxV1FaxStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "queued":
 		fallthrough
 	case "processing":
@@ -100,10 +112,10 @@ func (e *FaxV1FaxStatusEnum) UnmarshalJSON(data []byte) error {
 	case "failed":
 		fallthrough
 	case "canceled":
-		*e = FaxV1FaxStatusEnum(s)
+		*e = FaxV1FaxStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FaxV1FaxStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FaxV1FaxStatusEnum: %v", v)
 	}
 }
 

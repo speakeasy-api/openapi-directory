@@ -20,12 +20,16 @@ const (
 	ProviderDTOStatusEnumNotConfirmed       ProviderDTOStatusEnum = "NOT_CONFIRMED"
 )
 
+func (e ProviderDTOStatusEnum) ToPointer() *ProviderDTOStatusEnum {
+	return &e
+}
+
 func (e *ProviderDTOStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
@@ -41,10 +45,10 @@ func (e *ProviderDTOStatusEnum) UnmarshalJSON(data []byte) error {
 	case "POTENTIAL":
 		fallthrough
 	case "NOT_CONFIRMED":
-		*e = ProviderDTOStatusEnum(s)
+		*e = ProviderDTOStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProviderDTOStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProviderDTOStatusEnum: %v", v)
 	}
 }
 

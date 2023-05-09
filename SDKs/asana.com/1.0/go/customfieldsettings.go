@@ -36,7 +36,10 @@ func newCustomFieldSettings(defaultClient, securityClient HTTPClient, serverURL,
 // Returns a list of all of the custom fields settings on a portfolio, in compact form.
 func (s *customFieldSettings) GetCustomFieldSettingsForPortfolio(ctx context.Context, request operations.GetCustomFieldSettingsForPortfolioRequest) (*operations.GetCustomFieldSettingsForPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/custom_field_settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/custom_field_settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -103,7 +106,10 @@ func (s *customFieldSettings) GetCustomFieldSettingsForPortfolio(ctx context.Con
 // Returns a list of all of the custom fields settings on a project, in compact form. Note that, as in all queries to collections which return compact representation, `opt_fields` can be used to include more data than is returned in the compact representation. See the [getting started guide on input/output options](https://developers.asana.com/docs/#input-output-options) for more information.
 func (s *customFieldSettings) GetCustomFieldSettingsForProject(ctx context.Context, request operations.GetCustomFieldSettingsForProjectRequest) (*operations.GetCustomFieldSettingsForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/custom_field_settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/custom_field_settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

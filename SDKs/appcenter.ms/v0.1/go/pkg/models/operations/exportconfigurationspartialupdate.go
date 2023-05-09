@@ -21,12 +21,16 @@ const (
 	ExportConfigurationsPartialUpdateRequestBodyExportEntitiesEnumNoLogs      ExportConfigurationsPartialUpdateRequestBodyExportEntitiesEnum = "no_logs"
 )
 
+func (e ExportConfigurationsPartialUpdateRequestBodyExportEntitiesEnum) ToPointer() *ExportConfigurationsPartialUpdateRequestBodyExportEntitiesEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsPartialUpdateRequestBodyExportEntitiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crashes":
 		fallthrough
 	case "errors":
@@ -34,10 +38,10 @@ func (e *ExportConfigurationsPartialUpdateRequestBodyExportEntitiesEnum) Unmarsh
 	case "attachments":
 		fallthrough
 	case "no_logs":
-		*e = ExportConfigurationsPartialUpdateRequestBodyExportEntitiesEnum(s)
+		*e = ExportConfigurationsPartialUpdateRequestBodyExportEntitiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdateRequestBodyExportEntitiesEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdateRequestBodyExportEntitiesEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	ExportConfigurationsPartialUpdateRequestBodyTypeEnumApplicationInsightsLinkedSubscription ExportConfigurationsPartialUpdateRequestBodyTypeEnum = "application_insights_linked_subscription"
 )
 
+func (e ExportConfigurationsPartialUpdateRequestBodyTypeEnum) ToPointer() *ExportConfigurationsPartialUpdateRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsPartialUpdateRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "blob_storage_connection_string":
 		fallthrough
 	case "application_insights_instrumentation_key":
@@ -64,10 +72,10 @@ func (e *ExportConfigurationsPartialUpdateRequestBodyTypeEnum) UnmarshalJSON(dat
 	case "blob_storage_linked_subscription":
 		fallthrough
 	case "application_insights_linked_subscription":
-		*e = ExportConfigurationsPartialUpdateRequestBodyTypeEnum(s)
+		*e = ExportConfigurationsPartialUpdateRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdateRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdateRequestBodyTypeEnum: %v", v)
 	}
 }
 
@@ -107,12 +115,16 @@ const (
 	ExportConfigurationsPartialUpdateDefaultApplicationJSONErrorCodeEnumTooManyRequests     ExportConfigurationsPartialUpdateDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ExportConfigurationsPartialUpdateDefaultApplicationJSONErrorCodeEnum) ToPointer() *ExportConfigurationsPartialUpdateDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsPartialUpdateDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -126,10 +138,10 @@ func (e *ExportConfigurationsPartialUpdateDefaultApplicationJSONErrorCodeEnum) U
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ExportConfigurationsPartialUpdateDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ExportConfigurationsPartialUpdateDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdateDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdateDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -152,12 +164,16 @@ const (
 	ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationExportEntitiesEnumNoLogs      ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationExportEntitiesEnum = "no_logs"
 )
 
+func (e ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationExportEntitiesEnum) ToPointer() *ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationExportEntitiesEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationExportEntitiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crashes":
 		fallthrough
 	case "errors":
@@ -165,10 +181,10 @@ func (e *ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationE
 	case "attachments":
 		fallthrough
 	case "no_logs":
-		*e = ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationExportEntitiesEnum(s)
+		*e = ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationExportEntitiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationExportEntitiesEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationExportEntitiesEnum: %v", v)
 	}
 }
 
@@ -182,12 +198,16 @@ const (
 	ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationTypeEnumApplicationInsightsLinkedSubscription ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationTypeEnum = "application_insights_linked_subscription"
 )
 
+func (e ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationTypeEnum) ToPointer() *ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationTypeEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "blob_storage_connection_string":
 		fallthrough
 	case "application_insights_instrumentation_key":
@@ -195,10 +215,10 @@ func (e *ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationT
 	case "blob_storage_linked_subscription":
 		fallthrough
 	case "application_insights_linked_subscription":
-		*e = ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationTypeEnum(s)
+		*e = ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdate200ApplicationJSONExportConfigurationTypeEnum: %v", v)
 	}
 }
 
@@ -224,12 +244,16 @@ const (
 	ExportConfigurationsPartialUpdate200ApplicationJSONExportEntitiesEnumNoLogs      ExportConfigurationsPartialUpdate200ApplicationJSONExportEntitiesEnum = "no_logs"
 )
 
+func (e ExportConfigurationsPartialUpdate200ApplicationJSONExportEntitiesEnum) ToPointer() *ExportConfigurationsPartialUpdate200ApplicationJSONExportEntitiesEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsPartialUpdate200ApplicationJSONExportEntitiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crashes":
 		fallthrough
 	case "errors":
@@ -237,10 +261,10 @@ func (e *ExportConfigurationsPartialUpdate200ApplicationJSONExportEntitiesEnum) 
 	case "attachments":
 		fallthrough
 	case "no_logs":
-		*e = ExportConfigurationsPartialUpdate200ApplicationJSONExportEntitiesEnum(s)
+		*e = ExportConfigurationsPartialUpdate200ApplicationJSONExportEntitiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdate200ApplicationJSONExportEntitiesEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdate200ApplicationJSONExportEntitiesEnum: %v", v)
 	}
 }
 
@@ -252,19 +276,23 @@ const (
 	ExportConfigurationsPartialUpdate200ApplicationJSONExportTypeEnumAppInsights ExportConfigurationsPartialUpdate200ApplicationJSONExportTypeEnum = "AppInsights"
 )
 
+func (e ExportConfigurationsPartialUpdate200ApplicationJSONExportTypeEnum) ToPointer() *ExportConfigurationsPartialUpdate200ApplicationJSONExportTypeEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsPartialUpdate200ApplicationJSONExportTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BlobStorage":
 		fallthrough
 	case "AppInsights":
-		*e = ExportConfigurationsPartialUpdate200ApplicationJSONExportTypeEnum(s)
+		*e = ExportConfigurationsPartialUpdate200ApplicationJSONExportTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdate200ApplicationJSONExportTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdate200ApplicationJSONExportTypeEnum: %v", v)
 	}
 }
 
@@ -279,12 +307,16 @@ const (
 	ExportConfigurationsPartialUpdate200ApplicationJSONStateEnumInvalid  ExportConfigurationsPartialUpdate200ApplicationJSONStateEnum = "Invalid"
 )
 
+func (e ExportConfigurationsPartialUpdate200ApplicationJSONStateEnum) ToPointer() *ExportConfigurationsPartialUpdate200ApplicationJSONStateEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsPartialUpdate200ApplicationJSONStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
@@ -294,10 +326,10 @@ func (e *ExportConfigurationsPartialUpdate200ApplicationJSONStateEnum) Unmarshal
 	case "Deleted":
 		fallthrough
 	case "Invalid":
-		*e = ExportConfigurationsPartialUpdate200ApplicationJSONStateEnum(s)
+		*e = ExportConfigurationsPartialUpdate200ApplicationJSONStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdate200ApplicationJSONStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsPartialUpdate200ApplicationJSONStateEnum: %v", v)
 	}
 }
 

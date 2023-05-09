@@ -2,30 +2,31 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BillingbudgetsBillingAccountsBudgetsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.BillingAccounts.BillingbudgetsBillingAccountsBudgetsCreate(ctx, operations.BillingbudgetsBillingAccountsBudgetsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput: &shared.GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput{
             Budget: &shared.GoogleCloudBillingBudgetsV1beta1BudgetInput{
                 AllUpdatesRule: &shared.GoogleCloudBillingBudgetsV1beta1AllUpdatesRule{
-                    DisableDefaultIamRecipients: false,
+                    DisableDefaultIamRecipients: sdk.Bool(false),
                     MonitoringNotificationChannels: []string{
                         "distinctio",
                         "quibusdam",
                         "unde",
                     },
-                    PubsubTopic: "nulla",
-                    SchemaVersion: "corrupti",
+                    PubsubTopic: sdk.String("nulla"),
+                    SchemaVersion: sdk.String("corrupti"),
                 },
                 Amount: &shared.GoogleCloudBillingBudgetsV1beta1BudgetAmount{
                     LastPeriodAmount: map[string]interface{}{
@@ -35,30 +36,30 @@ func main() {
                         "debitis": "ipsa",
                     },
                     SpecifiedAmount: &shared.GoogleTypeMoney{
-                        CurrencyCode: "delectus",
-                        Nanos: 272656,
-                        Units: "suscipit",
+                        CurrencyCode: sdk.String("delectus"),
+                        Nanos: sdk.Int(272656),
+                        Units: sdk.String("suscipit"),
                     },
                 },
                 BudgetFilter: &shared.GoogleCloudBillingBudgetsV1beta1Filter{
-                    CalendarPeriod: "MONTH",
+                    CalendarPeriod: shared.GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriodEnumMonth.ToPointer(),
                     CreditTypes: []string{
                         "placeat",
                         "voluptatum",
                         "iusto",
                         "excepturi",
                     },
-                    CreditTypesTreatment: "INCLUDE_ALL_CREDITS",
+                    CreditTypesTreatment: shared.GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatmentEnumIncludeAllCredits.ToPointer(),
                     CustomPeriod: &shared.GoogleCloudBillingBudgetsV1beta1CustomPeriod{
                         EndDate: &shared.GoogleTypeDate{
-                            Day: 925597,
-                            Month: 836079,
-                            Year: 71036,
+                            Day: sdk.Int(925597),
+                            Month: sdk.Int(836079),
+                            Year: sdk.Int(71036),
                         },
                         StartDate: &shared.GoogleTypeDate{
-                            Day: 337396,
-                            Month: 87129,
-                            Year: 648172,
+                            Day: sdk.Int(337396),
+                            Month: sdk.Int(87129),
+                            Year: sdk.Int(648172),
                         },
                     },
                     Labels: map[string][]interface{}{
@@ -85,39 +86,36 @@ func main() {
                         "officia",
                     },
                 },
-                DisplayName: "occaecati",
-                Etag: "fugit",
+                DisplayName: sdk.String("occaecati"),
+                Etag: sdk.String("fugit"),
                 ThresholdRules: []shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
                     shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
-                        SpendBasis: "FORECASTED_SPEND",
-                        ThresholdPercent: 7586.16,
+                        SpendBasis: shared.GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnumForecastedSpend.ToPointer(),
+                        ThresholdPercent: sdk.Float64(7586.16),
                     },
                     shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
-                        SpendBasis: "CURRENT_SPEND",
-                        ThresholdPercent: 1059.07,
+                        SpendBasis: shared.GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnumCurrentSpend.ToPointer(),
+                        ThresholdPercent: sdk.Float64(1059.07),
                     },
                     shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
-                        SpendBasis: "CURRENT_SPEND",
-                        ThresholdPercent: 4736,
+                        SpendBasis: shared.GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnumCurrentSpend.ToPointer(),
+                        ThresholdPercent: sdk.Float64(4736),
                     },
                 },
             },
         },
-        AccessToken: "modi",
-        Alt: "json",
-        Callback: "impedit",
-        Fields: "cum",
-        Key: "esse",
-        OauthToken: "ipsum",
+        AccessToken: sdk.String("modi"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("impedit"),
+        Fields: sdk.String("cum"),
+        Key: sdk.String("esse"),
+        OauthToken: sdk.String("ipsum"),
         Parent: "excepturi",
-        PrettyPrint: false,
-        QuotaUser: "aspernatur",
-        UploadType: "perferendis",
-        UploadProtocol: "ad",
-    }
-
-    ctx := context.Background()
-    res, err := s.BillingAccounts.BillingbudgetsBillingAccountsBudgetsCreate(ctx, req, operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("aspernatur"),
+        UploadType: sdk.String("perferendis"),
+        UploadProtocol: sdk.String("ad"),
+    }, operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity{
         Option1: &operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

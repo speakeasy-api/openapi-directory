@@ -174,7 +174,10 @@ func (s *webhooks) CreateWebhook(ctx context.Context, request operations.CreateW
 // This method *permanently* removes a webhook. Note that it may be possible to receive a request that was already in flight after deleting the webhook, but no further requests will be issued.
 func (s *webhooks) DeleteWebhook(ctx context.Context, request operations.DeleteWebhookRequest) (*operations.DeleteWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhook_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhook_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -241,7 +244,10 @@ func (s *webhooks) DeleteWebhook(ctx context.Context, request operations.DeleteW
 // Returns the full record for the given webhook.
 func (s *webhooks) GetWebhook(ctx context.Context, request operations.GetWebhookRequest) (*operations.GetWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhook_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhook_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -375,7 +381,10 @@ func (s *webhooks) GetWebhooks(ctx context.Context, request operations.GetWebhoo
 // An existing webhook's filters can be updated by making a PUT request on the URL for that webhook. Note that the webhook's previous `filters` array will be completely overwritten by the `filters` sent in the PUT request.
 func (s *webhooks) UpdateWebhook(ctx context.Context, request operations.UpdateWebhookRequest) (*operations.UpdateWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhook_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhook_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

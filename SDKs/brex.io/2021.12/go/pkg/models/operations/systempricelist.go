@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type SystemPricelistSecurity struct {
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
+}
+
 // SystemPricelistDefaultApplicationJSON - Detailed information about the error
 type SystemPricelistDefaultApplicationJSON struct {
 	Code    int     `json:"code"`

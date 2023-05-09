@@ -15,17 +15,21 @@ const (
 	GETModifySubnetAttributeActionEnumModifySubnetAttribute GETModifySubnetAttributeActionEnum = "ModifySubnetAttribute"
 )
 
+func (e GETModifySubnetAttributeActionEnum) ToPointer() *GETModifySubnetAttributeActionEnum {
+	return &e
+}
+
 func (e *GETModifySubnetAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifySubnetAttribute":
-		*e = GETModifySubnetAttributeActionEnum(s)
+		*e = GETModifySubnetAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifySubnetAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifySubnetAttributeActionEnum: %v", v)
 	}
 }
 
@@ -72,19 +76,23 @@ const (
 	GETModifySubnetAttributePrivateDNSHostnameTypeOnLaunchEnumResourceName GETModifySubnetAttributePrivateDNSHostnameTypeOnLaunchEnum = "resource-name"
 )
 
+func (e GETModifySubnetAttributePrivateDNSHostnameTypeOnLaunchEnum) ToPointer() *GETModifySubnetAttributePrivateDNSHostnameTypeOnLaunchEnum {
+	return &e
+}
+
 func (e *GETModifySubnetAttributePrivateDNSHostnameTypeOnLaunchEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ip-name":
 		fallthrough
 	case "resource-name":
-		*e = GETModifySubnetAttributePrivateDNSHostnameTypeOnLaunchEnum(s)
+		*e = GETModifySubnetAttributePrivateDNSHostnameTypeOnLaunchEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifySubnetAttributePrivateDNSHostnameTypeOnLaunchEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifySubnetAttributePrivateDNSHostnameTypeOnLaunchEnum: %v", v)
 	}
 }
 
@@ -95,17 +103,21 @@ const (
 	GETModifySubnetAttributeVersionEnumTwoThousandAndSixteen1115 GETModifySubnetAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETModifySubnetAttributeVersionEnum) ToPointer() *GETModifySubnetAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETModifySubnetAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifySubnetAttributeVersionEnum(s)
+		*e = GETModifySubnetAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifySubnetAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifySubnetAttributeVersionEnum: %v", v)
 	}
 }
 

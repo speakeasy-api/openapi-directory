@@ -18,12 +18,16 @@ const (
 	LandlordPhotoModelPhotoTypeEnumAerialPhoto LandlordPhotoModelPhotoTypeEnum = "AerialPhoto"
 )
 
+func (e LandlordPhotoModelPhotoTypeEnum) ToPointer() *LandlordPhotoModelPhotoTypeEnum {
+	return &e
+}
+
 func (e *LandlordPhotoModelPhotoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Photo":
 		fallthrough
 	case "Map":
@@ -33,10 +37,10 @@ func (e *LandlordPhotoModelPhotoTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SiteMap":
 		fallthrough
 	case "AerialPhoto":
-		*e = LandlordPhotoModelPhotoTypeEnum(s)
+		*e = LandlordPhotoModelPhotoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LandlordPhotoModelPhotoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LandlordPhotoModelPhotoTypeEnum: %v", v)
 	}
 }
 

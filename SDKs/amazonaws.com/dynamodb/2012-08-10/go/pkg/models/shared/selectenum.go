@@ -16,12 +16,16 @@ const (
 	SelectEnumCount                  SelectEnum = "COUNT"
 )
 
+func (e SelectEnum) ToPointer() *SelectEnum {
+	return &e
+}
+
 func (e *SelectEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL_ATTRIBUTES":
 		fallthrough
 	case "ALL_PROJECTED_ATTRIBUTES":
@@ -29,9 +33,9 @@ func (e *SelectEnum) UnmarshalJSON(data []byte) error {
 	case "SPECIFIC_ATTRIBUTES":
 		fallthrough
 	case "COUNT":
-		*e = SelectEnum(s)
+		*e = SelectEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SelectEnum: %s", s)
+		return fmt.Errorf("invalid value for SelectEnum: %v", v)
 	}
 }

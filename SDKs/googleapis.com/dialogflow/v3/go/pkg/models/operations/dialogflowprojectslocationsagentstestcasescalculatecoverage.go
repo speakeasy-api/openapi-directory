@@ -34,12 +34,16 @@ const (
 	DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageTypeEnumTransitionRouteGroup    DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageTypeEnum = "TRANSITION_ROUTE_GROUP"
 )
 
+func (e DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageTypeEnum) ToPointer() *DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageTypeEnum {
+	return &e
+}
+
 func (e *DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COVERAGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INTENT":
@@ -47,10 +51,10 @@ func (e *DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageTypeEnum) Un
 	case "PAGE_TRANSITION":
 		fallthrough
 	case "TRANSITION_ROUTE_GROUP":
-		*e = DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageTypeEnum(s)
+		*e = DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageTypeEnum: %v", v)
 	}
 }
 

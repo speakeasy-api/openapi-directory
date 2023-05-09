@@ -17,12 +17,16 @@ const (
 	EmbeddedObjectBorderDashStyleEnumDash                 EmbeddedObjectBorderDashStyleEnum = "DASH"
 )
 
+func (e EmbeddedObjectBorderDashStyleEnum) ToPointer() *EmbeddedObjectBorderDashStyleEnum {
+	return &e
+}
+
 func (e *EmbeddedObjectBorderDashStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DASH_STYLE_UNSPECIFIED":
 		fallthrough
 	case "SOLID":
@@ -30,10 +34,10 @@ func (e *EmbeddedObjectBorderDashStyleEnum) UnmarshalJSON(data []byte) error {
 	case "DOT":
 		fallthrough
 	case "DASH":
-		*e = EmbeddedObjectBorderDashStyleEnum(s)
+		*e = EmbeddedObjectBorderDashStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EmbeddedObjectBorderDashStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for EmbeddedObjectBorderDashStyleEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	EmbeddedObjectBorderPropertyStateEnumNotRendered EmbeddedObjectBorderPropertyStateEnum = "NOT_RENDERED"
 )
 
+func (e EmbeddedObjectBorderPropertyStateEnum) ToPointer() *EmbeddedObjectBorderPropertyStateEnum {
+	return &e
+}
+
 func (e *EmbeddedObjectBorderPropertyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RENDERED":
 		fallthrough
 	case "NOT_RENDERED":
-		*e = EmbeddedObjectBorderPropertyStateEnum(s)
+		*e = EmbeddedObjectBorderPropertyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EmbeddedObjectBorderPropertyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for EmbeddedObjectBorderPropertyStateEnum: %v", v)
 	}
 }
 

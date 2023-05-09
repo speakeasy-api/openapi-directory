@@ -14,18 +14,22 @@ const (
 	SourceRepositoryEnumS3         SourceRepositoryEnum = "S3"
 )
 
+func (e SourceRepositoryEnum) ToPointer() *SourceRepositoryEnum {
+	return &e
+}
+
 func (e *SourceRepositoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit":
 		fallthrough
 	case "S3":
-		*e = SourceRepositoryEnum(s)
+		*e = SourceRepositoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceRepositoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceRepositoryEnum: %v", v)
 	}
 }

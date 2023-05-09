@@ -15,17 +15,21 @@ const (
 	GETUpdateCustomVerificationEmailTemplateActionEnumUpdateCustomVerificationEmailTemplate GETUpdateCustomVerificationEmailTemplateActionEnum = "UpdateCustomVerificationEmailTemplate"
 )
 
+func (e GETUpdateCustomVerificationEmailTemplateActionEnum) ToPointer() *GETUpdateCustomVerificationEmailTemplateActionEnum {
+	return &e
+}
+
 func (e *GETUpdateCustomVerificationEmailTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateCustomVerificationEmailTemplate":
-		*e = GETUpdateCustomVerificationEmailTemplateActionEnum(s)
+		*e = GETUpdateCustomVerificationEmailTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateCustomVerificationEmailTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateCustomVerificationEmailTemplateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUpdateCustomVerificationEmailTemplateVersionEnumTwoThousandAndTen1201 GETUpdateCustomVerificationEmailTemplateVersionEnum = "2010-12-01"
 )
 
+func (e GETUpdateCustomVerificationEmailTemplateVersionEnum) ToPointer() *GETUpdateCustomVerificationEmailTemplateVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateCustomVerificationEmailTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETUpdateCustomVerificationEmailTemplateVersionEnum(s)
+		*e = GETUpdateCustomVerificationEmailTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateCustomVerificationEmailTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateCustomVerificationEmailTemplateVersionEnum: %v", v)
 	}
 }
 

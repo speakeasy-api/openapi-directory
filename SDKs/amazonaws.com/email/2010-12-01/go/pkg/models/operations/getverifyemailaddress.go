@@ -15,17 +15,21 @@ const (
 	GETVerifyEmailAddressActionEnumVerifyEmailAddress GETVerifyEmailAddressActionEnum = "VerifyEmailAddress"
 )
 
+func (e GETVerifyEmailAddressActionEnum) ToPointer() *GETVerifyEmailAddressActionEnum {
+	return &e
+}
+
 func (e *GETVerifyEmailAddressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VerifyEmailAddress":
-		*e = GETVerifyEmailAddressActionEnum(s)
+		*e = GETVerifyEmailAddressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETVerifyEmailAddressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETVerifyEmailAddressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETVerifyEmailAddressVersionEnumTwoThousandAndTen1201 GETVerifyEmailAddressVersionEnum = "2010-12-01"
 )
 
+func (e GETVerifyEmailAddressVersionEnum) ToPointer() *GETVerifyEmailAddressVersionEnum {
+	return &e
+}
+
 func (e *GETVerifyEmailAddressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETVerifyEmailAddressVersionEnum(s)
+		*e = GETVerifyEmailAddressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETVerifyEmailAddressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETVerifyEmailAddressVersionEnum: %v", v)
 	}
 }
 

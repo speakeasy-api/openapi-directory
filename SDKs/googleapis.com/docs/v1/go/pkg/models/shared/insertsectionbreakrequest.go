@@ -16,21 +16,25 @@ const (
 	InsertSectionBreakRequestSectionTypeEnumNextPage               InsertSectionBreakRequestSectionTypeEnum = "NEXT_PAGE"
 )
 
+func (e InsertSectionBreakRequestSectionTypeEnum) ToPointer() *InsertSectionBreakRequestSectionTypeEnum {
+	return &e
+}
+
 func (e *InsertSectionBreakRequestSectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CONTINUOUS":
 		fallthrough
 	case "NEXT_PAGE":
-		*e = InsertSectionBreakRequestSectionTypeEnum(s)
+		*e = InsertSectionBreakRequestSectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InsertSectionBreakRequestSectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InsertSectionBreakRequestSectionTypeEnum: %v", v)
 	}
 }
 

@@ -87,7 +87,10 @@ func (s *user) CreateUser(ctx context.Context, request operations.CreateUserRequ
 // DeleteUser - Delete a user
 func (s *user) DeleteUser(ctx context.Context, request operations.DeleteUserRequest) (*operations.DeleteUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -131,7 +134,10 @@ func (s *user) DeleteUser(ctx context.Context, request operations.DeleteUserRequ
 // GetUser - Retrieve a user
 func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -174,6 +180,8 @@ func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest) (
 
 // GetUsers - List users
 // This endpoint is **DEPRECATED**. Please use [/v0.2/users](/api/conversation.v2#get-users).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *user) GetUsers(ctx context.Context) (*operations.GetUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/users"
@@ -220,7 +228,10 @@ func (s *user) GetUsers(ctx context.Context) (*operations.GetUsersResponse, erro
 // GetuserConversations - List user conversations
 func (s *user) GetuserConversations(ctx context.Context, request operations.GetuserConversationsRequest) (*operations.GetuserConversationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/conversations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{user_id}/conversations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -264,7 +275,10 @@ func (s *user) GetuserConversations(ctx context.Context, request operations.Getu
 // UpdateUser - Update a user
 func (s *user) UpdateUser(ctx context.Context, request operations.UpdateUserRequest) (*operations.UpdateUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

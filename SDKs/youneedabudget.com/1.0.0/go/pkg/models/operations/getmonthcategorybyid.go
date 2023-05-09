@@ -9,7 +9,7 @@ import (
 )
 
 type GetMonthCategoryByIDRequest struct {
-	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
 	// The id of the category
 	CategoryID string `pathParam:"style=simple,explode=false,name=category_id"`

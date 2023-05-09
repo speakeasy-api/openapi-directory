@@ -2,9 +2,10 @@
 
 package shared
 
-// ZonalStatisticsConfigInput - <p/>
+// ZonalStatisticsConfigInput - The structure representing input configuration of ZonalStatistics operation.
 type ZonalStatisticsConfigInput struct {
-	Statistics  []ZonalStatisticsEnum `json:"Statistics"`
-	TargetBands []string              `json:"TargetBands,omitempty"`
-	ZoneS3Path  string                `json:"ZoneS3Path"`
+	Statistics         []ZonalStatisticsEnum `json:"Statistics"`
+	TargetBands        []string              `json:"TargetBands,omitempty"`
+	ZoneS3Path         string                `json:"ZoneS3Path"`
+	ZoneS3PathKmsKeyID *string               `json:"ZoneS3PathKmsKeyId,omitempty"`
 }

@@ -14,18 +14,22 @@ const (
 	AuditTaskTypeEnumScheduledAuditTask AuditTaskTypeEnum = "SCHEDULED_AUDIT_TASK"
 )
 
+func (e AuditTaskTypeEnum) ToPointer() *AuditTaskTypeEnum {
+	return &e
+}
+
 func (e *AuditTaskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ON_DEMAND_AUDIT_TASK":
 		fallthrough
 	case "SCHEDULED_AUDIT_TASK":
-		*e = AuditTaskTypeEnum(s)
+		*e = AuditTaskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditTaskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditTaskTypeEnum: %v", v)
 	}
 }

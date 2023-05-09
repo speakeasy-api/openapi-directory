@@ -18,12 +18,16 @@ const (
 	AuditMitigationActionsExecutionStatusEnumPending    AuditMitigationActionsExecutionStatusEnum = "PENDING"
 )
 
+func (e AuditMitigationActionsExecutionStatusEnum) ToPointer() *AuditMitigationActionsExecutionStatusEnum {
+	return &e
+}
+
 func (e *AuditMitigationActionsExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "COMPLETED":
@@ -35,9 +39,9 @@ func (e *AuditMitigationActionsExecutionStatusEnum) UnmarshalJSON(data []byte) e
 	case "SKIPPED":
 		fallthrough
 	case "PENDING":
-		*e = AuditMitigationActionsExecutionStatusEnum(s)
+		*e = AuditMitigationActionsExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditMitigationActionsExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditMitigationActionsExecutionStatusEnum: %v", v)
 	}
 }

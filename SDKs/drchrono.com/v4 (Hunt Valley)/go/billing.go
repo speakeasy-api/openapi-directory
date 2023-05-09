@@ -95,7 +95,10 @@ func (s *billing) BillingProfilesList(ctx context.Context, request operations.Bi
 // BillingProfilesRead - Retrieve an existing billing profiles
 func (s *billing) BillingProfilesRead(ctx context.Context, request operations.BillingProfilesReadRequest, security operations.BillingProfilesReadSecurity) (*operations.BillingProfilesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/billing_profiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/billing_profiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -272,7 +275,10 @@ func (s *billing) CommLogsList(ctx context.Context, request operations.CommLogsL
 // CommLogsPartialUpdate - Update an existing communication (phone call) logs
 func (s *billing) CommLogsPartialUpdate(ctx context.Context, request operations.CommLogsPartialUpdateRequest, security operations.CommLogsPartialUpdateSecurity) (*operations.CommLogsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/comm_logs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/comm_logs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -323,7 +329,10 @@ func (s *billing) CommLogsPartialUpdate(ctx context.Context, request operations.
 // CommLogsRead - Retrieve an existing communication (phone call) logs
 func (s *billing) CommLogsRead(ctx context.Context, request operations.CommLogsReadRequest, security operations.CommLogsReadSecurity) (*operations.CommLogsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/comm_logs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/comm_logs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -382,7 +391,10 @@ func (s *billing) CommLogsRead(ctx context.Context, request operations.CommLogsR
 // CommLogsUpdate - Update an existing communication (phone call) logs
 func (s *billing) CommLogsUpdate(ctx context.Context, request operations.CommLogsUpdateRequest, security operations.CommLogsUpdateSecurity) (*operations.CommLogsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/comm_logs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/comm_logs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -492,7 +504,10 @@ func (s *billing) CustomInsurancePlanNamesList(ctx context.Context, request oper
 // CustomInsurancePlanNamesRead - Retrieve an existing custom insurance plan name
 func (s *billing) CustomInsurancePlanNamesRead(ctx context.Context, request operations.CustomInsurancePlanNamesReadRequest, security operations.CustomInsurancePlanNamesReadSecurity) (*operations.CustomInsurancePlanNamesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/custom_insurance_plan_names/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/custom_insurance_plan_names/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -610,7 +625,10 @@ func (s *billing) EligibilityChecksList(ctx context.Context, request operations.
 // EligibilityChecksRead - Retrieve an existing past eligibility check
 func (s *billing) EligibilityChecksRead(ctx context.Context, request operations.EligibilityChecksReadRequest, security operations.EligibilityChecksReadSecurity) (*operations.EligibilityChecksReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/eligibility_checks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/eligibility_checks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -724,9 +742,13 @@ func (s *billing) LineItemsCreate(ctx context.Context, request operations.LineIt
 
 	return res, nil
 }
+
 func (s *billing) LineItemsDelete(ctx context.Context, request operations.LineItemsDeleteRequest, security operations.LineItemsDeleteSecurity) (*operations.LineItemsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -832,9 +854,13 @@ func (s *billing) LineItemsList(ctx context.Context, request operations.LineItem
 
 	return res, nil
 }
+
 func (s *billing) LineItemsPartialUpdate(ctx context.Context, request operations.LineItemsPartialUpdateRequest, security operations.LineItemsPartialUpdateSecurity) (*operations.LineItemsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -885,7 +911,10 @@ func (s *billing) LineItemsPartialUpdate(ctx context.Context, request operations
 // LineItemsRead - Retrieve an existing billing line item
 func (s *billing) LineItemsRead(ctx context.Context, request operations.LineItemsReadRequest, security operations.LineItemsReadSecurity) (*operations.LineItemsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -940,9 +969,13 @@ func (s *billing) LineItemsRead(ctx context.Context, request operations.LineItem
 
 	return res, nil
 }
+
 func (s *billing) LineItemsUpdate(ctx context.Context, request operations.LineItemsUpdateRequest, security operations.LineItemsUpdateSecurity) (*operations.LineItemsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/line_items/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1052,7 +1085,10 @@ func (s *billing) PatientPaymentLogList(ctx context.Context, request operations.
 // PatientPaymentLogRead - Retrieve an existing patient payment log
 func (s *billing) PatientPaymentLogRead(ctx context.Context, request operations.PatientPaymentLogReadRequest, security operations.PatientPaymentLogReadSecurity) (*operations.PatientPaymentLogReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_payment_log/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_payment_log/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1229,7 +1265,10 @@ func (s *billing) PatientPaymentsList(ctx context.Context, request operations.Pa
 // PatientPaymentsRead - Retrieve an existing patient payment
 func (s *billing) PatientPaymentsRead(ctx context.Context, request operations.PatientPaymentsReadRequest, security operations.PatientPaymentsReadSecurity) (*operations.PatientPaymentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patient_payments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patient_payments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1284,6 +1323,7 @@ func (s *billing) PatientPaymentsRead(ctx context.Context, request operations.Pa
 
 	return res, nil
 }
+
 func (s *billing) ProceduresList(ctx context.Context, request operations.ProceduresListRequest, security operations.ProceduresListSecurity) (*operations.ProceduresListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/procedures"
@@ -1341,9 +1381,13 @@ func (s *billing) ProceduresList(ctx context.Context, request operations.Procedu
 
 	return res, nil
 }
+
 func (s *billing) ProceduresRead(ctx context.Context, request operations.ProceduresReadRequest, security operations.ProceduresReadSecurity) (*operations.ProceduresReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/procedures/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/procedures/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1461,7 +1505,10 @@ func (s *billing) TransactionsList(ctx context.Context, request operations.Trans
 // TransactionsRead - Retrieve an existing insurance transaction
 func (s *billing) TransactionsRead(ctx context.Context, request operations.TransactionsReadRequest, security operations.TransactionsReadSecurity) (*operations.TransactionsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/transactions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/transactions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

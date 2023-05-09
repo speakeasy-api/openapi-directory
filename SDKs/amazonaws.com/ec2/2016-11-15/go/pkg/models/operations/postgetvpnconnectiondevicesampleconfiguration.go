@@ -15,17 +15,21 @@ const (
 	POSTGetVpnConnectionDeviceSampleConfigurationActionEnumGetVpnConnectionDeviceSampleConfiguration POSTGetVpnConnectionDeviceSampleConfigurationActionEnum = "GetVpnConnectionDeviceSampleConfiguration"
 )
 
+func (e POSTGetVpnConnectionDeviceSampleConfigurationActionEnum) ToPointer() *POSTGetVpnConnectionDeviceSampleConfigurationActionEnum {
+	return &e
+}
+
 func (e *POSTGetVpnConnectionDeviceSampleConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetVpnConnectionDeviceSampleConfiguration":
-		*e = POSTGetVpnConnectionDeviceSampleConfigurationActionEnum(s)
+		*e = POSTGetVpnConnectionDeviceSampleConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetVpnConnectionDeviceSampleConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetVpnConnectionDeviceSampleConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetVpnConnectionDeviceSampleConfigurationVersionEnumTwoThousandAndSixteen1115 POSTGetVpnConnectionDeviceSampleConfigurationVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetVpnConnectionDeviceSampleConfigurationVersionEnum) ToPointer() *POSTGetVpnConnectionDeviceSampleConfigurationVersionEnum {
+	return &e
+}
+
 func (e *POSTGetVpnConnectionDeviceSampleConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetVpnConnectionDeviceSampleConfigurationVersionEnum(s)
+		*e = POSTGetVpnConnectionDeviceSampleConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetVpnConnectionDeviceSampleConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetVpnConnectionDeviceSampleConfigurationVersionEnum: %v", v)
 	}
 }
 

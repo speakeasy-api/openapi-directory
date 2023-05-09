@@ -16,21 +16,25 @@ const (
 	GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnumDisabled                            GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum = "DISABLED"
 )
 
+func (e GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum) ToPointer() *GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum {
+	return &e
+}
+
 func (e *GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP_ENGINE_INTEGRATION_MODE_UNSPECIFIED":
 		fallthrough
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum(s)
+		*e = GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	GoogleFirestoreAdminV1DatabaseConcurrencyModeEnumOptimisticWithEntityGroups GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum = "OPTIMISTIC_WITH_ENTITY_GROUPS"
 )
 
+func (e GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum) ToPointer() *GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum {
+	return &e
+}
+
 func (e *GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONCURRENCY_MODE_UNSPECIFIED":
 		fallthrough
 	case "OPTIMISTIC":
@@ -57,10 +65,41 @@ func (e *GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum) UnmarshalJSON(data [
 	case "PESSIMISTIC":
 		fallthrough
 	case "OPTIMISTIC_WITH_ENTITY_GROUPS":
-		*e = GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum(s)
+		*e = GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum: %v", v)
+	}
+}
+
+// GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum - State of delete protection for the database.
+type GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum string
+
+const (
+	GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnumDeleteProtectionStateUnspecified GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum = "DELETE_PROTECTION_STATE_UNSPECIFIED"
+	GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnumDeleteProtectionDisabled         GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum = "DELETE_PROTECTION_DISABLED"
+	GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnumDeleteProtectionEnabled          GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum = "DELETE_PROTECTION_ENABLED"
+)
+
+func (e GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum) ToPointer() *GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum {
+	return &e
+}
+
+func (e *GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "DELETE_PROTECTION_STATE_UNSPECIFIED":
+		fallthrough
+	case "DELETE_PROTECTION_DISABLED":
+		fallthrough
+	case "DELETE_PROTECTION_ENABLED":
+		*e = GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum: %v", v)
 	}
 }
 
@@ -73,21 +112,25 @@ const (
 	GoogleFirestoreAdminV1DatabaseTypeEnumDatastoreMode           GoogleFirestoreAdminV1DatabaseTypeEnum = "DATASTORE_MODE"
 )
 
+func (e GoogleFirestoreAdminV1DatabaseTypeEnum) ToPointer() *GoogleFirestoreAdminV1DatabaseTypeEnum {
+	return &e
+}
+
 func (e *GoogleFirestoreAdminV1DatabaseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATABASE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FIRESTORE_NATIVE":
 		fallthrough
 	case "DATASTORE_MODE":
-		*e = GoogleFirestoreAdminV1DatabaseTypeEnum(s)
+		*e = GoogleFirestoreAdminV1DatabaseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1DatabaseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1DatabaseTypeEnum: %v", v)
 	}
 }
 
@@ -97,8 +140,10 @@ type GoogleFirestoreAdminV1Database struct {
 	AppEngineIntegrationMode *GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum `json:"appEngineIntegrationMode,omitempty"`
 	// The concurrency control mode to use for this database.
 	ConcurrencyMode *GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum `json:"concurrencyMode,omitempty"`
-	// Output only. The timestamp at which this database was created.
+	// Output only. The timestamp at which this database was created. Databases created before 2016 do not populate create_time.
 	CreateTime *string `json:"createTime,omitempty"`
+	// State of delete protection for the database.
+	DeleteProtectionState *GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum `json:"deleteProtectionState,omitempty"`
 	// This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
 	Etag *string `json:"etag,omitempty"`
 	// Output only. The key_prefix for this database. This key_prefix is used, in combination with the project id ("~") to construct the application id that is returned from the Cloud Datastore APIs in Google App Engine first generation runtimes. This value may be empty in which case the appid to use for URL-encoded keys is the project_id (eg: foo instead of v~foo).
@@ -121,6 +166,8 @@ type GoogleFirestoreAdminV1DatabaseInput struct {
 	AppEngineIntegrationMode *GoogleFirestoreAdminV1DatabaseAppEngineIntegrationModeEnum `json:"appEngineIntegrationMode,omitempty"`
 	// The concurrency control mode to use for this database.
 	ConcurrencyMode *GoogleFirestoreAdminV1DatabaseConcurrencyModeEnum `json:"concurrencyMode,omitempty"`
+	// State of delete protection for the database.
+	DeleteProtectionState *GoogleFirestoreAdminV1DatabaseDeleteProtectionStateEnum `json:"deleteProtectionState,omitempty"`
 	// This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
 	Etag *string `json:"etag,omitempty"`
 	// The location of the database. Available databases are listed at https://cloud.google.com/firestore/docs/locations.

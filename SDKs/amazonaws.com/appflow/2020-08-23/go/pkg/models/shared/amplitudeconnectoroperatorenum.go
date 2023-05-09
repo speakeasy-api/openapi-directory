@@ -13,16 +13,20 @@ const (
 	AmplitudeConnectorOperatorEnumBetween AmplitudeConnectorOperatorEnum = "BETWEEN"
 )
 
+func (e AmplitudeConnectorOperatorEnum) ToPointer() *AmplitudeConnectorOperatorEnum {
+	return &e
+}
+
 func (e *AmplitudeConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BETWEEN":
-		*e = AmplitudeConnectorOperatorEnum(s)
+		*e = AmplitudeConnectorOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AmplitudeConnectorOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for AmplitudeConnectorOperatorEnum: %v", v)
 	}
 }

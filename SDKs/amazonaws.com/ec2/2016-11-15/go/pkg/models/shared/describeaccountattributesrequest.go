@@ -14,19 +14,23 @@ const (
 	DescribeAccountAttributesRequestAttributeNamesEnumDefaultVpc         DescribeAccountAttributesRequestAttributeNamesEnum = "default-vpc"
 )
 
+func (e DescribeAccountAttributesRequestAttributeNamesEnum) ToPointer() *DescribeAccountAttributesRequestAttributeNamesEnum {
+	return &e
+}
+
 func (e *DescribeAccountAttributesRequestAttributeNamesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "supported-platforms":
 		fallthrough
 	case "default-vpc":
-		*e = DescribeAccountAttributesRequestAttributeNamesEnum(s)
+		*e = DescribeAccountAttributesRequestAttributeNamesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAccountAttributesRequestAttributeNamesEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAccountAttributesRequestAttributeNamesEnum: %v", v)
 	}
 }
 

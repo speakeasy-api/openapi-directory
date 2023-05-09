@@ -18,12 +18,16 @@ const (
 	SendDebugCaptureRequestDataFormatEnumBrotli                SendDebugCaptureRequestDataFormatEnum = "BROTLI"
 )
 
+func (e SendDebugCaptureRequestDataFormatEnum) ToPointer() *SendDebugCaptureRequestDataFormatEnum {
+	return &e
+}
+
 func (e *SendDebugCaptureRequestDataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "RAW":
@@ -33,10 +37,10 @@ func (e *SendDebugCaptureRequestDataFormatEnum) UnmarshalJSON(data []byte) error
 	case "ZLIB":
 		fallthrough
 	case "BROTLI":
-		*e = SendDebugCaptureRequestDataFormatEnum(s)
+		*e = SendDebugCaptureRequestDataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendDebugCaptureRequestDataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for SendDebugCaptureRequestDataFormatEnum: %v", v)
 	}
 }
 

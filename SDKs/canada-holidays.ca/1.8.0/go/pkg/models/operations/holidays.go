@@ -19,12 +19,16 @@ const (
 	HolidaysFederalEnumFalse HolidaysFederalEnum = "false"
 )
 
+func (e HolidaysFederalEnum) ToPointer() *HolidaysFederalEnum {
+	return &e
+}
+
 func (e *HolidaysFederalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "0":
@@ -32,10 +36,10 @@ func (e *HolidaysFederalEnum) UnmarshalJSON(data []byte) error {
 	case "true":
 		fallthrough
 	case "false":
-		*e = HolidaysFederalEnum(s)
+		*e = HolidaysFederalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HolidaysFederalEnum: %s", s)
+		return fmt.Errorf("invalid value for HolidaysFederalEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	HolidaysOptionalEnumFalse HolidaysOptionalEnum = "false"
 )
 
+func (e HolidaysOptionalEnum) ToPointer() *HolidaysOptionalEnum {
+	return &e
+}
+
 func (e *HolidaysOptionalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "0":
@@ -62,10 +70,10 @@ func (e *HolidaysOptionalEnum) UnmarshalJSON(data []byte) error {
 	case "true":
 		fallthrough
 	case "false":
-		*e = HolidaysOptionalEnum(s)
+		*e = HolidaysOptionalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HolidaysOptionalEnum: %s", s)
+		return fmt.Errorf("invalid value for HolidaysOptionalEnum: %v", v)
 	}
 }
 

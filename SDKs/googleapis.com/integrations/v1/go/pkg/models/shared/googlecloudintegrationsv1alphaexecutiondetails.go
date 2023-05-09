@@ -21,12 +21,16 @@ const (
 	GoogleCloudIntegrationsV1alphaExecutionDetailsStateEnumSuspended        GoogleCloudIntegrationsV1alphaExecutionDetailsStateEnum = "SUSPENDED"
 )
 
+func (e GoogleCloudIntegrationsV1alphaExecutionDetailsStateEnum) ToPointer() *GoogleCloudIntegrationsV1alphaExecutionDetailsStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaExecutionDetailsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -42,10 +46,10 @@ func (e *GoogleCloudIntegrationsV1alphaExecutionDetailsStateEnum) UnmarshalJSON(
 	case "RETRY_ON_HOLD":
 		fallthrough
 	case "SUSPENDED":
-		*e = GoogleCloudIntegrationsV1alphaExecutionDetailsStateEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaExecutionDetailsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaExecutionDetailsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaExecutionDetailsStateEnum: %v", v)
 	}
 }
 

@@ -14,22 +14,23 @@ type ListWorkflowsTypeEnum string
 
 const (
 	ListWorkflowsTypeEnumPrivate ListWorkflowsTypeEnum = "PRIVATE"
-	ListWorkflowsTypeEnumService ListWorkflowsTypeEnum = "SERVICE"
 )
 
+func (e ListWorkflowsTypeEnum) ToPointer() *ListWorkflowsTypeEnum {
+	return &e
+}
+
 func (e *ListWorkflowsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE":
-		fallthrough
-	case "SERVICE":
-		*e = ListWorkflowsTypeEnum(s)
+		*e = ListWorkflowsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListWorkflowsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListWorkflowsTypeEnum: %v", v)
 	}
 }
 

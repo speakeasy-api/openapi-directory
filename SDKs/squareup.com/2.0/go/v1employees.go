@@ -265,7 +265,10 @@ func (s *v1Employees) ListEmployees(ctx context.Context, request operations.List
 // Provides the details for a single employee.
 func (s *v1Employees) RetrieveEmployee(ctx context.Context, request operations.RetrieveEmployeeRequest, security operations.RetrieveEmployeeSecurity) (*operations.RetrieveEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/me/employees/{employee_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/me/employees/{employee_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -310,7 +313,10 @@ func (s *v1Employees) RetrieveEmployee(ctx context.Context, request operations.R
 // Provides the details for a single employee role.
 func (s *v1Employees) RetrieveEmployeeRole(ctx context.Context, request operations.RetrieveEmployeeRoleRequest, security operations.RetrieveEmployeeRoleSecurity) (*operations.RetrieveEmployeeRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/me/roles/{role_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/me/roles/{role_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -354,7 +360,10 @@ func (s *v1Employees) RetrieveEmployeeRole(ctx context.Context, request operatio
 // UpdateEmployee - UpdateEmployee
 func (s *v1Employees) UpdateEmployee(ctx context.Context, request operations.UpdateEmployeeRequest, security operations.UpdateEmployeeSecurity) (*operations.UpdateEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/me/employees/{employee_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/me/employees/{employee_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "V1Employee", "json")
 	if err != nil {
@@ -409,7 +418,10 @@ func (s *v1Employees) UpdateEmployee(ctx context.Context, request operations.Upd
 // Modifies the details of an employee role.
 func (s *v1Employees) UpdateEmployeeRole(ctx context.Context, request operations.UpdateEmployeeRoleRequest, security operations.UpdateEmployeeRoleSecurity) (*operations.UpdateEmployeeRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/me/roles/{role_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/me/roles/{role_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "V1EmployeeRole", "json")
 	if err != nil {

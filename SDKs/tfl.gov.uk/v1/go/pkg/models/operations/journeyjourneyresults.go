@@ -20,12 +20,16 @@ const (
 	JourneyJourneyResultsAccessibilityPreferenceEnumStepFreeToPlatform JourneyJourneyResultsAccessibilityPreferenceEnum = "StepFreeToPlatform"
 )
 
+func (e JourneyJourneyResultsAccessibilityPreferenceEnum) ToPointer() *JourneyJourneyResultsAccessibilityPreferenceEnum {
+	return &e
+}
+
 func (e *JourneyJourneyResultsAccessibilityPreferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NoRequirements":
 		fallthrough
 	case "NoSolidStairs":
@@ -37,10 +41,10 @@ func (e *JourneyJourneyResultsAccessibilityPreferenceEnum) UnmarshalJSON(data []
 	case "StepFreeToVehicle":
 		fallthrough
 	case "StepFreeToPlatform":
-		*e = JourneyJourneyResultsAccessibilityPreferenceEnum(s)
+		*e = JourneyJourneyResultsAccessibilityPreferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JourneyJourneyResultsAccessibilityPreferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for JourneyJourneyResultsAccessibilityPreferenceEnum: %v", v)
 	}
 }
 
@@ -52,21 +56,25 @@ const (
 	JourneyJourneyResultsBikeProficiencyEnumFast     JourneyJourneyResultsBikeProficiencyEnum = "Fast"
 )
 
+func (e JourneyJourneyResultsBikeProficiencyEnum) ToPointer() *JourneyJourneyResultsBikeProficiencyEnum {
+	return &e
+}
+
 func (e *JourneyJourneyResultsBikeProficiencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Easy":
 		fallthrough
 	case "Moderate":
 		fallthrough
 	case "Fast":
-		*e = JourneyJourneyResultsBikeProficiencyEnum(s)
+		*e = JourneyJourneyResultsBikeProficiencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JourneyJourneyResultsBikeProficiencyEnum: %s", s)
+		return fmt.Errorf("invalid value for JourneyJourneyResultsBikeProficiencyEnum: %v", v)
 	}
 }
 
@@ -81,12 +89,16 @@ const (
 	JourneyJourneyResultsCyclePreferenceEnumCycleHire       JourneyJourneyResultsCyclePreferenceEnum = "CycleHire"
 )
 
+func (e JourneyJourneyResultsCyclePreferenceEnum) ToPointer() *JourneyJourneyResultsCyclePreferenceEnum {
+	return &e
+}
+
 func (e *JourneyJourneyResultsCyclePreferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "LeaveAtStation":
@@ -96,10 +108,10 @@ func (e *JourneyJourneyResultsCyclePreferenceEnum) UnmarshalJSON(data []byte) er
 	case "AllTheWay":
 		fallthrough
 	case "CycleHire":
-		*e = JourneyJourneyResultsCyclePreferenceEnum(s)
+		*e = JourneyJourneyResultsCyclePreferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JourneyJourneyResultsCyclePreferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for JourneyJourneyResultsCyclePreferenceEnum: %v", v)
 	}
 }
 
@@ -112,21 +124,25 @@ const (
 	JourneyJourneyResultsJourneyPreferenceEnumLeastWalking     JourneyJourneyResultsJourneyPreferenceEnum = "LeastWalking"
 )
 
+func (e JourneyJourneyResultsJourneyPreferenceEnum) ToPointer() *JourneyJourneyResultsJourneyPreferenceEnum {
+	return &e
+}
+
 func (e *JourneyJourneyResultsJourneyPreferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LeastInterchange":
 		fallthrough
 	case "LeastTime":
 		fallthrough
 	case "LeastWalking":
-		*e = JourneyJourneyResultsJourneyPreferenceEnum(s)
+		*e = JourneyJourneyResultsJourneyPreferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JourneyJourneyResultsJourneyPreferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for JourneyJourneyResultsJourneyPreferenceEnum: %v", v)
 	}
 }
 
@@ -138,19 +154,23 @@ const (
 	JourneyJourneyResultsTimeIsEnumDeparting JourneyJourneyResultsTimeIsEnum = "Departing"
 )
 
+func (e JourneyJourneyResultsTimeIsEnum) ToPointer() *JourneyJourneyResultsTimeIsEnum {
+	return &e
+}
+
 func (e *JourneyJourneyResultsTimeIsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Arriving":
 		fallthrough
 	case "Departing":
-		*e = JourneyJourneyResultsTimeIsEnum(s)
+		*e = JourneyJourneyResultsTimeIsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JourneyJourneyResultsTimeIsEnum: %s", s)
+		return fmt.Errorf("invalid value for JourneyJourneyResultsTimeIsEnum: %v", v)
 	}
 }
 
@@ -163,21 +183,25 @@ const (
 	JourneyJourneyResultsWalkingSpeedEnumFast    JourneyJourneyResultsWalkingSpeedEnum = "Fast"
 )
 
+func (e JourneyJourneyResultsWalkingSpeedEnum) ToPointer() *JourneyJourneyResultsWalkingSpeedEnum {
+	return &e
+}
+
 func (e *JourneyJourneyResultsWalkingSpeedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Slow":
 		fallthrough
 	case "Average":
 		fallthrough
 	case "Fast":
-		*e = JourneyJourneyResultsWalkingSpeedEnum(s)
+		*e = JourneyJourneyResultsWalkingSpeedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JourneyJourneyResultsWalkingSpeedEnum: %s", s)
+		return fmt.Errorf("invalid value for JourneyJourneyResultsWalkingSpeedEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateRateBasedRuleXAmzTargetEnumAwswafRegional20161128UpdateRateBasedRule UpdateRateBasedRuleXAmzTargetEnum = "AWSWAF_Regional_20161128.UpdateRateBasedRule"
 )
 
+func (e UpdateRateBasedRuleXAmzTargetEnum) ToPointer() *UpdateRateBasedRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateRateBasedRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.UpdateRateBasedRule":
-		*e = UpdateRateBasedRuleXAmzTargetEnum(s)
+		*e = UpdateRateBasedRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateRateBasedRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateRateBasedRuleXAmzTargetEnum: %v", v)
 	}
 }
 

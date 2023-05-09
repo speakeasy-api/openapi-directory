@@ -16,17 +16,21 @@ const (
 	CreateGatewayXAmzTargetEnumBackupOnPremisesV20210101CreateGateway CreateGatewayXAmzTargetEnum = "BackupOnPremises_v20210101.CreateGateway"
 )
 
+func (e CreateGatewayXAmzTargetEnum) ToPointer() *CreateGatewayXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateGatewayXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.CreateGateway":
-		*e = CreateGatewayXAmzTargetEnum(s)
+		*e = CreateGatewayXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateGatewayXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateGatewayXAmzTargetEnum: %v", v)
 	}
 }
 

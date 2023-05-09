@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/letmc.com/diary/v3-diary/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CompanyControllerGetBranchesRequest{
+    ctx := context.Background()
+    res, err := s.CompanyController.CompanyControllerGetBranches(ctx, operations.CompanyControllerGetBranchesRequest{
         Count: 548814,
         Offset: 592845,
         ShortName: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.CompanyController.CompanyControllerGetBranches(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,30 +44,30 @@ func main() {
 ## Available Resources and Operations
 
 
-### CompanyController
+### [CompanyController](docs/companycontroller/README.md)
 
-* `CompanyControllerGetBranches` - All branches defined for a company
-* `GetV3DiaryShortNameCompanyBranchesBranchID` - Get a specific branch given its unique Object ID (OID)
+* [CompanyControllerGetBranches](docs/companycontroller/README.md#companycontrollergetbranches) - All branches defined for a company
+* [GetV3DiaryShortNameCompanyBranchesBranchID](docs/companycontroller/README.md#getv3diaryshortnamecompanybranchesbranchid) - Get a specific branch given its unique Object ID (OID)
 
-### DiaryController
+### [DiaryController](docs/diarycontroller/README.md)
 
-* `DiaryControllerAddFeedbackForm` - Submit appointment feedback
-* `DiaryControllerAddFeedbackJSON` - Submit appointment feedback
-* `DiaryControllerAddFeedbackRaw` - Submit appointment feedback
-* `DiaryControllerCancelAppointment` - Cancel an existing appointment using its unique identifier
-* `DiaryControllerDeleteAppointment` - Delete an existing appointment using its unique identifier
-* `DiaryControllerGetAllocations` - Get a list of all available allocations for a date + 7 days for a specified appointment type
-* `DiaryControllerGetAppointment` - Get an appointment by ID
-* `DiaryControllerGetAppointmentTypes` - A collection of all diary appointment types
-* `DiaryControllerGetAppointmentsBetweenDates` - A collection of diary appointments linked to a company filtered between specific dates and by appointment type
-* `DiaryControllerGetRecurringAppointments` - Retrieves all recurring appointments:-
-* `DiaryControllerPostAppointmentForm` - Post an appointment into a valid diary allocation
-* `DiaryControllerPostAppointmentJSON` - Post an appointment into a valid diary allocation
-* `DiaryControllerPostAppointmentRaw` - Post an appointment into a valid diary allocation
-* `DiaryControllerPutAppointmentForm` - Update an existing appointment using its unique identifier
-* `DiaryControllerPutAppointmentJSON` - Update an existing appointment using its unique identifier
-* `DiaryControllerPutAppointmentRaw` - Update an existing appointment using its unique identifier
-* `DiaryControllerSearchGuest` - Match Guest Parameters with existing applicants
+* [DiaryControllerAddFeedbackForm](docs/diarycontroller/README.md#diarycontrolleraddfeedbackform) - Submit appointment feedback
+* [DiaryControllerAddFeedbackJSON](docs/diarycontroller/README.md#diarycontrolleraddfeedbackjson) - Submit appointment feedback
+* [DiaryControllerAddFeedbackRaw](docs/diarycontroller/README.md#diarycontrolleraddfeedbackraw) - Submit appointment feedback
+* [DiaryControllerCancelAppointment](docs/diarycontroller/README.md#diarycontrollercancelappointment) - Cancel an existing appointment using its unique identifier
+* [DiaryControllerDeleteAppointment](docs/diarycontroller/README.md#diarycontrollerdeleteappointment) - Delete an existing appointment using its unique identifier
+* [DiaryControllerGetAllocations](docs/diarycontroller/README.md#diarycontrollergetallocations) - Get a list of all available allocations for a date + 7 days for a specified appointment type
+* [DiaryControllerGetAppointment](docs/diarycontroller/README.md#diarycontrollergetappointment) - Get an appointment by ID
+* [DiaryControllerGetAppointmentTypes](docs/diarycontroller/README.md#diarycontrollergetappointmenttypes) - A collection of all diary appointment types
+* [DiaryControllerGetAppointmentsBetweenDates](docs/diarycontroller/README.md#diarycontrollergetappointmentsbetweendates) - A collection of diary appointments linked to a company filtered between specific dates and by appointment type
+* [DiaryControllerGetRecurringAppointments](docs/diarycontroller/README.md#diarycontrollergetrecurringappointments) - Retrieves all recurring appointments:-
+* [DiaryControllerPostAppointmentForm](docs/diarycontroller/README.md#diarycontrollerpostappointmentform) - Post an appointment into a valid diary allocation
+* [DiaryControllerPostAppointmentJSON](docs/diarycontroller/README.md#diarycontrollerpostappointmentjson) - Post an appointment into a valid diary allocation
+* [DiaryControllerPostAppointmentRaw](docs/diarycontroller/README.md#diarycontrollerpostappointmentraw) - Post an appointment into a valid diary allocation
+* [DiaryControllerPutAppointmentForm](docs/diarycontroller/README.md#diarycontrollerputappointmentform) - Update an existing appointment using its unique identifier
+* [DiaryControllerPutAppointmentJSON](docs/diarycontroller/README.md#diarycontrollerputappointmentjson) - Update an existing appointment using its unique identifier
+* [DiaryControllerPutAppointmentRaw](docs/diarycontroller/README.md#diarycontrollerputappointmentraw) - Update an existing appointment using its unique identifier
+* [DiaryControllerSearchGuest](docs/diarycontroller/README.md#diarycontrollersearchguest) - Match Guest Parameters with existing applicants
 <!-- End SDK Available Operations -->
 
 ### Maturity

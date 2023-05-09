@@ -16,19 +16,23 @@ const (
 	EnableSecurityHubRequestBodyControlFindingGeneratorEnumSecurityControl EnableSecurityHubRequestBodyControlFindingGeneratorEnum = "SECURITY_CONTROL"
 )
 
+func (e EnableSecurityHubRequestBodyControlFindingGeneratorEnum) ToPointer() *EnableSecurityHubRequestBodyControlFindingGeneratorEnum {
+	return &e
+}
+
 func (e *EnableSecurityHubRequestBodyControlFindingGeneratorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD_CONTROL":
 		fallthrough
 	case "SECURITY_CONTROL":
-		*e = EnableSecurityHubRequestBodyControlFindingGeneratorEnum(s)
+		*e = EnableSecurityHubRequestBodyControlFindingGeneratorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnableSecurityHubRequestBodyControlFindingGeneratorEnum: %s", s)
+		return fmt.Errorf("invalid value for EnableSecurityHubRequestBodyControlFindingGeneratorEnum: %v", v)
 	}
 }
 

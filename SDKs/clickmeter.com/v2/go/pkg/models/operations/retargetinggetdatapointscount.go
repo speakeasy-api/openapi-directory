@@ -19,12 +19,16 @@ const (
 	RetargetingGetDatapointsCountStatusEnumSpam    RetargetingGetDatapointsCountStatusEnum = "spam"
 )
 
+func (e RetargetingGetDatapointsCountStatusEnum) ToPointer() *RetargetingGetDatapointsCountStatusEnum {
+	return &e
+}
+
 func (e *RetargetingGetDatapointsCountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "active":
@@ -32,10 +36,10 @@ func (e *RetargetingGetDatapointsCountStatusEnum) UnmarshalJSON(data []byte) err
 	case "paused":
 		fallthrough
 	case "spam":
-		*e = RetargetingGetDatapointsCountStatusEnum(s)
+		*e = RetargetingGetDatapointsCountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetargetingGetDatapointsCountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetargetingGetDatapointsCountStatusEnum: %v", v)
 	}
 }
 

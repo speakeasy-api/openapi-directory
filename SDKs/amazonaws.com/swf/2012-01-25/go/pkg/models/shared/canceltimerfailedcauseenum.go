@@ -14,18 +14,22 @@ const (
 	CancelTimerFailedCauseEnumOperationNotPermitted CancelTimerFailedCauseEnum = "OPERATION_NOT_PERMITTED"
 )
 
+func (e CancelTimerFailedCauseEnum) ToPointer() *CancelTimerFailedCauseEnum {
+	return &e
+}
+
 func (e *CancelTimerFailedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIMER_ID_UNKNOWN":
 		fallthrough
 	case "OPERATION_NOT_PERMITTED":
-		*e = CancelTimerFailedCauseEnum(s)
+		*e = CancelTimerFailedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelTimerFailedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelTimerFailedCauseEnum: %v", v)
 	}
 }

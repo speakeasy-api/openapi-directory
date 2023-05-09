@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/esgenterprise.com/1.0.0/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetSearchRequest{
-        Q: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Rating.GetSearch(ctx, req, operations.GetSearchSecurity{
+    res, err := s.Rating.GetSearch(ctx, operations.GetSearchRequest{
+        Q: "corrupti",
+    }, operations.GetSearchSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -47,9 +44,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Rating
+### [Rating](docs/rating/README.md)
 
-* `GetSearch` - List all company ESG Ratings
+* [GetSearch](docs/rating/README.md#getsearch) - List all company ESG Ratings
 <!-- End SDK Available Operations -->
 
 ### Maturity

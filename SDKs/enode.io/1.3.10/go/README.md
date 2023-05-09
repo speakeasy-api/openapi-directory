@@ -13,26 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/enode.io/1.3.10/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ControlChargerChargingRequest{
+    ctx := context.Background()
+    res, err := s.Chargers.ControlChargerCharging(ctx, operations.ControlChargerChargingRequest{
         RequestBody: &operations.ControlChargerChargingRequestBody{
-            Action: "START",
+            Action: operations.ControlChargerChargingRequestBodyActionEnumStart,
         },
         ChargerID: "corrupti",
-    }
-
-    ctx := context.Background()
-    res, err := s.Chargers.ControlChargerCharging(ctx, req, operations.ControlChargerChargingSecurity{
+    }, operations.ControlChargerChargingSecurity{
         UserAccessToken: sdk.String("Bearer YOUR_ACCESS_TOKEN_HERE"),
     })
     if err != nil {
@@ -50,57 +47,57 @@ func main() {
 ## Available Resources and Operations
 
 
-### Chargers
+### [Chargers](docs/chargers/README.md)
 
-* `ControlChargerCharging` - Control Charging
-* `GetCharger` - Get Charger
-* `GetChargers` - List Chargers
+* [ControlChargerCharging](docs/chargers/README.md#controlchargercharging) - Control Charging
+* [GetCharger](docs/chargers/README.md#getcharger) - Get Charger
+* [GetChargers](docs/chargers/README.md#getchargers) - List Chargers
 
-### ChargingLocations
+### [ChargingLocations](docs/charginglocations/README.md)
 
-* `DeleteCharginglocationsCharginglocationid` - Delete Charging Location
-* `GetCharginglocations` - List Charging Locations
-* `GetCharginglocationsCharginglocationid` - Get Charging Location
-* `PostCharginglocations` - Create Charging Location
-* `PutCharginglocationsCharginglocationid` - Update Charging Location
+* [DeleteCharginglocationsCharginglocationid](docs/charginglocations/README.md#deletecharginglocationscharginglocationid) - Delete Charging Location
+* [GetCharginglocations](docs/charginglocations/README.md#getcharginglocations) - List Charging Locations
+* [GetCharginglocationsCharginglocationid](docs/charginglocations/README.md#getcharginglocationscharginglocationid) - Get Charging Location
+* [PostCharginglocations](docs/charginglocations/README.md#postcharginglocations) - Create Charging Location
+* [PutCharginglocationsCharginglocationid](docs/charginglocations/README.md#putcharginglocationscharginglocationid) - Update Charging Location
 
-### Me
+### [Me](docs/me/README.md)
 
-* `DisconnectVendor` - Disconnect Vendor
-* `GetMe` - Get My User
+* [DisconnectVendor](docs/me/README.md#disconnectvendor) - Disconnect Vendor
+* [GetMe](docs/me/README.md#getme) - Get My User
 
-### ServiceHealth
+### [ServiceHealth](docs/servicehealth/README.md)
 
-* `GetHealthReady` - Check Service Readiness
-* `GetHealthVendors` - Check Available Vendors
+* [GetHealthReady](docs/servicehealth/README.md#gethealthready) - Check Service Readiness
+* [GetHealthVendors](docs/servicehealth/README.md#gethealthvendors) - Check Available Vendors
 
-### Statistics
+### [Statistics](docs/statistics/README.md)
 
-* `GetStatisticsCharging` - Get User Charging Statistics
+* [GetStatisticsCharging](docs/statistics/README.md#getstatisticscharging) - Get User Charging Statistics
 
-### UserManagement
+### [UserManagement](docs/usermanagement/README.md)
 
-* `DeleteUsersUserid` - Unlink User
-* `DeleteUsersUseridAuthorization` - Deauthorize User
-* `PostUsersUseridLink` - Link User
+* [DeleteUsersUserid](docs/usermanagement/README.md#deleteusersuserid) - Unlink User
+* [DeleteUsersUseridAuthorization](docs/usermanagement/README.md#deleteusersuseridauthorization) - Deauthorize User
+* [PostUsersUseridLink](docs/usermanagement/README.md#postusersuseridlink) - Link User
 
-### Vehicles
+### [Vehicles](docs/vehicles/README.md)
 
-* `GetVehicleChargestate` - Get Vehicle Charge State
-* `GetVehicles` - List Vehicles
-* `GetVehiclesVehicleid` - Get Vehicle
-* `GetVehiclesVehicleidInformation` - Get Vehicle Information
-* `GetVehiclesVehicleidLocation` - Get Vehicle Location
-* `GetVehiclesVehicleidOdometer` - Get Vehicle Odometer
-* `GetVehiclesVehicleidSmartchargingpolicy` - Get Vehicle Smart Charging Policy
-* `PostVehiclesVehicleidCharging` - Start / Stop Charging
-* `PostVehiclesVehicleidWatch` - Start Watching Vehicle
-* `PutVehiclesVehicleidSmartchargingpolicy` - Update Vehicle Smart Charging Policy
+* [GetVehicleChargestate](docs/vehicles/README.md#getvehiclechargestate) - Get Vehicle Charge State
+* [GetVehicles](docs/vehicles/README.md#getvehicles) - List Vehicles
+* [GetVehiclesVehicleid](docs/vehicles/README.md#getvehiclesvehicleid) - Get Vehicle
+* [GetVehiclesVehicleidInformation](docs/vehicles/README.md#getvehiclesvehicleidinformation) - Get Vehicle Information
+* [GetVehiclesVehicleidLocation](docs/vehicles/README.md#getvehiclesvehicleidlocation) - Get Vehicle Location
+* [GetVehiclesVehicleidOdometer](docs/vehicles/README.md#getvehiclesvehicleidodometer) - Get Vehicle Odometer
+* [GetVehiclesVehicleidSmartchargingpolicy](docs/vehicles/README.md#getvehiclesvehicleidsmartchargingpolicy) - Get Vehicle Smart Charging Policy
+* [PostVehiclesVehicleidCharging](docs/vehicles/README.md#postvehiclesvehicleidcharging) - Start / Stop Charging
+* [PostVehiclesVehicleidWatch](docs/vehicles/README.md#postvehiclesvehicleidwatch) - Start Watching Vehicle
+* [PutVehiclesVehicleidSmartchargingpolicy](docs/vehicles/README.md#putvehiclesvehicleidsmartchargingpolicy) - Update Vehicle Smart Charging Policy
 
-### Webhooks
+### [Webhooks](docs/webhooks/README.md)
 
-* `PostWebhooksFirehoseTest` - Test Firehose Webhook
-* `PutWebhooksFirehose` - Update Firehose Webhook
+* [PostWebhooksFirehoseTest](docs/webhooks/README.md#postwebhooksfirehosetest) - Test Firehose Webhook
+* [PutWebhooksFirehose](docs/webhooks/README.md#putwebhooksfirehose) - Update Firehose Webhook
 <!-- End SDK Available Operations -->
 
 ### Maturity

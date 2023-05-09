@@ -86,7 +86,10 @@ func (s *bulkJobs) GetV2BulkJobs(ctx context.Context, request operations.GetV2Bu
 // Fetches a bulk job, by ID only.
 func (s *bulkJobs) GetV2BulkJobsID(ctx context.Context, request operations.GetV2BulkJobsIDRequest) (*operations.GetV2BulkJobsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bulk_jobs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/bulk_jobs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,7 +190,10 @@ func (s *bulkJobs) PostV2BulkJobs(ctx context.Context, request operations.PostV2
 // For additional information on creating bulk jobs, the types of supported bulk jobs, and examples of the bulk job flow, visit the <a href="/bulk.html" target="_blank" rel="noopener noreferrer">bulk job details page</a>.
 func (s *bulkJobs) PutV2BulkJobsID(ctx context.Context, request operations.PutV2BulkJobsIDRequest) (*operations.PutV2BulkJobsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bulk_jobs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/bulk_jobs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

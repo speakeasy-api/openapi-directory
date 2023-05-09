@@ -14,18 +14,22 @@ const (
 	ImagePullCredentialsTypeEnumServiceRole ImagePullCredentialsTypeEnum = "SERVICE_ROLE"
 )
 
+func (e ImagePullCredentialsTypeEnum) ToPointer() *ImagePullCredentialsTypeEnum {
+	return &e
+}
+
 func (e *ImagePullCredentialsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODEBUILD":
 		fallthrough
 	case "SERVICE_ROLE":
-		*e = ImagePullCredentialsTypeEnum(s)
+		*e = ImagePullCredentialsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImagePullCredentialsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImagePullCredentialsTypeEnum: %v", v)
 	}
 }

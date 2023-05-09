@@ -15,20 +15,24 @@ const (
 	FulfillmentStateEnumReadyForFulfillment FulfillmentStateEnum = "ReadyForFulfillment"
 )
 
+func (e FulfillmentStateEnum) ToPointer() *FulfillmentStateEnum {
+	return &e
+}
+
 func (e *FulfillmentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Fulfilled":
 		fallthrough
 	case "Failed":
 		fallthrough
 	case "ReadyForFulfillment":
-		*e = FulfillmentStateEnum(s)
+		*e = FulfillmentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FulfillmentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for FulfillmentStateEnum: %v", v)
 	}
 }

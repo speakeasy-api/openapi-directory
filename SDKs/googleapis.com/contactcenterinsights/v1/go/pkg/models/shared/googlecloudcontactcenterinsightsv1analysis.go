@@ -2,6 +2,16 @@
 
 package shared
 
+// GoogleCloudContactcenterinsightsV1AnalysisInput - The analysis resource.
+type GoogleCloudContactcenterinsightsV1AnalysisInput struct {
+	// The result of an analysis.
+	AnalysisResult *GoogleCloudContactcenterinsightsV1AnalysisResult `json:"analysisResult,omitempty"`
+	// Selector of all available annotators and phrase matchers to run.
+	AnnotatorSelector *GoogleCloudContactcenterinsightsV1AnnotatorSelector `json:"annotatorSelector,omitempty"`
+	// Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
+	Name *string `json:"name,omitempty"`
+}
+
 // GoogleCloudContactcenterinsightsV1Analysis - The analysis resource.
 type GoogleCloudContactcenterinsightsV1Analysis struct {
 	// The result of an analysis.
@@ -14,14 +24,4 @@ type GoogleCloudContactcenterinsightsV1Analysis struct {
 	Name *string `json:"name,omitempty"`
 	// Output only. The time at which the analysis was requested.
 	RequestTime *string `json:"requestTime,omitempty"`
-}
-
-// GoogleCloudContactcenterinsightsV1AnalysisInput - The analysis resource.
-type GoogleCloudContactcenterinsightsV1AnalysisInput struct {
-	// The result of an analysis.
-	AnalysisResult *GoogleCloudContactcenterinsightsV1AnalysisResult `json:"analysisResult,omitempty"`
-	// Selector of all available annotators and phrase matchers to run.
-	AnnotatorSelector *GoogleCloudContactcenterinsightsV1AnnotatorSelector `json:"annotatorSelector,omitempty"`
-	// Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
-	Name *string `json:"name,omitempty"`
 }

@@ -14,18 +14,22 @@ const (
 	FormDataSourceTypeEnumCustom    FormDataSourceTypeEnum = "Custom"
 )
 
+func (e FormDataSourceTypeEnum) ToPointer() *FormDataSourceTypeEnum {
+	return &e
+}
+
 func (e *FormDataSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DataStore":
 		fallthrough
 	case "Custom":
-		*e = FormDataSourceTypeEnum(s)
+		*e = FormDataSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FormDataSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FormDataSourceTypeEnum: %v", v)
 	}
 }

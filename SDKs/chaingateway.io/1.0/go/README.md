@@ -13,27 +13,25 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/chaingateway.io/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteAddressRequest{
+    ctx := context.Background()
+    res, err := s.AddressRequests.DeleteAddress(ctx, operations.DeleteAddressRequest{
         Authorization: "q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m",
         DeleteAddressRequest: shared.DeleteAddressRequest{
             Ethereumaddress: "corrupti",
             Password: "provident",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.AddressRequests.DeleteAddress(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,38 +47,38 @@ func main() {
 ## Available Resources and Operations
 
 
-### AddressRequests
+### [AddressRequests](docs/addressrequests/README.md)
 
-* `DeleteAddress` - deleteAddress
-* `ExportAddress` - exportAddress
-* `ImportAddress` - importAddress
-* `ListAddresses` - listAddresses
-* `NewAddress` - newAddress
+* [DeleteAddress](docs/addressrequests/README.md#deleteaddress) - deleteAddress
+* [ExportAddress](docs/addressrequests/README.md#exportaddress) - exportAddress
+* [ImportAddress](docs/addressrequests/README.md#importaddress) - importAddress
+* [ListAddresses](docs/addressrequests/README.md#listaddresses) - listAddresses
+* [NewAddress](docs/addressrequests/README.md#newaddress) - newAddress
 
-### InfoRequests
+### [InfoRequests](docs/inforequests/README.md)
 
-* `GetBlock` - getBlock
-* `GetEthereumBalance` - getEthereumBalance
-* `GetExchangeRate` - getExchangeRate
-* `GetGasPrice` - getGasPrice
-* `GetLastBlockNumber` - getLastBlockNumber
-* `GetToken` - getToken
-* `GetTokenBalance` - getTokenBalance
-* `GetTransactions` - getTransactions
+* [GetBlock](docs/inforequests/README.md#getblock) - getBlock
+* [GetEthereumBalance](docs/inforequests/README.md#getethereumbalance) - getEthereumBalance
+* [GetExchangeRate](docs/inforequests/README.md#getexchangerate) - getExchangeRate
+* [GetGasPrice](docs/inforequests/README.md#getgasprice) - getGasPrice
+* [GetLastBlockNumber](docs/inforequests/README.md#getlastblocknumber) - getLastBlockNumber
+* [GetToken](docs/inforequests/README.md#gettoken) - getToken
+* [GetTokenBalance](docs/inforequests/README.md#gettokenbalance) - getTokenBalance
+* [GetTransactions](docs/inforequests/README.md#gettransactions) - getTransactions
 
-### SubscriptionIPNRequests
+### [SubscriptionIPNRequests](docs/subscriptionipnrequests/README.md)
 
-* `ListFailedIPNs` - listFailedIPNs
-* `ListSubscribedAddresses` - listSubscribedAddresses
-* `ResendFailedIPN` - resendFailedIPN
-* `SubscribeAddress` - subscribeAddress
-* `UnsubscribeAddress` - unsubscribeAddress
+* [ListFailedIPNs](docs/subscriptionipnrequests/README.md#listfailedipns) - listFailedIPNs
+* [ListSubscribedAddresses](docs/subscriptionipnrequests/README.md#listsubscribedaddresses) - listSubscribedAddresses
+* [ResendFailedIPN](docs/subscriptionipnrequests/README.md#resendfailedipn) - resendFailedIPN
+* [SubscribeAddress](docs/subscriptionipnrequests/README.md#subscribeaddress) - subscribeAddress
+* [UnsubscribeAddress](docs/subscriptionipnrequests/README.md#unsubscribeaddress) - unsubscribeAddress
 
-### TransactionRequests
+### [TransactionRequests](docs/transactionrequests/README.md)
 
-* `ClearAddress` - clearAddress
-* `SendEthereum` - sendEthereum
-* `SendToken` - sendToken
+* [ClearAddress](docs/transactionrequests/README.md#clearaddress) - clearAddress
+* [SendEthereum](docs/transactionrequests/README.md#sendethereum) - sendEthereum
+* [SendToken](docs/transactionrequests/README.md#sendtoken) - sendToken
 <!-- End SDK Available Operations -->
 
 ### Maturity

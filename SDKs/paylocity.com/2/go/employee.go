@@ -35,7 +35,10 @@ func newEmployee(defaultClient, securityClient HTTPClient, serverURL, language, 
 // New Employee API sends new employee data directly to Web Pay. Companies who use the New Hire Template in Web Pay may require additional fields when hiring employees. New Employee API Requests will honor these required fields.
 func (s *employee) AddEmployee(ctx context.Context, request operations.AddEmployeeRequest, security operations.AddEmployeeSecurity) (*operations.AddEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Employee", "json")
 	if err != nil {
@@ -107,7 +110,10 @@ func (s *employee) AddEmployee(ctx context.Context, request operations.AddEmploy
 // Get All Employees API will return employee data currently available in Web Pay.
 func (s *employee) GetAllEmployees(ctx context.Context, request operations.GetAllEmployeesRequest, security operations.GetAllEmployeesSecurity) (*operations.GetAllEmployeesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -173,7 +179,10 @@ func (s *employee) GetAllEmployees(ctx context.Context, request operations.GetAl
 // Get Employee API will return employee data currently available in Web Pay.
 func (s *employee) GetEmployee(ctx context.Context, request operations.GetEmployeeRequest, security operations.GetEmployeeSecurity) (*operations.GetEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -235,7 +244,10 @@ func (s *employee) GetEmployee(ctx context.Context, request operations.GetEmploy
 // Update Employee API will update existing employee data in WebPay.
 func (s *employee) UpdateEmployee(ctx context.Context, request operations.UpdateEmployeeRequest, security operations.UpdateEmployeeSecurity) (*operations.UpdateEmployeeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Employee", "json")
 	if err != nil {

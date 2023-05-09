@@ -16,17 +16,21 @@ const (
 	ImportKeyMaterialXAmzTargetEnumTrentServiceImportKeyMaterial ImportKeyMaterialXAmzTargetEnum = "TrentService.ImportKeyMaterial"
 )
 
+func (e ImportKeyMaterialXAmzTargetEnum) ToPointer() *ImportKeyMaterialXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportKeyMaterialXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.ImportKeyMaterial":
-		*e = ImportKeyMaterialXAmzTargetEnum(s)
+		*e = ImportKeyMaterialXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportKeyMaterialXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportKeyMaterialXAmzTargetEnum: %v", v)
 	}
 }
 

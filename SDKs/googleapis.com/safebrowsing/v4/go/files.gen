@@ -9,6 +9,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -52,4 +53,12 @@ pkg/models/shared/googlesecuritysafebrowsingv4listthreatlistsresponse.go
 pkg/models/shared/googlesecuritysafebrowsingv4threatlistdescriptor.go
 pkg/models/shared/googlesecuritysafebrowsingv4findthreatmatchesresponse.go
 pkg/models/shared/googlesecuritysafebrowsingv4findthreatmatchesrequest.go
+docs/sdk/README.md
+docs/encodedfullhashes/README.md
+docs/encodedupdates/README.md
+docs/fullhashes/README.md
+docs/threathits/README.md
+docs/threatlistupdates/README.md
+docs/threatlists/README.md
+docs/threatmatches/README.md
 USAGE.md

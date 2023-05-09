@@ -15,19 +15,23 @@ const (
 	GooglePrivacyDlpV2ExpressionsLogicalOperatorEnumAnd                        GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum = "AND"
 )
 
+func (e GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum) ToPointer() *GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOGICAL_OPERATOR_UNSPECIFIED":
 		fallthrough
 	case "AND":
-		*e = GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum(s)
+		*e = GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum: %v", v)
 	}
 }
 

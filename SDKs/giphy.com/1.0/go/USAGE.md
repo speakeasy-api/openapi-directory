@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.GetGifByIDRequest{
-        GifID: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.Gifs.GetGifByID(ctx, req)
+    res, err := s.Gifs.GetGifByID(ctx, operations.GetGifByIDRequest{
+        GifID: 548814,
+    })
     if err != nil {
         log.Fatal(err)
     }

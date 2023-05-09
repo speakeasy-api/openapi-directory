@@ -21,11 +21,27 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Lets Android application developers access their Google Play accounts. At a high level, the expected workflow is to "insert" an Edit, make changes as necessary, and then "commit" it.
 // https://developers.google.com/android-publisher
 type SDK struct {
 	Applications                *applications
 	Edits                       *edits
+	Externaltransactions        *externaltransactions
 	Generatedapks               *generatedapks
 	Grants                      *grants
 	Inappproducts               *inappproducts
@@ -107,6 +123,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.Edits = newEdits(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Externaltransactions = newExternaltransactions(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

@@ -36,7 +36,10 @@ func newDelete(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // KeyRevoke - Revoke an Identity (Key) with a revocation secret
 func (s *delete) KeyRevoke(ctx context.Context, request operations.KeyRevokeRequest) (*operations.KeyRevokeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -182,7 +185,10 @@ func (s *delete) KeyRevokeNosecret(ctx context.Context, request operations.KeyRe
 // SignDelete - delete a verification job
 func (s *delete) SignDelete(ctx context.Context, request operations.SignDeleteRequest) (*operations.SignDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoalEnumFlexrsCostOptimized  GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoalEnum = "FLEXRS_COST_OPTIMIZED"
 )
 
+func (e GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoalEnum) ToPointer() *GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoalEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FLEXRS_UNSPECIFIED":
 		fallthrough
 	case "FLEXRS_SPEED_OPTIMIZED":
 		fallthrough
 	case "FLEXRS_COST_OPTIMIZED":
-		*e = GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoalEnum(s)
+		*e = GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoalEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentFlexrsGoalEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIPConfigurationEnumWorkerIPPrivate     GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIPConfigurationEnum = "WORKER_IP_PRIVATE"
 )
 
+func (e GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIPConfigurationEnum) ToPointer() *GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIPConfigurationEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIPConfigurationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORKER_IP_UNSPECIFIED":
 		fallthrough
 	case "WORKER_IP_PUBLIC":
 		fallthrough
 	case "WORKER_IP_PRIVATE":
-		*e = GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIPConfigurationEnum(s)
+		*e = GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIPConfigurationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIPConfigurationEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIPConfigurationEnum: %v", v)
 	}
 }
 

@@ -11,6 +11,8 @@ type CreateCompanyUserResponse struct {
 	Active *bool `json:"active,omitempty"`
 	// The list of [merchant accounts](https://docs.adyen.com/account/account-structure#merchant-accounts) associated with this user.
 	AssociatedMerchantAccounts []string `json:"associatedMerchantAccounts,omitempty"`
+	// Set of authn apps available to this user
+	AuthnApps []string `json:"authnApps,omitempty"`
 	// The email address of the user.
 	Email string `json:"email"`
 	// The unique identifier of the user.

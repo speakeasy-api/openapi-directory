@@ -45,21 +45,25 @@ const (
 	SymbolsGetStatus200ApplicationJSONStatusEnumMissing   SymbolsGetStatus200ApplicationJSONStatusEnum = "missing"
 )
 
+func (e SymbolsGetStatus200ApplicationJSONStatusEnum) ToPointer() *SymbolsGetStatus200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *SymbolsGetStatus200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "ignored":
 		fallthrough
 	case "missing":
-		*e = SymbolsGetStatus200ApplicationJSONStatusEnum(s)
+		*e = SymbolsGetStatus200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymbolsGetStatus200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SymbolsGetStatus200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

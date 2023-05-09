@@ -17,21 +17,25 @@ const (
 	MaintenanceIssueModelIssuePriorityEnumHigh   MaintenanceIssueModelIssuePriorityEnum = "High"
 )
 
+func (e MaintenanceIssueModelIssuePriorityEnum) ToPointer() *MaintenanceIssueModelIssuePriorityEnum {
+	return &e
+}
+
 func (e *MaintenanceIssueModelIssuePriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Low":
 		fallthrough
 	case "Medium":
 		fallthrough
 	case "High":
-		*e = MaintenanceIssueModelIssuePriorityEnum(s)
+		*e = MaintenanceIssueModelIssuePriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MaintenanceIssueModelIssuePriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for MaintenanceIssueModelIssuePriorityEnum: %v", v)
 	}
 }
 

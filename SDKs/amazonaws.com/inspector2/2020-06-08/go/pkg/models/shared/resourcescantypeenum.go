@@ -15,20 +15,24 @@ const (
 	ResourceScanTypeEnumLambda ResourceScanTypeEnum = "LAMBDA"
 )
 
+func (e ResourceScanTypeEnum) ToPointer() *ResourceScanTypeEnum {
+	return &e
+}
+
 func (e *ResourceScanTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2":
 		fallthrough
 	case "ECR":
 		fallthrough
 	case "LAMBDA":
-		*e = ResourceScanTypeEnum(s)
+		*e = ResourceScanTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceScanTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceScanTypeEnum: %v", v)
 	}
 }

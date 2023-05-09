@@ -37,7 +37,10 @@ func newLanguageTraining(defaultClient, securityClient HTTPClient, serverURL, la
 // Returns the status of a model's training process. Use the progress field to determine how far the training has progressed. When training completes successfully, the status is SUCCEEDED and the progress is 1.
 func (s *languageTraining) GetTrainStatusAndProgress(ctx context.Context, request operations.GetTrainStatusAndProgressRequest, security operations.GetTrainStatusAndProgressSecurity) (*operations.GetTrainStatusAndProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/train/{modelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/language/train/{modelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

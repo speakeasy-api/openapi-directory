@@ -16,12 +16,16 @@ const (
 	InstancePatchStateOperatorTypeEnumGreaterThan InstancePatchStateOperatorTypeEnum = "GreaterThan"
 )
 
+func (e InstancePatchStateOperatorTypeEnum) ToPointer() *InstancePatchStateOperatorTypeEnum {
+	return &e
+}
+
 func (e *InstancePatchStateOperatorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Equal":
 		fallthrough
 	case "NotEqual":
@@ -29,9 +33,9 @@ func (e *InstancePatchStateOperatorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LessThan":
 		fallthrough
 	case "GreaterThan":
-		*e = InstancePatchStateOperatorTypeEnum(s)
+		*e = InstancePatchStateOperatorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstancePatchStateOperatorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstancePatchStateOperatorTypeEnum: %v", v)
 	}
 }

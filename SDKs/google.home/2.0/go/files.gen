@@ -8,6 +8,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -118,4 +119,11 @@ pkg/models/shared/forgetwifinetworkrequest.go
 pkg/models/shared/example113.go
 pkg/models/shared/example114.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/assistant/README.md
+docs/bluetooth/README.md
+docs/deviceinfo/README.md
+docs/devicesettings/README.md
+docs/staticfiles/README.md
+docs/wifi/README.md
 USAGE.md

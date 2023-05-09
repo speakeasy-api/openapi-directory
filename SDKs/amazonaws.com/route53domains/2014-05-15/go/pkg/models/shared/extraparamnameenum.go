@@ -43,12 +43,16 @@ const (
 	ExtraParamNameEnumAuPriorityToken               ExtraParamNameEnum = "AU_PRIORITY_TOKEN"
 )
 
+func (e ExtraParamNameEnum) ToPointer() *ExtraParamNameEnum {
+	return &e
+}
+
 func (e *ExtraParamNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DUNS_NUMBER":
 		fallthrough
 	case "BRAND_NUMBER":
@@ -110,9 +114,9 @@ func (e *ExtraParamNameEnum) UnmarshalJSON(data []byte) error {
 	case "EU_COUNTRY_OF_CITIZENSHIP":
 		fallthrough
 	case "AU_PRIORITY_TOKEN":
-		*e = ExtraParamNameEnum(s)
+		*e = ExtraParamNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExtraParamNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ExtraParamNameEnum: %v", v)
 	}
 }

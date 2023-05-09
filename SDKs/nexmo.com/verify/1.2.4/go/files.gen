@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -39,4 +40,7 @@ pkg/models/shared/controlrequest.go
 pkg/models/shared/psd2request.go
 pkg/models/shared/searchresponse.go
 pkg/models/shared/searcherrorresponse.go
+docs/sdk/README.md
+docs/fraudmanagement/README.md
+docs/requests/README.md
 USAGE.md

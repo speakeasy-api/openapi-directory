@@ -16,17 +16,21 @@ const (
 	ListTargetsByRuleXAmzTargetEnumAwsEventsListTargetsByRule ListTargetsByRuleXAmzTargetEnum = "AWSEvents.ListTargetsByRule"
 )
 
+func (e ListTargetsByRuleXAmzTargetEnum) ToPointer() *ListTargetsByRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListTargetsByRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.ListTargetsByRule":
-		*e = ListTargetsByRuleXAmzTargetEnum(s)
+		*e = ListTargetsByRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTargetsByRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTargetsByRuleXAmzTargetEnum: %v", v)
 	}
 }
 

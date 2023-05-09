@@ -20,12 +20,16 @@ const (
 	MessageNewJobStateEnumDeletionInProgress MessageNewJobStateEnum = "DELETION_IN_PROGRESS"
 )
 
+func (e MessageNewJobStateEnum) ToPointer() *MessageNewJobStateEnum {
+	return &e
+}
+
 func (e *MessageNewJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "QUEUED":
@@ -39,10 +43,10 @@ func (e *MessageNewJobStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "DELETION_IN_PROGRESS":
-		*e = MessageNewJobStateEnum(s)
+		*e = MessageNewJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageNewJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageNewJobStateEnum: %v", v)
 	}
 }
 
@@ -56,14 +60,19 @@ const (
 	MessageNewTaskStateEnumRunning          MessageNewTaskStateEnum = "RUNNING"
 	MessageNewTaskStateEnumFailed           MessageNewTaskStateEnum = "FAILED"
 	MessageNewTaskStateEnumSucceeded        MessageNewTaskStateEnum = "SUCCEEDED"
+	MessageNewTaskStateEnumUnexecuted       MessageNewTaskStateEnum = "UNEXECUTED"
 )
 
+func (e MessageNewTaskStateEnum) ToPointer() *MessageNewTaskStateEnum {
+	return &e
+}
+
 func (e *MessageNewTaskStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -75,10 +84,12 @@ func (e *MessageNewTaskStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "SUCCEEDED":
-		*e = MessageNewTaskStateEnum(s)
+		fallthrough
+	case "UNEXECUTED":
+		*e = MessageNewTaskStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageNewTaskStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageNewTaskStateEnum: %v", v)
 	}
 }
 
@@ -91,21 +102,25 @@ const (
 	MessageTypeEnumTaskStateChanged MessageTypeEnum = "TASK_STATE_CHANGED"
 )
 
+func (e MessageTypeEnum) ToPointer() *MessageTypeEnum {
+	return &e
+}
+
 func (e *MessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "JOB_STATE_CHANGED":
 		fallthrough
 	case "TASK_STATE_CHANGED":
-		*e = MessageTypeEnum(s)
+		*e = MessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageTypeEnum: %v", v)
 	}
 }
 

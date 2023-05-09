@@ -13,47 +13,45 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/iamcredent
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.IamcredentialsProjectsServiceAccountsGenerateAccessToken(ctx, operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GenerateAccessTokenRequest: &shared.GenerateAccessTokenRequest{
             Delegates: []string{
                 "distinctio",
                 "quibusdam",
                 "unde",
             },
-            Lifetime: "nulla",
+            Lifetime: sdk.String("nulla"),
             Scope: []string{
                 "illum",
                 "vel",
                 "error",
             },
         },
-        AccessToken: "deserunt",
-        Alt: "media",
-        Callback: "iure",
-        Fields: "magnam",
-        Key: "debitis",
-        Name: "ipsa",
-        OauthToken: "delectus",
-        PrettyPrint: false,
-        QuotaUser: "tempora",
-        UploadType: "suscipit",
-        UploadProtocol: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.IamcredentialsProjectsServiceAccountsGenerateAccessToken(ctx, req, operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity{
+        AccessToken: sdk.String("deserunt"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("iure"),
+        Fields: sdk.String("magnam"),
+        Key: sdk.String("debitis"),
+        Name: "Lucia Goldner",
+        OauthToken: sdk.String("minus"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("placeat"),
+        UploadType: sdk.String("voluptatum"),
+        UploadProtocol: sdk.String("iusto"),
+    }, operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -72,12 +70,12 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `IamcredentialsProjectsServiceAccountsGenerateAccessToken` - Generates an OAuth 2.0 access token for a service account.
-* `IamcredentialsProjectsServiceAccountsGenerateIDToken` - Generates an OpenID Connect ID token for a service account.
-* `IamcredentialsProjectsServiceAccountsSignBlob` - Signs a blob using a service account's system-managed private key.
-* `IamcredentialsProjectsServiceAccountsSignJwt` - Signs a JWT using a service account's system-managed private key.
+* [IamcredentialsProjectsServiceAccountsGenerateAccessToken](docs/projects/README.md#iamcredentialsprojectsserviceaccountsgenerateaccesstoken) - Generates an OAuth 2.0 access token for a service account.
+* [IamcredentialsProjectsServiceAccountsGenerateIDToken](docs/projects/README.md#iamcredentialsprojectsserviceaccountsgenerateidtoken) - Generates an OpenID Connect ID token for a service account.
+* [IamcredentialsProjectsServiceAccountsSignBlob](docs/projects/README.md#iamcredentialsprojectsserviceaccountssignblob) - Signs a blob using a service account's system-managed private key.
+* [IamcredentialsProjectsServiceAccountsSignJwt](docs/projects/README.md#iamcredentialsprojectsserviceaccountssignjwt) - Signs a JWT using a service account's system-managed private key.
 <!-- End SDK Available Operations -->
 
 ### Maturity

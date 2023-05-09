@@ -14,18 +14,22 @@ const (
 	TelemetryEnumOff TelemetryEnum = "Off"
 )
 
+func (e TelemetryEnum) ToPointer() *TelemetryEnum {
+	return &e
+}
+
 func (e *TelemetryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "On":
 		fallthrough
 	case "Off":
-		*e = TelemetryEnum(s)
+		*e = TelemetryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TelemetryEnum: %s", s)
+		return fmt.Errorf("invalid value for TelemetryEnum: %v", v)
 	}
 }

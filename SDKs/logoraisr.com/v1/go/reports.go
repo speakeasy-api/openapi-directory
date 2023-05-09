@@ -144,7 +144,10 @@ func (s *reports) ReportsList(ctx context.Context) (*operations.ReportsListRespo
 // This GET-Method returns the details of a specific report.
 func (s *reports) ReportsRead(ctx context.Context, request operations.ReportsReadRequest) (*operations.ReportsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{report_number}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reports/{report_number}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

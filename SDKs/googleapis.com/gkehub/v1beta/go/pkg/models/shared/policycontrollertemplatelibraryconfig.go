@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// PolicyControllerTemplateLibraryConfigInstallationEnum - Configures the manner in which the template library is installed on the cluster. TODO (b/271878194): Decrement this
+// PolicyControllerTemplateLibraryConfigInstallationEnum - Configures the manner in which the template library is installed on the cluster.
 type PolicyControllerTemplateLibraryConfigInstallationEnum string
 
 const (
@@ -16,28 +16,32 @@ const (
 	PolicyControllerTemplateLibraryConfigInstallationEnumAll                     PolicyControllerTemplateLibraryConfigInstallationEnum = "ALL"
 )
 
+func (e PolicyControllerTemplateLibraryConfigInstallationEnum) ToPointer() *PolicyControllerTemplateLibraryConfigInstallationEnum {
+	return &e
+}
+
 func (e *PolicyControllerTemplateLibraryConfigInstallationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTALLATION_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
 		fallthrough
 	case "ALL":
-		*e = PolicyControllerTemplateLibraryConfigInstallationEnum(s)
+		*e = PolicyControllerTemplateLibraryConfigInstallationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyControllerTemplateLibraryConfigInstallationEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyControllerTemplateLibraryConfigInstallationEnum: %v", v)
 	}
 }
 
 // PolicyControllerTemplateLibraryConfig - The config specifying which default library templates to install.
 type PolicyControllerTemplateLibraryConfig struct {
-	// Whether the standard template library should be installed or not. TODO (b/271878194): Remove this
+	// Whether the standard template library should be installed or not.
 	Included *bool `json:"included,omitempty"`
-	// Configures the manner in which the template library is installed on the cluster. TODO (b/271878194): Decrement this
+	// Configures the manner in which the template library is installed on the cluster.
 	Installation *PolicyControllerTemplateLibraryConfigInstallationEnum `json:"installation,omitempty"`
 }

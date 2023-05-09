@@ -16,17 +16,21 @@ const (
 	ListPoolOriginationIdentitiesXAmzTargetEnumPinpointSmsVoiceV2ListPoolOriginationIdentities ListPoolOriginationIdentitiesXAmzTargetEnum = "PinpointSMSVoiceV2.ListPoolOriginationIdentities"
 )
 
+func (e ListPoolOriginationIdentitiesXAmzTargetEnum) ToPointer() *ListPoolOriginationIdentitiesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListPoolOriginationIdentitiesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.ListPoolOriginationIdentities":
-		*e = ListPoolOriginationIdentitiesXAmzTargetEnum(s)
+		*e = ListPoolOriginationIdentitiesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPoolOriginationIdentitiesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPoolOriginationIdentitiesXAmzTargetEnum: %v", v)
 	}
 }
 

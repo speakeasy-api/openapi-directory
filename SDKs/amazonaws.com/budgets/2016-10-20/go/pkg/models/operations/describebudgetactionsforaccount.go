@@ -16,17 +16,21 @@ const (
 	DescribeBudgetActionsForAccountXAmzTargetEnumAwsBudgetServiceGatewayDescribeBudgetActionsForAccount DescribeBudgetActionsForAccountXAmzTargetEnum = "AWSBudgetServiceGateway.DescribeBudgetActionsForAccount"
 )
 
+func (e DescribeBudgetActionsForAccountXAmzTargetEnum) ToPointer() *DescribeBudgetActionsForAccountXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeBudgetActionsForAccountXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSBudgetServiceGateway.DescribeBudgetActionsForAccount":
-		*e = DescribeBudgetActionsForAccountXAmzTargetEnum(s)
+		*e = DescribeBudgetActionsForAccountXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeBudgetActionsForAccountXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeBudgetActionsForAccountXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -30,17 +30,21 @@ const (
 	GetInventory200ApplicationXMLQuantityUnitEnumEach GetInventory200ApplicationXMLQuantityUnitEnum = "EACH"
 )
 
+func (e GetInventory200ApplicationXMLQuantityUnitEnum) ToPointer() *GetInventory200ApplicationXMLQuantityUnitEnum {
+	return &e
+}
+
 func (e *GetInventory200ApplicationXMLQuantityUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EACH":
-		*e = GetInventory200ApplicationXMLQuantityUnitEnum(s)
+		*e = GetInventory200ApplicationXMLQuantityUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInventory200ApplicationXMLQuantityUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInventory200ApplicationXMLQuantityUnitEnum: %v", v)
 	}
 }
 
@@ -67,17 +71,21 @@ const (
 	GetInventory200ApplicationJSONQuantityUnitEnumEach GetInventory200ApplicationJSONQuantityUnitEnum = "EACH"
 )
 
+func (e GetInventory200ApplicationJSONQuantityUnitEnum) ToPointer() *GetInventory200ApplicationJSONQuantityUnitEnum {
+	return &e
+}
+
 func (e *GetInventory200ApplicationJSONQuantityUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EACH":
-		*e = GetInventory200ApplicationJSONQuantityUnitEnum(s)
+		*e = GetInventory200ApplicationJSONQuantityUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInventory200ApplicationJSONQuantityUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInventory200ApplicationJSONQuantityUnitEnum: %v", v)
 	}
 }
 

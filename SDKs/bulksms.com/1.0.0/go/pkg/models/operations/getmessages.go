@@ -23,17 +23,21 @@ const (
 	GetMessagesSortOrderEnumAscending GetMessagesSortOrderEnum = "ASCENDING"
 )
 
+func (e GetMessagesSortOrderEnum) ToPointer() *GetMessagesSortOrderEnum {
+	return &e
+}
+
 func (e *GetMessagesSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
-		*e = GetMessagesSortOrderEnum(s)
+		*e = GetMessagesSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMessagesSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMessagesSortOrderEnum: %v", v)
 	}
 }
 

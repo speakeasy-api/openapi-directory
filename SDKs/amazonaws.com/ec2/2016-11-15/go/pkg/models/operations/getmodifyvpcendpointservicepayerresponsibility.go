@@ -15,17 +15,21 @@ const (
 	GETModifyVpcEndpointServicePayerResponsibilityActionEnumModifyVpcEndpointServicePayerResponsibility GETModifyVpcEndpointServicePayerResponsibilityActionEnum = "ModifyVpcEndpointServicePayerResponsibility"
 )
 
+func (e GETModifyVpcEndpointServicePayerResponsibilityActionEnum) ToPointer() *GETModifyVpcEndpointServicePayerResponsibilityActionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcEndpointServicePayerResponsibilityActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVpcEndpointServicePayerResponsibility":
-		*e = GETModifyVpcEndpointServicePayerResponsibilityActionEnum(s)
+		*e = GETModifyVpcEndpointServicePayerResponsibilityActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcEndpointServicePayerResponsibilityActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcEndpointServicePayerResponsibilityActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnumServiceOwner GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum = "ServiceOwner"
 )
 
+func (e GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum) ToPointer() *GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum {
+	return &e
+}
+
 func (e *GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ServiceOwner":
-		*e = GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum(s)
+		*e = GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	GETModifyVpcEndpointServicePayerResponsibilityVersionEnumTwoThousandAndSixteen1115 GETModifyVpcEndpointServicePayerResponsibilityVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVpcEndpointServicePayerResponsibilityVersionEnum) ToPointer() *GETModifyVpcEndpointServicePayerResponsibilityVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcEndpointServicePayerResponsibilityVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVpcEndpointServicePayerResponsibilityVersionEnum(s)
+		*e = GETModifyVpcEndpointServicePayerResponsibilityVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcEndpointServicePayerResponsibilityVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcEndpointServicePayerResponsibilityVersionEnum: %v", v)
 	}
 }
 

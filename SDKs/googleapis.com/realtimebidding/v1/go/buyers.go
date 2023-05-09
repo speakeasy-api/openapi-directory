@@ -35,7 +35,10 @@ func newBuyers(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // RealtimebiddingBuyersCreativesCreate - Creates a creative.
 func (s *buyers) RealtimebiddingBuyersCreativesCreate(ctx context.Context, request operations.RealtimebiddingBuyersCreativesCreateRequest, security operations.RealtimebiddingBuyersCreativesCreateSecurity) (*operations.RealtimebiddingBuyersCreativesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/creatives", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/creatives", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeInput", "json")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *buyers) RealtimebiddingBuyersCreativesCreate(ctx context.Context, reque
 // RealtimebiddingBuyersCreativesList - Lists creatives as they are at the time of the initial request. This call may take multiple hours to complete. For large, paginated requests, this method returns a snapshot of creatives at the time of request for the first page. `lastStatusUpdate` and `creativeServingDecision` may be outdated for creatives on sequential pages. We recommend [Google Cloud Pub/Sub](//cloud.google.com/pubsub/docs/overview) to view the latest status.
 func (s *buyers) RealtimebiddingBuyersCreativesList(ctx context.Context, request operations.RealtimebiddingBuyersCreativesListRequest, security operations.RealtimebiddingBuyersCreativesListSecurity) (*operations.RealtimebiddingBuyersCreativesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/creatives", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/creatives", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +144,10 @@ func (s *buyers) RealtimebiddingBuyersCreativesList(ctx context.Context, request
 // RealtimebiddingBuyersCreativesPatch - Updates a creative.
 func (s *buyers) RealtimebiddingBuyersCreativesPatch(ctx context.Context, request operations.RealtimebiddingBuyersCreativesPatchRequest, security operations.RealtimebiddingBuyersCreativesPatchSecurity) (*operations.RealtimebiddingBuyersCreativesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeInput", "json")
 	if err != nil {
@@ -241,7 +250,10 @@ func (s *buyers) RealtimebiddingBuyersList(ctx context.Context, request operatio
 // RealtimebiddingBuyersUserListsClose - Change the status of a user list to CLOSED. This prevents new users from being added to the user list.
 func (s *buyers) RealtimebiddingBuyersUserListsClose(ctx context.Context, request operations.RealtimebiddingBuyersUserListsCloseRequest, security operations.RealtimebiddingBuyersUserListsCloseSecurity) (*operations.RealtimebiddingBuyersUserListsCloseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:close", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:close", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -296,7 +308,10 @@ func (s *buyers) RealtimebiddingBuyersUserListsClose(ctx context.Context, reques
 // RealtimebiddingBuyersUserListsCreate - Create a new user list.
 func (s *buyers) RealtimebiddingBuyersUserListsCreate(ctx context.Context, request operations.RealtimebiddingBuyersUserListsCreateRequest, security operations.RealtimebiddingBuyersUserListsCreateSecurity) (*operations.RealtimebiddingBuyersUserListsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/userLists", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/userLists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserListInput", "json")
 	if err != nil {
@@ -351,7 +366,10 @@ func (s *buyers) RealtimebiddingBuyersUserListsCreate(ctx context.Context, reque
 // RealtimebiddingBuyersUserListsGet - Gets a user list by its name.
 func (s *buyers) RealtimebiddingBuyersUserListsGet(ctx context.Context, request operations.RealtimebiddingBuyersUserListsGetRequest, security operations.RealtimebiddingBuyersUserListsGetSecurity) (*operations.RealtimebiddingBuyersUserListsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -399,7 +417,10 @@ func (s *buyers) RealtimebiddingBuyersUserListsGet(ctx context.Context, request 
 // RealtimebiddingBuyersUserListsGetRemarketingTag - Gets remarketing tag for a buyer. A remarketing tag is a piece of JavaScript code that can be placed on a web page. When a user visits a page containing a remarketing tag, Google adds the user to a user list.
 func (s *buyers) RealtimebiddingBuyersUserListsGetRemarketingTag(ctx context.Context, request operations.RealtimebiddingBuyersUserListsGetRemarketingTagRequest, security operations.RealtimebiddingBuyersUserListsGetRemarketingTagSecurity) (*operations.RealtimebiddingBuyersUserListsGetRemarketingTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getRemarketingTag", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getRemarketingTag", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -447,7 +468,10 @@ func (s *buyers) RealtimebiddingBuyersUserListsGetRemarketingTag(ctx context.Con
 // RealtimebiddingBuyersUserListsList - Lists the user lists visible to the current user.
 func (s *buyers) RealtimebiddingBuyersUserListsList(ctx context.Context, request operations.RealtimebiddingBuyersUserListsListRequest, security operations.RealtimebiddingBuyersUserListsListSecurity) (*operations.RealtimebiddingBuyersUserListsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/userLists", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/userLists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -495,7 +519,10 @@ func (s *buyers) RealtimebiddingBuyersUserListsList(ctx context.Context, request
 // RealtimebiddingBuyersUserListsOpen - Change the status of a user list to OPEN. This allows new users to be added to the user list.
 func (s *buyers) RealtimebiddingBuyersUserListsOpen(ctx context.Context, request operations.RealtimebiddingBuyersUserListsOpenRequest, security operations.RealtimebiddingBuyersUserListsOpenSecurity) (*operations.RealtimebiddingBuyersUserListsOpenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:open", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:open", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -550,7 +577,10 @@ func (s *buyers) RealtimebiddingBuyersUserListsOpen(ctx context.Context, request
 // RealtimebiddingBuyersUserListsUpdate - Update the given user list. Only user lists with URLRestrictions can be updated.
 func (s *buyers) RealtimebiddingBuyersUserListsUpdate(ctx context.Context, request operations.RealtimebiddingBuyersUserListsUpdateRequest, security operations.RealtimebiddingBuyersUserListsUpdateSecurity) (*operations.RealtimebiddingBuyersUserListsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserListInput", "json")
 	if err != nil {

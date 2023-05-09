@@ -18,12 +18,16 @@ const (
 	GoogleAdsSearchads360V0CommonMetricsHistoricalCreativeQualityScoreEnumAboveAverage GoogleAdsSearchads360V0CommonMetricsHistoricalCreativeQualityScoreEnum = "ABOVE_AVERAGE"
 )
 
+func (e GoogleAdsSearchads360V0CommonMetricsHistoricalCreativeQualityScoreEnum) ToPointer() *GoogleAdsSearchads360V0CommonMetricsHistoricalCreativeQualityScoreEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonMetricsHistoricalCreativeQualityScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -33,10 +37,10 @@ func (e *GoogleAdsSearchads360V0CommonMetricsHistoricalCreativeQualityScoreEnum)
 	case "AVERAGE":
 		fallthrough
 	case "ABOVE_AVERAGE":
-		*e = GoogleAdsSearchads360V0CommonMetricsHistoricalCreativeQualityScoreEnum(s)
+		*e = GoogleAdsSearchads360V0CommonMetricsHistoricalCreativeQualityScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonMetricsHistoricalCreativeQualityScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonMetricsHistoricalCreativeQualityScoreEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	GoogleAdsSearchads360V0CommonMetricsHistoricalLandingPageQualityScoreEnumAboveAverage GoogleAdsSearchads360V0CommonMetricsHistoricalLandingPageQualityScoreEnum = "ABOVE_AVERAGE"
 )
 
+func (e GoogleAdsSearchads360V0CommonMetricsHistoricalLandingPageQualityScoreEnum) ToPointer() *GoogleAdsSearchads360V0CommonMetricsHistoricalLandingPageQualityScoreEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonMetricsHistoricalLandingPageQualityScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -66,10 +74,10 @@ func (e *GoogleAdsSearchads360V0CommonMetricsHistoricalLandingPageQualityScoreEn
 	case "AVERAGE":
 		fallthrough
 	case "ABOVE_AVERAGE":
-		*e = GoogleAdsSearchads360V0CommonMetricsHistoricalLandingPageQualityScoreEnum(s)
+		*e = GoogleAdsSearchads360V0CommonMetricsHistoricalLandingPageQualityScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonMetricsHistoricalLandingPageQualityScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonMetricsHistoricalLandingPageQualityScoreEnum: %v", v)
 	}
 }
 
@@ -84,12 +92,16 @@ const (
 	GoogleAdsSearchads360V0CommonMetricsHistoricalSearchPredictedCtrEnumAboveAverage GoogleAdsSearchads360V0CommonMetricsHistoricalSearchPredictedCtrEnum = "ABOVE_AVERAGE"
 )
 
+func (e GoogleAdsSearchads360V0CommonMetricsHistoricalSearchPredictedCtrEnum) ToPointer() *GoogleAdsSearchads360V0CommonMetricsHistoricalSearchPredictedCtrEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonMetricsHistoricalSearchPredictedCtrEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -99,10 +111,10 @@ func (e *GoogleAdsSearchads360V0CommonMetricsHistoricalSearchPredictedCtrEnum) U
 	case "AVERAGE":
 		fallthrough
 	case "ABOVE_AVERAGE":
-		*e = GoogleAdsSearchads360V0CommonMetricsHistoricalSearchPredictedCtrEnum(s)
+		*e = GoogleAdsSearchads360V0CommonMetricsHistoricalSearchPredictedCtrEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonMetricsHistoricalSearchPredictedCtrEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonMetricsHistoricalSearchPredictedCtrEnum: %v", v)
 	}
 }
 
@@ -117,12 +129,16 @@ const (
 	GoogleAdsSearchads360V0CommonMetricsInteractionEventTypesEnumNone        GoogleAdsSearchads360V0CommonMetricsInteractionEventTypesEnum = "NONE"
 )
 
+func (e GoogleAdsSearchads360V0CommonMetricsInteractionEventTypesEnum) ToPointer() *GoogleAdsSearchads360V0CommonMetricsInteractionEventTypesEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonMetricsInteractionEventTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -134,10 +150,10 @@ func (e *GoogleAdsSearchads360V0CommonMetricsInteractionEventTypesEnum) Unmarsha
 	case "VIDEO_VIEW":
 		fallthrough
 	case "NONE":
-		*e = GoogleAdsSearchads360V0CommonMetricsInteractionEventTypesEnum(s)
+		*e = GoogleAdsSearchads360V0CommonMetricsInteractionEventTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonMetricsInteractionEventTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonMetricsInteractionEventTypesEnum: %v", v)
 	}
 }
 
@@ -275,4 +291,6 @@ type GoogleAdsSearchads360V0CommonMetrics struct {
 	ValuePerConversion *float64 `json:"valuePerConversion,omitempty"`
 	// Biddable conversions value by conversion date divided by biddable conversions by conversion date. Shows how much, on average, each of the biddable conversions is worth (by conversion date). When this column is selected with date, the values in date column means the conversion date.
 	ValuePerConversionsByConversionDate *float64 `json:"valuePerConversionsByConversionDate,omitempty"`
+	// Clicks that Search Ads 360 has successfully recorded and forwarded to an advertiser's landing page.
+	Visits *float64 `json:"visits,omitempty"`
 }

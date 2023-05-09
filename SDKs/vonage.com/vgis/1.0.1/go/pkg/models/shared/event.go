@@ -16,19 +16,23 @@ const (
 	EventDirectionEnumOutbound EventDirectionEnum = "OUTBOUND"
 )
 
+func (e EventDirectionEnum) ToPointer() *EventDirectionEnum {
+	return &e
+}
+
 func (e *EventDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INBOUND":
 		fallthrough
 	case "OUTBOUND":
-		*e = EventDirectionEnum(s)
+		*e = EventDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for EventDirectionEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	EventStateEnumMissed       EventStateEnum = "MISSED"
 )
 
+func (e EventStateEnum) ToPointer() *EventStateEnum {
+	return &e
+}
+
 func (e *EventStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIALIZING":
 		fallthrough
 	case "RINGING":
@@ -73,10 +81,10 @@ func (e *EventStateEnum) UnmarshalJSON(data []byte) error {
 	case "ANSWERED":
 		fallthrough
 	case "MISSED":
-		*e = EventStateEnum(s)
+		*e = EventStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventStateEnum: %s", s)
+		return fmt.Errorf("invalid value for EventStateEnum: %v", v)
 	}
 }
 
@@ -87,17 +95,21 @@ const (
 	EventTypeEnumCall EventTypeEnum = "CALL"
 )
 
+func (e EventTypeEnum) ToPointer() *EventTypeEnum {
+	return &e
+}
+
 func (e *EventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CALL":
-		*e = EventTypeEnum(s)
+		*e = EventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventTypeEnum: %v", v)
 	}
 }
 

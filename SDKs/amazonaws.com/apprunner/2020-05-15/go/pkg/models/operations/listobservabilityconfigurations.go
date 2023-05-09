@@ -16,17 +16,21 @@ const (
 	ListObservabilityConfigurationsXAmzTargetEnumAppRunnerListObservabilityConfigurations ListObservabilityConfigurationsXAmzTargetEnum = "AppRunner.ListObservabilityConfigurations"
 )
 
+func (e ListObservabilityConfigurationsXAmzTargetEnum) ToPointer() *ListObservabilityConfigurationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListObservabilityConfigurationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppRunner.ListObservabilityConfigurations":
-		*e = ListObservabilityConfigurationsXAmzTargetEnum(s)
+		*e = ListObservabilityConfigurationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListObservabilityConfigurationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListObservabilityConfigurationsXAmzTargetEnum: %v", v)
 	}
 }
 

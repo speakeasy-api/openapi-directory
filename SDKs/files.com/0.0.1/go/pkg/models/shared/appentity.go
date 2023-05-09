@@ -19,12 +19,16 @@ const (
 	AppEntityAppTypeEnumAppIntegration AppEntityAppTypeEnum = "app_integration"
 )
 
+func (e AppEntityAppTypeEnum) ToPointer() *AppEntityAppTypeEnum {
+	return &e
+}
+
 func (e *AppEntityAppTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sdk":
 		fallthrough
 	case "sso":
@@ -36,10 +40,10 @@ func (e *AppEntityAppTypeEnum) UnmarshalJSON(data []byte) error {
 	case "client_app":
 		fallthrough
 	case "app_integration":
-		*e = AppEntityAppTypeEnum(s)
+		*e = AppEntityAppTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppEntityAppTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppEntityAppTypeEnum: %v", v)
 	}
 }
 
@@ -67,12 +71,16 @@ const (
 	AppEntityFolderBehaviorTypeEnumOverrideUploadFilename AppEntityFolderBehaviorTypeEnum = "override_upload_filename"
 )
 
+func (e AppEntityFolderBehaviorTypeEnum) ToPointer() *AppEntityFolderBehaviorTypeEnum {
+	return &e
+}
+
 func (e *AppEntityFolderBehaviorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "webhook":
 		fallthrough
 	case "file_expiration":
@@ -108,10 +116,10 @@ func (e *AppEntityFolderBehaviorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "auto_decrypt":
 		fallthrough
 	case "override_upload_filename":
-		*e = AppEntityFolderBehaviorTypeEnum(s)
+		*e = AppEntityFolderBehaviorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppEntityFolderBehaviorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppEntityFolderBehaviorTypeEnum: %v", v)
 	}
 }
 
@@ -139,12 +147,16 @@ const (
 	AppEntityRemoteServerTypeEnumFilebase           AppEntityRemoteServerTypeEnum = "filebase"
 )
 
+func (e AppEntityRemoteServerTypeEnum) ToPointer() *AppEntityRemoteServerTypeEnum {
+	return &e
+}
+
 func (e *AppEntityRemoteServerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ftp":
 		fallthrough
 	case "sftp":
@@ -180,10 +192,10 @@ func (e *AppEntityRemoteServerTypeEnum) UnmarshalJSON(data []byte) error {
 	case "files_agent":
 		fallthrough
 	case "filebase":
-		*e = AppEntityRemoteServerTypeEnum(s)
+		*e = AppEntityRemoteServerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppEntityRemoteServerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppEntityRemoteServerTypeEnum: %v", v)
 	}
 }
 
@@ -207,12 +219,16 @@ const (
 	AppEntitySsoStrategyTypeEnumScim         AppEntitySsoStrategyTypeEnum = "scim"
 )
 
+func (e AppEntitySsoStrategyTypeEnum) ToPointer() *AppEntitySsoStrategyTypeEnum {
+	return &e
+}
+
 func (e *AppEntitySsoStrategyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "google":
 		fallthrough
 	case "auth0":
@@ -240,10 +256,10 @@ func (e *AppEntitySsoStrategyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ldap":
 		fallthrough
 	case "scim":
-		*e = AppEntitySsoStrategyTypeEnum(s)
+		*e = AppEntitySsoStrategyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppEntitySsoStrategyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppEntitySsoStrategyTypeEnum: %v", v)
 	}
 }
 

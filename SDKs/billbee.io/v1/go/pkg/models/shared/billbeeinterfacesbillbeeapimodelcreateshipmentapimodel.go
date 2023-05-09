@@ -8,77 +8,81 @@ import (
 	"time"
 )
 
-type BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum string
+type BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum int
 
 const (
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumZero      BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "0"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumOne       BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "1"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumTwo       BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "2"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumThree     BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "3"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumFour      BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "4"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumFive      BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "5"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumSix       BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "6"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumSeven     BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "7"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumEight     BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "8"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumNine      BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "9"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumTen       BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "10"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumEleven    BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "11"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumTwelve    BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "12"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumThirteen  BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "13"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumFourteen  BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "14"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumFifteen   BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "15"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumSixteen   BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "16"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumSeventeen BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "17"
-	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumEighteen  BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = "18"
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumZero      BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 0
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumOne       BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 1
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumTwo       BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 2
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumThree     BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 3
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumFour      BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 4
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumFive      BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 5
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumSix       BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 6
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumSeven     BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 7
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumEight     BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 8
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumNine      BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 9
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumTen       BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 10
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumEleven    BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 11
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumTwelve    BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 12
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumThirteen  BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 13
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumFourteen  BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 14
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumFifteen   BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 15
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumSixteen   BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 16
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumSeventeen BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 17
+	BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnumEighteen  BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum = 18
 )
 
+func (e BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum) ToPointer() *BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum {
+	return &e
+}
+
 func (e *BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "7":
+	case 7:
 		fallthrough
-	case "8":
+	case 8:
 		fallthrough
-	case "9":
+	case 9:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "11":
+	case 11:
 		fallthrough
-	case "12":
+	case 12:
 		fallthrough
-	case "13":
+	case 13:
 		fallthrough
-	case "14":
+	case 14:
 		fallthrough
-	case "15":
+	case 15:
 		fallthrough
-	case "16":
+	case 16:
 		fallthrough
-	case "17":
+	case 17:
 		fallthrough
-	case "18":
-		*e = BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum(s)
+	case 18:
+		*e = BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum: %s", s)
+		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum: %v", v)
 	}
 }
 

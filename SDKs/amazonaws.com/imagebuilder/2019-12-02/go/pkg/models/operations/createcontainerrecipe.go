@@ -16,17 +16,21 @@ const (
 	CreateContainerRecipeRequestBodyContainerTypeEnumDocker CreateContainerRecipeRequestBodyContainerTypeEnum = "DOCKER"
 )
 
+func (e CreateContainerRecipeRequestBodyContainerTypeEnum) ToPointer() *CreateContainerRecipeRequestBodyContainerTypeEnum {
+	return &e
+}
+
 func (e *CreateContainerRecipeRequestBodyContainerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOCKER":
-		*e = CreateContainerRecipeRequestBodyContainerTypeEnum(s)
+		*e = CreateContainerRecipeRequestBodyContainerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateContainerRecipeRequestBodyContainerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateContainerRecipeRequestBodyContainerTypeEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	CreateContainerRecipeRequestBodyPlatformOverrideEnumLinux   CreateContainerRecipeRequestBodyPlatformOverrideEnum = "Linux"
 )
 
+func (e CreateContainerRecipeRequestBodyPlatformOverrideEnum) ToPointer() *CreateContainerRecipeRequestBodyPlatformOverrideEnum {
+	return &e
+}
+
 func (e *CreateContainerRecipeRequestBodyPlatformOverrideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Windows":
 		fallthrough
 	case "Linux":
-		*e = CreateContainerRecipeRequestBodyPlatformOverrideEnum(s)
+		*e = CreateContainerRecipeRequestBodyPlatformOverrideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateContainerRecipeRequestBodyPlatformOverrideEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateContainerRecipeRequestBodyPlatformOverrideEnum: %v", v)
 	}
 }
 

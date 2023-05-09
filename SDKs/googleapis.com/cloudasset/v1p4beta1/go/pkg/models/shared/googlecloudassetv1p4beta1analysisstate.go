@@ -30,12 +30,16 @@ const (
 	GoogleCloudAssetV1p4beta1AnalysisStateCodeEnumDataLoss           GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum = "DATA_LOSS"
 )
 
+func (e GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum) ToPointer() *GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "CANCELLED":
@@ -69,10 +73,10 @@ func (e *GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum) UnmarshalJSON(data []by
 	case "UNAVAILABLE":
 		fallthrough
 	case "DATA_LOSS":
-		*e = GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum(s)
+		*e = GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssetV1p4beta1AnalysisStateCodeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetCampagneRapportCampagneEnumOne GetCampagneRapportCampagneEnum = "1"
 )
 
+func (e GetCampagneRapportCampagneEnum) ToPointer() *GetCampagneRapportCampagneEnum {
+	return &e
+}
+
 func (e *GetCampagneRapportCampagneEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
-		*e = GetCampagneRapportCampagneEnum(s)
+		*e = GetCampagneRapportCampagneEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCampagneRapportCampagneEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCampagneRapportCampagneEnum: %v", v)
 	}
 }
 

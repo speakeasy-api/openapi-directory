@@ -22,12 +22,16 @@ const (
 	ReportInstanceStatusRequestReasonCodesEnumOther                    ReportInstanceStatusRequestReasonCodesEnum = "other"
 )
 
+func (e ReportInstanceStatusRequestReasonCodesEnum) ToPointer() *ReportInstanceStatusRequestReasonCodesEnum {
+	return &e
+}
+
 func (e *ReportInstanceStatusRequestReasonCodesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instance-stuck-in-state":
 		fallthrough
 	case "unresponsive":
@@ -45,10 +49,10 @@ func (e *ReportInstanceStatusRequestReasonCodesEnum) UnmarshalJSON(data []byte) 
 	case "performance-other":
 		fallthrough
 	case "other":
-		*e = ReportInstanceStatusRequestReasonCodesEnum(s)
+		*e = ReportInstanceStatusRequestReasonCodesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportInstanceStatusRequestReasonCodesEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportInstanceStatusRequestReasonCodesEnum: %v", v)
 	}
 }
 
@@ -60,19 +64,23 @@ const (
 	ReportInstanceStatusRequestStatusEnumImpaired ReportInstanceStatusRequestStatusEnum = "impaired"
 )
 
+func (e ReportInstanceStatusRequestStatusEnum) ToPointer() *ReportInstanceStatusRequestStatusEnum {
+	return &e
+}
+
 func (e *ReportInstanceStatusRequestStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ok":
 		fallthrough
 	case "impaired":
-		*e = ReportInstanceStatusRequestStatusEnum(s)
+		*e = ReportInstanceStatusRequestStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportInstanceStatusRequestStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportInstanceStatusRequestStatusEnum: %v", v)
 	}
 }
 

@@ -26,4 +26,6 @@ type RetrieveAllEUAsForAnEndUserV2Response struct {
 	RetrieveAllEUAsForAnEndUserV2403ApplicationJSONObject map[string]interface{}
 	// Not found error
 	RetrieveAllEUAsForAnEndUserV2404ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	RetrieveAllEUAsForAnEndUserV2429ApplicationJSONObject map[string]interface{}
 }

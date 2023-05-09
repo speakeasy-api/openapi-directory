@@ -36,12 +36,16 @@ const (
 	ReturnASandboxAchTransferParametersReasonEnumOther                                                     ReturnASandboxAchTransferParametersReasonEnum = "other"
 )
 
+func (e ReturnASandboxAchTransferParametersReasonEnum) ToPointer() *ReturnASandboxAchTransferParametersReasonEnum {
+	return &e
+}
+
 func (e *ReturnASandboxAchTransferParametersReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_fund":
 		fallthrough
 	case "no_account":
@@ -87,10 +91,10 @@ func (e *ReturnASandboxAchTransferParametersReasonEnum) UnmarshalJSON(data []byt
 	case "incorrectly_coded_outbound_international_payment":
 		fallthrough
 	case "other":
-		*e = ReturnASandboxAchTransferParametersReasonEnum(s)
+		*e = ReturnASandboxAchTransferParametersReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReturnASandboxAchTransferParametersReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for ReturnASandboxAchTransferParametersReasonEnum: %v", v)
 	}
 }
 

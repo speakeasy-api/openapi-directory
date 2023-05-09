@@ -15,18 +15,22 @@ const (
 	WorkloadEnvironmentEnumPreproduction WorkloadEnvironmentEnum = "PREPRODUCTION"
 )
 
+func (e WorkloadEnvironmentEnum) ToPointer() *WorkloadEnvironmentEnum {
+	return &e
+}
+
 func (e *WorkloadEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCTION":
 		fallthrough
 	case "PREPRODUCTION":
-		*e = WorkloadEnvironmentEnum(s)
+		*e = WorkloadEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkloadEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkloadEnvironmentEnum: %v", v)
 	}
 }

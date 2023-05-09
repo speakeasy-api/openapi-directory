@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteRiddleRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.PrivateRiddles.DeleteRiddle(ctx, req, operations.DeleteRiddleSecurity{
+    res, err := s.PrivateRiddles.DeleteRiddle(ctx, operations.DeleteRiddleRequest{
+        ID: "corrupti",
+    }, operations.DeleteRiddleSecurity{
         XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
     })
     if err != nil {

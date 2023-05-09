@@ -16,12 +16,16 @@ const (
 	TimeUnitEnumNanoseconds  TimeUnitEnum = "NANOSECONDS"
 )
 
+func (e TimeUnitEnum) ToPointer() *TimeUnitEnum {
+	return &e
+}
+
 func (e *TimeUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MILLISECONDS":
 		fallthrough
 	case "SECONDS":
@@ -29,9 +33,9 @@ func (e *TimeUnitEnum) UnmarshalJSON(data []byte) error {
 	case "MICROSECONDS":
 		fallthrough
 	case "NANOSECONDS":
-		*e = TimeUnitEnum(s)
+		*e = TimeUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimeUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for TimeUnitEnum: %v", v)
 	}
 }

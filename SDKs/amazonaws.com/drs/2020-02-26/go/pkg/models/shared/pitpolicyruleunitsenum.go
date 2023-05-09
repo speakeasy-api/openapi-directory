@@ -15,20 +15,24 @@ const (
 	PITPolicyRuleUnitsEnumDay    PITPolicyRuleUnitsEnum = "DAY"
 )
 
+func (e PITPolicyRuleUnitsEnum) ToPointer() *PITPolicyRuleUnitsEnum {
+	return &e
+}
+
 func (e *PITPolicyRuleUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MINUTE":
 		fallthrough
 	case "HOUR":
 		fallthrough
 	case "DAY":
-		*e = PITPolicyRuleUnitsEnum(s)
+		*e = PITPolicyRuleUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PITPolicyRuleUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for PITPolicyRuleUnitsEnum: %v", v)
 	}
 }

@@ -16,21 +16,25 @@ const (
 	IosAppStateEnumDeleted          IosAppStateEnum = "DELETED"
 )
 
+func (e IosAppStateEnum) ToPointer() *IosAppStateEnum {
+	return &e
+}
+
 func (e *IosAppStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "DELETED":
-		*e = IosAppStateEnum(s)
+		*e = IosAppStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IosAppStateEnum: %s", s)
+		return fmt.Errorf("invalid value for IosAppStateEnum: %v", v)
 	}
 }
 

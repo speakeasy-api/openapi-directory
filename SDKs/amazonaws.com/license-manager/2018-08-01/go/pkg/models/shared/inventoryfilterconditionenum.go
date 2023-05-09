@@ -16,12 +16,16 @@ const (
 	InventoryFilterConditionEnumContains   InventoryFilterConditionEnum = "CONTAINS"
 )
 
+func (e InventoryFilterConditionEnum) ToPointer() *InventoryFilterConditionEnum {
+	return &e
+}
+
 func (e *InventoryFilterConditionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUALS":
 		fallthrough
 	case "NOT_EQUALS":
@@ -29,9 +33,9 @@ func (e *InventoryFilterConditionEnum) UnmarshalJSON(data []byte) error {
 	case "BEGINS_WITH":
 		fallthrough
 	case "CONTAINS":
-		*e = InventoryFilterConditionEnum(s)
+		*e = InventoryFilterConditionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventoryFilterConditionEnum: %s", s)
+		return fmt.Errorf("invalid value for InventoryFilterConditionEnum: %v", v)
 	}
 }

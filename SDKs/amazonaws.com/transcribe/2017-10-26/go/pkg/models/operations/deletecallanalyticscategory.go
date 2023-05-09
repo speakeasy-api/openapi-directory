@@ -16,17 +16,21 @@ const (
 	DeleteCallAnalyticsCategoryXAmzTargetEnumTranscribeDeleteCallAnalyticsCategory DeleteCallAnalyticsCategoryXAmzTargetEnum = "Transcribe.DeleteCallAnalyticsCategory"
 )
 
+func (e DeleteCallAnalyticsCategoryXAmzTargetEnum) ToPointer() *DeleteCallAnalyticsCategoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteCallAnalyticsCategoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Transcribe.DeleteCallAnalyticsCategory":
-		*e = DeleteCallAnalyticsCategoryXAmzTargetEnum(s)
+		*e = DeleteCallAnalyticsCategoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteCallAnalyticsCategoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteCallAnalyticsCategoryXAmzTargetEnum: %v", v)
 	}
 }
 

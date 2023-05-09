@@ -58,12 +58,16 @@ const (
 	GetWorkspaceSlugActivitiesActivityTypeEnumYoutubeComment               GetWorkspaceSlugActivitiesActivityTypeEnum = "youtube:comment"
 )
 
+func (e GetWorkspaceSlugActivitiesActivityTypeEnum) ToPointer() *GetWorkspaceSlugActivitiesActivityTypeEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugActivitiesActivityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "discourse:topic:created":
 		fallthrough
 	case "discourse:post:liked":
@@ -143,10 +147,10 @@ func (e *GetWorkspaceSlugActivitiesActivityTypeEnum) UnmarshalJSON(data []byte) 
 	case "twitter:followed":
 		fallthrough
 	case "youtube:comment":
-		*e = GetWorkspaceSlugActivitiesActivityTypeEnum(s)
+		*e = GetWorkspaceSlugActivitiesActivityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugActivitiesActivityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugActivitiesActivityTypeEnum: %v", v)
 	}
 }
 
@@ -158,19 +162,23 @@ const (
 	GetWorkspaceSlugActivitiesAffiliationEnumTeammate GetWorkspaceSlugActivitiesAffiliationEnum = "teammate"
 )
 
+func (e GetWorkspaceSlugActivitiesAffiliationEnum) ToPointer() *GetWorkspaceSlugActivitiesAffiliationEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugActivitiesAffiliationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "member":
 		fallthrough
 	case "teammate":
-		*e = GetWorkspaceSlugActivitiesAffiliationEnum(s)
+		*e = GetWorkspaceSlugActivitiesAffiliationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugActivitiesAffiliationEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugActivitiesAffiliationEnum: %v", v)
 	}
 }
 
@@ -182,19 +190,23 @@ const (
 	GetWorkspaceSlugActivitiesDirectionEnumDesc GetWorkspaceSlugActivitiesDirectionEnum = "DESC"
 )
 
+func (e GetWorkspaceSlugActivitiesDirectionEnum) ToPointer() *GetWorkspaceSlugActivitiesDirectionEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugActivitiesDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASC":
 		fallthrough
 	case "DESC":
-		*e = GetWorkspaceSlugActivitiesDirectionEnum(s)
+		*e = GetWorkspaceSlugActivitiesDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugActivitiesDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugActivitiesDirectionEnum: %v", v)
 	}
 }
 
@@ -212,12 +224,16 @@ const (
 	GetWorkspaceSlugActivitiesIdentityEnumDiscord   GetWorkspaceSlugActivitiesIdentityEnum = "discord"
 )
 
+func (e GetWorkspaceSlugActivitiesIdentityEnum) ToPointer() *GetWorkspaceSlugActivitiesIdentityEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugActivitiesIdentityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "github":
 		fallthrough
 	case "twitter":
@@ -233,10 +249,10 @@ func (e *GetWorkspaceSlugActivitiesIdentityEnum) UnmarshalJSON(data []byte) erro
 	case "slack":
 		fallthrough
 	case "discord":
-		*e = GetWorkspaceSlugActivitiesIdentityEnum(s)
+		*e = GetWorkspaceSlugActivitiesIdentityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugActivitiesIdentityEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugActivitiesIdentityEnum: %v", v)
 	}
 }
 
@@ -249,21 +265,25 @@ const (
 	GetWorkspaceSlugActivitiesItemsEnumOneHundred GetWorkspaceSlugActivitiesItemsEnum = "100"
 )
 
+func (e GetWorkspaceSlugActivitiesItemsEnum) ToPointer() *GetWorkspaceSlugActivitiesItemsEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugActivitiesItemsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "10":
 		fallthrough
 	case "50":
 		fallthrough
 	case "100":
-		*e = GetWorkspaceSlugActivitiesItemsEnum(s)
+		*e = GetWorkspaceSlugActivitiesItemsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugActivitiesItemsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugActivitiesItemsEnum: %v", v)
 	}
 }
 
@@ -275,19 +295,23 @@ const (
 	GetWorkspaceSlugActivitiesSortEnumMember     GetWorkspaceSlugActivitiesSortEnum = "member"
 )
 
+func (e GetWorkspaceSlugActivitiesSortEnum) ToPointer() *GetWorkspaceSlugActivitiesSortEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugActivitiesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "occurred_at":
 		fallthrough
 	case "member":
-		*e = GetWorkspaceSlugActivitiesSortEnum(s)
+		*e = GetWorkspaceSlugActivitiesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugActivitiesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugActivitiesSortEnum: %v", v)
 	}
 }
 
@@ -321,6 +345,8 @@ type GetWorkspaceSlugActivitiesRequest struct {
 	// Comma separated list of job titles. The union (OR) of job titles is applied.
 	Title *string `queryParam:"style=form,explode=true,name=title[]"`
 	// Deprecated in favor of the activity_type parameter.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Type          *string `queryParam:"style=form,explode=true,name=type"`
 	WorkspaceSlug string  `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }

@@ -34,7 +34,10 @@ func newAPISpecification(defaultClient, securityClient HTTPClient, serverURL, la
 // DeleteAPISpecification - Delete an API specification in ReadMe
 func (s *apiSpecification) DeleteAPISpecification(ctx context.Context, request operations.DeleteAPISpecificationRequest, security operations.DeleteAPISpecificationSecurity) (*operations.DeleteAPISpecificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api-specification/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api-specification/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -113,7 +116,10 @@ func (s *apiSpecification) GetAPISpecification(ctx context.Context, request oper
 // UpdateAPISpecification - Update an API specification in ReadMe
 func (s *apiSpecification) UpdateAPISpecification(ctx context.Context, request operations.UpdateAPISpecificationRequest, security operations.UpdateAPISpecificationSecurity) (*operations.UpdateAPISpecificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api-specification/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api-specification/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

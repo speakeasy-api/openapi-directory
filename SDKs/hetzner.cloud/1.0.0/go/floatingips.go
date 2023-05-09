@@ -44,7 +44,10 @@ func newFloatingIPs(defaultClient, securityClient HTTPClient, serverURL, languag
 // Deletes a Floating IP. If it is currently assigned to a Server it will automatically get unassigned.
 func (s *floatingIPs) DeleteFloatingIpsID(ctx context.Context, request operations.DeleteFloatingIpsIDRequest) (*operations.DeleteFloatingIpsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +132,10 @@ func (s *floatingIPs) GetFloatingIps(ctx context.Context, request operations.Get
 // Returns a specific Floating IP object.
 func (s *floatingIPs) GetFloatingIpsID(ctx context.Context, request operations.GetFloatingIpsIDRequest) (*operations.GetFloatingIpsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -227,7 +233,10 @@ func (s *floatingIPs) PostFloatingIps(ctx context.Context, request operations.Po
 // Also note that when updating labels, the Floating IP’s current set of labels will be replaced with the labels provided in the request body. So, for example, if you want to add a new label, you have to provide all existing labels plus the new label in the request body.
 func (s *floatingIPs) PutFloatingIpsID(ctx context.Context, request operations.PutFloatingIpsIDRequest) (*operations.PutFloatingIpsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/floating_ips/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

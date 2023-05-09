@@ -18,21 +18,25 @@ const (
 	ProjectsListCardsArchivedStateEnumNotArchived ProjectsListCardsArchivedStateEnum = "not_archived"
 )
 
+func (e ProjectsListCardsArchivedStateEnum) ToPointer() *ProjectsListCardsArchivedStateEnum {
+	return &e
+}
+
 func (e *ProjectsListCardsArchivedStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "archived":
 		fallthrough
 	case "not_archived":
-		*e = ProjectsListCardsArchivedStateEnum(s)
+		*e = ProjectsListCardsArchivedStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectsListCardsArchivedStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectsListCardsArchivedStateEnum: %v", v)
 	}
 }
 

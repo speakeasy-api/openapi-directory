@@ -17,12 +17,16 @@ const (
 	GoogleCloudMlV1StudyConfigAlgorithmEnumRandomSearch          GoogleCloudMlV1StudyConfigAlgorithmEnum = "RANDOM_SEARCH"
 )
 
+func (e GoogleCloudMlV1StudyConfigAlgorithmEnum) ToPointer() *GoogleCloudMlV1StudyConfigAlgorithmEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1StudyConfigAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "GAUSSIAN_PROCESS_BANDIT":
@@ -30,10 +34,10 @@ func (e *GoogleCloudMlV1StudyConfigAlgorithmEnum) UnmarshalJSON(data []byte) err
 	case "GRID_SEARCH":
 		fallthrough
 	case "RANDOM_SEARCH":
-		*e = GoogleCloudMlV1StudyConfigAlgorithmEnum(s)
+		*e = GoogleCloudMlV1StudyConfigAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1StudyConfigAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1StudyConfigAlgorithmEnum: %v", v)
 	}
 }
 

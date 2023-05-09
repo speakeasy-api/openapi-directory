@@ -18,12 +18,16 @@ const (
 	CatalogCollectionItemAssetTypeEnumEditorialVideo CatalogCollectionItemAssetTypeEnum = "editorial-video"
 )
 
+func (e CatalogCollectionItemAssetTypeEnum) ToPointer() *CatalogCollectionItemAssetTypeEnum {
+	return &e
+}
+
 func (e *CatalogCollectionItemAssetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "image":
 		fallthrough
 	case "video":
@@ -33,10 +37,10 @@ func (e *CatalogCollectionItemAssetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "editorial-image":
 		fallthrough
 	case "editorial-video":
-		*e = CatalogCollectionItemAssetTypeEnum(s)
+		*e = CatalogCollectionItemAssetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CatalogCollectionItemAssetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CatalogCollectionItemAssetTypeEnum: %v", v)
 	}
 }
 

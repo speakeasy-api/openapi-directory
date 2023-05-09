@@ -31,12 +31,16 @@ const (
 	AgeRangeAssignedTargetingOptionDetailsAgeRangeEnumAgeRange6064        AgeRangeAssignedTargetingOptionDetailsAgeRangeEnum = "AGE_RANGE_60_64"
 )
 
+func (e AgeRangeAssignedTargetingOptionDetailsAgeRangeEnum) ToPointer() *AgeRangeAssignedTargetingOptionDetailsAgeRangeEnum {
+	return &e
+}
+
 func (e *AgeRangeAssignedTargetingOptionDetailsAgeRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGE_RANGE_UNSPECIFIED":
 		fallthrough
 	case "AGE_RANGE_18_24":
@@ -72,10 +76,10 @@ func (e *AgeRangeAssignedTargetingOptionDetailsAgeRangeEnum) UnmarshalJSON(data 
 	case "AGE_RANGE_55_59":
 		fallthrough
 	case "AGE_RANGE_60_64":
-		*e = AgeRangeAssignedTargetingOptionDetailsAgeRangeEnum(s)
+		*e = AgeRangeAssignedTargetingOptionDetailsAgeRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AgeRangeAssignedTargetingOptionDetailsAgeRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for AgeRangeAssignedTargetingOptionDetailsAgeRangeEnum: %v", v)
 	}
 }
 

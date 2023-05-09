@@ -23,21 +23,25 @@ const (
 	ResellerSubscriptionsDeleteDeletionTypeEnumTransferToDirect      ResellerSubscriptionsDeleteDeletionTypeEnum = "transfer_to_direct"
 )
 
+func (e ResellerSubscriptionsDeleteDeletionTypeEnum) ToPointer() *ResellerSubscriptionsDeleteDeletionTypeEnum {
+	return &e
+}
+
 func (e *ResellerSubscriptionsDeleteDeletionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deletion_type_undefined":
 		fallthrough
 	case "cancel":
 		fallthrough
 	case "transfer_to_direct":
-		*e = ResellerSubscriptionsDeleteDeletionTypeEnum(s)
+		*e = ResellerSubscriptionsDeleteDeletionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResellerSubscriptionsDeleteDeletionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResellerSubscriptionsDeleteDeletionTypeEnum: %v", v)
 	}
 }
 

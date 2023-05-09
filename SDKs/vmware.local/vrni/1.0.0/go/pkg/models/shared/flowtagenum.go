@@ -57,12 +57,16 @@ const (
 	FlowTagEnumTagDiffVpc              FlowTagEnum = "TAG_DIFF_VPC"
 )
 
+func (e FlowTagEnum) ToPointer() *FlowTagEnum {
+	return &e
+}
+
 func (e *FlowTagEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TAG_TRAFFIC_TYPE_UNKNOWN":
 		fallthrough
 	case "TAG_INTERNET_TRAFFIC":
@@ -152,9 +156,9 @@ func (e *FlowTagEnum) UnmarshalJSON(data []byte) error {
 	case "TAG_WITHIN_VPC":
 		fallthrough
 	case "TAG_DIFF_VPC":
-		*e = FlowTagEnum(s)
+		*e = FlowTagEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlowTagEnum: %s", s)
+		return fmt.Errorf("invalid value for FlowTagEnum: %v", v)
 	}
 }

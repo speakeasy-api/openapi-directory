@@ -16,21 +16,25 @@ const (
 	VenueTypeEnumAttraction VenueTypeEnum = "attraction"
 )
 
+func (e VenueTypeEnum) ToPointer() *VenueTypeEnum {
+	return &e
+}
+
 func (e *VenueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "event":
 		fallthrough
 	case "venue":
 		fallthrough
 	case "attraction":
-		*e = VenueTypeEnum(s)
+		*e = VenueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VenueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VenueTypeEnum: %v", v)
 	}
 }
 

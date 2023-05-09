@@ -22,12 +22,16 @@ const (
 	UpdateScheduledAuditRequestBodyDayOfWeekEnumSat UpdateScheduledAuditRequestBodyDayOfWeekEnum = "SAT"
 )
 
+func (e UpdateScheduledAuditRequestBodyDayOfWeekEnum) ToPointer() *UpdateScheduledAuditRequestBodyDayOfWeekEnum {
+	return &e
+}
+
 func (e *UpdateScheduledAuditRequestBodyDayOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUN":
 		fallthrough
 	case "MON":
@@ -41,10 +45,10 @@ func (e *UpdateScheduledAuditRequestBodyDayOfWeekEnum) UnmarshalJSON(data []byte
 	case "FRI":
 		fallthrough
 	case "SAT":
-		*e = UpdateScheduledAuditRequestBodyDayOfWeekEnum(s)
+		*e = UpdateScheduledAuditRequestBodyDayOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateScheduledAuditRequestBodyDayOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateScheduledAuditRequestBodyDayOfWeekEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	UpdateScheduledAuditRequestBodyFrequencyEnumMonthly  UpdateScheduledAuditRequestBodyFrequencyEnum = "MONTHLY"
 )
 
+func (e UpdateScheduledAuditRequestBodyFrequencyEnum) ToPointer() *UpdateScheduledAuditRequestBodyFrequencyEnum {
+	return &e
+}
+
 func (e *UpdateScheduledAuditRequestBodyFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAILY":
 		fallthrough
 	case "WEEKLY":
@@ -71,10 +79,10 @@ func (e *UpdateScheduledAuditRequestBodyFrequencyEnum) UnmarshalJSON(data []byte
 	case "BIWEEKLY":
 		fallthrough
 	case "MONTHLY":
-		*e = UpdateScheduledAuditRequestBodyFrequencyEnum(s)
+		*e = UpdateScheduledAuditRequestBodyFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateScheduledAuditRequestBodyFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateScheduledAuditRequestBodyFrequencyEnum: %v", v)
 	}
 }
 

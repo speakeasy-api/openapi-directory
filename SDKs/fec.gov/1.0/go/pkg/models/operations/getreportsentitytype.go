@@ -22,12 +22,16 @@ const (
 	GetReportsEntityTypeAmendmentIndicatorEnumS       GetReportsEntityTypeAmendmentIndicatorEnum = "S"
 )
 
+func (e GetReportsEntityTypeAmendmentIndicatorEnum) ToPointer() *GetReportsEntityTypeAmendmentIndicatorEnum {
+	return &e
+}
+
 func (e *GetReportsEntityTypeAmendmentIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "N":
@@ -41,10 +45,10 @@ func (e *GetReportsEntityTypeAmendmentIndicatorEnum) UnmarshalJSON(data []byte) 
 	case "M":
 		fallthrough
 	case "S":
-		*e = GetReportsEntityTypeAmendmentIndicatorEnum(s)
+		*e = GetReportsEntityTypeAmendmentIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetReportsEntityTypeAmendmentIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetReportsEntityTypeAmendmentIndicatorEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	GetReportsEntityTypeEntityTypeEnumIeOnly       GetReportsEntityTypeEntityTypeEnum = "ie-only"
 )
 
+func (e GetReportsEntityTypeEntityTypeEnum) ToPointer() *GetReportsEntityTypeEntityTypeEnum {
+	return &e
+}
+
 func (e *GetReportsEntityTypeEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "presidential":
 		fallthrough
 	case "pac-party":
@@ -71,10 +79,10 @@ func (e *GetReportsEntityTypeEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "house-senate":
 		fallthrough
 	case "ie-only":
-		*e = GetReportsEntityTypeEntityTypeEnum(s)
+		*e = GetReportsEntityTypeEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetReportsEntityTypeEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetReportsEntityTypeEntityTypeEnum: %v", v)
 	}
 }
 
@@ -86,19 +94,23 @@ const (
 	GetReportsEntityTypeFilerTypeEnumPaper GetReportsEntityTypeFilerTypeEnum = "paper"
 )
 
+func (e GetReportsEntityTypeFilerTypeEnum) ToPointer() *GetReportsEntityTypeFilerTypeEnum {
+	return &e
+}
+
 func (e *GetReportsEntityTypeFilerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "e-file":
 		fallthrough
 	case "paper":
-		*e = GetReportsEntityTypeFilerTypeEnum(s)
+		*e = GetReportsEntityTypeFilerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetReportsEntityTypeFilerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetReportsEntityTypeFilerTypeEnum: %v", v)
 	}
 }
 
@@ -123,6 +135,12 @@ type GetReportsEntityTypeRequest struct {
 	BeginningImageNumber []string `queryParam:"style=form,explode=true,name=beginning_image_number"`
 	// A unique identifier assigned to each candidate registered with the FEC.
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
+	// First character indicates office - [P]residential, [H]ouse, [S]enate].
+	// Second character is the last digit of the two-year period the ID was created.
+	// Third and fourth is the candidate state. Presidential IDs don't have state.
+	// Fifth and sixth is the district when the candidate first ran. This does not change if the
+	// candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+	// The rest is sequence.
 	//
 	CandidateID *string `queryParam:"style=form,explode=true,name=candidate_id"`
 	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.

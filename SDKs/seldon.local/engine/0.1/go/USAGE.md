@@ -2,20 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PredictJSONRequest{
+    ctx := context.Background()
+    res, err := s.ExternalAmbassadorAPI.PredictJSON(ctx, operations.PredictJSONRequest{
         SeldonMessage: shared.SeldonMessage{
-            BinData: "corrupti",
+            BinData: sdk.String("corrupti"),
             Data: &shared.DefaultData{
                 Names: []string{
                     "distinctio",
@@ -56,7 +57,7 @@ func main() {
                         9255.97,
                         8360.79,
                     },
-                    Dtype: "DT_INT32",
+                    Dtype: shared.TensorflowDataTypeEnumDtInt32.ToPointer(),
                     FloatVal: []float32{
                         871.29,
                         6481.72,
@@ -78,143 +79,120 @@ func main() {
                     },
                     ResourceHandleVal: []shared.TensorflowResourceHandleProto{
                         shared.TensorflowResourceHandleProto{
-                            Container: "totam",
-                            Device: "porro",
-                            HashCode: "dolorum",
-                            MaybeTypeName: "dicta",
-                            Name: "nam",
+                            Container: sdk.String("totam"),
+                            Device: sdk.String("porro"),
+                            HashCode: sdk.String("dolorum"),
+                            MaybeTypeName: sdk.String("dicta"),
+                            Name: sdk.String("Luke McCullough"),
                         },
                         shared.TensorflowResourceHandleProto{
-                            Container: "officia",
-                            Device: "occaecati",
-                            HashCode: "fugit",
-                            MaybeTypeName: "deleniti",
-                            Name: "hic",
+                            Container: sdk.String("hic"),
+                            Device: sdk.String("optio"),
+                            HashCode: sdk.String("totam"),
+                            MaybeTypeName: sdk.String("beatae"),
+                            Name: sdk.String("Tanya Gleason"),
                         },
                     },
                     ScomplexVal: []float32{
-                        5218.48,
-                        1059.07,
-                        4146.62,
-                        4736,
+                        4561.5,
+                        2165.5,
+                        5684.34,
                     },
                     StringVal: []string{
-                        "qui",
-                        "impedit",
+                        "perferendis",
                     },
-                    TensorContent: "cum",
+                    TensorContent: sdk.String("ad"),
                     TensorShape: &shared.TensorflowTensorShapeProto{
                         Dim: []shared.TensorShapeProtoDim{
                             shared.TensorShapeProtoDim{
-                                Name: "ipsum",
-                                Size: "excepturi",
+                                Name: sdk.String("Sheryl Fadel"),
+                                Size: sdk.String("hic"),
                             },
                             shared.TensorShapeProtoDim{
-                                Name: "aspernatur",
-                                Size: "perferendis",
+                                Name: sdk.String("Wilbur Kirlin"),
+                                Size: sdk.String("iure"),
+                            },
+                            shared.TensorShapeProtoDim{
+                                Name: sdk.String("Dr. Rickey Boyle"),
+                                Size: sdk.String("mollitia"),
                             },
                         },
-                        UnknownRank: false,
+                        UnknownRank: sdk.Bool(false),
                     },
                     Uint32Val: []int64{
-                        617636,
-                        149675,
+                        170909,
+                        210382,
+                        358152,
                     },
                     Uint64Val: []string{
-                        "dolor",
-                        "natus",
-                        "laboriosam",
+                        "nobis",
                     },
                     VariantVal: []shared.TensorflowVariantTensorDataProto{
                         shared.TensorflowVariantTensorDataProto{
-                            Metadata: "saepe",
+                            Metadata: sdk.String("omnis"),
                             Tensors: []shared.TensorflowTensorProto{
                                 shared.TensorflowTensorProto{},
                                 shared.TensorflowTensorProto{},
-                                shared.TensorflowTensorProto{},
                             },
-                            TypeName: "in",
+                            TypeName: sdk.String("minima"),
                         },
                         shared.TensorflowVariantTensorDataProto{
-                            Metadata: "corporis",
+                            Metadata: sdk.String("excepturi"),
                             Tensors: []shared.TensorflowTensorProto{
                                 shared.TensorflowTensorProto{},
-                                shared.TensorflowTensorProto{},
-                                shared.TensorflowTensorProto{},
                             },
-                            TypeName: "iure",
-                        },
-                        shared.TensorflowVariantTensorDataProto{
-                            Metadata: "saepe",
-                            Tensors: []shared.TensorflowTensorProto{
-                                shared.TensorflowTensorProto{},
-                                shared.TensorflowTensorProto{},
-                                shared.TensorflowTensorProto{},
-                            },
-                            TypeName: "architecto",
-                        },
-                        shared.TensorflowVariantTensorDataProto{
-                            Metadata: "ipsa",
-                            Tensors: []shared.TensorflowTensorProto{
-                                shared.TensorflowTensorProto{},
-                                shared.TensorflowTensorProto{},
-                                shared.TensorflowTensorProto{},
-                                shared.TensorflowTensorProto{},
-                            },
-                            TypeName: "est",
+                            TypeName: sdk.String("iure"),
                         },
                     },
-                    VersionNumber: 653140,
+                    VersionNumber: sdk.Int(634274),
                 },
             },
             Meta: &shared.Meta{
                 Metrics: []shared.Metric{
                     shared.Metric{
-                        Key: "dolores",
-                        Type: "COUNTER",
-                        Value: 3581.52,
+                        Key: sdk.String("sapiente"),
+                        Type: shared.MetricTypeEnumCounter.ToPointer(),
+                        Value: sdk.Float32(6527.9),
                     },
                     shared.Metric{
-                        Key: "explicabo",
-                        Type: "TIMER",
-                        Value: 3154.28,
+                        Key: sdk.String("dolorem"),
+                        Type: shared.MetricTypeEnumGauge.ToPointer(),
+                        Value: sdk.Float32(1613.09),
                     },
                     shared.Metric{
-                        Key: "omnis",
-                        Type: "GAUGE",
-                        Value: 3250.47,
+                        Key: sdk.String("repellat"),
+                        Type: shared.MetricTypeEnumGauge.ToPointer(),
+                        Value: sdk.Float32(5818.5),
+                    },
+                    shared.Metric{
+                        Key: sdk.String("numquam"),
+                        Type: shared.MetricTypeEnumGauge.ToPointer(),
+                        Value: sdk.Float32(4663.11),
                     },
                 },
-                Puid: "excepturi",
+                Puid: sdk.String("molestiae"),
                 RequestPath: map[string]string{
-                    "iure": "culpa",
+                    "error": "quia",
                 },
                 Routing: map[string]int{
-                    "sapiente": 102044,
-                    "mollitia": 208876,
-                    "culpa": 161309,
-                    "repellat": 653108,
+                    "vitae": 674752,
+                    "animi": 317202,
                 },
                 Tags: map[string]interface{}{
-                    "numquam": "commodi",
-                    "quam": "molestiae",
-                    "velit": "error",
+                    "quo": "sequi",
                 },
             },
             Status: &shared.Status{
-                Code: 158969,
-                Info: "quis",
-                Reason: "vitae",
-                Status: "FAILURE",
+                Code: sdk.Int(949572),
+                Info: sdk.String("ipsam"),
+                Reason: sdk.String("id"),
+                Status: shared.StatusStatusFlagEnumFailure.ToPointer(),
             },
-            StrData: "animi",
+            StrData: sdk.String("aut"),
         },
-        Deployment: "enim",
-        Namespace: "odit",
-    }
-
-    ctx := context.Background()
-    res, err := s.ExternalAmbassadorAPI.PredictJSON(ctx, req, operations.PredictJSONSecurity{
+        Deployment: "quasi",
+        Namespace: "error",
+    }, operations.PredictJSONSecurity{
         HTTPBearer: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {

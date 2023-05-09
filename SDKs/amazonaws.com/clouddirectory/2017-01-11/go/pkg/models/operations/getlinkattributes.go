@@ -17,19 +17,23 @@ const (
 	GetLinkAttributesRequestBodyConsistencyLevelEnumEventual     GetLinkAttributesRequestBodyConsistencyLevelEnum = "EVENTUAL"
 )
 
+func (e GetLinkAttributesRequestBodyConsistencyLevelEnum) ToPointer() *GetLinkAttributesRequestBodyConsistencyLevelEnum {
+	return &e
+}
+
 func (e *GetLinkAttributesRequestBodyConsistencyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERIALIZABLE":
 		fallthrough
 	case "EVENTUAL":
-		*e = GetLinkAttributesRequestBodyConsistencyLevelEnum(s)
+		*e = GetLinkAttributesRequestBodyConsistencyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLinkAttributesRequestBodyConsistencyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLinkAttributesRequestBodyConsistencyLevelEnum: %v", v)
 	}
 }
 

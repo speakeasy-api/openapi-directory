@@ -22,19 +22,23 @@ const (
 	DfareportingPlacementGroupsListPlacementGroupTypeEnumPlacementRoadblock DfareportingPlacementGroupsListPlacementGroupTypeEnum = "PLACEMENT_ROADBLOCK"
 )
 
+func (e DfareportingPlacementGroupsListPlacementGroupTypeEnum) ToPointer() *DfareportingPlacementGroupsListPlacementGroupTypeEnum {
+	return &e
+}
+
 func (e *DfareportingPlacementGroupsListPlacementGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACEMENT_PACKAGE":
 		fallthrough
 	case "PLACEMENT_ROADBLOCK":
-		*e = DfareportingPlacementGroupsListPlacementGroupTypeEnum(s)
+		*e = DfareportingPlacementGroupsListPlacementGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingPlacementGroupsListPlacementGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingPlacementGroupsListPlacementGroupTypeEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	DfareportingPlacementGroupsListPricingTypesEnumPricingTypeCpmActiveview       DfareportingPlacementGroupsListPricingTypesEnum = "PRICING_TYPE_CPM_ACTIVEVIEW"
 )
 
+func (e DfareportingPlacementGroupsListPricingTypesEnum) ToPointer() *DfareportingPlacementGroupsListPricingTypesEnum {
+	return &e
+}
+
 func (e *DfareportingPlacementGroupsListPricingTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICING_TYPE_CPM":
 		fallthrough
 	case "PRICING_TYPE_CPC":
@@ -66,10 +74,10 @@ func (e *DfareportingPlacementGroupsListPricingTypesEnum) UnmarshalJSON(data []b
 	case "PRICING_TYPE_FLAT_RATE_CLICKS":
 		fallthrough
 	case "PRICING_TYPE_CPM_ACTIVEVIEW":
-		*e = DfareportingPlacementGroupsListPricingTypesEnum(s)
+		*e = DfareportingPlacementGroupsListPricingTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingPlacementGroupsListPricingTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingPlacementGroupsListPricingTypesEnum: %v", v)
 	}
 }
 
@@ -81,19 +89,23 @@ const (
 	DfareportingPlacementGroupsListSortFieldEnumName DfareportingPlacementGroupsListSortFieldEnum = "NAME"
 )
 
+func (e DfareportingPlacementGroupsListSortFieldEnum) ToPointer() *DfareportingPlacementGroupsListSortFieldEnum {
+	return &e
+}
+
 func (e *DfareportingPlacementGroupsListSortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID":
 		fallthrough
 	case "NAME":
-		*e = DfareportingPlacementGroupsListSortFieldEnum(s)
+		*e = DfareportingPlacementGroupsListSortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingPlacementGroupsListSortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingPlacementGroupsListSortFieldEnum: %v", v)
 	}
 }
 
@@ -105,19 +117,23 @@ const (
 	DfareportingPlacementGroupsListSortOrderEnumDescending DfareportingPlacementGroupsListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingPlacementGroupsListSortOrderEnum) ToPointer() *DfareportingPlacementGroupsListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingPlacementGroupsListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingPlacementGroupsListSortOrderEnum(s)
+		*e = DfareportingPlacementGroupsListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingPlacementGroupsListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingPlacementGroupsListSortOrderEnum: %v", v)
 	}
 }
 

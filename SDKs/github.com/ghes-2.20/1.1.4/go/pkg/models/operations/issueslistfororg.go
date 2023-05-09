@@ -27,12 +27,16 @@ const (
 	IssuesListForOrgFilterEnumAll        IssuesListForOrgFilterEnum = "all"
 )
 
+func (e IssuesListForOrgFilterEnum) ToPointer() *IssuesListForOrgFilterEnum {
+	return &e
+}
+
 func (e *IssuesListForOrgFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "assigned":
 		fallthrough
 	case "created":
@@ -44,10 +48,10 @@ func (e *IssuesListForOrgFilterEnum) UnmarshalJSON(data []byte) error {
 	case "repos":
 		fallthrough
 	case "all":
-		*e = IssuesListForOrgFilterEnum(s)
+		*e = IssuesListForOrgFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListForOrgFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListForOrgFilterEnum: %v", v)
 	}
 }
 
@@ -60,21 +64,25 @@ const (
 	IssuesListForOrgSortEnumComments IssuesListForOrgSortEnum = "comments"
 )
 
+func (e IssuesListForOrgSortEnum) ToPointer() *IssuesListForOrgSortEnum {
+	return &e
+}
+
 func (e *IssuesListForOrgSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
 		fallthrough
 	case "comments":
-		*e = IssuesListForOrgSortEnum(s)
+		*e = IssuesListForOrgSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListForOrgSortEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListForOrgSortEnum: %v", v)
 	}
 }
 
@@ -87,21 +95,25 @@ const (
 	IssuesListForOrgStateEnumAll    IssuesListForOrgStateEnum = "all"
 )
 
+func (e IssuesListForOrgStateEnum) ToPointer() *IssuesListForOrgStateEnum {
+	return &e
+}
+
 func (e *IssuesListForOrgStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "all":
-		*e = IssuesListForOrgStateEnum(s)
+		*e = IssuesListForOrgStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListForOrgStateEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListForOrgStateEnum: %v", v)
 	}
 }
 

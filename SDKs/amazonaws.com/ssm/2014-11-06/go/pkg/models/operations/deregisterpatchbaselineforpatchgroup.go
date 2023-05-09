@@ -16,17 +16,21 @@ const (
 	DeregisterPatchBaselineForPatchGroupXAmzTargetEnumAmazonSsmDeregisterPatchBaselineForPatchGroup DeregisterPatchBaselineForPatchGroupXAmzTargetEnum = "AmazonSSM.DeregisterPatchBaselineForPatchGroup"
 )
 
+func (e DeregisterPatchBaselineForPatchGroupXAmzTargetEnum) ToPointer() *DeregisterPatchBaselineForPatchGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeregisterPatchBaselineForPatchGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DeregisterPatchBaselineForPatchGroup":
-		*e = DeregisterPatchBaselineForPatchGroupXAmzTargetEnum(s)
+		*e = DeregisterPatchBaselineForPatchGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeregisterPatchBaselineForPatchGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeregisterPatchBaselineForPatchGroupXAmzTargetEnum: %v", v)
 	}
 }
 

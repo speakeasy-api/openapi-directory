@@ -15,17 +15,21 @@ const (
 	GETAttachInternetGatewayActionEnumAttachInternetGateway GETAttachInternetGatewayActionEnum = "AttachInternetGateway"
 )
 
+func (e GETAttachInternetGatewayActionEnum) ToPointer() *GETAttachInternetGatewayActionEnum {
+	return &e
+}
+
 func (e *GETAttachInternetGatewayActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AttachInternetGateway":
-		*e = GETAttachInternetGatewayActionEnum(s)
+		*e = GETAttachInternetGatewayActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAttachInternetGatewayActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAttachInternetGatewayActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAttachInternetGatewayVersionEnumTwoThousandAndSixteen1115 GETAttachInternetGatewayVersionEnum = "2016-11-15"
 )
 
+func (e GETAttachInternetGatewayVersionEnum) ToPointer() *GETAttachInternetGatewayVersionEnum {
+	return &e
+}
+
 func (e *GETAttachInternetGatewayVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETAttachInternetGatewayVersionEnum(s)
+		*e = GETAttachInternetGatewayVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAttachInternetGatewayVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAttachInternetGatewayVersionEnum: %v", v)
 	}
 }
 

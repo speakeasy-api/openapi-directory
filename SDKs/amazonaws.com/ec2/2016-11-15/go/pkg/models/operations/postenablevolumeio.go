@@ -15,17 +15,21 @@ const (
 	POSTEnableVolumeIOActionEnumEnableVolumeIo POSTEnableVolumeIOActionEnum = "EnableVolumeIO"
 )
 
+func (e POSTEnableVolumeIOActionEnum) ToPointer() *POSTEnableVolumeIOActionEnum {
+	return &e
+}
+
 func (e *POSTEnableVolumeIOActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableVolumeIO":
-		*e = POSTEnableVolumeIOActionEnum(s)
+		*e = POSTEnableVolumeIOActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableVolumeIOActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableVolumeIOActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTEnableVolumeIOVersionEnumTwoThousandAndSixteen1115 POSTEnableVolumeIOVersionEnum = "2016-11-15"
 )
 
+func (e POSTEnableVolumeIOVersionEnum) ToPointer() *POSTEnableVolumeIOVersionEnum {
+	return &e
+}
+
 func (e *POSTEnableVolumeIOVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTEnableVolumeIOVersionEnum(s)
+		*e = POSTEnableVolumeIOVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableVolumeIOVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableVolumeIOVersionEnum: %v", v)
 	}
 }
 

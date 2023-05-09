@@ -14,18 +14,22 @@ const (
 	ServiceNowBuildVersionTypeEnumOthers ServiceNowBuildVersionTypeEnum = "OTHERS"
 )
 
+func (e ServiceNowBuildVersionTypeEnum) ToPointer() *ServiceNowBuildVersionTypeEnum {
+	return &e
+}
+
 func (e *ServiceNowBuildVersionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LONDON":
 		fallthrough
 	case "OTHERS":
-		*e = ServiceNowBuildVersionTypeEnum(s)
+		*e = ServiceNowBuildVersionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceNowBuildVersionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceNowBuildVersionTypeEnum: %v", v)
 	}
 }

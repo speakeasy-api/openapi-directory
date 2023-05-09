@@ -15,17 +15,21 @@ const (
 	GETApplyPendingMaintenanceActionActionEnumApplyPendingMaintenanceAction GETApplyPendingMaintenanceActionActionEnum = "ApplyPendingMaintenanceAction"
 )
 
+func (e GETApplyPendingMaintenanceActionActionEnum) ToPointer() *GETApplyPendingMaintenanceActionActionEnum {
+	return &e
+}
+
 func (e *GETApplyPendingMaintenanceActionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ApplyPendingMaintenanceAction":
-		*e = GETApplyPendingMaintenanceActionActionEnum(s)
+		*e = GETApplyPendingMaintenanceActionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETApplyPendingMaintenanceActionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETApplyPendingMaintenanceActionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETApplyPendingMaintenanceActionVersionEnumTwoThousandAndFourteen1031 GETApplyPendingMaintenanceActionVersionEnum = "2014-10-31"
 )
 
+func (e GETApplyPendingMaintenanceActionVersionEnum) ToPointer() *GETApplyPendingMaintenanceActionVersionEnum {
+	return &e
+}
+
 func (e *GETApplyPendingMaintenanceActionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETApplyPendingMaintenanceActionVersionEnum(s)
+		*e = GETApplyPendingMaintenanceActionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETApplyPendingMaintenanceActionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETApplyPendingMaintenanceActionVersionEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	VolumeAttachmentsStateEnumBusy      VolumeAttachmentsStateEnum = "busy"
 )
 
+func (e VolumeAttachmentsStateEnum) ToPointer() *VolumeAttachmentsStateEnum {
+	return &e
+}
+
 func (e *VolumeAttachmentsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -34,10 +38,10 @@ func (e *VolumeAttachmentsStateEnum) UnmarshalJSON(data []byte) error {
 	case "detached":
 		fallthrough
 	case "busy":
-		*e = VolumeAttachmentsStateEnum(s)
+		*e = VolumeAttachmentsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeAttachmentsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeAttachmentsStateEnum: %v", v)
 	}
 }
 
@@ -63,12 +67,16 @@ const (
 	VolumeStateEnumError     VolumeStateEnum = "error"
 )
 
+func (e VolumeStateEnum) ToPointer() *VolumeStateEnum {
+	return &e
+}
+
 func (e *VolumeStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creating":
 		fallthrough
 	case "available":
@@ -80,10 +88,10 @@ func (e *VolumeStateEnum) UnmarshalJSON(data []byte) error {
 	case "deleted":
 		fallthrough
 	case "error":
-		*e = VolumeStateEnum(s)
+		*e = VolumeStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeStateEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeStateEnum: %v", v)
 	}
 }
 
@@ -106,12 +114,16 @@ const (
 	VolumeVolumeTypeEnumGp3      VolumeVolumeTypeEnum = "gp3"
 )
 
+func (e VolumeVolumeTypeEnum) ToPointer() *VolumeVolumeTypeEnum {
+	return &e
+}
+
 func (e *VolumeVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -125,10 +137,10 @@ func (e *VolumeVolumeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = VolumeVolumeTypeEnum(s)
+		*e = VolumeVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeVolumeTypeEnum: %v", v)
 	}
 }
 

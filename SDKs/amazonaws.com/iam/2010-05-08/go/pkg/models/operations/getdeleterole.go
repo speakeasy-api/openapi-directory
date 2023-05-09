@@ -15,17 +15,21 @@ const (
 	GETDeleteRoleActionEnumDeleteRole GETDeleteRoleActionEnum = "DeleteRole"
 )
 
+func (e GETDeleteRoleActionEnum) ToPointer() *GETDeleteRoleActionEnum {
+	return &e
+}
+
 func (e *GETDeleteRoleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteRole":
-		*e = GETDeleteRoleActionEnum(s)
+		*e = GETDeleteRoleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteRoleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteRoleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteRoleVersionEnumTwoThousandAndTen0508 GETDeleteRoleVersionEnum = "2010-05-08"
 )
 
+func (e GETDeleteRoleVersionEnum) ToPointer() *GETDeleteRoleVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteRoleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETDeleteRoleVersionEnum(s)
+		*e = GETDeleteRoleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteRoleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteRoleVersionEnum: %v", v)
 	}
 }
 

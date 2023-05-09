@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/cloudtrail-
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,39 +28,37 @@ func main() {
         }),
     )
 
-    req := operations.PutAuditEventsRequest{
+    ctx := context.Background()
+    res, err := s.PutAuditEvents(ctx, operations.PutAuditEventsRequest{
         RequestBody: operations.PutAuditEventsRequestBody{
             AuditEvents: []shared.AuditEvent{
                 shared.AuditEvent{
                     EventData: "provident",
-                    EventDataChecksum: "distinctio",
-                    ID: "quibusdam",
+                    EventDataChecksum: sdk.String("distinctio"),
+                    ID: "d9d8d69a-674e-40f4-a7cc-8796ed151a05",
                 },
                 shared.AuditEvent{
-                    EventData: "unde",
-                    EventDataChecksum: "nulla",
-                    ID: "corrupti",
+                    EventData: "repellendus",
+                    EventDataChecksum: sdk.String("sapiente"),
+                    ID: "c2ddf7cc-78ca-41ba-928f-c816742cb739",
                 },
                 shared.AuditEvent{
-                    EventData: "illum",
-                    EventDataChecksum: "vel",
-                    ID: "error",
+                    EventData: "aspernatur",
+                    EventDataChecksum: sdk.String("perferendis"),
+                    ID: "5929396f-ea75-496e-b10f-aaa2352c5955",
                 },
             },
         },
-        XAmzAlgorithm: "deserunt",
-        XAmzContentSha256: "suscipit",
-        XAmzCredential: "iure",
-        XAmzDate: "magnam",
-        XAmzSecurityToken: "debitis",
-        XAmzSignature: "ipsa",
-        XAmzSignedHeaders: "delectus",
-        ChannelArn: "tempora",
-        ExternalID: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.PutAuditEvents(ctx, req)
+        XAmzAlgorithm: sdk.String("excepturi"),
+        XAmzContentSha256: sdk.String("accusantium"),
+        XAmzCredential: sdk.String("iure"),
+        XAmzDate: sdk.String("culpa"),
+        XAmzSecurityToken: sdk.String("doloribus"),
+        XAmzSignature: sdk.String("sapiente"),
+        XAmzSignedHeaders: sdk.String("architecto"),
+        ChannelArn: "mollitia",
+        ExternalID: sdk.String("dolorem"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -75,9 +73,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `PutAuditEvents` - Ingests your application events into CloudTrail Lake. A required parameter, <code>auditEvents</code>, accepts the JSON records (also called <i>payload</i>) of events that you want CloudTrail to ingest. You can add up to 100 of these events (or up to 1 MB) per <code>PutAuditEvents</code> request.
+* [PutAuditEvents](docs/sdk/README.md#putauditevents) - Ingests your application events into CloudTrail Lake. A required parameter, <code>auditEvents</code>, accepts the JSON records (also called <i>payload</i>) of events that you want CloudTrail to ingest. You can add up to 100 of these events (or up to 1 MB) per <code>PutAuditEvents</code> request.
 <!-- End SDK Available Operations -->
 
 ### Maturity

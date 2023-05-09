@@ -22,21 +22,25 @@ const (
 	CreateCheckTruoraPriorityEnumHigh   CreateCheckTruoraPriorityEnum = "high"
 )
 
+func (e CreateCheckTruoraPriorityEnum) ToPointer() *CreateCheckTruoraPriorityEnum {
+	return &e
+}
+
 func (e *CreateCheckTruoraPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "low":
 		fallthrough
 	case "medium":
 		fallthrough
 	case "high":
-		*e = CreateCheckTruoraPriorityEnum(s)
+		*e = CreateCheckTruoraPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCheckTruoraPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCheckTruoraPriorityEnum: %v", v)
 	}
 }
 

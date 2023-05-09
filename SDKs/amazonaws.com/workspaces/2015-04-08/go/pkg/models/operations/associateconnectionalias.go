@@ -16,17 +16,21 @@ const (
 	AssociateConnectionAliasXAmzTargetEnumWorkspacesServiceAssociateConnectionAlias AssociateConnectionAliasXAmzTargetEnum = "WorkspacesService.AssociateConnectionAlias"
 )
 
+func (e AssociateConnectionAliasXAmzTargetEnum) ToPointer() *AssociateConnectionAliasXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateConnectionAliasXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.AssociateConnectionAlias":
-		*e = AssociateConnectionAliasXAmzTargetEnum(s)
+		*e = AssociateConnectionAliasXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateConnectionAliasXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateConnectionAliasXAmzTargetEnum: %v", v)
 	}
 }
 

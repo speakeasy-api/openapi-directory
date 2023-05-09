@@ -15,17 +15,21 @@ const (
 	GETResetNetworkInterfaceAttributeActionEnumResetNetworkInterfaceAttribute GETResetNetworkInterfaceAttributeActionEnum = "ResetNetworkInterfaceAttribute"
 )
 
+func (e GETResetNetworkInterfaceAttributeActionEnum) ToPointer() *GETResetNetworkInterfaceAttributeActionEnum {
+	return &e
+}
+
 func (e *GETResetNetworkInterfaceAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetNetworkInterfaceAttribute":
-		*e = GETResetNetworkInterfaceAttributeActionEnum(s)
+		*e = GETResetNetworkInterfaceAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetNetworkInterfaceAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetNetworkInterfaceAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETResetNetworkInterfaceAttributeVersionEnumTwoThousandAndSixteen1115 GETResetNetworkInterfaceAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETResetNetworkInterfaceAttributeVersionEnum) ToPointer() *GETResetNetworkInterfaceAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETResetNetworkInterfaceAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETResetNetworkInterfaceAttributeVersionEnum(s)
+		*e = GETResetNetworkInterfaceAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetNetworkInterfaceAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetNetworkInterfaceAttributeVersionEnum: %v", v)
 	}
 }
 

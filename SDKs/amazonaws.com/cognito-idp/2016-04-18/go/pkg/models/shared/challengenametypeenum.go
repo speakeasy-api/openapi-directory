@@ -22,12 +22,16 @@ const (
 	ChallengeNameTypeEnumNewPasswordRequired    ChallengeNameTypeEnum = "NEW_PASSWORD_REQUIRED"
 )
 
+func (e ChallengeNameTypeEnum) ToPointer() *ChallengeNameTypeEnum {
+	return &e
+}
+
 func (e *ChallengeNameTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SMS_MFA":
 		fallthrough
 	case "SOFTWARE_TOKEN_MFA":
@@ -47,9 +51,9 @@ func (e *ChallengeNameTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ADMIN_NO_SRP_AUTH":
 		fallthrough
 	case "NEW_PASSWORD_REQUIRED":
-		*e = ChallengeNameTypeEnum(s)
+		*e = ChallengeNameTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChallengeNameTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChallengeNameTypeEnum: %v", v)
 	}
 }

@@ -649,14 +649,23 @@ const (
 	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR7g12xlarge     DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r7g.12xlarge"
 	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR7g16xlarge     DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r7g.16xlarge"
 	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR7gMetal        DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r7g.metal"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumC6inMetal       DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "c6in.metal"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumM6inMetal       DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "m6in.metal"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumM6idnMetal      DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "m6idn.metal"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR6inMetal       DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r6in.metal"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR6idnMetal      DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum) ToPointer() *DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -1932,10 +1941,20 @@ func (e *DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnu
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -1948,21 +1967,25 @@ const (
 	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsLocationTypeEnumAvailabilityZoneID DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsLocationTypeEnum = "availability-zone-id"
 )
 
+func (e DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsLocationTypeEnum) ToPointer() *DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsLocationTypeEnum {
+	return &e
+}
+
 func (e *DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsLocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "region":
 		fallthrough
 	case "availability-zone":
 		fallthrough
 	case "availability-zone-id":
-		*e = DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsLocationTypeEnum(s)
+		*e = DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsLocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsLocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsLocationTypeEnum: %v", v)
 	}
 }
 

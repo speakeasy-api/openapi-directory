@@ -16,19 +16,23 @@ const (
 	GetDiscoveryV2VenuesIDIncludeLicensedContentEnumNo  GetDiscoveryV2VenuesIDIncludeLicensedContentEnum = " no"
 )
 
+func (e GetDiscoveryV2VenuesIDIncludeLicensedContentEnum) ToPointer() *GetDiscoveryV2VenuesIDIncludeLicensedContentEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2VenuesIDIncludeLicensedContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = GetDiscoveryV2VenuesIDIncludeLicensedContentEnum(s)
+		*e = GetDiscoveryV2VenuesIDIncludeLicensedContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2VenuesIDIncludeLicensedContentEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2VenuesIDIncludeLicensedContentEnum: %v", v)
 	}
 }
 

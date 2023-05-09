@@ -3,11 +3,43 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
 
+// DeleteRecordDeletionModeEnum - The name of the deletion mode for deleting the record. By default, the deletion mode is set to <code>SoftDelete</code>.
+type DeleteRecordDeletionModeEnum string
+
+const (
+	DeleteRecordDeletionModeEnumSoftDelete DeleteRecordDeletionModeEnum = "SoftDelete"
+	DeleteRecordDeletionModeEnumHardDelete DeleteRecordDeletionModeEnum = "HardDelete"
+)
+
+func (e DeleteRecordDeletionModeEnum) ToPointer() *DeleteRecordDeletionModeEnum {
+	return &e
+}
+
+func (e *DeleteRecordDeletionModeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "SoftDelete":
+		fallthrough
+	case "HardDelete":
+		*e = DeleteRecordDeletionModeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for DeleteRecordDeletionModeEnum: %v", v)
+	}
+}
+
 type DeleteRecordRequest struct {
+	// The name of the deletion mode for deleting the record. By default, the deletion mode is set to <code>SoftDelete</code>.
+	DeletionMode *DeleteRecordDeletionModeEnum `queryParam:"style=form,explode=true,name=DeletionMode"`
 	// Timestamp indicating when the deletion event occurred. <code>EventTime</code> can be used to query data at a certain point in time.
 	EventTime string `queryParam:"style=form,explode=true,name=EventTime"`
 	// The name of the feature group to delete the record from.

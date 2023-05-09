@@ -16,27 +16,31 @@ const (
 	GoogleCloudDatacatalogV1beta1TaxonomyServiceNameEnumManagingSystemOther       GoogleCloudDatacatalogV1beta1TaxonomyServiceNameEnum = "MANAGING_SYSTEM_OTHER"
 )
 
+func (e GoogleCloudDatacatalogV1beta1TaxonomyServiceNameEnum) ToPointer() *GoogleCloudDatacatalogV1beta1TaxonomyServiceNameEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1beta1TaxonomyServiceNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANAGING_SYSTEM_UNSPECIFIED":
 		fallthrough
 	case "MANAGING_SYSTEM_DATAPLEX":
 		fallthrough
 	case "MANAGING_SYSTEM_OTHER":
-		*e = GoogleCloudDatacatalogV1beta1TaxonomyServiceNameEnum(s)
+		*e = GoogleCloudDatacatalogV1beta1TaxonomyServiceNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1beta1TaxonomyServiceNameEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1beta1TaxonomyServiceNameEnum: %v", v)
 	}
 }
 
 // GoogleCloudDatacatalogV1beta1TaxonomyService - The source system of the Taxonomy.
 type GoogleCloudDatacatalogV1beta1TaxonomyService struct {
-	// P4SA Identity of the service.
+	// The service agent for the service.
 	Identity *string `json:"identity,omitempty"`
 	// The Google Cloud service name.
 	Name *GoogleCloudDatacatalogV1beta1TaxonomyServiceNameEnum `json:"name,omitempty"`

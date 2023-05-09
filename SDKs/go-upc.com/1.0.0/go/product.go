@@ -34,7 +34,10 @@ func newProduct(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GetProductInfo - Retrieve product info for a particular barcode number (UPC, EAN, or ISBN).
 func (s *product) GetProductInfo(ctx context.Context, request operations.GetProductInfoRequest) (*operations.GetProductInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/code/{code}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/code/{code}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,20 +15,24 @@ const (
 	EventFilterTypeEnumSignUp         EventFilterTypeEnum = "SIGN_UP"
 )
 
+func (e EventFilterTypeEnum) ToPointer() *EventFilterTypeEnum {
+	return &e
+}
+
 func (e *EventFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIGN_IN":
 		fallthrough
 	case "PASSWORD_CHANGE":
 		fallthrough
 	case "SIGN_UP":
-		*e = EventFilterTypeEnum(s)
+		*e = EventFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventFilterTypeEnum: %v", v)
 	}
 }

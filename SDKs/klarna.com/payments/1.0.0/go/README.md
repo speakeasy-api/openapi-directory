@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/klarna.com/payments/1.0.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CancelAuthorizationRequest{
-        AuthorizationToken: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Orders.CancelAuthorization(ctx, req)
+    res, err := s.Orders.CancelAuthorization(ctx, operations.CancelAuthorizationRequest{
+        AuthorizationToken: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,17 +42,17 @@ func main() {
 ## Available Resources and Operations
 
 
-### Orders
+### [Orders](docs/orders/README.md)
 
-* `CancelAuthorization` - Cancel an existing authorization
-* `CreateOrder` - Create a new order
-* `PurchaseToken` - Generate a consumer token
+* [CancelAuthorization](docs/orders/README.md#cancelauthorization) - Cancel an existing authorization
+* [CreateOrder](docs/orders/README.md#createorder) - Create a new order
+* [PurchaseToken](docs/orders/README.md#purchasetoken) - Generate a consumer token
 
-### Sessions
+### [Sessions](docs/sessions/README.md)
 
-* `CreateCreditSession` - Create a new payment session
-* `ReadCreditSession` - Read an existing payment session
-* `UpdateCreditSession` - Update an existing payment session
+* [CreateCreditSession](docs/sessions/README.md#createcreditsession) - Create a new payment session
+* [ReadCreditSession](docs/sessions/README.md#readcreditsession) - Read an existing payment session
+* [UpdateCreditSession](docs/sessions/README.md#updatecreditsession) - Update an existing payment session
 <!-- End SDK Available Operations -->
 
 ### Maturity

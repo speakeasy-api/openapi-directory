@@ -15,18 +15,22 @@ const (
 	TimespanTypeEnumWeeks  TimespanTypeEnum = "weeks"
 )
 
+func (e TimespanTypeEnum) ToPointer() *TimespanTypeEnum {
+	return &e
+}
+
 func (e *TimespanTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "months":
 		fallthrough
 	case "weeks":
-		*e = TimespanTypeEnum(s)
+		*e = TimespanTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimespanTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TimespanTypeEnum: %v", v)
 	}
 }

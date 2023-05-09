@@ -16,12 +16,16 @@ const (
 	RuleTypeEnumStringLength     RuleTypeEnum = "STRING_LENGTH"
 )
 
+func (e RuleTypeEnum) ToPointer() *RuleTypeEnum {
+	return &e
+}
+
 func (e *RuleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BINARY_LENGTH":
 		fallthrough
 	case "NUMBER_COMPARISON":
@@ -29,9 +33,9 @@ func (e *RuleTypeEnum) UnmarshalJSON(data []byte) error {
 	case "STRING_FROM_SET":
 		fallthrough
 	case "STRING_LENGTH":
-		*e = RuleTypeEnum(s)
+		*e = RuleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RuleTypeEnum: %v", v)
 	}
 }

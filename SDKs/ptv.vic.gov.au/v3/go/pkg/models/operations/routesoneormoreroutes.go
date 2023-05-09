@@ -9,35 +9,39 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RoutesOneOrMoreRoutesRouteTypesEnum string
+type RoutesOneOrMoreRoutesRouteTypesEnum int
 
 const (
-	RoutesOneOrMoreRoutesRouteTypesEnumZero  RoutesOneOrMoreRoutesRouteTypesEnum = "0"
-	RoutesOneOrMoreRoutesRouteTypesEnumOne   RoutesOneOrMoreRoutesRouteTypesEnum = "1"
-	RoutesOneOrMoreRoutesRouteTypesEnumTwo   RoutesOneOrMoreRoutesRouteTypesEnum = "2"
-	RoutesOneOrMoreRoutesRouteTypesEnumThree RoutesOneOrMoreRoutesRouteTypesEnum = "3"
-	RoutesOneOrMoreRoutesRouteTypesEnumFour  RoutesOneOrMoreRoutesRouteTypesEnum = "4"
+	RoutesOneOrMoreRoutesRouteTypesEnumZero  RoutesOneOrMoreRoutesRouteTypesEnum = 0
+	RoutesOneOrMoreRoutesRouteTypesEnumOne   RoutesOneOrMoreRoutesRouteTypesEnum = 1
+	RoutesOneOrMoreRoutesRouteTypesEnumTwo   RoutesOneOrMoreRoutesRouteTypesEnum = 2
+	RoutesOneOrMoreRoutesRouteTypesEnumThree RoutesOneOrMoreRoutesRouteTypesEnum = 3
+	RoutesOneOrMoreRoutesRouteTypesEnumFour  RoutesOneOrMoreRoutesRouteTypesEnum = 4
 )
 
+func (e RoutesOneOrMoreRoutesRouteTypesEnum) ToPointer() *RoutesOneOrMoreRoutesRouteTypesEnum {
+	return &e
+}
+
 func (e *RoutesOneOrMoreRoutesRouteTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
-		*e = RoutesOneOrMoreRoutesRouteTypesEnum(s)
+	case 4:
+		*e = RoutesOneOrMoreRoutesRouteTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoutesOneOrMoreRoutesRouteTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for RoutesOneOrMoreRoutesRouteTypesEnum: %v", v)
 	}
 }
 

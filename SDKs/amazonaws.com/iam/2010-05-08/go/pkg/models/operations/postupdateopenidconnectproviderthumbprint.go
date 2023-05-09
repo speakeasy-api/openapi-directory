@@ -15,17 +15,21 @@ const (
 	POSTUpdateOpenIDConnectProviderThumbprintActionEnumUpdateOpenIDConnectProviderThumbprint POSTUpdateOpenIDConnectProviderThumbprintActionEnum = "UpdateOpenIDConnectProviderThumbprint"
 )
 
+func (e POSTUpdateOpenIDConnectProviderThumbprintActionEnum) ToPointer() *POSTUpdateOpenIDConnectProviderThumbprintActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateOpenIDConnectProviderThumbprintActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateOpenIDConnectProviderThumbprint":
-		*e = POSTUpdateOpenIDConnectProviderThumbprintActionEnum(s)
+		*e = POSTUpdateOpenIDConnectProviderThumbprintActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateOpenIDConnectProviderThumbprintActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateOpenIDConnectProviderThumbprintActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateOpenIDConnectProviderThumbprintVersionEnumTwoThousandAndTen0508 POSTUpdateOpenIDConnectProviderThumbprintVersionEnum = "2010-05-08"
 )
 
+func (e POSTUpdateOpenIDConnectProviderThumbprintVersionEnum) ToPointer() *POSTUpdateOpenIDConnectProviderThumbprintVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateOpenIDConnectProviderThumbprintVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTUpdateOpenIDConnectProviderThumbprintVersionEnum(s)
+		*e = POSTUpdateOpenIDConnectProviderThumbprintVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateOpenIDConnectProviderThumbprintVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateOpenIDConnectProviderThumbprintVersionEnum: %v", v)
 	}
 }
 

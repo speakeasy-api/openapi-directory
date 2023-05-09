@@ -36,7 +36,10 @@ func newMe(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // DeleteMeFollowingsUserID - Deletes a user who is followed by the authenticated user.
 func (s *me) DeleteMeFollowingsUserID(ctx context.Context, request operations.DeleteMeFollowingsUserIDRequest, security operations.DeleteMeFollowingsUserIDSecurity) (*operations.DeleteMeFollowingsUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/followings/{user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/followings/{user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -91,7 +94,7 @@ func (s *me) DeleteMeFollowingsUserID(ctx context.Context, request operations.De
 }
 
 // GetMe - Returns the authenticated user’s information.
-func (s *me) GetMe(ctx context.Context) (*operations.GetMeResponse, error) {
+func (s *me) GetMe(ctx context.Context, security operations.GetMeSecurity) (*operations.GetMeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me"
 
@@ -100,7 +103,7 @@ func (s *me) GetMe(ctx context.Context) (*operations.GetMeResponse, error) {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -379,7 +382,10 @@ func (s *me) GetMeConnections(ctx context.Context, request operations.GetMeConne
 // GetMeConnectionsConnectionID - Returns the authenticated user's connected social account.
 func (s *me) GetMeConnectionsConnectionID(ctx context.Context, request operations.GetMeConnectionsConnectionIDRequest, security operations.GetMeConnectionsConnectionIDSecurity) (*operations.GetMeConnectionsConnectionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/connections/{connection_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/connections/{connection_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -441,6 +447,8 @@ func (s *me) GetMeConnectionsConnectionID(ctx context.Context, request operation
 }
 
 // GetMeFavoritesIds - Returns user’s favorites ids. (use /me/likes/tracks instead to fetch the authenticated user's likes)
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *me) GetMeFavoritesIds(ctx context.Context, request operations.GetMeFavoritesIdsRequest, security operations.GetMeFavoritesIdsSecurity) (*operations.GetMeFavoritesIdsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me/favorites/ids"
@@ -540,9 +548,14 @@ func (s *me) GetMeFollowers(ctx context.Context, request operations.GetMeFollowe
 }
 
 // GetMeFollowersFollowerID - Returns a user who is following the authenticated user. (use /users/{user_id} instead, to fetch the user details)
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *me) GetMeFollowersFollowerID(ctx context.Context, request operations.GetMeFollowersFollowerIDRequest, security operations.GetMeFollowersFollowerIDSecurity) (*operations.GetMeFollowersFollowerIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/followers/{follower_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/followers/{follower_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -710,9 +723,14 @@ func (s *me) GetMeFollowingsTracks(ctx context.Context, request operations.GetMe
 }
 
 // GetMeFollowingsUserID - Returns a user who is followed by the authenticated user. (use /users/{user_id} instead, to fetch the user details)
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *me) GetMeFollowingsUserID(ctx context.Context, request operations.GetMeFollowingsUserIDRequest, security operations.GetMeFollowingsUserIDSecurity) (*operations.GetMeFollowingsUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/followings/{user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/followings/{user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -901,9 +919,14 @@ func (s *me) GetMePlaylists(ctx context.Context, request operations.GetMePlaylis
 }
 
 // GetMePlaylistsPlaylistID - Returns playlist. (use /playlists/{playlist_id} instead, to fetch the playlist details)
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *me) GetMePlaylistsPlaylistID(ctx context.Context, request operations.GetMePlaylistsPlaylistIDRequest, security operations.GetMePlaylistsPlaylistIDSecurity) (*operations.GetMePlaylistsPlaylistIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/playlists/{playlist_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/playlists/{playlist_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1003,9 +1026,14 @@ func (s *me) GetMeTracks(ctx context.Context, request operations.GetMeTracksRequ
 }
 
 // GetMeTracksTrackID - Returns a specified track. (use /tracks/{track_id} instead, to fetch the track details)
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *me) GetMeTracksTrackID(ctx context.Context, request operations.GetMeTracksTrackIDRequest, security operations.GetMeTracksTrackIDSecurity) (*operations.GetMeTracksTrackIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/tracks/{track_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/tracks/{track_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1049,7 +1077,10 @@ func (s *me) GetMeTracksTrackID(ctx context.Context, request operations.GetMeTra
 // PutMeFollowingsUserID - Follows a user.
 func (s *me) PutMeFollowingsUserID(ctx context.Context, request operations.PutMeFollowingsUserIDRequest, security operations.PutMeFollowingsUserIDSecurity) (*operations.PutMeFollowingsUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/me/followings/{user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/me/followings/{user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

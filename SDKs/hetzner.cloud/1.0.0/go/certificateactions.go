@@ -36,7 +36,10 @@ func newCertificateActions(defaultClient, securityClient HTTPClient, serverURL, 
 // Only type `managed` Certificates can have Actions. For type `uploaded` Certificates the `actions` key will always contain an empty array.
 func (s *certificateActions) GetCertificatesIDActions(ctx context.Context, request operations.GetCertificatesIDActionsRequest) (*operations.GetCertificatesIDActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}/actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/certificates/{id}/actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *certificateActions) GetCertificatesIDActions(ctx context.Context, reque
 // Returns a specific Action for a Certificate. Only type `managed` Certificates have Actions.
 func (s *certificateActions) GetCertificatesIDActionsActionID(ctx context.Context, request operations.GetCertificatesIDActionsActionIDRequest) (*operations.GetCertificatesIDActionsActionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}/actions/{action_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/certificates/{id}/actions/{action_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -145,7 +151,10 @@ func (s *certificateActions) GetCertificatesIDActionsActionID(ctx context.Contex
 // | `dns_zone_is_secondary_zone`                            | DNS zone is a secondary zone                                              |
 func (s *certificateActions) PostCertificatesIDActionsRetry(ctx context.Context, request operations.PostCertificatesIDActionsRetryRequest) (*operations.PostCertificatesIDActionsRetryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificates/{id}/actions/retry", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/certificates/{id}/actions/retry", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

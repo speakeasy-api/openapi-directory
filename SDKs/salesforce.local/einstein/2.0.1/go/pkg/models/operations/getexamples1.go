@@ -22,21 +22,25 @@ const (
 	GetExamples1SourceEnumUpload   GetExamples1SourceEnum = "upload"
 )
 
+func (e GetExamples1SourceEnum) ToPointer() *GetExamples1SourceEnum {
+	return &e
+}
+
 func (e *GetExamples1SourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "feedback":
 		fallthrough
 	case "upload":
-		*e = GetExamples1SourceEnum(s)
+		*e = GetExamples1SourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetExamples1SourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetExamples1SourceEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTDescribeNetworkInsightsAccessScopeAnalysesActionEnumDescribeNetworkInsightsAccessScopeAnalyses POSTDescribeNetworkInsightsAccessScopeAnalysesActionEnum = "DescribeNetworkInsightsAccessScopeAnalyses"
 )
 
+func (e POSTDescribeNetworkInsightsAccessScopeAnalysesActionEnum) ToPointer() *POSTDescribeNetworkInsightsAccessScopeAnalysesActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeNetworkInsightsAccessScopeAnalysesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeNetworkInsightsAccessScopeAnalyses":
-		*e = POSTDescribeNetworkInsightsAccessScopeAnalysesActionEnum(s)
+		*e = POSTDescribeNetworkInsightsAccessScopeAnalysesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeNetworkInsightsAccessScopeAnalysesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeNetworkInsightsAccessScopeAnalysesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeNetworkInsightsAccessScopeAnalysesVersionEnumTwoThousandAndSixteen1115 POSTDescribeNetworkInsightsAccessScopeAnalysesVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeNetworkInsightsAccessScopeAnalysesVersionEnum) ToPointer() *POSTDescribeNetworkInsightsAccessScopeAnalysesVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeNetworkInsightsAccessScopeAnalysesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeNetworkInsightsAccessScopeAnalysesVersionEnum(s)
+		*e = POSTDescribeNetworkInsightsAccessScopeAnalysesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeNetworkInsightsAccessScopeAnalysesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeNetworkInsightsAccessScopeAnalysesVersionEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	CallAsEnumDelegatedAdmin CallAsEnum = "DELEGATED_ADMIN"
 )
 
+func (e CallAsEnum) ToPointer() *CallAsEnum {
+	return &e
+}
+
 func (e *CallAsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SELF":
 		fallthrough
 	case "DELEGATED_ADMIN":
-		*e = CallAsEnum(s)
+		*e = CallAsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallAsEnum: %s", s)
+		return fmt.Errorf("invalid value for CallAsEnum: %v", v)
 	}
 }

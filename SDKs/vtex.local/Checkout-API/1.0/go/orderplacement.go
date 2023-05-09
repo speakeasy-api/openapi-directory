@@ -97,7 +97,10 @@ func (s *orderPlacement) PlaceOrder(ctx context.Context, request operations.Plac
 // After the creation of an order with this request, you have five minutes to send payment information and then request payment processing.
 func (s *orderPlacement) PlaceOrderFromExistingOrderForm(ctx context.Context, request operations.PlaceOrderFromExistingOrderFormRequest) (*operations.PlaceOrderFromExistingOrderFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/transaction", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/transaction", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -153,7 +156,10 @@ func (s *orderPlacement) PlaceOrderFromExistingOrderForm(ctx context.Context, re
 // > This request has to be made until five minutes after the [Place order](https://developers.vtex.com/docs/api-reference/checkout-api#put-/api/checkout/pub/orders) or [Place order from existing cart](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/transaction) request has been made, or else, the order will not be processed.
 func (s *orderPlacement) ProcessOrder(ctx context.Context, request operations.ProcessOrderRequest) (*operations.ProcessOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/gatewayCallback/{orderGroup}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/gatewayCallback/{orderGroup}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

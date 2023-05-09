@@ -19,12 +19,16 @@ const (
 	MeasurementsGetV2MeasurementsGetOrderByMeasOrderEnumDatetime MeasurementsGetV2MeasurementsGetOrderByMeasOrderEnum = "datetime"
 )
 
+func (e MeasurementsGetV2MeasurementsGetOrderByMeasOrderEnum) ToPointer() *MeasurementsGetV2MeasurementsGetOrderByMeasOrderEnum {
+	return &e
+}
+
 func (e *MeasurementsGetV2MeasurementsGetOrderByMeasOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "city":
 		fallthrough
 	case "country":
@@ -32,10 +36,10 @@ func (e *MeasurementsGetV2MeasurementsGetOrderByMeasOrderEnum) UnmarshalJSON(dat
 	case "location":
 		fallthrough
 	case "datetime":
-		*e = MeasurementsGetV2MeasurementsGetOrderByMeasOrderEnum(s)
+		*e = MeasurementsGetV2MeasurementsGetOrderByMeasOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MeasurementsGetV2MeasurementsGetOrderByMeasOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for MeasurementsGetV2MeasurementsGetOrderByMeasOrderEnum: %v", v)
 	}
 }
 
@@ -47,19 +51,23 @@ const (
 	MeasurementsGetV2MeasurementsGetSortSortEnumDesc MeasurementsGetV2MeasurementsGetSortSortEnum = "desc"
 )
 
+func (e MeasurementsGetV2MeasurementsGetSortSortEnum) ToPointer() *MeasurementsGetV2MeasurementsGetSortSortEnum {
+	return &e
+}
+
 func (e *MeasurementsGetV2MeasurementsGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = MeasurementsGetV2MeasurementsGetSortSortEnum(s)
+		*e = MeasurementsGetV2MeasurementsGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MeasurementsGetV2MeasurementsGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for MeasurementsGetV2MeasurementsGetSortSortEnum: %v", v)
 	}
 }
 

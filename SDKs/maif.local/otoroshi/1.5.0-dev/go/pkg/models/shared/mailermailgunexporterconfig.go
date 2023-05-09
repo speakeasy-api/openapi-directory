@@ -14,17 +14,21 @@ const (
 	MailerMailgunExporterConfigTypeEnumMailgun MailerMailgunExporterConfigTypeEnum = "mailgun"
 )
 
+func (e MailerMailgunExporterConfigTypeEnum) ToPointer() *MailerMailgunExporterConfigTypeEnum {
+	return &e
+}
+
 func (e *MailerMailgunExporterConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mailgun":
-		*e = MailerMailgunExporterConfigTypeEnum(s)
+		*e = MailerMailgunExporterConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailerMailgunExporterConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailerMailgunExporterConfigTypeEnum: %v", v)
 	}
 }
 

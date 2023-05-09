@@ -19,12 +19,16 @@ const (
 	PaymentMethodSetupInfoShopperInteractionEnumContAuth  PaymentMethodSetupInfoShopperInteractionEnum = "contAuth"
 )
 
+func (e PaymentMethodSetupInfoShopperInteractionEnum) ToPointer() *PaymentMethodSetupInfoShopperInteractionEnum {
+	return &e
+}
+
 func (e *PaymentMethodSetupInfoShopperInteractionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "eCommerce":
 		fallthrough
 	case "pos":
@@ -32,10 +36,10 @@ func (e *PaymentMethodSetupInfoShopperInteractionEnum) UnmarshalJSON(data []byte
 	case "moto":
 		fallthrough
 	case "contAuth":
-		*e = PaymentMethodSetupInfoShopperInteractionEnum(s)
+		*e = PaymentMethodSetupInfoShopperInteractionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentMethodSetupInfoShopperInteractionEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentMethodSetupInfoShopperInteractionEnum: %v", v)
 	}
 }
 
@@ -93,12 +97,16 @@ const (
 	PaymentMethodSetupInfoTypeEnumWechatpayPos    PaymentMethodSetupInfoTypeEnum = "wechatpay_pos"
 )
 
+func (e PaymentMethodSetupInfoTypeEnum) ToPointer() *PaymentMethodSetupInfoTypeEnum {
+	return &e
+}
+
 func (e *PaymentMethodSetupInfoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "afterpaytouch":
 		fallthrough
 	case "alipay":
@@ -194,10 +202,10 @@ func (e *PaymentMethodSetupInfoTypeEnum) UnmarshalJSON(data []byte) error {
 	case "wechatpay":
 		fallthrough
 	case "wechatpay_pos":
-		*e = PaymentMethodSetupInfoTypeEnum(s)
+		*e = PaymentMethodSetupInfoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentMethodSetupInfoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentMethodSetupInfoTypeEnum: %v", v)
 	}
 }
 

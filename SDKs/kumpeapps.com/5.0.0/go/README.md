@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/kumpeapps.com/5.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.KkidAllowanceGetRequest{
-        KidUserID: 548814,
-        TransactionDays: 592845,
-    }
-
     ctx := context.Background()
-    res, err := s.KKid.KkidAllowanceGet(ctx, req, operations.KkidAllowanceGetSecurity{
+    res, err := s.KKid.KkidAllowanceGet(ctx, operations.KkidAllowanceGetRequest{
+        KidUserID: 548814,
+        TransactionDays: sdk.Int64(592845),
+    }, operations.KkidAllowanceGetSecurity{
         AuthKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -48,44 +45,44 @@ func main() {
 ## Available Resources and Operations
 
 
-### KKid
+### [KKid](docs/kkid/README.md)
 
-* `KkidAllowanceGet` - returns allowance balance and allowance transactions
-* `KkidAllowancePost` - adds new allowance transaction to kidUserID
-* `KkidApnsPost` - subscribes/unsubscribes/registers for apns push notifications
-* `KkidChorelistDelete` - deletes chore for given chore id
-* `KkidChorelistGet` - returns list of chores for given user
-* `KkidChorelistPost` - adds chore for given user
-* `KkidChorelistPut` - updates chore for given chore id
-* `KkidMasteruserPost` - adds new master user account
-* `KkidShareGet` - Create Share Link
-* `KkidUserGet` - Gets user info
-* `KkidUserlistDelete` - deletes user
-* `KkidUserlistGet` - returns list of users
-* `KkidUserlistPost` - adds new child user
-* `KkidUserlistPut` - updates user
-* `KkidWishlistDelete` - Delete item from wishlist
-* `KkidWishlistGet` - Get list of wishlist items
-* `KkidWishlistPost` - Add item to kid's wishlist
-* `KkidWishlistPut` - Update item on kid's wishlist
+* [KkidAllowanceGet](docs/kkid/README.md#kkidallowanceget) - returns allowance balance and allowance transactions
+* [KkidAllowancePost](docs/kkid/README.md#kkidallowancepost) - adds new allowance transaction to kidUserID
+* [KkidApnsPost](docs/kkid/README.md#kkidapnspost) - subscribes/unsubscribes/registers for apns push notifications
+* [KkidChorelistDelete](docs/kkid/README.md#kkidchorelistdelete) - deletes chore for given chore id
+* [KkidChorelistGet](docs/kkid/README.md#kkidchorelistget) - returns list of chores for given user
+* [KkidChorelistPost](docs/kkid/README.md#kkidchorelistpost) - adds chore for given user
+* [KkidChorelistPut](docs/kkid/README.md#kkidchorelistput) - updates chore for given chore id
+* [KkidMasteruserPost](docs/kkid/README.md#kkidmasteruserpost) - adds new master user account
+* [KkidShareGet](docs/kkid/README.md#kkidshareget) - Create Share Link
+* [KkidUserGet](docs/kkid/README.md#kkiduserget) - Gets user info
+* [KkidUserlistDelete](docs/kkid/README.md#kkiduserlistdelete) - deletes user
+* [KkidUserlistGet](docs/kkid/README.md#kkiduserlistget) - returns list of users
+* [KkidUserlistPost](docs/kkid/README.md#kkiduserlistpost) - adds new child user
+* [KkidUserlistPut](docs/kkid/README.md#kkiduserlistput) - updates user
+* [KkidWishlistDelete](docs/kkid/README.md#kkidwishlistdelete) - Delete item from wishlist
+* [KkidWishlistGet](docs/kkid/README.md#kkidwishlistget) - Get list of wishlist items
+* [KkidWishlistPost](docs/kkid/README.md#kkidwishlistpost) - Add item to kid's wishlist
+* [KkidWishlistPut](docs/kkid/README.md#kkidwishlistput) - Update item on kid's wishlist
 
-### Authentication
+### [Authentication](docs/authentication/README.md)
 
-* `AppkeyPatch` - Compromise app key
-* `AppkeyPost` - Request app key
-* `AppkeyPut` - Deactivate app key
-* `AuthAppkeyPatch` - Compromise app key
-* `AuthAppkeyPost` - Request app key
-* `AuthAppkeyPut` - Deactivate app key
-* `AuthAuthkeyGet` - Request auth key for user (login user)
-* `AuthAuthkeyPatch` - Compromise auth key
-* `AuthAuthkeyPost` - Request auth key for user (login user)
-* `AuthAuthkeyPut` - Deactivate auth key (logout)
-* `AuthVerifyotpGet` - Verifies YubiKey OTP for authenticated user
-* `AuthkeyGet` - Request auth key for user (login user)
-* `AuthkeyPatch` - Compromise auth key
-* `AuthkeyPost` - Request auth key for user (login user)
-* `AuthkeyPut` - Deactivate auth key (logout)
+* [~~AppkeyPatch~~](docs/authentication/README.md#appkeypatch) - Compromise app key :warning: **Deprecated**
+* [~~AppkeyPost~~](docs/authentication/README.md#appkeypost) - Request app key :warning: **Deprecated**
+* [~~AppkeyPut~~](docs/authentication/README.md#appkeyput) - Deactivate app key :warning: **Deprecated**
+* [AuthAppkeyPatch](docs/authentication/README.md#authappkeypatch) - Compromise app key
+* [AuthAppkeyPost](docs/authentication/README.md#authappkeypost) - Request app key
+* [AuthAppkeyPut](docs/authentication/README.md#authappkeyput) - Deactivate app key
+* [AuthAuthkeyGet](docs/authentication/README.md#authauthkeyget) - Request auth key for user (login user)
+* [AuthAuthkeyPatch](docs/authentication/README.md#authauthkeypatch) - Compromise auth key
+* [AuthAuthkeyPost](docs/authentication/README.md#authauthkeypost) - Request auth key for user (login user)
+* [AuthAuthkeyPut](docs/authentication/README.md#authauthkeyput) - Deactivate auth key (logout)
+* [AuthVerifyotpGet](docs/authentication/README.md#authverifyotpget) - Verifies YubiKey OTP for authenticated user
+* [~~AuthkeyGet~~](docs/authentication/README.md#authkeyget) - Request auth key for user (login user) :warning: **Deprecated**
+* [~~AuthkeyPatch~~](docs/authentication/README.md#authkeypatch) - Compromise auth key :warning: **Deprecated**
+* [~~AuthkeyPost~~](docs/authentication/README.md#authkeypost) - Request auth key for user (login user) :warning: **Deprecated**
+* [~~AuthkeyPut~~](docs/authentication/README.md#authkeyput) - Deactivate auth key (logout) :warning: **Deprecated**
 <!-- End SDK Available Operations -->
 
 ### Maturity

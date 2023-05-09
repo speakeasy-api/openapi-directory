@@ -17,21 +17,25 @@ const (
 	PostLoginSampleSourceEnumWeb     PostLoginSampleSourceEnum = "web"
 )
 
+func (e PostLoginSampleSourceEnum) ToPointer() *PostLoginSampleSourceEnum {
+	return &e
+}
+
 func (e *PostLoginSampleSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iOS":
 		fallthrough
 	case "android":
 		fallthrough
 	case "web":
-		*e = PostLoginSampleSourceEnum(s)
+		*e = PostLoginSampleSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostLoginSampleSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for PostLoginSampleSourceEnum: %v", v)
 	}
 }
 

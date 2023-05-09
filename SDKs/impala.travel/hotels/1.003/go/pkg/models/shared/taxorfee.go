@@ -16,21 +16,25 @@ const (
 	TaxOrFeeCategoryEnumOther   TaxOrFeeCategoryEnum = "OTHER"
 )
 
+func (e TaxOrFeeCategoryEnum) ToPointer() *TaxOrFeeCategoryEnum {
+	return &e
+}
+
 func (e *TaxOrFeeCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VAT":
 		fallthrough
 	case "CITY_TAX":
 		fallthrough
 	case "OTHER":
-		*e = TaxOrFeeCategoryEnum(s)
+		*e = TaxOrFeeCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaxOrFeeCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for TaxOrFeeCategoryEnum: %v", v)
 	}
 }
 

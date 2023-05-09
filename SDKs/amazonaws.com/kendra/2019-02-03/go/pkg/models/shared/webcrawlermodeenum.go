@@ -15,20 +15,24 @@ const (
 	WebCrawlerModeEnumEverything WebCrawlerModeEnum = "EVERYTHING"
 )
 
+func (e WebCrawlerModeEnum) ToPointer() *WebCrawlerModeEnum {
+	return &e
+}
+
 func (e *WebCrawlerModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HOST_ONLY":
 		fallthrough
 	case "SUBDOMAINS":
 		fallthrough
 	case "EVERYTHING":
-		*e = WebCrawlerModeEnum(s)
+		*e = WebCrawlerModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebCrawlerModeEnum: %s", s)
+		return fmt.Errorf("invalid value for WebCrawlerModeEnum: %v", v)
 	}
 }

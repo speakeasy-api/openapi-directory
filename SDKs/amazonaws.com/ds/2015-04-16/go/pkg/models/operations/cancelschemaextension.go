@@ -16,17 +16,21 @@ const (
 	CancelSchemaExtensionXAmzTargetEnumDirectoryService20150416CancelSchemaExtension CancelSchemaExtensionXAmzTargetEnum = "DirectoryService_20150416.CancelSchemaExtension"
 )
 
+func (e CancelSchemaExtensionXAmzTargetEnum) ToPointer() *CancelSchemaExtensionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CancelSchemaExtensionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.CancelSchemaExtension":
-		*e = CancelSchemaExtensionXAmzTargetEnum(s)
+		*e = CancelSchemaExtensionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelSchemaExtensionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelSchemaExtensionXAmzTargetEnum: %v", v)
 	}
 }
 

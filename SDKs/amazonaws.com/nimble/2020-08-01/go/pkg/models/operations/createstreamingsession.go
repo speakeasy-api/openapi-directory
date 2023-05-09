@@ -28,12 +28,16 @@ const (
 	CreateStreamingSessionRequestBodyEc2InstanceTypeEnumG516xlarge   CreateStreamingSessionRequestBodyEc2InstanceTypeEnum = "g5.16xlarge"
 )
 
+func (e CreateStreamingSessionRequestBodyEc2InstanceTypeEnum) ToPointer() *CreateStreamingSessionRequestBodyEc2InstanceTypeEnum {
+	return &e
+}
+
 func (e *CreateStreamingSessionRequestBodyEc2InstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "g4dn.xlarge":
 		fallthrough
 	case "g4dn.2xlarge":
@@ -59,10 +63,10 @@ func (e *CreateStreamingSessionRequestBodyEc2InstanceTypeEnum) UnmarshalJSON(dat
 	case "g5.8xlarge":
 		fallthrough
 	case "g5.16xlarge":
-		*e = CreateStreamingSessionRequestBodyEc2InstanceTypeEnum(s)
+		*e = CreateStreamingSessionRequestBodyEc2InstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateStreamingSessionRequestBodyEc2InstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateStreamingSessionRequestBodyEc2InstanceTypeEnum: %v", v)
 	}
 }
 

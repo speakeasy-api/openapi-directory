@@ -15,17 +15,21 @@ const (
 	GETUpdateRoleDescriptionActionEnumUpdateRoleDescription GETUpdateRoleDescriptionActionEnum = "UpdateRoleDescription"
 )
 
+func (e GETUpdateRoleDescriptionActionEnum) ToPointer() *GETUpdateRoleDescriptionActionEnum {
+	return &e
+}
+
 func (e *GETUpdateRoleDescriptionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateRoleDescription":
-		*e = GETUpdateRoleDescriptionActionEnum(s)
+		*e = GETUpdateRoleDescriptionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateRoleDescriptionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateRoleDescriptionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUpdateRoleDescriptionVersionEnumTwoThousandAndTen0508 GETUpdateRoleDescriptionVersionEnum = "2010-05-08"
 )
 
+func (e GETUpdateRoleDescriptionVersionEnum) ToPointer() *GETUpdateRoleDescriptionVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateRoleDescriptionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETUpdateRoleDescriptionVersionEnum(s)
+		*e = GETUpdateRoleDescriptionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateRoleDescriptionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateRoleDescriptionVersionEnum: %v", v)
 	}
 }
 

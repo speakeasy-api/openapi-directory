@@ -22,17 +22,21 @@ const (
 	UpdateTransactionRequestBodySourceEnumShop UpdateTransactionRequestBodySourceEnum = "SHOP"
 )
 
+func (e UpdateTransactionRequestBodySourceEnum) ToPointer() *UpdateTransactionRequestBodySourceEnum {
+	return &e
+}
+
 func (e *UpdateTransactionRequestBodySourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHOP":
-		*e = UpdateTransactionRequestBodySourceEnum(s)
+		*e = UpdateTransactionRequestBodySourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateTransactionRequestBodySourceEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateTransactionRequestBodySourceEnum: %v", v)
 	}
 }
 
@@ -44,21 +48,25 @@ const (
 	UpdateTransactionRequestBodyStatusEnumPending   UpdateTransactionRequestBodyStatusEnum = "PENDING"
 )
 
+func (e UpdateTransactionRequestBodyStatusEnum) ToPointer() *UpdateTransactionRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *UpdateTransactionRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANCELLED":
 		fallthrough
 	case "CLOSED":
 		fallthrough
 	case "PENDING":
-		*e = UpdateTransactionRequestBodyStatusEnum(s)
+		*e = UpdateTransactionRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateTransactionRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateTransactionRequestBodyStatusEnum: %v", v)
 	}
 }
 

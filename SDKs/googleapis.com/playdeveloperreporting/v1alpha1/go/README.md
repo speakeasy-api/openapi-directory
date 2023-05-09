@@ -13,37 +13,35 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/playdevelo
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PlaydeveloperreportingAnomaliesListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Filter: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        PageSize: 423655,
-        PageToken: "error",
-        Parent: "deserunt",
-        PrettyPrint: false,
-        QuotaUser: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-    }
-
     ctx := context.Background()
-    res, err := s.Anomalies.PlaydeveloperreportingAnomaliesList(ctx, req, operations.PlaydeveloperreportingAnomaliesListSecurity{
+    res, err := s.Anomalies.PlaydeveloperreportingAnomaliesList(ctx, operations.PlaydeveloperreportingAnomaliesListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Filter: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PageSize: sdk.Int64(423655),
+        PageToken: sdk.String("error"),
+        Parent: "deserunt",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("suscipit"),
+        UploadType: sdk.String("iure"),
+        UploadProtocol: sdk.String("magnam"),
+    }, operations.PlaydeveloperreportingAnomaliesListSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -62,16 +60,16 @@ func main() {
 ## Available Resources and Operations
 
 
-### Anomalies
+### [Anomalies](docs/anomalies/README.md)
 
-* `PlaydeveloperreportingAnomaliesList` - Lists anomalies in any of the datasets.
+* [PlaydeveloperreportingAnomaliesList](docs/anomalies/README.md#playdeveloperreportinganomalieslist) - Lists anomalies in any of the datasets.
 
-### Vitals
+### [Vitals](docs/vitals/README.md)
 
-* `PlaydeveloperreportingVitalsErrorsIssuesSearch` - Searches all error issues in which reports have been grouped.
-* `PlaydeveloperreportingVitalsErrorsReportsSearch` - Searches all error reports received for an app.
-* `PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet` - Describes the properties of the metric set.
-* `PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuery` - Queries the metrics in the metric set.
+* [PlaydeveloperreportingVitalsErrorsIssuesSearch](docs/vitals/README.md#playdeveloperreportingvitalserrorsissuessearch) - Searches all error issues in which reports have been grouped.
+* [PlaydeveloperreportingVitalsErrorsReportsSearch](docs/vitals/README.md#playdeveloperreportingvitalserrorsreportssearch) - Searches all error reports received for an app.
+* [PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet](docs/vitals/README.md#playdeveloperreportingvitalsstuckbackgroundwakelockrateget) - Describes the properties of the metric set.
+* [PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuery](docs/vitals/README.md#playdeveloperreportingvitalsstuckbackgroundwakelockratequery) - Queries the metrics in the metric set.
 <!-- End SDK Available Operations -->
 
 ### Maturity

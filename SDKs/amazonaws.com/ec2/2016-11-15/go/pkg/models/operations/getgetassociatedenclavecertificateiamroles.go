@@ -15,17 +15,21 @@ const (
 	GETGETAssociatedEnclaveCertificateIamRolesActionEnumGetAssociatedEnclaveCertificateIamRoles GETGETAssociatedEnclaveCertificateIamRolesActionEnum = "GetAssociatedEnclaveCertificateIamRoles"
 )
 
+func (e GETGETAssociatedEnclaveCertificateIamRolesActionEnum) ToPointer() *GETGETAssociatedEnclaveCertificateIamRolesActionEnum {
+	return &e
+}
+
 func (e *GETGETAssociatedEnclaveCertificateIamRolesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAssociatedEnclaveCertificateIamRoles":
-		*e = GETGETAssociatedEnclaveCertificateIamRolesActionEnum(s)
+		*e = GETGETAssociatedEnclaveCertificateIamRolesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAssociatedEnclaveCertificateIamRolesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAssociatedEnclaveCertificateIamRolesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETAssociatedEnclaveCertificateIamRolesVersionEnumTwoThousandAndSixteen1115 GETGETAssociatedEnclaveCertificateIamRolesVersionEnum = "2016-11-15"
 )
 
+func (e GETGETAssociatedEnclaveCertificateIamRolesVersionEnum) ToPointer() *GETGETAssociatedEnclaveCertificateIamRolesVersionEnum {
+	return &e
+}
+
 func (e *GETGETAssociatedEnclaveCertificateIamRolesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETAssociatedEnclaveCertificateIamRolesVersionEnum(s)
+		*e = GETGETAssociatedEnclaveCertificateIamRolesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAssociatedEnclaveCertificateIamRolesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAssociatedEnclaveCertificateIamRolesVersionEnum: %v", v)
 	}
 }
 

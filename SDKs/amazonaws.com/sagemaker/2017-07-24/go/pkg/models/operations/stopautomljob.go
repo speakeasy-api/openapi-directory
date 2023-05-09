@@ -16,17 +16,21 @@ const (
 	StopAutoMLJobXAmzTargetEnumSageMakerStopAutoMlJob StopAutoMLJobXAmzTargetEnum = "SageMaker.StopAutoMLJob"
 )
 
+func (e StopAutoMLJobXAmzTargetEnum) ToPointer() *StopAutoMLJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopAutoMLJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.StopAutoMLJob":
-		*e = StopAutoMLJobXAmzTargetEnum(s)
+		*e = StopAutoMLJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopAutoMLJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopAutoMLJobXAmzTargetEnum: %v", v)
 	}
 }
 

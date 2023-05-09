@@ -17,12 +17,16 @@ const (
 	TargetPlatformArchEnumArmEabihf TargetPlatformArchEnum = "ARM_EABIHF"
 )
 
+func (e TargetPlatformArchEnum) ToPointer() *TargetPlatformArchEnum {
+	return &e
+}
+
 func (e *TargetPlatformArchEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "X86_64":
 		fallthrough
 	case "X86":
@@ -32,9 +36,9 @@ func (e *TargetPlatformArchEnum) UnmarshalJSON(data []byte) error {
 	case "ARM_EABI":
 		fallthrough
 	case "ARM_EABIHF":
-		*e = TargetPlatformArchEnum(s)
+		*e = TargetPlatformArchEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetPlatformArchEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetPlatformArchEnum: %v", v)
 	}
 }

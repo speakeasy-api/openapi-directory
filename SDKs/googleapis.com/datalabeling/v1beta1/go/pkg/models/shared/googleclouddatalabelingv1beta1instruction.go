@@ -18,12 +18,16 @@ const (
 	GoogleCloudDatalabelingV1beta1InstructionDataTypeEnumGeneralData         GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum = "GENERAL_DATA"
 )
 
+func (e GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum) ToPointer() *GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IMAGE":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum) UnmarshalJSON(da
 	case "TEXT":
 		fallthrough
 	case "GENERAL_DATA":
-		*e = GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1InstructionDataTypeEnum: %v", v)
 	}
 }
 

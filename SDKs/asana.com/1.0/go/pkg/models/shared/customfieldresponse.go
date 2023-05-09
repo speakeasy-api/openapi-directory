@@ -149,12 +149,16 @@ const (
 	CustomFieldResponseAsanaCreatedFieldEnumWordCount                  CustomFieldResponseAsanaCreatedFieldEnum = "word_count"
 )
 
+func (e CustomFieldResponseAsanaCreatedFieldEnum) ToPointer() *CustomFieldResponseAsanaCreatedFieldEnum {
+	return &e
+}
+
 func (e *CustomFieldResponseAsanaCreatedFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a_v_requirements":
 		fallthrough
 	case "account_name":
@@ -426,10 +430,10 @@ func (e *CustomFieldResponseAsanaCreatedFieldEnum) UnmarshalJSON(data []byte) er
 	case "vendor_type":
 		fallthrough
 	case "word_count":
-		*e = CustomFieldResponseAsanaCreatedFieldEnum(s)
+		*e = CustomFieldResponseAsanaCreatedFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldResponseAsanaCreatedFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldResponseAsanaCreatedFieldEnum: %v", v)
 	}
 }
 
@@ -441,19 +445,23 @@ const (
 	CustomFieldResponseCustomLabelPositionEnumSuffix CustomFieldResponseCustomLabelPositionEnum = "suffix"
 )
 
+func (e CustomFieldResponseCustomLabelPositionEnum) ToPointer() *CustomFieldResponseCustomLabelPositionEnum {
+	return &e
+}
+
 func (e *CustomFieldResponseCustomLabelPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "prefix":
 		fallthrough
 	case "suffix":
-		*e = CustomFieldResponseCustomLabelPositionEnum(s)
+		*e = CustomFieldResponseCustomLabelPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldResponseCustomLabelPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldResponseCustomLabelPositionEnum: %v", v)
 	}
 }
 
@@ -500,12 +508,16 @@ const (
 	CustomFieldResponseFormatEnumNone       CustomFieldResponseFormatEnum = "none"
 )
 
+func (e CustomFieldResponseFormatEnum) ToPointer() *CustomFieldResponseFormatEnum {
+	return &e
+}
+
 func (e *CustomFieldResponseFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "currency":
 		fallthrough
 	case "identifier":
@@ -515,10 +527,10 @@ func (e *CustomFieldResponseFormatEnum) UnmarshalJSON(data []byte) error {
 	case "custom":
 		fallthrough
 	case "none":
-		*e = CustomFieldResponseFormatEnum(s)
+		*e = CustomFieldResponseFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldResponseFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldResponseFormatEnum: %v", v)
 	}
 }
 
@@ -534,12 +546,16 @@ const (
 	CustomFieldResponseResourceSubtypeEnumPeople    CustomFieldResponseResourceSubtypeEnum = "people"
 )
 
+func (e CustomFieldResponseResourceSubtypeEnum) ToPointer() *CustomFieldResponseResourceSubtypeEnum {
+	return &e
+}
+
 func (e *CustomFieldResponseResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "enum":
@@ -551,10 +567,10 @@ func (e *CustomFieldResponseResourceSubtypeEnum) UnmarshalJSON(data []byte) erro
 	case "date":
 		fallthrough
 	case "people":
-		*e = CustomFieldResponseResourceSubtypeEnum(s)
+		*e = CustomFieldResponseResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldResponseResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldResponseResourceSubtypeEnum: %v", v)
 	}
 }
 
@@ -568,12 +584,16 @@ const (
 	CustomFieldResponseTypeEnumNumber    CustomFieldResponseTypeEnum = "number"
 )
 
+func (e CustomFieldResponseTypeEnum) ToPointer() *CustomFieldResponseTypeEnum {
+	return &e
+}
+
 func (e *CustomFieldResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "enum":
@@ -581,10 +601,10 @@ func (e *CustomFieldResponseTypeEnum) UnmarshalJSON(data []byte) error {
 	case "multi_enum":
 		fallthrough
 	case "number":
-		*e = CustomFieldResponseTypeEnum(s)
+		*e = CustomFieldResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldResponseTypeEnum: %v", v)
 	}
 }
 

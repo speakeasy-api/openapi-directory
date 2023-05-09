@@ -15,18 +15,22 @@ const (
 	EmployeeStatusEnumTerminated EmployeeStatusEnum = "TERMINATED"
 )
 
+func (e EmployeeStatusEnum) ToPointer() *EmployeeStatusEnum {
+	return &e
+}
+
 func (e *EmployeeStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "TERMINATED":
-		*e = EmployeeStatusEnum(s)
+		*e = EmployeeStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EmployeeStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EmployeeStatusEnum: %v", v)
 	}
 }

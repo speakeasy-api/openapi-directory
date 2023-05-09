@@ -17,12 +17,16 @@ const (
 	ProvisionedProductStatusEnumPlanInProgress ProvisionedProductStatusEnum = "PLAN_IN_PROGRESS"
 )
 
+func (e ProvisionedProductStatusEnum) ToPointer() *ProvisionedProductStatusEnum {
+	return &e
+}
+
 func (e *ProvisionedProductStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "UNDER_CHANGE":
@@ -32,9 +36,9 @@ func (e *ProvisionedProductStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ERROR":
 		fallthrough
 	case "PLAN_IN_PROGRESS":
-		*e = ProvisionedProductStatusEnum(s)
+		*e = ProvisionedProductStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionedProductStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionedProductStatusEnum: %v", v)
 	}
 }

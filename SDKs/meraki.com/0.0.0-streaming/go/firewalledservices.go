@@ -34,7 +34,10 @@ func newFirewalledServices(defaultClient, securityClient HTTPClient, serverURL, 
 // Return the accessibility settings of the given service ('ICMP', 'web', or 'SNMP')
 func (s *firewalledServices) GetNetworkFirewalledService(ctx context.Context, request operations.GetNetworkFirewalledServiceRequest) (*operations.GetNetworkFirewalledServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firewalledServices/{service}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firewalledServices/{service}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *firewalledServices) GetNetworkFirewalledService(ctx context.Context, re
 // List the appliance services and their accessibility rules
 func (s *firewalledServices) GetNetworkFirewalledServices(ctx context.Context, request operations.GetNetworkFirewalledServicesRequest) (*operations.GetNetworkFirewalledServicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firewalledServices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firewalledServices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -114,61 +120,6 @@ func (s *firewalledServices) GetNetworkFirewalledServices(ctx context.Context, r
 			}
 
 			res.GetNetworkFirewalledServices200ApplicationJSONObjects = out
-		}
-	}
-
-	return res, nil
-}
-
-// UpdateNetworkFirewalledService - Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
-// Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
-func (s *firewalledServices) UpdateNetworkFirewalledService(ctx context.Context, request operations.UpdateNetworkFirewalledServiceRequest) (*operations.UpdateNetworkFirewalledServiceResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/firewalledServices/{service}", request, nil)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	client := s.securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.UpdateNetworkFirewalledServiceResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.UpdateNetworkFirewalledService200ApplicationJSONObject = out
 		}
 	}
 

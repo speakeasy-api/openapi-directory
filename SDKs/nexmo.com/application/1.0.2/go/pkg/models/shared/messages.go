@@ -14,19 +14,23 @@ const (
 	MessagesWebhooksEndpointTypeEnumStatusURL  MessagesWebhooksEndpointTypeEnum = "status_url"
 )
 
+func (e MessagesWebhooksEndpointTypeEnum) ToPointer() *MessagesWebhooksEndpointTypeEnum {
+	return &e
+}
+
 func (e *MessagesWebhooksEndpointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inbound_url":
 		fallthrough
 	case "status_url":
-		*e = MessagesWebhooksEndpointTypeEnum(s)
+		*e = MessagesWebhooksEndpointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessagesWebhooksEndpointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MessagesWebhooksEndpointTypeEnum: %v", v)
 	}
 }
 
@@ -38,19 +42,23 @@ const (
 	MessagesWebhooksHTTPMethodEnumPost MessagesWebhooksHTTPMethodEnum = "POST"
 )
 
+func (e MessagesWebhooksHTTPMethodEnum) ToPointer() *MessagesWebhooksHTTPMethodEnum {
+	return &e
+}
+
 func (e *MessagesWebhooksHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "POST":
-		*e = MessagesWebhooksHTTPMethodEnum(s)
+		*e = MessagesWebhooksHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessagesWebhooksHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for MessagesWebhooksHTTPMethodEnum: %v", v)
 	}
 }
 

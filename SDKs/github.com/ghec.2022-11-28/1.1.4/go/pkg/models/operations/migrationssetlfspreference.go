@@ -17,19 +17,23 @@ const (
 	MigrationsSetLfsPreferenceRequestBodyUseLfsEnumOptOut MigrationsSetLfsPreferenceRequestBodyUseLfsEnum = "opt_out"
 )
 
+func (e MigrationsSetLfsPreferenceRequestBodyUseLfsEnum) ToPointer() *MigrationsSetLfsPreferenceRequestBodyUseLfsEnum {
+	return &e
+}
+
 func (e *MigrationsSetLfsPreferenceRequestBodyUseLfsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "opt_in":
 		fallthrough
 	case "opt_out":
-		*e = MigrationsSetLfsPreferenceRequestBodyUseLfsEnum(s)
+		*e = MigrationsSetLfsPreferenceRequestBodyUseLfsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationsSetLfsPreferenceRequestBodyUseLfsEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationsSetLfsPreferenceRequestBodyUseLfsEnum: %v", v)
 	}
 }
 

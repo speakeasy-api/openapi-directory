@@ -13,30 +13,28 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/qualtrics.com/0.2/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateContactInMailinglistRequest{
+    ctx := context.Background()
+    res, err := s.CreateContactInMailinglist(ctx, operations.CreateContactInMailinglistRequest{
         CreateContactInMailingList: shared.CreateContactInMailingList{
-            Email: "Larue_Rau85@yahoo.com",
-            FirstName: "Karley",
-            LastName: "Stamm",
-            Unsubscribed: false,
+            Email: sdk.String("Larue_Rau85@yahoo.com"),
+            FirstName: sdk.String("Karley"),
+            LastName: sdk.String("Stamm"),
+            Unsubscribed: sdk.Bool(false),
         },
         DirectoryID: "vel",
         MailingListID: "error",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateContactInMailinglist(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,16 +49,16 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateContactInMailinglist` - Create contact in mailing list
-* `GenerateDistributionLinks` - Generate distribution links
-* `GetDistributions` - Get distributions for survey
-* `GetEventSubscriptions` - Get event subscriptions
-* `GetSurvey` - Get survey
-* `Retrievedistributionlinks` - Retrieve distribution links
-* `WebhookDelete` - Remove subscription to response event
-* `WhenAResponseIsReceived` - Triggers when a response is submitted to a qualtrics survey
+* [CreateContactInMailinglist](docs/sdk/README.md#createcontactinmailinglist) - Create contact in mailing list
+* [GenerateDistributionLinks](docs/sdk/README.md#generatedistributionlinks) - Generate distribution links
+* [GetDistributions](docs/sdk/README.md#getdistributions) - Get distributions for survey
+* [GetEventSubscriptions](docs/sdk/README.md#geteventsubscriptions) - Get event subscriptions
+* [GetSurvey](docs/sdk/README.md#getsurvey) - Get survey
+* [Retrievedistributionlinks](docs/sdk/README.md#retrievedistributionlinks) - Retrieve distribution links
+* [WebhookDelete](docs/sdk/README.md#webhookdelete) - Remove subscription to response event
+* [WhenAResponseIsReceived](docs/sdk/README.md#whenaresponseisreceived) - Triggers when a response is submitted to a qualtrics survey
 <!-- End SDK Available Operations -->
 
 ### Maturity

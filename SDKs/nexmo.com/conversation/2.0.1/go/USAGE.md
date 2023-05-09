@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,17 +17,15 @@ func main() {
         }),
     )
 
-    req := operations.CreateConversationRequestBody{
-        DisplayName: "Customer Chat",
-        ImageURL: "https://example.com/image.png",
-        Name: "customer_chat",
-        Properties: &shared.ConversationProperties{
-            TTL: 60,
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.Conversation.CreateConversation(ctx, req)
+    res, err := s.Conversation.CreateConversation(ctx, operations.CreateConversationRequestBody{
+        DisplayName: sdk.String("Customer Chat"),
+        ImageURL: sdk.String("https://example.com/image.png"),
+        Name: sdk.String("customer_chat"),
+        Properties: &shared.ConversationProperties{
+            TTL: sdk.Float64(60),
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -22,19 +22,23 @@ const (
 	DfareportingInventoryItemsListSortFieldEnumName DfareportingInventoryItemsListSortFieldEnum = "NAME"
 )
 
+func (e DfareportingInventoryItemsListSortFieldEnum) ToPointer() *DfareportingInventoryItemsListSortFieldEnum {
+	return &e
+}
+
 func (e *DfareportingInventoryItemsListSortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID":
 		fallthrough
 	case "NAME":
-		*e = DfareportingInventoryItemsListSortFieldEnum(s)
+		*e = DfareportingInventoryItemsListSortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingInventoryItemsListSortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingInventoryItemsListSortFieldEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	DfareportingInventoryItemsListSortOrderEnumDescending DfareportingInventoryItemsListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingInventoryItemsListSortOrderEnum) ToPointer() *DfareportingInventoryItemsListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingInventoryItemsListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingInventoryItemsListSortOrderEnum(s)
+		*e = DfareportingInventoryItemsListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingInventoryItemsListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingInventoryItemsListSortOrderEnum: %v", v)
 	}
 }
 
@@ -70,19 +78,23 @@ const (
 	DfareportingInventoryItemsListTypeEnumPlanningPlacementTypeCredit  DfareportingInventoryItemsListTypeEnum = "PLANNING_PLACEMENT_TYPE_CREDIT"
 )
 
+func (e DfareportingInventoryItemsListTypeEnum) ToPointer() *DfareportingInventoryItemsListTypeEnum {
+	return &e
+}
+
 func (e *DfareportingInventoryItemsListTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLANNING_PLACEMENT_TYPE_REGULAR":
 		fallthrough
 	case "PLANNING_PLACEMENT_TYPE_CREDIT":
-		*e = DfareportingInventoryItemsListTypeEnum(s)
+		*e = DfareportingInventoryItemsListTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingInventoryItemsListTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingInventoryItemsListTypeEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newDevices(defaultClient, securityClient HTTPClient, serverURL, language, s
 // AndroidenterpriseDevicesForceReportUpload - Uploads a report containing any changes in app states on the device since the last report was generated. You can call this method up to 3 times every 24 hours for a given device. If you exceed the quota, then the Google Play EMM API returns HTTP 429 Too Many Requests.
 func (s *devices) AndroidenterpriseDevicesForceReportUpload(ctx context.Context, request operations.AndroidenterpriseDevicesForceReportUploadRequest, security operations.AndroidenterpriseDevicesForceReportUploadSecurity) (*operations.AndroidenterpriseDevicesForceReportUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/forceReportUpload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/forceReportUpload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *devices) AndroidenterpriseDevicesForceReportUpload(ctx context.Context,
 // AndroidenterpriseDevicesGet - Retrieves the details of a device.
 func (s *devices) AndroidenterpriseDevicesGet(ctx context.Context, request operations.AndroidenterpriseDevicesGetRequest, security operations.AndroidenterpriseDevicesGetSecurity) (*operations.AndroidenterpriseDevicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *devices) AndroidenterpriseDevicesGet(ctx context.Context, request opera
 // AndroidenterpriseDevicesGetState - Retrieves whether a device's access to Google services is enabled or disabled. The device state takes effect only if enforcing EMM policies on Android devices is enabled in the Google Admin Console. Otherwise, the device state is ignored and all devices are allowed access to Google services. This is only supported for Google-managed users.
 func (s *devices) AndroidenterpriseDevicesGetState(ctx context.Context, request operations.AndroidenterpriseDevicesGetStateRequest, security operations.AndroidenterpriseDevicesGetStateSecurity) (*operations.AndroidenterpriseDevicesGetStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/state", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/state", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +178,10 @@ func (s *devices) AndroidenterpriseDevicesGetState(ctx context.Context, request 
 // AndroidenterpriseDevicesList - Retrieves the IDs of all of a user's devices.
 func (s *devices) AndroidenterpriseDevicesList(ctx context.Context, request operations.AndroidenterpriseDevicesListRequest, security operations.AndroidenterpriseDevicesListSecurity) (*operations.AndroidenterpriseDevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +229,10 @@ func (s *devices) AndroidenterpriseDevicesList(ctx context.Context, request oper
 // AndroidenterpriseDevicesSetState - Sets whether a device's access to Google services is enabled or disabled. The device state takes effect only if enforcing EMM policies on Android devices is enabled in the Google Admin Console. Otherwise, the device state is ignored and all devices are allowed access to Google services. This is only supported for Google-managed users.
 func (s *devices) AndroidenterpriseDevicesSetState(ctx context.Context, request operations.AndroidenterpriseDevicesSetStateRequest, security operations.AndroidenterpriseDevicesSetStateSecurity) (*operations.AndroidenterpriseDevicesSetStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/state", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}/state", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeviceState", "json")
 	if err != nil {
@@ -272,7 +287,10 @@ func (s *devices) AndroidenterpriseDevicesSetState(ctx context.Context, request 
 // AndroidenterpriseDevicesUpdate - Updates the device policy. To ensure the policy is properly enforced, you need to prevent unmanaged accounts from accessing Google Play by setting the allowed_accounts in the managed configuration for the Google Play package. See restrict accounts in Google Play. When provisioning a new device, you should set the device policy using this method before adding the managed Google Play Account to the device, otherwise the policy will not be applied for a short period of time after adding the account to the device.
 func (s *devices) AndroidenterpriseDevicesUpdate(ctx context.Context, request operations.AndroidenterpriseDevicesUpdateRequest, security operations.AndroidenterpriseDevicesUpdateSecurity) (*operations.AndroidenterpriseDevicesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/devices/{deviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Device", "json")
 	if err != nil {

@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -17,4 +18,7 @@ pkg/models/operations/getpirategenerateinsult.go
 pkg/models/operations/getpirategenerateloremipsum.go
 pkg/models/operations/getpirategeneratename.go
 pkg/models/operations/getpiratetranslate.go
+docs/sdk/README.md
+docs/generation/README.md
+docs/translation/README.md
 USAGE.md

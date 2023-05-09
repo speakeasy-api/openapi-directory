@@ -17,16 +17,8 @@ type HistoryListRequest struct {
 	EndAt *time.Time `queryParam:"style=form,explode=true,name=end_at"`
 	// If set, return records where the specified field is equal to the supplied value. Valid fields are `user_id`, `folder` or `path`.
 	Filter map[string]interface{} `queryParam:"style=form,explode=true,name=filter"`
-	// If set, return records where the specified field is greater than the supplied value. Valid fields are `user_id`, `folder` or `path`.
-	FilterGt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_gt"`
-	// If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `user_id`, `folder` or `path`.
-	FilterGteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_gteq"`
-	// If set, return records where the specified field is equal to the supplied value. Valid fields are `user_id`, `folder` or `path`.
-	FilterLike map[string]interface{} `queryParam:"style=form,explode=true,name=filter_like"`
-	// If set, return records where the specified field is less than the supplied value. Valid fields are `user_id`, `folder` or `path`.
-	FilterLt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lt"`
-	// If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `user_id`, `folder` or `path`.
-	FilterLteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lteq"`
+	// If set, return records where the specified field is prefixed by the supplied value. Valid fields are `path`.
+	FilterPrefix map[string]interface{} `queryParam:"style=form,explode=true,name=filter_prefix"`
 	// Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[path]=desc`). Valid fields are `path`, `folder`, `user_id` or `created_at`.

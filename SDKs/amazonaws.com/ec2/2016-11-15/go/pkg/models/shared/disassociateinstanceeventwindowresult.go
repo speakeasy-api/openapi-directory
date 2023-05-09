@@ -30,12 +30,16 @@ const (
 	DisassociateInstanceEventWindowResultInstanceEventWindowStateEnumDeleted  DisassociateInstanceEventWindowResultInstanceEventWindowStateEnum = "deleted"
 )
 
+func (e DisassociateInstanceEventWindowResultInstanceEventWindowStateEnum) ToPointer() *DisassociateInstanceEventWindowResultInstanceEventWindowStateEnum {
+	return &e
+}
+
 func (e *DisassociateInstanceEventWindowResultInstanceEventWindowStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creating":
 		fallthrough
 	case "deleting":
@@ -43,10 +47,10 @@ func (e *DisassociateInstanceEventWindowResultInstanceEventWindowStateEnum) Unma
 	case "active":
 		fallthrough
 	case "deleted":
-		*e = DisassociateInstanceEventWindowResultInstanceEventWindowStateEnum(s)
+		*e = DisassociateInstanceEventWindowResultInstanceEventWindowStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateInstanceEventWindowResultInstanceEventWindowStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateInstanceEventWindowResultInstanceEventWindowStateEnum: %v", v)
 	}
 }
 
@@ -69,12 +73,16 @@ const (
 	DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnumSaturday  DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum = "saturday"
 )
 
+func (e DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum) ToPointer() *DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum {
+	return &e
+}
+
 func (e *DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sunday":
 		fallthrough
 	case "monday":
@@ -88,10 +96,10 @@ func (e *DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWe
 	case "friday":
 		fallthrough
 	case "saturday":
-		*e = DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum(s)
+		*e = DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesEndWeekDayEnum: %v", v)
 	}
 }
 
@@ -108,12 +116,16 @@ const (
 	DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnumSaturday  DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum = "saturday"
 )
 
+func (e DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum) ToPointer() *DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum {
+	return &e
+}
+
 func (e *DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sunday":
 		fallthrough
 	case "monday":
@@ -127,10 +139,10 @@ func (e *DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesStart
 	case "friday":
 		fallthrough
 	case "saturday":
-		*e = DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum(s)
+		*e = DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateInstanceEventWindowResultInstanceEventWindowTimeRangesStartWeekDayEnum: %v", v)
 	}
 }
 

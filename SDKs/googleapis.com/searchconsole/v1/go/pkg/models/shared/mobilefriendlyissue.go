@@ -20,12 +20,16 @@ const (
 	MobileFriendlyIssueRuleEnumTapTargetsTooClose            MobileFriendlyIssueRuleEnum = "TAP_TARGETS_TOO_CLOSE"
 )
 
+func (e MobileFriendlyIssueRuleEnum) ToPointer() *MobileFriendlyIssueRuleEnum {
+	return &e
+}
+
 func (e *MobileFriendlyIssueRuleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MOBILE_FRIENDLY_RULE_UNSPECIFIED":
 		fallthrough
 	case "USES_INCOMPATIBLE_PLUGINS":
@@ -39,10 +43,10 @@ func (e *MobileFriendlyIssueRuleEnum) UnmarshalJSON(data []byte) error {
 	case "USE_LEGIBLE_FONT_SIZES":
 		fallthrough
 	case "TAP_TARGETS_TOO_CLOSE":
-		*e = MobileFriendlyIssueRuleEnum(s)
+		*e = MobileFriendlyIssueRuleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MobileFriendlyIssueRuleEnum: %s", s)
+		return fmt.Errorf("invalid value for MobileFriendlyIssueRuleEnum: %v", v)
 	}
 }
 

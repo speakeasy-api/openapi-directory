@@ -14,17 +14,21 @@ const (
 	DescribeExportTasksResultExportTasksExportToS3TaskContainerFormatEnumOva DescribeExportTasksResultExportTasksExportToS3TaskContainerFormatEnum = "ova"
 )
 
+func (e DescribeExportTasksResultExportTasksExportToS3TaskContainerFormatEnum) ToPointer() *DescribeExportTasksResultExportTasksExportToS3TaskContainerFormatEnum {
+	return &e
+}
+
 func (e *DescribeExportTasksResultExportTasksExportToS3TaskContainerFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ova":
-		*e = DescribeExportTasksResultExportTasksExportToS3TaskContainerFormatEnum(s)
+		*e = DescribeExportTasksResultExportTasksExportToS3TaskContainerFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeExportTasksResultExportTasksExportToS3TaskContainerFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeExportTasksResultExportTasksExportToS3TaskContainerFormatEnum: %v", v)
 	}
 }
 
@@ -37,21 +41,25 @@ const (
 	DescribeExportTasksResultExportTasksExportToS3TaskDiskImageFormatEnumVhd  DescribeExportTasksResultExportTasksExportToS3TaskDiskImageFormatEnum = "VHD"
 )
 
+func (e DescribeExportTasksResultExportTasksExportToS3TaskDiskImageFormatEnum) ToPointer() *DescribeExportTasksResultExportTasksExportToS3TaskDiskImageFormatEnum {
+	return &e
+}
+
 func (e *DescribeExportTasksResultExportTasksExportToS3TaskDiskImageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VMDK":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "VHD":
-		*e = DescribeExportTasksResultExportTasksExportToS3TaskDiskImageFormatEnum(s)
+		*e = DescribeExportTasksResultExportTasksExportToS3TaskDiskImageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeExportTasksResultExportTasksExportToS3TaskDiskImageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeExportTasksResultExportTasksExportToS3TaskDiskImageFormatEnum: %v", v)
 	}
 }
 
@@ -72,21 +80,25 @@ const (
 	DescribeExportTasksResultExportTasksInstanceExportDetailsTargetEnvironmentEnumMicrosoft DescribeExportTasksResultExportTasksInstanceExportDetailsTargetEnvironmentEnum = "microsoft"
 )
 
+func (e DescribeExportTasksResultExportTasksInstanceExportDetailsTargetEnvironmentEnum) ToPointer() *DescribeExportTasksResultExportTasksInstanceExportDetailsTargetEnvironmentEnum {
+	return &e
+}
+
 func (e *DescribeExportTasksResultExportTasksInstanceExportDetailsTargetEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "citrix":
 		fallthrough
 	case "vmware":
 		fallthrough
 	case "microsoft":
-		*e = DescribeExportTasksResultExportTasksInstanceExportDetailsTargetEnvironmentEnum(s)
+		*e = DescribeExportTasksResultExportTasksInstanceExportDetailsTargetEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeExportTasksResultExportTasksInstanceExportDetailsTargetEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeExportTasksResultExportTasksInstanceExportDetailsTargetEnvironmentEnum: %v", v)
 	}
 }
 
@@ -106,12 +118,16 @@ const (
 	DescribeExportTasksResultExportTasksStateEnumCompleted  DescribeExportTasksResultExportTasksStateEnum = "completed"
 )
 
+func (e DescribeExportTasksResultExportTasksStateEnum) ToPointer() *DescribeExportTasksResultExportTasksStateEnum {
+	return &e
+}
+
 func (e *DescribeExportTasksResultExportTasksStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "cancelling":
@@ -119,10 +135,10 @@ func (e *DescribeExportTasksResultExportTasksStateEnum) UnmarshalJSON(data []byt
 	case "cancelled":
 		fallthrough
 	case "completed":
-		*e = DescribeExportTasksResultExportTasksStateEnum(s)
+		*e = DescribeExportTasksResultExportTasksStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeExportTasksResultExportTasksStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeExportTasksResultExportTasksStateEnum: %v", v)
 	}
 }
 

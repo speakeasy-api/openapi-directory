@@ -15,19 +15,23 @@ const (
 	GoogleFirestoreAdminV1IndexFieldArrayConfigEnumContains               GoogleFirestoreAdminV1IndexFieldArrayConfigEnum = "CONTAINS"
 )
 
+func (e GoogleFirestoreAdminV1IndexFieldArrayConfigEnum) ToPointer() *GoogleFirestoreAdminV1IndexFieldArrayConfigEnum {
+	return &e
+}
+
 func (e *GoogleFirestoreAdminV1IndexFieldArrayConfigEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARRAY_CONFIG_UNSPECIFIED":
 		fallthrough
 	case "CONTAINS":
-		*e = GoogleFirestoreAdminV1IndexFieldArrayConfigEnum(s)
+		*e = GoogleFirestoreAdminV1IndexFieldArrayConfigEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1IndexFieldArrayConfigEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1IndexFieldArrayConfigEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	GoogleFirestoreAdminV1IndexFieldOrderEnumDescending       GoogleFirestoreAdminV1IndexFieldOrderEnum = "DESCENDING"
 )
 
+func (e GoogleFirestoreAdminV1IndexFieldOrderEnum) ToPointer() *GoogleFirestoreAdminV1IndexFieldOrderEnum {
+	return &e
+}
+
 func (e *GoogleFirestoreAdminV1IndexFieldOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORDER_UNSPECIFIED":
 		fallthrough
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = GoogleFirestoreAdminV1IndexFieldOrderEnum(s)
+		*e = GoogleFirestoreAdminV1IndexFieldOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1IndexFieldOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleFirestoreAdminV1IndexFieldOrderEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTPutWarmPoolActionEnumPutWarmPool POSTPutWarmPoolActionEnum = "PutWarmPool"
 )
 
+func (e POSTPutWarmPoolActionEnum) ToPointer() *POSTPutWarmPoolActionEnum {
+	return &e
+}
+
 func (e *POSTPutWarmPoolActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PutWarmPool":
-		*e = POSTPutWarmPoolActionEnum(s)
+		*e = POSTPutWarmPoolActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPutWarmPoolActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPutWarmPoolActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTPutWarmPoolVersionEnumTwoThousandAndEleven0101 POSTPutWarmPoolVersionEnum = "2011-01-01"
 )
 
+func (e POSTPutWarmPoolVersionEnum) ToPointer() *POSTPutWarmPoolVersionEnum {
+	return &e
+}
+
 func (e *POSTPutWarmPoolVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTPutWarmPoolVersionEnum(s)
+		*e = POSTPutWarmPoolVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPutWarmPoolVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPutWarmPoolVersionEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	NameMatchedOutMatchStatusEnumMismatch NameMatchedOutMatchStatusEnum = "Mismatch"
 )
 
+func (e NameMatchedOutMatchStatusEnum) ToPointer() *NameMatchedOutMatchStatusEnum {
+	return &e
+}
+
 func (e *NameMatchedOutMatchStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Match":
 		fallthrough
 	case "Mismatch":
-		*e = NameMatchedOutMatchStatusEnum(s)
+		*e = NameMatchedOutMatchStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NameMatchedOutMatchStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for NameMatchedOutMatchStatusEnum: %v", v)
 	}
 }
 

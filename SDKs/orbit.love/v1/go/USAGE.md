@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDRequest{
-        ID: "corrupti",
-        MemberSlug: "provident",
-        WorkspaceSlug: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.Activities.DeleteWorkspaceSlugMembersMemberSlugActivitiesID(ctx, req, operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDSecurity{
+    res, err := s.Activities.DeleteWorkspaceSlugMembersMemberSlugActivitiesID(ctx, operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+        MemberSlug: "deserunt",
+        WorkspaceSlug: "perferendis",
+    }, operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDSecurity{
         Bearer: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {

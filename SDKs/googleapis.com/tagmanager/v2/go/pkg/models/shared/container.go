@@ -20,12 +20,16 @@ const (
 	ContainerUsageContextEnumServer                  ContainerUsageContextEnum = "server"
 )
 
+func (e ContainerUsageContextEnum) ToPointer() *ContainerUsageContextEnum {
+	return &e
+}
+
 func (e *ContainerUsageContextEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "usageContextUnspecified":
 		fallthrough
 	case "web":
@@ -41,10 +45,10 @@ func (e *ContainerUsageContextEnum) UnmarshalJSON(data []byte) error {
 	case "amp":
 		fallthrough
 	case "server":
-		*e = ContainerUsageContextEnum(s)
+		*e = ContainerUsageContextEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerUsageContextEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerUsageContextEnum: %v", v)
 	}
 }
 

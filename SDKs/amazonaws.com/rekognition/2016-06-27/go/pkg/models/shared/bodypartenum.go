@@ -16,12 +16,16 @@ const (
 	BodyPartEnumRightHand BodyPartEnum = "RIGHT_HAND"
 )
 
+func (e BodyPartEnum) ToPointer() *BodyPartEnum {
+	return &e
+}
+
 func (e *BodyPartEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FACE":
 		fallthrough
 	case "HEAD":
@@ -29,9 +33,9 @@ func (e *BodyPartEnum) UnmarshalJSON(data []byte) error {
 	case "LEFT_HAND":
 		fallthrough
 	case "RIGHT_HAND":
-		*e = BodyPartEnum(s)
+		*e = BodyPartEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BodyPartEnum: %s", s)
+		return fmt.Errorf("invalid value for BodyPartEnum: %v", v)
 	}
 }

@@ -20,12 +20,16 @@ const (
 	PromotionPromotionStatusDestinationStatusStatusEnumPending          PromotionPromotionStatusDestinationStatusStatusEnum = "PENDING"
 )
 
+func (e PromotionPromotionStatusDestinationStatusStatusEnum) ToPointer() *PromotionPromotionStatusDestinationStatusStatusEnum {
+	return &e
+}
+
 func (e *PromotionPromotionStatusDestinationStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "IN_REVIEW":
@@ -39,10 +43,10 @@ func (e *PromotionPromotionStatusDestinationStatusStatusEnum) UnmarshalJSON(data
 	case "EXPIRED":
 		fallthrough
 	case "PENDING":
-		*e = PromotionPromotionStatusDestinationStatusStatusEnum(s)
+		*e = PromotionPromotionStatusDestinationStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PromotionPromotionStatusDestinationStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PromotionPromotionStatusDestinationStatusStatusEnum: %v", v)
 	}
 }
 

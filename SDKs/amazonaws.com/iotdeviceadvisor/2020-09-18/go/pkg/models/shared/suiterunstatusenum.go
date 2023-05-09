@@ -21,12 +21,16 @@ const (
 	SuiteRunStatusEnumError            SuiteRunStatusEnum = "ERROR"
 )
 
+func (e SuiteRunStatusEnum) ToPointer() *SuiteRunStatusEnum {
+	return &e
+}
+
 func (e *SuiteRunStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PASS":
 		fallthrough
 	case "FAIL":
@@ -44,9 +48,9 @@ func (e *SuiteRunStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PASS_WITH_WARNINGS":
 		fallthrough
 	case "ERROR":
-		*e = SuiteRunStatusEnum(s)
+		*e = SuiteRunStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SuiteRunStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SuiteRunStatusEnum: %v", v)
 	}
 }

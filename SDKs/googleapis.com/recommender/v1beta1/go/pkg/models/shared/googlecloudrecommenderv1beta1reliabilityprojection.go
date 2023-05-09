@@ -16,12 +16,16 @@ const (
 	GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnumAccessDeny          GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnum = "ACCESS_DENY"
 )
 
+func (e GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnum) ToPointer() *GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RISK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SERVICE_DISRUPTION":
@@ -29,10 +33,10 @@ func (e *GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnum) UnmarshalJ
 	case "DATA_LOSS":
 		fallthrough
 	case "ACCESS_DENY":
-		*e = GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnum(s)
+		*e = GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1beta1ReliabilityProjectionRisksEnum: %v", v)
 	}
 }
 

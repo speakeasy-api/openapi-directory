@@ -14,18 +14,22 @@ const (
 	CertificateAuthorityUsageModeEnumShortLivedCertificate CertificateAuthorityUsageModeEnum = "SHORT_LIVED_CERTIFICATE"
 )
 
+func (e CertificateAuthorityUsageModeEnum) ToPointer() *CertificateAuthorityUsageModeEnum {
+	return &e
+}
+
 func (e *CertificateAuthorityUsageModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GENERAL_PURPOSE":
 		fallthrough
 	case "SHORT_LIVED_CERTIFICATE":
-		*e = CertificateAuthorityUsageModeEnum(s)
+		*e = CertificateAuthorityUsageModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateAuthorityUsageModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateAuthorityUsageModeEnum: %v", v)
 	}
 }

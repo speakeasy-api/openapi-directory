@@ -16,17 +16,21 @@ const (
 	UpdateAliasXAmzTargetEnumGameLiftUpdateAlias UpdateAliasXAmzTargetEnum = "GameLift.UpdateAlias"
 )
 
+func (e UpdateAliasXAmzTargetEnum) ToPointer() *UpdateAliasXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateAliasXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.UpdateAlias":
-		*e = UpdateAliasXAmzTargetEnum(s)
+		*e = UpdateAliasXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAliasXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAliasXAmzTargetEnum: %v", v)
 	}
 }
 

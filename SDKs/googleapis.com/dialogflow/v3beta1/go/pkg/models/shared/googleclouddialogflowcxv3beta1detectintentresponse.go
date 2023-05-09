@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowCxV3beta1DetectIntentResponseResponseTypeEnumFinal                   GoogleCloudDialogflowCxV3beta1DetectIntentResponseResponseTypeEnum = "FINAL"
 )
 
+func (e GoogleCloudDialogflowCxV3beta1DetectIntentResponseResponseTypeEnum) ToPointer() *GoogleCloudDialogflowCxV3beta1DetectIntentResponseResponseTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3beta1DetectIntentResponseResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESPONSE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PARTIAL":
 		fallthrough
 	case "FINAL":
-		*e = GoogleCloudDialogflowCxV3beta1DetectIntentResponseResponseTypeEnum(s)
+		*e = GoogleCloudDialogflowCxV3beta1DetectIntentResponseResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1DetectIntentResponseResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1DetectIntentResponseResponseTypeEnum: %v", v)
 	}
 }
 

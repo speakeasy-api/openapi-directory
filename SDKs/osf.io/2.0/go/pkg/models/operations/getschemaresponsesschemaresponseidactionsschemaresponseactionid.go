@@ -25,12 +25,16 @@ const (
 	GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesFromStateEnumPendingModeration GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesFromStateEnum = "pending_moderation"
 )
 
+func (e GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesFromStateEnum) ToPointer() *GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesFromStateEnum {
+	return &e
+}
+
 func (e *GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesFromStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "initial":
 		fallthrough
 	case "in_progress":
@@ -38,10 +42,10 @@ func (e *GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaRe
 	case "approved":
 		fallthrough
 	case "pending_moderation":
-		*e = GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesFromStateEnum(s)
+		*e = GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesFromStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesFromStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesFromStateEnum: %v", v)
 	}
 }
 
@@ -54,21 +58,25 @@ const (
 	GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesToStateEnumPendingModeration GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesToStateEnum = "pending_moderation"
 )
 
+func (e GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesToStateEnum) ToPointer() *GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesToStateEnum {
+	return &e
+}
+
 func (e *GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesToStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "in_progress":
 		fallthrough
 	case "approved":
 		fallthrough
 	case "pending_moderation":
-		*e = GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesToStateEnum(s)
+		*e = GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesToStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesToStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesToStateEnum: %v", v)
 	}
 }
 
@@ -83,12 +91,16 @@ const (
 	GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesTriggerEnumModeratorReject GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesTriggerEnum = "moderator_reject"
 )
 
+func (e GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesTriggerEnum) ToPointer() *GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesTriggerEnum {
+	return &e
+}
+
 func (e *GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesTriggerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submit":
 		fallthrough
 	case "approve":
@@ -98,10 +110,10 @@ func (e *GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaRe
 	case "admin_reject":
 		fallthrough
 	case "moderator_reject":
-		*e = GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesTriggerEnum(s)
+		*e = GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesTriggerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesTriggerEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionIDSchemaResponseActionsAttributesTriggerEnum: %v", v)
 	}
 }
 

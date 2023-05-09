@@ -17,21 +17,25 @@ const (
 	DeleteLensLensStatusEnumPublished DeleteLensLensStatusEnum = "PUBLISHED"
 )
 
+func (e DeleteLensLensStatusEnum) ToPointer() *DeleteLensLensStatusEnum {
+	return &e
+}
+
 func (e *DeleteLensLensStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "DRAFT":
 		fallthrough
 	case "PUBLISHED":
-		*e = DeleteLensLensStatusEnum(s)
+		*e = DeleteLensLensStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLensLensStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLensLensStatusEnum: %v", v)
 	}
 }
 

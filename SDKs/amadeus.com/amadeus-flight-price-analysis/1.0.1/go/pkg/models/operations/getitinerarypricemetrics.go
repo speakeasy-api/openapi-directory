@@ -37,12 +37,16 @@ const (
 	GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJSONLinksMethodsEnumOptions GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJSONLinksMethodsEnum = "OPTIONS"
 )
 
+func (e GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJSONLinksMethodsEnum) ToPointer() *GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJSONLinksMethodsEnum {
+	return &e
+}
+
 func (e *GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJSONLinksMethodsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "POST":
@@ -54,10 +58,10 @@ func (e *GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJSONLinksMethodsEnu
 	case "DELETE":
 		fallthrough
 	case "OPTIONS":
-		*e = GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJSONLinksMethodsEnum(s)
+		*e = GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJSONLinksMethodsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJSONLinksMethodsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJSONLinksMethodsEnum: %v", v)
 	}
 }
 

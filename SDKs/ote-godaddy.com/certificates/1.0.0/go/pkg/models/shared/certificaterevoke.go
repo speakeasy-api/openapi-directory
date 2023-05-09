@@ -18,12 +18,16 @@ const (
 	CertificateRevokeReasonEnumSuperseded           CertificateRevokeReasonEnum = "SUPERSEDED"
 )
 
+func (e CertificateRevokeReasonEnum) ToPointer() *CertificateRevokeReasonEnum {
+	return &e
+}
+
 func (e *CertificateRevokeReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AFFILIATION_CHANGED":
 		fallthrough
 	case "CESSATION_OF_OPERATION":
@@ -33,10 +37,10 @@ func (e *CertificateRevokeReasonEnum) UnmarshalJSON(data []byte) error {
 	case "PRIVILEGE_WITHDRAWN":
 		fallthrough
 	case "SUPERSEDED":
-		*e = CertificateRevokeReasonEnum(s)
+		*e = CertificateRevokeReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateRevokeReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateRevokeReasonEnum: %v", v)
 	}
 }
 

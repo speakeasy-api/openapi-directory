@@ -15,17 +15,21 @@ const (
 	GETCreateTransitGatewayPrefixListReferenceActionEnumCreateTransitGatewayPrefixListReference GETCreateTransitGatewayPrefixListReferenceActionEnum = "CreateTransitGatewayPrefixListReference"
 )
 
+func (e GETCreateTransitGatewayPrefixListReferenceActionEnum) ToPointer() *GETCreateTransitGatewayPrefixListReferenceActionEnum {
+	return &e
+}
+
 func (e *GETCreateTransitGatewayPrefixListReferenceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateTransitGatewayPrefixListReference":
-		*e = GETCreateTransitGatewayPrefixListReferenceActionEnum(s)
+		*e = GETCreateTransitGatewayPrefixListReferenceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateTransitGatewayPrefixListReferenceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateTransitGatewayPrefixListReferenceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateTransitGatewayPrefixListReferenceVersionEnumTwoThousandAndSixteen1115 GETCreateTransitGatewayPrefixListReferenceVersionEnum = "2016-11-15"
 )
 
+func (e GETCreateTransitGatewayPrefixListReferenceVersionEnum) ToPointer() *GETCreateTransitGatewayPrefixListReferenceVersionEnum {
+	return &e
+}
+
 func (e *GETCreateTransitGatewayPrefixListReferenceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCreateTransitGatewayPrefixListReferenceVersionEnum(s)
+		*e = GETCreateTransitGatewayPrefixListReferenceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateTransitGatewayPrefixListReferenceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateTransitGatewayPrefixListReferenceVersionEnum: %v", v)
 	}
 }
 

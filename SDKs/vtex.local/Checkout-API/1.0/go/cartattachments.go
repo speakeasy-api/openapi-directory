@@ -39,7 +39,10 @@ func newCartAttachments(defaultClient, securityClient HTTPClient, serverURL, lan
 // > This request has a time out of 12 seconds.
 func (s *cartAttachments) AddClientPreferences(ctx context.Context, request operations.AddClientPreferencesRequest) (*operations.AddClientPreferencesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/clientPreferencesData", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/clientPreferencesData", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -102,7 +105,10 @@ func (s *cartAttachments) AddClientPreferences(ctx context.Context, request oper
 // >⚠️ The authentication of this endpoint can change depending on the customer context. If you are modifying information from a customer with a complete profile on the store, the response will return the customer's data masked. You can only access the customer data with an authenticated request.
 func (s *cartAttachments) AddClientProfile(ctx context.Context, request operations.AddClientProfileRequest) (*operations.AddClientProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/clientProfileData", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/clientProfileData", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -154,7 +160,10 @@ func (s *cartAttachments) AddClientProfile(ctx context.Context, request operatio
 // > This request has a time out of 12 seconds.
 func (s *cartAttachments) AddMarketingData(ctx context.Context, request operations.AddMarketingDataRequest) (*operations.AddMarketingDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/marketingData", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/marketingData", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -206,7 +215,10 @@ func (s *cartAttachments) AddMarketingData(ctx context.Context, request operatio
 // > This request has a time out of 12 seconds.
 func (s *cartAttachments) AddMerchantContextData(ctx context.Context, request operations.AddMerchantContextDataRequest) (*operations.AddMerchantContextDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/merchantContextData", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/merchantContextData", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -267,7 +279,10 @@ func (s *cartAttachments) AddMerchantContextData(ctx context.Context, request op
 // > This request has a time out of 12 seconds.
 func (s *cartAttachments) AddPaymentData(ctx context.Context, request operations.AddPaymentDataRequest) (*operations.AddPaymentDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/paymentData", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/paymentData", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -323,7 +338,10 @@ func (s *cartAttachments) AddPaymentData(ctx context.Context, request operations
 // >⚠️ The authentication of this endpoint can change depending on the customer context. If you are modifying information from a customer with a complete profile on the store, the response will return the customer's data masked. You can only access the customer data with an authenticated request.
 func (s *cartAttachments) AddShippingAddress(ctx context.Context, request operations.AddShippingAddressRequest) (*operations.AddShippingAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/shippingData", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/attachments/shippingData", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

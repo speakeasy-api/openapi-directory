@@ -23,12 +23,16 @@ const (
 	JobQueryEmploymentTypesEnumOtherEmploymentType       JobQueryEmploymentTypesEnum = "OTHER_EMPLOYMENT_TYPE"
 )
 
+func (e JobQueryEmploymentTypesEnum) ToPointer() *JobQueryEmploymentTypesEnum {
+	return &e
+}
+
 func (e *JobQueryEmploymentTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EMPLOYMENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FULL_TIME":
@@ -50,10 +54,10 @@ func (e *JobQueryEmploymentTypesEnum) UnmarshalJSON(data []byte) error {
 	case "FLY_IN_FLY_OUT":
 		fallthrough
 	case "OTHER_EMPLOYMENT_TYPE":
-		*e = JobQueryEmploymentTypesEnum(s)
+		*e = JobQueryEmploymentTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobQueryEmploymentTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for JobQueryEmploymentTypesEnum: %v", v)
 	}
 }
 
@@ -93,12 +97,16 @@ const (
 	JobQueryJobCategoriesEnumTransportationAndLogistics       JobQueryJobCategoriesEnum = "TRANSPORTATION_AND_LOGISTICS"
 )
 
+func (e JobQueryJobCategoriesEnum) ToPointer() *JobQueryJobCategoriesEnum {
+	return &e
+}
+
 func (e *JobQueryJobCategoriesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "ACCOUNTING_AND_FINANCE":
@@ -160,10 +168,10 @@ func (e *JobQueryJobCategoriesEnum) UnmarshalJSON(data []byte) error {
 	case "SPORTS_FITNESS_AND_RECREATION":
 		fallthrough
 	case "TRANSPORTATION_AND_LOGISTICS":
-		*e = JobQueryJobCategoriesEnum(s)
+		*e = JobQueryJobCategoriesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobQueryJobCategoriesEnum: %s", s)
+		return fmt.Errorf("invalid value for JobQueryJobCategoriesEnum: %v", v)
 	}
 }
 

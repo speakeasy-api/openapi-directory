@@ -14,18 +14,22 @@ const (
 	FederationModeEnumLocal     FederationModeEnum = "LOCAL"
 )
 
+func (e FederationModeEnum) ToPointer() *FederationModeEnum {
+	return &e
+}
+
 func (e *FederationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEDERATED":
 		fallthrough
 	case "LOCAL":
-		*e = FederationModeEnum(s)
+		*e = FederationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FederationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for FederationModeEnum: %v", v)
 	}
 }

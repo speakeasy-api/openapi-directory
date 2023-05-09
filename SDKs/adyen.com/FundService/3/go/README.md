@@ -13,23 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/FundService/3/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.AccountHolderBalanceRequest{
-        AccountHolderCode: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.General.PostAccountHolderBalance(ctx, req, operations.PostAccountHolderBalanceSecurity{
+    res, err := s.General.PostAccountHolderBalance(ctx, shared.AccountHolderBalanceRequest{
+        AccountHolderCode: "corrupti",
+    }, operations.PostAccountHolderBalanceSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {
@@ -47,16 +45,16 @@ func main() {
 ## Available Resources and Operations
 
 
-### General
+### [General](docs/general/README.md)
 
-* `PostAccountHolderBalance` - Get the balances of an account holder
-* `PostAccountHolderTransactionList` - Get a list of transactions
-* `PostDebitAccountHolder` - Send a direct debit request
-* `PostPayoutAccountHolder` - Pay out from an account to the account holder
-* `PostRefundFundsTransfer` - Refund a funds transfer
-* `PostRefundNotPaidOutTransfers` - Refund all transactions of an account since the most recent payout
-* `PostSetupBeneficiary` - Designate a beneficiary account and transfer the benefactor's current balance
-* `PostTransferFunds` - Transfer funds between platform accounts
+* [PostAccountHolderBalance](docs/general/README.md#postaccountholderbalance) - Get the balances of an account holder
+* [PostAccountHolderTransactionList](docs/general/README.md#postaccountholdertransactionlist) - Get a list of transactions
+* [PostDebitAccountHolder](docs/general/README.md#postdebitaccountholder) - Send a direct debit request
+* [PostPayoutAccountHolder](docs/general/README.md#postpayoutaccountholder) - Pay out from an account to the account holder
+* [PostRefundFundsTransfer](docs/general/README.md#postrefundfundstransfer) - Refund a funds transfer
+* [PostRefundNotPaidOutTransfers](docs/general/README.md#postrefundnotpaidouttransfers) - Refund all transactions of an account since the most recent payout
+* [PostSetupBeneficiary](docs/general/README.md#postsetupbeneficiary) - Designate a beneficiary account and transfer the benefactor's current balance
+* [PostTransferFunds](docs/general/README.md#posttransferfunds) - Transfer funds between platform accounts
 <!-- End SDK Available Operations -->
 
 ### Maturity

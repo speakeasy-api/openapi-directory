@@ -23,12 +23,16 @@ const (
 	IssuesLockRequestBodyLockReasonEnumSpam      IssuesLockRequestBodyLockReasonEnum = "spam"
 )
 
+func (e IssuesLockRequestBodyLockReasonEnum) ToPointer() *IssuesLockRequestBodyLockReasonEnum {
+	return &e
+}
+
 func (e *IssuesLockRequestBodyLockReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "off-topic":
 		fallthrough
 	case "too heated":
@@ -36,10 +40,10 @@ func (e *IssuesLockRequestBodyLockReasonEnum) UnmarshalJSON(data []byte) error {
 	case "resolved":
 		fallthrough
 	case "spam":
-		*e = IssuesLockRequestBodyLockReasonEnum(s)
+		*e = IssuesLockRequestBodyLockReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesLockRequestBodyLockReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesLockRequestBodyLockReasonEnum: %v", v)
 	}
 }
 

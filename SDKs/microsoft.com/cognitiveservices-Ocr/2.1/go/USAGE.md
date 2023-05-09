@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := shared.ImageURL{
-        URL: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.BatchReadFile(ctx, req)
+    res, err := s.BatchReadFile(ctx, shared.ImageURL{
+        URL: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

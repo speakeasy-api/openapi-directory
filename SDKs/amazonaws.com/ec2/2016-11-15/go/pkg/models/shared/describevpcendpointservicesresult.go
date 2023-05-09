@@ -14,17 +14,21 @@ const (
 	DescribeVpcEndpointServicesResultServiceDetailsPayerResponsibilityEnumServiceOwner DescribeVpcEndpointServicesResultServiceDetailsPayerResponsibilityEnum = "ServiceOwner"
 )
 
+func (e DescribeVpcEndpointServicesResultServiceDetailsPayerResponsibilityEnum) ToPointer() *DescribeVpcEndpointServicesResultServiceDetailsPayerResponsibilityEnum {
+	return &e
+}
+
 func (e *DescribeVpcEndpointServicesResultServiceDetailsPayerResponsibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ServiceOwner":
-		*e = DescribeVpcEndpointServicesResultServiceDetailsPayerResponsibilityEnum(s)
+		*e = DescribeVpcEndpointServicesResultServiceDetailsPayerResponsibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcEndpointServicesResultServiceDetailsPayerResponsibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcEndpointServicesResultServiceDetailsPayerResponsibilityEnum: %v", v)
 	}
 }
 
@@ -37,21 +41,25 @@ const (
 	DescribeVpcEndpointServicesResultServiceDetailsPrivateDNSNameVerificationStateEnumFailed              DescribeVpcEndpointServicesResultServiceDetailsPrivateDNSNameVerificationStateEnum = "failed"
 )
 
+func (e DescribeVpcEndpointServicesResultServiceDetailsPrivateDNSNameVerificationStateEnum) ToPointer() *DescribeVpcEndpointServicesResultServiceDetailsPrivateDNSNameVerificationStateEnum {
+	return &e
+}
+
 func (e *DescribeVpcEndpointServicesResultServiceDetailsPrivateDNSNameVerificationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pendingVerification":
 		fallthrough
 	case "verified":
 		fallthrough
 	case "failed":
-		*e = DescribeVpcEndpointServicesResultServiceDetailsPrivateDNSNameVerificationStateEnum(s)
+		*e = DescribeVpcEndpointServicesResultServiceDetailsPrivateDNSNameVerificationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcEndpointServicesResultServiceDetailsPrivateDNSNameVerificationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcEndpointServicesResultServiceDetailsPrivateDNSNameVerificationStateEnum: %v", v)
 	}
 }
 
@@ -69,21 +77,25 @@ const (
 	DescribeVpcEndpointServicesResultServiceDetailsServiceTypeServiceTypeEnumGatewayLoadBalancer DescribeVpcEndpointServicesResultServiceDetailsServiceTypeServiceTypeEnum = "GatewayLoadBalancer"
 )
 
+func (e DescribeVpcEndpointServicesResultServiceDetailsServiceTypeServiceTypeEnum) ToPointer() *DescribeVpcEndpointServicesResultServiceDetailsServiceTypeServiceTypeEnum {
+	return &e
+}
+
 func (e *DescribeVpcEndpointServicesResultServiceDetailsServiceTypeServiceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Interface":
 		fallthrough
 	case "Gateway":
 		fallthrough
 	case "GatewayLoadBalancer":
-		*e = DescribeVpcEndpointServicesResultServiceDetailsServiceTypeServiceTypeEnum(s)
+		*e = DescribeVpcEndpointServicesResultServiceDetailsServiceTypeServiceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcEndpointServicesResultServiceDetailsServiceTypeServiceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcEndpointServicesResultServiceDetailsServiceTypeServiceTypeEnum: %v", v)
 	}
 }
 
@@ -99,19 +111,23 @@ const (
 	DescribeVpcEndpointServicesResultServiceDetailsSupportedIPAddressTypesEnumIpv6 DescribeVpcEndpointServicesResultServiceDetailsSupportedIPAddressTypesEnum = "ipv6"
 )
 
+func (e DescribeVpcEndpointServicesResultServiceDetailsSupportedIPAddressTypesEnum) ToPointer() *DescribeVpcEndpointServicesResultServiceDetailsSupportedIPAddressTypesEnum {
+	return &e
+}
+
 func (e *DescribeVpcEndpointServicesResultServiceDetailsSupportedIPAddressTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
-		*e = DescribeVpcEndpointServicesResultServiceDetailsSupportedIPAddressTypesEnum(s)
+		*e = DescribeVpcEndpointServicesResultServiceDetailsSupportedIPAddressTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcEndpointServicesResultServiceDetailsSupportedIPAddressTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcEndpointServicesResultServiceDetailsSupportedIPAddressTypesEnum: %v", v)
 	}
 }
 

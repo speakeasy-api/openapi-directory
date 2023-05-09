@@ -17,12 +17,16 @@ const (
 	GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnumAnyServiceAccount       GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum = "ANY_SERVICE_ACCOUNT"
 )
 
+func (e GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum) ToPointer() *GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum {
+	return &e
+}
+
 func (e *GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IDENTITY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ANY_IDENTITY":
@@ -30,10 +34,10 @@ func (e *GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum) Unmars
 	case "ANY_USER_ACCOUNT":
 		fallthrough
 	case "ANY_SERVICE_ACCOUNT":
-		*e = GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum(s)
+		*e = GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum: %v", v)
 	}
 }
 

@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -35,4 +36,6 @@ pkg/models/operations/getactionresourceshow.go
 pkg/models/operations/getactionstatusshow.go
 pkg/models/operations/getactiontaglist.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/action/README.md
 USAGE.md

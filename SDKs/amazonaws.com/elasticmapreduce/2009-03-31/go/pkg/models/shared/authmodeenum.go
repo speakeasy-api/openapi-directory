@@ -14,18 +14,22 @@ const (
 	AuthModeEnumIam AuthModeEnum = "IAM"
 )
 
+func (e AuthModeEnum) ToPointer() *AuthModeEnum {
+	return &e
+}
+
 func (e *AuthModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSO":
 		fallthrough
 	case "IAM":
-		*e = AuthModeEnum(s)
+		*e = AuthModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthModeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthModeEnum: %v", v)
 	}
 }

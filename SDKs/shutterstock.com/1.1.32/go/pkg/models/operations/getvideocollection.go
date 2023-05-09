@@ -20,19 +20,23 @@ const (
 	GetVideoCollectionEmbedEnumShareURL  GetVideoCollectionEmbedEnum = "share_url"
 )
 
+func (e GetVideoCollectionEmbedEnum) ToPointer() *GetVideoCollectionEmbedEnum {
+	return &e
+}
+
 func (e *GetVideoCollectionEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "share_code":
 		fallthrough
 	case "share_url":
-		*e = GetVideoCollectionEmbedEnum(s)
+		*e = GetVideoCollectionEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVideoCollectionEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVideoCollectionEmbedEnum: %v", v)
 	}
 }
 

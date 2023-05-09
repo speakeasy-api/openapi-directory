@@ -16,17 +16,21 @@ const (
 	ListLogPatternsXAmzTargetEnumEc2WindowsBarleyServiceListLogPatterns ListLogPatternsXAmzTargetEnum = "EC2WindowsBarleyService.ListLogPatterns"
 )
 
+func (e ListLogPatternsXAmzTargetEnum) ToPointer() *ListLogPatternsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListLogPatternsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2WindowsBarleyService.ListLogPatterns":
-		*e = ListLogPatternsXAmzTargetEnum(s)
+		*e = ListLogPatternsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLogPatternsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLogPatternsXAmzTargetEnum: %v", v)
 	}
 }
 

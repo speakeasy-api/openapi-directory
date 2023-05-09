@@ -17,12 +17,16 @@ const (
 	WorkflowStepTypeEnumDecrypt WorkflowStepTypeEnum = "DECRYPT"
 )
 
+func (e WorkflowStepTypeEnum) ToPointer() *WorkflowStepTypeEnum {
+	return &e
+}
+
 func (e *WorkflowStepTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COPY":
 		fallthrough
 	case "CUSTOM":
@@ -32,9 +36,9 @@ func (e *WorkflowStepTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DELETE":
 		fallthrough
 	case "DECRYPT":
-		*e = WorkflowStepTypeEnum(s)
+		*e = WorkflowStepTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkflowStepTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkflowStepTypeEnum: %v", v)
 	}
 }

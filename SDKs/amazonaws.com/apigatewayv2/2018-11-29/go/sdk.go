@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Amazon API Gateway V2
 // https://docs.aws.amazon.com/apigateway/ - Amazon Web Services documentation
 type SDK struct {
@@ -210,7 +225,10 @@ func (s *SDK) CreateAPI(ctx context.Context, request operations.CreateAPIRequest
 // CreateAPIMapping - Creates an API mapping.
 func (s *SDK) CreateAPIMapping(ctx context.Context, request operations.CreateAPIMappingRequest) (*operations.CreateAPIMappingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}/apimappings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}/apimappings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -306,7 +324,10 @@ func (s *SDK) CreateAPIMapping(ctx context.Context, request operations.CreateAPI
 // CreateAuthorizer - Creates an Authorizer for an API.
 func (s *SDK) CreateAuthorizer(ctx context.Context, request operations.CreateAuthorizerRequest) (*operations.CreateAuthorizerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/authorizers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/authorizers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -402,7 +423,10 @@ func (s *SDK) CreateAuthorizer(ctx context.Context, request operations.CreateAut
 // CreateDeployment - Creates a Deployment for an API.
 func (s *SDK) CreateDeployment(ctx context.Context, request operations.CreateDeploymentRequest) (*operations.CreateDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -604,7 +628,10 @@ func (s *SDK) CreateDomainName(ctx context.Context, request operations.CreateDom
 // CreateIntegration - Creates an Integration.
 func (s *SDK) CreateIntegration(ctx context.Context, request operations.CreateIntegrationRequest) (*operations.CreateIntegrationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -700,7 +727,10 @@ func (s *SDK) CreateIntegration(ctx context.Context, request operations.CreateIn
 // CreateIntegrationResponse - Creates an IntegrationResponses.
 func (s *SDK) CreateIntegrationResponse(ctx context.Context, request operations.CreateIntegrationResponseRequest) (*operations.CreateIntegrationResponseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}/integrationresponses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}/integrationresponses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -796,7 +826,10 @@ func (s *SDK) CreateIntegrationResponse(ctx context.Context, request operations.
 // CreateModel - Creates a Model for an API.
 func (s *SDK) CreateModel(ctx context.Context, request operations.CreateModelRequest) (*operations.CreateModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -892,7 +925,10 @@ func (s *SDK) CreateModel(ctx context.Context, request operations.CreateModelReq
 // CreateRoute - Creates a Route for an API.
 func (s *SDK) CreateRoute(ctx context.Context, request operations.CreateRouteRequest) (*operations.CreateRouteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -988,7 +1024,10 @@ func (s *SDK) CreateRoute(ctx context.Context, request operations.CreateRouteReq
 // CreateRouteResponse - Creates a RouteResponse for a Route.
 func (s *SDK) CreateRouteResponse(ctx context.Context, request operations.CreateRouteResponseRequest) (*operations.CreateRouteResponseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}/routeresponses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}/routeresponses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1084,7 +1123,10 @@ func (s *SDK) CreateRouteResponse(ctx context.Context, request operations.Create
 // CreateStage - Creates a Stage for an API.
 func (s *SDK) CreateStage(ctx context.Context, request operations.CreateStageRequest) (*operations.CreateStageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1256,7 +1298,10 @@ func (s *SDK) CreateVpcLink(ctx context.Context, request operations.CreateVpcLin
 // DeleteAccessLogSettings - Deletes the AccessLogSettings for a Stage. To disable access logging for a Stage, delete its AccessLogSettings.
 func (s *SDK) DeleteAccessLogSettings(ctx context.Context, request operations.DeleteAccessLogSettingsRequest) (*operations.DeleteAccessLogSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages/{stageName}/accesslogsettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages/{stageName}/accesslogsettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1313,7 +1358,10 @@ func (s *SDK) DeleteAccessLogSettings(ctx context.Context, request operations.De
 // DeleteAPI - Deletes an Api resource.
 func (s *SDK) DeleteAPI(ctx context.Context, request operations.DeleteAPIRequest) (*operations.DeleteAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1370,7 +1418,10 @@ func (s *SDK) DeleteAPI(ctx context.Context, request operations.DeleteAPIRequest
 // DeleteAPIMapping - Deletes an API mapping.
 func (s *SDK) DeleteAPIMapping(ctx context.Context, request operations.DeleteAPIMappingRequest) (*operations.DeleteAPIMappingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}/apimappings/{apiMappingId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}/apimappings/{apiMappingId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1437,7 +1488,10 @@ func (s *SDK) DeleteAPIMapping(ctx context.Context, request operations.DeleteAPI
 // DeleteAuthorizer - Deletes an Authorizer.
 func (s *SDK) DeleteAuthorizer(ctx context.Context, request operations.DeleteAuthorizerRequest) (*operations.DeleteAuthorizerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/authorizers/{authorizerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/authorizers/{authorizerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1494,7 +1548,10 @@ func (s *SDK) DeleteAuthorizer(ctx context.Context, request operations.DeleteAut
 // DeleteCorsConfiguration - Deletes a CORS configuration.
 func (s *SDK) DeleteCorsConfiguration(ctx context.Context, request operations.DeleteCorsConfigurationRequest) (*operations.DeleteCorsConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/cors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/cors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1551,7 +1608,10 @@ func (s *SDK) DeleteCorsConfiguration(ctx context.Context, request operations.De
 // DeleteDeployment - Deletes a Deployment.
 func (s *SDK) DeleteDeployment(ctx context.Context, request operations.DeleteDeploymentRequest) (*operations.DeleteDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/deployments/{deploymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/deployments/{deploymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1608,7 +1668,10 @@ func (s *SDK) DeleteDeployment(ctx context.Context, request operations.DeleteDep
 // DeleteDomainName - Deletes a domain name.
 func (s *SDK) DeleteDomainName(ctx context.Context, request operations.DeleteDomainNameRequest) (*operations.DeleteDomainNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1665,7 +1728,10 @@ func (s *SDK) DeleteDomainName(ctx context.Context, request operations.DeleteDom
 // DeleteIntegration - Deletes an Integration.
 func (s *SDK) DeleteIntegration(ctx context.Context, request operations.DeleteIntegrationRequest) (*operations.DeleteIntegrationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1722,7 +1788,10 @@ func (s *SDK) DeleteIntegration(ctx context.Context, request operations.DeleteIn
 // DeleteIntegrationResponse - Deletes an IntegrationResponses.
 func (s *SDK) DeleteIntegrationResponse(ctx context.Context, request operations.DeleteIntegrationResponseRequest) (*operations.DeleteIntegrationResponseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}/integrationresponses/{integrationResponseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}/integrationresponses/{integrationResponseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1779,7 +1848,10 @@ func (s *SDK) DeleteIntegrationResponse(ctx context.Context, request operations.
 // DeleteModel - Deletes a Model.
 func (s *SDK) DeleteModel(ctx context.Context, request operations.DeleteModelRequest) (*operations.DeleteModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/models/{modelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/models/{modelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1836,7 +1908,10 @@ func (s *SDK) DeleteModel(ctx context.Context, request operations.DeleteModelReq
 // DeleteRoute - Deletes a Route.
 func (s *SDK) DeleteRoute(ctx context.Context, request operations.DeleteRouteRequest) (*operations.DeleteRouteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1893,7 +1968,10 @@ func (s *SDK) DeleteRoute(ctx context.Context, request operations.DeleteRouteReq
 // DeleteRouteRequestParameter - Deletes a route request parameter.
 func (s *SDK) DeleteRouteRequestParameter(ctx context.Context, request operations.DeleteRouteRequestParameterRequest) (*operations.DeleteRouteRequestParameterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}/requestparameters/{requestParameterKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}/requestparameters/{requestParameterKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1950,7 +2028,10 @@ func (s *SDK) DeleteRouteRequestParameter(ctx context.Context, request operation
 // DeleteRouteResponse - Deletes a RouteResponse.
 func (s *SDK) DeleteRouteResponse(ctx context.Context, request operations.DeleteRouteResponseRequest) (*operations.DeleteRouteResponseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}/routeresponses/{routeResponseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}/routeresponses/{routeResponseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2007,7 +2088,10 @@ func (s *SDK) DeleteRouteResponse(ctx context.Context, request operations.Delete
 // DeleteRouteSettings - Deletes the RouteSettings for a stage.
 func (s *SDK) DeleteRouteSettings(ctx context.Context, request operations.DeleteRouteSettingsRequest) (*operations.DeleteRouteSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages/{stageName}/routesettings/{routeKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages/{stageName}/routesettings/{routeKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2064,7 +2148,10 @@ func (s *SDK) DeleteRouteSettings(ctx context.Context, request operations.Delete
 // DeleteStage - Deletes a Stage.
 func (s *SDK) DeleteStage(ctx context.Context, request operations.DeleteStageRequest) (*operations.DeleteStageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages/{stageName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages/{stageName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2121,7 +2208,10 @@ func (s *SDK) DeleteStage(ctx context.Context, request operations.DeleteStageReq
 // DeleteVpcLink - Deletes a VPC link.
 func (s *SDK) DeleteVpcLink(ctx context.Context, request operations.DeleteVpcLinkRequest) (*operations.DeleteVpcLinkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vpclinks/{vpcLinkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vpclinks/{vpcLinkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2183,9 +2273,13 @@ func (s *SDK) DeleteVpcLink(ctx context.Context, request operations.DeleteVpcLin
 
 	return res, nil
 }
+
 func (s *SDK) ExportAPI(ctx context.Context, request operations.ExportAPIRequest) (*operations.ExportAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/exports/{specification}#outputType", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/exports/{specification}#outputType", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2265,7 +2359,10 @@ func (s *SDK) ExportAPI(ctx context.Context, request operations.ExportAPIRequest
 // GetAPI - Gets an Api resource.
 func (s *SDK) GetAPI(ctx context.Context, request operations.GetAPIRequest) (*operations.GetAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2331,7 +2428,10 @@ func (s *SDK) GetAPI(ctx context.Context, request operations.GetAPIRequest) (*op
 // GetAPIMapping - Gets an API mapping.
 func (s *SDK) GetAPIMapping(ctx context.Context, request operations.GetAPIMappingRequest) (*operations.GetAPIMappingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}/apimappings/{apiMappingId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}/apimappings/{apiMappingId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2407,7 +2507,10 @@ func (s *SDK) GetAPIMapping(ctx context.Context, request operations.GetAPIMappin
 // GetAPIMappings - Gets API mappings.
 func (s *SDK) GetAPIMappings(ctx context.Context, request operations.GetAPIMappingsRequest) (*operations.GetAPIMappingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}/apimappings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}/apimappings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2567,7 +2670,10 @@ func (s *SDK) GetApis(ctx context.Context, request operations.GetApisRequest) (*
 // GetAuthorizer - Gets an Authorizer.
 func (s *SDK) GetAuthorizer(ctx context.Context, request operations.GetAuthorizerRequest) (*operations.GetAuthorizerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/authorizers/{authorizerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/authorizers/{authorizerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2633,7 +2739,10 @@ func (s *SDK) GetAuthorizer(ctx context.Context, request operations.GetAuthorize
 // GetAuthorizers - Gets the Authorizers for an API.
 func (s *SDK) GetAuthorizers(ctx context.Context, request operations.GetAuthorizersRequest) (*operations.GetAuthorizersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/authorizers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/authorizers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2713,7 +2822,10 @@ func (s *SDK) GetAuthorizers(ctx context.Context, request operations.GetAuthoriz
 // GetDeployment - Gets a Deployment.
 func (s *SDK) GetDeployment(ctx context.Context, request operations.GetDeploymentRequest) (*operations.GetDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/deployments/{deploymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/deployments/{deploymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2779,7 +2891,10 @@ func (s *SDK) GetDeployment(ctx context.Context, request operations.GetDeploymen
 // GetDeployments - Gets the Deployments for an API.
 func (s *SDK) GetDeployments(ctx context.Context, request operations.GetDeploymentsRequest) (*operations.GetDeploymentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2859,7 +2974,10 @@ func (s *SDK) GetDeployments(ctx context.Context, request operations.GetDeployme
 // GetDomainName - Gets a domain name.
 func (s *SDK) GetDomainName(ctx context.Context, request operations.GetDomainNameRequest) (*operations.GetDomainNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3005,7 +3123,10 @@ func (s *SDK) GetDomainNames(ctx context.Context, request operations.GetDomainNa
 // GetIntegration - Gets an Integration.
 func (s *SDK) GetIntegration(ctx context.Context, request operations.GetIntegrationRequest) (*operations.GetIntegrationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3071,7 +3192,10 @@ func (s *SDK) GetIntegration(ctx context.Context, request operations.GetIntegrat
 // GetIntegrationResponse - Gets an IntegrationResponses.
 func (s *SDK) GetIntegrationResponse(ctx context.Context, request operations.GetIntegrationResponseRequest) (*operations.GetIntegrationResponseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}/integrationresponses/{integrationResponseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}/integrationresponses/{integrationResponseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3137,7 +3261,10 @@ func (s *SDK) GetIntegrationResponse(ctx context.Context, request operations.Get
 // GetIntegrationResponses - Gets the IntegrationResponses for an Integration.
 func (s *SDK) GetIntegrationResponses(ctx context.Context, request operations.GetIntegrationResponsesRequest) (*operations.GetIntegrationResponsesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}/integrationresponses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}/integrationresponses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3217,7 +3344,10 @@ func (s *SDK) GetIntegrationResponses(ctx context.Context, request operations.Ge
 // GetIntegrations - Gets the Integrations for an API.
 func (s *SDK) GetIntegrations(ctx context.Context, request operations.GetIntegrationsRequest) (*operations.GetIntegrationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3297,7 +3427,10 @@ func (s *SDK) GetIntegrations(ctx context.Context, request operations.GetIntegra
 // GetModel - Gets a Model.
 func (s *SDK) GetModel(ctx context.Context, request operations.GetModelRequest) (*operations.GetModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/models/{modelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/models/{modelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3363,7 +3496,10 @@ func (s *SDK) GetModel(ctx context.Context, request operations.GetModelRequest) 
 // GetModelTemplate - Gets a model template.
 func (s *SDK) GetModelTemplate(ctx context.Context, request operations.GetModelTemplateRequest) (*operations.GetModelTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/models/{modelId}/template", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/models/{modelId}/template", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3429,7 +3565,10 @@ func (s *SDK) GetModelTemplate(ctx context.Context, request operations.GetModelT
 // GetModels - Gets the Models for an API.
 func (s *SDK) GetModels(ctx context.Context, request operations.GetModelsRequest) (*operations.GetModelsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3509,7 +3648,10 @@ func (s *SDK) GetModels(ctx context.Context, request operations.GetModelsRequest
 // GetRoute - Gets a Route.
 func (s *SDK) GetRoute(ctx context.Context, request operations.GetRouteRequest) (*operations.GetRouteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3575,7 +3717,10 @@ func (s *SDK) GetRoute(ctx context.Context, request operations.GetRouteRequest) 
 // GetRouteResponse - Gets a RouteResponse.
 func (s *SDK) GetRouteResponse(ctx context.Context, request operations.GetRouteResponseRequest) (*operations.GetRouteResponseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}/routeresponses/{routeResponseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}/routeresponses/{routeResponseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3641,7 +3786,10 @@ func (s *SDK) GetRouteResponse(ctx context.Context, request operations.GetRouteR
 // GetRouteResponses - Gets the RouteResponses for a Route.
 func (s *SDK) GetRouteResponses(ctx context.Context, request operations.GetRouteResponsesRequest) (*operations.GetRouteResponsesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}/routeresponses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}/routeresponses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3721,7 +3869,10 @@ func (s *SDK) GetRouteResponses(ctx context.Context, request operations.GetRoute
 // GetRoutes - Gets the Routes for an API.
 func (s *SDK) GetRoutes(ctx context.Context, request operations.GetRoutesRequest) (*operations.GetRoutesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3801,7 +3952,10 @@ func (s *SDK) GetRoutes(ctx context.Context, request operations.GetRoutesRequest
 // GetStage - Gets a Stage.
 func (s *SDK) GetStage(ctx context.Context, request operations.GetStageRequest) (*operations.GetStageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages/{stageName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages/{stageName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3867,7 +4021,10 @@ func (s *SDK) GetStage(ctx context.Context, request operations.GetStageRequest) 
 // GetStages - Gets the Stages for an API.
 func (s *SDK) GetStages(ctx context.Context, request operations.GetStagesRequest) (*operations.GetStagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3947,7 +4104,10 @@ func (s *SDK) GetStages(ctx context.Context, request operations.GetStagesRequest
 // GetTags - Gets a collection of Tag resources.
 func (s *SDK) GetTags(ctx context.Context, request operations.GetTagsRequest) (*operations.GetTagsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/tags/{resource-arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/tags/{resource-arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4033,7 +4193,10 @@ func (s *SDK) GetTags(ctx context.Context, request operations.GetTagsRequest) (*
 // GetVpcLink - Gets a VPC link.
 func (s *SDK) GetVpcLink(ctx context.Context, request operations.GetVpcLinkRequest) (*operations.GetVpcLinkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vpclinks/{vpcLinkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vpclinks/{vpcLinkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4269,7 +4432,10 @@ func (s *SDK) ImportAPI(ctx context.Context, request operations.ImportAPIRequest
 // ReimportAPI - Puts an Api resource.
 func (s *SDK) ReimportAPI(ctx context.Context, request operations.ReimportAPIRequest) (*operations.ReimportAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4369,7 +4535,10 @@ func (s *SDK) ReimportAPI(ctx context.Context, request operations.ReimportAPIReq
 // ResetAuthorizersCache - Resets all authorizer cache entries on a stage. Supported only for HTTP APIs.
 func (s *SDK) ResetAuthorizersCache(ctx context.Context, request operations.ResetAuthorizersCacheRequest) (*operations.ResetAuthorizersCacheResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages/{stageName}/cache/authorizers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages/{stageName}/cache/authorizers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4426,7 +4595,10 @@ func (s *SDK) ResetAuthorizersCache(ctx context.Context, request operations.Rese
 // TagResource - Creates a new Tag resource to represent a tag.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/tags/{resource-arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/tags/{resource-arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4522,7 +4694,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Deletes a Tag.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/tags/{resource-arn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/tags/{resource-arn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4603,7 +4778,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAPI - Updates an Api resource.
 func (s *SDK) UpdateAPI(ctx context.Context, request operations.UpdateAPIRequest) (*operations.UpdateAPIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4699,7 +4877,10 @@ func (s *SDK) UpdateAPI(ctx context.Context, request operations.UpdateAPIRequest
 // UpdateAPIMapping - The API mapping.
 func (s *SDK) UpdateAPIMapping(ctx context.Context, request operations.UpdateAPIMappingRequest) (*operations.UpdateAPIMappingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}/apimappings/{apiMappingId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}/apimappings/{apiMappingId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4795,7 +4976,10 @@ func (s *SDK) UpdateAPIMapping(ctx context.Context, request operations.UpdateAPI
 // UpdateAuthorizer - Updates an Authorizer.
 func (s *SDK) UpdateAuthorizer(ctx context.Context, request operations.UpdateAuthorizerRequest) (*operations.UpdateAuthorizerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/authorizers/{authorizerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/authorizers/{authorizerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4891,7 +5075,10 @@ func (s *SDK) UpdateAuthorizer(ctx context.Context, request operations.UpdateAut
 // UpdateDeployment - Updates a Deployment.
 func (s *SDK) UpdateDeployment(ctx context.Context, request operations.UpdateDeploymentRequest) (*operations.UpdateDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/deployments/{deploymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/deployments/{deploymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4987,7 +5174,10 @@ func (s *SDK) UpdateDeployment(ctx context.Context, request operations.UpdateDep
 // UpdateDomainName - Updates a domain name.
 func (s *SDK) UpdateDomainName(ctx context.Context, request operations.UpdateDomainNameRequest) (*operations.UpdateDomainNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/domainnames/{domainName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5083,7 +5273,10 @@ func (s *SDK) UpdateDomainName(ctx context.Context, request operations.UpdateDom
 // UpdateIntegration - Updates an Integration.
 func (s *SDK) UpdateIntegration(ctx context.Context, request operations.UpdateIntegrationRequest) (*operations.UpdateIntegrationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5179,7 +5372,10 @@ func (s *SDK) UpdateIntegration(ctx context.Context, request operations.UpdateIn
 // UpdateIntegrationResponse - Updates an IntegrationResponses.
 func (s *SDK) UpdateIntegrationResponse(ctx context.Context, request operations.UpdateIntegrationResponseRequest) (*operations.UpdateIntegrationResponseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}/integrationresponses/{integrationResponseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/integrations/{integrationId}/integrationresponses/{integrationResponseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5275,7 +5471,10 @@ func (s *SDK) UpdateIntegrationResponse(ctx context.Context, request operations.
 // UpdateModel - Updates a Model.
 func (s *SDK) UpdateModel(ctx context.Context, request operations.UpdateModelRequest) (*operations.UpdateModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/models/{modelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/models/{modelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5371,7 +5570,10 @@ func (s *SDK) UpdateModel(ctx context.Context, request operations.UpdateModelReq
 // UpdateRoute - Updates a Route.
 func (s *SDK) UpdateRoute(ctx context.Context, request operations.UpdateRouteRequest) (*operations.UpdateRouteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5467,7 +5669,10 @@ func (s *SDK) UpdateRoute(ctx context.Context, request operations.UpdateRouteReq
 // UpdateRouteResponse - Updates a RouteResponse.
 func (s *SDK) UpdateRouteResponse(ctx context.Context, request operations.UpdateRouteResponseRequest) (*operations.UpdateRouteResponseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}/routeresponses/{routeResponseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/routes/{routeId}/routeresponses/{routeResponseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5563,7 +5768,10 @@ func (s *SDK) UpdateRouteResponse(ctx context.Context, request operations.Update
 // UpdateStage - Updates a Stage.
 func (s *SDK) UpdateStage(ctx context.Context, request operations.UpdateStageRequest) (*operations.UpdateStageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages/{stageName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/apis/{apiId}/stages/{stageName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5659,7 +5867,10 @@ func (s *SDK) UpdateStage(ctx context.Context, request operations.UpdateStageReq
 // UpdateVpcLink - Updates a VPC link.
 func (s *SDK) UpdateVpcLink(ctx context.Context, request operations.UpdateVpcLinkRequest) (*operations.UpdateVpcLinkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vpclinks/{vpcLinkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vpclinks/{vpcLinkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -22,12 +23,14 @@ pkg/models/operations/certificatemanagerprojectslocationscertificatescreate.go
 pkg/models/operations/certificatemanagerprojectslocationscertificateslist.go
 pkg/models/operations/certificatemanagerprojectslocationsdnsauthorizationscreate.go
 pkg/models/operations/certificatemanagerprojectslocationsdnsauthorizationslist.go
-pkg/models/operations/certificatemanagerprojectslocationsdnsauthorizationspatch.go
 pkg/models/operations/certificatemanagerprojectslocationslist.go
 pkg/models/operations/certificatemanagerprojectslocationsoperationscancel.go
-pkg/models/operations/certificatemanagerprojectslocationsoperationsdelete.go
-pkg/models/operations/certificatemanagerprojectslocationsoperationsget.go
 pkg/models/operations/certificatemanagerprojectslocationsoperationslist.go
+pkg/models/operations/certificatemanagerprojectslocationstrustconfigscreate.go
+pkg/models/operations/certificatemanagerprojectslocationstrustconfigsdelete.go
+pkg/models/operations/certificatemanagerprojectslocationstrustconfigsget.go
+pkg/models/operations/certificatemanagerprojectslocationstrustconfigslist.go
+pkg/models/operations/certificatemanagerprojectslocationstrustconfigspatch.go
 pkg/models/shared/operation.go
 pkg/models/shared/status.go
 pkg/models/shared/altenum.go
@@ -54,4 +57,11 @@ pkg/models/shared/dnsresourcerecord.go
 pkg/models/shared/listlocationsresponse.go
 pkg/models/shared/location.go
 pkg/models/shared/listoperationsresponse.go
+pkg/models/shared/trustconfig.go
+pkg/models/shared/truststore.go
+pkg/models/shared/trustanchor.go
+pkg/models/shared/intermediateca.go
+pkg/models/shared/listtrustconfigsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

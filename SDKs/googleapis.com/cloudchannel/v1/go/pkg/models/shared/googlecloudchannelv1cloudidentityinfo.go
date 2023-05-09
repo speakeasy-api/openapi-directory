@@ -16,21 +16,25 @@ const (
 	GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnumTeam                    GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum = "TEAM"
 )
 
+func (e GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum) ToPointer() *GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOMER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DOMAIN":
 		fallthrough
 	case "TEAM":
-		*e = GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum(s)
+		*e = GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum: %v", v)
 	}
 }
 

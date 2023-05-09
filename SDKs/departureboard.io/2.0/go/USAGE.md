@@ -2,30 +2,27 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetArrivalsAndDeparturesByCRSRequest{
+    ctx := context.Background()
+    res, err := s.DeparturesAndArrivals.GetArrivalsAndDeparturesByCRS(ctx, operations.GetArrivalsAndDeparturesByCRSRequest{
         Crs: "corrupti",
         APIKey: "provident",
-        FilterStation: "distinctio",
-        FilterType: "quibusdam",
-        NumServices: 602763,
-        ServiceDetails: false,
-        TimeOffset: 857946,
-        TimeWindow: 544883,
-    }
-
-    ctx := context.Background()
-    res, err := s.DeparturesAndArrivals.GetArrivalsAndDeparturesByCRS(ctx, req)
+        FilterStation: sdk.String("distinctio"),
+        FilterType: sdk.String("quibusdam"),
+        NumServices: sdk.Int64(602763),
+        ServiceDetails: sdk.Bool(false),
+        TimeOffset: sdk.Int64(857946),
+        TimeWindow: sdk.Int64(544883),
+    })
     if err != nil {
         log.Fatal(err)
     }

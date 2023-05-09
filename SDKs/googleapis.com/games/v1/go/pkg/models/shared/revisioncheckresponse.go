@@ -17,12 +17,16 @@ const (
 	RevisionCheckResponseRevisionStatusEnumInvalid                   RevisionCheckResponseRevisionStatusEnum = "INVALID"
 )
 
+func (e RevisionCheckResponseRevisionStatusEnum) ToPointer() *RevisionCheckResponseRevisionStatusEnum {
+	return &e
+}
+
 func (e *RevisionCheckResponseRevisionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVISION_STATUS_UNSPECIFIED":
 		fallthrough
 	case "OK":
@@ -30,10 +34,10 @@ func (e *RevisionCheckResponseRevisionStatusEnum) UnmarshalJSON(data []byte) err
 	case "DEPRECATED":
 		fallthrough
 	case "INVALID":
-		*e = RevisionCheckResponseRevisionStatusEnum(s)
+		*e = RevisionCheckResponseRevisionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RevisionCheckResponseRevisionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RevisionCheckResponseRevisionStatusEnum: %v", v)
 	}
 }
 

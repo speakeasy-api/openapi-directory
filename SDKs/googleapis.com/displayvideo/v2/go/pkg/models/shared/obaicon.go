@@ -18,12 +18,16 @@ const (
 	ObaIconPositionEnumObaIconPositionLowerLeft   ObaIconPositionEnum = "OBA_ICON_POSITION_LOWER_LEFT"
 )
 
+func (e ObaIconPositionEnum) ToPointer() *ObaIconPositionEnum {
+	return &e
+}
+
 func (e *ObaIconPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OBA_ICON_POSITION_UNSPECIFIED":
 		fallthrough
 	case "OBA_ICON_POSITION_UPPER_RIGHT":
@@ -33,10 +37,10 @@ func (e *ObaIconPositionEnum) UnmarshalJSON(data []byte) error {
 	case "OBA_ICON_POSITION_LOWER_RIGHT":
 		fallthrough
 	case "OBA_ICON_POSITION_LOWER_LEFT":
-		*e = ObaIconPositionEnum(s)
+		*e = ObaIconPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ObaIconPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for ObaIconPositionEnum: %v", v)
 	}
 }
 

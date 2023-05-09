@@ -22,6 +22,8 @@ type FolderListForPathRequest struct {
 	Search *string `queryParam:"style=form,explode=true,name=search"`
 	// Search entire site?  If set, we will ignore the folder path provided and search the entire site.  This is the same API used by the search bar in the UI.  Search results are a best effort, not real time, and not guaranteed to match every file.  This field should only be used for ad-hoc (human) searching, and not as part of an automated process.
 	SearchAll *bool `queryParam:"style=form,explode=true,name=search_all"`
+	// Search by field and direction. Valid fields are `path`, `size`, `modified_at_datetime`, `provided_modified_at`.  Valid directions are `asc` and `desc`.  Defaults to `{"path":"asc"}`.
+	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
 	// Include file previews?
 	WithPreviews *bool `queryParam:"style=form,explode=true,name=with_previews"`
 	// Include file priority color information?

@@ -4,16 +4,16 @@ package shared
 
 // Kubernetes - Kubernetes-related attributes.
 type Kubernetes struct {
-	// Provides information on any Kubernetes access reviews (i.e. privilege checks) relevant to the finding.
+	// Provides information on any Kubernetes access reviews (privilege checks) relevant to the finding.
 	AccessReviews []AccessReview `json:"accessReviews,omitempty"`
-	// Provides Kubernetes role binding information for findings that involve RoleBindings or ClusterRoleBindings.
+	// Provides Kubernetes role binding information for findings that involve [RoleBindings or ClusterRoleBindings](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
 	Bindings []GoogleCloudSecuritycenterV1Binding `json:"bindings,omitempty"`
-	// GKE Node Pools associated with the finding. This field will contain NodePool information for each Node, when it is available.
+	// GKE [node pools](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools) associated with the finding. This field contains node pool information for each node, when it is available.
 	NodePools []NodePool `json:"nodePools,omitempty"`
-	// Provides Kubernetes Node information.
+	// Provides Kubernetes [node](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture#nodes) information.
 	Nodes []Node `json:"nodes,omitempty"`
-	// Kubernetes Pods associated with the finding. This field will contain Pod records for each container that is owned by a Pod.
+	// Kubernetes [Pods](https://cloud.google.com/kubernetes-engine/docs/concepts/pod) associated with the finding. This field contains Pod records for each container that is owned by a Pod.
 	Pods []Pod `json:"pods,omitempty"`
-	// Provides Kubernetes role information for findings that involve Roles or ClusterRoles.
+	// Provides Kubernetes role information for findings that involve [Roles or ClusterRoles](https://cloud.google.com/kubernetes-engine/docs/how-to/role-based-access-control).
 	Roles []Role `json:"roles,omitempty"`
 }

@@ -13,33 +13,34 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/websecurit
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ScanConfig: &shared.ScanConfig{
             Authentication: &shared.Authentication{
                 CustomAccount: &shared.CustomAccount{
-                    LoginURL: "provident",
-                    Password: "distinctio",
-                    Username: "Rosalinda_Mitchell84",
+                    LoginURL: sdk.String("provident"),
+                    Password: sdk.String("distinctio"),
+                    Username: sdk.String("Rosalinda_Mitchell84"),
                 },
                 GoogleAccount: &shared.GoogleAccount{
-                    Password: "vel",
-                    Username: "Linda.Oberbrunner",
+                    Password: sdk.String("vel"),
+                    Username: sdk.String("Linda.Oberbrunner"),
                 },
                 IapCredential: &shared.IapCredential{
                     IapTestServiceAccountInfo: &shared.IapTestServiceAccountInfo{
-                        TargetAudienceClientID: "magnam",
+                        TargetAudienceClientID: sdk.String("magnam"),
                     },
                 },
             },
@@ -49,41 +50,35 @@ func main() {
                 "tempora",
                 "suscipit",
             },
-            DisplayName: "molestiae",
-            ExportToSecurityCommandCenter: "DISABLED",
-            IgnoreHTTPStatusErrors: false,
-            ManagedScan: false,
-            MaxQPS: 812169,
-            Name: "voluptatum",
-            RiskLevel: "NORMAL",
+            DisplayName: sdk.String("molestiae"),
+            ExportToSecurityCommandCenter: shared.ScanConfigExportToSecurityCommandCenterEnumDisabled.ToPointer(),
+            IgnoreHTTPStatusErrors: sdk.Bool(false),
+            ManagedScan: sdk.Bool(false),
+            MaxQPS: sdk.Int(812169),
+            Name: sdk.String("Ted Mante"),
+            RiskLevel: shared.ScanConfigRiskLevelEnumLow.ToPointer(),
             Schedule: &shared.Schedule{
-                IntervalDurationDays: 568045,
-                ScheduleTime: "nisi",
+                IntervalDurationDays: sdk.Int(71036),
+                ScheduleTime: sdk.String("quis"),
             },
             StartingUrls: []string{
-                "temporibus",
-                "ab",
-                "quis",
-                "veritatis",
+                "deserunt",
             },
-            StaticIPScan: false,
-            UserAgent: "CHROME_ANDROID",
+            StaticIPScan: sdk.Bool(false),
+            UserAgent: shared.ScanConfigUserAgentEnumUserAgentUnspecified.ToPointer(),
         },
-        AccessToken: "perferendis",
-        Alt: "media",
-        Callback: "repellendus",
-        Fields: "sapiente",
-        Key: "quo",
-        OauthToken: "odit",
+        AccessToken: sdk.String("ipsam"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("sapiente"),
+        Fields: sdk.String("quo"),
+        Key: sdk.String("odit"),
+        OauthToken: sdk.String("at"),
         Parent: "at",
-        PrettyPrint: false,
-        QuotaUser: "at",
-        UploadType: "maiores",
-        UploadProtocol: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, req, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("maiores"),
+        UploadType: sdk.String("molestiae"),
+        UploadProtocol: sdk.String("quod"),
+    }, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -102,19 +97,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `WebsecurityscannerProjectsScanConfigsCreate` - Creates a new ScanConfig.
-* `WebsecurityscannerProjectsScanConfigsDelete` - Deletes an existing ScanConfig and its child resources.
-* `WebsecurityscannerProjectsScanConfigsList` - Lists ScanConfigs under a given project.
-* `WebsecurityscannerProjectsScanConfigsPatch` - Updates a ScanConfig. This method support partial update of a ScanConfig.
-* `WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList` - List CrawledUrls under a given ScanRun.
-* `WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList` - List all FindingTypeStats under a given ScanRun.
-* `WebsecurityscannerProjectsScanConfigsScanRunsFindingsGet` - Gets a Finding.
-* `WebsecurityscannerProjectsScanConfigsScanRunsFindingsList` - List Findings under a given ScanRun.
-* `WebsecurityscannerProjectsScanConfigsScanRunsList` - Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
-* `WebsecurityscannerProjectsScanConfigsScanRunsStop` - Stops a ScanRun. The stopped ScanRun is returned.
-* `WebsecurityscannerProjectsScanConfigsStart` - Start a ScanRun according to the given ScanConfig.
+* [WebsecurityscannerProjectsScanConfigsCreate](docs/projects/README.md#websecurityscannerprojectsscanconfigscreate) - Creates a new ScanConfig.
+* [WebsecurityscannerProjectsScanConfigsDelete](docs/projects/README.md#websecurityscannerprojectsscanconfigsdelete) - Deletes an existing ScanConfig and its child resources.
+* [WebsecurityscannerProjectsScanConfigsList](docs/projects/README.md#websecurityscannerprojectsscanconfigslist) - Lists ScanConfigs under a given project.
+* [WebsecurityscannerProjectsScanConfigsPatch](docs/projects/README.md#websecurityscannerprojectsscanconfigspatch) - Updates a ScanConfig. This method support partial update of a ScanConfig.
+* [WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunscrawledurlslist) - List CrawledUrls under a given ScanRun.
+* [WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunsfindingtypestatslist) - List all FindingTypeStats under a given ScanRun.
+* [WebsecurityscannerProjectsScanConfigsScanRunsFindingsGet](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunsfindingsget) - Gets a Finding.
+* [WebsecurityscannerProjectsScanConfigsScanRunsFindingsList](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunsfindingslist) - List Findings under a given ScanRun.
+* [WebsecurityscannerProjectsScanConfigsScanRunsList](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunslist) - Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
+* [WebsecurityscannerProjectsScanConfigsScanRunsStop](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunsstop) - Stops a ScanRun. The stopped ScanRun is returned.
+* [WebsecurityscannerProjectsScanConfigsStart](docs/projects/README.md#websecurityscannerprojectsscanconfigsstart) - Start a ScanRun according to the given ScanConfig.
 <!-- End SDK Available Operations -->
 
 ### Maturity

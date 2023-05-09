@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,15 +17,16 @@ func main() {
         }),
     )
 
-    req := operations.CreateAnomalyMonitorRequest{
+    ctx := context.Background()
+    res, err := s.CreateAnomalyMonitor(ctx, operations.CreateAnomalyMonitorRequest{
         CreateAnomalyMonitorRequest: shared.CreateAnomalyMonitorRequest{
             AnomalyMonitor: shared.AnomalyMonitor{
-                CreationDate: "corrupti",
-                DimensionalValueCount: 592845,
-                LastEvaluatedDate: "distinctio",
-                LastUpdatedDate: "quibusdam",
-                MonitorArn: "unde",
-                MonitorDimension: "SERVICE",
+                CreationDate: sdk.String("corrupti"),
+                DimensionalValueCount: sdk.Int64(592845),
+                LastEvaluatedDate: sdk.String("distinctio"),
+                LastUpdatedDate: sdk.String("quibusdam"),
+                MonitorArn: sdk.String("unde"),
+                MonitorDimension: shared.MonitorDimensionEnumService.ToPointer(),
                 MonitorName: "nulla",
                 MonitorSpecification: &shared.Expression{
                     And: []shared.Expression{
@@ -34,10 +35,10 @@ func main() {
                         shared.Expression{},
                     },
                     CostCategories: &shared.CostCategoryValues{
-                        Key: "illum",
+                        Key: sdk.String("illum"),
                         MatchOptions: []shared.MatchOptionEnum{
-                            "CONTAINS",
-                            "CASE_SENSITIVE",
+                            shared.MatchOptionEnumContains,
+                            shared.MatchOptionEnumCaseSensitive,
                         },
                         Values: []string{
                             "iure",
@@ -45,9 +46,9 @@ func main() {
                         },
                     },
                     Dimensions: &shared.DimensionValues{
-                        Key: "AGREEMENT_END_DATE_TIME_BEFORE",
+                        Key: shared.DimensionEnumAgreementEndDateTimeBefore.ToPointer(),
                         MatchOptions: []shared.MatchOptionEnum{
-                            "GREATER_THAN_OR_EQUAL",
+                            shared.MatchOptionEnumGreaterThanOrEqual,
                         },
                         Values: []string{
                             "suscipit",
@@ -62,11 +63,11 @@ func main() {
                         shared.Expression{},
                     },
                     Tags: &shared.TagValues{
-                        Key: "placeat",
+                        Key: sdk.String("placeat"),
                         MatchOptions: []shared.MatchOptionEnum{
-                            "ENDS_WITH",
-                            "CONTAINS",
-                            "ENDS_WITH",
+                            shared.MatchOptionEnumEndsWith,
+                            shared.MatchOptionEnumContains,
+                            shared.MatchOptionEnumEndsWith,
                         },
                         Values: []string{
                             "temporibus",
@@ -76,7 +77,7 @@ func main() {
                         },
                     },
                 },
-                MonitorType: "CUSTOM",
+                MonitorType: shared.MonitorTypeEnumCustom,
             },
             ResourceTags: []shared.ResourceTag{
                 shared.ResourceTag{
@@ -85,18 +86,15 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "sapiente",
-        XAmzContentSha256: "quo",
-        XAmzCredential: "odit",
-        XAmzDate: "at",
-        XAmzSecurityToken: "at",
-        XAmzSignature: "maiores",
-        XAmzSignedHeaders: "molestiae",
-        XAmzTarget: "AWSInsightsIndexService.CreateAnomalyMonitor",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateAnomalyMonitor(ctx, req)
+        XAmzAlgorithm: sdk.String("sapiente"),
+        XAmzContentSha256: sdk.String("quo"),
+        XAmzCredential: sdk.String("odit"),
+        XAmzDate: sdk.String("at"),
+        XAmzSecurityToken: sdk.String("at"),
+        XAmzSignature: sdk.String("maiores"),
+        XAmzSignedHeaders: sdk.String("molestiae"),
+        XAmzTarget: operations.CreateAnomalyMonitorXAmzTargetEnumAwsInsightsIndexServiceCreateAnomalyMonitor,
+    })
     if err != nil {
         log.Fatal(err)
     }

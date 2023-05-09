@@ -24,12 +24,16 @@ const (
 	PatternsGetPatternByRunExpandEnumNone              PatternsGetPatternByRunExpandEnum = "None"
 )
 
+func (e PatternsGetPatternByRunExpandEnum) ToPointer() *PatternsGetPatternByRunExpandEnum {
+	return &e
+}
+
 func (e *PatternsGetPatternByRunExpandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All":
 		fallthrough
 	case "Stop":
@@ -47,43 +51,47 @@ func (e *PatternsGetPatternByRunExpandEnum) UnmarshalJSON(data []byte) error {
 	case "VehiclePosition":
 		fallthrough
 	case "None":
-		*e = PatternsGetPatternByRunExpandEnum(s)
+		*e = PatternsGetPatternByRunExpandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatternsGetPatternByRunExpandEnum: %s", s)
+		return fmt.Errorf("invalid value for PatternsGetPatternByRunExpandEnum: %v", v)
 	}
 }
 
 // PatternsGetPatternByRunRouteTypeEnum - Number identifying transport mode; values returned via RouteTypes API
-type PatternsGetPatternByRunRouteTypeEnum string
+type PatternsGetPatternByRunRouteTypeEnum int
 
 const (
-	PatternsGetPatternByRunRouteTypeEnumZero  PatternsGetPatternByRunRouteTypeEnum = "0"
-	PatternsGetPatternByRunRouteTypeEnumOne   PatternsGetPatternByRunRouteTypeEnum = "1"
-	PatternsGetPatternByRunRouteTypeEnumTwo   PatternsGetPatternByRunRouteTypeEnum = "2"
-	PatternsGetPatternByRunRouteTypeEnumThree PatternsGetPatternByRunRouteTypeEnum = "3"
-	PatternsGetPatternByRunRouteTypeEnumFour  PatternsGetPatternByRunRouteTypeEnum = "4"
+	PatternsGetPatternByRunRouteTypeEnumZero  PatternsGetPatternByRunRouteTypeEnum = 0
+	PatternsGetPatternByRunRouteTypeEnumOne   PatternsGetPatternByRunRouteTypeEnum = 1
+	PatternsGetPatternByRunRouteTypeEnumTwo   PatternsGetPatternByRunRouteTypeEnum = 2
+	PatternsGetPatternByRunRouteTypeEnumThree PatternsGetPatternByRunRouteTypeEnum = 3
+	PatternsGetPatternByRunRouteTypeEnumFour  PatternsGetPatternByRunRouteTypeEnum = 4
 )
 
+func (e PatternsGetPatternByRunRouteTypeEnum) ToPointer() *PatternsGetPatternByRunRouteTypeEnum {
+	return &e
+}
+
 func (e *PatternsGetPatternByRunRouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
-		*e = PatternsGetPatternByRunRouteTypeEnum(s)
+	case 4:
+		*e = PatternsGetPatternByRunRouteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatternsGetPatternByRunRouteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatternsGetPatternByRunRouteTypeEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETDescribeStopwordOptionsActionEnumDescribeStopwordOptions GETDescribeStopwordOptionsActionEnum = "DescribeStopwordOptions"
 )
 
+func (e GETDescribeStopwordOptionsActionEnum) ToPointer() *GETDescribeStopwordOptionsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeStopwordOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeStopwordOptions":
-		*e = GETDescribeStopwordOptionsActionEnum(s)
+		*e = GETDescribeStopwordOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeStopwordOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeStopwordOptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeStopwordOptionsVersionEnumTwoThousandAndEleven0201 GETDescribeStopwordOptionsVersionEnum = "2011-02-01"
 )
 
+func (e GETDescribeStopwordOptionsVersionEnum) ToPointer() *GETDescribeStopwordOptionsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeStopwordOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-02-01":
-		*e = GETDescribeStopwordOptionsVersionEnum(s)
+		*e = GETDescribeStopwordOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeStopwordOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeStopwordOptionsVersionEnum: %v", v)
 	}
 }
 

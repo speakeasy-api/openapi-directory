@@ -15,17 +15,21 @@ const (
 	GETTerminateEnvironmentActionEnumTerminateEnvironment GETTerminateEnvironmentActionEnum = "TerminateEnvironment"
 )
 
+func (e GETTerminateEnvironmentActionEnum) ToPointer() *GETTerminateEnvironmentActionEnum {
+	return &e
+}
+
 func (e *GETTerminateEnvironmentActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TerminateEnvironment":
-		*e = GETTerminateEnvironmentActionEnum(s)
+		*e = GETTerminateEnvironmentActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTerminateEnvironmentActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTerminateEnvironmentActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETTerminateEnvironmentVersionEnumTwoThousandAndTen1201 GETTerminateEnvironmentVersionEnum = "2010-12-01"
 )
 
+func (e GETTerminateEnvironmentVersionEnum) ToPointer() *GETTerminateEnvironmentVersionEnum {
+	return &e
+}
+
 func (e *GETTerminateEnvironmentVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETTerminateEnvironmentVersionEnum(s)
+		*e = GETTerminateEnvironmentVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTerminateEnvironmentVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTerminateEnvironmentVersionEnum: %v", v)
 	}
 }
 

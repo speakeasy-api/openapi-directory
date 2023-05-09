@@ -26,12 +26,16 @@ const (
 	GetPublicKeyResponseCustomerMasterKeySpecEnumSm2              GetPublicKeyResponseCustomerMasterKeySpecEnum = "SM2"
 )
 
+func (e GetPublicKeyResponseCustomerMasterKeySpecEnum) ToPointer() *GetPublicKeyResponseCustomerMasterKeySpecEnum {
+	return &e
+}
+
 func (e *GetPublicKeyResponseCustomerMasterKeySpecEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RSA_2048":
 		fallthrough
 	case "RSA_3072":
@@ -57,10 +61,10 @@ func (e *GetPublicKeyResponseCustomerMasterKeySpecEnum) UnmarshalJSON(data []byt
 	case "HMAC_512":
 		fallthrough
 	case "SM2":
-		*e = GetPublicKeyResponseCustomerMasterKeySpecEnum(s)
+		*e = GetPublicKeyResponseCustomerMasterKeySpecEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPublicKeyResponseCustomerMasterKeySpecEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPublicKeyResponseCustomerMasterKeySpecEnum: %v", v)
 	}
 }
 

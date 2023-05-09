@@ -17,12 +17,16 @@ const (
 	SourceConnectorTypeEnumS3         SourceConnectorTypeEnum = "S3"
 )
 
+func (e SourceConnectorTypeEnum) ToPointer() *SourceConnectorTypeEnum {
+	return &e
+}
+
 func (e *SourceConnectorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Salesforce":
 		fallthrough
 	case "Marketo":
@@ -32,9 +36,9 @@ func (e *SourceConnectorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Servicenow":
 		fallthrough
 	case "S3":
-		*e = SourceConnectorTypeEnum(s)
+		*e = SourceConnectorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceConnectorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceConnectorTypeEnum: %v", v)
 	}
 }

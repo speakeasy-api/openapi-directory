@@ -17,12 +17,16 @@ const (
 	FromPropertyTypeEnumWhatsapp        FromPropertyTypeEnum = "whatsapp"
 )
 
+func (e FromPropertyTypeEnum) ToPointer() *FromPropertyTypeEnum {
+	return &e
+}
+
 func (e *FromPropertyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sms":
 		fallthrough
 	case "viber_service_msg":
@@ -30,10 +34,10 @@ func (e *FromPropertyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "messenger":
 		fallthrough
 	case "whatsapp":
-		*e = FromPropertyTypeEnum(s)
+		*e = FromPropertyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FromPropertyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FromPropertyTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DeleteWebhookXAmzTargetEnumCodePipeline20150709DeleteWebhook DeleteWebhookXAmzTargetEnum = "CodePipeline_20150709.DeleteWebhook"
 )
 
+func (e DeleteWebhookXAmzTargetEnum) ToPointer() *DeleteWebhookXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteWebhookXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.DeleteWebhook":
-		*e = DeleteWebhookXAmzTargetEnum(s)
+		*e = DeleteWebhookXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteWebhookXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteWebhookXAmzTargetEnum: %v", v)
 	}
 }
 

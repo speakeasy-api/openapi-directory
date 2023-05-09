@@ -34,7 +34,10 @@ func newV1p4beta1(defaultClient, securityClient HTTPClient, serverURL, language,
 // CloudassetAnalyzeIamPolicy - Analyzes IAM policies to answer which identities have what accesses on which resources.
 func (s *v1p4beta1) CloudassetAnalyzeIamPolicy(ctx context.Context, request operations.CloudassetAnalyzeIamPolicyRequest, security operations.CloudassetAnalyzeIamPolicySecurity) (*operations.CloudassetAnalyzeIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p4beta1/{parent}:analyzeIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1p4beta1/{parent}:analyzeIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *v1p4beta1) CloudassetAnalyzeIamPolicy(ctx context.Context, request oper
 // CloudassetExportIamPolicyAnalysis - Exports the answers of which identities have what accesses on which resources to a Google Cloud Storage destination. The output format is the JSON format that represents a AnalyzeIamPolicyResponse in the JSON format. This method implements the google.longrunning.Operation, which allows you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. The metadata contains the request to help callers to map responses to requests.
 func (s *v1p4beta1) CloudassetExportIamPolicyAnalysis(ctx context.Context, request operations.CloudassetExportIamPolicyAnalysisRequest, security operations.CloudassetExportIamPolicyAnalysisSecurity) (*operations.CloudassetExportIamPolicyAnalysisResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p4beta1/{parent}:exportIamPolicyAnalysis", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1p4beta1/{parent}:exportIamPolicyAnalysis", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExportIamPolicyAnalysisRequest", "json")
 	if err != nil {

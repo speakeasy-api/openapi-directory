@@ -18,21 +18,25 @@ const (
 	TeamsUpdateInOrgRequestBodyPermissionEnumAdmin TeamsUpdateInOrgRequestBodyPermissionEnum = "admin"
 )
 
+func (e TeamsUpdateInOrgRequestBodyPermissionEnum) ToPointer() *TeamsUpdateInOrgRequestBodyPermissionEnum {
+	return &e
+}
+
 func (e *TeamsUpdateInOrgRequestBodyPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pull":
 		fallthrough
 	case "push":
 		fallthrough
 	case "admin":
-		*e = TeamsUpdateInOrgRequestBodyPermissionEnum(s)
+		*e = TeamsUpdateInOrgRequestBodyPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsUpdateInOrgRequestBodyPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsUpdateInOrgRequestBodyPermissionEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	TeamsUpdateInOrgRequestBodyPrivacyEnumClosed TeamsUpdateInOrgRequestBodyPrivacyEnum = "closed"
 )
 
+func (e TeamsUpdateInOrgRequestBodyPrivacyEnum) ToPointer() *TeamsUpdateInOrgRequestBodyPrivacyEnum {
+	return &e
+}
+
 func (e *TeamsUpdateInOrgRequestBodyPrivacyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "secret":
 		fallthrough
 	case "closed":
-		*e = TeamsUpdateInOrgRequestBodyPrivacyEnum(s)
+		*e = TeamsUpdateInOrgRequestBodyPrivacyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsUpdateInOrgRequestBodyPrivacyEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsUpdateInOrgRequestBodyPrivacyEnum: %v", v)
 	}
 }
 

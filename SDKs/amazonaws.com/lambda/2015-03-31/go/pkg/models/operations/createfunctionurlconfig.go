@@ -17,19 +17,23 @@ const (
 	CreateFunctionURLConfigRequestBodyAuthTypeEnumAwsIam CreateFunctionURLConfigRequestBodyAuthTypeEnum = "AWS_IAM"
 )
 
+func (e CreateFunctionURLConfigRequestBodyAuthTypeEnum) ToPointer() *CreateFunctionURLConfigRequestBodyAuthTypeEnum {
+	return &e
+}
+
 func (e *CreateFunctionURLConfigRequestBodyAuthTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "AWS_IAM":
-		*e = CreateFunctionURLConfigRequestBodyAuthTypeEnum(s)
+		*e = CreateFunctionURLConfigRequestBodyAuthTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFunctionURLConfigRequestBodyAuthTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFunctionURLConfigRequestBodyAuthTypeEnum: %v", v)
 	}
 }
 
@@ -43,11 +47,41 @@ type CreateFunctionURLConfigRequestBodyCors struct {
 	MaxAge           *int64   `json:"MaxAge,omitempty"`
 }
 
+// CreateFunctionURLConfigRequestBodyInvokeModeEnum - <p>Use one of the following options:</p> <ul> <li> <p> <code>BUFFERED</code> – This is the default option. Lambda invokes your function using the <code>Invoke</code> API operation. Invocation results are available when the payload is complete. The maximum payload size is 6 MB.</p> </li> <li> <p> <code>RESPONSE_STREAM</code> – Your function streams payload results as they become available. Lambda invokes your function using the <code>InvokeWithResponseStream</code> API operation. The maximum response payload size is 20 MB, however, you can <a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html">request a quota increase</a>.</p> </li> </ul>
+type CreateFunctionURLConfigRequestBodyInvokeModeEnum string
+
+const (
+	CreateFunctionURLConfigRequestBodyInvokeModeEnumBuffered       CreateFunctionURLConfigRequestBodyInvokeModeEnum = "BUFFERED"
+	CreateFunctionURLConfigRequestBodyInvokeModeEnumResponseStream CreateFunctionURLConfigRequestBodyInvokeModeEnum = "RESPONSE_STREAM"
+)
+
+func (e CreateFunctionURLConfigRequestBodyInvokeModeEnum) ToPointer() *CreateFunctionURLConfigRequestBodyInvokeModeEnum {
+	return &e
+}
+
+func (e *CreateFunctionURLConfigRequestBodyInvokeModeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "BUFFERED":
+		fallthrough
+	case "RESPONSE_STREAM":
+		*e = CreateFunctionURLConfigRequestBodyInvokeModeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CreateFunctionURLConfigRequestBodyInvokeModeEnum: %v", v)
+	}
+}
+
 type CreateFunctionURLConfigRequestBody struct {
 	// The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict access to authenticated users only. Set to <code>NONE</code> if you want to bypass IAM authentication to create a public endpoint. For more information, see <a href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html">Security and auth model for Lambda function URLs</a>.
 	AuthType CreateFunctionURLConfigRequestBodyAuthTypeEnum `json:"AuthType"`
 	// The <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">cross-origin resource sharing (CORS)</a> settings for your Lambda function URL. Use CORS to grant access to your function URL from any origin. You can also use CORS to control access for specific HTTP headers and methods in requests to your function URL.
 	Cors *CreateFunctionURLConfigRequestBodyCors `json:"Cors,omitempty"`
+	// <p>Use one of the following options:</p> <ul> <li> <p> <code>BUFFERED</code> – This is the default option. Lambda invokes your function using the <code>Invoke</code> API operation. Invocation results are available when the payload is complete. The maximum payload size is 6 MB.</p> </li> <li> <p> <code>RESPONSE_STREAM</code> – Your function streams payload results as they become available. Lambda invokes your function using the <code>InvokeWithResponseStream</code> API operation. The maximum response payload size is 20 MB, however, you can <a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html">request a quota increase</a>.</p> </li> </ul>
+	InvokeMode *CreateFunctionURLConfigRequestBodyInvokeModeEnum `json:"InvokeMode,omitempty"`
 }
 
 type CreateFunctionURLConfigRequest struct {

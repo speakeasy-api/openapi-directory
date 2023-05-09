@@ -15,20 +15,24 @@ const (
 	PingStatusEnumInactive       PingStatusEnum = "Inactive"
 )
 
+func (e PingStatusEnum) ToPointer() *PingStatusEnum {
+	return &e
+}
+
 func (e *PingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Online":
 		fallthrough
 	case "ConnectionLost":
 		fallthrough
 	case "Inactive":
-		*e = PingStatusEnum(s)
+		*e = PingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PingStatusEnum: %v", v)
 	}
 }

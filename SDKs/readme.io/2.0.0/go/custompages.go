@@ -84,7 +84,10 @@ func (s *customPages) CreateCustomPage(ctx context.Context, request shared.Custo
 // Delete the custom page with this slug
 func (s *customPages) DeleteCustomPage(ctx context.Context, request operations.DeleteCustomPageRequest, security operations.DeleteCustomPageSecurity) (*operations.DeleteCustomPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custompages/{slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custompages/{slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -122,7 +125,10 @@ func (s *customPages) DeleteCustomPage(ctx context.Context, request operations.D
 // Returns the custom page with this slug
 func (s *customPages) GetCustomPage(ctx context.Context, request operations.GetCustomPageRequest, security operations.GetCustomPageSecurity) (*operations.GetCustomPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custompages/{slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custompages/{slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -201,7 +207,10 @@ func (s *customPages) GetCustomPages(ctx context.Context, request operations.Get
 // Update a custom page with this slug
 func (s *customPages) UpdateCustomPage(ctx context.Context, request operations.UpdateCustomPageRequest, security operations.UpdateCustomPageSecurity) (*operations.UpdateCustomPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custompages/{slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custompages/{slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomPage", "json")
 	if err != nil {

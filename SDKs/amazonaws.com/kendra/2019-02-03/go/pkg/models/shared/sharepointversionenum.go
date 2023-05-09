@@ -16,12 +16,16 @@ const (
 	SharePointVersionEnumSharepoint2019   SharePointVersionEnum = "SHAREPOINT_2019"
 )
 
+func (e SharePointVersionEnum) ToPointer() *SharePointVersionEnum {
+	return &e
+}
+
 func (e *SharePointVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHAREPOINT_2013":
 		fallthrough
 	case "SHAREPOINT_2016":
@@ -29,9 +33,9 @@ func (e *SharePointVersionEnum) UnmarshalJSON(data []byte) error {
 	case "SHAREPOINT_ONLINE":
 		fallthrough
 	case "SHAREPOINT_2019":
-		*e = SharePointVersionEnum(s)
+		*e = SharePointVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SharePointVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for SharePointVersionEnum: %v", v)
 	}
 }

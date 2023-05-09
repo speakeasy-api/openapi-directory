@@ -17,12 +17,16 @@ const (
 	WorkerPoolDefaultPackageSetEnumDefaultPackageSetPython  WorkerPoolDefaultPackageSetEnum = "DEFAULT_PACKAGE_SET_PYTHON"
 )
 
+func (e WorkerPoolDefaultPackageSetEnum) ToPointer() *WorkerPoolDefaultPackageSetEnum {
+	return &e
+}
+
 func (e *WorkerPoolDefaultPackageSetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT_PACKAGE_SET_UNKNOWN":
 		fallthrough
 	case "DEFAULT_PACKAGE_SET_NONE":
@@ -30,10 +34,10 @@ func (e *WorkerPoolDefaultPackageSetEnum) UnmarshalJSON(data []byte) error {
 	case "DEFAULT_PACKAGE_SET_JAVA":
 		fallthrough
 	case "DEFAULT_PACKAGE_SET_PYTHON":
-		*e = WorkerPoolDefaultPackageSetEnum(s)
+		*e = WorkerPoolDefaultPackageSetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkerPoolDefaultPackageSetEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkerPoolDefaultPackageSetEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	WorkerPoolIPConfigurationEnumWorkerIPPrivate     WorkerPoolIPConfigurationEnum = "WORKER_IP_PRIVATE"
 )
 
+func (e WorkerPoolIPConfigurationEnum) ToPointer() *WorkerPoolIPConfigurationEnum {
+	return &e
+}
+
 func (e *WorkerPoolIPConfigurationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORKER_IP_UNSPECIFIED":
 		fallthrough
 	case "WORKER_IP_PUBLIC":
 		fallthrough
 	case "WORKER_IP_PRIVATE":
-		*e = WorkerPoolIPConfigurationEnum(s)
+		*e = WorkerPoolIPConfigurationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkerPoolIPConfigurationEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkerPoolIPConfigurationEnum: %v", v)
 	}
 }
 
@@ -74,12 +82,16 @@ const (
 	WorkerPoolTeardownPolicyEnumTeardownNever         WorkerPoolTeardownPolicyEnum = "TEARDOWN_NEVER"
 )
 
+func (e WorkerPoolTeardownPolicyEnum) ToPointer() *WorkerPoolTeardownPolicyEnum {
+	return &e
+}
+
 func (e *WorkerPoolTeardownPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEARDOWN_POLICY_UNKNOWN":
 		fallthrough
 	case "TEARDOWN_ALWAYS":
@@ -87,10 +99,10 @@ func (e *WorkerPoolTeardownPolicyEnum) UnmarshalJSON(data []byte) error {
 	case "TEARDOWN_ON_SUCCESS":
 		fallthrough
 	case "TEARDOWN_NEVER":
-		*e = WorkerPoolTeardownPolicyEnum(s)
+		*e = WorkerPoolTeardownPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkerPoolTeardownPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkerPoolTeardownPolicyEnum: %v", v)
 	}
 }
 

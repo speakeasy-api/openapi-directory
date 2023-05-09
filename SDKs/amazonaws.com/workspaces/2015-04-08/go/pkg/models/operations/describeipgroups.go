@@ -16,17 +16,21 @@ const (
 	DescribeIPGroupsXAmzTargetEnumWorkspacesServiceDescribeIPGroups DescribeIPGroupsXAmzTargetEnum = "WorkspacesService.DescribeIpGroups"
 )
 
+func (e DescribeIPGroupsXAmzTargetEnum) ToPointer() *DescribeIPGroupsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeIPGroupsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.DescribeIpGroups":
-		*e = DescribeIPGroupsXAmzTargetEnum(s)
+		*e = DescribeIPGroupsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeIPGroupsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeIPGroupsXAmzTargetEnum: %v", v)
 	}
 }
 

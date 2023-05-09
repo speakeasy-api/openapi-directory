@@ -16,12 +16,16 @@ const (
 	EncryptionAlgorithmSpecEnumSm2Pke           EncryptionAlgorithmSpecEnum = "SM2PKE"
 )
 
+func (e EncryptionAlgorithmSpecEnum) ToPointer() *EncryptionAlgorithmSpecEnum {
+	return &e
+}
+
 func (e *EncryptionAlgorithmSpecEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYMMETRIC_DEFAULT":
 		fallthrough
 	case "RSAES_OAEP_SHA_1":
@@ -29,9 +33,9 @@ func (e *EncryptionAlgorithmSpecEnum) UnmarshalJSON(data []byte) error {
 	case "RSAES_OAEP_SHA_256":
 		fallthrough
 	case "SM2PKE":
-		*e = EncryptionAlgorithmSpecEnum(s)
+		*e = EncryptionAlgorithmSpecEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EncryptionAlgorithmSpecEnum: %s", s)
+		return fmt.Errorf("invalid value for EncryptionAlgorithmSpecEnum: %v", v)
 	}
 }

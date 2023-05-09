@@ -22,12 +22,16 @@ const (
 	GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnumChrome                  GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum = "CHROME"
 )
 
+func (e GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum) ToPointer() *GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum {
+	return &e
+}
+
 func (e *GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "WINDOWS":
@@ -45,10 +49,10 @@ func (e *GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum) UnmarshalJSON(da
 	case "ALL_PLATFORMS":
 		fallthrough
 	case "CHROME":
-		*e = GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum(s)
+		*e = GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatHitPlatformTypeEnum: %v", v)
 	}
 }
 
@@ -76,12 +80,16 @@ const (
 	GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnumAccuracyTips                  GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum = "ACCURACY_TIPS"
 )
 
+func (e GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum) ToPointer() *GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum {
+	return &e
+}
+
 func (e *GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THREAT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MALWARE":
@@ -117,10 +125,10 @@ func (e *GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum) UnmarshalJSON(data
 	case "HIGH_CONFIDENCE_ALLOWLIST":
 		fallthrough
 	case "ACCURACY_TIPS":
-		*e = GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum(s)
+		*e = GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatHitThreatTypeEnum: %v", v)
 	}
 }
 

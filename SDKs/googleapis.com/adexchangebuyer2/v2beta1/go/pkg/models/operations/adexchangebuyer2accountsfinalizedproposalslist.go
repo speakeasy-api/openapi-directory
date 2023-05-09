@@ -23,21 +23,25 @@ const (
 	Adexchangebuyer2AccountsFinalizedProposalsListFilterSyntaxEnumListFilter              Adexchangebuyer2AccountsFinalizedProposalsListFilterSyntaxEnum = "LIST_FILTER"
 )
 
+func (e Adexchangebuyer2AccountsFinalizedProposalsListFilterSyntaxEnum) ToPointer() *Adexchangebuyer2AccountsFinalizedProposalsListFilterSyntaxEnum {
+	return &e
+}
+
 func (e *Adexchangebuyer2AccountsFinalizedProposalsListFilterSyntaxEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILTER_SYNTAX_UNSPECIFIED":
 		fallthrough
 	case "PQL":
 		fallthrough
 	case "LIST_FILTER":
-		*e = Adexchangebuyer2AccountsFinalizedProposalsListFilterSyntaxEnum(s)
+		*e = Adexchangebuyer2AccountsFinalizedProposalsListFilterSyntaxEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Adexchangebuyer2AccountsFinalizedProposalsListFilterSyntaxEnum: %s", s)
+		return fmt.Errorf("invalid value for Adexchangebuyer2AccountsFinalizedProposalsListFilterSyntaxEnum: %v", v)
 	}
 }
 

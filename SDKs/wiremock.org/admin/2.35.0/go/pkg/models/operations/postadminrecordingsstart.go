@@ -57,17 +57,21 @@ const (
 	PostAdminRecordingsStartRequestBodyRequestBodyPattern4MatcherEnumEqualToXML PostAdminRecordingsStartRequestBodyRequestBodyPattern4MatcherEnum = "equalToXml"
 )
 
+func (e PostAdminRecordingsStartRequestBodyRequestBodyPattern4MatcherEnum) ToPointer() *PostAdminRecordingsStartRequestBodyRequestBodyPattern4MatcherEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsStartRequestBodyRequestBodyPattern4MatcherEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "equalToXml":
-		*e = PostAdminRecordingsStartRequestBodyRequestBodyPattern4MatcherEnum(s)
+		*e = PostAdminRecordingsStartRequestBodyRequestBodyPattern4MatcherEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsStartRequestBodyRequestBodyPattern4MatcherEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsStartRequestBodyRequestBodyPattern4MatcherEnum: %v", v)
 	}
 }
 
@@ -82,17 +86,21 @@ const (
 	PostAdminRecordingsStartRequestBodyRequestBodyPattern3MatcherEnumEqualToJSON PostAdminRecordingsStartRequestBodyRequestBodyPattern3MatcherEnum = "equalToJson"
 )
 
+func (e PostAdminRecordingsStartRequestBodyRequestBodyPattern3MatcherEnum) ToPointer() *PostAdminRecordingsStartRequestBodyRequestBodyPattern3MatcherEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsStartRequestBodyRequestBodyPattern3MatcherEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "equalToJson":
-		*e = PostAdminRecordingsStartRequestBodyRequestBodyPattern3MatcherEnum(s)
+		*e = PostAdminRecordingsStartRequestBodyRequestBodyPattern3MatcherEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsStartRequestBodyRequestBodyPattern3MatcherEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsStartRequestBodyRequestBodyPattern3MatcherEnum: %v", v)
 	}
 }
 
@@ -111,17 +119,21 @@ const (
 	PostAdminRecordingsStartRequestBodyRequestBodyPattern2MatcherEnumEqualTo PostAdminRecordingsStartRequestBodyRequestBodyPattern2MatcherEnum = "equalTo"
 )
 
+func (e PostAdminRecordingsStartRequestBodyRequestBodyPattern2MatcherEnum) ToPointer() *PostAdminRecordingsStartRequestBodyRequestBodyPattern2MatcherEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsStartRequestBodyRequestBodyPattern2MatcherEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "equalTo":
-		*e = PostAdminRecordingsStartRequestBodyRequestBodyPattern2MatcherEnum(s)
+		*e = PostAdminRecordingsStartRequestBodyRequestBodyPattern2MatcherEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsStartRequestBodyRequestBodyPattern2MatcherEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsStartRequestBodyRequestBodyPattern2MatcherEnum: %v", v)
 	}
 }
 
@@ -138,17 +150,21 @@ const (
 	PostAdminRecordingsStartRequestBodyRequestBodyPattern1MatcherEnumAuto PostAdminRecordingsStartRequestBodyRequestBodyPattern1MatcherEnum = "auto"
 )
 
+func (e PostAdminRecordingsStartRequestBodyRequestBodyPattern1MatcherEnum) ToPointer() *PostAdminRecordingsStartRequestBodyRequestBodyPattern1MatcherEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsStartRequestBodyRequestBodyPattern1MatcherEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "auto":
-		*e = PostAdminRecordingsStartRequestBodyRequestBodyPattern1MatcherEnum(s)
+		*e = PostAdminRecordingsStartRequestBodyRequestBodyPattern1MatcherEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsStartRequestBodyRequestBodyPattern1MatcherEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsStartRequestBodyRequestBodyPattern1MatcherEnum: %v", v)
 	}
 }
 

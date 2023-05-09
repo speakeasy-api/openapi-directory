@@ -15,20 +15,24 @@ const (
 	ObjectiveStatusEnumFailed    ObjectiveStatusEnum = "Failed"
 )
 
+func (e ObjectiveStatusEnum) ToPointer() *ObjectiveStatusEnum {
+	return &e
+}
+
 func (e *ObjectiveStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Succeeded":
 		fallthrough
 	case "Pending":
 		fallthrough
 	case "Failed":
-		*e = ObjectiveStatusEnum(s)
+		*e = ObjectiveStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ObjectiveStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ObjectiveStatusEnum: %v", v)
 	}
 }

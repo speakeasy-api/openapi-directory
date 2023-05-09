@@ -14,18 +14,22 @@ const (
 	AdditionalResourceTypeEnumImprovementPlan AdditionalResourceTypeEnum = "IMPROVEMENT_PLAN"
 )
 
+func (e AdditionalResourceTypeEnum) ToPointer() *AdditionalResourceTypeEnum {
+	return &e
+}
+
 func (e *AdditionalResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HELPFUL_RESOURCE":
 		fallthrough
 	case "IMPROVEMENT_PLAN":
-		*e = AdditionalResourceTypeEnum(s)
+		*e = AdditionalResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdditionalResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdditionalResourceTypeEnum: %v", v)
 	}
 }

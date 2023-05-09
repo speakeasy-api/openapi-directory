@@ -16,17 +16,21 @@ const (
 	SearchProvisionedProductsXAmzTargetEnumAws242ServiceCatalogServiceSearchProvisionedProducts SearchProvisionedProductsXAmzTargetEnum = "AWS242ServiceCatalogService.SearchProvisionedProducts"
 )
 
+func (e SearchProvisionedProductsXAmzTargetEnum) ToPointer() *SearchProvisionedProductsXAmzTargetEnum {
+	return &e
+}
+
 func (e *SearchProvisionedProductsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.SearchProvisionedProducts":
-		*e = SearchProvisionedProductsXAmzTargetEnum(s)
+		*e = SearchProvisionedProductsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchProvisionedProductsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchProvisionedProductsXAmzTargetEnum: %v", v)
 	}
 }
 

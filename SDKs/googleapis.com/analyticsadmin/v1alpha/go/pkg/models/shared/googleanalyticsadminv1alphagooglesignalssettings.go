@@ -16,21 +16,25 @@ const (
 	GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsConsentEnumGoogleSignalsConsentNotConsented GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsConsentEnum = "GOOGLE_SIGNALS_CONSENT_NOT_CONSENTED"
 )
 
+func (e GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsConsentEnum) ToPointer() *GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsConsentEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsConsentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GOOGLE_SIGNALS_CONSENT_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_SIGNALS_CONSENT_CONSENTED":
 		fallthrough
 	case "GOOGLE_SIGNALS_CONSENT_NOT_CONSENTED":
-		*e = GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsConsentEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsConsentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsConsentEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsConsentEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsStateEnumGoogleSignalsDisabled         GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsStateEnum = "GOOGLE_SIGNALS_DISABLED"
 )
 
+func (e GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsStateEnum) ToPointer() *GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsStateEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GOOGLE_SIGNALS_STATE_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_SIGNALS_ENABLED":
 		fallthrough
 	case "GOOGLE_SIGNALS_DISABLED":
-		*e = GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsStateEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaGoogleSignalsSettingsStateEnum: %v", v)
 	}
 }
 

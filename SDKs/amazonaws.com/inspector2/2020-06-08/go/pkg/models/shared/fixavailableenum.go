@@ -15,20 +15,24 @@ const (
 	FixAvailableEnumPartial FixAvailableEnum = "PARTIAL"
 )
 
+func (e FixAvailableEnum) ToPointer() *FixAvailableEnum {
+	return &e
+}
+
 func (e *FixAvailableEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "YES":
 		fallthrough
 	case "NO":
 		fallthrough
 	case "PARTIAL":
-		*e = FixAvailableEnum(s)
+		*e = FixAvailableEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FixAvailableEnum: %s", s)
+		return fmt.Errorf("invalid value for FixAvailableEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETPurgeQueueActionEnumPurgeQueue GETPurgeQueueActionEnum = "PurgeQueue"
 )
 
+func (e GETPurgeQueueActionEnum) ToPointer() *GETPurgeQueueActionEnum {
+	return &e
+}
+
 func (e *GETPurgeQueueActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PurgeQueue":
-		*e = GETPurgeQueueActionEnum(s)
+		*e = GETPurgeQueueActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPurgeQueueActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPurgeQueueActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETPurgeQueueVersionEnumTwoThousandAndTwelve1105 GETPurgeQueueVersionEnum = "2012-11-05"
 )
 
+func (e GETPurgeQueueVersionEnum) ToPointer() *GETPurgeQueueVersionEnum {
+	return &e
+}
+
 func (e *GETPurgeQueueVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = GETPurgeQueueVersionEnum(s)
+		*e = GETPurgeQueueVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPurgeQueueVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPurgeQueueVersionEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTCreateLocalGatewayRouteTableVpcAssociationActionEnumCreateLocalGatewayRouteTableVpcAssociation POSTCreateLocalGatewayRouteTableVpcAssociationActionEnum = "CreateLocalGatewayRouteTableVpcAssociation"
 )
 
+func (e POSTCreateLocalGatewayRouteTableVpcAssociationActionEnum) ToPointer() *POSTCreateLocalGatewayRouteTableVpcAssociationActionEnum {
+	return &e
+}
+
 func (e *POSTCreateLocalGatewayRouteTableVpcAssociationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateLocalGatewayRouteTableVpcAssociation":
-		*e = POSTCreateLocalGatewayRouteTableVpcAssociationActionEnum(s)
+		*e = POSTCreateLocalGatewayRouteTableVpcAssociationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateLocalGatewayRouteTableVpcAssociationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateLocalGatewayRouteTableVpcAssociationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateLocalGatewayRouteTableVpcAssociationVersionEnumTwoThousandAndSixteen1115 POSTCreateLocalGatewayRouteTableVpcAssociationVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateLocalGatewayRouteTableVpcAssociationVersionEnum) ToPointer() *POSTCreateLocalGatewayRouteTableVpcAssociationVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateLocalGatewayRouteTableVpcAssociationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateLocalGatewayRouteTableVpcAssociationVersionEnum(s)
+		*e = POSTCreateLocalGatewayRouteTableVpcAssociationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateLocalGatewayRouteTableVpcAssociationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateLocalGatewayRouteTableVpcAssociationVersionEnum: %v", v)
 	}
 }
 

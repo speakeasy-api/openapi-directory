@@ -15,17 +15,21 @@ const (
 	DescribeTransitGatewayConnectsResultTransitGatewayConnectsOptionsProtocolEnumGre DescribeTransitGatewayConnectsResultTransitGatewayConnectsOptionsProtocolEnum = "gre"
 )
 
+func (e DescribeTransitGatewayConnectsResultTransitGatewayConnectsOptionsProtocolEnum) ToPointer() *DescribeTransitGatewayConnectsResultTransitGatewayConnectsOptionsProtocolEnum {
+	return &e
+}
+
 func (e *DescribeTransitGatewayConnectsResultTransitGatewayConnectsOptionsProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gre":
-		*e = DescribeTransitGatewayConnectsResultTransitGatewayConnectsOptionsProtocolEnum(s)
+		*e = DescribeTransitGatewayConnectsResultTransitGatewayConnectsOptionsProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTransitGatewayConnectsResultTransitGatewayConnectsOptionsProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTransitGatewayConnectsResultTransitGatewayConnectsOptionsProtocolEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	DescribeTransitGatewayConnectsResultTransitGatewayConnectsStateEnumFailing           DescribeTransitGatewayConnectsResultTransitGatewayConnectsStateEnum = "failing"
 )
 
+func (e DescribeTransitGatewayConnectsResultTransitGatewayConnectsStateEnum) ToPointer() *DescribeTransitGatewayConnectsResultTransitGatewayConnectsStateEnum {
+	return &e
+}
+
 func (e *DescribeTransitGatewayConnectsResultTransitGatewayConnectsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "initiating":
 		fallthrough
 	case "initiatingRequest":
@@ -84,10 +92,10 @@ func (e *DescribeTransitGatewayConnectsResultTransitGatewayConnectsStateEnum) Un
 	case "rejecting":
 		fallthrough
 	case "failing":
-		*e = DescribeTransitGatewayConnectsResultTransitGatewayConnectsStateEnum(s)
+		*e = DescribeTransitGatewayConnectsResultTransitGatewayConnectsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTransitGatewayConnectsResultTransitGatewayConnectsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTransitGatewayConnectsResultTransitGatewayConnectsStateEnum: %v", v)
 	}
 }
 

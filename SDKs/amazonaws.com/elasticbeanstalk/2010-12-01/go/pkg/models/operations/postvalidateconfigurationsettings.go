@@ -15,17 +15,21 @@ const (
 	POSTValidateConfigurationSettingsActionEnumValidateConfigurationSettings POSTValidateConfigurationSettingsActionEnum = "ValidateConfigurationSettings"
 )
 
+func (e POSTValidateConfigurationSettingsActionEnum) ToPointer() *POSTValidateConfigurationSettingsActionEnum {
+	return &e
+}
+
 func (e *POSTValidateConfigurationSettingsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ValidateConfigurationSettings":
-		*e = POSTValidateConfigurationSettingsActionEnum(s)
+		*e = POSTValidateConfigurationSettingsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTValidateConfigurationSettingsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTValidateConfigurationSettingsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTValidateConfigurationSettingsVersionEnumTwoThousandAndTen1201 POSTValidateConfigurationSettingsVersionEnum = "2010-12-01"
 )
 
+func (e POSTValidateConfigurationSettingsVersionEnum) ToPointer() *POSTValidateConfigurationSettingsVersionEnum {
+	return &e
+}
+
 func (e *POSTValidateConfigurationSettingsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTValidateConfigurationSettingsVersionEnum(s)
+		*e = POSTValidateConfigurationSettingsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTValidateConfigurationSettingsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTValidateConfigurationSettingsVersionEnum: %v", v)
 	}
 }
 

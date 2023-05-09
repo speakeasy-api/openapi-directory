@@ -36,7 +36,10 @@ func newProfileImages(defaultClient, securityClient HTTPClient, serverURL, langu
 //	corresponding username.
 func (s *profileImages) GetProfileImage(ctx context.Context, request operations.GetProfileImageRequest) (*operations.GetProfileImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/profile_images/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/profile_images/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

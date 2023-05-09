@@ -83,7 +83,10 @@ func (s *publishers) PublishersList(ctx context.Context, request operations.Publ
 // PublishersRead - Get details of the publisher.
 func (s *publishers) PublishersRead(ctx context.Context, request operations.PublishersReadRequest) (*operations.PublishersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publishers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/publishers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

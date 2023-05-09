@@ -16,17 +16,21 @@ const (
 	DescribeAppsXAmzTargetEnumOpsWorks20130218DescribeApps DescribeAppsXAmzTargetEnum = "OpsWorks_20130218.DescribeApps"
 )
 
+func (e DescribeAppsXAmzTargetEnum) ToPointer() *DescribeAppsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAppsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DescribeApps":
-		*e = DescribeAppsXAmzTargetEnum(s)
+		*e = DescribeAppsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAppsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAppsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetOpenIDTokenXAmzTargetEnumAwsCognitoIdentityServiceGetOpenIDToken GetOpenIDTokenXAmzTargetEnum = "AWSCognitoIdentityService.GetOpenIdToken"
 )
 
+func (e GetOpenIDTokenXAmzTargetEnum) ToPointer() *GetOpenIDTokenXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetOpenIDTokenXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityService.GetOpenIdToken":
-		*e = GetOpenIDTokenXAmzTargetEnum(s)
+		*e = GetOpenIDTokenXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOpenIDTokenXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOpenIDTokenXAmzTargetEnum: %v", v)
 	}
 }
 

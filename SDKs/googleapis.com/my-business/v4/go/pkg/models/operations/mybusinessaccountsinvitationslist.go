@@ -18,21 +18,25 @@ const (
 	MybusinessAccountsInvitationsListTargetTypeEnumLocationsOnly MybusinessAccountsInvitationsListTargetTypeEnum = "LOCATIONS_ONLY"
 )
 
+func (e MybusinessAccountsInvitationsListTargetTypeEnum) ToPointer() *MybusinessAccountsInvitationsListTargetTypeEnum {
+	return &e
+}
+
 func (e *MybusinessAccountsInvitationsListTargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "ACCOUNTS_ONLY":
 		fallthrough
 	case "LOCATIONS_ONLY":
-		*e = MybusinessAccountsInvitationsListTargetTypeEnum(s)
+		*e = MybusinessAccountsInvitationsListTargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MybusinessAccountsInvitationsListTargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MybusinessAccountsInvitationsListTargetTypeEnum: %v", v)
 	}
 }
 

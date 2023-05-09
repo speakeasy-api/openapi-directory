@@ -15,20 +15,24 @@ const (
 	UsageLimitFeatureTypeEnumCrossRegionDatasharing UsageLimitFeatureTypeEnum = "cross-region-datasharing"
 )
 
+func (e UsageLimitFeatureTypeEnum) ToPointer() *UsageLimitFeatureTypeEnum {
+	return &e
+}
+
 func (e *UsageLimitFeatureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spectrum":
 		fallthrough
 	case "concurrency-scaling":
 		fallthrough
 	case "cross-region-datasharing":
-		*e = UsageLimitFeatureTypeEnum(s)
+		*e = UsageLimitFeatureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageLimitFeatureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageLimitFeatureTypeEnum: %v", v)
 	}
 }

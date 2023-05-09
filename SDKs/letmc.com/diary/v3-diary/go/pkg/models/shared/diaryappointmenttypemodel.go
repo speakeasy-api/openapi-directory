@@ -20,12 +20,16 @@ const (
 	DiaryAppointmentTypeModelSystemTypeEnumCustom            DiaryAppointmentTypeModelSystemTypeEnum = "Custom"
 )
 
+func (e DiaryAppointmentTypeModelSystemTypeEnum) ToPointer() *DiaryAppointmentTypeModelSystemTypeEnum {
+	return &e
+}
+
 func (e *DiaryAppointmentTypeModelSystemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Viewing":
 		fallthrough
 	case "ViewAndValue":
@@ -39,10 +43,10 @@ func (e *DiaryAppointmentTypeModelSystemTypeEnum) UnmarshalJSON(data []byte) err
 	case "SalesAppraisal":
 		fallthrough
 	case "Custom":
-		*e = DiaryAppointmentTypeModelSystemTypeEnum(s)
+		*e = DiaryAppointmentTypeModelSystemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiaryAppointmentTypeModelSystemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DiaryAppointmentTypeModelSystemTypeEnum: %v", v)
 	}
 }
 

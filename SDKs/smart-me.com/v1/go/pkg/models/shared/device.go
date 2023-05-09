@@ -22,12 +22,16 @@ const (
 	DeviceChargingStationStateEnumOffline             DeviceChargingStationStateEnum = "Offline"
 )
 
+func (e DeviceChargingStationStateEnum) ToPointer() *DeviceChargingStationStateEnum {
+	return &e
+}
+
 func (e *DeviceChargingStationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Booting":
 		fallthrough
 	case "ReadyNoCarConnected":
@@ -43,10 +47,10 @@ func (e *DeviceChargingStationStateEnum) UnmarshalJSON(data []byte) error {
 	case "Authorize":
 		fallthrough
 	case "Offline":
-		*e = DeviceChargingStationStateEnum(s)
+		*e = DeviceChargingStationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceChargingStationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceChargingStationStateEnum: %v", v)
 	}
 }
 
@@ -71,12 +75,16 @@ const (
 	DeviceDeviceEnergyTypeEnumMeterTypeWmBusGateway  DeviceDeviceEnergyTypeEnum = "MeterTypeWMBusGateway"
 )
 
+func (e DeviceDeviceEnergyTypeEnum) ToPointer() *DeviceDeviceEnergyTypeEnum {
+	return &e
+}
+
 func (e *DeviceDeviceEnergyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MeterTypeUnknown":
 		fallthrough
 	case "MeterTypeElectricity":
@@ -106,10 +114,10 @@ func (e *DeviceDeviceEnergyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MeterTypeVirtualMeter":
 		fallthrough
 	case "MeterTypeWMBusGateway":
-		*e = DeviceDeviceEnergyTypeEnum(s)
+		*e = DeviceDeviceEnergyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceDeviceEnergyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceDeviceEnergyTypeEnum: %v", v)
 	}
 }
 
@@ -142,12 +150,16 @@ const (
 	DeviceFamilyTypeEnumMeterFamilyTypeVirtualBillingMeter                   DeviceFamilyTypeEnum = "MeterFamilyTypeVirtualBillingMeter"
 )
 
+func (e DeviceFamilyTypeEnum) ToPointer() *DeviceFamilyTypeEnum {
+	return &e
+}
+
 func (e *DeviceFamilyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MeterFamilyTypeUnknown":
 		fallthrough
 	case "MeterFamilyTypeSmartMeConnectV1":
@@ -193,10 +205,10 @@ func (e *DeviceFamilyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MeterFamilyTypeRestApiMeter":
 		fallthrough
 	case "MeterFamilyTypeVirtualBillingMeter":
-		*e = DeviceFamilyTypeEnum(s)
+		*e = DeviceFamilyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceFamilyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceFamilyTypeEnum: %v", v)
 	}
 }
 
@@ -216,12 +228,16 @@ const (
 	DeviceMeterSubTypeEnumMeterSubTypeVirtualBattery  DeviceMeterSubTypeEnum = "MeterSubTypeVirtualBattery"
 )
 
+func (e DeviceMeterSubTypeEnum) ToPointer() *DeviceMeterSubTypeEnum {
+	return &e
+}
+
 func (e *DeviceMeterSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MeterSubTypeUnknown":
 		fallthrough
 	case "MeterSubTypeCold":
@@ -241,10 +257,10 @@ func (e *DeviceMeterSubTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MeterSubTypeTemperature":
 		fallthrough
 	case "MeterSubTypeVirtualBattery":
-		*e = DeviceMeterSubTypeEnum(s)
+		*e = DeviceMeterSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceMeterSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceMeterSubTypeEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newOpenAPISpec(defaultClient, securityClient HTTPClient, serverURL, languag
 // Return the OpenAPI 2.0 Specification of the organization's API documentation in JSON
 func (s *openAPISpec) GetOrganizationOpenapiSpec(ctx context.Context, request operations.GetOrganizationOpenapiSpecRequest) (*operations.GetOrganizationOpenapiSpecResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/openapiSpec", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/openapiSpec", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

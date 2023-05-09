@@ -15,18 +15,22 @@ const (
 	OBBeneficiaryType1CodeEnumOrdinary OBBeneficiaryType1CodeEnum = "Ordinary"
 )
 
+func (e OBBeneficiaryType1CodeEnum) ToPointer() *OBBeneficiaryType1CodeEnum {
+	return &e
+}
+
 func (e *OBBeneficiaryType1CodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Trusted":
 		fallthrough
 	case "Ordinary":
-		*e = OBBeneficiaryType1CodeEnum(s)
+		*e = OBBeneficiaryType1CodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBBeneficiaryType1CodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBBeneficiaryType1CodeEnum: %v", v)
 	}
 }

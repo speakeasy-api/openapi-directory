@@ -16,17 +16,21 @@ const (
 	DeleteApplicationOutputXAmzTargetEnumKinesisAnalytics20150814DeleteApplicationOutput DeleteApplicationOutputXAmzTargetEnum = "KinesisAnalytics_20150814.DeleteApplicationOutput"
 )
 
+func (e DeleteApplicationOutputXAmzTargetEnum) ToPointer() *DeleteApplicationOutputXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteApplicationOutputXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20150814.DeleteApplicationOutput":
-		*e = DeleteApplicationOutputXAmzTargetEnum(s)
+		*e = DeleteApplicationOutputXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteApplicationOutputXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteApplicationOutputXAmzTargetEnum: %v", v)
 	}
 }
 

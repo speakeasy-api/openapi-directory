@@ -15,19 +15,23 @@ const (
 	UserInformationGenderEnumFemale UserInformationGenderEnum = "female"
 )
 
+func (e UserInformationGenderEnum) ToPointer() *UserInformationGenderEnum {
+	return &e
+}
+
 func (e *UserInformationGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
-		*e = UserInformationGenderEnum(s)
+		*e = UserInformationGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserInformationGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for UserInformationGenderEnum: %v", v)
 	}
 }
 
@@ -38,19 +42,23 @@ const (
 	UserInformationMaritalStatusEnumMarried UserInformationMaritalStatusEnum = "married"
 )
 
+func (e UserInformationMaritalStatusEnum) ToPointer() *UserInformationMaritalStatusEnum {
+	return &e
+}
+
 func (e *UserInformationMaritalStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "single":
 		fallthrough
 	case "married":
-		*e = UserInformationMaritalStatusEnum(s)
+		*e = UserInformationMaritalStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserInformationMaritalStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UserInformationMaritalStatusEnum: %v", v)
 	}
 }
 

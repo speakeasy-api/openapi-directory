@@ -16,17 +16,21 @@ const (
 	CreatePullThroughCacheRuleXAmzTargetEnumAmazonEc2ContainerRegistryV20150921CreatePullThroughCacheRule CreatePullThroughCacheRuleXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.CreatePullThroughCacheRule"
 )
 
+func (e CreatePullThroughCacheRuleXAmzTargetEnum) ToPointer() *CreatePullThroughCacheRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreatePullThroughCacheRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.CreatePullThroughCacheRule":
-		*e = CreatePullThroughCacheRuleXAmzTargetEnum(s)
+		*e = CreatePullThroughCacheRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePullThroughCacheRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePullThroughCacheRuleXAmzTargetEnum: %v", v)
 	}
 }
 

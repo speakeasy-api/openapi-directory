@@ -35,7 +35,10 @@ func newTagsAPI(defaultClient, securityClient HTTPClient, serverURL, language, s
 // CreateTag - Create a tag for the project
 func (s *tagsAPI) CreateTag(ctx context.Context, request operations.CreateTagRequest) (*operations.CreateTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -106,7 +109,10 @@ func (s *tagsAPI) CreateTag(ctx context.Context, request operations.CreateTagReq
 // DeleteTag - Delete a tag from the project
 func (s *tagsAPI) DeleteTag(ctx context.Context, request operations.DeleteTagRequest) (*operations.DeleteTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags/{tagId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags/{tagId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -143,7 +149,10 @@ func (s *tagsAPI) DeleteTag(ctx context.Context, request operations.DeleteTagReq
 // GetTag - Get information about a specific tag
 func (s *tagsAPI) GetTag(ctx context.Context, request operations.GetTagRequest) (*operations.GetTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags/{tagId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags/{tagId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -214,7 +223,10 @@ func (s *tagsAPI) GetTag(ctx context.Context, request operations.GetTagRequest) 
 // GetTags - Get the tags for a given project and iteration
 func (s *tagsAPI) GetTags(ctx context.Context, request operations.GetTagsRequest) (*operations.GetTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -285,7 +297,10 @@ func (s *tagsAPI) GetTags(ctx context.Context, request operations.GetTagsRequest
 // UpdateTagForm - Update a tag
 func (s *tagsAPI) UpdateTagForm(ctx context.Context, request operations.UpdateTagFormRequest) (*operations.UpdateTagFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags/{tagId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags/{tagId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagInput", "form")
 	if err != nil {
@@ -362,7 +377,10 @@ func (s *tagsAPI) UpdateTagForm(ctx context.Context, request operations.UpdateTa
 // UpdateTagJSON - Update a tag
 func (s *tagsAPI) UpdateTagJSON(ctx context.Context, request operations.UpdateTagJSONRequest) (*operations.UpdateTagJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags/{tagId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags/{tagId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagInput", "json")
 	if err != nil {
@@ -439,7 +457,10 @@ func (s *tagsAPI) UpdateTagJSON(ctx context.Context, request operations.UpdateTa
 // UpdateTagRaw - Update a tag
 func (s *tagsAPI) UpdateTagRaw(ctx context.Context, request operations.UpdateTagRawRequest) (*operations.UpdateTagRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags/{tagId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/tags/{tagId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

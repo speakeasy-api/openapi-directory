@@ -20,12 +20,16 @@ const (
 	GETVersionIncidentsFormatIncidentTypeEnumChopShop            GETVersionIncidentsFormatIncidentTypeEnum = "chop_shop"
 )
 
+func (e GETVersionIncidentsFormatIncidentTypeEnum) ToPointer() *GETVersionIncidentsFormatIncidentTypeEnum {
+	return &e
+}
+
 func (e *GETVersionIncidentsFormatIncidentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crash":
 		fallthrough
 	case "hazard":
@@ -37,10 +41,10 @@ func (e *GETVersionIncidentsFormatIncidentTypeEnum) UnmarshalJSON(data []byte) e
 	case "infrastructure_issue":
 		fallthrough
 	case "chop_shop":
-		*e = GETVersionIncidentsFormatIncidentTypeEnum(s)
+		*e = GETVersionIncidentsFormatIncidentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETVersionIncidentsFormatIncidentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETVersionIncidentsFormatIncidentTypeEnum: %v", v)
 	}
 }
 

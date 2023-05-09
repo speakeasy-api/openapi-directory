@@ -16,17 +16,21 @@ const (
 	DescribeLocationsXAmzTargetEnumOvertureServiceDescribeLocations DescribeLocationsXAmzTargetEnum = "OvertureService.DescribeLocations"
 )
 
+func (e DescribeLocationsXAmzTargetEnum) ToPointer() *DescribeLocationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeLocationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.DescribeLocations":
-		*e = DescribeLocationsXAmzTargetEnum(s)
+		*e = DescribeLocationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeLocationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeLocationsXAmzTargetEnum: %v", v)
 	}
 }
 

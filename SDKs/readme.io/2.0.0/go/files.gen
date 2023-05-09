@@ -11,6 +11,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -55,4 +56,14 @@ pkg/models/shared/changelog.go
 pkg/models/shared/custompage.go
 pkg/models/shared/doc.go
 pkg/models/shared/version.go
+docs/sdk/README.md
+docs/apispecification/README.md
+docs/categories/README.md
+docs/changelog/README.md
+docs/custompages/README.md
+docs/docs/README.md
+docs/errors/README.md
+docs/projects/README.md
+docs/swagger/README.md
+docs/version/README.md
 USAGE.md

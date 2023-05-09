@@ -15,17 +15,21 @@ const (
 	POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnumCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum = "CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation"
 )
 
+func (e POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum) ToPointer() *POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum {
+	return &e
+}
+
 func (e *POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociation":
-		*e = POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum(s)
+		*e = POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnumTwoThousandAndSixteen1115 POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum) ToPointer() *POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum(s)
+		*e = POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationVersionEnum: %v", v)
 	}
 }
 

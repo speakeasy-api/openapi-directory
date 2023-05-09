@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateBatchInferenceJobRequest{
+    ctx := context.Background()
+    res, err := s.CreateBatchInferenceJob(ctx, operations.CreateBatchInferenceJobRequest{
         CreateBatchInferenceJobRequest: shared.CreateBatchInferenceJobRequest{
             BatchInferenceJobConfig: &shared.BatchInferenceJobConfig{
                 ItemExplorationConfig: map[string]string{
@@ -26,21 +27,21 @@ func main() {
                     "nulla": "corrupti",
                 },
             },
-            FilterArn: "illum",
+            FilterArn: sdk.String("illum"),
             JobInput: shared.BatchInferenceJobInput{
                 S3DataSource: shared.S3DataConfig{
-                    KmsKeyArn: "vel",
+                    KmsKeyArn: sdk.String("vel"),
                     Path: "error",
                 },
             },
             JobName: "deserunt",
             JobOutput: shared.BatchInferenceJobOutput{
                 S3DataDestination: shared.S3DataConfig{
-                    KmsKeyArn: "suscipit",
+                    KmsKeyArn: sdk.String("suscipit"),
                     Path: "iure",
                 },
             },
-            NumResults: 297534,
+            NumResults: sdk.Int64(297534),
             RoleArn: "debitis",
             SolutionVersionArn: "ipsa",
             Tags: []shared.Tag{
@@ -62,18 +63,15 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "nisi",
-        XAmzContentSha256: "recusandae",
-        XAmzCredential: "temporibus",
-        XAmzDate: "ab",
-        XAmzSecurityToken: "quis",
-        XAmzSignature: "veritatis",
-        XAmzSignedHeaders: "deserunt",
-        XAmzTarget: "AmazonPersonalize.CreateBatchInferenceJob",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateBatchInferenceJob(ctx, req)
+        XAmzAlgorithm: sdk.String("nisi"),
+        XAmzContentSha256: sdk.String("recusandae"),
+        XAmzCredential: sdk.String("temporibus"),
+        XAmzDate: sdk.String("ab"),
+        XAmzSecurityToken: sdk.String("quis"),
+        XAmzSignature: sdk.String("veritatis"),
+        XAmzSignedHeaders: sdk.String("deserunt"),
+        XAmzTarget: operations.CreateBatchInferenceJobXAmzTargetEnumAmazonPersonalizeCreateBatchInferenceJob,
+    })
     if err != nil {
         log.Fatal(err)
     }

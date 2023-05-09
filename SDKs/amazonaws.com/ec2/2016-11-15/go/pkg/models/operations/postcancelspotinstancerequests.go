@@ -15,17 +15,21 @@ const (
 	POSTCancelSpotInstanceRequestsActionEnumCancelSpotInstanceRequests POSTCancelSpotInstanceRequestsActionEnum = "CancelSpotInstanceRequests"
 )
 
+func (e POSTCancelSpotInstanceRequestsActionEnum) ToPointer() *POSTCancelSpotInstanceRequestsActionEnum {
+	return &e
+}
+
 func (e *POSTCancelSpotInstanceRequestsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CancelSpotInstanceRequests":
-		*e = POSTCancelSpotInstanceRequestsActionEnum(s)
+		*e = POSTCancelSpotInstanceRequestsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCancelSpotInstanceRequestsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCancelSpotInstanceRequestsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCancelSpotInstanceRequestsVersionEnumTwoThousandAndSixteen1115 POSTCancelSpotInstanceRequestsVersionEnum = "2016-11-15"
 )
 
+func (e POSTCancelSpotInstanceRequestsVersionEnum) ToPointer() *POSTCancelSpotInstanceRequestsVersionEnum {
+	return &e
+}
+
 func (e *POSTCancelSpotInstanceRequestsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCancelSpotInstanceRequestsVersionEnum(s)
+		*e = POSTCancelSpotInstanceRequestsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCancelSpotInstanceRequestsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCancelSpotInstanceRequestsVersionEnum: %v", v)
 	}
 }
 

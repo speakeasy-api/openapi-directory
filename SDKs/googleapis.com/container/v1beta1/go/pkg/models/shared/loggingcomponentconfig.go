@@ -18,12 +18,16 @@ const (
 	LoggingComponentConfigEnableComponentsEnumControllerManager    LoggingComponentConfigEnableComponentsEnum = "CONTROLLER_MANAGER"
 )
 
+func (e LoggingComponentConfigEnableComponentsEnum) ToPointer() *LoggingComponentConfigEnableComponentsEnum {
+	return &e
+}
+
 func (e *LoggingComponentConfigEnableComponentsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPONENT_UNSPECIFIED":
 		fallthrough
 	case "SYSTEM_COMPONENTS":
@@ -35,10 +39,10 @@ func (e *LoggingComponentConfigEnableComponentsEnum) UnmarshalJSON(data []byte) 
 	case "SCHEDULER":
 		fallthrough
 	case "CONTROLLER_MANAGER":
-		*e = LoggingComponentConfigEnableComponentsEnum(s)
+		*e = LoggingComponentConfigEnableComponentsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoggingComponentConfigEnableComponentsEnum: %s", s)
+		return fmt.Errorf("invalid value for LoggingComponentConfigEnableComponentsEnum: %v", v)
 	}
 }
 

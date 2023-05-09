@@ -36,7 +36,10 @@ func newBalanceAccounts(defaultClient, securityClient HTTPClient, serverURL, lan
 // Returns a balance account and its balances for the default currency and other currencies with a non-zero balance.
 func (s *balanceAccounts) GetBalanceAccountsID(ctx context.Context, request operations.GetBalanceAccountsIDRequest, security operations.GetBalanceAccountsIDSecurity) (*operations.GetBalanceAccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,7 +104,10 @@ func (s *balanceAccounts) GetBalanceAccountsID(ctx context.Context, request oper
 // To fetch multiple pages, use the query parameters.For example, to limit the page to 3 payment instruments and to skip the first 6, use `/balanceAccounts/{id}/paymentInstruments?limit=3&offset=6`.
 func (s *balanceAccounts) GetBalanceAccountsIDPaymentInstruments(ctx context.Context, request operations.GetBalanceAccountsIDPaymentInstrumentsRequest, security operations.GetBalanceAccountsIDPaymentInstrumentsSecurity) (*operations.GetBalanceAccountsIDPaymentInstrumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}/paymentInstruments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}/paymentInstruments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -168,7 +174,10 @@ func (s *balanceAccounts) GetBalanceAccountsIDPaymentInstruments(ctx context.Con
 // Updates a balance account.
 func (s *balanceAccounts) PatchBalanceAccountsID(ctx context.Context, request operations.PatchBalanceAccountsIDRequest, security operations.PatchBalanceAccountsIDSecurity) (*operations.PatchBalanceAccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BalanceAccountUpdateRequestInput", "json")
 	if err != nil {

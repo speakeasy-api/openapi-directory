@@ -87,6 +87,54 @@ func (s *tagKeys) CloudresourcemanagerTagKeysCreate(ctx context.Context, request
 	return res, nil
 }
 
+// CloudresourcemanagerTagKeysGetNamespaced - Retrieves a TagKey by its namespaced name. This method will return `PERMISSION_DENIED` if the key does not exist or the user does not have permission to view it.
+func (s *tagKeys) CloudresourcemanagerTagKeysGetNamespaced(ctx context.Context, request operations.CloudresourcemanagerTagKeysGetNamespacedRequest, security operations.CloudresourcemanagerTagKeysGetNamespacedSecurity) (*operations.CloudresourcemanagerTagKeysGetNamespacedResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v3/tagKeys/namespaced"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CloudresourcemanagerTagKeysGetNamespacedResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TagKey
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TagKey = out
+		}
+	}
+
+	return res, nil
+}
+
 // CloudresourcemanagerTagKeysList - Lists all TagKeys for a parent resource.
 func (s *tagKeys) CloudresourcemanagerTagKeysList(ctx context.Context, request operations.CloudresourcemanagerTagKeysListRequest, security operations.CloudresourcemanagerTagKeysListSecurity) (*operations.CloudresourcemanagerTagKeysListResponse, error) {
 	baseURL := s.serverURL

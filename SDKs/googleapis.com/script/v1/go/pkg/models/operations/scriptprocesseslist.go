@@ -28,12 +28,16 @@ const (
 	ScriptProcessesListUserProcessFilterStatusesEnumDelayed                  ScriptProcessesListUserProcessFilterStatusesEnum = "DELAYED"
 )
 
+func (e ScriptProcessesListUserProcessFilterStatusesEnum) ToPointer() *ScriptProcessesListUserProcessFilterStatusesEnum {
+	return &e
+}
+
 func (e *ScriptProcessesListUserProcessFilterStatusesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESS_STATUS_UNSPECIFIED":
 		fallthrough
 	case "RUNNING":
@@ -51,10 +55,10 @@ func (e *ScriptProcessesListUserProcessFilterStatusesEnum) UnmarshalJSON(data []
 	case "UNKNOWN":
 		fallthrough
 	case "DELAYED":
-		*e = ScriptProcessesListUserProcessFilterStatusesEnum(s)
+		*e = ScriptProcessesListUserProcessFilterStatusesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScriptProcessesListUserProcessFilterStatusesEnum: %s", s)
+		return fmt.Errorf("invalid value for ScriptProcessesListUserProcessFilterStatusesEnum: %v", v)
 	}
 }
 
@@ -73,12 +77,16 @@ const (
 	ScriptProcessesListUserProcessFilterTypesEnumBatchTask              ScriptProcessesListUserProcessFilterTypesEnum = "BATCH_TASK"
 )
 
+func (e ScriptProcessesListUserProcessFilterTypesEnum) ToPointer() *ScriptProcessesListUserProcessFilterTypesEnum {
+	return &e
+}
+
 func (e *ScriptProcessesListUserProcessFilterTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESS_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ADD_ON":
@@ -98,10 +106,10 @@ func (e *ScriptProcessesListUserProcessFilterTypesEnum) UnmarshalJSON(data []byt
 	case "MENU":
 		fallthrough
 	case "BATCH_TASK":
-		*e = ScriptProcessesListUserProcessFilterTypesEnum(s)
+		*e = ScriptProcessesListUserProcessFilterTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScriptProcessesListUserProcessFilterTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for ScriptProcessesListUserProcessFilterTypesEnum: %v", v)
 	}
 }
 
@@ -115,12 +123,16 @@ const (
 	ScriptProcessesListUserProcessFilterUserAccessLevelsEnumOwner                      ScriptProcessesListUserProcessFilterUserAccessLevelsEnum = "OWNER"
 )
 
+func (e ScriptProcessesListUserProcessFilterUserAccessLevelsEnum) ToPointer() *ScriptProcessesListUserProcessFilterUserAccessLevelsEnum {
+	return &e
+}
+
 func (e *ScriptProcessesListUserProcessFilterUserAccessLevelsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_ACCESS_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -130,10 +142,10 @@ func (e *ScriptProcessesListUserProcessFilterUserAccessLevelsEnum) UnmarshalJSON
 	case "WRITE":
 		fallthrough
 	case "OWNER":
-		*e = ScriptProcessesListUserProcessFilterUserAccessLevelsEnum(s)
+		*e = ScriptProcessesListUserProcessFilterUserAccessLevelsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScriptProcessesListUserProcessFilterUserAccessLevelsEnum: %s", s)
+		return fmt.Errorf("invalid value for ScriptProcessesListUserProcessFilterUserAccessLevelsEnum: %v", v)
 	}
 }
 

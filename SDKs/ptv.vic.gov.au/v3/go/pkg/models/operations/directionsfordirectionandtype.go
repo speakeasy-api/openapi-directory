@@ -10,35 +10,39 @@ import (
 )
 
 // DirectionsForDirectionAndTypeRouteTypeEnum - Number identifying transport mode; values returned via RouteTypes API
-type DirectionsForDirectionAndTypeRouteTypeEnum string
+type DirectionsForDirectionAndTypeRouteTypeEnum int
 
 const (
-	DirectionsForDirectionAndTypeRouteTypeEnumZero  DirectionsForDirectionAndTypeRouteTypeEnum = "0"
-	DirectionsForDirectionAndTypeRouteTypeEnumOne   DirectionsForDirectionAndTypeRouteTypeEnum = "1"
-	DirectionsForDirectionAndTypeRouteTypeEnumTwo   DirectionsForDirectionAndTypeRouteTypeEnum = "2"
-	DirectionsForDirectionAndTypeRouteTypeEnumThree DirectionsForDirectionAndTypeRouteTypeEnum = "3"
-	DirectionsForDirectionAndTypeRouteTypeEnumFour  DirectionsForDirectionAndTypeRouteTypeEnum = "4"
+	DirectionsForDirectionAndTypeRouteTypeEnumZero  DirectionsForDirectionAndTypeRouteTypeEnum = 0
+	DirectionsForDirectionAndTypeRouteTypeEnumOne   DirectionsForDirectionAndTypeRouteTypeEnum = 1
+	DirectionsForDirectionAndTypeRouteTypeEnumTwo   DirectionsForDirectionAndTypeRouteTypeEnum = 2
+	DirectionsForDirectionAndTypeRouteTypeEnumThree DirectionsForDirectionAndTypeRouteTypeEnum = 3
+	DirectionsForDirectionAndTypeRouteTypeEnumFour  DirectionsForDirectionAndTypeRouteTypeEnum = 4
 )
 
+func (e DirectionsForDirectionAndTypeRouteTypeEnum) ToPointer() *DirectionsForDirectionAndTypeRouteTypeEnum {
+	return &e
+}
+
 func (e *DirectionsForDirectionAndTypeRouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
-		*e = DirectionsForDirectionAndTypeRouteTypeEnum(s)
+	case 4:
+		*e = DirectionsForDirectionAndTypeRouteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectionsForDirectionAndTypeRouteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectionsForDirectionAndTypeRouteTypeEnum: %v", v)
 	}
 }
 

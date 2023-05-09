@@ -83,7 +83,10 @@ func (s *management) AnalyticsManagementAccountSummariesList(ctx context.Context
 // AnalyticsManagementAccountUserLinksDelete - Removes a user from the given account.
 func (s *management) AnalyticsManagementAccountUserLinksDelete(ctx context.Context, request operations.AnalyticsManagementAccountUserLinksDeleteRequest, security operations.AnalyticsManagementAccountUserLinksDeleteSecurity) (*operations.AnalyticsManagementAccountUserLinksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/entityUserLinks/{linkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/entityUserLinks/{linkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -122,7 +125,10 @@ func (s *management) AnalyticsManagementAccountUserLinksDelete(ctx context.Conte
 // AnalyticsManagementAccountUserLinksInsert - Adds a new user to the given account.
 func (s *management) AnalyticsManagementAccountUserLinksInsert(ctx context.Context, request operations.AnalyticsManagementAccountUserLinksInsertRequest, security operations.AnalyticsManagementAccountUserLinksInsertSecurity) (*operations.AnalyticsManagementAccountUserLinksInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/entityUserLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/entityUserLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EntityUserLinkInput", "json")
 	if err != nil {
@@ -177,7 +183,10 @@ func (s *management) AnalyticsManagementAccountUserLinksInsert(ctx context.Conte
 // AnalyticsManagementAccountUserLinksList - Lists account-user links for a given account.
 func (s *management) AnalyticsManagementAccountUserLinksList(ctx context.Context, request operations.AnalyticsManagementAccountUserLinksListRequest, security operations.AnalyticsManagementAccountUserLinksListSecurity) (*operations.AnalyticsManagementAccountUserLinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/entityUserLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/entityUserLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +234,10 @@ func (s *management) AnalyticsManagementAccountUserLinksList(ctx context.Context
 // AnalyticsManagementAccountUserLinksUpdate - Updates permissions for an existing user on the given account.
 func (s *management) AnalyticsManagementAccountUserLinksUpdate(ctx context.Context, request operations.AnalyticsManagementAccountUserLinksUpdateRequest, security operations.AnalyticsManagementAccountUserLinksUpdateSecurity) (*operations.AnalyticsManagementAccountUserLinksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/entityUserLinks/{linkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/entityUserLinks/{linkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EntityUserLinkInput", "json")
 	if err != nil {
@@ -383,7 +395,10 @@ func (s *management) AnalyticsManagementClientIDHashClientID(ctx context.Context
 // AnalyticsManagementCustomDataSourcesList - List custom data sources to which the user has access.
 func (s *management) AnalyticsManagementCustomDataSourcesList(ctx context.Context, request operations.AnalyticsManagementCustomDataSourcesListRequest, security operations.AnalyticsManagementCustomDataSourcesListSecurity) (*operations.AnalyticsManagementCustomDataSourcesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDataSources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDataSources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -431,7 +446,10 @@ func (s *management) AnalyticsManagementCustomDataSourcesList(ctx context.Contex
 // AnalyticsManagementCustomDimensionsGet - Get a custom dimension to which the user has access.
 func (s *management) AnalyticsManagementCustomDimensionsGet(ctx context.Context, request operations.AnalyticsManagementCustomDimensionsGetRequest, security operations.AnalyticsManagementCustomDimensionsGetSecurity) (*operations.AnalyticsManagementCustomDimensionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDimensions/{customDimensionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDimensions/{customDimensionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -479,7 +497,10 @@ func (s *management) AnalyticsManagementCustomDimensionsGet(ctx context.Context,
 // AnalyticsManagementCustomDimensionsInsert - Create a new custom dimension.
 func (s *management) AnalyticsManagementCustomDimensionsInsert(ctx context.Context, request operations.AnalyticsManagementCustomDimensionsInsertRequest, security operations.AnalyticsManagementCustomDimensionsInsertSecurity) (*operations.AnalyticsManagementCustomDimensionsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDimensions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDimensions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomDimensionInput", "json")
 	if err != nil {
@@ -534,7 +555,10 @@ func (s *management) AnalyticsManagementCustomDimensionsInsert(ctx context.Conte
 // AnalyticsManagementCustomDimensionsList - Lists custom dimensions to which the user has access.
 func (s *management) AnalyticsManagementCustomDimensionsList(ctx context.Context, request operations.AnalyticsManagementCustomDimensionsListRequest, security operations.AnalyticsManagementCustomDimensionsListSecurity) (*operations.AnalyticsManagementCustomDimensionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDimensions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDimensions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -582,7 +606,10 @@ func (s *management) AnalyticsManagementCustomDimensionsList(ctx context.Context
 // AnalyticsManagementCustomDimensionsPatch - Updates an existing custom dimension. This method supports patch semantics.
 func (s *management) AnalyticsManagementCustomDimensionsPatch(ctx context.Context, request operations.AnalyticsManagementCustomDimensionsPatchRequest, security operations.AnalyticsManagementCustomDimensionsPatchSecurity) (*operations.AnalyticsManagementCustomDimensionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDimensions/{customDimensionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDimensions/{customDimensionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomDimensionInput", "json")
 	if err != nil {
@@ -637,7 +664,10 @@ func (s *management) AnalyticsManagementCustomDimensionsPatch(ctx context.Contex
 // AnalyticsManagementCustomDimensionsUpdate - Updates an existing custom dimension.
 func (s *management) AnalyticsManagementCustomDimensionsUpdate(ctx context.Context, request operations.AnalyticsManagementCustomDimensionsUpdateRequest, security operations.AnalyticsManagementCustomDimensionsUpdateSecurity) (*operations.AnalyticsManagementCustomDimensionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDimensions/{customDimensionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDimensions/{customDimensionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomDimensionInput", "json")
 	if err != nil {
@@ -692,7 +722,10 @@ func (s *management) AnalyticsManagementCustomDimensionsUpdate(ctx context.Conte
 // AnalyticsManagementCustomMetricsGet - Get a custom metric to which the user has access.
 func (s *management) AnalyticsManagementCustomMetricsGet(ctx context.Context, request operations.AnalyticsManagementCustomMetricsGetRequest, security operations.AnalyticsManagementCustomMetricsGetSecurity) (*operations.AnalyticsManagementCustomMetricsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customMetrics/{customMetricId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customMetrics/{customMetricId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -740,7 +773,10 @@ func (s *management) AnalyticsManagementCustomMetricsGet(ctx context.Context, re
 // AnalyticsManagementCustomMetricsInsert - Create a new custom metric.
 func (s *management) AnalyticsManagementCustomMetricsInsert(ctx context.Context, request operations.AnalyticsManagementCustomMetricsInsertRequest, security operations.AnalyticsManagementCustomMetricsInsertSecurity) (*operations.AnalyticsManagementCustomMetricsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customMetrics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customMetrics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomMetricInput", "json")
 	if err != nil {
@@ -795,7 +831,10 @@ func (s *management) AnalyticsManagementCustomMetricsInsert(ctx context.Context,
 // AnalyticsManagementCustomMetricsList - Lists custom metrics to which the user has access.
 func (s *management) AnalyticsManagementCustomMetricsList(ctx context.Context, request operations.AnalyticsManagementCustomMetricsListRequest, security operations.AnalyticsManagementCustomMetricsListSecurity) (*operations.AnalyticsManagementCustomMetricsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customMetrics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customMetrics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -843,7 +882,10 @@ func (s *management) AnalyticsManagementCustomMetricsList(ctx context.Context, r
 // AnalyticsManagementCustomMetricsPatch - Updates an existing custom metric. This method supports patch semantics.
 func (s *management) AnalyticsManagementCustomMetricsPatch(ctx context.Context, request operations.AnalyticsManagementCustomMetricsPatchRequest, security operations.AnalyticsManagementCustomMetricsPatchSecurity) (*operations.AnalyticsManagementCustomMetricsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customMetrics/{customMetricId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customMetrics/{customMetricId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomMetricInput", "json")
 	if err != nil {
@@ -898,7 +940,10 @@ func (s *management) AnalyticsManagementCustomMetricsPatch(ctx context.Context, 
 // AnalyticsManagementCustomMetricsUpdate - Updates an existing custom metric.
 func (s *management) AnalyticsManagementCustomMetricsUpdate(ctx context.Context, request operations.AnalyticsManagementCustomMetricsUpdateRequest, security operations.AnalyticsManagementCustomMetricsUpdateSecurity) (*operations.AnalyticsManagementCustomMetricsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customMetrics/{customMetricId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customMetrics/{customMetricId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomMetricInput", "json")
 	if err != nil {
@@ -953,7 +998,10 @@ func (s *management) AnalyticsManagementCustomMetricsUpdate(ctx context.Context,
 // AnalyticsManagementExperimentsDelete - Delete an experiment.
 func (s *management) AnalyticsManagementExperimentsDelete(ctx context.Context, request operations.AnalyticsManagementExperimentsDeleteRequest, security operations.AnalyticsManagementExperimentsDeleteSecurity) (*operations.AnalyticsManagementExperimentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments/{experimentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments/{experimentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -992,7 +1040,10 @@ func (s *management) AnalyticsManagementExperimentsDelete(ctx context.Context, r
 // AnalyticsManagementExperimentsGet - Returns an experiment to which the user has access.
 func (s *management) AnalyticsManagementExperimentsGet(ctx context.Context, request operations.AnalyticsManagementExperimentsGetRequest, security operations.AnalyticsManagementExperimentsGetSecurity) (*operations.AnalyticsManagementExperimentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments/{experimentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments/{experimentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1040,7 +1091,10 @@ func (s *management) AnalyticsManagementExperimentsGet(ctx context.Context, requ
 // AnalyticsManagementExperimentsInsert - Create a new experiment.
 func (s *management) AnalyticsManagementExperimentsInsert(ctx context.Context, request operations.AnalyticsManagementExperimentsInsertRequest, security operations.AnalyticsManagementExperimentsInsertSecurity) (*operations.AnalyticsManagementExperimentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Experiment", "json")
 	if err != nil {
@@ -1095,7 +1149,10 @@ func (s *management) AnalyticsManagementExperimentsInsert(ctx context.Context, r
 // AnalyticsManagementExperimentsList - Lists experiments to which the user has access.
 func (s *management) AnalyticsManagementExperimentsList(ctx context.Context, request operations.AnalyticsManagementExperimentsListRequest, security operations.AnalyticsManagementExperimentsListSecurity) (*operations.AnalyticsManagementExperimentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1143,7 +1200,10 @@ func (s *management) AnalyticsManagementExperimentsList(ctx context.Context, req
 // AnalyticsManagementExperimentsPatch - Update an existing experiment. This method supports patch semantics.
 func (s *management) AnalyticsManagementExperimentsPatch(ctx context.Context, request operations.AnalyticsManagementExperimentsPatchRequest, security operations.AnalyticsManagementExperimentsPatchSecurity) (*operations.AnalyticsManagementExperimentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments/{experimentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments/{experimentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Experiment", "json")
 	if err != nil {
@@ -1198,7 +1258,10 @@ func (s *management) AnalyticsManagementExperimentsPatch(ctx context.Context, re
 // AnalyticsManagementExperimentsUpdate - Update an existing experiment.
 func (s *management) AnalyticsManagementExperimentsUpdate(ctx context.Context, request operations.AnalyticsManagementExperimentsUpdateRequest, security operations.AnalyticsManagementExperimentsUpdateSecurity) (*operations.AnalyticsManagementExperimentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments/{experimentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/experiments/{experimentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Experiment", "json")
 	if err != nil {
@@ -1253,7 +1316,10 @@ func (s *management) AnalyticsManagementExperimentsUpdate(ctx context.Context, r
 // AnalyticsManagementFiltersDelete - Delete a filter.
 func (s *management) AnalyticsManagementFiltersDelete(ctx context.Context, request operations.AnalyticsManagementFiltersDeleteRequest, security operations.AnalyticsManagementFiltersDeleteSecurity) (*operations.AnalyticsManagementFiltersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/filters/{filterId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/filters/{filterId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1301,7 +1367,10 @@ func (s *management) AnalyticsManagementFiltersDelete(ctx context.Context, reque
 // AnalyticsManagementFiltersGet - Returns filters to which the user has access.
 func (s *management) AnalyticsManagementFiltersGet(ctx context.Context, request operations.AnalyticsManagementFiltersGetRequest, security operations.AnalyticsManagementFiltersGetSecurity) (*operations.AnalyticsManagementFiltersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/filters/{filterId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/filters/{filterId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1349,7 +1418,10 @@ func (s *management) AnalyticsManagementFiltersGet(ctx context.Context, request 
 // AnalyticsManagementFiltersInsert - Create a new filter.
 func (s *management) AnalyticsManagementFiltersInsert(ctx context.Context, request operations.AnalyticsManagementFiltersInsertRequest, security operations.AnalyticsManagementFiltersInsertSecurity) (*operations.AnalyticsManagementFiltersInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/filters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/filters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FilterInput", "json")
 	if err != nil {
@@ -1404,7 +1476,10 @@ func (s *management) AnalyticsManagementFiltersInsert(ctx context.Context, reque
 // AnalyticsManagementFiltersList - Lists all filters for an account
 func (s *management) AnalyticsManagementFiltersList(ctx context.Context, request operations.AnalyticsManagementFiltersListRequest, security operations.AnalyticsManagementFiltersListSecurity) (*operations.AnalyticsManagementFiltersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/filters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/filters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1452,7 +1527,10 @@ func (s *management) AnalyticsManagementFiltersList(ctx context.Context, request
 // AnalyticsManagementFiltersPatch - Updates an existing filter. This method supports patch semantics.
 func (s *management) AnalyticsManagementFiltersPatch(ctx context.Context, request operations.AnalyticsManagementFiltersPatchRequest, security operations.AnalyticsManagementFiltersPatchSecurity) (*operations.AnalyticsManagementFiltersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/filters/{filterId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/filters/{filterId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FilterInput", "json")
 	if err != nil {
@@ -1507,7 +1585,10 @@ func (s *management) AnalyticsManagementFiltersPatch(ctx context.Context, reques
 // AnalyticsManagementFiltersUpdate - Updates an existing filter.
 func (s *management) AnalyticsManagementFiltersUpdate(ctx context.Context, request operations.AnalyticsManagementFiltersUpdateRequest, security operations.AnalyticsManagementFiltersUpdateSecurity) (*operations.AnalyticsManagementFiltersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/filters/{filterId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/filters/{filterId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FilterInput", "json")
 	if err != nil {
@@ -1562,7 +1643,10 @@ func (s *management) AnalyticsManagementFiltersUpdate(ctx context.Context, reque
 // AnalyticsManagementGoalsGet - Gets a goal to which the user has access.
 func (s *management) AnalyticsManagementGoalsGet(ctx context.Context, request operations.AnalyticsManagementGoalsGetRequest, security operations.AnalyticsManagementGoalsGetSecurity) (*operations.AnalyticsManagementGoalsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals/{goalId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals/{goalId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1610,7 +1694,10 @@ func (s *management) AnalyticsManagementGoalsGet(ctx context.Context, request op
 // AnalyticsManagementGoalsInsert - Create a new goal.
 func (s *management) AnalyticsManagementGoalsInsert(ctx context.Context, request operations.AnalyticsManagementGoalsInsertRequest, security operations.AnalyticsManagementGoalsInsertSecurity) (*operations.AnalyticsManagementGoalsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Goal", "json")
 	if err != nil {
@@ -1665,7 +1752,10 @@ func (s *management) AnalyticsManagementGoalsInsert(ctx context.Context, request
 // AnalyticsManagementGoalsList - Lists goals to which the user has access.
 func (s *management) AnalyticsManagementGoalsList(ctx context.Context, request operations.AnalyticsManagementGoalsListRequest, security operations.AnalyticsManagementGoalsListSecurity) (*operations.AnalyticsManagementGoalsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1713,7 +1803,10 @@ func (s *management) AnalyticsManagementGoalsList(ctx context.Context, request o
 // AnalyticsManagementGoalsPatch - Updates an existing goal. This method supports patch semantics.
 func (s *management) AnalyticsManagementGoalsPatch(ctx context.Context, request operations.AnalyticsManagementGoalsPatchRequest, security operations.AnalyticsManagementGoalsPatchSecurity) (*operations.AnalyticsManagementGoalsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals/{goalId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals/{goalId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Goal", "json")
 	if err != nil {
@@ -1768,7 +1861,10 @@ func (s *management) AnalyticsManagementGoalsPatch(ctx context.Context, request 
 // AnalyticsManagementGoalsUpdate - Updates an existing goal.
 func (s *management) AnalyticsManagementGoalsUpdate(ctx context.Context, request operations.AnalyticsManagementGoalsUpdateRequest, security operations.AnalyticsManagementGoalsUpdateSecurity) (*operations.AnalyticsManagementGoalsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals/{goalId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals/{goalId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Goal", "json")
 	if err != nil {
@@ -1823,7 +1919,10 @@ func (s *management) AnalyticsManagementGoalsUpdate(ctx context.Context, request
 // AnalyticsManagementProfileFilterLinksDelete - Delete a profile filter link.
 func (s *management) AnalyticsManagementProfileFilterLinksDelete(ctx context.Context, request operations.AnalyticsManagementProfileFilterLinksDeleteRequest, security operations.AnalyticsManagementProfileFilterLinksDeleteSecurity) (*operations.AnalyticsManagementProfileFilterLinksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks/{linkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks/{linkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1862,7 +1961,10 @@ func (s *management) AnalyticsManagementProfileFilterLinksDelete(ctx context.Con
 // AnalyticsManagementProfileFilterLinksGet - Returns a single profile filter link.
 func (s *management) AnalyticsManagementProfileFilterLinksGet(ctx context.Context, request operations.AnalyticsManagementProfileFilterLinksGetRequest, security operations.AnalyticsManagementProfileFilterLinksGetSecurity) (*operations.AnalyticsManagementProfileFilterLinksGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks/{linkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks/{linkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1910,7 +2012,10 @@ func (s *management) AnalyticsManagementProfileFilterLinksGet(ctx context.Contex
 // AnalyticsManagementProfileFilterLinksInsert - Create a new profile filter link.
 func (s *management) AnalyticsManagementProfileFilterLinksInsert(ctx context.Context, request operations.AnalyticsManagementProfileFilterLinksInsertRequest, security operations.AnalyticsManagementProfileFilterLinksInsertSecurity) (*operations.AnalyticsManagementProfileFilterLinksInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfileFilterLinkInput", "json")
 	if err != nil {
@@ -1965,7 +2070,10 @@ func (s *management) AnalyticsManagementProfileFilterLinksInsert(ctx context.Con
 // AnalyticsManagementProfileFilterLinksList - Lists all profile filter links for a profile.
 func (s *management) AnalyticsManagementProfileFilterLinksList(ctx context.Context, request operations.AnalyticsManagementProfileFilterLinksListRequest, security operations.AnalyticsManagementProfileFilterLinksListSecurity) (*operations.AnalyticsManagementProfileFilterLinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2013,7 +2121,10 @@ func (s *management) AnalyticsManagementProfileFilterLinksList(ctx context.Conte
 // AnalyticsManagementProfileFilterLinksPatch - Update an existing profile filter link. This method supports patch semantics.
 func (s *management) AnalyticsManagementProfileFilterLinksPatch(ctx context.Context, request operations.AnalyticsManagementProfileFilterLinksPatchRequest, security operations.AnalyticsManagementProfileFilterLinksPatchSecurity) (*operations.AnalyticsManagementProfileFilterLinksPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks/{linkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks/{linkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfileFilterLinkInput", "json")
 	if err != nil {
@@ -2068,7 +2179,10 @@ func (s *management) AnalyticsManagementProfileFilterLinksPatch(ctx context.Cont
 // AnalyticsManagementProfileFilterLinksUpdate - Update an existing profile filter link.
 func (s *management) AnalyticsManagementProfileFilterLinksUpdate(ctx context.Context, request operations.AnalyticsManagementProfileFilterLinksUpdateRequest, security operations.AnalyticsManagementProfileFilterLinksUpdateSecurity) (*operations.AnalyticsManagementProfileFilterLinksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks/{linkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/profileFilterLinks/{linkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfileFilterLinkInput", "json")
 	if err != nil {
@@ -2123,7 +2237,10 @@ func (s *management) AnalyticsManagementProfileFilterLinksUpdate(ctx context.Con
 // AnalyticsManagementProfileUserLinksDelete - Removes a user from the given view (profile).
 func (s *management) AnalyticsManagementProfileUserLinksDelete(ctx context.Context, request operations.AnalyticsManagementProfileUserLinksDeleteRequest, security operations.AnalyticsManagementProfileUserLinksDeleteSecurity) (*operations.AnalyticsManagementProfileUserLinksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/entityUserLinks/{linkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/entityUserLinks/{linkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2162,7 +2279,10 @@ func (s *management) AnalyticsManagementProfileUserLinksDelete(ctx context.Conte
 // AnalyticsManagementProfileUserLinksInsert - Adds a new user to the given view (profile).
 func (s *management) AnalyticsManagementProfileUserLinksInsert(ctx context.Context, request operations.AnalyticsManagementProfileUserLinksInsertRequest, security operations.AnalyticsManagementProfileUserLinksInsertSecurity) (*operations.AnalyticsManagementProfileUserLinksInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/entityUserLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/entityUserLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EntityUserLinkInput", "json")
 	if err != nil {
@@ -2217,7 +2337,10 @@ func (s *management) AnalyticsManagementProfileUserLinksInsert(ctx context.Conte
 // AnalyticsManagementProfileUserLinksList - Lists profile-user links for a given view (profile).
 func (s *management) AnalyticsManagementProfileUserLinksList(ctx context.Context, request operations.AnalyticsManagementProfileUserLinksListRequest, security operations.AnalyticsManagementProfileUserLinksListSecurity) (*operations.AnalyticsManagementProfileUserLinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/entityUserLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/entityUserLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2265,7 +2388,10 @@ func (s *management) AnalyticsManagementProfileUserLinksList(ctx context.Context
 // AnalyticsManagementProfileUserLinksUpdate - Updates permissions for an existing user on the given view (profile).
 func (s *management) AnalyticsManagementProfileUserLinksUpdate(ctx context.Context, request operations.AnalyticsManagementProfileUserLinksUpdateRequest, security operations.AnalyticsManagementProfileUserLinksUpdateSecurity) (*operations.AnalyticsManagementProfileUserLinksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/entityUserLinks/{linkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/entityUserLinks/{linkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EntityUserLinkInput", "json")
 	if err != nil {
@@ -2320,7 +2446,10 @@ func (s *management) AnalyticsManagementProfileUserLinksUpdate(ctx context.Conte
 // AnalyticsManagementProfilesDelete - Deletes a view (profile).
 func (s *management) AnalyticsManagementProfilesDelete(ctx context.Context, request operations.AnalyticsManagementProfilesDeleteRequest, security operations.AnalyticsManagementProfilesDeleteSecurity) (*operations.AnalyticsManagementProfilesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2359,7 +2488,10 @@ func (s *management) AnalyticsManagementProfilesDelete(ctx context.Context, requ
 // AnalyticsManagementProfilesGet - Gets a view (profile) to which the user has access.
 func (s *management) AnalyticsManagementProfilesGet(ctx context.Context, request operations.AnalyticsManagementProfilesGetRequest, security operations.AnalyticsManagementProfilesGetSecurity) (*operations.AnalyticsManagementProfilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2407,7 +2539,10 @@ func (s *management) AnalyticsManagementProfilesGet(ctx context.Context, request
 // AnalyticsManagementProfilesInsert - Create a new view (profile).
 func (s *management) AnalyticsManagementProfilesInsert(ctx context.Context, request operations.AnalyticsManagementProfilesInsertRequest, security operations.AnalyticsManagementProfilesInsertSecurity) (*operations.AnalyticsManagementProfilesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfileInput", "json")
 	if err != nil {
@@ -2462,7 +2597,10 @@ func (s *management) AnalyticsManagementProfilesInsert(ctx context.Context, requ
 // AnalyticsManagementProfilesList - Lists views (profiles) to which the user has access.
 func (s *management) AnalyticsManagementProfilesList(ctx context.Context, request operations.AnalyticsManagementProfilesListRequest, security operations.AnalyticsManagementProfilesListSecurity) (*operations.AnalyticsManagementProfilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2510,7 +2648,10 @@ func (s *management) AnalyticsManagementProfilesList(ctx context.Context, reques
 // AnalyticsManagementProfilesPatch - Updates an existing view (profile). This method supports patch semantics.
 func (s *management) AnalyticsManagementProfilesPatch(ctx context.Context, request operations.AnalyticsManagementProfilesPatchRequest, security operations.AnalyticsManagementProfilesPatchSecurity) (*operations.AnalyticsManagementProfilesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfileInput", "json")
 	if err != nil {
@@ -2565,7 +2706,10 @@ func (s *management) AnalyticsManagementProfilesPatch(ctx context.Context, reque
 // AnalyticsManagementProfilesUpdate - Updates an existing view (profile).
 func (s *management) AnalyticsManagementProfilesUpdate(ctx context.Context, request operations.AnalyticsManagementProfilesUpdateRequest, security operations.AnalyticsManagementProfilesUpdateSecurity) (*operations.AnalyticsManagementProfilesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfileInput", "json")
 	if err != nil {
@@ -2620,7 +2764,10 @@ func (s *management) AnalyticsManagementProfilesUpdate(ctx context.Context, requ
 // AnalyticsManagementRemarketingAudienceDelete - Delete a remarketing audience.
 func (s *management) AnalyticsManagementRemarketingAudienceDelete(ctx context.Context, request operations.AnalyticsManagementRemarketingAudienceDeleteRequest, security operations.AnalyticsManagementRemarketingAudienceDeleteSecurity) (*operations.AnalyticsManagementRemarketingAudienceDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences/{remarketingAudienceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences/{remarketingAudienceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2659,7 +2806,10 @@ func (s *management) AnalyticsManagementRemarketingAudienceDelete(ctx context.Co
 // AnalyticsManagementRemarketingAudienceGet - Gets a remarketing audience to which the user has access.
 func (s *management) AnalyticsManagementRemarketingAudienceGet(ctx context.Context, request operations.AnalyticsManagementRemarketingAudienceGetRequest, security operations.AnalyticsManagementRemarketingAudienceGetSecurity) (*operations.AnalyticsManagementRemarketingAudienceGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences/{remarketingAudienceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences/{remarketingAudienceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2707,7 +2857,10 @@ func (s *management) AnalyticsManagementRemarketingAudienceGet(ctx context.Conte
 // AnalyticsManagementRemarketingAudienceInsert - Creates a new remarketing audience.
 func (s *management) AnalyticsManagementRemarketingAudienceInsert(ctx context.Context, request operations.AnalyticsManagementRemarketingAudienceInsertRequest, security operations.AnalyticsManagementRemarketingAudienceInsertSecurity) (*operations.AnalyticsManagementRemarketingAudienceInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemarketingAudienceInput", "json")
 	if err != nil {
@@ -2762,7 +2915,10 @@ func (s *management) AnalyticsManagementRemarketingAudienceInsert(ctx context.Co
 // AnalyticsManagementRemarketingAudienceList - Lists remarketing audiences to which the user has access.
 func (s *management) AnalyticsManagementRemarketingAudienceList(ctx context.Context, request operations.AnalyticsManagementRemarketingAudienceListRequest, security operations.AnalyticsManagementRemarketingAudienceListSecurity) (*operations.AnalyticsManagementRemarketingAudienceListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2810,7 +2966,10 @@ func (s *management) AnalyticsManagementRemarketingAudienceList(ctx context.Cont
 // AnalyticsManagementRemarketingAudiencePatch - Updates an existing remarketing audience. This method supports patch semantics.
 func (s *management) AnalyticsManagementRemarketingAudiencePatch(ctx context.Context, request operations.AnalyticsManagementRemarketingAudiencePatchRequest, security operations.AnalyticsManagementRemarketingAudiencePatchSecurity) (*operations.AnalyticsManagementRemarketingAudiencePatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences/{remarketingAudienceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences/{remarketingAudienceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemarketingAudienceInput", "json")
 	if err != nil {
@@ -2865,7 +3024,10 @@ func (s *management) AnalyticsManagementRemarketingAudiencePatch(ctx context.Con
 // AnalyticsManagementRemarketingAudienceUpdate - Updates an existing remarketing audience.
 func (s *management) AnalyticsManagementRemarketingAudienceUpdate(ctx context.Context, request operations.AnalyticsManagementRemarketingAudienceUpdateRequest, security operations.AnalyticsManagementRemarketingAudienceUpdateSecurity) (*operations.AnalyticsManagementRemarketingAudienceUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences/{remarketingAudienceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/remarketingAudiences/{remarketingAudienceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemarketingAudienceInput", "json")
 	if err != nil {
@@ -2968,7 +3130,10 @@ func (s *management) AnalyticsManagementSegmentsList(ctx context.Context, reques
 // AnalyticsManagementUnsampledReportsDelete - Deletes an unsampled report.
 func (s *management) AnalyticsManagementUnsampledReportsDelete(ctx context.Context, request operations.AnalyticsManagementUnsampledReportsDeleteRequest, security operations.AnalyticsManagementUnsampledReportsDeleteSecurity) (*operations.AnalyticsManagementUnsampledReportsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/unsampledReports/{unsampledReportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/unsampledReports/{unsampledReportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3007,7 +3172,10 @@ func (s *management) AnalyticsManagementUnsampledReportsDelete(ctx context.Conte
 // AnalyticsManagementUnsampledReportsGet - Returns a single unsampled report.
 func (s *management) AnalyticsManagementUnsampledReportsGet(ctx context.Context, request operations.AnalyticsManagementUnsampledReportsGetRequest, security operations.AnalyticsManagementUnsampledReportsGetSecurity) (*operations.AnalyticsManagementUnsampledReportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/unsampledReports/{unsampledReportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/unsampledReports/{unsampledReportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3055,7 +3223,10 @@ func (s *management) AnalyticsManagementUnsampledReportsGet(ctx context.Context,
 // AnalyticsManagementUnsampledReportsInsert - Create a new unsampled report.
 func (s *management) AnalyticsManagementUnsampledReportsInsert(ctx context.Context, request operations.AnalyticsManagementUnsampledReportsInsertRequest, security operations.AnalyticsManagementUnsampledReportsInsertSecurity) (*operations.AnalyticsManagementUnsampledReportsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/unsampledReports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/unsampledReports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UnsampledReportInput", "json")
 	if err != nil {
@@ -3110,7 +3281,10 @@ func (s *management) AnalyticsManagementUnsampledReportsInsert(ctx context.Conte
 // AnalyticsManagementUnsampledReportsList - Lists unsampled reports to which the user has access.
 func (s *management) AnalyticsManagementUnsampledReportsList(ctx context.Context, request operations.AnalyticsManagementUnsampledReportsListRequest, security operations.AnalyticsManagementUnsampledReportsListSecurity) (*operations.AnalyticsManagementUnsampledReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/unsampledReports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/unsampledReports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3158,7 +3332,10 @@ func (s *management) AnalyticsManagementUnsampledReportsList(ctx context.Context
 // AnalyticsManagementUploadsDeleteUploadData - Delete data associated with a previous upload.
 func (s *management) AnalyticsManagementUploadsDeleteUploadData(ctx context.Context, request operations.AnalyticsManagementUploadsDeleteUploadDataRequest, security operations.AnalyticsManagementUploadsDeleteUploadDataSecurity) (*operations.AnalyticsManagementUploadsDeleteUploadDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDataSources/{customDataSourceId}/deleteUploadData", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDataSources/{customDataSourceId}/deleteUploadData", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AnalyticsDataimportDeleteUploadDataRequest", "json")
 	if err != nil {
@@ -3204,7 +3381,10 @@ func (s *management) AnalyticsManagementUploadsDeleteUploadData(ctx context.Cont
 // AnalyticsManagementUploadsGet - List uploads to which the user has access.
 func (s *management) AnalyticsManagementUploadsGet(ctx context.Context, request operations.AnalyticsManagementUploadsGetRequest, security operations.AnalyticsManagementUploadsGetSecurity) (*operations.AnalyticsManagementUploadsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDataSources/{customDataSourceId}/uploads/{uploadId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDataSources/{customDataSourceId}/uploads/{uploadId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3252,7 +3432,10 @@ func (s *management) AnalyticsManagementUploadsGet(ctx context.Context, request 
 // AnalyticsManagementUploadsList - List uploads to which the user has access.
 func (s *management) AnalyticsManagementUploadsList(ctx context.Context, request operations.AnalyticsManagementUploadsListRequest, security operations.AnalyticsManagementUploadsListSecurity) (*operations.AnalyticsManagementUploadsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDataSources/{customDataSourceId}/uploads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDataSources/{customDataSourceId}/uploads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3300,7 +3483,10 @@ func (s *management) AnalyticsManagementUploadsList(ctx context.Context, request
 // AnalyticsManagementUploadsUploadData - Upload data for a custom data source.
 func (s *management) AnalyticsManagementUploadsUploadData(ctx context.Context, request operations.AnalyticsManagementUploadsUploadDataRequest, security operations.AnalyticsManagementUploadsUploadDataSecurity) (*operations.AnalyticsManagementUploadsUploadDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDataSources/{customDataSourceId}/uploads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/customDataSources/{customDataSourceId}/uploads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -3348,7 +3534,10 @@ func (s *management) AnalyticsManagementUploadsUploadData(ctx context.Context, r
 // AnalyticsManagementWebPropertyAdWordsLinksDelete - Deletes a web property-Google Ads link.
 func (s *management) AnalyticsManagementWebPropertyAdWordsLinksDelete(ctx context.Context, request operations.AnalyticsManagementWebPropertyAdWordsLinksDeleteRequest, security operations.AnalyticsManagementWebPropertyAdWordsLinksDeleteSecurity) (*operations.AnalyticsManagementWebPropertyAdWordsLinksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3387,7 +3576,10 @@ func (s *management) AnalyticsManagementWebPropertyAdWordsLinksDelete(ctx contex
 // AnalyticsManagementWebPropertyAdWordsLinksGet - Returns a web property-Google Ads link to which the user has access.
 func (s *management) AnalyticsManagementWebPropertyAdWordsLinksGet(ctx context.Context, request operations.AnalyticsManagementWebPropertyAdWordsLinksGetRequest, security operations.AnalyticsManagementWebPropertyAdWordsLinksGetSecurity) (*operations.AnalyticsManagementWebPropertyAdWordsLinksGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3435,7 +3627,10 @@ func (s *management) AnalyticsManagementWebPropertyAdWordsLinksGet(ctx context.C
 // AnalyticsManagementWebPropertyAdWordsLinksInsert - Creates a webProperty-Google Ads link.
 func (s *management) AnalyticsManagementWebPropertyAdWordsLinksInsert(ctx context.Context, request operations.AnalyticsManagementWebPropertyAdWordsLinksInsertRequest, security operations.AnalyticsManagementWebPropertyAdWordsLinksInsertSecurity) (*operations.AnalyticsManagementWebPropertyAdWordsLinksInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EntityAdWordsLink", "json")
 	if err != nil {
@@ -3490,7 +3685,10 @@ func (s *management) AnalyticsManagementWebPropertyAdWordsLinksInsert(ctx contex
 // AnalyticsManagementWebPropertyAdWordsLinksList - Lists webProperty-Google Ads links for a given web property.
 func (s *management) AnalyticsManagementWebPropertyAdWordsLinksList(ctx context.Context, request operations.AnalyticsManagementWebPropertyAdWordsLinksListRequest, security operations.AnalyticsManagementWebPropertyAdWordsLinksListSecurity) (*operations.AnalyticsManagementWebPropertyAdWordsLinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3538,7 +3736,10 @@ func (s *management) AnalyticsManagementWebPropertyAdWordsLinksList(ctx context.
 // AnalyticsManagementWebPropertyAdWordsLinksPatch - Updates an existing webProperty-Google Ads link. This method supports patch semantics.
 func (s *management) AnalyticsManagementWebPropertyAdWordsLinksPatch(ctx context.Context, request operations.AnalyticsManagementWebPropertyAdWordsLinksPatchRequest, security operations.AnalyticsManagementWebPropertyAdWordsLinksPatchSecurity) (*operations.AnalyticsManagementWebPropertyAdWordsLinksPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EntityAdWordsLink", "json")
 	if err != nil {
@@ -3593,7 +3794,10 @@ func (s *management) AnalyticsManagementWebPropertyAdWordsLinksPatch(ctx context
 // AnalyticsManagementWebPropertyAdWordsLinksUpdate - Updates an existing webProperty-Google Ads link.
 func (s *management) AnalyticsManagementWebPropertyAdWordsLinksUpdate(ctx context.Context, request operations.AnalyticsManagementWebPropertyAdWordsLinksUpdateRequest, security operations.AnalyticsManagementWebPropertyAdWordsLinksUpdateSecurity) (*operations.AnalyticsManagementWebPropertyAdWordsLinksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityAdWordsLinks/{webPropertyAdWordsLinkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EntityAdWordsLink", "json")
 	if err != nil {
@@ -3648,7 +3852,10 @@ func (s *management) AnalyticsManagementWebPropertyAdWordsLinksUpdate(ctx contex
 // AnalyticsManagementWebpropertiesGet - Gets a web property to which the user has access.
 func (s *management) AnalyticsManagementWebpropertiesGet(ctx context.Context, request operations.AnalyticsManagementWebpropertiesGetRequest, security operations.AnalyticsManagementWebpropertiesGetSecurity) (*operations.AnalyticsManagementWebpropertiesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3696,7 +3903,10 @@ func (s *management) AnalyticsManagementWebpropertiesGet(ctx context.Context, re
 // AnalyticsManagementWebpropertiesInsert - Create a new property if the account has fewer than 20 properties. Web properties are visible in the Google Analytics interface only if they have at least one profile.
 func (s *management) AnalyticsManagementWebpropertiesInsert(ctx context.Context, request operations.AnalyticsManagementWebpropertiesInsertRequest, security operations.AnalyticsManagementWebpropertiesInsertSecurity) (*operations.AnalyticsManagementWebpropertiesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebpropertyInput", "json")
 	if err != nil {
@@ -3751,7 +3961,10 @@ func (s *management) AnalyticsManagementWebpropertiesInsert(ctx context.Context,
 // AnalyticsManagementWebpropertiesList - Lists web properties to which the user has access.
 func (s *management) AnalyticsManagementWebpropertiesList(ctx context.Context, request operations.AnalyticsManagementWebpropertiesListRequest, security operations.AnalyticsManagementWebpropertiesListSecurity) (*operations.AnalyticsManagementWebpropertiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3799,7 +4012,10 @@ func (s *management) AnalyticsManagementWebpropertiesList(ctx context.Context, r
 // AnalyticsManagementWebpropertiesPatch - Updates an existing web property. This method supports patch semantics.
 func (s *management) AnalyticsManagementWebpropertiesPatch(ctx context.Context, request operations.AnalyticsManagementWebpropertiesPatchRequest, security operations.AnalyticsManagementWebpropertiesPatchSecurity) (*operations.AnalyticsManagementWebpropertiesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebpropertyInput", "json")
 	if err != nil {
@@ -3854,7 +4070,10 @@ func (s *management) AnalyticsManagementWebpropertiesPatch(ctx context.Context, 
 // AnalyticsManagementWebpropertiesUpdate - Updates an existing web property.
 func (s *management) AnalyticsManagementWebpropertiesUpdate(ctx context.Context, request operations.AnalyticsManagementWebpropertiesUpdateRequest, security operations.AnalyticsManagementWebpropertiesUpdateSecurity) (*operations.AnalyticsManagementWebpropertiesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebpropertyInput", "json")
 	if err != nil {
@@ -3909,7 +4128,10 @@ func (s *management) AnalyticsManagementWebpropertiesUpdate(ctx context.Context,
 // AnalyticsManagementWebpropertyUserLinksDelete - Removes a user from the given web property.
 func (s *management) AnalyticsManagementWebpropertyUserLinksDelete(ctx context.Context, request operations.AnalyticsManagementWebpropertyUserLinksDeleteRequest, security operations.AnalyticsManagementWebpropertyUserLinksDeleteSecurity) (*operations.AnalyticsManagementWebpropertyUserLinksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityUserLinks/{linkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityUserLinks/{linkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3948,7 +4170,10 @@ func (s *management) AnalyticsManagementWebpropertyUserLinksDelete(ctx context.C
 // AnalyticsManagementWebpropertyUserLinksInsert - Adds a new user to the given web property.
 func (s *management) AnalyticsManagementWebpropertyUserLinksInsert(ctx context.Context, request operations.AnalyticsManagementWebpropertyUserLinksInsertRequest, security operations.AnalyticsManagementWebpropertyUserLinksInsertSecurity) (*operations.AnalyticsManagementWebpropertyUserLinksInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityUserLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityUserLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EntityUserLinkInput", "json")
 	if err != nil {
@@ -4003,7 +4228,10 @@ func (s *management) AnalyticsManagementWebpropertyUserLinksInsert(ctx context.C
 // AnalyticsManagementWebpropertyUserLinksList - Lists webProperty-user links for a given web property.
 func (s *management) AnalyticsManagementWebpropertyUserLinksList(ctx context.Context, request operations.AnalyticsManagementWebpropertyUserLinksListRequest, security operations.AnalyticsManagementWebpropertyUserLinksListSecurity) (*operations.AnalyticsManagementWebpropertyUserLinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityUserLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityUserLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4051,7 +4279,10 @@ func (s *management) AnalyticsManagementWebpropertyUserLinksList(ctx context.Con
 // AnalyticsManagementWebpropertyUserLinksUpdate - Updates permissions for an existing user on the given web property.
 func (s *management) AnalyticsManagementWebpropertyUserLinksUpdate(ctx context.Context, request operations.AnalyticsManagementWebpropertyUserLinksUpdateRequest, security operations.AnalyticsManagementWebpropertyUserLinksUpdateSecurity) (*operations.AnalyticsManagementWebpropertyUserLinksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityUserLinks/{linkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/entityUserLinks/{linkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EntityUserLinkInput", "json")
 	if err != nil {

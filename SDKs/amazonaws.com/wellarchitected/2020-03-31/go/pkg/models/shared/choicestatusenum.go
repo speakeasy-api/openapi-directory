@@ -15,20 +15,24 @@ const (
 	ChoiceStatusEnumUnselected    ChoiceStatusEnum = "UNSELECTED"
 )
 
+func (e ChoiceStatusEnum) ToPointer() *ChoiceStatusEnum {
+	return &e
+}
+
 func (e *ChoiceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SELECTED":
 		fallthrough
 	case "NOT_APPLICABLE":
 		fallthrough
 	case "UNSELECTED":
-		*e = ChoiceStatusEnum(s)
+		*e = ChoiceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChoiceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ChoiceStatusEnum: %v", v)
 	}
 }

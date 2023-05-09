@@ -18,21 +18,25 @@ const (
 	ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnumPrivate  ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum = "private"
 )
 
+func (e ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum) ToPointer() *ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum {
+	return &e
+}
+
 func (e *ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "selected":
 		fallthrough
 	case "all":
 		fallthrough
 	case "private":
-		*e = ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum(s)
+		*e = ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionsCreateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum: %v", v)
 	}
 }
 

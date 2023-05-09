@@ -21,12 +21,16 @@ const (
 	ConditionIamEnumCredsAssertion    ConditionIamEnum = "CREDS_ASSERTION"
 )
 
+func (e ConditionIamEnum) ToPointer() *ConditionIamEnum {
+	return &e
+}
+
 func (e *ConditionIamEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_ATTR":
 		fallthrough
 	case "AUTHORITY":
@@ -42,10 +46,10 @@ func (e *ConditionIamEnum) UnmarshalJSON(data []byte) error {
 	case "CREDENTIALS_TYPE":
 		fallthrough
 	case "CREDS_ASSERTION":
-		*e = ConditionIamEnum(s)
+		*e = ConditionIamEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConditionIamEnum: %s", s)
+		return fmt.Errorf("invalid value for ConditionIamEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	ConditionOpEnumDischarged ConditionOpEnum = "DISCHARGED"
 )
 
+func (e ConditionOpEnum) ToPointer() *ConditionOpEnum {
+	return &e
+}
+
 func (e *ConditionOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_OP":
 		fallthrough
 	case "EQUALS":
@@ -78,10 +86,10 @@ func (e *ConditionOpEnum) UnmarshalJSON(data []byte) error {
 	case "NOT_IN":
 		fallthrough
 	case "DISCHARGED":
-		*e = ConditionOpEnum(s)
+		*e = ConditionOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConditionOpEnum: %s", s)
+		return fmt.Errorf("invalid value for ConditionOpEnum: %v", v)
 	}
 }
 
@@ -96,12 +104,16 @@ const (
 	ConditionSysEnumIP      ConditionSysEnum = "IP"
 )
 
+func (e ConditionSysEnum) ToPointer() *ConditionSysEnum {
+	return &e
+}
+
 func (e *ConditionSysEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_ATTR":
 		fallthrough
 	case "REGION":
@@ -111,10 +123,10 @@ func (e *ConditionSysEnum) UnmarshalJSON(data []byte) error {
 	case "NAME":
 		fallthrough
 	case "IP":
-		*e = ConditionSysEnum(s)
+		*e = ConditionSysEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConditionSysEnum: %s", s)
+		return fmt.Errorf("invalid value for ConditionSysEnum: %v", v)
 	}
 }
 

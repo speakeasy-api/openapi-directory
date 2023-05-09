@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.PreviewsReadRequest{
-        FileID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Previews.PreviewsRead(ctx, req)
+    res, err := s.Previews.PreviewsRead(ctx, operations.PreviewsReadRequest{
+        FileID: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

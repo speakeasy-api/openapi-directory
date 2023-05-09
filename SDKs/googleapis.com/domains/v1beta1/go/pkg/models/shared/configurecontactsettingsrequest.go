@@ -14,19 +14,23 @@ const (
 	ConfigureContactSettingsRequestContactNoticesEnumPublicContactDataAcknowledgement ConfigureContactSettingsRequestContactNoticesEnum = "PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT"
 )
 
+func (e ConfigureContactSettingsRequestContactNoticesEnum) ToPointer() *ConfigureContactSettingsRequestContactNoticesEnum {
+	return &e
+}
+
 func (e *ConfigureContactSettingsRequestContactNoticesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTACT_NOTICE_UNSPECIFIED":
 		fallthrough
 	case "PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT":
-		*e = ConfigureContactSettingsRequestContactNoticesEnum(s)
+		*e = ConfigureContactSettingsRequestContactNoticesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigureContactSettingsRequestContactNoticesEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigureContactSettingsRequestContactNoticesEnum: %v", v)
 	}
 }
 

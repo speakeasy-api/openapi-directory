@@ -11,6 +11,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -149,4 +150,14 @@ pkg/models/shared/membership.go
 pkg/models/shared/membershiplist.go
 pkg/models/shared/teamlist.go
 pkg/models/shared/userlist.go
+docs/sdk/README.md
+docs/account/README.md
+docs/avatars/README.md
+docs/database/README.md
+docs/functions/README.md
+docs/health/README.md
+docs/locale/README.md
+docs/storage/README.md
+docs/teams/README.md
+docs/users/README.md
 USAGE.md

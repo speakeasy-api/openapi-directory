@@ -15,15 +15,18 @@ const (
 	WorkflowStatusEnumUpdating WorkflowStatusEnum = "UPDATING"
 	WorkflowStatusEnumDeleted  WorkflowStatusEnum = "DELETED"
 	WorkflowStatusEnumFailed   WorkflowStatusEnum = "FAILED"
-	WorkflowStatusEnumInactive WorkflowStatusEnum = "INACTIVE"
 )
 
+func (e WorkflowStatusEnum) ToPointer() *WorkflowStatusEnum {
+	return &e
+}
+
 func (e *WorkflowStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -33,11 +36,9 @@ func (e *WorkflowStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETED":
 		fallthrough
 	case "FAILED":
-		fallthrough
-	case "INACTIVE":
-		*e = WorkflowStatusEnum(s)
+		*e = WorkflowStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkflowStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkflowStatusEnum: %v", v)
 	}
 }

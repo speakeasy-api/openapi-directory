@@ -15,20 +15,24 @@ const (
 	RecommendationSourceTypeEnumOther          RecommendationSourceTypeEnum = "OTHER"
 )
 
+func (e RecommendationSourceTypeEnum) ToPointer() *RecommendationSourceTypeEnum {
+	return &e
+}
+
 func (e *RecommendationSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ISSUE_DETECTION":
 		fallthrough
 	case "RULE_EVALUATION":
 		fallthrough
 	case "OTHER":
-		*e = RecommendationSourceTypeEnum(s)
+		*e = RecommendationSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecommendationSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RecommendationSourceTypeEnum: %v", v)
 	}
 }

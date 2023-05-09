@@ -19,12 +19,16 @@ const (
 	ConferencePlayResponseMessageEnumConferencePlayFailed                   ConferencePlayResponseMessageEnum = "Conference Play Failed"
 )
 
+func (e ConferencePlayResponseMessageEnum) ToPointer() *ConferencePlayResponseMessageEnum {
+	return &e
+}
+
 func (e *ConferencePlayResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Conference Play Executed":
 		fallthrough
 	case "ConferenceName Parameter must be present":
@@ -36,10 +40,10 @@ func (e *ConferencePlayResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "Conference Play Failed -- Conference not found":
 		fallthrough
 	case "Conference Play Failed":
-		*e = ConferencePlayResponseMessageEnum(s)
+		*e = ConferencePlayResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConferencePlayResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ConferencePlayResponseMessageEnum: %v", v)
 	}
 }
 

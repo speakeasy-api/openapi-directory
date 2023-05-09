@@ -30,12 +30,16 @@ const (
 	PartitionInstanceTypeEnumSearchPreviousgeneration2xlarge PartitionInstanceTypeEnum = "search.previousgeneration.2xlarge"
 )
 
+func (e PartitionInstanceTypeEnum) ToPointer() *PartitionInstanceTypeEnum {
+	return &e
+}
+
 func (e *PartitionInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "search.m1.small":
 		fallthrough
 	case "search.m1.large":
@@ -69,9 +73,9 @@ func (e *PartitionInstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "search.previousgeneration.xlarge":
 		fallthrough
 	case "search.previousgeneration.2xlarge":
-		*e = PartitionInstanceTypeEnum(s)
+		*e = PartitionInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartitionInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PartitionInstanceTypeEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETReceiveMessageActionEnumReceiveMessage GETReceiveMessageActionEnum = "ReceiveMessage"
 )
 
+func (e GETReceiveMessageActionEnum) ToPointer() *GETReceiveMessageActionEnum {
+	return &e
+}
+
 func (e *GETReceiveMessageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReceiveMessage":
-		*e = GETReceiveMessageActionEnum(s)
+		*e = GETReceiveMessageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReceiveMessageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReceiveMessageActionEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	GETReceiveMessageAttributeNamesEnumSqsManagedSseEnabled                  GETReceiveMessageAttributeNamesEnum = "SqsManagedSseEnabled"
 )
 
+func (e GETReceiveMessageAttributeNamesEnum) ToPointer() *GETReceiveMessageAttributeNamesEnum {
+	return &e
+}
+
 func (e *GETReceiveMessageAttributeNamesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All":
 		fallthrough
 	case "Policy":
@@ -105,10 +113,10 @@ func (e *GETReceiveMessageAttributeNamesEnum) UnmarshalJSON(data []byte) error {
 	case "RedriveAllowPolicy":
 		fallthrough
 	case "SqsManagedSseEnabled":
-		*e = GETReceiveMessageAttributeNamesEnum(s)
+		*e = GETReceiveMessageAttributeNamesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReceiveMessageAttributeNamesEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReceiveMessageAttributeNamesEnum: %v", v)
 	}
 }
 
@@ -119,17 +127,21 @@ const (
 	GETReceiveMessageVersionEnumTwoThousandAndTwelve1105 GETReceiveMessageVersionEnum = "2012-11-05"
 )
 
+func (e GETReceiveMessageVersionEnum) ToPointer() *GETReceiveMessageVersionEnum {
+	return &e
+}
+
 func (e *GETReceiveMessageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = GETReceiveMessageVersionEnum(s)
+		*e = GETReceiveMessageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReceiveMessageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReceiveMessageVersionEnum: %v", v)
 	}
 }
 

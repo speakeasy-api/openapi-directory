@@ -13,16 +13,20 @@ const (
 	JoinRequiredOptionEnumQueryRunner JoinRequiredOptionEnum = "QUERY_RUNNER"
 )
 
+func (e JoinRequiredOptionEnum) ToPointer() *JoinRequiredOptionEnum {
+	return &e
+}
+
 func (e *JoinRequiredOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUERY_RUNNER":
-		*e = JoinRequiredOptionEnum(s)
+		*e = JoinRequiredOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JoinRequiredOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for JoinRequiredOptionEnum: %v", v)
 	}
 }

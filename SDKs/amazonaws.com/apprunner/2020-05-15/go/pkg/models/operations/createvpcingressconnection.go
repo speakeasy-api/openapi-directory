@@ -16,17 +16,21 @@ const (
 	CreateVpcIngressConnectionXAmzTargetEnumAppRunnerCreateVpcIngressConnection CreateVpcIngressConnectionXAmzTargetEnum = "AppRunner.CreateVpcIngressConnection"
 )
 
+func (e CreateVpcIngressConnectionXAmzTargetEnum) ToPointer() *CreateVpcIngressConnectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateVpcIngressConnectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppRunner.CreateVpcIngressConnection":
-		*e = CreateVpcIngressConnectionXAmzTargetEnum(s)
+		*e = CreateVpcIngressConnectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcIngressConnectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcIngressConnectionXAmzTargetEnum: %v", v)
 	}
 }
 

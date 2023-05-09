@@ -32,7 +32,7 @@ type TpuProjectsLocationsQueuedResourcesCreateRequest struct {
 	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
-	// The unqualified resource name. Should follow the ^[A-Za-z0-9_.~+%-]+$ regex format.
+	// The unqualified resource name. Should follow the `^[A-Za-z0-9_.~+%-]+$` regex format.
 	QueuedResourceID *string `queryParam:"style=form,explode=true,name=queuedResourceId"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`

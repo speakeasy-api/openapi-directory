@@ -16,17 +16,21 @@ const (
 	RegisterComputeXAmzTargetEnumGameLiftRegisterCompute RegisterComputeXAmzTargetEnum = "GameLift.RegisterCompute"
 )
 
+func (e RegisterComputeXAmzTargetEnum) ToPointer() *RegisterComputeXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterComputeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.RegisterCompute":
-		*e = RegisterComputeXAmzTargetEnum(s)
+		*e = RegisterComputeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterComputeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterComputeXAmzTargetEnum: %v", v)
 	}
 }
 

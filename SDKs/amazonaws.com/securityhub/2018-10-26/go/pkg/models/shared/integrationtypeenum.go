@@ -15,20 +15,24 @@ const (
 	IntegrationTypeEnumUpdateFindingsInSecurityHub    IntegrationTypeEnum = "UPDATE_FINDINGS_IN_SECURITY_HUB"
 )
 
+func (e IntegrationTypeEnum) ToPointer() *IntegrationTypeEnum {
+	return &e
+}
+
 func (e *IntegrationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEND_FINDINGS_TO_SECURITY_HUB":
 		fallthrough
 	case "RECEIVE_FINDINGS_FROM_SECURITY_HUB":
 		fallthrough
 	case "UPDATE_FINDINGS_IN_SECURITY_HUB":
-		*e = IntegrationTypeEnum(s)
+		*e = IntegrationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegrationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegrationTypeEnum: %v", v)
 	}
 }

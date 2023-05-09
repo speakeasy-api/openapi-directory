@@ -13,16 +13,20 @@ const (
 	SourceTypeEnumReplicationInstance SourceTypeEnum = "replication-instance"
 )
 
+func (e SourceTypeEnum) ToPointer() *SourceTypeEnum {
+	return &e
+}
+
 func (e *SourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "replication-instance":
-		*e = SourceTypeEnum(s)
+		*e = SourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceTypeEnum: %v", v)
 	}
 }

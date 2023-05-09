@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -41,4 +42,7 @@ pkg/models/shared/verificationtoken.go
 pkg/models/shared/generateverificationtokenresponse.go
 pkg/models/shared/generateverificationtokenrequest.go
 pkg/models/shared/location.go
+docs/sdk/README.md
+docs/locations/README.md
+docs/verificationtokens/README.md
 USAGE.md

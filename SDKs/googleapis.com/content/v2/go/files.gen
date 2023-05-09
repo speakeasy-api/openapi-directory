@@ -16,6 +16,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -379,4 +380,19 @@ pkg/models/shared/holidaysholiday.go
 pkg/models/shared/shippingsettingsgetsupportedpickupservicesresponse.go
 pkg/models/shared/pickupservicespickupservice.go
 pkg/models/shared/shippingsettingslistresponse.go
+docs/sdk/README.md
+docs/accounts/README.md
+docs/accountstatuses/README.md
+docs/accounttax/README.md
+docs/datafeeds/README.md
+docs/datafeedstatuses/README.md
+docs/liasettings/README.md
+docs/orderinvoices/README.md
+docs/orderreports/README.md
+docs/orderreturns/README.md
+docs/orders/README.md
+docs/pos/README.md
+docs/products/README.md
+docs/productstatuses/README.md
+docs/shippingsettings/README.md
 USAGE.md

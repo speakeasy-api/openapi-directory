@@ -16,17 +16,21 @@ const (
 	SkipWaitTimeForInstanceTerminationXAmzTargetEnumCodeDeploy20141006SkipWaitTimeForInstanceTermination SkipWaitTimeForInstanceTerminationXAmzTargetEnum = "CodeDeploy_20141006.SkipWaitTimeForInstanceTermination"
 )
 
+func (e SkipWaitTimeForInstanceTerminationXAmzTargetEnum) ToPointer() *SkipWaitTimeForInstanceTerminationXAmzTargetEnum {
+	return &e
+}
+
 func (e *SkipWaitTimeForInstanceTerminationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.SkipWaitTimeForInstanceTermination":
-		*e = SkipWaitTimeForInstanceTerminationXAmzTargetEnum(s)
+		*e = SkipWaitTimeForInstanceTerminationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SkipWaitTimeForInstanceTerminationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SkipWaitTimeForInstanceTerminationXAmzTargetEnum: %v", v)
 	}
 }
 

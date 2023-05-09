@@ -17,19 +17,23 @@ const (
 	AveragesV2GetV2AveragesGetSortSortEnumDesc AveragesV2GetV2AveragesGetSortSortEnum = "desc"
 )
 
+func (e AveragesV2GetV2AveragesGetSortSortEnum) ToPointer() *AveragesV2GetV2AveragesGetSortSortEnum {
+	return &e
+}
+
 func (e *AveragesV2GetV2AveragesGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = AveragesV2GetV2AveragesGetSortSortEnum(s)
+		*e = AveragesV2GetV2AveragesGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AveragesV2GetV2AveragesGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for AveragesV2GetV2AveragesGetSortSortEnum: %v", v)
 	}
 }
 

@@ -32,12 +32,16 @@ const (
 	PkixPublicKeySignatureAlgorithmEnumEcSignP521Sha512              PkixPublicKeySignatureAlgorithmEnum = "EC_SIGN_P521_SHA512"
 )
 
+func (e PkixPublicKeySignatureAlgorithmEnum) ToPointer() *PkixPublicKeySignatureAlgorithmEnum {
+	return &e
+}
+
 func (e *PkixPublicKeySignatureAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIGNATURE_ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "RSA_PSS_2048_SHA256":
@@ -75,10 +79,10 @@ func (e *PkixPublicKeySignatureAlgorithmEnum) UnmarshalJSON(data []byte) error {
 	case "ECDSA_P521_SHA512":
 		fallthrough
 	case "EC_SIGN_P521_SHA512":
-		*e = PkixPublicKeySignatureAlgorithmEnum(s)
+		*e = PkixPublicKeySignatureAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PkixPublicKeySignatureAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for PkixPublicKeySignatureAlgorithmEnum: %v", v)
 	}
 }
 

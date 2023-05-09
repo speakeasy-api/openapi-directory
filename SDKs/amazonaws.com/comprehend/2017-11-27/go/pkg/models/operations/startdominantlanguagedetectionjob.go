@@ -16,17 +16,21 @@ const (
 	StartDominantLanguageDetectionJobXAmzTargetEnumComprehend20171127StartDominantLanguageDetectionJob StartDominantLanguageDetectionJobXAmzTargetEnum = "Comprehend_20171127.StartDominantLanguageDetectionJob"
 )
 
+func (e StartDominantLanguageDetectionJobXAmzTargetEnum) ToPointer() *StartDominantLanguageDetectionJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartDominantLanguageDetectionJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.StartDominantLanguageDetectionJob":
-		*e = StartDominantLanguageDetectionJobXAmzTargetEnum(s)
+		*e = StartDominantLanguageDetectionJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartDominantLanguageDetectionJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartDominantLanguageDetectionJobXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -50,6 +54,8 @@ type StartDominantLanguageDetectionJobResponse struct {
 	InvalidRequestException interface{}
 	// KmsKeyValidationException
 	KmsKeyValidationException interface{}
+	// ResourceInUseException
+	ResourceInUseException interface{}
 	// Success
 	StartDominantLanguageDetectionJobResponse *shared.StartDominantLanguageDetectionJobResponse
 	StatusCode                                int

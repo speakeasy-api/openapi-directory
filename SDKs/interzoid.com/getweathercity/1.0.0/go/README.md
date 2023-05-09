@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getweatherc
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetweatherRequest{
+    ctx := context.Background()
+    res, err := s.WeatherByCityAndState.Getweather(ctx, operations.GetweatherRequest{
         City: "Laruecester",
         License: "quibusdam",
         State: "unde",
-    }
-
-    ctx := context.Background()
-    res, err := s.WeatherByCityAndState.Getweather(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,9 +44,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### WeatherByCityAndState
+### [WeatherByCityAndState](docs/weatherbycityandstate/README.md)
 
-* `Getweather` - Gets current weather information for a US city and state
+* [Getweather](docs/weatherbycityandstate/README.md#getweather) - Gets current weather information for a US city and state
 <!-- End SDK Available Operations -->
 
 ### Maturity

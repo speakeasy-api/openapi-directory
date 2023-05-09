@@ -15,20 +15,24 @@ const (
 	AttachmentsSourceKeyEnumAttachmentReference AttachmentsSourceKeyEnum = "AttachmentReference"
 )
 
+func (e AttachmentsSourceKeyEnum) ToPointer() *AttachmentsSourceKeyEnum {
+	return &e
+}
+
 func (e *AttachmentsSourceKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SourceUrl":
 		fallthrough
 	case "S3FileUrl":
 		fallthrough
 	case "AttachmentReference":
-		*e = AttachmentsSourceKeyEnum(s)
+		*e = AttachmentsSourceKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachmentsSourceKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachmentsSourceKeyEnum: %v", v)
 	}
 }

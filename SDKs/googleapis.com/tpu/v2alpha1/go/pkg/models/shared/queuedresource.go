@@ -12,6 +12,8 @@ type QueuedResource struct {
 	Name *string `json:"name,omitempty"`
 	// Defines the policy of the QueuedRequest.
 	QueueingPolicy *QueueingPolicy `json:"queueingPolicy,omitempty"`
+	// Name of the reservation in which the resource should be provisioned. Format: projects/{project}/locations/{zone}/reservations/{reservation}
+	ReservationName *string `json:"reservationName,omitempty"`
 	// QueuedResourceState defines the details of the QueuedResource request.
 	State *QueuedResourceState `json:"state,omitempty"`
 	// Details of the TPU resource(s) being requested.
@@ -26,6 +28,8 @@ type QueuedResourceInput struct {
 	Guaranteed *Guaranteed `json:"guaranteed,omitempty"`
 	// Defines the policy of the QueuedRequest.
 	QueueingPolicy *QueueingPolicy `json:"queueingPolicy,omitempty"`
+	// Name of the reservation in which the resource should be provisioned. Format: projects/{project}/locations/{zone}/reservations/{reservation}
+	ReservationName *string `json:"reservationName,omitempty"`
 	// QueuedResourceState defines the details of the QueuedResource request.
 	State *QueuedResourceState `json:"state,omitempty"`
 	// Details of the TPU resource(s) being requested.

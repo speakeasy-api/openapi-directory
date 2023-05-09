@@ -23,12 +23,16 @@ const (
 	WorkspaceStatusEnumLicenseRemovalFailed WorkspaceStatusEnum = "LICENSE_REMOVAL_FAILED"
 )
 
+func (e WorkspaceStatusEnum) ToPointer() *WorkspaceStatusEnum {
+	return &e
+}
+
 func (e *WorkspaceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "CREATING":
@@ -50,9 +54,9 @@ func (e *WorkspaceStatusEnum) UnmarshalJSON(data []byte) error {
 	case "UPGRADE_FAILED":
 		fallthrough
 	case "LICENSE_REMOVAL_FAILED":
-		*e = WorkspaceStatusEnum(s)
+		*e = WorkspaceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkspaceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkspaceStatusEnum: %v", v)
 	}
 }

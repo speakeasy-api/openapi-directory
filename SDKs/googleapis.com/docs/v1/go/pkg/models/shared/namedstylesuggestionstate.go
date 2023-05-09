@@ -23,12 +23,16 @@ const (
 	NamedStyleSuggestionStateNamedStyleTypeEnumHeading6                  NamedStyleSuggestionStateNamedStyleTypeEnum = "HEADING_6"
 )
 
+func (e NamedStyleSuggestionStateNamedStyleTypeEnum) ToPointer() *NamedStyleSuggestionStateNamedStyleTypeEnum {
+	return &e
+}
+
 func (e *NamedStyleSuggestionStateNamedStyleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NAMED_STYLE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NORMAL_TEXT":
@@ -48,10 +52,10 @@ func (e *NamedStyleSuggestionStateNamedStyleTypeEnum) UnmarshalJSON(data []byte)
 	case "HEADING_5":
 		fallthrough
 	case "HEADING_6":
-		*e = NamedStyleSuggestionStateNamedStyleTypeEnum(s)
+		*e = NamedStyleSuggestionStateNamedStyleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NamedStyleSuggestionStateNamedStyleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NamedStyleSuggestionStateNamedStyleTypeEnum: %v", v)
 	}
 }
 

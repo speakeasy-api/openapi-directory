@@ -14,18 +14,22 @@ const (
 	InvocationTypeEnumRequestResponse InvocationTypeEnum = "RequestResponse"
 )
 
+func (e InvocationTypeEnum) ToPointer() *InvocationTypeEnum {
+	return &e
+}
+
 func (e *InvocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Event":
 		fallthrough
 	case "RequestResponse":
-		*e = InvocationTypeEnum(s)
+		*e = InvocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvocationTypeEnum: %v", v)
 	}
 }

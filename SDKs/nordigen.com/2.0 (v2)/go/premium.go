@@ -33,7 +33,10 @@ func newPremium(defaultClient, securityClient HTTPClient, serverURL, language, s
 // RetrieveAccountTransactionsV2 - Access account premium transactions.
 func (s *premium) RetrieveAccountTransactionsV2(ctx context.Context, request operations.RetrieveAccountTransactionsV2Request) (*operations.RetrieveAccountTransactionsV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/premium/{id}/transactions/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/accounts/premium/{id}/transactions/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -64,6 +67,15 @@ func (s *premium) RetrieveAccountTransactionsV2(ctx context.Context, request ope
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAccountTransactionsV2200ApplicationJSONObject = out
+		}
 	case httpRes.StatusCode == 400:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):

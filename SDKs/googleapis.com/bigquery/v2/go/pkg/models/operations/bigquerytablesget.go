@@ -40,12 +40,16 @@ const (
 	BigqueryTablesGetViewEnumTableMetadataViewUnspecified BigqueryTablesGetViewEnum = "TABLE_METADATA_VIEW_UNSPECIFIED"
 )
 
+func (e BigqueryTablesGetViewEnum) ToPointer() *BigqueryTablesGetViewEnum {
+	return &e
+}
+
 func (e *BigqueryTablesGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "FULL":
@@ -53,10 +57,10 @@ func (e *BigqueryTablesGetViewEnum) UnmarshalJSON(data []byte) error {
 	case "STORAGE_STATS":
 		fallthrough
 	case "TABLE_METADATA_VIEW_UNSPECIFIED":
-		*e = BigqueryTablesGetViewEnum(s)
+		*e = BigqueryTablesGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BigqueryTablesGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for BigqueryTablesGetViewEnum: %v", v)
 	}
 }
 

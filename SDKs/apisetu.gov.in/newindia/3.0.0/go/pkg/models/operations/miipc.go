@@ -32,17 +32,21 @@ const (
 	MiipcRequestBodyFormatEnumPdf MiipcRequestBodyFormatEnum = "pdf"
 )
 
+func (e MiipcRequestBodyFormatEnum) ToPointer() *MiipcRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *MiipcRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = MiipcRequestBodyFormatEnum(s)
+		*e = MiipcRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MiipcRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MiipcRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -62,17 +66,21 @@ const (
 	Miipc504ApplicationJSONErrorEnumGatewayTimeout Miipc504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Miipc504ApplicationJSONErrorEnum) ToPointer() *Miipc504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Miipc504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Miipc504ApplicationJSONErrorEnum(s)
+		*e = Miipc504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -82,17 +90,21 @@ const (
 	Miipc504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Miipc504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Miipc504ApplicationJSONErrorDescriptionEnum) ToPointer() *Miipc504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Miipc504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Miipc504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Miipc504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -108,17 +120,21 @@ const (
 	Miipc503ApplicationJSONErrorEnumServiceUnavailable Miipc503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Miipc503ApplicationJSONErrorEnum) ToPointer() *Miipc503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Miipc503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Miipc503ApplicationJSONErrorEnum(s)
+		*e = Miipc503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -128,17 +144,21 @@ const (
 	Miipc503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Miipc503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Miipc503ApplicationJSONErrorDescriptionEnum) ToPointer() *Miipc503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Miipc503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Miipc503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Miipc503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -154,17 +174,21 @@ const (
 	Miipc502ApplicationJSONErrorEnumBadGatewy Miipc502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Miipc502ApplicationJSONErrorEnum) ToPointer() *Miipc502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Miipc502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Miipc502ApplicationJSONErrorEnum(s)
+		*e = Miipc502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -174,17 +198,21 @@ const (
 	Miipc502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Miipc502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Miipc502ApplicationJSONErrorDescriptionEnum) ToPointer() *Miipc502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Miipc502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Miipc502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Miipc502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -200,17 +228,21 @@ const (
 	Miipc500ApplicationJSONErrorEnumInternalServerError Miipc500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Miipc500ApplicationJSONErrorEnum) ToPointer() *Miipc500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Miipc500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Miipc500ApplicationJSONErrorEnum(s)
+		*e = Miipc500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -220,17 +252,21 @@ const (
 	Miipc500ApplicationJSONErrorDescriptionEnumInternalServerError Miipc500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Miipc500ApplicationJSONErrorDescriptionEnum) ToPointer() *Miipc500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Miipc500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Miipc500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Miipc500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -247,19 +283,23 @@ const (
 	Miipc404ApplicationJSONErrorEnumURLNotFound    Miipc404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Miipc404ApplicationJSONErrorEnum) ToPointer() *Miipc404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Miipc404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Miipc404ApplicationJSONErrorEnum(s)
+		*e = Miipc404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -270,19 +310,23 @@ const (
 	Miipc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Miipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Miipc404ApplicationJSONErrorDescriptionEnum) ToPointer() *Miipc404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Miipc404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Miipc404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Miipc404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -299,19 +343,23 @@ const (
 	Miipc401ApplicationJSONErrorEnumInvalidAuthorization  Miipc401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Miipc401ApplicationJSONErrorEnum) ToPointer() *Miipc401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Miipc401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Miipc401ApplicationJSONErrorEnum(s)
+		*e = Miipc401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -322,19 +370,23 @@ const (
 	Miipc401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Miipc401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Miipc401ApplicationJSONErrorDescriptionEnum) ToPointer() *Miipc401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Miipc401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Miipc401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Miipc401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -354,12 +406,16 @@ const (
 	Miipc400ApplicationJSONErrorEnumInvalidConsentid Miipc400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Miipc400ApplicationJSONErrorEnum) ToPointer() *Miipc400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Miipc400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -369,10 +425,10 @@ func (e *Miipc400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Miipc400ApplicationJSONErrorEnum(s)
+		*e = Miipc400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -386,12 +442,16 @@ const (
 	Miipc400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Miipc400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Miipc400ApplicationJSONErrorDescriptionEnum) ToPointer() *Miipc400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Miipc400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -401,10 +461,10 @@ func (e *Miipc400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Miipc400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Miipc400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Miipc400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Miipc400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

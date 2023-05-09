@@ -36,7 +36,10 @@ func newVaults(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GetVaultByID - Get Vault details and metadata
 func (s *vaults) GetVaultByID(ctx context.Context, request operations.GetVaultByIDRequest, security operations.GetVaultByIDSecurity) (*operations.GetVaultByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

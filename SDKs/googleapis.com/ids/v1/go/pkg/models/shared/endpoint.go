@@ -19,12 +19,16 @@ const (
 	EndpointSeverityEnumCritical            EndpointSeverityEnum = "CRITICAL"
 )
 
+func (e EndpointSeverityEnum) ToPointer() *EndpointSeverityEnum {
+	return &e
+}
+
 func (e *EndpointSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "INFORMATIONAL":
@@ -36,10 +40,10 @@ func (e *EndpointSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "HIGH":
 		fallthrough
 	case "CRITICAL":
-		*e = EndpointSeverityEnum(s)
+		*e = EndpointSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointSeverityEnum: %v", v)
 	}
 }
 
@@ -70,12 +74,16 @@ const (
 	EndpointStateEnumUpdating         EndpointStateEnum = "UPDATING"
 )
 
+func (e EndpointStateEnum) ToPointer() *EndpointStateEnum {
+	return &e
+}
+
 func (e *EndpointStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -85,10 +93,10 @@ func (e *EndpointStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "UPDATING":
-		*e = EndpointStateEnum(s)
+		*e = EndpointStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointStateEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointStateEnum: %v", v)
 	}
 }
 

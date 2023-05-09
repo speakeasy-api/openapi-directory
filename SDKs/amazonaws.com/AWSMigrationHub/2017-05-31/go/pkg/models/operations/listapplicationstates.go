@@ -16,17 +16,21 @@ const (
 	ListApplicationStatesXAmzTargetEnumAwsMigrationHubListApplicationStates ListApplicationStatesXAmzTargetEnum = "AWSMigrationHub.ListApplicationStates"
 )
 
+func (e ListApplicationStatesXAmzTargetEnum) ToPointer() *ListApplicationStatesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListApplicationStatesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHub.ListApplicationStates":
-		*e = ListApplicationStatesXAmzTargetEnum(s)
+		*e = ListApplicationStatesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListApplicationStatesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListApplicationStatesXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -33,12 +33,16 @@ const (
 	ActionEntityActionEnumAPIKeyDestroy     ActionEntityActionEnum = "api_key_destroy"
 )
 
+func (e ActionEntityActionEnum) ToPointer() *ActionEntityActionEnum {
+	return &e
+}
+
 func (e *ActionEntityActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "create":
 		fallthrough
 	case "read":
@@ -76,10 +80,10 @@ func (e *ActionEntityActionEnum) UnmarshalJSON(data []byte) error {
 	case "api_key_update":
 		fallthrough
 	case "api_key_destroy":
-		*e = ActionEntityActionEnum(s)
+		*e = ActionEntityActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionEntityActionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionEntityActionEnum: %v", v)
 	}
 }
 
@@ -111,12 +115,16 @@ const (
 	ActionEntityFailureTypeEnumCountryMismatch                   ActionEntityFailureTypeEnum = "country_mismatch"
 )
 
+func (e ActionEntityFailureTypeEnum) ToPointer() *ActionEntityFailureTypeEnum {
+	return &e
+}
+
 func (e *ActionEntityFailureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "expired_trial":
 		fallthrough
 	case "account_overdue":
@@ -160,10 +168,10 @@ func (e *ActionEntityFailureTypeEnum) UnmarshalJSON(data []byte) error {
 	case "disabled":
 		fallthrough
 	case "country_mismatch":
-		*e = ActionEntityFailureTypeEnum(s)
+		*e = ActionEntityFailureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionEntityFailureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionEntityFailureTypeEnum: %v", v)
 	}
 }
 
@@ -188,12 +196,16 @@ const (
 	ActionEntityInterfaceEnumRemote        ActionEntityInterfaceEnum = "remote"
 )
 
+func (e ActionEntityInterfaceEnum) ToPointer() *ActionEntityInterfaceEnum {
+	return &e
+}
+
 func (e *ActionEntityInterfaceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "web":
 		fallthrough
 	case "ftp":
@@ -223,10 +235,10 @@ func (e *ActionEntityInterfaceEnum) UnmarshalJSON(data []byte) error {
 	case "inbound_email":
 		fallthrough
 	case "remote":
-		*e = ActionEntityInterfaceEnum(s)
+		*e = ActionEntityInterfaceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionEntityInterfaceEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionEntityInterfaceEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	DeviceSubsetTypeEnumNamecontains DeviceSubsetTypeEnum = "NAMECONTAINS"
 )
 
+func (e DeviceSubsetTypeEnum) ToPointer() *DeviceSubsetTypeEnum {
+	return &e
+}
+
 func (e *DeviceSubsetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERCENTAGE":
 		fallthrough
 	case "SELECTION":
 		fallthrough
 	case "NAMECONTAINS":
-		*e = DeviceSubsetTypeEnum(s)
+		*e = DeviceSubsetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceSubsetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceSubsetTypeEnum: %v", v)
 	}
 }

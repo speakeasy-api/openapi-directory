@@ -363,7 +363,10 @@ func (s *ee) GetEligibleOffers(ctx context.Context, request operations.GetEligib
 // GetPlan - Returns the plan description for EE flow including additional description data.
 func (s *ee) GetPlan(ctx context.Context, request operations.GetPlanRequest) (*operations.GetPlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ee/plans/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ee/plans/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -21,12 +21,16 @@ const (
 	ShippingMethodFieldsTypeEnumExternal     ShippingMethodFieldsTypeEnum = "external"
 )
 
+func (e ShippingMethodFieldsTypeEnum) ToPointer() *ShippingMethodFieldsTypeEnum {
+	return &e
+}
+
 func (e *ShippingMethodFieldsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "free":
 		fallthrough
 	case "tables":
@@ -42,10 +46,10 @@ func (e *ShippingMethodFieldsTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ups":
 		fallthrough
 	case "external":
-		*e = ShippingMethodFieldsTypeEnum(s)
+		*e = ShippingMethodFieldsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShippingMethodFieldsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShippingMethodFieldsTypeEnum: %v", v)
 	}
 }
 

@@ -23,12 +23,16 @@ const (
 	GetPlacementGroupsSortEnumCreatedDesc GetPlacementGroupsSortEnum = "created:desc"
 )
 
+func (e GetPlacementGroupsSortEnum) ToPointer() *GetPlacementGroupsSortEnum {
+	return &e
+}
+
 func (e *GetPlacementGroupsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -46,10 +50,10 @@ func (e *GetPlacementGroupsSortEnum) UnmarshalJSON(data []byte) error {
 	case "created:asc":
 		fallthrough
 	case "created:desc":
-		*e = GetPlacementGroupsSortEnum(s)
+		*e = GetPlacementGroupsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPlacementGroupsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPlacementGroupsSortEnum: %v", v)
 	}
 }
 
@@ -60,17 +64,21 @@ const (
 	GetPlacementGroupsTypeParameterTypeEnumSpread GetPlacementGroupsTypeParameterTypeEnum = "spread"
 )
 
+func (e GetPlacementGroupsTypeParameterTypeEnum) ToPointer() *GetPlacementGroupsTypeParameterTypeEnum {
+	return &e
+}
+
 func (e *GetPlacementGroupsTypeParameterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spread":
-		*e = GetPlacementGroupsTypeParameterTypeEnum(s)
+		*e = GetPlacementGroupsTypeParameterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPlacementGroupsTypeParameterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPlacementGroupsTypeParameterTypeEnum: %v", v)
 	}
 }
 
@@ -111,17 +119,21 @@ const (
 	GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnumSpread GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum = "spread"
 )
 
+func (e GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum) ToPointer() *GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum {
+	return &e
+}
+
 func (e *GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spread":
-		*e = GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum(s)
+		*e = GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPlacementGroupsPlacementGroupsResponsePlacementGroupTypeEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTChangeMessageVisibilityActionEnumChangeMessageVisibility POSTChangeMessageVisibilityActionEnum = "ChangeMessageVisibility"
 )
 
+func (e POSTChangeMessageVisibilityActionEnum) ToPointer() *POSTChangeMessageVisibilityActionEnum {
+	return &e
+}
+
 func (e *POSTChangeMessageVisibilityActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ChangeMessageVisibility":
-		*e = POSTChangeMessageVisibilityActionEnum(s)
+		*e = POSTChangeMessageVisibilityActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTChangeMessageVisibilityActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTChangeMessageVisibilityActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTChangeMessageVisibilityVersionEnumTwoThousandAndTwelve1105 POSTChangeMessageVisibilityVersionEnum = "2012-11-05"
 )
 
+func (e POSTChangeMessageVisibilityVersionEnum) ToPointer() *POSTChangeMessageVisibilityVersionEnum {
+	return &e
+}
+
 func (e *POSTChangeMessageVisibilityVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = POSTChangeMessageVisibilityVersionEnum(s)
+		*e = POSTChangeMessageVisibilityVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTChangeMessageVisibilityVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTChangeMessageVisibilityVersionEnum: %v", v)
 	}
 }
 

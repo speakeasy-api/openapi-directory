@@ -34,7 +34,10 @@ func newDimensionValues(defaultClient, securityClient HTTPClient, serverURL, lan
 // DfareportingDimensionValuesQuery - Retrieves list of report dimension values for a list of filters.
 func (s *dimensionValues) DfareportingDimensionValuesQuery(ctx context.Context, request operations.DfareportingDimensionValuesQueryRequest, security operations.DfareportingDimensionValuesQuerySecurity) (*operations.DfareportingDimensionValuesQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dimensionvalues/query", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dimensionvalues/query", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DimensionValueRequest", "json")
 	if err != nil {

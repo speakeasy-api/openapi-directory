@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SrcSearchlyAPIV1ControllersSimilarityByContentRequestBody{
-        Content: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Similarity.SrcSearchlyAPIV1ControllersSimilarityByContent(ctx, req)
+    res, err := s.Similarity.SrcSearchlyAPIV1ControllersSimilarityByContent(ctx, operations.SrcSearchlyAPIV1ControllersSimilarityByContentRequestBody{
+        Content: sdk.String("corrupti"),
+    })
     if err != nil {
         log.Fatal(err)
     }

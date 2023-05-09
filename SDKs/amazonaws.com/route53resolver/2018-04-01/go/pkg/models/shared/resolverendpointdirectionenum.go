@@ -14,18 +14,22 @@ const (
 	ResolverEndpointDirectionEnumOutbound ResolverEndpointDirectionEnum = "OUTBOUND"
 )
 
+func (e ResolverEndpointDirectionEnum) ToPointer() *ResolverEndpointDirectionEnum {
+	return &e
+}
+
 func (e *ResolverEndpointDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INBOUND":
 		fallthrough
 	case "OUTBOUND":
-		*e = ResolverEndpointDirectionEnum(s)
+		*e = ResolverEndpointDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResolverEndpointDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ResolverEndpointDirectionEnum: %v", v)
 	}
 }

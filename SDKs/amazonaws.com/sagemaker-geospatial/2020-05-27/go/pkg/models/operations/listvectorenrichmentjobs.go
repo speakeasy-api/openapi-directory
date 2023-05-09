@@ -17,19 +17,23 @@ const (
 	ListVectorEnrichmentJobsRequestBodySortOrderEnumDescending ListVectorEnrichmentJobsRequestBodySortOrderEnum = "DESCENDING"
 )
 
+func (e ListVectorEnrichmentJobsRequestBodySortOrderEnum) ToPointer() *ListVectorEnrichmentJobsRequestBodySortOrderEnum {
+	return &e
+}
+
 func (e *ListVectorEnrichmentJobsRequestBodySortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = ListVectorEnrichmentJobsRequestBodySortOrderEnum(s)
+		*e = ListVectorEnrichmentJobsRequestBodySortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListVectorEnrichmentJobsRequestBodySortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ListVectorEnrichmentJobsRequestBodySortOrderEnum: %v", v)
 	}
 }
 

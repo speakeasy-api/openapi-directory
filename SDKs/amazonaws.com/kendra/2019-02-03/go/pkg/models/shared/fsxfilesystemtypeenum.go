@@ -13,16 +13,20 @@ const (
 	FsxFileSystemTypeEnumWindows FsxFileSystemTypeEnum = "WINDOWS"
 )
 
+func (e FsxFileSystemTypeEnum) ToPointer() *FsxFileSystemTypeEnum {
+	return &e
+}
+
 func (e *FsxFileSystemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WINDOWS":
-		*e = FsxFileSystemTypeEnum(s)
+		*e = FsxFileSystemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FsxFileSystemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FsxFileSystemTypeEnum: %v", v)
 	}
 }

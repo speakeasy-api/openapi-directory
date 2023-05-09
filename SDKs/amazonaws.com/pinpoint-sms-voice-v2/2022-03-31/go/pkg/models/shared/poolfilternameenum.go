@@ -19,12 +19,16 @@ const (
 	PoolFilterNameEnumDeletionProtectionEnabled PoolFilterNameEnum = "deletion-protection-enabled"
 )
 
+func (e PoolFilterNameEnum) ToPointer() *PoolFilterNameEnum {
+	return &e
+}
+
 func (e *PoolFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "status":
 		fallthrough
 	case "message-type":
@@ -38,9 +42,9 @@ func (e *PoolFilterNameEnum) UnmarshalJSON(data []byte) error {
 	case "shared-routes-enabled":
 		fallthrough
 	case "deletion-protection-enabled":
-		*e = PoolFilterNameEnum(s)
+		*e = PoolFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolFilterNameEnum: %v", v)
 	}
 }

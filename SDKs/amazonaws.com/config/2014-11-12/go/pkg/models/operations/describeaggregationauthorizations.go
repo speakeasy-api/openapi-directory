@@ -16,17 +16,21 @@ const (
 	DescribeAggregationAuthorizationsXAmzTargetEnumStarlingDoveServiceDescribeAggregationAuthorizations DescribeAggregationAuthorizationsXAmzTargetEnum = "StarlingDoveService.DescribeAggregationAuthorizations"
 )
 
+func (e DescribeAggregationAuthorizationsXAmzTargetEnum) ToPointer() *DescribeAggregationAuthorizationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAggregationAuthorizationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DescribeAggregationAuthorizations":
-		*e = DescribeAggregationAuthorizationsXAmzTargetEnum(s)
+		*e = DescribeAggregationAuthorizationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAggregationAuthorizationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAggregationAuthorizationsXAmzTargetEnum: %v", v)
 	}
 }
 

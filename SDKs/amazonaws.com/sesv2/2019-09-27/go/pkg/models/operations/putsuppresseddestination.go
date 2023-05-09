@@ -16,19 +16,23 @@ const (
 	PutSuppressedDestinationRequestBodyReasonEnumComplaint PutSuppressedDestinationRequestBodyReasonEnum = "COMPLAINT"
 )
 
+func (e PutSuppressedDestinationRequestBodyReasonEnum) ToPointer() *PutSuppressedDestinationRequestBodyReasonEnum {
+	return &e
+}
+
 func (e *PutSuppressedDestinationRequestBodyReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BOUNCE":
 		fallthrough
 	case "COMPLAINT":
-		*e = PutSuppressedDestinationRequestBodyReasonEnum(s)
+		*e = PutSuppressedDestinationRequestBodyReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutSuppressedDestinationRequestBodyReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for PutSuppressedDestinationRequestBodyReasonEnum: %v", v)
 	}
 }
 

@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/license-man
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,18 +27,16 @@ func main() {
         }),
     )
 
-    req := operations.GetServiceSettingsRequest{
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "provident",
-        XAmzCredential: "distinctio",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "unde",
-        XAmzSignature: "nulla",
-        XAmzSignedHeaders: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetServiceSettings(ctx, req)
+    res, err := s.GetServiceSettings(ctx, operations.GetServiceSettingsRequest{
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("provident"),
+        XAmzCredential: sdk.String("distinctio"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("unde"),
+        XAmzSignature: sdk.String("nulla"),
+        XAmzSignedHeaders: sdk.String("corrupti"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -54,12 +51,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetServiceSettings` - Lists the Linux subscriptions service settings.
-* `ListLinuxSubscriptionInstances` - Lists the running Amazon EC2 instances that were discovered with commercial Linux subscriptions.
-* `ListLinuxSubscriptions` - Lists the Linux subscriptions that have been discovered. If you have linked your organization, the returned results will include data aggregated across your accounts in Organizations.
-* `UpdateServiceSettings` - Updates the service settings for Linux subscriptions.
+* [GetServiceSettings](docs/sdk/README.md#getservicesettings) - Lists the Linux subscriptions service settings.
+* [ListLinuxSubscriptionInstances](docs/sdk/README.md#listlinuxsubscriptioninstances) - Lists the running Amazon EC2 instances that were discovered with commercial Linux subscriptions.
+* [ListLinuxSubscriptions](docs/sdk/README.md#listlinuxsubscriptions) - Lists the Linux subscriptions that have been discovered. If you have linked your organization, the returned results will include data aggregated across your accounts in Organizations.
+* [UpdateServiceSettings](docs/sdk/README.md#updateservicesettings) - Updates the service settings for Linux subscriptions.
 <!-- End SDK Available Operations -->
 
 ### Maturity

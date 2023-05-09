@@ -16,17 +16,21 @@ const (
 	StartPHIDetectionJobXAmzTargetEnumComprehendMedical20181030StartPhiDetectionJob StartPHIDetectionJobXAmzTargetEnum = "ComprehendMedical_20181030.StartPHIDetectionJob"
 )
 
+func (e StartPHIDetectionJobXAmzTargetEnum) ToPointer() *StartPHIDetectionJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartPHIDetectionJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComprehendMedical_20181030.StartPHIDetectionJob":
-		*e = StartPHIDetectionJobXAmzTargetEnum(s)
+		*e = StartPHIDetectionJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartPHIDetectionJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartPHIDetectionJobXAmzTargetEnum: %v", v)
 	}
 }
 

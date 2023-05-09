@@ -13,16 +13,20 @@ const (
 	CostCategorySplitChargeRuleParameterTypeEnumAllocationPercentages CostCategorySplitChargeRuleParameterTypeEnum = "ALLOCATION_PERCENTAGES"
 )
 
+func (e CostCategorySplitChargeRuleParameterTypeEnum) ToPointer() *CostCategorySplitChargeRuleParameterTypeEnum {
+	return &e
+}
+
 func (e *CostCategorySplitChargeRuleParameterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOCATION_PERCENTAGES":
-		*e = CostCategorySplitChargeRuleParameterTypeEnum(s)
+		*e = CostCategorySplitChargeRuleParameterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CostCategorySplitChargeRuleParameterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CostCategorySplitChargeRuleParameterTypeEnum: %v", v)
 	}
 }

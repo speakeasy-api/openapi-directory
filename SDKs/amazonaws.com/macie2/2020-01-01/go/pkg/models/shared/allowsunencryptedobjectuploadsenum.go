@@ -15,20 +15,24 @@ const (
 	AllowsUnencryptedObjectUploadsEnumUnknown AllowsUnencryptedObjectUploadsEnum = "UNKNOWN"
 )
 
+func (e AllowsUnencryptedObjectUploadsEnum) ToPointer() *AllowsUnencryptedObjectUploadsEnum {
+	return &e
+}
+
 func (e *AllowsUnencryptedObjectUploadsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRUE":
 		fallthrough
 	case "FALSE":
 		fallthrough
 	case "UNKNOWN":
-		*e = AllowsUnencryptedObjectUploadsEnum(s)
+		*e = AllowsUnencryptedObjectUploadsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllowsUnencryptedObjectUploadsEnum: %s", s)
+		return fmt.Errorf("invalid value for AllowsUnencryptedObjectUploadsEnum: %v", v)
 	}
 }

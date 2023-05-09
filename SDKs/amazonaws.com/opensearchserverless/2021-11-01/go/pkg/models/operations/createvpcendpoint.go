@@ -16,17 +16,21 @@ const (
 	CreateVpcEndpointXAmzTargetEnumOpenSearchServerlessCreateVpcEndpoint CreateVpcEndpointXAmzTargetEnum = "OpenSearchServerless.CreateVpcEndpoint"
 )
 
+func (e CreateVpcEndpointXAmzTargetEnum) ToPointer() *CreateVpcEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateVpcEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpenSearchServerless.CreateVpcEndpoint":
-		*e = CreateVpcEndpointXAmzTargetEnum(s)
+		*e = CreateVpcEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

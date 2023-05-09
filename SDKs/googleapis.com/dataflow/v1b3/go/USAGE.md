@@ -2,36 +2,34 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DataflowProjectsDeleteSnapshotsRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        Location: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        ProjectID: "vel",
-        QuotaUser: "error",
-        SnapshotID: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.DataflowProjectsDeleteSnapshots(ctx, req, operations.DataflowProjectsDeleteSnapshotsSecurity{
+    res, err := s.Projects.DataflowProjectsDeleteSnapshots(ctx, operations.DataflowProjectsDeleteSnapshotsRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        Location: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PrettyPrint: sdk.Bool(false),
+        ProjectID: "vel",
+        QuotaUser: sdk.String("error"),
+        SnapshotID: sdk.String("deserunt"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("iure"),
+    }, operations.DataflowProjectsDeleteSnapshotsSecurity{
         Option1: &operations.DataflowProjectsDeleteSnapshotsSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

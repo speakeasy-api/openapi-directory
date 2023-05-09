@@ -15,20 +15,24 @@ const (
 	AwsManagedTargetDestinationEnumAwsFargate          AwsManagedTargetDestinationEnum = "AWS Fargate"
 )
 
+func (e AwsManagedTargetDestinationEnum) ToPointer() *AwsManagedTargetDestinationEnum {
+	return &e
+}
+
 func (e *AwsManagedTargetDestinationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None specified":
 		fallthrough
 	case "AWS Elastic BeanStalk":
 		fallthrough
 	case "AWS Fargate":
-		*e = AwsManagedTargetDestinationEnum(s)
+		*e = AwsManagedTargetDestinationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AwsManagedTargetDestinationEnum: %s", s)
+		return fmt.Errorf("invalid value for AwsManagedTargetDestinationEnum: %v", v)
 	}
 }

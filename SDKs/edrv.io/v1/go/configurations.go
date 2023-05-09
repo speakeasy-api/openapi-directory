@@ -34,7 +34,10 @@ func newConfigurations(defaultClient, securityClient HTTPClient, serverURL, lang
 // GetConfiguration - Get one Configuration data
 func (s *configurations) GetConfiguration(ctx context.Context, request operations.GetConfigurationRequest) (*operations.GetConfigurationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/configurations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/configurations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

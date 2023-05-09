@@ -18,12 +18,16 @@ const (
 	DealSyndicationProductEnumGames                         DealSyndicationProductEnum = "GAMES"
 )
 
+func (e DealSyndicationProductEnum) ToPointer() *DealSyndicationProductEnum {
+	return &e
+}
+
 func (e *DealSyndicationProductEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYNDICATION_PRODUCT_UNSPECIFIED":
 		fallthrough
 	case "CONTENT":
@@ -33,10 +37,10 @@ func (e *DealSyndicationProductEnum) UnmarshalJSON(data []byte) error {
 	case "VIDEO":
 		fallthrough
 	case "GAMES":
-		*e = DealSyndicationProductEnum(s)
+		*e = DealSyndicationProductEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DealSyndicationProductEnum: %s", s)
+		return fmt.Errorf("invalid value for DealSyndicationProductEnum: %v", v)
 	}
 }
 
@@ -81,21 +85,25 @@ const (
 	DealCreativePreApprovalPolicyEnumSellerPreApprovalNotRequired         DealCreativePreApprovalPolicyEnum = "SELLER_PRE_APPROVAL_NOT_REQUIRED"
 )
 
+func (e DealCreativePreApprovalPolicyEnum) ToPointer() *DealCreativePreApprovalPolicyEnum {
+	return &e
+}
+
 func (e *DealCreativePreApprovalPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_PRE_APPROVAL_POLICY_UNSPECIFIED":
 		fallthrough
 	case "SELLER_PRE_APPROVAL_REQUIRED":
 		fallthrough
 	case "SELLER_PRE_APPROVAL_NOT_REQUIRED":
-		*e = DealCreativePreApprovalPolicyEnum(s)
+		*e = DealCreativePreApprovalPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DealCreativePreApprovalPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for DealCreativePreApprovalPolicyEnum: %v", v)
 	}
 }
 
@@ -108,21 +116,25 @@ const (
 	DealCreativeSafeFrameCompatibilityEnumIncompatible                              DealCreativeSafeFrameCompatibilityEnum = "INCOMPATIBLE"
 )
 
+func (e DealCreativeSafeFrameCompatibilityEnum) ToPointer() *DealCreativeSafeFrameCompatibilityEnum {
+	return &e
+}
+
 func (e *DealCreativeSafeFrameCompatibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_SAFE_FRAME_COMPATIBILITY_UNSPECIFIED":
 		fallthrough
 	case "COMPATIBLE":
 		fallthrough
 	case "INCOMPATIBLE":
-		*e = DealCreativeSafeFrameCompatibilityEnum(s)
+		*e = DealCreativeSafeFrameCompatibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DealCreativeSafeFrameCompatibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for DealCreativeSafeFrameCompatibilityEnum: %v", v)
 	}
 }
 
@@ -135,21 +147,25 @@ const (
 	DealProgrammaticCreativeSourceEnumPublisher                             DealProgrammaticCreativeSourceEnum = "PUBLISHER"
 )
 
+func (e DealProgrammaticCreativeSourceEnum) ToPointer() *DealProgrammaticCreativeSourceEnum {
+	return &e
+}
+
 func (e *DealProgrammaticCreativeSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROGRAMMATIC_CREATIVE_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "ADVERTISER":
 		fallthrough
 	case "PUBLISHER":
-		*e = DealProgrammaticCreativeSourceEnum(s)
+		*e = DealProgrammaticCreativeSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DealProgrammaticCreativeSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for DealProgrammaticCreativeSourceEnum: %v", v)
 	}
 }
 

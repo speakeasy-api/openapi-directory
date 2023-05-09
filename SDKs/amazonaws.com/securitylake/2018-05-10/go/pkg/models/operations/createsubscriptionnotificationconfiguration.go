@@ -17,19 +17,23 @@ const (
 	CreateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnumPut  CreateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum = "PUT"
 )
 
+func (e CreateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum) ToPointer() *CreateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum {
+	return &e
+}
+
 func (e *CreateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POST":
 		fallthrough
 	case "PUT":
-		*e = CreateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum(s)
+		*e = CreateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum: %v", v)
 	}
 }
 

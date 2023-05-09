@@ -31,21 +31,25 @@ const (
 	OperationStatusEnumDone    OperationStatusEnum = "DONE"
 )
 
+func (e OperationStatusEnum) ToPointer() *OperationStatusEnum {
+	return &e
+}
+
 func (e *OperationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "RUNNING":
 		fallthrough
 	case "DONE":
-		*e = OperationStatusEnum(s)
+		*e = OperationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OperationStatusEnum: %v", v)
 	}
 }
 
@@ -82,12 +86,16 @@ const (
 	OperationWarningsCodeEnumInvalidHealthCheckForDynamicWieghtedLb OperationWarningsCodeEnum = "INVALID_HEALTH_CHECK_FOR_DYNAMIC_WIEGHTED_LB"
 )
 
+func (e OperationWarningsCodeEnum) ToPointer() *OperationWarningsCodeEnum {
+	return &e
+}
+
 func (e *OperationWarningsCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPRECATED_RESOURCE_USED":
 		fallthrough
 	case "NO_RESULTS_ON_PAGE":
@@ -141,10 +149,10 @@ func (e *OperationWarningsCodeEnum) UnmarshalJSON(data []byte) error {
 	case "NEXT_HOP_INSTANCE_HAS_NO_IPV6_INTERFACE":
 		fallthrough
 	case "INVALID_HEALTH_CHECK_FOR_DYNAMIC_WIEGHTED_LB":
-		*e = OperationWarningsCodeEnum(s)
+		*e = OperationWarningsCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperationWarningsCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OperationWarningsCodeEnum: %v", v)
 	}
 }
 

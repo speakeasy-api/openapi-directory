@@ -15,17 +15,21 @@ const (
 	POSTDescribeInstanceEventNotificationAttributesActionEnumDescribeInstanceEventNotificationAttributes POSTDescribeInstanceEventNotificationAttributesActionEnum = "DescribeInstanceEventNotificationAttributes"
 )
 
+func (e POSTDescribeInstanceEventNotificationAttributesActionEnum) ToPointer() *POSTDescribeInstanceEventNotificationAttributesActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeInstanceEventNotificationAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeInstanceEventNotificationAttributes":
-		*e = POSTDescribeInstanceEventNotificationAttributesActionEnum(s)
+		*e = POSTDescribeInstanceEventNotificationAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeInstanceEventNotificationAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeInstanceEventNotificationAttributesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeInstanceEventNotificationAttributesVersionEnumTwoThousandAndSixteen1115 POSTDescribeInstanceEventNotificationAttributesVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeInstanceEventNotificationAttributesVersionEnum) ToPointer() *POSTDescribeInstanceEventNotificationAttributesVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeInstanceEventNotificationAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeInstanceEventNotificationAttributesVersionEnum(s)
+		*e = POSTDescribeInstanceEventNotificationAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeInstanceEventNotificationAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeInstanceEventNotificationAttributesVersionEnum: %v", v)
 	}
 }
 

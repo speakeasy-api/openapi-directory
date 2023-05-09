@@ -16,17 +16,21 @@ const (
 	AssociateDiscoveredResourceXAmzTargetEnumAwsMigrationHubAssociateDiscoveredResource AssociateDiscoveredResourceXAmzTargetEnum = "AWSMigrationHub.AssociateDiscoveredResource"
 )
 
+func (e AssociateDiscoveredResourceXAmzTargetEnum) ToPointer() *AssociateDiscoveredResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateDiscoveredResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHub.AssociateDiscoveredResource":
-		*e = AssociateDiscoveredResourceXAmzTargetEnum(s)
+		*e = AssociateDiscoveredResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateDiscoveredResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateDiscoveredResourceXAmzTargetEnum: %v", v)
 	}
 }
 

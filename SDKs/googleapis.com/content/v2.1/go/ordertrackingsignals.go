@@ -34,7 +34,10 @@ func newOrdertrackingsignals(defaultClient, securityClient HTTPClient, serverURL
 // ContentOrdertrackingsignalsCreate - Creates new order tracking signal.
 func (s *ordertrackingsignals) ContentOrdertrackingsignalsCreate(ctx context.Context, request operations.ContentOrdertrackingsignalsCreateRequest, security operations.ContentOrdertrackingsignalsCreateSecurity) (*operations.ContentOrdertrackingsignalsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/ordertrackingsignals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/ordertrackingsignals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderTrackingSignalInput", "json")
 	if err != nil {

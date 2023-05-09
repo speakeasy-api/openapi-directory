@@ -23,12 +23,16 @@ const (
 	LegalEntityAssociationTypeEnumUltimateParentCompany LegalEntityAssociationTypeEnum = "ultimateParentCompany"
 )
 
+func (e LegalEntityAssociationTypeEnum) ToPointer() *LegalEntityAssociationTypeEnum {
+	return &e
+}
+
 func (e *LegalEntityAssociationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pciSignatory":
 		fallthrough
 	case "signatory":
@@ -40,10 +44,10 @@ func (e *LegalEntityAssociationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "uboThroughOwnership":
 		fallthrough
 	case "ultimateParentCompany":
-		*e = LegalEntityAssociationTypeEnum(s)
+		*e = LegalEntityAssociationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LegalEntityAssociationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LegalEntityAssociationTypeEnum: %v", v)
 	}
 }
 

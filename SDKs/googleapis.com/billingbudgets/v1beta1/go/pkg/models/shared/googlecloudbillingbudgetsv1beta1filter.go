@@ -17,12 +17,16 @@ const (
 	GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriodEnumYear                      GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriodEnum = "YEAR"
 )
 
+func (e GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriodEnum) ToPointer() *GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriodEnum {
+	return &e
+}
+
 func (e *GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CALENDAR_PERIOD_UNSPECIFIED":
 		fallthrough
 	case "MONTH":
@@ -30,10 +34,10 @@ func (e *GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriodEnum) UnmarshalJSON
 	case "QUARTER":
 		fallthrough
 	case "YEAR":
-		*e = GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriodEnum(s)
+		*e = GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriodEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatmentEnumIncludeSpecifiedCredits         GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatmentEnum = "INCLUDE_SPECIFIED_CREDITS"
 )
 
+func (e GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatmentEnum) ToPointer() *GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatmentEnum {
+	return &e
+}
+
 func (e *GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREDIT_TYPES_TREATMENT_UNSPECIFIED":
 		fallthrough
 	case "INCLUDE_ALL_CREDITS":
@@ -60,10 +68,10 @@ func (e *GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatmentEnum) Unmarsh
 	case "EXCLUDE_ALL_CREDITS":
 		fallthrough
 	case "INCLUDE_SPECIFIED_CREDITS":
-		*e = GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatmentEnum(s)
+		*e = GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatmentEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatmentEnum: %v", v)
 	}
 }
 

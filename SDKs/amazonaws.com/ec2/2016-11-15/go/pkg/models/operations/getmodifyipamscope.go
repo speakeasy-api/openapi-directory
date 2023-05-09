@@ -15,17 +15,21 @@ const (
 	GETModifyIpamScopeActionEnumModifyIpamScope GETModifyIpamScopeActionEnum = "ModifyIpamScope"
 )
 
+func (e GETModifyIpamScopeActionEnum) ToPointer() *GETModifyIpamScopeActionEnum {
+	return &e
+}
+
 func (e *GETModifyIpamScopeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyIpamScope":
-		*e = GETModifyIpamScopeActionEnum(s)
+		*e = GETModifyIpamScopeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyIpamScopeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyIpamScopeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyIpamScopeVersionEnumTwoThousandAndSixteen1115 GETModifyIpamScopeVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyIpamScopeVersionEnum) ToPointer() *GETModifyIpamScopeVersionEnum {
+	return &e
+}
+
 func (e *GETModifyIpamScopeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyIpamScopeVersionEnum(s)
+		*e = GETModifyIpamScopeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyIpamScopeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyIpamScopeVersionEnum: %v", v)
 	}
 }
 

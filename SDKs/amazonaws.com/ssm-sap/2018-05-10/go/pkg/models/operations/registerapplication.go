@@ -16,17 +16,21 @@ const (
 	RegisterApplicationRequestBodyApplicationTypeEnumHana RegisterApplicationRequestBodyApplicationTypeEnum = "HANA"
 )
 
+func (e RegisterApplicationRequestBodyApplicationTypeEnum) ToPointer() *RegisterApplicationRequestBodyApplicationTypeEnum {
+	return &e
+}
+
 func (e *RegisterApplicationRequestBodyApplicationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HANA":
-		*e = RegisterApplicationRequestBodyApplicationTypeEnum(s)
+		*e = RegisterApplicationRequestBodyApplicationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterApplicationRequestBodyApplicationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterApplicationRequestBodyApplicationTypeEnum: %v", v)
 	}
 }
 

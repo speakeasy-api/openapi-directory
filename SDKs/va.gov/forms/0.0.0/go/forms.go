@@ -35,7 +35,10 @@ func newForms(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Returns a single form and the full revision history
 func (s *forms) FindFormByFormName(ctx context.Context, request operations.FindFormByFormNameRequest, security operations.FindFormByFormNameSecurity) (*operations.FindFormByFormNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/{form_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/forms/{form_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	AccountPermissionLevelEnumMemberLevel                AccountPermissionLevelEnum = "MEMBER_LEVEL"
 )
 
+func (e AccountPermissionLevelEnum) ToPointer() *AccountPermissionLevelEnum {
+	return &e
+}
+
 func (e *AccountPermissionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERMISSION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "OWNER_LEVEL":
 		fallthrough
 	case "MEMBER_LEVEL":
-		*e = AccountPermissionLevelEnum(s)
+		*e = AccountPermissionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountPermissionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountPermissionLevelEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	AccountRoleEnumCommunityManager       AccountRoleEnum = "COMMUNITY_MANAGER"
 )
 
+func (e AccountRoleEnum) ToPointer() *AccountRoleEnum {
+	return &e
+}
+
 func (e *AccountRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_ROLE_UNSPECIFIED":
 		fallthrough
 	case "OWNER":
@@ -60,10 +68,10 @@ func (e *AccountRoleEnum) UnmarshalJSON(data []byte) error {
 	case "MANAGER":
 		fallthrough
 	case "COMMUNITY_MANAGER":
-		*e = AccountRoleEnum(s)
+		*e = AccountRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountRoleEnum: %v", v)
 	}
 }
 
@@ -78,12 +86,16 @@ const (
 	AccountTypeEnumOrganization           AccountTypeEnum = "ORGANIZATION"
 )
 
+func (e AccountTypeEnum) ToPointer() *AccountTypeEnum {
+	return &e
+}
+
 func (e *AccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PERSONAL":
@@ -93,10 +105,10 @@ func (e *AccountTypeEnum) UnmarshalJSON(data []byte) error {
 	case "USER_GROUP":
 		fallthrough
 	case "ORGANIZATION":
-		*e = AccountTypeEnum(s)
+		*e = AccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTypeEnum: %v", v)
 	}
 }
 

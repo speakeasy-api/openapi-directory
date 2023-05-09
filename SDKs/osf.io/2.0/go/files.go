@@ -72,7 +72,10 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // To delete a file or folder send a DELETE request to the delete link. Nothing will be returned in the response body.
 func (s *files) FilesDetail(ctx context.Context, request operations.FilesDetailRequest) (*operations.FilesDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{file_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{file_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +124,10 @@ func (s *files) FilesDetail(ctx context.Context, request operations.FilesDetailR
 // If the request is unsuccessful, JSON with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *files) FilesPatch(ctx context.Context, request operations.FilesPatchRequest) (*operations.FilesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{file_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{file_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -172,7 +178,10 @@ func (s *files) FilesPatch(ctx context.Context, request operations.FilesPatchReq
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *files) FilesVersionDetail(ctx context.Context, request operations.FilesVersionDetailRequest) (*operations.FilesVersionDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{file_id}/versions/{version_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{file_id}/versions/{version_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -226,7 +235,10 @@ func (s *files) FilesVersionDetail(ctx context.Context, request operations.Files
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *files) FilesVersions(ctx context.Context, request operations.FilesVersionsRequest) (*operations.FilesVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{file_id}/versions/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{file_id}/versions/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

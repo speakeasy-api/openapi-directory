@@ -91,7 +91,10 @@ func (s *users) GetMe(ctx context.Context) (*operations.GetMeResponse, error) {
 // Gets a user by ID. You must be authorised as the target user in order to make this request.
 func (s *users) GetUsersID(ctx context.Context, request operations.GetUsersIDRequest) (*operations.GetUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -148,7 +151,10 @@ func (s *users) GetUsersID(ctx context.Context, request operations.GetUsersIDReq
 // Updates the user by their ID. You must be authorised as the target user in order to make this request.
 func (s *users) PutUsersID(ctx context.Context, request operations.PutUsersIDRequest) (*operations.PutUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

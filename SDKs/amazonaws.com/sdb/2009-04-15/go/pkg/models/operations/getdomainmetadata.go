@@ -15,17 +15,21 @@ const (
 	GETDomainMetadataActionEnumDomainMetadata GETDomainMetadataActionEnum = "DomainMetadata"
 )
 
+func (e GETDomainMetadataActionEnum) ToPointer() *GETDomainMetadataActionEnum {
+	return &e
+}
+
 func (e *GETDomainMetadataActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DomainMetadata":
-		*e = GETDomainMetadataActionEnum(s)
+		*e = GETDomainMetadataActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDomainMetadataActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDomainMetadataActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDomainMetadataVersionEnumTwoThousandAndNine0415 GETDomainMetadataVersionEnum = "2009-04-15"
 )
 
+func (e GETDomainMetadataVersionEnum) ToPointer() *GETDomainMetadataVersionEnum {
+	return &e
+}
+
 func (e *GETDomainMetadataVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2009-04-15":
-		*e = GETDomainMetadataVersionEnum(s)
+		*e = GETDomainMetadataVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDomainMetadataVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDomainMetadataVersionEnum: %v", v)
 	}
 }
 

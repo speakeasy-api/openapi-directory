@@ -14,17 +14,21 @@ const (
 	DescribeHostReservationOfferingsResultOfferingSetCurrencyCodeEnumUsd DescribeHostReservationOfferingsResultOfferingSetCurrencyCodeEnum = "USD"
 )
 
+func (e DescribeHostReservationOfferingsResultOfferingSetCurrencyCodeEnum) ToPointer() *DescribeHostReservationOfferingsResultOfferingSetCurrencyCodeEnum {
+	return &e
+}
+
 func (e *DescribeHostReservationOfferingsResultOfferingSetCurrencyCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
-		*e = DescribeHostReservationOfferingsResultOfferingSetCurrencyCodeEnum(s)
+		*e = DescribeHostReservationOfferingsResultOfferingSetCurrencyCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHostReservationOfferingsResultOfferingSetCurrencyCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHostReservationOfferingsResultOfferingSetCurrencyCodeEnum: %v", v)
 	}
 }
 
@@ -37,21 +41,25 @@ const (
 	DescribeHostReservationOfferingsResultOfferingSetPaymentOptionEnumNoUpfront      DescribeHostReservationOfferingsResultOfferingSetPaymentOptionEnum = "NoUpfront"
 )
 
+func (e DescribeHostReservationOfferingsResultOfferingSetPaymentOptionEnum) ToPointer() *DescribeHostReservationOfferingsResultOfferingSetPaymentOptionEnum {
+	return &e
+}
+
 func (e *DescribeHostReservationOfferingsResultOfferingSetPaymentOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AllUpfront":
 		fallthrough
 	case "PartialUpfront":
 		fallthrough
 	case "NoUpfront":
-		*e = DescribeHostReservationOfferingsResultOfferingSetPaymentOptionEnum(s)
+		*e = DescribeHostReservationOfferingsResultOfferingSetPaymentOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHostReservationOfferingsResultOfferingSetPaymentOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHostReservationOfferingsResultOfferingSetPaymentOptionEnum: %v", v)
 	}
 }
 

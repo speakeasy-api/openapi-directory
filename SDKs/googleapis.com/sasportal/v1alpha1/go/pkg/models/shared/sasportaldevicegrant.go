@@ -16,21 +16,25 @@ const (
 	SasPortalDeviceGrantChannelTypeEnumChannelTypePal         SasPortalDeviceGrantChannelTypeEnum = "CHANNEL_TYPE_PAL"
 )
 
+func (e SasPortalDeviceGrantChannelTypeEnum) ToPointer() *SasPortalDeviceGrantChannelTypeEnum {
+	return &e
+}
+
 func (e *SasPortalDeviceGrantChannelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHANNEL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CHANNEL_TYPE_GAA":
 		fallthrough
 	case "CHANNEL_TYPE_PAL":
-		*e = SasPortalDeviceGrantChannelTypeEnum(s)
+		*e = SasPortalDeviceGrantChannelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SasPortalDeviceGrantChannelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SasPortalDeviceGrantChannelTypeEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	SasPortalDeviceGrantStateEnumGrantStateExpired     SasPortalDeviceGrantStateEnum = "GRANT_STATE_EXPIRED"
 )
 
+func (e SasPortalDeviceGrantStateEnum) ToPointer() *SasPortalDeviceGrantStateEnum {
+	return &e
+}
+
 func (e *SasPortalDeviceGrantStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GRANT_STATE_UNSPECIFIED":
 		fallthrough
 	case "GRANT_STATE_GRANTED":
@@ -63,10 +71,10 @@ func (e *SasPortalDeviceGrantStateEnum) UnmarshalJSON(data []byte) error {
 	case "GRANT_STATE_AUTHORIZED":
 		fallthrough
 	case "GRANT_STATE_EXPIRED":
-		*e = SasPortalDeviceGrantStateEnum(s)
+		*e = SasPortalDeviceGrantStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SasPortalDeviceGrantStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SasPortalDeviceGrantStateEnum: %v", v)
 	}
 }
 

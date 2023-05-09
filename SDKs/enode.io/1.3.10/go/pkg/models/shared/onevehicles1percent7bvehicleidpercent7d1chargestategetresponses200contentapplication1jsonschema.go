@@ -10,23 +10,27 @@ import (
 type Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum string
 
 const (
-	Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnumUnknown Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum = ""
-	Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnumDefault Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum = "DEFAULT"
+	Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnumLessThanNilGreaterThan Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum = "<nil>"
+	Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnumDefault                Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum = "DEFAULT"
 )
 
+func (e Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum) ToPointer() *Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum {
+	return &e
+}
+
 func (e *Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "":
+	switch v {
+	case "<nil>":
 		fallthrough
 	case "DEFAULT":
-		*e = Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum(s)
+		*e = Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for Onevehicles1Percent7BvehicleIDPercent7D1chargeStateGetResponses200ContentApplication1jsonSchemaIsChargingReasonsEnum: %v", v)
 	}
 }
 

@@ -21,12 +21,16 @@ const (
 	BackfillJobStateEnumUnsupported      BackfillJobStateEnum = "UNSUPPORTED"
 )
 
+func (e BackfillJobStateEnum) ToPointer() *BackfillJobStateEnum {
+	return &e
+}
+
 func (e *BackfillJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_STARTED":
@@ -42,10 +46,10 @@ func (e *BackfillJobStateEnum) UnmarshalJSON(data []byte) error {
 	case "COMPLETED":
 		fallthrough
 	case "UNSUPPORTED":
-		*e = BackfillJobStateEnum(s)
+		*e = BackfillJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackfillJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BackfillJobStateEnum: %v", v)
 	}
 }
 
@@ -58,21 +62,25 @@ const (
 	BackfillJobTriggerEnumManual             BackfillJobTriggerEnum = "MANUAL"
 )
 
+func (e BackfillJobTriggerEnum) ToPointer() *BackfillJobTriggerEnum {
+	return &e
+}
+
 func (e *BackfillJobTriggerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRIGGER_UNSPECIFIED":
 		fallthrough
 	case "AUTOMATIC":
 		fallthrough
 	case "MANUAL":
-		*e = BackfillJobTriggerEnum(s)
+		*e = BackfillJobTriggerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackfillJobTriggerEnum: %s", s)
+		return fmt.Errorf("invalid value for BackfillJobTriggerEnum: %v", v)
 	}
 }
 

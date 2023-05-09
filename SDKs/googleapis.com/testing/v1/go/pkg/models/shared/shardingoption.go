@@ -6,6 +6,8 @@ package shared
 type ShardingOption struct {
 	// Shards test cases into the specified groups of packages, classes, and/or methods. With manual sharding enabled, specifying test targets via environment_variables or in InstrumentationTest is invalid.
 	ManualSharding *ManualSharding `json:"manualSharding,omitempty"`
+	// Shards test based on previous test case timing records.
+	SmartSharding *SmartSharding `json:"smartSharding,omitempty"`
 	// Uniformly shards test cases given a total number of shards. For instrumentation tests, it will be translated to "-e numShard" and "-e shardIndex" AndroidJUnitRunner arguments. With uniform sharding enabled, specifying either of these sharding arguments via `environment_variables` is invalid. Based on the sharding mechanism AndroidJUnitRunner uses, there is no guarantee that test cases will be distributed uniformly across all shards.
 	UniformSharding *UniformSharding `json:"uniformSharding,omitempty"`
 }

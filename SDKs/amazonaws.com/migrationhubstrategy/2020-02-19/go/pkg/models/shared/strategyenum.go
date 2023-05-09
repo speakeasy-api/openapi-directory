@@ -19,12 +19,16 @@ const (
 	StrategyEnumRepurchase StrategyEnum = "Repurchase"
 )
 
+func (e StrategyEnum) ToPointer() *StrategyEnum {
+	return &e
+}
+
 func (e *StrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Rehost":
 		fallthrough
 	case "Retirement":
@@ -38,9 +42,9 @@ func (e *StrategyEnum) UnmarshalJSON(data []byte) error {
 	case "Relocate":
 		fallthrough
 	case "Repurchase":
-		*e = StrategyEnum(s)
+		*e = StrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for StrategyEnum: %v", v)
 	}
 }

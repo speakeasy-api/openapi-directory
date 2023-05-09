@@ -14,18 +14,22 @@ const (
 	FallbackResultEnumDeny  FallbackResultEnum = "DENY"
 )
 
+func (e FallbackResultEnum) ToPointer() *FallbackResultEnum {
+	return &e
+}
+
 func (e *FallbackResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = FallbackResultEnum(s)
+		*e = FallbackResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FallbackResultEnum: %s", s)
+		return fmt.Errorf("invalid value for FallbackResultEnum: %v", v)
 	}
 }

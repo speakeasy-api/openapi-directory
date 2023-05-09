@@ -4,7 +4,7 @@ package shared
 
 // GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition - A transition in a page.
 type GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition struct {
-	// Whether or not the transition is covered by at least one of the agent's test cases.
+	// Whether the transition is covered by at least one of the agent's test cases.
 	Covered *bool `json:"covered,omitempty"`
 	// An event handler specifies an event that can be handled during a session. When the specified event happens, the following actions are taken in order: * If there is a `trigger_fulfillment` associated with the event, it will be called. * If there is a `target_page` associated with the event, the session will transition into the specified page. * If there is a `target_flow` associated with the event, the session will transition into the specified flow.
 	EventHandler *GoogleCloudDialogflowCxV3beta1EventHandler `json:"eventHandler,omitempty"`

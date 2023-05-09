@@ -16,21 +16,25 @@ const (
 	PlaylistItemStatusPrivacyStatusEnumPrivate  PlaylistItemStatusPrivacyStatusEnum = "private"
 )
 
+func (e PlaylistItemStatusPrivacyStatusEnum) ToPointer() *PlaylistItemStatusPrivacyStatusEnum {
+	return &e
+}
+
 func (e *PlaylistItemStatusPrivacyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "unlisted":
 		fallthrough
 	case "private":
-		*e = PlaylistItemStatusPrivacyStatusEnum(s)
+		*e = PlaylistItemStatusPrivacyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlaylistItemStatusPrivacyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PlaylistItemStatusPrivacyStatusEnum: %v", v)
 	}
 }
 

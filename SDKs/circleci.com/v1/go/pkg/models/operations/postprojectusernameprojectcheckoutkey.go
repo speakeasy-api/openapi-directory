@@ -17,19 +17,23 @@ const (
 	PostProjectUsernameProjectCheckoutKeyRequestBodyEnumGithubUserKey PostProjectUsernameProjectCheckoutKeyRequestBodyEnum = "github-user-key"
 )
 
+func (e PostProjectUsernameProjectCheckoutKeyRequestBodyEnum) ToPointer() *PostProjectUsernameProjectCheckoutKeyRequestBodyEnum {
+	return &e
+}
+
 func (e *PostProjectUsernameProjectCheckoutKeyRequestBodyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deploy-key":
 		fallthrough
 	case "github-user-key":
-		*e = PostProjectUsernameProjectCheckoutKeyRequestBodyEnum(s)
+		*e = PostProjectUsernameProjectCheckoutKeyRequestBodyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostProjectUsernameProjectCheckoutKeyRequestBodyEnum: %s", s)
+		return fmt.Errorf("invalid value for PostProjectUsernameProjectCheckoutKeyRequestBodyEnum: %v", v)
 	}
 }
 

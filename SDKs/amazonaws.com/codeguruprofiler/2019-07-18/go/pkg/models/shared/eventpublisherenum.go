@@ -13,16 +13,20 @@ const (
 	EventPublisherEnumAnomalyDetection EventPublisherEnum = "AnomalyDetection"
 )
 
+func (e EventPublisherEnum) ToPointer() *EventPublisherEnum {
+	return &e
+}
+
 func (e *EventPublisherEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnomalyDetection":
-		*e = EventPublisherEnum(s)
+		*e = EventPublisherEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventPublisherEnum: %s", s)
+		return fmt.Errorf("invalid value for EventPublisherEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETCreateOptionGroupActionEnumCreateOptionGroup GETCreateOptionGroupActionEnum = "CreateOptionGroup"
 )
 
+func (e GETCreateOptionGroupActionEnum) ToPointer() *GETCreateOptionGroupActionEnum {
+	return &e
+}
+
 func (e *GETCreateOptionGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateOptionGroup":
-		*e = GETCreateOptionGroupActionEnum(s)
+		*e = GETCreateOptionGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateOptionGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateOptionGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateOptionGroupVersionEnumTwoThousandAndThirteen0212 GETCreateOptionGroupVersionEnum = "2013-02-12"
 )
 
+func (e GETCreateOptionGroupVersionEnum) ToPointer() *GETCreateOptionGroupVersionEnum {
+	return &e
+}
+
 func (e *GETCreateOptionGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETCreateOptionGroupVersionEnum(s)
+		*e = GETCreateOptionGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateOptionGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateOptionGroupVersionEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	KeyManagerTypeEnumCustomer KeyManagerTypeEnum = "CUSTOMER"
 )
 
+func (e KeyManagerTypeEnum) ToPointer() *KeyManagerTypeEnum {
+	return &e
+}
+
 func (e *KeyManagerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS":
 		fallthrough
 	case "CUSTOMER":
-		*e = KeyManagerTypeEnum(s)
+		*e = KeyManagerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyManagerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyManagerTypeEnum: %v", v)
 	}
 }

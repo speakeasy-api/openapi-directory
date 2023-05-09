@@ -37,12 +37,16 @@ const (
 	UpdateArtifactXRegistryArtifactTypeEnumXML        UpdateArtifactXRegistryArtifactTypeEnum = "XML"
 )
 
+func (e UpdateArtifactXRegistryArtifactTypeEnum) ToPointer() *UpdateArtifactXRegistryArtifactTypeEnum {
+	return &e
+}
+
 func (e *UpdateArtifactXRegistryArtifactTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVRO":
 		fallthrough
 	case "PROTOBUF":
@@ -64,10 +68,10 @@ func (e *UpdateArtifactXRegistryArtifactTypeEnum) UnmarshalJSON(data []byte) err
 	case "XSD":
 		fallthrough
 	case "XML":
-		*e = UpdateArtifactXRegistryArtifactTypeEnum(s)
+		*e = UpdateArtifactXRegistryArtifactTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateArtifactXRegistryArtifactTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateArtifactXRegistryArtifactTypeEnum: %v", v)
 	}
 }
 

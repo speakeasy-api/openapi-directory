@@ -13,38 +13,36 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/verifiedac
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.VerifiedaccessChallengeCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Challenge.VerifiedaccessChallengeCreate(ctx, operations.VerifiedaccessChallengeCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         RequestBody: map[string]interface{}{
             "distinctio": "quibusdam",
             "unde": "nulla",
             "corrupti": "illum",
         },
-        AccessToken: "vel",
-        Alt: "media",
-        Callback: "deserunt",
-        Fields: "suscipit",
-        Key: "iure",
-        OauthToken: "magnam",
-        PrettyPrint: false,
-        QuotaUser: "debitis",
-        UploadType: "ipsa",
-        UploadProtocol: "delectus",
-    }
-
-    ctx := context.Background()
-    res, err := s.Challenge.VerifiedaccessChallengeCreate(ctx, req, operations.VerifiedaccessChallengeCreateSecurity{
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("deserunt"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        OauthToken: sdk.String("magnam"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("debitis"),
+        UploadType: sdk.String("ipsa"),
+        UploadProtocol: sdk.String("delectus"),
+    }, operations.VerifiedaccessChallengeCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -63,10 +61,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### Challenge
+### [Challenge](docs/challenge/README.md)
 
-* `VerifiedaccessChallengeCreate` - CreateChallenge API
-* `VerifiedaccessChallengeVerify` - VerifyChallengeResponse API
+* [VerifiedaccessChallengeCreate](docs/challenge/README.md#verifiedaccesschallengecreate) - CreateChallenge API
+* [VerifiedaccessChallengeVerify](docs/challenge/README.md#verifiedaccesschallengeverify) - VerifyChallengeResponse API
 <!-- End SDK Available Operations -->
 
 ### Maturity

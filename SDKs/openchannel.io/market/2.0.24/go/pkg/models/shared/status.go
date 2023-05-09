@@ -15,19 +15,23 @@ const (
 	StatusReasonEnumSpam      StatusReasonEnum = "spam"
 )
 
+func (e StatusReasonEnum) ToPointer() *StatusReasonEnum {
+	return &e
+}
+
 func (e *StatusReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "profanity":
 		fallthrough
 	case "spam":
-		*e = StatusReasonEnum(s)
+		*e = StatusReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusReasonEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	StatusValueEnumApproved StatusValueEnum = "approved"
 )
 
+func (e StatusValueEnum) ToPointer() *StatusValueEnum {
+	return &e
+}
+
 func (e *StatusValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "spam":
@@ -54,10 +62,10 @@ func (e *StatusValueEnum) UnmarshalJSON(data []byte) error {
 	case "flagged":
 		fallthrough
 	case "approved":
-		*e = StatusValueEnum(s)
+		*e = StatusValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusValueEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusValueEnum: %v", v)
 	}
 }
 

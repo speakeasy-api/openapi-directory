@@ -16,17 +16,21 @@ const (
 	PutScheduledActionXAmzTargetEnumAnyScaleFrontendServicePutScheduledAction PutScheduledActionXAmzTargetEnum = "AnyScaleFrontendService.PutScheduledAction"
 )
 
+func (e PutScheduledActionXAmzTargetEnum) ToPointer() *PutScheduledActionXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutScheduledActionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyScaleFrontendService.PutScheduledAction":
-		*e = PutScheduledActionXAmzTargetEnum(s)
+		*e = PutScheduledActionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutScheduledActionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutScheduledActionXAmzTargetEnum: %v", v)
 	}
 }
 

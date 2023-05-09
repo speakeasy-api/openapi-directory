@@ -19,19 +19,23 @@ const (
 	TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnumMaintainer TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum = "maintainer"
 )
 
+func (e TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum) ToPointer() *TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum {
+	return &e
+}
+
 func (e *TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "member":
 		fallthrough
 	case "maintainer":
-		*e = TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum(s)
+		*e = TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsAddOrUpdateMembershipForUserLegacyRequestBodyRoleEnum: %v", v)
 	}
 }
 

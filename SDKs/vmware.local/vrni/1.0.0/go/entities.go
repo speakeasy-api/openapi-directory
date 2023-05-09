@@ -37,7 +37,10 @@ func newEntities(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Show cluster details
 func (s *entities) GetCluster(ctx context.Context, request operations.GetClusterRequest, security operations.GetClusterSecurity) (*operations.GetClusterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/clusters/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/clusters/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,7 +104,10 @@ func (s *entities) GetCluster(ctx context.Context, request operations.GetCluster
 // Show vCenter datacenter details
 func (s *entities) GetDatacenter(ctx context.Context, request operations.GetDatacenterRequest, security operations.GetDatacenterSecurity) (*operations.GetDatacenterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/vc-datacenters/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/vc-datacenters/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -165,7 +171,10 @@ func (s *entities) GetDatacenter(ctx context.Context, request operations.GetData
 // Show datastore details
 func (s *entities) GetDatastore(ctx context.Context, request operations.GetDatastoreRequest, security operations.GetDatastoreSecurity) (*operations.GetDatastoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/datastores/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/datastores/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,7 +238,10 @@ func (s *entities) GetDatastore(ctx context.Context, request operations.GetDatas
 // Show distributed virtual portgroup details
 func (s *entities) GetDistributedVirtualPortgroup(ctx context.Context, request operations.GetDistributedVirtualPortgroupRequest, security operations.GetDistributedVirtualPortgroupSecurity) (*operations.GetDistributedVirtualPortgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/distributed-virtual-portgroups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/distributed-virtual-portgroups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -293,7 +305,10 @@ func (s *entities) GetDistributedVirtualPortgroup(ctx context.Context, request o
 // Show distributed virtual switch details
 func (s *entities) GetDistributedVirtualSwitch(ctx context.Context, request operations.GetDistributedVirtualSwitchRequest, security operations.GetDistributedVirtualSwitchSecurity) (*operations.GetDistributedVirtualSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/distributed-virtual-switches/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/distributed-virtual-switches/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -357,7 +372,10 @@ func (s *entities) GetDistributedVirtualSwitch(ctx context.Context, request oper
 // Show firewall details
 func (s *entities) GetFirewall(ctx context.Context, request operations.GetFirewallRequest, security operations.GetFirewallSecurity) (*operations.GetFirewallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/firewalls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/firewalls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -421,7 +439,10 @@ func (s *entities) GetFirewall(ctx context.Context, request operations.GetFirewa
 // Show firewall rule details
 func (s *entities) GetFirewallRule(ctx context.Context, request operations.GetFirewallRuleRequest, security operations.GetFirewallRuleSecurity) (*operations.GetFirewallRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/firewall-rules/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/firewall-rules/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -485,7 +506,10 @@ func (s *entities) GetFirewallRule(ctx context.Context, request operations.GetFi
 // Show flow details
 func (s *entities) GetFlow(ctx context.Context, request operations.GetFlowRequest, security operations.GetFlowSecurity) (*operations.GetFlowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/flows/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/flows/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -611,7 +635,10 @@ func (s *entities) GetFlows(ctx context.Context, request operations.GetFlowsRequ
 // Show folder details
 func (s *entities) GetFolder(ctx context.Context, request operations.GetFolderRequest, security operations.GetFolderSecurity) (*operations.GetFolderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/folders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/folders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -675,7 +702,10 @@ func (s *entities) GetFolder(ctx context.Context, request operations.GetFolderRe
 // Show host details
 func (s *entities) GetHost(ctx context.Context, request operations.GetHostRequest, security operations.GetHostSecurity) (*operations.GetHostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/hosts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/hosts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -739,7 +769,10 @@ func (s *entities) GetHost(ctx context.Context, request operations.GetHostReques
 // Show ip set details
 func (s *entities) GetIPSet(ctx context.Context, request operations.GetIPSetRequest, security operations.GetIPSetSecurity) (*operations.GetIPSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/ip-sets/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/ip-sets/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -803,7 +836,10 @@ func (s *entities) GetIPSet(ctx context.Context, request operations.GetIPSetRequ
 // Show layer2 network details
 func (s *entities) GetLayer2Network(ctx context.Context, request operations.GetLayer2NetworkRequest, security operations.GetLayer2NetworkSecurity) (*operations.GetLayer2NetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/layer2-networks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/layer2-networks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -867,7 +903,10 @@ func (s *entities) GetLayer2Network(ctx context.Context, request operations.GetL
 // Show nsx manager details
 func (s *entities) GetNSXManager(ctx context.Context, request operations.GetNSXManagerRequest, security operations.GetNSXManagerSecurity) (*operations.GetNSXManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/nsx-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/nsx-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -931,7 +970,10 @@ func (s *entities) GetNSXManager(ctx context.Context, request operations.GetNSXM
 // Get name of an entity
 func (s *entities) GetName(ctx context.Context, request operations.GetNameRequest, security operations.GetNameSecurity) (*operations.GetNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/names/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/names/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1041,7 +1083,10 @@ func (s *entities) GetNames(ctx context.Context, request shared.NamesRequest, se
 // Show problem event details.
 func (s *entities) GetProblemEvent(ctx context.Context, request operations.GetProblemEventRequest, security operations.GetProblemEventSecurity) (*operations.GetProblemEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/problems/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/problems/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1105,7 +1150,10 @@ func (s *entities) GetProblemEvent(ctx context.Context, request operations.GetPr
 // Show security group details
 func (s *entities) GetSecurityGroup(ctx context.Context, request operations.GetSecurityGroupRequest, security operations.GetSecurityGroupSecurity) (*operations.GetSecurityGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/security-groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/security-groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1169,7 +1217,10 @@ func (s *entities) GetSecurityGroup(ctx context.Context, request operations.GetS
 // Show security tag details
 func (s *entities) GetSecurityTag(ctx context.Context, request operations.GetSecurityTagRequest, security operations.GetSecurityTagSecurity) (*operations.GetSecurityTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/security-tags/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/security-tags/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1233,7 +1284,10 @@ func (s *entities) GetSecurityTag(ctx context.Context, request operations.GetSec
 // Show service details
 func (s *entities) GetService(ctx context.Context, request operations.GetServiceRequest, security operations.GetServiceSecurity) (*operations.GetServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/services/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/services/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1297,7 +1351,10 @@ func (s *entities) GetService(ctx context.Context, request operations.GetService
 // Show service group details
 func (s *entities) GetServiceGroup(ctx context.Context, request operations.GetServiceGroupRequest, security operations.GetServiceGroupSecurity) (*operations.GetServiceGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/service-groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/service-groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1361,7 +1418,10 @@ func (s *entities) GetServiceGroup(ctx context.Context, request operations.GetSe
 // Show vCenter manager details
 func (s *entities) GetVcenterManager(ctx context.Context, request operations.GetVcenterManagerRequest, security operations.GetVcenterManagerSecurity) (*operations.GetVcenterManagerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/vcenter-managers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/vcenter-managers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1425,7 +1485,10 @@ func (s *entities) GetVcenterManager(ctx context.Context, request operations.Get
 // Show vm details
 func (s *entities) GetVM(ctx context.Context, request operations.GetVMRequest, security operations.GetVMSecurity) (*operations.GetVMResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/vms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/vms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1489,7 +1552,10 @@ func (s *entities) GetVM(ctx context.Context, request operations.GetVMRequest, s
 // Show vmknic details
 func (s *entities) GetVmknic(ctx context.Context, request operations.GetVmknicRequest, security operations.GetVmknicSecurity) (*operations.GetVmknicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/vmknics/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/vmknics/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1553,7 +1619,10 @@ func (s *entities) GetVmknic(ctx context.Context, request operations.GetVmknicRe
 // Show vnic details
 func (s *entities) GetVnic(ctx context.Context, request operations.GetVnicRequest, security operations.GetVnicSecurity) (*operations.GetVnicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/entities/vnics/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/entities/vnics/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

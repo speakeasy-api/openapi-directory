@@ -15,17 +15,21 @@ const (
 	GETListDeadLetterSourceQueuesActionEnumListDeadLetterSourceQueues GETListDeadLetterSourceQueuesActionEnum = "ListDeadLetterSourceQueues"
 )
 
+func (e GETListDeadLetterSourceQueuesActionEnum) ToPointer() *GETListDeadLetterSourceQueuesActionEnum {
+	return &e
+}
+
 func (e *GETListDeadLetterSourceQueuesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListDeadLetterSourceQueues":
-		*e = GETListDeadLetterSourceQueuesActionEnum(s)
+		*e = GETListDeadLetterSourceQueuesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListDeadLetterSourceQueuesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListDeadLetterSourceQueuesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListDeadLetterSourceQueuesVersionEnumTwoThousandAndTwelve1105 GETListDeadLetterSourceQueuesVersionEnum = "2012-11-05"
 )
 
+func (e GETListDeadLetterSourceQueuesVersionEnum) ToPointer() *GETListDeadLetterSourceQueuesVersionEnum {
+	return &e
+}
+
 func (e *GETListDeadLetterSourceQueuesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = GETListDeadLetterSourceQueuesVersionEnum(s)
+		*e = GETListDeadLetterSourceQueuesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListDeadLetterSourceQueuesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListDeadLetterSourceQueuesVersionEnum: %v", v)
 	}
 }
 

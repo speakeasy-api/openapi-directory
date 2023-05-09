@@ -14,18 +14,22 @@ const (
 	ProjectSourceEnumWeb ProjectSourceEnum = "web"
 )
 
+func (e ProjectSourceEnum) ToPointer() *ProjectSourceEnum {
+	return &e
+}
+
 func (e *ProjectSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api":
 		fallthrough
 	case "web":
-		*e = ProjectSourceEnum(s)
+		*e = ProjectSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectSourceEnum: %v", v)
 	}
 }

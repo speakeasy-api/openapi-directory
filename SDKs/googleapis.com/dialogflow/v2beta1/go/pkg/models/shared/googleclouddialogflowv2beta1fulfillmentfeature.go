@@ -15,19 +15,23 @@ const (
 	GoogleCloudDialogflowV2beta1FulfillmentFeatureTypeEnumSmalltalk       GoogleCloudDialogflowV2beta1FulfillmentFeatureTypeEnum = "SMALLTALK"
 )
 
+func (e GoogleCloudDialogflowV2beta1FulfillmentFeatureTypeEnum) ToPointer() *GoogleCloudDialogflowV2beta1FulfillmentFeatureTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1FulfillmentFeatureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "SMALLTALK":
-		*e = GoogleCloudDialogflowV2beta1FulfillmentFeatureTypeEnum(s)
+		*e = GoogleCloudDialogflowV2beta1FulfillmentFeatureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1FulfillmentFeatureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1FulfillmentFeatureTypeEnum: %v", v)
 	}
 }
 

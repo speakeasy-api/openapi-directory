@@ -15,21 +15,25 @@ const (
 	InputFieldDefinitionSupportedValueTypesEnumFieldData      InputFieldDefinitionSupportedValueTypesEnum = "FIELD_DATA"
 )
 
+func (e InputFieldDefinitionSupportedValueTypesEnum) ToPointer() *InputFieldDefinitionSupportedValueTypesEnum {
+	return &e
+}
+
 func (e *InputFieldDefinitionSupportedValueTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATIC_VALUE":
 		fallthrough
 	case "OBJECT_PROPERTY":
 		fallthrough
 	case "FIELD_DATA":
-		*e = InputFieldDefinitionSupportedValueTypesEnum(s)
+		*e = InputFieldDefinitionSupportedValueTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InputFieldDefinitionSupportedValueTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for InputFieldDefinitionSupportedValueTypesEnum: %v", v)
 	}
 }
 

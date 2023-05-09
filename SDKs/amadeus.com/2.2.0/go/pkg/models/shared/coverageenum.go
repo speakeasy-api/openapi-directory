@@ -16,20 +16,24 @@ const (
 	CoverageEnumAllSegments       CoverageEnum = "ALL_SEGMENTS"
 )
 
+func (e CoverageEnum) ToPointer() *CoverageEnum {
+	return &e
+}
+
 func (e *CoverageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MOST_SEGMENTS":
 		fallthrough
 	case "AT_LEAST_ONE_SEGMENT":
 		fallthrough
 	case "ALL_SEGMENTS":
-		*e = CoverageEnum(s)
+		*e = CoverageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CoverageEnum: %s", s)
+		return fmt.Errorf("invalid value for CoverageEnum: %v", v)
 	}
 }

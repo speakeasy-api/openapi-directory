@@ -15,17 +15,21 @@ const (
 	POSTDeleteSnapshotActionEnumDeleteSnapshot POSTDeleteSnapshotActionEnum = "DeleteSnapshot"
 )
 
+func (e POSTDeleteSnapshotActionEnum) ToPointer() *POSTDeleteSnapshotActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteSnapshotActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteSnapshot":
-		*e = POSTDeleteSnapshotActionEnum(s)
+		*e = POSTDeleteSnapshotActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteSnapshotActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteSnapshotActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteSnapshotVersionEnumTwoThousandAndSixteen1115 POSTDeleteSnapshotVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteSnapshotVersionEnum) ToPointer() *POSTDeleteSnapshotVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteSnapshotVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteSnapshotVersionEnum(s)
+		*e = POSTDeleteSnapshotVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteSnapshotVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteSnapshotVersionEnum: %v", v)
 	}
 }
 

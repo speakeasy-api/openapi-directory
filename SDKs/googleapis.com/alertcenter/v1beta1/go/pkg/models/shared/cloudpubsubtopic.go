@@ -15,19 +15,23 @@ const (
 	CloudPubsubTopicPayloadFormatEnumJSON                     CloudPubsubTopicPayloadFormatEnum = "JSON"
 )
 
+func (e CloudPubsubTopicPayloadFormatEnum) ToPointer() *CloudPubsubTopicPayloadFormatEnum {
+	return &e
+}
+
 func (e *CloudPubsubTopicPayloadFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PAYLOAD_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "JSON":
-		*e = CloudPubsubTopicPayloadFormatEnum(s)
+		*e = CloudPubsubTopicPayloadFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudPubsubTopicPayloadFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudPubsubTopicPayloadFormatEnum: %v", v)
 	}
 }
 

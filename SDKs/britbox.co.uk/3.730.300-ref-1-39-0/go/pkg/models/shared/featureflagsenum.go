@@ -20,12 +20,16 @@ const (
 	FeatureFlagsEnumCd  FeatureFlagsEnum = "cd"
 )
 
+func (e FeatureFlagsEnum) ToPointer() *FeatureFlagsEnum {
+	return &e
+}
+
 func (e *FeatureFlagsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "idp":
@@ -41,9 +45,9 @@ func (e *FeatureFlagsEnum) UnmarshalJSON(data []byte) error {
 	case "lrl":
 		fallthrough
 	case "cd":
-		*e = FeatureFlagsEnum(s)
+		*e = FeatureFlagsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeatureFlagsEnum: %s", s)
+		return fmt.Errorf("invalid value for FeatureFlagsEnum: %v", v)
 	}
 }

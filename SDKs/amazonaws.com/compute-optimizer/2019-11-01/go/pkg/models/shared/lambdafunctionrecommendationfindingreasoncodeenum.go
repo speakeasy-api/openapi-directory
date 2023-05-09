@@ -16,12 +16,16 @@ const (
 	LambdaFunctionRecommendationFindingReasonCodeEnumInconclusive           LambdaFunctionRecommendationFindingReasonCodeEnum = "Inconclusive"
 )
 
+func (e LambdaFunctionRecommendationFindingReasonCodeEnum) ToPointer() *LambdaFunctionRecommendationFindingReasonCodeEnum {
+	return &e
+}
+
 func (e *LambdaFunctionRecommendationFindingReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MemoryOverprovisioned":
 		fallthrough
 	case "MemoryUnderprovisioned":
@@ -29,9 +33,9 @@ func (e *LambdaFunctionRecommendationFindingReasonCodeEnum) UnmarshalJSON(data [
 	case "InsufficientData":
 		fallthrough
 	case "Inconclusive":
-		*e = LambdaFunctionRecommendationFindingReasonCodeEnum(s)
+		*e = LambdaFunctionRecommendationFindingReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LambdaFunctionRecommendationFindingReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for LambdaFunctionRecommendationFindingReasonCodeEnum: %v", v)
 	}
 }

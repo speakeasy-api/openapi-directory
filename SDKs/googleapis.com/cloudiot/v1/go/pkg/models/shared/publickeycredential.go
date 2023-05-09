@@ -18,12 +18,16 @@ const (
 	PublicKeyCredentialFormatEnumEs256X509Pem               PublicKeyCredentialFormatEnum = "ES256_X509_PEM"
 )
 
+func (e PublicKeyCredentialFormatEnum) ToPointer() *PublicKeyCredentialFormatEnum {
+	return &e
+}
+
 func (e *PublicKeyCredentialFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_PUBLIC_KEY_FORMAT":
 		fallthrough
 	case "RSA_PEM":
@@ -33,10 +37,10 @@ func (e *PublicKeyCredentialFormatEnum) UnmarshalJSON(data []byte) error {
 	case "ES256_PEM":
 		fallthrough
 	case "ES256_X509_PEM":
-		*e = PublicKeyCredentialFormatEnum(s)
+		*e = PublicKeyCredentialFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublicKeyCredentialFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PublicKeyCredentialFormatEnum: %v", v)
 	}
 }
 

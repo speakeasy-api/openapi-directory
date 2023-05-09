@@ -44,7 +44,10 @@ func newSections(defaultClient, securityClient HTTPClient, serverURL, language, 
 // This does not work for separators (tasks with the resource_subtype of section).
 func (s *sections) AddTaskForSection(ctx context.Context, request operations.AddTaskForSectionRequest) (*operations.AddTaskForSectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sections/{section_gid}/addTask", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sections/{section_gid}/addTask", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -122,7 +125,10 @@ func (s *sections) AddTaskForSection(ctx context.Context, request operations.Add
 // Returns the full record of the newly created section.
 func (s *sections) CreateSectionForProject(ctx context.Context, request operations.CreateSectionForProjectRequest) (*operations.CreateSectionForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/sections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/sections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -206,7 +212,10 @@ func (s *sections) CreateSectionForProject(ctx context.Context, request operatio
 // Returns an empty data block.
 func (s *sections) DeleteSection(ctx context.Context, request operations.DeleteSectionRequest) (*operations.DeleteSectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sections/{section_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sections/{section_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -273,7 +282,10 @@ func (s *sections) DeleteSection(ctx context.Context, request operations.DeleteS
 // Returns the complete record for a single section.
 func (s *sections) GetSection(ctx context.Context, request operations.GetSectionRequest) (*operations.GetSectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sections/{section_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sections/{section_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -340,7 +352,10 @@ func (s *sections) GetSection(ctx context.Context, request operations.GetSection
 // Returns the compact records for all sections in the specified project.
 func (s *sections) GetSectionsForProject(ctx context.Context, request operations.GetSectionsForProjectRequest) (*operations.GetSectionsForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/sections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/sections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -412,7 +427,10 @@ func (s *sections) GetSectionsForProject(ctx context.Context, request operations
 // Returns an empty data block.
 func (s *sections) InsertSectionForProject(ctx context.Context, request operations.InsertSectionForProjectRequest) (*operations.InsertSectionForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/sections/insert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/sections/insert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -498,7 +516,10 @@ func (s *sections) InsertSectionForProject(ctx context.Context, request operatio
 // Returns the complete updated section record.
 func (s *sections) UpdateSection(ctx context.Context, request operations.UpdateSectionRequest) (*operations.UpdateSectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sections/{section_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sections/{section_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

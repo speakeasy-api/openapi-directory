@@ -33,7 +33,10 @@ func newBuckets(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 func (s *buckets) GetBucket(ctx context.Context, request operations.GetBucketRequest) (*operations.GetBucketResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/buckets/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/buckets/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -106,6 +109,7 @@ func (s *buckets) GetBucket(ctx context.Context, request operations.GetBucketReq
 
 	return res, nil
 }
+
 func (s *buckets) GetBuckets(ctx context.Context, request operations.GetBucketsRequest) (*operations.GetBucketsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/buckets"

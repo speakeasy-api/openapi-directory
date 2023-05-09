@@ -14,17 +14,21 @@ const (
 	VerifyCapabilityVersionEnumV2 VerifyCapabilityVersionEnum = "v2"
 )
 
+func (e VerifyCapabilityVersionEnum) ToPointer() *VerifyCapabilityVersionEnum {
+	return &e
+}
+
 func (e *VerifyCapabilityVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "v2":
-		*e = VerifyCapabilityVersionEnum(s)
+		*e = VerifyCapabilityVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyCapabilityVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyCapabilityVersionEnum: %v", v)
 	}
 }
 
@@ -34,17 +38,21 @@ const (
 	VerifyCapabilityWebhooksStatusURLHTTPMethodEnumPost VerifyCapabilityWebhooksStatusURLHTTPMethodEnum = "POST"
 )
 
+func (e VerifyCapabilityWebhooksStatusURLHTTPMethodEnum) ToPointer() *VerifyCapabilityWebhooksStatusURLHTTPMethodEnum {
+	return &e
+}
+
 func (e *VerifyCapabilityWebhooksStatusURLHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POST":
-		*e = VerifyCapabilityWebhooksStatusURLHTTPMethodEnum(s)
+		*e = VerifyCapabilityWebhooksStatusURLHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyCapabilityWebhooksStatusURLHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyCapabilityWebhooksStatusURLHTTPMethodEnum: %v", v)
 	}
 }
 

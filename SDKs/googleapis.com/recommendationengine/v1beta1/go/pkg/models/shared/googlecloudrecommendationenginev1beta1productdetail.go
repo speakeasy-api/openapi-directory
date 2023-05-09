@@ -18,12 +18,16 @@ const (
 	GoogleCloudRecommendationengineV1beta1ProductDetailStockStateEnumBackorder             GoogleCloudRecommendationengineV1beta1ProductDetailStockStateEnum = "BACKORDER"
 )
 
+func (e GoogleCloudRecommendationengineV1beta1ProductDetailStockStateEnum) ToPointer() *GoogleCloudRecommendationengineV1beta1ProductDetailStockStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommendationengineV1beta1ProductDetailStockStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STOCK_STATE_UNSPECIFIED":
 		fallthrough
 	case "IN_STOCK":
@@ -33,10 +37,10 @@ func (e *GoogleCloudRecommendationengineV1beta1ProductDetailStockStateEnum) Unma
 	case "PREORDER":
 		fallthrough
 	case "BACKORDER":
-		*e = GoogleCloudRecommendationengineV1beta1ProductDetailStockStateEnum(s)
+		*e = GoogleCloudRecommendationengineV1beta1ProductDetailStockStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommendationengineV1beta1ProductDetailStockStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommendationengineV1beta1ProductDetailStockStateEnum: %v", v)
 	}
 }
 

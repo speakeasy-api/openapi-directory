@@ -20,21 +20,25 @@ const (
 	AppInvitationsUpdatePermissionsRequestBodyPermissionsEnumViewer    AppInvitationsUpdatePermissionsRequestBodyPermissionsEnum = "viewer"
 )
 
+func (e AppInvitationsUpdatePermissionsRequestBodyPermissionsEnum) ToPointer() *AppInvitationsUpdatePermissionsRequestBodyPermissionsEnum {
+	return &e
+}
+
 func (e *AppInvitationsUpdatePermissionsRequestBodyPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
 		fallthrough
 	case "viewer":
-		*e = AppInvitationsUpdatePermissionsRequestBodyPermissionsEnum(s)
+		*e = AppInvitationsUpdatePermissionsRequestBodyPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppInvitationsUpdatePermissionsRequestBodyPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppInvitationsUpdatePermissionsRequestBodyPermissionsEnum: %v", v)
 	}
 }
 
@@ -67,12 +71,16 @@ const (
 	AppInvitationsUpdatePermissionsDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppInvitationsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppInvitationsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppInvitationsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppInvitationsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -86,10 +94,10 @@ func (e *AppInvitationsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum) Unm
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppInvitationsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppInvitationsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppInvitationsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppInvitationsUpdatePermissionsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

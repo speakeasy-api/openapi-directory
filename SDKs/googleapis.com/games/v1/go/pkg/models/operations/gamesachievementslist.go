@@ -24,12 +24,16 @@ const (
 	GamesAchievementsListStateEnumUnlocked GamesAchievementsListStateEnum = "UNLOCKED"
 )
 
+func (e GamesAchievementsListStateEnum) ToPointer() *GamesAchievementsListStateEnum {
+	return &e
+}
+
 func (e *GamesAchievementsListStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "HIDDEN":
@@ -37,10 +41,10 @@ func (e *GamesAchievementsListStateEnum) UnmarshalJSON(data []byte) error {
 	case "REVEALED":
 		fallthrough
 	case "UNLOCKED":
-		*e = GamesAchievementsListStateEnum(s)
+		*e = GamesAchievementsListStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GamesAchievementsListStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GamesAchievementsListStateEnum: %v", v)
 	}
 }
 

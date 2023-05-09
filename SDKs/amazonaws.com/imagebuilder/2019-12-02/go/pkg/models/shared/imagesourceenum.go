@@ -16,12 +16,16 @@ const (
 	ImageSourceEnumCustom         ImageSourceEnum = "CUSTOM"
 )
 
+func (e ImageSourceEnum) ToPointer() *ImageSourceEnum {
+	return &e
+}
+
 func (e *ImageSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AMAZON_MANAGED":
 		fallthrough
 	case "AWS_MARKETPLACE":
@@ -29,9 +33,9 @@ func (e *ImageSourceEnum) UnmarshalJSON(data []byte) error {
 	case "IMPORTED":
 		fallthrough
 	case "CUSTOM":
-		*e = ImageSourceEnum(s)
+		*e = ImageSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageSourceEnum: %v", v)
 	}
 }

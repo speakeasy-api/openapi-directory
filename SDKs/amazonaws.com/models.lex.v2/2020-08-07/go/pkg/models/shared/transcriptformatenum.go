@@ -13,16 +13,20 @@ const (
 	TranscriptFormatEnumLex TranscriptFormatEnum = "Lex"
 )
 
+func (e TranscriptFormatEnum) ToPointer() *TranscriptFormatEnum {
+	return &e
+}
+
 func (e *TranscriptFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lex":
-		*e = TranscriptFormatEnum(s)
+		*e = TranscriptFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TranscriptFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TranscriptFormatEnum: %v", v)
 	}
 }

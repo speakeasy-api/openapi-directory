@@ -42,12 +42,16 @@ const (
 	StorageObjectsInsertPredefinedACLEnumPublicRead             StorageObjectsInsertPredefinedACLEnum = "publicRead"
 )
 
+func (e StorageObjectsInsertPredefinedACLEnum) ToPointer() *StorageObjectsInsertPredefinedACLEnum {
+	return &e
+}
+
 func (e *StorageObjectsInsertPredefinedACLEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "authenticatedRead":
 		fallthrough
 	case "bucketOwnerFullControl":
@@ -59,10 +63,10 @@ func (e *StorageObjectsInsertPredefinedACLEnum) UnmarshalJSON(data []byte) error
 	case "projectPrivate":
 		fallthrough
 	case "publicRead":
-		*e = StorageObjectsInsertPredefinedACLEnum(s)
+		*e = StorageObjectsInsertPredefinedACLEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageObjectsInsertPredefinedACLEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageObjectsInsertPredefinedACLEnum: %v", v)
 	}
 }
 
@@ -74,19 +78,23 @@ const (
 	StorageObjectsInsertProjectionEnumNoACL StorageObjectsInsertProjectionEnum = "noAcl"
 )
 
+func (e StorageObjectsInsertProjectionEnum) ToPointer() *StorageObjectsInsertProjectionEnum {
+	return &e
+}
+
 func (e *StorageObjectsInsertProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "full":
 		fallthrough
 	case "noAcl":
-		*e = StorageObjectsInsertProjectionEnum(s)
+		*e = StorageObjectsInsertProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageObjectsInsertProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageObjectsInsertProjectionEnum: %v", v)
 	}
 }
 

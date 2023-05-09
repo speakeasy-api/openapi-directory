@@ -16,17 +16,21 @@ const (
 	DeleteGeoMatchSetXAmzTargetEnumAwswafRegional20161128DeleteGeoMatchSet DeleteGeoMatchSetXAmzTargetEnum = "AWSWAF_Regional_20161128.DeleteGeoMatchSet"
 )
 
+func (e DeleteGeoMatchSetXAmzTargetEnum) ToPointer() *DeleteGeoMatchSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteGeoMatchSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.DeleteGeoMatchSet":
-		*e = DeleteGeoMatchSetXAmzTargetEnum(s)
+		*e = DeleteGeoMatchSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteGeoMatchSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteGeoMatchSetXAmzTargetEnum: %v", v)
 	}
 }
 

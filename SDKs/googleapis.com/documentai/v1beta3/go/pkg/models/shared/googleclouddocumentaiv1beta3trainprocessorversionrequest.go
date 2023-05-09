@@ -2,13 +2,13 @@
 
 package shared
 
-// GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest - Request message for the create processor version method.
+// GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest - Request message for the TrainProcessorVersion method.
 type GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest struct {
 	// Optional. The processor version to use as a base for training. This processor version must be a child of `parent`. Format: `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`.
 	BaseProcessorVersion *string `json:"baseProcessorVersion,omitempty"`
 	// The schema defines the output of the processed document by a processor.
 	DocumentSchema *GoogleCloudDocumentaiV1beta3DocumentSchema `json:"documentSchema,omitempty"`
-	// The input data used to train a new `ProcessorVersion`.
+	// The input data used to train a new ProcessorVersion.
 	InputData *GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequestInputData `json:"inputData,omitempty"`
 	// A processor version is an implementation of a processor. Each processor can have multiple versions, pre-trained by Google internally or up-trained by the customer. At a time, a processor can only have one default version version. So the processor's behavior (when processing documents) is defined by a default version
 	ProcessorVersion *GoogleCloudDocumentaiV1beta3ProcessorVersion `json:"processorVersion,omitempty"`

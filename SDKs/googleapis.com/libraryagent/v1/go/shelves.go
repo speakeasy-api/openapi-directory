@@ -35,7 +35,10 @@ func newShelves(defaultClient, securityClient HTTPClient, serverURL, language, s
 // LibraryagentShelvesBooksBorrow - Borrow a book from the library. Returns the book if it is borrowed successfully. Returns NOT_FOUND if the book does not exist in the library. Returns quota exceeded error if the amount of books borrowed exceeds allocation quota in any dimensions.
 func (s *shelves) LibraryagentShelvesBooksBorrow(ctx context.Context, request operations.LibraryagentShelvesBooksBorrowRequest, security operations.LibraryagentShelvesBooksBorrowSecurity) (*operations.LibraryagentShelvesBooksBorrowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:borrow", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:borrow", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *shelves) LibraryagentShelvesBooksBorrow(ctx context.Context, request op
 // LibraryagentShelvesBooksGet - Gets a book. Returns NOT_FOUND if the book does not exist.
 func (s *shelves) LibraryagentShelvesBooksGet(ctx context.Context, request operations.LibraryagentShelvesBooksGetRequest, security operations.LibraryagentShelvesBooksGetSecurity) (*operations.LibraryagentShelvesBooksGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *shelves) LibraryagentShelvesBooksGet(ctx context.Context, request opera
 // LibraryagentShelvesBooksList - Lists books in a shelf. The order is unspecified but deterministic. Newly created books will not necessarily be added to the end of this list. Returns NOT_FOUND if the shelf does not exist.
 func (s *shelves) LibraryagentShelvesBooksList(ctx context.Context, request operations.LibraryagentShelvesBooksListRequest, security operations.LibraryagentShelvesBooksListSecurity) (*operations.LibraryagentShelvesBooksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/books", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/books", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -179,7 +188,10 @@ func (s *shelves) LibraryagentShelvesBooksList(ctx context.Context, request oper
 // LibraryagentShelvesBooksReturn - Return a book to the library. Returns the book if it is returned to the library successfully. Returns error if the book does not belong to the library or the users didn't borrow before.
 func (s *shelves) LibraryagentShelvesBooksReturn(ctx context.Context, request operations.LibraryagentShelvesBooksReturnRequest, security operations.LibraryagentShelvesBooksReturnSecurity) (*operations.LibraryagentShelvesBooksReturnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:return", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:return", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

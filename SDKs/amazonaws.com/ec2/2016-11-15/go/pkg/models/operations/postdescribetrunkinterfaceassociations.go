@@ -15,17 +15,21 @@ const (
 	POSTDescribeTrunkInterfaceAssociationsActionEnumDescribeTrunkInterfaceAssociations POSTDescribeTrunkInterfaceAssociationsActionEnum = "DescribeTrunkInterfaceAssociations"
 )
 
+func (e POSTDescribeTrunkInterfaceAssociationsActionEnum) ToPointer() *POSTDescribeTrunkInterfaceAssociationsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeTrunkInterfaceAssociationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeTrunkInterfaceAssociations":
-		*e = POSTDescribeTrunkInterfaceAssociationsActionEnum(s)
+		*e = POSTDescribeTrunkInterfaceAssociationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeTrunkInterfaceAssociationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeTrunkInterfaceAssociationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeTrunkInterfaceAssociationsVersionEnumTwoThousandAndSixteen1115 POSTDescribeTrunkInterfaceAssociationsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeTrunkInterfaceAssociationsVersionEnum) ToPointer() *POSTDescribeTrunkInterfaceAssociationsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeTrunkInterfaceAssociationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeTrunkInterfaceAssociationsVersionEnum(s)
+		*e = POSTDescribeTrunkInterfaceAssociationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeTrunkInterfaceAssociationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeTrunkInterfaceAssociationsVersionEnum: %v", v)
 	}
 }
 

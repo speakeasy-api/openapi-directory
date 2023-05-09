@@ -16,21 +16,25 @@ const (
 	GoogleCloudAssetV1ConstraintConstraintDefaultEnumDeny                         GoogleCloudAssetV1ConstraintConstraintDefaultEnum = "DENY"
 )
 
+func (e GoogleCloudAssetV1ConstraintConstraintDefaultEnum) ToPointer() *GoogleCloudAssetV1ConstraintConstraintDefaultEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssetV1ConstraintConstraintDefaultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONSTRAINT_DEFAULT_UNSPECIFIED":
 		fallthrough
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = GoogleCloudAssetV1ConstraintConstraintDefaultEnum(s)
+		*e = GoogleCloudAssetV1ConstraintConstraintDefaultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssetV1ConstraintConstraintDefaultEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssetV1ConstraintConstraintDefaultEnum: %v", v)
 	}
 }
 

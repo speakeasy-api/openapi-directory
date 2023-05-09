@@ -17,12 +17,16 @@ const (
 	DatabaseStatusEnumUnknown  DatabaseStatusEnum = "UNKNOWN"
 )
 
+func (e DatabaseStatusEnum) ToPointer() *DatabaseStatusEnum {
+	return &e
+}
+
 func (e *DatabaseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "STARTING":
@@ -32,9 +36,9 @@ func (e *DatabaseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "WARNING":
 		fallthrough
 	case "UNKNOWN":
-		*e = DatabaseStatusEnum(s)
+		*e = DatabaseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseStatusEnum: %v", v)
 	}
 }

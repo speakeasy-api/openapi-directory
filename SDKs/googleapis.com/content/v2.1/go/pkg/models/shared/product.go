@@ -49,6 +49,8 @@ type Product struct {
 	CustomLabel4 *string `json:"customLabel4,omitempty"`
 	// Description of the item.
 	Description *string `json:"description,omitempty"`
+	// The date time when an offer becomes visible in search results across Google’s YouTube surfaces, in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format. See [Disclosure date]( https://support.google.com/merchants/answer/13034208) for more information.
+	DisclosureDate *string `json:"disclosureDate,omitempty"`
 	// An identifier for an item for dynamic remarketing campaigns.
 	DisplayAdsID *string `json:"displayAdsId,omitempty"`
 	// URL directly to your item's landing page for dynamic remarketing campaigns.

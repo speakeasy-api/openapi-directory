@@ -19,12 +19,16 @@ const (
 	MeasurementsGetV1V1MeasurementsGetOrderByMeasOrderEnumDatetime MeasurementsGetV1V1MeasurementsGetOrderByMeasOrderEnum = "datetime"
 )
 
+func (e MeasurementsGetV1V1MeasurementsGetOrderByMeasOrderEnum) ToPointer() *MeasurementsGetV1V1MeasurementsGetOrderByMeasOrderEnum {
+	return &e
+}
+
 func (e *MeasurementsGetV1V1MeasurementsGetOrderByMeasOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "city":
 		fallthrough
 	case "country":
@@ -32,10 +36,10 @@ func (e *MeasurementsGetV1V1MeasurementsGetOrderByMeasOrderEnum) UnmarshalJSON(d
 	case "location":
 		fallthrough
 	case "datetime":
-		*e = MeasurementsGetV1V1MeasurementsGetOrderByMeasOrderEnum(s)
+		*e = MeasurementsGetV1V1MeasurementsGetOrderByMeasOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MeasurementsGetV1V1MeasurementsGetOrderByMeasOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for MeasurementsGetV1V1MeasurementsGetOrderByMeasOrderEnum: %v", v)
 	}
 }
 
@@ -47,19 +51,23 @@ const (
 	MeasurementsGetV1V1MeasurementsGetSortSortEnumDesc MeasurementsGetV1V1MeasurementsGetSortSortEnum = "desc"
 )
 
+func (e MeasurementsGetV1V1MeasurementsGetSortSortEnum) ToPointer() *MeasurementsGetV1V1MeasurementsGetSortSortEnum {
+	return &e
+}
+
 func (e *MeasurementsGetV1V1MeasurementsGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = MeasurementsGetV1V1MeasurementsGetSortSortEnum(s)
+		*e = MeasurementsGetV1V1MeasurementsGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MeasurementsGetV1V1MeasurementsGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for MeasurementsGetV1V1MeasurementsGetSortSortEnum: %v", v)
 	}
 }
 

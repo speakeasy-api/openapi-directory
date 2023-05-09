@@ -16,17 +16,21 @@ const (
 	GetLayerVersionByArnFindEnumLayerVersion GetLayerVersionByArnFindEnum = "LayerVersion"
 )
 
+func (e GetLayerVersionByArnFindEnum) ToPointer() *GetLayerVersionByArnFindEnum {
+	return &e
+}
+
 func (e *GetLayerVersionByArnFindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LayerVersion":
-		*e = GetLayerVersionByArnFindEnum(s)
+		*e = GetLayerVersionByArnFindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLayerVersionByArnFindEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLayerVersionByArnFindEnum: %v", v)
 	}
 }
 

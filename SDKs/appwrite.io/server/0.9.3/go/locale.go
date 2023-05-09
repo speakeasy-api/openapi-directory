@@ -37,7 +37,7 @@ func newLocale(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Get the current user location based on IP. Returns an object with user country code, country name, continent name, continent code, ip address and suggested currency. You can use the locale header to get the data in a supported language.
 //
 // ([IP Geolocation by DB-IP](https://db-ip.com))
-func (s *locale) LocaleGet(ctx context.Context) (*operations.LocaleGetResponse, error) {
+func (s *locale) LocaleGet(ctx context.Context, security operations.LocaleGetSecurity) (*operations.LocaleGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/locale"
 
@@ -46,7 +46,7 @@ func (s *locale) LocaleGet(ctx context.Context) (*operations.LocaleGetResponse, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -82,7 +82,7 @@ func (s *locale) LocaleGet(ctx context.Context) (*operations.LocaleGetResponse, 
 
 // LocaleGetContinents - List Continents
 // List of all continents. You can use the locale header to get the data in a supported language.
-func (s *locale) LocaleGetContinents(ctx context.Context) (*operations.LocaleGetContinentsResponse, error) {
+func (s *locale) LocaleGetContinents(ctx context.Context, security operations.LocaleGetContinentsSecurity) (*operations.LocaleGetContinentsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/locale/continents"
 
@@ -91,7 +91,7 @@ func (s *locale) LocaleGetContinents(ctx context.Context) (*operations.LocaleGet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -127,7 +127,7 @@ func (s *locale) LocaleGetContinents(ctx context.Context) (*operations.LocaleGet
 
 // LocaleGetCountries - List Countries
 // List of all countries. You can use the locale header to get the data in a supported language.
-func (s *locale) LocaleGetCountries(ctx context.Context) (*operations.LocaleGetCountriesResponse, error) {
+func (s *locale) LocaleGetCountries(ctx context.Context, security operations.LocaleGetCountriesSecurity) (*operations.LocaleGetCountriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/locale/countries"
 
@@ -136,7 +136,7 @@ func (s *locale) LocaleGetCountries(ctx context.Context) (*operations.LocaleGetC
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -172,7 +172,7 @@ func (s *locale) LocaleGetCountries(ctx context.Context) (*operations.LocaleGetC
 
 // LocaleGetCountriesEU - List EU Countries
 // List of all countries that are currently members of the EU. You can use the locale header to get the data in a supported language.
-func (s *locale) LocaleGetCountriesEU(ctx context.Context) (*operations.LocaleGetCountriesEUResponse, error) {
+func (s *locale) LocaleGetCountriesEU(ctx context.Context, security operations.LocaleGetCountriesEUSecurity) (*operations.LocaleGetCountriesEUResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/locale/countries/eu"
 
@@ -181,7 +181,7 @@ func (s *locale) LocaleGetCountriesEU(ctx context.Context) (*operations.LocaleGe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -217,7 +217,7 @@ func (s *locale) LocaleGetCountriesEU(ctx context.Context) (*operations.LocaleGe
 
 // LocaleGetCountriesPhones - List Countries Phone Codes
 // List of all countries phone codes. You can use the locale header to get the data in a supported language.
-func (s *locale) LocaleGetCountriesPhones(ctx context.Context) (*operations.LocaleGetCountriesPhonesResponse, error) {
+func (s *locale) LocaleGetCountriesPhones(ctx context.Context, security operations.LocaleGetCountriesPhonesSecurity) (*operations.LocaleGetCountriesPhonesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/locale/countries/phones"
 
@@ -226,7 +226,7 @@ func (s *locale) LocaleGetCountriesPhones(ctx context.Context) (*operations.Loca
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -262,7 +262,7 @@ func (s *locale) LocaleGetCountriesPhones(ctx context.Context) (*operations.Loca
 
 // LocaleGetCurrencies - List Currencies
 // List of all currencies, including currency symbol, name, plural, and decimal digits for all major and minor currencies. You can use the locale header to get the data in a supported language.
-func (s *locale) LocaleGetCurrencies(ctx context.Context) (*operations.LocaleGetCurrenciesResponse, error) {
+func (s *locale) LocaleGetCurrencies(ctx context.Context, security operations.LocaleGetCurrenciesSecurity) (*operations.LocaleGetCurrenciesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/locale/currencies"
 
@@ -271,7 +271,7 @@ func (s *locale) LocaleGetCurrencies(ctx context.Context) (*operations.LocaleGet
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -307,7 +307,7 @@ func (s *locale) LocaleGetCurrencies(ctx context.Context) (*operations.LocaleGet
 
 // LocaleGetLanguages - List Languages
 // List of all languages classified by ISO 639-1 including 2-letter code, name in English, and name in the respective language.
-func (s *locale) LocaleGetLanguages(ctx context.Context) (*operations.LocaleGetLanguagesResponse, error) {
+func (s *locale) LocaleGetLanguages(ctx context.Context, security operations.LocaleGetLanguagesSecurity) (*operations.LocaleGetLanguagesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/locale/languages"
 
@@ -316,7 +316,7 @@ func (s *locale) LocaleGetLanguages(ctx context.Context) (*operations.LocaleGetL
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

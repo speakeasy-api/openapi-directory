@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>Security Hub provides you with a comprehensive view of the security state of your Amazon Web Services environment and resources. It also provides you with the readiness status of your environment based on controls from supported security standards. Security Hub collects security data from Amazon Web Services accounts, services, and integrated third-party products and helps you analyze security trends in your environment to identify the highest priority security issues. For more information about Security Hub, see the <a href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html">Security HubUser Guide</a>.</p> <p>When you use operations in the Security Hub API, the requests are executed only in the Amazon Web Services Region that is currently active or in the specific Amazon Web Services Region that you specify in your request. Any configuration or settings change that results from the operation is applied only to that Region. To make the same change in other Regions, run the same command for each Region in which you want to apply the change.</p> <p>For example, if your Region is set to <code>us-west-2</code>, when you use <code>CreateMembers</code> to add a member account to Security Hub, the association of the member account with the administrator account is created only in the <code>us-west-2</code> Region. Security Hub must be enabled for the member account in the same Region that the invitation was sent from.</p> <p>The following throttling limits apply to using Security Hub API operations.</p> <ul> <li> <p> <code>BatchEnableStandards</code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 1 request per second.</p> </li> <li> <p> <code>GetFindings</code> - <code>RateLimit</code> of 3 requests per second. <code>BurstLimit</code> of 6 requests per second.</p> </li> <li> <p> <code>BatchImportFindings</code> - <code>RateLimit</code> of 10 requests per second. <code>BurstLimit</code> of 30 requests per second.</p> </li> <li> <p> <code>BatchUpdateFindings</code> - <code>RateLimit</code> of 10 requests per second. <code>BurstLimit</code> of 30 requests per second.</p> </li> <li> <p> <code>UpdateStandardsControl</code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 5 requests per second.</p> </li> <li> <p>All other operations - <code>RateLimit</code> of 10 requests per second. <code>BurstLimit</code> of 30 requests per second.</p> </li> </ul>
 // https://docs.aws.amazon.com/securityhub/ - Amazon Web Services documentation
 type SDK struct {
@@ -218,6 +233,8 @@ func (s *SDK) AcceptAdministratorInvitation(ctx context.Context, request operati
 }
 
 // AcceptInvitation - <p>This method is deprecated. Instead, use <code>AcceptAdministratorInvitation</code>.</p> <p>The Security Hub console continues to use <code>AcceptInvitation</code>. It will eventually change to use <code>AcceptAdministratorInvitation</code>. Any IAM policies that specifically control access to this function must continue to use <code>AcceptInvitation</code>. You should also add <code>AcceptAdministratorInvitation</code> to your policies to ensure that the correct permissions are in place after the console begins to use <code>AcceptAdministratorInvitation</code>.</p> <p>Accepts the invitation to be a member account and be monitored by the Security Hub administrator account that the invitation was sent from.</p> <p>This operation is only used by member accounts that are not added through Organizations.</p> <p>When the member account accepts the invitation, permission is granted to the administrator account to view findings generated in the member account.</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) AcceptInvitation(ctx context.Context, request operations.AcceptInvitationRequest) (*operations.AcceptInvitationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/master"
@@ -1518,7 +1535,10 @@ func (s *SDK) DeclineInvitations(ctx context.Context, request operations.Decline
 // DeleteActionTarget - <p>Deletes a custom action target from Security Hub.</p> <p>Deleting a custom action target does not affect any findings or insights that were already sent to Amazon CloudWatch Events using the custom action.</p>
 func (s *SDK) DeleteActionTarget(ctx context.Context, request operations.DeleteActionTargetRequest) (*operations.DeleteActionTargetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/actionTargets/{ActionTargetArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/actionTargets/{ActionTargetArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1604,7 +1624,10 @@ func (s *SDK) DeleteActionTarget(ctx context.Context, request operations.DeleteA
 // DeleteFindingAggregator - <p>Deletes a finding aggregator. When you delete the finding aggregator, you stop finding aggregation.</p> <p>When you stop finding aggregation, findings that were already aggregated to the aggregation Region are still visible from the aggregation Region. New findings and finding updates are not aggregated. </p>
 func (s *SDK) DeleteFindingAggregator(ctx context.Context, request operations.DeleteFindingAggregatorRequest) (*operations.DeleteFindingAggregatorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/findingAggregator/delete/{FindingAggregatorArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/findingAggregator/delete/{FindingAggregatorArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1710,7 +1733,10 @@ func (s *SDK) DeleteFindingAggregator(ctx context.Context, request operations.De
 // DeleteInsight - Deletes the insight specified by the <code>InsightArn</code>.
 func (s *SDK) DeleteInsight(ctx context.Context, request operations.DeleteInsightRequest) (*operations.DeleteInsightResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/insights/{InsightArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/insights/{InsightArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2474,7 +2500,10 @@ func (s *SDK) DescribeStandards(ctx context.Context, request operations.Describe
 // DescribeStandardsControls - <p>Returns a list of security standards controls.</p> <p>For each control, the results include information about whether it is currently enabled, the severity, and a link to remediation information.</p>
 func (s *SDK) DescribeStandardsControls(ctx context.Context, request operations.DescribeStandardsControlsRequest) (*operations.DescribeStandardsControlsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/standards/controls/{StandardsSubscriptionArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/standards/controls/{StandardsSubscriptionArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2564,7 +2593,10 @@ func (s *SDK) DescribeStandardsControls(ctx context.Context, request operations.
 // DisableImportFindingsForProduct - Disables the integration of the specified product with Security Hub. After the integration is disabled, findings from that product are no longer sent to Security Hub.
 func (s *SDK) DisableImportFindingsForProduct(ctx context.Context, request operations.DisableImportFindingsForProductRequest) (*operations.DisableImportFindingsForProductResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/productSubscriptions/{ProductSubscriptionArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/productSubscriptions/{ProductSubscriptionArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2936,6 +2968,8 @@ func (s *SDK) DisassociateFromAdministratorAccount(ctx context.Context, request 
 }
 
 // DisassociateFromMasterAccount - <p>This method is deprecated. Instead, use <code>DisassociateFromAdministratorAccount</code>.</p> <p>The Security Hub console continues to use <code>DisassociateFromMasterAccount</code>. It will eventually change to use <code>DisassociateFromAdministratorAccount</code>. Any IAM policies that specifically control access to this function must continue to use <code>DisassociateFromMasterAccount</code>. You should also add <code>DisassociateFromAdministratorAccount</code> to your policies to ensure that the correct permissions are in place after the console begins to use <code>DisassociateFromAdministratorAccount</code>.</p> <p>Disassociates the current Security Hub member account from the associated administrator account.</p> <p>This operation is only used by accounts that are not part of an organization. For organization accounts, only the administrator account can disassociate a member account.</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DisassociateFromMasterAccount(ctx context.Context, request operations.DisassociateFromMasterAccountRequest) (*operations.DisassociateFromMasterAccountResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/master/disassociate"
@@ -3644,7 +3678,10 @@ func (s *SDK) GetEnabledStandards(ctx context.Context, request operations.GetEna
 // GetFindingAggregator - Returns the current finding aggregation configuration.
 func (s *SDK) GetFindingAggregator(ctx context.Context, request operations.GetFindingAggregatorRequest) (*operations.GetFindingAggregatorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/findingAggregator/get/{FindingAggregatorArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/findingAggregator/get/{FindingAggregatorArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3850,7 +3887,10 @@ func (s *SDK) GetFindings(ctx context.Context, request operations.GetFindingsReq
 // GetInsightResults - Lists the results of the Security Hub insight specified by the insight ARN.
 func (s *SDK) GetInsightResults(ctx context.Context, request operations.GetInsightResultsRequest) (*operations.GetInsightResultsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/insights/results/{InsightArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/insights/results/{InsightArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4140,6 +4180,8 @@ func (s *SDK) GetInvitationsCount(ctx context.Context, request operations.GetInv
 }
 
 // GetMasterAccount - <p>This method is deprecated. Instead, use <code>GetAdministratorAccount</code>.</p> <p>The Security Hub console continues to use <code>GetMasterAccount</code>. It will eventually change to use <code>GetAdministratorAccount</code>. Any IAM policies that specifically control access to this function must continue to use <code>GetMasterAccount</code>. You should also add <code>GetAdministratorAccount</code> to your policies to ensure that the correct permissions are in place after the console begins to use <code>GetAdministratorAccount</code>.</p> <p>Provides the details for the Security Hub administrator account for the current member account.</p> <p>Can be used by both member accounts that are managed using Organizations and accounts that were invited manually.</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) GetMasterAccount(ctx context.Context, request operations.GetMasterAccountRequest) (*operations.GetMasterAccountResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/master"
@@ -5080,7 +5122,10 @@ func (s *SDK) ListStandardsControlAssociations(ctx context.Context, request oper
 // ListTagsForResource - Returns a list of tags associated with a resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5156,7 +5201,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // TagResource - Adds one or more tags to a resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5242,7 +5290,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes one or more tags from a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5322,7 +5373,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateActionTarget - Updates the name and description of a custom action target in Security Hub.
 func (s *SDK) UpdateActionTarget(ctx context.Context, request operations.UpdateActionTargetRequest) (*operations.UpdateActionTargetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/actionTargets/{ActionTargetArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/actionTargets/{ActionTargetArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5642,7 +5696,10 @@ func (s *SDK) UpdateFindings(ctx context.Context, request operations.UpdateFindi
 // UpdateInsight - Updates the Security Hub insight identified by the specified insight ARN.
 func (s *SDK) UpdateInsight(ctx context.Context, request operations.UpdateInsightRequest) (*operations.UpdateInsightResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/insights/{InsightArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/insights/{InsightArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5950,7 +6007,10 @@ func (s *SDK) UpdateSecurityHubConfiguration(ctx context.Context, request operat
 // UpdateStandardsControl - Used to control whether an individual security standard control is enabled or disabled.
 func (s *SDK) UpdateStandardsControl(ctx context.Context, request operations.UpdateStandardsControlRequest) (*operations.UpdateStandardsControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/standards/control/{StandardsControlArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/standards/control/{StandardsControlArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

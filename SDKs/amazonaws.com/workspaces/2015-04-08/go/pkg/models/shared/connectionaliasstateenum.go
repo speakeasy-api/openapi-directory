@@ -15,20 +15,24 @@ const (
 	ConnectionAliasStateEnumDeleting ConnectionAliasStateEnum = "DELETING"
 )
 
+func (e ConnectionAliasStateEnum) ToPointer() *ConnectionAliasStateEnum {
+	return &e
+}
+
 func (e *ConnectionAliasStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATED":
 		fallthrough
 	case "DELETING":
-		*e = ConnectionAliasStateEnum(s)
+		*e = ConnectionAliasStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionAliasStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionAliasStateEnum: %v", v)
 	}
 }

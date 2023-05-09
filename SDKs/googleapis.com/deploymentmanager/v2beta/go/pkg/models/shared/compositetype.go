@@ -16,12 +16,16 @@ const (
 	CompositeTypeStatusEnumSupported     CompositeTypeStatusEnum = "SUPPORTED"
 )
 
+func (e CompositeTypeStatusEnum) ToPointer() *CompositeTypeStatusEnum {
+	return &e
+}
+
 func (e *CompositeTypeStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_STATUS":
 		fallthrough
 	case "DEPRECATED":
@@ -29,10 +33,10 @@ func (e *CompositeTypeStatusEnum) UnmarshalJSON(data []byte) error {
 	case "EXPERIMENTAL":
 		fallthrough
 	case "SUPPORTED":
-		*e = CompositeTypeStatusEnum(s)
+		*e = CompositeTypeStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompositeTypeStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompositeTypeStatusEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	ContextNumberUpdateVoiceTypeEnumApp  ContextNumberUpdateVoiceTypeEnum = "app"
 )
 
+func (e ContextNumberUpdateVoiceTypeEnum) ToPointer() *ContextNumberUpdateVoiceTypeEnum {
+	return &e
+}
+
 func (e *ContextNumberUpdateVoiceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tel":
 		fallthrough
 	case "sip":
@@ -30,10 +34,10 @@ func (e *ContextNumberUpdateVoiceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "vxml":
 		fallthrough
 	case "app":
-		*e = ContextNumberUpdateVoiceTypeEnum(s)
+		*e = ContextNumberUpdateVoiceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContextNumberUpdateVoiceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContextNumberUpdateVoiceTypeEnum: %v", v)
 	}
 }
 

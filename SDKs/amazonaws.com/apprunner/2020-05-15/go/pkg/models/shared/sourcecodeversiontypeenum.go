@@ -13,16 +13,20 @@ const (
 	SourceCodeVersionTypeEnumBranch SourceCodeVersionTypeEnum = "BRANCH"
 )
 
+func (e SourceCodeVersionTypeEnum) ToPointer() *SourceCodeVersionTypeEnum {
+	return &e
+}
+
 func (e *SourceCodeVersionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BRANCH":
-		*e = SourceCodeVersionTypeEnum(s)
+		*e = SourceCodeVersionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceCodeVersionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceCodeVersionTypeEnum: %v", v)
 	}
 }

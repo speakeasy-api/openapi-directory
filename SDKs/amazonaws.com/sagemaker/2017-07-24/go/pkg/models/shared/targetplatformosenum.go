@@ -14,18 +14,22 @@ const (
 	TargetPlatformOsEnumLinux   TargetPlatformOsEnum = "LINUX"
 )
 
+func (e TargetPlatformOsEnum) ToPointer() *TargetPlatformOsEnum {
+	return &e
+}
+
 func (e *TargetPlatformOsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANDROID":
 		fallthrough
 	case "LINUX":
-		*e = TargetPlatformOsEnum(s)
+		*e = TargetPlatformOsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetPlatformOsEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetPlatformOsEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	ObjectTypeEnumEnumAssessmentReport ObjectTypeEnumEnum = "ASSESSMENT_REPORT"
 )
 
+func (e ObjectTypeEnumEnum) ToPointer() *ObjectTypeEnumEnum {
+	return &e
+}
+
 func (e *ObjectTypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSESSMENT":
 		fallthrough
 	case "CONTROL_SET":
@@ -32,9 +36,9 @@ func (e *ObjectTypeEnumEnum) UnmarshalJSON(data []byte) error {
 	case "DELEGATION":
 		fallthrough
 	case "ASSESSMENT_REPORT":
-		*e = ObjectTypeEnumEnum(s)
+		*e = ObjectTypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ObjectTypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ObjectTypeEnumEnum: %v", v)
 	}
 }

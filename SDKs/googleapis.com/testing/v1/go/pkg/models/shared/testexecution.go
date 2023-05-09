@@ -24,12 +24,16 @@ const (
 	TestExecutionStateEnumInvalid                  TestExecutionStateEnum = "INVALID"
 )
 
+func (e TestExecutionStateEnum) ToPointer() *TestExecutionStateEnum {
+	return &e
+}
+
 func (e *TestExecutionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEST_STATE_UNSPECIFIED":
 		fallthrough
 	case "VALIDATING":
@@ -51,10 +55,10 @@ func (e *TestExecutionStateEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLED":
 		fallthrough
 	case "INVALID":
-		*e = TestExecutionStateEnum(s)
+		*e = TestExecutionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestExecutionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TestExecutionStateEnum: %v", v)
 	}
 }
 

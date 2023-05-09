@@ -13,16 +13,20 @@ const (
 	FilterKeyEnumHasAccessTo FilterKeyEnum = "hasAccessTo"
 )
 
+func (e FilterKeyEnum) ToPointer() *FilterKeyEnum {
+	return &e
+}
+
 func (e *FilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hasAccessTo":
-		*e = FilterKeyEnum(s)
+		*e = FilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterKeyEnum: %v", v)
 	}
 }

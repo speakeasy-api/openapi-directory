@@ -31,12 +31,16 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryDataTypeEnumJSONValue             EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryDataTypeEnum = "JSON_VALUE"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryDataTypeEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryDataTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STRING_VALUE":
@@ -72,10 +76,10 @@ func (e *EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryDataTypeEnum) 
 	case "NON_SERIALIZABLE_OBJECT":
 		fallthrough
 	case "JSON_VALUE":
-		*e = EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryDataTypeEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryDataTypeEnum: %v", v)
 	}
 }
 
@@ -89,12 +93,16 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryInOutTypeEnumInOut                EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryInOutTypeEnum = "IN_OUT"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryInOutTypeEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryInOutTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryInOutTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_OUT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IN":
@@ -102,10 +110,10 @@ func (e *EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryInOutTypeEnum)
 	case "OUT":
 		fallthrough
 	case "IN_OUT":
-		*e = EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryInOutTypeEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryInOutTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryInOutTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntryInOutTypeEnum: %v", v)
 	}
 }
 

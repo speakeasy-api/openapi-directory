@@ -16,17 +16,21 @@ const (
 	WithdrawByoipCidrXAmzTargetEnumGlobalAcceleratorV20180706WithdrawByoipCidr WithdrawByoipCidrXAmzTargetEnum = "GlobalAccelerator_V20180706.WithdrawByoipCidr"
 )
 
+func (e WithdrawByoipCidrXAmzTargetEnum) ToPointer() *WithdrawByoipCidrXAmzTargetEnum {
+	return &e
+}
+
 func (e *WithdrawByoipCidrXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.WithdrawByoipCidr":
-		*e = WithdrawByoipCidrXAmzTargetEnum(s)
+		*e = WithdrawByoipCidrXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WithdrawByoipCidrXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for WithdrawByoipCidrXAmzTargetEnum: %v", v)
 	}
 }
 

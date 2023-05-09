@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -43,4 +44,8 @@ pkg/models/shared/seats.go
 pkg/models/shared/renewalsettings.go
 pkg/models/shared/changeplanrequest.go
 pkg/models/shared/subscriptions.go
+docs/sdk/README.md
+docs/customers/README.md
+docs/resellernotify/README.md
+docs/subscriptions/README.md
 USAGE.md

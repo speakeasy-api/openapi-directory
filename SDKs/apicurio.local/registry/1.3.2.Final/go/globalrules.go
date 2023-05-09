@@ -165,7 +165,10 @@ func (s *globalRules) DeleteAllGlobalRules(ctx context.Context) (*operations.Del
 // * A server error occurred (HTTP error `500`)
 func (s *globalRules) DeleteGlobalRule(ctx context.Context, request operations.DeleteGlobalRuleRequest) (*operations.DeleteGlobalRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{rule}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/rules/{rule}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -219,7 +222,10 @@ func (s *globalRules) DeleteGlobalRule(ctx context.Context, request operations.D
 // * A server error occurred (HTTP error `500`)
 func (s *globalRules) GetGlobalRuleConfig(ctx context.Context, request operations.GetGlobalRuleConfigRequest) (*operations.GetGlobalRuleConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{rule}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/rules/{rule}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -341,7 +347,10 @@ func (s *globalRules) ListGlobalRules(ctx context.Context) (*operations.ListGlob
 // * A server error occurred (HTTP error `500`)
 func (s *globalRules) UpdateGlobalRuleConfig(ctx context.Context, request operations.UpdateGlobalRuleConfigRequest) (*operations.UpdateGlobalRuleConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/rules/{rule}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/rules/{rule}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Rule1", "json")
 	if err != nil {

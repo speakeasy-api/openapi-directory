@@ -306,12 +306,16 @@ const (
 	DataExporterConfigTypEnumCustom  DataExporterConfigTypEnum = "custom"
 )
 
+func (e DataExporterConfigTypEnum) ToPointer() *DataExporterConfigTypEnum {
+	return &e
+}
+
 func (e *DataExporterConfigTypEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "kafka":
 		fallthrough
 	case "pulsar":
@@ -325,10 +329,10 @@ func (e *DataExporterConfigTypEnum) UnmarshalJSON(data []byte) error {
 	case "console":
 		fallthrough
 	case "custom":
-		*e = DataExporterConfigTypEnum(s)
+		*e = DataExporterConfigTypEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataExporterConfigTypEnum: %s", s)
+		return fmt.Errorf("invalid value for DataExporterConfigTypEnum: %v", v)
 	}
 }
 

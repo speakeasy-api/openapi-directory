@@ -44,12 +44,16 @@ const (
 	ContactCenterStateEnumStateTerminated        ContactCenterStateEnum = "STATE_TERMINATED"
 )
 
+func (e ContactCenterStateEnum) ToPointer() *ContactCenterStateEnum {
+	return &e
+}
+
 func (e *ContactCenterStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "STATE_DEPLOYING":
@@ -63,10 +67,10 @@ func (e *ContactCenterStateEnum) UnmarshalJSON(data []byte) error {
 	case "STATE_TERMINATING_FAILED":
 		fallthrough
 	case "STATE_TERMINATED":
-		*e = ContactCenterStateEnum(s)
+		*e = ContactCenterStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactCenterStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactCenterStateEnum: %v", v)
 	}
 }
 

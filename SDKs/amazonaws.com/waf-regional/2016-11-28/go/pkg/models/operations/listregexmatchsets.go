@@ -16,17 +16,21 @@ const (
 	ListRegexMatchSetsXAmzTargetEnumAwswafRegional20161128ListRegexMatchSets ListRegexMatchSetsXAmzTargetEnum = "AWSWAF_Regional_20161128.ListRegexMatchSets"
 )
 
+func (e ListRegexMatchSetsXAmzTargetEnum) ToPointer() *ListRegexMatchSetsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListRegexMatchSetsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.ListRegexMatchSets":
-		*e = ListRegexMatchSetsXAmzTargetEnum(s)
+		*e = ListRegexMatchSetsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRegexMatchSetsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRegexMatchSetsXAmzTargetEnum: %v", v)
 	}
 }
 

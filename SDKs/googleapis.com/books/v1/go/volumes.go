@@ -35,7 +35,10 @@ func newVolumes(defaultClient, securityClient HTTPClient, serverURL, language, s
 // BooksVolumesAssociatedList - Return a list of associated books.
 func (s *volumes) BooksVolumesAssociatedList(ctx context.Context, request operations.BooksVolumesAssociatedListRequest, security operations.BooksVolumesAssociatedListSecurity) (*operations.BooksVolumesAssociatedListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/associated", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}/associated", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *volumes) BooksVolumesAssociatedList(ctx context.Context, request operat
 // BooksVolumesGet - Gets volume information for a single volume.
 func (s *volumes) BooksVolumesGet(ctx context.Context, request operations.BooksVolumesGetRequest, security operations.BooksVolumesGetSecurity) (*operations.BooksVolumesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/volumes/{volumeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

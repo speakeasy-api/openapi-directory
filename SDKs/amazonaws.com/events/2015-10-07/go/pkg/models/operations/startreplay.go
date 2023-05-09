@@ -16,17 +16,21 @@ const (
 	StartReplayXAmzTargetEnumAwsEventsStartReplay StartReplayXAmzTargetEnum = "AWSEvents.StartReplay"
 )
 
+func (e StartReplayXAmzTargetEnum) ToPointer() *StartReplayXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartReplayXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.StartReplay":
-		*e = StartReplayXAmzTargetEnum(s)
+		*e = StartReplayXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartReplayXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartReplayXAmzTargetEnum: %v", v)
 	}
 }
 

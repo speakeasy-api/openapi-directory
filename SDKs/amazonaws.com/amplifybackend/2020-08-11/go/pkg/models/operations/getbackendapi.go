@@ -19,12 +19,16 @@ const (
 	GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnumNone                  GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum = "NONE"
 )
 
+func (e GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum) ToPointer() *GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum {
+	return &e
+}
+
 func (e *GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPTIMISTIC_CONCURRENCY":
 		fallthrough
 	case "LAMBDA":
@@ -32,10 +36,10 @@ func (e *GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrat
 	case "AUTOMERGE":
 		fallthrough
 	case "NONE":
-		*e = GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum(s)
+		*e = GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBackendAPIRequestBodyResourceConfigConflictResolutionResolutionStrategyEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnumOpenidConnect          GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum = "OPENID_CONNECT"
 )
 
+func (e GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum) ToPointer() *GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum {
+	return &e
+}
+
 func (e *GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "API_KEY":
 		fallthrough
 	case "AWS_IAM":
@@ -67,10 +75,10 @@ func (e *GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum) Unmarsha
 	case "AMAZON_COGNITO_USER_POOLS":
 		fallthrough
 	case "OPENID_CONNECT":
-		*e = GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum(s)
+		*e = GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum: %v", v)
 	}
 }
 

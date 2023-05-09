@@ -17,12 +17,16 @@ const (
 	CodeScanningAlertRuleSeverityEnumError   CodeScanningAlertRuleSeverityEnum = "error"
 )
 
+func (e CodeScanningAlertRuleSeverityEnum) ToPointer() *CodeScanningAlertRuleSeverityEnum {
+	return &e
+}
+
 func (e *CodeScanningAlertRuleSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "note":
@@ -30,10 +34,10 @@ func (e *CodeScanningAlertRuleSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "warning":
 		fallthrough
 	case "error":
-		*e = CodeScanningAlertRuleSeverityEnum(s)
+		*e = CodeScanningAlertRuleSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodeScanningAlertRuleSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for CodeScanningAlertRuleSeverityEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2VersionStatusEnumFailed                   GoogleCloudDialogflowV2VersionStatusEnum = "FAILED"
 )
 
+func (e GoogleCloudDialogflowV2VersionStatusEnum) ToPointer() *GoogleCloudDialogflowV2VersionStatusEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2VersionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERSION_STATUS_UNSPECIFIED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowV2VersionStatusEnum) UnmarshalJSON(data []byte) er
 	case "READY":
 		fallthrough
 	case "FAILED":
-		*e = GoogleCloudDialogflowV2VersionStatusEnum(s)
+		*e = GoogleCloudDialogflowV2VersionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2VersionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2VersionStatusEnum: %v", v)
 	}
 }
 

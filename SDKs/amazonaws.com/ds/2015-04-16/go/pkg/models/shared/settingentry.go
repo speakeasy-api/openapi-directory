@@ -10,6 +10,7 @@ import (
 type SettingEntry struct {
 	AllowedValues         *string                                     `json:"AllowedValues,omitempty"`
 	AppliedValue          *string                                     `json:"AppliedValue,omitempty"`
+	DataType              *string                                     `json:"DataType,omitempty"`
 	LastRequestedDateTime *time.Time                                  `json:"LastRequestedDateTime,omitempty"`
 	LastUpdatedDateTime   *time.Time                                  `json:"LastUpdatedDateTime,omitempty"`
 	Name                  *string                                     `json:"Name,omitempty"`

@@ -16,17 +16,21 @@ const (
 	DeleteWorkerBlockXAmzTargetEnumMTurkRequesterServiceV20170117DeleteWorkerBlock DeleteWorkerBlockXAmzTargetEnum = "MTurkRequesterServiceV20170117.DeleteWorkerBlock"
 )
 
+func (e DeleteWorkerBlockXAmzTargetEnum) ToPointer() *DeleteWorkerBlockXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteWorkerBlockXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.DeleteWorkerBlock":
-		*e = DeleteWorkerBlockXAmzTargetEnum(s)
+		*e = DeleteWorkerBlockXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteWorkerBlockXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteWorkerBlockXAmzTargetEnum: %v", v)
 	}
 }
 

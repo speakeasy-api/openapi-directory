@@ -15,19 +15,23 @@ const (
 	TableGranularityEnumMillis                          TableGranularityEnum = "MILLIS"
 )
 
+func (e TableGranularityEnum) ToPointer() *TableGranularityEnum {
+	return &e
+}
+
 func (e *TableGranularityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIMESTAMP_GRANULARITY_UNSPECIFIED":
 		fallthrough
 	case "MILLIS":
-		*e = TableGranularityEnum(s)
+		*e = TableGranularityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TableGranularityEnum: %s", s)
+		return fmt.Errorf("invalid value for TableGranularityEnum: %v", v)
 	}
 }
 

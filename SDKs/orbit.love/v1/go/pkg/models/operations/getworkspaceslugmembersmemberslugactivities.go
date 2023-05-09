@@ -20,19 +20,23 @@ const (
 	GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnumDesc GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum = "DESC"
 )
 
+func (e GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum) ToPointer() *GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASC":
 		fallthrough
 	case "DESC":
-		*e = GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum(s)
+		*e = GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnumOneHundred GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum = "100"
 )
 
+func (e GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum) ToPointer() *GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "10":
 		fallthrough
 	case "50":
 		fallthrough
 	case "100":
-		*e = GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum(s)
+		*e = GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum: %v", v)
 	}
 }
 
@@ -71,19 +79,23 @@ const (
 	GetWorkspaceSlugMembersMemberSlugActivitiesSortEnumMember     GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum = "member"
 )
 
+func (e GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum) ToPointer() *GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "occurred_at":
 		fallthrough
 	case "member":
-		*e = GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum(s)
+		*e = GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum: %v", v)
 	}
 }
 
@@ -95,6 +107,8 @@ type GetWorkspaceSlugMembersMemberSlugActivitiesRequest struct {
 	Page         *string                                                   `queryParam:"style=form,explode=true,name=page"`
 	Sort         *GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum      `queryParam:"style=form,explode=true,name=sort"`
 	// Deprecated in favor of the activity_type parameter.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Type          *string `queryParam:"style=form,explode=true,name=type"`
 	WorkspaceSlug string  `pathParam:"style=simple,explode=false,name=workspace_slug"`
 }

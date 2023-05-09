@@ -17,12 +17,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesBiddingStrategyStatusEnumRemoved     GoogleAdsSearchads360V0ResourcesBiddingStrategyStatusEnum = "REMOVED"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesBiddingStrategyStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesBiddingStrategyStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesBiddingStrategyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -30,10 +34,10 @@ func (e *GoogleAdsSearchads360V0ResourcesBiddingStrategyStatusEnum) UnmarshalJSO
 	case "ENABLED":
 		fallthrough
 	case "REMOVED":
-		*e = GoogleAdsSearchads360V0ResourcesBiddingStrategyStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesBiddingStrategyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesBiddingStrategyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesBiddingStrategyStatusEnum: %v", v)
 	}
 }
 
@@ -62,12 +66,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesBiddingStrategyTypeEnumTargetSpend             GoogleAdsSearchads360V0ResourcesBiddingStrategyTypeEnum = "TARGET_SPEND"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesBiddingStrategyTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesBiddingStrategyTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesBiddingStrategyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -105,10 +113,10 @@ func (e *GoogleAdsSearchads360V0ResourcesBiddingStrategyTypeEnum) UnmarshalJSON(
 	case "TARGET_ROAS":
 		fallthrough
 	case "TARGET_SPEND":
-		*e = GoogleAdsSearchads360V0ResourcesBiddingStrategyTypeEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesBiddingStrategyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesBiddingStrategyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesBiddingStrategyTypeEnum: %v", v)
 	}
 }
 

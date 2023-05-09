@@ -42,12 +42,16 @@ const (
 	PublicKeyAlgorithmEnumExternalSymmetricEncryption          PublicKeyAlgorithmEnum = "EXTERNAL_SYMMETRIC_ENCRYPTION"
 )
 
+func (e PublicKeyAlgorithmEnum) ToPointer() *PublicKeyAlgorithmEnum {
+	return &e
+}
+
 func (e *PublicKeyAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_SYMMETRIC_ENCRYPTION":
@@ -105,10 +109,10 @@ func (e *PublicKeyAlgorithmEnum) UnmarshalJSON(data []byte) error {
 	case "HMAC_SHA224":
 		fallthrough
 	case "EXTERNAL_SYMMETRIC_ENCRYPTION":
-		*e = PublicKeyAlgorithmEnum(s)
+		*e = PublicKeyAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublicKeyAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for PublicKeyAlgorithmEnum: %v", v)
 	}
 }
 
@@ -123,12 +127,16 @@ const (
 	PublicKeyProtectionLevelEnumExternalVpc                PublicKeyProtectionLevelEnum = "EXTERNAL_VPC"
 )
 
+func (e PublicKeyProtectionLevelEnum) ToPointer() *PublicKeyProtectionLevelEnum {
+	return &e
+}
+
 func (e *PublicKeyProtectionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROTECTION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "SOFTWARE":
@@ -138,10 +146,10 @@ func (e *PublicKeyProtectionLevelEnum) UnmarshalJSON(data []byte) error {
 	case "EXTERNAL":
 		fallthrough
 	case "EXTERNAL_VPC":
-		*e = PublicKeyProtectionLevelEnum(s)
+		*e = PublicKeyProtectionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublicKeyProtectionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PublicKeyProtectionLevelEnum: %v", v)
 	}
 }
 

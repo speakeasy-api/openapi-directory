@@ -14,18 +14,22 @@ const (
 	CostCategoryInheritedValueDimensionNameEnumTag               CostCategoryInheritedValueDimensionNameEnum = "TAG"
 )
 
+func (e CostCategoryInheritedValueDimensionNameEnum) ToPointer() *CostCategoryInheritedValueDimensionNameEnum {
+	return &e
+}
+
 func (e *CostCategoryInheritedValueDimensionNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINKED_ACCOUNT_NAME":
 		fallthrough
 	case "TAG":
-		*e = CostCategoryInheritedValueDimensionNameEnum(s)
+		*e = CostCategoryInheritedValueDimensionNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CostCategoryInheritedValueDimensionNameEnum: %s", s)
+		return fmt.Errorf("invalid value for CostCategoryInheritedValueDimensionNameEnum: %v", v)
 	}
 }

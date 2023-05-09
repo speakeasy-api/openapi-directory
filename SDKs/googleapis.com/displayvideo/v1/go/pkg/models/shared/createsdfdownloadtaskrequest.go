@@ -24,12 +24,16 @@ const (
 	CreateSdfDownloadTaskRequestVersionEnumSdfVersion55          CreateSdfDownloadTaskRequestVersionEnum = "SDF_VERSION_5_5"
 )
 
+func (e CreateSdfDownloadTaskRequestVersionEnum) ToPointer() *CreateSdfDownloadTaskRequestVersionEnum {
+	return &e
+}
+
 func (e *CreateSdfDownloadTaskRequestVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SDF_VERSION_UNSPECIFIED":
 		fallthrough
 	case "SDF_VERSION_3_1":
@@ -51,10 +55,10 @@ func (e *CreateSdfDownloadTaskRequestVersionEnum) UnmarshalJSON(data []byte) err
 	case "SDF_VERSION_5_4":
 		fallthrough
 	case "SDF_VERSION_5_5":
-		*e = CreateSdfDownloadTaskRequestVersionEnum(s)
+		*e = CreateSdfDownloadTaskRequestVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSdfDownloadTaskRequestVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSdfDownloadTaskRequestVersionEnum: %v", v)
 	}
 }
 

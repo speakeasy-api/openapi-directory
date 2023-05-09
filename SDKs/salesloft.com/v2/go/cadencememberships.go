@@ -37,7 +37,10 @@ func newCadenceMemberships(defaultClient, securityClient HTTPClient, serverURL, 
 // Cadence Membership
 func (s *cadenceMemberships) DeleteV2CadenceMembershipsIDJSON(ctx context.Context, request operations.DeleteV2CadenceMembershipsIDJSONRequest) (*operations.DeleteV2CadenceMembershipsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cadence_memberships/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/cadence_memberships/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +128,10 @@ func (s *cadenceMemberships) GetV2CadenceMembershipsJSON(ctx context.Context, re
 // Fetches a cadence membership, by ID only.
 func (s *cadenceMemberships) GetV2CadenceMembershipsIDJSON(ctx context.Context, request operations.GetV2CadenceMembershipsIDJSONRequest) (*operations.GetV2CadenceMembershipsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/cadence_memberships/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/cadence_memberships/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

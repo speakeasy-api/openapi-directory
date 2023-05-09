@@ -17,19 +17,23 @@ const (
 	CreateCustomPluginRequestBodyContentTypeEnumZip CreateCustomPluginRequestBodyContentTypeEnum = "ZIP"
 )
 
+func (e CreateCustomPluginRequestBodyContentTypeEnum) ToPointer() *CreateCustomPluginRequestBodyContentTypeEnum {
+	return &e
+}
+
 func (e *CreateCustomPluginRequestBodyContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JAR":
 		fallthrough
 	case "ZIP":
-		*e = CreateCustomPluginRequestBodyContentTypeEnum(s)
+		*e = CreateCustomPluginRequestBodyContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCustomPluginRequestBodyContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCustomPluginRequestBodyContentTypeEnum: %v", v)
 	}
 }
 

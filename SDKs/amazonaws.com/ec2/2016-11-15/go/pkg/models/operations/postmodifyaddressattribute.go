@@ -15,17 +15,21 @@ const (
 	POSTModifyAddressAttributeActionEnumModifyAddressAttribute POSTModifyAddressAttributeActionEnum = "ModifyAddressAttribute"
 )
 
+func (e POSTModifyAddressAttributeActionEnum) ToPointer() *POSTModifyAddressAttributeActionEnum {
+	return &e
+}
+
 func (e *POSTModifyAddressAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyAddressAttribute":
-		*e = POSTModifyAddressAttributeActionEnum(s)
+		*e = POSTModifyAddressAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyAddressAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyAddressAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyAddressAttributeVersionEnumTwoThousandAndSixteen1115 POSTModifyAddressAttributeVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyAddressAttributeVersionEnum) ToPointer() *POSTModifyAddressAttributeVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyAddressAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyAddressAttributeVersionEnum(s)
+		*e = POSTModifyAddressAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyAddressAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyAddressAttributeVersionEnum: %v", v)
 	}
 }
 

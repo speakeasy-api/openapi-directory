@@ -13,33 +13,30 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/restful4up.local/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ApplyYaraRulesRequestBody{
+    ctx := context.Background()
+    res, err := s.ApplyYaraRules(ctx, operations.ApplyYaraRulesRequestBody{
         File: operations.ApplyYaraRulesRequestBodyFile{
             Content: []byte("corrupti"),
             File: "provident",
         },
-        IsUnpackingRequired: "false",
+        IsUnpackingRequired: operations.ApplyYaraRulesRequestBodyIsUnpackingRequiredEnumFalse.ToPointer(),
         Rules: []string{
             "unde",
             "nulla",
             "corrupti",
             "illum",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.ApplyYaraRules(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -54,13 +51,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `ApplyYaraRules` - apply given YARA rules to the given executable. (upto 10 rules)
-* `Clean` - clean up the uploaded files
-* `EmulationOutput` - try to get the emulation output after unpacking the file
-* `GeneratePartialYaraRule` - generate partial YARA rules for give executable. (Rule without the condition section)
-* `Unpack` - try to unpack the given file
+* [ApplyYaraRules](docs/sdk/README.md#applyyararules) - apply given YARA rules to the given executable. (upto 10 rules)
+* [Clean](docs/sdk/README.md#clean) - clean up the uploaded files
+* [EmulationOutput](docs/sdk/README.md#emulationoutput) - try to get the emulation output after unpacking the file
+* [GeneratePartialYaraRule](docs/sdk/README.md#generatepartialyararule) - generate partial YARA rules for give executable. (Rule without the condition section)
+* [Unpack](docs/sdk/README.md#unpack) - try to unpack the given file
 <!-- End SDK Available Operations -->
 
 ### Maturity

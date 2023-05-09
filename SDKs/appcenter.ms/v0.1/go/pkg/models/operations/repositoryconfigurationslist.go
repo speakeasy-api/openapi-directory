@@ -37,21 +37,25 @@ const (
 	RepositoryConfigurationsList200ApplicationJSONStateEnumActive       RepositoryConfigurationsList200ApplicationJSONStateEnum = "active"
 )
 
+func (e RepositoryConfigurationsList200ApplicationJSONStateEnum) ToPointer() *RepositoryConfigurationsList200ApplicationJSONStateEnum {
+	return &e
+}
+
 func (e *RepositoryConfigurationsList200ApplicationJSONStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unauthorized":
 		fallthrough
 	case "inactive":
 		fallthrough
 	case "active":
-		*e = RepositoryConfigurationsList200ApplicationJSONStateEnum(s)
+		*e = RepositoryConfigurationsList200ApplicationJSONStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryConfigurationsList200ApplicationJSONStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryConfigurationsList200ApplicationJSONStateEnum: %v", v)
 	}
 }
 

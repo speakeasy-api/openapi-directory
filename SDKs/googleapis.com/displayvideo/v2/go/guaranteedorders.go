@@ -90,7 +90,10 @@ func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersCreate(ctx context.Contex
 // DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessors - Edits read advertisers of a guaranteed order.
 func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessors(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsRequest, security operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsSecurity) (*operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/guaranteedOrders/{guaranteedOrderId}:editGuaranteedOrderReadAccessors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/guaranteedOrders/{guaranteedOrderId}:editGuaranteedOrderReadAccessors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditGuaranteedOrderReadAccessorsRequest", "json")
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAc
 // DisplayvideoGuaranteedOrdersGet - Gets a guaranteed order.
 func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersGet(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersGetRequest, security operations.DisplayvideoGuaranteedOrdersGetSecurity) (*operations.DisplayvideoGuaranteedOrdersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/guaranteedOrders/{guaranteedOrderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/guaranteedOrders/{guaranteedOrderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -241,7 +247,10 @@ func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersList(ctx context.Context,
 // DisplayvideoGuaranteedOrdersPatch - Updates an existing guaranteed order. Returns the updated guaranteed order if successful.
 func (s *guaranteedOrders) DisplayvideoGuaranteedOrdersPatch(ctx context.Context, request operations.DisplayvideoGuaranteedOrdersPatchRequest, security operations.DisplayvideoGuaranteedOrdersPatchSecurity) (*operations.DisplayvideoGuaranteedOrdersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/guaranteedOrders/{guaranteedOrderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/guaranteedOrders/{guaranteedOrderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GuaranteedOrderInput", "json")
 	if err != nil {

@@ -19,12 +19,16 @@ const (
 	VpcLinkVpcLinkStatusEnumInactive  VpcLinkVpcLinkStatusEnum = "INACTIVE"
 )
 
+func (e VpcLinkVpcLinkStatusEnum) ToPointer() *VpcLinkVpcLinkStatusEnum {
+	return &e
+}
+
 func (e *VpcLinkVpcLinkStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "AVAILABLE":
@@ -34,10 +38,10 @@ func (e *VpcLinkVpcLinkStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "INACTIVE":
-		*e = VpcLinkVpcLinkStatusEnum(s)
+		*e = VpcLinkVpcLinkStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VpcLinkVpcLinkStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for VpcLinkVpcLinkStatusEnum: %v", v)
 	}
 }
 
@@ -48,17 +52,21 @@ const (
 	VpcLinkVpcLinkVersionEnumV2 VpcLinkVpcLinkVersionEnum = "V2"
 )
 
+func (e VpcLinkVpcLinkVersionEnum) ToPointer() *VpcLinkVpcLinkVersionEnum {
+	return &e
+}
+
 func (e *VpcLinkVpcLinkVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "V2":
-		*e = VpcLinkVpcLinkVersionEnum(s)
+		*e = VpcLinkVpcLinkVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VpcLinkVpcLinkVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for VpcLinkVpcLinkVersionEnum: %v", v)
 	}
 }
 

@@ -41,7 +41,10 @@ func newCompany(defaultClient, securityClient HTTPClient, serverURL, language, s
 // [ref]: https://etmdb.com/en/company-list/-updated_date
 func (s *company) CompanySearchRead(ctx context.Context, request operations.CompanySearchReadRequest) (*operations.CompanySearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/company/search/{company_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/company/search/{company_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

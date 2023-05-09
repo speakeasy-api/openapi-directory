@@ -16,12 +16,16 @@ const (
 	CoverageResourceTypeEnumAwsLambdaFunction    CoverageResourceTypeEnum = "AWS_LAMBDA_FUNCTION"
 )
 
+func (e CoverageResourceTypeEnum) ToPointer() *CoverageResourceTypeEnum {
+	return &e
+}
+
 func (e *CoverageResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_EC2_INSTANCE":
 		fallthrough
 	case "AWS_ECR_CONTAINER_IMAGE":
@@ -29,9 +33,9 @@ func (e *CoverageResourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AWS_ECR_REPOSITORY":
 		fallthrough
 	case "AWS_LAMBDA_FUNCTION":
-		*e = CoverageResourceTypeEnum(s)
+		*e = CoverageResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CoverageResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CoverageResourceTypeEnum: %v", v)
 	}
 }

@@ -98,12 +98,16 @@ const (
 	CreateInstanceEventWindowRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateInstanceEventWindowRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateInstanceEventWindowRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateInstanceEventWindowRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateInstanceEventWindowRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateInstanceEventWindowRequestTagSpecificationsResourceTypeEnum) Unma
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateInstanceEventWindowRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateInstanceEventWindowRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateInstanceEventWindowRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateInstanceEventWindowRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

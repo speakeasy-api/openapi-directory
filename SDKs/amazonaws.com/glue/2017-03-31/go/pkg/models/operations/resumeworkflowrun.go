@@ -16,17 +16,21 @@ const (
 	ResumeWorkflowRunXAmzTargetEnumAwsGlueResumeWorkflowRun ResumeWorkflowRunXAmzTargetEnum = "AWSGlue.ResumeWorkflowRun"
 )
 
+func (e ResumeWorkflowRunXAmzTargetEnum) ToPointer() *ResumeWorkflowRunXAmzTargetEnum {
+	return &e
+}
+
 func (e *ResumeWorkflowRunXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.ResumeWorkflowRun":
-		*e = ResumeWorkflowRunXAmzTargetEnum(s)
+		*e = ResumeWorkflowRunXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResumeWorkflowRunXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ResumeWorkflowRunXAmzTargetEnum: %v", v)
 	}
 }
 

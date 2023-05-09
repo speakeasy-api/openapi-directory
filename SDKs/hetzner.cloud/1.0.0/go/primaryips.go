@@ -48,7 +48,10 @@ func newPrimaryIPs(defaultClient, securityClient HTTPClient, serverURL, language
 // The Primary IP may be assigned to a Server. In this case it is unassigned automatically. The Server must be powered off (status `off`) in order for this operation to succeed.
 func (s *primaryIPs) DeletePrimaryIpsID(ctx context.Context, request operations.DeletePrimaryIpsIDRequest) (*operations.DeletePrimaryIpsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -133,7 +136,10 @@ func (s *primaryIPs) GetPrimaryIps(ctx context.Context, request operations.GetPr
 // Returns a specific Primary IP object.
 func (s *primaryIPs) GetPrimaryIpsID(ctx context.Context, request operations.GetPrimaryIpsIDRequest) (*operations.GetPrimaryIpsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -246,7 +252,10 @@ func (s *primaryIPs) PostPrimaryIps(ctx context.Context, request operations.Post
 // If the Primary IP object changes during the request, the response will be a “conflict” error.
 func (s *primaryIPs) PutPrimaryIpsID(ctx context.Context, request operations.PutPrimaryIpsIDRequest) (*operations.PutPrimaryIpsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

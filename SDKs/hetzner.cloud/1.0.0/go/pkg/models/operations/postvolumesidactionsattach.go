@@ -45,21 +45,25 @@ const (
 	PostVolumesIDActionsAttachActionResponseActionStatusEnumError   PostVolumesIDActionsAttachActionResponseActionStatusEnum = "error"
 )
 
+func (e PostVolumesIDActionsAttachActionResponseActionStatusEnum) ToPointer() *PostVolumesIDActionsAttachActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostVolumesIDActionsAttachActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostVolumesIDActionsAttachActionResponseActionStatusEnum(s)
+		*e = PostVolumesIDActionsAttachActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostVolumesIDActionsAttachActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostVolumesIDActionsAttachActionResponseActionStatusEnum: %v", v)
 	}
 }
 

@@ -15,21 +15,25 @@ const (
 	GeometryTypeEnumMultiPolygon GeometryTypeEnum = "MultiPolygon"
 )
 
+func (e GeometryTypeEnum) ToPointer() *GeometryTypeEnum {
+	return &e
+}
+
 func (e *GeometryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Point":
 		fallthrough
 	case "Polygon":
 		fallthrough
 	case "MultiPolygon":
-		*e = GeometryTypeEnum(s)
+		*e = GeometryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GeometryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GeometryTypeEnum: %v", v)
 	}
 }
 

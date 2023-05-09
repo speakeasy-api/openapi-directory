@@ -36,7 +36,10 @@ func newPulls(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#check-if-a-pull-request-has-been-merged - API method documentation
 func (s *pulls) PullsCheckIfMerged(ctx context.Context, request operations.PullsCheckIfMergedRequest) (*operations.PullsCheckIfMergedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/merge", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/merge", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -75,7 +78,10 @@ func (s *pulls) PullsCheckIfMerged(ctx context.Context, request operations.Pulls
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#create-a-pull-request - API method documentation
 func (s *pulls) PullsCreate(ctx context.Context, request operations.PullsCreateRequest) (*operations.PullsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -155,7 +161,10 @@ func (s *pulls) PullsCreate(ctx context.Context, request operations.PullsCreateR
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#create-a-reply-for-a-review-comment - API method documentation
 func (s *pulls) PullsCreateReplyForReviewComment(ctx context.Context, request operations.PullsCreateReplyForReviewCommentRequest) (*operations.PullsCreateReplyForReviewCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -229,7 +238,10 @@ func (s *pulls) PullsCreateReplyForReviewComment(ctx context.Context, request op
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#create-a-review-for-a-pull-request - API method documentation
 func (s *pulls) PullsCreateReview(ctx context.Context, request operations.PullsCreateReviewRequest) (*operations.PullsCreateReviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -309,7 +321,10 @@ func (s *pulls) PullsCreateReview(ctx context.Context, request operations.PullsC
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#create-a-review-comment-for-a-pull-request - API method documentation
 func (s *pulls) PullsCreateReviewComment(ctx context.Context, request operations.PullsCreateReviewCommentRequest) (*operations.PullsCreateReviewCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -386,7 +401,10 @@ func (s *pulls) PullsCreateReviewComment(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#delete-a-pending-review-for-a-pull-request - API method documentation
 func (s *pulls) PullsDeletePendingReview(ctx context.Context, request operations.PullsDeletePendingReviewRequest) (*operations.PullsDeletePendingReviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -452,7 +470,10 @@ func (s *pulls) PullsDeletePendingReview(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#delete-a-review-comment-for-a-pull-request - API method documentation
 func (s *pulls) PullsDeleteReviewComment(ctx context.Context, request operations.PullsDeleteReviewCommentRequest) (*operations.PullsDeleteReviewCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -499,7 +520,10 @@ func (s *pulls) PullsDeleteReviewComment(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#dismiss-a-review-for-a-pull-request - API method documentation
 func (s *pulls) PullsDismissReview(ctx context.Context, request operations.PullsDismissReviewRequest) (*operations.PullsDismissReviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -589,7 +613,10 @@ func (s *pulls) PullsDismissReview(ctx context.Context, request operations.Pulls
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#get-a-pull-request - API method documentation
 func (s *pulls) PullsGet(ctx context.Context, request operations.PullsGetRequest) (*operations.PullsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -647,7 +674,10 @@ func (s *pulls) PullsGet(ctx context.Context, request operations.PullsGetRequest
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#get-a-review-for-a-pull-request - API method documentation
 func (s *pulls) PullsGetReview(ctx context.Context, request operations.PullsGetReviewRequest) (*operations.PullsGetReviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -703,7 +733,10 @@ func (s *pulls) PullsGetReview(ctx context.Context, request operations.PullsGetR
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#get-a-review-comment-for-a-pull-request - API method documentation
 func (s *pulls) PullsGetReviewComment(ctx context.Context, request operations.PullsGetReviewCommentRequest) (*operations.PullsGetReviewCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -759,7 +792,10 @@ func (s *pulls) PullsGetReviewComment(ctx context.Context, request operations.Pu
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#list-pull-requests - API method documentation
 func (s *pulls) PullsList(ctx context.Context, request operations.PullsListRequest) (*operations.PullsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -822,7 +858,10 @@ func (s *pulls) PullsList(ctx context.Context, request operations.PullsListReque
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#list-comments-for-a-pull-request-review - API method documentation
 func (s *pulls) PullsListCommentsForReview(ctx context.Context, request operations.PullsListCommentsForReviewRequest) (*operations.PullsListCommentsForReviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -884,7 +923,10 @@ func (s *pulls) PullsListCommentsForReview(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#list-commits-on-a-pull-request - API method documentation
 func (s *pulls) PullsListCommits(ctx context.Context, request operations.PullsListCommitsRequest) (*operations.PullsListCommitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/commits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/commits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -936,7 +978,10 @@ func (s *pulls) PullsListCommits(ctx context.Context, request operations.PullsLi
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#list-pull-requests-files - API method documentation
 func (s *pulls) PullsListFiles(ctx context.Context, request operations.PullsListFilesRequest) (*operations.PullsListFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1007,7 +1052,10 @@ func (s *pulls) PullsListFiles(ctx context.Context, request operations.PullsList
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#list-requested-reviewers-for-a-pull-request - API method documentation
 func (s *pulls) PullsListRequestedReviewers(ctx context.Context, request operations.PullsListRequestedReviewersRequest) (*operations.PullsListRequestedReviewersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1059,7 +1107,10 @@ func (s *pulls) PullsListRequestedReviewers(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#list-review-comments-on-a-pull-request - API method documentation
 func (s *pulls) PullsListReviewComments(ctx context.Context, request operations.PullsListReviewCommentsRequest) (*operations.PullsListReviewCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1111,7 +1162,10 @@ func (s *pulls) PullsListReviewComments(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#list-review-comments-in-a-repository - API method documentation
 func (s *pulls) PullsListReviewCommentsForRepo(ctx context.Context, request operations.PullsListReviewCommentsForRepoRequest) (*operations.PullsListReviewCommentsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1163,7 +1217,10 @@ func (s *pulls) PullsListReviewCommentsForRepo(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#list-reviews-for-a-pull-request - API method documentation
 func (s *pulls) PullsListReviews(ctx context.Context, request operations.PullsListReviewsRequest) (*operations.PullsListReviewsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1215,7 +1272,10 @@ func (s *pulls) PullsListReviews(ctx context.Context, request operations.PullsLi
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#merge-a-pull-request - API method documentation
 func (s *pulls) PullsMerge(ctx context.Context, request operations.PullsMergeRequest) (*operations.PullsMergeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/merge", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/merge", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1309,7 +1369,10 @@ func (s *pulls) PullsMerge(ctx context.Context, request operations.PullsMergeReq
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#remove-requested-reviewers-from-a-pull-request - API method documentation
 func (s *pulls) PullsRemoveRequestedReviewers(ctx context.Context, request operations.PullsRemoveRequestedReviewersRequest) (*operations.PullsRemoveRequestedReviewersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1375,7 +1438,10 @@ func (s *pulls) PullsRemoveRequestedReviewers(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#request-reviewers-for-a-pull-request - API method documentation
 func (s *pulls) PullsRequestReviewers(ctx context.Context, request operations.PullsRequestReviewersRequest) (*operations.PullsRequestReviewersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1438,7 +1504,10 @@ func (s *pulls) PullsRequestReviewers(ctx context.Context, request operations.Pu
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#submit-a-review-for-a-pull-request - API method documentation
 func (s *pulls) PullsSubmitReview(ctx context.Context, request operations.PullsSubmitReviewRequest) (*operations.PullsSubmitReviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1516,7 +1585,10 @@ func (s *pulls) PullsSubmitReview(ctx context.Context, request operations.PullsS
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls/#update-a-pull-request - API method documentation
 func (s *pulls) PullsUpdate(ctx context.Context, request operations.PullsUpdateRequest) (*operations.PullsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1589,7 +1661,10 @@ func (s *pulls) PullsUpdate(ctx context.Context, request operations.PullsUpdateR
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#update-a-pull-request-branch - API method documentation
 func (s *pulls) PullsUpdateBranch(ctx context.Context, request operations.PullsUpdateBranchRequest) (*operations.PullsUpdateBranchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/update-branch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/update-branch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1672,7 +1747,10 @@ func (s *pulls) PullsUpdateBranch(ctx context.Context, request operations.PullsU
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#update-a-review-for-a-pull-request - API method documentation
 func (s *pulls) PullsUpdateReview(ctx context.Context, request operations.PullsUpdateReviewRequest) (*operations.PullsUpdateReviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1738,7 +1816,10 @@ func (s *pulls) PullsUpdateReview(ctx context.Context, request operations.PullsU
 // https://docs.github.com/enterprise-server@2.21/rest/reference/pulls#update-a-review-comment-for-a-pull-request - API method documentation
 func (s *pulls) PullsUpdateReviewComment(ctx context.Context, request operations.PullsUpdateReviewCommentRequest) (*operations.PullsUpdateReviewCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

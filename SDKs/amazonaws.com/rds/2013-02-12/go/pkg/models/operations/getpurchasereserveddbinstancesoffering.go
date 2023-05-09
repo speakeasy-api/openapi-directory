@@ -15,17 +15,21 @@ const (
 	GETPurchaseReservedDBInstancesOfferingActionEnumPurchaseReservedDbInstancesOffering GETPurchaseReservedDBInstancesOfferingActionEnum = "PurchaseReservedDBInstancesOffering"
 )
 
+func (e GETPurchaseReservedDBInstancesOfferingActionEnum) ToPointer() *GETPurchaseReservedDBInstancesOfferingActionEnum {
+	return &e
+}
+
 func (e *GETPurchaseReservedDBInstancesOfferingActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PurchaseReservedDBInstancesOffering":
-		*e = GETPurchaseReservedDBInstancesOfferingActionEnum(s)
+		*e = GETPurchaseReservedDBInstancesOfferingActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPurchaseReservedDBInstancesOfferingActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPurchaseReservedDBInstancesOfferingActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETPurchaseReservedDBInstancesOfferingVersionEnumTwoThousandAndThirteen0212 GETPurchaseReservedDBInstancesOfferingVersionEnum = "2013-02-12"
 )
 
+func (e GETPurchaseReservedDBInstancesOfferingVersionEnum) ToPointer() *GETPurchaseReservedDBInstancesOfferingVersionEnum {
+	return &e
+}
+
 func (e *GETPurchaseReservedDBInstancesOfferingVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETPurchaseReservedDBInstancesOfferingVersionEnum(s)
+		*e = GETPurchaseReservedDBInstancesOfferingVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPurchaseReservedDBInstancesOfferingVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPurchaseReservedDBInstancesOfferingVersionEnum: %v", v)
 	}
 }
 

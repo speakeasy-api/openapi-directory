@@ -32,12 +32,16 @@ const (
 	OrganizationsCreateOrUpdateDefaultApplicationJSONErrorCodeEnumTooManyRequests     OrganizationsCreateOrUpdateDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e OrganizationsCreateOrUpdateDefaultApplicationJSONErrorCodeEnum) ToPointer() *OrganizationsCreateOrUpdateDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *OrganizationsCreateOrUpdateDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -51,10 +55,10 @@ func (e *OrganizationsCreateOrUpdateDefaultApplicationJSONErrorCodeEnum) Unmarsh
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = OrganizationsCreateOrUpdateDefaultApplicationJSONErrorCodeEnum(s)
+		*e = OrganizationsCreateOrUpdateDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationsCreateOrUpdateDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationsCreateOrUpdateDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -76,19 +80,23 @@ const (
 	OrganizationsCreateOrUpdate201ApplicationJSONOriginEnumHockeyapp OrganizationsCreateOrUpdate201ApplicationJSONOriginEnum = "hockeyapp"
 )
 
+func (e OrganizationsCreateOrUpdate201ApplicationJSONOriginEnum) ToPointer() *OrganizationsCreateOrUpdate201ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *OrganizationsCreateOrUpdate201ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = OrganizationsCreateOrUpdate201ApplicationJSONOriginEnum(s)
+		*e = OrganizationsCreateOrUpdate201ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationsCreateOrUpdate201ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationsCreateOrUpdate201ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	FeedbackValueEnumNotUseful    FeedbackValueEnum = "NOT_USEFUL"
 )
 
+func (e FeedbackValueEnum) ToPointer() *FeedbackValueEnum {
+	return &e
+}
+
 func (e *FeedbackValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_SPECIFIED":
 		fallthrough
 	case "USEFUL":
 		fallthrough
 	case "NOT_USEFUL":
-		*e = FeedbackValueEnum(s)
+		*e = FeedbackValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeedbackValueEnum: %s", s)
+		return fmt.Errorf("invalid value for FeedbackValueEnum: %v", v)
 	}
 }

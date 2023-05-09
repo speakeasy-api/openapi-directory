@@ -16,17 +16,21 @@ const (
 	PutImageScanningConfigurationXAmzTargetEnumAmazonEc2ContainerRegistryV20150921PutImageScanningConfiguration PutImageScanningConfigurationXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.PutImageScanningConfiguration"
 )
 
+func (e PutImageScanningConfigurationXAmzTargetEnum) ToPointer() *PutImageScanningConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutImageScanningConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.PutImageScanningConfiguration":
-		*e = PutImageScanningConfigurationXAmzTargetEnum(s)
+		*e = PutImageScanningConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutImageScanningConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutImageScanningConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

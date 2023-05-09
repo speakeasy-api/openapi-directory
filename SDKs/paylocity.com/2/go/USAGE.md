@@ -2,38 +2,36 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AddOrUpdateAdditionalRatesRequest{
+    ctx := context.Background()
+    res, err := s.AdditionalRates.AddOrUpdateAdditionalRates(ctx, operations.AddOrUpdateAdditionalRatesRequest{
         AdditionalRate: shared.AdditionalRate{
-            ChangeReason: "corrupti",
-            CostCenter1: "provident",
-            CostCenter2: "distinctio",
-            CostCenter3: "quibusdam",
-            EffectiveDate: "unde",
-            EndCheckDate: "nulla",
-            Job: "corrupti",
-            Rate: 8472.52,
-            RateCode: "vel",
-            RateNotes: "error",
-            RatePer: "deserunt",
-            Shift: "suscipit",
+            ChangeReason: sdk.String("corrupti"),
+            CostCenter1: sdk.String("provident"),
+            CostCenter2: sdk.String("distinctio"),
+            CostCenter3: sdk.String("quibusdam"),
+            EffectiveDate: sdk.String("unde"),
+            EndCheckDate: sdk.String("nulla"),
+            Job: sdk.String("corrupti"),
+            Rate: sdk.Float64(8472.52),
+            RateCode: sdk.String("vel"),
+            RateNotes: sdk.String("error"),
+            RatePer: sdk.String("deserunt"),
+            Shift: sdk.String("suscipit"),
         },
         CompanyID: "iure",
         EmployeeID: "magnam",
-    }
-
-    ctx := context.Background()
-    res, err := s.AdditionalRates.AddOrUpdateAdditionalRates(ctx, req, operations.AddOrUpdateAdditionalRatesSecurity{
+    }, operations.AddOrUpdateAdditionalRatesSecurity{
         PaylocityAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

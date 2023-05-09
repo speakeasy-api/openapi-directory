@@ -16,17 +16,21 @@ const (
 	DescribeClientAuthenticationSettingsXAmzTargetEnumDirectoryService20150416DescribeClientAuthenticationSettings DescribeClientAuthenticationSettingsXAmzTargetEnum = "DirectoryService_20150416.DescribeClientAuthenticationSettings"
 )
 
+func (e DescribeClientAuthenticationSettingsXAmzTargetEnum) ToPointer() *DescribeClientAuthenticationSettingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeClientAuthenticationSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.DescribeClientAuthenticationSettings":
-		*e = DescribeClientAuthenticationSettingsXAmzTargetEnum(s)
+		*e = DescribeClientAuthenticationSettingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeClientAuthenticationSettingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeClientAuthenticationSettingsXAmzTargetEnum: %v", v)
 	}
 }
 

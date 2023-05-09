@@ -2,27 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAllTransfersRequest{
-        ID: "111",
-        Limit: "10",
-        Offset: "0",
-        Order: "ASC",
-        Status: "CREATED",
-    }
-
     ctx := context.Background()
-    res, err := s.BillingSubPartnerAPI.GetAllTransfers(ctx, req)
+    res, err := s.BillingSubPartnerAPI.GetAllTransfers(ctx, operations.GetAllTransfersRequest{
+        ID: sdk.String("111"),
+        Limit: sdk.String("10"),
+        Offset: sdk.String("0"),
+        Order: sdk.String("ASC"),
+        Status: sdk.String("CREATED"),
+    })
     if err != nil {
         log.Fatal(err)
     }

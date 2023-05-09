@@ -8,6 +8,10 @@ import (
 	"net/http"
 )
 
+type OrganizationsListSecurity struct {
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
+}
+
 type OrganizationsListDefaultApplicationJSONErrorCodeEnum string
 
 const (
@@ -20,12 +24,16 @@ const (
 	OrganizationsListDefaultApplicationJSONErrorCodeEnumTooManyRequests     OrganizationsListDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e OrganizationsListDefaultApplicationJSONErrorCodeEnum) ToPointer() *OrganizationsListDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *OrganizationsListDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -39,10 +47,10 @@ func (e *OrganizationsListDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(dat
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = OrganizationsListDefaultApplicationJSONErrorCodeEnum(s)
+		*e = OrganizationsListDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationsListDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationsListDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -64,19 +72,23 @@ const (
 	OrganizationsList200ApplicationJSONOriginEnumHockeyapp OrganizationsList200ApplicationJSONOriginEnum = "hockeyapp"
 )
 
+func (e OrganizationsList200ApplicationJSONOriginEnum) ToPointer() *OrganizationsList200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *OrganizationsList200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = OrganizationsList200ApplicationJSONOriginEnum(s)
+		*e = OrganizationsList200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationsList200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationsList200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

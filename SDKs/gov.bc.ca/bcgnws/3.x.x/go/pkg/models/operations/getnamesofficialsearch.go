@@ -9,50 +9,58 @@ import (
 )
 
 // GetNamesOfficialSearchEmbedEnum - A flag to indicate whether to embed the corresponding 'feature' into each matching name
-type GetNamesOfficialSearchEmbedEnum string
+type GetNamesOfficialSearchEmbedEnum int64
 
 const (
-	GetNamesOfficialSearchEmbedEnumZero GetNamesOfficialSearchEmbedEnum = "0"
-	GetNamesOfficialSearchEmbedEnumOne  GetNamesOfficialSearchEmbedEnum = "1"
+	GetNamesOfficialSearchEmbedEnumZero GetNamesOfficialSearchEmbedEnum = 0
+	GetNamesOfficialSearchEmbedEnumOne  GetNamesOfficialSearchEmbedEnum = 1
 )
 
+func (e GetNamesOfficialSearchEmbedEnum) ToPointer() *GetNamesOfficialSearchEmbedEnum {
+	return &e
+}
+
 func (e *GetNamesOfficialSearchEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = GetNamesOfficialSearchEmbedEnum(s)
+	case 1:
+		*e = GetNamesOfficialSearchEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesOfficialSearchEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesOfficialSearchEmbedEnum: %v", v)
 	}
 }
 
 // GetNamesOfficialSearchExactSpellingEnum - If the 'name' parameter is specified, 'exactSpelling' specifies whether to include only names that exactly match the search text (exactSpelling=1), or whether to also include names with similar spellings (exactSpelling=0)
-type GetNamesOfficialSearchExactSpellingEnum string
+type GetNamesOfficialSearchExactSpellingEnum int64
 
 const (
-	GetNamesOfficialSearchExactSpellingEnumZero GetNamesOfficialSearchExactSpellingEnum = "0"
-	GetNamesOfficialSearchExactSpellingEnumOne  GetNamesOfficialSearchExactSpellingEnum = "1"
+	GetNamesOfficialSearchExactSpellingEnumZero GetNamesOfficialSearchExactSpellingEnum = 0
+	GetNamesOfficialSearchExactSpellingEnumOne  GetNamesOfficialSearchExactSpellingEnum = 1
 )
 
+func (e GetNamesOfficialSearchExactSpellingEnum) ToPointer() *GetNamesOfficialSearchExactSpellingEnum {
+	return &e
+}
+
 func (e *GetNamesOfficialSearchExactSpellingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = GetNamesOfficialSearchExactSpellingEnum(s)
+	case 1:
+		*e = GetNamesOfficialSearchExactSpellingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesOfficialSearchExactSpellingEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesOfficialSearchExactSpellingEnum: %v", v)
 	}
 }
 
@@ -66,12 +74,16 @@ const (
 	GetNamesOfficialSearchOutputFormatEnumCsv  GetNamesOfficialSearchOutputFormatEnum = "csv"
 )
 
+func (e GetNamesOfficialSearchOutputFormatEnum) ToPointer() *GetNamesOfficialSearchOutputFormatEnum {
+	return &e
+}
+
 func (e *GetNamesOfficialSearchOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -79,55 +91,59 @@ func (e *GetNamesOfficialSearchOutputFormatEnum) UnmarshalJSON(data []byte) erro
 	case "kml":
 		fallthrough
 	case "csv":
-		*e = GetNamesOfficialSearchOutputFormatEnum(s)
+		*e = GetNamesOfficialSearchOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesOfficialSearchOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesOfficialSearchOutputFormatEnum: %v", v)
 	}
 }
 
 // GetNamesOfficialSearchOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries.
-type GetNamesOfficialSearchOutputSrsEnum string
+type GetNamesOfficialSearchOutputSrsEnum int64
 
 const (
-	GetNamesOfficialSearchOutputSrsEnumFourThousandThreeHundredAndTwentySix   GetNamesOfficialSearchOutputSrsEnum = "4326"
-	GetNamesOfficialSearchOutputSrsEnumFourThousandTwoHundredAndSixtyNine     GetNamesOfficialSearchOutputSrsEnum = "4269"
-	GetNamesOfficialSearchOutputSrsEnumThreeThousandAndFive                   GetNamesOfficialSearchOutputSrsEnum = "3005"
-	GetNamesOfficialSearchOutputSrsEnumThreeThousandEightHundredAndFiftySeven GetNamesOfficialSearchOutputSrsEnum = "3857"
-	GetNamesOfficialSearchOutputSrsEnumTwentySixThousandNineHundredAndSeven   GetNamesOfficialSearchOutputSrsEnum = "26907"
-	GetNamesOfficialSearchOutputSrsEnumTwentySixThousandNineHundredAndEight   GetNamesOfficialSearchOutputSrsEnum = "26908"
-	GetNamesOfficialSearchOutputSrsEnumTwentySixThousandNineHundredAndNine    GetNamesOfficialSearchOutputSrsEnum = "26909"
-	GetNamesOfficialSearchOutputSrsEnumTwentySixThousandNineHundredAndTen     GetNamesOfficialSearchOutputSrsEnum = "26910"
-	GetNamesOfficialSearchOutputSrsEnumTwentySixThousandNineHundredAndEleven  GetNamesOfficialSearchOutputSrsEnum = "26911"
+	GetNamesOfficialSearchOutputSrsEnumFourThousandThreeHundredAndTwentySix   GetNamesOfficialSearchOutputSrsEnum = 4326
+	GetNamesOfficialSearchOutputSrsEnumFourThousandTwoHundredAndSixtyNine     GetNamesOfficialSearchOutputSrsEnum = 4269
+	GetNamesOfficialSearchOutputSrsEnumThreeThousandAndFive                   GetNamesOfficialSearchOutputSrsEnum = 3005
+	GetNamesOfficialSearchOutputSrsEnumThreeThousandEightHundredAndFiftySeven GetNamesOfficialSearchOutputSrsEnum = 3857
+	GetNamesOfficialSearchOutputSrsEnumTwentySixThousandNineHundredAndSeven   GetNamesOfficialSearchOutputSrsEnum = 26907
+	GetNamesOfficialSearchOutputSrsEnumTwentySixThousandNineHundredAndEight   GetNamesOfficialSearchOutputSrsEnum = 26908
+	GetNamesOfficialSearchOutputSrsEnumTwentySixThousandNineHundredAndNine    GetNamesOfficialSearchOutputSrsEnum = 26909
+	GetNamesOfficialSearchOutputSrsEnumTwentySixThousandNineHundredAndTen     GetNamesOfficialSearchOutputSrsEnum = 26910
+	GetNamesOfficialSearchOutputSrsEnumTwentySixThousandNineHundredAndEleven  GetNamesOfficialSearchOutputSrsEnum = 26911
 )
 
+func (e GetNamesOfficialSearchOutputSrsEnum) ToPointer() *GetNamesOfficialSearchOutputSrsEnum {
+	return &e
+}
+
 func (e *GetNamesOfficialSearchOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "3857":
+	case 3857:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetNamesOfficialSearchOutputSrsEnum(s)
+	case 26911:
+		*e = GetNamesOfficialSearchOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesOfficialSearchOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesOfficialSearchOutputSrsEnum: %v", v)
 	}
 }
 
@@ -139,19 +155,23 @@ const (
 	GetNamesOfficialSearchOutputStyleEnumDetail  GetNamesOfficialSearchOutputStyleEnum = "detail"
 )
 
+func (e GetNamesOfficialSearchOutputStyleEnum) ToPointer() *GetNamesOfficialSearchOutputStyleEnum {
+	return &e
+}
+
 func (e *GetNamesOfficialSearchOutputStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "summary":
 		fallthrough
 	case "detail":
-		*e = GetNamesOfficialSearchOutputStyleEnum(s)
+		*e = GetNamesOfficialSearchOutputStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesOfficialSearchOutputStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesOfficialSearchOutputStyleEnum: %v", v)
 	}
 }
 
@@ -165,12 +185,16 @@ const (
 	GetNamesOfficialSearchSortByEnumDecisionDate GetNamesOfficialSearchSortByEnum = "decisionDate"
 )
 
+func (e GetNamesOfficialSearchSortByEnum) ToPointer() *GetNamesOfficialSearchSortByEnum {
+	return &e
+}
+
 func (e *GetNamesOfficialSearchSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "relevance":
 		fallthrough
 	case "name":
@@ -178,10 +202,10 @@ func (e *GetNamesOfficialSearchSortByEnum) UnmarshalJSON(data []byte) error {
 	case "featureType":
 		fallthrough
 	case "decisionDate":
-		*e = GetNamesOfficialSearchSortByEnum(s)
+		*e = GetNamesOfficialSearchSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesOfficialSearchSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesOfficialSearchSortByEnum: %v", v)
 	}
 }
 

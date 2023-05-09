@@ -16,12 +16,16 @@ const (
 	AccountTakeoverEventActionTypeEnumNoAction        AccountTakeoverEventActionTypeEnum = "NO_ACTION"
 )
 
+func (e AccountTakeoverEventActionTypeEnum) ToPointer() *AccountTakeoverEventActionTypeEnum {
+	return &e
+}
+
 func (e *AccountTakeoverEventActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BLOCK":
 		fallthrough
 	case "MFA_IF_CONFIGURED":
@@ -29,9 +33,9 @@ func (e *AccountTakeoverEventActionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MFA_REQUIRED":
 		fallthrough
 	case "NO_ACTION":
-		*e = AccountTakeoverEventActionTypeEnum(s)
+		*e = AccountTakeoverEventActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTakeoverEventActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTakeoverEventActionTypeEnum: %v", v)
 	}
 }

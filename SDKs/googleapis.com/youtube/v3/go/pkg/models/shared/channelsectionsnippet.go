@@ -16,21 +16,25 @@ const (
 	ChannelSectionSnippetStyleEnumVerticalList                   ChannelSectionSnippetStyleEnum = "verticalList"
 )
 
+func (e ChannelSectionSnippetStyleEnum) ToPointer() *ChannelSectionSnippetStyleEnum {
+	return &e
+}
+
 func (e *ChannelSectionSnippetStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "channelsectionStyleUnspecified":
 		fallthrough
 	case "horizontalRow":
 		fallthrough
 	case "verticalList":
-		*e = ChannelSectionSnippetStyleEnum(s)
+		*e = ChannelSectionSnippetStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChannelSectionSnippetStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for ChannelSectionSnippetStyleEnum: %v", v)
 	}
 }
 
@@ -57,12 +61,16 @@ const (
 	ChannelSectionSnippetTypeEnumSubscriptions               ChannelSectionSnippetTypeEnum = "subscriptions"
 )
 
+func (e ChannelSectionSnippetTypeEnum) ToPointer() *ChannelSectionSnippetTypeEnum {
+	return &e
+}
+
 func (e *ChannelSectionSnippetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "channelsectionTypeUndefined":
 		fallthrough
 	case "singlePlaylist":
@@ -96,10 +104,10 @@ func (e *ChannelSectionSnippetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "postedPlaylists":
 		fallthrough
 	case "subscriptions":
-		*e = ChannelSectionSnippetTypeEnum(s)
+		*e = ChannelSectionSnippetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChannelSectionSnippetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChannelSectionSnippetTypeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	ChannelStateEnumInactive         ChannelStateEnum = "INACTIVE"
 )
 
+func (e ChannelStateEnum) ToPointer() *ChannelStateEnum {
+	return &e
+}
+
 func (e *ChannelStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -30,10 +34,10 @@ func (e *ChannelStateEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
-		*e = ChannelStateEnum(s)
+		*e = ChannelStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChannelStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ChannelStateEnum: %v", v)
 	}
 }
 
@@ -43,7 +47,7 @@ type Channel struct {
 	ActivationToken *string `json:"activationToken,omitempty"`
 	// Output only. The creation time.
 	CreateTime *string `json:"createTime,omitempty"`
-	// Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
+	// Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
 	CryptoKeyName *string `json:"cryptoKeyName,omitempty"`
 	// Required. The resource name of the channel. Must be unique within the location on the project and must be in `projects/{project}/locations/{location}/channels/{channel_id}` format.
 	Name *string `json:"name,omitempty"`
@@ -61,7 +65,7 @@ type Channel struct {
 
 // ChannelInput - A representation of the Channel resource. A Channel is a resource on which event providers publish their events. The published events are delivered through the transport associated with the channel. Note that a channel is associated with exactly one event provider.
 type ChannelInput struct {
-	// Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
+	// Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
 	CryptoKeyName *string `json:"cryptoKeyName,omitempty"`
 	// Required. The resource name of the channel. Must be unique within the location on the project and must be in `projects/{project}/locations/{location}/channels/{channel_id}` format.
 	Name *string `json:"name,omitempty"`

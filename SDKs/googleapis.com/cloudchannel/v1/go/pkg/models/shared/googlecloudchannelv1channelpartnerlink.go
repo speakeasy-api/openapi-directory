@@ -18,12 +18,16 @@ const (
 	GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnumSuspended                          GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum = "SUSPENDED"
 )
 
+func (e GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum) ToPointer() *GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHANNEL_PARTNER_LINK_STATE_UNSPECIFIED":
 		fallthrough
 	case "INVITED":
@@ -33,10 +37,10 @@ func (e *GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum) UnmarshalJSON(data
 	case "REVOKED":
 		fallthrough
 	case "SUSPENDED":
-		*e = GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum(s)
+		*e = GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum: %v", v)
 	}
 }
 

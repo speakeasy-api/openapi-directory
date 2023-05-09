@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,25 +16,23 @@ func main() {
         }),
     )
 
-    req := operations.CreateDestinationRequest{
-        RequestBody: operations.CreateDestinationRequestBody{
-            AdditionalFixedProperties: "corrupti",
-            ClientToken: "provident",
-            Name: "distinctio",
-            Site: "quibusdam",
-            State: "DISABLED",
-        },
-        XAmzAlgorithm: "nulla",
-        XAmzContentSha256: "corrupti",
-        XAmzCredential: "illum",
-        XAmzDate: "vel",
-        XAmzSecurityToken: "error",
-        XAmzSignature: "deserunt",
-        XAmzSignedHeaders: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.CreateDestination(ctx, req)
+    res, err := s.CreateDestination(ctx, operations.CreateDestinationRequest{
+        RequestBody: operations.CreateDestinationRequestBody{
+            AdditionalFixedProperties: sdk.String("corrupti"),
+            ClientToken: sdk.String("provident"),
+            Name: "Ellis Mitchell",
+            Site: "illum",
+            State: operations.CreateDestinationRequestBodyStateEnumDisabled.ToPointer(),
+        },
+        XAmzAlgorithm: sdk.String("error"),
+        XAmzContentSha256: sdk.String("deserunt"),
+        XAmzCredential: sdk.String("suscipit"),
+        XAmzDate: sdk.String("iure"),
+        XAmzSecurityToken: sdk.String("magnam"),
+        XAmzSignature: sdk.String("debitis"),
+        XAmzSignedHeaders: sdk.String("ipsa"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -34,7 +34,10 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeries -  Returns the values for each date from a given time range and optionally the sub entity type, where applicable, that are associated with the specific daily metrics. Example request: `GET https://businessprofileperformance.googleapis.com/v1/locations/12345:fetchMultiDailyMetricsTimeSeries?dailyMetrics=WEBSITE_CLICKS&dailyMetrics=CALL_CLICKS&daily_range.start_date.year=2022&daily_range.start_date.month=1&daily_range.start_date.day=1&daily_range.end_date.year=2022&daily_range.end_date.month=3&daily_range.end_date.day=31`
 func (s *locations) BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeries(ctx context.Context, request operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesRequest) (*operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location}:fetchMultiDailyMetricsTimeSeries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{location}:fetchMultiDailyMetricsTimeSeries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *locations) BusinessprofileperformanceLocationsFetchMultiDailyMetricsTim
 // BusinessprofileperformanceLocationsGetDailyMetricsTimeSeries -  Returns the values for each date from a given time range that are associated with the specific daily metric. Example request: `GET https://businessprofileperformance.googleapis.com/v1/locations/12345:getDailyMetricsTimeSeries?dailyMetric=WEBSITE_CLICKS&daily_range.start_date.year=2022&daily_range.start_date.month=1&daily_range.start_date.day=1&daily_range.end_date.year=2022&daily_range.end_date.month=3&daily_range.end_date.day=31`
 func (s *locations) BusinessprofileperformanceLocationsGetDailyMetricsTimeSeries(ctx context.Context, request operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest) (*operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getDailyMetricsTimeSeries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getDailyMetricsTimeSeries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *locations) BusinessprofileperformanceLocationsGetDailyMetricsTimeSeries
 // BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyList - Returns the search keywords used to find a business in search or maps. Each search keyword is accompanied by impressions which are aggregated on a monthly basis. Example request: `GET https://businessprofileperformance.googleapis.com/v1/locations/12345/searchkeywords/impressions/monthly?monthly_range.start_month.year=2022&monthly_range.start_month.month=1&monthly_range.end_month.year=2022&monthly_range.end_month.month=3`
 func (s *locations) BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyList(ctx context.Context, request operations.BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest) (*operations.BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/searchkeywords/impressions/monthly", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/searchkeywords/impressions/monthly", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -17,12 +17,16 @@ const (
 	GoogleCloudAssuredworkloadsV1ViolationStateEnumException        GoogleCloudAssuredworkloadsV1ViolationStateEnum = "EXCEPTION"
 )
 
+func (e GoogleCloudAssuredworkloadsV1ViolationStateEnum) ToPointer() *GoogleCloudAssuredworkloadsV1ViolationStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssuredworkloadsV1ViolationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "RESOLVED":
@@ -30,18 +34,18 @@ func (e *GoogleCloudAssuredworkloadsV1ViolationStateEnum) UnmarshalJSON(data []b
 	case "UNRESOLVED":
 		fallthrough
 	case "EXCEPTION":
-		*e = GoogleCloudAssuredworkloadsV1ViolationStateEnum(s)
+		*e = GoogleCloudAssuredworkloadsV1ViolationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1ViolationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1ViolationStateEnum: %v", v)
 	}
 }
 
-// GoogleCloudAssuredworkloadsV1Violation - Workload monitoring Violation. Next Id: 22
+// GoogleCloudAssuredworkloadsV1Violation - Workload monitoring Violation. Next Id: 27
 type GoogleCloudAssuredworkloadsV1Violation struct {
 	// A boolean that indicates if the violation is acknowledged
 	Acknowledged *bool `json:"acknowledged,omitempty"`
-	// Optional. Timestamp when this violation was acknowledged last. This will be absent when acknowledged field is marked as false.
+	// Optional. Timestamp when this violation was acknowledged first. Check exception_contexts to find the last time the violation was acknowledged when there are more than one violations. This field will be absent when acknowledged field is marked as false.
 	AcknowledgementTime *string `json:"acknowledgementTime,omitempty"`
 	// Output only. Immutable. Audit Log Link for violated resource Format: https://console.cloud.google.com/logs/query;query={logName}{protoPayload.resourceName}{timeRange}{folder}
 	AuditLogLink *string `json:"auditLogLink,omitempty"`

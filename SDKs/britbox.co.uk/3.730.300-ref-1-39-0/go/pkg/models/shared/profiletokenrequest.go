@@ -22,19 +22,23 @@ const (
 	ProfileTokenRequestCookieTypeEnumPersistent ProfileTokenRequestCookieTypeEnum = "Persistent"
 )
 
+func (e ProfileTokenRequestCookieTypeEnum) ToPointer() *ProfileTokenRequestCookieTypeEnum {
+	return &e
+}
+
 func (e *ProfileTokenRequestCookieTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Session":
 		fallthrough
 	case "Persistent":
-		*e = ProfileTokenRequestCookieTypeEnum(s)
+		*e = ProfileTokenRequestCookieTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProfileTokenRequestCookieTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProfileTokenRequestCookieTypeEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	ProfileTokenRequestScopesEnumSettings ProfileTokenRequestScopesEnum = "Settings"
 )
 
+func (e ProfileTokenRequestScopesEnum) ToPointer() *ProfileTokenRequestScopesEnum {
+	return &e
+}
+
 func (e *ProfileTokenRequestScopesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Catalog":
 		fallthrough
 	case "Commerce":
 		fallthrough
 	case "Settings":
-		*e = ProfileTokenRequestScopesEnum(s)
+		*e = ProfileTokenRequestScopesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProfileTokenRequestScopesEnum: %s", s)
+		return fmt.Errorf("invalid value for ProfileTokenRequestScopesEnum: %v", v)
 	}
 }
 

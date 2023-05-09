@@ -24,12 +24,16 @@ const (
 	AdsensehostAssociationsessionsStartProductCodeEnumAfv  AdsensehostAssociationsessionsStartProductCodeEnum = "AFV"
 )
 
+func (e AdsensehostAssociationsessionsStartProductCodeEnum) ToPointer() *AdsensehostAssociationsessionsStartProductCodeEnum {
+	return &e
+}
+
 func (e *AdsensehostAssociationsessionsStartProductCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AFC":
 		fallthrough
 	case "AFG":
@@ -39,10 +43,10 @@ func (e *AdsensehostAssociationsessionsStartProductCodeEnum) UnmarshalJSON(data 
 	case "AFS":
 		fallthrough
 	case "AFV":
-		*e = AdsensehostAssociationsessionsStartProductCodeEnum(s)
+		*e = AdsensehostAssociationsessionsStartProductCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdsensehostAssociationsessionsStartProductCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdsensehostAssociationsessionsStartProductCodeEnum: %v", v)
 	}
 }
 

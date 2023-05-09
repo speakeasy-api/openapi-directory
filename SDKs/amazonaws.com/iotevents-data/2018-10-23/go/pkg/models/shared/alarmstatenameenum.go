@@ -18,12 +18,16 @@ const (
 	AlarmStateNameEnumLatched        AlarmStateNameEnum = "LATCHED"
 )
 
+func (e AlarmStateNameEnum) ToPointer() *AlarmStateNameEnum {
+	return &e
+}
+
 func (e *AlarmStateNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "NORMAL":
@@ -35,9 +39,9 @@ func (e *AlarmStateNameEnum) UnmarshalJSON(data []byte) error {
 	case "SNOOZE_DISABLED":
 		fallthrough
 	case "LATCHED":
-		*e = AlarmStateNameEnum(s)
+		*e = AlarmStateNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlarmStateNameEnum: %s", s)
+		return fmt.Errorf("invalid value for AlarmStateNameEnum: %v", v)
 	}
 }

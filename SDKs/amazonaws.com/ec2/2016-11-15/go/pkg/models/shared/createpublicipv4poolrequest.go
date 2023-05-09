@@ -98,12 +98,16 @@ const (
 	CreatePublicIpv4PoolRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreatePublicIpv4PoolRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreatePublicIpv4PoolRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreatePublicIpv4PoolRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreatePublicIpv4PoolRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreatePublicIpv4PoolRequestTagSpecificationsResourceTypeEnum) Unmarshal
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreatePublicIpv4PoolRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreatePublicIpv4PoolRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePublicIpv4PoolRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePublicIpv4PoolRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

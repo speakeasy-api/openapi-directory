@@ -17,12 +17,16 @@ const (
 	PoolsAdultPoolExceptionEnumDependentOnDayOfWeek PoolsAdultPoolExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsAdultPoolExceptionEnum) ToPointer() *PoolsAdultPoolExceptionEnum {
+	return &e
+}
+
 func (e *PoolsAdultPoolExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *PoolsAdultPoolExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsAdultPoolExceptionEnum(s)
+		*e = PoolsAdultPoolExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsAdultPoolExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsAdultPoolExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	PoolsHotTubExceptionEnumDependentOnDayOfWeek PoolsHotTubExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsHotTubExceptionEnum) ToPointer() *PoolsHotTubExceptionEnum {
+	return &e
+}
+
 func (e *PoolsHotTubExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *PoolsHotTubExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsHotTubExceptionEnum(s)
+		*e = PoolsHotTubExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsHotTubExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsHotTubExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	PoolsIndoorPoolExceptionEnumDependentOnDayOfWeek PoolsIndoorPoolExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsIndoorPoolExceptionEnum) ToPointer() *PoolsIndoorPoolExceptionEnum {
+	return &e
+}
+
 func (e *PoolsIndoorPoolExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *PoolsIndoorPoolExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsIndoorPoolExceptionEnum(s)
+		*e = PoolsIndoorPoolExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsIndoorPoolExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsIndoorPoolExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	PoolsIndoorPoolsCountExceptionEnumDependentOnDayOfWeek PoolsIndoorPoolsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsIndoorPoolsCountExceptionEnum) ToPointer() *PoolsIndoorPoolsCountExceptionEnum {
+	return &e
+}
+
 func (e *PoolsIndoorPoolsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *PoolsIndoorPoolsCountExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsIndoorPoolsCountExceptionEnum(s)
+		*e = PoolsIndoorPoolsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsIndoorPoolsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsIndoorPoolsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	PoolsLazyRiverExceptionEnumDependentOnDayOfWeek PoolsLazyRiverExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsLazyRiverExceptionEnum) ToPointer() *PoolsLazyRiverExceptionEnum {
+	return &e
+}
+
 func (e *PoolsLazyRiverExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *PoolsLazyRiverExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsLazyRiverExceptionEnum(s)
+		*e = PoolsLazyRiverExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsLazyRiverExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsLazyRiverExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	PoolsLifeguardExceptionEnumDependentOnDayOfWeek PoolsLifeguardExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsLifeguardExceptionEnum) ToPointer() *PoolsLifeguardExceptionEnum {
+	return &e
+}
+
 func (e *PoolsLifeguardExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *PoolsLifeguardExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsLifeguardExceptionEnum(s)
+		*e = PoolsLifeguardExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsLifeguardExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsLifeguardExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	PoolsOutdoorPoolExceptionEnumDependentOnDayOfWeek PoolsOutdoorPoolExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsOutdoorPoolExceptionEnum) ToPointer() *PoolsOutdoorPoolExceptionEnum {
+	return &e
+}
+
 func (e *PoolsOutdoorPoolExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *PoolsOutdoorPoolExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsOutdoorPoolExceptionEnum(s)
+		*e = PoolsOutdoorPoolExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsOutdoorPoolExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsOutdoorPoolExceptionEnum: %v", v)
 	}
 }
 
@@ -227,12 +255,16 @@ const (
 	PoolsOutdoorPoolsCountExceptionEnumDependentOnDayOfWeek PoolsOutdoorPoolsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsOutdoorPoolsCountExceptionEnum) ToPointer() *PoolsOutdoorPoolsCountExceptionEnum {
+	return &e
+}
+
 func (e *PoolsOutdoorPoolsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -240,10 +272,10 @@ func (e *PoolsOutdoorPoolsCountExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsOutdoorPoolsCountExceptionEnum(s)
+		*e = PoolsOutdoorPoolsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsOutdoorPoolsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsOutdoorPoolsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -257,12 +289,16 @@ const (
 	PoolsPoolExceptionEnumDependentOnDayOfWeek PoolsPoolExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsPoolExceptionEnum) ToPointer() *PoolsPoolExceptionEnum {
+	return &e
+}
+
 func (e *PoolsPoolExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -270,10 +306,10 @@ func (e *PoolsPoolExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsPoolExceptionEnum(s)
+		*e = PoolsPoolExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsPoolExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsPoolExceptionEnum: %v", v)
 	}
 }
 
@@ -287,12 +323,16 @@ const (
 	PoolsPoolsCountExceptionEnumDependentOnDayOfWeek PoolsPoolsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsPoolsCountExceptionEnum) ToPointer() *PoolsPoolsCountExceptionEnum {
+	return &e
+}
+
 func (e *PoolsPoolsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -300,10 +340,10 @@ func (e *PoolsPoolsCountExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsPoolsCountExceptionEnum(s)
+		*e = PoolsPoolsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsPoolsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsPoolsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -317,12 +357,16 @@ const (
 	PoolsWadingPoolExceptionEnumDependentOnDayOfWeek PoolsWadingPoolExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsWadingPoolExceptionEnum) ToPointer() *PoolsWadingPoolExceptionEnum {
+	return &e
+}
+
 func (e *PoolsWadingPoolExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -330,10 +374,10 @@ func (e *PoolsWadingPoolExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsWadingPoolExceptionEnum(s)
+		*e = PoolsWadingPoolExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsWadingPoolExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsWadingPoolExceptionEnum: %v", v)
 	}
 }
 
@@ -347,12 +391,16 @@ const (
 	PoolsWaterParkExceptionEnumDependentOnDayOfWeek PoolsWaterParkExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsWaterParkExceptionEnum) ToPointer() *PoolsWaterParkExceptionEnum {
+	return &e
+}
+
 func (e *PoolsWaterParkExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -360,10 +408,10 @@ func (e *PoolsWaterParkExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsWaterParkExceptionEnum(s)
+		*e = PoolsWaterParkExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsWaterParkExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsWaterParkExceptionEnum: %v", v)
 	}
 }
 
@@ -377,12 +425,16 @@ const (
 	PoolsWaterslideExceptionEnumDependentOnDayOfWeek PoolsWaterslideExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsWaterslideExceptionEnum) ToPointer() *PoolsWaterslideExceptionEnum {
+	return &e
+}
+
 func (e *PoolsWaterslideExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -390,10 +442,10 @@ func (e *PoolsWaterslideExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsWaterslideExceptionEnum(s)
+		*e = PoolsWaterslideExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsWaterslideExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsWaterslideExceptionEnum: %v", v)
 	}
 }
 
@@ -407,12 +459,16 @@ const (
 	PoolsWavePoolExceptionEnumDependentOnDayOfWeek PoolsWavePoolExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoolsWavePoolExceptionEnum) ToPointer() *PoolsWavePoolExceptionEnum {
+	return &e
+}
+
 func (e *PoolsWavePoolExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -420,10 +476,10 @@ func (e *PoolsWavePoolExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoolsWavePoolExceptionEnum(s)
+		*e = PoolsWavePoolExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoolsWavePoolExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoolsWavePoolExceptionEnum: %v", v)
 	}
 }
 

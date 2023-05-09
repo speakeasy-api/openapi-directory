@@ -16,19 +16,23 @@ const (
 	DescribeFlowLogsResultFlowLogsDestinationOptionsFileFormatEnumParquet   DescribeFlowLogsResultFlowLogsDestinationOptionsFileFormatEnum = "parquet"
 )
 
+func (e DescribeFlowLogsResultFlowLogsDestinationOptionsFileFormatEnum) ToPointer() *DescribeFlowLogsResultFlowLogsDestinationOptionsFileFormatEnum {
+	return &e
+}
+
 func (e *DescribeFlowLogsResultFlowLogsDestinationOptionsFileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "plain-text":
 		fallthrough
 	case "parquet":
-		*e = DescribeFlowLogsResultFlowLogsDestinationOptionsFileFormatEnum(s)
+		*e = DescribeFlowLogsResultFlowLogsDestinationOptionsFileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFlowLogsResultFlowLogsDestinationOptionsFileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFlowLogsResultFlowLogsDestinationOptionsFileFormatEnum: %v", v)
 	}
 }
 
@@ -48,21 +52,25 @@ const (
 	DescribeFlowLogsResultFlowLogsLogDestinationTypeEnumKinesisDataFirehose DescribeFlowLogsResultFlowLogsLogDestinationTypeEnum = "kinesis-data-firehose"
 )
 
+func (e DescribeFlowLogsResultFlowLogsLogDestinationTypeEnum) ToPointer() *DescribeFlowLogsResultFlowLogsLogDestinationTypeEnum {
+	return &e
+}
+
 func (e *DescribeFlowLogsResultFlowLogsLogDestinationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cloud-watch-logs":
 		fallthrough
 	case "s3":
 		fallthrough
 	case "kinesis-data-firehose":
-		*e = DescribeFlowLogsResultFlowLogsLogDestinationTypeEnum(s)
+		*e = DescribeFlowLogsResultFlowLogsLogDestinationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFlowLogsResultFlowLogsLogDestinationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFlowLogsResultFlowLogsLogDestinationTypeEnum: %v", v)
 	}
 }
 
@@ -81,21 +89,25 @@ const (
 	DescribeFlowLogsResultFlowLogsTrafficTypeEnumAll    DescribeFlowLogsResultFlowLogsTrafficTypeEnum = "ALL"
 )
 
+func (e DescribeFlowLogsResultFlowLogsTrafficTypeEnum) ToPointer() *DescribeFlowLogsResultFlowLogsTrafficTypeEnum {
+	return &e
+}
+
 func (e *DescribeFlowLogsResultFlowLogsTrafficTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCEPT":
 		fallthrough
 	case "REJECT":
 		fallthrough
 	case "ALL":
-		*e = DescribeFlowLogsResultFlowLogsTrafficTypeEnum(s)
+		*e = DescribeFlowLogsResultFlowLogsTrafficTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFlowLogsResultFlowLogsTrafficTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFlowLogsResultFlowLogsTrafficTypeEnum: %v", v)
 	}
 }
 

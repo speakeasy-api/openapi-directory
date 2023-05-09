@@ -16,21 +16,25 @@ const (
 	GoogleAnalyticsAdminV1alphaExpandedDataSetFilterStringFilterMatchTypeEnumContains             GoogleAnalyticsAdminV1alphaExpandedDataSetFilterStringFilterMatchTypeEnum = "CONTAINS"
 )
 
+func (e GoogleAnalyticsAdminV1alphaExpandedDataSetFilterStringFilterMatchTypeEnum) ToPointer() *GoogleAnalyticsAdminV1alphaExpandedDataSetFilterStringFilterMatchTypeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaExpandedDataSetFilterStringFilterMatchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MATCH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EXACT":
 		fallthrough
 	case "CONTAINS":
-		*e = GoogleAnalyticsAdminV1alphaExpandedDataSetFilterStringFilterMatchTypeEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaExpandedDataSetFilterStringFilterMatchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaExpandedDataSetFilterStringFilterMatchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaExpandedDataSetFilterStringFilterMatchTypeEnum: %v", v)
 	}
 }
 

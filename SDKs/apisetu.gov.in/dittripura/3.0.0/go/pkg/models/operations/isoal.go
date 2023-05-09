@@ -28,17 +28,21 @@ const (
 	IsoalRequestBodyFormatEnumPdf IsoalRequestBodyFormatEnum = "pdf"
 )
 
+func (e IsoalRequestBodyFormatEnum) ToPointer() *IsoalRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *IsoalRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = IsoalRequestBodyFormatEnum(s)
+		*e = IsoalRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IsoalRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for IsoalRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -58,17 +62,21 @@ const (
 	Isoal504ApplicationJSONErrorEnumGatewayTimeout Isoal504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Isoal504ApplicationJSONErrorEnum) ToPointer() *Isoal504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Isoal504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Isoal504ApplicationJSONErrorEnum(s)
+		*e = Isoal504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -78,17 +86,21 @@ const (
 	Isoal504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Isoal504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Isoal504ApplicationJSONErrorDescriptionEnum) ToPointer() *Isoal504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Isoal504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Isoal504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Isoal504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -104,17 +116,21 @@ const (
 	Isoal503ApplicationJSONErrorEnumServiceUnavailable Isoal503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Isoal503ApplicationJSONErrorEnum) ToPointer() *Isoal503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Isoal503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Isoal503ApplicationJSONErrorEnum(s)
+		*e = Isoal503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -124,17 +140,21 @@ const (
 	Isoal503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Isoal503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Isoal503ApplicationJSONErrorDescriptionEnum) ToPointer() *Isoal503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Isoal503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Isoal503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Isoal503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -150,17 +170,21 @@ const (
 	Isoal502ApplicationJSONErrorEnumBadGatewy Isoal502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Isoal502ApplicationJSONErrorEnum) ToPointer() *Isoal502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Isoal502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Isoal502ApplicationJSONErrorEnum(s)
+		*e = Isoal502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -170,17 +194,21 @@ const (
 	Isoal502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Isoal502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Isoal502ApplicationJSONErrorDescriptionEnum) ToPointer() *Isoal502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Isoal502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Isoal502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Isoal502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -196,17 +224,21 @@ const (
 	Isoal500ApplicationJSONErrorEnumInternalServerError Isoal500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Isoal500ApplicationJSONErrorEnum) ToPointer() *Isoal500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Isoal500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Isoal500ApplicationJSONErrorEnum(s)
+		*e = Isoal500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -216,17 +248,21 @@ const (
 	Isoal500ApplicationJSONErrorDescriptionEnumInternalServerError Isoal500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Isoal500ApplicationJSONErrorDescriptionEnum) ToPointer() *Isoal500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Isoal500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Isoal500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Isoal500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -243,19 +279,23 @@ const (
 	Isoal404ApplicationJSONErrorEnumURLNotFound    Isoal404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Isoal404ApplicationJSONErrorEnum) ToPointer() *Isoal404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Isoal404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Isoal404ApplicationJSONErrorEnum(s)
+		*e = Isoal404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -266,19 +306,23 @@ const (
 	Isoal404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Isoal404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Isoal404ApplicationJSONErrorDescriptionEnum) ToPointer() *Isoal404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Isoal404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Isoal404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Isoal404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -295,19 +339,23 @@ const (
 	Isoal401ApplicationJSONErrorEnumInvalidAuthorization  Isoal401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Isoal401ApplicationJSONErrorEnum) ToPointer() *Isoal401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Isoal401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Isoal401ApplicationJSONErrorEnum(s)
+		*e = Isoal401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -318,19 +366,23 @@ const (
 	Isoal401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Isoal401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Isoal401ApplicationJSONErrorDescriptionEnum) ToPointer() *Isoal401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Isoal401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Isoal401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Isoal401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -350,12 +402,16 @@ const (
 	Isoal400ApplicationJSONErrorEnumInvalidConsentid Isoal400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Isoal400ApplicationJSONErrorEnum) ToPointer() *Isoal400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Isoal400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -365,10 +421,10 @@ func (e *Isoal400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Isoal400ApplicationJSONErrorEnum(s)
+		*e = Isoal400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -382,12 +438,16 @@ const (
 	Isoal400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Isoal400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Isoal400ApplicationJSONErrorDescriptionEnum) ToPointer() *Isoal400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Isoal400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -397,10 +457,10 @@ func (e *Isoal400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Isoal400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Isoal400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Isoal400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Isoal400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

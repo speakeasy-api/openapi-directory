@@ -40,7 +40,10 @@ func newTerminalActionsCompanyLevel(defaultClient, securityClient HTTPClient, se
 // * Management API—Terminal actions read and write
 func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDAndroidApps(ctx context.Context, request operations.GetCompaniesCompanyIDAndroidAppsRequest, security operations.GetCompaniesCompanyIDAndroidAppsSecurity) (*operations.GetCompaniesCompanyIDAndroidAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/androidApps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/androidApps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -112,7 +115,10 @@ func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDAndroidApps(ctx conte
 // * Management API—Terminal actions read and write
 func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDAndroidCertificates(ctx context.Context, request operations.GetCompaniesCompanyIDAndroidCertificatesRequest, security operations.GetCompaniesCompanyIDAndroidCertificatesSecurity) (*operations.GetCompaniesCompanyIDAndroidCertificatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/androidCertificates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/androidCertificates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -182,7 +188,10 @@ func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDAndroidCertificates(c
 // * Management API—Terminal actions read and write
 func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDTerminalActions(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalActionsRequest, security operations.GetCompaniesCompanyIDTerminalActionsSecurity) (*operations.GetCompaniesCompanyIDTerminalActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalActions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalActions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -252,7 +261,10 @@ func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDTerminalActions(ctx c
 // * Management API—Terminal actions read and write
 func (s *terminalActionsCompanyLevel) GetCompaniesCompanyIDTerminalActionsActionID(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalActionsActionIDRequest, security operations.GetCompaniesCompanyIDTerminalActionsActionIDSecurity) (*operations.GetCompaniesCompanyIDTerminalActionsActionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalActions/{actionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalActions/{actionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

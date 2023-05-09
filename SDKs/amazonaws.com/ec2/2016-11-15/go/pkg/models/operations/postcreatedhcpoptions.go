@@ -15,17 +15,21 @@ const (
 	POSTCreateDhcpOptionsActionEnumCreateDhcpOptions POSTCreateDhcpOptionsActionEnum = "CreateDhcpOptions"
 )
 
+func (e POSTCreateDhcpOptionsActionEnum) ToPointer() *POSTCreateDhcpOptionsActionEnum {
+	return &e
+}
+
 func (e *POSTCreateDhcpOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateDhcpOptions":
-		*e = POSTCreateDhcpOptionsActionEnum(s)
+		*e = POSTCreateDhcpOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateDhcpOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateDhcpOptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateDhcpOptionsVersionEnumTwoThousandAndSixteen1115 POSTCreateDhcpOptionsVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateDhcpOptionsVersionEnum) ToPointer() *POSTCreateDhcpOptionsVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateDhcpOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateDhcpOptionsVersionEnum(s)
+		*e = POSTCreateDhcpOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateDhcpOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateDhcpOptionsVersionEnum: %v", v)
 	}
 }
 

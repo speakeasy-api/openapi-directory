@@ -36,7 +36,10 @@ func newAssignment(defaultClient, securityClient HTTPClient, serverURL, language
 // DeleteAssignmentsID - Delete this assignment and all of it's contributions
 func (s *assignment) DeleteAssignmentsID(ctx context.Context, request operations.DeleteAssignmentsIDRequest) (*operations.DeleteAssignmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assignments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assignments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +128,10 @@ func (s *assignment) GetAssignments(ctx context.Context, request operations.GetA
 // GetAssignmentsID - Get a single assigment by id
 func (s *assignment) GetAssignmentsID(ctx context.Context, request operations.GetAssignmentsIDRequest) (*operations.GetAssignmentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assignments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assignments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

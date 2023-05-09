@@ -21,12 +21,16 @@ const (
 	ContinueAsNewWorkflowExecutionFailedCauseEnumOperationNotPermitted                        ContinueAsNewWorkflowExecutionFailedCauseEnum = "OPERATION_NOT_PERMITTED"
 )
 
+func (e ContinueAsNewWorkflowExecutionFailedCauseEnum) ToPointer() *ContinueAsNewWorkflowExecutionFailedCauseEnum {
+	return &e
+}
+
 func (e *ContinueAsNewWorkflowExecutionFailedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNHANDLED_DECISION":
 		fallthrough
 	case "WORKFLOW_TYPE_DEPRECATED":
@@ -44,9 +48,9 @@ func (e *ContinueAsNewWorkflowExecutionFailedCauseEnum) UnmarshalJSON(data []byt
 	case "CONTINUE_AS_NEW_WORKFLOW_EXECUTION_RATE_EXCEEDED":
 		fallthrough
 	case "OPERATION_NOT_PERMITTED":
-		*e = ContinueAsNewWorkflowExecutionFailedCauseEnum(s)
+		*e = ContinueAsNewWorkflowExecutionFailedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContinueAsNewWorkflowExecutionFailedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for ContinueAsNewWorkflowExecutionFailedCauseEnum: %v", v)
 	}
 }

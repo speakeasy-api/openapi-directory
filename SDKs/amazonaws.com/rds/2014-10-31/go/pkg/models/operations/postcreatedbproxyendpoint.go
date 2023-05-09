@@ -15,17 +15,21 @@ const (
 	POSTCreateDBProxyEndpointActionEnumCreateDbProxyEndpoint POSTCreateDBProxyEndpointActionEnum = "CreateDBProxyEndpoint"
 )
 
+func (e POSTCreateDBProxyEndpointActionEnum) ToPointer() *POSTCreateDBProxyEndpointActionEnum {
+	return &e
+}
+
 func (e *POSTCreateDBProxyEndpointActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateDBProxyEndpoint":
-		*e = POSTCreateDBProxyEndpointActionEnum(s)
+		*e = POSTCreateDBProxyEndpointActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateDBProxyEndpointActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateDBProxyEndpointActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateDBProxyEndpointVersionEnumTwoThousandAndFourteen1031 POSTCreateDBProxyEndpointVersionEnum = "2014-10-31"
 )
 
+func (e POSTCreateDBProxyEndpointVersionEnum) ToPointer() *POSTCreateDBProxyEndpointVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateDBProxyEndpointVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTCreateDBProxyEndpointVersionEnum(s)
+		*e = POSTCreateDBProxyEndpointVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateDBProxyEndpointVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateDBProxyEndpointVersionEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	SortDirectionEnumDesc SortDirectionEnum = "DESC"
 )
 
+func (e SortDirectionEnum) ToPointer() *SortDirectionEnum {
+	return &e
+}
+
 func (e *SortDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASC":
 		fallthrough
 	case "DESC":
-		*e = SortDirectionEnum(s)
+		*e = SortDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for SortDirectionEnum: %v", v)
 	}
 }

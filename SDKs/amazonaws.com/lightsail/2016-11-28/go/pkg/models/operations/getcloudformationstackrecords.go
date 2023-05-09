@@ -16,17 +16,21 @@ const (
 	GetCloudFormationStackRecordsXAmzTargetEnumLightsail20161128GetCloudFormationStackRecords GetCloudFormationStackRecordsXAmzTargetEnum = "Lightsail_20161128.GetCloudFormationStackRecords"
 )
 
+func (e GetCloudFormationStackRecordsXAmzTargetEnum) ToPointer() *GetCloudFormationStackRecordsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCloudFormationStackRecordsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetCloudFormationStackRecords":
-		*e = GetCloudFormationStackRecordsXAmzTargetEnum(s)
+		*e = GetCloudFormationStackRecordsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCloudFormationStackRecordsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCloudFormationStackRecordsXAmzTargetEnum: %v", v)
 	}
 }
 

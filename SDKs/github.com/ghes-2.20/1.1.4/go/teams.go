@@ -46,9 +46,14 @@ func newTeams(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 //
 // Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://docs.github.com/enterprise-server@2.20/rest/overview/resources-in-the-rest-api#http-verbs)."
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#add-team-member-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsAddMemberLegacy(ctx context.Context, request operations.TeamsAddMemberLegacyRequest) (*operations.TeamsAddMemberLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -103,7 +108,10 @@ func (s *teams) TeamsAddMemberLegacy(ctx context.Context, request operations.Tea
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#add-or-update-team-membership-for-a-user - API method documentation
 func (s *teams) TeamsAddOrUpdateMembershipForUser(ctx context.Context, request operations.TeamsAddOrUpdateMembershipForUserRequest) (*operations.TeamsAddOrUpdateMembershipForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -157,7 +165,10 @@ func (s *teams) TeamsAddOrUpdateMembershipForUser(ctx context.Context, request o
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams/#add-or-update-team-project-permissions - API method documentation
 func (s *teams) TeamsAddOrUpdateProjectPermissions(ctx context.Context, request operations.TeamsAddOrUpdateProjectPermissionsRequest) (*operations.TeamsAddOrUpdateProjectPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -215,7 +226,10 @@ func (s *teams) TeamsAddOrUpdateProjectPermissions(ctx context.Context, request 
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams/#add-or-update-team-repository-permissions - API method documentation
 func (s *teams) TeamsAddOrUpdateRepoPermissions(ctx context.Context, request operations.TeamsAddOrUpdateRepoPermissionsRequest) (*operations.TeamsAddOrUpdateRepoPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -259,7 +273,10 @@ func (s *teams) TeamsAddOrUpdateRepoPermissions(ctx context.Context, request ope
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams/#check-team-permissions-for-a-project - API method documentation
 func (s *teams) TeamsCheckPermissionsForProject(ctx context.Context, request operations.TeamsCheckPermissionsForProjectRequest) (*operations.TeamsCheckPermissionsForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -310,7 +327,10 @@ func (s *teams) TeamsCheckPermissionsForProject(ctx context.Context, request ope
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams/#check-team-permissions-for-a-repository - API method documentation
 func (s *teams) TeamsCheckPermissionsForRepo(ctx context.Context, request operations.TeamsCheckPermissionsForRepoRequest) (*operations.TeamsCheckPermissionsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -368,7 +388,10 @@ func (s *teams) TeamsCheckPermissionsForRepo(ctx context.Context, request operat
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#create-a-team - API method documentation
 func (s *teams) TeamsCreate(ctx context.Context, request operations.TeamsCreateRequest) (*operations.TeamsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -446,7 +469,10 @@ func (s *teams) TeamsCreate(ctx context.Context, request operations.TeamsCreateR
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#create-a-discussion - API method documentation
 func (s *teams) TeamsCreateDiscussion(ctx context.Context, request operations.TeamsCreateDiscussionRequest) (*operations.TeamsCreateDiscussionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -504,7 +530,10 @@ func (s *teams) TeamsCreateDiscussion(ctx context.Context, request operations.Te
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#create-a-discussion-comment - API method documentation
 func (s *teams) TeamsCreateDiscussionComment(ctx context.Context, request operations.TeamsCreateDiscussionCommentRequest) (*operations.TeamsCreateDiscussionCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -562,7 +591,10 @@ func (s *teams) TeamsCreateDiscussionComment(ctx context.Context, request operat
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams/#delete-a-team - API method documentation
 func (s *teams) TeamsDelete(ctx context.Context, request operations.TeamsDeleteRequest) (*operations.TeamsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -599,7 +631,10 @@ func (s *teams) TeamsDelete(ctx context.Context, request operations.TeamsDeleteR
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#delete-a-discussion - API method documentation
 func (s *teams) TeamsDeleteDiscussion(ctx context.Context, request operations.TeamsDeleteDiscussionRequest) (*operations.TeamsDeleteDiscussionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -636,7 +671,10 @@ func (s *teams) TeamsDeleteDiscussion(ctx context.Context, request operations.Te
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#delete-a-discussion-comment - API method documentation
 func (s *teams) TeamsDeleteDiscussionComment(ctx context.Context, request operations.TeamsDeleteDiscussionCommentRequest) (*operations.TeamsDeleteDiscussionCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -672,7 +710,10 @@ func (s *teams) TeamsDeleteDiscussionComment(ctx context.Context, request operat
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams/#get-a-team - API method documentation
 func (s *teams) TeamsGet(ctx context.Context, request operations.TeamsGetRequest) (*operations.TeamsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -720,7 +761,10 @@ func (s *teams) TeamsGet(ctx context.Context, request operations.TeamsGetRequest
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#get-a-team-by-name - API method documentation
 func (s *teams) TeamsGetByName(ctx context.Context, request operations.TeamsGetByNameRequest) (*operations.TeamsGetByNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -776,7 +820,10 @@ func (s *teams) TeamsGetByName(ctx context.Context, request operations.TeamsGetB
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#get-a-discussion - API method documentation
 func (s *teams) TeamsGetDiscussion(ctx context.Context, request operations.TeamsGetDiscussionRequest) (*operations.TeamsGetDiscussionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -822,7 +869,10 @@ func (s *teams) TeamsGetDiscussion(ctx context.Context, request operations.Teams
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#get-a-discussion-comment - API method documentation
 func (s *teams) TeamsGetDiscussionComment(ctx context.Context, request operations.TeamsGetDiscussionCommentRequest) (*operations.TeamsGetDiscussionCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -870,9 +920,14 @@ func (s *teams) TeamsGetDiscussionComment(ctx context.Context, request operation
 //
 // To list members in a team, the team must be visible to the authenticated user.
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#get-team-member-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsGetMemberLegacy(ctx context.Context, request operations.TeamsGetMemberLegacyRequest) (*operations.TeamsGetMemberLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -915,7 +970,10 @@ func (s *teams) TeamsGetMemberLegacy(ctx context.Context, request operations.Tea
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#get-team-membership-for-a-user - API method documentation
 func (s *teams) TeamsGetMembershipForUser(ctx context.Context, request operations.TeamsGetMembershipForUserRequest) (*operations.TeamsGetMembershipForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -961,7 +1019,10 @@ func (s *teams) TeamsGetMembershipForUser(ctx context.Context, request operation
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#list-teams - API method documentation
 func (s *teams) TeamsList(ctx context.Context, request operations.TeamsListRequest) (*operations.TeamsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1022,7 +1083,10 @@ func (s *teams) TeamsList(ctx context.Context, request operations.TeamsListReque
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams/#list-child-teams - API method documentation
 func (s *teams) TeamsListChild(ctx context.Context, request operations.TeamsListChildRequest) (*operations.TeamsListChildResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1074,7 +1138,10 @@ func (s *teams) TeamsListChild(ctx context.Context, request operations.TeamsList
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#list-discussion-comments - API method documentation
 func (s *teams) TeamsListDiscussionComments(ctx context.Context, request operations.TeamsListDiscussionCommentsRequest) (*operations.TeamsListDiscussionCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1126,7 +1193,10 @@ func (s *teams) TeamsListDiscussionComments(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#list-discussions - API method documentation
 func (s *teams) TeamsListDiscussions(ctx context.Context, request operations.TeamsListDiscussionsRequest) (*operations.TeamsListDiscussionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1245,7 +1315,10 @@ func (s *teams) TeamsListForAuthenticatedUser(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#list-team-members - API method documentation
 func (s *teams) TeamsListMembers(ctx context.Context, request operations.TeamsListMembersRequest) (*operations.TeamsListMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1297,7 +1370,10 @@ func (s *teams) TeamsListMembers(ctx context.Context, request operations.TeamsLi
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams/#list-team-projects - API method documentation
 func (s *teams) TeamsListProjects(ctx context.Context, request operations.TeamsListProjectsRequest) (*operations.TeamsListProjectsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1351,7 +1427,10 @@ func (s *teams) TeamsListProjects(ctx context.Context, request operations.TeamsL
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams/#list-team-repositories - API method documentation
 func (s *teams) TeamsListRepos(ctx context.Context, request operations.TeamsListReposRequest) (*operations.TeamsListReposResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1409,9 +1488,14 @@ func (s *teams) TeamsListRepos(ctx context.Context, request operations.TeamsList
 //
 // **Note:** When you have team synchronization set up for a team with your organization's identity provider (IdP), you will see an error if you attempt to use the API for making changes to the team's membership. If you have access to manage group membership in your IdP, you can manage GitHub Enterprise Server team membership through your identity provider, which automatically adds and removes team members in an organization. For more information, see "[Synchronizing teams between your identity provider and GitHub Enterprise Server](https://help.github.com/articles/synchronizing-teams-between-your-identity-provider-and-github/)."
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#remove-team-member-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsRemoveMemberLegacy(ctx context.Context, request operations.TeamsRemoveMemberLegacyRequest) (*operations.TeamsRemoveMemberLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1450,7 +1534,10 @@ func (s *teams) TeamsRemoveMemberLegacy(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#remove-team-membership-for-a-user - API method documentation
 func (s *teams) TeamsRemoveMembershipForUser(ctx context.Context, request operations.TeamsRemoveMembershipForUserRequest) (*operations.TeamsRemoveMembershipForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1487,7 +1574,10 @@ func (s *teams) TeamsRemoveMembershipForUser(ctx context.Context, request operat
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams/#remove-a-project-from-a-team - API method documentation
 func (s *teams) TeamsRemoveProject(ctx context.Context, request operations.TeamsRemoveProjectRequest) (*operations.TeamsRemoveProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1524,7 +1614,10 @@ func (s *teams) TeamsRemoveProject(ctx context.Context, request operations.Teams
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams/#remove-a-repository-from-a-team - API method documentation
 func (s *teams) TeamsRemoveRepo(ctx context.Context, request operations.TeamsRemoveRepoRequest) (*operations.TeamsRemoveRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1563,7 +1656,10 @@ func (s *teams) TeamsRemoveRepo(ctx context.Context, request operations.TeamsRem
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams/#update-a-team - API method documentation
 func (s *teams) TeamsUpdate(ctx context.Context, request operations.TeamsUpdateRequest) (*operations.TeamsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1616,7 +1712,10 @@ func (s *teams) TeamsUpdate(ctx context.Context, request operations.TeamsUpdateR
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#update-a-discussion - API method documentation
 func (s *teams) TeamsUpdateDiscussion(ctx context.Context, request operations.TeamsUpdateDiscussionRequest) (*operations.TeamsUpdateDiscussionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1669,7 +1768,10 @@ func (s *teams) TeamsUpdateDiscussion(ctx context.Context, request operations.Te
 // https://docs.github.com/enterprise-server@2.20/rest/reference/teams#update-a-discussion-comment - API method documentation
 func (s *teams) TeamsUpdateDiscussionComment(ctx context.Context, request operations.TeamsUpdateDiscussionCommentRequest) (*operations.TeamsUpdateDiscussionCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

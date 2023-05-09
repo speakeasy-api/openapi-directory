@@ -15,20 +15,24 @@ const (
 	OnFailureEnumDelete    OnFailureEnum = "DELETE"
 )
 
+func (e OnFailureEnum) ToPointer() *OnFailureEnum {
+	return &e
+}
+
 func (e *OnFailureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DO_NOTHING":
 		fallthrough
 	case "ROLLBACK":
 		fallthrough
 	case "DELETE":
-		*e = OnFailureEnum(s)
+		*e = OnFailureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OnFailureEnum: %s", s)
+		return fmt.Errorf("invalid value for OnFailureEnum: %v", v)
 	}
 }

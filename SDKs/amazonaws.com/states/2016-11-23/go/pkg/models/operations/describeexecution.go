@@ -16,17 +16,21 @@ const (
 	DescribeExecutionXAmzTargetEnumAwsStepFunctionsDescribeExecution DescribeExecutionXAmzTargetEnum = "AWSStepFunctions.DescribeExecution"
 )
 
+func (e DescribeExecutionXAmzTargetEnum) ToPointer() *DescribeExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSStepFunctions.DescribeExecution":
-		*e = DescribeExecutionXAmzTargetEnum(s)
+		*e = DescribeExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

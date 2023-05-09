@@ -20,12 +20,16 @@ const (
 	SavingsPlanRateFilterNameEnumOperation          SavingsPlanRateFilterNameEnum = "operation"
 )
 
+func (e SavingsPlanRateFilterNameEnum) ToPointer() *SavingsPlanRateFilterNameEnum {
+	return &e
+}
+
 func (e *SavingsPlanRateFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "region":
 		fallthrough
 	case "instanceType":
@@ -41,9 +45,9 @@ func (e *SavingsPlanRateFilterNameEnum) UnmarshalJSON(data []byte) error {
 	case "usageType":
 		fallthrough
 	case "operation":
-		*e = SavingsPlanRateFilterNameEnum(s)
+		*e = SavingsPlanRateFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SavingsPlanRateFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SavingsPlanRateFilterNameEnum: %v", v)
 	}
 }

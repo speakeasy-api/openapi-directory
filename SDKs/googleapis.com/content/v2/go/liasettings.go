@@ -90,7 +90,10 @@ func (s *liasettings) ContentLiasettingsCustombatch(ctx context.Context, request
 // ContentLiasettingsGet - Retrieves the LIA settings of the account.
 func (s *liasettings) ContentLiasettingsGet(ctx context.Context, request operations.ContentLiasettingsGetRequest, security operations.ContentLiasettingsGetSecurity) (*operations.ContentLiasettingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *liasettings) ContentLiasettingsGet(ctx context.Context, request operati
 // ContentLiasettingsGetaccessiblegmbaccounts - Retrieves the list of accessible Google My Business accounts.
 func (s *liasettings) ContentLiasettingsGetaccessiblegmbaccounts(ctx context.Context, request operations.ContentLiasettingsGetaccessiblegmbaccountsRequest, security operations.ContentLiasettingsGetaccessiblegmbaccountsSecurity) (*operations.ContentLiasettingsGetaccessiblegmbaccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}/accessiblegmbaccounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}/accessiblegmbaccounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -186,7 +192,10 @@ func (s *liasettings) ContentLiasettingsGetaccessiblegmbaccounts(ctx context.Con
 // ContentLiasettingsList - Lists the LIA settings of the sub-accounts in your Merchant Center account.
 func (s *liasettings) ContentLiasettingsList(ctx context.Context, request operations.ContentLiasettingsListRequest, security operations.ContentLiasettingsListSecurity) (*operations.ContentLiasettingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -282,7 +291,10 @@ func (s *liasettings) ContentLiasettingsListposdataproviders(ctx context.Context
 // ContentLiasettingsRequestgmbaccess - Requests access to a specified Google My Business account.
 func (s *liasettings) ContentLiasettingsRequestgmbaccess(ctx context.Context, request operations.ContentLiasettingsRequestgmbaccessRequest, security operations.ContentLiasettingsRequestgmbaccessSecurity) (*operations.ContentLiasettingsRequestgmbaccessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}/requestgmbaccess", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}/requestgmbaccess", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -330,7 +342,10 @@ func (s *liasettings) ContentLiasettingsRequestgmbaccess(ctx context.Context, re
 // ContentLiasettingsRequestinventoryverification - Requests inventory validation for the specified country.
 func (s *liasettings) ContentLiasettingsRequestinventoryverification(ctx context.Context, request operations.ContentLiasettingsRequestinventoryverificationRequest, security operations.ContentLiasettingsRequestinventoryverificationSecurity) (*operations.ContentLiasettingsRequestinventoryverificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}/requestinventoryverification/{country}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}/requestinventoryverification/{country}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -378,7 +393,10 @@ func (s *liasettings) ContentLiasettingsRequestinventoryverification(ctx context
 // ContentLiasettingsSetinventoryverificationcontact - Sets the inventory verification contract for the specified country.
 func (s *liasettings) ContentLiasettingsSetinventoryverificationcontact(ctx context.Context, request operations.ContentLiasettingsSetinventoryverificationcontactRequest, security operations.ContentLiasettingsSetinventoryverificationcontactSecurity) (*operations.ContentLiasettingsSetinventoryverificationcontactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}/setinventoryverificationcontact", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}/setinventoryverificationcontact", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -426,7 +444,10 @@ func (s *liasettings) ContentLiasettingsSetinventoryverificationcontact(ctx cont
 // ContentLiasettingsSetposdataprovider - Sets the POS data provider for the specified country.
 func (s *liasettings) ContentLiasettingsSetposdataprovider(ctx context.Context, request operations.ContentLiasettingsSetposdataproviderRequest, security operations.ContentLiasettingsSetposdataproviderSecurity) (*operations.ContentLiasettingsSetposdataproviderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}/setposdataprovider", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}/setposdataprovider", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -474,7 +495,10 @@ func (s *liasettings) ContentLiasettingsSetposdataprovider(ctx context.Context, 
 // ContentLiasettingsUpdate - Updates the LIA settings of the account. Any fields that are not provided are deleted from the resource.
 func (s *liasettings) ContentLiasettingsUpdate(ctx context.Context, request operations.ContentLiasettingsUpdateRequest, security operations.ContentLiasettingsUpdateSecurity) (*operations.ContentLiasettingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/liasettings/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LiaSettings", "json")
 	if err != nil {

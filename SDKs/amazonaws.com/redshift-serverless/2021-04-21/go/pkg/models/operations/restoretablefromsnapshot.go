@@ -16,17 +16,21 @@ const (
 	RestoreTableFromSnapshotXAmzTargetEnumRedshiftServerlessRestoreTableFromSnapshot RestoreTableFromSnapshotXAmzTargetEnum = "RedshiftServerless.RestoreTableFromSnapshot"
 )
 
+func (e RestoreTableFromSnapshotXAmzTargetEnum) ToPointer() *RestoreTableFromSnapshotXAmzTargetEnum {
+	return &e
+}
+
 func (e *RestoreTableFromSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.RestoreTableFromSnapshot":
-		*e = RestoreTableFromSnapshotXAmzTargetEnum(s)
+		*e = RestoreTableFromSnapshotXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RestoreTableFromSnapshotXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RestoreTableFromSnapshotXAmzTargetEnum: %v", v)
 	}
 }
 

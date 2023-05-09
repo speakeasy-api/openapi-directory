@@ -16,19 +16,23 @@ const (
 	PostAppsAppIDVersionsVersionStatusModifiedByEnumAdministrator PostAppsAppIDVersionsVersionStatusModifiedByEnum = "administrator"
 )
 
+func (e PostAppsAppIDVersionsVersionStatusModifiedByEnum) ToPointer() *PostAppsAppIDVersionsVersionStatusModifiedByEnum {
+	return &e
+}
+
 func (e *PostAppsAppIDVersionsVersionStatusModifiedByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "developer":
 		fallthrough
 	case "administrator":
-		*e = PostAppsAppIDVersionsVersionStatusModifiedByEnum(s)
+		*e = PostAppsAppIDVersionsVersionStatusModifiedByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAppsAppIDVersionsVersionStatusModifiedByEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAppsAppIDVersionsVersionStatusModifiedByEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	PostAppsAppIDVersionsVersionStatusStatusEnumRejected  PostAppsAppIDVersionsVersionStatusStatusEnum = "rejected"
 )
 
+func (e PostAppsAppIDVersionsVersionStatusStatusEnum) ToPointer() *PostAppsAppIDVersionsVersionStatusStatusEnum {
+	return &e
+}
+
 func (e *PostAppsAppIDVersionsVersionStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inReview":
 		fallthrough
 	case "approved":
@@ -55,10 +63,10 @@ func (e *PostAppsAppIDVersionsVersionStatusStatusEnum) UnmarshalJSON(data []byte
 	case "suspended":
 		fallthrough
 	case "rejected":
-		*e = PostAppsAppIDVersionsVersionStatusStatusEnum(s)
+		*e = PostAppsAppIDVersionsVersionStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAppsAppIDVersionsVersionStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAppsAppIDVersionsVersionStatusStatusEnum: %v", v)
 	}
 }
 

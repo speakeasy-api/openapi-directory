@@ -34,7 +34,10 @@ func newMXL7ApplicationCategories(defaultClient, securityClient HTTPClient, serv
 // Return the L7 firewall application categories and their associated applications for an MX network
 func (s *mxL7ApplicationCategories) GetNetworkL7FirewallRulesApplicationCategories(ctx context.Context, request operations.GetNetworkL7FirewallRulesApplicationCategoriesRequest) (*operations.GetNetworkL7FirewallRulesApplicationCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/l7FirewallRules/applicationCategories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/l7FirewallRules/applicationCategories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

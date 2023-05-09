@@ -18,12 +18,16 @@ const (
 	DescribeReservedInstancesListingsResultReservedInstancesListingsInstanceCountsStateEnumPending   DescribeReservedInstancesListingsResultReservedInstancesListingsInstanceCountsStateEnum = "pending"
 )
 
+func (e DescribeReservedInstancesListingsResultReservedInstancesListingsInstanceCountsStateEnum) ToPointer() *DescribeReservedInstancesListingsResultReservedInstancesListingsInstanceCountsStateEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesListingsResultReservedInstancesListingsInstanceCountsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "sold":
@@ -31,10 +35,10 @@ func (e *DescribeReservedInstancesListingsResultReservedInstancesListingsInstanc
 	case "cancelled":
 		fallthrough
 	case "pending":
-		*e = DescribeReservedInstancesListingsResultReservedInstancesListingsInstanceCountsStateEnum(s)
+		*e = DescribeReservedInstancesListingsResultReservedInstancesListingsInstanceCountsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesListingsResultReservedInstancesListingsInstanceCountsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesListingsResultReservedInstancesListingsInstanceCountsStateEnum: %v", v)
 	}
 }
 
@@ -51,17 +55,21 @@ const (
 	DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnumUsd DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum = "USD"
 )
 
+func (e DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum) ToPointer() *DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
-		*e = DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum(s)
+		*e = DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesListingsResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum: %v", v)
 	}
 }
 
@@ -83,12 +91,16 @@ const (
 	DescribeReservedInstancesListingsResultReservedInstancesListingsStatusEnumClosed    DescribeReservedInstancesListingsResultReservedInstancesListingsStatusEnum = "closed"
 )
 
+func (e DescribeReservedInstancesListingsResultReservedInstancesListingsStatusEnum) ToPointer() *DescribeReservedInstancesListingsResultReservedInstancesListingsStatusEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesListingsResultReservedInstancesListingsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "pending":
@@ -96,10 +108,10 @@ func (e *DescribeReservedInstancesListingsResultReservedInstancesListingsStatusE
 	case "cancelled":
 		fallthrough
 	case "closed":
-		*e = DescribeReservedInstancesListingsResultReservedInstancesListingsStatusEnum(s)
+		*e = DescribeReservedInstancesListingsResultReservedInstancesListingsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesListingsResultReservedInstancesListingsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesListingsResultReservedInstancesListingsStatusEnum: %v", v)
 	}
 }
 

@@ -472,7 +472,10 @@ func (s *internationalScheduledPayments) CreateInternationalScheduledPaymentsRaw
 // GetInternationalScheduledPaymentConsentsConsentID - Get International Scheduled Payment Consents
 func (s *internationalScheduledPayments) GetInternationalScheduledPaymentConsentsConsentID(ctx context.Context, request operations.GetInternationalScheduledPaymentConsentsConsentIDRequest, security operations.GetInternationalScheduledPaymentConsentsConsentIDSecurity) (*operations.GetInternationalScheduledPaymentConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-scheduled-payment-consents/{ConsentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/international-scheduled-payment-consents/{ConsentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -569,7 +572,10 @@ func (s *internationalScheduledPayments) GetInternationalScheduledPaymentConsent
 // GetInternationalScheduledPaymentConsentsConsentIDFundsConfirmation - Get International Scheduled Payment Consents Funds Confirmation
 func (s *internationalScheduledPayments) GetInternationalScheduledPaymentConsentsConsentIDFundsConfirmation(ctx context.Context, request operations.GetInternationalScheduledPaymentConsentsConsentIDFundsConfirmationRequest, security operations.GetInternationalScheduledPaymentConsentsConsentIDFundsConfirmationSecurity) (*operations.GetInternationalScheduledPaymentConsentsConsentIDFundsConfirmationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-scheduled-payment-consents/{ConsentId}/funds-confirmation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/international-scheduled-payment-consents/{ConsentId}/funds-confirmation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -666,7 +672,10 @@ func (s *internationalScheduledPayments) GetInternationalScheduledPaymentConsent
 // GetInternationalScheduledPaymentsInternationalScheduledPaymentID - Get International Scheduled Payments
 func (s *internationalScheduledPayments) GetInternationalScheduledPaymentsInternationalScheduledPaymentID(ctx context.Context, request operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIDRequest, security operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIDSecurity) (*operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-scheduled-payments/{InternationalScheduledPaymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/international-scheduled-payments/{InternationalScheduledPaymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	POSTRejectTransitGatewayMulticastDomainAssociationsActionEnumRejectTransitGatewayMulticastDomainAssociations POSTRejectTransitGatewayMulticastDomainAssociationsActionEnum = "RejectTransitGatewayMulticastDomainAssociations"
 )
 
+func (e POSTRejectTransitGatewayMulticastDomainAssociationsActionEnum) ToPointer() *POSTRejectTransitGatewayMulticastDomainAssociationsActionEnum {
+	return &e
+}
+
 func (e *POSTRejectTransitGatewayMulticastDomainAssociationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RejectTransitGatewayMulticastDomainAssociations":
-		*e = POSTRejectTransitGatewayMulticastDomainAssociationsActionEnum(s)
+		*e = POSTRejectTransitGatewayMulticastDomainAssociationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRejectTransitGatewayMulticastDomainAssociationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRejectTransitGatewayMulticastDomainAssociationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRejectTransitGatewayMulticastDomainAssociationsVersionEnumTwoThousandAndSixteen1115 POSTRejectTransitGatewayMulticastDomainAssociationsVersionEnum = "2016-11-15"
 )
 
+func (e POSTRejectTransitGatewayMulticastDomainAssociationsVersionEnum) ToPointer() *POSTRejectTransitGatewayMulticastDomainAssociationsVersionEnum {
+	return &e
+}
+
 func (e *POSTRejectTransitGatewayMulticastDomainAssociationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTRejectTransitGatewayMulticastDomainAssociationsVersionEnum(s)
+		*e = POSTRejectTransitGatewayMulticastDomainAssociationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRejectTransitGatewayMulticastDomainAssociationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRejectTransitGatewayMulticastDomainAssociationsVersionEnum: %v", v)
 	}
 }
 

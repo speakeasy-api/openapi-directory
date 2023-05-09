@@ -15,23 +15,27 @@ const (
 	GoogleAppsCardV1TextInputTypeEnumMultipleLine GoogleAppsCardV1TextInputTypeEnum = "MULTIPLE_LINE"
 )
 
+func (e GoogleAppsCardV1TextInputTypeEnum) ToPointer() *GoogleAppsCardV1TextInputTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1TextInputTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SINGLE_LINE":
 		fallthrough
 	case "MULTIPLE_LINE":
-		*e = GoogleAppsCardV1TextInputTypeEnum(s)
+		*e = GoogleAppsCardV1TextInputTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1TextInputTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1TextInputTypeEnum: %v", v)
 	}
 }
 
-// GoogleAppsCardV1TextInput - A field in which users can enter text. Supports suggestions and on-change actions. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect abstract data from users, use a text input. To collect defined data from users, use the selection input widget instead.
+// GoogleAppsCardV1TextInput - A field in which users can enter text. Supports suggestions and on-change actions. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect undefined or abstract data from users, use a text input. To collect defined or enumerated data from users, use the SelectionInput widget.
 type GoogleAppsCardV1TextInput struct {
 	// An action that describes the behavior when the form is submitted. For example, an Apps Script can be invoked to handle the form. If the action is triggered, the form values are sent to the server.
 	AutoCompleteAction *GoogleAppsCardV1Action `json:"autoCompleteAction,omitempty"`

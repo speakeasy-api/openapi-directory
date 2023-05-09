@@ -15,20 +15,24 @@ const (
 	RoleTypeEnumAdmin     RoleTypeEnum = "ADMIN"
 )
 
+func (e RoleTypeEnum) ToPointer() *RoleTypeEnum {
+	return &e
+}
+
 func (e *RoleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READ_ONLY":
 		fallthrough
 	case "DEVELOPER":
 		fallthrough
 	case "ADMIN":
-		*e = RoleTypeEnum(s)
+		*e = RoleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RoleTypeEnum: %v", v)
 	}
 }

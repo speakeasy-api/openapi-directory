@@ -33,21 +33,25 @@ const (
 	ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnumCanaryOptionTryDisable  ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum = "CANARY_OPTION_TRY_DISABLE"
 )
 
+func (e ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum) ToPointer() *ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum {
+	return &e
+}
+
 func (e *ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANARY_OPTION_UNSPECIFIED":
 		fallthrough
 	case "CANARY_OPTION_TRY_ENABLE":
 		fallthrough
 	case "CANARY_OPTION_TRY_DISABLE":
-		*e = ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum(s)
+		*e = ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ClouddebuggerDebuggerDebuggeesBreakpointsSetCanaryOptionEnum: %v", v)
 	}
 }
 

@@ -2,36 +2,33 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetClassificationsRequest{
+    ctx := context.Background()
+    res, err := s.Classification.GetClassifications(ctx, operations.GetClassificationsRequest{
         Ids: []string{
             "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
             "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
             "b7392059-2939-46fe-a759-6eb10faaa235",
         },
-        IsCountry: "explicabo",
-        PageNumber: 750686,
-        PageSize: 315428,
-        Q: "omnis",
+        IsCountry: sdk.String("explicabo"),
+        PageNumber: sdk.Int64(750686),
+        PageSize: sdk.Int64(315428),
+        Q: sdk.String("omnis"),
         Sort: []GetClassificationsSortEnum{
-            "created_at",
-            "updated_at",
+            operations.GetClassificationsSortEnumCreatedAt,
+            operations.GetClassificationsSortEnumUpdatedAt,
         },
-        Type: "AlternateFeedType",
-    }
-
-    ctx := context.Background()
-    res, err := s.Classification.GetClassifications(ctx, req, operations.GetClassificationsSecurity{
+        Type: operations.GetClassificationsTypeEnumAlternateFeedType.ToPointer(),
+    }, operations.GetClassificationsSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {

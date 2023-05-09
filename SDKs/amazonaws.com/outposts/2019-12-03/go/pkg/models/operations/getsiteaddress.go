@@ -17,19 +17,23 @@ const (
 	GetSiteAddressAddressTypeEnumOperatingAddress GetSiteAddressAddressTypeEnum = "OPERATING_ADDRESS"
 )
 
+func (e GetSiteAddressAddressTypeEnum) ToPointer() *GetSiteAddressAddressTypeEnum {
+	return &e
+}
+
 func (e *GetSiteAddressAddressTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHIPPING_ADDRESS":
 		fallthrough
 	case "OPERATING_ADDRESS":
-		*e = GetSiteAddressAddressTypeEnum(s)
+		*e = GetSiteAddressAddressTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSiteAddressAddressTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSiteAddressAddressTypeEnum: %v", v)
 	}
 }
 

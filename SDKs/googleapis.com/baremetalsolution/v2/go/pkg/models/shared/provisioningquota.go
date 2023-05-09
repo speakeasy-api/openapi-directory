@@ -17,12 +17,16 @@ const (
 	ProvisioningQuotaAssetTypeEnumAssetTypeNetwork     ProvisioningQuotaAssetTypeEnum = "ASSET_TYPE_NETWORK"
 )
 
+func (e ProvisioningQuotaAssetTypeEnum) ToPointer() *ProvisioningQuotaAssetTypeEnum {
+	return &e
+}
+
 func (e *ProvisioningQuotaAssetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSET_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ASSET_TYPE_SERVER":
@@ -30,10 +34,10 @@ func (e *ProvisioningQuotaAssetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ASSET_TYPE_STORAGE":
 		fallthrough
 	case "ASSET_TYPE_NETWORK":
-		*e = ProvisioningQuotaAssetTypeEnum(s)
+		*e = ProvisioningQuotaAssetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisioningQuotaAssetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisioningQuotaAssetTypeEnum: %v", v)
 	}
 }
 

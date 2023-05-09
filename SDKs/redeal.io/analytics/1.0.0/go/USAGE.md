@@ -2,28 +2,25 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetEventsRequest{
-        Company: "Medhurst - Rau",
-        Deal: "quibusdam",
-        Nexttoken: "unde",
-        Queryexecutionid: "nulla",
-        Site: "corrupti",
-        Type: "contacts",
-    }
-
     ctx := context.Background()
-    res, err := s.Developers.GetEvents(ctx, req)
+    res, err := s.Developers.GetEvents(ctx, operations.GetEventsRequest{
+        Company: sdk.String("Medhurst - Rau"),
+        Deal: sdk.String("quibusdam"),
+        Nexttoken: sdk.String("unde"),
+        Queryexecutionid: sdk.String("nulla"),
+        Site: sdk.String("corrupti"),
+        Type: operations.GetEventsTypeEnumContacts.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }

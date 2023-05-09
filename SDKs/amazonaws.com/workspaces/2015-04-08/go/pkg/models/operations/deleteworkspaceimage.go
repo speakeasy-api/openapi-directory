@@ -16,17 +16,21 @@ const (
 	DeleteWorkspaceImageXAmzTargetEnumWorkspacesServiceDeleteWorkspaceImage DeleteWorkspaceImageXAmzTargetEnum = "WorkspacesService.DeleteWorkspaceImage"
 )
 
+func (e DeleteWorkspaceImageXAmzTargetEnum) ToPointer() *DeleteWorkspaceImageXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteWorkspaceImageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.DeleteWorkspaceImage":
-		*e = DeleteWorkspaceImageXAmzTargetEnum(s)
+		*e = DeleteWorkspaceImageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteWorkspaceImageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteWorkspaceImageXAmzTargetEnum: %v", v)
 	}
 }
 

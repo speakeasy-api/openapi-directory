@@ -20,12 +20,16 @@ const (
 	ListAuditMitigationActionsTasksTaskStatusEnumCanceled   ListAuditMitigationActionsTasksTaskStatusEnum = "CANCELED"
 )
 
+func (e ListAuditMitigationActionsTasksTaskStatusEnum) ToPointer() *ListAuditMitigationActionsTasksTaskStatusEnum {
+	return &e
+}
+
 func (e *ListAuditMitigationActionsTasksTaskStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "COMPLETED":
@@ -33,10 +37,10 @@ func (e *ListAuditMitigationActionsTasksTaskStatusEnum) UnmarshalJSON(data []byt
 	case "FAILED":
 		fallthrough
 	case "CANCELED":
-		*e = ListAuditMitigationActionsTasksTaskStatusEnum(s)
+		*e = ListAuditMitigationActionsTasksTaskStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAuditMitigationActionsTasksTaskStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAuditMitigationActionsTasksTaskStatusEnum: %v", v)
 	}
 }
 

@@ -14,19 +14,23 @@ const (
 	MetaCommunicationMediumEnumEmail  MetaCommunicationMediumEnum = "EMAIL"
 )
 
+func (e MetaCommunicationMediumEnum) ToPointer() *MetaCommunicationMediumEnum {
+	return &e
+}
+
 func (e *MetaCommunicationMediumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MOBILE":
 		fallthrough
 	case "EMAIL":
-		*e = MetaCommunicationMediumEnum(s)
+		*e = MetaCommunicationMediumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetaCommunicationMediumEnum: %s", s)
+		return fmt.Errorf("invalid value for MetaCommunicationMediumEnum: %v", v)
 	}
 }
 

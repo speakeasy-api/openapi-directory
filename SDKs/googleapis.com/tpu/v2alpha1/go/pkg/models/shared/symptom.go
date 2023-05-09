@@ -20,12 +20,16 @@ const (
 	SymptomSymptomTypeEnumProjectAbuse           SymptomSymptomTypeEnum = "PROJECT_ABUSE"
 )
 
+func (e SymptomSymptomTypeEnum) ToPointer() *SymptomSymptomTypeEnum {
+	return &e
+}
+
 func (e *SymptomSymptomTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYMPTOM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LOW_MEMORY":
@@ -39,10 +43,10 @@ func (e *SymptomSymptomTypeEnum) UnmarshalJSON(data []byte) error {
 	case "HBM_OUT_OF_MEMORY":
 		fallthrough
 	case "PROJECT_ABUSE":
-		*e = SymptomSymptomTypeEnum(s)
+		*e = SymptomSymptomTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymptomSymptomTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SymptomSymptomTypeEnum: %v", v)
 	}
 }
 

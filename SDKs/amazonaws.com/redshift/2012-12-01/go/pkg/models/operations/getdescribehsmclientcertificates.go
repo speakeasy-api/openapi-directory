@@ -15,17 +15,21 @@ const (
 	GETDescribeHsmClientCertificatesActionEnumDescribeHsmClientCertificates GETDescribeHsmClientCertificatesActionEnum = "DescribeHsmClientCertificates"
 )
 
+func (e GETDescribeHsmClientCertificatesActionEnum) ToPointer() *GETDescribeHsmClientCertificatesActionEnum {
+	return &e
+}
+
 func (e *GETDescribeHsmClientCertificatesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeHsmClientCertificates":
-		*e = GETDescribeHsmClientCertificatesActionEnum(s)
+		*e = GETDescribeHsmClientCertificatesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeHsmClientCertificatesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeHsmClientCertificatesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeHsmClientCertificatesVersionEnumTwoThousandAndTwelve1201 GETDescribeHsmClientCertificatesVersionEnum = "2012-12-01"
 )
 
+func (e GETDescribeHsmClientCertificatesVersionEnum) ToPointer() *GETDescribeHsmClientCertificatesVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeHsmClientCertificatesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETDescribeHsmClientCertificatesVersionEnum(s)
+		*e = GETDescribeHsmClientCertificatesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeHsmClientCertificatesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeHsmClientCertificatesVersionEnum: %v", v)
 	}
 }
 

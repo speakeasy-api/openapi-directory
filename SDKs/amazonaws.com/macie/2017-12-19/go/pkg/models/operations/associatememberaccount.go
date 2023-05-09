@@ -16,17 +16,21 @@ const (
 	AssociateMemberAccountXAmzTargetEnumMacieServiceAssociateMemberAccount AssociateMemberAccountXAmzTargetEnum = "MacieService.AssociateMemberAccount"
 )
 
+func (e AssociateMemberAccountXAmzTargetEnum) ToPointer() *AssociateMemberAccountXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateMemberAccountXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MacieService.AssociateMemberAccount":
-		*e = AssociateMemberAccountXAmzTargetEnum(s)
+		*e = AssociateMemberAccountXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateMemberAccountXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateMemberAccountXAmzTargetEnum: %v", v)
 	}
 }
 

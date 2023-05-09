@@ -16,17 +16,21 @@ const (
 	ImportCertificateXAmzTargetEnumCertificateManagerImportCertificate ImportCertificateXAmzTargetEnum = "CertificateManager.ImportCertificate"
 )
 
+func (e ImportCertificateXAmzTargetEnum) ToPointer() *ImportCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CertificateManager.ImportCertificate":
-		*e = ImportCertificateXAmzTargetEnum(s)
+		*e = ImportCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

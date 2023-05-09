@@ -22,17 +22,21 @@ const (
 	DescribeFastLaunchImagesResultFastLaunchImagesResourceTypeEnumSnapshot DescribeFastLaunchImagesResultFastLaunchImagesResourceTypeEnum = "snapshot"
 )
 
+func (e DescribeFastLaunchImagesResultFastLaunchImagesResourceTypeEnum) ToPointer() *DescribeFastLaunchImagesResultFastLaunchImagesResourceTypeEnum {
+	return &e
+}
+
 func (e *DescribeFastLaunchImagesResultFastLaunchImagesResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "snapshot":
-		*e = DescribeFastLaunchImagesResultFastLaunchImagesResourceTypeEnum(s)
+		*e = DescribeFastLaunchImagesResultFastLaunchImagesResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFastLaunchImagesResultFastLaunchImagesResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFastLaunchImagesResultFastLaunchImagesResourceTypeEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	DescribeFastLaunchImagesResultFastLaunchImagesStateEnumDisablingFailed DescribeFastLaunchImagesResultFastLaunchImagesStateEnum = "disabling-failed"
 )
 
+func (e DescribeFastLaunchImagesResultFastLaunchImagesStateEnum) ToPointer() *DescribeFastLaunchImagesResultFastLaunchImagesStateEnum {
+	return &e
+}
+
 func (e *DescribeFastLaunchImagesResultFastLaunchImagesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabling":
 		fallthrough
 	case "enabling-failed":
@@ -70,10 +78,10 @@ func (e *DescribeFastLaunchImagesResultFastLaunchImagesStateEnum) UnmarshalJSON(
 	case "disabling":
 		fallthrough
 	case "disabling-failed":
-		*e = DescribeFastLaunchImagesResultFastLaunchImagesStateEnum(s)
+		*e = DescribeFastLaunchImagesResultFastLaunchImagesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFastLaunchImagesResultFastLaunchImagesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFastLaunchImagesResultFastLaunchImagesStateEnum: %v", v)
 	}
 }
 

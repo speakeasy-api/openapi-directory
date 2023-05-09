@@ -36,7 +36,10 @@ func newAttributes(defaultClient, securityClient HTTPClient, serverURL, language
 // DeleteAttributesComputedID - Delete an Attribute
 func (s *attributes) DeleteAttributesComputedID(ctx context.Context, request operations.DeleteAttributesComputedIDRequest) (*operations.DeleteAttributesComputedIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attributes/computed/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/attributes/computed/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -174,7 +177,10 @@ func (s *attributes) PostAttributesComputed(ctx context.Context, request shared.
 // PutAttributesComputedID - Update an Attribute
 func (s *attributes) PutAttributesComputedID(ctx context.Context, request operations.PutAttributesComputedIDRequest) (*operations.PutAttributesComputedIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/attributes/computed/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/attributes/computed/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Attribute", "json")
 	if err != nil {

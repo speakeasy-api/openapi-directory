@@ -15,19 +15,23 @@ const (
 	PatientAuthNotificationAuthStatusEnumDenied  PatientAuthNotificationAuthStatusEnum = "DENIED"
 )
 
+func (e PatientAuthNotificationAuthStatusEnum) ToPointer() *PatientAuthNotificationAuthStatusEnum {
+	return &e
+}
+
 func (e *PatientAuthNotificationAuthStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GRANTED":
 		fallthrough
 	case "DENIED":
-		*e = PatientAuthNotificationAuthStatusEnum(s)
+		*e = PatientAuthNotificationAuthStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientAuthNotificationAuthStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientAuthNotificationAuthStatusEnum: %v", v)
 	}
 }
 

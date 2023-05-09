@@ -36,7 +36,10 @@ func newSoundEffects(defaultClient, securityClient HTTPClient, serverURL, langua
 // This endpoint redownloads sound effects that you have already received a license for. The download links in the response are valid for 8 hours.
 func (s *soundEffects) DownloadSfx(ctx context.Context, request operations.DownloadSfxRequest, security operations.DownloadSfxSecurity) (*operations.DownloadSfxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sfx/licenses/{id}/downloads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/sfx/licenses/{id}/downloads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -86,7 +89,10 @@ func (s *soundEffects) DownloadSfx(ctx context.Context, request operations.Downl
 // This endpoint shows information about a sound effect.
 func (s *soundEffects) GetSfxDetails(ctx context.Context, request operations.GetSfxDetailsRequest, security operations.GetSfxDetailsSecurity) (*operations.GetSfxDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/sfx/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/sfx/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,6 +137,8 @@ func (s *soundEffects) GetSfxDetails(ctx context.Context, request operations.Get
 	case httpRes.StatusCode == 401:
 		fallthrough
 	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 503:
 	}
 
 	return res, nil
@@ -353,6 +361,8 @@ func (s *soundEffects) SearchSFX(ctx context.Context, request operations.SearchS
 	case httpRes.StatusCode == 401:
 		fallthrough
 	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 503:
 	}
 
 	return res, nil

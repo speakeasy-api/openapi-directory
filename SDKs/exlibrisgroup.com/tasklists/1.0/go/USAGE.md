@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,18 +16,16 @@ func main() {
         }),
     )
 
-    req := operations.GetAlmawsV1TaskListsRsLendingRequestsRequest{
-        Library: "corrupti",
-        Partner: "provident",
-        Printed: "distinctio",
-        Reported: "quibusdam",
-        RequestedFormat: "unde",
-        Status: "nulla",
-        SuppliedFormat: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.LendingRequests.GetAlmawsV1TaskListsRsLendingRequests(ctx, req)
+    res, err := s.LendingRequests.GetAlmawsV1TaskListsRsLendingRequests(ctx, operations.GetAlmawsV1TaskListsRsLendingRequestsRequest{
+        Library: sdk.String("corrupti"),
+        Partner: sdk.String("provident"),
+        Printed: sdk.String("distinctio"),
+        Reported: sdk.String("quibusdam"),
+        RequestedFormat: sdk.String("unde"),
+        Status: sdk.String("nulla"),
+        SuppliedFormat: sdk.String("corrupti"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -17,21 +17,25 @@ const (
 	PostNetworksIDActionsAddSubnetAddSubnetRequestTypeEnumVswitch PostNetworksIDActionsAddSubnetAddSubnetRequestTypeEnum = "vswitch"
 )
 
+func (e PostNetworksIDActionsAddSubnetAddSubnetRequestTypeEnum) ToPointer() *PostNetworksIDActionsAddSubnetAddSubnetRequestTypeEnum {
+	return &e
+}
+
 func (e *PostNetworksIDActionsAddSubnetAddSubnetRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cloud":
 		fallthrough
 	case "server":
 		fallthrough
 	case "vswitch":
-		*e = PostNetworksIDActionsAddSubnetAddSubnetRequestTypeEnum(s)
+		*e = PostNetworksIDActionsAddSubnetAddSubnetRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostNetworksIDActionsAddSubnetAddSubnetRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostNetworksIDActionsAddSubnetAddSubnetRequestTypeEnum: %v", v)
 	}
 }
 
@@ -76,21 +80,25 @@ const (
 	PostNetworksIDActionsAddSubnetActionResponseActionStatusEnumError   PostNetworksIDActionsAddSubnetActionResponseActionStatusEnum = "error"
 )
 
+func (e PostNetworksIDActionsAddSubnetActionResponseActionStatusEnum) ToPointer() *PostNetworksIDActionsAddSubnetActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostNetworksIDActionsAddSubnetActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostNetworksIDActionsAddSubnetActionResponseActionStatusEnum(s)
+		*e = PostNetworksIDActionsAddSubnetActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostNetworksIDActionsAddSubnetActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostNetworksIDActionsAddSubnetActionResponseActionStatusEnum: %v", v)
 	}
 }
 

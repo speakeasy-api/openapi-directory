@@ -55,6 +55,8 @@ type Meeting struct {
 	RecipientEmail *string
 	// Name of the meeting invite recipient
 	RecipientName *string
+	// Status of the meeting rescheduling progress. Possible values are: pending, booked, failed, retry
+	RescheduleStatus *string
 	// Start time of the meeting
 	StartTime *types.Date
 	// Status of the meeting. Possible values are: pending, booked, failed, retry

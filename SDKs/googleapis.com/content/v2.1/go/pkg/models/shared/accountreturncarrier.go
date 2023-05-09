@@ -16,21 +16,25 @@ const (
 	AccountReturnCarrierCarrierCodeEnumUps                    AccountReturnCarrierCarrierCodeEnum = "UPS"
 )
 
+func (e AccountReturnCarrierCarrierCodeEnum) ToPointer() *AccountReturnCarrierCarrierCodeEnum {
+	return &e
+}
+
 func (e *AccountReturnCarrierCarrierCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CARRIER_CODE_UNSPECIFIED":
 		fallthrough
 	case "FEDEX":
 		fallthrough
 	case "UPS":
-		*e = AccountReturnCarrierCarrierCodeEnum(s)
+		*e = AccountReturnCarrierCarrierCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountReturnCarrierCarrierCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountReturnCarrierCarrierCodeEnum: %v", v)
 	}
 }
 

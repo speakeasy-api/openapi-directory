@@ -22,12 +22,16 @@ const (
 	RecognitionMetadataInteractionTypeEnumDictation                  RecognitionMetadataInteractionTypeEnum = "DICTATION"
 )
 
+func (e RecognitionMetadataInteractionTypeEnum) ToPointer() *RecognitionMetadataInteractionTypeEnum {
+	return &e
+}
+
 func (e *RecognitionMetadataInteractionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERACTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DISCUSSION":
@@ -45,10 +49,10 @@ func (e *RecognitionMetadataInteractionTypeEnum) UnmarshalJSON(data []byte) erro
 	case "VOICE_COMMAND":
 		fallthrough
 	case "DICTATION":
-		*e = RecognitionMetadataInteractionTypeEnum(s)
+		*e = RecognitionMetadataInteractionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecognitionMetadataInteractionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RecognitionMetadataInteractionTypeEnum: %v", v)
 	}
 }
 
@@ -62,12 +66,16 @@ const (
 	RecognitionMetadataMicrophoneDistanceEnumFarfield                      RecognitionMetadataMicrophoneDistanceEnum = "FARFIELD"
 )
 
+func (e RecognitionMetadataMicrophoneDistanceEnum) ToPointer() *RecognitionMetadataMicrophoneDistanceEnum {
+	return &e
+}
+
 func (e *RecognitionMetadataMicrophoneDistanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MICROPHONE_DISTANCE_UNSPECIFIED":
 		fallthrough
 	case "NEARFIELD":
@@ -75,10 +83,10 @@ func (e *RecognitionMetadataMicrophoneDistanceEnum) UnmarshalJSON(data []byte) e
 	case "MIDFIELD":
 		fallthrough
 	case "FARFIELD":
-		*e = RecognitionMetadataMicrophoneDistanceEnum(s)
+		*e = RecognitionMetadataMicrophoneDistanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecognitionMetadataMicrophoneDistanceEnum: %s", s)
+		return fmt.Errorf("invalid value for RecognitionMetadataMicrophoneDistanceEnum: %v", v)
 	}
 }
 
@@ -91,21 +99,25 @@ const (
 	RecognitionMetadataOriginalMediaTypeEnumVideo                        RecognitionMetadataOriginalMediaTypeEnum = "VIDEO"
 )
 
+func (e RecognitionMetadataOriginalMediaTypeEnum) ToPointer() *RecognitionMetadataOriginalMediaTypeEnum {
+	return &e
+}
+
 func (e *RecognitionMetadataOriginalMediaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORIGINAL_MEDIA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AUDIO":
 		fallthrough
 	case "VIDEO":
-		*e = RecognitionMetadataOriginalMediaTypeEnum(s)
+		*e = RecognitionMetadataOriginalMediaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecognitionMetadataOriginalMediaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RecognitionMetadataOriginalMediaTypeEnum: %v", v)
 	}
 }
 
@@ -122,12 +134,16 @@ const (
 	RecognitionMetadataRecordingDeviceTypeEnumOtherIndoorDevice              RecognitionMetadataRecordingDeviceTypeEnum = "OTHER_INDOOR_DEVICE"
 )
 
+func (e RecognitionMetadataRecordingDeviceTypeEnum) ToPointer() *RecognitionMetadataRecordingDeviceTypeEnum {
+	return &e
+}
+
 func (e *RecognitionMetadataRecordingDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECORDING_DEVICE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SMARTPHONE":
@@ -141,10 +157,10 @@ func (e *RecognitionMetadataRecordingDeviceTypeEnum) UnmarshalJSON(data []byte) 
 	case "OTHER_OUTDOOR_DEVICE":
 		fallthrough
 	case "OTHER_INDOOR_DEVICE":
-		*e = RecognitionMetadataRecordingDeviceTypeEnum(s)
+		*e = RecognitionMetadataRecordingDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecognitionMetadataRecordingDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RecognitionMetadataRecordingDeviceTypeEnum: %v", v)
 	}
 }
 

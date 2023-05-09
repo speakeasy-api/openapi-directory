@@ -16,21 +16,25 @@ const (
 	GoogleCloudIntegrationsV1alphaTaskConfigExternalTaskTypeEnumErrorTask                   GoogleCloudIntegrationsV1alphaTaskConfigExternalTaskTypeEnum = "ERROR_TASK"
 )
 
+func (e GoogleCloudIntegrationsV1alphaTaskConfigExternalTaskTypeEnum) ToPointer() *GoogleCloudIntegrationsV1alphaTaskConfigExternalTaskTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaTaskConfigExternalTaskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXTERNAL_TASK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NORMAL_TASK":
 		fallthrough
 	case "ERROR_TASK":
-		*e = GoogleCloudIntegrationsV1alphaTaskConfigExternalTaskTypeEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaTaskConfigExternalTaskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTaskConfigExternalTaskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTaskConfigExternalTaskTypeEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	GoogleCloudIntegrationsV1alphaTaskConfigJSONValidationOptionEnumPrePostExecution                GoogleCloudIntegrationsV1alphaTaskConfigJSONValidationOptionEnum = "PRE_POST_EXECUTION"
 )
 
+func (e GoogleCloudIntegrationsV1alphaTaskConfigJSONValidationOptionEnum) ToPointer() *GoogleCloudIntegrationsV1alphaTaskConfigJSONValidationOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaTaskConfigJSONValidationOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JSON_VALIDATION_OPTION_UNSPECIFIED":
 		fallthrough
 	case "SKIP":
@@ -60,10 +68,10 @@ func (e *GoogleCloudIntegrationsV1alphaTaskConfigJSONValidationOptionEnum) Unmar
 	case "POST_EXECUTION":
 		fallthrough
 	case "PRE_POST_EXECUTION":
-		*e = GoogleCloudIntegrationsV1alphaTaskConfigJSONValidationOptionEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaTaskConfigJSONValidationOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTaskConfigJSONValidationOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTaskConfigJSONValidationOptionEnum: %v", v)
 	}
 }
 
@@ -76,21 +84,25 @@ const (
 	GoogleCloudIntegrationsV1alphaTaskConfigNextTasksExecutionPolicyEnumRunFirstMatch                       GoogleCloudIntegrationsV1alphaTaskConfigNextTasksExecutionPolicyEnum = "RUN_FIRST_MATCH"
 )
 
+func (e GoogleCloudIntegrationsV1alphaTaskConfigNextTasksExecutionPolicyEnum) ToPointer() *GoogleCloudIntegrationsV1alphaTaskConfigNextTasksExecutionPolicyEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaTaskConfigNextTasksExecutionPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEXT_TASKS_EXECUTION_POLICY_UNSPECIFIED":
 		fallthrough
 	case "RUN_ALL_MATCH":
 		fallthrough
 	case "RUN_FIRST_MATCH":
-		*e = GoogleCloudIntegrationsV1alphaTaskConfigNextTasksExecutionPolicyEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaTaskConfigNextTasksExecutionPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTaskConfigNextTasksExecutionPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTaskConfigNextTasksExecutionPolicyEnum: %v", v)
 	}
 }
 
@@ -104,12 +116,16 @@ const (
 	GoogleCloudIntegrationsV1alphaTaskConfigTaskExecutionStrategyEnumWhenAllTasksAndConditionsSucceed GoogleCloudIntegrationsV1alphaTaskConfigTaskExecutionStrategyEnum = "WHEN_ALL_TASKS_AND_CONDITIONS_SUCCEED"
 )
 
+func (e GoogleCloudIntegrationsV1alphaTaskConfigTaskExecutionStrategyEnum) ToPointer() *GoogleCloudIntegrationsV1alphaTaskConfigTaskExecutionStrategyEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaTaskConfigTaskExecutionStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TASK_EXECUTION_STRATEGY_UNSPECIFIED":
 		fallthrough
 	case "WHEN_ALL_SUCCEED":
@@ -117,10 +133,10 @@ func (e *GoogleCloudIntegrationsV1alphaTaskConfigTaskExecutionStrategyEnum) Unma
 	case "WHEN_ANY_SUCCEED":
 		fallthrough
 	case "WHEN_ALL_TASKS_AND_CONDITIONS_SUCCEED":
-		*e = GoogleCloudIntegrationsV1alphaTaskConfigTaskExecutionStrategyEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaTaskConfigTaskExecutionStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTaskConfigTaskExecutionStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTaskConfigTaskExecutionStrategyEnum: %v", v)
 	}
 }
 

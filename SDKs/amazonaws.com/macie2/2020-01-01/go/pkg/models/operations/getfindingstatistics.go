@@ -24,12 +24,16 @@ const (
 	GetFindingStatisticsRequestBodyGroupByEnumSeverityDescription           GetFindingStatisticsRequestBodyGroupByEnum = "severity.description"
 )
 
+func (e GetFindingStatisticsRequestBodyGroupByEnum) ToPointer() *GetFindingStatisticsRequestBodyGroupByEnum {
+	return &e
+}
+
 func (e *GetFindingStatisticsRequestBodyGroupByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "resourcesAffected.s3Bucket.name":
 		fallthrough
 	case "type":
@@ -37,10 +41,10 @@ func (e *GetFindingStatisticsRequestBodyGroupByEnum) UnmarshalJSON(data []byte) 
 	case "classificationDetails.jobId":
 		fallthrough
 	case "severity.description":
-		*e = GetFindingStatisticsRequestBodyGroupByEnum(s)
+		*e = GetFindingStatisticsRequestBodyGroupByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFindingStatisticsRequestBodyGroupByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFindingStatisticsRequestBodyGroupByEnum: %v", v)
 	}
 }
 

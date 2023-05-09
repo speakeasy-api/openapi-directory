@@ -20,12 +20,16 @@ const (
 	UpdateAnswerRequestBodyReasonEnumNone                    UpdateAnswerRequestBodyReasonEnum = "NONE"
 )
 
+func (e UpdateAnswerRequestBodyReasonEnum) ToPointer() *UpdateAnswerRequestBodyReasonEnum {
+	return &e
+}
+
 func (e *UpdateAnswerRequestBodyReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OUT_OF_SCOPE":
 		fallthrough
 	case "BUSINESS_PRIORITIES":
@@ -35,10 +39,10 @@ func (e *UpdateAnswerRequestBodyReasonEnum) UnmarshalJSON(data []byte) error {
 	case "OTHER":
 		fallthrough
 	case "NONE":
-		*e = UpdateAnswerRequestBodyReasonEnum(s)
+		*e = UpdateAnswerRequestBodyReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnswerRequestBodyReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnswerRequestBodyReasonEnum: %v", v)
 	}
 }
 

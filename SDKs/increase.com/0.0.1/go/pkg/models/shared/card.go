@@ -41,21 +41,25 @@ const (
 	CardStatusEnumCanceled CardStatusEnum = "canceled"
 )
 
+func (e CardStatusEnum) ToPointer() *CardStatusEnum {
+	return &e
+}
+
 func (e *CardStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "disabled":
 		fallthrough
 	case "canceled":
-		*e = CardStatusEnum(s)
+		*e = CardStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CardStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CardStatusEnum: %v", v)
 	}
 }
 
@@ -66,17 +70,21 @@ const (
 	CardTypeEnumCard CardTypeEnum = "card"
 )
 
+func (e CardTypeEnum) ToPointer() *CardTypeEnum {
+	return &e
+}
+
 func (e *CardTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card":
-		*e = CardTypeEnum(s)
+		*e = CardTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CardTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CardTypeEnum: %v", v)
 	}
 }
 

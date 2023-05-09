@@ -15,17 +15,21 @@ const (
 	POSTGetVerifiedAccessGroupPolicyActionEnumGetVerifiedAccessGroupPolicy POSTGetVerifiedAccessGroupPolicyActionEnum = "GetVerifiedAccessGroupPolicy"
 )
 
+func (e POSTGetVerifiedAccessGroupPolicyActionEnum) ToPointer() *POSTGetVerifiedAccessGroupPolicyActionEnum {
+	return &e
+}
+
 func (e *POSTGetVerifiedAccessGroupPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetVerifiedAccessGroupPolicy":
-		*e = POSTGetVerifiedAccessGroupPolicyActionEnum(s)
+		*e = POSTGetVerifiedAccessGroupPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetVerifiedAccessGroupPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetVerifiedAccessGroupPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetVerifiedAccessGroupPolicyVersionEnumTwoThousandAndSixteen1115 POSTGetVerifiedAccessGroupPolicyVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetVerifiedAccessGroupPolicyVersionEnum) ToPointer() *POSTGetVerifiedAccessGroupPolicyVersionEnum {
+	return &e
+}
+
 func (e *POSTGetVerifiedAccessGroupPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetVerifiedAccessGroupPolicyVersionEnum(s)
+		*e = POSTGetVerifiedAccessGroupPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetVerifiedAccessGroupPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetVerifiedAccessGroupPolicyVersionEnum: %v", v)
 	}
 }
 

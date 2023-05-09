@@ -37,7 +37,10 @@ func newPortfolioMemberships(defaultClient, securityClient HTTPClient, serverURL
 // Returns the complete portfolio record for a single portfolio membership.
 func (s *portfolioMemberships) GetPortfolioMembership(ctx context.Context, request operations.GetPortfolioMembershipRequest) (*operations.GetPortfolioMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolio_memberships/{portfolio_membership_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portfolio_memberships/{portfolio_membership_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -171,7 +174,10 @@ func (s *portfolioMemberships) GetPortfolioMemberships(ctx context.Context, requ
 // Returns the compact portfolio membership records for the portfolio.
 func (s *portfolioMemberships) GetPortfolioMembershipsForPortfolio(ctx context.Context, request operations.GetPortfolioMembershipsForPortfolioRequest) (*operations.GetPortfolioMembershipsForPortfolioResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/portfolio_memberships", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portfolios/{portfolio_gid}/portfolio_memberships", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

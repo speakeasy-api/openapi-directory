@@ -54,21 +54,25 @@ const (
 	CodePushDeploymentsPromote200ApplicationJSONReleaseMethodEnumRollback CodePushDeploymentsPromote200ApplicationJSONReleaseMethodEnum = "Rollback"
 )
 
+func (e CodePushDeploymentsPromote200ApplicationJSONReleaseMethodEnum) ToPointer() *CodePushDeploymentsPromote200ApplicationJSONReleaseMethodEnum {
+	return &e
+}
+
 func (e *CodePushDeploymentsPromote200ApplicationJSONReleaseMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Upload":
 		fallthrough
 	case "Promote":
 		fallthrough
 	case "Rollback":
-		*e = CodePushDeploymentsPromote200ApplicationJSONReleaseMethodEnum(s)
+		*e = CodePushDeploymentsPromote200ApplicationJSONReleaseMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodePushDeploymentsPromote200ApplicationJSONReleaseMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CodePushDeploymentsPromote200ApplicationJSONReleaseMethodEnum: %v", v)
 	}
 }
 

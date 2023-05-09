@@ -21,12 +21,16 @@ const (
 	AppEngineHTTPRequestHTTPMethodEnumOptions               AppEngineHTTPRequestHTTPMethodEnum = "OPTIONS"
 )
 
+func (e AppEngineHTTPRequestHTTPMethodEnum) ToPointer() *AppEngineHTTPRequestHTTPMethodEnum {
+	return &e
+}
+
 func (e *AppEngineHTTPRequestHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP_METHOD_UNSPECIFIED":
 		fallthrough
 	case "POST":
@@ -42,10 +46,10 @@ func (e *AppEngineHTTPRequestHTTPMethodEnum) UnmarshalJSON(data []byte) error {
 	case "PATCH":
 		fallthrough
 	case "OPTIONS":
-		*e = AppEngineHTTPRequestHTTPMethodEnum(s)
+		*e = AppEngineHTTPRequestHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppEngineHTTPRequestHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for AppEngineHTTPRequestHTTPMethodEnum: %v", v)
 	}
 }
 

@@ -28,6 +28,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Sécurisez vos données en interfaçant votre logiciel métier avec le service en ligne GererMesAffaires
 // https://api.gerermesaffaires.com/ - Documentation fonctionnelle des API GererMesAffaires
 type SDK struct {
@@ -109,7 +124,10 @@ func New(opts ...SDKOption) *SDK {
 // DeleteBusinessGroupsIDSpacesSpaceID - Remove a customer space from partner
 func (s *SDK) DeleteBusinessGroupsIDSpacesSpaceID(ctx context.Context, request operations.DeleteBusinessGroupsIDSpacesSpaceIDRequest, security operations.DeleteBusinessGroupsIDSpacesSpaceIDSecurity) (*operations.DeleteBusinessGroupsIDSpacesSpaceIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/business-groups/{id}/spaces/{spaceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/business-groups/{id}/spaces/{spaceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -144,7 +162,10 @@ func (s *SDK) DeleteBusinessGroupsIDSpacesSpaceID(ctx context.Context, request o
 // DeleteSpacesID - Delete a Space (only space not delivered to customer)
 func (s *SDK) DeleteSpacesID(ctx context.Context, request operations.DeleteSpacesIDRequest) (*operations.DeleteSpacesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -179,7 +200,10 @@ func (s *SDK) DeleteSpacesID(ctx context.Context, request operations.DeleteSpace
 // DeleteSpacesIDCompanyEntitiesPersonIDDetailsDesignation - delete a contact detail for a company entity
 func (s *SDK) DeleteSpacesIDCompanyEntitiesPersonIDDetailsDesignation(ctx context.Context, request operations.DeleteSpacesIDCompanyEntitiesPersonIDDetailsDesignationRequest) (*operations.DeleteSpacesIDCompanyEntitiesPersonIDDetailsDesignationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities/{personId}/details/{designation}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities/{personId}/details/{designation}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -214,7 +238,10 @@ func (s *SDK) DeleteSpacesIDCompanyEntitiesPersonIDDetailsDesignation(ctx contex
 // DeleteSpacesIDGroupsGroupIDFoldersFolderID - delete access to a folder for a group
 func (s *SDK) DeleteSpacesIDGroupsGroupIDFoldersFolderID(ctx context.Context, request operations.DeleteSpacesIDGroupsGroupIDFoldersFolderIDRequest) (*operations.DeleteSpacesIDGroupsGroupIDFoldersFolderIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/{groupId}/folders/{folderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/{groupId}/folders/{folderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -249,7 +276,10 @@ func (s *SDK) DeleteSpacesIDGroupsGroupIDFoldersFolderID(ctx context.Context, re
 // DeleteSpacesIDGroupsGroupIDPersonsMemberID - Delete a person of a group
 func (s *SDK) DeleteSpacesIDGroupsGroupIDPersonsMemberID(ctx context.Context, request operations.DeleteSpacesIDGroupsGroupIDPersonsMemberIDRequest) (*operations.DeleteSpacesIDGroupsGroupIDPersonsMemberIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/{groupId}/persons/{memberId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/{groupId}/persons/{memberId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -284,7 +314,10 @@ func (s *SDK) DeleteSpacesIDGroupsGroupIDPersonsMemberID(ctx context.Context, re
 // DeleteSpacesIDPersonsPersonID - delete a person
 func (s *SDK) DeleteSpacesIDPersonsPersonID(ctx context.Context, request operations.DeleteSpacesIDPersonsPersonIDRequest) (*operations.DeleteSpacesIDPersonsPersonIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -319,7 +352,10 @@ func (s *SDK) DeleteSpacesIDPersonsPersonID(ctx context.Context, request operati
 // DeleteSpacesIDPersonsPersonIDDetailsDesignation - delete a contact detail for a person
 func (s *SDK) DeleteSpacesIDPersonsPersonIDDetailsDesignation(ctx context.Context, request operations.DeleteSpacesIDPersonsPersonIDDetailsDesignationRequest) (*operations.DeleteSpacesIDPersonsPersonIDDetailsDesignationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/details/{designation}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/details/{designation}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -354,7 +390,10 @@ func (s *SDK) DeleteSpacesIDPersonsPersonIDDetailsDesignation(ctx context.Contex
 // DeleteSpacesIDStatusCode - delete a status of the space
 func (s *SDK) DeleteSpacesIDStatusCode(ctx context.Context, request operations.DeleteSpacesIDStatusCodeRequest) (*operations.DeleteSpacesIDStatusCodeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/status/{code}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/status/{code}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -389,7 +428,10 @@ func (s *SDK) DeleteSpacesIDStatusCode(ctx context.Context, request operations.D
 // DeleteSpacesIDTriggersName - Deletes a trigger for the space id
 func (s *SDK) DeleteSpacesIDTriggersName(ctx context.Context, request operations.DeleteSpacesIDTriggersNameRequest, security operations.DeleteSpacesIDTriggersNameSecurity) (*operations.DeleteSpacesIDTriggersNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/triggers/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/triggers/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -424,7 +466,10 @@ func (s *SDK) DeleteSpacesIDTriggersName(ctx context.Context, request operations
 // DeleteSpacesSpaceIDCommonFoldersID - Delete a common folder
 func (s *SDK) DeleteSpacesSpaceIDCommonFoldersID(ctx context.Context, request operations.DeleteSpacesSpaceIDCommonFoldersIDRequest) (*operations.DeleteSpacesSpaceIDCommonFoldersIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/common-folders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/common-folders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -459,7 +504,10 @@ func (s *SDK) DeleteSpacesSpaceIDCommonFoldersID(ctx context.Context, request op
 // DeleteSpacesSpaceIDFoldersFolderIDBankStatementsDocumentID - delete a bank statement
 func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDBankStatementsDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersFolderIDBankStatementsDocumentIDRequest) (*operations.DeleteSpacesSpaceIDFoldersFolderIDBankStatementsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/bank-statements/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/bank-statements/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -494,7 +542,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDBankStatementsDocumentID(ctx con
 // DeleteSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentID - delete a contractual document
 func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentIDRequest) (*operations.DeleteSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/contractual-documents/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/contractual-documents/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -529,7 +580,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentID(c
 // DeleteSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentID - delete a corporate tax declaration
 func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequest) (*operations.DeleteSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/corporate-tax-declarations/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/corporate-tax-declarations/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -564,7 +618,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocument
 // DeleteSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentID - delete an expense proof
 func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequest) (*operations.DeleteSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/expense-proofs/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/expense-proofs/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -599,7 +656,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentID(ctx cont
 // DeleteSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentID - delete an expense report
 func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDRequest) (*operations.DeleteSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/expense-reports/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/expense-reports/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -634,7 +694,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentID(ctx con
 // DeleteSpacesSpaceIDFoldersFolderIDInvoicesDocumentID - delete an invoice document
 func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDInvoicesDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDRequest) (*operations.DeleteSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/invoices/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/invoices/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -669,7 +732,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDInvoicesDocumentID(ctx context.C
 // DeleteSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentID - delete a tax declaration
 func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDRequest) (*operations.DeleteSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/other-taxes/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/other-taxes/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -704,7 +770,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentID(ctx context
 // DeleteSpacesSpaceIDFoldersFolderIDPayrollsDocumentID - delete a payroll
 func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDPayrollsDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersFolderIDPayrollsDocumentIDRequest) (*operations.DeleteSpacesSpaceIDFoldersFolderIDPayrollsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/payrolls/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/payrolls/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -739,7 +808,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDPayrollsDocumentID(ctx context.C
 // DeleteSpacesSpaceIDFoldersFolderIDPayslipsDocumentID - delete a payslip
 func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDPayslipsDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDRequest) (*operations.DeleteSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/payslips/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/payslips/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -774,7 +846,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDPayslipsDocumentID(ctx context.C
 // DeleteSpacesSpaceIDFoldersFolderIDSocialContractsDocumentID - delete a social contract
 func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDSocialContractsDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDRequest) (*operations.DeleteSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/social-contracts/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/social-contracts/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -809,7 +884,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDSocialContractsDocumentID(ctx co
 // DeleteSpacesSpaceIDFoldersFolderIDSocialDeclarationsDocumentID - delete a social declaration
 func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDSocialDeclarationsDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersFolderIDSocialDeclarationsDocumentIDRequest) (*operations.DeleteSpacesSpaceIDFoldersFolderIDSocialDeclarationsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/social-declarations/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/social-declarations/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -844,7 +922,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDSocialDeclarationsDocumentID(ctx
 // DeleteSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentID - delete a VAT declaration
 func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDRequest) (*operations.DeleteSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/vat-declarations/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/vat-declarations/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -879,7 +960,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentID(ctx co
 // DeleteSpacesSpaceIDFoldersIDAccountingYear - delete an AccountingYear
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDAccountingYear(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDAccountingYearRequest) (*operations.DeleteSpacesSpaceIDFoldersIDAccountingYearResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/accounting-year", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/accounting-year", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -914,7 +998,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDAccountingYear(ctx context.Context, re
 // DeleteSpacesSpaceIDFoldersIDBank - Delete a Folder (except Name, Class, ModificationDate and ArchivalDate) and Bank data
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDBank(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDBankRequest) (*operations.DeleteSpacesSpaceIDFoldersIDBankResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/bank", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/bank", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -949,7 +1036,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDBank(ctx context.Context, request oper
 // DeleteSpacesSpaceIDFoldersIDCustomer - delete a customer
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDCustomer(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDCustomerRequest) (*operations.DeleteSpacesSpaceIDFoldersIDCustomerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/customer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/customer", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -984,7 +1074,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDCustomer(ctx context.Context, request 
 // DeleteSpacesSpaceIDFoldersIDEmployee - Delete a Folder (except Name, Class, ModificationDate and ArchivalDate) and Employee data
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDEmployee(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDEmployeeRequest) (*operations.DeleteSpacesSpaceIDFoldersIDEmployeeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/employee", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/employee", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1019,7 +1112,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDEmployee(ctx context.Context, request 
 // DeleteSpacesSpaceIDFoldersIDInsurance - Delete a Folder (except Name, Class, ModificationDate and ArchivalDate) and Insurance data
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDInsurance(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDInsuranceRequest) (*operations.DeleteSpacesSpaceIDFoldersIDInsuranceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/insurance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/insurance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1054,7 +1150,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDInsurance(ctx context.Context, request
 // DeleteSpacesSpaceIDFoldersIDLoan - Delete a Folder (except Name, Class, ModificationDate and ArchivalDate) and Loan data
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDLoan(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDLoanRequest) (*operations.DeleteSpacesSpaceIDFoldersIDLoanResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/loan", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/loan", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1089,7 +1188,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDLoan(ctx context.Context, request oper
 // DeleteSpacesSpaceIDFoldersIDPasswordsPasswordID - delete a password
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDPasswordsPasswordID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDPasswordsPasswordIDRequest) (*operations.DeleteSpacesSpaceIDFoldersIDPasswordsPasswordIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/passwords/{passwordId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/passwords/{passwordId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1124,7 +1226,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDPasswordsPasswordID(ctx context.Contex
 // DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclaration - delete a nominative social declaration in a folder social
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclaration(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationRequest, security operations.DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationSecurity) (*operations.DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payrolls/{payrollId}/nominative-social-declaration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payrolls/{payrollId}/nominative-social-declaration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1159,7 +1264,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDecla
 // DeleteSpacesSpaceIDFoldersIDPortfolioPortfolioID - delete a secondary portfolio of a customer contract
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDPortfolioPortfolioID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDPortfolioPortfolioIDRequest) (*operations.DeleteSpacesSpaceIDFoldersIDPortfolioPortfolioIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/portfolio/{portfolioId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/portfolio/{portfolioId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1194,7 +1302,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDPortfolioPortfolioID(ctx context.Conte
 // DeleteSpacesSpaceIDFoldersIDProfessionalVehicle - delete a Professional Vehicle
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDProfessionalVehicle(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDProfessionalVehicleRequest) (*operations.DeleteSpacesSpaceIDFoldersIDProfessionalVehicleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/professional-vehicle", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/professional-vehicle", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1229,7 +1340,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDProfessionalVehicle(ctx context.Contex
 // DeleteSpacesSpaceIDFoldersIDProvider - delete a provider
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDProvider(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDProviderRequest) (*operations.DeleteSpacesSpaceIDFoldersIDProviderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/provider", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/provider", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1264,7 +1378,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDProvider(ctx context.Context, request 
 // DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDocumentID - delete a document from a required document
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDocumentID(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDocumentIDRequest, security operations.DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDocumentIDSecurity) (*operations.DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDocumentsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}/documents/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}/documents/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1299,7 +1416,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidDoc
 // DeleteSpacesSpaceIDFoldersIDSocialRegimes - delete a social regime
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDSocialRegimes(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDSocialRegimesRequest) (*operations.DeleteSpacesSpaceIDFoldersIDSocialRegimesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-regimes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-regimes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1334,7 +1454,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDSocialRegimes(ctx context.Context, req
 // DeleteSpacesSpaceIDFoldersIDTaxContract - Delete a Folder (except Name, Class, ModificationDate and ArchivalDate) and tax contract data
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDTaxContract(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDTaxContractRequest) (*operations.DeleteSpacesSpaceIDFoldersIDTaxContractResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/tax-contract", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/tax-contract", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1369,7 +1492,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDTaxContract(ctx context.Context, reque
 // DeleteSpacesSpaceIDFoldersIDDocumentClass - delete a class document
 func (s *SDK) DeleteSpacesSpaceIDFoldersIDDocumentClass(ctx context.Context, request operations.DeleteSpacesSpaceIDFoldersIDDocumentClassRequest) (*operations.DeleteSpacesSpaceIDFoldersIDDocumentClassResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/{documentClass}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/{documentClass}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1404,7 +1530,10 @@ func (s *SDK) DeleteSpacesSpaceIDFoldersIDDocumentClass(ctx context.Context, req
 // DeleteSpacesSpaceIDPersonsIDGuestInSpace - delete the invitation of a person in a space
 func (s *SDK) DeleteSpacesSpaceIDPersonsIDGuestInSpace(ctx context.Context, request operations.DeleteSpacesSpaceIDPersonsIDGuestInSpaceRequest, security operations.DeleteSpacesSpaceIDPersonsIDGuestInSpaceSecurity) (*operations.DeleteSpacesSpaceIDPersonsIDGuestInSpaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/guest-in-space", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/guest-in-space", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1439,7 +1568,10 @@ func (s *SDK) DeleteSpacesSpaceIDPersonsIDGuestInSpace(ctx context.Context, requ
 // DeleteSpacesSpaceIDPersonsIDInvitation - delete the invitation of a person in a space
 func (s *SDK) DeleteSpacesSpaceIDPersonsIDInvitation(ctx context.Context, request operations.DeleteSpacesSpaceIDPersonsIDInvitationRequest, security operations.DeleteSpacesSpaceIDPersonsIDInvitationSecurity) (*operations.DeleteSpacesSpaceIDPersonsIDInvitationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/invitation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/invitation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1472,7 +1604,7 @@ func (s *SDK) DeleteSpacesSpaceIDPersonsIDInvitation(ctx context.Context, reques
 }
 
 // GetBoxMenus - Returns predefined folders and workbooks of the Box for all the spaces
-func (s *SDK) GetBoxMenus(ctx context.Context) (*operations.GetBoxMenusResponse, error) {
+func (s *SDK) GetBoxMenus(ctx context.Context, security operations.GetBoxMenusSecurity) (*operations.GetBoxMenusResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/box/menus"
 
@@ -1481,7 +1613,7 @@ func (s *SDK) GetBoxMenus(ctx context.Context) (*operations.GetBoxMenusResponse,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._securityClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1614,7 +1746,10 @@ func (s *SDK) GetBusinessGroupsAll(ctx context.Context, request operations.GetBu
 // GetBusinessGroupsID - Returns a group
 func (s *SDK) GetBusinessGroupsID(ctx context.Context, request operations.GetBusinessGroupsIDRequest, security operations.GetBusinessGroupsIDSecurity) (*operations.GetBusinessGroupsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/business-groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/business-groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1658,7 +1793,10 @@ func (s *SDK) GetBusinessGroupsID(ctx context.Context, request operations.GetBus
 // GetBusinessGroupsIDSpaces - Returns spaces of the business group with id
 func (s *SDK) GetBusinessGroupsIDSpaces(ctx context.Context, request operations.GetBusinessGroupsIDSpacesRequest, security operations.GetBusinessGroupsIDSpacesSecurity) (*operations.GetBusinessGroupsIDSpacesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/business-groups/{id}/spaces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/business-groups/{id}/spaces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1706,7 +1844,10 @@ func (s *SDK) GetBusinessGroupsIDSpaces(ctx context.Context, request operations.
 // GetHubBusinessGroupsIDMenus - Returns predefined folders and workbooks of the Hub for all the spaces of the business group
 func (s *SDK) GetHubBusinessGroupsIDMenus(ctx context.Context, request operations.GetHubBusinessGroupsIDMenusRequest, security operations.GetHubBusinessGroupsIDMenusSecurity) (*operations.GetHubBusinessGroupsIDMenusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hub/business-groups/{Id}/menus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hub/business-groups/{Id}/menus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1748,7 +1889,7 @@ func (s *SDK) GetHubBusinessGroupsIDMenus(ctx context.Context, request operation
 }
 
 // GetHubMenus - Returns predefined folders and workbooks of the Hub for all the spaces
-func (s *SDK) GetHubMenus(ctx context.Context) (*operations.GetHubMenusResponse, error) {
+func (s *SDK) GetHubMenus(ctx context.Context, security operations.GetHubMenusSecurity) (*operations.GetHubMenusResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hub/menus"
 
@@ -1757,7 +1898,7 @@ func (s *SDK) GetHubMenus(ctx context.Context) (*operations.GetHubMenusResponse,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._securityClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1792,7 +1933,7 @@ func (s *SDK) GetHubMenus(ctx context.Context) (*operations.GetHubMenusResponse,
 }
 
 // GetHubMenusAll - Returns predefined folders and workbooks of the Hub for all the spaces and customer spaces
-func (s *SDK) GetHubMenusAll(ctx context.Context) (*operations.GetHubMenusAllResponse, error) {
+func (s *SDK) GetHubMenusAll(ctx context.Context, security operations.GetHubMenusAllSecurity) (*operations.GetHubMenusAllResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/hub/menus/all"
 
@@ -1801,7 +1942,7 @@ func (s *SDK) GetHubMenusAll(ctx context.Context) (*operations.GetHubMenusAllRes
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._securityClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1838,7 +1979,10 @@ func (s *SDK) GetHubMenusAll(ctx context.Context) (*operations.GetHubMenusAllRes
 // GetHubSpacesSpaceIDMenus - Returns predefined folders and workbooks of the Hub for the space
 func (s *SDK) GetHubSpacesSpaceIDMenus(ctx context.Context, request operations.GetHubSpacesSpaceIDMenusRequest) (*operations.GetHubSpacesSpaceIDMenusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hub/spaces/{spaceId}/menus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hub/spaces/{spaceId}/menus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2075,7 +2219,7 @@ func (s *SDK) GetRegistration(ctx context.Context, request operations.GetRegistr
 }
 
 // GetSession - Returns member id of user logged
-func (s *SDK) GetSession(ctx context.Context) (*operations.GetSessionResponse, error) {
+func (s *SDK) GetSession(ctx context.Context, security operations.GetSessionSecurity) (*operations.GetSessionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/session"
 
@@ -2084,7 +2228,7 @@ func (s *SDK) GetSession(ctx context.Context) (*operations.GetSessionResponse, e
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._securityClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -2217,7 +2361,10 @@ func (s *SDK) GetSpacesAll(ctx context.Context, request operations.GetSpacesAllR
 // GetSpacesID - Returns a space
 func (s *SDK) GetSpacesID(ctx context.Context, request operations.GetSpacesIDRequest) (*operations.GetSpacesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2261,7 +2408,10 @@ func (s *SDK) GetSpacesID(ctx context.Context, request operations.GetSpacesIDReq
 // GetSpacesIDAccountingYear - Returns list of accounting years for the space {id}
 func (s *SDK) GetSpacesIDAccountingYear(ctx context.Context, request operations.GetSpacesIDAccountingYearRequest) (*operations.GetSpacesIDAccountingYearResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/accounting-year", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/accounting-year", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2309,7 +2459,10 @@ func (s *SDK) GetSpacesIDAccountingYear(ctx context.Context, request operations.
 // GetSpacesIDCollectiveDecision - Returns list of collective decisions for the space {id}
 func (s *SDK) GetSpacesIDCollectiveDecision(ctx context.Context, request operations.GetSpacesIDCollectiveDecisionRequest) (*operations.GetSpacesIDCollectiveDecisionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/collective-decision", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/collective-decision", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2357,7 +2510,10 @@ func (s *SDK) GetSpacesIDCollectiveDecision(ctx context.Context, request operati
 // GetSpacesIDCompanyEntities - Returns list of company entities
 func (s *SDK) GetSpacesIDCompanyEntities(ctx context.Context, request operations.GetSpacesIDCompanyEntitiesRequest) (*operations.GetSpacesIDCompanyEntitiesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2405,7 +2561,10 @@ func (s *SDK) GetSpacesIDCompanyEntities(ctx context.Context, request operations
 // GetSpacesIDCompanyEntitiesAll - Returns list of company entities even company entities archived
 func (s *SDK) GetSpacesIDCompanyEntitiesAll(ctx context.Context, request operations.GetSpacesIDCompanyEntitiesAllRequest) (*operations.GetSpacesIDCompanyEntitiesAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2453,7 +2612,10 @@ func (s *SDK) GetSpacesIDCompanyEntitiesAll(ctx context.Context, request operati
 // GetSpacesIDCompanyEntitiesCompanyID - Returns a compay entity
 func (s *SDK) GetSpacesIDCompanyEntitiesCompanyID(ctx context.Context, request operations.GetSpacesIDCompanyEntitiesCompanyIDRequest) (*operations.GetSpacesIDCompanyEntitiesCompanyIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities/{companyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities/{companyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2497,7 +2659,10 @@ func (s *SDK) GetSpacesIDCompanyEntitiesCompanyID(ctx context.Context, request o
 // GetSpacesIDCompanyEntitiesPersonIDDetails - Returns all details of a company entity
 func (s *SDK) GetSpacesIDCompanyEntitiesPersonIDDetails(ctx context.Context, request operations.GetSpacesIDCompanyEntitiesPersonIDDetailsRequest) (*operations.GetSpacesIDCompanyEntitiesPersonIDDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities/{personId}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities/{personId}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2541,7 +2706,10 @@ func (s *SDK) GetSpacesIDCompanyEntitiesPersonIDDetails(ctx context.Context, req
 // GetSpacesIDFoldersFolderIDPersonsMemberID - return the access of a person in a customer contract
 func (s *SDK) GetSpacesIDFoldersFolderIDPersonsMemberID(ctx context.Context, request operations.GetSpacesIDFoldersFolderIDPersonsMemberIDRequest) (*operations.GetSpacesIDFoldersFolderIDPersonsMemberIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/folders/{folderId}/persons/{memberId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/folders/{folderId}/persons/{memberId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2585,7 +2753,10 @@ func (s *SDK) GetSpacesIDFoldersFolderIDPersonsMemberID(ctx context.Context, req
 // GetSpacesIDGroups - Returns list of groups
 func (s *SDK) GetSpacesIDGroups(ctx context.Context, request operations.GetSpacesIDGroupsRequest) (*operations.GetSpacesIDGroupsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2633,7 +2804,10 @@ func (s *SDK) GetSpacesIDGroups(ctx context.Context, request operations.GetSpace
 // GetSpacesIDGroupsAll - Returns list of groups even archived of the space
 func (s *SDK) GetSpacesIDGroupsAll(ctx context.Context, request operations.GetSpacesIDGroupsAllRequest) (*operations.GetSpacesIDGroupsAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2681,7 +2855,10 @@ func (s *SDK) GetSpacesIDGroupsAll(ctx context.Context, request operations.GetSp
 // GetSpacesIDGroupsGroupID - Returns a group
 func (s *SDK) GetSpacesIDGroupsGroupID(ctx context.Context, request operations.GetSpacesIDGroupsGroupIDRequest) (*operations.GetSpacesIDGroupsGroupIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/{groupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/{groupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2725,7 +2902,10 @@ func (s *SDK) GetSpacesIDGroupsGroupID(ctx context.Context, request operations.G
 // GetSpacesIDLegal - Returns legal information of a space (except private)
 func (s *SDK) GetSpacesIDLegal(ctx context.Context, request operations.GetSpacesIDLegalRequest) (*operations.GetSpacesIDLegalResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/legal", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/legal", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2769,7 +2949,10 @@ func (s *SDK) GetSpacesIDLegal(ctx context.Context, request operations.GetSpaces
 // GetSpacesIDLogo - Returns a space with the logo
 func (s *SDK) GetSpacesIDLogo(ctx context.Context, request operations.GetSpacesIDLogoRequest) (*operations.GetSpacesIDLogoResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/logo", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/logo", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2820,7 +3003,10 @@ func (s *SDK) GetSpacesIDLogo(ctx context.Context, request operations.GetSpacesI
 // GetSpacesIDPersons - Returns list of persons
 func (s *SDK) GetSpacesIDPersons(ctx context.Context, request operations.GetSpacesIDPersonsRequest) (*operations.GetSpacesIDPersonsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2868,7 +3054,10 @@ func (s *SDK) GetSpacesIDPersons(ctx context.Context, request operations.GetSpac
 // GetSpacesIDPersonsAll - Returns list of persons even persons archived
 func (s *SDK) GetSpacesIDPersonsAll(ctx context.Context, request operations.GetSpacesIDPersonsAllRequest) (*operations.GetSpacesIDPersonsAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2916,7 +3105,10 @@ func (s *SDK) GetSpacesIDPersonsAll(ctx context.Context, request operations.GetS
 // GetSpacesIDPersonsPersonID - Returns a person
 func (s *SDK) GetSpacesIDPersonsPersonID(ctx context.Context, request operations.GetSpacesIDPersonsPersonIDRequest) (*operations.GetSpacesIDPersonsPersonIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2960,7 +3152,10 @@ func (s *SDK) GetSpacesIDPersonsPersonID(ctx context.Context, request operations
 // GetSpacesIDPersonsPersonIDDetails - Returns all details of a person
 func (s *SDK) GetSpacesIDPersonsPersonIDDetails(ctx context.Context, request operations.GetSpacesIDPersonsPersonIDDetailsRequest) (*operations.GetSpacesIDPersonsPersonIDDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3004,7 +3199,10 @@ func (s *SDK) GetSpacesIDPersonsPersonIDDetails(ctx context.Context, request ope
 // GetSpacesIDPersonsPersonIDFolders - Returns list of folders with exceptionnal access of the person personId
 func (s *SDK) GetSpacesIDPersonsPersonIDFolders(ctx context.Context, request operations.GetSpacesIDPersonsPersonIDFoldersRequest) (*operations.GetSpacesIDPersonsPersonIDFoldersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/folders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/folders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3052,7 +3250,10 @@ func (s *SDK) GetSpacesIDPersonsPersonIDFolders(ctx context.Context, request ope
 // GetSpacesIDPersonsPersonIDGroups - Returns list of groups of the person personId
 func (s *SDK) GetSpacesIDPersonsPersonIDGroups(ctx context.Context, request operations.GetSpacesIDPersonsPersonIDGroupsRequest) (*operations.GetSpacesIDPersonsPersonIDGroupsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3096,7 +3297,10 @@ func (s *SDK) GetSpacesIDPersonsPersonIDGroups(ctx context.Context, request oper
 // GetSpacesIDPersonsPersonIDPortfolios - Returns list of portfolios of the person personId
 func (s *SDK) GetSpacesIDPersonsPersonIDPortfolios(ctx context.Context, request operations.GetSpacesIDPersonsPersonIDPortfoliosRequest) (*operations.GetSpacesIDPersonsPersonIDPortfoliosResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/portfolios", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/portfolios", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3140,7 +3344,10 @@ func (s *SDK) GetSpacesIDPersonsPersonIDPortfolios(ctx context.Context, request 
 // GetSpacesIDProfessionalVehicles - Returns list of professionalvehicles for the space {id}
 func (s *SDK) GetSpacesIDProfessionalVehicles(ctx context.Context, request operations.GetSpacesIDProfessionalVehiclesRequest) (*operations.GetSpacesIDProfessionalVehiclesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/professional-vehicles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/professional-vehicles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3188,7 +3395,10 @@ func (s *SDK) GetSpacesIDProfessionalVehicles(ctx context.Context, request opera
 // GetSpacesIDSettingsNf203Logs - Returns state of activation of logs
 func (s *SDK) GetSpacesIDSettingsNf203Logs(ctx context.Context, request operations.GetSpacesIDSettingsNf203LogsRequest, security operations.GetSpacesIDSettingsNf203LogsSecurity) (*operations.GetSpacesIDSettingsNf203LogsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/settings/nf203/logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/settings/nf203/logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3232,7 +3442,10 @@ func (s *SDK) GetSpacesIDSettingsNf203Logs(ctx context.Context, request operatio
 // GetSpacesIDStatus - Returns all status of the space
 func (s *SDK) GetSpacesIDStatus(ctx context.Context, request operations.GetSpacesIDStatusRequest) (*operations.GetSpacesIDStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3276,7 +3489,10 @@ func (s *SDK) GetSpacesIDStatus(ctx context.Context, request operations.GetSpace
 // GetSpacesIDTaxContracts - Returns list of tax contracts for the space {id}
 func (s *SDK) GetSpacesIDTaxContracts(ctx context.Context, request operations.GetSpacesIDTaxContractsRequest) (*operations.GetSpacesIDTaxContractsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/tax-contracts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/tax-contracts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3320,7 +3536,10 @@ func (s *SDK) GetSpacesIDTaxContracts(ctx context.Context, request operations.Ge
 // GetSpacesIDTriggers - Returns list of triggers for the space {id}
 func (s *SDK) GetSpacesIDTriggers(ctx context.Context, request operations.GetSpacesIDTriggersRequest, security operations.GetSpacesIDTriggersSecurity) (*operations.GetSpacesIDTriggersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/triggers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/triggers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3364,7 +3583,10 @@ func (s *SDK) GetSpacesIDTriggers(ctx context.Context, request operations.GetSpa
 // GetSpacesSpaceIDCompanyEntitiesIDFollowUps - Returns folder of the company entity
 func (s *SDK) GetSpacesSpaceIDCompanyEntitiesIDFollowUps(ctx context.Context, request operations.GetSpacesSpaceIDCompanyEntitiesIDFollowUpsRequest) (*operations.GetSpacesSpaceIDCompanyEntitiesIDFollowUpsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/company-entities/{id}/follow-ups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/company-entities/{id}/follow-ups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3408,7 +3630,10 @@ func (s *SDK) GetSpacesSpaceIDCompanyEntitiesIDFollowUps(ctx context.Context, re
 // GetSpacesSpaceIDCustomers - Returns folder with Id and customer data
 func (s *SDK) GetSpacesSpaceIDCustomers(ctx context.Context, request operations.GetSpacesSpaceIDCustomersRequest) (*operations.GetSpacesSpaceIDCustomersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/customers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/customers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3456,7 +3681,10 @@ func (s *SDK) GetSpacesSpaceIDCustomers(ctx context.Context, request operations.
 // GetSpacesSpaceIDCustomersAll - Returns folder with Id and customer data (even archived)
 func (s *SDK) GetSpacesSpaceIDCustomersAll(ctx context.Context, request operations.GetSpacesSpaceIDCustomersAllRequest) (*operations.GetSpacesSpaceIDCustomersAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/customers/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/customers/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3504,7 +3732,10 @@ func (s *SDK) GetSpacesSpaceIDCustomersAll(ctx context.Context, request operatio
 // GetSpacesSpaceIDDocuments - Returns documents of the folder
 func (s *SDK) GetSpacesSpaceIDDocuments(ctx context.Context, request operations.GetSpacesSpaceIDDocumentsRequest) (*operations.GetSpacesSpaceIDDocumentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3552,7 +3783,10 @@ func (s *SDK) GetSpacesSpaceIDDocuments(ctx context.Context, request operations.
 // GetSpacesSpaceIDDocumentsDocumentIDExtend - read the data of a document
 func (s *SDK) GetSpacesSpaceIDDocumentsDocumentIDExtend(ctx context.Context, request operations.GetSpacesSpaceIDDocumentsDocumentIDExtendRequest) (*operations.GetSpacesSpaceIDDocumentsDocumentIDExtendResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/extend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/extend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3596,7 +3830,10 @@ func (s *SDK) GetSpacesSpaceIDDocumentsDocumentIDExtend(ctx context.Context, req
 // GetSpacesSpaceIDDocumentsDocumentIDFolders - Returns versions of the document
 func (s *SDK) GetSpacesSpaceIDDocumentsDocumentIDFolders(ctx context.Context, request operations.GetSpacesSpaceIDDocumentsDocumentIDFoldersRequest) (*operations.GetSpacesSpaceIDDocumentsDocumentIDFoldersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/folders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/folders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3640,7 +3877,10 @@ func (s *SDK) GetSpacesSpaceIDDocumentsDocumentIDFolders(ctx context.Context, re
 // GetSpacesSpaceIDDocumentsDocumentIDMailingprice - returns the number of pages and the price of the pdf to send by mail
 func (s *SDK) GetSpacesSpaceIDDocumentsDocumentIDMailingprice(ctx context.Context, request operations.GetSpacesSpaceIDDocumentsDocumentIDMailingpriceRequest, security operations.GetSpacesSpaceIDDocumentsDocumentIDMailingpriceSecurity) (*operations.GetSpacesSpaceIDDocumentsDocumentIDMailingpriceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/mailingprice", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/mailingprice", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3684,7 +3924,10 @@ func (s *SDK) GetSpacesSpaceIDDocumentsDocumentIDMailingprice(ctx context.Contex
 // GetSpacesSpaceIDDocumentsDocumentIDVersions - Returns versions of the document
 func (s *SDK) GetSpacesSpaceIDDocumentsDocumentIDVersions(ctx context.Context, request operations.GetSpacesSpaceIDDocumentsDocumentIDVersionsRequest) (*operations.GetSpacesSpaceIDDocumentsDocumentIDVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3728,7 +3971,10 @@ func (s *SDK) GetSpacesSpaceIDDocumentsDocumentIDVersions(ctx context.Context, r
 // GetSpacesSpaceIDDocumentsDocumentIDVersionsCurrent - Returns current version of the document
 func (s *SDK) GetSpacesSpaceIDDocumentsDocumentIDVersionsCurrent(ctx context.Context, request operations.GetSpacesSpaceIDDocumentsDocumentIDVersionsCurrentRequest) (*operations.GetSpacesSpaceIDDocumentsDocumentIDVersionsCurrentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/versions/current", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/versions/current", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3772,7 +4018,10 @@ func (s *SDK) GetSpacesSpaceIDDocumentsDocumentIDVersionsCurrent(ctx context.Con
 // GetSpacesSpaceIDDocumentsIDAccess - Returns accesses of one document
 func (s *SDK) GetSpacesSpaceIDDocumentsIDAccess(ctx context.Context, request operations.GetSpacesSpaceIDDocumentsIDAccessRequest) (*operations.GetSpacesSpaceIDDocumentsIDAccessResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{id}/access", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{id}/access", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3816,7 +4065,10 @@ func (s *SDK) GetSpacesSpaceIDDocumentsIDAccess(ctx context.Context, request ope
 // GetSpacesSpaceIDDocumentsIDAccounting - Returns the document with the accounting property
 func (s *SDK) GetSpacesSpaceIDDocumentsIDAccounting(ctx context.Context, request operations.GetSpacesSpaceIDDocumentsIDAccountingRequest) (*operations.GetSpacesSpaceIDDocumentsIDAccountingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{id}/accounting", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{id}/accounting", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3860,7 +4112,10 @@ func (s *SDK) GetSpacesSpaceIDDocumentsIDAccounting(ctx context.Context, request
 // GetSpacesSpaceIDDocumentsIDDownload - Returns content of one document
 func (s *SDK) GetSpacesSpaceIDDocumentsIDDownload(ctx context.Context, request operations.GetSpacesSpaceIDDocumentsIDDownloadRequest) (*operations.GetSpacesSpaceIDDocumentsIDDownloadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{id}/download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{id}/download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3918,7 +4173,10 @@ func (s *SDK) GetSpacesSpaceIDDocumentsIDDownload(ctx context.Context, request o
 // GetSpacesSpaceIDEmployees - Returns folders with Id and employee data
 func (s *SDK) GetSpacesSpaceIDEmployees(ctx context.Context, request operations.GetSpacesSpaceIDEmployeesRequest) (*operations.GetSpacesSpaceIDEmployeesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/employees", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/employees", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3966,7 +4224,10 @@ func (s *SDK) GetSpacesSpaceIDEmployees(ctx context.Context, request operations.
 // GetSpacesSpaceIDEmployeesAll - Returns folders with Id and employee data (even archived)
 func (s *SDK) GetSpacesSpaceIDEmployeesAll(ctx context.Context, request operations.GetSpacesSpaceIDEmployeesAllRequest) (*operations.GetSpacesSpaceIDEmployeesAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/employees/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/employees/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4014,7 +4275,10 @@ func (s *SDK) GetSpacesSpaceIDEmployeesAll(ctx context.Context, request operatio
 // GetSpacesSpaceIDEmployers - Returns folders with Id and employer data
 func (s *SDK) GetSpacesSpaceIDEmployers(ctx context.Context, request operations.GetSpacesSpaceIDEmployersRequest) (*operations.GetSpacesSpaceIDEmployersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/employers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/employers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4062,7 +4326,10 @@ func (s *SDK) GetSpacesSpaceIDEmployers(ctx context.Context, request operations.
 // GetSpacesSpaceIDEmployersAll - Returns folders with Id and employer data (even archived)
 func (s *SDK) GetSpacesSpaceIDEmployersAll(ctx context.Context, request operations.GetSpacesSpaceIDEmployersAllRequest) (*operations.GetSpacesSpaceIDEmployersAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/employers/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/employers/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4110,7 +4377,10 @@ func (s *SDK) GetSpacesSpaceIDEmployersAll(ctx context.Context, request operatio
 // GetSpacesSpaceIDExtend - read the data of a space
 func (s *SDK) GetSpacesSpaceIDExtend(ctx context.Context, request operations.GetSpacesSpaceIDExtendRequest) (*operations.GetSpacesSpaceIDExtendResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/extend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/extend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4154,7 +4424,10 @@ func (s *SDK) GetSpacesSpaceIDExtend(ctx context.Context, request operations.Get
 // GetSpacesSpaceIDFolders - Returns folders of the space
 func (s *SDK) GetSpacesSpaceIDFolders(ctx context.Context, request operations.GetSpacesSpaceIDFoldersRequest) (*operations.GetSpacesSpaceIDFoldersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4202,7 +4475,10 @@ func (s *SDK) GetSpacesSpaceIDFolders(ctx context.Context, request operations.Ge
 // GetSpacesSpaceIDFoldersAll - Returns folders of the space (even archived)
 func (s *SDK) GetSpacesSpaceIDFoldersAll(ctx context.Context, request operations.GetSpacesSpaceIDFoldersAllRequest) (*operations.GetSpacesSpaceIDFoldersAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4250,7 +4526,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersAll(ctx context.Context, request operations
 // GetSpacesSpaceIDFoldersFolderIDNominativeSocialDeclarationsDocumentID - get a nominative social declaration
 func (s *SDK) GetSpacesSpaceIDFoldersFolderIDNominativeSocialDeclarationsDocumentID(ctx context.Context, request operations.GetSpacesSpaceIDFoldersFolderIDNominativeSocialDeclarationsDocumentIDRequest) (*operations.GetSpacesSpaceIDFoldersFolderIDNominativeSocialDeclarationsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/nominative-social-declarations/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/nominative-social-declarations/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4294,7 +4573,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersFolderIDNominativeSocialDeclarationsDocumen
 // GetSpacesSpaceIDFoldersID - Returns folder with Id
 func (s *SDK) GetSpacesSpaceIDFoldersID(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDRequest) (*operations.GetSpacesSpaceIDFoldersIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4338,7 +4620,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersID(ctx context.Context, request operations.
 // GetSpacesSpaceIDFoldersIDAccountings - Returns accountings documents of the folder (results and taxation or accountingyear)
 func (s *SDK) GetSpacesSpaceIDFoldersIDAccountings(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDAccountingsRequest) (*operations.GetSpacesSpaceIDFoldersIDAccountingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/accountings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/accountings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4386,7 +4671,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDAccountings(ctx context.Context, request 
 // GetSpacesSpaceIDFoldersIDAccountingsJournal - journal of accountings document delivered to a customer
 func (s *SDK) GetSpacesSpaceIDFoldersIDAccountingsJournal(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDAccountingsJournalRequest) (*operations.GetSpacesSpaceIDFoldersIDAccountingsJournalResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/accountings-journal", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/accountings-journal", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4434,7 +4722,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDAccountingsJournal(ctx context.Context, r
 // GetSpacesSpaceIDFoldersIDBank - Returns folder with Id and bank data
 func (s *SDK) GetSpacesSpaceIDFoldersIDBank(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDBankRequest) (*operations.GetSpacesSpaceIDFoldersIDBankResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/bank", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/bank", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4478,7 +4769,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDBank(ctx context.Context, request operati
 // GetSpacesSpaceIDFoldersIDBankStatements - Returns bank statements of the folder bank
 func (s *SDK) GetSpacesSpaceIDFoldersIDBankStatements(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDBankStatementsRequest) (*operations.GetSpacesSpaceIDFoldersIDBankStatementsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/bank-statements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/bank-statements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4526,7 +4820,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDBankStatements(ctx context.Context, reque
 // GetSpacesSpaceIDFoldersIDCommonFolders - Returns common folders of a folder
 func (s *SDK) GetSpacesSpaceIDFoldersIDCommonFolders(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDCommonFoldersRequest) (*operations.GetSpacesSpaceIDFoldersIDCommonFoldersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/common-folders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/common-folders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4574,7 +4871,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDCommonFolders(ctx context.Context, reques
 // GetSpacesSpaceIDFoldersIDCommonFoldersAll - Returns common folders (even archived) of a folder
 func (s *SDK) GetSpacesSpaceIDFoldersIDCommonFoldersAll(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDCommonFoldersAllRequest) (*operations.GetSpacesSpaceIDFoldersIDCommonFoldersAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/common-folders/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/common-folders/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4622,7 +4922,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDCommonFoldersAll(ctx context.Context, req
 // GetSpacesSpaceIDFoldersIDContractingPartner - Returns all contracting partners of a contract
 func (s *SDK) GetSpacesSpaceIDFoldersIDContractingPartner(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDContractingPartnerRequest) (*operations.GetSpacesSpaceIDFoldersIDContractingPartnerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/contracting-partner", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/contracting-partner", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4666,7 +4969,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDContractingPartner(ctx context.Context, r
 // GetSpacesSpaceIDFoldersIDContractingPartnerSpace - Returns collector space of a contract
 func (s *SDK) GetSpacesSpaceIDFoldersIDContractingPartnerSpace(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDContractingPartnerSpaceRequest) (*operations.GetSpacesSpaceIDFoldersIDContractingPartnerSpaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/contracting-partner/space", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/contracting-partner/space", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4710,7 +5016,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDContractingPartnerSpace(ctx context.Conte
 // GetSpacesSpaceIDFoldersIDContractualDocuments - Returns documents of the folder
 func (s *SDK) GetSpacesSpaceIDFoldersIDContractualDocuments(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDContractualDocumentsRequest) (*operations.GetSpacesSpaceIDFoldersIDContractualDocumentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/contractual-documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/contractual-documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4758,7 +5067,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDContractualDocuments(ctx context.Context,
 // GetSpacesSpaceIDFoldersIDContractualRelationship - Returns folder with Id and contractual-relationship data
 func (s *SDK) GetSpacesSpaceIDFoldersIDContractualRelationship(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDContractualRelationshipRequest) (*operations.GetSpacesSpaceIDFoldersIDContractualRelationshipResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/contractual-relationship", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/contractual-relationship", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4802,7 +5114,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDContractualRelationship(ctx context.Conte
 // GetSpacesSpaceIDFoldersIDCoporateTaxDeclarations - Returns corporate tax declarations
 func (s *SDK) GetSpacesSpaceIDFoldersIDCoporateTaxDeclarations(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDCoporateTaxDeclarationsRequest) (*operations.GetSpacesSpaceIDFoldersIDCoporateTaxDeclarationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/coporate-tax-declarations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/coporate-tax-declarations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4850,7 +5165,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDCoporateTaxDeclarations(ctx context.Conte
 // GetSpacesSpaceIDFoldersIDCustomer - Returns folder with Id and customer data
 func (s *SDK) GetSpacesSpaceIDFoldersIDCustomer(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDCustomerRequest) (*operations.GetSpacesSpaceIDFoldersIDCustomerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/customer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/customer", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4894,7 +5212,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDCustomer(ctx context.Context, request ope
 // GetSpacesSpaceIDFoldersIDDeliveriesJournal - journal of documents delivered to a customer
 func (s *SDK) GetSpacesSpaceIDFoldersIDDeliveriesJournal(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDDeliveriesJournalRequest) (*operations.GetSpacesSpaceIDFoldersIDDeliveriesJournalResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/deliveries-journal", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/deliveries-journal", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4942,7 +5263,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDDeliveriesJournal(ctx context.Context, re
 // GetSpacesSpaceIDFoldersIDDocuments - Returns documents of the folder
 func (s *SDK) GetSpacesSpaceIDFoldersIDDocuments(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDDocumentsRequest) (*operations.GetSpacesSpaceIDFoldersIDDocumentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4990,7 +5314,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDDocuments(ctx context.Context, request op
 // GetSpacesSpaceIDFoldersIDEmployee - Returns folder with Id and employee data
 func (s *SDK) GetSpacesSpaceIDFoldersIDEmployee(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDEmployeeRequest) (*operations.GetSpacesSpaceIDFoldersIDEmployeeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/employee", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/employee", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5034,7 +5361,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDEmployee(ctx context.Context, request ope
 // GetSpacesSpaceIDFoldersIDExpenseProofs - Returns expense proofs of the folder (social, followup or exchange)
 func (s *SDK) GetSpacesSpaceIDFoldersIDExpenseProofs(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDExpenseProofsRequest) (*operations.GetSpacesSpaceIDFoldersIDExpenseProofsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-proofs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-proofs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5082,7 +5412,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDExpenseProofs(ctx context.Context, reques
 // GetSpacesSpaceIDFoldersIDExpenseReports - Returns expense reports of the folder (social or followup)
 func (s *SDK) GetSpacesSpaceIDFoldersIDExpenseReports(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDExpenseReportsRequest) (*operations.GetSpacesSpaceIDFoldersIDExpenseReportsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-reports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5130,7 +5463,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDExpenseReports(ctx context.Context, reque
 // GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofs - Returns expense proofs linked to the expenseReportId
 func (s *SDK) GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofs(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsRequest) (*operations.GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProofsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-reports/{expenseReportId}/expense-proofs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-reports/{expenseReportId}/expense-proofs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5178,7 +5514,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDExpenseReportsExpenseReportIDExpenseProof
 // GetSpacesSpaceIDFoldersIDInsurance - Returns folder with Id and insurance data
 func (s *SDK) GetSpacesSpaceIDFoldersIDInsurance(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDInsuranceRequest) (*operations.GetSpacesSpaceIDFoldersIDInsuranceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/insurance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/insurance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5222,7 +5561,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDInsurance(ctx context.Context, request op
 // GetSpacesSpaceIDFoldersIDInvoices - Returns invoices of the folder (customer, provider, accountingyear or root folders customers or providers)
 func (s *SDK) GetSpacesSpaceIDFoldersIDInvoices(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDInvoicesRequest) (*operations.GetSpacesSpaceIDFoldersIDInvoicesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/invoices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/invoices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5270,7 +5612,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDInvoices(ctx context.Context, request ope
 // GetSpacesSpaceIDFoldersIDLegalEntity - Returns legal entity of a follow up folder
 func (s *SDK) GetSpacesSpaceIDFoldersIDLegalEntity(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDLegalEntityRequest) (*operations.GetSpacesSpaceIDFoldersIDLegalEntityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/legal-entity", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/legal-entity", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5314,7 +5659,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDLegalEntity(ctx context.Context, request 
 // GetSpacesSpaceIDFoldersIDLoan - Returns folder with Id and loan data
 func (s *SDK) GetSpacesSpaceIDFoldersIDLoan(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDLoanRequest) (*operations.GetSpacesSpaceIDFoldersIDLoanResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/loan", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/loan", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5358,7 +5706,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDLoan(ctx context.Context, request operati
 // GetSpacesSpaceIDFoldersIDMessages - Returns messages of the folder
 func (s *SDK) GetSpacesSpaceIDFoldersIDMessages(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDMessagesRequest) (*operations.GetSpacesSpaceIDFoldersIDMessagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/messages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/messages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5406,7 +5757,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDMessages(ctx context.Context, request ope
 // GetSpacesSpaceIDFoldersIDMessagesMessageID - Returns message with Id
 func (s *SDK) GetSpacesSpaceIDFoldersIDMessagesMessageID(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDMessagesMessageIDRequest) (*operations.GetSpacesSpaceIDFoldersIDMessagesMessageIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/messages/{messageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/messages/{messageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5450,7 +5804,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDMessagesMessageID(ctx context.Context, re
 // GetSpacesSpaceIDFoldersIDNominativeSocialDeclarations - Returns nominative social declarations of the folder social
 func (s *SDK) GetSpacesSpaceIDFoldersIDNominativeSocialDeclarations(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDNominativeSocialDeclarationsRequest) (*operations.GetSpacesSpaceIDFoldersIDNominativeSocialDeclarationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/nominative-social-declarations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/nominative-social-declarations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5498,7 +5855,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDNominativeSocialDeclarations(ctx context.
 // GetSpacesSpaceIDFoldersIDOtherTaxes - Returns other taxes declarations
 func (s *SDK) GetSpacesSpaceIDFoldersIDOtherTaxes(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDOtherTaxesRequest) (*operations.GetSpacesSpaceIDFoldersIDOtherTaxesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/other-taxes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/other-taxes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5546,7 +5906,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDOtherTaxes(ctx context.Context, request o
 // GetSpacesSpaceIDFoldersIDPasswords - Returns identifiers/passwords of the folder
 func (s *SDK) GetSpacesSpaceIDFoldersIDPasswords(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDPasswordsRequest) (*operations.GetSpacesSpaceIDFoldersIDPasswordsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/passwords", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/passwords", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5590,7 +5953,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDPasswords(ctx context.Context, request op
 // GetSpacesSpaceIDFoldersIDPasswordsPasswordID - Returns password with Id
 func (s *SDK) GetSpacesSpaceIDFoldersIDPasswordsPasswordID(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDPasswordsPasswordIDRequest) (*operations.GetSpacesSpaceIDFoldersIDPasswordsPasswordIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/passwords/{passwordId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/passwords/{passwordId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5634,7 +6000,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDPasswordsPasswordID(ctx context.Context, 
 // GetSpacesSpaceIDFoldersIDPayrolls - Returns payrolls of the folder social
 func (s *SDK) GetSpacesSpaceIDFoldersIDPayrolls(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDPayrollsRequest) (*operations.GetSpacesSpaceIDFoldersIDPayrollsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payrolls", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payrolls", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5682,7 +6051,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDPayrolls(ctx context.Context, request ope
 // GetSpacesSpaceIDFoldersIDPayslips - Returns payslips of the folder employee
 func (s *SDK) GetSpacesSpaceIDFoldersIDPayslips(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDPayslipsRequest) (*operations.GetSpacesSpaceIDFoldersIDPayslipsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payslips", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payslips", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5730,7 +6102,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDPayslips(ctx context.Context, request ope
 // GetSpacesSpaceIDFoldersIDProvider - Returns folder with Id and provider data
 func (s *SDK) GetSpacesSpaceIDFoldersIDProvider(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDProviderRequest) (*operations.GetSpacesSpaceIDFoldersIDProviderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/provider", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/provider", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5774,7 +6149,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDProvider(ctx context.Context, request ope
 // GetSpacesSpaceIDFoldersIDRequiredDocuments - list of the required documents for a person
 func (s *SDK) GetSpacesSpaceIDFoldersIDRequiredDocuments(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDRequiredDocumentsRequest) (*operations.GetSpacesSpaceIDFoldersIDRequiredDocumentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/required-documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/required-documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5818,7 +6196,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDRequiredDocuments(ctx context.Context, re
 // GetSpacesSpaceIDFoldersIDSections - Returns sections of the folder
 func (s *SDK) GetSpacesSpaceIDFoldersIDSections(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDSectionsRequest) (*operations.GetSpacesSpaceIDFoldersIDSectionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/sections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/sections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5862,7 +6243,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDSections(ctx context.Context, request ope
 // GetSpacesSpaceIDFoldersIDSocialContracts - Returns social contracts of the folder employee
 func (s *SDK) GetSpacesSpaceIDFoldersIDSocialContracts(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDSocialContractsRequest) (*operations.GetSpacesSpaceIDFoldersIDSocialContractsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-contracts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-contracts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5910,7 +6294,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDSocialContracts(ctx context.Context, requ
 // GetSpacesSpaceIDFoldersIDSocialDeclarations - Returns social declarations
 func (s *SDK) GetSpacesSpaceIDFoldersIDSocialDeclarations(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDSocialDeclarationsRequest) (*operations.GetSpacesSpaceIDFoldersIDSocialDeclarationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-declarations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-declarations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5958,7 +6345,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDSocialDeclarations(ctx context.Context, r
 // GetSpacesSpaceIDFoldersIDSocialRegimes - Returns folder with Id and social regime data
 func (s *SDK) GetSpacesSpaceIDFoldersIDSocialRegimes(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDSocialRegimesRequest) (*operations.GetSpacesSpaceIDFoldersIDSocialRegimesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-regimes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-regimes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6002,7 +6392,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDSocialRegimes(ctx context.Context, reques
 // GetSpacesSpaceIDFoldersIDSumInvoices - Returns sum of invoices of the folder (customer, provider, accountingyear or root folders customers or providers)
 func (s *SDK) GetSpacesSpaceIDFoldersIDSumInvoices(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDSumInvoicesRequest) (*operations.GetSpacesSpaceIDFoldersIDSumInvoicesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/sum-invoices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/sum-invoices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6050,7 +6443,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDSumInvoices(ctx context.Context, request 
 // GetSpacesSpaceIDFoldersIDVatDeclarations - Returns vat declarations
 func (s *SDK) GetSpacesSpaceIDFoldersIDVatDeclarations(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDVatDeclarationsRequest) (*operations.GetSpacesSpaceIDFoldersIDVatDeclarationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/vat-declarations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/vat-declarations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6098,7 +6494,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDVatDeclarations(ctx context.Context, requ
 // GetSpacesSpaceIDFoldersIDDocumentClass - Returns document of documentClass (without specific data) of the folder
 func (s *SDK) GetSpacesSpaceIDFoldersIDDocumentClass(ctx context.Context, request operations.GetSpacesSpaceIDFoldersIDDocumentClassRequest) (*operations.GetSpacesSpaceIDFoldersIDDocumentClassResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/{documentClass}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/{documentClass}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6142,7 +6541,10 @@ func (s *SDK) GetSpacesSpaceIDFoldersIDDocumentClass(ctx context.Context, reques
 // GetSpacesSpaceIDLegalEntitiesIDBanks - Returns list of bank folders for a legal-entity
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDBanks(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDBanksRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDBanksResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/banks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/banks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6186,7 +6588,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDBanks(ctx context.Context, request 
 // GetSpacesSpaceIDLegalEntitiesIDBanksAll - Returns folder of the banks even archived
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDBanksAll(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDBanksAllRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDBanksAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/banks/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/banks/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6230,7 +6635,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDBanksAll(ctx context.Context, reque
 // GetSpacesSpaceIDLegalEntitiesIDContracts - Returns all contract folders of the legal entity
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDContracts(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDContractsRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDContractsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/contracts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/contracts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6274,7 +6682,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDContracts(ctx context.Context, requ
 // GetSpacesSpaceIDLegalEntitiesIDContractualRelationships - Returns folder of the others contract with legal entity
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDContractualRelationships(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDContractualRelationshipsRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDContractualRelationshipsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/contractual-relationships", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/contractual-relationships", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6318,7 +6729,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDContractualRelationships(ctx contex
 // GetSpacesSpaceIDLegalEntitiesIDContractualRelationshipsAll - Returns folder of the others contract with legal entity (even archived)
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDContractualRelationshipsAll(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDContractualRelationshipsAllRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDContractualRelationshipsAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/contractual-relationships/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/contractual-relationships/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6362,7 +6776,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDContractualRelationshipsAll(ctx con
 // GetSpacesSpaceIDLegalEntitiesIDCustomers - Returns folder of the customer
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDCustomers(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDCustomersRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDCustomersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/customers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/customers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6406,7 +6823,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDCustomers(ctx context.Context, requ
 // GetSpacesSpaceIDLegalEntitiesIDCustomersAll - Returns folder of the customers (even archived)
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDCustomersAll(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDCustomersAllRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDCustomersAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/customers/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/customers/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6450,7 +6870,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDCustomersAll(ctx context.Context, r
 // GetSpacesSpaceIDLegalEntitiesIDInsurances - Returns list of insurance folders for a legal-entity
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDInsurances(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDInsurancesRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDInsurancesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/insurances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/insurances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6494,7 +6917,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDInsurances(ctx context.Context, req
 // GetSpacesSpaceIDLegalEntitiesIDInsurancesAll - Returns folder of the insurances even archived
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDInsurancesAll(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDInsurancesAllRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDInsurancesAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/insurances/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/insurances/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6538,7 +6964,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDInsurancesAll(ctx context.Context, 
 // GetSpacesSpaceIDLegalEntitiesIDLoans - Returns folder of the loan
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDLoans(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDLoansRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDLoansResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/loans", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/loans", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6582,7 +7011,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDLoans(ctx context.Context, request 
 // GetSpacesSpaceIDLegalEntitiesIDLoansAll - Returns folder of the loans even archived
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDLoansAll(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDLoansAllRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDLoansAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/loans/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/loans/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6626,7 +7058,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDLoansAll(ctx context.Context, reque
 // GetSpacesSpaceIDLegalEntitiesIDProviders - Returns list of providers folders for a legal-entity
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDProviders(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDProvidersRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDProvidersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/providers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/providers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6670,7 +7105,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDProviders(ctx context.Context, requ
 // GetSpacesSpaceIDLegalEntitiesIDProvidersAll - Returns folder of the providers even archived
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDProvidersAll(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDProvidersAllRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDProvidersAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/providers/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/providers/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6714,7 +7152,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDProvidersAll(ctx context.Context, r
 // GetSpacesSpaceIDLegalEntitiesIDSocialRegimes - Returns list of social regimes folders for a legal-entity
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDSocialRegimes(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDSocialRegimesRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDSocialRegimesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/social-regimes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/social-regimes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6758,7 +7199,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDSocialRegimes(ctx context.Context, 
 // GetSpacesSpaceIDLegalEntitiesIDSocialRegimesAll - Returns folder of the social regimes even archived
 func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDSocialRegimesAll(ctx context.Context, request operations.GetSpacesSpaceIDLegalEntitiesIDSocialRegimesAllRequest) (*operations.GetSpacesSpaceIDLegalEntitiesIDSocialRegimesAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/social-regimes/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/social-regimes/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6802,7 +7246,10 @@ func (s *SDK) GetSpacesSpaceIDLegalEntitiesIDSocialRegimesAll(ctx context.Contex
 // GetSpacesSpaceIDLoans - Returns list of all loan folders of the space
 func (s *SDK) GetSpacesSpaceIDLoans(ctx context.Context, request operations.GetSpacesSpaceIDLoansRequest) (*operations.GetSpacesSpaceIDLoansResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/loans", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/loans", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6846,7 +7293,10 @@ func (s *SDK) GetSpacesSpaceIDLoans(ctx context.Context, request operations.GetS
 // GetSpacesSpaceIDLoansAll - Returns list of all loan folders even archived of the space
 func (s *SDK) GetSpacesSpaceIDLoansAll(ctx context.Context, request operations.GetSpacesSpaceIDLoansAllRequest) (*operations.GetSpacesSpaceIDLoansAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/loans/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/loans/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6890,7 +7340,10 @@ func (s *SDK) GetSpacesSpaceIDLoansAll(ctx context.Context, request operations.G
 // GetSpacesSpaceIDPersonsIDEmployees - Returns folder of the employee
 func (s *SDK) GetSpacesSpaceIDPersonsIDEmployees(ctx context.Context, request operations.GetSpacesSpaceIDPersonsIDEmployeesRequest) (*operations.GetSpacesSpaceIDPersonsIDEmployeesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/employees", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/employees", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6934,7 +7387,10 @@ func (s *SDK) GetSpacesSpaceIDPersonsIDEmployees(ctx context.Context, request op
 // GetSpacesSpaceIDPersonsIDEmployeesAll - Returns folder of all employees (even archived)
 func (s *SDK) GetSpacesSpaceIDPersonsIDEmployeesAll(ctx context.Context, request operations.GetSpacesSpaceIDPersonsIDEmployeesAllRequest) (*operations.GetSpacesSpaceIDPersonsIDEmployeesAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/employees/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/employees/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6978,7 +7434,10 @@ func (s *SDK) GetSpacesSpaceIDPersonsIDEmployeesAll(ctx context.Context, request
 // GetSpacesSpaceIDPersonsIDExchange - Returns folder exchange of the person
 func (s *SDK) GetSpacesSpaceIDPersonsIDExchange(ctx context.Context, request operations.GetSpacesSpaceIDPersonsIDExchangeRequest) (*operations.GetSpacesSpaceIDPersonsIDExchangeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/exchange", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/exchange", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7022,7 +7481,10 @@ func (s *SDK) GetSpacesSpaceIDPersonsIDExchange(ctx context.Context, request ope
 // GetSpacesSpaceIDPersonsIDFollowUps - Returns folder of the person
 func (s *SDK) GetSpacesSpaceIDPersonsIDFollowUps(ctx context.Context, request operations.GetSpacesSpaceIDPersonsIDFollowUpsRequest) (*operations.GetSpacesSpaceIDPersonsIDFollowUpsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/follow-ups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/follow-ups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7066,7 +7528,10 @@ func (s *SDK) GetSpacesSpaceIDPersonsIDFollowUps(ctx context.Context, request op
 // GetSpacesSpaceIDPersonsIDInvitation - Returns invitation of a person
 func (s *SDK) GetSpacesSpaceIDPersonsIDInvitation(ctx context.Context, request operations.GetSpacesSpaceIDPersonsIDInvitationRequest) (*operations.GetSpacesSpaceIDPersonsIDInvitationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/invitation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/invitation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7110,7 +7575,10 @@ func (s *SDK) GetSpacesSpaceIDPersonsIDInvitation(ctx context.Context, request o
 // GetSpacesSpaceIDPersonsMemberIDFoldersID - Returns folderId with the access of the person
 func (s *SDK) GetSpacesSpaceIDPersonsMemberIDFoldersID(ctx context.Context, request operations.GetSpacesSpaceIDPersonsMemberIDFoldersIDRequest) (*operations.GetSpacesSpaceIDPersonsMemberIDFoldersIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{memberId}/folders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{memberId}/folders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7154,7 +7622,10 @@ func (s *SDK) GetSpacesSpaceIDPersonsMemberIDFoldersID(ctx context.Context, requ
 // GetSpacesSpaceIDProviders - Returns folder with Id and provider data
 func (s *SDK) GetSpacesSpaceIDProviders(ctx context.Context, request operations.GetSpacesSpaceIDProvidersRequest) (*operations.GetSpacesSpaceIDProvidersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/providers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/providers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7202,7 +7673,10 @@ func (s *SDK) GetSpacesSpaceIDProviders(ctx context.Context, request operations.
 // GetSpacesSpaceIDProvidersAll - Returns folder with Id and provider data (even archived)
 func (s *SDK) GetSpacesSpaceIDProvidersAll(ctx context.Context, request operations.GetSpacesSpaceIDProvidersAllRequest) (*operations.GetSpacesSpaceIDProvidersAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/providers/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/providers/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7250,7 +7724,10 @@ func (s *SDK) GetSpacesSpaceIDProvidersAll(ctx context.Context, request operatio
 // GetSpacesSpaceIDSocialRegimes - Returns folder with Id and social regime data
 func (s *SDK) GetSpacesSpaceIDSocialRegimes(ctx context.Context, request operations.GetSpacesSpaceIDSocialRegimesRequest) (*operations.GetSpacesSpaceIDSocialRegimesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/social-regimes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/social-regimes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7298,7 +7775,10 @@ func (s *SDK) GetSpacesSpaceIDSocialRegimes(ctx context.Context, request operati
 // GetSpacesSpaceIDSocialRegimesAll - Returns folder with Id and social regime data (even archived)
 func (s *SDK) GetSpacesSpaceIDSocialRegimesAll(ctx context.Context, request operations.GetSpacesSpaceIDSocialRegimesAllRequest) (*operations.GetSpacesSpaceIDSocialRegimesAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/social-regimes/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/social-regimes/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7346,7 +7826,10 @@ func (s *SDK) GetSpacesSpaceIDSocialRegimesAll(ctx context.Context, request oper
 // GetSpacesSpaceIDSpacesInvoicings - Returns CSV Invoicings of the spaces for the account of the spaceId
 func (s *SDK) GetSpacesSpaceIDSpacesInvoicings(ctx context.Context, request operations.GetSpacesSpaceIDSpacesInvoicingsRequest) (*operations.GetSpacesSpaceIDSpacesInvoicingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/spaces-invoicings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/spaces-invoicings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -7619,7 +8102,10 @@ func (s *SDK) PatchProfileMultipart(ctx context.Context, request operations.Patc
 // PatchSpacesID - Modify a Space (except private)
 func (s *SDK) PatchSpacesID(ctx context.Context, request operations.PatchSpacesIDRequest) (*operations.PatchSpacesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7664,7 +8150,10 @@ func (s *SDK) PatchSpacesID(ctx context.Context, request operations.PatchSpacesI
 // PatchSpacesIDCompanyEntitiesCompanyID - Modify a company entity
 func (s *SDK) PatchSpacesIDCompanyEntitiesCompanyID(ctx context.Context, request operations.PatchSpacesIDCompanyEntitiesCompanyIDRequest) (*operations.PatchSpacesIDCompanyEntitiesCompanyIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities/{companyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities/{companyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7709,7 +8198,10 @@ func (s *SDK) PatchSpacesIDCompanyEntitiesCompanyID(ctx context.Context, request
 // PatchSpacesIDFoldersFolderIDPersonsMemberID - Add/Modify/Delete a person in a customer contract (except manager)
 func (s *SDK) PatchSpacesIDFoldersFolderIDPersonsMemberID(ctx context.Context, request operations.PatchSpacesIDFoldersFolderIDPersonsMemberIDRequest) (*operations.PatchSpacesIDFoldersFolderIDPersonsMemberIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/folders/{folderId}/persons/{memberId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/folders/{folderId}/persons/{memberId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7754,7 +8246,10 @@ func (s *SDK) PatchSpacesIDFoldersFolderIDPersonsMemberID(ctx context.Context, r
 // PatchSpacesIDFoldersFolderIDPersonsMemberIDActiveaccess - open an access
 func (s *SDK) PatchSpacesIDFoldersFolderIDPersonsMemberIDActiveaccess(ctx context.Context, request operations.PatchSpacesIDFoldersFolderIDPersonsMemberIDActiveaccessRequest) (*operations.PatchSpacesIDFoldersFolderIDPersonsMemberIDActiveaccessResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/folders/{folderId}/persons/{memberId}/activeaccess", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/folders/{folderId}/persons/{memberId}/activeaccess", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -7789,7 +8284,10 @@ func (s *SDK) PatchSpacesIDFoldersFolderIDPersonsMemberIDActiveaccess(ctx contex
 // PatchSpacesIDFoldersFolderIDPersonsMemberIDUnactiveaccess - close an access
 func (s *SDK) PatchSpacesIDFoldersFolderIDPersonsMemberIDUnactiveaccess(ctx context.Context, request operations.PatchSpacesIDFoldersFolderIDPersonsMemberIDUnactiveaccessRequest) (*operations.PatchSpacesIDFoldersFolderIDPersonsMemberIDUnactiveaccessResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/folders/{folderId}/persons/{memberId}/unactiveaccess", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/folders/{folderId}/persons/{memberId}/unactiveaccess", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -7824,7 +8322,10 @@ func (s *SDK) PatchSpacesIDFoldersFolderIDPersonsMemberIDUnactiveaccess(ctx cont
 // PatchSpacesIDGroupsGroupID - Modify a group
 func (s *SDK) PatchSpacesIDGroupsGroupID(ctx context.Context, request operations.PatchSpacesIDGroupsGroupIDRequest) (*operations.PatchSpacesIDGroupsGroupIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/{groupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/{groupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7869,7 +8370,10 @@ func (s *SDK) PatchSpacesIDGroupsGroupID(ctx context.Context, request operations
 // PatchSpacesIDGroupsGroupIDFoldersFolderID - Add access to a folder for a group
 func (s *SDK) PatchSpacesIDGroupsGroupIDFoldersFolderID(ctx context.Context, request operations.PatchSpacesIDGroupsGroupIDFoldersFolderIDRequest) (*operations.PatchSpacesIDGroupsGroupIDFoldersFolderIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/{groupId}/folders/{folderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/{groupId}/folders/{folderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7914,7 +8418,10 @@ func (s *SDK) PatchSpacesIDGroupsGroupIDFoldersFolderID(ctx context.Context, req
 // PatchSpacesIDGroupsGroupIDPersonsMemberID - Add a person to a group
 func (s *SDK) PatchSpacesIDGroupsGroupIDPersonsMemberID(ctx context.Context, request operations.PatchSpacesIDGroupsGroupIDPersonsMemberIDRequest) (*operations.PatchSpacesIDGroupsGroupIDPersonsMemberIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/{groupId}/persons/{memberId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups/{groupId}/persons/{memberId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -7949,7 +8456,10 @@ func (s *SDK) PatchSpacesIDGroupsGroupIDPersonsMemberID(ctx context.Context, req
 // PatchSpacesIDLegal - Modify legal information of a Space (except private)
 func (s *SDK) PatchSpacesIDLegal(ctx context.Context, request operations.PatchSpacesIDLegalRequest) (*operations.PatchSpacesIDLegalResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/legal", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/legal", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Legal", "json")
 	if err != nil {
@@ -7994,7 +8504,10 @@ func (s *SDK) PatchSpacesIDLegal(ctx context.Context, request operations.PatchSp
 // PatchSpacesIDPersonsMemberIDPlayer - Modify the role of a person
 func (s *SDK) PatchSpacesIDPersonsMemberIDPlayer(ctx context.Context, request operations.PatchSpacesIDPersonsMemberIDPlayerRequest) (*operations.PatchSpacesIDPersonsMemberIDPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{memberId}/player", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{memberId}/player", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8039,7 +8552,10 @@ func (s *SDK) PatchSpacesIDPersonsMemberIDPlayer(ctx context.Context, request op
 // PatchSpacesIDPersonsPersonID - Modify a person
 func (s *SDK) PatchSpacesIDPersonsPersonID(ctx context.Context, request operations.PatchSpacesIDPersonsPersonIDRequest) (*operations.PatchSpacesIDPersonsPersonIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8084,7 +8600,10 @@ func (s *SDK) PatchSpacesIDPersonsPersonID(ctx context.Context, request operatio
 // PatchSpacesIDPortfoliosPortfolioIDPersonsMemberID - Add/Modify/Delete a person in a portfolio (except manager)
 func (s *SDK) PatchSpacesIDPortfoliosPortfolioIDPersonsMemberID(ctx context.Context, request operations.PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequest) (*operations.PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/portfolios/{portfolioId}/persons/{memberId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/portfolios/{portfolioId}/persons/{memberId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8129,7 +8648,10 @@ func (s *SDK) PatchSpacesIDPortfoliosPortfolioIDPersonsMemberID(ctx context.Cont
 // PatchSpacesSpaceIDCommonFoldersID - Modify a common folder
 func (s *SDK) PatchSpacesSpaceIDCommonFoldersID(ctx context.Context, request operations.PatchSpacesSpaceIDCommonFoldersIDRequest) (*operations.PatchSpacesSpaceIDCommonFoldersIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/common-folders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/common-folders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8174,7 +8696,10 @@ func (s *SDK) PatchSpacesSpaceIDCommonFoldersID(ctx context.Context, request ope
 // PatchSpacesSpaceIDDocumentsDocumentID - modify a doc
 func (s *SDK) PatchSpacesSpaceIDDocumentsDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDDocumentsDocumentIDRequest) (*operations.PatchSpacesSpaceIDDocumentsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8219,7 +8744,10 @@ func (s *SDK) PatchSpacesSpaceIDDocumentsDocumentID(ctx context.Context, request
 // PatchSpacesSpaceIDFoldersFolderIDBankStatementsDocumentID - modify a bank statement
 func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDBankStatementsDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersFolderIDBankStatementsDocumentIDRequest) (*operations.PatchSpacesSpaceIDFoldersFolderIDBankStatementsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/bank-statements/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/bank-statements/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8261,7 +8789,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDBankStatementsDocumentID(ctx cont
 // PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentID - modify a contractual document
 func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentIDRequest) (*operations.PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/contractual-documents/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/contractual-documents/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8303,7 +8834,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDContractualDocumentsDocumentID(ct
 // PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentID - modify a coporate tax declaration
 func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequest) (*operations.PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/corporate-tax-declarations/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/corporate-tax-declarations/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8345,7 +8879,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentI
 // PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentID - modify an expense report
 func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequest) (*operations.PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/expense-proofs/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/expense-proofs/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8387,7 +8924,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentID(ctx conte
 // PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentID - modify an expense report
 func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDRequest) (*operations.PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/expense-reports/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/expense-reports/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8429,7 +8969,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDExpenseReportsDocumentID(ctx cont
 // PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentID - modify a invoice
 func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDRequest) (*operations.PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/invoices/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/invoices/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8471,7 +9014,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentID(ctx context.Co
 // PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentID - modify an other tax declaration
 func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDRequest) (*operations.PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/other-taxes/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/other-taxes/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8513,7 +9059,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDOtherTaxesDocumentID(ctx context.
 // PatchSpacesSpaceIDFoldersFolderIDPayrollsDocumentID - modify a payroll
 func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDPayrollsDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersFolderIDPayrollsDocumentIDRequest) (*operations.PatchSpacesSpaceIDFoldersFolderIDPayrollsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/payrolls/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/payrolls/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8555,7 +9104,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDPayrollsDocumentID(ctx context.Co
 // PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentID - modify a payslip
 func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDRequest) (*operations.PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/payslips/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/payslips/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8597,7 +9149,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDPayslipsDocumentID(ctx context.Co
 // PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentID - modify a social contract
 func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDRequest) (*operations.PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/social-contracts/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/social-contracts/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8639,7 +9194,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDSocialContractsDocumentID(ctx con
 // PatchSpacesSpaceIDFoldersFolderIDSocialDeclarationsDocumentID - modify a social declaration
 func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDSocialDeclarationsDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersFolderIDSocialDeclarationsDocumentIDRequest) (*operations.PatchSpacesSpaceIDFoldersFolderIDSocialDeclarationsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/social-declarations/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/social-declarations/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8681,7 +9239,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDSocialDeclarationsDocumentID(ctx 
 // PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentID - modify a vat declaration
 func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDRequest) (*operations.PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/vat-declarations/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/vat-declarations/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8723,7 +9284,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersFolderIDVatDeclarationsDocumentID(ctx con
 // PatchSpacesSpaceIDFoldersID - Modify a Folder (except Name, Class, ModificationDate and ArchivalDate)
 func (s *SDK) PatchSpacesSpaceIDFoldersID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDRequest) (*operations.PatchSpacesSpaceIDFoldersIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8768,7 +9332,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersID(ctx context.Context, request operation
 // PatchSpacesSpaceIDFoldersIDAccountingYear - Modify a Folder (except Name, Class, ModificationDate and ArchivalDate) and AccountingYear data
 func (s *SDK) PatchSpacesSpaceIDFoldersIDAccountingYear(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDAccountingYearRequest) (*operations.PatchSpacesSpaceIDFoldersIDAccountingYearResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/accounting-year", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/accounting-year", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8813,7 +9380,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDAccountingYear(ctx context.Context, req
 // PatchSpacesSpaceIDFoldersIDBank - Modify a Folder (except Name, Class, ModificationDate and ArchivalDate) and Bank data
 func (s *SDK) PatchSpacesSpaceIDFoldersIDBank(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDBankRequest) (*operations.PatchSpacesSpaceIDFoldersIDBankResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/bank", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/bank", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8858,7 +9428,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDBank(ctx context.Context, request opera
 // PatchSpacesSpaceIDFoldersIDCollectiveDecision - Modify a Folder (except Name, Class, ModificationDate and ArchivalDate) and Collective Decision data
 func (s *SDK) PatchSpacesSpaceIDFoldersIDCollectiveDecision(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDCollectiveDecisionRequest) (*operations.PatchSpacesSpaceIDFoldersIDCollectiveDecisionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/collective-decision", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/collective-decision", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8903,7 +9476,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDCollectiveDecision(ctx context.Context,
 // PatchSpacesSpaceIDFoldersIDCustomer - Modify a Folder (except Name, Class, ModificationDate and ArchivalDate) and Customer data
 func (s *SDK) PatchSpacesSpaceIDFoldersIDCustomer(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDCustomerRequest) (*operations.PatchSpacesSpaceIDFoldersIDCustomerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/customer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/customer", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8948,7 +9524,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDCustomer(ctx context.Context, request o
 // PatchSpacesSpaceIDFoldersIDDocumentsDocumentIDDetach - Detach a doc of a folder
 func (s *SDK) PatchSpacesSpaceIDFoldersIDDocumentsDocumentIDDetach(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDDocumentsDocumentIDDetachRequest) (*operations.PatchSpacesSpaceIDFoldersIDDocumentsDocumentIDDetachResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/documents/{documentId}/detach", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/documents/{documentId}/detach", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -8983,7 +9562,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDDocumentsDocumentIDDetach(ctx context.C
 // PatchSpacesSpaceIDFoldersIDEmployee - Modify a Folder (except Name, Class, ModificationDate and ArchivalDate) and Employee data
 func (s *SDK) PatchSpacesSpaceIDFoldersIDEmployee(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDEmployeeRequest) (*operations.PatchSpacesSpaceIDFoldersIDEmployeeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/employee", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/employee", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9028,7 +9610,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDEmployee(ctx context.Context, request o
 // PatchSpacesSpaceIDFoldersIDInsurance - Modify a Folder (except Name, Class, ModificationDate and ArchivalDate) and Insurance data
 func (s *SDK) PatchSpacesSpaceIDFoldersIDInsurance(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDInsuranceRequest) (*operations.PatchSpacesSpaceIDFoldersIDInsuranceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/insurance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/insurance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9073,7 +9658,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDInsurance(ctx context.Context, request 
 // PatchSpacesSpaceIDFoldersIDLoan - Modify a Folder (except Name, Class, ModificationDate and ArchivalDate) and Loan data
 func (s *SDK) PatchSpacesSpaceIDFoldersIDLoan(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDLoanRequest) (*operations.PatchSpacesSpaceIDFoldersIDLoanResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/loan", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/loan", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9118,7 +9706,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDLoan(ctx context.Context, request opera
 // PatchSpacesSpaceIDFoldersIDMessagesMessageID - Modify a Message
 func (s *SDK) PatchSpacesSpaceIDFoldersIDMessagesMessageID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDMessagesMessageIDRequest) (*operations.PatchSpacesSpaceIDFoldersIDMessagesMessageIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/messages/{messageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/messages/{messageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9163,7 +9754,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDMessagesMessageID(ctx context.Context, 
 // PatchSpacesSpaceIDFoldersIDPasswordsPasswordID - Modify a Password
 func (s *SDK) PatchSpacesSpaceIDFoldersIDPasswordsPasswordID(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDPasswordsPasswordIDRequest) (*operations.PatchSpacesSpaceIDFoldersIDPasswordsPasswordIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/passwords/{passwordId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/passwords/{passwordId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9208,7 +9802,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDPasswordsPasswordID(ctx context.Context
 // PatchSpacesSpaceIDFoldersIDProfessionalVehicle - Modify a Folder (except Name, Class, ModificationDate and ArchivalDate) and Professional Vehicle data
 func (s *SDK) PatchSpacesSpaceIDFoldersIDProfessionalVehicle(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDProfessionalVehicleRequest) (*operations.PatchSpacesSpaceIDFoldersIDProfessionalVehicleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/professional-vehicle", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/professional-vehicle", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9253,7 +9850,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDProfessionalVehicle(ctx context.Context
 // PatchSpacesSpaceIDFoldersIDProvider - Modify a Folder (except Name, Class, ModificationDate and ArchivalDate) and Provider data
 func (s *SDK) PatchSpacesSpaceIDFoldersIDProvider(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDProviderRequest) (*operations.PatchSpacesSpaceIDFoldersIDProviderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/provider", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/provider", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9298,7 +9898,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDProvider(ctx context.Context, request o
 // PatchSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentid - Modify the status of a requireddocument
 func (s *SDK) PatchSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentid(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidRequest) (*operations.PatchSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9343,7 +9946,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentid(ctx
 // PatchSpacesSpaceIDFoldersIDSocialRegimes - Modify a Folder (except Name, Class, ModificationDate and ArchivalDate) and Social Regime data
 func (s *SDK) PatchSpacesSpaceIDFoldersIDSocialRegimes(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDSocialRegimesRequest) (*operations.PatchSpacesSpaceIDFoldersIDSocialRegimesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-regimes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-regimes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9388,7 +9994,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDSocialRegimes(ctx context.Context, requ
 // PatchSpacesSpaceIDFoldersIDTaxContract - Modify a Folder (except Name, Class, ModificationDate and ArchivalDate) and Tax Contract data
 func (s *SDK) PatchSpacesSpaceIDFoldersIDTaxContract(ctx context.Context, request operations.PatchSpacesSpaceIDFoldersIDTaxContractRequest) (*operations.PatchSpacesSpaceIDFoldersIDTaxContractResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/tax-contract", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/tax-contract", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9433,7 +10042,10 @@ func (s *SDK) PatchSpacesSpaceIDFoldersIDTaxContract(ctx context.Context, reques
 // PatchSpacesSpaceIDPersonsIDCallForDocument - modify the invitation of a person to collect documents
 func (s *SDK) PatchSpacesSpaceIDPersonsIDCallForDocument(ctx context.Context, request operations.PatchSpacesSpaceIDPersonsIDCallForDocumentRequest, security operations.PatchSpacesSpaceIDPersonsIDCallForDocumentSecurity) (*operations.PatchSpacesSpaceIDPersonsIDCallForDocumentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/call-for-document", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/call-for-document", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyCollect", "json")
 	if err != nil {
@@ -9478,7 +10090,10 @@ func (s *SDK) PatchSpacesSpaceIDPersonsIDCallForDocument(ctx context.Context, re
 // PatchSpacesSpaceIDPersonsIDGuestInSpace - invite a person in a space
 func (s *SDK) PatchSpacesSpaceIDPersonsIDGuestInSpace(ctx context.Context, request operations.PatchSpacesSpaceIDPersonsIDGuestInSpaceRequest, security operations.PatchSpacesSpaceIDPersonsIDGuestInSpaceSecurity) (*operations.PatchSpacesSpaceIDPersonsIDGuestInSpaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/guest-in-space", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/guest-in-space", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModifyInvitation", "json")
 	if err != nil {
@@ -9523,7 +10138,10 @@ func (s *SDK) PatchSpacesSpaceIDPersonsIDGuestInSpace(ctx context.Context, reque
 // PatchSpacesSpaceIDPersonsIDInvitation - modify an invitation
 func (s *SDK) PatchSpacesSpaceIDPersonsIDInvitation(ctx context.Context, request operations.PatchSpacesSpaceIDPersonsIDInvitationRequest, security operations.PatchSpacesSpaceIDPersonsIDInvitationSecurity) (*operations.PatchSpacesSpaceIDPersonsIDInvitationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/invitation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/invitation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9568,7 +10186,10 @@ func (s *SDK) PatchSpacesSpaceIDPersonsIDInvitation(ctx context.Context, request
 // PatchSpacesSpaceIDPersonsMemberIDFoldersID - Modify an access
 func (s *SDK) PatchSpacesSpaceIDPersonsMemberIDFoldersID(ctx context.Context, request operations.PatchSpacesSpaceIDPersonsMemberIDFoldersIDRequest) (*operations.PatchSpacesSpaceIDPersonsMemberIDFoldersIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{memberId}/folders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{memberId}/folders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9669,7 +10290,10 @@ func (s *SDK) PostBusinessGroups(ctx context.Context, request operations.PostBus
 // PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpace - send an invitation to manager the private space of personId
 func (s *SDK) PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpace(ctx context.Context, request operations.PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceRequest, security operations.PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceSecurity) (*operations.PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDGuestInSpaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/business-groups/{id}/spaces/{spaceId}/legal-entities/{personId}/customers/{folderId}/guest-in-space", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/business-groups/{id}/spaces/{spaceId}/legal-entities/{personId}/customers/{folderId}/guest-in-space", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -9725,7 +10349,10 @@ func (s *SDK) PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFol
 // PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDSpaces - Add a Space in a group
 func (s *SDK) PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDSpaces(ctx context.Context, request operations.PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDSpacesRequest, security operations.PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDSpacesSecurity) (*operations.PostBusinessGroupsIDSpacesSpaceIDLegalEntitiesPersonIDCustomersFolderIDSpacesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/business-groups/{id}/spaces/{spaceId}/legal-entities/{personId}/customers/{folderId}/spaces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/business-groups/{id}/spaces/{spaceId}/legal-entities/{personId}/customers/{folderId}/spaces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -10005,7 +10632,10 @@ func (s *SDK) PostHubPayslipsMultipart(ctx context.Context, request operations.P
 // PostHubSpacesSpaceIDDocumentsJSON - Add a document in a space (this document is analyzed to be saved in the correct folder)
 func (s *SDK) PostHubSpacesSpaceIDDocumentsJSON(ctx context.Context, request operations.PostHubSpacesSpaceIDDocumentsJSONRequest, security operations.PostHubSpacesSpaceIDDocumentsJSONSecurity) (*operations.PostHubSpacesSpaceIDDocumentsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hub/spaces/{spaceId}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hub/spaces/{spaceId}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -10061,7 +10691,10 @@ func (s *SDK) PostHubSpacesSpaceIDDocumentsJSON(ctx context.Context, request ope
 // PostHubSpacesSpaceIDDocumentsMultipart - Add a document in a space (this document is analyzed to be saved in the correct folder)
 func (s *SDK) PostHubSpacesSpaceIDDocumentsMultipart(ctx context.Context, request operations.PostHubSpacesSpaceIDDocumentsMultipartRequest, security operations.PostHubSpacesSpaceIDDocumentsMultipartSecurity) (*operations.PostHubSpacesSpaceIDDocumentsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hub/spaces/{spaceId}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hub/spaces/{spaceId}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -10117,7 +10750,10 @@ func (s *SDK) PostHubSpacesSpaceIDDocumentsMultipart(ctx context.Context, reques
 // PostHubSpacesSpaceIDPayslipsJSON - Add a payslip in a space (this document is analyzed to be saved in the correct folder)
 func (s *SDK) PostHubSpacesSpaceIDPayslipsJSON(ctx context.Context, request operations.PostHubSpacesSpaceIDPayslipsJSONRequest, security operations.PostHubSpacesSpaceIDPayslipsJSONSecurity) (*operations.PostHubSpacesSpaceIDPayslipsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hub/spaces/{spaceId}/payslips", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hub/spaces/{spaceId}/payslips", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -10173,7 +10809,10 @@ func (s *SDK) PostHubSpacesSpaceIDPayslipsJSON(ctx context.Context, request oper
 // PostHubSpacesSpaceIDPayslipsMultipart - Add a payslip in a space (this document is analyzed to be saved in the correct folder)
 func (s *SDK) PostHubSpacesSpaceIDPayslipsMultipart(ctx context.Context, request operations.PostHubSpacesSpaceIDPayslipsMultipartRequest, security operations.PostHubSpacesSpaceIDPayslipsMultipartSecurity) (*operations.PostHubSpacesSpaceIDPayslipsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hub/spaces/{spaceId}/payslips", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hub/spaces/{spaceId}/payslips", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -10229,7 +10868,10 @@ func (s *SDK) PostHubSpacesSpaceIDPayslipsMultipart(ctx context.Context, request
 // PostMenusMenuIDDocumentsJSON - add a document to the target menuId
 func (s *SDK) PostMenusMenuIDDocumentsJSON(ctx context.Context, request operations.PostMenusMenuIDDocumentsJSONRequest, security operations.PostMenusMenuIDDocumentsJSONSecurity) (*operations.PostMenusMenuIDDocumentsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/menus/{menuId}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/menus/{menuId}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -10283,7 +10925,10 @@ func (s *SDK) PostMenusMenuIDDocumentsJSON(ctx context.Context, request operatio
 // PostMenusMenuIDDocumentsMultipart - add a document to the target menuId
 func (s *SDK) PostMenusMenuIDDocumentsMultipart(ctx context.Context, request operations.PostMenusMenuIDDocumentsMultipartRequest, security operations.PostMenusMenuIDDocumentsMultipartSecurity) (*operations.PostMenusMenuIDDocumentsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/menus/{menuId}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/menus/{menuId}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -10537,7 +11182,10 @@ func (s *SDK) PostSpaces(ctx context.Context, request operations.PostSpacesReque
 // PostSpacesIDAccountingYear - Create a accounting year for the space id
 func (s *SDK) PostSpacesIDAccountingYear(ctx context.Context, request operations.PostSpacesIDAccountingYearRequest, security operations.PostSpacesIDAccountingYearSecurity) (*operations.PostSpacesIDAccountingYearResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/accounting-year", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/accounting-year", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -10593,7 +11241,10 @@ func (s *SDK) PostSpacesIDAccountingYear(ctx context.Context, request operations
 // PostSpacesIDCollectiveDecision - Create a colletive decision for the space id
 func (s *SDK) PostSpacesIDCollectiveDecision(ctx context.Context, request operations.PostSpacesIDCollectiveDecisionRequest, security operations.PostSpacesIDCollectiveDecisionSecurity) (*operations.PostSpacesIDCollectiveDecisionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/collective-decision", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/collective-decision", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -10649,7 +11300,10 @@ func (s *SDK) PostSpacesIDCollectiveDecision(ctx context.Context, request operat
 // PostSpacesIDCompanyEntities - Add a Company Entity in a Space
 func (s *SDK) PostSpacesIDCompanyEntities(ctx context.Context, request operations.PostSpacesIDCompanyEntitiesRequest, security operations.PostSpacesIDCompanyEntitiesSecurity) (*operations.PostSpacesIDCompanyEntitiesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -10705,7 +11359,10 @@ func (s *SDK) PostSpacesIDCompanyEntities(ctx context.Context, request operation
 // PostSpacesIDCompanyEntitiesPersonIDDetails - Replace or Add a contact detail for a person
 func (s *SDK) PostSpacesIDCompanyEntitiesPersonIDDetails(ctx context.Context, request operations.PostSpacesIDCompanyEntitiesPersonIDDetailsRequest) (*operations.PostSpacesIDCompanyEntitiesPersonIDDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities/{personId}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/company-entities/{personId}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -10750,7 +11407,10 @@ func (s *SDK) PostSpacesIDCompanyEntitiesPersonIDDetails(ctx context.Context, re
 // PostSpacesIDDocumentsDownload - create an archive with documents
 func (s *SDK) PostSpacesIDDocumentsDownload(ctx context.Context, request operations.PostSpacesIDDocumentsDownloadRequest, security operations.PostSpacesIDDocumentsDownloadSecurity) (*operations.PostSpacesIDDocumentsDownloadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/documents/download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/documents/download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -10813,7 +11473,10 @@ func (s *SDK) PostSpacesIDDocumentsDownload(ctx context.Context, request operati
 // PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpace - invite a owner in a space
 func (s *SDK) PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpace(ctx context.Context, request operations.PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpaceRequest, security operations.PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpaceSecurity) (*operations.PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/folders/{folderId}/persons/{personId}/guest-in-space", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/folders/{folderId}/persons/{personId}/guest-in-space", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InvitationPerson", "json")
 	if err != nil {
@@ -10858,7 +11521,10 @@ func (s *SDK) PostSpacesIDFoldersFolderIDPersonsPersonIDGuestInSpace(ctx context
 // PostSpacesIDGroups - Add a group in a Space
 func (s *SDK) PostSpacesIDGroups(ctx context.Context, request operations.PostSpacesIDGroupsRequest, security operations.PostSpacesIDGroupsSecurity) (*operations.PostSpacesIDGroupsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -10914,7 +11580,10 @@ func (s *SDK) PostSpacesIDGroups(ctx context.Context, request operations.PostSpa
 // PostSpacesIDPersons - Add a Person in a Space
 func (s *SDK) PostSpacesIDPersons(ctx context.Context, request operations.PostSpacesIDPersonsRequest, security operations.PostSpacesIDPersonsSecurity) (*operations.PostSpacesIDPersonsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -10970,7 +11639,10 @@ func (s *SDK) PostSpacesIDPersons(ctx context.Context, request operations.PostSp
 // PostSpacesIDPersonsPersonIDDetails - Replace or Add a contact detail for a person
 func (s *SDK) PostSpacesIDPersonsPersonIDDetails(ctx context.Context, request operations.PostSpacesIDPersonsPersonIDDetailsRequest) (*operations.PostSpacesIDPersonsPersonIDDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11015,7 +11687,10 @@ func (s *SDK) PostSpacesIDPersonsPersonIDDetails(ctx context.Context, request op
 // PostSpacesIDPersonsPersonIDPortfolios - Create a portfolio for the person personId
 func (s *SDK) PostSpacesIDPersonsPersonIDPortfolios(ctx context.Context, request operations.PostSpacesIDPersonsPersonIDPortfoliosRequest, security operations.PostSpacesIDPersonsPersonIDPortfoliosSecurity) (*operations.PostSpacesIDPersonsPersonIDPortfoliosResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/portfolios", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/persons/{personId}/portfolios", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11068,7 +11743,10 @@ func (s *SDK) PostSpacesIDPersonsPersonIDPortfolios(ctx context.Context, request
 // PostSpacesIDProfessionalVehicles - Create a professional vehicle for the space
 func (s *SDK) PostSpacesIDProfessionalVehicles(ctx context.Context, request operations.PostSpacesIDProfessionalVehiclesRequest, security operations.PostSpacesIDProfessionalVehiclesSecurity) (*operations.PostSpacesIDProfessionalVehiclesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/professional-vehicles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/professional-vehicles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11124,7 +11802,10 @@ func (s *SDK) PostSpacesIDProfessionalVehicles(ctx context.Context, request oper
 // PostSpacesIDSettingsNf203Logs - Enable/Disable logs
 func (s *SDK) PostSpacesIDSettingsNf203Logs(ctx context.Context, request operations.PostSpacesIDSettingsNf203LogsRequest, security operations.PostSpacesIDSettingsNf203LogsSecurity) (*operations.PostSpacesIDSettingsNf203LogsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/settings/nf203/logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/settings/nf203/logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11166,7 +11847,10 @@ func (s *SDK) PostSpacesIDSettingsNf203Logs(ctx context.Context, request operati
 // PostSpacesIDStatus - Replace or Add a status
 func (s *SDK) PostSpacesIDStatus(ctx context.Context, request operations.PostSpacesIDStatusRequest) (*operations.PostSpacesIDStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11211,7 +11895,10 @@ func (s *SDK) PostSpacesIDStatus(ctx context.Context, request operations.PostSpa
 // PostSpacesIDTaxContracts - Create a tax contract for the space
 func (s *SDK) PostSpacesIDTaxContracts(ctx context.Context, request operations.PostSpacesIDTaxContractsRequest, security operations.PostSpacesIDTaxContractsSecurity) (*operations.PostSpacesIDTaxContractsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/tax-contracts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/tax-contracts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11267,7 +11954,10 @@ func (s *SDK) PostSpacesIDTaxContracts(ctx context.Context, request operations.P
 // PostSpacesIDTriggersName - Creates a trigger for the space id
 func (s *SDK) PostSpacesIDTriggersName(ctx context.Context, request operations.PostSpacesIDTriggersNameRequest, security operations.PostSpacesIDTriggersNameSecurity) (*operations.PostSpacesIDTriggersNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/triggers/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{id}/triggers/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -11302,7 +11992,10 @@ func (s *SDK) PostSpacesIDTriggersName(ctx context.Context, request operations.P
 // PostSpacesSpaceIDDocumentsDocumentIDExtend - Add a data to a document
 func (s *SDK) PostSpacesSpaceIDDocumentsDocumentIDExtend(ctx context.Context, request operations.PostSpacesSpaceIDDocumentsDocumentIDExtendRequest, security operations.PostSpacesSpaceIDDocumentsDocumentIDExtendSecurity) (*operations.PostSpacesSpaceIDDocumentsDocumentIDExtendResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/extend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/extend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11358,7 +12051,10 @@ func (s *SDK) PostSpacesSpaceIDDocumentsDocumentIDExtend(ctx context.Context, re
 // PostSpacesSpaceIDDocumentsDocumentIDMailing - send by mail a document
 func (s *SDK) PostSpacesSpaceIDDocumentsDocumentIDMailing(ctx context.Context, request operations.PostSpacesSpaceIDDocumentsDocumentIDMailingRequest, security operations.PostSpacesSpaceIDDocumentsDocumentIDMailingSecurity) (*operations.PostSpacesSpaceIDDocumentsDocumentIDMailingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/mailing", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/mailing", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11412,7 +12108,10 @@ func (s *SDK) PostSpacesSpaceIDDocumentsDocumentIDMailing(ctx context.Context, r
 // PostSpacesSpaceIDDocumentsDocumentIDVersionsJSON - Add a version to a document and set it as current
 func (s *SDK) PostSpacesSpaceIDDocumentsDocumentIDVersionsJSON(ctx context.Context, request operations.PostSpacesSpaceIDDocumentsDocumentIDVersionsJSONRequest, security operations.PostSpacesSpaceIDDocumentsDocumentIDVersionsJSONSecurity) (*operations.PostSpacesSpaceIDDocumentsDocumentIDVersionsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11468,7 +12167,10 @@ func (s *SDK) PostSpacesSpaceIDDocumentsDocumentIDVersionsJSON(ctx context.Conte
 // PostSpacesSpaceIDDocumentsDocumentIDVersionsMultipart - Add a version to a document and set it as current
 func (s *SDK) PostSpacesSpaceIDDocumentsDocumentIDVersionsMultipart(ctx context.Context, request operations.PostSpacesSpaceIDDocumentsDocumentIDVersionsMultipartRequest, security operations.PostSpacesSpaceIDDocumentsDocumentIDVersionsMultipartSecurity) (*operations.PostSpacesSpaceIDDocumentsDocumentIDVersionsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/documents/{documentId}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -11524,7 +12226,10 @@ func (s *SDK) PostSpacesSpaceIDDocumentsDocumentIDVersionsMultipart(ctx context.
 // PostSpacesSpaceIDExtend - Add a data to a space
 func (s *SDK) PostSpacesSpaceIDExtend(ctx context.Context, request operations.PostSpacesSpaceIDExtendRequest, security operations.PostSpacesSpaceIDExtendSecurity) (*operations.PostSpacesSpaceIDExtendResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/extend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/extend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11580,7 +12285,10 @@ func (s *SDK) PostSpacesSpaceIDExtend(ctx context.Context, request operations.Po
 // PostSpacesSpaceIDFoldersFolderIDPayrollsDocumentIDRefresh - recalculate a payroll
 func (s *SDK) PostSpacesSpaceIDFoldersFolderIDPayrollsDocumentIDRefresh(ctx context.Context, request operations.PostSpacesSpaceIDFoldersFolderIDPayrollsDocumentIDRefreshRequest) (*operations.PostSpacesSpaceIDFoldersFolderIDPayrollsDocumentIDRefreshResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/payrolls/{documentId}/refresh", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{folderId}/payrolls/{documentId}/refresh", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -11625,7 +12333,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersFolderIDPayrollsDocumentIDRefresh(ctx cont
 // PostSpacesSpaceIDFoldersIDBankStatementsJSON - Add a bank statement in a folder bank
 func (s *SDK) PostSpacesSpaceIDFoldersIDBankStatementsJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDBankStatementsJSONRequest, security operations.PostSpacesSpaceIDFoldersIDBankStatementsJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDBankStatementsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/bank-statements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/bank-statements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11681,7 +12392,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDBankStatementsJSON(ctx context.Context, 
 // PostSpacesSpaceIDFoldersIDBankStatementsMultipart - Add a bank statement in a folder bank
 func (s *SDK) PostSpacesSpaceIDFoldersIDBankStatementsMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDBankStatementsMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDBankStatementsMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDBankStatementsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/bank-statements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/bank-statements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -11737,7 +12451,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDBankStatementsMultipart(ctx context.Cont
 // PostSpacesSpaceIDFoldersIDCommonFolders - Add a common folder in another folder
 func (s *SDK) PostSpacesSpaceIDFoldersIDCommonFolders(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDCommonFoldersRequest, security operations.PostSpacesSpaceIDFoldersIDCommonFoldersSecurity) (*operations.PostSpacesSpaceIDFoldersIDCommonFoldersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/common-folders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/common-folders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11793,7 +12510,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDCommonFolders(ctx context.Context, reque
 // PostSpacesSpaceIDFoldersIDContractualDocumentsJSON - Add a document in a folder
 func (s *SDK) PostSpacesSpaceIDFoldersIDContractualDocumentsJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDContractualDocumentsJSONRequest, security operations.PostSpacesSpaceIDFoldersIDContractualDocumentsJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDContractualDocumentsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/contractual-documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/contractual-documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11849,7 +12569,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDContractualDocumentsJSON(ctx context.Con
 // PostSpacesSpaceIDFoldersIDContractualDocumentsMultipart - Add a document in a folder
 func (s *SDK) PostSpacesSpaceIDFoldersIDContractualDocumentsMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/contractual-documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/contractual-documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -11905,7 +12628,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDContractualDocumentsMultipart(ctx contex
 // PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsJSON - Add a corporate tax declaration
 func (s *SDK) PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsJSONRequest, security operations.PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/coporate-tax-declarations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/coporate-tax-declarations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -11961,7 +12687,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsJSON(ctx context.
 // PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipart - Add a corporate tax declaration
 func (s *SDK) PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/coporate-tax-declarations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/coporate-tax-declarations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -12017,7 +12746,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsMultipart(ctx con
 // PostSpacesSpaceIDFoldersIDDocumentsJSON - Add a document in a folder
 func (s *SDK) PostSpacesSpaceIDFoldersIDDocumentsJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDDocumentsJSONRequest, security operations.PostSpacesSpaceIDFoldersIDDocumentsJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDDocumentsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -12073,7 +12805,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDDocumentsJSON(ctx context.Context, reque
 // PostSpacesSpaceIDFoldersIDDocumentsMultipart - Add a document in a folder
 func (s *SDK) PostSpacesSpaceIDFoldersIDDocumentsMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDDocumentsMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDDocumentsMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDDocumentsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -12129,7 +12864,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDDocumentsMultipart(ctx context.Context, 
 // PostSpacesSpaceIDFoldersIDExpenseProofsJSON - Add a expense proof in a folder followup or exchange
 func (s *SDK) PostSpacesSpaceIDFoldersIDExpenseProofsJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDExpenseProofsJSONRequest, security operations.PostSpacesSpaceIDFoldersIDExpenseProofsJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDExpenseProofsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-proofs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-proofs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -12185,7 +12923,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDExpenseProofsJSON(ctx context.Context, r
 // PostSpacesSpaceIDFoldersIDExpenseProofsMultipart - Add a expense proof in a folder followup or exchange
 func (s *SDK) PostSpacesSpaceIDFoldersIDExpenseProofsMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDExpenseProofsMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDExpenseProofsMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDExpenseProofsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-proofs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-proofs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -12241,7 +12982,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDExpenseProofsMultipart(ctx context.Conte
 // PostSpacesSpaceIDFoldersIDExpenseReportsJSON - Add a expense report in a folder followup
 func (s *SDK) PostSpacesSpaceIDFoldersIDExpenseReportsJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDExpenseReportsJSONRequest, security operations.PostSpacesSpaceIDFoldersIDExpenseReportsJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDExpenseReportsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-reports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -12297,7 +13041,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDExpenseReportsJSON(ctx context.Context, 
 // PostSpacesSpaceIDFoldersIDExpenseReportsMultipart - Add a expense report in a folder followup
 func (s *SDK) PostSpacesSpaceIDFoldersIDExpenseReportsMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDExpenseReportsMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDExpenseReportsMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDExpenseReportsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-reports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/expense-reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -12353,7 +13100,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDExpenseReportsMultipart(ctx context.Cont
 // PostSpacesSpaceIDFoldersIDInvoicesJSON - Add a invoice in a folder of a customer or a provider
 func (s *SDK) PostSpacesSpaceIDFoldersIDInvoicesJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDInvoicesJSONRequest, security operations.PostSpacesSpaceIDFoldersIDInvoicesJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDInvoicesJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/invoices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/invoices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -12409,7 +13159,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDInvoicesJSON(ctx context.Context, reques
 // PostSpacesSpaceIDFoldersIDInvoicesMultipart - Add a invoice in a folder of a customer or a provider
 func (s *SDK) PostSpacesSpaceIDFoldersIDInvoicesMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDInvoicesMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDInvoicesMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDInvoicesMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/invoices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/invoices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -12465,7 +13218,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDInvoicesMultipart(ctx context.Context, r
 // PostSpacesSpaceIDFoldersIDMessages - Write a message in the journal of a folder
 func (s *SDK) PostSpacesSpaceIDFoldersIDMessages(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDMessagesRequest, security operations.PostSpacesSpaceIDFoldersIDMessagesSecurity) (*operations.PostSpacesSpaceIDFoldersIDMessagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/messages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/messages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -12510,7 +13266,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDMessages(ctx context.Context, request op
 // PostSpacesSpaceIDFoldersIDOtherTaxesJSON - Add a tax declaration
 func (s *SDK) PostSpacesSpaceIDFoldersIDOtherTaxesJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDOtherTaxesJSONRequest, security operations.PostSpacesSpaceIDFoldersIDOtherTaxesJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDOtherTaxesJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/other-taxes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/other-taxes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -12566,7 +13325,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDOtherTaxesJSON(ctx context.Context, requ
 // PostSpacesSpaceIDFoldersIDOtherTaxesMultipart - Add a tax declaration
 func (s *SDK) PostSpacesSpaceIDFoldersIDOtherTaxesMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDOtherTaxesMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDOtherTaxesMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDOtherTaxesMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/other-taxes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/other-taxes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -12622,7 +13384,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDOtherTaxesMultipart(ctx context.Context,
 // PostSpacesSpaceIDFoldersIDPasswords - Write a identifier/password in aa folder
 func (s *SDK) PostSpacesSpaceIDFoldersIDPasswords(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDPasswordsRequest, security operations.PostSpacesSpaceIDFoldersIDPasswordsSecurity) (*operations.PostSpacesSpaceIDFoldersIDPasswordsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/passwords", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/passwords", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -12667,7 +13432,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDPasswords(ctx context.Context, request o
 // PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationJSON - Add a nominative social declaration in a folder social
 func (s *SDK) PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationJSONRequest, security operations.PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payrolls/{payrollId}/nominative-social-declaration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payrolls/{payrollId}/nominative-social-declaration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -12723,7 +13491,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclara
 // PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipart - Add a nominative social declaration in a folder social
 func (s *SDK) PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payrolls/{payrollId}/nominative-social-declaration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payrolls/{payrollId}/nominative-social-declaration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -12779,7 +13550,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclara
 // PostSpacesSpaceIDFoldersIDPayrollsJSON - Add a payroll in a folder social
 func (s *SDK) PostSpacesSpaceIDFoldersIDPayrollsJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDPayrollsJSONRequest, security operations.PostSpacesSpaceIDFoldersIDPayrollsJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDPayrollsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payrolls", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payrolls", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -12835,7 +13609,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDPayrollsJSON(ctx context.Context, reques
 // PostSpacesSpaceIDFoldersIDPayrollsMultipart - Add a payroll in a folder social
 func (s *SDK) PostSpacesSpaceIDFoldersIDPayrollsMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDPayrollsMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDPayrollsMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDPayrollsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payrolls", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payrolls", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -12891,7 +13668,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDPayrollsMultipart(ctx context.Context, r
 // PostSpacesSpaceIDFoldersIDPayslipsJSON - Add a payslip in a folder employee
 func (s *SDK) PostSpacesSpaceIDFoldersIDPayslipsJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDPayslipsJSONRequest, security operations.PostSpacesSpaceIDFoldersIDPayslipsJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDPayslipsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payslips", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payslips", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -12947,7 +13727,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDPayslipsJSON(ctx context.Context, reques
 // PostSpacesSpaceIDFoldersIDPayslipsMultipart - Add a payslip in a folder employee
 func (s *SDK) PostSpacesSpaceIDFoldersIDPayslipsMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDPayslipsMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDPayslipsMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDPayslipsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payslips", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/payslips", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -13003,7 +13786,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDPayslipsMultipart(ctx context.Context, r
 // PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidJSON - Add a required document to a line
 func (s *SDK) PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidJSONRequest, security operations.PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -13059,7 +13845,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidJSON(
 // PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipart - Add a required document to a line
 func (s *SDK) PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -13115,7 +13904,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDRequiredDocumentsRequireddocumentidMulti
 // PostSpacesSpaceIDFoldersIDSocialContractsJSON - Add a social contract in a folder employee
 func (s *SDK) PostSpacesSpaceIDFoldersIDSocialContractsJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDSocialContractsJSONRequest, security operations.PostSpacesSpaceIDFoldersIDSocialContractsJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDSocialContractsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-contracts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-contracts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -13171,7 +13963,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDSocialContractsJSON(ctx context.Context,
 // PostSpacesSpaceIDFoldersIDSocialContractsMultipart - Add a social contract in a folder employee
 func (s *SDK) PostSpacesSpaceIDFoldersIDSocialContractsMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDSocialContractsMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDSocialContractsMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDSocialContractsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-contracts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-contracts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -13227,7 +14022,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDSocialContractsMultipart(ctx context.Con
 // PostSpacesSpaceIDFoldersIDSocialDeclarationsJSON - Add a social declaration
 func (s *SDK) PostSpacesSpaceIDFoldersIDSocialDeclarationsJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDSocialDeclarationsJSONRequest, security operations.PostSpacesSpaceIDFoldersIDSocialDeclarationsJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDSocialDeclarationsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-declarations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-declarations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -13283,7 +14081,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDSocialDeclarationsJSON(ctx context.Conte
 // PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipart - Add a social declaration
 func (s *SDK) PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-declarations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/social-declarations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -13339,7 +14140,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDSocialDeclarationsMultipart(ctx context.
 // PostSpacesSpaceIDFoldersIDVatDeclarationsJSON - Add a vat declaration
 func (s *SDK) PostSpacesSpaceIDFoldersIDVatDeclarationsJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDVatDeclarationsJSONRequest, security operations.PostSpacesSpaceIDFoldersIDVatDeclarationsJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDVatDeclarationsJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/vat-declarations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/vat-declarations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -13395,7 +14199,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDVatDeclarationsJSON(ctx context.Context,
 // PostSpacesSpaceIDFoldersIDVatDeclarationsMultipart - Add a vat declaration
 func (s *SDK) PostSpacesSpaceIDFoldersIDVatDeclarationsMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDVatDeclarationsMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/vat-declarations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/vat-declarations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -13451,7 +14258,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDVatDeclarationsMultipart(ctx context.Con
 // PostSpacesSpaceIDFoldersIDDocumentClassJSON - Add a document in a folder
 func (s *SDK) PostSpacesSpaceIDFoldersIDDocumentClassJSON(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDDocumentClassJSONRequest, security operations.PostSpacesSpaceIDFoldersIDDocumentClassJSONSecurity) (*operations.PostSpacesSpaceIDFoldersIDDocumentClassJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/{documentClass}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/{documentClass}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -13507,7 +14317,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDDocumentClassJSON(ctx context.Context, r
 // PostSpacesSpaceIDFoldersIDDocumentClassMultipart - Add a document in a folder
 func (s *SDK) PostSpacesSpaceIDFoldersIDDocumentClassMultipart(ctx context.Context, request operations.PostSpacesSpaceIDFoldersIDDocumentClassMultipartRequest, security operations.PostSpacesSpaceIDFoldersIDDocumentClassMultipartSecurity) (*operations.PostSpacesSpaceIDFoldersIDDocumentClassMultipartResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/{documentClass}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/folders/{id}/{documentClass}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -13563,7 +14376,10 @@ func (s *SDK) PostSpacesSpaceIDFoldersIDDocumentClassMultipart(ctx context.Conte
 // PostSpacesSpaceIDLegalEntitiesIDBanks - Add a folder for a bank
 func (s *SDK) PostSpacesSpaceIDLegalEntitiesIDBanks(ctx context.Context, request operations.PostSpacesSpaceIDLegalEntitiesIDBanksRequest, security operations.PostSpacesSpaceIDLegalEntitiesIDBanksSecurity) (*operations.PostSpacesSpaceIDLegalEntitiesIDBanksResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/banks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/banks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -13619,7 +14435,10 @@ func (s *SDK) PostSpacesSpaceIDLegalEntitiesIDBanks(ctx context.Context, request
 // PostSpacesSpaceIDLegalEntitiesIDCustomers - Add a folder for a customer
 func (s *SDK) PostSpacesSpaceIDLegalEntitiesIDCustomers(ctx context.Context, request operations.PostSpacesSpaceIDLegalEntitiesIDCustomersRequest, security operations.PostSpacesSpaceIDLegalEntitiesIDCustomersSecurity) (*operations.PostSpacesSpaceIDLegalEntitiesIDCustomersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/customers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/customers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -13675,7 +14494,10 @@ func (s *SDK) PostSpacesSpaceIDLegalEntitiesIDCustomers(ctx context.Context, req
 // PostSpacesSpaceIDLegalEntitiesIDInsurances - Add a folder for a insurance
 func (s *SDK) PostSpacesSpaceIDLegalEntitiesIDInsurances(ctx context.Context, request operations.PostSpacesSpaceIDLegalEntitiesIDInsurancesRequest, security operations.PostSpacesSpaceIDLegalEntitiesIDInsurancesSecurity) (*operations.PostSpacesSpaceIDLegalEntitiesIDInsurancesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/insurances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/insurances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -13731,7 +14553,10 @@ func (s *SDK) PostSpacesSpaceIDLegalEntitiesIDInsurances(ctx context.Context, re
 // PostSpacesSpaceIDLegalEntitiesIDLoans - Add a folder for a loan
 func (s *SDK) PostSpacesSpaceIDLegalEntitiesIDLoans(ctx context.Context, request operations.PostSpacesSpaceIDLegalEntitiesIDLoansRequest, security operations.PostSpacesSpaceIDLegalEntitiesIDLoansSecurity) (*operations.PostSpacesSpaceIDLegalEntitiesIDLoansResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/loans", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/loans", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -13787,7 +14612,10 @@ func (s *SDK) PostSpacesSpaceIDLegalEntitiesIDLoans(ctx context.Context, request
 // PostSpacesSpaceIDLegalEntitiesIDProviders - Add a folder for a provider
 func (s *SDK) PostSpacesSpaceIDLegalEntitiesIDProviders(ctx context.Context, request operations.PostSpacesSpaceIDLegalEntitiesIDProvidersRequest, security operations.PostSpacesSpaceIDLegalEntitiesIDProvidersSecurity) (*operations.PostSpacesSpaceIDLegalEntitiesIDProvidersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/providers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/providers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -13843,7 +14671,10 @@ func (s *SDK) PostSpacesSpaceIDLegalEntitiesIDProviders(ctx context.Context, req
 // PostSpacesSpaceIDLegalEntitiesIDSocialRegimes - Add a folder for a social regime
 func (s *SDK) PostSpacesSpaceIDLegalEntitiesIDSocialRegimes(ctx context.Context, request operations.PostSpacesSpaceIDLegalEntitiesIDSocialRegimesRequest, security operations.PostSpacesSpaceIDLegalEntitiesIDSocialRegimesSecurity) (*operations.PostSpacesSpaceIDLegalEntitiesIDSocialRegimesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/social-regimes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/legal-entities/{id}/social-regimes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -13899,7 +14730,10 @@ func (s *SDK) PostSpacesSpaceIDLegalEntitiesIDSocialRegimes(ctx context.Context,
 // PostSpacesSpaceIDPersonsIDCallForDocument - invite a person to collect documents
 func (s *SDK) PostSpacesSpaceIDPersonsIDCallForDocument(ctx context.Context, request operations.PostSpacesSpaceIDPersonsIDCallForDocumentRequest, security operations.PostSpacesSpaceIDPersonsIDCallForDocumentSecurity) (*operations.PostSpacesSpaceIDPersonsIDCallForDocumentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/call-for-document", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/call-for-document", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CallForDocument", "json")
 	if err != nil {
@@ -13955,7 +14789,10 @@ func (s *SDK) PostSpacesSpaceIDPersonsIDCallForDocument(ctx context.Context, req
 // PostSpacesSpaceIDPersonsIDEmployees - Add a folder for a employee
 func (s *SDK) PostSpacesSpaceIDPersonsIDEmployees(ctx context.Context, request operations.PostSpacesSpaceIDPersonsIDEmployeesRequest, security operations.PostSpacesSpaceIDPersonsIDEmployeesSecurity) (*operations.PostSpacesSpaceIDPersonsIDEmployeesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/employees", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/employees", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -14011,7 +14848,10 @@ func (s *SDK) PostSpacesSpaceIDPersonsIDEmployees(ctx context.Context, request o
 // PostSpacesSpaceIDPersonsIDGuestInSpace - invite a person in a space
 func (s *SDK) PostSpacesSpaceIDPersonsIDGuestInSpace(ctx context.Context, request operations.PostSpacesSpaceIDPersonsIDGuestInSpaceRequest, security operations.PostSpacesSpaceIDPersonsIDGuestInSpaceSecurity) (*operations.PostSpacesSpaceIDPersonsIDGuestInSpaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/guest-in-space", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/guest-in-space", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GuestInSpace", "json")
 	if err != nil {
@@ -14056,7 +14896,10 @@ func (s *SDK) PostSpacesSpaceIDPersonsIDGuestInSpace(ctx context.Context, reques
 // PostSpacesSpaceIDPersonsIDInvitation - create an invitation in a space for a person
 func (s *SDK) PostSpacesSpaceIDPersonsIDInvitation(ctx context.Context, request operations.PostSpacesSpaceIDPersonsIDInvitationRequest, security operations.PostSpacesSpaceIDPersonsIDInvitationSecurity) (*operations.PostSpacesSpaceIDPersonsIDInvitationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/invitation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/invitation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -14110,7 +14953,10 @@ func (s *SDK) PostSpacesSpaceIDPersonsIDInvitation(ctx context.Context, request 
 // PostSpacesSpaceIDPersonsIDInvitationInvitationIDSend - send the invitation of a person in a space
 func (s *SDK) PostSpacesSpaceIDPersonsIDInvitationInvitationIDSend(ctx context.Context, request operations.PostSpacesSpaceIDPersonsIDInvitationInvitationIDSendRequest, security operations.PostSpacesSpaceIDPersonsIDInvitationInvitationIDSendSecurity) (*operations.PostSpacesSpaceIDPersonsIDInvitationInvitationIDSendResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/invitation/{invitationId}/send", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/spaces/{spaceId}/persons/{id}/invitation/{invitationId}/send", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

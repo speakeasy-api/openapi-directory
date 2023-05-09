@@ -18,21 +18,25 @@ const (
 	WorkTypeAPISearchQueryOptionsOrderEnumDesc WorkTypeAPISearchQueryOptionsOrderEnum = "Desc"
 )
 
+func (e WorkTypeAPISearchQueryOptionsOrderEnum) ToPointer() *WorkTypeAPISearchQueryOptionsOrderEnum {
+	return &e
+}
+
 func (e *WorkTypeAPISearchQueryOptionsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "Asc":
 		fallthrough
 	case "Desc":
-		*e = WorkTypeAPISearchQueryOptionsOrderEnum(s)
+		*e = WorkTypeAPISearchQueryOptionsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkTypeAPISearchQueryOptionsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkTypeAPISearchQueryOptionsOrderEnum: %v", v)
 	}
 }
 

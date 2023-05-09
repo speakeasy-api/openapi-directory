@@ -2,23 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteBusinessLinesIDRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.BusinessLines.DeleteBusinessLinesID(ctx, req, operations.DeleteBusinessLinesIDSecurity{
+    res, err := s.BusinessLines.DeleteBusinessLinesID(ctx, operations.DeleteBusinessLinesIDRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    }, operations.DeleteBusinessLinesIDSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {

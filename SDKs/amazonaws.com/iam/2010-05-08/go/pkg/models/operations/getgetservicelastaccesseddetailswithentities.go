@@ -15,17 +15,21 @@ const (
 	GETGETServiceLastAccessedDetailsWithEntitiesActionEnumGetServiceLastAccessedDetailsWithEntities GETGETServiceLastAccessedDetailsWithEntitiesActionEnum = "GetServiceLastAccessedDetailsWithEntities"
 )
 
+func (e GETGETServiceLastAccessedDetailsWithEntitiesActionEnum) ToPointer() *GETGETServiceLastAccessedDetailsWithEntitiesActionEnum {
+	return &e
+}
+
 func (e *GETGETServiceLastAccessedDetailsWithEntitiesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetServiceLastAccessedDetailsWithEntities":
-		*e = GETGETServiceLastAccessedDetailsWithEntitiesActionEnum(s)
+		*e = GETGETServiceLastAccessedDetailsWithEntitiesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETServiceLastAccessedDetailsWithEntitiesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETServiceLastAccessedDetailsWithEntitiesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETServiceLastAccessedDetailsWithEntitiesVersionEnumTwoThousandAndTen0508 GETGETServiceLastAccessedDetailsWithEntitiesVersionEnum = "2010-05-08"
 )
 
+func (e GETGETServiceLastAccessedDetailsWithEntitiesVersionEnum) ToPointer() *GETGETServiceLastAccessedDetailsWithEntitiesVersionEnum {
+	return &e
+}
+
 func (e *GETGETServiceLastAccessedDetailsWithEntitiesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETGETServiceLastAccessedDetailsWithEntitiesVersionEnum(s)
+		*e = GETGETServiceLastAccessedDetailsWithEntitiesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETServiceLastAccessedDetailsWithEntitiesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETServiceLastAccessedDetailsWithEntitiesVersionEnum: %v", v)
 	}
 }
 

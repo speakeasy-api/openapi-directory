@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/highwaysengland.co.uk/v1/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AreasGetRequest{
-        Version: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Areas.AreasGet(ctx, req)
+    res, err := s.Areas.AreasGet(ctx, operations.AreasGetRequest{
+        Version: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,30 +42,30 @@ func main() {
 ## Available Resources and Operations
 
 
-### Areas
+### [Areas](docs/areas/README.md)
 
-* `AreasGet` - Returns list of areas
-* `GetVVersionAreasAreaIds` - Returns details of selected area
+* [AreasGet](docs/areas/README.md#areasget) - Returns list of areas
+* [GetVVersionAreasAreaIds](docs/areas/README.md#getvversionareasareaids) - Returns details of selected area
 
-### Quality
+### [Quality](docs/quality/README.md)
 
-* `QualityGetDailyDataQualityForSite` - Get Site DailyQuality
-* `QualityGetOverallDataQualityForSites` - Get Site OverallQuality
+* [QualityGetDailyDataQualityForSite](docs/quality/README.md#qualitygetdailydataqualityforsite) - Get Site DailyQuality
+* [QualityGetOverallDataQualityForSites](docs/quality/README.md#qualitygetoveralldataqualityforsites) - Get Site OverallQuality
 
-### Reports
+### [Reports](docs/reports/README.md)
 
-* `ReportsIndex` - Gets the daily report.
-* `GetVVersionReportsStartDateToEndDateReportType` - Gets the daily report.
+* [ReportsIndex](docs/reports/README.md#reportsindex) - Gets the daily report.
+* [GetVVersionReportsStartDateToEndDateReportType](docs/reports/README.md#getvversionreportsstartdatetoenddatereporttype) - Gets the daily report.
 
-### SiteTypes
+### [SiteTypes](docs/sitetypes/README.md)
 
-* `SiteTypesGetSitesForPublicFacingAPI` - Returns the layer metadata for the LayerId specified.
-* `SiteTypesIndex` - Return list of site types
+* [SiteTypesGetSitesForPublicFacingAPI](docs/sitetypes/README.md#sitetypesgetsitesforpublicfacingapi) - Returns the layer metadata for the LayerId specified.
+* [SiteTypesIndex](docs/sitetypes/README.md#sitetypesindex) - Return list of site types
 
-### Sites
+### [Sites](docs/sites/README.md)
 
-* `SitesIndex` - Get a list of sites
-* `GetVVersionSitesSiteIds` - Get selected sites
+* [SitesIndex](docs/sites/README.md#sitesindex) - Get a list of sites
+* [GetVVersionSitesSiteIds](docs/sites/README.md#getvversionsitessiteids) - Get selected sites
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,12 +16,16 @@ const (
 	MapRunStatusEnumAborted   MapRunStatusEnum = "ABORTED"
 )
 
+func (e MapRunStatusEnum) ToPointer() *MapRunStatusEnum {
+	return &e
+}
+
 func (e *MapRunStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "SUCCEEDED":
@@ -29,9 +33,9 @@ func (e *MapRunStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "ABORTED":
-		*e = MapRunStatusEnum(s)
+		*e = MapRunStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MapRunStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MapRunStatusEnum: %v", v)
 	}
 }

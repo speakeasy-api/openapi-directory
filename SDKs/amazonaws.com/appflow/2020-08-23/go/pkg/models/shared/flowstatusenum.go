@@ -18,12 +18,16 @@ const (
 	FlowStatusEnumSuspended  FlowStatusEnum = "Suspended"
 )
 
+func (e FlowStatusEnum) ToPointer() *FlowStatusEnum {
+	return &e
+}
+
 func (e *FlowStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Deprecated":
@@ -35,9 +39,9 @@ func (e *FlowStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Errored":
 		fallthrough
 	case "Suspended":
-		*e = FlowStatusEnum(s)
+		*e = FlowStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlowStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FlowStatusEnum: %v", v)
 	}
 }

@@ -17,21 +17,25 @@ const (
 	AudioRenderResultPresetEnumStemsWav  AudioRenderResultPresetEnum = "STEMS_WAV"
 )
 
+func (e AudioRenderResultPresetEnum) ToPointer() *AudioRenderResultPresetEnum {
+	return &e
+}
+
 func (e *AudioRenderResultPresetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MASTER_MP3":
 		fallthrough
 	case "MASTER_WAV":
 		fallthrough
 	case "STEMS_WAV":
-		*e = AudioRenderResultPresetEnum(s)
+		*e = AudioRenderResultPresetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AudioRenderResultPresetEnum: %s", s)
+		return fmt.Errorf("invalid value for AudioRenderResultPresetEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	AudioRenderResultStatusEnumFailedCreate   AudioRenderResultStatusEnum = "FAILED_CREATE"
 )
 
+func (e AudioRenderResultStatusEnum) ToPointer() *AudioRenderResultStatusEnum {
+	return &e
+}
+
 func (e *AudioRenderResultStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WAITING_COMPOSE":
 		fallthrough
 	case "RUNNING_COMPOSE":
@@ -64,10 +72,10 @@ func (e *AudioRenderResultStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CREATED":
 		fallthrough
 	case "FAILED_CREATE":
-		*e = AudioRenderResultStatusEnum(s)
+		*e = AudioRenderResultStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AudioRenderResultStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AudioRenderResultStatusEnum: %v", v)
 	}
 }
 

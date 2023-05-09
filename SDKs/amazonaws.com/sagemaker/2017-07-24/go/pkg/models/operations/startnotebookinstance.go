@@ -16,17 +16,21 @@ const (
 	StartNotebookInstanceXAmzTargetEnumSageMakerStartNotebookInstance StartNotebookInstanceXAmzTargetEnum = "SageMaker.StartNotebookInstance"
 )
 
+func (e StartNotebookInstanceXAmzTargetEnum) ToPointer() *StartNotebookInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartNotebookInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.StartNotebookInstance":
-		*e = StartNotebookInstanceXAmzTargetEnum(s)
+		*e = StartNotebookInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartNotebookInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartNotebookInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

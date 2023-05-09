@@ -14,18 +14,22 @@ const (
 	AppStatusTypeEnumDeleting AppStatusTypeEnum = "Deleting"
 )
 
+func (e AppStatusTypeEnum) ToPointer() *AppStatusTypeEnum {
+	return &e
+}
+
 func (e *AppStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Deleting":
-		*e = AppStatusTypeEnum(s)
+		*e = AppStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppStatusTypeEnum: %v", v)
 	}
 }

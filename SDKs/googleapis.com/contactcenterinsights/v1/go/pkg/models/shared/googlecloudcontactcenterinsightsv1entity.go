@@ -26,12 +26,16 @@ const (
 	GoogleCloudContactcenterinsightsV1EntityTypeEnumPrice           GoogleCloudContactcenterinsightsV1EntityTypeEnum = "PRICE"
 )
 
+func (e GoogleCloudContactcenterinsightsV1EntityTypeEnum) ToPointer() *GoogleCloudContactcenterinsightsV1EntityTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudContactcenterinsightsV1EntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "PERSON":
@@ -57,10 +61,10 @@ func (e *GoogleCloudContactcenterinsightsV1EntityTypeEnum) UnmarshalJSON(data []
 	case "NUMBER":
 		fallthrough
 	case "PRICE":
-		*e = GoogleCloudContactcenterinsightsV1EntityTypeEnum(s)
+		*e = GoogleCloudContactcenterinsightsV1EntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1EntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1EntityTypeEnum: %v", v)
 	}
 }
 

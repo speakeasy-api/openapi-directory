@@ -15,17 +15,21 @@ const (
 	POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnumIncreaseNodeGroupsInGlobalReplicationGroup POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum = "IncreaseNodeGroupsInGlobalReplicationGroup"
 )
 
+func (e POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum) ToPointer() *POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum {
+	return &e
+}
+
 func (e *POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IncreaseNodeGroupsInGlobalReplicationGroup":
-		*e = POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum(s)
+		*e = POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTIncreaseNodeGroupsInGlobalReplicationGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum = "2015-02-02"
 )
 
+func (e POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum) ToPointer() *POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum(s)
+		*e = POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTIncreaseNodeGroupsInGlobalReplicationGroupVersionEnum: %v", v)
 	}
 }
 

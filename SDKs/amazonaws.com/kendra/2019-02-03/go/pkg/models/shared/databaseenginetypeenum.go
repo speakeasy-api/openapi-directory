@@ -16,12 +16,16 @@ const (
 	DatabaseEngineTypeEnumRdsPostgresql       DatabaseEngineTypeEnum = "RDS_POSTGRESQL"
 )
 
+func (e DatabaseEngineTypeEnum) ToPointer() *DatabaseEngineTypeEnum {
+	return &e
+}
+
 func (e *DatabaseEngineTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RDS_AURORA_MYSQL":
 		fallthrough
 	case "RDS_AURORA_POSTGRESQL":
@@ -29,9 +33,9 @@ func (e *DatabaseEngineTypeEnum) UnmarshalJSON(data []byte) error {
 	case "RDS_MYSQL":
 		fallthrough
 	case "RDS_POSTGRESQL":
-		*e = DatabaseEngineTypeEnum(s)
+		*e = DatabaseEngineTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseEngineTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseEngineTypeEnum: %v", v)
 	}
 }

@@ -13,16 +13,20 @@ const (
 	AdditionalResultAttributeValueTypeEnumTextWithHighlightsValue AdditionalResultAttributeValueTypeEnum = "TEXT_WITH_HIGHLIGHTS_VALUE"
 )
 
+func (e AdditionalResultAttributeValueTypeEnum) ToPointer() *AdditionalResultAttributeValueTypeEnum {
+	return &e
+}
+
 func (e *AdditionalResultAttributeValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEXT_WITH_HIGHLIGHTS_VALUE":
-		*e = AdditionalResultAttributeValueTypeEnum(s)
+		*e = AdditionalResultAttributeValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdditionalResultAttributeValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdditionalResultAttributeValueTypeEnum: %v", v)
 	}
 }

@@ -26,17 +26,21 @@ const (
 	StartProtectedQueryRequestBodyTypeEnumSQL StartProtectedQueryRequestBodyTypeEnum = "SQL"
 )
 
+func (e StartProtectedQueryRequestBodyTypeEnum) ToPointer() *StartProtectedQueryRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *StartProtectedQueryRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL":
-		*e = StartProtectedQueryRequestBodyTypeEnum(s)
+		*e = StartProtectedQueryRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartProtectedQueryRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StartProtectedQueryRequestBodyTypeEnum: %v", v)
 	}
 }
 

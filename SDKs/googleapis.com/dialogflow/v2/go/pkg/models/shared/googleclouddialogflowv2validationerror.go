@@ -18,12 +18,16 @@ const (
 	GoogleCloudDialogflowV2ValidationErrorSeverityEnumCritical            GoogleCloudDialogflowV2ValidationErrorSeverityEnum = "CRITICAL"
 )
 
+func (e GoogleCloudDialogflowV2ValidationErrorSeverityEnum) ToPointer() *GoogleCloudDialogflowV2ValidationErrorSeverityEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2ValidationErrorSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "INFO":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDialogflowV2ValidationErrorSeverityEnum) UnmarshalJSON(data 
 	case "ERROR":
 		fallthrough
 	case "CRITICAL":
-		*e = GoogleCloudDialogflowV2ValidationErrorSeverityEnum(s)
+		*e = GoogleCloudDialogflowV2ValidationErrorSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ValidationErrorSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ValidationErrorSeverityEnum: %v", v)
 	}
 }
 

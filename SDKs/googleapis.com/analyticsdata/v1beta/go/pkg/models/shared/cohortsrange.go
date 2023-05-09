@@ -17,12 +17,16 @@ const (
 	CohortsRangeGranularityEnumMonthly                CohortsRangeGranularityEnum = "MONTHLY"
 )
 
+func (e CohortsRangeGranularityEnum) ToPointer() *CohortsRangeGranularityEnum {
+	return &e
+}
+
 func (e *CohortsRangeGranularityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GRANULARITY_UNSPECIFIED":
 		fallthrough
 	case "DAILY":
@@ -30,10 +34,10 @@ func (e *CohortsRangeGranularityEnum) UnmarshalJSON(data []byte) error {
 	case "WEEKLY":
 		fallthrough
 	case "MONTHLY":
-		*e = CohortsRangeGranularityEnum(s)
+		*e = CohortsRangeGranularityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CohortsRangeGranularityEnum: %s", s)
+		return fmt.Errorf("invalid value for CohortsRangeGranularityEnum: %v", v)
 	}
 }
 

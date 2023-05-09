@@ -31,12 +31,16 @@ const (
 	TeamsGetUsersDefaultApplicationJSONErrorCodeEnumTooManyRequests     TeamsGetUsersDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e TeamsGetUsersDefaultApplicationJSONErrorCodeEnum) ToPointer() *TeamsGetUsersDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *TeamsGetUsersDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *TeamsGetUsersDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = TeamsGetUsersDefaultApplicationJSONErrorCodeEnum(s)
+		*e = TeamsGetUsersDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsGetUsersDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsGetUsersDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -75,19 +79,23 @@ const (
 	TeamsGetUsers200ApplicationJSONRoleEnumCollaborator TeamsGetUsers200ApplicationJSONRoleEnum = "collaborator"
 )
 
+func (e TeamsGetUsers200ApplicationJSONRoleEnum) ToPointer() *TeamsGetUsers200ApplicationJSONRoleEnum {
+	return &e
+}
+
 func (e *TeamsGetUsers200ApplicationJSONRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "maintainer":
 		fallthrough
 	case "collaborator":
-		*e = TeamsGetUsers200ApplicationJSONRoleEnum(s)
+		*e = TeamsGetUsers200ApplicationJSONRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsGetUsers200ApplicationJSONRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsGetUsers200ApplicationJSONRoleEnum: %v", v)
 	}
 }
 

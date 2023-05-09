@@ -16,17 +16,21 @@ const (
 	DescribeUpdateDirectoryXAmzTargetEnumDirectoryService20150416DescribeUpdateDirectory DescribeUpdateDirectoryXAmzTargetEnum = "DirectoryService_20150416.DescribeUpdateDirectory"
 )
 
+func (e DescribeUpdateDirectoryXAmzTargetEnum) ToPointer() *DescribeUpdateDirectoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeUpdateDirectoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.DescribeUpdateDirectory":
-		*e = DescribeUpdateDirectoryXAmzTargetEnum(s)
+		*e = DescribeUpdateDirectoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeUpdateDirectoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeUpdateDirectoryXAmzTargetEnum: %v", v)
 	}
 }
 

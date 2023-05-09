@@ -14,18 +14,22 @@ const (
 	ReloadOptionValueEnumValidateOnly ReloadOptionValueEnum = "validate-only"
 )
 
+func (e ReloadOptionValueEnum) ToPointer() *ReloadOptionValueEnum {
+	return &e
+}
+
 func (e *ReloadOptionValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "data-reload":
 		fallthrough
 	case "validate-only":
-		*e = ReloadOptionValueEnum(s)
+		*e = ReloadOptionValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReloadOptionValueEnum: %s", s)
+		return fmt.Errorf("invalid value for ReloadOptionValueEnum: %v", v)
 	}
 }

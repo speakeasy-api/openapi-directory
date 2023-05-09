@@ -16,17 +16,21 @@ const (
 	DescribeExportConfigurationsXAmzTargetEnumAwsPoseidonServiceV20151101DescribeExportConfigurations DescribeExportConfigurationsXAmzTargetEnum = "AWSPoseidonService_V2015_11_01.DescribeExportConfigurations"
 )
 
+func (e DescribeExportConfigurationsXAmzTargetEnum) ToPointer() *DescribeExportConfigurationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeExportConfigurationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPoseidonService_V2015_11_01.DescribeExportConfigurations":
-		*e = DescribeExportConfigurationsXAmzTargetEnum(s)
+		*e = DescribeExportConfigurationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeExportConfigurationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeExportConfigurationsXAmzTargetEnum: %v", v)
 	}
 }
 

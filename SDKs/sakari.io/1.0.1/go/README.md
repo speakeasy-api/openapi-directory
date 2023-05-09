@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sakari.io/1.0.1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.TokenRequest{
-        ClientID: "00000000-0000-0000-0000-00000000000",
-        ClientSecret: "00000000-0000-0000-0000-00000000000",
-        GrantType: "client_credentials",
-    }
-
     ctx := context.Background()
-    res, err := s.Authentication.AuthToken(ctx, req)
+    res, err := s.Authentication.AuthToken(ctx, shared.TokenRequest{
+        ClientID: sdk.String("00000000-0000-0000-0000-00000000000"),
+        ClientSecret: sdk.String("00000000-0000-0000-0000-00000000000"),
+        GrantType: sdk.String("client_credentials"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,57 +44,57 @@ func main() {
 ## Available Resources and Operations
 
 
-### Authentication
+### [Authentication](docs/authentication/README.md)
 
-* `AuthToken` - Get token for accessing APIs
+* [AuthToken](docs/authentication/README.md#authtoken) - Get token for accessing APIs
 
-### Campaigns
+### [Campaigns](docs/campaigns/README.md)
 
-* `CampaignsCreate` - Create campaign
-* `CampaignsFetch` - Fetch campaign by ID
-* `CampaignsFetchAll` - Fetch campaigns
-* `CampaignsRemove` - Deletes a campaign
-* `CampaignsUpdate` - Updates a campaign
+* [CampaignsCreate](docs/campaigns/README.md#campaignscreate) - Create campaign
+* [CampaignsFetch](docs/campaigns/README.md#campaignsfetch) - Fetch campaign by ID
+* [CampaignsFetchAll](docs/campaigns/README.md#campaignsfetchall) - Fetch campaigns
+* [CampaignsRemove](docs/campaigns/README.md#campaignsremove) - Deletes a campaign
+* [CampaignsUpdate](docs/campaigns/README.md#campaignsupdate) - Updates a campaign
 
-### Contacts
+### [Contacts](docs/contacts/README.md)
 
-* `ContactsCreateJSON` - Create contact
-* `ContactsCreateString` - Create contact
-* `ContactsFetch` - Fetch contact by ID
-* `ContactsFetchAll` - Fetch contacts
-* `ContactsRemove` - Deletes a contact
-* `ContactsUpdate` - Updates a contact
+* [ContactsCreateJSON](docs/contacts/README.md#contactscreatejson) - Create contact
+* [ContactsCreateString](docs/contacts/README.md#contactscreatestring) - Create contact
+* [ContactsFetch](docs/contacts/README.md#contactsfetch) - Fetch contact by ID
+* [ContactsFetchAll](docs/contacts/README.md#contactsfetchall) - Fetch contacts
+* [ContactsRemove](docs/contacts/README.md#contactsremove) - Deletes a contact
+* [ContactsUpdate](docs/contacts/README.md#contactsupdate) - Updates a contact
 
-### Conversations
+### [Conversations](docs/conversations/README.md)
 
-* `ConversationsClose` - Closes a conversation
-* `ConversationsFetch` - Fetch conversation by ID
-* `ConversationsFetchAll` - Fetch conversations
+* [ConversationsClose](docs/conversations/README.md#conversationsclose) - Closes a conversation
+* [ConversationsFetch](docs/conversations/README.md#conversationsfetch) - Fetch conversation by ID
+* [ConversationsFetchAll](docs/conversations/README.md#conversationsfetchall) - Fetch conversations
 
-### Messages
+### [Messages](docs/messages/README.md)
 
-* `MessagesFetch` - Fetch message by id
-* `MessagesFetchAll` - Fetch messages
-* `MessagesSend` - Send Messages
+* [MessagesFetch](docs/messages/README.md#messagesfetch) - Fetch message by id
+* [MessagesFetchAll](docs/messages/README.md#messagesfetchall) - Fetch messages
+* [MessagesSend](docs/messages/README.md#messagessend) - Send Messages
 
-### Templates
+### [Templates](docs/templates/README.md)
 
-* `TemplatesCreate` - Create template
-* `TemplatesFetch` - Fetch template by ID
-* `TemplatesFetchAll` - Fetch templates
-* `TemplatesRemove` - Deletes a template
-* `TemplatesUpdate` - Updates a template
+* [TemplatesCreate](docs/templates/README.md#templatescreate) - Create template
+* [TemplatesFetch](docs/templates/README.md#templatesfetch) - Fetch template by ID
+* [TemplatesFetchAll](docs/templates/README.md#templatesfetchall) - Fetch templates
+* [TemplatesRemove](docs/templates/README.md#templatesremove) - Deletes a template
+* [TemplatesUpdate](docs/templates/README.md#templatesupdate) - Updates a template
 
-### Tools
+### [Tools](docs/tools/README.md)
 
-* `ToolsShareFileMultipart` - Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
-* `ToolsShareFileRaw` - Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
+* [ToolsShareFileMultipart](docs/tools/README.md#toolssharefilemultipart) - Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
+* [ToolsShareFileRaw](docs/tools/README.md#toolssharefileraw) - Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
 
-### Webhooks
+### [Webhooks](docs/webhooks/README.md)
 
-* `WebhooksFetchAll` - Fetch active webhooks
-* `WebhooksSubscribe` - Subscribe to message events
-* `WebhooksUnsubscribe` - Unsubscribe to message events
+* [WebhooksFetchAll](docs/webhooks/README.md#webhooksfetchall) - Fetch active webhooks
+* [WebhooksSubscribe](docs/webhooks/README.md#webhookssubscribe) - Subscribe to message events
+* [WebhooksUnsubscribe](docs/webhooks/README.md#webhooksunsubscribe) - Unsubscribe to message events
 <!-- End SDK Available Operations -->
 
 ### Maturity

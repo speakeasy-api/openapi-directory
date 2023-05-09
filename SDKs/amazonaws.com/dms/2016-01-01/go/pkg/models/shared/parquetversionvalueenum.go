@@ -14,18 +14,22 @@ const (
 	ParquetVersionValueEnumParquet20 ParquetVersionValueEnum = "parquet-2-0"
 )
 
+func (e ParquetVersionValueEnum) ToPointer() *ParquetVersionValueEnum {
+	return &e
+}
+
 func (e *ParquetVersionValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "parquet-1-0":
 		fallthrough
 	case "parquet-2-0":
-		*e = ParquetVersionValueEnum(s)
+		*e = ParquetVersionValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParquetVersionValueEnum: %s", s)
+		return fmt.Errorf("invalid value for ParquetVersionValueEnum: %v", v)
 	}
 }

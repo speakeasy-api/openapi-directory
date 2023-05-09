@@ -25,12 +25,16 @@ const (
 	PagesHTTPSCertificateStateEnumDNSChanged           PagesHTTPSCertificateStateEnum = "dns_changed"
 )
 
+func (e PagesHTTPSCertificateStateEnum) ToPointer() *PagesHTTPSCertificateStateEnum {
+	return &e
+}
+
 func (e *PagesHTTPSCertificateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "new":
 		fallthrough
 	case "authorization_created":
@@ -54,10 +58,10 @@ func (e *PagesHTTPSCertificateStateEnum) UnmarshalJSON(data []byte) error {
 	case "destroy_pending":
 		fallthrough
 	case "dns_changed":
-		*e = PagesHTTPSCertificateStateEnum(s)
+		*e = PagesHTTPSCertificateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PagesHTTPSCertificateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PagesHTTPSCertificateStateEnum: %v", v)
 	}
 }
 

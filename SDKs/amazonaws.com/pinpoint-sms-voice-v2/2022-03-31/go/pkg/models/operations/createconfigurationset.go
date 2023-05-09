@@ -16,17 +16,21 @@ const (
 	CreateConfigurationSetXAmzTargetEnumPinpointSmsVoiceV2CreateConfigurationSet CreateConfigurationSetXAmzTargetEnum = "PinpointSMSVoiceV2.CreateConfigurationSet"
 )
 
+func (e CreateConfigurationSetXAmzTargetEnum) ToPointer() *CreateConfigurationSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateConfigurationSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.CreateConfigurationSet":
-		*e = CreateConfigurationSetXAmzTargetEnum(s)
+		*e = CreateConfigurationSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateConfigurationSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateConfigurationSetXAmzTargetEnum: %v", v)
 	}
 }
 

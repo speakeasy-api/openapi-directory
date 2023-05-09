@@ -38,7 +38,10 @@ func newAppPkgm(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Reads the content of the AppD of on-boarded individual application package resources.
 func (s *appPkgm) AppDGET(ctx context.Context, request operations.AppDGETRequest) (*operations.AppDGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/onboarded_app_packages/{appDId}/appd", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/onboarded_app_packages/{appDId}/appd", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -115,7 +118,10 @@ func (s *appPkgm) AppDGET(ctx context.Context, request operations.AppDGETRequest
 // Fetch the onboarded application package content identified by appPkgId or appDId.
 func (s *appPkgm) AppDIDGET(ctx context.Context, request operations.AppDIDGETRequest) (*operations.AppDIDGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/onboarded_app_packages/{appDId}/package_content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/onboarded_app_packages/{appDId}/package_content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -175,7 +181,10 @@ func (s *appPkgm) AppDIDGET(ctx context.Context, request operations.AppDIDGETReq
 // Uploads the content of application package.
 func (s *appPkgm) AppDIDPUT(ctx context.Context, request operations.AppDIDPUTRequest) (*operations.AppDIDPUTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/onboarded_app_packages/{appDId}/package_content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/onboarded_app_packages/{appDId}/package_content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -240,7 +249,10 @@ func (s *appPkgm) AppDIDPUT(ctx context.Context, request operations.AppDIDPUTReq
 // Fetch the onboarded application package content identified by appPkgId or appDId.
 func (s *appPkgm) AppPkgGET(ctx context.Context, request operations.AppPkgGETRequest) (*operations.AppPkgGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app_packages/{appPkgId}/package_content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app_packages/{appPkgId}/package_content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -300,7 +312,10 @@ func (s *appPkgm) AppPkgGET(ctx context.Context, request operations.AppPkgGETReq
 // Reads the content of the AppD of on-boarded individual application package resources.
 func (s *appPkgm) AppPkgIDGET(ctx context.Context, request operations.AppPkgIDGETRequest) (*operations.AppPkgIDGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app_packages/{appPkgId}/appd", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app_packages/{appPkgId}/appd", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -377,7 +392,10 @@ func (s *appPkgm) AppPkgIDGET(ctx context.Context, request operations.AppPkgIDGE
 // Uploads the content of application package.
 func (s *appPkgm) AppPkgPUT(ctx context.Context, request operations.AppPkgPUTRequest) (*operations.AppPkgPUTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app_packages/{appPkgId}/package_content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app_packages/{appPkgId}/package_content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -442,7 +460,10 @@ func (s *appPkgm) AppPkgPUT(ctx context.Context, request operations.AppPkgPUTReq
 // Deletes an individual application package resources
 func (s *appPkgm) AppPackageDELETE(ctx context.Context, request operations.AppPackageDELETERequest) (*operations.AppPackageDELETEResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app_packages/{appPkgId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app_packages/{appPkgId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -498,7 +519,10 @@ func (s *appPkgm) AppPackageDELETE(ctx context.Context, request operations.AppPa
 // Queries the information related to individual application package resources
 func (s *appPkgm) AppPackageGET(ctx context.Context, request operations.AppPackageGETRequest) (*operations.AppPackageGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app_packages/{appPkgId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app_packages/{appPkgId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -563,7 +587,10 @@ func (s *appPkgm) AppPackageGET(ctx context.Context, request operations.AppPacka
 // Updates the operational state of an individual application package resources
 func (s *appPkgm) AppPackagePATCH(ctx context.Context, request operations.AppPackagePATCHRequest) (*operations.AppPackagePATCHResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/app_packages/{appPkgId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/app_packages/{appPkgId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppPkgInfoModifications", "json")
 	if err != nil {
@@ -784,7 +811,10 @@ func (s *appPkgm) AppPackagesPOST(ctx context.Context, request shared.CreateAppP
 // Deletes the individual subscription to notifications about application package changes in MEO.
 func (s *appPkgm) IndividualSubscriptionDELETE(ctx context.Context, request operations.IndividualSubscriptionDELETERequest) (*operations.IndividualSubscriptionDELETEResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -836,7 +866,10 @@ func (s *appPkgm) IndividualSubscriptionDELETE(ctx context.Context, request oper
 // Used to represent an individual subscription to notifications about application package changes.
 func (s *appPkgm) IndividualSubscriptionGET(ctx context.Context, request operations.IndividualSubscriptionGETRequest) (*operations.IndividualSubscriptionGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscriptions/{subscriptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -23,21 +23,25 @@ const (
 	IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadFileFormatEnumYaml                  IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadFileFormatEnum = "YAML"
 )
 
+func (e IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadFileFormatEnum) ToPointer() *IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadFileFormatEnum {
+	return &e
+}
+
 func (e *IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadFileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILE_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "JSON":
 		fallthrough
 	case "YAML":
-		*e = IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadFileFormatEnum(s)
+		*e = IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadFileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadFileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadFileFormatEnum: %v", v)
 	}
 }
 

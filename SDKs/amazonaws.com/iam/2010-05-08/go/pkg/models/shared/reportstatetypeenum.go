@@ -15,20 +15,24 @@ const (
 	ReportStateTypeEnumComplete   ReportStateTypeEnum = "COMPLETE"
 )
 
+func (e ReportStateTypeEnum) ToPointer() *ReportStateTypeEnum {
+	return &e
+}
+
 func (e *ReportStateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STARTED":
 		fallthrough
 	case "INPROGRESS":
 		fallthrough
 	case "COMPLETE":
-		*e = ReportStateTypeEnum(s)
+		*e = ReportStateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportStateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportStateTypeEnum: %v", v)
 	}
 }

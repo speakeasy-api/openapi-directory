@@ -38,7 +38,10 @@ func newRepos(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#accept-a-repository-invitation - API method documentation
 func (s *repos) ReposAcceptInvitation(ctx context.Context, request operations.ReposAcceptInvitationRequest) (*operations.ReposAcceptInvitationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/repository_invitations/{invitation_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/repository_invitations/{invitation_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -97,7 +100,10 @@ func (s *repos) ReposAcceptInvitation(ctx context.Context, request operations.Re
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#add-app-access-restrictions - API method documentation
 func (s *repos) ReposAddAppAccessRestrictions(ctx context.Context, request operations.ReposAddAppAccessRestrictionsRequest) (*operations.ReposAddAppAccessRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -170,7 +176,10 @@ func (s *repos) ReposAddAppAccessRestrictions(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#add-a-repository-collaborator - API method documentation
 func (s *repos) ReposAddCollaborator(ctx context.Context, request operations.ReposAddCollaboratorRequest) (*operations.ReposAddCollaboratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/collaborators/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/collaborators/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -244,7 +253,10 @@ func (s *repos) ReposAddCollaborator(ctx context.Context, request operations.Rep
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#add-status-check-contexts - API method documentation
 func (s *repos) ReposAddStatusCheckContexts(ctx context.Context, request operations.ReposAddStatusCheckContextsRequest) (*operations.ReposAddStatusCheckContextsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -325,7 +337,10 @@ func (s *repos) ReposAddStatusCheckContexts(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#add-team-access-restrictions - API method documentation
 func (s *repos) ReposAddTeamAccessRestrictions(ctx context.Context, request operations.ReposAddTeamAccessRestrictionsRequest) (*operations.ReposAddTeamAccessRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -394,7 +409,10 @@ func (s *repos) ReposAddTeamAccessRestrictions(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#add-user-access-restrictions - API method documentation
 func (s *repos) ReposAddUserAccessRestrictions(ctx context.Context, request operations.ReposAddUserAccessRestrictionsRequest) (*operations.ReposAddUserAccessRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -459,7 +477,10 @@ func (s *repos) ReposAddUserAccessRestrictions(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#check-if-a-user-is-a-repository-collaborator - API method documentation
 func (s *repos) ReposCheckCollaborator(ctx context.Context, request operations.ReposCheckCollaboratorRequest) (*operations.ReposCheckCollaboratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/collaborators/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/collaborators/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -538,7 +559,10 @@ func (s *repos) ReposCheckCollaborator(ctx context.Context, request operations.R
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#compare-two-commits - API method documentation
 func (s *repos) ReposCompareCommits(ctx context.Context, request operations.ReposCompareCommitsRequest) (*operations.ReposCompareCommitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/compare/{basehead}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/compare/{basehead}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -598,7 +622,10 @@ func (s *repos) ReposCompareCommits(ctx context.Context, request operations.Repo
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-a-commit-comment - API method documentation
 func (s *repos) ReposCreateCommitComment(ctx context.Context, request operations.ReposCreateCommitCommentRequest) (*operations.ReposCreateCommitCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{commit_sha}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{commit_sha}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -678,7 +705,10 @@ func (s *repos) ReposCreateCommitComment(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-commit-signature-protection - API method documentation
 func (s *repos) ReposCreateCommitSignatureProtection(ctx context.Context, request operations.ReposCreateCommitSignatureProtectionRequest) (*operations.ReposCreateCommitSignatureProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_signatures", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_signatures", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -736,7 +766,10 @@ func (s *repos) ReposCreateCommitSignatureProtection(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-a-commit-status - API method documentation
 func (s *repos) ReposCreateCommitStatus(ctx context.Context, request operations.ReposCreateCommitStatusRequest) (*operations.ReposCreateCommitStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/statuses/{sha}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/statuses/{sha}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -794,7 +827,10 @@ func (s *repos) ReposCreateCommitStatus(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-a-deploy-key - API method documentation
 func (s *repos) ReposCreateDeployKey(ctx context.Context, request operations.ReposCreateDeployKeyRequest) (*operations.ReposCreateDeployKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -906,7 +942,10 @@ func (s *repos) ReposCreateDeployKey(ctx context.Context, request operations.Rep
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-a-deployment - API method documentation
 func (s *repos) ReposCreateDeployment(ctx context.Context, request operations.ReposCreateDeploymentRequest) (*operations.ReposCreateDeploymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -985,7 +1024,10 @@ func (s *repos) ReposCreateDeployment(ctx context.Context, request operations.Re
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-a-deployment-status - API method documentation
 func (s *repos) ReposCreateDeploymentStatus(ctx context.Context, request operations.ReposCreateDeploymentStatusRequest) (*operations.ReposCreateDeploymentStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/deployments/{deployment_id}/statuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/deployments/{deployment_id}/statuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1162,7 +1204,10 @@ func (s *repos) ReposCreateForAuthenticatedUser(ctx context.Context, request ope
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-a-fork - API method documentation
 func (s *repos) ReposCreateFork(ctx context.Context, request operations.ReposCreateForkRequest) (*operations.ReposCreateForkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/forks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/forks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1261,7 +1306,10 @@ func (s *repos) ReposCreateFork(ctx context.Context, request operations.ReposCre
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-an-organization-repository - API method documentation
 func (s *repos) ReposCreateInOrg(ctx context.Context, request operations.ReposCreateInOrgRequest) (*operations.ReposCreateInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/repos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/repos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1339,7 +1387,10 @@ func (s *repos) ReposCreateInOrg(ctx context.Context, request operations.ReposCr
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-or-update-file-contents - API method documentation
 func (s *repos) ReposCreateOrUpdateFileContents(ctx context.Context, request operations.ReposCreateOrUpdateFileContentsRequest) (*operations.ReposCreateOrUpdateFileContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/contents/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/contents/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1419,7 +1470,10 @@ func (s *repos) ReposCreateOrUpdateFileContents(ctx context.Context, request ope
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-a-github-pages-site - API method documentation
 func (s *repos) ReposCreatePagesSite(ctx context.Context, request operations.ReposCreatePagesSiteRequest) (*operations.ReposCreatePagesSiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1507,7 +1561,10 @@ func (s *repos) ReposCreatePagesSite(ctx context.Context, request operations.Rep
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-a-release - API method documentation
 func (s *repos) ReposCreateRelease(ctx context.Context, request operations.ReposCreateReleaseRequest) (*operations.ReposCreateReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1582,7 +1639,10 @@ func (s *repos) ReposCreateRelease(ctx context.Context, request operations.Repos
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-a-repository-using-a-template - API method documentation
 func (s *repos) ReposCreateUsingTemplate(ctx context.Context, request operations.ReposCreateUsingTemplateRequest) (*operations.ReposCreateUsingTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{template_owner}/{template_repo}/generate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{template_owner}/{template_repo}/generate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1641,7 +1701,10 @@ func (s *repos) ReposCreateUsingTemplate(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#create-a-repository-webhook - API method documentation
 func (s *repos) ReposCreateWebhook(ctx context.Context, request operations.ReposCreateWebhookRequest) (*operations.ReposCreateWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1717,7 +1780,10 @@ func (s *repos) ReposCreateWebhook(ctx context.Context, request operations.Repos
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#decline-a-repository-invitation - API method documentation
 func (s *repos) ReposDeclineInvitation(ctx context.Context, request operations.ReposDeclineInvitationRequest) (*operations.ReposDeclineInvitationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/repository_invitations/{invitation_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/repository_invitations/{invitation_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1773,7 +1839,10 @@ func (s *repos) ReposDeclineInvitation(ctx context.Context, request operations.R
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-a-repository - API method documentation
 func (s *repos) ReposDelete(ctx context.Context, request operations.ReposDeleteRequest) (*operations.ReposDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1834,7 +1903,10 @@ func (s *repos) ReposDelete(ctx context.Context, request operations.ReposDeleteR
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-access-restrictions - API method documentation
 func (s *repos) ReposDeleteAccessRestrictions(ctx context.Context, request operations.ReposDeleteAccessRestrictionsRequest) (*operations.ReposDeleteAccessRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1873,7 +1945,10 @@ func (s *repos) ReposDeleteAccessRestrictions(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-admin-branch-protection - API method documentation
 func (s *repos) ReposDeleteAdminBranchProtection(ctx context.Context, request operations.ReposDeleteAdminBranchProtectionRequest) (*operations.ReposDeleteAdminBranchProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1920,7 +1995,10 @@ func (s *repos) ReposDeleteAdminBranchProtection(ctx context.Context, request op
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-branch-protection - API method documentation
 func (s *repos) ReposDeleteBranchProtection(ctx context.Context, request operations.ReposDeleteBranchProtectionRequest) (*operations.ReposDeleteBranchProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1966,7 +2044,10 @@ func (s *repos) ReposDeleteBranchProtection(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-a-commit-comment - API method documentation
 func (s *repos) ReposDeleteCommitComment(ctx context.Context, request operations.ReposDeleteCommitCommentRequest) (*operations.ReposDeleteCommitCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2015,7 +2096,10 @@ func (s *repos) ReposDeleteCommitComment(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-commit-signature-protection - API method documentation
 func (s *repos) ReposDeleteCommitSignatureProtection(ctx context.Context, request operations.ReposDeleteCommitSignatureProtectionRequest) (*operations.ReposDeleteCommitSignatureProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_signatures", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_signatures", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2062,7 +2146,10 @@ func (s *repos) ReposDeleteCommitSignatureProtection(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-a-deploy-key - API method documentation
 func (s *repos) ReposDeleteDeployKey(ctx context.Context, request operations.ReposDeleteDeployKeyRequest) (*operations.ReposDeleteDeployKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/keys/{key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/keys/{key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2105,7 +2192,10 @@ func (s *repos) ReposDeleteDeployKey(ctx context.Context, request operations.Rep
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-a-file - API method documentation
 func (s *repos) ReposDeleteFile(ctx context.Context, request operations.ReposDeleteFileRequest) (*operations.ReposDeleteFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/contents/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/contents/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2192,7 +2282,10 @@ func (s *repos) ReposDeleteFile(ctx context.Context, request operations.ReposDel
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-a-repository-invitation - API method documentation
 func (s *repos) ReposDeleteInvitation(ctx context.Context, request operations.ReposDeleteInvitationRequest) (*operations.ReposDeleteInvitationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/invitations/{invitation_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/invitations/{invitation_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2228,7 +2321,10 @@ func (s *repos) ReposDeleteInvitation(ctx context.Context, request operations.Re
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-a-github-pages-site - API method documentation
 func (s *repos) ReposDeletePagesSite(ctx context.Context, request operations.ReposDeletePagesSiteRequest) (*operations.ReposDeletePagesSiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2295,7 +2391,10 @@ func (s *repos) ReposDeletePagesSite(ctx context.Context, request operations.Rep
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-pull-request-review-protection - API method documentation
 func (s *repos) ReposDeletePullRequestReviewProtection(ctx context.Context, request operations.ReposDeletePullRequestReviewProtectionRequest) (*operations.ReposDeletePullRequestReviewProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2342,7 +2441,10 @@ func (s *repos) ReposDeletePullRequestReviewProtection(ctx context.Context, requ
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-a-release - API method documentation
 func (s *repos) ReposDeleteRelease(ctx context.Context, request operations.ReposDeleteReleaseRequest) (*operations.ReposDeleteReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2378,7 +2480,10 @@ func (s *repos) ReposDeleteRelease(ctx context.Context, request operations.Repos
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-a-release-asset - API method documentation
 func (s *repos) ReposDeleteReleaseAsset(ctx context.Context, request operations.ReposDeleteReleaseAssetRequest) (*operations.ReposDeleteReleaseAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/assets/{asset_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/assets/{asset_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2414,7 +2519,10 @@ func (s *repos) ReposDeleteReleaseAsset(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#delete-a-repository-webhook - API method documentation
 func (s *repos) ReposDeleteWebhook(ctx context.Context, request operations.ReposDeleteWebhookRequest) (*operations.ReposDeleteWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks/{hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks/{hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2464,7 +2572,10 @@ func (s *repos) ReposDeleteWebhook(ctx context.Context, request operations.Repos
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#download-a-repository-archive - API method documentation
 func (s *repos) ReposDownloadTarballArchive(ctx context.Context, request operations.ReposDownloadTarballArchiveRequest) (*operations.ReposDownloadTarballArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/tarball/{ref}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/tarball/{ref}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2505,7 +2616,10 @@ func (s *repos) ReposDownloadTarballArchive(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#download-a-repository-archive - API method documentation
 func (s *repos) ReposDownloadZipballArchive(ctx context.Context, request operations.ReposDownloadZipballArchiveRequest) (*operations.ReposDownloadZipballArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/zipball/{ref}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/zipball/{ref}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2545,7 +2659,10 @@ func (s *repos) ReposDownloadZipballArchive(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-repository - API method documentation
 func (s *repos) ReposGet(ctx context.Context, request operations.ReposGetRequest) (*operations.ReposGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2609,7 +2726,10 @@ func (s *repos) ReposGet(ctx context.Context, request operations.ReposGetRequest
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-access-restrictions - API method documentation
 func (s *repos) ReposGetAccessRestrictions(ctx context.Context, request operations.ReposGetAccessRestrictionsRequest) (*operations.ReposGetAccessRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2665,7 +2785,10 @@ func (s *repos) ReposGetAccessRestrictions(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-admin-branch-protection - API method documentation
 func (s *repos) ReposGetAdminBranchProtection(ctx context.Context, request operations.ReposGetAdminBranchProtectionRequest) (*operations.ReposGetAdminBranchProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2711,7 +2834,10 @@ func (s *repos) ReposGetAdminBranchProtection(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-all-status-check-contexts - API method documentation
 func (s *repos) ReposGetAllStatusCheckContexts(ctx context.Context, request operations.ReposGetAllStatusCheckContextsRequest) (*operations.ReposGetAllStatusCheckContextsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2766,7 +2892,10 @@ func (s *repos) ReposGetAllStatusCheckContexts(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-all-repository-topics - API method documentation
 func (s *repos) ReposGetAllTopics(ctx context.Context, request operations.ReposGetAllTopicsRequest) (*operations.ReposGetAllTopicsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/topics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/topics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2838,7 +2967,10 @@ func (s *repos) ReposGetAllTopics(ctx context.Context, request operations.ReposG
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-apps-with-access-to-the-protected-branch - API method documentation
 func (s *repos) ReposGetAppsWithAccessToProtectedBranch(ctx context.Context, request operations.ReposGetAppsWithAccessToProtectedBranchRequest) (*operations.ReposGetAppsWithAccessToProtectedBranchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2893,7 +3025,10 @@ func (s *repos) ReposGetAppsWithAccessToProtectedBranch(ctx context.Context, req
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-branch - API method documentation
 func (s *repos) ReposGetBranch(ctx context.Context, request operations.ReposGetBranchRequest) (*operations.ReposGetBranchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2961,7 +3096,10 @@ func (s *repos) ReposGetBranch(ctx context.Context, request operations.ReposGetB
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-branch-protection - API method documentation
 func (s *repos) ReposGetBranchProtection(ctx context.Context, request operations.ReposGetBranchProtectionRequest) (*operations.ReposGetBranchProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3017,7 +3155,10 @@ func (s *repos) ReposGetBranchProtection(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-the-weekly-commit-activity - API method documentation
 func (s *repos) ReposGetCodeFrequencyStats(ctx context.Context, request operations.ReposGetCodeFrequencyStatsRequest) (*operations.ReposGetCodeFrequencyStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/stats/code_frequency", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/stats/code_frequency", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3074,7 +3215,10 @@ func (s *repos) ReposGetCodeFrequencyStats(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-repository-permissions-for-a-user - API method documentation
 func (s *repos) ReposGetCollaboratorPermissionLevel(ctx context.Context, request operations.ReposGetCollaboratorPermissionLevelRequest) (*operations.ReposGetCollaboratorPermissionLevelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/collaborators/{username}/permission", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/collaborators/{username}/permission", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3138,7 +3282,10 @@ func (s *repos) ReposGetCollaboratorPermissionLevel(ctx context.Context, request
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-the-combined-status-for-a-specific-reference - API method documentation
 func (s *repos) ReposGetCombinedStatusForRef(ctx context.Context, request operations.ReposGetCombinedStatusForRefRequest) (*operations.ReposGetCombinedStatusForRefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{ref}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{ref}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3233,7 +3380,10 @@ func (s *repos) ReposGetCombinedStatusForRef(ctx context.Context, request operat
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-commit - API method documentation
 func (s *repos) ReposGetCommit(ctx context.Context, request operations.ReposGetCommitRequest) (*operations.ReposGetCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{ref}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{ref}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3305,7 +3455,10 @@ func (s *repos) ReposGetCommit(ctx context.Context, request operations.ReposGetC
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-the-last-year-of-commit-activity - API method documentation
 func (s *repos) ReposGetCommitActivityStats(ctx context.Context, request operations.ReposGetCommitActivityStatsRequest) (*operations.ReposGetCommitActivityStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/stats/commit_activity", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/stats/commit_activity", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3361,7 +3514,10 @@ func (s *repos) ReposGetCommitActivityStats(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-commit-comment - API method documentation
 func (s *repos) ReposGetCommitComment(ctx context.Context, request operations.ReposGetCommitCommentRequest) (*operations.ReposGetCommitCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3421,7 +3577,10 @@ func (s *repos) ReposGetCommitComment(ctx context.Context, request operations.Re
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-commit-signature-protection - API method documentation
 func (s *repos) ReposGetCommitSignatureProtection(ctx context.Context, request operations.ReposGetCommitSignatureProtectionRequest) (*operations.ReposGetCommitSignatureProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_signatures", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_signatures", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3508,7 +3667,10 @@ func (s *repos) ReposGetCommitSignatureProtection(ctx context.Context, request o
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-repository-content - API method documentation
 func (s *repos) ReposGetContent(ctx context.Context, request operations.ReposGetContentRequest) (*operations.ReposGetContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/contents/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/contents/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3584,7 +3746,10 @@ func (s *repos) ReposGetContent(ctx context.Context, request operations.ReposGet
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-all-contributor-commit-activity - API method documentation
 func (s *repos) ReposGetContributorsStats(ctx context.Context, request operations.ReposGetContributorsStatsRequest) (*operations.ReposGetContributorsStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/stats/contributors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/stats/contributors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3640,7 +3805,10 @@ func (s *repos) ReposGetContributorsStats(ctx context.Context, request operation
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-deploy-key - API method documentation
 func (s *repos) ReposGetDeployKey(ctx context.Context, request operations.ReposGetDeployKeyRequest) (*operations.ReposGetDeployKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/keys/{key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/keys/{key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3695,7 +3863,10 @@ func (s *repos) ReposGetDeployKey(ctx context.Context, request operations.ReposG
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-deployment - API method documentation
 func (s *repos) ReposGetDeployment(ctx context.Context, request operations.ReposGetDeploymentRequest) (*operations.ReposGetDeploymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/deployments/{deployment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/deployments/{deployment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3751,7 +3922,10 @@ func (s *repos) ReposGetDeployment(ctx context.Context, request operations.Repos
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-deployment-status - API method documentation
 func (s *repos) ReposGetDeploymentStatus(ctx context.Context, request operations.ReposGetDeploymentStatusRequest) (*operations.ReposGetDeploymentStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/deployments/{deployment_id}/statuses/{status_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/deployments/{deployment_id}/statuses/{status_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3816,7 +3990,10 @@ func (s *repos) ReposGetDeploymentStatus(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-latest-pages-build - API method documentation
 func (s *repos) ReposGetLatestPagesBuild(ctx context.Context, request operations.ReposGetLatestPagesBuildRequest) (*operations.ReposGetLatestPagesBuildResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages/builds/latest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages/builds/latest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3864,7 +4041,10 @@ func (s *repos) ReposGetLatestPagesBuild(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-the-latest-release - API method documentation
 func (s *repos) ReposGetLatestRelease(ctx context.Context, request operations.ReposGetLatestReleaseRequest) (*operations.ReposGetLatestReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/latest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/latest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3909,7 +4089,10 @@ func (s *repos) ReposGetLatestRelease(ctx context.Context, request operations.Re
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-github-pages-site - API method documentation
 func (s *repos) ReposGetPages(ctx context.Context, request operations.ReposGetPagesRequest) (*operations.ReposGetPagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3964,7 +4147,10 @@ func (s *repos) ReposGetPages(ctx context.Context, request operations.ReposGetPa
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-github-pages-build - API method documentation
 func (s *repos) ReposGetPagesBuild(ctx context.Context, request operations.ReposGetPagesBuildRequest) (*operations.ReposGetPagesBuildResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages/builds/{build_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages/builds/{build_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4012,7 +4198,10 @@ func (s *repos) ReposGetPagesBuild(ctx context.Context, request operations.Repos
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-the-weekly-commit-count - API method documentation
 func (s *repos) ReposGetParticipationStats(ctx context.Context, request operations.ReposGetParticipationStatsRequest) (*operations.ReposGetParticipationStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/stats/participation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/stats/participation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4068,7 +4257,10 @@ func (s *repos) ReposGetParticipationStats(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-pull-request-review-protection - API method documentation
 func (s *repos) ReposGetPullRequestReviewProtection(ctx context.Context, request operations.ReposGetPullRequestReviewProtectionRequest) (*operations.ReposGetPullRequestReviewProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4120,7 +4312,10 @@ func (s *repos) ReposGetPullRequestReviewProtection(ctx context.Context, request
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-the-hourly-commit-count-for-each-day - API method documentation
 func (s *repos) ReposGetPunchCardStats(ctx context.Context, request operations.ReposGetPunchCardStatsRequest) (*operations.ReposGetPunchCardStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/stats/punch_card", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/stats/punch_card", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4169,7 +4364,10 @@ func (s *repos) ReposGetPunchCardStats(ctx context.Context, request operations.R
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-repository-readme - API method documentation
 func (s *repos) ReposGetReadme(ctx context.Context, request operations.ReposGetReadmeRequest) (*operations.ReposGetReadmeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/readme", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/readme", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4241,7 +4439,10 @@ func (s *repos) ReposGetReadme(ctx context.Context, request operations.ReposGetR
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-repository-directory-readme - API method documentation
 func (s *repos) ReposGetReadmeInDirectory(ctx context.Context, request operations.ReposGetReadmeInDirectoryRequest) (*operations.ReposGetReadmeInDirectoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/readme/{dir}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/readme/{dir}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4311,7 +4512,10 @@ func (s *repos) ReposGetReadmeInDirectory(ctx context.Context, request operation
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-release - API method documentation
 func (s *repos) ReposGetRelease(ctx context.Context, request operations.ReposGetReleaseRequest) (*operations.ReposGetReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4367,7 +4571,10 @@ func (s *repos) ReposGetRelease(ctx context.Context, request operations.ReposGet
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-release-asset - API method documentation
 func (s *repos) ReposGetReleaseAsset(ctx context.Context, request operations.ReposGetReleaseAssetRequest) (*operations.ReposGetReleaseAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/assets/{asset_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/assets/{asset_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4434,7 +4641,10 @@ func (s *repos) ReposGetReleaseAsset(ctx context.Context, request operations.Rep
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-release-by-tag-name - API method documentation
 func (s *repos) ReposGetReleaseByTag(ctx context.Context, request operations.ReposGetReleaseByTagRequest) (*operations.ReposGetReleaseByTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/tags/{tag}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/tags/{tag}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4490,7 +4700,10 @@ func (s *repos) ReposGetReleaseByTag(ctx context.Context, request operations.Rep
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-status-checks-protection - API method documentation
 func (s *repos) ReposGetStatusChecksProtection(ctx context.Context, request operations.ReposGetStatusChecksProtectionRequest) (*operations.ReposGetStatusChecksProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4548,7 +4761,10 @@ func (s *repos) ReposGetStatusChecksProtection(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-teams-with-access-to-the-protected-branch - API method documentation
 func (s *repos) ReposGetTeamsWithAccessToProtectedBranch(ctx context.Context, request operations.ReposGetTeamsWithAccessToProtectedBranchRequest) (*operations.ReposGetTeamsWithAccessToProtectedBranchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4606,7 +4822,10 @@ func (s *repos) ReposGetTeamsWithAccessToProtectedBranch(ctx context.Context, re
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-users-with-access-to-the-protected-branch - API method documentation
 func (s *repos) ReposGetUsersWithAccessToProtectedBranch(ctx context.Context, request operations.ReposGetUsersWithAccessToProtectedBranchRequest) (*operations.ReposGetUsersWithAccessToProtectedBranchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4662,7 +4881,10 @@ func (s *repos) ReposGetUsersWithAccessToProtectedBranch(ctx context.Context, re
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#get-a-repository-webhook - API method documentation
 func (s *repos) ReposGetWebhook(ctx context.Context, request operations.ReposGetWebhookRequest) (*operations.ReposGetWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks/{hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks/{hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4717,7 +4939,10 @@ func (s *repos) ReposGetWebhook(ctx context.Context, request operations.ReposGet
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-branches - API method documentation
 func (s *repos) ReposListBranches(ctx context.Context, request operations.ReposListBranchesRequest) (*operations.ReposListBranchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4781,7 +5006,10 @@ func (s *repos) ReposListBranches(ctx context.Context, request operations.ReposL
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-branches-for-head-commit - API method documentation
 func (s *repos) ReposListBranchesForHeadCommit(ctx context.Context, request operations.ReposListBranchesForHeadCommitRequest) (*operations.ReposListBranchesForHeadCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4849,7 +5077,10 @@ func (s *repos) ReposListBranchesForHeadCommit(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-repository-collaborators - API method documentation
 func (s *repos) ReposListCollaborators(ctx context.Context, request operations.ReposListCollaboratorsRequest) (*operations.ReposListCollaboratorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/collaborators", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/collaborators", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4911,7 +5142,10 @@ func (s *repos) ReposListCollaborators(ctx context.Context, request operations.R
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-commit-comments - API method documentation
 func (s *repos) ReposListCommentsForCommit(ctx context.Context, request operations.ReposListCommentsForCommitRequest) (*operations.ReposListCommentsForCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{commit_sha}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{commit_sha}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4965,7 +5199,10 @@ func (s *repos) ReposListCommentsForCommit(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-commit-comments-for-a-repository - API method documentation
 func (s *repos) ReposListCommitCommentsForRepo(ctx context.Context, request operations.ReposListCommitCommentsForRepoRequest) (*operations.ReposListCommitCommentsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5019,7 +5256,10 @@ func (s *repos) ReposListCommitCommentsForRepo(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-commit-statuses-for-a-reference - API method documentation
 func (s *repos) ReposListCommitStatusesForRef(ctx context.Context, request operations.ReposListCommitStatusesForRefRequest) (*operations.ReposListCommitStatusesForRefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{ref}/statuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{ref}/statuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5108,7 +5348,10 @@ func (s *repos) ReposListCommitStatusesForRef(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-commits - API method documentation
 func (s *repos) ReposListCommits(ctx context.Context, request operations.ReposListCommitsRequest) (*operations.ReposListCommitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5193,7 +5436,10 @@ func (s *repos) ReposListCommits(ctx context.Context, request operations.ReposLi
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-repository-contributors - API method documentation
 func (s *repos) ReposListContributors(ctx context.Context, request operations.ReposListContributorsRequest) (*operations.ReposListContributorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/contributors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/contributors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5257,7 +5503,10 @@ func (s *repos) ReposListContributors(ctx context.Context, request operations.Re
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-deploy-keys - API method documentation
 func (s *repos) ReposListDeployKeys(ctx context.Context, request operations.ReposListDeployKeysRequest) (*operations.ReposListDeployKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5309,7 +5558,10 @@ func (s *repos) ReposListDeployKeys(ctx context.Context, request operations.Repo
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-deployment-statuses - API method documentation
 func (s *repos) ReposListDeploymentStatuses(ctx context.Context, request operations.ReposListDeploymentStatusesRequest) (*operations.ReposListDeploymentStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/deployments/{deployment_id}/statuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/deployments/{deployment_id}/statuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5371,7 +5623,10 @@ func (s *repos) ReposListDeploymentStatuses(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-deployments - API method documentation
 func (s *repos) ReposListDeployments(ctx context.Context, request operations.ReposListDeploymentsRequest) (*operations.ReposListDeploymentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5498,7 +5753,10 @@ func (s *repos) ReposListForAuthenticatedUser(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-organization-repositories - API method documentation
 func (s *repos) ReposListForOrg(ctx context.Context, request operations.ReposListForOrgRequest) (*operations.ReposListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/repos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/repos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5550,7 +5808,10 @@ func (s *repos) ReposListForOrg(ctx context.Context, request operations.ReposLis
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-repositories-for-a-user - API method documentation
 func (s *repos) ReposListForUser(ctx context.Context, request operations.ReposListForUserRequest) (*operations.ReposListForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/repos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/repos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5601,7 +5862,10 @@ func (s *repos) ReposListForUser(ctx context.Context, request operations.ReposLi
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-forks - API method documentation
 func (s *repos) ReposListForks(ctx context.Context, request operations.ReposListForksRequest) (*operations.ReposListForksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/forks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/forks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5670,7 +5934,10 @@ func (s *repos) ReposListForks(ctx context.Context, request operations.ReposList
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-repository-invitations - API method documentation
 func (s *repos) ReposListInvitations(ctx context.Context, request operations.ReposListInvitationsRequest) (*operations.ReposListInvitationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/invitations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/invitations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5789,7 +6056,10 @@ func (s *repos) ReposListInvitationsForAuthenticatedUser(ctx context.Context, re
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-repository-languages - API method documentation
 func (s *repos) ReposListLanguages(ctx context.Context, request operations.ReposListLanguagesRequest) (*operations.ReposListLanguagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/languages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/languages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5834,7 +6104,10 @@ func (s *repos) ReposListLanguages(ctx context.Context, request operations.Repos
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-github-pages-builds - API method documentation
 func (s *repos) ReposListPagesBuilds(ctx context.Context, request operations.ReposListPagesBuildsRequest) (*operations.ReposListPagesBuildsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages/builds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages/builds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5953,7 +6226,10 @@ func (s *repos) ReposListPublic(ctx context.Context, request operations.ReposLis
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-pull-requests-associated-with-a-commit - API method documentation
 func (s *repos) ReposListPullRequestsAssociatedWithCommit(ctx context.Context, request operations.ReposListPullRequestsAssociatedWithCommitRequest) (*operations.ReposListPullRequestsAssociatedWithCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{commit_sha}/pulls", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/commits/{commit_sha}/pulls", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6014,7 +6290,10 @@ func (s *repos) ReposListPullRequestsAssociatedWithCommit(ctx context.Context, r
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-release-assets - API method documentation
 func (s *repos) ReposListReleaseAssets(ctx context.Context, request operations.ReposListReleaseAssetsRequest) (*operations.ReposListReleaseAssetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}/assets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}/assets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6068,7 +6347,10 @@ func (s *repos) ReposListReleaseAssets(ctx context.Context, request operations.R
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-releases - API method documentation
 func (s *repos) ReposListReleases(ctx context.Context, request operations.ReposListReleasesRequest) (*operations.ReposListReleasesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6129,7 +6411,10 @@ func (s *repos) ReposListReleases(ctx context.Context, request operations.ReposL
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-repository-tags - API method documentation
 func (s *repos) ReposListTags(ctx context.Context, request operations.ReposListTagsRequest) (*operations.ReposListTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6180,7 +6465,10 @@ func (s *repos) ReposListTags(ctx context.Context, request operations.ReposListT
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-repository-teams - API method documentation
 func (s *repos) ReposListTeams(ctx context.Context, request operations.ReposListTeamsRequest) (*operations.ReposListTeamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6231,7 +6519,10 @@ func (s *repos) ReposListTeams(ctx context.Context, request operations.ReposList
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#list-repository-webhooks - API method documentation
 func (s *repos) ReposListWebhooks(ctx context.Context, request operations.ReposListWebhooksRequest) (*operations.ReposListWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6292,7 +6583,10 @@ func (s *repos) ReposListWebhooks(ctx context.Context, request operations.ReposL
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#merge-a-branch - API method documentation
 func (s *repos) ReposMerge(ctx context.Context, request operations.ReposMergeRequest) (*operations.ReposMergeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/merges", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/merges", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6373,7 +6667,10 @@ func (s *repos) ReposMerge(ctx context.Context, request operations.ReposMergeReq
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#ping-a-repository-webhook - API method documentation
 func (s *repos) ReposPingWebhook(ctx context.Context, request operations.ReposPingWebhookRequest) (*operations.ReposPingWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks/{hook_id}/pings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks/{hook_id}/pings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -6426,7 +6723,10 @@ func (s *repos) ReposPingWebhook(ctx context.Context, request operations.ReposPi
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#remove-app-access-restrictions - API method documentation
 func (s *repos) ReposRemoveAppAccessRestrictions(ctx context.Context, request operations.ReposRemoveAppAccessRestrictionsRequest) (*operations.ReposRemoveAppAccessRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6488,7 +6788,10 @@ func (s *repos) ReposRemoveAppAccessRestrictions(ctx context.Context, request op
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#remove-a-repository-collaborator - API method documentation
 func (s *repos) ReposRemoveCollaborator(ctx context.Context, request operations.ReposRemoveCollaboratorRequest) (*operations.ReposRemoveCollaboratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/collaborators/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/collaborators/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -6525,7 +6828,10 @@ func (s *repos) ReposRemoveCollaborator(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#remove-status-check-contexts - API method documentation
 func (s *repos) ReposRemoveStatusCheckContexts(ctx context.Context, request operations.ReposRemoveStatusCheckContextsRequest) (*operations.ReposRemoveStatusCheckContextsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6598,7 +6904,10 @@ func (s *repos) ReposRemoveStatusCheckContexts(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#remove-status-check-protection - API method documentation
 func (s *repos) ReposRemoveStatusCheckProtection(ctx context.Context, request operations.ReposRemoveStatusCheckProtectionRequest) (*operations.ReposRemoveStatusCheckProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -6641,7 +6950,10 @@ func (s *repos) ReposRemoveStatusCheckProtection(ctx context.Context, request op
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#remove-team-access-restrictions - API method documentation
 func (s *repos) ReposRemoveTeamAccessRestrictions(ctx context.Context, request operations.ReposRemoveTeamAccessRestrictionsRequest) (*operations.ReposRemoveTeamAccessRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6710,7 +7022,10 @@ func (s *repos) ReposRemoveTeamAccessRestrictions(ctx context.Context, request o
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#remove-user-access-restrictions - API method documentation
 func (s *repos) ReposRemoveUserAccessRestrictions(ctx context.Context, request operations.ReposRemoveUserAccessRestrictionsRequest) (*operations.ReposRemoveUserAccessRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6772,7 +7087,10 @@ func (s *repos) ReposRemoveUserAccessRestrictions(ctx context.Context, request o
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#replace-all-repository-topics - API method documentation
 func (s *repos) ReposReplaceAllTopics(ctx context.Context, request operations.ReposReplaceAllTopicsRequest) (*operations.ReposReplaceAllTopicsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/topics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/topics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6860,7 +7178,10 @@ func (s *repos) ReposReplaceAllTopics(ctx context.Context, request operations.Re
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#request-a-github-pages-build - API method documentation
 func (s *repos) ReposRequestPagesBuild(ctx context.Context, request operations.ReposRequestPagesBuildRequest) (*operations.ReposRequestPagesBuildResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages/builds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages/builds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -6908,7 +7229,10 @@ func (s *repos) ReposRequestPagesBuild(ctx context.Context, request operations.R
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#set-admin-branch-protection - API method documentation
 func (s *repos) ReposSetAdminBranchProtection(ctx context.Context, request operations.ReposSetAdminBranchProtectionRequest) (*operations.ReposSetAdminBranchProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -6960,7 +7284,10 @@ func (s *repos) ReposSetAdminBranchProtection(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#set-app-access-restrictions - API method documentation
 func (s *repos) ReposSetAppAccessRestrictions(ctx context.Context, request operations.ReposSetAppAccessRestrictionsRequest) (*operations.ReposSetAppAccessRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7023,7 +7350,10 @@ func (s *repos) ReposSetAppAccessRestrictions(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#set-status-check-contexts - API method documentation
 func (s *repos) ReposSetStatusCheckContexts(ctx context.Context, request operations.ReposSetStatusCheckContextsRequest) (*operations.ReposSetStatusCheckContextsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7102,7 +7432,10 @@ func (s *repos) ReposSetStatusCheckContexts(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#set-team-access-restrictions - API method documentation
 func (s *repos) ReposSetTeamAccessRestrictions(ctx context.Context, request operations.ReposSetTeamAccessRestrictionsRequest) (*operations.ReposSetTeamAccessRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7171,7 +7504,10 @@ func (s *repos) ReposSetTeamAccessRestrictions(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#set-user-access-restrictions - API method documentation
 func (s *repos) ReposSetUserAccessRestrictions(ctx context.Context, request operations.ReposSetUserAccessRestrictionsRequest) (*operations.ReposSetUserAccessRestrictionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7236,7 +7572,10 @@ func (s *repos) ReposSetUserAccessRestrictions(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#test-the-push-repository-webhook - API method documentation
 func (s *repos) ReposTestPushWebhook(ctx context.Context, request operations.ReposTestPushWebhookRequest) (*operations.ReposTestPushWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks/{hook_id}/tests", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks/{hook_id}/tests", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -7283,7 +7622,10 @@ func (s *repos) ReposTestPushWebhook(ctx context.Context, request operations.Rep
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#transfer-a-repository - API method documentation
 func (s *repos) ReposTransfer(ctx context.Context, request operations.ReposTransferRequest) (*operations.ReposTransferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/transfer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/transfer", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7339,7 +7681,10 @@ func (s *repos) ReposTransfer(ctx context.Context, request operations.ReposTrans
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos/#update-a-repository - API method documentation
 func (s *repos) ReposUpdate(ctx context.Context, request operations.ReposUpdateRequest) (*operations.ReposUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7422,7 +7767,10 @@ func (s *repos) ReposUpdate(ctx context.Context, request operations.ReposUpdateR
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#update-branch-protection - API method documentation
 func (s *repos) ReposUpdateBranchProtection(ctx context.Context, request operations.ReposUpdateBranchProtectionRequest) (*operations.ReposUpdateBranchProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7509,7 +7857,10 @@ func (s *repos) ReposUpdateBranchProtection(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#update-a-commit-comment - API method documentation
 func (s *repos) ReposUpdateCommitComment(ctx context.Context, request operations.ReposUpdateCommitCommentRequest) (*operations.ReposUpdateCommitCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7575,7 +7926,10 @@ func (s *repos) ReposUpdateCommitComment(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#update-information-about-a-github-pages-site - API method documentation
 func (s *repos) ReposUpdateInformationAboutPagesSite(ctx context.Context, request operations.ReposUpdateInformationAboutPagesSiteRequest) (*operations.ReposUpdateInformationAboutPagesSiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7648,7 +8002,10 @@ func (s *repos) ReposUpdateInformationAboutPagesSite(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#update-a-repository-invitation - API method documentation
 func (s *repos) ReposUpdateInvitation(ctx context.Context, request operations.ReposUpdateInvitationRequest) (*operations.ReposUpdateInvitationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/invitations/{invitation_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/invitations/{invitation_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7705,7 +8062,10 @@ func (s *repos) ReposUpdateInvitation(ctx context.Context, request operations.Re
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#update-pull-request-review-protection - API method documentation
 func (s *repos) ReposUpdatePullRequestReviewProtection(ctx context.Context, request operations.ReposUpdatePullRequestReviewProtectionRequest) (*operations.ReposUpdatePullRequestReviewProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7768,7 +8128,10 @@ func (s *repos) ReposUpdatePullRequestReviewProtection(ctx context.Context, requ
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#update-a-release - API method documentation
 func (s *repos) ReposUpdateRelease(ctx context.Context, request operations.ReposUpdateReleaseRequest) (*operations.ReposUpdateReleaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7821,7 +8184,10 @@ func (s *repos) ReposUpdateRelease(ctx context.Context, request operations.Repos
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#update-a-release-asset - API method documentation
 func (s *repos) ReposUpdateReleaseAsset(ctx context.Context, request operations.ReposUpdateReleaseAssetRequest) (*operations.ReposUpdateReleaseAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/assets/{asset_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/assets/{asset_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7876,7 +8242,10 @@ func (s *repos) ReposUpdateReleaseAsset(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#update-status-check-potection - API method documentation
 func (s *repos) ReposUpdateStatusCheckProtection(ctx context.Context, request operations.ReposUpdateStatusCheckProtectionRequest) (*operations.ReposUpdateStatusCheckProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7949,7 +8318,10 @@ func (s *repos) ReposUpdateStatusCheckProtection(ctx context.Context, request op
 // https://docs.github.com/enterprise-server@2.20/rest/reference/repos#update-a-repository-webhook - API method documentation
 func (s *repos) ReposUpdateWebhook(ctx context.Context, request operations.ReposUpdateWebhookRequest) (*operations.ReposUpdateWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks/{hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/hooks/{hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -8053,7 +8425,10 @@ func (s *repos) ReposUploadReleaseAsset(ctx context.Context, request operations.
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}/assets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/releases/{release_id}/assets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {

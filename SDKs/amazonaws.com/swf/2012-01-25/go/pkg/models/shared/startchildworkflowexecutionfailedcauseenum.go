@@ -23,12 +23,16 @@ const (
 	StartChildWorkflowExecutionFailedCauseEnumOperationNotPermitted                        StartChildWorkflowExecutionFailedCauseEnum = "OPERATION_NOT_PERMITTED"
 )
 
+func (e StartChildWorkflowExecutionFailedCauseEnum) ToPointer() *StartChildWorkflowExecutionFailedCauseEnum {
+	return &e
+}
+
 func (e *StartChildWorkflowExecutionFailedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORKFLOW_TYPE_DOES_NOT_EXIST":
 		fallthrough
 	case "WORKFLOW_TYPE_DEPRECATED":
@@ -50,9 +54,9 @@ func (e *StartChildWorkflowExecutionFailedCauseEnum) UnmarshalJSON(data []byte) 
 	case "DEFAULT_CHILD_POLICY_UNDEFINED":
 		fallthrough
 	case "OPERATION_NOT_PERMITTED":
-		*e = StartChildWorkflowExecutionFailedCauseEnum(s)
+		*e = StartChildWorkflowExecutionFailedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartChildWorkflowExecutionFailedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for StartChildWorkflowExecutionFailedCauseEnum: %v", v)
 	}
 }

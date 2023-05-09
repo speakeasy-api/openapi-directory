@@ -17,19 +17,23 @@ const (
 	PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnumDeleted PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum = "deleted"
 )
 
+func (e PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum) ToPointer() *PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum {
+	return &e
+}
+
 func (e *PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "deleted":
-		*e = PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum(s)
+		*e = PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum: %v", v)
 	}
 }
 

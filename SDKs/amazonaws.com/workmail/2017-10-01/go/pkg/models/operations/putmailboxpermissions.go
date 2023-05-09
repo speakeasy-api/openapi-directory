@@ -16,17 +16,21 @@ const (
 	PutMailboxPermissionsXAmzTargetEnumWorkMailServicePutMailboxPermissions PutMailboxPermissionsXAmzTargetEnum = "WorkMailService.PutMailboxPermissions"
 )
 
+func (e PutMailboxPermissionsXAmzTargetEnum) ToPointer() *PutMailboxPermissionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutMailboxPermissionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.PutMailboxPermissions":
-		*e = PutMailboxPermissionsXAmzTargetEnum(s)
+		*e = PutMailboxPermissionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutMailboxPermissionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutMailboxPermissionsXAmzTargetEnum: %v", v)
 	}
 }
 

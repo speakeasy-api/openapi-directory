@@ -16,17 +16,21 @@ const (
 	SuspendGameServerGroupXAmzTargetEnumGameLiftSuspendGameServerGroup SuspendGameServerGroupXAmzTargetEnum = "GameLift.SuspendGameServerGroup"
 )
 
+func (e SuspendGameServerGroupXAmzTargetEnum) ToPointer() *SuspendGameServerGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *SuspendGameServerGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.SuspendGameServerGroup":
-		*e = SuspendGameServerGroupXAmzTargetEnum(s)
+		*e = SuspendGameServerGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SuspendGameServerGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SuspendGameServerGroupXAmzTargetEnum: %v", v)
 	}
 }
 

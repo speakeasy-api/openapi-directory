@@ -89,12 +89,16 @@ const (
 	OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeometryTypeEnumMultiPolygon    OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeometryTypeEnum = "MultiPolygon"
 )
 
+func (e OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeometryTypeEnum) ToPointer() *OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeometryTypeEnum {
+	return &e
+}
+
 func (e *OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeometryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Point":
 		fallthrough
 	case "LineString":
@@ -106,10 +110,10 @@ func (e *OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeo
 	case "MultiLineString":
 		fallthrough
 	case "MultiPolygon":
-		*e = OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeometryTypeEnum(s)
+		*e = OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeometryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeometryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeometryTypeEnum: %v", v)
 	}
 }
 
@@ -131,17 +135,21 @@ const (
 	OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginTypeEnumFeature OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginTypeEnum = "Feature"
 )
 
+func (e OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginTypeEnum) ToPointer() *OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginTypeEnum {
+	return &e
+}
+
 func (e *OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Feature":
-		*e = OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginTypeEnum(s)
+		*e = OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginTypeEnum: %v", v)
 	}
 }
 

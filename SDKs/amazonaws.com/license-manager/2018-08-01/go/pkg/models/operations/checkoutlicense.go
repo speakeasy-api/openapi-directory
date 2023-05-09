@@ -16,17 +16,21 @@ const (
 	CheckoutLicenseXAmzTargetEnumAwsLicenseManagerCheckoutLicense CheckoutLicenseXAmzTargetEnum = "AWSLicenseManager.CheckoutLicense"
 )
 
+func (e CheckoutLicenseXAmzTargetEnum) ToPointer() *CheckoutLicenseXAmzTargetEnum {
+	return &e
+}
+
 func (e *CheckoutLicenseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLicenseManager.CheckoutLicense":
-		*e = CheckoutLicenseXAmzTargetEnum(s)
+		*e = CheckoutLicenseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckoutLicenseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckoutLicenseXAmzTargetEnum: %v", v)
 	}
 }
 

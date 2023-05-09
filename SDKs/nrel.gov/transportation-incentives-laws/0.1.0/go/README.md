@@ -13,36 +13,33 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nrel.gov/transportation-i
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TransportationIncentivesLawsAllRequest{
-        APIKey: "corrupti",
-        Expired: false,
-        IncentiveType: "provident",
-        Jurisdiction: "distinctio",
-        Keyword: "quibusdam",
-        LawType: "unde",
-        Limit: 857946,
-        Local: false,
-        OutputFormat: "xml",
-        Poc: false,
-        Recent: false,
-        RegulationType: "illum",
-        Technology: "vel",
-        UserType: "error",
-    }
-
     ctx := context.Background()
-    res, err := s.TransportationIncentivesLawsAll(ctx, req)
+    res, err := s.TransportationIncentivesLawsAll(ctx, operations.TransportationIncentivesLawsAllRequest{
+        APIKey: "corrupti",
+        Expired: sdk.Bool(false),
+        IncentiveType: sdk.String("provident"),
+        Jurisdiction: sdk.String("distinctio"),
+        Keyword: sdk.String("quibusdam"),
+        LawType: sdk.String("unde"),
+        Limit: sdk.Int64(857946),
+        Local: sdk.Bool(false),
+        OutputFormat: operations.TransportationIncentivesLawsAllOutputFormatEnumXML,
+        Poc: sdk.Bool(false),
+        Recent: sdk.Bool(false),
+        RegulationType: sdk.String("illum"),
+        Technology: sdk.String("vel"),
+        UserType: sdk.String("error"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -57,12 +54,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `TransportationIncentivesLawsAll` - Return a full list of laws and incentives that match your query.
-* `TransportationIncentivesLawsCategories` - Return the law categories for a given category type.
-* `TransportationIncentivesLawsID` - Fetch the details of a specific law given the law's ID.
-* `TransportationIncentivesLawsPocs` - Get the points of contact for a given jurisdiction.
+* [TransportationIncentivesLawsAll](docs/sdk/README.md#transportationincentiveslawsall) - Return a full list of laws and incentives that match your query.
+* [TransportationIncentivesLawsCategories](docs/sdk/README.md#transportationincentiveslawscategories) - Return the law categories for a given category type.
+* [TransportationIncentivesLawsID](docs/sdk/README.md#transportationincentiveslawsid) - Fetch the details of a specific law given the law's ID.
+* [TransportationIncentivesLawsPocs](docs/sdk/README.md#transportationincentiveslawspocs) - Get the points of contact for a given jurisdiction.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,12 +16,16 @@ const (
 	FeatureTypeEnumSignatures FeatureTypeEnum = "SIGNATURES"
 )
 
+func (e FeatureTypeEnum) ToPointer() *FeatureTypeEnum {
+	return &e
+}
+
 func (e *FeatureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TABLES":
 		fallthrough
 	case "FORMS":
@@ -29,9 +33,9 @@ func (e *FeatureTypeEnum) UnmarshalJSON(data []byte) error {
 	case "QUERIES":
 		fallthrough
 	case "SIGNATURES":
-		*e = FeatureTypeEnum(s)
+		*e = FeatureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeatureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FeatureTypeEnum: %v", v)
 	}
 }

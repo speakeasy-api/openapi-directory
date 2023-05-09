@@ -15,20 +15,24 @@ const (
 	SupportedSavingsPlansTypeEnumSagemakerSp   SupportedSavingsPlansTypeEnum = "SAGEMAKER_SP"
 )
 
+func (e SupportedSavingsPlansTypeEnum) ToPointer() *SupportedSavingsPlansTypeEnum {
+	return &e
+}
+
 func (e *SupportedSavingsPlansTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPUTE_SP":
 		fallthrough
 	case "EC2_INSTANCE_SP":
 		fallthrough
 	case "SAGEMAKER_SP":
-		*e = SupportedSavingsPlansTypeEnum(s)
+		*e = SupportedSavingsPlansTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SupportedSavingsPlansTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SupportedSavingsPlansTypeEnum: %v", v)
 	}
 }

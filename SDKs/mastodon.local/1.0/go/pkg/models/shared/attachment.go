@@ -18,12 +18,16 @@ const (
 	AttachmentTypeEnumAudio   AttachmentTypeEnum = "audio"
 )
 
+func (e AttachmentTypeEnum) ToPointer() *AttachmentTypeEnum {
+	return &e
+}
+
 func (e *AttachmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "image":
@@ -33,10 +37,10 @@ func (e *AttachmentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "video":
 		fallthrough
 	case "audio":
-		*e = AttachmentTypeEnum(s)
+		*e = AttachmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachmentTypeEnum: %v", v)
 	}
 }
 

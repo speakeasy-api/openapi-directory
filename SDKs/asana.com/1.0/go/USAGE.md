@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,29 +17,26 @@ func main() {
         }),
     )
 
-    req := operations.CreateAttachmentForObjectRequest{
+    ctx := context.Background()
+    res, err := s.Attachments.CreateAttachmentForObject(ctx, operations.CreateAttachmentForObjectRequest{
         AttachmentRequest: shared.AttachmentRequest{
-            ConnectToApp: false,
+            ConnectToApp: sdk.Bool(false),
             File: &shared.AttachmentRequestFile{
                 Content: []byte("corrupti"),
                 File: "provident",
             },
-            Name: "distinctio",
-            Parent: "quibusdam",
-            ResourceSubtype: "external",
-            URL: "unde",
+            Name: sdk.String("Ellis Mitchell"),
+            Parent: sdk.String("illum"),
+            ResourceSubtype: shared.AttachmentRequestResourceSubtypeEnumExternal.ToPointer(),
+            URL: sdk.String("vel"),
         },
         OptFields: []string{
-            "corrupti",
-            "illum",
-            "vel",
-            "error",
+            "deserunt",
+            "suscipit",
+            "iure",
         },
-        OptPretty: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.Attachments.CreateAttachmentForObject(ctx, req)
+        OptPretty: sdk.Bool(false),
+    })
     if err != nil {
         log.Fatal(err)
     }

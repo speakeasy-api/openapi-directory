@@ -16,21 +16,25 @@ const (
 	AutoMergeMergeMethodEnumRebase AutoMergeMergeMethodEnum = "rebase"
 )
 
+func (e AutoMergeMergeMethodEnum) ToPointer() *AutoMergeMergeMethodEnum {
+	return &e
+}
+
 func (e *AutoMergeMergeMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "merge":
 		fallthrough
 	case "squash":
 		fallthrough
 	case "rebase":
-		*e = AutoMergeMergeMethodEnum(s)
+		*e = AutoMergeMergeMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoMergeMergeMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoMergeMergeMethodEnum: %v", v)
 	}
 }
 

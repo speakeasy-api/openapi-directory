@@ -16,17 +16,21 @@ const (
 	CreateGrantVersionXAmzTargetEnumAwsLicenseManagerCreateGrantVersion CreateGrantVersionXAmzTargetEnum = "AWSLicenseManager.CreateGrantVersion"
 )
 
+func (e CreateGrantVersionXAmzTargetEnum) ToPointer() *CreateGrantVersionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateGrantVersionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLicenseManager.CreateGrantVersion":
-		*e = CreateGrantVersionXAmzTargetEnum(s)
+		*e = CreateGrantVersionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateGrantVersionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateGrantVersionXAmzTargetEnum: %v", v)
 	}
 }
 

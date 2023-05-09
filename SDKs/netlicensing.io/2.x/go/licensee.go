@@ -107,7 +107,10 @@ func (s *licensee) CreateLicensee(ctx context.Context, request operations.Create
 // Delete a Licensee by 'number'
 func (s *licensee) DeleteLicensee(ctx context.Context, request operations.DeleteLicenseeRequest, security operations.DeleteLicenseeSecurity) (*operations.DeleteLicenseeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -170,7 +173,10 @@ func (s *licensee) DeleteLicensee(ctx context.Context, request operations.Delete
 // Return a Licensee by 'licenseeNumber'
 func (s *licensee) GetLicensee(ctx context.Context, request operations.GetLicenseeRequest, security operations.GetLicenseeSecurity) (*operations.GetLicenseeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -227,7 +233,7 @@ func (s *licensee) GetLicensee(ctx context.Context, request operations.GetLicens
 
 // ListLicensees - List Licensees
 // Return a list of all Licensees for the current Vendor
-func (s *licensee) ListLicensees(ctx context.Context) (*operations.ListLicenseesResponse, error) {
+func (s *licensee) ListLicensees(ctx context.Context, security operations.ListLicenseesSecurity) (*operations.ListLicenseesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/licensee"
 
@@ -236,7 +242,7 @@ func (s *licensee) ListLicensees(ctx context.Context) (*operations.ListLicensees
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -288,7 +294,10 @@ func (s *licensee) ListLicensees(ctx context.Context) (*operations.ListLicensees
 // Licenses transfer between Licensees
 func (s *licensee) TransferLicenses(ctx context.Context, request operations.TransferLicensesRequest, security operations.TransferLicensesSecurity) (*operations.TransferLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}/transfer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}/transfer", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
@@ -357,7 +366,10 @@ func (s *licensee) TransferLicenses(ctx context.Context, request operations.Tran
 // Sets the provided properties to a Licensee. Return an updated Licensee
 func (s *licensee) UpdateLicensee(ctx context.Context, request operations.UpdateLicenseeRequest, security operations.UpdateLicenseeSecurity) (*operations.UpdateLicenseeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
@@ -425,7 +437,10 @@ func (s *licensee) UpdateLicensee(ctx context.Context, request operations.Update
 // Validates active Licenses of the Licensee
 func (s *licensee) ValidateLicensee(ctx context.Context, request operations.ValidateLicenseeRequest, security operations.ValidateLicenseeSecurity) (*operations.ValidateLicenseeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}/validate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/licensee/{licenseeNumber}/validate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

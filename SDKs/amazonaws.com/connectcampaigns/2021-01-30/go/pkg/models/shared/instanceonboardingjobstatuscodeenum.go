@@ -16,20 +16,24 @@ const (
 	InstanceOnboardingJobStatusCodeEnumFailed     InstanceOnboardingJobStatusCodeEnum = "FAILED"
 )
 
+func (e InstanceOnboardingJobStatusCodeEnum) ToPointer() *InstanceOnboardingJobStatusCodeEnum {
+	return &e
+}
+
 func (e *InstanceOnboardingJobStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = InstanceOnboardingJobStatusCodeEnum(s)
+		*e = InstanceOnboardingJobStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceOnboardingJobStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceOnboardingJobStatusCodeEnum: %v", v)
 	}
 }

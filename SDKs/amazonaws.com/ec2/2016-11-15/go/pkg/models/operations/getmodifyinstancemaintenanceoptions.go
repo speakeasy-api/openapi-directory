@@ -15,17 +15,21 @@ const (
 	GETModifyInstanceMaintenanceOptionsActionEnumModifyInstanceMaintenanceOptions GETModifyInstanceMaintenanceOptionsActionEnum = "ModifyInstanceMaintenanceOptions"
 )
 
+func (e GETModifyInstanceMaintenanceOptionsActionEnum) ToPointer() *GETModifyInstanceMaintenanceOptionsActionEnum {
+	return &e
+}
+
 func (e *GETModifyInstanceMaintenanceOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyInstanceMaintenanceOptions":
-		*e = GETModifyInstanceMaintenanceOptionsActionEnum(s)
+		*e = GETModifyInstanceMaintenanceOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstanceMaintenanceOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstanceMaintenanceOptionsActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETModifyInstanceMaintenanceOptionsAutoRecoveryEnumDefault  GETModifyInstanceMaintenanceOptionsAutoRecoveryEnum = "default"
 )
 
+func (e GETModifyInstanceMaintenanceOptionsAutoRecoveryEnum) ToPointer() *GETModifyInstanceMaintenanceOptionsAutoRecoveryEnum {
+	return &e
+}
+
 func (e *GETModifyInstanceMaintenanceOptionsAutoRecoveryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "default":
-		*e = GETModifyInstanceMaintenanceOptionsAutoRecoveryEnum(s)
+		*e = GETModifyInstanceMaintenanceOptionsAutoRecoveryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstanceMaintenanceOptionsAutoRecoveryEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstanceMaintenanceOptionsAutoRecoveryEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETModifyInstanceMaintenanceOptionsVersionEnumTwoThousandAndSixteen1115 GETModifyInstanceMaintenanceOptionsVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyInstanceMaintenanceOptionsVersionEnum) ToPointer() *GETModifyInstanceMaintenanceOptionsVersionEnum {
+	return &e
+}
+
 func (e *GETModifyInstanceMaintenanceOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyInstanceMaintenanceOptionsVersionEnum(s)
+		*e = GETModifyInstanceMaintenanceOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstanceMaintenanceOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstanceMaintenanceOptionsVersionEnum: %v", v)
 	}
 }
 

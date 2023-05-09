@@ -14,19 +14,23 @@ const (
 	GroupMembershipCriteriaMembershipTypeEnumIPAddressMembershipCriteria GroupMembershipCriteriaMembershipTypeEnum = "IPAddressMembershipCriteria"
 )
 
+func (e GroupMembershipCriteriaMembershipTypeEnum) ToPointer() *GroupMembershipCriteriaMembershipTypeEnum {
+	return &e
+}
+
 func (e *GroupMembershipCriteriaMembershipTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SearchMembershipCriteria":
 		fallthrough
 	case "IPAddressMembershipCriteria":
-		*e = GroupMembershipCriteriaMembershipTypeEnum(s)
+		*e = GroupMembershipCriteriaMembershipTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupMembershipCriteriaMembershipTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupMembershipCriteriaMembershipTypeEnum: %v", v)
 	}
 }
 

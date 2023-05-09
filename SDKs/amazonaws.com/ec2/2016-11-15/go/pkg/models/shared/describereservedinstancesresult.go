@@ -15,17 +15,21 @@ const (
 	DescribeReservedInstancesResultReservedInstancesCurrencyCodeEnumUsd DescribeReservedInstancesResultReservedInstancesCurrencyCodeEnum = "USD"
 )
 
+func (e DescribeReservedInstancesResultReservedInstancesCurrencyCodeEnum) ToPointer() *DescribeReservedInstancesResultReservedInstancesCurrencyCodeEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesResultReservedInstancesCurrencyCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
-		*e = DescribeReservedInstancesResultReservedInstancesCurrencyCodeEnum(s)
+		*e = DescribeReservedInstancesResultReservedInstancesCurrencyCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesCurrencyCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesCurrencyCodeEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	DescribeReservedInstancesResultReservedInstancesInstanceTenancyEnumHost      DescribeReservedInstancesResultReservedInstancesInstanceTenancyEnum = "host"
 )
 
+func (e DescribeReservedInstancesResultReservedInstancesInstanceTenancyEnum) ToPointer() *DescribeReservedInstancesResultReservedInstancesInstanceTenancyEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesResultReservedInstancesInstanceTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = DescribeReservedInstancesResultReservedInstancesInstanceTenancyEnum(s)
+		*e = DescribeReservedInstancesResultReservedInstancesInstanceTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesInstanceTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesInstanceTenancyEnum: %v", v)
 	}
 }
 
@@ -698,14 +706,23 @@ const (
 	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR7g12xlarge     DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r7g.12xlarge"
 	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR7g16xlarge     DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r7g.16xlarge"
 	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR7gMetal        DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r7g.metal"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumC6inMetal       DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "c6in.metal"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumM6inMetal       DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "m6in.metal"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumM6idnMetal      DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "m6idn.metal"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR6inMetal       DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r6in.metal"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR6idnMetal      DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum) ToPointer() *DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -1981,10 +1998,20 @@ func (e *DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum) Unmar
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -1996,19 +2023,23 @@ const (
 	DescribeReservedInstancesResultReservedInstancesOfferingClassEnumConvertible DescribeReservedInstancesResultReservedInstancesOfferingClassEnum = "convertible"
 )
 
+func (e DescribeReservedInstancesResultReservedInstancesOfferingClassEnum) ToPointer() *DescribeReservedInstancesResultReservedInstancesOfferingClassEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesResultReservedInstancesOfferingClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "convertible":
-		*e = DescribeReservedInstancesResultReservedInstancesOfferingClassEnum(s)
+		*e = DescribeReservedInstancesResultReservedInstancesOfferingClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesOfferingClassEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesOfferingClassEnum: %v", v)
 	}
 }
 
@@ -2024,12 +2055,16 @@ const (
 	DescribeReservedInstancesResultReservedInstancesOfferingTypeEnumAllUpfront        DescribeReservedInstancesResultReservedInstancesOfferingTypeEnum = "All Upfront"
 )
 
+func (e DescribeReservedInstancesResultReservedInstancesOfferingTypeEnum) ToPointer() *DescribeReservedInstancesResultReservedInstancesOfferingTypeEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesResultReservedInstancesOfferingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Heavy Utilization":
 		fallthrough
 	case "Medium Utilization":
@@ -2041,10 +2076,10 @@ func (e *DescribeReservedInstancesResultReservedInstancesOfferingTypeEnum) Unmar
 	case "Partial Upfront":
 		fallthrough
 	case "All Upfront":
-		*e = DescribeReservedInstancesResultReservedInstancesOfferingTypeEnum(s)
+		*e = DescribeReservedInstancesResultReservedInstancesOfferingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesOfferingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesOfferingTypeEnum: %v", v)
 	}
 }
 
@@ -2058,12 +2093,16 @@ const (
 	DescribeReservedInstancesResultReservedInstancesProductDescriptionEnumWindowsAmazonVpc   DescribeReservedInstancesResultReservedInstancesProductDescriptionEnum = "Windows (Amazon VPC)"
 )
 
+func (e DescribeReservedInstancesResultReservedInstancesProductDescriptionEnum) ToPointer() *DescribeReservedInstancesResultReservedInstancesProductDescriptionEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesResultReservedInstancesProductDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Linux/UNIX":
 		fallthrough
 	case "Linux/UNIX (Amazon VPC)":
@@ -2071,10 +2110,10 @@ func (e *DescribeReservedInstancesResultReservedInstancesProductDescriptionEnum)
 	case "Windows":
 		fallthrough
 	case "Windows (Amazon VPC)":
-		*e = DescribeReservedInstancesResultReservedInstancesProductDescriptionEnum(s)
+		*e = DescribeReservedInstancesResultReservedInstancesProductDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesProductDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesProductDescriptionEnum: %v", v)
 	}
 }
 
@@ -2085,17 +2124,21 @@ const (
 	DescribeReservedInstancesResultReservedInstancesRecurringChargesFrequencyEnumHourly DescribeReservedInstancesResultReservedInstancesRecurringChargesFrequencyEnum = "Hourly"
 )
 
+func (e DescribeReservedInstancesResultReservedInstancesRecurringChargesFrequencyEnum) ToPointer() *DescribeReservedInstancesResultReservedInstancesRecurringChargesFrequencyEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesResultReservedInstancesRecurringChargesFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Hourly":
-		*e = DescribeReservedInstancesResultReservedInstancesRecurringChargesFrequencyEnum(s)
+		*e = DescribeReservedInstancesResultReservedInstancesRecurringChargesFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesRecurringChargesFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesRecurringChargesFrequencyEnum: %v", v)
 	}
 }
 
@@ -2113,19 +2156,23 @@ const (
 	DescribeReservedInstancesResultReservedInstancesScopeEnumRegion           DescribeReservedInstancesResultReservedInstancesScopeEnum = "Region"
 )
 
+func (e DescribeReservedInstancesResultReservedInstancesScopeEnum) ToPointer() *DescribeReservedInstancesResultReservedInstancesScopeEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesResultReservedInstancesScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Availability Zone":
 		fallthrough
 	case "Region":
-		*e = DescribeReservedInstancesResultReservedInstancesScopeEnum(s)
+		*e = DescribeReservedInstancesResultReservedInstancesScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesScopeEnum: %v", v)
 	}
 }
 
@@ -2141,12 +2188,16 @@ const (
 	DescribeReservedInstancesResultReservedInstancesStateEnumQueuedDeleted  DescribeReservedInstancesResultReservedInstancesStateEnum = "queued-deleted"
 )
 
+func (e DescribeReservedInstancesResultReservedInstancesStateEnum) ToPointer() *DescribeReservedInstancesResultReservedInstancesStateEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesResultReservedInstancesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "payment-pending":
 		fallthrough
 	case "active":
@@ -2158,10 +2209,10 @@ func (e *DescribeReservedInstancesResultReservedInstancesStateEnum) UnmarshalJSO
 	case "queued":
 		fallthrough
 	case "queued-deleted":
-		*e = DescribeReservedInstancesResultReservedInstancesStateEnum(s)
+		*e = DescribeReservedInstancesResultReservedInstancesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesResultReservedInstancesStateEnum: %v", v)
 	}
 }
 

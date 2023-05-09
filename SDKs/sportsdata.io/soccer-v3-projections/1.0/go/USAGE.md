@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,13 +16,11 @@ func main() {
         }),
     )
 
-    req := operations.DfsSlatesByDateRequest{
-        Date: "corrupti",
-        Format: "xml",
-    }
-
     ctx := context.Background()
-    res, err := s.DfsSlatesByDate(ctx, req)
+    res, err := s.DfsSlatesByDate(ctx, operations.DfsSlatesByDateRequest{
+        Date: "corrupti",
+        Format: operations.DfsSlatesByDateFormatEnumXML,
+    })
     if err != nil {
         log.Fatal(err)
     }

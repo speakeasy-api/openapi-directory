@@ -16,17 +16,21 @@ const (
 	ListTagsXAmzTargetEnumAmazonMemoryDbListTags ListTagsXAmzTargetEnum = "AmazonMemoryDB.ListTags"
 )
 
+func (e ListTagsXAmzTargetEnum) ToPointer() *ListTagsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListTagsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.ListTags":
-		*e = ListTagsXAmzTargetEnum(s)
+		*e = ListTagsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTagsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTagsXAmzTargetEnum: %v", v)
 	}
 }
 

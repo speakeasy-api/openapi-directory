@@ -2,25 +2,26 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Accounts.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreate(ctx, operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudChannelV1ChannelPartnerRepricingConfigInput: &shared.GoogleCloudChannelV1ChannelPartnerRepricingConfigInput{
             RepricingConfig: &shared.GoogleCloudChannelV1RepricingConfig{
                 Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                     PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                         Percentage: &shared.GoogleTypeDecimal{
-                            Value: "provident",
+                            Value: sdk.String("provident"),
                         },
                     },
                 },
@@ -34,14 +35,14 @@ func main() {
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "deserunt",
+                                    Value: sdk.String("deserunt"),
                                 },
                             },
                         },
-                        RebillingBasis: "COST_AT_LIST",
+                        RebillingBasis: shared.GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnumCostAtList.ToPointer(),
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "iure",
+                                SkuGroup: sdk.String("iure"),
                             },
                         },
                     },
@@ -49,14 +50,14 @@ func main() {
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "magnam",
+                                    Value: sdk.String("magnam"),
                                 },
                             },
                         },
-                        RebillingBasis: "DIRECT_CUSTOMER_COST",
+                        RebillingBasis: shared.GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnumDirectCustomerCost.ToPointer(),
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "ipsa",
+                                SkuGroup: sdk.String("ipsa"),
                             },
                         },
                     },
@@ -64,44 +65,41 @@ func main() {
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "delectus",
+                                    Value: sdk.String("delectus"),
                                 },
                             },
                         },
-                        RebillingBasis: "REBILLING_BASIS_UNSPECIFIED",
+                        RebillingBasis: shared.GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnumRebillingBasisUnspecified.ToPointer(),
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "suscipit",
+                                SkuGroup: sdk.String("suscipit"),
                             },
                         },
                     },
                 },
                 EffectiveInvoiceMonth: &shared.GoogleTypeDate{
-                    Day: 477665,
-                    Month: 791725,
-                    Year: 812169,
+                    Day: sdk.Int(477665),
+                    Month: sdk.Int(791725),
+                    Year: sdk.Int(812169),
                 },
                 EntitlementGranularity: &shared.GoogleCloudChannelV1RepricingConfigEntitlementGranularity{
-                    Entitlement: "voluptatum",
+                    Entitlement: sdk.String("voluptatum"),
                 },
-                RebillingBasis: "COST_AT_LIST",
+                RebillingBasis: shared.GoogleCloudChannelV1RepricingConfigRebillingBasisEnumCostAtList.ToPointer(),
             },
         },
-        AccessToken: "excepturi",
-        Alt: "media",
-        Callback: "recusandae",
-        Fields: "temporibus",
-        Key: "ab",
-        OauthToken: "quis",
+        AccessToken: sdk.String("excepturi"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("recusandae"),
+        Fields: sdk.String("temporibus"),
+        Key: sdk.String("ab"),
+        OauthToken: sdk.String("quis"),
         Parent: "veritatis",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "perferendis",
-        UploadProtocol: "ipsam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreate(ctx, req, operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("perferendis"),
+        UploadProtocol: sdk.String("ipsam"),
+    }, operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

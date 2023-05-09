@@ -14,18 +14,22 @@ const (
 	AppAssessmentScheduleTypeEnumDaily    AppAssessmentScheduleTypeEnum = "Daily"
 )
 
+func (e AppAssessmentScheduleTypeEnum) ToPointer() *AppAssessmentScheduleTypeEnum {
+	return &e
+}
+
 func (e *AppAssessmentScheduleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Disabled":
 		fallthrough
 	case "Daily":
-		*e = AppAssessmentScheduleTypeEnum(s)
+		*e = AppAssessmentScheduleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppAssessmentScheduleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppAssessmentScheduleTypeEnum: %v", v)
 	}
 }

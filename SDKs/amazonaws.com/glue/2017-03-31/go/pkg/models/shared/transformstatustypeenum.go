@@ -15,20 +15,24 @@ const (
 	TransformStatusTypeEnumDeleting TransformStatusTypeEnum = "DELETING"
 )
 
+func (e TransformStatusTypeEnum) ToPointer() *TransformStatusTypeEnum {
+	return &e
+}
+
 func (e *TransformStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_READY":
 		fallthrough
 	case "READY":
 		fallthrough
 	case "DELETING":
-		*e = TransformStatusTypeEnum(s)
+		*e = TransformStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransformStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TransformStatusTypeEnum: %v", v)
 	}
 }

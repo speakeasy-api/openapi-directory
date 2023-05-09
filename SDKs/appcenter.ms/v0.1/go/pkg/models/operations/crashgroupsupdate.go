@@ -21,21 +21,25 @@ const (
 	CrashGroupsUpdateRequestBodyStatusEnumIgnored CrashGroupsUpdateRequestBodyStatusEnum = "ignored"
 )
 
+func (e CrashGroupsUpdateRequestBodyStatusEnum) ToPointer() *CrashGroupsUpdateRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *CrashGroupsUpdateRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "ignored":
-		*e = CrashGroupsUpdateRequestBodyStatusEnum(s)
+		*e = CrashGroupsUpdateRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrashGroupsUpdateRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CrashGroupsUpdateRequestBodyStatusEnum: %v", v)
 	}
 }
 
@@ -76,12 +80,16 @@ const (
 	CrashGroupsUpdate200ApplicationJSONReasonFrameLanguageEnumUnknown      CrashGroupsUpdate200ApplicationJSONReasonFrameLanguageEnum = "Unknown"
 )
 
+func (e CrashGroupsUpdate200ApplicationJSONReasonFrameLanguageEnum) ToPointer() *CrashGroupsUpdate200ApplicationJSONReasonFrameLanguageEnum {
+	return &e
+}
+
 func (e *CrashGroupsUpdate200ApplicationJSONReasonFrameLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JavaScript":
 		fallthrough
 	case "CSharp":
@@ -99,10 +107,10 @@ func (e *CrashGroupsUpdate200ApplicationJSONReasonFrameLanguageEnum) UnmarshalJS
 	case "Java":
 		fallthrough
 	case "Unknown":
-		*e = CrashGroupsUpdate200ApplicationJSONReasonFrameLanguageEnum(s)
+		*e = CrashGroupsUpdate200ApplicationJSONReasonFrameLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrashGroupsUpdate200ApplicationJSONReasonFrameLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for CrashGroupsUpdate200ApplicationJSONReasonFrameLanguageEnum: %v", v)
 	}
 }
 
@@ -144,21 +152,25 @@ const (
 	CrashGroupsUpdate200ApplicationJSONStatusEnumIgnored CrashGroupsUpdate200ApplicationJSONStatusEnum = "ignored"
 )
 
+func (e CrashGroupsUpdate200ApplicationJSONStatusEnum) ToPointer() *CrashGroupsUpdate200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *CrashGroupsUpdate200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "ignored":
-		*e = CrashGroupsUpdate200ApplicationJSONStatusEnum(s)
+		*e = CrashGroupsUpdate200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrashGroupsUpdate200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CrashGroupsUpdate200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

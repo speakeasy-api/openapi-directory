@@ -15,17 +15,21 @@ const (
 	POSTCreateListenerActionEnumCreateListener POSTCreateListenerActionEnum = "CreateListener"
 )
 
+func (e POSTCreateListenerActionEnum) ToPointer() *POSTCreateListenerActionEnum {
+	return &e
+}
+
 func (e *POSTCreateListenerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateListener":
-		*e = POSTCreateListenerActionEnum(s)
+		*e = POSTCreateListenerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateListenerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateListenerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateListenerVersionEnumTwoThousandAndFifteen1201 POSTCreateListenerVersionEnum = "2015-12-01"
 )
 
+func (e POSTCreateListenerVersionEnum) ToPointer() *POSTCreateListenerVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateListenerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = POSTCreateListenerVersionEnum(s)
+		*e = POSTCreateListenerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateListenerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateListenerVersionEnum: %v", v)
 	}
 }
 

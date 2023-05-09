@@ -18,12 +18,16 @@ const (
 	WebhookFilterTypeEnumCommitMessage  WebhookFilterTypeEnum = "COMMIT_MESSAGE"
 )
 
+func (e WebhookFilterTypeEnum) ToPointer() *WebhookFilterTypeEnum {
+	return &e
+}
+
 func (e *WebhookFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVENT":
 		fallthrough
 	case "BASE_REF":
@@ -35,9 +39,9 @@ func (e *WebhookFilterTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FILE_PATH":
 		fallthrough
 	case "COMMIT_MESSAGE":
-		*e = WebhookFilterTypeEnum(s)
+		*e = WebhookFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookFilterTypeEnum: %v", v)
 	}
 }

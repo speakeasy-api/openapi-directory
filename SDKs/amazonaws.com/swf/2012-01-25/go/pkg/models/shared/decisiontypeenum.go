@@ -25,12 +25,16 @@ const (
 	DecisionTypeEnumScheduleLambdaFunction                 DecisionTypeEnum = "ScheduleLambdaFunction"
 )
 
+func (e DecisionTypeEnum) ToPointer() *DecisionTypeEnum {
+	return &e
+}
+
 func (e *DecisionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ScheduleActivityTask":
 		fallthrough
 	case "RequestCancelActivityTask":
@@ -56,9 +60,9 @@ func (e *DecisionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "StartChildWorkflowExecution":
 		fallthrough
 	case "ScheduleLambdaFunction":
-		*e = DecisionTypeEnum(s)
+		*e = DecisionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DecisionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DecisionTypeEnum: %v", v)
 	}
 }

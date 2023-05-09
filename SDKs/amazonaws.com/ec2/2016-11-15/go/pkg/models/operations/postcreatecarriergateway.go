@@ -15,17 +15,21 @@ const (
 	POSTCreateCarrierGatewayActionEnumCreateCarrierGateway POSTCreateCarrierGatewayActionEnum = "CreateCarrierGateway"
 )
 
+func (e POSTCreateCarrierGatewayActionEnum) ToPointer() *POSTCreateCarrierGatewayActionEnum {
+	return &e
+}
+
 func (e *POSTCreateCarrierGatewayActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateCarrierGateway":
-		*e = POSTCreateCarrierGatewayActionEnum(s)
+		*e = POSTCreateCarrierGatewayActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateCarrierGatewayActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateCarrierGatewayActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateCarrierGatewayVersionEnumTwoThousandAndSixteen1115 POSTCreateCarrierGatewayVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateCarrierGatewayVersionEnum) ToPointer() *POSTCreateCarrierGatewayVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateCarrierGatewayVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateCarrierGatewayVersionEnum(s)
+		*e = POSTCreateCarrierGatewayVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateCarrierGatewayVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateCarrierGatewayVersionEnum: %v", v)
 	}
 }
 

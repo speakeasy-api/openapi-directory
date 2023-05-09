@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -87,4 +88,13 @@ pkg/models/shared/uploadstatus.go
 pkg/models/shared/uploadstatuses.go
 pkg/models/shared/uploadstatusquery.go
 pkg/models/shared/upload.go
+docs/sdk/README.md
+docs/boundaries/README.md
+docs/exports/README.md
+docs/farmorganizations/README.md
+docs/fields/README.md
+docs/layers/README.md
+docs/operations/README.md
+docs/resourceowners/README.md
+docs/uploads/README.md
 USAGE.md

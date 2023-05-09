@@ -35,7 +35,10 @@ func newCreatives(defaultClient, securityClient HTTPClient, serverURL, language,
 // AdexchangebuyerCreativesAddDeal - Add a deal id association for the creative.
 func (s *creatives) AdexchangebuyerCreativesAddDeal(ctx context.Context, request operations.AdexchangebuyerCreativesAddDealRequest, security operations.AdexchangebuyerCreativesAddDealSecurity) (*operations.AdexchangebuyerCreativesAddDealResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}/addDeal/{dealId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}/addDeal/{dealId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *creatives) AdexchangebuyerCreativesAddDeal(ctx context.Context, request
 // AdexchangebuyerCreativesGet - Gets the status for a single creative. A creative will be available 30-40 minutes after submission.
 func (s *creatives) AdexchangebuyerCreativesGet(ctx context.Context, request operations.AdexchangebuyerCreativesGetRequest, security operations.AdexchangebuyerCreativesGetSecurity) (*operations.AdexchangebuyerCreativesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *creatives) AdexchangebuyerCreativesList(ctx context.Context, request op
 // AdexchangebuyerCreativesListDeals - Lists the external deal ids associated with the creative.
 func (s *creatives) AdexchangebuyerCreativesListDeals(ctx context.Context, request operations.AdexchangebuyerCreativesListDealsRequest, security operations.AdexchangebuyerCreativesListDealsSecurity) (*operations.AdexchangebuyerCreativesListDealsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}/listDeals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}/listDeals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -273,7 +282,10 @@ func (s *creatives) AdexchangebuyerCreativesListDeals(ctx context.Context, reque
 // AdexchangebuyerCreativesRemoveDeal - Remove a deal id associated with the creative.
 func (s *creatives) AdexchangebuyerCreativesRemoveDeal(ctx context.Context, request operations.AdexchangebuyerCreativesRemoveDealRequest, security operations.AdexchangebuyerCreativesRemoveDealSecurity) (*operations.AdexchangebuyerCreativesRemoveDealResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}/removeDeal/{dealId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}/removeDeal/{dealId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

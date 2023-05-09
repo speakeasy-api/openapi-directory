@@ -14,18 +14,22 @@ const (
 	QueryErrorCodeEnumAccessDenied    QueryErrorCodeEnum = "ACCESS_DENIED"
 )
 
+func (e QueryErrorCodeEnum) ToPointer() *QueryErrorCodeEnum {
+	return &e
+}
+
 func (e *QueryErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_FAILURE":
 		fallthrough
 	case "ACCESS_DENIED":
-		*e = QueryErrorCodeEnum(s)
+		*e = QueryErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryErrorCodeEnum: %v", v)
 	}
 }

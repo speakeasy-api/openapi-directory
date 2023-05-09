@@ -16,17 +16,21 @@ const (
 	GetOperationDetailXAmzTargetEnumRoute53DomainsV20140515GetOperationDetail GetOperationDetailXAmzTargetEnum = "Route53Domains_v20140515.GetOperationDetail"
 )
 
+func (e GetOperationDetailXAmzTargetEnum) ToPointer() *GetOperationDetailXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetOperationDetailXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.GetOperationDetail":
-		*e = GetOperationDetailXAmzTargetEnum(s)
+		*e = GetOperationDetailXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOperationDetailXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOperationDetailXAmzTargetEnum: %v", v)
 	}
 }
 

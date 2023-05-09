@@ -16,12 +16,16 @@ const (
 	RuntimeAnalysisStatusEnumAnalysisFailed        RuntimeAnalysisStatusEnum = "ANALYSIS_FAILED"
 )
 
+func (e RuntimeAnalysisStatusEnum) ToPointer() *RuntimeAnalysisStatusEnum {
+	return &e
+}
+
 func (e *RuntimeAnalysisStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANALYSIS_TO_BE_SCHEDULED":
 		fallthrough
 	case "ANALYSIS_STARTED":
@@ -29,9 +33,9 @@ func (e *RuntimeAnalysisStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ANALYSIS_SUCCESS":
 		fallthrough
 	case "ANALYSIS_FAILED":
-		*e = RuntimeAnalysisStatusEnum(s)
+		*e = RuntimeAnalysisStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuntimeAnalysisStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RuntimeAnalysisStatusEnum: %v", v)
 	}
 }

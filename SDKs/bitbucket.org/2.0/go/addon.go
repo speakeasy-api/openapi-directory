@@ -50,7 +50,7 @@ func newAddon(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 //	  -H "Authorization: JWT <JWT Token>"
 //
 // ```
-func (s *addon) DeleteAddon(ctx context.Context) (*operations.DeleteAddonResponse, error) {
+func (s *addon) DeleteAddon(ctx context.Context, security operations.DeleteAddonSecurity) (*operations.DeleteAddonResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/addon"
 
@@ -59,7 +59,7 @@ func (s *addon) DeleteAddon(ctx context.Context) (*operations.DeleteAddonRespons
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -101,7 +101,10 @@ func (s *addon) DeleteAddon(ctx context.Context) (*operations.DeleteAddonRespons
 // specified linker of the authenticated application.
 func (s *addon) DeleteAddonLinkersLinkerKeyValues(ctx context.Context, request operations.DeleteAddonLinkersLinkerKeyValuesRequest, security operations.DeleteAddonLinkersLinkerKeyValuesSecurity) (*operations.DeleteAddonLinkersLinkerKeyValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -150,7 +153,10 @@ func (s *addon) DeleteAddonLinkersLinkerKeyValues(ctx context.Context, request o
 // of the authenticated application.
 func (s *addon) DeleteAddonLinkersLinkerKeyValuesValueID(ctx context.Context, request operations.DeleteAddonLinkersLinkerKeyValuesValueIDRequest, security operations.DeleteAddonLinkersLinkerKeyValuesValueIDSecurity) (*operations.DeleteAddonLinkersLinkerKeyValuesValueIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values/{value_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values/{value_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -197,7 +203,7 @@ func (s *addon) DeleteAddonLinkersLinkerKeyValuesValueID(ctx context.Context, re
 // GetAddonLinkers - List linkers for an app
 // Gets a list of all [linkers](/cloud/bitbucket/modules/linker/)
 // for the authenticated application.
-func (s *addon) GetAddonLinkers(ctx context.Context) (*operations.GetAddonLinkersResponse, error) {
+func (s *addon) GetAddonLinkers(ctx context.Context, security operations.GetAddonLinkersSecurity) (*operations.GetAddonLinkersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/addon/linkers"
 
@@ -206,7 +212,7 @@ func (s *addon) GetAddonLinkers(ctx context.Context) (*operations.GetAddonLinker
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -246,7 +252,10 @@ func (s *addon) GetAddonLinkers(ctx context.Context) (*operations.GetAddonLinker
 // for the authenticated application.
 func (s *addon) GetAddonLinkersLinkerKey(ctx context.Context, request operations.GetAddonLinkersLinkerKeyRequest, security operations.GetAddonLinkersLinkerKeySecurity) (*operations.GetAddonLinkersLinkerKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -302,7 +311,10 @@ func (s *addon) GetAddonLinkersLinkerKey(ctx context.Context, request operations
 // [Read more about linker values](/cloud/bitbucket/modules/linker/#usingthebitbucketapitosupplyvalues)
 func (s *addon) GetAddonLinkersLinkerKeyValues(ctx context.Context, request operations.GetAddonLinkersLinkerKeyValuesRequest, security operations.GetAddonLinkersLinkerKeyValuesSecurity) (*operations.GetAddonLinkersLinkerKeyValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +363,10 @@ func (s *addon) GetAddonLinkersLinkerKeyValues(ctx context.Context, request oper
 // of the authenticated application.
 func (s *addon) GetAddonLinkersLinkerKeyValuesValueID(ctx context.Context, request operations.GetAddonLinkersLinkerKeyValuesValueIDRequest, security operations.GetAddonLinkersLinkerKeyValuesValueIDSecurity) (*operations.GetAddonLinkersLinkerKeyValuesValueIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values/{value_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values/{value_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -407,7 +422,10 @@ func (s *addon) GetAddonLinkersLinkerKeyValuesValueID(ctx context.Context, reque
 // [Read more about linker values](/cloud/bitbucket/modules/linker/#usingthebitbucketapitosupplyvalues)
 func (s *addon) PostAddonLinkersLinkerKeyValues(ctx context.Context, request operations.PostAddonLinkersLinkerKeyValuesRequest, security operations.PostAddonLinkersLinkerKeyValuesSecurity) (*operations.PostAddonLinkersLinkerKeyValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -507,7 +525,7 @@ func (s *addon) PostAddonLinkersLinkerKeyValues(ctx context.Context, request ope
 //
 // Note that the scopes of the application cannot be increased
 // in the new descriptor nor reduced to none.
-func (s *addon) PutAddon(ctx context.Context) (*operations.PutAddonResponse, error) {
+func (s *addon) PutAddon(ctx context.Context, security operations.PutAddonSecurity) (*operations.PutAddonResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/addon"
 
@@ -516,7 +534,7 @@ func (s *addon) PutAddon(ctx context.Context) (*operations.PutAddonResponse, err
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -567,7 +585,10 @@ func (s *addon) PutAddon(ctx context.Context) (*operations.PutAddonResponse, err
 // [Read more about linker values](/cloud/bitbucket/modules/linker/#usingthebitbucketapitosupplyvalues)
 func (s *addon) PutAddonLinkersLinkerKeyValues(ctx context.Context, request operations.PutAddonLinkersLinkerKeyValuesRequest, security operations.PutAddonLinkersLinkerKeyValuesSecurity) (*operations.PutAddonLinkersLinkerKeyValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/addon/linkers/{linker_key}/values", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

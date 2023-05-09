@@ -15,17 +15,21 @@ const (
 	DisassociateServiceQuotaTemplateXAmzTargetEnumServiceQuotasV20190624DisassociateServiceQuotaTemplate DisassociateServiceQuotaTemplateXAmzTargetEnum = "ServiceQuotasV20190624.DisassociateServiceQuotaTemplate"
 )
 
+func (e DisassociateServiceQuotaTemplateXAmzTargetEnum) ToPointer() *DisassociateServiceQuotaTemplateXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateServiceQuotaTemplateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ServiceQuotasV20190624.DisassociateServiceQuotaTemplate":
-		*e = DisassociateServiceQuotaTemplateXAmzTargetEnum(s)
+		*e = DisassociateServiceQuotaTemplateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateServiceQuotaTemplateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateServiceQuotaTemplateXAmzTargetEnum: %v", v)
 	}
 }
 

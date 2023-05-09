@@ -16,17 +16,21 @@ const (
 	ListMetricAttributionsXAmzTargetEnumAmazonPersonalizeListMetricAttributions ListMetricAttributionsXAmzTargetEnum = "AmazonPersonalize.ListMetricAttributions"
 )
 
+func (e ListMetricAttributionsXAmzTargetEnum) ToPointer() *ListMetricAttributionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListMetricAttributionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.ListMetricAttributions":
-		*e = ListMetricAttributionsXAmzTargetEnum(s)
+		*e = ListMetricAttributionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListMetricAttributionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListMetricAttributionsXAmzTargetEnum: %v", v)
 	}
 }
 

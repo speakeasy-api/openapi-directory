@@ -20,12 +20,16 @@ const (
 	GetGetCurationTagHistoryFormatEnumPdf  GetGetCurationTagHistoryFormatEnum = "pdf"
 )
 
+func (e GetGetCurationTagHistoryFormatEnum) ToPointer() *GetGetCurationTagHistoryFormatEnum {
+	return &e
+}
+
 func (e *GetGetCurationTagHistoryFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -37,10 +41,10 @@ func (e *GetGetCurationTagHistoryFormatEnum) UnmarshalJSON(data []byte) error {
 	case "jpg":
 		fallthrough
 	case "pdf":
-		*e = GetGetCurationTagHistoryFormatEnum(s)
+		*e = GetGetCurationTagHistoryFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGetCurationTagHistoryFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGetCurationTagHistoryFormatEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	FacetAttributeTypeEnumVariant  FacetAttributeTypeEnum = "VARIANT"
 )
 
+func (e FacetAttributeTypeEnum) ToPointer() *FacetAttributeTypeEnum {
+	return &e
+}
+
 func (e *FacetAttributeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRING":
 		fallthrough
 	case "BINARY":
@@ -35,9 +39,9 @@ func (e *FacetAttributeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DATETIME":
 		fallthrough
 	case "VARIANT":
-		*e = FacetAttributeTypeEnum(s)
+		*e = FacetAttributeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FacetAttributeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FacetAttributeTypeEnum: %v", v)
 	}
 }

@@ -21,19 +21,23 @@ const (
 	PublishXAmzMqtt5PayloadFormatIndicatorEnumUTF8Data         PublishXAmzMqtt5PayloadFormatIndicatorEnum = "UTF8_DATA"
 )
 
+func (e PublishXAmzMqtt5PayloadFormatIndicatorEnum) ToPointer() *PublishXAmzMqtt5PayloadFormatIndicatorEnum {
+	return &e
+}
+
 func (e *PublishXAmzMqtt5PayloadFormatIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_BYTES":
 		fallthrough
 	case "UTF8_DATA":
-		*e = PublishXAmzMqtt5PayloadFormatIndicatorEnum(s)
+		*e = PublishXAmzMqtt5PayloadFormatIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublishXAmzMqtt5PayloadFormatIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for PublishXAmzMqtt5PayloadFormatIndicatorEnum: %v", v)
 	}
 }
 

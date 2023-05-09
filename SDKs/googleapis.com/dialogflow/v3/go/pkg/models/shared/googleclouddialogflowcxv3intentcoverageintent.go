@@ -4,7 +4,7 @@ package shared
 
 // GoogleCloudDialogflowCxV3IntentCoverageIntent - The agent's intent.
 type GoogleCloudDialogflowCxV3IntentCoverageIntent struct {
-	// Whether or not the intent is covered by at least one of the agent's test cases.
+	// Whether the intent is covered by at least one of the agent's test cases.
 	Covered *bool `json:"covered,omitempty"`
 	// The intent full resource name
 	Intent *string `json:"intent,omitempty"`

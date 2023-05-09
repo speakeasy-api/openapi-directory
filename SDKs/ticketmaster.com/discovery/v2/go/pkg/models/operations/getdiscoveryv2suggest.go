@@ -16,19 +16,23 @@ const (
 	GetDiscoveryV2SuggestIncludeFuzzyEnumNo  GetDiscoveryV2SuggestIncludeFuzzyEnum = " no"
 )
 
+func (e GetDiscoveryV2SuggestIncludeFuzzyEnum) ToPointer() *GetDiscoveryV2SuggestIncludeFuzzyEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2SuggestIncludeFuzzyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = GetDiscoveryV2SuggestIncludeFuzzyEnum(s)
+		*e = GetDiscoveryV2SuggestIncludeFuzzyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestIncludeFuzzyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestIncludeFuzzyEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	GetDiscoveryV2SuggestIncludeLicensedContentEnumNo  GetDiscoveryV2SuggestIncludeLicensedContentEnum = " no"
 )
 
+func (e GetDiscoveryV2SuggestIncludeLicensedContentEnum) ToPointer() *GetDiscoveryV2SuggestIncludeLicensedContentEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2SuggestIncludeLicensedContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = GetDiscoveryV2SuggestIncludeLicensedContentEnum(s)
+		*e = GetDiscoveryV2SuggestIncludeLicensedContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestIncludeLicensedContentEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestIncludeLicensedContentEnum: %v", v)
 	}
 }
 
@@ -64,19 +72,23 @@ const (
 	GetDiscoveryV2SuggestIncludeSpellcheckEnumNo  GetDiscoveryV2SuggestIncludeSpellcheckEnum = " no"
 )
 
+func (e GetDiscoveryV2SuggestIncludeSpellcheckEnum) ToPointer() *GetDiscoveryV2SuggestIncludeSpellcheckEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2SuggestIncludeSpellcheckEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = GetDiscoveryV2SuggestIncludeSpellcheckEnum(s)
+		*e = GetDiscoveryV2SuggestIncludeSpellcheckEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestIncludeSpellcheckEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestIncludeSpellcheckEnum: %v", v)
 	}
 }
 
@@ -89,21 +101,25 @@ const (
 	GetDiscoveryV2SuggestIncludeTbaEnumOnly GetDiscoveryV2SuggestIncludeTbaEnum = " only"
 )
 
+func (e GetDiscoveryV2SuggestIncludeTbaEnum) ToPointer() *GetDiscoveryV2SuggestIncludeTbaEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2SuggestIncludeTbaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
 		fallthrough
 	case " only":
-		*e = GetDiscoveryV2SuggestIncludeTbaEnum(s)
+		*e = GetDiscoveryV2SuggestIncludeTbaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestIncludeTbaEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestIncludeTbaEnum: %v", v)
 	}
 }
 
@@ -116,21 +132,25 @@ const (
 	GetDiscoveryV2SuggestIncludeTbdEnumOnly GetDiscoveryV2SuggestIncludeTbdEnum = " only"
 )
 
+func (e GetDiscoveryV2SuggestIncludeTbdEnum) ToPointer() *GetDiscoveryV2SuggestIncludeTbdEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2SuggestIncludeTbdEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
 		fallthrough
 	case " only":
-		*e = GetDiscoveryV2SuggestIncludeTbdEnum(s)
+		*e = GetDiscoveryV2SuggestIncludeTbdEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestIncludeTbdEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestIncludeTbdEnum: %v", v)
 	}
 }
 
@@ -144,12 +164,16 @@ const (
 	GetDiscoveryV2SuggestSourceEnumTmr          GetDiscoveryV2SuggestSourceEnum = " tmr"
 )
 
+func (e GetDiscoveryV2SuggestSourceEnum) ToPointer() *GetDiscoveryV2SuggestSourceEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2SuggestSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ticketmaster":
 		fallthrough
 	case " universe":
@@ -157,10 +181,10 @@ func (e *GetDiscoveryV2SuggestSourceEnum) UnmarshalJSON(data []byte) error {
 	case " frontgate":
 		fallthrough
 	case " tmr":
-		*e = GetDiscoveryV2SuggestSourceEnum(s)
+		*e = GetDiscoveryV2SuggestSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestSourceEnum: %v", v)
 	}
 }
 
@@ -172,19 +196,23 @@ const (
 	GetDiscoveryV2SuggestUnitEnumKm    GetDiscoveryV2SuggestUnitEnum = "km"
 )
 
+func (e GetDiscoveryV2SuggestUnitEnum) ToPointer() *GetDiscoveryV2SuggestUnitEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2SuggestUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "miles":
 		fallthrough
 	case "km":
-		*e = GetDiscoveryV2SuggestUnitEnum(s)
+		*e = GetDiscoveryV2SuggestUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2SuggestUnitEnum: %v", v)
 	}
 }
 

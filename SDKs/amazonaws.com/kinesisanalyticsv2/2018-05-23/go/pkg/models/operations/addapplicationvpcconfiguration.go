@@ -16,17 +16,21 @@ const (
 	AddApplicationVpcConfigurationXAmzTargetEnumKinesisAnalytics20180523AddApplicationVpcConfiguration AddApplicationVpcConfigurationXAmzTargetEnum = "KinesisAnalytics_20180523.AddApplicationVpcConfiguration"
 )
 
+func (e AddApplicationVpcConfigurationXAmzTargetEnum) ToPointer() *AddApplicationVpcConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddApplicationVpcConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20180523.AddApplicationVpcConfiguration":
-		*e = AddApplicationVpcConfigurationXAmzTargetEnum(s)
+		*e = AddApplicationVpcConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddApplicationVpcConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddApplicationVpcConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

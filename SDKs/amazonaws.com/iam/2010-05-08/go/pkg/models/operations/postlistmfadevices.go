@@ -15,17 +15,21 @@ const (
 	POSTListMFADevicesActionEnumListMfaDevices POSTListMFADevicesActionEnum = "ListMFADevices"
 )
 
+func (e POSTListMFADevicesActionEnum) ToPointer() *POSTListMFADevicesActionEnum {
+	return &e
+}
+
 func (e *POSTListMFADevicesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListMFADevices":
-		*e = POSTListMFADevicesActionEnum(s)
+		*e = POSTListMFADevicesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListMFADevicesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListMFADevicesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTListMFADevicesVersionEnumTwoThousandAndTen0508 POSTListMFADevicesVersionEnum = "2010-05-08"
 )
 
+func (e POSTListMFADevicesVersionEnum) ToPointer() *POSTListMFADevicesVersionEnum {
+	return &e
+}
+
 func (e *POSTListMFADevicesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTListMFADevicesVersionEnum(s)
+		*e = POSTListMFADevicesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListMFADevicesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListMFADevicesVersionEnum: %v", v)
 	}
 }
 

@@ -32,12 +32,16 @@ const (
 	AppleMappingDeleteDefaultApplicationJSONCodeEnumTooManyRequests     AppleMappingDeleteDefaultApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e AppleMappingDeleteDefaultApplicationJSONCodeEnum) ToPointer() *AppleMappingDeleteDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *AppleMappingDeleteDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -51,10 +55,10 @@ func (e *AppleMappingDeleteDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppleMappingDeleteDefaultApplicationJSONCodeEnum(s)
+		*e = AppleMappingDeleteDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppleMappingDeleteDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppleMappingDeleteDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 

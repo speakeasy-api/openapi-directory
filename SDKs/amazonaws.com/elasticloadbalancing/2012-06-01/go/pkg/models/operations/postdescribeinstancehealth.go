@@ -15,17 +15,21 @@ const (
 	POSTDescribeInstanceHealthActionEnumDescribeInstanceHealth POSTDescribeInstanceHealthActionEnum = "DescribeInstanceHealth"
 )
 
+func (e POSTDescribeInstanceHealthActionEnum) ToPointer() *POSTDescribeInstanceHealthActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeInstanceHealthActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeInstanceHealth":
-		*e = POSTDescribeInstanceHealthActionEnum(s)
+		*e = POSTDescribeInstanceHealthActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeInstanceHealthActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeInstanceHealthActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeInstanceHealthVersionEnumTwoThousandAndTwelve0601 POSTDescribeInstanceHealthVersionEnum = "2012-06-01"
 )
 
+func (e POSTDescribeInstanceHealthVersionEnum) ToPointer() *POSTDescribeInstanceHealthVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeInstanceHealthVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = POSTDescribeInstanceHealthVersionEnum(s)
+		*e = POSTDescribeInstanceHealthVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeInstanceHealthVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeInstanceHealthVersionEnum: %v", v)
 	}
 }
 

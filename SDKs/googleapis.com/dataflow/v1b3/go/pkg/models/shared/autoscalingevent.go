@@ -18,12 +18,16 @@ const (
 	AutoscalingEventEventTypeEnumNoChange                 AutoscalingEventEventTypeEnum = "NO_CHANGE"
 )
 
+func (e AutoscalingEventEventTypeEnum) ToPointer() *AutoscalingEventEventTypeEnum {
+	return &e
+}
+
 func (e *AutoscalingEventEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNKNOWN":
 		fallthrough
 	case "TARGET_NUM_WORKERS_CHANGED":
@@ -33,10 +37,10 @@ func (e *AutoscalingEventEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ACTUATION_FAILURE":
 		fallthrough
 	case "NO_CHANGE":
-		*e = AutoscalingEventEventTypeEnum(s)
+		*e = AutoscalingEventEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoscalingEventEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoscalingEventEventTypeEnum: %v", v)
 	}
 }
 

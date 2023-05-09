@@ -16,17 +16,21 @@ const (
 	ListSnapshotsXAmzTargetEnumRedshiftServerlessListSnapshots ListSnapshotsXAmzTargetEnum = "RedshiftServerless.ListSnapshots"
 )
 
+func (e ListSnapshotsXAmzTargetEnum) ToPointer() *ListSnapshotsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListSnapshotsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.ListSnapshots":
-		*e = ListSnapshotsXAmzTargetEnum(s)
+		*e = ListSnapshotsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSnapshotsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSnapshotsXAmzTargetEnum: %v", v)
 	}
 }
 

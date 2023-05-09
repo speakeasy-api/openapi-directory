@@ -18,12 +18,16 @@ const (
 	FilterEnumRunning    FilterEnum = "running"
 )
 
+func (e FilterEnum) ToPointer() *FilterEnum {
+	return &e
+}
+
 func (e *FilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "completed":
 		fallthrough
 	case "successful":
@@ -31,9 +35,9 @@ func (e *FilterEnum) UnmarshalJSON(data []byte) error {
 	case "failed":
 		fallthrough
 	case "running":
-		*e = FilterEnum(s)
+		*e = FilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterEnum: %v", v)
 	}
 }

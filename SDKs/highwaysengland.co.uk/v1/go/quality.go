@@ -34,7 +34,10 @@ func newQuality(defaultClient, securityClient HTTPClient, serverURL, language, s
 // QualityGetDailyDataQualityForSite - Get Site DailyQuality
 func (s *quality) QualityGetDailyDataQualityForSite(ctx context.Context, request operations.QualityGetDailyDataQualityForSiteRequest) (*operations.QualityGetDailyDataQualityForSiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v{version}/quality/daily", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v{version}/quality/daily", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *quality) QualityGetDailyDataQualityForSite(ctx context.Context, request
 // QualityGetOverallDataQualityForSites - Get Site OverallQuality
 func (s *quality) QualityGetOverallDataQualityForSites(ctx context.Context, request operations.QualityGetOverallDataQualityForSitesRequest) (*operations.QualityGetOverallDataQualityForSitesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v{version}/quality/overall", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v{version}/quality/overall", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

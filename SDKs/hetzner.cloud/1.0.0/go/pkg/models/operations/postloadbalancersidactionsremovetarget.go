@@ -8,8 +8,8 @@ import (
 	"net/http"
 )
 
-// PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestIP - IP targets where the traffic should be routed through. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well.
-type PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestIP struct {
+// PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestLoadBalancerTargetIP - IP targets where the traffic should be routed to. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well. Only present for target type "ip".
+type PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestLoadBalancerTargetIP struct {
 	// IP of a server that belongs to the same customer (public IPv4/IPv6) or private IP in a Subnetwork type vswitch.
 	IP string `json:"ip"`
 }
@@ -35,27 +35,31 @@ const (
 	PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestTypeEnumIP            PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestTypeEnum = "ip"
 )
 
+func (e PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestTypeEnum) ToPointer() *PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestTypeEnum {
+	return &e
+}
+
 func (e *PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "server":
 		fallthrough
 	case "label_selector":
 		fallthrough
 	case "ip":
-		*e = PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestTypeEnum(s)
+		*e = PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestTypeEnum: %v", v)
 	}
 }
 
 type PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequest struct {
-	// IP targets where the traffic should be routed through. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well.
-	IP *PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestIP `json:"ip,omitempty"`
+	// IP targets where the traffic should be routed to. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well. Only present for target type "ip".
+	IP *PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestLoadBalancerTargetIP `json:"ip,omitempty"`
 	// Configuration for label selector targets, required if type is `label_selector`
 	LabelSelector *PostLoadBalancersIDActionsRemoveTargetRemoveTargetRequestLabelSelector `json:"label_selector,omitempty"`
 	// Configuration for type Server, required if type is `server`
@@ -94,21 +98,25 @@ const (
 	PostLoadBalancersIDActionsRemoveTargetActionResponseActionStatusEnumError   PostLoadBalancersIDActionsRemoveTargetActionResponseActionStatusEnum = "error"
 )
 
+func (e PostLoadBalancersIDActionsRemoveTargetActionResponseActionStatusEnum) ToPointer() *PostLoadBalancersIDActionsRemoveTargetActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostLoadBalancersIDActionsRemoveTargetActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostLoadBalancersIDActionsRemoveTargetActionResponseActionStatusEnum(s)
+		*e = PostLoadBalancersIDActionsRemoveTargetActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsRemoveTargetActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsRemoveTargetActionResponseActionStatusEnum: %v", v)
 	}
 }
 

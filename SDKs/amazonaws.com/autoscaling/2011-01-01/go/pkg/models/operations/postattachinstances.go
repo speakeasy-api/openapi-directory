@@ -15,17 +15,21 @@ const (
 	POSTAttachInstancesActionEnumAttachInstances POSTAttachInstancesActionEnum = "AttachInstances"
 )
 
+func (e POSTAttachInstancesActionEnum) ToPointer() *POSTAttachInstancesActionEnum {
+	return &e
+}
+
 func (e *POSTAttachInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AttachInstances":
-		*e = POSTAttachInstancesActionEnum(s)
+		*e = POSTAttachInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAttachInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAttachInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAttachInstancesVersionEnumTwoThousandAndEleven0101 POSTAttachInstancesVersionEnum = "2011-01-01"
 )
 
+func (e POSTAttachInstancesVersionEnum) ToPointer() *POSTAttachInstancesVersionEnum {
+	return &e
+}
+
 func (e *POSTAttachInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTAttachInstancesVersionEnum(s)
+		*e = POSTAttachInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAttachInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAttachInstancesVersionEnum: %v", v)
 	}
 }
 

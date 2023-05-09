@@ -21,12 +21,16 @@ const (
 	ConfigManagementSyncStateCodeEnumUnreachable         ConfigManagementSyncStateCodeEnum = "UNREACHABLE"
 )
 
+func (e ConfigManagementSyncStateCodeEnum) ToPointer() *ConfigManagementSyncStateCodeEnum {
+	return &e
+}
+
 func (e *ConfigManagementSyncStateCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYNC_CODE_UNSPECIFIED":
 		fallthrough
 	case "SYNCED":
@@ -42,10 +46,10 @@ func (e *ConfigManagementSyncStateCodeEnum) UnmarshalJSON(data []byte) error {
 	case "UNAUTHORIZED":
 		fallthrough
 	case "UNREACHABLE":
-		*e = ConfigManagementSyncStateCodeEnum(s)
+		*e = ConfigManagementSyncStateCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementSyncStateCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementSyncStateCodeEnum: %v", v)
 	}
 }
 

@@ -36,7 +36,10 @@ func newAccount(defaultClient, securityClient HTTPClient, serverURL, language, s
 // AccountDeleteDomainWhitelist - Delete an domain entry
 func (s *account) AccountDeleteDomainWhitelist(ctx context.Context, request operations.AccountDeleteDomainWhitelistRequest) (*operations.AccountDeleteDomainWhitelistResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/domainwhitelist/{whitelistId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/domainwhitelist/{whitelistId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -104,7 +107,10 @@ func (s *account) AccountDeleteDomainWhitelist(ctx context.Context, request oper
 // AccountDeleteGuest - Delete a guest
 func (s *account) AccountDeleteGuest(ctx context.Context, request operations.AccountDeleteGuestRequest) (*operations.AccountDeleteGuestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -172,7 +178,10 @@ func (s *account) AccountDeleteGuest(ctx context.Context, request operations.Acc
 // AccountDeleteIPBlacklist - Delete an ip blacklist entry
 func (s *account) AccountDeleteIPBlacklist(ctx context.Context, request operations.AccountDeleteIPBlacklistRequest) (*operations.AccountDeleteIPBlacklistResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/ipblacklist/{blacklistId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/ipblacklist/{blacklistId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -366,7 +375,10 @@ func (s *account) AccountGetDomainWhitelist(ctx context.Context, request operati
 // AccountGetGuest - Retrieve a guest
 func (s *account) AccountGetGuest(ctx context.Context, request operations.AccountGetGuestRequest) (*operations.AccountGetGuestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -622,7 +634,10 @@ func (s *account) AccountGetIPBlacklist(ctx context.Context, request operations.
 // AccountGetPermissions - Retrieve permissions for a guest
 func (s *account) AccountGetPermissions(ctx context.Context, request operations.AccountGetPermissionsRequest) (*operations.AccountGetPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -680,7 +695,10 @@ func (s *account) AccountGetPermissions(ctx context.Context, request operations.
 // AccountGetPermissionsCount - Retrieve count of the permissions for a guest
 func (s *account) AccountGetPermissionsCount(ctx context.Context, request operations.AccountGetPermissionsCountRequest) (*operations.AccountGetPermissionsCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/permissions/count", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/permissions/count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -820,7 +838,10 @@ func (s *account) AccountGetPlan(ctx context.Context) (*operations.AccountGetPla
 // AccountPatchPermissionsForm - Change the permission on a shared object
 func (s *account) AccountPatchPermissionsForm(ctx context.Context, request operations.AccountPatchPermissionsFormRequest) (*operations.AccountPatchPermissionsFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPermissionPatchRequest", "form")
 	if err != nil {
@@ -898,7 +919,10 @@ func (s *account) AccountPatchPermissionsForm(ctx context.Context, request opera
 // AccountPatchPermissionsJSON - Change the permission on a shared object
 func (s *account) AccountPatchPermissionsJSON(ctx context.Context, request operations.AccountPatchPermissionsJSONRequest) (*operations.AccountPatchPermissionsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPermissionPatchRequest", "json")
 	if err != nil {
@@ -976,7 +1000,10 @@ func (s *account) AccountPatchPermissionsJSON(ctx context.Context, request opera
 // AccountPatchPermissionsRaw - Change the permission on a shared object
 func (s *account) AccountPatchPermissionsRaw(ctx context.Context, request operations.AccountPatchPermissionsRawRequest) (*operations.AccountPatchPermissionsRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1054,7 +1081,10 @@ func (s *account) AccountPatchPermissionsRaw(ctx context.Context, request operat
 // AccountPostGuestForm - Update a guest
 func (s *account) AccountPostGuestForm(ctx context.Context, request operations.AccountPostGuestFormRequest) (*operations.AccountPostGuestFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoAccountingGuest", "form")
 	if err != nil {
@@ -1132,7 +1162,10 @@ func (s *account) AccountPostGuestForm(ctx context.Context, request operations.A
 // AccountPostGuestJSON - Update a guest
 func (s *account) AccountPostGuestJSON(ctx context.Context, request operations.AccountPostGuestJSONRequest) (*operations.AccountPostGuestJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoAccountingGuest", "json")
 	if err != nil {
@@ -1210,7 +1243,10 @@ func (s *account) AccountPostGuestJSON(ctx context.Context, request operations.A
 // AccountPostGuestRaw - Update a guest
 func (s *account) AccountPostGuestRaw(ctx context.Context, request operations.AccountPostGuestRawRequest) (*operations.AccountPostGuestRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -2224,7 +2260,10 @@ func (s *account) AccountPutIPBlacklistRaw(ctx context.Context, request []byte) 
 // PostAccountGuestsGuestIDTypePermissionsPatchForm - Change the permission on a shared object
 func (s *account) PostAccountGuestsGuestIDTypePermissionsPatchForm(ctx context.Context, request operations.PostAccountGuestsGuestIDTypePermissionsPatchFormRequest) (*operations.PostAccountGuestsGuestIDTypePermissionsPatchFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPermissionPatchRequest", "form")
 	if err != nil {
@@ -2302,7 +2341,10 @@ func (s *account) PostAccountGuestsGuestIDTypePermissionsPatchForm(ctx context.C
 // PostAccountGuestsGuestIDTypePermissionsPatchJSON - Change the permission on a shared object
 func (s *account) PostAccountGuestsGuestIDTypePermissionsPatchJSON(ctx context.Context, request operations.PostAccountGuestsGuestIDTypePermissionsPatchJSONRequest) (*operations.PostAccountGuestsGuestIDTypePermissionsPatchJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsPermissionPatchRequest", "json")
 	if err != nil {
@@ -2380,7 +2422,10 @@ func (s *account) PostAccountGuestsGuestIDTypePermissionsPatchJSON(ctx context.C
 // PostAccountGuestsGuestIDTypePermissionsPatchRaw - Change the permission on a shared object
 func (s *account) PostAccountGuestsGuestIDTypePermissionsPatchRaw(ctx context.Context, request operations.PostAccountGuestsGuestIDTypePermissionsPatchRawRequest) (*operations.PostAccountGuestsGuestIDTypePermissionsPatchRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/guests/{guestId}/{type}/permissions/patch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

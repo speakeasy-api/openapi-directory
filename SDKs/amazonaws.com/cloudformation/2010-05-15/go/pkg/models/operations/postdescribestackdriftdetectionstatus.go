@@ -15,17 +15,21 @@ const (
 	POSTDescribeStackDriftDetectionStatusActionEnumDescribeStackDriftDetectionStatus POSTDescribeStackDriftDetectionStatusActionEnum = "DescribeStackDriftDetectionStatus"
 )
 
+func (e POSTDescribeStackDriftDetectionStatusActionEnum) ToPointer() *POSTDescribeStackDriftDetectionStatusActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeStackDriftDetectionStatusActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeStackDriftDetectionStatus":
-		*e = POSTDescribeStackDriftDetectionStatusActionEnum(s)
+		*e = POSTDescribeStackDriftDetectionStatusActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeStackDriftDetectionStatusActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeStackDriftDetectionStatusActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeStackDriftDetectionStatusVersionEnumTwoThousandAndTen0515 POSTDescribeStackDriftDetectionStatusVersionEnum = "2010-05-15"
 )
 
+func (e POSTDescribeStackDriftDetectionStatusVersionEnum) ToPointer() *POSTDescribeStackDriftDetectionStatusVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeStackDriftDetectionStatusVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTDescribeStackDriftDetectionStatusVersionEnum(s)
+		*e = POSTDescribeStackDriftDetectionStatusVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeStackDriftDetectionStatusVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeStackDriftDetectionStatusVersionEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	DocumentFilterKeyEnumDocumentType  DocumentFilterKeyEnum = "DocumentType"
 )
 
+func (e DocumentFilterKeyEnum) ToPointer() *DocumentFilterKeyEnum {
+	return &e
+}
+
 func (e *DocumentFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "Owner":
@@ -29,9 +33,9 @@ func (e *DocumentFilterKeyEnum) UnmarshalJSON(data []byte) error {
 	case "PlatformTypes":
 		fallthrough
 	case "DocumentType":
-		*e = DocumentFilterKeyEnum(s)
+		*e = DocumentFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentFilterKeyEnum: %v", v)
 	}
 }

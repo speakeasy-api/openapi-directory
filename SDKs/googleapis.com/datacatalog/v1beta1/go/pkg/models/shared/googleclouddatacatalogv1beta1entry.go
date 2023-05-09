@@ -16,21 +16,25 @@ const (
 	GoogleCloudDatacatalogV1beta1EntryIntegratedSystemEnumCloudPubsub                 GoogleCloudDatacatalogV1beta1EntryIntegratedSystemEnum = "CLOUD_PUBSUB"
 )
 
+func (e GoogleCloudDatacatalogV1beta1EntryIntegratedSystemEnum) ToPointer() *GoogleCloudDatacatalogV1beta1EntryIntegratedSystemEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1beta1EntryIntegratedSystemEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTEGRATED_SYSTEM_UNSPECIFIED":
 		fallthrough
 	case "BIGQUERY":
 		fallthrough
 	case "CLOUD_PUBSUB":
-		*e = GoogleCloudDatacatalogV1beta1EntryIntegratedSystemEnum(s)
+		*e = GoogleCloudDatacatalogV1beta1EntryIntegratedSystemEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1beta1EntryIntegratedSystemEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1beta1EntryIntegratedSystemEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	GoogleCloudDatacatalogV1beta1EntryTypeEnumFileset              GoogleCloudDatacatalogV1beta1EntryTypeEnum = "FILESET"
 )
 
+func (e GoogleCloudDatacatalogV1beta1EntryTypeEnum) ToPointer() *GoogleCloudDatacatalogV1beta1EntryTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1beta1EntryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTRY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TABLE":
@@ -60,10 +68,10 @@ func (e *GoogleCloudDatacatalogV1beta1EntryTypeEnum) UnmarshalJSON(data []byte) 
 	case "DATA_STREAM":
 		fallthrough
 	case "FILESET":
-		*e = GoogleCloudDatacatalogV1beta1EntryTypeEnum(s)
+		*e = GoogleCloudDatacatalogV1beta1EntryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1beta1EntryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1beta1EntryTypeEnum: %v", v)
 	}
 }
 

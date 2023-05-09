@@ -16,12 +16,16 @@ const (
 	DistrictStatusStateEnumPaused  DistrictStatusStateEnum = "paused"
 )
 
+func (e DistrictStatusStateEnum) ToPointer() *DistrictStatusStateEnum {
+	return &e
+}
+
 func (e *DistrictStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "pending":
@@ -29,10 +33,10 @@ func (e *DistrictStatusStateEnum) UnmarshalJSON(data []byte) error {
 	case "error":
 		fallthrough
 	case "paused":
-		*e = DistrictStatusStateEnum(s)
+		*e = DistrictStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistrictStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DistrictStatusStateEnum: %v", v)
 	}
 }
 

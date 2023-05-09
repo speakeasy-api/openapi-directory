@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - The Vonage Audit API allows you to view details of changes to your account. More information is available at <https://developer.nexmo.com/audit/overview>.
 // _Please note that the Audit API is currently in Beta_
 type SDK struct {
@@ -97,7 +112,10 @@ func New(opts ...SDKOption) *SDK {
 // Get the specified audit event.
 func (s *SDK) GetEvent(ctx context.Context, request operations.GetEventRequest, security operations.GetEventSecurity) (*operations.GetEventResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/events/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,7 +257,7 @@ func (s *SDK) GetEvents(ctx context.Context, request operations.GetEventsRequest
 
 // GetEventsOptions - Retrieve audit event types
 // Get audit event types.
-func (s *SDK) GetEventsOptions(ctx context.Context) (*operations.GetEventsOptionsResponse, error) {
+func (s *SDK) GetEventsOptions(ctx context.Context, security operations.GetEventsOptionsSecurity) (*operations.GetEventsOptionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/events"
 
@@ -248,7 +266,7 @@ func (s *SDK) GetEventsOptions(ctx context.Context) (*operations.GetEventsOption
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

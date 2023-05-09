@@ -17,12 +17,16 @@ const (
 	VaultTypeEnumTransfer    VaultTypeEnum = "TRANSFER"
 )
 
+func (e VaultTypeEnum) ToPointer() *VaultTypeEnum {
+	return &e
+}
+
 func (e *VaultTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_CREATED":
 		fallthrough
 	case "PERSONAL":
@@ -30,10 +34,10 @@ func (e *VaultTypeEnum) UnmarshalJSON(data []byte) error {
 	case "EVERYONE":
 		fallthrough
 	case "TRANSFER":
-		*e = VaultTypeEnum(s)
+		*e = VaultTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VaultTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VaultTypeEnum: %v", v)
 	}
 }
 

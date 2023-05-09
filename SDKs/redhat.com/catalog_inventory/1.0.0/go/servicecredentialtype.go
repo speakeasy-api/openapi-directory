@@ -85,7 +85,10 @@ func (s *serviceCredentialType) ListServiceCredentialTypes(ctx context.Context, 
 // Returns a ServiceCredentialType object
 func (s *serviceCredentialType) ShowServiceCredentialType(ctx context.Context, request operations.ShowServiceCredentialTypeRequest) (*operations.ShowServiceCredentialTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_credential_types/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_credential_types/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	InstanceActionEnumKeepAlive InstanceActionEnum = "KEEP_ALIVE"
 )
 
+func (e InstanceActionEnum) ToPointer() *InstanceActionEnum {
+	return &e
+}
+
 func (e *InstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TERMINATE":
 		fallthrough
 	case "KEEP_ALIVE":
-		*e = InstanceActionEnum(s)
+		*e = InstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceActionEnum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newSavedQueries(defaultClient, securityClient HTTPClient, serverURL, langua
 // CloudassetSavedQueriesCreate - Creates a saved query in a parent project/folder/organization.
 func (s *savedQueries) CloudassetSavedQueriesCreate(ctx context.Context, request operations.CloudassetSavedQueriesCreateRequest, security operations.CloudassetSavedQueriesCreateSecurity) (*operations.CloudassetSavedQueriesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/savedQueries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/savedQueries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SavedQueryInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *savedQueries) CloudassetSavedQueriesCreate(ctx context.Context, request
 // CloudassetSavedQueriesDelete - Deletes a saved query.
 func (s *savedQueries) CloudassetSavedQueriesDelete(ctx context.Context, request operations.CloudassetSavedQueriesDeleteRequest, security operations.CloudassetSavedQueriesDeleteSecurity) (*operations.CloudassetSavedQueriesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *savedQueries) CloudassetSavedQueriesDelete(ctx context.Context, request
 // CloudassetSavedQueriesGet - Gets details about a saved query.
 func (s *savedQueries) CloudassetSavedQueriesGet(ctx context.Context, request operations.CloudassetSavedQueriesGetRequest, security operations.CloudassetSavedQueriesGetSecurity) (*operations.CloudassetSavedQueriesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *savedQueries) CloudassetSavedQueriesGet(ctx context.Context, request op
 // CloudassetSavedQueriesList - Lists all saved queries in a parent project/folder/organization.
 func (s *savedQueries) CloudassetSavedQueriesList(ctx context.Context, request operations.CloudassetSavedQueriesListRequest, security operations.CloudassetSavedQueriesListSecurity) (*operations.CloudassetSavedQueriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/savedQueries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/savedQueries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *savedQueries) CloudassetSavedQueriesList(ctx context.Context, request o
 // CloudassetSavedQueriesPatch - Updates a saved query.
 func (s *savedQueries) CloudassetSavedQueriesPatch(ctx context.Context, request operations.CloudassetSavedQueriesPatchRequest, security operations.CloudassetSavedQueriesPatchSecurity) (*operations.CloudassetSavedQueriesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SavedQueryInput", "json")
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	RichResultsIssueSeverityEnumError               RichResultsIssueSeverityEnum = "ERROR"
 )
 
+func (e RichResultsIssueSeverityEnum) ToPointer() *RichResultsIssueSeverityEnum {
+	return &e
+}
+
 func (e *RichResultsIssueSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "WARNING":
 		fallthrough
 	case "ERROR":
-		*e = RichResultsIssueSeverityEnum(s)
+		*e = RichResultsIssueSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RichResultsIssueSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for RichResultsIssueSeverityEnum: %v", v)
 	}
 }
 

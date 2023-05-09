@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/fungenerators.com/random-
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetFactFodRequest{
-        Category: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.FactOfTheDay.GetFactFod(ctx, req, operations.GetFactFodSecurity{
+    res, err := s.FactOfTheDay.GetFactFod(ctx, operations.GetFactFodRequest{
+        Category: sdk.String("corrupti"),
+    }, operations.GetFactFodSecurity{
         XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -47,33 +44,33 @@ func main() {
 ## Available Resources and Operations
 
 
-### FactOfTheDay
+### [FactOfTheDay](docs/factoftheday/README.md)
 
-* `GetFactFod` - Get fact of the day for the given category.
-* `GetFactFodCategories` - Get the list of supported fact of the day categories.
+* [GetFactFod](docs/factoftheday/README.md#getfactfod) - Get fact of the day for the given category.
+* [GetFactFodCategories](docs/factoftheday/README.md#getfactfodcategories) - Get the list of supported fact of the day categories.
 
-### NumberFacts
+### [NumberFacts](docs/numberfacts/README.md)
 
-* `GetFactNumbers` - Get a random fact about a number
+* [GetFactNumbers](docs/numberfacts/README.md#getfactnumbers) - Get a random fact about a number
 
-### OnThisDay
+### [OnThisDay](docs/onthisday/README.md)
 
-* `GetFactOnthisdayBorn` - Returns a random ( famous/ relatively famous ) person born on a given day and month
-* `GetFactOnthisdayDied` - Returns a random ( famous/ relatively famous ) person died on a given day and month
-* `GetFactOnthisdayEvent` - Returns a random ( famous/ relatively famous ) historic event on a given day and month
+* [GetFactOnthisdayBorn](docs/onthisday/README.md#getfactonthisdayborn) - Returns a random ( famous/ relatively famous ) person born on a given day and month
+* [GetFactOnthisdayDied](docs/onthisday/README.md#getfactonthisdaydied) - Returns a random ( famous/ relatively famous ) person died on a given day and month
+* [GetFactOnthisdayEvent](docs/onthisday/README.md#getfactonthisdayevent) - Returns a random ( famous/ relatively famous ) historic event on a given day and month
 
-### PrivateFacts
+### [PrivateFacts](docs/privatefacts/README.md)
 
-* `DeleteFact` - Delete a Fact entry identified by the id.
-* `GetFact` - Get a Fact belonging to the id.
-* `PutFact` - Add a Fact entry to the database (private collection).
+* [DeleteFact](docs/privatefacts/README.md#deletefact) - Delete a Fact entry identified by the id.
+* [GetFact](docs/privatefacts/README.md#getfact) - Get a Fact belonging to the id.
+* [PutFact](docs/privatefacts/README.md#putfact) - Add a Fact entry to the database (private collection).
 
-### RandomFacts
+### [RandomFacts](docs/randomfacts/README.md)
 
-* `GetFact` - Get a Fact belonging to the id.
-* `GetFactCategories` - Get a random Fact.
-* `GetFactRandom` - Get a random Fact for a given category(optional) and subcategory(optional).
-* `GetFactSearch` - Search for random Fact which has the text in the query, for a given category(optional) and subcategory(optional).
+* [GetFact](docs/randomfacts/README.md#getfact) - Get a Fact belonging to the id.
+* [GetFactCategories](docs/randomfacts/README.md#getfactcategories) - Get a random Fact.
+* [GetFactRandom](docs/randomfacts/README.md#getfactrandom) - Get a random Fact for a given category(optional) and subcategory(optional).
+* [GetFactSearch](docs/randomfacts/README.md#getfactsearch) - Search for random Fact which has the text in the query, for a given category(optional) and subcategory(optional).
 <!-- End SDK Available Operations -->
 
 ### Maturity

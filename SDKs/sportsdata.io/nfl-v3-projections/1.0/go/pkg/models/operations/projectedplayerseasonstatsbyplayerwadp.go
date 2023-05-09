@@ -17,19 +17,23 @@ const (
 	ProjectedPlayerSeasonStatsByPlayerWAdpFormatEnumJSON ProjectedPlayerSeasonStatsByPlayerWAdpFormatEnum = "JSON"
 )
 
+func (e ProjectedPlayerSeasonStatsByPlayerWAdpFormatEnum) ToPointer() *ProjectedPlayerSeasonStatsByPlayerWAdpFormatEnum {
+	return &e
+}
+
 func (e *ProjectedPlayerSeasonStatsByPlayerWAdpFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = ProjectedPlayerSeasonStatsByPlayerWAdpFormatEnum(s)
+		*e = ProjectedPlayerSeasonStatsByPlayerWAdpFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectedPlayerSeasonStatsByPlayerWAdpFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectedPlayerSeasonStatsByPlayerWAdpFormatEnum: %v", v)
 	}
 }
 

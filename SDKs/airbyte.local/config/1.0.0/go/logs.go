@@ -75,13 +75,12 @@ func (s *logs) GetLogs(ctx context.Context, request shared.LogsRequestBody) (*op
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
-			data, err := io.ReadAll(httpRes.Body)
+			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {
 				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
-			out := string(data)
-			res.GetLogs200TextPlainBinaryString = &out
+			res.GetLogs200TextPlainBinaryString = out
 		}
 	case httpRes.StatusCode == 404:
 		switch {

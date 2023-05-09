@@ -36,7 +36,10 @@ func newCustomFields(defaultClient, securityClient HTTPClient, serverURL, langua
 // DeleteCustomFieldsIDJSON - Delete an existing CustomField.
 func (s *customFields) DeleteCustomFieldsIDJSON(ctx context.Context, request operations.DeleteCustomFieldsIDJSONRequest) (*operations.DeleteCustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -95,7 +98,10 @@ func (s *customFields) DeleteCustomFieldsIDJSON(ctx context.Context, request ope
 // DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON - Delete an existing CustomFieldSelectOption.
 func (s *customFields) DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON(ctx context.Context, request operations.DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONRequest) (*operations.DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}/select_options/{custom_field_select_option_id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}/select_options/{custom_field_select_option_id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -202,7 +208,10 @@ func (s *customFields) GetCustomFieldsJSON(ctx context.Context, request operatio
 // GetCustomFieldsIDJSON - Retrieve a single CustomField.
 func (s *customFields) GetCustomFieldsIDJSON(ctx context.Context, request operations.GetCustomFieldsIDJSONRequest) (*operations.GetCustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -318,7 +327,10 @@ func (s *customFields) PostCustomFieldsJSON(ctx context.Context, request operati
 // PutCustomFieldsIDJSON - Update a CustomField.
 func (s *customFields) PutCustomFieldsIDJSON(ctx context.Context, request operations.PutCustomFieldsIDJSONRequest) (*operations.PutCustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom_fields/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomFieldEdit", "json")
 	if err != nil {

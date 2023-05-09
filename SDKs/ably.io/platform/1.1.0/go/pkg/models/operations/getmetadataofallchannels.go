@@ -19,19 +19,23 @@ const (
 	GetMetadataOfAllChannelsByEnumID    GetMetadataOfAllChannelsByEnum = "id"
 )
 
+func (e GetMetadataOfAllChannelsByEnum) ToPointer() *GetMetadataOfAllChannelsByEnum {
+	return &e
+}
+
 func (e *GetMetadataOfAllChannelsByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "value":
 		fallthrough
 	case "id":
-		*e = GetMetadataOfAllChannelsByEnum(s)
+		*e = GetMetadataOfAllChannelsByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMetadataOfAllChannelsByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMetadataOfAllChannelsByEnum: %v", v)
 	}
 }
 

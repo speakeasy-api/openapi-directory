@@ -21,12 +21,16 @@ const (
 	GoogleCloudIntegrationsV1alphaFailurePolicyRetryStrategyEnumRestartIntegrationWithBackoff GoogleCloudIntegrationsV1alphaFailurePolicyRetryStrategyEnum = "RESTART_INTEGRATION_WITH_BACKOFF"
 )
 
+func (e GoogleCloudIntegrationsV1alphaFailurePolicyRetryStrategyEnum) ToPointer() *GoogleCloudIntegrationsV1alphaFailurePolicyRetryStrategyEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaFailurePolicyRetryStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETRY_STRATEGY_UNSPECIFIED":
 		fallthrough
 	case "IGNORE":
@@ -42,10 +46,10 @@ func (e *GoogleCloudIntegrationsV1alphaFailurePolicyRetryStrategyEnum) Unmarshal
 	case "EXPONENTIAL_BACKOFF":
 		fallthrough
 	case "RESTART_INTEGRATION_WITH_BACKOFF":
-		*e = GoogleCloudIntegrationsV1alphaFailurePolicyRetryStrategyEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaFailurePolicyRetryStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaFailurePolicyRetryStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaFailurePolicyRetryStrategyEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicy(ctx context.Context, request operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyRequest, security operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicySecurity) (*operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) GameservicesProjectsLocationsGameServerDeploymentsGetIamPolic
 // GameservicesProjectsLocationsGameServerDeploymentsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) GameservicesProjectsLocationsGameServerDeploymentsSetIamPolicy(ctx context.Context, request operations.GameservicesProjectsLocationsGameServerDeploymentsSetIamPolicyRequest, security operations.GameservicesProjectsLocationsGameServerDeploymentsSetIamPolicySecurity) (*operations.GameservicesProjectsLocationsGameServerDeploymentsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) GameservicesProjectsLocationsGameServerDeploymentsSetIamPolic
 // GameservicesProjectsLocationsGameServerDeploymentsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) GameservicesProjectsLocationsGameServerDeploymentsTestIamPermissions(ctx context.Context, request operations.GameservicesProjectsLocationsGameServerDeploymentsTestIamPermissionsRequest, security operations.GameservicesProjectsLocationsGameServerDeploymentsTestIamPermissionsSecurity) (*operations.GameservicesProjectsLocationsGameServerDeploymentsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) GameservicesProjectsLocationsGameServerDeploymentsTestIamPerm
 // GameservicesProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) GameservicesProjectsLocationsList(ctx context.Context, request operations.GameservicesProjectsLocationsListRequest, security operations.GameservicesProjectsLocationsListSecurity) (*operations.GameservicesProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) GameservicesProjectsLocationsList(ctx context.Context, reques
 // GameservicesProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) GameservicesProjectsLocationsOperationsCancel(ctx context.Context, request operations.GameservicesProjectsLocationsOperationsCancelRequest, security operations.GameservicesProjectsLocationsOperationsCancelSecurity) (*operations.GameservicesProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) GameservicesProjectsLocationsOperationsCancel(ctx context.Con
 // GameservicesProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) GameservicesProjectsLocationsOperationsDelete(ctx context.Context, request operations.GameservicesProjectsLocationsOperationsDeleteRequest, security operations.GameservicesProjectsLocationsOperationsDeleteSecurity) (*operations.GameservicesProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) GameservicesProjectsLocationsOperationsDelete(ctx context.Con
 // GameservicesProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) GameservicesProjectsLocationsOperationsGet(ctx context.Context, request operations.GameservicesProjectsLocationsOperationsGetRequest, security operations.GameservicesProjectsLocationsOperationsGetSecurity) (*operations.GameservicesProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) GameservicesProjectsLocationsOperationsGet(ctx context.Contex
 // GameservicesProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) GameservicesProjectsLocationsOperationsList(ctx context.Context, request operations.GameservicesProjectsLocationsOperationsListRequest, security operations.GameservicesProjectsLocationsOperationsListSecurity) (*operations.GameservicesProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

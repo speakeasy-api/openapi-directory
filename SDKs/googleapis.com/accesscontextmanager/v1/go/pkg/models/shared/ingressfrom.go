@@ -17,12 +17,16 @@ const (
 	IngressFromIdentityTypeEnumAnyServiceAccount       IngressFromIdentityTypeEnum = "ANY_SERVICE_ACCOUNT"
 )
 
+func (e IngressFromIdentityTypeEnum) ToPointer() *IngressFromIdentityTypeEnum {
+	return &e
+}
+
 func (e *IngressFromIdentityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IDENTITY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ANY_IDENTITY":
@@ -30,10 +34,10 @@ func (e *IngressFromIdentityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ANY_USER_ACCOUNT":
 		fallthrough
 	case "ANY_SERVICE_ACCOUNT":
-		*e = IngressFromIdentityTypeEnum(s)
+		*e = IngressFromIdentityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IngressFromIdentityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IngressFromIdentityTypeEnum: %v", v)
 	}
 }
 

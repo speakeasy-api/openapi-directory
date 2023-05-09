@@ -16,17 +16,21 @@ const (
 	FailoverShardXAmzTargetEnumAmazonMemoryDbFailoverShard FailoverShardXAmzTargetEnum = "AmazonMemoryDB.FailoverShard"
 )
 
+func (e FailoverShardXAmzTargetEnum) ToPointer() *FailoverShardXAmzTargetEnum {
+	return &e
+}
+
 func (e *FailoverShardXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.FailoverShard":
-		*e = FailoverShardXAmzTargetEnum(s)
+		*e = FailoverShardXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailoverShardXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for FailoverShardXAmzTargetEnum: %v", v)
 	}
 }
 

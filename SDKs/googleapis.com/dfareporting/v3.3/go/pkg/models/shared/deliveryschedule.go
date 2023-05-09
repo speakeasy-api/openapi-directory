@@ -29,12 +29,16 @@ const (
 	DeliverySchedulePriorityEnumAdPriority16 DeliverySchedulePriorityEnum = "AD_PRIORITY_16"
 )
 
+func (e DeliverySchedulePriorityEnum) ToPointer() *DeliverySchedulePriorityEnum {
+	return &e
+}
+
 func (e *DeliverySchedulePriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AD_PRIORITY_01":
 		fallthrough
 	case "AD_PRIORITY_02":
@@ -66,10 +70,10 @@ func (e *DeliverySchedulePriorityEnum) UnmarshalJSON(data []byte) error {
 	case "AD_PRIORITY_15":
 		fallthrough
 	case "AD_PRIORITY_16":
-		*e = DeliverySchedulePriorityEnum(s)
+		*e = DeliverySchedulePriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliverySchedulePriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliverySchedulePriorityEnum: %v", v)
 	}
 }
 

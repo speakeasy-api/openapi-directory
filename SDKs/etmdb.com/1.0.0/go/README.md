@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/etmdb.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CinemaSearchReadRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Cinema.CinemaSearchRead(ctx, req)
+    res, err := s.Cinema.CinemaSearchRead(ctx, operations.CinemaSearchReadRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,86 +42,86 @@ func main() {
 ## Available Resources and Operations
 
 
-### Cinema
+### [Cinema](docs/cinema/README.md)
 
-* `CinemaSearchRead` - Return cinema search result
+* [CinemaSearchRead](docs/cinema/README.md#cinemasearchread) - Return cinema search result
 
-### CinemaDetail
+### [CinemaDetail](docs/cinemadetail/README.md)
 
-* `CinemaDetailSearchRead` - Return cinema details search result
+* [CinemaDetailSearchRead](docs/cinemadetail/README.md#cinemadetailsearchread) - Return cinema details search result
 
-### CinemaSchedule
+### [CinemaSchedule](docs/cinemaschedule/README.md)
 
-* `CinemaScheduleSearchRead` - Return cinema schedule search result
-* `CinemaScheduleSearchallRead` - Return cinema schedule search result
+* [CinemaScheduleSearchRead](docs/cinemaschedule/README.md#cinemaschedulesearchread) - Return cinema schedule search result
+* [CinemaScheduleSearchallRead](docs/cinemaschedule/README.md#cinemaschedulesearchallread) - Return cinema schedule search result
 
-### CinemaSheduleShowtime
+### [CinemaSheduleShowtime](docs/cinemasheduleshowtime/README.md)
 
-* `CinemaSheduleShowtimeSearchRead` - Return cinema schedule and showtime search result
-* `CinemaSheduleShowtimeSearchallRead` - Return cinema schedule and showtime search result
+* [CinemaSheduleShowtimeSearchRead](docs/cinemasheduleshowtime/README.md#cinemasheduleshowtimesearchread) - Return cinema schedule and showtime search result
+* [CinemaSheduleShowtimeSearchallRead](docs/cinemasheduleshowtime/README.md#cinemasheduleshowtimesearchallread) - Return cinema schedule and showtime search result
 
-### Company
+### [Company](docs/company/README.md)
 
-* `CompanySearchRead` - Return company search result
+* [CompanySearchRead](docs/company/README.md#companysearchread) - Return company search result
 
-### CompanyCredits
+### [CompanyCredits](docs/companycredits/README.md)
 
-* `CompanyCreditsSearchRead` - Return company credits search result
-* `CompanyCreditsSearchallRead` - Return company credits search result
+* [CompanyCreditsSearchRead](docs/companycredits/README.md#companycreditssearchread) - Return company credits search result
+* [CompanyCreditsSearchallRead](docs/companycredits/README.md#companycreditssearchallread) - Return company credits search result
 
-### Filmography
+### [Filmography](docs/filmography/README.md)
 
-* `FilmographySearchRead` - Return filmography search result
-* `FilmographySearchallRead` - Return filmography search result
+* [FilmographySearchRead](docs/filmography/README.md#filmographysearchread) - Return filmography search result
+* [FilmographySearchallRead](docs/filmography/README.md#filmographysearchallread) - Return filmography search result
 
-### FilmographyType
+### [FilmographyType](docs/filmographytype/README.md)
 
-* `FilmographyTypeSearchRead` - Return filmography type search result
+* [FilmographyTypeSearchRead](docs/filmographytype/README.md#filmographytypesearchread) - Return filmography type search result
 
-### Genre
+### [Genre](docs/genre/README.md)
 
-* `GenreSearchRead` - Return movie genre search result
-* `GenreSearchallRead` - Return movie genre search result
+* [GenreSearchRead](docs/genre/README.md#genresearchread) - Return movie genre search result
+* [GenreSearchallRead](docs/genre/README.md#genresearchallread) - Return movie genre search result
 
-### GenreType
+### [GenreType](docs/genretype/README.md)
 
-* `GenreTypeSearchRead` - Return genre type search result
+* [GenreTypeSearchRead](docs/genretype/README.md#genretypesearchread) - Return genre type search result
 
-### Job
+### [Job](docs/job/README.md)
 
-* `JobSearchRead` - Return job details search result
-* `JobSearchallRead` - Return job details search result
+* [JobSearchRead](docs/job/README.md#jobsearchread) - Return job details search result
+* [JobSearchallRead](docs/job/README.md#jobsearchallread) - Return job details search result
 
-### Media
+### [Media](docs/media/README.md)
 
-* `MediaSearchRead` - Return movie media search result
-* `MediaSearchallRead` - Return cast media search result
+* [MediaSearchRead](docs/media/README.md#mediasearchread) - Return movie media search result
+* [MediaSearchallRead](docs/media/README.md#mediasearchallread) - Return cast media search result
 
-### Movie
+### [Movie](docs/movie/README.md)
 
-* `MovieSearchRead` - Return movie search result
+* [MovieSearchRead](docs/movie/README.md#moviesearchread) - Return movie search result
 
-### MovieCast
+### [MovieCast](docs/moviecast/README.md)
 
-* `MovieCastSearchRead` - Return movie cast search result
-* `MovieCastSearchallRead` - Return movie cast search result
+* [MovieCastSearchRead](docs/moviecast/README.md#moviecastsearchread) - Return movie cast search result
+* [MovieCastSearchallRead](docs/moviecast/README.md#moviecastsearchallread) - Return movie cast search result
 
-### News
+### [News](docs/news/README.md)
 
-* `NewsSearchRead` - Return news or article search result
+* [NewsSearchRead](docs/news/README.md#newssearchread) - Return news or article search result
 
-### People
+### [People](docs/people/README.md)
 
-* `PeopleSearchRead` - Return cast search result
+* [PeopleSearchRead](docs/people/README.md#peoplesearchread) - Return cast search result
 
-### Showtime
+### [Showtime](docs/showtime/README.md)
 
-* `ShowtimeSearchallRead` - Return showtime search result
+* [ShowtimeSearchallRead](docs/showtime/README.md#showtimesearchallread) - Return showtime search result
 
-### Watchlist
+### [Watchlist](docs/watchlist/README.md)
 
-* `WatchlistSearchRead` - Return watchlist search result
-* `WatchlistSearchallRead` - Return watchlist search result
+* [WatchlistSearchRead](docs/watchlist/README.md#watchlistsearchread) - Return watchlist search result
+* [WatchlistSearchallRead](docs/watchlist/README.md#watchlistsearchallread) - Return watchlist search result
 <!-- End SDK Available Operations -->
 
 ### Maturity

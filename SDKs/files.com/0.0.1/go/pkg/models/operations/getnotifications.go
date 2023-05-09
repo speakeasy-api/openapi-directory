@@ -10,20 +10,12 @@ import (
 type GetNotificationsRequest struct {
 	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
-	// If set, return records where the specified field is equal to the supplied value. Valid fields are `user_id`, `group_id` or `path`.
+	// If set, return records where the specified field is equal to the supplied value. Valid fields are `path`, `user_id` or `group_id`.
 	Filter map[string]interface{} `queryParam:"style=form,explode=true,name=filter"`
-	// If set, return records where the specified field is greater than the supplied value. Valid fields are `user_id`, `group_id` or `path`.
-	FilterGt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_gt"`
-	// If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `user_id`, `group_id` or `path`.
-	FilterGteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_gteq"`
-	// If set, return records where the specified field is equal to the supplied value. Valid fields are `user_id`, `group_id` or `path`.
-	FilterLike map[string]interface{} `queryParam:"style=form,explode=true,name=filter_like"`
-	// If set, return records where the specified field is less than the supplied value. Valid fields are `user_id`, `group_id` or `path`.
-	FilterLt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lt"`
-	// If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `user_id`, `group_id` or `path`.
-	FilterLteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lteq"`
-	// DEPRECATED: Show notifications for this Group ID. Use `filter[group_id]` instead.
-	GroupID *int `queryParam:"style=form,explode=true,name=group_id"`
+	// If set, return records where the specified field is prefixed by the supplied value. Valid fields are `path`.
+	FilterPrefix map[string]interface{} `queryParam:"style=form,explode=true,name=filter_prefix"`
+	// If set, return records where the specified field is equal to the supplied value.
+	GroupID *string `queryParam:"style=form,explode=true,name=group_id"`
 	// If `include_ancestors` is `true` and `path` is specified, include notifications for any parent paths. Ignored if `path` is not specified.
 	IncludeAncestors *bool `queryParam:"style=form,explode=true,name=include_ancestors"`
 	// Show notifications for this Path.

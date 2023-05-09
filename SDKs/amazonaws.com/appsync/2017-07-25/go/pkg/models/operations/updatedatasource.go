@@ -66,12 +66,16 @@ const (
 	UpdateDataSourceRequestBodyTypeEnumAmazonEventbridge       UpdateDataSourceRequestBodyTypeEnum = "AMAZON_EVENTBRIDGE"
 )
 
+func (e UpdateDataSourceRequestBodyTypeEnum) ToPointer() *UpdateDataSourceRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *UpdateDataSourceRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_LAMBDA":
 		fallthrough
 	case "AMAZON_DYNAMODB":
@@ -87,10 +91,10 @@ func (e *UpdateDataSourceRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AMAZON_OPENSEARCH_SERVICE":
 		fallthrough
 	case "AMAZON_EVENTBRIDGE":
-		*e = UpdateDataSourceRequestBodyTypeEnum(s)
+		*e = UpdateDataSourceRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDataSourceRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDataSourceRequestBodyTypeEnum: %v", v)
 	}
 }
 

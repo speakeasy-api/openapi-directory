@@ -15,19 +15,23 @@ const (
 	GetIpamPoolCidrsResultIpamPoolCidrsFailureReasonCodeEnumLimitExceeded    GetIpamPoolCidrsResultIpamPoolCidrsFailureReasonCodeEnum = "limit-exceeded"
 )
 
+func (e GetIpamPoolCidrsResultIpamPoolCidrsFailureReasonCodeEnum) ToPointer() *GetIpamPoolCidrsResultIpamPoolCidrsFailureReasonCodeEnum {
+	return &e
+}
+
 func (e *GetIpamPoolCidrsResultIpamPoolCidrsFailureReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cidr-not-available":
 		fallthrough
 	case "limit-exceeded":
-		*e = GetIpamPoolCidrsResultIpamPoolCidrsFailureReasonCodeEnum(s)
+		*e = GetIpamPoolCidrsResultIpamPoolCidrsFailureReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIpamPoolCidrsResultIpamPoolCidrsFailureReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIpamPoolCidrsResultIpamPoolCidrsFailureReasonCodeEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	GetIpamPoolCidrsResultIpamPoolCidrsStateEnumFailedImport       GetIpamPoolCidrsResultIpamPoolCidrsStateEnum = "failed-import"
 )
 
+func (e GetIpamPoolCidrsResultIpamPoolCidrsStateEnum) ToPointer() *GetIpamPoolCidrsResultIpamPoolCidrsStateEnum {
+	return &e
+}
+
 func (e *GetIpamPoolCidrsResultIpamPoolCidrsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending-provision":
 		fallthrough
 	case "provisioned":
@@ -72,10 +80,10 @@ func (e *GetIpamPoolCidrsResultIpamPoolCidrsStateEnum) UnmarshalJSON(data []byte
 	case "pending-import":
 		fallthrough
 	case "failed-import":
-		*e = GetIpamPoolCidrsResultIpamPoolCidrsStateEnum(s)
+		*e = GetIpamPoolCidrsResultIpamPoolCidrsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIpamPoolCidrsResultIpamPoolCidrsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIpamPoolCidrsResultIpamPoolCidrsStateEnum: %v", v)
 	}
 }
 

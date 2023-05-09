@@ -21,21 +21,25 @@ const (
 	GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnumOneHundred GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnum = "100"
 )
 
+func (e GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnum) ToPointer() *GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnum {
+	return &e
+}
+
 func (e *GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "10":
 		fallthrough
 	case "50":
 		fallthrough
 	case "100":
-		*e = GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnum(s)
+		*e = GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspaceSlugOrganizationsOrganizationIDMembersItemsEnum: %v", v)
 	}
 }
 

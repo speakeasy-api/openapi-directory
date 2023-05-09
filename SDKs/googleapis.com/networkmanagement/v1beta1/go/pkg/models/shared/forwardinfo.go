@@ -21,12 +21,16 @@ const (
 	ForwardInfoTargetEnumAnotherProject             ForwardInfoTargetEnum = "ANOTHER_PROJECT"
 )
 
+func (e ForwardInfoTargetEnum) ToPointer() *ForwardInfoTargetEnum {
+	return &e
+}
+
 func (e *ForwardInfoTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_UNSPECIFIED":
 		fallthrough
 	case "PEERING_VPC":
@@ -42,10 +46,10 @@ func (e *ForwardInfoTargetEnum) UnmarshalJSON(data []byte) error {
 	case "CLOUD_SQL_INSTANCE":
 		fallthrough
 	case "ANOTHER_PROJECT":
-		*e = ForwardInfoTargetEnum(s)
+		*e = ForwardInfoTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ForwardInfoTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ForwardInfoTargetEnum: %v", v)
 	}
 }
 

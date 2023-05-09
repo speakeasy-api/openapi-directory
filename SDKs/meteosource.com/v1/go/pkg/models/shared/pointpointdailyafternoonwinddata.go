@@ -9,7 +9,6 @@ type PointPointDailyAfternoonWindData struct {
 	// Afternoon wind direction in `N`, `NNE`, `NE`, ..., `NNW` format.
 	// Unit: 16dir
 	Dir []byte `json:"dir,omitempty"`
-	// Wind gust speed. (afternoon max)
 	// Units: metric = m/s, us = mph, uk = mph, ca = km/h
 	Gusts *float64 `json:"gusts,omitempty"`
 	// Units: metric = m/s, us = mph, uk = mph, ca = km/h

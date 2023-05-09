@@ -34,7 +34,10 @@ func newSizes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DfareportingSizesGet - Gets one size by ID.
 func (s *sizes) DfareportingSizesGet(ctx context.Context, request operations.DfareportingSizesGetRequest, security operations.DfareportingSizesGetSecurity) (*operations.DfareportingSizesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sizes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sizes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *sizes) DfareportingSizesGet(ctx context.Context, request operations.Dfa
 // DfareportingSizesInsert - Inserts a new size.
 func (s *sizes) DfareportingSizesInsert(ctx context.Context, request operations.DfareportingSizesInsertRequest, security operations.DfareportingSizesInsertSecurity) (*operations.DfareportingSizesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sizes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sizes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Size", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *sizes) DfareportingSizesInsert(ctx context.Context, request operations.
 // DfareportingSizesList - Retrieves a list of sizes, possibly filtered. Retrieved sizes are globally unique and may include values not currently in use by your account. Due to this, the list of sizes returned by this method may differ from the list seen in the Trafficking UI.
 func (s *sizes) DfareportingSizesList(ctx context.Context, request operations.DfareportingSizesListRequest, security operations.DfareportingSizesListSecurity) (*operations.DfareportingSizesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sizes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/sizes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

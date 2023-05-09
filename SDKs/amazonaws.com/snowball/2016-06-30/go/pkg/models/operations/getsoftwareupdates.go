@@ -16,17 +16,21 @@ const (
 	GetSoftwareUpdatesXAmzTargetEnumAwsieSnowballJobManagementServiceGetSoftwareUpdates GetSoftwareUpdatesXAmzTargetEnum = "AWSIESnowballJobManagementService.GetSoftwareUpdates"
 )
 
+func (e GetSoftwareUpdatesXAmzTargetEnum) ToPointer() *GetSoftwareUpdatesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSoftwareUpdatesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSIESnowballJobManagementService.GetSoftwareUpdates":
-		*e = GetSoftwareUpdatesXAmzTargetEnum(s)
+		*e = GetSoftwareUpdatesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSoftwareUpdatesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSoftwareUpdatesXAmzTargetEnum: %v", v)
 	}
 }
 

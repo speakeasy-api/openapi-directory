@@ -36,7 +36,10 @@ func newCommands(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DeleteCommandsID - Delete a Saved Command
 func (s *commands) DeleteCommandsID(ctx context.Context, request operations.DeleteCommandsIDRequest) (*operations.DeleteCommandsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/commands/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/commands/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -331,7 +334,10 @@ func (s *commands) PostCommandsSend(ctx context.Context, request shared.Command)
 // PutCommandsID - Update a Saved Command
 func (s *commands) PutCommandsID(ctx context.Context, request operations.PutCommandsIDRequest) (*operations.PutCommandsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/commands/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/commands/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Command", "json")
 	if err != nil {

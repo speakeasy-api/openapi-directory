@@ -25,12 +25,16 @@ const (
 	GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnumSuperseded GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum = "SUPERSEDED"
 )
 
+func (e GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum) ToPointer() *GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum {
+	return &e
+}
+
 func (e *GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPEN":
 		fallthrough
 	case "MERGED":
@@ -38,10 +42,10 @@ func (e *GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum) UnmarshalJSON(da
 	case "DECLINED":
 		fallthrough
 	case "SUPERSEDED":
-		*e = GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum(s)
+		*e = GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum: %v", v)
 	}
 }
 

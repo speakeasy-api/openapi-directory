@@ -8,166 +8,170 @@ import (
 )
 
 // StatusCodeEnum - HTTP status codes to filter by. Only results with these codes will be returned
-type StatusCodeEnum string
+type StatusCodeEnum int64
 
 const (
-	StatusCodeEnumTwoHundred                StatusCodeEnum = "200"
-	StatusCodeEnumTwoHundredAndOne          StatusCodeEnum = "201"
-	StatusCodeEnumTwoHundredAndTwo          StatusCodeEnum = "202"
-	StatusCodeEnumTwoHundredAndThree        StatusCodeEnum = "203"
-	StatusCodeEnumTwoHundredAndFour         StatusCodeEnum = "204"
-	StatusCodeEnumTwoHundredAndFive         StatusCodeEnum = "205"
-	StatusCodeEnumTwoHundredAndSix          StatusCodeEnum = "206"
-	StatusCodeEnumThreeHundred              StatusCodeEnum = "300"
-	StatusCodeEnumThreeHundredAndOne        StatusCodeEnum = "301"
-	StatusCodeEnumThreeHundredAndTwo        StatusCodeEnum = "302"
-	StatusCodeEnumThreeHundredAndThree      StatusCodeEnum = "303"
-	StatusCodeEnumThreeHundredAndFour       StatusCodeEnum = "304"
-	StatusCodeEnumThreeHundredAndFive       StatusCodeEnum = "305"
-	StatusCodeEnumThreeHundredAndSix        StatusCodeEnum = "306"
-	StatusCodeEnumThreeHundredAndSeven      StatusCodeEnum = "307"
-	StatusCodeEnumThreeHundredAndEight      StatusCodeEnum = "308"
-	StatusCodeEnumFourHundred               StatusCodeEnum = "400"
-	StatusCodeEnumFourHundredAndOne         StatusCodeEnum = "401"
-	StatusCodeEnumFourHundredAndTwo         StatusCodeEnum = "402"
-	StatusCodeEnumFourHundredAndThree       StatusCodeEnum = "403"
-	StatusCodeEnumFourHundredAndFour        StatusCodeEnum = "404"
-	StatusCodeEnumFourHundredAndFive        StatusCodeEnum = "405"
-	StatusCodeEnumFourHundredAndSix         StatusCodeEnum = "406"
-	StatusCodeEnumFourHundredAndSeven       StatusCodeEnum = "407"
-	StatusCodeEnumFourHundredAndEight       StatusCodeEnum = "408"
-	StatusCodeEnumFourHundredAndNine        StatusCodeEnum = "409"
-	StatusCodeEnumFourHundredAndTen         StatusCodeEnum = "410"
-	StatusCodeEnumFourHundredAndEleven      StatusCodeEnum = "411"
-	StatusCodeEnumFourHundredAndTwelve      StatusCodeEnum = "412"
-	StatusCodeEnumFourHundredAndThirteen    StatusCodeEnum = "413"
-	StatusCodeEnumFourHundredAndFourteen    StatusCodeEnum = "414"
-	StatusCodeEnumFourHundredAndFifteen     StatusCodeEnum = "415"
-	StatusCodeEnumFourHundredAndSixteen     StatusCodeEnum = "416"
-	StatusCodeEnumFourHundredAndSeventeen   StatusCodeEnum = "417"
-	StatusCodeEnumFourHundredAndEighteen    StatusCodeEnum = "418"
-	StatusCodeEnumFourHundredAndTwentyOne   StatusCodeEnum = "421"
-	StatusCodeEnumFourHundredAndTwentySix   StatusCodeEnum = "426"
-	StatusCodeEnumFourHundredAndTwentyEight StatusCodeEnum = "428"
-	StatusCodeEnumFourHundredAndTwentyNine  StatusCodeEnum = "429"
-	StatusCodeEnumFourHundredAndThirtyOne   StatusCodeEnum = "431"
-	StatusCodeEnumFiveHundred               StatusCodeEnum = "500"
-	StatusCodeEnumFiveHundredAndOne         StatusCodeEnum = "501"
-	StatusCodeEnumFiveHundredAndTwo         StatusCodeEnum = "502"
-	StatusCodeEnumFiveHundredAndThree       StatusCodeEnum = "503"
-	StatusCodeEnumFiveHundredAndFour        StatusCodeEnum = "504"
-	StatusCodeEnumFiveHundredAndFive        StatusCodeEnum = "505"
-	StatusCodeEnumFiveHundredAndSix         StatusCodeEnum = "506"
-	StatusCodeEnumFiveHundredAndSeven       StatusCodeEnum = "507"
-	StatusCodeEnumFiveHundredAndEleven      StatusCodeEnum = "511"
+	StatusCodeEnumTwoHundred                StatusCodeEnum = 200
+	StatusCodeEnumTwoHundredAndOne          StatusCodeEnum = 201
+	StatusCodeEnumTwoHundredAndTwo          StatusCodeEnum = 202
+	StatusCodeEnumTwoHundredAndThree        StatusCodeEnum = 203
+	StatusCodeEnumTwoHundredAndFour         StatusCodeEnum = 204
+	StatusCodeEnumTwoHundredAndFive         StatusCodeEnum = 205
+	StatusCodeEnumTwoHundredAndSix          StatusCodeEnum = 206
+	StatusCodeEnumThreeHundred              StatusCodeEnum = 300
+	StatusCodeEnumThreeHundredAndOne        StatusCodeEnum = 301
+	StatusCodeEnumThreeHundredAndTwo        StatusCodeEnum = 302
+	StatusCodeEnumThreeHundredAndThree      StatusCodeEnum = 303
+	StatusCodeEnumThreeHundredAndFour       StatusCodeEnum = 304
+	StatusCodeEnumThreeHundredAndFive       StatusCodeEnum = 305
+	StatusCodeEnumThreeHundredAndSix        StatusCodeEnum = 306
+	StatusCodeEnumThreeHundredAndSeven      StatusCodeEnum = 307
+	StatusCodeEnumThreeHundredAndEight      StatusCodeEnum = 308
+	StatusCodeEnumFourHundred               StatusCodeEnum = 400
+	StatusCodeEnumFourHundredAndOne         StatusCodeEnum = 401
+	StatusCodeEnumFourHundredAndTwo         StatusCodeEnum = 402
+	StatusCodeEnumFourHundredAndThree       StatusCodeEnum = 403
+	StatusCodeEnumFourHundredAndFour        StatusCodeEnum = 404
+	StatusCodeEnumFourHundredAndFive        StatusCodeEnum = 405
+	StatusCodeEnumFourHundredAndSix         StatusCodeEnum = 406
+	StatusCodeEnumFourHundredAndSeven       StatusCodeEnum = 407
+	StatusCodeEnumFourHundredAndEight       StatusCodeEnum = 408
+	StatusCodeEnumFourHundredAndNine        StatusCodeEnum = 409
+	StatusCodeEnumFourHundredAndTen         StatusCodeEnum = 410
+	StatusCodeEnumFourHundredAndEleven      StatusCodeEnum = 411
+	StatusCodeEnumFourHundredAndTwelve      StatusCodeEnum = 412
+	StatusCodeEnumFourHundredAndThirteen    StatusCodeEnum = 413
+	StatusCodeEnumFourHundredAndFourteen    StatusCodeEnum = 414
+	StatusCodeEnumFourHundredAndFifteen     StatusCodeEnum = 415
+	StatusCodeEnumFourHundredAndSixteen     StatusCodeEnum = 416
+	StatusCodeEnumFourHundredAndSeventeen   StatusCodeEnum = 417
+	StatusCodeEnumFourHundredAndEighteen    StatusCodeEnum = 418
+	StatusCodeEnumFourHundredAndTwentyOne   StatusCodeEnum = 421
+	StatusCodeEnumFourHundredAndTwentySix   StatusCodeEnum = 426
+	StatusCodeEnumFourHundredAndTwentyEight StatusCodeEnum = 428
+	StatusCodeEnumFourHundredAndTwentyNine  StatusCodeEnum = 429
+	StatusCodeEnumFourHundredAndThirtyOne   StatusCodeEnum = 431
+	StatusCodeEnumFiveHundred               StatusCodeEnum = 500
+	StatusCodeEnumFiveHundredAndOne         StatusCodeEnum = 501
+	StatusCodeEnumFiveHundredAndTwo         StatusCodeEnum = 502
+	StatusCodeEnumFiveHundredAndThree       StatusCodeEnum = 503
+	StatusCodeEnumFiveHundredAndFour        StatusCodeEnum = 504
+	StatusCodeEnumFiveHundredAndFive        StatusCodeEnum = 505
+	StatusCodeEnumFiveHundredAndSix         StatusCodeEnum = 506
+	StatusCodeEnumFiveHundredAndSeven       StatusCodeEnum = 507
+	StatusCodeEnumFiveHundredAndEleven      StatusCodeEnum = 511
 )
 
+func (e StatusCodeEnum) ToPointer() *StatusCodeEnum {
+	return &e
+}
+
 func (e *StatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "200":
+	switch v {
+	case 200:
 		fallthrough
-	case "201":
+	case 201:
 		fallthrough
-	case "202":
+	case 202:
 		fallthrough
-	case "203":
+	case 203:
 		fallthrough
-	case "204":
+	case 204:
 		fallthrough
-	case "205":
+	case 205:
 		fallthrough
-	case "206":
+	case 206:
 		fallthrough
-	case "300":
+	case 300:
 		fallthrough
-	case "301":
+	case 301:
 		fallthrough
-	case "302":
+	case 302:
 		fallthrough
-	case "303":
+	case 303:
 		fallthrough
-	case "304":
+	case 304:
 		fallthrough
-	case "305":
+	case 305:
 		fallthrough
-	case "306":
+	case 306:
 		fallthrough
-	case "307":
+	case 307:
 		fallthrough
-	case "308":
+	case 308:
 		fallthrough
-	case "400":
+	case 400:
 		fallthrough
-	case "401":
+	case 401:
 		fallthrough
-	case "402":
+	case 402:
 		fallthrough
-	case "403":
+	case 403:
 		fallthrough
-	case "404":
+	case 404:
 		fallthrough
-	case "405":
+	case 405:
 		fallthrough
-	case "406":
+	case 406:
 		fallthrough
-	case "407":
+	case 407:
 		fallthrough
-	case "408":
+	case 408:
 		fallthrough
-	case "409":
+	case 409:
 		fallthrough
-	case "410":
+	case 410:
 		fallthrough
-	case "411":
+	case 411:
 		fallthrough
-	case "412":
+	case 412:
 		fallthrough
-	case "413":
+	case 413:
 		fallthrough
-	case "414":
+	case 414:
 		fallthrough
-	case "415":
+	case 415:
 		fallthrough
-	case "416":
+	case 416:
 		fallthrough
-	case "417":
+	case 417:
 		fallthrough
-	case "418":
+	case 418:
 		fallthrough
-	case "421":
+	case 421:
 		fallthrough
-	case "426":
+	case 426:
 		fallthrough
-	case "428":
+	case 428:
 		fallthrough
-	case "429":
+	case 429:
 		fallthrough
-	case "431":
+	case 431:
 		fallthrough
-	case "500":
+	case 500:
 		fallthrough
-	case "501":
+	case 501:
 		fallthrough
-	case "502":
+	case 502:
 		fallthrough
-	case "503":
+	case 503:
 		fallthrough
-	case "504":
+	case 504:
 		fallthrough
-	case "505":
+	case 505:
 		fallthrough
-	case "506":
+	case 506:
 		fallthrough
-	case "507":
+	case 507:
 		fallthrough
-	case "511":
-		*e = StatusCodeEnum(s)
+	case 511:
+		*e = StatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusCodeEnum: %v", v)
 	}
 }

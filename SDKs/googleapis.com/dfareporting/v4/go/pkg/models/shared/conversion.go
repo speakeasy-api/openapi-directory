@@ -40,6 +40,8 @@ type Conversion struct {
 	TimestampMicros *string `json:"timestampMicros,omitempty"`
 	// Whether this particular request may come from a user under the age of 16 (may differ by country), under compliance with the European Union's General Data Protection Regulation (GDPR).
 	TreatmentForUnderage *bool `json:"treatmentForUnderage,omitempty"`
+	// The user identifiers to enhance the conversion. The maximum number of user identifiers for each conversion is 5.
+	UserIdentifiers []UserIdentifier `json:"userIdentifiers,omitempty"`
 	// The value of the conversion.
 	Value *float64 `json:"value,omitempty"`
 }

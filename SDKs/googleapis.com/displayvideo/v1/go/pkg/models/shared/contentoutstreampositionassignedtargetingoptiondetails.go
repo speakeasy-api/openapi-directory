@@ -17,12 +17,16 @@ const (
 	ContentOutstreamPositionAssignedTargetingOptionDetailsAdTypeEnumAdTypeAudio       ContentOutstreamPositionAssignedTargetingOptionDetailsAdTypeEnum = "AD_TYPE_AUDIO"
 )
 
+func (e ContentOutstreamPositionAssignedTargetingOptionDetailsAdTypeEnum) ToPointer() *ContentOutstreamPositionAssignedTargetingOptionDetailsAdTypeEnum {
+	return &e
+}
+
 func (e *ContentOutstreamPositionAssignedTargetingOptionDetailsAdTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AD_TYPE_DISPLAY":
@@ -30,10 +34,10 @@ func (e *ContentOutstreamPositionAssignedTargetingOptionDetailsAdTypeEnum) Unmar
 	case "AD_TYPE_VIDEO":
 		fallthrough
 	case "AD_TYPE_AUDIO":
-		*e = ContentOutstreamPositionAssignedTargetingOptionDetailsAdTypeEnum(s)
+		*e = ContentOutstreamPositionAssignedTargetingOptionDetailsAdTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentOutstreamPositionAssignedTargetingOptionDetailsAdTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentOutstreamPositionAssignedTargetingOptionDetailsAdTypeEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnumContentOutstreamPositionInterstitial ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnum = "CONTENT_OUTSTREAM_POSITION_INTERSTITIAL"
 )
 
+func (e ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnum) ToPointer() *ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnum {
+	return &e
+}
+
 func (e *ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_OUTSTREAM_POSITION_UNSPECIFIED":
 		fallthrough
 	case "CONTENT_OUTSTREAM_POSITION_UNKNOWN":
@@ -66,10 +74,10 @@ func (e *ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamP
 	case "CONTENT_OUTSTREAM_POSITION_IN_FEED":
 		fallthrough
 	case "CONTENT_OUTSTREAM_POSITION_INTERSTITIAL":
-		*e = ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnum(s)
+		*e = ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentOutstreamPositionAssignedTargetingOptionDetailsContentOutstreamPositionEnum: %v", v)
 	}
 }
 

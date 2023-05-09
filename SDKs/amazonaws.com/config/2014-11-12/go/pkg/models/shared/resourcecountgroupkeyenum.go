@@ -15,20 +15,24 @@ const (
 	ResourceCountGroupKeyEnumAwsRegion    ResourceCountGroupKeyEnum = "AWS_REGION"
 )
 
+func (e ResourceCountGroupKeyEnum) ToPointer() *ResourceCountGroupKeyEnum {
+	return &e
+}
+
 func (e *ResourceCountGroupKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE_TYPE":
 		fallthrough
 	case "ACCOUNT_ID":
 		fallthrough
 	case "AWS_REGION":
-		*e = ResourceCountGroupKeyEnum(s)
+		*e = ResourceCountGroupKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceCountGroupKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceCountGroupKeyEnum: %v", v)
 	}
 }

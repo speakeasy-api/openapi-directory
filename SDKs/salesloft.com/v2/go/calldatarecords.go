@@ -90,7 +90,10 @@ func (s *callDataRecords) GetV2CallDataRecordsJSON(ctx context.Context, request 
 // Fetches a call data record, by ID only.
 func (s *callDataRecords) GetV2CallDataRecordsIDJSON(ctx context.Context, request operations.GetV2CallDataRecordsIDJSONRequest) (*operations.GetV2CallDataRecordsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/call_data_records/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/call_data_records/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,12 +16,16 @@ const (
 	APICoreDtoClickStreamHitDatapointInfoStatusEnumDeleted APICoreDtoClickStreamHitDatapointInfoStatusEnum = "Deleted"
 )
 
+func (e APICoreDtoClickStreamHitDatapointInfoStatusEnum) ToPointer() *APICoreDtoClickStreamHitDatapointInfoStatusEnum {
+	return &e
+}
+
 func (e *APICoreDtoClickStreamHitDatapointInfoStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Paused":
@@ -29,10 +33,10 @@ func (e *APICoreDtoClickStreamHitDatapointInfoStatusEnum) UnmarshalJSON(data []b
 	case "Abuse":
 		fallthrough
 	case "Deleted":
-		*e = APICoreDtoClickStreamHitDatapointInfoStatusEnum(s)
+		*e = APICoreDtoClickStreamHitDatapointInfoStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APICoreDtoClickStreamHitDatapointInfoStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for APICoreDtoClickStreamHitDatapointInfoStatusEnum: %v", v)
 	}
 }
 

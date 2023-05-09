@@ -16,17 +16,21 @@ const (
 	DecreaseReplicationFactorXAmzTargetEnumAmazonDaxv3DecreaseReplicationFactor DecreaseReplicationFactorXAmzTargetEnum = "AmazonDAXV3.DecreaseReplicationFactor"
 )
 
+func (e DecreaseReplicationFactorXAmzTargetEnum) ToPointer() *DecreaseReplicationFactorXAmzTargetEnum {
+	return &e
+}
+
 func (e *DecreaseReplicationFactorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDAXV3.DecreaseReplicationFactor":
-		*e = DecreaseReplicationFactorXAmzTargetEnum(s)
+		*e = DecreaseReplicationFactorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DecreaseReplicationFactorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DecreaseReplicationFactorXAmzTargetEnum: %v", v)
 	}
 }
 

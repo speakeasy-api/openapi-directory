@@ -29,12 +29,16 @@ const (
 	DescribeInstanceAttributeRequestAttributeEnumDisableAPIStop                    DescribeInstanceAttributeRequestAttributeEnum = "disableApiStop"
 )
 
+func (e DescribeInstanceAttributeRequestAttributeEnum) ToPointer() *DescribeInstanceAttributeRequestAttributeEnum {
+	return &e
+}
+
 func (e *DescribeInstanceAttributeRequestAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instanceType":
 		fallthrough
 	case "kernel":
@@ -66,10 +70,10 @@ func (e *DescribeInstanceAttributeRequestAttributeEnum) UnmarshalJSON(data []byt
 	case "enclaveOptions":
 		fallthrough
 	case "disableApiStop":
-		*e = DescribeInstanceAttributeRequestAttributeEnum(s)
+		*e = DescribeInstanceAttributeRequestAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstanceAttributeRequestAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstanceAttributeRequestAttributeEnum: %v", v)
 	}
 }
 

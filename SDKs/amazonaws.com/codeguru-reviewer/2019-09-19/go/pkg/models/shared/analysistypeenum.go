@@ -14,18 +14,22 @@ const (
 	AnalysisTypeEnumCodeQuality AnalysisTypeEnum = "CodeQuality"
 )
 
+func (e AnalysisTypeEnum) ToPointer() *AnalysisTypeEnum {
+	return &e
+}
+
 func (e *AnalysisTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Security":
 		fallthrough
 	case "CodeQuality":
-		*e = AnalysisTypeEnum(s)
+		*e = AnalysisTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalysisTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalysisTypeEnum: %v", v)
 	}
 }

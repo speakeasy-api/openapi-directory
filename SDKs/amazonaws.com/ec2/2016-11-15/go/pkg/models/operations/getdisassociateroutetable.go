@@ -15,17 +15,21 @@ const (
 	GETDisassociateRouteTableActionEnumDisassociateRouteTable GETDisassociateRouteTableActionEnum = "DisassociateRouteTable"
 )
 
+func (e GETDisassociateRouteTableActionEnum) ToPointer() *GETDisassociateRouteTableActionEnum {
+	return &e
+}
+
 func (e *GETDisassociateRouteTableActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateRouteTable":
-		*e = GETDisassociateRouteTableActionEnum(s)
+		*e = GETDisassociateRouteTableActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateRouteTableActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateRouteTableActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisassociateRouteTableVersionEnumTwoThousandAndSixteen1115 GETDisassociateRouteTableVersionEnum = "2016-11-15"
 )
 
+func (e GETDisassociateRouteTableVersionEnum) ToPointer() *GETDisassociateRouteTableVersionEnum {
+	return &e
+}
+
 func (e *GETDisassociateRouteTableVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDisassociateRouteTableVersionEnum(s)
+		*e = GETDisassociateRouteTableVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateRouteTableVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateRouteTableVersionEnum: %v", v)
 	}
 }
 

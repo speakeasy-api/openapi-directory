@@ -22,12 +22,16 @@ const (
 	SecurityServiceTypeEnumImportNetworkFirewall      SecurityServiceTypeEnum = "IMPORT_NETWORK_FIREWALL"
 )
 
+func (e SecurityServiceTypeEnum) ToPointer() *SecurityServiceTypeEnum {
+	return &e
+}
+
 func (e *SecurityServiceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WAF":
 		fallthrough
 	case "WAFV2":
@@ -47,9 +51,9 @@ func (e *SecurityServiceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "THIRD_PARTY_FIREWALL":
 		fallthrough
 	case "IMPORT_NETWORK_FIREWALL":
-		*e = SecurityServiceTypeEnum(s)
+		*e = SecurityServiceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SecurityServiceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SecurityServiceTypeEnum: %v", v)
 	}
 }

@@ -16,21 +16,25 @@ const (
 	SchedulePlayParametersLegsEnumBoth SchedulePlayParametersLegsEnum = "both"
 )
 
+func (e SchedulePlayParametersLegsEnum) ToPointer() *SchedulePlayParametersLegsEnum {
+	return &e
+}
+
 func (e *SchedulePlayParametersLegsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "aleg":
 		fallthrough
 	case "bleg":
 		fallthrough
 	case "both":
-		*e = SchedulePlayParametersLegsEnum(s)
+		*e = SchedulePlayParametersLegsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SchedulePlayParametersLegsEnum: %s", s)
+		return fmt.Errorf("invalid value for SchedulePlayParametersLegsEnum: %v", v)
 	}
 }
 

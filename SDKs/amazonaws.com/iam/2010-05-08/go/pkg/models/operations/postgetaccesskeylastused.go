@@ -15,17 +15,21 @@ const (
 	POSTGetAccessKeyLastUsedActionEnumGetAccessKeyLastUsed POSTGetAccessKeyLastUsedActionEnum = "GetAccessKeyLastUsed"
 )
 
+func (e POSTGetAccessKeyLastUsedActionEnum) ToPointer() *POSTGetAccessKeyLastUsedActionEnum {
+	return &e
+}
+
 func (e *POSTGetAccessKeyLastUsedActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAccessKeyLastUsed":
-		*e = POSTGetAccessKeyLastUsedActionEnum(s)
+		*e = POSTGetAccessKeyLastUsedActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetAccessKeyLastUsedActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetAccessKeyLastUsedActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetAccessKeyLastUsedVersionEnumTwoThousandAndTen0508 POSTGetAccessKeyLastUsedVersionEnum = "2010-05-08"
 )
 
+func (e POSTGetAccessKeyLastUsedVersionEnum) ToPointer() *POSTGetAccessKeyLastUsedVersionEnum {
+	return &e
+}
+
 func (e *POSTGetAccessKeyLastUsedVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTGetAccessKeyLastUsedVersionEnum(s)
+		*e = POSTGetAccessKeyLastUsedVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetAccessKeyLastUsedVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetAccessKeyLastUsedVersionEnum: %v", v)
 	}
 }
 

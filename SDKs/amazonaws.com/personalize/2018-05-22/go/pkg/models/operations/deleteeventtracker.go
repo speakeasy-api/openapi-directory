@@ -16,17 +16,21 @@ const (
 	DeleteEventTrackerXAmzTargetEnumAmazonPersonalizeDeleteEventTracker DeleteEventTrackerXAmzTargetEnum = "AmazonPersonalize.DeleteEventTracker"
 )
 
+func (e DeleteEventTrackerXAmzTargetEnum) ToPointer() *DeleteEventTrackerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteEventTrackerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.DeleteEventTracker":
-		*e = DeleteEventTrackerXAmzTargetEnum(s)
+		*e = DeleteEventTrackerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteEventTrackerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteEventTrackerXAmzTargetEnum: %v", v)
 	}
 }
 

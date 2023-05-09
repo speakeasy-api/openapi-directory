@@ -15,20 +15,24 @@ const (
 	MigrationTypeValueEnumFullLoadAndCdc MigrationTypeValueEnum = "full-load-and-cdc"
 )
 
+func (e MigrationTypeValueEnum) ToPointer() *MigrationTypeValueEnum {
+	return &e
+}
+
 func (e *MigrationTypeValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "full-load":
 		fallthrough
 	case "cdc":
 		fallthrough
 	case "full-load-and-cdc":
-		*e = MigrationTypeValueEnum(s)
+		*e = MigrationTypeValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationTypeValueEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationTypeValueEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	DeleteAggregationAuthorizationXAmzTargetEnumStarlingDoveServiceDeleteAggregationAuthorization DeleteAggregationAuthorizationXAmzTargetEnum = "StarlingDoveService.DeleteAggregationAuthorization"
 )
 
+func (e DeleteAggregationAuthorizationXAmzTargetEnum) ToPointer() *DeleteAggregationAuthorizationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteAggregationAuthorizationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DeleteAggregationAuthorization":
-		*e = DeleteAggregationAuthorizationXAmzTargetEnum(s)
+		*e = DeleteAggregationAuthorizationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAggregationAuthorizationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAggregationAuthorizationXAmzTargetEnum: %v", v)
 	}
 }
 

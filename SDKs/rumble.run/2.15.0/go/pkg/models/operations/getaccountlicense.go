@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type GetAccountLicenseSecurity struct {
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type GetAccountLicenseResponse struct {
 	Body        []byte
 	ContentType string

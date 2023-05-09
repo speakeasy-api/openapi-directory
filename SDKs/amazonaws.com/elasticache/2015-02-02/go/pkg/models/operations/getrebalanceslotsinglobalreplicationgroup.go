@@ -15,17 +15,21 @@ const (
 	GETRebalanceSlotsInGlobalReplicationGroupActionEnumRebalanceSlotsInGlobalReplicationGroup GETRebalanceSlotsInGlobalReplicationGroupActionEnum = "RebalanceSlotsInGlobalReplicationGroup"
 )
 
+func (e GETRebalanceSlotsInGlobalReplicationGroupActionEnum) ToPointer() *GETRebalanceSlotsInGlobalReplicationGroupActionEnum {
+	return &e
+}
+
 func (e *GETRebalanceSlotsInGlobalReplicationGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RebalanceSlotsInGlobalReplicationGroup":
-		*e = GETRebalanceSlotsInGlobalReplicationGroupActionEnum(s)
+		*e = GETRebalanceSlotsInGlobalReplicationGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRebalanceSlotsInGlobalReplicationGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRebalanceSlotsInGlobalReplicationGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRebalanceSlotsInGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 GETRebalanceSlotsInGlobalReplicationGroupVersionEnum = "2015-02-02"
 )
 
+func (e GETRebalanceSlotsInGlobalReplicationGroupVersionEnum) ToPointer() *GETRebalanceSlotsInGlobalReplicationGroupVersionEnum {
+	return &e
+}
+
 func (e *GETRebalanceSlotsInGlobalReplicationGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = GETRebalanceSlotsInGlobalReplicationGroupVersionEnum(s)
+		*e = GETRebalanceSlotsInGlobalReplicationGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRebalanceSlotsInGlobalReplicationGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRebalanceSlotsInGlobalReplicationGroupVersionEnum: %v", v)
 	}
 }
 

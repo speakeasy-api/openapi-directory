@@ -17,12 +17,16 @@ const (
 	DatePartitionSequenceValueEnumDdmmyyyy   DatePartitionSequenceValueEnum = "DDMMYYYY"
 )
 
+func (e DatePartitionSequenceValueEnum) ToPointer() *DatePartitionSequenceValueEnum {
+	return &e
+}
+
 func (e *DatePartitionSequenceValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "YYYYMMDD":
 		fallthrough
 	case "YYYYMMDDHH":
@@ -32,9 +36,9 @@ func (e *DatePartitionSequenceValueEnum) UnmarshalJSON(data []byte) error {
 	case "MMYYYYDD":
 		fallthrough
 	case "DDMMYYYY":
-		*e = DatePartitionSequenceValueEnum(s)
+		*e = DatePartitionSequenceValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatePartitionSequenceValueEnum: %s", s)
+		return fmt.Errorf("invalid value for DatePartitionSequenceValueEnum: %v", v)
 	}
 }

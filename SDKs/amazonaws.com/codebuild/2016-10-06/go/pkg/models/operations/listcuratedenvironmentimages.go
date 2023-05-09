@@ -16,17 +16,21 @@ const (
 	ListCuratedEnvironmentImagesXAmzTargetEnumCodeBuild20161006ListCuratedEnvironmentImages ListCuratedEnvironmentImagesXAmzTargetEnum = "CodeBuild_20161006.ListCuratedEnvironmentImages"
 )
 
+func (e ListCuratedEnvironmentImagesXAmzTargetEnum) ToPointer() *ListCuratedEnvironmentImagesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCuratedEnvironmentImagesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.ListCuratedEnvironmentImages":
-		*e = ListCuratedEnvironmentImagesXAmzTargetEnum(s)
+		*e = ListCuratedEnvironmentImagesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCuratedEnvironmentImagesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCuratedEnvironmentImagesXAmzTargetEnum: %v", v)
 	}
 }
 

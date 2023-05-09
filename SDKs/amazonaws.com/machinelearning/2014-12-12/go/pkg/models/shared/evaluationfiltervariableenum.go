@@ -21,12 +21,16 @@ const (
 	EvaluationFilterVariableEnumDataURI       EvaluationFilterVariableEnum = "DataURI"
 )
 
+func (e EvaluationFilterVariableEnum) ToPointer() *EvaluationFilterVariableEnum {
+	return &e
+}
+
 func (e *EvaluationFilterVariableEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreatedAt":
 		fallthrough
 	case "LastUpdatedAt":
@@ -42,9 +46,9 @@ func (e *EvaluationFilterVariableEnum) UnmarshalJSON(data []byte) error {
 	case "DataSourceId":
 		fallthrough
 	case "DataURI":
-		*e = EvaluationFilterVariableEnum(s)
+		*e = EvaluationFilterVariableEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EvaluationFilterVariableEnum: %s", s)
+		return fmt.Errorf("invalid value for EvaluationFilterVariableEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	StopAssessmentRunXAmzTargetEnumInspectorServiceStopAssessmentRun StopAssessmentRunXAmzTargetEnum = "InspectorService.StopAssessmentRun"
 )
 
+func (e StopAssessmentRunXAmzTargetEnum) ToPointer() *StopAssessmentRunXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopAssessmentRunXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InspectorService.StopAssessmentRun":
-		*e = StopAssessmentRunXAmzTargetEnum(s)
+		*e = StopAssessmentRunXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopAssessmentRunXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopAssessmentRunXAmzTargetEnum: %v", v)
 	}
 }
 

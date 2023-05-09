@@ -33,12 +33,16 @@ const (
 	ExportConfigurationsGetDefaultApplicationJSONErrorCodeEnumTooManyRequests     ExportConfigurationsGetDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ExportConfigurationsGetDefaultApplicationJSONErrorCodeEnum) ToPointer() *ExportConfigurationsGetDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsGetDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *ExportConfigurationsGetDefaultApplicationJSONErrorCodeEnum) UnmarshalJS
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ExportConfigurationsGetDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ExportConfigurationsGetDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsGetDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsGetDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -78,12 +82,16 @@ const (
 	ExportConfigurationsGet200ApplicationJSONExportConfigurationExportEntitiesEnumNoLogs      ExportConfigurationsGet200ApplicationJSONExportConfigurationExportEntitiesEnum = "no_logs"
 )
 
+func (e ExportConfigurationsGet200ApplicationJSONExportConfigurationExportEntitiesEnum) ToPointer() *ExportConfigurationsGet200ApplicationJSONExportConfigurationExportEntitiesEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsGet200ApplicationJSONExportConfigurationExportEntitiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crashes":
 		fallthrough
 	case "errors":
@@ -91,10 +99,10 @@ func (e *ExportConfigurationsGet200ApplicationJSONExportConfigurationExportEntit
 	case "attachments":
 		fallthrough
 	case "no_logs":
-		*e = ExportConfigurationsGet200ApplicationJSONExportConfigurationExportEntitiesEnum(s)
+		*e = ExportConfigurationsGet200ApplicationJSONExportConfigurationExportEntitiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsGet200ApplicationJSONExportConfigurationExportEntitiesEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsGet200ApplicationJSONExportConfigurationExportEntitiesEnum: %v", v)
 	}
 }
 
@@ -108,12 +116,16 @@ const (
 	ExportConfigurationsGet200ApplicationJSONExportConfigurationTypeEnumApplicationInsightsLinkedSubscription ExportConfigurationsGet200ApplicationJSONExportConfigurationTypeEnum = "application_insights_linked_subscription"
 )
 
+func (e ExportConfigurationsGet200ApplicationJSONExportConfigurationTypeEnum) ToPointer() *ExportConfigurationsGet200ApplicationJSONExportConfigurationTypeEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsGet200ApplicationJSONExportConfigurationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "blob_storage_connection_string":
 		fallthrough
 	case "application_insights_instrumentation_key":
@@ -121,10 +133,10 @@ func (e *ExportConfigurationsGet200ApplicationJSONExportConfigurationTypeEnum) U
 	case "blob_storage_linked_subscription":
 		fallthrough
 	case "application_insights_linked_subscription":
-		*e = ExportConfigurationsGet200ApplicationJSONExportConfigurationTypeEnum(s)
+		*e = ExportConfigurationsGet200ApplicationJSONExportConfigurationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsGet200ApplicationJSONExportConfigurationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsGet200ApplicationJSONExportConfigurationTypeEnum: %v", v)
 	}
 }
 
@@ -150,12 +162,16 @@ const (
 	ExportConfigurationsGet200ApplicationJSONExportEntitiesEnumNoLogs      ExportConfigurationsGet200ApplicationJSONExportEntitiesEnum = "no_logs"
 )
 
+func (e ExportConfigurationsGet200ApplicationJSONExportEntitiesEnum) ToPointer() *ExportConfigurationsGet200ApplicationJSONExportEntitiesEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsGet200ApplicationJSONExportEntitiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crashes":
 		fallthrough
 	case "errors":
@@ -163,10 +179,10 @@ func (e *ExportConfigurationsGet200ApplicationJSONExportEntitiesEnum) UnmarshalJ
 	case "attachments":
 		fallthrough
 	case "no_logs":
-		*e = ExportConfigurationsGet200ApplicationJSONExportEntitiesEnum(s)
+		*e = ExportConfigurationsGet200ApplicationJSONExportEntitiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsGet200ApplicationJSONExportEntitiesEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsGet200ApplicationJSONExportEntitiesEnum: %v", v)
 	}
 }
 
@@ -178,19 +194,23 @@ const (
 	ExportConfigurationsGet200ApplicationJSONExportTypeEnumAppInsights ExportConfigurationsGet200ApplicationJSONExportTypeEnum = "AppInsights"
 )
 
+func (e ExportConfigurationsGet200ApplicationJSONExportTypeEnum) ToPointer() *ExportConfigurationsGet200ApplicationJSONExportTypeEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsGet200ApplicationJSONExportTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BlobStorage":
 		fallthrough
 	case "AppInsights":
-		*e = ExportConfigurationsGet200ApplicationJSONExportTypeEnum(s)
+		*e = ExportConfigurationsGet200ApplicationJSONExportTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsGet200ApplicationJSONExportTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsGet200ApplicationJSONExportTypeEnum: %v", v)
 	}
 }
 
@@ -205,12 +225,16 @@ const (
 	ExportConfigurationsGet200ApplicationJSONStateEnumInvalid  ExportConfigurationsGet200ApplicationJSONStateEnum = "Invalid"
 )
 
+func (e ExportConfigurationsGet200ApplicationJSONStateEnum) ToPointer() *ExportConfigurationsGet200ApplicationJSONStateEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsGet200ApplicationJSONStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
@@ -220,10 +244,10 @@ func (e *ExportConfigurationsGet200ApplicationJSONStateEnum) UnmarshalJSON(data 
 	case "Deleted":
 		fallthrough
 	case "Invalid":
-		*e = ExportConfigurationsGet200ApplicationJSONStateEnum(s)
+		*e = ExportConfigurationsGet200ApplicationJSONStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsGet200ApplicationJSONStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsGet200ApplicationJSONStateEnum: %v", v)
 	}
 }
 

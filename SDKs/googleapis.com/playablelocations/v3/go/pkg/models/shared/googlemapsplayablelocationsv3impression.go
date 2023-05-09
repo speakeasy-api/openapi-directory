@@ -16,21 +16,25 @@ const (
 	GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnumInteracted                GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum = "INTERACTED"
 )
 
+func (e GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum) ToPointer() *GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum {
+	return &e
+}
+
 func (e *GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPRESSION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PRESENTED":
 		fallthrough
 	case "INTERACTED":
-		*e = GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum(s)
+		*e = GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum: %v", v)
 	}
 }
 

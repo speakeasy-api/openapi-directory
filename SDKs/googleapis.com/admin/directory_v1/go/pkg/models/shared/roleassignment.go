@@ -15,25 +15,29 @@ const (
 	RoleAssignmentAssigneeTypeEnumGroup RoleAssignmentAssigneeTypeEnum = "group"
 )
 
+func (e RoleAssignmentAssigneeTypeEnum) ToPointer() *RoleAssignmentAssigneeTypeEnum {
+	return &e
+}
+
 func (e *RoleAssignmentAssigneeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "group":
-		*e = RoleAssignmentAssigneeTypeEnum(s)
+		*e = RoleAssignmentAssigneeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoleAssignmentAssigneeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RoleAssignmentAssigneeTypeEnum: %v", v)
 	}
 }
 
 // RoleAssignment - Defines an assignment of a role.
 type RoleAssignment struct {
-	// The unique ID of the entity this role is assigned to—either the `user_id` of a user or the `uniqueId` of a service account, as defined in [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
+	// The unique ID of the entity this role is assigned to—either the `user_id` of a user, the `group_id` of a group, or the `uniqueId` of a service account as defined in [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
 	AssignedTo *string `json:"assignedTo,omitempty"`
 	// Output only. The type of the assignee (`USER` or `GROUP`).
 	AssigneeType *RoleAssignmentAssigneeTypeEnum `json:"assigneeType,omitempty"`
@@ -53,7 +57,7 @@ type RoleAssignment struct {
 
 // RoleAssignmentInput - Defines an assignment of a role.
 type RoleAssignmentInput struct {
-	// The unique ID of the entity this role is assigned to—either the `user_id` of a user or the `uniqueId` of a service account, as defined in [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
+	// The unique ID of the entity this role is assigned to—either the `user_id` of a user, the `group_id` of a group, or the `uniqueId` of a service account as defined in [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
 	AssignedTo *string `json:"assignedTo,omitempty"`
 	// ETag of the resource.
 	Etag *string `json:"etag,omitempty"`

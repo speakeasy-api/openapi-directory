@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // IamcredentialsProjectsServiceAccountsGenerateAccessToken - Generates an OAuth 2.0 access token for a service account.
 func (s *projects) IamcredentialsProjectsServiceAccountsGenerateAccessToken(ctx context.Context, request operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest, security operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity) (*operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:generateAccessToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:generateAccessToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateAccessTokenRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) IamcredentialsProjectsServiceAccountsGenerateAccessToken(ctx 
 // IamcredentialsProjectsServiceAccountsGenerateIDToken - Generates an OpenID Connect ID token for a service account.
 func (s *projects) IamcredentialsProjectsServiceAccountsGenerateIDToken(ctx context.Context, request operations.IamcredentialsProjectsServiceAccountsGenerateIDTokenRequest, security operations.IamcredentialsProjectsServiceAccountsGenerateIDTokenSecurity) (*operations.IamcredentialsProjectsServiceAccountsGenerateIDTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:generateIdToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:generateIdToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateIDTokenRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) IamcredentialsProjectsServiceAccountsGenerateIDToken(ctx cont
 // IamcredentialsProjectsServiceAccountsSignBlob - Signs a blob using a service account's system-managed private key.
 func (s *projects) IamcredentialsProjectsServiceAccountsSignBlob(ctx context.Context, request operations.IamcredentialsProjectsServiceAccountsSignBlobRequest, security operations.IamcredentialsProjectsServiceAccountsSignBlobSecurity) (*operations.IamcredentialsProjectsServiceAccountsSignBlobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:signBlob", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:signBlob", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SignBlobRequest", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *projects) IamcredentialsProjectsServiceAccountsSignBlob(ctx context.Con
 // IamcredentialsProjectsServiceAccountsSignJwt - Signs a JWT using a service account's system-managed private key.
 func (s *projects) IamcredentialsProjectsServiceAccountsSignJwt(ctx context.Context, request operations.IamcredentialsProjectsServiceAccountsSignJwtRequest, security operations.IamcredentialsProjectsServiceAccountsSignJwtSecurity) (*operations.IamcredentialsProjectsServiceAccountsSignJwtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:signJwt", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:signJwt", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SignJwtRequest", "json")
 	if err != nil {

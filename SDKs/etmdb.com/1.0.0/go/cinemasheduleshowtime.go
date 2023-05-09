@@ -41,7 +41,10 @@ func newCinemaSheduleShowtime(defaultClient, securityClient HTTPClient, serverUR
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *cinemaSheduleShowtime) CinemaSheduleShowtimeSearchRead(ctx context.Context, request operations.CinemaSheduleShowtimeSearchReadRequest) (*operations.CinemaSheduleShowtimeSearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/cinema-shedule-showtime/search/{movie_title}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/cinema-shedule-showtime/search/{movie_title}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *cinemaSheduleShowtime) CinemaSheduleShowtimeSearchRead(ctx context.Cont
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *cinemaSheduleShowtime) CinemaSheduleShowtimeSearchallRead(ctx context.Context, request operations.CinemaSheduleShowtimeSearchallReadRequest) (*operations.CinemaSheduleShowtimeSearchallReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/cinema-shedule-showtime/searchall/{param}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/cinema-shedule-showtime/searchall/{param}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

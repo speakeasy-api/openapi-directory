@@ -32,9 +32,14 @@ func newSwagger(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // DeleteSwagger - DEPRECATED. Instead, use https://docs.readme.com/developers/reference/api-specification#deleteapispecification to delete a Swagger file in ReadMe
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *swagger) DeleteSwagger(ctx context.Context, request operations.DeleteSwaggerRequest, security operations.DeleteSwaggerSecurity) (*operations.DeleteSwaggerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/swagger/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/swagger/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,9 +74,14 @@ func (s *swagger) DeleteSwagger(ctx context.Context, request operations.DeleteSw
 }
 
 // UpdateSwagger - DEPRECATED. Instead, use https://docs.readme.com/developers/reference/api-specification#updateapispecification to update a Swagger file.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *swagger) UpdateSwagger(ctx context.Context, request operations.UpdateSwaggerRequest, security operations.UpdateSwaggerSecurity) (*operations.UpdateSwaggerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/swagger/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/swagger/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -118,6 +128,8 @@ func (s *swagger) UpdateSwagger(ctx context.Context, request operations.UpdateSw
 }
 
 // UploadSwagger - DEPRECATED. Instead use https://docs.readme.com/developers/reference/api-specification#uploadapispecification to upload a Swagger file to ReadMe
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *swagger) UploadSwagger(ctx context.Context, request operations.UploadSwaggerRequestBody, security operations.UploadSwaggerSecurity) (*operations.UploadSwaggerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/swagger"

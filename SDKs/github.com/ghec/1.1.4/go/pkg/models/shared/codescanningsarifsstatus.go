@@ -16,21 +16,25 @@ const (
 	CodeScanningSarifsStatusProcessingStatusEnumFailed   CodeScanningSarifsStatusProcessingStatusEnum = "failed"
 )
 
+func (e CodeScanningSarifsStatusProcessingStatusEnum) ToPointer() *CodeScanningSarifsStatusProcessingStatusEnum {
+	return &e
+}
+
 func (e *CodeScanningSarifsStatusProcessingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "complete":
 		fallthrough
 	case "failed":
-		*e = CodeScanningSarifsStatusProcessingStatusEnum(s)
+		*e = CodeScanningSarifsStatusProcessingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodeScanningSarifsStatusProcessingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CodeScanningSarifsStatusProcessingStatusEnum: %v", v)
 	}
 }
 

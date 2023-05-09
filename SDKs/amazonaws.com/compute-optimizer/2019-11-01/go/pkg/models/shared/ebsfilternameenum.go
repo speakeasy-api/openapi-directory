@@ -13,16 +13,20 @@ const (
 	EBSFilterNameEnumFinding EBSFilterNameEnum = "Finding"
 )
 
+func (e EBSFilterNameEnum) ToPointer() *EBSFilterNameEnum {
+	return &e
+}
+
 func (e *EBSFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Finding":
-		*e = EBSFilterNameEnum(s)
+		*e = EBSFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EBSFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for EBSFilterNameEnum: %v", v)
 	}
 }

@@ -35,7 +35,10 @@ func newMylibrary(defaultClient, securityClient HTTPClient, serverURL, language,
 // BooksMylibraryAnnotationsDelete - Deletes an annotation.
 func (s *mylibrary) BooksMylibraryAnnotationsDelete(ctx context.Context, request operations.BooksMylibraryAnnotationsDeleteRequest, security operations.BooksMylibraryAnnotationsDeleteSecurity) (*operations.BooksMylibraryAnnotationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/annotations/{annotationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/annotations/{annotationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -234,7 +237,10 @@ func (s *mylibrary) BooksMylibraryAnnotationsSummary(ctx context.Context, reques
 // BooksMylibraryAnnotationsUpdate - Updates an existing annotation.
 func (s *mylibrary) BooksMylibraryAnnotationsUpdate(ctx context.Context, request operations.BooksMylibraryAnnotationsUpdateRequest, security operations.BooksMylibraryAnnotationsUpdateSecurity) (*operations.BooksMylibraryAnnotationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/annotations/{annotationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/annotations/{annotationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Annotation", "json")
 	if err != nil {
@@ -289,7 +295,10 @@ func (s *mylibrary) BooksMylibraryAnnotationsUpdate(ctx context.Context, request
 // BooksMylibraryBookshelvesAddVolume - Adds a volume to a bookshelf.
 func (s *mylibrary) BooksMylibraryBookshelvesAddVolume(ctx context.Context, request operations.BooksMylibraryBookshelvesAddVolumeRequest, security operations.BooksMylibraryBookshelvesAddVolumeSecurity) (*operations.BooksMylibraryBookshelvesAddVolumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/bookshelves/{shelf}/addVolume", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/bookshelves/{shelf}/addVolume", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -337,7 +346,10 @@ func (s *mylibrary) BooksMylibraryBookshelvesAddVolume(ctx context.Context, requ
 // BooksMylibraryBookshelvesClearVolumes - Clears all volumes from a bookshelf.
 func (s *mylibrary) BooksMylibraryBookshelvesClearVolumes(ctx context.Context, request operations.BooksMylibraryBookshelvesClearVolumesRequest, security operations.BooksMylibraryBookshelvesClearVolumesSecurity) (*operations.BooksMylibraryBookshelvesClearVolumesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/bookshelves/{shelf}/clearVolumes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/bookshelves/{shelf}/clearVolumes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -385,7 +397,10 @@ func (s *mylibrary) BooksMylibraryBookshelvesClearVolumes(ctx context.Context, r
 // BooksMylibraryBookshelvesGet - Retrieves metadata for a specific bookshelf belonging to the authenticated user.
 func (s *mylibrary) BooksMylibraryBookshelvesGet(ctx context.Context, request operations.BooksMylibraryBookshelvesGetRequest, security operations.BooksMylibraryBookshelvesGetSecurity) (*operations.BooksMylibraryBookshelvesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/bookshelves/{shelf}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/bookshelves/{shelf}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -481,7 +496,10 @@ func (s *mylibrary) BooksMylibraryBookshelvesList(ctx context.Context, request o
 // BooksMylibraryBookshelvesMoveVolume - Moves a volume within a bookshelf.
 func (s *mylibrary) BooksMylibraryBookshelvesMoveVolume(ctx context.Context, request operations.BooksMylibraryBookshelvesMoveVolumeRequest, security operations.BooksMylibraryBookshelvesMoveVolumeSecurity) (*operations.BooksMylibraryBookshelvesMoveVolumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/bookshelves/{shelf}/moveVolume", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/bookshelves/{shelf}/moveVolume", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -529,7 +547,10 @@ func (s *mylibrary) BooksMylibraryBookshelvesMoveVolume(ctx context.Context, req
 // BooksMylibraryBookshelvesRemoveVolume - Removes a volume from a bookshelf.
 func (s *mylibrary) BooksMylibraryBookshelvesRemoveVolume(ctx context.Context, request operations.BooksMylibraryBookshelvesRemoveVolumeRequest, security operations.BooksMylibraryBookshelvesRemoveVolumeSecurity) (*operations.BooksMylibraryBookshelvesRemoveVolumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/bookshelves/{shelf}/removeVolume", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/bookshelves/{shelf}/removeVolume", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -577,7 +598,10 @@ func (s *mylibrary) BooksMylibraryBookshelvesRemoveVolume(ctx context.Context, r
 // BooksMylibraryBookshelvesVolumesList - Gets volume information for volumes on a bookshelf.
 func (s *mylibrary) BooksMylibraryBookshelvesVolumesList(ctx context.Context, request operations.BooksMylibraryBookshelvesVolumesListRequest, security operations.BooksMylibraryBookshelvesVolumesListSecurity) (*operations.BooksMylibraryBookshelvesVolumesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/bookshelves/{shelf}/volumes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/bookshelves/{shelf}/volumes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -625,7 +649,10 @@ func (s *mylibrary) BooksMylibraryBookshelvesVolumesList(ctx context.Context, re
 // BooksMylibraryReadingpositionsGet - Retrieves my reading position information for a volume.
 func (s *mylibrary) BooksMylibraryReadingpositionsGet(ctx context.Context, request operations.BooksMylibraryReadingpositionsGetRequest, security operations.BooksMylibraryReadingpositionsGetSecurity) (*operations.BooksMylibraryReadingpositionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/readingpositions/{volumeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/readingpositions/{volumeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -673,7 +700,10 @@ func (s *mylibrary) BooksMylibraryReadingpositionsGet(ctx context.Context, reque
 // BooksMylibraryReadingpositionsSetPosition - Sets my reading position information for a volume.
 func (s *mylibrary) BooksMylibraryReadingpositionsSetPosition(ctx context.Context, request operations.BooksMylibraryReadingpositionsSetPositionRequest, security operations.BooksMylibraryReadingpositionsSetPositionSecurity) (*operations.BooksMylibraryReadingpositionsSetPositionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/readingpositions/{volumeId}/setPosition", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/mylibrary/readingpositions/{volumeId}/setPosition", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	ComputeEngineTargetDefaultsBootOptionEnumComputeEngineBootOptionBios        ComputeEngineTargetDefaultsBootOptionEnum = "COMPUTE_ENGINE_BOOT_OPTION_BIOS"
 )
 
+func (e ComputeEngineTargetDefaultsBootOptionEnum) ToPointer() *ComputeEngineTargetDefaultsBootOptionEnum {
+	return &e
+}
+
 func (e *ComputeEngineTargetDefaultsBootOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPUTE_ENGINE_BOOT_OPTION_UNSPECIFIED":
 		fallthrough
 	case "COMPUTE_ENGINE_BOOT_OPTION_EFI":
 		fallthrough
 	case "COMPUTE_ENGINE_BOOT_OPTION_BIOS":
-		*e = ComputeEngineTargetDefaultsBootOptionEnum(s)
+		*e = ComputeEngineTargetDefaultsBootOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeEngineTargetDefaultsBootOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeEngineTargetDefaultsBootOptionEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	ComputeEngineTargetDefaultsDiskTypeEnumComputeEngineDiskTypeBalanced    ComputeEngineTargetDefaultsDiskTypeEnum = "COMPUTE_ENGINE_DISK_TYPE_BALANCED"
 )
 
+func (e ComputeEngineTargetDefaultsDiskTypeEnum) ToPointer() *ComputeEngineTargetDefaultsDiskTypeEnum {
+	return &e
+}
+
 func (e *ComputeEngineTargetDefaultsDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPUTE_ENGINE_DISK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "COMPUTE_ENGINE_DISK_TYPE_STANDARD":
@@ -57,10 +65,10 @@ func (e *ComputeEngineTargetDefaultsDiskTypeEnum) UnmarshalJSON(data []byte) err
 	case "COMPUTE_ENGINE_DISK_TYPE_SSD":
 		fallthrough
 	case "COMPUTE_ENGINE_DISK_TYPE_BALANCED":
-		*e = ComputeEngineTargetDefaultsDiskTypeEnum(s)
+		*e = ComputeEngineTargetDefaultsDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeEngineTargetDefaultsDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeEngineTargetDefaultsDiskTypeEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	ComputeEngineTargetDefaultsLicenseTypeEnumComputeEngineLicenseTypeByol    ComputeEngineTargetDefaultsLicenseTypeEnum = "COMPUTE_ENGINE_LICENSE_TYPE_BYOL"
 )
 
+func (e ComputeEngineTargetDefaultsLicenseTypeEnum) ToPointer() *ComputeEngineTargetDefaultsLicenseTypeEnum {
+	return &e
+}
+
 func (e *ComputeEngineTargetDefaultsLicenseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPUTE_ENGINE_LICENSE_TYPE_DEFAULT":
 		fallthrough
 	case "COMPUTE_ENGINE_LICENSE_TYPE_PAYG":
 		fallthrough
 	case "COMPUTE_ENGINE_LICENSE_TYPE_BYOL":
-		*e = ComputeEngineTargetDefaultsLicenseTypeEnum(s)
+		*e = ComputeEngineTargetDefaultsLicenseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeEngineTargetDefaultsLicenseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeEngineTargetDefaultsLicenseTypeEnum: %v", v)
 	}
 }
 

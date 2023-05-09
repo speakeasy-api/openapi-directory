@@ -16,17 +16,21 @@ const (
 	CreateQualificationTypeXAmzTargetEnumMTurkRequesterServiceV20170117CreateQualificationType CreateQualificationTypeXAmzTargetEnum = "MTurkRequesterServiceV20170117.CreateQualificationType"
 )
 
+func (e CreateQualificationTypeXAmzTargetEnum) ToPointer() *CreateQualificationTypeXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateQualificationTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.CreateQualificationType":
-		*e = CreateQualificationTypeXAmzTargetEnum(s)
+		*e = CreateQualificationTypeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateQualificationTypeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateQualificationTypeXAmzTargetEnum: %v", v)
 	}
 }
 

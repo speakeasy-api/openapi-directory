@@ -16,19 +16,23 @@ const (
 	OBSCASupportData1AppliedAuthenticationApproachEnumSca OBSCASupportData1AppliedAuthenticationApproachEnum = "SCA"
 )
 
+func (e OBSCASupportData1AppliedAuthenticationApproachEnum) ToPointer() *OBSCASupportData1AppliedAuthenticationApproachEnum {
+	return &e
+}
+
 func (e *OBSCASupportData1AppliedAuthenticationApproachEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CA":
 		fallthrough
 	case "SCA":
-		*e = OBSCASupportData1AppliedAuthenticationApproachEnum(s)
+		*e = OBSCASupportData1AppliedAuthenticationApproachEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBSCASupportData1AppliedAuthenticationApproachEnum: %s", s)
+		return fmt.Errorf("invalid value for OBSCASupportData1AppliedAuthenticationApproachEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	OBSCASupportData1RequestedSCAExemptionTypeEnumPartyToParty      OBSCASupportData1RequestedSCAExemptionTypeEnum = "PartyToParty"
 )
 
+func (e OBSCASupportData1RequestedSCAExemptionTypeEnum) ToPointer() *OBSCASupportData1RequestedSCAExemptionTypeEnum {
+	return &e
+}
+
 func (e *OBSCASupportData1RequestedSCAExemptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BillPayment":
 		fallthrough
 	case "ContactlessTravel":
@@ -64,10 +72,10 @@ func (e *OBSCASupportData1RequestedSCAExemptionTypeEnum) UnmarshalJSON(data []by
 	case "Parking":
 		fallthrough
 	case "PartyToParty":
-		*e = OBSCASupportData1RequestedSCAExemptionTypeEnum(s)
+		*e = OBSCASupportData1RequestedSCAExemptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBSCASupportData1RequestedSCAExemptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBSCASupportData1RequestedSCAExemptionTypeEnum: %v", v)
 	}
 }
 

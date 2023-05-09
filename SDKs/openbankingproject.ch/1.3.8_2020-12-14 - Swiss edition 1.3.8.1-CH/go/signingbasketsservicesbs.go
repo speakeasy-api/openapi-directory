@@ -225,7 +225,10 @@ func (s *signingBasketsServiceSBS) CreateSigningBasket(ctx context.Context, requ
 // Nevertheless, single transactions might be cancelled on an individual basis on the XS2A interface.
 func (s *signingBasketsServiceSBS) DeleteSigningBasket(ctx context.Context, request operations.DeleteSigningBasketRequest, security operations.DeleteSigningBasketSecurity) (*operations.DeleteSigningBasketResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -391,7 +394,10 @@ func (s *signingBasketsServiceSBS) DeleteSigningBasket(ctx context.Context, requ
 // Returns the content of a signing basket object.
 func (s *signingBasketsServiceSBS) GetSigningBasket(ctx context.Context, request operations.GetSigningBasketRequest, security operations.GetSigningBasketSecurity) (*operations.GetSigningBasketResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -569,7 +575,10 @@ func (s *signingBasketsServiceSBS) GetSigningBasket(ctx context.Context, request
 // This function returns an array of hyperlinks to all generated authorisation sub-resources.
 func (s *signingBasketsServiceSBS) GetSigningBasketAuthorisation(ctx context.Context, request operations.GetSigningBasketAuthorisationRequest, security operations.GetSigningBasketAuthorisationSecurity) (*operations.GetSigningBasketAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -745,7 +754,10 @@ func (s *signingBasketsServiceSBS) GetSigningBasketAuthorisation(ctx context.Con
 // This method returns the SCA status of a signing basket's authorisation sub-resource.
 func (s *signingBasketsServiceSBS) GetSigningBasketScaStatus(ctx context.Context, request operations.GetSigningBasketScaStatusRequest, security operations.GetSigningBasketScaStatusSecurity) (*operations.GetSigningBasketScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -921,7 +933,10 @@ func (s *signingBasketsServiceSBS) GetSigningBasketScaStatus(ctx context.Context
 // Returns the status of a signing basket object.
 func (s *signingBasketsServiceSBS) GetSigningBasketStatus(ctx context.Context, request operations.GetSigningBasketStatusRequest, security operations.GetSigningBasketStatusSecurity) (*operations.GetSigningBasketStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1129,7 +1144,10 @@ func (s *signingBasketsServiceSBS) GetSigningBasketStatus(ctx context.Context, r
 //   - The signing basket needs to be authorised yet.
 func (s *signingBasketsServiceSBS) StartSigningBasketAuthorisation(ctx context.Context, request operations.StartSigningBasketAuthorisationRequest, security operations.StartSigningBasketAuthorisationSecurity) (*operations.StartSigningBasketAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1349,7 +1367,10 @@ func (s *signingBasketsServiceSBS) StartSigningBasketAuthorisation(ctx context.C
 //     Maybe in a later version the access path will change.
 func (s *signingBasketsServiceSBS) UpdateSigningBasketPsuData(ctx context.Context, request operations.UpdateSigningBasketPsuDataRequest, security operations.UpdateSigningBasketPsuDataSecurity) (*operations.UpdateSigningBasketPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

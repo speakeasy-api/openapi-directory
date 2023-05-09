@@ -25,6 +25,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - The Vonage Business Cloud Reports API enables you to retrieve call logs for your account.
 //
 // Your application must subscribe to the Reports API suite to use this API.
@@ -97,7 +112,10 @@ func New(opts ...SDKOption) *SDK {
 // Retrieve call logs for your account
 func (s *SDK) GetCallLogs(ctx context.Context, request operations.GetCallLogsRequest, security operations.GetCallLogsSecurity) (*operations.GetCallLogsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}/call-logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{account_id}/call-logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

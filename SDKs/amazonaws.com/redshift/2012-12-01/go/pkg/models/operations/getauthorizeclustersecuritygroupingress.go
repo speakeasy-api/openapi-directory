@@ -15,17 +15,21 @@ const (
 	GETAuthorizeClusterSecurityGroupIngressActionEnumAuthorizeClusterSecurityGroupIngress GETAuthorizeClusterSecurityGroupIngressActionEnum = "AuthorizeClusterSecurityGroupIngress"
 )
 
+func (e GETAuthorizeClusterSecurityGroupIngressActionEnum) ToPointer() *GETAuthorizeClusterSecurityGroupIngressActionEnum {
+	return &e
+}
+
 func (e *GETAuthorizeClusterSecurityGroupIngressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AuthorizeClusterSecurityGroupIngress":
-		*e = GETAuthorizeClusterSecurityGroupIngressActionEnum(s)
+		*e = GETAuthorizeClusterSecurityGroupIngressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAuthorizeClusterSecurityGroupIngressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAuthorizeClusterSecurityGroupIngressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAuthorizeClusterSecurityGroupIngressVersionEnumTwoThousandAndTwelve1201 GETAuthorizeClusterSecurityGroupIngressVersionEnum = "2012-12-01"
 )
 
+func (e GETAuthorizeClusterSecurityGroupIngressVersionEnum) ToPointer() *GETAuthorizeClusterSecurityGroupIngressVersionEnum {
+	return &e
+}
+
 func (e *GETAuthorizeClusterSecurityGroupIngressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETAuthorizeClusterSecurityGroupIngressVersionEnum(s)
+		*e = GETAuthorizeClusterSecurityGroupIngressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAuthorizeClusterSecurityGroupIngressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAuthorizeClusterSecurityGroupIngressVersionEnum: %v", v)
 	}
 }
 

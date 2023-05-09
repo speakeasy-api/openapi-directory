@@ -15,17 +15,21 @@ const (
 	GETDeleteNetworkInsightsAccessScopeAnalysisActionEnumDeleteNetworkInsightsAccessScopeAnalysis GETDeleteNetworkInsightsAccessScopeAnalysisActionEnum = "DeleteNetworkInsightsAccessScopeAnalysis"
 )
 
+func (e GETDeleteNetworkInsightsAccessScopeAnalysisActionEnum) ToPointer() *GETDeleteNetworkInsightsAccessScopeAnalysisActionEnum {
+	return &e
+}
+
 func (e *GETDeleteNetworkInsightsAccessScopeAnalysisActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteNetworkInsightsAccessScopeAnalysis":
-		*e = GETDeleteNetworkInsightsAccessScopeAnalysisActionEnum(s)
+		*e = GETDeleteNetworkInsightsAccessScopeAnalysisActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteNetworkInsightsAccessScopeAnalysisActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteNetworkInsightsAccessScopeAnalysisActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteNetworkInsightsAccessScopeAnalysisVersionEnumTwoThousandAndSixteen1115 GETDeleteNetworkInsightsAccessScopeAnalysisVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteNetworkInsightsAccessScopeAnalysisVersionEnum) ToPointer() *GETDeleteNetworkInsightsAccessScopeAnalysisVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteNetworkInsightsAccessScopeAnalysisVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteNetworkInsightsAccessScopeAnalysisVersionEnum(s)
+		*e = GETDeleteNetworkInsightsAccessScopeAnalysisVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteNetworkInsightsAccessScopeAnalysisVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteNetworkInsightsAccessScopeAnalysisVersionEnum: %v", v)
 	}
 }
 

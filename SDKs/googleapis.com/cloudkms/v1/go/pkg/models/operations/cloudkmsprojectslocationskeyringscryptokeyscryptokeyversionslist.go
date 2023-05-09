@@ -32,19 +32,23 @@ const (
 	CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListViewEnumFull                            CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListViewEnum = "FULL"
 )
 
+func (e CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListViewEnum) ToPointer() *CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListViewEnum {
+	return &e
+}
+
 func (e *CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRYPTO_KEY_VERSION_VIEW_UNSPECIFIED":
 		fallthrough
 	case "FULL":
-		*e = CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListViewEnum(s)
+		*e = CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsListViewEnum: %v", v)
 	}
 }
 

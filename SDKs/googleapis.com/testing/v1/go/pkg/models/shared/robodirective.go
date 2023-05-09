@@ -17,12 +17,16 @@ const (
 	RoboDirectiveActionTypeEnumIgnore                RoboDirectiveActionTypeEnum = "IGNORE"
 )
 
+func (e RoboDirectiveActionTypeEnum) ToPointer() *RoboDirectiveActionTypeEnum {
+	return &e
+}
+
 func (e *RoboDirectiveActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SINGLE_CLICK":
@@ -30,10 +34,10 @@ func (e *RoboDirectiveActionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ENTER_TEXT":
 		fallthrough
 	case "IGNORE":
-		*e = RoboDirectiveActionTypeEnum(s)
+		*e = RoboDirectiveActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoboDirectiveActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RoboDirectiveActionTypeEnum: %v", v)
 	}
 }
 

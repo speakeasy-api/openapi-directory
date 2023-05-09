@@ -13,34 +13,32 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/monitoring
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        MonitoredResourceContainer: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.Locations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProject(ctx, req, operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurity{
+    res, err := s.Locations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProject(ctx, operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        MonitoredResourceContainer: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("vel"),
+        UploadType: sdk.String("error"),
+        UploadProtocol: sdk.String("deserunt"),
+    }, operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurity{
         Option1: &operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -61,26 +59,26 @@ func main() {
 ## Available Resources and Operations
 
 
-### Locations
+### [Locations](docs/locations/README.md)
 
-* `MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProject` - Returns a list of every Metrics Scope that a specific MonitoredProject has been added to. The metrics scope representing the specified monitored project will always be the first entry in the response.
-* `MonitoringLocationsGlobalMetricsScopesProjectsCreate` - Adds a MonitoredProject with the given project ID to the specified Metrics Scope.
+* [MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProject](docs/locations/README.md#monitoringlocationsglobalmetricsscopeslistmetricsscopesbymonitoredproject) - Returns a list of every Metrics Scope that a specific MonitoredProject has been added to. The metrics scope representing the specified monitored project will always be the first entry in the response.
+* [MonitoringLocationsGlobalMetricsScopesProjectsCreate](docs/locations/README.md#monitoringlocationsglobalmetricsscopesprojectscreate) - Adds a MonitoredProject with the given project ID to the specified Metrics Scope.
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `MonitoringProjectsDashboardsCreate` - Creates a new custom dashboard. For examples on how you can use this API to create dashboards, see Managing dashboards by API (https://cloud.google.com/monitoring/dashboards/api-dashboard). This method requires the monitoring.dashboards.create permission on the specified project. For more information about permissions, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-* `MonitoringProjectsDashboardsDelete` - Deletes an existing custom dashboard.This method requires the monitoring.dashboards.delete permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-* `MonitoringProjectsDashboardsGet` - Fetches a specific dashboard.This method requires the monitoring.dashboards.get permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-* `MonitoringProjectsDashboardsList` - Lists the existing dashboards.This method requires the monitoring.dashboards.list permission on the specified project. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-* `MonitoringProjectsDashboardsPatch` - Replaces an existing custom dashboard with a new definition.This method requires the monitoring.dashboards.update permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-* `MonitoringProjectsLocationPrometheusAPIV1LabelValues` - Lists possible values for a given label name.
-* `MonitoringProjectsLocationPrometheusAPIV1Labels` - Lists labels for metrics.
-* `MonitoringProjectsLocationPrometheusAPIV1LabelsList` - Lists labels for metrics.
-* `MonitoringProjectsLocationPrometheusAPIV1MetadataList` - Lists metadata for metrics.
-* `MonitoringProjectsLocationPrometheusAPIV1Query` - Evaluate a PromQL query at a single point in time.
-* `MonitoringProjectsLocationPrometheusAPIV1QueryExemplars` - Lists exemplars relevant to a given PromQL query,
-* `MonitoringProjectsLocationPrometheusAPIV1QueryRange` - Evaluate a PromQL query with start, end time range.
-* `MonitoringProjectsLocationPrometheusAPIV1Series` - Lists metadata for metrics.
+* [MonitoringProjectsDashboardsCreate](docs/projects/README.md#monitoringprojectsdashboardscreate) - Creates a new custom dashboard. For examples on how you can use this API to create dashboards, see Managing dashboards by API (https://cloud.google.com/monitoring/dashboards/api-dashboard). This method requires the monitoring.dashboards.create permission on the specified project. For more information about permissions, see Cloud Identity and Access Management (https://cloud.google.com/iam).
+* [MonitoringProjectsDashboardsDelete](docs/projects/README.md#monitoringprojectsdashboardsdelete) - Deletes an existing custom dashboard.This method requires the monitoring.dashboards.delete permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
+* [MonitoringProjectsDashboardsGet](docs/projects/README.md#monitoringprojectsdashboardsget) - Fetches a specific dashboard.This method requires the monitoring.dashboards.get permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
+* [MonitoringProjectsDashboardsList](docs/projects/README.md#monitoringprojectsdashboardslist) - Lists the existing dashboards.This method requires the monitoring.dashboards.list permission on the specified project. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
+* [MonitoringProjectsDashboardsPatch](docs/projects/README.md#monitoringprojectsdashboardspatch) - Replaces an existing custom dashboard with a new definition.This method requires the monitoring.dashboards.update permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
+* [MonitoringProjectsLocationPrometheusAPIV1LabelValues](docs/projects/README.md#monitoringprojectslocationprometheusapiv1labelvalues) - Lists possible values for a given label name.
+* [MonitoringProjectsLocationPrometheusAPIV1Labels](docs/projects/README.md#monitoringprojectslocationprometheusapiv1labels) - Lists labels for metrics.
+* [MonitoringProjectsLocationPrometheusAPIV1LabelsList](docs/projects/README.md#monitoringprojectslocationprometheusapiv1labelslist) - Lists labels for metrics.
+* [MonitoringProjectsLocationPrometheusAPIV1MetadataList](docs/projects/README.md#monitoringprojectslocationprometheusapiv1metadatalist) - Lists metadata for metrics.
+* [MonitoringProjectsLocationPrometheusAPIV1Query](docs/projects/README.md#monitoringprojectslocationprometheusapiv1query) - Evaluate a PromQL query at a single point in time.
+* [MonitoringProjectsLocationPrometheusAPIV1QueryExemplars](docs/projects/README.md#monitoringprojectslocationprometheusapiv1queryexemplars) - Lists exemplars relevant to a given PromQL query,
+* [MonitoringProjectsLocationPrometheusAPIV1QueryRange](docs/projects/README.md#monitoringprojectslocationprometheusapiv1queryrange) - Evaluate a PromQL query with start, end time range.
+* [MonitoringProjectsLocationPrometheusAPIV1Series](docs/projects/README.md#monitoringprojectslocationprometheusapiv1series) - Lists metadata for metrics.
 <!-- End SDK Available Operations -->
 
 ### Maturity

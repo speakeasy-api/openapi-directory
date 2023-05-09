@@ -34,7 +34,10 @@ func newConnect(defaultClient, securityClient HTTPClient, serverURL, language, s
 // SQLConnectGenerateEphemeral - Generates a short-lived X509 certificate containing the provided public key and signed by a private key specific to the target instance. Users may use the certificate to authenticate as themselves when connecting to the database.
 func (s *connect) SQLConnectGenerateEphemeral(ctx context.Context, request operations.SQLConnectGenerateEphemeralRequest, security operations.SQLConnectGenerateEphemeralSecurity) (*operations.SQLConnectGenerateEphemeralResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}:generateEphemeralCert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}:generateEphemeralCert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateEphemeralCertRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *connect) SQLConnectGenerateEphemeral(ctx context.Context, request opera
 // SQLConnectGet - Retrieves connect settings about a Cloud SQL instance.
 func (s *connect) SQLConnectGet(ctx context.Context, request operations.SQLConnectGetRequest, security operations.SQLConnectGetSecurity) (*operations.SQLConnectGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/connectSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/instances/{instance}/connectSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

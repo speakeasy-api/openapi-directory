@@ -16,17 +16,21 @@ const (
 	CreateComputerXAmzTargetEnumDirectoryService20150416CreateComputer CreateComputerXAmzTargetEnum = "DirectoryService_20150416.CreateComputer"
 )
 
+func (e CreateComputerXAmzTargetEnum) ToPointer() *CreateComputerXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateComputerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.CreateComputer":
-		*e = CreateComputerXAmzTargetEnum(s)
+		*e = CreateComputerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateComputerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateComputerXAmzTargetEnum: %v", v)
 	}
 }
 

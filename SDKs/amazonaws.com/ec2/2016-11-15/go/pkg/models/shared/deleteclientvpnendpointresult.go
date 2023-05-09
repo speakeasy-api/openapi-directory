@@ -17,12 +17,16 @@ const (
 	DeleteClientVpnEndpointResultStatusCodeEnumDeleted          DeleteClientVpnEndpointResultStatusCodeEnum = "deleted"
 )
 
+func (e DeleteClientVpnEndpointResultStatusCodeEnum) ToPointer() *DeleteClientVpnEndpointResultStatusCodeEnum {
+	return &e
+}
+
 func (e *DeleteClientVpnEndpointResultStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending-associate":
 		fallthrough
 	case "available":
@@ -30,10 +34,10 @@ func (e *DeleteClientVpnEndpointResultStatusCodeEnum) UnmarshalJSON(data []byte)
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = DeleteClientVpnEndpointResultStatusCodeEnum(s)
+		*e = DeleteClientVpnEndpointResultStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteClientVpnEndpointResultStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteClientVpnEndpointResultStatusCodeEnum: %v", v)
 	}
 }
 

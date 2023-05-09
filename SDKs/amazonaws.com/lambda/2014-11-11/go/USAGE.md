@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,9 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.AddEventSourceRequest{
+    ctx := context.Background()
+    res, err := s.AddEventSource(ctx, operations.AddEventSourceRequest{
         RequestBody: operations.AddEventSourceRequestBody{
-            BatchSize: 548814,
+            BatchSize: sdk.Int64(548814),
             EventSource: "provident",
             FunctionName: "distinctio",
             Parameters: map[string]string{
@@ -30,17 +30,14 @@ func main() {
             },
             Role: "iure",
         },
-        XAmzAlgorithm: "magnam",
-        XAmzContentSha256: "debitis",
-        XAmzCredential: "ipsa",
-        XAmzDate: "delectus",
-        XAmzSecurityToken: "tempora",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddEventSource(ctx, req)
+        XAmzAlgorithm: sdk.String("magnam"),
+        XAmzContentSha256: sdk.String("debitis"),
+        XAmzCredential: sdk.String("ipsa"),
+        XAmzDate: sdk.String("delectus"),
+        XAmzSecurityToken: sdk.String("tempora"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("molestiae"),
+    })
     if err != nil {
         log.Fatal(err)
     }

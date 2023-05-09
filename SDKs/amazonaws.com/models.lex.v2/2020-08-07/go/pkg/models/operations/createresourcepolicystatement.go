@@ -17,19 +17,23 @@ const (
 	CreateResourcePolicyStatementRequestBodyEffectEnumDeny  CreateResourcePolicyStatementRequestBodyEffectEnum = "Deny"
 )
 
+func (e CreateResourcePolicyStatementRequestBodyEffectEnum) ToPointer() *CreateResourcePolicyStatementRequestBodyEffectEnum {
+	return &e
+}
+
 func (e *CreateResourcePolicyStatementRequestBodyEffectEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Allow":
 		fallthrough
 	case "Deny":
-		*e = CreateResourcePolicyStatementRequestBodyEffectEnum(s)
+		*e = CreateResourcePolicyStatementRequestBodyEffectEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateResourcePolicyStatementRequestBodyEffectEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateResourcePolicyStatementRequestBodyEffectEnum: %v", v)
 	}
 }
 

@@ -22,12 +22,16 @@ const (
 	PointStyleShapeEnumXMark                 PointStyleShapeEnum = "X_MARK"
 )
 
+func (e PointStyleShapeEnum) ToPointer() *PointStyleShapeEnum {
+	return &e
+}
+
 func (e *PointStyleShapeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POINT_SHAPE_UNSPECIFIED":
 		fallthrough
 	case "CIRCLE":
@@ -45,10 +49,10 @@ func (e *PointStyleShapeEnum) UnmarshalJSON(data []byte) error {
 	case "TRIANGLE":
 		fallthrough
 	case "X_MARK":
-		*e = PointStyleShapeEnum(s)
+		*e = PointStyleShapeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PointStyleShapeEnum: %s", s)
+		return fmt.Errorf("invalid value for PointStyleShapeEnum: %v", v)
 	}
 }
 

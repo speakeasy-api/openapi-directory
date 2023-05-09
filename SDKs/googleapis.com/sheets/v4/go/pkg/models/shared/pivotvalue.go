@@ -17,12 +17,16 @@ const (
 	PivotValueCalculatedDisplayTypeEnumPercentOfGrandTotal                        PivotValueCalculatedDisplayTypeEnum = "PERCENT_OF_GRAND_TOTAL"
 )
 
+func (e PivotValueCalculatedDisplayTypeEnum) ToPointer() *PivotValueCalculatedDisplayTypeEnum {
+	return &e
+}
+
 func (e *PivotValueCalculatedDisplayTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PIVOT_VALUE_CALCULATED_DISPLAY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PERCENT_OF_ROW_TOTAL":
@@ -30,10 +34,10 @@ func (e *PivotValueCalculatedDisplayTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PERCENT_OF_COLUMN_TOTAL":
 		fallthrough
 	case "PERCENT_OF_GRAND_TOTAL":
-		*e = PivotValueCalculatedDisplayTypeEnum(s)
+		*e = PivotValueCalculatedDisplayTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PivotValueCalculatedDisplayTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PivotValueCalculatedDisplayTypeEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	PivotValueSummarizeFunctionEnumCustom                                PivotValueSummarizeFunctionEnum = "CUSTOM"
 )
 
+func (e PivotValueSummarizeFunctionEnum) ToPointer() *PivotValueSummarizeFunctionEnum {
+	return &e
+}
+
 func (e *PivotValueSummarizeFunctionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PIVOT_STANDARD_VALUE_FUNCTION_UNSPECIFIED":
 		fallthrough
 	case "SUM":
@@ -93,10 +101,10 @@ func (e *PivotValueSummarizeFunctionEnum) UnmarshalJSON(data []byte) error {
 	case "VARP":
 		fallthrough
 	case "CUSTOM":
-		*e = PivotValueSummarizeFunctionEnum(s)
+		*e = PivotValueSummarizeFunctionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PivotValueSummarizeFunctionEnum: %s", s)
+		return fmt.Errorf("invalid value for PivotValueSummarizeFunctionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	PutManagedScalingPolicyXAmzTargetEnumElasticMapReducePutManagedScalingPolicy PutManagedScalingPolicyXAmzTargetEnum = "ElasticMapReduce.PutManagedScalingPolicy"
 )
 
+func (e PutManagedScalingPolicyXAmzTargetEnum) ToPointer() *PutManagedScalingPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutManagedScalingPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.PutManagedScalingPolicy":
-		*e = PutManagedScalingPolicyXAmzTargetEnum(s)
+		*e = PutManagedScalingPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutManagedScalingPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutManagedScalingPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

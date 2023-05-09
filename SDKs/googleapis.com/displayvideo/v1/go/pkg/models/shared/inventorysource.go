@@ -16,21 +16,25 @@ const (
 	InventorySourceCommitmentEnumInventorySourceCommitmentNonGuaranteed InventorySourceCommitmentEnum = "INVENTORY_SOURCE_COMMITMENT_NON_GUARANTEED"
 )
 
+func (e InventorySourceCommitmentEnum) ToPointer() *InventorySourceCommitmentEnum {
+	return &e
+}
+
 func (e *InventorySourceCommitmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVENTORY_SOURCE_COMMITMENT_UNSPECIFIED":
 		fallthrough
 	case "INVENTORY_SOURCE_COMMITMENT_GUARANTEED":
 		fallthrough
 	case "INVENTORY_SOURCE_COMMITMENT_NON_GUARANTEED":
-		*e = InventorySourceCommitmentEnum(s)
+		*e = InventorySourceCommitmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventorySourceCommitmentEnum: %s", s)
+		return fmt.Errorf("invalid value for InventorySourceCommitmentEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	InventorySourceDeliveryMethodEnumInventorySourceDeliveryMethodTag          InventorySourceDeliveryMethodEnum = "INVENTORY_SOURCE_DELIVERY_METHOD_TAG"
 )
 
+func (e InventorySourceDeliveryMethodEnum) ToPointer() *InventorySourceDeliveryMethodEnum {
+	return &e
+}
+
 func (e *InventorySourceDeliveryMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVENTORY_SOURCE_DELIVERY_METHOD_UNSPECIFIED":
 		fallthrough
 	case "INVENTORY_SOURCE_DELIVERY_METHOD_PROGRAMMATIC":
 		fallthrough
 	case "INVENTORY_SOURCE_DELIVERY_METHOD_TAG":
-		*e = InventorySourceDeliveryMethodEnum(s)
+		*e = InventorySourceDeliveryMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventorySourceDeliveryMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for InventorySourceDeliveryMethodEnum: %v", v)
 	}
 }
 
@@ -142,12 +150,16 @@ const (
 	InventorySourceExchangeEnumExchangeHivestack         InventorySourceExchangeEnum = "EXCHANGE_HIVESTACK"
 )
 
+func (e InventorySourceExchangeEnum) ToPointer() *InventorySourceExchangeEnum {
+	return &e
+}
+
 func (e *InventorySourceExchangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCHANGE_UNSPECIFIED":
 		fallthrough
 	case "EXCHANGE_GOOGLE_AD_MANAGER":
@@ -297,10 +309,10 @@ func (e *InventorySourceExchangeEnum) UnmarshalJSON(data []byte) error {
 	case "EXCHANGE_RESET_DIGITAL":
 		fallthrough
 	case "EXCHANGE_HIVESTACK":
-		*e = InventorySourceExchangeEnum(s)
+		*e = InventorySourceExchangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventorySourceExchangeEnum: %s", s)
+		return fmt.Errorf("invalid value for InventorySourceExchangeEnum: %v", v)
 	}
 }
 
@@ -313,21 +325,25 @@ const (
 	InventorySourceInventorySourceTypeEnumInventorySourceTypeAuctionPackage InventorySourceInventorySourceTypeEnum = "INVENTORY_SOURCE_TYPE_AUCTION_PACKAGE"
 )
 
+func (e InventorySourceInventorySourceTypeEnum) ToPointer() *InventorySourceInventorySourceTypeEnum {
+	return &e
+}
+
 func (e *InventorySourceInventorySourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVENTORY_SOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INVENTORY_SOURCE_TYPE_PRIVATE":
 		fallthrough
 	case "INVENTORY_SOURCE_TYPE_AUCTION_PACKAGE":
-		*e = InventorySourceInventorySourceTypeEnum(s)
+		*e = InventorySourceInventorySourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventorySourceInventorySourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InventorySourceInventorySourceTypeEnum: %v", v)
 	}
 }
 
@@ -379,12 +395,16 @@ const (
 	InventorySourceInventorySourceProductTypeEnumAuctionPackage                        InventorySourceInventorySourceProductTypeEnum = "AUCTION_PACKAGE"
 )
 
+func (e InventorySourceInventorySourceProductTypeEnum) ToPointer() *InventorySourceInventorySourceProductTypeEnum {
+	return &e
+}
+
 func (e *InventorySourceInventorySourceProductTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVENTORY_SOURCE_PRODUCT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PREFERRED_DEAL":
@@ -404,10 +424,10 @@ func (e *InventorySourceInventorySourceProductTypeEnum) UnmarshalJSON(data []byt
 	case "PROGRAMMATIC_TV":
 		fallthrough
 	case "AUCTION_PACKAGE":
-		*e = InventorySourceInventorySourceProductTypeEnum(s)
+		*e = InventorySourceInventorySourceProductTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventorySourceInventorySourceProductTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InventorySourceInventorySourceProductTypeEnum: %v", v)
 	}
 }
 

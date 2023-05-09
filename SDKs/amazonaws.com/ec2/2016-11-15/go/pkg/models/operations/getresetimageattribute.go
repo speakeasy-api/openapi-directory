@@ -15,17 +15,21 @@ const (
 	GETResetImageAttributeActionEnumResetImageAttribute GETResetImageAttributeActionEnum = "ResetImageAttribute"
 )
 
+func (e GETResetImageAttributeActionEnum) ToPointer() *GETResetImageAttributeActionEnum {
+	return &e
+}
+
 func (e *GETResetImageAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetImageAttribute":
-		*e = GETResetImageAttributeActionEnum(s)
+		*e = GETResetImageAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetImageAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetImageAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETResetImageAttributeAttributeEnumLaunchPermission GETResetImageAttributeAttributeEnum = "launchPermission"
 )
 
+func (e GETResetImageAttributeAttributeEnum) ToPointer() *GETResetImageAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETResetImageAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "launchPermission":
-		*e = GETResetImageAttributeAttributeEnum(s)
+		*e = GETResetImageAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetImageAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetImageAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	GETResetImageAttributeVersionEnumTwoThousandAndSixteen1115 GETResetImageAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETResetImageAttributeVersionEnum) ToPointer() *GETResetImageAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETResetImageAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETResetImageAttributeVersionEnum(s)
+		*e = GETResetImageAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetImageAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetImageAttributeVersionEnum: %v", v)
 	}
 }
 

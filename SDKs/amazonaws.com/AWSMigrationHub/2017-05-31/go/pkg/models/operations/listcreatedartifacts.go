@@ -16,17 +16,21 @@ const (
 	ListCreatedArtifactsXAmzTargetEnumAwsMigrationHubListCreatedArtifacts ListCreatedArtifactsXAmzTargetEnum = "AWSMigrationHub.ListCreatedArtifacts"
 )
 
+func (e ListCreatedArtifactsXAmzTargetEnum) ToPointer() *ListCreatedArtifactsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCreatedArtifactsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHub.ListCreatedArtifacts":
-		*e = ListCreatedArtifactsXAmzTargetEnum(s)
+		*e = ListCreatedArtifactsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCreatedArtifactsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCreatedArtifactsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -27,6 +27,8 @@ type GetSearchVersionNumberReverseGeocodePositionExtRequest struct {
 	// Restricts reverse geocodes to a certain type of road use. The road use array for reverse geocodes can be one or more of: ["LimitedAccess", "Arterial", "Terminal", "Ramp", "Rotary", "LocalStreet"].
 	RoadUse *string `queryParam:"style=form,explode=true,name=roadUse"`
 	// If the "spatialKeys" flag is set, the response will also contain a proprietary geospatial keys for a specified location.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	SpatialKeys *bool `queryParam:"style=form,explode=true,name=spatialKeys"`
 	// Service version number. The current value is 2.
 	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`

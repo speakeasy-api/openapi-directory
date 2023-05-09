@@ -17,12 +17,16 @@ const (
 	GatewayAPIConfigChannelEnumChannelStandard     GatewayAPIConfigChannelEnum = "CHANNEL_STANDARD"
 )
 
+func (e GatewayAPIConfigChannelEnum) ToPointer() *GatewayAPIConfigChannelEnum {
+	return &e
+}
+
 func (e *GatewayAPIConfigChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHANNEL_UNSPECIFIED":
 		fallthrough
 	case "CHANNEL_DISABLED":
@@ -30,10 +34,10 @@ func (e *GatewayAPIConfigChannelEnum) UnmarshalJSON(data []byte) error {
 	case "CHANNEL_EXPERIMENTAL":
 		fallthrough
 	case "CHANNEL_STANDARD":
-		*e = GatewayAPIConfigChannelEnum(s)
+		*e = GatewayAPIConfigChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GatewayAPIConfigChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for GatewayAPIConfigChannelEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	InstanceTypeEnumGreen InstanceTypeEnum = "Green"
 )
 
+func (e InstanceTypeEnum) ToPointer() *InstanceTypeEnum {
+	return &e
+}
+
 func (e *InstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Blue":
 		fallthrough
 	case "Green":
-		*e = InstanceTypeEnum(s)
+		*e = InstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceTypeEnum: %v", v)
 	}
 }

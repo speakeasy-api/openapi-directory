@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -20,15 +20,13 @@ func main() {
         }),
     )
 
-    req := operations.RequestAccessTokenRequest{
-        RequestBody: &operations.RequestAccessTokenRequestBody{},
-        XAblyVersion: "corrupti",
-        Format: "msgpack",
-        KeyName: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.Authentication.RequestAccessToken(ctx, req)
+    res, err := s.Authentication.RequestAccessToken(ctx, operations.RequestAccessTokenRequest{
+        RequestBody: &operations.RequestAccessTokenRequestBody{},
+        XAblyVersion: sdk.String("corrupti"),
+        Format: shared.ResponseFormatEnumMsgpack.ToPointer(),
+        KeyName: "distinctio",
+    })
     if err != nil {
         log.Fatal(err)
     }

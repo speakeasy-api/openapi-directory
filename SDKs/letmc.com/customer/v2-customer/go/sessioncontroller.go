@@ -34,7 +34,10 @@ func newSessionController(defaultClient, securityClient HTTPClient, serverURL, l
 // SessionControllerChangePassword - Change the password of a customer given their existing and new password.
 func (s *sessionController) SessionControllerChangePassword(ctx context.Context, request operations.SessionControllerChangePasswordRequest) (*operations.SessionControllerChangePasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/session/password", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/session/password", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *sessionController) SessionControllerChangePassword(ctx context.Context,
 // SessionControllerCreateLandlordLogin - Send a request to the in-tray to create a landlord login.
 func (s *sessionController) SessionControllerCreateLandlordLogin(ctx context.Context, request operations.SessionControllerCreateLandlordLoginRequest) (*operations.SessionControllerCreateLandlordLoginResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/session/createlandlordlogin", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/session/createlandlordlogin", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -112,7 +118,10 @@ func (s *sessionController) SessionControllerCreateLandlordLogin(ctx context.Con
 // SessionControllerGetSessionInfo - Gets information about the currently logged on customer.
 func (s *sessionController) SessionControllerGetSessionInfo(ctx context.Context, request operations.SessionControllerGetSessionInfoRequest) (*operations.SessionControllerGetSessionInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/session", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/session", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *sessionController) SessionControllerGetSessionInfo(ctx context.Context,
 // SessionControllerLogin - Login as a customer given their username and password.
 func (s *sessionController) SessionControllerLogin(ctx context.Context, request operations.SessionControllerLoginRequest) (*operations.SessionControllerLoginResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/session", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/session", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -258,7 +270,10 @@ func (s *sessionController) SessionControllerLogin(ctx context.Context, request 
 // SessionControllerLogout - Logout a customer previously logged in via the Login endpoint.
 func (s *sessionController) SessionControllerLogout(ctx context.Context, request operations.SessionControllerLogoutRequest) (*operations.SessionControllerLogoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/session", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/session", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -297,7 +312,10 @@ func (s *sessionController) SessionControllerLogout(ctx context.Context, request
 // SessionControllerResetPassword - Reset the customer's password. An email will be sent out to reset.
 func (s *sessionController) SessionControllerResetPassword(ctx context.Context, request operations.SessionControllerResetPasswordRequest) (*operations.SessionControllerResetPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/session/resetpassword", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/session/resetpassword", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

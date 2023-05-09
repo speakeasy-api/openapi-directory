@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // IntegrationsProjectsLocationsAppsScriptProjectsCreate - Creates an Apps Script project.
 func (s *projects) IntegrationsProjectsLocationsAppsScriptProjectsCreate(ctx context.Context, request operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateRequest, security operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateSecurity) (*operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/appsScriptProjects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/appsScriptProjects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaCreateAppsScriptProjectRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) IntegrationsProjectsLocationsAppsScriptProjectsCreate(ctx con
 // IntegrationsProjectsLocationsAppsScriptProjectsLink - Links a existing Apps Script project.
 func (s *projects) IntegrationsProjectsLocationsAppsScriptProjectsLink(ctx context.Context, request operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkRequest, security operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkSecurity) (*operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/appsScriptProjects:link", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/appsScriptProjects:link", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaLinkAppsScriptProjectRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) IntegrationsProjectsLocationsAppsScriptProjectsLink(ctx conte
 // IntegrationsProjectsLocationsConnectionsList - Lists Connections in a given project and location.
 func (s *projects) IntegrationsProjectsLocationsConnectionsList(ctx context.Context, request operations.IntegrationsProjectsLocationsConnectionsListRequest, security operations.IntegrationsProjectsLocationsConnectionsListSecurity) (*operations.IntegrationsProjectsLocationsConnectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/connections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/connections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) IntegrationsProjectsLocationsConnectionsList(ctx context.Cont
 // IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasList - Lists the JSON schemas for the inputs and outputs of actions, filtered by action name.
 func (s *projects) IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasList(ctx context.Context, request operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListRequest, security operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListSecurity) (*operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/runtimeActionSchemas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/runtimeActionSchemas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasL
 // IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasList - Lists the JSON schemas for the properties of runtime entities, filtered by entity name.
 func (s *projects) IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasList(ctx context.Context, request operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListRequest, security operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListSecurity) (*operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/runtimeEntitySchemas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/runtimeEntitySchemas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasL
 // IntegrationsProjectsLocationsProductsAuthConfigsCreate - Creates an auth config record. Fetch corresponding credentials for specific auth types, e.g. access token for OAuth 2.0, JWT token for JWT. Encrypt the auth config with Cloud KMS and store the encrypted credentials in Spanner. Returns the encrypted auth config.
 func (s *projects) IntegrationsProjectsLocationsProductsAuthConfigsCreate(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest, security operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateSecurity) (*operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/authConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/authConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaAuthConfigInput", "json")
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsAuthConfigsCreate(ctx co
 // IntegrationsProjectsLocationsProductsAuthConfigsList - Lists all auth configs that match the filter. Restrict to auth configs belong to the current client only.
 func (s *projects) IntegrationsProjectsLocationsProductsAuthConfigsList(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsAuthConfigsListRequest, security operations.IntegrationsProjectsLocationsProductsAuthConfigsListSecurity) (*operations.IntegrationsProjectsLocationsProductsAuthConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/authConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/authConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsAuthConfigsList(ctx cont
 // IntegrationsProjectsLocationsProductsCertificatesCreate - Creates a new certificate. The certificate will be registered to the trawler service and will be encrypted using cloud KMS and stored in Spanner Returns the certificate.
 func (s *projects) IntegrationsProjectsLocationsProductsCertificatesCreate(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsCertificatesCreateRequest, security operations.IntegrationsProjectsLocationsProductsCertificatesCreateSecurity) (*operations.IntegrationsProjectsLocationsProductsCertificatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/certificates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/certificates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaCertificateInput", "json")
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsCertificatesCreate(ctx c
 // IntegrationsProjectsLocationsProductsCertificatesList - List all the certificates that match the filter. Restrict to certificate of current client only.
 func (s *projects) IntegrationsProjectsLocationsProductsCertificatesList(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsCertificatesListRequest, security operations.IntegrationsProjectsLocationsProductsCertificatesListSecurity) (*operations.IntegrationsProjectsLocationsProductsCertificatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/certificates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/certificates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -494,7 +521,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsCertificatesList(ctx con
 // IntegrationsProjectsLocationsProductsIntegrationsExecute - Executes integrations synchronously by passing the trigger id in the request body. The request is not returned until the requested executions are either fulfilled or experienced an error. If the integration name is not specified (passing `-`), all of the associated integration under the given trigger_id will be executed. Otherwise only the specified integration for the given `trigger_id` is executed. This is helpful for execution the integration from UI.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsExecute(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:execute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:execute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest", "json")
 	if err != nil {
@@ -549,7 +579,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsExecute(ctx 
 // IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancel - Cancellation of an execution
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancel(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -604,7 +637,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsExecutionsCa
 // IntegrationsProjectsLocationsProductsIntegrationsExecutionsList - Lists the results of all the integration executions. The response includes the same information as the [execution log](https://cloud.google.com/application-integration/docs/viewing-logs) in the Integration UI.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsExecutionsList(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -652,7 +688,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsExecutionsLi
 // IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLift - * Lifts suspension for advanced suspension task. Fetch corresponding suspension with provided suspension Id, resolve suspension, and set up suspension result for the Suspension Task.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLift(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:lift", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:lift", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaLiftSuspensionRequest", "json")
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsExecutionsSu
 // IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsList - * Lists suspensions associated with a specific execution. Only those with permissions to resolve the relevant suspensions will be able to view them.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsList(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/suspensions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/suspensions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -755,7 +797,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsExecutionsSu
 // IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolve - * Resolves (lifts/rejects) any number of suspensions. If the integration is already running, only the status of the suspension is updated. Otherwise, the suspended integration will begin execution again.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolve(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:resolve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:resolve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaResolveSuspensionRequestInput", "json")
 	if err != nil {
@@ -810,7 +855,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsExecutionsSu
 // IntegrationsProjectsLocationsProductsIntegrationsList - Returns the list of all integrations in the specified project.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsList(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsListRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsListSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/integrations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/integrations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -858,7 +906,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsList(ctx con
 // IntegrationsProjectsLocationsProductsIntegrationsSchedule - Schedules an integration for execution by passing the trigger id and the scheduled time in the request body.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsSchedule(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:schedule", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:schedule", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest", "json")
 	if err != nil {
@@ -913,7 +964,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsSchedule(ctx
 // IntegrationsProjectsLocationsProductsIntegrationsVersionsDownload - Downloads an integration. Retrieves the `IntegrationVersion` for a given `integration_id` and returns the response as a string.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsVersionsDownload(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -961,7 +1015,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsVersionsDown
 // IntegrationsProjectsLocationsProductsIntegrationsVersionsPublish - This RPC throws an exception if the integration is in ARCHIVED or ACTIVE state. This RPC throws an exception if the version being published is DRAFT, and if the `locked_by` user is not the same as the user performing the Publish. Audit fields updated include last_published_timestamp, last_published_by, last_modified_timestamp, last_modified_by. Any existing lock is on this integration is released.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsVersionsPublish(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:publish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:publish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1016,7 +1073,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsVersionsPubl
 // IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLock - Clears the `locked_by` and `locked_at_timestamp`in the DRAFT version of this integration. It then performs the same action as the CreateDraftIntegrationVersion (i.e., copies the DRAFT version of the integration as a SNAPSHOT and then creates a new DRAFT version with the `locked_by` set to the `user_taking_over` and the `locked_at_timestamp` set to the current timestamp). Both the `locked_by` and `user_taking_over` are notified via email about the takeover. This RPC throws an exception if the integration is not in DRAFT status or if the `locked_by` and `locked_at_timestamp` fields are not set.The TakeoverEdit lock is treated the same as an edit of the integration, and hence shares ACLs with edit. Audit fields updated include last_modified_timestamp, last_modified_by.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLock(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{integrationVersion}:takeoverEditLock", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{integrationVersion}:takeoverEditLock", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1071,7 +1131,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsVersionsTake
 // IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublish - Sets the status of the ACTIVE integration to SNAPSHOT with a new tag "PREVIOUSLY_PUBLISHED" after validating it. The "HEAD" and "PUBLISH_REQUESTED" tags do not change. This RPC throws an exception if the version being snapshot is not ACTIVE. Audit fields added include action, action_by, action_timestamp.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublish(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:unpublish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:unpublish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1126,7 +1189,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpu
 // IntegrationsProjectsLocationsProductsIntegrationsVersionsUpload - Uploads an integration. The content can be a previously downloaded integration. Performs the same function as CreateDraftIntegrationVersion, but accepts input in a string format, which holds the complete representation of the IntegrationVersion content.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsVersionsUpload(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/versions:upload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/versions:upload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest", "json")
 	if err != nil {
@@ -1181,7 +1247,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationsVersionsUplo
 // IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreate - Creates an IntegrationTemplateVersion.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreate(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionInput", "json")
 	if err != nil {
@@ -1236,7 +1305,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationtemplatesVers
 // IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsList - Returns the list of all IntegrationTemplateVersions in the specified project.
 func (s *projects) IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsList(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListRequest, security operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListSecurity) (*operations.IntegrationsProjectsLocationsProductsIntegrationtemplatesVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1284,7 +1356,10 @@ func (s *projects) IntegrationsProjectsLocationsProductsIntegrationtemplatesVers
 // IntegrationsProjectsLocationsSfdcInstancesCreate - Creates an sfdc instance record. Store the sfdc instance in Spanner. Returns the sfdc instance.
 func (s *projects) IntegrationsProjectsLocationsSfdcInstancesCreate(ctx context.Context, request operations.IntegrationsProjectsLocationsSfdcInstancesCreateRequest, security operations.IntegrationsProjectsLocationsSfdcInstancesCreateSecurity) (*operations.IntegrationsProjectsLocationsSfdcInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/sfdcInstances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/sfdcInstances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaSfdcInstanceInput", "json")
 	if err != nil {
@@ -1339,7 +1414,10 @@ func (s *projects) IntegrationsProjectsLocationsSfdcInstancesCreate(ctx context.
 // IntegrationsProjectsLocationsSfdcInstancesList - Lists all sfdc instances that match the filter. Restrict to sfdc instances belonging to the current client only.
 func (s *projects) IntegrationsProjectsLocationsSfdcInstancesList(ctx context.Context, request operations.IntegrationsProjectsLocationsSfdcInstancesListRequest, security operations.IntegrationsProjectsLocationsSfdcInstancesListSecurity) (*operations.IntegrationsProjectsLocationsSfdcInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/sfdcInstances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/sfdcInstances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1387,7 +1465,10 @@ func (s *projects) IntegrationsProjectsLocationsSfdcInstancesList(ctx context.Co
 // IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreate - Creates an sfdc channel record. Store the sfdc channel in Spanner. Returns the sfdc channel.
 func (s *projects) IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreate(ctx context.Context, request operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateRequest, security operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateSecurity) (*operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/sfdcChannels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/sfdcChannels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaSfdcChannelInput", "json")
 	if err != nil {
@@ -1442,7 +1523,10 @@ func (s *projects) IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreate(
 // IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDelete - Deletes an sfdc channel.
 func (s *projects) IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDelete(ctx context.Context, request operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteRequest, security operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteSecurity) (*operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1490,7 +1574,10 @@ func (s *projects) IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDelete(
 // IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGet - Gets an sfdc channel. If the channel doesn't exist, Code.NOT_FOUND exception will be thrown.
 func (s *projects) IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGet(ctx context.Context, request operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetRequest, security operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetSecurity) (*operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1538,7 +1625,10 @@ func (s *projects) IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGet(ctx
 // IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsList - Lists all sfdc channels that match the filter. Restrict to sfdc channels belonging to the current client only.
 func (s *projects) IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsList(ctx context.Context, request operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListRequest, security operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListSecurity) (*operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/sfdcChannels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/sfdcChannels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1586,7 +1676,10 @@ func (s *projects) IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsList(ct
 // IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatch - Updates an sfdc channel. Updates the sfdc channel in spanner. Returns the sfdc channel.
 func (s *projects) IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatch(ctx context.Context, request operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchRequest, security operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchSecurity) (*operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudIntegrationsV1alphaSfdcChannelInput", "json")
 	if err != nil {

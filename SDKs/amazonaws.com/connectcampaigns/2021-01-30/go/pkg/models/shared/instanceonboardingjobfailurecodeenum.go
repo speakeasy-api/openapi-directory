@@ -19,12 +19,16 @@ const (
 	InstanceOnboardingJobFailureCodeEnumInternalFailure                     InstanceOnboardingJobFailureCodeEnum = "INTERNAL_FAILURE"
 )
 
+func (e InstanceOnboardingJobFailureCodeEnum) ToPointer() *InstanceOnboardingJobFailureCodeEnum {
+	return &e
+}
+
 func (e *InstanceOnboardingJobFailureCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVENT_BRIDGE_ACCESS_DENIED":
 		fallthrough
 	case "EVENT_BRIDGE_MANAGED_RULE_LIMIT_EXCEEDED":
@@ -36,9 +40,9 @@ func (e *InstanceOnboardingJobFailureCodeEnum) UnmarshalJSON(data []byte) error 
 	case "KMS_KEY_NOT_FOUND":
 		fallthrough
 	case "INTERNAL_FAILURE":
-		*e = InstanceOnboardingJobFailureCodeEnum(s)
+		*e = InstanceOnboardingJobFailureCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceOnboardingJobFailureCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceOnboardingJobFailureCodeEnum: %v", v)
 	}
 }

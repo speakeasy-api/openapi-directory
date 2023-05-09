@@ -13,16 +13,20 @@ const (
 	ResourceConfigurationSchemaTypeEnumCfnResourceSchema ResourceConfigurationSchemaTypeEnum = "CFN_RESOURCE_SCHEMA"
 )
 
+func (e ResourceConfigurationSchemaTypeEnum) ToPointer() *ResourceConfigurationSchemaTypeEnum {
+	return &e
+}
+
 func (e *ResourceConfigurationSchemaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CFN_RESOURCE_SCHEMA":
-		*e = ResourceConfigurationSchemaTypeEnum(s)
+		*e = ResourceConfigurationSchemaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceConfigurationSchemaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceConfigurationSchemaTypeEnum: %v", v)
 	}
 }

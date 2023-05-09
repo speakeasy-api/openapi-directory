@@ -16,21 +16,25 @@ const (
 	ProjectPrivateRoleEnumViewer       ProjectPrivateRoleEnum = "Viewer"
 )
 
+func (e ProjectPrivateRoleEnum) ToPointer() *ProjectPrivateRoleEnum {
+	return &e
+}
+
 func (e *ProjectPrivateRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Owner":
 		fallthrough
 	case "Collaborator":
 		fallthrough
 	case "Viewer":
-		*e = ProjectPrivateRoleEnum(s)
+		*e = ProjectPrivateRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectPrivateRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectPrivateRoleEnum: %v", v)
 	}
 }
 
@@ -42,19 +46,23 @@ const (
 	ProjectPrivateStorageEnumGroup      ProjectPrivateStorageEnum = "group"
 )
 
+func (e ProjectPrivateStorageEnum) ToPointer() *ProjectPrivateStorageEnum {
+	return &e
+}
+
 func (e *ProjectPrivateStorageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "individual":
 		fallthrough
 	case "group":
-		*e = ProjectPrivateStorageEnum(s)
+		*e = ProjectPrivateStorageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectPrivateStorageEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectPrivateStorageEnum: %v", v)
 	}
 }
 

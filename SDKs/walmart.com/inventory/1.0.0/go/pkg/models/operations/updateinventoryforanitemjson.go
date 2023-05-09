@@ -15,17 +15,21 @@ const (
 	UpdateInventoryForAnItemApplicationJSONQuantityUnitEnumEach UpdateInventoryForAnItemApplicationJSONQuantityUnitEnum = "EACH"
 )
 
+func (e UpdateInventoryForAnItemApplicationJSONQuantityUnitEnum) ToPointer() *UpdateInventoryForAnItemApplicationJSONQuantityUnitEnum {
+	return &e
+}
+
 func (e *UpdateInventoryForAnItemApplicationJSONQuantityUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EACH":
-		*e = UpdateInventoryForAnItemApplicationJSONQuantityUnitEnum(s)
+		*e = UpdateInventoryForAnItemApplicationJSONQuantityUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInventoryForAnItemApplicationJSONQuantityUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInventoryForAnItemApplicationJSONQuantityUnitEnum: %v", v)
 	}
 }
 
@@ -69,17 +73,21 @@ const (
 	UpdateInventoryForAnItemJSON200ApplicationXMLQuantityUnitEnumEach UpdateInventoryForAnItemJSON200ApplicationXMLQuantityUnitEnum = "EACH"
 )
 
+func (e UpdateInventoryForAnItemJSON200ApplicationXMLQuantityUnitEnum) ToPointer() *UpdateInventoryForAnItemJSON200ApplicationXMLQuantityUnitEnum {
+	return &e
+}
+
 func (e *UpdateInventoryForAnItemJSON200ApplicationXMLQuantityUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EACH":
-		*e = UpdateInventoryForAnItemJSON200ApplicationXMLQuantityUnitEnum(s)
+		*e = UpdateInventoryForAnItemJSON200ApplicationXMLQuantityUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInventoryForAnItemJSON200ApplicationXMLQuantityUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInventoryForAnItemJSON200ApplicationXMLQuantityUnitEnum: %v", v)
 	}
 }
 
@@ -106,17 +114,21 @@ const (
 	UpdateInventoryForAnItemJSON200ApplicationJSONQuantityUnitEnumEach UpdateInventoryForAnItemJSON200ApplicationJSONQuantityUnitEnum = "EACH"
 )
 
+func (e UpdateInventoryForAnItemJSON200ApplicationJSONQuantityUnitEnum) ToPointer() *UpdateInventoryForAnItemJSON200ApplicationJSONQuantityUnitEnum {
+	return &e
+}
+
 func (e *UpdateInventoryForAnItemJSON200ApplicationJSONQuantityUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EACH":
-		*e = UpdateInventoryForAnItemJSON200ApplicationJSONQuantityUnitEnum(s)
+		*e = UpdateInventoryForAnItemJSON200ApplicationJSONQuantityUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInventoryForAnItemJSON200ApplicationJSONQuantityUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInventoryForAnItemJSON200ApplicationJSONQuantityUnitEnum: %v", v)
 	}
 }
 

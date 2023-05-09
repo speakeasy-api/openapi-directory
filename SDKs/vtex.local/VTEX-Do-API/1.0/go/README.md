@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/VTEX-Do-API/1.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,15 +28,13 @@ func main() {
         }),
     )
 
-    req := operations.GetNoteRequest{
+    ctx := context.Background()
+    res, err := s.Note.GetNote(ctx, operations.GetNoteRequest{
         Accept: "application/json",
         ContentType: "application/json",
         NoteID: "654321cba",
-        Reason: "data-validation",
-    }
-
-    ctx := context.Background()
-    res, err := s.Note.GetNote(ctx, req)
+        Reason: sdk.String("data-validation"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -53,19 +50,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### Note
+### [Note](docs/note/README.md)
 
-* `GetNote` - Retrieve Note
-* `GetNotesbyorderID` - Get Notes by orderId
-* `NewNote` - Create Note
+* [GetNote](docs/note/README.md#getnote) - Retrieve Note
+* [GetNotesbyorderID](docs/note/README.md#getnotesbyorderid) - Get Notes by orderId
+* [NewNote](docs/note/README.md#newnote) - Create Note
 
-### Task
+### [Task](docs/task/README.md)
 
-* `AddComment` - Add Comment on a Task
-* `EditTask` - Update Task
-* `GetTask` - Retrieve Task
-* `Listtasksbyassignee` - List tasks
-* `NewTask` - Create Task
+* [AddComment](docs/task/README.md#addcomment) - Add Comment on a Task
+* [EditTask](docs/task/README.md#edittask) - Update Task
+* [GetTask](docs/task/README.md#gettask) - Retrieve Task
+* [Listtasksbyassignee](docs/task/README.md#listtasksbyassignee) - List tasks
+* [NewTask](docs/task/README.md#newtask) - Create Task
 <!-- End SDK Available Operations -->
 
 ### Maturity

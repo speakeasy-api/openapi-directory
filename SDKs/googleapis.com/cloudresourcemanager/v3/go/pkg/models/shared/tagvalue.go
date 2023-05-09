@@ -26,7 +26,7 @@ type TagValue struct {
 	Etag *string `json:"etag,omitempty"`
 	// Immutable. Resource name for TagValue in the format `tagValues/456`.
 	Name *string `json:"name,omitempty"`
-	// Output only. Namespaced name of the TagValue. Now only supported in the format `{organization_id}/{tag_key_short_name}/{short_name}`. Other formats will be supported when we add non-org parented tags.
+	// Output only. The namespaced name of the TagValue. Can be in the form `{organization_id}/{tag_key_short_name}/{tag_value_short_name}` or `{project_id}/{tag_key_short_name}/{tag_value_short_name}` or `{project_number}/{tag_key_short_name}/{tag_value_short_name}`.
 	NamespacedName *string `json:"namespacedName,omitempty"`
 	// Immutable. The resource name of the new TagValue's parent TagKey. Must be of the form `tagKeys/{tag_key_id}`.
 	Parent *string `json:"parent,omitempty"`

@@ -15,17 +15,21 @@ const (
 	GETGETOrganizationsAccessReportActionEnumGetOrganizationsAccessReport GETGETOrganizationsAccessReportActionEnum = "GetOrganizationsAccessReport"
 )
 
+func (e GETGETOrganizationsAccessReportActionEnum) ToPointer() *GETGETOrganizationsAccessReportActionEnum {
+	return &e
+}
+
 func (e *GETGETOrganizationsAccessReportActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetOrganizationsAccessReport":
-		*e = GETGETOrganizationsAccessReportActionEnum(s)
+		*e = GETGETOrganizationsAccessReportActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETOrganizationsAccessReportActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETOrganizationsAccessReportActionEnum: %v", v)
 	}
 }
 
@@ -39,12 +43,16 @@ const (
 	GETGETOrganizationsAccessReportSortKeyEnumLastAuthenticatedTimeDescending GETGETOrganizationsAccessReportSortKeyEnum = "LAST_AUTHENTICATED_TIME_DESCENDING"
 )
 
+func (e GETGETOrganizationsAccessReportSortKeyEnum) ToPointer() *GETGETOrganizationsAccessReportSortKeyEnum {
+	return &e
+}
+
 func (e *GETGETOrganizationsAccessReportSortKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE_NAMESPACE_ASCENDING":
 		fallthrough
 	case "SERVICE_NAMESPACE_DESCENDING":
@@ -52,10 +60,10 @@ func (e *GETGETOrganizationsAccessReportSortKeyEnum) UnmarshalJSON(data []byte) 
 	case "LAST_AUTHENTICATED_TIME_ASCENDING":
 		fallthrough
 	case "LAST_AUTHENTICATED_TIME_DESCENDING":
-		*e = GETGETOrganizationsAccessReportSortKeyEnum(s)
+		*e = GETGETOrganizationsAccessReportSortKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETOrganizationsAccessReportSortKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETOrganizationsAccessReportSortKeyEnum: %v", v)
 	}
 }
 
@@ -66,17 +74,21 @@ const (
 	GETGETOrganizationsAccessReportVersionEnumTwoThousandAndTen0508 GETGETOrganizationsAccessReportVersionEnum = "2010-05-08"
 )
 
+func (e GETGETOrganizationsAccessReportVersionEnum) ToPointer() *GETGETOrganizationsAccessReportVersionEnum {
+	return &e
+}
+
 func (e *GETGETOrganizationsAccessReportVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETGETOrganizationsAccessReportVersionEnum(s)
+		*e = GETGETOrganizationsAccessReportVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETOrganizationsAccessReportVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETOrganizationsAccessReportVersionEnum: %v", v)
 	}
 }
 

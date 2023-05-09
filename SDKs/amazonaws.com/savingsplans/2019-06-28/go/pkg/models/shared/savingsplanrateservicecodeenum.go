@@ -17,12 +17,16 @@ const (
 	SavingsPlanRateServiceCodeEnumAmazonSageMaker SavingsPlanRateServiceCodeEnum = "AmazonSageMaker"
 )
 
+func (e SavingsPlanRateServiceCodeEnum) ToPointer() *SavingsPlanRateServiceCodeEnum {
+	return &e
+}
+
 func (e *SavingsPlanRateServiceCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2":
 		fallthrough
 	case "AmazonECS":
@@ -32,9 +36,9 @@ func (e *SavingsPlanRateServiceCodeEnum) UnmarshalJSON(data []byte) error {
 	case "AWSLambda":
 		fallthrough
 	case "AmazonSageMaker":
-		*e = SavingsPlanRateServiceCodeEnum(s)
+		*e = SavingsPlanRateServiceCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SavingsPlanRateServiceCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for SavingsPlanRateServiceCodeEnum: %v", v)
 	}
 }

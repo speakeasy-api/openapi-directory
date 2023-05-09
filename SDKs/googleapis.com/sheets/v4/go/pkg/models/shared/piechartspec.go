@@ -20,12 +20,16 @@ const (
 	PieChartSpecLegendPositionEnumLabeledLegend                     PieChartSpecLegendPositionEnum = "LABELED_LEGEND"
 )
 
+func (e PieChartSpecLegendPositionEnum) ToPointer() *PieChartSpecLegendPositionEnum {
+	return &e
+}
+
 func (e *PieChartSpecLegendPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PIE_CHART_LEGEND_POSITION_UNSPECIFIED":
 		fallthrough
 	case "BOTTOM_LEGEND":
@@ -39,10 +43,10 @@ func (e *PieChartSpecLegendPositionEnum) UnmarshalJSON(data []byte) error {
 	case "NO_LEGEND":
 		fallthrough
 	case "LABELED_LEGEND":
-		*e = PieChartSpecLegendPositionEnum(s)
+		*e = PieChartSpecLegendPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PieChartSpecLegendPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for PieChartSpecLegendPositionEnum: %v", v)
 	}
 }
 

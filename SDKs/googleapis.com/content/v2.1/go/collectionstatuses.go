@@ -34,7 +34,10 @@ func newCollectionstatuses(defaultClient, securityClient HTTPClient, serverURL, 
 // ContentCollectionstatusesGet - Gets the status of a collection from your Merchant Center account.
 func (s *collectionstatuses) ContentCollectionstatusesGet(ctx context.Context, request operations.ContentCollectionstatusesGetRequest, security operations.ContentCollectionstatusesGetSecurity) (*operations.ContentCollectionstatusesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collectionstatuses/{collectionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collectionstatuses/{collectionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *collectionstatuses) ContentCollectionstatusesGet(ctx context.Context, r
 // ContentCollectionstatusesList - Lists the statuses of the collections in your Merchant Center account.
 func (s *collectionstatuses) ContentCollectionstatusesList(ctx context.Context, request operations.ContentCollectionstatusesListRequest, security operations.ContentCollectionstatusesListSecurity) (*operations.ContentCollectionstatusesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collectionstatuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/collectionstatuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

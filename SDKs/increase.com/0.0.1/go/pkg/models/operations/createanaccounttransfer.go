@@ -9,23 +9,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAnAccountTransferDefaultApplicationJSON13StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON13StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CreateAnAccountTransferDefaultApplicationJSON13StatusEnum = "429"
+	CreateAnAccountTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CreateAnAccountTransferDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON13StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = CreateAnAccountTransferDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = CreateAnAccountTransferDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON13TypeEnumRateLimitedError CreateAnAccountTransferDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON13TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON13TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -57,23 +65,27 @@ type CreateAnAccountTransferDefaultApplicationJSON13 struct {
 	Type       CreateAnAccountTransferDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type CreateAnAccountTransferDefaultApplicationJSON12StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON12StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree CreateAnAccountTransferDefaultApplicationJSON12StatusEnum = "403"
+	CreateAnAccountTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree CreateAnAccountTransferDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON12StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateAnAccountTransferDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateAnAccountTransferDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -83,17 +95,21 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON12TypeEnumPrivateFeatureError CreateAnAccountTransferDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON12TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON12TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -104,23 +120,27 @@ type CreateAnAccountTransferDefaultApplicationJSON12 struct {
 	Type   CreateAnAccountTransferDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type CreateAnAccountTransferDefaultApplicationJSON11StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON11StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour CreateAnAccountTransferDefaultApplicationJSON11StatusEnum = "404"
+	CreateAnAccountTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour CreateAnAccountTransferDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON11StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CreateAnAccountTransferDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CreateAnAccountTransferDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON11TypeEnumObjectNotFoundError CreateAnAccountTransferDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON11TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON11TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -151,23 +175,27 @@ type CreateAnAccountTransferDefaultApplicationJSON11 struct {
 	Type   CreateAnAccountTransferDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type CreateAnAccountTransferDefaultApplicationJSON10StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON10StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON10StatusEnumFourHundred CreateAnAccountTransferDefaultApplicationJSON10StatusEnum = "400"
+	CreateAnAccountTransferDefaultApplicationJSON10StatusEnumFourHundred CreateAnAccountTransferDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON10StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CreateAnAccountTransferDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CreateAnAccountTransferDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -177,17 +205,21 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON10TypeEnumMalformedRequestError CreateAnAccountTransferDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON10TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON10TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -198,23 +230,27 @@ type CreateAnAccountTransferDefaultApplicationJSON10 struct {
 	Type   CreateAnAccountTransferDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type CreateAnAccountTransferDefaultApplicationJSON9StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON9StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON9StatusEnumFourHundred CreateAnAccountTransferDefaultApplicationJSON9StatusEnum = "400"
+	CreateAnAccountTransferDefaultApplicationJSON9StatusEnumFourHundred CreateAnAccountTransferDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON9StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CreateAnAccountTransferDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CreateAnAccountTransferDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -224,46 +260,54 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON9TypeEnumInvalidParametersError CreateAnAccountTransferDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON9TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON9TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type CreateAnAccountTransferDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                 `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                 `json:"errors"`
 	Status CreateAnAccountTransferDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                   `json:"title"`
 	Type   CreateAnAccountTransferDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type CreateAnAccountTransferDefaultApplicationJSON8StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON8StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine CreateAnAccountTransferDefaultApplicationJSON8StatusEnum = "409"
+	CreateAnAccountTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine CreateAnAccountTransferDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON8StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CreateAnAccountTransferDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CreateAnAccountTransferDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON8TypeEnumInvalidOperationError CreateAnAccountTransferDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON8TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON8TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -294,23 +342,27 @@ type CreateAnAccountTransferDefaultApplicationJSON8 struct {
 	Type   CreateAnAccountTransferDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type CreateAnAccountTransferDefaultApplicationJSON7StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON7StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne CreateAnAccountTransferDefaultApplicationJSON7StatusEnum = "401"
+	CreateAnAccountTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne CreateAnAccountTransferDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON7StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = CreateAnAccountTransferDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = CreateAnAccountTransferDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON7TypeEnumInvalidAPIKeyError CreateAnAccountTransferDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON7TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON7TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -341,23 +397,27 @@ type CreateAnAccountTransferDefaultApplicationJSON7 struct {
 	Type   CreateAnAccountTransferDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type CreateAnAccountTransferDefaultApplicationJSON6StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON6StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON6StatusEnumFiveHundred CreateAnAccountTransferDefaultApplicationJSON6StatusEnum = "500"
+	CreateAnAccountTransferDefaultApplicationJSON6StatusEnumFiveHundred CreateAnAccountTransferDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON6StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = CreateAnAccountTransferDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = CreateAnAccountTransferDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -367,17 +427,21 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON6TypeEnumInternalServerError CreateAnAccountTransferDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON6TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON6TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -388,23 +452,27 @@ type CreateAnAccountTransferDefaultApplicationJSON6 struct {
 	Type   CreateAnAccountTransferDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type CreateAnAccountTransferDefaultApplicationJSON5StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON5StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree CreateAnAccountTransferDefaultApplicationJSON5StatusEnum = "403"
+	CreateAnAccountTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree CreateAnAccountTransferDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON5StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateAnAccountTransferDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateAnAccountTransferDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -414,17 +482,21 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON5TypeEnumInsufficientPermissionsError CreateAnAccountTransferDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON5TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON5TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -435,23 +507,27 @@ type CreateAnAccountTransferDefaultApplicationJSON5 struct {
 	Type   CreateAnAccountTransferDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type CreateAnAccountTransferDefaultApplicationJSON4StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON4StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CreateAnAccountTransferDefaultApplicationJSON4StatusEnum = "422"
+	CreateAnAccountTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CreateAnAccountTransferDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON4StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = CreateAnAccountTransferDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = CreateAnAccountTransferDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -461,17 +537,21 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError CreateAnAccountTransferDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON4TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON4TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -482,23 +562,27 @@ type CreateAnAccountTransferDefaultApplicationJSON4 struct {
 	Type   CreateAnAccountTransferDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type CreateAnAccountTransferDefaultApplicationJSON3StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON3StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine CreateAnAccountTransferDefaultApplicationJSON3StatusEnum = "409"
+	CreateAnAccountTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine CreateAnAccountTransferDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON3StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CreateAnAccountTransferDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CreateAnAccountTransferDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -508,17 +592,21 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON3TypeEnumIdempotencyConflictError CreateAnAccountTransferDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON3TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON3TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -529,23 +617,27 @@ type CreateAnAccountTransferDefaultApplicationJSON3 struct {
 	Type   CreateAnAccountTransferDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type CreateAnAccountTransferDefaultApplicationJSON2StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON2StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree CreateAnAccountTransferDefaultApplicationJSON2StatusEnum = "403"
+	CreateAnAccountTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree CreateAnAccountTransferDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON2StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateAnAccountTransferDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateAnAccountTransferDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -555,17 +647,21 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON2TypeEnumEnvironmentMismatchError CreateAnAccountTransferDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON2TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON2TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -576,23 +672,27 @@ type CreateAnAccountTransferDefaultApplicationJSON2 struct {
 	Type   CreateAnAccountTransferDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type CreateAnAccountTransferDefaultApplicationJSON1StatusEnum string
+type CreateAnAccountTransferDefaultApplicationJSON1StatusEnum int64
 
 const (
-	CreateAnAccountTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour CreateAnAccountTransferDefaultApplicationJSON1StatusEnum = "404"
+	CreateAnAccountTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour CreateAnAccountTransferDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON1StatusEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CreateAnAccountTransferDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CreateAnAccountTransferDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -602,17 +702,21 @@ const (
 	CreateAnAccountTransferDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError CreateAnAccountTransferDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e CreateAnAccountTransferDefaultApplicationJSON1TypeEnum) ToPointer() *CreateAnAccountTransferDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *CreateAnAccountTransferDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = CreateAnAccountTransferDefaultApplicationJSON1TypeEnum(s)
+		*e = CreateAnAccountTransferDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAccountTransferDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

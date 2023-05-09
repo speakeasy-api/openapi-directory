@@ -35,7 +35,10 @@ func newScores(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GamesScoresGet - Get high scores, and optionally ranks, in leaderboards for the currently authenticated player. For a specific time span, `leaderboardId` can be set to `ALL` to retrieve data for all leaderboards in a given time span. `NOTE: You cannot ask for 'ALL' leaderboards and 'ALL' timeSpans in the same request; only one parameter may be set to 'ALL'.
 func (s *scores) GamesScoresGet(ctx context.Context, request operations.GamesScoresGetRequest, security operations.GamesScoresGetSecurity) (*operations.GamesScoresGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/leaderboards/{leaderboardId}/scores/{timeSpan}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/leaderboards/{leaderboardId}/scores/{timeSpan}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *scores) GamesScoresGet(ctx context.Context, request operations.GamesSco
 // GamesScoresList - Lists the scores in a leaderboard, starting from the top.
 func (s *scores) GamesScoresList(ctx context.Context, request operations.GamesScoresListRequest, security operations.GamesScoresListSecurity) (*operations.GamesScoresListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}/scores/{collection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}/scores/{collection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *scores) GamesScoresList(ctx context.Context, request operations.GamesSc
 // GamesScoresListWindow - Lists the scores in a leaderboard around (and including) a player's score.
 func (s *scores) GamesScoresListWindow(ctx context.Context, request operations.GamesScoresListWindowRequest, security operations.GamesScoresListWindowSecurity) (*operations.GamesScoresListWindowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}/window/{collection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}/window/{collection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -179,7 +188,10 @@ func (s *scores) GamesScoresListWindow(ctx context.Context, request operations.G
 // GamesScoresSubmit - Submits a score to the specified leaderboard.
 func (s *scores) GamesScoresSubmit(ctx context.Context, request operations.GamesScoresSubmitRequest, security operations.GamesScoresSubmitSecurity) (*operations.GamesScoresSubmitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}/scores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}/scores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

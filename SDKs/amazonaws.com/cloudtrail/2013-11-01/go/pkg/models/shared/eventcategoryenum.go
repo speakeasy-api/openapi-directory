@@ -13,16 +13,20 @@ const (
 	EventCategoryEnumInsight EventCategoryEnum = "insight"
 )
 
+func (e EventCategoryEnum) ToPointer() *EventCategoryEnum {
+	return &e
+}
+
 func (e *EventCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insight":
-		*e = EventCategoryEnum(s)
+		*e = EventCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for EventCategoryEnum: %v", v)
 	}
 }

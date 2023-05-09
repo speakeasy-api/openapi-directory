@@ -24,12 +24,16 @@ const (
 	PrivateCollectionsListOrderEnumCites         PrivateCollectionsListOrderEnum = "cites"
 )
 
+func (e PrivateCollectionsListOrderEnum) ToPointer() *PrivateCollectionsListOrderEnum {
+	return &e
+}
+
 func (e *PrivateCollectionsListOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "published_date":
 		fallthrough
 	case "modified_date":
@@ -39,10 +43,10 @@ func (e *PrivateCollectionsListOrderEnum) UnmarshalJSON(data []byte) error {
 	case "shares":
 		fallthrough
 	case "cites":
-		*e = PrivateCollectionsListOrderEnum(s)
+		*e = PrivateCollectionsListOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrivateCollectionsListOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for PrivateCollectionsListOrderEnum: %v", v)
 	}
 }
 
@@ -54,19 +58,23 @@ const (
 	PrivateCollectionsListOrderDirectionEnumDesc PrivateCollectionsListOrderDirectionEnum = "desc"
 )
 
+func (e PrivateCollectionsListOrderDirectionEnum) ToPointer() *PrivateCollectionsListOrderDirectionEnum {
+	return &e
+}
+
 func (e *PrivateCollectionsListOrderDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = PrivateCollectionsListOrderDirectionEnum(s)
+		*e = PrivateCollectionsListOrderDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrivateCollectionsListOrderDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for PrivateCollectionsListOrderDirectionEnum: %v", v)
 	}
 }
 

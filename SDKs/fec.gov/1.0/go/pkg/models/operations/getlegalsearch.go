@@ -21,12 +21,16 @@ const (
 	GetLegalSearchAoCategoryEnumS GetLegalSearchAoCategoryEnum = "S"
 )
 
+func (e GetLegalSearchAoCategoryEnum) ToPointer() *GetLegalSearchAoCategoryEnum {
+	return &e
+}
+
 func (e *GetLegalSearchAoCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "F":
 		fallthrough
 	case "V":
@@ -40,95 +44,110 @@ func (e *GetLegalSearchAoCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "C":
 		fallthrough
 	case "S":
-		*e = GetLegalSearchAoCategoryEnum(s)
+		*e = GetLegalSearchAoCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLegalSearchAoCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLegalSearchAoCategoryEnum: %v", v)
 	}
 }
 
-type GetLegalSearchAoRequestorTypeEnum string
+type GetLegalSearchAoRequestorTypeEnum int
 
 const (
-	GetLegalSearchAoRequestorTypeEnumOne      GetLegalSearchAoRequestorTypeEnum = "1"
-	GetLegalSearchAoRequestorTypeEnumTwo      GetLegalSearchAoRequestorTypeEnum = "2"
-	GetLegalSearchAoRequestorTypeEnumThree    GetLegalSearchAoRequestorTypeEnum = "3"
-	GetLegalSearchAoRequestorTypeEnumFour     GetLegalSearchAoRequestorTypeEnum = "4"
-	GetLegalSearchAoRequestorTypeEnumFive     GetLegalSearchAoRequestorTypeEnum = "5"
-	GetLegalSearchAoRequestorTypeEnumSix      GetLegalSearchAoRequestorTypeEnum = "6"
-	GetLegalSearchAoRequestorTypeEnumSeven    GetLegalSearchAoRequestorTypeEnum = "7"
-	GetLegalSearchAoRequestorTypeEnumEight    GetLegalSearchAoRequestorTypeEnum = "8"
-	GetLegalSearchAoRequestorTypeEnumNine     GetLegalSearchAoRequestorTypeEnum = "9"
-	GetLegalSearchAoRequestorTypeEnumTen      GetLegalSearchAoRequestorTypeEnum = "10"
-	GetLegalSearchAoRequestorTypeEnumEleven   GetLegalSearchAoRequestorTypeEnum = "11"
-	GetLegalSearchAoRequestorTypeEnumTwelve   GetLegalSearchAoRequestorTypeEnum = "12"
-	GetLegalSearchAoRequestorTypeEnumThirteen GetLegalSearchAoRequestorTypeEnum = "13"
-	GetLegalSearchAoRequestorTypeEnumFourteen GetLegalSearchAoRequestorTypeEnum = "14"
-	GetLegalSearchAoRequestorTypeEnumFifteen  GetLegalSearchAoRequestorTypeEnum = "15"
-	GetLegalSearchAoRequestorTypeEnumSixteen  GetLegalSearchAoRequestorTypeEnum = "16"
+	GetLegalSearchAoRequestorTypeEnumOne      GetLegalSearchAoRequestorTypeEnum = 1
+	GetLegalSearchAoRequestorTypeEnumTwo      GetLegalSearchAoRequestorTypeEnum = 2
+	GetLegalSearchAoRequestorTypeEnumThree    GetLegalSearchAoRequestorTypeEnum = 3
+	GetLegalSearchAoRequestorTypeEnumFour     GetLegalSearchAoRequestorTypeEnum = 4
+	GetLegalSearchAoRequestorTypeEnumFive     GetLegalSearchAoRequestorTypeEnum = 5
+	GetLegalSearchAoRequestorTypeEnumSix      GetLegalSearchAoRequestorTypeEnum = 6
+	GetLegalSearchAoRequestorTypeEnumSeven    GetLegalSearchAoRequestorTypeEnum = 7
+	GetLegalSearchAoRequestorTypeEnumEight    GetLegalSearchAoRequestorTypeEnum = 8
+	GetLegalSearchAoRequestorTypeEnumNine     GetLegalSearchAoRequestorTypeEnum = 9
+	GetLegalSearchAoRequestorTypeEnumTen      GetLegalSearchAoRequestorTypeEnum = 10
+	GetLegalSearchAoRequestorTypeEnumEleven   GetLegalSearchAoRequestorTypeEnum = 11
+	GetLegalSearchAoRequestorTypeEnumTwelve   GetLegalSearchAoRequestorTypeEnum = 12
+	GetLegalSearchAoRequestorTypeEnumThirteen GetLegalSearchAoRequestorTypeEnum = 13
+	GetLegalSearchAoRequestorTypeEnumFourteen GetLegalSearchAoRequestorTypeEnum = 14
+	GetLegalSearchAoRequestorTypeEnumFifteen  GetLegalSearchAoRequestorTypeEnum = 15
+	GetLegalSearchAoRequestorTypeEnumSixteen  GetLegalSearchAoRequestorTypeEnum = 16
 )
 
+func (e GetLegalSearchAoRequestorTypeEnum) ToPointer() *GetLegalSearchAoRequestorTypeEnum {
+	return &e
+}
+
 func (e *GetLegalSearchAoRequestorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "7":
+	case 7:
 		fallthrough
-	case "8":
+	case 8:
 		fallthrough
-	case "9":
+	case 9:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "11":
+	case 11:
 		fallthrough
-	case "12":
+	case 12:
 		fallthrough
-	case "13":
+	case 13:
 		fallthrough
-	case "14":
+	case 14:
 		fallthrough
-	case "15":
+	case 15:
 		fallthrough
-	case "16":
-		*e = GetLegalSearchAoRequestorTypeEnum(s)
+	case 16:
+		*e = GetLegalSearchAoRequestorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLegalSearchAoRequestorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLegalSearchAoRequestorTypeEnum: %v", v)
 	}
 }
 
 type GetLegalSearchCaseDocCategoryIDEnum string
 
 const (
-	GetLegalSearchCaseDocCategoryIDEnumOne   GetLegalSearchCaseDocCategoryIDEnum = "1"
-	GetLegalSearchCaseDocCategoryIDEnumTwo   GetLegalSearchCaseDocCategoryIDEnum = "2"
-	GetLegalSearchCaseDocCategoryIDEnumThree GetLegalSearchCaseDocCategoryIDEnum = "3"
-	GetLegalSearchCaseDocCategoryIDEnumFour  GetLegalSearchCaseDocCategoryIDEnum = "4"
-	GetLegalSearchCaseDocCategoryIDEnumFive  GetLegalSearchCaseDocCategoryIDEnum = "5"
-	GetLegalSearchCaseDocCategoryIDEnumSix   GetLegalSearchCaseDocCategoryIDEnum = "6"
+	GetLegalSearchCaseDocCategoryIDEnumOne                 GetLegalSearchCaseDocCategoryIDEnum = "1"
+	GetLegalSearchCaseDocCategoryIDEnumTwo                 GetLegalSearchCaseDocCategoryIDEnum = "2"
+	GetLegalSearchCaseDocCategoryIDEnumThree               GetLegalSearchCaseDocCategoryIDEnum = "3"
+	GetLegalSearchCaseDocCategoryIDEnumFour                GetLegalSearchCaseDocCategoryIDEnum = "4"
+	GetLegalSearchCaseDocCategoryIDEnumFive                GetLegalSearchCaseDocCategoryIDEnum = "5"
+	GetLegalSearchCaseDocCategoryIDEnumSix                 GetLegalSearchCaseDocCategoryIDEnum = "6"
+	GetLegalSearchCaseDocCategoryIDEnumOneThousandAndOne   GetLegalSearchCaseDocCategoryIDEnum = "1001"
+	GetLegalSearchCaseDocCategoryIDEnumOneThousandAndTwo   GetLegalSearchCaseDocCategoryIDEnum = "1002"
+	GetLegalSearchCaseDocCategoryIDEnumOneThousandAndThree GetLegalSearchCaseDocCategoryIDEnum = "1003"
+	GetLegalSearchCaseDocCategoryIDEnumOneThousandAndFour  GetLegalSearchCaseDocCategoryIDEnum = "1004"
+	GetLegalSearchCaseDocCategoryIDEnumOneThousandAndFive  GetLegalSearchCaseDocCategoryIDEnum = "1005"
+	GetLegalSearchCaseDocCategoryIDEnumOneThousandAndSix   GetLegalSearchCaseDocCategoryIDEnum = "1006"
+	GetLegalSearchCaseDocCategoryIDEnumTwoThousandAndOne   GetLegalSearchCaseDocCategoryIDEnum = "2001"
 )
 
+func (e GetLegalSearchCaseDocCategoryIDEnum) ToPointer() *GetLegalSearchCaseDocCategoryIDEnum {
+	return &e
+}
+
 func (e *GetLegalSearchCaseDocCategoryIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "2":
@@ -140,10 +159,94 @@ func (e *GetLegalSearchCaseDocCategoryIDEnum) UnmarshalJSON(data []byte) error {
 	case "5":
 		fallthrough
 	case "6":
-		*e = GetLegalSearchCaseDocCategoryIDEnum(s)
+		fallthrough
+	case "1001":
+		fallthrough
+	case "1002":
+		fallthrough
+	case "1003":
+		fallthrough
+	case "1004":
+		fallthrough
+	case "1005":
+		fallthrough
+	case "1006":
+		fallthrough
+	case "2001":
+		*e = GetLegalSearchCaseDocCategoryIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLegalSearchCaseDocCategoryIDEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLegalSearchCaseDocCategoryIDEnum: %v", v)
+	}
+}
+
+// GetLegalSearchMurTypeEnum -
+// Type of MUR : current or archived
+type GetLegalSearchMurTypeEnum string
+
+const (
+	GetLegalSearchMurTypeEnumArchived GetLegalSearchMurTypeEnum = "archived"
+	GetLegalSearchMurTypeEnumCurrent  GetLegalSearchMurTypeEnum = "current"
+)
+
+func (e GetLegalSearchMurTypeEnum) ToPointer() *GetLegalSearchMurTypeEnum {
+	return &e
+}
+
+func (e *GetLegalSearchMurTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "archived":
+		fallthrough
+	case "current":
+		*e = GetLegalSearchMurTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetLegalSearchMurTypeEnum: %v", v)
+	}
+}
+
+// GetLegalSearchTypeEnum -
+// Choose a legal document type
+type GetLegalSearchTypeEnum string
+
+const (
+	GetLegalSearchTypeEnumAdminFines       GetLegalSearchTypeEnum = "admin_fines"
+	GetLegalSearchTypeEnumAdrs             GetLegalSearchTypeEnum = "adrs"
+	GetLegalSearchTypeEnumAdvisoryOpinions GetLegalSearchTypeEnum = "advisory_opinions"
+	GetLegalSearchTypeEnumMurs             GetLegalSearchTypeEnum = "murs"
+	GetLegalSearchTypeEnumRegulations      GetLegalSearchTypeEnum = "regulations"
+	GetLegalSearchTypeEnumStatutes         GetLegalSearchTypeEnum = "statutes"
+)
+
+func (e GetLegalSearchTypeEnum) ToPointer() *GetLegalSearchTypeEnum {
+	return &e
+}
+
+func (e *GetLegalSearchTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "admin_fines":
+		fallthrough
+	case "adrs":
+		fallthrough
+	case "advisory_opinions":
+		fallthrough
+	case "murs":
+		fallthrough
+	case "regulations":
+		fallthrough
+	case "statutes":
+		*e = GetLegalSearchTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetLegalSearchTypeEnum: %v", v)
 	}
 }
 
@@ -230,12 +333,19 @@ type GetLegalSearchRequest struct {
 	//
 	CaseDispositions []string `queryParam:"style=form,explode=true,name=case_dispositions"`
 	// Select one or more case_doc_category_id to filter by corresponding CASE_DOCUMENT_CATEGORY:
-	//         - 1 - Conciliation Agreements
-	//         - 2 - Complaint, Responses, Designation of Counsel and Extensions of Timee
+	//         - 1 - Conciliation and Settlement Agreements
+	//         - 2 - Complaint, Responses, Designation of Counsel and Extensions of Time
 	//         - 3 - General Counsel Reports, Briefs, Notifications and Responses
 	//         - 4 - Certifications
-	//         - 5 - Civil Penalties, Disgorgements and Other Payments
-	//         - 6 - Statements of Reasons
+	//         - 5 - Civil Penalties, Disgorgements, Other Payments and Letters of Compliance
+	//         - 6 - Statement of Reasons
+	//         - 1001 - ADR Settlement Agreements
+	//         - 1002 - Complaint, Responses, Designation of Counsel and Extensions of Time
+	//         - 1003 - ADR Memoranda, Notifications and Responses
+	//         - 1004 - Certifications
+	//         - 1005 - Civil Penalties, Disgorgements, Other Payments and Letters of Compliance
+	//         - 1006 - Statement of Reasons
+	//         - 2001 - Administrative Fine Case
 	//
 	CaseDocCategoryID []GetLegalSearchCaseDocCategoryIDEnum `queryParam:"style=form,explode=true,name=case_doc_category_id"`
 	// Cases election cycles
@@ -273,21 +383,16 @@ type GetLegalSearchRequest struct {
 	HitsReturned *int `queryParam:"style=form,explode=true,name=hits_returned"`
 	// Type of MUR : current or archived
 	//
-	MurType *string `queryParam:"style=form,explode=true,name=mur_type"`
+	MurType *GetLegalSearchMurTypeEnum `queryParam:"style=form,explode=true,name=mur_type"`
 	// Text to search legal documents for
 	//
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// Provide a field to sort by. Use `-` for descending order. ex: `-case_no`
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
-	// Legal Document type to refine search by
-	//     - statutes
-	//     - regulations
-	//     - advisory_opinions
-	//     - murs
-	//     - admin_fines
+	// Choose a legal document type
 	//
-	Type *string `queryParam:"style=form,explode=true,name=type"`
+	Type *GetLegalSearchTypeEnum `queryParam:"style=form,explode=true,name=type"`
 }
 
 type GetLegalSearchDefaultApplicationJSONAdminFinesCommissionVotes struct {
@@ -473,19 +578,23 @@ const (
 	GetLegalSearchDefaultApplicationJSONMursMurTypeEnumArchived GetLegalSearchDefaultApplicationJSONMursMurTypeEnum = "archived"
 )
 
+func (e GetLegalSearchDefaultApplicationJSONMursMurTypeEnum) ToPointer() *GetLegalSearchDefaultApplicationJSONMursMurTypeEnum {
+	return &e
+}
+
 func (e *GetLegalSearchDefaultApplicationJSONMursMurTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "archived":
-		*e = GetLegalSearchDefaultApplicationJSONMursMurTypeEnum(s)
+		*e = GetLegalSearchDefaultApplicationJSONMursMurTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLegalSearchDefaultApplicationJSONMursMurTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLegalSearchDefaultApplicationJSONMursMurTypeEnum: %v", v)
 	}
 }
 

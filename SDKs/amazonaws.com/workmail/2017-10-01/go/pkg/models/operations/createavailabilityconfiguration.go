@@ -16,17 +16,21 @@ const (
 	CreateAvailabilityConfigurationXAmzTargetEnumWorkMailServiceCreateAvailabilityConfiguration CreateAvailabilityConfigurationXAmzTargetEnum = "WorkMailService.CreateAvailabilityConfiguration"
 )
 
+func (e CreateAvailabilityConfigurationXAmzTargetEnum) ToPointer() *CreateAvailabilityConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAvailabilityConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.CreateAvailabilityConfiguration":
-		*e = CreateAvailabilityConfigurationXAmzTargetEnum(s)
+		*e = CreateAvailabilityConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAvailabilityConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAvailabilityConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

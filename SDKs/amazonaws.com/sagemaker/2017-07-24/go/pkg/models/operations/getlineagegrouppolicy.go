@@ -16,17 +16,21 @@ const (
 	GetLineageGroupPolicyXAmzTargetEnumSageMakerGetLineageGroupPolicy GetLineageGroupPolicyXAmzTargetEnum = "SageMaker.GetLineageGroupPolicy"
 )
 
+func (e GetLineageGroupPolicyXAmzTargetEnum) ToPointer() *GetLineageGroupPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetLineageGroupPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.GetLineageGroupPolicy":
-		*e = GetLineageGroupPolicyXAmzTargetEnum(s)
+		*e = GetLineageGroupPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLineageGroupPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLineageGroupPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

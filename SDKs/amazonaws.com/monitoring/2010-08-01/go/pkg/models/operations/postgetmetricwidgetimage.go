@@ -15,17 +15,21 @@ const (
 	POSTGetMetricWidgetImageActionEnumGetMetricWidgetImage POSTGetMetricWidgetImageActionEnum = "GetMetricWidgetImage"
 )
 
+func (e POSTGetMetricWidgetImageActionEnum) ToPointer() *POSTGetMetricWidgetImageActionEnum {
+	return &e
+}
+
 func (e *POSTGetMetricWidgetImageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetMetricWidgetImage":
-		*e = POSTGetMetricWidgetImageActionEnum(s)
+		*e = POSTGetMetricWidgetImageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetMetricWidgetImageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetMetricWidgetImageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetMetricWidgetImageVersionEnumTwoThousandAndTen0801 POSTGetMetricWidgetImageVersionEnum = "2010-08-01"
 )
 
+func (e POSTGetMetricWidgetImageVersionEnum) ToPointer() *POSTGetMetricWidgetImageVersionEnum {
+	return &e
+}
+
 func (e *POSTGetMetricWidgetImageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = POSTGetMetricWidgetImageVersionEnum(s)
+		*e = POSTGetMetricWidgetImageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetMetricWidgetImageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetMetricWidgetImageVersionEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTGetAssociatedEnclaveCertificateIamRolesActionEnumGetAssociatedEnclaveCertificateIamRoles POSTGetAssociatedEnclaveCertificateIamRolesActionEnum = "GetAssociatedEnclaveCertificateIamRoles"
 )
 
+func (e POSTGetAssociatedEnclaveCertificateIamRolesActionEnum) ToPointer() *POSTGetAssociatedEnclaveCertificateIamRolesActionEnum {
+	return &e
+}
+
 func (e *POSTGetAssociatedEnclaveCertificateIamRolesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAssociatedEnclaveCertificateIamRoles":
-		*e = POSTGetAssociatedEnclaveCertificateIamRolesActionEnum(s)
+		*e = POSTGetAssociatedEnclaveCertificateIamRolesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetAssociatedEnclaveCertificateIamRolesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetAssociatedEnclaveCertificateIamRolesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetAssociatedEnclaveCertificateIamRolesVersionEnumTwoThousandAndSixteen1115 POSTGetAssociatedEnclaveCertificateIamRolesVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetAssociatedEnclaveCertificateIamRolesVersionEnum) ToPointer() *POSTGetAssociatedEnclaveCertificateIamRolesVersionEnum {
+	return &e
+}
+
 func (e *POSTGetAssociatedEnclaveCertificateIamRolesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetAssociatedEnclaveCertificateIamRolesVersionEnum(s)
+		*e = POSTGetAssociatedEnclaveCertificateIamRolesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetAssociatedEnclaveCertificateIamRolesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetAssociatedEnclaveCertificateIamRolesVersionEnum: %v", v)
 	}
 }
 

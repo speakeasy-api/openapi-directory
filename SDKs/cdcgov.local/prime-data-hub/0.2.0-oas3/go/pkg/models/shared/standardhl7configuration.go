@@ -18,21 +18,25 @@ const (
 	StandardHl7ConfigurationPhoneNumberFormattingEnumAreaLocalInComponentOne  StandardHl7ConfigurationPhoneNumberFormattingEnum = "AREA_LOCAL_IN_COMPONENT_ONE"
 )
 
+func (e StandardHl7ConfigurationPhoneNumberFormattingEnum) ToPointer() *StandardHl7ConfigurationPhoneNumberFormattingEnum {
+	return &e
+}
+
 func (e *StandardHl7ConfigurationPhoneNumberFormattingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD":
 		fallthrough
 	case "ONLY_DIGITS_IN_COMPONENT_ONE":
 		fallthrough
 	case "AREA_LOCAL_IN_COMPONENT_ONE":
-		*e = StandardHl7ConfigurationPhoneNumberFormattingEnum(s)
+		*e = StandardHl7ConfigurationPhoneNumberFormattingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StandardHl7ConfigurationPhoneNumberFormattingEnum: %s", s)
+		return fmt.Errorf("invalid value for StandardHl7ConfigurationPhoneNumberFormattingEnum: %v", v)
 	}
 }
 

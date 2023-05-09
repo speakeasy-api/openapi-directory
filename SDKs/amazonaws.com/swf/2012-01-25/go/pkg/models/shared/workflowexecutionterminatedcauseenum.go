@@ -15,20 +15,24 @@ const (
 	WorkflowExecutionTerminatedCauseEnumOperatorInitiated  WorkflowExecutionTerminatedCauseEnum = "OPERATOR_INITIATED"
 )
 
+func (e WorkflowExecutionTerminatedCauseEnum) ToPointer() *WorkflowExecutionTerminatedCauseEnum {
+	return &e
+}
+
 func (e *WorkflowExecutionTerminatedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHILD_POLICY_APPLIED":
 		fallthrough
 	case "EVENT_LIMIT_EXCEEDED":
 		fallthrough
 	case "OPERATOR_INITIATED":
-		*e = WorkflowExecutionTerminatedCauseEnum(s)
+		*e = WorkflowExecutionTerminatedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkflowExecutionTerminatedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkflowExecutionTerminatedCauseEnum: %v", v)
 	}
 }

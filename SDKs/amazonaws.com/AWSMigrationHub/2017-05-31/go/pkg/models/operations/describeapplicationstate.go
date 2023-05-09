@@ -16,17 +16,21 @@ const (
 	DescribeApplicationStateXAmzTargetEnumAwsMigrationHubDescribeApplicationState DescribeApplicationStateXAmzTargetEnum = "AWSMigrationHub.DescribeApplicationState"
 )
 
+func (e DescribeApplicationStateXAmzTargetEnum) ToPointer() *DescribeApplicationStateXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeApplicationStateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHub.DescribeApplicationState":
-		*e = DescribeApplicationStateXAmzTargetEnum(s)
+		*e = DescribeApplicationStateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeApplicationStateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeApplicationStateXAmzTargetEnum: %v", v)
 	}
 }
 

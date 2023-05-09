@@ -15,21 +15,25 @@ const (
 	ScanDefinitionAssetsCriticityEnumHigh   ScanDefinitionAssetsCriticityEnum = "high"
 )
 
+func (e ScanDefinitionAssetsCriticityEnum) ToPointer() *ScanDefinitionAssetsCriticityEnum {
+	return &e
+}
+
 func (e *ScanDefinitionAssetsCriticityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "low":
 		fallthrough
 	case "medium":
 		fallthrough
 	case "high":
-		*e = ScanDefinitionAssetsCriticityEnum(s)
+		*e = ScanDefinitionAssetsCriticityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanDefinitionAssetsCriticityEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanDefinitionAssetsCriticityEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	ScanDefinitionAssetsDatatypeEnumApplication  ScanDefinitionAssetsDatatypeEnum = "application"
 )
 
+func (e ScanDefinitionAssetsDatatypeEnum) ToPointer() *ScanDefinitionAssetsDatatypeEnum {
+	return &e
+}
+
 func (e *ScanDefinitionAssetsDatatypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ip":
 		fallthrough
 	case "ip-range":
@@ -76,10 +84,10 @@ func (e *ScanDefinitionAssetsDatatypeEnum) UnmarshalJSON(data []byte) error {
 	case "path":
 		fallthrough
 	case "application":
-		*e = ScanDefinitionAssetsDatatypeEnum(s)
+		*e = ScanDefinitionAssetsDatatypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanDefinitionAssetsDatatypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanDefinitionAssetsDatatypeEnum: %v", v)
 	}
 }
 

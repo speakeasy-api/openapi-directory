@@ -20,12 +20,16 @@ const (
 	GetListPathwaysFormatEnumPdf  GetListPathwaysFormatEnum = "pdf"
 )
 
+func (e GetListPathwaysFormatEnum) ToPointer() *GetListPathwaysFormatEnum {
+	return &e
+}
+
 func (e *GetListPathwaysFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -37,10 +41,10 @@ func (e *GetListPathwaysFormatEnum) UnmarshalJSON(data []byte) error {
 	case "jpg":
 		fallthrough
 	case "pdf":
-		*e = GetListPathwaysFormatEnum(s)
+		*e = GetListPathwaysFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetListPathwaysFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetListPathwaysFormatEnum: %v", v)
 	}
 }
 

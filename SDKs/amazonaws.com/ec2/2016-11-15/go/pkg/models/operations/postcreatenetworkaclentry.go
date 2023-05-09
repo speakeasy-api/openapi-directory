@@ -15,17 +15,21 @@ const (
 	POSTCreateNetworkACLEntryActionEnumCreateNetworkACLEntry POSTCreateNetworkACLEntryActionEnum = "CreateNetworkAclEntry"
 )
 
+func (e POSTCreateNetworkACLEntryActionEnum) ToPointer() *POSTCreateNetworkACLEntryActionEnum {
+	return &e
+}
+
 func (e *POSTCreateNetworkACLEntryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateNetworkAclEntry":
-		*e = POSTCreateNetworkACLEntryActionEnum(s)
+		*e = POSTCreateNetworkACLEntryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateNetworkACLEntryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateNetworkACLEntryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateNetworkACLEntryVersionEnumTwoThousandAndSixteen1115 POSTCreateNetworkACLEntryVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateNetworkACLEntryVersionEnum) ToPointer() *POSTCreateNetworkACLEntryVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateNetworkACLEntryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateNetworkACLEntryVersionEnum(s)
+		*e = POSTCreateNetworkACLEntryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateNetworkACLEntryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateNetworkACLEntryVersionEnum: %v", v)
 	}
 }
 

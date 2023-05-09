@@ -2,47 +2,45 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.IamcredentialsProjectsServiceAccountsGenerateAccessToken(ctx, operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GenerateAccessTokenRequest: &shared.GenerateAccessTokenRequest{
             Delegates: []string{
                 "distinctio",
                 "quibusdam",
                 "unde",
             },
-            Lifetime: "nulla",
+            Lifetime: sdk.String("nulla"),
             Scope: []string{
                 "illum",
                 "vel",
                 "error",
             },
         },
-        AccessToken: "deserunt",
-        Alt: "media",
-        Callback: "iure",
-        Fields: "magnam",
-        Key: "debitis",
-        Name: "ipsa",
-        OauthToken: "delectus",
-        PrettyPrint: false,
-        QuotaUser: "tempora",
-        UploadType: "suscipit",
-        UploadProtocol: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.IamcredentialsProjectsServiceAccountsGenerateAccessToken(ctx, req, operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity{
+        AccessToken: sdk.String("deserunt"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("iure"),
+        Fields: sdk.String("magnam"),
+        Key: sdk.String("debitis"),
+        Name: "Lucia Goldner",
+        OauthToken: sdk.String("minus"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("placeat"),
+        UploadType: sdk.String("voluptatum"),
+        UploadProtocol: sdk.String("iusto"),
+    }, operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

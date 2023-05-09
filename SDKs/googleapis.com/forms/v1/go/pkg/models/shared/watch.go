@@ -17,12 +17,16 @@ const (
 	WatchErrorTypeEnumOtherErrors          WatchErrorTypeEnum = "OTHER_ERRORS"
 )
 
+func (e WatchErrorTypeEnum) ToPointer() *WatchErrorTypeEnum {
+	return &e
+}
+
 func (e *WatchErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ERROR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PROJECT_NOT_AUTHORIZED":
@@ -30,10 +34,10 @@ func (e *WatchErrorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NO_USER_ACCESS":
 		fallthrough
 	case "OTHER_ERRORS":
-		*e = WatchErrorTypeEnum(s)
+		*e = WatchErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WatchErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WatchErrorTypeEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	WatchEventTypeEnumResponses            WatchEventTypeEnum = "RESPONSES"
 )
 
+func (e WatchEventTypeEnum) ToPointer() *WatchEventTypeEnum {
+	return &e
+}
+
 func (e *WatchEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SCHEMA":
 		fallthrough
 	case "RESPONSES":
-		*e = WatchEventTypeEnum(s)
+		*e = WatchEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WatchEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WatchEventTypeEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	WatchStateEnumSuspended        WatchStateEnum = "SUSPENDED"
 )
 
+func (e WatchStateEnum) ToPointer() *WatchStateEnum {
+	return &e
+}
+
 func (e *WatchStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "SUSPENDED":
-		*e = WatchStateEnum(s)
+		*e = WatchStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WatchStateEnum: %s", s)
+		return fmt.Errorf("invalid value for WatchStateEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,24 +16,22 @@ func main() {
         }),
     )
 
-    req := operations.GetIceServerConfigRequest{
+    ctx := context.Background()
+    res, err := s.GetIceServerConfig(ctx, operations.GetIceServerConfigRequest{
         RequestBody: operations.GetIceServerConfigRequestBody{
             ChannelARN: "corrupti",
-            ClientID: "provident",
-            Service: "TURN",
-            Username: "Micheal_Sporer",
+            ClientID: sdk.String("provident"),
+            Service: operations.GetIceServerConfigRequestBodyServiceEnumTurn.ToPointer(),
+            Username: sdk.String("Micheal_Sporer"),
         },
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "illum",
-        XAmzCredential: "vel",
-        XAmzDate: "error",
-        XAmzSecurityToken: "deserunt",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "iure",
-    }
-
-    ctx := context.Background()
-    res, err := s.GetIceServerConfig(ctx, req)
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("illum"),
+        XAmzCredential: sdk.String("vel"),
+        XAmzDate: sdk.String("error"),
+        XAmzSecurityToken: sdk.String("deserunt"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("iure"),
+    })
     if err != nil {
         log.Fatal(err)
     }

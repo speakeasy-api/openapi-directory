@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <fullname>Well-Architected Tool</fullname> <p>This is the <i>Well-Architected Tool API Reference</i>. The WA Tool API provides programmatic access to the <a href="http://aws.amazon.com/well-architected-tool">Well-Architected Tool</a> in the <a href="https://console.aws.amazon.com/wellarchitected">Amazon Web Services Management Console</a>. For information about the Well-Architected Tool, see the <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/intro.html">Well-Architected Tool User Guide</a>.</p>
 // https://docs.aws.amazon.com/wellarchitected/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // AssociateLenses - <p>Associate a lens to a workload.</p> <p>Up to 10 lenses can be associated with a workload in a single API operation. A maximum of 20 lenses can be associated with a workload.</p> <note> <p> <b>Disclaimer</b> </p> <p>By accessing and/or applying custom lenses created by another Amazon Web Services user or account, you acknowledge that custom lenses created by other users and shared with you are Third Party Content as defined in the Amazon Web Services Customer Agreement. </p> </note>
 func (s *SDK) AssociateLenses(ctx context.Context, request operations.AssociateLensesRequest) (*operations.AssociateLensesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/associateLenses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/associateLenses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -218,10 +236,13 @@ func (s *SDK) AssociateLenses(ctx context.Context, request operations.AssociateL
 	return res, nil
 }
 
-// CreateLensShare - <p>Create a lens share.</p> <p>The owner of a lens can share it with other Amazon Web Services accounts, IAM users, an organization, and organizational units (OUs) in the same Amazon Web Services Region. Shared access to a lens is not removed until the lens invitation is deleted.</p> <note> <p> <b>Disclaimer</b> </p> <p>By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.</p> </note>
+// CreateLensShare - <p>Create a lens share.</p> <p>The owner of a lens can share it with other Amazon Web Services accounts, users, an organization, and organizational units (OUs) in the same Amazon Web Services Region. Lenses provided by Amazon Web Services (Amazon Web Services Official Content) cannot be shared.</p> <p> Shared access to a lens is not removed until the lens invitation is deleted.</p> <p>If you share a lens with an organization or OU, all accounts in the organization or OU are granted access to the lens.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-sharing.html">Sharing a custom lens</a> in the <i>Well-Architected Tool User Guide</i>.</p> <note> <p> <b>Disclaimer</b> </p> <p>By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.</p> </note>
 func (s *SDK) CreateLensShare(ctx context.Context, request operations.CreateLensShareRequest) (*operations.CreateLensShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/shares", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/shares", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -344,10 +365,13 @@ func (s *SDK) CreateLensShare(ctx context.Context, request operations.CreateLens
 	return res, nil
 }
 
-// CreateLensVersion - <p>Create a new lens version.</p> <p>A lens can have up to 100 versions.</p> <p>After a lens has been imported, create a new lens version to publish it. The owner of a lens can share the lens with other Amazon Web Services accounts and IAM users in the same Amazon Web Services Region. Only the owner of a lens can delete it. </p>
+// CreateLensVersion - <p>Create a new lens version.</p> <p>A lens can have up to 100 versions.</p> <p>Use this operation to publish a new lens version after you have imported a lens. The <code>LensAlias</code> is used to identify the lens to be published. The owner of a lens can share the lens with other Amazon Web Services accounts and users in the same Amazon Web Services Region. Only the owner of a lens can delete it. </p>
 func (s *SDK) CreateLensVersion(ctx context.Context, request operations.CreateLensVersionRequest) (*operations.CreateLensVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -473,7 +497,10 @@ func (s *SDK) CreateLensVersion(ctx context.Context, request operations.CreateLe
 // CreateMilestone - Create a milestone for an existing workload.
 func (s *SDK) CreateMilestone(ctx context.Context, request operations.CreateMilestoneRequest) (*operations.CreateMilestoneResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/milestones", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/milestones", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -596,7 +623,7 @@ func (s *SDK) CreateMilestone(ctx context.Context, request operations.CreateMile
 	return res, nil
 }
 
-// CreateWorkload - <p>Create a new workload.</p> <p>The owner of a workload can share the workload with other Amazon Web Services accounts, IAM users, an organization, and organizational units (OUs) in the same Amazon Web Services Region. Only the owner of a workload can delete it.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/define-workload.html">Defining a Workload</a> in the <i>Well-Architected Tool User Guide</i>.</p>
+// CreateWorkload - <p>Create a new workload.</p> <p>The owner of a workload can share the workload with other Amazon Web Services accounts, users, an organization, and organizational units (OUs) in the same Amazon Web Services Region. Only the owner of a workload can delete it.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/define-workload.html">Defining a Workload</a> in the <i>Well-Architected Tool User Guide</i>.</p> <important> <p>Either <code>AwsRegions</code>, <code>NonAwsRegions</code>, or both must be specified when creating a workload.</p> <p>You also must specify <code>ReviewOwner</code>, even though the parameter is listed as not being required in the following section. </p> </important>
 func (s *SDK) CreateWorkload(ctx context.Context, request operations.CreateWorkloadRequest) (*operations.CreateWorkloadResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workloads"
@@ -705,6 +732,16 @@ func (s *SDK) CreateWorkload(ctx context.Context, request operations.CreateWorkl
 				return nil, err
 			}
 
+			res.ResourceNotFoundException = out
+		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
 			res.ThrottlingException = out
 		}
 	}
@@ -712,10 +749,13 @@ func (s *SDK) CreateWorkload(ctx context.Context, request operations.CreateWorkl
 	return res, nil
 }
 
-// CreateWorkloadShare - <p>Create a workload share.</p> <p>The owner of a workload can share it with other Amazon Web Services accounts and IAM users in the same Amazon Web Services Region. Shared access to a workload is not removed until the workload invitation is deleted.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html">Sharing a Workload</a> in the <i>Well-Architected Tool User Guide</i>.</p>
+// CreateWorkloadShare - <p>Create a workload share.</p> <p>The owner of a workload can share it with other Amazon Web Services accounts and users in the same Amazon Web Services Region. Shared access to a workload is not removed until the workload invitation is deleted.</p> <p>If you share a workload with an organization or OU, all accounts in the organization or OU are granted access to the workload.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-sharing.html">Sharing a workload</a> in the <i>Well-Architected Tool User Guide</i>.</p>
 func (s *SDK) CreateWorkloadShare(ctx context.Context, request operations.CreateWorkloadShareRequest) (*operations.CreateWorkloadShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -838,10 +878,13 @@ func (s *SDK) CreateWorkloadShare(ctx context.Context, request operations.Create
 	return res, nil
 }
 
-// DeleteLens - <p>Delete an existing lens.</p> <p>Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and IAM users that you shared the lens with can continue to use it, but they will no longer be able to apply it to new workloads. </p> <note> <p> <b>Disclaimer</b> </p> <p>By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.</p> </note>
+// DeleteLens - <p>Delete an existing lens.</p> <p>Only the owner of a lens can delete it. After the lens is deleted, Amazon Web Services accounts and users that you shared the lens with can continue to use it, but they will no longer be able to apply it to new workloads. </p> <note> <p> <b>Disclaimer</b> </p> <p>By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.</p> </note>
 func (s *SDK) DeleteLens(ctx context.Context, request operations.DeleteLensRequest) (*operations.DeleteLensResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}#ClientRequestToken&LensStatus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}#ClientRequestToken&LensStatus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -939,10 +982,13 @@ func (s *SDK) DeleteLens(ctx context.Context, request operations.DeleteLensReque
 	return res, nil
 }
 
-// DeleteLensShare - <p>Delete a lens share.</p> <p>After the lens share is deleted, Amazon Web Services accounts, IAM users, organizations, and organizational units (OUs) that you shared the lens with can continue to use it, but they will no longer be able to apply it to new workloads.</p> <note> <p> <b>Disclaimer</b> </p> <p>By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.</p> </note>
+// DeleteLensShare - <p>Delete a lens share.</p> <p>After the lens share is deleted, Amazon Web Services accounts, users, organizations, and organizational units (OUs) that you shared the lens with can continue to use it, but they will no longer be able to apply it to new workloads.</p> <note> <p> <b>Disclaimer</b> </p> <p>By sharing your custom lenses with other Amazon Web Services accounts, you acknowledge that Amazon Web Services will make your custom lenses available to those other accounts. Those other accounts may continue to access and use your shared custom lenses even if you delete the custom lenses from your own Amazon Web Services account or terminate your Amazon Web Services account.</p> </note>
 func (s *SDK) DeleteLensShare(ctx context.Context, request operations.DeleteLensShareRequest) (*operations.DeleteLensShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/shares/{ShareId}#ClientRequestToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/shares/{ShareId}#ClientRequestToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1043,7 +1089,10 @@ func (s *SDK) DeleteLensShare(ctx context.Context, request operations.DeleteLens
 // DeleteWorkload - Delete an existing workload.
 func (s *SDK) DeleteWorkload(ctx context.Context, request operations.DeleteWorkloadRequest) (*operations.DeleteWorkloadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}#ClientRequestToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}#ClientRequestToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1144,7 +1193,10 @@ func (s *SDK) DeleteWorkload(ctx context.Context, request operations.DeleteWorkl
 // DeleteWorkloadShare - Delete a workload share.
 func (s *SDK) DeleteWorkloadShare(ctx context.Context, request operations.DeleteWorkloadShareRequest) (*operations.DeleteWorkloadShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares/{ShareId}#ClientRequestToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares/{ShareId}#ClientRequestToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1245,7 +1297,10 @@ func (s *SDK) DeleteWorkloadShare(ctx context.Context, request operations.Delete
 // DisassociateLenses - <p>Disassociate a lens from a workload.</p> <p>Up to 10 lenses can be disassociated from a workload in a single API operation.</p> <note> <p>The Amazon Web Services Well-Architected Framework lens (<code>wellarchitected</code>) cannot be removed from a workload.</p> </note>
 func (s *SDK) DisassociateLenses(ctx context.Context, request operations.DisassociateLensesRequest) (*operations.DisassociateLensesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/disassociateLenses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/disassociateLenses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1349,10 +1404,13 @@ func (s *SDK) DisassociateLenses(ctx context.Context, request operations.Disasso
 	return res, nil
 }
 
-// ExportLens - <p>Export an existing lens.</p> <p>Lenses are defined in JSON. For more information, see <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format specification</a> in the <i>Well-Architected Tool User Guide</i>. Only the owner of a lens can export it. </p> <note> <p> <b>Disclaimer</b> </p> <p>Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable law, providing adequate privacy notices, and obtaining necessary consents for processing such data.</p> </note>
+// ExportLens - <p>Export an existing lens.</p> <p>Only the owner of a lens can export it. Lenses provided by Amazon Web Services (Amazon Web Services Official Content) cannot be exported.</p> <p>Lenses are defined in JSON. For more information, see <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format specification</a> in the <i>Well-Architected Tool User Guide</i>.</p> <note> <p> <b>Disclaimer</b> </p> <p>Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable law, providing adequate privacy notices, and obtaining necessary consents for processing such data.</p> </note>
 func (s *SDK) ExportLens(ctx context.Context, request operations.ExportLensRequest) (*operations.ExportLensResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/export", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/export", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1452,7 +1510,10 @@ func (s *SDK) ExportLens(ctx context.Context, request operations.ExportLensReque
 // GetAnswer - Get the answer to a specific question in a workload review.
 func (s *SDK) GetAnswer(ctx context.Context, request operations.GetAnswerRequest) (*operations.GetAnswerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/answers/{QuestionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/answers/{QuestionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1549,10 +1610,113 @@ func (s *SDK) GetAnswer(ctx context.Context, request operations.GetAnswerRequest
 	return res, nil
 }
 
+// GetConsolidatedReport - <p>Get a consolidated report of your workloads.</p> <p>You can optionally choose to include workloads that have been shared with you.</p>
+func (s *SDK) GetConsolidatedReport(ctx context.Context, request operations.GetConsolidatedReportRequest) (*operations.GetConsolidatedReportResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/consolidatedReport#Format"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetConsolidatedReportResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetConsolidatedReportOutput
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetConsolidatedReportOutput = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ValidationException = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InternalServerException = out
+		}
+	case httpRes.StatusCode == 482:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AccessDeniedException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ThrottlingException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ConflictException = out
+		}
+	}
+
+	return res, nil
+}
+
 // GetLens - Get an existing lens.
 func (s *SDK) GetLens(ctx context.Context, request operations.GetLensRequest) (*operations.GetLensResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1652,7 +1816,10 @@ func (s *SDK) GetLens(ctx context.Context, request operations.GetLensRequest) (*
 // GetLensReview - Get lens review.
 func (s *SDK) GetLensReview(ctx context.Context, request operations.GetLensReviewRequest) (*operations.GetLensReviewResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1752,7 +1919,10 @@ func (s *SDK) GetLensReview(ctx context.Context, request operations.GetLensRevie
 // GetLensReviewReport - Get lens review report.
 func (s *SDK) GetLensReviewReport(ctx context.Context, request operations.GetLensReviewReportRequest) (*operations.GetLensReviewReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/report", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/report", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1852,7 +2022,10 @@ func (s *SDK) GetLensReviewReport(ctx context.Context, request operations.GetLen
 // GetLensVersionDifference - Get lens version differences.
 func (s *SDK) GetLensVersionDifference(ctx context.Context, request operations.GetLensVersionDifferenceRequest) (*operations.GetLensVersionDifferenceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/versionDifference", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/versionDifference", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1952,7 +2125,10 @@ func (s *SDK) GetLensVersionDifference(ctx context.Context, request operations.G
 // GetMilestone - Get a milestone for an existing workload.
 func (s *SDK) GetMilestone(ctx context.Context, request operations.GetMilestoneRequest) (*operations.GetMilestoneResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/milestones/{MilestoneNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/milestones/{MilestoneNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2048,7 +2224,10 @@ func (s *SDK) GetMilestone(ctx context.Context, request operations.GetMilestoneR
 // GetWorkload - Get an existing workload.
 func (s *SDK) GetWorkload(ctx context.Context, request operations.GetWorkloadRequest) (*operations.GetWorkloadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2141,7 +2320,7 @@ func (s *SDK) GetWorkload(ctx context.Context, request operations.GetWorkloadReq
 	return res, nil
 }
 
-// ImportLens - <p>Import a new lens.</p> <p>The lens cannot be applied to workloads or shared with other Amazon Web Services accounts until it's published with <a>CreateLensVersion</a> </p> <p>Lenses are defined in JSON. For more information, see <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format specification</a> in the <i>Well-Architected Tool User Guide</i>.</p> <p>A custom lens cannot exceed 500 KB in size.</p> <note> <p> <b>Disclaimer</b> </p> <p>Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable law, providing adequate privacy notices, and obtaining necessary consents for processing such data.</p> </note>
+// ImportLens - <p>Import a new custom lens or update an existing custom lens.</p> <p>To update an existing custom lens, specify its ARN as the <code>LensAlias</code>. If no ARN is specified, a new custom lens is created.</p> <p>The new or updated lens will have a status of <code>DRAFT</code>. The lens cannot be applied to workloads or shared with other Amazon Web Services accounts until it's published with <a>CreateLensVersion</a>.</p> <p>Lenses are defined in JSON. For more information, see <a href="https://docs.aws.amazon.com/wellarchitected/latest/userguide/lenses-format-specification.html">JSON format specification</a> in the <i>Well-Architected Tool User Guide</i>.</p> <p>A custom lens cannot exceed 500 KB in size.</p> <note> <p> <b>Disclaimer</b> </p> <p>Do not include or gather personal identifiable information (PII) of end users or other identifiable individuals in or via your custom lenses. If your custom lens or those shared with you and used in your account do include or collect PII you are responsible for: ensuring that the included PII is processed in accordance with applicable law, providing adequate privacy notices, and obtaining necessary consents for processing such data.</p> </note>
 func (s *SDK) ImportLens(ctx context.Context, request operations.ImportLensRequest) (*operations.ImportLensResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/importLens"
@@ -2267,10 +2446,13 @@ func (s *SDK) ImportLens(ctx context.Context, request operations.ImportLensReque
 	return res, nil
 }
 
-// ListAnswers - List of answers.
+// ListAnswers - List of answers for a particular workload and lens.
 func (s *SDK) ListAnswers(ctx context.Context, request operations.ListAnswersRequest) (*operations.ListAnswersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/answers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/answers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2370,7 +2552,10 @@ func (s *SDK) ListAnswers(ctx context.Context, request operations.ListAnswersReq
 // ListCheckDetails - List of Trusted Advisor check details by account related to the workload.
 func (s *SDK) ListCheckDetails(ctx context.Context, request operations.ListCheckDetailsRequest) (*operations.ListCheckDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/checks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/checks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2480,7 +2665,10 @@ func (s *SDK) ListCheckDetails(ctx context.Context, request operations.ListCheck
 // ListCheckSummaries - List of Trusted Advisor checks summarized for all accounts related to the workload.
 func (s *SDK) ListCheckSummaries(ctx context.Context, request operations.ListCheckSummariesRequest) (*operations.ListCheckSummariesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/checkSummaries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/checkSummaries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2590,7 +2778,10 @@ func (s *SDK) ListCheckSummaries(ctx context.Context, request operations.ListChe
 // ListLensReviewImprovements - List lens review improvements.
 func (s *SDK) ListLensReviewImprovements(ctx context.Context, request operations.ListLensReviewImprovementsRequest) (*operations.ListLensReviewImprovementsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/improvements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/improvements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2687,10 +2878,13 @@ func (s *SDK) ListLensReviewImprovements(ctx context.Context, request operations
 	return res, nil
 }
 
-// ListLensReviews - List lens reviews.
+// ListLensReviews - List lens reviews for a particular workload.
 func (s *SDK) ListLensReviews(ctx context.Context, request operations.ListLensReviewsRequest) (*operations.ListLensReviewsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2790,7 +2984,10 @@ func (s *SDK) ListLensReviews(ctx context.Context, request operations.ListLensRe
 // ListLensShares - List the lens shares associated with the lens.
 func (s *SDK) ListLensShares(ctx context.Context, request operations.ListLensSharesRequest) (*operations.ListLensSharesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/shares", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lenses/{LensAlias}/shares", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2980,7 +3177,10 @@ func (s *SDK) ListLenses(ctx context.Context, request operations.ListLensesReque
 // ListMilestones - List all milestones for an existing workload.
 func (s *SDK) ListMilestones(ctx context.Context, request operations.ListMilestonesRequest) (*operations.ListMilestonesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/milestonesSummaries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/milestonesSummaries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3280,7 +3480,10 @@ func (s *SDK) ListShareInvitations(ctx context.Context, request operations.ListS
 // ListTagsForResource - <p>List the tags for a resource.</p> <note> <p>The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.</p> </note>
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{WorkloadArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{WorkloadArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3346,7 +3549,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // ListWorkloadShares - List the workload shares associated with the workload.
 func (s *SDK) ListWorkloadShares(ctx context.Context, request operations.ListWorkloadSharesRequest) (*operations.ListWorkloadSharesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3443,7 +3649,7 @@ func (s *SDK) ListWorkloadShares(ctx context.Context, request operations.ListWor
 	return res, nil
 }
 
-// ListWorkloads - List workloads. Paginated.
+// ListWorkloads - Paginated list of workloads.
 func (s *SDK) ListWorkloads(ctx context.Context, request operations.ListWorkloadsRequest) (*operations.ListWorkloadsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workloadsSummaries"
@@ -3546,7 +3752,10 @@ func (s *SDK) ListWorkloads(ctx context.Context, request operations.ListWorkload
 // TagResource - <p>Adds one or more tags to the specified resource.</p> <note> <p>The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.</p> </note>
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{WorkloadArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{WorkloadArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3622,7 +3831,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - <p>Deletes specified tags from a resource.</p> <note> <p>The WorkloadArn parameter can be either a workload ARN or a custom lens ARN.</p> </note> <p>To specify multiple tags, use separate <b>tagKeys</b> parameters, for example:</p> <p> <code>DELETE /tags/WorkloadArn?tagKeys=key1&amp;tagKeys=key2</code> </p>
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{WorkloadArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{WorkloadArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3692,7 +3904,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAnswer - Update the answer to a specific question in a workload review.
 func (s *SDK) UpdateAnswer(ctx context.Context, request operations.UpdateAnswerRequest) (*operations.UpdateAnswerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/answers/{QuestionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/answers/{QuestionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3902,10 +4117,13 @@ func (s *SDK) UpdateGlobalSettings(ctx context.Context, request operations.Updat
 	return res, nil
 }
 
-// UpdateLensReview - Update lens review.
+// UpdateLensReview - Update lens review for a particular workload.
 func (s *SDK) UpdateLensReview(ctx context.Context, request operations.UpdateLensReviewRequest) (*operations.UpdateLensReviewResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4021,7 +4239,10 @@ func (s *SDK) UpdateLensReview(ctx context.Context, request operations.UpdateLen
 // UpdateShareInvitation - <p>Update a workload or custom lens share invitation.</p> <note> <p>This API operation can be called independently of any resource. Previous documentation implied that a workload ARN must be specified.</p> </note>
 func (s *SDK) UpdateShareInvitation(ctx context.Context, request operations.UpdateShareInvitationRequest) (*operations.UpdateShareInvitationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shareInvitations/{ShareInvitationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/shareInvitations/{ShareInvitationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4137,7 +4358,10 @@ func (s *SDK) UpdateShareInvitation(ctx context.Context, request operations.Upda
 // UpdateWorkload - Update an existing workload.
 func (s *SDK) UpdateWorkload(ctx context.Context, request operations.UpdateWorkloadRequest) (*operations.UpdateWorkloadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4253,7 +4477,10 @@ func (s *SDK) UpdateWorkload(ctx context.Context, request operations.UpdateWorkl
 // UpdateWorkloadShare - Update a workload share.
 func (s *SDK) UpdateWorkloadShare(ctx context.Context, request operations.UpdateWorkloadShareRequest) (*operations.UpdateWorkloadShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares/{ShareId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/shares/{ShareId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4366,10 +4593,13 @@ func (s *SDK) UpdateWorkloadShare(ctx context.Context, request operations.Update
 	return res, nil
 }
 
-// UpgradeLensReview - Upgrade lens review.
+// UpgradeLensReview - Upgrade lens review for a particular workload.
 func (s *SDK) UpgradeLensReview(ctx context.Context, request operations.UpgradeLensReviewRequest) (*operations.UpgradeLensReviewResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/upgrade", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workloads/{WorkloadId}/lensReviews/{LensAlias}/upgrade", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

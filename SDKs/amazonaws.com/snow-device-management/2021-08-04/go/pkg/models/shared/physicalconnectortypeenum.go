@@ -17,12 +17,16 @@ const (
 	PhysicalConnectorTypeEnumWifi    PhysicalConnectorTypeEnum = "WIFI"
 )
 
+func (e PhysicalConnectorTypeEnum) ToPointer() *PhysicalConnectorTypeEnum {
+	return &e
+}
+
 func (e *PhysicalConnectorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RJ45":
 		fallthrough
 	case "SFP_PLUS":
@@ -32,9 +36,9 @@ func (e *PhysicalConnectorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "RJ45_2":
 		fallthrough
 	case "WIFI":
-		*e = PhysicalConnectorTypeEnum(s)
+		*e = PhysicalConnectorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PhysicalConnectorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PhysicalConnectorTypeEnum: %v", v)
 	}
 }

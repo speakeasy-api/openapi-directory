@@ -16,12 +16,16 @@ const (
 	ResourceShareInvitationStatusEnumExpired  ResourceShareInvitationStatusEnum = "EXPIRED"
 )
 
+func (e ResourceShareInvitationStatusEnum) ToPointer() *ResourceShareInvitationStatusEnum {
+	return &e
+}
+
 func (e *ResourceShareInvitationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "ACCEPTED":
@@ -29,9 +33,9 @@ func (e *ResourceShareInvitationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "REJECTED":
 		fallthrough
 	case "EXPIRED":
-		*e = ResourceShareInvitationStatusEnum(s)
+		*e = ResourceShareInvitationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceShareInvitationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceShareInvitationStatusEnum: %v", v)
 	}
 }

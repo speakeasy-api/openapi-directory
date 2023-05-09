@@ -14,18 +14,22 @@ const (
 	DataFormatValueEnumParquet DataFormatValueEnum = "parquet"
 )
 
+func (e DataFormatValueEnum) ToPointer() *DataFormatValueEnum {
+	return &e
+}
+
 func (e *DataFormatValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "csv":
 		fallthrough
 	case "parquet":
-		*e = DataFormatValueEnum(s)
+		*e = DataFormatValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataFormatValueEnum: %s", s)
+		return fmt.Errorf("invalid value for DataFormatValueEnum: %v", v)
 	}
 }

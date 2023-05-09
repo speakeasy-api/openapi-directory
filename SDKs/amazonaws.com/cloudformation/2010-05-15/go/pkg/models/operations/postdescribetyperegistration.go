@@ -15,17 +15,21 @@ const (
 	POSTDescribeTypeRegistrationActionEnumDescribeTypeRegistration POSTDescribeTypeRegistrationActionEnum = "DescribeTypeRegistration"
 )
 
+func (e POSTDescribeTypeRegistrationActionEnum) ToPointer() *POSTDescribeTypeRegistrationActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeTypeRegistrationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeTypeRegistration":
-		*e = POSTDescribeTypeRegistrationActionEnum(s)
+		*e = POSTDescribeTypeRegistrationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeTypeRegistrationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeTypeRegistrationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeTypeRegistrationVersionEnumTwoThousandAndTen0515 POSTDescribeTypeRegistrationVersionEnum = "2010-05-15"
 )
 
+func (e POSTDescribeTypeRegistrationVersionEnum) ToPointer() *POSTDescribeTypeRegistrationVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeTypeRegistrationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTDescribeTypeRegistrationVersionEnum(s)
+		*e = POSTDescribeTypeRegistrationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeTypeRegistrationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeTypeRegistrationVersionEnum: %v", v)
 	}
 }
 

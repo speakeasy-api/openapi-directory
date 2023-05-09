@@ -36,7 +36,10 @@ func newRepositories(defaultClient, securityClient HTTPClient, serverURL, langua
 // GetV2NamespacesNamespaceRepositoriesRepositoryTags - List repository tags
 func (s *repositories) GetV2NamespacesNamespaceRepositoriesRepositoryTags(ctx context.Context, request operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest) (*operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *repositories) GetV2NamespacesNamespaceRepositoriesRepositoryTags(ctx co
 // GetV2NamespacesNamespaceRepositoriesRepositoryTagsTag - Read repository tag
 func (s *repositories) GetV2NamespacesNamespaceRepositoriesRepositoryTagsTag(ctx context.Context, request operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest) (*operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -152,7 +158,10 @@ func (s *repositories) GetV2NamespacesNamespaceRepositoriesRepositoryTagsTag(ctx
 // HeadV2NamespacesNamespaceRepositoriesRepositoryTags - Check repository tags
 func (s *repositories) HeadV2NamespacesNamespaceRepositoriesRepositoryTags(ctx context.Context, request operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsRequest) (*operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *repositories) HeadV2NamespacesNamespaceRepositoriesRepositoryTags(ctx c
 // HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTag - Check repository tag
 func (s *repositories) HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTag(ctx context.Context, request operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest) (*operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {

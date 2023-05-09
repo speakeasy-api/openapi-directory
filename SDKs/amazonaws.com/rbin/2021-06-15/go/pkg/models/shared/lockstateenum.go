@@ -15,20 +15,24 @@ const (
 	LockStateEnumUnlocked      LockStateEnum = "unlocked"
 )
 
+func (e LockStateEnum) ToPointer() *LockStateEnum {
+	return &e
+}
+
 func (e *LockStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "locked":
 		fallthrough
 	case "pending_unlock":
 		fallthrough
 	case "unlocked":
-		*e = LockStateEnum(s)
+		*e = LockStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LockStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LockStateEnum: %v", v)
 	}
 }

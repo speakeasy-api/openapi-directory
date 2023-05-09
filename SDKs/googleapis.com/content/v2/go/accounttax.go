@@ -90,7 +90,10 @@ func (s *accounttax) ContentAccounttaxCustombatch(ctx context.Context, request o
 // ContentAccounttaxGet - Retrieves the tax settings of the account.
 func (s *accounttax) ContentAccounttaxGet(ctx context.Context, request operations.ContentAccounttaxGetRequest, security operations.ContentAccounttaxGetSecurity) (*operations.ContentAccounttaxGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounttax/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounttax/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *accounttax) ContentAccounttaxGet(ctx context.Context, request operation
 // ContentAccounttaxList - Lists the tax settings of the sub-accounts in your Merchant Center account.
 func (s *accounttax) ContentAccounttaxList(ctx context.Context, request operations.ContentAccounttaxListRequest, security operations.ContentAccounttaxListSecurity) (*operations.ContentAccounttaxListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounttax", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounttax", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -186,7 +192,10 @@ func (s *accounttax) ContentAccounttaxList(ctx context.Context, request operatio
 // ContentAccounttaxUpdate - Updates the tax settings of the account. Any fields that are not provided are deleted from the resource.
 func (s *accounttax) ContentAccounttaxUpdate(ctx context.Context, request operations.ContentAccounttaxUpdateRequest, security operations.ContentAccounttaxUpdateSecurity) (*operations.ContentAccounttaxUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounttax/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounttax/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountTax", "json")
 	if err != nil {

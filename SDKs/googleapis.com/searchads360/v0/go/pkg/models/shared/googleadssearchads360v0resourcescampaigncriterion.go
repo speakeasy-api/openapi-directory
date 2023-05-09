@@ -7,6 +7,43 @@ import (
 	"fmt"
 )
 
+// GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum - The status of the criterion.
+type GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum string
+
+const (
+	GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnumUnspecified GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum = "UNSPECIFIED"
+	GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnumUnknown     GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum = "UNKNOWN"
+	GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnumEnabled     GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum = "ENABLED"
+	GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnumPaused      GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum = "PAUSED"
+	GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnumRemoved     GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum = "REMOVED"
+)
+
+func (e GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum {
+	return &e
+}
+
+func (e *GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "UNSPECIFIED":
+		fallthrough
+	case "UNKNOWN":
+		fallthrough
+	case "ENABLED":
+		fallthrough
+	case "PAUSED":
+		fallthrough
+	case "REMOVED":
+		*e = GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum: %v", v)
+	}
+}
+
 // GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum - Output only. The type of the criterion.
 type GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum string
 
@@ -50,12 +87,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnumLocalServiceID         GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum = "LOCAL_SERVICE_ID"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -129,15 +170,17 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum) UnmarshalJSO
 	case "AUDIENCE":
 		fallthrough
 	case "LOCAL_SERVICE_ID":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum: %v", v)
 	}
 }
 
 // GoogleAdsSearchads360V0ResourcesCampaignCriterion - A campaign criterion.
 type GoogleAdsSearchads360V0ResourcesCampaignCriterion struct {
+	// An age range criterion.
+	AgeRange *GoogleAdsSearchads360V0CommonAgeRangeInfo `json:"ageRange,omitempty"`
 	// The modifier for the bids when the criterion matches. The modifier must be in the range: 0.1 - 10.0. Most targetable criteria types support modifiers. Use 0 to opt out of a Device type.
 	BidModifier *float32 `json:"bidModifier,omitempty"`
 	// Output only. The ID of the criterion. This field is ignored during mutate.
@@ -146,8 +189,14 @@ type GoogleAdsSearchads360V0ResourcesCampaignCriterion struct {
 	Device *GoogleAdsSearchads360V0CommonDeviceInfo `json:"device,omitempty"`
 	// Output only. The display name of the criterion. This field is ignored for mutates.
 	DisplayName *string `json:"displayName,omitempty"`
+	// A gender criterion.
+	Gender *GoogleAdsSearchads360V0CommonGenderInfo `json:"gender,omitempty"`
+	// A keyword criterion.
+	Keyword *GoogleAdsSearchads360V0CommonKeywordInfo `json:"keyword,omitempty"`
 	// A language criterion.
 	Language *GoogleAdsSearchads360V0CommonLanguageInfo `json:"language,omitempty"`
+	// Output only. The datetime when this campaign criterion was last modified. The datetime is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+	LastModifiedTime *string `json:"lastModifiedTime,omitempty"`
 	// A location criterion.
 	Location *GoogleAdsSearchads360V0CommonLocationInfo `json:"location,omitempty"`
 	// A radius around a list of locations specified through a feed.
@@ -156,6 +205,12 @@ type GoogleAdsSearchads360V0ResourcesCampaignCriterion struct {
 	Negative *bool `json:"negative,omitempty"`
 	// Immutable. The resource name of the campaign criterion. Campaign criterion resource names have the form: `customers/{customer_id}/campaignCriteria/{campaign_id}~{criterion_id}`
 	ResourceName *string `json:"resourceName,omitempty"`
+	// The status of the criterion.
+	Status *GoogleAdsSearchads360V0ResourcesCampaignCriterionStatusEnum `json:"status,omitempty"`
 	// Output only. The type of the criterion.
 	Type *GoogleAdsSearchads360V0ResourcesCampaignCriterionTypeEnum `json:"type,omitempty"`
+	// A User List criterion. Represents a user list that is defined by the advertiser to be targeted.
+	UserList *GoogleAdsSearchads360V0CommonUserListInfo `json:"userList,omitempty"`
+	// Represents a criterion for targeting webpages of an advertiser's website.
+	Webpage *GoogleAdsSearchads360V0CommonWebpageInfo `json:"webpage,omitempty"`
 }

@@ -16,17 +16,21 @@ const (
 	GetDiscoverySummaryXAmzTargetEnumAwsPoseidonServiceV20151101GetDiscoverySummary GetDiscoverySummaryXAmzTargetEnum = "AWSPoseidonService_V2015_11_01.GetDiscoverySummary"
 )
 
+func (e GetDiscoverySummaryXAmzTargetEnum) ToPointer() *GetDiscoverySummaryXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDiscoverySummaryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPoseidonService_V2015_11_01.GetDiscoverySummary":
-		*e = GetDiscoverySummaryXAmzTargetEnum(s)
+		*e = GetDiscoverySummaryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoverySummaryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoverySummaryXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	DomainProvisioningCertStatusEnumCertError             DomainProvisioningCertStatusEnum = "CERT_ERROR"
 )
 
+func (e DomainProvisioningCertStatusEnum) ToPointer() *DomainProvisioningCertStatusEnum {
+	return &e
+}
+
 func (e *DomainProvisioningCertStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERT_STATUS_UNSPECIFIED":
 		fallthrough
 	case "CERT_PENDING":
@@ -39,10 +43,10 @@ func (e *DomainProvisioningCertStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CERT_ACTIVE":
 		fallthrough
 	case "CERT_ERROR":
-		*e = DomainProvisioningCertStatusEnum(s)
+		*e = DomainProvisioningCertStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainProvisioningCertStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainProvisioningCertStatusEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	DomainProvisioningDNSStatusEnumDNSExtraneousMatch   DomainProvisioningDNSStatusEnum = "DNS_EXTRANEOUS_MATCH"
 )
 
+func (e DomainProvisioningDNSStatusEnum) ToPointer() *DomainProvisioningDNSStatusEnum {
+	return &e
+}
+
 func (e *DomainProvisioningDNSStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DNS_STATUS_UNSPECIFIED":
 		fallthrough
 	case "DNS_PENDING":
@@ -75,10 +83,10 @@ func (e *DomainProvisioningDNSStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DNS_MATCH":
 		fallthrough
 	case "DNS_EXTRANEOUS_MATCH":
-		*e = DomainProvisioningDNSStatusEnum(s)
+		*e = DomainProvisioningDNSStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainProvisioningDNSStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainProvisioningDNSStatusEnum: %v", v)
 	}
 }
 

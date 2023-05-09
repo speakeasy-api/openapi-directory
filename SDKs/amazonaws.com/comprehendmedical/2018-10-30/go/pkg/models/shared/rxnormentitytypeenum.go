@@ -14,18 +14,22 @@ const (
 	RxNormEntityTypeEnumGenericName RxNormEntityTypeEnum = "GENERIC_NAME"
 )
 
+func (e RxNormEntityTypeEnum) ToPointer() *RxNormEntityTypeEnum {
+	return &e
+}
+
 func (e *RxNormEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BRAND_NAME":
 		fallthrough
 	case "GENERIC_NAME":
-		*e = RxNormEntityTypeEnum(s)
+		*e = RxNormEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RxNormEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RxNormEntityTypeEnum: %v", v)
 	}
 }

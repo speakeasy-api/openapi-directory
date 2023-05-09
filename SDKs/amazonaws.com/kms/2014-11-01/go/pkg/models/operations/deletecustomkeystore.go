@@ -16,17 +16,21 @@ const (
 	DeleteCustomKeyStoreXAmzTargetEnumTrentServiceDeleteCustomKeyStore DeleteCustomKeyStoreXAmzTargetEnum = "TrentService.DeleteCustomKeyStore"
 )
 
+func (e DeleteCustomKeyStoreXAmzTargetEnum) ToPointer() *DeleteCustomKeyStoreXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteCustomKeyStoreXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.DeleteCustomKeyStore":
-		*e = DeleteCustomKeyStoreXAmzTargetEnum(s)
+		*e = DeleteCustomKeyStoreXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteCustomKeyStoreXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteCustomKeyStoreXAmzTargetEnum: %v", v)
 	}
 }
 

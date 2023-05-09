@@ -14,17 +14,21 @@ const (
 	ServingContextAllEnumSimpleContext ServingContextAllEnum = "SIMPLE_CONTEXT"
 )
 
+func (e ServingContextAllEnum) ToPointer() *ServingContextAllEnum {
+	return &e
+}
+
 func (e *ServingContextAllEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIMPLE_CONTEXT":
-		*e = ServingContextAllEnum(s)
+		*e = ServingContextAllEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServingContextAllEnum: %s", s)
+		return fmt.Errorf("invalid value for ServingContextAllEnum: %v", v)
 	}
 }
 

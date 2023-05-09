@@ -17,19 +17,23 @@ const (
 	GetHLSStreamingSessionURLRequestBodyContainerFormatEnumMpegTs        GetHLSStreamingSessionURLRequestBodyContainerFormatEnum = "MPEG_TS"
 )
 
+func (e GetHLSStreamingSessionURLRequestBodyContainerFormatEnum) ToPointer() *GetHLSStreamingSessionURLRequestBodyContainerFormatEnum {
+	return &e
+}
+
 func (e *GetHLSStreamingSessionURLRequestBodyContainerFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FRAGMENTED_MP4":
 		fallthrough
 	case "MPEG_TS":
-		*e = GetHLSStreamingSessionURLRequestBodyContainerFormatEnum(s)
+		*e = GetHLSStreamingSessionURLRequestBodyContainerFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHLSStreamingSessionURLRequestBodyContainerFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHLSStreamingSessionURLRequestBodyContainerFormatEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnumOnDiscontinuity GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnum = "ON_DISCONTINUITY"
 )
 
+func (e GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnum) ToPointer() *GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnum {
+	return &e
+}
+
 func (e *GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALWAYS":
 		fallthrough
 	case "NEVER":
 		fallthrough
 	case "ON_DISCONTINUITY":
-		*e = GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnum(s)
+		*e = GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnum: %v", v)
 	}
 }
 
@@ -68,19 +76,23 @@ const (
 	GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnumNever  GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum = "NEVER"
 )
 
+func (e GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum) ToPointer() *GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum {
+	return &e
+}
+
 func (e *GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALWAYS":
 		fallthrough
 	case "NEVER":
-		*e = GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum(s)
+		*e = GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum: %v", v)
 	}
 }
 
@@ -99,21 +111,25 @@ const (
 	GetHLSStreamingSessionURLRequestBodyPlaybackModeEnumOnDemand   GetHLSStreamingSessionURLRequestBodyPlaybackModeEnum = "ON_DEMAND"
 )
 
+func (e GetHLSStreamingSessionURLRequestBodyPlaybackModeEnum) ToPointer() *GetHLSStreamingSessionURLRequestBodyPlaybackModeEnum {
+	return &e
+}
+
 func (e *GetHLSStreamingSessionURLRequestBodyPlaybackModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "LIVE_REPLAY":
 		fallthrough
 	case "ON_DEMAND":
-		*e = GetHLSStreamingSessionURLRequestBodyPlaybackModeEnum(s)
+		*e = GetHLSStreamingSessionURLRequestBodyPlaybackModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHLSStreamingSessionURLRequestBodyPlaybackModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHLSStreamingSessionURLRequestBodyPlaybackModeEnum: %v", v)
 	}
 }
 

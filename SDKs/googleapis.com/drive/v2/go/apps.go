@@ -35,7 +35,10 @@ func newApps(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // DriveAppsGet - Gets a specific app.
 func (s *apps) DriveAppsGet(ctx context.Context, request operations.DriveAppsGetRequest, security operations.DriveAppsGetSecurity) (*operations.DriveAppsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/{appId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

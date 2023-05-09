@@ -16,17 +16,21 @@ const (
 	GetServiceXAmzTargetEnumRoute53AutoNamingV20170314GetService GetServiceXAmzTargetEnum = "Route53AutoNaming_v20170314.GetService"
 )
 
+func (e GetServiceXAmzTargetEnum) ToPointer() *GetServiceXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetServiceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53AutoNaming_v20170314.GetService":
-		*e = GetServiceXAmzTargetEnum(s)
+		*e = GetServiceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServiceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServiceXAmzTargetEnum: %v", v)
 	}
 }
 

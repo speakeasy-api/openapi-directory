@@ -13,26 +13,30 @@ import (
 type PostUsersIDCategoriesRequestBodyRefundBehaviourEnum string
 
 const (
-	PostUsersIDCategoriesRequestBodyRefundBehaviourEnumDebitsAreDeductions PostUsersIDCategoriesRequestBodyRefundBehaviourEnum = "debits_are_deductions"
-	PostUsersIDCategoriesRequestBodyRefundBehaviourEnumCreditsAreRefunds   PostUsersIDCategoriesRequestBodyRefundBehaviourEnum = "credits_are_refunds"
-	PostUsersIDCategoriesRequestBodyRefundBehaviourEnumNull                PostUsersIDCategoriesRequestBodyRefundBehaviourEnum = "null"
+	PostUsersIDCategoriesRequestBodyRefundBehaviourEnumDebitsAreDeductions    PostUsersIDCategoriesRequestBodyRefundBehaviourEnum = "debits_are_deductions"
+	PostUsersIDCategoriesRequestBodyRefundBehaviourEnumCreditsAreRefunds      PostUsersIDCategoriesRequestBodyRefundBehaviourEnum = "credits_are_refunds"
+	PostUsersIDCategoriesRequestBodyRefundBehaviourEnumLessThanNilGreaterThan PostUsersIDCategoriesRequestBodyRefundBehaviourEnum = "<nil>"
 )
 
+func (e PostUsersIDCategoriesRequestBodyRefundBehaviourEnum) ToPointer() *PostUsersIDCategoriesRequestBodyRefundBehaviourEnum {
+	return &e
+}
+
 func (e *PostUsersIDCategoriesRequestBodyRefundBehaviourEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "debits_are_deductions":
 		fallthrough
 	case "credits_are_refunds":
 		fallthrough
-	case "null":
-		*e = PostUsersIDCategoriesRequestBodyRefundBehaviourEnum(s)
+	case "<nil>":
+		*e = PostUsersIDCategoriesRequestBodyRefundBehaviourEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostUsersIDCategoriesRequestBodyRefundBehaviourEnum: %s", s)
+		return fmt.Errorf("invalid value for PostUsersIDCategoriesRequestBodyRefundBehaviourEnum: %v", v)
 	}
 }
 

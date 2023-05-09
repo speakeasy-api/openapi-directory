@@ -15,20 +15,24 @@ const (
 	LastUpdateStatusEnumInProgress LastUpdateStatusEnum = "InProgress"
 )
 
+func (e LastUpdateStatusEnum) ToPointer() *LastUpdateStatusEnum {
+	return &e
+}
+
 func (e *LastUpdateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Successful":
 		fallthrough
 	case "Failed":
 		fallthrough
 	case "InProgress":
-		*e = LastUpdateStatusEnum(s)
+		*e = LastUpdateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LastUpdateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LastUpdateStatusEnum: %v", v)
 	}
 }

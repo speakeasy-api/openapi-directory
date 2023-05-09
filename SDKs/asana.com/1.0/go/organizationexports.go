@@ -126,7 +126,10 @@ func (s *organizationExports) CreateOrganizationExport(ctx context.Context, requ
 // Returns details of a previously-requested Organization export.
 func (s *organizationExports) GetOrganizationExport(ctx context.Context, request operations.GetOrganizationExportRequest) (*operations.GetOrganizationExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organization_exports/{organization_export_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organization_exports/{organization_export_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	TextFieldFontEnumTimesRoman TextFieldFontEnum = "times_roman"
 )
 
+func (e TextFieldFontEnum) ToPointer() *TextFieldFontEnum {
+	return &e
+}
+
 func (e *TextFieldFontEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "courier":
 		fallthrough
 	case "helvetica":
 		fallthrough
 	case "times_roman":
-		*e = TextFieldFontEnum(s)
+		*e = TextFieldFontEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextFieldFontEnum: %s", s)
+		return fmt.Errorf("invalid value for TextFieldFontEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	TextFieldHorizontalAlignEnumR TextFieldHorizontalAlignEnum = "R"
 )
 
+func (e TextFieldHorizontalAlignEnum) ToPointer() *TextFieldHorizontalAlignEnum {
+	return &e
+}
+
 func (e *TextFieldHorizontalAlignEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "L":
 		fallthrough
 	case "C":
 		fallthrough
 	case "R":
-		*e = TextFieldHorizontalAlignEnum(s)
+		*e = TextFieldHorizontalAlignEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextFieldHorizontalAlignEnum: %s", s)
+		return fmt.Errorf("invalid value for TextFieldHorizontalAlignEnum: %v", v)
 	}
 }
 
@@ -67,17 +75,21 @@ const (
 	TextFieldTypeEnumText TextFieldTypeEnum = "text"
 )
 
+func (e TextFieldTypeEnum) ToPointer() *TextFieldTypeEnum {
+	return &e
+}
+
 func (e *TextFieldTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
-		*e = TextFieldTypeEnum(s)
+		*e = TextFieldTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextFieldTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TextFieldTypeEnum: %v", v)
 	}
 }
 
@@ -90,21 +102,25 @@ const (
 	TextFieldVerticalAlignEnumB TextFieldVerticalAlignEnum = "B"
 )
 
+func (e TextFieldVerticalAlignEnum) ToPointer() *TextFieldVerticalAlignEnum {
+	return &e
+}
+
 func (e *TextFieldVerticalAlignEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "T":
 		fallthrough
 	case "C":
 		fallthrough
 	case "B":
-		*e = TextFieldVerticalAlignEnum(s)
+		*e = TextFieldVerticalAlignEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextFieldVerticalAlignEnum: %s", s)
+		return fmt.Errorf("invalid value for TextFieldVerticalAlignEnum: %v", v)
 	}
 }
 

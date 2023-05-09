@@ -33,12 +33,16 @@ const (
 	SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnumSensitiveCategoryLiveStreamingVideo      SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnum = "SENSITIVE_CATEGORY_LIVE_STREAMING_VIDEO"
 )
 
+func (e SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnum) ToPointer() *SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnum {
+	return &e
+}
+
 func (e *SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SENSITIVE_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "SENSITIVE_CATEGORY_ADULT":
@@ -78,10 +82,10 @@ func (e *SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategor
 	case "SENSITIVE_CATEGORY_EMBEDDED_VIDEO":
 		fallthrough
 	case "SENSITIVE_CATEGORY_LIVE_STREAMING_VIDEO":
-		*e = SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnum(s)
+		*e = SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SensitiveCategoryAssignedTargetingOptionDetailsExcludedSensitiveCategoryEnum: %v", v)
 	}
 }
 

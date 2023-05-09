@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAdvertisingEligibilityRequest{
-        XEbayCMarketplaceID: "corrupti",
-        ProgramTypes: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.AdvertisingEligibility.GetAdvertisingEligibility(ctx, req, operations.GetAdvertisingEligibilitySecurity{
+    res, err := s.AdvertisingEligibility.GetAdvertisingEligibility(ctx, operations.GetAdvertisingEligibilityRequest{
+        XEbayCMarketplaceID: "corrupti",
+        ProgramTypes: sdk.String("provident"),
+    }, operations.GetAdvertisingEligibilitySecurity{
         APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

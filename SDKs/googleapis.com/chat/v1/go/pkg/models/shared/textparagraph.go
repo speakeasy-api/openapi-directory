@@ -2,7 +2,7 @@
 
 package shared
 
-// TextParagraph - A paragraph of text. Formatted text supported.
+// TextParagraph - A paragraph of text. Formatted text supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
 type TextParagraph struct {
 	Text *string `json:"text,omitempty"`
 }

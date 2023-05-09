@@ -34,7 +34,10 @@ func newSchemas(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Deletes an existing schema for a given data entity.
 func (s *schemas) Deleteschemabyname(ctx context.Context, request operations.DeleteschemabynameRequest) (*operations.DeleteschemabynameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/schemas/{schemaName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/schemas/{schemaName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -72,7 +75,10 @@ func (s *schemas) Deleteschemabyname(ctx context.Context, request operations.Del
 // Returns an existing schema for a given data entity.
 func (s *schemas) Getschemabyname(ctx context.Context, request operations.GetschemabynameRequest) (*operations.GetschemabynameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/schemas/{schemaName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/schemas/{schemaName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -110,7 +116,10 @@ func (s *schemas) Getschemabyname(ctx context.Context, request operations.Getsch
 // Return the schemas saved.
 func (s *schemas) Getschemas(ctx context.Context, request operations.GetschemasRequest) (*operations.GetschemasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/schemas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/schemas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -152,7 +161,10 @@ func (s *schemas) Getschemas(ctx context.Context, request operations.GetschemasR
 // This request can also be used to [create or edit Master Data v2 triggers](https://developers.vtex.com/vtex-rest-api/docs/setting-up-triggers-in-master-data-v2).
 func (s *schemas) Saveschemabyname(ctx context.Context, request operations.SaveschemabynameRequest) (*operations.SaveschemabynameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/schemas/{schemaName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/schemas/{schemaName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SaveschemabynameRequest", "json")
 	if err != nil {

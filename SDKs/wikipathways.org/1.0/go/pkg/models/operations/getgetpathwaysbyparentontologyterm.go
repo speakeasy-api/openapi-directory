@@ -20,12 +20,16 @@ const (
 	GetGetPathwaysByParentOntologyTermFormatEnumPdf  GetGetPathwaysByParentOntologyTermFormatEnum = "pdf"
 )
 
+func (e GetGetPathwaysByParentOntologyTermFormatEnum) ToPointer() *GetGetPathwaysByParentOntologyTermFormatEnum {
+	return &e
+}
+
 func (e *GetGetPathwaysByParentOntologyTermFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -37,10 +41,10 @@ func (e *GetGetPathwaysByParentOntologyTermFormatEnum) UnmarshalJSON(data []byte
 	case "jpg":
 		fallthrough
 	case "pdf":
-		*e = GetGetPathwaysByParentOntologyTermFormatEnum(s)
+		*e = GetGetPathwaysByParentOntologyTermFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGetPathwaysByParentOntologyTermFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGetPathwaysByParentOntologyTermFormatEnum: %v", v)
 	}
 }
 

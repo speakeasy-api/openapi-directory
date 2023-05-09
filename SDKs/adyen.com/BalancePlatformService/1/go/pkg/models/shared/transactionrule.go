@@ -21,12 +21,16 @@ const (
 	TransactionRuleEntryModesEnumUnknown     TransactionRuleEntryModesEnum = "unknown"
 )
 
+func (e TransactionRuleEntryModesEnum) ToPointer() *TransactionRuleEntryModesEnum {
+	return &e
+}
+
 func (e *TransactionRuleEntryModesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "barcode":
 		fallthrough
 	case "chip":
@@ -44,10 +48,10 @@ func (e *TransactionRuleEntryModesEnum) UnmarshalJSON(data []byte) error {
 	case "server":
 		fallthrough
 	case "unknown":
-		*e = TransactionRuleEntryModesEnum(s)
+		*e = TransactionRuleEntryModesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionRuleEntryModesEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionRuleEntryModesEnum: %v", v)
 	}
 }
 
@@ -64,12 +68,16 @@ const (
 	TransactionRuleProcessingTypesEnumUnknown        TransactionRuleProcessingTypesEnum = "unknown"
 )
 
+func (e TransactionRuleProcessingTypesEnum) ToPointer() *TransactionRuleProcessingTypesEnum {
+	return &e
+}
+
 func (e *TransactionRuleProcessingTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "atmWithdraw":
 		fallthrough
 	case "balanceInquiry":
@@ -85,10 +93,10 @@ func (e *TransactionRuleProcessingTypesEnum) UnmarshalJSON(data []byte) error {
 	case "token":
 		fallthrough
 	case "unknown":
-		*e = TransactionRuleProcessingTypesEnum(s)
+		*e = TransactionRuleProcessingTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionRuleProcessingTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionRuleProcessingTypesEnum: %v", v)
 	}
 }
 
@@ -103,19 +111,23 @@ const (
 	TransactionRuleStatusEnumInactive TransactionRuleStatusEnum = "inactive"
 )
 
+func (e TransactionRuleStatusEnum) ToPointer() *TransactionRuleStatusEnum {
+	return &e
+}
+
 func (e *TransactionRuleStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = TransactionRuleStatusEnum(s)
+		*e = TransactionRuleStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionRuleStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionRuleStatusEnum: %v", v)
 	}
 }
 
@@ -135,12 +147,16 @@ const (
 	TransactionRuleTypeEnumVelocity  TransactionRuleTypeEnum = "velocity"
 )
 
+func (e TransactionRuleTypeEnum) ToPointer() *TransactionRuleTypeEnum {
+	return &e
+}
+
 func (e *TransactionRuleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "allowList":
 		fallthrough
 	case "blockList":
@@ -148,10 +164,10 @@ func (e *TransactionRuleTypeEnum) UnmarshalJSON(data []byte) error {
 	case "maxUsage":
 		fallthrough
 	case "velocity":
-		*e = TransactionRuleTypeEnum(s)
+		*e = TransactionRuleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionRuleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionRuleTypeEnum: %v", v)
 	}
 }
 

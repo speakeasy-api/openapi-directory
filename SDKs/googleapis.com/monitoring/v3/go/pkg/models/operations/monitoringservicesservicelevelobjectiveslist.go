@@ -39,21 +39,25 @@ const (
 	MonitoringServicesServiceLevelObjectivesListViewEnumExplicit        MonitoringServicesServiceLevelObjectivesListViewEnum = "EXPLICIT"
 )
 
+func (e MonitoringServicesServiceLevelObjectivesListViewEnum) ToPointer() *MonitoringServicesServiceLevelObjectivesListViewEnum {
+	return &e
+}
+
 func (e *MonitoringServicesServiceLevelObjectivesListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_UNSPECIFIED":
 		fallthrough
 	case "FULL":
 		fallthrough
 	case "EXPLICIT":
-		*e = MonitoringServicesServiceLevelObjectivesListViewEnum(s)
+		*e = MonitoringServicesServiceLevelObjectivesListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringServicesServiceLevelObjectivesListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringServicesServiceLevelObjectivesListViewEnum: %v", v)
 	}
 }
 

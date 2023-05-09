@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.Rule{
-        Config: "corrupti",
-        Type: "VALIDITY",
-    }
-
     ctx := context.Background()
-    res, err := s.Admin.CreateGlobalRule(ctx, req)
+    res, err := s.Admin.CreateGlobalRule(ctx, shared.Rule{
+        Config: "corrupti",
+        Type: shared.RuleTypeEnumValidity.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }

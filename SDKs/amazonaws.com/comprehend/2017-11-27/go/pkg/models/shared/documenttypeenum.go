@@ -19,12 +19,16 @@ const (
 	DocumentTypeEnumTextractAnalyzeDocumentJSON    DocumentTypeEnum = "TEXTRACT_ANALYZE_DOCUMENT_JSON"
 )
 
+func (e DocumentTypeEnum) ToPointer() *DocumentTypeEnum {
+	return &e
+}
+
 func (e *DocumentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NATIVE_PDF":
 		fallthrough
 	case "SCANNED_PDF":
@@ -38,9 +42,9 @@ func (e *DocumentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TEXTRACT_DETECT_DOCUMENT_TEXT_JSON":
 		fallthrough
 	case "TEXTRACT_ANALYZE_DOCUMENT_JSON":
-		*e = DocumentTypeEnum(s)
+		*e = DocumentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentTypeEnum: %v", v)
 	}
 }

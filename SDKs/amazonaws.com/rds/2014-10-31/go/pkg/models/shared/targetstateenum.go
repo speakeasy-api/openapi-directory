@@ -15,20 +15,24 @@ const (
 	TargetStateEnumUnavailable TargetStateEnum = "UNAVAILABLE"
 )
 
+func (e TargetStateEnum) ToPointer() *TargetStateEnum {
+	return &e
+}
+
 func (e *TargetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGISTERING":
 		fallthrough
 	case "AVAILABLE":
 		fallthrough
 	case "UNAVAILABLE":
-		*e = TargetStateEnum(s)
+		*e = TargetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetStateEnum: %v", v)
 	}
 }

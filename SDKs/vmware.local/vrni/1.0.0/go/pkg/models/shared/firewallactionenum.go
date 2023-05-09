@@ -19,12 +19,16 @@ const (
 	FirewallActionEnumDoNotRedirect FirewallActionEnum = "DO_NOT_REDIRECT"
 )
 
+func (e FirewallActionEnum) ToPointer() *FirewallActionEnum {
+	return &e
+}
+
 func (e *FirewallActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOW":
 		fallthrough
 	case "ACCEPT":
@@ -38,9 +42,9 @@ func (e *FirewallActionEnum) UnmarshalJSON(data []byte) error {
 	case "REDIRECT":
 		fallthrough
 	case "DO_NOT_REDIRECT":
-		*e = FirewallActionEnum(s)
+		*e = FirewallActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirewallActionEnum: %s", s)
+		return fmt.Errorf("invalid value for FirewallActionEnum: %v", v)
 	}
 }

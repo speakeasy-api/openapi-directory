@@ -40,7 +40,10 @@ func newDisputes(defaultClient, securityClient HTTPClient, serverURL, language, 
 // does not have sufficient funds, Square debits the associated bank account.
 func (s *disputes) AcceptDispute(ctx context.Context, request operations.AcceptDisputeRequest, security operations.AcceptDisputeSecurity) (*operations.AcceptDisputeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/accept", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/accept", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *disputes) AcceptDispute(ctx context.Context, request operations.AcceptD
 // Uploads text to use as evidence for a dispute challenge.
 func (s *disputes) CreateDisputeEvidenceText(ctx context.Context, request operations.CreateDisputeEvidenceTextRequest, security operations.CreateDisputeEvidenceTextSecurity) (*operations.CreateDisputeEvidenceTextResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence-text", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence-text", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateDisputeEvidenceTextRequest", "json")
 	if err != nil {
@@ -143,7 +149,10 @@ func (s *disputes) CreateDisputeEvidenceText(ctx context.Context, request operat
 // submitting it to the bank using [SubmitEvidence](https://developer.squareup.com/reference/square_2021-08-18/disputes-api/submit-evidence).
 func (s *disputes) DeleteDisputeEvidence(ctx context.Context, request operations.DeleteDisputeEvidenceRequest, security operations.DeleteDisputeEvidenceSecurity) (*operations.DeleteDisputeEvidenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence/{evidence_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence/{evidence_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -188,7 +197,10 @@ func (s *disputes) DeleteDisputeEvidence(ctx context.Context, request operations
 // Returns a list of evidence associated with a dispute.
 func (s *disputes) ListDisputeEvidence(ctx context.Context, request operations.ListDisputeEvidenceRequest, security operations.ListDisputeEvidenceSecurity) (*operations.ListDisputeEvidenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -286,7 +298,10 @@ func (s *disputes) ListDisputes(ctx context.Context, request operations.ListDisp
 // Returns details about a specific dispute.
 func (s *disputes) RetrieveDispute(ctx context.Context, request operations.RetrieveDisputeRequest, security operations.RetrieveDisputeSecurity) (*operations.RetrieveDisputeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -334,7 +349,10 @@ func (s *disputes) RetrieveDispute(ctx context.Context, request operations.Retri
 // download the evidence after you upload it.
 func (s *disputes) RetrieveDisputeEvidence(ctx context.Context, request operations.RetrieveDisputeEvidenceRequest, security operations.RetrieveDisputeEvidenceSecurity) (*operations.RetrieveDisputeEvidenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence/{evidence_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/evidence/{evidence_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -384,7 +402,10 @@ func (s *disputes) RetrieveDisputeEvidence(ctx context.Context, request operatio
 // evidence automatically provided by Square, when available.
 func (s *disputes) SubmitEvidence(ctx context.Context, request operations.SubmitEvidenceRequest, security operations.SubmitEvidenceSecurity) (*operations.SubmitEvidenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/submit-evidence", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/disputes/{dispute_id}/submit-evidence", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

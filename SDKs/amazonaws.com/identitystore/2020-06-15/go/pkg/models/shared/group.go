@@ -2,7 +2,7 @@
 
 package shared
 
-// Group - A group object that contains a specified group’s metadata and attributes.
+// Group - A group object that contains the metadata and attributes for a specified group.
 type Group struct {
 	Description     *string      `json:"Description,omitempty"`
 	DisplayName     *string      `json:"DisplayName,omitempty"`

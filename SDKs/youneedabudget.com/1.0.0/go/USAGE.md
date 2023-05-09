@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,19 +17,17 @@ func main() {
         }),
     )
 
-    req := operations.CreateAccountRequest{
+    ctx := context.Background()
+    res, err := s.Accounts.CreateAccount(ctx, operations.CreateAccountRequest{
         PostAccountWrapper: shared.PostAccountWrapper{
             Account: shared.SaveAccount{
                 Balance: 548814,
-                Name: "provident",
-                Type: "studentLoan",
+                Name: "Kelvin Sporer",
+                Type: shared.AccountTypeEnumMortgage,
             },
         },
-        BudgetID: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.CreateAccount(ctx, req)
+        BudgetID: "illum",
+    })
     if err != nil {
         log.Fatal(err)
     }

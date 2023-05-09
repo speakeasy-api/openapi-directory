@@ -16,17 +16,21 @@ const (
 	DisableLDAPSXAmzTargetEnumDirectoryService20150416DisableLdaps DisableLDAPSXAmzTargetEnum = "DirectoryService_20150416.DisableLDAPS"
 )
 
+func (e DisableLDAPSXAmzTargetEnum) ToPointer() *DisableLDAPSXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisableLDAPSXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.DisableLDAPS":
-		*e = DisableLDAPSXAmzTargetEnum(s)
+		*e = DisableLDAPSXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableLDAPSXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableLDAPSXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	GettablePolicyStateValuesEnumError    GettablePolicyStateValuesEnum = "ERROR"
 )
 
+func (e GettablePolicyStateValuesEnum) ToPointer() *GettablePolicyStateValuesEnum {
+	return &e
+}
+
 func (e *GettablePolicyStateValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "ERROR":
-		*e = GettablePolicyStateValuesEnum(s)
+		*e = GettablePolicyStateValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GettablePolicyStateValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for GettablePolicyStateValuesEnum: %v", v)
 	}
 }

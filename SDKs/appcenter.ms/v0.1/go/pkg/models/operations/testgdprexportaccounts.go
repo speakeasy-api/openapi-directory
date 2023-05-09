@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type TestGdprExportAccountsSecurity struct {
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
+}
+
 type TestGdprExportAccounts200ApplicationJSONResources struct {
 	Path *string `json:"path,omitempty"`
 	Rel  *string `json:"rel,omitempty"`

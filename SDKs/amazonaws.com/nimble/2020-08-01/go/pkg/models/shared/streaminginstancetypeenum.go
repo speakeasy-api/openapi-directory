@@ -25,12 +25,16 @@ const (
 	StreamingInstanceTypeEnumG516xlarge   StreamingInstanceTypeEnum = "g5.16xlarge"
 )
 
+func (e StreamingInstanceTypeEnum) ToPointer() *StreamingInstanceTypeEnum {
+	return &e
+}
+
 func (e *StreamingInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "g4dn.xlarge":
 		fallthrough
 	case "g4dn.2xlarge":
@@ -56,9 +60,9 @@ func (e *StreamingInstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "g5.8xlarge":
 		fallthrough
 	case "g5.16xlarge":
-		*e = StreamingInstanceTypeEnum(s)
+		*e = StreamingInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamingInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamingInstanceTypeEnum: %v", v)
 	}
 }

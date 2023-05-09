@@ -15,17 +15,21 @@ const (
 	GETRestartAppServerActionEnumRestartAppServer GETRestartAppServerActionEnum = "RestartAppServer"
 )
 
+func (e GETRestartAppServerActionEnum) ToPointer() *GETRestartAppServerActionEnum {
+	return &e
+}
+
 func (e *GETRestartAppServerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RestartAppServer":
-		*e = GETRestartAppServerActionEnum(s)
+		*e = GETRestartAppServerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestartAppServerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestartAppServerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRestartAppServerVersionEnumTwoThousandAndTen1201 GETRestartAppServerVersionEnum = "2010-12-01"
 )
 
+func (e GETRestartAppServerVersionEnum) ToPointer() *GETRestartAppServerVersionEnum {
+	return &e
+}
+
 func (e *GETRestartAppServerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETRestartAppServerVersionEnum(s)
+		*e = GETRestartAppServerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestartAppServerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestartAppServerVersionEnum: %v", v)
 	}
 }
 

@@ -14,19 +14,23 @@ const (
 	GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsDestinationPacketHeaderStatementProtocolsEnumUDP GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsDestinationPacketHeaderStatementProtocolsEnum = "udp"
 )
 
+func (e GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsDestinationPacketHeaderStatementProtocolsEnum) ToPointer() *GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsDestinationPacketHeaderStatementProtocolsEnum {
+	return &e
+}
+
 func (e *GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsDestinationPacketHeaderStatementProtocolsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "udp":
-		*e = GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsDestinationPacketHeaderStatementProtocolsEnum(s)
+		*e = GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsDestinationPacketHeaderStatementProtocolsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsDestinationPacketHeaderStatementProtocolsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsDestinationPacketHeaderStatementProtocolsEnum: %v", v)
 	}
 }
 
@@ -60,19 +64,23 @@ const (
 	GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsSourcePacketHeaderStatementProtocolsEnumUDP GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsSourcePacketHeaderStatementProtocolsEnum = "udp"
 )
 
+func (e GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsSourcePacketHeaderStatementProtocolsEnum) ToPointer() *GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsSourcePacketHeaderStatementProtocolsEnum {
+	return &e
+}
+
 func (e *GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsSourcePacketHeaderStatementProtocolsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "udp":
-		*e = GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsSourcePacketHeaderStatementProtocolsEnum(s)
+		*e = GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsSourcePacketHeaderStatementProtocolsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsSourcePacketHeaderStatementProtocolsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentExcludePathsSourcePacketHeaderStatementProtocolsEnum: %v", v)
 	}
 }
 
@@ -124,19 +132,23 @@ const (
 	GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsDestinationPacketHeaderStatementProtocolsEnumUDP GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsDestinationPacketHeaderStatementProtocolsEnum = "udp"
 )
 
+func (e GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsDestinationPacketHeaderStatementProtocolsEnum) ToPointer() *GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsDestinationPacketHeaderStatementProtocolsEnum {
+	return &e
+}
+
 func (e *GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsDestinationPacketHeaderStatementProtocolsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "udp":
-		*e = GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsDestinationPacketHeaderStatementProtocolsEnum(s)
+		*e = GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsDestinationPacketHeaderStatementProtocolsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsDestinationPacketHeaderStatementProtocolsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsDestinationPacketHeaderStatementProtocolsEnum: %v", v)
 	}
 }
 
@@ -170,19 +182,23 @@ const (
 	GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatementProtocolsEnumUDP GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatementProtocolsEnum = "udp"
 )
 
+func (e GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatementProtocolsEnum) ToPointer() *GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatementProtocolsEnum {
+	return &e
+}
+
 func (e *GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatementProtocolsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "udp":
-		*e = GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatementProtocolsEnum(s)
+		*e = GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatementProtocolsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatementProtocolsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNetworkInsightsAccessScopeContentResultNetworkInsightsAccessScopeContentMatchPathsSourcePacketHeaderStatementProtocolsEnum: %v", v)
 	}
 }
 

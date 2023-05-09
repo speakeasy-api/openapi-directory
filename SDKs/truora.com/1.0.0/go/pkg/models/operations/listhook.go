@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type ListHookSecurity struct {
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=Truora-API-Key"`
+}
+
 type ListHookResponse struct {
 	ContentType string
 	HookOutput  *shared.HookOutput

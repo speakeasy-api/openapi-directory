@@ -5,7 +5,7 @@ package shared
 // GetOnboardingURLResponse - OK - the request has succeeded.
 type GetOnboardingURLResponse struct {
 	// Information about any invalid fields.
-	InvalidFields []ErrorFieldType `json:"invalidFields,omitempty"`
+	InvalidFields []ErrorFieldTypeWrapper `json:"invalidFields,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
 	PspReference *string `json:"pspReference,omitempty"`
 	// The URL to the Hosted Onboarding Page where you should redirect your sub-merchant. This URL must be used within 30 seconds and can only be used once.

@@ -16,21 +16,25 @@ const (
 	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnumLineItemRecurrenceTypeOneTime     GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum = "LINE_ITEM_RECURRENCE_TYPE_ONE_TIME"
 )
 
+func (e GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum) ToPointer() *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_ITEM_RECURRENCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINE_ITEM_RECURRENCE_TYPE_PERIODIC":
 		fallthrough
 	case "LINE_ITEM_RECURRENCE_TYPE_ONE_TIME":
-		*e = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum(s)
+		*e = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemRecurrenceTypeEnum: %v", v)
 	}
 }
 
@@ -45,14 +49,19 @@ const (
 	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateActivating          GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_ACTIVATING"
 	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateDeactivating        GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_DEACTIVATING"
 	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateWaitingToDeactivate GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_WAITING_TO_DEACTIVATE"
+	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnumLineItemStateOffCycleCharging    GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum = "LINE_ITEM_STATE_OFF_CYCLE_CHARGING"
 )
 
+func (e GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum) ToPointer() *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_ITEM_STATE_UNSPECIFIED":
 		fallthrough
 	case "LINE_ITEM_STATE_ACTIVE":
@@ -66,10 +75,12 @@ func (e *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum)
 	case "LINE_ITEM_STATE_DEACTIVATING":
 		fallthrough
 	case "LINE_ITEM_STATE_WAITING_TO_DEACTIVATE":
-		*e = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum(s)
+		fallthrough
+	case "LINE_ITEM_STATE_OFF_CYCLE_CHARGING":
+		*e = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemStateEnum: %v", v)
 	}
 }
 
@@ -81,6 +92,8 @@ type GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem struct {
 	Description *string `json:"description,omitempty"`
 	// Output only. The free trial end time will be populated after the line item is successfully processed. End time of the line item free trial period, in ISO 8061 format. For example, "2019-08-31T17:28:54.564Z". It will be set the same as createTime if no free trial promotion is specified.
 	LineItemFreeTrialEndTime *string `json:"lineItemFreeTrialEndTime,omitempty"`
+	// Output only. A unique index of the subscription line item.
+	LineItemIndex *int `json:"lineItemIndex,omitempty"`
 	// Optional. The promotions applied on the line item. It can be: - a free trial promotion, which overrides the subscription-level free trial promotion. - an introductory pricing promotion. When used as input in Create or Provision API, specify its resource name only.
 	LineItemPromotionSpecs []GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec `json:"lineItemPromotionSpecs,omitempty"`
 	// Details for a ONE_TIME recurrence line item.

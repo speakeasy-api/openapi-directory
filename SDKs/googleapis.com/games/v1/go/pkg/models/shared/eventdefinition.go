@@ -16,21 +16,25 @@ const (
 	EventDefinitionVisibilityEnumHidden                     EventDefinitionVisibilityEnum = "HIDDEN"
 )
 
+func (e EventDefinitionVisibilityEnum) ToPointer() *EventDefinitionVisibilityEnum {
+	return &e
+}
+
 func (e *EventDefinitionVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVENT_VISIBILITY_UNSPECIFIED":
 		fallthrough
 	case "REVEALED":
 		fallthrough
 	case "HIDDEN":
-		*e = EventDefinitionVisibilityEnum(s)
+		*e = EventDefinitionVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventDefinitionVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for EventDefinitionVisibilityEnum: %v", v)
 	}
 }
 

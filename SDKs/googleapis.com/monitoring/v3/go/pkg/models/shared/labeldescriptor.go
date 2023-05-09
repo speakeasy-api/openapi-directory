@@ -16,21 +16,25 @@ const (
 	LabelDescriptorValueTypeEnumInt64  LabelDescriptorValueTypeEnum = "INT64"
 )
 
+func (e LabelDescriptorValueTypeEnum) ToPointer() *LabelDescriptorValueTypeEnum {
+	return &e
+}
+
 func (e *LabelDescriptorValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRING":
 		fallthrough
 	case "BOOL":
 		fallthrough
 	case "INT64":
-		*e = LabelDescriptorValueTypeEnum(s)
+		*e = LabelDescriptorValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LabelDescriptorValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LabelDescriptorValueTypeEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	UpdateContactPhotoRequestSourcesEnumReadSourceTypeDomainContact UpdateContactPhotoRequestSourcesEnum = "READ_SOURCE_TYPE_DOMAIN_CONTACT"
 )
 
+func (e UpdateContactPhotoRequestSourcesEnum) ToPointer() *UpdateContactPhotoRequestSourcesEnum {
+	return &e
+}
+
 func (e *UpdateContactPhotoRequestSourcesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READ_SOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "READ_SOURCE_TYPE_PROFILE":
@@ -29,10 +33,10 @@ func (e *UpdateContactPhotoRequestSourcesEnum) UnmarshalJSON(data []byte) error 
 	case "READ_SOURCE_TYPE_CONTACT":
 		fallthrough
 	case "READ_SOURCE_TYPE_DOMAIN_CONTACT":
-		*e = UpdateContactPhotoRequestSourcesEnum(s)
+		*e = UpdateContactPhotoRequestSourcesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateContactPhotoRequestSourcesEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateContactPhotoRequestSourcesEnum: %v", v)
 	}
 }
 

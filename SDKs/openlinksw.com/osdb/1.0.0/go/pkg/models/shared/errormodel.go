@@ -13,17 +13,21 @@ const (
 	ErrorModelStatusEnumError ErrorModelStatusEnum = "error"
 )
 
+func (e ErrorModelStatusEnum) ToPointer() *ErrorModelStatusEnum {
+	return &e
+}
+
 func (e *ErrorModelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "error":
-		*e = ErrorModelStatusEnum(s)
+		*e = ErrorModelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorModelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorModelStatusEnum: %v", v)
 	}
 }
 

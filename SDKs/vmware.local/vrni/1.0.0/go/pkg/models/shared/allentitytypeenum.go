@@ -59,12 +59,16 @@ const (
 	AllEntityTypeEnumFolder                      AllEntityTypeEnum = "Folder"
 )
 
+func (e AllEntityTypeEnum) ToPointer() *AllEntityTypeEnum {
+	return &e
+}
+
 func (e *AllEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Group":
 		fallthrough
 	case "BaseSecurityGroup":
@@ -158,9 +162,9 @@ func (e *AllEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Datastore":
 		fallthrough
 	case "Folder":
-		*e = AllEntityTypeEnum(s)
+		*e = AllEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AllEntityTypeEnum: %v", v)
 	}
 }

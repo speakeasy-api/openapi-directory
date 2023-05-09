@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/prss.org/2.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAPIV2BroadcastservicesRequest{
-        OrderByID: "desc",
-        PageSize: 592845,
-        PageStart: 715190,
-    }
-
     ctx := context.Background()
-    res, err := s.BroadcastServices.GetAPIV2Broadcastservices(ctx, req, operations.GetAPIV2BroadcastservicesSecurity{
+    res, err := s.BroadcastServices.GetAPIV2Broadcastservices(ctx, operations.GetAPIV2BroadcastservicesRequest{
+        OrderByID: operations.GetAPIV2BroadcastservicesOrderByIDEnumDesc.ToPointer(),
+        PageSize: sdk.Int(592845),
+        PageStart: sdk.Int(715190),
+    }, operations.GetAPIV2BroadcastservicesSecurity{
         CdOauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -49,71 +46,71 @@ func main() {
 ## Available Resources and Operations
 
 
-### BroadcastServices
+### [BroadcastServices](docs/broadcastservices/README.md)
 
-* `GetAPIV2Broadcastservices` - Gets broadcast services matching the given criteria.
-* `GetAPIV2BroadcastservicesID` - Returns the broadcast service matching the given ID.
+* [GetAPIV2Broadcastservices](docs/broadcastservices/README.md#getapiv2broadcastservices) - Gets broadcast services matching the given criteria.
+* [GetAPIV2BroadcastservicesID](docs/broadcastservices/README.md#getapiv2broadcastservicesid) - Returns the broadcast service matching the given ID.
 
-### CDDrive
+### [CDDrive](docs/cddrive/README.md)
 
-* `DeleteAPIV2CddriveFilesFileID` - Delete a file.
-* `DeleteAPIV2CddriveFoldersFolderID` - UNDER DEVELOPMENT - Delete a folder.
-* `GetAPIV2CddriveFilesFileID` - Get file information.
-* `GetAPIV2CddriveFilesFileIDContent` - UNDER DEVELOPMENT - Download a file.
-* `GetAPIV2CddriveFoldersFolderID` - UNDER DEVELOPMENT - Get folder information.
-* `GetAPIV2CddriveFoldersFolderIDItems` - Get the items in the folder.
-* `PostAPIV2CddriveFilesContent` - Upload a file.
-* `PostAPIV2CddriveFolders` - Create a folder.
+* [DeleteAPIV2CddriveFilesFileID](docs/cddrive/README.md#deleteapiv2cddrivefilesfileid) - Delete a file.
+* [DeleteAPIV2CddriveFoldersFolderID](docs/cddrive/README.md#deleteapiv2cddrivefoldersfolderid) - UNDER DEVELOPMENT - Delete a folder.
+* [GetAPIV2CddriveFilesFileID](docs/cddrive/README.md#getapiv2cddrivefilesfileid) - Get file information.
+* [GetAPIV2CddriveFilesFileIDContent](docs/cddrive/README.md#getapiv2cddrivefilesfileidcontent) - UNDER DEVELOPMENT - Download a file.
+* [GetAPIV2CddriveFoldersFolderID](docs/cddrive/README.md#getapiv2cddrivefoldersfolderid) - UNDER DEVELOPMENT - Get folder information.
+* [GetAPIV2CddriveFoldersFolderIDItems](docs/cddrive/README.md#getapiv2cddrivefoldersfolderiditems) - Get the items in the folder.
+* [PostAPIV2CddriveFilesContent](docs/cddrive/README.md#postapiv2cddrivefilescontent) - Upload a file.
+* [PostAPIV2CddriveFolders](docs/cddrive/README.md#postapiv2cddrivefolders) - Create a folder.
 
-### Episodes
+### [Episodes](docs/episodes/README.md)
 
-* `GetAPIV2Episodes` - Gets episodes matching the given criteria.
-* `GetAPIV2EpisodesID` - Returns the episode matching the given ID.
+* [GetAPIV2Episodes](docs/episodes/README.md#getapiv2episodes) - Gets episodes matching the given criteria.
+* [GetAPIV2EpisodesID](docs/episodes/README.md#getapiv2episodesid) - Returns the episode matching the given ID.
 
-### MetaPub
+### [MetaPub](docs/metapub/README.md)
 
-* `GetAPIV2MetapubProgramInformationBatchBatchID` - Get an EPG batch operation.
-* `PostAPIV2MetapubProgramInformationBatch` - Create a batch operation on EPG information.
+* [~~GetAPIV2MetapubProgramInformationBatchBatchID~~](docs/metapub/README.md#getapiv2metapubprograminformationbatchbatchid) - Get an EPG batch operation. :warning: **Deprecated**
+* [~~PostAPIV2MetapubProgramInformationBatch~~](docs/metapub/README.md#postapiv2metapubprograminformationbatch) - Create a batch operation on EPG information. :warning: **Deprecated**
 
-### Pieces
+### [Pieces](docs/pieces/README.md)
 
-* `DeleteAPIV2PiecesID` - Deletes the piece with the given ID.
-* `GetAPIV2Pieces` - Returns the pieces matching the query parameters.
-* `GetAPIV2PiecesID` - Returns the piece matching the given ID.
-* `PostAPIV2Pieces` - Create a new piece.
+* [DeleteAPIV2PiecesID](docs/pieces/README.md#deleteapiv2piecesid) - Deletes the piece with the given ID.
+* [GetAPIV2Pieces](docs/pieces/README.md#getapiv2pieces) - Returns the pieces matching the query parameters.
+* [GetAPIV2PiecesID](docs/pieces/README.md#getapiv2piecesid) - Returns the piece matching the given ID.
+* [PostAPIV2Pieces](docs/pieces/README.md#postapiv2pieces) - Create a new piece.
 
-### Programs
+### [Programs](docs/programs/README.md)
 
-* `GetAPIV2ProgramsSearch` - Optimized free-text search for programs using various filters.
-* `GetAPIV2ProgramsID` - Returns the program matching the given ID.
+* [GetAPIV2ProgramsSearch](docs/programs/README.md#getapiv2programssearch) - Optimized free-text search for programs using various filters.
+* [GetAPIV2ProgramsID](docs/programs/README.md#getapiv2programsid) - Returns the program matching the given ID.
 
-### RadioDNS
+### [RadioDNS](docs/radiodns/README.md)
 
-* `GetRadiodnsSpi31GIXML` - Get the group information document.
-* `GetRadiodnsSpi31SIXML` - Get the service information document.
-* `GetRadiodnsSpi31IDFqdnSidDatePIXML` - Get the program information document.
+* [GetRadiodnsSpi31GIXML](docs/radiodns/README.md#getradiodnsspi31gixml) - Get the group information document.
+* [GetRadiodnsSpi31SIXML](docs/radiodns/README.md#getradiodnsspi31sixml) - Get the service information document.
+* [GetRadiodnsSpi31IDFqdnSidDatePIXML](docs/radiodns/README.md#getradiodnsspi31idfqdnsiddatepixml) - Get the program information document.
 
-### Segments
+### [Segments](docs/segments/README.md)
 
-* `DeleteAPIV2SegmentsID` - Deletes the segment with the given ID.
-* `GetAPIV2Segments` - Returns the segments matching the query parameters.
-* `GetAPIV2SegmentsID` - Returns the segment matching the given ID.
-* `GetAPIV2SegmentsIDContent` - UNDER DEVELOPMENT - Returns the audio content segment matching the given ID.
-* `PostAPIV2Segments` - Creates a new segment.
+* [DeleteAPIV2SegmentsID](docs/segments/README.md#deleteapiv2segmentsid) - Deletes the segment with the given ID.
+* [GetAPIV2Segments](docs/segments/README.md#getapiv2segments) - Returns the segments matching the query parameters.
+* [GetAPIV2SegmentsID](docs/segments/README.md#getapiv2segmentsid) - Returns the segment matching the given ID.
+* [GetAPIV2SegmentsIDContent](docs/segments/README.md#getapiv2segmentsidcontent) - UNDER DEVELOPMENT - Returns the audio content segment matching the given ID.
+* [PostAPIV2Segments](docs/segments/README.md#postapiv2segments) - Creates a new segment.
 
-### SpotInsertions
+### [SpotInsertions](docs/spotinsertions/README.md)
 
-* `DeleteAPIV2SpotinsertionsID` - Deletes the spot insertion with the given ID.
-* `GetAPIV2Spotinsertions` - Returns the spot insertions matching the query parameters.
-* `GetAPIV2SpotinsertionsID` - Returns the spot insertion matching the given ID.
-* `PostAPIV2Spotinsertions` - Creates a new spot insertion.
+* [DeleteAPIV2SpotinsertionsID](docs/spotinsertions/README.md#deleteapiv2spotinsertionsid) - Deletes the spot insertion with the given ID.
+* [GetAPIV2Spotinsertions](docs/spotinsertions/README.md#getapiv2spotinsertions) - Returns the spot insertions matching the query parameters.
+* [GetAPIV2SpotinsertionsID](docs/spotinsertions/README.md#getapiv2spotinsertionsid) - Returns the spot insertion matching the given ID.
+* [PostAPIV2Spotinsertions](docs/spotinsertions/README.md#postapiv2spotinsertions) - Creates a new spot insertion.
 
-### Spots
+### [Spots](docs/spots/README.md)
 
-* `DeleteAPIV2SpotsID` - Deletes the spot with the given ID.
-* `GetAPIV2Spots` - Returns the spots matching the query parameters.
-* `GetAPIV2SpotsID` - Returns the spot matching the given ID.
-* `PostAPIV2Spots` - Creates a new spot.
+* [DeleteAPIV2SpotsID](docs/spots/README.md#deleteapiv2spotsid) - Deletes the spot with the given ID.
+* [GetAPIV2Spots](docs/spots/README.md#getapiv2spots) - Returns the spots matching the query parameters.
+* [GetAPIV2SpotsID](docs/spots/README.md#getapiv2spotsid) - Returns the spot matching the given ID.
+* [PostAPIV2Spots](docs/spots/README.md#postapiv2spots) - Creates a new spot.
 <!-- End SDK Available Operations -->
 
 ### Maturity

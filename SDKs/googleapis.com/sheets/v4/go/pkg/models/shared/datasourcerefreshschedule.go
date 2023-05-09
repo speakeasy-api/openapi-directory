@@ -15,19 +15,23 @@ const (
 	DataSourceRefreshScheduleRefreshScopeEnumAllDataSources                    DataSourceRefreshScheduleRefreshScopeEnum = "ALL_DATA_SOURCES"
 )
 
+func (e DataSourceRefreshScheduleRefreshScopeEnum) ToPointer() *DataSourceRefreshScheduleRefreshScopeEnum {
+	return &e
+}
+
 func (e *DataSourceRefreshScheduleRefreshScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_SOURCE_REFRESH_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "ALL_DATA_SOURCES":
-		*e = DataSourceRefreshScheduleRefreshScopeEnum(s)
+		*e = DataSourceRefreshScheduleRefreshScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSourceRefreshScheduleRefreshScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSourceRefreshScheduleRefreshScopeEnum: %v", v)
 	}
 }
 

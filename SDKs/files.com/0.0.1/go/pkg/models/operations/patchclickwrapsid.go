@@ -18,21 +18,25 @@ const (
 	PatchClickwrapsIDRequestBodyUseWithBundlesEnumRequire   PatchClickwrapsIDRequestBodyUseWithBundlesEnum = "require"
 )
 
+func (e PatchClickwrapsIDRequestBodyUseWithBundlesEnum) ToPointer() *PatchClickwrapsIDRequestBodyUseWithBundlesEnum {
+	return &e
+}
+
 func (e *PatchClickwrapsIDRequestBodyUseWithBundlesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "available":
 		fallthrough
 	case "require":
-		*e = PatchClickwrapsIDRequestBodyUseWithBundlesEnum(s)
+		*e = PatchClickwrapsIDRequestBodyUseWithBundlesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchClickwrapsIDRequestBodyUseWithBundlesEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchClickwrapsIDRequestBodyUseWithBundlesEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	PatchClickwrapsIDRequestBodyUseWithInboxesEnumRequire   PatchClickwrapsIDRequestBodyUseWithInboxesEnum = "require"
 )
 
+func (e PatchClickwrapsIDRequestBodyUseWithInboxesEnum) ToPointer() *PatchClickwrapsIDRequestBodyUseWithInboxesEnum {
+	return &e
+}
+
 func (e *PatchClickwrapsIDRequestBodyUseWithInboxesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "available":
 		fallthrough
 	case "require":
-		*e = PatchClickwrapsIDRequestBodyUseWithInboxesEnum(s)
+		*e = PatchClickwrapsIDRequestBodyUseWithInboxesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchClickwrapsIDRequestBodyUseWithInboxesEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchClickwrapsIDRequestBodyUseWithInboxesEnum: %v", v)
 	}
 }
 
@@ -71,19 +79,23 @@ const (
 	PatchClickwrapsIDRequestBodyUseWithUsersEnumRequire PatchClickwrapsIDRequestBodyUseWithUsersEnum = "require"
 )
 
+func (e PatchClickwrapsIDRequestBodyUseWithUsersEnum) ToPointer() *PatchClickwrapsIDRequestBodyUseWithUsersEnum {
+	return &e
+}
+
 func (e *PatchClickwrapsIDRequestBodyUseWithUsersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "require":
-		*e = PatchClickwrapsIDRequestBodyUseWithUsersEnum(s)
+		*e = PatchClickwrapsIDRequestBodyUseWithUsersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchClickwrapsIDRequestBodyUseWithUsersEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchClickwrapsIDRequestBodyUseWithUsersEnum: %v", v)
 	}
 }
 

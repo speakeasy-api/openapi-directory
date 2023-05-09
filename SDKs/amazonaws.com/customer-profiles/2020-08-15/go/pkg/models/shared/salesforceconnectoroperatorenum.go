@@ -33,12 +33,16 @@ const (
 	SalesforceConnectorOperatorEnumNoOp                 SalesforceConnectorOperatorEnum = "NO_OP"
 )
 
+func (e SalesforceConnectorOperatorEnum) ToPointer() *SalesforceConnectorOperatorEnum {
+	return &e
+}
+
 func (e *SalesforceConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION":
 		fallthrough
 	case "LESS_THAN":
@@ -80,9 +84,9 @@ func (e *SalesforceConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATE_NUMERIC":
 		fallthrough
 	case "NO_OP":
-		*e = SalesforceConnectorOperatorEnum(s)
+		*e = SalesforceConnectorOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SalesforceConnectorOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for SalesforceConnectorOperatorEnum: %v", v)
 	}
 }

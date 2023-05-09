@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetcitymatchRequest{
+    ctx := context.Background()
+    res, err := s.CityNameSimilarityKey.Getcitymatch(ctx, operations.GetcitymatchRequest{
         City: "Laruecester",
         License: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.CityNameSimilarityKey.Getcitymatch(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

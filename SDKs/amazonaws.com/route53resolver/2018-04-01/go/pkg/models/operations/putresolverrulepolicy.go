@@ -16,17 +16,21 @@ const (
 	PutResolverRulePolicyXAmzTargetEnumRoute53ResolverPutResolverRulePolicy PutResolverRulePolicyXAmzTargetEnum = "Route53Resolver.PutResolverRulePolicy"
 )
 
+func (e PutResolverRulePolicyXAmzTargetEnum) ToPointer() *PutResolverRulePolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutResolverRulePolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.PutResolverRulePolicy":
-		*e = PutResolverRulePolicyXAmzTargetEnum(s)
+		*e = PutResolverRulePolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutResolverRulePolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutResolverRulePolicyXAmzTargetEnum: %v", v)
 	}
 }
 

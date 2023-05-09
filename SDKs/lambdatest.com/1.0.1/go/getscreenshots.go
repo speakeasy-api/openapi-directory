@@ -35,7 +35,10 @@ func newGetScreenshots(defaultClient, securityClient HTTPClient, serverURL, lang
 // To fetch specified screenshot details
 func (s *getScreenshots) Screenshots(ctx context.Context, request operations.ScreenshotsRequest, security operations.ScreenshotsSecurity) (*operations.ScreenshotsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{test_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{test_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	UpdateRdsDbInstanceXAmzTargetEnumOpsWorks20130218UpdateRdsDbInstance UpdateRdsDbInstanceXAmzTargetEnum = "OpsWorks_20130218.UpdateRdsDbInstance"
 )
 
+func (e UpdateRdsDbInstanceXAmzTargetEnum) ToPointer() *UpdateRdsDbInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateRdsDbInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.UpdateRdsDbInstance":
-		*e = UpdateRdsDbInstanceXAmzTargetEnum(s)
+		*e = UpdateRdsDbInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateRdsDbInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateRdsDbInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

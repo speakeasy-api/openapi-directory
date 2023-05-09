@@ -16,21 +16,25 @@ const (
 	GoogleCloudRetailV2ServingConfigDiversityTypeEnumDataDrivenDiversity      GoogleCloudRetailV2ServingConfigDiversityTypeEnum = "DATA_DRIVEN_DIVERSITY"
 )
 
+func (e GoogleCloudRetailV2ServingConfigDiversityTypeEnum) ToPointer() *GoogleCloudRetailV2ServingConfigDiversityTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2ServingConfigDiversityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIVERSITY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RULE_BASED_DIVERSITY":
 		fallthrough
 	case "DATA_DRIVEN_DIVERSITY":
-		*e = GoogleCloudRetailV2ServingConfigDiversityTypeEnum(s)
+		*e = GoogleCloudRetailV2ServingConfigDiversityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2ServingConfigDiversityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2ServingConfigDiversityTypeEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	GoogleCloudRetailV2ServingConfigSolutionTypesEnumSolutionTypeSearch         GoogleCloudRetailV2ServingConfigSolutionTypesEnum = "SOLUTION_TYPE_SEARCH"
 )
 
+func (e GoogleCloudRetailV2ServingConfigSolutionTypesEnum) ToPointer() *GoogleCloudRetailV2ServingConfigSolutionTypesEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2ServingConfigSolutionTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOLUTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SOLUTION_TYPE_RECOMMENDATION":
 		fallthrough
 	case "SOLUTION_TYPE_SEARCH":
-		*e = GoogleCloudRetailV2ServingConfigSolutionTypesEnum(s)
+		*e = GoogleCloudRetailV2ServingConfigSolutionTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2ServingConfigSolutionTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2ServingConfigSolutionTypesEnum: %v", v)
 	}
 }
 

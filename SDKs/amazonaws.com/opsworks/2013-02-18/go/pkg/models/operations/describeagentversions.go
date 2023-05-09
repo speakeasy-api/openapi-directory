@@ -16,17 +16,21 @@ const (
 	DescribeAgentVersionsXAmzTargetEnumOpsWorks20130218DescribeAgentVersions DescribeAgentVersionsXAmzTargetEnum = "OpsWorks_20130218.DescribeAgentVersions"
 )
 
+func (e DescribeAgentVersionsXAmzTargetEnum) ToPointer() *DescribeAgentVersionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAgentVersionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DescribeAgentVersions":
-		*e = DescribeAgentVersionsXAmzTargetEnum(s)
+		*e = DescribeAgentVersionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAgentVersionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAgentVersionsXAmzTargetEnum: %v", v)
 	}
 }
 

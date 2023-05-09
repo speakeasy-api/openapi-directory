@@ -20,12 +20,16 @@ const (
 	TargetFrequencyTimeUnitEnumTimeUnitMinutes     TargetFrequencyTimeUnitEnum = "TIME_UNIT_MINUTES"
 )
 
+func (e TargetFrequencyTimeUnitEnum) ToPointer() *TargetFrequencyTimeUnitEnum {
+	return &e
+}
+
 func (e *TargetFrequencyTimeUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIME_UNIT_UNSPECIFIED":
 		fallthrough
 	case "TIME_UNIT_LIFETIME":
@@ -39,10 +43,10 @@ func (e *TargetFrequencyTimeUnitEnum) UnmarshalJSON(data []byte) error {
 	case "TIME_UNIT_HOURS":
 		fallthrough
 	case "TIME_UNIT_MINUTES":
-		*e = TargetFrequencyTimeUnitEnum(s)
+		*e = TargetFrequencyTimeUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetFrequencyTimeUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetFrequencyTimeUnitEnum: %v", v)
 	}
 }
 

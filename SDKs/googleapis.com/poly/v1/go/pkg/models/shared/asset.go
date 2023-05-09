@@ -16,21 +16,25 @@ const (
 	AssetLicenseEnumAllRightsReserved AssetLicenseEnum = "ALL_RIGHTS_RESERVED"
 )
 
+func (e AssetLicenseEnum) ToPointer() *AssetLicenseEnum {
+	return &e
+}
+
 func (e *AssetLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "CREATIVE_COMMONS_BY":
 		fallthrough
 	case "ALL_RIGHTS_RESERVED":
-		*e = AssetLicenseEnum(s)
+		*e = AssetLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssetLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for AssetLicenseEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	AssetVisibilityEnumPublic                AssetVisibilityEnum = "PUBLIC"
 )
 
+func (e AssetVisibilityEnum) ToPointer() *AssetVisibilityEnum {
+	return &e
+}
+
 func (e *AssetVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VISIBILITY_UNSPECIFIED":
 		fallthrough
 	case "PRIVATE":
@@ -57,10 +65,10 @@ func (e *AssetVisibilityEnum) UnmarshalJSON(data []byte) error {
 	case "UNLISTED":
 		fallthrough
 	case "PUBLIC":
-		*e = AssetVisibilityEnum(s)
+		*e = AssetVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssetVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for AssetVisibilityEnum: %v", v)
 	}
 }
 

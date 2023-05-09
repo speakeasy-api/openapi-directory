@@ -8,6 +8,8 @@ type GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse struct {
 	GroupIds []string `json:"groupIds,omitempty"`
 	// Output only. The namespace of the policy type of the group IDs.
 	PolicyNamespace *string `json:"policyNamespace,omitempty"`
+	// Output only. The schema name of the policy for the group IDs.
+	PolicySchema *string `json:"policySchema,omitempty"`
 	// The key used to identify the target on which the policy will be applied.
 	PolicyTargetKey *GoogleChromePolicyVersionsV1PolicyTargetKey `json:"policyTargetKey,omitempty"`
 }

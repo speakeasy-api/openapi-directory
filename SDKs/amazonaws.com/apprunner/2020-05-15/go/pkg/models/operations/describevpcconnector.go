@@ -16,17 +16,21 @@ const (
 	DescribeVpcConnectorXAmzTargetEnumAppRunnerDescribeVpcConnector DescribeVpcConnectorXAmzTargetEnum = "AppRunner.DescribeVpcConnector"
 )
 
+func (e DescribeVpcConnectorXAmzTargetEnum) ToPointer() *DescribeVpcConnectorXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeVpcConnectorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppRunner.DescribeVpcConnector":
-		*e = DescribeVpcConnectorXAmzTargetEnum(s)
+		*e = DescribeVpcConnectorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcConnectorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcConnectorXAmzTargetEnum: %v", v)
 	}
 }
 

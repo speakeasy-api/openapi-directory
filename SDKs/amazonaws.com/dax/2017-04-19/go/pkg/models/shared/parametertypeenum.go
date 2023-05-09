@@ -14,18 +14,22 @@ const (
 	ParameterTypeEnumNodeTypeSpecific ParameterTypeEnum = "NODE_TYPE_SPECIFIC"
 )
 
+func (e ParameterTypeEnum) ToPointer() *ParameterTypeEnum {
+	return &e
+}
+
 func (e *ParameterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "NODE_TYPE_SPECIFIC":
-		*e = ParameterTypeEnum(s)
+		*e = ParameterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParameterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParameterTypeEnum: %v", v)
 	}
 }

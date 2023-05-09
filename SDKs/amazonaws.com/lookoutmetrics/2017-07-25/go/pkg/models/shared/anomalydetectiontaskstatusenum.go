@@ -17,12 +17,16 @@ const (
 	AnomalyDetectionTaskStatusEnumFailedToSchedule AnomalyDetectionTaskStatusEnum = "FAILED_TO_SCHEDULE"
 )
 
+func (e AnomalyDetectionTaskStatusEnum) ToPointer() *AnomalyDetectionTaskStatusEnum {
+	return &e
+}
+
 func (e *AnomalyDetectionTaskStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "IN_PROGRESS":
@@ -32,9 +36,9 @@ func (e *AnomalyDetectionTaskStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "FAILED_TO_SCHEDULE":
-		*e = AnomalyDetectionTaskStatusEnum(s)
+		*e = AnomalyDetectionTaskStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnomalyDetectionTaskStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AnomalyDetectionTaskStatusEnum: %v", v)
 	}
 }

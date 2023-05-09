@@ -34,7 +34,10 @@ func newPrivileges(defaultClient, securityClient HTTPClient, serverURL, language
 // DirectoryPrivilegesList - Retrieves a paginated list of all privileges for a customer.
 func (s *privileges) DirectoryPrivilegesList(ctx context.Context, request operations.DirectoryPrivilegesListRequest, security operations.DirectoryPrivilegesListSecurity) (*operations.DirectoryPrivilegesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/ALL/privileges", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/ALL/privileges", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

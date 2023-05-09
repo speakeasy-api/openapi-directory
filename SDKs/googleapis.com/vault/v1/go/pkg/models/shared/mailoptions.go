@@ -2,8 +2,49 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// MailOptionsClientSideEncryptedOptionEnum - Specifies whether the results should include encrypted content, unencrypted content, or both. Defaults to including both.
+type MailOptionsClientSideEncryptedOptionEnum string
+
+const (
+	MailOptionsClientSideEncryptedOptionEnumClientSideEncryptedOptionUnspecified MailOptionsClientSideEncryptedOptionEnum = "CLIENT_SIDE_ENCRYPTED_OPTION_UNSPECIFIED"
+	MailOptionsClientSideEncryptedOptionEnumClientSideEncryptedOptionAny         MailOptionsClientSideEncryptedOptionEnum = "CLIENT_SIDE_ENCRYPTED_OPTION_ANY"
+	MailOptionsClientSideEncryptedOptionEnumClientSideEncryptedOptionEncrypted   MailOptionsClientSideEncryptedOptionEnum = "CLIENT_SIDE_ENCRYPTED_OPTION_ENCRYPTED"
+	MailOptionsClientSideEncryptedOptionEnumClientSideEncryptedOptionUnencrypted MailOptionsClientSideEncryptedOptionEnum = "CLIENT_SIDE_ENCRYPTED_OPTION_UNENCRYPTED"
+)
+
+func (e MailOptionsClientSideEncryptedOptionEnum) ToPointer() *MailOptionsClientSideEncryptedOptionEnum {
+	return &e
+}
+
+func (e *MailOptionsClientSideEncryptedOptionEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "CLIENT_SIDE_ENCRYPTED_OPTION_UNSPECIFIED":
+		fallthrough
+	case "CLIENT_SIDE_ENCRYPTED_OPTION_ANY":
+		fallthrough
+	case "CLIENT_SIDE_ENCRYPTED_OPTION_ENCRYPTED":
+		fallthrough
+	case "CLIENT_SIDE_ENCRYPTED_OPTION_UNENCRYPTED":
+		*e = MailOptionsClientSideEncryptedOptionEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for MailOptionsClientSideEncryptedOptionEnum: %v", v)
+	}
+}
+
 // MailOptions - Additional options for Gmail search
 type MailOptions struct {
+	// Specifies whether the results should include encrypted content, unencrypted content, or both. Defaults to including both.
+	ClientSideEncryptedOption *MailOptionsClientSideEncryptedOptionEnum `json:"clientSideEncryptedOption,omitempty"`
 	// Set to **true** to exclude drafts.
 	ExcludeDrafts *bool `json:"excludeDrafts,omitempty"`
 }

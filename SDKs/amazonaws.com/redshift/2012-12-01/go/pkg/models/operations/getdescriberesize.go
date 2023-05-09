@@ -15,17 +15,21 @@ const (
 	GETDescribeResizeActionEnumDescribeResize GETDescribeResizeActionEnum = "DescribeResize"
 )
 
+func (e GETDescribeResizeActionEnum) ToPointer() *GETDescribeResizeActionEnum {
+	return &e
+}
+
 func (e *GETDescribeResizeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeResize":
-		*e = GETDescribeResizeActionEnum(s)
+		*e = GETDescribeResizeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeResizeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeResizeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeResizeVersionEnumTwoThousandAndTwelve1201 GETDescribeResizeVersionEnum = "2012-12-01"
 )
 
+func (e GETDescribeResizeVersionEnum) ToPointer() *GETDescribeResizeVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeResizeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETDescribeResizeVersionEnum(s)
+		*e = GETDescribeResizeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeResizeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeResizeVersionEnum: %v", v)
 	}
 }
 

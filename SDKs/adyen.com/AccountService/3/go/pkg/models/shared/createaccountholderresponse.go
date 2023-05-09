@@ -11,7 +11,7 @@ type CreateAccountHolderResponse struct {
 	AccountHolderDetails *AccountHolderDetails `json:"accountHolderDetails,omitempty"`
 	AccountHolderStatus  *AccountHolderStatus  `json:"accountHolderStatus,omitempty"`
 	// A list of fields that caused the `/createAccountHolder` request to fail.
-	InvalidFields []ErrorFieldType `json:"invalidFields,omitempty"`
+	InvalidFields []ErrorFieldTypeWrapper `json:"invalidFields,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
 	PspReference *string `json:"pspReference,omitempty"`
 	// The result code.

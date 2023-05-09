@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>AWS Identity and Access Management Roles Anywhere provides a secure way for your workloads such as servers, containers, and applications running outside of AWS to obtain Temporary AWS credentials. Your workloads can use the same IAM policies and roles that you have configured with native AWS applications to access AWS resources. Using IAM Roles Anywhere will eliminate the need to manage long term credentials for workloads running outside of AWS.</p> <p>To use IAM Roles Anywhere customer workloads will need to use X.509 certificates issued by their Certificate Authority (CA) . The Certificate Authority (CA) needs to be registered with IAM Roles Anywhere as a trust anchor to establish trust between customer PKI and IAM Roles Anywhere. Customers who do not manage their own PKI system can use AWS Certificate Manager Private Certificate Authority (ACM PCA) to create a Certificate Authority and use that to establish trust with IAM Roles Anywhere</p> <p>This guide describes the IAM rolesanywhere operations that you can call programmatically. For general information about IAM Roles Anywhere see <a href="https://docs.aws.amazon.com/">https://docs.aws.amazon.com/</a> </p>
 // https://docs.aws.amazon.com/rolesanywhere/ - Amazon Web Services documentation
 type SDK struct {
@@ -266,7 +281,10 @@ func (s *SDK) CreateTrustAnchor(ctx context.Context, request operations.CreateTr
 // DeleteCrl - <p>Deletes a certificate revocation list (CRL).</p> <p> <b>Required permissions: </b> <code>rolesanywhere:DeleteCrl</code>. </p>
 func (s *SDK) DeleteCrl(ctx context.Context, request operations.DeleteCrlRequest) (*operations.DeleteCrlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -332,7 +350,10 @@ func (s *SDK) DeleteCrl(ctx context.Context, request operations.DeleteCrlRequest
 // DeleteProfile - <p>Deletes a profile.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:DeleteProfile</code>. </p>
 func (s *SDK) DeleteProfile(ctx context.Context, request operations.DeleteProfileRequest) (*operations.DeleteProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *SDK) DeleteProfile(ctx context.Context, request operations.DeleteProfil
 // DeleteTrustAnchor - <p>Deletes a trust anchor.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:DeleteTrustAnchor</code>. </p>
 func (s *SDK) DeleteTrustAnchor(ctx context.Context, request operations.DeleteTrustAnchorRequest) (*operations.DeleteTrustAnchorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -464,7 +488,10 @@ func (s *SDK) DeleteTrustAnchor(ctx context.Context, request operations.DeleteTr
 // DisableCrl - <p>Disables a certificate revocation list (CRL).</p> <p> <b>Required permissions: </b> <code>rolesanywhere:DisableCrl</code>. </p>
 func (s *SDK) DisableCrl(ctx context.Context, request operations.DisableCrlRequest) (*operations.DisableCrlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -530,7 +557,10 @@ func (s *SDK) DisableCrl(ctx context.Context, request operations.DisableCrlReque
 // DisableProfile - <p>Disables a profile. When disabled, <a href="https://docs.aws.amazon.com/rolesanywhere/latest/APIReference/API_CreateSession.html">CreateSession</a> requests with this profile fail.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:DisableProfile</code>. </p>
 func (s *SDK) DisableProfile(ctx context.Context, request operations.DisableProfileRequest) (*operations.DisableProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -596,7 +626,10 @@ func (s *SDK) DisableProfile(ctx context.Context, request operations.DisableProf
 // DisableTrustAnchor - <p>Disables a trust anchor. When disabled, <a href="https://docs.aws.amazon.com/rolesanywhere/latest/APIReference/API_CreateSession.html">CreateSession</a> requests specifying this trust anchor are unauthorized.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:DisableTrustAnchor</code>. </p>
 func (s *SDK) DisableTrustAnchor(ctx context.Context, request operations.DisableTrustAnchorRequest) (*operations.DisableTrustAnchorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -662,7 +695,10 @@ func (s *SDK) DisableTrustAnchor(ctx context.Context, request operations.Disable
 // EnableCrl - <p>Enables a certificate revocation list (CRL). When enabled, certificates stored in the CRL are unauthorized to receive session credentials.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:EnableCrl</code>. </p>
 func (s *SDK) EnableCrl(ctx context.Context, request operations.EnableCrlRequest) (*operations.EnableCrlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -728,7 +764,10 @@ func (s *SDK) EnableCrl(ctx context.Context, request operations.EnableCrlRequest
 // EnableProfile - <p>Enables the roles in a profile to receive session credentials in <a href="https://docs.aws.amazon.com/rolesanywhere/latest/APIReference/API_CreateSession.html">CreateSession</a>. </p> <p> <b>Required permissions: </b> <code>rolesanywhere:EnableProfile</code>. </p>
 func (s *SDK) EnableProfile(ctx context.Context, request operations.EnableProfileRequest) (*operations.EnableProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -794,7 +833,10 @@ func (s *SDK) EnableProfile(ctx context.Context, request operations.EnableProfil
 // EnableTrustAnchor - <p>Enables a trust anchor. When enabled, certificates in the trust anchor chain are authorized for trust validation. </p> <p> <b>Required permissions: </b> <code>rolesanywhere:EnableTrustAnchor</code>. </p>
 func (s *SDK) EnableTrustAnchor(ctx context.Context, request operations.EnableTrustAnchorRequest) (*operations.EnableTrustAnchorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -860,7 +902,10 @@ func (s *SDK) EnableTrustAnchor(ctx context.Context, request operations.EnableTr
 // GetCrl - <p>Gets a certificate revocation list (CRL).</p> <p> <b>Required permissions: </b> <code>rolesanywhere:GetCrl</code>. </p>
 func (s *SDK) GetCrl(ctx context.Context, request operations.GetCrlRequest) (*operations.GetCrlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -916,7 +961,10 @@ func (s *SDK) GetCrl(ctx context.Context, request operations.GetCrlRequest) (*op
 // GetProfile - <p>Gets a profile.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:GetProfile</code>. </p>
 func (s *SDK) GetProfile(ctx context.Context, request operations.GetProfileRequest) (*operations.GetProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -982,7 +1030,10 @@ func (s *SDK) GetProfile(ctx context.Context, request operations.GetProfileReque
 // GetSubject - <p>Gets a Subject. A Subject associates a certificate identity with authentication attempts by CreateSession. The Subject resources stores audit information such as status of the last authentication attempt, the certificate data used in the attempt, and the last time the associated identity attempted authentication. </p> <p> <b>Required permissions: </b> <code>rolesanywhere:GetSubject</code>. </p>
 func (s *SDK) GetSubject(ctx context.Context, request operations.GetSubjectRequest) (*operations.GetSubjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subject/{subjectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subject/{subjectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1048,7 +1099,10 @@ func (s *SDK) GetSubject(ctx context.Context, request operations.GetSubjectReque
 // GetTrustAnchor - <p>Gets a trust anchor.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:GetTrustAnchor</code>. </p>
 func (s *SDK) GetTrustAnchor(ctx context.Context, request operations.GetTrustAnchorRequest) (*operations.GetTrustAnchorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1742,7 +1796,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateCrl - <p>Updates the certificate revocation list (CRL). CRl is a list of certificates that have been revoked by the issuing certificate Authority (CA). IAM Roles Anywhere validates against the crl list before issuing credentials.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:UpdateCrl</code>. </p>
 func (s *SDK) UpdateCrl(ctx context.Context, request operations.UpdateCrlRequest) (*operations.UpdateCrlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/crl/{crlId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1828,7 +1885,10 @@ func (s *SDK) UpdateCrl(ctx context.Context, request operations.UpdateCrlRequest
 // UpdateProfile - <p>Updates the profile. A profile is configuration resource to list the roles that RolesAnywhere service is trusted to assume. In addition, by applying a profile you can scope-down permissions with IAM managed policies.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:UpdateProfile</code>. </p>
 func (s *SDK) UpdateProfile(ctx context.Context, request operations.UpdateProfileRequest) (*operations.UpdateProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/profile/{profileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1914,7 +1974,10 @@ func (s *SDK) UpdateProfile(ctx context.Context, request operations.UpdateProfil
 // UpdateTrustAnchor - <p>Updates the trust anchor.You establish trust between IAM Roles Anywhere and your certificate authority (CA) by configuring a trust anchor. A Trust Anchor is defined either as a reference to a AWS Certificate Manager Private Certificate Authority (ACM PCA), or by uploading a Certificate Authority (CA) certificate. Your AWS workloads can authenticate with the trust anchor using certificates issued by the trusted Certificate Authority (CA) in exchange for temporary AWS credentials.</p> <p> <b>Required permissions: </b> <code>rolesanywhere:UpdateTrustAnchor</code>. </p>
 func (s *SDK) UpdateTrustAnchor(ctx context.Context, request operations.UpdateTrustAnchorRequest) (*operations.UpdateTrustAnchorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/trustanchor/{trustAnchorId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

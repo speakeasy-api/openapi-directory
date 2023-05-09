@@ -16,12 +16,16 @@ const (
 	JobErrorCodeEnumServiceError              JobErrorCodeEnum = "SERVICE_ERROR"
 )
 
+func (e JobErrorCodeEnum) ToPointer() *JobErrorCodeEnum {
+	return &e
+}
+
 func (e *JobErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTHORIZATION_ERROR":
 		fallthrough
 	case "RESOURCE_NOT_FOUND_ERROR":
@@ -29,9 +33,9 @@ func (e *JobErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "SERVICE_QUOTA_EXCEEDED_ERROR":
 		fallthrough
 	case "SERVICE_ERROR":
-		*e = JobErrorCodeEnum(s)
+		*e = JobErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for JobErrorCodeEnum: %v", v)
 	}
 }

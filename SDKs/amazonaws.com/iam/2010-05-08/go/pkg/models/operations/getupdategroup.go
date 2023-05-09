@@ -15,17 +15,21 @@ const (
 	GETUpdateGroupActionEnumUpdateGroup GETUpdateGroupActionEnum = "UpdateGroup"
 )
 
+func (e GETUpdateGroupActionEnum) ToPointer() *GETUpdateGroupActionEnum {
+	return &e
+}
+
 func (e *GETUpdateGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateGroup":
-		*e = GETUpdateGroupActionEnum(s)
+		*e = GETUpdateGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUpdateGroupVersionEnumTwoThousandAndTen0508 GETUpdateGroupVersionEnum = "2010-05-08"
 )
 
+func (e GETUpdateGroupVersionEnum) ToPointer() *GETUpdateGroupVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETUpdateGroupVersionEnum(s)
+		*e = GETUpdateGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateGroupVersionEnum: %v", v)
 	}
 }
 

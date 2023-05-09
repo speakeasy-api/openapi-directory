@@ -16,17 +16,21 @@ const (
 	DescribeRefreshSchemasStatusXAmzTargetEnumAmazonDmSv20160101DescribeRefreshSchemasStatus DescribeRefreshSchemasStatusXAmzTargetEnum = "AmazonDMSv20160101.DescribeRefreshSchemasStatus"
 )
 
+func (e DescribeRefreshSchemasStatusXAmzTargetEnum) ToPointer() *DescribeRefreshSchemasStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeRefreshSchemasStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.DescribeRefreshSchemasStatus":
-		*e = DescribeRefreshSchemasStatusXAmzTargetEnum(s)
+		*e = DescribeRefreshSchemasStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeRefreshSchemasStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeRefreshSchemasStatusXAmzTargetEnum: %v", v)
 	}
 }
 

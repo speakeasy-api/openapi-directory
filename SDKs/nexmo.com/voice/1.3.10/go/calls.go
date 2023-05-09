@@ -89,7 +89,10 @@ func (s *calls) CreateCall(ctx context.Context, request operations.CreateCallReq
 // Get detail of a specific call
 func (s *calls) GetCall(ctx context.Context, request operations.GetCallRequest, security operations.GetCallSecurity) (*operations.GetCallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -183,7 +186,10 @@ func (s *calls) GetCalls(ctx context.Context, request operations.GetCallsRequest
 // Modify an in progress call
 func (s *calls) UpdateCall(ctx context.Context, request operations.UpdateCallRequest, security operations.UpdateCallSecurity) (*operations.UpdateCallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

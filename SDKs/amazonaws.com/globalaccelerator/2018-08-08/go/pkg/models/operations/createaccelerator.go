@@ -16,17 +16,21 @@ const (
 	CreateAcceleratorXAmzTargetEnumGlobalAcceleratorV20180706CreateAccelerator CreateAcceleratorXAmzTargetEnum = "GlobalAccelerator_V20180706.CreateAccelerator"
 )
 
+func (e CreateAcceleratorXAmzTargetEnum) ToPointer() *CreateAcceleratorXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAcceleratorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.CreateAccelerator":
-		*e = CreateAcceleratorXAmzTargetEnum(s)
+		*e = CreateAcceleratorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAcceleratorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAcceleratorXAmzTargetEnum: %v", v)
 	}
 }
 

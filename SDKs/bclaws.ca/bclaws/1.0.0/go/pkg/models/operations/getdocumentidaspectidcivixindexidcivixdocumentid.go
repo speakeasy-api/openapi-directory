@@ -23,12 +23,16 @@ const (
 	GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDAspectIDEnumArchOic  GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDAspectIDEnum = "arch_oic"
 )
 
+func (e GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDAspectIDEnum) ToPointer() *GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDAspectIDEnum {
+	return &e
+}
+
 func (e *GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDAspectIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "complete":
 		fallthrough
 	case "corpreg":
@@ -46,10 +50,10 @@ func (e *GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDAspectIDEnum) Unmarshal
 	case "hscr":
 		fallthrough
 	case "arch_oic":
-		*e = GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDAspectIDEnum(s)
+		*e = GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDAspectIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDAspectIDEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDAspectIDEnum: %v", v)
 	}
 }
 

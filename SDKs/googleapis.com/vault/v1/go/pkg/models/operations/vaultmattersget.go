@@ -33,21 +33,25 @@ const (
 	VaultMattersGetViewEnumFull            VaultMattersGetViewEnum = "FULL"
 )
 
+func (e VaultMattersGetViewEnum) ToPointer() *VaultMattersGetViewEnum {
+	return &e
+}
+
 func (e *VaultMattersGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = VaultMattersGetViewEnum(s)
+		*e = VaultMattersGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VaultMattersGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for VaultMattersGetViewEnum: %v", v)
 	}
 }
 

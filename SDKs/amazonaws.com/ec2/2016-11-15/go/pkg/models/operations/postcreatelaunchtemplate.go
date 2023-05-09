@@ -15,17 +15,21 @@ const (
 	POSTCreateLaunchTemplateActionEnumCreateLaunchTemplate POSTCreateLaunchTemplateActionEnum = "CreateLaunchTemplate"
 )
 
+func (e POSTCreateLaunchTemplateActionEnum) ToPointer() *POSTCreateLaunchTemplateActionEnum {
+	return &e
+}
+
 func (e *POSTCreateLaunchTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateLaunchTemplate":
-		*e = POSTCreateLaunchTemplateActionEnum(s)
+		*e = POSTCreateLaunchTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateLaunchTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateLaunchTemplateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateLaunchTemplateVersionEnumTwoThousandAndSixteen1115 POSTCreateLaunchTemplateVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateLaunchTemplateVersionEnum) ToPointer() *POSTCreateLaunchTemplateVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateLaunchTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateLaunchTemplateVersionEnum(s)
+		*e = POSTCreateLaunchTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateLaunchTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateLaunchTemplateVersionEnum: %v", v)
 	}
 }
 

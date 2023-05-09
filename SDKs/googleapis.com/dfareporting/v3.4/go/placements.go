@@ -34,7 +34,10 @@ func newPlacements(defaultClient, securityClient HTTPClient, serverURL, language
 // DfareportingPlacementsGeneratetags - Generates tags for a placement.
 func (s *placements) DfareportingPlacementsGeneratetags(ctx context.Context, request operations.DfareportingPlacementsGeneratetagsRequest, security operations.DfareportingPlacementsGeneratetagsSecurity) (*operations.DfareportingPlacementsGeneratetagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placements/generatetags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placements/generatetags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *placements) DfareportingPlacementsGeneratetags(ctx context.Context, req
 // DfareportingPlacementsGet - Gets one placement by ID.
 func (s *placements) DfareportingPlacementsGet(ctx context.Context, request operations.DfareportingPlacementsGetRequest, security operations.DfareportingPlacementsGetSecurity) (*operations.DfareportingPlacementsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placements/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placements/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *placements) DfareportingPlacementsGet(ctx context.Context, request oper
 // DfareportingPlacementsInsert - Inserts a new placement.
 func (s *placements) DfareportingPlacementsInsert(ctx context.Context, request operations.DfareportingPlacementsInsertRequest, security operations.DfareportingPlacementsInsertSecurity) (*operations.DfareportingPlacementsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Placement", "json")
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *placements) DfareportingPlacementsInsert(ctx context.Context, request o
 // DfareportingPlacementsList - Retrieves a list of placements, possibly filtered. This method supports paging.
 func (s *placements) DfareportingPlacementsList(ctx context.Context, request operations.DfareportingPlacementsListRequest, security operations.DfareportingPlacementsListSecurity) (*operations.DfareportingPlacementsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *placements) DfareportingPlacementsList(ctx context.Context, request ope
 // DfareportingPlacementsPatch - Updates an existing placement. This method supports patch semantics.
 func (s *placements) DfareportingPlacementsPatch(ctx context.Context, request operations.DfareportingPlacementsPatchRequest, security operations.DfareportingPlacementsPatchSecurity) (*operations.DfareportingPlacementsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Placement", "json")
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *placements) DfareportingPlacementsPatch(ctx context.Context, request op
 // DfareportingPlacementsUpdate - Updates an existing placement.
 func (s *placements) DfareportingPlacementsUpdate(ctx context.Context, request operations.DfareportingPlacementsUpdateRequest, security operations.DfareportingPlacementsUpdateSecurity) (*operations.DfareportingPlacementsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/placements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Placement", "json")
 	if err != nil {

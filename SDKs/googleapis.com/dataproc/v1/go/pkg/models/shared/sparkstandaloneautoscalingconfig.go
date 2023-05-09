@@ -4,7 +4,7 @@ package shared
 
 // SparkStandaloneAutoscalingConfig - Basic autoscaling configurations for Spark Standalone.
 type SparkStandaloneAutoscalingConfig struct {
-	// Required. Timeout for Spark graceful decommissioning of spark workers. Specifies the duration to wait for spark worker to complete spark decomissioning tasks before forcefully removing workers. Only applicable to downscaling operations.Bounds: 0s, 1d.
+	// Required. Timeout for Spark graceful decommissioning of spark workers. Specifies the duration to wait for spark worker to complete spark decommissioning tasks before forcefully removing workers. Only applicable to downscaling operations.Bounds: 0s, 1d.
 	GracefulDecommissionTimeout *string `json:"gracefulDecommissionTimeout,omitempty"`
 	// Required. Fraction of required executors to remove from Spark Serverless clusters. A scale-down factor of 1.0 will result in scaling down so that there are no more executors for the Spark Job.(more aggressive scaling). A scale-down factor closer to 0 will result in a smaller magnitude of scaling donw (less aggressive scaling).Bounds: 0.0, 1.0.
 	ScaleDownFactor *float64 `json:"scaleDownFactor,omitempty"`

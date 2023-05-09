@@ -14,18 +14,22 @@ const (
 	NestingLevelValueEnumOne  NestingLevelValueEnum = "one"
 )
 
+func (e NestingLevelValueEnum) ToPointer() *NestingLevelValueEnum {
+	return &e
+}
+
 func (e *NestingLevelValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "one":
-		*e = NestingLevelValueEnum(s)
+		*e = NestingLevelValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NestingLevelValueEnum: %s", s)
+		return fmt.Errorf("invalid value for NestingLevelValueEnum: %v", v)
 	}
 }

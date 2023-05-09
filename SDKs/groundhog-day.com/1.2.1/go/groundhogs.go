@@ -35,7 +35,10 @@ func newGroundhogs(defaultClient, securityClient HTTPClient, serverURL, language
 // Returns a prognosticating animal and its known predictions.
 func (s *groundhogs) Groundhog(ctx context.Context, request operations.GroundhogRequest) (*operations.GroundhogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/groundhogs/{slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/groundhogs/{slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

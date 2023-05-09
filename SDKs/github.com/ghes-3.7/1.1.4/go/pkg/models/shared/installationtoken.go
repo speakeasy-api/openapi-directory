@@ -14,19 +14,23 @@ const (
 	InstallationTokenRepositorySelectionEnumSelected InstallationTokenRepositorySelectionEnum = "selected"
 )
 
+func (e InstallationTokenRepositorySelectionEnum) ToPointer() *InstallationTokenRepositorySelectionEnum {
+	return &e
+}
+
 func (e *InstallationTokenRepositorySelectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "selected":
-		*e = InstallationTokenRepositorySelectionEnum(s)
+		*e = InstallationTokenRepositorySelectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstallationTokenRepositorySelectionEnum: %s", s)
+		return fmt.Errorf("invalid value for InstallationTokenRepositorySelectionEnum: %v", v)
 	}
 }
 

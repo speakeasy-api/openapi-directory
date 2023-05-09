@@ -4,8 +4,8 @@ package shared
 
 // ListCasesResponse - The response message for the ListCases endpoint.
 type ListCasesResponse struct {
-	// The list of cases associated with the cloud resource, after any filters have been applied.
+	// The list of cases associated with the Google Cloud Resource, after any filters have been applied.
 	Cases []Case `json:"cases,omitempty"`
-	// A token to retrieve the next page of results. This should be set in the `page_token` field of subsequent `ListCasesRequest` message that is issued. If unspecified, there are no more results to retrieve.
+	// A token to retrieve the next page of results. This should be set in the `page_token` field of the subsequent `ListCasesRequest` message that is issued. If unspecified, there are no more results to retrieve.
 	NextPageToken *string `json:"nextPageToken,omitempty"`
 }

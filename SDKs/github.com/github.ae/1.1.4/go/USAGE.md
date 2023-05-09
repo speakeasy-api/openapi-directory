@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ActionsAddSelectedRepoToOrgSecretRequest{
+    ctx := context.Background()
+    res, err := s.Actions.ActionsAddSelectedRepoToOrgSecret(ctx, operations.ActionsAddSelectedRepoToOrgSecretRequest{
         Org: "corrupti",
         RepositoryID: 592845,
         SecretName: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.Actions.ActionsAddSelectedRepoToOrgSecret(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

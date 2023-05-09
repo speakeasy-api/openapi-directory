@@ -14,18 +14,22 @@ const (
 	RepoUpgradeOnBootEnumNone     RepoUpgradeOnBootEnum = "NONE"
 )
 
+func (e RepoUpgradeOnBootEnum) ToPointer() *RepoUpgradeOnBootEnum {
+	return &e
+}
+
 func (e *RepoUpgradeOnBootEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECURITY":
 		fallthrough
 	case "NONE":
-		*e = RepoUpgradeOnBootEnum(s)
+		*e = RepoUpgradeOnBootEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepoUpgradeOnBootEnum: %s", s)
+		return fmt.Errorf("invalid value for RepoUpgradeOnBootEnum: %v", v)
 	}
 }

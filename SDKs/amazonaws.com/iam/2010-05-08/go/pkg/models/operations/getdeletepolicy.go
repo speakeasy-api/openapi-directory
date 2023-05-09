@@ -15,17 +15,21 @@ const (
 	GETDeletePolicyActionEnumDeletePolicy GETDeletePolicyActionEnum = "DeletePolicy"
 )
 
+func (e GETDeletePolicyActionEnum) ToPointer() *GETDeletePolicyActionEnum {
+	return &e
+}
+
 func (e *GETDeletePolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeletePolicy":
-		*e = GETDeletePolicyActionEnum(s)
+		*e = GETDeletePolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeletePolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeletePolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeletePolicyVersionEnumTwoThousandAndTen0508 GETDeletePolicyVersionEnum = "2010-05-08"
 )
 
+func (e GETDeletePolicyVersionEnum) ToPointer() *GETDeletePolicyVersionEnum {
+	return &e
+}
+
 func (e *GETDeletePolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETDeletePolicyVersionEnum(s)
+		*e = GETDeletePolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeletePolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeletePolicyVersionEnum: %v", v)
 	}
 }
 

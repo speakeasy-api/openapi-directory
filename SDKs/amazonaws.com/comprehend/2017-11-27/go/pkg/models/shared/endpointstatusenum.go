@@ -17,12 +17,16 @@ const (
 	EndpointStatusEnumUpdating  EndpointStatusEnum = "UPDATING"
 )
 
+func (e EndpointStatusEnum) ToPointer() *EndpointStatusEnum {
+	return &e
+}
+
 func (e *EndpointStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "DELETING":
@@ -32,9 +36,9 @@ func (e *EndpointStatusEnum) UnmarshalJSON(data []byte) error {
 	case "IN_SERVICE":
 		fallthrough
 	case "UPDATING":
-		*e = EndpointStatusEnum(s)
+		*e = EndpointStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointStatusEnum: %v", v)
 	}
 }

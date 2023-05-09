@@ -15,19 +15,23 @@ const (
 	DescribeElasticGpusResultElasticGpuSetElasticGpuHealthStatusEnumImpaired DescribeElasticGpusResultElasticGpuSetElasticGpuHealthStatusEnum = "IMPAIRED"
 )
 
+func (e DescribeElasticGpusResultElasticGpuSetElasticGpuHealthStatusEnum) ToPointer() *DescribeElasticGpusResultElasticGpuSetElasticGpuHealthStatusEnum {
+	return &e
+}
+
 func (e *DescribeElasticGpusResultElasticGpuSetElasticGpuHealthStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "IMPAIRED":
-		*e = DescribeElasticGpusResultElasticGpuSetElasticGpuHealthStatusEnum(s)
+		*e = DescribeElasticGpusResultElasticGpuSetElasticGpuHealthStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeElasticGpusResultElasticGpuSetElasticGpuHealthStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeElasticGpusResultElasticGpuSetElasticGpuHealthStatusEnum: %v", v)
 	}
 }
 
@@ -43,17 +47,21 @@ const (
 	DescribeElasticGpusResultElasticGpuSetElasticGpuStateEnumAttached DescribeElasticGpusResultElasticGpuSetElasticGpuStateEnum = "ATTACHED"
 )
 
+func (e DescribeElasticGpusResultElasticGpuSetElasticGpuStateEnum) ToPointer() *DescribeElasticGpusResultElasticGpuSetElasticGpuStateEnum {
+	return &e
+}
+
 func (e *DescribeElasticGpusResultElasticGpuSetElasticGpuStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTACHED":
-		*e = DescribeElasticGpusResultElasticGpuSetElasticGpuStateEnum(s)
+		*e = DescribeElasticGpusResultElasticGpuSetElasticGpuStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeElasticGpusResultElasticGpuSetElasticGpuStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeElasticGpusResultElasticGpuSetElasticGpuStateEnum: %v", v)
 	}
 }
 

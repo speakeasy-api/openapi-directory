@@ -90,7 +90,10 @@ func (s *itv) ActivateSaveOffer(ctx context.Context, request operations.Activate
 // ChangeCardDetails - Change payment card details.
 func (s *itv) ChangeCardDetails(ctx context.Context, request operations.ChangeCardDetailsRequest, security operations.ChangeCardDetailsSecurity) (*operations.ChangeCardDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/cards/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/cards/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvChangeCardDetailsRequest", "json")
 	if err != nil {
@@ -361,7 +364,10 @@ func (s *itv) CheckPreviousEntitlements(ctx context.Context, request operations.
 // CheckVoucher - Validates the coupon/voucher for specified payment platform.
 func (s *itv) CheckVoucher(ctx context.Context, request operations.CheckVoucherRequest, security operations.CheckVoucherSecurity) (*operations.CheckVoucherResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/voucher/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/voucher/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvVoucherRequest", "json")
 	if err != nil {
@@ -437,7 +443,10 @@ func (s *itv) CheckVoucher(ctx context.Context, request operations.CheckVoucherR
 // ConfirmPurchase - Confirms purchase and returns the details of purchased subscription for specified payment platform.
 func (s *itv) ConfirmPurchase(ctx context.Context, request operations.ConfirmPurchaseRequest, security operations.ConfirmPurchaseSecurity) (*operations.ConfirmPurchaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvPurchaseRequest", "json")
 	if err != nil {
@@ -513,7 +522,10 @@ func (s *itv) ConfirmPurchase(ctx context.Context, request operations.ConfirmPur
 // ConfirmPurchaseStrong - Confirms purchase and returns the details of purchased subscription for specified payment platform.
 func (s *itv) ConfirmPurchaseStrong(ctx context.Context, request operations.ConfirmPurchaseStrongRequest, security operations.ConfirmPurchaseStrongSecurity) (*operations.ConfirmPurchaseStrongResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}/strong", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}/strong", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvPurchaseStrongRequest", "json")
 	if err != nil {
@@ -589,7 +601,10 @@ func (s *itv) ConfirmPurchaseStrong(ctx context.Context, request operations.Conf
 // ConfirmPurchaseWithOffer - Confirms purchase and returns the details of purchased subscription for specified payment platform.
 func (s *itv) ConfirmPurchaseWithOffer(ctx context.Context, request operations.ConfirmPurchaseWithOfferRequest, security operations.ConfirmPurchaseWithOfferSecurity) (*operations.ConfirmPurchaseWithOfferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}/withoffer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}/withoffer", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvPurchaseWithOfferRequest", "json")
 	if err != nil {
@@ -737,7 +752,10 @@ func (s *itv) DeleteAccount(ctx context.Context, request operations.DeleteAccoun
 // expiry date or next renewal date.
 func (s *itv) DeleteItvPurchasePlatform(ctx context.Context, request operations.DeleteItvPurchasePlatformRequest, security operations.DeleteItvPurchasePlatformSecurity) (*operations.DeleteItvPurchasePlatformResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvCancelSubscriptionRequest", "json")
 	if err != nil {
@@ -804,7 +822,10 @@ func (s *itv) DeleteItvPurchasePlatform(ctx context.Context, request operations.
 // ExecuteTransaction - Sends request to execute specified transaction.
 func (s *itv) ExecuteTransaction(ctx context.Context, request operations.ExecuteTransactionRequest) (*operations.ExecuteTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/roku/transaction/{transactionid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/roku/transaction/{transactionid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvRokuTransactionRequest", "json")
 	if err != nil {
@@ -953,7 +974,10 @@ func (s *itv) GetAccountTokenWithPin(ctx context.Context, request operations.Get
 // GetBillingHistory - Returns the list of billing records for specified payment platform.
 func (s *itv) GetBillingHistory(ctx context.Context, request operations.GetBillingHistoryRequest, security operations.GetBillingHistorySecurity) (*operations.GetBillingHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/billinghistory/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/billinghistory/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvBillingHistoryRequest", "json")
 	if err != nil {
@@ -1029,7 +1053,10 @@ func (s *itv) GetBillingHistory(ctx context.Context, request operations.GetBilli
 // GetCardDetails - Get payment card details.
 func (s *itv) GetCardDetails(ctx context.Context, request operations.GetCardDetailsRequest, security operations.GetCardDetailsSecurity) (*operations.GetCardDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/cards/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/cards/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvGetCardDetailsRequest", "json")
 	if err != nil {
@@ -1171,7 +1198,10 @@ func (s *itv) GetCurrentEntitlement(ctx context.Context, request operations.GetC
 // GetCurrentSubscription - Returns the details of current subscription for specified payment platform.
 func (s *itv) GetCurrentSubscription(ctx context.Context, request operations.GetCurrentSubscriptionRequest, security operations.GetCurrentSubscriptionSecurity) (*operations.GetCurrentSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/purchase/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1303,7 +1333,10 @@ func (s *itv) GetEntitlementsHistory(ctx context.Context, request operations.Get
 // GetFeatureFlag - Gets info whether or not a feature is enabled or disabled using a feature flag. Feature flags are set as a custom field within PM. It also supports custom feature flag data if needed. Such data can be return as well.
 func (s *itv) GetFeatureFlag(ctx context.Context, request operations.GetFeatureFlagRequest) (*operations.GetFeatureFlagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/featureFlag/{feature}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/featureFlag/{feature}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1758,7 +1791,10 @@ func (s *itv) GetSubscriptionState(ctx context.Context, request operations.GetSu
 // GetSubscriptionStatus - Returns status of latest payment intent.
 func (s *itv) GetSubscriptionStatus(ctx context.Context, request operations.GetSubscriptionStatusRequest, security operations.GetSubscriptionStatusSecurity) (*operations.GetSubscriptionStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/subscription/status/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/subscription/status/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1872,7 +1908,10 @@ func (s *itv) GetUpcomingInvoice(ctx context.Context, request operations.GetUpco
 // GetVoucherByID - Checks the provided coupon id for a user. Only Stripe platform is currently supported.
 func (s *itv) GetVoucherByID(ctx context.Context, request operations.GetVoucherByIDRequest, security operations.GetVoucherByIDSecurity) (*operations.GetVoucherByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/voucher/{planId}/{voucherId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/voucher/{planId}/{voucherId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1938,7 +1977,10 @@ func (s *itv) GetVoucherByID(ctx context.Context, request operations.GetVoucherB
 // GetItvItemsummaryExternalID - Redirects to corresponding Axis Item details page.
 func (s *itv) GetItvItemsummaryExternalID(ctx context.Context, request operations.GetItvItemsummaryExternalIDRequest) (*operations.GetItvItemsummaryExternalIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/itemsummary/{externalId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/itemsummary/{externalId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2000,7 +2042,10 @@ func (s *itv) GetItvItemsummaryExternalID(ctx context.Context, request operation
 // GetItvPlansPlatform - Returns the plans available for specified payment platform.
 func (s *itv) GetItvPlansPlatform(ctx context.Context, request operations.GetItvPlansPlatformRequest, security operations.GetItvPlansPlatformSecurity) (*operations.GetItvPlansPlatformResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/plans/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/plans/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2257,7 +2302,10 @@ func (s *itv) GooglePaySubscription(ctx context.Context, request operations.Goog
 // Resubscribe - Resubscription for a user.
 func (s *itv) Resubscribe(ctx context.Context, request operations.ResubscribeRequest, security operations.ResubscribeSecurity) (*operations.ResubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/resubscribe/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/resubscribe/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2314,7 +2362,10 @@ func (s *itv) Resubscribe(ctx context.Context, request operations.ResubscribeReq
 // UpdatePaymentIntentStrong - Change payment method details.
 func (s *itv) UpdatePaymentIntentStrong(ctx context.Context, request operations.UpdatePaymentIntentStrongRequest, security operations.UpdatePaymentIntentStrongSecurity) (*operations.UpdatePaymentIntentStrongResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/updateIntent/strong/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/updateIntent/strong/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvUpdateIntentStrongRequest", "json")
 	if err != nil {
@@ -2390,7 +2441,10 @@ func (s *itv) UpdatePaymentIntentStrong(ctx context.Context, request operations.
 // UpdatePaymentMethodStrong - Change payment method details.
 func (s *itv) UpdatePaymentMethodStrong(ctx context.Context, request operations.UpdatePaymentMethodStrongRequest, security operations.UpdatePaymentMethodStrongSecurity) (*operations.UpdatePaymentMethodStrongResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/updatePayment/strong/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/updatePayment/strong/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvUpdatePaymentStrongRequest", "json")
 	if err != nil {
@@ -2526,7 +2580,10 @@ func (s *itv) UpdateProfile(ctx context.Context, request operations.UpdateProfil
 // UpgradePlan - Upgrades the plan for the current user.
 func (s *itv) UpgradePlan(ctx context.Context, request operations.UpgradePlanRequest, security operations.UpgradePlanSecurity) (*operations.UpgradePlanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/itv/plan/{platform}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/itv/plan/{platform}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ItvUpgradePlanRequest", "json")
 	if err != nil {

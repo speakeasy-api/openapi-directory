@@ -16,21 +16,25 @@ const (
 	CustomVitalTypeDataTypeEnumSingleSel CustomVitalTypeDataTypeEnum = "single_sel"
 )
 
+func (e CustomVitalTypeDataTypeEnum) ToPointer() *CustomVitalTypeDataTypeEnum {
+	return &e
+}
+
 func (e *CustomVitalTypeDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "number":
 		fallthrough
 	case "single_sel":
-		*e = CustomVitalTypeDataTypeEnum(s)
+		*e = CustomVitalTypeDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomVitalTypeDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomVitalTypeDataTypeEnum: %v", v)
 	}
 }
 

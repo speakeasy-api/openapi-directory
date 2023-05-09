@@ -16,17 +16,21 @@ const (
 	ListStepsXAmzTargetEnumElasticMapReduceListSteps ListStepsXAmzTargetEnum = "ElasticMapReduce.ListSteps"
 )
 
+func (e ListStepsXAmzTargetEnum) ToPointer() *ListStepsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListStepsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.ListSteps":
-		*e = ListStepsXAmzTargetEnum(s)
+		*e = ListStepsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListStepsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListStepsXAmzTargetEnum: %v", v)
 	}
 }
 

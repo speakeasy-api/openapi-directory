@@ -13,16 +13,20 @@ const (
 	ComponentStatusEnumDeprecated ComponentStatusEnum = "DEPRECATED"
 )
 
+func (e ComponentStatusEnum) ToPointer() *ComponentStatusEnum {
+	return &e
+}
+
 func (e *ComponentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPRECATED":
-		*e = ComponentStatusEnum(s)
+		*e = ComponentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComponentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ComponentStatusEnum: %v", v)
 	}
 }

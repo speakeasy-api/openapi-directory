@@ -71,12 +71,16 @@ const (
 	HistoryEventTypeEnumMapRunSucceeded              HistoryEventTypeEnum = "MapRunSucceeded"
 )
 
+func (e HistoryEventTypeEnum) ToPointer() *HistoryEventTypeEnum {
+	return &e
+}
+
 func (e *HistoryEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ActivityFailed":
 		fallthrough
 	case "ActivityScheduled":
@@ -194,9 +198,9 @@ func (e *HistoryEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MapRunStarted":
 		fallthrough
 	case "MapRunSucceeded":
-		*e = HistoryEventTypeEnum(s)
+		*e = HistoryEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HistoryEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HistoryEventTypeEnum: %v", v)
 	}
 }

@@ -63,14 +63,19 @@ const (
 	ExportableInstanceFieldEnumInferredWorkloadTypes                                           ExportableInstanceFieldEnum = "InferredWorkloadTypes"
 	ExportableInstanceFieldEnumRecommendationOptionsMigrationEffort                            ExportableInstanceFieldEnum = "RecommendationOptionsMigrationEffort"
 	ExportableInstanceFieldEnumEffectiveRecommendationPreferencesExternalMetricsSource         ExportableInstanceFieldEnum = "EffectiveRecommendationPreferencesExternalMetricsSource"
+	ExportableInstanceFieldEnumInstanceState                                                   ExportableInstanceFieldEnum = "InstanceState"
 )
 
+func (e ExportableInstanceFieldEnum) ToPointer() *ExportableInstanceFieldEnum {
+	return &e
+}
+
 func (e *ExportableInstanceFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AccountId":
 		fallthrough
 	case "InstanceArn":
@@ -176,9 +181,11 @@ func (e *ExportableInstanceFieldEnum) UnmarshalJSON(data []byte) error {
 	case "RecommendationOptionsMigrationEffort":
 		fallthrough
 	case "EffectiveRecommendationPreferencesExternalMetricsSource":
-		*e = ExportableInstanceFieldEnum(s)
+		fallthrough
+	case "InstanceState":
+		*e = ExportableInstanceFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportableInstanceFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportableInstanceFieldEnum: %v", v)
 	}
 }

@@ -13,75 +13,31 @@ type AccountAttributesAllowedIP struct {
 	IPStart *string `json:"ipStart,omitempty"`
 }
 
-// AccountAttributesBrandingEnum - Branding flag. Set to `true` if the account has branding functionality enabled.
-type AccountAttributesBrandingEnum string
-
-const (
-	AccountAttributesBrandingEnumTrue  AccountAttributesBrandingEnum = "true"
-	AccountAttributesBrandingEnumFalse AccountAttributesBrandingEnum = "false"
-)
-
-func (e *AccountAttributesBrandingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = AccountAttributesBrandingEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountAttributesBrandingEnum: %s", s)
-	}
-}
-
-// AccountAttributesCustomDomainEnum - Custom domain flag. Set to `true` if account type allows custom domain functionality.
-type AccountAttributesCustomDomainEnum string
-
-const (
-	AccountAttributesCustomDomainEnumTrue  AccountAttributesCustomDomainEnum = "true"
-	AccountAttributesCustomDomainEnumFalse AccountAttributesCustomDomainEnum = "false"
-)
-
-func (e *AccountAttributesCustomDomainEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = AccountAttributesCustomDomainEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountAttributesCustomDomainEnum: %s", s)
-	}
-}
-
 // AccountAttributesStatusEnum - Account status flag. A one (1) means the account is active; zero (0) means it is suspended.
-type AccountAttributesStatusEnum string
+type AccountAttributesStatusEnum int
 
 const (
-	AccountAttributesStatusEnumOne  AccountAttributesStatusEnum = "1"
-	AccountAttributesStatusEnumZero AccountAttributesStatusEnum = "0"
+	AccountAttributesStatusEnumOne  AccountAttributesStatusEnum = 1
+	AccountAttributesStatusEnumZero AccountAttributesStatusEnum = 0
 )
+
+func (e AccountAttributesStatusEnum) ToPointer() *AccountAttributesStatusEnum {
+	return &e
+}
 
 func (e *AccountAttributesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "0":
-		*e = AccountAttributesStatusEnum(s)
+	case 0:
+		*e = AccountAttributesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountAttributesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountAttributesStatusEnum: %v", v)
 	}
 }
 
@@ -93,8 +49,8 @@ type AccountAttributes struct {
 	// Range of IP addresses allowed to access this account.
 	AllowedIP []AccountAttributesAllowedIP `json:"allowedIp,omitempty"`
 	// Branding flag. Set to `true` if the account has branding functionality enabled.
-	Branding         *AccountAttributesBrandingEnum `json:"branding,omitempty"`
-	BrandingSettings *BrandingSettings              `json:"brandingSettings,omitempty"`
+	Branding         *bool             `json:"branding,omitempty"`
+	BrandingSettings *BrandingSettings `json:"brandingSettings,omitempty"`
 	// (ExaVault Use Only) Internal ID of the account in CMS.
 	ClientID *int `json:"clientId,omitempty"`
 	// Flag to indicate whether the account requires complex passwords. Set to `true` to require complex passwords on all users and shares.
@@ -102,7 +58,7 @@ type AccountAttributes struct {
 	// Timestamp of account creation.
 	Created *time.Time `json:"created,omitempty"`
 	// Custom domain flag. Set to `true` if account type allows custom domain functionality.
-	CustomDomain *AccountAttributesCustomDomainEnum `json:"customDomain,omitempty"`
+	CustomDomain *bool `json:"customDomain,omitempty"`
 	// Custom signature for all account emails users or recipients will receive.
 	CustomSignature *string `json:"customSignature,omitempty"`
 	// Custom domain used to brand this account.

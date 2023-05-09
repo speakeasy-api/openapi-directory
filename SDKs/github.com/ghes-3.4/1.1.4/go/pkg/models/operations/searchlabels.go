@@ -17,19 +17,23 @@ const (
 	SearchLabelsSortEnumUpdated SearchLabelsSortEnum = "updated"
 )
 
+func (e SearchLabelsSortEnum) ToPointer() *SearchLabelsSortEnum {
+	return &e
+}
+
 func (e *SearchLabelsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
-		*e = SearchLabelsSortEnum(s)
+		*e = SearchLabelsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchLabelsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchLabelsSortEnum: %v", v)
 	}
 }
 

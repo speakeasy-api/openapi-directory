@@ -15,20 +15,24 @@ const (
 	ReferenceStatusEnumDeleted  ReferenceStatusEnum = "DELETED"
 )
 
+func (e ReferenceStatusEnum) ToPointer() *ReferenceStatusEnum {
+	return &e
+}
+
 func (e *ReferenceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "DELETING":
 		fallthrough
 	case "DELETED":
-		*e = ReferenceStatusEnum(s)
+		*e = ReferenceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReferenceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReferenceStatusEnum: %v", v)
 	}
 }

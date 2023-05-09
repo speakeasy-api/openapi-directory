@@ -16,12 +16,16 @@ const (
 	HealthStatusFilterEnumHealthyOrElseAll HealthStatusFilterEnum = "HEALTHY_OR_ELSE_ALL"
 )
 
+func (e HealthStatusFilterEnum) ToPointer() *HealthStatusFilterEnum {
+	return &e
+}
+
 func (e *HealthStatusFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEALTHY":
 		fallthrough
 	case "UNHEALTHY":
@@ -29,9 +33,9 @@ func (e *HealthStatusFilterEnum) UnmarshalJSON(data []byte) error {
 	case "ALL":
 		fallthrough
 	case "HEALTHY_OR_ELSE_ALL":
-		*e = HealthStatusFilterEnum(s)
+		*e = HealthStatusFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HealthStatusFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for HealthStatusFilterEnum: %v", v)
 	}
 }

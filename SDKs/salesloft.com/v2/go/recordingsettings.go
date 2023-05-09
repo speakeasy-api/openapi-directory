@@ -37,7 +37,10 @@ func newRecordingSettings(defaultClient, securityClient HTTPClient, serverURL, l
 // Phone number should be in E.164 format.
 func (s *recordingSettings) GetV2PhoneNumbersRecordingSettingsIDJSON(ctx context.Context, request operations.GetV2PhoneNumbersRecordingSettingsIDJSONRequest) (*operations.GetV2PhoneNumbersRecordingSettingsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/phone_numbers/recording_settings/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/phone_numbers/recording_settings/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

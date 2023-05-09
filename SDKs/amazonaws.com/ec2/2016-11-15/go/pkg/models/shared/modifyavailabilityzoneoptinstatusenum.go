@@ -14,18 +14,22 @@ const (
 	ModifyAvailabilityZoneOptInStatusEnumNotOptedIn ModifyAvailabilityZoneOptInStatusEnum = "not-opted-in"
 )
 
+func (e ModifyAvailabilityZoneOptInStatusEnum) ToPointer() *ModifyAvailabilityZoneOptInStatusEnum {
+	return &e
+}
+
 func (e *ModifyAvailabilityZoneOptInStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "opted-in":
 		fallthrough
 	case "not-opted-in":
-		*e = ModifyAvailabilityZoneOptInStatusEnum(s)
+		*e = ModifyAvailabilityZoneOptInStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyAvailabilityZoneOptInStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyAvailabilityZoneOptInStatusEnum: %v", v)
 	}
 }

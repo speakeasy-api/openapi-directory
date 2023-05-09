@@ -16,17 +16,21 @@ const (
 	CreateGameSessionXAmzTargetEnumGameLiftCreateGameSession CreateGameSessionXAmzTargetEnum = "GameLift.CreateGameSession"
 )
 
+func (e CreateGameSessionXAmzTargetEnum) ToPointer() *CreateGameSessionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateGameSessionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.CreateGameSession":
-		*e = CreateGameSessionXAmzTargetEnum(s)
+		*e = CreateGameSessionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateGameSessionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateGameSessionXAmzTargetEnum: %v", v)
 	}
 }
 

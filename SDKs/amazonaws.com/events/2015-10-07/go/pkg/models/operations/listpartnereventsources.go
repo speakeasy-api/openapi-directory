@@ -16,17 +16,21 @@ const (
 	ListPartnerEventSourcesXAmzTargetEnumAwsEventsListPartnerEventSources ListPartnerEventSourcesXAmzTargetEnum = "AWSEvents.ListPartnerEventSources"
 )
 
+func (e ListPartnerEventSourcesXAmzTargetEnum) ToPointer() *ListPartnerEventSourcesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListPartnerEventSourcesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.ListPartnerEventSources":
-		*e = ListPartnerEventSourcesXAmzTargetEnum(s)
+		*e = ListPartnerEventSourcesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPartnerEventSourcesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPartnerEventSourcesXAmzTargetEnum: %v", v)
 	}
 }
 

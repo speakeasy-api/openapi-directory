@@ -14,23 +14,27 @@ type UpdateAnAccountRequest struct {
 	UpdateAnAccountParameters shared.UpdateAnAccountParameters `request:"mediaType=application/json"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON13StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON13StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine UpdateAnAccountDefaultApplicationJSON13StatusEnum = "429"
+	UpdateAnAccountDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine UpdateAnAccountDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON13StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = UpdateAnAccountDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = UpdateAnAccountDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -40,17 +44,21 @@ const (
 	UpdateAnAccountDefaultApplicationJSON13TypeEnumRateLimitedError UpdateAnAccountDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON13TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = UpdateAnAccountDefaultApplicationJSON13TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -62,23 +70,27 @@ type UpdateAnAccountDefaultApplicationJSON13 struct {
 	Type       UpdateAnAccountDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON12StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON12StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON12StatusEnumFourHundredAndThree UpdateAnAccountDefaultApplicationJSON12StatusEnum = "403"
+	UpdateAnAccountDefaultApplicationJSON12StatusEnumFourHundredAndThree UpdateAnAccountDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON12StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = UpdateAnAccountDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = UpdateAnAccountDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -88,17 +100,21 @@ const (
 	UpdateAnAccountDefaultApplicationJSON12TypeEnumPrivateFeatureError UpdateAnAccountDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON12TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = UpdateAnAccountDefaultApplicationJSON12TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -109,23 +125,27 @@ type UpdateAnAccountDefaultApplicationJSON12 struct {
 	Type   UpdateAnAccountDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON11StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON11StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON11StatusEnumFourHundredAndFour UpdateAnAccountDefaultApplicationJSON11StatusEnum = "404"
+	UpdateAnAccountDefaultApplicationJSON11StatusEnumFourHundredAndFour UpdateAnAccountDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON11StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = UpdateAnAccountDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = UpdateAnAccountDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -135,17 +155,21 @@ const (
 	UpdateAnAccountDefaultApplicationJSON11TypeEnumObjectNotFoundError UpdateAnAccountDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON11TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = UpdateAnAccountDefaultApplicationJSON11TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -156,23 +180,27 @@ type UpdateAnAccountDefaultApplicationJSON11 struct {
 	Type   UpdateAnAccountDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON10StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON10StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON10StatusEnumFourHundred UpdateAnAccountDefaultApplicationJSON10StatusEnum = "400"
+	UpdateAnAccountDefaultApplicationJSON10StatusEnumFourHundred UpdateAnAccountDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON10StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = UpdateAnAccountDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = UpdateAnAccountDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -182,17 +210,21 @@ const (
 	UpdateAnAccountDefaultApplicationJSON10TypeEnumMalformedRequestError UpdateAnAccountDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON10TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = UpdateAnAccountDefaultApplicationJSON10TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -203,23 +235,27 @@ type UpdateAnAccountDefaultApplicationJSON10 struct {
 	Type   UpdateAnAccountDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON9StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON9StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON9StatusEnumFourHundred UpdateAnAccountDefaultApplicationJSON9StatusEnum = "400"
+	UpdateAnAccountDefaultApplicationJSON9StatusEnumFourHundred UpdateAnAccountDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON9StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = UpdateAnAccountDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = UpdateAnAccountDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -229,46 +265,54 @@ const (
 	UpdateAnAccountDefaultApplicationJSON9TypeEnumInvalidParametersError UpdateAnAccountDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON9TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = UpdateAnAccountDefaultApplicationJSON9TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type UpdateAnAccountDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                         `json:"errors,omitempty"`
+	Errors []map[string]interface{}                         `json:"errors"`
 	Status UpdateAnAccountDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                           `json:"title"`
 	Type   UpdateAnAccountDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON8StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON8StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON8StatusEnumFourHundredAndNine UpdateAnAccountDefaultApplicationJSON8StatusEnum = "409"
+	UpdateAnAccountDefaultApplicationJSON8StatusEnumFourHundredAndNine UpdateAnAccountDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON8StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = UpdateAnAccountDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = UpdateAnAccountDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -278,17 +322,21 @@ const (
 	UpdateAnAccountDefaultApplicationJSON8TypeEnumInvalidOperationError UpdateAnAccountDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON8TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = UpdateAnAccountDefaultApplicationJSON8TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -299,23 +347,27 @@ type UpdateAnAccountDefaultApplicationJSON8 struct {
 	Type   UpdateAnAccountDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON7StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON7StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON7StatusEnumFourHundredAndOne UpdateAnAccountDefaultApplicationJSON7StatusEnum = "401"
+	UpdateAnAccountDefaultApplicationJSON7StatusEnumFourHundredAndOne UpdateAnAccountDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON7StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = UpdateAnAccountDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = UpdateAnAccountDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -325,17 +377,21 @@ const (
 	UpdateAnAccountDefaultApplicationJSON7TypeEnumInvalidAPIKeyError UpdateAnAccountDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON7TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = UpdateAnAccountDefaultApplicationJSON7TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -346,23 +402,27 @@ type UpdateAnAccountDefaultApplicationJSON7 struct {
 	Type   UpdateAnAccountDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON6StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON6StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON6StatusEnumFiveHundred UpdateAnAccountDefaultApplicationJSON6StatusEnum = "500"
+	UpdateAnAccountDefaultApplicationJSON6StatusEnumFiveHundred UpdateAnAccountDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON6StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = UpdateAnAccountDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = UpdateAnAccountDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -372,17 +432,21 @@ const (
 	UpdateAnAccountDefaultApplicationJSON6TypeEnumInternalServerError UpdateAnAccountDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON6TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = UpdateAnAccountDefaultApplicationJSON6TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -393,23 +457,27 @@ type UpdateAnAccountDefaultApplicationJSON6 struct {
 	Type   UpdateAnAccountDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON5StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON5StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON5StatusEnumFourHundredAndThree UpdateAnAccountDefaultApplicationJSON5StatusEnum = "403"
+	UpdateAnAccountDefaultApplicationJSON5StatusEnumFourHundredAndThree UpdateAnAccountDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON5StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = UpdateAnAccountDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = UpdateAnAccountDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -419,17 +487,21 @@ const (
 	UpdateAnAccountDefaultApplicationJSON5TypeEnumInsufficientPermissionsError UpdateAnAccountDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON5TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = UpdateAnAccountDefaultApplicationJSON5TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -440,23 +512,27 @@ type UpdateAnAccountDefaultApplicationJSON5 struct {
 	Type   UpdateAnAccountDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON4StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON4StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo UpdateAnAccountDefaultApplicationJSON4StatusEnum = "422"
+	UpdateAnAccountDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo UpdateAnAccountDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON4StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = UpdateAnAccountDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = UpdateAnAccountDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -466,17 +542,21 @@ const (
 	UpdateAnAccountDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError UpdateAnAccountDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON4TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = UpdateAnAccountDefaultApplicationJSON4TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -487,23 +567,27 @@ type UpdateAnAccountDefaultApplicationJSON4 struct {
 	Type   UpdateAnAccountDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON3StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON3StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON3StatusEnumFourHundredAndNine UpdateAnAccountDefaultApplicationJSON3StatusEnum = "409"
+	UpdateAnAccountDefaultApplicationJSON3StatusEnumFourHundredAndNine UpdateAnAccountDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON3StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = UpdateAnAccountDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = UpdateAnAccountDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -513,17 +597,21 @@ const (
 	UpdateAnAccountDefaultApplicationJSON3TypeEnumIdempotencyConflictError UpdateAnAccountDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON3TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = UpdateAnAccountDefaultApplicationJSON3TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -534,23 +622,27 @@ type UpdateAnAccountDefaultApplicationJSON3 struct {
 	Type   UpdateAnAccountDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON2StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON2StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON2StatusEnumFourHundredAndThree UpdateAnAccountDefaultApplicationJSON2StatusEnum = "403"
+	UpdateAnAccountDefaultApplicationJSON2StatusEnumFourHundredAndThree UpdateAnAccountDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON2StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = UpdateAnAccountDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = UpdateAnAccountDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -560,17 +652,21 @@ const (
 	UpdateAnAccountDefaultApplicationJSON2TypeEnumEnvironmentMismatchError UpdateAnAccountDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON2TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = UpdateAnAccountDefaultApplicationJSON2TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -581,23 +677,27 @@ type UpdateAnAccountDefaultApplicationJSON2 struct {
 	Type   UpdateAnAccountDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type UpdateAnAccountDefaultApplicationJSON1StatusEnum string
+type UpdateAnAccountDefaultApplicationJSON1StatusEnum int64
 
 const (
-	UpdateAnAccountDefaultApplicationJSON1StatusEnumFourHundredAndFour UpdateAnAccountDefaultApplicationJSON1StatusEnum = "404"
+	UpdateAnAccountDefaultApplicationJSON1StatusEnumFourHundredAndFour UpdateAnAccountDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON1StatusEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = UpdateAnAccountDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = UpdateAnAccountDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -607,17 +707,21 @@ const (
 	UpdateAnAccountDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError UpdateAnAccountDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e UpdateAnAccountDefaultApplicationJSON1TypeEnum) ToPointer() *UpdateAnAccountDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *UpdateAnAccountDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = UpdateAnAccountDefaultApplicationJSON1TypeEnum(s)
+		*e = UpdateAnAccountDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAnAccountDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

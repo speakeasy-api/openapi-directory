@@ -27,12 +27,16 @@ const (
 	NextPlaybackItemSuggestionTypeEnumNone             NextPlaybackItemSuggestionTypeEnum = "None"
 )
 
+func (e NextPlaybackItemSuggestionTypeEnum) ToPointer() *NextPlaybackItemSuggestionTypeEnum {
+	return &e
+}
+
 func (e *NextPlaybackItemSuggestionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartWatching":
 		fallthrough
 	case "ContinueWatching":
@@ -42,10 +46,10 @@ func (e *NextPlaybackItemSuggestionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Sequential":
 		fallthrough
 	case "None":
-		*e = NextPlaybackItemSuggestionTypeEnum(s)
+		*e = NextPlaybackItemSuggestionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NextPlaybackItemSuggestionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NextPlaybackItemSuggestionTypeEnum: %v", v)
 	}
 }
 

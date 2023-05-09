@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/exlibrisgroup.com/tasklis
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,18 +27,16 @@ func main() {
         }),
     )
 
-    req := operations.GetAlmawsV1TaskListsRsLendingRequestsRequest{
-        Library: "corrupti",
-        Partner: "provident",
-        Printed: "distinctio",
-        Reported: "quibusdam",
-        RequestedFormat: "unde",
-        Status: "nulla",
-        SuppliedFormat: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.LendingRequests.GetAlmawsV1TaskListsRsLendingRequests(ctx, req)
+    res, err := s.LendingRequests.GetAlmawsV1TaskListsRsLendingRequests(ctx, operations.GetAlmawsV1TaskListsRsLendingRequestsRequest{
+        Library: sdk.String("corrupti"),
+        Partner: sdk.String("provident"),
+        Printed: sdk.String("distinctio"),
+        Reported: sdk.String("quibusdam"),
+        RequestedFormat: sdk.String("unde"),
+        Status: sdk.String("nulla"),
+        SuppliedFormat: sdk.String("corrupti"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,27 +52,27 @@ func main() {
 ## Available Resources and Operations
 
 
-### LendingRequests
+### [LendingRequests](docs/lendingrequests/README.md)
 
-* `GetAlmawsV1TaskListsRsLendingRequests` - Get Lending Requests
-* `PostAlmawsV1TaskListsRsLendingRequests` - Act on Lending Requests
+* [GetAlmawsV1TaskListsRsLendingRequests](docs/lendingrequests/README.md#getalmawsv1tasklistsrslendingrequests) - Get Lending Requests
+* [PostAlmawsV1TaskListsRsLendingRequests](docs/lendingrequests/README.md#postalmawsv1tasklistsrslendingrequests) - Act on Lending Requests
 
-### Printouts
+### [Printouts](docs/printouts/README.md)
 
-* `GetAlmawsV1TaskListsPrintouts` - Retrieve Printouts
-* `GetAlmawsV1TaskListsPrintoutsPrintoutID` - Retrieve a Printout
-* `PostAlmawsV1TaskListsPrintouts` - Act on Printouts
-* `PostAlmawsV1TaskListsPrintoutsPrintoutID` - Printout Service
+* [GetAlmawsV1TaskListsPrintouts](docs/printouts/README.md#getalmawsv1tasklistsprintouts) - Retrieve Printouts
+* [GetAlmawsV1TaskListsPrintoutsPrintoutID](docs/printouts/README.md#getalmawsv1tasklistsprintoutsprintoutid) - Retrieve a Printout
+* [PostAlmawsV1TaskListsPrintouts](docs/printouts/README.md#postalmawsv1tasklistsprintouts) - Act on Printouts
+* [PostAlmawsV1TaskListsPrintoutsPrintoutID](docs/printouts/README.md#postalmawsv1tasklistsprintoutsprintoutid) - Printout Service
 
-### RequestedResources
+### [RequestedResources](docs/requestedresources/README.md)
 
-* `GetAlmawsV1TaskListsRequestedResources` - Get Requested Resources
-* `PostAlmawsV1TaskListsRequestedResources` - Act on Requested Resources
+* [GetAlmawsV1TaskListsRequestedResources](docs/requestedresources/README.md#getalmawsv1tasklistsrequestedresources) - Get Requested Resources
+* [PostAlmawsV1TaskListsRequestedResources](docs/requestedresources/README.md#postalmawsv1tasklistsrequestedresources) - Act on Requested Resources
 
-### Test
+### [Test](docs/test/README.md)
 
-* `GetAlmawsV1TaskListsTest` - GET Task-lists Test API
-* `PostAlmawsV1TaskListsTest` - POST Task-lists Test API
+* [GetAlmawsV1TaskListsTest](docs/test/README.md#getalmawsv1taskliststest) - GET Task-lists Test API
+* [PostAlmawsV1TaskListsTest](docs/test/README.md#postalmawsv1taskliststest) - POST Task-lists Test API
 <!-- End SDK Available Operations -->
 
 ### Maturity

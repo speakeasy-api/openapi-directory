@@ -16,17 +16,21 @@ const (
 	DescribeExportTasksXAmzTargetEnumLogs20140328DescribeExportTasks DescribeExportTasksXAmzTargetEnum = "Logs_20140328.DescribeExportTasks"
 )
 
+func (e DescribeExportTasksXAmzTargetEnum) ToPointer() *DescribeExportTasksXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeExportTasksXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.DescribeExportTasks":
-		*e = DescribeExportTasksXAmzTargetEnum(s)
+		*e = DescribeExportTasksXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeExportTasksXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeExportTasksXAmzTargetEnum: %v", v)
 	}
 }
 

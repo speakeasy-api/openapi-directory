@@ -16,21 +16,25 @@ const (
 	NetworkConfigDatapathProviderEnumAdvancedDatapath            NetworkConfigDatapathProviderEnum = "ADVANCED_DATAPATH"
 )
 
+func (e NetworkConfigDatapathProviderEnum) ToPointer() *NetworkConfigDatapathProviderEnum {
+	return &e
+}
+
 func (e *NetworkConfigDatapathProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATAPATH_PROVIDER_UNSPECIFIED":
 		fallthrough
 	case "LEGACY_DATAPATH":
 		fallthrough
 	case "ADVANCED_DATAPATH":
-		*e = NetworkConfigDatapathProviderEnum(s)
+		*e = NetworkConfigDatapathProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkConfigDatapathProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkConfigDatapathProviderEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	NetworkConfigPrivateIpv6GoogleAccessEnumPrivateIpv6GoogleAccessBidirectional NetworkConfigPrivateIpv6GoogleAccessEnum = "PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL"
 )
 
+func (e NetworkConfigPrivateIpv6GoogleAccessEnum) ToPointer() *NetworkConfigPrivateIpv6GoogleAccessEnum {
+	return &e
+}
+
 func (e *NetworkConfigPrivateIpv6GoogleAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED":
 		fallthrough
 	case "PRIVATE_IPV6_GOOGLE_ACCESS_DISABLED":
@@ -57,10 +65,10 @@ func (e *NetworkConfigPrivateIpv6GoogleAccessEnum) UnmarshalJSON(data []byte) er
 	case "PRIVATE_IPV6_GOOGLE_ACCESS_TO_GOOGLE":
 		fallthrough
 	case "PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL":
-		*e = NetworkConfigPrivateIpv6GoogleAccessEnum(s)
+		*e = NetworkConfigPrivateIpv6GoogleAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkConfigPrivateIpv6GoogleAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkConfigPrivateIpv6GoogleAccessEnum: %v", v)
 	}
 }
 

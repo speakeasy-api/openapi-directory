@@ -20,12 +20,16 @@ const (
 	DomainStatusEnumUpdating              DomainStatusEnum = "UPDATING"
 )
 
+func (e DomainStatusEnum) ToPointer() *DomainStatusEnum {
+	return &e
+}
+
 func (e *DomainStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_VERIFICATION":
 		fallthrough
 	case "IN_PROGRESS":
@@ -41,9 +45,9 @@ func (e *DomainStatusEnum) UnmarshalJSON(data []byte) error {
 	case "REQUESTING_CERTIFICATE":
 		fallthrough
 	case "UPDATING":
-		*e = DomainStatusEnum(s)
+		*e = DomainStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainStatusEnum: %v", v)
 	}
 }

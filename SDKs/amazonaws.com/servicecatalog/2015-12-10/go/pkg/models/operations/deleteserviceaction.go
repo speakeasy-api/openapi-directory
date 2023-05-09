@@ -16,17 +16,21 @@ const (
 	DeleteServiceActionXAmzTargetEnumAws242ServiceCatalogServiceDeleteServiceAction DeleteServiceActionXAmzTargetEnum = "AWS242ServiceCatalogService.DeleteServiceAction"
 )
 
+func (e DeleteServiceActionXAmzTargetEnum) ToPointer() *DeleteServiceActionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteServiceActionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DeleteServiceAction":
-		*e = DeleteServiceActionXAmzTargetEnum(s)
+		*e = DeleteServiceActionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteServiceActionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteServiceActionXAmzTargetEnum: %v", v)
 	}
 }
 

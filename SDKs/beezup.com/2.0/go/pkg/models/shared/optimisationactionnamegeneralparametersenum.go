@@ -15,18 +15,22 @@ const (
 	OptimisationActionNameGeneralParametersEnumDisable  OptimisationActionNameGeneralParametersEnum = "disable"
 )
 
+func (e OptimisationActionNameGeneralParametersEnum) ToPointer() *OptimisationActionNameGeneralParametersEnum {
+	return &e
+}
+
 func (e *OptimisationActionNameGeneralParametersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "reenable":
 		fallthrough
 	case "disable":
-		*e = OptimisationActionNameGeneralParametersEnum(s)
+		*e = OptimisationActionNameGeneralParametersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OptimisationActionNameGeneralParametersEnum: %s", s)
+		return fmt.Errorf("invalid value for OptimisationActionNameGeneralParametersEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	SalesforceKnowledgeArticleStateEnumArchived  SalesforceKnowledgeArticleStateEnum = "ARCHIVED"
 )
 
+func (e SalesforceKnowledgeArticleStateEnum) ToPointer() *SalesforceKnowledgeArticleStateEnum {
+	return &e
+}
+
 func (e *SalesforceKnowledgeArticleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DRAFT":
 		fallthrough
 	case "PUBLISHED":
 		fallthrough
 	case "ARCHIVED":
-		*e = SalesforceKnowledgeArticleStateEnum(s)
+		*e = SalesforceKnowledgeArticleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SalesforceKnowledgeArticleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SalesforceKnowledgeArticleStateEnum: %v", v)
 	}
 }

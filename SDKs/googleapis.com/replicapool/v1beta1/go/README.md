@@ -13,18 +13,19 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/replicapoo
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ReplicapoolPoolsDeleteRequest{
+    ctx := context.Background()
+    res, err := s.Pools.ReplicapoolPoolsDelete(ctx, operations.ReplicapoolPoolsDeleteRequest{
         PoolsDeleteRequest: &shared.PoolsDeleteRequest{
             AbandonInstances: []string{
                 "provident",
@@ -32,20 +33,17 @@ func main() {
                 "quibusdam",
             },
         },
-        Alt: "json",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
         PoolName: "illum",
-        PrettyPrint: false,
+        PrettyPrint: sdk.Bool(false),
         ProjectName: "vel",
-        QuotaUser: "error",
-        UserIP: "deserunt",
+        QuotaUser: sdk.String("error"),
+        UserIP: sdk.String("deserunt"),
         Zone: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.Pools.ReplicapoolPoolsDelete(ctx, req, operations.ReplicapoolPoolsDeleteSecurity{
+    }, operations.ReplicapoolPoolsDeleteSecurity{
         Option1: &operations.ReplicapoolPoolsDeleteSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -66,21 +64,21 @@ func main() {
 ## Available Resources and Operations
 
 
-### Pools
+### [Pools](docs/pools/README.md)
 
-* `ReplicapoolPoolsDelete` - Deletes a replica pool.
-* `ReplicapoolPoolsGet` - Gets information about a single replica pool.
-* `ReplicapoolPoolsInsert` - Inserts a new replica pool.
-* `ReplicapoolPoolsList` - List all replica pools.
-* `ReplicapoolPoolsResize` - Resize a pool. This is an asynchronous operation, and multiple overlapping resize requests can be made. Replica Pools will use the information from the last resize request.
-* `ReplicapoolPoolsUpdatetemplate` - Update the template used by the pool.
+* [ReplicapoolPoolsDelete](docs/pools/README.md#replicapoolpoolsdelete) - Deletes a replica pool.
+* [ReplicapoolPoolsGet](docs/pools/README.md#replicapoolpoolsget) - Gets information about a single replica pool.
+* [ReplicapoolPoolsInsert](docs/pools/README.md#replicapoolpoolsinsert) - Inserts a new replica pool.
+* [ReplicapoolPoolsList](docs/pools/README.md#replicapoolpoolslist) - List all replica pools.
+* [ReplicapoolPoolsResize](docs/pools/README.md#replicapoolpoolsresize) - Resize a pool. This is an asynchronous operation, and multiple overlapping resize requests can be made. Replica Pools will use the information from the last resize request.
+* [ReplicapoolPoolsUpdatetemplate](docs/pools/README.md#replicapoolpoolsupdatetemplate) - Update the template used by the pool.
 
-### Replicas
+### [Replicas](docs/replicas/README.md)
 
-* `ReplicapoolReplicasDelete` - Deletes a replica from the pool.
-* `ReplicapoolReplicasGet` - Gets information about a specific replica.
-* `ReplicapoolReplicasList` - Lists all replicas in a pool.
-* `ReplicapoolReplicasRestart` - Restarts a replica in a pool.
+* [ReplicapoolReplicasDelete](docs/replicas/README.md#replicapoolreplicasdelete) - Deletes a replica from the pool.
+* [ReplicapoolReplicasGet](docs/replicas/README.md#replicapoolreplicasget) - Gets information about a specific replica.
+* [ReplicapoolReplicasList](docs/replicas/README.md#replicapoolreplicaslist) - Lists all replicas in a pool.
+* [ReplicapoolReplicasRestart](docs/replicas/README.md#replicapoolreplicasrestart) - Restarts a replica in a pool.
 <!-- End SDK Available Operations -->
 
 ### Maturity

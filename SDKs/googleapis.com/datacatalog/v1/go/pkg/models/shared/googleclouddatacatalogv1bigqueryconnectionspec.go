@@ -15,19 +15,23 @@ const (
 	GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionTypeEnumCloudSQL                  GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionTypeEnum = "CLOUD_SQL"
 )
 
+func (e GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionTypeEnum) ToPointer() *GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CLOUD_SQL":
-		*e = GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionTypeEnum(s)
+		*e = GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionTypeEnum: %v", v)
 	}
 }
 

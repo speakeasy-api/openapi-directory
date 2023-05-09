@@ -33,12 +33,16 @@ const (
 	AnalyticsListAudiencesDefaultApplicationJSONErrorCodeEnumTooManyRequests     AnalyticsListAudiencesDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AnalyticsListAudiencesDefaultApplicationJSONErrorCodeEnum) ToPointer() *AnalyticsListAudiencesDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AnalyticsListAudiencesDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *AnalyticsListAudiencesDefaultApplicationJSONErrorCodeEnum) UnmarshalJSO
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AnalyticsListAudiencesDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AnalyticsListAudiencesDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsListAudiencesDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsListAudiencesDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -78,21 +82,25 @@ const (
 	AnalyticsListAudiences200ApplicationJSONValuesStateEnumDisabled    AnalyticsListAudiences200ApplicationJSONValuesStateEnum = "Disabled"
 )
 
+func (e AnalyticsListAudiences200ApplicationJSONValuesStateEnum) ToPointer() *AnalyticsListAudiences200ApplicationJSONValuesStateEnum {
+	return &e
+}
+
 func (e *AnalyticsListAudiences200ApplicationJSONValuesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Calculating":
 		fallthrough
 	case "Ready":
 		fallthrough
 	case "Disabled":
-		*e = AnalyticsListAudiences200ApplicationJSONValuesStateEnum(s)
+		*e = AnalyticsListAudiences200ApplicationJSONValuesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsListAudiences200ApplicationJSONValuesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsListAudiences200ApplicationJSONValuesStateEnum: %v", v)
 	}
 }
 

@@ -15,21 +15,25 @@ const (
 	OrganizationJurisdictionEnumCounty   OrganizationJurisdictionEnum = "County"
 )
 
+func (e OrganizationJurisdictionEnum) ToPointer() *OrganizationJurisdictionEnum {
+	return &e
+}
+
 func (e *OrganizationJurisdictionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "National":
 		fallthrough
 	case "State":
 		fallthrough
 	case "County":
-		*e = OrganizationJurisdictionEnum(s)
+		*e = OrganizationJurisdictionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationJurisdictionEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationJurisdictionEnum: %v", v)
 	}
 }
 

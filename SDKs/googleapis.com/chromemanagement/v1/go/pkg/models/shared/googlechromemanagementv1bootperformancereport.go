@@ -18,12 +18,16 @@ const (
 	GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnumOther                     GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum = "OTHER"
 )
 
+func (e GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum) ToPointer() *GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHUTDOWN_REASON_UNSPECIFIED":
 		fallthrough
 	case "USER_REQUEST":
@@ -33,14 +37,14 @@ func (e *GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum) Unmars
 	case "LOW_BATTERY":
 		fallthrough
 	case "OTHER":
-		*e = GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum(s)
+		*e = GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1BootPerformanceReportShutdownReasonEnum: %v", v)
 	}
 }
 
-// GoogleChromeManagementV1BootPerformanceReport - Boot performance report of a device. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceBootMode](https://chromeenterprise.google/policies/#ReportDeviceBootMode) * Data Collection Frequency: On every boot up event * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A
+// GoogleChromeManagementV1BootPerformanceReport - Boot performance report of a device. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceBootMode](https://chromeenterprise.google/policies/#ReportDeviceBootMode) * Data Collection Frequency: On every boot up event * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_OS_REPORT
 type GoogleChromeManagementV1BootPerformanceReport struct {
 	// Total time to boot up.
 	BootUpDuration *string `json:"bootUpDuration,omitempty"`

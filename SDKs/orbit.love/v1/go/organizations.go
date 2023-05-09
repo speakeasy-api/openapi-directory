@@ -33,7 +33,10 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // GetWorkspaceSlugOrganizations - List organizations in a workspace
 func (s *organizations) GetWorkspaceSlugOrganizations(ctx context.Context, request operations.GetWorkspaceSlugOrganizationsRequest, security operations.GetWorkspaceSlugOrganizationsSecurity) (*operations.GetWorkspaceSlugOrganizationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -72,7 +75,10 @@ func (s *organizations) GetWorkspaceSlugOrganizations(ctx context.Context, reque
 // GetWorkspaceSlugOrganizationsOrganizationID - Get an organization
 func (s *organizations) GetWorkspaceSlugOrganizationsOrganizationID(ctx context.Context, request operations.GetWorkspaceSlugOrganizationsOrganizationIDRequest, security operations.GetWorkspaceSlugOrganizationsOrganizationIDSecurity) (*operations.GetWorkspaceSlugOrganizationsOrganizationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -107,7 +113,10 @@ func (s *organizations) GetWorkspaceSlugOrganizationsOrganizationID(ctx context.
 // PutWorkspaceSlugOrganizationsOrganizationID - Update an organization
 func (s *organizations) PutWorkspaceSlugOrganizationsOrganizationID(ctx context.Context, request operations.PutWorkspaceSlugOrganizationsOrganizationIDRequest, security operations.PutWorkspaceSlugOrganizationsOrganizationIDSecurity) (*operations.PutWorkspaceSlugOrganizationsOrganizationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Organization", "json")
 	if err != nil {

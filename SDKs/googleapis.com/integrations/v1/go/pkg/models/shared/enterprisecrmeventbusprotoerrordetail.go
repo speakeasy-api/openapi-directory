@@ -17,12 +17,16 @@ const (
 	EnterpriseCrmEventbusProtoErrorDetailSeverityEnumInfo                EnterpriseCrmEventbusProtoErrorDetailSeverityEnum = "INFO"
 )
 
+func (e EnterpriseCrmEventbusProtoErrorDetailSeverityEnum) ToPointer() *EnterpriseCrmEventbusProtoErrorDetailSeverityEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoErrorDetailSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "ERROR":
@@ -30,10 +34,10 @@ func (e *EnterpriseCrmEventbusProtoErrorDetailSeverityEnum) UnmarshalJSON(data [
 	case "WARN":
 		fallthrough
 	case "INFO":
-		*e = EnterpriseCrmEventbusProtoErrorDetailSeverityEnum(s)
+		*e = EnterpriseCrmEventbusProtoErrorDetailSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoErrorDetailSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoErrorDetailSeverityEnum: %v", v)
 	}
 }
 

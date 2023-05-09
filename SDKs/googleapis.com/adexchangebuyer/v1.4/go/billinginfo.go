@@ -35,7 +35,10 @@ func newBillingInfo(defaultClient, securityClient HTTPClient, serverURL, languag
 // AdexchangebuyerBillingInfoGet - Returns the billing information for one account specified by account ID.
 func (s *billingInfo) AdexchangebuyerBillingInfoGet(ctx context.Context, request operations.AdexchangebuyerBillingInfoGetRequest, security operations.AdexchangebuyerBillingInfoGetSecurity) (*operations.AdexchangebuyerBillingInfoGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/billinginfo/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/billinginfo/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,20 +15,24 @@ const (
 	StreamHealthEnumUnknown  StreamHealthEnum = "UNKNOWN"
 )
 
+func (e StreamHealthEnum) ToPointer() *StreamHealthEnum {
+	return &e
+}
+
 func (e *StreamHealthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEALTHY":
 		fallthrough
 	case "STARVING":
 		fallthrough
 	case "UNKNOWN":
-		*e = StreamHealthEnum(s)
+		*e = StreamHealthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamHealthEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamHealthEnum: %v", v)
 	}
 }

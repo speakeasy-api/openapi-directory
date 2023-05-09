@@ -16,17 +16,21 @@ const (
 	DeleteProvisionedProductPlanXAmzTargetEnumAws242ServiceCatalogServiceDeleteProvisionedProductPlan DeleteProvisionedProductPlanXAmzTargetEnum = "AWS242ServiceCatalogService.DeleteProvisionedProductPlan"
 )
 
+func (e DeleteProvisionedProductPlanXAmzTargetEnum) ToPointer() *DeleteProvisionedProductPlanXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteProvisionedProductPlanXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DeleteProvisionedProductPlan":
-		*e = DeleteProvisionedProductPlanXAmzTargetEnum(s)
+		*e = DeleteProvisionedProductPlanXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteProvisionedProductPlanXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteProvisionedProductPlanXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -44,12 +44,16 @@ const (
 	TargetDeviceEnumImx8mplus     TargetDeviceEnum = "imx8mplus"
 )
 
+func (e TargetDeviceEnum) ToPointer() *TargetDeviceEnum {
+	return &e
+}
+
 func (e *TargetDeviceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lambda":
 		fallthrough
 	case "ml_m4":
@@ -113,9 +117,9 @@ func (e *TargetDeviceEnum) UnmarshalJSON(data []byte) error {
 	case "jacinto_tda4vm":
 		fallthrough
 	case "imx8mplus":
-		*e = TargetDeviceEnum(s)
+		*e = TargetDeviceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetDeviceEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetDeviceEnum: %v", v)
 	}
 }

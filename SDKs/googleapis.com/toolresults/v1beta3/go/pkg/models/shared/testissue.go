@@ -16,21 +16,25 @@ const (
 	TestIssueCategoryEnumRobo                TestIssueCategoryEnum = "robo"
 )
 
+func (e TestIssueCategoryEnum) ToPointer() *TestIssueCategoryEnum {
+	return &e
+}
+
 func (e *TestIssueCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unspecifiedCategory":
 		fallthrough
 	case "common":
 		fallthrough
 	case "robo":
-		*e = TestIssueCategoryEnum(s)
+		*e = TestIssueCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestIssueCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for TestIssueCategoryEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	TestIssueSeverityEnumSevere              TestIssueSeverityEnum = "severe"
 )
 
+func (e TestIssueSeverityEnum) ToPointer() *TestIssueSeverityEnum {
+	return &e
+}
+
 func (e *TestIssueSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unspecifiedSeverity":
 		fallthrough
 	case "info":
@@ -60,10 +68,10 @@ func (e *TestIssueSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "warning":
 		fallthrough
 	case "severe":
-		*e = TestIssueSeverityEnum(s)
+		*e = TestIssueSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestIssueSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for TestIssueSeverityEnum: %v", v)
 	}
 }
 
@@ -105,12 +113,16 @@ const (
 	TestIssueTypeEnumDetectedAppSplashScreen             TestIssueTypeEnum = "detectedAppSplashScreen"
 )
 
+func (e TestIssueTypeEnum) ToPointer() *TestIssueTypeEnum {
+	return &e
+}
+
 func (e *TestIssueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unspecifiedType":
 		fallthrough
 	case "fatalException":
@@ -174,10 +186,10 @@ func (e *TestIssueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "logcatCollectionError":
 		fallthrough
 	case "detectedAppSplashScreen":
-		*e = TestIssueTypeEnum(s)
+		*e = TestIssueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestIssueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TestIssueTypeEnum: %v", v)
 	}
 }
 

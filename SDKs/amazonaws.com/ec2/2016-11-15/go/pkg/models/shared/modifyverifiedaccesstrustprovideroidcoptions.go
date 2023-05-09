@@ -2,7 +2,13 @@
 
 package shared
 
-// ModifyVerifiedAccessTrustProviderOidcOptions - OpenID Connect options for an <code>oidc</code>-type, user-identity based trust provider.
+// ModifyVerifiedAccessTrustProviderOidcOptions - Options for an OpenID Connect-compatible user-identity trust provider.
 type ModifyVerifiedAccessTrustProviderOidcOptions struct {
-	Scope *string
+	AuthorizationEndpoint *string
+	ClientID              *string
+	ClientSecret          *string
+	Issuer                *string
+	Scope                 *string
+	TokenEndpoint         *string
+	UserInfoEndpoint      *string
 }

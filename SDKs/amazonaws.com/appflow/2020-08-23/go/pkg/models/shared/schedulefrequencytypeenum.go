@@ -18,12 +18,16 @@ const (
 	ScheduleFrequencyTypeEnumOnce     ScheduleFrequencyTypeEnum = "ONCE"
 )
 
+func (e ScheduleFrequencyTypeEnum) ToPointer() *ScheduleFrequencyTypeEnum {
+	return &e
+}
+
 func (e *ScheduleFrequencyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BYMINUTE":
 		fallthrough
 	case "HOURLY":
@@ -35,9 +39,9 @@ func (e *ScheduleFrequencyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MONTHLY":
 		fallthrough
 	case "ONCE":
-		*e = ScheduleFrequencyTypeEnum(s)
+		*e = ScheduleFrequencyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScheduleFrequencyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScheduleFrequencyTypeEnum: %v", v)
 	}
 }

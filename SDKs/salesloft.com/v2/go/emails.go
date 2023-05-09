@@ -87,7 +87,10 @@ func (s *emails) GetV2ActivitiesEmailsJSON(ctx context.Context, request operatio
 // Fetches an email, by ID only.
 func (s *emails) GetV2ActivitiesEmailsIDJSON(ctx context.Context, request operations.GetV2ActivitiesEmailsIDJSONRequest) (*operations.GetV2ActivitiesEmailsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/activities/emails/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/activities/emails/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

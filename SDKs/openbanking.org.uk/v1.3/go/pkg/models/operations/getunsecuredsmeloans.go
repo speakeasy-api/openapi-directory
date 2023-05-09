@@ -32,17 +32,21 @@ const (
 	GetUnsecuredSmeLoans503ErrorObjectDescriptionEnumTheServiceIsTemporarilyUnavailable GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum = "The service is temporarily unavailable."
 )
 
+func (e GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum) ToPointer() *GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "The service is temporarily unavailable.":
-		*e = GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum(s)
+		*e = GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -52,17 +56,21 @@ const (
 	GetUnsecuredSmeLoans503ErrorObjectStatusEnumFiveHundredAndThree GetUnsecuredSmeLoans503ErrorObjectStatusEnum = "503"
 )
 
+func (e GetUnsecuredSmeLoans503ErrorObjectStatusEnum) ToPointer() *GetUnsecuredSmeLoans503ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans503ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "503":
-		*e = GetUnsecuredSmeLoans503ErrorObjectStatusEnum(s)
+		*e = GetUnsecuredSmeLoans503ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans503ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans503ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -72,17 +80,21 @@ const (
 	GetUnsecuredSmeLoans503ErrorObjectTitleEnumServiceTemporarilyUnavailable GetUnsecuredSmeLoans503ErrorObjectTitleEnum = "Service temporarily unavailable"
 )
 
+func (e GetUnsecuredSmeLoans503ErrorObjectTitleEnum) ToPointer() *GetUnsecuredSmeLoans503ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans503ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Service temporarily unavailable":
-		*e = GetUnsecuredSmeLoans503ErrorObjectTitleEnum(s)
+		*e = GetUnsecuredSmeLoans503ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans503ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans503ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -99,17 +111,21 @@ const (
 	GetUnsecuredSmeLoans500ErrorObjectDescriptionEnumAnErrorOccurredOnTheServerNoFurtherInformationIsAvailable GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum = "An error occurred on the server. No further information is available."
 )
 
+func (e GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum) ToPointer() *GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "An error occurred on the server. No further information is available.":
-		*e = GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum(s)
+		*e = GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans500ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -119,17 +135,21 @@ const (
 	GetUnsecuredSmeLoans500ErrorObjectStatusEnumFiveHundred GetUnsecuredSmeLoans500ErrorObjectStatusEnum = "500"
 )
 
+func (e GetUnsecuredSmeLoans500ErrorObjectStatusEnum) ToPointer() *GetUnsecuredSmeLoans500ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans500ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "500":
-		*e = GetUnsecuredSmeLoans500ErrorObjectStatusEnum(s)
+		*e = GetUnsecuredSmeLoans500ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans500ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans500ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -139,17 +159,21 @@ const (
 	GetUnsecuredSmeLoans500ErrorObjectTitleEnumInternalServerError GetUnsecuredSmeLoans500ErrorObjectTitleEnum = "Internal server error"
 )
 
+func (e GetUnsecuredSmeLoans500ErrorObjectTitleEnum) ToPointer() *GetUnsecuredSmeLoans500ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans500ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = GetUnsecuredSmeLoans500ErrorObjectTitleEnum(s)
+		*e = GetUnsecuredSmeLoans500ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans500ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans500ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -166,17 +190,21 @@ const (
 	GetUnsecuredSmeLoans429ErrorObjectDescriptionEnumYouHaveRequestedThisResourceTooOftenSlowDown GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum = "You have requested this resource too often. Slow down."
 )
 
+func (e GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum) ToPointer() *GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "You have requested this resource too often. Slow down.":
-		*e = GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum(s)
+		*e = GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans429ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -186,17 +214,21 @@ const (
 	GetUnsecuredSmeLoans429ErrorObjectStatusEnumFourHundredAndTwentyNine GetUnsecuredSmeLoans429ErrorObjectStatusEnum = "429"
 )
 
+func (e GetUnsecuredSmeLoans429ErrorObjectStatusEnum) ToPointer() *GetUnsecuredSmeLoans429ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans429ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "429":
-		*e = GetUnsecuredSmeLoans429ErrorObjectStatusEnum(s)
+		*e = GetUnsecuredSmeLoans429ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans429ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans429ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -206,17 +238,21 @@ const (
 	GetUnsecuredSmeLoans429ErrorObjectTitleEnumTooManyRequests GetUnsecuredSmeLoans429ErrorObjectTitleEnum = "Too many requests"
 )
 
+func (e GetUnsecuredSmeLoans429ErrorObjectTitleEnum) ToPointer() *GetUnsecuredSmeLoans429ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans429ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Too many requests":
-		*e = GetUnsecuredSmeLoans429ErrorObjectTitleEnum(s)
+		*e = GetUnsecuredSmeLoans429ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans429ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans429ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -233,17 +269,21 @@ const (
 	GetUnsecuredSmeLoans408ErrorObjectDescriptionEnumYourClientHasFailedToSubmitARequestAndATimeoutHasOccurred GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum = "Your client has failed to submit a request, and a timeout has occurred."
 )
 
+func (e GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum) ToPointer() *GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Your client has failed to submit a request, and a timeout has occurred.":
-		*e = GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum(s)
+		*e = GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans408ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -253,17 +293,21 @@ const (
 	GetUnsecuredSmeLoans408ErrorObjectStatusEnumFourHundredAndEight GetUnsecuredSmeLoans408ErrorObjectStatusEnum = "408"
 )
 
+func (e GetUnsecuredSmeLoans408ErrorObjectStatusEnum) ToPointer() *GetUnsecuredSmeLoans408ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans408ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "408":
-		*e = GetUnsecuredSmeLoans408ErrorObjectStatusEnum(s)
+		*e = GetUnsecuredSmeLoans408ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans408ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans408ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	GetUnsecuredSmeLoans408ErrorObjectTitleEnumClientTimeout GetUnsecuredSmeLoans408ErrorObjectTitleEnum = "Client timeout"
 )
 
+func (e GetUnsecuredSmeLoans408ErrorObjectTitleEnum) ToPointer() *GetUnsecuredSmeLoans408ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans408ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Client timeout":
-		*e = GetUnsecuredSmeLoans408ErrorObjectTitleEnum(s)
+		*e = GetUnsecuredSmeLoans408ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans408ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans408ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -300,17 +348,21 @@ const (
 	GetUnsecuredSmeLoans400ErrorObjectDescriptionEnumYouHaveSentARequestWhichCouldNotBeUnderstood GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum = "You have sent a request which could not be understood."
 )
 
+func (e GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum) ToPointer() *GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "You have sent a request which could not be understood.":
-		*e = GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum(s)
+		*e = GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans400ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	GetUnsecuredSmeLoans400ErrorObjectStatusEnumFourHundred GetUnsecuredSmeLoans400ErrorObjectStatusEnum = "400"
 )
 
+func (e GetUnsecuredSmeLoans400ErrorObjectStatusEnum) ToPointer() *GetUnsecuredSmeLoans400ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans400ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "400":
-		*e = GetUnsecuredSmeLoans400ErrorObjectStatusEnum(s)
+		*e = GetUnsecuredSmeLoans400ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans400ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans400ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -340,17 +396,21 @@ const (
 	GetUnsecuredSmeLoans400ErrorObjectTitleEnumBadRequest GetUnsecuredSmeLoans400ErrorObjectTitleEnum = "Bad request"
 )
 
+func (e GetUnsecuredSmeLoans400ErrorObjectTitleEnum) ToPointer() *GetUnsecuredSmeLoans400ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans400ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Bad request":
-		*e = GetUnsecuredSmeLoans400ErrorObjectTitleEnum(s)
+		*e = GetUnsecuredSmeLoans400ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans400ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans400ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -374,12 +434,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnumRegularDeposit GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum = "RegularDeposit"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CashDeposit":
 		fallthrough
 	case "Deposit":
@@ -393,10 +457,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "MobileLogon":
 		fallthrough
 	case "RegularDeposit":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum: %v", v)
 	}
 }
 
@@ -449,21 +513,25 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnumRegular             GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum = "Regular"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataBenefitsBenefitGroupBenefitSubTypeEnum: %v", v)
 	}
 }
 
@@ -494,12 +562,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCustomerAccessChannelsEnumText             GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCustomerAccessChannelsEnum = "Text"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCustomerAccessChannelsEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCustomerAccessChannelsEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCustomerAccessChannelsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Branch":
 		fallthrough
 	case "MobileBankingApp":
@@ -513,10 +585,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "PostOffice":
 		fallthrough
 	case "Text":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCustomerAccessChannelsEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCustomerAccessChannelsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCustomerAccessChannelsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataCustomerAccessChannelsEnum: %v", v)
 	}
 }
 
@@ -545,12 +617,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnumUcasFulltimeTwoYears      GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum = "UCASFulltimeTwoYears"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyBusinessCustomer":
 		fallthrough
 	case "BusinessOnly":
@@ -588,10 +664,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "TwoMonthsOfCourseStart":
 		fallthrough
 	case "UCASFulltimeTwoYears":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityEligibilityTypeEnum: %v", v)
 	}
 }
 
@@ -605,12 +681,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnumStartUp           GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum = "StartUp"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ExistingCustomers":
 		fallthrough
 	case "NewCustomersOnly":
@@ -618,10 +698,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "SwitchersOnly":
 		fallthrough
 	case "StartUp":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMarketingEligibilityEnum: %v", v)
 	}
 }
 
@@ -637,12 +717,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnumYearly       GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum = "Yearly"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcademicTerm":
 		fallthrough
 	case "HalfYearly":
@@ -654,10 +738,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "Weekly":
 		fallthrough
 	case "Yearly":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityMinimumIncomeFrequencyEnum: %v", v)
 	}
 }
 
@@ -676,12 +760,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnumIrl   GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum = "IRL"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UK":
 		fallthrough
 	case "EEA":
@@ -699,10 +787,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "GB - WLS":
 		fallthrough
 	case "IRL":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilityResidencyRestrictedRegionEnum: %v", v)
 	}
 }
 
@@ -716,12 +804,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnumTurnover    GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum = "Turnover"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Joint":
 		fallthrough
 	case "SoleIncome":
@@ -729,10 +821,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "SoleOrJoint":
 		fallthrough
 	case "Turnover":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataEligibilitySingleJointIncomeEnum: %v", v)
 	}
 }
 
@@ -832,12 +924,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnumYearly                   GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum = "Yearly"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcademicTerm":
 		fallthrough
 	case "AccountClosing":
@@ -879,10 +975,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "Weekly":
 		fallthrough
 	case "Yearly":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum: %v", v)
 	}
 }
 
@@ -1286,12 +1382,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnumCounterCashFeePercent                 GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum = "CounterCashFeePercent"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Other":
 		fallthrough
 	case "ATMDonation":
@@ -2031,10 +2131,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "CounterPaidTrans":
 		fallthrough
 	case "CounterCashFeePercent":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum: %v", v)
 	}
 }
 
@@ -2065,21 +2165,25 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnumRegular             GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum = "Regular"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesFeesFeeDetailsFeeSubTypeEnum: %v", v)
 	}
 }
 
@@ -2117,21 +2221,25 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesProductStateEnumRegular             GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesProductStateEnum = "Regular"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesProductStateEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesProductStateEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesProductStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesProductStateEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesProductStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesProductStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataFeesAndChargesProductStateEnum: %v", v)
 	}
 }
 
@@ -2154,12 +2262,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingLoanLengthIncrementEnumFiveYears  GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingLoanLengthIncrementEnum = "5 years"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingLoanLengthIncrementEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingLoanLengthIncrementEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingLoanLengthIncrementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1 year":
 		fallthrough
 	case "2 years":
@@ -2169,10 +2281,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "4 years":
 		fallthrough
 	case "5 years":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingLoanLengthIncrementEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingLoanLengthIncrementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingLoanLengthIncrementEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingLoanLengthIncrementEnum: %v", v)
 	}
 }
 
@@ -2187,12 +2299,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRateComparisonTypeEnumRepApr GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRateComparisonTypeEnum = "RepApr"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRateComparisonTypeEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRateComparisonTypeEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRateComparisonTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APR":
 		fallthrough
 	case "AER":
@@ -2202,10 +2318,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "Net":
 		fallthrough
 	case "RepApr":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRateComparisonTypeEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRateComparisonTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRateComparisonTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRateComparisonTypeEnum: %v", v)
 	}
 }
 
@@ -2223,12 +2339,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRepaymentFrequencyEnumYearly      GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRepaymentFrequencyEnum = "Yearly"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRepaymentFrequencyEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRepaymentFrequencyEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRepaymentFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Daily":
 		fallthrough
 	case "Flexible":
@@ -2244,10 +2364,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "Weekly":
 		fallthrough
 	case "Yearly":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRepaymentFrequencyEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRepaymentFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRepaymentFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingRepaymentFrequencyEnum: %v", v)
 	}
 }
 
@@ -2265,12 +2385,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingSizeIncrementEnumTierMinimum GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingSizeIncrementEnum = "TierMinimum"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingSizeIncrementEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingSizeIncrementEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingSizeIncrementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "£5000":
 		fallthrough
 	case "£10000":
@@ -2286,10 +2410,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "TierMaximum":
 		fallthrough
 	case "TierMinimum":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingSizeIncrementEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingSizeIncrementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingSizeIncrementEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemLoanPricingSizeIncrementEnum: %v", v)
 	}
 }
 
@@ -2321,21 +2445,25 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemProductStateEnumRegular             GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemProductStateEnum = "Regular"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemProductStateEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemProductStateEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemProductStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemProductStateEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemProductStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemProductStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataLoanItemProductStateEnum: %v", v)
 	}
 }
 
@@ -2366,19 +2494,23 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnumEu GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum = "EU"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UK":
 		fallthrough
 	case "EU":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataOrganisationBrandTrademarkIPOCodeEnum: %v", v)
 	}
 }
 
@@ -2430,12 +2562,16 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnumSwitchersOnly        GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum = "SwitchersOnly"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AgricultureSector":
 		fallthrough
 	case "AllSegmentsCorporate":
@@ -2455,10 +2591,10 @@ func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONData
 	case "SpecialisedSector":
 		fallthrough
 	case "SwitchersOnly":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductSegmentEnum: %v", v)
 	}
 }
 
@@ -2471,21 +2607,25 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeNameEnumSmeUnsecuredLoan     GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeNameEnum = "SmeUnsecuredLoan"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeNameEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeNameEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FlexibleBusinessLoan":
 		fallthrough
 	case "SmallBusinessLoan":
 		fallthrough
 	case "SmeUnsecuredLoan":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeNameEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONDataProductTypeNameEnum: %v", v)
 	}
 }
 
@@ -2535,17 +2675,21 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnumUseOfTheApIsAndAnyRelatedDataWillBeSubjectToTheTermsOfTheOpenLicenceAndSubjectToTermsAndConditions GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum = "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum: %v", v)
 	}
 }
 
@@ -2556,17 +2700,21 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnumHTTPSWwwOpenbankingOrgUkOpenLicence GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum = "https://www.openbanking.org.uk/open-licence"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "https://www.openbanking.org.uk/open-licence":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum: %v", v)
 	}
 }
 
@@ -2577,17 +2725,21 @@ const (
 	GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnumHTTPSWwwOpenbankingOrgUkTerms GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum = "https://www.openbanking.org.uk/terms"
 )
 
+func (e GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum) ToPointer() *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum {
+	return &e
+}
+
 func (e *GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "https://www.openbanking.org.uk/terms":
-		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum(s)
+		*e = GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum: %v", v)
 	}
 }
 

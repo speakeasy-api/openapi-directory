@@ -16,19 +16,23 @@ const (
 	PutAccountDetailsRequestBodyContactLanguageEnumJa PutAccountDetailsRequestBodyContactLanguageEnum = "JA"
 )
 
+func (e PutAccountDetailsRequestBodyContactLanguageEnum) ToPointer() *PutAccountDetailsRequestBodyContactLanguageEnum {
+	return &e
+}
+
 func (e *PutAccountDetailsRequestBodyContactLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EN":
 		fallthrough
 	case "JA":
-		*e = PutAccountDetailsRequestBodyContactLanguageEnum(s)
+		*e = PutAccountDetailsRequestBodyContactLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutAccountDetailsRequestBodyContactLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for PutAccountDetailsRequestBodyContactLanguageEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	PutAccountDetailsRequestBodyMailTypeEnumTransactional PutAccountDetailsRequestBodyMailTypeEnum = "TRANSACTIONAL"
 )
 
+func (e PutAccountDetailsRequestBodyMailTypeEnum) ToPointer() *PutAccountDetailsRequestBodyMailTypeEnum {
+	return &e
+}
+
 func (e *PutAccountDetailsRequestBodyMailTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MARKETING":
 		fallthrough
 	case "TRANSACTIONAL":
-		*e = PutAccountDetailsRequestBodyMailTypeEnum(s)
+		*e = PutAccountDetailsRequestBodyMailTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutAccountDetailsRequestBodyMailTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutAccountDetailsRequestBodyMailTypeEnum: %v", v)
 	}
 }
 

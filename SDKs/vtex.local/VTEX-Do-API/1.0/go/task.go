@@ -35,7 +35,10 @@ func newTask(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Adds a comment to a given task, filtering by `taskId`.
 func (s *task) AddComment(ctx context.Context, request operations.AddCommentRequest) (*operations.AddCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddCommentRequest", "json")
 	if err != nil {
@@ -92,7 +95,10 @@ func (s *task) AddComment(ctx context.Context, request operations.AddCommentRequ
 // Updates a given task's status, for example, filtering by `taskId`.
 func (s *task) EditTask(ctx context.Context, request operations.EditTaskRequest) (*operations.EditTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditTaskRequest", "json")
 	if err != nil {
@@ -149,7 +155,10 @@ func (s *task) EditTask(ctx context.Context, request operations.EditTaskRequest)
 // Retrieves a given task, filtering by `taskId`.
 func (s *task) GetTask(ctx context.Context, request operations.GetTaskRequest) (*operations.GetTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

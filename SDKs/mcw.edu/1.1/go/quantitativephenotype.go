@@ -35,7 +35,10 @@ func newQuantitativePhenotype(defaultClient, securityClient HTTPClient, serverUR
 // GETChartInfoUsingGET - Return a list of quantitative phenotypes values based on a combination of Clinical Measurement, Experimental Condition, Rat Strain, and/or Measurement Method ontology terms.  Results will be all records that match all terms submitted.  Ontology ids should be submitted as a comma delimited list (ex. RS:0000029,CMO:0000155,CMO:0000139).  Species type is an integer value (3=rat, 4=chinchilla).  Reference RGD ID for a study works like a filter.
 func (s *quantitativePhenotype) GETChartInfoUsingGET(ctx context.Context, request operations.GETChartInfoUsingGETRequest) (*operations.GETChartInfoUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phenotype/phenominer/chart/{speciesTypeKey}/{refRgdId}/{termString}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/phenotype/phenominer/chart/{speciesTypeKey}/{refRgdId}/{termString}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *quantitativePhenotype) GETChartInfoUsingGET(ctx context.Context, reques
 // GETChartInfoUsingGET1 - Return a list of quantitative phenotypes values based on a combination of Clinical Measurement, Experimental Condition, Rat Strain, and/or Measurement Method ontology terms.  Results will be all records that match all terms submitted.  Ontology ids should be submitted as a comma delimited list (ex. RS:0000029,CMO:0000155,CMO:0000139).  Species type is an integer value (3=rat, 4=chinchilla)
 func (s *quantitativePhenotype) GETChartInfoUsingGET1(ctx context.Context, request operations.GETChartInfoUsingGET1Request) (*operations.GETChartInfoUsingGET1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/phenotype/phenominer/chart/{speciesTypeKey}/{termString}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/phenotype/phenominer/chart/{speciesTypeKey}/{termString}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

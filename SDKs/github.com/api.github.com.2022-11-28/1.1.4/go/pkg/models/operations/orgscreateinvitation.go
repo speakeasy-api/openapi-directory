@@ -21,21 +21,25 @@ const (
 	OrgsCreateInvitationRequestBodyRoleEnumBillingManager OrgsCreateInvitationRequestBodyRoleEnum = "billing_manager"
 )
 
+func (e OrgsCreateInvitationRequestBodyRoleEnum) ToPointer() *OrgsCreateInvitationRequestBodyRoleEnum {
+	return &e
+}
+
 func (e *OrgsCreateInvitationRequestBodyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin":
 		fallthrough
 	case "direct_member":
 		fallthrough
 	case "billing_manager":
-		*e = OrgsCreateInvitationRequestBodyRoleEnum(s)
+		*e = OrgsCreateInvitationRequestBodyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgsCreateInvitationRequestBodyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgsCreateInvitationRequestBodyRoleEnum: %v", v)
 	}
 }
 

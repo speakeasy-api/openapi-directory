@@ -19,12 +19,16 @@ const (
 	ActivityActivityTypeEnumEvent                   ActivityActivityTypeEnum = "EVENT"
 )
 
+func (e ActivityActivityTypeEnum) ToPointer() *ActivityActivityTypeEnum {
+	return &e
+}
+
 func (e *ActivityActivityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVITY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PAGEVIEW":
@@ -36,10 +40,10 @@ func (e *ActivityActivityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ECOMMERCE":
 		fallthrough
 	case "EVENT":
-		*e = ActivityActivityTypeEnum(s)
+		*e = ActivityActivityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivityActivityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivityActivityTypeEnum: %v", v)
 	}
 }
 

@@ -2,204 +2,212 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.DatamigrationProjectsLocationsConnectionProfilesCreate(ctx, operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ConnectionProfileInput: &shared.ConnectionProfileInput{
             Alloydb: &shared.AlloyDbConnectionProfileInput{
-                ClusterID: "provident",
+                ClusterID: sdk.String("provident"),
                 Settings: &shared.AlloyDbSettingsInput{
+                    EncryptionConfig: &shared.EncryptionConfig{
+                        KmsKeyName: sdk.String("distinctio"),
+                    },
                     InitialUser: &shared.UserPasswordInput{
-                        Password: "distinctio",
-                        User: "quibusdam",
+                        Password: sdk.String("quibusdam"),
+                        User: sdk.String("unde"),
                     },
                     Labels: map[string]string{
-                        "nulla": "corrupti",
-                        "illum": "vel",
-                        "error": "deserunt",
+                        "corrupti": "illum",
+                        "vel": "error",
+                        "deserunt": "suscipit",
+                        "iure": "magnam",
                     },
                     PrimaryInstanceSettings: &shared.PrimaryInstanceSettingsInput{
                         DatabaseFlags: map[string]string{
-                            "iure": "magnam",
-                            "debitis": "ipsa",
+                            "ipsa": "delectus",
+                            "tempora": "suscipit",
+                            "molestiae": "minus",
+                            "placeat": "voluptatum",
                         },
-                        ID: "delectus",
+                        ID: sdk.String("796ed151-a05d-4fc2-9df7-cc78ca1ba928"),
                         Labels: map[string]string{
-                            "suscipit": "molestiae",
-                            "minus": "placeat",
+                            "optio": "totam",
+                            "beatae": "commodi",
+                            "molestiae": "modi",
+                            "qui": "impedit",
                         },
                         MachineConfig: &shared.MachineConfig{
-                            CPUCount: 528895,
+                            CPUCount: sdk.Int(736918),
                         },
                     },
-                    VpcNetwork: "iusto",
+                    VpcNetwork: sdk.String("esse"),
                 },
             },
             Cloudsql: &shared.CloudSQLConnectionProfileInput{
                 Settings: &shared.CloudSQLSettingsInput{
-                    ActivationPolicy: "ALWAYS",
-                    AutoStorageIncrease: false,
-                    AvailabilityType: "ZONAL",
-                    CmekKeyName: "recusandae",
-                    Collation: "temporibus",
-                    DataDiskSizeGb: "ab",
-                    DataDiskType: "PD_SSD",
+                    ActivationPolicy: shared.CloudSQLSettingsActivationPolicyEnumSQLActivationPolicyUnspecified.ToPointer(),
+                    AutoStorageIncrease: sdk.Bool(false),
+                    AvailabilityType: shared.CloudSQLSettingsAvailabilityTypeEnumZonal.ToPointer(),
+                    CmekKeyName: sdk.String("aspernatur"),
+                    Collation: sdk.String("perferendis"),
+                    DataDiskSizeGb: sdk.String("ad"),
+                    DataDiskType: shared.CloudSQLSettingsDataDiskTypeEnumPdSsd.ToPointer(),
                     DatabaseFlags: map[string]string{
-                        "deserunt": "perferendis",
-                    },
-                    DatabaseVersion: "POSTGRES_9_6",
-                    IPConfig: &shared.SQLIPConfig{
-                        AuthorizedNetworks: []shared.SQLACLEntry{
-                            shared.SQLACLEntry{
-                                ExpireTime: "sapiente",
-                                Label: "quo",
-                                TTL: "odit",
-                                Value: "at",
-                            },
-                            shared.SQLACLEntry{
-                                ExpireTime: "at",
-                                Label: "maiores",
-                                TTL: "molestiae",
-                                Value: "quod",
-                            },
-                            shared.SQLACLEntry{
-                                ExpireTime: "quod",
-                                Label: "esse",
-                                TTL: "totam",
-                                Value: "porro",
-                            },
-                            shared.SQLACLEntry{
-                                ExpireTime: "dolorum",
-                                Label: "dicta",
-                                TTL: "nam",
-                                Value: "officia",
-                            },
-                        },
-                        EnableIpv4: false,
-                        PrivateNetwork: "occaecati",
-                        RequireSsl: false,
-                    },
-                    RootPassword: "fugit",
-                    SecondaryZone: "deleniti",
-                    SourceID: "hic",
-                    StorageAutoResizeLimit: "optio",
-                    Tier: "totam",
-                    UserLabels: map[string]string{
-                        "commodi": "molestiae",
-                    },
-                    Zone: "modi",
-                },
-            },
-            DisplayName: "qui",
-            Error: &shared.Status{
-                Code: 774234,
-                Details: []map[string]interface{}{
-                    map[string]interface{}{
-                        "ipsum": "excepturi",
-                        "aspernatur": "perferendis",
-                    },
-                    map[string]interface{}{
-                        "natus": "sed",
                         "iste": "dolor",
                     },
+                    DatabaseVersion: shared.CloudSQLSettingsDatabaseVersionEnumMysql80.ToPointer(),
+                    IPConfig: &shared.SQLIPConfig{
+                        AllocatedIPRange: sdk.String("laboriosam"),
+                        AuthorizedNetworks: []shared.SQLACLEntry{
+                            shared.SQLACLEntry{
+                                ExpireTime: sdk.String("saepe"),
+                                Label: sdk.String("fuga"),
+                                TTL: sdk.String("in"),
+                                Value: sdk.String("corporis"),
+                            },
+                            shared.SQLACLEntry{
+                                ExpireTime: sdk.String("iste"),
+                                Label: sdk.String("iure"),
+                                TTL: sdk.String("saepe"),
+                                Value: sdk.String("quidem"),
+                            },
+                            shared.SQLACLEntry{
+                                ExpireTime: sdk.String("architecto"),
+                                Label: sdk.String("ipsa"),
+                                TTL: sdk.String("reiciendis"),
+                                Value: sdk.String("est"),
+                            },
+                            shared.SQLACLEntry{
+                                ExpireTime: sdk.String("mollitia"),
+                                Label: sdk.String("laborum"),
+                                TTL: sdk.String("dolores"),
+                                Value: sdk.String("dolorem"),
+                            },
+                        },
+                        EnableIpv4: sdk.Bool(false),
+                        PrivateNetwork: sdk.String("corporis"),
+                        RequireSsl: sdk.Bool(false),
+                    },
+                    RootPassword: sdk.String("explicabo"),
+                    SecondaryZone: sdk.String("nobis"),
+                    SourceID: sdk.String("enim"),
+                    StorageAutoResizeLimit: sdk.String("omnis"),
+                    Tier: sdk.String("nemo"),
+                    UserLabels: map[string]string{
+                        "excepturi": "accusantium",
+                        "iure": "culpa",
+                    },
+                    Zone: sdk.String("doloribus"),
+                },
+            },
+            DisplayName: sdk.String("sapiente"),
+            Error: &shared.Status{
+                Code: sdk.Int(102044),
+                Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "laboriosam": "hic",
-                        "saepe": "fuga",
-                        "in": "corporis",
+                        "culpa": "consequuntur",
+                    },
+                    map[string]interface{}{
+                        "mollitia": "occaecati",
+                        "numquam": "commodi",
+                        "quam": "molestiae",
+                        "velit": "error",
+                    },
+                    map[string]interface{}{
+                        "quis": "vitae",
                     },
                 },
-                Message: "iste",
+                Message: sdk.String("laborum"),
             },
             Labels: map[string]string{
-                "saepe": "quidem",
-                "architecto": "ipsa",
+                "enim": "odit",
+                "quo": "sequi",
+                "tenetur": "ipsam",
             },
             Mysql: &shared.MySQLConnectionProfileInput{
-                CloudSQLID: "reiciendis",
-                Host: "est",
-                Password: "mollitia",
-                Port: 670638,
+                CloudSQLID: sdk.String("id"),
+                Host: sdk.String("possimus"),
+                Password: sdk.String("aut"),
+                Port: sdk.Int(97101),
                 Ssl: &shared.SslConfigInput{
-                    CaCertificate: "dolores",
-                    ClientCertificate: "dolorem",
-                    ClientKey: "corporis",
+                    CaCertificate: sdk.String("error"),
+                    ClientCertificate: sdk.String("temporibus"),
+                    ClientKey: sdk.String("laborum"),
                 },
-                Username: "Braulio60",
+                Username: sdk.String("Austyn_Witting46"),
             },
-            Name: "nemo",
+            Name: sdk.String("Jan Bednar"),
             Oracle: &shared.OracleConnectionProfileInput{
-                DatabaseService: "minima",
+                DatabaseService: sdk.String("cum"),
                 ForwardSSHConnectivity: &shared.ForwardSSHTunnelConnectivity{
-                    Hostname: "nippy-apse.info",
-                    Password: "culpa",
-                    Port: 988374,
-                    PrivateKey: "sapiente",
-                    Username: "Bart63",
+                    Hostname: sdk.String("agile-arch-rival.info"),
+                    Password: sdk.String("ut"),
+                    Port: sdk.Int(979587),
+                    PrivateKey: sdk.String("dicta"),
+                    Username: sdk.String("Floy.Gulgowski"),
                 },
-                Host: "consequuntur",
-                Password: "repellat",
-                Port: 653108,
+                Host: sdk.String("harum"),
+                Password: sdk.String("enim"),
+                Port: sdk.Int(880476),
                 PrivateConnectivity: &shared.PrivateConnectivity{
-                    PrivateConnection: "occaecati",
+                    PrivateConnection: sdk.String("commodi"),
                 },
                 StaticServiceIPConnectivity: map[string]interface{}{
-                    "commodi": "quam",
-                    "molestiae": "velit",
+                    "quae": "ipsum",
+                    "quidem": "molestias",
+                    "excepturi": "pariatur",
+                    "modi": "praesentium",
                 },
-                Username: "Linda.Cronin",
+                Username: sdk.String("Judah92"),
             },
             Postgresql: &shared.PostgreSQLConnectionProfileInput{
-                CloudSQLID: "laborum",
-                Host: "animi",
-                Password: "enim",
-                Port: 138183,
+                CloudSQLID: sdk.String("sint"),
+                Host: sdk.String("veritatis"),
+                Password: sdk.String("itaque"),
+                Port: sdk.Int(277718),
                 PrivateServiceConnectConnectivity: &shared.PrivateServiceConnectConnectivity{
-                    ServiceAttachment: "quo",
+                    ServiceAttachment: sdk.String("enim"),
                 },
                 Ssl: &shared.SslConfigInput{
-                    CaCertificate: "sequi",
-                    ClientCertificate: "tenetur",
-                    ClientKey: "ipsam",
+                    CaCertificate: sdk.String("consequatur"),
+                    ClientCertificate: sdk.String("est"),
+                    ClientKey: sdk.String("quibusdam"),
                 },
                 StaticIPConnectivity: map[string]interface{}{
-                    "possimus": "aut",
-                    "quasi": "error",
-                    "temporibus": "laborum",
+                    "deserunt": "distinctio",
                 },
-                Username: "Austyn_Witting46",
+                Username: sdk.String("Ron18"),
             },
-            Provider: "RDS",
-            State: "FAILED",
+            Provider: shared.ConnectionProfileProviderEnumCloudsql.ToPointer(),
+            State: shared.ConnectionProfileStateEnumUpdating.ToPointer(),
         },
-        AccessToken: "ipsa",
-        Alt: "media",
-        Callback: "voluptate",
-        ConnectionProfileID: "cum",
-        Fields: "perferendis",
-        Key: "doloremque",
-        OauthToken: "reprehenderit",
-        Parent: "ut",
-        PrettyPrint: false,
-        QuotaUser: "maiores",
-        RequestID: "dicta",
-        SkipValidation: false,
-        UploadType: "corporis",
-        UploadProtocol: "dolore",
-        ValidateOnly: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.DatamigrationProjectsLocationsConnectionProfilesCreate(ctx, req, operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity{
+        AccessToken: sdk.String("quos"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("magni"),
+        ConnectionProfileID: sdk.String("assumenda"),
+        Fields: sdk.String("ipsam"),
+        Key: sdk.String("alias"),
+        OauthToken: sdk.String("fugit"),
+        Parent: "dolorum",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("excepturi"),
+        RequestID: sdk.String("tempora"),
+        SkipValidation: sdk.Bool(false),
+        UploadType: sdk.String("facilis"),
+        UploadProtocol: sdk.String("tempore"),
+        ValidateOnly: sdk.Bool(false),
+    }, operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -15,20 +15,24 @@ const (
 	ActionEnumURL      ActionEnum = "URL"
 )
 
+func (e ActionEnum) ToPointer() *ActionEnum {
+	return &e
+}
+
 func (e *ActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPEN_APP":
 		fallthrough
 	case "DEEP_LINK":
 		fallthrough
 	case "URL":
-		*e = ActionEnum(s)
+		*e = ActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	CreateRateBasedRuleXAmzTargetEnumAwswaf20150824CreateRateBasedRule CreateRateBasedRuleXAmzTargetEnum = "AWSWAF_20150824.CreateRateBasedRule"
 )
 
+func (e CreateRateBasedRuleXAmzTargetEnum) ToPointer() *CreateRateBasedRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateRateBasedRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.CreateRateBasedRule":
-		*e = CreateRateBasedRuleXAmzTargetEnum(s)
+		*e = CreateRateBasedRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRateBasedRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRateBasedRuleXAmzTargetEnum: %v", v)
 	}
 }
 

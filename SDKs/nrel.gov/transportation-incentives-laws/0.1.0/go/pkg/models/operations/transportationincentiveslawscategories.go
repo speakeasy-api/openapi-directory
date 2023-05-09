@@ -16,19 +16,23 @@ const (
 	TransportationIncentivesLawsCategoriesOutputFormatEnumXML  TransportationIncentivesLawsCategoriesOutputFormatEnum = "xml"
 )
 
+func (e TransportationIncentivesLawsCategoriesOutputFormatEnum) ToPointer() *TransportationIncentivesLawsCategoriesOutputFormatEnum {
+	return &e
+}
+
 func (e *TransportationIncentivesLawsCategoriesOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = TransportationIncentivesLawsCategoriesOutputFormatEnum(s)
+		*e = TransportationIncentivesLawsCategoriesOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransportationIncentivesLawsCategoriesOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TransportationIncentivesLawsCategoriesOutputFormatEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	TransportationIncentivesLawsCategoriesTypeEnumIncentive  TransportationIncentivesLawsCategoriesTypeEnum = "incentive"
 )
 
+func (e TransportationIncentivesLawsCategoriesTypeEnum) ToPointer() *TransportationIncentivesLawsCategoriesTypeEnum {
+	return &e
+}
+
 func (e *TransportationIncentivesLawsCategoriesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tech":
 		fallthrough
 	case "user":
@@ -55,10 +63,10 @@ func (e *TransportationIncentivesLawsCategoriesTypeEnum) UnmarshalJSON(data []by
 	case "regulation":
 		fallthrough
 	case "incentive":
-		*e = TransportationIncentivesLawsCategoriesTypeEnum(s)
+		*e = TransportationIncentivesLawsCategoriesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransportationIncentivesLawsCategoriesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TransportationIncentivesLawsCategoriesTypeEnum: %v", v)
 	}
 }
 

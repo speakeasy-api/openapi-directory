@@ -15,18 +15,22 @@ const (
 	FindingsFilterActionEnumNoop    FindingsFilterActionEnum = "NOOP"
 )
 
+func (e FindingsFilterActionEnum) ToPointer() *FindingsFilterActionEnum {
+	return &e
+}
+
 func (e *FindingsFilterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARCHIVE":
 		fallthrough
 	case "NOOP":
-		*e = FindingsFilterActionEnum(s)
+		*e = FindingsFilterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingsFilterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingsFilterActionEnum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newSSIDs(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Return the SSID statuses of an access point
 func (s *ssiDs) GetNetworkDeviceWirelessStatus(ctx context.Context, request operations.GetNetworkDeviceWirelessStatusRequest) (*operations.GetNetworkDeviceWirelessStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/wireless/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/wireless/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *ssiDs) GetNetworkDeviceWirelessStatus(ctx context.Context, request oper
 // Return a single SSID
 func (s *ssiDs) GetNetworkSsid(ctx context.Context, request operations.GetNetworkSsidRequest) (*operations.GetNetworkSsidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,7 +130,10 @@ func (s *ssiDs) GetNetworkSsid(ctx context.Context, request operations.GetNetwor
 // List the SSIDs in a network. Supports networks with access points or wireless-enabled security appliances and teleworker gateways.
 func (s *ssiDs) GetNetworkSsids(ctx context.Context, request operations.GetNetworkSsidsRequest) (*operations.GetNetworkSsidsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +178,10 @@ func (s *ssiDs) GetNetworkSsids(ctx context.Context, request operations.GetNetwo
 // Update the attributes of an SSID
 func (s *ssiDs) UpdateNetworkSsid(ctx context.Context, request operations.UpdateNetworkSsidRequest) (*operations.UpdateNetworkSsidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

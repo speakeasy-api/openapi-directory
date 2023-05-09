@@ -21,12 +21,16 @@ const (
 	GoogleCloudDocumentaiV1beta2DocumentProvenanceTypeEnumEvalSkipped              GoogleCloudDocumentaiV1beta2DocumentProvenanceTypeEnum = "EVAL_SKIPPED"
 )
 
+func (e GoogleCloudDocumentaiV1beta2DocumentProvenanceTypeEnum) ToPointer() *GoogleCloudDocumentaiV1beta2DocumentProvenanceTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1beta2DocumentProvenanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ADD":
@@ -42,10 +46,10 @@ func (e *GoogleCloudDocumentaiV1beta2DocumentProvenanceTypeEnum) UnmarshalJSON(d
 	case "EVAL_APPROVED":
 		fallthrough
 	case "EVAL_SKIPPED":
-		*e = GoogleCloudDocumentaiV1beta2DocumentProvenanceTypeEnum(s)
+		*e = GoogleCloudDocumentaiV1beta2DocumentProvenanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1beta2DocumentProvenanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1beta2DocumentProvenanceTypeEnum: %v", v)
 	}
 }
 

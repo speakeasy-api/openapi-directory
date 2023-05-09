@@ -13,6 +13,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -76,4 +77,16 @@ pkg/models/operations/deactivatewarehouse.go
 pkg/models/operations/removewarehouse.go
 pkg/models/operations/warehousebyid.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/docks/README.md
+docs/freightvalues/README.md
+docs/holidays/README.md
+docs/inventory/README.md
+docs/pickuppoints/README.md
+docs/polygons/README.md
+docs/reservations/README.md
+docs/sla/README.md
+docs/scheduleddelivery/README.md
+docs/shippingpolicies/README.md
+docs/warehouses/README.md
 USAGE.md

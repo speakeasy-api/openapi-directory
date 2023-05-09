@@ -35,7 +35,10 @@ func newProducts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ProductsDelete - Removes an existing Product.
 func (s *products) ProductsDelete(ctx context.Context, request operations.ProductsDeleteRequest) (*operations.ProductsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/products/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -237,7 +240,10 @@ func (s *products) ProductsProcessBatch(ctx context.Context, request []shared.Ba
 // ProductsPut - Updates an existing Product.
 func (s *products) ProductsPut(ctx context.Context, request operations.ProductsPutRequest) (*operations.ProductsPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/products/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductDto", "json")
 	if err != nil {
@@ -291,7 +297,10 @@ func (s *products) ProductsPut(ctx context.Context, request operations.ProductsP
 // GetV1ProductsID - Returns information about a single Product.
 func (s *products) GetV1ProductsID(ctx context.Context, request operations.GetV1ProductsIDRequest) (*operations.GetV1ProductsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/products/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

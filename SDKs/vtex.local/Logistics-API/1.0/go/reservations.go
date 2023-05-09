@@ -35,7 +35,10 @@ func newReservations(defaultClient, securityClient HTTPClient, serverURL, langua
 // Acknowledges reservations made by reservation ID.
 func (s *reservations) AcknowledgmentReservation(ctx context.Context, request operations.AcknowledgmentReservationRequest) (*operations.AcknowledgmentReservationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}/acknowledge", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}/acknowledge", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *reservations) AcknowledgmentReservation(ctx context.Context, request op
 // Cancels reservation by reservation ID.
 func (s *reservations) CancelReservation(ctx context.Context, request operations.CancelReservationRequest) (*operations.CancelReservationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -111,7 +117,10 @@ func (s *reservations) CancelReservation(ctx context.Context, request operations
 // Confirms reservation by reservation ID.
 func (s *reservations) ConfirmReservation(ctx context.Context, request operations.ConfirmReservationRequest) (*operations.ConfirmReservationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}/confirm", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}/confirm", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -208,7 +217,10 @@ func (s *reservations) CreateReservation(ctx context.Context, request operations
 // Lists reservation's information by ID.
 func (s *reservations) ReservationByID(ctx context.Context, request operations.ReservationByIDRequest) (*operations.ReservationByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{reservationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -257,7 +269,10 @@ func (s *reservations) ReservationByID(ctx context.Context, request operations.R
 // Lists reservations in your store, by searching through warehouse and SKU.
 func (s *reservations) ReservationbyWarehouseandSku(ctx context.Context, request operations.ReservationbyWarehouseandSkuRequest) (*operations.ReservationbyWarehouseandSkuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{warehouseId}/{skuId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/inventory/reservations/{warehouseId}/{skuId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

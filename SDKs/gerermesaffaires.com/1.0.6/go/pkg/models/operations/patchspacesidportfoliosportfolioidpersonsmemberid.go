@@ -8,47 +8,6 @@ import (
 	"net/http"
 )
 
-type PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum string
-
-const (
-	PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnumTax              PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum = "tax"
-	PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnumWealthManagement PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum = "wealth management"
-	PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnumSocial           PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum = "social"
-	PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnumSocialManager    PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum = "social manager"
-	PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnumPurchases        PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum = "purchases"
-	PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnumSales            PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum = "sales"
-	PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnumLegal            PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum = "legal"
-	PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnumAccounting       PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum = "accounting"
-)
-
-func (e *PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "tax":
-		fallthrough
-	case "wealth management":
-		fallthrough
-	case "social":
-		fallthrough
-	case "social manager":
-		fallthrough
-	case "purchases":
-		fallthrough
-	case "sales":
-		fallthrough
-	case "legal":
-		fallthrough
-	case "accounting":
-		*e = PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum: %s", s)
-	}
-}
-
 type PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyRoleEnum string
 
 const (
@@ -57,30 +16,34 @@ const (
 	PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyRoleEnumEmpty        PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyRoleEnum = "empty"
 )
 
+func (e PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyRoleEnum) ToPointer() *PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyRoleEnum {
+	return &e
+}
+
 func (e *PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "collaborator":
 		fallthrough
 	case "assistant":
 		fallthrough
 	case "empty":
-		*e = PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyRoleEnum(s)
+		*e = PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyRoleEnum: %v", v)
 	}
 }
 
 // PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBody - Portfolio to modify
 type PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBody struct {
-	Apply   *bool                                                                   `json:"Apply,omitempty"`
-	Groups  *PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyGroupsEnum `json:"Groups,omitempty"`
-	IsAdmin *bool                                                                   `json:"IsAdmin,omitempty"`
-	Role    *PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyRoleEnum   `json:"Role,omitempty"`
+	Apply   *bool                                                                 `json:"Apply,omitempty"`
+	Groups  []string                                                              `json:"Groups,omitempty"`
+	IsAdmin *bool                                                                 `json:"IsAdmin,omitempty"`
+	Role    *PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequestBodyRoleEnum `json:"Role,omitempty"`
 }
 
 type PatchSpacesIDPortfoliosPortfolioIDPersonsMemberIDRequest struct {

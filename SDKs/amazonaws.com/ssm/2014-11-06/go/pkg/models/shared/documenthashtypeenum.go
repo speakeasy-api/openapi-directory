@@ -14,18 +14,22 @@ const (
 	DocumentHashTypeEnumSha1   DocumentHashTypeEnum = "Sha1"
 )
 
+func (e DocumentHashTypeEnum) ToPointer() *DocumentHashTypeEnum {
+	return &e
+}
+
 func (e *DocumentHashTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Sha256":
 		fallthrough
 	case "Sha1":
-		*e = DocumentHashTypeEnum(s)
+		*e = DocumentHashTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentHashTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentHashTypeEnum: %v", v)
 	}
 }

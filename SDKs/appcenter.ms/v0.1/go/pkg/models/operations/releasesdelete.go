@@ -33,12 +33,16 @@ const (
 	ReleasesDelete500ApplicationJSONCodeEnumTooManyRequests     ReleasesDelete500ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesDelete500ApplicationJSONCodeEnum) ToPointer() *ReleasesDelete500ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesDelete500ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *ReleasesDelete500ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) er
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesDelete500ApplicationJSONCodeEnum(s)
+		*e = ReleasesDelete500ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesDelete500ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesDelete500ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -78,12 +82,16 @@ const (
 	ReleasesDelete404ApplicationJSONCodeEnumTooManyRequests     ReleasesDelete404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesDelete404ApplicationJSONCodeEnum) ToPointer() *ReleasesDelete404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesDelete404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -97,10 +105,10 @@ func (e *ReleasesDelete404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) er
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesDelete404ApplicationJSONCodeEnum(s)
+		*e = ReleasesDelete404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesDelete404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesDelete404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

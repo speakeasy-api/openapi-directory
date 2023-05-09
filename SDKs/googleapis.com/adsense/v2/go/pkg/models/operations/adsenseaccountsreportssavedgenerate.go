@@ -38,12 +38,16 @@ const (
 	AdsenseAccountsReportsSavedGenerateDateRangeEnumLast30Days                    AdsenseAccountsReportsSavedGenerateDateRangeEnum = "LAST_30_DAYS"
 )
 
+func (e AdsenseAccountsReportsSavedGenerateDateRangeEnum) ToPointer() *AdsenseAccountsReportsSavedGenerateDateRangeEnum {
+	return &e
+}
+
 func (e *AdsenseAccountsReportsSavedGenerateDateRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPORTING_DATE_RANGE_UNSPECIFIED":
 		fallthrough
 	case "CUSTOM":
@@ -59,10 +63,10 @@ func (e *AdsenseAccountsReportsSavedGenerateDateRangeEnum) UnmarshalJSON(data []
 	case "LAST_7_DAYS":
 		fallthrough
 	case "LAST_30_DAYS":
-		*e = AdsenseAccountsReportsSavedGenerateDateRangeEnum(s)
+		*e = AdsenseAccountsReportsSavedGenerateDateRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdsenseAccountsReportsSavedGenerateDateRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdsenseAccountsReportsSavedGenerateDateRangeEnum: %v", v)
 	}
 }
 
@@ -75,21 +79,25 @@ const (
 	AdsenseAccountsReportsSavedGenerateReportingTimeZoneEnumGoogleTimeZone               AdsenseAccountsReportsSavedGenerateReportingTimeZoneEnum = "GOOGLE_TIME_ZONE"
 )
 
+func (e AdsenseAccountsReportsSavedGenerateReportingTimeZoneEnum) ToPointer() *AdsenseAccountsReportsSavedGenerateReportingTimeZoneEnum {
+	return &e
+}
+
 func (e *AdsenseAccountsReportsSavedGenerateReportingTimeZoneEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPORTING_TIME_ZONE_UNSPECIFIED":
 		fallthrough
 	case "ACCOUNT_TIME_ZONE":
 		fallthrough
 	case "GOOGLE_TIME_ZONE":
-		*e = AdsenseAccountsReportsSavedGenerateReportingTimeZoneEnum(s)
+		*e = AdsenseAccountsReportsSavedGenerateReportingTimeZoneEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdsenseAccountsReportsSavedGenerateReportingTimeZoneEnum: %s", s)
+		return fmt.Errorf("invalid value for AdsenseAccountsReportsSavedGenerateReportingTimeZoneEnum: %v", v)
 	}
 }
 

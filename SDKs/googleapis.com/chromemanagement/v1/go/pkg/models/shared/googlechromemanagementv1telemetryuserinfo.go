@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleChromeManagementV1TelemetryUserInfo - Information about a user associated with telemetry data.
+// GoogleChromeManagementV1TelemetryUserInfo - Information about a user associated with telemetry data. * Granular permission needed: TELEMETRY_API_USER
 type GoogleChromeManagementV1TelemetryUserInfo struct {
 	// Output only. User's email.
 	Email *string `json:"email,omitempty"`

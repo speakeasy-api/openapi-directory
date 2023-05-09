@@ -16,19 +16,23 @@ const (
 	PostServersIDActionsEnableRescueRequestBodyTypeEnumLinux32 PostServersIDActionsEnableRescueRequestBodyTypeEnum = "linux32"
 )
 
+func (e PostServersIDActionsEnableRescueRequestBodyTypeEnum) ToPointer() *PostServersIDActionsEnableRescueRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *PostServersIDActionsEnableRescueRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "linux64":
 		fallthrough
 	case "linux32":
-		*e = PostServersIDActionsEnableRescueRequestBodyTypeEnum(s)
+		*e = PostServersIDActionsEnableRescueRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersIDActionsEnableRescueRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersIDActionsEnableRescueRequestBodyTypeEnum: %v", v)
 	}
 }
 
@@ -69,21 +73,25 @@ const (
 	PostServersIDActionsEnableRescue201ApplicationJSONActionStatusEnumError   PostServersIDActionsEnableRescue201ApplicationJSONActionStatusEnum = "error"
 )
 
+func (e PostServersIDActionsEnableRescue201ApplicationJSONActionStatusEnum) ToPointer() *PostServersIDActionsEnableRescue201ApplicationJSONActionStatusEnum {
+	return &e
+}
+
 func (e *PostServersIDActionsEnableRescue201ApplicationJSONActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostServersIDActionsEnableRescue201ApplicationJSONActionStatusEnum(s)
+		*e = PostServersIDActionsEnableRescue201ApplicationJSONActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersIDActionsEnableRescue201ApplicationJSONActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersIDActionsEnableRescue201ApplicationJSONActionStatusEnum: %v", v)
 	}
 }
 

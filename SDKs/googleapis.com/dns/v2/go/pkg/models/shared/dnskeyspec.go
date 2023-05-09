@@ -18,12 +18,16 @@ const (
 	DNSKeySpecAlgorithmEnumEcdsap384Sha384 DNSKeySpecAlgorithmEnum = "ECDSAP384SHA384"
 )
 
+func (e DNSKeySpecAlgorithmEnum) ToPointer() *DNSKeySpecAlgorithmEnum {
+	return &e
+}
+
 func (e *DNSKeySpecAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RSASHA1":
 		fallthrough
 	case "RSASHA256":
@@ -33,10 +37,10 @@ func (e *DNSKeySpecAlgorithmEnum) UnmarshalJSON(data []byte) error {
 	case "ECDSAP256SHA256":
 		fallthrough
 	case "ECDSAP384SHA384":
-		*e = DNSKeySpecAlgorithmEnum(s)
+		*e = DNSKeySpecAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DNSKeySpecAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for DNSKeySpecAlgorithmEnum: %v", v)
 	}
 }
 
@@ -48,19 +52,23 @@ const (
 	DNSKeySpecKeyTypeEnumZoneSigning DNSKeySpecKeyTypeEnum = "ZONE_SIGNING"
 )
 
+func (e DNSKeySpecKeyTypeEnum) ToPointer() *DNSKeySpecKeyTypeEnum {
+	return &e
+}
+
 func (e *DNSKeySpecKeyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KEY_SIGNING":
 		fallthrough
 	case "ZONE_SIGNING":
-		*e = DNSKeySpecKeyTypeEnum(s)
+		*e = DNSKeySpecKeyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DNSKeySpecKeyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DNSKeySpecKeyTypeEnum: %v", v)
 	}
 }
 

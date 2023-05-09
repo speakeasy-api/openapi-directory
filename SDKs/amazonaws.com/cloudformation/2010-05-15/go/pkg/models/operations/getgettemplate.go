@@ -15,17 +15,21 @@ const (
 	GETGETTemplateActionEnumGetTemplate GETGETTemplateActionEnum = "GetTemplate"
 )
 
+func (e GETGETTemplateActionEnum) ToPointer() *GETGETTemplateActionEnum {
+	return &e
+}
+
 func (e *GETGETTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetTemplate":
-		*e = GETGETTemplateActionEnum(s)
+		*e = GETGETTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETTemplateActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETGETTemplateTemplateStageEnumProcessed GETGETTemplateTemplateStageEnum = "Processed"
 )
 
+func (e GETGETTemplateTemplateStageEnum) ToPointer() *GETGETTemplateTemplateStageEnum {
+	return &e
+}
+
 func (e *GETGETTemplateTemplateStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Original":
 		fallthrough
 	case "Processed":
-		*e = GETGETTemplateTemplateStageEnum(s)
+		*e = GETGETTemplateTemplateStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETTemplateTemplateStageEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETTemplateTemplateStageEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETGETTemplateVersionEnumTwoThousandAndTen0515 GETGETTemplateVersionEnum = "2010-05-15"
 )
 
+func (e GETGETTemplateVersionEnum) ToPointer() *GETGETTemplateVersionEnum {
+	return &e
+}
+
 func (e *GETGETTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETGETTemplateVersionEnum(s)
+		*e = GETGETTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETTemplateVersionEnum: %v", v)
 	}
 }
 

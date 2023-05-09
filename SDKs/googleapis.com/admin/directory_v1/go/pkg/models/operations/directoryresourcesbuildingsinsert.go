@@ -23,21 +23,25 @@ const (
 	DirectoryResourcesBuildingsInsertCoordinatesSourceEnumSourceUnspecified   DirectoryResourcesBuildingsInsertCoordinatesSourceEnum = "SOURCE_UNSPECIFIED"
 )
 
+func (e DirectoryResourcesBuildingsInsertCoordinatesSourceEnum) ToPointer() *DirectoryResourcesBuildingsInsertCoordinatesSourceEnum {
+	return &e
+}
+
 func (e *DirectoryResourcesBuildingsInsertCoordinatesSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLIENT_SPECIFIED":
 		fallthrough
 	case "RESOLVED_FROM_ADDRESS":
 		fallthrough
 	case "SOURCE_UNSPECIFIED":
-		*e = DirectoryResourcesBuildingsInsertCoordinatesSourceEnum(s)
+		*e = DirectoryResourcesBuildingsInsertCoordinatesSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryResourcesBuildingsInsertCoordinatesSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryResourcesBuildingsInsertCoordinatesSourceEnum: %v", v)
 	}
 }
 

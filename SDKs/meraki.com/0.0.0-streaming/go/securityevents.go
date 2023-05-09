@@ -34,7 +34,10 @@ func newSecurityEvents(defaultClient, securityClient HTTPClient, serverURL, lang
 // List the security events (intrusion detection only) for a network
 func (s *securityEvents) GetNetworkSecurityEvents(ctx context.Context, request operations.GetNetworkSecurityEventsRequest) (*operations.GetNetworkSecurityEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/securityEvents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/securityEvents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *securityEvents) GetNetworkSecurityEvents(ctx context.Context, request o
 // List the security events (intrusion detection only) for an organization
 func (s *securityEvents) GetOrganizationSecurityEvents(ctx context.Context, request operations.GetOrganizationSecurityEventsRequest) (*operations.GetOrganizationSecurityEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/securityEvents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/securityEvents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

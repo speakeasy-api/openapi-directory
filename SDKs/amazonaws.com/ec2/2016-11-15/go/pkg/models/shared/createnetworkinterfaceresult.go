@@ -40,12 +40,16 @@ const (
 	CreateNetworkInterfaceResultNetworkInterfaceAttachmentStatusEnumDetached  CreateNetworkInterfaceResultNetworkInterfaceAttachmentStatusEnum = "detached"
 )
 
+func (e CreateNetworkInterfaceResultNetworkInterfaceAttachmentStatusEnum) ToPointer() *CreateNetworkInterfaceResultNetworkInterfaceAttachmentStatusEnum {
+	return &e
+}
+
 func (e *CreateNetworkInterfaceResultNetworkInterfaceAttachmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -53,10 +57,10 @@ func (e *CreateNetworkInterfaceResultNetworkInterfaceAttachmentStatusEnum) Unmar
 	case "detaching":
 		fallthrough
 	case "detached":
-		*e = CreateNetworkInterfaceResultNetworkInterfaceAttachmentStatusEnum(s)
+		*e = CreateNetworkInterfaceResultNetworkInterfaceAttachmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNetworkInterfaceResultNetworkInterfaceAttachmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNetworkInterfaceResultNetworkInterfaceAttachmentStatusEnum: %v", v)
 	}
 }
 
@@ -102,12 +106,16 @@ const (
 	CreateNetworkInterfaceResultNetworkInterfaceInterfaceTypeEnumAwsCodestarConnectionsManaged CreateNetworkInterfaceResultNetworkInterfaceInterfaceTypeEnum = "aws_codestar_connections_managed"
 )
 
+func (e CreateNetworkInterfaceResultNetworkInterfaceInterfaceTypeEnum) ToPointer() *CreateNetworkInterfaceResultNetworkInterfaceInterfaceTypeEnum {
+	return &e
+}
+
 func (e *CreateNetworkInterfaceResultNetworkInterfaceInterfaceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "interface":
 		fallthrough
 	case "natGateway":
@@ -141,10 +149,10 @@ func (e *CreateNetworkInterfaceResultNetworkInterfaceInterfaceTypeEnum) Unmarsha
 	case "iot_rules_managed":
 		fallthrough
 	case "aws_codestar_connections_managed":
-		*e = CreateNetworkInterfaceResultNetworkInterfaceInterfaceTypeEnum(s)
+		*e = CreateNetworkInterfaceResultNetworkInterfaceInterfaceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNetworkInterfaceResultNetworkInterfaceInterfaceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNetworkInterfaceResultNetworkInterfaceInterfaceTypeEnum: %v", v)
 	}
 }
 
@@ -193,12 +201,16 @@ const (
 	CreateNetworkInterfaceResultNetworkInterfaceStatusEnumDetaching  CreateNetworkInterfaceResultNetworkInterfaceStatusEnum = "detaching"
 )
 
+func (e CreateNetworkInterfaceResultNetworkInterfaceStatusEnum) ToPointer() *CreateNetworkInterfaceResultNetworkInterfaceStatusEnum {
+	return &e
+}
+
 func (e *CreateNetworkInterfaceResultNetworkInterfaceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "associated":
@@ -208,10 +220,10 @@ func (e *CreateNetworkInterfaceResultNetworkInterfaceStatusEnum) UnmarshalJSON(d
 	case "in-use":
 		fallthrough
 	case "detaching":
-		*e = CreateNetworkInterfaceResultNetworkInterfaceStatusEnum(s)
+		*e = CreateNetworkInterfaceResultNetworkInterfaceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNetworkInterfaceResultNetworkInterfaceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNetworkInterfaceResultNetworkInterfaceStatusEnum: %v", v)
 	}
 }
 

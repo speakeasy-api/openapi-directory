@@ -15,17 +15,21 @@ const (
 	POSTSearchLocalGatewayRoutesActionEnumSearchLocalGatewayRoutes POSTSearchLocalGatewayRoutesActionEnum = "SearchLocalGatewayRoutes"
 )
 
+func (e POSTSearchLocalGatewayRoutesActionEnum) ToPointer() *POSTSearchLocalGatewayRoutesActionEnum {
+	return &e
+}
+
 func (e *POSTSearchLocalGatewayRoutesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SearchLocalGatewayRoutes":
-		*e = POSTSearchLocalGatewayRoutesActionEnum(s)
+		*e = POSTSearchLocalGatewayRoutesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSearchLocalGatewayRoutesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSearchLocalGatewayRoutesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSearchLocalGatewayRoutesVersionEnumTwoThousandAndSixteen1115 POSTSearchLocalGatewayRoutesVersionEnum = "2016-11-15"
 )
 
+func (e POSTSearchLocalGatewayRoutesVersionEnum) ToPointer() *POSTSearchLocalGatewayRoutesVersionEnum {
+	return &e
+}
+
 func (e *POSTSearchLocalGatewayRoutesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTSearchLocalGatewayRoutesVersionEnum(s)
+		*e = POSTSearchLocalGatewayRoutesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSearchLocalGatewayRoutesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSearchLocalGatewayRoutesVersionEnum: %v", v)
 	}
 }
 

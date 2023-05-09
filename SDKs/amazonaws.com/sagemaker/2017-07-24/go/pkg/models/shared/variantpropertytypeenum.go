@@ -15,20 +15,24 @@ const (
 	VariantPropertyTypeEnumDataCaptureConfig    VariantPropertyTypeEnum = "DataCaptureConfig"
 )
 
+func (e VariantPropertyTypeEnum) ToPointer() *VariantPropertyTypeEnum {
+	return &e
+}
+
 func (e *VariantPropertyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DesiredInstanceCount":
 		fallthrough
 	case "DesiredWeight":
 		fallthrough
 	case "DataCaptureConfig":
-		*e = VariantPropertyTypeEnum(s)
+		*e = VariantPropertyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VariantPropertyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VariantPropertyTypeEnum: %v", v)
 	}
 }

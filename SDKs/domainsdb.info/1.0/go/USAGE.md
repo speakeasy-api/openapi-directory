@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetDomainsTldZoneIDDownloadRequest{
-        APIKey: "corrupti",
-        Date: "provident",
-        ZoneID: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.Domains.GetDomainsTldZoneIDDownload(ctx, req)
+    res, err := s.Domains.GetDomainsTldZoneIDDownload(ctx, operations.GetDomainsTldZoneIDDownloadRequest{
+        APIKey: sdk.String("corrupti"),
+        Date: sdk.String("provident"),
+        ZoneID: "distinctio",
+    })
     if err != nil {
         log.Fatal(err)
     }

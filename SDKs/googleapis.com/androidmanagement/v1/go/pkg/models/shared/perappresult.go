@@ -18,12 +18,16 @@ const (
 	PerAppResultClearingResultEnumAPILevel                  PerAppResultClearingResultEnum = "API_LEVEL"
 )
 
+func (e PerAppResultClearingResultEnum) ToPointer() *PerAppResultClearingResultEnum {
+	return &e
+}
+
 func (e *PerAppResultClearingResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLEARING_RESULT_UNSPECIFIED":
 		fallthrough
 	case "SUCCESS":
@@ -33,10 +37,10 @@ func (e *PerAppResultClearingResultEnum) UnmarshalJSON(data []byte) error {
 	case "APP_PROTECTED":
 		fallthrough
 	case "API_LEVEL":
-		*e = PerAppResultClearingResultEnum(s)
+		*e = PerAppResultClearingResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PerAppResultClearingResultEnum: %s", s)
+		return fmt.Errorf("invalid value for PerAppResultClearingResultEnum: %v", v)
 	}
 }
 

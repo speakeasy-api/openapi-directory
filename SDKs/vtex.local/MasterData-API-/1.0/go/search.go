@@ -37,7 +37,10 @@ func newSearch(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // > Avoid sending too many requests with wildcards (`*`) in the search parameters or that use the `keyword` parameter. This may lead to this endpoint being temporarily blocked for your account. If this happens you will receive an error with status code `503`.
 func (s *search) Searchdocuments(ctx context.Context, request operations.SearchdocumentsRequest) (*operations.SearchdocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

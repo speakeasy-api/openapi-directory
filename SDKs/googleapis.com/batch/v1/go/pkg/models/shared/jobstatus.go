@@ -20,12 +20,16 @@ const (
 	JobStatusStateEnumDeletionInProgress JobStatusStateEnum = "DELETION_IN_PROGRESS"
 )
 
+func (e JobStatusStateEnum) ToPointer() *JobStatusStateEnum {
+	return &e
+}
+
 func (e *JobStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "QUEUED":
@@ -39,10 +43,10 @@ func (e *JobStatusStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "DELETION_IN_PROGRESS":
-		*e = JobStatusStateEnum(s)
+		*e = JobStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for JobStatusStateEnum: %v", v)
 	}
 }
 

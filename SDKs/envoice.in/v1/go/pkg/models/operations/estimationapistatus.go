@@ -23,21 +23,25 @@ const (
 	EstimationAPIStatus200TextJSONEnumRejected EstimationAPIStatus200TextJSONEnum = "Rejected"
 )
 
+func (e EstimationAPIStatus200TextJSONEnum) ToPointer() *EstimationAPIStatus200TextJSONEnum {
+	return &e
+}
+
 func (e *EstimationAPIStatus200TextJSONEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Draft":
 		fallthrough
 	case "Accepted":
 		fallthrough
 	case "Rejected":
-		*e = EstimationAPIStatus200TextJSONEnum(s)
+		*e = EstimationAPIStatus200TextJSONEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EstimationAPIStatus200TextJSONEnum: %s", s)
+		return fmt.Errorf("invalid value for EstimationAPIStatus200TextJSONEnum: %v", v)
 	}
 }
 
@@ -50,21 +54,25 @@ const (
 	EstimationAPIStatus200ApplicationXMLEnumRejected EstimationAPIStatus200ApplicationXMLEnum = "Rejected"
 )
 
+func (e EstimationAPIStatus200ApplicationXMLEnum) ToPointer() *EstimationAPIStatus200ApplicationXMLEnum {
+	return &e
+}
+
 func (e *EstimationAPIStatus200ApplicationXMLEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Draft":
 		fallthrough
 	case "Accepted":
 		fallthrough
 	case "Rejected":
-		*e = EstimationAPIStatus200ApplicationXMLEnum(s)
+		*e = EstimationAPIStatus200ApplicationXMLEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EstimationAPIStatus200ApplicationXMLEnum: %s", s)
+		return fmt.Errorf("invalid value for EstimationAPIStatus200ApplicationXMLEnum: %v", v)
 	}
 }
 
@@ -77,21 +85,25 @@ const (
 	EstimationAPIStatus200ApplicationJSONEnumRejected EstimationAPIStatus200ApplicationJSONEnum = "Rejected"
 )
 
+func (e EstimationAPIStatus200ApplicationJSONEnum) ToPointer() *EstimationAPIStatus200ApplicationJSONEnum {
+	return &e
+}
+
 func (e *EstimationAPIStatus200ApplicationJSONEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Draft":
 		fallthrough
 	case "Accepted":
 		fallthrough
 	case "Rejected":
-		*e = EstimationAPIStatus200ApplicationJSONEnum(s)
+		*e = EstimationAPIStatus200ApplicationJSONEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EstimationAPIStatus200ApplicationJSONEnum: %s", s)
+		return fmt.Errorf("invalid value for EstimationAPIStatus200ApplicationJSONEnum: %v", v)
 	}
 }
 

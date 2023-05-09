@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>Welcome to the Audit Manager API reference. This guide is for developers who need detailed information about the Audit Manager API operations, data types, and errors. </p> <p>Audit Manager is a service that provides automated evidence collection so that you can continually audit your Amazon Web Services usage. You can use it to assess the effectiveness of your controls, manage risk, and simplify compliance.</p> <p>Audit Manager provides prebuilt frameworks that structure and automate assessments for a given compliance standard. Frameworks include a prebuilt collection of controls with descriptions and testing procedures. These controls are grouped according to the requirements of the specified compliance standard or regulation. You can also customize frameworks and controls to support internal audits with specific requirements. </p> <p>Use the following links to get started with the Audit Manager API:</p> <ul> <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_Operations.html">Actions</a>: An alphabetical list of all Audit Manager API operations.</p> </li> <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_Types.html">Data types</a>: An alphabetical list of all Audit Manager data types.</p> </li> <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/APIReference/CommonParameters.html">Common parameters</a>: Parameters that all operations can use.</p> </li> <li> <p> <a href="https://docs.aws.amazon.com/audit-manager/latest/APIReference/CommonErrors.html">Common errors</a>: Client and server errors that all operations can return.</p> </li> </ul> <p>If you're new to Audit Manager, we recommend that you review the <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html"> Audit Manager User Guide</a>.</p>
 // https://docs.aws.amazon.com/auditmanager/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // AssociateAssessmentReportEvidenceFolder -  Associates an evidence folder to an assessment report in an Audit Manager assessment.
 func (s *SDK) AssociateAssessmentReportEvidenceFolder(ctx context.Context, request operations.AssociateAssessmentReportEvidenceFolderRequest) (*operations.AssociateAssessmentReportEvidenceFolderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/associateToAssessmentReport", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/associateToAssessmentReport", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -210,7 +228,10 @@ func (s *SDK) AssociateAssessmentReportEvidenceFolder(ctx context.Context, reque
 // BatchAssociateAssessmentReportEvidence -  Associates a list of evidence to an assessment report in an Audit Manager assessment.
 func (s *SDK) BatchAssociateAssessmentReportEvidence(ctx context.Context, request operations.BatchAssociateAssessmentReportEvidenceRequest) (*operations.BatchAssociateAssessmentReportEvidenceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/batchAssociateToAssessmentReport", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/batchAssociateToAssessmentReport", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -306,7 +327,10 @@ func (s *SDK) BatchAssociateAssessmentReportEvidence(ctx context.Context, reques
 // BatchCreateDelegationByAssessment -  Creates a batch of delegations for an assessment in Audit Manager.
 func (s *SDK) BatchCreateDelegationByAssessment(ctx context.Context, request operations.BatchCreateDelegationByAssessmentRequest) (*operations.BatchCreateDelegationByAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/delegations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/delegations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -402,7 +426,10 @@ func (s *SDK) BatchCreateDelegationByAssessment(ctx context.Context, request ope
 // BatchDeleteDelegationByAssessment -  Deletes a batch of delegations for an assessment in Audit Manager.
 func (s *SDK) BatchDeleteDelegationByAssessment(ctx context.Context, request operations.BatchDeleteDelegationByAssessmentRequest) (*operations.BatchDeleteDelegationByAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/delegations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/delegations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -498,7 +525,10 @@ func (s *SDK) BatchDeleteDelegationByAssessment(ctx context.Context, request ope
 // BatchDisassociateAssessmentReportEvidence -  Disassociates a list of evidence from an assessment report in Audit Manager.
 func (s *SDK) BatchDisassociateAssessmentReportEvidence(ctx context.Context, request operations.BatchDisassociateAssessmentReportEvidenceRequest) (*operations.BatchDisassociateAssessmentReportEvidenceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/batchDisassociateFromAssessmentReport", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/batchDisassociateFromAssessmentReport", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -594,7 +624,10 @@ func (s *SDK) BatchDisassociateAssessmentReportEvidence(ctx context.Context, req
 // BatchImportEvidenceToAssessmentControl - <p>Uploads one or more pieces of evidence to a control in an Audit Manager assessment. You can upload manual evidence from any Amazon Simple Storage Service (Amazon S3) bucket by specifying the S3 URI of the evidence. </p> <p>You must upload manual evidence to your S3 bucket before you can upload it to your assessment. For instructions, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_CreateBucket.html">CreateBucket</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html">PutObject</a> in the <i>Amazon Simple Storage Service API Reference.</i> </p> <p>The following restrictions apply to this action:</p> <ul> <li> <p>Maximum size of an individual evidence file: 100 MB</p> </li> <li> <p>Number of daily manual evidence uploads per control: 100</p> </li> <li> <p>Supported file formats: See <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/upload-evidence.html#supported-manual-evidence-files">Supported file types for manual evidence</a> in the <i>Audit Manager User Guide</i> </p> </li> </ul> <p>For more information about Audit Manager service restrictions, see <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/service-quotas.html">Quotas and restrictions for Audit Manager</a>.</p>
 func (s *SDK) BatchImportEvidenceToAssessmentControl(ctx context.Context, request operations.BatchImportEvidenceToAssessmentControlRequest) (*operations.BatchImportEvidenceToAssessmentControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/controls/{controlId}/evidence", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/controls/{controlId}/evidence", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -902,7 +935,10 @@ func (s *SDK) CreateAssessmentFramework(ctx context.Context, request operations.
 // CreateAssessmentReport -  Creates an assessment report for the specified assessment.
 func (s *SDK) CreateAssessmentReport(ctx context.Context, request operations.CreateAssessmentReportRequest) (*operations.CreateAssessmentReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/reports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1104,7 +1140,10 @@ func (s *SDK) CreateControl(ctx context.Context, request operations.CreateContro
 // DeleteAssessment -  Deletes an assessment in Audit Manager.
 func (s *SDK) DeleteAssessment(ctx context.Context, request operations.DeleteAssessmentRequest) (*operations.DeleteAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1190,7 +1229,10 @@ func (s *SDK) DeleteAssessment(ctx context.Context, request operations.DeleteAss
 // DeleteAssessmentFramework -  Deletes a custom framework in Audit Manager.
 func (s *SDK) DeleteAssessmentFramework(ctx context.Context, request operations.DeleteAssessmentFrameworkRequest) (*operations.DeleteAssessmentFrameworkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1276,7 +1318,10 @@ func (s *SDK) DeleteAssessmentFramework(ctx context.Context, request operations.
 // DeleteAssessmentFrameworkShare -  Deletes a share request for a custom framework in Audit Manager.
 func (s *SDK) DeleteAssessmentFrameworkShare(ctx context.Context, request operations.DeleteAssessmentFrameworkShareRequest) (*operations.DeleteAssessmentFrameworkShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworkShareRequests/{requestId}#requestType", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworkShareRequests/{requestId}#requestType", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1366,7 +1411,10 @@ func (s *SDK) DeleteAssessmentFrameworkShare(ctx context.Context, request operat
 // DeleteAssessmentReport - <p>Deletes an assessment report in Audit Manager. </p> <p>When you run the <code>DeleteAssessmentReport</code> operation, Audit Manager attempts to delete the following data:</p> <ol> <li> <p>The specified assessment report that’s stored in your S3 bucket</p> </li> <li> <p>The associated metadata that’s stored in Audit Manager</p> </li> </ol> <p>If Audit Manager can’t access the assessment report in your S3 bucket, the report isn’t deleted. In this event, the <code>DeleteAssessmentReport</code> operation doesn’t fail. Instead, it proceeds to delete the associated metadata only. You must then delete the assessment report from the S3 bucket yourself. </p> <p>This scenario happens when Audit Manager receives a <code>403 (Forbidden)</code> or <code>404 (Not Found)</code> error from Amazon S3. To avoid this, make sure that your S3 bucket is available, and that you configured the correct permissions for Audit Manager to delete resources in your S3 bucket. For an example permissions policy that you can use, see <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/security_iam_id-based-policy-examples.html#full-administrator-access-assessment-report-destination">Assessment report destination permissions</a> in the <i>Audit Manager User Guide</i>. For information about the issues that could cause a <code>403 (Forbidden)</code> or <code>404 (Not Found</code>) error from Amazon S3, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html#ErrorCodeList">List of Error Codes</a> in the <i>Amazon Simple Storage Service API Reference</i>. </p>
 func (s *SDK) DeleteAssessmentReport(ctx context.Context, request operations.DeleteAssessmentReportRequest) (*operations.DeleteAssessmentReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/reports/{assessmentReportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/reports/{assessmentReportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1452,7 +1500,10 @@ func (s *SDK) DeleteAssessmentReport(ctx context.Context, request operations.Del
 // DeleteControl -  Deletes a custom control in Audit Manager.
 func (s *SDK) DeleteControl(ctx context.Context, request operations.DeleteControlRequest) (*operations.DeleteControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/controls/{controlId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/controls/{controlId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1720,7 +1771,10 @@ func (s *SDK) DeregisterOrganizationAdminAccount(ctx context.Context, request op
 // DisassociateAssessmentReportEvidenceFolder -  Disassociates an evidence folder from the specified assessment report in Audit Manager.
 func (s *SDK) DisassociateAssessmentReportEvidenceFolder(ctx context.Context, request operations.DisassociateAssessmentReportEvidenceFolderRequest) (*operations.DisassociateAssessmentReportEvidenceFolderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/disassociateFromAssessmentReport", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/disassociateFromAssessmentReport", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1872,7 +1926,10 @@ func (s *SDK) GetAccountStatus(ctx context.Context, request operations.GetAccoun
 // GetAssessment - Returns an assessment from Audit Manager.
 func (s *SDK) GetAssessment(ctx context.Context, request operations.GetAssessmentRequest) (*operations.GetAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1958,7 +2015,10 @@ func (s *SDK) GetAssessment(ctx context.Context, request operations.GetAssessmen
 // GetAssessmentFramework - Returns a framework from Audit Manager.
 func (s *SDK) GetAssessmentFramework(ctx context.Context, request operations.GetAssessmentFrameworkRequest) (*operations.GetAssessmentFrameworkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2044,7 +2104,10 @@ func (s *SDK) GetAssessmentFramework(ctx context.Context, request operations.Get
 // GetAssessmentReportURL -  Returns the URL of an assessment report in Audit Manager.
 func (s *SDK) GetAssessmentReportURL(ctx context.Context, request operations.GetAssessmentReportURLRequest) (*operations.GetAssessmentReportURLResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/reports/{assessmentReportId}/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/reports/{assessmentReportId}/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2130,7 +2193,10 @@ func (s *SDK) GetAssessmentReportURL(ctx context.Context, request operations.Get
 // GetChangeLogs -  Returns a list of changelogs from Audit Manager.
 func (s *SDK) GetChangeLogs(ctx context.Context, request operations.GetChangeLogsRequest) (*operations.GetChangeLogsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/changelogs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/changelogs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2220,7 +2286,10 @@ func (s *SDK) GetChangeLogs(ctx context.Context, request operations.GetChangeLog
 // GetControl -  Returns a control from Audit Manager.
 func (s *SDK) GetControl(ctx context.Context, request operations.GetControlRequest) (*operations.GetControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/controls/{controlId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/controls/{controlId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2386,7 +2455,10 @@ func (s *SDK) GetDelegations(ctx context.Context, request operations.GetDelegati
 // GetEvidence -  Returns evidence from Audit Manager.
 func (s *SDK) GetEvidence(ctx context.Context, request operations.GetEvidenceRequest) (*operations.GetEvidenceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/evidenceFolders/{evidenceFolderId}/evidence/{evidenceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/evidenceFolders/{evidenceFolderId}/evidence/{evidenceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2472,7 +2544,10 @@ func (s *SDK) GetEvidence(ctx context.Context, request operations.GetEvidenceReq
 // GetEvidenceByEvidenceFolder -  Returns all evidence from a specified evidence folder in Audit Manager.
 func (s *SDK) GetEvidenceByEvidenceFolder(ctx context.Context, request operations.GetEvidenceByEvidenceFolderRequest) (*operations.GetEvidenceByEvidenceFolderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/evidenceFolders/{evidenceFolderId}/evidence", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/evidenceFolders/{evidenceFolderId}/evidence", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2562,7 +2637,10 @@ func (s *SDK) GetEvidenceByEvidenceFolder(ctx context.Context, request operation
 // GetEvidenceFolder -  Returns an evidence folder from the specified assessment in Audit Manager.
 func (s *SDK) GetEvidenceFolder(ctx context.Context, request operations.GetEvidenceFolderRequest) (*operations.GetEvidenceFolderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/evidenceFolders/{evidenceFolderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/evidenceFolders/{evidenceFolderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2648,7 +2726,10 @@ func (s *SDK) GetEvidenceFolder(ctx context.Context, request operations.GetEvide
 // GetEvidenceFoldersByAssessment -  Returns the evidence folders from a specified assessment in Audit Manager.
 func (s *SDK) GetEvidenceFoldersByAssessment(ctx context.Context, request operations.GetEvidenceFoldersByAssessmentRequest) (*operations.GetEvidenceFoldersByAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/evidenceFolders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/evidenceFolders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2738,7 +2819,10 @@ func (s *SDK) GetEvidenceFoldersByAssessment(ctx context.Context, request operat
 // GetEvidenceFoldersByAssessmentControl -  Returns a list of evidence folders that are associated with a specified control in an Audit Manager assessment.
 func (s *SDK) GetEvidenceFoldersByAssessmentControl(ctx context.Context, request operations.GetEvidenceFoldersByAssessmentControlRequest) (*operations.GetEvidenceFoldersByAssessmentControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/evidenceFolders-by-assessment-control/{controlSetId}/{controlId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/evidenceFolders-by-assessment-control/{controlSetId}/{controlId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2894,7 +2978,10 @@ func (s *SDK) GetInsights(ctx context.Context, request operations.GetInsightsReq
 // GetInsightsByAssessment - Gets the latest analytics data for a specific active assessment.
 func (s *SDK) GetInsightsByAssessment(ctx context.Context, request operations.GetInsightsByAssessmentRequest) (*operations.GetInsightsByAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/insights/assessments/{assessmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/insights/assessments/{assessmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3142,7 +3229,10 @@ func (s *SDK) GetServicesInScope(ctx context.Context, request operations.GetServ
 // GetSettings -  Returns the settings for the specified Amazon Web Services account.
 func (s *SDK) GetSettings(ctx context.Context, request operations.GetSettingsRequest) (*operations.GetSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/{attribute}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/{attribute}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4128,7 +4218,10 @@ func (s *SDK) ListNotifications(ctx context.Context, request operations.ListNoti
 // ListTagsForResource -  Returns a list of tags for the specified resource in Audit Manager.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4406,7 +4499,10 @@ func (s *SDK) RegisterOrganizationAdminAccount(ctx context.Context, request oper
 // StartAssessmentFrameworkShare - <p> Creates a share request for a custom framework in Audit Manager. </p> <p>The share request specifies a recipient and notifies them that a custom framework is available. Recipients have 120 days to accept or decline the request. If no action is taken, the share request expires.</p> <p>When you create a share request, Audit Manager stores a snapshot of your custom framework in the US East (N. Virginia) Amazon Web Services Region. Audit Manager also stores a backup of the same snapshot in the US West (Oregon) Amazon Web Services Region.</p> <p>Audit Manager deletes the snapshot and the backup snapshot when one of the following events occurs:</p> <ul> <li> <p>The sender revokes the share request.</p> </li> <li> <p>The recipient declines the share request.</p> </li> <li> <p>The recipient encounters an error and doesn't successfully accept the share request.</p> </li> <li> <p>The share request expires before the recipient responds to the request.</p> </li> </ul> <p>When a sender <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/framework-sharing.html#framework-sharing-resend">resends a share request</a>, the snapshot is replaced with an updated version that corresponds with the latest version of the custom framework. </p> <p>When a recipient accepts a share request, the snapshot is replicated into their Amazon Web Services account under the Amazon Web Services Region that was specified in the share request. </p> <important> <p>When you invoke the <code>StartAssessmentFrameworkShare</code> API, you are about to share a custom framework with another Amazon Web Services account. You may not share a custom framework that is derived from a standard framework if the standard framework is designated as not eligible for sharing by Amazon Web Services, unless you have obtained permission to do so from the owner of the standard framework. To learn more about which standard frameworks are eligible for sharing, see <a href="https://docs.aws.amazon.com/audit-manager/latest/userguide/share-custom-framework-concepts-and-terminology.html#eligibility">Framework sharing eligibility</a> in the <i>Audit Manager User Guide</i>.</p> </important>
 func (s *SDK) StartAssessmentFrameworkShare(ctx context.Context, request operations.StartAssessmentFrameworkShareRequest) (*operations.StartAssessmentFrameworkShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}/shareRequests", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}/shareRequests", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4502,7 +4598,10 @@ func (s *SDK) StartAssessmentFrameworkShare(ctx context.Context, request operati
 // TagResource -  Tags the specified resource in Audit Manager.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4588,7 +4687,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource -  Removes a tag from a resource in Audit Manager.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4668,7 +4770,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAssessment -  Edits an Audit Manager assessment.
 func (s *SDK) UpdateAssessment(ctx context.Context, request operations.UpdateAssessmentRequest) (*operations.UpdateAssessmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4764,7 +4869,10 @@ func (s *SDK) UpdateAssessment(ctx context.Context, request operations.UpdateAss
 // UpdateAssessmentControl -  Updates a control within an assessment in Audit Manager.
 func (s *SDK) UpdateAssessmentControl(ctx context.Context, request operations.UpdateAssessmentControlRequest) (*operations.UpdateAssessmentControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/controls/{controlId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/controls/{controlId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4860,7 +4968,10 @@ func (s *SDK) UpdateAssessmentControl(ctx context.Context, request operations.Up
 // UpdateAssessmentControlSetStatus -  Updates the status of a control set in an Audit Manager assessment.
 func (s *SDK) UpdateAssessmentControlSetStatus(ctx context.Context, request operations.UpdateAssessmentControlSetStatusRequest) (*operations.UpdateAssessmentControlSetStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/controlSets/{controlSetId}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4956,7 +5067,10 @@ func (s *SDK) UpdateAssessmentControlSetStatus(ctx context.Context, request oper
 // UpdateAssessmentFramework -  Updates a custom framework in Audit Manager.
 func (s *SDK) UpdateAssessmentFramework(ctx context.Context, request operations.UpdateAssessmentFrameworkRequest) (*operations.UpdateAssessmentFrameworkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworks/{frameworkId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5052,7 +5166,10 @@ func (s *SDK) UpdateAssessmentFramework(ctx context.Context, request operations.
 // UpdateAssessmentFrameworkShare -  Updates a share request for a custom framework in Audit Manager.
 func (s *SDK) UpdateAssessmentFrameworkShare(ctx context.Context, request operations.UpdateAssessmentFrameworkShareRequest) (*operations.UpdateAssessmentFrameworkShareResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworkShareRequests/{requestId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessmentFrameworkShareRequests/{requestId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5158,7 +5275,10 @@ func (s *SDK) UpdateAssessmentFrameworkShare(ctx context.Context, request operat
 // UpdateAssessmentStatus -  Updates the status of an assessment in Audit Manager.
 func (s *SDK) UpdateAssessmentStatus(ctx context.Context, request operations.UpdateAssessmentStatusRequest) (*operations.UpdateAssessmentStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assessments/{assessmentId}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5264,7 +5384,10 @@ func (s *SDK) UpdateAssessmentStatus(ctx context.Context, request operations.Upd
 // UpdateControl -  Updates a custom control in Audit Manager.
 func (s *SDK) UpdateControl(ctx context.Context, request operations.UpdateControlRequest) (*operations.UpdateControlResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/controls/{controlId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/controls/{controlId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	QueryObjectsXAmzTargetEnumDataPipelineQueryObjects QueryObjectsXAmzTargetEnum = "DataPipeline.QueryObjects"
 )
 
+func (e QueryObjectsXAmzTargetEnum) ToPointer() *QueryObjectsXAmzTargetEnum {
+	return &e
+}
+
 func (e *QueryObjectsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DataPipeline.QueryObjects":
-		*e = QueryObjectsXAmzTargetEnum(s)
+		*e = QueryObjectsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryObjectsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryObjectsXAmzTargetEnum: %v", v)
 	}
 }
 

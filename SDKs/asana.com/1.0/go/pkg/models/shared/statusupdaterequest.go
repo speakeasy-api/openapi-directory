@@ -22,12 +22,16 @@ const (
 	StatusUpdateRequestStatusTypeEnumDropped  StatusUpdateRequestStatusTypeEnum = "dropped"
 )
 
+func (e StatusUpdateRequestStatusTypeEnum) ToPointer() *StatusUpdateRequestStatusTypeEnum {
+	return &e
+}
+
 func (e *StatusUpdateRequestStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on_track":
 		fallthrough
 	case "at_risk":
@@ -45,10 +49,10 @@ func (e *StatusUpdateRequestStatusTypeEnum) UnmarshalJSON(data []byte) error {
 	case "missed":
 		fallthrough
 	case "dropped":
-		*e = StatusUpdateRequestStatusTypeEnum(s)
+		*e = StatusUpdateRequestStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusUpdateRequestStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusUpdateRequestStatusTypeEnum: %v", v)
 	}
 }
 

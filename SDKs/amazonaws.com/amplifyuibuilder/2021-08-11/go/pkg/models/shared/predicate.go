@@ -4,9 +4,10 @@ package shared
 
 // Predicate - Stores information for generating Amplify DataStore queries. Use a <code>Predicate</code> to retrieve a subset of the data in a collection.
 type Predicate struct {
-	And      []Predicate `json:"and,omitempty"`
-	Field    *string     `json:"field,omitempty"`
-	Operand  *string     `json:"operand,omitempty"`
-	Operator *string     `json:"operator,omitempty"`
-	Or       []Predicate `json:"or,omitempty"`
+	And         []Predicate `json:"and,omitempty"`
+	Field       *string     `json:"field,omitempty"`
+	Operand     *string     `json:"operand,omitempty"`
+	OperandType *string     `json:"operandType,omitempty"`
+	Operator    *string     `json:"operator,omitempty"`
+	Or          []Predicate `json:"or,omitempty"`
 }

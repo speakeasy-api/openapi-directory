@@ -15,20 +15,24 @@ const (
 	LocationFilterNameEnumCreationTime LocationFilterNameEnum = "CreationTime"
 )
 
+func (e LocationFilterNameEnum) ToPointer() *LocationFilterNameEnum {
+	return &e
+}
+
 func (e *LocationFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LocationUri":
 		fallthrough
 	case "LocationType":
 		fallthrough
 	case "CreationTime":
-		*e = LocationFilterNameEnum(s)
+		*e = LocationFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocationFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for LocationFilterNameEnum: %v", v)
 	}
 }

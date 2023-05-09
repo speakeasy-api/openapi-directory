@@ -136,7 +136,10 @@ func (s *api) CreateAPI(ctx context.Context, request operations.CreateAPIRequest
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) CreateAPIVersion(ctx context.Context, request operations.CreateAPIVersionRequest) (*operations.CreateAPIVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -196,7 +199,10 @@ func (s *api) CreateAPIVersion(ctx context.Context, request operations.CreateAPI
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) CreateCollectionFromSchema(ctx context.Context, request operations.CreateCollectionFromSchemaRequest) (*operations.CreateCollectionFromSchemaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}/collections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}/collections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -291,7 +297,10 @@ func (s *api) CreateCollectionFromSchema(ctx context.Context, request operations
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) CreateRelations(ctx context.Context, request operations.CreateRelationsRequest) (*operations.CreateRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/relations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/relations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -353,7 +362,10 @@ func (s *api) CreateRelations(ctx context.Context, request operations.CreateRela
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) CreateSchema(ctx context.Context, request operations.CreateSchemaRequest) (*operations.CreateSchemaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/schemas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/schemas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -409,7 +421,10 @@ func (s *api) CreateSchema(ctx context.Context, request operations.CreateSchemaR
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) DeleteAnAPI(ctx context.Context, request operations.DeleteAnAPIRequest) (*operations.DeleteAnAPIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -458,7 +473,10 @@ func (s *api) DeleteAnAPI(ctx context.Context, request operations.DeleteAnAPIReq
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) DeleteAnAPIVersion(ctx context.Context, request operations.DeleteAnAPIVersionRequest) (*operations.DeleteAnAPIVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -551,7 +569,10 @@ func (s *api) GetAllApIs(ctx context.Context, request operations.GetAllApIsReque
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) GetAllAPIVersions(ctx context.Context, request operations.GetAllAPIVersionsRequest) (*operations.GetAllAPIVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -600,7 +621,10 @@ func (s *api) GetAllAPIVersions(ctx context.Context, request operations.GetAllAP
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) GetAnAPIVersion(ctx context.Context, request operations.GetAnAPIVersionRequest) (*operations.GetAnAPIVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -649,7 +673,10 @@ func (s *api) GetAnAPIVersion(ctx context.Context, request operations.GetAnAPIVe
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) GetContractTestRelations(ctx context.Context, request operations.GetContractTestRelationsRequest) (*operations.GetContractTestRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/contracttest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/contracttest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -698,7 +725,10 @@ func (s *api) GetContractTestRelations(ctx context.Context, request operations.G
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) GetDocumentationRelations(ctx context.Context, request operations.GetDocumentationRelationsRequest) (*operations.GetDocumentationRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/documentation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/documentation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -747,7 +777,10 @@ func (s *api) GetDocumentationRelations(ctx context.Context, request operations.
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) GetEnvironmentRelations(ctx context.Context, request operations.GetEnvironmentRelationsRequest) (*operations.GetEnvironmentRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/environment", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/environment", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -796,7 +829,10 @@ func (s *api) GetEnvironmentRelations(ctx context.Context, request operations.Ge
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) GetIntegrationTestRelations(ctx context.Context, request operations.GetIntegrationTestRelationsRequest) (*operations.GetIntegrationTestRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/integrationtest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/integrationtest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -845,7 +881,10 @@ func (s *api) GetIntegrationTestRelations(ctx context.Context, request operation
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) GetLinkedRelations(ctx context.Context, request operations.GetLinkedRelationsRequest) (*operations.GetLinkedRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/relations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/relations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -894,7 +933,10 @@ func (s *api) GetLinkedRelations(ctx context.Context, request operations.GetLink
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) GetMonitorRelations(ctx context.Context, request operations.GetMonitorRelationsRequest) (*operations.GetMonitorRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/monitor", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/monitor", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -943,7 +985,10 @@ func (s *api) GetMonitorRelations(ctx context.Context, request operations.GetMon
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) GetSchema(ctx context.Context, request operations.GetSchemaRequest) (*operations.GetSchemaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -992,7 +1037,10 @@ func (s *api) GetSchema(ctx context.Context, request operations.GetSchemaRequest
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) GetTestSuiteRelations(ctx context.Context, request operations.GetTestSuiteRelationsRequest) (*operations.GetTestSuiteRelationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/testsuite", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/testsuite", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1041,7 +1089,10 @@ func (s *api) GetTestSuiteRelations(ctx context.Context, request operations.GetT
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) SingleAPI(ctx context.Context, request operations.SingleAPIRequest) (*operations.SingleAPIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1088,7 +1139,10 @@ func (s *api) SingleAPI(ctx context.Context, request operations.SingleAPIRequest
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) SyncRelationsWithSchema(ctx context.Context, request operations.SyncRelationsWithSchemaRequest) (*operations.SyncRelationsWithSchemaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/{entityType}/{entityId}/syncWithSchema", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/{entityType}/{entityId}/syncWithSchema", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1149,7 +1203,10 @@ func (s *api) SyncRelationsWithSchema(ctx context.Context, request operations.Sy
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) UpdateAnAPI(ctx context.Context, request operations.UpdateAnAPIRequest) (*operations.UpdateAnAPIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1207,7 +1264,10 @@ func (s *api) UpdateAnAPI(ctx context.Context, request operations.UpdateAnAPIReq
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) UpdateAnAPIVersion(ctx context.Context, request operations.UpdateAnAPIVersionRequest) (*operations.UpdateAnAPIVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1269,7 +1329,10 @@ func (s *api) UpdateAnAPIVersion(ctx context.Context, request operations.UpdateA
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *api) UpdateSchema(ctx context.Context, request operations.UpdateSchemaRequest) (*operations.UpdateSchemaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

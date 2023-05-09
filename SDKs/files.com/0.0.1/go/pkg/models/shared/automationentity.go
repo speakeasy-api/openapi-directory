@@ -23,12 +23,16 @@ const (
 	AutomationEntityAutomationEnumRunSync        AutomationEntityAutomationEnum = "run_sync"
 )
 
+func (e AutomationEntityAutomationEnum) ToPointer() *AutomationEntityAutomationEnum {
+	return &e
+}
+
 func (e *AutomationEntityAutomationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "create_folder":
 		fallthrough
 	case "request_file":
@@ -46,10 +50,10 @@ func (e *AutomationEntityAutomationEnum) UnmarshalJSON(data []byte) error {
 	case "as2_send":
 		fallthrough
 	case "run_sync":
-		*e = AutomationEntityAutomationEnum(s)
+		*e = AutomationEntityAutomationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutomationEntityAutomationEnum: %s", s)
+		return fmt.Errorf("invalid value for AutomationEntityAutomationEnum: %v", v)
 	}
 }
 
@@ -65,12 +69,16 @@ const (
 	AutomationEntityTriggerEnumAction         AutomationEntityTriggerEnum = "action"
 )
 
+func (e AutomationEntityTriggerEnum) ToPointer() *AutomationEntityTriggerEnum {
+	return &e
+}
+
 func (e *AutomationEntityTriggerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "realtime":
 		fallthrough
 	case "daily":
@@ -82,10 +90,10 @@ func (e *AutomationEntityTriggerEnum) UnmarshalJSON(data []byte) error {
 	case "email":
 		fallthrough
 	case "action":
-		*e = AutomationEntityTriggerEnum(s)
+		*e = AutomationEntityTriggerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutomationEntityTriggerEnum: %s", s)
+		return fmt.Errorf("invalid value for AutomationEntityTriggerEnum: %v", v)
 	}
 }
 
@@ -117,6 +125,8 @@ type AutomationEntity struct {
 	Name *string `json:"name,omitempty"`
 	// Path on which this Automation runs.  Supports globs.
 	Path *string `json:"path,omitempty"`
+	// If trigger type is `daily`, this specifies a day number to run in one of the supported intervals: `week`, `month`, `quarter`, `year`.
+	RecurringDay *int `json:"recurring_day,omitempty"`
 	// If trigger is `custom_schedule`, Custom schedule description for when the automation should be run.
 	Schedule map[string]interface{} `json:"schedule,omitempty"`
 	// Source Path

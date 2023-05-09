@@ -14,18 +14,22 @@ const (
 	DevEnvironmentSessionTypeEnumSSH DevEnvironmentSessionTypeEnum = "SSH"
 )
 
+func (e DevEnvironmentSessionTypeEnum) ToPointer() *DevEnvironmentSessionTypeEnum {
+	return &e
+}
+
 func (e *DevEnvironmentSessionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSM":
 		fallthrough
 	case "SSH":
-		*e = DevEnvironmentSessionTypeEnum(s)
+		*e = DevEnvironmentSessionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevEnvironmentSessionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevEnvironmentSessionTypeEnum: %v", v)
 	}
 }

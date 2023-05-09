@@ -15,19 +15,23 @@ const (
 	AccessTokenDetailsRealmEnumContributor AccessTokenDetailsRealmEnum = "contributor"
 )
 
+func (e AccessTokenDetailsRealmEnum) ToPointer() *AccessTokenDetailsRealmEnum {
+	return &e
+}
+
 func (e *AccessTokenDetailsRealmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "contributor":
-		*e = AccessTokenDetailsRealmEnum(s)
+		*e = AccessTokenDetailsRealmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessTokenDetailsRealmEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessTokenDetailsRealmEnum: %v", v)
 	}
 }
 

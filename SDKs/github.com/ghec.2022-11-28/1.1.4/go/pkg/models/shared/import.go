@@ -34,12 +34,16 @@ const (
 	ImportStatusEnumDetectionNeedsAuth     ImportStatusEnum = "detection_needs_auth"
 )
 
+func (e ImportStatusEnum) ToPointer() *ImportStatusEnum {
+	return &e
+}
+
 func (e *ImportStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "auth":
 		fallthrough
 	case "error":
@@ -71,10 +75,10 @@ func (e *ImportStatusEnum) UnmarshalJSON(data []byte) error {
 	case "detection_found_nothing":
 		fallthrough
 	case "detection_needs_auth":
-		*e = ImportStatusEnum(s)
+		*e = ImportStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportStatusEnum: %v", v)
 	}
 }
 

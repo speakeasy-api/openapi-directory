@@ -21,12 +21,16 @@ const (
 	AutoMLAlgorithmEnumFastai        AutoMLAlgorithmEnum = "fastai"
 )
 
+func (e AutoMLAlgorithmEnum) ToPointer() *AutoMLAlgorithmEnum {
+	return &e
+}
+
 func (e *AutoMLAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xgboost":
 		fallthrough
 	case "linear-learner":
@@ -44,9 +48,9 @@ func (e *AutoMLAlgorithmEnum) UnmarshalJSON(data []byte) error {
 	case "nn-torch":
 		fallthrough
 	case "fastai":
-		*e = AutoMLAlgorithmEnum(s)
+		*e = AutoMLAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoMLAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoMLAlgorithmEnum: %v", v)
 	}
 }

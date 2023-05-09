@@ -16,21 +16,25 @@ const (
 	ImportMappingRulesRequestRulesFormatEnumImportRulesFileFormatOratopgConfigFile        ImportMappingRulesRequestRulesFormatEnum = "IMPORT_RULES_FILE_FORMAT_ORATOPG_CONFIG_FILE"
 )
 
+func (e ImportMappingRulesRequestRulesFormatEnum) ToPointer() *ImportMappingRulesRequestRulesFormatEnum {
+	return &e
+}
+
 func (e *ImportMappingRulesRequestRulesFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORT_RULES_FILE_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "IMPORT_RULES_FILE_FORMAT_HARBOUR_BRIDGE_SESSION_FILE":
 		fallthrough
 	case "IMPORT_RULES_FILE_FORMAT_ORATOPG_CONFIG_FILE":
-		*e = ImportMappingRulesRequestRulesFormatEnum(s)
+		*e = ImportMappingRulesRequestRulesFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportMappingRulesRequestRulesFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportMappingRulesRequestRulesFormatEnum: %v", v)
 	}
 }
 

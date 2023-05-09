@@ -16,12 +16,16 @@ const (
 	StatefulActionEnumReject StatefulActionEnum = "REJECT"
 )
 
+func (e StatefulActionEnum) ToPointer() *StatefulActionEnum {
+	return &e
+}
+
 func (e *StatefulActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PASS":
 		fallthrough
 	case "DROP":
@@ -29,9 +33,9 @@ func (e *StatefulActionEnum) UnmarshalJSON(data []byte) error {
 	case "ALERT":
 		fallthrough
 	case "REJECT":
-		*e = StatefulActionEnum(s)
+		*e = StatefulActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatefulActionEnum: %s", s)
+		return fmt.Errorf("invalid value for StatefulActionEnum: %v", v)
 	}
 }

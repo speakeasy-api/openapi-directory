@@ -15,17 +15,21 @@ const (
 	GETRevokeDBSecurityGroupIngressActionEnumRevokeDbSecurityGroupIngress GETRevokeDBSecurityGroupIngressActionEnum = "RevokeDBSecurityGroupIngress"
 )
 
+func (e GETRevokeDBSecurityGroupIngressActionEnum) ToPointer() *GETRevokeDBSecurityGroupIngressActionEnum {
+	return &e
+}
+
 func (e *GETRevokeDBSecurityGroupIngressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RevokeDBSecurityGroupIngress":
-		*e = GETRevokeDBSecurityGroupIngressActionEnum(s)
+		*e = GETRevokeDBSecurityGroupIngressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRevokeDBSecurityGroupIngressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRevokeDBSecurityGroupIngressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRevokeDBSecurityGroupIngressVersionEnumTwoThousandAndThirteen0212 GETRevokeDBSecurityGroupIngressVersionEnum = "2013-02-12"
 )
 
+func (e GETRevokeDBSecurityGroupIngressVersionEnum) ToPointer() *GETRevokeDBSecurityGroupIngressVersionEnum {
+	return &e
+}
+
 func (e *GETRevokeDBSecurityGroupIngressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETRevokeDBSecurityGroupIngressVersionEnum(s)
+		*e = GETRevokeDBSecurityGroupIngressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRevokeDBSecurityGroupIngressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRevokeDBSecurityGroupIngressVersionEnum: %v", v)
 	}
 }
 

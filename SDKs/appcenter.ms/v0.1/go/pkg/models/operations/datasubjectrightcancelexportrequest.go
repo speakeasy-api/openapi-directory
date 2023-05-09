@@ -30,12 +30,16 @@ const (
 	DataSubjectRightCancelExportRequestDefaultApplicationJSONErrorCodeEnumTooManyRequests     DataSubjectRightCancelExportRequestDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DataSubjectRightCancelExportRequestDefaultApplicationJSONErrorCodeEnum) ToPointer() *DataSubjectRightCancelExportRequestDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DataSubjectRightCancelExportRequestDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -49,10 +53,10 @@ func (e *DataSubjectRightCancelExportRequestDefaultApplicationJSONErrorCodeEnum)
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DataSubjectRightCancelExportRequestDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DataSubjectRightCancelExportRequestDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSubjectRightCancelExportRequestDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSubjectRightCancelExportRequestDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -78,12 +82,16 @@ const (
 	DataSubjectRightCancelExportRequest503ApplicationJSONErrorCodeEnumTooManyRequests     DataSubjectRightCancelExportRequest503ApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DataSubjectRightCancelExportRequest503ApplicationJSONErrorCodeEnum) ToPointer() *DataSubjectRightCancelExportRequest503ApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DataSubjectRightCancelExportRequest503ApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -97,10 +105,10 @@ func (e *DataSubjectRightCancelExportRequest503ApplicationJSONErrorCodeEnum) Unm
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DataSubjectRightCancelExportRequest503ApplicationJSONErrorCodeEnum(s)
+		*e = DataSubjectRightCancelExportRequest503ApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSubjectRightCancelExportRequest503ApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSubjectRightCancelExportRequest503ApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

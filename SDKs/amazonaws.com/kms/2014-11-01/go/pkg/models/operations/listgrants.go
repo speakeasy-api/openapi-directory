@@ -16,17 +16,21 @@ const (
 	ListGrantsXAmzTargetEnumTrentServiceListGrants ListGrantsXAmzTargetEnum = "TrentService.ListGrants"
 )
 
+func (e ListGrantsXAmzTargetEnum) ToPointer() *ListGrantsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListGrantsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.ListGrants":
-		*e = ListGrantsXAmzTargetEnum(s)
+		*e = ListGrantsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListGrantsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListGrantsXAmzTargetEnum: %v", v)
 	}
 }
 

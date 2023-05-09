@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,15 +17,13 @@ func main() {
         }),
     )
 
-    req := operations.GetSearchVersionNumberAdditionalDataExtRequest{
-        Ext: "json",
-        Geometries: "corrupti",
-        GeometriesZoom: "13",
-        VersionNumber: "2",
-    }
-
     ctx := context.Background()
-    res, err := s.AdditionalData.GetSearchVersionNumberAdditionalDataExt(ctx, req)
+    res, err := s.AdditionalData.GetSearchVersionNumberAdditionalDataExt(ctx, operations.GetSearchVersionNumberAdditionalDataExtRequest{
+        Ext: operations.GetSearchVersionNumberAdditionalDataExtExtEnumJSON,
+        Geometries: "corrupti",
+        GeometriesZoom: operations.GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnumThirteen.ToPointer(),
+        VersionNumber: shared.VersionNumberEnumTwo,
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -15,17 +15,21 @@ const (
 	POSTDescribeFastSnapshotRestoresActionEnumDescribeFastSnapshotRestores POSTDescribeFastSnapshotRestoresActionEnum = "DescribeFastSnapshotRestores"
 )
 
+func (e POSTDescribeFastSnapshotRestoresActionEnum) ToPointer() *POSTDescribeFastSnapshotRestoresActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeFastSnapshotRestoresActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeFastSnapshotRestores":
-		*e = POSTDescribeFastSnapshotRestoresActionEnum(s)
+		*e = POSTDescribeFastSnapshotRestoresActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeFastSnapshotRestoresActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeFastSnapshotRestoresActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeFastSnapshotRestoresVersionEnumTwoThousandAndSixteen1115 POSTDescribeFastSnapshotRestoresVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeFastSnapshotRestoresVersionEnum) ToPointer() *POSTDescribeFastSnapshotRestoresVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeFastSnapshotRestoresVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeFastSnapshotRestoresVersionEnum(s)
+		*e = POSTDescribeFastSnapshotRestoresVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeFastSnapshotRestoresVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeFastSnapshotRestoresVersionEnum: %v", v)
 	}
 }
 

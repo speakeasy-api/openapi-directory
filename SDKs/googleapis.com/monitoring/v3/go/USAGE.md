@@ -2,22 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MonitoringProjectsAlertPoliciesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.MonitoringProjectsAlertPoliciesCreate(ctx, operations.MonitoringProjectsAlertPoliciesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AlertPolicy: &shared.AlertPolicy{
             AlertStrategy: &shared.AlertStrategy{
-                AutoClose: "provident",
+                AutoClose: sdk.String("provident"),
                 NotificationChannelStrategy: []shared.NotificationChannelStrategy{
                     shared.NotificationChannelStrategy{
                         NotificationChannelNames: []string{
@@ -26,7 +27,7 @@ func main() {
                             "corrupti",
                             "illum",
                         },
-                        RenotifyInterval: "vel",
+                        RenotifyInterval: sdk.String("vel"),
                     },
                     shared.NotificationChannelStrategy{
                         NotificationChannelNames: []string{
@@ -34,7 +35,7 @@ func main() {
                             "suscipit",
                             "iure",
                         },
-                        RenotifyInterval: "magnam",
+                        RenotifyInterval: sdk.String("magnam"),
                     },
                     shared.NotificationChannelStrategy{
                         NotificationChannelNames: []string{
@@ -43,50 +44,50 @@ func main() {
                             "tempora",
                             "suscipit",
                         },
-                        RenotifyInterval: "molestiae",
+                        RenotifyInterval: sdk.String("molestiae"),
                     },
                 },
                 NotificationRateLimit: &shared.NotificationRateLimit{
-                    Period: "minus",
+                    Period: sdk.String("minus"),
                 },
             },
-            Combiner: "AND_WITH_MATCHING_RESOURCE",
+            Combiner: shared.AlertPolicyCombinerEnumAndWithMatchingResource.ToPointer(),
             Conditions: []shared.Condition{
                 shared.Condition{
                     ConditionAbsent: &shared.MetricAbsence{
                         Aggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "excepturi",
-                                CrossSeriesReducer: "REDUCE_STDDEV",
+                                AlignmentPeriod: sdk.String("excepturi"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReduceStddev.ToPointer(),
                                 GroupByFields: []string{
                                     "temporibus",
                                     "ab",
                                     "quis",
                                     "veritatis",
                                 },
-                                PerSeriesAligner: "ALIGN_COUNT_FALSE",
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignCountFalse.ToPointer(),
                             },
                             shared.Aggregation{
-                                AlignmentPeriod: "perferendis",
-                                CrossSeriesReducer: "REDUCE_STDDEV",
+                                AlignmentPeriod: sdk.String("perferendis"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReduceStddev.ToPointer(),
                                 GroupByFields: []string{
                                     "sapiente",
                                     "quo",
                                     "odit",
                                     "at",
                                 },
-                                PerSeriesAligner: "ALIGN_PERCENTILE_50",
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignPercentile50.ToPointer(),
                             },
                         },
-                        Duration: "maiores",
-                        Filter: "molestiae",
+                        Duration: sdk.String("maiores"),
+                        Filter: sdk.String("molestiae"),
                         Trigger: &shared.Trigger{
-                            Count: 799159,
-                            Percent: 8009.11,
+                            Count: sdk.Int(799159),
+                            Percent: sdk.Float64(8009.11),
                         },
                     },
                     ConditionMatchedLog: &shared.LogMatch{
-                        Filter: "esse",
+                        Filter: sdk.String("esse"),
                         LabelExtractors: map[string]string{
                             "porro": "dolorum",
                             "dicta": "nam",
@@ -94,387 +95,300 @@ func main() {
                         },
                     },
                     ConditionMonitoringQueryLanguage: &shared.MonitoringQueryLanguageCondition{
-                        Duration: "fugit",
-                        EvaluationMissingData: "EVALUATION_MISSING_DATA_ACTIVE",
-                        Query: "hic",
+                        Duration: sdk.String("fugit"),
+                        EvaluationMissingData: shared.MonitoringQueryLanguageConditionEvaluationMissingDataEnumEvaluationMissingDataActive.ToPointer(),
+                        Query: sdk.String("hic"),
                         Trigger: &shared.Trigger{
-                            Count: 758616,
-                            Percent: 5218.48,
+                            Count: sdk.Int(758616),
+                            Percent: sdk.Float64(5218.48),
                         },
                     },
                     ConditionThreshold: &shared.MetricThreshold{
                         Aggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "commodi",
-                                CrossSeriesReducer: "REDUCE_COUNT",
+                                AlignmentPeriod: sdk.String("commodi"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReduceCount.ToPointer(),
                                 GroupByFields: []string{
                                     "qui",
                                     "impedit",
                                 },
-                                PerSeriesAligner: "ALIGN_PERCENTILE_99",
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignPercentile99.ToPointer(),
                             },
                         },
-                        Comparison: "COMPARISON_LT",
+                        Comparison: shared.MetricThresholdComparisonEnumComparisonLt.ToPointer(),
                         DenominatorAggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "excepturi",
-                                CrossSeriesReducer: "REDUCE_MEAN",
+                                AlignmentPeriod: sdk.String("excepturi"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReduceMean.ToPointer(),
                                 GroupByFields: []string{
                                     "ad",
                                 },
-                                PerSeriesAligner: "ALIGN_COUNT_TRUE",
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignCountTrue.ToPointer(),
                             },
                         },
-                        DenominatorFilter: "sed",
-                        Duration: "iste",
-                        EvaluationMissingData: "EVALUATION_MISSING_DATA_UNSPECIFIED",
-                        Filter: "natus",
+                        DenominatorFilter: sdk.String("sed"),
+                        Duration: sdk.String("iste"),
+                        EvaluationMissingData: shared.MetricThresholdEvaluationMissingDataEnumEvaluationMissingDataUnspecified.ToPointer(),
+                        Filter: sdk.String("natus"),
                         ForecastOptions: &shared.ForecastOptions{
-                            ForecastHorizon: "laboriosam",
+                            ForecastHorizon: sdk.String("laboriosam"),
                         },
-                        ThresholdValue: 9437.49,
+                        ThresholdValue: sdk.Float64(9437.49),
                         Trigger: &shared.Trigger{
-                            Count: 902599,
-                            Percent: 6818.2,
+                            Count: sdk.Int(902599),
+                            Percent: sdk.Float64(6818.2),
                         },
                     },
-                    DisplayName: "in",
-                    Name: "corporis",
+                    DisplayName: sdk.String("in"),
+                    Name: sdk.String("Sheryl Kertzmann"),
                 },
                 shared.Condition{
                     ConditionAbsent: &shared.MetricAbsence{
                         Aggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "iure",
-                                CrossSeriesReducer: "REDUCE_PERCENTILE_50",
+                                AlignmentPeriod: sdk.String("ipsa"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReducePercentile05.ToPointer(),
                                 GroupByFields: []string{
-                                    "architecto",
-                                    "ipsa",
-                                    "reiciendis",
+                                    "mollitia",
+                                    "laborum",
+                                    "dolores",
                                 },
-                                PerSeriesAligner: "ALIGN_COUNT_FALSE",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "mollitia",
-                                CrossSeriesReducer: "REDUCE_FRACTION_TRUE",
-                                GroupByFields: []string{
-                                    "dolorem",
-                                },
-                                PerSeriesAligner: "ALIGN_MAX",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "explicabo",
-                                CrossSeriesReducer: "REDUCE_PERCENTILE_99",
-                                GroupByFields: []string{
-                                    "omnis",
-                                    "nemo",
-                                },
-                                PerSeriesAligner: "ALIGN_MAX",
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignInterpolate.ToPointer(),
                             },
                         },
-                        Duration: "excepturi",
-                        Filter: "accusantium",
+                        Duration: sdk.String("corporis"),
+                        Filter: sdk.String("explicabo"),
                         Trigger: &shared.Trigger{
-                            Count: 438601,
-                            Percent: 6342.74,
+                            Count: sdk.Int(750686),
+                            Percent: sdk.Float64(3154.28),
                         },
                     },
                     ConditionMatchedLog: &shared.LogMatch{
-                        Filter: "doloribus",
+                        Filter: sdk.String("omnis"),
                         LabelExtractors: map[string]string{
-                            "architecto": "mollitia",
-                            "dolorem": "culpa",
-                            "consequuntur": "repellat",
-                            "mollitia": "occaecati",
+                            "minima": "excepturi",
+                            "accusantium": "iure",
                         },
                     },
                     ConditionMonitoringQueryLanguage: &shared.MonitoringQueryLanguageCondition{
-                        Duration: "numquam",
-                        EvaluationMissingData: "EVALUATION_MISSING_DATA_INACTIVE",
-                        Query: "quam",
+                        Duration: sdk.String("culpa"),
+                        EvaluationMissingData: shared.MonitoringQueryLanguageConditionEvaluationMissingDataEnumEvaluationMissingDataNoOp.ToPointer(),
+                        Query: sdk.String("sapiente"),
                         Trigger: &shared.Trigger{
-                            Count: 474697,
-                            Percent: 2444.25,
+                            Count: sdk.Int(102044),
+                            Percent: sdk.Float64(6527.9),
                         },
                     },
                     ConditionThreshold: &shared.MetricThreshold{
                         Aggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "quia",
-                                CrossSeriesReducer: "REDUCE_SUM",
+                                AlignmentPeriod: sdk.String("culpa"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReduceMin.ToPointer(),
                                 GroupByFields: []string{
-                                    "laborum",
+                                    "mollitia",
+                                    "occaecati",
+                                    "numquam",
+                                    "commodi",
                                 },
-                                PerSeriesAligner: "ALIGN_COUNT_FALSE",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "enim",
-                                CrossSeriesReducer: "REDUCE_MEAN",
-                                GroupByFields: []string{
-                                    "sequi",
-                                    "tenetur",
-                                    "ipsam",
-                                    "id",
-                                },
-                                PerSeriesAligner: "ALIGN_PERCENTILE_95",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "aut",
-                                CrossSeriesReducer: "REDUCE_MEAN",
-                                GroupByFields: []string{
-                                    "temporibus",
-                                    "laborum",
-                                    "quasi",
-                                },
-                                PerSeriesAligner: "ALIGN_PERCENT_CHANGE",
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignCount.ToPointer(),
                             },
                         },
-                        Comparison: "COMPARISON_NE",
+                        Comparison: shared.MetricThresholdComparisonEnumComparisonLt.ToPointer(),
                         DenominatorAggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "nihil",
-                                CrossSeriesReducer: "REDUCE_COUNT_TRUE",
+                                AlignmentPeriod: sdk.String("error"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReduceMin.ToPointer(),
                                 GroupByFields: []string{
-                                    "ipsa",
-                                    "omnis",
-                                    "voluptate",
-                                    "cum",
+                                    "vitae",
+                                    "laborum",
                                 },
-                                PerSeriesAligner: "ALIGN_NONE",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "doloremque",
-                                CrossSeriesReducer: "REDUCE_COUNT",
-                                GroupByFields: []string{
-                                    "maiores",
-                                    "dicta",
-                                },
-                                PerSeriesAligner: "ALIGN_MAX",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "dolore",
-                                CrossSeriesReducer: "REDUCE_COUNT",
-                                GroupByFields: []string{
-                                    "harum",
-                                },
-                                PerSeriesAligner: "ALIGN_MAX",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "accusamus",
-                                CrossSeriesReducer: "REDUCE_STDDEV",
-                                GroupByFields: []string{
-                                    "quae",
-                                    "ipsum",
-                                    "quidem",
-                                    "molestias",
-                                },
-                                PerSeriesAligner: "ALIGN_STDDEV",
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignCountFalse.ToPointer(),
                             },
                         },
-                        DenominatorFilter: "pariatur",
-                        Duration: "modi",
-                        EvaluationMissingData: "EVALUATION_MISSING_DATA_ACTIVE",
-                        Filter: "rem",
+                        DenominatorFilter: sdk.String("enim"),
+                        Duration: sdk.String("odit"),
+                        EvaluationMissingData: shared.MetricThresholdEvaluationMissingDataEnumEvaluationMissingDataNoOp.ToPointer(),
+                        Filter: sdk.String("sequi"),
                         ForecastOptions: &shared.ForecastOptions{
-                            ForecastHorizon: "voluptates",
+                            ForecastHorizon: sdk.String("tenetur"),
                         },
-                        ThresholdValue: 939.4,
+                        ThresholdValue: sdk.Float64(3687.25),
                         Trigger: &shared.Trigger{
-                            Count: 921158,
-                            Percent: 5759.47,
+                            Count: sdk.Int(662527),
+                            Percent: sdk.Float64(8209.94),
                         },
                     },
-                    DisplayName: "veritatis",
-                    Name: "itaque",
+                    DisplayName: sdk.String("aut"),
+                    Name: sdk.String("Sabrina Smitham DVM"),
                 },
                 shared.Condition{
                     ConditionAbsent: &shared.MetricAbsence{
                         Aggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "enim",
-                                CrossSeriesReducer: "REDUCE_NONE",
+                                AlignmentPeriod: sdk.String("vero"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReduceCount.ToPointer(),
                                 GroupByFields: []string{
-                                    "quibusdam",
-                                    "explicabo",
-                                    "deserunt",
+                                    "voluptatibus",
+                                    "ipsa",
+                                    "omnis",
                                 },
-                                PerSeriesAligner: "ALIGN_FRACTION_TRUE",
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignCount.ToPointer(),
                             },
                             shared.Aggregation{
-                                AlignmentPeriod: "quibusdam",
-                                CrossSeriesReducer: "REDUCE_SUM",
+                                AlignmentPeriod: sdk.String("cum"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReduceNone.ToPointer(),
                                 GroupByFields: []string{
+                                    "reprehenderit",
+                                },
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignMin.ToPointer(),
+                            },
+                            shared.Aggregation{
+                                AlignmentPeriod: sdk.String("maiores"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReduceMean.ToPointer(),
+                                GroupByFields: []string{
+                                    "dolore",
+                                    "iusto",
+                                },
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignRate.ToPointer(),
+                            },
+                            shared.Aggregation{
+                                AlignmentPeriod: sdk.String("harum"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReduceSum.ToPointer(),
+                                GroupByFields: []string{
+                                    "commodi",
+                                    "repudiandae",
+                                    "quae",
+                                    "ipsum",
+                                },
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignFractionTrue.ToPointer(),
+                            },
+                        },
+                        Duration: sdk.String("molestias"),
+                        Filter: sdk.String("excepturi"),
+                        Trigger: &shared.Trigger{
+                            Count: sdk.Int(865103),
+                            Percent: sdk.Float64(2653.89),
+                        },
+                    },
+                    ConditionMatchedLog: &shared.LogMatch{
+                        Filter: sdk.String("praesentium"),
+                        LabelExtractors: map[string]string{
+                            "voluptates": "quasi",
+                            "repudiandae": "sint",
+                            "veritatis": "itaque",
+                        },
+                    },
+                    ConditionMonitoringQueryLanguage: &shared.MonitoringQueryLanguageCondition{
+                        Duration: sdk.String("incidunt"),
+                        EvaluationMissingData: shared.MonitoringQueryLanguageConditionEvaluationMissingDataEnumEvaluationMissingDataInactive.ToPointer(),
+                        Query: sdk.String("consequatur"),
+                        Trigger: &shared.Trigger{
+                            Count: sdk.Int(667411),
+                            Percent: sdk.Float64(8423.42),
+                        },
+                    },
+                    ConditionThreshold: &shared.MetricThreshold{
+                        Aggregations: []shared.Aggregation{
+                            shared.Aggregation{
+                                AlignmentPeriod: sdk.String("deserunt"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReducePercentile99.ToPointer(),
+                                GroupByFields: []string{
+                                    "labore",
+                                    "modi",
                                     "qui",
                                     "aliquid",
                                 },
-                                PerSeriesAligner: "ALIGN_COUNT_TRUE",
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignCountTrue.ToPointer(),
                             },
                         },
-                        Duration: "quos",
-                        Filter: "perferendis",
-                        Trigger: &shared.Trigger{
-                            Count: 164940,
-                            Percent: 8289.4,
-                        },
-                    },
-                    ConditionMatchedLog: &shared.LogMatch{
-                        Filter: "ipsam",
-                        LabelExtractors: map[string]string{
-                            "fugit": "dolorum",
-                        },
-                    },
-                    ConditionMonitoringQueryLanguage: &shared.MonitoringQueryLanguageCondition{
-                        Duration: "excepturi",
-                        EvaluationMissingData: "EVALUATION_MISSING_DATA_INACTIVE",
-                        Query: "facilis",
-                        Trigger: &shared.Trigger{
-                            Count: 735194,
-                            Percent: 2884.76,
-                        },
-                    },
-                    ConditionThreshold: &shared.MetricThreshold{
-                        Aggregations: []shared.Aggregation{
-                            shared.Aggregation{
-                                AlignmentPeriod: "eum",
-                                CrossSeriesReducer: "REDUCE_MAX",
-                                GroupByFields: []string{
-                                    "sint",
-                                    "aliquid",
-                                    "provident",
-                                    "necessitatibus",
-                                },
-                                PerSeriesAligner: "ALIGN_STDDEV",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "officia",
-                                CrossSeriesReducer: "REDUCE_MAX",
-                                GroupByFields: []string{
-                                    "a",
-                                    "dolorum",
-                                    "in",
-                                    "in",
-                                },
-                                PerSeriesAligner: "ALIGN_PERCENTILE_50",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "maiores",
-                                CrossSeriesReducer: "REDUCE_FRACTION_TRUE",
-                                GroupByFields: []string{
-                                    "magnam",
-                                },
-                                PerSeriesAligner: "ALIGN_PERCENTILE_99",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "facere",
-                                CrossSeriesReducer: "REDUCE_STDDEV",
-                                GroupByFields: []string{
-                                    "laborum",
-                                    "accusamus",
-                                },
-                                PerSeriesAligner: "ALIGN_NEXT_OLDER",
-                            },
-                        },
-                        Comparison: "COMPARISON_LE",
+                        Comparison: shared.MetricThresholdComparisonEnumComparisonLt.ToPointer(),
                         DenominatorAggregations: []shared.Aggregation{
                             shared.Aggregation{
-                                AlignmentPeriod: "accusamus",
-                                CrossSeriesReducer: "REDUCE_PERCENTILE_05",
+                                AlignmentPeriod: sdk.String("magni"),
+                                CrossSeriesReducer: shared.AggregationCrossSeriesReducerEnumReducePercentile95.ToPointer(),
                                 GroupByFields: []string{
-                                    "provident",
-                                    "nam",
-                                    "id",
+                                    "alias",
+                                    "fugit",
                                 },
-                                PerSeriesAligner: "ALIGN_SUM",
-                            },
-                            shared.Aggregation{
-                                AlignmentPeriod: "deleniti",
-                                CrossSeriesReducer: "REDUCE_PERCENTILE_05",
-                                GroupByFields: []string{
-                                    "deserunt",
-                                },
-                                PerSeriesAligner: "ALIGN_MEAN",
+                                PerSeriesAligner: shared.AggregationPerSeriesAlignerEnumAlignCountFalse.ToPointer(),
                             },
                         },
-                        DenominatorFilter: "vel",
-                        Duration: "natus",
-                        EvaluationMissingData: "EVALUATION_MISSING_DATA_ACTIVE",
-                        Filter: "molestiae",
+                        DenominatorFilter: sdk.String("excepturi"),
+                        Duration: sdk.String("tempora"),
+                        EvaluationMissingData: shared.MetricThresholdEvaluationMissingDataEnumEvaluationMissingDataActive.ToPointer(),
+                        Filter: sdk.String("tempore"),
                         ForecastOptions: &shared.ForecastOptions{
-                            ForecastHorizon: "perferendis",
+                            ForecastHorizon: sdk.String("labore"),
                         },
-                        ThresholdValue: 4701.32,
+                        ThresholdValue: sdk.Float64(9621.89),
                         Trigger: &shared.Trigger{
-                            Count: 301575,
-                            Percent: 7160.75,
+                            Count: sdk.Int(433288),
+                            Percent: sdk.Float64(2487.53),
                         },
                     },
-                    DisplayName: "id",
-                    Name: "labore",
+                    DisplayName: sdk.String("eligendi"),
+                    Name: sdk.String("Gilbert Medhurst"),
                 },
             },
             CreationRecord: &shared.MutationRecord{
-                MutateTime: "labore",
-                MutatedBy: "suscipit",
+                MutateTime: sdk.String("officia"),
+                MutatedBy: sdk.String("dolor"),
             },
-            DisplayName: "natus",
+            DisplayName: sdk.String("debitis"),
             Documentation: &shared.Documentation{
-                Content: "nobis",
-                MimeType: "eum",
+                Content: sdk.String("a"),
+                MimeType: sdk.String("dolorum"),
             },
-            Enabled: false,
+            Enabled: sdk.Bool(false),
             MutationRecord: &shared.MutationRecord{
-                MutateTime: "vero",
-                MutatedBy: "aspernatur",
+                MutateTime: sdk.String("in"),
+                MutatedBy: sdk.String("in"),
             },
-            Name: "architecto",
+            Name: sdk.String("Mrs. Emilio Price"),
             NotificationChannels: []string{
-                "et",
-                "excepturi",
+                "ea",
+                "aliquid",
+                "laborum",
+                "accusamus",
             },
             UserLabels: map[string]string{
-                "provident": "quos",
-                "sint": "accusantium",
+                "occaecati": "enim",
             },
             Validity: &shared.Status{
-                Code: 653201,
+                Code: sdk.Int(881736),
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "ad": "eum",
-                        "dolor": "necessitatibus",
-                        "odit": "nemo",
+                        "provident": "nam",
+                        "id": "blanditiis",
+                        "deleniti": "sapiente",
                     },
                     map[string]interface{}{
-                        "iure": "doloribus",
+                        "deserunt": "nisi",
                     },
                     map[string]interface{}{
-                        "eius": "maxime",
-                        "deleniti": "facilis",
-                        "in": "architecto",
-                        "architecto": "repudiandae",
+                        "natus": "omnis",
+                        "molestiae": "perferendis",
                     },
                     map[string]interface{}{
-                        "expedita": "nihil",
-                        "repellat": "quibusdam",
+                        "magnam": "distinctio",
+                        "id": "labore",
                     },
                 },
-                Message: "sed",
+                Message: sdk.String("labore"),
             },
         },
-        AccessToken: "saepe",
-        Alt: "proto",
-        Callback: "accusantium",
-        Fields: "consequuntur",
-        Key: "praesentium",
-        Name: "natus",
-        OauthToken: "magni",
-        PrettyPrint: false,
-        QuotaUser: "sunt",
-        UploadType: "quo",
-        UploadProtocol: "illum",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.MonitoringProjectsAlertPoliciesCreate(ctx, req, operations.MonitoringProjectsAlertPoliciesCreateSecurity{
+        AccessToken: sdk.String("suscipit"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("nobis"),
+        Fields: sdk.String("eum"),
+        Key: sdk.String("vero"),
+        Name: "Ms. Julie Gusikowski",
+        OauthToken: sdk.String("provident"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("quos"),
+        UploadType: sdk.String("sint"),
+        UploadProtocol: sdk.String("accusantium"),
+    }, operations.MonitoringProjectsAlertPoliciesCreateSecurity{
         Option1: &operations.MonitoringProjectsAlertPoliciesCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

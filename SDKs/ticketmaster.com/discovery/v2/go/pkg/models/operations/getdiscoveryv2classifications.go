@@ -16,19 +16,23 @@ const (
 	GetDiscoveryV2ClassificationsIncludeLicensedContentEnumNo  GetDiscoveryV2ClassificationsIncludeLicensedContentEnum = " no"
 )
 
+func (e GetDiscoveryV2ClassificationsIncludeLicensedContentEnum) ToPointer() *GetDiscoveryV2ClassificationsIncludeLicensedContentEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2ClassificationsIncludeLicensedContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = GetDiscoveryV2ClassificationsIncludeLicensedContentEnum(s)
+		*e = GetDiscoveryV2ClassificationsIncludeLicensedContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2ClassificationsIncludeLicensedContentEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2ClassificationsIncludeLicensedContentEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	GetDiscoveryV2ClassificationsIncludeSpellcheckEnumNo  GetDiscoveryV2ClassificationsIncludeSpellcheckEnum = " no"
 )
 
+func (e GetDiscoveryV2ClassificationsIncludeSpellcheckEnum) ToPointer() *GetDiscoveryV2ClassificationsIncludeSpellcheckEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2ClassificationsIncludeSpellcheckEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = GetDiscoveryV2ClassificationsIncludeSpellcheckEnum(s)
+		*e = GetDiscoveryV2ClassificationsIncludeSpellcheckEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2ClassificationsIncludeSpellcheckEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2ClassificationsIncludeSpellcheckEnum: %v", v)
 	}
 }
 
@@ -65,21 +73,25 @@ const (
 	GetDiscoveryV2ClassificationsIncludeTestEnumOnly GetDiscoveryV2ClassificationsIncludeTestEnum = " only"
 )
 
+func (e GetDiscoveryV2ClassificationsIncludeTestEnum) ToPointer() *GetDiscoveryV2ClassificationsIncludeTestEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2ClassificationsIncludeTestEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
 		fallthrough
 	case " only":
-		*e = GetDiscoveryV2ClassificationsIncludeTestEnum(s)
+		*e = GetDiscoveryV2ClassificationsIncludeTestEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2ClassificationsIncludeTestEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2ClassificationsIncludeTestEnum: %v", v)
 	}
 }
 
@@ -93,12 +105,16 @@ const (
 	GetDiscoveryV2ClassificationsSourceEnumTmr          GetDiscoveryV2ClassificationsSourceEnum = " tmr"
 )
 
+func (e GetDiscoveryV2ClassificationsSourceEnum) ToPointer() *GetDiscoveryV2ClassificationsSourceEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2ClassificationsSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ticketmaster":
 		fallthrough
 	case " universe":
@@ -106,10 +122,10 @@ func (e *GetDiscoveryV2ClassificationsSourceEnum) UnmarshalJSON(data []byte) err
 	case " frontgate":
 		fallthrough
 	case " tmr":
-		*e = GetDiscoveryV2ClassificationsSourceEnum(s)
+		*e = GetDiscoveryV2ClassificationsSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2ClassificationsSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2ClassificationsSourceEnum: %v", v)
 	}
 }
 

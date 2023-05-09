@@ -37,7 +37,10 @@ func newAs2Partners(defaultClient, securityClient HTTPClient, serverURL, languag
 // Delete As2 Partner
 func (s *as2Partners) DeleteAs2PartnersID(ctx context.Context, request operations.DeleteAs2PartnersIDRequest) (*operations.DeleteAs2PartnersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/as2_partners/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/as2_partners/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *as2Partners) GetAs2Partners(ctx context.Context, request operations.Get
 // Show As2 Partner
 func (s *as2Partners) GetAs2PartnersID(ctx context.Context, request operations.GetAs2PartnersIDRequest) (*operations.GetAs2PartnersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/as2_partners/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/as2_partners/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *as2Partners) GetAs2PartnersID(ctx context.Context, request operations.G
 // Update As2 Partner
 func (s *as2Partners) PatchAs2PartnersID(ctx context.Context, request operations.PatchAs2PartnersIDRequest) (*operations.PatchAs2PartnersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/as2_partners/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/as2_partners/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

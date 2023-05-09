@@ -16,17 +16,21 @@ const (
 	VerifySoftwareTokenXAmzTargetEnumAwsCognitoIdentityProviderServiceVerifySoftwareToken VerifySoftwareTokenXAmzTargetEnum = "AWSCognitoIdentityProviderService.VerifySoftwareToken"
 )
 
+func (e VerifySoftwareTokenXAmzTargetEnum) ToPointer() *VerifySoftwareTokenXAmzTargetEnum {
+	return &e
+}
+
 func (e *VerifySoftwareTokenXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.VerifySoftwareToken":
-		*e = VerifySoftwareTokenXAmzTargetEnum(s)
+		*e = VerifySoftwareTokenXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifySoftwareTokenXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifySoftwareTokenXAmzTargetEnum: %v", v)
 	}
 }
 

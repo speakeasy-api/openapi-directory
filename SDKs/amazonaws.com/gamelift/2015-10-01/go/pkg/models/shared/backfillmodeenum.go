@@ -14,18 +14,22 @@ const (
 	BackfillModeEnumManual    BackfillModeEnum = "MANUAL"
 )
 
+func (e BackfillModeEnum) ToPointer() *BackfillModeEnum {
+	return &e
+}
+
 func (e *BackfillModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTOMATIC":
 		fallthrough
 	case "MANUAL":
-		*e = BackfillModeEnum(s)
+		*e = BackfillModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackfillModeEnum: %s", s)
+		return fmt.Errorf("invalid value for BackfillModeEnum: %v", v)
 	}
 }

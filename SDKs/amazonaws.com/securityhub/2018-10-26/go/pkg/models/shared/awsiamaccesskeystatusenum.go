@@ -14,18 +14,22 @@ const (
 	AwsIamAccessKeyStatusEnumInactive AwsIamAccessKeyStatusEnum = "Inactive"
 )
 
+func (e AwsIamAccessKeyStatusEnum) ToPointer() *AwsIamAccessKeyStatusEnum {
+	return &e
+}
+
 func (e *AwsIamAccessKeyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Inactive":
-		*e = AwsIamAccessKeyStatusEnum(s)
+		*e = AwsIamAccessKeyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AwsIamAccessKeyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AwsIamAccessKeyStatusEnum: %v", v)
 	}
 }

@@ -8,7 +8,8 @@ import (
 
 // ResourceInfo - A structure containing information about an Lake Formation resource.
 type ResourceInfo struct {
-	LastModified *time.Time `json:"LastModified,omitempty"`
-	ResourceArn  *string    `json:"ResourceArn,omitempty"`
-	RoleArn      *string    `json:"RoleArn,omitempty"`
+	LastModified   *time.Time `json:"LastModified,omitempty"`
+	ResourceArn    *string    `json:"ResourceArn,omitempty"`
+	RoleArn        *string    `json:"RoleArn,omitempty"`
+	WithFederation *bool      `json:"WithFederation,omitempty"`
 }

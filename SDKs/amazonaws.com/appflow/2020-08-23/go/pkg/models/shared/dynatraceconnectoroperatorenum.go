@@ -27,12 +27,16 @@ const (
 	DynatraceConnectorOperatorEnumNoOp                DynatraceConnectorOperatorEnum = "NO_OP"
 )
 
+func (e DynatraceConnectorOperatorEnum) ToPointer() *DynatraceConnectorOperatorEnum {
+	return &e
+}
+
 func (e *DynatraceConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION":
 		fallthrough
 	case "BETWEEN":
@@ -62,9 +66,9 @@ func (e *DynatraceConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATE_NUMERIC":
 		fallthrough
 	case "NO_OP":
-		*e = DynatraceConnectorOperatorEnum(s)
+		*e = DynatraceConnectorOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DynatraceConnectorOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for DynatraceConnectorOperatorEnum: %v", v)
 	}
 }

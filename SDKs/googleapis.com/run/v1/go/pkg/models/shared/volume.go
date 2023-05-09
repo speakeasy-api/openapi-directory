@@ -6,6 +6,8 @@ package shared
 type Volume struct {
 	// Not supported by Cloud Run. Adapts a ConfigMap into a volume. The contents of the target ConfigMap's Data field will be presented in a volume as files using the keys in the Data field as the file names, unless the items element is populated with specific mappings of keys to paths.
 	ConfigMap *ConfigMapVolumeSource `json:"configMap,omitempty"`
+	// Ephemeral storage which can be backed by real disks (HD, SSD), network storage or memory (i.e. tmpfs). For now only in memory (tmpfs) is supported. It is ephemeral in the sense that when the sandbox is taken down, the data is destroyed with it (it does not persist across sandbox runs).
+	EmptyDir *EmptyDirVolumeSource `json:"emptyDir,omitempty"`
 	// Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
 	Name *string `json:"name,omitempty"`
 	// A volume representing a secret stored in Google Secret Manager. The secret's value will be presented as the content of a file whose name is defined in the item path. If no items are defined, the name of the file is the secret_name. The contents of the target Secret's Data field will be presented in a volume as files using the keys in the Data field as the file names.

@@ -14,18 +14,22 @@ const (
 	LayerFailureCodeEnumMissingLayerDigest LayerFailureCodeEnum = "MissingLayerDigest"
 )
 
+func (e LayerFailureCodeEnum) ToPointer() *LayerFailureCodeEnum {
+	return &e
+}
+
 func (e *LayerFailureCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InvalidLayerDigest":
 		fallthrough
 	case "MissingLayerDigest":
-		*e = LayerFailureCodeEnum(s)
+		*e = LayerFailureCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LayerFailureCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for LayerFailureCodeEnum: %v", v)
 	}
 }

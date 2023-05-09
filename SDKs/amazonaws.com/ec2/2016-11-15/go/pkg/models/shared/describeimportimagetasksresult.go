@@ -16,21 +16,25 @@ const (
 	DescribeImportImageTasksResultImportImageTasksBootModeEnumUefiPreferred DescribeImportImageTasksResultImportImageTasksBootModeEnum = "uefi-preferred"
 )
 
+func (e DescribeImportImageTasksResultImportImageTasksBootModeEnum) ToPointer() *DescribeImportImageTasksResultImportImageTasksBootModeEnum {
+	return &e
+}
+
 func (e *DescribeImportImageTasksResultImportImageTasksBootModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy-bios":
 		fallthrough
 	case "uefi":
 		fallthrough
 	case "uefi-preferred":
-		*e = DescribeImportImageTasksResultImportImageTasksBootModeEnum(s)
+		*e = DescribeImportImageTasksResultImportImageTasksBootModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImportImageTasksResultImportImageTasksBootModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImportImageTasksResultImportImageTasksBootModeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	AutofitAutofitTypeEnumShapeAutofit           AutofitAutofitTypeEnum = "SHAPE_AUTOFIT"
 )
 
+func (e AutofitAutofitTypeEnum) ToPointer() *AutofitAutofitTypeEnum {
+	return &e
+}
+
 func (e *AutofitAutofitTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTOFIT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -30,10 +34,10 @@ func (e *AutofitAutofitTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TEXT_AUTOFIT":
 		fallthrough
 	case "SHAPE_AUTOFIT":
-		*e = AutofitAutofitTypeEnum(s)
+		*e = AutofitAutofitTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutofitAutofitTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutofitAutofitTypeEnum: %v", v)
 	}
 }
 

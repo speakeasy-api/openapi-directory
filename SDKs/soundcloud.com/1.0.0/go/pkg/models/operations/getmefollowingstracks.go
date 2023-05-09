@@ -18,6 +18,8 @@ type GetMeFollowingsTracksRequest struct {
 	// Number of results to return in the collection.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// Offset of first result. Deprecated, use `linked_partitioning` instead.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 }
 

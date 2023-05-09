@@ -13,23 +13,27 @@ type RetrieveAnAchPrenotificationRequest struct {
 	AchPrenotificationID string `pathParam:"style=simple,explode=false,name=ach_prenotification_id"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum = "429"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON13TypeEnumRateLimitedError RetrieveAnAchPrenotificationDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON13TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON13TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type RetrieveAnAchPrenotificationDefaultApplicationJSON13 struct {
 	Type       RetrieveAnAchPrenotificationDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnum = "403"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON12TypeEnumPrivateFeatureError RetrieveAnAchPrenotificationDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON12TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON12TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type RetrieveAnAchPrenotificationDefaultApplicationJSON12 struct {
 	Type   RetrieveAnAchPrenotificationDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnum = "404"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON11TypeEnumObjectNotFoundError RetrieveAnAchPrenotificationDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON11TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON11TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type RetrieveAnAchPrenotificationDefaultApplicationJSON11 struct {
 	Type   RetrieveAnAchPrenotificationDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnumFourHundred RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnum = "400"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnumFourHundred RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON10TypeEnumMalformedRequestError RetrieveAnAchPrenotificationDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON10TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON10TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type RetrieveAnAchPrenotificationDefaultApplicationJSON10 struct {
 	Type   RetrieveAnAchPrenotificationDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnumFourHundred RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnum = "400"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnumFourHundred RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON9TypeEnumInvalidParametersError RetrieveAnAchPrenotificationDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON9TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON9TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type RetrieveAnAchPrenotificationDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                      `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                      `json:"errors"`
 	Status RetrieveAnAchPrenotificationDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                        `json:"title"`
 	Type   RetrieveAnAchPrenotificationDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnum = "409"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON8TypeEnumInvalidOperationError RetrieveAnAchPrenotificationDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON8TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON8TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type RetrieveAnAchPrenotificationDefaultApplicationJSON8 struct {
 	Type   RetrieveAnAchPrenotificationDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnum = "401"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON7TypeEnumInvalidAPIKeyError RetrieveAnAchPrenotificationDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON7TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON7TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type RetrieveAnAchPrenotificationDefaultApplicationJSON7 struct {
 	Type   RetrieveAnAchPrenotificationDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnumFiveHundred RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnum = "500"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnumFiveHundred RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON6TypeEnumInternalServerError RetrieveAnAchPrenotificationDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON6TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON6TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type RetrieveAnAchPrenotificationDefaultApplicationJSON6 struct {
 	Type   RetrieveAnAchPrenotificationDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnum = "403"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON5TypeEnumInsufficientPermissionsError RetrieveAnAchPrenotificationDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON5TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON5TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type RetrieveAnAchPrenotificationDefaultApplicationJSON5 struct {
 	Type   RetrieveAnAchPrenotificationDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnum = "422"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError RetrieveAnAchPrenotificationDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON4TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON4TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type RetrieveAnAchPrenotificationDefaultApplicationJSON4 struct {
 	Type   RetrieveAnAchPrenotificationDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnum = "409"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON3TypeEnumIdempotencyConflictError RetrieveAnAchPrenotificationDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON3TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON3TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type RetrieveAnAchPrenotificationDefaultApplicationJSON3 struct {
 	Type   RetrieveAnAchPrenotificationDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnum = "403"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON2TypeEnumEnvironmentMismatchError RetrieveAnAchPrenotificationDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON2TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON2TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type RetrieveAnAchPrenotificationDefaultApplicationJSON2 struct {
 	Type   RetrieveAnAchPrenotificationDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnum string
+type RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnum int64
 
 const (
-	RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnum = "404"
+	RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	RetrieveAnAchPrenotificationDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError RetrieveAnAchPrenotificationDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e RetrieveAnAchPrenotificationDefaultApplicationJSON1TypeEnum) ToPointer() *RetrieveAnAchPrenotificationDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *RetrieveAnAchPrenotificationDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON1TypeEnum(s)
+		*e = RetrieveAnAchPrenotificationDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveAnAchPrenotificationDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

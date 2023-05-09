@@ -18,12 +18,16 @@ const (
 	PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringMethodEnumWardLinkage     PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringMethodEnum = "wardLinkage"
 )
 
+func (e PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringMethodEnum) ToPointer() *PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringMethodEnum {
+	return &e
+}
+
 func (e *PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "singleLinkage":
 		fallthrough
 	case "averageLinkage":
@@ -31,10 +35,10 @@ func (e *PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringMet
 	case "completeLinkage":
 		fallthrough
 	case "wardLinkage":
-		*e = PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringMethodEnum(s)
+		*e = PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringMethodEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringOrderingEnumOptimal PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringOrderingEnum = "optimal"
 )
 
+func (e PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringOrderingEnum) ToPointer() *PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringOrderingEnum {
+	return &e
+}
+
 func (e *PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringOrderingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "r-hclust":
 		fallthrough
 	case "optimal":
-		*e = PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringOrderingEnum(s)
+		*e = PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringOrderingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringOrderingEnum: %s", s)
+		return fmt.Errorf("invalid value for PostPortfolioOptimizationHierarchicalRiskParityRequestBodyClusteringOrderingEnum: %v", v)
 	}
 }
 

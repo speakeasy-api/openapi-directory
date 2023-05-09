@@ -19,21 +19,25 @@ const (
 	TestCardRangeCreationResultCreationResultCodeEnumError         TestCardRangeCreationResultCreationResultCodeEnum = "ERROR"
 )
 
+func (e TestCardRangeCreationResultCreationResultCodeEnum) ToPointer() *TestCardRangeCreationResultCreationResultCodeEnum {
+	return &e
+}
+
 func (e *TestCardRangeCreationResultCreationResultCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALREADY_EXISTS":
 		fallthrough
 	case "CREATED":
 		fallthrough
 	case "ERROR":
-		*e = TestCardRangeCreationResultCreationResultCodeEnum(s)
+		*e = TestCardRangeCreationResultCreationResultCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestCardRangeCreationResultCreationResultCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for TestCardRangeCreationResultCreationResultCodeEnum: %v", v)
 	}
 }
 

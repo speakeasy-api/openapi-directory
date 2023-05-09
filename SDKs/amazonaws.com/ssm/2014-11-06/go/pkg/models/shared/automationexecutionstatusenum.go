@@ -30,12 +30,16 @@ const (
 	AutomationExecutionStatusEnumCompletedWithFailure           AutomationExecutionStatusEnum = "CompletedWithFailure"
 )
 
+func (e AutomationExecutionStatusEnum) ToPointer() *AutomationExecutionStatusEnum {
+	return &e
+}
+
 func (e *AutomationExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "InProgress":
@@ -71,9 +75,9 @@ func (e *AutomationExecutionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CompletedWithSuccess":
 		fallthrough
 	case "CompletedWithFailure":
-		*e = AutomationExecutionStatusEnum(s)
+		*e = AutomationExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutomationExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AutomationExecutionStatusEnum: %v", v)
 	}
 }

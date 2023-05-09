@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // TpuProjectsLocationsAcceleratorTypesList - Lists accelerator types supported by this API.
 func (s *projects) TpuProjectsLocationsAcceleratorTypesList(ctx context.Context, request operations.TpuProjectsLocationsAcceleratorTypesListRequest, security operations.TpuProjectsLocationsAcceleratorTypesListSecurity) (*operations.TpuProjectsLocationsAcceleratorTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/acceleratorTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/acceleratorTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) TpuProjectsLocationsAcceleratorTypesList(ctx context.Context,
 // TpuProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) TpuProjectsLocationsList(ctx context.Context, request operations.TpuProjectsLocationsListRequest, security operations.TpuProjectsLocationsListSecurity) (*operations.TpuProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *projects) TpuProjectsLocationsList(ctx context.Context, request operati
 // TpuProjectsLocationsNodesCreate - Creates a node.
 func (s *projects) TpuProjectsLocationsNodesCreate(ctx context.Context, request operations.TpuProjectsLocationsNodesCreateRequest, security operations.TpuProjectsLocationsNodesCreateSecurity) (*operations.TpuProjectsLocationsNodesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/nodes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/nodes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NodeInput", "json")
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) TpuProjectsLocationsNodesCreate(ctx context.Context, request 
 // TpuProjectsLocationsNodesList - Lists nodes.
 func (s *projects) TpuProjectsLocationsNodesList(ctx context.Context, request operations.TpuProjectsLocationsNodesListRequest, security operations.TpuProjectsLocationsNodesListSecurity) (*operations.TpuProjectsLocationsNodesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/nodes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/nodes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *projects) TpuProjectsLocationsNodesList(ctx context.Context, request op
 // TpuProjectsLocationsNodesReimage - Reimages a node's OS.
 func (s *projects) TpuProjectsLocationsNodesReimage(ctx context.Context, request operations.TpuProjectsLocationsNodesReimageRequest, security operations.TpuProjectsLocationsNodesReimageSecurity) (*operations.TpuProjectsLocationsNodesReimageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:reimage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:reimage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReimageNodeRequest", "json")
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) TpuProjectsLocationsNodesReimage(ctx context.Context, request
 // TpuProjectsLocationsNodesStart - Starts a node.
 func (s *projects) TpuProjectsLocationsNodesStart(ctx context.Context, request operations.TpuProjectsLocationsNodesStartRequest, security operations.TpuProjectsLocationsNodesStartSecurity) (*operations.TpuProjectsLocationsNodesStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) TpuProjectsLocationsNodesStart(ctx context.Context, request o
 // TpuProjectsLocationsNodesStop - Stops a node, this operation is only available with single TPU nodes.
 func (s *projects) TpuProjectsLocationsNodesStop(ctx context.Context, request operations.TpuProjectsLocationsNodesStopRequest, security operations.TpuProjectsLocationsNodesStopSecurity) (*operations.TpuProjectsLocationsNodesStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) TpuProjectsLocationsNodesStop(ctx context.Context, request op
 // TpuProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) TpuProjectsLocationsOperationsCancel(ctx context.Context, request operations.TpuProjectsLocationsOperationsCancelRequest, security operations.TpuProjectsLocationsOperationsCancelSecurity) (*operations.TpuProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) TpuProjectsLocationsOperationsCancel(ctx context.Context, req
 // TpuProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) TpuProjectsLocationsOperationsDelete(ctx context.Context, request operations.TpuProjectsLocationsOperationsDeleteRequest, security operations.TpuProjectsLocationsOperationsDeleteSecurity) (*operations.TpuProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -494,7 +521,10 @@ func (s *projects) TpuProjectsLocationsOperationsDelete(ctx context.Context, req
 // TpuProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) TpuProjectsLocationsOperationsList(ctx context.Context, request operations.TpuProjectsLocationsOperationsListRequest, security operations.TpuProjectsLocationsOperationsListSecurity) (*operations.TpuProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +572,10 @@ func (s *projects) TpuProjectsLocationsOperationsList(ctx context.Context, reque
 // TpuProjectsLocationsTensorflowVersionsGet - Gets TensorFlow Version.
 func (s *projects) TpuProjectsLocationsTensorflowVersionsGet(ctx context.Context, request operations.TpuProjectsLocationsTensorflowVersionsGetRequest, security operations.TpuProjectsLocationsTensorflowVersionsGetSecurity) (*operations.TpuProjectsLocationsTensorflowVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -590,7 +623,10 @@ func (s *projects) TpuProjectsLocationsTensorflowVersionsGet(ctx context.Context
 // TpuProjectsLocationsTensorflowVersionsList - List TensorFlow versions supported by this API.
 func (s *projects) TpuProjectsLocationsTensorflowVersionsList(ctx context.Context, request operations.TpuProjectsLocationsTensorflowVersionsListRequest, security operations.TpuProjectsLocationsTensorflowVersionsListSecurity) (*operations.TpuProjectsLocationsTensorflowVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tensorflowVersions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tensorflowVersions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

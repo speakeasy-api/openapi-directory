@@ -17,12 +17,16 @@ const (
 	MaximumExecutionFrequencyEnumTwentyFourHours MaximumExecutionFrequencyEnum = "TwentyFour_Hours"
 )
 
+func (e MaximumExecutionFrequencyEnum) ToPointer() *MaximumExecutionFrequencyEnum {
+	return &e
+}
+
 func (e *MaximumExecutionFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "One_Hour":
 		fallthrough
 	case "Three_Hours":
@@ -32,9 +36,9 @@ func (e *MaximumExecutionFrequencyEnum) UnmarshalJSON(data []byte) error {
 	case "Twelve_Hours":
 		fallthrough
 	case "TwentyFour_Hours":
-		*e = MaximumExecutionFrequencyEnum(s)
+		*e = MaximumExecutionFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MaximumExecutionFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for MaximumExecutionFrequencyEnum: %v", v)
 	}
 }

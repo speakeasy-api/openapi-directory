@@ -13,16 +13,20 @@ const (
 	BlockerTypeEnumSchedule BlockerTypeEnum = "Schedule"
 )
 
+func (e BlockerTypeEnum) ToPointer() *BlockerTypeEnum {
+	return &e
+}
+
 func (e *BlockerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Schedule":
-		*e = BlockerTypeEnum(s)
+		*e = BlockerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BlockerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BlockerTypeEnum: %v", v)
 	}
 }

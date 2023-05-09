@@ -36,7 +36,10 @@ func newContent(defaultClient, securityClient HTTPClient, serverURL, language, s
 // that are not logged in i.e. this endpoint does not require authorisation
 func (s *content) GetAnonNextPlaybackItem(ctx context.Context, request operations.GetAnonNextPlaybackItemRequest) (*operations.GetAnonNextPlaybackItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/items/{itemId}/next", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/items/{itemId}/next", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -102,7 +105,10 @@ func (s *content) GetAnonNextPlaybackItem(ctx context.Context, request operation
 // GetItem - Returns the details of an item with the specified id.
 func (s *content) GetItem(ctx context.Context, request operations.GetItemRequest) (*operations.GetItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/items/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/items/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -174,7 +180,10 @@ func (s *content) GetItem(ctx context.Context, request operations.GetItemRequest
 // Returns 404 if no children found.
 func (s *content) GetItemChildrenList(ctx context.Context, request operations.GetItemChildrenListRequest) (*operations.GetItemChildrenListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/items/{id}/children", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/items/{id}/children", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -318,7 +327,10 @@ func (s *content) GetItemDownloadables(ctx context.Context, request operations.G
 // Note for now, due to the size of the list being unknown, only a single page will be returned.
 func (s *content) GetItemRelatedList(ctx context.Context, request operations.GetItemRelatedListRequest) (*operations.GetItemRelatedListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/items/{id}/related", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/items/{id}/related", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -460,7 +472,10 @@ func (s *content) GetItemsMediaClipFiles(ctx context.Context, request operations
 // GetList - Returns a list of items under the specified item list
 func (s *content) GetList(ctx context.Context, request operations.GetListRequest) (*operations.GetListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lists/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lists/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -606,7 +621,10 @@ func (s *content) GetLists(ctx context.Context, request operations.GetListsReque
 // If no files are found a 404 is returned.
 func (s *content) GetPublicItemMediaFiles(ctx context.Context, request operations.GetPublicItemMediaFilesRequest) (*operations.GetPublicItemMediaFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/items/{id}/videos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/items/{id}/videos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -760,7 +778,10 @@ func (s *content) GetSchedules(ctx context.Context, request operations.GetSchedu
 // GetPlansID - Returns the details of a Plan with the specified id.
 func (s *content) GetPlansID(ctx context.Context, request operations.GetPlansIDRequest) (*operations.GetPlansIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/plans/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/plans/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

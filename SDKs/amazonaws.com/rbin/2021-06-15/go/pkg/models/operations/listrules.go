@@ -18,21 +18,25 @@ const (
 	ListRulesRequestBodyLockStateEnumUnlocked      ListRulesRequestBodyLockStateEnum = "unlocked"
 )
 
+func (e ListRulesRequestBodyLockStateEnum) ToPointer() *ListRulesRequestBodyLockStateEnum {
+	return &e
+}
+
 func (e *ListRulesRequestBodyLockStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "locked":
 		fallthrough
 	case "pending_unlock":
 		fallthrough
 	case "unlocked":
-		*e = ListRulesRequestBodyLockStateEnum(s)
+		*e = ListRulesRequestBodyLockStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRulesRequestBodyLockStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRulesRequestBodyLockStateEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	ListRulesRequestBodyResourceTypeEnumEc2Image    ListRulesRequestBodyResourceTypeEnum = "EC2_IMAGE"
 )
 
+func (e ListRulesRequestBodyResourceTypeEnum) ToPointer() *ListRulesRequestBodyResourceTypeEnum {
+	return &e
+}
+
 func (e *ListRulesRequestBodyResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EBS_SNAPSHOT":
 		fallthrough
 	case "EC2_IMAGE":
-		*e = ListRulesRequestBodyResourceTypeEnum(s)
+		*e = ListRulesRequestBodyResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRulesRequestBodyResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRulesRequestBodyResourceTypeEnum: %v", v)
 	}
 }
 

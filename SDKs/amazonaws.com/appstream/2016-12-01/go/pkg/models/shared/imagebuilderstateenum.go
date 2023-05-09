@@ -23,12 +23,16 @@ const (
 	ImageBuilderStateEnumPendingQualification ImageBuilderStateEnum = "PENDING_QUALIFICATION"
 )
 
+func (e ImageBuilderStateEnum) ToPointer() *ImageBuilderStateEnum {
+	return &e
+}
+
 func (e *ImageBuilderStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "UPDATING_AGENT":
@@ -50,9 +54,9 @@ func (e *ImageBuilderStateEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATING":
 		fallthrough
 	case "PENDING_QUALIFICATION":
-		*e = ImageBuilderStateEnum(s)
+		*e = ImageBuilderStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageBuilderStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageBuilderStateEnum: %v", v)
 	}
 }

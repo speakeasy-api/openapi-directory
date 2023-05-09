@@ -16,17 +16,21 @@ const (
 	StopDeploymentXAmzTargetEnumCodeDeploy20141006StopDeployment StopDeploymentXAmzTargetEnum = "CodeDeploy_20141006.StopDeployment"
 )
 
+func (e StopDeploymentXAmzTargetEnum) ToPointer() *StopDeploymentXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopDeploymentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.StopDeployment":
-		*e = StopDeploymentXAmzTargetEnum(s)
+		*e = StopDeploymentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopDeploymentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopDeploymentXAmzTargetEnum: %v", v)
 	}
 }
 

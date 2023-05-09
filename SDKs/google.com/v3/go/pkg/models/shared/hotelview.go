@@ -66,12 +66,16 @@ const (
 	HotelViewDataIssuesEnumInvalidCheckoutFormat                    HotelViewDataIssuesEnum = "INVALID_CHECKOUT_FORMAT"
 )
 
+func (e HotelViewDataIssuesEnum) ToPointer() *HotelViewDataIssuesEnum {
+	return &e
+}
+
 func (e *HotelViewDataIssuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEED_DATA_ISSUE_UNSPECIFIED":
 		fallthrough
 	case "FEED_DATA_ISSUE_UNKNOWN":
@@ -179,10 +183,10 @@ func (e *HotelViewDataIssuesEnum) UnmarshalJSON(data []byte) error {
 	case "INVALID_CHECKIN_FORMAT":
 		fallthrough
 	case "INVALID_CHECKOUT_FORMAT":
-		*e = HotelViewDataIssuesEnum(s)
+		*e = HotelViewDataIssuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HotelViewDataIssuesEnum: %s", s)
+		return fmt.Errorf("invalid value for HotelViewDataIssuesEnum: %v", v)
 	}
 }
 
@@ -197,12 +201,16 @@ const (
 	HotelViewMatchStatusEnumMapOverlap             HotelViewMatchStatusEnum = "MAP_OVERLAP"
 )
 
+func (e HotelViewMatchStatusEnum) ToPointer() *HotelViewMatchStatusEnum {
+	return &e
+}
+
 func (e *HotelViewMatchStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MATCH_STATUS_UNSPECIFIED":
 		fallthrough
 	case "MATCH_STATUS_UNKNOWN":
@@ -212,10 +220,10 @@ func (e *HotelViewMatchStatusEnum) UnmarshalJSON(data []byte) error {
 	case "MATCHED":
 		fallthrough
 	case "MAP_OVERLAP":
-		*e = HotelViewMatchStatusEnum(s)
+		*e = HotelViewMatchStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HotelViewMatchStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HotelViewMatchStatusEnum: %v", v)
 	}
 }
 

@@ -33,12 +33,16 @@ const (
 	ReleasesGetReleaseUploadStatus404ApplicationJSONCodeEnumTooManyRequests     ReleasesGetReleaseUploadStatus404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesGetReleaseUploadStatus404ApplicationJSONCodeEnum) ToPointer() *ReleasesGetReleaseUploadStatus404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesGetReleaseUploadStatus404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *ReleasesGetReleaseUploadStatus404ApplicationJSONCodeEnum) UnmarshalJSON
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesGetReleaseUploadStatus404ApplicationJSONCodeEnum(s)
+		*e = ReleasesGetReleaseUploadStatus404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetReleaseUploadStatus404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetReleaseUploadStatus404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -78,12 +82,16 @@ const (
 	ReleasesGetReleaseUploadStatus400ApplicationJSONCodeEnumTooManyRequests     ReleasesGetReleaseUploadStatus400ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesGetReleaseUploadStatus400ApplicationJSONCodeEnum) ToPointer() *ReleasesGetReleaseUploadStatus400ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesGetReleaseUploadStatus400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -97,10 +105,10 @@ func (e *ReleasesGetReleaseUploadStatus400ApplicationJSONCodeEnum) UnmarshalJSON
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesGetReleaseUploadStatus400ApplicationJSONCodeEnum(s)
+		*e = ReleasesGetReleaseUploadStatus400ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetReleaseUploadStatus400ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetReleaseUploadStatus400ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -121,12 +129,16 @@ const (
 	ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnumError              ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnum = "error"
 )
 
+func (e ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnum) ToPointer() *ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnum {
+	return &e
+}
+
 func (e *ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uploadStarted":
 		fallthrough
 	case "uploadFinished":
@@ -136,10 +148,10 @@ func (e *ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnum) Unmar
 	case "malwareDetected":
 		fallthrough
 	case "error":
-		*e = ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnum(s)
+		*e = ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetReleaseUploadStatus200ApplicationJSONUploadStatusEnum: %v", v)
 	}
 }
 

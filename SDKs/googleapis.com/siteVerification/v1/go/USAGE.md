@@ -2,30 +2,28 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SiteVerificationWebResourceDeleteRequest{
-        Alt: "json",
-        Fields: "corrupti",
-        ID: "provident",
-        Key: "distinctio",
-        OauthToken: "quibusdam",
-        PrettyPrint: false,
-        QuotaUser: "unde",
-        UserIP: "nulla",
-    }
-
     ctx := context.Background()
-    res, err := s.WebResource.SiteVerificationWebResourceDelete(ctx, req, operations.SiteVerificationWebResourceDeleteSecurity{
+    res, err := s.WebResource.SiteVerificationWebResourceDelete(ctx, operations.SiteVerificationWebResourceDeleteRequest{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("corrupti"),
+        ID: "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
+        Key: sdk.String("perferendis"),
+        OauthToken: sdk.String("ipsam"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("repellendus"),
+        UserIP: sdk.String("sapiente"),
+    }, operations.SiteVerificationWebResourceDeleteSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

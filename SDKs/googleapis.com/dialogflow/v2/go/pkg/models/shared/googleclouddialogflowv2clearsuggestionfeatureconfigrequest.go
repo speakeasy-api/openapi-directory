@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestParticipantRoleEnumEndUser         GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestParticipantRoleEnum = "END_USER"
 )
 
+func (e GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestParticipantRoleEnum) ToPointer() *GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestParticipantRoleEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestParticipantRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLE_UNSPECIFIED":
 		fallthrough
 	case "HUMAN_AGENT":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestParticipantRo
 	case "AUTOMATED_AGENT":
 		fallthrough
 	case "END_USER":
-		*e = GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestParticipantRoleEnum(s)
+		*e = GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestParticipantRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestParticipantRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestParticipantRoleEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestSuggestionFeatureTypeEnumSmartReply        GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestSuggestionFeatureTypeEnum = "SMART_REPLY"
 )
 
+func (e GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestSuggestionFeatureTypeEnum) ToPointer() *GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestSuggestionFeatureTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestSuggestionFeatureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "ARTICLE_SUGGESTION":
@@ -60,10 +68,10 @@ func (e *GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestSuggestionFea
 	case "FAQ":
 		fallthrough
 	case "SMART_REPLY":
-		*e = GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestSuggestionFeatureTypeEnum(s)
+		*e = GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestSuggestionFeatureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestSuggestionFeatureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ClearSuggestionFeatureConfigRequestSuggestionFeatureTypeEnum: %v", v)
 	}
 }
 

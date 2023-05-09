@@ -16,17 +16,21 @@ const (
 	ListNamespacesXAmzTargetEnumRoute53AutoNamingV20170314ListNamespaces ListNamespacesXAmzTargetEnum = "Route53AutoNaming_v20170314.ListNamespaces"
 )
 
+func (e ListNamespacesXAmzTargetEnum) ToPointer() *ListNamespacesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListNamespacesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53AutoNaming_v20170314.ListNamespaces":
-		*e = ListNamespacesXAmzTargetEnum(s)
+		*e = ListNamespacesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListNamespacesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListNamespacesXAmzTargetEnum: %v", v)
 	}
 }
 

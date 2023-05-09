@@ -13,38 +13,36 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/deployment
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeploymentmanagerDeploymentsCancelPreviewRequest{
-        DollarXgafv: "2",
-        DeploymentsCancelPreviewRequest: &shared.DeploymentsCancelPreviewRequest{
-            Fingerprint: "provident",
-        },
-        AccessToken: "distinctio",
-        Alt: "proto",
-        Callback: "unde",
-        Deployment: "nulla",
-        Fields: "corrupti",
-        Key: "illum",
-        OauthToken: "vel",
-        PrettyPrint: false,
-        Project: "error",
-        QuotaUser: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.Deployments.DeploymentmanagerDeploymentsCancelPreview(ctx, req, operations.DeploymentmanagerDeploymentsCancelPreviewSecurity{
+    res, err := s.Deployments.DeploymentmanagerDeploymentsCancelPreview(ctx, operations.DeploymentmanagerDeploymentsCancelPreviewRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        DeploymentsCancelPreviewRequest: &shared.DeploymentsCancelPreviewRequest{
+            Fingerprint: sdk.String("provident"),
+        },
+        AccessToken: sdk.String("distinctio"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("unde"),
+        Deployment: "nulla",
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("illum"),
+        OauthToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        Project: "error",
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("iure"),
+    }, operations.DeploymentmanagerDeploymentsCancelPreviewSecurity{
         Option1: &operations.DeploymentmanagerDeploymentsCancelPreviewSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -65,38 +63,38 @@ func main() {
 ## Available Resources and Operations
 
 
-### Deployments
+### [Deployments](docs/deployments/README.md)
 
-* `DeploymentmanagerDeploymentsCancelPreview` - Cancels and removes the preview currently associated with the deployment.
-* `DeploymentmanagerDeploymentsDelete` - Deletes a deployment and all of the resources in the deployment.
-* `DeploymentmanagerDeploymentsGet` - Gets information about a specific deployment.
-* `DeploymentmanagerDeploymentsGetIamPolicy` - Gets the access control policy for a resource. May be empty if no such policy or resource exists.
-* `DeploymentmanagerDeploymentsInsert` - Creates a deployment and all of the resources described by the deployment manifest.
-* `DeploymentmanagerDeploymentsList` - Lists all deployments for a given project.
-* `DeploymentmanagerDeploymentsPatch` - Patches a deployment and all of the resources described by the deployment manifest.
-* `DeploymentmanagerDeploymentsSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy.
-* `DeploymentmanagerDeploymentsStop` - Stops an ongoing operation. This does not roll back any work that has already been completed, but prevents any new work from being started.
-* `DeploymentmanagerDeploymentsTestIamPermissions` - Returns permissions that a caller has on the specified resource.
-* `DeploymentmanagerDeploymentsUpdate` - Updates a deployment and all of the resources described by the deployment manifest.
+* [DeploymentmanagerDeploymentsCancelPreview](docs/deployments/README.md#deploymentmanagerdeploymentscancelpreview) - Cancels and removes the preview currently associated with the deployment.
+* [DeploymentmanagerDeploymentsDelete](docs/deployments/README.md#deploymentmanagerdeploymentsdelete) - Deletes a deployment and all of the resources in the deployment.
+* [DeploymentmanagerDeploymentsGet](docs/deployments/README.md#deploymentmanagerdeploymentsget) - Gets information about a specific deployment.
+* [DeploymentmanagerDeploymentsGetIamPolicy](docs/deployments/README.md#deploymentmanagerdeploymentsgetiampolicy) - Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+* [DeploymentmanagerDeploymentsInsert](docs/deployments/README.md#deploymentmanagerdeploymentsinsert) - Creates a deployment and all of the resources described by the deployment manifest.
+* [DeploymentmanagerDeploymentsList](docs/deployments/README.md#deploymentmanagerdeploymentslist) - Lists all deployments for a given project.
+* [DeploymentmanagerDeploymentsPatch](docs/deployments/README.md#deploymentmanagerdeploymentspatch) - Patches a deployment and all of the resources described by the deployment manifest.
+* [DeploymentmanagerDeploymentsSetIamPolicy](docs/deployments/README.md#deploymentmanagerdeploymentssetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy.
+* [DeploymentmanagerDeploymentsStop](docs/deployments/README.md#deploymentmanagerdeploymentsstop) - Stops an ongoing operation. This does not roll back any work that has already been completed, but prevents any new work from being started.
+* [DeploymentmanagerDeploymentsTestIamPermissions](docs/deployments/README.md#deploymentmanagerdeploymentstestiampermissions) - Returns permissions that a caller has on the specified resource.
+* [DeploymentmanagerDeploymentsUpdate](docs/deployments/README.md#deploymentmanagerdeploymentsupdate) - Updates a deployment and all of the resources described by the deployment manifest.
 
-### Manifests
+### [Manifests](docs/manifests/README.md)
 
-* `DeploymentmanagerManifestsGet` - Gets information about a specific manifest.
-* `DeploymentmanagerManifestsList` - Lists all manifests for a given deployment.
+* [DeploymentmanagerManifestsGet](docs/manifests/README.md#deploymentmanagermanifestsget) - Gets information about a specific manifest.
+* [DeploymentmanagerManifestsList](docs/manifests/README.md#deploymentmanagermanifestslist) - Lists all manifests for a given deployment.
 
-### Operations
+### [Operations](docs/operations/README.md)
 
-* `DeploymentmanagerOperationsGet` - Gets information about a specific operation.
-* `DeploymentmanagerOperationsList` - Lists all operations for a project.
+* [DeploymentmanagerOperationsGet](docs/operations/README.md#deploymentmanageroperationsget) - Gets information about a specific operation.
+* [DeploymentmanagerOperationsList](docs/operations/README.md#deploymentmanageroperationslist) - Lists all operations for a project.
 
-### Resources
+### [Resources](docs/resources/README.md)
 
-* `DeploymentmanagerResourcesGet` - Gets information about a single resource.
-* `DeploymentmanagerResourcesList` - Lists all resources in a given deployment.
+* [DeploymentmanagerResourcesGet](docs/resources/README.md#deploymentmanagerresourcesget) - Gets information about a single resource.
+* [DeploymentmanagerResourcesList](docs/resources/README.md#deploymentmanagerresourceslist) - Lists all resources in a given deployment.
 
-### Types
+### [Types](docs/types/README.md)
 
-* `DeploymentmanagerTypesList` - Lists all resource types for Deployment Manager.
+* [DeploymentmanagerTypesList](docs/types/README.md#deploymentmanagertypeslist) - Lists all resource types for Deployment Manager.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -127,7 +127,10 @@ func (s *hooks) CreateHook(ctx context.Context, request shared.CreateHookInput, 
 // Deletes hook configuration.
 func (s *hooks) DeletHook(ctx context.Context, request operations.DeletHookRequest, security operations.DeletHookSecurity) (*operations.DeletHookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/hooks/{hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/hooks/{hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -171,7 +174,7 @@ func (s *hooks) DeletHook(ctx context.Context, request operations.DeletHookReque
 
 // ListHook - Lists all hooks
 // Lists all the configured hooks in your account.
-func (s *hooks) ListHook(ctx context.Context) (*operations.ListHookResponse, error) {
+func (s *hooks) ListHook(ctx context.Context, security operations.ListHookSecurity) (*operations.ListHookResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/hooks"
 
@@ -180,7 +183,7 @@ func (s *hooks) ListHook(ctx context.Context) (*operations.ListHookResponse, err
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.securityClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -218,7 +221,10 @@ func (s *hooks) ListHook(ctx context.Context) (*operations.ListHookResponse, err
 // Updates a hook configuration.
 func (s *hooks) UpdateHook(ctx context.Context, request operations.UpdateHookRequest, security operations.UpdateHookSecurity) (*operations.UpdateHookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/hooks/{hook_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/hooks/{hook_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateHookInput", "form")
 	if err != nil {

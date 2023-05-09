@@ -13,16 +13,20 @@ const (
 	AlgorithmNameCloudRemovalEnumInterpolation AlgorithmNameCloudRemovalEnum = "INTERPOLATION"
 )
 
+func (e AlgorithmNameCloudRemovalEnum) ToPointer() *AlgorithmNameCloudRemovalEnum {
+	return &e
+}
+
 func (e *AlgorithmNameCloudRemovalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERPOLATION":
-		*e = AlgorithmNameCloudRemovalEnum(s)
+		*e = AlgorithmNameCloudRemovalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlgorithmNameCloudRemovalEnum: %s", s)
+		return fmt.Errorf("invalid value for AlgorithmNameCloudRemovalEnum: %v", v)
 	}
 }

@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getcountrym
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetcountrymatchRequest{
+    ctx := context.Background()
+    res, err := s.CountryMatchSimilarityKey.Getcountrymatch(ctx, operations.GetcountrymatchRequest{
         Country: "Malta",
         License: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.CountryMatchSimilarityKey.Getcountrymatch(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### CountryMatchSimilarityKey
+### [CountryMatchSimilarityKey](docs/countrymatchsimilaritykey/README.md)
 
-* `Getcountrymatch` - Gets a similarity key for matching purposes for country name data
+* [Getcountrymatch](docs/countrymatchsimilaritykey/README.md#getcountrymatch) - Gets a similarity key for matching purposes for country name data
 <!-- End SDK Available Operations -->
 
 ### Maturity

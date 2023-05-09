@@ -18,12 +18,16 @@ const (
 	BtPlanListItemIntervalEnumNone  BtPlanListItemIntervalEnum = "none"
 )
 
+func (e BtPlanListItemIntervalEnum) ToPointer() *BtPlanListItemIntervalEnum {
+	return &e
+}
+
 func (e *BtPlanListItemIntervalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "day":
 		fallthrough
 	case "week":
@@ -33,10 +37,10 @@ func (e *BtPlanListItemIntervalEnum) UnmarshalJSON(data []byte) error {
 	case "year":
 		fallthrough
 	case "none":
-		*e = BtPlanListItemIntervalEnum(s)
+		*e = BtPlanListItemIntervalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BtPlanListItemIntervalEnum: %s", s)
+		return fmt.Errorf("invalid value for BtPlanListItemIntervalEnum: %v", v)
 	}
 }
 

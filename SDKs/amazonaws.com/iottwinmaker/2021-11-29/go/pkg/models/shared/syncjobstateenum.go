@@ -17,12 +17,16 @@ const (
 	SyncJobStateEnumError        SyncJobStateEnum = "ERROR"
 )
 
+func (e SyncJobStateEnum) ToPointer() *SyncJobStateEnum {
+	return &e
+}
+
 func (e *SyncJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "INITIALIZING":
@@ -32,9 +36,9 @@ func (e *SyncJobStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "ERROR":
-		*e = SyncJobStateEnum(s)
+		*e = SyncJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SyncJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SyncJobStateEnum: %v", v)
 	}
 }

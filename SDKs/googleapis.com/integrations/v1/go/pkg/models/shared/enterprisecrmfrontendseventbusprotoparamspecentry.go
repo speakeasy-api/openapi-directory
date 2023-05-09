@@ -31,12 +31,16 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoParamSpecEntryDataTypeEnumJSONValue             EnterpriseCrmFrontendsEventbusProtoParamSpecEntryDataTypeEnum = "JSON_VALUE"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoParamSpecEntryDataTypeEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoParamSpecEntryDataTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoParamSpecEntryDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STRING_VALUE":
@@ -72,10 +76,10 @@ func (e *EnterpriseCrmFrontendsEventbusProtoParamSpecEntryDataTypeEnum) Unmarsha
 	case "NON_SERIALIZABLE_OBJECT":
 		fallthrough
 	case "JSON_VALUE":
-		*e = EnterpriseCrmFrontendsEventbusProtoParamSpecEntryDataTypeEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoParamSpecEntryDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoParamSpecEntryDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoParamSpecEntryDataTypeEnum: %v", v)
 	}
 }
 

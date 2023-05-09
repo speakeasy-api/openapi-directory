@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowCxV3NluSettingsModelTrainingModeEnumModelTrainingModeManual      GoogleCloudDialogflowCxV3NluSettingsModelTrainingModeEnum = "MODEL_TRAINING_MODE_MANUAL"
 )
 
+func (e GoogleCloudDialogflowCxV3NluSettingsModelTrainingModeEnum) ToPointer() *GoogleCloudDialogflowCxV3NluSettingsModelTrainingModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3NluSettingsModelTrainingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODEL_TRAINING_MODE_UNSPECIFIED":
 		fallthrough
 	case "MODEL_TRAINING_MODE_AUTOMATIC":
 		fallthrough
 	case "MODEL_TRAINING_MODE_MANUAL":
-		*e = GoogleCloudDialogflowCxV3NluSettingsModelTrainingModeEnum(s)
+		*e = GoogleCloudDialogflowCxV3NluSettingsModelTrainingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3NluSettingsModelTrainingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3NluSettingsModelTrainingModeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudDialogflowCxV3NluSettingsModelTypeEnumModelTypeAdvanced    GoogleCloudDialogflowCxV3NluSettingsModelTypeEnum = "MODEL_TYPE_ADVANCED"
 )
 
+func (e GoogleCloudDialogflowCxV3NluSettingsModelTypeEnum) ToPointer() *GoogleCloudDialogflowCxV3NluSettingsModelTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3NluSettingsModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODEL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MODEL_TYPE_STANDARD":
 		fallthrough
 	case "MODEL_TYPE_ADVANCED":
-		*e = GoogleCloudDialogflowCxV3NluSettingsModelTypeEnum(s)
+		*e = GoogleCloudDialogflowCxV3NluSettingsModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3NluSettingsModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3NluSettingsModelTypeEnum: %v", v)
 	}
 }
 

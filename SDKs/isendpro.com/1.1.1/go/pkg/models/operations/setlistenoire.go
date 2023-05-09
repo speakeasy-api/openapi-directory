@@ -16,17 +16,21 @@ const (
 	SetListeNoireSetlisteNoireEnumOne SetListeNoireSetlisteNoireEnum = "1"
 )
 
+func (e SetListeNoireSetlisteNoireEnum) ToPointer() *SetListeNoireSetlisteNoireEnum {
+	return &e
+}
+
 func (e *SetListeNoireSetlisteNoireEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
-		*e = SetListeNoireSetlisteNoireEnum(s)
+		*e = SetListeNoireSetlisteNoireEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetListeNoireSetlisteNoireEnum: %s", s)
+		return fmt.Errorf("invalid value for SetListeNoireSetlisteNoireEnum: %v", v)
 	}
 }
 

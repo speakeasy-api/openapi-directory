@@ -26,12 +26,16 @@ const (
 	MediaTypeEnumAvatar           MediaTypeEnum = "avatar"
 )
 
+func (e MediaTypeEnum) ToPointer() *MediaTypeEnum {
+	return &e
+}
+
 func (e *MediaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "youtube":
 		fallthrough
 	case "cdphotothread":
@@ -57,10 +61,10 @@ func (e *MediaTypeEnum) UnmarshalJSON(data []byte) error {
 	case "external-link":
 		fallthrough
 	case "avatar":
-		*e = MediaTypeEnum(s)
+		*e = MediaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaTypeEnum: %v", v)
 	}
 }
 

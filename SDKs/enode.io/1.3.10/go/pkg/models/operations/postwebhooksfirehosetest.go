@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type PostWebhooksFirehoseTestSecurity struct {
+	ClientAccessToken string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type PostWebhooksFirehoseTestResponse struct {
 	ContentType string
 	StatusCode  int

@@ -15,19 +15,23 @@ const (
 	BatchGetAmpUrlsRequestLookupStrategyEnumInIndexDoc   BatchGetAmpUrlsRequestLookupStrategyEnum = "IN_INDEX_DOC"
 )
 
+func (e BatchGetAmpUrlsRequestLookupStrategyEnum) ToPointer() *BatchGetAmpUrlsRequestLookupStrategyEnum {
+	return &e
+}
+
 func (e *BatchGetAmpUrlsRequestLookupStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FETCH_LIVE_DOC":
 		fallthrough
 	case "IN_INDEX_DOC":
-		*e = BatchGetAmpUrlsRequestLookupStrategyEnum(s)
+		*e = BatchGetAmpUrlsRequestLookupStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetAmpUrlsRequestLookupStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetAmpUrlsRequestLookupStrategyEnum: %v", v)
 	}
 }
 

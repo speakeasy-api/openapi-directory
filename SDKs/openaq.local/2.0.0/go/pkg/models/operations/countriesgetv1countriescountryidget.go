@@ -20,12 +20,16 @@ const (
 	CountriesGetV1CountriesCountryIDGetOrderByCountriesOrderEnumCount        CountriesGetV1CountriesCountryIDGetOrderByCountriesOrderEnum = "count"
 )
 
+func (e CountriesGetV1CountriesCountryIDGetOrderByCountriesOrderEnum) ToPointer() *CountriesGetV1CountriesCountryIDGetOrderByCountriesOrderEnum {
+	return &e
+}
+
 func (e *CountriesGetV1CountriesCountryIDGetOrderByCountriesOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "country":
 		fallthrough
 	case "firstUpdated":
@@ -35,10 +39,10 @@ func (e *CountriesGetV1CountriesCountryIDGetOrderByCountriesOrderEnum) Unmarshal
 	case "locations":
 		fallthrough
 	case "count":
-		*e = CountriesGetV1CountriesCountryIDGetOrderByCountriesOrderEnum(s)
+		*e = CountriesGetV1CountriesCountryIDGetOrderByCountriesOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CountriesGetV1CountriesCountryIDGetOrderByCountriesOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for CountriesGetV1CountriesCountryIDGetOrderByCountriesOrderEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	CountriesGetV1CountriesCountryIDGetSortSortEnumDesc CountriesGetV1CountriesCountryIDGetSortSortEnum = "desc"
 )
 
+func (e CountriesGetV1CountriesCountryIDGetSortSortEnum) ToPointer() *CountriesGetV1CountriesCountryIDGetSortSortEnum {
+	return &e
+}
+
 func (e *CountriesGetV1CountriesCountryIDGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = CountriesGetV1CountriesCountryIDGetSortSortEnum(s)
+		*e = CountriesGetV1CountriesCountryIDGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CountriesGetV1CountriesCountryIDGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for CountriesGetV1CountriesCountryIDGetSortSortEnum: %v", v)
 	}
 }
 

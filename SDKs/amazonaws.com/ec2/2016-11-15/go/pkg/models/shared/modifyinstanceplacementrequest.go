@@ -15,19 +15,23 @@ const (
 	ModifyInstancePlacementRequestAffinityEnumHost    ModifyInstancePlacementRequestAffinityEnum = "host"
 )
 
+func (e ModifyInstancePlacementRequestAffinityEnum) ToPointer() *ModifyInstancePlacementRequestAffinityEnum {
+	return &e
+}
+
 func (e *ModifyInstancePlacementRequestAffinityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "host":
-		*e = ModifyInstancePlacementRequestAffinityEnum(s)
+		*e = ModifyInstancePlacementRequestAffinityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyInstancePlacementRequestAffinityEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyInstancePlacementRequestAffinityEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	ModifyInstancePlacementRequestTenancyEnumHost      ModifyInstancePlacementRequestTenancyEnum = "host"
 )
 
+func (e ModifyInstancePlacementRequestTenancyEnum) ToPointer() *ModifyInstancePlacementRequestTenancyEnum {
+	return &e
+}
+
 func (e *ModifyInstancePlacementRequestTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = ModifyInstancePlacementRequestTenancyEnum(s)
+		*e = ModifyInstancePlacementRequestTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyInstancePlacementRequestTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyInstancePlacementRequestTenancyEnum: %v", v)
 	}
 }
 

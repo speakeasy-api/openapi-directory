@@ -16,17 +16,21 @@ const (
 	GetSubscriptionStateXAmzTargetEnumAwsShield20160616GetSubscriptionState GetSubscriptionStateXAmzTargetEnum = "AWSShield_20160616.GetSubscriptionState"
 )
 
+func (e GetSubscriptionStateXAmzTargetEnum) ToPointer() *GetSubscriptionStateXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSubscriptionStateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.GetSubscriptionState":
-		*e = GetSubscriptionStateXAmzTargetEnum(s)
+		*e = GetSubscriptionStateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSubscriptionStateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSubscriptionStateXAmzTargetEnum: %v", v)
 	}
 }
 

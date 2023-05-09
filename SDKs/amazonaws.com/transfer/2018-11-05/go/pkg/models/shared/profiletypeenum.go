@@ -14,18 +14,22 @@ const (
 	ProfileTypeEnumPartner ProfileTypeEnum = "PARTNER"
 )
 
+func (e ProfileTypeEnum) ToPointer() *ProfileTypeEnum {
+	return &e
+}
+
 func (e *ProfileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCAL":
 		fallthrough
 	case "PARTNER":
-		*e = ProfileTypeEnum(s)
+		*e = ProfileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProfileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProfileTypeEnum: %v", v)
 	}
 }

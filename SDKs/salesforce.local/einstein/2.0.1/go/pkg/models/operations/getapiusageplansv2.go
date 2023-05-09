@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetAPIUsagePlansV2Security struct {
+	BearerToken string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type GetAPIUsagePlansV2Response struct {
 	// api usage
 	APIUsageList *shared.APIUsageList

@@ -17,12 +17,16 @@ const (
 	ConnectSettingsBackendTypeEnumExternal                  ConnectSettingsBackendTypeEnum = "EXTERNAL"
 )
 
+func (e ConnectSettingsBackendTypeEnum) ToPointer() *ConnectSettingsBackendTypeEnum {
+	return &e
+}
+
 func (e *ConnectSettingsBackendTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_BACKEND_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FIRST_GEN":
@@ -30,10 +34,10 @@ func (e *ConnectSettingsBackendTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SECOND_GEN":
 		fallthrough
 	case "EXTERNAL":
-		*e = ConnectSettingsBackendTypeEnum(s)
+		*e = ConnectSettingsBackendTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectSettingsBackendTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectSettingsBackendTypeEnum: %v", v)
 	}
 }
 
@@ -56,6 +60,7 @@ const (
 	ConnectSettingsDatabaseVersionEnumPostgres12                    ConnectSettingsDatabaseVersionEnum = "POSTGRES_12"
 	ConnectSettingsDatabaseVersionEnumPostgres13                    ConnectSettingsDatabaseVersionEnum = "POSTGRES_13"
 	ConnectSettingsDatabaseVersionEnumPostgres14                    ConnectSettingsDatabaseVersionEnum = "POSTGRES_14"
+	ConnectSettingsDatabaseVersionEnumPostgres15                    ConnectSettingsDatabaseVersionEnum = "POSTGRES_15"
 	ConnectSettingsDatabaseVersionEnumMysql80                       ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0"
 	ConnectSettingsDatabaseVersionEnumMysql8018                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_18"
 	ConnectSettingsDatabaseVersionEnumMysql8026                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_26"
@@ -65,18 +70,26 @@ const (
 	ConnectSettingsDatabaseVersionEnumMysql8030                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_30"
 	ConnectSettingsDatabaseVersionEnumMysql8031                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_31"
 	ConnectSettingsDatabaseVersionEnumMysql8032                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_32"
+	ConnectSettingsDatabaseVersionEnumMysql8033                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_33"
+	ConnectSettingsDatabaseVersionEnumMysql8034                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_34"
+	ConnectSettingsDatabaseVersionEnumMysql8035                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_35"
+	ConnectSettingsDatabaseVersionEnumMysql8036                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_36"
 	ConnectSettingsDatabaseVersionEnumSqlserver2019Standard         ConnectSettingsDatabaseVersionEnum = "SQLSERVER_2019_STANDARD"
 	ConnectSettingsDatabaseVersionEnumSqlserver2019Enterprise       ConnectSettingsDatabaseVersionEnum = "SQLSERVER_2019_ENTERPRISE"
 	ConnectSettingsDatabaseVersionEnumSqlserver2019Express          ConnectSettingsDatabaseVersionEnum = "SQLSERVER_2019_EXPRESS"
 	ConnectSettingsDatabaseVersionEnumSqlserver2019Web              ConnectSettingsDatabaseVersionEnum = "SQLSERVER_2019_WEB"
 )
 
+func (e ConnectSettingsDatabaseVersionEnum) ToPointer() *ConnectSettingsDatabaseVersionEnum {
+	return &e
+}
+
 func (e *ConnectSettingsDatabaseVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_DATABASE_VERSION_UNSPECIFIED":
 		fallthrough
 	case "MYSQL_5_1":
@@ -107,6 +120,8 @@ func (e *ConnectSettingsDatabaseVersionEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "POSTGRES_14":
 		fallthrough
+	case "POSTGRES_15":
+		fallthrough
 	case "MYSQL_8_0":
 		fallthrough
 	case "MYSQL_8_0_18":
@@ -125,6 +140,14 @@ func (e *ConnectSettingsDatabaseVersionEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "MYSQL_8_0_32":
 		fallthrough
+	case "MYSQL_8_0_33":
+		fallthrough
+	case "MYSQL_8_0_34":
+		fallthrough
+	case "MYSQL_8_0_35":
+		fallthrough
+	case "MYSQL_8_0_36":
+		fallthrough
 	case "SQLSERVER_2019_STANDARD":
 		fallthrough
 	case "SQLSERVER_2019_ENTERPRISE":
@@ -132,10 +155,10 @@ func (e *ConnectSettingsDatabaseVersionEnum) UnmarshalJSON(data []byte) error {
 	case "SQLSERVER_2019_EXPRESS":
 		fallthrough
 	case "SQLSERVER_2019_WEB":
-		*e = ConnectSettingsDatabaseVersionEnum(s)
+		*e = ConnectSettingsDatabaseVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectSettingsDatabaseVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectSettingsDatabaseVersionEnum: %v", v)
 	}
 }
 

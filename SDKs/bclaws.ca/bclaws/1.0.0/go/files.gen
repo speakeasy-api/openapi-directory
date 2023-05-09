@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -21,4 +22,8 @@ pkg/models/operations/getdocumentidaspectidcivixindexidcivixdocumentidsearchsear
 pkg/models/operations/getdocumentidaspectidcivixindexidcivixdocumentidxml.go
 pkg/models/operations/getdocumentidaspectidcivixindexidcivixdocumentidxmlsearchsearchstring.go
 pkg/models/operations/getsearchaspectidfullsearch.go
+docs/sdk/README.md
+docs/content/README.md
+docs/document/README.md
+docs/search/README.md
 USAGE.md

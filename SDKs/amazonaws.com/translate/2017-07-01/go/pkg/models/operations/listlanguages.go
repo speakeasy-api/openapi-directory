@@ -16,17 +16,21 @@ const (
 	ListLanguagesXAmzTargetEnumAwsShineFrontendService20170701ListLanguages ListLanguagesXAmzTargetEnum = "AWSShineFrontendService_20170701.ListLanguages"
 )
 
+func (e ListLanguagesXAmzTargetEnum) ToPointer() *ListLanguagesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListLanguagesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShineFrontendService_20170701.ListLanguages":
-		*e = ListLanguagesXAmzTargetEnum(s)
+		*e = ListLanguagesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLanguagesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLanguagesXAmzTargetEnum: %v", v)
 	}
 }
 

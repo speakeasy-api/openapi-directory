@@ -15,20 +15,24 @@ const (
 	ChatTokenCapabilityEnumDeleteMessage  ChatTokenCapabilityEnum = "DELETE_MESSAGE"
 )
 
+func (e ChatTokenCapabilityEnum) ToPointer() *ChatTokenCapabilityEnum {
+	return &e
+}
+
 func (e *ChatTokenCapabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEND_MESSAGE":
 		fallthrough
 	case "DISCONNECT_USER":
 		fallthrough
 	case "DELETE_MESSAGE":
-		*e = ChatTokenCapabilityEnum(s)
+		*e = ChatTokenCapabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChatTokenCapabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ChatTokenCapabilityEnum: %v", v)
 	}
 }

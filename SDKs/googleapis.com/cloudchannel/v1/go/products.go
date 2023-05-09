@@ -83,7 +83,10 @@ func (s *products) CloudchannelProductsList(ctx context.Context, request operati
 // CloudchannelProductsSkusList - Lists the SKUs for a product the reseller is authorized to sell. Possible error codes: * INVALID_ARGUMENT: Required request parameters are missing or invalid.
 func (s *products) CloudchannelProductsSkusList(ctx context.Context, request operations.CloudchannelProductsSkusListRequest, security operations.CloudchannelProductsSkusListSecurity) (*operations.CloudchannelProductsSkusListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/skus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/skus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

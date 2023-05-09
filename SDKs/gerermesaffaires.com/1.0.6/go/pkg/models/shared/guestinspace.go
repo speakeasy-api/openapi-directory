@@ -15,21 +15,25 @@ const (
 	GuestInSpaceClientManagementEnumAdn     GuestInSpaceClientManagementEnum = "adn"
 )
 
+func (e GuestInSpaceClientManagementEnum) ToPointer() *GuestInSpaceClientManagementEnum {
+	return &e
+}
+
 func (e *GuestInSpaceClientManagementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no":
 		fallthrough
 	case "manager":
 		fallthrough
 	case "adn":
-		*e = GuestInSpaceClientManagementEnum(s)
+		*e = GuestInSpaceClientManagementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestInSpaceClientManagementEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestInSpaceClientManagementEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	GuestInSpaceFoldersRightEnumWrite GuestInSpaceFoldersRightEnum = "write"
 )
 
+func (e GuestInSpaceFoldersRightEnum) ToPointer() *GuestInSpaceFoldersRightEnum {
+	return &e
+}
+
 func (e *GuestInSpaceFoldersRightEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = GuestInSpaceFoldersRightEnum(s)
+		*e = GuestInSpaceFoldersRightEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestInSpaceFoldersRightEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestInSpaceFoldersRightEnum: %v", v)
 	}
 }
 
@@ -71,12 +79,16 @@ const (
 	GuestInSpacePlayerEnumCollaborator GuestInSpacePlayerEnum = "collaborator"
 )
 
+func (e GuestInSpacePlayerEnum) ToPointer() *GuestInSpacePlayerEnum {
+	return &e
+}
+
 func (e *GuestInSpacePlayerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "guest":
 		fallthrough
 	case "owner":
@@ -86,10 +98,10 @@ func (e *GuestInSpacePlayerEnum) UnmarshalJSON(data []byte) error {
 	case "assistant":
 		fallthrough
 	case "collaborator":
-		*e = GuestInSpacePlayerEnum(s)
+		*e = GuestInSpacePlayerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuestInSpacePlayerEnum: %s", s)
+		return fmt.Errorf("invalid value for GuestInSpacePlayerEnum: %v", v)
 	}
 }
 

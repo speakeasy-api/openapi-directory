@@ -47,7 +47,10 @@ func newRefs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // refs/heads).
 func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsBranchesName(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -97,7 +100,10 @@ func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsBranchesName(ctx context.C
 // The tag name should not include any prefixes (e.g. refs/tags).
 func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -156,7 +162,10 @@ func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Conte
 // Bitbucket will apply natural sorting and interpret numerical values as numbers instead of strings.
 func (s *refs) GetRepositoriesWorkspaceRepoSlugRefs(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsRequest, security operations.GetRepositoriesWorkspaceRepoSlugRefsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugRefsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -355,7 +364,10 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefs(ctx context.Context, request
 //	Bitbucket will apply natural sorting and interpret numerical values as numbers instead of strings.
 func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsBranches(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest, security operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -536,7 +548,10 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsBranches(ctx context.Context,
 //	refs/heads).
 func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsBranchesName(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest, security operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -603,7 +618,10 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsBranchesName(ctx context.Cont
 // Bitbucket will apply natural sorting and interpret numerical values as numbers instead of strings.
 func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsTags(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsTagsRequest, security operations.GetRepositoriesWorkspaceRepoSlugRefsTagsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugRefsTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -791,7 +809,10 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsTags(ctx context.Context, req
 // ```
 func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameRequest, security operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -874,7 +895,10 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Context,
 // approach.
 func (s *refs) PostRepositoriesWorkspaceRepoSlugRefsBranches(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesRequest, security operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/branches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -951,7 +975,10 @@ func (s *refs) PostRepositoriesWorkspaceRepoSlugRefsBranches(ctx context.Context
 // ambiguous. Using a full commit hash is the preferred approach.
 func (s *refs) PostRepositoriesWorkspaceRepoSlugRefsTags(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugRefsTagsRequest, security operations.PostRepositoriesWorkspaceRepoSlugRefsTagsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugRefsTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

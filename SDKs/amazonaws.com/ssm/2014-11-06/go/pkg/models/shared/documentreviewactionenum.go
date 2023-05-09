@@ -16,12 +16,16 @@ const (
 	DocumentReviewActionEnumReject        DocumentReviewActionEnum = "Reject"
 )
 
+func (e DocumentReviewActionEnum) ToPointer() *DocumentReviewActionEnum {
+	return &e
+}
+
 func (e *DocumentReviewActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SendForReview":
 		fallthrough
 	case "UpdateReview":
@@ -29,9 +33,9 @@ func (e *DocumentReviewActionEnum) UnmarshalJSON(data []byte) error {
 	case "Approve":
 		fallthrough
 	case "Reject":
-		*e = DocumentReviewActionEnum(s)
+		*e = DocumentReviewActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentReviewActionEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentReviewActionEnum: %v", v)
 	}
 }

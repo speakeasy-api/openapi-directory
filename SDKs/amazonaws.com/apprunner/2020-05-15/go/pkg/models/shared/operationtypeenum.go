@@ -18,12 +18,16 @@ const (
 	OperationTypeEnumUpdateService   OperationTypeEnum = "UPDATE_SERVICE"
 )
 
+func (e OperationTypeEnum) ToPointer() *OperationTypeEnum {
+	return &e
+}
+
 func (e *OperationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "START_DEPLOYMENT":
 		fallthrough
 	case "CREATE_SERVICE":
@@ -35,9 +39,9 @@ func (e *OperationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DELETE_SERVICE":
 		fallthrough
 	case "UPDATE_SERVICE":
-		*e = OperationTypeEnum(s)
+		*e = OperationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OperationTypeEnum: %v", v)
 	}
 }

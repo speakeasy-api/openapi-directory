@@ -16,17 +16,21 @@ const (
 	BatchExecuteStatementXAmzTargetEnumRedshiftDataBatchExecuteStatement BatchExecuteStatementXAmzTargetEnum = "RedshiftData.BatchExecuteStatement"
 )
 
+func (e BatchExecuteStatementXAmzTargetEnum) ToPointer() *BatchExecuteStatementXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchExecuteStatementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftData.BatchExecuteStatement":
-		*e = BatchExecuteStatementXAmzTargetEnum(s)
+		*e = BatchExecuteStatementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchExecuteStatementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchExecuteStatementXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -25,12 +25,16 @@ const (
 	OpticalStandardEnumOptic1000BaseSx     OpticalStandardEnum = "OPTIC_1000BASE_SX"
 )
 
+func (e OpticalStandardEnum) ToPointer() *OpticalStandardEnum {
+	return &e
+}
+
 func (e *OpticalStandardEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPTIC_10GBASE_SR":
 		fallthrough
 	case "OPTIC_10GBASE_IR":
@@ -56,9 +60,9 @@ func (e *OpticalStandardEnum) UnmarshalJSON(data []byte) error {
 	case "OPTIC_1000BASE_LX":
 		fallthrough
 	case "OPTIC_1000BASE_SX":
-		*e = OpticalStandardEnum(s)
+		*e = OpticalStandardEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpticalStandardEnum: %s", s)
+		return fmt.Errorf("invalid value for OpticalStandardEnum: %v", v)
 	}
 }

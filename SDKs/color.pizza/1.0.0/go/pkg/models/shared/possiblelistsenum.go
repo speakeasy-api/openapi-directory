@@ -34,12 +34,16 @@ const (
 	PossibleListsEnumXkcd                PossibleListsEnum = "xkcd"
 )
 
+func (e PossibleListsEnum) ToPointer() *PossibleListsEnum {
+	return &e
+}
+
 func (e *PossibleListsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "bestOf":
@@ -81,9 +85,9 @@ func (e *PossibleListsEnum) UnmarshalJSON(data []byte) error {
 	case "x11":
 		fallthrough
 	case "xkcd":
-		*e = PossibleListsEnum(s)
+		*e = PossibleListsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PossibleListsEnum: %s", s)
+		return fmt.Errorf("invalid value for PossibleListsEnum: %v", v)
 	}
 }

@@ -143,6 +143,8 @@ func (s *events) GetEvents(ctx context.Context) (*operations.GetEventsResponse, 
 // Endpoint used to track an event for a user or an account.
 //
 // This endpoint is moved to [Track](#operation/trackEvent).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *events) TrackJourneyEvent(ctx context.Context, request operations.TrackJourneyEventRequestBody) (*operations.TrackJourneyEventResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/events"

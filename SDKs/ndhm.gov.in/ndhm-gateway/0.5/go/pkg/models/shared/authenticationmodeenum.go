@@ -21,12 +21,16 @@ const (
 	AuthenticationModeEnumAadhaarOtp   AuthenticationModeEnum = "AADHAAR_OTP"
 )
 
+func (e AuthenticationModeEnum) ToPointer() *AuthenticationModeEnum {
+	return &e
+}
+
 func (e *AuthenticationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MOBILE_OTP":
 		fallthrough
 	case "DIRECT":
@@ -34,9 +38,9 @@ func (e *AuthenticationModeEnum) UnmarshalJSON(data []byte) error {
 	case "DEMOGRAPHICS":
 		fallthrough
 	case "AADHAAR_OTP":
-		*e = AuthenticationModeEnum(s)
+		*e = AuthenticationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthenticationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthenticationModeEnum: %v", v)
 	}
 }

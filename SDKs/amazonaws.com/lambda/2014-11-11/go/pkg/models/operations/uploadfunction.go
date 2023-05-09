@@ -16,17 +16,21 @@ const (
 	UploadFunctionModeEnumEvent UploadFunctionModeEnum = "event"
 )
 
+func (e UploadFunctionModeEnum) ToPointer() *UploadFunctionModeEnum {
+	return &e
+}
+
 func (e *UploadFunctionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "event":
-		*e = UploadFunctionModeEnum(s)
+		*e = UploadFunctionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UploadFunctionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UploadFunctionModeEnum: %v", v)
 	}
 }
 
@@ -42,17 +46,21 @@ const (
 	UploadFunctionRuntimeEnumNodejs UploadFunctionRuntimeEnum = "nodejs"
 )
 
+func (e UploadFunctionRuntimeEnum) ToPointer() *UploadFunctionRuntimeEnum {
+	return &e
+}
+
 func (e *UploadFunctionRuntimeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nodejs":
-		*e = UploadFunctionRuntimeEnum(s)
+		*e = UploadFunctionRuntimeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UploadFunctionRuntimeEnum: %s", s)
+		return fmt.Errorf("invalid value for UploadFunctionRuntimeEnum: %v", v)
 	}
 }
 

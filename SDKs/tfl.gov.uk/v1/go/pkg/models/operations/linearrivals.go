@@ -18,21 +18,25 @@ const (
 	LineArrivalsDirectionEnumAll      LineArrivalsDirectionEnum = "all"
 )
 
+func (e LineArrivalsDirectionEnum) ToPointer() *LineArrivalsDirectionEnum {
+	return &e
+}
+
 func (e *LineArrivalsDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inbound":
 		fallthrough
 	case "outbound":
 		fallthrough
 	case "all":
-		*e = LineArrivalsDirectionEnum(s)
+		*e = LineArrivalsDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineArrivalsDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for LineArrivalsDirectionEnum: %v", v)
 	}
 }
 

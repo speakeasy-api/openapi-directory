@@ -34,7 +34,10 @@ func newPromotions(defaultClient, securityClient HTTPClient, serverURL, language
 // ContentPromotionsCreate - Inserts a promotion for your Merchant Center account. If the promotion already exists, then it updates the promotion instead. To [end or delete] (https://developers.google.com/shopping-content/guides/promotions#end_a_promotion) a promotion update the time period of the promotion to a time that has already passed.
 func (s *promotions) ContentPromotionsCreate(ctx context.Context, request operations.ContentPromotionsCreateRequest, security operations.ContentPromotionsCreateSecurity) (*operations.ContentPromotionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/promotions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/promotions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PromotionInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *promotions) ContentPromotionsCreate(ctx context.Context, request operat
 // ContentPromotionsGet - Retrieves a promotion from your Merchant Center account.
 func (s *promotions) ContentPromotionsGet(ctx context.Context, request operations.ContentPromotionsGetRequest, security operations.ContentPromotionsGetSecurity) (*operations.ContentPromotionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/promotions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/promotions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

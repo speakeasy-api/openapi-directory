@@ -13,16 +13,20 @@ const (
 	FunctionResponseTypeEnumReportBatchItemFailures FunctionResponseTypeEnum = "ReportBatchItemFailures"
 )
 
+func (e FunctionResponseTypeEnum) ToPointer() *FunctionResponseTypeEnum {
+	return &e
+}
+
 func (e *FunctionResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReportBatchItemFailures":
-		*e = FunctionResponseTypeEnum(s)
+		*e = FunctionResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FunctionResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FunctionResponseTypeEnum: %v", v)
 	}
 }

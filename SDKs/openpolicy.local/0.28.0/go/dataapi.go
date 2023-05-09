@@ -36,7 +36,10 @@ func newDataAPI(defaultClient, securityClient HTTPClient, serverURL, language, s
 // This API endpoint deletes an existing document from the server
 func (s *dataAPI) DeleteDocument(ctx context.Context, request operations.DeleteDocumentRequest) (*operations.DeleteDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/data/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/data/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *dataAPI) DeleteDocument(ctx context.Context, request operations.DeleteD
 // - You provide the input document but the query has already defined it.
 func (s *dataAPI) GetDocument(ctx context.Context, request operations.GetDocumentRequest) (*operations.GetDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/data/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/data/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -161,7 +167,10 @@ func (s *dataAPI) GetDocument(ctx context.Context, request operations.GetDocumen
 // If `path` indexes into an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, a *not found* response (404) will be returned.
 func (s *dataAPI) GetDocumentWithPath(ctx context.Context, request operations.GetDocumentWithPathRequest) (*operations.GetDocumentWithPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/data/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/data/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -240,7 +249,10 @@ func (s *dataAPI) GetDocumentWithPath(ctx context.Context, request operations.Ge
 // The server will return a *not found* (404) response if the requested document is missing or undefined.
 func (s *dataAPI) GetDocumentWithWebHook(ctx context.Context, request operations.GetDocumentWithWebHookRequest) (*operations.GetDocumentWithWebHookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0/data/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0/data/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -321,7 +333,10 @@ func (s *dataAPI) GetDocumentWithWebHook(ctx context.Context, request operations
 // This API endpoint updates an existing document on the server by describing the changes required (using [JSON patch operations](http://jsonpatch.com/))
 func (s *dataAPI) PatchDocument(ctx context.Context, request operations.PatchDocumentRequest) (*operations.PatchDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/data/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/data/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -391,7 +406,10 @@ func (s *dataAPI) PatchDocument(ctx context.Context, request operations.PatchDoc
 // This behavior is similar to the Unix command [mkdir -p](https://en.wikipedia.org/wiki/Mkdir#Options).
 func (s *dataAPI) PutDocument(ctx context.Context, request operations.PutDocumentRequest) (*operations.PutDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/data/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/data/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

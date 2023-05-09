@@ -19,26 +19,27 @@ type SearchVideosSecurity struct {
 type SearchVideosAspectRatioEnum string
 
 const (
-	SearchVideosAspectRatioEnumFour3       SearchVideosAspectRatioEnum = "4_3"
-	SearchVideosAspectRatioEnumSixteen9    SearchVideosAspectRatioEnum = "16_9"
+	SearchVideosAspectRatioEnumZero        SearchVideosAspectRatioEnum = "0"
 	SearchVideosAspectRatioEnumNonstandard SearchVideosAspectRatioEnum = "nonstandard"
 )
 
+func (e SearchVideosAspectRatioEnum) ToPointer() *SearchVideosAspectRatioEnum {
+	return &e
+}
+
 func (e *SearchVideosAspectRatioEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4_3":
-		fallthrough
-	case "16_9":
+	switch v {
+	case "0":
 		fallthrough
 	case "nonstandard":
-		*e = SearchVideosAspectRatioEnum(s)
+		*e = SearchVideosAspectRatioEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchVideosAspectRatioEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchVideosAspectRatioEnum: %v", v)
 	}
 }
 
@@ -49,19 +50,23 @@ const (
 	SearchVideosLicenseEnumEditorial  SearchVideosLicenseEnum = "editorial"
 )
 
+func (e SearchVideosLicenseEnum) ToPointer() *SearchVideosLicenseEnum {
+	return &e
+}
+
 func (e *SearchVideosLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "commercial":
 		fallthrough
 	case "editorial":
-		*e = SearchVideosLicenseEnum(s)
+		*e = SearchVideosLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchVideosLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchVideosLicenseEnum: %v", v)
 	}
 }
 
@@ -80,12 +85,16 @@ const (
 	SearchVideosPeopleAgeEnumOlder     SearchVideosPeopleAgeEnum = "older"
 )
 
+func (e SearchVideosPeopleAgeEnum) ToPointer() *SearchVideosPeopleAgeEnum {
+	return &e
+}
+
 func (e *SearchVideosPeopleAgeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "infants":
 		fallthrough
 	case "children":
@@ -103,10 +112,10 @@ func (e *SearchVideosPeopleAgeEnum) UnmarshalJSON(data []byte) error {
 	case "60s":
 		fallthrough
 	case "older":
-		*e = SearchVideosPeopleAgeEnum(s)
+		*e = SearchVideosPeopleAgeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchVideosPeopleAgeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchVideosPeopleAgeEnum: %v", v)
 	}
 }
 
@@ -130,12 +139,16 @@ const (
 	SearchVideosPeopleEthnicityEnumOther           SearchVideosPeopleEthnicityEnum = "other"
 )
 
+func (e SearchVideosPeopleEthnicityEnum) ToPointer() *SearchVideosPeopleEthnicityEnum {
+	return &e
+}
+
 func (e *SearchVideosPeopleEthnicityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "african":
 		fallthrough
 	case "african_american":
@@ -165,10 +178,10 @@ func (e *SearchVideosPeopleEthnicityEnum) UnmarshalJSON(data []byte) error {
 	case "southeast_asian":
 		fallthrough
 	case "other":
-		*e = SearchVideosPeopleEthnicityEnum(s)
+		*e = SearchVideosPeopleEthnicityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchVideosPeopleEthnicityEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchVideosPeopleEthnicityEnum: %v", v)
 	}
 }
 
@@ -181,21 +194,25 @@ const (
 	SearchVideosPeopleGenderEnumBoth   SearchVideosPeopleGenderEnum = "both"
 )
 
+func (e SearchVideosPeopleGenderEnum) ToPointer() *SearchVideosPeopleGenderEnum {
+	return &e
+}
+
 func (e *SearchVideosPeopleGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
 		fallthrough
 	case "both":
-		*e = SearchVideosPeopleGenderEnum(s)
+		*e = SearchVideosPeopleGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchVideosPeopleGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchVideosPeopleGenderEnum: %v", v)
 	}
 }
 
@@ -208,21 +225,25 @@ const (
 	SearchVideosResolutionEnumHighDefinition     SearchVideosResolutionEnum = "high_definition"
 )
 
+func (e SearchVideosResolutionEnum) ToPointer() *SearchVideosResolutionEnum {
+	return &e
+}
+
 func (e *SearchVideosResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "4k":
 		fallthrough
 	case "standard_definition":
 		fallthrough
 	case "high_definition":
-		*e = SearchVideosResolutionEnum(s)
+		*e = SearchVideosResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchVideosResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchVideosResolutionEnum: %v", v)
 	}
 }
 
@@ -236,12 +257,16 @@ const (
 	SearchVideosSortEnumRandom    SearchVideosSortEnum = "random"
 )
 
+func (e SearchVideosSortEnum) ToPointer() *SearchVideosSortEnum {
+	return &e
+}
+
 func (e *SearchVideosSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "popular":
@@ -249,10 +274,10 @@ func (e *SearchVideosSortEnum) UnmarshalJSON(data []byte) error {
 	case "relevance":
 		fallthrough
 	case "random":
-		*e = SearchVideosSortEnum(s)
+		*e = SearchVideosSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchVideosSortEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchVideosSortEnum: %v", v)
 	}
 }
 
@@ -264,19 +289,23 @@ const (
 	SearchVideosViewEnumFull    SearchVideosViewEnum = "full"
 )
 
+func (e SearchVideosViewEnum) ToPointer() *SearchVideosViewEnum {
+	return &e
+}
+
 func (e *SearchVideosViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimal":
 		fallthrough
 	case "full":
-		*e = SearchVideosViewEnum(s)
+		*e = SearchVideosViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchVideosViewEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchVideosViewEnum: %v", v)
 	}
 }
 
@@ -296,12 +325,16 @@ type SearchVideosRequest struct {
 	// Show videos from contributors in one or more specified countries
 	ContributorCountry []string `queryParam:"style=form,explode=true,name=contributor_country"`
 	// (Deprecated; use duration_from and duration_to instead) Show videos with the specified duration in seconds
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Duration *int64 `queryParam:"style=form,explode=true,name=duration"`
 	// Show videos with the specified duration or longer in seconds
 	DurationFrom *int64 `queryParam:"style=form,explode=true,name=duration_from"`
 	// Show videos with the specified duration or shorter in seconds
 	DurationTo *int64 `queryParam:"style=form,explode=true,name=duration_to"`
 	// (Deprecated; use fps_from and fps_to instead) Show videos with the specified frames per second
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Fps *float64 `queryParam:"style=form,explode=true,name=fps"`
 	// Show videos with the specified frames per second or more
 	FpsFrom *float64 `queryParam:"style=form,explode=true,name=fps_from"`

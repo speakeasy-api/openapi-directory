@@ -16,17 +16,21 @@ const (
 	UpdateEnvironmentMembershipXAmzTargetEnumAwsCloud9WorkspaceManagementServiceUpdateEnvironmentMembership UpdateEnvironmentMembershipXAmzTargetEnum = "AWSCloud9WorkspaceManagementService.UpdateEnvironmentMembership"
 )
 
+func (e UpdateEnvironmentMembershipXAmzTargetEnum) ToPointer() *UpdateEnvironmentMembershipXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateEnvironmentMembershipXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCloud9WorkspaceManagementService.UpdateEnvironmentMembership":
-		*e = UpdateEnvironmentMembershipXAmzTargetEnum(s)
+		*e = UpdateEnvironmentMembershipXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateEnvironmentMembershipXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateEnvironmentMembershipXAmzTargetEnum: %v", v)
 	}
 }
 

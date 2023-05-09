@@ -16,21 +16,25 @@ const (
 	ProtectConfigWorkloadVulnerabilityModeEnumBasic                                ProtectConfigWorkloadVulnerabilityModeEnum = "BASIC"
 )
 
+func (e ProtectConfigWorkloadVulnerabilityModeEnum) ToPointer() *ProtectConfigWorkloadVulnerabilityModeEnum {
+	return &e
+}
+
 func (e *ProtectConfigWorkloadVulnerabilityModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORKLOAD_VULNERABILITY_MODE_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "BASIC":
-		*e = ProtectConfigWorkloadVulnerabilityModeEnum(s)
+		*e = ProtectConfigWorkloadVulnerabilityModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProtectConfigWorkloadVulnerabilityModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProtectConfigWorkloadVulnerabilityModeEnum: %v", v)
 	}
 }
 

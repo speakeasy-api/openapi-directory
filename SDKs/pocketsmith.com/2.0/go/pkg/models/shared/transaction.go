@@ -15,19 +15,23 @@ const (
 	TransactionStatusEnumPosted  TransactionStatusEnum = "posted"
 )
 
+func (e TransactionStatusEnum) ToPointer() *TransactionStatusEnum {
+	return &e
+}
+
 func (e *TransactionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "posted":
-		*e = TransactionStatusEnum(s)
+		*e = TransactionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionStatusEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	TransactionTypeEnumCredit TransactionTypeEnum = "credit"
 )
 
+func (e TransactionTypeEnum) ToPointer() *TransactionTypeEnum {
+	return &e
+}
+
 func (e *TransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "debit":
 		fallthrough
 	case "credit":
-		*e = TransactionTypeEnum(s)
+		*e = TransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionTypeEnum: %v", v)
 	}
 }
 

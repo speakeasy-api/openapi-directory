@@ -391,7 +391,10 @@ func (s *inventory) DeprecatedBatchRetrieveInventoryCounts(ctx context.Context, 
 // is updated to conform to the standard convention.
 func (s *inventory) DeprecatedRetrieveInventoryAdjustment(ctx context.Context, request operations.DeprecatedRetrieveInventoryAdjustmentRequest, security operations.DeprecatedRetrieveInventoryAdjustmentSecurity) (*operations.DeprecatedRetrieveInventoryAdjustmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/adjustment/{adjustment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/inventory/adjustment/{adjustment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -437,7 +440,10 @@ func (s *inventory) DeprecatedRetrieveInventoryAdjustment(ctx context.Context, r
 // is updated to conform to the standard convention.
 func (s *inventory) DeprecatedRetrieveInventoryPhysicalCount(ctx context.Context, request operations.DeprecatedRetrieveInventoryPhysicalCountRequest, security operations.DeprecatedRetrieveInventoryPhysicalCountSecurity) (*operations.DeprecatedRetrieveInventoryPhysicalCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/physical-count/{physical_count_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/inventory/physical-count/{physical_count_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -483,7 +489,10 @@ func (s *inventory) DeprecatedRetrieveInventoryPhysicalCount(ctx context.Context
 // with the provided `adjustment_id`.
 func (s *inventory) RetrieveInventoryAdjustment(ctx context.Context, request operations.RetrieveInventoryAdjustmentRequest, security operations.RetrieveInventoryAdjustmentSecurity) (*operations.RetrieveInventoryAdjustmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/adjustments/{adjustment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/inventory/adjustments/{adjustment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -540,7 +549,10 @@ func (s *inventory) RetrieveInventoryAdjustment(ctx context.Context, request ope
 // sophisticated queries, use a batch endpoint.
 func (s *inventory) RetrieveInventoryChanges(ctx context.Context, request operations.RetrieveInventoryChangesRequest, security operations.RetrieveInventoryChangesSecurity) (*operations.RetrieveInventoryChangesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/{catalog_object_id}/changes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/inventory/{catalog_object_id}/changes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -592,7 +604,10 @@ func (s *inventory) RetrieveInventoryChanges(ctx context.Context, request operat
 // For more sophisticated queries, use a batch endpoint.
 func (s *inventory) RetrieveInventoryCount(ctx context.Context, request operations.RetrieveInventoryCountRequest, security operations.RetrieveInventoryCountSecurity) (*operations.RetrieveInventoryCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/{catalog_object_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/inventory/{catalog_object_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -642,7 +657,10 @@ func (s *inventory) RetrieveInventoryCount(ctx context.Context, request operatio
 // object with the provided `physical_count_id`.
 func (s *inventory) RetrieveInventoryPhysicalCount(ctx context.Context, request operations.RetrieveInventoryPhysicalCountRequest, security operations.RetrieveInventoryPhysicalCountSecurity) (*operations.RetrieveInventoryPhysicalCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/physical-counts/{physical_count_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/inventory/physical-counts/{physical_count_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -688,7 +706,10 @@ func (s *inventory) RetrieveInventoryPhysicalCount(ctx context.Context, request 
 // with the provided `transfer_id`.
 func (s *inventory) RetrieveInventoryTransfer(ctx context.Context, request operations.RetrieveInventoryTransferRequest, security operations.RetrieveInventoryTransferSecurity) (*operations.RetrieveInventoryTransferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventory/transfers/{transfer_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/inventory/transfers/{transfer_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

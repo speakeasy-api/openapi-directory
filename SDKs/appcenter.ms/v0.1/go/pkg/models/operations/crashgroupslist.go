@@ -27,12 +27,16 @@ const (
 	CrashGroupsListDollarOrderbyEnumImpactedUsersDesc  CrashGroupsListDollarOrderbyEnum = "impacted_users desc"
 )
 
+func (e CrashGroupsListDollarOrderbyEnum) ToPointer() *CrashGroupsListDollarOrderbyEnum {
+	return &e
+}
+
 func (e *CrashGroupsListDollarOrderbyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "last_occurrence asc":
 		fallthrough
 	case "last_occurrence desc":
@@ -48,10 +52,10 @@ func (e *CrashGroupsListDollarOrderbyEnum) UnmarshalJSON(data []byte) error {
 	case "impacted_users asc":
 		fallthrough
 	case "impacted_users desc":
-		*e = CrashGroupsListDollarOrderbyEnum(s)
+		*e = CrashGroupsListDollarOrderbyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrashGroupsListDollarOrderbyEnum: %s", s)
+		return fmt.Errorf("invalid value for CrashGroupsListDollarOrderbyEnum: %v", v)
 	}
 }
 
@@ -64,21 +68,25 @@ const (
 	CrashGroupsListGroupStatusEnumIgnored CrashGroupsListGroupStatusEnum = "ignored"
 )
 
+func (e CrashGroupsListGroupStatusEnum) ToPointer() *CrashGroupsListGroupStatusEnum {
+	return &e
+}
+
 func (e *CrashGroupsListGroupStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "ignored":
-		*e = CrashGroupsListGroupStatusEnum(s)
+		*e = CrashGroupsListGroupStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrashGroupsListGroupStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CrashGroupsListGroupStatusEnum: %v", v)
 	}
 }
 
@@ -90,19 +98,23 @@ const (
 	CrashGroupsListGroupTypeEnumGroupType2 CrashGroupsListGroupTypeEnum = "GroupType2"
 )
 
+func (e CrashGroupsListGroupTypeEnum) ToPointer() *CrashGroupsListGroupTypeEnum {
+	return &e
+}
+
 func (e *CrashGroupsListGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GroupType1":
 		fallthrough
 	case "GroupType2":
-		*e = CrashGroupsListGroupTypeEnum(s)
+		*e = CrashGroupsListGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrashGroupsListGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CrashGroupsListGroupTypeEnum: %v", v)
 	}
 }
 
@@ -147,12 +159,16 @@ const (
 	CrashGroupsList200ApplicationJSONCrashGroupsReasonFrameLanguageEnumUnknown      CrashGroupsList200ApplicationJSONCrashGroupsReasonFrameLanguageEnum = "Unknown"
 )
 
+func (e CrashGroupsList200ApplicationJSONCrashGroupsReasonFrameLanguageEnum) ToPointer() *CrashGroupsList200ApplicationJSONCrashGroupsReasonFrameLanguageEnum {
+	return &e
+}
+
 func (e *CrashGroupsList200ApplicationJSONCrashGroupsReasonFrameLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JavaScript":
 		fallthrough
 	case "CSharp":
@@ -170,10 +186,10 @@ func (e *CrashGroupsList200ApplicationJSONCrashGroupsReasonFrameLanguageEnum) Un
 	case "Java":
 		fallthrough
 	case "Unknown":
-		*e = CrashGroupsList200ApplicationJSONCrashGroupsReasonFrameLanguageEnum(s)
+		*e = CrashGroupsList200ApplicationJSONCrashGroupsReasonFrameLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrashGroupsList200ApplicationJSONCrashGroupsReasonFrameLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for CrashGroupsList200ApplicationJSONCrashGroupsReasonFrameLanguageEnum: %v", v)
 	}
 }
 
@@ -215,21 +231,25 @@ const (
 	CrashGroupsList200ApplicationJSONCrashGroupsStatusEnumIgnored CrashGroupsList200ApplicationJSONCrashGroupsStatusEnum = "ignored"
 )
 
+func (e CrashGroupsList200ApplicationJSONCrashGroupsStatusEnum) ToPointer() *CrashGroupsList200ApplicationJSONCrashGroupsStatusEnum {
+	return &e
+}
+
 func (e *CrashGroupsList200ApplicationJSONCrashGroupsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "ignored":
-		*e = CrashGroupsList200ApplicationJSONCrashGroupsStatusEnum(s)
+		*e = CrashGroupsList200ApplicationJSONCrashGroupsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrashGroupsList200ApplicationJSONCrashGroupsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CrashGroupsList200ApplicationJSONCrashGroupsStatusEnum: %v", v)
 	}
 }
 

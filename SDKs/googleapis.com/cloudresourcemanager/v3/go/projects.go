@@ -138,7 +138,10 @@ func (s *projects) CloudresourcemanagerProjectsList(ctx context.Context, request
 // CloudresourcemanagerProjectsMove - Move a project to another place in your resource hierarchy, under a new resource parent. Returns an operation which can be used to track the process of the project move workflow. Upon success, the `Operation.response` field will be populated with the moved project. The caller must have `resourcemanager.projects.move` permission on the project, on the project's current and proposed new parent. If project has no current parent, or it currently does not have an associated organization resource, you will also need the `resourcemanager.projects.setIamPolicy` permission in the project.
 func (s *projects) CloudresourcemanagerProjectsMove(ctx context.Context, request operations.CloudresourcemanagerProjectsMoveRequest, security operations.CloudresourcemanagerProjectsMoveSecurity) (*operations.CloudresourcemanagerProjectsMoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}:move", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}:move", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MoveProjectRequest", "json")
 	if err != nil {
@@ -241,7 +244,10 @@ func (s *projects) CloudresourcemanagerProjectsSearch(ctx context.Context, reque
 // CloudresourcemanagerProjectsUndelete - Restores the project identified by the specified `name` (for example, `projects/415104041262`). You can only use this method for a project that has a lifecycle state of DELETE_REQUESTED. After deletion starts, the project cannot be restored. The caller must have `resourcemanager.projects.undelete` permission for this project.
 func (s *projects) CloudresourcemanagerProjectsUndelete(ctx context.Context, request operations.CloudresourcemanagerProjectsUndeleteRequest, security operations.CloudresourcemanagerProjectsUndeleteSecurity) (*operations.CloudresourcemanagerProjectsUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}:undelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}:undelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

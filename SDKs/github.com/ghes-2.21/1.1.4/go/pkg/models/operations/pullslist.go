@@ -17,19 +17,23 @@ const (
 	PullsListDirectionEnumDesc PullsListDirectionEnum = "desc"
 )
 
+func (e PullsListDirectionEnum) ToPointer() *PullsListDirectionEnum {
+	return &e
+}
+
 func (e *PullsListDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = PullsListDirectionEnum(s)
+		*e = PullsListDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullsListDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for PullsListDirectionEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	PullsListSortEnumLongRunning PullsListSortEnum = "long-running"
 )
 
+func (e PullsListSortEnum) ToPointer() *PullsListSortEnum {
+	return &e
+}
+
 func (e *PullsListSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
@@ -56,10 +64,10 @@ func (e *PullsListSortEnum) UnmarshalJSON(data []byte) error {
 	case "popularity":
 		fallthrough
 	case "long-running":
-		*e = PullsListSortEnum(s)
+		*e = PullsListSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullsListSortEnum: %s", s)
+		return fmt.Errorf("invalid value for PullsListSortEnum: %v", v)
 	}
 }
 
@@ -72,21 +80,25 @@ const (
 	PullsListStateEnumAll    PullsListStateEnum = "all"
 )
 
+func (e PullsListStateEnum) ToPointer() *PullsListStateEnum {
+	return &e
+}
+
 func (e *PullsListStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "all":
-		*e = PullsListStateEnum(s)
+		*e = PullsListStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullsListStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PullsListStateEnum: %v", v)
 	}
 }
 

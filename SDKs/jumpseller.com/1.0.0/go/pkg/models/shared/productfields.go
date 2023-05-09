@@ -15,19 +15,23 @@ const (
 	ProductFieldsPackageFormatEnumCylinder ProductFieldsPackageFormatEnum = "cylinder"
 )
 
+func (e ProductFieldsPackageFormatEnum) ToPointer() *ProductFieldsPackageFormatEnum {
+	return &e
+}
+
 func (e *ProductFieldsPackageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "box":
 		fallthrough
 	case "cylinder":
-		*e = ProductFieldsPackageFormatEnum(s)
+		*e = ProductFieldsPackageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductFieldsPackageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductFieldsPackageFormatEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	ProductFieldsStatusEnumDisabled     ProductFieldsStatusEnum = "disabled"
 )
 
+func (e ProductFieldsStatusEnum) ToPointer() *ProductFieldsStatusEnum {
+	return &e
+}
+
 func (e *ProductFieldsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "not-available":
 		fallthrough
 	case "disabled":
-		*e = ProductFieldsStatusEnum(s)
+		*e = ProductFieldsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductFieldsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductFieldsStatusEnum: %v", v)
 	}
 }
 

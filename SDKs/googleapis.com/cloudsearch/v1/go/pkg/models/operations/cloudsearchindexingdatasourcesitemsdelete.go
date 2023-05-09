@@ -33,21 +33,25 @@ const (
 	CloudsearchIndexingDatasourcesItemsDeleteModeEnumAsynchronous CloudsearchIndexingDatasourcesItemsDeleteModeEnum = "ASYNCHRONOUS"
 )
 
+func (e CloudsearchIndexingDatasourcesItemsDeleteModeEnum) ToPointer() *CloudsearchIndexingDatasourcesItemsDeleteModeEnum {
+	return &e
+}
+
 func (e *CloudsearchIndexingDatasourcesItemsDeleteModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "SYNCHRONOUS":
 		fallthrough
 	case "ASYNCHRONOUS":
-		*e = CloudsearchIndexingDatasourcesItemsDeleteModeEnum(s)
+		*e = CloudsearchIndexingDatasourcesItemsDeleteModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudsearchIndexingDatasourcesItemsDeleteModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudsearchIndexingDatasourcesItemsDeleteModeEnum: %v", v)
 	}
 }
 

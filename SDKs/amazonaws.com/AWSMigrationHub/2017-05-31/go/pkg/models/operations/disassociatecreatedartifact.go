@@ -16,17 +16,21 @@ const (
 	DisassociateCreatedArtifactXAmzTargetEnumAwsMigrationHubDisassociateCreatedArtifact DisassociateCreatedArtifactXAmzTargetEnum = "AWSMigrationHub.DisassociateCreatedArtifact"
 )
 
+func (e DisassociateCreatedArtifactXAmzTargetEnum) ToPointer() *DisassociateCreatedArtifactXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateCreatedArtifactXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHub.DisassociateCreatedArtifact":
-		*e = DisassociateCreatedArtifactXAmzTargetEnum(s)
+		*e = DisassociateCreatedArtifactXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateCreatedArtifactXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateCreatedArtifactXAmzTargetEnum: %v", v)
 	}
 }
 

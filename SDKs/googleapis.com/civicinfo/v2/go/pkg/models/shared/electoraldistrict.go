@@ -27,12 +27,16 @@ const (
 	ElectoralDistrictScopeEnumNational      ElectoralDistrictScopeEnum = "national"
 )
 
+func (e ElectoralDistrictScopeEnum) ToPointer() *ElectoralDistrictScopeEnum {
+	return &e
+}
+
 func (e *ElectoralDistrictScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "statewide":
 		fallthrough
 	case "congressional":
@@ -60,10 +64,10 @@ func (e *ElectoralDistrictScopeEnum) UnmarshalJSON(data []byte) error {
 	case "cityCouncil":
 		fallthrough
 	case "national":
-		*e = ElectoralDistrictScopeEnum(s)
+		*e = ElectoralDistrictScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ElectoralDistrictScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ElectoralDistrictScopeEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newCameras(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Generate a snapshot of what the camera sees at the specified time and return a link to that image.
 func (s *cameras) GenerateNetworkCameraSnapshot(ctx context.Context, request operations.GenerateNetworkCameraSnapshotRequest) (*operations.GenerateNetworkCameraSnapshotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cameras/{serial}/snapshot", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cameras/{serial}/snapshot", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -82,56 +85,14 @@ func (s *cameras) GenerateNetworkCameraSnapshot(ctx context.Context, request ope
 	return res, nil
 }
 
-// GetDeviceCameraQualityAndRetentionSettings - Returns quality and retention settings for the given camera
-// Returns quality and retention settings for the given camera
-func (s *cameras) GetDeviceCameraQualityAndRetentionSettings(ctx context.Context, request operations.GetDeviceCameraQualityAndRetentionSettingsRequest) (*operations.GetDeviceCameraQualityAndRetentionSettingsResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetentionSettings", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s.securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetDeviceCameraQualityAndRetentionSettingsResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.GetDeviceCameraQualityAndRetentionSettings200ApplicationJSONObject = out
-		}
-	}
-
-	return res, nil
-}
-
 // GetDeviceCameraVideoSettings - Returns video settings for the given camera
 // Returns video settings for the given camera
 func (s *cameras) GetDeviceCameraVideoSettings(ctx context.Context, request operations.GetDeviceCameraVideoSettingsRequest) (*operations.GetDeviceCameraVideoSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +137,10 @@ func (s *cameras) GetDeviceCameraVideoSettings(ctx context.Context, request oper
 // Returns a list of all camera recording schedules.
 func (s *cameras) GetNetworkCameraSchedules(ctx context.Context, request operations.GetNetworkCameraSchedulesRequest) (*operations.GetNetworkCameraSchedulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/schedules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/camera/schedules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +185,10 @@ func (s *cameras) GetNetworkCameraSchedules(ctx context.Context, request operati
 // Returns video link to the specified camera. If a timestamp is supplied, it links to that timestamp.
 func (s *cameras) GetNetworkCameraVideoLink(ctx context.Context, request operations.GetNetworkCameraVideoLinkRequest) (*operations.GetNetworkCameraVideoLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cameras/{serial}/videoLink", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/cameras/{serial}/videoLink", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -266,63 +233,14 @@ func (s *cameras) GetNetworkCameraVideoLink(ctx context.Context, request operati
 	return res, nil
 }
 
-// UpdateDeviceCameraQualityAndRetentionSettings - Update quality and retention settings for the given camera
-// Update quality and retention settings for the given camera
-func (s *cameras) UpdateDeviceCameraQualityAndRetentionSettings(ctx context.Context, request operations.UpdateDeviceCameraQualityAndRetentionSettingsRequest) (*operations.UpdateDeviceCameraQualityAndRetentionSettingsResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/qualityAndRetentionSettings", request, nil)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	client := s.securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.UpdateDeviceCameraQualityAndRetentionSettingsResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.UpdateDeviceCameraQualityAndRetentionSettings200ApplicationJSONObject = out
-		}
-	}
-
-	return res, nil
-}
-
 // UpdateDeviceCameraVideoSettings - Update video settings for the given camera
 // Update video settings for the given camera
 func (s *cameras) UpdateDeviceCameraVideoSettings(ctx context.Context, request operations.UpdateDeviceCameraVideoSettingsRequest) (*operations.UpdateDeviceCameraVideoSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/camera/video/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

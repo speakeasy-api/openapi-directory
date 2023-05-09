@@ -225,7 +225,10 @@ func (s *resources) CopyResources(ctx context.Context, request operations.CopyRe
 // - There is no way to un-delete a deleted resource.
 func (s *resources) DeleteResourceByID(ctx context.Context, request operations.DeleteResourceByIDRequest) (*operations.DeleteResourceByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/resources/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -572,7 +575,10 @@ func (s *resources) GetResourceInfo(ctx context.Context, request operations.GetR
 // - Authenticated user should have list permission.
 func (s *resources) GetResourceInfoByID(ctx context.Context, request operations.GetResourceInfoByIDRequest) (*operations.GetResourceInfoByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/resources/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -628,7 +634,10 @@ func (s *resources) GetResourceInfoByID(ctx context.Context, request operations.
 // - Authenticated user should have list permission.
 func (s *resources) ListResourceContents(ctx context.Context, request operations.ListResourceContentsRequest) (*operations.ListResourceContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/list/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/resources/list/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -812,7 +821,10 @@ func (s *resources) MoveResources(ctx context.Context, request operations.MoveRe
 // Update the specified file or folder resource record's "name" parameter. The resource is identified by the numeric resource ID that is passed in as the last segment of the URI.
 func (s *resources) UpdateResourceByID(ctx context.Context, request operations.UpdateResourceByIDRequest) (*operations.UpdateResourceByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/resources/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/resources/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

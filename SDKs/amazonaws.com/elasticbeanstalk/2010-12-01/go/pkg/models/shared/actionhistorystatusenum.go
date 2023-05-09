@@ -15,20 +15,24 @@ const (
 	ActionHistoryStatusEnumUnknown   ActionHistoryStatusEnum = "Unknown"
 )
 
+func (e ActionHistoryStatusEnum) ToPointer() *ActionHistoryStatusEnum {
+	return &e
+}
+
 func (e *ActionHistoryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Completed":
 		fallthrough
 	case "Failed":
 		fallthrough
 	case "Unknown":
-		*e = ActionHistoryStatusEnum(s)
+		*e = ActionHistoryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionHistoryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionHistoryStatusEnum: %v", v)
 	}
 }

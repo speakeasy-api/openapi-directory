@@ -60,12 +60,16 @@ const (
 	PaymentMethodResponseTypesWithErrorsEnumWechatpayPos    PaymentMethodResponseTypesWithErrorsEnum = "wechatpay_pos"
 )
 
+func (e PaymentMethodResponseTypesWithErrorsEnum) ToPointer() *PaymentMethodResponseTypesWithErrorsEnum {
+	return &e
+}
+
 func (e *PaymentMethodResponseTypesWithErrorsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "afterpaytouch":
 		fallthrough
 	case "alipay":
@@ -161,10 +165,10 @@ func (e *PaymentMethodResponseTypesWithErrorsEnum) UnmarshalJSON(data []byte) er
 	case "wechatpay":
 		fallthrough
 	case "wechatpay_pos":
-		*e = PaymentMethodResponseTypesWithErrorsEnum(s)
+		*e = PaymentMethodResponseTypesWithErrorsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentMethodResponseTypesWithErrorsEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentMethodResponseTypesWithErrorsEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateDatasetEntriesXAmzTargetEnumRekognitionServiceUpdateDatasetEntries UpdateDatasetEntriesXAmzTargetEnum = "RekognitionService.UpdateDatasetEntries"
 )
 
+func (e UpdateDatasetEntriesXAmzTargetEnum) ToPointer() *UpdateDatasetEntriesXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDatasetEntriesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.UpdateDatasetEntries":
-		*e = UpdateDatasetEntriesXAmzTargetEnum(s)
+		*e = UpdateDatasetEntriesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDatasetEntriesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDatasetEntriesXAmzTargetEnum: %v", v)
 	}
 }
 

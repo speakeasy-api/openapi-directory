@@ -15,17 +15,21 @@ const (
 	BookingRequestPaymentTypeEnumAPI BookingRequestPaymentTypeEnum = "API"
 )
 
+func (e BookingRequestPaymentTypeEnum) ToPointer() *BookingRequestPaymentTypeEnum {
+	return &e
+}
+
 func (e *BookingRequestPaymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "API":
-		*e = BookingRequestPaymentTypeEnum(s)
+		*e = BookingRequestPaymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BookingRequestPaymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BookingRequestPaymentTypeEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTCreateEgressOnlyInternetGatewayActionEnumCreateEgressOnlyInternetGateway POSTCreateEgressOnlyInternetGatewayActionEnum = "CreateEgressOnlyInternetGateway"
 )
 
+func (e POSTCreateEgressOnlyInternetGatewayActionEnum) ToPointer() *POSTCreateEgressOnlyInternetGatewayActionEnum {
+	return &e
+}
+
 func (e *POSTCreateEgressOnlyInternetGatewayActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateEgressOnlyInternetGateway":
-		*e = POSTCreateEgressOnlyInternetGatewayActionEnum(s)
+		*e = POSTCreateEgressOnlyInternetGatewayActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateEgressOnlyInternetGatewayActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateEgressOnlyInternetGatewayActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateEgressOnlyInternetGatewayVersionEnumTwoThousandAndSixteen1115 POSTCreateEgressOnlyInternetGatewayVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateEgressOnlyInternetGatewayVersionEnum) ToPointer() *POSTCreateEgressOnlyInternetGatewayVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateEgressOnlyInternetGatewayVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateEgressOnlyInternetGatewayVersionEnum(s)
+		*e = POSTCreateEgressOnlyInternetGatewayVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateEgressOnlyInternetGatewayVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateEgressOnlyInternetGatewayVersionEnum: %v", v)
 	}
 }
 

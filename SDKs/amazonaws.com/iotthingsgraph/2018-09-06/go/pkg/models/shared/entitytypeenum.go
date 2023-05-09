@@ -22,12 +22,16 @@ const (
 	EntityTypeEnumEnum        EntityTypeEnum = "ENUM"
 )
 
+func (e EntityTypeEnum) ToPointer() *EntityTypeEnum {
+	return &e
+}
+
 func (e *EntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE":
 		fallthrough
 	case "SERVICE":
@@ -47,9 +51,9 @@ func (e *EntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MAPPING":
 		fallthrough
 	case "ENUM":
-		*e = EntityTypeEnum(s)
+		*e = EntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityTypeEnum: %v", v)
 	}
 }

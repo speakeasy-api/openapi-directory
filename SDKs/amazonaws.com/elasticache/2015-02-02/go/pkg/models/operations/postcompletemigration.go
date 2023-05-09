@@ -15,17 +15,21 @@ const (
 	POSTCompleteMigrationActionEnumCompleteMigration POSTCompleteMigrationActionEnum = "CompleteMigration"
 )
 
+func (e POSTCompleteMigrationActionEnum) ToPointer() *POSTCompleteMigrationActionEnum {
+	return &e
+}
+
 func (e *POSTCompleteMigrationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CompleteMigration":
-		*e = POSTCompleteMigrationActionEnum(s)
+		*e = POSTCompleteMigrationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCompleteMigrationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCompleteMigrationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCompleteMigrationVersionEnumTwoThousandAndFifteen0202 POSTCompleteMigrationVersionEnum = "2015-02-02"
 )
 
+func (e POSTCompleteMigrationVersionEnum) ToPointer() *POSTCompleteMigrationVersionEnum {
+	return &e
+}
+
 func (e *POSTCompleteMigrationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTCompleteMigrationVersionEnum(s)
+		*e = POSTCompleteMigrationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCompleteMigrationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCompleteMigrationVersionEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	InventoryAttributeDataTypeEnumNumber InventoryAttributeDataTypeEnum = "number"
 )
 
+func (e InventoryAttributeDataTypeEnum) ToPointer() *InventoryAttributeDataTypeEnum {
+	return &e
+}
+
 func (e *InventoryAttributeDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "string":
 		fallthrough
 	case "number":
-		*e = InventoryAttributeDataTypeEnum(s)
+		*e = InventoryAttributeDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventoryAttributeDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InventoryAttributeDataTypeEnum: %v", v)
 	}
 }

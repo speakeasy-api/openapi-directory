@@ -16,19 +16,23 @@ const (
 	DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurationsBgpStatusEnumDown DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurationsBgpStatusEnum = "down"
 )
 
+func (e DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurationsBgpStatusEnum) ToPointer() *DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurationsBgpStatusEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurationsBgpStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "up":
 		fallthrough
 	case "down":
-		*e = DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurationsBgpStatusEnum(s)
+		*e = DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurationsBgpStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurationsBgpStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationBgpConfigurationsBgpStatusEnum: %v", v)
 	}
 }
 
@@ -48,17 +52,21 @@ const (
 	DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationProtocolEnumGre DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationProtocolEnum = "gre"
 )
 
+func (e DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationProtocolEnum) ToPointer() *DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationProtocolEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gre":
-		*e = DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationProtocolEnum(s)
+		*e = DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerConnectPeerConfigurationProtocolEnum: %v", v)
 	}
 }
 
@@ -81,12 +89,16 @@ const (
 	DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerStateEnumDeleted   DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerStateEnum = "deleted"
 )
 
+func (e DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerStateEnum) ToPointer() *DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerStateEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
@@ -94,10 +106,10 @@ func (e *DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerStateEnum
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerStateEnum(s)
+		*e = DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayConnectPeerResultTransitGatewayConnectPeerStateEnum: %v", v)
 	}
 }
 

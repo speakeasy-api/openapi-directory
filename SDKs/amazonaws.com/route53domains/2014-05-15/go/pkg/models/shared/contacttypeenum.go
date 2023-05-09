@@ -17,12 +17,16 @@ const (
 	ContactTypeEnumReseller    ContactTypeEnum = "RESELLER"
 )
 
+func (e ContactTypeEnum) ToPointer() *ContactTypeEnum {
+	return &e
+}
+
 func (e *ContactTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERSON":
 		fallthrough
 	case "COMPANY":
@@ -32,9 +36,9 @@ func (e *ContactTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PUBLIC_BODY":
 		fallthrough
 	case "RESELLER":
-		*e = ContactTypeEnum(s)
+		*e = ContactTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactTypeEnum: %v", v)
 	}
 }

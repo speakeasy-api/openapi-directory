@@ -18,12 +18,16 @@ const (
 	ConnectionProfileProviderEnumAlloydb                     ConnectionProfileProviderEnum = "ALLOYDB"
 )
 
+func (e ConnectionProfileProviderEnum) ToPointer() *ConnectionProfileProviderEnum {
+	return &e
+}
+
 func (e *ConnectionProfileProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATABASE_PROVIDER_UNSPECIFIED":
 		fallthrough
 	case "CLOUDSQL":
@@ -33,10 +37,10 @@ func (e *ConnectionProfileProviderEnum) UnmarshalJSON(data []byte) error {
 	case "AURORA":
 		fallthrough
 	case "ALLOYDB":
-		*e = ConnectionProfileProviderEnum(s)
+		*e = ConnectionProfileProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionProfileProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionProfileProviderEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	ConnectionProfileStateEnumFailed           ConnectionProfileStateEnum = "FAILED"
 )
 
+func (e ConnectionProfileStateEnum) ToPointer() *ConnectionProfileStateEnum {
+	return &e
+}
+
 func (e *ConnectionProfileStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "DRAFT":
@@ -75,10 +83,10 @@ func (e *ConnectionProfileStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETED":
 		fallthrough
 	case "FAILED":
-		*e = ConnectionProfileStateEnum(s)
+		*e = ConnectionProfileStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionProfileStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionProfileStateEnum: %v", v)
 	}
 }
 

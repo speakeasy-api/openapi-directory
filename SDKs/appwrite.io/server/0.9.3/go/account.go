@@ -141,7 +141,7 @@ func (s *account) AccountCreateVerification(ctx context.Context, request operati
 
 // AccountDelete - Delete Account
 // Delete a currently logged in user account. Behind the scene, the user record is not deleted but permanently blocked from any access. This is done to avoid deleted accounts being overtaken by new users with the same email address. Any user-related resources like documents or storage files should be deleted separately.
-func (s *account) AccountDelete(ctx context.Context) (*operations.AccountDeleteResponse, error) {
+func (s *account) AccountDelete(ctx context.Context, security operations.AccountDeleteSecurity) (*operations.AccountDeleteResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account"
 
@@ -150,7 +150,7 @@ func (s *account) AccountDelete(ctx context.Context) (*operations.AccountDeleteR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -179,7 +179,10 @@ func (s *account) AccountDelete(ctx context.Context) (*operations.AccountDeleteR
 // Use this endpoint to log out the currently logged in user from all their account sessions across all of their different devices. When using the option id argument, only the session unique ID provider will be deleted.
 func (s *account) AccountDeleteSession(ctx context.Context, request operations.AccountDeleteSessionRequest, security operations.AccountDeleteSessionSecurity) (*operations.AccountDeleteSessionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/sessions/{sessionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/sessions/{sessionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -213,7 +216,7 @@ func (s *account) AccountDeleteSession(ctx context.Context, request operations.A
 
 // AccountDeleteSessions - Delete All Account Sessions
 // Delete all sessions from the user account and remove any sessions cookies from the end client.
-func (s *account) AccountDeleteSessions(ctx context.Context) (*operations.AccountDeleteSessionsResponse, error) {
+func (s *account) AccountDeleteSessions(ctx context.Context, security operations.AccountDeleteSessionsSecurity) (*operations.AccountDeleteSessionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/sessions"
 
@@ -222,7 +225,7 @@ func (s *account) AccountDeleteSessions(ctx context.Context) (*operations.Accoun
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -249,7 +252,7 @@ func (s *account) AccountDeleteSessions(ctx context.Context) (*operations.Accoun
 
 // AccountGet - Get Account
 // Get currently logged in user data as JSON object.
-func (s *account) AccountGet(ctx context.Context) (*operations.AccountGetResponse, error) {
+func (s *account) AccountGet(ctx context.Context, security operations.AccountGetSecurity) (*operations.AccountGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account"
 
@@ -258,7 +261,7 @@ func (s *account) AccountGet(ctx context.Context) (*operations.AccountGetRespons
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,7 +297,7 @@ func (s *account) AccountGet(ctx context.Context) (*operations.AccountGetRespons
 
 // AccountGetLogs - Get Account Logs
 // Get currently logged in user list of latest security activity logs. Each log returns user IP address, location and date and time of log.
-func (s *account) AccountGetLogs(ctx context.Context) (*operations.AccountGetLogsResponse, error) {
+func (s *account) AccountGetLogs(ctx context.Context, security operations.AccountGetLogsSecurity) (*operations.AccountGetLogsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/logs"
 
@@ -303,7 +306,7 @@ func (s *account) AccountGetLogs(ctx context.Context) (*operations.AccountGetLog
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -339,7 +342,7 @@ func (s *account) AccountGetLogs(ctx context.Context) (*operations.AccountGetLog
 
 // AccountGetPrefs - Get Account Preferences
 // Get currently logged in user preferences as a key-value object.
-func (s *account) AccountGetPrefs(ctx context.Context) (*operations.AccountGetPrefsResponse, error) {
+func (s *account) AccountGetPrefs(ctx context.Context, security operations.AccountGetPrefsSecurity) (*operations.AccountGetPrefsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/prefs"
 
@@ -348,7 +351,7 @@ func (s *account) AccountGetPrefs(ctx context.Context) (*operations.AccountGetPr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -386,7 +389,10 @@ func (s *account) AccountGetPrefs(ctx context.Context) (*operations.AccountGetPr
 // Use this endpoint to get a logged in user's session using a Session ID. Inputting 'current' will return the current session being used.
 func (s *account) AccountGetSession(ctx context.Context, request operations.AccountGetSessionRequest, security operations.AccountGetSessionSecurity) (*operations.AccountGetSessionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/sessions/{sessionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/sessions/{sessionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -429,7 +435,7 @@ func (s *account) AccountGetSession(ctx context.Context, request operations.Acco
 
 // AccountGetSessions - Get Account Sessions
 // Get currently logged in user list of active sessions across different devices.
-func (s *account) AccountGetSessions(ctx context.Context) (*operations.AccountGetSessionsResponse, error) {
+func (s *account) AccountGetSessions(ctx context.Context, security operations.AccountGetSessionsSecurity) (*operations.AccountGetSessionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/sessions"
 
@@ -438,7 +444,7 @@ func (s *account) AccountGetSessions(ctx context.Context) (*operations.AccountGe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

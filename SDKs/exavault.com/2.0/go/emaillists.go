@@ -91,7 +91,10 @@ func (s *emailLists) AddEmailList(ctx context.Context, request operations.AddEma
 // Permanently delete an email group. This action is not reversible. We recommend making a user confirm this action before sending the API call.
 func (s *emailLists) DeleteEmailListByID(ctx context.Context, request operations.DeleteEmailListByIDRequest) (*operations.DeleteEmailListByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/email-lists/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/email-lists/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *emailLists) DeleteEmailListByID(ctx context.Context, request operations
 // Retrieve all the details of a specific email list including it's name, when it was created and all the email addresses that belong to the group.
 func (s *emailLists) GetEmailListByID(ctx context.Context, request operations.GetEmailListByIDRequest) (*operations.GetEmailListByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/email-lists/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/email-lists/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -244,7 +250,10 @@ func (s *emailLists) GetEmailLists(ctx context.Context, request operations.GetEm
 // *This call will **replace** your current email list in its entirety.* If you want to keep any existing emails on the list, be sure to submit the call with any current emails you want to keep on the list.
 func (s *emailLists) UpdateEmailListByID(ctx context.Context, request operations.UpdateEmailListByIDRequest) (*operations.UpdateEmailListByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/email-lists/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/email-lists/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

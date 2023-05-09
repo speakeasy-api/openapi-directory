@@ -650,14 +650,23 @@ const (
 	DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnumR7g12xlarge     DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum = "r7g.12xlarge"
 	DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnumR7g16xlarge     DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum = "r7g.16xlarge"
 	DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnumR7gMetal        DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum = "r7g.metal"
+	DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnumC6inMetal       DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum = "c6in.metal"
+	DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnumM6inMetal       DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum = "m6in.metal"
+	DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnumM6idnMetal      DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum = "m6idn.metal"
+	DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnumR6inMetal       DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum = "r6in.metal"
+	DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnumR6idnMetal      DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum) ToPointer() *DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -1933,10 +1942,20 @@ func (e *DescribeReservedInstancesModificationsResultReservedInstancesModificati
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -1948,19 +1967,23 @@ const (
 	DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationScopeEnumRegion           DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationScopeEnum = "Region"
 )
 
+func (e DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationScopeEnum) ToPointer() *DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationScopeEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Availability Zone":
 		fallthrough
 	case "Region":
-		*e = DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationScopeEnum(s)
+		*e = DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationScopeEnum: %v", v)
 	}
 }
 

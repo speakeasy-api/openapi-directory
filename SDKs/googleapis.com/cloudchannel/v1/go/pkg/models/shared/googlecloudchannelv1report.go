@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleCloudChannelV1Report - The ID and description of a report that was used to generate report data. For example, "GCP Daily Spend", "Google Workspace License Activity", etc.
+// GoogleCloudChannelV1Report - The ID and description of a report that was used to generate report data. For example, "Google Cloud Daily Spend", "Google Workspace License Activity", etc.
 type GoogleCloudChannelV1Report struct {
 	// The list of columns included in the report. This defines the schema of the report results.
 	Columns []GoogleCloudChannelV1Column `json:"columns,omitempty"`

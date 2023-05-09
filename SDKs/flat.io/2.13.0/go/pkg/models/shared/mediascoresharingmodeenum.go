@@ -17,12 +17,16 @@ const (
 	MediaScoreSharingModeEnumPerformance MediaScoreSharingModeEnum = "performance"
 )
 
+func (e MediaScoreSharingModeEnum) ToPointer() *MediaScoreSharingModeEnum {
+	return &e
+}
+
 func (e *MediaScoreSharingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
@@ -30,9 +34,9 @@ func (e *MediaScoreSharingModeEnum) UnmarshalJSON(data []byte) error {
 	case "copy":
 		fallthrough
 	case "performance":
-		*e = MediaScoreSharingModeEnum(s)
+		*e = MediaScoreSharingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaScoreSharingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaScoreSharingModeEnum: %v", v)
 	}
 }

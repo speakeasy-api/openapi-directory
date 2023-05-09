@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,7 +16,8 @@ func main() {
         }),
     )
 
-    req := operations.PostAssetsAnalysisAbsorptionRatioRequestBody{
+    ctx := context.Background()
+    res, err := s.AssetsAnalysis.PostAssetsAnalysisAbsorptionRatio(ctx, operations.PostAssetsAnalysisAbsorptionRatioRequestBody{
         Assets: 548814,
         AssetsCovarianceMatrix: [][]float64{
             []float64{
@@ -37,12 +37,9 @@ func main() {
             },
         },
         AssetsCovarianceMatrixEigenvectors: &operations.PostAssetsAnalysisAbsorptionRatioRequestBodyAssetsCovarianceMatrixEigenvectors{
-            EigenvectorsRetained: 891773,
+            EigenvectorsRetained: sdk.Int64(891773),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.AssetsAnalysis.PostAssetsAnalysisAbsorptionRatio(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -19,12 +19,16 @@ const (
 	CreateVpcResultVpcCidrBlockAssociationSetCidrBlockStateStateEnumFailed         CreateVpcResultVpcCidrBlockAssociationSetCidrBlockStateStateEnum = "failed"
 )
 
+func (e CreateVpcResultVpcCidrBlockAssociationSetCidrBlockStateStateEnum) ToPointer() *CreateVpcResultVpcCidrBlockAssociationSetCidrBlockStateStateEnum {
+	return &e
+}
+
 func (e *CreateVpcResultVpcCidrBlockAssociationSetCidrBlockStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -36,10 +40,10 @@ func (e *CreateVpcResultVpcCidrBlockAssociationSetCidrBlockStateStateEnum) Unmar
 	case "failing":
 		fallthrough
 	case "failed":
-		*e = CreateVpcResultVpcCidrBlockAssociationSetCidrBlockStateStateEnum(s)
+		*e = CreateVpcResultVpcCidrBlockAssociationSetCidrBlockStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcResultVpcCidrBlockAssociationSetCidrBlockStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcResultVpcCidrBlockAssociationSetCidrBlockStateStateEnum: %v", v)
 	}
 }
 
@@ -65,21 +69,25 @@ const (
 	CreateVpcResultVpcInstanceTenancyEnumHost      CreateVpcResultVpcInstanceTenancyEnum = "host"
 )
 
+func (e CreateVpcResultVpcInstanceTenancyEnum) ToPointer() *CreateVpcResultVpcInstanceTenancyEnum {
+	return &e
+}
+
 func (e *CreateVpcResultVpcInstanceTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = CreateVpcResultVpcInstanceTenancyEnum(s)
+		*e = CreateVpcResultVpcInstanceTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcResultVpcInstanceTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcResultVpcInstanceTenancyEnum: %v", v)
 	}
 }
 
@@ -95,12 +103,16 @@ const (
 	CreateVpcResultVpcIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnumFailed         CreateVpcResultVpcIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum = "failed"
 )
 
+func (e CreateVpcResultVpcIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum) ToPointer() *CreateVpcResultVpcIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum {
+	return &e
+}
+
 func (e *CreateVpcResultVpcIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -112,10 +124,10 @@ func (e *CreateVpcResultVpcIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnu
 	case "failing":
 		fallthrough
 	case "failed":
-		*e = CreateVpcResultVpcIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum(s)
+		*e = CreateVpcResultVpcIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcResultVpcIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcResultVpcIpv6CidrBlockAssociationSetIpv6CidrBlockStateStateEnum: %v", v)
 	}
 }
 
@@ -142,19 +154,23 @@ const (
 	CreateVpcResultVpcStateEnumAvailable CreateVpcResultVpcStateEnum = "available"
 )
 
+func (e CreateVpcResultVpcStateEnum) ToPointer() *CreateVpcResultVpcStateEnum {
+	return &e
+}
+
 func (e *CreateVpcResultVpcStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
-		*e = CreateVpcResultVpcStateEnum(s)
+		*e = CreateVpcResultVpcStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcResultVpcStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcResultVpcStateEnum: %v", v)
 	}
 }
 

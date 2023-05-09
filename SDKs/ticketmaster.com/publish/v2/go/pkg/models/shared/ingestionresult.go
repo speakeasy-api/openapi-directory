@@ -16,21 +16,25 @@ const (
 	IngestionResultStatusEnumSuccess        IngestionResultStatusEnum = "Success"
 )
 
+func (e IngestionResultStatusEnum) ToPointer() *IngestionResultStatusEnum {
+	return &e
+}
+
 func (e *IngestionResultStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Error":
 		fallthrough
 	case "SuccessWarning":
 		fallthrough
 	case "Success":
-		*e = IngestionResultStatusEnum(s)
+		*e = IngestionResultStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IngestionResultStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for IngestionResultStatusEnum: %v", v)
 	}
 }
 

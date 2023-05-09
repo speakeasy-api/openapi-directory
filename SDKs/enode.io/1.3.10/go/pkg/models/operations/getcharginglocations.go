@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetCharginglocationsSecurity struct {
+	UserAccessToken  *string `security:"scheme,type=oauth2,name=Authorization"`
+	UserAccessToken1 *string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetCharginglocationsResponse struct {
 	ContentType string
 	StatusCode  int

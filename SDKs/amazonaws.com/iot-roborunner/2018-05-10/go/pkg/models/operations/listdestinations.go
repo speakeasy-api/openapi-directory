@@ -18,21 +18,25 @@ const (
 	ListDestinationsStateEnumDecommissioned ListDestinationsStateEnum = "DECOMMISSIONED"
 )
 
+func (e ListDestinationsStateEnum) ToPointer() *ListDestinationsStateEnum {
+	return &e
+}
+
 func (e *ListDestinationsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "DECOMMISSIONED":
-		*e = ListDestinationsStateEnum(s)
+		*e = ListDestinationsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDestinationsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDestinationsStateEnum: %v", v)
 	}
 }
 

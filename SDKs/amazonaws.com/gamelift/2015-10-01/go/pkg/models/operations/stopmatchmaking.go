@@ -16,17 +16,21 @@ const (
 	StopMatchmakingXAmzTargetEnumGameLiftStopMatchmaking StopMatchmakingXAmzTargetEnum = "GameLift.StopMatchmaking"
 )
 
+func (e StopMatchmakingXAmzTargetEnum) ToPointer() *StopMatchmakingXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopMatchmakingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.StopMatchmaking":
-		*e = StopMatchmakingXAmzTargetEnum(s)
+		*e = StopMatchmakingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopMatchmakingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopMatchmakingXAmzTargetEnum: %v", v)
 	}
 }
 

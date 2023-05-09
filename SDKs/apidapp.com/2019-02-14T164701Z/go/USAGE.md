@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteKeyKeyRequest{
-        Key: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteKeyKey(ctx, req)
+    res, err := s.DeleteKeyKey(ctx, operations.DeleteKeyKeyRequest{
+        Key: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

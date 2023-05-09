@@ -15,17 +15,21 @@ const (
 	GETTestTypeActionEnumTestType GETTestTypeActionEnum = "TestType"
 )
 
+func (e GETTestTypeActionEnum) ToPointer() *GETTestTypeActionEnum {
+	return &e
+}
+
 func (e *GETTestTypeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TestType":
-		*e = GETTestTypeActionEnum(s)
+		*e = GETTestTypeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTestTypeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTestTypeActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETTestTypeTypeEnumHook     GETTestTypeTypeEnum = "HOOK"
 )
 
+func (e GETTestTypeTypeEnum) ToPointer() *GETTestTypeTypeEnum {
+	return &e
+}
+
 func (e *GETTestTypeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = GETTestTypeTypeEnum(s)
+		*e = GETTestTypeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTestTypeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTestTypeTypeEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETTestTypeVersionEnumTwoThousandAndTen0515 GETTestTypeVersionEnum = "2010-05-15"
 )
 
+func (e GETTestTypeVersionEnum) ToPointer() *GETTestTypeVersionEnum {
+	return &e
+}
+
 func (e *GETTestTypeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETTestTypeVersionEnum(s)
+		*e = GETTestTypeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTestTypeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTestTypeVersionEnum: %v", v)
 	}
 }
 

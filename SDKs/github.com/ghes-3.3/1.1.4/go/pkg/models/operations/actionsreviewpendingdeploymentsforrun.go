@@ -17,19 +17,23 @@ const (
 	ActionsReviewPendingDeploymentsForRunRequestBodyStateEnumRejected ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum = "rejected"
 )
 
+func (e ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum) ToPointer() *ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum {
+	return &e
+}
+
 func (e *ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "approved":
 		fallthrough
 	case "rejected":
-		*e = ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum(s)
+		*e = ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionsReviewPendingDeploymentsForRunRequestBodyStateEnum: %v", v)
 	}
 }
 

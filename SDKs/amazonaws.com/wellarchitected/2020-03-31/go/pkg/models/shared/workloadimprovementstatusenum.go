@@ -18,12 +18,16 @@ const (
 	WorkloadImprovementStatusEnumRiskAcknowledged WorkloadImprovementStatusEnum = "RISK_ACKNOWLEDGED"
 )
 
+func (e WorkloadImprovementStatusEnum) ToPointer() *WorkloadImprovementStatusEnum {
+	return &e
+}
+
 func (e *WorkloadImprovementStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_APPLICABLE":
 		fallthrough
 	case "NOT_STARTED":
@@ -33,9 +37,9 @@ func (e *WorkloadImprovementStatusEnum) UnmarshalJSON(data []byte) error {
 	case "COMPLETE":
 		fallthrough
 	case "RISK_ACKNOWLEDGED":
-		*e = WorkloadImprovementStatusEnum(s)
+		*e = WorkloadImprovementStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkloadImprovementStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkloadImprovementStatusEnum: %v", v)
 	}
 }

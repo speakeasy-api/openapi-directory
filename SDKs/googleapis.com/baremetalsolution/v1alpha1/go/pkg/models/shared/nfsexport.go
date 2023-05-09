@@ -16,21 +16,25 @@ const (
 	NfsExportPermissionsEnumReadWrite              NfsExportPermissionsEnum = "READ_WRITE"
 )
 
+func (e NfsExportPermissionsEnum) ToPointer() *NfsExportPermissionsEnum {
+	return &e
+}
+
 func (e *NfsExportPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERMISSIONS_UNSPECIFIED":
 		fallthrough
 	case "READ_ONLY":
 		fallthrough
 	case "READ_WRITE":
-		*e = NfsExportPermissionsEnum(s)
+		*e = NfsExportPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NfsExportPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for NfsExportPermissionsEnum: %v", v)
 	}
 }
 

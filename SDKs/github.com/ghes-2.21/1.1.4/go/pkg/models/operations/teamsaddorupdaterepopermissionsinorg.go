@@ -26,12 +26,16 @@ const (
 	TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnumTriage   TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum = "triage"
 )
 
+func (e TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum) ToPointer() *TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum {
+	return &e
+}
+
 func (e *TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pull":
 		fallthrough
 	case "push":
@@ -41,10 +45,10 @@ func (e *TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum) Unmarsha
 	case "maintain":
 		fallthrough
 	case "triage":
-		*e = TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum(s)
+		*e = TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsAddOrUpdateRepoPermissionsInOrgRequestBodyPermissionEnum: %v", v)
 	}
 }
 

@@ -36,7 +36,10 @@ func newShipment(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Get a specific shipment.
 func (s *shipment) GetShipment(ctx context.Context, request operations.GetShipmentRequest) (*operations.GetShipmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments/{shipment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments/{shipment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +194,10 @@ func (s *shipment) GetShipment(ctx context.Context, request operations.GetShipme
 // List shipments of project
 func (s *shipment) GetShipmentList(ctx context.Context, request operations.GetShipmentListRequest) (*operations.GetShipmentListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,7 +352,10 @@ func (s *shipment) GetShipmentList(ctx context.Context, request operations.GetSh
 // Create a shipment
 func (s *shipment) PostShipmentJSON(ctx context.Context, request operations.PostShipmentJSONRequest) (*operations.PostShipmentJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShipmentLocationPostPersistVO", "json")
 	if err != nil {
@@ -508,7 +517,10 @@ func (s *shipment) PostShipmentJSON(ctx context.Context, request operations.Post
 // Create a shipment
 func (s *shipment) PostShipmentRaw(ctx context.Context, request operations.PostShipmentRawRequest) (*operations.PostShipmentRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -670,7 +682,10 @@ func (s *shipment) PostShipmentRaw(ctx context.Context, request operations.PostS
 // Update a specific shipment location
 func (s *shipment) PutShipmentLocationJSON(ctx context.Context, request operations.PutShipmentLocationJSONRequest) (*operations.PutShipmentLocationJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments/{shipment_id}/locations/{location_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments/{shipment_id}/locations/{location_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShipmentLocationPersistVO", "json")
 	if err != nil {
@@ -775,7 +790,10 @@ func (s *shipment) PutShipmentLocationJSON(ctx context.Context, request operatio
 // Update a specific shipment location
 func (s *shipment) PutShipmentLocationRaw(ctx context.Context, request operations.PutShipmentLocationRawRequest) (*operations.PutShipmentLocationRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments/{shipment_id}/locations/{location_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments/{shipment_id}/locations/{location_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

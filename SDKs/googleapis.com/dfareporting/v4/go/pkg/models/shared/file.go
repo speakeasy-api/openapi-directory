@@ -15,19 +15,23 @@ const (
 	FileFormatEnumExcel FileFormatEnum = "EXCEL"
 )
 
+func (e FileFormatEnum) ToPointer() *FileFormatEnum {
+	return &e
+}
+
 func (e *FileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
 		fallthrough
 	case "EXCEL":
-		*e = FileFormatEnum(s)
+		*e = FileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for FileFormatEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	FileStatusEnumQueued          FileStatusEnum = "QUEUED"
 )
 
+func (e FileStatusEnum) ToPointer() *FileStatusEnum {
+	return &e
+}
+
 func (e *FileStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "REPORT_AVAILABLE":
@@ -57,10 +65,10 @@ func (e *FileStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLED":
 		fallthrough
 	case "QUEUED":
-		*e = FileStatusEnum(s)
+		*e = FileStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FileStatusEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	DestinationStatusStatusEnumDisapproved DestinationStatusStatusEnum = "DISAPPROVED"
 )
 
+func (e DestinationStatusStatusEnum) ToPointer() *DestinationStatusStatusEnum {
+	return &e
+}
+
 func (e *DestinationStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "ACTIVE":
@@ -30,10 +34,10 @@ func (e *DestinationStatusStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING":
 		fallthrough
 	case "DISAPPROVED":
-		*e = DestinationStatusStatusEnum(s)
+		*e = DestinationStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinationStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinationStatusStatusEnum: %v", v)
 	}
 }
 

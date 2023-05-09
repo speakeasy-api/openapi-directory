@@ -34,7 +34,10 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 // PlusCommentsGet - Shut down. See https://developers.google.com/+/api-shutdown for more details.
 func (s *comments) PlusCommentsGet(ctx context.Context, request operations.PlusCommentsGetRequest, security operations.PlusCommentsGetSecurity) (*operations.PlusCommentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/comments/{commentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/comments/{commentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *comments) PlusCommentsGet(ctx context.Context, request operations.PlusC
 // PlusCommentsList - Shut down. See https://developers.google.com/+/api-shutdown for more details.
 func (s *comments) PlusCommentsList(ctx context.Context, request operations.PlusCommentsListRequest, security operations.PlusCommentsListSecurity) (*operations.PlusCommentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/activities/{activityId}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/activities/{activityId}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

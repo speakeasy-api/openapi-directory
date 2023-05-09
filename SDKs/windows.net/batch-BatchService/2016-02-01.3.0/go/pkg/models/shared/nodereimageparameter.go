@@ -17,12 +17,16 @@ const (
 	NodeReimageParameterNodeReimageOptionEnumRetaineddata   NodeReimageParameterNodeReimageOptionEnum = "retaineddata"
 )
 
+func (e NodeReimageParameterNodeReimageOptionEnum) ToPointer() *NodeReimageParameterNodeReimageOptionEnum {
+	return &e
+}
+
 func (e *NodeReimageParameterNodeReimageOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "requeue":
 		fallthrough
 	case "terminate":
@@ -30,10 +34,10 @@ func (e *NodeReimageParameterNodeReimageOptionEnum) UnmarshalJSON(data []byte) e
 	case "taskcompletion":
 		fallthrough
 	case "retaineddata":
-		*e = NodeReimageParameterNodeReimageOptionEnum(s)
+		*e = NodeReimageParameterNodeReimageOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodeReimageParameterNodeReimageOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for NodeReimageParameterNodeReimageOptionEnum: %v", v)
 	}
 }
 

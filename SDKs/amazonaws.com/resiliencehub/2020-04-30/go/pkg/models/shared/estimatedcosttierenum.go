@@ -16,12 +16,16 @@ const (
 	EstimatedCostTierEnumL4 EstimatedCostTierEnum = "L4"
 )
 
+func (e EstimatedCostTierEnum) ToPointer() *EstimatedCostTierEnum {
+	return &e
+}
+
 func (e *EstimatedCostTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "L1":
 		fallthrough
 	case "L2":
@@ -29,9 +33,9 @@ func (e *EstimatedCostTierEnum) UnmarshalJSON(data []byte) error {
 	case "L3":
 		fallthrough
 	case "L4":
-		*e = EstimatedCostTierEnum(s)
+		*e = EstimatedCostTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EstimatedCostTierEnum: %s", s)
+		return fmt.Errorf("invalid value for EstimatedCostTierEnum: %v", v)
 	}
 }

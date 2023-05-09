@@ -22,19 +22,23 @@ const (
 	LabOrderPriorityEnumS LabOrderPriorityEnum = "S"
 )
 
+func (e LabOrderPriorityEnum) ToPointer() *LabOrderPriorityEnum {
+	return &e
+}
+
 func (e *LabOrderPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "N":
 		fallthrough
 	case "S":
-		*e = LabOrderPriorityEnum(s)
+		*e = LabOrderPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LabOrderPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for LabOrderPriorityEnum: %v", v)
 	}
 }
 

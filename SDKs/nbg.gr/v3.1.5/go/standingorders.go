@@ -35,7 +35,10 @@ func newStandingOrders(defaultClient, securityClient HTTPClient, serverURL, lang
 // Get Standing Orders by Account ID
 func (s *standingOrders) GetAccountsAccountIDStandingOrders(ctx context.Context, request operations.GetAccountsAccountIDStandingOrdersRequest, security operations.GetAccountsAccountIDStandingOrdersSecurity) (*operations.GetAccountsAccountIDStandingOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/standing-orders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/standing-orders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

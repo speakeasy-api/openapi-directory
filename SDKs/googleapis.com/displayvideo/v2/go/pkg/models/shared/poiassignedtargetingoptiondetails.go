@@ -16,21 +16,25 @@ const (
 	PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnumDistanceUnitKilometers  PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnum = "DISTANCE_UNIT_KILOMETERS"
 )
 
+func (e PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnum) ToPointer() *PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnum {
+	return &e
+}
+
 func (e *PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISTANCE_UNIT_UNSPECIFIED":
 		fallthrough
 	case "DISTANCE_UNIT_MILES":
 		fallthrough
 	case "DISTANCE_UNIT_KILOMETERS":
-		*e = PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnum(s)
+		*e = PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for PoiAssignedTargetingOptionDetailsProximityRadiusUnitEnum: %v", v)
 	}
 }
 

@@ -36,7 +36,10 @@ func newCategories(defaultClient, securityClient HTTPClient, serverURL, language
 // DeleteCategoriesIDJSON - Delete an existing Category.
 func (s *categories) DeleteCategoriesIDJSON(ctx context.Context, request operations.DeleteCategoriesIDJSONRequest) (*operations.DeleteCategoriesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/categories/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -191,7 +194,10 @@ func (s *categories) GetCategoriesCountJSON(ctx context.Context, request operati
 // GetCategoriesIDJSON - Retrieve a single Category.
 func (s *categories) GetCategoriesIDJSON(ctx context.Context, request operations.GetCategoriesIDJSONRequest) (*operations.GetCategoriesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/categories/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -308,7 +314,10 @@ func (s *categories) PostCategoriesJSON(ctx context.Context, request operations.
 // PutCategoriesIDJSON - Modify an existing Category.
 func (s *categories) PutCategoriesIDJSON(ctx context.Context, request operations.PutCategoriesIDJSONRequest) (*operations.PutCategoriesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/categories/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CategoryEdit", "json")
 	if err != nil {

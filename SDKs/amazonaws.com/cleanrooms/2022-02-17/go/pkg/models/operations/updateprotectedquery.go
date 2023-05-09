@@ -16,17 +16,21 @@ const (
 	UpdateProtectedQueryRequestBodyTargetStatusEnumCancelled UpdateProtectedQueryRequestBodyTargetStatusEnum = "CANCELLED"
 )
 
+func (e UpdateProtectedQueryRequestBodyTargetStatusEnum) ToPointer() *UpdateProtectedQueryRequestBodyTargetStatusEnum {
+	return &e
+}
+
 func (e *UpdateProtectedQueryRequestBodyTargetStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANCELLED":
-		*e = UpdateProtectedQueryRequestBodyTargetStatusEnum(s)
+		*e = UpdateProtectedQueryRequestBodyTargetStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateProtectedQueryRequestBodyTargetStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateProtectedQueryRequestBodyTargetStatusEnum: %v", v)
 	}
 }
 

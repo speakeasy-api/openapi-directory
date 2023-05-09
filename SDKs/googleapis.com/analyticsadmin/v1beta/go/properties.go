@@ -35,7 +35,10 @@ func newProperties(defaultClient, securityClient HTTPClient, serverURL, language
 // AnalyticsadminPropertiesAcknowledgeUserDataCollection - Acknowledges the terms of user data collection for the specified property. This acknowledgement must be completed (either in the Google Analytics UI or through this API) before MeasurementProtocolSecret resources may be created.
 func (s *properties) AnalyticsadminPropertiesAcknowledgeUserDataCollection(ctx context.Context, request operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest, security operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionSecurity) (*operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:acknowledgeUserDataCollection", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:acknowledgeUserDataCollection", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1betaAcknowledgeUserDataCollectionRequest", "json")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *properties) AnalyticsadminPropertiesAcknowledgeUserDataCollection(ctx c
 // AnalyticsadminPropertiesConversionEventsCreate - Creates a conversion event with the specified attributes.
 func (s *properties) AnalyticsadminPropertiesConversionEventsCreate(ctx context.Context, request operations.AnalyticsadminPropertiesConversionEventsCreateRequest, security operations.AnalyticsadminPropertiesConversionEventsCreateSecurity) (*operations.AnalyticsadminPropertiesConversionEventsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/conversionEvents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/conversionEvents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1betaConversionEventInput", "json")
 	if err != nil {
@@ -145,7 +151,10 @@ func (s *properties) AnalyticsadminPropertiesConversionEventsCreate(ctx context.
 // AnalyticsadminPropertiesConversionEventsList - Returns a list of conversion events in the specified parent property. Returns an empty list if no conversion events are found.
 func (s *properties) AnalyticsadminPropertiesConversionEventsList(ctx context.Context, request operations.AnalyticsadminPropertiesConversionEventsListRequest, security operations.AnalyticsadminPropertiesConversionEventsListSecurity) (*operations.AnalyticsadminPropertiesConversionEventsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/conversionEvents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/conversionEvents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -248,7 +257,10 @@ func (s *properties) AnalyticsadminPropertiesCreate(ctx context.Context, request
 // AnalyticsadminPropertiesCustomDimensionsCreate - Creates a CustomDimension.
 func (s *properties) AnalyticsadminPropertiesCustomDimensionsCreate(ctx context.Context, request operations.AnalyticsadminPropertiesCustomDimensionsCreateRequest, security operations.AnalyticsadminPropertiesCustomDimensionsCreateSecurity) (*operations.AnalyticsadminPropertiesCustomDimensionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/customDimensions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/customDimensions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1betaCustomDimensionInput", "json")
 	if err != nil {
@@ -303,7 +315,10 @@ func (s *properties) AnalyticsadminPropertiesCustomDimensionsCreate(ctx context.
 // AnalyticsadminPropertiesCustomDimensionsList - Lists CustomDimensions on a property.
 func (s *properties) AnalyticsadminPropertiesCustomDimensionsList(ctx context.Context, request operations.AnalyticsadminPropertiesCustomDimensionsListRequest, security operations.AnalyticsadminPropertiesCustomDimensionsListSecurity) (*operations.AnalyticsadminPropertiesCustomDimensionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/customDimensions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/customDimensions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +366,10 @@ func (s *properties) AnalyticsadminPropertiesCustomDimensionsList(ctx context.Co
 // AnalyticsadminPropertiesCustomMetricsArchive - Archives a CustomMetric on a property.
 func (s *properties) AnalyticsadminPropertiesCustomMetricsArchive(ctx context.Context, request operations.AnalyticsadminPropertiesCustomMetricsArchiveRequest, security operations.AnalyticsadminPropertiesCustomMetricsArchiveSecurity) (*operations.AnalyticsadminPropertiesCustomMetricsArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:archive", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}:archive", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -406,7 +424,10 @@ func (s *properties) AnalyticsadminPropertiesCustomMetricsArchive(ctx context.Co
 // AnalyticsadminPropertiesCustomMetricsCreate - Creates a CustomMetric.
 func (s *properties) AnalyticsadminPropertiesCustomMetricsCreate(ctx context.Context, request operations.AnalyticsadminPropertiesCustomMetricsCreateRequest, security operations.AnalyticsadminPropertiesCustomMetricsCreateSecurity) (*operations.AnalyticsadminPropertiesCustomMetricsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/customMetrics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/customMetrics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1betaCustomMetricInput", "json")
 	if err != nil {
@@ -461,7 +482,10 @@ func (s *properties) AnalyticsadminPropertiesCustomMetricsCreate(ctx context.Con
 // AnalyticsadminPropertiesCustomMetricsList - Lists CustomMetrics on a property.
 func (s *properties) AnalyticsadminPropertiesCustomMetricsList(ctx context.Context, request operations.AnalyticsadminPropertiesCustomMetricsListRequest, security operations.AnalyticsadminPropertiesCustomMetricsListSecurity) (*operations.AnalyticsadminPropertiesCustomMetricsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/customMetrics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/customMetrics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -509,7 +533,10 @@ func (s *properties) AnalyticsadminPropertiesCustomMetricsList(ctx context.Conte
 // AnalyticsadminPropertiesDataStreamsCreate - Creates a DataStream.
 func (s *properties) AnalyticsadminPropertiesDataStreamsCreate(ctx context.Context, request operations.AnalyticsadminPropertiesDataStreamsCreateRequest, security operations.AnalyticsadminPropertiesDataStreamsCreateSecurity) (*operations.AnalyticsadminPropertiesDataStreamsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/dataStreams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/dataStreams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1betaDataStreamInput", "json")
 	if err != nil {
@@ -564,7 +591,10 @@ func (s *properties) AnalyticsadminPropertiesDataStreamsCreate(ctx context.Conte
 // AnalyticsadminPropertiesDataStreamsList - Lists DataStreams on a property.
 func (s *properties) AnalyticsadminPropertiesDataStreamsList(ctx context.Context, request operations.AnalyticsadminPropertiesDataStreamsListRequest, security operations.AnalyticsadminPropertiesDataStreamsListSecurity) (*operations.AnalyticsadminPropertiesDataStreamsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/dataStreams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/dataStreams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -612,7 +642,10 @@ func (s *properties) AnalyticsadminPropertiesDataStreamsList(ctx context.Context
 // AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreate - Creates a measurement protocol secret.
 func (s *properties) AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreate(ctx context.Context, request operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateRequest, security operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateSecurity) (*operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/measurementProtocolSecrets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/measurementProtocolSecrets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1betaMeasurementProtocolSecretInput", "json")
 	if err != nil {
@@ -667,7 +700,10 @@ func (s *properties) AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecre
 // AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGet - Lookup for a single "GA4" MeasurementProtocolSecret.
 func (s *properties) AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGet(ctx context.Context, request operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetRequest, security operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetSecurity) (*operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -715,7 +751,10 @@ func (s *properties) AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecre
 // AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsList - Returns child MeasurementProtocolSecrets under the specified parent Property.
 func (s *properties) AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsList(ctx context.Context, request operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListRequest, security operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListSecurity) (*operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/measurementProtocolSecrets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/measurementProtocolSecrets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -763,7 +802,10 @@ func (s *properties) AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecre
 // AnalyticsadminPropertiesFirebaseLinksCreate - Creates a FirebaseLink. Properties can have at most one FirebaseLink.
 func (s *properties) AnalyticsadminPropertiesFirebaseLinksCreate(ctx context.Context, request operations.AnalyticsadminPropertiesFirebaseLinksCreateRequest, security operations.AnalyticsadminPropertiesFirebaseLinksCreateSecurity) (*operations.AnalyticsadminPropertiesFirebaseLinksCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/firebaseLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/firebaseLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1betaFirebaseLinkInput", "json")
 	if err != nil {
@@ -818,7 +860,10 @@ func (s *properties) AnalyticsadminPropertiesFirebaseLinksCreate(ctx context.Con
 // AnalyticsadminPropertiesFirebaseLinksList - Lists FirebaseLinks on a property. Properties can have at most one FirebaseLink.
 func (s *properties) AnalyticsadminPropertiesFirebaseLinksList(ctx context.Context, request operations.AnalyticsadminPropertiesFirebaseLinksListRequest, security operations.AnalyticsadminPropertiesFirebaseLinksListSecurity) (*operations.AnalyticsadminPropertiesFirebaseLinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/firebaseLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/firebaseLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -866,7 +911,10 @@ func (s *properties) AnalyticsadminPropertiesFirebaseLinksList(ctx context.Conte
 // AnalyticsadminPropertiesGoogleAdsLinksCreate - Creates a GoogleAdsLink.
 func (s *properties) AnalyticsadminPropertiesGoogleAdsLinksCreate(ctx context.Context, request operations.AnalyticsadminPropertiesGoogleAdsLinksCreateRequest, security operations.AnalyticsadminPropertiesGoogleAdsLinksCreateSecurity) (*operations.AnalyticsadminPropertiesGoogleAdsLinksCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/googleAdsLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/googleAdsLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1betaGoogleAdsLinkInput", "json")
 	if err != nil {
@@ -921,7 +969,10 @@ func (s *properties) AnalyticsadminPropertiesGoogleAdsLinksCreate(ctx context.Co
 // AnalyticsadminPropertiesGoogleAdsLinksDelete - Deletes a GoogleAdsLink on a property
 func (s *properties) AnalyticsadminPropertiesGoogleAdsLinksDelete(ctx context.Context, request operations.AnalyticsadminPropertiesGoogleAdsLinksDeleteRequest, security operations.AnalyticsadminPropertiesGoogleAdsLinksDeleteSecurity) (*operations.AnalyticsadminPropertiesGoogleAdsLinksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -969,7 +1020,10 @@ func (s *properties) AnalyticsadminPropertiesGoogleAdsLinksDelete(ctx context.Co
 // AnalyticsadminPropertiesGoogleAdsLinksList - Lists GoogleAdsLinks on a property.
 func (s *properties) AnalyticsadminPropertiesGoogleAdsLinksList(ctx context.Context, request operations.AnalyticsadminPropertiesGoogleAdsLinksListRequest, security operations.AnalyticsadminPropertiesGoogleAdsLinksListSecurity) (*operations.AnalyticsadminPropertiesGoogleAdsLinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/googleAdsLinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/googleAdsLinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1017,7 +1071,10 @@ func (s *properties) AnalyticsadminPropertiesGoogleAdsLinksList(ctx context.Cont
 // AnalyticsadminPropertiesGoogleAdsLinksPatch - Updates a GoogleAdsLink on a property
 func (s *properties) AnalyticsadminPropertiesGoogleAdsLinksPatch(ctx context.Context, request operations.AnalyticsadminPropertiesGoogleAdsLinksPatchRequest, security operations.AnalyticsadminPropertiesGoogleAdsLinksPatchSecurity) (*operations.AnalyticsadminPropertiesGoogleAdsLinksPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1betaGoogleAdsLinkInput", "json")
 	if err != nil {
@@ -1120,7 +1177,10 @@ func (s *properties) AnalyticsadminPropertiesList(ctx context.Context, request o
 // AnalyticsadminPropertiesRunAccessReport - Returns a customized report of data access records. The report provides records of each time a user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data Access Reports can be requested for a property. The property must be in Google Analytics 360. This method is only available to Administrators. These data access records include GA4 UI Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can retrieve data from Google Analytics through a linkage. These records don't include property configuration changes like adding a stream or changing a property's time zone. For configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
 func (s *properties) AnalyticsadminPropertiesRunAccessReport(ctx context.Context, request operations.AnalyticsadminPropertiesRunAccessReportRequest, security operations.AnalyticsadminPropertiesRunAccessReportSecurity) (*operations.AnalyticsadminPropertiesRunAccessReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{entity}:runAccessReport", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{entity}:runAccessReport", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAnalyticsAdminV1betaRunAccessReportRequest", "json")
 	if err != nil {

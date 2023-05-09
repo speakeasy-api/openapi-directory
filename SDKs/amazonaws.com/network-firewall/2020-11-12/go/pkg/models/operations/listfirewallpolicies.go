@@ -16,17 +16,21 @@ const (
 	ListFirewallPoliciesXAmzTargetEnumNetworkFirewall20201112ListFirewallPolicies ListFirewallPoliciesXAmzTargetEnum = "NetworkFirewall_20201112.ListFirewallPolicies"
 )
 
+func (e ListFirewallPoliciesXAmzTargetEnum) ToPointer() *ListFirewallPoliciesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListFirewallPoliciesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NetworkFirewall_20201112.ListFirewallPolicies":
-		*e = ListFirewallPoliciesXAmzTargetEnum(s)
+		*e = ListFirewallPoliciesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFirewallPoliciesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFirewallPoliciesXAmzTargetEnum: %v", v)
 	}
 }
 

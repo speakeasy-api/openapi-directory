@@ -19,12 +19,16 @@ const (
 	AllowedOperationEnumCreateToken              AllowedOperationEnum = "CreateToken"
 )
 
+func (e AllowedOperationEnum) ToPointer() *AllowedOperationEnum {
+	return &e
+}
+
 func (e *AllowedOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateGrant":
 		fallthrough
 	case "CheckoutLicense":
@@ -38,9 +42,9 @@ func (e *AllowedOperationEnum) UnmarshalJSON(data []byte) error {
 	case "ListPurchasedLicenses":
 		fallthrough
 	case "CreateToken":
-		*e = AllowedOperationEnum(s)
+		*e = AllowedOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllowedOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for AllowedOperationEnum: %v", v)
 	}
 }

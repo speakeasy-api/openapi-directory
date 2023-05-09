@@ -16,17 +16,21 @@ const (
 	DeleteServerXAmzTargetEnumTransferServiceDeleteServer DeleteServerXAmzTargetEnum = "TransferService.DeleteServer"
 )
 
+func (e DeleteServerXAmzTargetEnum) ToPointer() *DeleteServerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteServerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.DeleteServer":
-		*e = DeleteServerXAmzTargetEnum(s)
+		*e = DeleteServerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteServerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteServerXAmzTargetEnum: %v", v)
 	}
 }
 

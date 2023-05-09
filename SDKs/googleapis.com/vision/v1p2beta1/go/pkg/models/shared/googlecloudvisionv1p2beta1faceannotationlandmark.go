@@ -50,12 +50,16 @@ const (
 	GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnumRightCheekCenter          GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum = "RIGHT_CHEEK_CENTER"
 )
 
+func (e GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum) ToPointer() *GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_LANDMARK":
 		fallthrough
 	case "LEFT_EYE":
@@ -129,10 +133,10 @@ func (e *GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum) UnmarshalJSON
 	case "LEFT_CHEEK_CENTER":
 		fallthrough
 	case "RIGHT_CHEEK_CENTER":
-		*e = GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum(s)
+		*e = GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p2beta1FaceAnnotationLandmarkTypeEnum: %v", v)
 	}
 }
 

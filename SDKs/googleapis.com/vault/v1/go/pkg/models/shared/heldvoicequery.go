@@ -16,12 +16,16 @@ const (
 	HeldVoiceQueryCoveredDataEnumCallLogs               HeldVoiceQueryCoveredDataEnum = "CALL_LOGS"
 )
 
+func (e HeldVoiceQueryCoveredDataEnum) ToPointer() *HeldVoiceQueryCoveredDataEnum {
+	return &e
+}
+
 func (e *HeldVoiceQueryCoveredDataEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COVERED_DATA_UNSPECIFIED":
 		fallthrough
 	case "TEXT_MESSAGES":
@@ -29,10 +33,10 @@ func (e *HeldVoiceQueryCoveredDataEnum) UnmarshalJSON(data []byte) error {
 	case "VOICEMAILS":
 		fallthrough
 	case "CALL_LOGS":
-		*e = HeldVoiceQueryCoveredDataEnum(s)
+		*e = HeldVoiceQueryCoveredDataEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HeldVoiceQueryCoveredDataEnum: %s", s)
+		return fmt.Errorf("invalid value for HeldVoiceQueryCoveredDataEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	KeyAlgorithmEnumEcSecp521r1  KeyAlgorithmEnum = "EC_secp521r1"
 )
 
+func (e KeyAlgorithmEnum) ToPointer() *KeyAlgorithmEnum {
+	return &e
+}
+
 func (e *KeyAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RSA_1024":
 		fallthrough
 	case "RSA_2048":
@@ -38,9 +42,9 @@ func (e *KeyAlgorithmEnum) UnmarshalJSON(data []byte) error {
 	case "EC_secp384r1":
 		fallthrough
 	case "EC_secp521r1":
-		*e = KeyAlgorithmEnum(s)
+		*e = KeyAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyAlgorithmEnum: %v", v)
 	}
 }

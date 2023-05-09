@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetFoodBrandedBarcodePhpRequest{
-        Code: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetFoodBrandedBarcodePhp(ctx, req, operations.GetFoodBrandedBarcodePhpSecurity{
+    res, err := s.GetFoodBrandedBarcodePhp(ctx, operations.GetFoodBrandedBarcodePhpRequest{
+        Code: "corrupti",
+    }, operations.GetFoodBrandedBarcodePhpSecurity{
         APIKeyAuth: "YOUR_API_KEY_HERE",
     })
     if err != nil {

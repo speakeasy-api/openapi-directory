@@ -16,17 +16,21 @@ const (
 	CreatePermissionSetXAmzTargetEnumSwbExternalServiceCreatePermissionSet CreatePermissionSetXAmzTargetEnum = "SWBExternalService.CreatePermissionSet"
 )
 
+func (e CreatePermissionSetXAmzTargetEnum) ToPointer() *CreatePermissionSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreatePermissionSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.CreatePermissionSet":
-		*e = CreatePermissionSetXAmzTargetEnum(s)
+		*e = CreatePermissionSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePermissionSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePermissionSetXAmzTargetEnum: %v", v)
 	}
 }
 

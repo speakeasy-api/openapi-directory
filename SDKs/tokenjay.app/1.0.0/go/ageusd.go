@@ -35,7 +35,10 @@ func newAgeUsd(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // CalcSigmaRsvExchange - Calculates SigRSV exchange
 func (s *ageUsd) CalcSigmaRsvExchange(ctx context.Context, request operations.CalcSigmaRsvExchangeRequest) (*operations.CalcSigmaRsvExchangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sigrsv/exchange/{amount}/info", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sigrsv/exchange/{amount}/info", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -123,7 +126,10 @@ func (s *ageUsd) CalcSigmaRsvExchange(ctx context.Context, request operations.Ca
 // CalcSigmaUsdExchange - Calculates SigUSD exchange
 func (s *ageUsd) CalcSigmaUsdExchange(ctx context.Context, request operations.CalcSigmaUsdExchangeRequest) (*operations.CalcSigmaUsdExchangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sigusd/exchange/{amount}/info", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sigusd/exchange/{amount}/info", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

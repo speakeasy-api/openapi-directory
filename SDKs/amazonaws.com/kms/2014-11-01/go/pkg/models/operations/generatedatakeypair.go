@@ -16,17 +16,21 @@ const (
 	GenerateDataKeyPairXAmzTargetEnumTrentServiceGenerateDataKeyPair GenerateDataKeyPairXAmzTargetEnum = "TrentService.GenerateDataKeyPair"
 )
 
+func (e GenerateDataKeyPairXAmzTargetEnum) ToPointer() *GenerateDataKeyPairXAmzTargetEnum {
+	return &e
+}
+
 func (e *GenerateDataKeyPairXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.GenerateDataKeyPair":
-		*e = GenerateDataKeyPairXAmzTargetEnum(s)
+		*e = GenerateDataKeyPairXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GenerateDataKeyPairXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GenerateDataKeyPairXAmzTargetEnum: %v", v)
 	}
 }
 

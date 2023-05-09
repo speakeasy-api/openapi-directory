@@ -14,18 +14,22 @@ const (
 	SplitEnumTest  SplitEnum = "TEST"
 )
 
+func (e SplitEnum) ToPointer() *SplitEnum {
+	return &e
+}
+
 func (e *SplitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRAIN":
 		fallthrough
 	case "TEST":
-		*e = SplitEnum(s)
+		*e = SplitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SplitEnum: %s", s)
+		return fmt.Errorf("invalid value for SplitEnum: %v", v)
 	}
 }

@@ -253,12 +253,16 @@ const (
 	CountryCodeEnumZw CountryCodeEnum = "ZW"
 )
 
+func (e CountryCodeEnum) ToPointer() *CountryCodeEnum {
+	return &e
+}
+
 func (e *CountryCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AD":
 		fallthrough
 	case "AE":
@@ -738,9 +742,9 @@ func (e *CountryCodeEnum) UnmarshalJSON(data []byte) error {
 	case "ZM":
 		fallthrough
 	case "ZW":
-		*e = CountryCodeEnum(s)
+		*e = CountryCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CountryCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CountryCodeEnum: %v", v)
 	}
 }

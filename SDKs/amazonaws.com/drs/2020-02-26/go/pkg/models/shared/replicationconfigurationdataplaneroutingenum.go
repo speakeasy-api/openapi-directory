@@ -14,18 +14,22 @@ const (
 	ReplicationConfigurationDataPlaneRoutingEnumPublicIP  ReplicationConfigurationDataPlaneRoutingEnum = "PUBLIC_IP"
 )
 
+func (e ReplicationConfigurationDataPlaneRoutingEnum) ToPointer() *ReplicationConfigurationDataPlaneRoutingEnum {
+	return &e
+}
+
 func (e *ReplicationConfigurationDataPlaneRoutingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE_IP":
 		fallthrough
 	case "PUBLIC_IP":
-		*e = ReplicationConfigurationDataPlaneRoutingEnum(s)
+		*e = ReplicationConfigurationDataPlaneRoutingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicationConfigurationDataPlaneRoutingEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicationConfigurationDataPlaneRoutingEnum: %v", v)
 	}
 }

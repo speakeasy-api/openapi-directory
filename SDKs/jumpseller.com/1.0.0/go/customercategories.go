@@ -36,7 +36,10 @@ func newCustomerCategories(defaultClient, securityClient HTTPClient, serverURL, 
 // DeleteCustomerCategoriesIDJSON - Delete an existing CustomerCategory.
 func (s *customerCategories) DeleteCustomerCategoriesIDJSON(ctx context.Context, request operations.DeleteCustomerCategoriesIDJSONRequest) (*operations.DeleteCustomerCategoriesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customer_categories/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customer_categories/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -95,7 +98,10 @@ func (s *customerCategories) DeleteCustomerCategoriesIDJSON(ctx context.Context,
 // DeleteCustomerCategoriesIDCustomersJSON - Delete Customers from an existing CustomerCategory.
 func (s *customerCategories) DeleteCustomerCategoriesIDCustomersJSON(ctx context.Context, request operations.DeleteCustomerCategoriesIDCustomersJSONRequest) (*operations.DeleteCustomerCategoriesIDCustomersJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customer_categories/{id}/customers.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customer_categories/{id}/customers.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomersToCustomerCategory", "json")
 	if err != nil {
@@ -212,7 +218,10 @@ func (s *customerCategories) GetCustomerCategoriesJSON(ctx context.Context, requ
 // GetCustomerCategoriesIDJSON - Retrieve a single CustomerCategory.
 func (s *customerCategories) GetCustomerCategoriesIDJSON(ctx context.Context, request operations.GetCustomerCategoriesIDJSONRequest) (*operations.GetCustomerCategoriesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customer_categories/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customer_categories/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -270,7 +279,10 @@ func (s *customerCategories) GetCustomerCategoriesIDJSON(ctx context.Context, re
 // GetCustomerCategoriesIDCustomersJSON - Retrieves the customers in a CustomerCategory.
 func (s *customerCategories) GetCustomerCategoriesIDCustomersJSON(ctx context.Context, request operations.GetCustomerCategoriesIDCustomersJSONRequest) (*operations.GetCustomerCategoriesIDCustomersJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customer_categories/{id}/customers.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customer_categories/{id}/customers.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -396,7 +408,10 @@ func (s *customerCategories) PostCustomerCategoriesJSON(ctx context.Context, req
 // PostCustomerCategoriesIDCustomersJSON - Adds Customers to a CustomerCategory.
 func (s *customerCategories) PostCustomerCategoriesIDCustomersJSON(ctx context.Context, request operations.PostCustomerCategoriesIDCustomersJSONRequest) (*operations.PostCustomerCategoriesIDCustomersJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customer_categories/{id}/customers.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customer_categories/{id}/customers.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomersToCustomerCategory", "json")
 	if err != nil {
@@ -464,7 +479,10 @@ func (s *customerCategories) PostCustomerCategoriesIDCustomersJSON(ctx context.C
 // PutCustomerCategoriesIDJSON - Update a CustomerCategory.
 func (s *customerCategories) PutCustomerCategoriesIDJSON(ctx context.Context, request operations.PutCustomerCategoriesIDJSONRequest) (*operations.PutCustomerCategoriesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customer_categories/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customer_categories/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerCategoryEdit", "json")
 	if err != nil {

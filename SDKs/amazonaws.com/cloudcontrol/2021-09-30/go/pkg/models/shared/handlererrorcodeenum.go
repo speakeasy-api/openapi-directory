@@ -27,12 +27,16 @@ const (
 	HandlerErrorCodeEnumInternalFailure         HandlerErrorCodeEnum = "InternalFailure"
 )
 
+func (e HandlerErrorCodeEnum) ToPointer() *HandlerErrorCodeEnum {
+	return &e
+}
+
 func (e *HandlerErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NotUpdatable":
 		fallthrough
 	case "InvalidRequest":
@@ -62,9 +66,9 @@ func (e *HandlerErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "NetworkFailure":
 		fallthrough
 	case "InternalFailure":
-		*e = HandlerErrorCodeEnum(s)
+		*e = HandlerErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HandlerErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for HandlerErrorCodeEnum: %v", v)
 	}
 }

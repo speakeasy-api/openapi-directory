@@ -19,12 +19,16 @@ const (
 	FilterNameStringTypeEnumAll           FilterNameStringTypeEnum = "all"
 )
 
+func (e FilterNameStringTypeEnum) ToPointer() *FilterNameStringTypeEnum {
+	return &e
+}
+
 func (e *FilterNameStringTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "description":
 		fallthrough
 	case "name":
@@ -38,9 +42,9 @@ func (e *FilterNameStringTypeEnum) UnmarshalJSON(data []byte) error {
 	case "owning-service":
 		fallthrough
 	case "all":
-		*e = FilterNameStringTypeEnum(s)
+		*e = FilterNameStringTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterNameStringTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterNameStringTypeEnum: %v", v)
 	}
 }

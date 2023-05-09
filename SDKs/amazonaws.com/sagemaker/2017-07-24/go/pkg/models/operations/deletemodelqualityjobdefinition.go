@@ -16,17 +16,21 @@ const (
 	DeleteModelQualityJobDefinitionXAmzTargetEnumSageMakerDeleteModelQualityJobDefinition DeleteModelQualityJobDefinitionXAmzTargetEnum = "SageMaker.DeleteModelQualityJobDefinition"
 )
 
+func (e DeleteModelQualityJobDefinitionXAmzTargetEnum) ToPointer() *DeleteModelQualityJobDefinitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteModelQualityJobDefinitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DeleteModelQualityJobDefinition":
-		*e = DeleteModelQualityJobDefinitionXAmzTargetEnum(s)
+		*e = DeleteModelQualityJobDefinitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteModelQualityJobDefinitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteModelQualityJobDefinitionXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateAppXAmzTargetEnumOpsWorks20130218UpdateApp UpdateAppXAmzTargetEnum = "OpsWorks_20130218.UpdateApp"
 )
 
+func (e UpdateAppXAmzTargetEnum) ToPointer() *UpdateAppXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateAppXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.UpdateApp":
-		*e = UpdateAppXAmzTargetEnum(s)
+		*e = UpdateAppXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAppXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAppXAmzTargetEnum: %v", v)
 	}
 }
 

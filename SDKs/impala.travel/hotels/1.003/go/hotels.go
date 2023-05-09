@@ -138,7 +138,10 @@ func (s *hotels) ListHotels(ctx context.Context, request operations.ListHotelsRe
 // Using the `rateId` of any of those rates, you can use the [Create a booking](https://docs.impala.travel/docs/booking-api/spec/openapi.seller.yaml/paths/~1bookings/post) endpoint to make a booking.
 func (s *hotels) RetrieveHotel(ctx context.Context, request operations.RetrieveHotelRequest) (*operations.RetrieveHotelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hotels/{hotelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hotels/{hotelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

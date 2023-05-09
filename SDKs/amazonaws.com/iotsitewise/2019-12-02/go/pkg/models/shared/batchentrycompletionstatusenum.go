@@ -14,18 +14,22 @@ const (
 	BatchEntryCompletionStatusEnumError   BatchEntryCompletionStatusEnum = "ERROR"
 )
 
+func (e BatchEntryCompletionStatusEnum) ToPointer() *BatchEntryCompletionStatusEnum {
+	return &e
+}
+
 func (e *BatchEntryCompletionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESS":
 		fallthrough
 	case "ERROR":
-		*e = BatchEntryCompletionStatusEnum(s)
+		*e = BatchEntryCompletionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchEntryCompletionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchEntryCompletionStatusEnum: %v", v)
 	}
 }

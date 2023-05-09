@@ -16,17 +16,21 @@ const (
 	GetCostEstimateXAmzTargetEnumLightsail20161128GetCostEstimate GetCostEstimateXAmzTargetEnum = "Lightsail_20161128.GetCostEstimate"
 )
 
+func (e GetCostEstimateXAmzTargetEnum) ToPointer() *GetCostEstimateXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCostEstimateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetCostEstimate":
-		*e = GetCostEstimateXAmzTargetEnum(s)
+		*e = GetCostEstimateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCostEstimateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCostEstimateXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	OriginProtocolPolicyEnumHTTPSOnly   OriginProtocolPolicyEnum = "https-only"
 )
 
+func (e OriginProtocolPolicyEnum) ToPointer() *OriginProtocolPolicyEnum {
+	return &e
+}
+
 func (e *OriginProtocolPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "http-only":
 		fallthrough
 	case "match-viewer":
 		fallthrough
 	case "https-only":
-		*e = OriginProtocolPolicyEnum(s)
+		*e = OriginProtocolPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OriginProtocolPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for OriginProtocolPolicyEnum: %v", v)
 	}
 }

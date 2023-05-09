@@ -16,17 +16,21 @@ const (
 	StartCallAnalyticsJobXAmzTargetEnumTranscribeStartCallAnalyticsJob StartCallAnalyticsJobXAmzTargetEnum = "Transcribe.StartCallAnalyticsJob"
 )
 
+func (e StartCallAnalyticsJobXAmzTargetEnum) ToPointer() *StartCallAnalyticsJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartCallAnalyticsJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Transcribe.StartCallAnalyticsJob":
-		*e = StartCallAnalyticsJobXAmzTargetEnum(s)
+		*e = StartCallAnalyticsJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartCallAnalyticsJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartCallAnalyticsJobXAmzTargetEnum: %v", v)
 	}
 }
 

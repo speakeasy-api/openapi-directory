@@ -17,19 +17,23 @@ const (
 	BoxScoresDeltaVFormatEnumJSON BoxScoresDeltaVFormatEnum = "JSON"
 )
 
+func (e BoxScoresDeltaVFormatEnum) ToPointer() *BoxScoresDeltaVFormatEnum {
+	return &e
+}
+
 func (e *BoxScoresDeltaVFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = BoxScoresDeltaVFormatEnum(s)
+		*e = BoxScoresDeltaVFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BoxScoresDeltaVFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for BoxScoresDeltaVFormatEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	BoxScoresDeltaVPlayerstoincludeEnumIdp     BoxScoresDeltaVPlayerstoincludeEnum = "idp"
 )
 
+func (e BoxScoresDeltaVPlayerstoincludeEnum) ToPointer() *BoxScoresDeltaVPlayerstoincludeEnum {
+	return &e
+}
+
 func (e *BoxScoresDeltaVPlayerstoincludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "fantasy":
 		fallthrough
 	case "idp":
-		*e = BoxScoresDeltaVPlayerstoincludeEnum(s)
+		*e = BoxScoresDeltaVPlayerstoincludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BoxScoresDeltaVPlayerstoincludeEnum: %s", s)
+		return fmt.Errorf("invalid value for BoxScoresDeltaVPlayerstoincludeEnum: %v", v)
 	}
 }
 

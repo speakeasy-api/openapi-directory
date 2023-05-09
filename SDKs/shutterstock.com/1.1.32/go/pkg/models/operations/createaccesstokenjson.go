@@ -18,21 +18,25 @@ const (
 	CreateAccessTokenApplicationJSONGrantTypeEnumRefreshToken      CreateAccessTokenApplicationJSONGrantTypeEnum = "refresh_token"
 )
 
+func (e CreateAccessTokenApplicationJSONGrantTypeEnum) ToPointer() *CreateAccessTokenApplicationJSONGrantTypeEnum {
+	return &e
+}
+
 func (e *CreateAccessTokenApplicationJSONGrantTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "authorization_code":
 		fallthrough
 	case "client_credentials":
 		fallthrough
 	case "refresh_token":
-		*e = CreateAccessTokenApplicationJSONGrantTypeEnum(s)
+		*e = CreateAccessTokenApplicationJSONGrantTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccessTokenApplicationJSONGrantTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccessTokenApplicationJSONGrantTypeEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	CreateAccessTokenApplicationJSONRealmEnumContributor CreateAccessTokenApplicationJSONRealmEnum = "contributor"
 )
 
+func (e CreateAccessTokenApplicationJSONRealmEnum) ToPointer() *CreateAccessTokenApplicationJSONRealmEnum {
+	return &e
+}
+
 func (e *CreateAccessTokenApplicationJSONRealmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "contributor":
-		*e = CreateAccessTokenApplicationJSONRealmEnum(s)
+		*e = CreateAccessTokenApplicationJSONRealmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccessTokenApplicationJSONRealmEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccessTokenApplicationJSONRealmEnum: %v", v)
 	}
 }
 

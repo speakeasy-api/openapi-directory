@@ -19,12 +19,16 @@ const (
 	GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnumInactive         GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum = "INACTIVE"
 )
 
+func (e GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum) ToPointer() *GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum {
+	return &e
+}
+
 func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -36,10 +40,10 @@ func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum) Unma
 	case "DELETING":
 		fallthrough
 	case "INACTIVE":
-		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum(s)
+		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerPoolStateEnum: %v", v)
 	}
 }
 

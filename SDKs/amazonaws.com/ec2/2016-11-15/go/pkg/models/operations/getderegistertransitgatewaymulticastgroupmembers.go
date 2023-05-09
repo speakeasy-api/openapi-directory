@@ -15,17 +15,21 @@ const (
 	GETDeregisterTransitGatewayMulticastGroupMembersActionEnumDeregisterTransitGatewayMulticastGroupMembers GETDeregisterTransitGatewayMulticastGroupMembersActionEnum = "DeregisterTransitGatewayMulticastGroupMembers"
 )
 
+func (e GETDeregisterTransitGatewayMulticastGroupMembersActionEnum) ToPointer() *GETDeregisterTransitGatewayMulticastGroupMembersActionEnum {
+	return &e
+}
+
 func (e *GETDeregisterTransitGatewayMulticastGroupMembersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeregisterTransitGatewayMulticastGroupMembers":
-		*e = GETDeregisterTransitGatewayMulticastGroupMembersActionEnum(s)
+		*e = GETDeregisterTransitGatewayMulticastGroupMembersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeregisterTransitGatewayMulticastGroupMembersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeregisterTransitGatewayMulticastGroupMembersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeregisterTransitGatewayMulticastGroupMembersVersionEnumTwoThousandAndSixteen1115 GETDeregisterTransitGatewayMulticastGroupMembersVersionEnum = "2016-11-15"
 )
 
+func (e GETDeregisterTransitGatewayMulticastGroupMembersVersionEnum) ToPointer() *GETDeregisterTransitGatewayMulticastGroupMembersVersionEnum {
+	return &e
+}
+
 func (e *GETDeregisterTransitGatewayMulticastGroupMembersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeregisterTransitGatewayMulticastGroupMembersVersionEnum(s)
+		*e = GETDeregisterTransitGatewayMulticastGroupMembersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeregisterTransitGatewayMulticastGroupMembersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeregisterTransitGatewayMulticastGroupMembersVersionEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETRegisterInstanceEventNotificationAttributesActionEnumRegisterInstanceEventNotificationAttributes GETRegisterInstanceEventNotificationAttributesActionEnum = "RegisterInstanceEventNotificationAttributes"
 )
 
+func (e GETRegisterInstanceEventNotificationAttributesActionEnum) ToPointer() *GETRegisterInstanceEventNotificationAttributesActionEnum {
+	return &e
+}
+
 func (e *GETRegisterInstanceEventNotificationAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RegisterInstanceEventNotificationAttributes":
-		*e = GETRegisterInstanceEventNotificationAttributesActionEnum(s)
+		*e = GETRegisterInstanceEventNotificationAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRegisterInstanceEventNotificationAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRegisterInstanceEventNotificationAttributesActionEnum: %v", v)
 	}
 }
 
@@ -42,17 +46,21 @@ const (
 	GETRegisterInstanceEventNotificationAttributesVersionEnumTwoThousandAndSixteen1115 GETRegisterInstanceEventNotificationAttributesVersionEnum = "2016-11-15"
 )
 
+func (e GETRegisterInstanceEventNotificationAttributesVersionEnum) ToPointer() *GETRegisterInstanceEventNotificationAttributesVersionEnum {
+	return &e
+}
+
 func (e *GETRegisterInstanceEventNotificationAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETRegisterInstanceEventNotificationAttributesVersionEnum(s)
+		*e = GETRegisterInstanceEventNotificationAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRegisterInstanceEventNotificationAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRegisterInstanceEventNotificationAttributesVersionEnum: %v", v)
 	}
 }
 

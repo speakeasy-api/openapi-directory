@@ -2,32 +2,30 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AdsenseAccountsAdclientsGetAdCodeRequest{
+    ctx := context.Background()
+    res, err := s.Accounts.AdsenseAccountsAdclientsGetAdCode(ctx, operations.AdsenseAccountsAdclientsGetAdCodeRequest{
         AccountID: "corrupti",
         AdClientID: "provident",
-        Alt: "json",
-        Fields: "quibusdam",
-        Key: "unde",
-        OauthToken: "nulla",
-        PrettyPrint: false,
-        QuotaUser: "corrupti",
-        TagPartner: "illum",
-        UserIP: "vel",
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.AdsenseAccountsAdclientsGetAdCode(ctx, req, operations.AdsenseAccountsAdclientsGetAdCodeSecurity{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("quibusdam"),
+        Key: sdk.String("unde"),
+        OauthToken: sdk.String("nulla"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("corrupti"),
+        TagPartner: sdk.String("illum"),
+        UserIP: sdk.String("vel"),
+    }, operations.AdsenseAccountsAdclientsGetAdCodeSecurity{
         Option1: &operations.AdsenseAccountsAdclientsGetAdCodeSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

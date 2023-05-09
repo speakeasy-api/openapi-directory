@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,13 +17,11 @@ func main() {
         }),
     )
 
-    req := operations.DeleteAppsAppIDRequest{
+    ctx := context.Background()
+    res, err := s.AppsFindAndModifyApps.DeleteAppsAppID(ctx, operations.DeleteAppsAppIDRequest{
         AppID: "corrupti",
         DeveloperID: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.AppsFindAndModifyApps.DeleteAppsAppID(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

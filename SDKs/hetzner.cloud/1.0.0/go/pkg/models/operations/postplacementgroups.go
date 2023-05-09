@@ -15,17 +15,21 @@ const (
 	PostPlacementGroupsCreatePlacementGroupRequestTypeEnumSpread PostPlacementGroupsCreatePlacementGroupRequestTypeEnum = "spread"
 )
 
+func (e PostPlacementGroupsCreatePlacementGroupRequestTypeEnum) ToPointer() *PostPlacementGroupsCreatePlacementGroupRequestTypeEnum {
+	return &e
+}
+
 func (e *PostPlacementGroupsCreatePlacementGroupRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spread":
-		*e = PostPlacementGroupsCreatePlacementGroupRequestTypeEnum(s)
+		*e = PostPlacementGroupsCreatePlacementGroupRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostPlacementGroupsCreatePlacementGroupRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostPlacementGroupsCreatePlacementGroupRequestTypeEnum: %v", v)
 	}
 }
 
@@ -62,21 +66,25 @@ const (
 	PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnumError   PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum = "error"
 )
 
+func (e PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum) ToPointer() *PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum {
+	return &e
+}
+
 func (e *PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum(s)
+		*e = PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum: %v", v)
 	}
 }
 
@@ -106,17 +114,21 @@ const (
 	PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnumSpread PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum = "spread"
 )
 
+func (e PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum) ToPointer() *PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum {
+	return &e
+}
+
 func (e *PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spread":
-		*e = PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum(s)
+		*e = PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum: %v", v)
 	}
 }
 

@@ -2,27 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAccessTokensAccessTokensRequest{
-        AccessTokens: "corrupti",
-        Callback: "provident",
-        Filter: "distinctio",
-        Page: 844266,
-        Pagesize: 602763,
-    }
-
     ctx := context.Background()
-    res, err := s.GetAccessTokensAccessTokens(ctx, req)
+    res, err := s.GetAccessTokensAccessTokens(ctx, operations.GetAccessTokensAccessTokensRequest{
+        AccessTokens: "corrupti",
+        Callback: sdk.String("provident"),
+        Filter: sdk.String("distinctio"),
+        Page: sdk.Int64(844266),
+        Pagesize: sdk.Int64(602763),
+    })
     if err != nil {
         log.Fatal(err)
     }

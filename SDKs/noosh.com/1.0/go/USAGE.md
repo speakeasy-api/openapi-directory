@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetBillingRecipientsRequest{
-        WorkgroupID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Contact.GetBillingRecipients(ctx, req)
+    res, err := s.Contact.GetBillingRecipients(ctx, operations.GetBillingRecipientsRequest{
+        WorkgroupID: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

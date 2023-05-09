@@ -15,20 +15,24 @@ const (
 	ProvisioningTypeEnumFullyMutable     ProvisioningTypeEnum = "FULLY_MUTABLE"
 )
 
+func (e ProvisioningTypeEnum) ToPointer() *ProvisioningTypeEnum {
+	return &e
+}
+
 func (e *ProvisioningTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NON_PROVISIONABLE":
 		fallthrough
 	case "IMMUTABLE":
 		fallthrough
 	case "FULLY_MUTABLE":
-		*e = ProvisioningTypeEnum(s)
+		*e = ProvisioningTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisioningTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisioningTypeEnum: %v", v)
 	}
 }

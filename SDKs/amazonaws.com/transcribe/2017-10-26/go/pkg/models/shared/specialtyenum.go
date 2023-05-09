@@ -13,16 +13,20 @@ const (
 	SpecialtyEnumPrimarycare SpecialtyEnum = "PRIMARYCARE"
 )
 
+func (e SpecialtyEnum) ToPointer() *SpecialtyEnum {
+	return &e
+}
+
 func (e *SpecialtyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIMARYCARE":
-		*e = SpecialtyEnum(s)
+		*e = SpecialtyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpecialtyEnum: %s", s)
+		return fmt.Errorf("invalid value for SpecialtyEnum: %v", v)
 	}
 }

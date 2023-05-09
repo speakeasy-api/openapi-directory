@@ -15,18 +15,22 @@ const (
 	SensorTypesEnumLowCostSensor  SensorTypesEnum = "low-cost sensor"
 )
 
+func (e SensorTypesEnum) ToPointer() *SensorTypesEnum {
+	return &e
+}
+
 func (e *SensorTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "reference grade":
 		fallthrough
 	case "low-cost sensor":
-		*e = SensorTypesEnum(s)
+		*e = SensorTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SensorTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for SensorTypesEnum: %v", v)
 	}
 }

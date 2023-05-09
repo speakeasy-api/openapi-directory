@@ -145,7 +145,10 @@ func (s *subscriptions) PubsubSubscriptionsCreate(ctx context.Context, request o
 // PubsubSubscriptionsDelete - Deletes an existing subscription. All pending messages in the subscription are immediately dropped. Calls to Pull after deletion will return NOT_FOUND.
 func (s *subscriptions) PubsubSubscriptionsDelete(ctx context.Context, request operations.PubsubSubscriptionsDeleteRequest, security operations.PubsubSubscriptionsDeleteSecurity) (*operations.PubsubSubscriptionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1a/subscriptions/{subscription}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1a/subscriptions/{subscription}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -193,7 +196,10 @@ func (s *subscriptions) PubsubSubscriptionsDelete(ctx context.Context, request o
 // PubsubSubscriptionsGet - Gets the configuration details of a subscription.
 func (s *subscriptions) PubsubSubscriptionsGet(ctx context.Context, request operations.PubsubSubscriptionsGetRequest, security operations.PubsubSubscriptionsGetSecurity) (*operations.PubsubSubscriptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1a/subscriptions/{subscription}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1a/subscriptions/{subscription}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

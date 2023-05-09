@@ -15,17 +15,21 @@ const (
 	POSTModifyIpamResourceCidrActionEnumModifyIpamResourceCidr POSTModifyIpamResourceCidrActionEnum = "ModifyIpamResourceCidr"
 )
 
+func (e POSTModifyIpamResourceCidrActionEnum) ToPointer() *POSTModifyIpamResourceCidrActionEnum {
+	return &e
+}
+
 func (e *POSTModifyIpamResourceCidrActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyIpamResourceCidr":
-		*e = POSTModifyIpamResourceCidrActionEnum(s)
+		*e = POSTModifyIpamResourceCidrActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyIpamResourceCidrActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyIpamResourceCidrActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyIpamResourceCidrVersionEnumTwoThousandAndSixteen1115 POSTModifyIpamResourceCidrVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyIpamResourceCidrVersionEnum) ToPointer() *POSTModifyIpamResourceCidrVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyIpamResourceCidrVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyIpamResourceCidrVersionEnum(s)
+		*e = POSTModifyIpamResourceCidrVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyIpamResourceCidrVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyIpamResourceCidrVersionEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	MarketFilterBettingTypesEnumAsianHandicapSingleLine MarketFilterBettingTypesEnum = "ASIAN_HANDICAP_SINGLE_LINE"
 )
 
+func (e MarketFilterBettingTypesEnum) ToPointer() *MarketFilterBettingTypesEnum {
+	return &e
+}
+
 func (e *MarketFilterBettingTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ODDS":
 		fallthrough
 	case "LINE":
@@ -32,10 +36,10 @@ func (e *MarketFilterBettingTypesEnum) UnmarshalJSON(data []byte) error {
 	case "ASIAN_HANDICAP_DOUBLE_LINE":
 		fallthrough
 	case "ASIAN_HANDICAP_SINGLE_LINE":
-		*e = MarketFilterBettingTypesEnum(s)
+		*e = MarketFilterBettingTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MarketFilterBettingTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for MarketFilterBettingTypesEnum: %v", v)
 	}
 }
 

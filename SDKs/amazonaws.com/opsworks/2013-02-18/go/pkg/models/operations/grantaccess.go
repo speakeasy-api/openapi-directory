@@ -16,17 +16,21 @@ const (
 	GrantAccessXAmzTargetEnumOpsWorks20130218GrantAccess GrantAccessXAmzTargetEnum = "OpsWorks_20130218.GrantAccess"
 )
 
+func (e GrantAccessXAmzTargetEnum) ToPointer() *GrantAccessXAmzTargetEnum {
+	return &e
+}
+
 func (e *GrantAccessXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.GrantAccess":
-		*e = GrantAccessXAmzTargetEnum(s)
+		*e = GrantAccessXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GrantAccessXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GrantAccessXAmzTargetEnum: %v", v)
 	}
 }
 

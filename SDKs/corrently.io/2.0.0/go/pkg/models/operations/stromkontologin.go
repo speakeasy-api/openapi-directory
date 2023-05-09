@@ -20,19 +20,23 @@ const (
 	StromkontoLogin200ApplicationJSONStatusEnumUnregistered StromkontoLogin200ApplicationJSONStatusEnum = "unregistered"
 )
 
+func (e StromkontoLogin200ApplicationJSONStatusEnum) ToPointer() *StromkontoLogin200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *StromkontoLogin200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "registered":
 		fallthrough
 	case "unregistered":
-		*e = StromkontoLogin200ApplicationJSONStatusEnum(s)
+		*e = StromkontoLogin200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StromkontoLogin200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StromkontoLogin200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

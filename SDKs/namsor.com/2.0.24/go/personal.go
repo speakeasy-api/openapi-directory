@@ -36,7 +36,10 @@ func newPersonal(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Corridor - [USES 20 UNITS PER NAME COUPLE] Infer several classifications for a cross border interaction between names (ex. remit, travel, intl com)
 func (s *personal) Corridor(ctx context.Context, request operations.CorridorRequest, security operations.CorridorSecurity) (*operations.CorridorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/corridor/{countryIso2From}/{firstNameFrom}/{lastNameFrom}/{countryIso2To}/{firstNameTo}/{lastNameTo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/corridor/{countryIso2From}/{firstNameFrom}/{lastNameFrom}/{countryIso2To}/{firstNameTo}/{lastNameTo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -139,7 +142,10 @@ func (s *personal) CorridorBatch(ctx context.Context, request shared.BatchCorrid
 // Country - [USES 10 UNITS PER NAME] Infer the likely country of residence of a personal full name, or one surname. Assumes names as they are in the country of residence OR the country of origin.
 func (s *personal) Country(ctx context.Context, request operations.CountryRequest, security operations.CountrySecurity) (*operations.CountryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/country/{personalNameFull}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/country/{personalNameFull}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -242,7 +248,10 @@ func (s *personal) CountryBatch(ctx context.Context, request shared.BatchPersona
 // Diaspora - [USES 20 UNITS PER NAME] Infer the likely ethnicity/diaspora of a personal name, given a country of residence ISO2 code (ex. US, CA, AU, NZ etc.)
 func (s *personal) Diaspora(ctx context.Context, request operations.DiasporaRequest, security operations.DiasporaSecurity) (*operations.DiasporaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/diaspora/{countryIso2}/{firstName}/{lastName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/diaspora/{countryIso2}/{firstName}/{lastName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -342,10 +351,13 @@ func (s *personal) DiasporaBatch(ctx context.Context, request shared.BatchFirstL
 	return res, nil
 }
 
-// Gender - Infer the likely gender of a just a fiven name, assuming default 'US' local context. Please use preferably full names and local geographic context for better accuracy.
+// Gender - Infer the likely gender of a name.
 func (s *personal) Gender(ctx context.Context, request operations.GenderRequest, security operations.GenderSecurity) (*operations.GenderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/gender/{firstName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/gender/{firstName}/{lastName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -448,7 +460,10 @@ func (s *personal) GenderBatch(ctx context.Context, request shared.BatchFirstLas
 // GenderFull - Infer the likely gender of a full name, ex. John H. Smith
 func (s *personal) GenderFull(ctx context.Context, request operations.GenderFullRequest, security operations.GenderFullSecurity) (*operations.GenderFullResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/genderFull/{fullName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/genderFull/{fullName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -551,7 +566,10 @@ func (s *personal) GenderFullBatch(ctx context.Context, request shared.BatchPers
 // GenderFullGeo - Infer the likely gender of a full name, given a local context (ISO2 country code).
 func (s *personal) GenderFullGeo(ctx context.Context, request operations.GenderFullGeoRequest, security operations.GenderFullGeoSecurity) (*operations.GenderFullGeoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/genderFullGeo/{fullName}/{countryIso2}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/genderFullGeo/{fullName}/{countryIso2}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -654,7 +672,10 @@ func (s *personal) GenderFullGeoBatch(ctx context.Context, request shared.BatchP
 // GenderGeo - Infer the likely gender of a name, given a local context (ISO2 country code).
 func (s *personal) GenderGeo(ctx context.Context, request operations.GenderGeoRequest, security operations.GenderGeoSecurity) (*operations.GenderGeoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/genderGeo/{firstName}/{lastName}/{countryIso2}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/genderGeo/{firstName}/{lastName}/{countryIso2}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -754,10 +775,13 @@ func (s *personal) GenderGeoBatch(ctx context.Context, request shared.BatchFirst
 	return res, nil
 }
 
-// Gender1 - Infer the likely gender of a name.
+// Gender1 - Infer the likely gender of a just a fiven name, assuming default 'US' local context. Please use preferably full names and local geographic context for better accuracy.
 func (s *personal) Gender1(ctx context.Context, request operations.Gender1Request, security operations.Gender1Security) (*operations.Gender1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/gender/{firstName}/{lastName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/gender/{firstName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -804,7 +828,10 @@ func (s *personal) Gender1(ctx context.Context, request operations.Gender1Reques
 // Origin - [USES 10 UNITS PER NAME] Infer the likely country of origin of a personal name. Assumes names as they are in the country of origin. For US, CA, AU, NZ and other melting-pots : use 'diaspora' instead.
 func (s *personal) Origin(ctx context.Context, request operations.OriginRequest, security operations.OriginSecurity) (*operations.OriginResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/origin/{firstName}/{lastName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/origin/{firstName}/{lastName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -907,7 +934,10 @@ func (s *personal) OriginBatch(ctx context.Context, request shared.BatchFirstLas
 // ParseName - Infer the likely first/last name structure of a name, ex. John Smith or SMITH, John or SMITH; John.
 func (s *personal) ParseName(ctx context.Context, request operations.ParseNameRequest, security operations.ParseNameSecurity) (*operations.ParseNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/parseName/{nameFull}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/parseName/{nameFull}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1010,7 +1040,10 @@ func (s *personal) ParseNameBatch(ctx context.Context, request shared.BatchPerso
 // ParseNameGeo - Infer the likely first/last name structure of a name, ex. John Smith or SMITH, John or SMITH; John. For better accuracy, provide a geographic context.
 func (s *personal) ParseNameGeo(ctx context.Context, request operations.ParseNameGeoRequest, security operations.ParseNameGeoSecurity) (*operations.ParseNameGeoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/parseName/{nameFull}/{countryIso2}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/parseName/{nameFull}/{countryIso2}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1113,7 +1146,10 @@ func (s *personal) ParseNameGeoBatch(ctx context.Context, request shared.BatchPe
 // ReligionFull - [USES 10 UNITS PER NAME] Infer the likely religion of a personal full name. NB: only for INDIA (as of current version).
 func (s *personal) ReligionFull(ctx context.Context, request operations.ReligionFullRequest, security operations.ReligionFullSecurity) (*operations.ReligionFullResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/religionFull/{countryIso2}/{subDivisionIso31662}/{personalNameFull}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/religionFull/{countryIso2}/{subDivisionIso31662}/{personalNameFull}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1216,7 +1252,10 @@ func (s *personal) ReligionFullBatch(ctx context.Context, request shared.BatchPe
 // Subclassification - [USES 10 UNITS PER NAME] Infer the likely origin of a name at a country subclassification level (state or regeion). Initially, this is only supported for India (ISO2 code 'IN').
 func (s *personal) Subclassification(ctx context.Context, request operations.SubclassificationRequest, security operations.SubclassificationSecurity) (*operations.SubclassificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/subclassification/{countryIso2}/{firstName}/{lastName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/subclassification/{countryIso2}/{firstName}/{lastName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1316,10 +1355,119 @@ func (s *personal) SubclassificationBatch(ctx context.Context, request shared.Ba
 	return res, nil
 }
 
+// SubclassificationFull - [USES 10 UNITS PER NAME] Infer the likely origin of a name at a country subclassification level (state or regeion). Initially, this is only supported for India (ISO2 code 'IN').
+func (s *personal) SubclassificationFull(ctx context.Context, request operations.SubclassificationFullRequest, security operations.SubclassificationFullSecurity) (*operations.SubclassificationFullResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/subclassificationFull/{countryIso2}/{fullName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SubclassificationFullResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.FirstLastNameGeoSubclassificationOut
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FirstLastNameGeoSubclassificationOut = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+	}
+
+	return res, nil
+}
+
+// SubclassificationFullBatch - [USES 10 UNITS PER NAME] Infer the likely origin of a list of up to 100 names at a country subclassification level (state or regeion). Initially, this is only supported for India (ISO2 code 'IN').
+func (s *personal) SubclassificationFullBatch(ctx context.Context, request shared.BatchPersonalNameGeoIn, security operations.SubclassificationFullBatchSecurity) (*operations.SubclassificationFullBatchResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/subclassificationFullBatch"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SubclassificationFullBatchResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BatchPersonalNameGeoSubclassificationOut
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BatchPersonalNameGeoSubclassificationOut = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+	}
+
+	return res, nil
+}
+
 // UsRaceEthnicity - [USES 10 UNITS PER NAME] Infer a US resident's likely race/ethnicity according to US Census taxonomy W_NL (white, non latino), HL (hispano latino),  A (asian, non latino), B_NL (black, non latino). Optionally add header X-OPTION-USRACEETHNICITY-TAXONOMY: USRACEETHNICITY-6CLASSES for two additional classes, AI_AN (American Indian or Alaskan Native) and PI (Pacific Islander).
 func (s *personal) UsRaceEthnicity(ctx context.Context, request operations.UsRaceEthnicityRequest, security operations.UsRaceEthnicitySecurity) (*operations.UsRaceEthnicityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/usRaceEthnicity/{firstName}/{lastName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/usRaceEthnicity/{firstName}/{lastName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1422,7 +1570,10 @@ func (s *personal) UsRaceEthnicityBatch(ctx context.Context, request shared.Batc
 // UsRaceEthnicityZip5 - [USES 10 UNITS PER NAME] Infer a US resident's likely race/ethnicity according to US Census taxonomy, using (optional) ZIP5 code info. Output is W_NL (white, non latino), HL (hispano latino),  A (asian, non latino), B_NL (black, non latino). Optionally add header X-OPTION-USRACEETHNICITY-TAXONOMY: USRACEETHNICITY-6CLASSES for two additional classes, AI_AN (American Indian or Alaskan Native) and PI (Pacific Islander).
 func (s *personal) UsRaceEthnicityZip5(ctx context.Context, request operations.UsRaceEthnicityZip5Request, security operations.UsRaceEthnicityZip5Security) (*operations.UsRaceEthnicityZip5Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/usRaceEthnicityZIP5/{firstName}/{lastName}/{zip5Code}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/usRaceEthnicityZIP5/{firstName}/{lastName}/{zip5Code}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

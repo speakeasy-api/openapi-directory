@@ -19,12 +19,16 @@ const (
 	PatchChargeStationVariableRequestBodyVariableEnumTransactionMessageAttempts      PatchChargeStationVariableRequestBodyVariableEnum = "TransactionMessageAttempts"
 )
 
+func (e PatchChargeStationVariableRequestBodyVariableEnum) ToPointer() *PatchChargeStationVariableRequestBodyVariableEnum {
+	return &e
+}
+
 func (e *PatchChargeStationVariableRequestBodyVariableEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MeterValueSampleInterval":
 		fallthrough
 	case "HeartbeatInterval":
@@ -36,10 +40,10 @@ func (e *PatchChargeStationVariableRequestBodyVariableEnum) UnmarshalJSON(data [
 	case "TransactionMessageRetryInterval":
 		fallthrough
 	case "TransactionMessageAttempts":
-		*e = PatchChargeStationVariableRequestBodyVariableEnum(s)
+		*e = PatchChargeStationVariableRequestBodyVariableEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchChargeStationVariableRequestBodyVariableEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchChargeStationVariableRequestBodyVariableEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	SyncActionEnumNoAction  SyncActionEnum = "NO_ACTION"
 )
 
+func (e SyncActionEnum) ToPointer() *SyncActionEnum {
+	return &e
+}
+
 func (e *SyncActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "START_SYNC":
 		fallthrough
 	case "NO_ACTION":
-		*e = SyncActionEnum(s)
+		*e = SyncActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SyncActionEnum: %s", s)
+		return fmt.Errorf("invalid value for SyncActionEnum: %v", v)
 	}
 }

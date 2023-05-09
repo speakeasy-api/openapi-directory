@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/youneedabudget.com/1.0.0/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,19 +28,17 @@ func main() {
         }),
     )
 
-    req := operations.CreateAccountRequest{
+    ctx := context.Background()
+    res, err := s.Accounts.CreateAccount(ctx, operations.CreateAccountRequest{
         PostAccountWrapper: shared.PostAccountWrapper{
             Account: shared.SaveAccount{
                 Balance: 548814,
-                Name: "provident",
-                Type: "studentLoan",
+                Name: "Kelvin Sporer",
+                Type: shared.AccountTypeEnumMortgage,
             },
         },
-        BudgetID: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.CreateAccount(ctx, req)
+        BudgetID: "illum",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -56,66 +54,66 @@ func main() {
 ## Available Resources and Operations
 
 
-### Accounts
+### [Accounts](docs/accounts/README.md)
 
-* `CreateAccount` - Create a new account
-* `GetAccountByID` - Single account
-* `GetAccounts` - Account list
+* [CreateAccount](docs/accounts/README.md#createaccount) - Create a new account
+* [GetAccountByID](docs/accounts/README.md#getaccountbyid) - Single account
+* [GetAccounts](docs/accounts/README.md#getaccounts) - Account list
 
-### Budgets
+### [Budgets](docs/budgets/README.md)
 
-* `GetBudgetByID` - Single budget
-* `GetBudgetSettingsByID` - Budget Settings
-* `GetBudgets` - List budgets
+* [GetBudgetByID](docs/budgets/README.md#getbudgetbyid) - Single budget
+* [GetBudgetSettingsByID](docs/budgets/README.md#getbudgetsettingsbyid) - Budget Settings
+* [GetBudgets](docs/budgets/README.md#getbudgets) - List budgets
 
-### Categories
+### [Categories](docs/categories/README.md)
 
-* `GetCategories` - List categories
-* `GetCategoryByID` - Single category
-* `GetMonthCategoryByID` - Single category for a specific budget month
-* `UpdateMonthCategory` - Update a category for a specific month
+* [GetCategories](docs/categories/README.md#getcategories) - List categories
+* [GetCategoryByID](docs/categories/README.md#getcategorybyid) - Single category
+* [GetMonthCategoryByID](docs/categories/README.md#getmonthcategorybyid) - Single category for a specific budget month
+* [UpdateMonthCategory](docs/categories/README.md#updatemonthcategory) - Update a category for a specific month
 
-### Deprecated
+### [Deprecated](docs/deprecated/README.md)
 
-* `BulkCreateTransactions` - Bulk create transactions
+* [BulkCreateTransactions](docs/deprecated/README.md#bulkcreatetransactions) - Bulk create transactions
 
-### Months
+### [Months](docs/months/README.md)
 
-* `GetBudgetMonth` - Single budget month
-* `GetBudgetMonths` - List budget months
+* [GetBudgetMonth](docs/months/README.md#getbudgetmonth) - Single budget month
+* [GetBudgetMonths](docs/months/README.md#getbudgetmonths) - List budget months
 
-### PayeeLocations
+### [PayeeLocations](docs/payeelocations/README.md)
 
-* `GetPayeeLocationByID` - Single payee location
-* `GetPayeeLocations` - List payee locations
-* `GetPayeeLocationsByPayee` - List locations for a payee
+* [GetPayeeLocationByID](docs/payeelocations/README.md#getpayeelocationbyid) - Single payee location
+* [GetPayeeLocations](docs/payeelocations/README.md#getpayeelocations) - List payee locations
+* [GetPayeeLocationsByPayee](docs/payeelocations/README.md#getpayeelocationsbypayee) - List locations for a payee
 
-### Payees
+### [Payees](docs/payees/README.md)
 
-* `GetPayeeByID` - Single payee
-* `GetPayees` - List payees
+* [GetPayeeByID](docs/payees/README.md#getpayeebyid) - Single payee
+* [GetPayees](docs/payees/README.md#getpayees) - List payees
 
-### ScheduledTransactions
+### [ScheduledTransactions](docs/scheduledtransactions/README.md)
 
-* `GetScheduledTransactionByID` - Single scheduled transaction
-* `GetScheduledTransactions` - List scheduled transactions
+* [GetScheduledTransactionByID](docs/scheduledtransactions/README.md#getscheduledtransactionbyid) - Single scheduled transaction
+* [GetScheduledTransactions](docs/scheduledtransactions/README.md#getscheduledtransactions) - List scheduled transactions
 
-### Transactions
+### [Transactions](docs/transactions/README.md)
 
-* `CreateTransaction` - Create a single transaction or multiple transactions
-* `DeleteTransaction` - Deletes an existing transaction
-* `GetTransactionByID` - Single transaction
-* `GetTransactions` - List transactions
-* `GetTransactionsByAccount` - List account transactions
-* `GetTransactionsByCategory` - List category transactions
-* `GetTransactionsByPayee` - List payee transactions
-* `ImportTransactions` - Import transactions
-* `UpdateTransaction` - Updates an existing transaction
-* `UpdateTransactions` - Update multiple transactions
+* [CreateTransaction](docs/transactions/README.md#createtransaction) - Create a single transaction or multiple transactions
+* [DeleteTransaction](docs/transactions/README.md#deletetransaction) - Deletes an existing transaction
+* [GetTransactionByID](docs/transactions/README.md#gettransactionbyid) - Single transaction
+* [GetTransactions](docs/transactions/README.md#gettransactions) - List transactions
+* [GetTransactionsByAccount](docs/transactions/README.md#gettransactionsbyaccount) - List account transactions
+* [GetTransactionsByCategory](docs/transactions/README.md#gettransactionsbycategory) - List category transactions
+* [GetTransactionsByPayee](docs/transactions/README.md#gettransactionsbypayee) - List payee transactions
+* [ImportTransactions](docs/transactions/README.md#importtransactions) - Import transactions
+* [UpdateTransaction](docs/transactions/README.md#updatetransaction) - Updates an existing transaction
+* [UpdateTransactions](docs/transactions/README.md#updatetransactions) - Update multiple transactions
 
-### User
+### [User](docs/user/README.md)
 
-* `GetUser` - User info
+* [GetUser](docs/user/README.md#getuser) - User info
 <!-- End SDK Available Operations -->
 
 ### Maturity

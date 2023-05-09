@@ -16,17 +16,21 @@ const (
 	ModifyWorkspaceAccessPropertiesXAmzTargetEnumWorkspacesServiceModifyWorkspaceAccessProperties ModifyWorkspaceAccessPropertiesXAmzTargetEnum = "WorkspacesService.ModifyWorkspaceAccessProperties"
 )
 
+func (e ModifyWorkspaceAccessPropertiesXAmzTargetEnum) ToPointer() *ModifyWorkspaceAccessPropertiesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ModifyWorkspaceAccessPropertiesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.ModifyWorkspaceAccessProperties":
-		*e = ModifyWorkspaceAccessPropertiesXAmzTargetEnum(s)
+		*e = ModifyWorkspaceAccessPropertiesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyWorkspaceAccessPropertiesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyWorkspaceAccessPropertiesXAmzTargetEnum: %v", v)
 	}
 }
 

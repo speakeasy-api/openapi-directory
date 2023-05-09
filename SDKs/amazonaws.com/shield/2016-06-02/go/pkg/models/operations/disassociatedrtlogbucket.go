@@ -16,17 +16,21 @@ const (
 	DisassociateDRTLogBucketXAmzTargetEnumAwsShield20160616DisassociateDrtLogBucket DisassociateDRTLogBucketXAmzTargetEnum = "AWSShield_20160616.DisassociateDRTLogBucket"
 )
 
+func (e DisassociateDRTLogBucketXAmzTargetEnum) ToPointer() *DisassociateDRTLogBucketXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateDRTLogBucketXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.DisassociateDRTLogBucket":
-		*e = DisassociateDRTLogBucketXAmzTargetEnum(s)
+		*e = DisassociateDRTLogBucketXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateDRTLogBucketXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateDRTLogBucketXAmzTargetEnum: %v", v)
 	}
 }
 

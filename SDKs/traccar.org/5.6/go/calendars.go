@@ -36,7 +36,10 @@ func newCalendars(defaultClient, securityClient HTTPClient, serverURL, language,
 // DeleteCalendarsID - Delete a Calendar
 func (s *calendars) DeleteCalendarsID(ctx context.Context, request operations.DeleteCalendarsIDRequest) (*operations.DeleteCalendarsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calendars/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -174,7 +177,10 @@ func (s *calendars) PostCalendars(ctx context.Context, request shared.Calendar) 
 // PutCalendarsID - Update a Calendar
 func (s *calendars) PutCalendarsID(ctx context.Context, request operations.PutCalendarsIDRequest) (*operations.PutCalendarsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/calendars/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/calendars/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Calendar", "json")
 	if err != nil {

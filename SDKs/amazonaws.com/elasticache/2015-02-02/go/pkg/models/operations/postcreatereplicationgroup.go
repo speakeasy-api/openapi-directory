@@ -15,17 +15,21 @@ const (
 	POSTCreateReplicationGroupActionEnumCreateReplicationGroup POSTCreateReplicationGroupActionEnum = "CreateReplicationGroup"
 )
 
+func (e POSTCreateReplicationGroupActionEnum) ToPointer() *POSTCreateReplicationGroupActionEnum {
+	return &e
+}
+
 func (e *POSTCreateReplicationGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateReplicationGroup":
-		*e = POSTCreateReplicationGroupActionEnum(s)
+		*e = POSTCreateReplicationGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateReplicationGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateReplicationGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateReplicationGroupVersionEnumTwoThousandAndFifteen0202 POSTCreateReplicationGroupVersionEnum = "2015-02-02"
 )
 
+func (e POSTCreateReplicationGroupVersionEnum) ToPointer() *POSTCreateReplicationGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateReplicationGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTCreateReplicationGroupVersionEnum(s)
+		*e = POSTCreateReplicationGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateReplicationGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateReplicationGroupVersionEnum: %v", v)
 	}
 }
 

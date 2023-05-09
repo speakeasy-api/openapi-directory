@@ -27,19 +27,23 @@ const (
 	MutanRequestBodyFormatEnumPdf MutanRequestBodyFormatEnum = "pdf"
 )
 
+func (e MutanRequestBodyFormatEnum) ToPointer() *MutanRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *MutanRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xml":
 		fallthrough
 	case "pdf":
-		*e = MutanRequestBodyFormatEnum(s)
+		*e = MutanRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MutanRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MutanRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -59,17 +63,21 @@ const (
 	Mutan504ApplicationJSONErrorEnumGatewayTimeout Mutan504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Mutan504ApplicationJSONErrorEnum) ToPointer() *Mutan504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mutan504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Mutan504ApplicationJSONErrorEnum(s)
+		*e = Mutan504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -79,17 +87,21 @@ const (
 	Mutan504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Mutan504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Mutan504ApplicationJSONErrorDescriptionEnum) ToPointer() *Mutan504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mutan504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Mutan504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mutan504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -105,17 +117,21 @@ const (
 	Mutan503ApplicationJSONErrorEnumServiceUnavailable Mutan503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Mutan503ApplicationJSONErrorEnum) ToPointer() *Mutan503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mutan503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Mutan503ApplicationJSONErrorEnum(s)
+		*e = Mutan503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -125,17 +141,21 @@ const (
 	Mutan503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Mutan503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Mutan503ApplicationJSONErrorDescriptionEnum) ToPointer() *Mutan503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mutan503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Mutan503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mutan503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -151,17 +171,21 @@ const (
 	Mutan502ApplicationJSONErrorEnumBadGatewy Mutan502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Mutan502ApplicationJSONErrorEnum) ToPointer() *Mutan502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mutan502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Mutan502ApplicationJSONErrorEnum(s)
+		*e = Mutan502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -171,17 +195,21 @@ const (
 	Mutan502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Mutan502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Mutan502ApplicationJSONErrorDescriptionEnum) ToPointer() *Mutan502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mutan502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Mutan502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mutan502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -197,17 +225,21 @@ const (
 	Mutan500ApplicationJSONErrorEnumInternalServerError Mutan500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Mutan500ApplicationJSONErrorEnum) ToPointer() *Mutan500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mutan500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Mutan500ApplicationJSONErrorEnum(s)
+		*e = Mutan500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -217,17 +249,21 @@ const (
 	Mutan500ApplicationJSONErrorDescriptionEnumInternalServerError Mutan500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Mutan500ApplicationJSONErrorDescriptionEnum) ToPointer() *Mutan500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mutan500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Mutan500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mutan500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -244,19 +280,23 @@ const (
 	Mutan404ApplicationJSONErrorEnumURLNotFound    Mutan404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Mutan404ApplicationJSONErrorEnum) ToPointer() *Mutan404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mutan404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Mutan404ApplicationJSONErrorEnum(s)
+		*e = Mutan404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -267,19 +307,23 @@ const (
 	Mutan404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Mutan404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Mutan404ApplicationJSONErrorDescriptionEnum) ToPointer() *Mutan404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mutan404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Mutan404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mutan404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -296,19 +340,23 @@ const (
 	Mutan401ApplicationJSONErrorEnumInvalidAuthorization  Mutan401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Mutan401ApplicationJSONErrorEnum) ToPointer() *Mutan401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mutan401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Mutan401ApplicationJSONErrorEnum(s)
+		*e = Mutan401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -319,19 +367,23 @@ const (
 	Mutan401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Mutan401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Mutan401ApplicationJSONErrorDescriptionEnum) ToPointer() *Mutan401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mutan401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Mutan401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mutan401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -351,12 +403,16 @@ const (
 	Mutan400ApplicationJSONErrorEnumInvalidConsentid Mutan400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Mutan400ApplicationJSONErrorEnum) ToPointer() *Mutan400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Mutan400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -366,10 +422,10 @@ func (e *Mutan400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Mutan400ApplicationJSONErrorEnum(s)
+		*e = Mutan400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -383,12 +439,16 @@ const (
 	Mutan400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Mutan400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Mutan400ApplicationJSONErrorDescriptionEnum) ToPointer() *Mutan400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Mutan400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -398,10 +458,10 @@ func (e *Mutan400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Mutan400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Mutan400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Mutan400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Mutan400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

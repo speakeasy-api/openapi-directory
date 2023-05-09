@@ -17,12 +17,16 @@ const (
 	ModelBillingPeriodEnumAnnually ModelBillingPeriodEnum = "annually"
 )
 
+func (e ModelBillingPeriodEnum) ToPointer() *ModelBillingPeriodEnum {
+	return &e
+}
+
 func (e *ModelBillingPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "daily":
 		fallthrough
 	case "weekly":
@@ -30,10 +34,10 @@ func (e *ModelBillingPeriodEnum) UnmarshalJSON(data []byte) error {
 	case "monthly":
 		fallthrough
 	case "annually":
-		*e = ModelBillingPeriodEnum(s)
+		*e = ModelBillingPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelBillingPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelBillingPeriodEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	ModelFeePayerEnumMarketplace ModelFeePayerEnum = "marketplace"
 )
 
+func (e ModelFeePayerEnum) ToPointer() *ModelFeePayerEnum {
+	return &e
+}
+
 func (e *ModelFeePayerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "developer":
 		fallthrough
 	case "marketplace":
-		*e = ModelFeePayerEnum(s)
+		*e = ModelFeePayerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelFeePayerEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelFeePayerEnum: %v", v)
 	}
 }
 
@@ -68,17 +76,21 @@ const (
 	ModelLicenseEnumSingle ModelLicenseEnum = "single"
 )
 
+func (e ModelLicenseEnum) ToPointer() *ModelLicenseEnum {
+	return &e
+}
+
 func (e *ModelLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "single":
-		*e = ModelLicenseEnum(s)
+		*e = ModelLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelLicenseEnum: %v", v)
 	}
 }
 
@@ -90,19 +102,23 @@ const (
 	ModelSubtypeEnumSeat  ModelSubtypeEnum = "seat"
 )
 
+func (e ModelSubtypeEnum) ToPointer() *ModelSubtypeEnum {
+	return &e
+}
+
 func (e *ModelSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "usage":
 		fallthrough
 	case "seat":
-		*e = ModelSubtypeEnum(s)
+		*e = ModelSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelSubtypeEnum: %v", v)
 	}
 }
 
@@ -115,21 +131,25 @@ const (
 	ModelTypeEnumRecurring ModelTypeEnum = "recurring"
 )
 
+func (e ModelTypeEnum) ToPointer() *ModelTypeEnum {
+	return &e
+}
+
 func (e *ModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "free":
 		fallthrough
 	case "single":
 		fallthrough
 	case "recurring":
-		*e = ModelTypeEnum(s)
+		*e = ModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelTypeEnum: %v", v)
 	}
 }
 

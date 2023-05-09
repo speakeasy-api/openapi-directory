@@ -27,6 +27,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - A simple API to get the current time based on a request with a timezone.
 type SDK struct {
 
@@ -206,7 +221,10 @@ func (s *SDK) GetIPTxt(ctx context.Context) (*operations.GetIPTxtResponse, error
 // GetIPIpv4 - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
 func (s *SDK) GetIPIpv4(ctx context.Context, request operations.GetIPIpv4Request) (*operations.GetIPIpv4Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ip/{ipv4}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ip/{ipv4}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -260,7 +278,10 @@ func (s *SDK) GetIPIpv4(ctx context.Context, request operations.GetIPIpv4Request
 // GetIPIpv4Txt - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
 func (s *SDK) GetIPIpv4Txt(ctx context.Context, request operations.GetIPIpv4TxtRequest) (*operations.GetIPIpv4TxtResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ip/{ipv4}.txt", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ip/{ipv4}.txt", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -405,7 +426,10 @@ func (s *SDK) GetTimezoneTxt(ctx context.Context) (*operations.GetTimezoneTxtRes
 // GetTimezoneArea - a listing of all timezones available for that area.
 func (s *SDK) GetTimezoneArea(ctx context.Context, request operations.GetTimezoneAreaRequest) (*operations.GetTimezoneAreaResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timezone/{area}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timezone/{area}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -459,7 +483,10 @@ func (s *SDK) GetTimezoneArea(ctx context.Context, request operations.GetTimezon
 // GetTimezoneAreaTxt - a listing of all timezones available for that area.
 func (s *SDK) GetTimezoneAreaTxt(ctx context.Context, request operations.GetTimezoneAreaTxtRequest) (*operations.GetTimezoneAreaTxtResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timezone/{area}.txt", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timezone/{area}.txt", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -515,7 +542,10 @@ func (s *SDK) GetTimezoneAreaTxt(ctx context.Context, request operations.GetTime
 // GetTimezoneAreaLocation - request the current time for a timezone.
 func (s *SDK) GetTimezoneAreaLocation(ctx context.Context, request operations.GetTimezoneAreaLocationRequest) (*operations.GetTimezoneAreaLocationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timezone/{area}/{location}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timezone/{area}/{location}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -569,7 +599,10 @@ func (s *SDK) GetTimezoneAreaLocation(ctx context.Context, request operations.Ge
 // GetTimezoneAreaLocationTxt - request the current time for a timezone.
 func (s *SDK) GetTimezoneAreaLocationTxt(ctx context.Context, request operations.GetTimezoneAreaLocationTxtRequest) (*operations.GetTimezoneAreaLocationTxtResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timezone/{area}/{location}.txt", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timezone/{area}/{location}.txt", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -625,7 +658,10 @@ func (s *SDK) GetTimezoneAreaLocationTxt(ctx context.Context, request operations
 // GetTimezoneAreaLocationRegion - request the current time for a timezone.
 func (s *SDK) GetTimezoneAreaLocationRegion(ctx context.Context, request operations.GetTimezoneAreaLocationRegionRequest) (*operations.GetTimezoneAreaLocationRegionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timezone/{area}/{location}/{region}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timezone/{area}/{location}/{region}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -679,7 +715,10 @@ func (s *SDK) GetTimezoneAreaLocationRegion(ctx context.Context, request operati
 // GetTimezoneAreaLocationRegionTxt - request the current time for a timezone.
 func (s *SDK) GetTimezoneAreaLocationRegionTxt(ctx context.Context, request operations.GetTimezoneAreaLocationRegionTxtRequest) (*operations.GetTimezoneAreaLocationRegionTxtResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timezone/{area}/{location}/{region}.txt", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timezone/{area}/{location}/{region}.txt", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

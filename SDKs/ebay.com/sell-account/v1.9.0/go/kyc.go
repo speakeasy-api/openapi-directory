@@ -33,7 +33,7 @@ func newKyc(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 }
 
 // GetKYC - <span class="tablenote"><b>Note:</b>This method was originally created to see which onboarding requirements were still pending for sellers being onboarded for eBay managed payments, but now that all seller accounts are onboarded globally, this method should now just returne an empty payload with a <code>204 No Content</code> HTTP status code. </span>
-func (s *kyc) GetKYC(ctx context.Context) (*operations.GetKYCResponse, error) {
+func (s *kyc) GetKYC(ctx context.Context, security operations.GetKYCSecurity) (*operations.GetKYCResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/kyc"
 
@@ -42,7 +42,7 @@ func (s *kyc) GetKYC(ctx context.Context) (*operations.GetKYCResponse, error) {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

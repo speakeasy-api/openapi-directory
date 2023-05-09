@@ -19,12 +19,16 @@ const (
 	UserStatusTypeEnumForceChangePassword UserStatusTypeEnum = "FORCE_CHANGE_PASSWORD"
 )
 
+func (e UserStatusTypeEnum) ToPointer() *UserStatusTypeEnum {
+	return &e
+}
+
 func (e *UserStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNCONFIRMED":
 		fallthrough
 	case "CONFIRMED":
@@ -38,9 +42,9 @@ func (e *UserStatusTypeEnum) UnmarshalJSON(data []byte) error {
 	case "RESET_REQUIRED":
 		fallthrough
 	case "FORCE_CHANGE_PASSWORD":
-		*e = UserStatusTypeEnum(s)
+		*e = UserStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserStatusTypeEnum: %v", v)
 	}
 }

@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/healthlake/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,18 +28,19 @@ func main() {
         }),
     )
 
-    req := operations.CreateFHIRDatastoreRequest{
+    ctx := context.Background()
+    res, err := s.CreateFHIRDatastore(ctx, operations.CreateFHIRDatastoreRequest{
         CreateFHIRDatastoreRequest: shared.CreateFHIRDatastoreRequest{
-            ClientToken: "corrupti",
-            DatastoreName: "provident",
-            DatastoreTypeVersion: "R4",
+            ClientToken: sdk.String("corrupti"),
+            DatastoreName: sdk.String("provident"),
+            DatastoreTypeVersion: shared.FHIRVersionEnumR4,
             PreloadDataConfig: &shared.PreloadDataConfig{
-                PreloadDataType: "SYNTHEA",
+                PreloadDataType: shared.PreloadDataTypeEnumSynthea,
             },
             SseConfiguration: &shared.SseConfiguration{
                 KmsEncryptionConfig: shared.KmsEncryptionConfig{
-                    CmkType: "AWS_OWNED_KMS_KEY",
-                    KmsKeyID: "quibusdam",
+                    CmkType: shared.CmkTypeEnumAwsOwnedKmsKey,
+                    KmsKeyID: sdk.String("quibusdam"),
                 },
             },
             Tags: []shared.Tag{
@@ -57,18 +58,15 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "suscipit",
-        XAmzContentSha256: "iure",
-        XAmzCredential: "magnam",
-        XAmzDate: "debitis",
-        XAmzSecurityToken: "ipsa",
-        XAmzSignature: "delectus",
-        XAmzSignedHeaders: "tempora",
-        XAmzTarget: "HealthLake.CreateFHIRDatastore",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateFHIRDatastore(ctx, req)
+        XAmzAlgorithm: sdk.String("suscipit"),
+        XAmzContentSha256: sdk.String("iure"),
+        XAmzCredential: sdk.String("magnam"),
+        XAmzDate: sdk.String("debitis"),
+        XAmzSecurityToken: sdk.String("ipsa"),
+        XAmzSignature: sdk.String("delectus"),
+        XAmzSignedHeaders: sdk.String("tempora"),
+        XAmzTarget: operations.CreateFHIRDatastoreXAmzTargetEnumHealthLakeCreateFhirDatastore,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -83,21 +81,21 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateFHIRDatastore` - Creates a Data Store that can ingest and export FHIR formatted data.
-* `DeleteFHIRDatastore` - Deletes a Data Store. 
-* `DescribeFHIRDatastore` - Gets the properties associated with the FHIR Data Store, including the Data Store ID, Data Store ARN, Data Store name, Data Store status, created at, Data Store type version, and Data Store endpoint.
-* `DescribeFHIRExportJob` - Displays the properties of a FHIR export job, including the ID, ARN, name, and the status of the job.
-* `DescribeFHIRImportJob` - Displays the properties of a FHIR import job, including the ID, ARN, name, and the status of the job. 
-* `ListFHIRDatastores` - Lists all FHIR Data Stores that are in the user’s account, regardless of Data Store status.
-* `ListFHIRExportJobs` -  Lists all FHIR export jobs associated with an account and their statuses. 
-* `ListFHIRImportJobs` -  Lists all FHIR import jobs associated with an account and their statuses. 
-* `ListTagsForResource` -  Returns a list of all existing tags associated with a Data Store. 
-* `StartFHIRExportJob` - Begins a FHIR export job.
-* `StartFHIRImportJob` - Begins a FHIR Import job.
-* `TagResource` -  Adds a user specifed key and value tag to a Data Store. 
-* `UntagResource` -  Removes tags from a Data Store. 
+* [CreateFHIRDatastore](docs/sdk/README.md#createfhirdatastore) - Creates a Data Store that can ingest and export FHIR formatted data.
+* [DeleteFHIRDatastore](docs/sdk/README.md#deletefhirdatastore) - Deletes a Data Store. 
+* [DescribeFHIRDatastore](docs/sdk/README.md#describefhirdatastore) - Gets the properties associated with the FHIR Data Store, including the Data Store ID, Data Store ARN, Data Store name, Data Store status, created at, Data Store type version, and Data Store endpoint.
+* [DescribeFHIRExportJob](docs/sdk/README.md#describefhirexportjob) - Displays the properties of a FHIR export job, including the ID, ARN, name, and the status of the job.
+* [DescribeFHIRImportJob](docs/sdk/README.md#describefhirimportjob) - Displays the properties of a FHIR import job, including the ID, ARN, name, and the status of the job. 
+* [ListFHIRDatastores](docs/sdk/README.md#listfhirdatastores) - Lists all FHIR Data Stores that are in the user’s account, regardless of Data Store status.
+* [ListFHIRExportJobs](docs/sdk/README.md#listfhirexportjobs) -  Lists all FHIR export jobs associated with an account and their statuses. 
+* [ListFHIRImportJobs](docs/sdk/README.md#listfhirimportjobs) -  Lists all FHIR import jobs associated with an account and their statuses. 
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) -  Returns a list of all existing tags associated with a Data Store. 
+* [StartFHIRExportJob](docs/sdk/README.md#startfhirexportjob) - Begins a FHIR export job.
+* [StartFHIRImportJob](docs/sdk/README.md#startfhirimportjob) - Begins a FHIR Import job.
+* [TagResource](docs/sdk/README.md#tagresource) -  Adds a user specifed key and value tag to a Data Store. 
+* [UntagResource](docs/sdk/README.md#untagresource) -  Removes tags from a Data Store. 
 <!-- End SDK Available Operations -->
 
 ### Maturity

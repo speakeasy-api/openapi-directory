@@ -28,12 +28,16 @@ const (
 	ValidateConsumerConfigResponseValidationErrorEnumUsePermissionNotFound            ValidateConsumerConfigResponseValidationErrorEnum = "USE_PERMISSION_NOT_FOUND"
 )
 
+func (e ValidateConsumerConfigResponseValidationErrorEnum) ToPointer() *ValidateConsumerConfigResponseValidationErrorEnum {
+	return &e
+}
+
 func (e *ValidateConsumerConfigResponseValidationErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALIDATION_ERROR_UNSPECIFIED":
 		fallthrough
 	case "VALIDATION_NOT_REQUESTED":
@@ -63,10 +67,10 @@ func (e *ValidateConsumerConfigResponseValidationErrorEnum) UnmarshalJSON(data [
 	case "COMPUTE_API_NOT_ENABLED":
 		fallthrough
 	case "USE_PERMISSION_NOT_FOUND":
-		*e = ValidateConsumerConfigResponseValidationErrorEnum(s)
+		*e = ValidateConsumerConfigResponseValidationErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidateConsumerConfigResponseValidationErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidateConsumerConfigResponseValidationErrorEnum: %v", v)
 	}
 }
 

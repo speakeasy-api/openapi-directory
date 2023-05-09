@@ -16,12 +16,16 @@ const (
 	ExperienceStatusEnumFailed   ExperienceStatusEnum = "FAILED"
 )
 
+func (e ExperienceStatusEnum) ToPointer() *ExperienceStatusEnum {
+	return &e
+}
+
 func (e *ExperienceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -29,9 +33,9 @@ func (e *ExperienceStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "FAILED":
-		*e = ExperienceStatusEnum(s)
+		*e = ExperienceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExperienceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExperienceStatusEnum: %v", v)
 	}
 }

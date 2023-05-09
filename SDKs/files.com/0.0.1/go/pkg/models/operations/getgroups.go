@@ -12,16 +12,8 @@ type GetGroupsRequest struct {
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// If set, return records where the specified field is equal to the supplied value. Valid fields are `name`.
 	Filter map[string]interface{} `queryParam:"style=form,explode=true,name=filter"`
-	// If set, return records where the specified field is greater than the supplied value. Valid fields are `name`.
-	FilterGt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_gt"`
-	// If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `name`.
-	FilterGteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_gteq"`
-	// If set, return records where the specified field is equal to the supplied value. Valid fields are `name`.
-	FilterLike map[string]interface{} `queryParam:"style=form,explode=true,name=filter_like"`
-	// If set, return records where the specified field is less than the supplied value. Valid fields are `name`.
-	FilterLt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lt"`
-	// If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `name`.
-	FilterLteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lteq"`
+	// If set, return records where the specified field is prefixed by the supplied value. Valid fields are `name`.
+	FilterPrefix map[string]interface{} `queryParam:"style=form,explode=true,name=filter_prefix"`
 	// Comma-separated list of group ids to include in results.
 	Ids *string `queryParam:"style=form,explode=true,name=ids"`
 	// Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).

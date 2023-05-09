@@ -20,12 +20,16 @@ const (
 	SummarizePriceAccuracyResponseCurrentBookOnGoogleScoreEnumFailed                        SummarizePriceAccuracyResponseCurrentBookOnGoogleScoreEnum = "FAILED"
 )
 
+func (e SummarizePriceAccuracyResponseCurrentBookOnGoogleScoreEnum) ToPointer() *SummarizePriceAccuracyResponseCurrentBookOnGoogleScoreEnum {
+	return &e
+}
+
 func (e *SummarizePriceAccuracyResponseCurrentBookOnGoogleScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICE_ACCURACY_STATE_UNSPECIFIED":
 		fallthrough
 	case "PRICE_ACCURACY_STATE_UNKNOWN":
@@ -39,10 +43,10 @@ func (e *SummarizePriceAccuracyResponseCurrentBookOnGoogleScoreEnum) UnmarshalJS
 	case "AT_RISK":
 		fallthrough
 	case "FAILED":
-		*e = SummarizePriceAccuracyResponseCurrentBookOnGoogleScoreEnum(s)
+		*e = SummarizePriceAccuracyResponseCurrentBookOnGoogleScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponseCurrentBookOnGoogleScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponseCurrentBookOnGoogleScoreEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	SummarizePriceAccuracyResponseCurrentOverallScoreEnumFailed                        SummarizePriceAccuracyResponseCurrentOverallScoreEnum = "FAILED"
 )
 
+func (e SummarizePriceAccuracyResponseCurrentOverallScoreEnum) ToPointer() *SummarizePriceAccuracyResponseCurrentOverallScoreEnum {
+	return &e
+}
+
 func (e *SummarizePriceAccuracyResponseCurrentOverallScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICE_ACCURACY_STATE_UNSPECIFIED":
 		fallthrough
 	case "PRICE_ACCURACY_STATE_UNKNOWN":
@@ -78,10 +86,10 @@ func (e *SummarizePriceAccuracyResponseCurrentOverallScoreEnum) UnmarshalJSON(da
 	case "AT_RISK":
 		fallthrough
 	case "FAILED":
-		*e = SummarizePriceAccuracyResponseCurrentOverallScoreEnum(s)
+		*e = SummarizePriceAccuracyResponseCurrentOverallScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponseCurrentOverallScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponseCurrentOverallScoreEnum: %v", v)
 	}
 }
 
@@ -98,12 +106,16 @@ const (
 	SummarizePriceAccuracyResponseCurrentScoreEnumFailed                        SummarizePriceAccuracyResponseCurrentScoreEnum = "FAILED"
 )
 
+func (e SummarizePriceAccuracyResponseCurrentScoreEnum) ToPointer() *SummarizePriceAccuracyResponseCurrentScoreEnum {
+	return &e
+}
+
 func (e *SummarizePriceAccuracyResponseCurrentScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICE_ACCURACY_STATE_UNSPECIFIED":
 		fallthrough
 	case "PRICE_ACCURACY_STATE_UNKNOWN":
@@ -117,10 +129,10 @@ func (e *SummarizePriceAccuracyResponseCurrentScoreEnum) UnmarshalJSON(data []by
 	case "AT_RISK":
 		fallthrough
 	case "FAILED":
-		*e = SummarizePriceAccuracyResponseCurrentScoreEnum(s)
+		*e = SummarizePriceAccuracyResponseCurrentScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponseCurrentScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponseCurrentScoreEnum: %v", v)
 	}
 }
 
@@ -137,12 +149,16 @@ const (
 	SummarizePriceAccuracyResponseCurrentWebsiteScoreEnumFailed                        SummarizePriceAccuracyResponseCurrentWebsiteScoreEnum = "FAILED"
 )
 
+func (e SummarizePriceAccuracyResponseCurrentWebsiteScoreEnum) ToPointer() *SummarizePriceAccuracyResponseCurrentWebsiteScoreEnum {
+	return &e
+}
+
 func (e *SummarizePriceAccuracyResponseCurrentWebsiteScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICE_ACCURACY_STATE_UNSPECIFIED":
 		fallthrough
 	case "PRICE_ACCURACY_STATE_UNKNOWN":
@@ -156,10 +172,10 @@ func (e *SummarizePriceAccuracyResponseCurrentWebsiteScoreEnum) UnmarshalJSON(da
 	case "AT_RISK":
 		fallthrough
 	case "FAILED":
-		*e = SummarizePriceAccuracyResponseCurrentWebsiteScoreEnum(s)
+		*e = SummarizePriceAccuracyResponseCurrentWebsiteScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponseCurrentWebsiteScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponseCurrentWebsiteScoreEnum: %v", v)
 	}
 }
 
@@ -176,12 +192,16 @@ const (
 	SummarizePriceAccuracyResponsePredictedBookOnGoogleScoreEnumFailed                        SummarizePriceAccuracyResponsePredictedBookOnGoogleScoreEnum = "FAILED"
 )
 
+func (e SummarizePriceAccuracyResponsePredictedBookOnGoogleScoreEnum) ToPointer() *SummarizePriceAccuracyResponsePredictedBookOnGoogleScoreEnum {
+	return &e
+}
+
 func (e *SummarizePriceAccuracyResponsePredictedBookOnGoogleScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICE_ACCURACY_STATE_UNSPECIFIED":
 		fallthrough
 	case "PRICE_ACCURACY_STATE_UNKNOWN":
@@ -195,10 +215,10 @@ func (e *SummarizePriceAccuracyResponsePredictedBookOnGoogleScoreEnum) Unmarshal
 	case "AT_RISK":
 		fallthrough
 	case "FAILED":
-		*e = SummarizePriceAccuracyResponsePredictedBookOnGoogleScoreEnum(s)
+		*e = SummarizePriceAccuracyResponsePredictedBookOnGoogleScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponsePredictedBookOnGoogleScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponsePredictedBookOnGoogleScoreEnum: %v", v)
 	}
 }
 
@@ -215,12 +235,16 @@ const (
 	SummarizePriceAccuracyResponsePredictedOverallScoreEnumFailed                        SummarizePriceAccuracyResponsePredictedOverallScoreEnum = "FAILED"
 )
 
+func (e SummarizePriceAccuracyResponsePredictedOverallScoreEnum) ToPointer() *SummarizePriceAccuracyResponsePredictedOverallScoreEnum {
+	return &e
+}
+
 func (e *SummarizePriceAccuracyResponsePredictedOverallScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICE_ACCURACY_STATE_UNSPECIFIED":
 		fallthrough
 	case "PRICE_ACCURACY_STATE_UNKNOWN":
@@ -234,10 +258,10 @@ func (e *SummarizePriceAccuracyResponsePredictedOverallScoreEnum) UnmarshalJSON(
 	case "AT_RISK":
 		fallthrough
 	case "FAILED":
-		*e = SummarizePriceAccuracyResponsePredictedOverallScoreEnum(s)
+		*e = SummarizePriceAccuracyResponsePredictedOverallScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponsePredictedOverallScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponsePredictedOverallScoreEnum: %v", v)
 	}
 }
 
@@ -254,12 +278,16 @@ const (
 	SummarizePriceAccuracyResponsePredictedScoreEnumFailed                        SummarizePriceAccuracyResponsePredictedScoreEnum = "FAILED"
 )
 
+func (e SummarizePriceAccuracyResponsePredictedScoreEnum) ToPointer() *SummarizePriceAccuracyResponsePredictedScoreEnum {
+	return &e
+}
+
 func (e *SummarizePriceAccuracyResponsePredictedScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICE_ACCURACY_STATE_UNSPECIFIED":
 		fallthrough
 	case "PRICE_ACCURACY_STATE_UNKNOWN":
@@ -273,10 +301,10 @@ func (e *SummarizePriceAccuracyResponsePredictedScoreEnum) UnmarshalJSON(data []
 	case "AT_RISK":
 		fallthrough
 	case "FAILED":
-		*e = SummarizePriceAccuracyResponsePredictedScoreEnum(s)
+		*e = SummarizePriceAccuracyResponsePredictedScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponsePredictedScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponsePredictedScoreEnum: %v", v)
 	}
 }
 
@@ -293,12 +321,16 @@ const (
 	SummarizePriceAccuracyResponsePredictedWebsiteScoreEnumFailed                        SummarizePriceAccuracyResponsePredictedWebsiteScoreEnum = "FAILED"
 )
 
+func (e SummarizePriceAccuracyResponsePredictedWebsiteScoreEnum) ToPointer() *SummarizePriceAccuracyResponsePredictedWebsiteScoreEnum {
+	return &e
+}
+
 func (e *SummarizePriceAccuracyResponsePredictedWebsiteScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICE_ACCURACY_STATE_UNSPECIFIED":
 		fallthrough
 	case "PRICE_ACCURACY_STATE_UNKNOWN":
@@ -312,10 +344,10 @@ func (e *SummarizePriceAccuracyResponsePredictedWebsiteScoreEnum) UnmarshalJSON(
 	case "AT_RISK":
 		fallthrough
 	case "FAILED":
-		*e = SummarizePriceAccuracyResponsePredictedWebsiteScoreEnum(s)
+		*e = SummarizePriceAccuracyResponsePredictedWebsiteScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponsePredictedWebsiteScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for SummarizePriceAccuracyResponsePredictedWebsiteScoreEnum: %v", v)
 	}
 }
 

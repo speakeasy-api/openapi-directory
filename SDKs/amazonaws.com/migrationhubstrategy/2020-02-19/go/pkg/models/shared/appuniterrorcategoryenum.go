@@ -17,12 +17,16 @@ const (
 	AppUnitErrorCategoryEnumOtherError        AppUnitErrorCategoryEnum = "OTHER_ERROR"
 )
 
+func (e AppUnitErrorCategoryEnum) ToPointer() *AppUnitErrorCategoryEnum {
+	return &e
+}
+
 func (e *AppUnitErrorCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREDENTIAL_ERROR":
 		fallthrough
 	case "CONNECTIVITY_ERROR":
@@ -32,9 +36,9 @@ func (e *AppUnitErrorCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "UNSUPPORTED_ERROR":
 		fallthrough
 	case "OTHER_ERROR":
-		*e = AppUnitErrorCategoryEnum(s)
+		*e = AppUnitErrorCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppUnitErrorCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for AppUnitErrorCategoryEnum: %v", v)
 	}
 }

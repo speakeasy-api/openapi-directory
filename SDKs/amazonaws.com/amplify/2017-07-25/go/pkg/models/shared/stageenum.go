@@ -17,12 +17,16 @@ const (
 	StageEnumPullRequest  StageEnum = "PULL_REQUEST"
 )
 
+func (e StageEnum) ToPointer() *StageEnum {
+	return &e
+}
+
 func (e *StageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCTION":
 		fallthrough
 	case "BETA":
@@ -32,9 +36,9 @@ func (e *StageEnum) UnmarshalJSON(data []byte) error {
 	case "EXPERIMENTAL":
 		fallthrough
 	case "PULL_REQUEST":
-		*e = StageEnum(s)
+		*e = StageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StageEnum: %s", s)
+		return fmt.Errorf("invalid value for StageEnum: %v", v)
 	}
 }

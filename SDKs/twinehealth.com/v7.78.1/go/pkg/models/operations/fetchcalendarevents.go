@@ -20,12 +20,16 @@ const (
 	FetchCalendarEventsFilterTypeEnumVideoCall     FetchCalendarEventsFilterTypeEnum = "video-call"
 )
 
+func (e FetchCalendarEventsFilterTypeEnum) ToPointer() *FetchCalendarEventsFilterTypeEnum {
+	return &e
+}
+
 func (e *FetchCalendarEventsFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "plan-check-in":
 		fallthrough
 	case "reminder":
@@ -35,10 +39,10 @@ func (e *FetchCalendarEventsFilterTypeEnum) UnmarshalJSON(data []byte) error {
 	case "office-visit":
 		fallthrough
 	case "video-call":
-		*e = FetchCalendarEventsFilterTypeEnum(s)
+		*e = FetchCalendarEventsFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FetchCalendarEventsFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FetchCalendarEventsFilterTypeEnum: %v", v)
 	}
 }
 
@@ -49,17 +53,21 @@ const (
 	FetchCalendarEventsIncludeEnumOwner FetchCalendarEventsIncludeEnum = "owner"
 )
 
+func (e FetchCalendarEventsIncludeEnum) ToPointer() *FetchCalendarEventsIncludeEnum {
+	return &e
+}
+
 func (e *FetchCalendarEventsIncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "owner":
-		*e = FetchCalendarEventsIncludeEnum(s)
+		*e = FetchCalendarEventsIncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FetchCalendarEventsIncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for FetchCalendarEventsIncludeEnum: %v", v)
 	}
 }
 

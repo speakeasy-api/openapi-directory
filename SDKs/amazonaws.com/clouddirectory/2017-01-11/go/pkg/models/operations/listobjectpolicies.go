@@ -31,19 +31,23 @@ const (
 	ListObjectPoliciesXAmzConsistencyLevelEnumEventual     ListObjectPoliciesXAmzConsistencyLevelEnum = "EVENTUAL"
 )
 
+func (e ListObjectPoliciesXAmzConsistencyLevelEnum) ToPointer() *ListObjectPoliciesXAmzConsistencyLevelEnum {
+	return &e
+}
+
 func (e *ListObjectPoliciesXAmzConsistencyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERIALIZABLE":
 		fallthrough
 	case "EVENTUAL":
-		*e = ListObjectPoliciesXAmzConsistencyLevelEnum(s)
+		*e = ListObjectPoliciesXAmzConsistencyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListObjectPoliciesXAmzConsistencyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ListObjectPoliciesXAmzConsistencyLevelEnum: %v", v)
 	}
 }
 

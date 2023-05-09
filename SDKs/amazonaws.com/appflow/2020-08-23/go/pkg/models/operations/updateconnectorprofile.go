@@ -17,19 +17,23 @@ const (
 	UpdateConnectorProfileRequestBodyConnectionModeEnumPrivate UpdateConnectorProfileRequestBodyConnectionModeEnum = "Private"
 )
 
+func (e UpdateConnectorProfileRequestBodyConnectionModeEnum) ToPointer() *UpdateConnectorProfileRequestBodyConnectionModeEnum {
+	return &e
+}
+
 func (e *UpdateConnectorProfileRequestBodyConnectionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Public":
 		fallthrough
 	case "Private":
-		*e = UpdateConnectorProfileRequestBodyConnectionModeEnum(s)
+		*e = UpdateConnectorProfileRequestBodyConnectionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateConnectorProfileRequestBodyConnectionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateConnectorProfileRequestBodyConnectionModeEnum: %v", v)
 	}
 }
 
@@ -40,6 +44,8 @@ type UpdateConnectorProfileRequestBodyConnectorProfileConfig struct {
 }
 
 type UpdateConnectorProfileRequestBody struct {
+	// <p>The <code>clientToken</code> parameter is an idempotency token. It ensures that your <code>UpdateConnectorProfile</code> request completes only once. You choose the value to pass. For example, if you don't receive a response from your request, you can safely retry the request with the same <code>clientToken</code> parameter value.</p> <p>If you omit a <code>clientToken</code> value, the Amazon Web Services SDK that you are using inserts a value for you. This way, the SDK can safely retry requests multiple times after a network error. You must provide your own value for other use cases.</p> <p>If you specify input parameters that differ from your first request, an error occurs. If you use a different value for <code>clientToken</code>, Amazon AppFlow considers it a new call to <code>UpdateConnectorProfile</code>. The token is active for 8 hours.</p>
+	ClientToken *string `json:"clientToken,omitempty"`
 	//  Indicates the connection mode and if it is public or private.
 	ConnectionMode UpdateConnectorProfileRequestBodyConnectionModeEnum `json:"connectionMode"`
 	//  Defines the connector-specific configuration and credentials for the connector profile.

@@ -34,7 +34,10 @@ func newIamPolicies(defaultClient, securityClient HTTPClient, serverURL, languag
 // CloudassetIamPoliciesSearchAll - Searches all the IAM policies within a given accessible Resource Manager scope (project/folder/organization). This RPC gives callers especially administrators the ability to search all the IAM policies within a scope, even if they don't have `.getIamPolicy` permission of all the IAM policies. Callers should have `cloud.assets.SearchAllIamPolicies` permission on the requested scope, otherwise the request will be rejected.
 func (s *iamPolicies) CloudassetIamPoliciesSearchAll(ctx context.Context, request operations.CloudassetIamPoliciesSearchAllRequest, security operations.CloudassetIamPoliciesSearchAllSecurity) (*operations.CloudassetIamPoliciesSearchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p1beta1/{scope}/iamPolicies:searchAll", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1p1beta1/{scope}/iamPolicies:searchAll", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

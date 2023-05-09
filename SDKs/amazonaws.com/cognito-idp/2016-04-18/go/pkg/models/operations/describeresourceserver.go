@@ -16,17 +16,21 @@ const (
 	DescribeResourceServerXAmzTargetEnumAwsCognitoIdentityProviderServiceDescribeResourceServer DescribeResourceServerXAmzTargetEnum = "AWSCognitoIdentityProviderService.DescribeResourceServer"
 )
 
+func (e DescribeResourceServerXAmzTargetEnum) ToPointer() *DescribeResourceServerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeResourceServerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.DescribeResourceServer":
-		*e = DescribeResourceServerXAmzTargetEnum(s)
+		*e = DescribeResourceServerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeResourceServerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeResourceServerXAmzTargetEnum: %v", v)
 	}
 }
 

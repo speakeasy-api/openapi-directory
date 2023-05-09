@@ -26,17 +26,21 @@ const (
 	SecerRequestBodyFormatEnumPdf SecerRequestBodyFormatEnum = "pdf"
 )
 
+func (e SecerRequestBodyFormatEnum) ToPointer() *SecerRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *SecerRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = SecerRequestBodyFormatEnum(s)
+		*e = SecerRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SecerRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for SecerRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -56,17 +60,21 @@ const (
 	Secer504ApplicationJSONErrorEnumGatewayTimeout Secer504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Secer504ApplicationJSONErrorEnum) ToPointer() *Secer504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Secer504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Secer504ApplicationJSONErrorEnum(s)
+		*e = Secer504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -76,17 +84,21 @@ const (
 	Secer504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Secer504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Secer504ApplicationJSONErrorDescriptionEnum) ToPointer() *Secer504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Secer504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Secer504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Secer504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -102,17 +114,21 @@ const (
 	Secer503ApplicationJSONErrorEnumServiceUnavailable Secer503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Secer503ApplicationJSONErrorEnum) ToPointer() *Secer503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Secer503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Secer503ApplicationJSONErrorEnum(s)
+		*e = Secer503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -122,17 +138,21 @@ const (
 	Secer503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Secer503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Secer503ApplicationJSONErrorDescriptionEnum) ToPointer() *Secer503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Secer503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Secer503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Secer503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -148,17 +168,21 @@ const (
 	Secer502ApplicationJSONErrorEnumBadGatewy Secer502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Secer502ApplicationJSONErrorEnum) ToPointer() *Secer502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Secer502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Secer502ApplicationJSONErrorEnum(s)
+		*e = Secer502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -168,17 +192,21 @@ const (
 	Secer502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Secer502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Secer502ApplicationJSONErrorDescriptionEnum) ToPointer() *Secer502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Secer502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Secer502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Secer502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -194,17 +222,21 @@ const (
 	Secer500ApplicationJSONErrorEnumInternalServerError Secer500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Secer500ApplicationJSONErrorEnum) ToPointer() *Secer500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Secer500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Secer500ApplicationJSONErrorEnum(s)
+		*e = Secer500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -214,17 +246,21 @@ const (
 	Secer500ApplicationJSONErrorDescriptionEnumInternalServerError Secer500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Secer500ApplicationJSONErrorDescriptionEnum) ToPointer() *Secer500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Secer500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Secer500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Secer500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -241,19 +277,23 @@ const (
 	Secer404ApplicationJSONErrorEnumURLNotFound    Secer404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Secer404ApplicationJSONErrorEnum) ToPointer() *Secer404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Secer404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Secer404ApplicationJSONErrorEnum(s)
+		*e = Secer404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -264,19 +304,23 @@ const (
 	Secer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Secer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Secer404ApplicationJSONErrorDescriptionEnum) ToPointer() *Secer404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Secer404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Secer404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Secer404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -293,19 +337,23 @@ const (
 	Secer401ApplicationJSONErrorEnumInvalidAuthorization  Secer401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Secer401ApplicationJSONErrorEnum) ToPointer() *Secer401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Secer401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Secer401ApplicationJSONErrorEnum(s)
+		*e = Secer401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -316,19 +364,23 @@ const (
 	Secer401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Secer401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Secer401ApplicationJSONErrorDescriptionEnum) ToPointer() *Secer401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Secer401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Secer401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Secer401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -348,12 +400,16 @@ const (
 	Secer400ApplicationJSONErrorEnumInvalidConsentid Secer400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Secer400ApplicationJSONErrorEnum) ToPointer() *Secer400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Secer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -363,10 +419,10 @@ func (e *Secer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Secer400ApplicationJSONErrorEnum(s)
+		*e = Secer400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -380,12 +436,16 @@ const (
 	Secer400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Secer400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Secer400ApplicationJSONErrorDescriptionEnum) ToPointer() *Secer400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Secer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -395,10 +455,10 @@ func (e *Secer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Secer400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Secer400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Secer400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Secer400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

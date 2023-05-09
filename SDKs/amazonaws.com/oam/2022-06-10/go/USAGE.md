@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,13 +17,14 @@ func main() {
         }),
     )
 
-    req := operations.CreateLinkRequest{
+    ctx := context.Background()
+    res, err := s.CreateLink(ctx, operations.CreateLinkRequest{
         RequestBody: operations.CreateLinkRequestBody{
             LabelTemplate: "corrupti",
             ResourceTypes: []shared.ResourceTypeEnum{
-                "AWS::XRay::Trace",
-                "AWS::XRay::Trace",
-                "AWS::Logs::LogGroup",
+                shared.ResourceTypeEnumAwsXRayTrace,
+                shared.ResourceTypeEnumAwsXRayTrace,
+                shared.ResourceTypeEnumAwsLogsLogGroup,
             },
             SinkIdentifier: "nulla",
             Tags: map[string]string{
@@ -32,17 +33,14 @@ func main() {
                 "suscipit": "iure",
             },
         },
-        XAmzAlgorithm: "magnam",
-        XAmzContentSha256: "debitis",
-        XAmzCredential: "ipsa",
-        XAmzDate: "delectus",
-        XAmzSecurityToken: "tempora",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateLink(ctx, req)
+        XAmzAlgorithm: sdk.String("magnam"),
+        XAmzContentSha256: sdk.String("debitis"),
+        XAmzCredential: sdk.String("ipsa"),
+        XAmzDate: sdk.String("delectus"),
+        XAmzSecurityToken: sdk.String("tempora"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("molestiae"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -13,35 +13,33 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/hubapi.com/events/v3/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetEventsV3EventsGetPageRequest{
-        After: "corrupti",
-        Before: "provident",
-        EventType: "distinctio",
-        Limit: 844266,
-        ObjectID: 602763,
-        ObjectType: "nulla",
-        OccurredAfter: "2021-04-22T12:08:58.275Z",
-        OccurredBefore: "2022-05-18T09:34:54.894Z",
+    ctx := context.Background()
+    res, err := s.Events.GetEventsV3EventsGetPage(ctx, operations.GetEventsV3EventsGetPageRequest{
+        After: sdk.String("corrupti"),
+        Before: sdk.String("provident"),
+        EventType: sdk.String("distinctio"),
+        Limit: sdk.Int(844266),
+        ObjectID: sdk.Int64(602763),
+        ObjectType: sdk.String("nulla"),
+        OccurredAfter: types.MustTimeFromString("2021-04-22T12:08:58.275Z"),
+        OccurredBefore: types.MustTimeFromString("2022-05-18T09:34:54.894Z"),
         Sort: []string{
             "suscipit",
             "iure",
             "magnam",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.Events.GetEventsV3EventsGetPage(ctx, req, operations.GetEventsV3EventsGetPageSecurity{
+    }, operations.GetEventsV3EventsGetPageSecurity{
         Hapikey: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {
@@ -59,9 +57,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Events
+### [Events](docs/events/README.md)
 
-* `GetEventsV3EventsGetPage` - Returns a collection of events matching a query.
+* [GetEventsV3EventsGetPage](docs/events/README.md#geteventsv3eventsgetpage) - Returns a collection of events matching a query.
 <!-- End SDK Available Operations -->
 
 ### Maturity

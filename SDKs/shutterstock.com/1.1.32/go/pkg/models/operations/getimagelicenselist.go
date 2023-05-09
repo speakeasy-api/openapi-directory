@@ -23,21 +23,25 @@ const (
 	GetImageLicenseListDownloadAvailabilityEnumNonDownloadable GetImageLicenseListDownloadAvailabilityEnum = "non_downloadable"
 )
 
+func (e GetImageLicenseListDownloadAvailabilityEnum) ToPointer() *GetImageLicenseListDownloadAvailabilityEnum {
+	return &e
+}
+
 func (e *GetImageLicenseListDownloadAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "downloadable":
 		fallthrough
 	case "non_downloadable":
-		*e = GetImageLicenseListDownloadAvailabilityEnum(s)
+		*e = GetImageLicenseListDownloadAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImageLicenseListDownloadAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImageLicenseListDownloadAvailabilityEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	GetImageLicenseListSortEnumOldest GetImageLicenseListSortEnum = "oldest"
 )
 
+func (e GetImageLicenseListSortEnum) ToPointer() *GetImageLicenseListSortEnum {
+	return &e
+}
+
 func (e *GetImageLicenseListSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "oldest":
-		*e = GetImageLicenseListSortEnum(s)
+		*e = GetImageLicenseListSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImageLicenseListSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImageLicenseListSortEnum: %v", v)
 	}
 }
 

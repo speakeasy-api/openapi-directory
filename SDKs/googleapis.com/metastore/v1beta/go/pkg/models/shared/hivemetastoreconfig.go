@@ -16,21 +16,25 @@ const (
 	HiveMetastoreConfigEndpointProtocolEnumGrpc                        HiveMetastoreConfigEndpointProtocolEnum = "GRPC"
 )
 
+func (e HiveMetastoreConfigEndpointProtocolEnum) ToPointer() *HiveMetastoreConfigEndpointProtocolEnum {
+	return &e
+}
+
 func (e *HiveMetastoreConfigEndpointProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENDPOINT_PROTOCOL_UNSPECIFIED":
 		fallthrough
 	case "THRIFT":
 		fallthrough
 	case "GRPC":
-		*e = HiveMetastoreConfigEndpointProtocolEnum(s)
+		*e = HiveMetastoreConfigEndpointProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HiveMetastoreConfigEndpointProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for HiveMetastoreConfigEndpointProtocolEnum: %v", v)
 	}
 }
 

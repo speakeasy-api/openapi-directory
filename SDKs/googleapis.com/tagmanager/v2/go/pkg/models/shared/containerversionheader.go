@@ -26,6 +26,8 @@ type ContainerVersionHeader struct {
 	NumRules *string `json:"numRules,omitempty"`
 	// Number of tags in the container version.
 	NumTags *string `json:"numTags,omitempty"`
+	// Number of transformations in the container version.
+	NumTransformations *string `json:"numTransformations,omitempty"`
 	// Number of triggers in the container version.
 	NumTriggers *string `json:"numTriggers,omitempty"`
 	// Number of variables in the container version.

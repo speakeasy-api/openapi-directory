@@ -15,21 +15,25 @@ const (
 	CallForDocumentClientManagementEnumAdn     CallForDocumentClientManagementEnum = "adn"
 )
 
+func (e CallForDocumentClientManagementEnum) ToPointer() *CallForDocumentClientManagementEnum {
+	return &e
+}
+
 func (e *CallForDocumentClientManagementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no":
 		fallthrough
 	case "manager":
 		fallthrough
 	case "adn":
-		*e = CallForDocumentClientManagementEnum(s)
+		*e = CallForDocumentClientManagementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallForDocumentClientManagementEnum: %s", s)
+		return fmt.Errorf("invalid value for CallForDocumentClientManagementEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	CallForDocumentPlayerEnumCollaborator CallForDocumentPlayerEnum = "collaborator"
 )
 
+func (e CallForDocumentPlayerEnum) ToPointer() *CallForDocumentPlayerEnum {
+	return &e
+}
+
 func (e *CallForDocumentPlayerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "guest":
 		fallthrough
 	case "owner":
@@ -58,10 +66,10 @@ func (e *CallForDocumentPlayerEnum) UnmarshalJSON(data []byte) error {
 	case "assistant":
 		fallthrough
 	case "collaborator":
-		*e = CallForDocumentPlayerEnum(s)
+		*e = CallForDocumentPlayerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallForDocumentPlayerEnum: %s", s)
+		return fmt.Errorf("invalid value for CallForDocumentPlayerEnum: %v", v)
 	}
 }
 

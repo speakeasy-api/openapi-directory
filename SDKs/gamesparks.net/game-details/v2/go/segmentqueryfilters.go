@@ -35,7 +35,10 @@ func newSegmentQueryFilters(defaultClient, securityClient HTTPClient, serverURL,
 // GETSegmentQueryFiltersConfigUsingGET - getSegmentQueryFiltersConfig
 func (s *segmentQueryFilters) GETSegmentQueryFiltersConfigUsingGET(ctx context.Context, request operations.GETSegmentQueryFiltersConfigUsingGETRequest) (*operations.GETSegmentQueryFiltersConfigUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/segmentQueryFilters/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/segmentQueryFilters/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -92,7 +95,10 @@ func (s *segmentQueryFilters) GETSegmentQueryFiltersConfigUsingGET(ctx context.C
 // GETSegmentQueryFiltersUsingGET - getSegmentQueryFilters
 func (s *segmentQueryFilters) GETSegmentQueryFiltersUsingGET(ctx context.Context, request operations.GETSegmentQueryFiltersUsingGETRequest) (*operations.GETSegmentQueryFiltersUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/segmentQueryFilters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/segmentQueryFilters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +155,10 @@ func (s *segmentQueryFilters) GETSegmentQueryFiltersUsingGET(ctx context.Context
 // GETSegmentQueryStandardFiltersUsingGET - getSegmentQueryStandardFilters
 func (s *segmentQueryFilters) GETSegmentQueryStandardFiltersUsingGET(ctx context.Context, request operations.GETSegmentQueryStandardFiltersUsingGETRequest) (*operations.GETSegmentQueryStandardFiltersUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/segmentQueryFilters/standardFilters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/segmentQueryFilters/standardFilters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -206,7 +215,10 @@ func (s *segmentQueryFilters) GETSegmentQueryStandardFiltersUsingGET(ctx context
 // UpdateSegmentQueryFiltersConfigUsingPUT - updateSegmentQueryFiltersConfig
 func (s *segmentQueryFilters) UpdateSegmentQueryFiltersConfigUsingPUT(ctx context.Context, request operations.UpdateSegmentQueryFiltersConfigUsingPUTRequest) (*operations.UpdateSegmentQueryFiltersConfigUsingPUTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/segmentQueryFilters/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/segmentQueryFilters/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SegmentQueryFilterConfigModel", "json")
 	if err != nil {

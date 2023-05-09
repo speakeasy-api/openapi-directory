@@ -18,12 +18,16 @@ const (
 	GoogleCloudMlV1TrialStateEnumStopping         GoogleCloudMlV1TrialStateEnum = "STOPPING"
 )
 
+func (e GoogleCloudMlV1TrialStateEnum) ToPointer() *GoogleCloudMlV1TrialStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1TrialStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "REQUESTED":
@@ -33,10 +37,10 @@ func (e *GoogleCloudMlV1TrialStateEnum) UnmarshalJSON(data []byte) error {
 	case "COMPLETED":
 		fallthrough
 	case "STOPPING":
-		*e = GoogleCloudMlV1TrialStateEnum(s)
+		*e = GoogleCloudMlV1TrialStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1TrialStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1TrialStateEnum: %v", v)
 	}
 }
 

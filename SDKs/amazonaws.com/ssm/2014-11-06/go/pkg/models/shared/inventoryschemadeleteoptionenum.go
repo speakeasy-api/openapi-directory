@@ -14,18 +14,22 @@ const (
 	InventorySchemaDeleteOptionEnumDeleteSchema  InventorySchemaDeleteOptionEnum = "DeleteSchema"
 )
 
+func (e InventorySchemaDeleteOptionEnum) ToPointer() *InventorySchemaDeleteOptionEnum {
+	return &e
+}
+
 func (e *InventorySchemaDeleteOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableSchema":
 		fallthrough
 	case "DeleteSchema":
-		*e = InventorySchemaDeleteOptionEnum(s)
+		*e = InventorySchemaDeleteOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventorySchemaDeleteOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for InventorySchemaDeleteOptionEnum: %v", v)
 	}
 }

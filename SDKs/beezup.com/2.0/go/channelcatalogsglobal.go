@@ -103,7 +103,10 @@ func (s *channelCatalogsGlobal) AddChannelCatalog(ctx context.Context, request s
 // DeleteChannelCatalog - Delete the channel catalog
 func (s *channelCatalogsGlobal) DeleteChannelCatalog(ctx context.Context, request operations.DeleteChannelCatalogRequest) (*operations.DeleteChannelCatalogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -150,7 +153,10 @@ func (s *channelCatalogsGlobal) DeleteChannelCatalog(ctx context.Context, reques
 // GetChannelCatalog - Get the channel catalog information
 func (s *channelCatalogsGlobal) GetChannelCatalog(ctx context.Context, request operations.GetChannelCatalogRequest) (*operations.GetChannelCatalogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/channelCatalogs/{channelCatalogId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

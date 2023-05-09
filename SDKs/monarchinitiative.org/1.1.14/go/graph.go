@@ -35,7 +35,10 @@ func newGraph(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // GetEdgeResource - Returns edges emanating from a given node
 func (s *graph) GetEdgeResource(ctx context.Context, request operations.GetEdgeResourceRequest) (*operations.GetEdgeResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/graph/edges/from/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/graph/edges/from/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *graph) GetEdgeResource(ctx context.Context, request operations.GetEdgeR
 // a molecular entity such as a gene or protein, or a conceptual entity such as a class from an ontology.
 func (s *graph) GetNodeResource(ctx context.Context, request operations.GetNodeResourceRequest) (*operations.GetNodeResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/graph/node/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/graph/node/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

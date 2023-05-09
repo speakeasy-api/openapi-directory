@@ -110,7 +110,10 @@ func (s *groups) GroupsCount(ctx context.Context, request operations.GroupsCount
 // GroupsDelete - Delete group specified by id
 func (s *groups) GroupsDelete(ctx context.Context, request operations.GroupsDeleteRequest) (*operations.GroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -240,7 +243,10 @@ func (s *groups) GroupsGet(ctx context.Context, request operations.GroupsGetRequ
 // GroupsGetDatapoints - List of all the datapoints associated to the user in this group.
 func (s *groups) GroupsGetDatapoints(ctx context.Context, request operations.GroupsGetDatapointsRequest) (*operations.GroupsGetDatapointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/datapoints", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/datapoints", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -300,7 +306,10 @@ func (s *groups) GroupsGetDatapoints(ctx context.Context, request operations.Gro
 // GroupsGetDatapointsCount - Count the datapoints associated to the user in this group.
 func (s *groups) GroupsGetDatapointsCount(ctx context.Context, request operations.GroupsGetDatapointsCountRequest) (*operations.GroupsGetDatapointsCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/datapoints/count", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/datapoints/count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -374,7 +383,10 @@ func (s *groups) GroupsGetDatapointsCount(ctx context.Context, request operation
 // GroupsGetDatapointsSummary - Retrieve statistics about a subset of datapoints for a timeframe with datapoints data
 func (s *groups) GroupsGetDatapointsSummary(ctx context.Context, request operations.GroupsGetDatapointsSummaryRequest) (*operations.GroupsGetDatapointsSummaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/aggregated/summary", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/aggregated/summary", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -432,7 +444,10 @@ func (s *groups) GroupsGetDatapointsSummary(ctx context.Context, request operati
 // GroupsGetHits - Retrieve the list of events related to this group.
 func (s *groups) GroupsGetHits(ctx context.Context, request operations.GroupsGetHitsRequest) (*operations.GroupsGetHitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/hits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/hits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -606,7 +621,10 @@ func (s *groups) GroupsGetStatisticsAllList(ctx context.Context, request operati
 // GroupsGetStatisticsList - Retrieve statistics about this group for a timeframe grouped by some temporal entity (day/week/month)
 func (s *groups) GroupsGetStatisticsList(ctx context.Context, request operations.GroupsGetStatisticsListRequest) (*operations.GroupsGetStatisticsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/aggregated/list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/aggregated/list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -664,7 +682,10 @@ func (s *groups) GroupsGetStatisticsList(ctx context.Context, request operations
 // GroupsGetStatisticsSingle - Retrieve statistics about this group for a timeframe
 func (s *groups) GroupsGetStatisticsSingle(ctx context.Context, request operations.GroupsGetStatisticsSingleRequest) (*operations.GroupsGetStatisticsSingleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/aggregated", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/aggregated", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -722,7 +743,10 @@ func (s *groups) GroupsGetStatisticsSingle(ctx context.Context, request operatio
 // GroupsPatchFavourite - Fast switch the "favourite" field of a group
 func (s *groups) GroupsPatchFavourite(ctx context.Context, request operations.GroupsPatchFavouriteRequest) (*operations.GroupsPatchFavouriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/favourite", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/favourite", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -794,7 +818,10 @@ func (s *groups) GroupsPatchFavourite(ctx context.Context, request operations.Gr
 // GroupsPatchNotesForm - Fast patch the "notes" field of a group
 func (s *groups) GroupsPatchNotesForm(ctx context.Context, request operations.GroupsPatchNotesFormRequest) (*operations.GroupsPatchNotesFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/notes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/notes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsGenericTextPatch", "form")
 	if err != nil {
@@ -876,7 +903,10 @@ func (s *groups) GroupsPatchNotesForm(ctx context.Context, request operations.Gr
 // GroupsPatchNotesJSON - Fast patch the "notes" field of a group
 func (s *groups) GroupsPatchNotesJSON(ctx context.Context, request operations.GroupsPatchNotesJSONRequest) (*operations.GroupsPatchNotesJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/notes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/notes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreRequestsGenericTextPatch", "json")
 	if err != nil {
@@ -958,7 +988,10 @@ func (s *groups) GroupsPatchNotesJSON(ctx context.Context, request operations.Gr
 // GroupsPatchNotesRaw - Fast patch the "notes" field of a group
 func (s *groups) GroupsPatchNotesRaw(ctx context.Context, request operations.GroupsPatchNotesRawRequest) (*operations.GroupsPatchNotesRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/notes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/notes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1040,7 +1073,10 @@ func (s *groups) GroupsPatchNotesRaw(ctx context.Context, request operations.Gro
 // GroupsPost - Update a group
 func (s *groups) GroupsPost(ctx context.Context, request operations.GroupsPostRequest) (*operations.GroupsPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoGroupsGroup", "json")
 	if err != nil {
@@ -1200,7 +1236,10 @@ func (s *groups) GroupsPut(ctx context.Context, request shared.APICoreDtoGroupsG
 // GroupsPutDatapoint - Create a datapoint in this group
 func (s *groups) GroupsPutDatapoint(ctx context.Context, request operations.GroupsPutDatapointRequest) (*operations.GroupsPutDatapointResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/datapoints", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}/datapoints", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoDatapointsDatapoint", "json")
 	if err != nil {
@@ -1280,7 +1319,10 @@ func (s *groups) GroupsPutDatapoint(ctx context.Context, request operations.Grou
 // GetGroupsID - Get a group
 func (s *groups) GetGroupsID(ctx context.Context, request operations.GetGroupsIDRequest) (*operations.GetGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	NetworkProfileTypeEnumPrivate NetworkProfileTypeEnum = "PRIVATE"
 )
 
+func (e NetworkProfileTypeEnum) ToPointer() *NetworkProfileTypeEnum {
+	return &e
+}
+
 func (e *NetworkProfileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CURATED":
 		fallthrough
 	case "PRIVATE":
-		*e = NetworkProfileTypeEnum(s)
+		*e = NetworkProfileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkProfileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkProfileTypeEnum: %v", v)
 	}
 }

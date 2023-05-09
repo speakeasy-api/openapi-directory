@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -32,4 +33,8 @@ pkg/models/shared/getclicksmodel.go
 pkg/models/shared/clickmodel.go
 pkg/models/shared/clickmodelpg.go
 pkg/models/shared/clicksfiltermodel.go
+docs/sdk/README.md
+docs/alias/README.md
+docs/click/README.md
+docs/statistics/README.md
 USAGE.md

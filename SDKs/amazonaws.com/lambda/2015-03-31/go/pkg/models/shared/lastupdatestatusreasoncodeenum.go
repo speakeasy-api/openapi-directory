@@ -33,12 +33,16 @@ const (
 	LastUpdateStatusReasonCodeEnumFunctionError               LastUpdateStatusReasonCodeEnum = "FunctionError"
 )
 
+func (e LastUpdateStatusReasonCodeEnum) ToPointer() *LastUpdateStatusReasonCodeEnum {
+	return &e
+}
+
 func (e *LastUpdateStatusReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EniLimitExceeded":
 		fallthrough
 	case "InsufficientRolePermissions":
@@ -80,9 +84,9 @@ func (e *LastUpdateStatusReasonCodeEnum) UnmarshalJSON(data []byte) error {
 	case "InvalidZipFileException":
 		fallthrough
 	case "FunctionError":
-		*e = LastUpdateStatusReasonCodeEnum(s)
+		*e = LastUpdateStatusReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LastUpdateStatusReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for LastUpdateStatusReasonCodeEnum: %v", v)
 	}
 }

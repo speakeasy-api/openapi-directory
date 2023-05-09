@@ -14,18 +14,22 @@ const (
 	SnapStartApplyOnEnumNone              SnapStartApplyOnEnum = "None"
 )
 
+func (e SnapStartApplyOnEnum) ToPointer() *SnapStartApplyOnEnum {
+	return &e
+}
+
 func (e *SnapStartApplyOnEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PublishedVersions":
 		fallthrough
 	case "None":
-		*e = SnapStartApplyOnEnum(s)
+		*e = SnapStartApplyOnEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SnapStartApplyOnEnum: %s", s)
+		return fmt.Errorf("invalid value for SnapStartApplyOnEnum: %v", v)
 	}
 }

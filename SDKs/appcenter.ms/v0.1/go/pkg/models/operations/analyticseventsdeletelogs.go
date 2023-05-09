@@ -22,29 +22,33 @@ type AnalyticsEventsDeleteLogsRequest struct {
 }
 
 // AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.
-type AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum string
+type AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum int64
 
 const (
-	AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnumFourHundred         AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum = "400"
-	AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnumFourHundredAndThree AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum = "403"
-	AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnumFiveHundred         AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum = "500"
+	AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnumFourHundred         AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum = 400
+	AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnumFourHundredAndThree AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum = 403
+	AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnumFiveHundred         AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum = 500
 )
 
+func (e AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum) ToPointer() *AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
+	switch v {
+	case 400:
 		fallthrough
-	case "403":
+	case 403:
 		fallthrough
-	case "500":
-		*e = AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum(s)
+	case 500:
+		*e = AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsEventsDeleteLogsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

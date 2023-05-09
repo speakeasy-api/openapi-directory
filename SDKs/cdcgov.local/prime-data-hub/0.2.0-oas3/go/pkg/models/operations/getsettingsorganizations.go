@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetSettingsOrganizationsSecurity struct {
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetSettingsOrganizationsResponse struct {
 	ContentType string
 	Headers     map[string][]string

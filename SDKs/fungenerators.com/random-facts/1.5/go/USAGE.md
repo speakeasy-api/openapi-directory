@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetFactFodRequest{
-        Category: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.FactOfTheDay.GetFactFod(ctx, req, operations.GetFactFodSecurity{
+    res, err := s.FactOfTheDay.GetFactFod(ctx, operations.GetFactFodRequest{
+        Category: sdk.String("corrupti"),
+    }, operations.GetFactFodSecurity{
         XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
     })
     if err != nil {

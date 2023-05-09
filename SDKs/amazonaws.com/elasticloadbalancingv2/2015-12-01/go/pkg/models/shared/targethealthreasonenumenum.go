@@ -24,12 +24,16 @@ const (
 	TargetHealthReasonEnumEnumElbInternalError               TargetHealthReasonEnumEnum = "Elb.InternalError"
 )
 
+func (e TargetHealthReasonEnumEnum) ToPointer() *TargetHealthReasonEnumEnum {
+	return &e
+}
+
 func (e *TargetHealthReasonEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Elb.RegistrationInProgress":
 		fallthrough
 	case "Elb.InitialHealthChecking":
@@ -53,9 +57,9 @@ func (e *TargetHealthReasonEnumEnum) UnmarshalJSON(data []byte) error {
 	case "Target.HealthCheckDisabled":
 		fallthrough
 	case "Elb.InternalError":
-		*e = TargetHealthReasonEnumEnum(s)
+		*e = TargetHealthReasonEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetHealthReasonEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetHealthReasonEnumEnum: %v", v)
 	}
 }

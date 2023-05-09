@@ -15,17 +15,21 @@ const (
 	POSTModifySnapshotCopyRetentionPeriodActionEnumModifySnapshotCopyRetentionPeriod POSTModifySnapshotCopyRetentionPeriodActionEnum = "ModifySnapshotCopyRetentionPeriod"
 )
 
+func (e POSTModifySnapshotCopyRetentionPeriodActionEnum) ToPointer() *POSTModifySnapshotCopyRetentionPeriodActionEnum {
+	return &e
+}
+
 func (e *POSTModifySnapshotCopyRetentionPeriodActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifySnapshotCopyRetentionPeriod":
-		*e = POSTModifySnapshotCopyRetentionPeriodActionEnum(s)
+		*e = POSTModifySnapshotCopyRetentionPeriodActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifySnapshotCopyRetentionPeriodActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifySnapshotCopyRetentionPeriodActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifySnapshotCopyRetentionPeriodVersionEnumTwoThousandAndTwelve1201 POSTModifySnapshotCopyRetentionPeriodVersionEnum = "2012-12-01"
 )
 
+func (e POSTModifySnapshotCopyRetentionPeriodVersionEnum) ToPointer() *POSTModifySnapshotCopyRetentionPeriodVersionEnum {
+	return &e
+}
+
 func (e *POSTModifySnapshotCopyRetentionPeriodVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTModifySnapshotCopyRetentionPeriodVersionEnum(s)
+		*e = POSTModifySnapshotCopyRetentionPeriodVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifySnapshotCopyRetentionPeriodVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifySnapshotCopyRetentionPeriodVersionEnum: %v", v)
 	}
 }
 

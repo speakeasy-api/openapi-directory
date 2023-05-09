@@ -14,16 +14,20 @@ const (
 	InstanceIDFilterOperatorEnumEq InstanceIDFilterOperatorEnum = "Eq"
 )
 
+func (e InstanceIDFilterOperatorEnum) ToPointer() *InstanceIDFilterOperatorEnum {
+	return &e
+}
+
 func (e *InstanceIDFilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Eq":
-		*e = InstanceIDFilterOperatorEnum(s)
+		*e = InstanceIDFilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceIDFilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceIDFilterOperatorEnum: %v", v)
 	}
 }

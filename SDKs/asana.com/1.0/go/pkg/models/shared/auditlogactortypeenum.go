@@ -19,12 +19,16 @@ const (
 	AuditLogActorTypeEnumExternalAdministrator AuditLogActorTypeEnum = "external_administrator"
 )
 
+func (e AuditLogActorTypeEnum) ToPointer() *AuditLogActorTypeEnum {
+	return &e
+}
+
 func (e *AuditLogActorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "asana":
@@ -34,9 +38,9 @@ func (e *AuditLogActorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "anonymous":
 		fallthrough
 	case "external_administrator":
-		*e = AuditLogActorTypeEnum(s)
+		*e = AuditLogActorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditLogActorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditLogActorTypeEnum: %v", v)
 	}
 }

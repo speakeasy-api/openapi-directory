@@ -20,12 +20,16 @@ const (
 	GetLoginFormatEnumPdf  GetLoginFormatEnum = "pdf"
 )
 
+func (e GetLoginFormatEnum) ToPointer() *GetLoginFormatEnum {
+	return &e
+}
+
 func (e *GetLoginFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -37,10 +41,10 @@ func (e *GetLoginFormatEnum) UnmarshalJSON(data []byte) error {
 	case "jpg":
 		fallthrough
 	case "pdf":
-		*e = GetLoginFormatEnum(s)
+		*e = GetLoginFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLoginFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLoginFormatEnum: %v", v)
 	}
 }
 

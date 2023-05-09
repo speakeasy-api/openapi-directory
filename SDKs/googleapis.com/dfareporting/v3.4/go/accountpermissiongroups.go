@@ -34,7 +34,10 @@ func newAccountPermissionGroups(defaultClient, securityClient HTTPClient, server
 // DfareportingAccountPermissionGroupsGet - Gets one account permission group by ID.
 func (s *accountPermissionGroups) DfareportingAccountPermissionGroupsGet(ctx context.Context, request operations.DfareportingAccountPermissionGroupsGetRequest, security operations.DfareportingAccountPermissionGroupsGetSecurity) (*operations.DfareportingAccountPermissionGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountPermissionGroups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountPermissionGroups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *accountPermissionGroups) DfareportingAccountPermissionGroupsGet(ctx con
 // DfareportingAccountPermissionGroupsList - Retrieves the list of account permission groups.
 func (s *accountPermissionGroups) DfareportingAccountPermissionGroupsList(ctx context.Context, request operations.DfareportingAccountPermissionGroupsListRequest, security operations.DfareportingAccountPermissionGroupsListSecurity) (*operations.DfareportingAccountPermissionGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountPermissionGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountPermissionGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

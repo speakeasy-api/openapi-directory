@@ -13,16 +13,20 @@ const (
 	AssistantTypeEnumAgent AssistantTypeEnum = "AGENT"
 )
 
+func (e AssistantTypeEnum) ToPointer() *AssistantTypeEnum {
+	return &e
+}
+
 func (e *AssistantTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGENT":
-		*e = AssistantTypeEnum(s)
+		*e = AssistantTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssistantTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssistantTypeEnum: %v", v)
 	}
 }

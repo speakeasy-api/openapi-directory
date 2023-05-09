@@ -2,25 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetUsersRequest{
-        Cursor: "corrupti",
-        Order: "desc",
-        PageSize: 715190,
-    }
-
     ctx := context.Background()
-    res, err := s.GetUsers(ctx, req)
+    res, err := s.GetUsers(ctx, operations.GetUsersRequest{
+        Cursor: sdk.String("corrupti"),
+        Order: shared.OrderEnumDesc.ToPointer(),
+        PageSize: sdk.Int64(715190),
+    })
     if err != nil {
         log.Fatal(err)
     }

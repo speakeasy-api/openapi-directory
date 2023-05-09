@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/beezup.com/2.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -41,387 +39,387 @@ func main() {
 ## Available Resources and Operations
 
 
-### AnalyticsGlobal
-
-* `AnalyticsIndex` - Get the Analytics API operation index
-* `AnalyticsStoreIndex` - Get the Analytics API operation index for one store
-
-### AnalyticsOptimisations
-
-* `CopyOptimisation` - Copy product optimisations between 2 channels
-* `Optimise` - Optimise products by page
-* `OptimiseAll` - Optimise all products
-* `OptimiseByCategory` - Optimise products by category
-* `OptimiseByChannel` - Optimise products by channel
-* `OptimiseByProduct` - Optimise product
-
-### AnalyticsReports
-
-* `DeleteReportFilter` - Delete the report filter
-* `GetReportFilter` - Get the report filter description
-* `GetReportFilters` - Get report filter list for the given store
-* `SaveReportFilter` - Save the report filter
-
-### AnalyticsRules
-
-* `CreateRule` - Rule creation
-* `DeleteRule` - Delete Rule
-* `DisableRule` - Disable rule
-* `EnableRule` - Enable rule
-* `GetRule` - Gets the rule
-* `GetRules` - Gets the list of rules for a given store
-* `GetRulesExecutions` - Get the rules execution history
-* `MoveDownRule` - Move the rule down
-* `MoveUpRule` - Move the rule up
-* `RunRule` - Run rule
-* `RunRules` - Run all rules for this store
-* `UpdateRule` - Update Rule
-
-### AnalyticsStatistics
-
-* `GetStoreReportByCategory` - Get the report by category
-* `GetStoreReportByChannel` - Get the report by channel
-* `GetStoreReportByDay` - Get the report by day for a StoreId
-* `GetStoreReportByDayPerStore` - Get the report by day for a StoreId
-* `GetStoreReportByProduct` - Get the report by product
-
-### AnalyticsTracking
-
-* `GetStoreTrackedClicks` - Get the latest tracked clicks
-* `GetStoreTrackedExternalOrders` - Get the latest tracked external orders
-* `GetStoreTrackedOrders` - Get the latest tracked orders
-* `GetStoreTrackingStatus` - Get the synchronization status of clicks and orders of a store
-* `GetTrackingStatus` - Get the global synchronization status of clicks and orders
-
-### CatalogsAuto
-
-* `AutoConfigureAutoImportInterval` - Configure Auto Import Interval
-* `AutoDeleteAutoImport` - Delete Auto Import
-* `AutoGetAutoImportConfiguration` - Get the auto import configuration
-* `AutoPauseAutoImport` - Pause Auto Import
-* `AutoResumeAutoImport` - Resume Auto Import
-* `AutoScheduleAutoImport` - Configure Auto Import Schedules
-* `AutoStartAutoImport` - Start Auto Import Manually
-* `ImportationActivateAutoImport` - Activate the auto importation of the last successful manual catalog importation.
-
-### CatalogsCatalog
-
-* `CatalogStoreIndex` - Get the index of the catalog API for this store
-* `CatalogChangeCatalogColumnUserName` - Change Catalog Column User Name
-* `CatalogChangeCustomColumnExpression` - Change custom column expression
-* `CatalogChangeCustomColumnUserName` - Change Custom Column User Name
-* `CatalogComputeExpression` - Compute the expression for this catalog.
-* `CatalogDeleteCustomColumn` - Delete custom column
-* `CatalogGetCatalogColumns` - Get catalog column list
-* `CatalogGetCategories` - Get category list
-* `CatalogGetCustomColumnExpression` - Get the encrypted custom column expression
-* `CatalogGetCustomColumns` - Get custom column list
-* `CatalogGetProductByProductID` - Get product by ProductId
-* `CatalogGetProductBySku` - Get product by Sku
-* `CatalogGetProducts` - Get product list
-* `CatalogGetRandomProducts` - Get random product list
-* `CatalogSaveCustomColumn` - Create or replace a custom column
-* `ImportationGetManualUpdateLastInputConfig` - Get the last input configuration
-
-### CatalogsGlobal
-
-* `CatalogIndex` - Get the index of the catalog API
-* `CatalogGetBeezUPColumns` - Get the BeezUP columns
-
-### CatalogsImportationCatalogInfo
-
-* `ImportationConfigureCatalogColumn` - Configure catalog column
-* `ImportationDeleteCustomColumn` - Delete Custom Column
-* `ImportationGetCustomColumnExpression` - Get the encrypted custom column expression in this importation
-* `ImportationGetCustomColumns` - Get custom columns currently place in this importation
-* `ImportationGetDetectedCatalogColumns` - Get detected catalog columns during this importation.
-* `ImportationGetProductSample` - Get the product sample related to this importation with all columns (catalog and custom)
-* `ImportationGetProductSampleCustomColumnValue` - Get product sample custom column value related to this importation.
-* `ImportationIgnoreColumn` - Ignore Column
-* `ImportationMapCatalogColumn` - Map catalog column to a BeezUP column
-* `ImportationMapCustomColumn` - Map custom column to a BeezUP column
-* `ImportationReattendColumn` - Reattend Column
-* `ImportationSaveCustomColumn` - Create or replace a custom column
-* `ImportationUnmapCatalogColumn` - Unmap catalog column
-* `ImportationUnmapCustomColumn` - Unmap custom column
+### [AnalyticsGlobal](docs/analyticsglobal/README.md)
+
+* [AnalyticsIndex](docs/analyticsglobal/README.md#analyticsindex) - Get the Analytics API operation index
+* [AnalyticsStoreIndex](docs/analyticsglobal/README.md#analyticsstoreindex) - Get the Analytics API operation index for one store
+
+### [AnalyticsOptimisations](docs/analyticsoptimisations/README.md)
+
+* [CopyOptimisation](docs/analyticsoptimisations/README.md#copyoptimisation) - Copy product optimisations between 2 channels
+* [Optimise](docs/analyticsoptimisations/README.md#optimise) - Optimise products by page
+* [OptimiseAll](docs/analyticsoptimisations/README.md#optimiseall) - Optimise all products
+* [OptimiseByCategory](docs/analyticsoptimisations/README.md#optimisebycategory) - Optimise products by category
+* [OptimiseByChannel](docs/analyticsoptimisations/README.md#optimisebychannel) - Optimise products by channel
+* [OptimiseByProduct](docs/analyticsoptimisations/README.md#optimisebyproduct) - Optimise product
+
+### [AnalyticsReports](docs/analyticsreports/README.md)
+
+* [DeleteReportFilter](docs/analyticsreports/README.md#deletereportfilter) - Delete the report filter
+* [GetReportFilter](docs/analyticsreports/README.md#getreportfilter) - Get the report filter description
+* [GetReportFilters](docs/analyticsreports/README.md#getreportfilters) - Get report filter list for the given store
+* [SaveReportFilter](docs/analyticsreports/README.md#savereportfilter) - Save the report filter
+
+### [AnalyticsRules](docs/analyticsrules/README.md)
+
+* [CreateRule](docs/analyticsrules/README.md#createrule) - Rule creation
+* [DeleteRule](docs/analyticsrules/README.md#deleterule) - Delete Rule
+* [DisableRule](docs/analyticsrules/README.md#disablerule) - Disable rule
+* [EnableRule](docs/analyticsrules/README.md#enablerule) - Enable rule
+* [GetRule](docs/analyticsrules/README.md#getrule) - Gets the rule
+* [GetRules](docs/analyticsrules/README.md#getrules) - Gets the list of rules for a given store
+* [GetRulesExecutions](docs/analyticsrules/README.md#getrulesexecutions) - Get the rules execution history
+* [MoveDownRule](docs/analyticsrules/README.md#movedownrule) - Move the rule down
+* [MoveUpRule](docs/analyticsrules/README.md#moveuprule) - Move the rule up
+* [RunRule](docs/analyticsrules/README.md#runrule) - Run rule
+* [RunRules](docs/analyticsrules/README.md#runrules) - Run all rules for this store
+* [UpdateRule](docs/analyticsrules/README.md#updaterule) - Update Rule
+
+### [AnalyticsStatistics](docs/analyticsstatistics/README.md)
+
+* [GetStoreReportByCategory](docs/analyticsstatistics/README.md#getstorereportbycategory) - Get the report by category
+* [GetStoreReportByChannel](docs/analyticsstatistics/README.md#getstorereportbychannel) - Get the report by channel
+* [GetStoreReportByDay](docs/analyticsstatistics/README.md#getstorereportbyday) - Get the report by day for a StoreId
+* [GetStoreReportByDayPerStore](docs/analyticsstatistics/README.md#getstorereportbydayperstore) - Get the report by day for a StoreId
+* [GetStoreReportByProduct](docs/analyticsstatistics/README.md#getstorereportbyproduct) - Get the report by product
+
+### [AnalyticsTracking](docs/analyticstracking/README.md)
+
+* [GetStoreTrackedClicks](docs/analyticstracking/README.md#getstoretrackedclicks) - Get the latest tracked clicks
+* [GetStoreTrackedExternalOrders](docs/analyticstracking/README.md#getstoretrackedexternalorders) - Get the latest tracked external orders
+* [GetStoreTrackedOrders](docs/analyticstracking/README.md#getstoretrackedorders) - Get the latest tracked orders
+* [GetStoreTrackingStatus](docs/analyticstracking/README.md#getstoretrackingstatus) - Get the synchronization status of clicks and orders of a store
+* [GetTrackingStatus](docs/analyticstracking/README.md#gettrackingstatus) - Get the global synchronization status of clicks and orders
+
+### [CatalogsAuto](docs/catalogsauto/README.md)
+
+* [AutoConfigureAutoImportInterval](docs/catalogsauto/README.md#autoconfigureautoimportinterval) - Configure Auto Import Interval
+* [AutoDeleteAutoImport](docs/catalogsauto/README.md#autodeleteautoimport) - Delete Auto Import
+* [AutoGetAutoImportConfiguration](docs/catalogsauto/README.md#autogetautoimportconfiguration) - Get the auto import configuration
+* [AutoPauseAutoImport](docs/catalogsauto/README.md#autopauseautoimport) - Pause Auto Import
+* [AutoResumeAutoImport](docs/catalogsauto/README.md#autoresumeautoimport) - Resume Auto Import
+* [AutoScheduleAutoImport](docs/catalogsauto/README.md#autoscheduleautoimport) - Configure Auto Import Schedules
+* [AutoStartAutoImport](docs/catalogsauto/README.md#autostartautoimport) - Start Auto Import Manually
+* [ImportationActivateAutoImport](docs/catalogsauto/README.md#importationactivateautoimport) - Activate the auto importation of the last successful manual catalog importation.
+
+### [CatalogsCatalog](docs/catalogscatalog/README.md)
+
+* [CatalogStoreIndex](docs/catalogscatalog/README.md#catalogstoreindex) - Get the index of the catalog API for this store
+* [CatalogChangeCatalogColumnUserName](docs/catalogscatalog/README.md#catalogchangecatalogcolumnusername) - Change Catalog Column User Name
+* [CatalogChangeCustomColumnExpression](docs/catalogscatalog/README.md#catalogchangecustomcolumnexpression) - Change custom column expression
+* [CatalogChangeCustomColumnUserName](docs/catalogscatalog/README.md#catalogchangecustomcolumnusername) - Change Custom Column User Name
+* [CatalogComputeExpression](docs/catalogscatalog/README.md#catalogcomputeexpression) - Compute the expression for this catalog.
+* [CatalogDeleteCustomColumn](docs/catalogscatalog/README.md#catalogdeletecustomcolumn) - Delete custom column
+* [CatalogGetCatalogColumns](docs/catalogscatalog/README.md#cataloggetcatalogcolumns) - Get catalog column list
+* [CatalogGetCategories](docs/catalogscatalog/README.md#cataloggetcategories) - Get category list
+* [CatalogGetCustomColumnExpression](docs/catalogscatalog/README.md#cataloggetcustomcolumnexpression) - Get the encrypted custom column expression
+* [CatalogGetCustomColumns](docs/catalogscatalog/README.md#cataloggetcustomcolumns) - Get custom column list
+* [CatalogGetProductByProductID](docs/catalogscatalog/README.md#cataloggetproductbyproductid) - Get product by ProductId
+* [CatalogGetProductBySku](docs/catalogscatalog/README.md#cataloggetproductbysku) - Get product by Sku
+* [CatalogGetProducts](docs/catalogscatalog/README.md#cataloggetproducts) - Get product list
+* [CatalogGetRandomProducts](docs/catalogscatalog/README.md#cataloggetrandomproducts) - Get random product list
+* [CatalogSaveCustomColumn](docs/catalogscatalog/README.md#catalogsavecustomcolumn) - Create or replace a custom column
+* [ImportationGetManualUpdateLastInputConfig](docs/catalogscatalog/README.md#importationgetmanualupdatelastinputconfig) - Get the last input configuration
+
+### [CatalogsGlobal](docs/catalogsglobal/README.md)
+
+* [CatalogIndex](docs/catalogsglobal/README.md#catalogindex) - Get the index of the catalog API
+* [CatalogGetBeezUPColumns](docs/catalogsglobal/README.md#cataloggetbeezupcolumns) - Get the BeezUP columns
+
+### [CatalogsImportationCatalogInfo](docs/catalogsimportationcataloginfo/README.md)
+
+* [ImportationConfigureCatalogColumn](docs/catalogsimportationcataloginfo/README.md#importationconfigurecatalogcolumn) - Configure catalog column
+* [ImportationDeleteCustomColumn](docs/catalogsimportationcataloginfo/README.md#importationdeletecustomcolumn) - Delete Custom Column
+* [ImportationGetCustomColumnExpression](docs/catalogsimportationcataloginfo/README.md#importationgetcustomcolumnexpression) - Get the encrypted custom column expression in this importation
+* [ImportationGetCustomColumns](docs/catalogsimportationcataloginfo/README.md#importationgetcustomcolumns) - Get custom columns currently place in this importation
+* [ImportationGetDetectedCatalogColumns](docs/catalogsimportationcataloginfo/README.md#importationgetdetectedcatalogcolumns) - Get detected catalog columns during this importation.
+* [ImportationGetProductSample](docs/catalogsimportationcataloginfo/README.md#importationgetproductsample) - Get the product sample related to this importation with all columns (catalog and custom)
+* [ImportationGetProductSampleCustomColumnValue](docs/catalogsimportationcataloginfo/README.md#importationgetproductsamplecustomcolumnvalue) - Get product sample custom column value related to this importation.
+* [ImportationIgnoreColumn](docs/catalogsimportationcataloginfo/README.md#importationignorecolumn) - Ignore Column
+* [ImportationMapCatalogColumn](docs/catalogsimportationcataloginfo/README.md#importationmapcatalogcolumn) - Map catalog column to a BeezUP column
+* [ImportationMapCustomColumn](docs/catalogsimportationcataloginfo/README.md#importationmapcustomcolumn) - Map custom column to a BeezUP column
+* [ImportationReattendColumn](docs/catalogsimportationcataloginfo/README.md#importationreattendcolumn) - Reattend Column
+* [ImportationSaveCustomColumn](docs/catalogsimportationcataloginfo/README.md#importationsavecustomcolumn) - Create or replace a custom column
+* [ImportationUnmapCatalogColumn](docs/catalogsimportationcataloginfo/README.md#importationunmapcatalogcolumn) - Unmap catalog column
+* [ImportationUnmapCustomColumn](docs/catalogsimportationcataloginfo/README.md#importationunmapcustomcolumn) - Unmap custom column
 
-### CatalogsImportationProcess
+### [CatalogsImportationProcess](docs/catalogsimportationprocess/README.md)
 
-* `ImportationCancel` - Cancel importation
-* `ImportationCommit` - Commit Importation
-* `ImportationCommitColumns` - Commit columns
-* `ImportationConfigureRemainingCatalogColumns` - Configure remaining catalog columns
-* `ImportationGetImportationMonitoring` - Get the importation status
-* `ImportationGetProductsReport` - Importation Get Products Report
-* `ImportationGetReport` - Importation Get Report
-* `ImportationGetReportings` - Get the latest catalog importation reporting
-* `ImportationGetReportingsAllStores` - Get the latest catalog importation reporting for all your stores
-* `ImportationStartManualUpdate` - Start Manual Import
-* `ImportationTechnicalProgression` - Get technical progression
+* [ImportationCancel](docs/catalogsimportationprocess/README.md#importationcancel) - Cancel importation
+* [ImportationCommit](docs/catalogsimportationprocess/README.md#importationcommit) - Commit Importation
+* [ImportationCommitColumns](docs/catalogsimportationprocess/README.md#importationcommitcolumns) - Commit columns
+* [ImportationConfigureRemainingCatalogColumns](docs/catalogsimportationprocess/README.md#importationconfigureremainingcatalogcolumns) - Configure remaining catalog columns
+* [ImportationGetImportationMonitoring](docs/catalogsimportationprocess/README.md#importationgetimportationmonitoring) - Get the importation status
+* [ImportationGetProductsReport](docs/catalogsimportationprocess/README.md#importationgetproductsreport) - Importation Get Products Report
+* [ImportationGetReport](docs/catalogsimportationprocess/README.md#importationgetreport) - Importation Get Report
+* [ImportationGetReportings](docs/catalogsimportationprocess/README.md#importationgetreportings) - Get the latest catalog importation reporting
+* [ImportationGetReportingsAllStores](docs/catalogsimportationprocess/README.md#importationgetreportingsallstores) - Get the latest catalog importation reporting for all your stores
+* [ImportationStartManualUpdate](docs/catalogsimportationprocess/README.md#importationstartmanualupdate) - Start Manual Import
+* [ImportationTechnicalProgression](docs/catalogsimportationprocess/README.md#importationtechnicalprogression) - Get technical progression
 
-### ChannelCatalogsCategories
+### [ChannelCatalogsCategories](docs/channelcatalogscategories/README.md)
 
-* `ConfigureChannelCatalogCategory` - Configure channel catalog category
-* `DisableChannelCatalogCategoryMapping` - Disable a channel catalog category mapping
-* `GetChannelCatalogCategories` - Get channel catalog categories
-* `ReenableChannelCatalogCategoryMapping` - Reenable a channel catalog category mapping
+* [ConfigureChannelCatalogCategory](docs/channelcatalogscategories/README.md#configurechannelcatalogcategory) - Configure channel catalog category
+* [DisableChannelCatalogCategoryMapping](docs/channelcatalogscategories/README.md#disablechannelcatalogcategorymapping) - Disable a channel catalog category mapping
+* [GetChannelCatalogCategories](docs/channelcatalogscategories/README.md#getchannelcatalogcategories) - Get channel catalog categories
+* [ReenableChannelCatalogCategoryMapping](docs/channelcatalogscategories/README.md#reenablechannelcatalogcategorymapping) - Reenable a channel catalog category mapping
 
-### ChannelCatalogsColumnMappings
+### [ChannelCatalogsColumnMappings](docs/channelcatalogscolumnmappings/README.md)
 
-* `ConfigureChannelCatalogColumnMappings` - Configure channel catalog column mappings
+* [ConfigureChannelCatalogColumnMappings](docs/channelcatalogscolumnmappings/README.md#configurechannelcatalogcolumnmappings) - Configure channel catalog column mappings
 
-### ChannelCatalogsExclusionFilters
+### [ChannelCatalogsExclusionFilters](docs/channelcatalogsexclusionfilters/README.md)
 
-* `ConfigureChannelCatalogExclusionFilters` - Configure channel catalog exclusion filters
-* `GetChannelCatalogExclusionFilters` - Get channel catalog exclusion filters
+* [ConfigureChannelCatalogExclusionFilters](docs/channelcatalogsexclusionfilters/README.md#configurechannelcatalogexclusionfilters) - Configure channel catalog exclusion filters
+* [GetChannelCatalogExclusionFilters](docs/channelcatalogsexclusionfilters/README.md#getchannelcatalogexclusionfilters) - Get channel catalog exclusion filters
 
-### ChannelCatalogsExportations
+### [ChannelCatalogsExportations](docs/channelcatalogsexportations/README.md)
 
-* `ClearChannelCatalogExportationCache` - Clear the exportation cache
-* `GetChannelCatalogExportationCacheInfo` - Get the exportation cache information
-* `GetChannelCatalogExportationHistory` - Get the exportation history
+* [ClearChannelCatalogExportationCache](docs/channelcatalogsexportations/README.md#clearchannelcatalogexportationcache) - Clear the exportation cache
+* [GetChannelCatalogExportationCacheInfo](docs/channelcatalogsexportations/README.md#getchannelcatalogexportationcacheinfo) - Get the exportation cache information
+* [GetChannelCatalogExportationHistory](docs/channelcatalogsexportations/README.md#getchannelcatalogexportationhistory) - Get the exportation history
 
-### ChannelCatalogsGlobal
+### [ChannelCatalogsGlobal](docs/channelcatalogsglobal/README.md)
 
-* `AddChannelCatalog` - Add a new channel catalog
-* `DeleteChannelCatalog` - Delete the channel catalog
-* `GetChannelCatalog` - Get the channel catalog information
-* `GetChannelCatalogFilterOperators` - Get channel catalog filter operators
-* `GetChannelCatalogs` - List all your current channel catalogs
+* [AddChannelCatalog](docs/channelcatalogsglobal/README.md#addchannelcatalog) - Add a new channel catalog
+* [DeleteChannelCatalog](docs/channelcatalogsglobal/README.md#deletechannelcatalog) - Delete the channel catalog
+* [GetChannelCatalog](docs/channelcatalogsglobal/README.md#getchannelcatalog) - Get the channel catalog information
+* [GetChannelCatalogFilterOperators](docs/channelcatalogsglobal/README.md#getchannelcatalogfilteroperators) - Get channel catalog filter operators
+* [GetChannelCatalogs](docs/channelcatalogsglobal/README.md#getchannelcatalogs) - List all your current channel catalogs
 
-### ChannelCatalogsLegacyTrackingGlobal
+### [ChannelCatalogsLegacyTrackingGlobal](docs/channelcatalogslegacytrackingglobal/README.md)
 
-* `GetLegacyTrackingChannelCatalog` - Get the channel catalog configured to use legacy tracking format information
-* `GetLegacyTrackingChannelCatalogs` - List all your current channel catalogs configured to use legacy tracking format
-* `MigrateLegacyTrackingChannelCatalog` - Migrate a channel catalog to current tracking format
+* [GetLegacyTrackingChannelCatalog](docs/channelcatalogslegacytrackingglobal/README.md#getlegacytrackingchannelcatalog) - Get the channel catalog configured to use legacy tracking format information
+* [GetLegacyTrackingChannelCatalogs](docs/channelcatalogslegacytrackingglobal/README.md#getlegacytrackingchannelcatalogs) - List all your current channel catalogs configured to use legacy tracking format
+* [MigrateLegacyTrackingChannelCatalog](docs/channelcatalogslegacytrackingglobal/README.md#migratelegacytrackingchannelcatalog) - Migrate a channel catalog to current tracking format
 
-### ChannelCatalogsProducts
+### [ChannelCatalogsProducts](docs/channelcatalogsproducts/README.md)
 
-* `ExportChannelCatalogProductInfoList` - Export channel catalog product information list
-* `GetChannelCatalogProductByChannelCatalog` - Get channel catalog products related to these channel catalogs
-* `GetChannelCatalogProductInfo` - Get channel catalog product information
-* `GetChannelCatalogProductInfoList` - Get channel catalog product information list
-* `GetChannelCatalogProductsCounters` - Get channel catalog products' counters
+* [ExportChannelCatalogProductInfoList](docs/channelcatalogsproducts/README.md#exportchannelcatalogproductinfolist) - Export channel catalog product information list
+* [GetChannelCatalogProductByChannelCatalog](docs/channelcatalogsproducts/README.md#getchannelcatalogproductbychannelcatalog) - Get channel catalog products related to these channel catalogs
+* [GetChannelCatalogProductInfo](docs/channelcatalogsproducts/README.md#getchannelcatalogproductinfo) - Get channel catalog product information
+* [GetChannelCatalogProductInfoList](docs/channelcatalogsproducts/README.md#getchannelcatalogproductinfolist) - Get channel catalog product information list
+* [GetChannelCatalogProductsCounters](docs/channelcatalogsproducts/README.md#getchannelcatalogproductscounters) - Get channel catalog products' counters
 
-### ChannelCatalogsProductsOptimisation
+### [ChannelCatalogsProductsOptimisation](docs/channelcatalogsproductsoptimisation/README.md)
 
-* `DisableChannelCatalogProduct` - Disable channel catalog product
-* `ReenableChannelCatalogProduct` - Reenable channel catalog product
+* [DisableChannelCatalogProduct](docs/channelcatalogsproductsoptimisation/README.md#disablechannelcatalogproduct) - Disable channel catalog product
+* [ReenableChannelCatalogProduct](docs/channelcatalogsproductsoptimisation/README.md#reenablechannelcatalogproduct) - Reenable channel catalog product
 
-### ChannelCatalogsProductsOverrides
+### [ChannelCatalogsProductsOverrides](docs/channelcatalogsproductsoverrides/README.md)
 
-* `ConfigureChannelCatalogProductValueOverrideCopy` - Copy channel catalog product value override
-* `DeleteChannelCatalogProductValueOverride` - Delete a specific channel catalog product value override
-* `GetChannelCatalogProductValueOverrideCopy` - Get channel catalog product value override compatibilities status
-* `OverrideChannelCatalogProductValues` - Override channel catalog product values
+* [ConfigureChannelCatalogProductValueOverrideCopy](docs/channelcatalogsproductsoverrides/README.md#configurechannelcatalogproductvalueoverridecopy) - Copy channel catalog product value override
+* [DeleteChannelCatalogProductValueOverride](docs/channelcatalogsproductsoverrides/README.md#deletechannelcatalogproductvalueoverride) - Delete a specific channel catalog product value override
+* [GetChannelCatalogProductValueOverrideCopy](docs/channelcatalogsproductsoverrides/README.md#getchannelcatalogproductvalueoverridecopy) - Get channel catalog product value override compatibilities status
+* [OverrideChannelCatalogProductValues](docs/channelcatalogsproductsoverrides/README.md#overridechannelcatalogproductvalues) - Override channel catalog product values
 
-### ChannelCatalogsSettings
+### [ChannelCatalogsSettings](docs/channelcatalogssettings/README.md)
 
-* `ConfigureChannelCatalogCostSettings` - Configure channel catalog cost settings
-* `ConfigureChannelCatalogGeneralSettings` - Configure channel catalog general settings
-* `DisableChannelCatalog` - Disable a channel catalog
-* `EnableChannelCatalog` - Enable a channel catalog
+* [ConfigureChannelCatalogCostSettings](docs/channelcatalogssettings/README.md#configurechannelcatalogcostsettings) - Configure channel catalog cost settings
+* [ConfigureChannelCatalogGeneralSettings](docs/channelcatalogssettings/README.md#configurechannelcataloggeneralsettings) - Configure channel catalog general settings
+* [DisableChannelCatalog](docs/channelcatalogssettings/README.md#disablechannelcatalog) - Disable a channel catalog
+* [EnableChannelCatalog](docs/channelcatalogssettings/README.md#enablechannelcatalog) - Enable a channel catalog
 
-### ChannelsChannelsGlobal
+### [ChannelsChannelsGlobal](docs/channelschannelsglobal/README.md)
 
-* `GetAvailableChannels` - List all available channel for this store
-* `GetChannelCategories` - Get channel categories
-* `GetChannelColumns` - Get channel columns
-* `GetChannelInfo` - Get channel information
+* [GetAvailableChannels](docs/channelschannelsglobal/README.md#getavailablechannels) - List all available channel for this store
+* [GetChannelCategories](docs/channelschannelsglobal/README.md#getchannelcategories) - Get channel categories
+* [GetChannelColumns](docs/channelschannelsglobal/README.md#getchannelcolumns) - Get channel columns
+* [GetChannelInfo](docs/channelschannelsglobal/README.md#getchannelinfo) - Get channel information
 
-### CustomerAccount
+### [CustomerAccount](docs/customeraccount/README.md)
 
-* `ActivateUserAccount` - Activate the user account
-* `ChangeEmail` - Change user email
-* `ChangePassword` - Change user password
-* `GetCreditCardInfo` - Get credit card information
-* `GetProfilePictureInfo` - Get profile picture information
-* `GetUserAccountInfo` - Get user account information
-* `ResendEmailActivation` - Resend email activation
-* `SaveCompanyInfo` - Change company information
-* `SaveCreditCardInfo` - Save user credit card info
-* `SavePersonalInfo` - Save user personal information
-* `SaveProfilePictureInfo` - Change user picture information
+* [ActivateUserAccount](docs/customeraccount/README.md#activateuseraccount) - Activate the user account
+* [ChangeEmail](docs/customeraccount/README.md#changeemail) - Change user email
+* [ChangePassword](docs/customeraccount/README.md#changepassword) - Change user password
+* [GetCreditCardInfo](docs/customeraccount/README.md#getcreditcardinfo) - Get credit card information
+* [GetProfilePictureInfo](docs/customeraccount/README.md#getprofilepictureinfo) - Get profile picture information
+* [GetUserAccountInfo](docs/customeraccount/README.md#getuseraccountinfo) - Get user account information
+* [ResendEmailActivation](docs/customeraccount/README.md#resendemailactivation) - Resend email activation
+* [SaveCompanyInfo](docs/customeraccount/README.md#savecompanyinfo) - Change company information
+* [SaveCreditCardInfo](docs/customeraccount/README.md#savecreditcardinfo) - Save user credit card info
+* [SavePersonalInfo](docs/customeraccount/README.md#savepersonalinfo) - Save user personal information
+* [SaveProfilePictureInfo](docs/customeraccount/README.md#saveprofilepictureinfo) - Change user picture information
 
-### CustomerAlerts
+### [CustomerAlerts](docs/customeralerts/README.md)
 
-* `GetStoreAlerts` - Get store's alerts
-* `SaveStoreAlerts` - Save store alerts
+* [GetStoreAlerts](docs/customeralerts/README.md#getstorealerts) - Get store's alerts
+* [SaveStoreAlerts](docs/customeralerts/README.md#savestorealerts) - Save store alerts
 
-### CustomerContracts
+### [CustomerContracts](docs/customercontracts/README.md)
 
-* `CreateContract` - Create a new contract
-* `DeleteNextContract` - Delete your next contract
-* `GetBillingPeriods` - Get billing periods conditions
-* `GetContracts` - Get contract list
-* `GetOffer` - Get offer pricing
-* `GetStandardOffers` - Get all standard offers
-* `ReactivateCurrentContract` - Reactivate your terminated contract.
-* `TerminateCurrentContract` - Schedule termination of your current contract at the end of the commitment.
+* [CreateContract](docs/customercontracts/README.md#createcontract) - Create a new contract
+* [DeleteNextContract](docs/customercontracts/README.md#deletenextcontract) - Delete your next contract
+* [GetBillingPeriods](docs/customercontracts/README.md#getbillingperiods) - Get billing periods conditions
+* [GetContracts](docs/customercontracts/README.md#getcontracts) - Get contract list
+* [GetOffer](docs/customercontracts/README.md#getoffer) - Get offer pricing
+* [GetStandardOffers](docs/customercontracts/README.md#getstandardoffers) - Get all standard offers
+* [ReactivateCurrentContract](docs/customercontracts/README.md#reactivatecurrentcontract) - Reactivate your terminated contract.
+* [TerminateCurrentContract](docs/customercontracts/README.md#terminatecurrentcontract) - Schedule termination of your current contract at the end of the commitment.
 
-### CustomerFriends
+### [CustomerFriends](docs/customerfriends/README.md)
 
-* `GetFriendInfo` - Get friend information
+* [GetFriendInfo](docs/customerfriends/README.md#getfriendinfo) - Get friend information
 
-### CustomerGlobal
+### [CustomerGlobal](docs/customerglobal/README.md)
 
-* `GetCustomerIndex` - The index of all operations and LOV
+* [GetCustomerIndex](docs/customerglobal/README.md#getcustomerindex) - The index of all operations and LOV
 
-### CustomerInvoices
+### [CustomerInvoices](docs/customerinvoices/README.md)
 
-* `GetInvoices` - Get all your invoices
+* [GetInvoices](docs/customerinvoices/README.md#getinvoices) - Get all your invoices
 
-### CustomerRights
+### [CustomerRights](docs/customerrights/README.md)
 
-* `GetRights` - Get store's rights
+* [GetRights](docs/customerrights/README.md#getrights) - Get store's rights
 
-### CustomerSecurity
+### [CustomerSecurity](docs/customersecurity/README.md)
 
-* `Logout` - Log out the current user from go2
-* `ZendeskToken` - Zendesk token
+* [Logout](docs/customersecurity/README.md#logout) - Log out the current user from go2
+* [ZendeskToken](docs/customersecurity/README.md#zendesktoken) - Zendesk token
 
-### CustomerShares
+### [CustomerShares](docs/customershares/README.md)
 
-* `DeleteStoreShare` - Delete a share of a store to another user
-* `GetStoreShares` - Get shares related to this store
-* `ShareStore` - Share a store to another user
+* [DeleteStoreShare](docs/customershares/README.md#deletestoreshare) - Delete a share of a store to another user
+* [GetStoreShares](docs/customershares/README.md#getstoreshares) - Get shares related to this store
+* [ShareStore](docs/customershares/README.md#sharestore) - Share a store to another user
 
-### CustomerStores
+### [CustomerStores](docs/customerstores/README.md)
 
-* `CreateStore` - Create a new store
-* `DeleteStore` - Delete a store
-* `GetStore` - Get store's information
-* `GetStores` - Get store list
-* `UpdateStore` - Update some store's information.
+* [CreateStore](docs/customerstores/README.md#createstore) - Create a new store
+* [DeleteStore](docs/customerstores/README.md#deletestore) - Delete a store
+* [GetStore](docs/customerstores/README.md#getstore) - Get store's information
+* [GetStores](docs/customerstores/README.md#getstores) - Get store list
+* [UpdateStore](docs/customerstores/README.md#updatestore) - Update some store's information.
 
-### MarketplacesChannelCatalogsGlobal
+### [MarketplacesChannelCatalogsGlobal](docs/marketplaceschannelcatalogsglobal/README.md)
 
-* `GetMarketplaceChannelCatalogs` - Get your marketplace channel catalog list
+* [GetMarketplaceChannelCatalogs](docs/marketplaceschannelcatalogsglobal/README.md#getmarketplacechannelcatalogs) - Get your marketplace channel catalog list
 
-### MarketplacesChannelCatalogsPublications
+### [MarketplacesChannelCatalogsPublications](docs/marketplaceschannelcatalogspublications/README.md)
 
-* `GetPublications` - Fetch the publication history for an account, sorted by descending start date
-* `PublishCatalogToMarketplace` - [PREVIEW] Launch a publication of the catalog to the marketplace
+* [GetPublications](docs/marketplaceschannelcatalogspublications/README.md#getpublications) - Fetch the publication history for an account, sorted by descending start date
+* [PublishCatalogToMarketplace](docs/marketplaceschannelcatalogspublications/README.md#publishcatalogtomarketplace) - [PREVIEW] Launch a publication of the catalog to the marketplace
 
-### MarketplacesChannelCatalogsSettings
+### [MarketplacesChannelCatalogsSettings](docs/marketplaceschannelcatalogssettings/README.md)
 
-* `GetChannelCatalogMarketplaceProperties` - Get the marketplace properties for a channel catalog
-* `GetChannelCatalogMarketplaceSettings` - Get the marketplace settings for a channel catalog
-* `SetChannelCatalogMarketplaceSettings` - Save new marketplace settings for a channel catalog
+* [GetChannelCatalogMarketplaceProperties](docs/marketplaceschannelcatalogssettings/README.md#getchannelcatalogmarketplaceproperties) - Get the marketplace properties for a channel catalog
+* [GetChannelCatalogMarketplaceSettings](docs/marketplaceschannelcatalogssettings/README.md#getchannelcatalogmarketplacesettings) - Get the marketplace settings for a channel catalog
+* [SetChannelCatalogMarketplaceSettings](docs/marketplaceschannelcatalogssettings/README.md#setchannelcatalogmarketplacesettings) - Save new marketplace settings for a channel catalog
 
-### MarketplacesOrdersAutoTransitions
+### [MarketplacesOrdersAutoTransitions](docs/marketplacesordersautotransitions/README.md)
 
-* `ConfigureAutomaticTransitions` - Configure new or existing automatic Order status transition
-* `GetAutomaticTransitions` - Get list of configured automatic Order status transitions
+* [ConfigureAutomaticTransitions](docs/marketplacesordersautotransitions/README.md#configureautomatictransitions) - Configure new or existing automatic Order status transition
+* [GetAutomaticTransitions](docs/marketplacesordersautotransitions/README.md#getautomatictransitions) - Get list of configured automatic Order status transitions
 
-### MarketplacesOrdersBatches
+### [MarketplacesOrdersBatches](docs/marketplacesordersbatches/README.md)
 
-* `ChangeOrderList` - [DEPRECATED] Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call)
-* `ClearMerchantOrderInfoList` - [DEPRECATED] Send a batch of operations to clear an Order's merchant information (max 100 items per call)
-* `SetMerchantOrderInfoList` - [DEPRECATED] Send a batch of operations to set an Order's merchant information  (max 100 items per call)
+* [~~ChangeOrderList~~](docs/marketplacesordersbatches/README.md#changeorderlist) - [DEPRECATED] Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call) :warning: **Deprecated**
+* [~~ClearMerchantOrderInfoList~~](docs/marketplacesordersbatches/README.md#clearmerchantorderinfolist) - [DEPRECATED] Send a batch of operations to clear an Order's merchant information (max 100 items per call) :warning: **Deprecated**
+* [~~SetMerchantOrderInfoList~~](docs/marketplacesordersbatches/README.md#setmerchantorderinfolist) - [DEPRECATED] Send a batch of operations to set an Order's merchant information  (max 100 items per call) :warning: **Deprecated**
 
-### MarketplacesOrdersExports
+### [MarketplacesOrdersExports](docs/marketplacesordersexports/README.md)
 
-* `ExportOrders` - Request a new Order report exportation to be generated
-* `GetOrderExportations` - Get a paginated list of Order report exportations
+* [ExportOrders](docs/marketplacesordersexports/README.md#exportorders) - Request a new Order report exportation to be generated
+* [GetOrderExportations](docs/marketplacesordersexports/README.md#getorderexportations) - Get a paginated list of Order report exportations
 
-### MarketplacesOrdersGlobal
+### [MarketplacesOrdersGlobal](docs/marketplacesordersglobal/README.md)
 
-* `GetMarketplaceAccountsSynchronization` - [DEPRECATED] Get current synchronization status between your marketplaces and BeezUP accounts
-* `GetOrderIndex` - [DEPRECATED] Get all actions you can do on the order API
-* `HarvestAll` - [DEPRECATED] Send harvest request to all your marketplaces
+* [~~GetMarketplaceAccountsSynchronization~~](docs/marketplacesordersglobal/README.md#getmarketplaceaccountssynchronization) - [DEPRECATED] Get current synchronization status between your marketplaces and BeezUP accounts :warning: **Deprecated**
+* [~~GetOrderIndex~~](docs/marketplacesordersglobal/README.md#getorderindex) - [DEPRECATED] Get all actions you can do on the order API :warning: **Deprecated**
+* [~~HarvestAll~~](docs/marketplacesordersglobal/README.md#harvestall) - [DEPRECATED] Send harvest request to all your marketplaces :warning: **Deprecated**
 
-### MarketplacesOrdersList
+### [MarketplacesOrdersList](docs/marketplacesorderslist/README.md)
 
-* `GetOrderListFull` - [DEPRECATED] Get a paginated list of all Orders with all Order and Order Item(s) properties
-* `GetOrderListLight` - [DEPRECATED] Get a paginated list of all Orders without details
+* [~~GetOrderListFull~~](docs/marketplacesorderslist/README.md#getorderlistfull) - [DEPRECATED] Get a paginated list of all Orders with all Order and Order Item(s) properties :warning: **Deprecated**
+* [~~GetOrderListLight~~](docs/marketplacesorderslist/README.md#getorderlistlight) - [DEPRECATED] Get a paginated list of all Orders without details :warning: **Deprecated**
 
-### MarketplacesOrdersOrder
+### [MarketplacesOrdersOrder](docs/marketplacesordersorder/README.md)
 
-* `ChangeOrder` - [DEPRECATED] Change your marketplace Order Information (accept, ship, etc.)
-* `ClearMerchantOrderInfo` - [DEPRECATED] Clear an Order's merchant information
-* `GetOrder` - [DEPRECATED] DEPRECATED - Get full Order and Order Item(s) properties
-* `GetOrderHistory` - [DEPRECATED] Get an Order's harvest and change history
-* `HarvestOrder` - [DEPRECATED] Send harvest request for a single Order
-* `HeadOrder` - [DEPRECATED] DEPRECATED - Get the meta information about the order (ETag, Last-Modified)
-* `SetMerchantOrderInfo` - [DEPRECATED] Set an Order's merchant information
+* [~~ChangeOrder~~](docs/marketplacesordersorder/README.md#changeorder) - [DEPRECATED] Change your marketplace Order Information (accept, ship, etc.) :warning: **Deprecated**
+* [~~ClearMerchantOrderInfo~~](docs/marketplacesordersorder/README.md#clearmerchantorderinfo) - [DEPRECATED] Clear an Order's merchant information :warning: **Deprecated**
+* [~~GetOrder~~](docs/marketplacesordersorder/README.md#getorder) - [DEPRECATED] DEPRECATED - Get full Order and Order Item(s) properties :warning: **Deprecated**
+* [~~GetOrderHistory~~](docs/marketplacesordersorder/README.md#getorderhistory) - [DEPRECATED] Get an Order's harvest and change history :warning: **Deprecated**
+* [~~HarvestOrder~~](docs/marketplacesordersorder/README.md#harvestorder) - [DEPRECATED] Send harvest request for a single Order :warning: **Deprecated**
+* [~~HeadOrder~~](docs/marketplacesordersorder/README.md#headorder) - [DEPRECATED] DEPRECATED - Get the meta information about the order (ETag, Last-Modified) :warning: **Deprecated**
+* [~~SetMerchantOrderInfo~~](docs/marketplacesordersorder/README.md#setmerchantorderinfo) - [DEPRECATED] Set an Order's merchant information :warning: **Deprecated**
 
-### MarketplacesOrdersSubscriptionsSubscriptions
+### [MarketplacesOrdersSubscriptionsSubscriptions](docs/marketplacesorderssubscriptionssubscriptions/README.md)
 
-* `ActivateSubscription` - Activate a subscription to the orders
-* `CreateSubscription` - Creates a subscription to the orders
-* `DeactivateSubscription` - Deactivate a subscription to the orders
-* `DeleteSubscription` - Delete a subscription to the orders
-* `GetSubscription` - Get a subscription to the orders
-* `GetSubscriptionList` - Get the subscription list
-* `GetSubscriptionPushReporting` - Get the push reporting related to this subscription
-* `RetryPushOrders` - Force retry push orders immediatly
+* [ActivateSubscription](docs/marketplacesorderssubscriptionssubscriptions/README.md#activatesubscription) - Activate a subscription to the orders
+* [CreateSubscription](docs/marketplacesorderssubscriptionssubscriptions/README.md#createsubscription) - Creates a subscription to the orders
+* [DeactivateSubscription](docs/marketplacesorderssubscriptionssubscriptions/README.md#deactivatesubscription) - Deactivate a subscription to the orders
+* [DeleteSubscription](docs/marketplacesorderssubscriptionssubscriptions/README.md#deletesubscription) - Delete a subscription to the orders
+* [GetSubscription](docs/marketplacesorderssubscriptionssubscriptions/README.md#getsubscription) - Get a subscription to the orders
+* [GetSubscriptionList](docs/marketplacesorderssubscriptionssubscriptions/README.md#getsubscriptionlist) - Get the subscription list
+* [GetSubscriptionPushReporting](docs/marketplacesorderssubscriptionssubscriptions/README.md#getsubscriptionpushreporting) - Get the push reporting related to this subscription
+* [RetryPushOrders](docs/marketplacesorderssubscriptionssubscriptions/README.md#retrypushorders) - Force retry push orders immediatly
 
-### MarketplacesOrdersV3Batches
+### [MarketplacesOrdersV3Batches](docs/marketplacesordersv3batches/README.md)
 
-* `ChangeOrderListV2` - Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call)
-* `ChangeOrderListV3` - Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call)
-* `ClearMerchantOrderInfoListV3` - Send a batch of operations to clear an Order's merchant information (max 100 items per call)
-* `SetMerchantOrderInfoListV3` - Send a batch of operations to set an Order's merchant information  (max 100 items per call)
+* [ChangeOrderListV2](docs/marketplacesordersv3batches/README.md#changeorderlistv2) - Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call)
+* [ChangeOrderListV3](docs/marketplacesordersv3batches/README.md#changeorderlistv3) - Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call)
+* [ClearMerchantOrderInfoListV3](docs/marketplacesordersv3batches/README.md#clearmerchantorderinfolistv3) - Send a batch of operations to clear an Order's merchant information (max 100 items per call)
+* [SetMerchantOrderInfoListV3](docs/marketplacesordersv3batches/README.md#setmerchantorderinfolistv3) - Send a batch of operations to set an Order's merchant information  (max 100 items per call)
 
-### MarketplacesOrdersV3Global
+### [MarketplacesOrdersV3Global](docs/marketplacesordersv3global/README.md)
 
-* `GetMarketplaceAccountsSynchronizationV3` - Get current synchronization status between your marketplaces and BeezUP accounts
-* `GetOrderManagementReadyMarketplaceBusinessCode` - Get the list of MarketplaceBusinessCode ready for Order Management
-* `HarvestAllV3` - Send harvest request to all your marketplaces
+* [GetMarketplaceAccountsSynchronizationV3](docs/marketplacesordersv3global/README.md#getmarketplaceaccountssynchronizationv3) - Get current synchronization status between your marketplaces and BeezUP accounts
+* [GetOrderManagementReadyMarketplaceBusinessCode](docs/marketplacesordersv3global/README.md#getordermanagementreadymarketplacebusinesscode) - Get the list of MarketplaceBusinessCode ready for Order Management
+* [HarvestAllV3](docs/marketplacesordersv3global/README.md#harvestallv3) - Send harvest request to all your marketplaces
 
-### MarketplacesOrdersV3List
+### [MarketplacesOrdersV3List](docs/marketplacesordersv3list/README.md)
 
-* `GetOrderListFullV3` - Get a paginated list of all Orders with all Order and Order Item(s) properties
-* `GetOrderListLightV3` - Get a paginated list of all Orders without details
+* [GetOrderListFullV3](docs/marketplacesordersv3list/README.md#getorderlistfullv3) - Get a paginated list of all Orders with all Order and Order Item(s) properties
+* [GetOrderListLightV3](docs/marketplacesordersv3list/README.md#getorderlistlightv3) - Get a paginated list of all Orders without details
 
-### MarketplacesOrdersV3Order
+### [MarketplacesOrdersV3Order](docs/marketplacesordersv3order/README.md)
 
-* `ChangeOrderV3` - Change your marketplace Order Information (accept, ship, etc.)
-* `ClearMerchantOrderInfoV3` - Clear an Order's merchant information
-* `GetOrderChangeReportingV3` - Get the order change reporting
-* `GetOrderHistoryV3` - Get an Order's harvest and change history
-* `GetOrderV3` - Get full Order and Order Item(s) properties
-* `HarvestAccount` - Send harvest request for an Account
-* `HarvestOrderV3` - Send harvest request for a single Order
-* `HeadOrderV3` - Get the meta information about the order (ETag, Last-Modified)
-* `SetMerchantOrderInfoV3` - Set an Order's merchant information
+* [ChangeOrderV3](docs/marketplacesordersv3order/README.md#changeorderv3) - Change your marketplace Order Information (accept, ship, etc.)
+* [ClearMerchantOrderInfoV3](docs/marketplacesordersv3order/README.md#clearmerchantorderinfov3) - Clear an Order's merchant information
+* [GetOrderChangeReportingV3](docs/marketplacesordersv3order/README.md#getorderchangereportingv3) - Get the order change reporting
+* [GetOrderHistoryV3](docs/marketplacesordersv3order/README.md#getorderhistoryv3) - Get an Order's harvest and change history
+* [GetOrderV3](docs/marketplacesordersv3order/README.md#getorderv3) - Get full Order and Order Item(s) properties
+* [HarvestAccount](docs/marketplacesordersv3order/README.md#harvestaccount) - Send harvest request for an Account
+* [HarvestOrderV3](docs/marketplacesordersv3order/README.md#harvestorderv3) - Send harvest request for a single Order
+* [HeadOrderV3](docs/marketplacesordersv3order/README.md#headorderv3) - Get the meta information about the order (ETag, Last-Modified)
+* [SetMerchantOrderInfoV3](docs/marketplacesordersv3order/README.md#setmerchantorderinfov3) - Set an Order's merchant information
 
-### OMInvoiceAPIGeneration
+### [OMInvoiceAPIGeneration](docs/ominvoiceapigeneration/README.md)
 
-* `GenerateBatchOrderInvoice` - Generate an Order Invoice batch
-* `GenerateOrderInvoice` - Generate an Order Invoice
-* `GetOrderInvoicePdf` - Returns the PDF version of the invoice
-* `GetOrderInvoicePreview` - View a preview an Order Invoice
+* [GenerateBatchOrderInvoice](docs/ominvoiceapigeneration/README.md#generatebatchorderinvoice) - Generate an Order Invoice batch
+* [GenerateOrderInvoice](docs/ominvoiceapigeneration/README.md#generateorderinvoice) - Generate an Order Invoice
+* [GetOrderInvoicePdf](docs/ominvoiceapigeneration/README.md#getorderinvoicepdf) - Returns the PDF version of the invoice
+* [GetOrderInvoicePreview](docs/ominvoiceapigeneration/README.md#getorderinvoicepreview) - View a preview an Order Invoice
 
-### OMInvoiceAPISettings
+### [OMInvoiceAPISettings](docs/ominvoiceapisettings/README.md)
 
-* `GetOrderInvoiceDesignSettings` - Get Order Invoice design settings
-* `GetOrderInvoiceDesignSettingsPreview` - View a preview an Order Invoice using custom design settings
-* `GetOrderInvoiceGeneralSettings` - Get Order Invoice general settings
-* `SaveOrderInvoiceDesignSettings` - Save Order Invoice design settings
-* `SaveOrderInvoiceGeneralSettings` - Save Order Invoice general settings
+* [GetOrderInvoiceDesignSettings](docs/ominvoiceapisettings/README.md#getorderinvoicedesignsettings) - Get Order Invoice design settings
+* [GetOrderInvoiceDesignSettingsPreview](docs/ominvoiceapisettings/README.md#getorderinvoicedesignsettingspreview) - View a preview an Order Invoice using custom design settings
+* [GetOrderInvoiceGeneralSettings](docs/ominvoiceapisettings/README.md#getorderinvoicegeneralsettings) - Get Order Invoice general settings
+* [SaveOrderInvoiceDesignSettings](docs/ominvoiceapisettings/README.md#saveorderinvoicedesignsettings) - Save Order Invoice design settings
+* [SaveOrderInvoiceGeneralSettings](docs/ominvoiceapisettings/README.md#saveorderinvoicegeneralsettings) - Save Order Invoice general settings
 
-### PublicChannelsPublicChannels
+### [PublicChannelsPublicChannels](docs/publicchannelspublicchannels/README.md)
 
-* `GetChannels` - The channel list for one country
-* `GetChannelsIndex` - Get public channel index
+* [GetChannels](docs/publicchannelspublicchannels/README.md#getchannels) - The channel list for one country
+* [GetChannelsIndex](docs/publicchannelspublicchannels/README.md#getchannelsindex) - Get public channel index
 
-### PublicListOfValuesLOV
+### [PublicListOfValuesLOV](docs/publiclistofvalueslov/README.md)
 
-* `GetPublicListOfValues` - Get the list of values related to this list name
-* `GetPublicLovIndex` - Get all list names
+* [GetPublicListOfValues](docs/publiclistofvalueslov/README.md#getpubliclistofvalues) - Get the list of values related to this list name
+* [GetPublicLovIndex](docs/publiclistofvalueslov/README.md#getpubliclovindex) - Get all list names
 
-### PublicSecuritySecurity
+### [PublicSecuritySecurity](docs/publicsecuritysecurity/README.md)
 
-* `Login` - Login
-* `LostPassword` - Lost password
-* `Register` - User Registration
+* [Login](docs/publicsecuritysecurity/README.md#login) - Login
+* [LostPassword](docs/publicsecuritysecurity/README.md#lostpassword) - Lost password
+* [Register](docs/publicsecuritysecurity/README.md#register) - User Registration
 
-### UserListOfValuesLOV
+### [UserListOfValuesLOV](docs/userlistofvalueslov/README.md)
 
-* `GetUserListOfValues` - Get the list of values related to this list name
-* `GetUserLovIndex` - Get all list names
+* [GetUserListOfValues](docs/userlistofvalueslov/README.md#getuserlistofvalues) - Get the list of values related to this list name
+* [GetUserLovIndex](docs/userlistofvalueslov/README.md#getuserlovindex) - Get all list names
 <!-- End SDK Available Operations -->
 
 ### Maturity

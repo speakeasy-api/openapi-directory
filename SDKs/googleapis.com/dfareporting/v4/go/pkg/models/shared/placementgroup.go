@@ -18,12 +18,16 @@ const (
 	PlacementGroupActiveStatusEnumPlacementStatusPermanentlyArchived PlacementGroupActiveStatusEnum = "PLACEMENT_STATUS_PERMANENTLY_ARCHIVED"
 )
 
+func (e PlacementGroupActiveStatusEnum) ToPointer() *PlacementGroupActiveStatusEnum {
+	return &e
+}
+
 func (e *PlacementGroupActiveStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACEMENT_STATUS_UNKNOWN":
 		fallthrough
 	case "PLACEMENT_STATUS_ACTIVE":
@@ -33,10 +37,10 @@ func (e *PlacementGroupActiveStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PLACEMENT_STATUS_ARCHIVED":
 		fallthrough
 	case "PLACEMENT_STATUS_PERMANENTLY_ARCHIVED":
-		*e = PlacementGroupActiveStatusEnum(s)
+		*e = PlacementGroupActiveStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlacementGroupActiveStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PlacementGroupActiveStatusEnum: %v", v)
 	}
 }
 
@@ -48,19 +52,23 @@ const (
 	PlacementGroupPlacementGroupTypeEnumPlacementRoadblock PlacementGroupPlacementGroupTypeEnum = "PLACEMENT_ROADBLOCK"
 )
 
+func (e PlacementGroupPlacementGroupTypeEnum) ToPointer() *PlacementGroupPlacementGroupTypeEnum {
+	return &e
+}
+
 func (e *PlacementGroupPlacementGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACEMENT_PACKAGE":
 		fallthrough
 	case "PLACEMENT_ROADBLOCK":
-		*e = PlacementGroupPlacementGroupTypeEnum(s)
+		*e = PlacementGroupPlacementGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlacementGroupPlacementGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlacementGroupPlacementGroupTypeEnum: %v", v)
 	}
 }
 

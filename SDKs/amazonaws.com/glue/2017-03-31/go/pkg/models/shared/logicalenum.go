@@ -14,18 +14,22 @@ const (
 	LogicalEnumAny LogicalEnum = "ANY"
 )
 
+func (e LogicalEnum) ToPointer() *LogicalEnum {
+	return &e
+}
+
 func (e *LogicalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AND":
 		fallthrough
 	case "ANY":
-		*e = LogicalEnum(s)
+		*e = LogicalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LogicalEnum: %s", s)
+		return fmt.Errorf("invalid value for LogicalEnum: %v", v)
 	}
 }

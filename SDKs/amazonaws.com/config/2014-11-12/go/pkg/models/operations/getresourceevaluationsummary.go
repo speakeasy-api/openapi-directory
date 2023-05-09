@@ -16,17 +16,21 @@ const (
 	GetResourceEvaluationSummaryXAmzTargetEnumStarlingDoveServiceGetResourceEvaluationSummary GetResourceEvaluationSummaryXAmzTargetEnum = "StarlingDoveService.GetResourceEvaluationSummary"
 )
 
+func (e GetResourceEvaluationSummaryXAmzTargetEnum) ToPointer() *GetResourceEvaluationSummaryXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetResourceEvaluationSummaryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.GetResourceEvaluationSummary":
-		*e = GetResourceEvaluationSummaryXAmzTargetEnum(s)
+		*e = GetResourceEvaluationSummaryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResourceEvaluationSummaryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResourceEvaluationSummaryXAmzTargetEnum: %v", v)
 	}
 }
 

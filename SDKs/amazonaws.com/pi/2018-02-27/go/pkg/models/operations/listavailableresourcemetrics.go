@@ -16,17 +16,21 @@ const (
 	ListAvailableResourceMetricsXAmzTargetEnumPerformanceInsightsv20180227ListAvailableResourceMetrics ListAvailableResourceMetricsXAmzTargetEnum = "PerformanceInsightsv20180227.ListAvailableResourceMetrics"
 )
 
+func (e ListAvailableResourceMetricsXAmzTargetEnum) ToPointer() *ListAvailableResourceMetricsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListAvailableResourceMetricsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PerformanceInsightsv20180227.ListAvailableResourceMetrics":
-		*e = ListAvailableResourceMetricsXAmzTargetEnum(s)
+		*e = ListAvailableResourceMetricsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAvailableResourceMetricsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAvailableResourceMetricsXAmzTargetEnum: %v", v)
 	}
 }
 

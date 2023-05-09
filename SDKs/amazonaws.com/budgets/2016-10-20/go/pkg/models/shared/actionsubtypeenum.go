@@ -14,18 +14,22 @@ const (
 	ActionSubTypeEnumStopRdsInstances ActionSubTypeEnum = "STOP_RDS_INSTANCES"
 )
 
+func (e ActionSubTypeEnum) ToPointer() *ActionSubTypeEnum {
+	return &e
+}
+
 func (e *ActionSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STOP_EC2_INSTANCES":
 		fallthrough
 	case "STOP_RDS_INSTANCES":
-		*e = ActionSubTypeEnum(s)
+		*e = ActionSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionSubTypeEnum: %v", v)
 	}
 }

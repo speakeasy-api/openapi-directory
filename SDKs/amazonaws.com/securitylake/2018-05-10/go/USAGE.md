@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateAwsLogSourceRequest{
+    ctx := context.Background()
+    res, err := s.CreateAwsLogSource(ctx, operations.CreateAwsLogSourceRequest{
         RequestBody: operations.CreateAwsLogSourceRequestBody{
             EnableAllDimensions: map[string]map[string][]string{
                 "provident": map[string][]string{
@@ -96,20 +97,17 @@ func main() {
                 },
             },
             InputOrder: []shared.DimensionEnum{
-                "SOURCE_TYPE",
+                shared.DimensionEnumSourceType,
             },
         },
-        XAmzAlgorithm: "laboriosam",
-        XAmzContentSha256: "hic",
-        XAmzCredential: "saepe",
-        XAmzDate: "fuga",
-        XAmzSecurityToken: "in",
-        XAmzSignature: "corporis",
-        XAmzSignedHeaders: "iste",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateAwsLogSource(ctx, req)
+        XAmzAlgorithm: sdk.String("laboriosam"),
+        XAmzContentSha256: sdk.String("hic"),
+        XAmzCredential: sdk.String("saepe"),
+        XAmzDate: sdk.String("fuga"),
+        XAmzSecurityToken: sdk.String("in"),
+        XAmzSignature: sdk.String("corporis"),
+        XAmzSignedHeaders: sdk.String("iste"),
+    })
     if err != nil {
         log.Fatal(err)
     }

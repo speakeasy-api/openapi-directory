@@ -17,19 +17,23 @@ const (
 	IssuesListMilestonesDirectionEnumDesc IssuesListMilestonesDirectionEnum = "desc"
 )
 
+func (e IssuesListMilestonesDirectionEnum) ToPointer() *IssuesListMilestonesDirectionEnum {
+	return &e
+}
+
 func (e *IssuesListMilestonesDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = IssuesListMilestonesDirectionEnum(s)
+		*e = IssuesListMilestonesDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListMilestonesDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListMilestonesDirectionEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	IssuesListMilestonesSortEnumCompleteness IssuesListMilestonesSortEnum = "completeness"
 )
 
+func (e IssuesListMilestonesSortEnum) ToPointer() *IssuesListMilestonesSortEnum {
+	return &e
+}
+
 func (e *IssuesListMilestonesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "due_on":
 		fallthrough
 	case "completeness":
-		*e = IssuesListMilestonesSortEnum(s)
+		*e = IssuesListMilestonesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListMilestonesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListMilestonesSortEnum: %v", v)
 	}
 }
 
@@ -66,21 +74,25 @@ const (
 	IssuesListMilestonesStateEnumAll    IssuesListMilestonesStateEnum = "all"
 )
 
+func (e IssuesListMilestonesStateEnum) ToPointer() *IssuesListMilestonesStateEnum {
+	return &e
+}
+
 func (e *IssuesListMilestonesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "all":
-		*e = IssuesListMilestonesStateEnum(s)
+		*e = IssuesListMilestonesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssuesListMilestonesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for IssuesListMilestonesStateEnum: %v", v)
 	}
 }
 

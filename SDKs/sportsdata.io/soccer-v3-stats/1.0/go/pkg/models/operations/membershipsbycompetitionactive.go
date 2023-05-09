@@ -17,19 +17,23 @@ const (
 	MembershipsByCompetitionActiveFormatEnumJSON MembershipsByCompetitionActiveFormatEnum = "json"
 )
 
+func (e MembershipsByCompetitionActiveFormatEnum) ToPointer() *MembershipsByCompetitionActiveFormatEnum {
+	return &e
+}
+
 func (e *MembershipsByCompetitionActiveFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xml":
 		fallthrough
 	case "json":
-		*e = MembershipsByCompetitionActiveFormatEnum(s)
+		*e = MembershipsByCompetitionActiveFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MembershipsByCompetitionActiveFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MembershipsByCompetitionActiveFormatEnum: %v", v)
 	}
 }
 

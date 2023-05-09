@@ -14,16 +14,20 @@ const (
 	AltEnumAtom AltEnum = "atom"
 )
 
+func (e AltEnum) ToPointer() *AltEnum {
+	return &e
+}
+
 func (e *AltEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "atom":
-		*e = AltEnum(s)
+		*e = AltEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AltEnum: %s", s)
+		return fmt.Errorf("invalid value for AltEnum: %v", v)
 	}
 }

@@ -39,7 +39,10 @@ func newNotes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // This operation can be called multiple times successfully.
 func (s *notes) DeleteV2NotesIDJSON(ctx context.Context, request operations.DeleteV2NotesIDJSONRequest) (*operations.DeleteV2NotesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/notes/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/notes/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +128,10 @@ func (s *notes) GetV2NotesJSON(ctx context.Context, request operations.GetV2Note
 // Fetches a note, by ID only.
 func (s *notes) GetV2NotesIDJSON(ctx context.Context, request operations.GetV2NotesIDJSONRequest) (*operations.GetV2NotesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/notes/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/notes/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *notes) PostV2NotesJSON(ctx context.Context, request operations.PostV2No
 // Updates a note. Any changes to the note or associated records will not reflect in your CRM.
 func (s *notes) PutV2NotesIDJSON(ctx context.Context, request operations.PutV2NotesIDJSONRequest) (*operations.PutV2NotesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/notes/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/notes/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

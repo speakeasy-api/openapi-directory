@@ -17,12 +17,16 @@ const (
 	TrialComponentPrimaryStatusEnumStopped    TrialComponentPrimaryStatusEnum = "Stopped"
 )
 
+func (e TrialComponentPrimaryStatusEnum) ToPointer() *TrialComponentPrimaryStatusEnum {
+	return &e
+}
+
 func (e *TrialComponentPrimaryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InProgress":
 		fallthrough
 	case "Completed":
@@ -32,9 +36,9 @@ func (e *TrialComponentPrimaryStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Stopping":
 		fallthrough
 	case "Stopped":
-		*e = TrialComponentPrimaryStatusEnum(s)
+		*e = TrialComponentPrimaryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrialComponentPrimaryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TrialComponentPrimaryStatusEnum: %v", v)
 	}
 }

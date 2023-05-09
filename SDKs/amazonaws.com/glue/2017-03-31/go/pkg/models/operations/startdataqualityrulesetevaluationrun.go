@@ -16,17 +16,21 @@ const (
 	StartDataQualityRulesetEvaluationRunXAmzTargetEnumAwsGlueStartDataQualityRulesetEvaluationRun StartDataQualityRulesetEvaluationRunXAmzTargetEnum = "AWSGlue.StartDataQualityRulesetEvaluationRun"
 )
 
+func (e StartDataQualityRulesetEvaluationRunXAmzTargetEnum) ToPointer() *StartDataQualityRulesetEvaluationRunXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartDataQualityRulesetEvaluationRunXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.StartDataQualityRulesetEvaluationRun":
-		*e = StartDataQualityRulesetEvaluationRunXAmzTargetEnum(s)
+		*e = StartDataQualityRulesetEvaluationRunXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartDataQualityRulesetEvaluationRunXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartDataQualityRulesetEvaluationRunXAmzTargetEnum: %v", v)
 	}
 }
 

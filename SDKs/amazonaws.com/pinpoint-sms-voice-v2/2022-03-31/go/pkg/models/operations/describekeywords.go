@@ -16,17 +16,21 @@ const (
 	DescribeKeywordsXAmzTargetEnumPinpointSmsVoiceV2DescribeKeywords DescribeKeywordsXAmzTargetEnum = "PinpointSMSVoiceV2.DescribeKeywords"
 )
 
+func (e DescribeKeywordsXAmzTargetEnum) ToPointer() *DescribeKeywordsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeKeywordsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.DescribeKeywords":
-		*e = DescribeKeywordsXAmzTargetEnum(s)
+		*e = DescribeKeywordsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeKeywordsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeKeywordsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newPermissions(defaultClient, securityClient HTTPClient, serverURL, languag
 // AndroidenterprisePermissionsGet - Retrieves details of an Android app permission for display to an enterprise admin.
 func (s *permissions) AndroidenterprisePermissionsGet(ctx context.Context, request operations.AndroidenterprisePermissionsGetRequest, security operations.AndroidenterprisePermissionsGetSecurity) (*operations.AndroidenterprisePermissionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/permissions/{permissionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/permissions/{permissionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

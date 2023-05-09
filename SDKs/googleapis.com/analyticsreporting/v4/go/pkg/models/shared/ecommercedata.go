@@ -22,12 +22,16 @@ const (
 	EcommerceDataActionTypeEnumCheckoutOption EcommerceDataActionTypeEnum = "CHECKOUT_OPTION"
 )
 
+func (e EcommerceDataActionTypeEnum) ToPointer() *EcommerceDataActionTypeEnum {
+	return &e
+}
+
 func (e *EcommerceDataActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "CLICK":
@@ -45,10 +49,10 @@ func (e *EcommerceDataActionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "REFUND":
 		fallthrough
 	case "CHECKOUT_OPTION":
-		*e = EcommerceDataActionTypeEnum(s)
+		*e = EcommerceDataActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EcommerceDataActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EcommerceDataActionTypeEnum: %v", v)
 	}
 }
 
@@ -61,21 +65,25 @@ const (
 	EcommerceDataEcommerceTypeEnumEnhanced                 EcommerceDataEcommerceTypeEnum = "ENHANCED"
 )
 
+func (e EcommerceDataEcommerceTypeEnum) ToPointer() *EcommerceDataEcommerceTypeEnum {
+	return &e
+}
+
 func (e *EcommerceDataEcommerceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ECOMMERCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CLASSIC":
 		fallthrough
 	case "ENHANCED":
-		*e = EcommerceDataEcommerceTypeEnum(s)
+		*e = EcommerceDataEcommerceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EcommerceDataEcommerceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EcommerceDataEcommerceTypeEnum: %v", v)
 	}
 }
 

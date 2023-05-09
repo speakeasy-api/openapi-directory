@@ -20,12 +20,16 @@ const (
 	GoogleAdsSearchads360V0CommonDeviceInfoTypeEnumOther       GoogleAdsSearchads360V0CommonDeviceInfoTypeEnum = "OTHER"
 )
 
+func (e GoogleAdsSearchads360V0CommonDeviceInfoTypeEnum) ToPointer() *GoogleAdsSearchads360V0CommonDeviceInfoTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonDeviceInfoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -39,10 +43,10 @@ func (e *GoogleAdsSearchads360V0CommonDeviceInfoTypeEnum) UnmarshalJSON(data []b
 	case "CONNECTED_TV":
 		fallthrough
 	case "OTHER":
-		*e = GoogleAdsSearchads360V0CommonDeviceInfoTypeEnum(s)
+		*e = GoogleAdsSearchads360V0CommonDeviceInfoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonDeviceInfoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonDeviceInfoTypeEnum: %v", v)
 	}
 }
 

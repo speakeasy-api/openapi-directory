@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowCxV3beta1ExportTestCasesRequestDataFormatEnumJSON                  GoogleCloudDialogflowCxV3beta1ExportTestCasesRequestDataFormatEnum = "JSON"
 )
 
+func (e GoogleCloudDialogflowCxV3beta1ExportTestCasesRequestDataFormatEnum) ToPointer() *GoogleCloudDialogflowCxV3beta1ExportTestCasesRequestDataFormatEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3beta1ExportTestCasesRequestDataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "BLOB":
 		fallthrough
 	case "JSON":
-		*e = GoogleCloudDialogflowCxV3beta1ExportTestCasesRequestDataFormatEnum(s)
+		*e = GoogleCloudDialogflowCxV3beta1ExportTestCasesRequestDataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ExportTestCasesRequestDataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ExportTestCasesRequestDataFormatEnum: %v", v)
 	}
 }
 

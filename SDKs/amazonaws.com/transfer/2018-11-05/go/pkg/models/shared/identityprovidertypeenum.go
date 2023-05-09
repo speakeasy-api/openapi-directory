@@ -17,12 +17,16 @@ const (
 	IdentityProviderTypeEnumAwsLambda           IdentityProviderTypeEnum = "AWS_LAMBDA"
 )
 
+func (e IdentityProviderTypeEnum) ToPointer() *IdentityProviderTypeEnum {
+	return &e
+}
+
 func (e *IdentityProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE_MANAGED":
 		fallthrough
 	case "API_GATEWAY":
@@ -30,9 +34,9 @@ func (e *IdentityProviderTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AWS_DIRECTORY_SERVICE":
 		fallthrough
 	case "AWS_LAMBDA":
-		*e = IdentityProviderTypeEnum(s)
+		*e = IdentityProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IdentityProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IdentityProviderTypeEnum: %v", v)
 	}
 }

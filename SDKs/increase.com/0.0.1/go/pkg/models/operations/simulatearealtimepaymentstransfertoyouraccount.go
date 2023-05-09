@@ -9,23 +9,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum = "429"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13TypeEnumRateLimitedError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -57,23 +65,27 @@ type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13 stru
 	Type       SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnumFourHundredAndThree SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnum = "403"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnumFourHundredAndThree SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -83,17 +95,21 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12TypeEnumPrivateFeatureError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -104,23 +120,27 @@ type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12 stru
 	Type   SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnumFourHundredAndFour SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnum = "404"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnumFourHundredAndFour SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11TypeEnumObjectNotFoundError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -151,23 +175,27 @@ type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11 stru
 	Type   SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnumFourHundred SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnum = "400"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnumFourHundred SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -177,17 +205,21 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10TypeEnumMalformedRequestError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -198,23 +230,27 @@ type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10 stru
 	Type   SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnumFourHundred SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnum = "400"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnumFourHundred SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -224,46 +260,54 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9TypeEnumInvalidParametersError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                                        `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                                        `json:"errors"`
 	Status SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                                          `json:"title"`
 	Type   SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnumFourHundredAndNine SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnum = "409"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnumFourHundredAndNine SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8TypeEnumInvalidOperationError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -294,23 +342,27 @@ type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8 struc
 	Type   SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnumFourHundredAndOne SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnum = "401"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnumFourHundredAndOne SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7TypeEnumInvalidAPIKeyError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -341,23 +397,27 @@ type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7 struc
 	Type   SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnumFiveHundred SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnum = "500"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnumFiveHundred SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -367,17 +427,21 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6TypeEnumInternalServerError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -388,23 +452,27 @@ type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6 struc
 	Type   SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnumFourHundredAndThree SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnum = "403"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnumFourHundredAndThree SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -414,17 +482,21 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5TypeEnumInsufficientPermissionsError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -435,23 +507,27 @@ type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5 struc
 	Type   SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnum = "422"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -461,17 +537,21 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -482,23 +562,27 @@ type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4 struc
 	Type   SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnumFourHundredAndNine SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnum = "409"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnumFourHundredAndNine SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -508,17 +592,21 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3TypeEnumIdempotencyConflictError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -529,23 +617,27 @@ type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3 struc
 	Type   SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnumFourHundredAndThree SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnum = "403"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnumFourHundredAndThree SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -555,17 +647,21 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2TypeEnumEnvironmentMismatchError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -576,23 +672,27 @@ type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2 struc
 	Type   SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnum string
+type SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnum int64
 
 const (
-	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnumFourHundredAndFour SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnum = "404"
+	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnumFourHundredAndFour SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -602,17 +702,21 @@ const (
 	SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1TypeEnum) ToPointer() *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1TypeEnum(s)
+		*e = SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

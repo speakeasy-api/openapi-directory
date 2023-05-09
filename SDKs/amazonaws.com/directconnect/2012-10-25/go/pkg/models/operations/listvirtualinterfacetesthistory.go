@@ -16,17 +16,21 @@ const (
 	ListVirtualInterfaceTestHistoryXAmzTargetEnumOvertureServiceListVirtualInterfaceTestHistory ListVirtualInterfaceTestHistoryXAmzTargetEnum = "OvertureService.ListVirtualInterfaceTestHistory"
 )
 
+func (e ListVirtualInterfaceTestHistoryXAmzTargetEnum) ToPointer() *ListVirtualInterfaceTestHistoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListVirtualInterfaceTestHistoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.ListVirtualInterfaceTestHistory":
-		*e = ListVirtualInterfaceTestHistoryXAmzTargetEnum(s)
+		*e = ListVirtualInterfaceTestHistoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListVirtualInterfaceTestHistoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListVirtualInterfaceTestHistoryXAmzTargetEnum: %v", v)
 	}
 }
 

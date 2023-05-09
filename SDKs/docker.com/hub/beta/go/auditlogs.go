@@ -39,7 +39,10 @@ func newAuditLogs(defaultClient, securityClient HTTPClient, serverURL, language,
 // Get audit log actions for a namespace to be used as a filter for querying audit events.
 func (s *auditLogs) AuditLogsGetAuditActions(ctx context.Context, request operations.AuditLogsGetAuditActionsRequest) (*operations.AuditLogsGetAuditActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/auditlogs/{account}/actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/auditlogs/{account}/actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -114,7 +117,10 @@ func (s *auditLogs) AuditLogsGetAuditActions(ctx context.Context, request operat
 // Get audit log events for a given namespace.
 func (s *auditLogs) AuditLogsGetAuditLogs(ctx context.Context, request operations.AuditLogsGetAuditLogsRequest) (*operations.AuditLogsGetAuditLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/auditlogs/{account}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/auditlogs/{account}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

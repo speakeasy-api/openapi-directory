@@ -22,21 +22,25 @@ const (
 	ReposCreateForAuthenticatedUserRequestBodyMergeCommitMessageEnumBlank   ReposCreateForAuthenticatedUserRequestBodyMergeCommitMessageEnum = "BLANK"
 )
 
+func (e ReposCreateForAuthenticatedUserRequestBodyMergeCommitMessageEnum) ToPointer() *ReposCreateForAuthenticatedUserRequestBodyMergeCommitMessageEnum {
+	return &e
+}
+
 func (e *ReposCreateForAuthenticatedUserRequestBodyMergeCommitMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_BODY":
 		fallthrough
 	case "PR_TITLE":
 		fallthrough
 	case "BLANK":
-		*e = ReposCreateForAuthenticatedUserRequestBodyMergeCommitMessageEnum(s)
+		*e = ReposCreateForAuthenticatedUserRequestBodyMergeCommitMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateForAuthenticatedUserRequestBodyMergeCommitMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateForAuthenticatedUserRequestBodyMergeCommitMessageEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	ReposCreateForAuthenticatedUserRequestBodyMergeCommitTitleEnumMergeMessage ReposCreateForAuthenticatedUserRequestBodyMergeCommitTitleEnum = "MERGE_MESSAGE"
 )
 
+func (e ReposCreateForAuthenticatedUserRequestBodyMergeCommitTitleEnum) ToPointer() *ReposCreateForAuthenticatedUserRequestBodyMergeCommitTitleEnum {
+	return &e
+}
+
 func (e *ReposCreateForAuthenticatedUserRequestBodyMergeCommitTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_TITLE":
 		fallthrough
 	case "MERGE_MESSAGE":
-		*e = ReposCreateForAuthenticatedUserRequestBodyMergeCommitTitleEnum(s)
+		*e = ReposCreateForAuthenticatedUserRequestBodyMergeCommitTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateForAuthenticatedUserRequestBodyMergeCommitTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateForAuthenticatedUserRequestBodyMergeCommitTitleEnum: %v", v)
 	}
 }
 
@@ -80,21 +88,25 @@ const (
 	ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitMessageEnumBlank          ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitMessageEnum = "BLANK"
 )
 
+func (e ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitMessageEnum) ToPointer() *ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitMessageEnum {
+	return &e
+}
+
 func (e *ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_BODY":
 		fallthrough
 	case "COMMIT_MESSAGES":
 		fallthrough
 	case "BLANK":
-		*e = ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitMessageEnum(s)
+		*e = ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitMessageEnum: %v", v)
 	}
 }
 
@@ -109,19 +121,23 @@ const (
 	ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitTitleEnumCommitOrPrTitle ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitTitleEnum = "COMMIT_OR_PR_TITLE"
 )
 
+func (e ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitTitleEnum) ToPointer() *ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitTitleEnum {
+	return &e
+}
+
 func (e *ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_TITLE":
 		fallthrough
 	case "COMMIT_OR_PR_TITLE":
-		*e = ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitTitleEnum(s)
+		*e = ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateForAuthenticatedUserRequestBodySquashMergeCommitTitleEnum: %v", v)
 	}
 }
 

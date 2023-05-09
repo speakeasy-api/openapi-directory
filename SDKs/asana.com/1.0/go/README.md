@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/asana.com/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,29 +28,26 @@ func main() {
         }),
     )
 
-    req := operations.CreateAttachmentForObjectRequest{
+    ctx := context.Background()
+    res, err := s.Attachments.CreateAttachmentForObject(ctx, operations.CreateAttachmentForObjectRequest{
         AttachmentRequest: shared.AttachmentRequest{
-            ConnectToApp: false,
+            ConnectToApp: sdk.Bool(false),
             File: &shared.AttachmentRequestFile{
                 Content: []byte("corrupti"),
                 File: "provident",
             },
-            Name: "distinctio",
-            Parent: "quibusdam",
-            ResourceSubtype: "external",
-            URL: "unde",
+            Name: sdk.String("Ellis Mitchell"),
+            Parent: sdk.String("illum"),
+            ResourceSubtype: shared.AttachmentRequestResourceSubtypeEnumExternal.ToPointer(),
+            URL: sdk.String("vel"),
         },
         OptFields: []string{
-            "corrupti",
-            "illum",
-            "vel",
-            "error",
+            "deserunt",
+            "suscipit",
+            "iure",
         },
-        OptPretty: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.Attachments.CreateAttachmentForObject(ctx, req)
+        OptPretty: sdk.Bool(false),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -66,265 +63,265 @@ func main() {
 ## Available Resources and Operations
 
 
-### Attachments
+### [Attachments](docs/attachments/README.md)
 
-* `CreateAttachmentForObject` - Upload an attachment
-* `DeleteAttachment` - Delete an attachment
-* `GetAttachment` - Get an attachment
-* `GetAttachmentsForObject` - Get attachments from an object
+* [CreateAttachmentForObject](docs/attachments/README.md#createattachmentforobject) - Upload an attachment
+* [DeleteAttachment](docs/attachments/README.md#deleteattachment) - Delete an attachment
+* [GetAttachment](docs/attachments/README.md#getattachment) - Get an attachment
+* [GetAttachmentsForObject](docs/attachments/README.md#getattachmentsforobject) - Get attachments from an object
 
-### AuditLogAPI
+### [AuditLogAPI](docs/auditlogapi/README.md)
 
-* `GetAuditLogEvents` - Get audit log events
+* [GetAuditLogEvents](docs/auditlogapi/README.md#getauditlogevents) - Get audit log events
 
-### BatchAPI
+### [BatchAPI](docs/batchapi/README.md)
 
-* `CreateBatchRequest` - Submit parallel requests
+* [CreateBatchRequest](docs/batchapi/README.md#createbatchrequest) - Submit parallel requests
 
-### CustomFieldSettings
+### [CustomFieldSettings](docs/customfieldsettings/README.md)
 
-* `GetCustomFieldSettingsForPortfolio` - Get a portfolio's custom fields
-* `GetCustomFieldSettingsForProject` - Get a project's custom fields
+* [GetCustomFieldSettingsForPortfolio](docs/customfieldsettings/README.md#getcustomfieldsettingsforportfolio) - Get a portfolio's custom fields
+* [GetCustomFieldSettingsForProject](docs/customfieldsettings/README.md#getcustomfieldsettingsforproject) - Get a project's custom fields
 
-### CustomFields
+### [CustomFields](docs/customfields/README.md)
 
-* `CreateCustomField` - Create a custom field
-* `CreateEnumOptionForCustomField` - Create an enum option
-* `DeleteCustomField` - Delete a custom field
-* `GetCustomField` - Get a custom field
-* `GetCustomFieldsForWorkspace` - Get a workspace's custom fields
-* `InsertEnumOptionForCustomField` - Reorder a custom field's enum
-* `UpdateCustomField` - Update a custom field
-* `UpdateEnumOption` - Update an enum option
+* [CreateCustomField](docs/customfields/README.md#createcustomfield) - Create a custom field
+* [CreateEnumOptionForCustomField](docs/customfields/README.md#createenumoptionforcustomfield) - Create an enum option
+* [DeleteCustomField](docs/customfields/README.md#deletecustomfield) - Delete a custom field
+* [GetCustomField](docs/customfields/README.md#getcustomfield) - Get a custom field
+* [GetCustomFieldsForWorkspace](docs/customfields/README.md#getcustomfieldsforworkspace) - Get a workspace's custom fields
+* [InsertEnumOptionForCustomField](docs/customfields/README.md#insertenumoptionforcustomfield) - Reorder a custom field's enum
+* [UpdateCustomField](docs/customfields/README.md#updatecustomfield) - Update a custom field
+* [UpdateEnumOption](docs/customfields/README.md#updateenumoption) - Update an enum option
 
-### Events
+### [Events](docs/events/README.md)
 
-* `GetEvents` - Get events on a resource
+* [GetEvents](docs/events/README.md#getevents) - Get events on a resource
 
-### GoalRelationships
+### [GoalRelationships](docs/goalrelationships/README.md)
 
-* `AddSupportingRelationship` - Add a supporting goal relationship
-* `GetGoalRelationship` - Get a goal relationship
-* `GetGoalRelationships` - Get goal relationships
-* `RemoveSupportingRelationship` - Removes a supporting goal relationship
-* `UpdateGoalRelationship` - Update a goal relationship
+* [AddSupportingRelationship](docs/goalrelationships/README.md#addsupportingrelationship) - Add a supporting goal relationship
+* [GetGoalRelationship](docs/goalrelationships/README.md#getgoalrelationship) - Get a goal relationship
+* [GetGoalRelationships](docs/goalrelationships/README.md#getgoalrelationships) - Get goal relationships
+* [RemoveSupportingRelationship](docs/goalrelationships/README.md#removesupportingrelationship) - Removes a supporting goal relationship
+* [UpdateGoalRelationship](docs/goalrelationships/README.md#updategoalrelationship) - Update a goal relationship
 
-### Goals
+### [Goals](docs/goals/README.md)
 
-* `AddFollowers` - Add a collaborator to a goal
-* `CreateGoal` - Create a goal
-* `CreateGoalMetric` - Create a goal metric
-* `DeleteGoal` - Delete a goal
-* `GetGoal` - Get a goal
-* `GetGoals` - Get goals
-* `GetParentGoalsForGoal` - Get parent goals from a goal
-* `RemoveFollowers` - Remove a collaborator from a goal
-* `UpdateGoal` - Update a goal
-* `UpdateGoalMetric` - Update a goal metric
+* [AddFollowers](docs/goals/README.md#addfollowers) - Add a collaborator to a goal
+* [CreateGoal](docs/goals/README.md#creategoal) - Create a goal
+* [CreateGoalMetric](docs/goals/README.md#creategoalmetric) - Create a goal metric
+* [DeleteGoal](docs/goals/README.md#deletegoal) - Delete a goal
+* [GetGoal](docs/goals/README.md#getgoal) - Get a goal
+* [GetGoals](docs/goals/README.md#getgoals) - Get goals
+* [GetParentGoalsForGoal](docs/goals/README.md#getparentgoalsforgoal) - Get parent goals from a goal
+* [RemoveFollowers](docs/goals/README.md#removefollowers) - Remove a collaborator from a goal
+* [UpdateGoal](docs/goals/README.md#updategoal) - Update a goal
+* [UpdateGoalMetric](docs/goals/README.md#updategoalmetric) - Update a goal metric
 
-### Jobs
+### [Jobs](docs/jobs/README.md)
 
-* `GetJob` - Get a job by id
+* [GetJob](docs/jobs/README.md#getjob) - Get a job by id
 
-### OrganizationExports
+### [OrganizationExports](docs/organizationexports/README.md)
 
-* `CreateOrganizationExport` - Create an organization export request
-* `GetOrganizationExport` - Get details on an org export request
+* [CreateOrganizationExport](docs/organizationexports/README.md#createorganizationexport) - Create an organization export request
+* [GetOrganizationExport](docs/organizationexports/README.md#getorganizationexport) - Get details on an org export request
 
-### PortfolioMemberships
+### [PortfolioMemberships](docs/portfoliomemberships/README.md)
 
-* `GetPortfolioMembership` - Get a portfolio membership
-* `GetPortfolioMemberships` - Get multiple portfolio memberships
-* `GetPortfolioMembershipsForPortfolio` - Get memberships from a portfolio
+* [GetPortfolioMembership](docs/portfoliomemberships/README.md#getportfoliomembership) - Get a portfolio membership
+* [GetPortfolioMemberships](docs/portfoliomemberships/README.md#getportfoliomemberships) - Get multiple portfolio memberships
+* [GetPortfolioMembershipsForPortfolio](docs/portfoliomemberships/README.md#getportfoliomembershipsforportfolio) - Get memberships from a portfolio
 
-### Portfolios
+### [Portfolios](docs/portfolios/README.md)
 
-* `AddCustomFieldSettingForPortfolio` - Add a custom field to a portfolio
-* `AddItemForPortfolio` - Add a portfolio item
-* `AddMembersForPortfolio` - Add users to a portfolio
-* `CreatePortfolio` - Create a portfolio
-* `DeletePortfolio` - Delete a portfolio
-* `GetItemsForPortfolio` - Get portfolio items
-* `GetPortfolio` - Get a portfolio
-* `GetPortfolios` - Get multiple portfolios
-* `RemoveCustomFieldSettingForPortfolio` - Remove a custom field from a portfolio
-* `RemoveItemForPortfolio` - Remove a portfolio item
-* `RemoveMembersForPortfolio` - Remove users from a portfolio
-* `UpdatePortfolio` - Update a portfolio
+* [AddCustomFieldSettingForPortfolio](docs/portfolios/README.md#addcustomfieldsettingforportfolio) - Add a custom field to a portfolio
+* [AddItemForPortfolio](docs/portfolios/README.md#additemforportfolio) - Add a portfolio item
+* [AddMembersForPortfolio](docs/portfolios/README.md#addmembersforportfolio) - Add users to a portfolio
+* [CreatePortfolio](docs/portfolios/README.md#createportfolio) - Create a portfolio
+* [DeletePortfolio](docs/portfolios/README.md#deleteportfolio) - Delete a portfolio
+* [GetItemsForPortfolio](docs/portfolios/README.md#getitemsforportfolio) - Get portfolio items
+* [GetPortfolio](docs/portfolios/README.md#getportfolio) - Get a portfolio
+* [GetPortfolios](docs/portfolios/README.md#getportfolios) - Get multiple portfolios
+* [RemoveCustomFieldSettingForPortfolio](docs/portfolios/README.md#removecustomfieldsettingforportfolio) - Remove a custom field from a portfolio
+* [RemoveItemForPortfolio](docs/portfolios/README.md#removeitemforportfolio) - Remove a portfolio item
+* [RemoveMembersForPortfolio](docs/portfolios/README.md#removemembersforportfolio) - Remove users from a portfolio
+* [UpdatePortfolio](docs/portfolios/README.md#updateportfolio) - Update a portfolio
 
-### ProjectBriefs
+### [ProjectBriefs](docs/projectbriefs/README.md)
 
-* `CreateProjectBrief` - Create a project brief
-* `DeleteProjectBrief` - Delete a project brief
-* `GetProjectBrief` - Get a project brief
-* `UpdateProjectBrief` - Update a project brief
+* [CreateProjectBrief](docs/projectbriefs/README.md#createprojectbrief) - Create a project brief
+* [DeleteProjectBrief](docs/projectbriefs/README.md#deleteprojectbrief) - Delete a project brief
+* [GetProjectBrief](docs/projectbriefs/README.md#getprojectbrief) - Get a project brief
+* [UpdateProjectBrief](docs/projectbriefs/README.md#updateprojectbrief) - Update a project brief
 
-### ProjectMemberships
+### [ProjectMemberships](docs/projectmemberships/README.md)
 
-* `GetProjectMembership` - Get a project membership
-* `GetProjectMembershipsForProject` - Get memberships from a project
+* [GetProjectMembership](docs/projectmemberships/README.md#getprojectmembership) - Get a project membership
+* [GetProjectMembershipsForProject](docs/projectmemberships/README.md#getprojectmembershipsforproject) - Get memberships from a project
 
-### ProjectStatuses
+### [ProjectStatuses](docs/projectstatuses/README.md)
 
-* `CreateProjectStatusForProject` - Create a project status
-* `DeleteProjectStatus` - Delete a project status
-* `GetProjectStatus` - Get a project status
-* `GetProjectStatusesForProject` - Get statuses from a project
+* [CreateProjectStatusForProject](docs/projectstatuses/README.md#createprojectstatusforproject) - Create a project status
+* [DeleteProjectStatus](docs/projectstatuses/README.md#deleteprojectstatus) - Delete a project status
+* [GetProjectStatus](docs/projectstatuses/README.md#getprojectstatus) - Get a project status
+* [GetProjectStatusesForProject](docs/projectstatuses/README.md#getprojectstatusesforproject) - Get statuses from a project
 
-### ProjectTemplates
+### [ProjectTemplates](docs/projecttemplates/README.md)
 
-* `GetProjectTemplate` - Get a project template
-* `GetProjectTemplates` - Get multiple project templates
-* `GetProjectTemplatesForTeam` - Get a team's project templates
-* `InstantiateProject` - Instantiate a project from a project template
+* [GetProjectTemplate](docs/projecttemplates/README.md#getprojecttemplate) - Get a project template
+* [GetProjectTemplates](docs/projecttemplates/README.md#getprojecttemplates) - Get multiple project templates
+* [GetProjectTemplatesForTeam](docs/projecttemplates/README.md#getprojecttemplatesforteam) - Get a team's project templates
+* [InstantiateProject](docs/projecttemplates/README.md#instantiateproject) - Instantiate a project from a project template
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `AddCustomFieldSettingForProject` - Add a custom field to a project
-* `AddFollowersForProject` - Add followers to a project
-* `AddMembersForProject` - Add users to a project
-* `CreateProject` - Create a project
-* `CreateProjectForTeam` - Create a project in a team
-* `CreateProjectForWorkspace` - Create a project in a workspace
-* `DeleteProject` - Delete a project
-* `DuplicateProject` - Duplicate a project
-* `GetProject` - Get a project
-* `GetProjects` - Get multiple projects
-* `GetProjectsForTask` - Get projects a task is in
-* `GetProjectsForTeam` - Get a team's projects
-* `GetProjectsForWorkspace` - Get all projects in a workspace
-* `GetTaskCountsForProject` - Get task count of a project
-* `ProjectSaveAsTemplate` - Create a project template from a project
-* `RemoveCustomFieldSettingForProject` - Remove a custom field from a project
-* `RemoveFollowersForProject` - Remove followers from a project
-* `RemoveMembersForProject` - Remove users from a project
-* `UpdateProject` - Update a project
+* [AddCustomFieldSettingForProject](docs/projects/README.md#addcustomfieldsettingforproject) - Add a custom field to a project
+* [AddFollowersForProject](docs/projects/README.md#addfollowersforproject) - Add followers to a project
+* [AddMembersForProject](docs/projects/README.md#addmembersforproject) - Add users to a project
+* [CreateProject](docs/projects/README.md#createproject) - Create a project
+* [CreateProjectForTeam](docs/projects/README.md#createprojectforteam) - Create a project in a team
+* [CreateProjectForWorkspace](docs/projects/README.md#createprojectforworkspace) - Create a project in a workspace
+* [DeleteProject](docs/projects/README.md#deleteproject) - Delete a project
+* [DuplicateProject](docs/projects/README.md#duplicateproject) - Duplicate a project
+* [GetProject](docs/projects/README.md#getproject) - Get a project
+* [GetProjects](docs/projects/README.md#getprojects) - Get multiple projects
+* [GetProjectsForTask](docs/projects/README.md#getprojectsfortask) - Get projects a task is in
+* [GetProjectsForTeam](docs/projects/README.md#getprojectsforteam) - Get a team's projects
+* [GetProjectsForWorkspace](docs/projects/README.md#getprojectsforworkspace) - Get all projects in a workspace
+* [GetTaskCountsForProject](docs/projects/README.md#gettaskcountsforproject) - Get task count of a project
+* [ProjectSaveAsTemplate](docs/projects/README.md#projectsaveastemplate) - Create a project template from a project
+* [RemoveCustomFieldSettingForProject](docs/projects/README.md#removecustomfieldsettingforproject) - Remove a custom field from a project
+* [RemoveFollowersForProject](docs/projects/README.md#removefollowersforproject) - Remove followers from a project
+* [RemoveMembersForProject](docs/projects/README.md#removemembersforproject) - Remove users from a project
+* [UpdateProject](docs/projects/README.md#updateproject) - Update a project
 
-### Sections
+### [Sections](docs/sections/README.md)
 
-* `AddTaskForSection` - Add task to section
-* `CreateSectionForProject` - Create a section in a project
-* `DeleteSection` - Delete a section
-* `GetSection` - Get a section
-* `GetSectionsForProject` - Get sections in a project
-* `InsertSectionForProject` - Move or Insert sections
-* `UpdateSection` - Update a section
+* [AddTaskForSection](docs/sections/README.md#addtaskforsection) - Add task to section
+* [CreateSectionForProject](docs/sections/README.md#createsectionforproject) - Create a section in a project
+* [DeleteSection](docs/sections/README.md#deletesection) - Delete a section
+* [GetSection](docs/sections/README.md#getsection) - Get a section
+* [GetSectionsForProject](docs/sections/README.md#getsectionsforproject) - Get sections in a project
+* [InsertSectionForProject](docs/sections/README.md#insertsectionforproject) - Move or Insert sections
+* [UpdateSection](docs/sections/README.md#updatesection) - Update a section
 
-### StatusUpdates
+### [StatusUpdates](docs/statusupdates/README.md)
 
-* `CreateStatusForObject` - Create a status update
-* `DeleteStatus` - Delete a status update
-* `GetStatus` - Get a status update
-* `GetStatusesForObject` - Get status updates from an object
+* [CreateStatusForObject](docs/statusupdates/README.md#createstatusforobject) - Create a status update
+* [DeleteStatus](docs/statusupdates/README.md#deletestatus) - Delete a status update
+* [GetStatus](docs/statusupdates/README.md#getstatus) - Get a status update
+* [GetStatusesForObject](docs/statusupdates/README.md#getstatusesforobject) - Get status updates from an object
 
-### Stories
+### [Stories](docs/stories/README.md)
 
-* `CreateStoryForTask` - Create a story on a task
-* `DeleteStory` - Delete a story
-* `GetStoriesForTask` - Get stories from a task
-* `GetStory` - Get a story
-* `UpdateStory` - Update a story
+* [CreateStoryForTask](docs/stories/README.md#createstoryfortask) - Create a story on a task
+* [DeleteStory](docs/stories/README.md#deletestory) - Delete a story
+* [GetStoriesForTask](docs/stories/README.md#getstoriesfortask) - Get stories from a task
+* [GetStory](docs/stories/README.md#getstory) - Get a story
+* [UpdateStory](docs/stories/README.md#updatestory) - Update a story
 
-### Tags
+### [Tags](docs/tags/README.md)
 
-* `CreateTag` - Create a tag
-* `CreateTagForWorkspace` - Create a tag in a workspace
-* `DeleteTag` - Delete a tag
-* `GetTag` - Get a tag
-* `GetTags` - Get multiple tags
-* `GetTagsForTask` - Get a task's tags
-* `GetTagsForWorkspace` - Get tags in a workspace
-* `UpdateTag` - Update a tag
+* [CreateTag](docs/tags/README.md#createtag) - Create a tag
+* [CreateTagForWorkspace](docs/tags/README.md#createtagforworkspace) - Create a tag in a workspace
+* [DeleteTag](docs/tags/README.md#deletetag) - Delete a tag
+* [GetTag](docs/tags/README.md#gettag) - Get a tag
+* [GetTags](docs/tags/README.md#gettags) - Get multiple tags
+* [GetTagsForTask](docs/tags/README.md#gettagsfortask) - Get a task's tags
+* [GetTagsForWorkspace](docs/tags/README.md#gettagsforworkspace) - Get tags in a workspace
+* [UpdateTag](docs/tags/README.md#updatetag) - Update a tag
 
-### Tasks
+### [Tasks](docs/tasks/README.md)
 
-* `AddDependenciesForTask` - Set dependencies for a task
-* `AddDependentsForTask` - Set dependents for a task
-* `AddFollowersForTask` - Add followers to a task
-* `AddProjectForTask` - Add a project to a task
-* `AddTagForTask` - Add a tag to a task
-* `CreateSubtaskForTask` - Create a subtask
-* `CreateTask` - Create a task
-* `DeleteTask` - Delete a task
-* `DuplicateTask` - Duplicate a task
-* `GetDependenciesForTask` - Get dependencies from a task
-* `GetDependentsForTask` - Get dependents from a task
-* `GetSubtasksForTask` - Get subtasks from a task
-* `GetTask` - Get a task
-* `GetTasks` - Get multiple tasks
-* `GetTasksForProject` - Get tasks from a project
-* `GetTasksForSection` - Get tasks from a section
-* `GetTasksForTag` - Get tasks from a tag
-* `GetTasksForUserTaskList` - Get tasks from a user task list
-* `RemoveDependenciesForTask` - Unlink dependencies from a task
-* `RemoveDependentsForTask` - Unlink dependents from a task
-* `RemoveFollowerForTask` - Remove followers from a task
-* `RemoveProjectForTask` - Remove a project from a task
-* `RemoveTagForTask` - Remove a tag from a task
-* `SearchTasksForWorkspace` - Search tasks in a workspace
-* `SetParentForTask` - Set the parent of a task
-* `UpdateTask` - Update a task
+* [AddDependenciesForTask](docs/tasks/README.md#adddependenciesfortask) - Set dependencies for a task
+* [AddDependentsForTask](docs/tasks/README.md#adddependentsfortask) - Set dependents for a task
+* [AddFollowersForTask](docs/tasks/README.md#addfollowersfortask) - Add followers to a task
+* [AddProjectForTask](docs/tasks/README.md#addprojectfortask) - Add a project to a task
+* [AddTagForTask](docs/tasks/README.md#addtagfortask) - Add a tag to a task
+* [CreateSubtaskForTask](docs/tasks/README.md#createsubtaskfortask) - Create a subtask
+* [CreateTask](docs/tasks/README.md#createtask) - Create a task
+* [DeleteTask](docs/tasks/README.md#deletetask) - Delete a task
+* [DuplicateTask](docs/tasks/README.md#duplicatetask) - Duplicate a task
+* [GetDependenciesForTask](docs/tasks/README.md#getdependenciesfortask) - Get dependencies from a task
+* [GetDependentsForTask](docs/tasks/README.md#getdependentsfortask) - Get dependents from a task
+* [GetSubtasksForTask](docs/tasks/README.md#getsubtasksfortask) - Get subtasks from a task
+* [GetTask](docs/tasks/README.md#gettask) - Get a task
+* [GetTasks](docs/tasks/README.md#gettasks) - Get multiple tasks
+* [GetTasksForProject](docs/tasks/README.md#gettasksforproject) - Get tasks from a project
+* [GetTasksForSection](docs/tasks/README.md#gettasksforsection) - Get tasks from a section
+* [GetTasksForTag](docs/tasks/README.md#gettasksfortag) - Get tasks from a tag
+* [GetTasksForUserTaskList](docs/tasks/README.md#gettasksforusertasklist) - Get tasks from a user task list
+* [RemoveDependenciesForTask](docs/tasks/README.md#removedependenciesfortask) - Unlink dependencies from a task
+* [RemoveDependentsForTask](docs/tasks/README.md#removedependentsfortask) - Unlink dependents from a task
+* [RemoveFollowerForTask](docs/tasks/README.md#removefollowerfortask) - Remove followers from a task
+* [RemoveProjectForTask](docs/tasks/README.md#removeprojectfortask) - Remove a project from a task
+* [RemoveTagForTask](docs/tasks/README.md#removetagfortask) - Remove a tag from a task
+* [SearchTasksForWorkspace](docs/tasks/README.md#searchtasksforworkspace) - Search tasks in a workspace
+* [SetParentForTask](docs/tasks/README.md#setparentfortask) - Set the parent of a task
+* [UpdateTask](docs/tasks/README.md#updatetask) - Update a task
 
-### TeamMemberships
+### [TeamMemberships](docs/teammemberships/README.md)
 
-* `GetTeamMembership` - Get a team membership
-* `GetTeamMemberships` - Get team memberships
-* `GetTeamMembershipsForTeam` - Get memberships from a team
-* `GetTeamMembershipsForUser` - Get memberships from a user
+* [GetTeamMembership](docs/teammemberships/README.md#getteammembership) - Get a team membership
+* [GetTeamMemberships](docs/teammemberships/README.md#getteammemberships) - Get team memberships
+* [GetTeamMembershipsForTeam](docs/teammemberships/README.md#getteammembershipsforteam) - Get memberships from a team
+* [GetTeamMembershipsForUser](docs/teammemberships/README.md#getteammembershipsforuser) - Get memberships from a user
 
-### Teams
+### [Teams](docs/teams/README.md)
 
-* `AddUserForTeam` - Add a user to a team
-* `CreateTeam` - Create a team
-* `GetTeam` - Get a team
-* `GetTeamsForUser` - Get teams for a user
-* `GetTeamsForWorkspace` - Get teams in a workspace
-* `RemoveUserForTeam` - Remove a user from a team
-* `UpdateTeam` - Update a team
+* [AddUserForTeam](docs/teams/README.md#adduserforteam) - Add a user to a team
+* [CreateTeam](docs/teams/README.md#createteam) - Create a team
+* [GetTeam](docs/teams/README.md#getteam) - Get a team
+* [GetTeamsForUser](docs/teams/README.md#getteamsforuser) - Get teams for a user
+* [GetTeamsForWorkspace](docs/teams/README.md#getteamsforworkspace) - Get teams in a workspace
+* [RemoveUserForTeam](docs/teams/README.md#removeuserforteam) - Remove a user from a team
+* [UpdateTeam](docs/teams/README.md#updateteam) - Update a team
 
-### TimePeriods
+### [TimePeriods](docs/timeperiods/README.md)
 
-* `GetTimePeriod` - Get a time period
-* `GetTimePeriods` - Get time periods
+* [GetTimePeriod](docs/timeperiods/README.md#gettimeperiod) - Get a time period
+* [GetTimePeriods](docs/timeperiods/README.md#gettimeperiods) - Get time periods
 
-### Typeahead
+### [Typeahead](docs/typeahead/README.md)
 
-* `TypeaheadForWorkspace` - Get objects via typeahead
+* [TypeaheadForWorkspace](docs/typeahead/README.md#typeaheadforworkspace) - Get objects via typeahead
 
-### UserTaskLists
+### [UserTaskLists](docs/usertasklists/README.md)
 
-* `GetUserTaskList` - Get a user task list
-* `GetUserTaskListForUser` - Get a user's task list
+* [GetUserTaskList](docs/usertasklists/README.md#getusertasklist) - Get a user task list
+* [GetUserTaskListForUser](docs/usertasklists/README.md#getusertasklistforuser) - Get a user's task list
 
-### Users
+### [Users](docs/users/README.md)
 
-* `GetFavoritesForUser` - Get a user's favorites
-* `GetUser` - Get a user
-* `GetUsers` - Get multiple users
-* `GetUsersForTeam` - Get users in a team
-* `GetUsersForWorkspace` - Get users in a workspace or organization
+* [GetFavoritesForUser](docs/users/README.md#getfavoritesforuser) - Get a user's favorites
+* [GetUser](docs/users/README.md#getuser) - Get a user
+* [GetUsers](docs/users/README.md#getusers) - Get multiple users
+* [GetUsersForTeam](docs/users/README.md#getusersforteam) - Get users in a team
+* [GetUsersForWorkspace](docs/users/README.md#getusersforworkspace) - Get users in a workspace or organization
 
-### Webhooks
+### [Webhooks](docs/webhooks/README.md)
 
-* `CreateWebhook` - Establish a webhook
-* `DeleteWebhook` - Delete a webhook
-* `GetWebhook` - Get a webhook
-* `GetWebhooks` - Get multiple webhooks
-* `UpdateWebhook` - Update a webhook
+* [CreateWebhook](docs/webhooks/README.md#createwebhook) - Establish a webhook
+* [DeleteWebhook](docs/webhooks/README.md#deletewebhook) - Delete a webhook
+* [GetWebhook](docs/webhooks/README.md#getwebhook) - Get a webhook
+* [GetWebhooks](docs/webhooks/README.md#getwebhooks) - Get multiple webhooks
+* [UpdateWebhook](docs/webhooks/README.md#updatewebhook) - Update a webhook
 
-### WorkspaceMemberships
+### [WorkspaceMemberships](docs/workspacememberships/README.md)
 
-* `GetWorkspaceMembership` - Get a workspace membership
-* `GetWorkspaceMembershipsForUser` - Get workspace memberships for a user
-* `GetWorkspaceMembershipsForWorkspace` - Get the workspace memberships for a workspace
+* [GetWorkspaceMembership](docs/workspacememberships/README.md#getworkspacemembership) - Get a workspace membership
+* [GetWorkspaceMembershipsForUser](docs/workspacememberships/README.md#getworkspacemembershipsforuser) - Get workspace memberships for a user
+* [GetWorkspaceMembershipsForWorkspace](docs/workspacememberships/README.md#getworkspacemembershipsforworkspace) - Get the workspace memberships for a workspace
 
-### Workspaces
+### [Workspaces](docs/workspaces/README.md)
 
-* `AddUserForWorkspace` - Add a user to a workspace or organization
-* `GetWorkspace` - Get a workspace
-* `GetWorkspaces` - Get multiple workspaces
-* `RemoveUserForWorkspace` - Remove a user from a workspace or organization
-* `UpdateWorkspace` - Update a workspace
+* [AddUserForWorkspace](docs/workspaces/README.md#adduserforworkspace) - Add a user to a workspace or organization
+* [GetWorkspace](docs/workspaces/README.md#getworkspace) - Get a workspace
+* [GetWorkspaces](docs/workspaces/README.md#getworkspaces) - Get multiple workspaces
+* [RemoveUserForWorkspace](docs/workspaces/README.md#removeuserforworkspace) - Remove a user from a workspace or organization
+* [UpdateWorkspace](docs/workspaces/README.md#updateworkspace) - Update a workspace
 <!-- End SDK Available Operations -->
 
 ### Maturity

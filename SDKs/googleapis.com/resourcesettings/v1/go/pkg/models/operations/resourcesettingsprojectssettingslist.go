@@ -24,12 +24,16 @@ const (
 	ResourcesettingsProjectsSettingsListViewEnumSettingViewLocalValue     ResourcesettingsProjectsSettingsListViewEnum = "SETTING_VIEW_LOCAL_VALUE"
 )
 
+func (e ResourcesettingsProjectsSettingsListViewEnum) ToPointer() *ResourcesettingsProjectsSettingsListViewEnum {
+	return &e
+}
+
 func (e *ResourcesettingsProjectsSettingsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SETTING_VIEW_UNSPECIFIED":
 		fallthrough
 	case "SETTING_VIEW_BASIC":
@@ -37,10 +41,10 @@ func (e *ResourcesettingsProjectsSettingsListViewEnum) UnmarshalJSON(data []byte
 	case "SETTING_VIEW_EFFECTIVE_VALUE":
 		fallthrough
 	case "SETTING_VIEW_LOCAL_VALUE":
-		*e = ResourcesettingsProjectsSettingsListViewEnum(s)
+		*e = ResourcesettingsProjectsSettingsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourcesettingsProjectsSettingsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourcesettingsProjectsSettingsListViewEnum: %v", v)
 	}
 }
 

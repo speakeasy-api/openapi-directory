@@ -17,12 +17,16 @@ const (
 	NotificationMessageTypeEnumNewRecommendation NotificationMessageTypeEnum = "NEW_RECOMMENDATION"
 )
 
+func (e NotificationMessageTypeEnum) ToPointer() *NotificationMessageTypeEnum {
+	return &e
+}
+
 func (e *NotificationMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEW_INSIGHT":
 		fallthrough
 	case "CLOSED_INSIGHT":
@@ -32,9 +36,9 @@ func (e *NotificationMessageTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SEVERITY_UPGRADED":
 		fallthrough
 	case "NEW_RECOMMENDATION":
-		*e = NotificationMessageTypeEnum(s)
+		*e = NotificationMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationMessageTypeEnum: %v", v)
 	}
 }

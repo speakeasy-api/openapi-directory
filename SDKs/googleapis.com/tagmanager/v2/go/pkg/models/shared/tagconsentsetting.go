@@ -16,21 +16,25 @@ const (
 	TagConsentSettingConsentStatusEnumNeeded    TagConsentSettingConsentStatusEnum = "needed"
 )
 
+func (e TagConsentSettingConsentStatusEnum) ToPointer() *TagConsentSettingConsentStatusEnum {
+	return &e
+}
+
 func (e *TagConsentSettingConsentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "notSet":
 		fallthrough
 	case "notNeeded":
 		fallthrough
 	case "needed":
-		*e = TagConsentSettingConsentStatusEnum(s)
+		*e = TagConsentSettingConsentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagConsentSettingConsentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TagConsentSettingConsentStatusEnum: %v", v)
 	}
 }
 

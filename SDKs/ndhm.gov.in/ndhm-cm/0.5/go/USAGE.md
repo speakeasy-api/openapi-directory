@@ -2,18 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PostV05ConsentRequestsInitJSONRequest{
+    ctx := context.Background()
+    res, err := s.Consent.PostV05ConsentRequestsInitJSON(ctx, operations.PostV05ConsentRequestsInitJSONRequest{
         Authorization: "corrupti",
         ConsentRequest: shared.ConsentRequest{
             Consent: shared.ConsentRequestConsent{
@@ -32,40 +34,40 @@ func main() {
                     },
                 },
                 HiTypes: []shared.HITypeEnumEnum{
-                    "DiagnosticReport",
-                    "DischargeSummary",
-                    "DiagnosticReport",
+                    shared.HITypeEnumEnumDiagnosticReport,
+                    shared.HITypeEnumEnumDischargeSummary,
+                    shared.HITypeEnumEnumDiagnosticReport,
                 },
                 Hip: &shared.ConsentRequestConsentHip{
-                    ID: "corrupti",
+                    ID: "8d69a674-e0f4-467c-8879-6ed151a05dfc",
                 },
                 Hiu: shared.ConsentRequestConsentHiu{
-                    ID: "illum",
+                    ID: "2ddf7cc7-8ca1-4ba9-a8fc-816742cb7392",
                 },
                 Patient: shared.ConsentRequestConsentPatient{
                     ID: "hinapatel79@ndhm",
                 },
                 Permission: shared.Permission{
-                    AccessMode: "STORE",
-                    DataEraseAt: "2021-09-16T11:56:06.019Z",
+                    AccessMode: shared.PermissionAccessModeEnumView,
+                    DataEraseAt: types.MustTimeFromString("2022-05-20T13:30:46.463Z"),
                     DateRange: shared.PermissionDateRange{
-                        From: "2022-07-25T06:44:09.184Z",
-                        To: "2022-02-09T12:04:06.508Z",
+                        From: types.MustTimeFromString("2022-05-22T14:02:28.908Z"),
+                        To: types.MustTimeFromString("2022-05-20T19:39:29.035Z"),
                     },
                     Frequency: shared.PermissionFrequency{
-                        Repeats: 56713,
-                        Unit: "YEAR",
-                        Value: 272656,
+                        Repeats: sdk.Int64(386489),
+                        Unit: shared.PermissionFrequencyUnitEnumYear.ToPointer(),
+                        Value: sdk.Int64(902599),
                     },
                 },
                 Purpose: shared.UsePurpose{
-                    Code: "suscipit",
-                    RefURI: "http://spotted-skyline.name",
-                    Text: "iusto",
+                    Code: "fuga",
+                    RefURI: sdk.String("http://grown-opposite.info"),
+                    Text: "saepe",
                 },
                 Requester: shared.Requester{
                     Identifier: &shared.RequesterIdentifier{
-                        System: "https://www.mciindia.org",
+                        System: sdk.String("https://www.mciindia.org"),
                         Type: "REGNO",
                         Value: "MH1001",
                     },
@@ -73,12 +75,9 @@ func main() {
                 },
             },
             RequestID: "499a5a4a-7dda-4f20-9b67-e24589627061",
-            Timestamp: "2022-03-20T06:24:36.919Z",
+            Timestamp: types.MustTimeFromString("2022-10-20T12:36:28.767Z"),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.Consent.PostV05ConsentRequestsInitJSON(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

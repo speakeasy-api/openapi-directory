@@ -14,18 +14,22 @@ const (
 	TrainingRepositoryAccessModeEnumVpc      TrainingRepositoryAccessModeEnum = "Vpc"
 )
 
+func (e TrainingRepositoryAccessModeEnum) ToPointer() *TrainingRepositoryAccessModeEnum {
+	return &e
+}
+
 func (e *TrainingRepositoryAccessModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Platform":
 		fallthrough
 	case "Vpc":
-		*e = TrainingRepositoryAccessModeEnum(s)
+		*e = TrainingRepositoryAccessModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingRepositoryAccessModeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingRepositoryAccessModeEnum: %v", v)
 	}
 }

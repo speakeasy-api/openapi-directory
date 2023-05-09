@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -17,6 +18,7 @@ pkg/models/operations/discoveryengineprojectslocationsdatastoresbranchesdocument
 pkg/models/operations/discoveryengineprojectslocationsdatastoresbranchesdocumentsimport.go
 pkg/models/operations/discoveryengineprojectslocationsdatastoresbranchesdocumentslist.go
 pkg/models/operations/discoveryengineprojectslocationsdatastoresbranchesdocumentspatch.go
+pkg/models/operations/discoveryengineprojectslocationsdatastoresbranchesdocumentspurge.go
 pkg/models/operations/discoveryengineprojectslocationsdatastoresservingconfigsrecommend.go
 pkg/models/operations/discoveryengineprojectslocationsdatastoresusereventscollect.go
 pkg/models/operations/discoveryengineprojectslocationsdatastoresusereventsimport.go
@@ -35,6 +37,7 @@ pkg/models/shared/googleclouddiscoveryenginev1alphaimporterrorconfig.go
 pkg/models/shared/googleclouddiscoveryenginev1alphabigquerysource.go
 pkg/models/shared/googletypedate.go
 pkg/models/shared/googleclouddiscoveryenginev1alphalistdocumentsresponse.go
+pkg/models/shared/googleclouddiscoveryenginev1alphapurgedocumentsrequest.go
 pkg/models/shared/googleclouddiscoveryenginev1alpharecommendresponse.go
 pkg/models/shared/googleclouddiscoveryenginev1alpharecommendresponserecommendationresult.go
 pkg/models/shared/googleclouddiscoveryenginev1alpharecommendrequest.go
@@ -52,4 +55,6 @@ pkg/models/shared/googleapihttpbody.go
 pkg/models/shared/googleclouddiscoveryenginev1alphaimportusereventsrequest.go
 pkg/models/shared/googleclouddiscoveryenginev1alphaimportusereventsrequestinlinesource.go
 pkg/models/shared/googlelongrunninglistoperationsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

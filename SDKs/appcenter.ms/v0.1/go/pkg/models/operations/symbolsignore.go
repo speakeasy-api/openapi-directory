@@ -44,19 +44,23 @@ const (
 	SymbolsIgnore200ApplicationJSONOriginEnumUser   SymbolsIgnore200ApplicationJSONOriginEnum = "User"
 )
 
+func (e SymbolsIgnore200ApplicationJSONOriginEnum) ToPointer() *SymbolsIgnore200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *SymbolsIgnore200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "System":
 		fallthrough
 	case "User":
-		*e = SymbolsIgnore200ApplicationJSONOriginEnum(s)
+		*e = SymbolsIgnore200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymbolsIgnore200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for SymbolsIgnore200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -68,19 +72,23 @@ const (
 	SymbolsIgnore200ApplicationJSONStatusEnumIgnored   SymbolsIgnore200ApplicationJSONStatusEnum = "ignored"
 )
 
+func (e SymbolsIgnore200ApplicationJSONStatusEnum) ToPointer() *SymbolsIgnore200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *SymbolsIgnore200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "ignored":
-		*e = SymbolsIgnore200ApplicationJSONStatusEnum(s)
+		*e = SymbolsIgnore200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymbolsIgnore200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SymbolsIgnore200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -95,12 +103,16 @@ const (
 	SymbolsIgnore200ApplicationJSONTypeEnumUwp             SymbolsIgnore200ApplicationJSONTypeEnum = "UWP"
 )
 
+func (e SymbolsIgnore200ApplicationJSONTypeEnum) ToPointer() *SymbolsIgnore200ApplicationJSONTypeEnum {
+	return &e
+}
+
 func (e *SymbolsIgnore200ApplicationJSONTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Apple":
 		fallthrough
 	case "JavaScript":
@@ -110,10 +122,10 @@ func (e *SymbolsIgnore200ApplicationJSONTypeEnum) UnmarshalJSON(data []byte) err
 	case "AndroidProguard":
 		fallthrough
 	case "UWP":
-		*e = SymbolsIgnore200ApplicationJSONTypeEnum(s)
+		*e = SymbolsIgnore200ApplicationJSONTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymbolsIgnore200ApplicationJSONTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SymbolsIgnore200ApplicationJSONTypeEnum: %v", v)
 	}
 }
 

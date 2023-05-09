@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/docker.com/dvp/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,13 +27,11 @@ func main() {
         }),
     )
 
-    req := shared.Users2FALoginRequest{
+    ctx := context.Background()
+    res, err := s.Authentication.PostUsers2FALogin(ctx, shared.Users2FALoginRequest{
         Code: "123456",
         Login2faToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
-    }
-
-    ctx := context.Background()
-    res, err := s.Authentication.PostUsers2FALogin(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -50,22 +47,22 @@ func main() {
 ## Available Resources and Operations
 
 
-### Authentication
+### [Authentication](docs/authentication/README.md)
 
-* `PostUsers2FALogin` - Second factor authentication.
-* `PostUsersLogin` - Create an authentication token
+* [PostUsers2FALogin](docs/authentication/README.md#postusers2falogin) - Second factor authentication.
+* [PostUsersLogin](docs/authentication/README.md#postuserslogin) - Create an authentication token
 
-### Discovery
+### [Discovery](docs/discovery/README.md)
 
-* `GetNamespace` - Get namespace
-* `GetNamespaces` - Get namespaces and repos
+* [GetNamespace](docs/discovery/README.md#getnamespace) - Get namespace
+* [GetNamespaces](docs/discovery/README.md#getnamespaces) - Get namespaces and repos
 
-### Namespaces
+### [Namespaces](docs/namespaces/README.md)
 
-* `GetNamespaceDataByTimespan` - Get namespace data for timespan
-* `GetNamespaceTimespanMetadata` - Get namespace metadata for timespan
-* `GetNamespaceTimespans` - Get timespans with data
-* `GetNamespaceYears` - Get years with data
+* [GetNamespaceDataByTimespan](docs/namespaces/README.md#getnamespacedatabytimespan) - Get namespace data for timespan
+* [GetNamespaceTimespanMetadata](docs/namespaces/README.md#getnamespacetimespanmetadata) - Get namespace metadata for timespan
+* [GetNamespaceTimespans](docs/namespaces/README.md#getnamespacetimespans) - Get timespans with data
+* [GetNamespaceYears](docs/namespaces/README.md#getnamespaceyears) - Get years with data
 <!-- End SDK Available Operations -->
 
 ### Maturity

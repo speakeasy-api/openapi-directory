@@ -18,12 +18,16 @@ const (
 	VideoDiscoveryAdThumbnailEnumThumbnail3           VideoDiscoveryAdThumbnailEnum = "THUMBNAIL_3"
 )
 
+func (e VideoDiscoveryAdThumbnailEnum) ToPointer() *VideoDiscoveryAdThumbnailEnum {
+	return &e
+}
+
 func (e *VideoDiscoveryAdThumbnailEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THUMBNAIL_UNSPECIFIED":
 		fallthrough
 	case "THUMBNAIL_DEFAULT":
@@ -33,10 +37,10 @@ func (e *VideoDiscoveryAdThumbnailEnum) UnmarshalJSON(data []byte) error {
 	case "THUMBNAIL_2":
 		fallthrough
 	case "THUMBNAIL_3":
-		*e = VideoDiscoveryAdThumbnailEnum(s)
+		*e = VideoDiscoveryAdThumbnailEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoDiscoveryAdThumbnailEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoDiscoveryAdThumbnailEnum: %v", v)
 	}
 }
 

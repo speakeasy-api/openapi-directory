@@ -14,18 +14,22 @@ const (
 	ScalingModeEnumManaged  ScalingModeEnum = "MANAGED"
 )
 
+func (e ScalingModeEnum) ToPointer() *ScalingModeEnum {
+	return &e
+}
+
 func (e *ScalingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD":
 		fallthrough
 	case "MANAGED":
-		*e = ScalingModeEnum(s)
+		*e = ScalingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScalingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScalingModeEnum: %v", v)
 	}
 }

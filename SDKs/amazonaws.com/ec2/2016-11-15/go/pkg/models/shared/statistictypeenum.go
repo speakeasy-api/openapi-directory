@@ -13,16 +13,20 @@ const (
 	StatisticTypeEnumP50 StatisticTypeEnum = "p50"
 )
 
+func (e StatisticTypeEnum) ToPointer() *StatisticTypeEnum {
+	return &e
+}
+
 func (e *StatisticTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "p50":
-		*e = StatisticTypeEnum(s)
+		*e = StatisticTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatisticTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StatisticTypeEnum: %v", v)
 	}
 }

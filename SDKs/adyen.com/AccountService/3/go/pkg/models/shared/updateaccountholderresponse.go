@@ -9,7 +9,7 @@ type UpdateAccountHolderResponse struct {
 	AccountHolderDetails *AccountHolderDetails `json:"accountHolderDetails,omitempty"`
 	AccountHolderStatus  *AccountHolderStatus  `json:"accountHolderStatus,omitempty"`
 	// in case the account holder has not been updated, contains account holder fields, that did not pass the validation.
-	InvalidFields []ErrorFieldType `json:"invalidFields,omitempty"`
+	InvalidFields []ErrorFieldTypeWrapper `json:"invalidFields,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
 	PspReference *string `json:"pspReference,omitempty"`
 	// The result code.
@@ -19,6 +19,6 @@ type UpdateAccountHolderResponse struct {
 	// * **false**: The processing of the request is immediately attempted; it may result in an error if the providing service is unavailable.
 	SubmittedAsync *bool `json:"submittedAsync,omitempty"`
 	// A list of the fields updated through the request.
-	UpdatedFields []FieldType            `json:"updatedFields,omitempty"`
+	UpdatedFields []FieldTypeWrapper     `json:"updatedFields,omitempty"`
 	Verification  *KYCVerificationResult `json:"verification,omitempty"`
 }

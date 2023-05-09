@@ -14,18 +14,22 @@ const (
 	SpotInstanceTypeEnumPersistent SpotInstanceTypeEnum = "persistent"
 )
 
+func (e SpotInstanceTypeEnum) ToPointer() *SpotInstanceTypeEnum {
+	return &e
+}
+
 func (e *SpotInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "one-time":
 		fallthrough
 	case "persistent":
-		*e = SpotInstanceTypeEnum(s)
+		*e = SpotInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpotInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SpotInstanceTypeEnum: %v", v)
 	}
 }

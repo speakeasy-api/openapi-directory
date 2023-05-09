@@ -15,17 +15,21 @@ const (
 	POSTTestRenderTemplateActionEnumTestRenderTemplate POSTTestRenderTemplateActionEnum = "TestRenderTemplate"
 )
 
+func (e POSTTestRenderTemplateActionEnum) ToPointer() *POSTTestRenderTemplateActionEnum {
+	return &e
+}
+
 func (e *POSTTestRenderTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TestRenderTemplate":
-		*e = POSTTestRenderTemplateActionEnum(s)
+		*e = POSTTestRenderTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTestRenderTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTestRenderTemplateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTTestRenderTemplateVersionEnumTwoThousandAndTen1201 POSTTestRenderTemplateVersionEnum = "2010-12-01"
 )
 
+func (e POSTTestRenderTemplateVersionEnum) ToPointer() *POSTTestRenderTemplateVersionEnum {
+	return &e
+}
+
 func (e *POSTTestRenderTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTTestRenderTemplateVersionEnum(s)
+		*e = POSTTestRenderTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTestRenderTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTestRenderTemplateVersionEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newMonetization(defaultClient, securityClient HTTPClient, serverURL, langua
 // AndroidpublisherMonetizationConvertRegionPrices - Calculates the region prices, using today's exchange rate and country-specific pricing patterns, based on the price in the request for a set of regions.
 func (s *monetization) AndroidpublisherMonetizationConvertRegionPrices(ctx context.Context, request operations.AndroidpublisherMonetizationConvertRegionPricesRequest, security operations.AndroidpublisherMonetizationConvertRegionPricesSecurity) (*operations.AndroidpublisherMonetizationConvertRegionPricesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/pricing:convertRegionPrices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/pricing:convertRegionPrices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConvertRegionPricesRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *monetization) AndroidpublisherMonetizationConvertRegionPrices(ctx conte
 // AndroidpublisherMonetizationSubscriptionsArchive - Archives a subscription. Can only be done if at least one base plan was active in the past, and no base plan is available for new or existing subscribers currently. This action is irreversible, and the subscription ID will remain reserved.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsArchive(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsArchiveRequest, security operations.AndroidpublisherMonetizationSubscriptionsArchiveSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}:archive", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}:archive", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsArchive(ctx cont
 // AndroidpublisherMonetizationSubscriptionsBasePlansActivate - Activates a base plan. Once activated, base plans will be available to new subscribers.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansActivate(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateRequest, security operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:activate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:activate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansActivat
 // AndroidpublisherMonetizationSubscriptionsBasePlansDeactivate - Deactivates a base plan. Once deactivated, the base plan will become unavailable to new subscribers, but existing subscribers will maintain their subscription
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansDeactivate(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateRequest, security operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:deactivate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:deactivate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -254,7 +266,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansDeactiv
 // AndroidpublisherMonetizationSubscriptionsBasePlansDelete - Deletes a base plan. Can only be done for draft base plans. This action is irreversible.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansDelete(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest, security operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -293,7 +308,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansDelete(
 // AndroidpublisherMonetizationSubscriptionsBasePlansMigratePrices - Migrates subscribers who are receiving an historical subscription price to the currently-offered price for the specified region. Requests will cause price change notifications to be sent to users who are currently receiving an historical price older than the supplied timestamp. Subscribers who do not agree to the new price will have their subscription ended at the next renewal.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansMigratePrices(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesRequest, security operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:migratePrices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:migratePrices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MigrateBasePlanPricesRequest", "json")
 	if err != nil {
@@ -348,7 +366,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansMigrate
 // AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivate - Activates a subscription offer. Once activated, subscription offers will be available to new subscribers.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivate(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateRequest, security operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}:activate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}:activate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -403,7 +424,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersA
 // AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreate - Creates a new subscription offer. Only auto-renewing base plans can have subscription offers. The offer state will be DRAFT until it is activated.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreate(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateRequest, security operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscriptionOfferInput", "json")
 	if err != nil {
@@ -458,7 +482,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersC
 // AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivate - Deactivates a subscription offer. Once deactivated, existing subscribers will maintain their subscription, but the offer will become unavailable to new subscribers.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivate(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateRequest, security operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}:deactivate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}:deactivate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -513,7 +540,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersD
 // AndroidpublisherMonetizationSubscriptionsBasePlansOffersDelete - Deletes a subscription offer. Can only be done for draft offers. This action is irreversible.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersDelete(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteRequest, security operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -552,7 +582,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersD
 // AndroidpublisherMonetizationSubscriptionsBasePlansOffersGet - Reads a single offer
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersGet(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest, security operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -600,7 +633,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersG
 // AndroidpublisherMonetizationSubscriptionsBasePlansOffersList - Lists all offers under a given subscription.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersList(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRequest, security operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -648,7 +684,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersL
 // AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatch - Updates an existing subscription offer.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatch(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest, security operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscriptionOfferInput", "json")
 	if err != nil {
@@ -703,7 +742,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsBasePlansOffersP
 // AndroidpublisherMonetizationSubscriptionsCreate - Creates a new subscription. Newly added base plans will remain in draft state until activated.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsCreate(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsCreateRequest, security operations.AndroidpublisherMonetizationSubscriptionsCreateSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscriptionInput", "json")
 	if err != nil {
@@ -758,7 +800,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsCreate(ctx conte
 // AndroidpublisherMonetizationSubscriptionsDelete - Deletes a subscription. A subscription can only be deleted if it has never had a base plan published.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsDelete(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsDeleteRequest, security operations.AndroidpublisherMonetizationSubscriptionsDeleteSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -797,7 +842,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsDelete(ctx conte
 // AndroidpublisherMonetizationSubscriptionsGet - Reads a single subscription.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsGet(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsGetRequest, security operations.AndroidpublisherMonetizationSubscriptionsGetSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -845,7 +893,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsGet(ctx context.
 // AndroidpublisherMonetizationSubscriptionsList - Lists all subscriptions under a given app.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsList(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsListRequest, security operations.AndroidpublisherMonetizationSubscriptionsListSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -893,7 +944,10 @@ func (s *monetization) AndroidpublisherMonetizationSubscriptionsList(ctx context
 // AndroidpublisherMonetizationSubscriptionsPatch - Updates an existing subscription.
 func (s *monetization) AndroidpublisherMonetizationSubscriptionsPatch(ctx context.Context, request operations.AndroidpublisherMonetizationSubscriptionsPatchRequest, security operations.AndroidpublisherMonetizationSubscriptionsPatchSecurity) (*operations.AndroidpublisherMonetizationSubscriptionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscriptionInput", "json")
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	PersistenceConfigPersistenceModeEnumRdb                        PersistenceConfigPersistenceModeEnum = "RDB"
 )
 
+func (e PersistenceConfigPersistenceModeEnum) ToPointer() *PersistenceConfigPersistenceModeEnum {
+	return &e
+}
+
 func (e *PersistenceConfigPersistenceModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERSISTENCE_MODE_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "RDB":
-		*e = PersistenceConfigPersistenceModeEnum(s)
+		*e = PersistenceConfigPersistenceModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PersistenceConfigPersistenceModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PersistenceConfigPersistenceModeEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	PersistenceConfigRdbSnapshotPeriodEnumTwentyFourHours           PersistenceConfigRdbSnapshotPeriodEnum = "TWENTY_FOUR_HOURS"
 )
 
+func (e PersistenceConfigRdbSnapshotPeriodEnum) ToPointer() *PersistenceConfigRdbSnapshotPeriodEnum {
+	return &e
+}
+
 func (e *PersistenceConfigRdbSnapshotPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SNAPSHOT_PERIOD_UNSPECIFIED":
 		fallthrough
 	case "ONE_HOUR":
@@ -60,10 +68,10 @@ func (e *PersistenceConfigRdbSnapshotPeriodEnum) UnmarshalJSON(data []byte) erro
 	case "TWELVE_HOURS":
 		fallthrough
 	case "TWENTY_FOUR_HOURS":
-		*e = PersistenceConfigRdbSnapshotPeriodEnum(s)
+		*e = PersistenceConfigRdbSnapshotPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PersistenceConfigRdbSnapshotPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for PersistenceConfigRdbSnapshotPeriodEnum: %v", v)
 	}
 }
 

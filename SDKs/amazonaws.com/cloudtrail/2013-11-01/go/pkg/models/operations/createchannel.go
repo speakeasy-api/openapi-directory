@@ -16,17 +16,21 @@ const (
 	CreateChannelXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101CreateChannel CreateChannelXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.CreateChannel"
 )
 
+func (e CreateChannelXAmzTargetEnum) ToPointer() *CreateChannelXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateChannelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.CreateChannel":
-		*e = CreateChannelXAmzTargetEnum(s)
+		*e = CreateChannelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateChannelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateChannelXAmzTargetEnum: %v", v)
 	}
 }
 

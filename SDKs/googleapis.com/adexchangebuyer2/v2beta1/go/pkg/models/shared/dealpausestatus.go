@@ -16,21 +16,25 @@ const (
 	DealPauseStatusFirstPausedByEnumSeller                     DealPauseStatusFirstPausedByEnum = "SELLER"
 )
 
+func (e DealPauseStatusFirstPausedByEnum) ToPointer() *DealPauseStatusFirstPausedByEnum {
+	return &e
+}
+
 func (e *DealPauseStatusFirstPausedByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUYER_SELLER_ROLE_UNSPECIFIED":
 		fallthrough
 	case "BUYER":
 		fallthrough
 	case "SELLER":
-		*e = DealPauseStatusFirstPausedByEnum(s)
+		*e = DealPauseStatusFirstPausedByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DealPauseStatusFirstPausedByEnum: %s", s)
+		return fmt.Errorf("invalid value for DealPauseStatusFirstPausedByEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	RequestedPipeStateEnumStopped RequestedPipeStateEnum = "STOPPED"
 )
 
+func (e RequestedPipeStateEnum) ToPointer() *RequestedPipeStateEnum {
+	return &e
+}
+
 func (e *RequestedPipeStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "STOPPED":
-		*e = RequestedPipeStateEnum(s)
+		*e = RequestedPipeStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestedPipeStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestedPipeStateEnum: %v", v)
 	}
 }

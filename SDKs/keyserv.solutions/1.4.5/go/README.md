@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/keyserv.solutions/1.4.5/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.KeysAPICurrentRequest{
-        Serial: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.KeysAPI.KeysAPICurrent(ctx, req)
+    res, err := s.KeysAPI.KeysAPICurrent(ctx, operations.KeysAPICurrentRequest{
+        Serial: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,38 +42,38 @@ func main() {
 ## Available Resources and Operations
 
 
-### KeysAPI
+### [KeysAPI](docs/keysapi/README.md)
 
-* `KeysAPICurrent`
-* `KeysAPICustom`
-* `KeysAPIExpiry`
-* `KeysAPIFind`
+* [KeysAPICurrent](docs/keysapi/README.md#keysapicurrent)
+* [KeysAPICustom](docs/keysapi/README.md#keysapicustom)
+* [KeysAPIExpiry](docs/keysapi/README.md#keysapiexpiry)
+* [KeysAPIFind](docs/keysapi/README.md#keysapifind)
 
-### ProductsAPI
+### [ProductsAPI](docs/productsapi/README.md)
 
-* `ProductsAPICount`
-* `ProductsAPIDeleteProduct`
-* `ProductsAPIDeleteProduct2`
-* `ProductsAPIFind`
-* `ProductsAPIList`
-* `ProductsAPIPatchProduct`
-* `ProductsAPIPatchProduct2`
-* `ProductsAPISave`
+* [ProductsAPICount](docs/productsapi/README.md#productsapicount)
+* [ProductsAPIDeleteProduct](docs/productsapi/README.md#productsapideleteproduct)
+* [ProductsAPIDeleteProduct2](docs/productsapi/README.md#productsapideleteproduct2)
+* [ProductsAPIFind](docs/productsapi/README.md#productsapifind)
+* [ProductsAPIList](docs/productsapi/README.md#productsapilist)
+* [ProductsAPIPatchProduct](docs/productsapi/README.md#productsapipatchproduct)
+* [ProductsAPIPatchProduct2](docs/productsapi/README.md#productsapipatchproduct2)
+* [ProductsAPISave](docs/productsapi/README.md#productsapisave)
 
-### SubscriptionsAPI
+### [SubscriptionsAPI](docs/subscriptionsapi/README.md)
 
-* `SubscriptionsAPICount`
-* `SubscriptionsAPIDeleteSubscription`
-* `SubscriptionsAPIDeleteSubscription2`
-* `SubscriptionsAPIDisable`
-* `SubscriptionsAPIDisable2`
-* `SubscriptionsAPIEnable`
-* `SubscriptionsAPIEnable2`
-* `SubscriptionsAPIFind`
-* `SubscriptionsAPIList`
-* `SubscriptionsAPIPutSubscription`
-* `SubscriptionsAPIPutSubscription2`
-* `SubscriptionsAPISave`
+* [SubscriptionsAPICount](docs/subscriptionsapi/README.md#subscriptionsapicount)
+* [SubscriptionsAPIDeleteSubscription](docs/subscriptionsapi/README.md#subscriptionsapideletesubscription)
+* [SubscriptionsAPIDeleteSubscription2](docs/subscriptionsapi/README.md#subscriptionsapideletesubscription2)
+* [SubscriptionsAPIDisable](docs/subscriptionsapi/README.md#subscriptionsapidisable)
+* [SubscriptionsAPIDisable2](docs/subscriptionsapi/README.md#subscriptionsapidisable2)
+* [SubscriptionsAPIEnable](docs/subscriptionsapi/README.md#subscriptionsapienable)
+* [SubscriptionsAPIEnable2](docs/subscriptionsapi/README.md#subscriptionsapienable2)
+* [SubscriptionsAPIFind](docs/subscriptionsapi/README.md#subscriptionsapifind)
+* [SubscriptionsAPIList](docs/subscriptionsapi/README.md#subscriptionsapilist)
+* [SubscriptionsAPIPutSubscription](docs/subscriptionsapi/README.md#subscriptionsapiputsubscription)
+* [SubscriptionsAPIPutSubscription2](docs/subscriptionsapi/README.md#subscriptionsapiputsubscription2)
+* [SubscriptionsAPISave](docs/subscriptionsapi/README.md#subscriptionsapisave)
 <!-- End SDK Available Operations -->
 
 ### Maturity

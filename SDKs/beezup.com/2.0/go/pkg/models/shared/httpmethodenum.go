@@ -19,12 +19,16 @@ const (
 	HTTPMethodEnumHead   HTTPMethodEnum = "HEAD"
 )
 
+func (e HTTPMethodEnum) ToPointer() *HTTPMethodEnum {
+	return &e
+}
+
 func (e *HTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "POST":
@@ -36,9 +40,9 @@ func (e *HTTPMethodEnum) UnmarshalJSON(data []byte) error {
 	case "PUT":
 		fallthrough
 	case "HEAD":
-		*e = HTTPMethodEnum(s)
+		*e = HTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for HTTPMethodEnum: %v", v)
 	}
 }

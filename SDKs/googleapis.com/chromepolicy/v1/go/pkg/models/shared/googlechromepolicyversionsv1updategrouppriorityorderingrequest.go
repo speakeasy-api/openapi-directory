@@ -6,8 +6,10 @@ package shared
 type GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest struct {
 	// Required. The group IDs, in desired priority ordering.
 	GroupIds []string `json:"groupIds,omitempty"`
-	// Required. The namespace of the policy type for the request.
+	// The namespace of the policy type for the request.
 	PolicyNamespace *string `json:"policyNamespace,omitempty"`
+	// The schema name of the policy for the request.
+	PolicySchema *string `json:"policySchema,omitempty"`
 	// The key used to identify the target on which the policy will be applied.
 	PolicyTargetKey *GoogleChromePolicyVersionsV1PolicyTargetKey `json:"policyTargetKey,omitempty"`
 }

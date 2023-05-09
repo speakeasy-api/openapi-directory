@@ -26,17 +26,21 @@ const (
 	ArcmwRequestBodyFormatEnumPdf ArcmwRequestBodyFormatEnum = "pdf"
 )
 
+func (e ArcmwRequestBodyFormatEnum) ToPointer() *ArcmwRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *ArcmwRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = ArcmwRequestBodyFormatEnum(s)
+		*e = ArcmwRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArcmwRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ArcmwRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -56,17 +60,21 @@ const (
 	Arcmw504ApplicationJSONErrorEnumGatewayTimeout Arcmw504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Arcmw504ApplicationJSONErrorEnum) ToPointer() *Arcmw504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Arcmw504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Arcmw504ApplicationJSONErrorEnum(s)
+		*e = Arcmw504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -76,17 +84,21 @@ const (
 	Arcmw504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Arcmw504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Arcmw504ApplicationJSONErrorDescriptionEnum) ToPointer() *Arcmw504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Arcmw504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Arcmw504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Arcmw504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -102,17 +114,21 @@ const (
 	Arcmw503ApplicationJSONErrorEnumServiceUnavailable Arcmw503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Arcmw503ApplicationJSONErrorEnum) ToPointer() *Arcmw503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Arcmw503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Arcmw503ApplicationJSONErrorEnum(s)
+		*e = Arcmw503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -122,17 +138,21 @@ const (
 	Arcmw503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Arcmw503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Arcmw503ApplicationJSONErrorDescriptionEnum) ToPointer() *Arcmw503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Arcmw503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Arcmw503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Arcmw503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -148,17 +168,21 @@ const (
 	Arcmw502ApplicationJSONErrorEnumBadGatewy Arcmw502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Arcmw502ApplicationJSONErrorEnum) ToPointer() *Arcmw502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Arcmw502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Arcmw502ApplicationJSONErrorEnum(s)
+		*e = Arcmw502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -168,17 +192,21 @@ const (
 	Arcmw502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Arcmw502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Arcmw502ApplicationJSONErrorDescriptionEnum) ToPointer() *Arcmw502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Arcmw502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Arcmw502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Arcmw502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -194,17 +222,21 @@ const (
 	Arcmw500ApplicationJSONErrorEnumInternalServerError Arcmw500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Arcmw500ApplicationJSONErrorEnum) ToPointer() *Arcmw500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Arcmw500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Arcmw500ApplicationJSONErrorEnum(s)
+		*e = Arcmw500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -214,17 +246,21 @@ const (
 	Arcmw500ApplicationJSONErrorDescriptionEnumInternalServerError Arcmw500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Arcmw500ApplicationJSONErrorDescriptionEnum) ToPointer() *Arcmw500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Arcmw500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Arcmw500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Arcmw500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -241,19 +277,23 @@ const (
 	Arcmw404ApplicationJSONErrorEnumURLNotFound    Arcmw404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Arcmw404ApplicationJSONErrorEnum) ToPointer() *Arcmw404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Arcmw404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Arcmw404ApplicationJSONErrorEnum(s)
+		*e = Arcmw404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -264,19 +304,23 @@ const (
 	Arcmw404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Arcmw404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Arcmw404ApplicationJSONErrorDescriptionEnum) ToPointer() *Arcmw404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Arcmw404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Arcmw404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Arcmw404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -293,19 +337,23 @@ const (
 	Arcmw401ApplicationJSONErrorEnumInvalidAuthorization  Arcmw401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Arcmw401ApplicationJSONErrorEnum) ToPointer() *Arcmw401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Arcmw401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Arcmw401ApplicationJSONErrorEnum(s)
+		*e = Arcmw401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -316,19 +364,23 @@ const (
 	Arcmw401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Arcmw401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Arcmw401ApplicationJSONErrorDescriptionEnum) ToPointer() *Arcmw401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Arcmw401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Arcmw401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Arcmw401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -348,12 +400,16 @@ const (
 	Arcmw400ApplicationJSONErrorEnumInvalidConsentid Arcmw400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Arcmw400ApplicationJSONErrorEnum) ToPointer() *Arcmw400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Arcmw400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -363,10 +419,10 @@ func (e *Arcmw400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Arcmw400ApplicationJSONErrorEnum(s)
+		*e = Arcmw400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -380,12 +436,16 @@ const (
 	Arcmw400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Arcmw400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Arcmw400ApplicationJSONErrorDescriptionEnum) ToPointer() *Arcmw400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Arcmw400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -395,10 +455,10 @@ func (e *Arcmw400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Arcmw400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Arcmw400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Arcmw400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Arcmw400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

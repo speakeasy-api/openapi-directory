@@ -17,12 +17,16 @@ const (
 	ExecutionStateEnumComplete     ExecutionStateEnum = "complete"
 )
 
+func (e ExecutionStateEnum) ToPointer() *ExecutionStateEnum {
+	return &e
+}
+
 func (e *ExecutionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknownState":
 		fallthrough
 	case "pending":
@@ -30,14 +34,14 @@ func (e *ExecutionStateEnum) UnmarshalJSON(data []byte) error {
 	case "inProgress":
 		fallthrough
 	case "complete":
-		*e = ExecutionStateEnum(s)
+		*e = ExecutionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionStateEnum: %v", v)
 	}
 }
 
-// Execution - An Execution represents a collection of Steps. For instance, it could represent: - a mobile test executed across a range of device configurations - a jenkins job with a build step followed by a test step The maximum size of an execution message is 1 MiB. An Execution can be updated until its state is set to COMPLETE at which point it becomes immutable. Next tag: 16
+// Execution - An Execution represents a collection of Steps. For instance, it could represent: - a mobile test executed across a range of device configurations - a jenkins job with a build step followed by a test step The maximum size of an execution message is 1 MiB. An Execution can be updated until its state is set to COMPLETE at which point it becomes immutable. Next tag: 17
 type Execution struct {
 	// A Timestamp represents a point in time independent of any time zone or local calendar, encoded as a count of seconds and fractions of seconds at nanosecond resolution. The count is relative to an epoch at UTC midnight on January 1, 1970, in the proleptic Gregorian calendar which extends the Gregorian calendar backwards to year one. All minutes are 60 seconds long. Leap seconds are "smeared" so that no leap second table is needed for interpretation, using a [24-hour linear smear](https://developers.google.com/time/smear). The range is from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59.999999999Z. By restricting to that range, we ensure that we can convert to and from [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) date strings.
 	CompletionTime *Timestamp `json:"completionTime,omitempty"`

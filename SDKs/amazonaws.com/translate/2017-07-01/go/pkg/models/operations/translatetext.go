@@ -16,17 +16,21 @@ const (
 	TranslateTextXAmzTargetEnumAwsShineFrontendService20170701TranslateText TranslateTextXAmzTargetEnum = "AWSShineFrontendService_20170701.TranslateText"
 )
 
+func (e TranslateTextXAmzTargetEnum) ToPointer() *TranslateTextXAmzTargetEnum {
+	return &e
+}
+
 func (e *TranslateTextXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShineFrontendService_20170701.TranslateText":
-		*e = TranslateTextXAmzTargetEnum(s)
+		*e = TranslateTextXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TranslateTextXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TranslateTextXAmzTargetEnum: %v", v)
 	}
 }
 

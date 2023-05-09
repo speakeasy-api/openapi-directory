@@ -34,7 +34,10 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreate - Creates a GcpUserAccessBinding. If the client specifies a name, the server ignores it. Fails if a resource already exists with the same group_key. Completion of this long-running operation does not necessarily signify that the new binding is deployed onto all affected users, which may take more time.
 func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreate(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateRequest, security operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateSecurity) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gcpUserAccessBindings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gcpUserAccessBindings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GcpUserAccessBinding", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsCr
 // AccesscontextmanagerOrganizationsGcpUserAccessBindingsDelete - Deletes a GcpUserAccessBinding. Completion of this long-running operation does not necessarily signify that the binding deletion is deployed onto all affected users, which may take more time.
 func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsDelete(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteRequest, security operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteSecurity) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsDe
 // AccesscontextmanagerOrganizationsGcpUserAccessBindingsGet - Gets the GcpUserAccessBinding with the given name.
 func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsGet(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetRequest, security operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetSecurity) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsGe
 // AccesscontextmanagerOrganizationsGcpUserAccessBindingsList - Lists all GcpUserAccessBindings for a Google Cloud organization.
 func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsList(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListRequest, security operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListSecurity) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gcpUserAccessBindings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gcpUserAccessBindings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsLi
 // AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatch - Updates a GcpUserAccessBinding. Completion of this long-running operation does not necessarily signify that the changed binding is deployed onto all affected users, which may take more time.
 func (s *organizations) AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatch(ctx context.Context, request operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest, security operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchSecurity) (*operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GcpUserAccessBinding", "json")
 	if err != nil {

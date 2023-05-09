@@ -15,21 +15,25 @@ const (
 	GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnumReplied                         GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum = "REPLIED"
 )
 
+func (e GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum) ToPointer() *GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEEDBACK_THREAD_STATUS_UNSPECIFIED":
 		fallthrough
 	case "NEW":
 		fallthrough
 	case "REPLIED":
-		*e = GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1FeedbackThreadMetadataStatusEnum: %v", v)
 	}
 }
 

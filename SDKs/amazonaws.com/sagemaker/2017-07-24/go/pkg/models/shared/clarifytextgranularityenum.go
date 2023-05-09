@@ -15,20 +15,24 @@ const (
 	ClarifyTextGranularityEnumParagraph ClarifyTextGranularityEnum = "paragraph"
 )
 
+func (e ClarifyTextGranularityEnum) ToPointer() *ClarifyTextGranularityEnum {
+	return &e
+}
+
 func (e *ClarifyTextGranularityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "token":
 		fallthrough
 	case "sentence":
 		fallthrough
 	case "paragraph":
-		*e = ClarifyTextGranularityEnum(s)
+		*e = ClarifyTextGranularityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClarifyTextGranularityEnum: %s", s)
+		return fmt.Errorf("invalid value for ClarifyTextGranularityEnum: %v", v)
 	}
 }

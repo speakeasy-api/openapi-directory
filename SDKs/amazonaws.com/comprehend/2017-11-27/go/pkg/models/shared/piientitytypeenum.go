@@ -49,12 +49,16 @@ const (
 	PiiEntityTypeEnumInVoterNumber                       PiiEntityTypeEnum = "IN_VOTER_NUMBER"
 )
 
+func (e PiiEntityTypeEnum) ToPointer() *PiiEntityTypeEnum {
+	return &e
+}
+
 func (e *PiiEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BANK_ACCOUNT_NUMBER":
 		fallthrough
 	case "BANK_ROUTING":
@@ -128,9 +132,9 @@ func (e *PiiEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "IN_AADHAAR":
 		fallthrough
 	case "IN_VOTER_NUMBER":
-		*e = PiiEntityTypeEnum(s)
+		*e = PiiEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PiiEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PiiEntityTypeEnum: %v", v)
 	}
 }

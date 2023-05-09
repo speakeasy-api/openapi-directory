@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CompareStationRequest{
-        StationName: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.ODWeather.CompareStation(ctx, req)
+    res, err := s.ODWeather.CompareStation(ctx, operations.CompareStationRequest{
+        StationName: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -48,21 +48,25 @@ const (
 	PutNetworksID200ApplicationJSONNetworkSubnetsTypeEnumVswitch PutNetworksID200ApplicationJSONNetworkSubnetsTypeEnum = "vswitch"
 )
 
+func (e PutNetworksID200ApplicationJSONNetworkSubnetsTypeEnum) ToPointer() *PutNetworksID200ApplicationJSONNetworkSubnetsTypeEnum {
+	return &e
+}
+
 func (e *PutNetworksID200ApplicationJSONNetworkSubnetsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cloud":
 		fallthrough
 	case "server":
 		fallthrough
 	case "vswitch":
-		*e = PutNetworksID200ApplicationJSONNetworkSubnetsTypeEnum(s)
+		*e = PutNetworksID200ApplicationJSONNetworkSubnetsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutNetworksID200ApplicationJSONNetworkSubnetsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutNetworksID200ApplicationJSONNetworkSubnetsTypeEnum: %v", v)
 	}
 }
 

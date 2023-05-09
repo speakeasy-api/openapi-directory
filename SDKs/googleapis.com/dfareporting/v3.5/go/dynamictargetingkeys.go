@@ -34,7 +34,10 @@ func newDynamicTargetingKeys(defaultClient, securityClient HTTPClient, serverURL
 // DfareportingDynamicTargetingKeysDelete - Deletes an existing dynamic targeting key.
 func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysDelete(ctx context.Context, request operations.DfareportingDynamicTargetingKeysDeleteRequest, security operations.DfareportingDynamicTargetingKeysDeleteSecurity) (*operations.DfareportingDynamicTargetingKeysDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dynamicTargetingKeys/{objectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dynamicTargetingKeys/{objectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysDelete(ctx contex
 // DfareportingDynamicTargetingKeysInsert - Inserts a new dynamic targeting key. Keys must be created at the advertiser level before being assigned to the advertiser's ads, creatives, or placements. There is a maximum of 1000 keys per advertiser, out of which a maximum of 20 keys can be assigned per ad, creative, or placement.
 func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysInsert(ctx context.Context, request operations.DfareportingDynamicTargetingKeysInsertRequest, security operations.DfareportingDynamicTargetingKeysInsertSecurity) (*operations.DfareportingDynamicTargetingKeysInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dynamicTargetingKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dynamicTargetingKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DynamicTargetingKey", "json")
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysInsert(ctx contex
 // DfareportingDynamicTargetingKeysList - Retrieves a list of dynamic targeting keys.
 func (s *dynamicTargetingKeys) DfareportingDynamicTargetingKeysList(ctx context.Context, request operations.DfareportingDynamicTargetingKeysListRequest, security operations.DfareportingDynamicTargetingKeysListSecurity) (*operations.DfareportingDynamicTargetingKeysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dynamicTargetingKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/dynamicTargetingKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

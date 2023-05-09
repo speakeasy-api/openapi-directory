@@ -69,12 +69,16 @@ const (
 	DisplayvideoTargetingTypesTargetingOptionsListTargetingTypeEnumTargetingTypeSessionPosition              DisplayvideoTargetingTypesTargetingOptionsListTargetingTypeEnum = "TARGETING_TYPE_SESSION_POSITION"
 )
 
+func (e DisplayvideoTargetingTypesTargetingOptionsListTargetingTypeEnum) ToPointer() *DisplayvideoTargetingTypesTargetingOptionsListTargetingTypeEnum {
+	return &e
+}
+
 func (e *DisplayvideoTargetingTypesTargetingOptionsListTargetingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGETING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TARGETING_TYPE_CHANNEL":
@@ -172,10 +176,10 @@ func (e *DisplayvideoTargetingTypesTargetingOptionsListTargetingTypeEnum) Unmars
 	case "TARGETING_TYPE_YOUTUBE_CHANNEL":
 		fallthrough
 	case "TARGETING_TYPE_SESSION_POSITION":
-		*e = DisplayvideoTargetingTypesTargetingOptionsListTargetingTypeEnum(s)
+		*e = DisplayvideoTargetingTypesTargetingOptionsListTargetingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisplayvideoTargetingTypesTargetingOptionsListTargetingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisplayvideoTargetingTypesTargetingOptionsListTargetingTypeEnum: %v", v)
 	}
 }
 
@@ -192,7 +196,7 @@ type DisplayvideoTargetingTypesTargetingOptionsListRequest struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
-	// Allows filtering by targeting option properties. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by `OR` logical operators. * A restriction has the form of `{field} {operator} {value}`. * The operator must be "=" (equal sign). * Supported fields: - `carrierAndIspDetails.type` - `geoRegionDetails.geoRegionType` - `targetingOptionId` Examples: * All `GEO REGION` targeting options that belong to sub type `GEO_REGION_TYPE_COUNTRY` or `GEO_REGION_TYPE_STATE`: `geoRegionDetails.geoRegionType="GEO_REGION_TYPE_COUNTRY" OR geoRegionDetails.geoRegionType="GEO_REGION_TYPE_STATE"` * All `CARRIER AND ISP` targeting options that belong to sub type `CARRIER_AND_ISP_TYPE_CARRIER`: `carrierAndIspDetails.type="CARRIER_AND_ISP_TYPE_CARRIER"`. The length of this field should be no more than 500 characters.
+	// Allows filtering by targeting option fields. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by `OR` logical operators. * A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: * `carrierAndIspDetails.type` * `geoRegionDetails.geoRegionType` * `targetingOptionId` Examples: * All `GEO REGION` targeting options that belong to sub type `GEO_REGION_TYPE_COUNTRY` or `GEO_REGION_TYPE_STATE`: `geoRegionDetails.geoRegionType="GEO_REGION_TYPE_COUNTRY" OR geoRegionDetails.geoRegionType="GEO_REGION_TYPE_STATE"` * All `CARRIER AND ISP` targeting options that belong to sub type `CARRIER_AND_ISP_TYPE_CARRIER`: `carrierAndIspDetails.type="CARRIER_AND_ISP_TYPE_CARRIER"` The length of this field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more information.
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`

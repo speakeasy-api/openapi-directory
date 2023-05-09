@@ -16,17 +16,21 @@ const (
 	DescribePlayerSessionsXAmzTargetEnumGameLiftDescribePlayerSessions DescribePlayerSessionsXAmzTargetEnum = "GameLift.DescribePlayerSessions"
 )
 
+func (e DescribePlayerSessionsXAmzTargetEnum) ToPointer() *DescribePlayerSessionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribePlayerSessionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DescribePlayerSessions":
-		*e = DescribePlayerSessionsXAmzTargetEnum(s)
+		*e = DescribePlayerSessionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribePlayerSessionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribePlayerSessionsXAmzTargetEnum: %v", v)
 	}
 }
 

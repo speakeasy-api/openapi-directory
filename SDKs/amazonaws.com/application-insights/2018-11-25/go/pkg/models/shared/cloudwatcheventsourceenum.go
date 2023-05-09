@@ -16,12 +16,16 @@ const (
 	CloudWatchEventSourceEnumRds        CloudWatchEventSourceEnum = "RDS"
 )
 
+func (e CloudWatchEventSourceEnum) ToPointer() *CloudWatchEventSourceEnum {
+	return &e
+}
+
 func (e *CloudWatchEventSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2":
 		fallthrough
 	case "CODE_DEPLOY":
@@ -29,9 +33,9 @@ func (e *CloudWatchEventSourceEnum) UnmarshalJSON(data []byte) error {
 	case "HEALTH":
 		fallthrough
 	case "RDS":
-		*e = CloudWatchEventSourceEnum(s)
+		*e = CloudWatchEventSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudWatchEventSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudWatchEventSourceEnum: %v", v)
 	}
 }

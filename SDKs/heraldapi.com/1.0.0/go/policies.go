@@ -36,7 +36,10 @@ func newPolicies(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Get the latest details for a specific policy.
 func (s *policies) GetPoliciesPolicyID(ctx context.Context, request operations.GetPoliciesPolicyIDRequest) (*operations.GetPoliciesPolicyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policies/{policy_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/policies/{policy_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

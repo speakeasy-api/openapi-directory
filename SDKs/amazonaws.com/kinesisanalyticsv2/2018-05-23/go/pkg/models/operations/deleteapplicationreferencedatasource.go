@@ -16,17 +16,21 @@ const (
 	DeleteApplicationReferenceDataSourceXAmzTargetEnumKinesisAnalytics20180523DeleteApplicationReferenceDataSource DeleteApplicationReferenceDataSourceXAmzTargetEnum = "KinesisAnalytics_20180523.DeleteApplicationReferenceDataSource"
 )
 
+func (e DeleteApplicationReferenceDataSourceXAmzTargetEnum) ToPointer() *DeleteApplicationReferenceDataSourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteApplicationReferenceDataSourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20180523.DeleteApplicationReferenceDataSource":
-		*e = DeleteApplicationReferenceDataSourceXAmzTargetEnum(s)
+		*e = DeleteApplicationReferenceDataSourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteApplicationReferenceDataSourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteApplicationReferenceDataSourceXAmzTargetEnum: %v", v)
 	}
 }
 

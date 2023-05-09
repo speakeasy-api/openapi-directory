@@ -16,12 +16,16 @@ const (
 	ExperimentResultRequestTypeEnumPValue             ExperimentResultRequestTypeEnum = "PValue"
 )
 
+func (e ExperimentResultRequestTypeEnum) ToPointer() *ExperimentResultRequestTypeEnum {
+	return &e
+}
+
 func (e *ExperimentResultRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BaseStat":
 		fallthrough
 	case "TreatmentEffect":
@@ -29,9 +33,9 @@ func (e *ExperimentResultRequestTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ConfidenceInterval":
 		fallthrough
 	case "PValue":
-		*e = ExperimentResultRequestTypeEnum(s)
+		*e = ExperimentResultRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExperimentResultRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExperimentResultRequestTypeEnum: %v", v)
 	}
 }

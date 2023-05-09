@@ -16,17 +16,21 @@ const (
 	DescribeRiskConfigurationXAmzTargetEnumAwsCognitoIdentityProviderServiceDescribeRiskConfiguration DescribeRiskConfigurationXAmzTargetEnum = "AWSCognitoIdentityProviderService.DescribeRiskConfiguration"
 )
 
+func (e DescribeRiskConfigurationXAmzTargetEnum) ToPointer() *DescribeRiskConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeRiskConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.DescribeRiskConfiguration":
-		*e = DescribeRiskConfigurationXAmzTargetEnum(s)
+		*e = DescribeRiskConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeRiskConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeRiskConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

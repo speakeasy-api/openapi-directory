@@ -18,12 +18,16 @@ const (
 	GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnumExpress               GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum = "EXPRESS"
 )
 
+func (e GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum) ToPointer() *GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WAF_FEATURE_UNSPECIFIED":
 		fallthrough
 	case "CHALLENGE_PAGE":
@@ -33,10 +37,10 @@ func (e *GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum) UnmarshalJSO
 	case "ACTION_TOKEN":
 		fallthrough
 	case "EXPRESS":
-		*e = GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum(s)
+		*e = GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnumFastly                GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum = "FASTLY"
 )
 
+func (e GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum) ToPointer() *GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WAF_SERVICE_UNSPECIFIED":
 		fallthrough
 	case "CA":
 		fallthrough
 	case "FASTLY":
-		*e = GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum(s)
+		*e = GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1WafSettingsWafServiceEnum: %v", v)
 	}
 }
 

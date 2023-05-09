@@ -20,12 +20,16 @@ const (
 	AdCompatibilityEnumInStreamAudio       AdCompatibilityEnum = "IN_STREAM_AUDIO"
 )
 
+func (e AdCompatibilityEnum) ToPointer() *AdCompatibilityEnum {
+	return &e
+}
+
 func (e *AdCompatibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISPLAY":
 		fallthrough
 	case "DISPLAY_INTERSTITIAL":
@@ -37,10 +41,10 @@ func (e *AdCompatibilityEnum) UnmarshalJSON(data []byte) error {
 	case "IN_STREAM_VIDEO":
 		fallthrough
 	case "IN_STREAM_AUDIO":
-		*e = AdCompatibilityEnum(s)
+		*e = AdCompatibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdCompatibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for AdCompatibilityEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	AdTypeEnumAdServingBrandSafeAd  AdTypeEnum = "AD_SERVING_BRAND_SAFE_AD"
 )
 
+func (e AdTypeEnum) ToPointer() *AdTypeEnum {
+	return &e
+}
+
 func (e *AdTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AD_SERVING_STANDARD_AD":
 		fallthrough
 	case "AD_SERVING_DEFAULT_AD":
@@ -70,10 +78,10 @@ func (e *AdTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AD_SERVING_TRACKING":
 		fallthrough
 	case "AD_SERVING_BRAND_SAFE_AD":
-		*e = AdTypeEnum(s)
+		*e = AdTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DescribeEffectivePatchesForPatchBaselineXAmzTargetEnumAmazonSsmDescribeEffectivePatchesForPatchBaseline DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum = "AmazonSSM.DescribeEffectivePatchesForPatchBaseline"
 )
 
+func (e DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum) ToPointer() *DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DescribeEffectivePatchesForPatchBaseline":
-		*e = DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum(s)
+		*e = DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum: %v", v)
 	}
 }
 

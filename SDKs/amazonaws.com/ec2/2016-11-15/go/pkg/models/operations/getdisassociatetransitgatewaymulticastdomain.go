@@ -15,17 +15,21 @@ const (
 	GETDisassociateTransitGatewayMulticastDomainActionEnumDisassociateTransitGatewayMulticastDomain GETDisassociateTransitGatewayMulticastDomainActionEnum = "DisassociateTransitGatewayMulticastDomain"
 )
 
+func (e GETDisassociateTransitGatewayMulticastDomainActionEnum) ToPointer() *GETDisassociateTransitGatewayMulticastDomainActionEnum {
+	return &e
+}
+
 func (e *GETDisassociateTransitGatewayMulticastDomainActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateTransitGatewayMulticastDomain":
-		*e = GETDisassociateTransitGatewayMulticastDomainActionEnum(s)
+		*e = GETDisassociateTransitGatewayMulticastDomainActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateTransitGatewayMulticastDomainActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateTransitGatewayMulticastDomainActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisassociateTransitGatewayMulticastDomainVersionEnumTwoThousandAndSixteen1115 GETDisassociateTransitGatewayMulticastDomainVersionEnum = "2016-11-15"
 )
 
+func (e GETDisassociateTransitGatewayMulticastDomainVersionEnum) ToPointer() *GETDisassociateTransitGatewayMulticastDomainVersionEnum {
+	return &e
+}
+
 func (e *GETDisassociateTransitGatewayMulticastDomainVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDisassociateTransitGatewayMulticastDomainVersionEnum(s)
+		*e = GETDisassociateTransitGatewayMulticastDomainVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateTransitGatewayMulticastDomainVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateTransitGatewayMulticastDomainVersionEnum: %v", v)
 	}
 }
 

@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/go-upc.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.GetProductInfoRequest{
-        Code: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Product.GetProductInfo(ctx, req)
+    res, err := s.Product.GetProductInfo(ctx, operations.GetProductInfoRequest{
+        Code: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,9 +46,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Product
+### [Product](docs/product/README.md)
 
-* `GetProductInfo` - Retrieve product info for a particular barcode number (UPC, EAN, or ISBN).
+* [GetProductInfo](docs/product/README.md#getproductinfo) - Retrieve product info for a particular barcode number (UPC, EAN, or ISBN).
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -19,12 +19,16 @@ const (
 	SendDigitsResponseMessageEnumSendDigitsFailed             SendDigitsResponseMessageEnum = "SendDigits Failed"
 )
 
+func (e SendDigitsResponseMessageEnum) ToPointer() *SendDigitsResponseMessageEnum {
+	return &e
+}
+
 func (e *SendDigitsResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SendDigits Executed":
 		fallthrough
 	case "CallUUID Parameter Missing":
@@ -36,10 +40,10 @@ func (e *SendDigitsResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "SendDigits Failed -- Call not found":
 		fallthrough
 	case "SendDigits Failed":
-		*e = SendDigitsResponseMessageEnum(s)
+		*e = SendDigitsResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendDigitsResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for SendDigitsResponseMessageEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	CommandStatusEnumCancelling CommandStatusEnum = "Cancelling"
 )
 
+func (e CommandStatusEnum) ToPointer() *CommandStatusEnum {
+	return &e
+}
+
 func (e *CommandStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "InProgress":
@@ -38,9 +42,9 @@ func (e *CommandStatusEnum) UnmarshalJSON(data []byte) error {
 	case "TimedOut":
 		fallthrough
 	case "Cancelling":
-		*e = CommandStatusEnum(s)
+		*e = CommandStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommandStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CommandStatusEnum: %v", v)
 	}
 }

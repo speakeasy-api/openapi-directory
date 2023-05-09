@@ -18,12 +18,16 @@ const (
 	VideoMetadataVastVersionEnumVastVersion40          VideoMetadataVastVersionEnum = "VAST_VERSION_4_0"
 )
 
+func (e VideoMetadataVastVersionEnum) ToPointer() *VideoMetadataVastVersionEnum {
+	return &e
+}
+
 func (e *VideoMetadataVastVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VAST_VERSION_UNSPECIFIED":
 		fallthrough
 	case "VAST_VERSION_1_0":
@@ -33,10 +37,10 @@ func (e *VideoMetadataVastVersionEnum) UnmarshalJSON(data []byte) error {
 	case "VAST_VERSION_3_0":
 		fallthrough
 	case "VAST_VERSION_4_0":
-		*e = VideoMetadataVastVersionEnum(s)
+		*e = VideoMetadataVastVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoMetadataVastVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoMetadataVastVersionEnum: %v", v)
 	}
 }
 

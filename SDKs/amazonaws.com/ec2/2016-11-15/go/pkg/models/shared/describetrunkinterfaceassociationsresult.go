@@ -15,19 +15,23 @@ const (
 	DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsInterfaceProtocolEnumGre  DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsInterfaceProtocolEnum = "GRE"
 )
 
+func (e DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsInterfaceProtocolEnum) ToPointer() *DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsInterfaceProtocolEnum {
+	return &e
+}
+
 func (e *DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsInterfaceProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VLAN":
 		fallthrough
 	case "GRE":
-		*e = DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsInterfaceProtocolEnum(s)
+		*e = DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsInterfaceProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsInterfaceProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTrunkInterfaceAssociationsResultInterfaceAssociationsInterfaceProtocolEnum: %v", v)
 	}
 }
 

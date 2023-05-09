@@ -15,19 +15,23 @@ const (
 	DockerRepositoryPublicRepositoryEnumDockerHub                   DockerRepositoryPublicRepositoryEnum = "DOCKER_HUB"
 )
 
+func (e DockerRepositoryPublicRepositoryEnum) ToPointer() *DockerRepositoryPublicRepositoryEnum {
+	return &e
+}
+
 func (e *DockerRepositoryPublicRepositoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLIC_REPOSITORY_UNSPECIFIED":
 		fallthrough
 	case "DOCKER_HUB":
-		*e = DockerRepositoryPublicRepositoryEnum(s)
+		*e = DockerRepositoryPublicRepositoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DockerRepositoryPublicRepositoryEnum: %s", s)
+		return fmt.Errorf("invalid value for DockerRepositoryPublicRepositoryEnum: %v", v)
 	}
 }
 

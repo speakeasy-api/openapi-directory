@@ -35,7 +35,10 @@ func newPulses(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Responds with the IDs of all pulses that learners have responded to in a specified offering.
 func (s *pulses) GetOfferingsOfferingIDAnalyticsPulses(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsPulsesRequest) (*operations.GetOfferingsOfferingIDAnalyticsPulsesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/pulses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/pulses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *pulses) GetOfferingsOfferingIDAnalyticsPulses(ctx context.Context, requ
 // Responds with pulse's responses, matching the pulseId, in an offering matching the offeringId.
 func (s *pulses) GetOfferingsOfferingIDAnalyticsPulsesPulseIDResponses(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsPulsesPulseIDResponsesRequest) (*operations.GetOfferingsOfferingIDAnalyticsPulsesPulseIDResponsesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/pulses/{pulseId}/responses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/pulses/{pulseId}/responses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

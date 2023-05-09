@@ -14,17 +14,21 @@ const (
 	CALocalAccountIdentificationTypeEnumCaLocal CALocalAccountIdentificationTypeEnum = "caLocal"
 )
 
+func (e CALocalAccountIdentificationTypeEnum) ToPointer() *CALocalAccountIdentificationTypeEnum {
+	return &e
+}
+
 func (e *CALocalAccountIdentificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "caLocal":
-		*e = CALocalAccountIdentificationTypeEnum(s)
+		*e = CALocalAccountIdentificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CALocalAccountIdentificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CALocalAccountIdentificationTypeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	FloodlightGroupWebTagTypeEnumWebTagTypeDynamic     FloodlightGroupWebTagTypeEnum = "WEB_TAG_TYPE_DYNAMIC"
 )
 
+func (e FloodlightGroupWebTagTypeEnum) ToPointer() *FloodlightGroupWebTagTypeEnum {
+	return &e
+}
+
 func (e *FloodlightGroupWebTagTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEB_TAG_TYPE_UNSPECIFIED":
 		fallthrough
 	case "WEB_TAG_TYPE_NONE":
@@ -30,10 +34,10 @@ func (e *FloodlightGroupWebTagTypeEnum) UnmarshalJSON(data []byte) error {
 	case "WEB_TAG_TYPE_IMAGE":
 		fallthrough
 	case "WEB_TAG_TYPE_DYNAMIC":
-		*e = FloodlightGroupWebTagTypeEnum(s)
+		*e = FloodlightGroupWebTagTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FloodlightGroupWebTagTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FloodlightGroupWebTagTypeEnum: %v", v)
 	}
 }
 

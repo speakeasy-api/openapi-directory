@@ -16,17 +16,21 @@ const (
 	ListCustomRoutingPortMappingsXAmzTargetEnumGlobalAcceleratorV20180706ListCustomRoutingPortMappings ListCustomRoutingPortMappingsXAmzTargetEnum = "GlobalAccelerator_V20180706.ListCustomRoutingPortMappings"
 )
 
+func (e ListCustomRoutingPortMappingsXAmzTargetEnum) ToPointer() *ListCustomRoutingPortMappingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCustomRoutingPortMappingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.ListCustomRoutingPortMappings":
-		*e = ListCustomRoutingPortMappingsXAmzTargetEnum(s)
+		*e = ListCustomRoutingPortMappingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCustomRoutingPortMappingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCustomRoutingPortMappingsXAmzTargetEnum: %v", v)
 	}
 }
 

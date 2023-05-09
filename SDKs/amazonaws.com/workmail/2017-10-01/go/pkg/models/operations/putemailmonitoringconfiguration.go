@@ -16,17 +16,21 @@ const (
 	PutEmailMonitoringConfigurationXAmzTargetEnumWorkMailServicePutEmailMonitoringConfiguration PutEmailMonitoringConfigurationXAmzTargetEnum = "WorkMailService.PutEmailMonitoringConfiguration"
 )
 
+func (e PutEmailMonitoringConfigurationXAmzTargetEnum) ToPointer() *PutEmailMonitoringConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutEmailMonitoringConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.PutEmailMonitoringConfiguration":
-		*e = PutEmailMonitoringConfigurationXAmzTargetEnum(s)
+		*e = PutEmailMonitoringConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutEmailMonitoringConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutEmailMonitoringConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

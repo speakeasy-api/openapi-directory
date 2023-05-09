@@ -54,12 +54,16 @@ const (
 	SubmitJobMediaURLOptionsLanguageEnumTr  SubmitJobMediaURLOptionsLanguageEnum = "tr"
 )
 
+func (e SubmitJobMediaURLOptionsLanguageEnum) ToPointer() *SubmitJobMediaURLOptionsLanguageEnum {
+	return &e
+}
+
 func (e *SubmitJobMediaURLOptionsLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "en":
 		fallthrough
 	case "ar":
@@ -121,10 +125,10 @@ func (e *SubmitJobMediaURLOptionsLanguageEnum) UnmarshalJSON(data []byte) error 
 	case "sv":
 		fallthrough
 	case "tr":
-		*e = SubmitJobMediaURLOptionsLanguageEnum(s)
+		*e = SubmitJobMediaURLOptionsLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitJobMediaURLOptionsLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitJobMediaURLOptionsLanguageEnum: %v", v)
 	}
 }
 

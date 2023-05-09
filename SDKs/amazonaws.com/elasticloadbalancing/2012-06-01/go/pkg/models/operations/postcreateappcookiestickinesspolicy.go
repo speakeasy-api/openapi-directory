@@ -15,17 +15,21 @@ const (
 	POSTCreateAppCookieStickinessPolicyActionEnumCreateAppCookieStickinessPolicy POSTCreateAppCookieStickinessPolicyActionEnum = "CreateAppCookieStickinessPolicy"
 )
 
+func (e POSTCreateAppCookieStickinessPolicyActionEnum) ToPointer() *POSTCreateAppCookieStickinessPolicyActionEnum {
+	return &e
+}
+
 func (e *POSTCreateAppCookieStickinessPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateAppCookieStickinessPolicy":
-		*e = POSTCreateAppCookieStickinessPolicyActionEnum(s)
+		*e = POSTCreateAppCookieStickinessPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateAppCookieStickinessPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateAppCookieStickinessPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateAppCookieStickinessPolicyVersionEnumTwoThousandAndTwelve0601 POSTCreateAppCookieStickinessPolicyVersionEnum = "2012-06-01"
 )
 
+func (e POSTCreateAppCookieStickinessPolicyVersionEnum) ToPointer() *POSTCreateAppCookieStickinessPolicyVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateAppCookieStickinessPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = POSTCreateAppCookieStickinessPolicyVersionEnum(s)
+		*e = POSTCreateAppCookieStickinessPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateAppCookieStickinessPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateAppCookieStickinessPolicyVersionEnum: %v", v)
 	}
 }
 

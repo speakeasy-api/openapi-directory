@@ -14,7 +14,7 @@ type YoutubeCommentsSetModerationStatusSecurity struct {
 	Oauth2c string `security:"scheme,type=oauth2,name=Authorization"`
 }
 
-// YoutubeCommentsSetModerationStatusModerationStatusEnum - Specifies the requested moderation status. Note, comments can be in statuses, which are not available through this call. For example, this call does not allow to mark a comment as 'likely spam'. Valid values: MODERATION_STATUS_PUBLISHED, MODERATION_STATUS_HELD_FOR_REVIEW, MODERATION_STATUS_REJECTED.
+// YoutubeCommentsSetModerationStatusModerationStatusEnum - Specifies the requested moderation status. Note, comments can be in statuses, which are not available through this call. For example, this call does not allow to mark a comment as 'likely spam'. Valid values: 'heldForReview', 'published' or 'rejected'.
 type YoutubeCommentsSetModerationStatusModerationStatusEnum string
 
 const (
@@ -24,12 +24,16 @@ const (
 	YoutubeCommentsSetModerationStatusModerationStatusEnumRejected      YoutubeCommentsSetModerationStatusModerationStatusEnum = "rejected"
 )
 
+func (e YoutubeCommentsSetModerationStatusModerationStatusEnum) ToPointer() *YoutubeCommentsSetModerationStatusModerationStatusEnum {
+	return &e
+}
+
 func (e *YoutubeCommentsSetModerationStatusModerationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "published":
 		fallthrough
 	case "heldForReview":
@@ -37,10 +41,10 @@ func (e *YoutubeCommentsSetModerationStatusModerationStatusEnum) UnmarshalJSON(d
 	case "likelySpam":
 		fallthrough
 	case "rejected":
-		*e = YoutubeCommentsSetModerationStatusModerationStatusEnum(s)
+		*e = YoutubeCommentsSetModerationStatusModerationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeCommentsSetModerationStatusModerationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeCommentsSetModerationStatusModerationStatusEnum: %v", v)
 	}
 }
 
@@ -61,7 +65,7 @@ type YoutubeCommentsSetModerationStatusRequest struct {
 	ID []string `queryParam:"style=form,explode=true,name=id"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
-	// Specifies the requested moderation status. Note, comments can be in statuses, which are not available through this call. For example, this call does not allow to mark a comment as 'likely spam'. Valid values: MODERATION_STATUS_PUBLISHED, MODERATION_STATUS_HELD_FOR_REVIEW, MODERATION_STATUS_REJECTED.
+	// Specifies the requested moderation status. Note, comments can be in statuses, which are not available through this call. For example, this call does not allow to mark a comment as 'likely spam'. Valid values: 'heldForReview', 'published' or 'rejected'.
 	ModerationStatus YoutubeCommentsSetModerationStatusModerationStatusEnum `queryParam:"style=form,explode=true,name=moderationStatus"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`

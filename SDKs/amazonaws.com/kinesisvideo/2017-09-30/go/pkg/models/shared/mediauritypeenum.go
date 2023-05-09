@@ -14,18 +14,22 @@ const (
 	MediaURITypeEnumFileURI MediaURITypeEnum = "FILE_URI"
 )
 
+func (e MediaURITypeEnum) ToPointer() *MediaURITypeEnum {
+	return &e
+}
+
 func (e *MediaURITypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RTSP_URI":
 		fallthrough
 	case "FILE_URI":
-		*e = MediaURITypeEnum(s)
+		*e = MediaURITypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaURITypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaURITypeEnum: %v", v)
 	}
 }

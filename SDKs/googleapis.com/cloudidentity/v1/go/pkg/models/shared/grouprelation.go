@@ -17,12 +17,16 @@ const (
 	GroupRelationRelationTypeEnumDirectAndIndirect       GroupRelationRelationTypeEnum = "DIRECT_AND_INDIRECT"
 )
 
+func (e GroupRelationRelationTypeEnum) ToPointer() *GroupRelationRelationTypeEnum {
+	return &e
+}
+
 func (e *GroupRelationRelationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DIRECT":
@@ -30,10 +34,10 @@ func (e *GroupRelationRelationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "INDIRECT":
 		fallthrough
 	case "DIRECT_AND_INDIRECT":
-		*e = GroupRelationRelationTypeEnum(s)
+		*e = GroupRelationRelationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupRelationRelationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupRelationRelationTypeEnum: %v", v)
 	}
 }
 

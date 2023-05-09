@@ -23,14 +23,21 @@ const (
 	ParameterMetadataParamTypeEnumPubsubSubscription ParameterMetadataParamTypeEnum = "PUBSUB_SUBSCRIPTION"
 	ParameterMetadataParamTypeEnumBigqueryTable      ParameterMetadataParamTypeEnum = "BIGQUERY_TABLE"
 	ParameterMetadataParamTypeEnumJavascriptUdfFile  ParameterMetadataParamTypeEnum = "JAVASCRIPT_UDF_FILE"
+	ParameterMetadataParamTypeEnumServiceAccount     ParameterMetadataParamTypeEnum = "SERVICE_ACCOUNT"
+	ParameterMetadataParamTypeEnumMachineType        ParameterMetadataParamTypeEnum = "MACHINE_TYPE"
+	ParameterMetadataParamTypeEnumKmsKeyName         ParameterMetadataParamTypeEnum = "KMS_KEY_NAME"
 )
 
+func (e ParameterMetadataParamTypeEnum) ToPointer() *ParameterMetadataParamTypeEnum {
+	return &e
+}
+
 func (e *ParameterMetadataParamTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "TEXT":
@@ -54,10 +61,16 @@ func (e *ParameterMetadataParamTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BIGQUERY_TABLE":
 		fallthrough
 	case "JAVASCRIPT_UDF_FILE":
-		*e = ParameterMetadataParamTypeEnum(s)
+		fallthrough
+	case "SERVICE_ACCOUNT":
+		fallthrough
+	case "MACHINE_TYPE":
+		fallthrough
+	case "KMS_KEY_NAME":
+		*e = ParameterMetadataParamTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParameterMetadataParamTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParameterMetadataParamTypeEnum: %v", v)
 	}
 }
 

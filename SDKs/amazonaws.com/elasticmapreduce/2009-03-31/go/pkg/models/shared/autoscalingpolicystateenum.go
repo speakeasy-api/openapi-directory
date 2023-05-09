@@ -18,12 +18,16 @@ const (
 	AutoScalingPolicyStateEnumFailed    AutoScalingPolicyStateEnum = "FAILED"
 )
 
+func (e AutoScalingPolicyStateEnum) ToPointer() *AutoScalingPolicyStateEnum {
+	return &e
+}
+
 func (e *AutoScalingPolicyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "ATTACHING":
@@ -35,9 +39,9 @@ func (e *AutoScalingPolicyStateEnum) UnmarshalJSON(data []byte) error {
 	case "DETACHED":
 		fallthrough
 	case "FAILED":
-		*e = AutoScalingPolicyStateEnum(s)
+		*e = AutoScalingPolicyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoScalingPolicyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoScalingPolicyStateEnum: %v", v)
 	}
 }

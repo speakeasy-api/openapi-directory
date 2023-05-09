@@ -32,6 +32,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <fullname>Amazon CloudFront</fullname> <p>This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about CloudFront API actions, data types, and errors. For detailed information about CloudFront features, see the <i>Amazon CloudFront Developer Guide</i>.</p>
 // https://docs.aws.amazon.com/cloudfront/ - Amazon Web Services documentation
 type SDK struct {
@@ -113,7 +128,10 @@ func New(opts ...SDKOption) *SDK {
 // AssociateAlias20200531 - <p>Associates an alias (also known as a CNAME or an alternate domain name) with a CloudFront distribution.</p> <p>With this operation you can move an alias that's already in use on a CloudFront distribution to a different distribution in one step. This prevents the downtime that could occur if you first remove the alias from one distribution and then separately add the alias to another distribution.</p> <p>To use this operation to associate an alias with a distribution, you provide the alias and the ID of the target distribution for the alias. For more information, including how to set up the target distribution, prerequisites that you must complete, and other restrictions, see <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html#alternate-domain-names-move">Moving an alternate domain name to a different distribution</a> in the <i>Amazon CloudFront Developer Guide</i>.</p>
 func (s *SDK) AssociateAlias20200531(ctx context.Context, request operations.AssociateAlias20200531Request) (*operations.AssociateAlias20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{TargetDistributionId}/associate-alias#Alias", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{TargetDistributionId}/associate-alias#Alias", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -172,7 +190,10 @@ func (s *SDK) AssociateAlias20200531(ctx context.Context, request operations.Ass
 // CopyDistribution20200531 - <p>Creates a staging distribution using the configuration of the provided primary distribution. A staging distribution is a copy of an existing distribution (called the primary distribution) that you can use in a continuous deployment workflow.</p> <p>After you create a staging distribution, you can use <code>UpdateDistribution</code> to modify the staging distribution's configuration. Then you can use <code>CreateContinuousDeploymentPolicy</code> to incrementally move traffic to the staging distribution.</p>
 func (s *SDK) CopyDistribution20200531(ctx context.Context, request operations.CopyDistribution20200531Request) (*operations.CopyDistribution20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{PrimaryDistributionId}/copy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{PrimaryDistributionId}/copy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1144,7 +1165,10 @@ func (s *SDK) CreateFunction20200531(ctx context.Context, request operations.Cre
 // CreateInvalidation20200531 - Create a new invalidation.
 func (s *SDK) CreateInvalidation20200531(ctx context.Context, request operations.CreateInvalidation20200531Request) (*operations.CreateInvalidation20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{DistributionId}/invalidation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{DistributionId}/invalidation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1278,7 +1302,10 @@ func (s *SDK) CreateKeyGroup20200531(ctx context.Context, request operations.Cre
 // CreateMonitoringSubscription20200531 - <p>Enables additional CloudWatch metrics for the specified CloudFront distribution. The additional metrics incur an additional cost.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/viewing-cloudfront-metrics.html#monitoring-console.distributions-additional">Viewing additional CloudFront distribution metrics</a> in the <i>Amazon CloudFront Developer Guide</i>.</p>
 func (s *SDK) CreateMonitoringSubscription20200531(ctx context.Context, request operations.CreateMonitoringSubscription20200531Request) (*operations.CreateMonitoringSubscription20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributions/{DistributionId}/monitoring-subscription/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributions/{DistributionId}/monitoring-subscription/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1844,7 +1871,10 @@ func (s *SDK) CreateStreamingDistributionWithTags20200531(ctx context.Context, r
 // DeleteCachePolicy20200531 - <p>Deletes a cache policy.</p> <p>You cannot delete a cache policy if it's attached to a cache behavior. First update your distributions to remove the cache policy from all cache behaviors, then delete the cache policy.</p> <p>To delete a cache policy, you must provide the policy's identifier and version. To get these values, you can use <code>ListCachePolicies</code> or <code>GetCachePolicy</code>.</p>
 func (s *SDK) DeleteCachePolicy20200531(ctx context.Context, request operations.DeleteCachePolicy20200531Request) (*operations.DeleteCachePolicy20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/cache-policy/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/cache-policy/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1901,7 +1931,10 @@ func (s *SDK) DeleteCachePolicy20200531(ctx context.Context, request operations.
 // DeleteCloudFrontOriginAccessIdentity20200531 - Delete an origin access identity.
 func (s *SDK) DeleteCloudFrontOriginAccessIdentity20200531(ctx context.Context, request operations.DeleteCloudFrontOriginAccessIdentity20200531Request) (*operations.DeleteCloudFrontOriginAccessIdentity20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-identity/cloudfront/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-identity/cloudfront/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1956,7 +1989,10 @@ func (s *SDK) DeleteCloudFrontOriginAccessIdentity20200531(ctx context.Context, 
 // DeleteContinuousDeploymentPolicy20200531 - <p>Deletes a continuous deployment policy.</p> <p>You cannot delete a continuous deployment policy that's attached to a primary distribution. First update your distribution to remove the continuous deployment policy, then you can delete the policy.</p>
 func (s *SDK) DeleteContinuousDeploymentPolicy20200531(ctx context.Context, request operations.DeleteContinuousDeploymentPolicy20200531Request) (*operations.DeleteContinuousDeploymentPolicy20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/continuous-deployment-policy/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/continuous-deployment-policy/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2013,7 +2049,10 @@ func (s *SDK) DeleteContinuousDeploymentPolicy20200531(ctx context.Context, requ
 // DeleteDistribution20200531 - Delete a distribution.
 func (s *SDK) DeleteDistribution20200531(ctx context.Context, request operations.DeleteDistribution20200531Request) (*operations.DeleteDistribution20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2068,7 +2107,10 @@ func (s *SDK) DeleteDistribution20200531(ctx context.Context, request operations
 // DeleteFieldLevelEncryptionConfig20200531 - Remove a field-level encryption configuration.
 func (s *SDK) DeleteFieldLevelEncryptionConfig20200531(ctx context.Context, request operations.DeleteFieldLevelEncryptionConfig20200531Request) (*operations.DeleteFieldLevelEncryptionConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2123,7 +2165,10 @@ func (s *SDK) DeleteFieldLevelEncryptionConfig20200531(ctx context.Context, requ
 // DeleteFieldLevelEncryptionProfile20200531 - Remove a field-level encryption profile.
 func (s *SDK) DeleteFieldLevelEncryptionProfile20200531(ctx context.Context, request operations.DeleteFieldLevelEncryptionProfile20200531Request) (*operations.DeleteFieldLevelEncryptionProfile20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption-profile/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption-profile/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2178,7 +2223,10 @@ func (s *SDK) DeleteFieldLevelEncryptionProfile20200531(ctx context.Context, req
 // DeleteFunction20200531 - <p>Deletes a CloudFront function.</p> <p>You cannot delete a function if it's associated with a cache behavior. First, update your distributions to remove the function association from all cache behaviors, then delete the function.</p> <p>To delete a function, you must provide the function's name and version (<code>ETag</code> value). To get these values, you can use <code>ListFunctions</code> and <code>DescribeFunction</code>.</p>
 func (s *SDK) DeleteFunction20200531(ctx context.Context, request operations.DeleteFunction20200531Request) (*operations.DeleteFunction20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/function/{Name}#If-Match", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/function/{Name}#If-Match", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2233,7 +2281,10 @@ func (s *SDK) DeleteFunction20200531(ctx context.Context, request operations.Del
 // DeleteKeyGroup20200531 - <p>Deletes a key group.</p> <p>You cannot delete a key group that is referenced in a cache behavior. First update your distributions to remove the key group from all cache behaviors, then delete the key group.</p> <p>To delete a key group, you must provide the key group's identifier and version. To get these values, use <code>ListKeyGroups</code> followed by <code>GetKeyGroup</code> or <code>GetKeyGroupConfig</code>.</p>
 func (s *SDK) DeleteKeyGroup20200531(ctx context.Context, request operations.DeleteKeyGroup20200531Request) (*operations.DeleteKeyGroup20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/key-group/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/key-group/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2286,7 +2337,10 @@ func (s *SDK) DeleteKeyGroup20200531(ctx context.Context, request operations.Del
 // DeleteMonitoringSubscription20200531 - Disables additional CloudWatch metrics for the specified CloudFront distribution.
 func (s *SDK) DeleteMonitoringSubscription20200531(ctx context.Context, request operations.DeleteMonitoringSubscription20200531Request) (*operations.DeleteMonitoringSubscription20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributions/{DistributionId}/monitoring-subscription/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributions/{DistributionId}/monitoring-subscription/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2340,7 +2394,10 @@ func (s *SDK) DeleteMonitoringSubscription20200531(ctx context.Context, request 
 // DeleteOriginAccessControl20200531 - <p>Deletes a CloudFront origin access control.</p> <p>You cannot delete an origin access control if it's in use. First, update all distributions to remove the origin access control from all origins, then delete the origin access control.</p>
 func (s *SDK) DeleteOriginAccessControl20200531(ctx context.Context, request operations.DeleteOriginAccessControl20200531Request) (*operations.DeleteOriginAccessControl20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-control/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-control/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2395,7 +2452,10 @@ func (s *SDK) DeleteOriginAccessControl20200531(ctx context.Context, request ope
 // DeleteOriginRequestPolicy20200531 - <p>Deletes an origin request policy.</p> <p>You cannot delete an origin request policy if it's attached to any cache behaviors. First update your distributions to remove the origin request policy from all cache behaviors, then delete the origin request policy.</p> <p>To delete an origin request policy, you must provide the policy's identifier and version. To get the identifier, you can use <code>ListOriginRequestPolicies</code> or <code>GetOriginRequestPolicy</code>.</p>
 func (s *SDK) DeleteOriginRequestPolicy20200531(ctx context.Context, request operations.DeleteOriginRequestPolicy20200531Request) (*operations.DeleteOriginRequestPolicy20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-request-policy/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-request-policy/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2452,7 +2512,10 @@ func (s *SDK) DeleteOriginRequestPolicy20200531(ctx context.Context, request ope
 // DeletePublicKey20200531 - Remove a public key you previously added to CloudFront.
 func (s *SDK) DeletePublicKey20200531(ctx context.Context, request operations.DeletePublicKey20200531Request) (*operations.DeletePublicKey20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/public-key/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/public-key/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2570,7 +2633,10 @@ func (s *SDK) DeleteRealtimeLogConfig20200531(ctx context.Context, request opera
 // DeleteResponseHeadersPolicy20200531 - <p>Deletes a response headers policy.</p> <p>You cannot delete a response headers policy if it's attached to a cache behavior. First update your distributions to remove the response headers policy from all cache behaviors, then delete the response headers policy.</p> <p>To delete a response headers policy, you must provide the policy's identifier and version. To get these values, you can use <code>ListResponseHeadersPolicies</code> or <code>GetResponseHeadersPolicy</code>.</p>
 func (s *SDK) DeleteResponseHeadersPolicy20200531(ctx context.Context, request operations.DeleteResponseHeadersPolicy20200531Request) (*operations.DeleteResponseHeadersPolicy20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/response-headers-policy/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/response-headers-policy/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2627,7 +2693,10 @@ func (s *SDK) DeleteResponseHeadersPolicy20200531(ctx context.Context, request o
 // DeleteStreamingDistribution20200531 - <p>Delete a streaming distribution. To delete an RTMP distribution using the CloudFront API, perform the following steps.</p> <p> <b>To delete an RTMP distribution using the CloudFront API</b>:</p> <ol> <li> <p>Disable the RTMP distribution.</p> </li> <li> <p>Submit a <code>GET Streaming Distribution Config</code> request to get the current configuration and the <code>Etag</code> header for the distribution. </p> </li> <li> <p>Update the XML document that was returned in the response to your <code>GET Streaming Distribution Config</code> request to change the value of <code>Enabled</code> to <code>false</code>.</p> </li> <li> <p>Submit a <code>PUT Streaming Distribution Config</code> request to update the configuration for your distribution. In the request body, include the XML document that you updated in Step 3. Then set the value of the HTTP <code>If-Match</code> header to the value of the <code>ETag</code> header that CloudFront returned when you submitted the <code>GET Streaming Distribution Config</code> request in Step 2.</p> </li> <li> <p>Review the response to the <code>PUT Streaming Distribution Config</code> request to confirm that the distribution was successfully disabled.</p> </li> <li> <p>Submit a <code>GET Streaming Distribution Config</code> request to confirm that your changes have propagated. When propagation is complete, the value of <code>Status</code> is <code>Deployed</code>.</p> </li> <li> <p>Submit a <code>DELETE Streaming Distribution</code> request. Set the value of the HTTP <code>If-Match</code> header to the value of the <code>ETag</code> header that CloudFront returned when you submitted the <code>GET Streaming Distribution Config</code> request in Step 2.</p> </li> <li> <p>Review the response to your <code>DELETE Streaming Distribution</code> request to confirm that the distribution was successfully deleted.</p> </li> </ol> <p>For information about deleting a distribution using the CloudFront console, see <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToDeleteDistribution.html">Deleting a Distribution</a> in the <i>Amazon CloudFront Developer Guide</i>.</p>
 func (s *SDK) DeleteStreamingDistribution20200531(ctx context.Context, request operations.DeleteStreamingDistribution20200531Request) (*operations.DeleteStreamingDistribution20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/streaming-distribution/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/streaming-distribution/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2682,7 +2751,10 @@ func (s *SDK) DeleteStreamingDistribution20200531(ctx context.Context, request o
 // DescribeFunction20200531 - <p>Gets configuration information and metadata about a CloudFront function, but not the function's code. To get a function's code, use <code>GetFunction</code>.</p> <p>To get configuration information and metadata about a function, you must provide the function's name and stage. To get these values, you can use <code>ListFunctions</code>.</p>
 func (s *SDK) DescribeFunction20200531(ctx context.Context, request operations.DescribeFunction20200531Request) (*operations.DescribeFunction20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/function/{Name}/describe", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/function/{Name}/describe", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2736,7 +2808,10 @@ func (s *SDK) DescribeFunction20200531(ctx context.Context, request operations.D
 // GetCachePolicy20200531 - <p>Gets a cache policy, including the following metadata:</p> <ul> <li> <p>The policy's identifier.</p> </li> <li> <p>The date and time when the policy was last modified.</p> </li> </ul> <p>To get a cache policy, you must provide the policy's identifier. If the cache policy is attached to a distribution's cache behavior, you can get the policy's identifier using <code>ListDistributions</code> or <code>GetDistribution</code>. If the cache policy is not attached to a cache behavior, you can get the identifier using <code>ListCachePolicies</code>.</p>
 func (s *SDK) GetCachePolicy20200531(ctx context.Context, request operations.GetCachePolicy20200531Request) (*operations.GetCachePolicy20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/cache-policy/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/cache-policy/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2786,7 +2861,10 @@ func (s *SDK) GetCachePolicy20200531(ctx context.Context, request operations.Get
 // GetCachePolicyConfig20200531 - <p>Gets a cache policy configuration.</p> <p>To get a cache policy configuration, you must provide the policy's identifier. If the cache policy is attached to a distribution's cache behavior, you can get the policy's identifier using <code>ListDistributions</code> or <code>GetDistribution</code>. If the cache policy is not attached to a cache behavior, you can get the identifier using <code>ListCachePolicies</code>.</p>
 func (s *SDK) GetCachePolicyConfig20200531(ctx context.Context, request operations.GetCachePolicyConfig20200531Request) (*operations.GetCachePolicyConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/cache-policy/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/cache-policy/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2836,7 +2914,10 @@ func (s *SDK) GetCachePolicyConfig20200531(ctx context.Context, request operatio
 // GetCloudFrontOriginAccessIdentity20200531 - Get the information about an origin access identity.
 func (s *SDK) GetCloudFrontOriginAccessIdentity20200531(ctx context.Context, request operations.GetCloudFrontOriginAccessIdentity20200531Request) (*operations.GetCloudFrontOriginAccessIdentity20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-identity/cloudfront/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-identity/cloudfront/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2886,7 +2967,10 @@ func (s *SDK) GetCloudFrontOriginAccessIdentity20200531(ctx context.Context, req
 // GetCloudFrontOriginAccessIdentityConfig20200531 - Get the configuration information about an origin access identity.
 func (s *SDK) GetCloudFrontOriginAccessIdentityConfig20200531(ctx context.Context, request operations.GetCloudFrontOriginAccessIdentityConfig20200531Request) (*operations.GetCloudFrontOriginAccessIdentityConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-identity/cloudfront/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-identity/cloudfront/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2936,7 +3020,10 @@ func (s *SDK) GetCloudFrontOriginAccessIdentityConfig20200531(ctx context.Contex
 // GetContinuousDeploymentPolicy20200531 - Gets a continuous deployment policy, including metadata (the policy's identifier and the date and time when the policy was last modified).
 func (s *SDK) GetContinuousDeploymentPolicy20200531(ctx context.Context, request operations.GetContinuousDeploymentPolicy20200531Request) (*operations.GetContinuousDeploymentPolicy20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/continuous-deployment-policy/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/continuous-deployment-policy/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2986,7 +3073,10 @@ func (s *SDK) GetContinuousDeploymentPolicy20200531(ctx context.Context, request
 // GetContinuousDeploymentPolicyConfig20200531 - Gets configuration information about a continuous deployment policy.
 func (s *SDK) GetContinuousDeploymentPolicyConfig20200531(ctx context.Context, request operations.GetContinuousDeploymentPolicyConfig20200531Request) (*operations.GetContinuousDeploymentPolicyConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/continuous-deployment-policy/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/continuous-deployment-policy/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3036,7 +3126,10 @@ func (s *SDK) GetContinuousDeploymentPolicyConfig20200531(ctx context.Context, r
 // GetDistribution20200531 - Get the information about a distribution.
 func (s *SDK) GetDistribution20200531(ctx context.Context, request operations.GetDistribution20200531Request) (*operations.GetDistribution20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3086,7 +3179,10 @@ func (s *SDK) GetDistribution20200531(ctx context.Context, request operations.Ge
 // GetDistributionConfig20200531 - Get the configuration information about a distribution.
 func (s *SDK) GetDistributionConfig20200531(ctx context.Context, request operations.GetDistributionConfig20200531Request) (*operations.GetDistributionConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3136,7 +3232,10 @@ func (s *SDK) GetDistributionConfig20200531(ctx context.Context, request operati
 // GetFieldLevelEncryption20200531 - Get the field-level encryption configuration information.
 func (s *SDK) GetFieldLevelEncryption20200531(ctx context.Context, request operations.GetFieldLevelEncryption20200531Request) (*operations.GetFieldLevelEncryption20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3186,7 +3285,10 @@ func (s *SDK) GetFieldLevelEncryption20200531(ctx context.Context, request opera
 // GetFieldLevelEncryptionConfig20200531 - Get the field-level encryption configuration information.
 func (s *SDK) GetFieldLevelEncryptionConfig20200531(ctx context.Context, request operations.GetFieldLevelEncryptionConfig20200531Request) (*operations.GetFieldLevelEncryptionConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3236,7 +3338,10 @@ func (s *SDK) GetFieldLevelEncryptionConfig20200531(ctx context.Context, request
 // GetFieldLevelEncryptionProfile20200531 - Get the field-level encryption profile information.
 func (s *SDK) GetFieldLevelEncryptionProfile20200531(ctx context.Context, request operations.GetFieldLevelEncryptionProfile20200531Request) (*operations.GetFieldLevelEncryptionProfile20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption-profile/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption-profile/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3286,7 +3391,10 @@ func (s *SDK) GetFieldLevelEncryptionProfile20200531(ctx context.Context, reques
 // GetFieldLevelEncryptionProfileConfig20200531 - Get the field-level encryption profile configuration information.
 func (s *SDK) GetFieldLevelEncryptionProfileConfig20200531(ctx context.Context, request operations.GetFieldLevelEncryptionProfileConfig20200531Request) (*operations.GetFieldLevelEncryptionProfileConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption-profile/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption-profile/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3336,7 +3444,10 @@ func (s *SDK) GetFieldLevelEncryptionProfileConfig20200531(ctx context.Context, 
 // GetFunction20200531 - <p>Gets the code of a CloudFront function. To get configuration information and metadata about a function, use <code>DescribeFunction</code>.</p> <p>To get a function's code, you must provide the function's name and stage. To get these values, you can use <code>ListFunctions</code>.</p>
 func (s *SDK) GetFunction20200531(ctx context.Context, request operations.GetFunction20200531Request) (*operations.GetFunction20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/function/{Name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/function/{Name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3390,7 +3501,10 @@ func (s *SDK) GetFunction20200531(ctx context.Context, request operations.GetFun
 // GetInvalidation20200531 - Get the information about an invalidation.
 func (s *SDK) GetInvalidation20200531(ctx context.Context, request operations.GetInvalidation20200531Request) (*operations.GetInvalidation20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{DistributionId}/invalidation/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{DistributionId}/invalidation/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3442,7 +3556,10 @@ func (s *SDK) GetInvalidation20200531(ctx context.Context, request operations.Ge
 // GetKeyGroup20200531 - <p>Gets a key group, including the date and time when the key group was last modified.</p> <p>To get a key group, you must provide the key group's identifier. If the key group is referenced in a distribution's cache behavior, you can get the key group's identifier using <code>ListDistributions</code> or <code>GetDistribution</code>. If the key group is not referenced in a cache behavior, you can get the identifier using <code>ListKeyGroups</code>.</p>
 func (s *SDK) GetKeyGroup20200531(ctx context.Context, request operations.GetKeyGroup20200531Request) (*operations.GetKeyGroup20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/key-group/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/key-group/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3490,7 +3607,10 @@ func (s *SDK) GetKeyGroup20200531(ctx context.Context, request operations.GetKey
 // GetKeyGroupConfig20200531 - <p>Gets a key group configuration.</p> <p>To get a key group configuration, you must provide the key group's identifier. If the key group is referenced in a distribution's cache behavior, you can get the key group's identifier using <code>ListDistributions</code> or <code>GetDistribution</code>. If the key group is not referenced in a cache behavior, you can get the identifier using <code>ListKeyGroups</code>.</p>
 func (s *SDK) GetKeyGroupConfig20200531(ctx context.Context, request operations.GetKeyGroupConfig20200531Request) (*operations.GetKeyGroupConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/key-group/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/key-group/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3538,7 +3658,10 @@ func (s *SDK) GetKeyGroupConfig20200531(ctx context.Context, request operations.
 // GetMonitoringSubscription20200531 - Gets information about whether additional CloudWatch metrics are enabled for the specified CloudFront distribution.
 func (s *SDK) GetMonitoringSubscription20200531(ctx context.Context, request operations.GetMonitoringSubscription20200531Request) (*operations.GetMonitoringSubscription20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributions/{DistributionId}/monitoring-subscription/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributions/{DistributionId}/monitoring-subscription/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3592,7 +3715,10 @@ func (s *SDK) GetMonitoringSubscription20200531(ctx context.Context, request ope
 // GetOriginAccessControl20200531 - Gets a CloudFront origin access control, including its unique identifier.
 func (s *SDK) GetOriginAccessControl20200531(ctx context.Context, request operations.GetOriginAccessControl20200531Request) (*operations.GetOriginAccessControl20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-control/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-control/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3642,7 +3768,10 @@ func (s *SDK) GetOriginAccessControl20200531(ctx context.Context, request operat
 // GetOriginAccessControlConfig20200531 - Gets a CloudFront origin access control configuration.
 func (s *SDK) GetOriginAccessControlConfig20200531(ctx context.Context, request operations.GetOriginAccessControlConfig20200531Request) (*operations.GetOriginAccessControlConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-control/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-control/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3692,7 +3821,10 @@ func (s *SDK) GetOriginAccessControlConfig20200531(ctx context.Context, request 
 // GetOriginRequestPolicy20200531 - <p>Gets an origin request policy, including the following metadata:</p> <ul> <li> <p>The policy's identifier.</p> </li> <li> <p>The date and time when the policy was last modified.</p> </li> </ul> <p>To get an origin request policy, you must provide the policy's identifier. If the origin request policy is attached to a distribution's cache behavior, you can get the policy's identifier using <code>ListDistributions</code> or <code>GetDistribution</code>. If the origin request policy is not attached to a cache behavior, you can get the identifier using <code>ListOriginRequestPolicies</code>.</p>
 func (s *SDK) GetOriginRequestPolicy20200531(ctx context.Context, request operations.GetOriginRequestPolicy20200531Request) (*operations.GetOriginRequestPolicy20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-request-policy/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-request-policy/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3742,7 +3874,10 @@ func (s *SDK) GetOriginRequestPolicy20200531(ctx context.Context, request operat
 // GetOriginRequestPolicyConfig20200531 - <p>Gets an origin request policy configuration.</p> <p>To get an origin request policy configuration, you must provide the policy's identifier. If the origin request policy is attached to a distribution's cache behavior, you can get the policy's identifier using <code>ListDistributions</code> or <code>GetDistribution</code>. If the origin request policy is not attached to a cache behavior, you can get the identifier using <code>ListOriginRequestPolicies</code>.</p>
 func (s *SDK) GetOriginRequestPolicyConfig20200531(ctx context.Context, request operations.GetOriginRequestPolicyConfig20200531Request) (*operations.GetOriginRequestPolicyConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-request-policy/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-request-policy/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3792,7 +3927,10 @@ func (s *SDK) GetOriginRequestPolicyConfig20200531(ctx context.Context, request 
 // GetPublicKey20200531 - Gets a public key.
 func (s *SDK) GetPublicKey20200531(ctx context.Context, request operations.GetPublicKey20200531Request) (*operations.GetPublicKey20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/public-key/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/public-key/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3842,7 +3980,10 @@ func (s *SDK) GetPublicKey20200531(ctx context.Context, request operations.GetPu
 // GetPublicKeyConfig20200531 - Gets a public key configuration.
 func (s *SDK) GetPublicKeyConfig20200531(ctx context.Context, request operations.GetPublicKeyConfig20200531Request) (*operations.GetPublicKeyConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/public-key/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/public-key/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3954,7 +4095,10 @@ func (s *SDK) GetRealtimeLogConfig20200531(ctx context.Context, request operatio
 // GetResponseHeadersPolicy20200531 - <p>Gets a response headers policy, including metadata (the policy's identifier and the date and time when the policy was last modified).</p> <p>To get a response headers policy, you must provide the policy's identifier. If the response headers policy is attached to a distribution's cache behavior, you can get the policy's identifier using <code>ListDistributions</code> or <code>GetDistribution</code>. If the response headers policy is not attached to a cache behavior, you can get the identifier using <code>ListResponseHeadersPolicies</code>.</p>
 func (s *SDK) GetResponseHeadersPolicy20200531(ctx context.Context, request operations.GetResponseHeadersPolicy20200531Request) (*operations.GetResponseHeadersPolicy20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/response-headers-policy/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/response-headers-policy/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4004,7 +4148,10 @@ func (s *SDK) GetResponseHeadersPolicy20200531(ctx context.Context, request oper
 // GetResponseHeadersPolicyConfig20200531 - <p>Gets a response headers policy configuration.</p> <p>To get a response headers policy configuration, you must provide the policy's identifier. If the response headers policy is attached to a distribution's cache behavior, you can get the policy's identifier using <code>ListDistributions</code> or <code>GetDistribution</code>. If the response headers policy is not attached to a cache behavior, you can get the identifier using <code>ListResponseHeadersPolicies</code>.</p>
 func (s *SDK) GetResponseHeadersPolicyConfig20200531(ctx context.Context, request operations.GetResponseHeadersPolicyConfig20200531Request) (*operations.GetResponseHeadersPolicyConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/response-headers-policy/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/response-headers-policy/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4054,7 +4201,10 @@ func (s *SDK) GetResponseHeadersPolicyConfig20200531(ctx context.Context, reques
 // GetStreamingDistribution20200531 - Gets information about a specified RTMP distribution, including the distribution configuration.
 func (s *SDK) GetStreamingDistribution20200531(ctx context.Context, request operations.GetStreamingDistribution20200531Request) (*operations.GetStreamingDistribution20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/streaming-distribution/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/streaming-distribution/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4104,7 +4254,10 @@ func (s *SDK) GetStreamingDistribution20200531(ctx context.Context, request oper
 // GetStreamingDistributionConfig20200531 - Get the configuration information about a streaming distribution.
 func (s *SDK) GetStreamingDistributionConfig20200531(ctx context.Context, request operations.GetStreamingDistributionConfig20200531Request) (*operations.GetStreamingDistributionConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/streaming-distribution/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/streaming-distribution/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4424,7 +4577,10 @@ func (s *SDK) ListDistributions20200531(ctx context.Context, request operations.
 // ListDistributionsByCachePolicyId20200531 - <p>Gets a list of distribution IDs for distributions that have a cache behavior that's associated with the specified cache policy.</p> <p>You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the <code>Marker</code> value in the subsequent request.</p>
 func (s *SDK) ListDistributionsByCachePolicyId20200531(ctx context.Context, request operations.ListDistributionsByCachePolicyId20200531Request) (*operations.ListDistributionsByCachePolicyId20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributionsByCachePolicyId/{CachePolicyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributionsByCachePolicyId/{CachePolicyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4480,7 +4636,10 @@ func (s *SDK) ListDistributionsByCachePolicyId20200531(ctx context.Context, requ
 // ListDistributionsByKeyGroup20200531 - <p>Gets a list of distribution IDs for distributions that have a cache behavior that references the specified key group.</p> <p>You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the <code>Marker</code> value in the subsequent request.</p>
 func (s *SDK) ListDistributionsByKeyGroup20200531(ctx context.Context, request operations.ListDistributionsByKeyGroup20200531Request) (*operations.ListDistributionsByKeyGroup20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributionsByKeyGroupId/{KeyGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributionsByKeyGroupId/{KeyGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4534,7 +4693,10 @@ func (s *SDK) ListDistributionsByKeyGroup20200531(ctx context.Context, request o
 // ListDistributionsByOriginRequestPolicyId20200531 - <p>Gets a list of distribution IDs for distributions that have a cache behavior that's associated with the specified origin request policy.</p> <p>You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the <code>Marker</code> value in the subsequent request.</p>
 func (s *SDK) ListDistributionsByOriginRequestPolicyId20200531(ctx context.Context, request operations.ListDistributionsByOriginRequestPolicyId20200531Request) (*operations.ListDistributionsByOriginRequestPolicyId20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributionsByOriginRequestPolicyId/{OriginRequestPolicyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributionsByOriginRequestPolicyId/{OriginRequestPolicyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4648,7 +4810,10 @@ func (s *SDK) ListDistributionsByRealtimeLogConfig20200531(ctx context.Context, 
 // ListDistributionsByResponseHeadersPolicyId20200531 - <p>Gets a list of distribution IDs for distributions that have a cache behavior that's associated with the specified response headers policy.</p> <p>You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the <code>NextMarker</code> value from the current response as the <code>Marker</code> value in the subsequent request.</p>
 func (s *SDK) ListDistributionsByResponseHeadersPolicyId20200531(ctx context.Context, request operations.ListDistributionsByResponseHeadersPolicyId20200531Request) (*operations.ListDistributionsByResponseHeadersPolicyId20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributionsByResponseHeadersPolicyId/{ResponseHeadersPolicyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributionsByResponseHeadersPolicyId/{ResponseHeadersPolicyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4704,7 +4869,10 @@ func (s *SDK) ListDistributionsByResponseHeadersPolicyId20200531(ctx context.Con
 // ListDistributionsByWebACLId20200531 - List the distributions that are associated with a specified WAF web ACL.
 func (s *SDK) ListDistributionsByWebACLId20200531(ctx context.Context, request operations.ListDistributionsByWebACLId20200531Request) (*operations.ListDistributionsByWebACLId20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributionsByWebACLId/{WebACLId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distributionsByWebACLId/{WebACLId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4916,7 +5084,10 @@ func (s *SDK) ListFunctions20200531(ctx context.Context, request operations.List
 // ListInvalidations20200531 - Lists invalidation batches.
 func (s *SDK) ListInvalidations20200531(ctx context.Context, request operations.ListInvalidations20200531Request) (*operations.ListInvalidations20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{DistributionId}/invalidation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{DistributionId}/invalidation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5406,7 +5577,10 @@ func (s *SDK) ListTagsForResource20200531(ctx context.Context, request operation
 // PublishFunction20200531 - <p>Publishes a CloudFront function by copying the function code from the <code>DEVELOPMENT</code> stage to <code>LIVE</code>. This automatically updates all cache behaviors that are using this function to use the newly published copy in the <code>LIVE</code> stage.</p> <p>When a function is published to the <code>LIVE</code> stage, you can attach the function to a distribution's cache behavior, using the function's Amazon Resource Name (ARN).</p> <p>To publish a function, you must provide the function's name and version (<code>ETag</code> value). To get these values, you can use <code>ListFunctions</code> and <code>DescribeFunction</code>.</p>
 func (s *SDK) PublishFunction20200531(ctx context.Context, request operations.PublishFunction20200531Request) (*operations.PublishFunction20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/function/{Name}/publish#If-Match", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/function/{Name}/publish#If-Match", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -5529,7 +5703,10 @@ func (s *SDK) TagResource20200531(ctx context.Context, request operations.TagRes
 // TestFunction20200531 - <p>Tests a CloudFront function.</p> <p>To test a function, you provide an <i>event object</i> that represents an HTTP request or response that your CloudFront distribution could receive in production. CloudFront runs the function, passing it the event object that you provided, and returns the function's result (the modified event object) in the response. The response also contains function logs and error messages, if any exist. For more information about testing functions, see <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/managing-functions.html#test-function">Testing functions</a> in the <i>Amazon CloudFront Developer Guide</i>.</p> <p>To test a function, you provide the function's name and version (<code>ETag</code> value) along with the event object. To get the function's name and version, you can use <code>ListFunctions</code> and <code>DescribeFunction</code>.</p>
 func (s *SDK) TestFunction20200531(ctx context.Context, request operations.TestFunction20200531Request) (*operations.TestFunction20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/function/{Name}/test#If-Match", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/function/{Name}/test#If-Match", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -5662,7 +5839,10 @@ func (s *SDK) UntagResource20200531(ctx context.Context, request operations.Unta
 // UpdateCachePolicy20200531 - <p>Updates a cache policy configuration.</p> <p>When you update a cache policy configuration, all the fields are updated with the values provided in the request. You cannot update some fields independent of others. To update a cache policy configuration:</p> <ol> <li> <p>Use <code>GetCachePolicyConfig</code> to get the current configuration.</p> </li> <li> <p>Locally modify the fields in the cache policy configuration that you want to update.</p> </li> <li> <p>Call <code>UpdateCachePolicy</code> by providing the entire cache policy configuration, including the fields that you modified and those that you didn't.</p> </li> </ol>
 func (s *SDK) UpdateCachePolicy20200531(ctx context.Context, request operations.UpdateCachePolicy20200531Request) (*operations.UpdateCachePolicy20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/cache-policy/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/cache-policy/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -5740,7 +5920,10 @@ func (s *SDK) UpdateCachePolicy20200531(ctx context.Context, request operations.
 // UpdateCloudFrontOriginAccessIdentity20200531 - Update an origin access identity.
 func (s *SDK) UpdateCloudFrontOriginAccessIdentity20200531(ctx context.Context, request operations.UpdateCloudFrontOriginAccessIdentity20200531Request) (*operations.UpdateCloudFrontOriginAccessIdentity20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-identity/cloudfront/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-identity/cloudfront/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -5812,7 +5995,10 @@ func (s *SDK) UpdateCloudFrontOriginAccessIdentity20200531(ctx context.Context, 
 // UpdateContinuousDeploymentPolicy20200531 - <p>Updates a continuous deployment policy. You can update a continuous deployment policy to enable or disable it, to change the percentage of traffic that it sends to the staging distribution, or to change the staging distribution that it sends traffic to.</p> <p>When you update a continuous deployment policy configuration, all the fields are updated with the values that are provided in the request. You cannot update some fields independent of others. To update a continuous deployment policy configuration:</p> <ol> <li> <p>Use <code>GetContinuousDeploymentPolicyConfig</code> to get the current configuration.</p> </li> <li> <p>Locally modify the fields in the continuous deployment policy configuration that you want to update.</p> </li> <li> <p>Use <code>UpdateContinuousDeploymentPolicy</code>, providing the entire continuous deployment policy configuration, including the fields that you modified and those that you didn't.</p> </li> </ol>
 func (s *SDK) UpdateContinuousDeploymentPolicy20200531(ctx context.Context, request operations.UpdateContinuousDeploymentPolicy20200531Request) (*operations.UpdateContinuousDeploymentPolicy20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/continuous-deployment-policy/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/continuous-deployment-policy/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -5882,7 +6068,10 @@ func (s *SDK) UpdateContinuousDeploymentPolicy20200531(ctx context.Context, requ
 // UpdateDistribution20200531 - <p>Updates the configuration for a CloudFront distribution.</p> <p>The update process includes getting the current distribution configuration, updating it to make your changes, and then submitting an <code>UpdateDistribution</code> request to make the updates.</p> <p> <b>To update a web distribution using the CloudFront API</b> </p> <ol> <li> <p>Use <code>GetDistributionConfig</code> to get the current configuration, including the version identifier (<code>ETag</code>).</p> </li> <li> <p>Update the distribution configuration that was returned in the response. Note the following important requirements and restrictions:</p> <ul> <li> <p>You must rename the <code>ETag</code> field to <code>IfMatch</code>, leaving the value unchanged. (Set the value of <code>IfMatch</code> to the value of <code>ETag</code>, then remove the <code>ETag</code> field.)</p> </li> <li> <p>You can't change the value of <code>CallerReference</code>.</p> </li> </ul> </li> <li> <p>Submit an <code>UpdateDistribution</code> request, providing the distribution configuration. The new configuration replaces the existing configuration. The values that you specify in an <code>UpdateDistribution</code> request are not merged into your existing configuration. Make sure to include all fields: the ones that you modified and also the ones that you didn't.</p> </li> </ol>
 func (s *SDK) UpdateDistribution20200531(ctx context.Context, request operations.UpdateDistribution20200531Request) (*operations.UpdateDistribution20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -6068,7 +6257,10 @@ func (s *SDK) UpdateDistribution20200531(ctx context.Context, request operations
 // UpdateDistributionWithStagingConfig20200531 - <p>Copies the staging distribution's configuration to its corresponding primary distribution. The primary distribution retains its <code>Aliases</code> (also known as alternate domain names or CNAMEs) and <code>ContinuousDeploymentPolicyId</code> value, but otherwise its configuration is overwritten to match the staging distribution.</p> <p>You can use this operation in a continuous deployment workflow after you have tested configuration changes on the staging distribution. After using a continuous deployment policy to move a portion of your domain name's traffic to the staging distribution and verifying that it works as intended, you can use this operation to copy the staging distribution's configuration to the primary distribution. This action will disable the continuous deployment policy and move your domain's traffic back to the primary distribution.</p>
 func (s *SDK) UpdateDistributionWithStagingConfig20200531(ctx context.Context, request operations.UpdateDistributionWithStagingConfig20200531Request) (*operations.UpdateDistributionWithStagingConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{Id}/promote-staging-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/distribution/{Id}/promote-staging-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -6238,7 +6430,10 @@ func (s *SDK) UpdateDistributionWithStagingConfig20200531(ctx context.Context, r
 // UpdateFieldLevelEncryptionConfig20200531 - Update a field-level encryption configuration.
 func (s *SDK) UpdateFieldLevelEncryptionConfig20200531(ctx context.Context, request operations.UpdateFieldLevelEncryptionConfig20200531Request) (*operations.UpdateFieldLevelEncryptionConfig20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -6316,7 +6511,10 @@ func (s *SDK) UpdateFieldLevelEncryptionConfig20200531(ctx context.Context, requ
 // UpdateFieldLevelEncryptionProfile20200531 - Update a field-level encryption profile.
 func (s *SDK) UpdateFieldLevelEncryptionProfile20200531(ctx context.Context, request operations.UpdateFieldLevelEncryptionProfile20200531Request) (*operations.UpdateFieldLevelEncryptionProfile20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption-profile/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/field-level-encryption-profile/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -6396,7 +6594,10 @@ func (s *SDK) UpdateFieldLevelEncryptionProfile20200531(ctx context.Context, req
 // UpdateFunction20200531 - <p>Updates a CloudFront function.</p> <p>You can update a function's code or the comment that describes the function. You cannot update a function's name.</p> <p>To update a function, you provide the function's name and version (<code>ETag</code> value) along with the updated function code. To get the name and version, you can use <code>ListFunctions</code> and <code>DescribeFunction</code>.</p>
 func (s *SDK) UpdateFunction20200531(ctx context.Context, request operations.UpdateFunction20200531Request) (*operations.UpdateFunction20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/function/{Name}#If-Match", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/function/{Name}#If-Match", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -6464,7 +6665,10 @@ func (s *SDK) UpdateFunction20200531(ctx context.Context, request operations.Upd
 // UpdateKeyGroup20200531 - <p>Updates a key group.</p> <p>When you update a key group, all the fields are updated with the values provided in the request. You cannot update some fields independent of others. To update a key group:</p> <ol> <li> <p>Get the current key group with <code>GetKeyGroup</code> or <code>GetKeyGroupConfig</code>.</p> </li> <li> <p>Locally modify the fields in the key group that you want to update. For example, add or remove public key IDs.</p> </li> <li> <p>Call <code>UpdateKeyGroup</code> with the entire key group object, including the fields that you modified and those that you didn't.</p> </li> </ol>
 func (s *SDK) UpdateKeyGroup20200531(ctx context.Context, request operations.UpdateKeyGroup20200531Request) (*operations.UpdateKeyGroup20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/key-group/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/key-group/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -6532,7 +6736,10 @@ func (s *SDK) UpdateKeyGroup20200531(ctx context.Context, request operations.Upd
 // UpdateOriginAccessControl20200531 - Updates a CloudFront origin access control.
 func (s *SDK) UpdateOriginAccessControl20200531(ctx context.Context, request operations.UpdateOriginAccessControl20200531Request) (*operations.UpdateOriginAccessControl20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-control/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-access-control/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -6602,7 +6809,10 @@ func (s *SDK) UpdateOriginAccessControl20200531(ctx context.Context, request ope
 // UpdateOriginRequestPolicy20200531 - <p>Updates an origin request policy configuration.</p> <p>When you update an origin request policy configuration, all the fields are updated with the values provided in the request. You cannot update some fields independent of others. To update an origin request policy configuration:</p> <ol> <li> <p>Use <code>GetOriginRequestPolicyConfig</code> to get the current configuration.</p> </li> <li> <p>Locally modify the fields in the origin request policy configuration that you want to update.</p> </li> <li> <p>Call <code>UpdateOriginRequestPolicy</code> by providing the entire origin request policy configuration, including the fields that you modified and those that you didn't.</p> </li> </ol>
 func (s *SDK) UpdateOriginRequestPolicy20200531(ctx context.Context, request operations.UpdateOriginRequestPolicy20200531Request) (*operations.UpdateOriginRequestPolicy20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-request-policy/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/origin-request-policy/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -6680,7 +6890,10 @@ func (s *SDK) UpdateOriginRequestPolicy20200531(ctx context.Context, request ope
 // UpdatePublicKey20200531 - Update public key information. Note that the only value you can change is the comment.
 func (s *SDK) UpdatePublicKey20200531(ctx context.Context, request operations.UpdatePublicKey20200531Request) (*operations.UpdatePublicKey20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/public-key/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/public-key/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -6812,7 +7025,10 @@ func (s *SDK) UpdateRealtimeLogConfig20200531(ctx context.Context, request opera
 // UpdateResponseHeadersPolicy20200531 - <p>Updates a response headers policy.</p> <p>When you update a response headers policy, the entire policy is replaced. You cannot update some policy fields independent of others. To update a response headers policy configuration:</p> <ol> <li> <p>Use <code>GetResponseHeadersPolicyConfig</code> to get the current policy's configuration.</p> </li> <li> <p>Modify the fields in the response headers policy configuration that you want to update.</p> </li> <li> <p>Call <code>UpdateResponseHeadersPolicy</code>, providing the entire response headers policy configuration, including the fields that you modified and those that you didn't.</p> </li> </ol>
 func (s *SDK) UpdateResponseHeadersPolicy20200531(ctx context.Context, request operations.UpdateResponseHeadersPolicy20200531Request) (*operations.UpdateResponseHeadersPolicy20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/response-headers-policy/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/response-headers-policy/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -6890,7 +7106,10 @@ func (s *SDK) UpdateResponseHeadersPolicy20200531(ctx context.Context, request o
 // UpdateStreamingDistribution20200531 - Update a streaming distribution.
 func (s *SDK) UpdateStreamingDistribution20200531(ctx context.Context, request operations.UpdateStreamingDistribution20200531Request) (*operations.UpdateStreamingDistribution20200531Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2020-05-31/streaming-distribution/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2020-05-31/streaming-distribution/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

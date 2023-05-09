@@ -15,17 +15,21 @@ const (
 	GETPutUserPermissionsBoundaryActionEnumPutUserPermissionsBoundary GETPutUserPermissionsBoundaryActionEnum = "PutUserPermissionsBoundary"
 )
 
+func (e GETPutUserPermissionsBoundaryActionEnum) ToPointer() *GETPutUserPermissionsBoundaryActionEnum {
+	return &e
+}
+
 func (e *GETPutUserPermissionsBoundaryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PutUserPermissionsBoundary":
-		*e = GETPutUserPermissionsBoundaryActionEnum(s)
+		*e = GETPutUserPermissionsBoundaryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutUserPermissionsBoundaryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutUserPermissionsBoundaryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETPutUserPermissionsBoundaryVersionEnumTwoThousandAndTen0508 GETPutUserPermissionsBoundaryVersionEnum = "2010-05-08"
 )
 
+func (e GETPutUserPermissionsBoundaryVersionEnum) ToPointer() *GETPutUserPermissionsBoundaryVersionEnum {
+	return &e
+}
+
 func (e *GETPutUserPermissionsBoundaryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETPutUserPermissionsBoundaryVersionEnum(s)
+		*e = GETPutUserPermissionsBoundaryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutUserPermissionsBoundaryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutUserPermissionsBoundaryVersionEnum: %v", v)
 	}
 }
 

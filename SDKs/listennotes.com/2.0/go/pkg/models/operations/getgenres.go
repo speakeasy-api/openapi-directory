@@ -10,26 +10,30 @@ import (
 )
 
 // GetGenresTopLevelOnlyEnum - Just show top level genres? If 1, yes, just show top level genres. If 0, no, show all genres.
-type GetGenresTopLevelOnlyEnum string
+type GetGenresTopLevelOnlyEnum int64
 
 const (
-	GetGenresTopLevelOnlyEnumZero GetGenresTopLevelOnlyEnum = "0"
-	GetGenresTopLevelOnlyEnumOne  GetGenresTopLevelOnlyEnum = "1"
+	GetGenresTopLevelOnlyEnumZero GetGenresTopLevelOnlyEnum = 0
+	GetGenresTopLevelOnlyEnumOne  GetGenresTopLevelOnlyEnum = 1
 )
 
+func (e GetGenresTopLevelOnlyEnum) ToPointer() *GetGenresTopLevelOnlyEnum {
+	return &e
+}
+
 func (e *GetGenresTopLevelOnlyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = GetGenresTopLevelOnlyEnum(s)
+	case 1:
+		*e = GetGenresTopLevelOnlyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGenresTopLevelOnlyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGenresTopLevelOnlyEnum: %v", v)
 	}
 }
 

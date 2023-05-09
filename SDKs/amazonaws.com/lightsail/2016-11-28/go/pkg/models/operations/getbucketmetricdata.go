@@ -16,17 +16,21 @@ const (
 	GetBucketMetricDataXAmzTargetEnumLightsail20161128GetBucketMetricData GetBucketMetricDataXAmzTargetEnum = "Lightsail_20161128.GetBucketMetricData"
 )
 
+func (e GetBucketMetricDataXAmzTargetEnum) ToPointer() *GetBucketMetricDataXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetBucketMetricDataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetBucketMetricData":
-		*e = GetBucketMetricDataXAmzTargetEnum(s)
+		*e = GetBucketMetricDataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBucketMetricDataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBucketMetricDataXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	DuplicateAccessEnumInsufficient      DuplicateAccessEnum = "INSUFFICIENT"
 )
 
+func (e DuplicateAccessEnum) ToPointer() *DuplicateAccessEnum {
+	return &e
+}
+
 func (e *DuplicateAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_UNSPECIFIED":
 		fallthrough
 	case "ACCESS_UNKNOWN":
@@ -30,10 +34,10 @@ func (e *DuplicateAccessEnum) UnmarshalJSON(data []byte) error {
 	case "ALLOWED":
 		fallthrough
 	case "INSUFFICIENT":
-		*e = DuplicateAccessEnum(s)
+		*e = DuplicateAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DuplicateAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for DuplicateAccessEnum: %v", v)
 	}
 }
 

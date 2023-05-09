@@ -22,12 +22,16 @@ const (
 	ContactPointTypeValueEnumOutOfHoursInfo     ContactPointTypeValueEnum = "OUT_OF_HOURS_INFO"
 )
 
+func (e ContactPointTypeValueEnum) ToPointer() *ContactPointTypeValueEnum {
+	return &e
+}
+
 func (e *ContactPointTypeValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNIT_WEB_ADDRESS":
 		fallthrough
 	case "TRUST_WEB_ADDRESS":
@@ -47,10 +51,10 @@ func (e *ContactPointTypeValueEnum) UnmarshalJSON(data []byte) error {
 	case "APPOINTMENT_EMAIL":
 		fallthrough
 	case "OUT_OF_HOURS_INFO":
-		*e = ContactPointTypeValueEnum(s)
+		*e = ContactPointTypeValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactPointTypeValueEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactPointTypeValueEnum: %v", v)
 	}
 }
 

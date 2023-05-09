@@ -14,23 +14,30 @@ const (
 	GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnumAggregationPeriodUnspecified GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum = "AGGREGATION_PERIOD_UNSPECIFIED"
 	GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnumHourly                       GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum = "HOURLY"
 	GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnumDaily                        GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum = "DAILY"
+	GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnumFullRange                    GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum = "FULL_RANGE"
 )
 
+func (e GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum) ToPointer() *GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum {
+	return &e
+}
+
 func (e *GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGGREGATION_PERIOD_UNSPECIFIED":
 		fallthrough
 	case "HOURLY":
 		fallthrough
 	case "DAILY":
-		*e = GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum(s)
+		fallthrough
+	case "FULL_RANGE":
+		*e = GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePlayDeveloperReportingV1alpha1MetricsRowAggregationPeriodEnum: %v", v)
 	}
 }
 

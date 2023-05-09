@@ -14,16 +14,20 @@ const (
 	SslCertificateVendorEnumSectigo SslCertificateVendorEnum = "sectigo"
 )
 
+func (e SslCertificateVendorEnum) ToPointer() *SslCertificateVendorEnum {
+	return &e
+}
+
 func (e *SslCertificateVendorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sectigo":
-		*e = SslCertificateVendorEnum(s)
+		*e = SslCertificateVendorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslCertificateVendorEnum: %s", s)
+		return fmt.Errorf("invalid value for SslCertificateVendorEnum: %v", v)
 	}
 }

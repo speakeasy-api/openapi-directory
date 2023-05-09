@@ -17,12 +17,16 @@ const (
 	ConnectionScheduleTimeUnitEnumMonths  ConnectionScheduleTimeUnitEnum = "months"
 )
 
+func (e ConnectionScheduleTimeUnitEnum) ToPointer() *ConnectionScheduleTimeUnitEnum {
+	return &e
+}
+
 func (e *ConnectionScheduleTimeUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minutes":
 		fallthrough
 	case "hours":
@@ -32,10 +36,10 @@ func (e *ConnectionScheduleTimeUnitEnum) UnmarshalJSON(data []byte) error {
 	case "weeks":
 		fallthrough
 	case "months":
-		*e = ConnectionScheduleTimeUnitEnum(s)
+		*e = ConnectionScheduleTimeUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionScheduleTimeUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionScheduleTimeUnitEnum: %v", v)
 	}
 }
 

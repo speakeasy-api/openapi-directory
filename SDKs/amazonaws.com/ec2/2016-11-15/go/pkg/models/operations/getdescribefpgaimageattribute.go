@@ -15,17 +15,21 @@ const (
 	GETDescribeFpgaImageAttributeActionEnumDescribeFpgaImageAttribute GETDescribeFpgaImageAttributeActionEnum = "DescribeFpgaImageAttribute"
 )
 
+func (e GETDescribeFpgaImageAttributeActionEnum) ToPointer() *GETDescribeFpgaImageAttributeActionEnum {
+	return &e
+}
+
 func (e *GETDescribeFpgaImageAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeFpgaImageAttribute":
-		*e = GETDescribeFpgaImageAttributeActionEnum(s)
+		*e = GETDescribeFpgaImageAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeFpgaImageAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeFpgaImageAttributeActionEnum: %v", v)
 	}
 }
 
@@ -39,12 +43,16 @@ const (
 	GETDescribeFpgaImageAttributeAttributeEnumProductCodes   GETDescribeFpgaImageAttributeAttributeEnum = "productCodes"
 )
 
+func (e GETDescribeFpgaImageAttributeAttributeEnum) ToPointer() *GETDescribeFpgaImageAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETDescribeFpgaImageAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "description":
 		fallthrough
 	case "name":
@@ -52,10 +60,10 @@ func (e *GETDescribeFpgaImageAttributeAttributeEnum) UnmarshalJSON(data []byte) 
 	case "loadPermission":
 		fallthrough
 	case "productCodes":
-		*e = GETDescribeFpgaImageAttributeAttributeEnum(s)
+		*e = GETDescribeFpgaImageAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeFpgaImageAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeFpgaImageAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -66,17 +74,21 @@ const (
 	GETDescribeFpgaImageAttributeVersionEnumTwoThousandAndSixteen1115 GETDescribeFpgaImageAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeFpgaImageAttributeVersionEnum) ToPointer() *GETDescribeFpgaImageAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeFpgaImageAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeFpgaImageAttributeVersionEnum(s)
+		*e = GETDescribeFpgaImageAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeFpgaImageAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeFpgaImageAttributeVersionEnum: %v", v)
 	}
 }
 

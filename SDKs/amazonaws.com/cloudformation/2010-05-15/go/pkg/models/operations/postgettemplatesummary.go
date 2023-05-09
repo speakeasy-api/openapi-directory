@@ -15,17 +15,21 @@ const (
 	POSTGetTemplateSummaryActionEnumGetTemplateSummary POSTGetTemplateSummaryActionEnum = "GetTemplateSummary"
 )
 
+func (e POSTGetTemplateSummaryActionEnum) ToPointer() *POSTGetTemplateSummaryActionEnum {
+	return &e
+}
+
 func (e *POSTGetTemplateSummaryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetTemplateSummary":
-		*e = POSTGetTemplateSummaryActionEnum(s)
+		*e = POSTGetTemplateSummaryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetTemplateSummaryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetTemplateSummaryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetTemplateSummaryVersionEnumTwoThousandAndTen0515 POSTGetTemplateSummaryVersionEnum = "2010-05-15"
 )
 
+func (e POSTGetTemplateSummaryVersionEnum) ToPointer() *POSTGetTemplateSummaryVersionEnum {
+	return &e
+}
+
 func (e *POSTGetTemplateSummaryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTGetTemplateSummaryVersionEnum(s)
+		*e = POSTGetTemplateSummaryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetTemplateSummaryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetTemplateSummaryVersionEnum: %v", v)
 	}
 }
 

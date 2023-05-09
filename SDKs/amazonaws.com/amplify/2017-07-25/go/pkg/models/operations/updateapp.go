@@ -32,21 +32,25 @@ const (
 	UpdateAppRequestBodyPlatformEnumWebCompute UpdateAppRequestBodyPlatformEnum = "WEB_COMPUTE"
 )
 
+func (e UpdateAppRequestBodyPlatformEnum) ToPointer() *UpdateAppRequestBodyPlatformEnum {
+	return &e
+}
+
 func (e *UpdateAppRequestBodyPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEB":
 		fallthrough
 	case "WEB_DYNAMIC":
 		fallthrough
 	case "WEB_COMPUTE":
-		*e = UpdateAppRequestBodyPlatformEnum(s)
+		*e = UpdateAppRequestBodyPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAppRequestBodyPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAppRequestBodyPlatformEnum: %v", v)
 	}
 }
 

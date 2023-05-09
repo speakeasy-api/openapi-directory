@@ -34,7 +34,10 @@ func newLicenseAssignments(defaultClient, securityClient HTTPClient, serverURL, 
 // LicensingLicenseAssignmentsDelete - Revoke a license.
 func (s *licenseAssignments) LicensingLicenseAssignmentsDelete(ctx context.Context, request operations.LicensingLicenseAssignmentsDeleteRequest, security operations.LicensingLicenseAssignmentsDeleteSecurity) (*operations.LicensingLicenseAssignmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsDelete(ctx context.Conte
 // LicensingLicenseAssignmentsGet - Get a specific user's license by product SKU.
 func (s *licenseAssignments) LicensingLicenseAssignmentsGet(ctx context.Context, request operations.LicensingLicenseAssignmentsGetRequest, security operations.LicensingLicenseAssignmentsGetSecurity) (*operations.LicensingLicenseAssignmentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsGet(ctx context.Context,
 // LicensingLicenseAssignmentsInsert - Assign a license.
 func (s *licenseAssignments) LicensingLicenseAssignmentsInsert(ctx context.Context, request operations.LicensingLicenseAssignmentsInsertRequest, security operations.LicensingLicenseAssignmentsInsertSecurity) (*operations.LicensingLicenseAssignmentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseAssignmentInsert", "json")
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsInsert(ctx context.Conte
 // LicensingLicenseAssignmentsListForProduct - List all users assigned licenses for a specific product SKU.
 func (s *licenseAssignments) LicensingLicenseAssignmentsListForProduct(ctx context.Context, request operations.LicensingLicenseAssignmentsListForProductRequest, security operations.LicensingLicenseAssignmentsListForProductSecurity) (*operations.LicensingLicenseAssignmentsListForProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsListForProduct(ctx conte
 // LicensingLicenseAssignmentsListForProductAndSku - List all users assigned licenses for a specific product SKU.
 func (s *licenseAssignments) LicensingLicenseAssignmentsListForProductAndSku(ctx context.Context, request operations.LicensingLicenseAssignmentsListForProductAndSkuRequest, security operations.LicensingLicenseAssignmentsListForProductAndSkuSecurity) (*operations.LicensingLicenseAssignmentsListForProductAndSkuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +296,10 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsListForProductAndSku(ctx
 // LicensingLicenseAssignmentsPatch - Reassign a user's product SKU with a different SKU in the same product. This method supports patch semantics.
 func (s *licenseAssignments) LicensingLicenseAssignmentsPatch(ctx context.Context, request operations.LicensingLicenseAssignmentsPatchRequest, security operations.LicensingLicenseAssignmentsPatchSecurity) (*operations.LicensingLicenseAssignmentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseAssignment", "json")
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *licenseAssignments) LicensingLicenseAssignmentsPatch(ctx context.Contex
 // LicensingLicenseAssignmentsUpdate - Reassign a user's product SKU with a different SKU in the same product.
 func (s *licenseAssignments) LicensingLicenseAssignmentsUpdate(ctx context.Context, request operations.LicensingLicenseAssignmentsUpdateRequest, security operations.LicensingLicenseAssignmentsUpdateSecurity) (*operations.LicensingLicenseAssignmentsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseAssignment", "json")
 	if err != nil {

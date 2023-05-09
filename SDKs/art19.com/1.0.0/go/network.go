@@ -107,7 +107,10 @@ func (s *network) GetNetworks(ctx context.Context, request operations.GetNetwork
 //     and will be removed from the response in a future release.
 func (s *network) GetNetworksID(ctx context.Context, request operations.GetNetworksIDRequest, security operations.GetNetworksIDSecurity) (*operations.GetNetworksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,20 +15,24 @@ const (
 	ArtifactsTypeEnumNoArtifacts  ArtifactsTypeEnum = "NO_ARTIFACTS"
 )
 
+func (e ArtifactsTypeEnum) ToPointer() *ArtifactsTypeEnum {
+	return &e
+}
+
 func (e *ArtifactsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODEPIPELINE":
 		fallthrough
 	case "S3":
 		fallthrough
 	case "NO_ARTIFACTS":
-		*e = ArtifactsTypeEnum(s)
+		*e = ArtifactsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArtifactsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ArtifactsTypeEnum: %v", v)
 	}
 }

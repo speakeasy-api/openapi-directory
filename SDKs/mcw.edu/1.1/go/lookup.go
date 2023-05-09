@@ -36,7 +36,10 @@ func newLookup(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GETEnsemblGeneMappingUsingGET - Translate an RGD ID to an Ensembl Gene  ID
 func (s *lookup) GETEnsemblGeneMappingUsingGET(ctx context.Context, request operations.GETEnsemblGeneMappingUsingGETRequest) (*operations.GETEnsemblGeneMappingUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/EnsemblGene/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/EnsemblGene/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -143,7 +146,10 @@ func (s *lookup) GetEnsemblGeneMappingUsingPOST(ctx context.Context, request sha
 // GETEnsemblProteinMappingUsingGET - Translate an RGD ID to an Ensembl Protein ID
 func (s *lookup) GETEnsemblProteinMappingUsingGET(ctx context.Context, request operations.GETEnsemblProteinMappingUsingGETRequest) (*operations.GETEnsemblProteinMappingUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/EnsemblProtein/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/EnsemblProtein/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -250,7 +256,10 @@ func (s *lookup) GetEnsemblProteinMappingUsingPOST(ctx context.Context, request 
 // GETEnsemblTranscriptMappingUsingGET - Translate an RGD ID to an Ensembl Transcript ID
 func (s *lookup) GETEnsemblTranscriptMappingUsingGET(ctx context.Context, request operations.GETEnsemblTranscriptMappingUsingGETRequest) (*operations.GETEnsemblTranscriptMappingUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/EnsemblTranscript/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/EnsemblTranscript/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -357,7 +366,10 @@ func (s *lookup) GetEnsemblTranscriptMappingUsingPOST(ctx context.Context, reque
 // GETGTEXMappingUsingGET - Translate an RGD ID to an GTEx ID
 func (s *lookup) GETGTEXMappingUsingGET(ctx context.Context, request operations.GETGTEXMappingUsingGETRequest) (*operations.GETGTEXMappingUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/GTEx/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/GTEx/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -464,7 +476,10 @@ func (s *lookup) GetGTEXMappingUsingPOST(ctx context.Context, request shared.RGD
 // GETGenBankNucleotideMappingUsingGET - Translate an RGD ID to a GenBank Nucleotide ID
 func (s *lookup) GETGenBankNucleotideMappingUsingGET(ctx context.Context, request operations.GETGenBankNucleotideMappingUsingGETRequest) (*operations.GETGenBankNucleotideMappingUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/GenBankNucleotide/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/GenBankNucleotide/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -571,7 +586,10 @@ func (s *lookup) GetGenBankNucleotideMappingUsingPOST(ctx context.Context, reque
 // GETGenBankProteinMappingUsingGET - Translate an RGD ID to a GenBank Protein ID
 func (s *lookup) GETGenBankProteinMappingUsingGET(ctx context.Context, request operations.GETGenBankProteinMappingUsingGETRequest) (*operations.GETGenBankProteinMappingUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/GenBankProtein/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/GenBankProtein/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -727,7 +745,10 @@ func (s *lookup) GETGeneTypesUsingGET(ctx context.Context) (*operations.GETGeneT
 // GETHGNCMappingUsingGET - Translate an RGD ID to an HGNC ID
 func (s *lookup) GETHGNCMappingUsingGET(ctx context.Context, request operations.GETHGNCMappingUsingGETRequest) (*operations.GETHGNCMappingUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/HGNC/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/HGNC/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -834,7 +855,10 @@ func (s *lookup) GetHGNCMappingUsingPOST(ctx context.Context, request shared.RGD
 // GETMGIMappingUsingGET - Translate an RGD ID to an MGI ID
 func (s *lookup) GETMGIMappingUsingGET(ctx context.Context, request operations.GETMGIMappingUsingGETRequest) (*operations.GETMGIMappingUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/MGI/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/MGI/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -941,7 +965,10 @@ func (s *lookup) GetMGIMappingUsingPOST(ctx context.Context, request shared.RGDI
 // GETMapsUsingGET - Return a list assembly maps for a species
 func (s *lookup) GETMapsUsingGET(ctx context.Context, request operations.GETMapsUsingGETRequest) (*operations.GETMapsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/maps/{speciesTypeKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lookup/maps/{speciesTypeKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -990,7 +1017,10 @@ func (s *lookup) GETMapsUsingGET(ctx context.Context, request operations.GETMaps
 // GETMapsUsingGET1 - Return a standardUnit for an ontology if it exists
 func (s *lookup) GETMapsUsingGET1(ctx context.Context, request operations.GETMapsUsingGET1Request) (*operations.GETMapsUsingGET1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/standardUnit/{accId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lookup/standardUnit/{accId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1040,7 +1070,10 @@ func (s *lookup) GETMapsUsingGET1(ctx context.Context, request operations.GETMap
 // GETNCBIGeneMappingUsingGET - Translate an RGD ID to an NCBI Gene ID
 func (s *lookup) GETNCBIGeneMappingUsingGET(ctx context.Context, request operations.GETNCBIGeneMappingUsingGETRequest) (*operations.GETNCBIGeneMappingUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/NCBIGene/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/NCBIGene/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1196,7 +1229,10 @@ func (s *lookup) GETSpeciesTypesUsingGET(ctx context.Context) (*operations.GETSp
 // GETUniProtMappingUsingGET - Translate an RGD ID to a UniProt ID
 func (s *lookup) GETUniProtMappingUsingGET(ctx context.Context, request operations.GETUniProtMappingUsingGETRequest) (*operations.GETUniProtMappingUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/UniProt/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/lookup/id/map/UniProt/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

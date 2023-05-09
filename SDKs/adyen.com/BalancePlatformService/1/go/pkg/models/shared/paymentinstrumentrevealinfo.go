@@ -4,9 +4,9 @@ package shared
 
 // PaymentInstrumentRevealInfo - OK - the request has succeeded.
 type PaymentInstrumentRevealInfo struct {
-	// The cvc of the card.
+	// The CVC2 value of the card.
 	Cvc        string `json:"cvc"`
 	Expiration Expiry `json:"expiration"`
-	// The pan number of the card.
+	// The primary account number (PAN) of the card.
 	Pan string `json:"pan"`
 }

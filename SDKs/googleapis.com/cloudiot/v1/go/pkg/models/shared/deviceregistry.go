@@ -18,12 +18,16 @@ const (
 	DeviceRegistryLogLevelEnumDebug               DeviceRegistryLogLevelEnum = "DEBUG"
 )
 
+func (e DeviceRegistryLogLevelEnum) ToPointer() *DeviceRegistryLogLevelEnum {
+	return &e
+}
+
 func (e *DeviceRegistryLogLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -33,10 +37,10 @@ func (e *DeviceRegistryLogLevelEnum) UnmarshalJSON(data []byte) error {
 	case "INFO":
 		fallthrough
 	case "DEBUG":
-		*e = DeviceRegistryLogLevelEnum(s)
+		*e = DeviceRegistryLogLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceRegistryLogLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceRegistryLogLevelEnum: %v", v)
 	}
 }
 

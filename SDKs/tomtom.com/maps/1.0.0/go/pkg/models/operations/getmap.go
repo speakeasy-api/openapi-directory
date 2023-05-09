@@ -16,19 +16,23 @@ const (
 	GetMapFormatEnumImagePng  GetMapFormatEnum = "image/png"
 )
 
+func (e GetMapFormatEnum) ToPointer() *GetMapFormatEnum {
+	return &e
+}
+
 func (e *GetMapFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "image/jpeg":
 		fallthrough
 	case "image/png":
-		*e = GetMapFormatEnum(s)
+		*e = GetMapFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapFormatEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	GetMapLayersEnumBasic GetMapLayersEnum = "basic"
 )
 
+func (e GetMapLayersEnum) ToPointer() *GetMapLayersEnum {
+	return &e
+}
+
 func (e *GetMapLayersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "basic":
-		*e = GetMapLayersEnum(s)
+		*e = GetMapLayersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapLayersEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapLayersEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GetMapRequestEnumGetMap GetMapRequestEnum = "GetMap"
 )
 
+func (e GetMapRequestEnum) ToPointer() *GetMapRequestEnum {
+	return &e
+}
+
 func (e *GetMapRequestEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetMap":
-		*e = GetMapRequestEnum(s)
+		*e = GetMapRequestEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapRequestEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapRequestEnum: %v", v)
 	}
 }
 
@@ -81,17 +93,21 @@ const (
 	GetMapServiceEnumWms GetMapServiceEnum = "WMS"
 )
 
+func (e GetMapServiceEnum) ToPointer() *GetMapServiceEnum {
+	return &e
+}
+
 func (e *GetMapServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WMS":
-		*e = GetMapServiceEnum(s)
+		*e = GetMapServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapServiceEnum: %v", v)
 	}
 }
 
@@ -105,19 +121,23 @@ const (
 	GetMapSrsEnumEpsg4326 GetMapSrsEnum = "EPSG:4326"
 )
 
+func (e GetMapSrsEnum) ToPointer() *GetMapSrsEnum {
+	return &e
+}
+
 func (e *GetMapSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EPSG:3857":
 		fallthrough
 	case "EPSG:4326":
-		*e = GetMapSrsEnum(s)
+		*e = GetMapSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapSrsEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	GetMapStylesEnumUnknown GetMapStylesEnum = ""
 )
 
+func (e GetMapStylesEnum) ToPointer() *GetMapStylesEnum {
+	return &e
+}
+
 func (e *GetMapStylesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
-		*e = GetMapStylesEnum(s)
+		*e = GetMapStylesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapStylesEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapStylesEnum: %v", v)
 	}
 }
 
@@ -151,38 +175,46 @@ const (
 	GetMapVersionEnumOne11 GetMapVersionEnum = "1.1.1"
 )
 
+func (e GetMapVersionEnum) ToPointer() *GetMapVersionEnum {
+	return &e
+}
+
 func (e *GetMapVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1.1.1":
-		*e = GetMapVersionEnum(s)
+		*e = GetMapVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionEnum: %v", v)
 	}
 }
 
 // GetMapVersionNumberEnum - Version of the service to call. The current version is 1
-type GetMapVersionNumberEnum string
+type GetMapVersionNumberEnum int64
 
 const (
-	GetMapVersionNumberEnumOne GetMapVersionNumberEnum = "1"
+	GetMapVersionNumberEnumOne GetMapVersionNumberEnum = 1
 )
 
+func (e GetMapVersionNumberEnum) ToPointer() *GetMapVersionNumberEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
-		*e = GetMapVersionNumberEnum(s)
+	switch v {
+	case 1:
+		*e = GetMapVersionNumberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberEnum: %v", v)
 	}
 }
 

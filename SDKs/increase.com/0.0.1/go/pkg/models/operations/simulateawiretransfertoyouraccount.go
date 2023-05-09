@@ -9,23 +9,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum = "429"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON13TypeEnumRateLimitedError SimulateAWireTransferToYourAccountDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON13TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON13TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -57,23 +65,27 @@ type SimulateAWireTransferToYourAccountDefaultApplicationJSON13 struct {
 	Type       SimulateAWireTransferToYourAccountDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnumFourHundredAndThree SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnum = "403"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnumFourHundredAndThree SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -83,17 +95,21 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON12TypeEnumPrivateFeatureError SimulateAWireTransferToYourAccountDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON12TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON12TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -104,23 +120,27 @@ type SimulateAWireTransferToYourAccountDefaultApplicationJSON12 struct {
 	Type   SimulateAWireTransferToYourAccountDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnumFourHundredAndFour SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnum = "404"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnumFourHundredAndFour SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON11TypeEnumObjectNotFoundError SimulateAWireTransferToYourAccountDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON11TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON11TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -151,23 +175,27 @@ type SimulateAWireTransferToYourAccountDefaultApplicationJSON11 struct {
 	Type   SimulateAWireTransferToYourAccountDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnumFourHundred SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnum = "400"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnumFourHundred SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -177,17 +205,21 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON10TypeEnumMalformedRequestError SimulateAWireTransferToYourAccountDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON10TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON10TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -198,23 +230,27 @@ type SimulateAWireTransferToYourAccountDefaultApplicationJSON10 struct {
 	Type   SimulateAWireTransferToYourAccountDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnumFourHundred SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnum = "400"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnumFourHundred SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -224,46 +260,54 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON9TypeEnumInvalidParametersError SimulateAWireTransferToYourAccountDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON9TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON9TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type SimulateAWireTransferToYourAccountDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                            `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                            `json:"errors"`
 	Status SimulateAWireTransferToYourAccountDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                              `json:"title"`
 	Type   SimulateAWireTransferToYourAccountDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnumFourHundredAndNine SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnum = "409"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnumFourHundredAndNine SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON8TypeEnumInvalidOperationError SimulateAWireTransferToYourAccountDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON8TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON8TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -294,23 +342,27 @@ type SimulateAWireTransferToYourAccountDefaultApplicationJSON8 struct {
 	Type   SimulateAWireTransferToYourAccountDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnumFourHundredAndOne SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnum = "401"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnumFourHundredAndOne SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON7TypeEnumInvalidAPIKeyError SimulateAWireTransferToYourAccountDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON7TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON7TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -341,23 +397,27 @@ type SimulateAWireTransferToYourAccountDefaultApplicationJSON7 struct {
 	Type   SimulateAWireTransferToYourAccountDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnumFiveHundred SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnum = "500"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnumFiveHundred SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -367,17 +427,21 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON6TypeEnumInternalServerError SimulateAWireTransferToYourAccountDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON6TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON6TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -388,23 +452,27 @@ type SimulateAWireTransferToYourAccountDefaultApplicationJSON6 struct {
 	Type   SimulateAWireTransferToYourAccountDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnumFourHundredAndThree SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnum = "403"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnumFourHundredAndThree SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -414,17 +482,21 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON5TypeEnumInsufficientPermissionsError SimulateAWireTransferToYourAccountDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON5TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON5TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -435,23 +507,27 @@ type SimulateAWireTransferToYourAccountDefaultApplicationJSON5 struct {
 	Type   SimulateAWireTransferToYourAccountDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnum = "422"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -461,17 +537,21 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError SimulateAWireTransferToYourAccountDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON4TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON4TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -482,23 +562,27 @@ type SimulateAWireTransferToYourAccountDefaultApplicationJSON4 struct {
 	Type   SimulateAWireTransferToYourAccountDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnumFourHundredAndNine SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnum = "409"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnumFourHundredAndNine SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -508,17 +592,21 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON3TypeEnumIdempotencyConflictError SimulateAWireTransferToYourAccountDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON3TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON3TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -529,23 +617,27 @@ type SimulateAWireTransferToYourAccountDefaultApplicationJSON3 struct {
 	Type   SimulateAWireTransferToYourAccountDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnumFourHundredAndThree SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnum = "403"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnumFourHundredAndThree SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -555,17 +647,21 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON2TypeEnumEnvironmentMismatchError SimulateAWireTransferToYourAccountDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON2TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON2TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -576,23 +672,27 @@ type SimulateAWireTransferToYourAccountDefaultApplicationJSON2 struct {
 	Type   SimulateAWireTransferToYourAccountDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnum string
+type SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnum int64
 
 const (
-	SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnumFourHundredAndFour SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnum = "404"
+	SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnumFourHundredAndFour SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -602,17 +702,21 @@ const (
 	SimulateAWireTransferToYourAccountDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError SimulateAWireTransferToYourAccountDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e SimulateAWireTransferToYourAccountDefaultApplicationJSON1TypeEnum) ToPointer() *SimulateAWireTransferToYourAccountDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *SimulateAWireTransferToYourAccountDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON1TypeEnum(s)
+		*e = SimulateAWireTransferToYourAccountDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SimulateAWireTransferToYourAccountDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/openlinksw.com/osdb/1.0.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ActionHelpRequest{
+    ctx := context.Background()
+    res, err := s.Osdb.ActionHelp(ctx, operations.ActionHelpRequest{
         ActionID: "corrupti",
         ServiceID: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.Osdb.ActionHelp(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,18 +43,18 @@ func main() {
 ## Available Resources and Operations
 
 
-### Osdb
+### [Osdb](docs/osdb/README.md)
 
-* `ActionHelp` - Action help
-* `DescribeAction` - Describe action
-* `DescribeService` - Describe service
-* `ExecuteAction` - Execute action
-* `ListActions` - List actions
-* `ListServices` - List services
-* `LoadService` - Load service
-* `Login` - Login
-* `Logout` - Logout
-* `UnloadService` - Unload service
+* [ActionHelp](docs/osdb/README.md#actionhelp) - Action help
+* [DescribeAction](docs/osdb/README.md#describeaction) - Describe action
+* [DescribeService](docs/osdb/README.md#describeservice) - Describe service
+* [ExecuteAction](docs/osdb/README.md#executeaction) - Execute action
+* [ListActions](docs/osdb/README.md#listactions) - List actions
+* [ListServices](docs/osdb/README.md#listservices) - List services
+* [LoadService](docs/osdb/README.md#loadservice) - Load service
+* [Login](docs/osdb/README.md#login) - Login
+* [Logout](docs/osdb/README.md#logout) - Logout
+* [UnloadService](docs/osdb/README.md#unloadservice) - Unload service
 <!-- End SDK Available Operations -->
 
 ### Maturity

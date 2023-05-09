@@ -34,7 +34,10 @@ func newMedia(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // ChromepolicyMediaUpload - Creates an enterprise file from the content provided by user. Returns a public download url for end user.
 func (s *media) ChromepolicyMediaUpload(ctx context.Context, request operations.ChromepolicyMediaUploadRequest, security operations.ChromepolicyMediaUploadSecurity) (*operations.ChromepolicyMediaUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/files:uploadPolicyFile", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/files:uploadPolicyFile", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

@@ -18,12 +18,16 @@ const (
 	GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequestPriorityEnumCriticalPlus  GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequestPriorityEnum = "CRITICAL_PLUS"
 )
 
+func (e GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequestPriorityEnum) ToPointer() *GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequestPriorityEnum {
+	return &e
+}
+
 func (e *GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequestPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPCIFIED":
 		fallthrough
 	case "SHEDDABLE":
@@ -33,14 +37,14 @@ func (e *GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequestPriority
 	case "CRITICAL":
 		fallthrough
 	case "CRITICAL_PLUS":
-		*e = GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequestPriorityEnum(s)
+		*e = GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequestPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequestPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequestPriorityEnum: %v", v)
 	}
 }
 
-// GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequest - Use this request to post all workflows associated with a given trigger id. Next available id: 10
+// GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequest - Use this request to post all workflows associated with a given trigger id. Next available id: 11
 type GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequest struct {
 	// Optional. If the client id is provided, then the combination of trigger id and client id is matched across all the workflows. If the client id is not provided, then workflows with matching trigger id are executed for each client id in the {@link TriggerConfig}. For Api Trigger, the client id is required and will be validated against the allowed clients.
 	ClientID *string `json:"clientId,omitempty"`
@@ -52,6 +56,8 @@ type GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequest struct {
 	Priority *GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequestPriorityEnum `json:"priority,omitempty"`
 	// Optional. This is used to de-dup incoming request: if the duplicate request was detected, the response from the previous execution is returned. Must have no more than 36 characters and contain only alphanumeric characters and hyphens.
 	RequestID *string `json:"requestId,omitempty"`
+	// This field is only required when using Admin Access. The resource name of target, or the parent resource name. For example: "projects/*/locations/*/integrations/*"
+	ResourceName *string `json:"resourceName,omitempty"`
 	// Optional. Time in milliseconds since epoch when the given event would be scheduled.
 	ScheduledTime *string `json:"scheduledTime,omitempty"`
 	// Optional. Sets test mode in {@link enterprise/crm/eventbus/event_message.proto}.

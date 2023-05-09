@@ -43,7 +43,10 @@ func newForm(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // - It is not possible to un-delete data that is removed in this way
 func (s *form) DeleteFormMessageByID(ctx context.Context, request operations.DeleteFormMessageByIDRequest) (*operations.DeleteFormMessageByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/entries/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/forms/entries/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *form) DeleteFormMessageByID(ctx context.Context, request operations.Del
 // If you prefer to find a form by its shareHash, you can use the [GET /forms](#operation/getFormByShareHash) endpoint instead.
 func (s *form) GetFormByID(ctx context.Context, request operations.GetFormByIDRequest) (*operations.GetFormByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -204,7 +210,10 @@ func (s *form) GetFormByShareHash(ctx context.Context, request operations.GetFor
 // Returns the form data entries for a specific form for a receive. Optional parameters can be included in the call to manage larger data sets.
 func (s *form) GetFormEntries(ctx context.Context, request operations.GetFormEntriesRequest) (*operations.GetFormEntriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/entries/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/forms/entries/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -259,7 +268,10 @@ func (s *form) GetFormEntries(ctx context.Context, request operations.GetFormEnt
 // *This call will **replace** your current form in its entirety.* If you want to keep any existing elements unchanged, be sure to submit the call with an element's current settings to preserve them.
 func (s *form) UpdateFormByID(ctx context.Context, request operations.UpdateFormByIDRequest) (*operations.UpdateFormByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

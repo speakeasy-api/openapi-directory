@@ -22,12 +22,16 @@ const (
 	WmxSitemapContentTypeEnumDataFeedElement WmxSitemapContentTypeEnum = "DATA_FEED_ELEMENT"
 )
 
+func (e WmxSitemapContentTypeEnum) ToPointer() *WmxSitemapContentTypeEnum {
+	return &e
+}
+
 func (e *WmxSitemapContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEB":
 		fallthrough
 	case "IMAGE":
@@ -45,10 +49,10 @@ func (e *WmxSitemapContentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "IOS_APP":
 		fallthrough
 	case "DATA_FEED_ELEMENT":
-		*e = WmxSitemapContentTypeEnum(s)
+		*e = WmxSitemapContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WmxSitemapContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WmxSitemapContentTypeEnum: %v", v)
 	}
 }
 

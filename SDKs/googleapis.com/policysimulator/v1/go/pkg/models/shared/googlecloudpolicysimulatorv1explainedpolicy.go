@@ -18,12 +18,16 @@ const (
 	GoogleCloudPolicysimulatorV1ExplainedPolicyAccessEnumUnknownInfoDenied      GoogleCloudPolicysimulatorV1ExplainedPolicyAccessEnum = "UNKNOWN_INFO_DENIED"
 )
 
+func (e GoogleCloudPolicysimulatorV1ExplainedPolicyAccessEnum) ToPointer() *GoogleCloudPolicysimulatorV1ExplainedPolicyAccessEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicysimulatorV1ExplainedPolicyAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_STATE_UNSPECIFIED":
 		fallthrough
 	case "GRANTED":
@@ -33,10 +37,10 @@ func (e *GoogleCloudPolicysimulatorV1ExplainedPolicyAccessEnum) UnmarshalJSON(da
 	case "UNKNOWN_CONDITIONAL":
 		fallthrough
 	case "UNKNOWN_INFO_DENIED":
-		*e = GoogleCloudPolicysimulatorV1ExplainedPolicyAccessEnum(s)
+		*e = GoogleCloudPolicysimulatorV1ExplainedPolicyAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicysimulatorV1ExplainedPolicyAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicysimulatorV1ExplainedPolicyAccessEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	GoogleCloudPolicysimulatorV1ExplainedPolicyRelevanceEnumHigh                          GoogleCloudPolicysimulatorV1ExplainedPolicyRelevanceEnum = "HIGH"
 )
 
+func (e GoogleCloudPolicysimulatorV1ExplainedPolicyRelevanceEnum) ToPointer() *GoogleCloudPolicysimulatorV1ExplainedPolicyRelevanceEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicysimulatorV1ExplainedPolicyRelevanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEURISTIC_RELEVANCE_UNSPECIFIED":
 		fallthrough
 	case "NORMAL":
 		fallthrough
 	case "HIGH":
-		*e = GoogleCloudPolicysimulatorV1ExplainedPolicyRelevanceEnum(s)
+		*e = GoogleCloudPolicysimulatorV1ExplainedPolicyRelevanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicysimulatorV1ExplainedPolicyRelevanceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicysimulatorV1ExplainedPolicyRelevanceEnum: %v", v)
 	}
 }
 

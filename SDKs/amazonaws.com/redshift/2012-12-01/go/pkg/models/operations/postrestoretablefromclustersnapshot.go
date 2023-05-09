@@ -15,17 +15,21 @@ const (
 	POSTRestoreTableFromClusterSnapshotActionEnumRestoreTableFromClusterSnapshot POSTRestoreTableFromClusterSnapshotActionEnum = "RestoreTableFromClusterSnapshot"
 )
 
+func (e POSTRestoreTableFromClusterSnapshotActionEnum) ToPointer() *POSTRestoreTableFromClusterSnapshotActionEnum {
+	return &e
+}
+
 func (e *POSTRestoreTableFromClusterSnapshotActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RestoreTableFromClusterSnapshot":
-		*e = POSTRestoreTableFromClusterSnapshotActionEnum(s)
+		*e = POSTRestoreTableFromClusterSnapshotActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRestoreTableFromClusterSnapshotActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRestoreTableFromClusterSnapshotActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRestoreTableFromClusterSnapshotVersionEnumTwoThousandAndTwelve1201 POSTRestoreTableFromClusterSnapshotVersionEnum = "2012-12-01"
 )
 
+func (e POSTRestoreTableFromClusterSnapshotVersionEnum) ToPointer() *POSTRestoreTableFromClusterSnapshotVersionEnum {
+	return &e
+}
+
 func (e *POSTRestoreTableFromClusterSnapshotVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTRestoreTableFromClusterSnapshotVersionEnum(s)
+		*e = POSTRestoreTableFromClusterSnapshotVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRestoreTableFromClusterSnapshotVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRestoreTableFromClusterSnapshotVersionEnum: %v", v)
 	}
 }
 

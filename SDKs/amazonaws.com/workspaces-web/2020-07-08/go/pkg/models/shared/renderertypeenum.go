@@ -13,16 +13,20 @@ const (
 	RendererTypeEnumAppStream RendererTypeEnum = "AppStream"
 )
 
+func (e RendererTypeEnum) ToPointer() *RendererTypeEnum {
+	return &e
+}
+
 func (e *RendererTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppStream":
-		*e = RendererTypeEnum(s)
+		*e = RendererTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RendererTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RendererTypeEnum: %v", v)
 	}
 }

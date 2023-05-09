@@ -3,15 +3,8 @@
 package shared
 
 type Security struct {
-	XAuthAccessToken   *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
-	XAuthAccessToken1  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
-	XAuthAccessToken10 *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
-	XAuthAccessToken2  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
-	XAuthAccessToken3  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
-	XAuthAccessToken4  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
-	XAuthAccessToken5  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
-	XAuthAccessToken6  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
-	XAuthAccessToken7  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
-	XAuthAccessToken8  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
-	XAuthAccessToken9  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken  *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken1 *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken2 *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
+	XAuthAccessToken3 *string `security:"scheme,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN"`
 }

@@ -15,17 +15,21 @@ const (
 	GETSwitchoverReadReplicaActionEnumSwitchoverReadReplica GETSwitchoverReadReplicaActionEnum = "SwitchoverReadReplica"
 )
 
+func (e GETSwitchoverReadReplicaActionEnum) ToPointer() *GETSwitchoverReadReplicaActionEnum {
+	return &e
+}
+
 func (e *GETSwitchoverReadReplicaActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SwitchoverReadReplica":
-		*e = GETSwitchoverReadReplicaActionEnum(s)
+		*e = GETSwitchoverReadReplicaActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSwitchoverReadReplicaActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSwitchoverReadReplicaActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSwitchoverReadReplicaVersionEnumTwoThousandAndFourteen1031 GETSwitchoverReadReplicaVersionEnum = "2014-10-31"
 )
 
+func (e GETSwitchoverReadReplicaVersionEnum) ToPointer() *GETSwitchoverReadReplicaVersionEnum {
+	return &e
+}
+
 func (e *GETSwitchoverReadReplicaVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETSwitchoverReadReplicaVersionEnum(s)
+		*e = GETSwitchoverReadReplicaVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSwitchoverReadReplicaVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSwitchoverReadReplicaVersionEnum: %v", v)
 	}
 }
 

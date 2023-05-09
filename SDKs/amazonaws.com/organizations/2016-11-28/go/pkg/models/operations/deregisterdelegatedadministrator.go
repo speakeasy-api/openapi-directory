@@ -16,17 +16,21 @@ const (
 	DeregisterDelegatedAdministratorXAmzTargetEnumAwsOrganizationsV20161128DeregisterDelegatedAdministrator DeregisterDelegatedAdministratorXAmzTargetEnum = "AWSOrganizationsV20161128.DeregisterDelegatedAdministrator"
 )
 
+func (e DeregisterDelegatedAdministratorXAmzTargetEnum) ToPointer() *DeregisterDelegatedAdministratorXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeregisterDelegatedAdministratorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.DeregisterDelegatedAdministrator":
-		*e = DeregisterDelegatedAdministratorXAmzTargetEnum(s)
+		*e = DeregisterDelegatedAdministratorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeregisterDelegatedAdministratorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeregisterDelegatedAdministratorXAmzTargetEnum: %v", v)
 	}
 }
 

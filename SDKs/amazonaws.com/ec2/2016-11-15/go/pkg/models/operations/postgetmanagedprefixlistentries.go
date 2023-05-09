@@ -15,17 +15,21 @@ const (
 	POSTGetManagedPrefixListEntriesActionEnumGetManagedPrefixListEntries POSTGetManagedPrefixListEntriesActionEnum = "GetManagedPrefixListEntries"
 )
 
+func (e POSTGetManagedPrefixListEntriesActionEnum) ToPointer() *POSTGetManagedPrefixListEntriesActionEnum {
+	return &e
+}
+
 func (e *POSTGetManagedPrefixListEntriesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetManagedPrefixListEntries":
-		*e = POSTGetManagedPrefixListEntriesActionEnum(s)
+		*e = POSTGetManagedPrefixListEntriesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetManagedPrefixListEntriesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetManagedPrefixListEntriesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetManagedPrefixListEntriesVersionEnumTwoThousandAndSixteen1115 POSTGetManagedPrefixListEntriesVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetManagedPrefixListEntriesVersionEnum) ToPointer() *POSTGetManagedPrefixListEntriesVersionEnum {
+	return &e
+}
+
 func (e *POSTGetManagedPrefixListEntriesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetManagedPrefixListEntriesVersionEnum(s)
+		*e = POSTGetManagedPrefixListEntriesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetManagedPrefixListEntriesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetManagedPrefixListEntriesVersionEnum: %v", v)
 	}
 }
 

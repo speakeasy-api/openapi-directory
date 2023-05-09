@@ -37,7 +37,10 @@ func newQueues(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // AckMessage - Acknowledge that Queue Message has been processed.
 func (s *queues) AckMessage(ctx context.Context, request operations.AckMessageRequest) (*operations.AckMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}/messages/{queueMessageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}/messages/{queueMessageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -127,7 +130,10 @@ func (s *queues) CreateQueue(ctx context.Context) (*operations.CreateQueueRespon
 // DeleteQueue - Delete Queue.
 func (s *queues) DeleteQueue(ctx context.Context, request operations.DeleteQueueRequest) (*operations.DeleteQueueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -220,7 +226,10 @@ func (s *queues) GetListOfQueues(ctx context.Context) (*operations.GetListOfQueu
 // GetMessageData - Get data associated with a Queue Message.
 func (s *queues) GetMessageData(ctx context.Context, request operations.GetMessageDataRequest) (*operations.GetMessageDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}/data/{queueMessageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}/data/{queueMessageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +276,10 @@ func (s *queues) GetMessageData(ctx context.Context, request operations.GetMessa
 // GetNextMessages - Get next Queue Messages from a Queue
 func (s *queues) GetNextMessages(ctx context.Context, request operations.GetNextMessagesRequest) (*operations.GetNextMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}/messages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}/messages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -316,7 +328,10 @@ func (s *queues) GetNextMessages(ctx context.Context, request operations.GetNext
 // GetQueueConfig - Get Queue config.
 func (s *queues) GetQueueConfig(ctx context.Context, request operations.GetQueueConfigRequest) (*operations.GetQueueConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -361,7 +376,10 @@ func (s *queues) GetQueueConfig(ctx context.Context, request operations.GetQueue
 // SendMessageBinary - Send Queue Message with a binary data (blob) payload.
 func (s *queues) SendMessageBinary(ctx context.Context, request operations.SendMessageBinaryRequest) (*operations.SendMessageBinaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}/messages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}/messages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -419,7 +437,10 @@ func (s *queues) SendMessageBinary(ctx context.Context, request operations.SendM
 // UpdateQueueConfig - Update Queue configuration.
 func (s *queues) UpdateQueueConfig(ctx context.Context, request operations.UpdateQueueConfigRequest) (*operations.UpdateQueueConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/queues/{queueName}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

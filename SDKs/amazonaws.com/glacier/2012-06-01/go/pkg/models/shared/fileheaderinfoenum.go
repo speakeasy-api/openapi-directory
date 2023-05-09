@@ -15,20 +15,24 @@ const (
 	FileHeaderInfoEnumNone   FileHeaderInfoEnum = "NONE"
 )
 
+func (e FileHeaderInfoEnum) ToPointer() *FileHeaderInfoEnum {
+	return &e
+}
+
 func (e *FileHeaderInfoEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USE":
 		fallthrough
 	case "IGNORE":
 		fallthrough
 	case "NONE":
-		*e = FileHeaderInfoEnum(s)
+		*e = FileHeaderInfoEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileHeaderInfoEnum: %s", s)
+		return fmt.Errorf("invalid value for FileHeaderInfoEnum: %v", v)
 	}
 }

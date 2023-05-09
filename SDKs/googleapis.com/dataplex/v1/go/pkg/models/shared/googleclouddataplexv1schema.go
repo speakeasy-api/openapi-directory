@@ -15,19 +15,23 @@ const (
 	GoogleCloudDataplexV1SchemaPartitionStyleEnumHiveCompatible            GoogleCloudDataplexV1SchemaPartitionStyleEnum = "HIVE_COMPATIBLE"
 )
 
+func (e GoogleCloudDataplexV1SchemaPartitionStyleEnum) ToPointer() *GoogleCloudDataplexV1SchemaPartitionStyleEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1SchemaPartitionStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARTITION_STYLE_UNSPECIFIED":
 		fallthrough
 	case "HIVE_COMPATIBLE":
-		*e = GoogleCloudDataplexV1SchemaPartitionStyleEnum(s)
+		*e = GoogleCloudDataplexV1SchemaPartitionStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1SchemaPartitionStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1SchemaPartitionStyleEnum: %v", v)
 	}
 }
 

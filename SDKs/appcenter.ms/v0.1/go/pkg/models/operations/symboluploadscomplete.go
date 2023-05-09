@@ -21,19 +21,23 @@ const (
 	SymbolUploadsCompleteRequestBodyStatusEnumAborted   SymbolUploadsCompleteRequestBodyStatusEnum = "aborted"
 )
 
+func (e SymbolUploadsCompleteRequestBodyStatusEnum) ToPointer() *SymbolUploadsCompleteRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *SymbolUploadsCompleteRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "committed":
 		fallthrough
 	case "aborted":
-		*e = SymbolUploadsCompleteRequestBodyStatusEnum(s)
+		*e = SymbolUploadsCompleteRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymbolUploadsCompleteRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SymbolUploadsCompleteRequestBodyStatusEnum: %v", v)
 	}
 }
 
@@ -77,19 +81,23 @@ const (
 	SymbolUploadsComplete200ApplicationJSONOriginEnumSystem SymbolUploadsComplete200ApplicationJSONOriginEnum = "System"
 )
 
+func (e SymbolUploadsComplete200ApplicationJSONOriginEnum) ToPointer() *SymbolUploadsComplete200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *SymbolUploadsComplete200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "User":
 		fallthrough
 	case "System":
-		*e = SymbolUploadsComplete200ApplicationJSONOriginEnum(s)
+		*e = SymbolUploadsComplete200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymbolUploadsComplete200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for SymbolUploadsComplete200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -105,12 +113,16 @@ const (
 	SymbolUploadsComplete200ApplicationJSONStatusEnumFailed     SymbolUploadsComplete200ApplicationJSONStatusEnum = "failed"
 )
 
+func (e SymbolUploadsComplete200ApplicationJSONStatusEnum) ToPointer() *SymbolUploadsComplete200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *SymbolUploadsComplete200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "committed":
@@ -122,10 +134,10 @@ func (e *SymbolUploadsComplete200ApplicationJSONStatusEnum) UnmarshalJSON(data [
 	case "indexed":
 		fallthrough
 	case "failed":
-		*e = SymbolUploadsComplete200ApplicationJSONStatusEnum(s)
+		*e = SymbolUploadsComplete200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymbolUploadsComplete200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SymbolUploadsComplete200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -140,12 +152,16 @@ const (
 	SymbolUploadsComplete200ApplicationJSONSymbolTypeEnumUwp             SymbolUploadsComplete200ApplicationJSONSymbolTypeEnum = "UWP"
 )
 
+func (e SymbolUploadsComplete200ApplicationJSONSymbolTypeEnum) ToPointer() *SymbolUploadsComplete200ApplicationJSONSymbolTypeEnum {
+	return &e
+}
+
 func (e *SymbolUploadsComplete200ApplicationJSONSymbolTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Apple":
 		fallthrough
 	case "JavaScript":
@@ -155,10 +171,10 @@ func (e *SymbolUploadsComplete200ApplicationJSONSymbolTypeEnum) UnmarshalJSON(da
 	case "AndroidProguard":
 		fallthrough
 	case "UWP":
-		*e = SymbolUploadsComplete200ApplicationJSONSymbolTypeEnum(s)
+		*e = SymbolUploadsComplete200ApplicationJSONSymbolTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymbolUploadsComplete200ApplicationJSONSymbolTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SymbolUploadsComplete200ApplicationJSONSymbolTypeEnum: %v", v)
 	}
 }
 

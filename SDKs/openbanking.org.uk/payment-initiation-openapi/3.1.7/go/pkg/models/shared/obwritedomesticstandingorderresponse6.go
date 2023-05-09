@@ -142,21 +142,25 @@ const (
 	OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnumRejected                     OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum = "Rejected"
 )
 
+func (e OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum) ToPointer() *OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authorised":
 		fallthrough
 	case "AwaitingFurtherAuthorisation":
 		fallthrough
 	case "Rejected":
-		*e = OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum(s)
+		*e = OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticStandingOrderResponse6DataMultiAuthorisationStatusEnum: %v", v)
 	}
 }
 
@@ -209,12 +213,16 @@ const (
 	OBWriteDomesticStandingOrderResponse6DataStatusEnumInitiationPending   OBWriteDomesticStandingOrderResponse6DataStatusEnum = "InitiationPending"
 )
 
+func (e OBWriteDomesticStandingOrderResponse6DataStatusEnum) ToPointer() *OBWriteDomesticStandingOrderResponse6DataStatusEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticStandingOrderResponse6DataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cancelled":
 		fallthrough
 	case "InitiationCompleted":
@@ -222,10 +230,10 @@ func (e *OBWriteDomesticStandingOrderResponse6DataStatusEnum) UnmarshalJSON(data
 	case "InitiationFailed":
 		fallthrough
 	case "InitiationPending":
-		*e = OBWriteDomesticStandingOrderResponse6DataStatusEnum(s)
+		*e = OBWriteDomesticStandingOrderResponse6DataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticStandingOrderResponse6DataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticStandingOrderResponse6DataStatusEnum: %v", v)
 	}
 }
 

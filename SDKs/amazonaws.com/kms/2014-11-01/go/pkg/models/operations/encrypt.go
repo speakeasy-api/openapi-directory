@@ -16,17 +16,21 @@ const (
 	EncryptXAmzTargetEnumTrentServiceEncrypt EncryptXAmzTargetEnum = "TrentService.Encrypt"
 )
 
+func (e EncryptXAmzTargetEnum) ToPointer() *EncryptXAmzTargetEnum {
+	return &e
+}
+
 func (e *EncryptXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.Encrypt":
-		*e = EncryptXAmzTargetEnum(s)
+		*e = EncryptXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EncryptXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for EncryptXAmzTargetEnum: %v", v)
 	}
 }
 

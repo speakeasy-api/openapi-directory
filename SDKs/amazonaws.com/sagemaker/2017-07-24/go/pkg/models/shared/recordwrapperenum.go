@@ -14,18 +14,22 @@ const (
 	RecordWrapperEnumRecordIo RecordWrapperEnum = "RecordIO"
 )
 
+func (e RecordWrapperEnum) ToPointer() *RecordWrapperEnum {
+	return &e
+}
+
 func (e *RecordWrapperEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "RecordIO":
-		*e = RecordWrapperEnum(s)
+		*e = RecordWrapperEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecordWrapperEnum: %s", s)
+		return fmt.Errorf("invalid value for RecordWrapperEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	IfExistsEnumReturnOrUpdate IfExistsEnum = "RETURN_OR_UPDATE"
 )
 
+func (e IfExistsEnum) ToPointer() *IfExistsEnum {
+	return &e
+}
+
 func (e *IfExistsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAIL":
 		fallthrough
 	case "UPDATE":
@@ -30,9 +34,9 @@ func (e *IfExistsEnum) UnmarshalJSON(data []byte) error {
 	case "RETURN":
 		fallthrough
 	case "RETURN_OR_UPDATE":
-		*e = IfExistsEnum(s)
+		*e = IfExistsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IfExistsEnum: %s", s)
+		return fmt.Errorf("invalid value for IfExistsEnum: %v", v)
 	}
 }

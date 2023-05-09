@@ -39,7 +39,10 @@ func newSecretScanning(defaultClient, securityClient HTTPClient, serverURL, lang
 // https://docs.github.com/enterprise-server@3.2/rest/reference/secret-scanning#get-a-secret-scanning-alert - API method documentation
 func (s *secretScanning) SecretScanningGetAlert(ctx context.Context, request operations.SecretScanningGetAlertRequest) (*operations.SecretScanningGetAlertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -100,7 +103,10 @@ func (s *secretScanning) SecretScanningGetAlert(ctx context.Context, request ope
 // https://docs.github.com/enterprise-server@3.2/rest/reference/secret-scanning#list-secret-scanning-alerts-for-a-repository - API method documentation
 func (s *secretScanning) SecretScanningListAlertsForRepo(ctx context.Context, request operations.SecretScanningListAlertsForRepoRequest) (*operations.SecretScanningListAlertsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/secret-scanning/alerts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/secret-scanning/alerts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -163,7 +169,10 @@ func (s *secretScanning) SecretScanningListAlertsForRepo(ctx context.Context, re
 // https://docs.github.com/enterprise-server@3.2/rest/reference/secret-scanning#update-a-secret-scanning-alert - API method documentation
 func (s *secretScanning) SecretScanningUpdateAlert(ctx context.Context, request operations.SecretScanningUpdateAlertRequest) (*operations.SecretScanningUpdateAlertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

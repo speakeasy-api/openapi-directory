@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DatacatalogProjectsLocationsEntryGroupsCreate - A maximum of 10,000 entry groups may be created per organization across all locations. Users should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
 func (s *projects) DatacatalogProjectsLocationsEntryGroupsCreate(ctx context.Context, request operations.DatacatalogProjectsLocationsEntryGroupsCreateRequest, security operations.DatacatalogProjectsLocationsEntryGroupsCreateSecurity) (*operations.DatacatalogProjectsLocationsEntryGroupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/entryGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/entryGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogV1beta1EntryGroupInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) DatacatalogProjectsLocationsEntryGroupsCreate(ctx context.Con
 // DatacatalogProjectsLocationsEntryGroupsEntriesCreate - Creates an entry. Only entries of 'FILESET' type or user-specified type can be created. Users should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information). A maximum of 100,000 entries may be created per entry group.
 func (s *projects) DatacatalogProjectsLocationsEntryGroupsEntriesCreate(ctx context.Context, request operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateRequest, security operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateSecurity) (*operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/entries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/entries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogV1beta1EntryInput", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) DatacatalogProjectsLocationsEntryGroupsEntriesCreate(ctx cont
 // DatacatalogProjectsLocationsEntryGroupsEntriesList - Lists entries.
 func (s *projects) DatacatalogProjectsLocationsEntryGroupsEntriesList(ctx context.Context, request operations.DatacatalogProjectsLocationsEntryGroupsEntriesListRequest, security operations.DatacatalogProjectsLocationsEntryGroupsEntriesListSecurity) (*operations.DatacatalogProjectsLocationsEntryGroupsEntriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/entries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/entries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) DatacatalogProjectsLocationsEntryGroupsEntriesList(ctx contex
 // DatacatalogProjectsLocationsEntryGroupsList - Lists entry groups.
 func (s *projects) DatacatalogProjectsLocationsEntryGroupsList(ctx context.Context, request operations.DatacatalogProjectsLocationsEntryGroupsListRequest, security operations.DatacatalogProjectsLocationsEntryGroupsListSecurity) (*operations.DatacatalogProjectsLocationsEntryGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/entryGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/entryGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) DatacatalogProjectsLocationsEntryGroupsList(ctx context.Conte
 // DatacatalogProjectsLocationsEntryGroupsTagsCreate - Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1beta1/projects.locations.entryGroups.entries.tags/create#path-parameters) and the [tag template](https://cloud.google.com/data-catalog/docs/reference/rest/v1beta1/projects.locations.tagTemplates/create#path-parameters) used to create the tag must be from the same organization.
 func (s *projects) DatacatalogProjectsLocationsEntryGroupsTagsCreate(ctx context.Context, request operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateRequest, security operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateSecurity) (*operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogV1beta1TagInput", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) DatacatalogProjectsLocationsEntryGroupsTagsCreate(ctx context
 // DatacatalogProjectsLocationsEntryGroupsTagsList - Lists tags assigned to an Entry. The columns in the response are lowercased.
 func (s *projects) DatacatalogProjectsLocationsEntryGroupsTagsList(ctx context.Context, request operations.DatacatalogProjectsLocationsEntryGroupsTagsListRequest, security operations.DatacatalogProjectsLocationsEntryGroupsTagsListSecurity) (*operations.DatacatalogProjectsLocationsEntryGroupsTagsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) DatacatalogProjectsLocationsEntryGroupsTagsList(ctx context.C
 // DatacatalogProjectsLocationsTagTemplatesCreate - Creates a tag template. The user should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
 func (s *projects) DatacatalogProjectsLocationsTagTemplatesCreate(ctx context.Context, request operations.DatacatalogProjectsLocationsTagTemplatesCreateRequest, security operations.DatacatalogProjectsLocationsTagTemplatesCreateSecurity) (*operations.DatacatalogProjectsLocationsTagTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/tagTemplates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/tagTemplates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogV1beta1TagTemplateInput", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) DatacatalogProjectsLocationsTagTemplatesCreate(ctx context.Co
 // DatacatalogProjectsLocationsTagTemplatesFieldsCreate - Creates a field in a tag template. The user should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
 func (s *projects) DatacatalogProjectsLocationsTagTemplatesFieldsCreate(ctx context.Context, request operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest, security operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateSecurity) (*operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/fields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/fields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogV1beta1TagTemplateFieldInput", "json")
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *projects) DatacatalogProjectsLocationsTagTemplatesFieldsCreate(ctx cont
 // DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRename - Renames an enum value in a tag template. The enum values have to be unique within one enum field. Thus, an enum value cannot be renamed with a name used in any other enum value within the same enum field.
 func (s *projects) DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRename(ctx context.Context, request operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameRequest, security operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameSecurity) (*operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:rename", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:rename", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest", "json")
 	if err != nil {
@@ -508,7 +535,10 @@ func (s *projects) DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenam
 // DatacatalogProjectsLocationsTaxonomiesCreate - Creates a taxonomy in the specified project.
 func (s *projects) DatacatalogProjectsLocationsTaxonomiesCreate(ctx context.Context, request operations.DatacatalogProjectsLocationsTaxonomiesCreateRequest, security operations.DatacatalogProjectsLocationsTaxonomiesCreateSecurity) (*operations.DatacatalogProjectsLocationsTaxonomiesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/taxonomies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/taxonomies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogV1beta1TaxonomyInput", "json")
 	if err != nil {
@@ -563,7 +593,10 @@ func (s *projects) DatacatalogProjectsLocationsTaxonomiesCreate(ctx context.Cont
 // DatacatalogProjectsLocationsTaxonomiesExport - Exports all taxonomies and their policy tags in a project. This method generates SerializedTaxonomy protos with nested policy tags that can be used as an input for future ImportTaxonomies calls.
 func (s *projects) DatacatalogProjectsLocationsTaxonomiesExport(ctx context.Context, request operations.DatacatalogProjectsLocationsTaxonomiesExportRequest, security operations.DatacatalogProjectsLocationsTaxonomiesExportSecurity) (*operations.DatacatalogProjectsLocationsTaxonomiesExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/taxonomies:export", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/taxonomies:export", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -611,7 +644,10 @@ func (s *projects) DatacatalogProjectsLocationsTaxonomiesExport(ctx context.Cont
 // DatacatalogProjectsLocationsTaxonomiesImport - Imports all taxonomies and their policy tags to a project as new taxonomies. This method provides a bulk taxonomy / policy tag creation using nested proto structure.
 func (s *projects) DatacatalogProjectsLocationsTaxonomiesImport(ctx context.Context, request operations.DatacatalogProjectsLocationsTaxonomiesImportRequest, security operations.DatacatalogProjectsLocationsTaxonomiesImportSecurity) (*operations.DatacatalogProjectsLocationsTaxonomiesImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/taxonomies:import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/taxonomies:import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogV1beta1ImportTaxonomiesRequest", "json")
 	if err != nil {
@@ -666,7 +702,10 @@ func (s *projects) DatacatalogProjectsLocationsTaxonomiesImport(ctx context.Cont
 // DatacatalogProjectsLocationsTaxonomiesList - Lists all taxonomies in a project in a particular location that the caller has permission to view.
 func (s *projects) DatacatalogProjectsLocationsTaxonomiesList(ctx context.Context, request operations.DatacatalogProjectsLocationsTaxonomiesListRequest, security operations.DatacatalogProjectsLocationsTaxonomiesListSecurity) (*operations.DatacatalogProjectsLocationsTaxonomiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/taxonomies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/taxonomies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -714,7 +753,10 @@ func (s *projects) DatacatalogProjectsLocationsTaxonomiesList(ctx context.Contex
 // DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreate - Creates a policy tag in the specified taxonomy.
 func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreate(ctx context.Context, request operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateRequest, security operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateSecurity) (*operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/policyTags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/policyTags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogV1beta1PolicyTagInput", "json")
 	if err != nil {
@@ -769,7 +811,10 @@ func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreate(ctx co
 // DatacatalogProjectsLocationsTaxonomiesPolicyTagsDelete - Deletes a policy tag. Also deletes all of its descendant policy tags.
 func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsDelete(ctx context.Context, request operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteRequest, security operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteSecurity) (*operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -817,7 +862,10 @@ func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsDelete(ctx co
 // DatacatalogProjectsLocationsTaxonomiesPolicyTagsGet - Gets a policy tag.
 func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsGet(ctx context.Context, request operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetRequest, security operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetSecurity) (*operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -865,7 +913,10 @@ func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsGet(ctx conte
 // DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicy - Gets the IAM policy for a taxonomy or a policy tag.
 func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicy(ctx context.Context, request operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyRequest, security operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicySecurity) (*operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
@@ -920,7 +971,10 @@ func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicy(
 // DatacatalogProjectsLocationsTaxonomiesPolicyTagsList - Lists all policy tags in a taxonomy.
 func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsList(ctx context.Context, request operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListRequest, security operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListSecurity) (*operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/policyTags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/policyTags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -968,7 +1022,10 @@ func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsList(ctx cont
 // DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatch - Updates a policy tag.
 func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatch(ctx context.Context, request operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest, security operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchSecurity) (*operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDatacatalogV1beta1PolicyTagInput", "json")
 	if err != nil {
@@ -1023,7 +1080,10 @@ func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatch(ctx con
 // DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicy - Sets the IAM policy for a taxonomy or a policy tag.
 func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicy(ctx context.Context, request operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyRequest, security operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicySecurity) (*operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -1078,7 +1138,10 @@ func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicy(
 // DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissions - Returns the permissions that a caller has on the specified taxonomy or policy tag.
 func (s *projects) DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissions(ctx context.Context, request operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsRequest, security operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsSecurity) (*operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {

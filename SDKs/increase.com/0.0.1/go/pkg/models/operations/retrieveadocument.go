@@ -13,23 +13,27 @@ type RetrieveADocumentRequest struct {
 	DocumentID string `pathParam:"style=simple,explode=false,name=document_id"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON13StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON13StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveADocumentDefaultApplicationJSON13StatusEnum = "429"
+	RetrieveADocumentDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveADocumentDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON13StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = RetrieveADocumentDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = RetrieveADocumentDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	RetrieveADocumentDefaultApplicationJSON13TypeEnumRateLimitedError RetrieveADocumentDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON13TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = RetrieveADocumentDefaultApplicationJSON13TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type RetrieveADocumentDefaultApplicationJSON13 struct {
 	Type       RetrieveADocumentDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON12StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON12StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveADocumentDefaultApplicationJSON12StatusEnum = "403"
+	RetrieveADocumentDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveADocumentDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON12StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveADocumentDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveADocumentDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	RetrieveADocumentDefaultApplicationJSON12TypeEnumPrivateFeatureError RetrieveADocumentDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON12TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = RetrieveADocumentDefaultApplicationJSON12TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type RetrieveADocumentDefaultApplicationJSON12 struct {
 	Type   RetrieveADocumentDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON11StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON11StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveADocumentDefaultApplicationJSON11StatusEnum = "404"
+	RetrieveADocumentDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveADocumentDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON11StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveADocumentDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveADocumentDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	RetrieveADocumentDefaultApplicationJSON11TypeEnumObjectNotFoundError RetrieveADocumentDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON11TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = RetrieveADocumentDefaultApplicationJSON11TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type RetrieveADocumentDefaultApplicationJSON11 struct {
 	Type   RetrieveADocumentDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON10StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON10StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON10StatusEnumFourHundred RetrieveADocumentDefaultApplicationJSON10StatusEnum = "400"
+	RetrieveADocumentDefaultApplicationJSON10StatusEnumFourHundred RetrieveADocumentDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON10StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveADocumentDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveADocumentDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	RetrieveADocumentDefaultApplicationJSON10TypeEnumMalformedRequestError RetrieveADocumentDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON10TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = RetrieveADocumentDefaultApplicationJSON10TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type RetrieveADocumentDefaultApplicationJSON10 struct {
 	Type   RetrieveADocumentDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON9StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON9StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON9StatusEnumFourHundred RetrieveADocumentDefaultApplicationJSON9StatusEnum = "400"
+	RetrieveADocumentDefaultApplicationJSON9StatusEnumFourHundred RetrieveADocumentDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON9StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveADocumentDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveADocumentDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	RetrieveADocumentDefaultApplicationJSON9TypeEnumInvalidParametersError RetrieveADocumentDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON9TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = RetrieveADocumentDefaultApplicationJSON9TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type RetrieveADocumentDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                           `json:"errors,omitempty"`
+	Errors []map[string]interface{}                           `json:"errors"`
 	Status RetrieveADocumentDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                             `json:"title"`
 	Type   RetrieveADocumentDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON8StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON8StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveADocumentDefaultApplicationJSON8StatusEnum = "409"
+	RetrieveADocumentDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveADocumentDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON8StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveADocumentDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveADocumentDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	RetrieveADocumentDefaultApplicationJSON8TypeEnumInvalidOperationError RetrieveADocumentDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON8TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = RetrieveADocumentDefaultApplicationJSON8TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type RetrieveADocumentDefaultApplicationJSON8 struct {
 	Type   RetrieveADocumentDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON7StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON7StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveADocumentDefaultApplicationJSON7StatusEnum = "401"
+	RetrieveADocumentDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveADocumentDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON7StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = RetrieveADocumentDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = RetrieveADocumentDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	RetrieveADocumentDefaultApplicationJSON7TypeEnumInvalidAPIKeyError RetrieveADocumentDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON7TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = RetrieveADocumentDefaultApplicationJSON7TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type RetrieveADocumentDefaultApplicationJSON7 struct {
 	Type   RetrieveADocumentDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON6StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON6StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON6StatusEnumFiveHundred RetrieveADocumentDefaultApplicationJSON6StatusEnum = "500"
+	RetrieveADocumentDefaultApplicationJSON6StatusEnumFiveHundred RetrieveADocumentDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON6StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = RetrieveADocumentDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = RetrieveADocumentDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	RetrieveADocumentDefaultApplicationJSON6TypeEnumInternalServerError RetrieveADocumentDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON6TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = RetrieveADocumentDefaultApplicationJSON6TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type RetrieveADocumentDefaultApplicationJSON6 struct {
 	Type   RetrieveADocumentDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON5StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON5StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveADocumentDefaultApplicationJSON5StatusEnum = "403"
+	RetrieveADocumentDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveADocumentDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON5StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveADocumentDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveADocumentDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	RetrieveADocumentDefaultApplicationJSON5TypeEnumInsufficientPermissionsError RetrieveADocumentDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON5TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = RetrieveADocumentDefaultApplicationJSON5TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type RetrieveADocumentDefaultApplicationJSON5 struct {
 	Type   RetrieveADocumentDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON4StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON4StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveADocumentDefaultApplicationJSON4StatusEnum = "422"
+	RetrieveADocumentDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveADocumentDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON4StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = RetrieveADocumentDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = RetrieveADocumentDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	RetrieveADocumentDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError RetrieveADocumentDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON4TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = RetrieveADocumentDefaultApplicationJSON4TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type RetrieveADocumentDefaultApplicationJSON4 struct {
 	Type   RetrieveADocumentDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON3StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON3StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveADocumentDefaultApplicationJSON3StatusEnum = "409"
+	RetrieveADocumentDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveADocumentDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON3StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveADocumentDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveADocumentDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	RetrieveADocumentDefaultApplicationJSON3TypeEnumIdempotencyConflictError RetrieveADocumentDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON3TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = RetrieveADocumentDefaultApplicationJSON3TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type RetrieveADocumentDefaultApplicationJSON3 struct {
 	Type   RetrieveADocumentDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON2StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON2StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveADocumentDefaultApplicationJSON2StatusEnum = "403"
+	RetrieveADocumentDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveADocumentDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON2StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveADocumentDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveADocumentDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	RetrieveADocumentDefaultApplicationJSON2TypeEnumEnvironmentMismatchError RetrieveADocumentDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON2TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = RetrieveADocumentDefaultApplicationJSON2TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type RetrieveADocumentDefaultApplicationJSON2 struct {
 	Type   RetrieveADocumentDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type RetrieveADocumentDefaultApplicationJSON1StatusEnum string
+type RetrieveADocumentDefaultApplicationJSON1StatusEnum int64
 
 const (
-	RetrieveADocumentDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveADocumentDefaultApplicationJSON1StatusEnum = "404"
+	RetrieveADocumentDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveADocumentDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON1StatusEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveADocumentDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveADocumentDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	RetrieveADocumentDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError RetrieveADocumentDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e RetrieveADocumentDefaultApplicationJSON1TypeEnum) ToPointer() *RetrieveADocumentDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADocumentDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = RetrieveADocumentDefaultApplicationJSON1TypeEnum(s)
+		*e = RetrieveADocumentDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADocumentDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

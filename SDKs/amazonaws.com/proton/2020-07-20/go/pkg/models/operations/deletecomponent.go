@@ -16,17 +16,21 @@ const (
 	DeleteComponentXAmzTargetEnumAwsProton20200720DeleteComponent DeleteComponentXAmzTargetEnum = "AwsProton20200720.DeleteComponent"
 )
 
+func (e DeleteComponentXAmzTargetEnum) ToPointer() *DeleteComponentXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteComponentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.DeleteComponent":
-		*e = DeleteComponentXAmzTargetEnum(s)
+		*e = DeleteComponentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteComponentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteComponentXAmzTargetEnum: %v", v)
 	}
 }
 

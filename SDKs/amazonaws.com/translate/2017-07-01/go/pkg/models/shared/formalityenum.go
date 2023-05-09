@@ -14,18 +14,22 @@ const (
 	FormalityEnumInformal FormalityEnum = "INFORMAL"
 )
 
+func (e FormalityEnum) ToPointer() *FormalityEnum {
+	return &e
+}
+
 func (e *FormalityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMAL":
 		fallthrough
 	case "INFORMAL":
-		*e = FormalityEnum(s)
+		*e = FormalityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FormalityEnum: %s", s)
+		return fmt.Errorf("invalid value for FormalityEnum: %v", v)
 	}
 }

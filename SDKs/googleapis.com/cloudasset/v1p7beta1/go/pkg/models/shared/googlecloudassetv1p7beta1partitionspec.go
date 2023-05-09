@@ -16,21 +16,25 @@ const (
 	GoogleCloudAssetV1p7beta1PartitionSpecPartitionKeyEnumRequestTime             GoogleCloudAssetV1p7beta1PartitionSpecPartitionKeyEnum = "REQUEST_TIME"
 )
 
+func (e GoogleCloudAssetV1p7beta1PartitionSpecPartitionKeyEnum) ToPointer() *GoogleCloudAssetV1p7beta1PartitionSpecPartitionKeyEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssetV1p7beta1PartitionSpecPartitionKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARTITION_KEY_UNSPECIFIED":
 		fallthrough
 	case "READ_TIME":
 		fallthrough
 	case "REQUEST_TIME":
-		*e = GoogleCloudAssetV1p7beta1PartitionSpecPartitionKeyEnum(s)
+		*e = GoogleCloudAssetV1p7beta1PartitionSpecPartitionKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssetV1p7beta1PartitionSpecPartitionKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssetV1p7beta1PartitionSpecPartitionKeyEnum: %v", v)
 	}
 }
 

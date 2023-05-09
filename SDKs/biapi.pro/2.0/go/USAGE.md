@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteClientsIDClientRequest{
-        Expand: "corrupti",
-        IDClient: 592845,
-    }
-
     ctx := context.Background()
-    res, err := s.Administration.DeleteClientsIDClient(ctx, req)
+    res, err := s.Administration.DeleteClientsIDClient(ctx, operations.DeleteClientsIDClientRequest{
+        Expand: sdk.String("corrupti"),
+        IDClient: 592845,
+    })
     if err != nil {
         log.Fatal(err)
     }

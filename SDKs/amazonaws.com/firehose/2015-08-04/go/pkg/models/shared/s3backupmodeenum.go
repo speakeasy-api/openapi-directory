@@ -14,18 +14,22 @@ const (
 	S3BackupModeEnumEnabled  S3BackupModeEnum = "Enabled"
 )
 
+func (e S3BackupModeEnum) ToPointer() *S3BackupModeEnum {
+	return &e
+}
+
 func (e *S3BackupModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Disabled":
 		fallthrough
 	case "Enabled":
-		*e = S3BackupModeEnum(s)
+		*e = S3BackupModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for S3BackupModeEnum: %s", s)
+		return fmt.Errorf("invalid value for S3BackupModeEnum: %v", v)
 	}
 }

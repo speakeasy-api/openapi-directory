@@ -37,7 +37,10 @@ func newMqtt(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // 0 - stopped, 2 - disconnected, 3 - connecting, 4 - connected, 5 - waiting for CONNACK, 6 - waiting for SUBACK, 7 - CONNACK received, in steady state
 func (s *mqtt) ProtocolMqttClientGetProtstate(ctx context.Context, request operations.ProtocolMqttClientGetProtstateRequest) (*operations.ProtocolMqttClientGetProtstateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/get/protstate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/get/protstate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *mqtt) ProtocolMqttClientGetProtstate(ctx context.Context, request opera
 // 0 means stopped, 1 means running
 func (s *mqtt) ProtocolMqttClientGetState(ctx context.Context, request operations.ProtocolMqttClientGetStateRequest) (*operations.ProtocolMqttClientGetStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/get/state", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/get/state", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *mqtt) ProtocolMqttClientGetState(ctx context.Context, request operation
 // 0 or more
 func (s *mqtt) ProtocolMqttClientMessageCard(ctx context.Context, request operations.ProtocolMqttClientMessageCardRequest) (*operations.ProtocolMqttClientMessageCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/message/card", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/message/card", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -175,7 +184,10 @@ func (s *mqtt) ProtocolMqttClientMessageCard(ctx context.Context, request operat
 // Attribute can be topic, interval, count, sent , pre, post, properties(list of PUBLISH properties), properties.i (i-th PUBLISH property), properties.PROP-NAME (PUBLISH property with name PROP-NAME)
 func (s *mqtt) ProtocolMqttClientMessageGet(ctx context.Context, request operations.ProtocolMqttClientMessageGetRequest) (*operations.ProtocolMqttClientMessageGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/message/get/{msgNum}/{attr}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/message/get/{msgNum}/{attr}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +233,10 @@ func (s *mqtt) ProtocolMqttClientMessageGet(ctx context.Context, request operati
 // Attribute can not be sent or properties . Use set/{msgNum}/count/{value} together with get/{msgNum}/count to throttle the outgoing MQTT message to the broker.
 func (s *mqtt) ProtocolMqttClientMessageSet(ctx context.Context, request operations.ProtocolMqttClientMessageSetRequest) (*operations.ProtocolMqttClientMessageSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/message/set/{msgNum}/{attr}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/message/set/{msgNum}/{attr}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -267,7 +282,10 @@ func (s *mqtt) ProtocolMqttClientMessageSet(ctx context.Context, request operati
 // Restarts a subscription
 func (s *mqtt) ProtocolMqttClientResubscribe(ctx context.Context, request operations.ProtocolMqttClientResubscribeRequest) (*operations.ProtocolMqttClientResubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/resubscribe/{subNum}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/resubscribe/{subNum}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -314,7 +332,10 @@ func (s *mqtt) ProtocolMqttClientResubscribe(ctx context.Context, request operat
 // Abort a connection
 func (s *mqtt) ProtocolMqttClientRuntimeAbort(ctx context.Context, request operations.ProtocolMqttClientRuntimeAbortRequest) (*operations.ProtocolMqttClientRuntimeAbortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/runtime/abort", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/runtime/abort", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -360,7 +381,10 @@ func (s *mqtt) ProtocolMqttClientRuntimeAbort(ctx context.Context, request opera
 // Start a connection
 func (s *mqtt) ProtocolMqttClientRuntimeConnect(ctx context.Context, request operations.ProtocolMqttClientRuntimeConnectRequest) (*operations.ProtocolMqttClientRuntimeConnectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/runtime/connect", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/runtime/connect", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -406,7 +430,10 @@ func (s *mqtt) ProtocolMqttClientRuntimeConnect(ctx context.Context, request ope
 // Graceful disconnect
 func (s *mqtt) ProtocolMqttClientRuntimeDisconnect(ctx context.Context, request operations.ProtocolMqttClientRuntimeDisconnectRequest) (*operations.ProtocolMqttClientRuntimeDisconnectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/runtime/disconnect", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/runtime/disconnect", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -452,7 +479,10 @@ func (s *mqtt) ProtocolMqttClientRuntimeDisconnect(ctx context.Context, request 
 // Broker IP address
 func (s *mqtt) ProtocolMqttClientSetBroker(ctx context.Context, request operations.ProtocolMqttClientSetBrokerRequest) (*operations.ProtocolMqttClientSetBrokerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/broker/{brokerAddr}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/broker/{brokerAddr}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -498,7 +528,10 @@ func (s *mqtt) ProtocolMqttClientSetBroker(ctx context.Context, request operatio
 // 1 for clean session , 0 not
 func (s *mqtt) ProtocolMqttClientSetCleansession(ctx context.Context, request operations.ProtocolMqttClientSetCleansessionRequest) (*operations.ProtocolMqttClientSetCleansessionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/cleansession/{cleanOrNot}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/cleansession/{cleanOrNot}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -544,7 +577,10 @@ func (s *mqtt) ProtocolMqttClientSetCleansession(ctx context.Context, request op
 // MQTT client ID
 func (s *mqtt) ProtocolMqttClientSetClientid(ctx context.Context, request operations.ProtocolMqttClientSetClientidRequest) (*operations.ProtocolMqttClientSetClientidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/clientid/{clientID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/clientid/{clientID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -590,7 +626,10 @@ func (s *mqtt) ProtocolMqttClientSetClientid(ctx context.Context, request operat
 // Keep alive the TCP connection
 func (s *mqtt) ProtocolMqttClientSetKeepalive(ctx context.Context, request operations.ProtocolMqttClientSetKeepaliveRequest) (*operations.ProtocolMqttClientSetKeepaliveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/keepalive/{aliveTime}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/keepalive/{aliveTime}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -636,7 +675,10 @@ func (s *mqtt) ProtocolMqttClientSetKeepalive(ctx context.Context, request opera
 // Action to take when MQTT session is disconnected
 func (s *mqtt) ProtocolMqttClientSetOnDisconnect(ctx context.Context, request operations.ProtocolMqttClientSetOnDisconnectRequest) (*operations.ProtocolMqttClientSetOnDisconnectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/on_disconnect/{action}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/on_disconnect/{action}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -682,7 +724,10 @@ func (s *mqtt) ProtocolMqttClientSetOnDisconnect(ctx context.Context, request op
 // Client password
 func (s *mqtt) ProtocolMqttClientSetPassword(ctx context.Context, request operations.ProtocolMqttClientSetPasswordRequest) (*operations.ProtocolMqttClientSetPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/password/{password}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/password/{password}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -728,7 +773,10 @@ func (s *mqtt) ProtocolMqttClientSetPassword(ctx context.Context, request operat
 // target TCP port
 func (s *mqtt) ProtocolMqttClientSetPort(ctx context.Context, request operations.ProtocolMqttClientSetPortRequest) (*operations.ProtocolMqttClientSetPortResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/port/{port}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/port/{port}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -774,7 +822,10 @@ func (s *mqtt) ProtocolMqttClientSetPort(ctx context.Context, request operations
 // Client username
 func (s *mqtt) ProtocolMqttClientSetUsername(ctx context.Context, request operations.ProtocolMqttClientSetUsernameRequest) (*operations.ProtocolMqttClientSetUsernameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/username/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/username/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -820,7 +871,10 @@ func (s *mqtt) ProtocolMqttClientSetUsername(ctx context.Context, request operat
 // Will message
 func (s *mqtt) ProtocolMqttClientSetWillmsg(ctx context.Context, request operations.ProtocolMqttClientSetWillmsgRequest) (*operations.ProtocolMqttClientSetWillmsgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willmsg/{msg}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willmsg/{msg}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -866,7 +920,10 @@ func (s *mqtt) ProtocolMqttClientSetWillmsg(ctx context.Context, request operati
 // QOS field
 func (s *mqtt) ProtocolMqttClientSetWillqos(ctx context.Context, request operations.ProtocolMqttClientSetWillqosRequest) (*operations.ProtocolMqttClientSetWillqosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willqos/{qos}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willqos/{qos}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -912,7 +969,10 @@ func (s *mqtt) ProtocolMqttClientSetWillqos(ctx context.Context, request operati
 // Retaining will
 func (s *mqtt) ProtocolMqttClientSetWillretain(ctx context.Context, request operations.ProtocolMqttClientSetWillretainRequest) (*operations.ProtocolMqttClientSetWillretainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willretain/{retain}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willretain/{retain}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -958,7 +1018,10 @@ func (s *mqtt) ProtocolMqttClientSetWillretain(ctx context.Context, request oper
 // Will topic for the will message
 func (s *mqtt) ProtocolMqttClientSetWilltopic(ctx context.Context, request operations.ProtocolMqttClientSetWilltopicRequest) (*operations.ProtocolMqttClientSetWilltopicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willtopic/{topic}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willtopic/{topic}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1004,7 +1067,10 @@ func (s *mqtt) ProtocolMqttClientSetWilltopic(ctx context.Context, request opera
 // 0 or more
 func (s *mqtt) ProtocolMqttClientSubscribeCard(ctx context.Context, request operations.ProtocolMqttClientSubscribeCardRequest) (*operations.ProtocolMqttClientSubscribeCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/subscribe/card", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/subscribe/card", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1050,7 +1116,10 @@ func (s *mqtt) ProtocolMqttClientSubscribeCard(ctx context.Context, request oper
 // Attribute can be topic, properties(list of SUBSCRIBE properties), properties.i (i-th SUBSCRIBE property), properties.PROP-NAME (SUBSCRIBE property with name PROP-NAME)
 func (s *mqtt) ProtocolMqttClientSubscribeGet(ctx context.Context, request operations.ProtocolMqttClientSubscribeGetRequest) (*operations.ProtocolMqttClientSubscribeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/subscribe/get/{subNum}/{attr}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/subscribe/get/{subNum}/{attr}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1096,7 +1165,10 @@ func (s *mqtt) ProtocolMqttClientSubscribeGet(ctx context.Context, request opera
 // Attribute can not be properties .
 func (s *mqtt) ProtocolMqttClientSubscribeSet(ctx context.Context, request operations.ProtocolMqttClientSubscribeSetRequest) (*operations.ProtocolMqttClientSubscribeSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/subscribe/set/{subNum}/{attr}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/subscribe/set/{subNum}/{attr}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1142,7 +1214,10 @@ func (s *mqtt) ProtocolMqttClientSubscribeSet(ctx context.Context, request opera
 // Stops a subscription
 func (s *mqtt) ProtocolMqttClientUnsubscribe(ctx context.Context, request operations.ProtocolMqttClientUnsubscribeRequest) (*operations.ProtocolMqttClientUnsubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/unsubscribe/{subNum}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/unsubscribe/{subNum}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1189,7 +1264,10 @@ func (s *mqtt) ProtocolMqttClientUnsubscribe(ctx context.Context, request operat
 // Agent's MQTT configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *mqtt) ProtocolMqttGetArgs(ctx context.Context, request operations.ProtocolMqttGetArgsRequest) (*operations.ProtocolMqttGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/args", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/args", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1235,7 +1313,10 @@ func (s *mqtt) ProtocolMqttGetArgs(ctx context.Context, request operations.Proto
 // Agent's MQTT configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *mqtt) ProtocolMqttGetConfig(ctx context.Context, request operations.ProtocolMqttGetConfigRequest) (*operations.ProtocolMqttGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1281,7 +1362,10 @@ func (s *mqtt) ProtocolMqttGetConfig(ctx context.Context, request operations.Pro
 // Statistics of fields indicated in the headers
 func (s *mqtt) ProtocolMqttGetStatistics(ctx context.Context, request operations.ProtocolMqttGetStatisticsRequest) (*operations.ProtocolMqttGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/statistics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/statistics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1373,7 +1457,10 @@ func (s *mqtt) ProtocolMqttGetStatsHdr(ctx context.Context) (*operations.Protoco
 // Trace 1 means enabled, 0 means not
 func (s *mqtt) ProtocolMqttGetTrace(ctx context.Context, request operations.ProtocolMqttGetTraceRequest) (*operations.ProtocolMqttGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/trace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/trace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1419,7 +1506,10 @@ func (s *mqtt) ProtocolMqttGetTrace(ctx context.Context, request operations.Prot
 // Agent's MQTT configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *mqtt) ProtocolMqttSetConfig(ctx context.Context, request operations.ProtocolMqttSetConfigRequest) (*operations.ProtocolMqttSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/set/config/{argument}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/set/config/{argument}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1466,7 +1556,10 @@ func (s *mqtt) ProtocolMqttSetConfig(ctx context.Context, request operations.Pro
 // 1 to enable, 0 to disable
 func (s *mqtt) ProtocolMqttSetTrace(ctx context.Context, request operations.ProtocolMqttSetTraceRequest) (*operations.ProtocolMqttSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/set/trace/{enableOrNot}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/mqtt/set/trace/{enableOrNot}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

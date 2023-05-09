@@ -15,19 +15,23 @@ const (
 	ModifyHostsRequestAutoPlacementEnumOff ModifyHostsRequestAutoPlacementEnum = "off"
 )
 
+func (e ModifyHostsRequestAutoPlacementEnum) ToPointer() *ModifyHostsRequestAutoPlacementEnum {
+	return &e
+}
+
 func (e *ModifyHostsRequestAutoPlacementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on":
 		fallthrough
 	case "off":
-		*e = ModifyHostsRequestAutoPlacementEnum(s)
+		*e = ModifyHostsRequestAutoPlacementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyHostsRequestAutoPlacementEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyHostsRequestAutoPlacementEnum: %v", v)
 	}
 }
 

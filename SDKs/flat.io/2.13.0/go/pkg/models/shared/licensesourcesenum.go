@@ -19,12 +19,16 @@ const (
 	LicenseSourcesEnumAppStore     LicenseSourcesEnum = "appStore"
 )
 
+func (e LicenseSourcesEnum) ToPointer() *LicenseSourcesEnum {
+	return &e
+}
+
 func (e *LicenseSourcesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "order":
 		fallthrough
 	case "trial":
@@ -36,9 +40,9 @@ func (e *LicenseSourcesEnum) UnmarshalJSON(data []byte) error {
 	case "subscription":
 		fallthrough
 	case "appStore":
-		*e = LicenseSourcesEnum(s)
+		*e = LicenseSourcesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseSourcesEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseSourcesEnum: %v", v)
 	}
 }

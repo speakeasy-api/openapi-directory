@@ -16,17 +16,21 @@ const (
 	DeleteMatchmakingRuleSetXAmzTargetEnumGameLiftDeleteMatchmakingRuleSet DeleteMatchmakingRuleSetXAmzTargetEnum = "GameLift.DeleteMatchmakingRuleSet"
 )
 
+func (e DeleteMatchmakingRuleSetXAmzTargetEnum) ToPointer() *DeleteMatchmakingRuleSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteMatchmakingRuleSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DeleteMatchmakingRuleSet":
-		*e = DeleteMatchmakingRuleSetXAmzTargetEnum(s)
+		*e = DeleteMatchmakingRuleSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteMatchmakingRuleSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteMatchmakingRuleSetXAmzTargetEnum: %v", v)
 	}
 }
 

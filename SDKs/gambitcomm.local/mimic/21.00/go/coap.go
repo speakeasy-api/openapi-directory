@@ -37,7 +37,10 @@ func newCoap(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Agent's COAP configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *coap) ProtocolCoapGetArgs(ctx context.Context, request operations.ProtocolCoapGetArgsRequest) (*operations.ProtocolCoapGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/coap/get/args", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/coap/get/args", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *coap) ProtocolCoapGetArgs(ctx context.Context, request operations.Proto
 // Agent's COAP configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *coap) ProtocolCoapGetConfig(ctx context.Context, request operations.ProtocolCoapGetConfigRequest) (*operations.ProtocolCoapGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/coap/get/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/coap/get/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *coap) ProtocolCoapGetConfig(ctx context.Context, request operations.Pro
 // Statistics of fields indicated in the headers
 func (s *coap) ProtocolCoapGetStatistics(ctx context.Context, request operations.ProtocolCoapGetStatisticsRequest) (*operations.ProtocolCoapGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/coap/get/statistics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/coap/get/statistics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +230,10 @@ func (s *coap) ProtocolCoapGetStatsHdr(ctx context.Context) (*operations.Protoco
 // Trace 1 means enabled, 0 means not
 func (s *coap) ProtocolCoapGetTrace(ctx context.Context, request operations.ProtocolCoapGetTraceRequest) (*operations.ProtocolCoapGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/coap/get/trace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/coap/get/trace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +279,10 @@ func (s *coap) ProtocolCoapGetTrace(ctx context.Context, request operations.Prot
 // Agent's COAP configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *coap) ProtocolCoapSetConfig(ctx context.Context, request operations.ProtocolCoapSetConfigRequest) (*operations.ProtocolCoapSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/coap/set/config/{argument}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/coap/set/config/{argument}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -314,7 +329,10 @@ func (s *coap) ProtocolCoapSetConfig(ctx context.Context, request operations.Pro
 // 1 to enable, 0 to disable
 func (s *coap) ProtocolCoapSetTrace(ctx context.Context, request operations.ProtocolCoapSetTraceRequest) (*operations.ProtocolCoapSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/coap/set/trace/{enableOrNot}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/coap/set/trace/{enableOrNot}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

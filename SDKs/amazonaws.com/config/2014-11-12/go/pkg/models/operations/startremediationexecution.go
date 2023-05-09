@@ -16,17 +16,21 @@ const (
 	StartRemediationExecutionXAmzTargetEnumStarlingDoveServiceStartRemediationExecution StartRemediationExecutionXAmzTargetEnum = "StarlingDoveService.StartRemediationExecution"
 )
 
+func (e StartRemediationExecutionXAmzTargetEnum) ToPointer() *StartRemediationExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartRemediationExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.StartRemediationExecution":
-		*e = StartRemediationExecutionXAmzTargetEnum(s)
+		*e = StartRemediationExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartRemediationExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartRemediationExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETDeleteUserActionEnumDeleteUser GETDeleteUserActionEnum = "DeleteUser"
 )
 
+func (e GETDeleteUserActionEnum) ToPointer() *GETDeleteUserActionEnum {
+	return &e
+}
+
 func (e *GETDeleteUserActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteUser":
-		*e = GETDeleteUserActionEnum(s)
+		*e = GETDeleteUserActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteUserActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteUserActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteUserVersionEnumTwoThousandAndFifteen0202 GETDeleteUserVersionEnum = "2015-02-02"
 )
 
+func (e GETDeleteUserVersionEnum) ToPointer() *GETDeleteUserVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteUserVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = GETDeleteUserVersionEnum(s)
+		*e = GETDeleteUserVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteUserVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteUserVersionEnum: %v", v)
 	}
 }
 

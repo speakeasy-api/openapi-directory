@@ -17,19 +17,23 @@ const (
 	ListDeploymentsHistoryFilterEnumLatestOnly ListDeploymentsHistoryFilterEnum = "LATEST_ONLY"
 )
 
+func (e ListDeploymentsHistoryFilterEnum) ToPointer() *ListDeploymentsHistoryFilterEnum {
+	return &e
+}
+
 func (e *ListDeploymentsHistoryFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "LATEST_ONLY":
-		*e = ListDeploymentsHistoryFilterEnum(s)
+		*e = ListDeploymentsHistoryFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDeploymentsHistoryFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDeploymentsHistoryFilterEnum: %v", v)
 	}
 }
 

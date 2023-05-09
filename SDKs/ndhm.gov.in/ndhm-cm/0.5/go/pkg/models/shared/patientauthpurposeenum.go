@@ -16,20 +16,24 @@ const (
 	PatientAuthPurposeEnumKycAndLink PatientAuthPurposeEnum = "KYC_AND_LINK"
 )
 
+func (e PatientAuthPurposeEnum) ToPointer() *PatientAuthPurposeEnum {
+	return &e
+}
+
 func (e *PatientAuthPurposeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINK":
 		fallthrough
 	case "KYC":
 		fallthrough
 	case "KYC_AND_LINK":
-		*e = PatientAuthPurposeEnum(s)
+		*e = PatientAuthPurposeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientAuthPurposeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientAuthPurposeEnum: %v", v)
 	}
 }

@@ -16,12 +16,16 @@ const (
 	DirectConnectGatewayAttachmentStateEnumDetached  DirectConnectGatewayAttachmentStateEnum = "detached"
 )
 
+func (e DirectConnectGatewayAttachmentStateEnum) ToPointer() *DirectConnectGatewayAttachmentStateEnum {
+	return &e
+}
+
 func (e *DirectConnectGatewayAttachmentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -29,9 +33,9 @@ func (e *DirectConnectGatewayAttachmentStateEnum) UnmarshalJSON(data []byte) err
 	case "detaching":
 		fallthrough
 	case "detached":
-		*e = DirectConnectGatewayAttachmentStateEnum(s)
+		*e = DirectConnectGatewayAttachmentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectConnectGatewayAttachmentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectConnectGatewayAttachmentStateEnum: %v", v)
 	}
 }

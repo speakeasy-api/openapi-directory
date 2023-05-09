@@ -67,12 +67,16 @@ const (
 	BigtableadminProjectsLocationsGetViewEnumFull            BigtableadminProjectsLocationsGetViewEnum = "FULL"
 )
 
+func (e BigtableadminProjectsLocationsGetViewEnum) ToPointer() *BigtableadminProjectsLocationsGetViewEnum {
+	return &e
+}
+
 func (e *BigtableadminProjectsLocationsGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_UNSPECIFIED":
 		fallthrough
 	case "NAME_ONLY":
@@ -86,10 +90,10 @@ func (e *BigtableadminProjectsLocationsGetViewEnum) UnmarshalJSON(data []byte) e
 	case "STATS_VIEW":
 		fallthrough
 	case "FULL":
-		*e = BigtableadminProjectsLocationsGetViewEnum(s)
+		*e = BigtableadminProjectsLocationsGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BigtableadminProjectsLocationsGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for BigtableadminProjectsLocationsGetViewEnum: %v", v)
 	}
 }
 

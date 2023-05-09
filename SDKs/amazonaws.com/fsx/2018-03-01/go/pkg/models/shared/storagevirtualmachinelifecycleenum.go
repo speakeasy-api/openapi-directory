@@ -18,12 +18,16 @@ const (
 	StorageVirtualMachineLifecycleEnumPending       StorageVirtualMachineLifecycleEnum = "PENDING"
 )
 
+func (e StorageVirtualMachineLifecycleEnum) ToPointer() *StorageVirtualMachineLifecycleEnum {
+	return &e
+}
+
 func (e *StorageVirtualMachineLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATED":
 		fallthrough
 	case "CREATING":
@@ -35,9 +39,9 @@ func (e *StorageVirtualMachineLifecycleEnum) UnmarshalJSON(data []byte) error {
 	case "MISCONFIGURED":
 		fallthrough
 	case "PENDING":
-		*e = StorageVirtualMachineLifecycleEnum(s)
+		*e = StorageVirtualMachineLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageVirtualMachineLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageVirtualMachineLifecycleEnum: %v", v)
 	}
 }

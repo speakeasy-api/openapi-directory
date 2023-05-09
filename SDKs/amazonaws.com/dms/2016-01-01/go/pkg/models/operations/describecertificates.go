@@ -16,17 +16,21 @@ const (
 	DescribeCertificatesXAmzTargetEnumAmazonDmSv20160101DescribeCertificates DescribeCertificatesXAmzTargetEnum = "AmazonDMSv20160101.DescribeCertificates"
 )
 
+func (e DescribeCertificatesXAmzTargetEnum) ToPointer() *DescribeCertificatesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeCertificatesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.DescribeCertificates":
-		*e = DescribeCertificatesXAmzTargetEnum(s)
+		*e = DescribeCertificatesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeCertificatesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeCertificatesXAmzTargetEnum: %v", v)
 	}
 }
 

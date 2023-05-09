@@ -16,12 +16,16 @@ const (
 	SpeakerStatusEnumPending  SpeakerStatusEnum = "PENDING"
 )
 
+func (e SpeakerStatusEnum) ToPointer() *SpeakerStatusEnum {
+	return &e
+}
+
 func (e *SpeakerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENROLLED":
 		fallthrough
 	case "EXPIRED":
@@ -29,9 +33,9 @@ func (e *SpeakerStatusEnum) UnmarshalJSON(data []byte) error {
 	case "OPTED_OUT":
 		fallthrough
 	case "PENDING":
-		*e = SpeakerStatusEnum(s)
+		*e = SpeakerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpeakerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SpeakerStatusEnum: %v", v)
 	}
 }

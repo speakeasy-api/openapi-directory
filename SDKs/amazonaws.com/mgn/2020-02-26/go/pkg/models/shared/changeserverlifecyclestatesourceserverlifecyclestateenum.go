@@ -15,20 +15,24 @@ const (
 	ChangeServerLifeCycleStateSourceServerLifecycleStateEnumCutover         ChangeServerLifeCycleStateSourceServerLifecycleStateEnum = "CUTOVER"
 )
 
+func (e ChangeServerLifeCycleStateSourceServerLifecycleStateEnum) ToPointer() *ChangeServerLifeCycleStateSourceServerLifecycleStateEnum {
+	return &e
+}
+
 func (e *ChangeServerLifeCycleStateSourceServerLifecycleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READY_FOR_TEST":
 		fallthrough
 	case "READY_FOR_CUTOVER":
 		fallthrough
 	case "CUTOVER":
-		*e = ChangeServerLifeCycleStateSourceServerLifecycleStateEnum(s)
+		*e = ChangeServerLifeCycleStateSourceServerLifecycleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChangeServerLifeCycleStateSourceServerLifecycleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ChangeServerLifeCycleStateSourceServerLifecycleStateEnum: %v", v)
 	}
 }

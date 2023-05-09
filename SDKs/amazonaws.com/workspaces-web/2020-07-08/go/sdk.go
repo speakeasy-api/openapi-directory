@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - WorkSpaces Web is a low cost, fully managed WorkSpace built specifically to facilitate secure, web-based workloads. WorkSpaces Web makes it easy for customers to safely provide their employees with access to internal websites and SaaS web applications without the administrative burden of appliances or specialized client software. WorkSpaces Web provides simple policy tools tailored for user interactions, while offloading common tasks like capacity management, scaling, and maintaining browser images.
 // https://docs.aws.amazon.com/workspaces-web/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // AssociateBrowserSettings - Associates a browser settings resource with a web portal.
 func (s *SDK) AssociateBrowserSettings(ctx context.Context, request operations.AssociateBrowserSettingsRequest) (*operations.AssociateBrowserSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/browserSettings#browserSettingsArn", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/browserSettings#browserSettingsArn", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -224,7 +242,10 @@ func (s *SDK) AssociateBrowserSettings(ctx context.Context, request operations.A
 // AssociateNetworkSettings - Associates a network settings resource with a web portal.
 func (s *SDK) AssociateNetworkSettings(ctx context.Context, request operations.AssociateNetworkSettingsRequest) (*operations.AssociateNetworkSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/networkSettings#networkSettingsArn", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/networkSettings#networkSettingsArn", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -334,7 +355,10 @@ func (s *SDK) AssociateNetworkSettings(ctx context.Context, request operations.A
 // AssociateTrustStore - Associates a trust store with a web portal.
 func (s *SDK) AssociateTrustStore(ctx context.Context, request operations.AssociateTrustStoreRequest) (*operations.AssociateTrustStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/trustStores#trustStoreArn", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/trustStores#trustStoreArn", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -434,7 +458,10 @@ func (s *SDK) AssociateTrustStore(ctx context.Context, request operations.Associ
 // AssociateUserAccessLoggingSettings - Associates a user access logging settings resource with a web portal.
 func (s *SDK) AssociateUserAccessLoggingSettings(ctx context.Context, request operations.AssociateUserAccessLoggingSettingsRequest) (*operations.AssociateUserAccessLoggingSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/userAccessLoggingSettings#userAccessLoggingSettingsArn", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/userAccessLoggingSettings#userAccessLoggingSettingsArn", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -544,7 +571,10 @@ func (s *SDK) AssociateUserAccessLoggingSettings(ctx context.Context, request op
 // AssociateUserSettings - Associates a user settings resource with a web portal.
 func (s *SDK) AssociateUserSettings(ctx context.Context, request operations.AssociateUserSettingsRequest) (*operations.AssociateUserSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/userSettings#userSettingsArn", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/userSettings#userSettingsArn", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1496,7 +1526,10 @@ func (s *SDK) CreateUserSettings(ctx context.Context, request operations.CreateU
 // DeleteBrowserSettings - Deletes browser settings.
 func (s *SDK) DeleteBrowserSettings(ctx context.Context, request operations.DeleteBrowserSettingsRequest) (*operations.DeleteBrowserSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browserSettings/{browserSettingsArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/browserSettings/{browserSettingsArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1592,7 +1625,10 @@ func (s *SDK) DeleteBrowserSettings(ctx context.Context, request operations.Dele
 // DeleteIdentityProvider - Deletes the identity provider.
 func (s *SDK) DeleteIdentityProvider(ctx context.Context, request operations.DeleteIdentityProviderRequest) (*operations.DeleteIdentityProviderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identityProviders/{identityProviderArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/identityProviders/{identityProviderArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1688,7 +1724,10 @@ func (s *SDK) DeleteIdentityProvider(ctx context.Context, request operations.Del
 // DeleteNetworkSettings - Deletes network settings.
 func (s *SDK) DeleteNetworkSettings(ctx context.Context, request operations.DeleteNetworkSettingsRequest) (*operations.DeleteNetworkSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networkSettings/{networkSettingsArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networkSettings/{networkSettingsArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1784,7 +1823,10 @@ func (s *SDK) DeleteNetworkSettings(ctx context.Context, request operations.Dele
 // DeletePortal - Deletes a web portal.
 func (s *SDK) DeletePortal(ctx context.Context, request operations.DeletePortalRequest) (*operations.DeletePortalResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1880,7 +1922,10 @@ func (s *SDK) DeletePortal(ctx context.Context, request operations.DeletePortalR
 // DeleteTrustStore - Deletes the trust store.
 func (s *SDK) DeleteTrustStore(ctx context.Context, request operations.DeleteTrustStoreRequest) (*operations.DeleteTrustStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustStores/{trustStoreArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/trustStores/{trustStoreArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1976,7 +2021,10 @@ func (s *SDK) DeleteTrustStore(ctx context.Context, request operations.DeleteTru
 // DeleteUserAccessLoggingSettings - Deletes user access logging settings.
 func (s *SDK) DeleteUserAccessLoggingSettings(ctx context.Context, request operations.DeleteUserAccessLoggingSettingsRequest) (*operations.DeleteUserAccessLoggingSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userAccessLoggingSettings/{userAccessLoggingSettingsArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userAccessLoggingSettings/{userAccessLoggingSettingsArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2072,7 +2120,10 @@ func (s *SDK) DeleteUserAccessLoggingSettings(ctx context.Context, request opera
 // DeleteUserSettings - Deletes user settings.
 func (s *SDK) DeleteUserSettings(ctx context.Context, request operations.DeleteUserSettingsRequest) (*operations.DeleteUserSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userSettings/{userSettingsArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userSettings/{userSettingsArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2168,7 +2219,10 @@ func (s *SDK) DeleteUserSettings(ctx context.Context, request operations.DeleteU
 // DisassociateBrowserSettings - Disassociates browser settings from a web portal.
 func (s *SDK) DisassociateBrowserSettings(ctx context.Context, request operations.DisassociateBrowserSettingsRequest) (*operations.DisassociateBrowserSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/browserSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/browserSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2264,7 +2318,10 @@ func (s *SDK) DisassociateBrowserSettings(ctx context.Context, request operation
 // DisassociateNetworkSettings - Disassociates network settings from a web portal.
 func (s *SDK) DisassociateNetworkSettings(ctx context.Context, request operations.DisassociateNetworkSettingsRequest) (*operations.DisassociateNetworkSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/networkSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/networkSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2360,7 +2417,10 @@ func (s *SDK) DisassociateNetworkSettings(ctx context.Context, request operation
 // DisassociateTrustStore - Disassociates a trust store from a web portal.
 func (s *SDK) DisassociateTrustStore(ctx context.Context, request operations.DisassociateTrustStoreRequest) (*operations.DisassociateTrustStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/trustStores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/trustStores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2456,7 +2516,10 @@ func (s *SDK) DisassociateTrustStore(ctx context.Context, request operations.Dis
 // DisassociateUserAccessLoggingSettings - Disassociates user access logging settings from a web portal.
 func (s *SDK) DisassociateUserAccessLoggingSettings(ctx context.Context, request operations.DisassociateUserAccessLoggingSettingsRequest) (*operations.DisassociateUserAccessLoggingSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/userAccessLoggingSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/userAccessLoggingSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2552,7 +2615,10 @@ func (s *SDK) DisassociateUserAccessLoggingSettings(ctx context.Context, request
 // DisassociateUserSettings - Disassociates user settings from a web portal.
 func (s *SDK) DisassociateUserSettings(ctx context.Context, request operations.DisassociateUserSettingsRequest) (*operations.DisassociateUserSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/userSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/userSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2648,7 +2714,10 @@ func (s *SDK) DisassociateUserSettings(ctx context.Context, request operations.D
 // GetBrowserSettings - Gets browser settings.
 func (s *SDK) GetBrowserSettings(ctx context.Context, request operations.GetBrowserSettingsRequest) (*operations.GetBrowserSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browserSettings/{browserSettingsArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/browserSettings/{browserSettingsArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2744,7 +2813,10 @@ func (s *SDK) GetBrowserSettings(ctx context.Context, request operations.GetBrow
 // GetIdentityProvider - Gets the identity provider.
 func (s *SDK) GetIdentityProvider(ctx context.Context, request operations.GetIdentityProviderRequest) (*operations.GetIdentityProviderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identityProviders/{identityProviderArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/identityProviders/{identityProviderArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2840,7 +2912,10 @@ func (s *SDK) GetIdentityProvider(ctx context.Context, request operations.GetIde
 // GetNetworkSettings - Gets the network settings.
 func (s *SDK) GetNetworkSettings(ctx context.Context, request operations.GetNetworkSettingsRequest) (*operations.GetNetworkSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networkSettings/{networkSettingsArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networkSettings/{networkSettingsArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2936,7 +3011,10 @@ func (s *SDK) GetNetworkSettings(ctx context.Context, request operations.GetNetw
 // GetPortal - Gets the web portal.
 func (s *SDK) GetPortal(ctx context.Context, request operations.GetPortalRequest) (*operations.GetPortalResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3032,7 +3110,10 @@ func (s *SDK) GetPortal(ctx context.Context, request operations.GetPortalRequest
 // GetPortalServiceProviderMetadata - Gets the service provider metadata.
 func (s *SDK) GetPortalServiceProviderMetadata(ctx context.Context, request operations.GetPortalServiceProviderMetadataRequest) (*operations.GetPortalServiceProviderMetadataResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portalIdp/{portalArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portalIdp/{portalArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3128,7 +3209,10 @@ func (s *SDK) GetPortalServiceProviderMetadata(ctx context.Context, request oper
 // GetTrustStore - Gets the trust store.
 func (s *SDK) GetTrustStore(ctx context.Context, request operations.GetTrustStoreRequest) (*operations.GetTrustStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustStores/{trustStoreArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/trustStores/{trustStoreArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3224,7 +3308,10 @@ func (s *SDK) GetTrustStore(ctx context.Context, request operations.GetTrustStor
 // GetTrustStoreCertificate - Gets the trust store certificate.
 func (s *SDK) GetTrustStoreCertificate(ctx context.Context, request operations.GetTrustStoreCertificateRequest) (*operations.GetTrustStoreCertificateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustStores/{trustStoreArn}/certificate#thumbprint", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/trustStores/{trustStoreArn}/certificate#thumbprint", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3324,7 +3411,10 @@ func (s *SDK) GetTrustStoreCertificate(ctx context.Context, request operations.G
 // GetUserAccessLoggingSettings - Gets user access logging settings.
 func (s *SDK) GetUserAccessLoggingSettings(ctx context.Context, request operations.GetUserAccessLoggingSettingsRequest) (*operations.GetUserAccessLoggingSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userAccessLoggingSettings/{userAccessLoggingSettingsArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userAccessLoggingSettings/{userAccessLoggingSettingsArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3420,7 +3510,10 @@ func (s *SDK) GetUserAccessLoggingSettings(ctx context.Context, request operatio
 // GetUserSettings - Gets user settings.
 func (s *SDK) GetUserSettings(ctx context.Context, request operations.GetUserSettingsRequest) (*operations.GetUserSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userSettings/{userSettingsArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userSettings/{userSettingsArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3606,7 +3699,10 @@ func (s *SDK) ListBrowserSettings(ctx context.Context, request operations.ListBr
 // ListIdentityProviders - Retrieves a list of identity providers for a specific web portal.
 func (s *SDK) ListIdentityProviders(ctx context.Context, request operations.ListIdentityProvidersRequest) (*operations.ListIdentityProvidersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/identityProviders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}/identityProviders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3876,7 +3972,10 @@ func (s *SDK) ListPortals(ctx context.Context, request operations.ListPortalsReq
 // ListTagsForResource - Retrieves a list of tags for a resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3972,7 +4071,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // ListTrustStoreCertificates - Retrieves a list of trust store certificates.
 func (s *SDK) ListTrustStoreCertificates(ctx context.Context, request operations.ListTrustStoreCertificatesRequest) (*operations.ListTrustStoreCertificatesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustStores/{trustStoreArn}/certificates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/trustStores/{trustStoreArn}/certificates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4342,7 +4444,10 @@ func (s *SDK) ListUserSettings(ctx context.Context, request operations.ListUserS
 // TagResource - Adds or overwrites one or more tags for the specified resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4458,7 +4563,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes one or more tags from the specified resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4558,7 +4666,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateBrowserSettings - Updates browser settings.
 func (s *SDK) UpdateBrowserSettings(ctx context.Context, request operations.UpdateBrowserSettingsRequest) (*operations.UpdateBrowserSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/browserSettings/{browserSettingsArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/browserSettings/{browserSettingsArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4664,7 +4775,10 @@ func (s *SDK) UpdateBrowserSettings(ctx context.Context, request operations.Upda
 // UpdateIdentityProvider - Updates the identity provider.
 func (s *SDK) UpdateIdentityProvider(ctx context.Context, request operations.UpdateIdentityProviderRequest) (*operations.UpdateIdentityProviderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identityProviders/{identityProviderArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/identityProviders/{identityProviderArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4770,7 +4884,10 @@ func (s *SDK) UpdateIdentityProvider(ctx context.Context, request operations.Upd
 // UpdateNetworkSettings - Updates network settings.
 func (s *SDK) UpdateNetworkSettings(ctx context.Context, request operations.UpdateNetworkSettingsRequest) (*operations.UpdateNetworkSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networkSettings/{networkSettingsArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networkSettings/{networkSettingsArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4876,7 +4993,10 @@ func (s *SDK) UpdateNetworkSettings(ctx context.Context, request operations.Upda
 // UpdatePortal - Updates a web portal.
 func (s *SDK) UpdatePortal(ctx context.Context, request operations.UpdatePortalRequest) (*operations.UpdatePortalResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4982,7 +5102,10 @@ func (s *SDK) UpdatePortal(ctx context.Context, request operations.UpdatePortalR
 // UpdateTrustStore - Updates the trust store.
 func (s *SDK) UpdateTrustStore(ctx context.Context, request operations.UpdateTrustStoreRequest) (*operations.UpdateTrustStoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/trustStores/{trustStoreArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/trustStores/{trustStoreArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5098,7 +5221,10 @@ func (s *SDK) UpdateTrustStore(ctx context.Context, request operations.UpdateTru
 // UpdateUserAccessLoggingSettings - Updates the user access logging settings.
 func (s *SDK) UpdateUserAccessLoggingSettings(ctx context.Context, request operations.UpdateUserAccessLoggingSettingsRequest) (*operations.UpdateUserAccessLoggingSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userAccessLoggingSettings/{userAccessLoggingSettingsArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userAccessLoggingSettings/{userAccessLoggingSettingsArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5204,7 +5330,10 @@ func (s *SDK) UpdateUserAccessLoggingSettings(ctx context.Context, request opera
 // UpdateUserSettings - Updates the user settings.
 func (s *SDK) UpdateUserSettings(ctx context.Context, request operations.UpdateUserSettingsRequest) (*operations.UpdateUserSettingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userSettings/{userSettingsArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userSettings/{userSettingsArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

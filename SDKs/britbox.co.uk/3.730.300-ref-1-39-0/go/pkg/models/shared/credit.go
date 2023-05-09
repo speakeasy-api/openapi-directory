@@ -28,12 +28,16 @@ const (
 	CreditRoleEnumWriter            CreditRoleEnum = "writer"
 )
 
+func (e CreditRoleEnum) ToPointer() *CreditRoleEnum {
+	return &e
+}
+
 func (e *CreditRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "actor":
 		fallthrough
 	case "associateproducer":
@@ -63,10 +67,10 @@ func (e *CreditRoleEnum) UnmarshalJSON(data []byte) error {
 	case "voice":
 		fallthrough
 	case "writer":
-		*e = CreditRoleEnum(s)
+		*e = CreditRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreditRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for CreditRoleEnum: %v", v)
 	}
 }
 

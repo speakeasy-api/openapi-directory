@@ -9,23 +9,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type RetrieveGroupDetailsDefaultApplicationJSON13StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON13StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveGroupDetailsDefaultApplicationJSON13StatusEnum = "429"
+	RetrieveGroupDetailsDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveGroupDetailsDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON13StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON13TypeEnumRateLimitedError RetrieveGroupDetailsDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON13TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON13TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -57,23 +65,27 @@ type RetrieveGroupDetailsDefaultApplicationJSON13 struct {
 	Type       RetrieveGroupDetailsDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type RetrieveGroupDetailsDefaultApplicationJSON12StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON12StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveGroupDetailsDefaultApplicationJSON12StatusEnum = "403"
+	RetrieveGroupDetailsDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveGroupDetailsDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON12StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -83,17 +95,21 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON12TypeEnumPrivateFeatureError RetrieveGroupDetailsDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON12TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON12TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -104,23 +120,27 @@ type RetrieveGroupDetailsDefaultApplicationJSON12 struct {
 	Type   RetrieveGroupDetailsDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type RetrieveGroupDetailsDefaultApplicationJSON11StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON11StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveGroupDetailsDefaultApplicationJSON11StatusEnum = "404"
+	RetrieveGroupDetailsDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveGroupDetailsDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON11StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON11TypeEnumObjectNotFoundError RetrieveGroupDetailsDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON11TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON11TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -151,23 +175,27 @@ type RetrieveGroupDetailsDefaultApplicationJSON11 struct {
 	Type   RetrieveGroupDetailsDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type RetrieveGroupDetailsDefaultApplicationJSON10StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON10StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON10StatusEnumFourHundred RetrieveGroupDetailsDefaultApplicationJSON10StatusEnum = "400"
+	RetrieveGroupDetailsDefaultApplicationJSON10StatusEnumFourHundred RetrieveGroupDetailsDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON10StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -177,17 +205,21 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON10TypeEnumMalformedRequestError RetrieveGroupDetailsDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON10TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON10TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -198,23 +230,27 @@ type RetrieveGroupDetailsDefaultApplicationJSON10 struct {
 	Type   RetrieveGroupDetailsDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type RetrieveGroupDetailsDefaultApplicationJSON9StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON9StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON9StatusEnumFourHundred RetrieveGroupDetailsDefaultApplicationJSON9StatusEnum = "400"
+	RetrieveGroupDetailsDefaultApplicationJSON9StatusEnumFourHundred RetrieveGroupDetailsDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON9StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -224,46 +260,54 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON9TypeEnumInvalidParametersError RetrieveGroupDetailsDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON9TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON9TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type RetrieveGroupDetailsDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                              `json:"errors,omitempty"`
+	Errors []map[string]interface{}                              `json:"errors"`
 	Status RetrieveGroupDetailsDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                `json:"title"`
 	Type   RetrieveGroupDetailsDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type RetrieveGroupDetailsDefaultApplicationJSON8StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON8StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveGroupDetailsDefaultApplicationJSON8StatusEnum = "409"
+	RetrieveGroupDetailsDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveGroupDetailsDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON8StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON8TypeEnumInvalidOperationError RetrieveGroupDetailsDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON8TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON8TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -294,23 +342,27 @@ type RetrieveGroupDetailsDefaultApplicationJSON8 struct {
 	Type   RetrieveGroupDetailsDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type RetrieveGroupDetailsDefaultApplicationJSON7StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON7StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveGroupDetailsDefaultApplicationJSON7StatusEnum = "401"
+	RetrieveGroupDetailsDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveGroupDetailsDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON7StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON7TypeEnumInvalidAPIKeyError RetrieveGroupDetailsDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON7TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON7TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -341,23 +397,27 @@ type RetrieveGroupDetailsDefaultApplicationJSON7 struct {
 	Type   RetrieveGroupDetailsDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type RetrieveGroupDetailsDefaultApplicationJSON6StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON6StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON6StatusEnumFiveHundred RetrieveGroupDetailsDefaultApplicationJSON6StatusEnum = "500"
+	RetrieveGroupDetailsDefaultApplicationJSON6StatusEnumFiveHundred RetrieveGroupDetailsDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON6StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -367,17 +427,21 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON6TypeEnumInternalServerError RetrieveGroupDetailsDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON6TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON6TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -388,23 +452,27 @@ type RetrieveGroupDetailsDefaultApplicationJSON6 struct {
 	Type   RetrieveGroupDetailsDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type RetrieveGroupDetailsDefaultApplicationJSON5StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON5StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveGroupDetailsDefaultApplicationJSON5StatusEnum = "403"
+	RetrieveGroupDetailsDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveGroupDetailsDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON5StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -414,17 +482,21 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON5TypeEnumInsufficientPermissionsError RetrieveGroupDetailsDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON5TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON5TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -435,23 +507,27 @@ type RetrieveGroupDetailsDefaultApplicationJSON5 struct {
 	Type   RetrieveGroupDetailsDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type RetrieveGroupDetailsDefaultApplicationJSON4StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON4StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveGroupDetailsDefaultApplicationJSON4StatusEnum = "422"
+	RetrieveGroupDetailsDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveGroupDetailsDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON4StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -461,17 +537,21 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError RetrieveGroupDetailsDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON4TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON4TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -482,23 +562,27 @@ type RetrieveGroupDetailsDefaultApplicationJSON4 struct {
 	Type   RetrieveGroupDetailsDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type RetrieveGroupDetailsDefaultApplicationJSON3StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON3StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveGroupDetailsDefaultApplicationJSON3StatusEnum = "409"
+	RetrieveGroupDetailsDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveGroupDetailsDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON3StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -508,17 +592,21 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON3TypeEnumIdempotencyConflictError RetrieveGroupDetailsDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON3TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON3TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -529,23 +617,27 @@ type RetrieveGroupDetailsDefaultApplicationJSON3 struct {
 	Type   RetrieveGroupDetailsDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type RetrieveGroupDetailsDefaultApplicationJSON2StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON2StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveGroupDetailsDefaultApplicationJSON2StatusEnum = "403"
+	RetrieveGroupDetailsDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveGroupDetailsDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON2StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -555,17 +647,21 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON2TypeEnumEnvironmentMismatchError RetrieveGroupDetailsDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON2TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON2TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -576,23 +672,27 @@ type RetrieveGroupDetailsDefaultApplicationJSON2 struct {
 	Type   RetrieveGroupDetailsDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type RetrieveGroupDetailsDefaultApplicationJSON1StatusEnum string
+type RetrieveGroupDetailsDefaultApplicationJSON1StatusEnum int64
 
 const (
-	RetrieveGroupDetailsDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveGroupDetailsDefaultApplicationJSON1StatusEnum = "404"
+	RetrieveGroupDetailsDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveGroupDetailsDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON1StatusEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveGroupDetailsDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -602,17 +702,21 @@ const (
 	RetrieveGroupDetailsDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError RetrieveGroupDetailsDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e RetrieveGroupDetailsDefaultApplicationJSON1TypeEnum) ToPointer() *RetrieveGroupDetailsDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *RetrieveGroupDetailsDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = RetrieveGroupDetailsDefaultApplicationJSON1TypeEnum(s)
+		*e = RetrieveGroupDetailsDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveGroupDetailsDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

@@ -4,6 +4,8 @@ package shared
 
 // Webfont - Metadata describing a family of fonts.
 type Webfont struct {
+	// Axis for variable fonts.
+	Axes []Axis `json:"axes,omitempty"`
 	// The category of the font.
 	Category *string `json:"category,omitempty"`
 	// The name of the font.
@@ -14,6 +16,8 @@ type Webfont struct {
 	Kind *string `json:"kind,omitempty"`
 	// The date (format "yyyy-MM-dd") the font was modified for the last time.
 	LastModified *string `json:"lastModified,omitempty"`
+	// Font URL for menu subset, a subset of the font that is enough to display the font name
+	Menu *string `json:"menu,omitempty"`
 	// The scripts supported by the font.
 	Subsets []string `json:"subsets,omitempty"`
 	// The available variants for the font.

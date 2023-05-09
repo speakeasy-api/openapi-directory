@@ -13,405 +13,206 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/dns/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DNSChangesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Changes.DNSChangesCreate(ctx, operations.DNSChangesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         Change: &shared.Change{
             Additions: []shared.ResourceRecordSet{
                 shared.ResourceRecordSet{
-                    Kind: "distinctio",
-                    Name: "quibusdam",
+                    Kind: sdk.String("distinctio"),
+                    Name: sdk.String("Stuart Stiedemann"),
                     RoutingPolicy: &shared.RRSetRoutingPolicy{
                         Geo: &shared.RRSetRoutingPolicyGeoPolicy{
-                            EnableFencing: false,
+                            EnableFencing: sdk.Bool(false),
                             Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
                                 shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
                                     HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
                                         InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "corrupti",
-                                                IPProtocol: "udp",
-                                                Kind: "vel",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "deserunt",
-                                                Port: "suscipit",
-                                                Project: "iure",
-                                                Region: "magnam",
+                                                IPAddress: sdk.String("deserunt"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("iure"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("debitis"),
+                                                Port: sdk.String("ipsa"),
+                                                Project: sdk.String("delectus"),
+                                                Region: sdk.String("tempora"),
                                             },
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "debitis",
-                                                IPProtocol: "undefined",
-                                                Kind: "delectus",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "suscipit",
-                                                Port: "molestiae",
-                                                Project: "minus",
-                                                Region: "placeat",
+                                                IPAddress: sdk.String("suscipit"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("minus"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("voluptatum"),
+                                                Port: sdk.String("iusto"),
+                                                Project: sdk.String("excepturi"),
+                                                Region: sdk.String("nisi"),
                                             },
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "voluptatum",
-                                                IPProtocol: "tcp",
-                                                Kind: "excepturi",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "recusandae",
-                                                Port: "temporibus",
-                                                Project: "ab",
-                                                Region: "quis",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "veritatis",
-                                                IPProtocol: "tcp",
-                                                Kind: "perferendis",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "repellendus",
-                                                Port: "sapiente",
-                                                Project: "quo",
-                                                Region: "odit",
+                                                IPAddress: sdk.String("recusandae"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                Kind: sdk.String("ab"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("veritatis"),
+                                                Port: sdk.String("deserunt"),
+                                                Project: sdk.String("perferendis"),
+                                                Region: sdk.String("ipsam"),
                                             },
                                         },
                                     },
-                                    Kind: "at",
-                                    Location: "at",
+                                    Kind: sdk.String("repellendus"),
+                                    Location: sdk.String("sapiente"),
                                     Rrdatas: []string{
-                                        "molestiae",
+                                        "odit",
+                                        "at",
+                                        "at",
+                                        "maiores",
+                                    },
+                                    SignatureRrdatas: []string{
                                         "quod",
                                         "quod",
+                                    },
+                                },
+                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("totam"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                Kind: sdk.String("dolorum"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("nam"),
+                                                Port: sdk.String("officia"),
+                                                Project: sdk.String("occaecati"),
+                                                Region: sdk.String("fugit"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("deleniti"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                Kind: sdk.String("optio"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("beatae"),
+                                                Port: sdk.String("commodi"),
+                                                Project: sdk.String("molestiae"),
+                                                Region: sdk.String("modi"),
+                                            },
+                                        },
+                                    },
+                                    Kind: sdk.String("qui"),
+                                    Location: sdk.String("impedit"),
+                                    Rrdatas: []string{
                                         "esse",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "porro",
-                                        "dolorum",
-                                        "dicta",
-                                    },
-                                },
-                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "officia",
-                                                IPProtocol: "tcp",
-                                                Kind: "fugit",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "hic",
-                                                Port: "optio",
-                                                Project: "totam",
-                                                Region: "beatae",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "commodi",
-                                                IPProtocol: "tcp",
-                                                Kind: "modi",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "impedit",
-                                                Port: "cum",
-                                                Project: "esse",
-                                                Region: "ipsum",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "excepturi",
-                                                IPProtocol: "undefined",
-                                                Kind: "perferendis",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "natus",
-                                                Port: "sed",
-                                                Project: "iste",
-                                                Region: "dolor",
-                                            },
-                                        },
-                                    },
-                                    Kind: "natus",
-                                    Location: "laboriosam",
-                                    Rrdatas: []string{
-                                        "saepe",
-                                        "fuga",
-                                        "in",
-                                        "corporis",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "iure",
-                                        "saepe",
-                                        "quidem",
-                                    },
-                                },
-                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "ipsa",
-                                                IPProtocol: "udp",
-                                                Kind: "est",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "laborum",
-                                                Port: "dolores",
-                                                Project: "dolorem",
-                                                Region: "corporis",
-                                            },
-                                        },
-                                    },
-                                    Kind: "explicabo",
-                                    Location: "nobis",
-                                    Rrdatas: []string{
-                                        "omnis",
-                                        "nemo",
-                                    },
-                                    SignatureRrdatas: []string{
+                                        "ipsum",
                                         "excepturi",
-                                        "accusantium",
+                                    },
+                                    SignatureRrdatas: []string{
+                                        "perferendis",
                                     },
                                 },
                             },
-                            Kind: "iure",
+                            Kind: sdk.String("ad"),
                         },
-                        Kind: "culpa",
+                        Kind: sdk.String("natus"),
                         PrimaryBackup: &shared.RRSetRoutingPolicyPrimaryBackupPolicy{
                             BackupGeoTargets: &shared.RRSetRoutingPolicyGeoPolicy{
-                                EnableFencing: false,
+                                EnableFencing: sdk.Bool(false),
                                 Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
                                     shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
                                         HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
                                             InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
                                                 shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "architecto",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "dolorem",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "consequuntur",
-                                                    Port: "repellat",
-                                                    Project: "mollitia",
-                                                    Region: "occaecati",
+                                                    IPAddress: sdk.String("dolor"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                    Kind: sdk.String("laboriosam"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                    NetworkURL: sdk.String("saepe"),
+                                                    Port: sdk.String("fuga"),
+                                                    Project: sdk.String("in"),
+                                                    Region: sdk.String("corporis"),
                                                 },
                                                 shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "numquam",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "quam",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "velit",
-                                                    Port: "error",
-                                                    Project: "quia",
-                                                    Region: "quis",
+                                                    IPAddress: sdk.String("iste"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                    Kind: sdk.String("saepe"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                    NetworkURL: sdk.String("architecto"),
+                                                    Port: sdk.String("ipsa"),
+                                                    Project: sdk.String("reiciendis"),
+                                                    Region: sdk.String("est"),
                                                 },
                                                 shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "vitae",
-                                                    IPProtocol: "udp",
-                                                    Kind: "animi",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "odit",
-                                                    Port: "quo",
-                                                    Project: "sequi",
-                                                    Region: "tenetur",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "ipsam",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "possimus",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "quasi",
-                                                    Port: "error",
-                                                    Project: "temporibus",
-                                                    Region: "laborum",
+                                                    IPAddress: sdk.String("mollitia"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                    Kind: sdk.String("dolores"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                    NetworkURL: sdk.String("corporis"),
+                                                    Port: sdk.String("explicabo"),
+                                                    Project: sdk.String("nobis"),
+                                                    Region: sdk.String("enim"),
                                                 },
                                             },
                                         },
-                                        Kind: "quasi",
-                                        Location: "reiciendis",
+                                        Kind: sdk.String("omnis"),
+                                        Location: sdk.String("nemo"),
                                         Rrdatas: []string{
-                                            "vero",
-                                            "nihil",
-                                            "praesentium",
-                                            "voluptatibus",
-                                        },
-                                        SignatureRrdatas: []string{
-                                            "omnis",
-                                        },
-                                    },
-                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "cum",
-                                                    IPProtocol: "undefined",
-                                                    Kind: "doloremque",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "ut",
-                                                    Port: "maiores",
-                                                    Project: "dicta",
-                                                    Region: "corporis",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "dolore",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "dicta",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "enim",
-                                                    Port: "accusamus",
-                                                    Project: "commodi",
-                                                    Region: "repudiandae",
-                                                },
-                                            },
-                                        },
-                                        Kind: "quae",
-                                        Location: "ipsum",
-                                        Rrdatas: []string{
-                                            "molestias",
                                             "excepturi",
-                                            "pariatur",
+                                            "accusantium",
                                         },
                                         SignatureRrdatas: []string{
-                                            "praesentium",
-                                            "rem",
-                                        },
-                                    },
-                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "quasi",
-                                                    IPProtocol: "udp",
-                                                    Kind: "sint",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "itaque",
-                                                    Port: "incidunt",
-                                                    Project: "enim",
-                                                    Region: "consequatur",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "est",
-                                                    IPProtocol: "udp",
-                                                    Kind: "explicabo",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "distinctio",
-                                                    Port: "quibusdam",
-                                                    Project: "labore",
-                                                    Region: "modi",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "qui",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "cupiditate",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "perferendis",
-                                                    Port: "magni",
-                                                    Project: "assumenda",
-                                                    Region: "ipsam",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "alias",
-                                                    IPProtocol: "undefined",
-                                                    Kind: "dolorum",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "tempora",
-                                                    Port: "facilis",
-                                                    Project: "tempore",
-                                                    Region: "labore",
-                                                },
-                                            },
-                                        },
-                                        Kind: "delectus",
-                                        Location: "eum",
-                                        Rrdatas: []string{
-                                            "eligendi",
-                                        },
-                                        SignatureRrdatas: []string{
-                                            "aliquid",
-                                            "provident",
-                                            "necessitatibus",
-                                        },
-                                    },
-                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "officia",
-                                                    IPProtocol: "undefined",
-                                                    Kind: "debitis",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "dolorum",
-                                                    Port: "in",
-                                                    Project: "in",
-                                                    Region: "illum",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "maiores",
-                                                    IPProtocol: "udp",
-                                                    Kind: "dicta",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "cumque",
-                                                    Port: "facere",
-                                                    Project: "ea",
-                                                    Region: "aliquid",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "laborum",
-                                                    IPProtocol: "udp",
-                                                    Kind: "non",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "enim",
-                                                    Port: "accusamus",
-                                                    Project: "delectus",
-                                                    Region: "quidem",
-                                                },
-                                            },
-                                        },
-                                        Kind: "provident",
-                                        Location: "nam",
-                                        Rrdatas: []string{
-                                            "blanditiis",
-                                            "deleniti",
-                                            "sapiente",
-                                        },
-                                        SignatureRrdatas: []string{
-                                            "deserunt",
+                                            "culpa",
+                                            "doloribus",
                                         },
                                     },
                                 },
-                                Kind: "nisi",
+                                Kind: sdk.String("sapiente"),
                             },
-                            Kind: "vel",
+                            Kind: sdk.String("architecto"),
                             PrimaryTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
                                 InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
                                     shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "omnis",
-                                        IPProtocol: "tcp",
-                                        Kind: "perferendis",
-                                        LoadBalancerType: "none",
-                                        NetworkURL: "magnam",
-                                        Port: "distinctio",
-                                        Project: "id",
-                                        Region: "labore",
+                                        IPAddress: sdk.String("dolorem"),
+                                        IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                        Kind: sdk.String("consequuntur"),
+                                        LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                        NetworkURL: sdk.String("mollitia"),
+                                        Port: sdk.String("occaecati"),
+                                        Project: sdk.String("numquam"),
+                                        Region: sdk.String("commodi"),
                                     },
                                     shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "labore",
-                                        IPProtocol: "tcp",
-                                        Kind: "natus",
-                                        LoadBalancerType: "regionalL4ilb",
-                                        NetworkURL: "eum",
-                                        Port: "vero",
-                                        Project: "aspernatur",
-                                        Region: "architecto",
+                                        IPAddress: sdk.String("quam"),
+                                        IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                        Kind: sdk.String("velit"),
+                                        LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                        NetworkURL: sdk.String("quia"),
+                                        Port: sdk.String("quis"),
+                                        Project: sdk.String("vitae"),
+                                        Region: sdk.String("laborum"),
                                     },
                                     shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "magnam",
-                                        IPProtocol: "undefined",
-                                        Kind: "excepturi",
-                                        LoadBalancerType: "none",
-                                        NetworkURL: "provident",
-                                        Port: "quos",
-                                        Project: "sint",
-                                        Region: "accusantium",
+                                        IPAddress: sdk.String("animi"),
+                                        IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                        Kind: sdk.String("odit"),
+                                        LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                        NetworkURL: sdk.String("sequi"),
+                                        Port: sdk.String("tenetur"),
+                                        Project: sdk.String("ipsam"),
+                                        Region: sdk.String("id"),
                                     },
                                 },
                             },
-                            TrickleTraffic: 6532.01,
+                            TrickleTraffic: sdk.Float64(8209.94),
                         },
                         Wrr: &shared.RRSetRoutingPolicyWrrPolicy{
                             Items: []shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
@@ -419,702 +220,295 @@ func main() {
                                     HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
                                         InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "ad",
-                                                IPProtocol: "tcp",
-                                                Kind: "dolor",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "odit",
-                                                Port: "nemo",
-                                                Project: "quasi",
-                                                Region: "iure",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "doloribus",
-                                                IPProtocol: "udp",
-                                                Kind: "eius",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "deleniti",
-                                                Port: "facilis",
-                                                Project: "in",
-                                                Region: "architecto",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "architecto",
-                                                IPProtocol: "udp",
-                                                Kind: "ullam",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "nihil",
-                                                Port: "repellat",
-                                                Project: "quibusdam",
-                                                Region: "sed",
+                                                IPAddress: sdk.String("error"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                Kind: sdk.String("laborum"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("reiciendis"),
+                                                Port: sdk.String("voluptatibus"),
+                                                Project: sdk.String("vero"),
+                                                Region: sdk.String("nihil"),
                                             },
                                         },
                                     },
-                                    Kind: "saepe",
+                                    Kind: sdk.String("praesentium"),
                                     Rrdatas: []string{
-                                        "accusantium",
-                                        "consequuntur",
-                                        "praesentium",
-                                        "natus",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "sunt",
-                                    },
-                                    Weight: 7790.51,
-                                },
-                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "pariatur",
-                                                IPProtocol: "udp",
-                                                Kind: "ea",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "odit",
-                                                Port: "ea",
-                                                Project: "accusantium",
-                                                Region: "ab",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "maiores",
-                                                IPProtocol: "udp",
-                                                Kind: "ipsam",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "autem",
-                                                Port: "nam",
-                                                Project: "eaque",
-                                                Region: "pariatur",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "nemo",
-                                                IPProtocol: "udp",
-                                                Kind: "perferendis",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "amet",
-                                                Port: "aut",
-                                                Project: "cumque",
-                                                Region: "corporis",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "hic",
-                                                IPProtocol: "udp",
-                                                Kind: "nobis",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "quis",
-                                                Port: "totam",
-                                                Project: "dignissimos",
-                                                Region: "eaque",
-                                            },
-                                        },
-                                    },
-                                    Kind: "quis",
-                                    Rrdatas: []string{
-                                        "eos",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "dolores",
-                                    },
-                                    Weight: 7936.98,
-                                },
-                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "dolor",
-                                                IPProtocol: "udp",
-                                                Kind: "nostrum",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "recusandae",
-                                                Port: "omnis",
-                                                Project: "facilis",
-                                                Region: "perspiciatis",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "voluptatem",
-                                                IPProtocol: "udp",
-                                                Kind: "consequuntur",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "error",
-                                                Port: "eaque",
-                                                Project: "occaecati",
-                                                Region: "rerum",
-                                            },
-                                        },
-                                    },
-                                    Kind: "adipisci",
-                                    Rrdatas: []string{
-                                        "earum",
-                                        "modi",
-                                        "iste",
-                                        "dolorum",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "pariatur",
-                                        "provident",
-                                        "nobis",
-                                    },
-                                    Weight: 7301.22,
-                                },
-                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "quaerat",
-                                                IPProtocol: "tcp",
-                                                Kind: "aliquid",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "dolorem",
-                                                Port: "dolor",
-                                                Project: "qui",
-                                                Region: "ipsum",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "hic",
-                                                IPProtocol: "tcp",
-                                                Kind: "cum",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "dignissimos",
-                                                Port: "reiciendis",
-                                                Project: "amet",
-                                                Region: "dolorum",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "numquam",
-                                                IPProtocol: "undefined",
-                                                Kind: "ipsa",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "iure",
-                                                Port: "odio",
-                                                Project: "quaerat",
-                                                Region: "accusamus",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "quidem",
-                                                IPProtocol: "udp",
-                                                Kind: "voluptas",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "eos",
-                                                Port: "atque",
-                                                Project: "sit",
-                                                Region: "fugiat",
-                                            },
-                                        },
-                                    },
-                                    Kind: "ab",
-                                    Rrdatas: []string{
-                                        "dolorum",
-                                        "iusto",
+                                        "ipsa",
+                                        "omnis",
                                         "voluptate",
+                                        "cum",
+                                    },
+                                    SignatureRrdatas: []string{
+                                        "doloremque",
+                                    },
+                                    Weight: sdk.Float64(4417.11),
+                                },
+                            },
+                            Kind: sdk.String("ut"),
+                        },
+                    },
+                    Rrdatas: []string{
+                        "dicta",
+                        "corporis",
+                        "dolore",
+                        "iusto",
+                    },
+                    SignatureRrdatas: []string{
+                        "harum",
+                    },
+                    TTL: sdk.Int(317983),
+                    Type: sdk.String("accusamus"),
+                },
+                shared.ResourceRecordSet{
+                    Kind: sdk.String("commodi"),
+                    Name: sdk.String("Eric Emmerich"),
+                    RoutingPolicy: &shared.RRSetRoutingPolicy{
+                        Geo: &shared.RRSetRoutingPolicyGeoPolicy{
+                            EnableFencing: sdk.Bool(false),
+                            Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("modi"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("rem"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("quasi"),
+                                                Port: sdk.String("repudiandae"),
+                                                Project: sdk.String("sint"),
+                                                Region: sdk.String("veritatis"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("itaque"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("enim"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("est"),
+                                                Port: sdk.String("quibusdam"),
+                                                Project: sdk.String("explicabo"),
+                                                Region: sdk.String("deserunt"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("distinctio"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                Kind: sdk.String("labore"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("qui"),
+                                                Port: sdk.String("aliquid"),
+                                                Project: sdk.String("cupiditate"),
+                                                Region: sdk.String("quos"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("perferendis"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("assumenda"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("alias"),
+                                                Port: sdk.String("fugit"),
+                                                Project: sdk.String("dolorum"),
+                                                Region: sdk.String("excepturi"),
+                                            },
+                                        },
+                                    },
+                                    Kind: sdk.String("tempora"),
+                                    Location: sdk.String("facilis"),
+                                    Rrdatas: []string{
+                                        "labore",
+                                        "delectus",
+                                        "eum",
+                                    },
+                                    SignatureRrdatas: []string{
+                                        "eligendi",
+                                    },
+                                },
+                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("aliquid"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("necessitatibus"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("officia"),
+                                                Port: sdk.String("dolor"),
+                                                Project: sdk.String("debitis"),
+                                                Region: sdk.String("a"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("dolorum"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("in"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("maiores"),
+                                                Port: sdk.String("rerum"),
+                                                Project: sdk.String("dicta"),
+                                                Region: sdk.String("magnam"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("cumque"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                Kind: sdk.String("ea"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("laborum"),
+                                                Port: sdk.String("accusamus"),
+                                                Project: sdk.String("non"),
+                                                Region: sdk.String("occaecati"),
+                                            },
+                                        },
+                                    },
+                                    Kind: sdk.String("enim"),
+                                    Location: sdk.String("accusamus"),
+                                    Rrdatas: []string{
+                                        "quidem",
+                                        "provident",
+                                        "nam",
+                                        "id",
                                     },
                                     SignatureRrdatas: []string{
                                         "deleniti",
-                                        "omnis",
-                                        "necessitatibus",
-                                    },
-                                    Weight: 7146.97,
-                                },
-                            },
-                            Kind: "asperiores",
-                        },
-                    },
-                    Rrdatas: []string{
-                        "ipsum",
-                        "voluptate",
-                    },
-                    SignatureRrdatas: []string{
-                        "saepe",
-                        "eius",
-                        "aspernatur",
-                    },
-                    TTL: 20651,
-                    Type: "amet",
-                },
-                shared.ResourceRecordSet{
-                    Kind: "optio",
-                    Name: "accusamus",
-                    RoutingPolicy: &shared.RRSetRoutingPolicy{
-                        Geo: &shared.RRSetRoutingPolicyGeoPolicy{
-                            EnableFencing: false,
-                            Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "suscipit",
-                                                IPProtocol: "tcp",
-                                                Kind: "provident",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "repellendus",
-                                                Port: "totam",
-                                                Project: "similique",
-                                                Region: "alias",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "at",
-                                                IPProtocol: "undefined",
-                                                Kind: "tempora",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "quod",
-                                                Port: "officiis",
-                                                Project: "qui",
-                                                Region: "dolorum",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "a",
-                                                IPProtocol: "tcp",
-                                                Kind: "harum",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "ipsum",
-                                                Port: "quisquam",
-                                                Project: "tenetur",
-                                                Region: "amet",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "tempore",
-                                                IPProtocol: "udp",
-                                                Kind: "numquam",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "dolorem",
-                                                Port: "sapiente",
-                                                Project: "totam",
-                                                Region: "nihil",
-                                            },
-                                        },
-                                    },
-                                    Kind: "sit",
-                                    Location: "expedita",
-                                    Rrdatas: []string{
-                                        "sed",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "libero",
-                                        "voluptas",
+                                        "sapiente",
+                                        "amet",
                                     },
                                 },
                                 shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
                                     HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
                                         InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "quam",
-                                                IPProtocol: "undefined",
-                                                Kind: "incidunt",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "cupiditate",
-                                                Port: "maxime",
-                                                Project: "pariatur",
-                                                Region: "soluta",
+                                                IPAddress: sdk.String("nisi"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("natus"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("molestiae"),
+                                                Port: sdk.String("perferendis"),
+                                                Project: sdk.String("nihil"),
+                                                Region: sdk.String("magnam"),
                                             },
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "dicta",
-                                                IPProtocol: "udp",
-                                                Kind: "totam",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "aspernatur",
-                                                Port: "dolores",
-                                                Project: "distinctio",
-                                                Region: "facilis",
+                                                IPAddress: sdk.String("distinctio"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("labore"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("suscipit"),
+                                                Port: sdk.String("natus"),
+                                                Project: sdk.String("nobis"),
+                                                Region: sdk.String("eum"),
                                             },
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "aliquid",
-                                                IPProtocol: "tcp",
-                                                Kind: "molestias",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "qui",
-                                                Port: "neque",
-                                                Project: "fugit",
-                                                Region: "magni",
+                                                IPAddress: sdk.String("vero"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("architecto"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("et"),
+                                                Port: sdk.String("excepturi"),
+                                                Project: sdk.String("ullam"),
+                                                Region: sdk.String("provident"),
                                             },
                                         },
                                     },
-                                    Kind: "odio",
-                                    Location: "sunt",
+                                    Kind: sdk.String("quos"),
+                                    Location: sdk.String("sint"),
                                     Rrdatas: []string{
-                                        "nam",
-                                        "hic",
+                                        "mollitia",
                                     },
                                     SignatureRrdatas: []string{
-                                        "cumque",
+                                        "mollitia",
+                                        "ad",
+                                        "eum",
+                                        "dolor",
                                     },
                                 },
                             },
-                            Kind: "soluta",
+                            Kind: sdk.String("necessitatibus"),
                         },
-                        Kind: "nobis",
+                        Kind: sdk.String("odit"),
                         PrimaryBackup: &shared.RRSetRoutingPolicyPrimaryBackupPolicy{
                             BackupGeoTargets: &shared.RRSetRoutingPolicyGeoPolicy{
-                                EnableFencing: false,
+                                EnableFencing: sdk.Bool(false),
                                 Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
                                     shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
                                         HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
                                             InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
                                                 shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "ipsum",
-                                                    IPProtocol: "undefined",
-                                                    Kind: "nobis",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "tempore",
-                                                    Port: "cupiditate",
-                                                    Project: "aperiam",
-                                                    Region: "delectus",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "dolorem",
-                                                    IPProtocol: "undefined",
-                                                    Kind: "labore",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "dolorum",
-                                                    Port: "architecto",
-                                                    Project: "quae",
-                                                    Region: "aut",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "quas",
-                                                    IPProtocol: "udp",
-                                                    Kind: "consequatur",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "repellendus",
-                                                    Port: "porro",
-                                                    Project: "doloribus",
-                                                    Region: "ut",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "facilis",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "qui",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "laudantium",
-                                                    Port: "odio",
-                                                    Project: "occaecati",
-                                                    Region: "voluptatibus",
+                                                    IPAddress: sdk.String("iure"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                    Kind: sdk.String("debitis"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                    NetworkURL: sdk.String("maxime"),
+                                                    Port: sdk.String("deleniti"),
+                                                    Project: sdk.String("facilis"),
+                                                    Region: sdk.String("in"),
                                                 },
                                             },
                                         },
-                                        Kind: "quisquam",
-                                        Location: "vero",
+                                        Kind: sdk.String("architecto"),
+                                        Location: sdk.String("architecto"),
                                         Rrdatas: []string{
-                                            "quis",
-                                            "ipsum",
-                                            "delectus",
+                                            "ullam",
+                                            "expedita",
+                                            "nihil",
+                                            "repellat",
                                         },
                                         SignatureRrdatas: []string{
-                                            "consectetur",
-                                            "vero",
-                                        },
-                                    },
-                                },
-                                Kind: "tenetur",
-                            },
-                            Kind: "dignissimos",
-                            PrimaryTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "distinctio",
-                                        IPProtocol: "udp",
-                                        Kind: "odio",
-                                        LoadBalancerType: "regionalL4ilb",
-                                        NetworkURL: "facilis",
-                                        Port: "vero",
-                                        Project: "ducimus",
-                                        Region: "dolore",
-                                    },
-                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "quibusdam",
-                                        IPProtocol: "udp",
-                                        Kind: "sequi",
-                                        LoadBalancerType: "regionalL4ilb",
-                                        NetworkURL: "impedit",
-                                        Port: "aut",
-                                        Project: "voluptatibus",
-                                        Region: "exercitationem",
-                                    },
-                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "nulla",
-                                        IPProtocol: "undefined",
-                                        Kind: "porro",
-                                        LoadBalancerType: "regionalL4ilb",
-                                        NetworkURL: "doloribus",
-                                        Port: "iusto",
-                                        Project: "eligendi",
-                                        Region: "ducimus",
-                                    },
-                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "alias",
-                                        IPProtocol: "tcp",
-                                        Kind: "tempora",
-                                        LoadBalancerType: "none",
-                                        NetworkURL: "ea",
-                                        Port: "aspernatur",
-                                        Project: "vel",
-                                        Region: "possimus",
-                                    },
-                                },
-                            },
-                            TrickleTraffic: 2978.42,
-                        },
-                        Wrr: &shared.RRSetRoutingPolicyWrrPolicy{
-                            Items: []shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "laudantium",
-                                                IPProtocol: "undefined",
-                                                Kind: "dolor",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "quasi",
-                                                Port: "ex",
-                                                Project: "nulla",
-                                                Region: "excepturi",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "voluptatibus",
-                                                IPProtocol: "tcp",
-                                                Kind: "sapiente",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "saepe",
-                                                Port: "ea",
-                                                Project: "impedit",
-                                                Region: "corporis",
-                                            },
-                                        },
-                                    },
-                                    Kind: "veniam",
-                                    Rrdatas: []string{
-                                        "inventore",
-                                        "magnam",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "quo",
-                                        "consectetur",
-                                    },
-                                    Weight: 9262.13,
-                                },
-                            },
-                            Kind: "aspernatur",
-                        },
-                    },
-                    Rrdatas: []string{
-                        "eaque",
-                        "a",
-                    },
-                    SignatureRrdatas: []string{
-                        "aut",
-                        "aut",
-                        "deleniti",
-                    },
-                    TTL: 770581,
-                    Type: "aliquam",
-                },
-                shared.ResourceRecordSet{
-                    Kind: "fugit",
-                    Name: "accusamus",
-                    RoutingPolicy: &shared.RRSetRoutingPolicy{
-                        Geo: &shared.RRSetRoutingPolicyGeoPolicy{
-                            EnableFencing: false,
-                            Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "et",
-                                                IPProtocol: "udp",
-                                                Kind: "laborum",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "velit",
-                                                Port: "eum",
-                                                Project: "autem",
-                                                Region: "nobis",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "quas",
-                                                IPProtocol: "udp",
-                                                Kind: "nulla",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "libero",
-                                                Port: "quasi",
-                                                Project: "tempora",
-                                                Region: "numquam",
-                                            },
-                                        },
-                                    },
-                                    Kind: "explicabo",
-                                    Location: "provident",
-                                    Rrdatas: []string{
-                                        "molestiae",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "odio",
-                                        "eius",
-                                    },
-                                },
-                            },
-                            Kind: "esse",
-                        },
-                        Kind: "esse",
-                        PrimaryBackup: &shared.RRSetRoutingPolicyPrimaryBackupPolicy{
-                            BackupGeoTargets: &shared.RRSetRoutingPolicyGeoPolicy{
-                                EnableFencing: false,
-                                Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "reprehenderit",
-                                                    IPProtocol: "udp",
-                                                    Kind: "fugiat",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "eum",
-                                                    Port: "suscipit",
-                                                    Project: "assumenda",
-                                                    Region: "eos",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "praesentium",
-                                                    IPProtocol: "udp",
-                                                    Kind: "veritatis",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "id",
-                                                    Port: "quidem",
-                                                    Project: "neque",
-                                                    Region: "quo",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "illum",
-                                                    IPProtocol: "udp",
-                                                    Kind: "fuga",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "eos",
-                                                    Port: "voluptas",
-                                                    Project: "ab",
-                                                    Region: "cupiditate",
-                                                },
-                                            },
-                                        },
-                                        Kind: "consequatur",
-                                        Location: "tempora",
-                                        Rrdatas: []string{
-                                            "ipsam",
-                                            "aspernatur",
-                                            "sequi",
-                                            "quo",
-                                        },
-                                        SignatureRrdatas: []string{
-                                            "recusandae",
-                                            "aperiam",
-                                        },
-                                    },
-                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "quod",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "inventore",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "totam",
-                                                    Port: "accusamus",
-                                                    Project: "aliquam",
-                                                    Region: "odio",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "occaecati",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "sapiente",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "deserunt",
-                                                    Port: "molestiae",
-                                                    Project: "accusantium",
-                                                    Region: "porro",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "eum",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "praesentium",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "deleniti",
-                                                    Port: "fugit",
-                                                    Project: "fuga",
-                                                    Region: "mollitia",
-                                                },
-                                            },
-                                        },
-                                        Kind: "incidunt",
-                                        Location: "atque",
-                                        Rrdatas: []string{
-                                            "minima",
-                                        },
-                                        SignatureRrdatas: []string{
-                                            "fugit",
-                                            "sapiente",
-                                        },
-                                    },
-                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "ratione",
-                                                    IPProtocol: "undefined",
-                                                    Kind: "saepe",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "atque",
-                                                    Port: "et",
-                                                    Project: "esse",
-                                                    Region: "eveniet",
-                                                },
-                                            },
-                                        },
-                                        Kind: "accusamus",
-                                        Location: "veritatis",
-                                        Rrdatas: []string{
-                                            "quod",
-                                            "nam",
-                                        },
-                                        SignatureRrdatas: []string{
-                                            "aliquid",
-                                            "quasi",
+                                            "sed",
                                             "saepe",
-                                            "vel",
+                                            "pariatur",
+                                            "accusantium",
+                                        },
+                                    },
+                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("praesentium"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                    Kind: sdk.String("magni"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                    NetworkURL: sdk.String("quo"),
+                                                    Port: sdk.String("illum"),
+                                                    Project: sdk.String("pariatur"),
+                                                    Region: sdk.String("maxime"),
+                                                },
+                                            },
+                                        },
+                                        Kind: sdk.String("ea"),
+                                        Location: sdk.String("excepturi"),
+                                        Rrdatas: []string{
+                                            "ea",
+                                        },
+                                        SignatureRrdatas: []string{
+                                            "ab",
                                         },
                                     },
                                 },
-                                Kind: "harum",
+                                Kind: sdk.String("maiores"),
                             },
-                            Kind: "molestiae",
+                            Kind: sdk.String("quidem"),
                             PrimaryTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
                                 InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
                                     shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "occaecati",
-                                        IPProtocol: "undefined",
-                                        Kind: "distinctio",
-                                        LoadBalancerType: "regionalL4ilb",
-                                        NetworkURL: "sit",
-                                        Port: "culpa",
-                                        Project: "tempore",
-                                        Region: "adipisci",
+                                        IPAddress: sdk.String("voluptate"),
+                                        IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                        Kind: sdk.String("nam"),
+                                        LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                        NetworkURL: sdk.String("pariatur"),
+                                        Port: sdk.String("nemo"),
+                                        Project: sdk.String("voluptatibus"),
+                                        Region: sdk.String("perferendis"),
                                     },
                                     shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "cumque",
-                                        IPProtocol: "undefined",
-                                        Kind: "consequatur",
-                                        LoadBalancerType: "regionalL4ilb",
-                                        NetworkURL: "quaerat",
-                                        Port: "sapiente",
-                                        Project: "consectetur",
-                                        Region: "esse",
-                                    },
-                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "blanditiis",
-                                        IPProtocol: "tcp",
-                                        Kind: "a",
-                                        LoadBalancerType: "regionalL4ilb",
-                                        NetworkURL: "quas",
-                                        Port: "esse",
-                                        Project: "quasi",
-                                        Region: "a",
+                                        IPAddress: sdk.String("fugiat"),
+                                        IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                        Kind: sdk.String("aut"),
+                                        LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                        NetworkURL: sdk.String("corporis"),
+                                        Port: sdk.String("hic"),
+                                        Project: sdk.String("libero"),
+                                        Region: sdk.String("nobis"),
                                     },
                                 },
                             },
-                            TrickleTraffic: 6216.79,
+                            TrickleTraffic: sdk.Float64(1716.29),
                         },
                         Wrr: &shared.RRSetRoutingPolicyWrrPolicy{
                             Items: []shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
@@ -1122,936 +516,917 @@ func main() {
                                     HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
                                         InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "possimus",
-                                                IPProtocol: "undefined",
-                                                Kind: "eveniet",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "facere",
-                                                Port: "veritatis",
-                                                Project: "consequuntur",
-                                                Region: "quasi",
+                                                IPAddress: sdk.String("dignissimos"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("quis"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("eos"),
+                                                Port: sdk.String("perferendis"),
+                                                Project: sdk.String("dolores"),
+                                                Region: sdk.String("minus"),
                                             },
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "similique",
-                                                IPProtocol: "tcp",
-                                                Kind: "aliquid",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "quae",
-                                                Port: "earum",
-                                                Project: "vel",
-                                                Region: "in",
+                                                IPAddress: sdk.String("quam"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("vero"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("hic"),
+                                                Port: sdk.String("recusandae"),
+                                                Project: sdk.String("omnis"),
+                                                Region: sdk.String("facilis"),
                                             },
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "eius",
-                                                IPProtocol: "udp",
-                                                Kind: "illum",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "accusantium",
-                                                Port: "aliquam",
-                                                Project: "sapiente",
-                                                Region: "dicta",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "ullam",
-                                                IPProtocol: "tcp",
-                                                Kind: "ullam",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "aut",
-                                                Port: "voluptatum",
-                                                Project: "qui",
-                                                Region: "quibusdam",
+                                                IPAddress: sdk.String("perspiciatis"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("porro"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("blanditiis"),
+                                                Port: sdk.String("error"),
+                                                Project: sdk.String("eaque"),
+                                                Region: sdk.String("occaecati"),
                                             },
                                         },
                                     },
-                                    Kind: "ex",
+                                    Kind: sdk.String("rerum"),
                                     Rrdatas: []string{
-                                        "itaque",
+                                        "asperiores",
+                                    },
+                                    SignatureRrdatas: []string{
+                                        "modi",
+                                        "iste",
                                         "dolorum",
-                                        "architecto",
+                                        "deleniti",
                                     },
-                                    SignatureRrdatas: []string{
-                                        "tenetur",
-                                        "quasi",
-                                        "at",
-                                    },
-                                    Weight: 920.27,
+                                    Weight: sdk.Float64(8642.82),
                                 },
                                 shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
                                     HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
                                         InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "ipsa",
-                                                IPProtocol: "undefined",
-                                                Kind: "veritatis",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "adipisci",
-                                                Port: "iste",
-                                                Project: "temporibus",
-                                                Region: "accusantium",
+                                                IPAddress: sdk.String("nobis"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                Kind: sdk.String("delectus"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("quos"),
+                                                Port: sdk.String("aliquid"),
+                                                Project: sdk.String("dolorem"),
+                                                Region: sdk.String("dolorem"),
                                             },
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "rem",
-                                                IPProtocol: "undefined",
-                                                Kind: "laudantium",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "mollitia",
-                                                Port: "ab",
-                                                Project: "corrupti",
-                                                Region: "non",
+                                                IPAddress: sdk.String("dolor"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("ipsum"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("excepturi"),
+                                                Port: sdk.String("cum"),
+                                                Project: sdk.String("voluptate"),
+                                                Region: sdk.String("dignissimos"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("reiciendis"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("dolorum"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("veritatis"),
+                                                Port: sdk.String("ipsa"),
+                                                Project: sdk.String("ipsa"),
+                                                Region: sdk.String("iure"),
                                             },
                                         },
                                     },
-                                    Kind: "voluptatem",
+                                    Kind: sdk.String("odio"),
                                     Rrdatas: []string{
-                                        "occaecati",
+                                        "accusamus",
+                                        "quidem",
                                     },
                                     SignatureRrdatas: []string{
-                                        "impedit",
-                                        "explicabo",
+                                        "voluptas",
+                                        "natus",
+                                        "eos",
+                                        "atque",
                                     },
-                                    Weight: 3762.26,
-                                },
-                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "dignissimos",
-                                                IPProtocol: "undefined",
-                                                Kind: "maiores",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "velit",
-                                                Port: "voluptatibus",
-                                                Project: "voluptas",
-                                                Region: "asperiores",
-                                            },
-                                        },
-                                    },
-                                    Kind: "aperiam",
-                                    Rrdatas: []string{
-                                        "quaerat",
-                                        "consequuntur",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "officia",
-                                        "maxime",
-                                        "dignissimos",
-                                        "officia",
-                                    },
-                                    Weight: 9894.1,
+                                    Weight: sdk.Float64(246.78),
                                 },
                             },
-                            Kind: "nemo",
+                            Kind: sdk.String("fugiat"),
                         },
                     },
                     Rrdatas: []string{
-                        "quaerat",
+                        "soluta",
                     },
                     SignatureRrdatas: []string{
-                        "quod",
-                        "labore",
-                        "ab",
-                        "adipisci",
+                        "iusto",
+                        "voluptate",
+                        "dolorum",
                     },
-                    TTL: 683573,
-                    Type: "id",
+                    TTL: sdk.Int(536579),
+                    Type: sdk.String("omnis"),
+                },
+                shared.ResourceRecordSet{
+                    Kind: sdk.String("necessitatibus"),
+                    Name: sdk.String("Emmett Kovacek"),
+                    RoutingPolicy: &shared.RRSetRoutingPolicy{
+                        Geo: &shared.RRSetRoutingPolicyGeoPolicy{
+                            EnableFencing: sdk.Bool(false),
+                            Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("eius"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("perferendis"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("optio"),
+                                                Port: sdk.String("accusamus"),
+                                                Project: sdk.String("ad"),
+                                                Region: sdk.String("saepe"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("suscipit"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("provident"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("repellendus"),
+                                                Port: sdk.String("totam"),
+                                                Project: sdk.String("similique"),
+                                                Region: sdk.String("alias"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("at"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("tempora"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("quod"),
+                                                Port: sdk.String("officiis"),
+                                                Project: sdk.String("qui"),
+                                                Region: sdk.String("dolorum"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("a"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("harum"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("ipsum"),
+                                                Port: sdk.String("quisquam"),
+                                                Project: sdk.String("tenetur"),
+                                                Region: sdk.String("amet"),
+                                            },
+                                        },
+                                    },
+                                    Kind: sdk.String("tempore"),
+                                    Location: sdk.String("accusamus"),
+                                    Rrdatas: []string{
+                                        "enim",
+                                        "dolorem",
+                                    },
+                                    SignatureRrdatas: []string{
+                                        "totam",
+                                        "nihil",
+                                        "sit",
+                                        "expedita",
+                                    },
+                                },
+                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("sed"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("libero"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("deserunt"),
+                                                Port: sdk.String("quam"),
+                                                Project: sdk.String("ipsum"),
+                                                Region: sdk.String("incidunt"),
+                                            },
+                                        },
+                                    },
+                                    Kind: sdk.String("qui"),
+                                    Location: sdk.String("cupiditate"),
+                                    Rrdatas: []string{
+                                        "pariatur",
+                                        "soluta",
+                                        "dicta",
+                                        "laborum",
+                                    },
+                                    SignatureRrdatas: []string{
+                                        "incidunt",
+                                        "aspernatur",
+                                        "dolores",
+                                    },
+                                },
+                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("facilis"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("quam"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("temporibus"),
+                                                Port: sdk.String("qui"),
+                                                Project: sdk.String("neque"),
+                                                Region: sdk.String("fugit"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("magni"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("sunt"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("nam"),
+                                                Port: sdk.String("hic"),
+                                                Project: sdk.String("voluptatem"),
+                                                Region: sdk.String("cumque"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("soluta"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                Kind: sdk.String("et"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("ipsum"),
+                                                Port: sdk.String("veritatis"),
+                                                Project: sdk.String("nobis"),
+                                                Region: sdk.String("quos"),
+                                            },
+                                        },
+                                    },
+                                    Kind: sdk.String("tempore"),
+                                    Location: sdk.String("cupiditate"),
+                                    Rrdatas: []string{
+                                        "delectus",
+                                    },
+                                    SignatureRrdatas: []string{
+                                        "dolore",
+                                    },
+                                },
+                            },
+                            Kind: sdk.String("labore"),
+                        },
+                        Kind: sdk.String("adipisci"),
+                        PrimaryBackup: &shared.RRSetRoutingPolicyPrimaryBackupPolicy{
+                            BackupGeoTargets: &shared.RRSetRoutingPolicyGeoPolicy{
+                                EnableFencing: sdk.Bool(false),
+                                Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("quae"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                    Kind: sdk.String("quas"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                    NetworkURL: sdk.String("consequatur"),
+                                                    Port: sdk.String("est"),
+                                                    Project: sdk.String("repellendus"),
+                                                    Region: sdk.String("porro"),
+                                                },
+                                            },
+                                        },
+                                        Kind: sdk.String("doloribus"),
+                                        Location: sdk.String("ut"),
+                                        Rrdatas: []string{
+                                            "cupiditate",
+                                            "qui",
+                                            "quae",
+                                        },
+                                        SignatureRrdatas: []string{
+                                            "odio",
+                                            "occaecati",
+                                            "voluptatibus",
+                                        },
+                                    },
+                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("vero"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                    Kind: sdk.String("quis"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                    NetworkURL: sdk.String("delectus"),
+                                                    Port: sdk.String("voluptate"),
+                                                    Project: sdk.String("consectetur"),
+                                                    Region: sdk.String("vero"),
+                                                },
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("tenetur"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                    Kind: sdk.String("hic"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                    NetworkURL: sdk.String("quod"),
+                                                    Port: sdk.String("odio"),
+                                                    Project: sdk.String("similique"),
+                                                    Region: sdk.String("facilis"),
+                                                },
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("vero"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                    Kind: sdk.String("dolore"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                    NetworkURL: sdk.String("illum"),
+                                                    Port: sdk.String("sequi"),
+                                                    Project: sdk.String("natus"),
+                                                    Region: sdk.String("impedit"),
+                                                },
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("aut"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                    Kind: sdk.String("exercitationem"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                    NetworkURL: sdk.String("fugit"),
+                                                    Port: sdk.String("porro"),
+                                                    Project: sdk.String("maiores"),
+                                                    Region: sdk.String("doloribus"),
+                                                },
+                                            },
+                                        },
+                                        Kind: sdk.String("iusto"),
+                                        Location: sdk.String("eligendi"),
+                                        Rrdatas: []string{
+                                            "alias",
+                                            "officia",
+                                        },
+                                        SignatureRrdatas: []string{
+                                            "ipsam",
+                                            "ea",
+                                        },
+                                    },
+                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("vel"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                    Kind: sdk.String("magnam"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                    NetworkURL: sdk.String("ex"),
+                                                    Port: sdk.String("laudantium"),
+                                                    Project: sdk.String("dicta"),
+                                                    Region: sdk.String("dolor"),
+                                                },
+                                            },
+                                        },
+                                        Kind: sdk.String("maiores"),
+                                        Location: sdk.String("quasi"),
+                                        Rrdatas: []string{
+                                            "nulla",
+                                            "excepturi",
+                                        },
+                                        SignatureRrdatas: []string{
+                                            "nostrum",
+                                            "sapiente",
+                                            "quisquam",
+                                            "saepe",
+                                        },
+                                    },
+                                },
+                                Kind: sdk.String("ea"),
+                            },
+                            Kind: sdk.String("impedit"),
+                            PrimaryTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                        IPAddress: sdk.String("veniam"),
+                                        IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                        Kind: sdk.String("inventore"),
+                                        LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                        NetworkURL: sdk.String("ea"),
+                                        Port: sdk.String("quo"),
+                                        Project: sdk.String("consectetur"),
+                                        Region: sdk.String("recusandae"),
+                                    },
+                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                        IPAddress: sdk.String("aspernatur"),
+                                        IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                        Kind: sdk.String("eaque"),
+                                        LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                        NetworkURL: sdk.String("libero"),
+                                        Port: sdk.String("aut"),
+                                        Project: sdk.String("aut"),
+                                        Region: sdk.String("deleniti"),
+                                    },
+                                },
+                            },
+                            TrickleTraffic: sdk.Float64(7705.81),
+                        },
+                        Wrr: &shared.RRSetRoutingPolicyWrrPolicy{
+                            Items: []shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
+                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
+                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("accusamus"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("non"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("dolorum"),
+                                                Port: sdk.String("laborum"),
+                                                Project: sdk.String("placeat"),
+                                                Region: sdk.String("velit"),
+                                            },
+                                        },
+                                    },
+                                    Kind: sdk.String("eum"),
+                                    Rrdatas: []string{
+                                        "nobis",
+                                        "quas",
+                                    },
+                                    SignatureRrdatas: []string{
+                                        "nulla",
+                                        "voluptas",
+                                        "libero",
+                                        "quasi",
+                                    },
+                                    Weight: sdk.Float64(2703.28),
+                                },
+                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
+                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("explicabo"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("ipsa"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("magnam"),
+                                                Port: sdk.String("odio"),
+                                                Project: sdk.String("eius"),
+                                                Region: sdk.String("esse"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("esse"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("fuga"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("quidem"),
+                                                Port: sdk.String("fugiat"),
+                                                Project: sdk.String("ut"),
+                                                Region: sdk.String("eum"),
+                                            },
+                                        },
+                                    },
+                                    Kind: sdk.String("suscipit"),
+                                    Rrdatas: []string{
+                                        "eos",
+                                        "praesentium",
+                                        "quisquam",
+                                        "veritatis",
+                                    },
+                                    SignatureRrdatas: []string{
+                                        "id",
+                                    },
+                                    Weight: sdk.Float64(6969.97),
+                                },
+                            },
+                            Kind: sdk.String("neque"),
+                        },
+                    },
+                    Rrdatas: []string{
+                        "illum",
+                        "quo",
+                        "fuga",
+                        "eius",
+                    },
+                    SignatureRrdatas: []string{
+                        "voluptas",
+                    },
+                    TTL: sdk.Int(69859),
+                    Type: sdk.String("cupiditate"),
                 },
             },
             Deletions: []shared.ResourceRecordSet{
                 shared.ResourceRecordSet{
-                    Kind: "velit",
-                    Name: "culpa",
+                    Kind: sdk.String("tempora"),
+                    Name: sdk.String("Roberto Collier"),
                     RoutingPolicy: &shared.RRSetRoutingPolicy{
                         Geo: &shared.RRSetRoutingPolicyGeoPolicy{
-                            EnableFencing: false,
+                            EnableFencing: sdk.Bool(false),
                             Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
                                 shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
                                     HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
                                         InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "totam",
-                                                IPProtocol: "udp",
-                                                Kind: "vel",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "quos",
-                                                Port: "vel",
-                                                Project: "labore",
-                                                Region: "possimus",
+                                                IPAddress: sdk.String("aperiam"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                Kind: sdk.String("quod"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("inventore"),
+                                                Port: sdk.String("nihil"),
+                                                Project: sdk.String("totam"),
+                                                Region: sdk.String("accusamus"),
                                             },
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "facilis",
-                                                IPProtocol: "udp",
-                                                Kind: "commodi",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "corporis",
-                                                Port: "reiciendis",
-                                                Project: "assumenda",
-                                                Region: "nemo",
+                                                IPAddress: sdk.String("aliquam"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("occaecati"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("sapiente"),
+                                                Port: sdk.String("dolores"),
+                                                Project: sdk.String("deserunt"),
+                                                Region: sdk.String("molestiae"),
                                             },
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "recusandae",
-                                                IPProtocol: "tcp",
-                                                Kind: "aperiam",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "consectetur",
-                                                Port: "in",
-                                                Project: "exercitationem",
-                                                Region: "earum",
+                                                IPAddress: sdk.String("accusantium"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                Kind: sdk.String("eum"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("praesentium"),
+                                                Port: sdk.String("consequuntur"),
+                                                Project: sdk.String("deleniti"),
+                                                Region: sdk.String("fugit"),
                                             },
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "facere",
-                                                IPProtocol: "undefined",
-                                                Kind: "doloribus",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "reiciendis",
-                                                Port: "quidem",
-                                                Project: "saepe",
-                                                Region: "necessitatibus",
+                                                IPAddress: sdk.String("fuga"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("incidunt"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("explicabo"),
+                                                Port: sdk.String("minima"),
+                                                Project: sdk.String("nisi"),
+                                                Region: sdk.String("fugit"),
                                             },
                                         },
                                     },
-                                    Kind: "dolore",
-                                    Location: "sunt",
+                                    Kind: sdk.String("sapiente"),
+                                    Location: sdk.String("consequuntur"),
                                     Rrdatas: []string{
-                                        "adipisci",
-                                        "non",
-                                        "amet",
-                                        "beatae",
+                                        "explicabo",
                                     },
                                     SignatureRrdatas: []string{
+                                        "occaecati",
+                                        "atque",
+                                        "et",
+                                        "esse",
+                                    },
+                                },
+                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("accusamus"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("esse"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("nam"),
+                                                Port: sdk.String("vero"),
+                                                Project: sdk.String("aliquid"),
+                                                Region: sdk.String("quasi"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("saepe"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                Kind: sdk.String("harum"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("rerum"),
+                                                Port: sdk.String("occaecati"),
+                                                Project: sdk.String("minima"),
+                                                Region: sdk.String("distinctio"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("eligendi"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("culpa"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("adipisci"),
+                                                Port: sdk.String("cumque"),
+                                                Project: sdk.String("consequuntur"),
+                                                Region: sdk.String("consequatur"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("minus"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("sapiente"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                NetworkURL: sdk.String("esse"),
+                                                Port: sdk.String("blanditiis"),
+                                                Project: sdk.String("provident"),
+                                                Region: sdk.String("a"),
+                                            },
+                                        },
+                                    },
+                                    Kind: sdk.String("nulla"),
+                                    Location: sdk.String("quas"),
+                                    Rrdatas: []string{
+                                        "quasi",
                                         "a",
-                                        "debitis",
-                                    },
-                                },
-                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "corporis",
-                                                IPProtocol: "udp",
-                                                Kind: "laboriosam",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "voluptates",
-                                                Port: "libero",
-                                                Project: "vitae",
-                                                Region: "accusamus",
-                                            },
-                                        },
-                                    },
-                                    Kind: "similique",
-                                    Location: "tempora",
-                                    Rrdatas: []string{
-                                        "voluptas",
                                     },
                                     SignatureRrdatas: []string{
-                                        "voluptas",
-                                        "minima",
+                                        "sint",
+                                        "pariatur",
+                                        "possimus",
                                     },
                                 },
-                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                            },
+                            Kind: sdk.String("quia"),
+                        },
+                        Kind: sdk.String("eveniet"),
+                        PrimaryBackup: &shared.RRSetRoutingPolicyPrimaryBackupPolicy{
+                            BackupGeoTargets: &shared.RRSetRoutingPolicyGeoPolicy{
+                                EnableFencing: sdk.Bool(false),
+                                Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("veritatis"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                    Kind: sdk.String("quasi"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                    NetworkURL: sdk.String("culpa"),
+                                                    Port: sdk.String("aliquid"),
+                                                    Project: sdk.String("tenetur"),
+                                                    Region: sdk.String("quae"),
+                                                },
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("earum"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                    Kind: sdk.String("in"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                    NetworkURL: sdk.String("libero"),
+                                                    Port: sdk.String("illum"),
+                                                    Project: sdk.String("soluta"),
+                                                    Region: sdk.String("accusantium"),
+                                                },
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("aliquam"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                    Kind: sdk.String("dicta"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                    NetworkURL: sdk.String("reprehenderit"),
+                                                    Port: sdk.String("ullam"),
+                                                    Project: sdk.String("nisi"),
+                                                    Region: sdk.String("aut"),
+                                                },
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("voluptatum"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                    Kind: sdk.String("quibusdam"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                    NetworkURL: sdk.String("deleniti"),
+                                                    Port: sdk.String("itaque"),
+                                                    Project: sdk.String("dolorum"),
+                                                    Region: sdk.String("architecto"),
+                                                },
+                                            },
+                                        },
+                                        Kind: sdk.String("omnis"),
+                                        Location: sdk.String("tenetur"),
+                                        Rrdatas: []string{
+                                            "at",
+                                        },
+                                        SignatureRrdatas: []string{
+                                            "voluptate",
+                                        },
+                                    },
+                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("minima"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                    Kind: sdk.String("consectetur"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                    NetworkURL: sdk.String("iste"),
+                                                    Port: sdk.String("temporibus"),
+                                                    Project: sdk.String("accusantium"),
+                                                    Region: sdk.String("rem"),
+                                                },
+                                            },
+                                        },
+                                        Kind: sdk.String("aut"),
+                                        Location: sdk.String("laudantium"),
+                                        Rrdatas: []string{
+                                            "mollitia",
+                                            "ab",
+                                        },
+                                        SignatureRrdatas: []string{
+                                            "non",
+                                            "voluptatem",
+                                            "dolor",
+                                        },
+                                    },
+                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("numquam"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                    Kind: sdk.String("explicabo"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                    NetworkURL: sdk.String("aut"),
+                                                    Port: sdk.String("dignissimos"),
+                                                    Project: sdk.String("dicta"),
+                                                    Region: sdk.String("maiores"),
+                                                },
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("natus"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                    Kind: sdk.String("voluptatibus"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                    NetworkURL: sdk.String("asperiores"),
+                                                    Port: sdk.String("aperiam"),
+                                                    Project: sdk.String("ea"),
+                                                    Region: sdk.String("quaerat"),
+                                                },
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("consequuntur"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                    Kind: sdk.String("officia"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                    NetworkURL: sdk.String("dignissimos"),
+                                                    Port: sdk.String("officia"),
+                                                    Project: sdk.String("asperiores"),
+                                                    Region: sdk.String("nemo"),
+                                                },
+                                            },
+                                        },
+                                        Kind: sdk.String("quae"),
+                                        Location: sdk.String("quaerat"),
+                                        Rrdatas: []string{
+                                            "quod",
+                                            "labore",
+                                            "ab",
+                                            "adipisci",
+                                        },
+                                        SignatureRrdatas: []string{
+                                            "id",
+                                            "suscipit",
+                                            "velit",
+                                        },
+                                    },
+                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
+                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("est"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                    Kind: sdk.String("totam"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                    NetworkURL: sdk.String("vel"),
+                                                    Port: sdk.String("ducimus"),
+                                                    Project: sdk.String("quos"),
+                                                    Region: sdk.String("vel"),
+                                                },
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("labore"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                    Kind: sdk.String("facilis"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                    NetworkURL: sdk.String("commodi"),
+                                                    Port: sdk.String("in"),
+                                                    Project: sdk.String("corporis"),
+                                                    Region: sdk.String("reiciendis"),
+                                                },
+                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                    IPAddress: sdk.String("assumenda"),
+                                                    IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumTCP.ToPointer(),
+                                                    Kind: sdk.String("recusandae"),
+                                                    LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                                    NetworkURL: sdk.String("aperiam"),
+                                                    Port: sdk.String("cum"),
+                                                    Project: sdk.String("consectetur"),
+                                                    Region: sdk.String("in"),
+                                                },
+                                            },
+                                        },
+                                        Kind: sdk.String("exercitationem"),
+                                        Location: sdk.String("earum"),
+                                        Rrdatas: []string{
+                                            "numquam",
+                                            "doloribus",
+                                            "suscipit",
+                                            "reiciendis",
+                                        },
+                                        SignatureRrdatas: []string{
+                                            "saepe",
+                                            "necessitatibus",
+                                            "dolore",
+                                        },
+                                    },
+                                },
+                                Kind: sdk.String("sunt"),
+                            },
+                            Kind: sdk.String("asperiores"),
+                            PrimaryTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                        IPAddress: sdk.String("non"),
+                                        IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                        Kind: sdk.String("beatae"),
+                                        LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumNone.ToPointer(),
+                                        NetworkURL: sdk.String("a"),
+                                        Port: sdk.String("debitis"),
+                                        Project: sdk.String("consectetur"),
+                                        Region: sdk.String("corporis"),
+                                    },
+                                },
+                            },
+                            TrickleTraffic: sdk.Float64(6897.68),
+                        },
+                        Wrr: &shared.RRSetRoutingPolicyWrrPolicy{
+                            Items: []shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
+                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
                                     HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
                                         InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
                                             shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "dolorum",
-                                                IPProtocol: "undefined",
-                                                Kind: "minus",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "blanditiis",
-                                                Port: "in",
-                                                Project: "dolore",
-                                                Region: "aliquam",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "officiis",
-                                                IPProtocol: "udp",
-                                                Kind: "ullam",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "cum",
-                                                Port: "blanditiis",
-                                                Project: "quas",
-                                                Region: "hic",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "nesciunt",
-                                                IPProtocol: "tcp",
-                                                Kind: "corrupti",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "totam",
-                                                Port: "hic",
-                                                Project: "exercitationem",
-                                                Region: "nobis",
+                                                IPAddress: sdk.String("voluptates"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                Kind: sdk.String("vitae"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("similique"),
+                                                Port: sdk.String("tempora"),
+                                                Project: sdk.String("aspernatur"),
+                                                Region: sdk.String("voluptas"),
                                             },
                                         },
                                     },
-                                    Kind: "sit",
-                                    Location: "rerum",
+                                    Kind: sdk.String("voluptas"),
                                     Rrdatas: []string{
+                                        "minima",
+                                        "nobis",
+                                    },
+                                    SignatureRrdatas: []string{
+                                        "adipisci",
+                                        "minus",
+                                        "dolores",
+                                    },
+                                    Weight: sdk.Float64(5039.34),
+                                },
+                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
+                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
+                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("dolore"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUndefined.ToPointer(),
+                                                Kind: sdk.String("officiis"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("ullam"),
+                                                Port: sdk.String("adipisci"),
+                                                Project: sdk.String("cum"),
+                                                Region: sdk.String("blanditiis"),
+                                            },
+                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
+                                                IPAddress: sdk.String("quas"),
+                                                IPProtocol: shared.RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP.ToPointer(),
+                                                Kind: sdk.String("nesciunt"),
+                                                LoadBalancerType: shared.RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4ilb.ToPointer(),
+                                                NetworkURL: sdk.String("corrupti"),
+                                                Port: sdk.String("pariatur"),
+                                                Project: sdk.String("totam"),
+                                                Region: sdk.String("hic"),
+                                            },
+                                        },
+                                    },
+                                    Kind: sdk.String("exercitationem"),
+                                    Rrdatas: []string{
+                                        "sit",
+                                        "rerum",
+                                        "sed",
                                         "reiciendis",
                                     },
                                     SignatureRrdatas: []string{
                                         "asperiores",
                                     },
+                                    Weight: sdk.Float64(7079.18),
                                 },
                             },
-                            Kind: "facilis",
-                        },
-                        Kind: "voluptate",
-                        PrimaryBackup: &shared.RRSetRoutingPolicyPrimaryBackupPolicy{
-                            BackupGeoTargets: &shared.RRSetRoutingPolicyGeoPolicy{
-                                EnableFencing: false,
-                                Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "iste",
-                                                    IPProtocol: "undefined",
-                                                    Kind: "laborum",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "in",
-                                                    Port: "commodi",
-                                                    Project: "quidem",
-                                                    Region: "explicabo",
-                                                },
-                                            },
-                                        },
-                                        Kind: "voluptas",
-                                        Location: "unde",
-                                        Rrdatas: []string{
-                                            "suscipit",
-                                        },
-                                        SignatureRrdatas: []string{
-                                            "debitis",
-                                            "illo",
-                                            "reiciendis",
-                                            "perferendis",
-                                        },
-                                    },
-                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "maiores",
-                                                    IPProtocol: "undefined",
-                                                    Kind: "sed",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "eius",
-                                                    Port: "necessitatibus",
-                                                    Project: "ipsum",
-                                                    Region: "ea",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "occaecati",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "voluptatibus",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "tempora",
-                                                    Port: "voluptate",
-                                                    Project: "reiciendis",
-                                                    Region: "ex",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "sit",
-                                                    IPProtocol: "undefined",
-                                                    Kind: "officiis",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "facilis",
-                                                    Port: "quaerat",
-                                                    Project: "incidunt",
-                                                    Region: "ipsam",
-                                                },
-                                            },
-                                        },
-                                        Kind: "debitis",
-                                        Location: "rem",
-                                        Rrdatas: []string{
-                                            "nobis",
-                                        },
-                                        SignatureRrdatas: []string{
-                                            "veniam",
-                                            "minima",
-                                            "recusandae",
-                                        },
-                                    },
-                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "nulla",
-                                                    IPProtocol: "undefined",
-                                                    Kind: "aperiam",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "numquam",
-                                                    Port: "veniam",
-                                                    Project: "in",
-                                                    Region: "officiis",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "beatae",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "exercitationem",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "cum",
-                                                    Port: "laboriosam",
-                                                    Project: "dolorum",
-                                                    Region: "voluptatum",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "error",
-                                                    IPProtocol: "udp",
-                                                    Kind: "expedita",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "neque",
-                                                    Port: "dolorum",
-                                                    Project: "nostrum",
-                                                    Region: "officia",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "dolorum",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "accusamus",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "atque",
-                                                    Port: "fugit",
-                                                    Project: "ut",
-                                                    Region: "fugiat",
-                                                },
-                                            },
-                                        },
-                                        Kind: "voluptatem",
-                                        Location: "culpa",
-                                        Rrdatas: []string{
-                                            "magnam",
-                                            "consequatur",
-                                            "esse",
-                                        },
-                                        SignatureRrdatas: []string{
-                                            "sit",
-                                            "voluptatum",
-                                        },
-                                    },
-                                },
-                                Kind: "quas",
-                            },
-                            Kind: "repudiandae",
-                            PrimaryTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "et",
-                                        IPProtocol: "tcp",
-                                        Kind: "ex",
-                                        LoadBalancerType: "none",
-                                        NetworkURL: "sit",
-                                        Port: "vel",
-                                        Project: "nostrum",
-                                        Region: "saepe",
-                                    },
-                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "error",
-                                        IPProtocol: "undefined",
-                                        Kind: "incidunt",
-                                        LoadBalancerType: "regionalL4ilb",
-                                        NetworkURL: "dolorem",
-                                        Port: "harum",
-                                        Project: "dicta",
-                                        Region: "architecto",
-                                    },
-                                },
-                            },
-                            TrickleTraffic: 5771.4,
-                        },
-                        Wrr: &shared.RRSetRoutingPolicyWrrPolicy{
-                            Items: []shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "atque",
-                                                IPProtocol: "udp",
-                                                Kind: "nam",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "laboriosam",
-                                                Port: "alias",
-                                                Project: "amet",
-                                                Region: "deserunt",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "voluptate",
-                                                IPProtocol: "tcp",
-                                                Kind: "reiciendis",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "repellendus",
-                                                Port: "delectus",
-                                                Project: "voluptates",
-                                                Region: "perferendis",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "est",
-                                                IPProtocol: "udp",
-                                                Kind: "reprehenderit",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "fuga",
-                                                Port: "praesentium",
-                                                Project: "mollitia",
-                                                Region: "veniam",
-                                            },
-                                        },
-                                    },
-                                    Kind: "voluptatem",
-                                    Rrdatas: []string{
-                                        "repudiandae",
-                                        "quasi",
-                                        "atque",
-                                        "reprehenderit",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "totam",
-                                        "suscipit",
-                                        "quidem",
-                                        "maxime",
-                                    },
-                                    Weight: 908.85,
-                                },
-                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "amet",
-                                                IPProtocol: "udp",
-                                                Kind: "ea",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "error",
-                                                Port: "officiis",
-                                                Project: "officiis",
-                                                Region: "accusamus",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "natus",
-                                                IPProtocol: "undefined",
-                                                Kind: "aspernatur",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "maiores",
-                                                Port: "corrupti",
-                                                Project: "at",
-                                                Region: "error",
-                                            },
-                                        },
-                                    },
-                                    Kind: "blanditiis",
-                                    Rrdatas: []string{
-                                        "repudiandae",
-                                        "atque",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "sunt",
-                                        "recusandae",
-                                        "dolorum",
-                                    },
-                                    Weight: 8298.98,
-                                },
-                            },
-                            Kind: "labore",
+                            Kind: sdk.String("voluptate"),
                         },
                     },
                     Rrdatas: []string{
-                        "doloremque",
-                        "repudiandae",
-                        "dicta",
-                        "accusantium",
+                        "ab",
+                        "iste",
+                        "dolore",
                     },
                     SignatureRrdatas: []string{
-                        "dolores",
+                        "sed",
+                        "in",
+                        "commodi",
                     },
-                    TTL: 316488,
-                    Type: "laboriosam",
-                },
-                shared.ResourceRecordSet{
-                    Kind: "velit",
-                    Name: "a",
-                    RoutingPolicy: &shared.RRSetRoutingPolicy{
-                        Geo: &shared.RRSetRoutingPolicyGeoPolicy{
-                            EnableFencing: false,
-                            Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "saepe",
-                                                IPProtocol: "undefined",
-                                                Kind: "occaecati",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "perspiciatis",
-                                                Port: "in",
-                                                Project: "adipisci",
-                                                Region: "eveniet",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "occaecati",
-                                                IPProtocol: "undefined",
-                                                Kind: "fugit",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "quis",
-                                                Port: "reprehenderit",
-                                                Project: "error",
-                                                Region: "illo",
-                                            },
-                                        },
-                                    },
-                                    Kind: "corporis",
-                                    Location: "quidem",
-                                    Rrdatas: []string{
-                                        "non",
-                                        "vero",
-                                        "doloremque",
-                                        "iure",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "totam",
-                                    },
-                                },
-                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "molestiae",
-                                                IPProtocol: "udp",
-                                                Kind: "qui",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "iure",
-                                                Port: "necessitatibus",
-                                                Project: "ratione",
-                                                Region: "laborum",
-                                            },
-                                        },
-                                    },
-                                    Kind: "distinctio",
-                                    Location: "voluptatum",
-                                    Rrdatas: []string{
-                                        "aliquam",
-                                        "ad",
-                                        "repellat",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "corporis",
-                                    },
-                                },
-                                shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "nihil",
-                                                IPProtocol: "tcp",
-                                                Kind: "voluptas",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "maiores",
-                                                Port: "reiciendis",
-                                                Project: "dolores",
-                                                Region: "id",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "minima",
-                                                IPProtocol: "undefined",
-                                                Kind: "dolorum",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "quae",
-                                                Port: "recusandae",
-                                                Project: "omnis",
-                                                Region: "quaerat",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "molestiae",
-                                                IPProtocol: "tcp",
-                                                Kind: "ut",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "adipisci",
-                                                Port: "debitis",
-                                                Project: "laudantium",
-                                                Region: "eum",
-                                            },
-                                        },
-                                    },
-                                    Kind: "nemo",
-                                    Location: "recusandae",
-                                    Rrdatas: []string{
-                                        "provident",
-                                        "quis",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "reiciendis",
-                                        "provident",
-                                    },
-                                },
-                            },
-                            Kind: "aspernatur",
-                        },
-                        Kind: "ullam",
-                        PrimaryBackup: &shared.RRSetRoutingPolicyPrimaryBackupPolicy{
-                            BackupGeoTargets: &shared.RRSetRoutingPolicyGeoPolicy{
-                                EnableFencing: false,
-                                Items: []shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                    shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem{
-                                        HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                            InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "nostrum",
-                                                    IPProtocol: "tcp",
-                                                    Kind: "provident",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "animi",
-                                                    Port: "ex",
-                                                    Project: "aliquid",
-                                                    Region: "accusantium",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "repellat",
-                                                    IPProtocol: "udp",
-                                                    Kind: "ullam",
-                                                    LoadBalancerType: "none",
-                                                    NetworkURL: "nam",
-                                                    Port: "earum",
-                                                    Project: "officia",
-                                                    Region: "laborum",
-                                                },
-                                                shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                    IPAddress: "placeat",
-                                                    IPProtocol: "undefined",
-                                                    Kind: "voluptatibus",
-                                                    LoadBalancerType: "regionalL4ilb",
-                                                    NetworkURL: "officiis",
-                                                    Port: "sapiente",
-                                                    Project: "cumque",
-                                                    Region: "vitae",
-                                                },
-                                            },
-                                        },
-                                        Kind: "rerum",
-                                        Location: "tempora",
-                                        Rrdatas: []string{
-                                            "inventore",
-                                            "fugit",
-                                        },
-                                        SignatureRrdatas: []string{
-                                            "quae",
-                                            "perferendis",
-                                            "velit",
-                                            "aspernatur",
-                                        },
-                                    },
-                                },
-                                Kind: "eum",
-                            },
-                            Kind: "eius",
-                            PrimaryTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "at",
-                                        IPProtocol: "udp",
-                                        Kind: "eos",
-                                        LoadBalancerType: "regionalL4ilb",
-                                        NetworkURL: "eum",
-                                        Port: "dicta",
-                                        Project: "minima",
-                                        Region: "beatae",
-                                    },
-                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "cupiditate",
-                                        IPProtocol: "tcp",
-                                        Kind: "earum",
-                                        LoadBalancerType: "regionalL4ilb",
-                                        NetworkURL: "hic",
-                                        Port: "illum",
-                                        Project: "eaque",
-                                        Region: "earum",
-                                    },
-                                    shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                        IPAddress: "perspiciatis",
-                                        IPProtocol: "udp",
-                                        Kind: "debitis",
-                                        LoadBalancerType: "none",
-                                        NetworkURL: "porro",
-                                        Port: "suscipit",
-                                        Project: "dolorem",
-                                        Region: "fugit",
-                                    },
-                                },
-                            },
-                            TrickleTraffic: 7649.95,
-                        },
-                        Wrr: &shared.RRSetRoutingPolicyWrrPolicy{
-                            Items: []shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "animi",
-                                                IPProtocol: "udp",
-                                                Kind: "nulla",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "quasi",
-                                                Port: "et",
-                                                Project: "ducimus",
-                                                Region: "natus",
-                                            },
-                                        },
-                                    },
-                                    Kind: "occaecati",
-                                    Rrdatas: []string{
-                                        "adipisci",
-                                        "quasi",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "doloribus",
-                                    },
-                                    Weight: 8595.81,
-                                },
-                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "ipsa",
-                                                IPProtocol: "undefined",
-                                                Kind: "nihil",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "dicta",
-                                                Port: "iusto",
-                                                Project: "esse",
-                                                Region: "praesentium",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "maiores",
-                                                IPProtocol: "udp",
-                                                Kind: "vel",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "fugiat",
-                                                Port: "doloremque",
-                                                Project: "dicta",
-                                                Region: "odio",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "tempora",
-                                                IPProtocol: "tcp",
-                                                Kind: "ex",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "aliquid",
-                                                Port: "ipsa",
-                                                Project: "laborum",
-                                                Region: "sunt",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "nostrum",
-                                                IPProtocol: "udp",
-                                                Kind: "expedita",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "officia",
-                                                Port: "suscipit",
-                                                Project: "aliquid",
-                                                Region: "perferendis",
-                                            },
-                                        },
-                                    },
-                                    Kind: "eum",
-                                    Rrdatas: []string{
-                                        "iste",
-                                        "id",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "error",
-                                    },
-                                    Weight: 8224.07,
-                                },
-                                shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem{
-                                    HealthCheckedTargets: &shared.RRSetRoutingPolicyHealthCheckTargets{
-                                        InternalLoadBalancers: []shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "mollitia",
-                                                IPProtocol: "udp",
-                                                Kind: "libero",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "deleniti",
-                                                Port: "enim",
-                                                Project: "vitae",
-                                                Region: "repellendus",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "ex",
-                                                IPProtocol: "udp",
-                                                Kind: "ex",
-                                                LoadBalancerType: "none",
-                                                NetworkURL: "ad",
-                                                Port: "expedita",
-                                                Project: "voluptatem",
-                                                Region: "molestias",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "cum",
-                                                IPProtocol: "tcp",
-                                                Kind: "beatae",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "omnis",
-                                                Port: "veritatis",
-                                                Project: "rerum",
-                                                Region: "est",
-                                            },
-                                            shared.RRSetRoutingPolicyLoadBalancerTarget{
-                                                IPAddress: "culpa",
-                                                IPProtocol: "undefined",
-                                                Kind: "sapiente",
-                                                LoadBalancerType: "regionalL4ilb",
-                                                NetworkURL: "architecto",
-                                                Port: "fuga",
-                                                Project: "pariatur",
-                                                Region: "debitis",
-                                            },
-                                        },
-                                    },
-                                    Kind: "voluptatem",
-                                    Rrdatas: []string{
-                                        "deleniti",
-                                    },
-                                    SignatureRrdatas: []string{
-                                        "ex",
-                                        "sapiente",
-                                        "rem",
-                                        "minus",
-                                    },
-                                    Weight: 3651,
-                                },
-                            },
-                            Kind: "asperiores",
-                        },
-                    },
-                    Rrdatas: []string{
-                        "ullam",
-                    },
-                    SignatureRrdatas: []string{
-                        "illum",
-                    },
-                    TTL: 518150,
-                    Type: "impedit",
+                    TTL: sdk.Int(696077),
+                    Type: sdk.String("explicabo"),
                 },
             },
-            ID: "quibusdam",
-            IsServing: false,
-            Kind: "nam",
-            StartTime: "ipsam",
-            Status: "done",
+            ID: sdk.String("6916fe1f-08f4-4294-a369-8f447f603e8b"),
+            IsServing: sdk.Bool(false),
+            Kind: sdk.String("quaerat"),
+            StartTime: sdk.String("incidunt"),
+            Status: shared.ChangeStatusEnumPending.ToPointer(),
         },
-        AccessToken: "dolor",
-        Alt: "json",
-        Callback: "inventore",
-        ClientOperationID: "deleniti",
-        Fields: "veritatis",
-        Key: "tempora",
-        ManagedZone: "dolor",
-        OauthToken: "consequatur",
-        PrettyPrint: false,
-        Project: "architecto",
-        QuotaUser: "sit",
-        UploadType: "modi",
-        UploadProtocol: "fugit",
-    }
-
-    ctx := context.Background()
-    res, err := s.Changes.DNSChangesCreate(ctx, req, operations.DNSChangesCreateSecurity{
+        AccessToken: sdk.String("debitis"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("sit"),
+        ClientOperationID: sdk.String("nobis"),
+        Fields: sdk.String("error"),
+        Key: sdk.String("veniam"),
+        ManagedZone: "minima",
+        OauthToken: sdk.String("recusandae"),
+        PrettyPrint: sdk.Bool(false),
+        Project: "reiciendis",
+        QuotaUser: sdk.String("nulla"),
+        UploadType: sdk.String("magni"),
+        UploadProtocol: sdk.String("aperiam"),
+    }, operations.DNSChangesCreateSecurity{
         Option1: &operations.DNSChangesCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -2072,72 +1447,72 @@ func main() {
 ## Available Resources and Operations
 
 
-### Changes
+### [Changes](docs/changes/README.md)
 
-* `DNSChangesCreate` - Atomically updates the ResourceRecordSet collection.
-* `DNSChangesGet` - Fetches the representation of an existing Change.
-* `DNSChangesList` - Enumerates Changes to a ResourceRecordSet collection.
+* [DNSChangesCreate](docs/changes/README.md#dnschangescreate) - Atomically updates the ResourceRecordSet collection.
+* [DNSChangesGet](docs/changes/README.md#dnschangesget) - Fetches the representation of an existing Change.
+* [DNSChangesList](docs/changes/README.md#dnschangeslist) - Enumerates Changes to a ResourceRecordSet collection.
 
-### DNSKeys
+### [DNSKeys](docs/dnskeys/README.md)
 
-* `DNSDNSKeysGet` - Fetches the representation of an existing DnsKey.
-* `DNSDNSKeysList` - Enumerates DnsKeys to a ResourceRecordSet collection.
+* [DNSDNSKeysGet](docs/dnskeys/README.md#dnsdnskeysget) - Fetches the representation of an existing DnsKey.
+* [DNSDNSKeysList](docs/dnskeys/README.md#dnsdnskeyslist) - Enumerates DnsKeys to a ResourceRecordSet collection.
 
-### ManagedZoneOperations
+### [ManagedZoneOperations](docs/managedzoneoperations/README.md)
 
-* `DNSManagedZoneOperationsGet` - Fetches the representation of an existing Operation.
-* `DNSManagedZoneOperationsList` - Enumerates Operations for the given ManagedZone.
+* [DNSManagedZoneOperationsGet](docs/managedzoneoperations/README.md#dnsmanagedzoneoperationsget) - Fetches the representation of an existing Operation.
+* [DNSManagedZoneOperationsList](docs/managedzoneoperations/README.md#dnsmanagedzoneoperationslist) - Enumerates Operations for the given ManagedZone.
 
-### ManagedZones
+### [ManagedZones](docs/managedzones/README.md)
 
-* `DNSManagedZonesCreate` - Creates a new ManagedZone.
-* `DNSManagedZonesDelete` - Deletes a previously created ManagedZone.
-* `DNSManagedZonesGet` - Fetches the representation of an existing ManagedZone.
-* `DNSManagedZonesGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `DNSManagedZonesList` - Enumerates ManagedZones that have been created but not yet deleted.
-* `DNSManagedZonesPatch` - Applies a partial update to an existing ManagedZone.
-* `DNSManagedZonesSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-* `DNSManagedZonesTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this returns an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-* `DNSManagedZonesUpdate` - Updates an existing ManagedZone.
+* [DNSManagedZonesCreate](docs/managedzones/README.md#dnsmanagedzonescreate) - Creates a new ManagedZone.
+* [DNSManagedZonesDelete](docs/managedzones/README.md#dnsmanagedzonesdelete) - Deletes a previously created ManagedZone.
+* [DNSManagedZonesGet](docs/managedzones/README.md#dnsmanagedzonesget) - Fetches the representation of an existing ManagedZone.
+* [DNSManagedZonesGetIamPolicy](docs/managedzones/README.md#dnsmanagedzonesgetiampolicy) - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* [DNSManagedZonesList](docs/managedzones/README.md#dnsmanagedzoneslist) - Enumerates ManagedZones that have been created but not yet deleted.
+* [DNSManagedZonesPatch](docs/managedzones/README.md#dnsmanagedzonespatch) - Applies a partial update to an existing ManagedZone.
+* [DNSManagedZonesSetIamPolicy](docs/managedzones/README.md#dnsmanagedzonessetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+* [DNSManagedZonesTestIamPermissions](docs/managedzones/README.md#dnsmanagedzonestestiampermissions) - Returns permissions that a caller has on the specified resource. If the resource does not exist, this returns an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+* [DNSManagedZonesUpdate](docs/managedzones/README.md#dnsmanagedzonesupdate) - Updates an existing ManagedZone.
 
-### Policies
+### [Policies](docs/policies/README.md)
 
-* `DNSPoliciesCreate` - Creates a new Policy.
-* `DNSPoliciesDelete` - Deletes a previously created Policy. Fails if the policy is still being referenced by a network.
-* `DNSPoliciesGet` - Fetches the representation of an existing Policy.
-* `DNSPoliciesList` - Enumerates all Policies associated with a project.
-* `DNSPoliciesPatch` - Applies a partial update to an existing Policy.
-* `DNSPoliciesUpdate` - Updates an existing Policy.
+* [DNSPoliciesCreate](docs/policies/README.md#dnspoliciescreate) - Creates a new Policy.
+* [DNSPoliciesDelete](docs/policies/README.md#dnspoliciesdelete) - Deletes a previously created Policy. Fails if the policy is still being referenced by a network.
+* [DNSPoliciesGet](docs/policies/README.md#dnspoliciesget) - Fetches the representation of an existing Policy.
+* [DNSPoliciesList](docs/policies/README.md#dnspolicieslist) - Enumerates all Policies associated with a project.
+* [DNSPoliciesPatch](docs/policies/README.md#dnspoliciespatch) - Applies a partial update to an existing Policy.
+* [DNSPoliciesUpdate](docs/policies/README.md#dnspoliciesupdate) - Updates an existing Policy.
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `DNSProjectsGet` - Fetches the representation of an existing Project.
+* [DNSProjectsGet](docs/projects/README.md#dnsprojectsget) - Fetches the representation of an existing Project.
 
-### ResourceRecordSets
+### [ResourceRecordSets](docs/resourcerecordsets/README.md)
 
-* `DNSResourceRecordSetsCreate` - Creates a new ResourceRecordSet.
-* `DNSResourceRecordSetsDelete` - Deletes a previously created ResourceRecordSet.
-* `DNSResourceRecordSetsGet` - Fetches the representation of an existing ResourceRecordSet.
-* `DNSResourceRecordSetsList` - Enumerates ResourceRecordSets that you have created but not yet deleted.
-* `DNSResourceRecordSetsPatch` - Applies a partial update to an existing ResourceRecordSet.
+* [DNSResourceRecordSetsCreate](docs/resourcerecordsets/README.md#dnsresourcerecordsetscreate) - Creates a new ResourceRecordSet.
+* [DNSResourceRecordSetsDelete](docs/resourcerecordsets/README.md#dnsresourcerecordsetsdelete) - Deletes a previously created ResourceRecordSet.
+* [DNSResourceRecordSetsGet](docs/resourcerecordsets/README.md#dnsresourcerecordsetsget) - Fetches the representation of an existing ResourceRecordSet.
+* [DNSResourceRecordSetsList](docs/resourcerecordsets/README.md#dnsresourcerecordsetslist) - Enumerates ResourceRecordSets that you have created but not yet deleted.
+* [DNSResourceRecordSetsPatch](docs/resourcerecordsets/README.md#dnsresourcerecordsetspatch) - Applies a partial update to an existing ResourceRecordSet.
 
-### ResponsePolicies
+### [ResponsePolicies](docs/responsepolicies/README.md)
 
-* `DNSResponsePoliciesCreate` - Creates a new Response Policy
-* `DNSResponsePoliciesDelete` - Deletes a previously created Response Policy. Fails if the response policy is non-empty or still being referenced by a network.
-* `DNSResponsePoliciesGet` - Fetches the representation of an existing Response Policy.
-* `DNSResponsePoliciesList` - Enumerates all Response Policies associated with a project.
-* `DNSResponsePoliciesPatch` - Applies a partial update to an existing Response Policy.
-* `DNSResponsePoliciesUpdate` - Updates an existing Response Policy.
+* [DNSResponsePoliciesCreate](docs/responsepolicies/README.md#dnsresponsepoliciescreate) - Creates a new Response Policy
+* [DNSResponsePoliciesDelete](docs/responsepolicies/README.md#dnsresponsepoliciesdelete) - Deletes a previously created Response Policy. Fails if the response policy is non-empty or still being referenced by a network.
+* [DNSResponsePoliciesGet](docs/responsepolicies/README.md#dnsresponsepoliciesget) - Fetches the representation of an existing Response Policy.
+* [DNSResponsePoliciesList](docs/responsepolicies/README.md#dnsresponsepolicieslist) - Enumerates all Response Policies associated with a project.
+* [DNSResponsePoliciesPatch](docs/responsepolicies/README.md#dnsresponsepoliciespatch) - Applies a partial update to an existing Response Policy.
+* [DNSResponsePoliciesUpdate](docs/responsepolicies/README.md#dnsresponsepoliciesupdate) - Updates an existing Response Policy.
 
-### ResponsePolicyRules
+### [ResponsePolicyRules](docs/responsepolicyrules/README.md)
 
-* `DNSResponsePolicyRulesCreate` - Creates a new Response Policy Rule.
-* `DNSResponsePolicyRulesDelete` - Deletes a previously created Response Policy Rule.
-* `DNSResponsePolicyRulesGet` - Fetches the representation of an existing Response Policy Rule.
-* `DNSResponsePolicyRulesList` - Enumerates all Response Policy Rules associated with a project.
-* `DNSResponsePolicyRulesPatch` - Applies a partial update to an existing Response Policy Rule.
-* `DNSResponsePolicyRulesUpdate` - Updates an existing Response Policy Rule.
+* [DNSResponsePolicyRulesCreate](docs/responsepolicyrules/README.md#dnsresponsepolicyrulescreate) - Creates a new Response Policy Rule.
+* [DNSResponsePolicyRulesDelete](docs/responsepolicyrules/README.md#dnsresponsepolicyrulesdelete) - Deletes a previously created Response Policy Rule.
+* [DNSResponsePolicyRulesGet](docs/responsepolicyrules/README.md#dnsresponsepolicyrulesget) - Fetches the representation of an existing Response Policy Rule.
+* [DNSResponsePolicyRulesList](docs/responsepolicyrules/README.md#dnsresponsepolicyruleslist) - Enumerates all Response Policy Rules associated with a project.
+* [DNSResponsePolicyRulesPatch](docs/responsepolicyrules/README.md#dnsresponsepolicyrulespatch) - Applies a partial update to an existing Response Policy Rule.
+* [DNSResponsePolicyRulesUpdate](docs/responsepolicyrules/README.md#dnsresponsepolicyrulesupdate) - Updates an existing Response Policy Rule.
 <!-- End SDK Available Operations -->
 
 ### Maturity

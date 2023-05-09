@@ -19,12 +19,16 @@ const (
 	RunsForRunExpandEnumNone              RunsForRunExpandEnum = "None"
 )
 
+func (e RunsForRunExpandEnum) ToPointer() *RunsForRunExpandEnum {
+	return &e
+}
+
 func (e *RunsForRunExpandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All":
 		fallthrough
 	case "VehicleDescriptor":
@@ -32,10 +36,10 @@ func (e *RunsForRunExpandEnum) UnmarshalJSON(data []byte) error {
 	case "VehiclePosition":
 		fallthrough
 	case "None":
-		*e = RunsForRunExpandEnum(s)
+		*e = RunsForRunExpandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunsForRunExpandEnum: %s", s)
+		return fmt.Errorf("invalid value for RunsForRunExpandEnum: %v", v)
 	}
 }
 

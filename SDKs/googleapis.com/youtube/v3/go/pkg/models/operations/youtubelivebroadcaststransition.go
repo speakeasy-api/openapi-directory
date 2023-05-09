@@ -34,12 +34,16 @@ const (
 	YoutubeLiveBroadcastsTransitionBroadcastStatusEnumComplete          YoutubeLiveBroadcastsTransitionBroadcastStatusEnum = "complete"
 )
 
+func (e YoutubeLiveBroadcastsTransitionBroadcastStatusEnum) ToPointer() *YoutubeLiveBroadcastsTransitionBroadcastStatusEnum {
+	return &e
+}
+
 func (e *YoutubeLiveBroadcastsTransitionBroadcastStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "statusUnspecified":
 		fallthrough
 	case "testing":
@@ -47,10 +51,10 @@ func (e *YoutubeLiveBroadcastsTransitionBroadcastStatusEnum) UnmarshalJSON(data 
 	case "live":
 		fallthrough
 	case "complete":
-		*e = YoutubeLiveBroadcastsTransitionBroadcastStatusEnum(s)
+		*e = YoutubeLiveBroadcastsTransitionBroadcastStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeLiveBroadcastsTransitionBroadcastStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeLiveBroadcastsTransitionBroadcastStatusEnum: %v", v)
 	}
 }
 

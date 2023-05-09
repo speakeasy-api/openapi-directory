@@ -16,17 +16,21 @@ const (
 	MergeBranchesByThreeWayXAmzTargetEnumCodeCommit20150413MergeBranchesByThreeWay MergeBranchesByThreeWayXAmzTargetEnum = "CodeCommit_20150413.MergeBranchesByThreeWay"
 )
 
+func (e MergeBranchesByThreeWayXAmzTargetEnum) ToPointer() *MergeBranchesByThreeWayXAmzTargetEnum {
+	return &e
+}
+
 func (e *MergeBranchesByThreeWayXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.MergeBranchesByThreeWay":
-		*e = MergeBranchesByThreeWayXAmzTargetEnum(s)
+		*e = MergeBranchesByThreeWayXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MergeBranchesByThreeWayXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for MergeBranchesByThreeWayXAmzTargetEnum: %v", v)
 	}
 }
 

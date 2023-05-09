@@ -38,7 +38,10 @@ func newWebhooksCompanyLevel(defaultClient, securityClient HTTPClient, serverURL
 // * Management API—Webhooks read and write
 func (s *webhooksCompanyLevel) DeleteCompaniesCompanyIDWebhooksWebhookID(ctx context.Context, request operations.DeleteCompaniesCompanyIDWebhooksWebhookIDRequest, security operations.DeleteCompaniesCompanyIDWebhooksWebhookIDSecurity) (*operations.DeleteCompaniesCompanyIDWebhooksWebhookIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *webhooksCompanyLevel) DeleteCompaniesCompanyIDWebhooksWebhookID(ctx con
 // * Management API—Webhooks read and write
 func (s *webhooksCompanyLevel) GetCompaniesCompanyIDWebhooks(ctx context.Context, request operations.GetCompaniesCompanyIDWebhooksRequest, security operations.GetCompaniesCompanyIDWebhooksSecurity) (*operations.GetCompaniesCompanyIDWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -167,7 +173,10 @@ func (s *webhooksCompanyLevel) GetCompaniesCompanyIDWebhooks(ctx context.Context
 // * Management API—Webhooks read and write
 func (s *webhooksCompanyLevel) GetCompaniesCompanyIDWebhooksWebhookID(ctx context.Context, request operations.GetCompaniesCompanyIDWebhooksWebhookIDRequest, security operations.GetCompaniesCompanyIDWebhooksWebhookIDSecurity) (*operations.GetCompaniesCompanyIDWebhooksWebhookIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +242,10 @@ func (s *webhooksCompanyLevel) GetCompaniesCompanyIDWebhooksWebhookID(ctx contex
 // * Management API—Webhooks read and write
 func (s *webhooksCompanyLevel) PatchCompaniesCompanyIDWebhooksWebhookID(ctx context.Context, request operations.PatchCompaniesCompanyIDWebhooksWebhookIDRequest, security operations.PatchCompaniesCompanyIDWebhooksWebhookIDSecurity) (*operations.PatchCompaniesCompanyIDWebhooksWebhookIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCompanyWebhookRequest", "json")
 	if err != nil {
@@ -306,7 +318,10 @@ func (s *webhooksCompanyLevel) PatchCompaniesCompanyIDWebhooksWebhookID(ctx cont
 // * Management API—Webhooks read and write
 func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooks(ctx context.Context, request operations.PostCompaniesCompanyIDWebhooksRequest, security operations.PostCompaniesCompanyIDWebhooksSecurity) (*operations.PostCompaniesCompanyIDWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCompanyWebhookRequest", "json")
 	if err != nil {
@@ -379,7 +394,10 @@ func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooks(ctx context.Contex
 // * Management API—Webhooks read and write
 func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooksWebhookIDGenerateHmac(ctx context.Context, request operations.PostCompaniesCompanyIDWebhooksWebhookIDGenerateHmacRequest, security operations.PostCompaniesCompanyIDWebhooksWebhookIDGenerateHmacSecurity) (*operations.PostCompaniesCompanyIDWebhooksWebhookIDGenerateHmacResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}/generateHmac", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}/generateHmac", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -451,7 +469,10 @@ func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooksWebhookIDGenerateHm
 // * Management API—Webhooks read and write
 func (s *webhooksCompanyLevel) PostCompaniesCompanyIDWebhooksWebhookIDTest(ctx context.Context, request operations.PostCompaniesCompanyIDWebhooksWebhookIDTestRequest, security operations.PostCompaniesCompanyIDWebhooksWebhookIDTestSecurity) (*operations.PostCompaniesCompanyIDWebhooksWebhookIDTestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}/test", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/webhooks/{webhookId}/test", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestCompanyWebhookRequest", "json")
 	if err != nil {

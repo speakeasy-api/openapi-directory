@@ -20,12 +20,16 @@ const (
 	ClusterStateChangeReasonCodeEnumAllStepsCompleted    ClusterStateChangeReasonCodeEnum = "ALL_STEPS_COMPLETED"
 )
 
+func (e ClusterStateChangeReasonCodeEnum) ToPointer() *ClusterStateChangeReasonCodeEnum {
+	return &e
+}
+
 func (e *ClusterStateChangeReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_ERROR":
 		fallthrough
 	case "VALIDATION_ERROR":
@@ -41,9 +45,9 @@ func (e *ClusterStateChangeReasonCodeEnum) UnmarshalJSON(data []byte) error {
 	case "STEP_FAILURE":
 		fallthrough
 	case "ALL_STEPS_COMPLETED":
-		*e = ClusterStateChangeReasonCodeEnum(s)
+		*e = ClusterStateChangeReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterStateChangeReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterStateChangeReasonCodeEnum: %v", v)
 	}
 }

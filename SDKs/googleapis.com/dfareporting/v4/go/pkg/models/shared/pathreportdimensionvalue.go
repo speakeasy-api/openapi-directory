@@ -17,12 +17,16 @@ const (
 	PathReportDimensionValueMatchTypeEnumWildcardExpression PathReportDimensionValueMatchTypeEnum = "WILDCARD_EXPRESSION"
 )
 
+func (e PathReportDimensionValueMatchTypeEnum) ToPointer() *PathReportDimensionValueMatchTypeEnum {
+	return &e
+}
+
 func (e *PathReportDimensionValueMatchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXACT":
 		fallthrough
 	case "BEGINS_WITH":
@@ -30,10 +34,10 @@ func (e *PathReportDimensionValueMatchTypeEnum) UnmarshalJSON(data []byte) error
 	case "CONTAINS":
 		fallthrough
 	case "WILDCARD_EXPRESSION":
-		*e = PathReportDimensionValueMatchTypeEnum(s)
+		*e = PathReportDimensionValueMatchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PathReportDimensionValueMatchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PathReportDimensionValueMatchTypeEnum: %v", v)
 	}
 }
 

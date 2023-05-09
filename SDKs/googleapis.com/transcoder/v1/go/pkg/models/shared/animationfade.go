@@ -16,21 +16,25 @@ const (
 	AnimationFadeFadeTypeEnumFadeOut             AnimationFadeFadeTypeEnum = "FADE_OUT"
 )
 
+func (e AnimationFadeFadeTypeEnum) ToPointer() *AnimationFadeFadeTypeEnum {
+	return &e
+}
+
 func (e *AnimationFadeFadeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FADE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FADE_IN":
 		fallthrough
 	case "FADE_OUT":
-		*e = AnimationFadeFadeTypeEnum(s)
+		*e = AnimationFadeFadeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnimationFadeFadeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnimationFadeFadeTypeEnum: %v", v)
 	}
 }
 

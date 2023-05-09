@@ -36,7 +36,10 @@ func newFolders(defaultClient, securityClient HTTPClient, serverURL, language, s
 // List Folders by path
 func (s *folders) FolderListForPath(ctx context.Context, request operations.FolderListForPathRequest) (*operations.FolderListForPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/folders/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/folders/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -104,7 +107,10 @@ func (s *folders) FolderListForPath(ctx context.Context, request operations.Fold
 // Create folder
 func (s *folders) PostFoldersPath(ctx context.Context, request operations.PostFoldersPathRequest) (*operations.PostFoldersPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/folders/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/folders/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

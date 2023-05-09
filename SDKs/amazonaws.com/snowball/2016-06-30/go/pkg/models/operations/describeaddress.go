@@ -16,17 +16,21 @@ const (
 	DescribeAddressXAmzTargetEnumAwsieSnowballJobManagementServiceDescribeAddress DescribeAddressXAmzTargetEnum = "AWSIESnowballJobManagementService.DescribeAddress"
 )
 
+func (e DescribeAddressXAmzTargetEnum) ToPointer() *DescribeAddressXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAddressXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSIESnowballJobManagementService.DescribeAddress":
-		*e = DescribeAddressXAmzTargetEnum(s)
+		*e = DescribeAddressXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAddressXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAddressXAmzTargetEnum: %v", v)
 	}
 }
 

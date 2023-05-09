@@ -16,17 +16,21 @@ const (
 	TagCertificateAuthorityXAmzTargetEnumAcmPrivateCaTagCertificateAuthority TagCertificateAuthorityXAmzTargetEnum = "ACMPrivateCA.TagCertificateAuthority"
 )
 
+func (e TagCertificateAuthorityXAmzTargetEnum) ToPointer() *TagCertificateAuthorityXAmzTargetEnum {
+	return &e
+}
+
 func (e *TagCertificateAuthorityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACMPrivateCA.TagCertificateAuthority":
-		*e = TagCertificateAuthorityXAmzTargetEnum(s)
+		*e = TagCertificateAuthorityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagCertificateAuthorityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TagCertificateAuthorityXAmzTargetEnum: %v", v)
 	}
 }
 

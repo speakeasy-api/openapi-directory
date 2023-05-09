@@ -35,7 +35,10 @@ func newFastSendDeviceValues(defaultClient, securityClient HTTPClient, serverURL
 //	Don't use this call to force a device to send the data every second for a longer time.
 func (s *fastSendDeviceValues) FastSendDeviceValuesGet(ctx context.Context, request operations.FastSendDeviceValuesGetRequest) (*operations.FastSendDeviceValuesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/FastSendDeviceValues/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/FastSendDeviceValues/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -33,12 +33,16 @@ const (
 	RunQueryRequestDataRangeEnumLast60Days        RunQueryRequestDataRangeEnum = "LAST_60_DAYS"
 )
 
+func (e RunQueryRequestDataRangeEnum) ToPointer() *RunQueryRequestDataRangeEnum {
+	return &e
+}
+
 func (e *RunQueryRequestDataRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOM_DATES":
 		fallthrough
 	case "CURRENT_DAY":
@@ -78,10 +82,10 @@ func (e *RunQueryRequestDataRangeEnum) UnmarshalJSON(data []byte) error {
 	case "TYPE_NOT_SUPPORTED":
 		fallthrough
 	case "LAST_60_DAYS":
-		*e = RunQueryRequestDataRangeEnum(s)
+		*e = RunQueryRequestDataRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunQueryRequestDataRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for RunQueryRequestDataRangeEnum: %v", v)
 	}
 }
 

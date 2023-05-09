@@ -16,17 +16,21 @@ const (
 	ListGlobalTablesXAmzTargetEnumDynamoDb20120810ListGlobalTables ListGlobalTablesXAmzTargetEnum = "DynamoDB_20120810.ListGlobalTables"
 )
 
+func (e ListGlobalTablesXAmzTargetEnum) ToPointer() *ListGlobalTablesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListGlobalTablesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.ListGlobalTables":
-		*e = ListGlobalTablesXAmzTargetEnum(s)
+		*e = ListGlobalTablesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListGlobalTablesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListGlobalTablesXAmzTargetEnum: %v", v)
 	}
 }
 

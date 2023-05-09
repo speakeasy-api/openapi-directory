@@ -15,17 +15,21 @@ const (
 	POSTDecreaseNodeGroupsInGlobalReplicationGroupActionEnumDecreaseNodeGroupsInGlobalReplicationGroup POSTDecreaseNodeGroupsInGlobalReplicationGroupActionEnum = "DecreaseNodeGroupsInGlobalReplicationGroup"
 )
 
+func (e POSTDecreaseNodeGroupsInGlobalReplicationGroupActionEnum) ToPointer() *POSTDecreaseNodeGroupsInGlobalReplicationGroupActionEnum {
+	return &e
+}
+
 func (e *POSTDecreaseNodeGroupsInGlobalReplicationGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DecreaseNodeGroupsInGlobalReplicationGroup":
-		*e = POSTDecreaseNodeGroupsInGlobalReplicationGroupActionEnum(s)
+		*e = POSTDecreaseNodeGroupsInGlobalReplicationGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDecreaseNodeGroupsInGlobalReplicationGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDecreaseNodeGroupsInGlobalReplicationGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDecreaseNodeGroupsInGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 POSTDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum = "2015-02-02"
 )
 
+func (e POSTDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum) ToPointer() *POSTDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum(s)
+		*e = POSTDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum: %v", v)
 	}
 }
 

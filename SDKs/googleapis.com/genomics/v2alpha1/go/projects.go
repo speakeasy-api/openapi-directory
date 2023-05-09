@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GenomicsProjectsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. Clients may use Operations.GetOperation or Operations.ListOperations to check whether the cancellation succeeded or the operation completed despite cancellation. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `genomics.operations.cancel`
 func (s *projects) GenomicsProjectsOperationsCancel(ctx context.Context, request operations.GenomicsProjectsOperationsCancelRequest, security operations.GenomicsProjectsOperationsCancelSecurity) (*operations.GenomicsProjectsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) GenomicsProjectsOperationsCancel(ctx context.Context, request
 // GenomicsProjectsOperationsList - Lists operations that match the specified filter in the request. Authorization requires the following [Google IAM](https://cloud.google.com/iam) permission: * `genomics.operations.list`
 func (s *projects) GenomicsProjectsOperationsList(ctx context.Context, request operations.GenomicsProjectsOperationsListRequest, security operations.GenomicsProjectsOperationsListSecurity) (*operations.GenomicsProjectsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) GenomicsProjectsOperationsList(ctx context.Context, request o
 // GenomicsProjectsWorkersCheckIn - The worker uses this method to retrieve the assigned operation and provide periodic status updates.
 func (s *projects) GenomicsProjectsWorkersCheckIn(ctx context.Context, request operations.GenomicsProjectsWorkersCheckInRequest, security operations.GenomicsProjectsWorkersCheckInSecurity) (*operations.GenomicsProjectsWorkersCheckInResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{id}:checkIn", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{id}:checkIn", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckInRequest", "json")
 	if err != nil {

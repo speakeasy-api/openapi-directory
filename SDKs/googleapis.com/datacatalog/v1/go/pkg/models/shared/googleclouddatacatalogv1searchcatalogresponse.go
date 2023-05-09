@@ -8,6 +8,8 @@ type GoogleCloudDatacatalogV1SearchCatalogResponse struct {
 	NextPageToken *string `json:"nextPageToken,omitempty"`
 	// Search results.
 	Results []GoogleCloudDatacatalogV1SearchCatalogResult `json:"results,omitempty"`
+	// The approximate total number of entries matched by the query.
+	TotalSize *int `json:"totalSize,omitempty"`
 	// Unreachable locations. Search results don't include data from those locations. To get additional information on an error, repeat the search request and restrict it to specific locations by setting the `SearchCatalogRequest.scope.restricted_locations` parameter.
 	Unreachable []string `json:"unreachable,omitempty"`
 }

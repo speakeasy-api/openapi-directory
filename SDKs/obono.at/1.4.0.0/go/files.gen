@@ -7,6 +7,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -46,4 +47,10 @@ pkg/models/shared/belege.go
 pkg/models/shared/monatsbeleg.go
 pkg/models/shared/registrierkasse.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/auth/README.md
+docs/beleg/README.md
+docs/export/README.md
+docs/monatsbelege/README.md
+docs/registrierkasse/README.md
 USAGE.md

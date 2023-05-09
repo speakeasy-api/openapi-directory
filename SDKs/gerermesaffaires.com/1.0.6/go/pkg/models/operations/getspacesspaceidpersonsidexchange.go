@@ -23,21 +23,25 @@ const (
 	GetSpacesSpaceIDPersonsIDExchange200ApplicationJSONLevelEnumPublic       GetSpacesSpaceIDPersonsIDExchange200ApplicationJSONLevelEnum = "public"
 )
 
+func (e GetSpacesSpaceIDPersonsIDExchange200ApplicationJSONLevelEnum) ToPointer() *GetSpacesSpaceIDPersonsIDExchange200ApplicationJSONLevelEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDPersonsIDExchange200ApplicationJSONLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = GetSpacesSpaceIDPersonsIDExchange200ApplicationJSONLevelEnum(s)
+		*e = GetSpacesSpaceIDPersonsIDExchange200ApplicationJSONLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDPersonsIDExchange200ApplicationJSONLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDPersonsIDExchange200ApplicationJSONLevelEnum: %v", v)
 	}
 }
 

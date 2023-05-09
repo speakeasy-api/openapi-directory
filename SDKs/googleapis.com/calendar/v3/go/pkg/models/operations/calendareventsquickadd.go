@@ -33,21 +33,25 @@ const (
 	CalendarEventsQuickAddSendUpdatesEnumNone         CalendarEventsQuickAddSendUpdatesEnum = "none"
 )
 
+func (e CalendarEventsQuickAddSendUpdatesEnum) ToPointer() *CalendarEventsQuickAddSendUpdatesEnum {
+	return &e
+}
+
 func (e *CalendarEventsQuickAddSendUpdatesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "externalOnly":
 		fallthrough
 	case "none":
-		*e = CalendarEventsQuickAddSendUpdatesEnum(s)
+		*e = CalendarEventsQuickAddSendUpdatesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalendarEventsQuickAddSendUpdatesEnum: %s", s)
+		return fmt.Errorf("invalid value for CalendarEventsQuickAddSendUpdatesEnum: %v", v)
 	}
 }
 

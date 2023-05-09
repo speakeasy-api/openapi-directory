@@ -15,17 +15,21 @@ const (
 	GETCreateDBInstanceActionEnumCreateDbInstance GETCreateDBInstanceActionEnum = "CreateDBInstance"
 )
 
+func (e GETCreateDBInstanceActionEnum) ToPointer() *GETCreateDBInstanceActionEnum {
+	return &e
+}
+
 func (e *GETCreateDBInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateDBInstance":
-		*e = GETCreateDBInstanceActionEnum(s)
+		*e = GETCreateDBInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateDBInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateDBInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateDBInstanceVersionEnumTwoThousandAndThirteen0212 GETCreateDBInstanceVersionEnum = "2013-02-12"
 )
 
+func (e GETCreateDBInstanceVersionEnum) ToPointer() *GETCreateDBInstanceVersionEnum {
+	return &e
+}
+
 func (e *GETCreateDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETCreateDBInstanceVersionEnum(s)
+		*e = GETCreateDBInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateDBInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateDBInstanceVersionEnum: %v", v)
 	}
 }
 

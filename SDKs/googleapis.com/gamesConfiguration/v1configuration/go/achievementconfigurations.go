@@ -34,7 +34,10 @@ func newAchievementConfigurations(defaultClient, securityClient HTTPClient, serv
 // GamesConfigurationAchievementConfigurationsDelete - Delete the achievement configuration with the given ID.
 func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsDelete(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsDeleteRequest, security operations.GamesConfigurationAchievementConfigurationsDeleteSecurity) (*operations.GamesConfigurationAchievementConfigurationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/achievements/{achievementId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/achievements/{achievementId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsD
 // GamesConfigurationAchievementConfigurationsGet - Retrieves the metadata of the achievement configuration with the given ID.
 func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsGet(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsGetRequest, security operations.GamesConfigurationAchievementConfigurationsGetSecurity) (*operations.GamesConfigurationAchievementConfigurationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/achievements/{achievementId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/achievements/{achievementId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsG
 // GamesConfigurationAchievementConfigurationsInsert - Insert a new achievement configuration in this application.
 func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsInsert(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsInsertRequest, security operations.GamesConfigurationAchievementConfigurationsInsertSecurity) (*operations.GamesConfigurationAchievementConfigurationsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/achievements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/achievements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AchievementConfiguration", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsI
 // GamesConfigurationAchievementConfigurationsList - Returns a list of the achievement configurations in this application.
 func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsList(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsListRequest, security operations.GamesConfigurationAchievementConfigurationsListSecurity) (*operations.GamesConfigurationAchievementConfigurationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/achievements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/achievements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsL
 // GamesConfigurationAchievementConfigurationsUpdate - Update the metadata of the achievement configuration with the given ID.
 func (s *achievementConfigurations) GamesConfigurationAchievementConfigurationsUpdate(ctx context.Context, request operations.GamesConfigurationAchievementConfigurationsUpdateRequest, security operations.GamesConfigurationAchievementConfigurationsUpdateSecurity) (*operations.GamesConfigurationAchievementConfigurationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/achievements/{achievementId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/achievements/{achievementId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AchievementConfiguration", "json")
 	if err != nil {

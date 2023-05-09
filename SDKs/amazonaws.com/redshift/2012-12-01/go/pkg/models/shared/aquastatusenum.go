@@ -15,20 +15,24 @@ const (
 	AquaStatusEnumApplying AquaStatusEnum = "applying"
 )
 
+func (e AquaStatusEnum) ToPointer() *AquaStatusEnum {
+	return &e
+}
+
 func (e *AquaStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
 		fallthrough
 	case "applying":
-		*e = AquaStatusEnum(s)
+		*e = AquaStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AquaStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AquaStatusEnum: %v", v)
 	}
 }

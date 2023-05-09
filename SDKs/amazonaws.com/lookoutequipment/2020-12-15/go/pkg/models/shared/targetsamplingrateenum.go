@@ -23,12 +23,16 @@ const (
 	TargetSamplingRateEnumPt1H  TargetSamplingRateEnum = "PT1H"
 )
 
+func (e TargetSamplingRateEnum) ToPointer() *TargetSamplingRateEnum {
+	return &e
+}
+
 func (e *TargetSamplingRateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PT1S":
 		fallthrough
 	case "PT5S":
@@ -50,9 +54,9 @@ func (e *TargetSamplingRateEnum) UnmarshalJSON(data []byte) error {
 	case "PT30M":
 		fallthrough
 	case "PT1H":
-		*e = TargetSamplingRateEnum(s)
+		*e = TargetSamplingRateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetSamplingRateEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetSamplingRateEnum: %v", v)
 	}
 }

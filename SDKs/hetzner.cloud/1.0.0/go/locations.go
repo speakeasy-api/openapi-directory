@@ -85,7 +85,10 @@ func (s *locations) GetLocations(ctx context.Context, request operations.GetLoca
 // Returns a specific Location object.
 func (s *locations) GetLocationsID(ctx context.Context, request operations.GetLocationsIDRequest) (*operations.GetLocationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/locations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

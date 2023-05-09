@@ -16,17 +16,21 @@ const (
 	UpdateDirectoryConfigXAmzTargetEnumPhotonAdminProxyServiceUpdateDirectoryConfig UpdateDirectoryConfigXAmzTargetEnum = "PhotonAdminProxyService.UpdateDirectoryConfig"
 )
 
+func (e UpdateDirectoryConfigXAmzTargetEnum) ToPointer() *UpdateDirectoryConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDirectoryConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.UpdateDirectoryConfig":
-		*e = UpdateDirectoryConfigXAmzTargetEnum(s)
+		*e = UpdateDirectoryConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDirectoryConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDirectoryConfigXAmzTargetEnum: %v", v)
 	}
 }
 

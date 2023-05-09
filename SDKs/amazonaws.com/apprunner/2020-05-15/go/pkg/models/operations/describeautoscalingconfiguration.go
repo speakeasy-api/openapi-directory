@@ -16,17 +16,21 @@ const (
 	DescribeAutoScalingConfigurationXAmzTargetEnumAppRunnerDescribeAutoScalingConfiguration DescribeAutoScalingConfigurationXAmzTargetEnum = "AppRunner.DescribeAutoScalingConfiguration"
 )
 
+func (e DescribeAutoScalingConfigurationXAmzTargetEnum) ToPointer() *DescribeAutoScalingConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAutoScalingConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppRunner.DescribeAutoScalingConfiguration":
-		*e = DescribeAutoScalingConfigurationXAmzTargetEnum(s)
+		*e = DescribeAutoScalingConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAutoScalingConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAutoScalingConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

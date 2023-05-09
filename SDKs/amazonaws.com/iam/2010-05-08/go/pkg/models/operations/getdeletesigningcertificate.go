@@ -15,17 +15,21 @@ const (
 	GETDeleteSigningCertificateActionEnumDeleteSigningCertificate GETDeleteSigningCertificateActionEnum = "DeleteSigningCertificate"
 )
 
+func (e GETDeleteSigningCertificateActionEnum) ToPointer() *GETDeleteSigningCertificateActionEnum {
+	return &e
+}
+
 func (e *GETDeleteSigningCertificateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteSigningCertificate":
-		*e = GETDeleteSigningCertificateActionEnum(s)
+		*e = GETDeleteSigningCertificateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteSigningCertificateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteSigningCertificateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteSigningCertificateVersionEnumTwoThousandAndTen0508 GETDeleteSigningCertificateVersionEnum = "2010-05-08"
 )
 
+func (e GETDeleteSigningCertificateVersionEnum) ToPointer() *GETDeleteSigningCertificateVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteSigningCertificateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETDeleteSigningCertificateVersionEnum(s)
+		*e = GETDeleteSigningCertificateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteSigningCertificateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteSigningCertificateVersionEnum: %v", v)
 	}
 }
 

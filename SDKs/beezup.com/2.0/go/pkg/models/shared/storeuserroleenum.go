@@ -17,18 +17,22 @@ const (
 	StoreUserRoleEnumUser  StoreUserRoleEnum = "User"
 )
 
+func (e StoreUserRoleEnum) ToPointer() *StoreUserRoleEnum {
+	return &e
+}
+
 func (e *StoreUserRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Owner":
 		fallthrough
 	case "User":
-		*e = StoreUserRoleEnum(s)
+		*e = StoreUserRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreUserRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreUserRoleEnum: %v", v)
 	}
 }

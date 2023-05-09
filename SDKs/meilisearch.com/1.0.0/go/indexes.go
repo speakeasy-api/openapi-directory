@@ -229,9 +229,9 @@ func (s *indexes) SwapIndexes(ctx context.Context, request []operations.SwapInde
 	return res, nil
 }
 
-// UdpateIndex - Udpate index
+// UpdateIndex - Update index
 // Can only change the document identifier if it has not already been added before.
-func (s *indexes) UdpateIndex(ctx context.Context, request operations.UdpateIndexRequestBody) (*operations.UdpateIndexResponse, error) {
+func (s *indexes) UpdateIndex(ctx context.Context, request operations.UpdateIndexRequestBody) (*operations.UpdateIndexResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/indexes/books"
 
@@ -260,7 +260,7 @@ func (s *indexes) UdpateIndex(ctx context.Context, request operations.UdpateInde
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.UdpateIndexResponse{
+	res := &operations.UpdateIndexResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

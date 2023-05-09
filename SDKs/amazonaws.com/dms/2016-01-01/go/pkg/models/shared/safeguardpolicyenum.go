@@ -15,20 +15,24 @@ const (
 	SafeguardPolicyEnumSharedAutomaticTruncation       SafeguardPolicyEnum = "shared-automatic-truncation"
 )
 
+func (e SafeguardPolicyEnum) ToPointer() *SafeguardPolicyEnum {
+	return &e
+}
+
 func (e *SafeguardPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rely-on-sql-server-replication-agent":
 		fallthrough
 	case "exclusive-automatic-truncation":
 		fallthrough
 	case "shared-automatic-truncation":
-		*e = SafeguardPolicyEnum(s)
+		*e = SafeguardPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SafeguardPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for SafeguardPolicyEnum: %v", v)
 	}
 }

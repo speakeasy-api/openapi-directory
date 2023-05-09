@@ -15,20 +15,24 @@ const (
 	MediaFileDeliveryEnumDownload    MediaFileDeliveryEnum = "download"
 )
 
+func (e MediaFileDeliveryEnum) ToPointer() *MediaFileDeliveryEnum {
+	return &e
+}
+
 func (e *MediaFileDeliveryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stream":
 		fallthrough
 	case "progressive":
 		fallthrough
 	case "download":
-		*e = MediaFileDeliveryEnum(s)
+		*e = MediaFileDeliveryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaFileDeliveryEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaFileDeliveryEnum: %v", v)
 	}
 }

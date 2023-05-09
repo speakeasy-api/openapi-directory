@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,14 +17,12 @@ func main() {
         }),
     )
 
-    req := operations.GetrulesforapricetableRequest{
+    ctx := context.Background()
+    res, err := s.PriceTables.Getrulesforapricetable(ctx, operations.GetrulesforapricetableRequest{
         Accept: "application/json",
         ContentType: "corrupti",
         PriceTableID: "b2c",
-    }
-
-    ctx := context.Background()
-    res, err := s.PriceTables.Getrulesforapricetable(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

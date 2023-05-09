@@ -18,12 +18,16 @@ const (
 	UnaryFilterOpEnumIsNotNull           UnaryFilterOpEnum = "IS_NOT_NULL"
 )
 
+func (e UnaryFilterOpEnum) ToPointer() *UnaryFilterOpEnum {
+	return &e
+}
+
 func (e *UnaryFilterOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATOR_UNSPECIFIED":
 		fallthrough
 	case "IS_NAN":
@@ -33,10 +37,10 @@ func (e *UnaryFilterOpEnum) UnmarshalJSON(data []byte) error {
 	case "IS_NOT_NAN":
 		fallthrough
 	case "IS_NOT_NULL":
-		*e = UnaryFilterOpEnum(s)
+		*e = UnaryFilterOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UnaryFilterOpEnum: %s", s)
+		return fmt.Errorf("invalid value for UnaryFilterOpEnum: %v", v)
 	}
 }
 

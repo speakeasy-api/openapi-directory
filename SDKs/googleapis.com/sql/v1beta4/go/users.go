@@ -34,7 +34,10 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // SQLUsersDelete - Deletes a user from a Cloud SQL instance.
 func (s *users) SQLUsersDelete(ctx context.Context, request operations.SQLUsersDeleteRequest, security operations.SQLUsersDeleteSecurity) (*operations.SQLUsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *users) SQLUsersDelete(ctx context.Context, request operations.SQLUsersD
 // SQLUsersGet - Retrieves a resource containing information about a user.
 func (s *users) SQLUsersGet(ctx context.Context, request operations.SQLUsersGetRequest, security operations.SQLUsersGetSecurity) (*operations.SQLUsersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/users/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/users/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *users) SQLUsersGet(ctx context.Context, request operations.SQLUsersGetR
 // SQLUsersInsert - Creates a new user in a Cloud SQL instance.
 func (s *users) SQLUsersInsert(ctx context.Context, request operations.SQLUsersInsertRequest, security operations.SQLUsersInsertSecurity) (*operations.SQLUsersInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "User", "json")
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *users) SQLUsersInsert(ctx context.Context, request operations.SQLUsersI
 // SQLUsersList - Lists users in the specified Cloud SQL instance.
 func (s *users) SQLUsersList(ctx context.Context, request operations.SQLUsersListRequest, security operations.SQLUsersListSecurity) (*operations.SQLUsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *users) SQLUsersList(ctx context.Context, request operations.SQLUsersLis
 // SQLUsersUpdate - Updates an existing user in a Cloud SQL instance.
 func (s *users) SQLUsersUpdate(ctx context.Context, request operations.SQLUsersUpdateRequest, security operations.SQLUsersUpdateSecurity) (*operations.SQLUsersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "User", "json")
 	if err != nil {

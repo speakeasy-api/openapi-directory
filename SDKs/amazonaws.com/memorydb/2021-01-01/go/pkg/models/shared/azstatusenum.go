@@ -14,18 +14,22 @@ const (
 	AZStatusEnumMultiaz  AZStatusEnum = "multiaz"
 )
 
+func (e AZStatusEnum) ToPointer() *AZStatusEnum {
+	return &e
+}
+
 func (e *AZStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "singleaz":
 		fallthrough
 	case "multiaz":
-		*e = AZStatusEnum(s)
+		*e = AZStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AZStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AZStatusEnum: %v", v)
 	}
 }

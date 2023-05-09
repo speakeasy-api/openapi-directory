@@ -26,12 +26,16 @@ const (
 	BulkEmailStatusEnumFailed                        BulkEmailStatusEnum = "FAILED"
 )
 
+func (e BulkEmailStatusEnum) ToPointer() *BulkEmailStatusEnum {
+	return &e
+}
+
 func (e *BulkEmailStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESS":
 		fallthrough
 	case "MESSAGE_REJECTED":
@@ -59,9 +63,9 @@ func (e *BulkEmailStatusEnum) UnmarshalJSON(data []byte) error {
 	case "TRANSIENT_FAILURE":
 		fallthrough
 	case "FAILED":
-		*e = BulkEmailStatusEnum(s)
+		*e = BulkEmailStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BulkEmailStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BulkEmailStatusEnum: %v", v)
 	}
 }

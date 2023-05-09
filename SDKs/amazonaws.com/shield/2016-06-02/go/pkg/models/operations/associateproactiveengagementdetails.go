@@ -16,17 +16,21 @@ const (
 	AssociateProactiveEngagementDetailsXAmzTargetEnumAwsShield20160616AssociateProactiveEngagementDetails AssociateProactiveEngagementDetailsXAmzTargetEnum = "AWSShield_20160616.AssociateProactiveEngagementDetails"
 )
 
+func (e AssociateProactiveEngagementDetailsXAmzTargetEnum) ToPointer() *AssociateProactiveEngagementDetailsXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateProactiveEngagementDetailsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.AssociateProactiveEngagementDetails":
-		*e = AssociateProactiveEngagementDetailsXAmzTargetEnum(s)
+		*e = AssociateProactiveEngagementDetailsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateProactiveEngagementDetailsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateProactiveEngagementDetailsXAmzTargetEnum: %v", v)
 	}
 }
 

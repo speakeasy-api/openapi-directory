@@ -19,12 +19,16 @@ const (
 	ImageStatusEnumDeleteFailed ImageStatusEnum = "DELETE_FAILED"
 )
 
+func (e ImageStatusEnum) ToPointer() *ImageStatusEnum {
+	return &e
+}
+
 func (e *ImageStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATED":
@@ -38,9 +42,9 @@ func (e *ImageStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "DELETE_FAILED":
-		*e = ImageStatusEnum(s)
+		*e = ImageStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageStatusEnum: %v", v)
 	}
 }

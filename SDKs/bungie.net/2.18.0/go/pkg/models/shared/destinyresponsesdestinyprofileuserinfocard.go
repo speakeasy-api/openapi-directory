@@ -20,53 +20,57 @@ type DestinyResponsesDestinyProfileUserInfoCardPlatformSilver struct {
 //
 //	For the time being, we will not return this information for any membership that is in a cross save pairing. The gist is that, once the pairing occurs, we do not currently have a consistent way to get that information for the profile's original Platform, and thus gameVersions would be too inconsistent (based on the last platform they happened to play on) for the info to be useful.
 //	If we ever can get this data, this field will be deprecated and replaced with data on the DestinyLinkedProfileResponse itself, with game versions per linked Platform. But since we can't get that, we have this as a stop-gap measure for getting the data in the only situation that we currently need it.
-type DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum string
+type DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum int
 
 const (
-	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumZero                     DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = "0"
-	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumOne                      DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = "1"
-	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumTwo                      DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = "2"
-	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumFour                     DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = "4"
-	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumEight                    DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = "8"
-	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumSixteen                  DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = "16"
-	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumThirtyTwo                DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = "32"
-	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumSixtyFour                DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = "64"
-	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumOneHundredAndTwentyEight DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = "128"
-	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumTwoHundredAndFiftySix    DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = "256"
-	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumFiveHundredAndTwelve     DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = "512"
+	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumZero                     DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = 0
+	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumOne                      DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = 1
+	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumTwo                      DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = 2
+	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumFour                     DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = 4
+	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumEight                    DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = 8
+	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumSixteen                  DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = 16
+	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumThirtyTwo                DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = 32
+	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumSixtyFour                DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = 64
+	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumOneHundredAndTwentyEight DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = 128
+	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumTwoHundredAndFiftySix    DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = 256
+	DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnumFiveHundredAndTwelve     DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum = 512
 )
 
+func (e DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum) ToPointer() *DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum {
+	return &e
+}
+
 func (e *DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "8":
+	case 8:
 		fallthrough
-	case "16":
+	case 16:
 		fallthrough
-	case "32":
+	case 32:
 		fallthrough
-	case "64":
+	case 64:
 		fallthrough
-	case "128":
+	case 128:
 		fallthrough
-	case "256":
+	case 256:
 		fallthrough
-	case "512":
-		*e = DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum(s)
+	case 512:
+		*e = DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinyResponsesDestinyProfileUserInfoCardUnpairedGameVersionsEnum: %v", v)
 	}
 }
 

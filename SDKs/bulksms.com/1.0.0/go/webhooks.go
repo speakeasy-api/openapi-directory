@@ -35,7 +35,10 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DeleteWebhooksID - Delete a webhook
 func (s *webhooks) DeleteWebhooksID(ctx context.Context, request operations.DeleteWebhooksIDRequest) (*operations.DeleteWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +82,7 @@ func (s *webhooks) DeleteWebhooksID(ctx context.Context, request operations.Dele
 
 // GetWebhooks - List webhooks
 // Contains a list of your webhooks
-func (s *webhooks) GetWebhooks(ctx context.Context) (*operations.GetWebhooksResponse, error) {
+func (s *webhooks) GetWebhooks(ctx context.Context, security operations.GetWebhooksSecurity) (*operations.GetWebhooksResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/webhooks"
 
@@ -88,7 +91,7 @@ func (s *webhooks) GetWebhooks(ctx context.Context) (*operations.GetWebhooksResp
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.securityClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -125,7 +128,10 @@ func (s *webhooks) GetWebhooks(ctx context.Context) (*operations.GetWebhooksResp
 // GetWebhooksID - Read a webhook
 func (s *webhooks) GetWebhooksID(ctx context.Context, request operations.GetWebhooksIDRequest) (*operations.GetWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -298,7 +304,10 @@ func (s *webhooks) PostWebhooks(ctx context.Context, request shared.WebhookEntry
 // PostWebhooksID - Update a webhook
 func (s *webhooks) PostWebhooksID(ctx context.Context, request operations.PostWebhooksIDRequest) (*operations.PostWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebhookEntry", "json")
 	if err != nil {

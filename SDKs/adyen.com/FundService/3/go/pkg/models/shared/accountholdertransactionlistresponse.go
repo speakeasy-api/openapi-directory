@@ -5,7 +5,7 @@ package shared
 // AccountHolderTransactionListResponse - OK - the request has succeeded.
 type AccountHolderTransactionListResponse struct {
 	// A list of the transactions.
-	AccountTransactionLists []AccountTransactionList `json:"accountTransactionLists,omitempty"`
+	AccountTransactionLists []AccountTransactionListWrapper `json:"accountTransactionLists,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
 	PspReference *string `json:"pspReference,omitempty"`
 	// The result code.

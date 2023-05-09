@@ -16,12 +16,16 @@ const (
 	CustomMailFromStatusEnumTemporaryFailure CustomMailFromStatusEnum = "TemporaryFailure"
 )
 
+func (e CustomMailFromStatusEnum) ToPointer() *CustomMailFromStatusEnum {
+	return &e
+}
+
 func (e *CustomMailFromStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "Success":
@@ -29,9 +33,9 @@ func (e *CustomMailFromStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Failed":
 		fallthrough
 	case "TemporaryFailure":
-		*e = CustomMailFromStatusEnum(s)
+		*e = CustomMailFromStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomMailFromStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomMailFromStatusEnum: %v", v)
 	}
 }

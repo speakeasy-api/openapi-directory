@@ -16,17 +16,21 @@ const (
 	DeleteStreamProcessorXAmzTargetEnumRekognitionServiceDeleteStreamProcessor DeleteStreamProcessorXAmzTargetEnum = "RekognitionService.DeleteStreamProcessor"
 )
 
+func (e DeleteStreamProcessorXAmzTargetEnum) ToPointer() *DeleteStreamProcessorXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteStreamProcessorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.DeleteStreamProcessor":
-		*e = DeleteStreamProcessorXAmzTargetEnum(s)
+		*e = DeleteStreamProcessorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteStreamProcessorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteStreamProcessorXAmzTargetEnum: %v", v)
 	}
 }
 

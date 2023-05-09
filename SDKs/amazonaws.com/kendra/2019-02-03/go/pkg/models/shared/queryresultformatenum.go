@@ -14,18 +14,22 @@ const (
 	QueryResultFormatEnumText  QueryResultFormatEnum = "TEXT"
 )
 
+func (e QueryResultFormatEnum) ToPointer() *QueryResultFormatEnum {
+	return &e
+}
+
 func (e *QueryResultFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TABLE":
 		fallthrough
 	case "TEXT":
-		*e = QueryResultFormatEnum(s)
+		*e = QueryResultFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryResultFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryResultFormatEnum: %v", v)
 	}
 }

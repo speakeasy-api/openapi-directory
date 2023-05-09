@@ -2,7 +2,7 @@
 
 package shared
 
-// ExportS3DataInput - <p/>
+// ExportS3DataInput - The structure containing the Amazon S3 path to export the Earth Observation job output.
 type ExportS3DataInput struct {
 	KmsKeyID *string `json:"KmsKeyId,omitempty"`
 	S3URI    string  `json:"S3Uri"`

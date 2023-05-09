@@ -14,18 +14,22 @@ const (
 	SortDirectionTypeEnumAscending  SortDirectionTypeEnum = "ASCENDING"
 )
 
+func (e SortDirectionTypeEnum) ToPointer() *SortDirectionTypeEnum {
+	return &e
+}
+
 func (e *SortDirectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DESCENDING":
 		fallthrough
 	case "ASCENDING":
-		*e = SortDirectionTypeEnum(s)
+		*e = SortDirectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortDirectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SortDirectionTypeEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	ImportErrorTypeEnumProcessingError ImportErrorTypeEnum = "PROCESSING_ERROR"
 )
 
+func (e ImportErrorTypeEnum) ToPointer() *ImportErrorTypeEnum {
+	return &e
+}
+
 func (e *ImportErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALIDATION_ERROR":
 		fallthrough
 	case "PROCESSING_ERROR":
-		*e = ImportErrorTypeEnum(s)
+		*e = ImportErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportErrorTypeEnum: %v", v)
 	}
 }

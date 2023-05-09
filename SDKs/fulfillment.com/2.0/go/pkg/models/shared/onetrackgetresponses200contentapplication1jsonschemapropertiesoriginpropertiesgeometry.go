@@ -89,12 +89,16 @@ const (
 	OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnumMultiPolygon    OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum = "MultiPolygon"
 )
 
+func (e OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum) ToPointer() *OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum {
+	return &e
+}
+
 func (e *OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Point":
 		fallthrough
 	case "LineString":
@@ -106,10 +110,10 @@ func (e *OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPro
 	case "MultiLineString":
 		fallthrough
 	case "MultiPolygon":
-		*e = OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum(s)
+		*e = OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum: %v", v)
 	}
 }
 

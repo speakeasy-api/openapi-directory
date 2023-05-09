@@ -15,17 +15,21 @@ const (
 	GETListInstanceProfilesForRoleActionEnumListInstanceProfilesForRole GETListInstanceProfilesForRoleActionEnum = "ListInstanceProfilesForRole"
 )
 
+func (e GETListInstanceProfilesForRoleActionEnum) ToPointer() *GETListInstanceProfilesForRoleActionEnum {
+	return &e
+}
+
 func (e *GETListInstanceProfilesForRoleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListInstanceProfilesForRole":
-		*e = GETListInstanceProfilesForRoleActionEnum(s)
+		*e = GETListInstanceProfilesForRoleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListInstanceProfilesForRoleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListInstanceProfilesForRoleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListInstanceProfilesForRoleVersionEnumTwoThousandAndTen0508 GETListInstanceProfilesForRoleVersionEnum = "2010-05-08"
 )
 
+func (e GETListInstanceProfilesForRoleVersionEnum) ToPointer() *GETListInstanceProfilesForRoleVersionEnum {
+	return &e
+}
+
 func (e *GETListInstanceProfilesForRoleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETListInstanceProfilesForRoleVersionEnum(s)
+		*e = GETListInstanceProfilesForRoleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListInstanceProfilesForRoleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListInstanceProfilesForRoleVersionEnum: %v", v)
 	}
 }
 

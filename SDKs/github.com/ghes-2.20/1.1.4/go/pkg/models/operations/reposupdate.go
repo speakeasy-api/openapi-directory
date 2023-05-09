@@ -19,12 +19,16 @@ const (
 	ReposUpdateRequestBodyVisibilityEnumInternal   ReposUpdateRequestBodyVisibilityEnum = "internal"
 )
 
+func (e ReposUpdateRequestBodyVisibilityEnum) ToPointer() *ReposUpdateRequestBodyVisibilityEnum {
+	return &e
+}
+
 func (e *ReposUpdateRequestBodyVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
@@ -32,10 +36,10 @@ func (e *ReposUpdateRequestBodyVisibilityEnum) UnmarshalJSON(data []byte) error 
 	case "visibility":
 		fallthrough
 	case "internal":
-		*e = ReposUpdateRequestBodyVisibilityEnum(s)
+		*e = ReposUpdateRequestBodyVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateRequestBodyVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateRequestBodyVisibilityEnum: %v", v)
 	}
 }
 

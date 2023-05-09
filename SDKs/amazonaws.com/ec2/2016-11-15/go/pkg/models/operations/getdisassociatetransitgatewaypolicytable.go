@@ -15,17 +15,21 @@ const (
 	GETDisassociateTransitGatewayPolicyTableActionEnumDisassociateTransitGatewayPolicyTable GETDisassociateTransitGatewayPolicyTableActionEnum = "DisassociateTransitGatewayPolicyTable"
 )
 
+func (e GETDisassociateTransitGatewayPolicyTableActionEnum) ToPointer() *GETDisassociateTransitGatewayPolicyTableActionEnum {
+	return &e
+}
+
 func (e *GETDisassociateTransitGatewayPolicyTableActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateTransitGatewayPolicyTable":
-		*e = GETDisassociateTransitGatewayPolicyTableActionEnum(s)
+		*e = GETDisassociateTransitGatewayPolicyTableActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateTransitGatewayPolicyTableActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateTransitGatewayPolicyTableActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisassociateTransitGatewayPolicyTableVersionEnumTwoThousandAndSixteen1115 GETDisassociateTransitGatewayPolicyTableVersionEnum = "2016-11-15"
 )
 
+func (e GETDisassociateTransitGatewayPolicyTableVersionEnum) ToPointer() *GETDisassociateTransitGatewayPolicyTableVersionEnum {
+	return &e
+}
+
 func (e *GETDisassociateTransitGatewayPolicyTableVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDisassociateTransitGatewayPolicyTableVersionEnum(s)
+		*e = GETDisassociateTransitGatewayPolicyTableVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateTransitGatewayPolicyTableVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateTransitGatewayPolicyTableVersionEnum: %v", v)
 	}
 }
 

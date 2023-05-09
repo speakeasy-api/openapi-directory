@@ -45,7 +45,10 @@ func newRateCalendar(defaultClient, securityClient HTTPClient, serverURL, langua
 // This endpoint returns a singular available rate plan.
 func (s *rateCalendar) ListRatePlanForHotelForRatePlanID(ctx context.Context, request operations.ListRatePlanForHotelForRatePlanIDRequest) (*operations.ListRatePlanForHotelForRatePlanIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hotels/{hotelId}/rate-plans/{ratePlanId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hotels/{hotelId}/rate-plans/{ratePlanId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +132,10 @@ func (s *rateCalendar) ListRatePlanForHotelForRatePlanID(ctx context.Context, re
 // This endpoint allows you to query rate prices for all future dates in one go, making it a great choice to feed availability information and prices into your own system or displaying a rate calender to guide your guests to gain an overview of future availability and prices.
 func (s *rateCalendar) ListRatePlansForHotel(ctx context.Context, request operations.ListRatePlansForHotelRequest) (*operations.ListRatePlansForHotelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hotels/{hotelId}/rate-plans", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hotels/{hotelId}/rate-plans", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

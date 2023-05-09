@@ -13,21 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/messages-olympu
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/callbacks"
+	"net/http"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SendMessageRequestBody{}
-
     ctx := context.Background()
-    res, err := s.SendMessage(ctx, req, operations.SendMessageSecurity{
+    res, err := s.SendMessage(ctx, operations.SendMessageRequestBody{}, operations.SendMessageSecurity{
         BasicAuth: &shared.SchemeBasicAuth{
             Password: "YOUR_PASSWORD_HERE",
             Username: "YOUR_USERNAME_HERE",
@@ -47,9 +47,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `SendMessage` - Send a message to the given channel.
+* [SendMessage](docs/sdk/README.md#sendmessage) - Send a message to the given channel.
 <!-- End SDK Available Operations -->
 
 ### Maturity

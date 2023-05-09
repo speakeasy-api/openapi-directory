@@ -72,12 +72,16 @@ const (
 	PostCompile200ApplicationJSONExplanationOpEnumRedo  PostCompile200ApplicationJSONExplanationOpEnum = "redo"
 )
 
+func (e PostCompile200ApplicationJSONExplanationOpEnum) ToPointer() *PostCompile200ApplicationJSONExplanationOpEnum {
+	return &e
+}
+
 func (e *PostCompile200ApplicationJSONExplanationOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enter":
 		fallthrough
 	case "exit":
@@ -87,10 +91,10 @@ func (e *PostCompile200ApplicationJSONExplanationOpEnum) UnmarshalJSON(data []by
 	case "fail":
 		fallthrough
 	case "redo":
-		*e = PostCompile200ApplicationJSONExplanationOpEnum(s)
+		*e = PostCompile200ApplicationJSONExplanationOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostCompile200ApplicationJSONExplanationOpEnum: %s", s)
+		return fmt.Errorf("invalid value for PostCompile200ApplicationJSONExplanationOpEnum: %v", v)
 	}
 }
 
@@ -103,21 +107,25 @@ const (
 	PostCompile200ApplicationJSONExplanationTypeEnumBody PostCompile200ApplicationJSONExplanationTypeEnum = "body"
 )
 
+func (e PostCompile200ApplicationJSONExplanationTypeEnum) ToPointer() *PostCompile200ApplicationJSONExplanationTypeEnum {
+	return &e
+}
+
 func (e *PostCompile200ApplicationJSONExplanationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "expr":
 		fallthrough
 	case "rule":
 		fallthrough
 	case "body":
-		*e = PostCompile200ApplicationJSONExplanationTypeEnum(s)
+		*e = PostCompile200ApplicationJSONExplanationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostCompile200ApplicationJSONExplanationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostCompile200ApplicationJSONExplanationTypeEnum: %v", v)
 	}
 }
 
@@ -200,19 +208,23 @@ const (
 	PostCompile200ApplicationJSONResultAstPackagePathTypeEnumPackage PostCompile200ApplicationJSONResultAstPackagePathTypeEnum = "package"
 )
 
+func (e PostCompile200ApplicationJSONResultAstPackagePathTypeEnum) ToPointer() *PostCompile200ApplicationJSONResultAstPackagePathTypeEnum {
+	return &e
+}
+
 func (e *PostCompile200ApplicationJSONResultAstPackagePathTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "import":
 		fallthrough
 	case "package":
-		*e = PostCompile200ApplicationJSONResultAstPackagePathTypeEnum(s)
+		*e = PostCompile200ApplicationJSONResultAstPackagePathTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostCompile200ApplicationJSONResultAstPackagePathTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostCompile200ApplicationJSONResultAstPackagePathTypeEnum: %v", v)
 	}
 }
 

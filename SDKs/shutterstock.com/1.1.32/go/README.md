@@ -13,42 +13,41 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/shutterstock.com/1.1.32/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AddTrackCollectionItemsRequest{
+    ctx := context.Background()
+    res, err := s.Audio.AddTrackCollectionItems(ctx, operations.AddTrackCollectionItemsRequest{
         CollectionItemRequest: shared.CollectionItemRequest{
             Items: []shared.CollectionItem{
                 shared.CollectionItem{
-                    AddedTime: "2021-07-27T21:52:56.087Z",
-                    ID: "quibusdam",
-                    MediaType: "unde",
+                    AddedTime: types.MustTimeFromString("2021-07-27T21:52:56.087Z"),
+                    ID: "d9d8d69a-674e-40f4-a7cc-8796ed151a05",
+                    MediaType: sdk.String("repellendus"),
                 },
                 shared.CollectionItem{
-                    AddedTime: "2021-05-14T08:28:11.899Z",
-                    ID: "illum",
-                    MediaType: "vel",
+                    AddedTime: types.MustTimeFromString("2020-08-31T22:02:25.322Z"),
+                    ID: "2ddf7cc7-8ca1-4ba9-a8fc-816742cb7392",
+                    MediaType: sdk.String("perferendis"),
                 },
                 shared.CollectionItem{
-                    AddedTime: "2021-09-16T11:56:06.019Z",
-                    ID: "suscipit",
-                    MediaType: "iure",
+                    AddedTime: types.MustTimeFromString("2022-05-20T13:30:46.463Z"),
+                    ID: "29396fea-7596-4eb1-8faa-a2352c595590",
+                    MediaType: sdk.String("iure"),
                 },
             },
         },
-        ID: "magnam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Audio.AddTrackCollectionItems(ctx, req, operations.AddTrackCollectionItemsSecurity{
+        ID: "aff1a3a2-fa94-4677-b925-1aa52c3f5ad0",
+    }, operations.AddTrackCollectionItemsSecurity{
         CustomerAccessCode: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -66,163 +65,163 @@ func main() {
 ## Available Resources and Operations
 
 
-### Audio
+### [Audio](docs/audio/README.md)
 
-* `AddTrackCollectionItems` - Add audio tracks to collections
-* `CreateTrackCollection` - Create audio collections
-* `DeleteTrackCollection` - Delete audio collections
-* `DeleteTrackCollectionItems` - Remove audio tracks from collections
-* `DownloadTracks` - Download audio tracks
-* `GetTrack` - Get details about audio tracks
-* `GetTrackCollection` - Get the details of audio collections
-* `GetTrackCollectionItems` - Get the contents of audio collections
-* `GetTrackCollectionList` - List audio collections
-* `GetTrackLicenseList` - List audio licenses
-* `GetTrackList` - List audio tracks
-* `LicenseTrack` - License audio tracks
-* `ListGenres` - List audio genres
-* `ListInstruments` - List audio instruments
-* `ListMoods` - List audio moods
-* `RenameTrackCollection` - Rename audio collections
-* `SearchTracks` - Search for tracks
+* [AddTrackCollectionItems](docs/audio/README.md#addtrackcollectionitems) - Add audio tracks to collections
+* [CreateTrackCollection](docs/audio/README.md#createtrackcollection) - Create audio collections
+* [DeleteTrackCollection](docs/audio/README.md#deletetrackcollection) - Delete audio collections
+* [DeleteTrackCollectionItems](docs/audio/README.md#deletetrackcollectionitems) - Remove audio tracks from collections
+* [DownloadTracks](docs/audio/README.md#downloadtracks) - Download audio tracks
+* [GetTrack](docs/audio/README.md#gettrack) - Get details about audio tracks
+* [GetTrackCollection](docs/audio/README.md#gettrackcollection) - Get the details of audio collections
+* [GetTrackCollectionItems](docs/audio/README.md#gettrackcollectionitems) - Get the contents of audio collections
+* [GetTrackCollectionList](docs/audio/README.md#gettrackcollectionlist) - List audio collections
+* [GetTrackLicenseList](docs/audio/README.md#gettracklicenselist) - List audio licenses
+* [GetTrackList](docs/audio/README.md#gettracklist) - List audio tracks
+* [LicenseTrack](docs/audio/README.md#licensetrack) - License audio tracks
+* [ListGenres](docs/audio/README.md#listgenres) - List audio genres
+* [ListInstruments](docs/audio/README.md#listinstruments) - List audio instruments
+* [ListMoods](docs/audio/README.md#listmoods) - List audio moods
+* [RenameTrackCollection](docs/audio/README.md#renametrackcollection) - Rename audio collections
+* [SearchTracks](docs/audio/README.md#searchtracks) - Search for tracks
 
-### Catalog
+### [Catalog](docs/catalog/README.md)
 
-* `AddToCollection` - Add items to catalog collections
-* `CreateCollection` - Create catalog collections
-* `DeleteCollection` - Delete catalog collections
-* `DeleteFromCollection` - Remove items from catalog collection
-* `GetCollections` - List catalog collections
-* `SearchCatalog` - Search catalogs for assets
-* `UpdateCollection` - Update collection metadata
+* [AddToCollection](docs/catalog/README.md#addtocollection) - Add items to catalog collections
+* [CreateCollection](docs/catalog/README.md#createcollection) - Create catalog collections
+* [DeleteCollection](docs/catalog/README.md#deletecollection) - Delete catalog collections
+* [DeleteFromCollection](docs/catalog/README.md#deletefromcollection) - Remove items from catalog collection
+* [GetCollections](docs/catalog/README.md#getcollections) - List catalog collections
+* [SearchCatalog](docs/catalog/README.md#searchcatalog) - Search catalogs for assets
+* [UpdateCollection](docs/catalog/README.md#updatecollection) - Update collection metadata
 
-### ComputerVision
+### [ComputerVision](docs/computervision/README.md)
 
-* `GetKeywords` - List suggested keywords
-* `GetSimilarImages` - List similar images
-* `GetSimilarVideos` - List similar videos
-* `UploadEphemeralImage` - Upload ephemeral images
-* `UploadImage` - Upload images
+* [GetKeywords](docs/computervision/README.md#getkeywords) - List suggested keywords
+* [GetSimilarImages](docs/computervision/README.md#getsimilarimages) - List similar images
+* [GetSimilarVideos](docs/computervision/README.md#getsimilarvideos) - List similar videos
+* [~~UploadEphemeralImage~~](docs/computervision/README.md#uploadephemeralimage) - Upload ephemeral images :warning: **Deprecated**
+* [UploadImage](docs/computervision/README.md#uploadimage) - Upload images
 
-### Contributors
+### [Contributors](docs/contributors/README.md)
 
-* `GetContributor` - Get details about a single contributor
-* `GetContributorCollectionItems` - Get the items in contributors' collections
-* `GetContributorCollections` - Get details about contributors' collections
-* `GetContributorCollectionsList` - List contributors' collections
-* `GetContributorList` - Get details about multiple contributors
+* [GetContributor](docs/contributors/README.md#getcontributor) - Get details about a single contributor
+* [GetContributorCollectionItems](docs/contributors/README.md#getcontributorcollectionitems) - Get the items in contributors' collections
+* [GetContributorCollections](docs/contributors/README.md#getcontributorcollections) - Get details about contributors' collections
+* [GetContributorCollectionsList](docs/contributors/README.md#getcontributorcollectionslist) - List contributors' collections
+* [GetContributorList](docs/contributors/README.md#getcontributorlist) - Get details about multiple contributors
 
-### CustomMusic
+### [CustomMusic](docs/custommusic/README.md)
 
-* `CreateAudioRenders` - Create rendered audio
-* `FetchRenders` - Get details about audio renders
-* `ListCustomDescriptors` - List computer audio descriptors
-* `ListCustomInstruments` - List computer audio instruments
+* [CreateAudioRenders](docs/custommusic/README.md#createaudiorenders) - Create rendered audio
+* [FetchRenders](docs/custommusic/README.md#fetchrenders) - Get details about audio renders
+* [ListCustomDescriptors](docs/custommusic/README.md#listcustomdescriptors) - List computer audio descriptors
+* [ListCustomInstruments](docs/custommusic/README.md#listcustominstruments) - List computer audio instruments
 
-### EditorialImages
+### [EditorialImages](docs/editorialimages/README.md)
 
-* `GetEditorialCategories` - (Deprecated) List editorial categories
-* `GetEditorialImage` - Get editorial content details
-* `GetEditorialImageLicenseList` - List editorial image licenses
-* `GetEditorialImageLivefeed` - Get editorial livefeed
-* `GetEditorialImageLivefeedItems` - Get editorial livefeed items
-* `GetEditorialImageLivefeedList` - Get editorial livefeed list
-* `GetEditorialLivefeed` - (Deprecated) Get editorial livefeed
-* `GetEditorialLivefeedItems` - (Deprecated) Get editorial livefeed items
-* `GetEditorialLivefeedList` - (Deprecated) Get editorial livefeed list
-* `GetUpdatedEditorialImage` - (Deprecated) List updated content
-* `GetUpdatedEditorialImages` - List updated content
-* `GetV2EditorialID` - (Deprecated) Get editorial content details
-* `LicenseEditorialImage` - (Deprecated) License editorial content
-* `LicenseEditorialImages` - License editorial content
-* `ListEditorialImageCategories` - List editorial categories
-* `SearchEditorial` - (Deprecated) Search editorial content
-* `SearchEditorialImages` - Search editorial images
+* [~~GetEditorialCategories~~](docs/editorialimages/README.md#geteditorialcategories) - (Deprecated) List editorial categories :warning: **Deprecated**
+* [GetEditorialImage](docs/editorialimages/README.md#geteditorialimage) - Get editorial content details
+* [GetEditorialImageLicenseList](docs/editorialimages/README.md#geteditorialimagelicenselist) - List editorial image licenses
+* [GetEditorialImageLivefeed](docs/editorialimages/README.md#geteditorialimagelivefeed) - Get editorial livefeed
+* [GetEditorialImageLivefeedItems](docs/editorialimages/README.md#geteditorialimagelivefeeditems) - Get editorial livefeed items
+* [GetEditorialImageLivefeedList](docs/editorialimages/README.md#geteditorialimagelivefeedlist) - Get editorial livefeed list
+* [~~GetEditorialLivefeed~~](docs/editorialimages/README.md#geteditoriallivefeed) - (Deprecated) Get editorial livefeed :warning: **Deprecated**
+* [~~GetEditorialLivefeedItems~~](docs/editorialimages/README.md#geteditoriallivefeeditems) - (Deprecated) Get editorial livefeed items :warning: **Deprecated**
+* [~~GetEditorialLivefeedList~~](docs/editorialimages/README.md#geteditoriallivefeedlist) - (Deprecated) Get editorial livefeed list :warning: **Deprecated**
+* [~~GetUpdatedEditorialImage~~](docs/editorialimages/README.md#getupdatededitorialimage) - (Deprecated) List updated content :warning: **Deprecated**
+* [GetUpdatedEditorialImages](docs/editorialimages/README.md#getupdatededitorialimages) - List updated content
+* [~~GetV2EditorialID~~](docs/editorialimages/README.md#getv2editorialid) - (Deprecated) Get editorial content details :warning: **Deprecated**
+* [~~LicenseEditorialImage~~](docs/editorialimages/README.md#licenseeditorialimage) - (Deprecated) License editorial content :warning: **Deprecated**
+* [LicenseEditorialImages](docs/editorialimages/README.md#licenseeditorialimages) - License editorial content
+* [ListEditorialImageCategories](docs/editorialimages/README.md#listeditorialimagecategories) - List editorial categories
+* [~~SearchEditorial~~](docs/editorialimages/README.md#searcheditorial) - (Deprecated) Search editorial content :warning: **Deprecated**
+* [SearchEditorialImages](docs/editorialimages/README.md#searcheditorialimages) - Search editorial images
 
-### EditorialVideo
+### [EditorialVideo](docs/editorialvideo/README.md)
 
-* `GetEditorialVideo` - Get editorial video content details
-* `GetEditorialVideoLicenseList` - List editorial video licenses
-* `LicenseEditorialVideo` - License editorial video content
-* `ListEditorialVideoCategories` - List editorial video categories
-* `SearchEditorialVideos` - Search editorial video content
+* [GetEditorialVideo](docs/editorialvideo/README.md#geteditorialvideo) - Get editorial video content details
+* [GetEditorialVideoLicenseList](docs/editorialvideo/README.md#geteditorialvideolicenselist) - List editorial video licenses
+* [LicenseEditorialVideo](docs/editorialvideo/README.md#licenseeditorialvideo) - License editorial video content
+* [ListEditorialVideoCategories](docs/editorialvideo/README.md#listeditorialvideocategories) - List editorial video categories
+* [SearchEditorialVideos](docs/editorialvideo/README.md#searcheditorialvideos) - Search editorial video content
 
-### Images
+### [Images](docs/images/README.md)
 
-* `AddImageCollectionItems` - Add images to collections
-* `BulkSearchImages` - Run multiple image searches
-* `CreateImageCollection` - Create image collections
-* `DeleteImageCollection` - Delete image collections
-* `DeleteImageCollectionItems` - Remove images from collections
-* `DownloadImage` - Download images
-* `GetFeaturedImageCollection` - Get the details of featured image collections
-* `GetFeaturedImageCollectionItems` - Get the contents of featured image collections
-* `GetFeaturedImageCollectionList` - List featured image collections
-* `GetImage` - Get details about images
-* `GetImageCollection` - Get the details of image collections
-* `GetImageCollectionItems` - Get the contents of image collections
-* `GetImageCollectionList` - List image collections
-* `GetImageKeywordSuggestions` - Get keywords from text
-* `GetImageLicenseList` - List image licenses
-* `GetImageList` - List images
-* `GetImageRecommendations` - List recommended images
-* `GetImageSuggestions` - Get suggestions for a search term
-* `GetUpdatedImages` - List updated images
-* `LicenseImages` - License images
-* `ListImageCategories` - List image categories
-* `ListSimilarImages` - List similar images
-* `RenameImageCollection` - Rename image collections
-* `SearchImages` - Search for images
+* [AddImageCollectionItems](docs/images/README.md#addimagecollectionitems) - Add images to collections
+* [BulkSearchImages](docs/images/README.md#bulksearchimages) - Run multiple image searches
+* [CreateImageCollection](docs/images/README.md#createimagecollection) - Create image collections
+* [DeleteImageCollection](docs/images/README.md#deleteimagecollection) - Delete image collections
+* [DeleteImageCollectionItems](docs/images/README.md#deleteimagecollectionitems) - Remove images from collections
+* [DownloadImage](docs/images/README.md#downloadimage) - Download images
+* [GetFeaturedImageCollection](docs/images/README.md#getfeaturedimagecollection) - Get the details of featured image collections
+* [GetFeaturedImageCollectionItems](docs/images/README.md#getfeaturedimagecollectionitems) - Get the contents of featured image collections
+* [GetFeaturedImageCollectionList](docs/images/README.md#getfeaturedimagecollectionlist) - List featured image collections
+* [GetImage](docs/images/README.md#getimage) - Get details about images
+* [GetImageCollection](docs/images/README.md#getimagecollection) - Get the details of image collections
+* [GetImageCollectionItems](docs/images/README.md#getimagecollectionitems) - Get the contents of image collections
+* [GetImageCollectionList](docs/images/README.md#getimagecollectionlist) - List image collections
+* [GetImageKeywordSuggestions](docs/images/README.md#getimagekeywordsuggestions) - Get keywords from text
+* [GetImageLicenseList](docs/images/README.md#getimagelicenselist) - List image licenses
+* [GetImageList](docs/images/README.md#getimagelist) - List images
+* [GetImageRecommendations](docs/images/README.md#getimagerecommendations) - List recommended images
+* [GetImageSuggestions](docs/images/README.md#getimagesuggestions) - Get suggestions for a search term
+* [GetUpdatedImages](docs/images/README.md#getupdatedimages) - List updated images
+* [LicenseImages](docs/images/README.md#licenseimages) - License images
+* [ListImageCategories](docs/images/README.md#listimagecategories) - List image categories
+* [ListSimilarImages](docs/images/README.md#listsimilarimages) - List similar images
+* [RenameImageCollection](docs/images/README.md#renameimagecollection) - Rename image collections
+* [SearchImages](docs/images/README.md#searchimages) - Search for images
 
-### Oauth
+### [Oauth](docs/oauth/README.md)
 
-* `Authorize` - Authorize applications
-* `CreateAccessTokenForm` - Get access tokens
-* `CreateAccessTokenJSON` - Get access tokens
+* [Authorize](docs/oauth/README.md#authorize) - Authorize applications
+* [CreateAccessTokenForm](docs/oauth/README.md#createaccesstokenform) - Get access tokens
+* [CreateAccessTokenJSON](docs/oauth/README.md#createaccesstokenjson) - Get access tokens
 
-### SoundEffects
+### [SoundEffects](docs/soundeffects/README.md)
 
-* `DownloadSfx` - Download sound effects
-* `GetSfxDetails` - Get details about sound effects
-* `GetSfxLicenseList` - List sound effects licenses
-* `GetSfxListDetails` - List details about sound effects
-* `LicensesSFX` - License sound effects
-* `SearchSFX` - Search for sound effects
+* [DownloadSfx](docs/soundeffects/README.md#downloadsfx) - Download sound effects
+* [GetSfxDetails](docs/soundeffects/README.md#getsfxdetails) - Get details about sound effects
+* [GetSfxLicenseList](docs/soundeffects/README.md#getsfxlicenselist) - List sound effects licenses
+* [GetSfxListDetails](docs/soundeffects/README.md#getsfxlistdetails) - List details about sound effects
+* [LicensesSFX](docs/soundeffects/README.md#licensessfx) - License sound effects
+* [SearchSFX](docs/soundeffects/README.md#searchsfx) - Search for sound effects
 
-### Test
+### [Test](docs/test/README.md)
 
-* `Echo` - Echo text
-* `Validate` - Validate input
+* [Echo](docs/test/README.md#echo) - Echo text
+* [Validate](docs/test/README.md#validate) - Validate input
 
-### Users
+### [Users](docs/users/README.md)
 
-* `GetAccessToken` - Get access token details
-* `GetUser` - Get user details
-* `GetUserSubscriptionList` - List user subscriptions
+* [GetAccessToken](docs/users/README.md#getaccesstoken) - Get access token details
+* [GetUser](docs/users/README.md#getuser) - Get user details
+* [GetUserSubscriptionList](docs/users/README.md#getusersubscriptionlist) - List user subscriptions
 
-### Videos
+### [Videos](docs/videos/README.md)
 
-* `AddVideoCollectionItems` - Add videos to collections
-* `CreateVideoCollection` - Create video collections
-* `DeleteVideoCollection` - Delete video collections
-* `DeleteVideoCollectionItems` - Remove videos from collections
-* `DownloadVideos` - Download videos
-* `FindSimilarVideos` - List similar videos
-* `GetFeaturedVideoCollection` - Get the details of featured video collections
-* `GetFeaturedVideoCollectionItems` - Get the contents of featured video collections
-* `GetFeaturedVideoCollectionList` - List featured video collections
-* `GetUpdatedVideos` - List updated videos
-* `GetVideo` - Get details about videos
-* `GetVideoCollection` - Get the details of video collections
-* `GetVideoCollectionItems` - Get the contents of video collections
-* `GetVideoCollectionList` - List video collections
-* `GetVideoLicenseList` - List video licenses
-* `GetVideoList` - List videos
-* `GetVideoSuggestions` - Get suggestions for a search term
-* `LicenseVideos` - License videos
-* `ListVideoCategories` - List video categories
-* `RenameVideoCollection` - Rename video collections
-* `SearchVideos` - Search for videos
+* [AddVideoCollectionItems](docs/videos/README.md#addvideocollectionitems) - Add videos to collections
+* [CreateVideoCollection](docs/videos/README.md#createvideocollection) - Create video collections
+* [DeleteVideoCollection](docs/videos/README.md#deletevideocollection) - Delete video collections
+* [DeleteVideoCollectionItems](docs/videos/README.md#deletevideocollectionitems) - Remove videos from collections
+* [DownloadVideos](docs/videos/README.md#downloadvideos) - Download videos
+* [FindSimilarVideos](docs/videos/README.md#findsimilarvideos) - List similar videos
+* [GetFeaturedVideoCollection](docs/videos/README.md#getfeaturedvideocollection) - Get the details of featured video collections
+* [GetFeaturedVideoCollectionItems](docs/videos/README.md#getfeaturedvideocollectionitems) - Get the contents of featured video collections
+* [GetFeaturedVideoCollectionList](docs/videos/README.md#getfeaturedvideocollectionlist) - List featured video collections
+* [GetUpdatedVideos](docs/videos/README.md#getupdatedvideos) - List updated videos
+* [GetVideo](docs/videos/README.md#getvideo) - Get details about videos
+* [GetVideoCollection](docs/videos/README.md#getvideocollection) - Get the details of video collections
+* [GetVideoCollectionItems](docs/videos/README.md#getvideocollectionitems) - Get the contents of video collections
+* [GetVideoCollectionList](docs/videos/README.md#getvideocollectionlist) - List video collections
+* [GetVideoLicenseList](docs/videos/README.md#getvideolicenselist) - List video licenses
+* [GetVideoList](docs/videos/README.md#getvideolist) - List videos
+* [GetVideoSuggestions](docs/videos/README.md#getvideosuggestions) - Get suggestions for a search term
+* [LicenseVideos](docs/videos/README.md#licensevideos) - License videos
+* [ListVideoCategories](docs/videos/README.md#listvideocategories) - List video categories
+* [RenameVideoCollection](docs/videos/README.md#renamevideocollection) - Rename video collections
+* [SearchVideos](docs/videos/README.md#searchvideos) - Search for videos
 <!-- End SDK Available Operations -->
 
 ### Maturity

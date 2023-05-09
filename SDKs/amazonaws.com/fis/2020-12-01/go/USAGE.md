@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,12 +17,13 @@ func main() {
         }),
     )
 
-    req := operations.CreateExperimentTemplateRequest{
+    ctx := context.Background()
+    res, err := s.CreateExperimentTemplate(ctx, operations.CreateExperimentTemplateRequest{
         RequestBody: operations.CreateExperimentTemplateRequestBody{
             Actions: map[string]shared.CreateExperimentTemplateActionInput{
                 "provident": shared.CreateExperimentTemplateActionInput{
                     ActionID: "distinctio",
-                    Description: "quibusdam",
+                    Description: sdk.String("quibusdam"),
                     Parameters: map[string]string{
                         "nulla": "corrupti",
                         "illum": "vel",
@@ -41,7 +42,7 @@ func main() {
                 },
                 "iusto": shared.CreateExperimentTemplateActionInput{
                     ActionID: "excepturi",
-                    Description: "nisi",
+                    Description: sdk.String("nisi"),
                     Parameters: map[string]string{
                         "temporibus": "ab",
                         "quis": "veritatis",
@@ -63,7 +64,7 @@ func main() {
                 },
                 "nam": shared.CreateExperimentTemplateActionInput{
                     ActionID: "officia",
-                    Description: "occaecati",
+                    Description: sdk.String("occaecati"),
                     Parameters: map[string]string{
                         "deleniti": "hic",
                     },
@@ -85,25 +86,25 @@ func main() {
                 CloudWatchLogsConfiguration: &shared.ExperimentTemplateCloudWatchLogsLogConfigurationInput{
                     LogGroupArn: "aspernatur",
                 },
-                LogSchemaVersion: 18789,
+                LogSchemaVersion: sdk.Int64(18789),
                 S3Configuration: &shared.ExperimentTemplateS3LogConfigurationInput{
                     BucketName: "ad",
-                    Prefix: "natus",
+                    Prefix: sdk.String("natus"),
                 },
             },
             RoleArn: "sed",
             StopConditions: []shared.CreateExperimentTemplateStopConditionInput{
                 shared.CreateExperimentTemplateStopConditionInput{
                     Source: "dolor",
-                    Value: "natus",
+                    Value: sdk.String("natus"),
                 },
                 shared.CreateExperimentTemplateStopConditionInput{
                     Source: "laboriosam",
-                    Value: "hic",
+                    Value: sdk.String("hic"),
                 },
                 shared.CreateExperimentTemplateStopConditionInput{
                     Source: "saepe",
-                    Value: "fuga",
+                    Value: sdk.String("fuga"),
                 },
             },
             Tags: map[string]string{
@@ -196,17 +197,14 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "harum",
-        XAmzContentSha256: "enim",
-        XAmzCredential: "accusamus",
-        XAmzDate: "commodi",
-        XAmzSecurityToken: "repudiandae",
-        XAmzSignature: "quae",
-        XAmzSignedHeaders: "ipsum",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateExperimentTemplate(ctx, req)
+        XAmzAlgorithm: sdk.String("harum"),
+        XAmzContentSha256: sdk.String("enim"),
+        XAmzCredential: sdk.String("accusamus"),
+        XAmzDate: sdk.String("commodi"),
+        XAmzSecurityToken: sdk.String("repudiandae"),
+        XAmzSignature: sdk.String("quae"),
+        XAmzSignedHeaders: sdk.String("ipsum"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -16,17 +16,21 @@ const (
 	ListBootstrapActionsXAmzTargetEnumElasticMapReduceListBootstrapActions ListBootstrapActionsXAmzTargetEnum = "ElasticMapReduce.ListBootstrapActions"
 )
 
+func (e ListBootstrapActionsXAmzTargetEnum) ToPointer() *ListBootstrapActionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListBootstrapActionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.ListBootstrapActions":
-		*e = ListBootstrapActionsXAmzTargetEnum(s)
+		*e = ListBootstrapActionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListBootstrapActionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListBootstrapActionsXAmzTargetEnum: %v", v)
 	}
 }
 

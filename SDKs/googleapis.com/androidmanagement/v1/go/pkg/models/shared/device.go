@@ -18,12 +18,16 @@ const (
 	DeviceAppliedStateEnumProvisioning           DeviceAppliedStateEnum = "PROVISIONING"
 )
 
+func (e DeviceAppliedStateEnum) ToPointer() *DeviceAppliedStateEnum {
+	return &e
+}
+
 func (e *DeviceAppliedStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -33,10 +37,10 @@ func (e *DeviceAppliedStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETED":
 		fallthrough
 	case "PROVISIONING":
-		*e = DeviceAppliedStateEnum(s)
+		*e = DeviceAppliedStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceAppliedStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceAppliedStateEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	DeviceManagementModeEnumProfileOwner              DeviceManagementModeEnum = "PROFILE_OWNER"
 )
 
+func (e DeviceManagementModeEnum) ToPointer() *DeviceManagementModeEnum {
+	return &e
+}
+
 func (e *DeviceManagementModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANAGEMENT_MODE_UNSPECIFIED":
 		fallthrough
 	case "DEVICE_OWNER":
 		fallthrough
 	case "PROFILE_OWNER":
-		*e = DeviceManagementModeEnum(s)
+		*e = DeviceManagementModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceManagementModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceManagementModeEnum: %v", v)
 	}
 }
 
@@ -76,21 +84,25 @@ const (
 	DeviceOwnershipEnumPersonallyOwned      DeviceOwnershipEnum = "PERSONALLY_OWNED"
 )
 
+func (e DeviceOwnershipEnum) ToPointer() *DeviceOwnershipEnum {
+	return &e
+}
+
 func (e *DeviceOwnershipEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OWNERSHIP_UNSPECIFIED":
 		fallthrough
 	case "COMPANY_OWNED":
 		fallthrough
 	case "PERSONALLY_OWNED":
-		*e = DeviceOwnershipEnum(s)
+		*e = DeviceOwnershipEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceOwnershipEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceOwnershipEnum: %v", v)
 	}
 }
 
@@ -105,12 +117,16 @@ const (
 	DeviceStateEnumProvisioning           DeviceStateEnum = "PROVISIONING"
 )
 
+func (e DeviceStateEnum) ToPointer() *DeviceStateEnum {
+	return &e
+}
+
 func (e *DeviceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -120,10 +136,10 @@ func (e *DeviceStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETED":
 		fallthrough
 	case "PROVISIONING":
-		*e = DeviceStateEnum(s)
+		*e = DeviceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceStateEnum: %v", v)
 	}
 }
 

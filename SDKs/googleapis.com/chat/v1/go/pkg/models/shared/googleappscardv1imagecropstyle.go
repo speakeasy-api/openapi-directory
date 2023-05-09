@@ -18,12 +18,16 @@ const (
 	GoogleAppsCardV1ImageCropStyleTypeEnumRectangle43              GoogleAppsCardV1ImageCropStyleTypeEnum = "RECTANGLE_4_3"
 )
 
+func (e GoogleAppsCardV1ImageCropStyleTypeEnum) ToPointer() *GoogleAppsCardV1ImageCropStyleTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1ImageCropStyleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMAGE_CROP_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SQUARE":
@@ -33,10 +37,10 @@ func (e *GoogleAppsCardV1ImageCropStyleTypeEnum) UnmarshalJSON(data []byte) erro
 	case "RECTANGLE_CUSTOM":
 		fallthrough
 	case "RECTANGLE_4_3":
-		*e = GoogleAppsCardV1ImageCropStyleTypeEnum(s)
+		*e = GoogleAppsCardV1ImageCropStyleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1ImageCropStyleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1ImageCropStyleTypeEnum: %v", v)
 	}
 }
 

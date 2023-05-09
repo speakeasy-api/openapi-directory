@@ -16,21 +16,25 @@ const (
 	AccountCredentialsPurposeEnumShopifyIntegration                   AccountCredentialsPurposeEnum = "SHOPIFY_INTEGRATION"
 )
 
+func (e AccountCredentialsPurposeEnum) ToPointer() *AccountCredentialsPurposeEnum {
+	return &e
+}
+
 func (e *AccountCredentialsPurposeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_CREDENTIALS_PURPOSE_UNSPECIFIED":
 		fallthrough
 	case "SHOPIFY_ORDER_MANAGEMENT":
 		fallthrough
 	case "SHOPIFY_INTEGRATION":
-		*e = AccountCredentialsPurposeEnum(s)
+		*e = AccountCredentialsPurposeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountCredentialsPurposeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountCredentialsPurposeEnum: %v", v)
 	}
 }
 

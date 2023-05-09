@@ -38,7 +38,10 @@ func newUsersMerchantLevel(defaultClient, securityClient HTTPClient, serverURL, 
 // * Management API—Users read and write
 func (s *usersMerchantLevel) GetMerchantsMerchantIDUsers(ctx context.Context, request operations.GetMerchantsMerchantIDUsersRequest, security operations.GetMerchantsMerchantIDUsersSecurity) (*operations.GetMerchantsMerchantIDUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -109,7 +112,10 @@ func (s *usersMerchantLevel) GetMerchantsMerchantIDUsers(ctx context.Context, re
 // * Management API—Users read and write
 func (s *usersMerchantLevel) GetMerchantsMerchantIDUsersUserID(ctx context.Context, request operations.GetMerchantsMerchantIDUsersUserIDRequest, security operations.GetMerchantsMerchantIDUsersUserIDSecurity) (*operations.GetMerchantsMerchantIDUsersUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +182,10 @@ func (s *usersMerchantLevel) GetMerchantsMerchantIDUsersUserID(ctx context.Conte
 // * Management API—Users read and write
 func (s *usersMerchantLevel) PatchMerchantsMerchantIDUsersUserID(ctx context.Context, request operations.PatchMerchantsMerchantIDUsersUserIDRequest, security operations.PatchMerchantsMerchantIDUsersUserIDSecurity) (*operations.PatchMerchantsMerchantIDUsersUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateMerchantUserRequest", "json")
 	if err != nil {
@@ -250,7 +259,10 @@ func (s *usersMerchantLevel) PatchMerchantsMerchantIDUsersUserID(ctx context.Con
 // * Management API—Users read and write
 func (s *usersMerchantLevel) PostMerchantsMerchantIDUsers(ctx context.Context, request operations.PostMerchantsMerchantIDUsersRequest, security operations.PostMerchantsMerchantIDUsersSecurity) (*operations.PostMerchantsMerchantIDUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateMerchantUserRequest", "json")
 	if err != nil {

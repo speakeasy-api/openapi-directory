@@ -16,17 +16,21 @@ const (
 	StartAutomationExecutionXAmzTargetEnumAmazonSsmStartAutomationExecution StartAutomationExecutionXAmzTargetEnum = "AmazonSSM.StartAutomationExecution"
 )
 
+func (e StartAutomationExecutionXAmzTargetEnum) ToPointer() *StartAutomationExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartAutomationExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.StartAutomationExecution":
-		*e = StartAutomationExecutionXAmzTargetEnum(s)
+		*e = StartAutomationExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartAutomationExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartAutomationExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

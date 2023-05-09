@@ -16,12 +16,16 @@ const (
 	MigrationEffortEnumHigh    MigrationEffortEnum = "High"
 )
 
+func (e MigrationEffortEnum) ToPointer() *MigrationEffortEnum {
+	return &e
+}
+
 func (e *MigrationEffortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VeryLow":
 		fallthrough
 	case "Low":
@@ -29,9 +33,9 @@ func (e *MigrationEffortEnum) UnmarshalJSON(data []byte) error {
 	case "Medium":
 		fallthrough
 	case "High":
-		*e = MigrationEffortEnum(s)
+		*e = MigrationEffortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationEffortEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationEffortEnum: %v", v)
 	}
 }

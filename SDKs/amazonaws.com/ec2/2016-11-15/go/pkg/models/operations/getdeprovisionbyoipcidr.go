@@ -15,17 +15,21 @@ const (
 	GETDeprovisionByoipCidrActionEnumDeprovisionByoipCidr GETDeprovisionByoipCidrActionEnum = "DeprovisionByoipCidr"
 )
 
+func (e GETDeprovisionByoipCidrActionEnum) ToPointer() *GETDeprovisionByoipCidrActionEnum {
+	return &e
+}
+
 func (e *GETDeprovisionByoipCidrActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeprovisionByoipCidr":
-		*e = GETDeprovisionByoipCidrActionEnum(s)
+		*e = GETDeprovisionByoipCidrActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeprovisionByoipCidrActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeprovisionByoipCidrActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeprovisionByoipCidrVersionEnumTwoThousandAndSixteen1115 GETDeprovisionByoipCidrVersionEnum = "2016-11-15"
 )
 
+func (e GETDeprovisionByoipCidrVersionEnum) ToPointer() *GETDeprovisionByoipCidrVersionEnum {
+	return &e
+}
+
 func (e *GETDeprovisionByoipCidrVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeprovisionByoipCidrVersionEnum(s)
+		*e = GETDeprovisionByoipCidrVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeprovisionByoipCidrVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeprovisionByoipCidrVersionEnum: %v", v)
 	}
 }
 

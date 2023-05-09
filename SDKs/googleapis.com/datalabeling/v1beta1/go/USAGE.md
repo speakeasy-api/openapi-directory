@@ -2,62 +2,60 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.DatalabelingProjectsAnnotationSpecSetsCreate(ctx, operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest: &shared.GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest{
             AnnotationSpecSet: &shared.GoogleCloudDatalabelingV1beta1AnnotationSpecSet{
                 AnnotationSpecs: []shared.GoogleCloudDatalabelingV1beta1AnnotationSpec{
                     shared.GoogleCloudDatalabelingV1beta1AnnotationSpec{
-                        Description: "distinctio",
-                        DisplayName: "quibusdam",
-                        Index: 602763,
+                        Description: sdk.String("distinctio"),
+                        DisplayName: sdk.String("quibusdam"),
+                        Index: sdk.Int(602763),
                     },
                     shared.GoogleCloudDatalabelingV1beta1AnnotationSpec{
-                        Description: "nulla",
-                        DisplayName: "corrupti",
-                        Index: 847252,
+                        Description: sdk.String("nulla"),
+                        DisplayName: sdk.String("corrupti"),
+                        Index: sdk.Int(847252),
                     },
                     shared.GoogleCloudDatalabelingV1beta1AnnotationSpec{
-                        Description: "vel",
-                        DisplayName: "error",
-                        Index: 645894,
+                        Description: sdk.String("vel"),
+                        DisplayName: sdk.String("error"),
+                        Index: sdk.Int(645894),
                     },
                 },
                 BlockingResources: []string{
                     "iure",
                     "magnam",
                 },
-                Description: "debitis",
-                DisplayName: "ipsa",
-                Name: "delectus",
+                Description: sdk.String("debitis"),
+                DisplayName: sdk.String("ipsa"),
+                Name: sdk.String("Ricky Hoppe"),
             },
         },
-        AccessToken: "tempora",
-        Alt: "media",
-        Callback: "molestiae",
-        Fields: "minus",
-        Key: "placeat",
-        OauthToken: "voluptatum",
-        Parent: "iusto",
-        PrettyPrint: false,
-        QuotaUser: "excepturi",
-        UploadType: "nisi",
-        UploadProtocol: "recusandae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.DatalabelingProjectsAnnotationSpecSetsCreate(ctx, req, operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity{
+        AccessToken: sdk.String("placeat"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("iusto"),
+        Fields: sdk.String("excepturi"),
+        Key: sdk.String("nisi"),
+        OauthToken: sdk.String("recusandae"),
+        Parent: "temporibus",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("ab"),
+        UploadType: sdk.String("quis"),
+        UploadProtocol: sdk.String("veritatis"),
+    }, operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

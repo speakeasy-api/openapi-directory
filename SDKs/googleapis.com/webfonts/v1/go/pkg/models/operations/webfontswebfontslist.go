@@ -9,6 +9,36 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type WebfontsWebfontsListCapabilityEnum string
+
+const (
+	WebfontsWebfontsListCapabilityEnumCapabilityUnspecified WebfontsWebfontsListCapabilityEnum = "CAPABILITY_UNSPECIFIED"
+	WebfontsWebfontsListCapabilityEnumWoff2                 WebfontsWebfontsListCapabilityEnum = "WOFF2"
+	WebfontsWebfontsListCapabilityEnumVf                    WebfontsWebfontsListCapabilityEnum = "VF"
+)
+
+func (e WebfontsWebfontsListCapabilityEnum) ToPointer() *WebfontsWebfontsListCapabilityEnum {
+	return &e
+}
+
+func (e *WebfontsWebfontsListCapabilityEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "CAPABILITY_UNSPECIFIED":
+		fallthrough
+	case "WOFF2":
+		fallthrough
+	case "VF":
+		*e = WebfontsWebfontsListCapabilityEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for WebfontsWebfontsListCapabilityEnum: %v", v)
+	}
+}
+
 // WebfontsWebfontsListSortEnum - Enables sorting of the list.
 type WebfontsWebfontsListSortEnum string
 
@@ -21,12 +51,16 @@ const (
 	WebfontsWebfontsListSortEnumTrending      WebfontsWebfontsListSortEnum = "TRENDING"
 )
 
+func (e WebfontsWebfontsListSortEnum) ToPointer() *WebfontsWebfontsListSortEnum {
+	return &e
+}
+
 func (e *WebfontsWebfontsListSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SORT_UNDEFINED":
 		fallthrough
 	case "ALPHA":
@@ -38,10 +72,10 @@ func (e *WebfontsWebfontsListSortEnum) UnmarshalJSON(data []byte) error {
 	case "STYLE":
 		fallthrough
 	case "TRENDING":
-		*e = WebfontsWebfontsListSortEnum(s)
+		*e = WebfontsWebfontsListSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebfontsWebfontsListSortEnum: %s", s)
+		return fmt.Errorf("invalid value for WebfontsWebfontsListSortEnum: %v", v)
 	}
 }
 
@@ -54,6 +88,10 @@ type WebfontsWebfontsListRequest struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// Controls the font urls in `Webfont.files`, by default, static ttf fonts are sent.
+	Capability []WebfontsWebfontsListCapabilityEnum `queryParam:"style=form,explode=true,name=capability"`
+	// Filters by Webfont.family, using literal match. If not set, returns all families
+	Family []string `queryParam:"style=form,explode=true,name=family"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
@@ -66,6 +104,8 @@ type WebfontsWebfontsListRequest struct {
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
 	// Enables sorting of the list.
 	Sort *WebfontsWebfontsListSortEnum `queryParam:"style=form,explode=true,name=sort"`
+	// Filters by Webfont.subset, if subset is found in Webfont.subsets. If not set, returns all families.
+	Subset *string `queryParam:"style=form,explode=true,name=subset"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").

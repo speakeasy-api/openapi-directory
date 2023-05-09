@@ -16,21 +16,25 @@ const (
 	PersonalNameGenderedOutLikelyGenderEnumUnknown PersonalNameGenderedOutLikelyGenderEnum = "unknown"
 )
 
+func (e PersonalNameGenderedOutLikelyGenderEnum) ToPointer() *PersonalNameGenderedOutLikelyGenderEnum {
+	return &e
+}
+
 func (e *PersonalNameGenderedOutLikelyGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
 		fallthrough
 	case "unknown":
-		*e = PersonalNameGenderedOutLikelyGenderEnum(s)
+		*e = PersonalNameGenderedOutLikelyGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PersonalNameGenderedOutLikelyGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for PersonalNameGenderedOutLikelyGenderEnum: %v", v)
 	}
 }
 

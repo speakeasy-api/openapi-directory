@@ -17,19 +17,23 @@ const (
 	CustomConfigurationFormatEnumHl7 CustomConfigurationFormatEnum = "HL7"
 )
 
+func (e CustomConfigurationFormatEnum) ToPointer() *CustomConfigurationFormatEnum {
+	return &e
+}
+
 func (e *CustomConfigurationFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
 		fallthrough
 	case "HL7":
-		*e = CustomConfigurationFormatEnum(s)
+		*e = CustomConfigurationFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomConfigurationFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomConfigurationFormatEnum: %v", v)
 	}
 }
 

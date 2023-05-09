@@ -15,17 +15,21 @@ const (
 	GETUpdateStemmingOptionsActionEnumUpdateStemmingOptions GETUpdateStemmingOptionsActionEnum = "UpdateStemmingOptions"
 )
 
+func (e GETUpdateStemmingOptionsActionEnum) ToPointer() *GETUpdateStemmingOptionsActionEnum {
+	return &e
+}
+
 func (e *GETUpdateStemmingOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateStemmingOptions":
-		*e = GETUpdateStemmingOptionsActionEnum(s)
+		*e = GETUpdateStemmingOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateStemmingOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateStemmingOptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUpdateStemmingOptionsVersionEnumTwoThousandAndEleven0201 GETUpdateStemmingOptionsVersionEnum = "2011-02-01"
 )
 
+func (e GETUpdateStemmingOptionsVersionEnum) ToPointer() *GETUpdateStemmingOptionsVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateStemmingOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-02-01":
-		*e = GETUpdateStemmingOptionsVersionEnum(s)
+		*e = GETUpdateStemmingOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateStemmingOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateStemmingOptionsVersionEnum: %v", v)
 	}
 }
 

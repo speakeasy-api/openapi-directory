@@ -16,21 +16,25 @@ const (
 	ReadOptionsReadConsistencyEnumEventual                   ReadOptionsReadConsistencyEnum = "EVENTUAL"
 )
 
+func (e ReadOptionsReadConsistencyEnum) ToPointer() *ReadOptionsReadConsistencyEnum {
+	return &e
+}
+
 func (e *ReadOptionsReadConsistencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READ_CONSISTENCY_UNSPECIFIED":
 		fallthrough
 	case "STRONG":
 		fallthrough
 	case "EVENTUAL":
-		*e = ReadOptionsReadConsistencyEnum(s)
+		*e = ReadOptionsReadConsistencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReadOptionsReadConsistencyEnum: %s", s)
+		return fmt.Errorf("invalid value for ReadOptionsReadConsistencyEnum: %v", v)
 	}
 }
 

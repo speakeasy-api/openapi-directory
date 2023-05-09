@@ -35,7 +35,10 @@ func newPatterns(defaultClient, securityClient HTTPClient, serverURL, language, 
 // PatternsGetPatternByRun - View the stopping pattern for a specific trip/service run
 func (s *patterns) PatternsGetPatternByRun(ctx context.Context, request operations.PatternsGetPatternByRunRequest) (*operations.PatternsGetPatternByRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/pattern/run/{run_ref}/route_type/{route_type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/pattern/run/{run_ref}/route_type/{route_type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

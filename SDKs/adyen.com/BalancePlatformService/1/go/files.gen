@@ -12,6 +12,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -86,7 +87,8 @@ pkg/models/shared/name.go
 pkg/models/shared/cardconfiguration.go
 pkg/models/shared/bulkaddress.go
 pkg/models/shared/authentication.go
-pkg/models/shared/bankaccount.go
+pkg/models/shared/ibanaccountidentification.go
+pkg/models/shared/uslocalaccountidentification.go
 pkg/models/shared/balanceaccountupdaterequest.go
 pkg/models/shared/balanceaccountinfo.go
 pkg/models/shared/bankaccountidentificationvalidationrequest.go
@@ -94,7 +96,6 @@ pkg/models/shared/aulocalaccountidentification.go
 pkg/models/shared/calocalaccountidentification.go
 pkg/models/shared/czlocalaccountidentification.go
 pkg/models/shared/hulocalaccountidentification.go
-pkg/models/shared/ibanaccountidentification.go
 pkg/models/shared/nolocalaccountidentification.go
 pkg/models/shared/numberandbicaccountidentification.go
 pkg/models/shared/additionalbankidentification.go
@@ -102,7 +103,6 @@ pkg/models/shared/pllocalaccountidentification.go
 pkg/models/shared/selocalaccountidentification.go
 pkg/models/shared/sglocalaccountidentification.go
 pkg/models/shared/uklocalaccountidentification.go
-pkg/models/shared/uslocalaccountidentification.go
 pkg/models/shared/serviceerror.go
 pkg/models/shared/document.go
 pkg/models/shared/ownerentity.go
@@ -142,4 +142,15 @@ pkg/models/shared/transactionruleinfo.go
 pkg/models/shared/transferinstrument.go
 pkg/models/shared/bankaccountinfo.go
 pkg/models/shared/transferinstrumentinfo.go
+docs/sdk/README.md
+docs/accountholders/README.md
+docs/balanceaccounts/README.md
+docs/bankaccountvalidation/README.md
+docs/documents/README.md
+docs/legalentities/README.md
+docs/paymentinstrumentgroups/README.md
+docs/paymentinstruments/README.md
+docs/platform/README.md
+docs/transactionrules/README.md
+docs/transferinstruments/README.md
 USAGE.md

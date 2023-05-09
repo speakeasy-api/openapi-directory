@@ -83,6 +83,10 @@ type PostV2CalendarEventsUpsertRequestBody struct {
 	Status *string `form:"name=status"`
 	// Title of the calendar event
 	Title *string `form:"name=title"`
+	//   Last modification time of the event in the ISO 8601 format with a time zone offset. The event will not be updated if the 'updated_at' timestamp from the payload is earlier than the one in the database.
+	//   Example: `2022-02-14T10:12:59+00:00`.
+	//
+	UpdatedAt *string `form:"name=updated_at"`
 }
 
 type PostV2CalendarEventsUpsertResponse struct {

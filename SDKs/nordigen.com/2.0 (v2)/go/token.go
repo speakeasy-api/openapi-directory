@@ -101,6 +101,16 @@ func (s *token) JWTObtain(ctx context.Context, request shared.JWTObtainPairReque
 
 			res.JWTObtain403ApplicationJSONObject = out
 		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.JWTObtain429ApplicationJSONObject = out
+		}
 	}
 
 	return res, nil
@@ -174,6 +184,16 @@ func (s *token) JWTRefresh(ctx context.Context, request shared.JWTRefreshRequest
 			}
 
 			res.JWTRefresh403ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.JWTRefresh429ApplicationJSONObject = out
 		}
 	}
 

@@ -34,7 +34,7 @@ func newV1Pepsanction(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // PepMonitorList - Retrieves a list of monitor entries
 // Retrieve a list of all active Pep Sanction Report monitors for this account
-func (s *v1Pepsanction) PepMonitorList(ctx context.Context) (*operations.PepMonitorListResponse, error) {
+func (s *v1Pepsanction) PepMonitorList(ctx context.Context, security operations.PepMonitorListSecurity) (*operations.PepMonitorListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/pepsanction/monitor/list"
 
@@ -43,7 +43,7 @@ func (s *v1Pepsanction) PepMonitorList(ctx context.Context) (*operations.PepMoni
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,7 +91,10 @@ func (s *v1Pepsanction) PepMonitorList(ctx context.Context) (*operations.PepMoni
 // Unregister a previously created Pep Sanction Report Monitor
 func (s *v1Pepsanction) PepMonitorUnregister(ctx context.Context, request operations.PepMonitorUnregisterRequest, security operations.PepMonitorUnregisterSecurity) (*operations.PepMonitorUnregisterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/monitor/unregister/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/monitor/unregister/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -146,7 +149,10 @@ func (s *v1Pepsanction) PepMonitorUnregister(ctx context.Context, request operat
 // Update the webhook URL of an active Pep Sanction Report Monitor
 func (s *v1Pepsanction) PepMonitorUpdate(ctx context.Context, request operations.PepMonitorUpdateRequest, security operations.PepMonitorUpdateSecurity) (*operations.PepMonitorUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/monitor/update/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/monitor/update/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
@@ -208,7 +214,10 @@ func (s *v1Pepsanction) PepMonitorUpdate(ctx context.Context, request operations
 // Order a new Pep Sanction Check by providing either a business or person name with some additional optional parameters.
 func (s *v1Pepsanction) PepOrder(ctx context.Context, request operations.PepOrderRequest, security operations.PepOrderSecurity) (*operations.PepOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/order/{type}/{search}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/order/{type}/{search}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
@@ -270,7 +279,10 @@ func (s *v1Pepsanction) PepOrder(ctx context.Context, request operations.PepOrde
 // Retrieve a completed Pep Sanction check structured or in pdf depending on given accept header
 func (s *v1Pepsanction) PepRetrieve(ctx context.Context, request operations.PepRetrieveRequest, security operations.PepRetrieveSecurity) (*operations.PepRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/retrieve/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/pepsanction/retrieve/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

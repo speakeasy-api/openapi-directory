@@ -32,12 +32,16 @@ const (
 	GetWorkspace422ApplicationJSONErrorEnumRequiredParameterMissingTemplateNotDefined           GetWorkspace422ApplicationJSONErrorEnum = "Required parameter missing: template not defined"
 )
 
+func (e GetWorkspace422ApplicationJSONErrorEnum) ToPointer() *GetWorkspace422ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *GetWorkspace422ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unable to parse JSON, please check formatting":
 		fallthrough
 	case "Required parameter missing":
@@ -45,10 +49,10 @@ func (e *GetWorkspace422ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) err
 	case "Required parameter missing: template definition not defined":
 		fallthrough
 	case "Required parameter missing: template not defined":
-		*e = GetWorkspace422ApplicationJSONErrorEnum(s)
+		*e = GetWorkspace422ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspace422ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspace422ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -69,21 +73,25 @@ const (
 	GetWorkspace404ApplicationJSONErrorEnumNoneOfTheTemplatesIsAvailableForTheWorkspace GetWorkspace404ApplicationJSONErrorEnum = "None of the templates is available for the workspace."
 )
 
+func (e GetWorkspace404ApplicationJSONErrorEnum) ToPointer() *GetWorkspace404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *GetWorkspace404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Entity not found":
 		fallthrough
 	case "Resource not found":
 		fallthrough
 	case "None of the templates is available for the workspace.":
-		*e = GetWorkspace404ApplicationJSONErrorEnum(s)
+		*e = GetWorkspace404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspace404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspace404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -102,17 +110,21 @@ const (
 	GetWorkspace403ApplicationJSONErrorEnumYourAccountHasExceededTheMonthlyDocumentGenerationLimit GetWorkspace403ApplicationJSONErrorEnum = "Your account has exceeded the monthly document generation limit."
 )
 
+func (e GetWorkspace403ApplicationJSONErrorEnum) ToPointer() *GetWorkspace403ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *GetWorkspace403ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Your account has exceeded the monthly document generation limit.":
-		*e = GetWorkspace403ApplicationJSONErrorEnum(s)
+		*e = GetWorkspace403ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspace403ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspace403ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -140,12 +152,16 @@ const (
 	GetWorkspace401ApplicationJSONErrorEnumAuthenticationFailed                                      GetWorkspace401ApplicationJSONErrorEnum = "Authentication failed"
 )
 
+func (e GetWorkspace401ApplicationJSONErrorEnum) ToPointer() *GetWorkspace401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *GetWorkspace401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed: request expired":
 		fallthrough
 	case "Authentication failed: signature or secret missing":
@@ -165,10 +181,10 @@ func (e *GetWorkspace401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) err
 	case "Authentication failed: incorrect signature":
 		fallthrough
 	case "Authentication failed":
-		*e = GetWorkspace401ApplicationJSONErrorEnum(s)
+		*e = GetWorkspace401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkspace401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkspace401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 

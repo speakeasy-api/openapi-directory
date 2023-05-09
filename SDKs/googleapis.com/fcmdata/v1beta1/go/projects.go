@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // FcmdataProjectsAndroidAppsDeliveryDataList - List aggregate delivery data for the given Android application.
 func (s *projects) FcmdataProjectsAndroidAppsDeliveryDataList(ctx context.Context, request operations.FcmdataProjectsAndroidAppsDeliveryDataListRequest, security operations.FcmdataProjectsAndroidAppsDeliveryDataListSecurity) (*operations.FcmdataProjectsAndroidAppsDeliveryDataListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/deliveryData", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/deliveryData", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

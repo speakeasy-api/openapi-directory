@@ -16,21 +16,25 @@ const (
 	VirtualTariffConsumptionDataTariffTypeEnumNormal  VirtualTariffConsumptionDataTariffTypeEnum = "Normal"
 )
 
+func (e VirtualTariffConsumptionDataTariffTypeEnum) ToPointer() *VirtualTariffConsumptionDataTariffTypeEnum {
+	return &e
+}
+
 func (e *VirtualTariffConsumptionDataTariffTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Battery":
 		fallthrough
 	case "Solar":
 		fallthrough
 	case "Normal":
-		*e = VirtualTariffConsumptionDataTariffTypeEnum(s)
+		*e = VirtualTariffConsumptionDataTariffTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VirtualTariffConsumptionDataTariffTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VirtualTariffConsumptionDataTariffTypeEnum: %v", v)
 	}
 }
 

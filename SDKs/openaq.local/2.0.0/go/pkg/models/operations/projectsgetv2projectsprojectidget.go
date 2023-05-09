@@ -20,12 +20,16 @@ const (
 	ProjectsGetV2ProjectsProjectIDGetOrderByProjectsOrderEnumLastUpdated  ProjectsGetV2ProjectsProjectIDGetOrderByProjectsOrderEnum = "lastUpdated"
 )
 
+func (e ProjectsGetV2ProjectsProjectIDGetOrderByProjectsOrderEnum) ToPointer() *ProjectsGetV2ProjectsProjectIDGetOrderByProjectsOrderEnum {
+	return &e
+}
+
 func (e *ProjectsGetV2ProjectsProjectIDGetOrderByProjectsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "name":
@@ -35,10 +39,10 @@ func (e *ProjectsGetV2ProjectsProjectIDGetOrderByProjectsOrderEnum) UnmarshalJSO
 	case "firstUpdated":
 		fallthrough
 	case "lastUpdated":
-		*e = ProjectsGetV2ProjectsProjectIDGetOrderByProjectsOrderEnum(s)
+		*e = ProjectsGetV2ProjectsProjectIDGetOrderByProjectsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectsGetV2ProjectsProjectIDGetOrderByProjectsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectsGetV2ProjectsProjectIDGetOrderByProjectsOrderEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	ProjectsGetV2ProjectsProjectIDGetSortSortEnumDesc ProjectsGetV2ProjectsProjectIDGetSortSortEnum = "desc"
 )
 
+func (e ProjectsGetV2ProjectsProjectIDGetSortSortEnum) ToPointer() *ProjectsGetV2ProjectsProjectIDGetSortSortEnum {
+	return &e
+}
+
 func (e *ProjectsGetV2ProjectsProjectIDGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = ProjectsGetV2ProjectsProjectIDGetSortSortEnum(s)
+		*e = ProjectsGetV2ProjectsProjectIDGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectsGetV2ProjectsProjectIDGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectsGetV2ProjectsProjectIDGetSortSortEnum: %v", v)
 	}
 }
 

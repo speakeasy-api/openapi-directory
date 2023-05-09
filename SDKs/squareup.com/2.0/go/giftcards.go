@@ -93,7 +93,10 @@ func (s *giftCards) CreateGiftCard(ctx context.Context, request shared.CreateGif
 // Links a customer to a gift card
 func (s *giftCards) LinkCustomerToGiftCard(ctx context.Context, request operations.LinkCustomerToGiftCardRequest, security operations.LinkCustomerToGiftCardSecurity) (*operations.LinkCustomerToGiftCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/gift-cards/{gift_card_id}/link-customer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/gift-cards/{gift_card_id}/link-customer", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LinkCustomerToGiftCardRequest", "json")
 	if err != nil {
@@ -198,7 +201,10 @@ func (s *giftCards) ListGiftCards(ctx context.Context, request operations.ListGi
 // Retrieves a gift card using its ID.
 func (s *giftCards) RetrieveGiftCard(ctx context.Context, request operations.RetrieveGiftCardRequest, security operations.RetrieveGiftCardSecurity) (*operations.RetrieveGiftCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/gift-cards/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/gift-cards/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -353,7 +359,10 @@ func (s *giftCards) RetrieveGiftCardFromNonce(ctx context.Context, request share
 // Unlinks a customer from a gift card
 func (s *giftCards) UnlinkCustomerFromGiftCard(ctx context.Context, request operations.UnlinkCustomerFromGiftCardRequest, security operations.UnlinkCustomerFromGiftCardSecurity) (*operations.UnlinkCustomerFromGiftCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/gift-cards/{gift_card_id}/unlink-customer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/gift-cards/{gift_card_id}/unlink-customer", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UnlinkCustomerFromGiftCardRequest", "json")
 	if err != nil {

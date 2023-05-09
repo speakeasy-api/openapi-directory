@@ -31,12 +31,16 @@ const (
 	CreateCapacityReservationFleetResultFleetCapacityReservationsInstancePlatformEnumRhelWithHaAndSQLServerEnterprise CreateCapacityReservationFleetResultFleetCapacityReservationsInstancePlatformEnum = "RHEL with HA and SQL Server Enterprise"
 )
 
+func (e CreateCapacityReservationFleetResultFleetCapacityReservationsInstancePlatformEnum) ToPointer() *CreateCapacityReservationFleetResultFleetCapacityReservationsInstancePlatformEnum {
+	return &e
+}
+
 func (e *CreateCapacityReservationFleetResultFleetCapacityReservationsInstancePlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Linux/UNIX":
 		fallthrough
 	case "Red Hat Enterprise Linux":
@@ -70,10 +74,10 @@ func (e *CreateCapacityReservationFleetResultFleetCapacityReservationsInstancePl
 	case "RHEL with HA and SQL Server Standard":
 		fallthrough
 	case "RHEL with HA and SQL Server Enterprise":
-		*e = CreateCapacityReservationFleetResultFleetCapacityReservationsInstancePlatformEnum(s)
+		*e = CreateCapacityReservationFleetResultFleetCapacityReservationsInstancePlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCapacityReservationFleetResultFleetCapacityReservationsInstancePlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCapacityReservationFleetResultFleetCapacityReservationsInstancePlatformEnum: %v", v)
 	}
 }
 
@@ -719,14 +723,23 @@ const (
 	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR7g12xlarge     CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r7g.12xlarge"
 	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR7g16xlarge     CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r7g.16xlarge"
 	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR7gMetal        CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r7g.metal"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumC6inMetal       CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "c6in.metal"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumM6inMetal       CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "m6in.metal"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumM6idnMetal      CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "m6idn.metal"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR6inMetal       CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r6in.metal"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR6idnMetal      CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum) ToPointer() *CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum {
+	return &e
+}
+
 func (e *CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -2002,10 +2015,20 @@ func (e *CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTy
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -2031,17 +2054,21 @@ const (
 	CreateCapacityReservationFleetResultInstanceMatchCriteriaEnumOpen CreateCapacityReservationFleetResultInstanceMatchCriteriaEnum = "open"
 )
 
+func (e CreateCapacityReservationFleetResultInstanceMatchCriteriaEnum) ToPointer() *CreateCapacityReservationFleetResultInstanceMatchCriteriaEnum {
+	return &e
+}
+
 func (e *CreateCapacityReservationFleetResultInstanceMatchCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
-		*e = CreateCapacityReservationFleetResultInstanceMatchCriteriaEnum(s)
+		*e = CreateCapacityReservationFleetResultInstanceMatchCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCapacityReservationFleetResultInstanceMatchCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCapacityReservationFleetResultInstanceMatchCriteriaEnum: %v", v)
 	}
 }
 
@@ -2060,12 +2087,16 @@ const (
 	CreateCapacityReservationFleetResultStateEnumFailed             CreateCapacityReservationFleetResultStateEnum = "failed"
 )
 
+func (e CreateCapacityReservationFleetResultStateEnum) ToPointer() *CreateCapacityReservationFleetResultStateEnum {
+	return &e
+}
+
 func (e *CreateCapacityReservationFleetResultStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "modifying":
@@ -2083,10 +2114,10 @@ func (e *CreateCapacityReservationFleetResultStateEnum) UnmarshalJSON(data []byt
 	case "cancelled":
 		fallthrough
 	case "failed":
-		*e = CreateCapacityReservationFleetResultStateEnum(s)
+		*e = CreateCapacityReservationFleetResultStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCapacityReservationFleetResultStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCapacityReservationFleetResultStateEnum: %v", v)
 	}
 }
 
@@ -2103,17 +2134,21 @@ const (
 	CreateCapacityReservationFleetResultTenancyEnumDefault CreateCapacityReservationFleetResultTenancyEnum = "default"
 )
 
+func (e CreateCapacityReservationFleetResultTenancyEnum) ToPointer() *CreateCapacityReservationFleetResultTenancyEnum {
+	return &e
+}
+
 func (e *CreateCapacityReservationFleetResultTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
-		*e = CreateCapacityReservationFleetResultTenancyEnum(s)
+		*e = CreateCapacityReservationFleetResultTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCapacityReservationFleetResultTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCapacityReservationFleetResultTenancyEnum: %v", v)
 	}
 }
 

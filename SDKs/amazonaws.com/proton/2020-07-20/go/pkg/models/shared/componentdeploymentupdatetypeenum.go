@@ -14,18 +14,22 @@ const (
 	ComponentDeploymentUpdateTypeEnumCurrentVersion ComponentDeploymentUpdateTypeEnum = "CURRENT_VERSION"
 )
 
+func (e ComponentDeploymentUpdateTypeEnum) ToPointer() *ComponentDeploymentUpdateTypeEnum {
+	return &e
+}
+
 func (e *ComponentDeploymentUpdateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "CURRENT_VERSION":
-		*e = ComponentDeploymentUpdateTypeEnum(s)
+		*e = ComponentDeploymentUpdateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComponentDeploymentUpdateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComponentDeploymentUpdateTypeEnum: %v", v)
 	}
 }

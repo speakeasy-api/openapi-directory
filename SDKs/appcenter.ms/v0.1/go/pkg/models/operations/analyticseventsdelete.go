@@ -22,29 +22,33 @@ type AnalyticsEventsDeleteRequest struct {
 }
 
 // AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.
-type AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum string
+type AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum int64
 
 const (
-	AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnumFourHundred         AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum = "400"
-	AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnumFourHundredAndThree AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum = "403"
-	AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnumFiveHundred         AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum = "500"
+	AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnumFourHundred         AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum = 400
+	AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnumFourHundredAndThree AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum = 403
+	AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnumFiveHundred         AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum = 500
 )
 
+func (e AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum) ToPointer() *AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
+	switch v {
+	case 400:
 		fallthrough
-	case "403":
+	case 403:
 		fallthrough
-	case "500":
-		*e = AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum(s)
+	case 500:
+		*e = AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsEventsDeleteDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

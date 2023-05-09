@@ -35,7 +35,10 @@ func newAgr(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // GETAffectedGenomicModelsUsingGET - Get affected genomic models (rat strains with gene alleles) submitted by RGD to AGR by taxonId
 func (s *agr) GETAffectedGenomicModelsUsingGET(ctx context.Context, request operations.GETAffectedGenomicModelsUsingGETRequest) (*operations.GETAffectedGenomicModelsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/agr/affectedGenomicModels/{taxonId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/agr/affectedGenomicModels/{taxonId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *agr) GETAffectedGenomicModelsUsingGET(ctx context.Context, request oper
 // GETAllelesForTaxonUsingGET - Get gene allele records submitted by RGD to AGR by taxonId
 func (s *agr) GETAllelesForTaxonUsingGET(ctx context.Context, request operations.GETAllelesForTaxonUsingGETRequest) (*operations.GETAllelesForTaxonUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/agr/alleles/{taxonId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/agr/alleles/{taxonId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -133,7 +139,10 @@ func (s *agr) GETAllelesForTaxonUsingGET(ctx context.Context, request operations
 // GETExpressionForTaxonUsingGET - Get expression annotations submitted by RGD to AGR by taxonId
 func (s *agr) GETExpressionForTaxonUsingGET(ctx context.Context, request operations.GETExpressionForTaxonUsingGETRequest) (*operations.GETExpressionForTaxonUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/agr/expression/{taxonId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/agr/expression/{taxonId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -182,7 +191,10 @@ func (s *agr) GETExpressionForTaxonUsingGET(ctx context.Context, request operati
 // GETGenesForLatestAssemblyUsingGET - Get gene records submitted by RGD to AGR by taxonId
 func (s *agr) GETGenesForLatestAssemblyUsingGET(ctx context.Context, request operations.GETGenesForLatestAssemblyUsingGETRequest) (*operations.GETGenesForLatestAssemblyUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/agr/{taxonId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/agr/{taxonId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -231,7 +243,10 @@ func (s *agr) GETGenesForLatestAssemblyUsingGET(ctx context.Context, request ope
 // GETPhenotypesForTaxonUsingGET - Get phenotype annotations submitted by RGD to AGR by taxonId
 func (s *agr) GETPhenotypesForTaxonUsingGET(ctx context.Context, request operations.GETPhenotypesForTaxonUsingGETRequest) (*operations.GETPhenotypesForTaxonUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/agr/phenotypes/{taxonId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/agr/phenotypes/{taxonId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -280,7 +295,10 @@ func (s *agr) GETPhenotypesForTaxonUsingGET(ctx context.Context, request operati
 // GETVariantsForTaxonUsingGET - Get basic variant records submitted by RGD to AGR by taxonId
 func (s *agr) GETVariantsForTaxonUsingGET(ctx context.Context, request operations.GETVariantsForTaxonUsingGETRequest) (*operations.GETVariantsForTaxonUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/agr/variants/{taxonId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/agr/variants/{taxonId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

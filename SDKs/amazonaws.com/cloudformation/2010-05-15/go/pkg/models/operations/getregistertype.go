@@ -15,17 +15,21 @@ const (
 	GETRegisterTypeActionEnumRegisterType GETRegisterTypeActionEnum = "RegisterType"
 )
 
+func (e GETRegisterTypeActionEnum) ToPointer() *GETRegisterTypeActionEnum {
+	return &e
+}
+
 func (e *GETRegisterTypeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RegisterType":
-		*e = GETRegisterTypeActionEnum(s)
+		*e = GETRegisterTypeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRegisterTypeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRegisterTypeActionEnum: %v", v)
 	}
 }
 
@@ -44,21 +48,25 @@ const (
 	GETRegisterTypeTypeEnumHook     GETRegisterTypeTypeEnum = "HOOK"
 )
 
+func (e GETRegisterTypeTypeEnum) ToPointer() *GETRegisterTypeTypeEnum {
+	return &e
+}
+
 func (e *GETRegisterTypeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = GETRegisterTypeTypeEnum(s)
+		*e = GETRegisterTypeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRegisterTypeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRegisterTypeTypeEnum: %v", v)
 	}
 }
 
@@ -69,17 +77,21 @@ const (
 	GETRegisterTypeVersionEnumTwoThousandAndTen0515 GETRegisterTypeVersionEnum = "2010-05-15"
 )
 
+func (e GETRegisterTypeVersionEnum) ToPointer() *GETRegisterTypeVersionEnum {
+	return &e
+}
+
 func (e *GETRegisterTypeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETRegisterTypeVersionEnum(s)
+		*e = GETRegisterTypeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRegisterTypeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRegisterTypeVersionEnum: %v", v)
 	}
 }
 

@@ -8,6 +8,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -58,4 +59,11 @@ pkg/models/shared/customchannel.go
 pkg/models/shared/customchannels.go
 pkg/models/shared/urlchannel.go
 pkg/models/shared/urlchannels.go
+docs/sdk/README.md
+docs/accounts/README.md
+docs/adclients/README.md
+docs/associationsessions/README.md
+docs/customchannels/README.md
+docs/reports/README.md
+docs/urlchannels/README.md
 USAGE.md

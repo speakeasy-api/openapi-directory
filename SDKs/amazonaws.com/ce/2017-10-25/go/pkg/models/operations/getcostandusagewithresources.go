@@ -16,17 +16,21 @@ const (
 	GetCostAndUsageWithResourcesXAmzTargetEnumAwsInsightsIndexServiceGetCostAndUsageWithResources GetCostAndUsageWithResourcesXAmzTargetEnum = "AWSInsightsIndexService.GetCostAndUsageWithResources"
 )
 
+func (e GetCostAndUsageWithResourcesXAmzTargetEnum) ToPointer() *GetCostAndUsageWithResourcesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCostAndUsageWithResourcesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSInsightsIndexService.GetCostAndUsageWithResources":
-		*e = GetCostAndUsageWithResourcesXAmzTargetEnum(s)
+		*e = GetCostAndUsageWithResourcesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCostAndUsageWithResourcesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCostAndUsageWithResourcesXAmzTargetEnum: %v", v)
 	}
 }
 

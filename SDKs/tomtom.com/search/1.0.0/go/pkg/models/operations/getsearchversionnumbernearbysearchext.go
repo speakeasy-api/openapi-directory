@@ -9,6 +9,8 @@ import (
 
 type GetSearchVersionNumberNearbySearchExtRequest struct {
 	// Bottom right position of the bounding box. This is specified as a comma separated string composed of lat., lon.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	BtmRight *string `queryParam:"style=form,explode=true,name=btmRight"`
 	// Comma separated string of country codes. This will limit the search to the specified countries.
 	CountrySet *string `queryParam:"style=form,explode=true,name=countrySet"`
@@ -49,6 +51,8 @@ type GetSearchVersionNumberNearbySearchExtRequest struct {
 	// If radius and position are set, the results will be constrained to the defined area. The radius parameter is specified in meters.
 	Radius *int64 `queryParam:"style=form,explode=true,name=radius"`
 	// Top left position of the bounding box. This is specified as a comma separated string composed of lat., lon.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	TopLeft *string `queryParam:"style=form,explode=true,name=topLeft"`
 	// Service version number. The current value is 2.
 	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`

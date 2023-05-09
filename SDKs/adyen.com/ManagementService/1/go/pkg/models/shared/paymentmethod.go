@@ -21,12 +21,16 @@ const (
 	PaymentMethodVerificationStatusEnumRejected PaymentMethodVerificationStatusEnum = "rejected"
 )
 
+func (e PaymentMethodVerificationStatusEnum) ToPointer() *PaymentMethodVerificationStatusEnum {
+	return &e
+}
+
 func (e *PaymentMethodVerificationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "valid":
 		fallthrough
 	case "pending":
@@ -34,10 +38,10 @@ func (e *PaymentMethodVerificationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "invalid":
 		fallthrough
 	case "rejected":
-		*e = PaymentMethodVerificationStatusEnum(s)
+		*e = PaymentMethodVerificationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentMethodVerificationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentMethodVerificationStatusEnum: %v", v)
 	}
 }
 

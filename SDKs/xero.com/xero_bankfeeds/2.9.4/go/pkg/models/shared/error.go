@@ -33,12 +33,16 @@ const (
 	ErrorTypeEnumAccountNotValid                             ErrorTypeEnum = "account-not-valid"
 )
 
+func (e ErrorTypeEnum) ToPointer() *ErrorTypeEnum {
+	return &e
+}
+
 func (e *ErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid-request":
 		fallthrough
 	case "invalid-application":
@@ -78,10 +82,10 @@ func (e *ErrorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "invalid-user-role":
 		fallthrough
 	case "account-not-valid":
-		*e = ErrorTypeEnum(s)
+		*e = ErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorTypeEnum: %v", v)
 	}
 }
 

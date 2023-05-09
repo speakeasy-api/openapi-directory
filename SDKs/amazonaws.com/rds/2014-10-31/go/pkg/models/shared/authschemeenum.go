@@ -13,16 +13,20 @@ const (
 	AuthSchemeEnumSecrets AuthSchemeEnum = "SECRETS"
 )
 
+func (e AuthSchemeEnum) ToPointer() *AuthSchemeEnum {
+	return &e
+}
+
 func (e *AuthSchemeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECRETS":
-		*e = AuthSchemeEnum(s)
+		*e = AuthSchemeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthSchemeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthSchemeEnum: %v", v)
 	}
 }

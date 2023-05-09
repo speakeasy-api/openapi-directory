@@ -15,17 +15,21 @@ const (
 	GETRegisterTransitGatewayMulticastGroupMembersActionEnumRegisterTransitGatewayMulticastGroupMembers GETRegisterTransitGatewayMulticastGroupMembersActionEnum = "RegisterTransitGatewayMulticastGroupMembers"
 )
 
+func (e GETRegisterTransitGatewayMulticastGroupMembersActionEnum) ToPointer() *GETRegisterTransitGatewayMulticastGroupMembersActionEnum {
+	return &e
+}
+
 func (e *GETRegisterTransitGatewayMulticastGroupMembersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RegisterTransitGatewayMulticastGroupMembers":
-		*e = GETRegisterTransitGatewayMulticastGroupMembersActionEnum(s)
+		*e = GETRegisterTransitGatewayMulticastGroupMembersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRegisterTransitGatewayMulticastGroupMembersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRegisterTransitGatewayMulticastGroupMembersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRegisterTransitGatewayMulticastGroupMembersVersionEnumTwoThousandAndSixteen1115 GETRegisterTransitGatewayMulticastGroupMembersVersionEnum = "2016-11-15"
 )
 
+func (e GETRegisterTransitGatewayMulticastGroupMembersVersionEnum) ToPointer() *GETRegisterTransitGatewayMulticastGroupMembersVersionEnum {
+	return &e
+}
+
 func (e *GETRegisterTransitGatewayMulticastGroupMembersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETRegisterTransitGatewayMulticastGroupMembersVersionEnum(s)
+		*e = GETRegisterTransitGatewayMulticastGroupMembersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRegisterTransitGatewayMulticastGroupMembersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRegisterTransitGatewayMulticastGroupMembersVersionEnum: %v", v)
 	}
 }
 

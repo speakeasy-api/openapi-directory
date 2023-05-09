@@ -23,12 +23,16 @@ const (
 	BeezUPCommonColumnDataTypeEnumImageURL   BeezUPCommonColumnDataTypeEnum = "ImageUrl"
 )
 
+func (e BeezUPCommonColumnDataTypeEnum) ToPointer() *BeezUPCommonColumnDataTypeEnum {
+	return &e
+}
+
 func (e *BeezUPCommonColumnDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "String":
 		fallthrough
 	case "Url":
@@ -48,9 +52,9 @@ func (e *BeezUPCommonColumnDataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Unknown":
 		fallthrough
 	case "ImageUrl":
-		*e = BeezUPCommonColumnDataTypeEnum(s)
+		*e = BeezUPCommonColumnDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BeezUPCommonColumnDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BeezUPCommonColumnDataTypeEnum: %v", v)
 	}
 }

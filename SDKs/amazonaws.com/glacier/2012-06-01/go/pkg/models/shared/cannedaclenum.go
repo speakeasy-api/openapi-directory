@@ -19,12 +19,16 @@ const (
 	CannedACLEnumBucketOwnerFullControl CannedACLEnum = "bucket-owner-full-control"
 )
 
+func (e CannedACLEnum) ToPointer() *CannedACLEnum {
+	return &e
+}
+
 func (e *CannedACLEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private":
 		fallthrough
 	case "public-read":
@@ -38,9 +42,9 @@ func (e *CannedACLEnum) UnmarshalJSON(data []byte) error {
 	case "bucket-owner-read":
 		fallthrough
 	case "bucket-owner-full-control":
-		*e = CannedACLEnum(s)
+		*e = CannedACLEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CannedACLEnum: %s", s)
+		return fmt.Errorf("invalid value for CannedACLEnum: %v", v)
 	}
 }

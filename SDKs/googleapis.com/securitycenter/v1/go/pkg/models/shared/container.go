@@ -4,12 +4,12 @@ package shared
 
 // Container - Container associated with the finding.
 type Container struct {
-	// Optional container image id, when provided by the container runtime. Uniquely identifies the container image launched using a container image digest.
+	// Optional container image ID, if provided by the container runtime. Uniquely identifies the container image launched using a container image digest.
 	ImageID *string `json:"imageId,omitempty"`
 	// Container labels, as provided by the container runtime.
 	Labels []Label `json:"labels,omitempty"`
-	// Container name.
+	// Name of the container.
 	Name *string `json:"name,omitempty"`
-	// Container image URI provided when configuring a pod/container. May identify a container image version using mutable tags.
+	// Container image URI provided when configuring a pod or container. This string can identify a container image version using mutable tags.
 	URI *string `json:"uri,omitempty"`
 }

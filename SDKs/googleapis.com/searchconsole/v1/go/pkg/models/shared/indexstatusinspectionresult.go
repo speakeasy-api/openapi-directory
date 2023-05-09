@@ -16,21 +16,25 @@ const (
 	IndexStatusInspectionResultCrawledAsEnumMobile                       IndexStatusInspectionResultCrawledAsEnum = "MOBILE"
 )
 
+func (e IndexStatusInspectionResultCrawledAsEnum) ToPointer() *IndexStatusInspectionResultCrawledAsEnum {
+	return &e
+}
+
 func (e *IndexStatusInspectionResultCrawledAsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRAWLING_USER_AGENT_UNSPECIFIED":
 		fallthrough
 	case "DESKTOP":
 		fallthrough
 	case "MOBILE":
-		*e = IndexStatusInspectionResultCrawledAsEnum(s)
+		*e = IndexStatusInspectionResultCrawledAsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IndexStatusInspectionResultCrawledAsEnum: %s", s)
+		return fmt.Errorf("invalid value for IndexStatusInspectionResultCrawledAsEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	IndexStatusInspectionResultIndexingStateEnumBlockedByRobotsTxt       IndexStatusInspectionResultIndexingStateEnum = "BLOCKED_BY_ROBOTS_TXT"
 )
 
+func (e IndexStatusInspectionResultIndexingStateEnum) ToPointer() *IndexStatusInspectionResultIndexingStateEnum {
+	return &e
+}
+
 func (e *IndexStatusInspectionResultIndexingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INDEXING_STATE_UNSPECIFIED":
 		fallthrough
 	case "INDEXING_ALLOWED":
@@ -60,10 +68,10 @@ func (e *IndexStatusInspectionResultIndexingStateEnum) UnmarshalJSON(data []byte
 	case "BLOCKED_BY_HTTP_HEADER":
 		fallthrough
 	case "BLOCKED_BY_ROBOTS_TXT":
-		*e = IndexStatusInspectionResultIndexingStateEnum(s)
+		*e = IndexStatusInspectionResultIndexingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IndexStatusInspectionResultIndexingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for IndexStatusInspectionResultIndexingStateEnum: %v", v)
 	}
 }
 
@@ -85,12 +93,16 @@ const (
 	IndexStatusInspectionResultPageFetchStateEnumInvalidURL                IndexStatusInspectionResultPageFetchStateEnum = "INVALID_URL"
 )
 
+func (e IndexStatusInspectionResultPageFetchStateEnum) ToPointer() *IndexStatusInspectionResultPageFetchStateEnum {
+	return &e
+}
+
 func (e *IndexStatusInspectionResultPageFetchStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PAGE_FETCH_STATE_UNSPECIFIED":
 		fallthrough
 	case "SUCCESSFUL":
@@ -114,10 +126,10 @@ func (e *IndexStatusInspectionResultPageFetchStateEnum) UnmarshalJSON(data []byt
 	case "INTERNAL_CRAWL_ERROR":
 		fallthrough
 	case "INVALID_URL":
-		*e = IndexStatusInspectionResultPageFetchStateEnum(s)
+		*e = IndexStatusInspectionResultPageFetchStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IndexStatusInspectionResultPageFetchStateEnum: %s", s)
+		return fmt.Errorf("invalid value for IndexStatusInspectionResultPageFetchStateEnum: %v", v)
 	}
 }
 
@@ -130,21 +142,25 @@ const (
 	IndexStatusInspectionResultRobotsTxtStateEnumDisallowed                IndexStatusInspectionResultRobotsTxtStateEnum = "DISALLOWED"
 )
 
+func (e IndexStatusInspectionResultRobotsTxtStateEnum) ToPointer() *IndexStatusInspectionResultRobotsTxtStateEnum {
+	return &e
+}
+
 func (e *IndexStatusInspectionResultRobotsTxtStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROBOTS_TXT_STATE_UNSPECIFIED":
 		fallthrough
 	case "ALLOWED":
 		fallthrough
 	case "DISALLOWED":
-		*e = IndexStatusInspectionResultRobotsTxtStateEnum(s)
+		*e = IndexStatusInspectionResultRobotsTxtStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IndexStatusInspectionResultRobotsTxtStateEnum: %s", s)
+		return fmt.Errorf("invalid value for IndexStatusInspectionResultRobotsTxtStateEnum: %v", v)
 	}
 }
 
@@ -159,12 +175,16 @@ const (
 	IndexStatusInspectionResultVerdictEnumNeutral            IndexStatusInspectionResultVerdictEnum = "NEUTRAL"
 )
 
+func (e IndexStatusInspectionResultVerdictEnum) ToPointer() *IndexStatusInspectionResultVerdictEnum {
+	return &e
+}
+
 func (e *IndexStatusInspectionResultVerdictEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERDICT_UNSPECIFIED":
 		fallthrough
 	case "PASS":
@@ -174,10 +194,10 @@ func (e *IndexStatusInspectionResultVerdictEnum) UnmarshalJSON(data []byte) erro
 	case "FAIL":
 		fallthrough
 	case "NEUTRAL":
-		*e = IndexStatusInspectionResultVerdictEnum(s)
+		*e = IndexStatusInspectionResultVerdictEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IndexStatusInspectionResultVerdictEnum: %s", s)
+		return fmt.Errorf("invalid value for IndexStatusInspectionResultVerdictEnum: %v", v)
 	}
 }
 

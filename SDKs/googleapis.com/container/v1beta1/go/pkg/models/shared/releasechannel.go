@@ -17,12 +17,16 @@ const (
 	ReleaseChannelChannelEnumStable      ReleaseChannelChannelEnum = "STABLE"
 )
 
+func (e ReleaseChannelChannelEnum) ToPointer() *ReleaseChannelChannelEnum {
+	return &e
+}
+
 func (e *ReleaseChannelChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "RAPID":
@@ -30,10 +34,10 @@ func (e *ReleaseChannelChannelEnum) UnmarshalJSON(data []byte) error {
 	case "REGULAR":
 		fallthrough
 	case "STABLE":
-		*e = ReleaseChannelChannelEnum(s)
+		*e = ReleaseChannelChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleaseChannelChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleaseChannelChannelEnum: %v", v)
 	}
 }
 

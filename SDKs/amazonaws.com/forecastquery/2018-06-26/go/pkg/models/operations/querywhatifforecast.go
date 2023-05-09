@@ -16,17 +16,21 @@ const (
 	QueryWhatIfForecastXAmzTargetEnumAmazonForecastRuntimeQueryWhatIfForecast QueryWhatIfForecastXAmzTargetEnum = "AmazonForecastRuntime.QueryWhatIfForecast"
 )
 
+func (e QueryWhatIfForecastXAmzTargetEnum) ToPointer() *QueryWhatIfForecastXAmzTargetEnum {
+	return &e
+}
+
 func (e *QueryWhatIfForecastXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecastRuntime.QueryWhatIfForecast":
-		*e = QueryWhatIfForecastXAmzTargetEnum(s)
+		*e = QueryWhatIfForecastXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryWhatIfForecastXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryWhatIfForecastXAmzTargetEnum: %v", v)
 	}
 }
 

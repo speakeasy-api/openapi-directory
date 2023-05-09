@@ -15,20 +15,24 @@ const (
 	SSLSupportMethodEnumStaticIP SSLSupportMethodEnum = "static-ip"
 )
 
+func (e SSLSupportMethodEnum) ToPointer() *SSLSupportMethodEnum {
+	return &e
+}
+
 func (e *SSLSupportMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sni-only":
 		fallthrough
 	case "vip":
 		fallthrough
 	case "static-ip":
-		*e = SSLSupportMethodEnum(s)
+		*e = SSLSupportMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SSLSupportMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for SSLSupportMethodEnum: %v", v)
 	}
 }

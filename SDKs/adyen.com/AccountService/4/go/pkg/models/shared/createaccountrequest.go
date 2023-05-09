@@ -21,15 +21,24 @@ const (
 	CreateAccountRequestPayoutScheduleEnumHold                           CreateAccountRequestPayoutScheduleEnum = "HOLD"
 	CreateAccountRequestPayoutScheduleEnumMonthly                        CreateAccountRequestPayoutScheduleEnum = "MONTHLY"
 	CreateAccountRequestPayoutScheduleEnumWeekly                         CreateAccountRequestPayoutScheduleEnum = "WEEKLY"
+	CreateAccountRequestPayoutScheduleEnumWeeklyMonToFriAu               CreateAccountRequestPayoutScheduleEnum = "WEEKLY_MON_TO_FRI_AU"
+	CreateAccountRequestPayoutScheduleEnumWeeklyMonToFriEu               CreateAccountRequestPayoutScheduleEnum = "WEEKLY_MON_TO_FRI_EU"
+	CreateAccountRequestPayoutScheduleEnumWeeklyMonToFriUs               CreateAccountRequestPayoutScheduleEnum = "WEEKLY_MON_TO_FRI_US"
 	CreateAccountRequestPayoutScheduleEnumWeeklyOnTueFriMidnight         CreateAccountRequestPayoutScheduleEnum = "WEEKLY_ON_TUE_FRI_MIDNIGHT"
+	CreateAccountRequestPayoutScheduleEnumWeeklySunToThuAu               CreateAccountRequestPayoutScheduleEnum = "WEEKLY_SUN_TO_THU_AU"
+	CreateAccountRequestPayoutScheduleEnumWeeklySunToThuUs               CreateAccountRequestPayoutScheduleEnum = "WEEKLY_SUN_TO_THU_US"
 )
 
+func (e CreateAccountRequestPayoutScheduleEnum) ToPointer() *CreateAccountRequestPayoutScheduleEnum {
+	return &e
+}
+
 func (e *CreateAccountRequestPayoutScheduleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BIWEEKLY_ON_1ST_AND_15TH_AT_MIDNIGHT":
 		fallthrough
 	case "DAILY":
@@ -48,11 +57,21 @@ func (e *CreateAccountRequestPayoutScheduleEnum) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "WEEKLY":
 		fallthrough
+	case "WEEKLY_MON_TO_FRI_AU":
+		fallthrough
+	case "WEEKLY_MON_TO_FRI_EU":
+		fallthrough
+	case "WEEKLY_MON_TO_FRI_US":
+		fallthrough
 	case "WEEKLY_ON_TUE_FRI_MIDNIGHT":
-		*e = CreateAccountRequestPayoutScheduleEnum(s)
+		fallthrough
+	case "WEEKLY_SUN_TO_THU_AU":
+		fallthrough
+	case "WEEKLY_SUN_TO_THU_US":
+		*e = CreateAccountRequestPayoutScheduleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccountRequestPayoutScheduleEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccountRequestPayoutScheduleEnum: %v", v)
 	}
 }
 

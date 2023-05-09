@@ -15,21 +15,25 @@ const (
 	CustomerInvoiceCreateDTOTypeEnumCreditNote CustomerInvoiceCreateDTOTypeEnum = "CREDIT_NOTE"
 )
 
+func (e CustomerInvoiceCreateDTOTypeEnum) ToPointer() *CustomerInvoiceCreateDTOTypeEnum {
+	return &e
+}
+
 func (e *CustomerInvoiceCreateDTOTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FINAL":
 		fallthrough
 	case "DRAFT":
 		fallthrough
 	case "CREDIT_NOTE":
-		*e = CustomerInvoiceCreateDTOTypeEnum(s)
+		*e = CustomerInvoiceCreateDTOTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomerInvoiceCreateDTOTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomerInvoiceCreateDTOTypeEnum: %v", v)
 	}
 }
 

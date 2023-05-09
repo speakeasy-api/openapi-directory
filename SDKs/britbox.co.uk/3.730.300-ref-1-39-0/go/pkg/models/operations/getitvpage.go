@@ -35,21 +35,25 @@ const (
 	GetItvPageItemDetailExpandEnumAncestors GetItvPageItemDetailExpandEnum = "ancestors"
 )
 
+func (e GetItvPageItemDetailExpandEnum) ToPointer() *GetItvPageItemDetailExpandEnum {
+	return &e
+}
+
 func (e *GetItvPageItemDetailExpandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "children":
 		fallthrough
 	case "ancestors":
-		*e = GetItvPageItemDetailExpandEnum(s)
+		*e = GetItvPageItemDetailExpandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetItvPageItemDetailExpandEnum: %s", s)
+		return fmt.Errorf("invalid value for GetItvPageItemDetailExpandEnum: %v", v)
 	}
 }
 
@@ -75,19 +79,23 @@ const (
 	GetItvPageItemDetailSelectSeasonEnumLatest GetItvPageItemDetailSelectSeasonEnum = "latest"
 )
 
+func (e GetItvPageItemDetailSelectSeasonEnum) ToPointer() *GetItvPageItemDetailSelectSeasonEnum {
+	return &e
+}
+
 func (e *GetItvPageItemDetailSelectSeasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "first":
 		fallthrough
 	case "latest":
-		*e = GetItvPageItemDetailSelectSeasonEnum(s)
+		*e = GetItvPageItemDetailSelectSeasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetItvPageItemDetailSelectSeasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GetItvPageItemDetailSelectSeasonEnum: %v", v)
 	}
 }
 
@@ -101,19 +109,23 @@ const (
 	GetItvPageTextEntryFormatEnumHTML     GetItvPageTextEntryFormatEnum = "html"
 )
 
+func (e GetItvPageTextEntryFormatEnum) ToPointer() *GetItvPageTextEntryFormatEnum {
+	return &e
+}
+
 func (e *GetItvPageTextEntryFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "markdown":
 		fallthrough
 	case "html":
-		*e = GetItvPageTextEntryFormatEnum(s)
+		*e = GetItvPageTextEntryFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetItvPageTextEntryFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetItvPageTextEntryFormatEnum: %v", v)
 	}
 }
 

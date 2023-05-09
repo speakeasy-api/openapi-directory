@@ -17,12 +17,16 @@ const (
 	FoodAndDrinkBarExceptionEnumDependentOnDayOfWeek FoodAndDrinkBarExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e FoodAndDrinkBarExceptionEnum) ToPointer() *FoodAndDrinkBarExceptionEnum {
+	return &e
+}
+
 func (e *FoodAndDrinkBarExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *FoodAndDrinkBarExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = FoodAndDrinkBarExceptionEnum(s)
+		*e = FoodAndDrinkBarExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FoodAndDrinkBarExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FoodAndDrinkBarExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	FoodAndDrinkBreakfastAvailableExceptionEnumDependentOnDayOfWeek FoodAndDrinkBreakfastAvailableExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e FoodAndDrinkBreakfastAvailableExceptionEnum) ToPointer() *FoodAndDrinkBreakfastAvailableExceptionEnum {
+	return &e
+}
+
 func (e *FoodAndDrinkBreakfastAvailableExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *FoodAndDrinkBreakfastAvailableExceptionEnum) UnmarshalJSON(data []byte)
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = FoodAndDrinkBreakfastAvailableExceptionEnum(s)
+		*e = FoodAndDrinkBreakfastAvailableExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FoodAndDrinkBreakfastAvailableExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FoodAndDrinkBreakfastAvailableExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	FoodAndDrinkBreakfastBuffetExceptionEnumDependentOnDayOfWeek FoodAndDrinkBreakfastBuffetExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e FoodAndDrinkBreakfastBuffetExceptionEnum) ToPointer() *FoodAndDrinkBreakfastBuffetExceptionEnum {
+	return &e
+}
+
 func (e *FoodAndDrinkBreakfastBuffetExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *FoodAndDrinkBreakfastBuffetExceptionEnum) UnmarshalJSON(data []byte) er
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = FoodAndDrinkBreakfastBuffetExceptionEnum(s)
+		*e = FoodAndDrinkBreakfastBuffetExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FoodAndDrinkBreakfastBuffetExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FoodAndDrinkBreakfastBuffetExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	FoodAndDrinkBuffetExceptionEnumDependentOnDayOfWeek FoodAndDrinkBuffetExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e FoodAndDrinkBuffetExceptionEnum) ToPointer() *FoodAndDrinkBuffetExceptionEnum {
+	return &e
+}
+
 func (e *FoodAndDrinkBuffetExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *FoodAndDrinkBuffetExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = FoodAndDrinkBuffetExceptionEnum(s)
+		*e = FoodAndDrinkBuffetExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FoodAndDrinkBuffetExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FoodAndDrinkBuffetExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	FoodAndDrinkDinnerBuffetExceptionEnumDependentOnDayOfWeek FoodAndDrinkDinnerBuffetExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e FoodAndDrinkDinnerBuffetExceptionEnum) ToPointer() *FoodAndDrinkDinnerBuffetExceptionEnum {
+	return &e
+}
+
 func (e *FoodAndDrinkDinnerBuffetExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *FoodAndDrinkDinnerBuffetExceptionEnum) UnmarshalJSON(data []byte) error
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = FoodAndDrinkDinnerBuffetExceptionEnum(s)
+		*e = FoodAndDrinkDinnerBuffetExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FoodAndDrinkDinnerBuffetExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FoodAndDrinkDinnerBuffetExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	FoodAndDrinkFreeBreakfastExceptionEnumDependentOnDayOfWeek FoodAndDrinkFreeBreakfastExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e FoodAndDrinkFreeBreakfastExceptionEnum) ToPointer() *FoodAndDrinkFreeBreakfastExceptionEnum {
+	return &e
+}
+
 func (e *FoodAndDrinkFreeBreakfastExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *FoodAndDrinkFreeBreakfastExceptionEnum) UnmarshalJSON(data []byte) erro
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = FoodAndDrinkFreeBreakfastExceptionEnum(s)
+		*e = FoodAndDrinkFreeBreakfastExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FoodAndDrinkFreeBreakfastExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FoodAndDrinkFreeBreakfastExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	FoodAndDrinkRestaurantExceptionEnumDependentOnDayOfWeek FoodAndDrinkRestaurantExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e FoodAndDrinkRestaurantExceptionEnum) ToPointer() *FoodAndDrinkRestaurantExceptionEnum {
+	return &e
+}
+
 func (e *FoodAndDrinkRestaurantExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *FoodAndDrinkRestaurantExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = FoodAndDrinkRestaurantExceptionEnum(s)
+		*e = FoodAndDrinkRestaurantExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FoodAndDrinkRestaurantExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FoodAndDrinkRestaurantExceptionEnum: %v", v)
 	}
 }
 
@@ -227,12 +255,16 @@ const (
 	FoodAndDrinkRestaurantsCountExceptionEnumDependentOnDayOfWeek FoodAndDrinkRestaurantsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e FoodAndDrinkRestaurantsCountExceptionEnum) ToPointer() *FoodAndDrinkRestaurantsCountExceptionEnum {
+	return &e
+}
+
 func (e *FoodAndDrinkRestaurantsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -240,10 +272,10 @@ func (e *FoodAndDrinkRestaurantsCountExceptionEnum) UnmarshalJSON(data []byte) e
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = FoodAndDrinkRestaurantsCountExceptionEnum(s)
+		*e = FoodAndDrinkRestaurantsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FoodAndDrinkRestaurantsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FoodAndDrinkRestaurantsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -257,12 +289,16 @@ const (
 	FoodAndDrinkRoomServiceExceptionEnumDependentOnDayOfWeek FoodAndDrinkRoomServiceExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e FoodAndDrinkRoomServiceExceptionEnum) ToPointer() *FoodAndDrinkRoomServiceExceptionEnum {
+	return &e
+}
+
 func (e *FoodAndDrinkRoomServiceExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -270,10 +306,10 @@ func (e *FoodAndDrinkRoomServiceExceptionEnum) UnmarshalJSON(data []byte) error 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = FoodAndDrinkRoomServiceExceptionEnum(s)
+		*e = FoodAndDrinkRoomServiceExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FoodAndDrinkRoomServiceExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FoodAndDrinkRoomServiceExceptionEnum: %v", v)
 	}
 }
 
@@ -287,12 +323,16 @@ const (
 	FoodAndDrinkTableServiceExceptionEnumDependentOnDayOfWeek FoodAndDrinkTableServiceExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e FoodAndDrinkTableServiceExceptionEnum) ToPointer() *FoodAndDrinkTableServiceExceptionEnum {
+	return &e
+}
+
 func (e *FoodAndDrinkTableServiceExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -300,10 +340,10 @@ func (e *FoodAndDrinkTableServiceExceptionEnum) UnmarshalJSON(data []byte) error
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = FoodAndDrinkTableServiceExceptionEnum(s)
+		*e = FoodAndDrinkTableServiceExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FoodAndDrinkTableServiceExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FoodAndDrinkTableServiceExceptionEnum: %v", v)
 	}
 }
 
@@ -317,12 +357,16 @@ const (
 	FoodAndDrinkTwentyFourHourRoomServiceExceptionEnumDependentOnDayOfWeek FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum) ToPointer() *FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum {
+	return &e
+}
+
 func (e *FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -330,10 +374,10 @@ func (e *FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum) UnmarshalJSON(data 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum(s)
+		*e = FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum: %v", v)
 	}
 }
 
@@ -347,12 +391,16 @@ const (
 	FoodAndDrinkVendingMachineExceptionEnumDependentOnDayOfWeek FoodAndDrinkVendingMachineExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e FoodAndDrinkVendingMachineExceptionEnum) ToPointer() *FoodAndDrinkVendingMachineExceptionEnum {
+	return &e
+}
+
 func (e *FoodAndDrinkVendingMachineExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -360,10 +408,10 @@ func (e *FoodAndDrinkVendingMachineExceptionEnum) UnmarshalJSON(data []byte) err
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = FoodAndDrinkVendingMachineExceptionEnum(s)
+		*e = FoodAndDrinkVendingMachineExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FoodAndDrinkVendingMachineExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FoodAndDrinkVendingMachineExceptionEnum: %v", v)
 	}
 }
 

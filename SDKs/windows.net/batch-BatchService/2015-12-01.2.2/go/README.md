@@ -13,28 +13,25 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/windows.net/batch-BatchSe
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ApplicationGetRequest{
+    ctx := context.Background()
+    res, err := s.Applications.ApplicationGet(ctx, operations.ApplicationGetRequest{
         APIVersion: "corrupti",
         ApplicationID: "provident",
-        ClientRequestID: "distinctio",
-        OcpDate: "quibusdam",
-        ReturnClientRequestID: false,
-        Timeout: 602763,
-    }
-
-    ctx := context.Background()
-    res, err := s.Applications.ApplicationGet(ctx, req)
+        ClientRequestID: sdk.String("distinctio"),
+        OcpDate: sdk.String("quibusdam"),
+        ReturnClientRequestID: sdk.Bool(false),
+        Timeout: sdk.Int(602763),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -50,99 +47,99 @@ func main() {
 ## Available Resources and Operations
 
 
-### Applications
+### [Applications](docs/applications/README.md)
 
-* `ApplicationGet` - Gets information about the specified application.
-* `ApplicationList` - Lists all of the applications available in the specified account.
+* [ApplicationGet](docs/applications/README.md#applicationget) - Gets information about the specified application.
+* [ApplicationList](docs/applications/README.md#applicationlist) - Lists all of the applications available in the specified account.
 
-### Certificates
+### [Certificates](docs/certificates/README.md)
 
-* `CertificateAdd` - Adds a certificate to the specified account.
-* `CertificateCancelDeletion` - Cancels a failed deletion of a certificate from the specified account.
-* `CertificateDelete` - Deletes a certificate from the specified account.
-* `CertificateGet` - Gets information about the specified certificate.
-* `CertificateList` - Lists all of the certificates that have been added to the specified account.
+* [CertificateAdd](docs/certificates/README.md#certificateadd) - Adds a certificate to the specified account.
+* [CertificateCancelDeletion](docs/certificates/README.md#certificatecanceldeletion) - Cancels a failed deletion of a certificate from the specified account.
+* [CertificateDelete](docs/certificates/README.md#certificatedelete) - Deletes a certificate from the specified account.
+* [CertificateGet](docs/certificates/README.md#certificateget) - Gets information about the specified certificate.
+* [CertificateList](docs/certificates/README.md#certificatelist) - Lists all of the certificates that have been added to the specified account.
 
-### ComputeNodes
+### [ComputeNodes](docs/computenodes/README.md)
 
-* `ComputeNodeAddUser` - Adds a user account to the specified compute node.
-* `ComputeNodeDeleteUser` - Deletes a user account from the specified compute node.
-* `ComputeNodeDisableScheduling` - Disable task scheduling of the specified compute node.
-* `ComputeNodeEnableScheduling` - Enable task scheduling of the specified compute node.
-* `ComputeNodeGet` - Gets information about the specified compute node.
-* `ComputeNodeGetRemoteDesktop` - Gets the Remote Desktop Protocol file for the specified compute node.
-* `ComputeNodeList` - Lists the compute nodes in the specified pool.
-* `ComputeNodeReboot` - Restarts the specified compute node.
-* `ComputeNodeReimage` - Reinstalls the operating system on the specified compute node.
-* `ComputeNodeUpdateUser` - Updates the password or expiration time of a user account on the specified compute node.
-* `PoolRemoveNodes` - Removes compute nodes from the specified pool.
+* [ComputeNodeAddUser](docs/computenodes/README.md#computenodeadduser) - Adds a user account to the specified compute node.
+* [ComputeNodeDeleteUser](docs/computenodes/README.md#computenodedeleteuser) - Deletes a user account from the specified compute node.
+* [ComputeNodeDisableScheduling](docs/computenodes/README.md#computenodedisablescheduling) - Disable task scheduling of the specified compute node.
+* [ComputeNodeEnableScheduling](docs/computenodes/README.md#computenodeenablescheduling) - Enable task scheduling of the specified compute node.
+* [ComputeNodeGet](docs/computenodes/README.md#computenodeget) - Gets information about the specified compute node.
+* [ComputeNodeGetRemoteDesktop](docs/computenodes/README.md#computenodegetremotedesktop) - Gets the Remote Desktop Protocol file for the specified compute node.
+* [ComputeNodeList](docs/computenodes/README.md#computenodelist) - Lists the compute nodes in the specified pool.
+* [ComputeNodeReboot](docs/computenodes/README.md#computenodereboot) - Restarts the specified compute node.
+* [ComputeNodeReimage](docs/computenodes/README.md#computenodereimage) - Reinstalls the operating system on the specified compute node.
+* [ComputeNodeUpdateUser](docs/computenodes/README.md#computenodeupdateuser) - Updates the password or expiration time of a user account on the specified compute node.
+* [PoolRemoveNodes](docs/computenodes/README.md#poolremovenodes) - Removes compute nodes from the specified pool.
 
-### Files
+### [Files](docs/files/README.md)
 
-* `FileDeleteFromComputeNode` - Deletes the specified task file from the compute node.
-* `FileDeleteFromTask` - Deletes the specified task file from the compute node where the task ran.
-* `FileGetFromComputeNode` - Gets the content of the specified task file.
-* `FileGetFromTask` - Gets the content of the specified task file.
-* `FileGetNodeFilePropertiesFromComputeNode` - Gets the properties of the specified compute node file.
-* `FileGetNodeFilePropertiesFromTask` - Gets the properties of the specified task file.
-* `FileListFromComputeNode` - Lists all of the files in task directories on the specified compute node.
-* `FileListFromTask` - Lists the files in a task's directory on its compute node.
+* [FileDeleteFromComputeNode](docs/files/README.md#filedeletefromcomputenode) - Deletes the specified task file from the compute node.
+* [FileDeleteFromTask](docs/files/README.md#filedeletefromtask) - Deletes the specified task file from the compute node where the task ran.
+* [FileGetFromComputeNode](docs/files/README.md#filegetfromcomputenode) - Gets the content of the specified task file.
+* [FileGetFromTask](docs/files/README.md#filegetfromtask) - Gets the content of the specified task file.
+* [FileGetNodeFilePropertiesFromComputeNode](docs/files/README.md#filegetnodefilepropertiesfromcomputenode) - Gets the properties of the specified compute node file.
+* [FileGetNodeFilePropertiesFromTask](docs/files/README.md#filegetnodefilepropertiesfromtask) - Gets the properties of the specified task file.
+* [FileListFromComputeNode](docs/files/README.md#filelistfromcomputenode) - Lists all of the files in task directories on the specified compute node.
+* [FileListFromTask](docs/files/README.md#filelistfromtask) - Lists the files in a task's directory on its compute node.
 
-### JobSchedules
+### [JobSchedules](docs/jobschedules/README.md)
 
-* `JobScheduleAdd` - Adds a job schedule to the specified account.
-* `JobScheduleDelete` - Deletes a job schedule from the specified account.
-* `JobScheduleDisable` - Disables a job schedule.
-* `JobScheduleEnable` - Enables a job schedule.
-* `JobScheduleExists` - Checks the specified job schedule exists.
-* `JobScheduleGet` - Gets information about the specified job schedule.
-* `JobScheduleList` - Lists all of the job schedules in the specified account.
-* `JobSchedulePatch` - Updates the properties of the specified job schedule.
-* `JobScheduleTerminate` - Terminates a job schedule.
-* `JobScheduleUpdate` - Updates the properties of the specified job schedule.
+* [JobScheduleAdd](docs/jobschedules/README.md#jobscheduleadd) - Adds a job schedule to the specified account.
+* [JobScheduleDelete](docs/jobschedules/README.md#jobscheduledelete) - Deletes a job schedule from the specified account.
+* [JobScheduleDisable](docs/jobschedules/README.md#jobscheduledisable) - Disables a job schedule.
+* [JobScheduleEnable](docs/jobschedules/README.md#jobscheduleenable) - Enables a job schedule.
+* [JobScheduleExists](docs/jobschedules/README.md#jobscheduleexists) - Checks the specified job schedule exists.
+* [JobScheduleGet](docs/jobschedules/README.md#jobscheduleget) - Gets information about the specified job schedule.
+* [JobScheduleList](docs/jobschedules/README.md#jobschedulelist) - Lists all of the job schedules in the specified account.
+* [JobSchedulePatch](docs/jobschedules/README.md#jobschedulepatch) - Updates the properties of the specified job schedule.
+* [JobScheduleTerminate](docs/jobschedules/README.md#jobscheduleterminate) - Terminates a job schedule.
+* [JobScheduleUpdate](docs/jobschedules/README.md#jobscheduleupdate) - Updates the properties of the specified job schedule.
 
-### Jobs
+### [Jobs](docs/jobs/README.md)
 
-* `JobAdd` - Adds a job to the specified account.
-* `JobDelete` - Deletes a job.
-* `JobDisable` - Disables the specified job, preventing new tasks from running.
-* `JobEnable` - Enables the specified job, allowing new tasks to run.
-* `JobGet` - Gets information about the specified job.
-* `JobGetAllJobsLifetimeStatistics` - Gets lifetime summary statistics for all of the jobs in the specified account. Statistics are aggregated across all jobs that have ever existed in the account, from account creation to the last update time of the statistics.
-* `JobList` - Lists all of the jobs in the specified account.
-* `JobListFromJobSchedule` - Lists the jobs that have been created under the specified job schedule.
-* `JobListPreparationAndReleaseTaskStatus` - Lists the execution status of the Job Preparation and Job Release task for the specified job across the compute nodes where the job has run.
-* `JobPatch` - Updates the properties of a job.
-* `JobTerminate` - Terminates the specified job, marking it as completed.
-* `JobUpdate` - Updates the properties of a job.
+* [JobAdd](docs/jobs/README.md#jobadd) - Adds a job to the specified account.
+* [JobDelete](docs/jobs/README.md#jobdelete) - Deletes a job.
+* [JobDisable](docs/jobs/README.md#jobdisable) - Disables the specified job, preventing new tasks from running.
+* [JobEnable](docs/jobs/README.md#jobenable) - Enables the specified job, allowing new tasks to run.
+* [JobGet](docs/jobs/README.md#jobget) - Gets information about the specified job.
+* [JobGetAllJobsLifetimeStatistics](docs/jobs/README.md#jobgetalljobslifetimestatistics) - Gets lifetime summary statistics for all of the jobs in the specified account. Statistics are aggregated across all jobs that have ever existed in the account, from account creation to the last update time of the statistics.
+* [JobList](docs/jobs/README.md#joblist) - Lists all of the jobs in the specified account.
+* [JobListFromJobSchedule](docs/jobs/README.md#joblistfromjobschedule) - Lists the jobs that have been created under the specified job schedule.
+* [JobListPreparationAndReleaseTaskStatus](docs/jobs/README.md#joblistpreparationandreleasetaskstatus) - Lists the execution status of the Job Preparation and Job Release task for the specified job across the compute nodes where the job has run.
+* [JobPatch](docs/jobs/README.md#jobpatch) - Updates the properties of a job.
+* [JobTerminate](docs/jobs/README.md#jobterminate) - Terminates the specified job, marking it as completed.
+* [JobUpdate](docs/jobs/README.md#jobupdate) - Updates the properties of a job.
 
-### Pools
+### [Pools](docs/pools/README.md)
 
-* `PoolAdd` - Adds a pool to the specified account.
-* `PoolDelete` - Deletes a pool from the specified account.
-* `PoolDisableAutoScale` - Disables automatic scaling for a pool.
-* `PoolEnableAutoScale` - Enables automatic scaling for a pool.
-* `PoolEvaluateAutoScale` - Gets the result of evaluating an automatic scaling formula on the pool.
-* `PoolExists` - Gets basic properties of a pool.
-* `PoolGet` - Gets information about the specified pool.
-* `PoolGetAllPoolsLifetimeStatistics` - Gets lifetime summary statistics for all of the pools in the specified account. Statistics are aggregated across all pools that have ever existed in the account, from account creation to the last update time of the statistics.
-* `PoolList` - Lists all of the pools in the specified account.
-* `PoolListPoolUsageMetrics` - Lists the usage metrics, aggregated by pool across individual time intervals, for the specified account.
-* `PoolPatch` - Updates the properties of a pool.
-* `PoolResize` - Changes the number of compute nodes that are assigned to a pool.
-* `PoolStopResize` - Stops an ongoing resize operation on the pool. This does not restore the pool to its previous state before the resize operation: it only stops any further changes being made, and the pool maintains its current state.
-* `PoolUpdateProperties` - Updates the properties of a pool.
-* `PoolUpgradeOS` - Upgrades the operating system of the specified pool.
+* [PoolAdd](docs/pools/README.md#pooladd) - Adds a pool to the specified account.
+* [PoolDelete](docs/pools/README.md#pooldelete) - Deletes a pool from the specified account.
+* [PoolDisableAutoScale](docs/pools/README.md#pooldisableautoscale) - Disables automatic scaling for a pool.
+* [PoolEnableAutoScale](docs/pools/README.md#poolenableautoscale) - Enables automatic scaling for a pool.
+* [PoolEvaluateAutoScale](docs/pools/README.md#poolevaluateautoscale) - Gets the result of evaluating an automatic scaling formula on the pool.
+* [PoolExists](docs/pools/README.md#poolexists) - Gets basic properties of a pool.
+* [PoolGet](docs/pools/README.md#poolget) - Gets information about the specified pool.
+* [PoolGetAllPoolsLifetimeStatistics](docs/pools/README.md#poolgetallpoolslifetimestatistics) - Gets lifetime summary statistics for all of the pools in the specified account. Statistics are aggregated across all pools that have ever existed in the account, from account creation to the last update time of the statistics.
+* [PoolList](docs/pools/README.md#poollist) - Lists all of the pools in the specified account.
+* [PoolListPoolUsageMetrics](docs/pools/README.md#poollistpoolusagemetrics) - Lists the usage metrics, aggregated by pool across individual time intervals, for the specified account.
+* [PoolPatch](docs/pools/README.md#poolpatch) - Updates the properties of a pool.
+* [PoolResize](docs/pools/README.md#poolresize) - Changes the number of compute nodes that are assigned to a pool.
+* [PoolStopResize](docs/pools/README.md#poolstopresize) - Stops an ongoing resize operation on the pool. This does not restore the pool to its previous state before the resize operation: it only stops any further changes being made, and the pool maintains its current state.
+* [PoolUpdateProperties](docs/pools/README.md#poolupdateproperties) - Updates the properties of a pool.
+* [PoolUpgradeOS](docs/pools/README.md#poolupgradeos) - Upgrades the operating system of the specified pool.
 
-### Tasks
+### [Tasks](docs/tasks/README.md)
 
-* `TaskAdd` - Adds a task to the specified job.
-* `TaskDelete` - Deletes a task from the specified job.
-* `TaskGet` - Gets information about the specified task.
-* `TaskList` - Lists all of the tasks that are associated with the specified job.
-* `TaskListSubtasks` - Lists all of the subtasks that are associated with the specified multi-instance task.
-* `TaskTerminate` - Terminates the specified task.
-* `TaskUpdate` - Updates the properties of the specified task.
+* [TaskAdd](docs/tasks/README.md#taskadd) - Adds a task to the specified job.
+* [TaskDelete](docs/tasks/README.md#taskdelete) - Deletes a task from the specified job.
+* [TaskGet](docs/tasks/README.md#taskget) - Gets information about the specified task.
+* [TaskList](docs/tasks/README.md#tasklist) - Lists all of the tasks that are associated with the specified job.
+* [TaskListSubtasks](docs/tasks/README.md#tasklistsubtasks) - Lists all of the subtasks that are associated with the specified multi-instance task.
+* [TaskTerminate](docs/tasks/README.md#taskterminate) - Terminates the specified task.
+* [TaskUpdate](docs/tasks/README.md#taskupdate) - Updates the properties of the specified task.
 <!-- End SDK Available Operations -->
 
 ### Maturity

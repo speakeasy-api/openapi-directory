@@ -15,17 +15,21 @@ const (
 	POSTModifyTargetGroupActionEnumModifyTargetGroup POSTModifyTargetGroupActionEnum = "ModifyTargetGroup"
 )
 
+func (e POSTModifyTargetGroupActionEnum) ToPointer() *POSTModifyTargetGroupActionEnum {
+	return &e
+}
+
 func (e *POSTModifyTargetGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyTargetGroup":
-		*e = POSTModifyTargetGroupActionEnum(s)
+		*e = POSTModifyTargetGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyTargetGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyTargetGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyTargetGroupVersionEnumTwoThousandAndFifteen1201 POSTModifyTargetGroupVersionEnum = "2015-12-01"
 )
 
+func (e POSTModifyTargetGroupVersionEnum) ToPointer() *POSTModifyTargetGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyTargetGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = POSTModifyTargetGroupVersionEnum(s)
+		*e = POSTModifyTargetGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyTargetGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyTargetGroupVersionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CreateModelQualityJobDefinitionXAmzTargetEnumSageMakerCreateModelQualityJobDefinition CreateModelQualityJobDefinitionXAmzTargetEnum = "SageMaker.CreateModelQualityJobDefinition"
 )
 
+func (e CreateModelQualityJobDefinitionXAmzTargetEnum) ToPointer() *CreateModelQualityJobDefinitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateModelQualityJobDefinitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreateModelQualityJobDefinition":
-		*e = CreateModelQualityJobDefinitionXAmzTargetEnum(s)
+		*e = CreateModelQualityJobDefinitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateModelQualityJobDefinitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateModelQualityJobDefinitionXAmzTargetEnum: %v", v)
 	}
 }
 

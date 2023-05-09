@@ -22,19 +22,23 @@ const (
 	SingleSignOnRequestCookieTypeEnumPersistent SingleSignOnRequestCookieTypeEnum = "Persistent"
 )
 
+func (e SingleSignOnRequestCookieTypeEnum) ToPointer() *SingleSignOnRequestCookieTypeEnum {
+	return &e
+}
+
 func (e *SingleSignOnRequestCookieTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Session":
 		fallthrough
 	case "Persistent":
-		*e = SingleSignOnRequestCookieTypeEnum(s)
+		*e = SingleSignOnRequestCookieTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SingleSignOnRequestCookieTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SingleSignOnRequestCookieTypeEnum: %v", v)
 	}
 }
 
@@ -45,17 +49,21 @@ const (
 	SingleSignOnRequestProviderEnumFacebook SingleSignOnRequestProviderEnum = "Facebook"
 )
 
+func (e SingleSignOnRequestProviderEnum) ToPointer() *SingleSignOnRequestProviderEnum {
+	return &e
+}
+
 func (e *SingleSignOnRequestProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Facebook":
-		*e = SingleSignOnRequestProviderEnum(s)
+		*e = SingleSignOnRequestProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SingleSignOnRequestProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for SingleSignOnRequestProviderEnum: %v", v)
 	}
 }
 
@@ -68,12 +76,16 @@ const (
 	SingleSignOnRequestScopesEnumPlayback SingleSignOnRequestScopesEnum = "Playback"
 )
 
+func (e SingleSignOnRequestScopesEnum) ToPointer() *SingleSignOnRequestScopesEnum {
+	return &e
+}
+
 func (e *SingleSignOnRequestScopesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Catalog":
 		fallthrough
 	case "Commerce":
@@ -81,10 +93,10 @@ func (e *SingleSignOnRequestScopesEnum) UnmarshalJSON(data []byte) error {
 	case "Settings":
 		fallthrough
 	case "Playback":
-		*e = SingleSignOnRequestScopesEnum(s)
+		*e = SingleSignOnRequestScopesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SingleSignOnRequestScopesEnum: %s", s)
+		return fmt.Errorf("invalid value for SingleSignOnRequestScopesEnum: %v", v)
 	}
 }
 

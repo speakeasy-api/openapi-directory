@@ -23,12 +23,16 @@ const (
 	GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnumExcel               GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum = "EXCEL"
 )
 
+func (e GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum) ToPointer() *GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BINARY_FILE":
@@ -50,10 +54,10 @@ func (e *GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum) UnmarshalJSON(data 
 	case "POWERPOINT":
 		fallthrough
 	case "EXCEL":
-		*e = GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum(s)
+		*e = GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum: %v", v)
 	}
 }
 
@@ -65,21 +69,25 @@ const (
 	GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnumRandomStart             GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum = "RANDOM_START"
 )
 
+func (e GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum) ToPointer() *GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SAMPLE_METHOD_UNSPECIFIED":
 		fallthrough
 	case "TOP":
 		fallthrough
 	case "RANDOM_START":
-		*e = GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum(s)
+		*e = GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum: %v", v)
 	}
 }
 

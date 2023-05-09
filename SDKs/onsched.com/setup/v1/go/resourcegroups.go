@@ -36,7 +36,10 @@ func newResourceGroups(defaultClient, securityClient HTTPClient, serverURL, lang
 // <p>Use this endpoint to <b>Delete</b> a resourceGroup object. A valid <b>resourceGroup id</b> is required. The resource group is not permanently deleted and can be recovered by using the <i>PUT ​/setup​/v1​/resourcegroups​/{id}​/recover</i> endpoint.</p>
 func (s *resourceGroups) DeleteSetupV1ResourcegroupsID(ctx context.Context, request operations.DeleteSetupV1ResourcegroupsIDRequest) (*operations.DeleteSetupV1ResourcegroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/resourcegroups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/resourcegroups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -131,7 +134,10 @@ func (s *resourceGroups) GetSetupV1Resourcegroups(ctx context.Context, request o
 // <p>Use this endpoint to return a <b>Resource Group</b> object. A valid <b>resourceGroup id</b> is required. Find resourceGroup id's by using the <i>GET setup/v1/resourceGroups</i> endpoint.</p>
 func (s *resourceGroups) GetSetupV1ResourcegroupsID(ctx context.Context, request operations.GetSetupV1ResourcegroupsIDRequest) (*operations.GetSetupV1ResourcegroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/resourcegroups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/resourcegroups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -228,7 +234,10 @@ func (s *resourceGroups) PostSetupV1Resourcegroups(ctx context.Context, request 
 // <p>Use this endpoint to <b>Update</b> a resourceGroup object. A valid <b>resourceGroup id</b> is required. </p>
 func (s *resourceGroups) PutSetupV1ResourcegroupsID(ctx context.Context, request operations.PutSetupV1ResourcegroupsIDRequest) (*operations.PutSetupV1ResourcegroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/resourcegroups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/resourcegroups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResourceGroupUpdateModel", "json")
 	if err != nil {
@@ -280,7 +289,10 @@ func (s *resourceGroups) PutSetupV1ResourcegroupsID(ctx context.Context, request
 // <p>Use this endpoint to <b>Recover</b> a deleted resourceGroup object. A valid <b>resourceGroup id</b> is required.</p>
 func (s *resourceGroups) PutSetupV1ResourcegroupsIDRecover(ctx context.Context, request operations.PutSetupV1ResourcegroupsIDRecoverRequest) (*operations.PutSetupV1ResourcegroupsIDRecoverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/resourcegroups/{id}/recover", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/resourcegroups/{id}/recover", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

@@ -85,7 +85,10 @@ func (s *backups) CreateBackup(ctx context.Context, request operations.CreateBac
 // DownloadBackup - Download backup
 func (s *backups) DownloadBackup(ctx context.Context, request operations.DownloadBackupRequest) (*operations.DownloadBackupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/backups/{filename}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/backups/{filename}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -168,7 +171,10 @@ func (s *backups) GetBackups(ctx context.Context) (*operations.GetBackupsRespons
 // SendDownloadBackupEmail - Send download backup email
 func (s *backups) SendDownloadBackupEmail(ctx context.Context, request operations.SendDownloadBackupEmailRequest) (*operations.SendDownloadBackupEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/backups/{filename}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/backups/{filename}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

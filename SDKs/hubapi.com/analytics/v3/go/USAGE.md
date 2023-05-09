@@ -2,32 +2,31 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.BehavioralEventHTTPCompletionRequest{
-        Email: "Larue_Rau85@yahoo.com",
+    ctx := context.Background()
+    res, err := s.BehavioralEventsTracking.PostEventsV3Send(ctx, shared.BehavioralEventHTTPCompletionRequest{
+        Email: sdk.String("Larue_Rau85@yahoo.com"),
         EventName: "corrupti",
-        ObjectID: "illum",
-        OccurredAt: "2022-05-18T09:34:54.894Z",
+        ObjectID: sdk.String("illum"),
+        OccurredAt: types.MustTimeFromString("2022-05-18T09:34:54.894Z"),
         Properties: map[string]string{
             "suscipit": "iure",
             "magnam": "debitis",
             "ipsa": "delectus",
         },
-        Utk: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.BehavioralEventsTracking.PostEventsV3Send(ctx, req, operations.PostEventsV3SendSecurity{
+        Utk: sdk.String("tempora"),
+    }, operations.PostEventsV3SendSecurity{
         Hapikey: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {

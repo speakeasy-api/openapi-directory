@@ -27,21 +27,25 @@ const (
 	OBWriteInternationalScheduledResponse6DataExchangeRateInformationRateTypeEnumIndicative OBWriteInternationalScheduledResponse6DataExchangeRateInformationRateTypeEnum = "Indicative"
 )
 
+func (e OBWriteInternationalScheduledResponse6DataExchangeRateInformationRateTypeEnum) ToPointer() *OBWriteInternationalScheduledResponse6DataExchangeRateInformationRateTypeEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalScheduledResponse6DataExchangeRateInformationRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Actual":
 		fallthrough
 	case "Agreed":
 		fallthrough
 	case "Indicative":
-		*e = OBWriteInternationalScheduledResponse6DataExchangeRateInformationRateTypeEnum(s)
+		*e = OBWriteInternationalScheduledResponse6DataExchangeRateInformationRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalScheduledResponse6DataExchangeRateInformationRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalScheduledResponse6DataExchangeRateInformationRateTypeEnum: %v", v)
 	}
 }
 
@@ -119,21 +123,25 @@ const (
 	OBWriteInternationalScheduledResponse6DataInitiationExchangeRateInformationRateTypeEnumIndicative OBWriteInternationalScheduledResponse6DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
 )
 
+func (e OBWriteInternationalScheduledResponse6DataInitiationExchangeRateInformationRateTypeEnum) ToPointer() *OBWriteInternationalScheduledResponse6DataInitiationExchangeRateInformationRateTypeEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalScheduledResponse6DataInitiationExchangeRateInformationRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Actual":
 		fallthrough
 	case "Agreed":
 		fallthrough
 	case "Indicative":
-		*e = OBWriteInternationalScheduledResponse6DataInitiationExchangeRateInformationRateTypeEnum(s)
+		*e = OBWriteInternationalScheduledResponse6DataInitiationExchangeRateInformationRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalScheduledResponse6DataInitiationExchangeRateInformationRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalScheduledResponse6DataInitiationExchangeRateInformationRateTypeEnum: %v", v)
 	}
 }
 
@@ -166,19 +174,23 @@ const (
 	OBWriteInternationalScheduledResponse6DataInitiationInstructionPriorityEnumUrgent OBWriteInternationalScheduledResponse6DataInitiationInstructionPriorityEnum = "Urgent"
 )
 
+func (e OBWriteInternationalScheduledResponse6DataInitiationInstructionPriorityEnum) ToPointer() *OBWriteInternationalScheduledResponse6DataInitiationInstructionPriorityEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalScheduledResponse6DataInitiationInstructionPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Normal":
 		fallthrough
 	case "Urgent":
-		*e = OBWriteInternationalScheduledResponse6DataInitiationInstructionPriorityEnum(s)
+		*e = OBWriteInternationalScheduledResponse6DataInitiationInstructionPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalScheduledResponse6DataInitiationInstructionPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalScheduledResponse6DataInitiationInstructionPriorityEnum: %v", v)
 	}
 }
 
@@ -252,21 +264,25 @@ const (
 	OBWriteInternationalScheduledResponse6DataMultiAuthorisationStatusEnumRejected                     OBWriteInternationalScheduledResponse6DataMultiAuthorisationStatusEnum = "Rejected"
 )
 
+func (e OBWriteInternationalScheduledResponse6DataMultiAuthorisationStatusEnum) ToPointer() *OBWriteInternationalScheduledResponse6DataMultiAuthorisationStatusEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalScheduledResponse6DataMultiAuthorisationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authorised":
 		fallthrough
 	case "AwaitingFurtherAuthorisation":
 		fallthrough
 	case "Rejected":
-		*e = OBWriteInternationalScheduledResponse6DataMultiAuthorisationStatusEnum(s)
+		*e = OBWriteInternationalScheduledResponse6DataMultiAuthorisationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalScheduledResponse6DataMultiAuthorisationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalScheduledResponse6DataMultiAuthorisationStatusEnum: %v", v)
 	}
 }
 
@@ -342,12 +358,16 @@ const (
 	OBWriteInternationalScheduledResponse6DataStatusEnumInitiationPending   OBWriteInternationalScheduledResponse6DataStatusEnum = "InitiationPending"
 )
 
+func (e OBWriteInternationalScheduledResponse6DataStatusEnum) ToPointer() *OBWriteInternationalScheduledResponse6DataStatusEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalScheduledResponse6DataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cancelled":
 		fallthrough
 	case "InitiationCompleted":
@@ -355,10 +375,10 @@ func (e *OBWriteInternationalScheduledResponse6DataStatusEnum) UnmarshalJSON(dat
 	case "InitiationFailed":
 		fallthrough
 	case "InitiationPending":
-		*e = OBWriteInternationalScheduledResponse6DataStatusEnum(s)
+		*e = OBWriteInternationalScheduledResponse6DataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalScheduledResponse6DataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalScheduledResponse6DataStatusEnum: %v", v)
 	}
 }
 

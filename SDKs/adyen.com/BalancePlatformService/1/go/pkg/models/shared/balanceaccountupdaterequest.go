@@ -19,12 +19,16 @@ const (
 	BalanceAccountUpdateRequestStatusEnumSuspended BalanceAccountUpdateRequestStatusEnum = "Suspended"
 )
 
+func (e BalanceAccountUpdateRequestStatusEnum) ToPointer() *BalanceAccountUpdateRequestStatusEnum {
+	return &e
+}
+
 func (e *BalanceAccountUpdateRequestStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Closed":
@@ -32,10 +36,10 @@ func (e *BalanceAccountUpdateRequestStatusEnum) UnmarshalJSON(data []byte) error
 	case "Inactive":
 		fallthrough
 	case "Suspended":
-		*e = BalanceAccountUpdateRequestStatusEnum(s)
+		*e = BalanceAccountUpdateRequestStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BalanceAccountUpdateRequestStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BalanceAccountUpdateRequestStatusEnum: %v", v)
 	}
 }
 

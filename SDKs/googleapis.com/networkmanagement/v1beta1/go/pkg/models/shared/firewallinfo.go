@@ -19,12 +19,16 @@ const (
 	FirewallInfoFirewallRuleTypeEnumNetworkFirewallPolicyRule              FirewallInfoFirewallRuleTypeEnum = "NETWORK_FIREWALL_POLICY_RULE"
 )
 
+func (e FirewallInfoFirewallRuleTypeEnum) ToPointer() *FirewallInfoFirewallRuleTypeEnum {
+	return &e
+}
+
 func (e *FirewallInfoFirewallRuleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIREWALL_RULE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "HIERARCHICAL_FIREWALL_POLICY_RULE":
@@ -36,10 +40,10 @@ func (e *FirewallInfoFirewallRuleTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SERVERLESS_VPC_ACCESS_MANAGED_FIREWALL_RULE":
 		fallthrough
 	case "NETWORK_FIREWALL_POLICY_RULE":
-		*e = FirewallInfoFirewallRuleTypeEnum(s)
+		*e = FirewallInfoFirewallRuleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirewallInfoFirewallRuleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FirewallInfoFirewallRuleTypeEnum: %v", v)
 	}
 }
 

@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - LoL v3 Projections
 type SDK struct {
 
@@ -106,7 +121,10 @@ func New(opts ...SDKOption) *SDK {
 // DfsSlatesByDate - Dfs Slates By Date
 func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesByDateRequest) (*operations.DfsSlatesByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlatesByDate/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlatesByDate/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -151,7 +169,10 @@ func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesB
 // Projected Player Game Stats by Date
 func (s *SDK) ProjectedPlayerGameStatsByDate(ctx context.Context, request operations.ProjectedPlayerGameStatsByDateRequest) (*operations.ProjectedPlayerGameStatsByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByDate/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByDate/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -196,7 +217,10 @@ func (s *SDK) ProjectedPlayerGameStatsByDate(ctx context.Context, request operat
 // Projected Player Game Stats by Date
 func (s *SDK) ProjectedPlayerGameStatsByPlayer(ctx context.Context, request operations.ProjectedPlayerGameStatsByPlayerRequest) (*operations.ProjectedPlayerGameStatsByPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByPlayer/{date}/{playerid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByPlayer/{date}/{playerid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	SslSecurityProtocolValueEnumSslEncryption SslSecurityProtocolValueEnum = "ssl-encryption"
 )
 
+func (e SslSecurityProtocolValueEnum) ToPointer() *SslSecurityProtocolValueEnum {
+	return &e
+}
+
 func (e *SslSecurityProtocolValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "plaintext":
 		fallthrough
 	case "ssl-encryption":
-		*e = SslSecurityProtocolValueEnum(s)
+		*e = SslSecurityProtocolValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslSecurityProtocolValueEnum: %s", s)
+		return fmt.Errorf("invalid value for SslSecurityProtocolValueEnum: %v", v)
 	}
 }

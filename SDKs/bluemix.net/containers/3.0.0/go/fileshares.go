@@ -40,7 +40,10 @@ func newFileShares(defaultClient, securityClient HTTPClient, serverURL, language
 //	**Note:** To delete a file share you must have been granted organization developer rights.
 func (s *fileShares) DeleteVolumesFsName(ctx context.Context, request operations.DeleteVolumesFsNameRequest) (*operations.DeleteVolumesFsNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/fs/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/volumes/fs/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -186,7 +189,10 @@ func (s *fileShares) GetVolumesFsJSON(ctx context.Context, request operations.Ge
 // This endpoint returns detailed information about a file share (corresponding IBM Containers command: `cf ic volume fs-inspect FSNAME`).
 func (s *fileShares) GetVolumesFsNameJSON(ctx context.Context, request operations.GetVolumesFsNameJSONRequest) (*operations.GetVolumesFsNameJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/fs/{name}/json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/volumes/fs/{name}/json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

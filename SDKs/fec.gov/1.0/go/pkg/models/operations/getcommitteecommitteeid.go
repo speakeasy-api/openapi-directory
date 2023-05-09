@@ -31,12 +31,16 @@ const (
 	GetCommitteeCommitteeIDCommitteeTypeEnumZ       GetCommitteeCommitteeIDCommitteeTypeEnum = "Z"
 )
 
+func (e GetCommitteeCommitteeIDCommitteeTypeEnum) ToPointer() *GetCommitteeCommitteeIDCommitteeTypeEnum {
+	return &e
+}
+
 func (e *GetCommitteeCommitteeIDCommitteeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "C":
@@ -70,10 +74,10 @@ func (e *GetCommitteeCommitteeIDCommitteeTypeEnum) UnmarshalJSON(data []byte) er
 	case "Y":
 		fallthrough
 	case "Z":
-		*e = GetCommitteeCommitteeIDCommitteeTypeEnum(s)
+		*e = GetCommitteeCommitteeIDCommitteeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommitteeCommitteeIDCommitteeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommitteeCommitteeIDCommitteeTypeEnum: %v", v)
 	}
 }
 
@@ -89,12 +93,16 @@ const (
 	GetCommitteeCommitteeIDDesignationEnumD       GetCommitteeCommitteeIDDesignationEnum = "D"
 )
 
+func (e GetCommitteeCommitteeIDDesignationEnum) ToPointer() *GetCommitteeCommitteeIDDesignationEnum {
+	return &e
+}
+
 func (e *GetCommitteeCommitteeIDDesignationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "A":
@@ -108,10 +116,10 @@ func (e *GetCommitteeCommitteeIDDesignationEnum) UnmarshalJSON(data []byte) erro
 	case "B":
 		fallthrough
 	case "D":
-		*e = GetCommitteeCommitteeIDDesignationEnum(s)
+		*e = GetCommitteeCommitteeIDDesignationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommitteeCommitteeIDDesignationEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommitteeCommitteeIDDesignationEnum: %v", v)
 	}
 }
 
@@ -129,12 +137,16 @@ const (
 	GetCommitteeCommitteeIDFilingFrequencyEnumMinusT  GetCommitteeCommitteeIDFilingFrequencyEnum = "-T"
 )
 
+func (e GetCommitteeCommitteeIDFilingFrequencyEnum) ToPointer() *GetCommitteeCommitteeIDFilingFrequencyEnum {
+	return &e
+}
+
 func (e *GetCommitteeCommitteeIDFilingFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "A":
@@ -152,10 +164,10 @@ func (e *GetCommitteeCommitteeIDFilingFrequencyEnum) UnmarshalJSON(data []byte) 
 	case "-A":
 		fallthrough
 	case "-T":
-		*e = GetCommitteeCommitteeIDFilingFrequencyEnum(s)
+		*e = GetCommitteeCommitteeIDFilingFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommitteeCommitteeIDFilingFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommitteeCommitteeIDFilingFrequencyEnum: %v", v)
 	}
 }
 
@@ -171,12 +183,16 @@ const (
 	GetCommitteeCommitteeIDOrganizationTypeEnumW       GetCommitteeCommitteeIDOrganizationTypeEnum = "W"
 )
 
+func (e GetCommitteeCommitteeIDOrganizationTypeEnum) ToPointer() *GetCommitteeCommitteeIDOrganizationTypeEnum {
+	return &e
+}
+
 func (e *GetCommitteeCommitteeIDOrganizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "C":
@@ -190,10 +206,10 @@ func (e *GetCommitteeCommitteeIDOrganizationTypeEnum) UnmarshalJSON(data []byte)
 	case "V":
 		fallthrough
 	case "W":
-		*e = GetCommitteeCommitteeIDOrganizationTypeEnum(s)
+		*e = GetCommitteeCommitteeIDOrganizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommitteeCommitteeIDOrganizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommitteeCommitteeIDOrganizationTypeEnum: %v", v)
 	}
 }
 

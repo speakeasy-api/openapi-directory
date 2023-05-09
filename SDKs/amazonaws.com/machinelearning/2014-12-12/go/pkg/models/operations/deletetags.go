@@ -16,17 +16,21 @@ const (
 	DeleteTagsXAmzTargetEnumAmazonMl20141212DeleteTags DeleteTagsXAmzTargetEnum = "AmazonML_20141212.DeleteTags"
 )
 
+func (e DeleteTagsXAmzTargetEnum) ToPointer() *DeleteTagsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteTagsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.DeleteTags":
-		*e = DeleteTagsXAmzTargetEnum(s)
+		*e = DeleteTagsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTagsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTagsXAmzTargetEnum: %v", v)
 	}
 }
 

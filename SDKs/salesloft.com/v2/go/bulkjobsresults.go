@@ -36,7 +36,10 @@ func newBulkJobsResults(defaultClient, securityClient HTTPClient, serverURL, lan
 // Fetches multiple job data records for a completed bulk job. Note that until a bulk job's state is set to `done` the returned `data` will be an empty array. Pagination is not supported, but cursor based polling is via use of the `id[gt]` filter. Pass the last id seen (i.e. `id[gt]=1234`) in order to get the next batch of records.
 func (s *bulkJobsResults) GetV2BulkJobsBulkJobsIDResults(ctx context.Context, request operations.GetV2BulkJobsBulkJobsIDResultsRequest) (*operations.GetV2BulkJobsBulkJobsIDResultsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/bulk_jobs/{bulk_jobs_id}/results", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/bulk_jobs/{bulk_jobs_id}/results", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

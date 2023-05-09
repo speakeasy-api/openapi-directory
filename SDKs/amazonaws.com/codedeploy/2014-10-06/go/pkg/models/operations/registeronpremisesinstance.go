@@ -16,17 +16,21 @@ const (
 	RegisterOnPremisesInstanceXAmzTargetEnumCodeDeploy20141006RegisterOnPremisesInstance RegisterOnPremisesInstanceXAmzTargetEnum = "CodeDeploy_20141006.RegisterOnPremisesInstance"
 )
 
+func (e RegisterOnPremisesInstanceXAmzTargetEnum) ToPointer() *RegisterOnPremisesInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterOnPremisesInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.RegisterOnPremisesInstance":
-		*e = RegisterOnPremisesInstanceXAmzTargetEnum(s)
+		*e = RegisterOnPremisesInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterOnPremisesInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterOnPremisesInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

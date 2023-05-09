@@ -15,17 +15,21 @@ const (
 	POSTTerminateClientVpnConnectionsActionEnumTerminateClientVpnConnections POSTTerminateClientVpnConnectionsActionEnum = "TerminateClientVpnConnections"
 )
 
+func (e POSTTerminateClientVpnConnectionsActionEnum) ToPointer() *POSTTerminateClientVpnConnectionsActionEnum {
+	return &e
+}
+
 func (e *POSTTerminateClientVpnConnectionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TerminateClientVpnConnections":
-		*e = POSTTerminateClientVpnConnectionsActionEnum(s)
+		*e = POSTTerminateClientVpnConnectionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTerminateClientVpnConnectionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTerminateClientVpnConnectionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTTerminateClientVpnConnectionsVersionEnumTwoThousandAndSixteen1115 POSTTerminateClientVpnConnectionsVersionEnum = "2016-11-15"
 )
 
+func (e POSTTerminateClientVpnConnectionsVersionEnum) ToPointer() *POSTTerminateClientVpnConnectionsVersionEnum {
+	return &e
+}
+
 func (e *POSTTerminateClientVpnConnectionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTTerminateClientVpnConnectionsVersionEnum(s)
+		*e = POSTTerminateClientVpnConnectionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTerminateClientVpnConnectionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTerminateClientVpnConnectionsVersionEnum: %v", v)
 	}
 }
 

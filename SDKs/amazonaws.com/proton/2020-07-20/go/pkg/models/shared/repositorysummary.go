@@ -4,7 +4,8 @@ package shared
 
 // RepositorySummary - Summary data of a linked repository—a repository that has been registered with Proton.
 type RepositorySummary struct {
-	Arn      string                 `json:"arn"`
-	Name     string                 `json:"name"`
-	Provider RepositoryProviderEnum `json:"provider"`
+	Arn           string                 `json:"arn"`
+	ConnectionArn string                 `json:"connectionArn"`
+	Name          string                 `json:"name"`
+	Provider      RepositoryProviderEnum `json:"provider"`
 }

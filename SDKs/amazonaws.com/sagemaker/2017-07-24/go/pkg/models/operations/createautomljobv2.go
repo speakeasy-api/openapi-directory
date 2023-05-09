@@ -16,17 +16,21 @@ const (
 	CreateAutoMLJobV2XAmzTargetEnumSageMakerCreateAutoMlJobV2 CreateAutoMLJobV2XAmzTargetEnum = "SageMaker.CreateAutoMLJobV2"
 )
 
+func (e CreateAutoMLJobV2XAmzTargetEnum) ToPointer() *CreateAutoMLJobV2XAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAutoMLJobV2XAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreateAutoMLJobV2":
-		*e = CreateAutoMLJobV2XAmzTargetEnum(s)
+		*e = CreateAutoMLJobV2XAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAutoMLJobV2XAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAutoMLJobV2XAmzTargetEnum: %v", v)
 	}
 }
 

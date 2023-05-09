@@ -16,12 +16,16 @@ const (
 	PortInfoSourceTypeEnumClosed   PortInfoSourceTypeEnum = "CLOSED"
 )
 
+func (e PortInfoSourceTypeEnum) ToPointer() *PortInfoSourceTypeEnum {
+	return &e
+}
+
 func (e *PortInfoSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "INSTANCE":
@@ -29,9 +33,9 @@ func (e *PortInfoSourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NONE":
 		fallthrough
 	case "CLOSED":
-		*e = PortInfoSourceTypeEnum(s)
+		*e = PortInfoSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PortInfoSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PortInfoSourceTypeEnum: %v", v)
 	}
 }

@@ -7,8 +7,10 @@ import (
 )
 
 type UntagResourceRequestBody struct {
-	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share that you want to remove tags from. The tags are removed from the resource share, not the resources in the resource share.
-	ResourceShareArn string `json:"resourceShareArn"`
+	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of the managed permission that you want to remove tags from. You must specify either <code>resourceArn</code>, or <code>resourceShareArn</code>, but not both.
+	ResourceArn *string `json:"resourceArn,omitempty"`
+	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of the resource share that you want to remove tags from. The tags are removed from the resource share, not the resources in the resource share. You must specify either <code>resourceShareArn</code>, or <code>resourceArn</code>, but not both.
+	ResourceShareArn *string `json:"resourceShareArn,omitempty"`
 	// Specifies a list of one or more tag keys that you want to remove.
 	TagKeys []string `json:"tagKeys"`
 }
@@ -28,12 +30,16 @@ type UntagResourceResponse struct {
 	ContentType string
 	// InvalidParameterException
 	InvalidParameterException interface{}
+	// MalformedArnException
+	MalformedArnException interface{}
 	// ServerInternalException
 	ServerInternalException interface{}
 	// ServiceUnavailableException
 	ServiceUnavailableException interface{}
 	StatusCode                  int
 	RawResponse                 *http.Response
+	// UnknownResourceException
+	UnknownResourceException interface{}
 	// Success
 	UntagResourceResponse map[string]interface{}
 }

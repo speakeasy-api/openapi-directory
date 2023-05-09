@@ -15,17 +15,21 @@ const (
 	POSTDescribeRegionsActionEnumDescribeRegions POSTDescribeRegionsActionEnum = "DescribeRegions"
 )
 
+func (e POSTDescribeRegionsActionEnum) ToPointer() *POSTDescribeRegionsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeRegionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeRegions":
-		*e = POSTDescribeRegionsActionEnum(s)
+		*e = POSTDescribeRegionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeRegionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeRegionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeRegionsVersionEnumTwoThousandAndSixteen1115 POSTDescribeRegionsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeRegionsVersionEnum) ToPointer() *POSTDescribeRegionsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeRegionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeRegionsVersionEnum(s)
+		*e = POSTDescribeRegionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeRegionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeRegionsVersionEnum: %v", v)
 	}
 }
 

@@ -75,7 +75,7 @@ func (s *factOfTheDay) GetFactFod(ctx context.Context, request operations.GetFac
 }
 
 // GetFactFodCategories - Get the list of supported fact of the day categories.
-func (s *factOfTheDay) GetFactFodCategories(ctx context.Context) (*operations.GetFactFodCategoriesResponse, error) {
+func (s *factOfTheDay) GetFactFodCategories(ctx context.Context, security operations.GetFactFodCategoriesSecurity) (*operations.GetFactFodCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/fact/fod/categories"
 
@@ -84,7 +84,7 @@ func (s *factOfTheDay) GetFactFodCategories(ctx context.Context) (*operations.Ge
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

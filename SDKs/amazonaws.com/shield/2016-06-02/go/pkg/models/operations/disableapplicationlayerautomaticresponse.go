@@ -16,17 +16,21 @@ const (
 	DisableApplicationLayerAutomaticResponseXAmzTargetEnumAwsShield20160616DisableApplicationLayerAutomaticResponse DisableApplicationLayerAutomaticResponseXAmzTargetEnum = "AWSShield_20160616.DisableApplicationLayerAutomaticResponse"
 )
 
+func (e DisableApplicationLayerAutomaticResponseXAmzTargetEnum) ToPointer() *DisableApplicationLayerAutomaticResponseXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisableApplicationLayerAutomaticResponseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.DisableApplicationLayerAutomaticResponse":
-		*e = DisableApplicationLayerAutomaticResponseXAmzTargetEnum(s)
+		*e = DisableApplicationLayerAutomaticResponseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableApplicationLayerAutomaticResponseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableApplicationLayerAutomaticResponseXAmzTargetEnum: %v", v)
 	}
 }
 

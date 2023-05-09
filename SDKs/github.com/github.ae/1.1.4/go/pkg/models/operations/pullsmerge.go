@@ -18,21 +18,25 @@ const (
 	PullsMergeRequestBodyMergeMethodEnumRebase PullsMergeRequestBodyMergeMethodEnum = "rebase"
 )
 
+func (e PullsMergeRequestBodyMergeMethodEnum) ToPointer() *PullsMergeRequestBodyMergeMethodEnum {
+	return &e
+}
+
 func (e *PullsMergeRequestBodyMergeMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "merge":
 		fallthrough
 	case "squash":
 		fallthrough
 	case "rebase":
-		*e = PullsMergeRequestBodyMergeMethodEnum(s)
+		*e = PullsMergeRequestBodyMergeMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullsMergeRequestBodyMergeMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for PullsMergeRequestBodyMergeMethodEnum: %v", v)
 	}
 }
 

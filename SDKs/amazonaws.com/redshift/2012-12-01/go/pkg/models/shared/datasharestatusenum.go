@@ -18,12 +18,16 @@ const (
 	DataShareStatusEnumAvailable            DataShareStatusEnum = "AVAILABLE"
 )
 
+func (e DataShareStatusEnum) ToPointer() *DataShareStatusEnum {
+	return &e
+}
+
 func (e *DataShareStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "PENDING_AUTHORIZATION":
@@ -35,9 +39,9 @@ func (e *DataShareStatusEnum) UnmarshalJSON(data []byte) error {
 	case "REJECTED":
 		fallthrough
 	case "AVAILABLE":
-		*e = DataShareStatusEnum(s)
+		*e = DataShareStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataShareStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DataShareStatusEnum: %v", v)
 	}
 }

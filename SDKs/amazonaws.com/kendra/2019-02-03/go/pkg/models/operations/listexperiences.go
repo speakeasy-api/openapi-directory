@@ -16,17 +16,21 @@ const (
 	ListExperiencesXAmzTargetEnumAwsKendraFrontendServiceListExperiences ListExperiencesXAmzTargetEnum = "AWSKendraFrontendService.ListExperiences"
 )
 
+func (e ListExperiencesXAmzTargetEnum) ToPointer() *ListExperiencesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListExperiencesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.ListExperiences":
-		*e = ListExperiencesXAmzTargetEnum(s)
+		*e = ListExperiencesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListExperiencesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListExperiencesXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnumExclusionTypeExclude     GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum = "EXCLUSION_TYPE_EXCLUDE"
 )
 
+func (e GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum) ToPointer() *GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCLUSION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EXCLUSION_TYPE_EXCLUDE":
-		*e = GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum(s)
+		*e = GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2CustomInfoTypeExclusionTypeEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnumVeryLikely            GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum = "VERY_LIKELY"
 )
 
+func (e GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum) ToPointer() *GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIKELIHOOD_UNSPECIFIED":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -60,10 +68,10 @@ func (e *GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum) UnmarshalJSON(data []by
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum(s)
+		*e = GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum: %v", v)
 	}
 }
 
@@ -81,6 +89,8 @@ type GooglePrivacyDlpV2CustomInfoType struct {
 	Likelihood *GooglePrivacyDlpV2CustomInfoTypeLikelihoodEnum `json:"likelihood,omitempty"`
 	// Message defining a custom regular expression.
 	Regex *GooglePrivacyDlpV2Regex `json:"regex,omitempty"`
+	// Score is a summary of all elements in the data profile. A higher number means more sensitive.
+	SensitivityScore *GooglePrivacyDlpV2SensitivityScore `json:"sensitivityScore,omitempty"`
 	// A reference to a StoredInfoType to use with scanning.
 	StoredType *GooglePrivacyDlpV2StoredType `json:"storedType,omitempty"`
 	// Message for detecting output from deidentification transformations such as [`CryptoReplaceFfxFpeConfig`](https://cloud.google.com/dlp/docs/reference/rest/v2/organizations.deidentifyTemplates#cryptoreplaceffxfpeconfig). These types of transformations are those that perform pseudonymization, thereby producing a "surrogate" as output. This should be used in conjunction with a field on the transformation such as `surrogate_info_type`. This CustomInfoType does not support the use of `detection_rules`.

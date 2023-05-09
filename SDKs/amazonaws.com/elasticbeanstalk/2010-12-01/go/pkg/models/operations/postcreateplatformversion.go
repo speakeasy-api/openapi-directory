@@ -15,17 +15,21 @@ const (
 	POSTCreatePlatformVersionActionEnumCreatePlatformVersion POSTCreatePlatformVersionActionEnum = "CreatePlatformVersion"
 )
 
+func (e POSTCreatePlatformVersionActionEnum) ToPointer() *POSTCreatePlatformVersionActionEnum {
+	return &e
+}
+
 func (e *POSTCreatePlatformVersionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreatePlatformVersion":
-		*e = POSTCreatePlatformVersionActionEnum(s)
+		*e = POSTCreatePlatformVersionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreatePlatformVersionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreatePlatformVersionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreatePlatformVersionVersionEnumTwoThousandAndTen1201 POSTCreatePlatformVersionVersionEnum = "2010-12-01"
 )
 
+func (e POSTCreatePlatformVersionVersionEnum) ToPointer() *POSTCreatePlatformVersionVersionEnum {
+	return &e
+}
+
 func (e *POSTCreatePlatformVersionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTCreatePlatformVersionVersionEnum(s)
+		*e = POSTCreatePlatformVersionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreatePlatformVersionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreatePlatformVersionVersionEnum: %v", v)
 	}
 }
 

@@ -10,7 +10,7 @@ import (
 type ListImagePackagesRequestBody struct {
 	// Filter results for the ListImagePackages request by the Image Build Version ARN
 	ImageBuildVersionArn string `json:"imageBuildVersionArn"`
-	// The maxiumum number of results to return from the ListImagePackages request.
+	// The maximum items to return in a request.
 	MaxResults *int64 `json:"maxResults,omitempty"`
 	// A token to specify where to start paginating. This is the NextToken from a previously truncated response.
 	NextToken *string `json:"nextToken,omitempty"`

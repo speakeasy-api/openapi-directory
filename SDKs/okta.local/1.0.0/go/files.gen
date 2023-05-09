@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -33,4 +34,8 @@ pkg/models/operations/getcurrentuser.go
 pkg/models/operations/getgroupsforuser.go
 pkg/models/operations/getuser.go
 pkg/models/operations/resetfactors.go
+docs/sdk/README.md
+docs/createuser/README.md
+docs/credentialoperations/README.md
+docs/lifecycleoperations/README.md
 USAGE.md

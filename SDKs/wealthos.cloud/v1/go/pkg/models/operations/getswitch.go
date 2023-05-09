@@ -46,19 +46,23 @@ const (
 	GetSwitch409ApplicationJSONStatusEnumComplete   GetSwitch409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e GetSwitch409ApplicationJSONStatusEnum) ToPointer() *GetSwitch409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetSwitch409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = GetSwitch409ApplicationJSONStatusEnum(s)
+		*e = GetSwitch409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSwitch409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSwitch409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -113,21 +117,25 @@ const (
 	GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequestModeEnumValue      GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequestModeEnum = "value"
 )
 
+func (e GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequestModeEnum) ToPointer() *GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequestModeEnum {
+	return &e
+}
+
 func (e *GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequestModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "percentage":
 		fallthrough
 	case "unit":
 		fallthrough
 	case "value":
-		*e = GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequestModeEnum(s)
+		*e = GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequestModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequestModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSwitch200ApplicationJSONEachBuyOrSellInstructionOfTheSwitchRequestModeEnum: %v", v)
 	}
 }
 
@@ -149,19 +157,23 @@ const (
 	GetSwitch200ApplicationJSONOriginEnumRebalance GetSwitch200ApplicationJSONOriginEnum = "rebalance"
 )
 
+func (e GetSwitch200ApplicationJSONOriginEnum) ToPointer() *GetSwitch200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *GetSwitch200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api":
 		fallthrough
 	case "rebalance":
-		*e = GetSwitch200ApplicationJSONOriginEnum(s)
+		*e = GetSwitch200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSwitch200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSwitch200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -176,12 +188,16 @@ const (
 	GetSwitch200ApplicationJSONStatusEnumFailed         GetSwitch200ApplicationJSONStatusEnum = "failed"
 )
 
+func (e GetSwitch200ApplicationJSONStatusEnum) ToPointer() *GetSwitch200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetSwitch200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "initiated":
 		fallthrough
 	case "sell_in_progress":
@@ -191,10 +207,10 @@ func (e *GetSwitch200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error
 	case "completed":
 		fallthrough
 	case "failed":
-		*e = GetSwitch200ApplicationJSONStatusEnum(s)
+		*e = GetSwitch200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSwitch200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSwitch200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -206,19 +222,23 @@ const (
 	GetSwitch200ApplicationJSONTransactionsSideEnumSell GetSwitch200ApplicationJSONTransactionsSideEnum = "sell"
 )
 
+func (e GetSwitch200ApplicationJSONTransactionsSideEnum) ToPointer() *GetSwitch200ApplicationJSONTransactionsSideEnum {
+	return &e
+}
+
 func (e *GetSwitch200ApplicationJSONTransactionsSideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "buy":
 		fallthrough
 	case "sell":
-		*e = GetSwitch200ApplicationJSONTransactionsSideEnum(s)
+		*e = GetSwitch200ApplicationJSONTransactionsSideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSwitch200ApplicationJSONTransactionsSideEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSwitch200ApplicationJSONTransactionsSideEnum: %v", v)
 	}
 }
 
@@ -231,12 +251,16 @@ const (
 	GetSwitch200ApplicationJSONTransactionsStatusEnumRejected   GetSwitch200ApplicationJSONTransactionsStatusEnum = "rejected"
 )
 
+func (e GetSwitch200ApplicationJSONTransactionsStatusEnum) ToPointer() *GetSwitch200ApplicationJSONTransactionsStatusEnum {
+	return &e
+}
+
 func (e *GetSwitch200ApplicationJSONTransactionsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instructed":
 		fallthrough
 	case "priced":
@@ -244,10 +268,10 @@ func (e *GetSwitch200ApplicationJSONTransactionsStatusEnum) UnmarshalJSON(data [
 	case "settled":
 		fallthrough
 	case "rejected":
-		*e = GetSwitch200ApplicationJSONTransactionsStatusEnum(s)
+		*e = GetSwitch200ApplicationJSONTransactionsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSwitch200ApplicationJSONTransactionsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSwitch200ApplicationJSONTransactionsStatusEnum: %v", v)
 	}
 }
 

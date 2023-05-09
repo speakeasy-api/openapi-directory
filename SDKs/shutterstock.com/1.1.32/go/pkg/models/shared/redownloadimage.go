@@ -18,12 +18,16 @@ const (
 	RedownloadImageSizeEnumVector    RedownloadImageSizeEnum = "vector"
 )
 
+func (e RedownloadImageSizeEnum) ToPointer() *RedownloadImageSizeEnum {
+	return &e
+}
+
 func (e *RedownloadImageSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "small":
 		fallthrough
 	case "medium":
@@ -33,10 +37,10 @@ func (e *RedownloadImageSizeEnum) UnmarshalJSON(data []byte) error {
 	case "supersize":
 		fallthrough
 	case "vector":
-		*e = RedownloadImageSizeEnum(s)
+		*e = RedownloadImageSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RedownloadImageSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for RedownloadImageSizeEnum: %v", v)
 	}
 }
 

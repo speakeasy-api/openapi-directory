@@ -39,12 +39,16 @@ const (
 	DfareportingPlacementsGeneratetagsTagFormatsEnumPlacementTagTrackingThirdPartyMeasurement      DfareportingPlacementsGeneratetagsTagFormatsEnum = "PLACEMENT_TAG_TRACKING_THIRD_PARTY_MEASUREMENT"
 )
 
+func (e DfareportingPlacementsGeneratetagsTagFormatsEnum) ToPointer() *DfareportingPlacementsGeneratetagsTagFormatsEnum {
+	return &e
+}
+
 func (e *DfareportingPlacementsGeneratetagsTagFormatsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACEMENT_TAG_STANDARD":
 		fallthrough
 	case "PLACEMENT_TAG_IFRAME_JAVASCRIPT":
@@ -84,10 +88,10 @@ func (e *DfareportingPlacementsGeneratetagsTagFormatsEnum) UnmarshalJSON(data []
 	case "PLACEMENT_TAG_INSTREAM_VIDEO_PREFETCH_VAST_4":
 		fallthrough
 	case "PLACEMENT_TAG_TRACKING_THIRD_PARTY_MEASUREMENT":
-		*e = DfareportingPlacementsGeneratetagsTagFormatsEnum(s)
+		*e = DfareportingPlacementsGeneratetagsTagFormatsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingPlacementsGeneratetagsTagFormatsEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingPlacementsGeneratetagsTagFormatsEnum: %v", v)
 	}
 }
 

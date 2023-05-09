@@ -16,12 +16,16 @@ const (
 	DetailedAlgorithmStatusEnumFailed     DetailedAlgorithmStatusEnum = "Failed"
 )
 
+func (e DetailedAlgorithmStatusEnum) ToPointer() *DetailedAlgorithmStatusEnum {
+	return &e
+}
+
 func (e *DetailedAlgorithmStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NotStarted":
 		fallthrough
 	case "InProgress":
@@ -29,9 +33,9 @@ func (e *DetailedAlgorithmStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Completed":
 		fallthrough
 	case "Failed":
-		*e = DetailedAlgorithmStatusEnum(s)
+		*e = DetailedAlgorithmStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetailedAlgorithmStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DetailedAlgorithmStatusEnum: %v", v)
 	}
 }

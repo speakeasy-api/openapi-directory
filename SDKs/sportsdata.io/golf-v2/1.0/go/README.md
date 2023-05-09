@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/golf-v2/1.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.CurrentSeasonRequest{
-        Format: "JSON",
-    }
-
     ctx := context.Background()
-    res, err := s.CurrentSeason(ctx, req)
+    res, err := s.CurrentSeason(ctx, operations.CurrentSeasonRequest{
+        Format: operations.CurrentSeasonFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,23 +45,23 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CurrentSeason` - Current Season
-* `DfsSlates` - DFS Slates
-* `Injuries` - Injuries
-* `InjuriesHistorical` - Injuries (Historical)
-* `Leaderboard` - Leaderboard
-* `News` - News
-* `NewsByDate` - News by Date
-* `NewsByPlayer` - News by Player
-* `Player` - Player
-* `PlayerSeasonStatsWWorldGolfRankings` - Player Season Stats (w/ World Golf Rankings)
-* `PlayerTournamentProjectedStatsWDraftkingsSalaries` - Player Tournament Projected Stats (w/ DraftKings Salaries)
-* `PlayerTournamentStatsByPlayer` - Player Tournament Stats By Player
-* `Players` - Players
-* `Schedule` - Schedule
-* `ScheduleBySeason` - Schedule by Season
+* [CurrentSeason](docs/sdk/README.md#currentseason) - Current Season
+* [DfsSlates](docs/sdk/README.md#dfsslates) - DFS Slates
+* [Injuries](docs/sdk/README.md#injuries) - Injuries
+* [InjuriesHistorical](docs/sdk/README.md#injurieshistorical) - Injuries (Historical)
+* [Leaderboard](docs/sdk/README.md#leaderboard) - Leaderboard
+* [News](docs/sdk/README.md#news) - News
+* [NewsByDate](docs/sdk/README.md#newsbydate) - News by Date
+* [NewsByPlayer](docs/sdk/README.md#newsbyplayer) - News by Player
+* [Player](docs/sdk/README.md#player) - Player
+* [PlayerSeasonStatsWWorldGolfRankings](docs/sdk/README.md#playerseasonstatswworldgolfrankings) - Player Season Stats (w/ World Golf Rankings)
+* [PlayerTournamentProjectedStatsWDraftkingsSalaries](docs/sdk/README.md#playertournamentprojectedstatswdraftkingssalaries) - Player Tournament Projected Stats (w/ DraftKings Salaries)
+* [PlayerTournamentStatsByPlayer](docs/sdk/README.md#playertournamentstatsbyplayer) - Player Tournament Stats By Player
+* [Players](docs/sdk/README.md#players) - Players
+* [Schedule](docs/sdk/README.md#schedule) - Schedule
+* [ScheduleBySeason](docs/sdk/README.md#schedulebyseason) - Schedule by Season
 <!-- End SDK Available Operations -->
 
 ### Maturity

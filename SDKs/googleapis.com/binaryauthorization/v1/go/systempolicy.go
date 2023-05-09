@@ -34,7 +34,10 @@ func newSystempolicy(defaultClient, securityClient HTTPClient, serverURL, langua
 // BinaryauthorizationSystempolicyGetPolicy - Gets the current system policy in the specified location.
 func (s *systempolicy) BinaryauthorizationSystempolicyGetPolicy(ctx context.Context, request operations.BinaryauthorizationSystempolicyGetPolicyRequest, security operations.BinaryauthorizationSystempolicyGetPolicySecurity) (*operations.BinaryauthorizationSystempolicyGetPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

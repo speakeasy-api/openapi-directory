@@ -18,12 +18,16 @@ const (
 	DistributionMetricNameEnumHttp5xxErrorRate DistributionMetricNameEnum = "Http5xxErrorRate"
 )
 
+func (e DistributionMetricNameEnum) ToPointer() *DistributionMetricNameEnum {
+	return &e
+}
+
 func (e *DistributionMetricNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Requests":
 		fallthrough
 	case "BytesDownloaded":
@@ -35,9 +39,9 @@ func (e *DistributionMetricNameEnum) UnmarshalJSON(data []byte) error {
 	case "Http4xxErrorRate":
 		fallthrough
 	case "Http5xxErrorRate":
-		*e = DistributionMetricNameEnum(s)
+		*e = DistributionMetricNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionMetricNameEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionMetricNameEnum: %v", v)
 	}
 }

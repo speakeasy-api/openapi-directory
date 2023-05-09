@@ -16,17 +16,21 @@ const (
 	GetFormByShareHashIncludeEnumShare GetFormByShareHashIncludeEnum = "share"
 )
 
+func (e GetFormByShareHashIncludeEnum) ToPointer() *GetFormByShareHashIncludeEnum {
+	return &e
+}
+
 func (e *GetFormByShareHashIncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "share":
-		*e = GetFormByShareHashIncludeEnum(s)
+		*e = GetFormByShareHashIncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFormByShareHashIncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFormByShareHashIncludeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	ChoiceQuestionTypeEnumDropDown              ChoiceQuestionTypeEnum = "DROP_DOWN"
 )
 
+func (e ChoiceQuestionTypeEnum) ToPointer() *ChoiceQuestionTypeEnum {
+	return &e
+}
+
 func (e *ChoiceQuestionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHOICE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RADIO":
@@ -30,10 +34,10 @@ func (e *ChoiceQuestionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CHECKBOX":
 		fallthrough
 	case "DROP_DOWN":
-		*e = ChoiceQuestionTypeEnum(s)
+		*e = ChoiceQuestionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChoiceQuestionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChoiceQuestionTypeEnum: %v", v)
 	}
 }
 

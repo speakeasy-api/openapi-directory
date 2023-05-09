@@ -15,18 +15,22 @@ const (
 	UsageStateEnumNotInUse UsageStateEnum = "NOT_IN_USE"
 )
 
+func (e UsageStateEnum) ToPointer() *UsageStateEnum {
+	return &e
+}
+
 func (e *UsageStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_USE":
 		fallthrough
 	case "NOT_IN_USE":
-		*e = UsageStateEnum(s)
+		*e = UsageStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageStateEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageStateEnum: %v", v)
 	}
 }

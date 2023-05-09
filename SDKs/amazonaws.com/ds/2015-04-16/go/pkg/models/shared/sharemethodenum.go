@@ -14,18 +14,22 @@ const (
 	ShareMethodEnumHandshake     ShareMethodEnum = "HANDSHAKE"
 )
 
+func (e ShareMethodEnum) ToPointer() *ShareMethodEnum {
+	return &e
+}
+
 func (e *ShareMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORGANIZATIONS":
 		fallthrough
 	case "HANDSHAKE":
-		*e = ShareMethodEnum(s)
+		*e = ShareMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareMethodEnum: %v", v)
 	}
 }

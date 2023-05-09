@@ -16,17 +16,21 @@ const (
 	SignalWorkflowExecutionXAmzTargetEnumSimpleWorkflowServiceSignalWorkflowExecution SignalWorkflowExecutionXAmzTargetEnum = "SimpleWorkflowService.SignalWorkflowExecution"
 )
 
+func (e SignalWorkflowExecutionXAmzTargetEnum) ToPointer() *SignalWorkflowExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *SignalWorkflowExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleWorkflowService.SignalWorkflowExecution":
-		*e = SignalWorkflowExecutionXAmzTargetEnum(s)
+		*e = SignalWorkflowExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SignalWorkflowExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SignalWorkflowExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

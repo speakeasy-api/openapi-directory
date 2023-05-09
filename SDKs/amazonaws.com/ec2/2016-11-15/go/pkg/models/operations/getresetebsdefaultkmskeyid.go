@@ -15,17 +15,21 @@ const (
 	GETResetEbsDefaultKmsKeyIDActionEnumResetEbsDefaultKmsKeyID GETResetEbsDefaultKmsKeyIDActionEnum = "ResetEbsDefaultKmsKeyId"
 )
 
+func (e GETResetEbsDefaultKmsKeyIDActionEnum) ToPointer() *GETResetEbsDefaultKmsKeyIDActionEnum {
+	return &e
+}
+
 func (e *GETResetEbsDefaultKmsKeyIDActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetEbsDefaultKmsKeyId":
-		*e = GETResetEbsDefaultKmsKeyIDActionEnum(s)
+		*e = GETResetEbsDefaultKmsKeyIDActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetEbsDefaultKmsKeyIDActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetEbsDefaultKmsKeyIDActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETResetEbsDefaultKmsKeyIDVersionEnumTwoThousandAndSixteen1115 GETResetEbsDefaultKmsKeyIDVersionEnum = "2016-11-15"
 )
 
+func (e GETResetEbsDefaultKmsKeyIDVersionEnum) ToPointer() *GETResetEbsDefaultKmsKeyIDVersionEnum {
+	return &e
+}
+
 func (e *GETResetEbsDefaultKmsKeyIDVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETResetEbsDefaultKmsKeyIDVersionEnum(s)
+		*e = GETResetEbsDefaultKmsKeyIDVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetEbsDefaultKmsKeyIDVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetEbsDefaultKmsKeyIDVersionEnum: %v", v)
 	}
 }
 

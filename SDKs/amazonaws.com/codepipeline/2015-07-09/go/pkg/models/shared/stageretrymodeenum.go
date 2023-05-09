@@ -13,16 +13,20 @@ const (
 	StageRetryModeEnumFailedActions StageRetryModeEnum = "FAILED_ACTIONS"
 )
 
+func (e StageRetryModeEnum) ToPointer() *StageRetryModeEnum {
+	return &e
+}
+
 func (e *StageRetryModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILED_ACTIONS":
-		*e = StageRetryModeEnum(s)
+		*e = StageRetryModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StageRetryModeEnum: %s", s)
+		return fmt.Errorf("invalid value for StageRetryModeEnum: %v", v)
 	}
 }

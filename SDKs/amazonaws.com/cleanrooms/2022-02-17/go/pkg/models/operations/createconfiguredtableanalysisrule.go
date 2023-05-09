@@ -22,19 +22,23 @@ const (
 	CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRuleTypeEnumList        CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRuleTypeEnum = "LIST"
 )
 
+func (e CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRuleTypeEnum) ToPointer() *CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRuleTypeEnum {
+	return &e
+}
+
 func (e *CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRuleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGGREGATION":
 		fallthrough
 	case "LIST":
-		*e = CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRuleTypeEnum(s)
+		*e = CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRuleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRuleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateConfiguredTableAnalysisRuleRequestBodyAnalysisRuleTypeEnum: %v", v)
 	}
 }
 

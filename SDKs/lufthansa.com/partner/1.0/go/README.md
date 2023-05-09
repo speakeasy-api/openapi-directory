@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/lufthansa.com/partner/1.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BaggageTripAndContactRequest{
+    ctx := context.Background()
+    res, err := s.Baggage.BaggageTripAndContact(ctx, operations.BaggageTripAndContactRequest{
         Accept: "corrupti",
         SearchID: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.Baggage.BaggageTripAndContact(ctx, req, operations.BaggageTripAndContactSecurity{
+    }, operations.BaggageTripAndContactSecurity{
         Auth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -48,39 +45,39 @@ func main() {
 ## Available Resources and Operations
 
 
-### Baggage
+### [Baggage](docs/baggage/README.md)
 
-* `BaggageTripAndContact` - Baggage Trip and Contact
+* [BaggageTripAndContact](docs/baggage/README.md#baggagetripandcontact) - Baggage Trip and Contact
 
-### Offers
+### [Offers](docs/offers/README.md)
 
-* `AllFares` - All Fares
-* `BestFares` - Best Fares
-* `DeepLinks` - Deep Links
-* `Fares` - Fares
-* `FaresSubscriptions` - Fares Subscriptions
-* `LHDeepLinksFFP` - LH Deep Links - FFP
-* `LHDeepLinksITCO` - LH Deep Links - ITCO
-* `LowestFares` - Lowest Fares
-* `ONDRoute` - OND Route
-* `ONDStatus` - OND Status
-* `TopOND` - Top OND
+* [AllFares](docs/offers/README.md#allfares) - All Fares
+* [BestFares](docs/offers/README.md#bestfares) - Best Fares
+* [DeepLinks](docs/offers/README.md#deeplinks) - Deep Links
+* [Fares](docs/offers/README.md#fares) - Fares
+* [FaresSubscriptions](docs/offers/README.md#faressubscriptions) - Fares Subscriptions
+* [LHDeepLinksFFP](docs/offers/README.md#lhdeeplinksffp) - LH Deep Links - FFP
+* [LHDeepLinksITCO](docs/offers/README.md#lhdeeplinksitco) - LH Deep Links - ITCO
+* [LowestFares](docs/offers/README.md#lowestfares) - Lowest Fares
+* [ONDRoute](docs/offers/README.md#ondroute) - OND Route
+* [ONDStatus](docs/offers/README.md#ondstatus) - OND Status
+* [TopOND](docs/offers/README.md#topond) - Top OND
 
-### Orders
+### [Orders](docs/orders/README.md)
 
-* `Orders` - Orders
+* [Orders](docs/orders/README.md#orders) - Orders
 
-### Preflight
+### [Preflight](docs/preflight/README.md)
 
-* `AutoCheckIn` - Auto Check-In
+* [AutoCheckIn](docs/preflight/README.md#autocheckin) - Auto Check-In
 
-### Promotions
+### [Promotions](docs/promotions/README.md)
 
-* `PriceOffers` - Price Offers
+* [PriceOffers](docs/promotions/README.md#priceoffers) - Price Offers
 
-### ReferenceData
+### [ReferenceData](docs/referencedata/README.md)
 
-* `SeatDetails` - Seat Details
+* [SeatDetails](docs/referencedata/README.md#seatdetails) - Seat Details
 <!-- End SDK Available Operations -->
 
 ### Maturity

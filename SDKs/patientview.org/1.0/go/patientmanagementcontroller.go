@@ -37,7 +37,10 @@ func newPatientManagementController(defaultClient, securityClient HTTPClient, se
 // getPatientManagement
 func (s *patientManagementController) GetPatientManagement(ctx context.Context, request operations.GetPatientManagementRequest) (*operations.GetPatientManagementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,7 +190,10 @@ func (s *patientManagementController) GetPatientManagementLookupTypes(ctx contex
 // savePatientManagement
 func (s *patientManagementController) SavePatientManagement(ctx context.Context, request operations.SavePatientManagementRequest) (*operations.SavePatientManagementResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientManagement", "json")
 	if err != nil {
@@ -238,7 +244,10 @@ func (s *patientManagementController) SavePatientManagement(ctx context.Context,
 // savePatientManagementSurgeries
 func (s *patientManagementController) SavePatientManagementSurgeries(ctx context.Context, request operations.SavePatientManagementSurgeriesRequest) (*operations.SavePatientManagementSurgeriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}/surgeries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}/surgeries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatientManagement", "json")
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	StartReportCreationXAmzTargetEnumResourceGroupsTaggingApi20170126StartReportCreation StartReportCreationXAmzTargetEnum = "ResourceGroupsTaggingAPI_20170126.StartReportCreation"
 )
 
+func (e StartReportCreationXAmzTargetEnum) ToPointer() *StartReportCreationXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartReportCreationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResourceGroupsTaggingAPI_20170126.StartReportCreation":
-		*e = StartReportCreationXAmzTargetEnum(s)
+		*e = StartReportCreationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartReportCreationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartReportCreationXAmzTargetEnum: %v", v)
 	}
 }
 

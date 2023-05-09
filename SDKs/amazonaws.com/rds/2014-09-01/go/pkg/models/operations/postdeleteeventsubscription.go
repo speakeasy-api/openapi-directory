@@ -15,17 +15,21 @@ const (
 	POSTDeleteEventSubscriptionActionEnumDeleteEventSubscription POSTDeleteEventSubscriptionActionEnum = "DeleteEventSubscription"
 )
 
+func (e POSTDeleteEventSubscriptionActionEnum) ToPointer() *POSTDeleteEventSubscriptionActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteEventSubscriptionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteEventSubscription":
-		*e = POSTDeleteEventSubscriptionActionEnum(s)
+		*e = POSTDeleteEventSubscriptionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteEventSubscriptionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteEventSubscriptionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteEventSubscriptionVersionEnumTwoThousandAndFourteen0901 POSTDeleteEventSubscriptionVersionEnum = "2014-09-01"
 )
 
+func (e POSTDeleteEventSubscriptionVersionEnum) ToPointer() *POSTDeleteEventSubscriptionVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteEventSubscriptionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-09-01":
-		*e = POSTDeleteEventSubscriptionVersionEnum(s)
+		*e = POSTDeleteEventSubscriptionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteEventSubscriptionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteEventSubscriptionVersionEnum: %v", v)
 	}
 }
 

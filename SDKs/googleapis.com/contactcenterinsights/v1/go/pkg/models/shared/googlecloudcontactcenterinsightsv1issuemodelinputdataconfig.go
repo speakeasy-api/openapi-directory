@@ -16,21 +16,25 @@ const (
 	GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnumChat              GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum = "CHAT"
 )
 
+func (e GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum) ToPointer() *GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum {
+	return &e
+}
+
 func (e *GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEDIUM_UNSPECIFIED":
 		fallthrough
 	case "PHONE_CALL":
 		fallthrough
 	case "CHAT":
-		*e = GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum(s)
+		*e = GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum: %v", v)
 	}
 }
 

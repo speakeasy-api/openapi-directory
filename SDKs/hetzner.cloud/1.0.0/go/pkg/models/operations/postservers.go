@@ -104,21 +104,25 @@ const (
 	PostServersCreateServerResponseActionStatusEnumError   PostServersCreateServerResponseActionStatusEnum = "error"
 )
 
+func (e PostServersCreateServerResponseActionStatusEnum) ToPointer() *PostServersCreateServerResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostServersCreateServerResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostServersCreateServerResponseActionStatusEnum(s)
+		*e = PostServersCreateServerResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersCreateServerResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersCreateServerResponseActionStatusEnum: %v", v)
 	}
 }
 
@@ -202,12 +206,16 @@ const (
 	PostServersCreateServerResponseServerImageOsFlavorEnumUnknown PostServersCreateServerResponseServerImageOsFlavorEnum = "unknown"
 )
 
+func (e PostServersCreateServerResponseServerImageOsFlavorEnum) ToPointer() *PostServersCreateServerResponseServerImageOsFlavorEnum {
+	return &e
+}
+
 func (e *PostServersCreateServerResponseServerImageOsFlavorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ubuntu":
 		fallthrough
 	case "centos":
@@ -217,10 +225,10 @@ func (e *PostServersCreateServerResponseServerImageOsFlavorEnum) UnmarshalJSON(d
 	case "fedora":
 		fallthrough
 	case "unknown":
-		*e = PostServersCreateServerResponseServerImageOsFlavorEnum(s)
+		*e = PostServersCreateServerResponseServerImageOsFlavorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerImageOsFlavorEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerImageOsFlavorEnum: %v", v)
 	}
 }
 
@@ -239,21 +247,25 @@ const (
 	PostServersCreateServerResponseServerImageStatusEnumUnavailable PostServersCreateServerResponseServerImageStatusEnum = "unavailable"
 )
 
+func (e PostServersCreateServerResponseServerImageStatusEnum) ToPointer() *PostServersCreateServerResponseServerImageStatusEnum {
+	return &e
+}
+
 func (e *PostServersCreateServerResponseServerImageStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "creating":
 		fallthrough
 	case "unavailable":
-		*e = PostServersCreateServerResponseServerImageStatusEnum(s)
+		*e = PostServersCreateServerResponseServerImageStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerImageStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerImageStatusEnum: %v", v)
 	}
 }
 
@@ -268,12 +280,16 @@ const (
 	PostServersCreateServerResponseServerImageTypeEnumTemporary PostServersCreateServerResponseServerImageTypeEnum = "temporary"
 )
 
+func (e PostServersCreateServerResponseServerImageTypeEnum) ToPointer() *PostServersCreateServerResponseServerImageTypeEnum {
+	return &e
+}
+
 func (e *PostServersCreateServerResponseServerImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "system":
 		fallthrough
 	case "app":
@@ -283,10 +299,10 @@ func (e *PostServersCreateServerResponseServerImageTypeEnum) UnmarshalJSON(data 
 	case "backup":
 		fallthrough
 	case "temporary":
-		*e = PostServersCreateServerResponseServerImageTypeEnum(s)
+		*e = PostServersCreateServerResponseServerImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerImageTypeEnum: %v", v)
 	}
 }
 
@@ -327,6 +343,34 @@ type PostServersCreateServerResponseServerImage struct {
 	Type PostServersCreateServerResponseServerImageTypeEnum `json:"type"`
 }
 
+// PostServersCreateServerResponseServerIsoArchitectureEnum - Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+type PostServersCreateServerResponseServerIsoArchitectureEnum string
+
+const (
+	PostServersCreateServerResponseServerIsoArchitectureEnumX86 PostServersCreateServerResponseServerIsoArchitectureEnum = "x86"
+	PostServersCreateServerResponseServerIsoArchitectureEnumArm PostServersCreateServerResponseServerIsoArchitectureEnum = "arm"
+)
+
+func (e PostServersCreateServerResponseServerIsoArchitectureEnum) ToPointer() *PostServersCreateServerResponseServerIsoArchitectureEnum {
+	return &e
+}
+
+func (e *PostServersCreateServerResponseServerIsoArchitectureEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "x86":
+		fallthrough
+	case "arm":
+		*e = PostServersCreateServerResponseServerIsoArchitectureEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerIsoArchitectureEnum: %v", v)
+	}
+}
+
 // PostServersCreateServerResponseServerIsoTypeEnum - Type of the ISO
 type PostServersCreateServerResponseServerIsoTypeEnum string
 
@@ -335,24 +379,30 @@ const (
 	PostServersCreateServerResponseServerIsoTypeEnumPrivate PostServersCreateServerResponseServerIsoTypeEnum = "private"
 )
 
+func (e PostServersCreateServerResponseServerIsoTypeEnum) ToPointer() *PostServersCreateServerResponseServerIsoTypeEnum {
+	return &e
+}
+
 func (e *PostServersCreateServerResponseServerIsoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = PostServersCreateServerResponseServerIsoTypeEnum(s)
+		*e = PostServersCreateServerResponseServerIsoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerIsoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerIsoTypeEnum: %v", v)
 	}
 }
 
 // PostServersCreateServerResponseServerIso - ISO Image that is attached to this Server. Null if no ISO is attached.
 type PostServersCreateServerResponseServerIso struct {
+	// Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+	Architecture PostServersCreateServerResponseServerIsoArchitectureEnum `json:"architecture"`
 	// ISO 8601 timestamp of deprecation, null if ISO is still available. After the deprecation time it will no longer be possible to attach the ISO to Servers.
 	Deprecated string `json:"deprecated"`
 	// Description of the ISO
@@ -372,17 +422,21 @@ const (
 	PostServersCreateServerResponseServerPlacementGroupNullableTypeEnumSpread PostServersCreateServerResponseServerPlacementGroupNullableTypeEnum = "spread"
 )
 
+func (e PostServersCreateServerResponseServerPlacementGroupNullableTypeEnum) ToPointer() *PostServersCreateServerResponseServerPlacementGroupNullableTypeEnum {
+	return &e
+}
+
 func (e *PostServersCreateServerResponseServerPlacementGroupNullableTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spread":
-		*e = PostServersCreateServerResponseServerPlacementGroupNullableTypeEnum(s)
+		*e = PostServersCreateServerResponseServerPlacementGroupNullableTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerPlacementGroupNullableTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerPlacementGroupNullableTypeEnum: %v", v)
 	}
 }
 
@@ -424,19 +478,23 @@ const (
 	PostServersCreateServerResponseServerPublicNetServerPublicNetFirewallStatusEnumPending PostServersCreateServerResponseServerPublicNetServerPublicNetFirewallStatusEnum = "pending"
 )
 
+func (e PostServersCreateServerResponseServerPublicNetServerPublicNetFirewallStatusEnum) ToPointer() *PostServersCreateServerResponseServerPublicNetServerPublicNetFirewallStatusEnum {
+	return &e
+}
+
 func (e *PostServersCreateServerResponseServerPublicNetServerPublicNetFirewallStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "applied":
 		fallthrough
 	case "pending":
-		*e = PostServersCreateServerResponseServerPublicNetServerPublicNetFirewallStatusEnum(s)
+		*e = PostServersCreateServerResponseServerPublicNetServerPublicNetFirewallStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerPublicNetServerPublicNetFirewallStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerPublicNetServerPublicNetFirewallStatusEnum: %v", v)
 	}
 }
 
@@ -498,19 +556,23 @@ const (
 	PostServersCreateServerResponseServerServerTypeCPUTypeEnumDedicated PostServersCreateServerResponseServerServerTypeCPUTypeEnum = "dedicated"
 )
 
+func (e PostServersCreateServerResponseServerServerTypeCPUTypeEnum) ToPointer() *PostServersCreateServerResponseServerServerTypeCPUTypeEnum {
+	return &e
+}
+
 func (e *PostServersCreateServerResponseServerServerTypeCPUTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shared":
 		fallthrough
 	case "dedicated":
-		*e = PostServersCreateServerResponseServerServerTypeCPUTypeEnum(s)
+		*e = PostServersCreateServerResponseServerServerTypeCPUTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerServerTypeCPUTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerServerTypeCPUTypeEnum: %v", v)
 	}
 }
 
@@ -547,19 +609,23 @@ const (
 	PostServersCreateServerResponseServerServerTypeStorageTypeEnumNetwork PostServersCreateServerResponseServerServerTypeStorageTypeEnum = "network"
 )
 
+func (e PostServersCreateServerResponseServerServerTypeStorageTypeEnum) ToPointer() *PostServersCreateServerResponseServerServerTypeStorageTypeEnum {
+	return &e
+}
+
 func (e *PostServersCreateServerResponseServerServerTypeStorageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "local":
 		fallthrough
 	case "network":
-		*e = PostServersCreateServerResponseServerServerTypeStorageTypeEnum(s)
+		*e = PostServersCreateServerResponseServerServerTypeStorageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerServerTypeStorageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerServerTypeStorageTypeEnum: %v", v)
 	}
 }
 
@@ -602,12 +668,16 @@ const (
 	PostServersCreateServerResponseServerStatusEnumUnknown      PostServersCreateServerResponseServerStatusEnum = "unknown"
 )
 
+func (e PostServersCreateServerResponseServerStatusEnum) ToPointer() *PostServersCreateServerResponseServerStatusEnum {
+	return &e
+}
+
 func (e *PostServersCreateServerResponseServerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "initializing":
@@ -625,10 +695,10 @@ func (e *PostServersCreateServerResponseServerStatusEnum) UnmarshalJSON(data []b
 	case "rebuilding":
 		fallthrough
 	case "unknown":
-		*e = PostServersCreateServerResponseServerStatusEnum(s)
+		*e = PostServersCreateServerResponseServerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersCreateServerResponseServerStatusEnum: %v", v)
 	}
 }
 

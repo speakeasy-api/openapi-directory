@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>Amazon Managed Grafana is a fully managed and secure data visualization service that you can use to instantly query, correlate, and visualize operational metrics, logs, and traces from multiple sources. Amazon Managed Grafana makes it easy to deploy, operate, and scale Grafana, a widely deployed data visualization tool that is popular for its extensible data support.</p> <p>With Amazon Managed Grafana, you create logically isolated Grafana servers called <i>workspaces</i>. In a workspace, you can create Grafana dashboards and visualizations to analyze your metrics, logs, and traces without having to build, package, or deploy any hardware to run Grafana servers. </p>
 // https://docs.aws.amazon.com/grafana/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // AssociateLicense - Assigns a Grafana Enterprise license to a workspace. Upgrading to Grafana Enterprise incurs additional fees. For more information, see <a href="https://docs.aws.amazon.com/grafana/latest/userguide/upgrade-to-Grafana-Enterprise.html">Upgrade a workspace to Grafana Enterprise</a>.
 func (s *SDK) AssociateLicense(ctx context.Context, request operations.AssociateLicenseRequest) (*operations.AssociateLicenseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/licenses/{licenseType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/licenses/{licenseType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -326,7 +344,10 @@ func (s *SDK) CreateWorkspace(ctx context.Context, request operations.CreateWork
 // CreateWorkspaceAPIKey - Creates a Grafana API key for the workspace. This key can be used to authenticate requests sent to the workspace's HTTP API. See <a href="https://docs.aws.amazon.com/grafana/latest/userguide/Using-Grafana-APIs.html">https://docs.aws.amazon.com/grafana/latest/userguide/Using-Grafana-APIs.html</a> for available APIs and example requests.
 func (s *SDK) CreateWorkspaceAPIKey(ctx context.Context, request operations.CreateWorkspaceAPIKeyRequest) (*operations.CreateWorkspaceAPIKeyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/apikeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/apikeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -452,7 +473,10 @@ func (s *SDK) CreateWorkspaceAPIKey(ctx context.Context, request operations.Crea
 // DeleteWorkspace - Deletes an Amazon Managed Grafana workspace.
 func (s *SDK) DeleteWorkspace(ctx context.Context, request operations.DeleteWorkspaceRequest) (*operations.DeleteWorkspaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -558,7 +582,10 @@ func (s *SDK) DeleteWorkspace(ctx context.Context, request operations.DeleteWork
 // DeleteWorkspaceAPIKey - Deletes a Grafana API key for the workspace.
 func (s *SDK) DeleteWorkspaceAPIKey(ctx context.Context, request operations.DeleteWorkspaceAPIKeyRequest) (*operations.DeleteWorkspaceAPIKeyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/apikeys/{keyName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/apikeys/{keyName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -664,7 +691,10 @@ func (s *SDK) DeleteWorkspaceAPIKey(ctx context.Context, request operations.Dele
 // DescribeWorkspace - Displays information about one Amazon Managed Grafana workspace.
 func (s *SDK) DescribeWorkspace(ctx context.Context, request operations.DescribeWorkspaceRequest) (*operations.DescribeWorkspaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -760,7 +790,10 @@ func (s *SDK) DescribeWorkspace(ctx context.Context, request operations.Describe
 // DescribeWorkspaceAuthentication - Displays information about the authentication methods used in one Amazon Managed Grafana workspace.
 func (s *SDK) DescribeWorkspaceAuthentication(ctx context.Context, request operations.DescribeWorkspaceAuthenticationRequest) (*operations.DescribeWorkspaceAuthenticationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/authentication", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/authentication", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -856,7 +889,10 @@ func (s *SDK) DescribeWorkspaceAuthentication(ctx context.Context, request opera
 // DescribeWorkspaceConfiguration - Gets the current configuration string for the given workspace.
 func (s *SDK) DescribeWorkspaceConfiguration(ctx context.Context, request operations.DescribeWorkspaceConfigurationRequest) (*operations.DescribeWorkspaceConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/configuration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/configuration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -942,7 +978,10 @@ func (s *SDK) DescribeWorkspaceConfiguration(ctx context.Context, request operat
 // DisassociateLicense - Removes the Grafana Enterprise license from a workspace.
 func (s *SDK) DisassociateLicense(ctx context.Context, request operations.DisassociateLicenseRequest) (*operations.DisassociateLicenseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/licenses/{licenseType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/licenses/{licenseType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1038,7 +1077,10 @@ func (s *SDK) DisassociateLicense(ctx context.Context, request operations.Disass
 // ListPermissions - Lists the users and groups who have the Grafana <code>Admin</code> and <code>Editor</code> roles in this workspace. If you use this operation without specifying <code>userId</code> or <code>groupId</code>, the operation returns the roles of all users and groups. If you specify a <code>userId</code> or a <code>groupId</code>, only the roles for that user or group are returned. If you do this, you can specify only one <code>userId</code> or one <code>groupId</code>.
 func (s *SDK) ListPermissions(ctx context.Context, request operations.ListPermissionsRequest) (*operations.ListPermissionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1138,7 +1180,10 @@ func (s *SDK) ListPermissions(ctx context.Context, request operations.ListPermis
 // ListTagsForResource - The <code>ListTagsForResource</code> operation returns the tags that are associated with the Amazon Managed Service for Grafana resource specified by the <code>resourceArn</code>. Currently, the only resource that can be tagged is a workspace.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1314,7 +1359,10 @@ func (s *SDK) ListWorkspaces(ctx context.Context, request operations.ListWorkspa
 // TagResource - <p>The <code>TagResource</code> operation associates tags with an Amazon Managed Grafana resource. Currently, the only resource that can be tagged is workspaces. </p> <p>If you specify a new tag key for the resource, this tag is appended to the list of tags associated with the resource. If you specify a tag key that is already associated with the resource, the new tag value that you specify replaces the previous value for that tag.</p>
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1420,7 +1468,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - The <code>UntagResource</code> operation removes the association of the tag with the Amazon Managed Grafana resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1520,7 +1571,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdatePermissions - Updates which users in a workspace have the Grafana <code>Admin</code> or <code>Editor</code> roles.
 func (s *SDK) UpdatePermissions(ctx context.Context, request operations.UpdatePermissionsRequest) (*operations.UpdatePermissionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1626,7 +1680,10 @@ func (s *SDK) UpdatePermissions(ctx context.Context, request operations.UpdatePe
 // UpdateWorkspace - <p>Modifies an existing Amazon Managed Grafana workspace. If you use this operation and omit any optional parameters, the existing values of those parameters are not changed.</p> <p>To modify the user authentication methods that the workspace uses, such as SAML or IAM Identity Center, use <a href="https://docs.aws.amazon.com/grafana/latest/APIReference/API_UpdateWorkspaceAuthentication.html">UpdateWorkspaceAuthentication</a>.</p> <p>To modify which users in the workspace have the <code>Admin</code> and <code>Editor</code> Grafana roles, use <a href="https://docs.aws.amazon.com/grafana/latest/APIReference/API_UpdatePermissions.html">UpdatePermissions</a>.</p>
 func (s *SDK) UpdateWorkspace(ctx context.Context, request operations.UpdateWorkspaceRequest) (*operations.UpdateWorkspaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1742,7 +1799,10 @@ func (s *SDK) UpdateWorkspace(ctx context.Context, request operations.UpdateWork
 // UpdateWorkspaceAuthentication - <p>Use this operation to define the identity provider (IdP) that this workspace authenticates users from, using SAML. You can also map SAML assertion attributes to workspace user information and define which groups in the assertion attribute are to have the <code>Admin</code> and <code>Editor</code> roles in the workspace.</p> <note> <p>Changes to the authentication method for a workspace may take a few minutes to take effect.</p> </note>
 func (s *SDK) UpdateWorkspaceAuthentication(ctx context.Context, request operations.UpdateWorkspaceAuthenticationRequest) (*operations.UpdateWorkspaceAuthenticationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/authentication", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/authentication", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1858,7 +1918,10 @@ func (s *SDK) UpdateWorkspaceAuthentication(ctx context.Context, request operati
 // UpdateWorkspaceConfiguration - Updates the configuration string for the given workspace
 func (s *SDK) UpdateWorkspaceConfiguration(ctx context.Context, request operations.UpdateWorkspaceConfigurationRequest) (*operations.UpdateWorkspaceConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/configuration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/configuration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

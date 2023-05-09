@@ -16,17 +16,21 @@ const (
 	ExecuteCommandXAmzTargetEnumAmazonEc2ContainerServiceV20141113ExecuteCommand ExecuteCommandXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.ExecuteCommand"
 )
 
+func (e ExecuteCommandXAmzTargetEnum) ToPointer() *ExecuteCommandXAmzTargetEnum {
+	return &e
+}
+
 func (e *ExecuteCommandXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.ExecuteCommand":
-		*e = ExecuteCommandXAmzTargetEnum(s)
+		*e = ExecuteCommandXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteCommandXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteCommandXAmzTargetEnum: %v", v)
 	}
 }
 

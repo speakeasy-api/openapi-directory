@@ -27,19 +27,23 @@ const (
 	GetObjectInformationXAmzConsistencyLevelEnumEventual     GetObjectInformationXAmzConsistencyLevelEnum = "EVENTUAL"
 )
 
+func (e GetObjectInformationXAmzConsistencyLevelEnum) ToPointer() *GetObjectInformationXAmzConsistencyLevelEnum {
+	return &e
+}
+
 func (e *GetObjectInformationXAmzConsistencyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERIALIZABLE":
 		fallthrough
 	case "EVENTUAL":
-		*e = GetObjectInformationXAmzConsistencyLevelEnum(s)
+		*e = GetObjectInformationXAmzConsistencyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetObjectInformationXAmzConsistencyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GetObjectInformationXAmzConsistencyLevelEnum: %v", v)
 	}
 }
 

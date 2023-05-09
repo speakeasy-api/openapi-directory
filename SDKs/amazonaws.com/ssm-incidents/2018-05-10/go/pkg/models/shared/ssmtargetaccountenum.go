@@ -14,18 +14,22 @@ const (
 	SsmTargetAccountEnumImpactedAccount          SsmTargetAccountEnum = "IMPACTED_ACCOUNT"
 )
 
+func (e SsmTargetAccountEnum) ToPointer() *SsmTargetAccountEnum {
+	return &e
+}
+
 func (e *SsmTargetAccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESPONSE_PLAN_OWNER_ACCOUNT":
 		fallthrough
 	case "IMPACTED_ACCOUNT":
-		*e = SsmTargetAccountEnum(s)
+		*e = SsmTargetAccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SsmTargetAccountEnum: %s", s)
+		return fmt.Errorf("invalid value for SsmTargetAccountEnum: %v", v)
 	}
 }

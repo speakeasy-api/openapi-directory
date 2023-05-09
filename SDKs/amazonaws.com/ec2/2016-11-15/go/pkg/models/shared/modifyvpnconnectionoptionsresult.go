@@ -18,12 +18,16 @@ const (
 	ModifyVpnConnectionOptionsResultVpnConnectionGatewayAssociationStateEnumDisassociating ModifyVpnConnectionOptionsResultVpnConnectionGatewayAssociationStateEnum = "disassociating"
 )
 
+func (e ModifyVpnConnectionOptionsResultVpnConnectionGatewayAssociationStateEnum) ToPointer() *ModifyVpnConnectionOptionsResultVpnConnectionGatewayAssociationStateEnum {
+	return &e
+}
+
 func (e *ModifyVpnConnectionOptionsResultVpnConnectionGatewayAssociationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associated":
 		fallthrough
 	case "not-associated":
@@ -31,10 +35,10 @@ func (e *ModifyVpnConnectionOptionsResultVpnConnectionGatewayAssociationStateEnu
 	case "associating":
 		fallthrough
 	case "disassociating":
-		*e = ModifyVpnConnectionOptionsResultVpnConnectionGatewayAssociationStateEnum(s)
+		*e = ModifyVpnConnectionOptionsResultVpnConnectionGatewayAssociationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionGatewayAssociationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionGatewayAssociationStateEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelInsideIPVersionEnumIpv6 ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelInsideIPVersionEnum = "ipv6"
 )
 
+func (e ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelInsideIPVersionEnum) ToPointer() *ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelInsideIPVersionEnum {
+	return &e
+}
+
 func (e *ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelInsideIPVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
-		*e = ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelInsideIPVersionEnum(s)
+		*e = ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelInsideIPVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelInsideIPVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelInsideIPVersionEnum: %v", v)
 	}
 }
 
@@ -111,26 +119,27 @@ type ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase2Inte
 
 // ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptions - The VPN tunnel options.
 type ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptions struct {
-	DpdTimeoutAction           *string
-	DpdTimeoutSeconds          *int64
-	IkeVersions                []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsIkeVersions
-	LogOptions                 *ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsLogOptions
-	OutsideIPAddress           *string
-	Phase1DHGroupNumbers       []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase1DHGroupNumbers
-	Phase1EncryptionAlgorithms []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase1EncryptionAlgorithms
-	Phase1IntegrityAlgorithms  []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase1IntegrityAlgorithms
-	Phase1LifetimeSeconds      *int64
-	Phase2DHGroupNumbers       []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase2DHGroupNumbers
-	Phase2EncryptionAlgorithms []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase2EncryptionAlgorithms
-	Phase2IntegrityAlgorithms  []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase2IntegrityAlgorithms
-	Phase2LifetimeSeconds      *int64
-	PreSharedKey               *string
-	RekeyFuzzPercentage        *int64
-	RekeyMarginTimeSeconds     *int64
-	ReplayWindowSize           *int64
-	StartupAction              *string
-	TunnelInsideCidr           *string
-	TunnelInsideIpv6Cidr       *string
+	DpdTimeoutAction             *string
+	DpdTimeoutSeconds            *int64
+	EnableTunnelLifecycleControl *bool
+	IkeVersions                  []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsIkeVersions
+	LogOptions                   *ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsLogOptions
+	OutsideIPAddress             *string
+	Phase1DHGroupNumbers         []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase1DHGroupNumbers
+	Phase1EncryptionAlgorithms   []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase1EncryptionAlgorithms
+	Phase1IntegrityAlgorithms    []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase1IntegrityAlgorithms
+	Phase1LifetimeSeconds        *int64
+	Phase2DHGroupNumbers         []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase2DHGroupNumbers
+	Phase2EncryptionAlgorithms   []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase2EncryptionAlgorithms
+	Phase2IntegrityAlgorithms    []ModifyVpnConnectionOptionsResultVpnConnectionOptionsTunnelOptionsPhase2IntegrityAlgorithms
+	Phase2LifetimeSeconds        *int64
+	PreSharedKey                 *string
+	RekeyFuzzPercentage          *int64
+	RekeyMarginTimeSeconds       *int64
+	ReplayWindowSize             *int64
+	StartupAction                *string
+	TunnelInsideCidr             *string
+	TunnelInsideIpv6Cidr         *string
 }
 
 // ModifyVpnConnectionOptionsResultVpnConnectionOptions - The VPN connection options.
@@ -154,17 +163,21 @@ const (
 	ModifyVpnConnectionOptionsResultVpnConnectionRoutesSourceEnumStatic ModifyVpnConnectionOptionsResultVpnConnectionRoutesSourceEnum = "Static"
 )
 
+func (e ModifyVpnConnectionOptionsResultVpnConnectionRoutesSourceEnum) ToPointer() *ModifyVpnConnectionOptionsResultVpnConnectionRoutesSourceEnum {
+	return &e
+}
+
 func (e *ModifyVpnConnectionOptionsResultVpnConnectionRoutesSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Static":
-		*e = ModifyVpnConnectionOptionsResultVpnConnectionRoutesSourceEnum(s)
+		*e = ModifyVpnConnectionOptionsResultVpnConnectionRoutesSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionRoutesSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionRoutesSourceEnum: %v", v)
 	}
 }
 
@@ -178,12 +191,16 @@ const (
 	ModifyVpnConnectionOptionsResultVpnConnectionRoutesStateEnumDeleted   ModifyVpnConnectionOptionsResultVpnConnectionRoutesStateEnum = "deleted"
 )
 
+func (e ModifyVpnConnectionOptionsResultVpnConnectionRoutesStateEnum) ToPointer() *ModifyVpnConnectionOptionsResultVpnConnectionRoutesStateEnum {
+	return &e
+}
+
 func (e *ModifyVpnConnectionOptionsResultVpnConnectionRoutesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
@@ -191,10 +208,10 @@ func (e *ModifyVpnConnectionOptionsResultVpnConnectionRoutesStateEnum) Unmarshal
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = ModifyVpnConnectionOptionsResultVpnConnectionRoutesStateEnum(s)
+		*e = ModifyVpnConnectionOptionsResultVpnConnectionRoutesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionRoutesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionRoutesStateEnum: %v", v)
 	}
 }
 
@@ -215,12 +232,16 @@ const (
 	ModifyVpnConnectionOptionsResultVpnConnectionStateEnumDeleted   ModifyVpnConnectionOptionsResultVpnConnectionStateEnum = "deleted"
 )
 
+func (e ModifyVpnConnectionOptionsResultVpnConnectionStateEnum) ToPointer() *ModifyVpnConnectionOptionsResultVpnConnectionStateEnum {
+	return &e
+}
+
 func (e *ModifyVpnConnectionOptionsResultVpnConnectionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
@@ -228,10 +249,10 @@ func (e *ModifyVpnConnectionOptionsResultVpnConnectionStateEnum) UnmarshalJSON(d
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = ModifyVpnConnectionOptionsResultVpnConnectionStateEnum(s)
+		*e = ModifyVpnConnectionOptionsResultVpnConnectionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionStateEnum: %v", v)
 	}
 }
 
@@ -248,17 +269,21 @@ const (
 	ModifyVpnConnectionOptionsResultVpnConnectionTypeEnumIpsec1 ModifyVpnConnectionOptionsResultVpnConnectionTypeEnum = "ipsec.1"
 )
 
+func (e ModifyVpnConnectionOptionsResultVpnConnectionTypeEnum) ToPointer() *ModifyVpnConnectionOptionsResultVpnConnectionTypeEnum {
+	return &e
+}
+
 func (e *ModifyVpnConnectionOptionsResultVpnConnectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipsec.1":
-		*e = ModifyVpnConnectionOptionsResultVpnConnectionTypeEnum(s)
+		*e = ModifyVpnConnectionOptionsResultVpnConnectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionTypeEnum: %v", v)
 	}
 }
 
@@ -270,19 +295,23 @@ const (
 	ModifyVpnConnectionOptionsResultVpnConnectionVgwTelemetryStatusEnumDown ModifyVpnConnectionOptionsResultVpnConnectionVgwTelemetryStatusEnum = "DOWN"
 )
 
+func (e ModifyVpnConnectionOptionsResultVpnConnectionVgwTelemetryStatusEnum) ToPointer() *ModifyVpnConnectionOptionsResultVpnConnectionVgwTelemetryStatusEnum {
+	return &e
+}
+
 func (e *ModifyVpnConnectionOptionsResultVpnConnectionVgwTelemetryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UP":
 		fallthrough
 	case "DOWN":
-		*e = ModifyVpnConnectionOptionsResultVpnConnectionVgwTelemetryStatusEnum(s)
+		*e = ModifyVpnConnectionOptionsResultVpnConnectionVgwTelemetryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionVgwTelemetryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVpnConnectionOptionsResultVpnConnectionVgwTelemetryStatusEnum: %v", v)
 	}
 }
 

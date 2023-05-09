@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - MLB scores, stats, and news API.
 type SDK struct {
 
@@ -107,7 +122,10 @@ func New(opts ...SDKOption) *SDK {
 // Returns <code>true</code> if there is at least one game being played at the time of the request or <code>false</code> if there are none.
 func (s *SDK) AreGamesInProgress(ctx context.Context, request operations.AreGamesInProgressRequest) (*operations.AreGamesInProgressResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/AreAnyGamesInProgress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/AreAnyGamesInProgress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -151,7 +169,10 @@ func (s *SDK) AreGamesInProgress(ctx context.Context, request operations.AreGame
 // BatterVsPitcherStats - Batter vs. Pitcher Stats
 func (s *SDK) BatterVsPitcherStats(ctx context.Context, request operations.BatterVsPitcherStatsRequest) (*operations.BatterVsPitcherStatsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/HitterVsPitcher/{hitterid}/{pitcherid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/HitterVsPitcher/{hitterid}/{pitcherid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -195,7 +216,10 @@ func (s *SDK) BatterVsPitcherStats(ctx context.Context, request operations.Batte
 // BoxScore - Box Score
 func (s *SDK) BoxScore(ctx context.Context, request operations.BoxScoreRequest) (*operations.BoxScoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/BoxScore/{gameid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/BoxScore/{gameid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,7 +263,10 @@ func (s *SDK) BoxScore(ctx context.Context, request operations.BoxScoreRequest) 
 // BoxScoresByDate - Box Scores by Date
 func (s *SDK) BoxScoresByDate(ctx context.Context, request operations.BoxScoresByDateRequest) (*operations.BoxScoresByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/BoxScores/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/BoxScores/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -283,7 +310,10 @@ func (s *SDK) BoxScoresByDate(ctx context.Context, request operations.BoxScoresB
 // BoxScoresByDateDelta - Box Scores by Date Delta
 func (s *SDK) BoxScoresByDateDelta(ctx context.Context, request operations.BoxScoresByDateDeltaRequest) (*operations.BoxScoresByDateDeltaResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/BoxScoresDelta/{date}/{minutes}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/BoxScoresDelta/{date}/{minutes}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -327,7 +357,10 @@ func (s *SDK) BoxScoresByDateDelta(ctx context.Context, request operations.BoxSc
 // CurrentSeason - Current Season
 func (s *SDK) CurrentSeason(ctx context.Context, request operations.CurrentSeasonRequest) (*operations.CurrentSeasonResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/CurrentSeason", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/CurrentSeason", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -371,7 +404,10 @@ func (s *SDK) CurrentSeason(ctx context.Context, request operations.CurrentSeaso
 // DfsSlatesByDate - DFS Slates by Date
 func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesByDateRequest) (*operations.DfsSlatesByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlatesByDate/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlatesByDate/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -415,7 +451,10 @@ func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesB
 // GamesByDate - Games by Date
 func (s *SDK) GamesByDate(ctx context.Context, request operations.GamesByDateRequest) (*operations.GamesByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/GamesByDate/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/GamesByDate/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -459,7 +498,10 @@ func (s *SDK) GamesByDate(ctx context.Context, request operations.GamesByDateReq
 // News - News
 func (s *SDK) News(ctx context.Context, request operations.NewsRequest) (*operations.NewsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/News", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/News", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -503,7 +545,10 @@ func (s *SDK) News(ctx context.Context, request operations.NewsRequest) (*operat
 // NewsByDate - News by Date
 func (s *SDK) NewsByDate(ctx context.Context, request operations.NewsByDateRequest) (*operations.NewsByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/NewsByDate/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/NewsByDate/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -547,7 +592,10 @@ func (s *SDK) NewsByDate(ctx context.Context, request operations.NewsByDateReque
 // NewsByPlayer - News by Player
 func (s *SDK) NewsByPlayer(ctx context.Context, request operations.NewsByPlayerRequest) (*operations.NewsByPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/NewsByPlayerID/{playerid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/NewsByPlayerID/{playerid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -591,7 +639,10 @@ func (s *SDK) NewsByPlayer(ctx context.Context, request operations.NewsByPlayerR
 // PlayerDetailsByActive - Player Details by Active
 func (s *SDK) PlayerDetailsByActive(ctx context.Context, request operations.PlayerDetailsByActiveRequest) (*operations.PlayerDetailsByActiveResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Players", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/Players", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -635,7 +686,10 @@ func (s *SDK) PlayerDetailsByActive(ctx context.Context, request operations.Play
 // PlayerDetailsByFreeAgents - Player Details by Free Agents
 func (s *SDK) PlayerDetailsByFreeAgents(ctx context.Context, request operations.PlayerDetailsByFreeAgentsRequest) (*operations.PlayerDetailsByFreeAgentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/FreeAgents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/FreeAgents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -679,7 +733,10 @@ func (s *SDK) PlayerDetailsByFreeAgents(ctx context.Context, request operations.
 // PlayerDetailsByPlayer - Player Details by Player
 func (s *SDK) PlayerDetailsByPlayer(ctx context.Context, request operations.PlayerDetailsByPlayerRequest) (*operations.PlayerDetailsByPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Player/{playerid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/Player/{playerid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -723,7 +780,10 @@ func (s *SDK) PlayerDetailsByPlayer(ctx context.Context, request operations.Play
 // PlayerGameLogsBySeason - Player Game Logs By Season
 func (s *SDK) PlayerGameLogsBySeason(ctx context.Context, request operations.PlayerGameLogsBySeasonRequest) (*operations.PlayerGameLogsBySeasonResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameStatsBySeason/{season}/{playerid}/{numberofgames}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameStatsBySeason/{season}/{playerid}/{numberofgames}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -767,7 +827,10 @@ func (s *SDK) PlayerGameLogsBySeason(ctx context.Context, request operations.Pla
 // PlayerGameStatsByDate - Player Game Stats by Date
 func (s *SDK) PlayerGameStatsByDate(ctx context.Context, request operations.PlayerGameStatsByDateRequest) (*operations.PlayerGameStatsByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameStatsByDate/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameStatsByDate/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -811,7 +874,10 @@ func (s *SDK) PlayerGameStatsByDate(ctx context.Context, request operations.Play
 // PlayerGameStatsByPlayer - Player Game Stats by Player
 func (s *SDK) PlayerGameStatsByPlayer(ctx context.Context, request operations.PlayerGameStatsByPlayerRequest) (*operations.PlayerGameStatsByPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameStatsByPlayer/{date}/{playerid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameStatsByPlayer/{date}/{playerid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -855,7 +921,10 @@ func (s *SDK) PlayerGameStatsByPlayer(ctx context.Context, request operations.Pl
 // PlayerSeasonAwayStats - Player Season Away Stats
 func (s *SDK) PlayerSeasonAwayStats(ctx context.Context, request operations.PlayerSeasonAwayStatsRequest) (*operations.PlayerSeasonAwayStatsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonAwayStats/{season}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonAwayStats/{season}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -899,7 +968,10 @@ func (s *SDK) PlayerSeasonAwayStats(ctx context.Context, request operations.Play
 // PlayerSeasonHomeStats - Player Season Home Stats
 func (s *SDK) PlayerSeasonHomeStats(ctx context.Context, request operations.PlayerSeasonHomeStatsRequest) (*operations.PlayerSeasonHomeStatsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonHomeStats/{season}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonHomeStats/{season}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -943,7 +1015,10 @@ func (s *SDK) PlayerSeasonHomeStats(ctx context.Context, request operations.Play
 // PlayerSeasonSplitStats - Player Season Split Stats
 func (s *SDK) PlayerSeasonSplitStats(ctx context.Context, request operations.PlayerSeasonSplitStatsRequest) (*operations.PlayerSeasonSplitStatsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonSplitStats/{season}/{split}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonSplitStats/{season}/{split}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -987,7 +1062,10 @@ func (s *SDK) PlayerSeasonSplitStats(ctx context.Context, request operations.Pla
 // PlayerSeasonStats - Player Season Stats
 func (s *SDK) PlayerSeasonStats(ctx context.Context, request operations.PlayerSeasonStatsRequest) (*operations.PlayerSeasonStatsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonStats/{season}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonStats/{season}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1031,7 +1109,10 @@ func (s *SDK) PlayerSeasonStats(ctx context.Context, request operations.PlayerSe
 // PlayerSeasonStatsByPlayer - Player Season Stats By Player
 func (s *SDK) PlayerSeasonStatsByPlayer(ctx context.Context, request operations.PlayerSeasonStatsByPlayerRequest) (*operations.PlayerSeasonStatsByPlayerResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonStatsByPlayer/{season}/{playerid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonStatsByPlayer/{season}/{playerid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1075,7 +1156,10 @@ func (s *SDK) PlayerSeasonStatsByPlayer(ctx context.Context, request operations.
 // PlayerSeasonStatsByTeam - Player Season Stats by Team
 func (s *SDK) PlayerSeasonStatsByTeam(ctx context.Context, request operations.PlayerSeasonStatsByTeamRequest) (*operations.PlayerSeasonStatsByTeamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonStatsByTeam/{season}/{team}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonStatsByTeam/{season}/{team}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1119,7 +1203,10 @@ func (s *SDK) PlayerSeasonStatsByTeam(ctx context.Context, request operations.Pl
 // PlayerSeasonStatsSplitByTeam - Player Season Stats Split By Team
 func (s *SDK) PlayerSeasonStatsSplitByTeam(ctx context.Context, request operations.PlayerSeasonStatsSplitByTeamRequest) (*operations.PlayerSeasonStatsSplitByTeamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonStatsSplitByTeam/{season}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonStatsSplitByTeam/{season}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1163,7 +1250,10 @@ func (s *SDK) PlayerSeasonStatsSplitByTeam(ctx context.Context, request operatio
 // PlayersByTeam - Players by Team
 func (s *SDK) PlayersByTeam(ctx context.Context, request operations.PlayersByTeamRequest) (*operations.PlayersByTeamResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Players/{team}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/Players/{team}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1207,7 +1297,10 @@ func (s *SDK) PlayersByTeam(ctx context.Context, request operations.PlayersByTea
 // Schedules - Schedules
 func (s *SDK) Schedules(ctx context.Context, request operations.SchedulesRequest) (*operations.SchedulesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Games/{season}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/Games/{season}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1251,7 +1344,10 @@ func (s *SDK) Schedules(ctx context.Context, request operations.SchedulesRequest
 // Stadiums - Stadiums
 func (s *SDK) Stadiums(ctx context.Context, request operations.StadiumsRequest) (*operations.StadiumsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Stadiums", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/Stadiums", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1295,7 +1391,10 @@ func (s *SDK) Stadiums(ctx context.Context, request operations.StadiumsRequest) 
 // Standings - Standings
 func (s *SDK) Standings(ctx context.Context, request operations.StandingsRequest) (*operations.StandingsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/Standings/{season}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/Standings/{season}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1340,7 +1439,10 @@ func (s *SDK) Standings(ctx context.Context, request operations.StandingsRequest
 // Game by game log of total team statistics.
 func (s *SDK) TeamGameLogsBySeason(ctx context.Context, request operations.TeamGameLogsBySeasonRequest) (*operations.TeamGameLogsBySeasonResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1384,7 +1486,10 @@ func (s *SDK) TeamGameLogsBySeason(ctx context.Context, request operations.TeamG
 // TeamGameStatsByDate - Team Game Stats by Date
 func (s *SDK) TeamGameStatsByDate(ctx context.Context, request operations.TeamGameStatsByDateRequest) (*operations.TeamGameStatsByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/TeamGameStatsByDate/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/TeamGameStatsByDate/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1428,7 +1533,10 @@ func (s *SDK) TeamGameStatsByDate(ctx context.Context, request operations.TeamGa
 // TeamHittingVsStartingPitcher - Team Hitting vs. Starting Pitcher
 func (s *SDK) TeamHittingVsStartingPitcher(ctx context.Context, request operations.TeamHittingVsStartingPitcherRequest) (*operations.TeamHittingVsStartingPitcherResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/TeamHittersVsPitcher/{gameid}/{team}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/TeamHittersVsPitcher/{gameid}/{team}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1472,7 +1580,10 @@ func (s *SDK) TeamHittingVsStartingPitcher(ctx context.Context, request operatio
 // TeamSeasonStats - Team Season Stats
 func (s *SDK) TeamSeasonStats(ctx context.Context, request operations.TeamSeasonStatsRequest) (*operations.TeamSeasonStatsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/TeamSeasonStats/{season}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/TeamSeasonStats/{season}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1516,7 +1627,10 @@ func (s *SDK) TeamSeasonStats(ctx context.Context, request operations.TeamSeason
 // TeamsActive - Teams (Active)
 func (s *SDK) TeamsActive(ctx context.Context, request operations.TeamsActiveRequest) (*operations.TeamsActiveResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1560,7 +1674,10 @@ func (s *SDK) TeamsActive(ctx context.Context, request operations.TeamsActiveReq
 // TeamsAll - Teams (All)
 func (s *SDK) TeamsAll(ctx context.Context, request operations.TeamsAllRequest) (*operations.TeamsAllResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/AllTeams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/AllTeams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

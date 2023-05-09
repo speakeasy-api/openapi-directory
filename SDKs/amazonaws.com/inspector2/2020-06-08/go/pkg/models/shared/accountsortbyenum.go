@@ -15,20 +15,24 @@ const (
 	AccountSortByEnumAll      AccountSortByEnum = "ALL"
 )
 
+func (e AccountSortByEnum) ToPointer() *AccountSortByEnum {
+	return &e
+}
+
 func (e *AccountSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRITICAL":
 		fallthrough
 	case "HIGH":
 		fallthrough
 	case "ALL":
-		*e = AccountSortByEnum(s)
+		*e = AccountSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountSortByEnum: %v", v)
 	}
 }

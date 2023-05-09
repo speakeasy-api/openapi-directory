@@ -22,12 +22,16 @@ const (
 	CardDisplayPropertyDataTypeEnumStatus   CardDisplayPropertyDataTypeEnum = "STATUS"
 )
 
+func (e CardDisplayPropertyDataTypeEnum) ToPointer() *CardDisplayPropertyDataTypeEnum {
+	return &e
+}
+
 func (e *CardDisplayPropertyDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BOOLEAN":
 		fallthrough
 	case "CURRENCY":
@@ -45,10 +49,10 @@ func (e *CardDisplayPropertyDataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "STRING":
 		fallthrough
 	case "STATUS":
-		*e = CardDisplayPropertyDataTypeEnum(s)
+		*e = CardDisplayPropertyDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CardDisplayPropertyDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CardDisplayPropertyDataTypeEnum: %v", v)
 	}
 }
 

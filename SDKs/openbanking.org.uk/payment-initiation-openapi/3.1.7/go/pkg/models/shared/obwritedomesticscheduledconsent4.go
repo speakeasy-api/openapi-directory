@@ -16,19 +16,23 @@ const (
 	OBWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnumSingle OBWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
+func (e OBWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum) ToPointer() *OBWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Any":
 		fallthrough
 	case "Single":
-		*e = OBWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum(s)
+		*e = OBWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticScheduledConsent4DataAuthorisationAuthorisationTypeEnum: %v", v)
 	}
 }
 
@@ -130,17 +134,21 @@ const (
 	OBWriteDomesticScheduledConsent4DataPermissionEnumCreate OBWriteDomesticScheduledConsent4DataPermissionEnum = "Create"
 )
 
+func (e OBWriteDomesticScheduledConsent4DataPermissionEnum) ToPointer() *OBWriteDomesticScheduledConsent4DataPermissionEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticScheduledConsent4DataPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Create":
-		*e = OBWriteDomesticScheduledConsent4DataPermissionEnum(s)
+		*e = OBWriteDomesticScheduledConsent4DataPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticScheduledConsent4DataPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticScheduledConsent4DataPermissionEnum: %v", v)
 	}
 }
 
@@ -152,19 +160,23 @@ const (
 	OBWriteDomesticScheduledConsent4DataReadRefundAccountEnumYes OBWriteDomesticScheduledConsent4DataReadRefundAccountEnum = "Yes"
 )
 
+func (e OBWriteDomesticScheduledConsent4DataReadRefundAccountEnum) ToPointer() *OBWriteDomesticScheduledConsent4DataReadRefundAccountEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticScheduledConsent4DataReadRefundAccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No":
 		fallthrough
 	case "Yes":
-		*e = OBWriteDomesticScheduledConsent4DataReadRefundAccountEnum(s)
+		*e = OBWriteDomesticScheduledConsent4DataReadRefundAccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticScheduledConsent4DataReadRefundAccountEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticScheduledConsent4DataReadRefundAccountEnum: %v", v)
 	}
 }
 

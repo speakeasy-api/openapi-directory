@@ -23,21 +23,25 @@ const (
 	InvokeXAmzInvocationTypeEnumDryRun          InvokeXAmzInvocationTypeEnum = "DryRun"
 )
 
+func (e InvokeXAmzInvocationTypeEnum) ToPointer() *InvokeXAmzInvocationTypeEnum {
+	return &e
+}
+
 func (e *InvokeXAmzInvocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Event":
 		fallthrough
 	case "RequestResponse":
 		fallthrough
 	case "DryRun":
-		*e = InvokeXAmzInvocationTypeEnum(s)
+		*e = InvokeXAmzInvocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvokeXAmzInvocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvokeXAmzInvocationTypeEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	InvokeXAmzLogTypeEnumTail InvokeXAmzLogTypeEnum = "Tail"
 )
 
+func (e InvokeXAmzLogTypeEnum) ToPointer() *InvokeXAmzLogTypeEnum {
+	return &e
+}
+
 func (e *InvokeXAmzLogTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "Tail":
-		*e = InvokeXAmzLogTypeEnum(s)
+		*e = InvokeXAmzLogTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvokeXAmzLogTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvokeXAmzLogTypeEnum: %v", v)
 	}
 }
 

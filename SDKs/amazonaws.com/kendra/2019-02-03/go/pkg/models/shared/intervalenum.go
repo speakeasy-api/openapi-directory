@@ -18,12 +18,16 @@ const (
 	IntervalEnumTwoMonthsAgo IntervalEnum = "TWO_MONTHS_AGO"
 )
 
+func (e IntervalEnum) ToPointer() *IntervalEnum {
+	return &e
+}
+
 func (e *IntervalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THIS_MONTH":
 		fallthrough
 	case "THIS_WEEK":
@@ -35,9 +39,9 @@ func (e *IntervalEnum) UnmarshalJSON(data []byte) error {
 	case "ONE_MONTH_AGO":
 		fallthrough
 	case "TWO_MONTHS_AGO":
-		*e = IntervalEnum(s)
+		*e = IntervalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntervalEnum: %s", s)
+		return fmt.Errorf("invalid value for IntervalEnum: %v", v)
 	}
 }

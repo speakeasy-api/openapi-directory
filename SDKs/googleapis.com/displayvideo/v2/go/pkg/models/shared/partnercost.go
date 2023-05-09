@@ -43,12 +43,16 @@ const (
 	PartnerCostCostTypeEnumPartnerCostTypeCustomFee5              PartnerCostCostTypeEnum = "PARTNER_COST_TYPE_CUSTOM_FEE_5"
 )
 
+func (e PartnerCostCostTypeEnum) ToPointer() *PartnerCostCostTypeEnum {
+	return &e
+}
+
 func (e *PartnerCostCostTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARTNER_COST_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PARTNER_COST_TYPE_ADLOOX":
@@ -108,10 +112,10 @@ func (e *PartnerCostCostTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PARTNER_COST_TYPE_CUSTOM_FEE_4":
 		fallthrough
 	case "PARTNER_COST_TYPE_CUSTOM_FEE_5":
-		*e = PartnerCostCostTypeEnum(s)
+		*e = PartnerCostCostTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartnerCostCostTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PartnerCostCostTypeEnum: %v", v)
 	}
 }
 
@@ -124,21 +128,25 @@ const (
 	PartnerCostFeeTypeEnumPartnerCostFeeTypeMediaFee    PartnerCostFeeTypeEnum = "PARTNER_COST_FEE_TYPE_MEDIA_FEE"
 )
 
+func (e PartnerCostFeeTypeEnum) ToPointer() *PartnerCostFeeTypeEnum {
+	return &e
+}
+
 func (e *PartnerCostFeeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARTNER_COST_FEE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PARTNER_COST_FEE_TYPE_CPM_FEE":
 		fallthrough
 	case "PARTNER_COST_FEE_TYPE_MEDIA_FEE":
-		*e = PartnerCostFeeTypeEnum(s)
+		*e = PartnerCostFeeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartnerCostFeeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PartnerCostFeeTypeEnum: %v", v)
 	}
 }
 
@@ -151,21 +159,25 @@ const (
 	PartnerCostInvoiceTypeEnumPartnerCostInvoiceTypePartner     PartnerCostInvoiceTypeEnum = "PARTNER_COST_INVOICE_TYPE_PARTNER"
 )
 
+func (e PartnerCostInvoiceTypeEnum) ToPointer() *PartnerCostInvoiceTypeEnum {
+	return &e
+}
+
 func (e *PartnerCostInvoiceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARTNER_COST_INVOICE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PARTNER_COST_INVOICE_TYPE_DV360":
 		fallthrough
 	case "PARTNER_COST_INVOICE_TYPE_PARTNER":
-		*e = PartnerCostInvoiceTypeEnum(s)
+		*e = PartnerCostInvoiceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartnerCostInvoiceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PartnerCostInvoiceTypeEnum: %v", v)
 	}
 }
 

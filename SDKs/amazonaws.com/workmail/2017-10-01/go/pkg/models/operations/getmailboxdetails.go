@@ -16,17 +16,21 @@ const (
 	GetMailboxDetailsXAmzTargetEnumWorkMailServiceGetMailboxDetails GetMailboxDetailsXAmzTargetEnum = "WorkMailService.GetMailboxDetails"
 )
 
+func (e GetMailboxDetailsXAmzTargetEnum) ToPointer() *GetMailboxDetailsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetMailboxDetailsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.GetMailboxDetails":
-		*e = GetMailboxDetailsXAmzTargetEnum(s)
+		*e = GetMailboxDetailsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMailboxDetailsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMailboxDetailsXAmzTargetEnum: %v", v)
 	}
 }
 

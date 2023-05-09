@@ -90,7 +90,10 @@ func (s *tagValues) CloudresourcemanagerTagValuesCreate(ctx context.Context, req
 // CloudresourcemanagerTagValuesGet - Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the value does not exist or the user does not have permission to view it.
 func (s *tagValues) CloudresourcemanagerTagValuesGet(ctx context.Context, request operations.CloudresourcemanagerTagValuesGetRequest, security operations.CloudresourcemanagerTagValuesGetSecurity) (*operations.CloudresourcemanagerTagValuesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *tagValues) CloudresourcemanagerTagValuesGet(ctx context.Context, reques
 // CloudresourcemanagerTagValuesGetIamPolicy - Gets the access control policy for a TagValue. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the TagValue's resource name. For example: `tagValues/1234`. The caller must have the `cloudresourcemanager.googleapis.com/tagValues.getIamPolicy` permission on the identified TagValue to get the access control policy.
 func (s *tagValues) CloudresourcemanagerTagValuesGetIamPolicy(ctx context.Context, request operations.CloudresourcemanagerTagValuesGetIamPolicyRequest, security operations.CloudresourcemanagerTagValuesGetIamPolicySecurity) (*operations.CloudresourcemanagerTagValuesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
@@ -184,6 +190,54 @@ func (s *tagValues) CloudresourcemanagerTagValuesGetIamPolicy(ctx context.Contex
 			}
 
 			res.Policy = out
+		}
+	}
+
+	return res, nil
+}
+
+// CloudresourcemanagerTagValuesGetNamespaced - Retrieves a TagValue by its namespaced name. This method will return `PERMISSION_DENIED` if the value does not exist or the user does not have permission to view it.
+func (s *tagValues) CloudresourcemanagerTagValuesGetNamespaced(ctx context.Context, request operations.CloudresourcemanagerTagValuesGetNamespacedRequest, security operations.CloudresourcemanagerTagValuesGetNamespacedSecurity) (*operations.CloudresourcemanagerTagValuesGetNamespacedResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v3/tagValues/namespaced"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CloudresourcemanagerTagValuesGetNamespacedResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TagValue
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TagValue = out
 		}
 	}
 
@@ -241,7 +295,10 @@ func (s *tagValues) CloudresourcemanagerTagValuesList(ctx context.Context, reque
 // CloudresourcemanagerTagValuesPatch - Updates the attributes of the TagValue resource.
 func (s *tagValues) CloudresourcemanagerTagValuesPatch(ctx context.Context, request operations.CloudresourcemanagerTagValuesPatchRequest, security operations.CloudresourcemanagerTagValuesPatchSecurity) (*operations.CloudresourcemanagerTagValuesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagValueInput", "json")
 	if err != nil {
@@ -296,7 +353,10 @@ func (s *tagValues) CloudresourcemanagerTagValuesPatch(ctx context.Context, requ
 // CloudresourcemanagerTagValuesSetIamPolicy - Sets the access control policy on a TagValue, replacing any existing policy. The `resource` field should be the TagValue's resource name. For example: `tagValues/1234`. The caller must have `resourcemanager.tagValues.setIamPolicy` permission on the identified tagValue.
 func (s *tagValues) CloudresourcemanagerTagValuesSetIamPolicy(ctx context.Context, request operations.CloudresourcemanagerTagValuesSetIamPolicyRequest, security operations.CloudresourcemanagerTagValuesSetIamPolicySecurity) (*operations.CloudresourcemanagerTagValuesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -351,7 +411,10 @@ func (s *tagValues) CloudresourcemanagerTagValuesSetIamPolicy(ctx context.Contex
 // CloudresourcemanagerTagValuesTagHoldsCreate - Creates a TagHold. Returns ALREADY_EXISTS if a TagHold with the same resource and origin exists under the same TagValue.
 func (s *tagValues) CloudresourcemanagerTagValuesTagHoldsCreate(ctx context.Context, request operations.CloudresourcemanagerTagValuesTagHoldsCreateRequest, security operations.CloudresourcemanagerTagValuesTagHoldsCreateSecurity) (*operations.CloudresourcemanagerTagValuesTagHoldsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/tagHolds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/tagHolds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagHoldInput", "json")
 	if err != nil {
@@ -406,7 +469,10 @@ func (s *tagValues) CloudresourcemanagerTagValuesTagHoldsCreate(ctx context.Cont
 // CloudresourcemanagerTagValuesTagHoldsDelete - Deletes a TagHold.
 func (s *tagValues) CloudresourcemanagerTagValuesTagHoldsDelete(ctx context.Context, request operations.CloudresourcemanagerTagValuesTagHoldsDeleteRequest, security operations.CloudresourcemanagerTagValuesTagHoldsDeleteSecurity) (*operations.CloudresourcemanagerTagValuesTagHoldsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -454,7 +520,10 @@ func (s *tagValues) CloudresourcemanagerTagValuesTagHoldsDelete(ctx context.Cont
 // CloudresourcemanagerTagValuesTagHoldsList - Lists TagHolds under a TagValue.
 func (s *tagValues) CloudresourcemanagerTagValuesTagHoldsList(ctx context.Context, request operations.CloudresourcemanagerTagValuesTagHoldsListRequest, security operations.CloudresourcemanagerTagValuesTagHoldsListSecurity) (*operations.CloudresourcemanagerTagValuesTagHoldsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/tagHolds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/tagHolds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -502,7 +571,10 @@ func (s *tagValues) CloudresourcemanagerTagValuesTagHoldsList(ctx context.Contex
 // CloudresourcemanagerTagValuesTestIamPermissions - Returns permissions that a caller has on the specified TagValue. The `resource` field should be the TagValue's resource name. For example: `tagValues/1234`. There are no permissions required for making this API call.
 func (s *tagValues) CloudresourcemanagerTagValuesTestIamPermissions(ctx context.Context, request operations.CloudresourcemanagerTagValuesTestIamPermissionsRequest, security operations.CloudresourcemanagerTagValuesTestIamPermissionsSecurity) (*operations.CloudresourcemanagerTagValuesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {

@@ -35,7 +35,7 @@ func newUser(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 // GetUserExtensions - Get User Extensions
 // This endpoint allows you to get list of your extensions including extensions from the watchlist.
-func (s *user) GetUserExtensions(ctx context.Context) (*operations.GetUserExtensionsResponse, error) {
+func (s *user) GetUserExtensions(ctx context.Context, security operations.GetUserExtensionsSecurity) (*operations.GetUserExtensionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user-extensions"
 
@@ -44,7 +44,7 @@ func (s *user) GetUserExtensions(ctx context.Context) (*operations.GetUserExtens
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

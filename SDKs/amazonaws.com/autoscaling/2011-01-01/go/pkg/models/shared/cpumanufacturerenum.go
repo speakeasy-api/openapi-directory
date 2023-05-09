@@ -15,20 +15,24 @@ const (
 	CPUManufacturerEnumAmazonWebServices CPUManufacturerEnum = "amazon-web-services"
 )
 
+func (e CPUManufacturerEnum) ToPointer() *CPUManufacturerEnum {
+	return &e
+}
+
 func (e *CPUManufacturerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intel":
 		fallthrough
 	case "amd":
 		fallthrough
 	case "amazon-web-services":
-		*e = CPUManufacturerEnum(s)
+		*e = CPUManufacturerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CPUManufacturerEnum: %s", s)
+		return fmt.Errorf("invalid value for CPUManufacturerEnum: %v", v)
 	}
 }

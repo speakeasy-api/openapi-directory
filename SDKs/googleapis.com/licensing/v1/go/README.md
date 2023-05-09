@@ -13,36 +13,34 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/licensing/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.LicensingLicenseAssignmentsDeleteRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
-        PrettyPrint: false,
-        ProductID: "illum",
-        QuotaUser: "vel",
-        SkuID: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-        UserID: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.LicenseAssignments.LicensingLicenseAssignmentsDelete(ctx, req, operations.LicensingLicenseAssignmentsDeleteSecurity{
+    res, err := s.LicenseAssignments.LicensingLicenseAssignmentsDelete(ctx, operations.LicensingLicenseAssignmentsDeleteRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
+        PrettyPrint: sdk.Bool(false),
+        ProductID: "illum",
+        QuotaUser: sdk.String("vel"),
+        SkuID: "error",
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+        UserID: "iure",
+    }, operations.LicensingLicenseAssignmentsDeleteSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -61,15 +59,15 @@ func main() {
 ## Available Resources and Operations
 
 
-### LicenseAssignments
+### [LicenseAssignments](docs/licenseassignments/README.md)
 
-* `LicensingLicenseAssignmentsDelete` - Revoke a license.
-* `LicensingLicenseAssignmentsGet` - Get a specific user's license by product SKU.
-* `LicensingLicenseAssignmentsInsert` - Assign a license.
-* `LicensingLicenseAssignmentsListForProduct` - List all users assigned licenses for a specific product SKU.
-* `LicensingLicenseAssignmentsListForProductAndSku` - List all users assigned licenses for a specific product SKU.
-* `LicensingLicenseAssignmentsPatch` - Reassign a user's product SKU with a different SKU in the same product. This method supports patch semantics.
-* `LicensingLicenseAssignmentsUpdate` - Reassign a user's product SKU with a different SKU in the same product.
+* [LicensingLicenseAssignmentsDelete](docs/licenseassignments/README.md#licensinglicenseassignmentsdelete) - Revoke a license.
+* [LicensingLicenseAssignmentsGet](docs/licenseassignments/README.md#licensinglicenseassignmentsget) - Get a specific user's license by product SKU.
+* [LicensingLicenseAssignmentsInsert](docs/licenseassignments/README.md#licensinglicenseassignmentsinsert) - Assign a license.
+* [LicensingLicenseAssignmentsListForProduct](docs/licenseassignments/README.md#licensinglicenseassignmentslistforproduct) - List all users assigned licenses for a specific product SKU.
+* [LicensingLicenseAssignmentsListForProductAndSku](docs/licenseassignments/README.md#licensinglicenseassignmentslistforproductandsku) - List all users assigned licenses for a specific product SKU.
+* [LicensingLicenseAssignmentsPatch](docs/licenseassignments/README.md#licensinglicenseassignmentspatch) - Reassign a user's product SKU with a different SKU in the same product. This method supports patch semantics.
+* [LicensingLicenseAssignmentsUpdate](docs/licenseassignments/README.md#licensinglicenseassignmentsupdate) - Reassign a user's product SKU with a different SKU in the same product.
 <!-- End SDK Available Operations -->
 
 ### Maturity

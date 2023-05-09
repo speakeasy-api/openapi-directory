@@ -16,17 +16,21 @@ const (
 	DescribeDocumentXAmzTargetEnumAmazonSsmDescribeDocument DescribeDocumentXAmzTargetEnum = "AmazonSSM.DescribeDocument"
 )
 
+func (e DescribeDocumentXAmzTargetEnum) ToPointer() *DescribeDocumentXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDocumentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DescribeDocument":
-		*e = DescribeDocumentXAmzTargetEnum(s)
+		*e = DescribeDocumentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDocumentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDocumentXAmzTargetEnum: %v", v)
 	}
 }
 

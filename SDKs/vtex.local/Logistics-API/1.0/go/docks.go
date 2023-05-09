@@ -35,7 +35,10 @@ func newDocks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Activates dock through dock ID.
 func (s *docks) ActivateDock(ctx context.Context, request operations.ActivateDockRequest) (*operations.ActivateDockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}/activation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}/activation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -170,7 +173,10 @@ func (s *docks) CreateUpdateDock(ctx context.Context, request operations.CreateU
 // Deactivate dock by dock ID
 func (s *docks) DeactivateDock(ctx context.Context, request operations.DeactivateDockRequest) (*operations.DeactivateDockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}/deactivation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}/deactivation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -208,7 +214,10 @@ func (s *docks) DeactivateDock(ctx context.Context, request operations.Deactivat
 // Deletes dock by dock ID.
 func (s *docks) Dock(ctx context.Context, request operations.DockRequest) (*operations.DockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -246,7 +255,10 @@ func (s *docks) Dock(ctx context.Context, request operations.DockRequest) (*oper
 // Informs a given dock's information, searching by dock ID.
 func (s *docks) DockByID(ctx context.Context, request operations.DockByIDRequest) (*operations.DockByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/docks/{dockId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

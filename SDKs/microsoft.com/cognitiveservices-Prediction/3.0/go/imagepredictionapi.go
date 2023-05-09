@@ -35,7 +35,10 @@ func newImagePredictionAPI(defaultClient, securityClient HTTPClient, serverURL, 
 // ClassifyImage - Classify an image and saves the result.
 func (s *imagePredictionAPI) ClassifyImage(ctx context.Context, request operations.ClassifyImageRequest) (*operations.ClassifyImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/image", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/image", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -131,7 +134,10 @@ func (s *imagePredictionAPI) ClassifyImage(ctx context.Context, request operatio
 // ClassifyImageURLWithNoStoreForm - Classify an image url without saving the result.
 func (s *imagePredictionAPI) ClassifyImageURLWithNoStoreForm(ctx context.Context, request operations.ClassifyImageURLWithNoStoreFormRequest) (*operations.ClassifyImageURLWithNoStoreFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/url/nostore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/url/nostore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "form")
 	if err != nil {
@@ -227,7 +233,10 @@ func (s *imagePredictionAPI) ClassifyImageURLWithNoStoreForm(ctx context.Context
 // ClassifyImageURLWithNoStoreJSON - Classify an image url without saving the result.
 func (s *imagePredictionAPI) ClassifyImageURLWithNoStoreJSON(ctx context.Context, request operations.ClassifyImageURLWithNoStoreJSONRequest) (*operations.ClassifyImageURLWithNoStoreJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/url/nostore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/url/nostore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
@@ -323,7 +332,10 @@ func (s *imagePredictionAPI) ClassifyImageURLWithNoStoreJSON(ctx context.Context
 // ClassifyImageURLWithNoStoreRaw - Classify an image url without saving the result.
 func (s *imagePredictionAPI) ClassifyImageURLWithNoStoreRaw(ctx context.Context, request operations.ClassifyImageURLWithNoStoreRawRequest) (*operations.ClassifyImageURLWithNoStoreRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/url/nostore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/url/nostore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -419,7 +431,10 @@ func (s *imagePredictionAPI) ClassifyImageURLWithNoStoreRaw(ctx context.Context,
 // ClassifyImageURLForm - Classify an image url and saves the result.
 func (s *imagePredictionAPI) ClassifyImageURLForm(ctx context.Context, request operations.ClassifyImageURLFormRequest) (*operations.ClassifyImageURLFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "form")
 	if err != nil {
@@ -515,7 +530,10 @@ func (s *imagePredictionAPI) ClassifyImageURLForm(ctx context.Context, request o
 // ClassifyImageURLJSON - Classify an image url and saves the result.
 func (s *imagePredictionAPI) ClassifyImageURLJSON(ctx context.Context, request operations.ClassifyImageURLJSONRequest) (*operations.ClassifyImageURLJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
@@ -611,7 +629,10 @@ func (s *imagePredictionAPI) ClassifyImageURLJSON(ctx context.Context, request o
 // ClassifyImageURLRaw - Classify an image url and saves the result.
 func (s *imagePredictionAPI) ClassifyImageURLRaw(ctx context.Context, request operations.ClassifyImageURLRawRequest) (*operations.ClassifyImageURLRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -707,7 +728,10 @@ func (s *imagePredictionAPI) ClassifyImageURLRaw(ctx context.Context, request op
 // ClassifyImageWithNoStore - Classify an image without saving the result.
 func (s *imagePredictionAPI) ClassifyImageWithNoStore(ctx context.Context, request operations.ClassifyImageWithNoStoreRequest) (*operations.ClassifyImageWithNoStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/image/nostore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/classify/iterations/{publishedName}/image/nostore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -803,7 +827,10 @@ func (s *imagePredictionAPI) ClassifyImageWithNoStore(ctx context.Context, reque
 // DetectImage - Detect objects in an image and saves the result.
 func (s *imagePredictionAPI) DetectImage(ctx context.Context, request operations.DetectImageRequest) (*operations.DetectImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/image", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/image", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -899,7 +926,10 @@ func (s *imagePredictionAPI) DetectImage(ctx context.Context, request operations
 // DetectImageURLWithNoStoreForm - Detect objects in an image url without saving the result.
 func (s *imagePredictionAPI) DetectImageURLWithNoStoreForm(ctx context.Context, request operations.DetectImageURLWithNoStoreFormRequest) (*operations.DetectImageURLWithNoStoreFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/url/nostore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/url/nostore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "form")
 	if err != nil {
@@ -995,7 +1025,10 @@ func (s *imagePredictionAPI) DetectImageURLWithNoStoreForm(ctx context.Context, 
 // DetectImageURLWithNoStoreJSON - Detect objects in an image url without saving the result.
 func (s *imagePredictionAPI) DetectImageURLWithNoStoreJSON(ctx context.Context, request operations.DetectImageURLWithNoStoreJSONRequest) (*operations.DetectImageURLWithNoStoreJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/url/nostore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/url/nostore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
@@ -1091,7 +1124,10 @@ func (s *imagePredictionAPI) DetectImageURLWithNoStoreJSON(ctx context.Context, 
 // DetectImageURLWithNoStoreRaw - Detect objects in an image url without saving the result.
 func (s *imagePredictionAPI) DetectImageURLWithNoStoreRaw(ctx context.Context, request operations.DetectImageURLWithNoStoreRawRequest) (*operations.DetectImageURLWithNoStoreRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/url/nostore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/url/nostore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1187,7 +1223,10 @@ func (s *imagePredictionAPI) DetectImageURLWithNoStoreRaw(ctx context.Context, r
 // DetectImageURLForm - Detect objects in an image url and saves the result.
 func (s *imagePredictionAPI) DetectImageURLForm(ctx context.Context, request operations.DetectImageURLFormRequest) (*operations.DetectImageURLFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "form")
 	if err != nil {
@@ -1283,7 +1322,10 @@ func (s *imagePredictionAPI) DetectImageURLForm(ctx context.Context, request ope
 // DetectImageURLJSON - Detect objects in an image url and saves the result.
 func (s *imagePredictionAPI) DetectImageURLJSON(ctx context.Context, request operations.DetectImageURLJSONRequest) (*operations.DetectImageURLJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
@@ -1379,7 +1421,10 @@ func (s *imagePredictionAPI) DetectImageURLJSON(ctx context.Context, request ope
 // DetectImageURLRaw - Detect objects in an image url and saves the result.
 func (s *imagePredictionAPI) DetectImageURLRaw(ctx context.Context, request operations.DetectImageURLRawRequest) (*operations.DetectImageURLRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1475,7 +1520,10 @@ func (s *imagePredictionAPI) DetectImageURLRaw(ctx context.Context, request oper
 // DetectImageWithNoStore - Detect objects in an image without saving the result.
 func (s *imagePredictionAPI) DetectImageWithNoStore(ctx context.Context, request operations.DetectImageWithNoStoreRequest) (*operations.DetectImageWithNoStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/image/nostore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/detect/iterations/{publishedName}/image/nostore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

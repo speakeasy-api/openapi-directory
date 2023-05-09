@@ -17,19 +17,23 @@ const (
 	InjuriesByTeamFormatEnumJSON InjuriesByTeamFormatEnum = "JSON"
 )
 
+func (e InjuriesByTeamFormatEnum) ToPointer() *InjuriesByTeamFormatEnum {
+	return &e
+}
+
 func (e *InjuriesByTeamFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = InjuriesByTeamFormatEnum(s)
+		*e = InjuriesByTeamFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InjuriesByTeamFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for InjuriesByTeamFormatEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	PatientCreateResourceAttributesGenderEnumOther  PatientCreateResourceAttributesGenderEnum = "other"
 )
 
+func (e PatientCreateResourceAttributesGenderEnum) ToPointer() *PatientCreateResourceAttributesGenderEnum {
+	return &e
+}
+
 func (e *PatientCreateResourceAttributesGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
 		fallthrough
 	case "other":
-		*e = PatientCreateResourceAttributesGenderEnum(s)
+		*e = PatientCreateResourceAttributesGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientCreateResourceAttributesGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientCreateResourceAttributesGenderEnum: %v", v)
 	}
 }
 
@@ -58,17 +62,21 @@ const (
 	PatientCreateResourceRelationshipsCoachesDataTypeEnumCoach PatientCreateResourceRelationshipsCoachesDataTypeEnum = "coach"
 )
 
+func (e PatientCreateResourceRelationshipsCoachesDataTypeEnum) ToPointer() *PatientCreateResourceRelationshipsCoachesDataTypeEnum {
+	return &e
+}
+
 func (e *PatientCreateResourceRelationshipsCoachesDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "coach":
-		*e = PatientCreateResourceRelationshipsCoachesDataTypeEnum(s)
+		*e = PatientCreateResourceRelationshipsCoachesDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientCreateResourceRelationshipsCoachesDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientCreateResourceRelationshipsCoachesDataTypeEnum: %v", v)
 	}
 }
 
@@ -105,17 +113,21 @@ const (
 	PatientCreateResourceRelationshipsGroupsDataTypeEnumGroup PatientCreateResourceRelationshipsGroupsDataTypeEnum = "group"
 )
 
+func (e PatientCreateResourceRelationshipsGroupsDataTypeEnum) ToPointer() *PatientCreateResourceRelationshipsGroupsDataTypeEnum {
+	return &e
+}
+
 func (e *PatientCreateResourceRelationshipsGroupsDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "group":
-		*e = PatientCreateResourceRelationshipsGroupsDataTypeEnum(s)
+		*e = PatientCreateResourceRelationshipsGroupsDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientCreateResourceRelationshipsGroupsDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientCreateResourceRelationshipsGroupsDataTypeEnum: %v", v)
 	}
 }
 
@@ -142,17 +154,21 @@ const (
 	PatientCreateResourceTypeEnumPatient PatientCreateResourceTypeEnum = "patient"
 )
 
+func (e PatientCreateResourceTypeEnum) ToPointer() *PatientCreateResourceTypeEnum {
+	return &e
+}
+
 func (e *PatientCreateResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "patient":
-		*e = PatientCreateResourceTypeEnum(s)
+		*e = PatientCreateResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientCreateResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientCreateResourceTypeEnum: %v", v)
 	}
 }
 

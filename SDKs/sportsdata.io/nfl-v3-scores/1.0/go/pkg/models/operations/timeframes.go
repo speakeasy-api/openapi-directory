@@ -17,19 +17,23 @@ const (
 	TimeframesFormatEnumJSON TimeframesFormatEnum = "JSON"
 )
 
+func (e TimeframesFormatEnum) ToPointer() *TimeframesFormatEnum {
+	return &e
+}
+
 func (e *TimeframesFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = TimeframesFormatEnum(s)
+		*e = TimeframesFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimeframesFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TimeframesFormatEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	TimeframesTypeEnumAll       TimeframesTypeEnum = "all"
 )
 
+func (e TimeframesTypeEnum) ToPointer() *TimeframesTypeEnum {
+	return &e
+}
+
 func (e *TimeframesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "upcoming":
@@ -59,10 +67,10 @@ func (e *TimeframesTypeEnum) UnmarshalJSON(data []byte) error {
 	case "recent":
 		fallthrough
 	case "all":
-		*e = TimeframesTypeEnum(s)
+		*e = TimeframesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimeframesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TimeframesTypeEnum: %v", v)
 	}
 }
 

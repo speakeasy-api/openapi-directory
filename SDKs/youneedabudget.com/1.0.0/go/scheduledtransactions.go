@@ -36,7 +36,10 @@ func newScheduledTransactions(defaultClient, securityClient HTTPClient, serverUR
 // Returns a single scheduled transaction
 func (s *scheduledTransactions) GetScheduledTransactionByID(ctx context.Context, request operations.GetScheduledTransactionByIDRequest) (*operations.GetScheduledTransactionByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/scheduled_transactions/{scheduled_transaction_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/scheduled_transactions/{scheduled_transaction_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -93,7 +96,10 @@ func (s *scheduledTransactions) GetScheduledTransactionByID(ctx context.Context,
 // Returns all scheduled transactions
 func (s *scheduledTransactions) GetScheduledTransactions(ctx context.Context, request operations.GetScheduledTransactionsRequest) (*operations.GetScheduledTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/scheduled_transactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/scheduled_transactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

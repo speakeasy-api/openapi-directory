@@ -15,17 +15,21 @@ const (
 	GETCreateLocalGatewayRouteActionEnumCreateLocalGatewayRoute GETCreateLocalGatewayRouteActionEnum = "CreateLocalGatewayRoute"
 )
 
+func (e GETCreateLocalGatewayRouteActionEnum) ToPointer() *GETCreateLocalGatewayRouteActionEnum {
+	return &e
+}
+
 func (e *GETCreateLocalGatewayRouteActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateLocalGatewayRoute":
-		*e = GETCreateLocalGatewayRouteActionEnum(s)
+		*e = GETCreateLocalGatewayRouteActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateLocalGatewayRouteActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateLocalGatewayRouteActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateLocalGatewayRouteVersionEnumTwoThousandAndSixteen1115 GETCreateLocalGatewayRouteVersionEnum = "2016-11-15"
 )
 
+func (e GETCreateLocalGatewayRouteVersionEnum) ToPointer() *GETCreateLocalGatewayRouteVersionEnum {
+	return &e
+}
+
 func (e *GETCreateLocalGatewayRouteVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCreateLocalGatewayRouteVersionEnum(s)
+		*e = GETCreateLocalGatewayRouteVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateLocalGatewayRouteVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateLocalGatewayRouteVersionEnum: %v", v)
 	}
 }
 

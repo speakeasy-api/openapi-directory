@@ -17,12 +17,16 @@ const (
 	CreateCalendarEventRequestDataAttributesAttendeesResponseStatusEnumAccepted    CreateCalendarEventRequestDataAttributesAttendeesResponseStatusEnum = "accepted"
 )
 
+func (e CreateCalendarEventRequestDataAttributesAttendeesResponseStatusEnum) ToPointer() *CreateCalendarEventRequestDataAttributesAttendeesResponseStatusEnum {
+	return &e
+}
+
 func (e *CreateCalendarEventRequestDataAttributesAttendeesResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "needsAction":
 		fallthrough
 	case "declined":
@@ -30,10 +34,10 @@ func (e *CreateCalendarEventRequestDataAttributesAttendeesResponseStatusEnum) Un
 	case "tentative":
 		fallthrough
 	case "accepted":
-		*e = CreateCalendarEventRequestDataAttributesAttendeesResponseStatusEnum(s)
+		*e = CreateCalendarEventRequestDataAttributesAttendeesResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCalendarEventRequestDataAttributesAttendeesResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCalendarEventRequestDataAttributesAttendeesResponseStatusEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	CreateCalendarEventRequestDataAttributesTypeEnumVideoCall     CreateCalendarEventRequestDataAttributesTypeEnum = "video-call"
 )
 
+func (e CreateCalendarEventRequestDataAttributesTypeEnum) ToPointer() *CreateCalendarEventRequestDataAttributesTypeEnum {
+	return &e
+}
+
 func (e *CreateCalendarEventRequestDataAttributesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "plan-check-in":
 		fallthrough
 	case "reminder":
@@ -69,10 +77,10 @@ func (e *CreateCalendarEventRequestDataAttributesTypeEnum) UnmarshalJSON(data []
 	case "office-visit":
 		fallthrough
 	case "video-call":
-		*e = CreateCalendarEventRequestDataAttributesTypeEnum(s)
+		*e = CreateCalendarEventRequestDataAttributesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCalendarEventRequestDataAttributesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCalendarEventRequestDataAttributesTypeEnum: %v", v)
 	}
 }
 

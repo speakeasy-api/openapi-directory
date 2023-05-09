@@ -33,21 +33,25 @@ const (
 	JobsProjectsCompleteScopeEnumPublic                     JobsProjectsCompleteScopeEnum = "PUBLIC"
 )
 
+func (e JobsProjectsCompleteScopeEnum) ToPointer() *JobsProjectsCompleteScopeEnum {
+	return &e
+}
+
 func (e *JobsProjectsCompleteScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETION_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "TENANT":
 		fallthrough
 	case "PUBLIC":
-		*e = JobsProjectsCompleteScopeEnum(s)
+		*e = JobsProjectsCompleteScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobsProjectsCompleteScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for JobsProjectsCompleteScopeEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	JobsProjectsCompleteTypeEnumCombined                  JobsProjectsCompleteTypeEnum = "COMBINED"
 )
 
+func (e JobsProjectsCompleteTypeEnum) ToPointer() *JobsProjectsCompleteTypeEnum {
+	return &e
+}
+
 func (e *JobsProjectsCompleteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "JOB_TITLE":
@@ -74,10 +82,10 @@ func (e *JobsProjectsCompleteTypeEnum) UnmarshalJSON(data []byte) error {
 	case "COMPANY_NAME":
 		fallthrough
 	case "COMBINED":
-		*e = JobsProjectsCompleteTypeEnum(s)
+		*e = JobsProjectsCompleteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobsProjectsCompleteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for JobsProjectsCompleteTypeEnum: %v", v)
 	}
 }
 

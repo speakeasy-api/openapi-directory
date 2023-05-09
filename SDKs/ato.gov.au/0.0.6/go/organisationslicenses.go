@@ -39,7 +39,10 @@ func newOrganisationsLicenses(defaultClient, securityClient HTTPClient, serverUR
 // Delete a license
 func (s *organisationsLicenses) DeleteOrganisationsPartyIDLicensesProductID(ctx context.Context, request operations.DeleteOrganisationsPartyIDLicensesProductIDRequest) (*operations.DeleteOrganisationsPartyIDLicensesProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *organisationsLicenses) DeleteOrganisationsPartyIDLicensesProductID(ctx 
 // GetOrganisationsPartyIDLicenses - Retrieve a list of licenses
 func (s *organisationsLicenses) GetOrganisationsPartyIDLicenses(ctx context.Context, request operations.GetOrganisationsPartyIDLicensesRequest) (*operations.GetOrganisationsPartyIDLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -165,7 +171,10 @@ func (s *organisationsLicenses) GetOrganisationsPartyIDLicenses(ctx context.Cont
 // Retrieve a license
 func (s *organisationsLicenses) GetOrganisationsPartyIDLicensesProductID(ctx context.Context, request operations.GetOrganisationsPartyIDLicensesProductIDRequest) (*operations.GetOrganisationsPartyIDLicensesProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -232,7 +241,10 @@ func (s *organisationsLicenses) GetOrganisationsPartyIDLicensesProductID(ctx con
 // Create a license
 func (s *organisationsLicenses) PostOrganisationsPartyIDLicenses(ctx context.Context, request operations.PostOrganisationsPartyIDLicensesRequest) (*operations.PostOrganisationsPartyIDLicensesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseInput", "json")
 	if err != nil {
@@ -311,7 +323,10 @@ func (s *organisationsLicenses) PostOrganisationsPartyIDLicenses(ctx context.Con
 // Update a license
 func (s *organisationsLicenses) PutOrganisationsPartyIDLicensesProductID(ctx context.Context, request operations.PutOrganisationsPartyIDLicensesProductIDRequest) (*operations.PutOrganisationsPartyIDLicensesProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}/licenses/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LicenseInput", "json")
 	if err != nil {

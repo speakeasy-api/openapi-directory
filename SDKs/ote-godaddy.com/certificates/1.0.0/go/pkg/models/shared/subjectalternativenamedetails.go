@@ -17,12 +17,16 @@ const (
 	SubjectAlternativeNameDetailsStatusEnumFraud     SubjectAlternativeNameDetailsStatusEnum = "FRAUD"
 )
 
+func (e SubjectAlternativeNameDetailsStatusEnum) ToPointer() *SubjectAlternativeNameDetailsStatusEnum {
+	return &e
+}
+
 func (e *SubjectAlternativeNameDetailsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "INVALID":
@@ -30,10 +34,10 @@ func (e *SubjectAlternativeNameDetailsStatusEnum) UnmarshalJSON(data []byte) err
 	case "COMPLETED":
 		fallthrough
 	case "FRAUD":
-		*e = SubjectAlternativeNameDetailsStatusEnum(s)
+		*e = SubjectAlternativeNameDetailsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubjectAlternativeNameDetailsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubjectAlternativeNameDetailsStatusEnum: %v", v)
 	}
 }
 

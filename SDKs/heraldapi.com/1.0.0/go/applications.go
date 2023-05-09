@@ -38,7 +38,10 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 // Get the latest details for a specific [application](https://www.heraldapi.com/docs/dynamic-application-steps).
 func (s *applications) GetApplicationsApplicationID(ctx context.Context, request operations.GetApplicationsApplicationIDRequest) (*operations.GetApplicationsApplicationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{application_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -143,7 +146,10 @@ func (s *applications) PostApplications(ctx context.Context, request shared.Appl
 // Read our step-by-step guide to [building a Dynamic Application](https://www.heraldapi.com/docs/dynamic-application-steps).
 func (s *applications) PutApplicationsApplicationID(ctx context.Context, request operations.PutApplicationsApplicationIDRequest) (*operations.PutApplicationsApplicationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{application_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{application_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationWriteV1", "json")
 	if err != nil {

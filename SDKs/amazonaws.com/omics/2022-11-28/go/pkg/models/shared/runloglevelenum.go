@@ -16,12 +16,16 @@ const (
 	RunLogLevelEnumAll   RunLogLevelEnum = "ALL"
 )
 
+func (e RunLogLevelEnum) ToPointer() *RunLogLevelEnum {
+	return &e
+}
+
 func (e *RunLogLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFF":
 		fallthrough
 	case "FATAL":
@@ -29,9 +33,9 @@ func (e *RunLogLevelEnum) UnmarshalJSON(data []byte) error {
 	case "ERROR":
 		fallthrough
 	case "ALL":
-		*e = RunLogLevelEnum(s)
+		*e = RunLogLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunLogLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for RunLogLevelEnum: %v", v)
 	}
 }

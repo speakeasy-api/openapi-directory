@@ -16,17 +16,21 @@ const (
 	DeleteIPGroupXAmzTargetEnumWorkspacesServiceDeleteIPGroup DeleteIPGroupXAmzTargetEnum = "WorkspacesService.DeleteIpGroup"
 )
 
+func (e DeleteIPGroupXAmzTargetEnum) ToPointer() *DeleteIPGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteIPGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.DeleteIpGroup":
-		*e = DeleteIPGroupXAmzTargetEnum(s)
+		*e = DeleteIPGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteIPGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteIPGroupXAmzTargetEnum: %v", v)
 	}
 }
 

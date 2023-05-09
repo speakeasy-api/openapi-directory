@@ -27,12 +27,16 @@ const (
 	MessageCode400PISEnumExecutionDateInvalid   MessageCode400PISEnum = "EXECUTION_DATE_INVALID"
 )
 
+func (e MessageCode400PISEnum) ToPointer() *MessageCode400PISEnum {
+	return &e
+}
+
 func (e *MessageCode400PISEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMAT_ERROR":
 		fallthrough
 	case "PARAMETER_NOT_CONSISTENT":
@@ -60,9 +64,9 @@ func (e *MessageCode400PISEnum) UnmarshalJSON(data []byte) error {
 	case "PAYMENT_FAILED":
 		fallthrough
 	case "EXECUTION_DATE_INVALID":
-		*e = MessageCode400PISEnum(s)
+		*e = MessageCode400PISEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageCode400PISEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageCode400PISEnum: %v", v)
 	}
 }

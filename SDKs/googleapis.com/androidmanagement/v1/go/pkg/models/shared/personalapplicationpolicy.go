@@ -16,21 +16,25 @@ const (
 	PersonalApplicationPolicyInstallTypeEnumAvailable              PersonalApplicationPolicyInstallTypeEnum = "AVAILABLE"
 )
 
+func (e PersonalApplicationPolicyInstallTypeEnum) ToPointer() *PersonalApplicationPolicyInstallTypeEnum {
+	return &e
+}
+
 func (e *PersonalApplicationPolicyInstallTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTALL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BLOCKED":
 		fallthrough
 	case "AVAILABLE":
-		*e = PersonalApplicationPolicyInstallTypeEnum(s)
+		*e = PersonalApplicationPolicyInstallTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PersonalApplicationPolicyInstallTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PersonalApplicationPolicyInstallTypeEnum: %v", v)
 	}
 }
 

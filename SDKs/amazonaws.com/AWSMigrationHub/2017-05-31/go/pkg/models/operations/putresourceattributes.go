@@ -16,17 +16,21 @@ const (
 	PutResourceAttributesXAmzTargetEnumAwsMigrationHubPutResourceAttributes PutResourceAttributesXAmzTargetEnum = "AWSMigrationHub.PutResourceAttributes"
 )
 
+func (e PutResourceAttributesXAmzTargetEnum) ToPointer() *PutResourceAttributesXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutResourceAttributesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHub.PutResourceAttributes":
-		*e = PutResourceAttributesXAmzTargetEnum(s)
+		*e = PutResourceAttributesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutResourceAttributesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutResourceAttributesXAmzTargetEnum: %v", v)
 	}
 }
 

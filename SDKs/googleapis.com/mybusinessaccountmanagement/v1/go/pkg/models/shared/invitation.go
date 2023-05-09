@@ -18,12 +18,16 @@ const (
 	InvitationRoleEnumSiteManager          InvitationRoleEnum = "SITE_MANAGER"
 )
 
+func (e InvitationRoleEnum) ToPointer() *InvitationRoleEnum {
+	return &e
+}
+
 func (e *InvitationRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADMIN_ROLE_UNSPECIFIED":
 		fallthrough
 	case "PRIMARY_OWNER":
@@ -33,10 +37,10 @@ func (e *InvitationRoleEnum) UnmarshalJSON(data []byte) error {
 	case "MANAGER":
 		fallthrough
 	case "SITE_MANAGER":
-		*e = InvitationRoleEnum(s)
+		*e = InvitationRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationRoleEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	InvitationTargetTypeEnumLocationsOnly         InvitationTargetTypeEnum = "LOCATIONS_ONLY"
 )
 
+func (e InvitationTargetTypeEnum) ToPointer() *InvitationTargetTypeEnum {
+	return &e
+}
+
 func (e *InvitationTargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ACCOUNTS_ONLY":
 		fallthrough
 	case "LOCATIONS_ONLY":
-		*e = InvitationTargetTypeEnum(s)
+		*e = InvitationTargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvitationTargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvitationTargetTypeEnum: %v", v)
 	}
 }
 

@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/finspace/20
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,51 +27,49 @@ func main() {
         }),
     )
 
-    req := operations.CreateEnvironmentRequest{
+    ctx := context.Background()
+    res, err := s.CreateEnvironment(ctx, operations.CreateEnvironmentRequest{
         RequestBody: operations.CreateEnvironmentRequestBody{
             DataBundles: []string{
                 "provident",
                 "distinctio",
                 "quibusdam",
             },
-            Description: "unde",
-            FederationMode: "LOCAL",
+            Description: sdk.String("unde"),
+            FederationMode: operations.CreateEnvironmentRequestBodyFederationModeEnumLocal.ToPointer(),
             FederationParameters: &operations.CreateEnvironmentRequestBodyFederationParameters{
-                ApplicationCallBackURL: "corrupti",
+                ApplicationCallBackURL: sdk.String("corrupti"),
                 AttributeMap: map[string]string{
                     "vel": "error",
                     "deserunt": "suscipit",
                     "iure": "magnam",
                     "debitis": "ipsa",
                 },
-                FederationProviderName: "delectus",
-                FederationURN: "tempora",
-                SamlMetadataDocument: "suscipit",
-                SamlMetadataURL: "molestiae",
+                FederationProviderName: sdk.String("delectus"),
+                FederationURN: sdk.String("tempora"),
+                SamlMetadataDocument: sdk.String("suscipit"),
+                SamlMetadataURL: sdk.String("molestiae"),
             },
-            KmsKeyID: "minus",
-            Name: "placeat",
+            KmsKeyID: sdk.String("minus"),
+            Name: "Ken Kshlerin",
             SuperuserParameters: &operations.CreateEnvironmentRequestBodySuperuserParameters{
-                EmailAddress: "voluptatum",
-                FirstName: "Jaycee",
-                LastName: "Mante",
+                EmailAddress: sdk.String("recusandae"),
+                FirstName: sdk.String("Rocky"),
+                LastName: sdk.String("Bernier"),
             },
             Tags: map[string]string{
-                "recusandae": "temporibus",
-                "ab": "quis",
+                "veritatis": "deserunt",
+                "perferendis": "ipsam",
             },
         },
-        XAmzAlgorithm: "veritatis",
-        XAmzContentSha256: "deserunt",
-        XAmzCredential: "perferendis",
-        XAmzDate: "ipsam",
-        XAmzSecurityToken: "repellendus",
-        XAmzSignature: "sapiente",
-        XAmzSignedHeaders: "quo",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateEnvironment(ctx, req)
+        XAmzAlgorithm: sdk.String("repellendus"),
+        XAmzContentSha256: sdk.String("sapiente"),
+        XAmzCredential: sdk.String("quo"),
+        XAmzDate: sdk.String("odit"),
+        XAmzSecurityToken: sdk.String("at"),
+        XAmzSignature: sdk.String("at"),
+        XAmzSignedHeaders: sdk.String("maiores"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -87,16 +84,16 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateEnvironment` - Create a new FinSpace environment.
-* `DeleteEnvironment` - Delete an FinSpace environment.
-* `GetEnvironment` - Returns the FinSpace environment object.
-* `ListEnvironments` - A list of all of your FinSpace environments.
-* `ListTagsForResource` - A list of all tags for a resource.
-* `TagResource` - Adds metadata tags to a FinSpace resource.
-* `UntagResource` - Removes metadata tags from a FinSpace resource.
-* `UpdateEnvironment` - Update your FinSpace environment.
+* [CreateEnvironment](docs/sdk/README.md#createenvironment) - Create a new FinSpace environment.
+* [DeleteEnvironment](docs/sdk/README.md#deleteenvironment) - Delete an FinSpace environment.
+* [GetEnvironment](docs/sdk/README.md#getenvironment) - Returns the FinSpace environment object.
+* [ListEnvironments](docs/sdk/README.md#listenvironments) - A list of all of your FinSpace environments.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - A list of all tags for a resource.
+* [TagResource](docs/sdk/README.md#tagresource) - Adds metadata tags to a FinSpace resource.
+* [UntagResource](docs/sdk/README.md#untagresource) - Removes metadata tags from a FinSpace resource.
+* [UpdateEnvironment](docs/sdk/README.md#updateenvironment) - Update your FinSpace environment.
 <!-- End SDK Available Operations -->
 
 ### Maturity

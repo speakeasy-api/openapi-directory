@@ -16,17 +16,21 @@ const (
 	GetSampledRequestsXAmzTargetEnumAwswaf20150824GetSampledRequests GetSampledRequestsXAmzTargetEnum = "AWSWAF_20150824.GetSampledRequests"
 )
 
+func (e GetSampledRequestsXAmzTargetEnum) ToPointer() *GetSampledRequestsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSampledRequestsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.GetSampledRequests":
-		*e = GetSampledRequestsXAmzTargetEnum(s)
+		*e = GetSampledRequestsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSampledRequestsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSampledRequestsXAmzTargetEnum: %v", v)
 	}
 }
 

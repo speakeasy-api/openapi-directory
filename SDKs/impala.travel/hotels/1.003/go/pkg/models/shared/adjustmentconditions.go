@@ -33,17 +33,21 @@ const (
 	AdjustmentConditionsTypeEnumLengthOfStay AdjustmentConditionsTypeEnum = "LENGTH_OF_STAY"
 )
 
+func (e AdjustmentConditionsTypeEnum) ToPointer() *AdjustmentConditionsTypeEnum {
+	return &e
+}
+
 func (e *AdjustmentConditionsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LENGTH_OF_STAY":
-		*e = AdjustmentConditionsTypeEnum(s)
+		*e = AdjustmentConditionsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdjustmentConditionsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdjustmentConditionsTypeEnum: %v", v)
 	}
 }
 

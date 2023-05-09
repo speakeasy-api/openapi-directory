@@ -29,12 +29,16 @@ const (
 	ScoutingObservationLocationDisplayColorEnumNumber808080 ScoutingObservationLocationDisplayColorEnum = "#808080"
 )
 
+func (e ScoutingObservationLocationDisplayColorEnum) ToPointer() *ScoutingObservationLocationDisplayColorEnum {
+	return &e
+}
+
 func (e *ScoutingObservationLocationDisplayColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "#307af7":
 		fallthrough
 	case "#38d753":
@@ -48,10 +52,10 @@ func (e *ScoutingObservationLocationDisplayColorEnum) UnmarshalJSON(data []byte)
 	case "#ff8439":
 		fallthrough
 	case "#808080":
-		*e = ScoutingObservationLocationDisplayColorEnum(s)
+		*e = ScoutingObservationLocationDisplayColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScoutingObservationLocationDisplayColorEnum: %s", s)
+		return fmt.Errorf("invalid value for ScoutingObservationLocationDisplayColorEnum: %v", v)
 	}
 }
 
@@ -63,19 +67,23 @@ const (
 	ScoutingObservationStatusEnumDeleted ScoutingObservationStatusEnum = "DELETED"
 )
 
+func (e ScoutingObservationStatusEnum) ToPointer() *ScoutingObservationStatusEnum {
+	return &e
+}
+
 func (e *ScoutingObservationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "DELETED":
-		*e = ScoutingObservationStatusEnum(s)
+		*e = ScoutingObservationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScoutingObservationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ScoutingObservationStatusEnum: %v", v)
 	}
 }
 
@@ -87,19 +95,23 @@ const (
 	ScoutingObservationTimespanEnumSeasonal  ScoutingObservationTimespanEnum = "SEASONAL"
 )
 
+func (e ScoutingObservationTimespanEnum) ToPointer() *ScoutingObservationTimespanEnum {
+	return &e
+}
+
 func (e *ScoutingObservationTimespanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERMANENT":
 		fallthrough
 	case "SEASONAL":
-		*e = ScoutingObservationTimespanEnum(s)
+		*e = ScoutingObservationTimespanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScoutingObservationTimespanEnum: %s", s)
+		return fmt.Errorf("invalid value for ScoutingObservationTimespanEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	InterfacePermissionTypeEnumEipAssociate   InterfacePermissionTypeEnum = "EIP-ASSOCIATE"
 )
 
+func (e InterfacePermissionTypeEnum) ToPointer() *InterfacePermissionTypeEnum {
+	return &e
+}
+
 func (e *InterfacePermissionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTANCE-ATTACH":
 		fallthrough
 	case "EIP-ASSOCIATE":
-		*e = InterfacePermissionTypeEnum(s)
+		*e = InterfacePermissionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InterfacePermissionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InterfacePermissionTypeEnum: %v", v)
 	}
 }

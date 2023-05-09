@@ -23,12 +23,16 @@ const (
 	RecommendationCategoryEnumCodeInconsistencies     RecommendationCategoryEnum = "CodeInconsistencies"
 )
 
+func (e RecommendationCategoryEnum) ToPointer() *RecommendationCategoryEnum {
+	return &e
+}
+
 func (e *RecommendationCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSBestPractices":
 		fallthrough
 	case "AWSCloudFormationIssues":
@@ -50,9 +54,9 @@ func (e *RecommendationCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "SecurityIssues":
 		fallthrough
 	case "CodeInconsistencies":
-		*e = RecommendationCategoryEnum(s)
+		*e = RecommendationCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecommendationCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for RecommendationCategoryEnum: %v", v)
 	}
 }

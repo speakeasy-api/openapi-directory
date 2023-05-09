@@ -14,18 +14,22 @@ const (
 	AlertTypeEnumLambda AlertTypeEnum = "LAMBDA"
 )
 
+func (e AlertTypeEnum) ToPointer() *AlertTypeEnum {
+	return &e
+}
+
 func (e *AlertTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SNS":
 		fallthrough
 	case "LAMBDA":
-		*e = AlertTypeEnum(s)
+		*e = AlertTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlertTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AlertTypeEnum: %v", v)
 	}
 }

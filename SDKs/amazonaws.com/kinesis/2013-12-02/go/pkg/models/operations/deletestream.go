@@ -16,17 +16,21 @@ const (
 	DeleteStreamXAmzTargetEnumKinesis20131202DeleteStream DeleteStreamXAmzTargetEnum = "Kinesis_20131202.DeleteStream"
 )
 
+func (e DeleteStreamXAmzTargetEnum) ToPointer() *DeleteStreamXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteStreamXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kinesis_20131202.DeleteStream":
-		*e = DeleteStreamXAmzTargetEnum(s)
+		*e = DeleteStreamXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteStreamXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteStreamXAmzTargetEnum: %v", v)
 	}
 }
 

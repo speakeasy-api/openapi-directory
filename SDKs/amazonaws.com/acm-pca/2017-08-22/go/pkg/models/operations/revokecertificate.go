@@ -16,17 +16,21 @@ const (
 	RevokeCertificateXAmzTargetEnumAcmPrivateCaRevokeCertificate RevokeCertificateXAmzTargetEnum = "ACMPrivateCA.RevokeCertificate"
 )
 
+func (e RevokeCertificateXAmzTargetEnum) ToPointer() *RevokeCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *RevokeCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACMPrivateCA.RevokeCertificate":
-		*e = RevokeCertificateXAmzTargetEnum(s)
+		*e = RevokeCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RevokeCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RevokeCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

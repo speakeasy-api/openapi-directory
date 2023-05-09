@@ -18,17 +18,21 @@ const (
 	TimeOffTypeResourceTypeEnumTimeOffType TimeOffTypeResourceTypeEnum = "TimeOffType"
 )
 
+func (e TimeOffTypeResourceTypeEnum) ToPointer() *TimeOffTypeResourceTypeEnum {
+	return &e
+}
+
 func (e *TimeOffTypeResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TimeOffType":
-		*e = TimeOffTypeResourceTypeEnum(s)
+		*e = TimeOffTypeResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimeOffTypeResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TimeOffTypeResourceTypeEnum: %v", v)
 	}
 }
 

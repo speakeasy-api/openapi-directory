@@ -43,12 +43,16 @@ const (
 	JobDerivedInfoJobCategoriesEnumTransportationAndLogistics       JobDerivedInfoJobCategoriesEnum = "TRANSPORTATION_AND_LOGISTICS"
 )
 
+func (e JobDerivedInfoJobCategoriesEnum) ToPointer() *JobDerivedInfoJobCategoriesEnum {
+	return &e
+}
+
 func (e *JobDerivedInfoJobCategoriesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "ACCOUNTING_AND_FINANCE":
@@ -110,10 +114,10 @@ func (e *JobDerivedInfoJobCategoriesEnum) UnmarshalJSON(data []byte) error {
 	case "SPORTS_FITNESS_AND_RECREATION":
 		fallthrough
 	case "TRANSPORTATION_AND_LOGISTICS":
-		*e = JobDerivedInfoJobCategoriesEnum(s)
+		*e = JobDerivedInfoJobCategoriesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobDerivedInfoJobCategoriesEnum: %s", s)
+		return fmt.Errorf("invalid value for JobDerivedInfoJobCategoriesEnum: %v", v)
 	}
 }
 

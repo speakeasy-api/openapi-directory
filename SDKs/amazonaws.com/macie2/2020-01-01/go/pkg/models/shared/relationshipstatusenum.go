@@ -23,12 +23,16 @@ const (
 	RelationshipStatusEnumAccountSuspended            RelationshipStatusEnum = "AccountSuspended"
 )
 
+func (e RelationshipStatusEnum) ToPointer() *RelationshipStatusEnum {
+	return &e
+}
+
 func (e *RelationshipStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Paused":
@@ -48,9 +52,9 @@ func (e *RelationshipStatusEnum) UnmarshalJSON(data []byte) error {
 	case "RegionDisabled":
 		fallthrough
 	case "AccountSuspended":
-		*e = RelationshipStatusEnum(s)
+		*e = RelationshipStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RelationshipStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RelationshipStatusEnum: %v", v)
 	}
 }

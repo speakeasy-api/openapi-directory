@@ -16,21 +16,25 @@ const (
 	VRFStateEnumProvisioned      VRFStateEnum = "PROVISIONED"
 )
 
+func (e VRFStateEnum) ToPointer() *VRFStateEnum {
+	return &e
+}
+
 func (e *VRFStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PROVISIONING":
 		fallthrough
 	case "PROVISIONED":
-		*e = VRFStateEnum(s)
+		*e = VRFStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VRFStateEnum: %s", s)
+		return fmt.Errorf("invalid value for VRFStateEnum: %v", v)
 	}
 }
 

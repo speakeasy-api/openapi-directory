@@ -34,7 +34,10 @@ func newArchive(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GroupsmigrationArchiveInsert - Inserts a new mail into the archive of the Google group.
 func (s *archive) GroupsmigrationArchiveInsert(ctx context.Context, request operations.GroupsmigrationArchiveInsertRequest, security operations.GroupsmigrationArchiveInsertSecurity) (*operations.GroupsmigrationArchiveInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/v1/groups/{groupId}/archive", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/v1/groups/{groupId}/archive", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

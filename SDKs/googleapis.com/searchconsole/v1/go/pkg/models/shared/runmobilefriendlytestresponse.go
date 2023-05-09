@@ -16,21 +16,25 @@ const (
 	RunMobileFriendlyTestResponseMobileFriendlinessEnumNotMobileFriendly                   RunMobileFriendlyTestResponseMobileFriendlinessEnum = "NOT_MOBILE_FRIENDLY"
 )
 
+func (e RunMobileFriendlyTestResponseMobileFriendlinessEnum) ToPointer() *RunMobileFriendlyTestResponseMobileFriendlinessEnum {
+	return &e
+}
+
 func (e *RunMobileFriendlyTestResponseMobileFriendlinessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MOBILE_FRIENDLY_TEST_RESULT_UNSPECIFIED":
 		fallthrough
 	case "MOBILE_FRIENDLY":
 		fallthrough
 	case "NOT_MOBILE_FRIENDLY":
-		*e = RunMobileFriendlyTestResponseMobileFriendlinessEnum(s)
+		*e = RunMobileFriendlyTestResponseMobileFriendlinessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunMobileFriendlyTestResponseMobileFriendlinessEnum: %s", s)
+		return fmt.Errorf("invalid value for RunMobileFriendlyTestResponseMobileFriendlinessEnum: %v", v)
 	}
 }
 

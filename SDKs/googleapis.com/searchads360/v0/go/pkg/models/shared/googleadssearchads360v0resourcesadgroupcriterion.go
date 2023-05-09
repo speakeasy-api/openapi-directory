@@ -34,12 +34,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnumAdGroupCriterionAccountPaused            GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum = "AD_GROUP_CRITERION_ACCOUNT_PAUSED"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -81,10 +85,10 @@ func (e *GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum) Unmar
 	case "AD_GROUP_CRITERION_SERVING":
 		fallthrough
 	case "AD_GROUP_CRITERION_ACCOUNT_PAUSED":
-		*e = GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum: %v", v)
 	}
 }
 
@@ -99,12 +103,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnumRemoved     GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum = "REMOVED"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -114,10 +122,10 @@ func (e *GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum) UnmarshalJS
 	case "PAUSED":
 		fallthrough
 	case "REMOVED":
-		*e = GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupCriterionStatusEnum: %v", v)
 	}
 }
 
@@ -164,12 +172,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnumLocalServiceID         GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum = "LOCAL_SERVICE_ID"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -243,10 +255,10 @@ func (e *GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum) UnmarshalJSON
 	case "AUDIENCE":
 		fallthrough
 	case "LOCAL_SERVICE_ID":
-		*e = GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum: %v", v)
 	}
 }
 
@@ -260,10 +272,14 @@ type GoogleAdsSearchads360V0ResourcesAdGroupCriterion struct {
 	BidModifier *float64 `json:"bidModifier,omitempty"`
 	// The CPC (cost-per-click) bid.
 	CpcBidMicros *string `json:"cpcBidMicros,omitempty"`
+	// Output only. The timestamp when this ad group criterion was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+	CreationTime *string `json:"creationTime,omitempty"`
 	// Output only. The ID of the criterion.
 	CriterionID *string `json:"criterionId,omitempty"`
 	// Output only. The effective CPC (cost-per-click) bid.
 	EffectiveCpcBidMicros *string `json:"effectiveCpcBidMicros,omitempty"`
+	// Output only. ID of the ad group criterion in the external engine account. This field is for non-Google Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads entity, use "ad_group_criterion.criterion_id" instead.
+	EngineID *string `json:"engineId,omitempty"`
 	// Output only. The Engine Status for ad group criterion.
 	EngineStatus *GoogleAdsSearchads360V0ResourcesAdGroupCriterionEngineStatusEnum `json:"engineStatus,omitempty"`
 	// URL template for appending params to final URL.
@@ -274,10 +290,16 @@ type GoogleAdsSearchads360V0ResourcesAdGroupCriterion struct {
 	Gender *GoogleAdsSearchads360V0CommonGenderInfo `json:"gender,omitempty"`
 	// A keyword criterion.
 	Keyword *GoogleAdsSearchads360V0CommonKeywordInfo `json:"keyword,omitempty"`
+	// Output only. The resource names of labels attached to this ad group criterion.
+	Labels []string `json:"labels,omitempty"`
 	// Output only. The datetime when this ad group criterion was last modified. The datetime is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
 	LastModifiedTime *string `json:"lastModifiedTime,omitempty"`
 	// A listing group criterion.
 	ListingGroup *GoogleAdsSearchads360V0CommonListingGroupInfo `json:"listingGroup,omitempty"`
+	// A location criterion.
+	Location *GoogleAdsSearchads360V0CommonLocationInfo `json:"location,omitempty"`
+	// Immutable. Whether to target (`false`) or exclude (`true`) the criterion. This field is immutable. To switch a criterion from positive to negative, remove then re-add it.
+	Negative *bool `json:"negative,omitempty"`
 	// A container for ad group criterion quality information.
 	QualityInfo *GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo `json:"qualityInfo,omitempty"`
 	// Immutable. The resource name of the ad group criterion. Ad group criterion resource names have the form: `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
@@ -288,6 +310,8 @@ type GoogleAdsSearchads360V0ResourcesAdGroupCriterion struct {
 	TrackingURLTemplate *string `json:"trackingUrlTemplate,omitempty"`
 	// Output only. The type of the criterion.
 	Type *GoogleAdsSearchads360V0ResourcesAdGroupCriterionTypeEnum `json:"type,omitempty"`
+	// A User List criterion. Represents a user list that is defined by the advertiser to be targeted.
+	UserList *GoogleAdsSearchads360V0CommonUserListInfo `json:"userList,omitempty"`
 	// Represents a criterion for targeting webpages of an advertiser's website.
 	Webpage *GoogleAdsSearchads360V0CommonWebpageInfo `json:"webpage,omitempty"`
 }

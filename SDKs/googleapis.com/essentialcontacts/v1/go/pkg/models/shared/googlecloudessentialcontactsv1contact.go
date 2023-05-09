@@ -21,12 +21,16 @@ const (
 	GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnumTechnicalIncidents              GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum = "TECHNICAL_INCIDENTS"
 )
 
+func (e GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum) ToPointer() *GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum {
+	return &e
+}
+
 func (e *GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOTIFICATION_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "ALL":
@@ -44,10 +48,10 @@ func (e *GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsE
 	case "PRODUCT_UPDATES":
 		fallthrough
 	case "TECHNICAL_INCIDENTS":
-		*e = GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum(s)
+		*e = GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum: %v", v)
 	}
 }
 
@@ -60,21 +64,25 @@ const (
 	GoogleCloudEssentialcontactsV1ContactValidationStateEnumInvalid                    GoogleCloudEssentialcontactsV1ContactValidationStateEnum = "INVALID"
 )
 
+func (e GoogleCloudEssentialcontactsV1ContactValidationStateEnum) ToPointer() *GoogleCloudEssentialcontactsV1ContactValidationStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudEssentialcontactsV1ContactValidationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALIDATION_STATE_UNSPECIFIED":
 		fallthrough
 	case "VALID":
 		fallthrough
 	case "INVALID":
-		*e = GoogleCloudEssentialcontactsV1ContactValidationStateEnum(s)
+		*e = GoogleCloudEssentialcontactsV1ContactValidationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudEssentialcontactsV1ContactValidationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudEssentialcontactsV1ContactValidationStateEnum: %v", v)
 	}
 }
 

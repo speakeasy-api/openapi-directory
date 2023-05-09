@@ -34,7 +34,10 @@ func newRegions(defaultClient, securityClient HTTPClient, serverURL, language, s
 // ContentRegionsCreate - Creates a region definition in your Merchant Center account.
 func (s *regions) ContentRegionsCreate(ctx context.Context, request operations.ContentRegionsCreateRequest, security operations.ContentRegionsCreateSecurity) (*operations.ContentRegionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/regions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/regions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegionInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *regions) ContentRegionsCreate(ctx context.Context, request operations.C
 // ContentRegionsDelete - Deletes a region definition from your Merchant Center account.
 func (s *regions) ContentRegionsDelete(ctx context.Context, request operations.ContentRegionsDeleteRequest, security operations.ContentRegionsDeleteSecurity) (*operations.ContentRegionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/regions/{regionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/regions/{regionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *regions) ContentRegionsDelete(ctx context.Context, request operations.C
 // ContentRegionsGet - Retrieves a region defined in your Merchant Center account.
 func (s *regions) ContentRegionsGet(ctx context.Context, request operations.ContentRegionsGetRequest, security operations.ContentRegionsGetSecurity) (*operations.ContentRegionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/regions/{regionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/regions/{regionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *regions) ContentRegionsGet(ctx context.Context, request operations.Cont
 // ContentRegionsList - Lists the regions in your Merchant Center account.
 func (s *regions) ContentRegionsList(ctx context.Context, request operations.ContentRegionsListRequest, security operations.ContentRegionsListSecurity) (*operations.ContentRegionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/regions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/regions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *regions) ContentRegionsList(ctx context.Context, request operations.Con
 // ContentRegionsPatch - Updates a region definition in your Merchant Center account.
 func (s *regions) ContentRegionsPatch(ctx context.Context, request operations.ContentRegionsPatchRequest, security operations.ContentRegionsPatchSecurity) (*operations.ContentRegionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/regions/{regionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/regions/{regionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegionInput", "json")
 	if err != nil {

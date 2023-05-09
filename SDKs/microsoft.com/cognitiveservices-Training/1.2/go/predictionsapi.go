@@ -35,7 +35,10 @@ func newPredictionsAPI(defaultClient, securityClient HTTPClient, serverURL, lang
 // DeletePrediction - Delete a set of predicted images and their associated prediction results
 func (s *predictionsAPI) DeletePrediction(ctx context.Context, request operations.DeletePredictionRequest) (*operations.DeletePredictionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -76,7 +79,10 @@ func (s *predictionsAPI) DeletePrediction(ctx context.Context, request operation
 // QueryPredictionResultsForm - Get images that were sent to your prediction endpoint
 func (s *predictionsAPI) QueryPredictionResultsForm(ctx context.Context, request operations.QueryPredictionResultsFormRequest) (*operations.QueryPredictionResultsFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions/query", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions/query", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PredictionQueryTokenInput", "form")
 	if err != nil {
@@ -153,7 +159,10 @@ func (s *predictionsAPI) QueryPredictionResultsForm(ctx context.Context, request
 // QueryPredictionResultsJSON - Get images that were sent to your prediction endpoint
 func (s *predictionsAPI) QueryPredictionResultsJSON(ctx context.Context, request operations.QueryPredictionResultsJSONRequest) (*operations.QueryPredictionResultsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions/query", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions/query", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PredictionQueryTokenInput", "json")
 	if err != nil {
@@ -230,7 +239,10 @@ func (s *predictionsAPI) QueryPredictionResultsJSON(ctx context.Context, request
 // QueryPredictionResultsRaw - Get images that were sent to your prediction endpoint
 func (s *predictionsAPI) QueryPredictionResultsRaw(ctx context.Context, request operations.QueryPredictionResultsRawRequest) (*operations.QueryPredictionResultsRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions/query", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/predictions/query", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -307,7 +319,10 @@ func (s *predictionsAPI) QueryPredictionResultsRaw(ctx context.Context, request 
 // QuickTestImage - Quick test an image
 func (s *predictionsAPI) QuickTestImage(ctx context.Context, request operations.QuickTestImageRequest) (*operations.QuickTestImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/image", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/image", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -388,7 +403,10 @@ func (s *predictionsAPI) QuickTestImage(ctx context.Context, request operations.
 // QuickTestImageURLForm - Quick test an image url
 func (s *predictionsAPI) QuickTestImageURLForm(ctx context.Context, request operations.QuickTestImageURLFormRequest) (*operations.QuickTestImageURLFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "form")
 	if err != nil {
@@ -469,7 +487,10 @@ func (s *predictionsAPI) QuickTestImageURLForm(ctx context.Context, request oper
 // QuickTestImageURLJSON - Quick test an image url
 func (s *predictionsAPI) QuickTestImageURLJSON(ctx context.Context, request operations.QuickTestImageURLJSONRequest) (*operations.QuickTestImageURLJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
@@ -550,7 +571,10 @@ func (s *predictionsAPI) QuickTestImageURLJSON(ctx context.Context, request oper
 // QuickTestImageURLRaw - Quick test an image url
 func (s *predictionsAPI) QuickTestImageURLRaw(ctx context.Context, request operations.QuickTestImageURLRawRequest) (*operations.QuickTestImageURLRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/quicktest/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

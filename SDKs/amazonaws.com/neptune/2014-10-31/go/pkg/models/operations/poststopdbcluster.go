@@ -15,17 +15,21 @@ const (
 	POSTStopDBClusterActionEnumStopDbCluster POSTStopDBClusterActionEnum = "StopDBCluster"
 )
 
+func (e POSTStopDBClusterActionEnum) ToPointer() *POSTStopDBClusterActionEnum {
+	return &e
+}
+
 func (e *POSTStopDBClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StopDBCluster":
-		*e = POSTStopDBClusterActionEnum(s)
+		*e = POSTStopDBClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStopDBClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStopDBClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTStopDBClusterVersionEnumTwoThousandAndFourteen1031 POSTStopDBClusterVersionEnum = "2014-10-31"
 )
 
+func (e POSTStopDBClusterVersionEnum) ToPointer() *POSTStopDBClusterVersionEnum {
+	return &e
+}
+
 func (e *POSTStopDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTStopDBClusterVersionEnum(s)
+		*e = POSTStopDBClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStopDBClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStopDBClusterVersionEnum: %v", v)
 	}
 }
 

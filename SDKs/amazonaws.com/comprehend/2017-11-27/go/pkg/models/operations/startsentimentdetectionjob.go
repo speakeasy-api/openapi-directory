@@ -16,17 +16,21 @@ const (
 	StartSentimentDetectionJobXAmzTargetEnumComprehend20171127StartSentimentDetectionJob StartSentimentDetectionJobXAmzTargetEnum = "Comprehend_20171127.StartSentimentDetectionJob"
 )
 
+func (e StartSentimentDetectionJobXAmzTargetEnum) ToPointer() *StartSentimentDetectionJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartSentimentDetectionJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.StartSentimentDetectionJob":
-		*e = StartSentimentDetectionJobXAmzTargetEnum(s)
+		*e = StartSentimentDetectionJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartSentimentDetectionJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartSentimentDetectionJobXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -50,6 +54,8 @@ type StartSentimentDetectionJobResponse struct {
 	InvalidRequestException interface{}
 	// KmsKeyValidationException
 	KmsKeyValidationException interface{}
+	// ResourceInUseException
+	ResourceInUseException interface{}
 	// Success
 	StartSentimentDetectionJobResponse *shared.StartSentimentDetectionJobResponse
 	StatusCode                         int

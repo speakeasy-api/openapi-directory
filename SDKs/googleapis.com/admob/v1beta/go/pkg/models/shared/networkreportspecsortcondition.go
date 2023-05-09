@@ -27,12 +27,16 @@ const (
 	NetworkReportSpecSortConditionDimensionEnumServingRestriction   NetworkReportSpecSortConditionDimensionEnum = "SERVING_RESTRICTION"
 )
 
+func (e NetworkReportSpecSortConditionDimensionEnum) ToPointer() *NetworkReportSpecSortConditionDimensionEnum {
+	return &e
+}
+
 func (e *NetworkReportSpecSortConditionDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "DATE":
@@ -60,10 +64,10 @@ func (e *NetworkReportSpecSortConditionDimensionEnum) UnmarshalJSON(data []byte)
 	case "APP_VERSION_NAME":
 		fallthrough
 	case "SERVING_RESTRICTION":
-		*e = NetworkReportSpecSortConditionDimensionEnum(s)
+		*e = NetworkReportSpecSortConditionDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkReportSpecSortConditionDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkReportSpecSortConditionDimensionEnum: %v", v)
 	}
 }
 
@@ -83,12 +87,16 @@ const (
 	NetworkReportSpecSortConditionMetricEnumShowRate          NetworkReportSpecSortConditionMetricEnum = "SHOW_RATE"
 )
 
+func (e NetworkReportSpecSortConditionMetricEnum) ToPointer() *NetworkReportSpecSortConditionMetricEnum {
+	return &e
+}
+
 func (e *NetworkReportSpecSortConditionMetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_UNSPECIFIED":
 		fallthrough
 	case "AD_REQUESTS":
@@ -108,10 +116,10 @@ func (e *NetworkReportSpecSortConditionMetricEnum) UnmarshalJSON(data []byte) er
 	case "MATCH_RATE":
 		fallthrough
 	case "SHOW_RATE":
-		*e = NetworkReportSpecSortConditionMetricEnum(s)
+		*e = NetworkReportSpecSortConditionMetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkReportSpecSortConditionMetricEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkReportSpecSortConditionMetricEnum: %v", v)
 	}
 }
 
@@ -124,21 +132,25 @@ const (
 	NetworkReportSpecSortConditionOrderEnumDescending           NetworkReportSpecSortConditionOrderEnum = "DESCENDING"
 )
 
+func (e NetworkReportSpecSortConditionOrderEnum) ToPointer() *NetworkReportSpecSortConditionOrderEnum {
+	return &e
+}
+
 func (e *NetworkReportSpecSortConditionOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SORT_ORDER_UNSPECIFIED":
 		fallthrough
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = NetworkReportSpecSortConditionOrderEnum(s)
+		*e = NetworkReportSpecSortConditionOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkReportSpecSortConditionOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkReportSpecSortConditionOrderEnum: %v", v)
 	}
 }
 

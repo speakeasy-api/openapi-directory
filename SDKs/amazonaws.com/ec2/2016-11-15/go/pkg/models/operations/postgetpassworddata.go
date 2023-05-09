@@ -15,17 +15,21 @@ const (
 	POSTGetPasswordDataActionEnumGetPasswordData POSTGetPasswordDataActionEnum = "GetPasswordData"
 )
 
+func (e POSTGetPasswordDataActionEnum) ToPointer() *POSTGetPasswordDataActionEnum {
+	return &e
+}
+
 func (e *POSTGetPasswordDataActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetPasswordData":
-		*e = POSTGetPasswordDataActionEnum(s)
+		*e = POSTGetPasswordDataActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetPasswordDataActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetPasswordDataActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetPasswordDataVersionEnumTwoThousandAndSixteen1115 POSTGetPasswordDataVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetPasswordDataVersionEnum) ToPointer() *POSTGetPasswordDataVersionEnum {
+	return &e
+}
+
 func (e *POSTGetPasswordDataVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetPasswordDataVersionEnum(s)
+		*e = POSTGetPasswordDataVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetPasswordDataVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetPasswordDataVersionEnum: %v", v)
 	}
 }
 

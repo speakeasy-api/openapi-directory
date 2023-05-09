@@ -17,12 +17,16 @@ const (
 	ManagedDataIdentifierSelectorEnumNone    ManagedDataIdentifierSelectorEnum = "NONE"
 )
 
+func (e ManagedDataIdentifierSelectorEnum) ToPointer() *ManagedDataIdentifierSelectorEnum {
+	return &e
+}
+
 func (e *ManagedDataIdentifierSelectorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "EXCLUDE":
@@ -30,9 +34,9 @@ func (e *ManagedDataIdentifierSelectorEnum) UnmarshalJSON(data []byte) error {
 	case "INCLUDE":
 		fallthrough
 	case "NONE":
-		*e = ManagedDataIdentifierSelectorEnum(s)
+		*e = ManagedDataIdentifierSelectorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagedDataIdentifierSelectorEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagedDataIdentifierSelectorEnum: %v", v)
 	}
 }

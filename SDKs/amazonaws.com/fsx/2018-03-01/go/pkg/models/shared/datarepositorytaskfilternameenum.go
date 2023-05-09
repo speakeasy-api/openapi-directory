@@ -16,12 +16,16 @@ const (
 	DataRepositoryTaskFilterNameEnumFileCacheID                 DataRepositoryTaskFilterNameEnum = "file-cache-id"
 )
 
+func (e DataRepositoryTaskFilterNameEnum) ToPointer() *DataRepositoryTaskFilterNameEnum {
+	return &e
+}
+
 func (e *DataRepositoryTaskFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "file-system-id":
 		fallthrough
 	case "task-lifecycle":
@@ -29,9 +33,9 @@ func (e *DataRepositoryTaskFilterNameEnum) UnmarshalJSON(data []byte) error {
 	case "data-repository-association-id":
 		fallthrough
 	case "file-cache-id":
-		*e = DataRepositoryTaskFilterNameEnum(s)
+		*e = DataRepositoryTaskFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataRepositoryTaskFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for DataRepositoryTaskFilterNameEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	ProvisionedConcurrencyStatusEnumEnumFailed     ProvisionedConcurrencyStatusEnumEnum = "FAILED"
 )
 
+func (e ProvisionedConcurrencyStatusEnumEnum) ToPointer() *ProvisionedConcurrencyStatusEnumEnum {
+	return &e
+}
+
 func (e *ProvisionedConcurrencyStatusEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "READY":
 		fallthrough
 	case "FAILED":
-		*e = ProvisionedConcurrencyStatusEnumEnum(s)
+		*e = ProvisionedConcurrencyStatusEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionedConcurrencyStatusEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionedConcurrencyStatusEnumEnum: %v", v)
 	}
 }

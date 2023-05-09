@@ -23,21 +23,25 @@ const (
 	ApigatewayProjectsLocationsOperationsGetViewEnumFull                  ApigatewayProjectsLocationsOperationsGetViewEnum = "FULL"
 )
 
+func (e ApigatewayProjectsLocationsOperationsGetViewEnum) ToPointer() *ApigatewayProjectsLocationsOperationsGetViewEnum {
+	return &e
+}
+
 func (e *ApigatewayProjectsLocationsOperationsGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONFIG_VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = ApigatewayProjectsLocationsOperationsGetViewEnum(s)
+		*e = ApigatewayProjectsLocationsOperationsGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApigatewayProjectsLocationsOperationsGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for ApigatewayProjectsLocationsOperationsGetViewEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	URLNotificationTypeEnumURLDeleted                     URLNotificationTypeEnum = "URL_DELETED"
 )
 
+func (e URLNotificationTypeEnum) ToPointer() *URLNotificationTypeEnum {
+	return &e
+}
+
 func (e *URLNotificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "URL_NOTIFICATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "URL_UPDATED":
 		fallthrough
 	case "URL_DELETED":
-		*e = URLNotificationTypeEnum(s)
+		*e = URLNotificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for URLNotificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for URLNotificationTypeEnum: %v", v)
 	}
 }
 

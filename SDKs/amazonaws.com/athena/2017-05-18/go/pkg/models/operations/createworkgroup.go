@@ -16,17 +16,21 @@ const (
 	CreateWorkGroupXAmzTargetEnumAmazonAthenaCreateWorkGroup CreateWorkGroupXAmzTargetEnum = "AmazonAthena.CreateWorkGroup"
 )
 
+func (e CreateWorkGroupXAmzTargetEnum) ToPointer() *CreateWorkGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateWorkGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.CreateWorkGroup":
-		*e = CreateWorkGroupXAmzTargetEnum(s)
+		*e = CreateWorkGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWorkGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWorkGroupXAmzTargetEnum: %v", v)
 	}
 }
 

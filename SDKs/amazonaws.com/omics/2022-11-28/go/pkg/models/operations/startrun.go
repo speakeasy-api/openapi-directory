@@ -19,12 +19,16 @@ const (
 	StartRunRequestBodyLogLevelEnumAll   StartRunRequestBodyLogLevelEnum = "ALL"
 )
 
+func (e StartRunRequestBodyLogLevelEnum) ToPointer() *StartRunRequestBodyLogLevelEnum {
+	return &e
+}
+
 func (e *StartRunRequestBodyLogLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFF":
 		fallthrough
 	case "FATAL":
@@ -32,10 +36,10 @@ func (e *StartRunRequestBodyLogLevelEnum) UnmarshalJSON(data []byte) error {
 	case "ERROR":
 		fallthrough
 	case "ALL":
-		*e = StartRunRequestBodyLogLevelEnum(s)
+		*e = StartRunRequestBodyLogLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartRunRequestBodyLogLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for StartRunRequestBodyLogLevelEnum: %v", v)
 	}
 }
 
@@ -44,22 +48,23 @@ type StartRunRequestBodyWorkflowTypeEnum string
 
 const (
 	StartRunRequestBodyWorkflowTypeEnumPrivate StartRunRequestBodyWorkflowTypeEnum = "PRIVATE"
-	StartRunRequestBodyWorkflowTypeEnumService StartRunRequestBodyWorkflowTypeEnum = "SERVICE"
 )
 
+func (e StartRunRequestBodyWorkflowTypeEnum) ToPointer() *StartRunRequestBodyWorkflowTypeEnum {
+	return &e
+}
+
 func (e *StartRunRequestBodyWorkflowTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE":
-		fallthrough
-	case "SERVICE":
-		*e = StartRunRequestBodyWorkflowTypeEnum(s)
+		*e = StartRunRequestBodyWorkflowTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartRunRequestBodyWorkflowTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StartRunRequestBodyWorkflowTypeEnum: %v", v)
 	}
 }
 

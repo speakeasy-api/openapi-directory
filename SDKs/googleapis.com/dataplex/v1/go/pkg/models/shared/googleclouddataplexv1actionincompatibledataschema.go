@@ -16,21 +16,25 @@ const (
 	GoogleCloudDataplexV1ActionIncompatibleDataSchemaSchemaChangeEnumModified                GoogleCloudDataplexV1ActionIncompatibleDataSchemaSchemaChangeEnum = "MODIFIED"
 )
 
+func (e GoogleCloudDataplexV1ActionIncompatibleDataSchemaSchemaChangeEnum) ToPointer() *GoogleCloudDataplexV1ActionIncompatibleDataSchemaSchemaChangeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1ActionIncompatibleDataSchemaSchemaChangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCHEMA_CHANGE_UNSPECIFIED":
 		fallthrough
 	case "INCOMPATIBLE":
 		fallthrough
 	case "MODIFIED":
-		*e = GoogleCloudDataplexV1ActionIncompatibleDataSchemaSchemaChangeEnum(s)
+		*e = GoogleCloudDataplexV1ActionIncompatibleDataSchemaSchemaChangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ActionIncompatibleDataSchemaSchemaChangeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ActionIncompatibleDataSchemaSchemaChangeEnum: %v", v)
 	}
 }
 

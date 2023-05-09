@@ -14,17 +14,17 @@ type Card struct {
 	// Format: 2 digits, zero-padded for single digits. For example:
 	// * 03 = March
 	// * 11 = November
-	ExpiryMonth string `json:"expiryMonth"`
+	ExpiryMonth *string `json:"expiryMonth,omitempty"`
 	// The card expiry year.
 	// Format: 4 digits. For example: 2020
-	ExpiryYear string `json:"expiryYear"`
+	ExpiryYear *string `json:"expiryYear,omitempty"`
 	// The name of the cardholder, as printed on the card.
-	HolderName string `json:"holderName"`
+	HolderName *string `json:"holderName,omitempty"`
 	// The issue number of the card (for some UK debit cards only).
 	IssueNumber *string `json:"issueNumber,omitempty"`
 	// The card number (4-19 characters). Do not use any separators.
 	// When this value is returned in a response, only the last 4 digits of the card number are returned.
-	Number string `json:"number"`
+	Number *string `json:"number,omitempty"`
 	// The month component of the start date (for some UK debit cards only).
 	StartMonth *string `json:"startMonth,omitempty"`
 	// The year component of the start date (for some UK debit cards only).

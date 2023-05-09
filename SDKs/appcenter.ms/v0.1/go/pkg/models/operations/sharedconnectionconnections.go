@@ -8,6 +8,10 @@ import (
 	"net/http"
 )
 
+type SharedconnectionConnectionsSecurity struct {
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
+}
+
 type SharedconnectionConnectionsDefaultApplicationJSONCodeEnum string
 
 const (
@@ -20,12 +24,16 @@ const (
 	SharedconnectionConnectionsDefaultApplicationJSONCodeEnumTooManyRequests     SharedconnectionConnectionsDefaultApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e SharedconnectionConnectionsDefaultApplicationJSONCodeEnum) ToPointer() *SharedconnectionConnectionsDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *SharedconnectionConnectionsDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -39,10 +47,10 @@ func (e *SharedconnectionConnectionsDefaultApplicationJSONCodeEnum) UnmarshalJSO
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = SharedconnectionConnectionsDefaultApplicationJSONCodeEnum(s)
+		*e = SharedconnectionConnectionsDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SharedconnectionConnectionsDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for SharedconnectionConnectionsDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -61,21 +69,25 @@ const (
 	SharedconnectionConnections200ApplicationJSONCredentialTypeEnumKey         SharedconnectionConnections200ApplicationJSONCredentialTypeEnum = "key"
 )
 
+func (e SharedconnectionConnections200ApplicationJSONCredentialTypeEnum) ToPointer() *SharedconnectionConnections200ApplicationJSONCredentialTypeEnum {
+	return &e
+}
+
 func (e *SharedconnectionConnections200ApplicationJSONCredentialTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "credentials":
 		fallthrough
 	case "certificate":
 		fallthrough
 	case "key":
-		*e = SharedconnectionConnections200ApplicationJSONCredentialTypeEnum(s)
+		*e = SharedconnectionConnections200ApplicationJSONCredentialTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SharedconnectionConnections200ApplicationJSONCredentialTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SharedconnectionConnections200ApplicationJSONCredentialTypeEnum: %v", v)
 	}
 }
 
@@ -89,12 +101,16 @@ const (
 	SharedconnectionConnections200ApplicationJSONServiceTypeEnumGitlab     SharedconnectionConnections200ApplicationJSONServiceTypeEnum = "gitlab"
 )
 
+func (e SharedconnectionConnections200ApplicationJSONServiceTypeEnum) ToPointer() *SharedconnectionConnections200ApplicationJSONServiceTypeEnum {
+	return &e
+}
+
 func (e *SharedconnectionConnections200ApplicationJSONServiceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "apple":
 		fallthrough
 	case "jira":
@@ -102,10 +118,10 @@ func (e *SharedconnectionConnections200ApplicationJSONServiceTypeEnum) Unmarshal
 	case "googleplay":
 		fallthrough
 	case "gitlab":
-		*e = SharedconnectionConnections200ApplicationJSONServiceTypeEnum(s)
+		*e = SharedconnectionConnections200ApplicationJSONServiceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SharedconnectionConnections200ApplicationJSONServiceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SharedconnectionConnections200ApplicationJSONServiceTypeEnum: %v", v)
 	}
 }
 

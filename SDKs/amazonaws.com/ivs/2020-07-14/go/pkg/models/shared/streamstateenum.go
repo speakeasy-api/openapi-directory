@@ -14,18 +14,22 @@ const (
 	StreamStateEnumOffline StreamStateEnum = "OFFLINE"
 )
 
+func (e StreamStateEnum) ToPointer() *StreamStateEnum {
+	return &e
+}
+
 func (e *StreamStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "OFFLINE":
-		*e = StreamStateEnum(s)
+		*e = StreamStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamStateEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamStateEnum: %v", v)
 	}
 }

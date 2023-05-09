@@ -4,6 +4,8 @@ package shared
 
 // AlloyDbSettings - Settings for creating an AlloyDB cluster.
 type AlloyDbSettings struct {
+	// EncryptionConfig describes the encryption config of a cluster that is encrypted with a CMEK (customer-managed encryption key).
+	EncryptionConfig *EncryptionConfig `json:"encryptionConfig,omitempty"`
 	// The username/password for a database user. Used for specifying initial users at cluster creation time.
 	InitialUser *UserPassword `json:"initialUser,omitempty"`
 	// Labels for the AlloyDB cluster created by DMS. An object containing a list of 'key', 'value' pairs.
@@ -16,6 +18,8 @@ type AlloyDbSettings struct {
 
 // AlloyDbSettingsInput - Settings for creating an AlloyDB cluster.
 type AlloyDbSettingsInput struct {
+	// EncryptionConfig describes the encryption config of a cluster that is encrypted with a CMEK (customer-managed encryption key).
+	EncryptionConfig *EncryptionConfig `json:"encryptionConfig,omitempty"`
 	// The username/password for a database user. Used for specifying initial users at cluster creation time.
 	InitialUser *UserPasswordInput `json:"initialUser,omitempty"`
 	// Labels for the AlloyDB cluster created by DMS. An object containing a list of 'key', 'value' pairs.

@@ -22,12 +22,16 @@ const (
 	PatchBundlesIDRequestBodyPermissionsEnumPreviewOnly PatchBundlesIDRequestBodyPermissionsEnum = "preview_only"
 )
 
+func (e PatchBundlesIDRequestBodyPermissionsEnum) ToPointer() *PatchBundlesIDRequestBodyPermissionsEnum {
+	return &e
+}
+
 func (e *PatchBundlesIDRequestBodyPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
@@ -39,10 +43,10 @@ func (e *PatchBundlesIDRequestBodyPermissionsEnum) UnmarshalJSON(data []byte) er
 	case "none":
 		fallthrough
 	case "preview_only":
-		*e = PatchBundlesIDRequestBodyPermissionsEnum(s)
+		*e = PatchBundlesIDRequestBodyPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchBundlesIDRequestBodyPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchBundlesIDRequestBodyPermissionsEnum: %v", v)
 	}
 }
 

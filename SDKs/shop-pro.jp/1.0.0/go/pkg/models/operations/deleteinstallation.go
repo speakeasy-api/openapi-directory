@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type DeleteInstallationSecurity struct {
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 // DeleteInstallation200ApplicationJSONUsageCharge - （従量課金の場合）従量課金アンインストール情報
 type DeleteInstallation200ApplicationJSONUsageCharge struct {
 	// アンインストール後に従量課金APIを利用いただくために必要な情報

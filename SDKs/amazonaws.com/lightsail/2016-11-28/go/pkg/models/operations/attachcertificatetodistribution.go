@@ -16,17 +16,21 @@ const (
 	AttachCertificateToDistributionXAmzTargetEnumLightsail20161128AttachCertificateToDistribution AttachCertificateToDistributionXAmzTargetEnum = "Lightsail_20161128.AttachCertificateToDistribution"
 )
 
+func (e AttachCertificateToDistributionXAmzTargetEnum) ToPointer() *AttachCertificateToDistributionXAmzTargetEnum {
+	return &e
+}
+
 func (e *AttachCertificateToDistributionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.AttachCertificateToDistribution":
-		*e = AttachCertificateToDistributionXAmzTargetEnum(s)
+		*e = AttachCertificateToDistributionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachCertificateToDistributionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachCertificateToDistributionXAmzTargetEnum: %v", v)
 	}
 }
 

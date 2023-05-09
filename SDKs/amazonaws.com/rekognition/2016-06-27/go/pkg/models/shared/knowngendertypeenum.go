@@ -17,12 +17,16 @@ const (
 	KnownGenderTypeEnumUnlisted  KnownGenderTypeEnum = "Unlisted"
 )
 
+func (e KnownGenderTypeEnum) ToPointer() *KnownGenderTypeEnum {
+	return &e
+}
+
 func (e *KnownGenderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Male":
 		fallthrough
 	case "Female":
@@ -30,9 +34,9 @@ func (e *KnownGenderTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Nonbinary":
 		fallthrough
 	case "Unlisted":
-		*e = KnownGenderTypeEnum(s)
+		*e = KnownGenderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KnownGenderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for KnownGenderTypeEnum: %v", v)
 	}
 }

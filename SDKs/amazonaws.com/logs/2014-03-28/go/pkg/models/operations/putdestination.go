@@ -16,17 +16,21 @@ const (
 	PutDestinationXAmzTargetEnumLogs20140328PutDestination PutDestinationXAmzTargetEnum = "Logs_20140328.PutDestination"
 )
 
+func (e PutDestinationXAmzTargetEnum) ToPointer() *PutDestinationXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutDestinationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.PutDestination":
-		*e = PutDestinationXAmzTargetEnum(s)
+		*e = PutDestinationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutDestinationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutDestinationXAmzTargetEnum: %v", v)
 	}
 }
 

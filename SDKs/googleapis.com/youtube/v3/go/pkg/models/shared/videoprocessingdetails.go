@@ -17,12 +17,16 @@ const (
 	VideoProcessingDetailsProcessingFailureReasonEnumOther           VideoProcessingDetailsProcessingFailureReasonEnum = "other"
 )
 
+func (e VideoProcessingDetailsProcessingFailureReasonEnum) ToPointer() *VideoProcessingDetailsProcessingFailureReasonEnum {
+	return &e
+}
+
 func (e *VideoProcessingDetailsProcessingFailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uploadFailed":
 		fallthrough
 	case "transcodeFailed":
@@ -30,10 +34,10 @@ func (e *VideoProcessingDetailsProcessingFailureReasonEnum) UnmarshalJSON(data [
 	case "streamingFailed":
 		fallthrough
 	case "other":
-		*e = VideoProcessingDetailsProcessingFailureReasonEnum(s)
+		*e = VideoProcessingDetailsProcessingFailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoProcessingDetailsProcessingFailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoProcessingDetailsProcessingFailureReasonEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	VideoProcessingDetailsProcessingStatusEnumTerminated VideoProcessingDetailsProcessingStatusEnum = "terminated"
 )
 
+func (e VideoProcessingDetailsProcessingStatusEnum) ToPointer() *VideoProcessingDetailsProcessingStatusEnum {
+	return &e
+}
+
 func (e *VideoProcessingDetailsProcessingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "processing":
 		fallthrough
 	case "succeeded":
@@ -60,10 +68,10 @@ func (e *VideoProcessingDetailsProcessingStatusEnum) UnmarshalJSON(data []byte) 
 	case "failed":
 		fallthrough
 	case "terminated":
-		*e = VideoProcessingDetailsProcessingStatusEnum(s)
+		*e = VideoProcessingDetailsProcessingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoProcessingDetailsProcessingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoProcessingDetailsProcessingStatusEnum: %v", v)
 	}
 }
 

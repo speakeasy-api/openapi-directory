@@ -38,19 +38,23 @@ const (
 	BigquerydatatransferProjectsTransferConfigsRunsListRunAttemptEnumLatest                BigquerydatatransferProjectsTransferConfigsRunsListRunAttemptEnum = "LATEST"
 )
 
+func (e BigquerydatatransferProjectsTransferConfigsRunsListRunAttemptEnum) ToPointer() *BigquerydatatransferProjectsTransferConfigsRunsListRunAttemptEnum {
+	return &e
+}
+
 func (e *BigquerydatatransferProjectsTransferConfigsRunsListRunAttemptEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUN_ATTEMPT_UNSPECIFIED":
 		fallthrough
 	case "LATEST":
-		*e = BigquerydatatransferProjectsTransferConfigsRunsListRunAttemptEnum(s)
+		*e = BigquerydatatransferProjectsTransferConfigsRunsListRunAttemptEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BigquerydatatransferProjectsTransferConfigsRunsListRunAttemptEnum: %s", s)
+		return fmt.Errorf("invalid value for BigquerydatatransferProjectsTransferConfigsRunsListRunAttemptEnum: %v", v)
 	}
 }
 
@@ -65,12 +69,16 @@ const (
 	BigquerydatatransferProjectsTransferConfigsRunsListStatesEnumCancelled                BigquerydatatransferProjectsTransferConfigsRunsListStatesEnum = "CANCELLED"
 )
 
+func (e BigquerydatatransferProjectsTransferConfigsRunsListStatesEnum) ToPointer() *BigquerydatatransferProjectsTransferConfigsRunsListStatesEnum {
+	return &e
+}
+
 func (e *BigquerydatatransferProjectsTransferConfigsRunsListStatesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRANSFER_STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -82,10 +90,10 @@ func (e *BigquerydatatransferProjectsTransferConfigsRunsListStatesEnum) Unmarsha
 	case "FAILED":
 		fallthrough
 	case "CANCELLED":
-		*e = BigquerydatatransferProjectsTransferConfigsRunsListStatesEnum(s)
+		*e = BigquerydatatransferProjectsTransferConfigsRunsListStatesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BigquerydatatransferProjectsTransferConfigsRunsListStatesEnum: %s", s)
+		return fmt.Errorf("invalid value for BigquerydatatransferProjectsTransferConfigsRunsListStatesEnum: %v", v)
 	}
 }
 

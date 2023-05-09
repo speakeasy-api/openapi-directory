@@ -15,17 +15,21 @@ const (
 	GETListAllowedNodeTypeModificationsActionEnumListAllowedNodeTypeModifications GETListAllowedNodeTypeModificationsActionEnum = "ListAllowedNodeTypeModifications"
 )
 
+func (e GETListAllowedNodeTypeModificationsActionEnum) ToPointer() *GETListAllowedNodeTypeModificationsActionEnum {
+	return &e
+}
+
 func (e *GETListAllowedNodeTypeModificationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListAllowedNodeTypeModifications":
-		*e = GETListAllowedNodeTypeModificationsActionEnum(s)
+		*e = GETListAllowedNodeTypeModificationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListAllowedNodeTypeModificationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListAllowedNodeTypeModificationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListAllowedNodeTypeModificationsVersionEnumTwoThousandAndFifteen0202 GETListAllowedNodeTypeModificationsVersionEnum = "2015-02-02"
 )
 
+func (e GETListAllowedNodeTypeModificationsVersionEnum) ToPointer() *GETListAllowedNodeTypeModificationsVersionEnum {
+	return &e
+}
+
 func (e *GETListAllowedNodeTypeModificationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = GETListAllowedNodeTypeModificationsVersionEnum(s)
+		*e = GETListAllowedNodeTypeModificationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListAllowedNodeTypeModificationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListAllowedNodeTypeModificationsVersionEnum: %v", v)
 	}
 }
 

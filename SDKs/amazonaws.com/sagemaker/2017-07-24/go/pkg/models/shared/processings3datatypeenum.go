@@ -14,18 +14,22 @@ const (
 	ProcessingS3DataTypeEnumS3Prefix     ProcessingS3DataTypeEnum = "S3Prefix"
 )
 
+func (e ProcessingS3DataTypeEnum) ToPointer() *ProcessingS3DataTypeEnum {
+	return &e
+}
+
 func (e *ProcessingS3DataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ManifestFile":
 		fallthrough
 	case "S3Prefix":
-		*e = ProcessingS3DataTypeEnum(s)
+		*e = ProcessingS3DataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProcessingS3DataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProcessingS3DataTypeEnum: %v", v)
 	}
 }

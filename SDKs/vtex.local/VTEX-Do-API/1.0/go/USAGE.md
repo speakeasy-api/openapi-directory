@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,15 +17,13 @@ func main() {
         }),
     )
 
-    req := operations.GetNoteRequest{
+    ctx := context.Background()
+    res, err := s.Note.GetNote(ctx, operations.GetNoteRequest{
         Accept: "application/json",
         ContentType: "application/json",
         NoteID: "654321cba",
-        Reason: "data-validation",
-    }
-
-    ctx := context.Background()
-    res, err := s.Note.GetNote(ctx, req)
+        Reason: sdk.String("data-validation"),
+    })
     if err != nil {
         log.Fatal(err)
     }

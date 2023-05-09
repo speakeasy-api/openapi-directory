@@ -15,20 +15,24 @@ const (
 	ApplicationHealthStatusEnumError   ApplicationHealthStatusEnum = "ERROR"
 )
 
+func (e ApplicationHealthStatusEnum) ToPointer() *ApplicationHealthStatusEnum {
+	return &e
+}
+
 func (e *ApplicationHealthStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEALTHY":
 		fallthrough
 	case "LAGGING":
 		fallthrough
 	case "ERROR":
-		*e = ApplicationHealthStatusEnum(s)
+		*e = ApplicationHealthStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationHealthStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationHealthStatusEnum: %v", v)
 	}
 }

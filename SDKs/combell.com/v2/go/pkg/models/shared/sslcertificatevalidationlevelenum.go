@@ -17,20 +17,24 @@ const (
 	SslCertificateValidationLevelEnumExtendedValidated     SslCertificateValidationLevelEnum = "extended_validated"
 )
 
+func (e SslCertificateValidationLevelEnum) ToPointer() *SslCertificateValidationLevelEnum {
+	return &e
+}
+
 func (e *SslCertificateValidationLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "domain_validated":
 		fallthrough
 	case "organization_validated":
 		fallthrough
 	case "extended_validated":
-		*e = SslCertificateValidationLevelEnum(s)
+		*e = SslCertificateValidationLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslCertificateValidationLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for SslCertificateValidationLevelEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	AutoMls3DataTypeEnumAugmentedManifestFile AutoMls3DataTypeEnum = "AugmentedManifestFile"
 )
 
+func (e AutoMls3DataTypeEnum) ToPointer() *AutoMls3DataTypeEnum {
+	return &e
+}
+
 func (e *AutoMls3DataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ManifestFile":
 		fallthrough
 	case "S3Prefix":
 		fallthrough
 	case "AugmentedManifestFile":
-		*e = AutoMls3DataTypeEnum(s)
+		*e = AutoMls3DataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoMls3DataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoMls3DataTypeEnum: %v", v)
 	}
 }

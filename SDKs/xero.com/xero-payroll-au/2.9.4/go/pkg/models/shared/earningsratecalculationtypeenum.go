@@ -15,20 +15,24 @@ const (
 	EarningsRateCalculationTypeEnumAnnualsalary      EarningsRateCalculationTypeEnum = "ANNUALSALARY"
 )
 
+func (e EarningsRateCalculationTypeEnum) ToPointer() *EarningsRateCalculationTypeEnum {
+	return &e
+}
+
 func (e *EarningsRateCalculationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USEEARNINGSRATE":
 		fallthrough
 	case "ENTEREARNINGSRATE":
 		fallthrough
 	case "ANNUALSALARY":
-		*e = EarningsRateCalculationTypeEnum(s)
+		*e = EarningsRateCalculationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EarningsRateCalculationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EarningsRateCalculationTypeEnum: %v", v)
 	}
 }

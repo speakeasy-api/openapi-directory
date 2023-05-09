@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DocumentaiProjectsLocationsDocumentsBatchProcess - LRO endpoint to batch process many documents. The output is written to Cloud Storage as JSON in the [Document] format.
 func (s *projects) DocumentaiProjectsLocationsDocumentsBatchProcess(ctx context.Context, request operations.DocumentaiProjectsLocationsDocumentsBatchProcessRequest, security operations.DocumentaiProjectsLocationsDocumentsBatchProcessSecurity) (*operations.DocumentaiProjectsLocationsDocumentsBatchProcessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/documents:batchProcess", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/documents:batchProcess", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDocumentaiV1beta2BatchProcessDocumentsRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) DocumentaiProjectsLocationsDocumentsBatchProcess(ctx context.
 // DocumentaiProjectsLocationsDocumentsProcess - Processes a single document.
 func (s *projects) DocumentaiProjectsLocationsDocumentsProcess(ctx context.Context, request operations.DocumentaiProjectsLocationsDocumentsProcessRequest, security operations.DocumentaiProjectsLocationsDocumentsProcessSecurity) (*operations.DocumentaiProjectsLocationsDocumentsProcessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/documents:process", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/documents:process", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDocumentaiV1beta2ProcessDocumentRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) DocumentaiProjectsLocationsDocumentsProcess(ctx context.Conte
 // DocumentaiProjectsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) DocumentaiProjectsOperationsGet(ctx context.Context, request operations.DocumentaiProjectsOperationsGetRequest, security operations.DocumentaiProjectsOperationsGetSecurity) (*operations.DocumentaiProjectsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

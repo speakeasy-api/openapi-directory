@@ -42,12 +42,16 @@ const (
 	GoogleCloudKmsV1CryptoKeyVersionAlgorithmEnumExternalSymmetricEncryption          GoogleCloudKmsV1CryptoKeyVersionAlgorithmEnum = "EXTERNAL_SYMMETRIC_ENCRYPTION"
 )
 
+func (e GoogleCloudKmsV1CryptoKeyVersionAlgorithmEnum) ToPointer() *GoogleCloudKmsV1CryptoKeyVersionAlgorithmEnum {
+	return &e
+}
+
 func (e *GoogleCloudKmsV1CryptoKeyVersionAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_SYMMETRIC_ENCRYPTION":
@@ -105,10 +109,10 @@ func (e *GoogleCloudKmsV1CryptoKeyVersionAlgorithmEnum) UnmarshalJSON(data []byt
 	case "HMAC_SHA224":
 		fallthrough
 	case "EXTERNAL_SYMMETRIC_ENCRYPTION":
-		*e = GoogleCloudKmsV1CryptoKeyVersionAlgorithmEnum(s)
+		*e = GoogleCloudKmsV1CryptoKeyVersionAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudKmsV1CryptoKeyVersionAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudKmsV1CryptoKeyVersionAlgorithmEnum: %v", v)
 	}
 }
 
@@ -123,12 +127,16 @@ const (
 	GoogleCloudKmsV1CryptoKeyVersionProtectionLevelEnumExternalVpc                GoogleCloudKmsV1CryptoKeyVersionProtectionLevelEnum = "EXTERNAL_VPC"
 )
 
+func (e GoogleCloudKmsV1CryptoKeyVersionProtectionLevelEnum) ToPointer() *GoogleCloudKmsV1CryptoKeyVersionProtectionLevelEnum {
+	return &e
+}
+
 func (e *GoogleCloudKmsV1CryptoKeyVersionProtectionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROTECTION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "SOFTWARE":
@@ -138,10 +146,10 @@ func (e *GoogleCloudKmsV1CryptoKeyVersionProtectionLevelEnum) UnmarshalJSON(data
 	case "EXTERNAL":
 		fallthrough
 	case "EXTERNAL_VPC":
-		*e = GoogleCloudKmsV1CryptoKeyVersionProtectionLevelEnum(s)
+		*e = GoogleCloudKmsV1CryptoKeyVersionProtectionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudKmsV1CryptoKeyVersionProtectionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudKmsV1CryptoKeyVersionProtectionLevelEnum: %v", v)
 	}
 }
 
@@ -162,12 +170,16 @@ const (
 	GoogleCloudKmsV1CryptoKeyVersionStateEnumExternalDestructionFailed        GoogleCloudKmsV1CryptoKeyVersionStateEnum = "EXTERNAL_DESTRUCTION_FAILED"
 )
 
+func (e GoogleCloudKmsV1CryptoKeyVersionStateEnum) ToPointer() *GoogleCloudKmsV1CryptoKeyVersionStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudKmsV1CryptoKeyVersionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRYPTO_KEY_VERSION_STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING_GENERATION":
@@ -189,10 +201,10 @@ func (e *GoogleCloudKmsV1CryptoKeyVersionStateEnum) UnmarshalJSON(data []byte) e
 	case "PENDING_EXTERNAL_DESTRUCTION":
 		fallthrough
 	case "EXTERNAL_DESTRUCTION_FAILED":
-		*e = GoogleCloudKmsV1CryptoKeyVersionStateEnum(s)
+		*e = GoogleCloudKmsV1CryptoKeyVersionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudKmsV1CryptoKeyVersionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudKmsV1CryptoKeyVersionStateEnum: %v", v)
 	}
 }
 

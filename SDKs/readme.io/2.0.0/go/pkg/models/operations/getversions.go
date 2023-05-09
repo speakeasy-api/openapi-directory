@@ -6,6 +6,11 @@ import (
 	"net/http"
 )
 
+type GetVersionsSecurity struct {
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
+}
+
 type GetVersionsResponse struct {
 	ContentType string
 	StatusCode  int

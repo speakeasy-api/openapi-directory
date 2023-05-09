@@ -16,21 +16,25 @@ const (
 	GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnumUnjoinedEvents                  GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnum = "UNJOINED_EVENTS"
 )
 
+func (e GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnum) ToPointer() *GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_EVENT_REJOIN_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "JOINED_EVENTS":
 		fallthrough
 	case "UNJOINED_EVENTS":
-		*e = GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnum(s)
+		*e = GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequestUserEventRejoinScopeEnum: %v", v)
 	}
 }
 

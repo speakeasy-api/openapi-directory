@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,69 +17,67 @@ func main() {
         }),
     )
 
-    req := operations.AddCustomAttributesRequest{
+    ctx := context.Background()
+    res, err := s.AddCustomAttributes(ctx, operations.AddCustomAttributesRequest{
         AddCustomAttributesRequest: shared.AddCustomAttributesRequest{
             CustomAttributes: []shared.SchemaAttributeType{
                 shared.SchemaAttributeType{
-                    AttributeDataType: "DateTime",
-                    DeveloperOnlyAttribute: false,
-                    Mutable: false,
-                    Name: "distinctio",
+                    AttributeDataType: shared.AttributeDataTypeEnumDateTime.ToPointer(),
+                    DeveloperOnlyAttribute: sdk.Bool(false),
+                    Mutable: sdk.Bool(false),
+                    Name: sdk.String("Ellis Mitchell"),
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "quibusdam",
-                        MinValue: "unde",
+                        MaxValue: sdk.String("illum"),
+                        MinValue: sdk.String("vel"),
                     },
-                    Required: false,
+                    Required: sdk.Bool(false),
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "nulla",
-                        MinLength: "corrupti",
+                        MaxLength: sdk.String("error"),
+                        MinLength: sdk.String("deserunt"),
                     },
                 },
                 shared.SchemaAttributeType{
-                    AttributeDataType: "Boolean",
-                    DeveloperOnlyAttribute: false,
-                    Mutable: false,
-                    Name: "vel",
+                    AttributeDataType: shared.AttributeDataTypeEnumNumber.ToPointer(),
+                    DeveloperOnlyAttribute: sdk.Bool(false),
+                    Mutable: sdk.Bool(false),
+                    Name: sdk.String("Dr. Valerie Toy"),
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "error",
-                        MinValue: "deserunt",
+                        MaxValue: sdk.String("suscipit"),
+                        MinValue: sdk.String("molestiae"),
                     },
-                    Required: false,
+                    Required: sdk.Bool(false),
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "suscipit",
-                        MinLength: "iure",
+                        MaxLength: sdk.String("minus"),
+                        MinLength: sdk.String("placeat"),
                     },
                 },
                 shared.SchemaAttributeType{
-                    AttributeDataType: "Number",
-                    DeveloperOnlyAttribute: false,
-                    Mutable: false,
-                    Name: "debitis",
+                    AttributeDataType: shared.AttributeDataTypeEnumDateTime.ToPointer(),
+                    DeveloperOnlyAttribute: sdk.Bool(false),
+                    Mutable: sdk.Bool(false),
+                    Name: sdk.String("Miriam Huel"),
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "ipsa",
-                        MinValue: "delectus",
+                        MaxValue: sdk.String("ab"),
+                        MinValue: sdk.String("quis"),
                     },
-                    Required: false,
+                    Required: sdk.Bool(false),
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "tempora",
-                        MinLength: "suscipit",
+                        MaxLength: sdk.String("veritatis"),
+                        MinLength: sdk.String("deserunt"),
                     },
                 },
             },
-            UserPoolID: "molestiae",
+            UserPoolID: "perferendis",
         },
-        XAmzAlgorithm: "minus",
-        XAmzContentSha256: "placeat",
-        XAmzCredential: "voluptatum",
-        XAmzDate: "iusto",
-        XAmzSecurityToken: "excepturi",
-        XAmzSignature: "nisi",
-        XAmzSignedHeaders: "recusandae",
-        XAmzTarget: "AWSCognitoIdentityProviderService.AddCustomAttributes",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddCustomAttributes(ctx, req)
+        XAmzAlgorithm: sdk.String("ipsam"),
+        XAmzContentSha256: sdk.String("repellendus"),
+        XAmzCredential: sdk.String("sapiente"),
+        XAmzDate: sdk.String("quo"),
+        XAmzSecurityToken: sdk.String("odit"),
+        XAmzSignature: sdk.String("at"),
+        XAmzSignedHeaders: sdk.String("at"),
+        XAmzTarget: operations.AddCustomAttributesXAmzTargetEnumAwsCognitoIdentityProviderServiceAddCustomAttributes,
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -194,7 +194,10 @@ func (s *environments) CreateEnvironment(ctx context.Context, request operations
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *environments) DeleteEnvironment(ctx context.Context, request operations.DeleteEnvironmentRequest) (*operations.DeleteEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{environment_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/environments/{environment_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -251,7 +254,10 @@ func (s *environments) DeleteEnvironment(ctx context.Context, request operations
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *environments) SingleEnvironment(ctx context.Context, request operations.SingleEnvironmentRequest) (*operations.SingleEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{environment_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/environments/{environment_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -355,7 +361,10 @@ func (s *environments) SingleEnvironment(ctx context.Context, request operations
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *environments) UpdateEnvironment(ctx context.Context, request operations.UpdateEnvironmentRequest) (*operations.UpdateEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{environment_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/environments/{environment_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	BotTypeEnumBotNetwork BotTypeEnum = "BotNetwork"
 )
 
+func (e BotTypeEnum) ToPointer() *BotTypeEnum {
+	return &e
+}
+
 func (e *BotTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Bot":
 		fallthrough
 	case "BotNetwork":
-		*e = BotTypeEnum(s)
+		*e = BotTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BotTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BotTypeEnum: %v", v)
 	}
 }

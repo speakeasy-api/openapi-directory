@@ -15,19 +15,23 @@ const (
 	GoogleCloudDialogflowV2beta1EntityTypeAutoExpansionModeEnumAutoExpansionModeDefault     GoogleCloudDialogflowV2beta1EntityTypeAutoExpansionModeEnum = "AUTO_EXPANSION_MODE_DEFAULT"
 )
 
+func (e GoogleCloudDialogflowV2beta1EntityTypeAutoExpansionModeEnum) ToPointer() *GoogleCloudDialogflowV2beta1EntityTypeAutoExpansionModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1EntityTypeAutoExpansionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTO_EXPANSION_MODE_UNSPECIFIED":
 		fallthrough
 	case "AUTO_EXPANSION_MODE_DEFAULT":
-		*e = GoogleCloudDialogflowV2beta1EntityTypeAutoExpansionModeEnum(s)
+		*e = GoogleCloudDialogflowV2beta1EntityTypeAutoExpansionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1EntityTypeAutoExpansionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1EntityTypeAutoExpansionModeEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	GoogleCloudDialogflowV2beta1EntityTypeKindEnumKindRegexp      GoogleCloudDialogflowV2beta1EntityTypeKindEnum = "KIND_REGEXP"
 )
 
+func (e GoogleCloudDialogflowV2beta1EntityTypeKindEnum) ToPointer() *GoogleCloudDialogflowV2beta1EntityTypeKindEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1EntityTypeKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KIND_UNSPECIFIED":
 		fallthrough
 	case "KIND_MAP":
@@ -54,10 +62,10 @@ func (e *GoogleCloudDialogflowV2beta1EntityTypeKindEnum) UnmarshalJSON(data []by
 	case "KIND_LIST":
 		fallthrough
 	case "KIND_REGEXP":
-		*e = GoogleCloudDialogflowV2beta1EntityTypeKindEnum(s)
+		*e = GoogleCloudDialogflowV2beta1EntityTypeKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1EntityTypeKindEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1EntityTypeKindEnum: %v", v)
 	}
 }
 

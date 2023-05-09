@@ -16,17 +16,21 @@ const (
 	DiscoverInputSchemaXAmzTargetEnumKinesisAnalytics20180523DiscoverInputSchema DiscoverInputSchemaXAmzTargetEnum = "KinesisAnalytics_20180523.DiscoverInputSchema"
 )
 
+func (e DiscoverInputSchemaXAmzTargetEnum) ToPointer() *DiscoverInputSchemaXAmzTargetEnum {
+	return &e
+}
+
 func (e *DiscoverInputSchemaXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20180523.DiscoverInputSchema":
-		*e = DiscoverInputSchemaXAmzTargetEnum(s)
+		*e = DiscoverInputSchemaXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiscoverInputSchemaXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DiscoverInputSchemaXAmzTargetEnum: %v", v)
 	}
 }
 

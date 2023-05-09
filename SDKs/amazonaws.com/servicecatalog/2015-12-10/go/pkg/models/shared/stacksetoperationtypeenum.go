@@ -15,20 +15,24 @@ const (
 	StackSetOperationTypeEnumDelete StackSetOperationTypeEnum = "DELETE"
 )
 
+func (e StackSetOperationTypeEnum) ToPointer() *StackSetOperationTypeEnum {
+	return &e
+}
+
 func (e *StackSetOperationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE":
 		fallthrough
 	case "UPDATE":
 		fallthrough
 	case "DELETE":
-		*e = StackSetOperationTypeEnum(s)
+		*e = StackSetOperationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StackSetOperationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StackSetOperationTypeEnum: %v", v)
 	}
 }

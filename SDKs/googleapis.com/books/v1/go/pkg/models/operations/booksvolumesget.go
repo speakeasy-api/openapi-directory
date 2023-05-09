@@ -23,21 +23,25 @@ const (
 	BooksVolumesGetProjectionEnumLite                BooksVolumesGetProjectionEnum = "LITE"
 )
 
+func (e BooksVolumesGetProjectionEnum) ToPointer() *BooksVolumesGetProjectionEnum {
+	return &e
+}
+
 func (e *BooksVolumesGetProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION_UNDEFINED":
 		fallthrough
 	case "FULL":
 		fallthrough
 	case "LITE":
-		*e = BooksVolumesGetProjectionEnum(s)
+		*e = BooksVolumesGetProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksVolumesGetProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksVolumesGetProjectionEnum: %v", v)
 	}
 }
 

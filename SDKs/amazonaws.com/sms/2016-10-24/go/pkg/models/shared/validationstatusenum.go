@@ -17,12 +17,16 @@ const (
 	ValidationStatusEnumFailed             ValidationStatusEnum = "FAILED"
 )
 
+func (e ValidationStatusEnum) ToPointer() *ValidationStatusEnum {
+	return &e
+}
+
 func (e *ValidationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READY_FOR_VALIDATION":
 		fallthrough
 	case "PENDING":
@@ -32,9 +36,9 @@ func (e *ValidationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = ValidationStatusEnum(s)
+		*e = ValidationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidationStatusEnum: %v", v)
 	}
 }

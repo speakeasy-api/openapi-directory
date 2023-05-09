@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,9 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.CreateClusterRequest{
+    ctx := context.Background()
+    res, err := s.CreateCluster(ctx, operations.CreateClusterRequest{
         RequestBody: operations.CreateClusterRequestBody{
-            ClientToken: "corrupti",
+            ClientToken: sdk.String("corrupti"),
             ClusterName: "provident",
             Tags: map[string]string{
                 "quibusdam": "unde",
@@ -27,17 +27,14 @@ func main() {
                 "illum": "vel",
             },
         },
-        XAmzAlgorithm: "error",
-        XAmzContentSha256: "deserunt",
-        XAmzCredential: "suscipit",
-        XAmzDate: "iure",
-        XAmzSecurityToken: "magnam",
-        XAmzSignature: "debitis",
-        XAmzSignedHeaders: "ipsa",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateCluster(ctx, req)
+        XAmzAlgorithm: sdk.String("error"),
+        XAmzContentSha256: sdk.String("deserunt"),
+        XAmzCredential: sdk.String("suscipit"),
+        XAmzDate: sdk.String("iure"),
+        XAmzSecurityToken: sdk.String("magnam"),
+        XAmzSignature: sdk.String("debitis"),
+        XAmzSignedHeaders: sdk.String("ipsa"),
+    })
     if err != nil {
         log.Fatal(err)
     }

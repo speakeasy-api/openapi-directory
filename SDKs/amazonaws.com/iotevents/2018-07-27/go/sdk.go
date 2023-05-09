@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - AWS IoT Events monitors your equipment or device fleets for failures or changes in operation, and triggers actions when such events occur. You can use AWS IoT Events API operations to create, read, update, and delete inputs and detector models, and to list their versions.
 // https://docs.aws.amazon.com/iotevents/ - Amazon Web Services documentation
 type SDK struct {
@@ -472,7 +487,10 @@ func (s *SDK) CreateInput(ctx context.Context, request operations.CreateInputReq
 // DeleteAlarmModel - Deletes an alarm model. Any alarm instances that were created based on this alarm model are also deleted. This action can't be undone.
 func (s *SDK) DeleteAlarmModel(ctx context.Context, request operations.DeleteAlarmModelRequest) (*operations.DeleteAlarmModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -578,7 +596,10 @@ func (s *SDK) DeleteAlarmModel(ctx context.Context, request operations.DeleteAla
 // DeleteDetectorModel - Deletes a detector model. Any active instances of the detector model are also deleted.
 func (s *SDK) DeleteDetectorModel(ctx context.Context, request operations.DeleteDetectorModelRequest) (*operations.DeleteDetectorModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -684,7 +705,10 @@ func (s *SDK) DeleteDetectorModel(ctx context.Context, request operations.Delete
 // DeleteInput - Deletes an input.
 func (s *SDK) DeleteInput(ctx context.Context, request operations.DeleteInputRequest) (*operations.DeleteInputResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/inputs/{inputName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/inputs/{inputName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -790,7 +814,10 @@ func (s *SDK) DeleteInput(ctx context.Context, request operations.DeleteInputReq
 // DescribeAlarmModel - Retrieves information about an alarm model. If you don't specify a value for the <code>alarmModelVersion</code> parameter, the latest version is returned.
 func (s *SDK) DescribeAlarmModel(ctx context.Context, request operations.DescribeAlarmModelRequest) (*operations.DescribeAlarmModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -890,7 +917,10 @@ func (s *SDK) DescribeAlarmModel(ctx context.Context, request operations.Describ
 // DescribeDetectorModel - Describes a detector model. If the <code>version</code> parameter is not specified, information about the latest version is returned.
 func (s *SDK) DescribeDetectorModel(ctx context.Context, request operations.DescribeDetectorModelRequest) (*operations.DescribeDetectorModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -990,7 +1020,10 @@ func (s *SDK) DescribeDetectorModel(ctx context.Context, request operations.Desc
 // DescribeDetectorModelAnalysis - <p>Retrieves runtime information about a detector model analysis.</p> <note> <p>After AWS IoT Events starts analyzing your detector model, you have up to 24 hours to retrieve the analysis results.</p> </note>
 func (s *SDK) DescribeDetectorModelAnalysis(ctx context.Context, request operations.DescribeDetectorModelAnalysisRequest) (*operations.DescribeDetectorModelAnalysisResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analysis/detector-models/{analysisId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/analysis/detector-models/{analysisId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1086,7 +1119,10 @@ func (s *SDK) DescribeDetectorModelAnalysis(ctx context.Context, request operati
 // DescribeInput - Describes an input.
 func (s *SDK) DescribeInput(ctx context.Context, request operations.DescribeInputRequest) (*operations.DescribeInputResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/inputs/{inputName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/inputs/{inputName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1288,7 +1324,10 @@ func (s *SDK) DescribeLoggingOptions(ctx context.Context, request operations.Des
 // GetDetectorModelAnalysisResults - <p>Retrieves one or more analysis results of the detector model.</p> <note> <p>After AWS IoT Events starts analyzing your detector model, you have up to 24 hours to retrieve the analysis results.</p> </note>
 func (s *SDK) GetDetectorModelAnalysisResults(ctx context.Context, request operations.GetDetectorModelAnalysisResultsRequest) (*operations.GetDetectorModelAnalysisResultsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analysis/detector-models/{analysisId}/results", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/analysis/detector-models/{analysisId}/results", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1388,7 +1427,10 @@ func (s *SDK) GetDetectorModelAnalysisResults(ctx context.Context, request opera
 // ListAlarmModelVersions - Lists all the versions of an alarm model. The operation returns only the metadata associated with each alarm model version.
 func (s *SDK) ListAlarmModelVersions(ctx context.Context, request operations.ListAlarmModelVersionsRequest) (*operations.ListAlarmModelVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1578,7 +1620,10 @@ func (s *SDK) ListAlarmModels(ctx context.Context, request operations.ListAlarmM
 // ListDetectorModelVersions - Lists all the versions of a detector model. Only the metadata associated with each detector model version is returned.
 func (s *SDK) ListDetectorModelVersions(ctx context.Context, request operations.ListDetectorModelVersionsRequest) (*operations.ListDetectorModelVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2497,7 +2542,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAlarmModel - Updates an alarm model. Any alarms that were created based on the previous version are deleted and then created again as new data arrives.
 func (s *SDK) UpdateAlarmModel(ctx context.Context, request operations.UpdateAlarmModelRequest) (*operations.UpdateAlarmModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/alarm-models/{alarmModelName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2613,7 +2661,10 @@ func (s *SDK) UpdateAlarmModel(ctx context.Context, request operations.UpdateAla
 // UpdateDetectorModel - Updates a detector model. Detectors (instances) spawned by the previous version are deleted and then re-created as new inputs arrive.
 func (s *SDK) UpdateDetectorModel(ctx context.Context, request operations.UpdateDetectorModelRequest) (*operations.UpdateDetectorModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/detector-models/{detectorModelName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2729,7 +2780,10 @@ func (s *SDK) UpdateDetectorModel(ctx context.Context, request operations.Update
 // UpdateInput - Updates an input.
 func (s *SDK) UpdateInput(ctx context.Context, request operations.UpdateInputRequest) (*operations.UpdateInputResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/inputs/{inputName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/inputs/{inputName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

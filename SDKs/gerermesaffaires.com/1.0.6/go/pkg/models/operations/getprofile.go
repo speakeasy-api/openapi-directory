@@ -31,19 +31,23 @@ const (
 	GetProfile200ApplicationJSONSexEnumFemale GetProfile200ApplicationJSONSexEnum = "female"
 )
 
+func (e GetProfile200ApplicationJSONSexEnum) ToPointer() *GetProfile200ApplicationJSONSexEnum {
+	return &e
+}
+
 func (e *GetProfile200ApplicationJSONSexEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
-		*e = GetProfile200ApplicationJSONSexEnum(s)
+		*e = GetProfile200ApplicationJSONSexEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProfile200ApplicationJSONSexEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProfile200ApplicationJSONSexEnum: %v", v)
 	}
 }
 
@@ -54,19 +58,23 @@ const (
 	GetProfile200ApplicationJSONStatusEnumNotValidated GetProfile200ApplicationJSONStatusEnum = "not validated"
 )
 
+func (e GetProfile200ApplicationJSONStatusEnum) ToPointer() *GetProfile200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetProfile200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "validated":
 		fallthrough
 	case "not validated":
-		*e = GetProfile200ApplicationJSONStatusEnum(s)
+		*e = GetProfile200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProfile200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProfile200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

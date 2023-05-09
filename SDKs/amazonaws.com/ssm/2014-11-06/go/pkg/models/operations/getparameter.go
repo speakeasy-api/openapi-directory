@@ -16,17 +16,21 @@ const (
 	GetParameterXAmzTargetEnumAmazonSsmGetParameter GetParameterXAmzTargetEnum = "AmazonSSM.GetParameter"
 )
 
+func (e GetParameterXAmzTargetEnum) ToPointer() *GetParameterXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetParameterXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.GetParameter":
-		*e = GetParameterXAmzTargetEnum(s)
+		*e = GetParameterXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetParameterXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetParameterXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DataplexProjectsLocationsDataAttributeBindingsCreate - Create a DataAttributeBinding resource.
 func (s *projects) DataplexProjectsLocationsDataAttributeBindingsCreate(ctx context.Context, request operations.DataplexProjectsLocationsDataAttributeBindingsCreateRequest, security operations.DataplexProjectsLocationsDataAttributeBindingsCreateSecurity) (*operations.DataplexProjectsLocationsDataAttributeBindingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataAttributeBindings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataAttributeBindings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1DataAttributeBindingInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) DataplexProjectsLocationsDataAttributeBindingsCreate(ctx cont
 // DataplexProjectsLocationsDataAttributeBindingsList - Lists DataAttributeBinding resources in a project and location.
 func (s *projects) DataplexProjectsLocationsDataAttributeBindingsList(ctx context.Context, request operations.DataplexProjectsLocationsDataAttributeBindingsListRequest, security operations.DataplexProjectsLocationsDataAttributeBindingsListSecurity) (*operations.DataplexProjectsLocationsDataAttributeBindingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataAttributeBindings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataAttributeBindings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) DataplexProjectsLocationsDataAttributeBindingsList(ctx contex
 // DataplexProjectsLocationsDataScansCreate - Creates a DataScan resource.
 func (s *projects) DataplexProjectsLocationsDataScansCreate(ctx context.Context, request operations.DataplexProjectsLocationsDataScansCreateRequest, security operations.DataplexProjectsLocationsDataScansCreateSecurity) (*operations.DataplexProjectsLocationsDataScansCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataScans", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataScans", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1DataScanInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) DataplexProjectsLocationsDataScansCreate(ctx context.Context,
 // DataplexProjectsLocationsDataScansList - Lists DataScans.
 func (s *projects) DataplexProjectsLocationsDataScansList(ctx context.Context, request operations.DataplexProjectsLocationsDataScansListRequest, security operations.DataplexProjectsLocationsDataScansListSecurity) (*operations.DataplexProjectsLocationsDataScansListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataScans", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataScans", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) DataplexProjectsLocationsDataScansList(ctx context.Context, r
 // DataplexProjectsLocationsDataTaxonomiesAttributesCreate - Create a DataAttribute resource.
 func (s *projects) DataplexProjectsLocationsDataTaxonomiesAttributesCreate(ctx context.Context, request operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest, security operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateSecurity) (*operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/attributes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/attributes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1DataAttributeInput", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) DataplexProjectsLocationsDataTaxonomiesAttributesCreate(ctx c
 // DataplexProjectsLocationsDataTaxonomiesAttributesList - Lists Data Attribute resources in a DataTaxonomy.
 func (s *projects) DataplexProjectsLocationsDataTaxonomiesAttributesList(ctx context.Context, request operations.DataplexProjectsLocationsDataTaxonomiesAttributesListRequest, security operations.DataplexProjectsLocationsDataTaxonomiesAttributesListSecurity) (*operations.DataplexProjectsLocationsDataTaxonomiesAttributesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/attributes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/attributes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) DataplexProjectsLocationsDataTaxonomiesAttributesList(ctx con
 // DataplexProjectsLocationsDataTaxonomiesCreate - Create a DataTaxonomy resource.
 func (s *projects) DataplexProjectsLocationsDataTaxonomiesCreate(ctx context.Context, request operations.DataplexProjectsLocationsDataTaxonomiesCreateRequest, security operations.DataplexProjectsLocationsDataTaxonomiesCreateSecurity) (*operations.DataplexProjectsLocationsDataTaxonomiesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataTaxonomies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataTaxonomies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1DataTaxonomyInput", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) DataplexProjectsLocationsDataTaxonomiesCreate(ctx context.Con
 // DataplexProjectsLocationsDataTaxonomiesList - Lists DataTaxonomy resources in a project and location.
 func (s *projects) DataplexProjectsLocationsDataTaxonomiesList(ctx context.Context, request operations.DataplexProjectsLocationsDataTaxonomiesListRequest, security operations.DataplexProjectsLocationsDataTaxonomiesListSecurity) (*operations.DataplexProjectsLocationsDataTaxonomiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataTaxonomies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataTaxonomies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) DataplexProjectsLocationsDataTaxonomiesList(ctx context.Conte
 // DataplexProjectsLocationsLakesContentCreate - Create a content.
 func (s *projects) DataplexProjectsLocationsLakesContentCreate(ctx context.Context, request operations.DataplexProjectsLocationsLakesContentCreateRequest, security operations.DataplexProjectsLocationsLakesContentCreateSecurity) (*operations.DataplexProjectsLocationsLakesContentCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1ContentInput", "json")
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *projects) DataplexProjectsLocationsLakesContentCreate(ctx context.Conte
 // DataplexProjectsLocationsLakesContentList - List content.
 func (s *projects) DataplexProjectsLocationsLakesContentList(ctx context.Context, request operations.DataplexProjectsLocationsLakesContentListRequest, security operations.DataplexProjectsLocationsLakesContentListSecurity) (*operations.DataplexProjectsLocationsLakesContentListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -549,7 +579,10 @@ func (s *projects) DataplexProjectsLocationsLakesContentList(ctx context.Context
 // DataplexProjectsLocationsLakesContentitemsCreate - Create a content.
 func (s *projects) DataplexProjectsLocationsLakesContentitemsCreate(ctx context.Context, request operations.DataplexProjectsLocationsLakesContentitemsCreateRequest, security operations.DataplexProjectsLocationsLakesContentitemsCreateSecurity) (*operations.DataplexProjectsLocationsLakesContentitemsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contentitems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contentitems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1ContentInput", "json")
 	if err != nil {
@@ -604,7 +637,10 @@ func (s *projects) DataplexProjectsLocationsLakesContentitemsCreate(ctx context.
 // DataplexProjectsLocationsLakesContentitemsList - List content.
 func (s *projects) DataplexProjectsLocationsLakesContentitemsList(ctx context.Context, request operations.DataplexProjectsLocationsLakesContentitemsListRequest, security operations.DataplexProjectsLocationsLakesContentitemsListSecurity) (*operations.DataplexProjectsLocationsLakesContentitemsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contentitems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contentitems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -652,7 +688,10 @@ func (s *projects) DataplexProjectsLocationsLakesContentitemsList(ctx context.Co
 // DataplexProjectsLocationsLakesCreate - Creates a lake resource.
 func (s *projects) DataplexProjectsLocationsLakesCreate(ctx context.Context, request operations.DataplexProjectsLocationsLakesCreateRequest, security operations.DataplexProjectsLocationsLakesCreateSecurity) (*operations.DataplexProjectsLocationsLakesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/lakes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/lakes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1LakeInput", "json")
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *projects) DataplexProjectsLocationsLakesCreate(ctx context.Context, req
 // DataplexProjectsLocationsLakesEnvironmentsCreate - Create an environment resource.
 func (s *projects) DataplexProjectsLocationsLakesEnvironmentsCreate(ctx context.Context, request operations.DataplexProjectsLocationsLakesEnvironmentsCreateRequest, security operations.DataplexProjectsLocationsLakesEnvironmentsCreateSecurity) (*operations.DataplexProjectsLocationsLakesEnvironmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1EnvironmentInput", "json")
 	if err != nil {
@@ -762,7 +804,10 @@ func (s *projects) DataplexProjectsLocationsLakesEnvironmentsCreate(ctx context.
 // DataplexProjectsLocationsLakesEnvironmentsList - Lists environments under the given lake.
 func (s *projects) DataplexProjectsLocationsLakesEnvironmentsList(ctx context.Context, request operations.DataplexProjectsLocationsLakesEnvironmentsListRequest, security operations.DataplexProjectsLocationsLakesEnvironmentsListSecurity) (*operations.DataplexProjectsLocationsLakesEnvironmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -810,7 +855,10 @@ func (s *projects) DataplexProjectsLocationsLakesEnvironmentsList(ctx context.Co
 // DataplexProjectsLocationsLakesEnvironmentsSessionsList - Lists session resources in an environment.
 func (s *projects) DataplexProjectsLocationsLakesEnvironmentsSessionsList(ctx context.Context, request operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListRequest, security operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListSecurity) (*operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sessions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sessions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -858,7 +906,10 @@ func (s *projects) DataplexProjectsLocationsLakesEnvironmentsSessionsList(ctx co
 // DataplexProjectsLocationsLakesList - Lists lake resources in a project and location.
 func (s *projects) DataplexProjectsLocationsLakesList(ctx context.Context, request operations.DataplexProjectsLocationsLakesListRequest, security operations.DataplexProjectsLocationsLakesListSecurity) (*operations.DataplexProjectsLocationsLakesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/lakes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/lakes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -906,7 +957,10 @@ func (s *projects) DataplexProjectsLocationsLakesList(ctx context.Context, reque
 // DataplexProjectsLocationsLakesTasksCreate - Creates a task resource within a lake.
 func (s *projects) DataplexProjectsLocationsLakesTasksCreate(ctx context.Context, request operations.DataplexProjectsLocationsLakesTasksCreateRequest, security operations.DataplexProjectsLocationsLakesTasksCreateSecurity) (*operations.DataplexProjectsLocationsLakesTasksCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tasks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tasks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1TaskInput", "json")
 	if err != nil {
@@ -961,7 +1015,10 @@ func (s *projects) DataplexProjectsLocationsLakesTasksCreate(ctx context.Context
 // DataplexProjectsLocationsLakesTasksJobsList - Lists Jobs under the given task.
 func (s *projects) DataplexProjectsLocationsLakesTasksJobsList(ctx context.Context, request operations.DataplexProjectsLocationsLakesTasksJobsListRequest, security operations.DataplexProjectsLocationsLakesTasksJobsListSecurity) (*operations.DataplexProjectsLocationsLakesTasksJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1009,7 +1066,10 @@ func (s *projects) DataplexProjectsLocationsLakesTasksJobsList(ctx context.Conte
 // DataplexProjectsLocationsLakesTasksList - Lists tasks under the given lake.
 func (s *projects) DataplexProjectsLocationsLakesTasksList(ctx context.Context, request operations.DataplexProjectsLocationsLakesTasksListRequest, security operations.DataplexProjectsLocationsLakesTasksListSecurity) (*operations.DataplexProjectsLocationsLakesTasksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tasks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tasks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1057,7 +1117,10 @@ func (s *projects) DataplexProjectsLocationsLakesTasksList(ctx context.Context, 
 // DataplexProjectsLocationsLakesTasksRun - Run an on demand execution of a Task.
 func (s *projects) DataplexProjectsLocationsLakesTasksRun(ctx context.Context, request operations.DataplexProjectsLocationsLakesTasksRunRequest, security operations.DataplexProjectsLocationsLakesTasksRunSecurity) (*operations.DataplexProjectsLocationsLakesTasksRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:run", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:run", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1112,7 +1175,10 @@ func (s *projects) DataplexProjectsLocationsLakesTasksRun(ctx context.Context, r
 // DataplexProjectsLocationsLakesZonesAssetsActionsList - Lists action resources in an asset.
 func (s *projects) DataplexProjectsLocationsLakesZonesAssetsActionsList(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesAssetsActionsListRequest, security operations.DataplexProjectsLocationsLakesZonesAssetsActionsListSecurity) (*operations.DataplexProjectsLocationsLakesZonesAssetsActionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1160,7 +1226,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesAssetsActionsList(ctx cont
 // DataplexProjectsLocationsLakesZonesAssetsCreate - Creates an asset resource.
 func (s *projects) DataplexProjectsLocationsLakesZonesAssetsCreate(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesAssetsCreateRequest, security operations.DataplexProjectsLocationsLakesZonesAssetsCreateSecurity) (*operations.DataplexProjectsLocationsLakesZonesAssetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1AssetInput", "json")
 	if err != nil {
@@ -1215,7 +1284,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesAssetsCreate(ctx context.C
 // DataplexProjectsLocationsLakesZonesAssetsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) DataplexProjectsLocationsLakesZonesAssetsGetIamPolicy(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyRequest, security operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicySecurity) (*operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1263,7 +1335,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesAssetsGetIamPolicy(ctx con
 // DataplexProjectsLocationsLakesZonesAssetsList - Lists asset resources in a zone.
 func (s *projects) DataplexProjectsLocationsLakesZonesAssetsList(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesAssetsListRequest, security operations.DataplexProjectsLocationsLakesZonesAssetsListSecurity) (*operations.DataplexProjectsLocationsLakesZonesAssetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/assets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1311,7 +1386,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesAssetsList(ctx context.Con
 // DataplexProjectsLocationsLakesZonesAssetsPatch - Updates an asset resource.
 func (s *projects) DataplexProjectsLocationsLakesZonesAssetsPatch(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesAssetsPatchRequest, security operations.DataplexProjectsLocationsLakesZonesAssetsPatchSecurity) (*operations.DataplexProjectsLocationsLakesZonesAssetsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1AssetInput", "json")
 	if err != nil {
@@ -1366,7 +1444,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesAssetsPatch(ctx context.Co
 // DataplexProjectsLocationsLakesZonesAssetsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
 func (s *projects) DataplexProjectsLocationsLakesZonesAssetsSetIamPolicy(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyRequest, security operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicySecurity) (*operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1SetIamPolicyRequest", "json")
 	if err != nil {
@@ -1421,7 +1502,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesAssetsSetIamPolicy(ctx con
 // DataplexProjectsLocationsLakesZonesAssetsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) DataplexProjectsLocationsLakesZonesAssetsTestIamPermissions(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsRequest, security operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsSecurity) (*operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -1476,7 +1560,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesAssetsTestIamPermissions(c
 // DataplexProjectsLocationsLakesZonesCreate - Creates a zone resource within a lake.
 func (s *projects) DataplexProjectsLocationsLakesZonesCreate(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesCreateRequest, security operations.DataplexProjectsLocationsLakesZonesCreateSecurity) (*operations.DataplexProjectsLocationsLakesZonesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/zones", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/zones", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1ZoneInput", "json")
 	if err != nil {
@@ -1531,7 +1618,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesCreate(ctx context.Context
 // DataplexProjectsLocationsLakesZonesEntitiesCreate - Create a metadata entity.
 func (s *projects) DataplexProjectsLocationsLakesZonesEntitiesCreate(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesEntitiesCreateRequest, security operations.DataplexProjectsLocationsLakesZonesEntitiesCreateSecurity) (*operations.DataplexProjectsLocationsLakesZonesEntitiesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/entities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/entities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1EntityInput", "json")
 	if err != nil {
@@ -1586,7 +1676,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesEntitiesCreate(ctx context
 // DataplexProjectsLocationsLakesZonesEntitiesList - List metadata entities in a zone.
 func (s *projects) DataplexProjectsLocationsLakesZonesEntitiesList(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesEntitiesListRequest, security operations.DataplexProjectsLocationsLakesZonesEntitiesListSecurity) (*operations.DataplexProjectsLocationsLakesZonesEntitiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/entities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/entities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1634,7 +1727,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesEntitiesList(ctx context.C
 // DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreate - Create a metadata partition.
 func (s *projects) DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreate(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateRequest, security operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateSecurity) (*operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/partitions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/partitions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1PartitionInput", "json")
 	if err != nil {
@@ -1689,7 +1785,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreate(c
 // DataplexProjectsLocationsLakesZonesEntitiesPartitionsList - List metadata partitions of an entity.
 func (s *projects) DataplexProjectsLocationsLakesZonesEntitiesPartitionsList(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListRequest, security operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListSecurity) (*operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/partitions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/partitions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1737,7 +1836,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesEntitiesPartitionsList(ctx
 // DataplexProjectsLocationsLakesZonesEntitiesUpdate - Update a metadata entity. Only supports full resource update.
 func (s *projects) DataplexProjectsLocationsLakesZonesEntitiesUpdate(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateRequest, security operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateSecurity) (*operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDataplexV1EntityInput", "json")
 	if err != nil {
@@ -1792,7 +1894,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesEntitiesUpdate(ctx context
 // DataplexProjectsLocationsLakesZonesList - Lists zone resources in a lake.
 func (s *projects) DataplexProjectsLocationsLakesZonesList(ctx context.Context, request operations.DataplexProjectsLocationsLakesZonesListRequest, security operations.DataplexProjectsLocationsLakesZonesListSecurity) (*operations.DataplexProjectsLocationsLakesZonesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/zones", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/zones", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1840,7 +1945,10 @@ func (s *projects) DataplexProjectsLocationsLakesZonesList(ctx context.Context, 
 // DataplexProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) DataplexProjectsLocationsList(ctx context.Context, request operations.DataplexProjectsLocationsListRequest, security operations.DataplexProjectsLocationsListSecurity) (*operations.DataplexProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1888,7 +1996,10 @@ func (s *projects) DataplexProjectsLocationsList(ctx context.Context, request op
 // DataplexProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
 func (s *projects) DataplexProjectsLocationsOperationsCancel(ctx context.Context, request operations.DataplexProjectsLocationsOperationsCancelRequest, security operations.DataplexProjectsLocationsOperationsCancelSecurity) (*operations.DataplexProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1943,7 +2054,10 @@ func (s *projects) DataplexProjectsLocationsOperationsCancel(ctx context.Context
 // DataplexProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED.
 func (s *projects) DataplexProjectsLocationsOperationsDelete(ctx context.Context, request operations.DataplexProjectsLocationsOperationsDeleteRequest, security operations.DataplexProjectsLocationsOperationsDeleteSecurity) (*operations.DataplexProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1991,7 +2105,10 @@ func (s *projects) DataplexProjectsLocationsOperationsDelete(ctx context.Context
 // DataplexProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) DataplexProjectsLocationsOperationsGet(ctx context.Context, request operations.DataplexProjectsLocationsOperationsGetRequest, security operations.DataplexProjectsLocationsOperationsGetSecurity) (*operations.DataplexProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2039,7 +2156,10 @@ func (s *projects) DataplexProjectsLocationsOperationsGet(ctx context.Context, r
 // DataplexProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 func (s *projects) DataplexProjectsLocationsOperationsList(ctx context.Context, request operations.DataplexProjectsLocationsOperationsListRequest, security operations.DataplexProjectsLocationsOperationsListSecurity) (*operations.DataplexProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

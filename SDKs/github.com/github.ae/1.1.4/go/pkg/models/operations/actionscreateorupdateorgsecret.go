@@ -17,21 +17,25 @@ const (
 	ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnumSelected ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum = "selected"
 )
 
+func (e ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum) ToPointer() *ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum {
+	return &e
+}
+
 func (e *ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "private":
 		fallthrough
 	case "selected":
-		*e = ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum(s)
+		*e = ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum: %v", v)
 	}
 }
 

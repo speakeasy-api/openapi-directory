@@ -18,12 +18,16 @@ const (
 	WorldExportJobStatusEnumCanceled  WorldExportJobStatusEnum = "Canceled"
 )
 
+func (e WorldExportJobStatusEnum) ToPointer() *WorldExportJobStatusEnum {
+	return &e
+}
+
 func (e *WorldExportJobStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "Running":
@@ -35,9 +39,9 @@ func (e *WorldExportJobStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Canceling":
 		fallthrough
 	case "Canceled":
-		*e = WorldExportJobStatusEnum(s)
+		*e = WorldExportJobStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorldExportJobStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WorldExportJobStatusEnum: %v", v)
 	}
 }

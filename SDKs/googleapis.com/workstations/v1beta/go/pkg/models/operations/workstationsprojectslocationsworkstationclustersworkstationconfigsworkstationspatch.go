@@ -18,7 +18,7 @@ type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstati
 	WorkstationInput *shared.WorkstationInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
-	// If set, and the config is not found, a new config will be created. In this situation, update_mask is ignored.
+	// If set and the workstation configuration is not found, a new workstation configuration is created. In this situation, update_mask is ignored.
 	AllowMissing *bool `queryParam:"style=form,explode=true,name=allowMissing"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
@@ -36,7 +36,7 @@ type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstati
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
-	// Required. Mask specifying which fields in the config should be updated.
+	// Required. Mask specifying which fields in the workstation configuration should be updated.
 	UpdateMask *string `queryParam:"style=form,explode=true,name=updateMask"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`

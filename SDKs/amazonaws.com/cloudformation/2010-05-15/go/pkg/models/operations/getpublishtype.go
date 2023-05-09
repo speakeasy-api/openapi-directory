@@ -15,17 +15,21 @@ const (
 	GETPublishTypeActionEnumPublishType GETPublishTypeActionEnum = "PublishType"
 )
 
+func (e GETPublishTypeActionEnum) ToPointer() *GETPublishTypeActionEnum {
+	return &e
+}
+
 func (e *GETPublishTypeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PublishType":
-		*e = GETPublishTypeActionEnum(s)
+		*e = GETPublishTypeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPublishTypeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPublishTypeActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETPublishTypeTypeEnumHook     GETPublishTypeTypeEnum = "HOOK"
 )
 
+func (e GETPublishTypeTypeEnum) ToPointer() *GETPublishTypeTypeEnum {
+	return &e
+}
+
 func (e *GETPublishTypeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = GETPublishTypeTypeEnum(s)
+		*e = GETPublishTypeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPublishTypeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPublishTypeTypeEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETPublishTypeVersionEnumTwoThousandAndTen0515 GETPublishTypeVersionEnum = "2010-05-15"
 )
 
+func (e GETPublishTypeVersionEnum) ToPointer() *GETPublishTypeVersionEnum {
+	return &e
+}
+
 func (e *GETPublishTypeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETPublishTypeVersionEnum(s)
+		*e = GETPublishTypeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPublishTypeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPublishTypeVersionEnum: %v", v)
 	}
 }
 

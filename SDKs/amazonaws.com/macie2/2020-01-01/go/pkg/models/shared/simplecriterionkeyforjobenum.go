@@ -17,12 +17,16 @@ const (
 	SimpleCriterionKeyForJobEnumS3BucketSharedAccess        SimpleCriterionKeyForJobEnum = "S3_BUCKET_SHARED_ACCESS"
 )
 
+func (e SimpleCriterionKeyForJobEnum) ToPointer() *SimpleCriterionKeyForJobEnum {
+	return &e
+}
+
 func (e *SimpleCriterionKeyForJobEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_ID":
 		fallthrough
 	case "S3_BUCKET_NAME":
@@ -30,9 +34,9 @@ func (e *SimpleCriterionKeyForJobEnum) UnmarshalJSON(data []byte) error {
 	case "S3_BUCKET_EFFECTIVE_PERMISSION":
 		fallthrough
 	case "S3_BUCKET_SHARED_ACCESS":
-		*e = SimpleCriterionKeyForJobEnum(s)
+		*e = SimpleCriterionKeyForJobEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SimpleCriterionKeyForJobEnum: %s", s)
+		return fmt.Errorf("invalid value for SimpleCriterionKeyForJobEnum: %v", v)
 	}
 }

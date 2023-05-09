@@ -16,21 +16,25 @@ const (
 	PresentationParamsColorSpaceEnumGamma   PresentationParamsColorSpaceEnum = "GAMMA"
 )
 
+func (e PresentationParamsColorSpaceEnum) ToPointer() *PresentationParamsColorSpaceEnum {
+	return &e
+}
+
 func (e *PresentationParamsColorSpaceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "LINEAR":
 		fallthrough
 	case "GAMMA":
-		*e = PresentationParamsColorSpaceEnum(s)
+		*e = PresentationParamsColorSpaceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PresentationParamsColorSpaceEnum: %s", s)
+		return fmt.Errorf("invalid value for PresentationParamsColorSpaceEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	AcceptTermsOfServiceResponseTypeEnumAdyenIssuing              AcceptTermsOfServiceResponseTypeEnum = "adyenIssuing"
 )
 
+func (e AcceptTermsOfServiceResponseTypeEnum) ToPointer() *AcceptTermsOfServiceResponseTypeEnum {
+	return &e
+}
+
 func (e *AcceptTermsOfServiceResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "adyenAccount":
 		fallthrough
 	case "adyenCapital":
@@ -39,10 +43,10 @@ func (e *AcceptTermsOfServiceResponseTypeEnum) UnmarshalJSON(data []byte) error 
 	case "adyenFranchisee":
 		fallthrough
 	case "adyenIssuing":
-		*e = AcceptTermsOfServiceResponseTypeEnum(s)
+		*e = AcceptTermsOfServiceResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AcceptTermsOfServiceResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AcceptTermsOfServiceResponseTypeEnum: %v", v)
 	}
 }
 

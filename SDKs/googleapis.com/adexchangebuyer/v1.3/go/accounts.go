@@ -35,7 +35,10 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AdexchangebuyerAccountsGet - Gets one account by ID.
 func (s *accounts) AdexchangebuyerAccountsGet(ctx context.Context, request operations.AdexchangebuyerAccountsGetRequest, security operations.AdexchangebuyerAccountsGetSecurity) (*operations.AdexchangebuyerAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +134,10 @@ func (s *accounts) AdexchangebuyerAccountsList(ctx context.Context, request oper
 // AdexchangebuyerAccountsPatch - Updates an existing account. This method supports patch semantics.
 func (s *accounts) AdexchangebuyerAccountsPatch(ctx context.Context, request operations.AdexchangebuyerAccountsPatchRequest, security operations.AdexchangebuyerAccountsPatchSecurity) (*operations.AdexchangebuyerAccountsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Account", "json")
 	if err != nil {
@@ -186,7 +192,10 @@ func (s *accounts) AdexchangebuyerAccountsPatch(ctx context.Context, request ope
 // AdexchangebuyerAccountsUpdate - Updates an existing account.
 func (s *accounts) AdexchangebuyerAccountsUpdate(ctx context.Context, request operations.AdexchangebuyerAccountsUpdateRequest, security operations.AdexchangebuyerAccountsUpdateSecurity) (*operations.AdexchangebuyerAccountsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Account", "json")
 	if err != nil {

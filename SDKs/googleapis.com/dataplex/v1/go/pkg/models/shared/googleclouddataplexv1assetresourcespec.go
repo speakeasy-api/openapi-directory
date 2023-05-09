@@ -16,21 +16,25 @@ const (
 	GoogleCloudDataplexV1AssetResourceSpecReadAccessModeEnumManaged               GoogleCloudDataplexV1AssetResourceSpecReadAccessModeEnum = "MANAGED"
 )
 
+func (e GoogleCloudDataplexV1AssetResourceSpecReadAccessModeEnum) ToPointer() *GoogleCloudDataplexV1AssetResourceSpecReadAccessModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1AssetResourceSpecReadAccessModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_MODE_UNSPECIFIED":
 		fallthrough
 	case "DIRECT":
 		fallthrough
 	case "MANAGED":
-		*e = GoogleCloudDataplexV1AssetResourceSpecReadAccessModeEnum(s)
+		*e = GoogleCloudDataplexV1AssetResourceSpecReadAccessModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1AssetResourceSpecReadAccessModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1AssetResourceSpecReadAccessModeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudDataplexV1AssetResourceSpecTypeEnumBigqueryDataset GoogleCloudDataplexV1AssetResourceSpecTypeEnum = "BIGQUERY_DATASET"
 )
 
+func (e GoogleCloudDataplexV1AssetResourceSpecTypeEnum) ToPointer() *GoogleCloudDataplexV1AssetResourceSpecTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1AssetResourceSpecTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "STORAGE_BUCKET":
 		fallthrough
 	case "BIGQUERY_DATASET":
-		*e = GoogleCloudDataplexV1AssetResourceSpecTypeEnum(s)
+		*e = GoogleCloudDataplexV1AssetResourceSpecTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1AssetResourceSpecTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1AssetResourceSpecTypeEnum: %v", v)
 	}
 }
 

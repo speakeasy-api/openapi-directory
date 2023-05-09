@@ -36,7 +36,10 @@ func newLanguageModels(defaultClient, securityClient HTTPClient, serverURL, lang
 // Deletes the specified model.
 func (s *languageModels) DeleteModel(ctx context.Context, request operations.DeleteModelRequest, security operations.DeleteModelSecurity) (*operations.DeleteModelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/models/{modelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/language/models/{modelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *languageModels) DeleteModel(ctx context.Context, request operations.Del
 // Returns the metrics for each epoch in a model.
 func (s *languageModels) GetTrainedModelLearningCurve(ctx context.Context, request operations.GetTrainedModelLearningCurveRequest, security operations.GetTrainedModelLearningCurveSecurity) (*operations.GetTrainedModelLearningCurveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/models/{modelId}/lc", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/language/models/{modelId}/lc", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *languageModels) GetTrainedModelLearningCurve(ctx context.Context, reque
 // Returns the metrics for a model
 func (s *languageModels) GetTrainedModelMetrics(ctx context.Context, request operations.GetTrainedModelMetricsRequest, security operations.GetTrainedModelMetricsSecurity) (*operations.GetTrainedModelMetricsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/models/{modelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/language/models/{modelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -175,7 +184,10 @@ func (s *languageModels) GetTrainedModelMetrics(ctx context.Context, request ope
 // Returns all models for the specified dataset.
 func (s *languageModels) GetTrainedModels(ctx context.Context, request operations.GetTrainedModelsRequest, security operations.GetTrainedModelsSecurity) (*operations.GetTrainedModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

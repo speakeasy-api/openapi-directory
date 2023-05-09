@@ -6,7 +6,7 @@ package shared
 type GoogleCloudDiscoveryengineV1alphaDocumentInfo struct {
 	// Required. The Document resource ID.
 	ID *string `json:"id,omitempty"`
-	// Required. The Document resource full name, of the form: projects/{project\_id}/locations/{location}/collections/{collection\_id}/dataStores/{data\_store\_id}/branches/{branch\_id}/documents/{document\_id}
+	// Required. The Document resource full name, of the form: `projects/{project_id}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}/branches/{branch_id}/documents/{document_id}`
 	Name *string `json:"name,omitempty"`
 	// The promotion IDs associated with this Document. Currently, this field is restricted to at most one ID.
 	PromotionIds []string `json:"promotionIds,omitempty"`

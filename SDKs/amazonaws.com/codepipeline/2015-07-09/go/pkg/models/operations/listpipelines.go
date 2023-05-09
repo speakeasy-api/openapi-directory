@@ -16,17 +16,21 @@ const (
 	ListPipelinesXAmzTargetEnumCodePipeline20150709ListPipelines ListPipelinesXAmzTargetEnum = "CodePipeline_20150709.ListPipelines"
 )
 
+func (e ListPipelinesXAmzTargetEnum) ToPointer() *ListPipelinesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListPipelinesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.ListPipelines":
-		*e = ListPipelinesXAmzTargetEnum(s)
+		*e = ListPipelinesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPipelinesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPipelinesXAmzTargetEnum: %v", v)
 	}
 }
 

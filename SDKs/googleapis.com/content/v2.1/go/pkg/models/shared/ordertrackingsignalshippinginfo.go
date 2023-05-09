@@ -16,21 +16,25 @@ const (
 	OrderTrackingSignalShippingInfoShippingStatusEnumDelivered                OrderTrackingSignalShippingInfoShippingStatusEnum = "DELIVERED"
 )
 
+func (e OrderTrackingSignalShippingInfoShippingStatusEnum) ToPointer() *OrderTrackingSignalShippingInfoShippingStatusEnum {
+	return &e
+}
+
 func (e *OrderTrackingSignalShippingInfoShippingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHIPPING_STATE_UNSPECIFIED":
 		fallthrough
 	case "SHIPPED":
 		fallthrough
 	case "DELIVERED":
-		*e = OrderTrackingSignalShippingInfoShippingStatusEnum(s)
+		*e = OrderTrackingSignalShippingInfoShippingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderTrackingSignalShippingInfoShippingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderTrackingSignalShippingInfoShippingStatusEnum: %v", v)
 	}
 }
 

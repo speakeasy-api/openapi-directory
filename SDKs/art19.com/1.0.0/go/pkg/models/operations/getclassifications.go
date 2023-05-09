@@ -21,21 +21,25 @@ const (
 	GetClassificationsSortEnumValue     GetClassificationsSortEnum = "value"
 )
 
+func (e GetClassificationsSortEnum) ToPointer() *GetClassificationsSortEnum {
+	return &e
+}
+
 func (e *GetClassificationsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created_at":
 		fallthrough
 	case "updated_at":
 		fallthrough
 	case "value":
-		*e = GetClassificationsSortEnum(s)
+		*e = GetClassificationsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetClassificationsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetClassificationsSortEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	GetClassificationsTypeEnumMediaRating       GetClassificationsTypeEnum = "MediaRating"
 )
 
+func (e GetClassificationsTypeEnum) ToPointer() *GetClassificationsTypeEnum {
+	return &e
+}
+
 func (e *GetClassificationsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AlternateFeedType":
 		fallthrough
 	case "Genre":
@@ -66,10 +74,10 @@ func (e *GetClassificationsTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Language":
 		fallthrough
 	case "MediaRating":
-		*e = GetClassificationsTypeEnum(s)
+		*e = GetClassificationsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetClassificationsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetClassificationsTypeEnum: %v", v)
 	}
 }
 

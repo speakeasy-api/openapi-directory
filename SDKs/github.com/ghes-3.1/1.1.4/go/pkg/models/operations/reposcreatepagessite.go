@@ -17,19 +17,23 @@ const (
 	ReposCreatePagesSiteRequestBody1SourcePathEnumRootDocs ReposCreatePagesSiteRequestBody1SourcePathEnum = "/docs"
 )
 
+func (e ReposCreatePagesSiteRequestBody1SourcePathEnum) ToPointer() *ReposCreatePagesSiteRequestBody1SourcePathEnum {
+	return &e
+}
+
 func (e *ReposCreatePagesSiteRequestBody1SourcePathEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "/":
 		fallthrough
 	case "/docs":
-		*e = ReposCreatePagesSiteRequestBody1SourcePathEnum(s)
+		*e = ReposCreatePagesSiteRequestBody1SourcePathEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBody1SourcePathEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBody1SourcePathEnum: %v", v)
 	}
 }
 

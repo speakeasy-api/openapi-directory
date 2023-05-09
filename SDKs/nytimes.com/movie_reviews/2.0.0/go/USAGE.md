@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.GetCriticsResourceTypeJSONRequest{
-        ResourceType: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetCriticsResourceTypeJSON(ctx, req)
+    res, err := s.GetCriticsResourceTypeJSON(ctx, operations.GetCriticsResourceTypeJSONRequest{
+        ResourceType: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

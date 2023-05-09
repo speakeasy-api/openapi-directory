@@ -214,7 +214,10 @@ func (s *customFields) CreateCustomField(ctx context.Context, request operations
 // Returns the full record of the newly created enum option.
 func (s *customFields) CreateEnumOptionForCustomField(ctx context.Context, request operations.CreateEnumOptionForCustomFieldRequest) (*operations.CreateEnumOptionForCustomFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{custom_field_gid}/enum_options", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom_fields/{custom_field_gid}/enum_options", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -290,7 +293,10 @@ func (s *customFields) CreateEnumOptionForCustomField(ctx context.Context, reque
 // Returns an empty data record.
 func (s *customFields) DeleteCustomField(ctx context.Context, request operations.DeleteCustomFieldRequest) (*operations.DeleteCustomFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{custom_field_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom_fields/{custom_field_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -364,7 +370,10 @@ func (s *customFields) DeleteCustomField(ctx context.Context, request operations
 // type-specific custom field definitions.
 func (s *customFields) GetCustomField(ctx context.Context, request operations.GetCustomFieldRequest) (*operations.GetCustomFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{custom_field_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom_fields/{custom_field_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -431,7 +440,10 @@ func (s *customFields) GetCustomField(ctx context.Context, request operations.Ge
 // Returns a list of the compact representation of all of the custom fields in a workspace.
 func (s *customFields) GetCustomFieldsForWorkspace(ctx context.Context, request operations.GetCustomFieldsForWorkspaceRequest) (*operations.GetCustomFieldsForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/custom_fields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/custom_fields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -499,7 +511,10 @@ func (s *customFields) GetCustomFieldsForWorkspace(ctx context.Context, request 
 // Locked custom fields can only be reordered by the user who locked the field.
 func (s *customFields) InsertEnumOptionForCustomField(ctx context.Context, request operations.InsertEnumOptionForCustomFieldRequest) (*operations.InsertEnumOptionForCustomFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{custom_field_gid}/enum_options/insert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom_fields/{custom_field_gid}/enum_options/insert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -578,7 +593,10 @@ func (s *customFields) InsertEnumOptionForCustomField(ctx context.Context, reque
 // Returns the complete updated custom field record.
 func (s *customFields) UpdateCustomField(ctx context.Context, request operations.UpdateCustomFieldRequest) (*operations.UpdateCustomFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom_fields/{custom_field_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom_fields/{custom_field_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -654,7 +672,10 @@ func (s *customFields) UpdateCustomField(ctx context.Context, request operations
 // Returns the full record of the updated enum option.
 func (s *customFields) UpdateEnumOption(ctx context.Context, request operations.UpdateEnumOptionRequest) (*operations.UpdateEnumOptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/enum_options/{enum_option_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/enum_options/{enum_option_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

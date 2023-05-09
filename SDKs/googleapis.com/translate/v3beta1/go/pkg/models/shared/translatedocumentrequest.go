@@ -10,6 +10,8 @@ type TranslateDocumentRequest struct {
 	DocumentInputConfig *DocumentInputConfig `json:"documentInputConfig,omitempty"`
 	// A document translation request output config.
 	DocumentOutputConfig *DocumentOutputConfig `json:"documentOutputConfig,omitempty"`
+	// Optional. If true, enable auto rotation correction in DVS.
+	EnableRotationCorrection *bool `json:"enableRotationCorrection,omitempty"`
 	// Optional. If true, use the text removal server to remove the shadow text on background image for native pdf translation. Shadow removal feature can only be enabled when is_translate_native_pdf_only: false && pdf_native_only: false
 	EnableShadowRemovalNativePdf *bool `json:"enableShadowRemovalNativePdf,omitempty"`
 	// Configures which glossary should be used for a specific target language, and defines options for applying that glossary.

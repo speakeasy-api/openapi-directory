@@ -166,7 +166,10 @@ func (s *ntp1) BurnToken(ctx context.Context, request shared.BurnTokenRequest) (
 // Returns both NEBL and NTP1 token UTXOs held at the given address.
 func (s *ntp1) GetAddressInfo(ctx context.Context, request operations.GetAddressInfoRequest) (*operations.GetAddressInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ntp1/addressinfo/{address}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ntp1/addressinfo/{address}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +224,10 @@ func (s *ntp1) GetAddressInfo(ctx context.Context, request operations.GetAddress
 // Returns the the the addresses holding a token and how many tokens are held
 func (s *ntp1) GetTokenHolders(ctx context.Context, request operations.GetTokenHoldersRequest) (*operations.GetTokenHoldersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ntp1/stakeholders/{tokenid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ntp1/stakeholders/{tokenid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -276,7 +282,10 @@ func (s *ntp1) GetTokenHolders(ctx context.Context, request operations.GetTokenH
 // Translates a token symbol to a tokenId if a token exists with that symbol on the network
 func (s *ntp1) GetTokenID(ctx context.Context, request operations.GetTokenIDRequest) (*operations.GetTokenIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ntp1/tokenid/{tokensymbol}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ntp1/tokenid/{tokensymbol}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -321,7 +330,10 @@ func (s *ntp1) GetTokenID(ctx context.Context, request operations.GetTokenIDRequ
 // Returns the metadata associated with a token.
 func (s *ntp1) GetTokenMetadata(ctx context.Context, request operations.GetTokenMetadataRequest) (*operations.GetTokenMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ntp1/tokenmetadata/{tokenid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ntp1/tokenmetadata/{tokenid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -380,7 +392,10 @@ func (s *ntp1) GetTokenMetadata(ctx context.Context, request operations.GetToken
 // Returns the metadata associated with a token for that specific utxo instead of the issuance transaction.
 func (s *ntp1) GetTokenMetadataOfUtxo(ctx context.Context, request operations.GetTokenMetadataOfUtxoRequest) (*operations.GetTokenMetadataOfUtxoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ntp1/tokenmetadata/{tokenid}/{utxo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ntp1/tokenmetadata/{tokenid}/{utxo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -439,7 +454,10 @@ func (s *ntp1) GetTokenMetadataOfUtxo(ctx context.Context, request operations.Ge
 // Returns detailed information regarding an NTP1 transaction.
 func (s *ntp1) GetTransactionInfo(ctx context.Context, request operations.GetTransactionInfoRequest) (*operations.GetTransactionInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ntp1/transactioninfo/{txid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ntp1/transactioninfo/{txid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

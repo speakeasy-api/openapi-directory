@@ -93,7 +93,10 @@ func (s *giftCard) CreateGiftCard(ctx context.Context, request operations.Create
 // Returns associated data for a specified giftcardId.
 func (s *giftCard) GetGiftCardbyID(ctx context.Context, request operations.GetGiftCardbyIDRequest) (*operations.GetGiftCardbyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/giftcards/{giftCardID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

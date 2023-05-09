@@ -82,7 +82,10 @@ func (s *sentences) GetSentences(ctx context.Context, request operations.GetSent
 // GetSentencesFromBook - Random sentences from a specific book
 func (s *sentences) GetSentencesFromBook(ctx context.Context, request operations.GetSentencesFromBookRequest) (*operations.GetSentencesFromBookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/{id}/sentences", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/{id}/sentences", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +133,10 @@ func (s *sentences) GetSentencesFromBook(ctx context.Context, request operations
 // GetSpecificSentence - A specific sentence
 func (s *sentences) GetSpecificSentence(ctx context.Context, request operations.GetSpecificSentenceRequest) (*operations.GetSpecificSentenceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sentences/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sentences/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	MetricStatisticEnumAverage MetricStatisticEnum = "Average"
 )
 
+func (e MetricStatisticEnum) ToPointer() *MetricStatisticEnum {
+	return &e
+}
+
 func (e *MetricStatisticEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Maximum":
 		fallthrough
 	case "Average":
-		*e = MetricStatisticEnum(s)
+		*e = MetricStatisticEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricStatisticEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricStatisticEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETDeleteExpressionActionEnumDeleteExpression GETDeleteExpressionActionEnum = "DeleteExpression"
 )
 
+func (e GETDeleteExpressionActionEnum) ToPointer() *GETDeleteExpressionActionEnum {
+	return &e
+}
+
 func (e *GETDeleteExpressionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteExpression":
-		*e = GETDeleteExpressionActionEnum(s)
+		*e = GETDeleteExpressionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteExpressionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteExpressionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteExpressionVersionEnumTwoThousandAndThirteen0101 GETDeleteExpressionVersionEnum = "2013-01-01"
 )
 
+func (e GETDeleteExpressionVersionEnum) ToPointer() *GETDeleteExpressionVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteExpressionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = GETDeleteExpressionVersionEnum(s)
+		*e = GETDeleteExpressionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteExpressionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteExpressionVersionEnum: %v", v)
 	}
 }
 

@@ -30,12 +30,16 @@ const (
 	PrintServerFailureInfoErrorCodeEnumDataLoss           PrintServerFailureInfoErrorCodeEnum = "DATA_LOSS"
 )
 
+func (e PrintServerFailureInfoErrorCodeEnum) ToPointer() *PrintServerFailureInfoErrorCodeEnum {
+	return &e
+}
+
 func (e *PrintServerFailureInfoErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "CANCELLED":
@@ -69,10 +73,10 @@ func (e *PrintServerFailureInfoErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "UNAVAILABLE":
 		fallthrough
 	case "DATA_LOSS":
-		*e = PrintServerFailureInfoErrorCodeEnum(s)
+		*e = PrintServerFailureInfoErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrintServerFailureInfoErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for PrintServerFailureInfoErrorCodeEnum: %v", v)
 	}
 }
 

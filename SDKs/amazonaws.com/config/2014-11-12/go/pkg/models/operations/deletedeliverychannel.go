@@ -16,17 +16,21 @@ const (
 	DeleteDeliveryChannelXAmzTargetEnumStarlingDoveServiceDeleteDeliveryChannel DeleteDeliveryChannelXAmzTargetEnum = "StarlingDoveService.DeleteDeliveryChannel"
 )
 
+func (e DeleteDeliveryChannelXAmzTargetEnum) ToPointer() *DeleteDeliveryChannelXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDeliveryChannelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DeleteDeliveryChannel":
-		*e = DeleteDeliveryChannelXAmzTargetEnum(s)
+		*e = DeleteDeliveryChannelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDeliveryChannelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDeliveryChannelXAmzTargetEnum: %v", v)
 	}
 }
 

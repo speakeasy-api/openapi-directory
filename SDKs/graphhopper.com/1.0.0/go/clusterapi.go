@@ -132,7 +132,10 @@ func (s *clusterAPI) AsyncClusteringProblem(ctx context.Context, request shared.
 // You can fetch it with the job_id, you have been sent.
 func (s *clusterAPI) GetClusterSolution(ctx context.Context, request operations.GetClusterSolutionRequest) (*operations.GetClusterSolutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cluster/solution/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cluster/solution/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

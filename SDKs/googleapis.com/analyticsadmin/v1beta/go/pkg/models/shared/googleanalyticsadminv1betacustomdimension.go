@@ -14,23 +14,30 @@ const (
 	GoogleAnalyticsAdminV1betaCustomDimensionScopeEnumDimensionScopeUnspecified GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum = "DIMENSION_SCOPE_UNSPECIFIED"
 	GoogleAnalyticsAdminV1betaCustomDimensionScopeEnumEvent                     GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum = "EVENT"
 	GoogleAnalyticsAdminV1betaCustomDimensionScopeEnumUser                      GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum = "USER"
+	GoogleAnalyticsAdminV1betaCustomDimensionScopeEnumItem                      GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum = "ITEM"
 )
 
+func (e GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum) ToPointer() *GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "EVENT":
 		fallthrough
 	case "USER":
-		*e = GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum(s)
+		fallthrough
+	case "ITEM":
+		*e = GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum: %v", v)
 	}
 }
 
@@ -44,7 +51,7 @@ type GoogleAnalyticsAdminV1betaCustomDimension struct {
 	DisplayName *string `json:"displayName,omitempty"`
 	// Output only. Resource name for this CustomDimension resource. Format: properties/{property}/customDimensions/{customDimension}
 	Name *string `json:"name,omitempty"`
-	// Required. Immutable. Tagging parameter name for this custom dimension. If this is a user-scoped dimension, then this is the user property name. If this is an event-scoped dimension, then this is the event parameter name. May only contain alphanumeric and underscore characters, starting with a letter. Max length of 24 characters for user-scoped dimensions, 40 characters for event-scoped dimensions.
+	// Required. Immutable. Tagging parameter name for this custom dimension. If this is a user-scoped dimension, then this is the user property name. If this is an event-scoped dimension, then this is the event parameter name. If this is an item-scoped dimension, then this is the parameter name found in the eCommerce items array. May only contain alphanumeric and underscore characters, starting with a letter. Max length of 24 characters for user-scoped dimensions, 40 characters for event-scoped dimensions.
 	ParameterName *string `json:"parameterName,omitempty"`
 	// Required. Immutable. The scope of this dimension.
 	Scope *GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum `json:"scope,omitempty"`
@@ -58,7 +65,7 @@ type GoogleAnalyticsAdminV1betaCustomDimensionInput struct {
 	DisallowAdsPersonalization *bool `json:"disallowAdsPersonalization,omitempty"`
 	// Required. Display name for this custom dimension as shown in the Analytics UI. Max length of 82 characters, alphanumeric plus space and underscore starting with a letter. Legacy system-generated display names may contain square brackets, but updates to this field will never permit square brackets.
 	DisplayName *string `json:"displayName,omitempty"`
-	// Required. Immutable. Tagging parameter name for this custom dimension. If this is a user-scoped dimension, then this is the user property name. If this is an event-scoped dimension, then this is the event parameter name. May only contain alphanumeric and underscore characters, starting with a letter. Max length of 24 characters for user-scoped dimensions, 40 characters for event-scoped dimensions.
+	// Required. Immutable. Tagging parameter name for this custom dimension. If this is a user-scoped dimension, then this is the user property name. If this is an event-scoped dimension, then this is the event parameter name. If this is an item-scoped dimension, then this is the parameter name found in the eCommerce items array. May only contain alphanumeric and underscore characters, starting with a letter. Max length of 24 characters for user-scoped dimensions, 40 characters for event-scoped dimensions.
 	ParameterName *string `json:"parameterName,omitempty"`
 	// Required. Immutable. The scope of this dimension.
 	Scope *GoogleAnalyticsAdminV1betaCustomDimensionScopeEnum `json:"scope,omitempty"`

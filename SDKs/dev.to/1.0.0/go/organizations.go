@@ -37,7 +37,10 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // It supports pagination, each page will contain `30` users by default.
 func (s *organizations) GetOrgArticles(ctx context.Context, request operations.GetOrgArticlesRequest) (*operations.GetOrgArticlesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/articles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/articles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *organizations) GetOrgArticles(ctx context.Context, request operations.G
 // It supports pagination, each page will contain `30` users by default.
 func (s *organizations) GetOrgUsers(ctx context.Context, request operations.GetOrgUsersRequest) (*operations.GetOrgUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -139,7 +145,10 @@ func (s *organizations) GetOrgUsers(ctx context.Context, request operations.GetO
 // This endpoint allows the client to retrieve a single organization by their username
 func (s *organizations) GetOrganization(ctx context.Context, request operations.GetOrganizationRequest) (*operations.GetOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

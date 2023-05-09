@@ -2,18 +2,6 @@
 
 package shared
 
-// DNSAuthorizationInput - A DnsAuthorization resource describes a way to perform domain authorization for certificate issuance.
-type DNSAuthorizationInput struct {
-	// One or more paragraphs of text description of a DnsAuthorization.
-	Description *string `json:"description,omitempty"`
-	// Required. Immutable. A domain that is being authorized. A DnsAuthorization resource covers a single domain and its wildcard, e.g. authorization for `example.com` can be used to issue certificates for `example.com` and `*.example.com`.
-	Domain *string `json:"domain,omitempty"`
-	// Set of labels associated with a DnsAuthorization.
-	Labels map[string]string `json:"labels,omitempty"`
-	// A user-defined name of the dns authorization. DnsAuthorization names must be unique globally and match pattern `projects/*/locations/*/dnsAuthorizations/*`.
-	Name *string `json:"name,omitempty"`
-}
-
 // DNSAuthorization - A DnsAuthorization resource describes a way to perform domain authorization for certificate issuance.
 type DNSAuthorization struct {
 	// Output only. The creation timestamp of a DnsAuthorization.
@@ -30,4 +18,16 @@ type DNSAuthorization struct {
 	Name *string `json:"name,omitempty"`
 	// Output only. The last update timestamp of a DnsAuthorization.
 	UpdateTime *string `json:"updateTime,omitempty"`
+}
+
+// DNSAuthorizationInput - A DnsAuthorization resource describes a way to perform domain authorization for certificate issuance.
+type DNSAuthorizationInput struct {
+	// One or more paragraphs of text description of a DnsAuthorization.
+	Description *string `json:"description,omitempty"`
+	// Required. Immutable. A domain that is being authorized. A DnsAuthorization resource covers a single domain and its wildcard, e.g. authorization for `example.com` can be used to issue certificates for `example.com` and `*.example.com`.
+	Domain *string `json:"domain,omitempty"`
+	// Set of labels associated with a DnsAuthorization.
+	Labels map[string]string `json:"labels,omitempty"`
+	// A user-defined name of the dns authorization. DnsAuthorization names must be unique globally and match pattern `projects/*/locations/*/dnsAuthorizations/*`.
+	Name *string `json:"name,omitempty"`
 }

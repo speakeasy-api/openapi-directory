@@ -36,7 +36,10 @@ func newCourseMappings(defaultClient, securityClient HTTPClient, serverURL, lang
 // Removes the course mapping between the offering and the externalCourseId.
 func (s *courseMappings) DeleteCourseMappingsOfferingIDExternalCourseID(ctx context.Context, request operations.DeleteCourseMappingsOfferingIDExternalCourseIDRequest) (*operations.DeleteCourseMappingsOfferingIDExternalCourseIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/course-mappings/{offeringId}/{externalCourseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/course-mappings/{offeringId}/{externalCourseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -152,7 +155,10 @@ func (s *courseMappings) GetCourseMappings(ctx context.Context) (*operations.Get
 // Responds with course mapping details by externalCourseId.
 func (s *courseMappings) GetCourseMappingsExternalcourseExternalCourseID(ctx context.Context, request operations.GetCourseMappingsExternalcourseExternalCourseIDRequest) (*operations.GetCourseMappingsExternalcourseExternalCourseIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/course-mappings/externalcourse/{externalCourseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/course-mappings/externalcourse/{externalCourseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -211,7 +217,10 @@ func (s *courseMappings) GetCourseMappingsExternalcourseExternalCourseID(ctx con
 // Responds with course mapping details by offeringId.
 func (s *courseMappings) GetCourseMappingsOfferingID(ctx context.Context, request operations.GetCourseMappingsOfferingIDRequest) (*operations.GetCourseMappingsOfferingIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/course-mappings/{offeringId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/course-mappings/{offeringId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -270,7 +279,10 @@ func (s *courseMappings) GetCourseMappingsOfferingID(ctx context.Context, reques
 // Creates a mapping between the offering and the externalCourseId.
 func (s *courseMappings) PutCourseMappingsOfferingIDExternalCourseID(ctx context.Context, request operations.PutCourseMappingsOfferingIDExternalCourseIDRequest) (*operations.PutCourseMappingsOfferingIDExternalCourseIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/course-mappings/{offeringId}/{externalCourseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/course-mappings/{offeringId}/{externalCourseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

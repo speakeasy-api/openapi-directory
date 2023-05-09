@@ -34,7 +34,10 @@ func newAccountActiveAdSummaries(defaultClient, securityClient HTTPClient, serve
 // DfareportingAccountActiveAdSummariesGet - Gets the account's active ad summary by account ID.
 func (s *accountActiveAdSummaries) DfareportingAccountActiveAdSummariesGet(ctx context.Context, request operations.DfareportingAccountActiveAdSummariesGetRequest, security operations.DfareportingAccountActiveAdSummariesGetSecurity) (*operations.DfareportingAccountActiveAdSummariesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountActiveAdSummaries/{summaryAccountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountActiveAdSummaries/{summaryAccountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

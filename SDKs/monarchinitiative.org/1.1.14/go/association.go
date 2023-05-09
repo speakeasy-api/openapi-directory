@@ -35,7 +35,10 @@ func newAssociation(defaultClient, securityClient HTTPClient, serverURL, languag
 // GetAssociationBySubjectAndAssocType - Returns list of matching associations of a given type
 func (s *association) GetAssociationBySubjectAndAssocType(ctx context.Context, request operations.GetAssociationBySubjectAndAssocTypeRequest) (*operations.GetAssociationBySubjectAndAssocTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/type/{association_type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/association/type/{association_type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *association) GetAssociationBySubjectAndAssocType(ctx context.Context, r
 // GetAssociationBySubjectAndObjectCategorySearch - Returns list of matching associations between a given subject and object category
 func (s *association) GetAssociationBySubjectAndObjectCategorySearch(ctx context.Context, request operations.GetAssociationBySubjectAndObjectCategorySearchRequest) (*operations.GetAssociationBySubjectAndObjectCategorySearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/find/{subject_category}/{object_category}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/association/find/{subject_category}/{object_category}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *association) GetAssociationBySubjectAndObjectCategorySearch(ctx context
 // GetAssociationBySubjectCategorySearch - Returns list of matching associations for a given subject category
 func (s *association) GetAssociationBySubjectCategorySearch(ctx context.Context, request operations.GetAssociationBySubjectCategorySearchRequest) (*operations.GetAssociationBySubjectCategorySearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/find/{subject_category}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/association/find/{subject_category}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -181,7 +190,10 @@ func (s *association) GetAssociationBySubjectCategorySearch(ctx context.Context,
 // via some relationship. Associations also include evidence, provenance etc.
 func (s *association) GetAssociationObject(ctx context.Context, request operations.GetAssociationObjectRequest) (*operations.GetAssociationObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/association/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -228,7 +240,10 @@ func (s *association) GetAssociationObject(ctx context.Context, request operatio
 // the connection.
 func (s *association) GetAssociationsBetween(ctx context.Context, request operations.GetAssociationsBetweenRequest) (*operations.GetAssociationsBetweenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/between/{subject}/{object}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/association/between/{subject}/{object}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -276,7 +291,10 @@ func (s *association) GetAssociationsBetween(ctx context.Context, request operat
 // GetAssociationsFrom - Returns list of matching associations starting from a given subject (source)
 func (s *association) GetAssociationsFrom(ctx context.Context, request operations.GetAssociationsFromRequest) (*operations.GetAssociationsFromResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/from/{subject}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/association/from/{subject}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -324,7 +342,10 @@ func (s *association) GetAssociationsFrom(ctx context.Context, request operation
 // GetAssociationsTo - Returns list of matching associations pointing to a given object (target)
 func (s *association) GetAssociationsTo(ctx context.Context, request operations.GetAssociationsToRequest) (*operations.GetAssociationsToResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/association/to/{object}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/association/to/{object}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

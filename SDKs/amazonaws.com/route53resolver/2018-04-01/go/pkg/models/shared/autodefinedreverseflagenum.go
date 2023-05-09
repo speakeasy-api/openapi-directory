@@ -15,20 +15,24 @@ const (
 	AutodefinedReverseFlagEnumUseLocalResourceSetting AutodefinedReverseFlagEnum = "USE_LOCAL_RESOURCE_SETTING"
 )
 
+func (e AutodefinedReverseFlagEnum) ToPointer() *AutodefinedReverseFlagEnum {
+	return &e
+}
+
 func (e *AutodefinedReverseFlagEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLE":
 		fallthrough
 	case "DISABLE":
 		fallthrough
 	case "USE_LOCAL_RESOURCE_SETTING":
-		*e = AutodefinedReverseFlagEnum(s)
+		*e = AutodefinedReverseFlagEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutodefinedReverseFlagEnum: %s", s)
+		return fmt.Errorf("invalid value for AutodefinedReverseFlagEnum: %v", v)
 	}
 }

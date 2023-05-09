@@ -16,17 +16,21 @@ const (
 	DeleteKeyspaceXAmzTargetEnumKeyspacesServiceDeleteKeyspace DeleteKeyspaceXAmzTargetEnum = "KeyspacesService.DeleteKeyspace"
 )
 
+func (e DeleteKeyspaceXAmzTargetEnum) ToPointer() *DeleteKeyspaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteKeyspaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KeyspacesService.DeleteKeyspace":
-		*e = DeleteKeyspaceXAmzTargetEnum(s)
+		*e = DeleteKeyspaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteKeyspaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteKeyspaceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	FargateProfileStatusEnumDeleteFailed FargateProfileStatusEnum = "DELETE_FAILED"
 )
 
+func (e FargateProfileStatusEnum) ToPointer() *FargateProfileStatusEnum {
+	return &e
+}
+
 func (e *FargateProfileStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -32,9 +36,9 @@ func (e *FargateProfileStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CREATE_FAILED":
 		fallthrough
 	case "DELETE_FAILED":
-		*e = FargateProfileStatusEnum(s)
+		*e = FargateProfileStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FargateProfileStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FargateProfileStatusEnum: %v", v)
 	}
 }

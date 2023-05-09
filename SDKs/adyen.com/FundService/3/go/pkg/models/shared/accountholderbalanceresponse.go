@@ -5,7 +5,7 @@ package shared
 // AccountHolderBalanceResponse - OK - the request has succeeded.
 type AccountHolderBalanceResponse struct {
 	// A list of each account and their balances.
-	BalancePerAccount []AccountDetailBalance `json:"balancePerAccount,omitempty"`
+	BalancePerAccount []AccountDetailBalanceWrapper `json:"balancePerAccount,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
 	PspReference *string `json:"pspReference,omitempty"`
 	// The result code.

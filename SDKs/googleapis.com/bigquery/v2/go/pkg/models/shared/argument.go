@@ -16,21 +16,25 @@ const (
 	ArgumentArgumentKindEnumAnyType                 ArgumentArgumentKindEnum = "ANY_TYPE"
 )
 
+func (e ArgumentArgumentKindEnum) ToPointer() *ArgumentArgumentKindEnum {
+	return &e
+}
+
 func (e *ArgumentArgumentKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARGUMENT_KIND_UNSPECIFIED":
 		fallthrough
 	case "FIXED_TYPE":
 		fallthrough
 	case "ANY_TYPE":
-		*e = ArgumentArgumentKindEnum(s)
+		*e = ArgumentArgumentKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArgumentArgumentKindEnum: %s", s)
+		return fmt.Errorf("invalid value for ArgumentArgumentKindEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	ArgumentModeEnumInout           ArgumentModeEnum = "INOUT"
 )
 
+func (e ArgumentModeEnum) ToPointer() *ArgumentModeEnum {
+	return &e
+}
+
 func (e *ArgumentModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODE_UNSPECIFIED":
 		fallthrough
 	case "IN":
@@ -57,10 +65,10 @@ func (e *ArgumentModeEnum) UnmarshalJSON(data []byte) error {
 	case "OUT":
 		fallthrough
 	case "INOUT":
-		*e = ArgumentModeEnum(s)
+		*e = ArgumentModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArgumentModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ArgumentModeEnum: %v", v)
 	}
 }
 

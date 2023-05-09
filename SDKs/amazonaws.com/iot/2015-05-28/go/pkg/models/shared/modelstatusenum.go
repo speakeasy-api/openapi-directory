@@ -15,20 +15,24 @@ const (
 	ModelStatusEnumExpired      ModelStatusEnum = "EXPIRED"
 )
 
+func (e ModelStatusEnum) ToPointer() *ModelStatusEnum {
+	return &e
+}
+
 func (e *ModelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_BUILD":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "EXPIRED":
-		*e = ModelStatusEnum(s)
+		*e = ModelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelStatusEnum: %v", v)
 	}
 }

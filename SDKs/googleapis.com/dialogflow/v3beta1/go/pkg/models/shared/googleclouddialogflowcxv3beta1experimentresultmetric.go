@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountTypeEnumAverageTurnCount     GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountTypeEnum = "AVERAGE_TURN_COUNT"
 )
 
+func (e GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountTypeEnum) ToPointer() *GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COUNT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TOTAL_NO_MATCH_COUNT":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountTypeEnum) Unma
 	case "TOTAL_TURN_COUNT":
 		fallthrough
 	case "AVERAGE_TURN_COUNT":
-		*e = GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountTypeEnum(s)
+		*e = GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ExperimentResultMetricCountTypeEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	GoogleCloudDialogflowCxV3beta1ExperimentResultMetricTypeEnumSessionEndRate                 GoogleCloudDialogflowCxV3beta1ExperimentResultMetricTypeEnum = "SESSION_END_RATE"
 )
 
+func (e GoogleCloudDialogflowCxV3beta1ExperimentResultMetricTypeEnum) ToPointer() *GoogleCloudDialogflowCxV3beta1ExperimentResultMetricTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3beta1ExperimentResultMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_UNSPECIFIED":
 		fallthrough
 	case "CONTAINED_SESSION_NO_CALLBACK_RATE":
@@ -66,10 +74,10 @@ func (e *GoogleCloudDialogflowCxV3beta1ExperimentResultMetricTypeEnum) Unmarshal
 	case "ABANDONED_SESSION_RATE":
 		fallthrough
 	case "SESSION_END_RATE":
-		*e = GoogleCloudDialogflowCxV3beta1ExperimentResultMetricTypeEnum(s)
+		*e = GoogleCloudDialogflowCxV3beta1ExperimentResultMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ExperimentResultMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ExperimentResultMetricTypeEnum: %v", v)
 	}
 }
 

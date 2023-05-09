@@ -24,12 +24,16 @@ const (
 	ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListFilterEnumGraphics                  ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListFilterEnum = "graphics"
 )
 
+func (e ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListFilterEnum) ToPointer() *ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListFilterEnum {
+	return &e
+}
+
 func (e *ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "perfMetricTypeUnspecified":
 		fallthrough
 	case "memory":
@@ -39,10 +43,10 @@ func (e *ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListFilterEn
 	case "network":
 		fallthrough
 	case "graphics":
-		*e = ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListFilterEnum(s)
+		*e = ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListFilterEnum: %v", v)
 	}
 }
 

@@ -2,49 +2,47 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.VpcaccessProjectsLocationsConnectorsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.VpcaccessProjectsLocationsConnectorsCreate(ctx, operations.VpcaccessProjectsLocationsConnectorsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ConnectorInput: &shared.ConnectorInput{
-            IPCidrRange: "provident",
-            MachineType: "distinctio",
-            MaxInstances: 844266,
-            MaxThroughput: 602763,
-            MinInstances: 857946,
-            MinThroughput: 544883,
-            Name: "illum",
-            Network: "vel",
+            IPCidrRange: sdk.String("provident"),
+            MachineType: sdk.String("distinctio"),
+            MaxInstances: sdk.Int(844266),
+            MaxThroughput: sdk.Int(602763),
+            MinInstances: sdk.Int(857946),
+            MinThroughput: sdk.Int(544883),
+            Name: sdk.String("Ben Mueller"),
+            Network: sdk.String("iure"),
             Subnet: &shared.Subnet{
-                Name: "error",
-                ProjectID: "deserunt",
+                Name: sdk.String("Raquel Bednar"),
+                ProjectID: sdk.String("suscipit"),
             },
         },
-        AccessToken: "suscipit",
-        Alt: "media",
-        Callback: "magnam",
-        ConnectorID: "debitis",
-        Fields: "ipsa",
-        Key: "delectus",
-        OauthToken: "tempora",
-        Parent: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "molestiae",
-        UploadType: "minus",
-        UploadProtocol: "placeat",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.VpcaccessProjectsLocationsConnectorsCreate(ctx, req, operations.VpcaccessProjectsLocationsConnectorsCreateSecurity{
+        AccessToken: sdk.String("molestiae"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("placeat"),
+        ConnectorID: sdk.String("voluptatum"),
+        Fields: sdk.String("iusto"),
+        Key: sdk.String("excepturi"),
+        OauthToken: sdk.String("nisi"),
+        Parent: "recusandae",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("temporibus"),
+        UploadType: sdk.String("ab"),
+        UploadProtocol: sdk.String("quis"),
+    }, operations.VpcaccessProjectsLocationsConnectorsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

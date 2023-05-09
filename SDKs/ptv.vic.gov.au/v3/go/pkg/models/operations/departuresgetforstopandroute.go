@@ -24,12 +24,16 @@ const (
 	DeparturesGetForStopAndRouteExpandEnumNone              DeparturesGetForStopAndRouteExpandEnum = "None"
 )
 
+func (e DeparturesGetForStopAndRouteExpandEnum) ToPointer() *DeparturesGetForStopAndRouteExpandEnum {
+	return &e
+}
+
 func (e *DeparturesGetForStopAndRouteExpandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All":
 		fallthrough
 	case "Stop":
@@ -47,43 +51,47 @@ func (e *DeparturesGetForStopAndRouteExpandEnum) UnmarshalJSON(data []byte) erro
 	case "VehiclePosition":
 		fallthrough
 	case "None":
-		*e = DeparturesGetForStopAndRouteExpandEnum(s)
+		*e = DeparturesGetForStopAndRouteExpandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeparturesGetForStopAndRouteExpandEnum: %s", s)
+		return fmt.Errorf("invalid value for DeparturesGetForStopAndRouteExpandEnum: %v", v)
 	}
 }
 
 // DeparturesGetForStopAndRouteRouteTypeEnum - Number identifying transport mode; values returned via RouteTypes API
-type DeparturesGetForStopAndRouteRouteTypeEnum string
+type DeparturesGetForStopAndRouteRouteTypeEnum int
 
 const (
-	DeparturesGetForStopAndRouteRouteTypeEnumZero  DeparturesGetForStopAndRouteRouteTypeEnum = "0"
-	DeparturesGetForStopAndRouteRouteTypeEnumOne   DeparturesGetForStopAndRouteRouteTypeEnum = "1"
-	DeparturesGetForStopAndRouteRouteTypeEnumTwo   DeparturesGetForStopAndRouteRouteTypeEnum = "2"
-	DeparturesGetForStopAndRouteRouteTypeEnumThree DeparturesGetForStopAndRouteRouteTypeEnum = "3"
-	DeparturesGetForStopAndRouteRouteTypeEnumFour  DeparturesGetForStopAndRouteRouteTypeEnum = "4"
+	DeparturesGetForStopAndRouteRouteTypeEnumZero  DeparturesGetForStopAndRouteRouteTypeEnum = 0
+	DeparturesGetForStopAndRouteRouteTypeEnumOne   DeparturesGetForStopAndRouteRouteTypeEnum = 1
+	DeparturesGetForStopAndRouteRouteTypeEnumTwo   DeparturesGetForStopAndRouteRouteTypeEnum = 2
+	DeparturesGetForStopAndRouteRouteTypeEnumThree DeparturesGetForStopAndRouteRouteTypeEnum = 3
+	DeparturesGetForStopAndRouteRouteTypeEnumFour  DeparturesGetForStopAndRouteRouteTypeEnum = 4
 )
 
+func (e DeparturesGetForStopAndRouteRouteTypeEnum) ToPointer() *DeparturesGetForStopAndRouteRouteTypeEnum {
+	return &e
+}
+
 func (e *DeparturesGetForStopAndRouteRouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
-		*e = DeparturesGetForStopAndRouteRouteTypeEnum(s)
+	case 4:
+		*e = DeparturesGetForStopAndRouteRouteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeparturesGetForStopAndRouteRouteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeparturesGetForStopAndRouteRouteTypeEnum: %v", v)
 	}
 }
 

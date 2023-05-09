@@ -16,21 +16,25 @@ const (
 	RunTaskRequestResponseViewEnumFull            RunTaskRequestResponseViewEnum = "FULL"
 )
 
+func (e RunTaskRequestResponseViewEnum) ToPointer() *RunTaskRequestResponseViewEnum {
+	return &e
+}
+
 func (e *RunTaskRequestResponseViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = RunTaskRequestResponseViewEnum(s)
+		*e = RunTaskRequestResponseViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunTaskRequestResponseViewEnum: %s", s)
+		return fmt.Errorf("invalid value for RunTaskRequestResponseViewEnum: %v", v)
 	}
 }
 

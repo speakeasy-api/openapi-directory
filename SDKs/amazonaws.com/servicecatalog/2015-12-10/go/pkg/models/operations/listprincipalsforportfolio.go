@@ -16,17 +16,21 @@ const (
 	ListPrincipalsForPortfolioXAmzTargetEnumAws242ServiceCatalogServiceListPrincipalsForPortfolio ListPrincipalsForPortfolioXAmzTargetEnum = "AWS242ServiceCatalogService.ListPrincipalsForPortfolio"
 )
 
+func (e ListPrincipalsForPortfolioXAmzTargetEnum) ToPointer() *ListPrincipalsForPortfolioXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListPrincipalsForPortfolioXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.ListPrincipalsForPortfolio":
-		*e = ListPrincipalsForPortfolioXAmzTargetEnum(s)
+		*e = ListPrincipalsForPortfolioXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPrincipalsForPortfolioXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPrincipalsForPortfolioXAmzTargetEnum: %v", v)
 	}
 }
 

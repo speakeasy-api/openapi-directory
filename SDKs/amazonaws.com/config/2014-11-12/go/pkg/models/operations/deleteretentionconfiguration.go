@@ -16,17 +16,21 @@ const (
 	DeleteRetentionConfigurationXAmzTargetEnumStarlingDoveServiceDeleteRetentionConfiguration DeleteRetentionConfigurationXAmzTargetEnum = "StarlingDoveService.DeleteRetentionConfiguration"
 )
 
+func (e DeleteRetentionConfigurationXAmzTargetEnum) ToPointer() *DeleteRetentionConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteRetentionConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DeleteRetentionConfiguration":
-		*e = DeleteRetentionConfigurationXAmzTargetEnum(s)
+		*e = DeleteRetentionConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRetentionConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRetentionConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

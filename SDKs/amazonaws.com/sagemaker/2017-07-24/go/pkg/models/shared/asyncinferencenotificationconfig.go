@@ -4,6 +4,7 @@ package shared
 
 // AsyncInferenceNotificationConfig - Specifies the configuration for notifications of inference results for asynchronous inference.
 type AsyncInferenceNotificationConfig struct {
-	ErrorTopic   *string `json:"ErrorTopic,omitempty"`
-	SuccessTopic *string `json:"SuccessTopic,omitempty"`
+	ErrorTopic                 *string                           `json:"ErrorTopic,omitempty"`
+	IncludeInferenceResponseIn []AsyncNotificationTopicTypesEnum `json:"IncludeInferenceResponseIn,omitempty"`
+	SuccessTopic               *string                           `json:"SuccessTopic,omitempty"`
 }

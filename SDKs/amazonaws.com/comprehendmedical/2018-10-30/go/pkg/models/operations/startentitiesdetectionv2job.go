@@ -16,17 +16,21 @@ const (
 	StartEntitiesDetectionV2JobXAmzTargetEnumComprehendMedical20181030StartEntitiesDetectionV2Job StartEntitiesDetectionV2JobXAmzTargetEnum = "ComprehendMedical_20181030.StartEntitiesDetectionV2Job"
 )
 
+func (e StartEntitiesDetectionV2JobXAmzTargetEnum) ToPointer() *StartEntitiesDetectionV2JobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartEntitiesDetectionV2JobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComprehendMedical_20181030.StartEntitiesDetectionV2Job":
-		*e = StartEntitiesDetectionV2JobXAmzTargetEnum(s)
+		*e = StartEntitiesDetectionV2JobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartEntitiesDetectionV2JobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartEntitiesDetectionV2JobXAmzTargetEnum: %v", v)
 	}
 }
 

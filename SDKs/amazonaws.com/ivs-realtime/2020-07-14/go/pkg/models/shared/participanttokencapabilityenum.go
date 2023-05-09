@@ -14,18 +14,22 @@ const (
 	ParticipantTokenCapabilityEnumSubscribe ParticipantTokenCapabilityEnum = "SUBSCRIBE"
 )
 
+func (e ParticipantTokenCapabilityEnum) ToPointer() *ParticipantTokenCapabilityEnum {
+	return &e
+}
+
 func (e *ParticipantTokenCapabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLISH":
 		fallthrough
 	case "SUBSCRIBE":
-		*e = ParticipantTokenCapabilityEnum(s)
+		*e = ParticipantTokenCapabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParticipantTokenCapabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ParticipantTokenCapabilityEnum: %v", v)
 	}
 }

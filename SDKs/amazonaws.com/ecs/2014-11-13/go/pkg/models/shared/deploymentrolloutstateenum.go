@@ -15,20 +15,24 @@ const (
 	DeploymentRolloutStateEnumInProgress DeploymentRolloutStateEnum = "IN_PROGRESS"
 )
 
+func (e DeploymentRolloutStateEnum) ToPointer() *DeploymentRolloutStateEnum {
+	return &e
+}
+
 func (e *DeploymentRolloutStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETED":
 		fallthrough
 	case "FAILED":
 		fallthrough
 	case "IN_PROGRESS":
-		*e = DeploymentRolloutStateEnum(s)
+		*e = DeploymentRolloutStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentRolloutStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentRolloutStateEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	GetComplianceSummaryXAmzTargetEnumResourceGroupsTaggingApi20170126GetComplianceSummary GetComplianceSummaryXAmzTargetEnum = "ResourceGroupsTaggingAPI_20170126.GetComplianceSummary"
 )
 
+func (e GetComplianceSummaryXAmzTargetEnum) ToPointer() *GetComplianceSummaryXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetComplianceSummaryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResourceGroupsTaggingAPI_20170126.GetComplianceSummary":
-		*e = GetComplianceSummaryXAmzTargetEnum(s)
+		*e = GetComplianceSummaryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetComplianceSummaryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetComplianceSummaryXAmzTargetEnum: %v", v)
 	}
 }
 

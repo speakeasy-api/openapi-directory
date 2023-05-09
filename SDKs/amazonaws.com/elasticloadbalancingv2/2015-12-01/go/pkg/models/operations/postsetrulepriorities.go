@@ -15,17 +15,21 @@ const (
 	POSTSetRulePrioritiesActionEnumSetRulePriorities POSTSetRulePrioritiesActionEnum = "SetRulePriorities"
 )
 
+func (e POSTSetRulePrioritiesActionEnum) ToPointer() *POSTSetRulePrioritiesActionEnum {
+	return &e
+}
+
 func (e *POSTSetRulePrioritiesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetRulePriorities":
-		*e = POSTSetRulePrioritiesActionEnum(s)
+		*e = POSTSetRulePrioritiesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetRulePrioritiesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetRulePrioritiesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSetRulePrioritiesVersionEnumTwoThousandAndFifteen1201 POSTSetRulePrioritiesVersionEnum = "2015-12-01"
 )
 
+func (e POSTSetRulePrioritiesVersionEnum) ToPointer() *POSTSetRulePrioritiesVersionEnum {
+	return &e
+}
+
 func (e *POSTSetRulePrioritiesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = POSTSetRulePrioritiesVersionEnum(s)
+		*e = POSTSetRulePrioritiesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetRulePrioritiesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetRulePrioritiesVersionEnum: %v", v)
 	}
 }
 

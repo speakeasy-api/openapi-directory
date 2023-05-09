@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,43 +17,41 @@ func main() {
         }),
     )
 
-    req := operations.CreateCapacityProviderRequest{
+    ctx := context.Background()
+    res, err := s.CreateCapacityProvider(ctx, operations.CreateCapacityProviderRequest{
         CreateCapacityProviderRequest: shared.CreateCapacityProviderRequest{
             AutoScalingGroupProvider: shared.AutoScalingGroupProvider{
                 AutoScalingGroupArn: "corrupti",
                 ManagedScaling: &shared.ManagedScaling{
-                    InstanceWarmupPeriod: 592845,
-                    MaximumScalingStepSize: 715190,
-                    MinimumScalingStepSize: 844266,
-                    Status: "DISABLED",
-                    TargetCapacity: 857946,
+                    InstanceWarmupPeriod: sdk.Int64(592845),
+                    MaximumScalingStepSize: sdk.Int64(715190),
+                    MinimumScalingStepSize: sdk.Int64(844266),
+                    Status: shared.ManagedScalingStatusEnumDisabled.ToPointer(),
+                    TargetCapacity: sdk.Int64(857946),
                 },
-                ManagedTerminationProtection: "DISABLED",
+                ManagedTerminationProtection: shared.ManagedTerminationProtectionEnumDisabled.ToPointer(),
             },
-            Name: "illum",
+            Name: "Ben Mueller",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "error",
-                    Value: "deserunt",
+                    Key: sdk.String("magnam"),
+                    Value: sdk.String("debitis"),
                 },
                 shared.Tag{
-                    Key: "suscipit",
-                    Value: "iure",
+                    Key: sdk.String("ipsa"),
+                    Value: sdk.String("delectus"),
                 },
             },
         },
-        XAmzAlgorithm: "magnam",
-        XAmzContentSha256: "debitis",
-        XAmzCredential: "ipsa",
-        XAmzDate: "delectus",
-        XAmzSecurityToken: "tempora",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "molestiae",
-        XAmzTarget: "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateCapacityProvider(ctx, req)
+        XAmzAlgorithm: sdk.String("tempora"),
+        XAmzContentSha256: sdk.String("suscipit"),
+        XAmzCredential: sdk.String("molestiae"),
+        XAmzDate: sdk.String("minus"),
+        XAmzSecurityToken: sdk.String("placeat"),
+        XAmzSignature: sdk.String("voluptatum"),
+        XAmzSignedHeaders: sdk.String("iusto"),
+        XAmzTarget: operations.CreateCapacityProviderXAmzTargetEnumAmazonEc2ContainerServiceV20141113CreateCapacityProvider,
+    })
     if err != nil {
         log.Fatal(err)
     }

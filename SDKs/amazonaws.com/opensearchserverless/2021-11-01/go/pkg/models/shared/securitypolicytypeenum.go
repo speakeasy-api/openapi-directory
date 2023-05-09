@@ -14,18 +14,22 @@ const (
 	SecurityPolicyTypeEnumNetwork    SecurityPolicyTypeEnum = "network"
 )
 
+func (e SecurityPolicyTypeEnum) ToPointer() *SecurityPolicyTypeEnum {
+	return &e
+}
+
 func (e *SecurityPolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "encryption":
 		fallthrough
 	case "network":
-		*e = SecurityPolicyTypeEnum(s)
+		*e = SecurityPolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SecurityPolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SecurityPolicyTypeEnum: %v", v)
 	}
 }

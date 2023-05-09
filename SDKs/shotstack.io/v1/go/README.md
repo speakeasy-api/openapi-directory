@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/shotstack.io/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRenderRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Edit.GetRender(ctx, req, operations.GetRenderSecurity{
+    res, err := s.Edit.GetRender(ctx, operations.GetRenderRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    }, operations.GetRenderSecurity{
         DeveloperKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -47,16 +44,16 @@ func main() {
 ## Available Resources and Operations
 
 
-### Edit
+### [Edit](docs/edit/README.md)
 
-* `GetRender` - Get Render Status
-* `PostRender` - Render Asset
+* [GetRender](docs/edit/README.md#getrender) - Get Render Status
+* [PostRender](docs/edit/README.md#postrender) - Render Asset
 
-### Serve
+### [Serve](docs/serve/README.md)
 
-* `DeleteAsset` - Delete Asset
-* `GetAsset` - Get Asset
-* `GetAssetByRenderID` - Get Asset by Render ID
+* [DeleteAsset](docs/serve/README.md#deleteasset) - Delete Asset
+* [GetAsset](docs/serve/README.md#getasset) - Get Asset
+* [GetAssetByRenderID](docs/serve/README.md#getassetbyrenderid) - Get Asset by Render ID
 <!-- End SDK Available Operations -->
 
 ### Maturity

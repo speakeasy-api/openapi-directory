@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // CloudtraceProjectsPatchTraces - Sends new traces to Cloud Trace or updates existing traces. If the ID of a trace that you send matches that of an existing trace, any fields in the existing trace and its spans are overwritten by the provided values, and any new fields provided are merged with the existing trace data. If the ID does not match, a new trace is created.
 func (s *projects) CloudtraceProjectsPatchTraces(ctx context.Context, request operations.CloudtraceProjectsPatchTracesRequest, security operations.CloudtraceProjectsPatchTracesSecurity) (*operations.CloudtraceProjectsPatchTracesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/traces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/traces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Traces", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) CloudtraceProjectsPatchTraces(ctx context.Context, request op
 // CloudtraceProjectsTracesGet - Gets a single trace by its ID.
 func (s *projects) CloudtraceProjectsTracesGet(ctx context.Context, request operations.CloudtraceProjectsTracesGetRequest, security operations.CloudtraceProjectsTracesGetSecurity) (*operations.CloudtraceProjectsTracesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/traces/{traceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/traces/{traceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) CloudtraceProjectsTracesGet(ctx context.Context, request oper
 // CloudtraceProjectsTracesList - Returns a list of traces that match the specified filter conditions.
 func (s *projects) CloudtraceProjectsTracesList(ctx context.Context, request operations.CloudtraceProjectsTracesListRequest, security operations.CloudtraceProjectsTracesListSecurity) (*operations.CloudtraceProjectsTracesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/traces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectId}/traces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

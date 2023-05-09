@@ -13,16 +13,20 @@ const (
 	RecentlyActiveEnumPt3H RecentlyActiveEnum = "PT3H"
 )
 
+func (e RecentlyActiveEnum) ToPointer() *RecentlyActiveEnum {
+	return &e
+}
+
 func (e *RecentlyActiveEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PT3H":
-		*e = RecentlyActiveEnum(s)
+		*e = RecentlyActiveEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecentlyActiveEnum: %s", s)
+		return fmt.Errorf("invalid value for RecentlyActiveEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	ReceiptTypeEnumStop      ReceiptTypeEnum = "STOP"
 )
 
+func (e ReceiptTypeEnum) ToPointer() *ReceiptTypeEnum {
+	return &e
+}
+
 func (e *ReceiptTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELIVERED":
 		fallthrough
 	case "ERROR":
@@ -32,9 +36,9 @@ func (e *ReceiptTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SENT":
 		fallthrough
 	case "STOP":
-		*e = ReceiptTypeEnum(s)
+		*e = ReceiptTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReceiptTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReceiptTypeEnum: %v", v)
 	}
 }

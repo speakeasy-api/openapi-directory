@@ -14,18 +14,22 @@ const (
 	EFSAuthorizationConfigIAMEnumDisabled EFSAuthorizationConfigIAMEnum = "DISABLED"
 )
 
+func (e EFSAuthorizationConfigIAMEnum) ToPointer() *EFSAuthorizationConfigIAMEnum {
+	return &e
+}
+
 func (e *EFSAuthorizationConfigIAMEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = EFSAuthorizationConfigIAMEnum(s)
+		*e = EFSAuthorizationConfigIAMEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EFSAuthorizationConfigIAMEnum: %s", s)
+		return fmt.Errorf("invalid value for EFSAuthorizationConfigIAMEnum: %v", v)
 	}
 }

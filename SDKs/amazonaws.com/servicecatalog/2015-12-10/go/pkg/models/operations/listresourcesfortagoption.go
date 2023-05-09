@@ -16,17 +16,21 @@ const (
 	ListResourcesForTagOptionXAmzTargetEnumAws242ServiceCatalogServiceListResourcesForTagOption ListResourcesForTagOptionXAmzTargetEnum = "AWS242ServiceCatalogService.ListResourcesForTagOption"
 )
 
+func (e ListResourcesForTagOptionXAmzTargetEnum) ToPointer() *ListResourcesForTagOptionXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListResourcesForTagOptionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.ListResourcesForTagOption":
-		*e = ListResourcesForTagOptionXAmzTargetEnum(s)
+		*e = ListResourcesForTagOptionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListResourcesForTagOptionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListResourcesForTagOptionXAmzTargetEnum: %v", v)
 	}
 }
 

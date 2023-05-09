@@ -18,19 +18,23 @@ const (
 	AccountAccessAllPsd2EnumAllAccountsWithOwnerName AccountAccessAllPsd2Enum = "allAccountsWithOwnerName"
 )
 
+func (e AccountAccessAllPsd2Enum) ToPointer() *AccountAccessAllPsd2Enum {
+	return &e
+}
+
 func (e *AccountAccessAllPsd2Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "allAccounts":
 		fallthrough
 	case "allAccountsWithOwnerName":
-		*e = AccountAccessAllPsd2Enum(s)
+		*e = AccountAccessAllPsd2Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountAccessAllPsd2Enum: %s", s)
+		return fmt.Errorf("invalid value for AccountAccessAllPsd2Enum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	AccountAccessAvailableAccountsEnumAllAccountsWithOwnerName AccountAccessAvailableAccountsEnum = "allAccountsWithOwnerName"
 )
 
+func (e AccountAccessAvailableAccountsEnum) ToPointer() *AccountAccessAvailableAccountsEnum {
+	return &e
+}
+
 func (e *AccountAccessAvailableAccountsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "allAccounts":
 		fallthrough
 	case "allAccountsWithOwnerName":
-		*e = AccountAccessAvailableAccountsEnum(s)
+		*e = AccountAccessAvailableAccountsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountAccessAvailableAccountsEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountAccessAvailableAccountsEnum: %v", v)
 	}
 }
 
@@ -72,19 +80,23 @@ const (
 	AccountAccessAvailableAccountsWithBalanceEnumAllAccountsWithOwnerName AccountAccessAvailableAccountsWithBalanceEnum = "allAccountsWithOwnerName"
 )
 
+func (e AccountAccessAvailableAccountsWithBalanceEnum) ToPointer() *AccountAccessAvailableAccountsWithBalanceEnum {
+	return &e
+}
+
 func (e *AccountAccessAvailableAccountsWithBalanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "allAccounts":
 		fallthrough
 	case "allAccountsWithOwnerName":
-		*e = AccountAccessAvailableAccountsWithBalanceEnum(s)
+		*e = AccountAccessAvailableAccountsWithBalanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountAccessAvailableAccountsWithBalanceEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountAccessAvailableAccountsWithBalanceEnum: %v", v)
 	}
 }
 

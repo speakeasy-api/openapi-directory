@@ -14,6 +14,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -58,4 +59,17 @@ pkg/models/shared/balance.go
 pkg/models/shared/transactions.go
 pkg/models/shared/tariffh0.go
 pkg/models/shared/componentsh0.go
+docs/sdk/README.md
+docs/dispatchgreenenergydistributionapi/README.md
+docs/greenpowerindexgrunstromindex/README.md
+docs/meteringdecorator/README.md
+docs/ocpp/README.md
+docs/openmeter/README.md
+docs/smarthome/README.md
+docs/stromquittung/README.md
+docs/stromkontoledger/README.md
+docs/tse/README.md
+docs/tariffpriceapi/README.md
+docs/wimwechselprozesseimmesswesenstromstatusapi/README.md
+docs/easee/README.md
 USAGE.md

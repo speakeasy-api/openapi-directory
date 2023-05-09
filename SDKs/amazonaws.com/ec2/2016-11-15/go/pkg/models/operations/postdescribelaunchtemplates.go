@@ -15,17 +15,21 @@ const (
 	POSTDescribeLaunchTemplatesActionEnumDescribeLaunchTemplates POSTDescribeLaunchTemplatesActionEnum = "DescribeLaunchTemplates"
 )
 
+func (e POSTDescribeLaunchTemplatesActionEnum) ToPointer() *POSTDescribeLaunchTemplatesActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeLaunchTemplatesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeLaunchTemplates":
-		*e = POSTDescribeLaunchTemplatesActionEnum(s)
+		*e = POSTDescribeLaunchTemplatesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeLaunchTemplatesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeLaunchTemplatesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeLaunchTemplatesVersionEnumTwoThousandAndSixteen1115 POSTDescribeLaunchTemplatesVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeLaunchTemplatesVersionEnum) ToPointer() *POSTDescribeLaunchTemplatesVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeLaunchTemplatesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeLaunchTemplatesVersionEnum(s)
+		*e = POSTDescribeLaunchTemplatesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeLaunchTemplatesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeLaunchTemplatesVersionEnum: %v", v)
 	}
 }
 

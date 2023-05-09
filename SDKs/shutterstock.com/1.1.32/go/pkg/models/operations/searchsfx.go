@@ -26,12 +26,16 @@ const (
 	SearchSFXSortEnumOldest    SearchSFXSortEnum = "oldest"
 )
 
+func (e SearchSFXSortEnum) ToPointer() *SearchSFXSortEnum {
+	return &e
+}
+
 func (e *SearchSFXSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "popular":
 		fallthrough
 	case "newest":
@@ -41,10 +45,10 @@ func (e *SearchSFXSortEnum) UnmarshalJSON(data []byte) error {
 	case "random":
 		fallthrough
 	case "oldest":
-		*e = SearchSFXSortEnum(s)
+		*e = SearchSFXSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchSFXSortEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchSFXSortEnum: %v", v)
 	}
 }
 
@@ -56,19 +60,23 @@ const (
 	SearchSFXViewEnumFull    SearchSFXViewEnum = "full"
 )
 
+func (e SearchSFXViewEnum) ToPointer() *SearchSFXViewEnum {
+	return &e
+}
+
 func (e *SearchSFXViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimal":
 		fallthrough
 	case "full":
-		*e = SearchSFXViewEnum(s)
+		*e = SearchSFXViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchSFXViewEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchSFXViewEnum: %v", v)
 	}
 }
 

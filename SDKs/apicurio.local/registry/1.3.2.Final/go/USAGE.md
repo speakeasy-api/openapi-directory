@@ -2,27 +2,25 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateArtifactRuleRequest{
+    ctx := context.Background()
+    res, err := s.ArtifactRules.CreateArtifactRule(ctx, operations.CreateArtifactRuleRequest{
         Rule: shared.Rule{
             Config: "corrupti",
-            Type: "VALIDITY",
+            Type: shared.RuleTypeEnumValidity.ToPointer(),
         },
         ArtifactID: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.ArtifactRules.CreateArtifactRule(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -13,16 +13,20 @@ const (
 	NotebookTypeEnumIpynb NotebookTypeEnum = "IPYNB"
 )
 
+func (e NotebookTypeEnum) ToPointer() *NotebookTypeEnum {
+	return &e
+}
+
 func (e *NotebookTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IPYNB":
-		*e = NotebookTypeEnum(s)
+		*e = NotebookTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotebookTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotebookTypeEnum: %v", v)
 	}
 }

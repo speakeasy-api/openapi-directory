@@ -24,12 +24,16 @@ const (
 	GetCandidatesTotalsAggregatesAggregateByEnumOfficeParty         GetCandidatesTotalsAggregatesAggregateByEnum = "office-party"
 )
 
+func (e GetCandidatesTotalsAggregatesAggregateByEnum) ToPointer() *GetCandidatesTotalsAggregatesAggregateByEnum {
+	return &e
+}
+
 func (e *GetCandidatesTotalsAggregatesAggregateByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "office":
 		fallthrough
 	case "office-state":
@@ -37,10 +41,10 @@ func (e *GetCandidatesTotalsAggregatesAggregateByEnum) UnmarshalJSON(data []byte
 	case "office-state-district":
 		fallthrough
 	case "office-party":
-		*e = GetCandidatesTotalsAggregatesAggregateByEnum(s)
+		*e = GetCandidatesTotalsAggregatesAggregateByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCandidatesTotalsAggregatesAggregateByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCandidatesTotalsAggregatesAggregateByEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	GetCandidatesTotalsAggregatesOfficeEnumP       GetCandidatesTotalsAggregatesOfficeEnum = "P"
 )
 
+func (e GetCandidatesTotalsAggregatesOfficeEnum) ToPointer() *GetCandidatesTotalsAggregatesOfficeEnum {
+	return &e
+}
+
 func (e *GetCandidatesTotalsAggregatesOfficeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "H":
@@ -67,10 +75,10 @@ func (e *GetCandidatesTotalsAggregatesOfficeEnum) UnmarshalJSON(data []byte) err
 	case "S":
 		fallthrough
 	case "P":
-		*e = GetCandidatesTotalsAggregatesOfficeEnum(s)
+		*e = GetCandidatesTotalsAggregatesOfficeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCandidatesTotalsAggregatesOfficeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCandidatesTotalsAggregatesOfficeEnum: %v", v)
 	}
 }
 
@@ -84,12 +92,16 @@ const (
 	GetCandidatesTotalsAggregatesPartyEnumOther   GetCandidatesTotalsAggregatesPartyEnum = "OTHER"
 )
 
+func (e GetCandidatesTotalsAggregatesPartyEnum) ToPointer() *GetCandidatesTotalsAggregatesPartyEnum {
+	return &e
+}
+
 func (e *GetCandidatesTotalsAggregatesPartyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "DEM":
@@ -97,10 +109,10 @@ func (e *GetCandidatesTotalsAggregatesPartyEnum) UnmarshalJSON(data []byte) erro
 	case "REP":
 		fallthrough
 	case "OTHER":
-		*e = GetCandidatesTotalsAggregatesPartyEnum(s)
+		*e = GetCandidatesTotalsAggregatesPartyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCandidatesTotalsAggregatesPartyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCandidatesTotalsAggregatesPartyEnum: %v", v)
 	}
 }
 

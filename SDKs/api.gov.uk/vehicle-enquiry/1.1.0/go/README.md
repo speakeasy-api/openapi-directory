@@ -13,27 +13,25 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/api.gov.uk/vehicle-enquir
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetVehicleDetailsByRegistrationNumberRequest{
-        VehicleRequest: shared.VehicleRequest{
-            RegistrationNumber: "corrupti",
-        },
-        XCorrelationID: "provident",
-        XAPIKey: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.Vehicle.GetVehicleDetailsByRegistrationNumber(ctx, req)
+    res, err := s.Vehicle.GetVehicleDetailsByRegistrationNumber(ctx, operations.GetVehicleDetailsByRegistrationNumberRequest{
+        VehicleRequest: shared.VehicleRequest{
+            RegistrationNumber: sdk.String("corrupti"),
+        },
+        XCorrelationID: sdk.String("provident"),
+        XAPIKey: "distinctio",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,9 +47,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Vehicle
+### [Vehicle](docs/vehicle/README.md)
 
-* `GetVehicleDetailsByRegistrationNumber` - Get vehicle details by registration number
+* [GetVehicleDetailsByRegistrationNumber](docs/vehicle/README.md#getvehicledetailsbyregistrationnumber) - Get vehicle details by registration number
 <!-- End SDK Available Operations -->
 
 ### Maturity

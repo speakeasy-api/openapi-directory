@@ -18,12 +18,16 @@ const (
 	PathQueryOptionsFilterMatchEnumWildcardExpression PathQueryOptionsFilterMatchEnum = "WILDCARD_EXPRESSION"
 )
 
+func (e PathQueryOptionsFilterMatchEnum) ToPointer() *PathQueryOptionsFilterMatchEnum {
+	return &e
+}
+
 func (e *PathQueryOptionsFilterMatchEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "EXACT":
@@ -33,10 +37,10 @@ func (e *PathQueryOptionsFilterMatchEnum) UnmarshalJSON(data []byte) error {
 	case "BEGINS_WITH":
 		fallthrough
 	case "WILDCARD_EXPRESSION":
-		*e = PathQueryOptionsFilterMatchEnum(s)
+		*e = PathQueryOptionsFilterMatchEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PathQueryOptionsFilterMatchEnum: %s", s)
+		return fmt.Errorf("invalid value for PathQueryOptionsFilterMatchEnum: %v", v)
 	}
 }
 

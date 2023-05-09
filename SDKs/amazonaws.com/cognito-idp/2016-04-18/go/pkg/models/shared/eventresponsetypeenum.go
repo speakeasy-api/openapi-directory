@@ -15,20 +15,24 @@ const (
 	EventResponseTypeEnumInProgress EventResponseTypeEnum = "InProgress"
 )
 
+func (e EventResponseTypeEnum) ToPointer() *EventResponseTypeEnum {
+	return &e
+}
+
 func (e *EventResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pass":
 		fallthrough
 	case "Fail":
 		fallthrough
 	case "InProgress":
-		*e = EventResponseTypeEnum(s)
+		*e = EventResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventResponseTypeEnum: %v", v)
 	}
 }

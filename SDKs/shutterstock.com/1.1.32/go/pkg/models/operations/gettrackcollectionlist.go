@@ -20,19 +20,23 @@ const (
 	GetTrackCollectionListEmbedEnumShareURL  GetTrackCollectionListEmbedEnum = "share_url"
 )
 
+func (e GetTrackCollectionListEmbedEnum) ToPointer() *GetTrackCollectionListEmbedEnum {
+	return &e
+}
+
 func (e *GetTrackCollectionListEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "share_code":
 		fallthrough
 	case "share_url":
-		*e = GetTrackCollectionListEmbedEnum(s)
+		*e = GetTrackCollectionListEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTrackCollectionListEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTrackCollectionListEmbedEnum: %v", v)
 	}
 }
 

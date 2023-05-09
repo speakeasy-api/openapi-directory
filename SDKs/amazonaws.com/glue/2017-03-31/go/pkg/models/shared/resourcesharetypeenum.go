@@ -10,22 +10,29 @@ import (
 type ResourceShareTypeEnum string
 
 const (
-	ResourceShareTypeEnumForeign ResourceShareTypeEnum = "FOREIGN"
-	ResourceShareTypeEnumAll     ResourceShareTypeEnum = "ALL"
+	ResourceShareTypeEnumForeign   ResourceShareTypeEnum = "FOREIGN"
+	ResourceShareTypeEnumAll       ResourceShareTypeEnum = "ALL"
+	ResourceShareTypeEnumFederated ResourceShareTypeEnum = "FEDERATED"
 )
 
+func (e ResourceShareTypeEnum) ToPointer() *ResourceShareTypeEnum {
+	return &e
+}
+
 func (e *ResourceShareTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FOREIGN":
 		fallthrough
 	case "ALL":
-		*e = ResourceShareTypeEnum(s)
+		fallthrough
+	case "FEDERATED":
+		*e = ResourceShareTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceShareTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceShareTypeEnum: %v", v)
 	}
 }

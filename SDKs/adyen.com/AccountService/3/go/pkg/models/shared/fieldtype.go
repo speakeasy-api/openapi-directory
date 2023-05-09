@@ -170,12 +170,16 @@ const (
 	FieldTypeFieldNameEnumYear                                                   FieldTypeFieldNameEnum = "year"
 )
 
+func (e FieldTypeFieldNameEnum) ToPointer() *FieldTypeFieldNameEnum {
+	return &e
+}
+
 func (e *FieldTypeFieldNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "accountCode":
 		fallthrough
 	case "accountHolderCode":
@@ -489,10 +493,10 @@ func (e *FieldTypeFieldNameEnum) UnmarshalJSON(data []byte) error {
 	case "webAddress":
 		fallthrough
 	case "year":
-		*e = FieldTypeFieldNameEnum(s)
+		*e = FieldTypeFieldNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldTypeFieldNameEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldTypeFieldNameEnum: %v", v)
 	}
 }
 

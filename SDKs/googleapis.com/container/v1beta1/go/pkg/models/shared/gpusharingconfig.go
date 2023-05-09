@@ -15,19 +15,23 @@ const (
 	GPUSharingConfigGPUSharingStrategyEnumTimeSharing                   GPUSharingConfigGPUSharingStrategyEnum = "TIME_SHARING"
 )
 
+func (e GPUSharingConfigGPUSharingStrategyEnum) ToPointer() *GPUSharingConfigGPUSharingStrategyEnum {
+	return &e
+}
+
 func (e *GPUSharingConfigGPUSharingStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GPU_SHARING_STRATEGY_UNSPECIFIED":
 		fallthrough
 	case "TIME_SHARING":
-		*e = GPUSharingConfigGPUSharingStrategyEnum(s)
+		*e = GPUSharingConfigGPUSharingStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GPUSharingConfigGPUSharingStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for GPUSharingConfigGPUSharingStrategyEnum: %v", v)
 	}
 }
 

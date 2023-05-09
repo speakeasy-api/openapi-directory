@@ -18,12 +18,16 @@ const (
 	GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnumError            GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnum = "ERROR"
 )
 
+func (e GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnum) ToPointer() *GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "SKIPPED":
@@ -33,16 +37,16 @@ func (e *GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnum) UnmarshalJSON(d
 	case "IN_PROGRESS":
 		fallthrough
 	case "ERROR":
-		*e = GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnum(s)
+		*e = GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnum: %v", v)
 	}
 }
 
 // GoogleCloudDocumentaiV1beta3HumanReviewStatus - The status of human review on a processed document.
 type GoogleCloudDocumentaiV1beta3HumanReviewStatus struct {
-	// The name of the operation triggered by the processed document. This field is populated only when the [state] is [HUMAN_REVIEW_IN_PROGRESS]. It has the same response type and metadata as the long running operation returned by [ReviewDocument] method.
+	// The name of the operation triggered by the processed document. This field is populated only when the state is `HUMAN_REVIEW_IN_PROGRESS`. It has the same response type and metadata as the long-running operation returned by ReviewDocument.
 	HumanReviewOperation *string `json:"humanReviewOperation,omitempty"`
 	// The state of human review on the processing request.
 	State *GoogleCloudDocumentaiV1beta3HumanReviewStatusStateEnum `json:"state,omitempty"`

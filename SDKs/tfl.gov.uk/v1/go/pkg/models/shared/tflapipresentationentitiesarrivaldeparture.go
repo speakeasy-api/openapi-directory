@@ -18,12 +18,16 @@ const (
 	TflAPIPresentationEntitiesArrivalDepartureDepartureStatusEnumNotStoppingAtStation TflAPIPresentationEntitiesArrivalDepartureDepartureStatusEnum = "NotStoppingAtStation"
 )
 
+func (e TflAPIPresentationEntitiesArrivalDepartureDepartureStatusEnum) ToPointer() *TflAPIPresentationEntitiesArrivalDepartureDepartureStatusEnum {
+	return &e
+}
+
 func (e *TflAPIPresentationEntitiesArrivalDepartureDepartureStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OnTime":
 		fallthrough
 	case "Delayed":
@@ -31,10 +35,10 @@ func (e *TflAPIPresentationEntitiesArrivalDepartureDepartureStatusEnum) Unmarsha
 	case "Cancelled":
 		fallthrough
 	case "NotStoppingAtStation":
-		*e = TflAPIPresentationEntitiesArrivalDepartureDepartureStatusEnum(s)
+		*e = TflAPIPresentationEntitiesArrivalDepartureDepartureStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesArrivalDepartureDepartureStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesArrivalDepartureDepartureStatusEnum: %v", v)
 	}
 }
 

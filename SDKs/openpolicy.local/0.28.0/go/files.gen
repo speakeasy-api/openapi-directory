@@ -8,6 +8,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -38,4 +39,11 @@ pkg/models/shared/fourhundredandfour.go
 pkg/models/shared/twohundredsingleresult.go
 pkg/models/shared/patchesschema.go
 pkg/models/shared/twohundredresult.go
+docs/sdk/README.md
+docs/compileapi/README.md
+docs/configapi/README.md
+docs/dataapi/README.md
+docs/healthapi/README.md
+docs/policyapi/README.md
+docs/queryapi/README.md
 USAGE.md

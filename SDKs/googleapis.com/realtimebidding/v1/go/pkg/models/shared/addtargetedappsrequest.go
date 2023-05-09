@@ -16,21 +16,25 @@ const (
 	AddTargetedAppsRequestTargetingModeEnumExclusive                AddTargetedAppsRequestTargetingModeEnum = "EXCLUSIVE"
 )
 
+func (e AddTargetedAppsRequestTargetingModeEnum) ToPointer() *AddTargetedAppsRequestTargetingModeEnum {
+	return &e
+}
+
 func (e *AddTargetedAppsRequestTargetingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGETING_MODE_UNSPECIFIED":
 		fallthrough
 	case "INCLUSIVE":
 		fallthrough
 	case "EXCLUSIVE":
-		*e = AddTargetedAppsRequestTargetingModeEnum(s)
+		*e = AddTargetedAppsRequestTargetingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddTargetedAppsRequestTargetingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for AddTargetedAppsRequestTargetingModeEnum: %v", v)
 	}
 }
 

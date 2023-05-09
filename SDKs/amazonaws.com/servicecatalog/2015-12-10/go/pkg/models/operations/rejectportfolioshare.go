@@ -16,17 +16,21 @@ const (
 	RejectPortfolioShareXAmzTargetEnumAws242ServiceCatalogServiceRejectPortfolioShare RejectPortfolioShareXAmzTargetEnum = "AWS242ServiceCatalogService.RejectPortfolioShare"
 )
 
+func (e RejectPortfolioShareXAmzTargetEnum) ToPointer() *RejectPortfolioShareXAmzTargetEnum {
+	return &e
+}
+
 func (e *RejectPortfolioShareXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.RejectPortfolioShare":
-		*e = RejectPortfolioShareXAmzTargetEnum(s)
+		*e = RejectPortfolioShareXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RejectPortfolioShareXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RejectPortfolioShareXAmzTargetEnum: %v", v)
 	}
 }
 

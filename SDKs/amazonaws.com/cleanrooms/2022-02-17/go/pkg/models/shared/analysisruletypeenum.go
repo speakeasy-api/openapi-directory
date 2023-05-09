@@ -14,18 +14,22 @@ const (
 	AnalysisRuleTypeEnumList        AnalysisRuleTypeEnum = "LIST"
 )
 
+func (e AnalysisRuleTypeEnum) ToPointer() *AnalysisRuleTypeEnum {
+	return &e
+}
+
 func (e *AnalysisRuleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGGREGATION":
 		fallthrough
 	case "LIST":
-		*e = AnalysisRuleTypeEnum(s)
+		*e = AnalysisRuleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalysisRuleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalysisRuleTypeEnum: %v", v)
 	}
 }

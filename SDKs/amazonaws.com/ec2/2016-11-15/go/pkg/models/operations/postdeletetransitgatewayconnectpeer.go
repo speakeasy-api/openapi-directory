@@ -15,17 +15,21 @@ const (
 	POSTDeleteTransitGatewayConnectPeerActionEnumDeleteTransitGatewayConnectPeer POSTDeleteTransitGatewayConnectPeerActionEnum = "DeleteTransitGatewayConnectPeer"
 )
 
+func (e POSTDeleteTransitGatewayConnectPeerActionEnum) ToPointer() *POSTDeleteTransitGatewayConnectPeerActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteTransitGatewayConnectPeerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteTransitGatewayConnectPeer":
-		*e = POSTDeleteTransitGatewayConnectPeerActionEnum(s)
+		*e = POSTDeleteTransitGatewayConnectPeerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteTransitGatewayConnectPeerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteTransitGatewayConnectPeerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteTransitGatewayConnectPeerVersionEnumTwoThousandAndSixteen1115 POSTDeleteTransitGatewayConnectPeerVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteTransitGatewayConnectPeerVersionEnum) ToPointer() *POSTDeleteTransitGatewayConnectPeerVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteTransitGatewayConnectPeerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteTransitGatewayConnectPeerVersionEnum(s)
+		*e = POSTDeleteTransitGatewayConnectPeerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteTransitGatewayConnectPeerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteTransitGatewayConnectPeerVersionEnum: %v", v)
 	}
 }
 

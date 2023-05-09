@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vonage.com/account/1.11.8
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AccountCtrlGetAccountServicesByAccountIDRequest{
-        AccountID: 5488.14,
-    }
-
     ctx := context.Background()
-    res, err := s.AccountCtrlGetAccountServicesByAccountID(ctx, req, operations.AccountCtrlGetAccountServicesByAccountIDSecurity{
+    res, err := s.AccountCtrlGetAccountServicesByAccountID(ctx, operations.AccountCtrlGetAccountServicesByAccountIDRequest{
+        AccountID: 5488.14,
+    }, operations.AccountCtrlGetAccountServicesByAccountIDSecurity{
         BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
@@ -46,11 +43,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AccountCtrlGetAccountServicesByAccountID` - Get account data by ID
-* `AccountCtrlGetLocationByID` - Get location data by account ID and location ID
-* `AccountCtrlGetLocationsByAccountID` - Get account locations data by account ID
+* [AccountCtrlGetAccountServicesByAccountID](docs/sdk/README.md#accountctrlgetaccountservicesbyaccountid) - Get account data by ID
+* [AccountCtrlGetLocationByID](docs/sdk/README.md#accountctrlgetlocationbyid) - Get location data by account ID and location ID
+* [AccountCtrlGetLocationsByAccountID](docs/sdk/README.md#accountctrlgetlocationsbyaccountid) - Get account locations data by account ID
 <!-- End SDK Available Operations -->
 
 ### Maturity

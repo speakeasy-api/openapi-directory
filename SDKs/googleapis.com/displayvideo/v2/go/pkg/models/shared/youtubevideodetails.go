@@ -16,21 +16,25 @@ const (
 	YoutubeVideoDetailsUnavailableReasonEnumVideoUnavailableReasonDeleted     YoutubeVideoDetailsUnavailableReasonEnum = "VIDEO_UNAVAILABLE_REASON_DELETED"
 )
 
+func (e YoutubeVideoDetailsUnavailableReasonEnum) ToPointer() *YoutubeVideoDetailsUnavailableReasonEnum {
+	return &e
+}
+
 func (e *YoutubeVideoDetailsUnavailableReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIDEO_UNAVAILABLE_REASON_UNSPECIFIED":
 		fallthrough
 	case "VIDEO_UNAVAILABLE_REASON_PRIVATE":
 		fallthrough
 	case "VIDEO_UNAVAILABLE_REASON_DELETED":
-		*e = YoutubeVideoDetailsUnavailableReasonEnum(s)
+		*e = YoutubeVideoDetailsUnavailableReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeVideoDetailsUnavailableReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeVideoDetailsUnavailableReasonEnum: %v", v)
 	}
 }
 

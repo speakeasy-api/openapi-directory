@@ -20,21 +20,25 @@ const (
 	PostSpacesSpaceIDFoldersIDCommonFoldersRequestBodyLevelEnumPublic       PostSpacesSpaceIDFoldersIDCommonFoldersRequestBodyLevelEnum = "public"
 )
 
+func (e PostSpacesSpaceIDFoldersIDCommonFoldersRequestBodyLevelEnum) ToPointer() *PostSpacesSpaceIDFoldersIDCommonFoldersRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDCommonFoldersRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = PostSpacesSpaceIDFoldersIDCommonFoldersRequestBodyLevelEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDCommonFoldersRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDCommonFoldersRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDCommonFoldersRequestBodyLevelEnum: %v", v)
 	}
 }
 

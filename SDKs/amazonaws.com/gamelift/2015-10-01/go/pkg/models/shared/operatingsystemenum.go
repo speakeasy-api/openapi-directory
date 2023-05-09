@@ -13,22 +13,29 @@ const (
 	OperatingSystemEnumWindows2012  OperatingSystemEnum = "WINDOWS_2012"
 	OperatingSystemEnumAmazonLinux  OperatingSystemEnum = "AMAZON_LINUX"
 	OperatingSystemEnumAmazonLinux2 OperatingSystemEnum = "AMAZON_LINUX_2"
+	OperatingSystemEnumWindows2016  OperatingSystemEnum = "WINDOWS_2016"
 )
 
+func (e OperatingSystemEnum) ToPointer() *OperatingSystemEnum {
+	return &e
+}
+
 func (e *OperatingSystemEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WINDOWS_2012":
 		fallthrough
 	case "AMAZON_LINUX":
 		fallthrough
 	case "AMAZON_LINUX_2":
-		*e = OperatingSystemEnum(s)
+		fallthrough
+	case "WINDOWS_2016":
+		*e = OperatingSystemEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperatingSystemEnum: %s", s)
+		return fmt.Errorf("invalid value for OperatingSystemEnum: %v", v)
 	}
 }

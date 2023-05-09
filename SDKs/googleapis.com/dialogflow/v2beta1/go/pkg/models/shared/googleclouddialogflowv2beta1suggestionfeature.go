@@ -18,12 +18,16 @@ const (
 	GoogleCloudDialogflowV2beta1SuggestionFeatureTypeEnumConversationSummarization GoogleCloudDialogflowV2beta1SuggestionFeatureTypeEnum = "CONVERSATION_SUMMARIZATION"
 )
 
+func (e GoogleCloudDialogflowV2beta1SuggestionFeatureTypeEnum) ToPointer() *GoogleCloudDialogflowV2beta1SuggestionFeatureTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1SuggestionFeatureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "ARTICLE_SUGGESTION":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDialogflowV2beta1SuggestionFeatureTypeEnum) UnmarshalJSON(da
 	case "SMART_REPLY":
 		fallthrough
 	case "CONVERSATION_SUMMARIZATION":
-		*e = GoogleCloudDialogflowV2beta1SuggestionFeatureTypeEnum(s)
+		*e = GoogleCloudDialogflowV2beta1SuggestionFeatureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1SuggestionFeatureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1SuggestionFeatureTypeEnum: %v", v)
 	}
 }
 

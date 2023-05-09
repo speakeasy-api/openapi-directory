@@ -16,17 +16,21 @@ const (
 	DescribeGameServerXAmzTargetEnumGameLiftDescribeGameServer DescribeGameServerXAmzTargetEnum = "GameLift.DescribeGameServer"
 )
 
+func (e DescribeGameServerXAmzTargetEnum) ToPointer() *DescribeGameServerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeGameServerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DescribeGameServer":
-		*e = DescribeGameServerXAmzTargetEnum(s)
+		*e = DescribeGameServerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeGameServerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeGameServerXAmzTargetEnum: %v", v)
 	}
 }
 

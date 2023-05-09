@@ -35,7 +35,10 @@ func newAnalyticsRules(defaultClient, securityClient HTTPClient, serverURL, lang
 // CreateRule - Rule creation
 func (s *analyticsRules) CreateRule(ctx context.Context, request operations.CreateRuleRequest) (*operations.CreateRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateRuleRequest", "json")
 	if err != nil {
@@ -106,7 +109,10 @@ func (s *analyticsRules) CreateRule(ctx context.Context, request operations.Crea
 // DeleteRule - Delete Rule
 func (s *analyticsRules) DeleteRule(ctx context.Context, request operations.DeleteRuleRequest) (*operations.DeleteRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -155,7 +161,10 @@ func (s *analyticsRules) DeleteRule(ctx context.Context, request operations.Dele
 // DisableRule - Disable rule
 func (s *analyticsRules) DisableRule(ctx context.Context, request operations.DisableRuleRequest) (*operations.DisableRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -204,7 +213,10 @@ func (s *analyticsRules) DisableRule(ctx context.Context, request operations.Dis
 // EnableRule - Enable rule
 func (s *analyticsRules) EnableRule(ctx context.Context, request operations.EnableRuleRequest) (*operations.EnableRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -253,7 +265,10 @@ func (s *analyticsRules) EnableRule(ctx context.Context, request operations.Enab
 // GetRule - Gets the rule
 func (s *analyticsRules) GetRule(ctx context.Context, request operations.GetRuleRequest) (*operations.GetRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -309,7 +324,10 @@ func (s *analyticsRules) GetRule(ctx context.Context, request operations.GetRule
 // GetRules - Gets the list of rules for a given store
 func (s *analyticsRules) GetRules(ctx context.Context, request operations.GetRulesRequest) (*operations.GetRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -365,7 +383,10 @@ func (s *analyticsRules) GetRules(ctx context.Context, request operations.GetRul
 // GetRulesExecutions - Get the rules execution history
 func (s *analyticsRules) GetRulesExecutions(ctx context.Context, request operations.GetRulesExecutionsRequest) (*operations.GetRulesExecutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -427,7 +448,10 @@ func (s *analyticsRules) GetRulesExecutions(ctx context.Context, request operati
 // MoveDownRule - Move the rule down
 func (s *analyticsRules) MoveDownRule(ctx context.Context, request operations.MoveDownRuleRequest) (*operations.MoveDownRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}/movedown", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}/movedown", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -478,7 +502,10 @@ func (s *analyticsRules) MoveDownRule(ctx context.Context, request operations.Mo
 // MoveUpRule - Move the rule up
 func (s *analyticsRules) MoveUpRule(ctx context.Context, request operations.MoveUpRuleRequest) (*operations.MoveUpRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}/moveup", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}/moveup", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -529,7 +556,10 @@ func (s *analyticsRules) MoveUpRule(ctx context.Context, request operations.Move
 // RunRule - Run rule
 func (s *analyticsRules) RunRule(ctx context.Context, request operations.RunRuleRequest) (*operations.RunRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}/run", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}/run", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -582,7 +612,10 @@ func (s *analyticsRules) RunRule(ctx context.Context, request operations.RunRule
 // RunRules - Run all rules for this store
 func (s *analyticsRules) RunRules(ctx context.Context, request operations.RunRulesRequest) (*operations.RunRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/run", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/run", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -633,7 +666,10 @@ func (s *analyticsRules) RunRules(ctx context.Context, request operations.RunRul
 // UpdateRule - Update Rule
 func (s *analyticsRules) UpdateRule(ctx context.Context, request operations.UpdateRuleRequest) (*operations.UpdateRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/rules/{ruleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateRuleRequest", "json")
 	if err != nil {

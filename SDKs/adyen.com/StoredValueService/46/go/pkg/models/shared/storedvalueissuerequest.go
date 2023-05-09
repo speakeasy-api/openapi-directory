@@ -24,12 +24,16 @@ const (
 	StoredValueIssueRequestShopperInteractionEnumPos       StoredValueIssueRequestShopperInteractionEnum = "POS"
 )
 
+func (e StoredValueIssueRequestShopperInteractionEnum) ToPointer() *StoredValueIssueRequestShopperInteractionEnum {
+	return &e
+}
+
 func (e *StoredValueIssueRequestShopperInteractionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ecommerce":
 		fallthrough
 	case "ContAuth":
@@ -37,10 +41,10 @@ func (e *StoredValueIssueRequestShopperInteractionEnum) UnmarshalJSON(data []byt
 	case "Moto":
 		fallthrough
 	case "POS":
-		*e = StoredValueIssueRequestShopperInteractionEnum(s)
+		*e = StoredValueIssueRequestShopperInteractionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoredValueIssueRequestShopperInteractionEnum: %s", s)
+		return fmt.Errorf("invalid value for StoredValueIssueRequestShopperInteractionEnum: %v", v)
 	}
 }
 

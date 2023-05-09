@@ -17,12 +17,16 @@ const (
 	DimensionOrderByOrderTypeEnumNumeric                     DimensionOrderByOrderTypeEnum = "NUMERIC"
 )
 
+func (e DimensionOrderByOrderTypeEnum) ToPointer() *DimensionOrderByOrderTypeEnum {
+	return &e
+}
+
 func (e *DimensionOrderByOrderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORDER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ALPHANUMERIC":
@@ -30,10 +34,10 @@ func (e *DimensionOrderByOrderTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CASE_INSENSITIVE_ALPHANUMERIC":
 		fallthrough
 	case "NUMERIC":
-		*e = DimensionOrderByOrderTypeEnum(s)
+		*e = DimensionOrderByOrderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DimensionOrderByOrderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DimensionOrderByOrderTypeEnum: %v", v)
 	}
 }
 

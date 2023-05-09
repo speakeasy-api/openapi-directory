@@ -15,19 +15,23 @@ const (
 	PatientProblemIcdVersionEnumTen  PatientProblemIcdVersionEnum = "10"
 )
 
+func (e PatientProblemIcdVersionEnum) ToPointer() *PatientProblemIcdVersionEnum {
+	return &e
+}
+
 func (e *PatientProblemIcdVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "9":
 		fallthrough
 	case "10":
-		*e = PatientProblemIcdVersionEnum(s)
+		*e = PatientProblemIcdVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientProblemIcdVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientProblemIcdVersionEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	PatientProblemStatusEnumResolved PatientProblemStatusEnum = "resolved"
 )
 
+func (e PatientProblemStatusEnum) ToPointer() *PatientProblemStatusEnum {
+	return &e
+}
+
 func (e *PatientProblemStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
 		fallthrough
 	case "resolved":
-		*e = PatientProblemStatusEnum(s)
+		*e = PatientProblemStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientProblemStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientProblemStatusEnum: %v", v)
 	}
 }
 

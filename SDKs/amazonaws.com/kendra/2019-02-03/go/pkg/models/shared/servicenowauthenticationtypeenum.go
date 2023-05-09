@@ -14,18 +14,22 @@ const (
 	ServiceNowAuthenticationTypeEnumOauth2    ServiceNowAuthenticationTypeEnum = "OAUTH2"
 )
 
+func (e ServiceNowAuthenticationTypeEnum) ToPointer() *ServiceNowAuthenticationTypeEnum {
+	return &e
+}
+
 func (e *ServiceNowAuthenticationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP_BASIC":
 		fallthrough
 	case "OAUTH2":
-		*e = ServiceNowAuthenticationTypeEnum(s)
+		*e = ServiceNowAuthenticationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceNowAuthenticationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceNowAuthenticationTypeEnum: %v", v)
 	}
 }

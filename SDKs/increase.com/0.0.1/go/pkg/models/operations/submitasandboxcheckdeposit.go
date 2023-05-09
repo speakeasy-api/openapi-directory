@@ -13,23 +13,27 @@ type SubmitASandboxCheckDepositRequest struct {
 	CheckDepositID string `pathParam:"style=simple,explode=false,name=check_deposit_id"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnum = "429"
+	SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON13TypeEnumRateLimitedError SubmitASandboxCheckDepositDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON13TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON13TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type SubmitASandboxCheckDepositDefaultApplicationJSON13 struct {
 	Type       SubmitASandboxCheckDepositDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnumFourHundredAndThree SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnum = "403"
+	SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnumFourHundredAndThree SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON12TypeEnumPrivateFeatureError SubmitASandboxCheckDepositDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON12TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON12TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type SubmitASandboxCheckDepositDefaultApplicationJSON12 struct {
 	Type   SubmitASandboxCheckDepositDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnumFourHundredAndFour SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnum = "404"
+	SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnumFourHundredAndFour SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON11TypeEnumObjectNotFoundError SubmitASandboxCheckDepositDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON11TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON11TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type SubmitASandboxCheckDepositDefaultApplicationJSON11 struct {
 	Type   SubmitASandboxCheckDepositDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnumFourHundred SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnum = "400"
+	SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnumFourHundred SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON10TypeEnumMalformedRequestError SubmitASandboxCheckDepositDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON10TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON10TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type SubmitASandboxCheckDepositDefaultApplicationJSON10 struct {
 	Type   SubmitASandboxCheckDepositDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnumFourHundred SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnum = "400"
+	SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnumFourHundred SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON9TypeEnumInvalidParametersError SubmitASandboxCheckDepositDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON9TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON9TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type SubmitASandboxCheckDepositDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                    `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                    `json:"errors"`
 	Status SubmitASandboxCheckDepositDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                      `json:"title"`
 	Type   SubmitASandboxCheckDepositDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnumFourHundredAndNine SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnum = "409"
+	SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnumFourHundredAndNine SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON8TypeEnumInvalidOperationError SubmitASandboxCheckDepositDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON8TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON8TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type SubmitASandboxCheckDepositDefaultApplicationJSON8 struct {
 	Type   SubmitASandboxCheckDepositDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnumFourHundredAndOne SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnum = "401"
+	SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnumFourHundredAndOne SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON7TypeEnumInvalidAPIKeyError SubmitASandboxCheckDepositDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON7TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON7TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type SubmitASandboxCheckDepositDefaultApplicationJSON7 struct {
 	Type   SubmitASandboxCheckDepositDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnumFiveHundred SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum = "500"
+	SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnumFiveHundred SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON6TypeEnumInternalServerError SubmitASandboxCheckDepositDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON6TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON6TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type SubmitASandboxCheckDepositDefaultApplicationJSON6 struct {
 	Type   SubmitASandboxCheckDepositDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnumFourHundredAndThree SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnum = "403"
+	SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnumFourHundredAndThree SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON5TypeEnumInsufficientPermissionsError SubmitASandboxCheckDepositDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON5TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON5TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type SubmitASandboxCheckDepositDefaultApplicationJSON5 struct {
 	Type   SubmitASandboxCheckDepositDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnum = "422"
+	SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError SubmitASandboxCheckDepositDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON4TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON4TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type SubmitASandboxCheckDepositDefaultApplicationJSON4 struct {
 	Type   SubmitASandboxCheckDepositDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnumFourHundredAndNine SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnum = "409"
+	SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnumFourHundredAndNine SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON3TypeEnumIdempotencyConflictError SubmitASandboxCheckDepositDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON3TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON3TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type SubmitASandboxCheckDepositDefaultApplicationJSON3 struct {
 	Type   SubmitASandboxCheckDepositDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnumFourHundredAndThree SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnum = "403"
+	SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnumFourHundredAndThree SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON2TypeEnumEnvironmentMismatchError SubmitASandboxCheckDepositDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON2TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON2TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type SubmitASandboxCheckDepositDefaultApplicationJSON2 struct {
 	Type   SubmitASandboxCheckDepositDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnum string
+type SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnum int64
 
 const (
-	SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnumFourHundredAndFour SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnum = "404"
+	SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnumFourHundredAndFour SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	SubmitASandboxCheckDepositDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError SubmitASandboxCheckDepositDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e SubmitASandboxCheckDepositDefaultApplicationJSON1TypeEnum) ToPointer() *SubmitASandboxCheckDepositDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *SubmitASandboxCheckDepositDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = SubmitASandboxCheckDepositDefaultApplicationJSON1TypeEnum(s)
+		*e = SubmitASandboxCheckDepositDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitASandboxCheckDepositDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

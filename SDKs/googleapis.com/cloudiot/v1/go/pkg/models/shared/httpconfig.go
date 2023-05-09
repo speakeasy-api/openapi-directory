@@ -16,21 +16,25 @@ const (
 	HTTPConfigHTTPEnabledStateEnumHTTPDisabled         HTTPConfigHTTPEnabledStateEnum = "HTTP_DISABLED"
 )
 
+func (e HTTPConfigHTTPEnabledStateEnum) ToPointer() *HTTPConfigHTTPEnabledStateEnum {
+	return &e
+}
+
 func (e *HTTPConfigHTTPEnabledStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP_STATE_UNSPECIFIED":
 		fallthrough
 	case "HTTP_ENABLED":
 		fallthrough
 	case "HTTP_DISABLED":
-		*e = HTTPConfigHTTPEnabledStateEnum(s)
+		*e = HTTPConfigHTTPEnabledStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HTTPConfigHTTPEnabledStateEnum: %s", s)
+		return fmt.Errorf("invalid value for HTTPConfigHTTPEnabledStateEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,29 +18,27 @@ func main() {
         }),
     )
 
-    req := operations.GetClipRequest{
+    ctx := context.Background()
+    res, err := s.GetClip(ctx, operations.GetClipRequest{
         RequestBody: operations.GetClipRequestBody{
             ClipFragmentSelector: operations.GetClipRequestBodyClipFragmentSelector{
-                FragmentSelectorType: "SERVER_TIMESTAMP",
+                FragmentSelectorType: shared.ClipFragmentSelectorTypeEnumServerTimestamp.ToPointer(),
                 TimestampRange: &shared.ClipTimestampRange{
-                    EndTimestamp: "2021-07-27T21:52:56.087Z",
-                    StartTimestamp: "2021-03-11T23:22:42.658Z",
+                    EndTimestamp: types.MustTimeFromString("2021-07-27T21:52:56.087Z"),
+                    StartTimestamp: types.MustTimeFromString("2021-03-11T23:22:42.658Z"),
                 },
             },
-            StreamARN: "nulla",
-            StreamName: "corrupti",
+            StreamARN: sdk.String("nulla"),
+            StreamName: sdk.String("corrupti"),
         },
-        XAmzAlgorithm: "illum",
-        XAmzContentSha256: "vel",
-        XAmzCredential: "error",
-        XAmzDate: "deserunt",
-        XAmzSecurityToken: "suscipit",
-        XAmzSignature: "iure",
-        XAmzSignedHeaders: "magnam",
-    }
-
-    ctx := context.Background()
-    res, err := s.GetClip(ctx, req)
+        XAmzAlgorithm: sdk.String("illum"),
+        XAmzContentSha256: sdk.String("vel"),
+        XAmzCredential: sdk.String("error"),
+        XAmzDate: sdk.String("deserunt"),
+        XAmzSecurityToken: sdk.String("suscipit"),
+        XAmzSignature: sdk.String("iure"),
+        XAmzSignedHeaders: sdk.String("magnam"),
+    })
     if err != nil {
         log.Fatal(err)
     }

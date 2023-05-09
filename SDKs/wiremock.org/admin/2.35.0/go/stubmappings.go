@@ -71,7 +71,10 @@ func (s *stubMappings) DeleteAdminMappings(ctx context.Context) (*operations.Del
 // DeleteAdminMappingsStubMappingID - Delete a stub mapping
 func (s *stubMappings) DeleteAdminMappingsStubMappingID(ctx context.Context, request operations.DeleteAdminMappingsStubMappingIDRequest) (*operations.DeleteAdminMappingsStubMappingIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/__admin/mappings/{stubMappingId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/__admin/mappings/{stubMappingId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -156,7 +159,10 @@ func (s *stubMappings) GetAdminMappings(ctx context.Context, request operations.
 // GetAdminMappingsStubMappingID - Get stub mapping by ID
 func (s *stubMappings) GetAdminMappingsStubMappingID(ctx context.Context, request operations.GetAdminMappingsStubMappingIDRequest) (*operations.GetAdminMappingsStubMappingIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/__admin/mappings/{stubMappingId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/__admin/mappings/{stubMappingId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -456,7 +462,10 @@ func (s *stubMappings) PostAdminMappingsSave(ctx context.Context) (*operations.P
 // PutAdminMappingsStubMappingID - Update a stub mapping
 func (s *stubMappings) PutAdminMappingsStubMappingID(ctx context.Context, request operations.PutAdminMappingsStubMappingIDRequest) (*operations.PutAdminMappingsStubMappingIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/__admin/mappings/{stubMappingId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/__admin/mappings/{stubMappingId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

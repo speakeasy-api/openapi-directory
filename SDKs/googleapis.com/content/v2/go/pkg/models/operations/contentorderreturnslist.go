@@ -22,19 +22,23 @@ const (
 	ContentOrderreturnsListOrderByEnumReturnCreationTimeAsc  ContentOrderreturnsListOrderByEnum = "RETURN_CREATION_TIME_ASC"
 )
 
+func (e ContentOrderreturnsListOrderByEnum) ToPointer() *ContentOrderreturnsListOrderByEnum {
+	return &e
+}
+
 func (e *ContentOrderreturnsListOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETURN_CREATION_TIME_DESC":
 		fallthrough
 	case "RETURN_CREATION_TIME_ASC":
-		*e = ContentOrderreturnsListOrderByEnum(s)
+		*e = ContentOrderreturnsListOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentOrderreturnsListOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentOrderreturnsListOrderByEnum: %v", v)
 	}
 }
 

@@ -36,12 +36,16 @@ const (
 	DataSubjectRightCancelDeleteRequestDefaultApplicationJSONErrorCodeEnumTooManyRequests     DataSubjectRightCancelDeleteRequestDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DataSubjectRightCancelDeleteRequestDefaultApplicationJSONErrorCodeEnum) ToPointer() *DataSubjectRightCancelDeleteRequestDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DataSubjectRightCancelDeleteRequestDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -55,10 +59,10 @@ func (e *DataSubjectRightCancelDeleteRequestDefaultApplicationJSONErrorCodeEnum)
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DataSubjectRightCancelDeleteRequestDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DataSubjectRightCancelDeleteRequestDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSubjectRightCancelDeleteRequestDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSubjectRightCancelDeleteRequestDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -84,12 +88,16 @@ const (
 	DataSubjectRightCancelDeleteRequest503ApplicationJSONErrorCodeEnumTooManyRequests     DataSubjectRightCancelDeleteRequest503ApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DataSubjectRightCancelDeleteRequest503ApplicationJSONErrorCodeEnum) ToPointer() *DataSubjectRightCancelDeleteRequest503ApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DataSubjectRightCancelDeleteRequest503ApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -103,10 +111,10 @@ func (e *DataSubjectRightCancelDeleteRequest503ApplicationJSONErrorCodeEnum) Unm
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DataSubjectRightCancelDeleteRequest503ApplicationJSONErrorCodeEnum(s)
+		*e = DataSubjectRightCancelDeleteRequest503ApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSubjectRightCancelDeleteRequest503ApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSubjectRightCancelDeleteRequest503ApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

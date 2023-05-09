@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefresh - Refresh runtime schema of a connection.
 func (s *projects) ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefresh(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshRequest, security operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshSecurity) (*operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:refresh", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:refresh", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadat
 // ConnectorsProjectsLocationsConnectionsCreate - Creates a new Connection in a given project and location.
 func (s *projects) ConnectorsProjectsLocationsConnectionsCreate(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsCreateRequest, security operations.ConnectorsProjectsLocationsConnectionsCreateSecurity) (*operations.ConnectorsProjectsLocationsConnectionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionInput", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsCreate(ctx context.Cont
 // ConnectorsProjectsLocationsConnectionsList - Lists Connections in a given project and location.
 func (s *projects) ConnectorsProjectsLocationsConnectionsList(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsListRequest, security operations.ConnectorsProjectsLocationsConnectionsListSecurity) (*operations.ConnectorsProjectsLocationsConnectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -189,65 +198,13 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsList(ctx context.Contex
 	return res, nil
 }
 
-// ConnectorsProjectsLocationsConnectionsPatch - Updates the parameters of a single Connection.
-func (s *projects) ConnectorsProjectsLocationsConnectionsPatch(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsPatchRequest, security operations.ConnectorsProjectsLocationsConnectionsPatchSecurity) (*operations.ConnectorsProjectsLocationsConnectionsPatchResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionInput", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "PATCH", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.ConnectorsProjectsLocationsConnectionsPatchResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Operation
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Operation = out
-		}
-	}
-
-	return res, nil
-}
-
 // ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasList - List schema of a runtime actions filtered by action name.
 func (s *projects) ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasList(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListRequest, security operations.ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListSecurity) (*operations.ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runtimeActionSchemas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runtimeActionSchemas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -295,7 +252,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasLis
 // ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasList - List schema of a runtime entities filtered by entity name.
 func (s *projects) ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasList(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListRequest, security operations.ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListSecurity) (*operations.ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runtimeEntitySchemas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runtimeEntitySchemas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -340,10 +300,289 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasLis
 	return res, nil
 }
 
+// ConnectorsProjectsLocationsEndpointAttachmentsCreate - Creates a new EndpointAttachment in a given project and location.
+func (s *projects) ConnectorsProjectsLocationsEndpointAttachmentsCreate(ctx context.Context, request operations.ConnectorsProjectsLocationsEndpointAttachmentsCreateRequest, security operations.ConnectorsProjectsLocationsEndpointAttachmentsCreateSecurity) (*operations.ConnectorsProjectsLocationsEndpointAttachmentsCreateResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpointAttachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EndpointAttachmentInput", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ConnectorsProjectsLocationsEndpointAttachmentsCreateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// ConnectorsProjectsLocationsEndpointAttachmentsList - List EndpointAttachments in a given project
+func (s *projects) ConnectorsProjectsLocationsEndpointAttachmentsList(ctx context.Context, request operations.ConnectorsProjectsLocationsEndpointAttachmentsListRequest, security operations.ConnectorsProjectsLocationsEndpointAttachmentsListSecurity) (*operations.ConnectorsProjectsLocationsEndpointAttachmentsListResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpointAttachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ConnectorsProjectsLocationsEndpointAttachmentsListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListEndpointAttachmentsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListEndpointAttachmentsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// ConnectorsProjectsLocationsGlobalManagedZonesCreate - Creates a new ManagedZone in a given project and location.
+func (s *projects) ConnectorsProjectsLocationsGlobalManagedZonesCreate(ctx context.Context, request operations.ConnectorsProjectsLocationsGlobalManagedZonesCreateRequest, security operations.ConnectorsProjectsLocationsGlobalManagedZonesCreateSecurity) (*operations.ConnectorsProjectsLocationsGlobalManagedZonesCreateResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/managedZones", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManagedZoneInput", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ConnectorsProjectsLocationsGlobalManagedZonesCreateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// ConnectorsProjectsLocationsGlobalManagedZonesList - List ManagedZones in a given project
+func (s *projects) ConnectorsProjectsLocationsGlobalManagedZonesList(ctx context.Context, request operations.ConnectorsProjectsLocationsGlobalManagedZonesListRequest, security operations.ConnectorsProjectsLocationsGlobalManagedZonesListSecurity) (*operations.ConnectorsProjectsLocationsGlobalManagedZonesListResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/managedZones", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ConnectorsProjectsLocationsGlobalManagedZonesListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListManagedZonesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListManagedZonesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// ConnectorsProjectsLocationsGlobalManagedZonesPatch - Updates the parameters of a single ManagedZone.
+func (s *projects) ConnectorsProjectsLocationsGlobalManagedZonesPatch(ctx context.Context, request operations.ConnectorsProjectsLocationsGlobalManagedZonesPatchRequest, security operations.ConnectorsProjectsLocationsGlobalManagedZonesPatchSecurity) (*operations.ConnectorsProjectsLocationsGlobalManagedZonesPatchResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ManagedZoneInput", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PATCH", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ConnectorsProjectsLocationsGlobalManagedZonesPatchResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
 // ConnectorsProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) ConnectorsProjectsLocationsList(ctx context.Context, request operations.ConnectorsProjectsLocationsListRequest, security operations.ConnectorsProjectsLocationsListSecurity) (*operations.ConnectorsProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +630,10 @@ func (s *projects) ConnectorsProjectsLocationsList(ctx context.Context, request 
 // ConnectorsProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) ConnectorsProjectsLocationsOperationsCancel(ctx context.Context, request operations.ConnectorsProjectsLocationsOperationsCancelRequest, security operations.ConnectorsProjectsLocationsOperationsCancelSecurity) (*operations.ConnectorsProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -446,7 +688,10 @@ func (s *projects) ConnectorsProjectsLocationsOperationsCancel(ctx context.Conte
 // ConnectorsProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) ConnectorsProjectsLocationsOperationsDelete(ctx context.Context, request operations.ConnectorsProjectsLocationsOperationsDeleteRequest, security operations.ConnectorsProjectsLocationsOperationsDeleteSecurity) (*operations.ConnectorsProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -494,7 +739,10 @@ func (s *projects) ConnectorsProjectsLocationsOperationsDelete(ctx context.Conte
 // ConnectorsProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) ConnectorsProjectsLocationsOperationsList(ctx context.Context, request operations.ConnectorsProjectsLocationsOperationsListRequest, security operations.ConnectorsProjectsLocationsOperationsListSecurity) (*operations.ConnectorsProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +790,10 @@ func (s *projects) ConnectorsProjectsLocationsOperationsList(ctx context.Context
 // ConnectorsProjectsLocationsProvidersConnectorsList - Lists Connectors in a given project and location.
 func (s *projects) ConnectorsProjectsLocationsProvidersConnectorsList(ctx context.Context, request operations.ConnectorsProjectsLocationsProvidersConnectorsListRequest, security operations.ConnectorsProjectsLocationsProvidersConnectorsListSecurity) (*operations.ConnectorsProjectsLocationsProvidersConnectorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -590,7 +841,10 @@ func (s *projects) ConnectorsProjectsLocationsProvidersConnectorsList(ctx contex
 // ConnectorsProjectsLocationsProvidersConnectorsVersionsGet - Gets details of a single connector version.
 func (s *projects) ConnectorsProjectsLocationsProvidersConnectorsVersionsGet(ctx context.Context, request operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsGetRequest, security operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsGetSecurity) (*operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -638,7 +892,10 @@ func (s *projects) ConnectorsProjectsLocationsProvidersConnectorsVersionsGet(ctx
 // ConnectorsProjectsLocationsProvidersConnectorsVersionsList - Lists Connector Versions in a given project and location.
 func (s *projects) ConnectorsProjectsLocationsProvidersConnectorsVersionsList(ctx context.Context, request operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsListRequest, security operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsListSecurity) (*operations.ConnectorsProjectsLocationsProvidersConnectorsVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -686,7 +943,10 @@ func (s *projects) ConnectorsProjectsLocationsProvidersConnectorsVersionsList(ct
 // ConnectorsProjectsLocationsProvidersGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) ConnectorsProjectsLocationsProvidersGetIamPolicy(ctx context.Context, request operations.ConnectorsProjectsLocationsProvidersGetIamPolicyRequest, security operations.ConnectorsProjectsLocationsProvidersGetIamPolicySecurity) (*operations.ConnectorsProjectsLocationsProvidersGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -734,7 +994,10 @@ func (s *projects) ConnectorsProjectsLocationsProvidersGetIamPolicy(ctx context.
 // ConnectorsProjectsLocationsProvidersList - Lists Providers in a given project and location.
 func (s *projects) ConnectorsProjectsLocationsProvidersList(ctx context.Context, request operations.ConnectorsProjectsLocationsProvidersListRequest, security operations.ConnectorsProjectsLocationsProvidersListSecurity) (*operations.ConnectorsProjectsLocationsProvidersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/providers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/providers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -782,7 +1045,10 @@ func (s *projects) ConnectorsProjectsLocationsProvidersList(ctx context.Context,
 // ConnectorsProjectsLocationsProvidersSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) ConnectorsProjectsLocationsProvidersSetIamPolicy(ctx context.Context, request operations.ConnectorsProjectsLocationsProvidersSetIamPolicyRequest, security operations.ConnectorsProjectsLocationsProvidersSetIamPolicySecurity) (*operations.ConnectorsProjectsLocationsProvidersSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -837,7 +1103,10 @@ func (s *projects) ConnectorsProjectsLocationsProvidersSetIamPolicy(ctx context.
 // ConnectorsProjectsLocationsProvidersTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) ConnectorsProjectsLocationsProvidersTestIamPermissions(ctx context.Context, request operations.ConnectorsProjectsLocationsProvidersTestIamPermissionsRequest, security operations.ConnectorsProjectsLocationsProvidersTestIamPermissionsSecurity) (*operations.ConnectorsProjectsLocationsProvidersTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {

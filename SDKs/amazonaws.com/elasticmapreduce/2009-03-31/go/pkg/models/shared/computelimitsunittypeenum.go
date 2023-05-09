@@ -15,20 +15,24 @@ const (
 	ComputeLimitsUnitTypeEnumVcpu               ComputeLimitsUnitTypeEnum = "VCPU"
 )
 
+func (e ComputeLimitsUnitTypeEnum) ToPointer() *ComputeLimitsUnitTypeEnum {
+	return &e
+}
+
 func (e *ComputeLimitsUnitTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InstanceFleetUnits":
 		fallthrough
 	case "Instances":
 		fallthrough
 	case "VCPU":
-		*e = ComputeLimitsUnitTypeEnum(s)
+		*e = ComputeLimitsUnitTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeLimitsUnitTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeLimitsUnitTypeEnum: %v", v)
 	}
 }

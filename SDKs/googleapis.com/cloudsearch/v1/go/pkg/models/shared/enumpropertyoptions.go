@@ -16,21 +16,25 @@ const (
 	EnumPropertyOptionsOrderedRankingEnumDescending EnumPropertyOptionsOrderedRankingEnum = "DESCENDING"
 )
 
+func (e EnumPropertyOptionsOrderedRankingEnum) ToPointer() *EnumPropertyOptionsOrderedRankingEnum {
+	return &e
+}
+
 func (e *EnumPropertyOptionsOrderedRankingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_ORDER":
 		fallthrough
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = EnumPropertyOptionsOrderedRankingEnum(s)
+		*e = EnumPropertyOptionsOrderedRankingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnumPropertyOptionsOrderedRankingEnum: %s", s)
+		return fmt.Errorf("invalid value for EnumPropertyOptionsOrderedRankingEnum: %v", v)
 	}
 }
 

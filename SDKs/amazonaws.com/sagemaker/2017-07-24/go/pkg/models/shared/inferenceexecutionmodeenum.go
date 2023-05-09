@@ -14,18 +14,22 @@ const (
 	InferenceExecutionModeEnumDirect InferenceExecutionModeEnum = "Direct"
 )
 
+func (e InferenceExecutionModeEnum) ToPointer() *InferenceExecutionModeEnum {
+	return &e
+}
+
 func (e *InferenceExecutionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Serial":
 		fallthrough
 	case "Direct":
-		*e = InferenceExecutionModeEnum(s)
+		*e = InferenceExecutionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InferenceExecutionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for InferenceExecutionModeEnum: %v", v)
 	}
 }

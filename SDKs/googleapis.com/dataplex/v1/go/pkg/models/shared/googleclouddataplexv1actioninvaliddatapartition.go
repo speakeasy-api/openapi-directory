@@ -16,21 +16,25 @@ const (
 	GoogleCloudDataplexV1ActionInvalidDataPartitionExpectedStructureEnumHiveStyleKeys                 GoogleCloudDataplexV1ActionInvalidDataPartitionExpectedStructureEnum = "HIVE_STYLE_KEYS"
 )
 
+func (e GoogleCloudDataplexV1ActionInvalidDataPartitionExpectedStructureEnum) ToPointer() *GoogleCloudDataplexV1ActionInvalidDataPartitionExpectedStructureEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1ActionInvalidDataPartitionExpectedStructureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARTITION_STRUCTURE_UNSPECIFIED":
 		fallthrough
 	case "CONSISTENT_KEYS":
 		fallthrough
 	case "HIVE_STYLE_KEYS":
-		*e = GoogleCloudDataplexV1ActionInvalidDataPartitionExpectedStructureEnum(s)
+		*e = GoogleCloudDataplexV1ActionInvalidDataPartitionExpectedStructureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ActionInvalidDataPartitionExpectedStructureEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ActionInvalidDataPartitionExpectedStructureEnum: %v", v)
 	}
 }
 

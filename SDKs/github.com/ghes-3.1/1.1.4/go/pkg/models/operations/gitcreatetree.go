@@ -20,12 +20,16 @@ const (
 	GitCreateTreeRequestBodyTreeModeEnumOneHundredAndTwentyThousand                GitCreateTreeRequestBodyTreeModeEnum = "120000"
 )
 
+func (e GitCreateTreeRequestBodyTreeModeEnum) ToPointer() *GitCreateTreeRequestBodyTreeModeEnum {
+	return &e
+}
+
 func (e *GitCreateTreeRequestBodyTreeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "100644":
 		fallthrough
 	case "100755":
@@ -35,10 +39,10 @@ func (e *GitCreateTreeRequestBodyTreeModeEnum) UnmarshalJSON(data []byte) error 
 	case "160000":
 		fallthrough
 	case "120000":
-		*e = GitCreateTreeRequestBodyTreeModeEnum(s)
+		*e = GitCreateTreeRequestBodyTreeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GitCreateTreeRequestBodyTreeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GitCreateTreeRequestBodyTreeModeEnum: %v", v)
 	}
 }
 
@@ -51,21 +55,25 @@ const (
 	GitCreateTreeRequestBodyTreeTypeEnumCommit GitCreateTreeRequestBodyTreeTypeEnum = "commit"
 )
 
+func (e GitCreateTreeRequestBodyTreeTypeEnum) ToPointer() *GitCreateTreeRequestBodyTreeTypeEnum {
+	return &e
+}
+
 func (e *GitCreateTreeRequestBodyTreeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "blob":
 		fallthrough
 	case "tree":
 		fallthrough
 	case "commit":
-		*e = GitCreateTreeRequestBodyTreeTypeEnum(s)
+		*e = GitCreateTreeRequestBodyTreeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GitCreateTreeRequestBodyTreeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GitCreateTreeRequestBodyTreeTypeEnum: %v", v)
 	}
 }
 

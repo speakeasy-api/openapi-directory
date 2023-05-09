@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/mercure.local/0.3.2/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,18 +27,16 @@ func main() {
         }),
     )
 
-    req := operations.GetWellKnownMercureRequest{
-        LastEventID: "corrupti",
-        LastEventIDQueryParameter: "provident",
+    ctx := context.Background()
+    res, err := s.GetWellKnownMercure(ctx, operations.GetWellKnownMercureRequest{
+        LastEventID: sdk.String("corrupti"),
+        LastEventIDQueryParameter: sdk.String("provident"),
         Topic: []string{
             "quibusdam",
             "unde",
             "nulla",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.GetWellKnownMercure(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -54,13 +51,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetWellKnownMercure` - Subscribe to updates
-* `GetWellKnownMercureSubscriptions` - Active subscriptions
-* `GetWellKnownMercureSubscriptionsTopic` - Active subscriptions for the given topic
-* `GetWellKnownMercureSubscriptionsTopicSubscriber` - Active subscription for the given topic and subscriber
-* `PostWellKnownMercure` - Publish an update
+* [GetWellKnownMercure](docs/sdk/README.md#getwellknownmercure) - Subscribe to updates
+* [GetWellKnownMercureSubscriptions](docs/sdk/README.md#getwellknownmercuresubscriptions) - Active subscriptions
+* [GetWellKnownMercureSubscriptionsTopic](docs/sdk/README.md#getwellknownmercuresubscriptionstopic) - Active subscriptions for the given topic
+* [GetWellKnownMercureSubscriptionsTopicSubscriber](docs/sdk/README.md#getwellknownmercuresubscriptionstopicsubscriber) - Active subscription for the given topic and subscriber
+* [PostWellKnownMercure](docs/sdk/README.md#postwellknownmercure) - Publish an update
 <!-- End SDK Available Operations -->
 
 ### Maturity

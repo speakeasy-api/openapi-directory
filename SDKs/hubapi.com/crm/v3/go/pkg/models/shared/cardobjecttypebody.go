@@ -17,12 +17,16 @@ const (
 	CardObjectTypeBodyNameEnumTickets   CardObjectTypeBodyNameEnum = "tickets"
 )
 
+func (e CardObjectTypeBodyNameEnum) ToPointer() *CardObjectTypeBodyNameEnum {
+	return &e
+}
+
 func (e *CardObjectTypeBodyNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "contacts":
 		fallthrough
 	case "deals":
@@ -30,10 +34,10 @@ func (e *CardObjectTypeBodyNameEnum) UnmarshalJSON(data []byte) error {
 	case "companies":
 		fallthrough
 	case "tickets":
-		*e = CardObjectTypeBodyNameEnum(s)
+		*e = CardObjectTypeBodyNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CardObjectTypeBodyNameEnum: %s", s)
+		return fmt.Errorf("invalid value for CardObjectTypeBodyNameEnum: %v", v)
 	}
 }
 

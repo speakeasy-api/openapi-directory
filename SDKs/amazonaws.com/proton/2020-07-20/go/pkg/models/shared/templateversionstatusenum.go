@@ -16,12 +16,16 @@ const (
 	TemplateVersionStatusEnumPublished              TemplateVersionStatusEnum = "PUBLISHED"
 )
 
+func (e TemplateVersionStatusEnum) ToPointer() *TemplateVersionStatusEnum {
+	return &e
+}
+
 func (e *TemplateVersionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGISTRATION_IN_PROGRESS":
 		fallthrough
 	case "REGISTRATION_FAILED":
@@ -29,9 +33,9 @@ func (e *TemplateVersionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DRAFT":
 		fallthrough
 	case "PUBLISHED":
-		*e = TemplateVersionStatusEnum(s)
+		*e = TemplateVersionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemplateVersionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TemplateVersionStatusEnum: %v", v)
 	}
 }

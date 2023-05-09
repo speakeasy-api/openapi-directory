@@ -15,20 +15,24 @@ const (
 	VpcEndpointTypeEnumGatewayLoadBalancer VpcEndpointTypeEnum = "GatewayLoadBalancer"
 )
 
+func (e VpcEndpointTypeEnum) ToPointer() *VpcEndpointTypeEnum {
+	return &e
+}
+
 func (e *VpcEndpointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Interface":
 		fallthrough
 	case "Gateway":
 		fallthrough
 	case "GatewayLoadBalancer":
-		*e = VpcEndpointTypeEnum(s)
+		*e = VpcEndpointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VpcEndpointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VpcEndpointTypeEnum: %v", v)
 	}
 }

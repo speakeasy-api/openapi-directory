@@ -17,12 +17,16 @@ const (
 	QueryExecutionStateEnumCancelled QueryExecutionStateEnum = "CANCELLED"
 )
 
+func (e QueryExecutionStateEnum) ToPointer() *QueryExecutionStateEnum {
+	return &e
+}
+
 func (e *QueryExecutionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUEUED":
 		fallthrough
 	case "RUNNING":
@@ -32,9 +36,9 @@ func (e *QueryExecutionStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "CANCELLED":
-		*e = QueryExecutionStateEnum(s)
+		*e = QueryExecutionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryExecutionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryExecutionStateEnum: %v", v)
 	}
 }

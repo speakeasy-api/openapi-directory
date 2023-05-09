@@ -16,19 +16,23 @@ const (
 	GetSearchAdvancedAcceptedEnumFalse GetSearchAdvancedAcceptedEnum = "false"
 )
 
+func (e GetSearchAdvancedAcceptedEnum) ToPointer() *GetSearchAdvancedAcceptedEnum {
+	return &e
+}
+
 func (e *GetSearchAdvancedAcceptedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetSearchAdvancedAcceptedEnum(s)
+		*e = GetSearchAdvancedAcceptedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSearchAdvancedAcceptedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSearchAdvancedAcceptedEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	GetSearchAdvancedClosedEnumFalse GetSearchAdvancedClosedEnum = "false"
 )
 
+func (e GetSearchAdvancedClosedEnum) ToPointer() *GetSearchAdvancedClosedEnum {
+	return &e
+}
+
 func (e *GetSearchAdvancedClosedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetSearchAdvancedClosedEnum(s)
+		*e = GetSearchAdvancedClosedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSearchAdvancedClosedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSearchAdvancedClosedEnum: %v", v)
 	}
 }
 
@@ -64,19 +72,23 @@ const (
 	GetSearchAdvancedMigratedEnumFalse GetSearchAdvancedMigratedEnum = "false"
 )
 
+func (e GetSearchAdvancedMigratedEnum) ToPointer() *GetSearchAdvancedMigratedEnum {
+	return &e
+}
+
 func (e *GetSearchAdvancedMigratedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetSearchAdvancedMigratedEnum(s)
+		*e = GetSearchAdvancedMigratedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSearchAdvancedMigratedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSearchAdvancedMigratedEnum: %v", v)
 	}
 }
 
@@ -88,19 +100,23 @@ const (
 	GetSearchAdvancedNoticeEnumFalse GetSearchAdvancedNoticeEnum = "false"
 )
 
+func (e GetSearchAdvancedNoticeEnum) ToPointer() *GetSearchAdvancedNoticeEnum {
+	return &e
+}
+
 func (e *GetSearchAdvancedNoticeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetSearchAdvancedNoticeEnum(s)
+		*e = GetSearchAdvancedNoticeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSearchAdvancedNoticeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSearchAdvancedNoticeEnum: %v", v)
 	}
 }
 
@@ -112,19 +128,23 @@ const (
 	GetSearchAdvancedOrderEnumAsc  GetSearchAdvancedOrderEnum = "asc"
 )
 
+func (e GetSearchAdvancedOrderEnum) ToPointer() *GetSearchAdvancedOrderEnum {
+	return &e
+}
+
 func (e *GetSearchAdvancedOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetSearchAdvancedOrderEnum(s)
+		*e = GetSearchAdvancedOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSearchAdvancedOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSearchAdvancedOrderEnum: %v", v)
 	}
 }
 
@@ -138,12 +158,16 @@ const (
 	GetSearchAdvancedSortEnumRelevance GetSearchAdvancedSortEnum = "relevance"
 )
 
+func (e GetSearchAdvancedSortEnum) ToPointer() *GetSearchAdvancedSortEnum {
+	return &e
+}
+
 func (e *GetSearchAdvancedSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "activity":
 		fallthrough
 	case "creation":
@@ -151,10 +175,10 @@ func (e *GetSearchAdvancedSortEnum) UnmarshalJSON(data []byte) error {
 	case "votes":
 		fallthrough
 	case "relevance":
-		*e = GetSearchAdvancedSortEnum(s)
+		*e = GetSearchAdvancedSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSearchAdvancedSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSearchAdvancedSortEnum: %v", v)
 	}
 }
 
@@ -166,19 +190,23 @@ const (
 	GetSearchAdvancedWikiEnumFalse GetSearchAdvancedWikiEnum = "false"
 )
 
+func (e GetSearchAdvancedWikiEnum) ToPointer() *GetSearchAdvancedWikiEnum {
+	return &e
+}
+
 func (e *GetSearchAdvancedWikiEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetSearchAdvancedWikiEnum(s)
+		*e = GetSearchAdvancedWikiEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSearchAdvancedWikiEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSearchAdvancedWikiEnum: %v", v)
 	}
 }
 

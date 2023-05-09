@@ -16,21 +16,25 @@ const (
 	IamBindingActionEnumRemove            IamBindingActionEnum = "REMOVE"
 )
 
+func (e IamBindingActionEnum) ToPointer() *IamBindingActionEnum {
+	return &e
+}
+
 func (e *IamBindingActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_UNSPECIFIED":
 		fallthrough
 	case "ADD":
 		fallthrough
 	case "REMOVE":
-		*e = IamBindingActionEnum(s)
+		*e = IamBindingActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IamBindingActionEnum: %s", s)
+		return fmt.Errorf("invalid value for IamBindingActionEnum: %v", v)
 	}
 }
 
@@ -38,7 +42,7 @@ func (e *IamBindingActionEnum) UnmarshalJSON(data []byte) error {
 type IamBinding struct {
 	// The action that was performed on a Binding.
 	Action *IamBindingActionEnum `json:"action,omitempty"`
-	// A single identity requesting access for a Cloud Platform resource, e.g. "foo@google.com".
+	// A single identity requesting access for a Cloud Platform resource, for example, "foo@google.com".
 	Member *string `json:"member,omitempty"`
 	// Role that is assigned to "members". For example, "roles/viewer", "roles/editor", or "roles/owner".
 	Role *string `json:"role,omitempty"`

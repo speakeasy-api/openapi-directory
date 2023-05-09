@@ -16,17 +16,21 @@ const (
 	CancelMailboxExportJobXAmzTargetEnumWorkMailServiceCancelMailboxExportJob CancelMailboxExportJobXAmzTargetEnum = "WorkMailService.CancelMailboxExportJob"
 )
 
+func (e CancelMailboxExportJobXAmzTargetEnum) ToPointer() *CancelMailboxExportJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *CancelMailboxExportJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.CancelMailboxExportJob":
-		*e = CancelMailboxExportJobXAmzTargetEnum(s)
+		*e = CancelMailboxExportJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelMailboxExportJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelMailboxExportJobXAmzTargetEnum: %v", v)
 	}
 }
 

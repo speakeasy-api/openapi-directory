@@ -14,18 +14,22 @@ const (
 	FindingTypeEnumPackageVulnerability FindingTypeEnum = "PACKAGE_VULNERABILITY"
 )
 
+func (e FindingTypeEnum) ToPointer() *FindingTypeEnum {
+	return &e
+}
+
 func (e *FindingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NETWORK_REACHABILITY":
 		fallthrough
 	case "PACKAGE_VULNERABILITY":
-		*e = FindingTypeEnum(s)
+		*e = FindingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingTypeEnum: %v", v)
 	}
 }

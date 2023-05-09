@@ -13,6 +13,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -247,4 +248,16 @@ pkg/models/shared/webhook.go
 pkg/models/shared/itemlistwebhookresource.go
 pkg/models/shared/webhookresource.go
 pkg/models/shared/webhookpage.go
+docs/sdk/README.md
+docs/calls/README.md
+docs/campaigns/README.md
+docs/contacts/README.md
+docs/keywords/README.md
+docs/me/README.md
+docs/media/README.md
+docs/numbers/README.md
+docs/orders/README.md
+docs/reports/README.md
+docs/texts/README.md
+docs/webhooks/README.md
 USAGE.md

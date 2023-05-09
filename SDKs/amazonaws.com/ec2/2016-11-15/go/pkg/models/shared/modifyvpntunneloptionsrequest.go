@@ -4,6 +4,7 @@ package shared
 
 type ModifyVpnTunnelOptionsRequest struct {
 	DryRun                    *bool
+	SkipTunnelReplacement     *bool
 	TunnelOptions             ModifyVpnTunnelOptionsSpecification
 	VpnConnectionID           string
 	VpnTunnelOutsideIPAddress string

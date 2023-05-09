@@ -15,17 +15,21 @@ const (
 	POSTListStackResourcesActionEnumListStackResources POSTListStackResourcesActionEnum = "ListStackResources"
 )
 
+func (e POSTListStackResourcesActionEnum) ToPointer() *POSTListStackResourcesActionEnum {
+	return &e
+}
+
 func (e *POSTListStackResourcesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListStackResources":
-		*e = POSTListStackResourcesActionEnum(s)
+		*e = POSTListStackResourcesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListStackResourcesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListStackResourcesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTListStackResourcesVersionEnumTwoThousandAndTen0515 POSTListStackResourcesVersionEnum = "2010-05-15"
 )
 
+func (e POSTListStackResourcesVersionEnum) ToPointer() *POSTListStackResourcesVersionEnum {
+	return &e
+}
+
 func (e *POSTListStackResourcesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTListStackResourcesVersionEnum(s)
+		*e = POSTListStackResourcesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListStackResourcesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListStackResourcesVersionEnum: %v", v)
 	}
 }
 

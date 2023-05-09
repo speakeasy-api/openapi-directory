@@ -14,18 +14,22 @@ const (
 	RetryBuildBatchTypeEnumRetryFailedBuilds RetryBuildBatchTypeEnum = "RETRY_FAILED_BUILDS"
 )
 
+func (e RetryBuildBatchTypeEnum) ToPointer() *RetryBuildBatchTypeEnum {
+	return &e
+}
+
 func (e *RetryBuildBatchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETRY_ALL_BUILDS":
 		fallthrough
 	case "RETRY_FAILED_BUILDS":
-		*e = RetryBuildBatchTypeEnum(s)
+		*e = RetryBuildBatchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetryBuildBatchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetryBuildBatchTypeEnum: %v", v)
 	}
 }

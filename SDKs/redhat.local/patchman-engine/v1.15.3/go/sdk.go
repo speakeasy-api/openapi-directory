@@ -28,6 +28,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - API of the Patch application on [cloud.redhat.com](cloud.redhat.com)
 //
 // Syntax of the `filter[name]` query parameters is described in  [Filters documentation](https://github.com/RedHatInsights/patchman-engine/wiki/API-custom-filters)
@@ -100,7 +115,10 @@ func New(opts ...SDKOption) *SDK {
 // Show me metadata of selected package
 func (s *SDK) LatestPackage(ctx context.Context, request operations.LatestPackageRequest, security operations.LatestPackageSecurity) (*operations.LatestPackageResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/packages/{package_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/packages/{package_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -145,7 +163,10 @@ func (s *SDK) LatestPackage(ctx context.Context, request operations.LatestPackag
 // Delete system by inventory id
 func (s *SDK) Deletesystem(ctx context.Context, request operations.DeletesystemRequest, security operations.DeletesystemSecurity) (*operations.DeletesystemResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/systems/{inventory_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/systems/{inventory_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -181,7 +202,10 @@ func (s *SDK) Deletesystem(ctx context.Context, request operations.DeletesystemR
 // Show me details an advisory by given advisory name
 func (s *SDK) DetailAdvisory(ctx context.Context, request operations.DetailAdvisoryRequest, security operations.DetailAdvisorySecurity) (*operations.DetailAdvisoryResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/advisories/{advisory_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/advisories/{advisory_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -226,7 +250,10 @@ func (s *SDK) DetailAdvisory(ctx context.Context, request operations.DetailAdvis
 // Show me details about a system by given inventory id
 func (s *SDK) DetailSystem(ctx context.Context, request operations.DetailSystemRequest, security operations.DetailSystemSecurity) (*operations.DetailSystemResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/systems/{inventory_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/systems/{inventory_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -327,7 +354,10 @@ func (s *SDK) ExportAdvisories(ctx context.Context, request operations.ExportAdv
 // Export systems for my account
 func (s *SDK) ExportAdvisorySystems(ctx context.Context, request operations.ExportAdvisorySystemsRequest, security operations.ExportAdvisorySystemsSecurity) (*operations.ExportAdvisorySystemsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/export/advisories/{advisory_id}/systems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/export/advisories/{advisory_id}/systems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -383,7 +413,10 @@ func (s *SDK) ExportAdvisorySystems(ctx context.Context, request operations.Expo
 // Show me all my systems which have a package installed
 func (s *SDK) ExportPackageSystems(ctx context.Context, request operations.ExportPackageSystemsRequest, security operations.ExportPackageSystemsSecurity) (*operations.ExportPackageSystemsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/export/packages/{package_name}/systems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/export/packages/{package_name}/systems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -488,7 +521,10 @@ func (s *SDK) ExportPackages(ctx context.Context, request operations.ExportPacka
 // Export applicable advisories for all my systems
 func (s *SDK) ExportSystemAdvisories(ctx context.Context, request operations.ExportSystemAdvisoriesRequest, security operations.ExportSystemAdvisoriesSecurity) (*operations.ExportSystemAdvisoriesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/export/systems/{inventory_id}/advisories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/export/systems/{inventory_id}/advisories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -544,7 +580,10 @@ func (s *SDK) ExportSystemAdvisories(ctx context.Context, request operations.Exp
 // Show me details about a system packages by given inventory id
 func (s *SDK) ExportSystemPackages(ctx context.Context, request operations.ExportSystemPackagesRequest, security operations.ExportSystemPackagesSecurity) (*operations.ExportSystemPackagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/export/systems/{inventory_id}/packages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/export/systems/{inventory_id}/packages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -698,7 +737,10 @@ func (s *SDK) ListAdvisories(ctx context.Context, request operations.ListAdvisor
 // Show me systems on which the given advisory is applicable
 func (s *SDK) ListAdvisorySystems(ctx context.Context, request operations.ListAdvisorySystemsRequest, security operations.ListAdvisorySystemsSecurity) (*operations.ListAdvisorySystemsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/advisories/{advisory_id}/systems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/advisories/{advisory_id}/systems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -796,7 +838,10 @@ func (s *SDK) ListPackages(ctx context.Context, request operations.ListPackagesR
 // Show me advisories for a system by given inventory id
 func (s *SDK) ListSystemAdvisories(ctx context.Context, request operations.ListSystemAdvisoriesRequest, security operations.ListSystemAdvisoriesSecurity) (*operations.ListSystemAdvisoriesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/systems/{inventory_id}/advisories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/systems/{inventory_id}/advisories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -894,7 +939,10 @@ func (s *SDK) ListSystems(ctx context.Context, request operations.ListSystemsReq
 // Show me all my systems which have a package installed
 func (s *SDK) PackageSystems(ctx context.Context, request operations.PackageSystemsRequest, security operations.PackageSystemsSecurity) (*operations.PackageSystemsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/packages/{package_name}/systems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/packages/{package_name}/systems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -943,7 +991,10 @@ func (s *SDK) PackageSystems(ctx context.Context, request operations.PackageSyst
 // Show me all package versions installed on some system
 func (s *SDK) PackageVersions(ctx context.Context, request operations.PackageVersionsRequest, security operations.PackageVersionsSecurity) (*operations.PackageVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/packages/{package_name}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/packages/{package_name}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -992,7 +1043,10 @@ func (s *SDK) PackageVersions(ctx context.Context, request operations.PackageVer
 // Show me details about a system packages by given inventory id
 func (s *SDK) SystemPackages(ctx context.Context, request operations.SystemPackagesRequest, security operations.SystemPackagesSecurity) (*operations.SystemPackagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/systems/{inventory_id}/packages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/patch/v1/systems/{inventory_id}/packages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

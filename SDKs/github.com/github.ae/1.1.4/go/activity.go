@@ -37,7 +37,10 @@ func newActivity(defaultClient, securityClient HTTPClient, serverURL, language, 
 // https://docs.github.com/github-ae@latest/rest/reference/activity#check-if-a-repository-is-starred-by-the-authenticated-user - API method documentation
 func (s *activity) ActivityCheckRepoIsStarredByAuthenticatedUser(ctx context.Context, request operations.ActivityCheckRepoIsStarredByAuthenticatedUserRequest) (*operations.ActivityCheckRepoIsStarredByAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/starred/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/starred/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *activity) ActivityCheckRepoIsStarredByAuthenticatedUser(ctx context.Con
 // https://docs.github.com/github-ae@latest/rest/reference/activity#delete-a-repository-subscription - API method documentation
 func (s *activity) ActivityDeleteRepoSubscription(ctx context.Context, request operations.ActivityDeleteRepoSubscriptionRequest) (*operations.ActivityDeleteRepoSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/subscription", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/subscription", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -127,7 +133,10 @@ func (s *activity) ActivityDeleteRepoSubscription(ctx context.Context, request o
 // https://docs.github.com/github-ae@latest/rest/reference/activity#delete-a-thread-subscription - API method documentation
 func (s *activity) ActivityDeleteThreadSubscription(ctx context.Context, request operations.ActivityDeleteThreadSubscriptionRequest) (*operations.ActivityDeleteThreadSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/threads/{thread_id}/subscription", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/notifications/threads/{thread_id}/subscription", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -233,7 +242,10 @@ func (s *activity) ActivityGetFeeds(ctx context.Context) (*operations.ActivityGe
 // https://docs.github.com/github-ae@latest/rest/reference/activity#get-a-repository-subscription - API method documentation
 func (s *activity) ActivityGetRepoSubscription(ctx context.Context, request operations.ActivityGetRepoSubscriptionRequest) (*operations.ActivityGetRepoSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/subscription", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/subscription", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -290,7 +302,10 @@ func (s *activity) ActivityGetRepoSubscription(ctx context.Context, request oper
 // https://docs.github.com/github-ae@latest/rest/reference/activity#get-a-thread - API method documentation
 func (s *activity) ActivityGetThread(ctx context.Context, request operations.ActivityGetThreadRequest) (*operations.ActivityGetThreadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/threads/{thread_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/notifications/threads/{thread_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +366,10 @@ func (s *activity) ActivityGetThread(ctx context.Context, request operations.Act
 // https://docs.github.com/github-ae@latest/rest/reference/activity#get-a-thread-subscription-for-the-authenticated-user - API method documentation
 func (s *activity) ActivityGetThreadSubscriptionForAuthenticatedUser(ctx context.Context, request operations.ActivityGetThreadSubscriptionForAuthenticatedUserRequest) (*operations.ActivityGetThreadSubscriptionForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/threads/{thread_id}/subscription", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/notifications/threads/{thread_id}/subscription", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -410,7 +428,10 @@ func (s *activity) ActivityGetThreadSubscriptionForAuthenticatedUser(ctx context
 // https://docs.github.com/github-ae@latest/rest/reference/activity#list-events-for-the-authenticated-user - API method documentation
 func (s *activity) ActivityListEventsForAuthenticatedUser(ctx context.Context, request operations.ActivityListEventsForAuthenticatedUserRequest) (*operations.ActivityListEventsForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/events", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -535,7 +556,10 @@ func (s *activity) ActivityListNotificationsForAuthenticatedUser(ctx context.Con
 // https://docs.github.com/github-ae@latest/rest/reference/activity#list-organization-events-for-the-authenticated-user - API method documentation
 func (s *activity) ActivityListOrgEventsForAuthenticatedUser(ctx context.Context, request operations.ActivityListOrgEventsForAuthenticatedUserRequest) (*operations.ActivityListOrgEventsForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/events/orgs/{org}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/events/orgs/{org}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -584,7 +608,10 @@ func (s *activity) ActivityListOrgEventsForAuthenticatedUser(ctx context.Context
 // https://docs.github.com/github-ae@latest/rest/reference/activity#list-repository-events - API method documentation
 func (s *activity) ActivityListRepoEvents(ctx context.Context, request operations.ActivityListRepoEventsRequest) (*operations.ActivityListRepoEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/events", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -634,7 +661,10 @@ func (s *activity) ActivityListRepoEvents(ctx context.Context, request operation
 // https://docs.github.com/github-ae@latest/rest/reference/activity#list-repository-notifications-for-the-authenticated-user - API method documentation
 func (s *activity) ActivityListRepoNotificationsForAuthenticatedUser(ctx context.Context, request operations.ActivityListRepoNotificationsForAuthenticatedUserRequest) (*operations.ActivityListRepoNotificationsForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/notifications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/notifications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -762,7 +792,10 @@ func (s *activity) ActivityListReposStarredByAuthenticatedUser(ctx context.Conte
 // https://docs.github.com/github-ae@latest/rest/reference/activity#list-repositories-starred-by-a-user - API method documentation
 func (s *activity) ActivityListReposStarredByUser(ctx context.Context, request operations.ActivityListReposStarredByUserRequest) (*operations.ActivityListReposStarredByUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/starred", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/starred", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -814,7 +847,10 @@ func (s *activity) ActivityListReposStarredByUser(ctx context.Context, request o
 // https://docs.github.com/github-ae@latest/rest/reference/activity#list-repositories-watched-by-a-user - API method documentation
 func (s *activity) ActivityListReposWatchedByUser(ctx context.Context, request operations.ActivityListReposWatchedByUserRequest) (*operations.ActivityListReposWatchedByUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/subscriptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/subscriptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -868,7 +904,10 @@ func (s *activity) ActivityListReposWatchedByUser(ctx context.Context, request o
 // https://docs.github.com/github-ae@latest/rest/reference/activity#list-stargazers - API method documentation
 func (s *activity) ActivityListStargazersForRepo(ctx context.Context, request operations.ActivityListStargazersForRepoRequest) (*operations.ActivityListStargazersForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/stargazers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/stargazers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -995,7 +1034,10 @@ func (s *activity) ActivityListWatchedReposForAuthenticatedUser(ctx context.Cont
 // https://docs.github.com/github-ae@latest/rest/reference/activity#list-watchers - API method documentation
 func (s *activity) ActivityListWatchersForRepo(ctx context.Context, request operations.ActivityListWatchersForRepoRequest) (*operations.ActivityListWatchersForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/subscribers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/subscribers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1115,7 +1157,10 @@ func (s *activity) ActivityMarkNotificationsAsRead(ctx context.Context, request 
 // https://docs.github.com/github-ae@latest/rest/reference/activity#mark-repository-notifications-as-read - API method documentation
 func (s *activity) ActivityMarkRepoNotificationsAsRead(ctx context.Context, request operations.ActivityMarkRepoNotificationsAsReadRequest) (*operations.ActivityMarkRepoNotificationsAsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/notifications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/notifications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1169,7 +1214,10 @@ func (s *activity) ActivityMarkRepoNotificationsAsRead(ctx context.Context, requ
 // https://docs.github.com/github-ae@latest/rest/reference/activity#mark-a-thread-as-read - API method documentation
 func (s *activity) ActivityMarkThreadAsRead(ctx context.Context, request operations.ActivityMarkThreadAsReadRequest) (*operations.ActivityMarkThreadAsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/threads/{thread_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/notifications/threads/{thread_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -1218,7 +1266,10 @@ func (s *activity) ActivityMarkThreadAsRead(ctx context.Context, request operati
 // https://docs.github.com/github-ae@latest/rest/reference/activity#set-a-repository-subscription - API method documentation
 func (s *activity) ActivitySetRepoSubscription(ctx context.Context, request operations.ActivitySetRepoSubscriptionRequest) (*operations.ActivitySetRepoSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/subscription", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/subscription", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1275,7 +1326,10 @@ func (s *activity) ActivitySetRepoSubscription(ctx context.Context, request oper
 // https://docs.github.com/github-ae@latest/rest/reference/activity#set-a-thread-subscription - API method documentation
 func (s *activity) ActivitySetThreadSubscription(ctx context.Context, request operations.ActivitySetThreadSubscriptionRequest) (*operations.ActivitySetThreadSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/threads/{thread_id}/subscription", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/notifications/threads/{thread_id}/subscription", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1341,7 +1395,10 @@ func (s *activity) ActivitySetThreadSubscription(ctx context.Context, request op
 // https://docs.github.com/github-ae@latest/rest/reference/activity#star-a-repository-for-the-authenticated-user - API method documentation
 func (s *activity) ActivityStarRepoForAuthenticatedUser(ctx context.Context, request operations.ActivityStarRepoForAuthenticatedUserRequest) (*operations.ActivityStarRepoForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/starred/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/starred/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1393,7 +1450,10 @@ func (s *activity) ActivityStarRepoForAuthenticatedUser(ctx context.Context, req
 // https://docs.github.com/github-ae@latest/rest/reference/activity#unstar-a-repository-for-the-authenticated-user - API method documentation
 func (s *activity) ActivityUnstarRepoForAuthenticatedUser(ctx context.Context, request operations.ActivityUnstarRepoForAuthenticatedUserRequest) (*operations.ActivityUnstarRepoForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/starred/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/starred/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

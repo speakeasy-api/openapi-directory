@@ -13,6 +13,8 @@ type RegisterResourceRequestBody struct {
 	RoleArn *string `json:"RoleArn,omitempty"`
 	// <p>Designates an Identity and Access Management (IAM) service-linked role by registering this role with the Data Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake Formation.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/lake-formation/latest/dg/service-linked-roles.html">Using Service-Linked Roles for Lake Formation</a>.</p>
 	UseServiceLinkedRole *bool `json:"UseServiceLinkedRole,omitempty"`
+	// Whether or not the resource is a federated resource.
+	WithFederation *bool `json:"WithFederation,omitempty"`
 }
 
 type RegisterResourceRequest struct {

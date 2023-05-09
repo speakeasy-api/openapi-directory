@@ -24,12 +24,16 @@ const (
 	PayoutRequestShopperInteractionEnumPos       PayoutRequestShopperInteractionEnum = "POS"
 )
 
+func (e PayoutRequestShopperInteractionEnum) ToPointer() *PayoutRequestShopperInteractionEnum {
+	return &e
+}
+
 func (e *PayoutRequestShopperInteractionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ecommerce":
 		fallthrough
 	case "ContAuth":
@@ -37,10 +41,10 @@ func (e *PayoutRequestShopperInteractionEnum) UnmarshalJSON(data []byte) error {
 	case "Moto":
 		fallthrough
 	case "POS":
-		*e = PayoutRequestShopperInteractionEnum(s)
+		*e = PayoutRequestShopperInteractionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PayoutRequestShopperInteractionEnum: %s", s)
+		return fmt.Errorf("invalid value for PayoutRequestShopperInteractionEnum: %v", v)
 	}
 }
 

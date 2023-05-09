@@ -16,17 +16,21 @@ const (
 	GETDescribeAlarmsActionEnumDescribeAlarms GETDescribeAlarmsActionEnum = "DescribeAlarms"
 )
 
+func (e GETDescribeAlarmsActionEnum) ToPointer() *GETDescribeAlarmsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeAlarmsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeAlarms":
-		*e = GETDescribeAlarmsActionEnum(s)
+		*e = GETDescribeAlarmsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAlarmsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAlarmsActionEnum: %v", v)
 	}
 }
 
@@ -39,21 +43,25 @@ const (
 	GETDescribeAlarmsStateValueEnumInsufficientData GETDescribeAlarmsStateValueEnum = "INSUFFICIENT_DATA"
 )
 
+func (e GETDescribeAlarmsStateValueEnum) ToPointer() *GETDescribeAlarmsStateValueEnum {
+	return &e
+}
+
 func (e *GETDescribeAlarmsStateValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "ALARM":
 		fallthrough
 	case "INSUFFICIENT_DATA":
-		*e = GETDescribeAlarmsStateValueEnum(s)
+		*e = GETDescribeAlarmsStateValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAlarmsStateValueEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAlarmsStateValueEnum: %v", v)
 	}
 }
 
@@ -64,17 +72,21 @@ const (
 	GETDescribeAlarmsVersionEnumTwoThousandAndTen0801 GETDescribeAlarmsVersionEnum = "2010-08-01"
 )
 
+func (e GETDescribeAlarmsVersionEnum) ToPointer() *GETDescribeAlarmsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeAlarmsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = GETDescribeAlarmsVersionEnum(s)
+		*e = GETDescribeAlarmsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAlarmsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAlarmsVersionEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTDescribeTransitGatewayRouteTableAnnouncementsActionEnumDescribeTransitGatewayRouteTableAnnouncements POSTDescribeTransitGatewayRouteTableAnnouncementsActionEnum = "DescribeTransitGatewayRouteTableAnnouncements"
 )
 
+func (e POSTDescribeTransitGatewayRouteTableAnnouncementsActionEnum) ToPointer() *POSTDescribeTransitGatewayRouteTableAnnouncementsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeTransitGatewayRouteTableAnnouncementsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeTransitGatewayRouteTableAnnouncements":
-		*e = POSTDescribeTransitGatewayRouteTableAnnouncementsActionEnum(s)
+		*e = POSTDescribeTransitGatewayRouteTableAnnouncementsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeTransitGatewayRouteTableAnnouncementsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeTransitGatewayRouteTableAnnouncementsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeTransitGatewayRouteTableAnnouncementsVersionEnumTwoThousandAndSixteen1115 POSTDescribeTransitGatewayRouteTableAnnouncementsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeTransitGatewayRouteTableAnnouncementsVersionEnum) ToPointer() *POSTDescribeTransitGatewayRouteTableAnnouncementsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeTransitGatewayRouteTableAnnouncementsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeTransitGatewayRouteTableAnnouncementsVersionEnum(s)
+		*e = POSTDescribeTransitGatewayRouteTableAnnouncementsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeTransitGatewayRouteTableAnnouncementsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeTransitGatewayRouteTableAnnouncementsVersionEnum: %v", v)
 	}
 }
 

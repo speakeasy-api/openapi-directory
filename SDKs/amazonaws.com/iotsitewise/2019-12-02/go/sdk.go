@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Welcome to the IoT SiteWise API Reference. IoT SiteWise is an Amazon Web Services service that connects <a href="https://en.wikipedia.org/wiki/Internet_of_things#Industrial_applications">Industrial Internet of Things (IIoT)</a> devices to the power of the Amazon Web Services Cloud. For more information, see the <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/">IoT SiteWise User Guide</a>. For information about IoT SiteWise quotas, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT SiteWise User Guide</i>.
 // https://docs.aws.amazon.com/iotsitewise/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // AssociateAssets - Associates a child asset with the given parent asset through a hierarchy defined in the parent asset's model. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/add-associated-assets.html">Associating assets</a> in the <i>IoT SiteWise User Guide</i>.
 func (s *SDK) AssociateAssets(ctx context.Context, request operations.AssociateAssetsRequest) (*operations.AssociateAssetsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/associate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/associate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -332,7 +350,10 @@ func (s *SDK) AssociateTimeSeriesToAssetProperty(ctx context.Context, request op
 // BatchAssociateProjectAssets - Associates a group (batch) of assets with an IoT SiteWise Monitor project.
 func (s *SDK) BatchAssociateProjectAssets(ctx context.Context, request operations.BatchAssociateProjectAssetsRequest) (*operations.BatchAssociateProjectAssetsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/assets/associate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/assets/associate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -438,7 +459,10 @@ func (s *SDK) BatchAssociateProjectAssets(ctx context.Context, request operation
 // BatchDisassociateProjectAssets - Disassociates a group (batch) of assets from an IoT SiteWise Monitor project.
 func (s *SDK) BatchDisassociateProjectAssets(ctx context.Context, request operations.BatchDisassociateProjectAssetsRequest) (*operations.BatchDisassociateProjectAssetsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/assets/disassociate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/assets/disassociate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1868,7 +1892,10 @@ func (s *SDK) CreateProject(ctx context.Context, request operations.CreateProjec
 // DeleteAccessPolicy - Deletes an access policy that grants the specified identity access to the specified IoT SiteWise Monitor resource. You can use this operation to revoke access to an IoT SiteWise Monitor resource.
 func (s *SDK) DeleteAccessPolicy(ctx context.Context, request operations.DeleteAccessPolicyRequest) (*operations.DeleteAccessPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/access-policies/{accessPolicyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/access-policies/{accessPolicyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1958,7 +1985,10 @@ func (s *SDK) DeleteAccessPolicy(ctx context.Context, request operations.DeleteA
 // DeleteAsset - <p>Deletes an asset. This action can't be undone. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/delete-assets-and-models.html">Deleting assets and models</a> in the <i>IoT SiteWise User Guide</i>. </p> <note> <p>You can't delete an asset that's associated to another asset. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DisassociateAssets.html">DisassociateAssets</a>.</p> </note>
 func (s *SDK) DeleteAsset(ctx context.Context, request operations.DeleteAssetRequest) (*operations.DeleteAssetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2058,7 +2088,10 @@ func (s *SDK) DeleteAsset(ctx context.Context, request operations.DeleteAssetReq
 // DeleteAssetModel - Deletes an asset model. This action can't be undone. You must delete all assets created from an asset model before you can delete the model. Also, you can't delete an asset model if a parent asset model exists that contains a property formula expression that depends on the asset model that you want to delete. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/delete-assets-and-models.html">Deleting assets and models</a> in the <i>IoT SiteWise User Guide</i>.
 func (s *SDK) DeleteAssetModel(ctx context.Context, request operations.DeleteAssetModelRequest) (*operations.DeleteAssetModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/asset-models/{assetModelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/asset-models/{assetModelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2158,7 +2191,10 @@ func (s *SDK) DeleteAssetModel(ctx context.Context, request operations.DeleteAss
 // DeleteDashboard - Deletes a dashboard from IoT SiteWise Monitor.
 func (s *SDK) DeleteDashboard(ctx context.Context, request operations.DeleteDashboardRequest) (*operations.DeleteDashboardResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dashboards/{dashboardId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dashboards/{dashboardId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2248,7 +2284,10 @@ func (s *SDK) DeleteDashboard(ctx context.Context, request operations.DeleteDash
 // DeleteGateway - Deletes a gateway from IoT SiteWise. When you delete a gateway, some of the gateway's files remain in your gateway's file system.
 func (s *SDK) DeleteGateway(ctx context.Context, request operations.DeleteGatewayRequest) (*operations.DeleteGatewayResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/20200301/gateways/{gatewayId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/20200301/gateways/{gatewayId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2325,7 +2364,10 @@ func (s *SDK) DeleteGateway(ctx context.Context, request operations.DeleteGatewa
 // DeletePortal - Deletes a portal from IoT SiteWise Monitor.
 func (s *SDK) DeletePortal(ctx context.Context, request operations.DeletePortalRequest) (*operations.DeletePortalResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2425,7 +2467,10 @@ func (s *SDK) DeletePortal(ctx context.Context, request operations.DeletePortalR
 // DeleteProject - Deletes a project from IoT SiteWise Monitor.
 func (s *SDK) DeleteProject(ctx context.Context, request operations.DeleteProjectRequest) (*operations.DeleteProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2616,7 +2661,10 @@ func (s *SDK) DeleteTimeSeries(ctx context.Context, request operations.DeleteTim
 // DescribeAccessPolicy - Describes an access policy, which specifies an identity's access to an IoT SiteWise Monitor portal or project.
 func (s *SDK) DescribeAccessPolicy(ctx context.Context, request operations.DescribeAccessPolicyRequest) (*operations.DescribeAccessPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/access-policies/{accessPolicyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/access-policies/{accessPolicyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2702,7 +2750,10 @@ func (s *SDK) DescribeAccessPolicy(ctx context.Context, request operations.Descr
 // DescribeAsset - Retrieves information about an asset.
 func (s *SDK) DescribeAsset(ctx context.Context, request operations.DescribeAssetRequest) (*operations.DescribeAssetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2792,7 +2843,10 @@ func (s *SDK) DescribeAsset(ctx context.Context, request operations.DescribeAsse
 // DescribeAssetModel - Retrieves information about an asset model.
 func (s *SDK) DescribeAssetModel(ctx context.Context, request operations.DescribeAssetModelRequest) (*operations.DescribeAssetModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/asset-models/{assetModelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/asset-models/{assetModelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2882,7 +2936,10 @@ func (s *SDK) DescribeAssetModel(ctx context.Context, request operations.Describ
 // DescribeAssetProperty - <p>Retrieves information about an asset property.</p> <note> <p>When you call this operation for an attribute property, this response includes the default attribute value that you define in the asset model. If you update the default value in the model, this operation's response includes the new default value.</p> </note> <p>This operation doesn't return the value of the asset property. To get the value of an asset property, use <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_GetAssetPropertyValue.html">GetAssetPropertyValue</a>.</p>
 func (s *SDK) DescribeAssetProperty(ctx context.Context, request operations.DescribeAssetPropertyRequest) (*operations.DescribeAssetPropertyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/properties/{propertyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/properties/{propertyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2968,7 +3025,10 @@ func (s *SDK) DescribeAssetProperty(ctx context.Context, request operations.Desc
 // DescribeBulkImportJob - Retrieves information about a bulk import job request. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/DescribeBulkImportJob.html">Describe a bulk import job (CLI)</a> in the <i>Amazon Simple Storage Service User Guide</i>.
 func (s *SDK) DescribeBulkImportJob(ctx context.Context, request operations.DescribeBulkImportJobRequest) (*operations.DescribeBulkImportJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3054,7 +3114,10 @@ func (s *SDK) DescribeBulkImportJob(ctx context.Context, request operations.Desc
 // DescribeDashboard - Retrieves information about a dashboard.
 func (s *SDK) DescribeDashboard(ctx context.Context, request operations.DescribeDashboardRequest) (*operations.DescribeDashboardResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dashboards/{dashboardId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dashboards/{dashboardId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3216,7 +3279,10 @@ func (s *SDK) DescribeDefaultEncryptionConfiguration(ctx context.Context, reques
 // DescribeGateway - Retrieves information about a gateway.
 func (s *SDK) DescribeGateway(ctx context.Context, request operations.DescribeGatewayRequest) (*operations.DescribeGatewayResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/20200301/gateways/{gatewayId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/20200301/gateways/{gatewayId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3302,7 +3368,10 @@ func (s *SDK) DescribeGateway(ctx context.Context, request operations.DescribeGa
 // DescribeGatewayCapabilityConfiguration - Retrieves information about a gateway capability configuration. Each gateway capability defines data sources for a gateway. A capability configuration can contain multiple data source configurations. If you define OPC-UA sources for a gateway in the IoT SiteWise console, all of your OPC-UA sources are stored in one capability configuration. To list all capability configurations for a gateway, use <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeGateway.html">DescribeGateway</a>.
 func (s *SDK) DescribeGatewayCapabilityConfiguration(ctx context.Context, request operations.DescribeGatewayCapabilityConfigurationRequest) (*operations.DescribeGatewayCapabilityConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/20200301/gateways/{gatewayId}/capability/{capabilityNamespace}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/20200301/gateways/{gatewayId}/capability/{capabilityNamespace}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3474,7 +3543,10 @@ func (s *SDK) DescribeLoggingOptions(ctx context.Context, request operations.Des
 // DescribePortal - Retrieves information about a portal.
 func (s *SDK) DescribePortal(ctx context.Context, request operations.DescribePortalRequest) (*operations.DescribePortalResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3560,7 +3632,10 @@ func (s *SDK) DescribePortal(ctx context.Context, request operations.DescribePor
 // DescribeProject - Retrieves information about a project.
 func (s *SDK) DescribeProject(ctx context.Context, request operations.DescribeProjectRequest) (*operations.DescribeProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3842,7 +3917,10 @@ func (s *SDK) DescribeTimeSeries(ctx context.Context, request operations.Describ
 // DisassociateAssets - Disassociates a child asset from the given parent asset through a hierarchy defined in the parent asset's model.
 func (s *SDK) DisassociateAssets(ctx context.Context, request operations.DisassociateAssetsRequest) (*operations.DisassociateAssetsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/disassociate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/disassociate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4520,7 +4598,10 @@ func (s *SDK) ListAccessPolicies(ctx context.Context, request operations.ListAcc
 // ListAssetModelProperties - Retrieves a paginated list of properties associated with an asset model. If you update properties associated with the model before you finish listing all the properties, you need to start all over again.
 func (s *SDK) ListAssetModelProperties(ctx context.Context, request operations.ListAssetModelPropertiesRequest) (*operations.ListAssetModelPropertiesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/asset-models/{assetModelId}/properties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/asset-models/{assetModelId}/properties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4690,7 +4771,10 @@ func (s *SDK) ListAssetModels(ctx context.Context, request operations.ListAssetM
 // ListAssetProperties - Retrieves a paginated list of properties associated with an asset. If you update properties associated with the model before you finish listing all the properties, you need to start all over again.
 func (s *SDK) ListAssetProperties(ctx context.Context, request operations.ListAssetPropertiesRequest) (*operations.ListAssetPropertiesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/properties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/properties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4780,7 +4864,10 @@ func (s *SDK) ListAssetProperties(ctx context.Context, request operations.ListAs
 // ListAssetRelationships - Retrieves a paginated list of asset relationships for an asset. You can use this operation to identify an asset's root asset and all associated assets between that asset and its root.
 func (s *SDK) ListAssetRelationships(ctx context.Context, request operations.ListAssetRelationshipsRequest) (*operations.ListAssetRelationshipsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/assetRelationships#traversalType", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/assetRelationships#traversalType", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4960,7 +5047,10 @@ func (s *SDK) ListAssets(ctx context.Context, request operations.ListAssetsReque
 // ListAssociatedAssets - <p>Retrieves a paginated list of associated assets.</p> <p>You can use this operation to do the following:</p> <ul> <li> <p>List child assets associated to a parent asset by a hierarchy that you specify.</p> </li> <li> <p>List an asset's parent asset.</p> </li> </ul>
 func (s *SDK) ListAssociatedAssets(ctx context.Context, request operations.ListAssociatedAssetsRequest) (*operations.ListAssociatedAssetsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/hierarchies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/hierarchies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5380,7 +5470,10 @@ func (s *SDK) ListPortals(ctx context.Context, request operations.ListPortalsReq
 // ListProjectAssets - Retrieves a paginated list of assets associated with an IoT SiteWise Monitor project.
 func (s *SDK) ListProjectAssets(ctx context.Context, request operations.ListProjectAssetsRequest) (*operations.ListProjectAssetsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/assets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/assets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -6348,7 +6441,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateAccessPolicy - Updates an existing access policy that specifies an identity's access to an IoT SiteWise Monitor portal or project resource.
 func (s *SDK) UpdateAccessPolicy(ctx context.Context, request operations.UpdateAccessPolicyRequest) (*operations.UpdateAccessPolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/access-policies/{accessPolicyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/access-policies/{accessPolicyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6444,7 +6540,10 @@ func (s *SDK) UpdateAccessPolicy(ctx context.Context, request operations.UpdateA
 // UpdateAsset - Updates an asset's name. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-assets-and-models.html">Updating assets and models</a> in the <i>IoT SiteWise User Guide</i>.
 func (s *SDK) UpdateAsset(ctx context.Context, request operations.UpdateAssetRequest) (*operations.UpdateAssetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6560,7 +6659,10 @@ func (s *SDK) UpdateAsset(ctx context.Context, request operations.UpdateAssetReq
 // UpdateAssetModel - <p>Updates an asset model and all of the assets that were created from the model. Each asset created from the model inherits the updated asset model's property and hierarchy definitions. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/update-assets-and-models.html">Updating assets and models</a> in the <i>IoT SiteWise User Guide</i>.</p> <important> <p>This operation overwrites the existing model with the provided model. To avoid deleting your asset model's properties or hierarchies, you must include their IDs and definitions in the updated asset model payload. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAssetModel.html">DescribeAssetModel</a>.</p> <p>If you remove a property from an asset model, IoT SiteWise deletes all previous data for that property. If you remove a hierarchy definition from an asset model, IoT SiteWise disassociates every asset associated with that hierarchy. You can't change the type or data type of an existing property.</p> </important>
 func (s *SDK) UpdateAssetModel(ctx context.Context, request operations.UpdateAssetModelRequest) (*operations.UpdateAssetModelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/asset-models/{assetModelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/asset-models/{assetModelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6686,7 +6788,10 @@ func (s *SDK) UpdateAssetModel(ctx context.Context, request operations.UpdateAss
 // UpdateAssetProperty - <p>Updates an asset property's alias and notification state.</p> <important> <p>This operation overwrites the property's existing alias and notification state. To keep your existing property's alias or notification state, you must include the existing values in the UpdateAssetProperty request. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeAssetProperty.html">DescribeAssetProperty</a>.</p> </important>
 func (s *SDK) UpdateAssetProperty(ctx context.Context, request operations.UpdateAssetPropertyRequest) (*operations.UpdateAssetPropertyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/properties/{propertyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assets/{assetId}/properties/{propertyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6783,7 +6888,10 @@ func (s *SDK) UpdateAssetProperty(ctx context.Context, request operations.Update
 // UpdateDashboard - Updates an IoT SiteWise Monitor dashboard.
 func (s *SDK) UpdateDashboard(ctx context.Context, request operations.UpdateDashboardRequest) (*operations.UpdateDashboardResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dashboards/{dashboardId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dashboards/{dashboardId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6879,7 +6987,10 @@ func (s *SDK) UpdateDashboard(ctx context.Context, request operations.UpdateDash
 // UpdateGateway - Updates a gateway's name.
 func (s *SDK) UpdateGateway(ctx context.Context, request operations.UpdateGatewayRequest) (*operations.UpdateGatewayResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/20200301/gateways/{gatewayId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/20200301/gateways/{gatewayId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6976,7 +7087,10 @@ func (s *SDK) UpdateGateway(ctx context.Context, request operations.UpdateGatewa
 // UpdateGatewayCapabilityConfiguration - Updates a gateway capability configuration or defines a new capability configuration. Each gateway capability defines data sources for a gateway. A capability configuration can contain multiple data source configurations. If you define OPC-UA sources for a gateway in the IoT SiteWise console, all of your OPC-UA sources are stored in one capability configuration. To list all capability configurations for a gateway, use <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeGateway.html">DescribeGateway</a>.
 func (s *SDK) UpdateGatewayCapabilityConfiguration(ctx context.Context, request operations.UpdateGatewayCapabilityConfigurationRequest) (*operations.UpdateGatewayCapabilityConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/20200301/gateways/{gatewayId}/capability", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/20200301/gateways/{gatewayId}/capability", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7092,7 +7206,10 @@ func (s *SDK) UpdateGatewayCapabilityConfiguration(ctx context.Context, request 
 // UpdatePortal - Updates an IoT SiteWise Monitor portal.
 func (s *SDK) UpdatePortal(ctx context.Context, request operations.UpdatePortalRequest) (*operations.UpdatePortalResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/portals/{portalId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/portals/{portalId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7198,7 +7315,10 @@ func (s *SDK) UpdatePortal(ctx context.Context, request operations.UpdatePortalR
 // UpdateProject - Updates an IoT SiteWise Monitor project.
 func (s *SDK) UpdateProject(ctx context.Context, request operations.UpdateProjectRequest) (*operations.UpdateProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

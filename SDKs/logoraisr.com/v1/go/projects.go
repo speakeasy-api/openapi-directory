@@ -144,7 +144,10 @@ func (s *projects) ProjectsList(ctx context.Context) (*operations.ProjectsListRe
 // This GET-Method returns a specific project.
 func (s *projects) ProjectsRead(ctx context.Context, request operations.ProjectsReadRequest) (*operations.ProjectsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_number}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_number}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

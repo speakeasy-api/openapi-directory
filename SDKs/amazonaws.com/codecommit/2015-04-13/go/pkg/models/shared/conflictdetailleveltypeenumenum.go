@@ -14,18 +14,22 @@ const (
 	ConflictDetailLevelTypeEnumEnumLineLevel ConflictDetailLevelTypeEnumEnum = "LINE_LEVEL"
 )
 
+func (e ConflictDetailLevelTypeEnumEnum) ToPointer() *ConflictDetailLevelTypeEnumEnum {
+	return &e
+}
+
 func (e *ConflictDetailLevelTypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILE_LEVEL":
 		fallthrough
 	case "LINE_LEVEL":
-		*e = ConflictDetailLevelTypeEnumEnum(s)
+		*e = ConflictDetailLevelTypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConflictDetailLevelTypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ConflictDetailLevelTypeEnumEnum: %v", v)
 	}
 }

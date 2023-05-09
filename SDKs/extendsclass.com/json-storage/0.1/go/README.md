@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/extendsclass.com/json-sto
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteBinIDRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteBinID(ctx, req)
+    res, err := s.DeleteBinID(ctx, operations.DeleteBinIDRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -44,13 +41,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DeleteBinID` - Delete a json bin
-* `GetBinID` - Return a json bin
-* `PatchBinID` - Partially update a json bin with JSON Merge Patch
-* `PostBin` - Create a json bin
-* `PutBinID` - Update a json bin
+* [DeleteBinID](docs/sdk/README.md#deletebinid) - Delete a json bin
+* [GetBinID](docs/sdk/README.md#getbinid) - Return a json bin
+* [PatchBinID](docs/sdk/README.md#patchbinid) - Partially update a json bin with JSON Merge Patch
+* [PostBin](docs/sdk/README.md#postbin) - Create a json bin
+* [PutBinID](docs/sdk/README.md#putbinid) - Update a json bin
 <!-- End SDK Available Operations -->
 
 ### Maturity

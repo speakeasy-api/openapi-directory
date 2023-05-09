@@ -15,20 +15,24 @@ const (
 	ServiceEnumLambda ServiceEnum = "LAMBDA"
 )
 
+func (e ServiceEnum) ToPointer() *ServiceEnum {
+	return &e
+}
+
 func (e *ServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2":
 		fallthrough
 	case "ECR":
 		fallthrough
 	case "LAMBDA":
-		*e = ServiceEnum(s)
+		*e = ServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceEnum: %v", v)
 	}
 }

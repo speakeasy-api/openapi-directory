@@ -15,17 +15,21 @@ const (
 	GETDeleteListenerActionEnumDeleteListener GETDeleteListenerActionEnum = "DeleteListener"
 )
 
+func (e GETDeleteListenerActionEnum) ToPointer() *GETDeleteListenerActionEnum {
+	return &e
+}
+
 func (e *GETDeleteListenerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteListener":
-		*e = GETDeleteListenerActionEnum(s)
+		*e = GETDeleteListenerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteListenerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteListenerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteListenerVersionEnumTwoThousandAndFifteen1201 GETDeleteListenerVersionEnum = "2015-12-01"
 )
 
+func (e GETDeleteListenerVersionEnum) ToPointer() *GETDeleteListenerVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteListenerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = GETDeleteListenerVersionEnum(s)
+		*e = GETDeleteListenerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteListenerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteListenerVersionEnum: %v", v)
 	}
 }
 

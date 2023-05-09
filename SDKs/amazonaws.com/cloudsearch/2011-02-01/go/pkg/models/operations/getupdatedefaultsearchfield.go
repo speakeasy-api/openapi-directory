@@ -15,17 +15,21 @@ const (
 	GETUpdateDefaultSearchFieldActionEnumUpdateDefaultSearchField GETUpdateDefaultSearchFieldActionEnum = "UpdateDefaultSearchField"
 )
 
+func (e GETUpdateDefaultSearchFieldActionEnum) ToPointer() *GETUpdateDefaultSearchFieldActionEnum {
+	return &e
+}
+
 func (e *GETUpdateDefaultSearchFieldActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateDefaultSearchField":
-		*e = GETUpdateDefaultSearchFieldActionEnum(s)
+		*e = GETUpdateDefaultSearchFieldActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateDefaultSearchFieldActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateDefaultSearchFieldActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUpdateDefaultSearchFieldVersionEnumTwoThousandAndEleven0201 GETUpdateDefaultSearchFieldVersionEnum = "2011-02-01"
 )
 
+func (e GETUpdateDefaultSearchFieldVersionEnum) ToPointer() *GETUpdateDefaultSearchFieldVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateDefaultSearchFieldVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-02-01":
-		*e = GETUpdateDefaultSearchFieldVersionEnum(s)
+		*e = GETUpdateDefaultSearchFieldVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateDefaultSearchFieldVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateDefaultSearchFieldVersionEnum: %v", v)
 	}
 }
 

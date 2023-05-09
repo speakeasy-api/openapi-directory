@@ -2,6 +2,42 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum - Type of notification
+type GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum string
+
+const (
+	GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnumNotificationTypeUnspecified             GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum = "NOTIFICATION_TYPE_UNSPECIFIED"
+	GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnumNotificationTypeSecurityPrivacyAdvisory GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum = "NOTIFICATION_TYPE_SECURITY_PRIVACY_ADVISORY"
+	GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnumNotificationTypeSensitiveActions        GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum = "NOTIFICATION_TYPE_SENSITIVE_ACTIONS"
+)
+
+func (e GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum) ToPointer() *GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum {
+	return &e
+}
+
+func (e *GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "NOTIFICATION_TYPE_UNSPECIFIED":
+		fallthrough
+	case "NOTIFICATION_TYPE_SECURITY_PRIVACY_ADVISORY":
+		fallthrough
+	case "NOTIFICATION_TYPE_SENSITIVE_ACTIONS":
+		*e = GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum: %v", v)
+	}
+}
+
 // GoogleCloudAdvisorynotificationsV1Notification - A notification object for notifying customers about security and privacy issues.
 type GoogleCloudAdvisorynotificationsV1Notification struct {
 	// Output only. Time the notification was created.
@@ -10,6 +46,8 @@ type GoogleCloudAdvisorynotificationsV1Notification struct {
 	Messages []GoogleCloudAdvisorynotificationsV1Message `json:"messages,omitempty"`
 	// The resource name of the notification. Format: organizations/{organization}/locations/{location}/notifications/{notification}.
 	Name *string `json:"name,omitempty"`
+	// Type of notification
+	NotificationType *GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum `json:"notificationType,omitempty"`
 	// A subject line of a notification.
 	Subject *GoogleCloudAdvisorynotificationsV1Subject `json:"subject,omitempty"`
 }

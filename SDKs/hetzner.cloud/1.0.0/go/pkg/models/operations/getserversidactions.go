@@ -32,12 +32,16 @@ const (
 	GetServersIDActionsSortParameterSortEnumFinishedDesc GetServersIDActionsSortParameterSortEnum = "finished:desc"
 )
 
+func (e GetServersIDActionsSortParameterSortEnum) ToPointer() *GetServersIDActionsSortParameterSortEnum {
+	return &e
+}
+
 func (e *GetServersIDActionsSortParameterSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -73,10 +77,10 @@ func (e *GetServersIDActionsSortParameterSortEnum) UnmarshalJSON(data []byte) er
 	case "finished:asc":
 		fallthrough
 	case "finished:desc":
-		*e = GetServersIDActionsSortParameterSortEnum(s)
+		*e = GetServersIDActionsSortParameterSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServersIDActionsSortParameterSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServersIDActionsSortParameterSortEnum: %v", v)
 	}
 }
 
@@ -89,21 +93,25 @@ const (
 	GetServersIDActionsStatusParameterStatusEnumError   GetServersIDActionsStatusParameterStatusEnum = "error"
 )
 
+func (e GetServersIDActionsStatusParameterStatusEnum) ToPointer() *GetServersIDActionsStatusParameterStatusEnum {
+	return &e
+}
+
 func (e *GetServersIDActionsStatusParameterStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "success":
 		fallthrough
 	case "error":
-		*e = GetServersIDActionsStatusParameterStatusEnum(s)
+		*e = GetServersIDActionsStatusParameterStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServersIDActionsStatusParameterStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServersIDActionsStatusParameterStatusEnum: %v", v)
 	}
 }
 
@@ -140,21 +148,25 @@ const (
 	GetServersIDActionsActionsResponseActionStatusEnumError   GetServersIDActionsActionsResponseActionStatusEnum = "error"
 )
 
+func (e GetServersIDActionsActionsResponseActionStatusEnum) ToPointer() *GetServersIDActionsActionsResponseActionStatusEnum {
+	return &e
+}
+
 func (e *GetServersIDActionsActionsResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = GetServersIDActionsActionsResponseActionStatusEnum(s)
+		*e = GetServersIDActionsActionsResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServersIDActionsActionsResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServersIDActionsActionsResponseActionStatusEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	StringFilterComparisonEnumPrefixNotEquals StringFilterComparisonEnum = "PREFIX_NOT_EQUALS"
 )
 
+func (e StringFilterComparisonEnum) ToPointer() *StringFilterComparisonEnum {
+	return &e
+}
+
 func (e *StringFilterComparisonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUALS":
 		fallthrough
 	case "PREFIX":
@@ -29,9 +33,9 @@ func (e *StringFilterComparisonEnum) UnmarshalJSON(data []byte) error {
 	case "NOT_EQUALS":
 		fallthrough
 	case "PREFIX_NOT_EQUALS":
-		*e = StringFilterComparisonEnum(s)
+		*e = StringFilterComparisonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StringFilterComparisonEnum: %s", s)
+		return fmt.Errorf("invalid value for StringFilterComparisonEnum: %v", v)
 	}
 }

@@ -48,12 +48,16 @@ const (
 	BookingStatusEnumPaymentAbandoned BookingStatusEnum = "PAYMENT_ABANDONED"
 )
 
+func (e BookingStatusEnum) ToPointer() *BookingStatusEnum {
+	return &e
+}
+
 func (e *BookingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANCELLED":
 		fallthrough
 	case "PENDING":
@@ -63,10 +67,10 @@ func (e *BookingStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PAYMENT_REQUIRED":
 		fallthrough
 	case "PAYMENT_ABANDONED":
-		*e = BookingStatusEnum(s)
+		*e = BookingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BookingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BookingStatusEnum: %v", v)
 	}
 }
 

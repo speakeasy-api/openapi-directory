@@ -16,17 +16,21 @@ const (
 	DeleteActivationXAmzTargetEnumAmazonSsmDeleteActivation DeleteActivationXAmzTargetEnum = "AmazonSSM.DeleteActivation"
 )
 
+func (e DeleteActivationXAmzTargetEnum) ToPointer() *DeleteActivationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteActivationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DeleteActivation":
-		*e = DeleteActivationXAmzTargetEnum(s)
+		*e = DeleteActivationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteActivationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteActivationXAmzTargetEnum: %v", v)
 	}
 }
 

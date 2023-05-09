@@ -13,17 +13,21 @@ const (
 	OneGetResponses200ContentApplication1jsonSchemaStatusEnumOk OneGetResponses200ContentApplication1jsonSchemaStatusEnum = "OK"
 )
 
+func (e OneGetResponses200ContentApplication1jsonSchemaStatusEnum) ToPointer() *OneGetResponses200ContentApplication1jsonSchemaStatusEnum {
+	return &e
+}
+
 func (e *OneGetResponses200ContentApplication1jsonSchemaStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
-		*e = OneGetResponses200ContentApplication1jsonSchemaStatusEnum(s)
+		*e = OneGetResponses200ContentApplication1jsonSchemaStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OneGetResponses200ContentApplication1jsonSchemaStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OneGetResponses200ContentApplication1jsonSchemaStatusEnum: %v", v)
 	}
 }
 

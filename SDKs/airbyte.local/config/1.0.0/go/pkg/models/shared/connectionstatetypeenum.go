@@ -17,12 +17,16 @@ const (
 	ConnectionStateTypeEnumNotSet ConnectionStateTypeEnum = "not_set"
 )
 
+func (e ConnectionStateTypeEnum) ToPointer() *ConnectionStateTypeEnum {
+	return &e
+}
+
 func (e *ConnectionStateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "global":
 		fallthrough
 	case "stream":
@@ -30,9 +34,9 @@ func (e *ConnectionStateTypeEnum) UnmarshalJSON(data []byte) error {
 	case "legacy":
 		fallthrough
 	case "not_set":
-		*e = ConnectionStateTypeEnum(s)
+		*e = ConnectionStateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionStateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionStateTypeEnum: %v", v)
 	}
 }

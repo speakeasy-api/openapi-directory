@@ -15,17 +15,21 @@ const (
 	POSTModifyInstanceCapacityReservationAttributesActionEnumModifyInstanceCapacityReservationAttributes POSTModifyInstanceCapacityReservationAttributesActionEnum = "ModifyInstanceCapacityReservationAttributes"
 )
 
+func (e POSTModifyInstanceCapacityReservationAttributesActionEnum) ToPointer() *POSTModifyInstanceCapacityReservationAttributesActionEnum {
+	return &e
+}
+
 func (e *POSTModifyInstanceCapacityReservationAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyInstanceCapacityReservationAttributes":
-		*e = POSTModifyInstanceCapacityReservationAttributesActionEnum(s)
+		*e = POSTModifyInstanceCapacityReservationAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyInstanceCapacityReservationAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyInstanceCapacityReservationAttributesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyInstanceCapacityReservationAttributesVersionEnumTwoThousandAndSixteen1115 POSTModifyInstanceCapacityReservationAttributesVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyInstanceCapacityReservationAttributesVersionEnum) ToPointer() *POSTModifyInstanceCapacityReservationAttributesVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyInstanceCapacityReservationAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyInstanceCapacityReservationAttributesVersionEnum(s)
+		*e = POSTModifyInstanceCapacityReservationAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyInstanceCapacityReservationAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyInstanceCapacityReservationAttributesVersionEnum: %v", v)
 	}
 }
 

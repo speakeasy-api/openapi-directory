@@ -15,20 +15,24 @@ const (
 	MLModelTypeEnumMulticlass MLModelTypeEnum = "MULTICLASS"
 )
 
+func (e MLModelTypeEnum) ToPointer() *MLModelTypeEnum {
+	return &e
+}
+
 func (e *MLModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGRESSION":
 		fallthrough
 	case "BINARY":
 		fallthrough
 	case "MULTICLASS":
-		*e = MLModelTypeEnum(s)
+		*e = MLModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MLModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MLModelTypeEnum: %v", v)
 	}
 }

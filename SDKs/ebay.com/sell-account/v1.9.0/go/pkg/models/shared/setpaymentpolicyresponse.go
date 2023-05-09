@@ -2,7 +2,7 @@
 
 package shared
 
-// SetPaymentPolicyResponse - A complex type that is populated with a response containing a payment policy.
+// SetPaymentPolicyResponse - Complex type that that gets populated with a response containing a payment policy.
 type SetPaymentPolicyResponse struct {
 	// This container indicates whether the payment business policy applies to motor vehicle listings, or if it applies to non-motor vehicle listings.
 	CategoryTypes []CategoryType `json:"categoryTypes,omitempty"`

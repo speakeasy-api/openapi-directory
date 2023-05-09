@@ -15,17 +15,21 @@ const (
 	POSTUntagRoleActionEnumUntagRole POSTUntagRoleActionEnum = "UntagRole"
 )
 
+func (e POSTUntagRoleActionEnum) ToPointer() *POSTUntagRoleActionEnum {
+	return &e
+}
+
 func (e *POSTUntagRoleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UntagRole":
-		*e = POSTUntagRoleActionEnum(s)
+		*e = POSTUntagRoleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUntagRoleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUntagRoleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUntagRoleVersionEnumTwoThousandAndTen0508 POSTUntagRoleVersionEnum = "2010-05-08"
 )
 
+func (e POSTUntagRoleVersionEnum) ToPointer() *POSTUntagRoleVersionEnum {
+	return &e
+}
+
 func (e *POSTUntagRoleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTUntagRoleVersionEnum(s)
+		*e = POSTUntagRoleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUntagRoleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUntagRoleVersionEnum: %v", v)
 	}
 }
 

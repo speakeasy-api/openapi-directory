@@ -16,21 +16,25 @@ const (
 	GoogleCloudRetailV2alphaSearchRequestSpellCorrectionSpecModeEnumAuto            GoogleCloudRetailV2alphaSearchRequestSpellCorrectionSpecModeEnum = "AUTO"
 )
 
+func (e GoogleCloudRetailV2alphaSearchRequestSpellCorrectionSpecModeEnum) ToPointer() *GoogleCloudRetailV2alphaSearchRequestSpellCorrectionSpecModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaSearchRequestSpellCorrectionSpecModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODE_UNSPECIFIED":
 		fallthrough
 	case "SUGGESTION_ONLY":
 		fallthrough
 	case "AUTO":
-		*e = GoogleCloudRetailV2alphaSearchRequestSpellCorrectionSpecModeEnum(s)
+		*e = GoogleCloudRetailV2alphaSearchRequestSpellCorrectionSpecModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaSearchRequestSpellCorrectionSpecModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaSearchRequestSpellCorrectionSpecModeEnum: %v", v)
 	}
 }
 

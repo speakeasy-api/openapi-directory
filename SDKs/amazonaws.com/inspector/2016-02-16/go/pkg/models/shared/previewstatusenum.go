@@ -14,18 +14,22 @@ const (
 	PreviewStatusEnumCompleted      PreviewStatusEnum = "COMPLETED"
 )
 
+func (e PreviewStatusEnum) ToPointer() *PreviewStatusEnum {
+	return &e
+}
+
 func (e *PreviewStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORK_IN_PROGRESS":
 		fallthrough
 	case "COMPLETED":
-		*e = PreviewStatusEnum(s)
+		*e = PreviewStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PreviewStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PreviewStatusEnum: %v", v)
 	}
 }

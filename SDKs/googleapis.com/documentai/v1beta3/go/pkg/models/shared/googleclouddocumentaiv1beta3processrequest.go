@@ -2,11 +2,11 @@
 
 package shared
 
-// GoogleCloudDocumentaiV1beta3ProcessRequest - Request message for the process document method.
+// GoogleCloudDocumentaiV1beta3ProcessRequest - Request message for the ProcessDocument method.
 type GoogleCloudDocumentaiV1beta3ProcessRequest struct {
 	// Document represents the canonical document resource in Document AI. It is an interchange format that provides insights into documents and allows for collaboration between users and Document AI to iterate and optimize for quality.
 	Document *GoogleCloudDocumentaiV1beta3Document `json:"document,omitempty"`
-	// Specifies which fields to include in ProcessResponse's document. Only supports top level document and pages field so it must be in the form of `{document_field_name}` or `pages.{page_field_name}`.
+	// Specifies which fields to include in the ProcessResponse.document output. Only supports top-level document and pages field, so it must be in the form of `{document_field_name}` or `pages.{page_field_name}`.
 	FieldMask *string `json:"fieldMask,omitempty"`
 	// Document represents the canonical document resource in Document AI. It is an interchange format that provides insights into documents and allows for collaboration between users and Document AI to iterate and optimize for quality.
 	InlineDocument *GoogleCloudDocumentaiV1beta3Document `json:"inlineDocument,omitempty"`

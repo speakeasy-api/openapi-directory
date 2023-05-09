@@ -35,7 +35,10 @@ func newBankAccounts(defaultClient, securityClient HTTPClient, serverURL, langua
 // BankAccountsDelete - Removes an existing Bank Account.
 func (s *bankAccounts) BankAccountsDelete(ctx context.Context, request operations.BankAccountsDeleteRequest) (*operations.BankAccountsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/bankAccounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/bankAccounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -237,7 +240,10 @@ func (s *bankAccounts) BankAccountsProcessBatch(ctx context.Context, request []s
 // BankAccountsPut - Updates an existing Bank Account.
 func (s *bankAccounts) BankAccountsPut(ctx context.Context, request operations.BankAccountsPutRequest) (*operations.BankAccountsPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/bankAccounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/bankAccounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BankAccountDto", "json")
 	if err != nil {
@@ -291,7 +297,10 @@ func (s *bankAccounts) BankAccountsPut(ctx context.Context, request operations.B
 // GetV1BankAccountsID - Returns information about a single Bank Account.
 func (s *bankAccounts) GetV1BankAccountsID(ctx context.Context, request operations.GetV1BankAccountsIDRequest) (*operations.GetV1BankAccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/bankAccounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/bankAccounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

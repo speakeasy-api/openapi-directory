@@ -15,19 +15,23 @@ const (
 	UpdateAuthorizerResponseAuthorizerTypeEnumJwt     UpdateAuthorizerResponseAuthorizerTypeEnum = "JWT"
 )
 
+func (e UpdateAuthorizerResponseAuthorizerTypeEnum) ToPointer() *UpdateAuthorizerResponseAuthorizerTypeEnum {
+	return &e
+}
+
 func (e *UpdateAuthorizerResponseAuthorizerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUEST":
 		fallthrough
 	case "JWT":
-		*e = UpdateAuthorizerResponseAuthorizerTypeEnum(s)
+		*e = UpdateAuthorizerResponseAuthorizerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAuthorizerResponseAuthorizerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAuthorizerResponseAuthorizerTypeEnum: %v", v)
 	}
 }
 

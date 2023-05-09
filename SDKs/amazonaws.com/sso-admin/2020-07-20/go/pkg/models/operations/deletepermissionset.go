@@ -16,17 +16,21 @@ const (
 	DeletePermissionSetXAmzTargetEnumSwbExternalServiceDeletePermissionSet DeletePermissionSetXAmzTargetEnum = "SWBExternalService.DeletePermissionSet"
 )
 
+func (e DeletePermissionSetXAmzTargetEnum) ToPointer() *DeletePermissionSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeletePermissionSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.DeletePermissionSet":
-		*e = DeletePermissionSetXAmzTargetEnum(s)
+		*e = DeletePermissionSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletePermissionSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletePermissionSetXAmzTargetEnum: %v", v)
 	}
 }
 

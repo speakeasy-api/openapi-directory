@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -18,4 +19,6 @@ pkg/models/operations/getrecordsrecordidmorelikethisformat.go
 pkg/models/shared/record.go
 pkg/models/shared/formatenum.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/apicalls/README.md
 USAGE.md

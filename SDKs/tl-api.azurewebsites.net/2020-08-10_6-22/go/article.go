@@ -155,6 +155,7 @@ func (s *article) ArticleDelete(ctx context.Context, request operations.ArticleD
 
 	return res, nil
 }
+
 func (s *article) ArticleGetAddons(ctx context.Context, request operations.ArticleGetAddonsRequest) (*operations.ArticleGetAddonsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Article/GetAddons"
@@ -329,7 +330,10 @@ func (s *article) ArticleGetRevenueAccounts(ctx context.Context) (*operations.Ar
 // ArticleGymArticleDetails - Get Gym specific properties for article
 func (s *article) ArticleGymArticleDetails(ctx context.Context, request operations.ArticleGymArticleDetailsRequest) (*operations.ArticleGymArticleDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/Article/GymArticle/{articleId}/{gymId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/Article/GymArticle/{articleId}/{gymId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -707,7 +711,10 @@ func (s *article) ArticleUpdateStatus(ctx context.Context, request operations.Ar
 // This will return all properties related to article entity
 func (s *article) ArticleGet(ctx context.Context, request operations.ArticleGetRequest) (*operations.ArticleGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/Article/{articleID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/Article/{articleID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

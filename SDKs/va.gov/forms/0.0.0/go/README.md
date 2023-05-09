@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/va.gov/forms/0.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FindFormByFormNameRequest{
-        FormName: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Forms.FindFormByFormName(ctx, req, operations.FindFormByFormNameSecurity{
+    res, err := s.Forms.FindFormByFormName(ctx, operations.FindFormByFormNameRequest{
+        FormName: "corrupti",
+    }, operations.FindFormByFormNameSecurity{
         Apikey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -47,10 +44,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### Forms
+### [Forms](docs/forms/README.md)
 
-* `FindFormByFormName` - Find form by form name
-* `FindForms` - Returns all VA Forms and their last revision date
+* [FindFormByFormName](docs/forms/README.md#findformbyformname) - Find form by form name
+* [FindForms](docs/forms/README.md#findforms) - Returns all VA Forms and their last revision date
 <!-- End SDK Available Operations -->
 
 ### Maturity

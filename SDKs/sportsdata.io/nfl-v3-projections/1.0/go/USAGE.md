@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,13 +16,11 @@ func main() {
         }),
     )
 
-    req := operations.DfsSlateOwnershipProjectionsBySlateidRequest{
-        Format: "JSON",
-        SlateID: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.DfsSlateOwnershipProjectionsBySlateid(ctx, req)
+    res, err := s.DfsSlateOwnershipProjectionsBySlateid(ctx, operations.DfsSlateOwnershipProjectionsBySlateidRequest{
+        Format: operations.DfsSlateOwnershipProjectionsBySlateidFormatEnumJSON,
+        SlateID: "provident",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -33,21 +33,25 @@ const (
 	CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnumNonGateway             CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum = "NON_GATEWAY"
 )
 
+func (e CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum) ToPointer() *CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum {
+	return &e
+}
+
 func (e *CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GATEWAY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GATEWAY":
 		fallthrough
 	case "NON_GATEWAY":
-		*e = CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum(s)
+		*e = CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum: %v", v)
 	}
 }
 

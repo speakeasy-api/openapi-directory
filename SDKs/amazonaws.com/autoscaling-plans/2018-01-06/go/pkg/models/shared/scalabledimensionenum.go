@@ -20,12 +20,16 @@ const (
 	ScalableDimensionEnumDynamodbIndexWriteCapacityUnits            ScalableDimensionEnum = "dynamodb:index:WriteCapacityUnits"
 )
 
+func (e ScalableDimensionEnum) ToPointer() *ScalableDimensionEnum {
+	return &e
+}
+
 func (e *ScalableDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "autoscaling:autoScalingGroup:DesiredCapacity":
 		fallthrough
 	case "ecs:service:DesiredCount":
@@ -41,9 +45,9 @@ func (e *ScalableDimensionEnum) UnmarshalJSON(data []byte) error {
 	case "dynamodb:index:ReadCapacityUnits":
 		fallthrough
 	case "dynamodb:index:WriteCapacityUnits":
-		*e = ScalableDimensionEnum(s)
+		*e = ScalableDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScalableDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for ScalableDimensionEnum: %v", v)
 	}
 }

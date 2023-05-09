@@ -13,39 +13,37 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/izettle.com/products/1.0.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateCategoriesRequest{
+    ctx := context.Background()
+    res, err := s.Categories.CreateCategories(ctx, operations.CreateCategoriesRequest{
         CreateCategoriesRequest: shared.CreateCategoriesRequest{
             Categories: []shared.CategoryDTO{
                 shared.CategoryDTO{
-                    Name: "provident",
-                    UUID: "bd9d8d69-a674-4e0f-867c-c8796ed151a0",
+                    Name: "Kelvin Sporer",
+                    UUID: "8d69a674-e0f4-467c-8879-6ed151a05dfc",
                 },
                 shared.CategoryDTO{
-                    Name: "ipsam",
-                    UUID: "dfc2ddf7-cc78-4ca1-ba92-8fc816742cb7",
+                    Name: "Teri Strosin",
+                    UUID: "cc78ca1b-a928-4fc8-9674-2cb739205929",
                 },
                 shared.CategoryDTO{
-                    Name: "ipsum",
-                    UUID: "92059293-96fe-4a75-96eb-10faaa2352c5",
+                    Name: "Faye Howe",
+                    UUID: "a7596eb1-0faa-4a23-92c5-955907aff1a3",
                 },
             },
         },
-        OrganizationUUID: "955907af-f1a3-4a2f-a946-7739251aa52c",
-    }
-
-    ctx := context.Background()
-    res, err := s.Categories.CreateCategories(ctx, req, operations.CreateCategoriesSecurity{
+        OrganizationUUID: "a2fa9467-7392-451a-a52c-3f5ad019da1f",
+    }, operations.CreateCategoriesSecurity{
         ZettleOauth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -63,61 +61,61 @@ func main() {
 ## Available Resources and Operations
 
 
-### Categories
+### [Categories](docs/categories/README.md)
 
-* `CreateCategories` - Create a new category
-* `DeleteCategory` - Delete a category
-* `GetProductTypes` - Retrieve all categories
-* `RenameCategory` - Rename a category
+* [CreateCategories](docs/categories/README.md#createcategories) - Create a new category
+* [DeleteCategory](docs/categories/README.md#deletecategory) - Delete a category
+* [GetProductTypes](docs/categories/README.md#getproducttypes) - Retrieve all categories
+* [RenameCategory](docs/categories/README.md#renamecategory) - Rename a category
 
-### Discounts
+### [Discounts](docs/discounts/README.md)
 
-* `CreateDiscount` - Create a discount
-* `DeleteDiscount` - Delete a single discount 
-* `GetAllDiscounts` - Retrieve all discounts
-* `GetDiscount` - Retrieve a single discount
-* `UpdateDiscount` - Update a single discount
+* [CreateDiscount](docs/discounts/README.md#creatediscount) - Create a discount
+* [DeleteDiscount](docs/discounts/README.md#deletediscount) - Delete a single discount 
+* [GetAllDiscounts](docs/discounts/README.md#getalldiscounts) - Retrieve all discounts
+* [GetDiscount](docs/discounts/README.md#getdiscount) - Retrieve a single discount
+* [UpdateDiscount](docs/discounts/README.md#updatediscount) - Update a single discount
 
-### Images
+### [Images](docs/images/README.md)
 
-* `GetAllImageUrls` - Retrieve all library item images
+* [GetAllImageUrls](docs/images/README.md#getallimageurls) - Retrieve all library item images
 
-### Import
+### [Import](docs/import/README.md)
 
-* `GetLatestImportStatus` - Get status for latest import
-* `GetStatusByUUID` - Get status for an import
-* `ImportLibraryV2` - Import library items
+* [GetLatestImportStatus](docs/import/README.md#getlatestimportstatus) - Get status for latest import
+* [GetStatusByUUID](docs/import/README.md#getstatusbyuuid) - Get status for an import
+* [ImportLibraryV2](docs/import/README.md#importlibraryv2) - Import library items
 
-### Library
+### [Library](docs/library/README.md)
 
-* `GetLibrary` - Retrieve the entire library
+* [GetLibrary](docs/library/README.md#getlibrary) - Retrieve the entire library
 
-### Products
+### [Products](docs/products/README.md)
 
-* `CountAllProducts` - Retrieve the count of existing products
-* `CreateProduct` - Create a new product
-* `DeleteProduct` - Delete a single product
-* `DeleteProducts` - Delete a list of products
-* `GetAllOptions` - Retrieve an aggregate of active Options in the library
-* `GetAllProductsInPos` - Retrieve all products visible in POS
-* `GetAllProductsV2` - Retrieve all products visible in POS – v2
-* `GetProduct` - Retrieve a single product
-* `UpdateProduct` - Update a single product
+* [CountAllProducts](docs/products/README.md#countallproducts) - Retrieve the count of existing products
+* [CreateProduct](docs/products/README.md#createproduct) - Create a new product
+* [DeleteProduct](docs/products/README.md#deleteproduct) - Delete a single product
+* [DeleteProducts](docs/products/README.md#deleteproducts) - Delete a list of products
+* [GetAllOptions](docs/products/README.md#getalloptions) - Retrieve an aggregate of active Options in the library
+* [GetAllProductsInPos](docs/products/README.md#getallproductsinpos) - Retrieve all products visible in POS
+* [GetAllProductsV2](docs/products/README.md#getallproductsv2) - Retrieve all products visible in POS – v2
+* [GetProduct](docs/products/README.md#getproduct) - Retrieve a single product
+* [UpdateProduct](docs/products/README.md#updateproduct) - Update a single product
 
-### ProductsOnline
+### [ProductsOnline](docs/productsonline/README.md)
 
-* `CreateProductSlug` - Create a product identifier
+* [CreateProductSlug](docs/productsonline/README.md#createproductslug) - Create a product identifier
 
-### Taxes
+### [Taxes](docs/taxes/README.md)
 
-* `CreateTaxRates` - Create new tax rates
-* `DeleteTaxRate` - Delete a single tax rate
-* `GetProductCountForAllTaxes` - Get all tax rates and a count of products associated with each
-* `GetTaxRate` - Get a single tax rate
-* `GetTaxRates` - Get all available tax rates
-* `GetTaxSettings` - Get the organization tax settings 
-* `SetTaxationMode` - Update the organization tax settings
-* `UpdateTaxRate` - Update a single tax rate
+* [CreateTaxRates](docs/taxes/README.md#createtaxrates) - Create new tax rates
+* [DeleteTaxRate](docs/taxes/README.md#deletetaxrate) - Delete a single tax rate
+* [GetProductCountForAllTaxes](docs/taxes/README.md#getproductcountforalltaxes) - Get all tax rates and a count of products associated with each
+* [GetTaxRate](docs/taxes/README.md#gettaxrate) - Get a single tax rate
+* [GetTaxRates](docs/taxes/README.md#gettaxrates) - Get all available tax rates
+* [GetTaxSettings](docs/taxes/README.md#gettaxsettings) - Get the organization tax settings 
+* [SetTaxationMode](docs/taxes/README.md#settaxationmode) - Update the organization tax settings
+* [UpdateTaxRate](docs/taxes/README.md#updatetaxrate) - Update a single tax rate
 <!-- End SDK Available Operations -->
 
 ### Maturity

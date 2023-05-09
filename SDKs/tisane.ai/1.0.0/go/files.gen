@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -18,4 +19,6 @@ pkg/models/operations/listhypernyms.go
 pkg/models/operations/listhyponyms.go
 pkg/models/operations/listinflectedforms.go
 pkg/models/operations/listwordsenses.go
+docs/sdk/README.md
+docs/languagemodeldirectaccess/README.md
 USAGE.md

@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -92,4 +93,13 @@ pkg/models/shared/hmackey.go
 pkg/models/shared/hmackeymetadata.go
 pkg/models/shared/hmackeysmetadata.go
 pkg/models/shared/serviceaccount.go
+docs/sdk/README.md
+docs/bucketaccesscontrols/README.md
+docs/buckets/README.md
+docs/channels/README.md
+docs/defaultobjectaccesscontrols/README.md
+docs/notifications/README.md
+docs/objectaccesscontrols/README.md
+docs/objects/README.md
+docs/projects/README.md
 USAGE.md

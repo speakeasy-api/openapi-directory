@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetEventsOptionsSecurity struct {
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
+}
+
 type GetEventsOptionsResponse struct {
 	// OK
 	AuditEventTypesResp *shared.AuditEventTypesResp

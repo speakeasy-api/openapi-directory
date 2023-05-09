@@ -16,21 +16,25 @@ const (
 	TranscriptMonologuesElementsTypeEnumUnknown TranscriptMonologuesElementsTypeEnum = "unknown"
 )
 
+func (e TranscriptMonologuesElementsTypeEnum) ToPointer() *TranscriptMonologuesElementsTypeEnum {
+	return &e
+}
+
 func (e *TranscriptMonologuesElementsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "punct":
 		fallthrough
 	case "unknown":
-		*e = TranscriptMonologuesElementsTypeEnum(s)
+		*e = TranscriptMonologuesElementsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TranscriptMonologuesElementsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TranscriptMonologuesElementsTypeEnum: %v", v)
 	}
 }
 

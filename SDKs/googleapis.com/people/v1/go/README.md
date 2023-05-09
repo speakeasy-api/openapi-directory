@@ -13,40 +13,38 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/people/v1/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PeopleContactGroupsBatchGetRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        GroupFields: "nulla",
-        Key: "corrupti",
-        MaxMembers: 847252,
-        OauthToken: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
+    ctx := context.Background()
+    res, err := s.ContactGroups.PeopleContactGroupsBatchGet(ctx, operations.PeopleContactGroupsBatchGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        GroupFields: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        MaxMembers: sdk.Int64(847252),
+        OauthToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
         ResourceNames: []string{
             "suscipit",
             "iure",
             "magnam",
         },
-        UploadType: "debitis",
-        UploadProtocol: "ipsa",
-    }
-
-    ctx := context.Background()
-    res, err := s.ContactGroups.PeopleContactGroupsBatchGet(ctx, req, operations.PeopleContactGroupsBatchGetSecurity{
+        UploadType: sdk.String("debitis"),
+        UploadProtocol: sdk.String("ipsa"),
+    }, operations.PeopleContactGroupsBatchGetSecurity{
         Option1: &operations.PeopleContactGroupsBatchGetSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -67,37 +65,37 @@ func main() {
 ## Available Resources and Operations
 
 
-### ContactGroups
+### [ContactGroups](docs/contactgroups/README.md)
 
-* `PeopleContactGroupsBatchGet` - Get a list of contact groups owned by the authenticated user by specifying a list of contact group resource names.
-* `PeopleContactGroupsCreate` - Create a new contact group owned by the authenticated user. Created contact group names must be unique to the users contact groups. Attempting to create a group with a duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-* `PeopleContactGroupsDelete` - Delete an existing contact group owned by the authenticated user by specifying a contact group resource name. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-* `PeopleContactGroupsList` - List all contact groups owned by the authenticated user. Members of the contact groups are not populated.
-* `PeopleContactGroupsMembersModify` - Modify the members of a contact group owned by the authenticated user. The only system contact groups that can have members added are `contactGroups/myContacts` and `contactGroups/starred`. Other system contact groups are deprecated and can only have contacts removed.
-* `PeopleContactGroupsUpdate` - Update the name of an existing contact group owned by the authenticated user. Updated contact group names must be unique to the users contact groups. Attempting to create a group with a duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
+* [PeopleContactGroupsBatchGet](docs/contactgroups/README.md#peoplecontactgroupsbatchget) - Get a list of contact groups owned by the authenticated user by specifying a list of contact group resource names.
+* [PeopleContactGroupsCreate](docs/contactgroups/README.md#peoplecontactgroupscreate) - Create a new contact group owned by the authenticated user. Created contact group names must be unique to the users contact groups. Attempting to create a group with a duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
+* [PeopleContactGroupsDelete](docs/contactgroups/README.md#peoplecontactgroupsdelete) - Delete an existing contact group owned by the authenticated user by specifying a contact group resource name. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
+* [PeopleContactGroupsList](docs/contactgroups/README.md#peoplecontactgroupslist) - List all contact groups owned by the authenticated user. Members of the contact groups are not populated.
+* [PeopleContactGroupsMembersModify](docs/contactgroups/README.md#peoplecontactgroupsmembersmodify) - Modify the members of a contact group owned by the authenticated user. The only system contact groups that can have members added are `contactGroups/myContacts` and `contactGroups/starred`. Other system contact groups are deprecated and can only have contacts removed.
+* [PeopleContactGroupsUpdate](docs/contactgroups/README.md#peoplecontactgroupsupdate) - Update the name of an existing contact group owned by the authenticated user. Updated contact group names must be unique to the users contact groups. Attempting to create a group with a duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 
-### OtherContacts
+### [OtherContacts](docs/othercontacts/README.md)
 
-* `PeopleOtherContactsCopyOtherContactToMyContactsGroup` - Copies an "Other contact" to a new contact in the user's "myContacts" group Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-* `PeopleOtherContactsList` - List all "Other contacts", that is contacts that are not in a contact group. "Other contacts" are typically auto created contacts from interactions. Sync tokens expire 7 days after the full sync. A request with an expired sync token will get an error with an [google.rpc.ErrorInfo](https://cloud.google.com/apis/design/errors#error_info) with reason "EXPIRED_SYNC_TOKEN". In the case of such an error clients should make a full sync request without a `sync_token`. The first page of a full sync request has an additional quota. If the quota is exceeded, a 429 error will be returned. This quota is fixed and can not be increased. When the `sync_token` is specified, resources deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or `sync_token` is specified, all other request parameters must match the first call. Writes may have a propagation delay of several minutes for sync requests. Incremental syncs are not intended for read-after-write use cases. See example usage at [List the user's other contacts that have changed](/people/v1/other-contacts#list_the_users_other_contacts_that_have_changed).
-* `PeopleOtherContactsSearch` - Provides a list of contacts in the authenticated user's other contacts that matches the search query. The query matches on a contact's `names`, `emailAddresses`, and `phoneNumbers` fields that are from the OTHER_CONTACT source. **IMPORTANT**: Before searching, clients should send a warmup request with an empty query to update the cache. See https://developers.google.com/people/v1/other-contacts#search_the_users_other_contacts
+* [PeopleOtherContactsCopyOtherContactToMyContactsGroup](docs/othercontacts/README.md#peopleothercontactscopyothercontacttomycontactsgroup) - Copies an "Other contact" to a new contact in the user's "myContacts" group Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
+* [PeopleOtherContactsList](docs/othercontacts/README.md#peopleothercontactslist) - List all "Other contacts", that is contacts that are not in a contact group. "Other contacts" are typically auto created contacts from interactions. Sync tokens expire 7 days after the full sync. A request with an expired sync token will get an error with an [google.rpc.ErrorInfo](https://cloud.google.com/apis/design/errors#error_info) with reason "EXPIRED_SYNC_TOKEN". In the case of such an error clients should make a full sync request without a `sync_token`. The first page of a full sync request has an additional quota. If the quota is exceeded, a 429 error will be returned. This quota is fixed and can not be increased. When the `sync_token` is specified, resources deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or `sync_token` is specified, all other request parameters must match the first call. Writes may have a propagation delay of several minutes for sync requests. Incremental syncs are not intended for read-after-write use cases. See example usage at [List the user's other contacts that have changed](/people/v1/other-contacts#list_the_users_other_contacts_that_have_changed).
+* [PeopleOtherContactsSearch](docs/othercontacts/README.md#peopleothercontactssearch) - Provides a list of contacts in the authenticated user's other contacts that matches the search query. The query matches on a contact's `names`, `emailAddresses`, and `phoneNumbers` fields that are from the OTHER_CONTACT source. **IMPORTANT**: Before searching, clients should send a warmup request with an empty query to update the cache. See https://developers.google.com/people/v1/other-contacts#search_the_users_other_contacts
 
-### People
+### [People](docs/people/README.md)
 
-* `PeoplePeopleBatchCreateContacts` - Create a batch of new contacts and return the PersonResponses for the newly Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-* `PeoplePeopleBatchDeleteContacts` - Delete a batch of contacts. Any non-contact data will not be deleted. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-* `PeoplePeopleBatchUpdateContacts` - Update a batch of contacts and return a map of resource names to PersonResponses for the updated contacts. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-* `PeoplePeopleConnectionsList` - Provides a list of the authenticated user's contacts. Sync tokens expire 7 days after the full sync. A request with an expired sync token will get an error with an [google.rpc.ErrorInfo](https://cloud.google.com/apis/design/errors#error_info) with reason "EXPIRED_SYNC_TOKEN". In the case of such an error clients should make a full sync request without a `sync_token`. The first page of a full sync request has an additional quota. If the quota is exceeded, a 429 error will be returned. This quota is fixed and can not be increased. When the `sync_token` is specified, resources deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or `sync_token` is specified, all other request parameters must match the first call. Writes may have a propagation delay of several minutes for sync requests. Incremental syncs are not intended for read-after-write use cases. See example usage at [List the user's contacts that have changed](/people/v1/contacts#list_the_users_contacts_that_have_changed).
-* `PeoplePeopleCreateContact` - Create a new contact and return the person resource for that contact. The request returns a 400 error if more than one field is specified on a field that is a singleton for contact sources: * biographies * birthdays * genders * names Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-* `PeoplePeopleDeleteContact` - Delete a contact person. Any non-contact data will not be deleted. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-* `PeoplePeopleDeleteContactPhoto` - Delete a contact's photo. Mutate requests for the same user should be done sequentially to avoid // lock contention.
-* `PeoplePeopleGet` - Provides information about a person by specifying a resource name. Use `people/me` to indicate the authenticated user. The request returns a 400 error if 'personFields' is not specified.
-* `PeoplePeopleGetBatchGet` - Provides information about a list of specific people by specifying a list of requested resource names. Use `people/me` to indicate the authenticated user. The request returns a 400 error if 'personFields' is not specified.
-* `PeoplePeopleListDirectoryPeople` - Provides a list of domain profiles and domain contacts in the authenticated user's domain directory. When the `sync_token` is specified, resources deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or `sync_token` is specified, all other request parameters must match the first call. Writes may have a propagation delay of several minutes for sync requests. Incremental syncs are not intended for read-after-write use cases. See example usage at [List the directory people that have changed](/people/v1/directory#list_the_directory_people_that_have_changed).
-* `PeoplePeopleSearchContacts` - Provides a list of contacts in the authenticated user's grouped contacts that matches the search query. The query matches on a contact's `names`, `nickNames`, `emailAddresses`, `phoneNumbers`, and `organizations` fields that are from the CONTACT source. **IMPORTANT**: Before searching, clients should send a warmup request with an empty query to update the cache. See https://developers.google.com/people/v1/contacts#search_the_users_contacts
-* `PeoplePeopleSearchDirectoryPeople` - Provides a list of domain profiles and domain contacts in the authenticated user's domain directory that match the search query.
-* `PeoplePeopleUpdateContact` - Update contact data for an existing contact person. Any non-contact data will not be modified. Any non-contact data in the person to update will be ignored. All fields specified in the `update_mask` will be replaced. The server returns a 400 error if `person.metadata.sources` is not specified for the contact to be updated or if there is no contact source. The server returns a 400 error with reason `"failedPrecondition"` if `person.metadata.sources.etag` is different than the contact's etag, which indicates the contact has changed since its data was read. Clients should get the latest person and merge their updates into the latest person. The server returns a 400 error if `memberships` are being updated and there are no contact group memberships specified on the person. The server returns a 400 error if more than one field is specified on a field that is a singleton for contact sources: * biographies * birthdays * genders * names Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-* `PeoplePeopleUpdateContactPhoto` - Update a contact's photo. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
+* [PeoplePeopleBatchCreateContacts](docs/people/README.md#peoplepeoplebatchcreatecontacts) - Create a batch of new contacts and return the PersonResponses for the newly Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
+* [PeoplePeopleBatchDeleteContacts](docs/people/README.md#peoplepeoplebatchdeletecontacts) - Delete a batch of contacts. Any non-contact data will not be deleted. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
+* [PeoplePeopleBatchUpdateContacts](docs/people/README.md#peoplepeoplebatchupdatecontacts) - Update a batch of contacts and return a map of resource names to PersonResponses for the updated contacts. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
+* [PeoplePeopleConnectionsList](docs/people/README.md#peoplepeopleconnectionslist) - Provides a list of the authenticated user's contacts. Sync tokens expire 7 days after the full sync. A request with an expired sync token will get an error with an [google.rpc.ErrorInfo](https://cloud.google.com/apis/design/errors#error_info) with reason "EXPIRED_SYNC_TOKEN". In the case of such an error clients should make a full sync request without a `sync_token`. The first page of a full sync request has an additional quota. If the quota is exceeded, a 429 error will be returned. This quota is fixed and can not be increased. When the `sync_token` is specified, resources deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or `sync_token` is specified, all other request parameters must match the first call. Writes may have a propagation delay of several minutes for sync requests. Incremental syncs are not intended for read-after-write use cases. See example usage at [List the user's contacts that have changed](/people/v1/contacts#list_the_users_contacts_that_have_changed).
+* [PeoplePeopleCreateContact](docs/people/README.md#peoplepeoplecreatecontact) - Create a new contact and return the person resource for that contact. The request returns a 400 error if more than one field is specified on a field that is a singleton for contact sources: * biographies * birthdays * genders * names Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
+* [PeoplePeopleDeleteContact](docs/people/README.md#peoplepeopledeletecontact) - Delete a contact person. Any non-contact data will not be deleted. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
+* [PeoplePeopleDeleteContactPhoto](docs/people/README.md#peoplepeopledeletecontactphoto) - Delete a contact's photo. Mutate requests for the same user should be done sequentially to avoid // lock contention.
+* [PeoplePeopleGet](docs/people/README.md#peoplepeopleget) - Provides information about a person by specifying a resource name. Use `people/me` to indicate the authenticated user. The request returns a 400 error if 'personFields' is not specified.
+* [PeoplePeopleGetBatchGet](docs/people/README.md#peoplepeoplegetbatchget) - Provides information about a list of specific people by specifying a list of requested resource names. Use `people/me` to indicate the authenticated user. The request returns a 400 error if 'personFields' is not specified.
+* [PeoplePeopleListDirectoryPeople](docs/people/README.md#peoplepeoplelistdirectorypeople) - Provides a list of domain profiles and domain contacts in the authenticated user's domain directory. When the `sync_token` is specified, resources deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or `sync_token` is specified, all other request parameters must match the first call. Writes may have a propagation delay of several minutes for sync requests. Incremental syncs are not intended for read-after-write use cases. See example usage at [List the directory people that have changed](/people/v1/directory#list_the_directory_people_that_have_changed).
+* [PeoplePeopleSearchContacts](docs/people/README.md#peoplepeoplesearchcontacts) - Provides a list of contacts in the authenticated user's grouped contacts that matches the search query. The query matches on a contact's `names`, `nickNames`, `emailAddresses`, `phoneNumbers`, and `organizations` fields that are from the CONTACT source. **IMPORTANT**: Before searching, clients should send a warmup request with an empty query to update the cache. See https://developers.google.com/people/v1/contacts#search_the_users_contacts
+* [PeoplePeopleSearchDirectoryPeople](docs/people/README.md#peoplepeoplesearchdirectorypeople) - Provides a list of domain profiles and domain contacts in the authenticated user's domain directory that match the search query.
+* [PeoplePeopleUpdateContact](docs/people/README.md#peoplepeopleupdatecontact) - Update contact data for an existing contact person. Any non-contact data will not be modified. Any non-contact data in the person to update will be ignored. All fields specified in the `update_mask` will be replaced. The server returns a 400 error if `person.metadata.sources` is not specified for the contact to be updated or if there is no contact source. The server returns a 400 error with reason `"failedPrecondition"` if `person.metadata.sources.etag` is different than the contact's etag, which indicates the contact has changed since its data was read. Clients should get the latest person and merge their updates into the latest person. The server returns a 400 error if `memberships` are being updated and there are no contact group memberships specified on the person. The server returns a 400 error if more than one field is specified on a field that is a singleton for contact sources: * biographies * birthdays * genders * names Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
+* [PeoplePeopleUpdateContactPhoto](docs/people/README.md#peoplepeopleupdatecontactphoto) - Update a contact's photo. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 <!-- End SDK Available Operations -->
 
 ### Maturity

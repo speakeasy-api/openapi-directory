@@ -16,17 +16,21 @@ const (
 	SendContactMethodVerificationXAmzTargetEnumLightsail20161128SendContactMethodVerification SendContactMethodVerificationXAmzTargetEnum = "Lightsail_20161128.SendContactMethodVerification"
 )
 
+func (e SendContactMethodVerificationXAmzTargetEnum) ToPointer() *SendContactMethodVerificationXAmzTargetEnum {
+	return &e
+}
+
 func (e *SendContactMethodVerificationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.SendContactMethodVerification":
-		*e = SendContactMethodVerificationXAmzTargetEnum(s)
+		*e = SendContactMethodVerificationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendContactMethodVerificationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SendContactMethodVerificationXAmzTargetEnum: %v", v)
 	}
 }
 

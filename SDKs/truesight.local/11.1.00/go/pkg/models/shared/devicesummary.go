@@ -121,12 +121,16 @@ const (
 	DeviceSummaryTypeEnumUnknown                 DeviceSummaryTypeEnum = "UNKNOWN"
 )
 
+func (e DeviceSummaryTypeEnum) ToPointer() *DeviceSummaryTypeEnum {
+	return &e
+}
+
 func (e *DeviceSummaryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "ESX_HOST":
@@ -344,10 +348,10 @@ func (e *DeviceSummaryTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MS_AZURE":
 		fallthrough
 	case "UNKNOWN":
-		*e = DeviceSummaryTypeEnum(s)
+		*e = DeviceSummaryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceSummaryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceSummaryTypeEnum: %v", v)
 	}
 }
 

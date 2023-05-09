@@ -22,19 +22,23 @@ const (
 	GetBng2latlongEastingNorthing200ApplicationJSONStatusEnumError GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum = "error"
 )
 
+func (e GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum) ToPointer() *GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ok":
 		fallthrough
 	case "error":
-		*e = GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum(s)
+		*e = GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBng2latlongEastingNorthing200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

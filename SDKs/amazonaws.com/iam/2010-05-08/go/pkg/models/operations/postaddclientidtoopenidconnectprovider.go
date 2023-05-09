@@ -15,17 +15,21 @@ const (
 	POSTAddClientIDToOpenIDConnectProviderActionEnumAddClientIDToOpenIDConnectProvider POSTAddClientIDToOpenIDConnectProviderActionEnum = "AddClientIDToOpenIDConnectProvider"
 )
 
+func (e POSTAddClientIDToOpenIDConnectProviderActionEnum) ToPointer() *POSTAddClientIDToOpenIDConnectProviderActionEnum {
+	return &e
+}
+
 func (e *POSTAddClientIDToOpenIDConnectProviderActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AddClientIDToOpenIDConnectProvider":
-		*e = POSTAddClientIDToOpenIDConnectProviderActionEnum(s)
+		*e = POSTAddClientIDToOpenIDConnectProviderActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAddClientIDToOpenIDConnectProviderActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAddClientIDToOpenIDConnectProviderActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAddClientIDToOpenIDConnectProviderVersionEnumTwoThousandAndTen0508 POSTAddClientIDToOpenIDConnectProviderVersionEnum = "2010-05-08"
 )
 
+func (e POSTAddClientIDToOpenIDConnectProviderVersionEnum) ToPointer() *POSTAddClientIDToOpenIDConnectProviderVersionEnum {
+	return &e
+}
+
 func (e *POSTAddClientIDToOpenIDConnectProviderVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTAddClientIDToOpenIDConnectProviderVersionEnum(s)
+		*e = POSTAddClientIDToOpenIDConnectProviderVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAddClientIDToOpenIDConnectProviderVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAddClientIDToOpenIDConnectProviderVersionEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnumTextEntityExtraction GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum = "TEXT_ENTITY_EXTRACTION"
 )
 
+func (e GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum) ToPointer() *GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEATURE_UNSPECIFIED":
 		fallthrough
 	case "TEXT_CLASSIFICATION":
 		fallthrough
 	case "TEXT_ENTITY_EXTRACTION":
-		*e = GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	StartSupportDataExportXAmzTargetEnumMarketplaceCommerceAnalytics20150701StartSupportDataExport StartSupportDataExportXAmzTargetEnum = "MarketplaceCommerceAnalytics20150701.StartSupportDataExport"
 )
 
+func (e StartSupportDataExportXAmzTargetEnum) ToPointer() *StartSupportDataExportXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartSupportDataExportXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MarketplaceCommerceAnalytics20150701.StartSupportDataExport":
-		*e = StartSupportDataExportXAmzTargetEnum(s)
+		*e = StartSupportDataExportXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartSupportDataExportXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartSupportDataExportXAmzTargetEnum: %v", v)
 	}
 }
 

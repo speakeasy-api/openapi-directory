@@ -34,7 +34,10 @@ func newOrderinvoices(defaultClient, securityClient HTTPClient, serverURL, langu
 // ContentOrderinvoicesCreatechargeinvoice - Creates a charge invoice for a shipment group, and triggers a charge capture for orderinvoice enabled orders.
 func (s *orderinvoices) ContentOrderinvoicesCreatechargeinvoice(ctx context.Context, request operations.ContentOrderinvoicesCreatechargeinvoiceRequest, security operations.ContentOrderinvoicesCreatechargeinvoiceSecurity) (*operations.ContentOrderinvoicesCreatechargeinvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderinvoices/{orderId}/createChargeInvoice", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderinvoices/{orderId}/createChargeInvoice", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderinvoicesCreateChargeInvoiceRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *orderinvoices) ContentOrderinvoicesCreatechargeinvoice(ctx context.Cont
 // ContentOrderinvoicesCreaterefundinvoice - Creates a refund invoice for one or more shipment groups, and triggers a refund for orderinvoice enabled orders. This can only be used for line items that have previously been charged using `createChargeInvoice`. All amounts (except for the summary) are incremental with respect to the previous invoice.
 func (s *orderinvoices) ContentOrderinvoicesCreaterefundinvoice(ctx context.Context, request operations.ContentOrderinvoicesCreaterefundinvoiceRequest, security operations.ContentOrderinvoicesCreaterefundinvoiceSecurity) (*operations.ContentOrderinvoicesCreaterefundinvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderinvoices/{orderId}/createRefundInvoice", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderinvoices/{orderId}/createRefundInvoice", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderinvoicesCreateRefundInvoiceRequest", "json")
 	if err != nil {

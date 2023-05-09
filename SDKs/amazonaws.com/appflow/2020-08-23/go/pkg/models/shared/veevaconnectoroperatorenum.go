@@ -33,12 +33,16 @@ const (
 	VeevaConnectorOperatorEnumNoOp                 VeevaConnectorOperatorEnum = "NO_OP"
 )
 
+func (e VeevaConnectorOperatorEnum) ToPointer() *VeevaConnectorOperatorEnum {
+	return &e
+}
+
 func (e *VeevaConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION":
 		fallthrough
 	case "LESS_THAN":
@@ -80,9 +84,9 @@ func (e *VeevaConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATE_NUMERIC":
 		fallthrough
 	case "NO_OP":
-		*e = VeevaConnectorOperatorEnum(s)
+		*e = VeevaConnectorOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VeevaConnectorOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for VeevaConnectorOperatorEnum: %v", v)
 	}
 }

@@ -15,21 +15,25 @@ const (
 	PretargetingConfigAllowedUserTargetingModesEnumInterestBasedTargeting       PretargetingConfigAllowedUserTargetingModesEnum = "INTEREST_BASED_TARGETING"
 )
 
+func (e PretargetingConfigAllowedUserTargetingModesEnum) ToPointer() *PretargetingConfigAllowedUserTargetingModesEnum {
+	return &e
+}
+
 func (e *PretargetingConfigAllowedUserTargetingModesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_TARGETING_MODE_UNSPECIFIED":
 		fallthrough
 	case "REMARKETING_ADS":
 		fallthrough
 	case "INTEREST_BASED_TARGETING":
-		*e = PretargetingConfigAllowedUserTargetingModesEnum(s)
+		*e = PretargetingConfigAllowedUserTargetingModesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PretargetingConfigAllowedUserTargetingModesEnum: %s", s)
+		return fmt.Errorf("invalid value for PretargetingConfigAllowedUserTargetingModesEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	PretargetingConfigIncludedEnvironmentsEnumWeb                    PretargetingConfigIncludedEnvironmentsEnum = "WEB"
 )
 
+func (e PretargetingConfigIncludedEnvironmentsEnum) ToPointer() *PretargetingConfigIncludedEnvironmentsEnum {
+	return &e
+}
+
 func (e *PretargetingConfigIncludedEnvironmentsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENVIRONMENT_UNSPECIFIED":
 		fallthrough
 	case "APP":
 		fallthrough
 	case "WEB":
-		*e = PretargetingConfigIncludedEnvironmentsEnum(s)
+		*e = PretargetingConfigIncludedEnvironmentsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PretargetingConfigIncludedEnvironmentsEnum: %s", s)
+		return fmt.Errorf("invalid value for PretargetingConfigIncludedEnvironmentsEnum: %v", v)
 	}
 }
 
@@ -68,12 +76,16 @@ const (
 	PretargetingConfigIncludedFormatsEnumNative                    PretargetingConfigIncludedFormatsEnum = "NATIVE"
 )
 
+func (e PretargetingConfigIncludedFormatsEnum) ToPointer() *PretargetingConfigIncludedFormatsEnum {
+	return &e
+}
+
 func (e *PretargetingConfigIncludedFormatsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "HTML":
@@ -81,10 +93,10 @@ func (e *PretargetingConfigIncludedFormatsEnum) UnmarshalJSON(data []byte) error
 	case "VAST":
 		fallthrough
 	case "NATIVE":
-		*e = PretargetingConfigIncludedFormatsEnum(s)
+		*e = PretargetingConfigIncludedFormatsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PretargetingConfigIncludedFormatsEnum: %s", s)
+		return fmt.Errorf("invalid value for PretargetingConfigIncludedFormatsEnum: %v", v)
 	}
 }
 
@@ -98,12 +110,16 @@ const (
 	PretargetingConfigIncludedPlatformsEnumConnectedTv         PretargetingConfigIncludedPlatformsEnum = "CONNECTED_TV"
 )
 
+func (e PretargetingConfigIncludedPlatformsEnum) ToPointer() *PretargetingConfigIncludedPlatformsEnum {
+	return &e
+}
+
 func (e *PretargetingConfigIncludedPlatformsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_UNSPECIFIED":
 		fallthrough
 	case "PERSONAL_COMPUTER":
@@ -113,10 +129,10 @@ func (e *PretargetingConfigIncludedPlatformsEnum) UnmarshalJSON(data []byte) err
 	case "TABLET":
 		fallthrough
 	case "CONNECTED_TV":
-		*e = PretargetingConfigIncludedPlatformsEnum(s)
+		*e = PretargetingConfigIncludedPlatformsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PretargetingConfigIncludedPlatformsEnum: %s", s)
+		return fmt.Errorf("invalid value for PretargetingConfigIncludedPlatformsEnum: %v", v)
 	}
 }
 
@@ -129,12 +145,16 @@ const (
 	PretargetingConfigIncludedUserIDTypesEnumDeviceID              PretargetingConfigIncludedUserIDTypesEnum = "DEVICE_ID"
 )
 
+func (e PretargetingConfigIncludedUserIDTypesEnum) ToPointer() *PretargetingConfigIncludedUserIDTypesEnum {
+	return &e
+}
+
 func (e *PretargetingConfigIncludedUserIDTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_ID_TYPE_UNSPECIFIED":
 		fallthrough
 	case "HOSTED_MATCH_DATA":
@@ -142,10 +162,10 @@ func (e *PretargetingConfigIncludedUserIDTypesEnum) UnmarshalJSON(data []byte) e
 	case "GOOGLE_COOKIE":
 		fallthrough
 	case "DEVICE_ID":
-		*e = PretargetingConfigIncludedUserIDTypesEnum(s)
+		*e = PretargetingConfigIncludedUserIDTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PretargetingConfigIncludedUserIDTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for PretargetingConfigIncludedUserIDTypesEnum: %v", v)
 	}
 }
 
@@ -158,21 +178,25 @@ const (
 	PretargetingConfigInterstitialTargetingEnumOnlyNonInterstitialRequests      PretargetingConfigInterstitialTargetingEnum = "ONLY_NON_INTERSTITIAL_REQUESTS"
 )
 
+func (e PretargetingConfigInterstitialTargetingEnum) ToPointer() *PretargetingConfigInterstitialTargetingEnum {
+	return &e
+}
+
 func (e *PretargetingConfigInterstitialTargetingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERSTITIAL_TARGETING_UNSPECIFIED":
 		fallthrough
 	case "ONLY_INTERSTITIAL_REQUESTS":
 		fallthrough
 	case "ONLY_NON_INTERSTITIAL_REQUESTS":
-		*e = PretargetingConfigInterstitialTargetingEnum(s)
+		*e = PretargetingConfigInterstitialTargetingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PretargetingConfigInterstitialTargetingEnum: %s", s)
+		return fmt.Errorf("invalid value for PretargetingConfigInterstitialTargetingEnum: %v", v)
 	}
 }
 
@@ -185,21 +209,25 @@ const (
 	PretargetingConfigStateEnumSuspended        PretargetingConfigStateEnum = "SUSPENDED"
 )
 
+func (e PretargetingConfigStateEnum) ToPointer() *PretargetingConfigStateEnum {
+	return &e
+}
+
 func (e *PretargetingConfigStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "SUSPENDED":
-		*e = PretargetingConfigStateEnum(s)
+		*e = PretargetingConfigStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PretargetingConfigStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PretargetingConfigStateEnum: %v", v)
 	}
 }
 

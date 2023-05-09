@@ -19,12 +19,16 @@ const (
 	SpanSpanKindEnumConsumer            SpanSpanKindEnum = "CONSUMER"
 )
 
+func (e SpanSpanKindEnum) ToPointer() *SpanSpanKindEnum {
+	return &e
+}
+
 func (e *SpanSpanKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPAN_KIND_UNSPECIFIED":
 		fallthrough
 	case "INTERNAL":
@@ -36,10 +40,10 @@ func (e *SpanSpanKindEnum) UnmarshalJSON(data []byte) error {
 	case "PRODUCER":
 		fallthrough
 	case "CONSUMER":
-		*e = SpanSpanKindEnum(s)
+		*e = SpanSpanKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpanSpanKindEnum: %s", s)
+		return fmt.Errorf("invalid value for SpanSpanKindEnum: %v", v)
 	}
 }
 

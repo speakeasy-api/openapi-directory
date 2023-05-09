@@ -16,21 +16,25 @@ const (
 	HashTypeEnumMd5                 HashTypeEnum = "MD5"
 )
 
+func (e HashTypeEnum) ToPointer() *HashTypeEnum {
+	return &e
+}
+
 func (e *HashTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HASH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SHA256":
 		fallthrough
 	case "MD5":
-		*e = HashTypeEnum(s)
+		*e = HashTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HashTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HashTypeEnum: %v", v)
 	}
 }
 

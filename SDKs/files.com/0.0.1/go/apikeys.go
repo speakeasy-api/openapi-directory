@@ -37,7 +37,10 @@ func newAPIKeys(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Delete Api Key
 func (s *apiKeys) DeleteAPIKeysID(ctx context.Context, request operations.DeleteAPIKeysIDRequest) (*operations.DeleteAPIKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api_keys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api_keys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *apiKeys) GetAPIKeys(ctx context.Context, request operations.GetAPIKeysR
 // Show Api Key
 func (s *apiKeys) GetAPIKeysID(ctx context.Context, request operations.GetAPIKeysIDRequest) (*operations.GetAPIKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api_keys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api_keys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *apiKeys) GetAPIKeysID(ctx context.Context, request operations.GetAPIKey
 // Update Api Key
 func (s *apiKeys) PatchAPIKeysID(ctx context.Context, request operations.PatchAPIKeysIDRequest) (*operations.PatchAPIKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api_keys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api_keys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

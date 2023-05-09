@@ -17,12 +17,16 @@ const (
 	RedownloadVideoSizeEnumFourk RedownloadVideoSizeEnum = "4k"
 )
 
+func (e RedownloadVideoSizeEnum) ToPointer() *RedownloadVideoSizeEnum {
+	return &e
+}
+
 func (e *RedownloadVideoSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "web":
 		fallthrough
 	case "sd":
@@ -30,10 +34,10 @@ func (e *RedownloadVideoSizeEnum) UnmarshalJSON(data []byte) error {
 	case "hd":
 		fallthrough
 	case "4k":
-		*e = RedownloadVideoSizeEnum(s)
+		*e = RedownloadVideoSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RedownloadVideoSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for RedownloadVideoSizeEnum: %v", v)
 	}
 }
 

@@ -31,12 +31,16 @@ const (
 	AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnumTooManyRequests     AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnum) ToPointer() *AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnum) Unmarsh
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AzureSubscriptionListForAppDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

@@ -11,6 +11,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -61,4 +62,14 @@ pkg/models/operations/updatetransaction.go
 pkg/models/operations/licensetypes.go
 pkg/models/operations/licensingmodels.go
 pkg/models/shared/netlicensing.go
+docs/sdk/README.md
+docs/license/README.md
+docs/licensetemplate/README.md
+docs/licensee/README.md
+docs/paymentmethod/README.md
+docs/product/README.md
+docs/productmodule/README.md
+docs/token/README.md
+docs/transaction/README.md
+docs/utility/README.md
 USAGE.md

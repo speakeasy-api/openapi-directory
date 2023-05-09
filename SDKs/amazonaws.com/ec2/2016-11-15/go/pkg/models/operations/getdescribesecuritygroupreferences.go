@@ -15,17 +15,21 @@ const (
 	GETDescribeSecurityGroupReferencesActionEnumDescribeSecurityGroupReferences GETDescribeSecurityGroupReferencesActionEnum = "DescribeSecurityGroupReferences"
 )
 
+func (e GETDescribeSecurityGroupReferencesActionEnum) ToPointer() *GETDescribeSecurityGroupReferencesActionEnum {
+	return &e
+}
+
 func (e *GETDescribeSecurityGroupReferencesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeSecurityGroupReferences":
-		*e = GETDescribeSecurityGroupReferencesActionEnum(s)
+		*e = GETDescribeSecurityGroupReferencesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSecurityGroupReferencesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSecurityGroupReferencesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeSecurityGroupReferencesVersionEnumTwoThousandAndSixteen1115 GETDescribeSecurityGroupReferencesVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeSecurityGroupReferencesVersionEnum) ToPointer() *GETDescribeSecurityGroupReferencesVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeSecurityGroupReferencesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeSecurityGroupReferencesVersionEnum(s)
+		*e = GETDescribeSecurityGroupReferencesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSecurityGroupReferencesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSecurityGroupReferencesVersionEnum: %v", v)
 	}
 }
 

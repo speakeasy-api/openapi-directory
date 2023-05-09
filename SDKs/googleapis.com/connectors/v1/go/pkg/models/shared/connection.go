@@ -2,32 +2,40 @@
 
 package shared
 
-// ConnectionInput - Connection represents an instance of connector.
-type ConnectionInput struct {
-	// AuthConfig defines details of a authentication type.
-	AuthConfig *AuthConfig `json:"authConfig,omitempty"`
-	// Optional. Configuration for configuring the connection with an external system.
-	ConfigVariables []ConfigVariable `json:"configVariables,omitempty"`
-	// Required. Connector version on which the connection is created. The format is: projects/*/locations/*/providers/*/connectors/*/versions/* Only global location is supported for ConnectorVersion resource.
-	ConnectorVersion *string `json:"connectorVersion,omitempty"`
-	// Optional. Description of the resource.
-	Description *string `json:"description,omitempty"`
-	// Optional. Configuration of the Connector's destination. Only accepted for Connectors that accepts user defined destination(s).
-	DestinationConfigs []DestinationConfig `json:"destinationConfigs,omitempty"`
-	// Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
-	Labels map[string]string `json:"labels,omitempty"`
-	// Determines whether or no a connection is locked. If locked, a reason must be specified.
-	LockConfig *LockConfig `json:"lockConfig,omitempty"`
-	// Node configuration for the connection.
-	NodeConfig *NodeConfig `json:"nodeConfig,omitempty"`
-	// Optional. Service account needed for runtime plane to access GCP resources.
-	ServiceAccount *string `json:"serviceAccount,omitempty"`
-	// SSL Configuration of a connection
-	SslConfig *SslConfig `json:"sslConfig,omitempty"`
-	// ConnectionStatus indicates the state of the connection.
-	Status *ConnectionStatus `json:"status,omitempty"`
-	// Optional. Suspended indicates if a user has suspended a connection or not.
-	Suspended *bool `json:"suspended,omitempty"`
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// ConnectionSubscriptionTypeEnum - Output only. This subscription type enum value states if the metrics should be sent for billing or not.
+type ConnectionSubscriptionTypeEnum string
+
+const (
+	ConnectionSubscriptionTypeEnumSubscriptionTypeUnspecified ConnectionSubscriptionTypeEnum = "SUBSCRIPTION_TYPE_UNSPECIFIED"
+	ConnectionSubscriptionTypeEnumPayG                        ConnectionSubscriptionTypeEnum = "PAY_G"
+	ConnectionSubscriptionTypeEnumPaid                        ConnectionSubscriptionTypeEnum = "PAID"
+)
+
+func (e ConnectionSubscriptionTypeEnum) ToPointer() *ConnectionSubscriptionTypeEnum {
+	return &e
+}
+
+func (e *ConnectionSubscriptionTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "SUBSCRIPTION_TYPE_UNSPECIFIED":
+		fallthrough
+	case "PAY_G":
+		fallthrough
+	case "PAID":
+		*e = ConnectionSubscriptionTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ConnectionSubscriptionTypeEnum: %v", v)
+	}
 }
 
 // Connection - Connection represents an instance of connector.
@@ -52,6 +60,8 @@ type Connection struct {
 	Labels map[string]string `json:"labels,omitempty"`
 	// Determines whether or no a connection is locked. If locked, a reason must be specified.
 	LockConfig *LockConfig `json:"lockConfig,omitempty"`
+	// Log configuration for the connection.
+	LogConfig *ConnectorsLogConfig `json:"logConfig,omitempty"`
 	// Output only. Resource name of the Connection. Format: projects/{project}/locations/{location}/connections/{connection}
 	Name *string `json:"name,omitempty"`
 	// Node configuration for the connection.
@@ -64,8 +74,40 @@ type Connection struct {
 	SslConfig *SslConfig `json:"sslConfig,omitempty"`
 	// ConnectionStatus indicates the state of the connection.
 	Status *ConnectionStatus `json:"status,omitempty"`
+	// Output only. This subscription type enum value states if the metrics should be sent for billing or not.
+	SubscriptionType *ConnectionSubscriptionTypeEnum `json:"subscriptionType,omitempty"`
 	// Optional. Suspended indicates if a user has suspended a connection or not.
 	Suspended *bool `json:"suspended,omitempty"`
 	// Output only. Updated time.
 	UpdateTime *string `json:"updateTime,omitempty"`
+}
+
+// ConnectionInput - Connection represents an instance of connector.
+type ConnectionInput struct {
+	// AuthConfig defines details of a authentication type.
+	AuthConfig *AuthConfig `json:"authConfig,omitempty"`
+	// Optional. Configuration for configuring the connection with an external system.
+	ConfigVariables []ConfigVariable `json:"configVariables,omitempty"`
+	// Required. Connector version on which the connection is created. The format is: projects/*/locations/*/providers/*/connectors/*/versions/* Only global location is supported for ConnectorVersion resource.
+	ConnectorVersion *string `json:"connectorVersion,omitempty"`
+	// Optional. Description of the resource.
+	Description *string `json:"description,omitempty"`
+	// Optional. Configuration of the Connector's destination. Only accepted for Connectors that accepts user defined destination(s).
+	DestinationConfigs []DestinationConfig `json:"destinationConfigs,omitempty"`
+	// Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
+	Labels map[string]string `json:"labels,omitempty"`
+	// Determines whether or no a connection is locked. If locked, a reason must be specified.
+	LockConfig *LockConfig `json:"lockConfig,omitempty"`
+	// Log configuration for the connection.
+	LogConfig *ConnectorsLogConfig `json:"logConfig,omitempty"`
+	// Node configuration for the connection.
+	NodeConfig *NodeConfig `json:"nodeConfig,omitempty"`
+	// Optional. Service account needed for runtime plane to access GCP resources.
+	ServiceAccount *string `json:"serviceAccount,omitempty"`
+	// SSL Configuration of a connection
+	SslConfig *SslConfig `json:"sslConfig,omitempty"`
+	// ConnectionStatus indicates the state of the connection.
+	Status *ConnectionStatus `json:"status,omitempty"`
+	// Optional. Suspended indicates if a user has suspended a connection or not.
+	Suspended *bool `json:"suspended,omitempty"`
 }

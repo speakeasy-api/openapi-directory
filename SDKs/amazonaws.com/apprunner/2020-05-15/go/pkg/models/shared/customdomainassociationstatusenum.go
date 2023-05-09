@@ -19,12 +19,16 @@ const (
 	CustomDomainAssociationStatusEnumBindingCertificate              CustomDomainAssociationStatusEnum = "BINDING_CERTIFICATE"
 )
 
+func (e CustomDomainAssociationStatusEnum) ToPointer() *CustomDomainAssociationStatusEnum {
+	return &e
+}
+
 func (e *CustomDomainAssociationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATE_FAILED":
@@ -38,9 +42,9 @@ func (e *CustomDomainAssociationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING_CERTIFICATE_DNS_VALIDATION":
 		fallthrough
 	case "BINDING_CERTIFICATE":
-		*e = CustomDomainAssociationStatusEnum(s)
+		*e = CustomDomainAssociationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomDomainAssociationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomDomainAssociationStatusEnum: %v", v)
 	}
 }

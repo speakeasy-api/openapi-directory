@@ -8,218 +8,254 @@ import (
 )
 
 // ReinitializeActionConfigurationResetAlertActionsEnum - When set to <em>1</em>, removes all manually set Alert Actions and reverts to basic default actions i.e. trigger a PATROL event and annotate a parameter graph.
-type ReinitializeActionConfigurationResetAlertActionsEnum string
+type ReinitializeActionConfigurationResetAlertActionsEnum int
 
 const (
-	ReinitializeActionConfigurationResetAlertActionsEnumZero ReinitializeActionConfigurationResetAlertActionsEnum = "0"
-	ReinitializeActionConfigurationResetAlertActionsEnumOne  ReinitializeActionConfigurationResetAlertActionsEnum = "1"
+	ReinitializeActionConfigurationResetAlertActionsEnumZero ReinitializeActionConfigurationResetAlertActionsEnum = 0
+	ReinitializeActionConfigurationResetAlertActionsEnumOne  ReinitializeActionConfigurationResetAlertActionsEnum = 1
 )
 
+func (e ReinitializeActionConfigurationResetAlertActionsEnum) ToPointer() *ReinitializeActionConfigurationResetAlertActionsEnum {
+	return &e
+}
+
 func (e *ReinitializeActionConfigurationResetAlertActionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = ReinitializeActionConfigurationResetAlertActionsEnum(s)
+	case 1:
+		*e = ReinitializeActionConfigurationResetAlertActionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetAlertActionsEnum: %s", s)
+		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetAlertActionsEnum: %v", v)
 	}
 }
 
 // ReinitializeActionConfigurationResetAlertAfterNTimesEnum - When set to <em>1</em>, resets the number of times thresholds can be breached before triggering an alert to their default values (1 time) for numeric, discrete, connector status and present parameters.
-type ReinitializeActionConfigurationResetAlertAfterNTimesEnum string
+type ReinitializeActionConfigurationResetAlertAfterNTimesEnum int
 
 const (
-	ReinitializeActionConfigurationResetAlertAfterNTimesEnumZero ReinitializeActionConfigurationResetAlertAfterNTimesEnum = "0"
-	ReinitializeActionConfigurationResetAlertAfterNTimesEnumOne  ReinitializeActionConfigurationResetAlertAfterNTimesEnum = "1"
+	ReinitializeActionConfigurationResetAlertAfterNTimesEnumZero ReinitializeActionConfigurationResetAlertAfterNTimesEnum = 0
+	ReinitializeActionConfigurationResetAlertAfterNTimesEnumOne  ReinitializeActionConfigurationResetAlertAfterNTimesEnum = 1
 )
 
+func (e ReinitializeActionConfigurationResetAlertAfterNTimesEnum) ToPointer() *ReinitializeActionConfigurationResetAlertAfterNTimesEnum {
+	return &e
+}
+
 func (e *ReinitializeActionConfigurationResetAlertAfterNTimesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = ReinitializeActionConfigurationResetAlertAfterNTimesEnum(s)
+	case 1:
+		*e = ReinitializeActionConfigurationResetAlertAfterNTimesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetAlertAfterNTimesEnum: %s", s)
+		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetAlertAfterNTimesEnum: %v", v)
 	}
 }
 
 // ReinitializeActionConfigurationResetDebugModeEnum - When set to <em>1</em>, deactivates the debug mode when it was manually enabled.
-type ReinitializeActionConfigurationResetDebugModeEnum string
+type ReinitializeActionConfigurationResetDebugModeEnum int
 
 const (
-	ReinitializeActionConfigurationResetDebugModeEnumZero ReinitializeActionConfigurationResetDebugModeEnum = "0"
-	ReinitializeActionConfigurationResetDebugModeEnumOne  ReinitializeActionConfigurationResetDebugModeEnum = "1"
+	ReinitializeActionConfigurationResetDebugModeEnumZero ReinitializeActionConfigurationResetDebugModeEnum = 0
+	ReinitializeActionConfigurationResetDebugModeEnumOne  ReinitializeActionConfigurationResetDebugModeEnum = 1
 )
 
+func (e ReinitializeActionConfigurationResetDebugModeEnum) ToPointer() *ReinitializeActionConfigurationResetDebugModeEnum {
+	return &e
+}
+
 func (e *ReinitializeActionConfigurationResetDebugModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = ReinitializeActionConfigurationResetDebugModeEnum(s)
+	case 1:
+		*e = ReinitializeActionConfigurationResetDebugModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetDebugModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetDebugModeEnum: %v", v)
 	}
 }
 
 // ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum - When set to <em>1</em>, removes all user-defined frequencies for discovery and polling processes to their default values (respectively 1 hour and 2 minutes).
-type ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum string
+type ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum int
 
 const (
-	ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnumZero ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum = "0"
-	ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnumOne  ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum = "1"
+	ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnumZero ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum = 0
+	ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnumOne  ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum = 1
 )
 
+func (e ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum) ToPointer() *ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum {
+	return &e
+}
+
 func (e *ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum(s)
+	case 1:
+		*e = ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum: %s", s)
+		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum: %v", v)
 	}
 }
 
 // ReinitializeActionConfigurationResetJavaSettingsEnum - When set to <em>1</em>, removes the custom Java settings (path and credentials). The KM will try to automatically find a suitable JRE.
-type ReinitializeActionConfigurationResetJavaSettingsEnum string
+type ReinitializeActionConfigurationResetJavaSettingsEnum int
 
 const (
-	ReinitializeActionConfigurationResetJavaSettingsEnumZero ReinitializeActionConfigurationResetJavaSettingsEnum = "0"
-	ReinitializeActionConfigurationResetJavaSettingsEnumOne  ReinitializeActionConfigurationResetJavaSettingsEnum = "1"
+	ReinitializeActionConfigurationResetJavaSettingsEnumZero ReinitializeActionConfigurationResetJavaSettingsEnum = 0
+	ReinitializeActionConfigurationResetJavaSettingsEnumOne  ReinitializeActionConfigurationResetJavaSettingsEnum = 1
 )
 
+func (e ReinitializeActionConfigurationResetJavaSettingsEnum) ToPointer() *ReinitializeActionConfigurationResetJavaSettingsEnum {
+	return &e
+}
+
 func (e *ReinitializeActionConfigurationResetJavaSettingsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = ReinitializeActionConfigurationResetJavaSettingsEnum(s)
+	case 1:
+		*e = ReinitializeActionConfigurationResetJavaSettingsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetJavaSettingsEnum: %s", s)
+		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetJavaSettingsEnum: %v", v)
 	}
 }
 
 // ReinitializeActionConfigurationResetOtherAlertSettingsEnum - When set to <em>1</em>, reverts any manually performed configuration changes to the default Hardware Sentry values.
-type ReinitializeActionConfigurationResetOtherAlertSettingsEnum string
+type ReinitializeActionConfigurationResetOtherAlertSettingsEnum int
 
 const (
-	ReinitializeActionConfigurationResetOtherAlertSettingsEnumZero ReinitializeActionConfigurationResetOtherAlertSettingsEnum = "0"
-	ReinitializeActionConfigurationResetOtherAlertSettingsEnumOne  ReinitializeActionConfigurationResetOtherAlertSettingsEnum = "1"
+	ReinitializeActionConfigurationResetOtherAlertSettingsEnumZero ReinitializeActionConfigurationResetOtherAlertSettingsEnum = 0
+	ReinitializeActionConfigurationResetOtherAlertSettingsEnumOne  ReinitializeActionConfigurationResetOtherAlertSettingsEnum = 1
 )
 
+func (e ReinitializeActionConfigurationResetOtherAlertSettingsEnum) ToPointer() *ReinitializeActionConfigurationResetOtherAlertSettingsEnum {
+	return &e
+}
+
 func (e *ReinitializeActionConfigurationResetOtherAlertSettingsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = ReinitializeActionConfigurationResetOtherAlertSettingsEnum(s)
+	case 1:
+		*e = ReinitializeActionConfigurationResetOtherAlertSettingsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetOtherAlertSettingsEnum: %s", s)
+		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetOtherAlertSettingsEnum: %v", v)
 	}
 }
 
 // ReinitializeActionConfigurationResetRemovedPausedObjectListEnum - When set to <em>1</em>, reactivates the monitoring of all paused or removed objects.
-type ReinitializeActionConfigurationResetRemovedPausedObjectListEnum string
+type ReinitializeActionConfigurationResetRemovedPausedObjectListEnum int
 
 const (
-	ReinitializeActionConfigurationResetRemovedPausedObjectListEnumZero ReinitializeActionConfigurationResetRemovedPausedObjectListEnum = "0"
-	ReinitializeActionConfigurationResetRemovedPausedObjectListEnumOne  ReinitializeActionConfigurationResetRemovedPausedObjectListEnum = "1"
+	ReinitializeActionConfigurationResetRemovedPausedObjectListEnumZero ReinitializeActionConfigurationResetRemovedPausedObjectListEnum = 0
+	ReinitializeActionConfigurationResetRemovedPausedObjectListEnumOne  ReinitializeActionConfigurationResetRemovedPausedObjectListEnum = 1
 )
 
+func (e ReinitializeActionConfigurationResetRemovedPausedObjectListEnum) ToPointer() *ReinitializeActionConfigurationResetRemovedPausedObjectListEnum {
+	return &e
+}
+
 func (e *ReinitializeActionConfigurationResetRemovedPausedObjectListEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = ReinitializeActionConfigurationResetRemovedPausedObjectListEnum(s)
+	case 1:
+		*e = ReinitializeActionConfigurationResetRemovedPausedObjectListEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetRemovedPausedObjectListEnum: %s", s)
+		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetRemovedPausedObjectListEnum: %v", v)
 	}
 }
 
 // ReinitializeActionConfigurationResetReportSettingsEnum - When set to <em>1</em>, clears the report schedule.
-type ReinitializeActionConfigurationResetReportSettingsEnum string
+type ReinitializeActionConfigurationResetReportSettingsEnum int
 
 const (
-	ReinitializeActionConfigurationResetReportSettingsEnumZero ReinitializeActionConfigurationResetReportSettingsEnum = "0"
-	ReinitializeActionConfigurationResetReportSettingsEnumOne  ReinitializeActionConfigurationResetReportSettingsEnum = "1"
+	ReinitializeActionConfigurationResetReportSettingsEnumZero ReinitializeActionConfigurationResetReportSettingsEnum = 0
+	ReinitializeActionConfigurationResetReportSettingsEnumOne  ReinitializeActionConfigurationResetReportSettingsEnum = 1
 )
 
+func (e ReinitializeActionConfigurationResetReportSettingsEnum) ToPointer() *ReinitializeActionConfigurationResetReportSettingsEnum {
+	return &e
+}
+
 func (e *ReinitializeActionConfigurationResetReportSettingsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = ReinitializeActionConfigurationResetReportSettingsEnum(s)
+	case 1:
+		*e = ReinitializeActionConfigurationResetReportSettingsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetReportSettingsEnum: %s", s)
+		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetReportSettingsEnum: %v", v)
 	}
 }
 
 // ReinitializeActionConfigurationResetThresholdsEnum - When set to <em>1</em>, resets all thresholds.
-type ReinitializeActionConfigurationResetThresholdsEnum string
+type ReinitializeActionConfigurationResetThresholdsEnum int
 
 const (
-	ReinitializeActionConfigurationResetThresholdsEnumZero ReinitializeActionConfigurationResetThresholdsEnum = "0"
-	ReinitializeActionConfigurationResetThresholdsEnumOne  ReinitializeActionConfigurationResetThresholdsEnum = "1"
+	ReinitializeActionConfigurationResetThresholdsEnumZero ReinitializeActionConfigurationResetThresholdsEnum = 0
+	ReinitializeActionConfigurationResetThresholdsEnumOne  ReinitializeActionConfigurationResetThresholdsEnum = 1
 )
 
+func (e ReinitializeActionConfigurationResetThresholdsEnum) ToPointer() *ReinitializeActionConfigurationResetThresholdsEnum {
+	return &e
+}
+
 func (e *ReinitializeActionConfigurationResetThresholdsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = ReinitializeActionConfigurationResetThresholdsEnum(s)
+	case 1:
+		*e = ReinitializeActionConfigurationResetThresholdsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetThresholdsEnum: %s", s)
+		return fmt.Errorf("invalid value for ReinitializeActionConfigurationResetThresholdsEnum: %v", v)
 	}
 }
 

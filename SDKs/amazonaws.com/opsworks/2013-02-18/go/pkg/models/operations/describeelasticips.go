@@ -16,17 +16,21 @@ const (
 	DescribeElasticIpsXAmzTargetEnumOpsWorks20130218DescribeElasticIps DescribeElasticIpsXAmzTargetEnum = "OpsWorks_20130218.DescribeElasticIps"
 )
 
+func (e DescribeElasticIpsXAmzTargetEnum) ToPointer() *DescribeElasticIpsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeElasticIpsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DescribeElasticIps":
-		*e = DescribeElasticIpsXAmzTargetEnum(s)
+		*e = DescribeElasticIpsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeElasticIpsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeElasticIpsXAmzTargetEnum: %v", v)
 	}
 }
 

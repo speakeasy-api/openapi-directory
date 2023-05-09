@@ -13,23 +13,24 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ticketmaster.com/publish/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PatchAttractionRequest{
+    ctx := context.Background()
+    res, err := s.PatchAttraction(ctx, operations.PatchAttractionRequest{
         AugmentationData: shared.AugmentationData{
             Changes: []shared.Change{
                 shared.Change{
-                    From: "provident",
-                    Op: "copy",
+                    From: sdk.String("provident"),
+                    Op: shared.ChangeOpEnumCopy,
                     Path: "quibusdam",
                     Value: map[string]interface{}{
                         "nulla": "corrupti",
@@ -38,8 +39,8 @@ func main() {
                     },
                 },
                 shared.Change{
-                    From: "suscipit",
-                    Op: "replace",
+                    From: sdk.String("suscipit"),
+                    Op: shared.ChangeOpEnumReplace,
                     Path: "magnam",
                     Value: map[string]interface{}{
                         "ipsa": "delectus",
@@ -49,8 +50,8 @@ func main() {
                     },
                 },
                 shared.Change{
-                    From: "iusto",
-                    Op: "move",
+                    From: sdk.String("iusto"),
+                    Op: shared.ChangeOpEnumMove,
                     Path: "nisi",
                     Value: map[string]interface{}{
                         "temporibus": "ab",
@@ -61,17 +62,14 @@ func main() {
                 },
             },
             RelatedEntityID: "sapiente",
-            RelatedEntityType: "venue",
-            Score: 1403.5,
+            RelatedEntityType: shared.AugmentationDataRelatedEntityTypeEnumVenue,
+            Score: sdk.Float32(1403.5),
             Source: "at",
             VersionNumber: 870088,
         },
         TMPSCorrelationID: "maiores",
-        ID: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.PatchAttraction(ctx, req)
+        ID: "7cc78ca1-ba92-48fc-8167-42cb73920592",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -86,18 +84,18 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `PatchAttraction` - Publish a patch on an attraction
-* `PatchEvent` - Publish a patch on an event
-* `PatchVenue` - Publish a patch on a venue
-* `PublishAttraction` - Publish an attractions
-* `PublishAttractionVideos` - Publish a video on an attraction
-* `PublishEntitlements` - Publish entitlements on an entity
-* `PublishEvent` - Publish an event
-* `PublishEventVideos` - Publish a video on an event
-* `PublishExtension` - Publish extension on an entity
-* `PublishVenue` - Publish a venue
+* [PatchAttraction](docs/sdk/README.md#patchattraction) - Publish a patch on an attraction
+* [PatchEvent](docs/sdk/README.md#patchevent) - Publish a patch on an event
+* [PatchVenue](docs/sdk/README.md#patchvenue) - Publish a patch on a venue
+* [PublishAttraction](docs/sdk/README.md#publishattraction) - Publish an attractions
+* [PublishAttractionVideos](docs/sdk/README.md#publishattractionvideos) - Publish a video on an attraction
+* [PublishEntitlements](docs/sdk/README.md#publishentitlements) - Publish entitlements on an entity
+* [PublishEvent](docs/sdk/README.md#publishevent) - Publish an event
+* [PublishEventVideos](docs/sdk/README.md#publisheventvideos) - Publish a video on an event
+* [PublishExtension](docs/sdk/README.md#publishextension) - Publish extension on an entity
+* [PublishVenue](docs/sdk/README.md#publishvenue) - Publish a venue
 <!-- End SDK Available Operations -->
 
 ### Maturity

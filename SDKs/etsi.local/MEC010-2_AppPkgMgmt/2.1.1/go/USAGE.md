@@ -2,28 +2,25 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AppDGETRequest{
-        AllFields: "corrupti",
-        AppDID: "provident",
-        ExcludeDefault: "distinctio",
-        ExcludeFields: "quibusdam",
-        Fields: "unde",
-        Filter: "nulla",
-    }
-
     ctx := context.Background()
-    res, err := s.AppPkgm.AppDGET(ctx, req)
+    res, err := s.AppPkgm.AppDGET(ctx, operations.AppDGETRequest{
+        AllFields: sdk.String("corrupti"),
+        AppDID: "provident",
+        ExcludeDefault: sdk.String("distinctio"),
+        ExcludeFields: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Filter: sdk.String("nulla"),
+    })
     if err != nil {
         log.Fatal(err)
     }

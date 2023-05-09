@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // PolicyanalyzerProjectsLocationsActivityTypesActivitiesQuery - Queries policy activities on GCP resources.
 func (s *projects) PolicyanalyzerProjectsLocationsActivityTypesActivitiesQuery(ctx context.Context, request operations.PolicyanalyzerProjectsLocationsActivityTypesActivitiesQueryRequest, security operations.PolicyanalyzerProjectsLocationsActivityTypesActivitiesQuerySecurity) (*operations.PolicyanalyzerProjectsLocationsActivityTypesActivitiesQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/activities:query", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/activities:query", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

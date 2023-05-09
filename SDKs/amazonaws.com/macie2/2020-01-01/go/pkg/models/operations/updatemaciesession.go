@@ -17,21 +17,25 @@ const (
 	UpdateMacieSessionRequestBodyFindingPublishingFrequencyEnumSixHours       UpdateMacieSessionRequestBodyFindingPublishingFrequencyEnum = "SIX_HOURS"
 )
 
+func (e UpdateMacieSessionRequestBodyFindingPublishingFrequencyEnum) ToPointer() *UpdateMacieSessionRequestBodyFindingPublishingFrequencyEnum {
+	return &e
+}
+
 func (e *UpdateMacieSessionRequestBodyFindingPublishingFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIFTEEN_MINUTES":
 		fallthrough
 	case "ONE_HOUR":
 		fallthrough
 	case "SIX_HOURS":
-		*e = UpdateMacieSessionRequestBodyFindingPublishingFrequencyEnum(s)
+		*e = UpdateMacieSessionRequestBodyFindingPublishingFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMacieSessionRequestBodyFindingPublishingFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMacieSessionRequestBodyFindingPublishingFrequencyEnum: %v", v)
 	}
 }
 
@@ -43,19 +47,23 @@ const (
 	UpdateMacieSessionRequestBodyStatusEnumEnabled UpdateMacieSessionRequestBodyStatusEnum = "ENABLED"
 )
 
+func (e UpdateMacieSessionRequestBodyStatusEnum) ToPointer() *UpdateMacieSessionRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *UpdateMacieSessionRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PAUSED":
 		fallthrough
 	case "ENABLED":
-		*e = UpdateMacieSessionRequestBodyStatusEnum(s)
+		*e = UpdateMacieSessionRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMacieSessionRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMacieSessionRequestBodyStatusEnum: %v", v)
 	}
 }
 

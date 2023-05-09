@@ -42,12 +42,16 @@ const (
 	StorageObjectsComposeDestinationPredefinedACLEnumPublicRead             StorageObjectsComposeDestinationPredefinedACLEnum = "publicRead"
 )
 
+func (e StorageObjectsComposeDestinationPredefinedACLEnum) ToPointer() *StorageObjectsComposeDestinationPredefinedACLEnum {
+	return &e
+}
+
 func (e *StorageObjectsComposeDestinationPredefinedACLEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "authenticatedRead":
 		fallthrough
 	case "bucketOwnerFullControl":
@@ -59,10 +63,10 @@ func (e *StorageObjectsComposeDestinationPredefinedACLEnum) UnmarshalJSON(data [
 	case "projectPrivate":
 		fallthrough
 	case "publicRead":
-		*e = StorageObjectsComposeDestinationPredefinedACLEnum(s)
+		*e = StorageObjectsComposeDestinationPredefinedACLEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageObjectsComposeDestinationPredefinedACLEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageObjectsComposeDestinationPredefinedACLEnum: %v", v)
 	}
 }
 

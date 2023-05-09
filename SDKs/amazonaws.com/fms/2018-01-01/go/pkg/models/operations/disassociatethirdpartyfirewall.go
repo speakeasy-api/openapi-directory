@@ -16,17 +16,21 @@ const (
 	DisassociateThirdPartyFirewallXAmzTargetEnumAwsfms20180101DisassociateThirdPartyFirewall DisassociateThirdPartyFirewallXAmzTargetEnum = "AWSFMS_20180101.DisassociateThirdPartyFirewall"
 )
 
+func (e DisassociateThirdPartyFirewallXAmzTargetEnum) ToPointer() *DisassociateThirdPartyFirewallXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateThirdPartyFirewallXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.DisassociateThirdPartyFirewall":
-		*e = DisassociateThirdPartyFirewallXAmzTargetEnum(s)
+		*e = DisassociateThirdPartyFirewallXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateThirdPartyFirewallXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateThirdPartyFirewallXAmzTargetEnum: %v", v)
 	}
 }
 

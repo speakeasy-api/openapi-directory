@@ -16,21 +16,25 @@ const (
 	ComputeEnginePreferencesLicenseTypeEnumLicenseTypeBringYourOwnLicense ComputeEnginePreferencesLicenseTypeEnum = "LICENSE_TYPE_BRING_YOUR_OWN_LICENSE"
 )
 
+func (e ComputeEnginePreferencesLicenseTypeEnum) ToPointer() *ComputeEnginePreferencesLicenseTypeEnum {
+	return &e
+}
+
 func (e *ComputeEnginePreferencesLicenseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LICENSE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LICENSE_TYPE_DEFAULT":
 		fallthrough
 	case "LICENSE_TYPE_BRING_YOUR_OWN_LICENSE":
-		*e = ComputeEnginePreferencesLicenseTypeEnum(s)
+		*e = ComputeEnginePreferencesLicenseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeEnginePreferencesLicenseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeEnginePreferencesLicenseTypeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	ComputeEnginePreferencesPersistentDiskTypeEnumPersistentDiskTypeSsd         ComputeEnginePreferencesPersistentDiskTypeEnum = "PERSISTENT_DISK_TYPE_SSD"
 )
 
+func (e ComputeEnginePreferencesPersistentDiskTypeEnum) ToPointer() *ComputeEnginePreferencesPersistentDiskTypeEnum {
+	return &e
+}
+
 func (e *ComputeEnginePreferencesPersistentDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERSISTENT_DISK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PERSISTENT_DISK_TYPE_STANDARD":
@@ -57,10 +65,10 @@ func (e *ComputeEnginePreferencesPersistentDiskTypeEnum) UnmarshalJSON(data []by
 	case "PERSISTENT_DISK_TYPE_BALANCED":
 		fallthrough
 	case "PERSISTENT_DISK_TYPE_SSD":
-		*e = ComputeEnginePreferencesPersistentDiskTypeEnum(s)
+		*e = ComputeEnginePreferencesPersistentDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeEnginePreferencesPersistentDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeEnginePreferencesPersistentDiskTypeEnum: %v", v)
 	}
 }
 

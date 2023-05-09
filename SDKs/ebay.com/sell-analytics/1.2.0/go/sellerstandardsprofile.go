@@ -33,7 +33,7 @@ func newSellerStandardsProfile(defaultClient, securityClient HTTPClient, serverU
 }
 
 // FindSellerStandardsProfiles - This call retrieves all the standards profiles for the associated seller. A standards profile is a set of eBay seller metrics and the seller's associated compliance values (either TOP_RATED, ABOVE_STANDARD, or BELOW_STANDARD). A seller's multiple profiles are distinguished by two criteria, a &quot;program&quot; and a &quot;cycle.&quot; A profile's program is one of three regions where the seller may have done business, or PROGRAM_GLOBAL to indicate all marketplaces where the seller has done business. The cycle value specifies whether the standards compliance values were determined at the last official eBay evaluation or at the time of the request.
-func (s *sellerStandardsProfile) FindSellerStandardsProfiles(ctx context.Context) (*operations.FindSellerStandardsProfilesResponse, error) {
+func (s *sellerStandardsProfile) FindSellerStandardsProfiles(ctx context.Context, security operations.FindSellerStandardsProfilesSecurity) (*operations.FindSellerStandardsProfilesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/seller_standards_profile"
 
@@ -42,7 +42,7 @@ func (s *sellerStandardsProfile) FindSellerStandardsProfiles(ctx context.Context
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -82,7 +82,10 @@ func (s *sellerStandardsProfile) FindSellerStandardsProfiles(ctx context.Context
 // GetSellerStandardsProfile - This call retrieves a single standards profile for the associated seller. A standards profile is a set of eBay seller metrics and the seller's associated compliance values (either TOP_RATED, ABOVE_STANDARD, or BELOW_STANDARD). A seller can have multiple profiles distinguished by two criteria, a &quot;program&quot; and a &quot;cycle.&quot; A profile's program is one of three regions where the seller may have done business, or PROGRAM_GLOBAL to indicate all marketplaces where the seller has done business. The cycle value specifies whether the standards compliance values were determined at the last official eBay evaluation (CURRENT) or at the time of the request (PROJECTED). Both cycle and a program values are required URI parameters for this method.
 func (s *sellerStandardsProfile) GetSellerStandardsProfile(ctx context.Context, request operations.GetSellerStandardsProfileRequest, security operations.GetSellerStandardsProfileSecurity) (*operations.GetSellerStandardsProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller_standards_profile/{program}/{cycle}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seller_standards_profile/{program}/{cycle}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

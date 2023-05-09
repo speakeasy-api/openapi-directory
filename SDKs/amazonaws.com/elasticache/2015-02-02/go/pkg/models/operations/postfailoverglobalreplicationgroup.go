@@ -15,17 +15,21 @@ const (
 	POSTFailoverGlobalReplicationGroupActionEnumFailoverGlobalReplicationGroup POSTFailoverGlobalReplicationGroupActionEnum = "FailoverGlobalReplicationGroup"
 )
 
+func (e POSTFailoverGlobalReplicationGroupActionEnum) ToPointer() *POSTFailoverGlobalReplicationGroupActionEnum {
+	return &e
+}
+
 func (e *POSTFailoverGlobalReplicationGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FailoverGlobalReplicationGroup":
-		*e = POSTFailoverGlobalReplicationGroupActionEnum(s)
+		*e = POSTFailoverGlobalReplicationGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTFailoverGlobalReplicationGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTFailoverGlobalReplicationGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTFailoverGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 POSTFailoverGlobalReplicationGroupVersionEnum = "2015-02-02"
 )
 
+func (e POSTFailoverGlobalReplicationGroupVersionEnum) ToPointer() *POSTFailoverGlobalReplicationGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTFailoverGlobalReplicationGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTFailoverGlobalReplicationGroupVersionEnum(s)
+		*e = POSTFailoverGlobalReplicationGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTFailoverGlobalReplicationGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTFailoverGlobalReplicationGroupVersionEnum: %v", v)
 	}
 }
 

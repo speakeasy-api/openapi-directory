@@ -16,17 +16,21 @@ const (
 	StopSentimentDetectionJobXAmzTargetEnumComprehend20171127StopSentimentDetectionJob StopSentimentDetectionJobXAmzTargetEnum = "Comprehend_20171127.StopSentimentDetectionJob"
 )
 
+func (e StopSentimentDetectionJobXAmzTargetEnum) ToPointer() *StopSentimentDetectionJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopSentimentDetectionJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.StopSentimentDetectionJob":
-		*e = StopSentimentDetectionJobXAmzTargetEnum(s)
+		*e = StopSentimentDetectionJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopSentimentDetectionJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopSentimentDetectionJobXAmzTargetEnum: %v", v)
 	}
 }
 

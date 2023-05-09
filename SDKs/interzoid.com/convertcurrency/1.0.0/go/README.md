@@ -13,26 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/convertcurr
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ConvertcurrencyRequest{
+    ctx := context.Background()
+    res, err := s.LiveCurrencyRateConversion.Convertcurrency(ctx, operations.ConvertcurrencyRequest{
         Amount: "corrupti",
         From: "provident",
         License: "distinctio",
         To: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.LiveCurrencyRateConversion.Convertcurrency(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,9 +45,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### LiveCurrencyRateConversion
+### [LiveCurrencyRateConversion](docs/livecurrencyrateconversion/README.md)
 
-* `Convertcurrency` - Converts amount in one currency to that of another
+* [Convertcurrency](docs/livecurrencyrateconversion/README.md#convertcurrency) - Converts amount in one currency to that of another
 <!-- End SDK Available Operations -->
 
 ### Maturity

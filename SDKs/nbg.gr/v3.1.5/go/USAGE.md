@@ -2,28 +2,25 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteAccountAccessConsentsConsentIDRequest{
+    ctx := context.Background()
+    res, err := s.AccountAccess.DeleteAccountAccessConsentsConsentID(ctx, operations.DeleteAccountAccessConsentsConsentIDRequest{
         ConsentID: "corrupti",
         SandboxID: "provident",
-        XCustomerUserAgent: "distinctio",
-        XFapiAuthDate: "quibusdam",
-        XFapiCustomerIPAddress: "unde",
-        XFapiInteractionID: "nulla",
-    }
-
-    ctx := context.Background()
-    res, err := s.AccountAccess.DeleteAccountAccessConsentsConsentID(ctx, req, operations.DeleteAccountAccessConsentsConsentIDSecurity{
+        XCustomerUserAgent: sdk.String("distinctio"),
+        XFapiAuthDate: sdk.String("quibusdam"),
+        XFapiCustomerIPAddress: sdk.String("unde"),
+        XFapiInteractionID: sdk.String("nulla"),
+    }, operations.DeleteAccountAccessConsentsConsentIDSecurity{
         ClientCredentialsToken: "Bearer YOUR_ACCESS_TOKEN_HERE",
         ClientID: "YOUR_API_KEY_HERE",
     })

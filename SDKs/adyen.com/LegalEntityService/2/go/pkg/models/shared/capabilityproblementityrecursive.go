@@ -15,25 +15,30 @@ const (
 	CapabilityProblemEntityRecursiveTypeEnumLegalEntity CapabilityProblemEntityRecursiveTypeEnum = "LegalEntity"
 )
 
+func (e CapabilityProblemEntityRecursiveTypeEnum) ToPointer() *CapabilityProblemEntityRecursiveTypeEnum {
+	return &e
+}
+
 func (e *CapabilityProblemEntityRecursiveTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BankAccount":
 		fallthrough
 	case "Document":
 		fallthrough
 	case "LegalEntity":
-		*e = CapabilityProblemEntityRecursiveTypeEnum(s)
+		*e = CapabilityProblemEntityRecursiveTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapabilityProblemEntityRecursiveTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CapabilityProblemEntityRecursiveTypeEnum: %v", v)
 	}
 }
 
 type CapabilityProblemEntityRecursive struct {
+	// List of document IDs corresponding to the verification errors from capabilities.
 	Documents []string                                  `json:"documents,omitempty"`
 	ID        *string                                   `json:"id,omitempty"`
 	Type      *CapabilityProblemEntityRecursiveTypeEnum `json:"type,omitempty"`

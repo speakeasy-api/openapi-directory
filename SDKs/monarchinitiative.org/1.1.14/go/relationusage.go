@@ -36,7 +36,10 @@ func newRelationUsage(defaultClient, securityClient HTTPClient, serverURL, langu
 // GetRelationUsageBetweenResource - All relations used plus count of associations
 func (s *relationUsage) GetRelationUsageBetweenResource(ctx context.Context, request operations.GetRelationUsageBetweenResourceRequest) (*operations.GetRelationUsageBetweenResourceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/relation/usage/between/{subject_category}/{object_category}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/relation/usage/between/{subject_category}/{object_category}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -59,17 +59,21 @@ const (
 	PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern4MatcherEnumEqualToXML PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern4MatcherEnum = "equalToXml"
 )
 
+func (e PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern4MatcherEnum) ToPointer() *PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern4MatcherEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern4MatcherEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "equalToXml":
-		*e = PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern4MatcherEnum(s)
+		*e = PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern4MatcherEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern4MatcherEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern4MatcherEnum: %v", v)
 	}
 }
 
@@ -84,17 +88,21 @@ const (
 	PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3MatcherEnumEqualToJSON PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3MatcherEnum = "equalToJson"
 )
 
+func (e PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3MatcherEnum) ToPointer() *PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3MatcherEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3MatcherEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "equalToJson":
-		*e = PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3MatcherEnum(s)
+		*e = PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3MatcherEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3MatcherEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern3MatcherEnum: %v", v)
 	}
 }
 
@@ -113,17 +121,21 @@ const (
 	PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2MatcherEnumEqualTo PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2MatcherEnum = "equalTo"
 )
 
+func (e PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2MatcherEnum) ToPointer() *PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2MatcherEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2MatcherEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "equalTo":
-		*e = PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2MatcherEnum(s)
+		*e = PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2MatcherEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2MatcherEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern2MatcherEnum: %v", v)
 	}
 }
 
@@ -140,17 +152,21 @@ const (
 	PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern1MatcherEnumAuto PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern1MatcherEnum = "auto"
 )
 
+func (e PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern1MatcherEnum) ToPointer() *PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern1MatcherEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern1MatcherEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "auto":
-		*e = PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern1MatcherEnum(s)
+		*e = PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern1MatcherEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern1MatcherEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshotRequestBodyRequestBodyPattern1MatcherEnum: %v", v)
 	}
 }
 
@@ -334,17 +350,21 @@ const (
 	PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnumUniform PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum = "uniform"
 )
 
+func (e PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum) ToPointer() *PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uniform":
-		*e = PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum(s)
+		*e = PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum: %v", v)
 	}
 }
 
@@ -361,17 +381,21 @@ const (
 	PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnumLognormal PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum = "lognormal"
 )
 
+func (e PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum) ToPointer() *PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lognormal":
-		*e = PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum(s)
+		*e = PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum: %v", v)
 	}
 }
 
@@ -460,12 +484,16 @@ const (
 	PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseFaultEnumRandomDataThenClose    PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseFaultEnum = "RANDOM_DATA_THEN_CLOSE"
 )
 
+func (e PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseFaultEnum) ToPointer() *PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseFaultEnum {
+	return &e
+}
+
 func (e *PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseFaultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTION_RESET_BY_PEER":
 		fallthrough
 	case "EMPTY_RESPONSE":
@@ -473,10 +501,10 @@ func (e *PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseFaultEnum)
 	case "MALFORMED_RESPONSE_CHUNK":
 		fallthrough
 	case "RANDOM_DATA_THEN_CLOSE":
-		*e = PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseFaultEnum(s)
+		*e = PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseFaultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseFaultEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminRecordingsSnapshot200ApplicationJSONMappingsResponseFaultEnum: %v", v)
 	}
 }
 

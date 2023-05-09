@@ -17,12 +17,16 @@ const (
 	DisplayNameDisapprovalReasonDisapprovalReasonEnumLandingPageNotMatched        DisplayNameDisapprovalReasonDisapprovalReasonEnum = "LANDING_PAGE_NOT_MATCHED"
 )
 
+func (e DisplayNameDisapprovalReasonDisapprovalReasonEnum) ToPointer() *DisplayNameDisapprovalReasonDisapprovalReasonEnum {
+	return &e
+}
+
 func (e *DisplayNameDisapprovalReasonDisapprovalReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISAPPROVAL_REASON_UNSPECIFIED":
 		fallthrough
 	case "PUNCTUATION":
@@ -30,10 +34,10 @@ func (e *DisplayNameDisapprovalReasonDisapprovalReasonEnum) UnmarshalJSON(data [
 	case "MARKETING_LANGUAGE":
 		fallthrough
 	case "LANDING_PAGE_NOT_MATCHED":
-		*e = DisplayNameDisapprovalReasonDisapprovalReasonEnum(s)
+		*e = DisplayNameDisapprovalReasonDisapprovalReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisplayNameDisapprovalReasonDisapprovalReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for DisplayNameDisapprovalReasonDisapprovalReasonEnum: %v", v)
 	}
 }
 

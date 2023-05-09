@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amadeus.com/amadeus-locat
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetCategoryRatedAreasRequest{
+    ctx := context.Background()
+    res, err := s.CategoryRatedAreas.GetCategoryRatedAreas(ctx, operations.GetCategoryRatedAreasRequest{
         Latitude: 5488.14,
         Longitude: 5928.45,
-    }
-
-    ctx := context.Background()
-    res, err := s.CategoryRatedAreas.GetCategoryRatedAreas(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### CategoryRatedAreas
+### [CategoryRatedAreas](docs/categoryratedareas/README.md)
 
-* `GetCategoryRatedAreas` - GET category rated areas
+* [GetCategoryRatedAreas](docs/categoryratedareas/README.md#getcategoryratedareas) - GET category rated areas
 <!-- End SDK Available Operations -->
 
 ### Maturity

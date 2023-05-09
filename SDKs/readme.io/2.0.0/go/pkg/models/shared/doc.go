@@ -16,21 +16,25 @@ const (
 	DocTypeEnumLink  DocTypeEnum = "link"
 )
 
+func (e DocTypeEnum) ToPointer() *DocTypeEnum {
+	return &e
+}
+
 func (e *DocTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "basic":
 		fallthrough
 	case "error":
 		fallthrough
 	case "link":
-		*e = DocTypeEnum(s)
+		*e = DocTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DocTypeEnum: %v", v)
 	}
 }
 

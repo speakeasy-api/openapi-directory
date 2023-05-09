@@ -16,21 +16,25 @@ const (
 	DNSKeyDigestTypeEnumSha384 DNSKeyDigestTypeEnum = "SHA384"
 )
 
+func (e DNSKeyDigestTypeEnum) ToPointer() *DNSKeyDigestTypeEnum {
+	return &e
+}
+
 func (e *DNSKeyDigestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHA1":
 		fallthrough
 	case "SHA256":
 		fallthrough
 	case "SHA384":
-		*e = DNSKeyDigestTypeEnum(s)
+		*e = DNSKeyDigestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DNSKeyDigestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DNSKeyDigestTypeEnum: %v", v)
 	}
 }
 

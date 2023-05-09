@@ -12,6 +12,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -105,4 +106,15 @@ pkg/models/shared/hostconfig.go
 pkg/models/shared/containerid.go
 pkg/models/shared/createcontainer.go
 pkg/models/shared/updatevolume.go
+docs/sdk/README.md
+docs/apiinfo/README.md
+docs/authentication/README.md
+docs/containergroups/README.md
+docs/fileshares/README.md
+docs/images/README.md
+docs/privatedockerimagesregistry/README.md
+docs/publicipaddresses/README.md
+docs/quota/README.md
+docs/singlecontainers/README.md
+docs/volumes/README.md
 USAGE.md

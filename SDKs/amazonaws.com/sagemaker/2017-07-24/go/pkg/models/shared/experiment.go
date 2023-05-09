@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// Experiment - The properties of an experiment as returned by the <a>Search</a> API.
+// Experiment - The properties of an experiment as returned by the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API.
 type Experiment struct {
 	CreatedBy      *UserContext `json:"CreatedBy,omitempty"`
 	CreationTime   *time.Time   `json:"CreationTime,omitempty"`

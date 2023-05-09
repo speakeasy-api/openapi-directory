@@ -13,23 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/LegalEntityServ
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteBusinessLinesIDRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.BusinessLines.DeleteBusinessLinesID(ctx, req, operations.DeleteBusinessLinesIDSecurity{
+    res, err := s.BusinessLines.DeleteBusinessLinesID(ctx, operations.DeleteBusinessLinesIDRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    }, operations.DeleteBusinessLinesIDSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {
@@ -47,45 +45,51 @@ func main() {
 ## Available Resources and Operations
 
 
-### BusinessLines
+### [BusinessLines](docs/businesslines/README.md)
 
-* `DeleteBusinessLinesID` - Delete a business line
-* `GetBusinessLinesID` - Get a business line
-* `PostBusinessLines` - Create a business line
+* [DeleteBusinessLinesID](docs/businesslines/README.md#deletebusinesslinesid) - Delete a business line
+* [GetBusinessLinesID](docs/businesslines/README.md#getbusinesslinesid) - Get a business line
+* [PostBusinessLines](docs/businesslines/README.md#postbusinesslines) - Create a business line
 
-### Documents
+### [Documents](docs/documents/README.md)
 
-* `DeleteDocumentsID` - Delete a document
-* `GetDocumentsID` - Get a document
-* `PatchDocumentsID` - Update a document
-* `PostDocuments` - Upload a document for verification checks
+* [DeleteDocumentsID](docs/documents/README.md#deletedocumentsid) - Delete a document
+* [GetDocumentsID](docs/documents/README.md#getdocumentsid) - Get a document
+* [PatchDocumentsID](docs/documents/README.md#patchdocumentsid) - Update a document
+* [PostDocuments](docs/documents/README.md#postdocuments) - Upload a document for verification checks
 
-### HostedOnboarding
+### [HostedOnboarding](docs/hostedonboarding/README.md)
 
-* `GetThemes` - Get a list of hosted onboarding page themes
-* `GetThemesID` - Get an onboarding link theme
-* `PostLegalEntitiesIDOnboardingLinks` - Get a link to an Adyen-hosted onboarding page
+* [GetThemes](docs/hostedonboarding/README.md#getthemes) - Get a list of hosted onboarding page themes
+* [GetThemesID](docs/hostedonboarding/README.md#getthemesid) - Get an onboarding link theme
+* [PostLegalEntitiesIDOnboardingLinks](docs/hostedonboarding/README.md#postlegalentitiesidonboardinglinks) - Get a link to an Adyen-hosted onboarding page
 
-### LegalEntities
+### [LegalEntities](docs/legalentities/README.md)
 
-* `GetLegalEntitiesID` - Get a legal entity
-* `GetLegalEntitiesIDBusinessLines` - Get all business lines under a legal entity
-* `PatchLegalEntitiesID` - Update a legal entity
-* `PostLegalEntities` - Create a legal entity
+* [GetLegalEntitiesID](docs/legalentities/README.md#getlegalentitiesid) - Get a legal entity
+* [GetLegalEntitiesIDBusinessLines](docs/legalentities/README.md#getlegalentitiesidbusinesslines) - Get all business lines under a legal entity
+* [PatchLegalEntitiesID](docs/legalentities/README.md#patchlegalentitiesid) - Update a legal entity
+* [PostLegalEntities](docs/legalentities/README.md#postlegalentities) - Create a legal entity
 
-### TermsOfService
+### [PCIQuestionnaires](docs/pciquestionnaires/README.md)
 
-* `GetLegalEntitiesIDTermsOfServiceAcceptanceInfos` - Get Terms of Service information for a legal entity
-* `GetLegalEntitiesIDTermsOfServiceStatus` - Get Terms of Service status
-* `PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentid` - Accept Terms of Service
-* `PostLegalEntitiesIDTermsOfService` - Get Terms of Service document
+* [GetLegalEntitiesIDPciQuestionnaires](docs/pciquestionnaires/README.md#getlegalentitiesidpciquestionnaires) - Get PCI questionnaire details
+* [GetLegalEntitiesIDPciQuestionnairesPciid](docs/pciquestionnaires/README.md#getlegalentitiesidpciquestionnairespciid) - Get PCI questionnaire
+* [PostLegalEntitiesIDPciQuestionnairesGeneratePciTemplates](docs/pciquestionnaires/README.md#postlegalentitiesidpciquestionnairesgeneratepcitemplates) - Generate PCI questionnaire
+* [PostLegalEntitiesIDPciQuestionnairesSignPciTemplates](docs/pciquestionnaires/README.md#postlegalentitiesidpciquestionnairessignpcitemplates) - Sign PCI questionnaire
 
-### TransferInstruments
+### [TermsOfService](docs/termsofservice/README.md)
 
-* `DeleteTransferInstrumentsID` - Delete a transfer instrument
-* `GetTransferInstrumentsID` - Get a transfer instrument
-* `PatchTransferInstrumentsID` - Update a transfer instrument
-* `PostTransferInstruments` - Create a transfer instrument
+* [GetLegalEntitiesIDTermsOfServiceAcceptanceInfos](docs/termsofservice/README.md#getlegalentitiesidtermsofserviceacceptanceinfos) - Get Terms of Service information for a legal entity
+* [PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentid](docs/termsofservice/README.md#patchlegalentitiesidtermsofservicetermsofservicedocumentid) - Accept Terms of Service
+* [PostLegalEntitiesIDTermsOfService](docs/termsofservice/README.md#postlegalentitiesidtermsofservice) - Get Terms of Service document
+
+### [TransferInstruments](docs/transferinstruments/README.md)
+
+* [DeleteTransferInstrumentsID](docs/transferinstruments/README.md#deletetransferinstrumentsid) - Delete a transfer instrument
+* [GetTransferInstrumentsID](docs/transferinstruments/README.md#gettransferinstrumentsid) - Get a transfer instrument
+* [PatchTransferInstrumentsID](docs/transferinstruments/README.md#patchtransferinstrumentsid) - Update a transfer instrument
+* [PostTransferInstruments](docs/transferinstruments/README.md#posttransferinstruments) - Create a transfer instrument
 <!-- End SDK Available Operations -->
 
 ### Maturity

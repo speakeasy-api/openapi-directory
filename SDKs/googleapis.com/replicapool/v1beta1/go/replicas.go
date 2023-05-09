@@ -34,7 +34,10 @@ func newReplicas(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ReplicapoolReplicasDelete - Deletes a replica from the pool.
 func (s *replicas) ReplicapoolReplicasDelete(ctx context.Context, request operations.ReplicapoolReplicasDeleteRequest, security operations.ReplicapoolReplicasDeleteSecurity) (*operations.ReplicapoolReplicasDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas/{replicaName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas/{replicaName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReplicasDeleteRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *replicas) ReplicapoolReplicasDelete(ctx context.Context, request operat
 // ReplicapoolReplicasGet - Gets information about a specific replica.
 func (s *replicas) ReplicapoolReplicasGet(ctx context.Context, request operations.ReplicapoolReplicasGetRequest, security operations.ReplicapoolReplicasGetSecurity) (*operations.ReplicapoolReplicasGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas/{replicaName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas/{replicaName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *replicas) ReplicapoolReplicasGet(ctx context.Context, request operation
 // ReplicapoolReplicasList - Lists all replicas in a pool.
 func (s *replicas) ReplicapoolReplicasList(ctx context.Context, request operations.ReplicapoolReplicasListRequest, security operations.ReplicapoolReplicasListSecurity) (*operations.ReplicapoolReplicasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *replicas) ReplicapoolReplicasList(ctx context.Context, request operatio
 // ReplicapoolReplicasRestart - Restarts a replica in a pool.
 func (s *replicas) ReplicapoolReplicasRestart(ctx context.Context, request operations.ReplicapoolReplicasRestartRequest, security operations.ReplicapoolReplicasRestartSecurity) (*operations.ReplicapoolReplicasRestartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas/{replicaName}/restart", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectName}/zones/{zone}/pools/{poolName}/replicas/{replicaName}/restart", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -18,12 +18,16 @@ const (
 	AuditLogEventContextAPIAuthenticationMethodEnumServiceAccount      AuditLogEventContextAPIAuthenticationMethodEnum = "service_account"
 )
 
+func (e AuditLogEventContextAPIAuthenticationMethodEnum) ToPointer() *AuditLogEventContextAPIAuthenticationMethodEnum {
+	return &e
+}
+
 func (e *AuditLogEventContextAPIAuthenticationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cookie":
 		fallthrough
 	case "oauth":
@@ -31,10 +35,10 @@ func (e *AuditLogEventContextAPIAuthenticationMethodEnum) UnmarshalJSON(data []b
 	case "personal_access_token":
 		fallthrough
 	case "service_account":
-		*e = AuditLogEventContextAPIAuthenticationMethodEnum(s)
+		*e = AuditLogEventContextAPIAuthenticationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditLogEventContextAPIAuthenticationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditLogEventContextAPIAuthenticationMethodEnum: %v", v)
 	}
 }
 
@@ -52,12 +56,16 @@ const (
 	AuditLogEventContextContextTypeEnumAPI          AuditLogEventContextContextTypeEnum = "api"
 )
 
+func (e AuditLogEventContextContextTypeEnum) ToPointer() *AuditLogEventContextContextTypeEnum {
+	return &e
+}
+
 func (e *AuditLogEventContextContextTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "web":
 		fallthrough
 	case "desktop":
@@ -71,10 +79,10 @@ func (e *AuditLogEventContextContextTypeEnum) UnmarshalJSON(data []byte) error {
 	case "email":
 		fallthrough
 	case "api":
-		*e = AuditLogEventContextContextTypeEnum(s)
+		*e = AuditLogEventContextContextTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditLogEventContextContextTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditLogEventContextContextTypeEnum: %v", v)
 	}
 }
 

@@ -33,7 +33,10 @@ func newExport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // ExportConfigurationsCreate - Create new export configuration
 func (s *export) ExportConfigurationsCreate(ctx context.Context, request operations.ExportConfigurationsCreateRequest, security operations.ExportConfigurationsCreateSecurity) (*operations.ExportConfigurationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -97,7 +100,10 @@ func (s *export) ExportConfigurationsCreate(ctx context.Context, request operati
 // ExportConfigurationsDelete - Delete export configuration.
 func (s *export) ExportConfigurationsDelete(ctx context.Context, request operations.ExportConfigurationsDeleteRequest, security operations.ExportConfigurationsDeleteSecurity) (*operations.ExportConfigurationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -142,7 +148,10 @@ func (s *export) ExportConfigurationsDelete(ctx context.Context, request operati
 // ExportConfigurationsDisable - Disable export configuration.
 func (s *export) ExportConfigurationsDisable(ctx context.Context, request operations.ExportConfigurationsDisableRequest, security operations.ExportConfigurationsDisableSecurity) (*operations.ExportConfigurationsDisableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -187,7 +196,10 @@ func (s *export) ExportConfigurationsDisable(ctx context.Context, request operat
 // ExportConfigurationsEnable - Enable export configuration.
 func (s *export) ExportConfigurationsEnable(ctx context.Context, request operations.ExportConfigurationsEnableRequest, security operations.ExportConfigurationsEnableSecurity) (*operations.ExportConfigurationsEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -232,7 +244,10 @@ func (s *export) ExportConfigurationsEnable(ctx context.Context, request operati
 // ExportConfigurationsGet - Get export configuration.
 func (s *export) ExportConfigurationsGet(ctx context.Context, request operations.ExportConfigurationsGetRequest, security operations.ExportConfigurationsGetSecurity) (*operations.ExportConfigurationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -286,7 +301,10 @@ func (s *export) ExportConfigurationsGet(ctx context.Context, request operations
 // ExportConfigurationsList - List export configurations.
 func (s *export) ExportConfigurationsList(ctx context.Context, request operations.ExportConfigurationsListRequest, security operations.ExportConfigurationsListSecurity) (*operations.ExportConfigurationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -340,7 +358,10 @@ func (s *export) ExportConfigurationsList(ctx context.Context, request operation
 // ExportConfigurationsPartialUpdate - Partially update export configuration.
 func (s *export) ExportConfigurationsPartialUpdate(ctx context.Context, request operations.ExportConfigurationsPartialUpdateRequest, security operations.ExportConfigurationsPartialUpdateSecurity) (*operations.ExportConfigurationsPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

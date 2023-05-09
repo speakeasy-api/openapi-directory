@@ -16,21 +16,25 @@ const (
 	URIOverrideSchemeEnumHTTPS             URIOverrideSchemeEnum = "HTTPS"
 )
 
+func (e URIOverrideSchemeEnum) ToPointer() *URIOverrideSchemeEnum {
+	return &e
+}
+
 func (e *URIOverrideSchemeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCHEME_UNSPECIFIED":
 		fallthrough
 	case "HTTP":
 		fallthrough
 	case "HTTPS":
-		*e = URIOverrideSchemeEnum(s)
+		*e = URIOverrideSchemeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for URIOverrideSchemeEnum: %s", s)
+		return fmt.Errorf("invalid value for URIOverrideSchemeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	URIOverrideURIOverrideEnforceModeEnumAlways                            URIOverrideURIOverrideEnforceModeEnum = "ALWAYS"
 )
 
+func (e URIOverrideURIOverrideEnforceModeEnum) ToPointer() *URIOverrideURIOverrideEnforceModeEnum {
+	return &e
+}
+
 func (e *URIOverrideURIOverrideEnforceModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "URI_OVERRIDE_ENFORCE_MODE_UNSPECIFIED":
 		fallthrough
 	case "IF_NOT_EXISTS":
 		fallthrough
 	case "ALWAYS":
-		*e = URIOverrideURIOverrideEnforceModeEnum(s)
+		*e = URIOverrideURIOverrideEnforceModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for URIOverrideURIOverrideEnforceModeEnum: %s", s)
+		return fmt.Errorf("invalid value for URIOverrideURIOverrideEnforceModeEnum: %v", v)
 	}
 }
 

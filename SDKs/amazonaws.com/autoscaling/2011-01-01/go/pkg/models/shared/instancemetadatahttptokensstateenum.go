@@ -14,18 +14,22 @@ const (
 	InstanceMetadataHTTPTokensStateEnumRequired InstanceMetadataHTTPTokensStateEnum = "required"
 )
 
+func (e InstanceMetadataHTTPTokensStateEnum) ToPointer() *InstanceMetadataHTTPTokensStateEnum {
+	return &e
+}
+
 func (e *InstanceMetadataHTTPTokensStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "optional":
 		fallthrough
 	case "required":
-		*e = InstanceMetadataHTTPTokensStateEnum(s)
+		*e = InstanceMetadataHTTPTokensStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceMetadataHTTPTokensStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceMetadataHTTPTokensStateEnum: %v", v)
 	}
 }

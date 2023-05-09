@@ -18,6 +18,6 @@ type CloudStorageWorkload struct {
 	OperationB *Usage `json:"operationB,omitempty"`
 	// Area contains only one location.
 	Region *Regional `json:"region,omitempty"`
-	// The [storage class](https://cloud.google.com/storage/docs/storage-classes#classes) of the data and operation. For example: "standard" or "nearline".
+	// The [storage class](https://cloud.google.com/storage/docs/storage-classes#classes) of the data and operation. For example: "standard" and "nearline".
 	StorageClass *string `json:"storageClass,omitempty"`
 }

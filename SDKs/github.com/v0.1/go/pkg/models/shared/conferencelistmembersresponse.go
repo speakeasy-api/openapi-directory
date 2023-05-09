@@ -17,12 +17,16 @@ const (
 	ConferenceListMembersResponseMessageEnumConferenceListMembersFailedConferenceNotFound ConferenceListMembersResponseMessageEnum = "Conference ListMembers Failed -- Conference not found"
 )
 
+func (e ConferenceListMembersResponseMessageEnum) ToPointer() *ConferenceListMembersResponseMessageEnum {
+	return &e
+}
+
 func (e *ConferenceListMembersResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Conference ListMembers Executed":
 		fallthrough
 	case "ConferenceName Parameter must be present":
@@ -30,10 +34,10 @@ func (e *ConferenceListMembersResponseMessageEnum) UnmarshalJSON(data []byte) er
 	case "Conference ListMembers Failed to parse result":
 		fallthrough
 	case "Conference ListMembers Failed -- Conference not found":
-		*e = ConferenceListMembersResponseMessageEnum(s)
+		*e = ConferenceListMembersResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConferenceListMembersResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ConferenceListMembersResponseMessageEnum: %v", v)
 	}
 }
 

@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// DailySubEntityTypeDayOfWeekEnum - Represents the day of the week. Eg: MONDAY.
+// DailySubEntityTypeDayOfWeekEnum - Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
 type DailySubEntityTypeDayOfWeekEnum string
 
 const (
@@ -21,12 +21,16 @@ const (
 	DailySubEntityTypeDayOfWeekEnumSunday               DailySubEntityTypeDayOfWeekEnum = "SUNDAY"
 )
 
+func (e DailySubEntityTypeDayOfWeekEnum) ToPointer() *DailySubEntityTypeDayOfWeekEnum {
+	return &e
+}
+
 func (e *DailySubEntityTypeDayOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAY_OF_WEEK_UNSPECIFIED":
 		fallthrough
 	case "MONDAY":
@@ -42,16 +46,16 @@ func (e *DailySubEntityTypeDayOfWeekEnum) UnmarshalJSON(data []byte) error {
 	case "SATURDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = DailySubEntityTypeDayOfWeekEnum(s)
+		*e = DailySubEntityTypeDayOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DailySubEntityTypeDayOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for DailySubEntityTypeDayOfWeekEnum: %v", v)
 	}
 }
 
 // DailySubEntityType - Represents all possible subentity types that are associated with DailyMetrics.
 type DailySubEntityType struct {
-	// Represents the day of the week. Eg: MONDAY.
+	// Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
 	DayOfWeek *DailySubEntityTypeDayOfWeekEnum `json:"dayOfWeek,omitempty"`
 	// Represents a time of day. The date and time zone are either not significant or are specified elsewhere. An API may choose to allow leap seconds. Related types are google.type.Date and `google.protobuf.Timestamp`.
 	TimeOfDay *TimeOfDay `json:"timeOfDay,omitempty"`

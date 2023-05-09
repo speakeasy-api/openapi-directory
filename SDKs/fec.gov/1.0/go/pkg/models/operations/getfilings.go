@@ -22,12 +22,16 @@ const (
 	GetFilingsAmendmentIndicatorEnumS       GetFilingsAmendmentIndicatorEnum = "S"
 )
 
+func (e GetFilingsAmendmentIndicatorEnum) ToPointer() *GetFilingsAmendmentIndicatorEnum {
+	return &e
+}
+
 func (e *GetFilingsAmendmentIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "N":
@@ -41,10 +45,10 @@ func (e *GetFilingsAmendmentIndicatorEnum) UnmarshalJSON(data []byte) error {
 	case "M":
 		fallthrough
 	case "S":
-		*e = GetFilingsAmendmentIndicatorEnum(s)
+		*e = GetFilingsAmendmentIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFilingsAmendmentIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFilingsAmendmentIndicatorEnum: %v", v)
 	}
 }
 
@@ -56,19 +60,23 @@ const (
 	GetFilingsFilerTypeEnumPaper GetFilingsFilerTypeEnum = "paper"
 )
 
+func (e GetFilingsFilerTypeEnum) ToPointer() *GetFilingsFilerTypeEnum {
+	return &e
+}
+
 func (e *GetFilingsFilerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "e-file":
 		fallthrough
 	case "paper":
-		*e = GetFilingsFilerTypeEnum(s)
+		*e = GetFilingsFilerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFilingsFilerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFilingsFilerTypeEnum: %v", v)
 	}
 }
 
@@ -81,12 +89,16 @@ const (
 	GetFilingsOfficeEnumP       GetFilingsOfficeEnum = "P"
 )
 
+func (e GetFilingsOfficeEnum) ToPointer() *GetFilingsOfficeEnum {
+	return &e
+}
+
 func (e *GetFilingsOfficeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "H":
@@ -94,10 +106,10 @@ func (e *GetFilingsOfficeEnum) UnmarshalJSON(data []byte) error {
 	case "S":
 		fallthrough
 	case "P":
-		*e = GetFilingsOfficeEnum(s)
+		*e = GetFilingsOfficeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFilingsOfficeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFilingsOfficeEnum: %v", v)
 	}
 }
 
@@ -122,6 +134,12 @@ type GetFilingsRequest struct {
 	BeginningImageNumber []string `queryParam:"style=form,explode=true,name=beginning_image_number"`
 	// A unique identifier assigned to each candidate registered with the FEC.
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
+	// First character indicates office - [P]residential, [H]ouse, [S]enate].
+	// Second character is the last digit of the two-year period the ID was created.
+	// Third and fourth is the candidate state. Presidential IDs don't have state.
+	// Fifth and sixth is the district when the candidate first ran. This does not change if the
+	// candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+	// The rest is sequence.
 	//
 	CandidateID []string `queryParam:"style=form,explode=true,name=candidate_id"`
 	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.

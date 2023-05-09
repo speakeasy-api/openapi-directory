@@ -15,17 +15,21 @@ const (
 	POSTRebalanceSlotsInGlobalReplicationGroupActionEnumRebalanceSlotsInGlobalReplicationGroup POSTRebalanceSlotsInGlobalReplicationGroupActionEnum = "RebalanceSlotsInGlobalReplicationGroup"
 )
 
+func (e POSTRebalanceSlotsInGlobalReplicationGroupActionEnum) ToPointer() *POSTRebalanceSlotsInGlobalReplicationGroupActionEnum {
+	return &e
+}
+
 func (e *POSTRebalanceSlotsInGlobalReplicationGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RebalanceSlotsInGlobalReplicationGroup":
-		*e = POSTRebalanceSlotsInGlobalReplicationGroupActionEnum(s)
+		*e = POSTRebalanceSlotsInGlobalReplicationGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRebalanceSlotsInGlobalReplicationGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRebalanceSlotsInGlobalReplicationGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRebalanceSlotsInGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 POSTRebalanceSlotsInGlobalReplicationGroupVersionEnum = "2015-02-02"
 )
 
+func (e POSTRebalanceSlotsInGlobalReplicationGroupVersionEnum) ToPointer() *POSTRebalanceSlotsInGlobalReplicationGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTRebalanceSlotsInGlobalReplicationGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTRebalanceSlotsInGlobalReplicationGroupVersionEnum(s)
+		*e = POSTRebalanceSlotsInGlobalReplicationGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRebalanceSlotsInGlobalReplicationGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRebalanceSlotsInGlobalReplicationGroupVersionEnum: %v", v)
 	}
 }
 

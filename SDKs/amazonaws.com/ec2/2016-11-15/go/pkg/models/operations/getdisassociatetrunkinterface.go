@@ -15,17 +15,21 @@ const (
 	GETDisassociateTrunkInterfaceActionEnumDisassociateTrunkInterface GETDisassociateTrunkInterfaceActionEnum = "DisassociateTrunkInterface"
 )
 
+func (e GETDisassociateTrunkInterfaceActionEnum) ToPointer() *GETDisassociateTrunkInterfaceActionEnum {
+	return &e
+}
+
 func (e *GETDisassociateTrunkInterfaceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateTrunkInterface":
-		*e = GETDisassociateTrunkInterfaceActionEnum(s)
+		*e = GETDisassociateTrunkInterfaceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateTrunkInterfaceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateTrunkInterfaceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisassociateTrunkInterfaceVersionEnumTwoThousandAndSixteen1115 GETDisassociateTrunkInterfaceVersionEnum = "2016-11-15"
 )
 
+func (e GETDisassociateTrunkInterfaceVersionEnum) ToPointer() *GETDisassociateTrunkInterfaceVersionEnum {
+	return &e
+}
+
 func (e *GETDisassociateTrunkInterfaceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDisassociateTrunkInterfaceVersionEnum(s)
+		*e = GETDisassociateTrunkInterfaceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisassociateTrunkInterfaceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisassociateTrunkInterfaceVersionEnum: %v", v)
 	}
 }
 

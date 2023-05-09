@@ -94,7 +94,10 @@ func (s *validationAuthorities) CreateClientValidator(ctx context.Context, reque
 // Delete one validation authorities by id
 func (s *validationAuthorities) DeleteClientValidator(ctx context.Context, request operations.DeleteClientValidatorRequest, security operations.DeleteClientValidatorSecurity) (*operations.DeleteClientValidatorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/client-validators/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/client-validators/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -142,7 +145,7 @@ func (s *validationAuthorities) DeleteClientValidator(ctx context.Context, reque
 
 // FindAllClientValidators - Get all validation authoritiess
 // Get all validation authoritiess
-func (s *validationAuthorities) FindAllClientValidators(ctx context.Context) (*operations.FindAllClientValidatorsResponse, error) {
+func (s *validationAuthorities) FindAllClientValidators(ctx context.Context, security operations.FindAllClientValidatorsSecurity) (*operations.FindAllClientValidatorsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/client-validators"
 
@@ -151,7 +154,7 @@ func (s *validationAuthorities) FindAllClientValidators(ctx context.Context) (*o
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -194,7 +197,10 @@ func (s *validationAuthorities) FindAllClientValidators(ctx context.Context) (*o
 // Get one validation authorities by id
 func (s *validationAuthorities) FindClientValidatorByID(ctx context.Context, request operations.FindClientValidatorByIDRequest, security operations.FindClientValidatorByIDSecurity) (*operations.FindClientValidatorByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/client-validators/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/client-validators/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -244,7 +250,10 @@ func (s *validationAuthorities) FindClientValidatorByID(ctx context.Context, req
 // Update one validation authorities by id
 func (s *validationAuthorities) PatchClientValidator(ctx context.Context, request operations.PatchClientValidatorRequest, security operations.PatchClientValidatorSecurity) (*operations.PatchClientValidatorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/client-validators/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/client-validators/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -301,7 +310,10 @@ func (s *validationAuthorities) PatchClientValidator(ctx context.Context, reques
 // Update one validation authorities by id
 func (s *validationAuthorities) UpdateClientValidator(ctx context.Context, request operations.UpdateClientValidatorRequest, security operations.UpdateClientValidatorSecurity) (*operations.UpdateClientValidatorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/client-validators/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/client-validators/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ValidationAuthority", "json")
 	if err != nil {

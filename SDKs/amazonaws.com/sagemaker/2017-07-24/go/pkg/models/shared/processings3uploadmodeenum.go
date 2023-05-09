@@ -14,18 +14,22 @@ const (
 	ProcessingS3UploadModeEnumEndOfJob   ProcessingS3UploadModeEnum = "EndOfJob"
 )
 
+func (e ProcessingS3UploadModeEnum) ToPointer() *ProcessingS3UploadModeEnum {
+	return &e
+}
+
 func (e *ProcessingS3UploadModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Continuous":
 		fallthrough
 	case "EndOfJob":
-		*e = ProcessingS3UploadModeEnum(s)
+		*e = ProcessingS3UploadModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProcessingS3UploadModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProcessingS3UploadModeEnum: %v", v)
 	}
 }

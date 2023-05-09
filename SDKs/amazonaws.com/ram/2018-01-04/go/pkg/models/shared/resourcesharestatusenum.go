@@ -17,12 +17,16 @@ const (
 	ResourceShareStatusEnumDeleted  ResourceShareStatusEnum = "DELETED"
 )
 
+func (e ResourceShareStatusEnum) ToPointer() *ResourceShareStatusEnum {
+	return &e
+}
+
 func (e *ResourceShareStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "ACTIVE":
@@ -32,9 +36,9 @@ func (e *ResourceShareStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "DELETED":
-		*e = ResourceShareStatusEnum(s)
+		*e = ResourceShareStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceShareStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceShareStatusEnum: %v", v)
 	}
 }

@@ -21,21 +21,25 @@ const (
 	ErrorsUpdateStateRequestBodyStateEnumIgnored ErrorsUpdateStateRequestBodyStateEnum = "ignored"
 )
 
+func (e ErrorsUpdateStateRequestBodyStateEnum) ToPointer() *ErrorsUpdateStateRequestBodyStateEnum {
+	return &e
+}
+
 func (e *ErrorsUpdateStateRequestBodyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "ignored":
-		*e = ErrorsUpdateStateRequestBodyStateEnum(s)
+		*e = ErrorsUpdateStateRequestBodyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsUpdateStateRequestBodyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsUpdateStateRequestBodyStateEnum: %v", v)
 	}
 }
 
@@ -68,12 +72,16 @@ const (
 	ErrorsUpdateStateDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsUpdateStateDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsUpdateStateDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsUpdateStateDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsUpdateStateDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -87,10 +95,10 @@ func (e *ErrorsUpdateStateDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(dat
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsUpdateStateDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsUpdateStateDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsUpdateStateDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsUpdateStateDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -119,12 +127,16 @@ const (
 	ErrorsUpdateState200ApplicationJSONReasonFramesLanguageEnumUnknown      ErrorsUpdateState200ApplicationJSONReasonFramesLanguageEnum = "Unknown"
 )
 
+func (e ErrorsUpdateState200ApplicationJSONReasonFramesLanguageEnum) ToPointer() *ErrorsUpdateState200ApplicationJSONReasonFramesLanguageEnum {
+	return &e
+}
+
 func (e *ErrorsUpdateState200ApplicationJSONReasonFramesLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JavaScript":
 		fallthrough
 	case "CSharp":
@@ -142,10 +154,10 @@ func (e *ErrorsUpdateState200ApplicationJSONReasonFramesLanguageEnum) UnmarshalJ
 	case "Java":
 		fallthrough
 	case "Unknown":
-		*e = ErrorsUpdateState200ApplicationJSONReasonFramesLanguageEnum(s)
+		*e = ErrorsUpdateState200ApplicationJSONReasonFramesLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsUpdateState200ApplicationJSONReasonFramesLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsUpdateState200ApplicationJSONReasonFramesLanguageEnum: %v", v)
 	}
 }
 
@@ -186,21 +198,25 @@ const (
 	ErrorsUpdateState200ApplicationJSONStateEnumIgnored ErrorsUpdateState200ApplicationJSONStateEnum = "ignored"
 )
 
+func (e ErrorsUpdateState200ApplicationJSONStateEnum) ToPointer() *ErrorsUpdateState200ApplicationJSONStateEnum {
+	return &e
+}
+
 func (e *ErrorsUpdateState200ApplicationJSONStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "ignored":
-		*e = ErrorsUpdateState200ApplicationJSONStateEnum(s)
+		*e = ErrorsUpdateState200ApplicationJSONStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsUpdateState200ApplicationJSONStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsUpdateState200ApplicationJSONStateEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newLeaderboardConfigurations(defaultClient, securityClient HTTPClient, serv
 // GamesConfigurationLeaderboardConfigurationsDelete - Delete the leaderboard configuration with the given ID.
 func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsDelete(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsDeleteRequest, security operations.GamesConfigurationLeaderboardConfigurationsDeleteSecurity) (*operations.GamesConfigurationLeaderboardConfigurationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/leaderboards/{leaderboardId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/leaderboards/{leaderboardId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsD
 // GamesConfigurationLeaderboardConfigurationsGet - Retrieves the metadata of the leaderboard configuration with the given ID.
 func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsGet(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsGetRequest, security operations.GamesConfigurationLeaderboardConfigurationsGetSecurity) (*operations.GamesConfigurationLeaderboardConfigurationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/leaderboards/{leaderboardId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/leaderboards/{leaderboardId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsG
 // GamesConfigurationLeaderboardConfigurationsInsert - Insert a new leaderboard configuration in this application.
 func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsInsert(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsInsertRequest, security operations.GamesConfigurationLeaderboardConfigurationsInsertSecurity) (*operations.GamesConfigurationLeaderboardConfigurationsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/leaderboards", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/leaderboards", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LeaderboardConfiguration", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsI
 // GamesConfigurationLeaderboardConfigurationsList - Returns a list of the leaderboard configurations in this application.
 func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsList(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsListRequest, security operations.GamesConfigurationLeaderboardConfigurationsListSecurity) (*operations.GamesConfigurationLeaderboardConfigurationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/leaderboards", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/applications/{applicationId}/leaderboards", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsL
 // GamesConfigurationLeaderboardConfigurationsUpdate - Update the metadata of the leaderboard configuration with the given ID.
 func (s *leaderboardConfigurations) GamesConfigurationLeaderboardConfigurationsUpdate(ctx context.Context, request operations.GamesConfigurationLeaderboardConfigurationsUpdateRequest, security operations.GamesConfigurationLeaderboardConfigurationsUpdateSecurity) (*operations.GamesConfigurationLeaderboardConfigurationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/leaderboards/{leaderboardId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1configuration/leaderboards/{leaderboardId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LeaderboardConfiguration", "json")
 	if err != nil {

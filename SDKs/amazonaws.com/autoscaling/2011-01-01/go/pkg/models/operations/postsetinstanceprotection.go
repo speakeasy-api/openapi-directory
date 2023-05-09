@@ -15,17 +15,21 @@ const (
 	POSTSetInstanceProtectionActionEnumSetInstanceProtection POSTSetInstanceProtectionActionEnum = "SetInstanceProtection"
 )
 
+func (e POSTSetInstanceProtectionActionEnum) ToPointer() *POSTSetInstanceProtectionActionEnum {
+	return &e
+}
+
 func (e *POSTSetInstanceProtectionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetInstanceProtection":
-		*e = POSTSetInstanceProtectionActionEnum(s)
+		*e = POSTSetInstanceProtectionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetInstanceProtectionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetInstanceProtectionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSetInstanceProtectionVersionEnumTwoThousandAndEleven0101 POSTSetInstanceProtectionVersionEnum = "2011-01-01"
 )
 
+func (e POSTSetInstanceProtectionVersionEnum) ToPointer() *POSTSetInstanceProtectionVersionEnum {
+	return &e
+}
+
 func (e *POSTSetInstanceProtectionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTSetInstanceProtectionVersionEnum(s)
+		*e = POSTSetInstanceProtectionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetInstanceProtectionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetInstanceProtectionVersionEnum: %v", v)
 	}
 }
 

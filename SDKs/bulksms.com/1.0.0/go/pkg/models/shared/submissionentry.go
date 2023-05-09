@@ -20,21 +20,25 @@ const (
 	SubmissionEntryDeliveryReportsEnumNone   SubmissionEntryDeliveryReportsEnum = "NONE"
 )
 
+func (e SubmissionEntryDeliveryReportsEnum) ToPointer() *SubmissionEntryDeliveryReportsEnum {
+	return &e
+}
+
 func (e *SubmissionEntryDeliveryReportsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "ERRORS":
 		fallthrough
 	case "NONE":
-		*e = SubmissionEntryDeliveryReportsEnum(s)
+		*e = SubmissionEntryDeliveryReportsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmissionEntryDeliveryReportsEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmissionEntryDeliveryReportsEnum: %v", v)
 	}
 }
 
@@ -59,21 +63,25 @@ const (
 	SubmissionEntryEncodingEnumBinary  SubmissionEntryEncodingEnum = "BINARY"
 )
 
+func (e SubmissionEntryEncodingEnum) ToPointer() *SubmissionEntryEncodingEnum {
+	return &e
+}
+
 func (e *SubmissionEntryEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEXT":
 		fallthrough
 	case "UNICODE":
 		fallthrough
 	case "BINARY":
-		*e = SubmissionEntryEncodingEnum(s)
+		*e = SubmissionEntryEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmissionEntryEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmissionEntryEncodingEnum: %v", v)
 	}
 }
 
@@ -90,12 +98,16 @@ const (
 	SubmissionEntryFromTypeEnumRepliable     SubmissionEntryFromTypeEnum = "REPLIABLE"
 )
 
+func (e SubmissionEntryFromTypeEnum) ToPointer() *SubmissionEntryFromTypeEnum {
+	return &e
+}
+
 func (e *SubmissionEntryFromTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNATIONAL":
 		fallthrough
 	case "ALPHANUMERIC":
@@ -103,10 +115,10 @@ func (e *SubmissionEntryFromTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SHORTCODE":
 		fallthrough
 	case "REPLIABLE":
-		*e = SubmissionEntryFromTypeEnum(s)
+		*e = SubmissionEntryFromTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmissionEntryFromTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmissionEntryFromTypeEnum: %v", v)
 	}
 }
 
@@ -153,12 +165,16 @@ const (
 	SubmissionEntryMessageClassEnumTeSpecific  SubmissionEntryMessageClassEnum = "TE_SPECIFIC"
 )
 
+func (e SubmissionEntryMessageClassEnum) ToPointer() *SubmissionEntryMessageClassEnum {
+	return &e
+}
+
 func (e *SubmissionEntryMessageClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FLASH_SMS":
 		fallthrough
 	case "ME_SPECIFIC":
@@ -166,10 +182,10 @@ func (e *SubmissionEntryMessageClassEnum) UnmarshalJSON(data []byte) error {
 	case "SIM_SPECIFIC":
 		fallthrough
 	case "TE_SPECIFIC":
-		*e = SubmissionEntryMessageClassEnum(s)
+		*e = SubmissionEntryMessageClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmissionEntryMessageClassEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmissionEntryMessageClassEnum: %v", v)
 	}
 }
 
@@ -212,12 +228,16 @@ const (
 	SubmissionEntryProtocolIDEnumSimDownload       SubmissionEntryProtocolIDEnum = "SIM_DOWNLOAD"
 )
 
+func (e SubmissionEntryProtocolIDEnum) ToPointer() *SubmissionEntryProtocolIDEnum {
+	return &e
+}
+
 func (e *SubmissionEntryProtocolIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPLICIT":
 		fallthrough
 	case "SHORT_MESSAGE_TYPE_0":
@@ -243,10 +263,10 @@ func (e *SubmissionEntryProtocolIDEnum) UnmarshalJSON(data []byte) error {
 	case "ME_DEPERSONALIZE":
 		fallthrough
 	case "SIM_DOWNLOAD":
-		*e = SubmissionEntryProtocolIDEnum(s)
+		*e = SubmissionEntryProtocolIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmissionEntryProtocolIDEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmissionEntryProtocolIDEnum: %v", v)
 	}
 }
 
@@ -259,21 +279,25 @@ const (
 	SubmissionEntryRoutingGroupEnumPremium  SubmissionEntryRoutingGroupEnum = "PREMIUM"
 )
 
+func (e SubmissionEntryRoutingGroupEnum) ToPointer() *SubmissionEntryRoutingGroupEnum {
+	return &e
+}
+
 func (e *SubmissionEntryRoutingGroupEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ECONOMY":
 		fallthrough
 	case "STANDARD":
 		fallthrough
 	case "PREMIUM":
-		*e = SubmissionEntryRoutingGroupEnum(s)
+		*e = SubmissionEntryRoutingGroupEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmissionEntryRoutingGroupEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmissionEntryRoutingGroupEnum: %v", v)
 	}
 }
 
@@ -285,19 +309,23 @@ const (
 	SubmissionEntryToTypeEnumGroup         SubmissionEntryToTypeEnum = "GROUP"
 )
 
+func (e SubmissionEntryToTypeEnum) ToPointer() *SubmissionEntryToTypeEnum {
+	return &e
+}
+
 func (e *SubmissionEntryToTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNATIONAL":
 		fallthrough
 	case "GROUP":
-		*e = SubmissionEntryToTypeEnum(s)
+		*e = SubmissionEntryToTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmissionEntryToTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmissionEntryToTypeEnum: %v", v)
 	}
 }
 

@@ -22,12 +22,16 @@ const (
 	ListJobsRequestBodyJobStatusEnumFailed    ListJobsRequestBodyJobStatusEnum = "FAILED"
 )
 
+func (e ListJobsRequestBodyJobStatusEnum) ToPointer() *ListJobsRequestBodyJobStatusEnum {
+	return &e
+}
+
 func (e *ListJobsRequestBodyJobStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBMITTED":
 		fallthrough
 	case "PENDING":
@@ -41,10 +45,10 @@ func (e *ListJobsRequestBodyJobStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = ListJobsRequestBodyJobStatusEnum(s)
+		*e = ListJobsRequestBodyJobStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListJobsRequestBodyJobStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListJobsRequestBodyJobStatusEnum: %v", v)
 	}
 }
 

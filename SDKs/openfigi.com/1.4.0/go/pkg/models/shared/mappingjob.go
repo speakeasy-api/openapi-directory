@@ -39,12 +39,16 @@ const (
 	MappingJobIDTypeEnumVendorIndexCode           MappingJobIDTypeEnum = "VENDOR_INDEX_CODE"
 )
 
+func (e MappingJobIDTypeEnum) ToPointer() *MappingJobIDTypeEnum {
+	return &e
+}
+
 func (e *MappingJobIDTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID_ISIN":
 		fallthrough
 	case "ID_BB_UNIQUE":
@@ -92,10 +96,10 @@ func (e *MappingJobIDTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BASE_TICKER":
 		fallthrough
 	case "VENDOR_INDEX_CODE":
-		*e = MappingJobIDTypeEnum(s)
+		*e = MappingJobIDTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MappingJobIDTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MappingJobIDTypeEnum: %v", v)
 	}
 }
 
@@ -174,19 +178,23 @@ const (
 	MappingJobOptionTypeEnumCall MappingJobOptionTypeEnum = "Call"
 )
 
+func (e MappingJobOptionTypeEnum) ToPointer() *MappingJobOptionTypeEnum {
+	return &e
+}
+
 func (e *MappingJobOptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Put":
 		fallthrough
 	case "Call":
-		*e = MappingJobOptionTypeEnum(s)
+		*e = MappingJobOptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MappingJobOptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MappingJobOptionTypeEnum: %v", v)
 	}
 }
 
@@ -337,12 +345,16 @@ const (
 	MappingJobStateCodeEnumZj MappingJobStateCodeEnum = "ZJ"
 )
 
+func (e MappingJobStateCodeEnum) ToPointer() *MappingJobStateCodeEnum {
+	return &e
+}
+
 func (e *MappingJobStateCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AB":
 		fallthrough
 	case "AC":
@@ -626,10 +638,10 @@ func (e *MappingJobStateCodeEnum) UnmarshalJSON(data []byte) error {
 	case "YU":
 		fallthrough
 	case "ZJ":
-		*e = MappingJobStateCodeEnum(s)
+		*e = MappingJobStateCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MappingJobStateCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for MappingJobStateCodeEnum: %v", v)
 	}
 }
 

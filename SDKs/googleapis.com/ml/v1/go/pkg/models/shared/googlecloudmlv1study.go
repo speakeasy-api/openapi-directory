@@ -17,12 +17,16 @@ const (
 	GoogleCloudMlV1StudyStateEnumCompleted        GoogleCloudMlV1StudyStateEnum = "COMPLETED"
 )
 
+func (e GoogleCloudMlV1StudyStateEnum) ToPointer() *GoogleCloudMlV1StudyStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1StudyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -30,10 +34,10 @@ func (e *GoogleCloudMlV1StudyStateEnum) UnmarshalJSON(data []byte) error {
 	case "INACTIVE":
 		fallthrough
 	case "COMPLETED":
-		*e = GoogleCloudMlV1StudyStateEnum(s)
+		*e = GoogleCloudMlV1StudyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1StudyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1StudyStateEnum: %v", v)
 	}
 }
 

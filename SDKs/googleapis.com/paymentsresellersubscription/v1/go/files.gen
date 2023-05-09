@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -54,4 +55,6 @@ pkg/models/shared/googlecloudpaymentsresellersubscriptionv1extendsubscriptionres
 pkg/models/shared/googlecloudpaymentsresellersubscriptionv1extendsubscriptionrequest.go
 pkg/models/shared/googlecloudpaymentsresellersubscriptionv1extension.go
 pkg/models/shared/googlecloudpaymentsresellersubscriptionv1undocancelsubscriptionresponse.go
+docs/sdk/README.md
+docs/partners/README.md
 USAGE.md

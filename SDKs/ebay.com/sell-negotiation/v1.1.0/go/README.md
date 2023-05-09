@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ebay.com/sell-negotiation
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FindEligibleItemsRequest{
-        XEbayCMarketplaceID: "corrupti",
-        Limit: "provident",
-        Offset: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.Offer.FindEligibleItems(ctx, req, operations.FindEligibleItemsSecurity{
+    res, err := s.Offer.FindEligibleItems(ctx, operations.FindEligibleItemsRequest{
+        XEbayCMarketplaceID: "corrupti",
+        Limit: sdk.String("provident"),
+        Offset: sdk.String("distinctio"),
+    }, operations.FindEligibleItemsSecurity{
         APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -49,10 +46,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### Offer
+### [Offer](docs/offer/README.md)
 
-* `FindEligibleItems` - This method evaluates a seller's current listings and returns the set of IDs that are eligible for a seller-initiated discount offer to a buyer. A listing ID is returned only when one or more buyers have shown an &quot;interest&quot; in the listing. If any buyers have shown interest in a listing, the seller can initiate a &quot;negotiation&quot; with them by calling sendOfferToInterestedBuyers, which sends all interested buyers a message that offers the listing at a discount. For details about how to create seller offers to buyers, see Sending offers to buyers.
-* `SendOfferToInterestedBuyers` - This method sends eligible buyers offers to purchase items in a listing at a discount. When a buyer has shown interest in a listing, they become &quot;eligible&quot; to receive a seller-initiated offer to purchase the item(s). Sellers use findEligibleItems to get the set of listings that have interested buyers. If a listing has interested buyers, sellers can use this method (sendOfferToInterestedBuyers) to send an offer to the buyers who are interested in the listing. The offer gives buyers the ability to purchase the associated listings at a discounted price. For details about how to create seller offers to buyers, see Sending offers to buyers.
+* [FindEligibleItems](docs/offer/README.md#findeligibleitems) - This method evaluates a seller's current listings and returns the set of IDs that are eligible for a seller-initiated discount offer to a buyer. A listing ID is returned only when one or more buyers have shown an &quot;interest&quot; in the listing. If any buyers have shown interest in a listing, the seller can initiate a &quot;negotiation&quot; with them by calling sendOfferToInterestedBuyers, which sends all interested buyers a message that offers the listing at a discount. For details about how to create seller offers to buyers, see Sending offers to buyers.
+* [SendOfferToInterestedBuyers](docs/offer/README.md#sendoffertointerestedbuyers) - This method sends eligible buyers offers to purchase items in a listing at a discount. When a buyer has shown interest in a listing, they become &quot;eligible&quot; to receive a seller-initiated offer to purchase the item(s). Sellers use findEligibleItems to get the set of listings that have interested buyers. If a listing has interested buyers, sellers can use this method (sendOfferToInterestedBuyers) to send an offer to the buyers who are interested in the listing. The offer gives buyers the ability to purchase the associated listings at a discounted price. For details about how to create seller offers to buyers, see Sending offers to buyers.
 <!-- End SDK Available Operations -->
 
 ### Maturity

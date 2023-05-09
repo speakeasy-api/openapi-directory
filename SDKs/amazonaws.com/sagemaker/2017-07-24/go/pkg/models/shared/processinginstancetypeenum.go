@@ -56,12 +56,16 @@ const (
 	ProcessingInstanceTypeEnumMlG4dn16xlarge ProcessingInstanceTypeEnum = "ml.g4dn.16xlarge"
 )
 
+func (e ProcessingInstanceTypeEnum) ToPointer() *ProcessingInstanceTypeEnum {
+	return &e
+}
+
 func (e *ProcessingInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ml.t3.medium":
 		fallthrough
 	case "ml.t3.large":
@@ -149,9 +153,9 @@ func (e *ProcessingInstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ml.g4dn.12xlarge":
 		fallthrough
 	case "ml.g4dn.16xlarge":
-		*e = ProcessingInstanceTypeEnum(s)
+		*e = ProcessingInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProcessingInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProcessingInstanceTypeEnum: %v", v)
 	}
 }

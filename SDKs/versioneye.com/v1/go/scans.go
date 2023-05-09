@@ -75,7 +75,10 @@ func (s *scans) GetAPIV1Scans(ctx context.Context, request operations.GetAPIV1Sc
 // GetAPIV1ScansID - Retrieves a project scan result
 func (s *scans) GetAPIV1ScansID(ctx context.Context, request operations.GetAPIV1ScansIDRequest, security operations.GetAPIV1ScansIDSecurity) (*operations.GetAPIV1ScansIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/scans/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/scans/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -112,7 +115,10 @@ func (s *scans) GetAPIV1ScansID(ctx context.Context, request operations.GetAPIV1
 // GetAPIV1ScansIDFilesFileID - Retrieves a file object, containing information about dependencies in the file
 func (s *scans) GetAPIV1ScansIDFilesFileID(ctx context.Context, request operations.GetAPIV1ScansIDFilesFileIDRequest, security operations.GetAPIV1ScansIDFilesFileIDSecurity) (*operations.GetAPIV1ScansIDFilesFileIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/scans/{id}/files/{file_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/scans/{id}/files/{file_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

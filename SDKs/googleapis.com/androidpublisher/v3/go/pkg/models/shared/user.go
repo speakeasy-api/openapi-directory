@@ -25,14 +25,19 @@ const (
 	UserDeveloperAccountPermissionsEnumCanCreateManagedPlayAppsGlobal      UserDeveloperAccountPermissionsEnum = "CAN_CREATE_MANAGED_PLAY_APPS_GLOBAL"
 	UserDeveloperAccountPermissionsEnumCanChangeManagedPlaySettingGlobal   UserDeveloperAccountPermissionsEnum = "CAN_CHANGE_MANAGED_PLAY_SETTING_GLOBAL"
 	UserDeveloperAccountPermissionsEnumCanManageOrdersGlobal               UserDeveloperAccountPermissionsEnum = "CAN_MANAGE_ORDERS_GLOBAL"
+	UserDeveloperAccountPermissionsEnumCanManageAppContentGlobal           UserDeveloperAccountPermissionsEnum = "CAN_MANAGE_APP_CONTENT_GLOBAL"
 )
 
+func (e UserDeveloperAccountPermissionsEnum) ToPointer() *UserDeveloperAccountPermissionsEnum {
+	return &e
+}
+
 func (e *UserDeveloperAccountPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVELOPER_LEVEL_PERMISSION_UNSPECIFIED":
 		fallthrough
 	case "CAN_SEE_ALL_APPS":
@@ -62,10 +67,12 @@ func (e *UserDeveloperAccountPermissionsEnum) UnmarshalJSON(data []byte) error {
 	case "CAN_CHANGE_MANAGED_PLAY_SETTING_GLOBAL":
 		fallthrough
 	case "CAN_MANAGE_ORDERS_GLOBAL":
-		*e = UserDeveloperAccountPermissionsEnum(s)
+		fallthrough
+	case "CAN_MANAGE_APP_CONTENT_GLOBAL":
+		*e = UserDeveloperAccountPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserDeveloperAccountPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for UserDeveloperAccountPermissionsEnum: %v", v)
 	}
 }
 
@@ -92,12 +99,16 @@ const (
 	UserAccessStateEnumAccessExpired          UserAccessStateEnum = "ACCESS_EXPIRED"
 )
 
+func (e UserAccessStateEnum) ToPointer() *UserAccessStateEnum {
+	return &e
+}
+
 func (e *UserAccessStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_STATE_UNSPECIFIED":
 		fallthrough
 	case "INVITED":
@@ -107,10 +118,10 @@ func (e *UserAccessStateEnum) UnmarshalJSON(data []byte) error {
 	case "ACCESS_GRANTED":
 		fallthrough
 	case "ACCESS_EXPIRED":
-		*e = UserAccessStateEnum(s)
+		*e = UserAccessStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserAccessStateEnum: %s", s)
+		return fmt.Errorf("invalid value for UserAccessStateEnum: %v", v)
 	}
 }
 

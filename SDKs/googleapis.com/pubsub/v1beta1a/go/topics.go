@@ -90,7 +90,10 @@ func (s *topics) PubsubTopicsCreate(ctx context.Context, request operations.Pubs
 // PubsubTopicsDelete - Deletes the topic with the given name. Returns NOT_FOUND if the topic does not exist. After a topic is deleted, a new topic may be created with the same name.
 func (s *topics) PubsubTopicsDelete(ctx context.Context, request operations.PubsubTopicsDeleteRequest, security operations.PubsubTopicsDeleteSecurity) (*operations.PubsubTopicsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1a/topics/{topic}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1a/topics/{topic}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *topics) PubsubTopicsDelete(ctx context.Context, request operations.Pubs
 // PubsubTopicsGet - Gets the configuration of a topic. Since the topic only has the name attribute, this method is only useful to check the existence of a topic. If other attributes are added in the future, they will be returned here.
 func (s *topics) PubsubTopicsGet(ctx context.Context, request operations.PubsubTopicsGetRequest, security operations.PubsubTopicsGetSecurity) (*operations.PubsubTopicsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1a/topics/{topic}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1a/topics/{topic}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

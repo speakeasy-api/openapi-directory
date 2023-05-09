@@ -13,32 +13,30 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/TfmAPIService/1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.AssignTerminalsRequest{
+    ctx := context.Background()
+    res, err := s.General.PostAssignTerminals(ctx, shared.AssignTerminalsRequest{
         CompanyAccount: "corrupti",
-        MerchantAccount: "provident",
-        MerchantInventory: false,
-        Store: "distinctio",
+        MerchantAccount: sdk.String("provident"),
+        MerchantInventory: sdk.Bool(false),
+        Store: sdk.String("distinctio"),
         Terminals: []string{
             "unde",
             "nulla",
             "corrupti",
             "illum",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.General.PostAssignTerminals(ctx, req, operations.PostAssignTerminalsSecurity{
+    }, operations.PostAssignTerminalsSecurity{
         APIKeyAuth: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -56,13 +54,13 @@ func main() {
 ## Available Resources and Operations
 
 
-### General
+### [General](docs/general/README.md)
 
-* `PostAssignTerminals` - Assign terminals
-* `PostFindTerminal` - Get the account or store of a terminal
-* `PostGetStoresUnderAccount` - Get the stores of an account
-* `PostGetTerminalDetails` - Get the details of a terminal
-* `PostGetTerminalsUnderAccount` - Get the list of terminals
+* [PostAssignTerminals](docs/general/README.md#postassignterminals) - Assign terminals
+* [PostFindTerminal](docs/general/README.md#postfindterminal) - Get the account or store of a terminal
+* [PostGetStoresUnderAccount](docs/general/README.md#postgetstoresunderaccount) - Get the stores of an account
+* [PostGetTerminalDetails](docs/general/README.md#postgetterminaldetails) - Get the details of a terminal
+* [PostGetTerminalsUnderAccount](docs/general/README.md#postgetterminalsunderaccount) - Get the list of terminals
 <!-- End SDK Available Operations -->
 
 ### Maturity

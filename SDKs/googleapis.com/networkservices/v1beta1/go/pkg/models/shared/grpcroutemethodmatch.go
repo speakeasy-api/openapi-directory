@@ -16,21 +16,25 @@ const (
 	GrpcRouteMethodMatchTypeEnumRegularExpression GrpcRouteMethodMatchTypeEnum = "REGULAR_EXPRESSION"
 )
 
+func (e GrpcRouteMethodMatchTypeEnum) ToPointer() *GrpcRouteMethodMatchTypeEnum {
+	return &e
+}
+
 func (e *GrpcRouteMethodMatchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "EXACT":
 		fallthrough
 	case "REGULAR_EXPRESSION":
-		*e = GrpcRouteMethodMatchTypeEnum(s)
+		*e = GrpcRouteMethodMatchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GrpcRouteMethodMatchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GrpcRouteMethodMatchTypeEnum: %v", v)
 	}
 }
 

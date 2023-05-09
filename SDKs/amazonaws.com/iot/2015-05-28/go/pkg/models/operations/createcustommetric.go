@@ -19,12 +19,16 @@ const (
 	CreateCustomMetricRequestBodyMetricTypeEnumNumber        CreateCustomMetricRequestBodyMetricTypeEnum = "number"
 )
 
+func (e CreateCustomMetricRequestBodyMetricTypeEnum) ToPointer() *CreateCustomMetricRequestBodyMetricTypeEnum {
+	return &e
+}
+
 func (e *CreateCustomMetricRequestBodyMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "string-list":
 		fallthrough
 	case "ip-address-list":
@@ -32,10 +36,10 @@ func (e *CreateCustomMetricRequestBodyMetricTypeEnum) UnmarshalJSON(data []byte)
 	case "number-list":
 		fallthrough
 	case "number":
-		*e = CreateCustomMetricRequestBodyMetricTypeEnum(s)
+		*e = CreateCustomMetricRequestBodyMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCustomMetricRequestBodyMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCustomMetricRequestBodyMetricTypeEnum: %v", v)
 	}
 }
 

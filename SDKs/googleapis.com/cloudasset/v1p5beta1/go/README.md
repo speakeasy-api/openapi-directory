@@ -13,44 +13,42 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudasset
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudassetAssetsListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
+    ctx := context.Background()
+    res, err := s.Assets.CloudassetAssetsList(ctx, operations.CloudassetAssetsListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
         AssetTypes: []string{
             "unde",
             "nulla",
             "corrupti",
             "illum",
         },
-        Callback: "vel",
-        ContentType: "ORG_POLICY",
-        Fields: "deserunt",
-        Key: "suscipit",
-        OauthToken: "iure",
-        PageSize: 297534,
-        PageToken: "debitis",
+        Callback: sdk.String("vel"),
+        ContentType: operations.CloudassetAssetsListContentTypeEnumOrgPolicy.ToPointer(),
+        Fields: sdk.String("deserunt"),
+        Key: sdk.String("suscipit"),
+        OauthToken: sdk.String("iure"),
+        PageSize: sdk.Int64(297534),
+        PageToken: sdk.String("debitis"),
         Parent: "ipsa",
-        PrettyPrint: false,
-        QuotaUser: "delectus",
-        ReadTime: "tempora",
-        UploadType: "suscipit",
-        UploadProtocol: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Assets.CloudassetAssetsList(ctx, req, operations.CloudassetAssetsListSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("delectus"),
+        ReadTime: sdk.String("tempora"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("molestiae"),
+    }, operations.CloudassetAssetsListSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -69,9 +67,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Assets
+### [Assets](docs/assets/README.md)
 
-* `CloudassetAssetsList` - Lists assets with time and resource types and returns paged results in response.
+* [CloudassetAssetsList](docs/assets/README.md#cloudassetassetslist) - Lists assets with time and resource types and returns paged results in response.
 <!-- End SDK Available Operations -->
 
 ### Maturity

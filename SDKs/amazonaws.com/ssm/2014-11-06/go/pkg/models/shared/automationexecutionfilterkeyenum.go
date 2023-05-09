@@ -24,12 +24,16 @@ const (
 	AutomationExecutionFilterKeyEnumOpsItemID           AutomationExecutionFilterKeyEnum = "OpsItemId"
 )
 
+func (e AutomationExecutionFilterKeyEnum) ToPointer() *AutomationExecutionFilterKeyEnum {
+	return &e
+}
+
 func (e *AutomationExecutionFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DocumentNamePrefix":
 		fallthrough
 	case "ExecutionStatus":
@@ -53,9 +57,9 @@ func (e *AutomationExecutionFilterKeyEnum) UnmarshalJSON(data []byte) error {
 	case "AutomationSubtype":
 		fallthrough
 	case "OpsItemId":
-		*e = AutomationExecutionFilterKeyEnum(s)
+		*e = AutomationExecutionFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutomationExecutionFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for AutomationExecutionFilterKeyEnum: %v", v)
 	}
 }

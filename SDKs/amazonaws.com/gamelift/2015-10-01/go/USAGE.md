@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,9 +17,10 @@ func main() {
         }),
     )
 
-    req := operations.AcceptMatchRequest{
+    ctx := context.Background()
+    res, err := s.AcceptMatch(ctx, operations.AcceptMatchRequest{
         AcceptMatchInput: shared.AcceptMatchInput{
-            AcceptanceType: "REJECT",
+            AcceptanceType: shared.AcceptanceTypeEnumReject,
             PlayerIds: []string{
                 "distinctio",
                 "quibusdam",
@@ -27,18 +28,15 @@ func main() {
             },
             TicketID: "nulla",
         },
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "illum",
-        XAmzCredential: "vel",
-        XAmzDate: "error",
-        XAmzSecurityToken: "deserunt",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "iure",
-        XAmzTarget: "GameLift.AcceptMatch",
-    }
-
-    ctx := context.Background()
-    res, err := s.AcceptMatch(ctx, req)
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("illum"),
+        XAmzCredential: sdk.String("vel"),
+        XAmzDate: sdk.String("error"),
+        XAmzSecurityToken: sdk.String("deserunt"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("iure"),
+        XAmzTarget: operations.AcceptMatchXAmzTargetEnumGameLiftAcceptMatch,
+    })
     if err != nil {
         log.Fatal(err)
     }

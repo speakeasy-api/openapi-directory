@@ -30,12 +30,16 @@ const (
 	RolloutRuleComparatorEnumSensitiveIsNotOneOf   RolloutRuleComparatorEnum = "sensitiveIsNotOneOf"
 )
 
+func (e RolloutRuleComparatorEnum) ToPointer() *RolloutRuleComparatorEnum {
+	return &e
+}
+
 func (e *RolloutRuleComparatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "isOneOf":
 		fallthrough
 	case "isNotOneOf":
@@ -71,9 +75,9 @@ func (e *RolloutRuleComparatorEnum) UnmarshalJSON(data []byte) error {
 	case "sensitiveIsOneOf":
 		fallthrough
 	case "sensitiveIsNotOneOf":
-		*e = RolloutRuleComparatorEnum(s)
+		*e = RolloutRuleComparatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RolloutRuleComparatorEnum: %s", s)
+		return fmt.Errorf("invalid value for RolloutRuleComparatorEnum: %v", v)
 	}
 }

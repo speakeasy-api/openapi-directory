@@ -135,7 +135,10 @@ func (s *paymentPortal) AddPaymentRequest(ctx context.Context, request shared.Cr
 // GetPaymentState - Returns the state of a payment request. Please note that payment requests are purged after some time, so persist the state at your side when needed
 func (s *paymentPortal) GetPaymentState(ctx context.Context, request operations.GetPaymentStateRequest) (*operations.GetPaymentStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment/state/{requestId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payment/state/{requestId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

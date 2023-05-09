@@ -14,18 +14,22 @@ const (
 	FlowTrafficTypeEnumEastWestTraffic FlowTrafficTypeEnum = "EAST_WEST_TRAFFIC"
 )
 
+func (e FlowTrafficTypeEnum) ToPointer() *FlowTrafficTypeEnum {
+	return &e
+}
+
 func (e *FlowTrafficTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNET_TRAFFIC":
 		fallthrough
 	case "EAST_WEST_TRAFFIC":
-		*e = FlowTrafficTypeEnum(s)
+		*e = FlowTrafficTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlowTrafficTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FlowTrafficTypeEnum: %v", v)
 	}
 }

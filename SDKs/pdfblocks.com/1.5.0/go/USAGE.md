@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,7 +16,8 @@ func main() {
         }),
     )
 
-    req := operations.AddImageWatermarkV1RequestBody{
+    ctx := context.Background()
+    res, err := s.AddImageWatermarkV1(ctx, operations.AddImageWatermarkV1RequestBody{
         File: operations.AddImageWatermarkV1RequestBodyFile{
             Content: []byte("corrupti"),
             File: "provident",
@@ -26,12 +26,9 @@ func main() {
             Content: []byte("distinctio"),
             Image: "quibusdam",
         },
-        Margin: 1,
-        Transparency: 50,
-    }
-
-    ctx := context.Background()
-    res, err := s.AddImageWatermarkV1(ctx, req)
+        Margin: sdk.Float32(1),
+        Transparency: sdk.Int(50),
+    })
     if err != nil {
         log.Fatal(err)
     }

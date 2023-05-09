@@ -15,17 +15,21 @@ const (
 	GETEnterStandbyActionEnumEnterStandby GETEnterStandbyActionEnum = "EnterStandby"
 )
 
+func (e GETEnterStandbyActionEnum) ToPointer() *GETEnterStandbyActionEnum {
+	return &e
+}
+
 func (e *GETEnterStandbyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnterStandby":
-		*e = GETEnterStandbyActionEnum(s)
+		*e = GETEnterStandbyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnterStandbyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnterStandbyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETEnterStandbyVersionEnumTwoThousandAndEleven0101 GETEnterStandbyVersionEnum = "2011-01-01"
 )
 
+func (e GETEnterStandbyVersionEnum) ToPointer() *GETEnterStandbyVersionEnum {
+	return &e
+}
+
 func (e *GETEnterStandbyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETEnterStandbyVersionEnum(s)
+		*e = GETEnterStandbyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnterStandbyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnterStandbyVersionEnum: %v", v)
 	}
 }
 

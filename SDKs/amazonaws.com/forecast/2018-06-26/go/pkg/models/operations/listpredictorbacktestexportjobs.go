@@ -16,17 +16,21 @@ const (
 	ListPredictorBacktestExportJobsXAmzTargetEnumAmazonForecastListPredictorBacktestExportJobs ListPredictorBacktestExportJobsXAmzTargetEnum = "AmazonForecast.ListPredictorBacktestExportJobs"
 )
 
+func (e ListPredictorBacktestExportJobsXAmzTargetEnum) ToPointer() *ListPredictorBacktestExportJobsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListPredictorBacktestExportJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.ListPredictorBacktestExportJobs":
-		*e = ListPredictorBacktestExportJobsXAmzTargetEnum(s)
+		*e = ListPredictorBacktestExportJobsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPredictorBacktestExportJobsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPredictorBacktestExportJobsXAmzTargetEnum: %v", v)
 	}
 }
 

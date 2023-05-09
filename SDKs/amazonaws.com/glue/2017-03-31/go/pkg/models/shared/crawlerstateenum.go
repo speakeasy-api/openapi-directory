@@ -15,20 +15,24 @@ const (
 	CrawlerStateEnumStopping CrawlerStateEnum = "STOPPING"
 )
 
+func (e CrawlerStateEnum) ToPointer() *CrawlerStateEnum {
+	return &e
+}
+
 func (e *CrawlerStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READY":
 		fallthrough
 	case "RUNNING":
 		fallthrough
 	case "STOPPING":
-		*e = CrawlerStateEnum(s)
+		*e = CrawlerStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrawlerStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CrawlerStateEnum: %v", v)
 	}
 }

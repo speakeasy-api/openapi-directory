@@ -14,18 +14,22 @@ const (
 	ReviewableHITStatusEnumReviewing  ReviewableHITStatusEnum = "Reviewing"
 )
 
+func (e ReviewableHITStatusEnum) ToPointer() *ReviewableHITStatusEnum {
+	return &e
+}
+
 func (e *ReviewableHITStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Reviewable":
 		fallthrough
 	case "Reviewing":
-		*e = ReviewableHITStatusEnum(s)
+		*e = ReviewableHITStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReviewableHITStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReviewableHITStatusEnum: %v", v)
 	}
 }

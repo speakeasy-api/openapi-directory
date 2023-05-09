@@ -19,12 +19,16 @@ const (
 	DescribeSavingsPlansOfferingsRequestBodyProductTypeEnumSageMaker DescribeSavingsPlansOfferingsRequestBodyProductTypeEnum = "SageMaker"
 )
 
+func (e DescribeSavingsPlansOfferingsRequestBodyProductTypeEnum) ToPointer() *DescribeSavingsPlansOfferingsRequestBodyProductTypeEnum {
+	return &e
+}
+
 func (e *DescribeSavingsPlansOfferingsRequestBodyProductTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2":
 		fallthrough
 	case "Fargate":
@@ -32,10 +36,10 @@ func (e *DescribeSavingsPlansOfferingsRequestBodyProductTypeEnum) UnmarshalJSON(
 	case "Lambda":
 		fallthrough
 	case "SageMaker":
-		*e = DescribeSavingsPlansOfferingsRequestBodyProductTypeEnum(s)
+		*e = DescribeSavingsPlansOfferingsRequestBodyProductTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSavingsPlansOfferingsRequestBodyProductTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSavingsPlansOfferingsRequestBodyProductTypeEnum: %v", v)
 	}
 }
 

@@ -18,19 +18,23 @@ const (
 	ListProfileTimesOrderByEnumTimestampAscending  ListProfileTimesOrderByEnum = "TimestampAscending"
 )
 
+func (e ListProfileTimesOrderByEnum) ToPointer() *ListProfileTimesOrderByEnum {
+	return &e
+}
+
 func (e *ListProfileTimesOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TimestampDescending":
 		fallthrough
 	case "TimestampAscending":
-		*e = ListProfileTimesOrderByEnum(s)
+		*e = ListProfileTimesOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListProfileTimesOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for ListProfileTimesOrderByEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	ListProfileTimesPeriodEnumP1D  ListProfileTimesPeriodEnum = "P1D"
 )
 
+func (e ListProfileTimesPeriodEnum) ToPointer() *ListProfileTimesPeriodEnum {
+	return &e
+}
+
 func (e *ListProfileTimesPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PT5M":
 		fallthrough
 	case "PT1H":
 		fallthrough
 	case "P1D":
-		*e = ListProfileTimesPeriodEnum(s)
+		*e = ListProfileTimesPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListProfileTimesPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for ListProfileTimesPeriodEnum: %v", v)
 	}
 }
 

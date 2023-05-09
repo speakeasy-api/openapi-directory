@@ -18,12 +18,16 @@ const (
 	NfsShareStateEnumDeleting         NfsShareStateEnum = "DELETING"
 )
 
+func (e NfsShareStateEnum) ToPointer() *NfsShareStateEnum {
+	return &e
+}
+
 func (e *NfsShareStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PROVISIONED":
@@ -33,10 +37,10 @@ func (e *NfsShareStateEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATING":
 		fallthrough
 	case "DELETING":
-		*e = NfsShareStateEnum(s)
+		*e = NfsShareStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NfsShareStateEnum: %s", s)
+		return fmt.Errorf("invalid value for NfsShareStateEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	NfsShareStorageTypeEnumHdd                    NfsShareStorageTypeEnum = "HDD"
 )
 
+func (e NfsShareStorageTypeEnum) ToPointer() *NfsShareStorageTypeEnum {
+	return &e
+}
+
 func (e *NfsShareStorageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STORAGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SSD":
 		fallthrough
 	case "HDD":
-		*e = NfsShareStorageTypeEnum(s)
+		*e = NfsShareStorageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NfsShareStorageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NfsShareStorageTypeEnum: %v", v)
 	}
 }
 

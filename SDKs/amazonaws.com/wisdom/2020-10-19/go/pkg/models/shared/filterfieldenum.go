@@ -13,16 +13,20 @@ const (
 	FilterFieldEnumName FilterFieldEnum = "NAME"
 )
 
+func (e FilterFieldEnum) ToPointer() *FilterFieldEnum {
+	return &e
+}
+
 func (e *FilterFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NAME":
-		*e = FilterFieldEnum(s)
+		*e = FilterFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterFieldEnum: %v", v)
 	}
 }

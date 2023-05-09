@@ -16,17 +16,21 @@ const (
 	ConvertRecoveryPointToSnapshotXAmzTargetEnumRedshiftServerlessConvertRecoveryPointToSnapshot ConvertRecoveryPointToSnapshotXAmzTargetEnum = "RedshiftServerless.ConvertRecoveryPointToSnapshot"
 )
 
+func (e ConvertRecoveryPointToSnapshotXAmzTargetEnum) ToPointer() *ConvertRecoveryPointToSnapshotXAmzTargetEnum {
+	return &e
+}
+
 func (e *ConvertRecoveryPointToSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.ConvertRecoveryPointToSnapshot":
-		*e = ConvertRecoveryPointToSnapshotXAmzTargetEnum(s)
+		*e = ConvertRecoveryPointToSnapshotXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConvertRecoveryPointToSnapshotXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ConvertRecoveryPointToSnapshotXAmzTargetEnum: %v", v)
 	}
 }
 

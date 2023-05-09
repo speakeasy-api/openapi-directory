@@ -36,7 +36,10 @@ func newProjectMemberships(defaultClient, securityClient HTTPClient, serverURL, 
 // Returns the complete project record for a single project membership.
 func (s *projectMemberships) GetProjectMembership(ctx context.Context, request operations.GetProjectMembershipRequest) (*operations.GetProjectMembershipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project_memberships/{project_membership_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/project_memberships/{project_membership_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -103,7 +106,10 @@ func (s *projectMemberships) GetProjectMembership(ctx context.Context, request o
 // Returns the compact project membership records for the project.
 func (s *projectMemberships) GetProjectMembershipsForProject(ctx context.Context, request operations.GetProjectMembershipsForProjectRequest) (*operations.GetProjectMembershipsForProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/project_memberships", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_gid}/project_memberships", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

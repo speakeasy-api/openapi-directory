@@ -16,17 +16,21 @@ const (
 	DeleteEndpointXAmzTargetEnumSageMakerDeleteEndpoint DeleteEndpointXAmzTargetEnum = "SageMaker.DeleteEndpoint"
 )
 
+func (e DeleteEndpointXAmzTargetEnum) ToPointer() *DeleteEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DeleteEndpoint":
-		*e = DeleteEndpointXAmzTargetEnum(s)
+		*e = DeleteEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

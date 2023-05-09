@@ -2,29 +2,26 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRequest{
-        XMarketID: "corrupti",
-        XPrivateLabelID: 592845,
+    ctx := context.Background()
+    res, err := s.V1.Get(ctx, operations.GetRequest{
+        XMarketID: sdk.String("corrupti"),
+        XPrivateLabelID: sdk.Int64(592845),
         Keys: []string{
             "quibusdam",
             "unde",
             "nulla",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.V1.Get(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

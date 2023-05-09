@@ -17,19 +17,23 @@ const (
 	CreateAccessTokenApplicationXWwwFormUrlencodedExpiresEnumFalse CreateAccessTokenApplicationXWwwFormUrlencodedExpiresEnum = "false"
 )
 
+func (e CreateAccessTokenApplicationXWwwFormUrlencodedExpiresEnum) ToPointer() *CreateAccessTokenApplicationXWwwFormUrlencodedExpiresEnum {
+	return &e
+}
+
 func (e *CreateAccessTokenApplicationXWwwFormUrlencodedExpiresEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = CreateAccessTokenApplicationXWwwFormUrlencodedExpiresEnum(s)
+		*e = CreateAccessTokenApplicationXWwwFormUrlencodedExpiresEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccessTokenApplicationXWwwFormUrlencodedExpiresEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccessTokenApplicationXWwwFormUrlencodedExpiresEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	CreateAccessTokenApplicationXWwwFormUrlencodedGrantTypeEnumRefreshToken      CreateAccessTokenApplicationXWwwFormUrlencodedGrantTypeEnum = "refresh_token"
 )
 
+func (e CreateAccessTokenApplicationXWwwFormUrlencodedGrantTypeEnum) ToPointer() *CreateAccessTokenApplicationXWwwFormUrlencodedGrantTypeEnum {
+	return &e
+}
+
 func (e *CreateAccessTokenApplicationXWwwFormUrlencodedGrantTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "authorization_code":
 		fallthrough
 	case "client_credentials":
 		fallthrough
 	case "refresh_token":
-		*e = CreateAccessTokenApplicationXWwwFormUrlencodedGrantTypeEnum(s)
+		*e = CreateAccessTokenApplicationXWwwFormUrlencodedGrantTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccessTokenApplicationXWwwFormUrlencodedGrantTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccessTokenApplicationXWwwFormUrlencodedGrantTypeEnum: %v", v)
 	}
 }
 
@@ -68,19 +76,23 @@ const (
 	CreateAccessTokenApplicationXWwwFormUrlencodedRealmEnumContributor CreateAccessTokenApplicationXWwwFormUrlencodedRealmEnum = "contributor"
 )
 
+func (e CreateAccessTokenApplicationXWwwFormUrlencodedRealmEnum) ToPointer() *CreateAccessTokenApplicationXWwwFormUrlencodedRealmEnum {
+	return &e
+}
+
 func (e *CreateAccessTokenApplicationXWwwFormUrlencodedRealmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "contributor":
-		*e = CreateAccessTokenApplicationXWwwFormUrlencodedRealmEnum(s)
+		*e = CreateAccessTokenApplicationXWwwFormUrlencodedRealmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccessTokenApplicationXWwwFormUrlencodedRealmEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccessTokenApplicationXWwwFormUrlencodedRealmEnum: %v", v)
 	}
 }
 

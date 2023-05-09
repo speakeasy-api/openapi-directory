@@ -16,19 +16,23 @@ const (
 	GetV1ValidationSingleFormatEnumXML  GetV1ValidationSingleFormatEnum = "xml"
 )
 
+func (e GetV1ValidationSingleFormatEnum) ToPointer() *GetV1ValidationSingleFormatEnum {
+	return &e
+}
+
 func (e *GetV1ValidationSingleFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = GetV1ValidationSingleFormatEnum(s)
+		*e = GetV1ValidationSingleFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetV1ValidationSingleFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetV1ValidationSingleFormatEnum: %v", v)
 	}
 }
 

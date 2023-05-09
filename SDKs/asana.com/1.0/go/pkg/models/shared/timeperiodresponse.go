@@ -20,12 +20,16 @@ const (
 	TimePeriodResponsePeriodEnumQ4 TimePeriodResponsePeriodEnum = "Q4"
 )
 
+func (e TimePeriodResponsePeriodEnum) ToPointer() *TimePeriodResponsePeriodEnum {
+	return &e
+}
+
 func (e *TimePeriodResponsePeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FY":
 		fallthrough
 	case "H1":
@@ -39,10 +43,10 @@ func (e *TimePeriodResponsePeriodEnum) UnmarshalJSON(data []byte) error {
 	case "Q3":
 		fallthrough
 	case "Q4":
-		*e = TimePeriodResponsePeriodEnum(s)
+		*e = TimePeriodResponsePeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimePeriodResponsePeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for TimePeriodResponsePeriodEnum: %v", v)
 	}
 }
 

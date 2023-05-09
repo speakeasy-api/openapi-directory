@@ -15,17 +15,21 @@ const (
 	POSTBacktrackDBClusterActionEnumBacktrackDbCluster POSTBacktrackDBClusterActionEnum = "BacktrackDBCluster"
 )
 
+func (e POSTBacktrackDBClusterActionEnum) ToPointer() *POSTBacktrackDBClusterActionEnum {
+	return &e
+}
+
 func (e *POSTBacktrackDBClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BacktrackDBCluster":
-		*e = POSTBacktrackDBClusterActionEnum(s)
+		*e = POSTBacktrackDBClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTBacktrackDBClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTBacktrackDBClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTBacktrackDBClusterVersionEnumTwoThousandAndFourteen1031 POSTBacktrackDBClusterVersionEnum = "2014-10-31"
 )
 
+func (e POSTBacktrackDBClusterVersionEnum) ToPointer() *POSTBacktrackDBClusterVersionEnum {
+	return &e
+}
+
 func (e *POSTBacktrackDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTBacktrackDBClusterVersionEnum(s)
+		*e = POSTBacktrackDBClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTBacktrackDBClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTBacktrackDBClusterVersionEnum: %v", v)
 	}
 }
 

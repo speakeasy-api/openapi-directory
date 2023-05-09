@@ -39,12 +39,16 @@ const (
 	StandardUnitEnumNone            StandardUnitEnum = "None"
 )
 
+func (e StandardUnitEnum) ToPointer() *StandardUnitEnum {
+	return &e
+}
+
 func (e *StandardUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Seconds":
 		fallthrough
 	case "Microseconds":
@@ -98,9 +102,9 @@ func (e *StandardUnitEnum) UnmarshalJSON(data []byte) error {
 	case "Count/Second":
 		fallthrough
 	case "None":
-		*e = StandardUnitEnum(s)
+		*e = StandardUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StandardUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for StandardUnitEnum: %v", v)
 	}
 }

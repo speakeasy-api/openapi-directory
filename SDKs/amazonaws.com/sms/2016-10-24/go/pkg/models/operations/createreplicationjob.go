@@ -16,17 +16,21 @@ const (
 	CreateReplicationJobXAmzTargetEnumAwsServerMigrationServiceV20161024CreateReplicationJob CreateReplicationJobXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.CreateReplicationJob"
 )
 
+func (e CreateReplicationJobXAmzTargetEnum) ToPointer() *CreateReplicationJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateReplicationJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.CreateReplicationJob":
-		*e = CreateReplicationJobXAmzTargetEnum(s)
+		*e = CreateReplicationJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateReplicationJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateReplicationJobXAmzTargetEnum: %v", v)
 	}
 }
 

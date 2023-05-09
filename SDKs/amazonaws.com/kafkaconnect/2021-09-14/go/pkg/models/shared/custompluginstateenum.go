@@ -18,12 +18,16 @@ const (
 	CustomPluginStateEnumDeleting     CustomPluginStateEnum = "DELETING"
 )
 
+func (e CustomPluginStateEnum) ToPointer() *CustomPluginStateEnum {
+	return &e
+}
+
 func (e *CustomPluginStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATE_FAILED":
@@ -35,9 +39,9 @@ func (e *CustomPluginStateEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATE_FAILED":
 		fallthrough
 	case "DELETING":
-		*e = CustomPluginStateEnum(s)
+		*e = CustomPluginStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomPluginStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomPluginStateEnum: %v", v)
 	}
 }

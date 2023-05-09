@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/sms/2016-10
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,218 +28,85 @@ func main() {
         }),
     )
 
-    req := operations.CreateAppRequest{
+    ctx := context.Background()
+    res, err := s.CreateApp(ctx, operations.CreateAppRequest{
         CreateAppRequest: shared.CreateAppRequest{
-            ClientToken: "corrupti",
-            Description: "provident",
-            Name: "distinctio",
-            RoleName: "quibusdam",
+            ClientToken: sdk.String("corrupti"),
+            Description: sdk.String("provident"),
+            Name: sdk.String("Ellis Mitchell"),
+            RoleName: sdk.String("illum"),
             ServerGroups: []shared.ServerGroup{
                 shared.ServerGroup{
-                    Name: "nulla",
-                    ServerGroupID: "corrupti",
+                    Name: sdk.String("Doug Hoppe"),
+                    ServerGroupID: sdk.String("debitis"),
                     ServerList: []shared.Server{
                         shared.Server{
-                            ReplicationJobID: "vel",
-                            ReplicationJobTerminated: false,
-                            ServerID: "error",
-                            ServerType: "VIRTUAL_MACHINE",
+                            ReplicationJobID: sdk.String("delectus"),
+                            ReplicationJobTerminated: sdk.Bool(false),
+                            ServerID: sdk.String("tempora"),
+                            ServerType: shared.ServerTypeEnumVirtualMachine.ToPointer(),
                             VMServer: &shared.VMServer{
-                                VMManagerName: "deserunt",
-                                VMManagerType: "SCVMM",
-                                VMName: "iure",
-                                VMPath: "magnam",
+                                VMManagerName: sdk.String("suscipit"),
+                                VMManagerType: shared.VMManagerTypeEnumScvmm.ToPointer(),
+                                VMName: sdk.String("minus"),
+                                VMPath: sdk.String("placeat"),
                                 VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "debitis",
-                                    VMManagerID: "ipsa",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "delectus",
-                            ReplicationJobTerminated: false,
-                            ServerID: "tempora",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "suscipit",
-                                VMManagerType: "SCVMM",
-                                VMName: "minus",
-                                VMPath: "placeat",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "voluptatum",
-                                    VMManagerID: "iusto",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "excepturi",
-                            ReplicationJobTerminated: false,
-                            ServerID: "nisi",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "recusandae",
-                                VMManagerType: "HYPERV-MANAGER",
-                                VMName: "ab",
-                                VMPath: "quis",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "veritatis",
-                                    VMManagerID: "deserunt",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "perferendis",
-                            ReplicationJobTerminated: false,
-                            ServerID: "ipsam",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "repellendus",
-                                VMManagerType: "HYPERV-MANAGER",
-                                VMName: "quo",
-                                VMPath: "odit",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "at",
-                                    VMManagerID: "at",
+                                    VMID: sdk.String("voluptatum"),
+                                    VMManagerID: sdk.String("iusto"),
                                 },
                             },
                         },
                     },
                 },
                 shared.ServerGroup{
-                    Name: "maiores",
-                    ServerGroupID: "molestiae",
+                    Name: sdk.String("Charlie Walsh II"),
+                    ServerGroupID: sdk.String("veritatis"),
                     ServerList: []shared.Server{
                         shared.Server{
-                            ReplicationJobID: "quod",
-                            ReplicationJobTerminated: false,
-                            ServerID: "esse",
-                            ServerType: "VIRTUAL_MACHINE",
+                            ReplicationJobID: sdk.String("perferendis"),
+                            ReplicationJobTerminated: sdk.Bool(false),
+                            ServerID: sdk.String("ipsam"),
+                            ServerType: shared.ServerTypeEnumVirtualMachine.ToPointer(),
                             VMServer: &shared.VMServer{
-                                VMManagerName: "totam",
-                                VMManagerType: "HYPERV-MANAGER",
-                                VMName: "dolorum",
-                                VMPath: "dicta",
+                                VMManagerName: sdk.String("repellendus"),
+                                VMManagerType: shared.VMManagerTypeEnumHypervManager.ToPointer(),
+                                VMName: sdk.String("quo"),
+                                VMPath: sdk.String("odit"),
                                 VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "nam",
-                                    VMManagerID: "officia",
+                                    VMID: sdk.String("at"),
+                                    VMManagerID: sdk.String("at"),
                                 },
                             },
                         },
                         shared.Server{
-                            ReplicationJobID: "occaecati",
-                            ReplicationJobTerminated: false,
-                            ServerID: "fugit",
-                            ServerType: "VIRTUAL_MACHINE",
+                            ReplicationJobID: sdk.String("maiores"),
+                            ReplicationJobTerminated: sdk.Bool(false),
+                            ServerID: sdk.String("molestiae"),
+                            ServerType: shared.ServerTypeEnumVirtualMachine.ToPointer(),
                             VMServer: &shared.VMServer{
-                                VMManagerName: "deleniti",
-                                VMManagerType: "HYPERV-MANAGER",
-                                VMName: "optio",
-                                VMPath: "totam",
+                                VMManagerName: sdk.String("quod"),
+                                VMManagerType: shared.VMManagerTypeEnumHypervManager.ToPointer(),
+                                VMName: sdk.String("esse"),
+                                VMPath: sdk.String("totam"),
                                 VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "beatae",
-                                    VMManagerID: "commodi",
+                                    VMID: sdk.String("porro"),
+                                    VMManagerID: sdk.String("dolorum"),
                                 },
                             },
                         },
                         shared.Server{
-                            ReplicationJobID: "molestiae",
-                            ReplicationJobTerminated: false,
-                            ServerID: "modi",
-                            ServerType: "VIRTUAL_MACHINE",
+                            ReplicationJobID: sdk.String("dicta"),
+                            ReplicationJobTerminated: sdk.Bool(false),
+                            ServerID: sdk.String("nam"),
+                            ServerType: shared.ServerTypeEnumVirtualMachine.ToPointer(),
                             VMServer: &shared.VMServer{
-                                VMManagerName: "qui",
-                                VMManagerType: "HYPERV-MANAGER",
-                                VMName: "cum",
-                                VMPath: "esse",
+                                VMManagerName: sdk.String("officia"),
+                                VMManagerType: shared.VMManagerTypeEnumScvmm.ToPointer(),
+                                VMName: sdk.String("fugit"),
+                                VMPath: sdk.String("deleniti"),
                                 VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "ipsum",
-                                    VMManagerID: "excepturi",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "aspernatur",
-                            ReplicationJobTerminated: false,
-                            ServerID: "perferendis",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "ad",
-                                VMManagerType: "SCVMM",
-                                VMName: "sed",
-                                VMPath: "iste",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "dolor",
-                                    VMManagerID: "natus",
-                                },
-                            },
-                        },
-                    },
-                },
-                shared.ServerGroup{
-                    Name: "laboriosam",
-                    ServerGroupID: "hic",
-                    ServerList: []shared.Server{
-                        shared.Server{
-                            ReplicationJobID: "fuga",
-                            ReplicationJobTerminated: false,
-                            ServerID: "in",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "corporis",
-                                VMManagerType: "SCVMM",
-                                VMName: "iure",
-                                VMPath: "saepe",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "quidem",
-                                    VMManagerID: "architecto",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "ipsa",
-                            ReplicationJobTerminated: false,
-                            ServerID: "reiciendis",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "est",
-                                VMManagerType: "SCVMM",
-                                VMName: "laborum",
-                                VMPath: "dolores",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "dolorem",
-                                    VMManagerID: "corporis",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "explicabo",
-                            ReplicationJobTerminated: false,
-                            ServerID: "nobis",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "enim",
-                                VMManagerType: "SCVMM",
-                                VMName: "nemo",
-                                VMPath: "minima",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "excepturi",
-                                    VMManagerID: "accusantium",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "iure",
-                            ReplicationJobTerminated: false,
-                            ServerID: "culpa",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "doloribus",
-                                VMManagerType: "HYPERV-MANAGER",
-                                VMName: "architecto",
-                                VMPath: "mollitia",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "dolorem",
-                                    VMManagerID: "culpa",
+                                    VMID: sdk.String("hic"),
+                                    VMManagerID: sdk.String("optio"),
                                 },
                             },
                         },
@@ -248,23 +115,28 @@ func main() {
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "repellat",
-                    Value: "mollitia",
+                    Key: sdk.String("beatae"),
+                    Value: sdk.String("commodi"),
+                },
+                shared.Tag{
+                    Key: sdk.String("molestiae"),
+                    Value: sdk.String("modi"),
+                },
+                shared.Tag{
+                    Key: sdk.String("qui"),
+                    Value: sdk.String("impedit"),
                 },
             },
         },
-        XAmzAlgorithm: "occaecati",
-        XAmzContentSha256: "numquam",
-        XAmzCredential: "commodi",
-        XAmzDate: "quam",
-        XAmzSecurityToken: "molestiae",
-        XAmzSignature: "velit",
-        XAmzSignedHeaders: "error",
-        XAmzTarget: "AWSServerMigrationService_V2016_10_24.CreateApp",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateApp(ctx, req)
+        XAmzAlgorithm: sdk.String("cum"),
+        XAmzContentSha256: sdk.String("esse"),
+        XAmzCredential: sdk.String("ipsum"),
+        XAmzDate: sdk.String("excepturi"),
+        XAmzSecurityToken: sdk.String("aspernatur"),
+        XAmzSignature: sdk.String("perferendis"),
+        XAmzSignedHeaders: sdk.String("ad"),
+        XAmzTarget: operations.CreateAppXAmzTargetEnumAwsServerMigrationServiceV20161024CreateApp,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -279,43 +151,43 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateApp` - Creates an application. An application consists of one or more server groups. Each server group contain one or more servers.
-* `CreateReplicationJob` - Creates a replication job. The replication job schedules periodic replication runs to replicate your server to Amazon Web Services. Each replication run creates an Amazon Machine Image (AMI).
-* `DeleteApp` - Deletes the specified application. Optionally deletes the launched stack associated with the application and all Server Migration Service replication jobs for servers in the application.
-* `DeleteAppLaunchConfiguration` - Deletes the launch configuration for the specified application.
-* `DeleteAppReplicationConfiguration` - Deletes the replication configuration for the specified application.
-* `DeleteAppValidationConfiguration` - Deletes the validation configuration for the specified application.
-* `DeleteReplicationJob` - <p>Deletes the specified replication job.</p> <p>After you delete a replication job, there are no further replication runs. Amazon Web Services deletes the contents of the Amazon S3 bucket used to store Server Migration Service artifacts. The AMIs created by the replication runs are not deleted.</p>
-* `DeleteServerCatalog` - Deletes all servers from your server catalog.
-* `DisassociateConnector` - <p>Disassociates the specified connector from Server Migration Service.</p> <p>After you disassociate a connector, it is no longer available to support replication jobs.</p>
-* `GenerateChangeSet` - Generates a target change set for a currently launched stack and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
-* `GenerateTemplate` - Generates an CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
-* `GetApp` - Retrieve information about the specified application.
-* `GetAppLaunchConfiguration` - Retrieves the application launch configuration associated with the specified application.
-* `GetAppReplicationConfiguration` - Retrieves the application replication configuration associated with the specified application.
-* `GetAppValidationConfiguration` - Retrieves information about a configuration for validating an application.
-* `GetAppValidationOutput` - Retrieves output from validating an application.
-* `GetConnectors` - Describes the connectors registered with the Server Migration Service.
-* `GetReplicationJobs` - Describes the specified replication job or all of your replication jobs.
-* `GetReplicationRuns` - Describes the replication runs for the specified replication job.
-* `GetServers` - <p>Describes the servers in your server catalog.</p> <p>Before you can describe your servers, you must import them using <a>ImportServerCatalog</a>.</p>
-* `ImportAppCatalog` - Allows application import from Migration Hub.
-* `ImportServerCatalog` - <p>Gathers a complete list of on-premises servers. Connectors must be installed and monitoring all servers to import.</p> <p>This call returns immediately, but might take additional time to retrieve all the servers.</p>
-* `LaunchApp` - Launches the specified application as a stack in CloudFormation.
-* `ListApps` - Retrieves summaries for all applications.
-* `NotifyAppValidationOutput` - Provides information to Server Migration Service about whether application validation is successful.
-* `PutAppLaunchConfiguration` - Creates or updates the launch configuration for the specified application.
-* `PutAppReplicationConfiguration` - Creates or updates the replication configuration for the specified application.
-* `PutAppValidationConfiguration` - Creates or updates a validation configuration for the specified application.
-* `StartAppReplication` - Starts replicating the specified application by creating replication jobs for each server in the application.
-* `StartOnDemandAppReplication` - Starts an on-demand replication run for the specified application.
-* `StartOnDemandReplicationRun` - <p>Starts an on-demand replication run for the specified replication job. This replication run starts immediately. This replication run is in addition to the ones already scheduled.</p> <p>There is a limit on the number of on-demand replications runs that you can request in a 24-hour period.</p>
-* `StopAppReplication` - Stops replicating the specified application by deleting the replication job for each server in the application.
-* `TerminateApp` - Terminates the stack for the specified application.
-* `UpdateApp` - Updates the specified application.
-* `UpdateReplicationJob` - Updates the specified settings for the specified replication job.
+* [CreateApp](docs/sdk/README.md#createapp) - Creates an application. An application consists of one or more server groups. Each server group contain one or more servers.
+* [CreateReplicationJob](docs/sdk/README.md#createreplicationjob) - Creates a replication job. The replication job schedules periodic replication runs to replicate your server to Amazon Web Services. Each replication run creates an Amazon Machine Image (AMI).
+* [DeleteApp](docs/sdk/README.md#deleteapp) - Deletes the specified application. Optionally deletes the launched stack associated with the application and all Server Migration Service replication jobs for servers in the application.
+* [DeleteAppLaunchConfiguration](docs/sdk/README.md#deleteapplaunchconfiguration) - Deletes the launch configuration for the specified application.
+* [DeleteAppReplicationConfiguration](docs/sdk/README.md#deleteappreplicationconfiguration) - Deletes the replication configuration for the specified application.
+* [DeleteAppValidationConfiguration](docs/sdk/README.md#deleteappvalidationconfiguration) - Deletes the validation configuration for the specified application.
+* [DeleteReplicationJob](docs/sdk/README.md#deletereplicationjob) - <p>Deletes the specified replication job.</p> <p>After you delete a replication job, there are no further replication runs. Amazon Web Services deletes the contents of the Amazon S3 bucket used to store Server Migration Service artifacts. The AMIs created by the replication runs are not deleted.</p>
+* [DeleteServerCatalog](docs/sdk/README.md#deleteservercatalog) - Deletes all servers from your server catalog.
+* [DisassociateConnector](docs/sdk/README.md#disassociateconnector) - <p>Disassociates the specified connector from Server Migration Service.</p> <p>After you disassociate a connector, it is no longer available to support replication jobs.</p>
+* [GenerateChangeSet](docs/sdk/README.md#generatechangeset) - Generates a target change set for a currently launched stack and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
+* [GenerateTemplate](docs/sdk/README.md#generatetemplate) - Generates an CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
+* [GetApp](docs/sdk/README.md#getapp) - Retrieve information about the specified application.
+* [GetAppLaunchConfiguration](docs/sdk/README.md#getapplaunchconfiguration) - Retrieves the application launch configuration associated with the specified application.
+* [GetAppReplicationConfiguration](docs/sdk/README.md#getappreplicationconfiguration) - Retrieves the application replication configuration associated with the specified application.
+* [GetAppValidationConfiguration](docs/sdk/README.md#getappvalidationconfiguration) - Retrieves information about a configuration for validating an application.
+* [GetAppValidationOutput](docs/sdk/README.md#getappvalidationoutput) - Retrieves output from validating an application.
+* [GetConnectors](docs/sdk/README.md#getconnectors) - Describes the connectors registered with the Server Migration Service.
+* [GetReplicationJobs](docs/sdk/README.md#getreplicationjobs) - Describes the specified replication job or all of your replication jobs.
+* [GetReplicationRuns](docs/sdk/README.md#getreplicationruns) - Describes the replication runs for the specified replication job.
+* [GetServers](docs/sdk/README.md#getservers) - <p>Describes the servers in your server catalog.</p> <p>Before you can describe your servers, you must import them using <a>ImportServerCatalog</a>.</p>
+* [ImportAppCatalog](docs/sdk/README.md#importappcatalog) - Allows application import from Migration Hub.
+* [ImportServerCatalog](docs/sdk/README.md#importservercatalog) - <p>Gathers a complete list of on-premises servers. Connectors must be installed and monitoring all servers to import.</p> <p>This call returns immediately, but might take additional time to retrieve all the servers.</p>
+* [LaunchApp](docs/sdk/README.md#launchapp) - Launches the specified application as a stack in CloudFormation.
+* [ListApps](docs/sdk/README.md#listapps) - Retrieves summaries for all applications.
+* [NotifyAppValidationOutput](docs/sdk/README.md#notifyappvalidationoutput) - Provides information to Server Migration Service about whether application validation is successful.
+* [PutAppLaunchConfiguration](docs/sdk/README.md#putapplaunchconfiguration) - Creates or updates the launch configuration for the specified application.
+* [PutAppReplicationConfiguration](docs/sdk/README.md#putappreplicationconfiguration) - Creates or updates the replication configuration for the specified application.
+* [PutAppValidationConfiguration](docs/sdk/README.md#putappvalidationconfiguration) - Creates or updates a validation configuration for the specified application.
+* [StartAppReplication](docs/sdk/README.md#startappreplication) - Starts replicating the specified application by creating replication jobs for each server in the application.
+* [StartOnDemandAppReplication](docs/sdk/README.md#startondemandappreplication) - Starts an on-demand replication run for the specified application.
+* [StartOnDemandReplicationRun](docs/sdk/README.md#startondemandreplicationrun) - <p>Starts an on-demand replication run for the specified replication job. This replication run starts immediately. This replication run is in addition to the ones already scheduled.</p> <p>There is a limit on the number of on-demand replications runs that you can request in a 24-hour period.</p>
+* [StopAppReplication](docs/sdk/README.md#stopappreplication) - Stops replicating the specified application by deleting the replication job for each server in the application.
+* [TerminateApp](docs/sdk/README.md#terminateapp) - Terminates the stack for the specified application.
+* [UpdateApp](docs/sdk/README.md#updateapp) - Updates the specified application.
+* [UpdateReplicationJob](docs/sdk/README.md#updatereplicationjob) - Updates the specified settings for the specified replication job.
 <!-- End SDK Available Operations -->
 
 ### Maturity

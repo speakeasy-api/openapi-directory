@@ -23,21 +23,25 @@ const (
 	UpdatePlaceIndexRequestBodyPricingPlanEnumMobileAssetManagement UpdatePlaceIndexRequestBodyPricingPlanEnum = "MobileAssetManagement"
 )
 
+func (e UpdatePlaceIndexRequestBodyPricingPlanEnum) ToPointer() *UpdatePlaceIndexRequestBodyPricingPlanEnum {
+	return &e
+}
+
 func (e *UpdatePlaceIndexRequestBodyPricingPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RequestBasedUsage":
 		fallthrough
 	case "MobileAssetTracking":
 		fallthrough
 	case "MobileAssetManagement":
-		*e = UpdatePlaceIndexRequestBodyPricingPlanEnum(s)
+		*e = UpdatePlaceIndexRequestBodyPricingPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePlaceIndexRequestBodyPricingPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePlaceIndexRequestBodyPricingPlanEnum: %v", v)
 	}
 }
 

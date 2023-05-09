@@ -16,17 +16,21 @@ const (
 	DeleteSessionXAmzTargetEnumAwsGlueDeleteSession DeleteSessionXAmzTargetEnum = "AWSGlue.DeleteSession"
 )
 
+func (e DeleteSessionXAmzTargetEnum) ToPointer() *DeleteSessionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteSessionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.DeleteSession":
-		*e = DeleteSessionXAmzTargetEnum(s)
+		*e = DeleteSessionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSessionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSessionXAmzTargetEnum: %v", v)
 	}
 }
 

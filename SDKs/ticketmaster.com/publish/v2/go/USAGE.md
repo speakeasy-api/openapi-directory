@@ -2,23 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PatchAttractionRequest{
+    ctx := context.Background()
+    res, err := s.PatchAttraction(ctx, operations.PatchAttractionRequest{
         AugmentationData: shared.AugmentationData{
             Changes: []shared.Change{
                 shared.Change{
-                    From: "provident",
-                    Op: "copy",
+                    From: sdk.String("provident"),
+                    Op: shared.ChangeOpEnumCopy,
                     Path: "quibusdam",
                     Value: map[string]interface{}{
                         "nulla": "corrupti",
@@ -27,8 +28,8 @@ func main() {
                     },
                 },
                 shared.Change{
-                    From: "suscipit",
-                    Op: "replace",
+                    From: sdk.String("suscipit"),
+                    Op: shared.ChangeOpEnumReplace,
                     Path: "magnam",
                     Value: map[string]interface{}{
                         "ipsa": "delectus",
@@ -38,8 +39,8 @@ func main() {
                     },
                 },
                 shared.Change{
-                    From: "iusto",
-                    Op: "move",
+                    From: sdk.String("iusto"),
+                    Op: shared.ChangeOpEnumMove,
                     Path: "nisi",
                     Value: map[string]interface{}{
                         "temporibus": "ab",
@@ -50,17 +51,14 @@ func main() {
                 },
             },
             RelatedEntityID: "sapiente",
-            RelatedEntityType: "venue",
-            Score: 1403.5,
+            RelatedEntityType: shared.AugmentationDataRelatedEntityTypeEnumVenue,
+            Score: sdk.Float32(1403.5),
             Source: "at",
             VersionNumber: 870088,
         },
         TMPSCorrelationID: "maiores",
-        ID: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.PatchAttraction(ctx, req)
+        ID: "7cc78ca1-ba92-48fc-8167-42cb73920592",
+    })
     if err != nil {
         log.Fatal(err)
     }

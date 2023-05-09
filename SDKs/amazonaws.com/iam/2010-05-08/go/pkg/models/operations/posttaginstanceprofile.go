@@ -15,17 +15,21 @@ const (
 	POSTTagInstanceProfileActionEnumTagInstanceProfile POSTTagInstanceProfileActionEnum = "TagInstanceProfile"
 )
 
+func (e POSTTagInstanceProfileActionEnum) ToPointer() *POSTTagInstanceProfileActionEnum {
+	return &e
+}
+
 func (e *POSTTagInstanceProfileActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TagInstanceProfile":
-		*e = POSTTagInstanceProfileActionEnum(s)
+		*e = POSTTagInstanceProfileActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTagInstanceProfileActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTagInstanceProfileActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTTagInstanceProfileVersionEnumTwoThousandAndTen0508 POSTTagInstanceProfileVersionEnum = "2010-05-08"
 )
 
+func (e POSTTagInstanceProfileVersionEnum) ToPointer() *POSTTagInstanceProfileVersionEnum {
+	return &e
+}
+
 func (e *POSTTagInstanceProfileVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTTagInstanceProfileVersionEnum(s)
+		*e = POSTTagInstanceProfileVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTagInstanceProfileVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTagInstanceProfileVersionEnum: %v", v)
 	}
 }
 

@@ -36,7 +36,10 @@ func newCustomGatewayProcessPaymentsAndRefunds(defaultClient, securityClient HTT
 // - Payments must be enabled and 'Custom' must be selected as the gateway in order to use this API endpoint
 func (s *customGatewayProcessPaymentsAndRefunds) PostCustomGatewayPaymentOwnershipID(ctx context.Context, request operations.PostCustomGatewayPaymentOwnershipIDRequest) (*operations.PostCustomGatewayPaymentOwnershipIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom-gateway/payment/{ownershipId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom-gateway/payment/{ownershipId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *customGatewayProcessPaymentsAndRefunds) PostCustomGatewayPaymentOwnersh
 // - Payments must be enabled and 'Custom' must be selected as the gateway in order to use this API endpoint
 func (s *customGatewayProcessPaymentsAndRefunds) PostCustomGatewayRefundOwnershipID(ctx context.Context, request operations.PostCustomGatewayRefundOwnershipIDRequest) (*operations.PostCustomGatewayRefundOwnershipIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/custom-gateway/refund/{ownershipId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/custom-gateway/refund/{ownershipId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

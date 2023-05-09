@@ -14,18 +14,22 @@ const (
 	InstanceAutoRecoveryStateEnumDefault  InstanceAutoRecoveryStateEnum = "default"
 )
 
+func (e InstanceAutoRecoveryStateEnum) ToPointer() *InstanceAutoRecoveryStateEnum {
+	return &e
+}
+
 func (e *InstanceAutoRecoveryStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "default":
-		*e = InstanceAutoRecoveryStateEnum(s)
+		*e = InstanceAutoRecoveryStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceAutoRecoveryStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceAutoRecoveryStateEnum: %v", v)
 	}
 }

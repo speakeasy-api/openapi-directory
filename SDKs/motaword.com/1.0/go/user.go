@@ -34,7 +34,10 @@ func newUser(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 
 func (s *user) ApproveVendorApplication(ctx context.Context, request operations.ApproveVendorApplicationRequest, security operations.ApproveVendorApplicationSecurity) (*operations.ApproveVendorApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/approve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/approve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -136,6 +139,16 @@ func (s *user) CreateUser(ctx context.Context, request operations.CreateUserRequ
 
 			res.User = out
 		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
 	}
 
 	return res, nil
@@ -199,7 +212,10 @@ func (s *user) DeleteAccount(ctx context.Context) (*operations.DeleteAccountResp
 // DeleteUserAccount - Delete requester account
 func (s *user) DeleteUserAccount(ctx context.Context, request operations.DeleteUserAccountRequest) (*operations.DeleteUserAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/delete-account", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/delete-account", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -249,6 +265,7 @@ func (s *user) DeleteUserAccount(ctx context.Context, request operations.DeleteU
 
 	return res, nil
 }
+
 func (s *user) DowngradeProofreader(ctx context.Context) (*operations.DowngradeProofreaderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/downgrade-proofreader"
@@ -302,9 +319,13 @@ func (s *user) DowngradeProofreader(ctx context.Context) (*operations.DowngradeP
 
 	return res, nil
 }
+
 func (s *user) DowngradeUserProofreader(ctx context.Context, request operations.DowngradeUserProofreaderRequest, security operations.DowngradeUserProofreaderSecurity) (*operations.DowngradeUserProofreaderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/downgrade-proofreader", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/downgrade-proofreader", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -415,7 +436,10 @@ func (s *user) FreezeAccount(ctx context.Context) (*operations.FreezeAccountResp
 // FreezeUserAccount - Freeze requester account for project notifications
 func (s *user) FreezeUserAccount(ctx context.Context, request operations.FreezeUserAccountRequest) (*operations.FreezeUserAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/freeze-account", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/freeze-account", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -897,7 +921,10 @@ func (s *user) GetStats(ctx context.Context) (*operations.GetStatsResponse, erro
 // GetThisUserGroups - Returns a list of user groups that this user belongs to.
 func (s *user) GetThisUserGroups(ctx context.Context, request operations.GetThisUserGroupsRequest) (*operations.GetThisUserGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/user-groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/user-groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -941,7 +968,10 @@ func (s *user) GetThisUserGroups(ctx context.Context, request operations.GetThis
 // GetUser - Get user information, including client or vendor specific info.
 func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest, security operations.GetUserSecurity) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -995,7 +1025,10 @@ func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest, s
 // GetUserEarnings - Returns your vendor earnings. Includes real-time earnings from ongoing projects, and fixed earnings from completed projects. Also includes total earnings and string edits.
 func (s *user) GetUserEarnings(ctx context.Context, request operations.GetUserEarningsRequest, security operations.GetUserEarningsSecurity) (*operations.GetUserEarningsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/earnings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/earnings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1095,7 +1128,10 @@ func (s *user) GetUserGroups(ctx context.Context) (*operations.GetUserGroupsResp
 // Returns billing and saved credit card information for user, and their corporate account if present & allowed.
 func (s *user) GetUserPaymentInfo(ctx context.Context, request operations.GetUserPaymentInfoRequest) (*operations.GetUserPaymentInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/payment", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/payment", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1149,7 +1185,10 @@ func (s *user) GetUserPaymentInfo(ctx context.Context, request operations.GetUse
 // GetUserPermissions - Returns a list of permissions that this user is authorized for.
 func (s *user) GetUserPermissions(ctx context.Context, request operations.GetUserPermissionsRequest) (*operations.GetUserPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1193,7 +1232,10 @@ func (s *user) GetUserPermissions(ctx context.Context, request operations.GetUse
 // GetUserPopularPairs - Returns the language pairs that the user has ordered most.
 func (s *user) GetUserPopularPairs(ctx context.Context, request operations.GetUserPopularPairsRequest, security operations.GetUserPopularPairsSecurity) (*operations.GetUserPopularPairsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/stats/popular-pairs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/stats/popular-pairs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1247,7 +1289,10 @@ func (s *user) GetUserPopularPairs(ctx context.Context, request operations.GetUs
 // GetUserProjectStats - Returns a user's project statistics.
 func (s *user) GetUserProjectStats(ctx context.Context, request operations.GetUserProjectStatsRequest, security operations.GetUserProjectStatsSecurity) (*operations.GetUserProjectStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/stats/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/stats/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1301,7 +1346,10 @@ func (s *user) GetUserProjectStats(ctx context.Context, request operations.GetUs
 // GetUserResponsivity - Returns a user's vendor responsivity stats
 func (s *user) GetUserResponsivity(ctx context.Context, request operations.GetUserResponsivityRequest, security operations.GetUserResponsivitySecurity) (*operations.GetUserResponsivityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/responsivity", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/responsivity", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1361,7 +1409,10 @@ func (s *user) GetUserResponsivity(ctx context.Context, request operations.GetUs
 // GetUserStats - Returns a user's client and vendor statistics. This used to be called "summary" (\@deprecated).
 func (s *user) GetUserStats(ctx context.Context, request operations.GetUserStatsRequest, security operations.GetUserStatsSecurity) (*operations.GetUserStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/stats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/stats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1521,6 +1572,7 @@ func (s *user) LogLocation(ctx context.Context, request shared.LocationUpdateCon
 
 	return res, nil
 }
+
 func (s *user) MakeProofreader(ctx context.Context) (*operations.MakeProofreaderResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/make-proofreader"
@@ -1574,9 +1626,13 @@ func (s *user) MakeProofreader(ctx context.Context) (*operations.MakeProofreader
 
 	return res, nil
 }
+
 func (s *user) MakeUserProofreader(ctx context.Context, request operations.MakeUserProofreaderRequest, security operations.MakeUserProofreaderSecurity) (*operations.MakeUserProofreaderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/make-proofreader", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/make-proofreader", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1627,9 +1683,13 @@ func (s *user) MakeUserProofreader(ctx context.Context, request operations.MakeU
 
 	return res, nil
 }
+
 func (s *user) RejectVendorApplication(ctx context.Context, request operations.RejectVendorApplicationRequest, security operations.RejectVendorApplicationSecurity) (*operations.RejectVendorApplicationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/reject", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/reject", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1788,7 +1848,10 @@ func (s *user) SendPasswordReminder(ctx context.Context, request shared.Email) (
 // SendUserEmailConfirmation - Sends email confirmation email for a user
 func (s *user) SendUserEmailConfirmation(ctx context.Context, request operations.SendUserEmailConfirmationRequest, security operations.SendUserEmailConfirmationSecurity) (*operations.SendUserEmailConfirmationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/resend-email-confirmation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/resend-email-confirmation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1914,9 +1977,13 @@ func (s *user) SubscribeNotification(ctx context.Context, request shared.Notific
 
 	return res, nil
 }
+
 func (s *user) SubscribeUserNotification(ctx context.Context, request operations.SubscribeUserNotificationRequest, security operations.SubscribeUserNotificationSecurity) (*operations.SubscribeUserNotificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/notifications/subscribe", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/notifications/subscribe", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NotificationSubscription", "json")
 	if err != nil {
@@ -1975,9 +2042,13 @@ func (s *user) SubscribeUserNotification(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *user) SuspendUser(ctx context.Context, request operations.SuspendUserRequest, security operations.SuspendUserSecurity) (*operations.SuspendUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/suspend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/suspend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SuspendUserRequest", "json")
 	if err != nil {
@@ -2094,7 +2165,10 @@ func (s *user) UnfreezeAccount(ctx context.Context) (*operations.UnfreezeAccount
 // UnfreezeUserAccount - Unfreeze requester account for project notifications
 func (s *user) UnfreezeUserAccount(ctx context.Context, request operations.UnfreezeUserAccountRequest) (*operations.UnfreezeUserAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/unfreeze-account", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/unfreeze-account", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2145,6 +2219,7 @@ func (s *user) UnfreezeUserAccount(ctx context.Context, request operations.Unfre
 
 	return res, nil
 }
+
 func (s *user) UnsubscribeNotification(ctx context.Context, request shared.NotificationSubscription) (*operations.UnsubscribeNotificationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/notifications/unsubscribe"
@@ -2206,9 +2281,13 @@ func (s *user) UnsubscribeNotification(ctx context.Context, request shared.Notif
 
 	return res, nil
 }
+
 func (s *user) UnsubscribeUserNotification(ctx context.Context, request operations.UnsubscribeUserNotificationRequest, security operations.UnsubscribeUserNotificationSecurity) (*operations.UnsubscribeUserNotificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/notifications/unsubscribe", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/notifications/unsubscribe", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NotificationSubscription", "json")
 	if err != nil {
@@ -2454,9 +2533,13 @@ func (s *user) UpdatePaymentInfo(ctx context.Context, request shared.UpdatePayme
 
 	return res, nil
 }
+
 func (s *user) UpdateUser(ctx context.Context, request operations.UpdateUserRequest) (*operations.UpdateUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserUpdateContent", "json")
 	if err != nil {
@@ -2513,9 +2596,13 @@ func (s *user) UpdateUser(ctx context.Context, request operations.UpdateUserRequ
 
 	return res, nil
 }
+
 func (s *user) UpdateUserGroup(ctx context.Context, request operations.UpdateUserGroupRequest, security operations.UpdateUserGroupSecurity) (*operations.UpdateUserGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/user-groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/user-groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ActiveWidget", "json")
 	if err != nil {
@@ -2577,7 +2664,10 @@ func (s *user) UpdateUserGroup(ctx context.Context, request operations.UpdateUse
 // Update user's billing and saved credit card information
 func (s *user) UpdateUserPaymentInfo(ctx context.Context, request operations.UpdateUserPaymentInfoRequest) (*operations.UpdateUserPaymentInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/payment", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/payment", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentInfo", "json")
 	if err != nil {
@@ -2762,9 +2852,13 @@ func (s *user) UploadProfilePictureMultipart(ctx context.Context, request shared
 
 	return res, nil
 }
+
 func (s *user) UploadUserProfilePictureJSON(ctx context.Context, request operations.UploadUserProfilePictureJSONRequest, security operations.UploadUserProfilePictureJSONSecurity) (*operations.UploadUserProfilePictureJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/profile-picture", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/profile-picture", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfilePictureUpload", "json")
 	if err != nil {
@@ -2823,9 +2917,13 @@ func (s *user) UploadUserProfilePictureJSON(ctx context.Context, request operati
 
 	return res, nil
 }
+
 func (s *user) UploadUserProfilePictureMultipart(ctx context.Context, request operations.UploadUserProfilePictureMultipartRequest, security operations.UploadUserProfilePictureMultipartSecurity) (*operations.UploadUserProfilePictureMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{userId}/profile-picture", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{userId}/profile-picture", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProfilePictureUpload1", "multipart")
 	if err != nil {

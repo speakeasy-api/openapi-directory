@@ -18,12 +18,16 @@ const (
 	ThreatIntelIndicatorCategoryEnumKeylogger         ThreatIntelIndicatorCategoryEnum = "KEYLOGGER"
 )
 
+func (e ThreatIntelIndicatorCategoryEnum) ToPointer() *ThreatIntelIndicatorCategoryEnum {
+	return &e
+}
+
 func (e *ThreatIntelIndicatorCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BACKDOOR":
 		fallthrough
 	case "CARD_STEALER":
@@ -35,9 +39,9 @@ func (e *ThreatIntelIndicatorCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "EXPLOIT_SITE":
 		fallthrough
 	case "KEYLOGGER":
-		*e = ThreatIntelIndicatorCategoryEnum(s)
+		*e = ThreatIntelIndicatorCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThreatIntelIndicatorCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for ThreatIntelIndicatorCategoryEnum: %v", v)
 	}
 }

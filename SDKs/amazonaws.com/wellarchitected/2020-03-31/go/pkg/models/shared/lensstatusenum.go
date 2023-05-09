@@ -17,12 +17,16 @@ const (
 	LensStatusEnumUnshared   LensStatusEnum = "UNSHARED"
 )
 
+func (e LensStatusEnum) ToPointer() *LensStatusEnum {
+	return &e
+}
+
 func (e *LensStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CURRENT":
 		fallthrough
 	case "NOT_CURRENT":
@@ -32,9 +36,9 @@ func (e *LensStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETED":
 		fallthrough
 	case "UNSHARED":
-		*e = LensStatusEnum(s)
+		*e = LensStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LensStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LensStatusEnum: %v", v)
 	}
 }

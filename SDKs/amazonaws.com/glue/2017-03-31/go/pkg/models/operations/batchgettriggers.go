@@ -16,17 +16,21 @@ const (
 	BatchGetTriggersXAmzTargetEnumAwsGlueBatchGetTriggers BatchGetTriggersXAmzTargetEnum = "AWSGlue.BatchGetTriggers"
 )
 
+func (e BatchGetTriggersXAmzTargetEnum) ToPointer() *BatchGetTriggersXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchGetTriggersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.BatchGetTriggers":
-		*e = BatchGetTriggersXAmzTargetEnum(s)
+		*e = BatchGetTriggersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetTriggersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetTriggersXAmzTargetEnum: %v", v)
 	}
 }
 

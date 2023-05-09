@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2EnvironmentStateEnumRunning          GoogleCloudDialogflowV2EnvironmentStateEnum = "RUNNING"
 )
 
+func (e GoogleCloudDialogflowV2EnvironmentStateEnum) ToPointer() *GoogleCloudDialogflowV2EnvironmentStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2EnvironmentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "STOPPED":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowV2EnvironmentStateEnum) UnmarshalJSON(data []byte)
 	case "LOADING":
 		fallthrough
 	case "RUNNING":
-		*e = GoogleCloudDialogflowV2EnvironmentStateEnum(s)
+		*e = GoogleCloudDialogflowV2EnvironmentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2EnvironmentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2EnvironmentStateEnum: %v", v)
 	}
 }
 

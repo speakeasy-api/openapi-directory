@@ -15,20 +15,24 @@ const (
 	SnapshotStatusEnumFailed    SnapshotStatusEnum = "Failed"
 )
 
+func (e SnapshotStatusEnum) ToPointer() *SnapshotStatusEnum {
+	return &e
+}
+
 func (e *SnapshotStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Creating":
 		fallthrough
 	case "Completed":
 		fallthrough
 	case "Failed":
-		*e = SnapshotStatusEnum(s)
+		*e = SnapshotStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SnapshotStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SnapshotStatusEnum: %v", v)
 	}
 }

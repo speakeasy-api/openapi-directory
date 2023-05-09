@@ -15,17 +15,21 @@ const (
 	POSTDisableAvailabilityZonesForLoadBalancerActionEnumDisableAvailabilityZonesForLoadBalancer POSTDisableAvailabilityZonesForLoadBalancerActionEnum = "DisableAvailabilityZonesForLoadBalancer"
 )
 
+func (e POSTDisableAvailabilityZonesForLoadBalancerActionEnum) ToPointer() *POSTDisableAvailabilityZonesForLoadBalancerActionEnum {
+	return &e
+}
+
 func (e *POSTDisableAvailabilityZonesForLoadBalancerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableAvailabilityZonesForLoadBalancer":
-		*e = POSTDisableAvailabilityZonesForLoadBalancerActionEnum(s)
+		*e = POSTDisableAvailabilityZonesForLoadBalancerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableAvailabilityZonesForLoadBalancerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableAvailabilityZonesForLoadBalancerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisableAvailabilityZonesForLoadBalancerVersionEnumTwoThousandAndTwelve0601 POSTDisableAvailabilityZonesForLoadBalancerVersionEnum = "2012-06-01"
 )
 
+func (e POSTDisableAvailabilityZonesForLoadBalancerVersionEnum) ToPointer() *POSTDisableAvailabilityZonesForLoadBalancerVersionEnum {
+	return &e
+}
+
 func (e *POSTDisableAvailabilityZonesForLoadBalancerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = POSTDisableAvailabilityZonesForLoadBalancerVersionEnum(s)
+		*e = POSTDisableAvailabilityZonesForLoadBalancerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableAvailabilityZonesForLoadBalancerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableAvailabilityZonesForLoadBalancerVersionEnum: %v", v)
 	}
 }
 

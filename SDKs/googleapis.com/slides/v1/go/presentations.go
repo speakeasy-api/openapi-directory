@@ -35,7 +35,10 @@ func newPresentations(defaultClient, securityClient HTTPClient, serverURL, langu
 // SlidesPresentationsBatchUpdate - Applies one or more updates to the presentation. Each request is validated before being applied. If any request is not valid, then the entire request will fail and nothing will be applied. Some requests have replies to give you some information about how they are applied. Other requests do not need to return information; these each return an empty reply. The order of replies matches that of the requests. For example, suppose you call batchUpdate with four updates, and only the third one returns information. The response would have two empty replies: the reply to the third request, and another empty reply, in that order. Because other users may be editing the presentation, the presentation might not exactly reflect your changes: your changes may be altered with respect to collaborator changes. If there are no collaborators, the presentation should reflect your changes. In any case, the updates in your request are guaranteed to be applied together atomically.
 func (s *presentations) SlidesPresentationsBatchUpdate(ctx context.Context, request operations.SlidesPresentationsBatchUpdateRequest, security operations.SlidesPresentationsBatchUpdateSecurity) (*operations.SlidesPresentationsBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}:batchUpdate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}:batchUpdate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdatePresentationRequest", "json")
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *presentations) SlidesPresentationsCreate(ctx context.Context, request o
 // SlidesPresentationsGet - Gets the latest version of the specified presentation.
 func (s *presentations) SlidesPresentationsGet(ctx context.Context, request operations.SlidesPresentationsGetRequest, security operations.SlidesPresentationsGetSecurity) (*operations.SlidesPresentationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +199,10 @@ func (s *presentations) SlidesPresentationsGet(ctx context.Context, request oper
 // SlidesPresentationsPagesGet - Gets the latest version of the specified page in the presentation.
 func (s *presentations) SlidesPresentationsPagesGet(ctx context.Context, request operations.SlidesPresentationsPagesGetRequest, security operations.SlidesPresentationsPagesGetSecurity) (*operations.SlidesPresentationsPagesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}/pages/{pageObjectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}/pages/{pageObjectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -241,7 +250,10 @@ func (s *presentations) SlidesPresentationsPagesGet(ctx context.Context, request
 // SlidesPresentationsPagesGetThumbnail - Generates a thumbnail of the latest version of the specified page in the presentation and returns a URL to the thumbnail image. This request counts as an [expensive read request](/slides/limits) for quota purposes.
 func (s *presentations) SlidesPresentationsPagesGetThumbnail(ctx context.Context, request operations.SlidesPresentationsPagesGetThumbnailRequest, security operations.SlidesPresentationsPagesGetThumbnailSecurity) (*operations.SlidesPresentationsPagesGetThumbnailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}/pages/{pageObjectId}/thumbnail", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/presentations/{presentationId}/pages/{pageObjectId}/thumbnail", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

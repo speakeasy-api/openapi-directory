@@ -18,21 +18,25 @@ const (
 	ListTableStorageOptimizersRequestBodyStorageOptimizerTypeEnumAll               ListTableStorageOptimizersRequestBodyStorageOptimizerTypeEnum = "ALL"
 )
 
+func (e ListTableStorageOptimizersRequestBodyStorageOptimizerTypeEnum) ToPointer() *ListTableStorageOptimizersRequestBodyStorageOptimizerTypeEnum {
+	return &e
+}
+
 func (e *ListTableStorageOptimizersRequestBodyStorageOptimizerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPACTION":
 		fallthrough
 	case "GARBAGE_COLLECTION":
 		fallthrough
 	case "ALL":
-		*e = ListTableStorageOptimizersRequestBodyStorageOptimizerTypeEnum(s)
+		*e = ListTableStorageOptimizersRequestBodyStorageOptimizerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTableStorageOptimizersRequestBodyStorageOptimizerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTableStorageOptimizersRequestBodyStorageOptimizerTypeEnum: %v", v)
 	}
 }
 

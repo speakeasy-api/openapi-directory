@@ -2,67 +2,68 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.DatamigrationProjectsLocationsConnectionProfilesCreate(ctx, operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ConnectionProfileInput: &shared.ConnectionProfileInput{
             Cloudsql: &shared.CloudSQLConnectionProfileInput{
                 Settings: &shared.CloudSQLSettingsInput{
-                    ActivationPolicy: "ALWAYS",
-                    AutoStorageIncrease: false,
-                    DataDiskSizeGb: "distinctio",
-                    DataDiskType: "PD_HDD",
+                    ActivationPolicy: shared.CloudSQLSettingsActivationPolicyEnumAlways.ToPointer(),
+                    AutoStorageIncrease: sdk.Bool(false),
+                    DataDiskSizeGb: sdk.String("distinctio"),
+                    DataDiskType: shared.CloudSQLSettingsDataDiskTypeEnumPdHdd.ToPointer(),
                     DatabaseFlags: map[string]string{
                         "nulla": "corrupti",
                         "illum": "vel",
                         "error": "deserunt",
                     },
-                    DatabaseVersion: "MYSQL_5_6",
+                    DatabaseVersion: shared.CloudSQLSettingsDatabaseVersionEnumMysql56.ToPointer(),
                     IPConfig: &shared.SQLIPConfig{
                         AuthorizedNetworks: []shared.SQLACLEntry{
                             shared.SQLACLEntry{
-                                ExpireTime: "magnam",
-                                Label: "debitis",
-                                TTL: "ipsa",
-                                Value: "delectus",
+                                ExpireTime: sdk.String("magnam"),
+                                Label: sdk.String("debitis"),
+                                TTL: sdk.String("ipsa"),
+                                Value: sdk.String("delectus"),
                             },
                             shared.SQLACLEntry{
-                                ExpireTime: "tempora",
-                                Label: "suscipit",
-                                TTL: "molestiae",
-                                Value: "minus",
+                                ExpireTime: sdk.String("tempora"),
+                                Label: sdk.String("suscipit"),
+                                TTL: sdk.String("molestiae"),
+                                Value: sdk.String("minus"),
                             },
                         },
-                        EnableIpv4: false,
-                        PrivateNetwork: "placeat",
-                        RequireSsl: false,
+                        EnableIpv4: sdk.Bool(false),
+                        PrivateNetwork: sdk.String("placeat"),
+                        RequireSsl: sdk.Bool(false),
                     },
-                    RootPassword: "voluptatum",
-                    SourceID: "iusto",
-                    StorageAutoResizeLimit: "excepturi",
-                    Tier: "nisi",
+                    RootPassword: sdk.String("voluptatum"),
+                    SourceID: sdk.String("iusto"),
+                    StorageAutoResizeLimit: sdk.String("excepturi"),
+                    Tier: sdk.String("nisi"),
                     UserLabels: map[string]string{
                         "temporibus": "ab",
                         "quis": "veritatis",
                         "deserunt": "perferendis",
                         "ipsam": "repellendus",
                     },
-                    Zone: "sapiente",
+                    Zone: sdk.String("sapiente"),
                 },
             },
-            DisplayName: "quo",
+            DisplayName: sdk.String("quo"),
             Error: &shared.Status{
-                Code: 140350,
+                Code: sdk.Int(140350),
                 Details: []map[string]interface{}{
                     map[string]interface{}{
                         "maiores": "molestiae",
@@ -83,45 +84,42 @@ func main() {
                         "qui": "impedit",
                     },
                 },
-                Message: "cum",
+                Message: sdk.String("cum"),
             },
             Labels: map[string]string{
                 "ipsum": "excepturi",
                 "aspernatur": "perferendis",
             },
             Mysql: &shared.MySQLConnectionProfileInput{
-                CloudSQLID: "ad",
-                Host: "natus",
-                Password: "sed",
-                Port: 612096,
+                CloudSQLID: sdk.String("ad"),
+                Host: sdk.String("natus"),
+                Password: sdk.String("sed"),
+                Port: sdk.Int(612096),
                 Ssl: &shared.SslConfigInput{
-                    CaCertificate: "dolor",
-                    ClientCertificate: "natus",
-                    ClientKey: "laboriosam",
+                    CaCertificate: sdk.String("dolor"),
+                    ClientCertificate: sdk.String("natus"),
+                    ClientKey: sdk.String("laboriosam"),
                 },
-                Username: "Tyra.Turcotte35",
+                Username: sdk.String("Tyra.Turcotte35"),
             },
-            Name: "iste",
-            Provider: "CLOUDSQL",
-            State: "FAILED",
+            Name: sdk.String("Brad Turcotte Jr."),
+            Provider: shared.ConnectionProfileProviderEnumRds.ToPointer(),
+            State: shared.ConnectionProfileStateEnumDeleting.ToPointer(),
         },
-        AccessToken: "quidem",
-        Alt: "json",
-        Callback: "ipsa",
-        ConnectionProfileID: "reiciendis",
-        Fields: "est",
-        Key: "mollitia",
-        OauthToken: "laborum",
-        Parent: "dolores",
-        PrettyPrint: false,
-        QuotaUser: "dolorem",
-        RequestID: "corporis",
-        UploadType: "explicabo",
-        UploadProtocol: "nobis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.DatamigrationProjectsLocationsConnectionProfilesCreate(ctx, req, operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity{
+        AccessToken: sdk.String("mollitia"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("dolores"),
+        ConnectionProfileID: sdk.String("dolorem"),
+        Fields: sdk.String("corporis"),
+        Key: sdk.String("explicabo"),
+        OauthToken: sdk.String("nobis"),
+        Parent: "enim",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("omnis"),
+        RequestID: sdk.String("nemo"),
+        UploadType: sdk.String("minima"),
+        UploadProtocol: sdk.String("excepturi"),
+    }, operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

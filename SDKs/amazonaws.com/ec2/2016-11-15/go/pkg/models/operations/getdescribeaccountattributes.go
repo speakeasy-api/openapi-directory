@@ -15,17 +15,21 @@ const (
 	GETDescribeAccountAttributesActionEnumDescribeAccountAttributes GETDescribeAccountAttributesActionEnum = "DescribeAccountAttributes"
 )
 
+func (e GETDescribeAccountAttributesActionEnum) ToPointer() *GETDescribeAccountAttributesActionEnum {
+	return &e
+}
+
 func (e *GETDescribeAccountAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeAccountAttributes":
-		*e = GETDescribeAccountAttributesActionEnum(s)
+		*e = GETDescribeAccountAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAccountAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAccountAttributesActionEnum: %v", v)
 	}
 }
 
@@ -36,19 +40,23 @@ const (
 	GETDescribeAccountAttributesAttributeNameEnumDefaultVpc         GETDescribeAccountAttributesAttributeNameEnum = "default-vpc"
 )
 
+func (e GETDescribeAccountAttributesAttributeNameEnum) ToPointer() *GETDescribeAccountAttributesAttributeNameEnum {
+	return &e
+}
+
 func (e *GETDescribeAccountAttributesAttributeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "supported-platforms":
 		fallthrough
 	case "default-vpc":
-		*e = GETDescribeAccountAttributesAttributeNameEnum(s)
+		*e = GETDescribeAccountAttributesAttributeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAccountAttributesAttributeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAccountAttributesAttributeNameEnum: %v", v)
 	}
 }
 
@@ -59,17 +67,21 @@ const (
 	GETDescribeAccountAttributesVersionEnumTwoThousandAndSixteen1115 GETDescribeAccountAttributesVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeAccountAttributesVersionEnum) ToPointer() *GETDescribeAccountAttributesVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeAccountAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeAccountAttributesVersionEnum(s)
+		*e = GETDescribeAccountAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAccountAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAccountAttributesVersionEnum: %v", v)
 	}
 }
 

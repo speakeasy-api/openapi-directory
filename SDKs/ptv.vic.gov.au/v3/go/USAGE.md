@@ -2,44 +2,42 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeparturesGetForStopRequest{
-        DateUtc: "2021-10-25T05:21:43.948Z",
-        Devid: "distinctio",
-        DirectionID: 844266,
+    ctx := context.Background()
+    res, err := s.Departures.DeparturesGetForStop(ctx, operations.DeparturesGetForStopRequest{
+        DateUtc: types.MustTimeFromString("2021-10-25T05:21:43.948Z"),
+        Devid: sdk.String("distinctio"),
+        DirectionID: sdk.Int(844266),
         Expand: []DeparturesGetForStopExpandEnum{
-            "VehiclePosition",
-            "Direction",
-            "VehiclePosition",
+            operations.DeparturesGetForStopExpandEnumVehiclePosition,
+            operations.DeparturesGetForStopExpandEnumDirection,
+            operations.DeparturesGetForStopExpandEnumVehiclePosition,
         },
-        Gtfs: false,
-        IncludeCancelled: false,
-        IncludeGeopath: false,
-        LookBackwards: false,
-        MaxResults: 423655,
+        Gtfs: sdk.Bool(false),
+        IncludeCancelled: sdk.Bool(false),
+        IncludeGeopath: sdk.Bool(false),
+        LookBackwards: sdk.Bool(false),
+        MaxResults: sdk.Int(423655),
         PlatformNumbers: []int{
             645894,
             384382,
             437587,
         },
-        RouteType: "1",
-        Signature: "debitis",
+        RouteType: operations.DeparturesGetForStopRouteTypeEnumOne,
+        Signature: sdk.String("debitis"),
         StopID: 56713,
-        Token: "delectus",
-    }
-
-    ctx := context.Background()
-    res, err := s.Departures.DeparturesGetForStop(ctx, req)
+        Token: sdk.String("delectus"),
+    })
     if err != nil {
         log.Fatal(err)
     }

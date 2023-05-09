@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,14 +17,12 @@ func main() {
         }),
     )
 
-    req := operations.AutoCompleteRequest{
+    ctx := context.Background()
+    res, err := s.Autocomplete.AutoComplete(ctx, operations.AutoCompleteRequest{
         Accept: "application/json",
         ContentType: "application/json",
         ProductNameContains: "jeans",
-    }
-
-    ctx := context.Background()
-    res, err := s.Autocomplete.AutoComplete(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

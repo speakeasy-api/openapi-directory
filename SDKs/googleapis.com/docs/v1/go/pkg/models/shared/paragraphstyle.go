@@ -18,12 +18,16 @@ const (
 	ParagraphStyleAlignmentEnumJustified            ParagraphStyleAlignmentEnum = "JUSTIFIED"
 )
 
+func (e ParagraphStyleAlignmentEnum) ToPointer() *ParagraphStyleAlignmentEnum {
+	return &e
+}
+
 func (e *ParagraphStyleAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALIGNMENT_UNSPECIFIED":
 		fallthrough
 	case "START":
@@ -33,10 +37,10 @@ func (e *ParagraphStyleAlignmentEnum) UnmarshalJSON(data []byte) error {
 	case "END":
 		fallthrough
 	case "JUSTIFIED":
-		*e = ParagraphStyleAlignmentEnum(s)
+		*e = ParagraphStyleAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParagraphStyleAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for ParagraphStyleAlignmentEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	ParagraphStyleDirectionEnumRightToLeft                 ParagraphStyleDirectionEnum = "RIGHT_TO_LEFT"
 )
 
+func (e ParagraphStyleDirectionEnum) ToPointer() *ParagraphStyleDirectionEnum {
+	return &e
+}
+
 func (e *ParagraphStyleDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_DIRECTION_UNSPECIFIED":
 		fallthrough
 	case "LEFT_TO_RIGHT":
 		fallthrough
 	case "RIGHT_TO_LEFT":
-		*e = ParagraphStyleDirectionEnum(s)
+		*e = ParagraphStyleDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParagraphStyleDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ParagraphStyleDirectionEnum: %v", v)
 	}
 }
 
@@ -83,12 +91,16 @@ const (
 	ParagraphStyleNamedStyleTypeEnumHeading6                  ParagraphStyleNamedStyleTypeEnum = "HEADING_6"
 )
 
+func (e ParagraphStyleNamedStyleTypeEnum) ToPointer() *ParagraphStyleNamedStyleTypeEnum {
+	return &e
+}
+
 func (e *ParagraphStyleNamedStyleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NAMED_STYLE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NORMAL_TEXT":
@@ -108,10 +120,10 @@ func (e *ParagraphStyleNamedStyleTypeEnum) UnmarshalJSON(data []byte) error {
 	case "HEADING_5":
 		fallthrough
 	case "HEADING_6":
-		*e = ParagraphStyleNamedStyleTypeEnum(s)
+		*e = ParagraphStyleNamedStyleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParagraphStyleNamedStyleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParagraphStyleNamedStyleTypeEnum: %v", v)
 	}
 }
 
@@ -124,21 +136,25 @@ const (
 	ParagraphStyleSpacingModeEnumCollapseLists          ParagraphStyleSpacingModeEnum = "COLLAPSE_LISTS"
 )
 
+func (e ParagraphStyleSpacingModeEnum) ToPointer() *ParagraphStyleSpacingModeEnum {
+	return &e
+}
+
 func (e *ParagraphStyleSpacingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPACING_MODE_UNSPECIFIED":
 		fallthrough
 	case "NEVER_COLLAPSE":
 		fallthrough
 	case "COLLAPSE_LISTS":
-		*e = ParagraphStyleSpacingModeEnum(s)
+		*e = ParagraphStyleSpacingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParagraphStyleSpacingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParagraphStyleSpacingModeEnum: %v", v)
 	}
 }
 

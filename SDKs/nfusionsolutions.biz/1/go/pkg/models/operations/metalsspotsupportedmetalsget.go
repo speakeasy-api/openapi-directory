@@ -16,19 +16,23 @@ const (
 	MetalsSpotSupportedMetalsGETFormatEnumXML  MetalsSpotSupportedMetalsGETFormatEnum = "xml"
 )
 
+func (e MetalsSpotSupportedMetalsGETFormatEnum) ToPointer() *MetalsSpotSupportedMetalsGETFormatEnum {
+	return &e
+}
+
 func (e *MetalsSpotSupportedMetalsGETFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = MetalsSpotSupportedMetalsGETFormatEnum(s)
+		*e = MetalsSpotSupportedMetalsGETFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetalsSpotSupportedMetalsGETFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MetalsSpotSupportedMetalsGETFormatEnum: %v", v)
 	}
 }
 

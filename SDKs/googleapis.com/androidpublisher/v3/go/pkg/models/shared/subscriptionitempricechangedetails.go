@@ -16,21 +16,25 @@ const (
 	SubscriptionItemPriceChangeDetailsPriceChangeModeEnumPriceIncrease              SubscriptionItemPriceChangeDetailsPriceChangeModeEnum = "PRICE_INCREASE"
 )
 
+func (e SubscriptionItemPriceChangeDetailsPriceChangeModeEnum) ToPointer() *SubscriptionItemPriceChangeDetailsPriceChangeModeEnum {
+	return &e
+}
+
 func (e *SubscriptionItemPriceChangeDetailsPriceChangeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICE_CHANGE_MODE_UNSPECIFIED":
 		fallthrough
 	case "PRICE_DECREASE":
 		fallthrough
 	case "PRICE_INCREASE":
-		*e = SubscriptionItemPriceChangeDetailsPriceChangeModeEnum(s)
+		*e = SubscriptionItemPriceChangeDetailsPriceChangeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionItemPriceChangeDetailsPriceChangeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionItemPriceChangeDetailsPriceChangeModeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	SubscriptionItemPriceChangeDetailsPriceChangeStateEnumApplied                     SubscriptionItemPriceChangeDetailsPriceChangeStateEnum = "APPLIED"
 )
 
+func (e SubscriptionItemPriceChangeDetailsPriceChangeStateEnum) ToPointer() *SubscriptionItemPriceChangeDetailsPriceChangeStateEnum {
+	return &e
+}
+
 func (e *SubscriptionItemPriceChangeDetailsPriceChangeStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICE_CHANGE_STATE_UNSPECIFIED":
 		fallthrough
 	case "OUTSTANDING":
@@ -57,10 +65,10 @@ func (e *SubscriptionItemPriceChangeDetailsPriceChangeStateEnum) UnmarshalJSON(d
 	case "CONFIRMED":
 		fallthrough
 	case "APPLIED":
-		*e = SubscriptionItemPriceChangeDetailsPriceChangeStateEnum(s)
+		*e = SubscriptionItemPriceChangeDetailsPriceChangeStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionItemPriceChangeDetailsPriceChangeStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionItemPriceChangeDetailsPriceChangeStateEnum: %v", v)
 	}
 }
 

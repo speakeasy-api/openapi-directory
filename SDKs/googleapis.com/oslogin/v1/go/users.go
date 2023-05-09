@@ -34,7 +34,10 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // OsloginUsersGetLoginProfile - Retrieves the profile information used for logging in to a virtual machine on Google Compute Engine.
 func (s *users) OsloginUsersGetLoginProfile(ctx context.Context, request operations.OsloginUsersGetLoginProfileRequest, security operations.OsloginUsersGetLoginProfileSecurity) (*operations.OsloginUsersGetLoginProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/loginProfile", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/loginProfile", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *users) OsloginUsersGetLoginProfile(ctx context.Context, request operati
 // OsloginUsersImportSSHPublicKey - Adds an SSH public key and returns the profile information. Default POSIX account information is set when no username and UID exist as part of the login profile.
 func (s *users) OsloginUsersImportSSHPublicKey(ctx context.Context, request operations.OsloginUsersImportSSHPublicKeyRequest, security operations.OsloginUsersImportSSHPublicKeySecurity) (*operations.OsloginUsersImportSSHPublicKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:importSshPublicKey", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:importSshPublicKey", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SSHPublicKeyInput", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *users) OsloginUsersImportSSHPublicKey(ctx context.Context, request oper
 // OsloginUsersSSHPublicKeysCreate - Create an SSH public key
 func (s *users) OsloginUsersSSHPublicKeysCreate(ctx context.Context, request operations.OsloginUsersSSHPublicKeysCreateRequest, security operations.OsloginUsersSSHPublicKeysCreateSecurity) (*operations.OsloginUsersSSHPublicKeysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sshPublicKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sshPublicKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SSHPublicKeyInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *users) OsloginUsersSSHPublicKeysCreate(ctx context.Context, request ope
 // OsloginUsersSSHPublicKeysDelete - Deletes an SSH public key.
 func (s *users) OsloginUsersSSHPublicKeysDelete(ctx context.Context, request operations.OsloginUsersSSHPublicKeysDeleteRequest, security operations.OsloginUsersSSHPublicKeysDeleteSecurity) (*operations.OsloginUsersSSHPublicKeysDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *users) OsloginUsersSSHPublicKeysDelete(ctx context.Context, request ope
 // OsloginUsersSSHPublicKeysGet - Retrieves an SSH public key.
 func (s *users) OsloginUsersSSHPublicKeysGet(ctx context.Context, request operations.OsloginUsersSSHPublicKeysGetRequest, security operations.OsloginUsersSSHPublicKeysGetSecurity) (*operations.OsloginUsersSSHPublicKeysGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *users) OsloginUsersSSHPublicKeysGet(ctx context.Context, request operat
 // OsloginUsersSSHPublicKeysPatch - Updates an SSH public key and returns the profile information. This method supports patch semantics.
 func (s *users) OsloginUsersSSHPublicKeysPatch(ctx context.Context, request operations.OsloginUsersSSHPublicKeysPatchRequest, security operations.OsloginUsersSSHPublicKeysPatchSecurity) (*operations.OsloginUsersSSHPublicKeysPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SSHPublicKeyInput", "json")
 	if err != nil {

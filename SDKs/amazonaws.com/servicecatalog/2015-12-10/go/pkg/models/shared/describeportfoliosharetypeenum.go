@@ -16,12 +16,16 @@ const (
 	DescribePortfolioShareTypeEnumOrganizationMemberAccount DescribePortfolioShareTypeEnum = "ORGANIZATION_MEMBER_ACCOUNT"
 )
 
+func (e DescribePortfolioShareTypeEnum) ToPointer() *DescribePortfolioShareTypeEnum {
+	return &e
+}
+
 func (e *DescribePortfolioShareTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT":
 		fallthrough
 	case "ORGANIZATION":
@@ -29,9 +33,9 @@ func (e *DescribePortfolioShareTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ORGANIZATIONAL_UNIT":
 		fallthrough
 	case "ORGANIZATION_MEMBER_ACCOUNT":
-		*e = DescribePortfolioShareTypeEnum(s)
+		*e = DescribePortfolioShareTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribePortfolioShareTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribePortfolioShareTypeEnum: %v", v)
 	}
 }

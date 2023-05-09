@@ -15,17 +15,21 @@ const (
 	POSTDeleteRolePermissionsBoundaryActionEnumDeleteRolePermissionsBoundary POSTDeleteRolePermissionsBoundaryActionEnum = "DeleteRolePermissionsBoundary"
 )
 
+func (e POSTDeleteRolePermissionsBoundaryActionEnum) ToPointer() *POSTDeleteRolePermissionsBoundaryActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteRolePermissionsBoundaryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteRolePermissionsBoundary":
-		*e = POSTDeleteRolePermissionsBoundaryActionEnum(s)
+		*e = POSTDeleteRolePermissionsBoundaryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteRolePermissionsBoundaryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteRolePermissionsBoundaryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteRolePermissionsBoundaryVersionEnumTwoThousandAndTen0508 POSTDeleteRolePermissionsBoundaryVersionEnum = "2010-05-08"
 )
 
+func (e POSTDeleteRolePermissionsBoundaryVersionEnum) ToPointer() *POSTDeleteRolePermissionsBoundaryVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteRolePermissionsBoundaryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTDeleteRolePermissionsBoundaryVersionEnum(s)
+		*e = POSTDeleteRolePermissionsBoundaryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteRolePermissionsBoundaryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteRolePermissionsBoundaryVersionEnum: %v", v)
 	}
 }
 

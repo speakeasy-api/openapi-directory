@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Price-Simulati
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetVCustomPricesSessionSchemaRequest{
+    ctx := context.Background()
+    res, err := s.CustomPrices.GetVCustomPricesSessionSchema(ctx, operations.GetVCustomPricesSessionSchemaRequest{
         Accept: "corrupti",
         ContentType: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.CustomPrices.GetVCustomPricesSessionSchema(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,21 +43,21 @@ func main() {
 ## Available Resources and Operations
 
 
-### CustomPrices
+### [CustomPrices](docs/customprices/README.md)
 
-* `GetVCustomPricesSessionSchema` - Get custom prices schema
-* `PostVCustomPricesSessionSchema` - Create or Update custom prices schema
+* [GetVCustomPricesSessionSchema](docs/customprices/README.md#getvcustompricessessionschema) - Get custom prices schema
+* [PostVCustomPricesSessionSchema](docs/customprices/README.md#postvcustompricessessionschema) - Create or Update custom prices schema
 
-### PriceAssociation
+### [PriceAssociation](docs/priceassociation/README.md)
 
-* `DeleteVCustomPricesRulesPriceAssociationID` - Disassociate price association by ID
-* `GetVCustomPricesRulesPriceAssociationID` - Get price association by ID
-* `PostVCustomPricesRules` - Create price association
-* `PutVCustomPricesRulesPriceAssociationID` - Update price association by ID
+* [DeleteVCustomPricesRulesPriceAssociationID](docs/priceassociation/README.md#deletevcustompricesrulespriceassociationid) - Disassociate price association by ID
+* [GetVCustomPricesRulesPriceAssociationID](docs/priceassociation/README.md#getvcustompricesrulespriceassociationid) - Get price association by ID
+* [PostVCustomPricesRules](docs/priceassociation/README.md#postvcustompricesrules) - Create price association
+* [PutVCustomPricesRulesPriceAssociationID](docs/priceassociation/README.md#putvcustompricesrulespriceassociationid) - Update price association by ID
 
-### SessionManagement
+### [SessionManagement](docs/sessionmanagement/README.md)
 
-* `PostSessions` - Update Order Configuration
+* [PostSessions](docs/sessionmanagement/README.md#postsessions) - Update Order Configuration
 <!-- End SDK Available Operations -->
 
 ### Maturity

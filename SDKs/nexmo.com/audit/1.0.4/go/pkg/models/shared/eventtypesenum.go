@@ -40,12 +40,16 @@ const (
 	EventTypesEnumAutoreloadDisable        EventTypesEnum = "AUTORELOAD_DISABLE"
 )
 
+func (e EventTypesEnum) ToPointer() *EventTypesEnum {
+	return &e
+}
+
 func (e *EventTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_STATUS":
 		fallthrough
 	case "USER_UPDATE":
@@ -99,9 +103,9 @@ func (e *EventTypesEnum) UnmarshalJSON(data []byte) error {
 	case "AUTORELOAD_UPDATE":
 		fallthrough
 	case "AUTORELOAD_DISABLE":
-		*e = EventTypesEnum(s)
+		*e = EventTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for EventTypesEnum: %v", v)
 	}
 }

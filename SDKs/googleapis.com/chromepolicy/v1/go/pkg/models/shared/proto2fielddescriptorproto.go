@@ -15,21 +15,25 @@ const (
 	Proto2FieldDescriptorProtoLabelEnumLabelRepeated Proto2FieldDescriptorProtoLabelEnum = "LABEL_REPEATED"
 )
 
+func (e Proto2FieldDescriptorProtoLabelEnum) ToPointer() *Proto2FieldDescriptorProtoLabelEnum {
+	return &e
+}
+
 func (e *Proto2FieldDescriptorProtoLabelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LABEL_OPTIONAL":
 		fallthrough
 	case "LABEL_REQUIRED":
 		fallthrough
 	case "LABEL_REPEATED":
-		*e = Proto2FieldDescriptorProtoLabelEnum(s)
+		*e = Proto2FieldDescriptorProtoLabelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Proto2FieldDescriptorProtoLabelEnum: %s", s)
+		return fmt.Errorf("invalid value for Proto2FieldDescriptorProtoLabelEnum: %v", v)
 	}
 }
 
@@ -57,12 +61,16 @@ const (
 	Proto2FieldDescriptorProtoTypeEnumTypeSint64   Proto2FieldDescriptorProtoTypeEnum = "TYPE_SINT64"
 )
 
+func (e Proto2FieldDescriptorProtoTypeEnum) ToPointer() *Proto2FieldDescriptorProtoTypeEnum {
+	return &e
+}
+
 func (e *Proto2FieldDescriptorProtoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_DOUBLE":
 		fallthrough
 	case "TYPE_FLOAT":
@@ -98,10 +106,10 @@ func (e *Proto2FieldDescriptorProtoTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TYPE_SINT32":
 		fallthrough
 	case "TYPE_SINT64":
-		*e = Proto2FieldDescriptorProtoTypeEnum(s)
+		*e = Proto2FieldDescriptorProtoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Proto2FieldDescriptorProtoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for Proto2FieldDescriptorProtoTypeEnum: %v", v)
 	}
 }
 

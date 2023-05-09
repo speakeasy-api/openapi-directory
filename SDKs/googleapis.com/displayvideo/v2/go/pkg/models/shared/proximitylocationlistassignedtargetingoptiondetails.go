@@ -16,21 +16,25 @@ const (
 	ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusUnitEnumProximityRadiusUnitKilometers  ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusUnitEnum = "PROXIMITY_RADIUS_UNIT_KILOMETERS"
 )
 
+func (e ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusUnitEnum) ToPointer() *ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusUnitEnum {
+	return &e
+}
+
 func (e *ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROXIMITY_RADIUS_UNIT_UNSPECIFIED":
 		fallthrough
 	case "PROXIMITY_RADIUS_UNIT_MILES":
 		fallthrough
 	case "PROXIMITY_RADIUS_UNIT_KILOMETERS":
-		*e = ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusUnitEnum(s)
+		*e = ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for ProximityLocationListAssignedTargetingOptionDetailsProximityRadiusUnitEnum: %v", v)
 	}
 }
 

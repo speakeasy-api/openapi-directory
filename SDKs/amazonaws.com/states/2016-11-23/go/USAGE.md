@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,36 +17,38 @@ func main() {
         }),
     )
 
-    req := operations.CreateActivityRequest{
+    ctx := context.Background()
+    res, err := s.CreateActivity(ctx, operations.CreateActivityRequest{
         CreateActivityInput: shared.CreateActivityInput{
-            Name: "corrupti",
+            Name: "Terrence Rau",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "distinctio",
-                    Value: "quibusdam",
+                    Key: sdk.String("corrupti"),
+                    Value: sdk.String("illum"),
                 },
                 shared.Tag{
-                    Key: "unde",
-                    Value: "nulla",
+                    Key: sdk.String("vel"),
+                    Value: sdk.String("error"),
                 },
                 shared.Tag{
-                    Key: "corrupti",
-                    Value: "illum",
+                    Key: sdk.String("deserunt"),
+                    Value: sdk.String("suscipit"),
+                },
+                shared.Tag{
+                    Key: sdk.String("iure"),
+                    Value: sdk.String("magnam"),
                 },
             },
         },
-        XAmzAlgorithm: "vel",
-        XAmzContentSha256: "error",
-        XAmzCredential: "deserunt",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "iure",
-        XAmzSignature: "magnam",
-        XAmzSignedHeaders: "debitis",
-        XAmzTarget: "AWSStepFunctions.CreateActivity",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateActivity(ctx, req)
+        XAmzAlgorithm: sdk.String("debitis"),
+        XAmzContentSha256: sdk.String("ipsa"),
+        XAmzCredential: sdk.String("delectus"),
+        XAmzDate: sdk.String("tempora"),
+        XAmzSecurityToken: sdk.String("suscipit"),
+        XAmzSignature: sdk.String("molestiae"),
+        XAmzSignedHeaders: sdk.String("minus"),
+        XAmzTarget: operations.CreateActivityXAmzTargetEnumAwsStepFunctionsCreateActivity,
+    })
     if err != nil {
         log.Fatal(err)
     }

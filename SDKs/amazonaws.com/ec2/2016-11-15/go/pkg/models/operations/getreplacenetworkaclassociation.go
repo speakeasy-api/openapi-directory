@@ -15,17 +15,21 @@ const (
 	GETReplaceNetworkACLAssociationActionEnumReplaceNetworkACLAssociation GETReplaceNetworkACLAssociationActionEnum = "ReplaceNetworkAclAssociation"
 )
 
+func (e GETReplaceNetworkACLAssociationActionEnum) ToPointer() *GETReplaceNetworkACLAssociationActionEnum {
+	return &e
+}
+
 func (e *GETReplaceNetworkACLAssociationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReplaceNetworkAclAssociation":
-		*e = GETReplaceNetworkACLAssociationActionEnum(s)
+		*e = GETReplaceNetworkACLAssociationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReplaceNetworkACLAssociationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReplaceNetworkACLAssociationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETReplaceNetworkACLAssociationVersionEnumTwoThousandAndSixteen1115 GETReplaceNetworkACLAssociationVersionEnum = "2016-11-15"
 )
 
+func (e GETReplaceNetworkACLAssociationVersionEnum) ToPointer() *GETReplaceNetworkACLAssociationVersionEnum {
+	return &e
+}
+
 func (e *GETReplaceNetworkACLAssociationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETReplaceNetworkACLAssociationVersionEnum(s)
+		*e = GETReplaceNetworkACLAssociationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETReplaceNetworkACLAssociationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETReplaceNetworkACLAssociationVersionEnum: %v", v)
 	}
 }
 

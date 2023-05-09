@@ -17,19 +17,23 @@ const (
 	TeamsFormatEnumJSON TeamsFormatEnum = "JSON"
 )
 
+func (e TeamsFormatEnum) ToPointer() *TeamsFormatEnum {
+	return &e
+}
+
 func (e *TeamsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = TeamsFormatEnum(s)
+		*e = TeamsFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsFormatEnum: %v", v)
 	}
 }
 

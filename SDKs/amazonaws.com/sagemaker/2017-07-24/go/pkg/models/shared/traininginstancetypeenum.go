@@ -61,12 +61,16 @@ const (
 	TrainingInstanceTypeEnumMlTrn132xlarge TrainingInstanceTypeEnum = "ml.trn1.32xlarge"
 )
 
+func (e TrainingInstanceTypeEnum) ToPointer() *TrainingInstanceTypeEnum {
+	return &e
+}
+
 func (e *TrainingInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ml.m4.xlarge":
 		fallthrough
 	case "ml.m4.2xlarge":
@@ -164,9 +168,9 @@ func (e *TrainingInstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ml.trn1.2xlarge":
 		fallthrough
 	case "ml.trn1.32xlarge":
-		*e = TrainingInstanceTypeEnum(s)
+		*e = TrainingInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingInstanceTypeEnum: %v", v)
 	}
 }

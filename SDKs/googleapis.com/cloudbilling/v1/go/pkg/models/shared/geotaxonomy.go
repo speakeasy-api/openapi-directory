@@ -17,12 +17,16 @@ const (
 	GeoTaxonomyTypeEnumMultiRegional   GeoTaxonomyTypeEnum = "MULTI_REGIONAL"
 )
 
+func (e GeoTaxonomyTypeEnum) ToPointer() *GeoTaxonomyTypeEnum {
+	return &e
+}
+
 func (e *GeoTaxonomyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "GLOBAL":
@@ -30,10 +34,10 @@ func (e *GeoTaxonomyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "REGIONAL":
 		fallthrough
 	case "MULTI_REGIONAL":
-		*e = GeoTaxonomyTypeEnum(s)
+		*e = GeoTaxonomyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GeoTaxonomyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GeoTaxonomyTypeEnum: %v", v)
 	}
 }
 

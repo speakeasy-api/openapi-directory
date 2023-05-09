@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -77,6 +78,7 @@ pkg/models/shared/googleclouddataplexv1scanneddata.go
 pkg/models/shared/googleclouddataplexv1scanneddataincrementalfield.go
 pkg/models/shared/googleclouddataplexv1dataqualityruleresult.go
 pkg/models/shared/googleclouddataplexv1dataqualitydimensionresult.go
+pkg/models/shared/googleclouddataplexv1dataprofilespec.go
 pkg/models/shared/googleclouddataplexv1dataprofileresult.go
 pkg/models/shared/googleclouddataplexv1dataprofileresultprofile.go
 pkg/models/shared/googleclouddataplexv1dataprofileresultprofilefield.go
@@ -173,4 +175,6 @@ pkg/models/shared/googleclouddataplexv1listzonesresponse.go
 pkg/models/shared/googlecloudlocationlistlocationsresponse.go
 pkg/models/shared/googlecloudlocationlocation.go
 pkg/models/shared/googlelongrunninglistoperationsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

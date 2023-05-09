@@ -16,21 +16,25 @@ const (
 	TimeSeriesTableMetricVisualizationEnumBar                            TimeSeriesTableMetricVisualizationEnum = "BAR"
 )
 
+func (e TimeSeriesTableMetricVisualizationEnum) ToPointer() *TimeSeriesTableMetricVisualizationEnum {
+	return &e
+}
+
 func (e *TimeSeriesTableMetricVisualizationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_VISUALIZATION_UNSPECIFIED":
 		fallthrough
 	case "NUMBER":
 		fallthrough
 	case "BAR":
-		*e = TimeSeriesTableMetricVisualizationEnum(s)
+		*e = TimeSeriesTableMetricVisualizationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimeSeriesTableMetricVisualizationEnum: %s", s)
+		return fmt.Errorf("invalid value for TimeSeriesTableMetricVisualizationEnum: %v", v)
 	}
 }
 

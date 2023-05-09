@@ -14,18 +14,22 @@ const (
 	FailbackLaunchTypeEnumDrill    FailbackLaunchTypeEnum = "DRILL"
 )
 
+func (e FailbackLaunchTypeEnum) ToPointer() *FailbackLaunchTypeEnum {
+	return &e
+}
+
 func (e *FailbackLaunchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECOVERY":
 		fallthrough
 	case "DRILL":
-		*e = FailbackLaunchTypeEnum(s)
+		*e = FailbackLaunchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailbackLaunchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FailbackLaunchTypeEnum: %v", v)
 	}
 }

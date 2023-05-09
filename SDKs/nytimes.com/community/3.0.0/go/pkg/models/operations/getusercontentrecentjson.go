@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type GETUserContentRecentJSONSecurity struct {
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=api-key"`
+}
+
 type GETUserContentRecentJSON200ApplicationJSONDebug struct {
 	Version *float64 `json:"version,omitempty"`
 }

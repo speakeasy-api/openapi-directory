@@ -15,20 +15,24 @@ const (
 	GameServerInstanceStatusEnumSpotTerminating GameServerInstanceStatusEnum = "SPOT_TERMINATING"
 )
 
+func (e GameServerInstanceStatusEnum) ToPointer() *GameServerInstanceStatusEnum {
+	return &e
+}
+
 func (e *GameServerInstanceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "DRAINING":
 		fallthrough
 	case "SPOT_TERMINATING":
-		*e = GameServerInstanceStatusEnum(s)
+		*e = GameServerInstanceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GameServerInstanceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GameServerInstanceStatusEnum: %v", v)
 	}
 }

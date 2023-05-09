@@ -2,29 +2,26 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GETListsBestSellersHistoryJSONRequest{
-        AgeGroup: "corrupti",
-        Author: "provident",
-        Contributor: "distinctio",
-        Isbn: "quibusdam",
-        Price: "unde",
-        Publisher: "nulla",
-        Title: "Ms.",
-    }
-
     ctx := context.Background()
-    res, err := s.GETListsBestSellersHistoryJSON(ctx, req, operations.GETListsBestSellersHistoryJSONSecurity{
+    res, err := s.GETListsBestSellersHistoryJSON(ctx, operations.GETListsBestSellersHistoryJSONRequest{
+        AgeGroup: sdk.String("corrupti"),
+        Author: sdk.String("provident"),
+        Contributor: sdk.String("distinctio"),
+        Isbn: sdk.String("quibusdam"),
+        Price: sdk.String("unde"),
+        Publisher: sdk.String("nulla"),
+        Title: sdk.String("Ms."),
+    }, operations.GETListsBestSellersHistoryJSONSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {

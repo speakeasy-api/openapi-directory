@@ -14,18 +14,22 @@ const (
 	DataDistributionTypeEnumShardedByS3Key  DataDistributionTypeEnum = "ShardedByS3Key"
 )
 
+func (e DataDistributionTypeEnum) ToPointer() *DataDistributionTypeEnum {
+	return &e
+}
+
 func (e *DataDistributionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FullyReplicated":
 		fallthrough
 	case "ShardedByS3Key":
-		*e = DataDistributionTypeEnum(s)
+		*e = DataDistributionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataDistributionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataDistributionTypeEnum: %v", v)
 	}
 }

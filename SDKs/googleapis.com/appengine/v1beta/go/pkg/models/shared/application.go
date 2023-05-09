@@ -17,12 +17,16 @@ const (
 	ApplicationDatabaseTypeEnumCloudDatastoreCompatibility ApplicationDatabaseTypeEnum = "CLOUD_DATASTORE_COMPATIBILITY"
 )
 
+func (e ApplicationDatabaseTypeEnum) ToPointer() *ApplicationDatabaseTypeEnum {
+	return &e
+}
+
 func (e *ApplicationDatabaseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATABASE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CLOUD_DATASTORE":
@@ -30,10 +34,10 @@ func (e *ApplicationDatabaseTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CLOUD_FIRESTORE":
 		fallthrough
 	case "CLOUD_DATASTORE_COMPATIBILITY":
-		*e = ApplicationDatabaseTypeEnum(s)
+		*e = ApplicationDatabaseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationDatabaseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationDatabaseTypeEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ApplicationServingStatusEnumSystemDisabled ApplicationServingStatusEnum = "SYSTEM_DISABLED"
 )
 
+func (e ApplicationServingStatusEnum) ToPointer() *ApplicationServingStatusEnum {
+	return &e
+}
+
 func (e *ApplicationServingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "SERVING":
@@ -60,10 +68,10 @@ func (e *ApplicationServingStatusEnum) UnmarshalJSON(data []byte) error {
 	case "USER_DISABLED":
 		fallthrough
 	case "SYSTEM_DISABLED":
-		*e = ApplicationServingStatusEnum(s)
+		*e = ApplicationServingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationServingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationServingStatusEnum: %v", v)
 	}
 }
 

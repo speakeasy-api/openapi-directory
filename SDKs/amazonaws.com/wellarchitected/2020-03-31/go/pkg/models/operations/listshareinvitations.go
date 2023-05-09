@@ -17,19 +17,23 @@ const (
 	ListShareInvitationsShareResourceTypeEnumLens     ListShareInvitationsShareResourceTypeEnum = "LENS"
 )
 
+func (e ListShareInvitationsShareResourceTypeEnum) ToPointer() *ListShareInvitationsShareResourceTypeEnum {
+	return &e
+}
+
 func (e *ListShareInvitationsShareResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORKLOAD":
 		fallthrough
 	case "LENS":
-		*e = ListShareInvitationsShareResourceTypeEnum(s)
+		*e = ListShareInvitationsShareResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListShareInvitationsShareResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListShareInvitationsShareResourceTypeEnum: %v", v)
 	}
 }
 

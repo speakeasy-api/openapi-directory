@@ -14,18 +14,22 @@ const (
 	ProvisionTargetTypeEnumAllProvisionedAccounts ProvisionTargetTypeEnum = "ALL_PROVISIONED_ACCOUNTS"
 )
 
+func (e ProvisionTargetTypeEnum) ToPointer() *ProvisionTargetTypeEnum {
+	return &e
+}
+
 func (e *ProvisionTargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_ACCOUNT":
 		fallthrough
 	case "ALL_PROVISIONED_ACCOUNTS":
-		*e = ProvisionTargetTypeEnum(s)
+		*e = ProvisionTargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionTargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionTargetTypeEnum: %v", v)
 	}
 }

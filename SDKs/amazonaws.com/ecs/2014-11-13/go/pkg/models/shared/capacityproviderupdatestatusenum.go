@@ -18,12 +18,16 @@ const (
 	CapacityProviderUpdateStatusEnumUpdateFailed     CapacityProviderUpdateStatusEnum = "UPDATE_FAILED"
 )
 
+func (e CapacityProviderUpdateStatusEnum) ToPointer() *CapacityProviderUpdateStatusEnum {
+	return &e
+}
+
 func (e *CapacityProviderUpdateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELETE_IN_PROGRESS":
 		fallthrough
 	case "DELETE_COMPLETE":
@@ -35,9 +39,9 @@ func (e *CapacityProviderUpdateStatusEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATE_COMPLETE":
 		fallthrough
 	case "UPDATE_FAILED":
-		*e = CapacityProviderUpdateStatusEnum(s)
+		*e = CapacityProviderUpdateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapacityProviderUpdateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CapacityProviderUpdateStatusEnum: %v", v)
 	}
 }

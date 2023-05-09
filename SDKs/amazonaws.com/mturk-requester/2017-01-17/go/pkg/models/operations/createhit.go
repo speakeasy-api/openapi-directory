@@ -16,17 +16,21 @@ const (
 	CreateHITXAmzTargetEnumMTurkRequesterServiceV20170117CreateHit CreateHITXAmzTargetEnum = "MTurkRequesterServiceV20170117.CreateHIT"
 )
 
+func (e CreateHITXAmzTargetEnum) ToPointer() *CreateHITXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateHITXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.CreateHIT":
-		*e = CreateHITXAmzTargetEnum(s)
+		*e = CreateHITXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateHITXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateHITXAmzTargetEnum: %v", v)
 	}
 }
 

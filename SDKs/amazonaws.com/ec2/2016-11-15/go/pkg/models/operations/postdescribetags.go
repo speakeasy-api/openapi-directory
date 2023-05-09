@@ -15,17 +15,21 @@ const (
 	POSTDescribeTagsActionEnumDescribeTags POSTDescribeTagsActionEnum = "DescribeTags"
 )
 
+func (e POSTDescribeTagsActionEnum) ToPointer() *POSTDescribeTagsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeTagsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeTags":
-		*e = POSTDescribeTagsActionEnum(s)
+		*e = POSTDescribeTagsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeTagsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeTagsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeTagsVersionEnumTwoThousandAndSixteen1115 POSTDescribeTagsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeTagsVersionEnum) ToPointer() *POSTDescribeTagsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeTagsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeTagsVersionEnum(s)
+		*e = POSTDescribeTagsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeTagsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeTagsVersionEnum: %v", v)
 	}
 }
 

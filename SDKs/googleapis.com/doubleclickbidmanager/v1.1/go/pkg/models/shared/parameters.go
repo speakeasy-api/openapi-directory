@@ -306,12 +306,16 @@ const (
 	ParametersGroupBysEnumFilterPublisherTrafficSource                             ParametersGroupBysEnum = "FILTER_PUBLISHER_TRAFFIC_SOURCE"
 )
 
+func (e ParametersGroupBysEnum) ToPointer() *ParametersGroupBysEnum {
+	return &e
+}
+
 func (e *ParametersGroupBysEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILTER_UNKNOWN":
 		fallthrough
 	case "FILTER_DATE":
@@ -899,10 +903,10 @@ func (e *ParametersGroupBysEnum) UnmarshalJSON(data []byte) error {
 	case "FILTER_TRUEVIEW_TARGETING_EXPANSION":
 		fallthrough
 	case "FILTER_PUBLISHER_TRAFFIC_SOURCE":
-		*e = ParametersGroupBysEnum(s)
+		*e = ParametersGroupBysEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParametersGroupBysEnum: %s", s)
+		return fmt.Errorf("invalid value for ParametersGroupBysEnum: %v", v)
 	}
 }
 
@@ -1387,12 +1391,16 @@ const (
 	ParametersMetricsEnumMetricVirtualPeopleImpressionReachPercentCoviewed                               ParametersMetricsEnum = "METRIC_VIRTUAL_PEOPLE_IMPRESSION_REACH_PERCENT_COVIEWED"
 )
 
+func (e ParametersMetricsEnum) ToPointer() *ParametersMetricsEnum {
+	return &e
+}
+
 func (e *ParametersMetricsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_UNKNOWN":
 		fallthrough
 	case "METRIC_IMPRESSIONS":
@@ -2344,10 +2352,10 @@ func (e *ParametersMetricsEnum) UnmarshalJSON(data []byte) error {
 	case "METRIC_VIRTUAL_PEOPLE_IMPRESSION_REACH_SHARE_PERCENT_COVIEWED":
 		fallthrough
 	case "METRIC_VIRTUAL_PEOPLE_IMPRESSION_REACH_PERCENT_COVIEWED":
-		*e = ParametersMetricsEnum(s)
+		*e = ParametersMetricsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParametersMetricsEnum: %s", s)
+		return fmt.Errorf("invalid value for ParametersMetricsEnum: %v", v)
 	}
 }
 
@@ -2391,12 +2399,16 @@ const (
 	ParametersTypeEnumTypePathAttribution                    ParametersTypeEnum = "TYPE_PATH_ATTRIBUTION"
 )
 
+func (e ParametersTypeEnum) ToPointer() *ParametersTypeEnum {
+	return &e
+}
+
 func (e *ParametersTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_GENERAL":
 		fallthrough
 	case "TYPE_AUDIENCE_PERFORMANCE":
@@ -2464,10 +2476,10 @@ func (e *ParametersTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TYPE_PATH":
 		fallthrough
 	case "TYPE_PATH_ATTRIBUTION":
-		*e = ParametersTypeEnum(s)
+		*e = ParametersTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParametersTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParametersTypeEnum: %v", v)
 	}
 }
 

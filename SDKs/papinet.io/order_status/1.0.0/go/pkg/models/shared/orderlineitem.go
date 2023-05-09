@@ -18,12 +18,16 @@ const (
 	OrderLineItemOrderLineItemStatusEnumShipmentCompleted   OrderLineItemOrderLineItemStatusEnum = "ShipmentCompleted"
 )
 
+func (e OrderLineItemOrderLineItemStatusEnum) ToPointer() *OrderLineItemOrderLineItemStatusEnum {
+	return &e
+}
+
 func (e *OrderLineItemOrderLineItemStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cancelled":
 		fallthrough
 	case "Completed":
@@ -35,10 +39,10 @@ func (e *OrderLineItemOrderLineItemStatusEnum) UnmarshalJSON(data []byte) error 
 	case "ProductionCompleted":
 		fallthrough
 	case "ShipmentCompleted":
-		*e = OrderLineItemOrderLineItemStatusEnum(s)
+		*e = OrderLineItemOrderLineItemStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderLineItemOrderLineItemStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderLineItemOrderLineItemStatusEnum: %v", v)
 	}
 }
 
@@ -52,12 +56,16 @@ const (
 	OrderLineItemQuantitiesQuantityContextEnumShipped   OrderLineItemQuantitiesQuantityContextEnum = "Shipped"
 )
 
+func (e OrderLineItemQuantitiesQuantityContextEnum) ToPointer() *OrderLineItemQuantitiesQuantityContextEnum {
+	return &e
+}
+
 func (e *OrderLineItemQuantitiesQuantityContextEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Confirmed":
 		fallthrough
 	case "Invoiced":
@@ -67,10 +75,10 @@ func (e *OrderLineItemQuantitiesQuantityContextEnum) UnmarshalJSON(data []byte) 
 	case "Produced":
 		fallthrough
 	case "Shipped":
-		*e = OrderLineItemQuantitiesQuantityContextEnum(s)
+		*e = OrderLineItemQuantitiesQuantityContextEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderLineItemQuantitiesQuantityContextEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderLineItemQuantitiesQuantityContextEnum: %v", v)
 	}
 }
 
@@ -87,12 +95,16 @@ const (
 	OrderLineItemQuantitiesQuantityTypeEnumTareWeight    OrderLineItemQuantitiesQuantityTypeEnum = "TareWeight"
 )
 
+func (e OrderLineItemQuantitiesQuantityTypeEnum) ToPointer() *OrderLineItemQuantitiesQuantityTypeEnum {
+	return &e
+}
+
 func (e *OrderLineItemQuantitiesQuantityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Area":
 		fallthrough
 	case "Count":
@@ -108,10 +120,10 @@ func (e *OrderLineItemQuantitiesQuantityTypeEnum) UnmarshalJSON(data []byte) err
 	case "NominalWeight":
 		fallthrough
 	case "TareWeight":
-		*e = OrderLineItemQuantitiesQuantityTypeEnum(s)
+		*e = OrderLineItemQuantitiesQuantityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderLineItemQuantitiesQuantityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderLineItemQuantitiesQuantityTypeEnum: %v", v)
 	}
 }
 
@@ -152,12 +164,16 @@ const (
 	OrderLineItemQuantitiesQuantityUOMEnumYard                      OrderLineItemQuantitiesQuantityUOMEnum = "Yard"
 )
 
+func (e OrderLineItemQuantitiesQuantityUOMEnum) ToPointer() *OrderLineItemQuantitiesQuantityUOMEnum {
+	return &e
+}
+
 func (e *OrderLineItemQuantitiesQuantityUOMEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Bale":
 		fallthrough
 	case "Box":
@@ -221,10 +237,10 @@ func (e *OrderLineItemQuantitiesQuantityUOMEnum) UnmarshalJSON(data []byte) erro
 	case "ThousandSquareInches":
 		fallthrough
 	case "Yard":
-		*e = OrderLineItemQuantitiesQuantityUOMEnum(s)
+		*e = OrderLineItemQuantitiesQuantityUOMEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderLineItemQuantitiesQuantityUOMEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderLineItemQuantitiesQuantityUOMEnum: %v", v)
 	}
 }
 

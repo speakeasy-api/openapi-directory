@@ -15,17 +15,21 @@ const (
 	POSTGetPredictiveScalingForecastActionEnumGetPredictiveScalingForecast POSTGetPredictiveScalingForecastActionEnum = "GetPredictiveScalingForecast"
 )
 
+func (e POSTGetPredictiveScalingForecastActionEnum) ToPointer() *POSTGetPredictiveScalingForecastActionEnum {
+	return &e
+}
+
 func (e *POSTGetPredictiveScalingForecastActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetPredictiveScalingForecast":
-		*e = POSTGetPredictiveScalingForecastActionEnum(s)
+		*e = POSTGetPredictiveScalingForecastActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetPredictiveScalingForecastActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetPredictiveScalingForecastActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetPredictiveScalingForecastVersionEnumTwoThousandAndEleven0101 POSTGetPredictiveScalingForecastVersionEnum = "2011-01-01"
 )
 
+func (e POSTGetPredictiveScalingForecastVersionEnum) ToPointer() *POSTGetPredictiveScalingForecastVersionEnum {
+	return &e
+}
+
 func (e *POSTGetPredictiveScalingForecastVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTGetPredictiveScalingForecastVersionEnum(s)
+		*e = POSTGetPredictiveScalingForecastVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetPredictiveScalingForecastVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetPredictiveScalingForecastVersionEnum: %v", v)
 	}
 }
 

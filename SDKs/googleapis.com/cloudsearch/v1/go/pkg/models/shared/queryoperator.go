@@ -22,12 +22,16 @@ const (
 	QueryOperatorTypeEnumHTML      QueryOperatorTypeEnum = "HTML"
 )
 
+func (e QueryOperatorTypeEnum) ToPointer() *QueryOperatorTypeEnum {
+	return &e
+}
+
 func (e *QueryOperatorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "INTEGER":
@@ -45,10 +49,10 @@ func (e *QueryOperatorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TEXT":
 		fallthrough
 	case "HTML":
-		*e = QueryOperatorTypeEnum(s)
+		*e = QueryOperatorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryOperatorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryOperatorTypeEnum: %v", v)
 	}
 }
 

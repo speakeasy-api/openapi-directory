@@ -17,12 +17,16 @@ const (
 	AuthorizationAttemptInfoFailureReasonEnumRateLimited              AuthorizationAttemptInfoFailureReasonEnum = "RATE_LIMITED"
 )
 
+func (e AuthorizationAttemptInfoFailureReasonEnum) ToPointer() *AuthorizationAttemptInfoFailureReasonEnum {
+	return &e
+}
+
 func (e *AuthorizationAttemptInfoFailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILURE_REASON_UNSPECIFIED":
 		fallthrough
 	case "CONFIG":
@@ -30,10 +34,10 @@ func (e *AuthorizationAttemptInfoFailureReasonEnum) UnmarshalJSON(data []byte) e
 	case "CAA":
 		fallthrough
 	case "RATE_LIMITED":
-		*e = AuthorizationAttemptInfoFailureReasonEnum(s)
+		*e = AuthorizationAttemptInfoFailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizationAttemptInfoFailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizationAttemptInfoFailureReasonEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	AuthorizationAttemptInfoStateEnumFailed           AuthorizationAttemptInfoStateEnum = "FAILED"
 )
 
+func (e AuthorizationAttemptInfoStateEnum) ToPointer() *AuthorizationAttemptInfoStateEnum {
+	return &e
+}
+
 func (e *AuthorizationAttemptInfoStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "AUTHORIZING":
@@ -60,10 +68,10 @@ func (e *AuthorizationAttemptInfoStateEnum) UnmarshalJSON(data []byte) error {
 	case "AUTHORIZED":
 		fallthrough
 	case "FAILED":
-		*e = AuthorizationAttemptInfoStateEnum(s)
+		*e = AuthorizationAttemptInfoStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizationAttemptInfoStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizationAttemptInfoStateEnum: %v", v)
 	}
 }
 

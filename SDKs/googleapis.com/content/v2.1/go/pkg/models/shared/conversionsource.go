@@ -25,12 +25,16 @@ const (
 	ConversionSourceStateEnumPending          ConversionSourceStateEnum = "PENDING"
 )
 
+func (e ConversionSourceStateEnum) ToPointer() *ConversionSourceStateEnum {
+	return &e
+}
+
 func (e *ConversionSourceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -38,10 +42,10 @@ func (e *ConversionSourceStateEnum) UnmarshalJSON(data []byte) error {
 	case "ARCHIVED":
 		fallthrough
 	case "PENDING":
-		*e = ConversionSourceStateEnum(s)
+		*e = ConversionSourceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConversionSourceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConversionSourceStateEnum: %v", v)
 	}
 }
 

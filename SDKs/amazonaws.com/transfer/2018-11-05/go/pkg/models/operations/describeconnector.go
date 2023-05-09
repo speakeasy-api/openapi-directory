@@ -16,17 +16,21 @@ const (
 	DescribeConnectorXAmzTargetEnumTransferServiceDescribeConnector DescribeConnectorXAmzTargetEnum = "TransferService.DescribeConnector"
 )
 
+func (e DescribeConnectorXAmzTargetEnum) ToPointer() *DescribeConnectorXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeConnectorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.DescribeConnector":
-		*e = DescribeConnectorXAmzTargetEnum(s)
+		*e = DescribeConnectorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeConnectorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeConnectorXAmzTargetEnum: %v", v)
 	}
 }
 

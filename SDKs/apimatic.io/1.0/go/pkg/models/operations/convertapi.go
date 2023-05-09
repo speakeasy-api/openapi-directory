@@ -25,12 +25,16 @@ const (
 	ConvertAPIFormatEnumApimatic     ConvertAPIFormatEnum = "apimatic"
 )
 
+func (e ConvertAPIFormatEnum) ToPointer() *ConvertAPIFormatEnum {
+	return &e
+}
+
 func (e *ConvertAPIFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "swagger10":
 		fallthrough
 	case "swagger20":
@@ -44,10 +48,10 @@ func (e *ConvertAPIFormatEnum) UnmarshalJSON(data []byte) error {
 	case "raml":
 		fallthrough
 	case "apimatic":
-		*e = ConvertAPIFormatEnum(s)
+		*e = ConvertAPIFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConvertAPIFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ConvertAPIFormatEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	ExecutionStatusEnumHandlingException ExecutionStatusEnum = "HANDLING_EXCEPTION"
 )
 
+func (e ExecutionStatusEnum) ToPointer() *ExecutionStatusEnum {
+	return &e
+}
+
 func (e *ExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "COMPLETED":
@@ -29,9 +33,9 @@ func (e *ExecutionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "EXCEPTION":
 		fallthrough
 	case "HANDLING_EXCEPTION":
-		*e = ExecutionStatusEnum(s)
+		*e = ExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionStatusEnum: %v", v)
 	}
 }

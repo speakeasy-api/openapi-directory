@@ -35,7 +35,10 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DownloadFileByID - Get the content of a File
 func (s *files) DownloadFileByID(ctx context.Context, request operations.DownloadFileByIDRequest, security operations.DownloadFileByIDSecurity) (*operations.DownloadFileByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}/content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}/content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -93,7 +96,10 @@ func (s *files) DownloadFileByID(ctx context.Context, request operations.Downloa
 // GetDetailsOfFileByID - Get the details of a File
 func (s *files) GetDetailsOfFileByID(ctx context.Context, request operations.GetDetailsOfFileByIDRequest, security operations.GetDetailsOfFileByIDSecurity) (*operations.GetDetailsOfFileByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -157,7 +163,10 @@ func (s *files) GetDetailsOfFileByID(ctx context.Context, request operations.Get
 // GetItemFiles - Get all the files inside an Item
 func (s *files) GetItemFiles(ctx context.Context, request operations.GetItemFilesRequest, security operations.GetItemFilesSecurity) (*operations.GetItemFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

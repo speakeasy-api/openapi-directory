@@ -32,10 +32,13 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 	}
 }
 
-// DisplayvideoUsersBulkEditAssignedUserRoles - Bulk edits user roles for a user. The operation will delete the assigned user roles provided in BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles.
+// DisplayvideoUsersBulkEditAssignedUserRoles - Bulk edits user roles for a user. The operation will delete the assigned user roles provided in BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
 func (s *users) DisplayvideoUsersBulkEditAssignedUserRoles(ctx context.Context, request operations.DisplayvideoUsersBulkEditAssignedUserRolesRequest, security operations.DisplayvideoUsersBulkEditAssignedUserRolesSecurity) (*operations.DisplayvideoUsersBulkEditAssignedUserRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}:bulkEditAssignedUserRoles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}:bulkEditAssignedUserRoles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditAssignedUserRolesRequestInput", "json")
 	if err != nil {
@@ -87,7 +90,7 @@ func (s *users) DisplayvideoUsersBulkEditAssignedUserRoles(ctx context.Context, 
 	return res, nil
 }
 
-// DisplayvideoUsersCreate - Creates a new user. Returns the newly created user if successful.
+// DisplayvideoUsersCreate - Creates a new user. Returns the newly created user if successful. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
 func (s *users) DisplayvideoUsersCreate(ctx context.Context, request operations.DisplayvideoUsersCreateRequest, security operations.DisplayvideoUsersCreateSecurity) (*operations.DisplayvideoUsersCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/users"
@@ -142,10 +145,13 @@ func (s *users) DisplayvideoUsersCreate(ctx context.Context, request operations.
 	return res, nil
 }
 
-// DisplayvideoUsersDelete - Deletes a user.
+// DisplayvideoUsersDelete - Deletes a user. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
 func (s *users) DisplayvideoUsersDelete(ctx context.Context, request operations.DisplayvideoUsersDeleteRequest, security operations.DisplayvideoUsersDeleteSecurity) (*operations.DisplayvideoUsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -190,10 +196,13 @@ func (s *users) DisplayvideoUsersDelete(ctx context.Context, request operations.
 	return res, nil
 }
 
-// DisplayvideoUsersGet - Gets a user.
+// DisplayvideoUsersGet - Gets a user. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
 func (s *users) DisplayvideoUsersGet(ctx context.Context, request operations.DisplayvideoUsersGetRequest, security operations.DisplayvideoUsersGetSecurity) (*operations.DisplayvideoUsersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -238,7 +247,7 @@ func (s *users) DisplayvideoUsersGet(ctx context.Context, request operations.Dis
 	return res, nil
 }
 
-// DisplayvideoUsersList - Lists users that are accessible to the current user. If two users have user roles on the same partner or advertiser, they can access each other.
+// DisplayvideoUsersList - Lists users that are accessible to the current user. If two users have user roles on the same partner or advertiser, they can access each other. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
 func (s *users) DisplayvideoUsersList(ctx context.Context, request operations.DisplayvideoUsersListRequest, security operations.DisplayvideoUsersListSecurity) (*operations.DisplayvideoUsersListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/users"
@@ -286,10 +295,13 @@ func (s *users) DisplayvideoUsersList(ctx context.Context, request operations.Di
 	return res, nil
 }
 
-// DisplayvideoUsersPatch - Updates an existing user. Returns the updated user if successful.
+// DisplayvideoUsersPatch - Updates an existing user. Returns the updated user if successful. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
 func (s *users) DisplayvideoUsersPatch(ctx context.Context, request operations.DisplayvideoUsersPatchRequest, security operations.DisplayvideoUsersPatchSecurity) (*operations.DisplayvideoUsersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {

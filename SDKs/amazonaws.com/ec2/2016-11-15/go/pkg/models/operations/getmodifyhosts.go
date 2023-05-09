@@ -15,17 +15,21 @@ const (
 	GETModifyHostsActionEnumModifyHosts GETModifyHostsActionEnum = "ModifyHosts"
 )
 
+func (e GETModifyHostsActionEnum) ToPointer() *GETModifyHostsActionEnum {
+	return &e
+}
+
 func (e *GETModifyHostsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyHosts":
-		*e = GETModifyHostsActionEnum(s)
+		*e = GETModifyHostsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyHostsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyHostsActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETModifyHostsAutoPlacementEnumOff GETModifyHostsAutoPlacementEnum = "off"
 )
 
+func (e GETModifyHostsAutoPlacementEnum) ToPointer() *GETModifyHostsAutoPlacementEnum {
+	return &e
+}
+
 func (e *GETModifyHostsAutoPlacementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on":
 		fallthrough
 	case "off":
-		*e = GETModifyHostsAutoPlacementEnum(s)
+		*e = GETModifyHostsAutoPlacementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyHostsAutoPlacementEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyHostsAutoPlacementEnum: %v", v)
 	}
 }
 
@@ -61,19 +69,23 @@ const (
 	GETModifyHostsHostMaintenanceEnumOff GETModifyHostsHostMaintenanceEnum = "off"
 )
 
+func (e GETModifyHostsHostMaintenanceEnum) ToPointer() *GETModifyHostsHostMaintenanceEnum {
+	return &e
+}
+
 func (e *GETModifyHostsHostMaintenanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on":
 		fallthrough
 	case "off":
-		*e = GETModifyHostsHostMaintenanceEnum(s)
+		*e = GETModifyHostsHostMaintenanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyHostsHostMaintenanceEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyHostsHostMaintenanceEnum: %v", v)
 	}
 }
 
@@ -85,19 +97,23 @@ const (
 	GETModifyHostsHostRecoveryEnumOff GETModifyHostsHostRecoveryEnum = "off"
 )
 
+func (e GETModifyHostsHostRecoveryEnum) ToPointer() *GETModifyHostsHostRecoveryEnum {
+	return &e
+}
+
 func (e *GETModifyHostsHostRecoveryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "on":
 		fallthrough
 	case "off":
-		*e = GETModifyHostsHostRecoveryEnum(s)
+		*e = GETModifyHostsHostRecoveryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyHostsHostRecoveryEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyHostsHostRecoveryEnum: %v", v)
 	}
 }
 
@@ -108,17 +124,21 @@ const (
 	GETModifyHostsVersionEnumTwoThousandAndSixteen1115 GETModifyHostsVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyHostsVersionEnum) ToPointer() *GETModifyHostsVersionEnum {
+	return &e
+}
+
 func (e *GETModifyHostsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyHostsVersionEnum(s)
+		*e = GETModifyHostsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyHostsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyHostsVersionEnum: %v", v)
 	}
 }
 

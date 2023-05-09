@@ -20,12 +20,16 @@ const (
 	LoadBalancerTLSCertificateStatusEnumUnknown            LoadBalancerTLSCertificateStatusEnum = "UNKNOWN"
 )
 
+func (e LoadBalancerTLSCertificateStatusEnum) ToPointer() *LoadBalancerTLSCertificateStatusEnum {
+	return &e
+}
+
 func (e *LoadBalancerTLSCertificateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_VALIDATION":
 		fallthrough
 	case "ISSUED":
@@ -41,9 +45,9 @@ func (e *LoadBalancerTLSCertificateStatusEnum) UnmarshalJSON(data []byte) error 
 	case "FAILED":
 		fallthrough
 	case "UNKNOWN":
-		*e = LoadBalancerTLSCertificateStatusEnum(s)
+		*e = LoadBalancerTLSCertificateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoadBalancerTLSCertificateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LoadBalancerTLSCertificateStatusEnum: %v", v)
 	}
 }

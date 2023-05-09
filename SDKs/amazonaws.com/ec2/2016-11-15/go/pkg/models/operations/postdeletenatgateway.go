@@ -15,17 +15,21 @@ const (
 	POSTDeleteNatGatewayActionEnumDeleteNatGateway POSTDeleteNatGatewayActionEnum = "DeleteNatGateway"
 )
 
+func (e POSTDeleteNatGatewayActionEnum) ToPointer() *POSTDeleteNatGatewayActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteNatGatewayActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteNatGateway":
-		*e = POSTDeleteNatGatewayActionEnum(s)
+		*e = POSTDeleteNatGatewayActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteNatGatewayActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteNatGatewayActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteNatGatewayVersionEnumTwoThousandAndSixteen1115 POSTDeleteNatGatewayVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteNatGatewayVersionEnum) ToPointer() *POSTDeleteNatGatewayVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteNatGatewayVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteNatGatewayVersionEnum(s)
+		*e = POSTDeleteNatGatewayVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteNatGatewayVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteNatGatewayVersionEnum: %v", v)
 	}
 }
 

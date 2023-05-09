@@ -17,12 +17,16 @@ const (
 	ProjectDTOv1StatusEnumClaim            ProjectDTOv1StatusEnum = "CLAIM"
 )
 
+func (e ProjectDTOv1StatusEnum) ToPointer() *ProjectDTOv1StatusEnum {
+	return &e
+}
+
 func (e *ProjectDTOv1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUESTED_PROJECT":
 		fallthrough
 	case "OPENED":
@@ -32,10 +36,10 @@ func (e *ProjectDTOv1StatusEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLED":
 		fallthrough
 	case "CLAIM":
-		*e = ProjectDTOv1StatusEnum(s)
+		*e = ProjectDTOv1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectDTOv1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectDTOv1StatusEnum: %v", v)
 	}
 }
 

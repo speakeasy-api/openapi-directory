@@ -2,100 +2,98 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.WebmastersSearchanalyticsQueryRequest{
+    ctx := context.Background()
+    res, err := s.Searchanalytics.WebmastersSearchanalyticsQuery(ctx, operations.WebmastersSearchanalyticsQueryRequest{
         SearchAnalyticsQueryRequest: &shared.SearchAnalyticsQueryRequest{
-            AggregationType: "corrupti",
-            DataState: "provident",
+            AggregationType: sdk.String("corrupti"),
+            DataState: sdk.String("provident"),
             DimensionFilterGroups: []shared.APIDimensionFilterGroup{
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
-                            Dimension: "unde",
-                            Expression: "nulla",
-                            Operator: "corrupti",
+                            Dimension: sdk.String("unde"),
+                            Expression: sdk.String("nulla"),
+                            Operator: sdk.String("corrupti"),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "illum",
-                            Expression: "vel",
-                            Operator: "error",
+                            Dimension: sdk.String("illum"),
+                            Expression: sdk.String("vel"),
+                            Operator: sdk.String("error"),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "deserunt",
-                            Expression: "suscipit",
-                            Operator: "iure",
+                            Dimension: sdk.String("deserunt"),
+                            Expression: sdk.String("suscipit"),
+                            Operator: sdk.String("iure"),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "magnam",
-                            Expression: "debitis",
-                            Operator: "ipsa",
+                            Dimension: sdk.String("magnam"),
+                            Expression: sdk.String("debitis"),
+                            Operator: sdk.String("ipsa"),
                         },
                     },
-                    GroupType: "delectus",
+                    GroupType: sdk.String("delectus"),
                 },
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
-                            Dimension: "suscipit",
-                            Expression: "molestiae",
-                            Operator: "minus",
+                            Dimension: sdk.String("suscipit"),
+                            Expression: sdk.String("molestiae"),
+                            Operator: sdk.String("minus"),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "placeat",
-                            Expression: "voluptatum",
-                            Operator: "iusto",
+                            Dimension: sdk.String("placeat"),
+                            Expression: sdk.String("voluptatum"),
+                            Operator: sdk.String("iusto"),
                         },
                     },
-                    GroupType: "excepturi",
+                    GroupType: sdk.String("excepturi"),
                 },
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
-                            Dimension: "recusandae",
-                            Expression: "temporibus",
-                            Operator: "ab",
+                            Dimension: sdk.String("recusandae"),
+                            Expression: sdk.String("temporibus"),
+                            Operator: sdk.String("ab"),
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "quis",
-                            Expression: "veritatis",
-                            Operator: "deserunt",
+                            Dimension: sdk.String("quis"),
+                            Expression: sdk.String("veritatis"),
+                            Operator: sdk.String("deserunt"),
                         },
                     },
-                    GroupType: "perferendis",
+                    GroupType: sdk.String("perferendis"),
                 },
             },
             Dimensions: []string{
                 "repellendus",
                 "sapiente",
             },
-            EndDate: "quo",
-            RowLimit: 140350,
-            SearchType: "at",
-            StartDate: "at",
-            StartRow: 978619,
+            EndDate: sdk.String("quo"),
+            RowLimit: sdk.Int(140350),
+            SearchType: sdk.String("at"),
+            StartDate: sdk.String("at"),
+            StartRow: sdk.Int(978619),
         },
-        Alt: "json",
-        Fields: "molestiae",
-        Key: "quod",
-        OauthToken: "quod",
-        PrettyPrint: false,
-        QuotaUser: "esse",
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("molestiae"),
+        Key: sdk.String("quod"),
+        OauthToken: sdk.String("quod"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("esse"),
         SiteURL: "totam",
-        UserIP: "porro",
-    }
-
-    ctx := context.Background()
-    res, err := s.Searchanalytics.WebmastersSearchanalyticsQuery(ctx, req, operations.WebmastersSearchanalyticsQuerySecurity{
+        UserIP: sdk.String("porro"),
+    }, operations.WebmastersSearchanalyticsQuerySecurity{
         Option1: &operations.WebmastersSearchanalyticsQuerySecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

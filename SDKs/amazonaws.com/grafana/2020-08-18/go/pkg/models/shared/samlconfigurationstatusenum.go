@@ -14,18 +14,22 @@ const (
 	SamlConfigurationStatusEnumNotConfigured SamlConfigurationStatusEnum = "NOT_CONFIGURED"
 )
 
+func (e SamlConfigurationStatusEnum) ToPointer() *SamlConfigurationStatusEnum {
+	return &e
+}
+
 func (e *SamlConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONFIGURED":
 		fallthrough
 	case "NOT_CONFIGURED":
-		*e = SamlConfigurationStatusEnum(s)
+		*e = SamlConfigurationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SamlConfigurationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SamlConfigurationStatusEnum: %v", v)
 	}
 }

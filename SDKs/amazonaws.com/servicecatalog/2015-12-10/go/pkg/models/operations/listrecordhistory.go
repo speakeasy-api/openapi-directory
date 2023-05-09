@@ -16,17 +16,21 @@ const (
 	ListRecordHistoryXAmzTargetEnumAws242ServiceCatalogServiceListRecordHistory ListRecordHistoryXAmzTargetEnum = "AWS242ServiceCatalogService.ListRecordHistory"
 )
 
+func (e ListRecordHistoryXAmzTargetEnum) ToPointer() *ListRecordHistoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListRecordHistoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.ListRecordHistory":
-		*e = ListRecordHistoryXAmzTargetEnum(s)
+		*e = ListRecordHistoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRecordHistoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRecordHistoryXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -18,21 +18,25 @@ const (
 	GetEventsTypeEnumContacts GetEventsTypeEnum = "contacts"
 )
 
+func (e GetEventsTypeEnum) ToPointer() *GetEventsTypeEnum {
+	return &e
+}
+
 func (e *GetEventsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "clicks":
 		fallthrough
 	case "contacts":
-		*e = GetEventsTypeEnum(s)
+		*e = GetEventsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEventsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEventsTypeEnum: %v", v)
 	}
 }
 

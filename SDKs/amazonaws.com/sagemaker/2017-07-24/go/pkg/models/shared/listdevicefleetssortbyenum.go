@@ -15,20 +15,24 @@ const (
 	ListDeviceFleetsSortByEnumLastModifiedTime ListDeviceFleetsSortByEnum = "LAST_MODIFIED_TIME"
 )
 
+func (e ListDeviceFleetsSortByEnum) ToPointer() *ListDeviceFleetsSortByEnum {
+	return &e
+}
+
 func (e *ListDeviceFleetsSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NAME":
 		fallthrough
 	case "CREATION_TIME":
 		fallthrough
 	case "LAST_MODIFIED_TIME":
-		*e = ListDeviceFleetsSortByEnum(s)
+		*e = ListDeviceFleetsSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDeviceFleetsSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDeviceFleetsSortByEnum: %v", v)
 	}
 }

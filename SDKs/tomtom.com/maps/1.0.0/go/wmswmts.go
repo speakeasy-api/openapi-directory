@@ -36,7 +36,10 @@ func newWmsWmts(defaultClient, securityClient HTTPClient, serverURL, language, s
 // that are available in the implementation.
 func (s *wmsWmts) GetCapabilities(ctx context.Context, request operations.GetCapabilitiesRequest) (*operations.GetCapabilitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/wms//", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/wms//", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *wmsWmts) GetCapabilities(ctx context.Context, request operations.GetCap
 // in the response to the GetCapabilities API call.
 func (s *wmsWmts) GetMap(ctx context.Context, request operations.GetMapRequest) (*operations.GetMapResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/wms/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/wms/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -135,7 +141,10 @@ func (s *wmsWmts) GetMap(ctx context.Context, request operations.GetMapRequest) 
 // for more information on WMTS.
 func (s *wmsWmts) GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXML(ctx context.Context, request operations.GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLRequest) (*operations.GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/wmts/{key}/{wmtsVersion}/WMTSCapabilities.xml", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/wmts/{key}/{wmtsVersion}/WMTSCapabilities.xml", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

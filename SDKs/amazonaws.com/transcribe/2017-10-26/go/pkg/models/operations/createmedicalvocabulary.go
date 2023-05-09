@@ -16,17 +16,21 @@ const (
 	CreateMedicalVocabularyXAmzTargetEnumTranscribeCreateMedicalVocabulary CreateMedicalVocabularyXAmzTargetEnum = "Transcribe.CreateMedicalVocabulary"
 )
 
+func (e CreateMedicalVocabularyXAmzTargetEnum) ToPointer() *CreateMedicalVocabularyXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateMedicalVocabularyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Transcribe.CreateMedicalVocabulary":
-		*e = CreateMedicalVocabularyXAmzTargetEnum(s)
+		*e = CreateMedicalVocabularyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateMedicalVocabularyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateMedicalVocabularyXAmzTargetEnum: %v", v)
 	}
 }
 

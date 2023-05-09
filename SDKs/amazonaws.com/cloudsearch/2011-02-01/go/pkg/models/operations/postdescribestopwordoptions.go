@@ -15,17 +15,21 @@ const (
 	POSTDescribeStopwordOptionsActionEnumDescribeStopwordOptions POSTDescribeStopwordOptionsActionEnum = "DescribeStopwordOptions"
 )
 
+func (e POSTDescribeStopwordOptionsActionEnum) ToPointer() *POSTDescribeStopwordOptionsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeStopwordOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeStopwordOptions":
-		*e = POSTDescribeStopwordOptionsActionEnum(s)
+		*e = POSTDescribeStopwordOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeStopwordOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeStopwordOptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeStopwordOptionsVersionEnumTwoThousandAndEleven0201 POSTDescribeStopwordOptionsVersionEnum = "2011-02-01"
 )
 
+func (e POSTDescribeStopwordOptionsVersionEnum) ToPointer() *POSTDescribeStopwordOptionsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeStopwordOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-02-01":
-		*e = POSTDescribeStopwordOptionsVersionEnum(s)
+		*e = POSTDescribeStopwordOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeStopwordOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeStopwordOptionsVersionEnum: %v", v)
 	}
 }
 

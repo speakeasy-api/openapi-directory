@@ -16,21 +16,25 @@ const (
 	SQLInstancesStartExternalSyncRequestSyncModeEnumOffline                     SQLInstancesStartExternalSyncRequestSyncModeEnum = "OFFLINE"
 )
 
+func (e SQLInstancesStartExternalSyncRequestSyncModeEnum) ToPointer() *SQLInstancesStartExternalSyncRequestSyncModeEnum {
+	return &e
+}
+
 func (e *SQLInstancesStartExternalSyncRequestSyncModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXTERNAL_SYNC_MODE_UNSPECIFIED":
 		fallthrough
 	case "ONLINE":
 		fallthrough
 	case "OFFLINE":
-		*e = SQLInstancesStartExternalSyncRequestSyncModeEnum(s)
+		*e = SQLInstancesStartExternalSyncRequestSyncModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SQLInstancesStartExternalSyncRequestSyncModeEnum: %s", s)
+		return fmt.Errorf("invalid value for SQLInstancesStartExternalSyncRequestSyncModeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	PublisherReviewStatusStatusEnumReviewStatusPending     PublisherReviewStatusStatusEnum = "REVIEW_STATUS_PENDING"
 )
 
+func (e PublisherReviewStatusStatusEnum) ToPointer() *PublisherReviewStatusStatusEnum {
+	return &e
+}
+
 func (e *PublisherReviewStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVIEW_STATUS_UNSPECIFIED":
 		fallthrough
 	case "REVIEW_STATUS_APPROVED":
@@ -30,10 +34,10 @@ func (e *PublisherReviewStatusStatusEnum) UnmarshalJSON(data []byte) error {
 	case "REVIEW_STATUS_REJECTED":
 		fallthrough
 	case "REVIEW_STATUS_PENDING":
-		*e = PublisherReviewStatusStatusEnum(s)
+		*e = PublisherReviewStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublisherReviewStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PublisherReviewStatusStatusEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateImagePermissionsXAmzTargetEnumPhotonAdminProxyServiceUpdateImagePermissions UpdateImagePermissionsXAmzTargetEnum = "PhotonAdminProxyService.UpdateImagePermissions"
 )
 
+func (e UpdateImagePermissionsXAmzTargetEnum) ToPointer() *UpdateImagePermissionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateImagePermissionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.UpdateImagePermissions":
-		*e = UpdateImagePermissionsXAmzTargetEnum(s)
+		*e = UpdateImagePermissionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateImagePermissionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateImagePermissionsXAmzTargetEnum: %v", v)
 	}
 }
 

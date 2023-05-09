@@ -16,17 +16,21 @@ const (
 	CreateWhatIfAnalysisXAmzTargetEnumAmazonForecastCreateWhatIfAnalysis CreateWhatIfAnalysisXAmzTargetEnum = "AmazonForecast.CreateWhatIfAnalysis"
 )
 
+func (e CreateWhatIfAnalysisXAmzTargetEnum) ToPointer() *CreateWhatIfAnalysisXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateWhatIfAnalysisXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.CreateWhatIfAnalysis":
-		*e = CreateWhatIfAnalysisXAmzTargetEnum(s)
+		*e = CreateWhatIfAnalysisXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWhatIfAnalysisXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWhatIfAnalysisXAmzTargetEnum: %v", v)
 	}
 }
 

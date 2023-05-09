@@ -16,17 +16,21 @@ const (
 	GetDatabasesXAmzTargetEnumAwsGlueGetDatabases GetDatabasesXAmzTargetEnum = "AWSGlue.GetDatabases"
 )
 
+func (e GetDatabasesXAmzTargetEnum) ToPointer() *GetDatabasesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDatabasesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetDatabases":
-		*e = GetDatabasesXAmzTargetEnum(s)
+		*e = GetDatabasesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDatabasesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDatabasesXAmzTargetEnum: %v", v)
 	}
 }
 

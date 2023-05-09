@@ -14,18 +14,22 @@ const (
 	ParquetWriterVersionEnumV2 ParquetWriterVersionEnum = "V2"
 )
 
+func (e ParquetWriterVersionEnum) ToPointer() *ParquetWriterVersionEnum {
+	return &e
+}
+
 func (e *ParquetWriterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "V1":
 		fallthrough
 	case "V2":
-		*e = ParquetWriterVersionEnum(s)
+		*e = ParquetWriterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParquetWriterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for ParquetWriterVersionEnum: %v", v)
 	}
 }

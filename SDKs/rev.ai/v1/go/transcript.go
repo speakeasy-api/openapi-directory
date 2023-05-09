@@ -38,7 +38,10 @@ func newTranscript(defaultClient, securityClient HTTPClient, serverURL, language
 // Note: For streaming jobs, transient failure of our storage during a live session may prevent the final hypothesis elements from saving properly, resulting in an incomplete transcript. This is rare, but not impossible. To guarantee 100% completeness, we recommend capturing all final hypothesis when you receive them on the client.
 func (s *transcript) GetTranscriptByID(ctx context.Context, request operations.GetTranscriptByIDRequest) (*operations.GetTranscriptByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{id}/transcript", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{id}/transcript", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

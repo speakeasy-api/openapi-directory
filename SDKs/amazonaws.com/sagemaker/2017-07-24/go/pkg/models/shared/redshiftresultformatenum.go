@@ -15,18 +15,22 @@ const (
 	RedshiftResultFormatEnumCsv     RedshiftResultFormatEnum = "CSV"
 )
 
+func (e RedshiftResultFormatEnum) ToPointer() *RedshiftResultFormatEnum {
+	return &e
+}
+
 func (e *RedshiftResultFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARQUET":
 		fallthrough
 	case "CSV":
-		*e = RedshiftResultFormatEnum(s)
+		*e = RedshiftResultFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RedshiftResultFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RedshiftResultFormatEnum: %v", v)
 	}
 }

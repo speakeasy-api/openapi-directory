@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type ListLoyaltyProgramsSecurity struct {
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type ListLoyaltyProgramsResponse struct {
 	ContentType string
 	// Success

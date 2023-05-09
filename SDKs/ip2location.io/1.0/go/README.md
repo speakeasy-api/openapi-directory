@@ -13,26 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ip2location.io/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRequest{
-        Format: "xml",
+    ctx := context.Background()
+    res, err := s.Get(ctx, operations.GetRequest{
+        Format: operations.GetFormatEnumXML.ToPointer(),
         IP: "8.8.8.8",
         Key: "provident",
-        Lang: "pt",
-    }
-
-    ctx := context.Background()
-    res, err := s.Get(ctx, req)
+        Lang: operations.GetLangEnumPt.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,9 +44,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `Get` - Geolocate user's location information via IP address
+* [Get](docs/sdk/README.md#get) - Geolocate user's location information via IP address
 <!-- End SDK Available Operations -->
 
 ### Maturity

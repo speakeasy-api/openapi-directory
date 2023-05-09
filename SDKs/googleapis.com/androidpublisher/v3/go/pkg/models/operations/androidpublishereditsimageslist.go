@@ -29,12 +29,16 @@ const (
 	AndroidpublisherEditsImagesListImageTypeEnumTvBanner                AndroidpublisherEditsImagesListImageTypeEnum = "tvBanner"
 )
 
+func (e AndroidpublisherEditsImagesListImageTypeEnum) ToPointer() *AndroidpublisherEditsImagesListImageTypeEnum {
+	return &e
+}
+
 func (e *AndroidpublisherEditsImagesListImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appImageTypeUnspecified":
 		fallthrough
 	case "phoneScreenshots":
@@ -52,10 +56,10 @@ func (e *AndroidpublisherEditsImagesListImageTypeEnum) UnmarshalJSON(data []byte
 	case "featureGraphic":
 		fallthrough
 	case "tvBanner":
-		*e = AndroidpublisherEditsImagesListImageTypeEnum(s)
+		*e = AndroidpublisherEditsImagesListImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidpublisherEditsImagesListImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidpublisherEditsImagesListImageTypeEnum: %v", v)
 	}
 }
 

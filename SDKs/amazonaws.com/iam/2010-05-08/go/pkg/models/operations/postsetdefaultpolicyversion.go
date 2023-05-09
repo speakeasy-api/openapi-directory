@@ -15,17 +15,21 @@ const (
 	POSTSetDefaultPolicyVersionActionEnumSetDefaultPolicyVersion POSTSetDefaultPolicyVersionActionEnum = "SetDefaultPolicyVersion"
 )
 
+func (e POSTSetDefaultPolicyVersionActionEnum) ToPointer() *POSTSetDefaultPolicyVersionActionEnum {
+	return &e
+}
+
 func (e *POSTSetDefaultPolicyVersionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetDefaultPolicyVersion":
-		*e = POSTSetDefaultPolicyVersionActionEnum(s)
+		*e = POSTSetDefaultPolicyVersionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetDefaultPolicyVersionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetDefaultPolicyVersionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSetDefaultPolicyVersionVersionEnumTwoThousandAndTen0508 POSTSetDefaultPolicyVersionVersionEnum = "2010-05-08"
 )
 
+func (e POSTSetDefaultPolicyVersionVersionEnum) ToPointer() *POSTSetDefaultPolicyVersionVersionEnum {
+	return &e
+}
+
 func (e *POSTSetDefaultPolicyVersionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTSetDefaultPolicyVersionVersionEnum(s)
+		*e = POSTSetDefaultPolicyVersionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetDefaultPolicyVersionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetDefaultPolicyVersionVersionEnum: %v", v)
 	}
 }
 

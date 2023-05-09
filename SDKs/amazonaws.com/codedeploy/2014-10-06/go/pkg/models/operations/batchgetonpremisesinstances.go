@@ -16,17 +16,21 @@ const (
 	BatchGetOnPremisesInstancesXAmzTargetEnumCodeDeploy20141006BatchGetOnPremisesInstances BatchGetOnPremisesInstancesXAmzTargetEnum = "CodeDeploy_20141006.BatchGetOnPremisesInstances"
 )
 
+func (e BatchGetOnPremisesInstancesXAmzTargetEnum) ToPointer() *BatchGetOnPremisesInstancesXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchGetOnPremisesInstancesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.BatchGetOnPremisesInstances":
-		*e = BatchGetOnPremisesInstancesXAmzTargetEnum(s)
+		*e = BatchGetOnPremisesInstancesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetOnPremisesInstancesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetOnPremisesInstancesXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	CompromisedCredentialsEventActionTypeEnumNoAction CompromisedCredentialsEventActionTypeEnum = "NO_ACTION"
 )
 
+func (e CompromisedCredentialsEventActionTypeEnum) ToPointer() *CompromisedCredentialsEventActionTypeEnum {
+	return &e
+}
+
 func (e *CompromisedCredentialsEventActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BLOCK":
 		fallthrough
 	case "NO_ACTION":
-		*e = CompromisedCredentialsEventActionTypeEnum(s)
+		*e = CompromisedCredentialsEventActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompromisedCredentialsEventActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompromisedCredentialsEventActionTypeEnum: %v", v)
 	}
 }

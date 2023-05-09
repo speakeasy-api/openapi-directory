@@ -17,12 +17,16 @@ const (
 	AppliedLicenseTypeEnumByol            AppliedLicenseTypeEnum = "BYOL"
 )
 
+func (e AppliedLicenseTypeEnum) ToPointer() *AppliedLicenseTypeEnum {
+	return &e
+}
+
 func (e *AppliedLicenseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -30,10 +34,10 @@ func (e *AppliedLicenseTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PAYG":
 		fallthrough
 	case "BYOL":
-		*e = AppliedLicenseTypeEnum(s)
+		*e = AppliedLicenseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppliedLicenseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppliedLicenseTypeEnum: %v", v)
 	}
 }
 

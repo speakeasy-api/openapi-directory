@@ -34,7 +34,10 @@ func newSites(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Represents the set of geocoded and standardized sites and intersections whose address best matches a given query address.
 func (s *sites) GetAddressesOutputFormat(ctx context.Context, request operations.GetAddressesOutputFormatRequest) (*operations.GetAddressesOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/addresses.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/addresses.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *sites) GetAddressesOutputFormat(ctx context.Context, request operations
 // Represents sites near a given point in the order of closest to farthest
 func (s *sites) GetSitesNearOutputFormat(ctx context.Context, request operations.GetSitesNearOutputFormatRequest) (*operations.GetSitesNearOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/near.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sites/near.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -114,7 +120,10 @@ func (s *sites) GetSitesNearOutputFormat(ctx context.Context, request operations
 // Represents the site nearest a given point
 func (s *sites) GetSitesNearestOutputFormat(ctx context.Context, request operations.GetSitesNearestOutputFormatRequest) (*operations.GetSitesNearestOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/nearest.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sites/nearest.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -154,7 +163,10 @@ func (s *sites) GetSitesNearestOutputFormat(ctx context.Context, request operati
 // Represents sites within a given area
 func (s *sites) GetSitesWithinOutputFormat(ctx context.Context, request operations.GetSitesWithinOutputFormatRequest) (*operations.GetSitesWithinOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/within.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sites/within.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -194,7 +206,10 @@ func (s *sites) GetSitesWithinOutputFormat(ctx context.Context, request operatio
 // Represents an individual site
 func (s *sites) GetSitesSiteIDOutputFormat(ctx context.Context, request operations.GetSitesSiteIDOutputFormatRequest) (*operations.GetSitesSiteIDOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteID}.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sites/{siteID}.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -234,7 +249,10 @@ func (s *sites) GetSitesSiteIDOutputFormat(ctx context.Context, request operatio
 // Represents all subsites of a given site
 func (s *sites) GetSitesSiteIDSubsitesOutputFormat(ctx context.Context, request operations.GetSitesSiteIDSubsitesOutputFormatRequest) (*operations.GetSitesSiteIDSubsitesOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteID}/subsites.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sites/{siteID}/subsites.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,20 +15,24 @@ const (
 	IsModifiableEnumConditional IsModifiableEnum = "CONDITIONAL"
 )
 
+func (e IsModifiableEnum) ToPointer() *IsModifiableEnum {
+	return &e
+}
+
 func (e *IsModifiableEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRUE":
 		fallthrough
 	case "FALSE":
 		fallthrough
 	case "CONDITIONAL":
-		*e = IsModifiableEnum(s)
+		*e = IsModifiableEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IsModifiableEnum: %s", s)
+		return fmt.Errorf("invalid value for IsModifiableEnum: %v", v)
 	}
 }

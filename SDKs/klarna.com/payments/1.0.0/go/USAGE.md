@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CancelAuthorizationRequest{
-        AuthorizationToken: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Orders.CancelAuthorization(ctx, req)
+    res, err := s.Orders.CancelAuthorization(ctx, operations.CancelAuthorizationRequest{
+        AuthorizationToken: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

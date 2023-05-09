@@ -14,19 +14,23 @@ const (
 	RegisterDomainRequestContactNoticesEnumPublicContactDataAcknowledgement RegisterDomainRequestContactNoticesEnum = "PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT"
 )
 
+func (e RegisterDomainRequestContactNoticesEnum) ToPointer() *RegisterDomainRequestContactNoticesEnum {
+	return &e
+}
+
 func (e *RegisterDomainRequestContactNoticesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTACT_NOTICE_UNSPECIFIED":
 		fallthrough
 	case "PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT":
-		*e = RegisterDomainRequestContactNoticesEnum(s)
+		*e = RegisterDomainRequestContactNoticesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterDomainRequestContactNoticesEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterDomainRequestContactNoticesEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	RegisterDomainRequestDomainNoticesEnumHstsPreloaded           RegisterDomainRequestDomainNoticesEnum = "HSTS_PRELOADED"
 )
 
+func (e RegisterDomainRequestDomainNoticesEnum) ToPointer() *RegisterDomainRequestDomainNoticesEnum {
+	return &e
+}
+
 func (e *RegisterDomainRequestDomainNoticesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOMAIN_NOTICE_UNSPECIFIED":
 		fallthrough
 	case "HSTS_PRELOADED":
-		*e = RegisterDomainRequestDomainNoticesEnum(s)
+		*e = RegisterDomainRequestDomainNoticesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterDomainRequestDomainNoticesEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterDomainRequestDomainNoticesEnum: %v", v)
 	}
 }
 

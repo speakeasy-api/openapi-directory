@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,19 +18,20 @@ func main() {
         }),
     )
 
-    req := operations.CreateConfigurationSetRequest{
+    ctx := context.Background()
+    res, err := s.CreateConfigurationSet(ctx, operations.CreateConfigurationSetRequest{
         RequestBody: operations.CreateConfigurationSetRequestBody{
             ConfigurationSetName: "corrupti",
             DeliveryOptions: &operations.CreateConfigurationSetRequestBodyDeliveryOptions{
-                SendingPoolName: "provident",
-                TLSPolicy: "OPTIONAL",
+                SendingPoolName: sdk.String("provident"),
+                TLSPolicy: shared.TLSPolicyEnumOptional.ToPointer(),
             },
             ReputationOptions: &operations.CreateConfigurationSetRequestBodyReputationOptions{
-                LastFreshStart: "2021-03-11T23:22:42.658Z",
-                ReputationMetricsEnabled: false,
+                LastFreshStart: types.MustTimeFromString("2021-03-11T23:22:42.658Z"),
+                ReputationMetricsEnabled: sdk.Bool(false),
             },
             SendingOptions: &operations.CreateConfigurationSetRequestBodySendingOptions{
-                SendingEnabled: false,
+                SendingEnabled: sdk.Bool(false),
             },
             Tags: []shared.Tag{
                 shared.Tag{
@@ -50,20 +52,17 @@ func main() {
                 },
             },
             TrackingOptions: &operations.CreateConfigurationSetRequestBodyTrackingOptions{
-                CustomRedirectDomain: "debitis",
+                CustomRedirectDomain: sdk.String("debitis"),
             },
         },
-        XAmzAlgorithm: "ipsa",
-        XAmzContentSha256: "delectus",
-        XAmzCredential: "tempora",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "molestiae",
-        XAmzSignature: "minus",
-        XAmzSignedHeaders: "placeat",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateConfigurationSet(ctx, req)
+        XAmzAlgorithm: sdk.String("ipsa"),
+        XAmzContentSha256: sdk.String("delectus"),
+        XAmzCredential: sdk.String("tempora"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("molestiae"),
+        XAmzSignature: sdk.String("minus"),
+        XAmzSignedHeaders: sdk.String("placeat"),
+    })
     if err != nil {
         log.Fatal(err)
     }

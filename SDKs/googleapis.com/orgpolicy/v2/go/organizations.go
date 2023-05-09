@@ -34,7 +34,10 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // OrgpolicyOrganizationsCustomConstraintsCreate - Creates a custom constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the organization does not exist. Returns a `google.rpc.Status` with `google.rpc.Code.ALREADY_EXISTS` if the constraint already exists on the given organization.
 func (s *organizations) OrgpolicyOrganizationsCustomConstraintsCreate(ctx context.Context, request operations.OrgpolicyOrganizationsCustomConstraintsCreateRequest, security operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity) (*operations.OrgpolicyOrganizationsCustomConstraintsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/customConstraints", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/customConstraints", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudOrgpolicyV2CustomConstraintInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *organizations) OrgpolicyOrganizationsCustomConstraintsCreate(ctx contex
 // OrgpolicyOrganizationsCustomConstraintsList - Retrieves all of the custom constraints that exist on a particular organization resource.
 func (s *organizations) OrgpolicyOrganizationsCustomConstraintsList(ctx context.Context, request operations.OrgpolicyOrganizationsCustomConstraintsListRequest, security operations.OrgpolicyOrganizationsCustomConstraintsListSecurity) (*operations.OrgpolicyOrganizationsCustomConstraintsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/customConstraints", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/customConstraints", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -18,14 +18,19 @@ const (
 	SnowballTypeEnumSnc1Hdd  SnowballTypeEnum = "SNC1_HDD"
 	SnowballTypeEnumSnc1Ssd  SnowballTypeEnum = "SNC1_SSD"
 	SnowballTypeEnumV35C     SnowballTypeEnum = "V3_5C"
+	SnowballTypeEnumV35S     SnowballTypeEnum = "V3_5S"
 )
 
+func (e SnowballTypeEnum) ToPointer() *SnowballTypeEnum {
+	return &e
+}
+
 func (e *SnowballTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD":
 		fallthrough
 	case "EDGE":
@@ -41,9 +46,11 @@ func (e *SnowballTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SNC1_SSD":
 		fallthrough
 	case "V3_5C":
-		*e = SnowballTypeEnum(s)
+		fallthrough
+	case "V3_5S":
+		*e = SnowballTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SnowballTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SnowballTypeEnum: %v", v)
 	}
 }

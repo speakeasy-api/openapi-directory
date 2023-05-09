@@ -87,7 +87,10 @@ func (s *apiV2) CreatePodcast(ctx context.Context, request operations.CreatePodc
 // CreatePodcastEpisode - Create podcast episode
 func (s *apiV2) CreatePodcastEpisode(ctx context.Context, request operations.CreatePodcastEpisodeRequest) (*operations.CreatePodcastEpisodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}/episodes/create", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}/episodes/create", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *apiV2) CreatePodcastEpisode(ctx context.Context, request operations.Cre
 // DeletePodcast - Delete podcast
 func (s *apiV2) DeletePodcast(ctx context.Context, request operations.DeletePodcastRequest) (*operations.DeletePodcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -173,7 +179,10 @@ func (s *apiV2) DeletePodcast(ctx context.Context, request operations.DeletePodc
 // DeletePodcast1 - Delete podcast episode
 func (s *apiV2) DeletePodcast1(ctx context.Context, request operations.DeletePodcast1Request) (*operations.DeletePodcast1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}/episodes/{episodeKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}/episodes/{episodeKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -256,7 +265,10 @@ func (s *apiV2) GetPartnerAggregatorStations(ctx context.Context, request operat
 // GetPodcast - Get podcast
 func (s *apiV2) GetPodcast(ctx context.Context, request operations.GetPodcastRequest) (*operations.GetPodcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -388,7 +400,10 @@ func (s *apiV2) GetPodcastCountries(ctx context.Context) (*operations.GetPodcast
 // GetPodcastEpisode - Get podcast episode
 func (s *apiV2) GetPodcastEpisode(ctx context.Context, request operations.GetPodcastEpisodeRequest) (*operations.GetPodcastEpisodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}/episodes/{episodeKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}/episodes/{episodeKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -432,7 +447,10 @@ func (s *apiV2) GetPodcastEpisode(ctx context.Context, request operations.GetPod
 // GetPodcastEpisodes - Get podcast episodes
 func (s *apiV2) GetPodcastEpisodes(ctx context.Context, request operations.GetPodcastEpisodesRequest) (*operations.GetPodcastEpisodesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}/episodes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}/episodes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -764,7 +782,10 @@ func (s *apiV2) SearchStations(ctx context.Context, request shared.StationSearch
 // UpdatePodcast - Update podcast
 func (s *apiV2) UpdatePodcast(ctx context.Context, request operations.UpdatePodcastRequest) (*operations.UpdatePodcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -815,7 +836,10 @@ func (s *apiV2) UpdatePodcast(ctx context.Context, request operations.UpdatePodc
 // UpdatePodcastEpisode - Update podcast episode
 func (s *apiV2) UpdatePodcastEpisode(ctx context.Context, request operations.UpdatePodcastEpisodeRequest) (*operations.UpdatePodcastEpisodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}/episodes/{episodeKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/podcasts/{podcastKey}/episodes/{episodeKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

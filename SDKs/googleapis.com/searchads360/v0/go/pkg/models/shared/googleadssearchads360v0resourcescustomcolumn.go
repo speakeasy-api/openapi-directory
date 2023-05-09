@@ -19,12 +19,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCustomColumnValueTypeEnumBoolean     GoogleAdsSearchads360V0ResourcesCustomColumnValueTypeEnum = "BOOLEAN"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCustomColumnValueTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCustomColumnValueTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCustomColumnValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -36,10 +40,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCustomColumnValueTypeEnum) UnmarshalJSO
 	case "DOUBLE":
 		fallthrough
 	case "BOOLEAN":
-		*e = GoogleAdsSearchads360V0ResourcesCustomColumnValueTypeEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCustomColumnValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCustomColumnValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCustomColumnValueTypeEnum: %v", v)
 	}
 }
 

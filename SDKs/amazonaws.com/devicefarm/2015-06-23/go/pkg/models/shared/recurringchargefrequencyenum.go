@@ -13,16 +13,20 @@ const (
 	RecurringChargeFrequencyEnumMonthly RecurringChargeFrequencyEnum = "MONTHLY"
 )
 
+func (e RecurringChargeFrequencyEnum) ToPointer() *RecurringChargeFrequencyEnum {
+	return &e
+}
+
 func (e *RecurringChargeFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MONTHLY":
-		*e = RecurringChargeFrequencyEnum(s)
+		*e = RecurringChargeFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecurringChargeFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for RecurringChargeFrequencyEnum: %v", v)
 	}
 }

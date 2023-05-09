@@ -15,20 +15,24 @@ const (
 	RecommendationReportStatusEnumSuccess    RecommendationReportStatusEnum = "SUCCESS"
 )
 
+func (e RecommendationReportStatusEnum) ToPointer() *RecommendationReportStatusEnum {
+	return &e
+}
+
 func (e *RecommendationReportStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILED":
 		fallthrough
 	case "IN_PROGRESS":
 		fallthrough
 	case "SUCCESS":
-		*e = RecommendationReportStatusEnum(s)
+		*e = RecommendationReportStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecommendationReportStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RecommendationReportStatusEnum: %v", v)
 	}
 }

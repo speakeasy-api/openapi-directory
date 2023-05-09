@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // PubliccaProjectsLocationsExternalAccountKeysCreate - Creates a new ExternalAccountKey bound to the project.
 func (s *projects) PubliccaProjectsLocationsExternalAccountKeysCreate(ctx context.Context, request operations.PubliccaProjectsLocationsExternalAccountKeysCreateRequest, security operations.PubliccaProjectsLocationsExternalAccountKeysCreateSecurity) (*operations.PubliccaProjectsLocationsExternalAccountKeysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/externalAccountKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/externalAccountKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

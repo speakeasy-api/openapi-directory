@@ -18,12 +18,16 @@ const (
 	WorkspaceStatusCodeEnumCreationFailed WorkspaceStatusCodeEnum = "CREATION_FAILED"
 )
 
+func (e WorkspaceStatusCodeEnum) ToPointer() *WorkspaceStatusCodeEnum {
+	return &e
+}
+
 func (e *WorkspaceStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -33,9 +37,9 @@ func (e *WorkspaceStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "CREATION_FAILED":
-		*e = WorkspaceStatusCodeEnum(s)
+		*e = WorkspaceStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkspaceStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkspaceStatusCodeEnum: %v", v)
 	}
 }

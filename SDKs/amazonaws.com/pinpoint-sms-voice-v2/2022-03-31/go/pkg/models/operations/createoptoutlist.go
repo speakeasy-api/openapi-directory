@@ -16,17 +16,21 @@ const (
 	CreateOptOutListXAmzTargetEnumPinpointSmsVoiceV2CreateOptOutList CreateOptOutListXAmzTargetEnum = "PinpointSMSVoiceV2.CreateOptOutList"
 )
 
+func (e CreateOptOutListXAmzTargetEnum) ToPointer() *CreateOptOutListXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateOptOutListXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.CreateOptOutList":
-		*e = CreateOptOutListXAmzTargetEnum(s)
+		*e = CreateOptOutListXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateOptOutListXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateOptOutListXAmzTargetEnum: %v", v)
 	}
 }
 

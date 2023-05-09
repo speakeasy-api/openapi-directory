@@ -15,19 +15,23 @@ const (
 	DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnumCoip             DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum = "coip"
 )
 
+func (e DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum) ToPointer() *DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum {
+	return &e
+}
+
 func (e *DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "direct-vpc-routing":
 		fallthrough
 	case "coip":
-		*e = DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum(s)
+		*e = DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableModeEnum: %v", v)
 	}
 }
 

@@ -30,12 +30,16 @@ const (
 	FailureInfoErrorCodeEnumDataLoss           FailureInfoErrorCodeEnum = "DATA_LOSS"
 )
 
+func (e FailureInfoErrorCodeEnum) ToPointer() *FailureInfoErrorCodeEnum {
+	return &e
+}
+
 func (e *FailureInfoErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "CANCELLED":
@@ -69,10 +73,10 @@ func (e *FailureInfoErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "UNAVAILABLE":
 		fallthrough
 	case "DATA_LOSS":
-		*e = FailureInfoErrorCodeEnum(s)
+		*e = FailureInfoErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailureInfoErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for FailureInfoErrorCodeEnum: %v", v)
 	}
 }
 

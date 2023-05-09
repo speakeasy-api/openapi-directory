@@ -15,17 +15,21 @@ const (
 	POSTRegisterPublisherActionEnumRegisterPublisher POSTRegisterPublisherActionEnum = "RegisterPublisher"
 )
 
+func (e POSTRegisterPublisherActionEnum) ToPointer() *POSTRegisterPublisherActionEnum {
+	return &e
+}
+
 func (e *POSTRegisterPublisherActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RegisterPublisher":
-		*e = POSTRegisterPublisherActionEnum(s)
+		*e = POSTRegisterPublisherActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRegisterPublisherActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRegisterPublisherActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRegisterPublisherVersionEnumTwoThousandAndTen0515 POSTRegisterPublisherVersionEnum = "2010-05-15"
 )
 
+func (e POSTRegisterPublisherVersionEnum) ToPointer() *POSTRegisterPublisherVersionEnum {
+	return &e
+}
+
 func (e *POSTRegisterPublisherVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTRegisterPublisherVersionEnum(s)
+		*e = POSTRegisterPublisherVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRegisterPublisherVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRegisterPublisherVersionEnum: %v", v)
 	}
 }
 

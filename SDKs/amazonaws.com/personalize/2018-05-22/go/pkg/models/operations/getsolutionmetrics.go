@@ -16,17 +16,21 @@ const (
 	GetSolutionMetricsXAmzTargetEnumAmazonPersonalizeGetSolutionMetrics GetSolutionMetricsXAmzTargetEnum = "AmazonPersonalize.GetSolutionMetrics"
 )
 
+func (e GetSolutionMetricsXAmzTargetEnum) ToPointer() *GetSolutionMetricsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSolutionMetricsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.GetSolutionMetrics":
-		*e = GetSolutionMetricsXAmzTargetEnum(s)
+		*e = GetSolutionMetricsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSolutionMetricsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSolutionMetricsXAmzTargetEnum: %v", v)
 	}
 }
 

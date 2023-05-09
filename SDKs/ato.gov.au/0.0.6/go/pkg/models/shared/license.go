@@ -16,19 +16,23 @@ const (
 	LicenseLicenseTypeEnumLicense2B                          LicenseLicenseTypeEnum = "License 2B"
 )
 
+func (e LicenseLicenseTypeEnum) ToPointer() *LicenseLicenseTypeEnum {
+	return &e
+}
+
 func (e *LicenseLicenseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Australian Financial Services License":
 		fallthrough
 	case "License 2B":
-		*e = LicenseLicenseTypeEnum(s)
+		*e = LicenseLicenseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseLicenseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseLicenseTypeEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	LicenseLifecycleStateEnumSuspended       LicenseLifecycleStateEnum = "Suspended"
 )
 
+func (e LicenseLifecycleStateEnum) ToPointer() *LicenseLifecycleStateEnum {
+	return &e
+}
+
 func (e *LicenseLifecycleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Approved":
 		fallthrough
 	case "Expired":
@@ -58,10 +66,10 @@ func (e *LicenseLifecycleStateEnum) UnmarshalJSON(data []byte) error {
 	case "Pending Approval":
 		fallthrough
 	case "Suspended":
-		*e = LicenseLifecycleStateEnum(s)
+		*e = LicenseLifecycleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseLifecycleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseLifecycleStateEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	GetIpamAddressHistoryResultHistoryRecordsResourceComplianceStatusEnumIgnored      GetIpamAddressHistoryResultHistoryRecordsResourceComplianceStatusEnum = "ignored"
 )
 
+func (e GetIpamAddressHistoryResultHistoryRecordsResourceComplianceStatusEnum) ToPointer() *GetIpamAddressHistoryResultHistoryRecordsResourceComplianceStatusEnum {
+	return &e
+}
+
 func (e *GetIpamAddressHistoryResultHistoryRecordsResourceComplianceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "compliant":
 		fallthrough
 	case "noncompliant":
@@ -31,10 +35,10 @@ func (e *GetIpamAddressHistoryResultHistoryRecordsResourceComplianceStatusEnum) 
 	case "unmanaged":
 		fallthrough
 	case "ignored":
-		*e = GetIpamAddressHistoryResultHistoryRecordsResourceComplianceStatusEnum(s)
+		*e = GetIpamAddressHistoryResultHistoryRecordsResourceComplianceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIpamAddressHistoryResultHistoryRecordsResourceComplianceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIpamAddressHistoryResultHistoryRecordsResourceComplianceStatusEnum: %v", v)
 	}
 }
 
@@ -47,21 +51,25 @@ const (
 	GetIpamAddressHistoryResultHistoryRecordsResourceOverlapStatusEnumIgnored        GetIpamAddressHistoryResultHistoryRecordsResourceOverlapStatusEnum = "ignored"
 )
 
+func (e GetIpamAddressHistoryResultHistoryRecordsResourceOverlapStatusEnum) ToPointer() *GetIpamAddressHistoryResultHistoryRecordsResourceOverlapStatusEnum {
+	return &e
+}
+
 func (e *GetIpamAddressHistoryResultHistoryRecordsResourceOverlapStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "overlapping":
 		fallthrough
 	case "nonoverlapping":
 		fallthrough
 	case "ignored":
-		*e = GetIpamAddressHistoryResultHistoryRecordsResourceOverlapStatusEnum(s)
+		*e = GetIpamAddressHistoryResultHistoryRecordsResourceOverlapStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIpamAddressHistoryResultHistoryRecordsResourceOverlapStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIpamAddressHistoryResultHistoryRecordsResourceOverlapStatusEnum: %v", v)
 	}
 }
 
@@ -76,12 +84,16 @@ const (
 	GetIpamAddressHistoryResultHistoryRecordsResourceTypeEnumInstance         GetIpamAddressHistoryResultHistoryRecordsResourceTypeEnum = "instance"
 )
 
+func (e GetIpamAddressHistoryResultHistoryRecordsResourceTypeEnum) ToPointer() *GetIpamAddressHistoryResultHistoryRecordsResourceTypeEnum {
+	return &e
+}
+
 func (e *GetIpamAddressHistoryResultHistoryRecordsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "eip":
 		fallthrough
 	case "vpc":
@@ -91,10 +103,10 @@ func (e *GetIpamAddressHistoryResultHistoryRecordsResourceTypeEnum) UnmarshalJSO
 	case "network-interface":
 		fallthrough
 	case "instance":
-		*e = GetIpamAddressHistoryResultHistoryRecordsResourceTypeEnum(s)
+		*e = GetIpamAddressHistoryResultHistoryRecordsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIpamAddressHistoryResultHistoryRecordsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIpamAddressHistoryResultHistoryRecordsResourceTypeEnum: %v", v)
 	}
 }
 

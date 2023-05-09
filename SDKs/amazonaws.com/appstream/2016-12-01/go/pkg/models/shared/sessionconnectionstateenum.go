@@ -14,18 +14,22 @@ const (
 	SessionConnectionStateEnumNotConnected SessionConnectionStateEnum = "NOT_CONNECTED"
 )
 
+func (e SessionConnectionStateEnum) ToPointer() *SessionConnectionStateEnum {
+	return &e
+}
+
 func (e *SessionConnectionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTED":
 		fallthrough
 	case "NOT_CONNECTED":
-		*e = SessionConnectionStateEnum(s)
+		*e = SessionConnectionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SessionConnectionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SessionConnectionStateEnum: %v", v)
 	}
 }

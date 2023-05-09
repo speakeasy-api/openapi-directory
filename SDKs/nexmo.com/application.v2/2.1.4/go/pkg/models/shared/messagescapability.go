@@ -13,17 +13,21 @@ const (
 	MessagesCapabilityWebhooksInboundURLHTTPMethodEnumPost MessagesCapabilityWebhooksInboundURLHTTPMethodEnum = "POST"
 )
 
+func (e MessagesCapabilityWebhooksInboundURLHTTPMethodEnum) ToPointer() *MessagesCapabilityWebhooksInboundURLHTTPMethodEnum {
+	return &e
+}
+
 func (e *MessagesCapabilityWebhooksInboundURLHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POST":
-		*e = MessagesCapabilityWebhooksInboundURLHTTPMethodEnum(s)
+		*e = MessagesCapabilityWebhooksInboundURLHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessagesCapabilityWebhooksInboundURLHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for MessagesCapabilityWebhooksInboundURLHTTPMethodEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	MessagesCapabilityWebhooksStatusURLHTTPMethodEnumPost MessagesCapabilityWebhooksStatusURLHTTPMethodEnum = "POST"
 )
 
+func (e MessagesCapabilityWebhooksStatusURLHTTPMethodEnum) ToPointer() *MessagesCapabilityWebhooksStatusURLHTTPMethodEnum {
+	return &e
+}
+
 func (e *MessagesCapabilityWebhooksStatusURLHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POST":
-		*e = MessagesCapabilityWebhooksStatusURLHTTPMethodEnum(s)
+		*e = MessagesCapabilityWebhooksStatusURLHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessagesCapabilityWebhooksStatusURLHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for MessagesCapabilityWebhooksStatusURLHTTPMethodEnum: %v", v)
 	}
 }
 

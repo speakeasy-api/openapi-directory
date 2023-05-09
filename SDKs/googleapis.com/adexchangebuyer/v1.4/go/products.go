@@ -35,7 +35,10 @@ func newProducts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AdexchangebuyerProductsGet - Gets the requested product by id.
 func (s *products) AdexchangebuyerProductsGet(ctx context.Context, request operations.AdexchangebuyerProductsGetRequest, security operations.AdexchangebuyerProductsGetSecurity) (*operations.AdexchangebuyerProductsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

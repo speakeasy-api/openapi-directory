@@ -16,21 +16,25 @@ const (
 	LogsPolicyDestinationEnumPath                   LogsPolicyDestinationEnum = "PATH"
 )
 
+func (e LogsPolicyDestinationEnum) ToPointer() *LogsPolicyDestinationEnum {
+	return &e
+}
+
 func (e *LogsPolicyDestinationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DESTINATION_UNSPECIFIED":
 		fallthrough
 	case "CLOUD_LOGGING":
 		fallthrough
 	case "PATH":
-		*e = LogsPolicyDestinationEnum(s)
+		*e = LogsPolicyDestinationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LogsPolicyDestinationEnum: %s", s)
+		return fmt.Errorf("invalid value for LogsPolicyDestinationEnum: %v", v)
 	}
 }
 

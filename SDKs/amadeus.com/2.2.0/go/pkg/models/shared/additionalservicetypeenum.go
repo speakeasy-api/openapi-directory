@@ -17,12 +17,16 @@ const (
 	AdditionalServiceTypeEnumOtherServices AdditionalServiceTypeEnum = "OTHER_SERVICES"
 )
 
+func (e AdditionalServiceTypeEnum) ToPointer() *AdditionalServiceTypeEnum {
+	return &e
+}
+
 func (e *AdditionalServiceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHECKED_BAGS":
 		fallthrough
 	case "MEALS":
@@ -30,9 +34,9 @@ func (e *AdditionalServiceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SEATS":
 		fallthrough
 	case "OTHER_SERVICES":
-		*e = AdditionalServiceTypeEnum(s)
+		*e = AdditionalServiceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdditionalServiceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdditionalServiceTypeEnum: %v", v)
 	}
 }

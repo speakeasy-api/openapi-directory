@@ -5,7 +5,7 @@ package shared
 type CreateVolumeFromBackupRequest struct {
 	// The ID of the source backup. Specifies the backup that you are copying.
 	BackupID string `json:"BackupId"`
-	// (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+	// (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
 	ClientRequestToken *string                         `json:"ClientRequestToken,omitempty"`
 	Name               string                          `json:"Name"`
 	OntapConfiguration *CreateOntapVolumeConfiguration `json:"OntapConfiguration,omitempty"`

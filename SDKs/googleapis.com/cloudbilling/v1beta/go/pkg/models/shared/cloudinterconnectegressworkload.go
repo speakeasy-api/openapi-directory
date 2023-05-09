@@ -19,12 +19,16 @@ const (
 	CloudInterconnectEgressWorkloadInterconnectConnectionLocationEnumInterconnectConnectionLocationAustralia    CloudInterconnectEgressWorkloadInterconnectConnectionLocationEnum = "INTERCONNECT_CONNECTION_LOCATION_AUSTRALIA"
 )
 
+func (e CloudInterconnectEgressWorkloadInterconnectConnectionLocationEnum) ToPointer() *CloudInterconnectEgressWorkloadInterconnectConnectionLocationEnum {
+	return &e
+}
+
 func (e *CloudInterconnectEgressWorkloadInterconnectConnectionLocationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERCONNECT_CONNECTION_LOCATION_UNSPECIFIED":
 		fallthrough
 	case "INTERCONNECT_CONNECTION_LOCATION_ASIA":
@@ -36,10 +40,10 @@ func (e *CloudInterconnectEgressWorkloadInterconnectConnectionLocationEnum) Unma
 	case "INTERCONNECT_CONNECTION_LOCATION_SOUTH_AMERICA":
 		fallthrough
 	case "INTERCONNECT_CONNECTION_LOCATION_AUSTRALIA":
-		*e = CloudInterconnectEgressWorkloadInterconnectConnectionLocationEnum(s)
+		*e = CloudInterconnectEgressWorkloadInterconnectConnectionLocationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudInterconnectEgressWorkloadInterconnectConnectionLocationEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudInterconnectEgressWorkloadInterconnectConnectionLocationEnum: %v", v)
 	}
 }
 

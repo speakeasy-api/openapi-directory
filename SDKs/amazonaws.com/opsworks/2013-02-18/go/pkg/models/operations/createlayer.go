@@ -16,17 +16,21 @@ const (
 	CreateLayerXAmzTargetEnumOpsWorks20130218CreateLayer CreateLayerXAmzTargetEnum = "OpsWorks_20130218.CreateLayer"
 )
 
+func (e CreateLayerXAmzTargetEnum) ToPointer() *CreateLayerXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateLayerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.CreateLayer":
-		*e = CreateLayerXAmzTargetEnum(s)
+		*e = CreateLayerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLayerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLayerXAmzTargetEnum: %v", v)
 	}
 }
 

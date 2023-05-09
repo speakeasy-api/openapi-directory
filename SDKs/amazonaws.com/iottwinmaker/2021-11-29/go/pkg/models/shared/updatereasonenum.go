@@ -17,12 +17,16 @@ const (
 	UpdateReasonEnumOverwritten       UpdateReasonEnum = "OVERWRITTEN"
 )
 
+func (e UpdateReasonEnum) ToPointer() *UpdateReasonEnum {
+	return &e
+}
+
 func (e *UpdateReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "PRICING_TIER_UPDATE":
@@ -32,9 +36,9 @@ func (e *UpdateReasonEnum) UnmarshalJSON(data []byte) error {
 	case "PRICING_MODE_UPDATE":
 		fallthrough
 	case "OVERWRITTEN":
-		*e = UpdateReasonEnum(s)
+		*e = UpdateReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateReasonEnum: %v", v)
 	}
 }

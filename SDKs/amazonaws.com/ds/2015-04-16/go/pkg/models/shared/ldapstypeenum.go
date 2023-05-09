@@ -13,16 +13,20 @@ const (
 	LDAPSTypeEnumClient LDAPSTypeEnum = "Client"
 )
 
+func (e LDAPSTypeEnum) ToPointer() *LDAPSTypeEnum {
+	return &e
+}
+
 func (e *LDAPSTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Client":
-		*e = LDAPSTypeEnum(s)
+		*e = LDAPSTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LDAPSTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LDAPSTypeEnum: %v", v)
 	}
 }

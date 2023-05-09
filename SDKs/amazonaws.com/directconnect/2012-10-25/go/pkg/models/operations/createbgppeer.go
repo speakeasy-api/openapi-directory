@@ -16,17 +16,21 @@ const (
 	CreateBGPPeerXAmzTargetEnumOvertureServiceCreateBgpPeer CreateBGPPeerXAmzTargetEnum = "OvertureService.CreateBGPPeer"
 )
 
+func (e CreateBGPPeerXAmzTargetEnum) ToPointer() *CreateBGPPeerXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateBGPPeerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.CreateBGPPeer":
-		*e = CreateBGPPeerXAmzTargetEnum(s)
+		*e = CreateBGPPeerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBGPPeerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBGPPeerXAmzTargetEnum: %v", v)
 	}
 }
 

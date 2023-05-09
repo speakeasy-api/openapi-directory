@@ -18,12 +18,16 @@ const (
 	UnavailabilityReasonCodeEnumObjectUnavailable           UnavailabilityReasonCodeEnum = "OBJECT_UNAVAILABLE"
 )
 
+func (e UnavailabilityReasonCodeEnum) ToPointer() *UnavailabilityReasonCodeEnum {
+	return &e
+}
+
 func (e *UnavailabilityReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OBJECT_EXCEEDS_SIZE_QUOTA":
 		fallthrough
 	case "UNSUPPORTED_OBJECT_TYPE":
@@ -33,9 +37,9 @@ func (e *UnavailabilityReasonCodeEnum) UnmarshalJSON(data []byte) error {
 	case "INVALID_CLASSIFICATION_RESULT":
 		fallthrough
 	case "OBJECT_UNAVAILABLE":
-		*e = UnavailabilityReasonCodeEnum(s)
+		*e = UnavailabilityReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UnavailabilityReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for UnavailabilityReasonCodeEnum: %v", v)
 	}
 }

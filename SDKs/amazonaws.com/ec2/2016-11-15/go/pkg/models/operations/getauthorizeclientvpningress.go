@@ -15,17 +15,21 @@ const (
 	GETAuthorizeClientVpnIngressActionEnumAuthorizeClientVpnIngress GETAuthorizeClientVpnIngressActionEnum = "AuthorizeClientVpnIngress"
 )
 
+func (e GETAuthorizeClientVpnIngressActionEnum) ToPointer() *GETAuthorizeClientVpnIngressActionEnum {
+	return &e
+}
+
 func (e *GETAuthorizeClientVpnIngressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AuthorizeClientVpnIngress":
-		*e = GETAuthorizeClientVpnIngressActionEnum(s)
+		*e = GETAuthorizeClientVpnIngressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAuthorizeClientVpnIngressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAuthorizeClientVpnIngressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAuthorizeClientVpnIngressVersionEnumTwoThousandAndSixteen1115 GETAuthorizeClientVpnIngressVersionEnum = "2016-11-15"
 )
 
+func (e GETAuthorizeClientVpnIngressVersionEnum) ToPointer() *GETAuthorizeClientVpnIngressVersionEnum {
+	return &e
+}
+
 func (e *GETAuthorizeClientVpnIngressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETAuthorizeClientVpnIngressVersionEnum(s)
+		*e = GETAuthorizeClientVpnIngressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAuthorizeClientVpnIngressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAuthorizeClientVpnIngressVersionEnum: %v", v)
 	}
 }
 

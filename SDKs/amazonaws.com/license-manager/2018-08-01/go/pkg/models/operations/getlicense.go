@@ -16,17 +16,21 @@ const (
 	GetLicenseXAmzTargetEnumAwsLicenseManagerGetLicense GetLicenseXAmzTargetEnum = "AWSLicenseManager.GetLicense"
 )
 
+func (e GetLicenseXAmzTargetEnum) ToPointer() *GetLicenseXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetLicenseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLicenseManager.GetLicense":
-		*e = GetLicenseXAmzTargetEnum(s)
+		*e = GetLicenseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLicenseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLicenseXAmzTargetEnum: %v", v)
 	}
 }
 

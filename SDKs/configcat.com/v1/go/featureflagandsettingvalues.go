@@ -53,7 +53,10 @@ func newFeatureFlagAndSettingValues(defaultClient, securityClient HTTPClient, se
 // evaluation order. You can read more about these rules [here](https://configcat.com/docs/advanced/targeting/).
 func (s *featureFlagAndSettingValues) GetSettingValue(ctx context.Context, request operations.GetSettingValueRequest) (*operations.GetSettingValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -122,7 +125,10 @@ func (s *featureFlagAndSettingValues) GetSettingValue(ctx context.Context, reque
 // evaluation order. You can read more about these rules [here](https://configcat.com/docs/advanced/targeting/).
 func (s *featureFlagAndSettingValues) GetSettingValues(ctx context.Context, request operations.GetSettingValuesRequest) (*operations.GetSettingValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/environments/{environmentId}/values", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/environments/{environmentId}/values", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -143,6 +149,150 @@ func (s *featureFlagAndSettingValues) GetSettingValues(ctx context.Context, requ
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.GetSettingValuesResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/hal+json`):
+			var out *shared.ConfigSettingValuesModel
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ConfigSettingValuesModel = out
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ConfigSettingValuesModel
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ConfigSettingValuesModel = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 429:
+	}
+
+	return res, nil
+}
+
+// PostSettingValues - Post values
+// This endpoint replaces the values of a specified Config's Feature Flags or Settings identified by the `configId` parameter
+// in a specified Environment identified by the `environmentId` parameter.
+//
+// Only the `value`, `rolloutRules` and `percentageRules` attributes are modifiable by this endpoint.
+//
+// **Important:** As this endpoint is doing a complete replace, it's important to set every other attribute that you don't
+// want to change in its original state. Not listing one means that it will reset.
+//
+// For example: We have the following resource.
+// ```
+//
+//	{
+//	    "settingValues": [
+//			{
+//				"rolloutPercentageItems": [
+//					{
+//						"percentage": 30,
+//						"value": true
+//					},
+//					{
+//						"percentage": 70,
+//						"value": false
+//					}
+//				],
+//				"rolloutRules": [],
+//				"value": false,
+//				"settingId": 1
+//			}
+//		]
+//	}
+//
+// ```
+// If we send a replace request body as below:
+// ```
+// {
+//
+//		"settingValues": [
+//			{
+//				"value": true,
+//				"settingId": 1
+//			}
+//		]
+//	}
+//
+// ```
+// Then besides that the default value is set to `true`, all the Percentage Rules are deleted.
+// So we get a response like this:
+// ```
+//
+//	{
+//		"settingValues": [
+//			{
+//				"rolloutPercentageItems": [],
+//				"rolloutRules": [],
+//				"value": true,
+//				"setting":
+//				{
+//					"settingId": 1
+//				}
+//			}
+//		]
+//	}
+//
+// ```
+//
+// The `rolloutRules` property describes two types of rules:
+//
+// - **Targeting rules**: When you want to add or update a targenting rule, the `comparator`, `comparisonAttribute`, and `comparisonValue` members are required.
+// - **Segment rules**: When you want to add add or update a segment rule, the `segmentId` which identifies the desired segment and the `segmentComparator` members are required.
+func (s *featureFlagAndSettingValues) PostSettingValues(ctx context.Context, request operations.PostSettingValuesRequest) (*operations.PostSettingValuesResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/environments/{environmentId}/values", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSettingValuesWithIDModel", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostSettingValuesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -230,7 +380,10 @@ func (s *featureFlagAndSettingValues) GetSettingValues(ctx context.Context, requ
 // - **Segment rules**: When you want to add add or update a segment rule, the `segmentId` which identifies the desired segment and the `segmentComparator` members are required.
 func (s *featureFlagAndSettingValues) ReplaceSettingValue(ctx context.Context, request operations.ReplaceSettingValueRequest) (*operations.ReplaceSettingValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSettingValueModel", "json")
 	if err != nil {
@@ -367,7 +520,10 @@ func (s *featureFlagAndSettingValues) ReplaceSettingValue(ctx context.Context, r
 // - **Segment rules**: When you want to add add or update a segment rule, the `segmentId` which identifies the desired segment and the `segmentComparator` members are required.
 func (s *featureFlagAndSettingValues) UpdateSettingValue(ctx context.Context, request operations.UpdateSettingValueRequest) (*operations.UpdateSettingValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JSONPatchInput", "json")
 	if err != nil {

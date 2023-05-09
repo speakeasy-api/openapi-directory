@@ -17,12 +17,16 @@ const (
 	ProductSetProductSetBehaviorEnumAllApproved ProductSetProductSetBehaviorEnum = "allApproved"
 )
 
+func (e ProductSetProductSetBehaviorEnum) ToPointer() *ProductSetProductSetBehaviorEnum {
+	return &e
+}
+
 func (e *ProductSetProductSetBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "whitelist":
@@ -30,10 +34,10 @@ func (e *ProductSetProductSetBehaviorEnum) UnmarshalJSON(data []byte) error {
 	case "includeAll":
 		fallthrough
 	case "allApproved":
-		*e = ProductSetProductSetBehaviorEnum(s)
+		*e = ProductSetProductSetBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductSetProductSetBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductSetProductSetBehaviorEnum: %v", v)
 	}
 }
 

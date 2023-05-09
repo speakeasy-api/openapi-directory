@@ -8,25 +8,29 @@ import (
 )
 
 // SafeModeParamEnum - Whether or not to exclude podcasts with explicit language. 1 is yes, and 0 is no.
-type SafeModeParamEnum string
+type SafeModeParamEnum int64
 
 const (
-	SafeModeParamEnumZero SafeModeParamEnum = "0"
-	SafeModeParamEnumOne  SafeModeParamEnum = "1"
+	SafeModeParamEnumZero SafeModeParamEnum = 0
+	SafeModeParamEnumOne  SafeModeParamEnum = 1
 )
 
+func (e SafeModeParamEnum) ToPointer() *SafeModeParamEnum {
+	return &e
+}
+
 func (e *SafeModeParamEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = SafeModeParamEnum(s)
+	case 1:
+		*e = SafeModeParamEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SafeModeParamEnum: %s", s)
+		return fmt.Errorf("invalid value for SafeModeParamEnum: %v", v)
 	}
 }

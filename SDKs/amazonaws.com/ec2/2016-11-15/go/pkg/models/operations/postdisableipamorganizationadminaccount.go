@@ -15,17 +15,21 @@ const (
 	POSTDisableIpamOrganizationAdminAccountActionEnumDisableIpamOrganizationAdminAccount POSTDisableIpamOrganizationAdminAccountActionEnum = "DisableIpamOrganizationAdminAccount"
 )
 
+func (e POSTDisableIpamOrganizationAdminAccountActionEnum) ToPointer() *POSTDisableIpamOrganizationAdminAccountActionEnum {
+	return &e
+}
+
 func (e *POSTDisableIpamOrganizationAdminAccountActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableIpamOrganizationAdminAccount":
-		*e = POSTDisableIpamOrganizationAdminAccountActionEnum(s)
+		*e = POSTDisableIpamOrganizationAdminAccountActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableIpamOrganizationAdminAccountActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableIpamOrganizationAdminAccountActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisableIpamOrganizationAdminAccountVersionEnumTwoThousandAndSixteen1115 POSTDisableIpamOrganizationAdminAccountVersionEnum = "2016-11-15"
 )
 
+func (e POSTDisableIpamOrganizationAdminAccountVersionEnum) ToPointer() *POSTDisableIpamOrganizationAdminAccountVersionEnum {
+	return &e
+}
+
 func (e *POSTDisableIpamOrganizationAdminAccountVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDisableIpamOrganizationAdminAccountVersionEnum(s)
+		*e = POSTDisableIpamOrganizationAdminAccountVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableIpamOrganizationAdminAccountVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableIpamOrganizationAdminAccountVersionEnum: %v", v)
 	}
 }
 

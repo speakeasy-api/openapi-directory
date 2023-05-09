@@ -16,17 +16,21 @@ const (
 	DescribeApplicationsXAmzTargetEnumPhotonAdminProxyServiceDescribeApplications DescribeApplicationsXAmzTargetEnum = "PhotonAdminProxyService.DescribeApplications"
 )
 
+func (e DescribeApplicationsXAmzTargetEnum) ToPointer() *DescribeApplicationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeApplicationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.DescribeApplications":
-		*e = DescribeApplicationsXAmzTargetEnum(s)
+		*e = DescribeApplicationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeApplicationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeApplicationsXAmzTargetEnum: %v", v)
 	}
 }
 

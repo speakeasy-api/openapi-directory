@@ -2,49 +2,47 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.BigqueryconnectionProjectsLocationsConnectionsCreate(ctx, operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ConnectionInput: &shared.ConnectionInput{
             CloudSQL: &shared.CloudSQLPropertiesInput{
                 Credential: &shared.CloudSQLCredential{
-                    Password: "provident",
-                    Username: "Micheal_Sporer",
+                    Password: sdk.String("provident"),
+                    Username: sdk.String("Micheal_Sporer"),
                 },
-                Database: "corrupti",
-                InstanceID: "illum",
-                Type: "POSTGRES",
+                Database: sdk.String("corrupti"),
+                InstanceID: sdk.String("illum"),
+                Type: shared.CloudSQLPropertiesTypeEnumPostgres.ToPointer(),
             },
-            Description: "error",
-            FriendlyName: "deserunt",
-            Name: "suscipit",
+            Description: sdk.String("error"),
+            FriendlyName: sdk.String("deserunt"),
+            Name: sdk.String("Willie Gulgowski DVM"),
         },
-        AccessToken: "iure",
-        Alt: "json",
-        Callback: "debitis",
-        ConnectionID: "ipsa",
-        Fields: "delectus",
-        Key: "tempora",
-        OauthToken: "suscipit",
-        Parent: "molestiae",
-        PrettyPrint: false,
-        QuotaUser: "minus",
-        UploadType: "placeat",
-        UploadProtocol: "voluptatum",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.BigqueryconnectionProjectsLocationsConnectionsCreate(ctx, req, operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity{
+        AccessToken: sdk.String("tempora"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("molestiae"),
+        ConnectionID: sdk.String("minus"),
+        Fields: sdk.String("placeat"),
+        Key: sdk.String("voluptatum"),
+        OauthToken: sdk.String("iusto"),
+        Parent: "excepturi",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("nisi"),
+        UploadType: sdk.String("recusandae"),
+        UploadProtocol: sdk.String("temporibus"),
+    }, operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity{
         Option1: &operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

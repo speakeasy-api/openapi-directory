@@ -17,19 +17,23 @@ const (
 	CreateNotificationRuleRequestBodyDetailTypeEnumFull  CreateNotificationRuleRequestBodyDetailTypeEnum = "FULL"
 )
 
+func (e CreateNotificationRuleRequestBodyDetailTypeEnum) ToPointer() *CreateNotificationRuleRequestBodyDetailTypeEnum {
+	return &e
+}
+
 func (e *CreateNotificationRuleRequestBodyDetailTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = CreateNotificationRuleRequestBodyDetailTypeEnum(s)
+		*e = CreateNotificationRuleRequestBodyDetailTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNotificationRuleRequestBodyDetailTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNotificationRuleRequestBodyDetailTypeEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	CreateNotificationRuleRequestBodyStatusEnumDisabled CreateNotificationRuleRequestBodyStatusEnum = "DISABLED"
 )
 
+func (e CreateNotificationRuleRequestBodyStatusEnum) ToPointer() *CreateNotificationRuleRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *CreateNotificationRuleRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = CreateNotificationRuleRequestBodyStatusEnum(s)
+		*e = CreateNotificationRuleRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNotificationRuleRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNotificationRuleRequestBodyStatusEnum: %v", v)
 	}
 }
 

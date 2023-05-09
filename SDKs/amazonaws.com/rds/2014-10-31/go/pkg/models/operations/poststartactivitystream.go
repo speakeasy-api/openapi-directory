@@ -15,17 +15,21 @@ const (
 	POSTStartActivityStreamActionEnumStartActivityStream POSTStartActivityStreamActionEnum = "StartActivityStream"
 )
 
+func (e POSTStartActivityStreamActionEnum) ToPointer() *POSTStartActivityStreamActionEnum {
+	return &e
+}
+
 func (e *POSTStartActivityStreamActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartActivityStream":
-		*e = POSTStartActivityStreamActionEnum(s)
+		*e = POSTStartActivityStreamActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartActivityStreamActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartActivityStreamActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTStartActivityStreamVersionEnumTwoThousandAndFourteen1031 POSTStartActivityStreamVersionEnum = "2014-10-31"
 )
 
+func (e POSTStartActivityStreamVersionEnum) ToPointer() *POSTStartActivityStreamVersionEnum {
+	return &e
+}
+
 func (e *POSTStartActivityStreamVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTStartActivityStreamVersionEnum(s)
+		*e = POSTStartActivityStreamVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartActivityStreamVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartActivityStreamVersionEnum: %v", v)
 	}
 }
 

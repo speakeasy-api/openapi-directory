@@ -16,6 +16,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -72,6 +73,7 @@ pkg/models/shared/sharedorganization.go
 pkg/models/shared/articleflaretag.go
 pkg/models/shared/videoarticle.go
 pkg/models/shared/comment.go
+pkg/models/shared/displayad.go
 pkg/models/shared/followedtag.go
 pkg/models/shared/user.go
 pkg/models/shared/page.go
@@ -80,4 +82,19 @@ pkg/models/shared/sharedpodcast.go
 pkg/models/shared/tag.go
 pkg/models/shared/userinviteparam.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/articles/README.md
+docs/comments/README.md
+docs/displayads/README.md
+docs/followedtags/README.md
+docs/followers/README.md
+docs/organizations/README.md
+docs/pages/README.md
+docs/podcastepisodes/README.md
+docs/profileimages/README.md
+docs/reactions/README.md
+docs/readinglist/README.md
+docs/tags/README.md
+docs/users/README.md
+docs/videos/README.md
 USAGE.md

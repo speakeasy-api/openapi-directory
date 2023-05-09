@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ApikeysProjectsLocationsKeysCreate - Creates a new API key. NOTE: Key is a global resource; hence the only supported value for location is `global`.
 func (s *projects) ApikeysProjectsLocationsKeysCreate(ctx context.Context, request operations.ApikeysProjectsLocationsKeysCreateRequest, security operations.ApikeysProjectsLocationsKeysCreateSecurity) (*operations.ApikeysProjectsLocationsKeysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "V2KeyInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) ApikeysProjectsLocationsKeysCreate(ctx context.Context, reque
 // ApikeysProjectsLocationsKeysDelete - Deletes an API key. Deleted key can be retrieved within 30 days of deletion. Afterward, key will be purged from the project. NOTE: Key is a global resource; hence the only supported value for location is `global`.
 func (s *projects) ApikeysProjectsLocationsKeysDelete(ctx context.Context, request operations.ApikeysProjectsLocationsKeysDeleteRequest, security operations.ApikeysProjectsLocationsKeysDeleteSecurity) (*operations.ApikeysProjectsLocationsKeysDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) ApikeysProjectsLocationsKeysDelete(ctx context.Context, reque
 // ApikeysProjectsLocationsKeysGet - Gets the metadata for an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
 func (s *projects) ApikeysProjectsLocationsKeysGet(ctx context.Context, request operations.ApikeysProjectsLocationsKeysGetRequest, security operations.ApikeysProjectsLocationsKeysGetSecurity) (*operations.ApikeysProjectsLocationsKeysGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) ApikeysProjectsLocationsKeysGet(ctx context.Context, request 
 // ApikeysProjectsLocationsKeysGetKeyString - Get the key string for an API key. NOTE: Key is a global resource; hence the only supported value for location is `global`.
 func (s *projects) ApikeysProjectsLocationsKeysGetKeyString(ctx context.Context, request operations.ApikeysProjectsLocationsKeysGetKeyStringRequest, security operations.ApikeysProjectsLocationsKeysGetKeyStringSecurity) (*operations.ApikeysProjectsLocationsKeysGetKeyStringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/keyString", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}/keyString", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *projects) ApikeysProjectsLocationsKeysGetKeyString(ctx context.Context,
 // ApikeysProjectsLocationsKeysList - Lists the API keys owned by a project. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
 func (s *projects) ApikeysProjectsLocationsKeysList(ctx context.Context, request operations.ApikeysProjectsLocationsKeysListRequest, security operations.ApikeysProjectsLocationsKeysListSecurity) (*operations.ApikeysProjectsLocationsKeysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +296,10 @@ func (s *projects) ApikeysProjectsLocationsKeysList(ctx context.Context, request
 // ApikeysProjectsLocationsKeysPatch - Patches the modifiable fields of an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
 func (s *projects) ApikeysProjectsLocationsKeysPatch(ctx context.Context, request operations.ApikeysProjectsLocationsKeysPatchRequest, security operations.ApikeysProjectsLocationsKeysPatchSecurity) (*operations.ApikeysProjectsLocationsKeysPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "V2KeyInput", "json")
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *projects) ApikeysProjectsLocationsKeysPatch(ctx context.Context, reques
 // ApikeysProjectsLocationsKeysUndelete - Undeletes an API key which was deleted within 30 days. NOTE: Key is a global resource; hence the only supported value for location is `global`.
 func (s *projects) ApikeysProjectsLocationsKeysUndelete(ctx context.Context, request operations.ApikeysProjectsLocationsKeysUndeleteRequest, security operations.ApikeysProjectsLocationsKeysUndeleteSecurity) (*operations.ApikeysProjectsLocationsKeysUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:undelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:undelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

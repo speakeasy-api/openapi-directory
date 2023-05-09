@@ -2,6 +2,42 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum - Output only. This subscription type enum value states if the metrics should be sent for billing or not.
+type GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum string
+
+const (
+	GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnumSubscriptionTypeUnspecified GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum = "SUBSCRIPTION_TYPE_UNSPECIFIED"
+	GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnumPayG                        GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum = "PAY_G"
+	GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnumPaid                        GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum = "PAID"
+)
+
+func (e GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum) ToPointer() *GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum {
+	return &e
+}
+
+func (e *GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "SUBSCRIPTION_TYPE_UNSPECIFIED":
+		fallthrough
+	case "PAY_G":
+		fallthrough
+	case "PAID":
+		*e = GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum: %v", v)
+	}
+}
+
 // GoogleCloudConnectorsV1Connection - Connection represents an instance of connector.
 type GoogleCloudConnectorsV1Connection struct {
 	// AuthConfig defines details of a authentication type.
@@ -24,6 +60,8 @@ type GoogleCloudConnectorsV1Connection struct {
 	Labels map[string]string `json:"labels,omitempty"`
 	// Determines whether or no a connection is locked. If locked, a reason must be specified.
 	LockConfig *GoogleCloudConnectorsV1LockConfig `json:"lockConfig,omitempty"`
+	// Log configuration for the connection.
+	LogConfig *GoogleCloudConnectorsV1LogConfig `json:"logConfig,omitempty"`
 	// Output only. Resource name of the Connection. Format: projects/{project}/locations/{location}/connections/{connection}
 	Name *string `json:"name,omitempty"`
 	// Node configuration for the connection.
@@ -36,6 +74,8 @@ type GoogleCloudConnectorsV1Connection struct {
 	SslConfig *GoogleCloudConnectorsV1SslConfig `json:"sslConfig,omitempty"`
 	// ConnectionStatus indicates the state of the connection.
 	Status *GoogleCloudConnectorsV1ConnectionStatus `json:"status,omitempty"`
+	// Output only. This subscription type enum value states if the metrics should be sent for billing or not.
+	SubscriptionType *GoogleCloudConnectorsV1ConnectionSubscriptionTypeEnum `json:"subscriptionType,omitempty"`
 	// Optional. Suspended indicates if a user has suspended a connection or not.
 	Suspended *bool `json:"suspended,omitempty"`
 	// Output only. Updated time.

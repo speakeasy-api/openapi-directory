@@ -14,18 +14,22 @@ const (
 	UserProfileSortKeyEnumLastModifiedTime UserProfileSortKeyEnum = "LastModifiedTime"
 )
 
+func (e UserProfileSortKeyEnum) ToPointer() *UserProfileSortKeyEnum {
+	return &e
+}
+
 func (e *UserProfileSortKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreationTime":
 		fallthrough
 	case "LastModifiedTime":
-		*e = UserProfileSortKeyEnum(s)
+		*e = UserProfileSortKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserProfileSortKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for UserProfileSortKeyEnum: %v", v)
 	}
 }

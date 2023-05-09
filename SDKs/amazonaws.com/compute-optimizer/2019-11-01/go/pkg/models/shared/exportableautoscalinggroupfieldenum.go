@@ -66,12 +66,16 @@ const (
 	ExportableAutoScalingGroupFieldEnumRecommendationOptionsMigrationEffort                            ExportableAutoScalingGroupFieldEnum = "RecommendationOptionsMigrationEffort"
 )
 
+func (e ExportableAutoScalingGroupFieldEnum) ToPointer() *ExportableAutoScalingGroupFieldEnum {
+	return &e
+}
+
 func (e *ExportableAutoScalingGroupFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AccountId":
 		fallthrough
 	case "AutoScalingGroupArn":
@@ -179,9 +183,9 @@ func (e *ExportableAutoScalingGroupFieldEnum) UnmarshalJSON(data []byte) error {
 	case "InferredWorkloadTypes":
 		fallthrough
 	case "RecommendationOptionsMigrationEffort":
-		*e = ExportableAutoScalingGroupFieldEnum(s)
+		*e = ExportableAutoScalingGroupFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportableAutoScalingGroupFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportableAutoScalingGroupFieldEnum: %v", v)
 	}
 }

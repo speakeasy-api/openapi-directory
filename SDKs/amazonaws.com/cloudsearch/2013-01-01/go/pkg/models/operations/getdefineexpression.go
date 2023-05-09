@@ -15,17 +15,21 @@ const (
 	GETDefineExpressionActionEnumDefineExpression GETDefineExpressionActionEnum = "DefineExpression"
 )
 
+func (e GETDefineExpressionActionEnum) ToPointer() *GETDefineExpressionActionEnum {
+	return &e
+}
+
 func (e *GETDefineExpressionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DefineExpression":
-		*e = GETDefineExpressionActionEnum(s)
+		*e = GETDefineExpressionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDefineExpressionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDefineExpressionActionEnum: %v", v)
 	}
 }
 
@@ -44,17 +48,21 @@ const (
 	GETDefineExpressionVersionEnumTwoThousandAndThirteen0101 GETDefineExpressionVersionEnum = "2013-01-01"
 )
 
+func (e GETDefineExpressionVersionEnum) ToPointer() *GETDefineExpressionVersionEnum {
+	return &e
+}
+
 func (e *GETDefineExpressionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = GETDefineExpressionVersionEnum(s)
+		*e = GETDefineExpressionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDefineExpressionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDefineExpressionVersionEnum: %v", v)
 	}
 }
 

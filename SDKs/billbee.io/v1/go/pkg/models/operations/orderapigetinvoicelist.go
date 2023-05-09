@@ -4,6 +4,7 @@ package operations
 
 import (
 	"net/http"
+	"openapi/pkg/models/shared"
 	"time"
 )
 
@@ -29,11 +30,10 @@ type OrderAPIGetInvoiceListRequest struct {
 }
 
 type OrderAPIGetInvoiceListResponse struct {
+	Body        []byte
 	ContentType string
 	// OK
-	OrderAPIGetInvoiceList200ApplicationJSONObject map[string]interface{}
-	// OK
-	OrderAPIGetInvoiceList200TextJSONObject map[string]interface{}
-	StatusCode                              int
-	RawResponse                             *http.Response
+	RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel *shared.RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel
+	StatusCode                                                                                                                  int
+	RawResponse                                                                                                                 *http.Response
 }

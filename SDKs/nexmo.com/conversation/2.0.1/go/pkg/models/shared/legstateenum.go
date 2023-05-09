@@ -14,16 +14,20 @@ const (
 	LegStateEnumTerminated LegStateEnum = "terminated"
 )
 
+func (e LegStateEnum) ToPointer() *LegStateEnum {
+	return &e
+}
+
 func (e *LegStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "terminated":
-		*e = LegStateEnum(s)
+		*e = LegStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LegStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LegStateEnum: %v", v)
 	}
 }

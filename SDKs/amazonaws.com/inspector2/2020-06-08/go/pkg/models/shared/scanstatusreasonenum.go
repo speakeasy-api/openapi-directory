@@ -30,12 +30,16 @@ const (
 	ScanStatusReasonEnumUnsupportedRuntime      ScanStatusReasonEnum = "UNSUPPORTED_RUNTIME"
 )
 
+func (e ScanStatusReasonEnum) ToPointer() *ScanStatusReasonEnum {
+	return &e
+}
+
 func (e *ScanStatusReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_INITIAL_SCAN":
 		fallthrough
 	case "ACCESS_DENIED":
@@ -71,9 +75,9 @@ func (e *ScanStatusReasonEnum) UnmarshalJSON(data []byte) error {
 	case "EXCLUDED_BY_TAG":
 		fallthrough
 	case "UNSUPPORTED_RUNTIME":
-		*e = ScanStatusReasonEnum(s)
+		*e = ScanStatusReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanStatusReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanStatusReasonEnum: %v", v)
 	}
 }

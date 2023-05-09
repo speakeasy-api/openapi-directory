@@ -16,17 +16,21 @@ const (
 	AddApplicationCloudWatchLoggingOptionXAmzTargetEnumKinesisAnalytics20180523AddApplicationCloudWatchLoggingOption AddApplicationCloudWatchLoggingOptionXAmzTargetEnum = "KinesisAnalytics_20180523.AddApplicationCloudWatchLoggingOption"
 )
 
+func (e AddApplicationCloudWatchLoggingOptionXAmzTargetEnum) ToPointer() *AddApplicationCloudWatchLoggingOptionXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddApplicationCloudWatchLoggingOptionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20180523.AddApplicationCloudWatchLoggingOption":
-		*e = AddApplicationCloudWatchLoggingOptionXAmzTargetEnum(s)
+		*e = AddApplicationCloudWatchLoggingOptionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddApplicationCloudWatchLoggingOptionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddApplicationCloudWatchLoggingOptionXAmzTargetEnum: %v", v)
 	}
 }
 

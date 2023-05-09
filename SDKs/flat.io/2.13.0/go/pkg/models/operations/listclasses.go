@@ -22,21 +22,25 @@ const (
 	ListClassesStateEnumArchived ListClassesStateEnum = "archived"
 )
 
+func (e ListClassesStateEnum) ToPointer() *ListClassesStateEnum {
+	return &e
+}
+
 func (e *ListClassesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
 		fallthrough
 	case "archived":
-		*e = ListClassesStateEnum(s)
+		*e = ListClassesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListClassesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ListClassesStateEnum: %v", v)
 	}
 }
 

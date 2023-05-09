@@ -22,19 +22,23 @@ const (
 	AccountTokenRequestCookieTypeEnumPersistent AccountTokenRequestCookieTypeEnum = "Persistent"
 )
 
+func (e AccountTokenRequestCookieTypeEnum) ToPointer() *AccountTokenRequestCookieTypeEnum {
+	return &e
+}
+
 func (e *AccountTokenRequestCookieTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Session":
 		fallthrough
 	case "Persistent":
-		*e = AccountTokenRequestCookieTypeEnum(s)
+		*e = AccountTokenRequestCookieTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTokenRequestCookieTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTokenRequestCookieTypeEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	AccountTokenRequestScopesEnumPlayback AccountTokenRequestScopesEnum = "Playback"
 )
 
+func (e AccountTokenRequestScopesEnum) ToPointer() *AccountTokenRequestScopesEnum {
+	return &e
+}
+
 func (e *AccountTokenRequestScopesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Catalog":
 		fallthrough
 	case "Commerce":
@@ -60,10 +68,10 @@ func (e *AccountTokenRequestScopesEnum) UnmarshalJSON(data []byte) error {
 	case "Settings":
 		fallthrough
 	case "Playback":
-		*e = AccountTokenRequestScopesEnum(s)
+		*e = AccountTokenRequestScopesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTokenRequestScopesEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTokenRequestScopesEnum: %v", v)
 	}
 }
 

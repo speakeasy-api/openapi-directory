@@ -16,17 +16,21 @@ const (
 	PutComplianceItemsXAmzTargetEnumAmazonSsmPutComplianceItems PutComplianceItemsXAmzTargetEnum = "AmazonSSM.PutComplianceItems"
 )
 
+func (e PutComplianceItemsXAmzTargetEnum) ToPointer() *PutComplianceItemsXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutComplianceItemsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.PutComplianceItems":
-		*e = PutComplianceItemsXAmzTargetEnum(s)
+		*e = PutComplianceItemsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutComplianceItemsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutComplianceItemsXAmzTargetEnum: %v", v)
 	}
 }
 

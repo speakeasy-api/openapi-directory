@@ -4,7 +4,7 @@ package shared
 
 // StartWorkstationRequest - Request message for StartWorkstation.
 type StartWorkstationRequest struct {
-	// If set, the request will be rejected if the latest version of the workstation on the server does not have this etag.
+	// If set, the request will be rejected if the latest version of the workstation on the server does not have this ETag.
 	Etag *string `json:"etag,omitempty"`
 	// If set, validate the request and preview the review, but do not actually apply it.
 	ValidateOnly *bool `json:"validateOnly,omitempty"`

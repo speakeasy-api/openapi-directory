@@ -16,17 +16,21 @@ const (
 	DeleteRemediationConfigurationXAmzTargetEnumStarlingDoveServiceDeleteRemediationConfiguration DeleteRemediationConfigurationXAmzTargetEnum = "StarlingDoveService.DeleteRemediationConfiguration"
 )
 
+func (e DeleteRemediationConfigurationXAmzTargetEnum) ToPointer() *DeleteRemediationConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteRemediationConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DeleteRemediationConfiguration":
-		*e = DeleteRemediationConfigurationXAmzTargetEnum(s)
+		*e = DeleteRemediationConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRemediationConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRemediationConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

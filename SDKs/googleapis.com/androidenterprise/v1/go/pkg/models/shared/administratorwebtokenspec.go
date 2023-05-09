@@ -15,21 +15,25 @@ const (
 	AdministratorWebTokenSpecPermissionEnumManageMcm   AdministratorWebTokenSpecPermissionEnum = "manageMcm"
 )
 
+func (e AdministratorWebTokenSpecPermissionEnum) ToPointer() *AdministratorWebTokenSpecPermissionEnum {
+	return &e
+}
+
 func (e *AdministratorWebTokenSpecPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "approveApps":
 		fallthrough
 	case "manageMcm":
-		*e = AdministratorWebTokenSpecPermissionEnum(s)
+		*e = AdministratorWebTokenSpecPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdministratorWebTokenSpecPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for AdministratorWebTokenSpecPermissionEnum: %v", v)
 	}
 }
 

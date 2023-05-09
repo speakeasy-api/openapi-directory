@@ -13,16 +13,20 @@ const (
 	EdgePresetDeploymentTypeEnumGreengrassV2Component EdgePresetDeploymentTypeEnum = "GreengrassV2Component"
 )
 
+func (e EdgePresetDeploymentTypeEnum) ToPointer() *EdgePresetDeploymentTypeEnum {
+	return &e
+}
+
 func (e *EdgePresetDeploymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GreengrassV2Component":
-		*e = EdgePresetDeploymentTypeEnum(s)
+		*e = EdgePresetDeploymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EdgePresetDeploymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EdgePresetDeploymentTypeEnum: %v", v)
 	}
 }

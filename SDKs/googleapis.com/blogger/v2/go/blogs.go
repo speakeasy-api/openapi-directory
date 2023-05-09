@@ -34,7 +34,10 @@ func newBlogs(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // BloggerBlogsGet - Gets a blog by id.
 func (s *blogs) BloggerBlogsGet(ctx context.Context, request operations.BloggerBlogsGetRequest, security operations.BloggerBlogsGetSecurity) (*operations.BloggerBlogsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/blogs/{blogId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/blogs/{blogId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *blogs) BloggerBlogsGet(ctx context.Context, request operations.BloggerB
 // BloggerBlogsList - Lists blogs by user id, possibly filtered.
 func (s *blogs) BloggerBlogsList(ctx context.Context, request operations.BloggerBlogsListRequest, security operations.BloggerBlogsListSecurity) (*operations.BloggerBlogsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/blogs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/users/{userId}/blogs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

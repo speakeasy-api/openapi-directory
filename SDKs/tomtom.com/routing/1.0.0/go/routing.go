@@ -34,7 +34,10 @@ func newRouting(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Calculates a set of locations that can be reached from the origin point.
 func (s *routing) GetRoutingVersionNumberCalculateReachableRangeOriginContentType(ctx context.Context, request operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest) (*operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/routing/{versionNumber}/calculateReachableRange/{origin}/{contentType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/routing/{versionNumber}/calculateReachableRange/{origin}/{contentType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *routing) GetRoutingVersionNumberCalculateReachableRangeOriginContentTyp
 // Calculates a route between an origin and a destination.
 func (s *routing) GetRoutingVersionNumberCalculateRouteLocationsContentType(ctx context.Context, request operations.GetRoutingVersionNumberCalculateRouteLocationsContentTypeRequest) (*operations.GetRoutingVersionNumberCalculateRouteLocationsContentTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/routing/{versionNumber}/calculateRoute/{locations}/{contentType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/routing/{versionNumber}/calculateRoute/{locations}/{contentType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -158,7 +164,10 @@ func (s *routing) GetRoutingVersionNumberCalculateRouteLocationsContentType(ctx 
 // Calculates a set of locations that can be reached from the origin point. POST method handles additionally parameters: <em>supportingPoints</em>, <em>allowVignette</em>, <em>avoidVignette</em>, <em>avoidAreas</em>.
 func (s *routing) PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJSON(ctx context.Context, request operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJSONRequest) (*operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/routing/{versionNumber}/calculateReachableRange/{origin}/{contentType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/routing/{versionNumber}/calculateReachableRange/{origin}/{contentType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CalculateReachableRangePostDataParameters", "json")
 	if err != nil {
@@ -227,7 +236,10 @@ func (s *routing) PostRoutingVersionNumberCalculateReachableRangeOriginContentTy
 // Calculates a set of locations that can be reached from the origin point. POST method handles additionally parameters: <em>supportingPoints</em>, <em>allowVignette</em>, <em>avoidVignette</em>, <em>avoidAreas</em>.
 func (s *routing) PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRaw(ctx context.Context, request operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRawRequest) (*operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/routing/{versionNumber}/calculateReachableRange/{origin}/{contentType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/routing/{versionNumber}/calculateReachableRange/{origin}/{contentType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -296,7 +308,10 @@ func (s *routing) PostRoutingVersionNumberCalculateReachableRangeOriginContentTy
 // Calculates a route between an origin and a destination. POST method handles additionally parameters: <em>supportingPoints</em>, <em>allowVignette</em>, <em>avoidVignette</em>, <em>avoidAreas</em>.
 func (s *routing) PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSON(ctx context.Context, request operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONRequest) (*operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/routing/{versionNumber}/calculateRoute/{locations}/{contentType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/routing/{versionNumber}/calculateRoute/{locations}/{contentType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CalculateRoutePostDataParameters", "json")
 	if err != nil {
@@ -365,7 +380,10 @@ func (s *routing) PostRoutingVersionNumberCalculateRouteLocationsContentTypeJSON
 // Calculates a route between an origin and a destination. POST method handles additionally parameters: <em>supportingPoints</em>, <em>allowVignette</em>, <em>avoidVignette</em>, <em>avoidAreas</em>.
 func (s *routing) PostRoutingVersionNumberCalculateRouteLocationsContentTypeRaw(ctx context.Context, request operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest) (*operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/routing/{versionNumber}/calculateRoute/{locations}/{contentType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/routing/{versionNumber}/calculateRoute/{locations}/{contentType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

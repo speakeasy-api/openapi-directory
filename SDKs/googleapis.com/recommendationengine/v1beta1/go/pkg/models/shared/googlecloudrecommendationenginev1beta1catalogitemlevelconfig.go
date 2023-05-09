@@ -16,21 +16,25 @@ const (
 	GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnumMaster                      GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum = "MASTER"
 )
 
+func (e GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum) ToPointer() *GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CATALOG_ITEM_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "VARIANT":
 		fallthrough
 	case "MASTER":
-		*e = GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum(s)
+		*e = GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnumMaster                      GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum = "MASTER"
 )
 
+func (e GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum) ToPointer() *GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CATALOG_ITEM_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "VARIANT":
 		fallthrough
 	case "MASTER":
-		*e = GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum(s)
+		*e = GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum: %v", v)
 	}
 }
 

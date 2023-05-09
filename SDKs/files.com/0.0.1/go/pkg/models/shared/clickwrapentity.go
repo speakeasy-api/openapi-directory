@@ -16,21 +16,25 @@ const (
 	ClickwrapEntityUseWithBundlesEnumRequire   ClickwrapEntityUseWithBundlesEnum = "require"
 )
 
+func (e ClickwrapEntityUseWithBundlesEnum) ToPointer() *ClickwrapEntityUseWithBundlesEnum {
+	return &e
+}
+
 func (e *ClickwrapEntityUseWithBundlesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "available":
 		fallthrough
 	case "require":
-		*e = ClickwrapEntityUseWithBundlesEnum(s)
+		*e = ClickwrapEntityUseWithBundlesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClickwrapEntityUseWithBundlesEnum: %s", s)
+		return fmt.Errorf("invalid value for ClickwrapEntityUseWithBundlesEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	ClickwrapEntityUseWithInboxesEnumRequire   ClickwrapEntityUseWithInboxesEnum = "require"
 )
 
+func (e ClickwrapEntityUseWithInboxesEnum) ToPointer() *ClickwrapEntityUseWithInboxesEnum {
+	return &e
+}
+
 func (e *ClickwrapEntityUseWithInboxesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "available":
 		fallthrough
 	case "require":
-		*e = ClickwrapEntityUseWithInboxesEnum(s)
+		*e = ClickwrapEntityUseWithInboxesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClickwrapEntityUseWithInboxesEnum: %s", s)
+		return fmt.Errorf("invalid value for ClickwrapEntityUseWithInboxesEnum: %v", v)
 	}
 }
 
@@ -69,19 +77,23 @@ const (
 	ClickwrapEntityUseWithUsersEnumRequire ClickwrapEntityUseWithUsersEnum = "require"
 )
 
+func (e ClickwrapEntityUseWithUsersEnum) ToPointer() *ClickwrapEntityUseWithUsersEnum {
+	return &e
+}
+
 func (e *ClickwrapEntityUseWithUsersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "require":
-		*e = ClickwrapEntityUseWithUsersEnum(s)
+		*e = ClickwrapEntityUseWithUsersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClickwrapEntityUseWithUsersEnum: %s", s)
+		return fmt.Errorf("invalid value for ClickwrapEntityUseWithUsersEnum: %v", v)
 	}
 }
 

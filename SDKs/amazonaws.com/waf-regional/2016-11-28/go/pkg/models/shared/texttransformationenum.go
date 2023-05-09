@@ -18,12 +18,16 @@ const (
 	TextTransformationEnumURLDecode          TextTransformationEnum = "URL_DECODE"
 )
 
+func (e TextTransformationEnum) ToPointer() *TextTransformationEnum {
+	return &e
+}
+
 func (e *TextTransformationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "COMPRESS_WHITE_SPACE":
@@ -35,9 +39,9 @@ func (e *TextTransformationEnum) UnmarshalJSON(data []byte) error {
 	case "CMD_LINE":
 		fallthrough
 	case "URL_DECODE":
-		*e = TextTransformationEnum(s)
+		*e = TextTransformationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextTransformationEnum: %s", s)
+		return fmt.Errorf("invalid value for TextTransformationEnum: %v", v)
 	}
 }

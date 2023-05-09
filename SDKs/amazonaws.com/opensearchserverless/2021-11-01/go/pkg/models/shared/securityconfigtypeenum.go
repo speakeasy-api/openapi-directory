@@ -13,16 +13,20 @@ const (
 	SecurityConfigTypeEnumSaml SecurityConfigTypeEnum = "saml"
 )
 
+func (e SecurityConfigTypeEnum) ToPointer() *SecurityConfigTypeEnum {
+	return &e
+}
+
 func (e *SecurityConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "saml":
-		*e = SecurityConfigTypeEnum(s)
+		*e = SecurityConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SecurityConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SecurityConfigTypeEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	AuthorizeClientVpnIngressResultStatusCodeEnumRevoking    AuthorizeClientVpnIngressResultStatusCodeEnum = "revoking"
 )
 
+func (e AuthorizeClientVpnIngressResultStatusCodeEnum) ToPointer() *AuthorizeClientVpnIngressResultStatusCodeEnum {
+	return &e
+}
+
 func (e *AuthorizeClientVpnIngressResultStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "authorizing":
 		fallthrough
 	case "active":
@@ -30,10 +34,10 @@ func (e *AuthorizeClientVpnIngressResultStatusCodeEnum) UnmarshalJSON(data []byt
 	case "failed":
 		fallthrough
 	case "revoking":
-		*e = AuthorizeClientVpnIngressResultStatusCodeEnum(s)
+		*e = AuthorizeClientVpnIngressResultStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizeClientVpnIngressResultStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizeClientVpnIngressResultStatusCodeEnum: %v", v)
 	}
 }
 

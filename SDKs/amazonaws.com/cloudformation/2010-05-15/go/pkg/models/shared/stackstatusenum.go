@@ -35,12 +35,16 @@ const (
 	StackStatusEnumImportRollbackComplete                  StackStatusEnum = "IMPORT_ROLLBACK_COMPLETE"
 )
 
+func (e StackStatusEnum) ToPointer() *StackStatusEnum {
+	return &e
+}
+
 func (e *StackStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE_IN_PROGRESS":
 		fallthrough
 	case "CREATE_FAILED":
@@ -86,9 +90,9 @@ func (e *StackStatusEnum) UnmarshalJSON(data []byte) error {
 	case "IMPORT_ROLLBACK_FAILED":
 		fallthrough
 	case "IMPORT_ROLLBACK_COMPLETE":
-		*e = StackStatusEnum(s)
+		*e = StackStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StackStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StackStatusEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETRemoveRoleFromInstanceProfileActionEnumRemoveRoleFromInstanceProfile GETRemoveRoleFromInstanceProfileActionEnum = "RemoveRoleFromInstanceProfile"
 )
 
+func (e GETRemoveRoleFromInstanceProfileActionEnum) ToPointer() *GETRemoveRoleFromInstanceProfileActionEnum {
+	return &e
+}
+
 func (e *GETRemoveRoleFromInstanceProfileActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RemoveRoleFromInstanceProfile":
-		*e = GETRemoveRoleFromInstanceProfileActionEnum(s)
+		*e = GETRemoveRoleFromInstanceProfileActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRemoveRoleFromInstanceProfileActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRemoveRoleFromInstanceProfileActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRemoveRoleFromInstanceProfileVersionEnumTwoThousandAndTen0508 GETRemoveRoleFromInstanceProfileVersionEnum = "2010-05-08"
 )
 
+func (e GETRemoveRoleFromInstanceProfileVersionEnum) ToPointer() *GETRemoveRoleFromInstanceProfileVersionEnum {
+	return &e
+}
+
 func (e *GETRemoveRoleFromInstanceProfileVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETRemoveRoleFromInstanceProfileVersionEnum(s)
+		*e = GETRemoveRoleFromInstanceProfileVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRemoveRoleFromInstanceProfileVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRemoveRoleFromInstanceProfileVersionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	PollForTaskXAmzTargetEnumDataPipelinePollForTask PollForTaskXAmzTargetEnum = "DataPipeline.PollForTask"
 )
 
+func (e PollForTaskXAmzTargetEnum) ToPointer() *PollForTaskXAmzTargetEnum {
+	return &e
+}
+
 func (e *PollForTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DataPipeline.PollForTask":
-		*e = PollForTaskXAmzTargetEnum(s)
+		*e = PollForTaskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PollForTaskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PollForTaskXAmzTargetEnum: %v", v)
 	}
 }
 

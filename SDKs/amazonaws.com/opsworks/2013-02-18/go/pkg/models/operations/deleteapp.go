@@ -16,17 +16,21 @@ const (
 	DeleteAppXAmzTargetEnumOpsWorks20130218DeleteApp DeleteAppXAmzTargetEnum = "OpsWorks_20130218.DeleteApp"
 )
 
+func (e DeleteAppXAmzTargetEnum) ToPointer() *DeleteAppXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteAppXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DeleteApp":
-		*e = DeleteAppXAmzTargetEnum(s)
+		*e = DeleteAppXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAppXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAppXAmzTargetEnum: %v", v)
 	}
 }
 

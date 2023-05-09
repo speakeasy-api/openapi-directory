@@ -16,17 +16,21 @@ const (
 	GetDataCatalogEncryptionSettingsXAmzTargetEnumAwsGlueGetDataCatalogEncryptionSettings GetDataCatalogEncryptionSettingsXAmzTargetEnum = "AWSGlue.GetDataCatalogEncryptionSettings"
 )
 
+func (e GetDataCatalogEncryptionSettingsXAmzTargetEnum) ToPointer() *GetDataCatalogEncryptionSettingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDataCatalogEncryptionSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetDataCatalogEncryptionSettings":
-		*e = GetDataCatalogEncryptionSettingsXAmzTargetEnum(s)
+		*e = GetDataCatalogEncryptionSettingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDataCatalogEncryptionSettingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDataCatalogEncryptionSettingsXAmzTargetEnum: %v", v)
 	}
 }
 

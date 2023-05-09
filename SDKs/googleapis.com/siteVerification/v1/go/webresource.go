@@ -35,7 +35,10 @@ func newWebResource(defaultClient, securityClient HTTPClient, serverURL, languag
 // SiteVerificationWebResourceDelete - Relinquish ownership of a website or domain.
 func (s *webResource) SiteVerificationWebResourceDelete(ctx context.Context, request operations.SiteVerificationWebResourceDeleteRequest, security operations.SiteVerificationWebResourceDeleteSecurity) (*operations.SiteVerificationWebResourceDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *webResource) SiteVerificationWebResourceDelete(ctx context.Context, req
 // SiteVerificationWebResourceGet - Get the most current data for a website or domain.
 func (s *webResource) SiteVerificationWebResourceGet(ctx context.Context, request operations.SiteVerificationWebResourceGetRequest, security operations.SiteVerificationWebResourceGetSecurity) (*operations.SiteVerificationWebResourceGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -280,7 +286,10 @@ func (s *webResource) SiteVerificationWebResourceList(ctx context.Context, reque
 // SiteVerificationWebResourcePatch - Modify the list of owners for your website or domain. This method supports patch semantics.
 func (s *webResource) SiteVerificationWebResourcePatch(ctx context.Context, request operations.SiteVerificationWebResourcePatchRequest, security operations.SiteVerificationWebResourcePatchSecurity) (*operations.SiteVerificationWebResourcePatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SiteVerificationWebResourceResource", "json")
 	if err != nil {
@@ -335,7 +344,10 @@ func (s *webResource) SiteVerificationWebResourcePatch(ctx context.Context, requ
 // SiteVerificationWebResourceUpdate - Modify the list of owners for your website or domain.
 func (s *webResource) SiteVerificationWebResourceUpdate(ctx context.Context, request operations.SiteVerificationWebResourceUpdateRequest, security operations.SiteVerificationWebResourceUpdateSecurity) (*operations.SiteVerificationWebResourceUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webResource/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SiteVerificationWebResourceResource", "json")
 	if err != nil {

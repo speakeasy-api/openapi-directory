@@ -14,18 +14,22 @@ const (
 	MemberTypeEnumUser  MemberTypeEnum = "USER"
 )
 
+func (e MemberTypeEnum) ToPointer() *MemberTypeEnum {
+	return &e
+}
+
 func (e *MemberTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GROUP":
 		fallthrough
 	case "USER":
-		*e = MemberTypeEnum(s)
+		*e = MemberTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MemberTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MemberTypeEnum: %v", v)
 	}
 }

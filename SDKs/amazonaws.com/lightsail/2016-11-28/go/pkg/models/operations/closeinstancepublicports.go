@@ -16,17 +16,21 @@ const (
 	CloseInstancePublicPortsXAmzTargetEnumLightsail20161128CloseInstancePublicPorts CloseInstancePublicPortsXAmzTargetEnum = "Lightsail_20161128.CloseInstancePublicPorts"
 )
 
+func (e CloseInstancePublicPortsXAmzTargetEnum) ToPointer() *CloseInstancePublicPortsXAmzTargetEnum {
+	return &e
+}
+
 func (e *CloseInstancePublicPortsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.CloseInstancePublicPorts":
-		*e = CloseInstancePublicPortsXAmzTargetEnum(s)
+		*e = CloseInstancePublicPortsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseInstancePublicPortsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseInstancePublicPortsXAmzTargetEnum: %v", v)
 	}
 }
 

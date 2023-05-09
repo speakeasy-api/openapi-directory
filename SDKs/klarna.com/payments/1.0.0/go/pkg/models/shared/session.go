@@ -16,21 +16,25 @@ const (
 	SessionAcquiringChannelEnumTelesales SessionAcquiringChannelEnum = "TELESALES"
 )
 
+func (e SessionAcquiringChannelEnum) ToPointer() *SessionAcquiringChannelEnum {
+	return &e
+}
+
 func (e *SessionAcquiringChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ECOMMERCE":
 		fallthrough
 	case "IN_STORE":
 		fallthrough
 	case "TELESALES":
-		*e = SessionAcquiringChannelEnum(s)
+		*e = SessionAcquiringChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SessionAcquiringChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for SessionAcquiringChannelEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	SessionIntentEnumBuyAndTokenize SessionIntentEnum = "buy_and_tokenize"
 )
 
+func (e SessionIntentEnum) ToPointer() *SessionIntentEnum {
+	return &e
+}
+
 func (e *SessionIntentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "buy":
 		fallthrough
 	case "tokenize":
 		fallthrough
 	case "buy_and_tokenize":
-		*e = SessionIntentEnum(s)
+		*e = SessionIntentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SessionIntentEnum: %s", s)
+		return fmt.Errorf("invalid value for SessionIntentEnum: %v", v)
 	}
 }
 

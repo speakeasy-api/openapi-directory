@@ -15,6 +15,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -188,4 +189,18 @@ pkg/models/shared/sitebinding.go
 pkg/models/shared/windowsiptypeenum.go
 pkg/models/shared/applicationpool.go
 pkg/models/shared/windowshosting.go
+docs/sdk/README.md
+docs/accounts/README.md
+docs/dnsrecords/README.md
+docs/domains/README.md
+docs/linuxhostings/README.md
+docs/mailzones/README.md
+docs/mailboxes/README.md
+docs/mysqldatabases/README.md
+docs/provisioningjobs/README.md
+docs/ssh/README.md
+docs/sslcertificaterequests/README.md
+docs/sslcertificates/README.md
+docs/servicepacks/README.md
+docs/windowshostings/README.md
 USAGE.md

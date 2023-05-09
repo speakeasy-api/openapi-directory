@@ -22,12 +22,16 @@ const (
 	PostBundlesRequestBodyPermissionsEnumPreviewOnly PostBundlesRequestBodyPermissionsEnum = "preview_only"
 )
 
+func (e PostBundlesRequestBodyPermissionsEnum) ToPointer() *PostBundlesRequestBodyPermissionsEnum {
+	return &e
+}
+
 func (e *PostBundlesRequestBodyPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
@@ -39,10 +43,10 @@ func (e *PostBundlesRequestBodyPermissionsEnum) UnmarshalJSON(data []byte) error
 	case "none":
 		fallthrough
 	case "preview_only":
-		*e = PostBundlesRequestBodyPermissionsEnum(s)
+		*e = PostBundlesRequestBodyPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostBundlesRequestBodyPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for PostBundlesRequestBodyPermissionsEnum: %v", v)
 	}
 }
 

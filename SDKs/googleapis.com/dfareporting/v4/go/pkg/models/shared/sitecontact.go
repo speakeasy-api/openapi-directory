@@ -15,19 +15,23 @@ const (
 	SiteContactContactTypeEnumTrafficker  SiteContactContactTypeEnum = "TRAFFICKER"
 )
 
+func (e SiteContactContactTypeEnum) ToPointer() *SiteContactContactTypeEnum {
+	return &e
+}
+
 func (e *SiteContactContactTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SALES_PERSON":
 		fallthrough
 	case "TRAFFICKER":
-		*e = SiteContactContactTypeEnum(s)
+		*e = SiteContactContactTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteContactContactTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteContactContactTypeEnum: %v", v)
 	}
 }
 

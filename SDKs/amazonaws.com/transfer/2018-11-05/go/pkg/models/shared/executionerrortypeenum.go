@@ -20,12 +20,16 @@ const (
 	ExecutionErrorTypeEnumInternalServerError ExecutionErrorTypeEnum = "INTERNAL_SERVER_ERROR"
 )
 
+func (e ExecutionErrorTypeEnum) ToPointer() *ExecutionErrorTypeEnum {
+	return &e
+}
+
 func (e *ExecutionErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERMISSION_DENIED":
 		fallthrough
 	case "CUSTOM_STEP_FAILED":
@@ -41,9 +45,9 @@ func (e *ExecutionErrorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TIMEOUT":
 		fallthrough
 	case "INTERNAL_SERVER_ERROR":
-		*e = ExecutionErrorTypeEnum(s)
+		*e = ExecutionErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionErrorTypeEnum: %v", v)
 	}
 }

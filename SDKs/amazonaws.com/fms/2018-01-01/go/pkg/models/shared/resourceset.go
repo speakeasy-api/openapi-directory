@@ -8,10 +8,11 @@ import (
 
 // ResourceSet - A set of resources to include in a policy.
 type ResourceSet struct {
-	Description      *string    `json:"Description,omitempty"`
-	ID               *string    `json:"Id,omitempty"`
-	LastUpdateTime   *time.Time `json:"LastUpdateTime,omitempty"`
-	Name             string     `json:"Name"`
-	ResourceTypeList []string   `json:"ResourceTypeList"`
-	UpdateToken      *string    `json:"UpdateToken,omitempty"`
+	Description       *string                `json:"Description,omitempty"`
+	ID                *string                `json:"Id,omitempty"`
+	LastUpdateTime    *time.Time             `json:"LastUpdateTime,omitempty"`
+	Name              string                 `json:"Name"`
+	ResourceSetStatus *ResourceSetStatusEnum `json:"ResourceSetStatus,omitempty"`
+	ResourceTypeList  []string               `json:"ResourceTypeList"`
+	UpdateToken       *string                `json:"UpdateToken,omitempty"`
 }

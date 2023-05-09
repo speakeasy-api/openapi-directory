@@ -13,16 +13,20 @@ const (
 	BrowserTypeEnumChrome BrowserTypeEnum = "Chrome"
 )
 
+func (e BrowserTypeEnum) ToPointer() *BrowserTypeEnum {
+	return &e
+}
+
 func (e *BrowserTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Chrome":
-		*e = BrowserTypeEnum(s)
+		*e = BrowserTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BrowserTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BrowserTypeEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	POSTGetStatusActionEnumGetStatus POSTGetStatusActionEnum = "GetStatus"
 )
 
+func (e POSTGetStatusActionEnum) ToPointer() *POSTGetStatusActionEnum {
+	return &e
+}
+
 func (e *POSTGetStatusActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetStatus":
-		*e = POSTGetStatusActionEnum(s)
+		*e = POSTGetStatusActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetStatusActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetStatusActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetStatusOperationEnumGetStatus POSTGetStatusOperationEnum = "GetStatus"
 )
 
+func (e POSTGetStatusOperationEnum) ToPointer() *POSTGetStatusOperationEnum {
+	return &e
+}
+
 func (e *POSTGetStatusOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetStatus":
-		*e = POSTGetStatusOperationEnum(s)
+		*e = POSTGetStatusOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetStatusOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetStatusOperationEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	POSTGetStatusVersionEnumTwoThousandAndTen0601 POSTGetStatusVersionEnum = "2010-06-01"
 )
 
+func (e POSTGetStatusVersionEnum) ToPointer() *POSTGetStatusVersionEnum {
+	return &e
+}
+
 func (e *POSTGetStatusVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-06-01":
-		*e = POSTGetStatusVersionEnum(s)
+		*e = POSTGetStatusVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetStatusVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetStatusVersionEnum: %v", v)
 	}
 }
 

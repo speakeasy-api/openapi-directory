@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,7 +18,8 @@ func main() {
         }),
     )
 
-    req := operations.BatchGetMetricDataRequest{
+    ctx := context.Background()
+    res, err := s.BatchGetMetricData(ctx, operations.BatchGetMetricDataRequest{
         RequestBody: operations.BatchGetMetricDataRequestBody{
             Queries: []shared.BatchGetMetricDataQuery{
                 shared.BatchGetMetricDataQuery{
@@ -26,49 +28,43 @@ func main() {
                         "unde": "nulla",
                         "corrupti": "illum",
                     },
-                    EndDate: "2022-05-18T09:34:54.894Z",
-                    ID: "deserunt",
-                    Metric: "TRANSIENT_BOUNCE",
-                    Namespace: "VDM",
-                    StartDate: "2022-09-14T09:35:47.986Z",
+                    EndDate: types.MustTimeFromString("2022-05-18T09:34:54.894Z"),
+                    ID: "a674e0f4-67cc-4879-aed1-51a05dfc2ddf",
+                    Metric: shared.MetricEnumOpen,
+                    Namespace: shared.MetricNamespaceEnumVdm,
+                    StartDate: types.MustTimeFromString("2020-08-07T00:03:55.328Z"),
                 },
                 shared.BatchGetMetricDataQuery{
                     Dimensions: map[string]string{
-                        "ipsa": "delectus",
-                        "tempora": "suscipit",
-                        "molestiae": "minus",
-                        "placeat": "voluptatum",
+                        "totam": "porro",
+                        "dolorum": "dicta",
                     },
-                    EndDate: "2022-06-07T15:55:46.205Z",
-                    ID: "nisi",
-                    Metric: "DELIVERY_COMPLAINT",
-                    Namespace: "VDM",
-                    StartDate: "2022-10-15T05:10:19.629Z",
+                    EndDate: types.MustTimeFromString("2021-09-20T20:35:01.256Z"),
+                    ID: "928fc816-742c-4b73-9205-929396fea759",
+                    Metric: shared.MetricEnumOpen,
+                    Namespace: shared.MetricNamespaceEnumVdm,
+                    StartDate: types.MustTimeFromString("2020-11-28T02:15:07.561Z"),
                 },
                 shared.BatchGetMetricDataQuery{
                     Dimensions: map[string]string{
-                        "veritatis": "deserunt",
-                        "perferendis": "ipsam",
+                        "ipsa": "reiciendis",
                     },
-                    EndDate: "2020-02-17T21:57:45.117Z",
-                    ID: "quo",
-                    Metric: "COMPLAINT",
-                    Namespace: "VDM",
-                    StartDate: "2020-05-23T06:06:25.221Z",
+                    EndDate: types.MustTimeFromString("2021-09-11T04:59:11.542Z"),
+                    ID: "a2352c59-5590-47af-b1a3-a2fa94677392",
+                    Metric: shared.MetricEnumTransientBounce,
+                    Namespace: shared.MetricNamespaceEnumVdm,
+                    StartDate: types.MustTimeFromString("2022-04-29T17:10:10.440Z"),
                 },
             },
         },
-        XAmzAlgorithm: "maiores",
-        XAmzContentSha256: "molestiae",
-        XAmzCredential: "quod",
-        XAmzDate: "quod",
-        XAmzSecurityToken: "esse",
-        XAmzSignature: "totam",
-        XAmzSignedHeaders: "porro",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchGetMetricData(ctx, req)
+        XAmzAlgorithm: sdk.String("animi"),
+        XAmzContentSha256: sdk.String("enim"),
+        XAmzCredential: sdk.String("odit"),
+        XAmzDate: sdk.String("quo"),
+        XAmzSecurityToken: sdk.String("sequi"),
+        XAmzSignature: sdk.String("tenetur"),
+        XAmzSignedHeaders: sdk.String("ipsam"),
+    })
     if err != nil {
         log.Fatal(err)
     }

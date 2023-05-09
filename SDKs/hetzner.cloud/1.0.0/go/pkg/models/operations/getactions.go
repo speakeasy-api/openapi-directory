@@ -32,12 +32,16 @@ const (
 	GetActionsSortParameterSortEnumFinishedDesc GetActionsSortParameterSortEnum = "finished:desc"
 )
 
+func (e GetActionsSortParameterSortEnum) ToPointer() *GetActionsSortParameterSortEnum {
+	return &e
+}
+
 func (e *GetActionsSortParameterSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -73,10 +77,10 @@ func (e *GetActionsSortParameterSortEnum) UnmarshalJSON(data []byte) error {
 	case "finished:asc":
 		fallthrough
 	case "finished:desc":
-		*e = GetActionsSortParameterSortEnum(s)
+		*e = GetActionsSortParameterSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetActionsSortParameterSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetActionsSortParameterSortEnum: %v", v)
 	}
 }
 
@@ -89,21 +93,25 @@ const (
 	GetActionsStatusParameterStatusEnumError   GetActionsStatusParameterStatusEnum = "error"
 )
 
+func (e GetActionsStatusParameterStatusEnum) ToPointer() *GetActionsStatusParameterStatusEnum {
+	return &e
+}
+
 func (e *GetActionsStatusParameterStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "success":
 		fallthrough
 	case "error":
-		*e = GetActionsStatusParameterStatusEnum(s)
+		*e = GetActionsStatusParameterStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetActionsStatusParameterStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetActionsStatusParameterStatusEnum: %v", v)
 	}
 }
 
@@ -140,21 +148,25 @@ const (
 	GetActionsActionsResponseActionStatusEnumError   GetActionsActionsResponseActionStatusEnum = "error"
 )
 
+func (e GetActionsActionsResponseActionStatusEnum) ToPointer() *GetActionsActionsResponseActionStatusEnum {
+	return &e
+}
+
 func (e *GetActionsActionsResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = GetActionsActionsResponseActionStatusEnum(s)
+		*e = GetActionsActionsResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetActionsActionsResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetActionsActionsResponseActionStatusEnum: %v", v)
 	}
 }
 

@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteBusinessGroupsIDSpacesSpaceIDRequest{
+    ctx := context.Background()
+    res, err := s.DeleteBusinessGroupsIDSpacesSpaceID(ctx, operations.DeleteBusinessGroupsIDSpacesSpaceIDRequest{
         ID: "P18784",
         SpaceID: "P18784",
-    }
-
-    ctx := context.Background()
-    res, err := s.DeleteBusinessGroupsIDSpacesSpaceID(ctx, req, operations.DeleteBusinessGroupsIDSpacesSpaceIDSecurity{
+    }, operations.DeleteBusinessGroupsIDSpacesSpaceIDSecurity{
         GmaAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

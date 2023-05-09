@@ -177,7 +177,10 @@ func (s *media) FindMedia(ctx context.Context, request operations.FindMediaReque
 // Get media resource by id
 func (s *media) GetMedia(ctx context.Context, request operations.GetMediaRequest, security operations.GetMediaSecurity) (*operations.GetMediaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/media/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/media/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -244,7 +247,10 @@ func (s *media) GetMedia(ctx context.Context, request operations.GetMediaRequest
 // Download a media file. Available types of files: bmp, gif, jpg, m4a, mp3, mp4, png, wav. Content type in response depends on 'extension' parameter, e.g. image/jpeg, image/png, audio/mp3, etc
 func (s *media) GetMediaData(ctx context.Context, request operations.GetMediaDataRequest, security operations.GetMediaDataSecurity) (*operations.GetMediaDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/media/{id}.{extension}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/media/{id}.{extension}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -355,7 +361,10 @@ func (s *media) GetMediaData(ctx context.Context, request operations.GetMediaDat
 // Download a MP3 media, endpoint returns application/binary content-type
 func (s *media) GetMediaDataBinary(ctx context.Context, request operations.GetMediaDataBinaryRequest, security operations.GetMediaDataBinarySecurity) (*operations.GetMediaDataBinaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/media/{id}/file", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/media/{id}/file", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -410,7 +419,10 @@ func (s *media) GetMediaDataBinary(ctx context.Context, request operations.GetMe
 // Download a media file. Available types of files: bmp, gif, jpg, m4a, mp3, mp4, png, wav. Content type in response depends on 'extension' parameter, e.g. image/jpeg, image/png, audio/mp3, etc
 func (s *media) GetMediaDataByKey(ctx context.Context, request operations.GetMediaDataByKeyRequest, security operations.GetMediaDataByKeySecurity) (*operations.GetMediaDataByKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/media/public/{key}.{extension}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/media/public/{key}.{extension}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,24 +15,29 @@ const (
 	RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnumUDP       RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnum = "UDP"
 )
 
+func (e RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnum) ToPointer() *RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnum {
+	return &e
+}
+
 func (e *RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNDEFINED":
 		fallthrough
 	case "TCP":
 		fallthrough
 	case "UDP":
-		*e = RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnum(s)
+		*e = RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnum: %v", v)
 	}
 }
 
+// RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum - The type of Load Balancer specified by this target. Must match the configuration of the Load Balancer located at the LoadBalancerTarget's IP address/port and region.
 type RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum string
 
 const (
@@ -40,34 +45,39 @@ const (
 	RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnumRegionalL4Ilb RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum = "REGIONAL_L4ILB"
 )
 
+func (e RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum) ToPointer() *RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum {
+	return &e
+}
+
 func (e *RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "REGIONAL_L4ILB":
-		*e = RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum(s)
+		*e = RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum: %v", v)
 	}
 }
 
 type RRSetRoutingPolicyLoadBalancerTarget struct {
-	// The frontend IP address of the
-	IPAddress        *string                                                   `json:"ipAddress,omitempty"`
-	IPProtocol       *RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnum       `json:"ipProtocol,omitempty"`
-	Kind             *string                                                   `json:"kind,omitempty"`
+	// The frontend IP address of the Load Balancer to health check.
+	IPAddress  *string                                             `json:"ipAddress,omitempty"`
+	IPProtocol *RRSetRoutingPolicyLoadBalancerTargetIPProtocolEnum `json:"ipProtocol,omitempty"`
+	Kind       *string                                             `json:"kind,omitempty"`
+	// The type of Load Balancer specified by this target. Must match the configuration of the Load Balancer located at the LoadBalancerTarget's IP address/port and region.
 	LoadBalancerType *RRSetRoutingPolicyLoadBalancerTargetLoadBalancerTypeEnum `json:"loadBalancerType,omitempty"`
-	// The fully qualified url of the network on which the ILB is
+	// The fully qualified url of the network on which the ILB is present. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
 	NetworkURL *string `json:"networkUrl,omitempty"`
-	// Load Balancer to health check. The configured port of the Load Balancer.
+	// The configured port of the Load Balancer.
 	Port *string `json:"port,omitempty"`
-	// present. This should be formatted like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network} The project ID in which the ILB exists.
+	// The project ID in which the ILB exists.
 	Project *string `json:"project,omitempty"`
-	// The region for regional ILBs.
+	// The region in which the ILB exists.
 	Region *string `json:"region,omitempty"`
 }

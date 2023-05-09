@@ -14,18 +14,22 @@ const (
 	UserTrustProviderTypeEnumOidc              UserTrustProviderTypeEnum = "oidc"
 )
 
+func (e UserTrustProviderTypeEnum) ToPointer() *UserTrustProviderTypeEnum {
+	return &e
+}
+
 func (e *UserTrustProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "iam-identity-center":
 		fallthrough
 	case "oidc":
-		*e = UserTrustProviderTypeEnum(s)
+		*e = UserTrustProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserTrustProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserTrustProviderTypeEnum: %v", v)
 	}
 }

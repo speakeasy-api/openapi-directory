@@ -16,12 +16,16 @@ const (
 	OriginRequestPolicyQueryStringBehaviorEnumAllExcept OriginRequestPolicyQueryStringBehaviorEnum = "allExcept"
 )
 
+func (e OriginRequestPolicyQueryStringBehaviorEnum) ToPointer() *OriginRequestPolicyQueryStringBehaviorEnum {
+	return &e
+}
+
 func (e *OriginRequestPolicyQueryStringBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "whitelist":
@@ -29,9 +33,9 @@ func (e *OriginRequestPolicyQueryStringBehaviorEnum) UnmarshalJSON(data []byte) 
 	case "all":
 		fallthrough
 	case "allExcept":
-		*e = OriginRequestPolicyQueryStringBehaviorEnum(s)
+		*e = OriginRequestPolicyQueryStringBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OriginRequestPolicyQueryStringBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for OriginRequestPolicyQueryStringBehaviorEnum: %v", v)
 	}
 }

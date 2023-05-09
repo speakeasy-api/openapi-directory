@@ -16,19 +16,23 @@ const (
 	ListOriginRequestPolicies20200531TypeEnumCustom  ListOriginRequestPolicies20200531TypeEnum = "custom"
 )
 
+func (e ListOriginRequestPolicies20200531TypeEnum) ToPointer() *ListOriginRequestPolicies20200531TypeEnum {
+	return &e
+}
+
 func (e *ListOriginRequestPolicies20200531TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "managed":
 		fallthrough
 	case "custom":
-		*e = ListOriginRequestPolicies20200531TypeEnum(s)
+		*e = ListOriginRequestPolicies20200531TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOriginRequestPolicies20200531TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOriginRequestPolicies20200531TypeEnum: %v", v)
 	}
 }
 

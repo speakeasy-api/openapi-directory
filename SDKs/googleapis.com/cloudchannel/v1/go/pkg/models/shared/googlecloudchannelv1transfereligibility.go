@@ -17,12 +17,16 @@ const (
 	GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnumSkuSuspended         GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum = "SKU_SUSPENDED"
 )
 
+func (e GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum) ToPointer() *GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REASON_UNSPECIFIED":
 		fallthrough
 	case "PENDING_TOS_ACCEPTANCE":
@@ -30,10 +34,10 @@ func (e *GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum) Unmarsh
 	case "SKU_NOT_ELIGIBLE":
 		fallthrough
 	case "SKU_SUSPENDED":
-		*e = GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum(s)
+		*e = GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1TransferEligibilityIneligibilityReasonEnum: %v", v)
 	}
 }
 

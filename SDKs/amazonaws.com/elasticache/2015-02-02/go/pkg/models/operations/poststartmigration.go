@@ -15,17 +15,21 @@ const (
 	POSTStartMigrationActionEnumStartMigration POSTStartMigrationActionEnum = "StartMigration"
 )
 
+func (e POSTStartMigrationActionEnum) ToPointer() *POSTStartMigrationActionEnum {
+	return &e
+}
+
 func (e *POSTStartMigrationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartMigration":
-		*e = POSTStartMigrationActionEnum(s)
+		*e = POSTStartMigrationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartMigrationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartMigrationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTStartMigrationVersionEnumTwoThousandAndFifteen0202 POSTStartMigrationVersionEnum = "2015-02-02"
 )
 
+func (e POSTStartMigrationVersionEnum) ToPointer() *POSTStartMigrationVersionEnum {
+	return &e
+}
+
 func (e *POSTStartMigrationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTStartMigrationVersionEnum(s)
+		*e = POSTStartMigrationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartMigrationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartMigrationVersionEnum: %v", v)
 	}
 }
 

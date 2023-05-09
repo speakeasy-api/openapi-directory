@@ -13,16 +13,20 @@ const (
 	PolicyTemplateNameEnumBlankPolicy PolicyTemplateNameEnum = "BLANK_POLICY"
 )
 
+func (e PolicyTemplateNameEnum) ToPointer() *PolicyTemplateNameEnum {
+	return &e
+}
+
 func (e *PolicyTemplateNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BLANK_POLICY":
-		*e = PolicyTemplateNameEnum(s)
+		*e = PolicyTemplateNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyTemplateNameEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyTemplateNameEnum: %v", v)
 	}
 }

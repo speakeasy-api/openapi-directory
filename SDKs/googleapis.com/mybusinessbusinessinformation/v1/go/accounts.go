@@ -34,7 +34,10 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // MybusinessbusinessinformationAccountsLocationsCreate - Creates a new Location that will be owned by the logged in user.
 func (s *accounts) MybusinessbusinessinformationAccountsLocationsCreate(ctx context.Context, request operations.MybusinessbusinessinformationAccountsLocationsCreateRequest) (*operations.MybusinessbusinessinformationAccountsLocationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *accounts) MybusinessbusinessinformationAccountsLocationsCreate(ctx cont
 // MybusinessbusinessinformationAccountsLocationsList - Lists the locations for the specified account.
 func (s *accounts) MybusinessbusinessinformationAccountsLocationsList(ctx context.Context, request operations.MybusinessbusinessinformationAccountsLocationsListRequest) (*operations.MybusinessbusinessinformationAccountsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

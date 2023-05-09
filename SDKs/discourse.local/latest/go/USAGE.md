@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AdminGetUserRequest{
-        ID: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.Admin.AdminGetUser(ctx, req)
+    res, err := s.Admin.AdminGetUser(ctx, operations.AdminGetUserRequest{
+        ID: 548814,
+    })
     if err != nil {
         log.Fatal(err)
     }

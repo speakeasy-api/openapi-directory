@@ -14,18 +14,22 @@ const (
 	HighlightTypeEnumThesaurusSynonym HighlightTypeEnum = "THESAURUS_SYNONYM"
 )
 
+func (e HighlightTypeEnum) ToPointer() *HighlightTypeEnum {
+	return &e
+}
+
 func (e *HighlightTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD":
 		fallthrough
 	case "THESAURUS_SYNONYM":
-		*e = HighlightTypeEnum(s)
+		*e = HighlightTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HighlightTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HighlightTypeEnum: %v", v)
 	}
 }

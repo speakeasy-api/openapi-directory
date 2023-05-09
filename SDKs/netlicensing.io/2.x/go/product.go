@@ -107,7 +107,10 @@ func (s *product) CreateProduct(ctx context.Context, request operations.CreatePr
 // Delete a Product by 'number'
 func (s *product) DeleteProduct(ctx context.Context, request operations.DeleteProductRequest, security operations.DeleteProductSecurity) (*operations.DeleteProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/product/{productNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/product/{productNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -168,7 +171,7 @@ func (s *product) DeleteProduct(ctx context.Context, request operations.DeletePr
 
 // ListProducts - List Products
 // Return a list of all configured Products for the current Vendor
-func (s *product) ListProducts(ctx context.Context) (*operations.ListProductsResponse, error) {
+func (s *product) ListProducts(ctx context.Context, security operations.ListProductsSecurity) (*operations.ListProductsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/product"
 
@@ -177,7 +180,7 @@ func (s *product) ListProducts(ctx context.Context) (*operations.ListProductsRes
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -229,7 +232,10 @@ func (s *product) ListProducts(ctx context.Context) (*operations.ListProductsRes
 // Return a Product by 'productNumber'
 func (s *product) ProductNumber(ctx context.Context, request operations.ProductNumberRequest, security operations.ProductNumberSecurity) (*operations.ProductNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/product/{productNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/product/{productNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +294,10 @@ func (s *product) ProductNumber(ctx context.Context, request operations.ProductN
 // Sets the provided properties to a Product. Return an updated Product
 func (s *product) UpdateProduct(ctx context.Context, request operations.UpdateProductRequest, security operations.UpdateProductSecurity) (*operations.UpdateProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/product/{productNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/product/{productNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

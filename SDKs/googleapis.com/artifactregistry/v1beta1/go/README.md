@@ -13,37 +13,35 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/artifactre
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ArtifactregistryProjectsLocationsListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Filter: "nulla",
-        Key: "corrupti",
-        Name: "illum",
-        OauthToken: "vel",
-        PageSize: 623564,
-        PageToken: "deserunt",
-        PrettyPrint: false,
-        QuotaUser: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.ArtifactregistryProjectsLocationsList(ctx, req, operations.ArtifactregistryProjectsLocationsListSecurity{
+    res, err := s.Projects.ArtifactregistryProjectsLocationsList(ctx, operations.ArtifactregistryProjectsLocationsListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Filter: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        Name: "Ben Mueller",
+        OauthToken: sdk.String("iure"),
+        PageSize: sdk.Int64(297534),
+        PageToken: sdk.String("debitis"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("ipsa"),
+        UploadType: sdk.String("delectus"),
+        UploadProtocol: sdk.String("tempora"),
+    }, operations.ArtifactregistryProjectsLocationsListSecurity{
         Option1: &operations.ArtifactregistryProjectsLocationsListSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -64,22 +62,22 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `ArtifactregistryProjectsLocationsList` - Lists information about the supported locations for this service.
-* `ArtifactregistryProjectsLocationsRepositoriesCreate` - Creates a repository. The returned Operation will finish once the repository has been created. Its response will be the created Repository.
-* `ArtifactregistryProjectsLocationsRepositoriesFilesList` - Lists files.
-* `ArtifactregistryProjectsLocationsRepositoriesGetIamPolicy` - Gets the IAM policy for a given resource.
-* `ArtifactregistryProjectsLocationsRepositoriesList` - Lists repositories.
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesList` - Lists packages.
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreate` - Creates a tag.
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesTagsList` - Lists tags.
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatch` - Updates a tag.
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDelete` - Deletes a version and all of its content. The returned operation will complete once the version has been deleted.
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsGet` - Gets a version
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsList` - Lists versions.
-* `ArtifactregistryProjectsLocationsRepositoriesSetIamPolicy` - Updates the IAM policy for a given resource.
-* `ArtifactregistryProjectsLocationsRepositoriesTestIamPermissions` - Tests if the caller has a list of permissions on a resource.
+* [ArtifactregistryProjectsLocationsList](docs/projects/README.md#artifactregistryprojectslocationslist) - Lists information about the supported locations for this service.
+* [ArtifactregistryProjectsLocationsRepositoriesCreate](docs/projects/README.md#artifactregistryprojectslocationsrepositoriescreate) - Creates a repository. The returned Operation will finish once the repository has been created. Its response will be the created Repository.
+* [ArtifactregistryProjectsLocationsRepositoriesFilesList](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesfileslist) - Lists files.
+* [ArtifactregistryProjectsLocationsRepositoriesGetIamPolicy](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesgetiampolicy) - Gets the IAM policy for a given resource.
+* [ArtifactregistryProjectsLocationsRepositoriesList](docs/projects/README.md#artifactregistryprojectslocationsrepositorieslist) - Lists repositories.
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesList](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackageslist) - Lists packages.
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreate](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackagestagscreate) - Creates a tag.
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesTagsList](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackagestagslist) - Lists tags.
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatch](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackagestagspatch) - Updates a tag.
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDelete](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackagesversionsdelete) - Deletes a version and all of its content. The returned operation will complete once the version has been deleted.
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsGet](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackagesversionsget) - Gets a version
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsList](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackagesversionslist) - Lists versions.
+* [ArtifactregistryProjectsLocationsRepositoriesSetIamPolicy](docs/projects/README.md#artifactregistryprojectslocationsrepositoriessetiampolicy) - Updates the IAM policy for a given resource.
+* [ArtifactregistryProjectsLocationsRepositoriesTestIamPermissions](docs/projects/README.md#artifactregistryprojectslocationsrepositoriestestiampermissions) - Tests if the caller has a list of permissions on a resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

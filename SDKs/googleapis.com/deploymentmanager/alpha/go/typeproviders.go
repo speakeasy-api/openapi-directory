@@ -34,7 +34,10 @@ func newTypeProviders(defaultClient, securityClient HTTPClient, serverURL, langu
 // DeploymentmanagerTypeProvidersDelete - Deletes a type provider.
 func (s *typeProviders) DeploymentmanagerTypeProvidersDelete(ctx context.Context, request operations.DeploymentmanagerTypeProvidersDeleteRequest, security operations.DeploymentmanagerTypeProvidersDeleteSecurity) (*operations.DeploymentmanagerTypeProvidersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersDelete(ctx context.Context
 // DeploymentmanagerTypeProvidersGet - Gets information about a specific type provider.
 func (s *typeProviders) DeploymentmanagerTypeProvidersGet(ctx context.Context, request operations.DeploymentmanagerTypeProvidersGetRequest, security operations.DeploymentmanagerTypeProvidersGetSecurity) (*operations.DeploymentmanagerTypeProvidersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersGet(ctx context.Context, r
 // DeploymentmanagerTypeProvidersGetType - Gets a type info for a type provided by a TypeProvider.
 func (s *typeProviders) DeploymentmanagerTypeProvidersGetType(ctx context.Context, request operations.DeploymentmanagerTypeProvidersGetTypeRequest, security operations.DeploymentmanagerTypeProvidersGetTypeSecurity) (*operations.DeploymentmanagerTypeProvidersGetTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}/types/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}/types/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -178,7 +187,10 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersGetType(ctx context.Contex
 // DeploymentmanagerTypeProvidersInsert - Creates a type provider.
 func (s *typeProviders) DeploymentmanagerTypeProvidersInsert(ctx context.Context, request operations.DeploymentmanagerTypeProvidersInsertRequest, security operations.DeploymentmanagerTypeProvidersInsertSecurity) (*operations.DeploymentmanagerTypeProvidersInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TypeProvider", "json")
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersInsert(ctx context.Context
 // DeploymentmanagerTypeProvidersList - Lists all resource type providers for Deployment Manager.
 func (s *typeProviders) DeploymentmanagerTypeProvidersList(ctx context.Context, request operations.DeploymentmanagerTypeProvidersListRequest, security operations.DeploymentmanagerTypeProvidersListSecurity) (*operations.DeploymentmanagerTypeProvidersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +296,10 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersList(ctx context.Context, 
 // DeploymentmanagerTypeProvidersListTypes - Lists all the type info for a TypeProvider.
 func (s *typeProviders) DeploymentmanagerTypeProvidersListTypes(ctx context.Context, request operations.DeploymentmanagerTypeProvidersListTypesRequest, security operations.DeploymentmanagerTypeProvidersListTypesSecurity) (*operations.DeploymentmanagerTypeProvidersListTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}/types", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}/types", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -329,7 +347,10 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersListTypes(ctx context.Cont
 // DeploymentmanagerTypeProvidersPatch - Patches a type provider.
 func (s *typeProviders) DeploymentmanagerTypeProvidersPatch(ctx context.Context, request operations.DeploymentmanagerTypeProvidersPatchRequest, security operations.DeploymentmanagerTypeProvidersPatchSecurity) (*operations.DeploymentmanagerTypeProvidersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TypeProvider1", "json")
 	if err != nil {
@@ -384,7 +405,10 @@ func (s *typeProviders) DeploymentmanagerTypeProvidersPatch(ctx context.Context,
 // DeploymentmanagerTypeProvidersUpdate - Updates a type provider.
 func (s *typeProviders) DeploymentmanagerTypeProvidersUpdate(ctx context.Context, request operations.DeploymentmanagerTypeProvidersUpdateRequest, security operations.DeploymentmanagerTypeProvidersUpdateSecurity) (*operations.DeploymentmanagerTypeProvidersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TypeProvider1", "json")
 	if err != nil {

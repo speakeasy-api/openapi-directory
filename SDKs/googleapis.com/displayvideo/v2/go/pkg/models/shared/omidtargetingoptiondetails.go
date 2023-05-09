@@ -15,19 +15,23 @@ const (
 	OmidTargetingOptionDetailsOmidEnumOmidForMobileDisplayAds OmidTargetingOptionDetailsOmidEnum = "OMID_FOR_MOBILE_DISPLAY_ADS"
 )
 
+func (e OmidTargetingOptionDetailsOmidEnum) ToPointer() *OmidTargetingOptionDetailsOmidEnum {
+	return &e
+}
+
 func (e *OmidTargetingOptionDetailsOmidEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OMID_UNSPECIFIED":
 		fallthrough
 	case "OMID_FOR_MOBILE_DISPLAY_ADS":
-		*e = OmidTargetingOptionDetailsOmidEnum(s)
+		*e = OmidTargetingOptionDetailsOmidEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OmidTargetingOptionDetailsOmidEnum: %s", s)
+		return fmt.Errorf("invalid value for OmidTargetingOptionDetailsOmidEnum: %v", v)
 	}
 }
 

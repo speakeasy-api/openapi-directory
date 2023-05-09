@@ -16,17 +16,21 @@ const (
 	DisassociateResolverRuleXAmzTargetEnumRoute53ResolverDisassociateResolverRule DisassociateResolverRuleXAmzTargetEnum = "Route53Resolver.DisassociateResolverRule"
 )
 
+func (e DisassociateResolverRuleXAmzTargetEnum) ToPointer() *DisassociateResolverRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateResolverRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.DisassociateResolverRule":
-		*e = DisassociateResolverRuleXAmzTargetEnum(s)
+		*e = DisassociateResolverRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateResolverRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateResolverRuleXAmzTargetEnum: %v", v)
 	}
 }
 

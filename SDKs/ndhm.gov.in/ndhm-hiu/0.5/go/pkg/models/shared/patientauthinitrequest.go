@@ -15,19 +15,23 @@ const (
 	PatientAuthInitRequestQueryRequesterTypeEnumHiu PatientAuthInitRequestQueryRequesterTypeEnum = "HIU"
 )
 
+func (e PatientAuthInitRequestQueryRequesterTypeEnum) ToPointer() *PatientAuthInitRequestQueryRequesterTypeEnum {
+	return &e
+}
+
 func (e *PatientAuthInitRequestQueryRequesterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HIP":
 		fallthrough
 	case "HIU":
-		*e = PatientAuthInitRequestQueryRequesterTypeEnum(s)
+		*e = PatientAuthInitRequestQueryRequesterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientAuthInitRequestQueryRequesterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientAuthInitRequestQueryRequesterTypeEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newSavedColumns(defaultClient, securityClient HTTPClient, serverURL, langua
 // DoubleclicksearchSavedColumnsList - Retrieve the list of saved columns for a specified advertiser.
 func (s *savedColumns) DoubleclicksearchSavedColumnsList(ctx context.Context, request operations.DoubleclicksearchSavedColumnsListRequest, security operations.DoubleclicksearchSavedColumnsListSecurity) (*operations.DoubleclicksearchSavedColumnsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/savedcolumns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/savedcolumns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

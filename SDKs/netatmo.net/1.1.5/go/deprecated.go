@@ -35,6 +35,8 @@ func newDeprecated(defaultClient, securityClient HTTPClient, serverURL, language
 
 // Devicelist - The method devicelist returns the list of devices owned by the user, and their modules.
 // A device is identified by its _id (which is its mac address) and each device may have one, several or no modules, also identified by an _id.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *deprecated) Devicelist(ctx context.Context, request operations.DevicelistRequest, security operations.DevicelistSecurity) (*operations.DevicelistResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/devicelist"
@@ -83,6 +85,8 @@ func (s *deprecated) Devicelist(ctx context.Context, request operations.Deviceli
 }
 
 // Getthermstate - The method getthermstate returns the last Thermostat measurements, its current weekly schedule, and, if present, its current manual temperature setpoint.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *deprecated) Getthermstate(ctx context.Context, request operations.GetthermstateRequest, security operations.GetthermstateSecurity) (*operations.GetthermstateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getthermstate"
@@ -131,7 +135,9 @@ func (s *deprecated) Getthermstate(ctx context.Context, request operations.Getth
 }
 
 // Getuser - The method getuser returns information about a user such as prefered language, prefered units, and list of devices.
-func (s *deprecated) Getuser(ctx context.Context) (*operations.GetuserResponse, error) {
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
+func (s *deprecated) Getuser(ctx context.Context, security operations.GetuserSecurity) (*operations.GetuserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getuser"
 
@@ -140,7 +146,7 @@ func (s *deprecated) Getuser(ctx context.Context) (*operations.GetuserResponse, 
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

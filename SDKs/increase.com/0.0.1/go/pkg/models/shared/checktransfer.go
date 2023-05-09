@@ -8,6 +8,22 @@ import (
 	"time"
 )
 
+// CheckTransferTransferApproval - If your account requires approvals for transfers and the transfer was approved, this will contain details of the approval.
+type CheckTransferTransferApproval struct {
+	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the transfer was approved.
+	ApprovedAt time.Time `json:"approved_at"`
+	// If the Transfer was approved by a user in the dashboard, the email address of that user.
+	ApprovedBy string `json:"approved_by"`
+}
+
+// CheckTransferTransferCancellation - If your account requires approvals for transfers and the transfer was not approved, this will contain details of the cancellation.
+type CheckTransferTransferCancellation struct {
+	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the Transfer was canceled.
+	CanceledAt time.Time `json:"canceled_at"`
+	// If the Transfer was canceled by a user in the dashboard, the email address of that user.
+	CanceledBy string `json:"canceled_by"`
+}
+
 // CheckTransferCurrencyEnum - The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the check's currency.
 type CheckTransferCurrencyEnum string
 
@@ -20,12 +36,16 @@ const (
 	CheckTransferCurrencyEnumUsd CheckTransferCurrencyEnum = "USD"
 )
 
+func (e CheckTransferCurrencyEnum) ToPointer() *CheckTransferCurrencyEnum {
+	return &e
+}
+
 func (e *CheckTransferCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -37,10 +57,10 @@ func (e *CheckTransferCurrencyEnum) UnmarshalJSON(data []byte) error {
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = CheckTransferCurrencyEnum(s)
+		*e = CheckTransferCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckTransferCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckTransferCurrencyEnum: %v", v)
 	}
 }
 
@@ -51,17 +71,21 @@ const (
 	CheckTransferCheckTransferDepositTypeEnumCheckTransferDeposit CheckTransferCheckTransferDepositTypeEnum = "check_transfer_deposit"
 )
 
+func (e CheckTransferCheckTransferDepositTypeEnum) ToPointer() *CheckTransferCheckTransferDepositTypeEnum {
+	return &e
+}
+
 func (e *CheckTransferCheckTransferDepositTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "check_transfer_deposit":
-		*e = CheckTransferCheckTransferDepositTypeEnum(s)
+		*e = CheckTransferCheckTransferDepositTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckTransferCheckTransferDepositTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckTransferCheckTransferDepositTypeEnum: %v", v)
 	}
 }
 
@@ -69,6 +93,8 @@ func (e *CheckTransferCheckTransferDepositTypeEnum) UnmarshalJSON(data []byte) e
 type CheckTransferCheckTransferDeposit struct {
 	// The ID for the File containing the image of the rear of the check.
 	BackImageFileID string `json:"back_image_file_id"`
+	// When the check was deposited.
+	DepositedAt time.Time `json:"deposited_at"`
 	// The ID for the File containing the image of the front of the check.
 	FrontImageFileID string `json:"front_image_file_id"`
 	// A constant representing the object's type. For this resource it will always be `check_transfer_deposit`.
@@ -91,13 +117,54 @@ type CheckTransferReturnAddress struct {
 	Zip string `json:"zip"`
 }
 
+// CheckTransferCheckTransferReturnReasonEnum - The reason why the check was returned.
+type CheckTransferCheckTransferReturnReasonEnum string
+
+const (
+	CheckTransferCheckTransferReturnReasonEnumMailDeliveryFailure CheckTransferCheckTransferReturnReasonEnum = "mail_delivery_failure"
+	CheckTransferCheckTransferReturnReasonEnumRefusedByRecipient  CheckTransferCheckTransferReturnReasonEnum = "refused_by_recipient"
+)
+
+func (e CheckTransferCheckTransferReturnReasonEnum) ToPointer() *CheckTransferCheckTransferReturnReasonEnum {
+	return &e
+}
+
+func (e *CheckTransferCheckTransferReturnReasonEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "mail_delivery_failure":
+		fallthrough
+	case "refused_by_recipient":
+		*e = CheckTransferCheckTransferReturnReasonEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CheckTransferCheckTransferReturnReasonEnum: %v", v)
+	}
+}
+
+// CheckTransferCheckTransferReturn - After a check transfer is returned, this will contain supplemental details. A check transfer is returned when the receiver mails a never deposited check back to the bank printed on the check.
+type CheckTransferCheckTransferReturn struct {
+	// If available, a document with additional information about the return.
+	FileID string `json:"file_id"`
+	// The reason why the check was returned.
+	Reason CheckTransferCheckTransferReturnReasonEnum `json:"reason"`
+	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the check was returned.
+	ReturnedAt time.Time `json:"returned_at"`
+	// The identifier of the Transaction that was created to credit you for the returned check.
+	TransactionID string `json:"transaction_id"`
+	// The identifier of the returned Check Transfer.
+	TransferID string `json:"transfer_id"`
+}
+
 // CheckTransferStatusEnum - The lifecycle status of the transfer.
 type CheckTransferStatusEnum string
 
 const (
 	CheckTransferStatusEnumPendingApproval   CheckTransferStatusEnum = "pending_approval"
 	CheckTransferStatusEnumPendingSubmission CheckTransferStatusEnum = "pending_submission"
-	CheckTransferStatusEnumSubmitting        CheckTransferStatusEnum = "submitting"
 	CheckTransferStatusEnumSubmitted         CheckTransferStatusEnum = "submitted"
 	CheckTransferStatusEnumPendingMailing    CheckTransferStatusEnum = "pending_mailing"
 	CheckTransferStatusEnumMailed            CheckTransferStatusEnum = "mailed"
@@ -109,17 +176,19 @@ const (
 	CheckTransferStatusEnumRequiresAttention CheckTransferStatusEnum = "requires_attention"
 )
 
+func (e CheckTransferStatusEnum) ToPointer() *CheckTransferStatusEnum {
+	return &e
+}
+
 func (e *CheckTransferStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending_approval":
 		fallthrough
 	case "pending_submission":
-		fallthrough
-	case "submitting":
 		fallthrough
 	case "submitted":
 		fallthrough
@@ -138,10 +207,10 @@ func (e *CheckTransferStatusEnum) UnmarshalJSON(data []byte) error {
 	case "rejected":
 		fallthrough
 	case "requires_attention":
-		*e = CheckTransferStatusEnum(s)
+		*e = CheckTransferStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckTransferStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckTransferStatusEnum: %v", v)
 	}
 }
 
@@ -152,17 +221,21 @@ const (
 	CheckTransferCheckTransferStopPaymentRequestTypeEnumCheckTransferStopPaymentRequest CheckTransferCheckTransferStopPaymentRequestTypeEnum = "check_transfer_stop_payment_request"
 )
 
+func (e CheckTransferCheckTransferStopPaymentRequestTypeEnum) ToPointer() *CheckTransferCheckTransferStopPaymentRequestTypeEnum {
+	return &e
+}
+
 func (e *CheckTransferCheckTransferStopPaymentRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "check_transfer_stop_payment_request":
-		*e = CheckTransferCheckTransferStopPaymentRequestTypeEnum(s)
+		*e = CheckTransferCheckTransferStopPaymentRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckTransferCheckTransferStopPaymentRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckTransferCheckTransferStopPaymentRequestTypeEnum: %v", v)
 	}
 }
 
@@ -182,6 +255,8 @@ type CheckTransferCheckTransferStopPaymentRequest struct {
 type CheckTransferCheckTransferSubmission struct {
 	// The identitying number of the check.
 	CheckNumber string `json:"check_number"`
+	// When this check transfer was submitted to our check printer.
+	SubmittedAt time.Time `json:"submitted_at"`
 }
 
 // CheckTransferTypeEnum - A constant representing the object's type. For this resource it will always be `check_transfer`.
@@ -191,17 +266,21 @@ const (
 	CheckTransferTypeEnumCheckTransfer CheckTransferTypeEnum = "check_transfer"
 )
 
+func (e CheckTransferTypeEnum) ToPointer() *CheckTransferTypeEnum {
+	return &e
+}
+
 func (e *CheckTransferTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "check_transfer":
-		*e = CheckTransferTypeEnum(s)
+		*e = CheckTransferTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckTransferTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckTransferTypeEnum: %v", v)
 	}
 }
 
@@ -221,6 +300,10 @@ type CheckTransfer struct {
 	AddressZip string `json:"address_zip"`
 	// The transfer amount in USD cents.
 	Amount int64 `json:"amount"`
+	// If your account requires approvals for transfers and the transfer was approved, this will contain details of the approval.
+	Approval CheckTransferTransferApproval `json:"approval"`
+	// If your account requires approvals for transfers and the transfer was not approved, this will contain details of the cancellation.
+	Cancellation CheckTransferTransferCancellation `json:"cancellation"`
 	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the transfer was created.
 	CreatedAt time.Time `json:"created_at"`
 	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the check's currency.
@@ -239,6 +322,8 @@ type CheckTransfer struct {
 	RecipientName string `json:"recipient_name"`
 	// The return address to be printed on the check.
 	ReturnAddress CheckTransferReturnAddress `json:"return_address"`
+	// After a check transfer is returned, this will contain supplemental details. A check transfer is returned when the receiver mails a never deposited check back to the bank printed on the check.
+	ReturnDetails CheckTransferCheckTransferReturn `json:"return_details"`
 	// The lifecycle status of the transfer.
 	Status CheckTransferStatusEnum `json:"status"`
 	// After a stop-payment is requested on the check, this will contain supplemental details.
@@ -247,8 +332,6 @@ type CheckTransfer struct {
 	Submission CheckTransferCheckTransferSubmission `json:"submission"`
 	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the check was submitted.
 	SubmittedAt time.Time `json:"submitted_at"`
-	// If the transfer was created from a template, this will be the template's ID.
-	TemplateID string `json:"template_id"`
 	// The ID for the transaction caused by the transfer.
 	TransactionID string `json:"transaction_id"`
 	// A constant representing the object's type. For this resource it will always be `check_transfer`.

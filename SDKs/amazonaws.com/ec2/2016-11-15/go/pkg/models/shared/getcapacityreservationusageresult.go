@@ -24,12 +24,16 @@ const (
 	GetCapacityReservationUsageResultStateEnumFailed    GetCapacityReservationUsageResultStateEnum = "failed"
 )
 
+func (e GetCapacityReservationUsageResultStateEnum) ToPointer() *GetCapacityReservationUsageResultStateEnum {
+	return &e
+}
+
 func (e *GetCapacityReservationUsageResultStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "expired":
@@ -39,10 +43,10 @@ func (e *GetCapacityReservationUsageResultStateEnum) UnmarshalJSON(data []byte) 
 	case "pending":
 		fallthrough
 	case "failed":
-		*e = GetCapacityReservationUsageResultStateEnum(s)
+		*e = GetCapacityReservationUsageResultStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCapacityReservationUsageResultStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCapacityReservationUsageResultStateEnum: %v", v)
 	}
 }
 

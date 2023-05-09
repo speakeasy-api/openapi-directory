@@ -15,17 +15,21 @@ const (
 	POSTStopDBInstanceAutomatedBackupsReplicationActionEnumStopDbInstanceAutomatedBackupsReplication POSTStopDBInstanceAutomatedBackupsReplicationActionEnum = "StopDBInstanceAutomatedBackupsReplication"
 )
 
+func (e POSTStopDBInstanceAutomatedBackupsReplicationActionEnum) ToPointer() *POSTStopDBInstanceAutomatedBackupsReplicationActionEnum {
+	return &e
+}
+
 func (e *POSTStopDBInstanceAutomatedBackupsReplicationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StopDBInstanceAutomatedBackupsReplication":
-		*e = POSTStopDBInstanceAutomatedBackupsReplicationActionEnum(s)
+		*e = POSTStopDBInstanceAutomatedBackupsReplicationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStopDBInstanceAutomatedBackupsReplicationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStopDBInstanceAutomatedBackupsReplicationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTStopDBInstanceAutomatedBackupsReplicationVersionEnumTwoThousandAndFourteen1031 POSTStopDBInstanceAutomatedBackupsReplicationVersionEnum = "2014-10-31"
 )
 
+func (e POSTStopDBInstanceAutomatedBackupsReplicationVersionEnum) ToPointer() *POSTStopDBInstanceAutomatedBackupsReplicationVersionEnum {
+	return &e
+}
+
 func (e *POSTStopDBInstanceAutomatedBackupsReplicationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTStopDBInstanceAutomatedBackupsReplicationVersionEnum(s)
+		*e = POSTStopDBInstanceAutomatedBackupsReplicationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStopDBInstanceAutomatedBackupsReplicationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStopDBInstanceAutomatedBackupsReplicationVersionEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	FeedConnectionAccountTypeEnumCreditcard FeedConnectionAccountTypeEnum = "CREDITCARD"
 )
 
+func (e FeedConnectionAccountTypeEnum) ToPointer() *FeedConnectionAccountTypeEnum {
+	return &e
+}
+
 func (e *FeedConnectionAccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BANK":
 		fallthrough
 	case "CREDITCARD":
-		*e = FeedConnectionAccountTypeEnum(s)
+		*e = FeedConnectionAccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeedConnectionAccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FeedConnectionAccountTypeEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	FeedConnectionStatusEnumRejected FeedConnectionStatusEnum = "REJECTED"
 )
 
+func (e FeedConnectionStatusEnum) ToPointer() *FeedConnectionStatusEnum {
+	return &e
+}
+
 func (e *FeedConnectionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "REJECTED":
-		*e = FeedConnectionStatusEnum(s)
+		*e = FeedConnectionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeedConnectionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FeedConnectionStatusEnum: %v", v)
 	}
 }
 

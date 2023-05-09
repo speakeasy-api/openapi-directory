@@ -16,17 +16,21 @@ const (
 	GetOrganizationConformancePackDetailedStatusXAmzTargetEnumStarlingDoveServiceGetOrganizationConformancePackDetailedStatus GetOrganizationConformancePackDetailedStatusXAmzTargetEnum = "StarlingDoveService.GetOrganizationConformancePackDetailedStatus"
 )
 
+func (e GetOrganizationConformancePackDetailedStatusXAmzTargetEnum) ToPointer() *GetOrganizationConformancePackDetailedStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetOrganizationConformancePackDetailedStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.GetOrganizationConformancePackDetailedStatus":
-		*e = GetOrganizationConformancePackDetailedStatusXAmzTargetEnum(s)
+		*e = GetOrganizationConformancePackDetailedStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOrganizationConformancePackDetailedStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOrganizationConformancePackDetailedStatusXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -4,6 +4,8 @@ package shared
 
 // TrafficSourceState - Describes the state of a traffic source.
 type TrafficSourceState struct {
+	Identifier    *string
 	State         *string
 	TrafficSource *string
+	Type          *string
 }

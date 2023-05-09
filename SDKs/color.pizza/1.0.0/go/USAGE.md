@@ -2,25 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRequest{
-        List: "nbsIscc",
-        Noduplicates: false,
-        Values: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.Get(ctx, req)
+    res, err := s.Get(ctx, operations.GetRequest{
+        List: shared.PossibleListsEnumNbsIscc.ToPointer(),
+        Noduplicates: sdk.Bool(false),
+        Values: sdk.String("provident"),
+    })
     if err != nil {
         log.Fatal(err)
     }

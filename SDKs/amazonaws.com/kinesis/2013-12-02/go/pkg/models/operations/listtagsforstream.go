@@ -16,17 +16,21 @@ const (
 	ListTagsForStreamXAmzTargetEnumKinesis20131202ListTagsForStream ListTagsForStreamXAmzTargetEnum = "Kinesis_20131202.ListTagsForStream"
 )
 
+func (e ListTagsForStreamXAmzTargetEnum) ToPointer() *ListTagsForStreamXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListTagsForStreamXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kinesis_20131202.ListTagsForStream":
-		*e = ListTagsForStreamXAmzTargetEnum(s)
+		*e = ListTagsForStreamXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTagsForStreamXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTagsForStreamXAmzTargetEnum: %v", v)
 	}
 }
 

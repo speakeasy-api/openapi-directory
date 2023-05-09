@@ -25,21 +25,25 @@ const (
 	GetSpacesIDAccountingYear200ApplicationJSONLevelEnumPublic       GetSpacesIDAccountingYear200ApplicationJSONLevelEnum = "public"
 )
 
+func (e GetSpacesIDAccountingYear200ApplicationJSONLevelEnum) ToPointer() *GetSpacesIDAccountingYear200ApplicationJSONLevelEnum {
+	return &e
+}
+
 func (e *GetSpacesIDAccountingYear200ApplicationJSONLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = GetSpacesIDAccountingYear200ApplicationJSONLevelEnum(s)
+		*e = GetSpacesIDAccountingYear200ApplicationJSONLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesIDAccountingYear200ApplicationJSONLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesIDAccountingYear200ApplicationJSONLevelEnum: %v", v)
 	}
 }
 

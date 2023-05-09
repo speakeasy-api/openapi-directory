@@ -13,35 +13,33 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/sasportal/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SasportalCustomersListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
-        PageSize: 847252,
-        PageToken: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.Customers.SasportalCustomersList(ctx, req, operations.SasportalCustomersListSecurity{
+    res, err := s.Customers.SasportalCustomersList(ctx, operations.SasportalCustomersListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
+        PageSize: sdk.Int64(847252),
+        PageToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.SasportalCustomersListSecurity{
         Option1: &operations.SasportalCustomersListSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -62,37 +60,37 @@ func main() {
 ## Available Resources and Operations
 
 
-### Customers
+### [Customers](docs/customers/README.md)
 
-* `SasportalCustomersList` - Returns a list of requested customers.
-* `SasportalCustomersProvisionDeployment` - Creates a new SAS deployment through the GCP workflow. Creates a SAS organization if an organization match is not found.
+* [SasportalCustomersList](docs/customers/README.md#sasportalcustomerslist) - Returns a list of requested customers.
+* [SasportalCustomersProvisionDeployment](docs/customers/README.md#sasportalcustomersprovisiondeployment) - Creates a new SAS deployment through the GCP workflow. Creates a SAS organization if an organization match is not found.
 
-### Installer
+### [Installer](docs/installer/README.md)
 
-* `SasportalInstallerGenerateSecret` - Generates a secret to be used with the ValidateInstaller.
-* `SasportalInstallerValidate` - Validates the identity of a Certified Professional Installer (CPI).
+* [SasportalInstallerGenerateSecret](docs/installer/README.md#sasportalinstallergeneratesecret) - Generates a secret to be used with the ValidateInstaller.
+* [SasportalInstallerValidate](docs/installer/README.md#sasportalinstallervalidate) - Validates the identity of a Certified Professional Installer (CPI).
 
-### Nodes
+### [Nodes](docs/nodes/README.md)
 
-* `SasportalNodesDevicesSignDevice` - Signs a device.
-* `SasportalNodesDevicesUpdateSigned` - Updates a signed device.
-* `SasportalNodesNodesDelete` - Deletes a node.
-* `SasportalNodesNodesDeploymentsCreate` - Creates a new deployment.
-* `SasportalNodesNodesDeploymentsList` - Lists deployments.
-* `SasportalNodesNodesDevicesCreate` - Creates a device under a node or customer.
-* `SasportalNodesNodesDevicesCreateSigned` - Creates a signed device under a node or customer.
-* `SasportalNodesNodesDevicesList` - Lists devices under a node or customer.
-* `SasportalNodesNodesGet` - Returns a requested node.
-* `SasportalNodesNodesMove` - Moves a node under another node or customer.
-* `SasportalNodesNodesNodesCreate` - Creates a new node.
-* `SasportalNodesNodesNodesList` - Lists nodes.
-* `SasportalNodesNodesPatch` - Updates an existing node.
+* [SasportalNodesDevicesSignDevice](docs/nodes/README.md#sasportalnodesdevicessigndevice) - Signs a device.
+* [SasportalNodesDevicesUpdateSigned](docs/nodes/README.md#sasportalnodesdevicesupdatesigned) - Updates a signed device.
+* [SasportalNodesNodesDelete](docs/nodes/README.md#sasportalnodesnodesdelete) - Deletes a node.
+* [SasportalNodesNodesDeploymentsCreate](docs/nodes/README.md#sasportalnodesnodesdeploymentscreate) - Creates a new deployment.
+* [SasportalNodesNodesDeploymentsList](docs/nodes/README.md#sasportalnodesnodesdeploymentslist) - Lists deployments.
+* [SasportalNodesNodesDevicesCreate](docs/nodes/README.md#sasportalnodesnodesdevicescreate) - Creates a device under a node or customer.
+* [SasportalNodesNodesDevicesCreateSigned](docs/nodes/README.md#sasportalnodesnodesdevicescreatesigned) - Creates a signed device under a node or customer.
+* [SasportalNodesNodesDevicesList](docs/nodes/README.md#sasportalnodesnodesdeviceslist) - Lists devices under a node or customer.
+* [SasportalNodesNodesGet](docs/nodes/README.md#sasportalnodesnodesget) - Returns a requested node.
+* [SasportalNodesNodesMove](docs/nodes/README.md#sasportalnodesnodesmove) - Moves a node under another node or customer.
+* [SasportalNodesNodesNodesCreate](docs/nodes/README.md#sasportalnodesnodesnodescreate) - Creates a new node.
+* [SasportalNodesNodesNodesList](docs/nodes/README.md#sasportalnodesnodesnodeslist) - Lists nodes.
+* [SasportalNodesNodesPatch](docs/nodes/README.md#sasportalnodesnodespatch) - Updates an existing node.
 
-### Policies
+### [Policies](docs/policies/README.md)
 
-* `SasportalPoliciesGet` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `SasportalPoliciesSet` - Sets the access control policy on the specified resource. Replaces any existing policy.
-* `SasportalPoliciesTest` - Returns permissions that a caller has on the specified resource.
+* [SasportalPoliciesGet](docs/policies/README.md#sasportalpoliciesget) - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* [SasportalPoliciesSet](docs/policies/README.md#sasportalpoliciesset) - Sets the access control policy on the specified resource. Replaces any existing policy.
+* [SasportalPoliciesTest](docs/policies/README.md#sasportalpoliciestest) - Returns permissions that a caller has on the specified resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

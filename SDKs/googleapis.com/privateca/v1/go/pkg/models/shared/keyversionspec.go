@@ -22,12 +22,16 @@ const (
 	KeyVersionSpecAlgorithmEnumEcP384Sha384                 KeyVersionSpecAlgorithmEnum = "EC_P384_SHA384"
 )
 
+func (e KeyVersionSpecAlgorithmEnum) ToPointer() *KeyVersionSpecAlgorithmEnum {
+	return &e
+}
+
 func (e *KeyVersionSpecAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIGN_HASH_ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "RSA_PSS_2048_SHA256":
@@ -45,10 +49,10 @@ func (e *KeyVersionSpecAlgorithmEnum) UnmarshalJSON(data []byte) error {
 	case "EC_P256_SHA256":
 		fallthrough
 	case "EC_P384_SHA384":
-		*e = KeyVersionSpecAlgorithmEnum(s)
+		*e = KeyVersionSpecAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyVersionSpecAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyVersionSpecAlgorithmEnum: %v", v)
 	}
 }
 

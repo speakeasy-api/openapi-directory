@@ -16,19 +16,23 @@ const (
 	ComputeNodeSchedulingStateEnumDisabled ComputeNodeSchedulingStateEnum = "disabled"
 )
 
+func (e ComputeNodeSchedulingStateEnum) ToPointer() *ComputeNodeSchedulingStateEnum {
+	return &e
+}
+
 func (e *ComputeNodeSchedulingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
-		*e = ComputeNodeSchedulingStateEnum(s)
+		*e = ComputeNodeSchedulingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeNodeSchedulingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeNodeSchedulingStateEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	ComputeNodeStateEnumOffline             ComputeNodeStateEnum = "offline"
 )
 
+func (e ComputeNodeStateEnum) ToPointer() *ComputeNodeStateEnum {
+	return &e
+}
+
 func (e *ComputeNodeStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idle":
 		fallthrough
 	case "rebooting":
@@ -79,10 +87,10 @@ func (e *ComputeNodeStateEnum) UnmarshalJSON(data []byte) error {
 	case "leavingpool":
 		fallthrough
 	case "offline":
-		*e = ComputeNodeStateEnum(s)
+		*e = ComputeNodeStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeNodeStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeNodeStateEnum: %v", v)
 	}
 }
 

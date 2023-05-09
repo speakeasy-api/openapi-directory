@@ -12,7 +12,7 @@ type Comment struct {
 	Creator *Actor `json:"creator,omitempty"`
 	// Output only. The resource name for the comment.
 	Name *string `json:"name,omitempty"`
-	// Output only. An automatically generated plain text version of body with all rich text syntax stripped.
+	// Output only. DEPRECATED. An automatically generated plain text version of body with all rich text syntax stripped.
 	PlainTextBody *string `json:"plainTextBody,omitempty"`
 }
 

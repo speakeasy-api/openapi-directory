@@ -14,18 +14,22 @@ const (
 	AugmentedManifestsDocumentTypeFormatEnumSemiStructuredDocument AugmentedManifestsDocumentTypeFormatEnum = "SEMI_STRUCTURED_DOCUMENT"
 )
 
+func (e AugmentedManifestsDocumentTypeFormatEnum) ToPointer() *AugmentedManifestsDocumentTypeFormatEnum {
+	return &e
+}
+
 func (e *AugmentedManifestsDocumentTypeFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLAIN_TEXT_DOCUMENT":
 		fallthrough
 	case "SEMI_STRUCTURED_DOCUMENT":
-		*e = AugmentedManifestsDocumentTypeFormatEnum(s)
+		*e = AugmentedManifestsDocumentTypeFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AugmentedManifestsDocumentTypeFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for AugmentedManifestsDocumentTypeFormatEnum: %v", v)
 	}
 }

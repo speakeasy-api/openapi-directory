@@ -2,49 +2,47 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Platforms.IdeahubPlatformsPropertiesIdeaActivitiesCreate(ctx, operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleSearchIdeahubV1betaIdeaActivity: &shared.GoogleSearchIdeahubV1betaIdeaActivity{
             Ideas: []string{
                 "distinctio",
                 "quibusdam",
                 "unde",
             },
-            Name: "nulla",
+            Name: sdk.String("Johnnie Stamm"),
             Topics: []string{
-                "illum",
-                "vel",
-                "error",
+                "suscipit",
+                "iure",
+                "magnam",
             },
-            Type: "POST_DELETED",
-            URI: "http://innocent-effect.org",
+            Type: shared.GoogleSearchIdeahubV1betaIdeaActivityTypeEnumPostUnpublished.ToPointer(),
+            URI: sdk.String("http://whirlwind-diver.info"),
         },
-        AccessToken: "ipsa",
-        Alt: "proto",
-        Callback: "tempora",
-        Fields: "suscipit",
-        Key: "molestiae",
-        OauthToken: "minus",
-        Parent: "placeat",
-        PrettyPrint: false,
-        QuotaUser: "voluptatum",
-        UploadType: "iusto",
-        UploadProtocol: "excepturi",
-    }
-
-    ctx := context.Background()
-    res, err := s.Platforms.IdeahubPlatformsPropertiesIdeaActivitiesCreate(ctx, req)
+        AccessToken: sdk.String("molestiae"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("placeat"),
+        Fields: sdk.String("voluptatum"),
+        Key: sdk.String("iusto"),
+        OauthToken: sdk.String("excepturi"),
+        Parent: "nisi",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("recusandae"),
+        UploadType: sdk.String("temporibus"),
+        UploadProtocol: sdk.String("ab"),
+    })
     if err != nil {
         log.Fatal(err)
     }

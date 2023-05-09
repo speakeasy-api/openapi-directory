@@ -8,7 +8,7 @@ type TriggerInput struct {
 	Channel *string `json:"channel,omitempty"`
 	// Represents a target of an invocation over HTTP.
 	Destination *Destination `json:"destination,omitempty"`
-	// Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This will be set to `application/json` if the value is not defined.
+	// Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This is set to `application/json` if the value is not defined.
 	EventDataContentType *string `json:"eventDataContentType,omitempty"`
 	// Required. Unordered list. The list of filters that applies to event attributes. Only events that match all the provided filters are sent to the destination.
 	EventFilters []EventFilter `json:"eventFilters,omitempty"`
@@ -34,7 +34,7 @@ type Trigger struct {
 	Destination *Destination `json:"destination,omitempty"`
 	// Output only. This checksum is computed by the server based on the value of other fields, and might be sent only on create requests to ensure that the client has an up-to-date value before proceeding.
 	Etag *string `json:"etag,omitempty"`
-	// Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This will be set to `application/json` if the value is not defined.
+	// Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This is set to `application/json` if the value is not defined.
 	EventDataContentType *string `json:"eventDataContentType,omitempty"`
 	// Required. Unordered list. The list of filters that applies to event attributes. Only events that match all the provided filters are sent to the destination.
 	EventFilters []EventFilter `json:"eventFilters,omitempty"`

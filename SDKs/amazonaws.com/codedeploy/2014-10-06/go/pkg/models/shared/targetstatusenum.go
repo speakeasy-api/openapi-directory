@@ -19,12 +19,16 @@ const (
 	TargetStatusEnumReady      TargetStatusEnum = "Ready"
 )
 
+func (e TargetStatusEnum) ToPointer() *TargetStatusEnum {
+	return &e
+}
+
 func (e *TargetStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "InProgress":
@@ -38,9 +42,9 @@ func (e *TargetStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Unknown":
 		fallthrough
 	case "Ready":
-		*e = TargetStatusEnum(s)
+		*e = TargetStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetStatusEnum: %v", v)
 	}
 }

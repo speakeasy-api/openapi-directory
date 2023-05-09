@@ -16,17 +16,21 @@ const (
 	PostCommentForPullRequestXAmzTargetEnumCodeCommit20150413PostCommentForPullRequest PostCommentForPullRequestXAmzTargetEnum = "CodeCommit_20150413.PostCommentForPullRequest"
 )
 
+func (e PostCommentForPullRequestXAmzTargetEnum) ToPointer() *PostCommentForPullRequestXAmzTargetEnum {
+	return &e
+}
+
 func (e *PostCommentForPullRequestXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.PostCommentForPullRequest":
-		*e = PostCommentForPullRequestXAmzTargetEnum(s)
+		*e = PostCommentForPullRequestXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostCommentForPullRequestXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PostCommentForPullRequestXAmzTargetEnum: %v", v)
 	}
 }
 

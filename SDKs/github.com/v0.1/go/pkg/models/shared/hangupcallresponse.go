@@ -17,12 +17,16 @@ const (
 	HangupCallResponseMessageEnumHangupCallFailed                                    HangupCallResponseMessageEnum = "Hangup Call Failed"
 )
 
+func (e HangupCallResponseMessageEnum) ToPointer() *HangupCallResponseMessageEnum {
+	return &e
+}
+
 func (e *HangupCallResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Hangup Call Executed":
 		fallthrough
 	case "CallUUID or RequestUUID Parameter must be present":
@@ -30,10 +34,10 @@ func (e *HangupCallResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "Both CallUUID and RequestUUID Parameters cannot be present":
 		fallthrough
 	case "Hangup Call Failed":
-		*e = HangupCallResponseMessageEnum(s)
+		*e = HangupCallResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HangupCallResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for HangupCallResponseMessageEnum: %v", v)
 	}
 }
 

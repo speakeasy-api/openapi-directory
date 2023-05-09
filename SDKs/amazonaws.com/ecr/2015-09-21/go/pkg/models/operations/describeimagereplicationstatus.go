@@ -16,17 +16,21 @@ const (
 	DescribeImageReplicationStatusXAmzTargetEnumAmazonEc2ContainerRegistryV20150921DescribeImageReplicationStatus DescribeImageReplicationStatusXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.DescribeImageReplicationStatus"
 )
 
+func (e DescribeImageReplicationStatusXAmzTargetEnum) ToPointer() *DescribeImageReplicationStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeImageReplicationStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.DescribeImageReplicationStatus":
-		*e = DescribeImageReplicationStatusXAmzTargetEnum(s)
+		*e = DescribeImageReplicationStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImageReplicationStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImageReplicationStatusXAmzTargetEnum: %v", v)
 	}
 }
 

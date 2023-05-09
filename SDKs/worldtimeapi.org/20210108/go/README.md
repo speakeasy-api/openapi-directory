@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/worldtimeapi.org/20210108
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -40,20 +38,20 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetIP` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
-* `GetIPTxt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
-* `GetIPIpv4` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
-* `GetIPIpv4Txt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
-* `GetTimezone` - a listing of all timezones.
-* `GetTimezoneTxt` - a listing of all timezones.
-* `GetTimezoneArea` - a listing of all timezones available for that area.
-* `GetTimezoneAreaTxt` - a listing of all timezones available for that area.
-* `GetTimezoneAreaLocation` - request the current time for a timezone.
-* `GetTimezoneAreaLocationTxt` - request the current time for a timezone.
-* `GetTimezoneAreaLocationRegion` - request the current time for a timezone.
-* `GetTimezoneAreaLocationRegionTxt` - request the current time for a timezone.
+* [GetIP](docs/sdk/README.md#getip) - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
+* [GetIPTxt](docs/sdk/README.md#getiptxt) - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
+* [GetIPIpv4](docs/sdk/README.md#getipipv4) - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
+* [GetIPIpv4Txt](docs/sdk/README.md#getipipv4txt) - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
+* [GetTimezone](docs/sdk/README.md#gettimezone) - a listing of all timezones.
+* [GetTimezoneTxt](docs/sdk/README.md#gettimezonetxt) - a listing of all timezones.
+* [GetTimezoneArea](docs/sdk/README.md#gettimezonearea) - a listing of all timezones available for that area.
+* [GetTimezoneAreaTxt](docs/sdk/README.md#gettimezoneareatxt) - a listing of all timezones available for that area.
+* [GetTimezoneAreaLocation](docs/sdk/README.md#gettimezonearealocation) - request the current time for a timezone.
+* [GetTimezoneAreaLocationTxt](docs/sdk/README.md#gettimezonearealocationtxt) - request the current time for a timezone.
+* [GetTimezoneAreaLocationRegion](docs/sdk/README.md#gettimezonearealocationregion) - request the current time for a timezone.
+* [GetTimezoneAreaLocationRegionTxt](docs/sdk/README.md#gettimezonearealocationregiontxt) - request the current time for a timezone.
 <!-- End SDK Available Operations -->
 
 ### Maturity

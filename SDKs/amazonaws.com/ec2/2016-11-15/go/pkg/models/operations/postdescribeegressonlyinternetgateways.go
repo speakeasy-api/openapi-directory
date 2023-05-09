@@ -15,17 +15,21 @@ const (
 	POSTDescribeEgressOnlyInternetGatewaysActionEnumDescribeEgressOnlyInternetGateways POSTDescribeEgressOnlyInternetGatewaysActionEnum = "DescribeEgressOnlyInternetGateways"
 )
 
+func (e POSTDescribeEgressOnlyInternetGatewaysActionEnum) ToPointer() *POSTDescribeEgressOnlyInternetGatewaysActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeEgressOnlyInternetGatewaysActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeEgressOnlyInternetGateways":
-		*e = POSTDescribeEgressOnlyInternetGatewaysActionEnum(s)
+		*e = POSTDescribeEgressOnlyInternetGatewaysActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeEgressOnlyInternetGatewaysActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeEgressOnlyInternetGatewaysActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeEgressOnlyInternetGatewaysVersionEnumTwoThousandAndSixteen1115 POSTDescribeEgressOnlyInternetGatewaysVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeEgressOnlyInternetGatewaysVersionEnum) ToPointer() *POSTDescribeEgressOnlyInternetGatewaysVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeEgressOnlyInternetGatewaysVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeEgressOnlyInternetGatewaysVersionEnum(s)
+		*e = POSTDescribeEgressOnlyInternetGatewaysVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeEgressOnlyInternetGatewaysVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeEgressOnlyInternetGatewaysVersionEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	GoogleCloudBeyondcorpAppconnectorsV1ResourceInfoStatusEnumDegraded                GoogleCloudBeyondcorpAppconnectorsV1ResourceInfoStatusEnum = "DEGRADED"
 )
 
+func (e GoogleCloudBeyondcorpAppconnectorsV1ResourceInfoStatusEnum) ToPointer() *GoogleCloudBeyondcorpAppconnectorsV1ResourceInfoStatusEnum {
+	return &e
+}
+
 func (e *GoogleCloudBeyondcorpAppconnectorsV1ResourceInfoStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEALTH_STATUS_UNSPECIFIED":
 		fallthrough
 	case "HEALTHY":
@@ -33,10 +37,10 @@ func (e *GoogleCloudBeyondcorpAppconnectorsV1ResourceInfoStatusEnum) UnmarshalJS
 	case "UNRESPONSIVE":
 		fallthrough
 	case "DEGRADED":
-		*e = GoogleCloudBeyondcorpAppconnectorsV1ResourceInfoStatusEnum(s)
+		*e = GoogleCloudBeyondcorpAppconnectorsV1ResourceInfoStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudBeyondcorpAppconnectorsV1ResourceInfoStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudBeyondcorpAppconnectorsV1ResourceInfoStatusEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DescribeCodeRepositoryXAmzTargetEnumSageMakerDescribeCodeRepository DescribeCodeRepositoryXAmzTargetEnum = "SageMaker.DescribeCodeRepository"
 )
 
+func (e DescribeCodeRepositoryXAmzTargetEnum) ToPointer() *DescribeCodeRepositoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeCodeRepositoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DescribeCodeRepository":
-		*e = DescribeCodeRepositoryXAmzTargetEnum(s)
+		*e = DescribeCodeRepositoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeCodeRepositoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeCodeRepositoryXAmzTargetEnum: %v", v)
 	}
 }
 

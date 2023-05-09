@@ -22,12 +22,16 @@ const (
 	DeliverInfoTargetEnumPscVpcSc            DeliverInfoTargetEnum = "PSC_VPC_SC"
 )
 
+func (e DeliverInfoTargetEnum) ToPointer() *DeliverInfoTargetEnum {
+	return &e
+}
+
 func (e *DeliverInfoTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_UNSPECIFIED":
 		fallthrough
 	case "INSTANCE":
@@ -45,10 +49,10 @@ func (e *DeliverInfoTargetEnum) UnmarshalJSON(data []byte) error {
 	case "PSC_GOOGLE_API":
 		fallthrough
 	case "PSC_VPC_SC":
-		*e = DeliverInfoTargetEnum(s)
+		*e = DeliverInfoTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliverInfoTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliverInfoTargetEnum: %v", v)
 	}
 }
 

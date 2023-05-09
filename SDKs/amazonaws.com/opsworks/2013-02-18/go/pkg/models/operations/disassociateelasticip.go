@@ -16,17 +16,21 @@ const (
 	DisassociateElasticIPXAmzTargetEnumOpsWorks20130218DisassociateElasticIP DisassociateElasticIPXAmzTargetEnum = "OpsWorks_20130218.DisassociateElasticIp"
 )
 
+func (e DisassociateElasticIPXAmzTargetEnum) ToPointer() *DisassociateElasticIPXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateElasticIPXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DisassociateElasticIp":
-		*e = DisassociateElasticIPXAmzTargetEnum(s)
+		*e = DisassociateElasticIPXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateElasticIPXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateElasticIPXAmzTargetEnum: %v", v)
 	}
 }
 

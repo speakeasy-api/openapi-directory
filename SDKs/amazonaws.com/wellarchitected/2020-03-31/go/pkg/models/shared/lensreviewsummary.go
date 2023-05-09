@@ -8,14 +8,14 @@ import (
 
 // LensReviewSummary - A lens review summary of a workload.
 type LensReviewSummary struct {
-	// <p>The alias of the lens.</p> <p>For Amazon Web Services official lenses, this is either the lens alias, such as <code>serverless</code>, or the lens ARN, such as <code>arn:aws:wellarchitected:us-west-2::lens/serverless</code>.</p> <p>For custom lenses, this is the lens ARN, such as <code>arn:aws:wellarchitected:us-east-1:123456789012:lens/my-lens</code>. </p> <p>Each lens is identified by its <a>LensSummary$LensAlias</a>.</p>
+	// <p>The alias of the lens.</p> <p>For Amazon Web Services official lenses, this is either the lens alias, such as <code>serverless</code>, or the lens ARN, such as <code>arn:aws:wellarchitected:us-east-1::lens/serverless</code>. Note that some operations (such as ExportLens and CreateLensShare) are not permitted on Amazon Web Services official lenses.</p> <p>For custom lenses, this is the lens ARN, such as <code>arn:aws:wellarchitected:us-west-2:123456789012:lens/0123456789abcdef01234567890abcdef</code>. </p> <p>Each lens is identified by its <a>LensSummary$LensAlias</a>.</p>
 	LensAlias *string `json:"LensAlias,omitempty"`
 	LensArn   *string `json:"LensArn,omitempty"`
 	// The full name of the lens.
 	LensName    *string         `json:"LensName,omitempty"`
 	LensStatus  *LensStatusEnum `json:"LensStatus,omitempty"`
 	LensVersion *string         `json:"LensVersion,omitempty"`
-	// A map from risk names to the count of how questions have that rating.
+	// A map from risk names to the count of how many questions have that rating.
 	RiskCounts map[string]int64 `json:"RiskCounts,omitempty"`
 	// The date and time recorded.
 	UpdatedAt *time.Time `json:"UpdatedAt,omitempty"`

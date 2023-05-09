@@ -6,6 +6,8 @@ package shared
 type GoogleCloudRunV2Volume struct {
 	// Represents a set of Cloud SQL instances. Each one will be available under /cloudsql/[instance]. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run.
 	CloudSQLInstance *GoogleCloudRunV2CloudSQLInstance `json:"cloudSqlInstance,omitempty"`
+	// Ephemeral storage which can be backed by real disks (HD, SSD), network storage or memory (i.e. tmpfs). For now only in memory (tmpfs) is supported. It is ephemeral in the sense that when the sandbox is taken down, the data is destroyed with it (it does not persist across sandbox runs).
+	EmptyDir *GoogleCloudRunV2EmptyDirVolumeSource `json:"emptyDir,omitempty"`
 	// Required. Volume's name.
 	Name *string `json:"name,omitempty"`
 	// The secret's value will be presented as the content of a file whose name is defined in the item path. If no items are defined, the name of the file is the secret.

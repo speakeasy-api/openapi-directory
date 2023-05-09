@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -18,14 +17,12 @@ func main() {
         }),
     )
 
-    req := shared.NumberDetails{
+    ctx := context.Background()
+    res, err := s.BuyANumber(ctx, shared.NumberDetails{
         Country: "GB",
         Msisdn: "447700900000",
-        TargetAPIKey: "1a2345b7",
-    }
-
-    ctx := context.Background()
-    res, err := s.BuyANumber(ctx, req)
+        TargetAPIKey: sdk.String("1a2345b7"),
+    })
     if err != nil {
         log.Fatal(err)
     }

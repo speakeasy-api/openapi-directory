@@ -16,21 +16,25 @@ const (
 	LicenseEditorialContentSizeEnumOriginal LicenseEditorialContentSizeEnum = "original"
 )
 
+func (e LicenseEditorialContentSizeEnum) ToPointer() *LicenseEditorialContentSizeEnum {
+	return &e
+}
+
 func (e *LicenseEditorialContentSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "small":
 		fallthrough
 	case "medium":
 		fallthrough
 	case "original":
-		*e = LicenseEditorialContentSizeEnum(s)
+		*e = LicenseEditorialContentSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseEditorialContentSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseEditorialContentSizeEnum: %v", v)
 	}
 }
 

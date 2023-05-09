@@ -15,17 +15,21 @@ const (
 	GETListExportsActionEnumListExports GETListExportsActionEnum = "ListExports"
 )
 
+func (e GETListExportsActionEnum) ToPointer() *GETListExportsActionEnum {
+	return &e
+}
+
 func (e *GETListExportsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListExports":
-		*e = GETListExportsActionEnum(s)
+		*e = GETListExportsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListExportsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListExportsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListExportsVersionEnumTwoThousandAndTen0515 GETListExportsVersionEnum = "2010-05-15"
 )
 
+func (e GETListExportsVersionEnum) ToPointer() *GETListExportsVersionEnum {
+	return &e
+}
+
 func (e *GETListExportsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETListExportsVersionEnum(s)
+		*e = GETListExportsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListExportsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListExportsVersionEnum: %v", v)
 	}
 }
 

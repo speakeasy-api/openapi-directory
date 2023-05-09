@@ -17,19 +17,23 @@ const (
 	PlayerDetailsByRookieDraftYearFormatEnumJSON PlayerDetailsByRookieDraftYearFormatEnum = "JSON"
 )
 
+func (e PlayerDetailsByRookieDraftYearFormatEnum) ToPointer() *PlayerDetailsByRookieDraftYearFormatEnum {
+	return &e
+}
+
 func (e *PlayerDetailsByRookieDraftYearFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = PlayerDetailsByRookieDraftYearFormatEnum(s)
+		*e = PlayerDetailsByRookieDraftYearFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlayerDetailsByRookieDraftYearFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PlayerDetailsByRookieDraftYearFormatEnum: %v", v)
 	}
 }
 

@@ -57,21 +57,25 @@ const (
 	ClassroomCoursesCourseWorkStudentSubmissionsListLateEnumNotLateOnly           ClassroomCoursesCourseWorkStudentSubmissionsListLateEnum = "NOT_LATE_ONLY"
 )
 
+func (e ClassroomCoursesCourseWorkStudentSubmissionsListLateEnum) ToPointer() *ClassroomCoursesCourseWorkStudentSubmissionsListLateEnum {
+	return &e
+}
+
 func (e *ClassroomCoursesCourseWorkStudentSubmissionsListLateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LATE_VALUES_UNSPECIFIED":
 		fallthrough
 	case "LATE_ONLY":
 		fallthrough
 	case "NOT_LATE_ONLY":
-		*e = ClassroomCoursesCourseWorkStudentSubmissionsListLateEnum(s)
+		*e = ClassroomCoursesCourseWorkStudentSubmissionsListLateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassroomCoursesCourseWorkStudentSubmissionsListLateEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassroomCoursesCourseWorkStudentSubmissionsListLateEnum: %v", v)
 	}
 }
 
@@ -86,12 +90,16 @@ const (
 	ClassroomCoursesCourseWorkStudentSubmissionsListStatesEnumReclaimedByStudent         ClassroomCoursesCourseWorkStudentSubmissionsListStatesEnum = "RECLAIMED_BY_STUDENT"
 )
 
+func (e ClassroomCoursesCourseWorkStudentSubmissionsListStatesEnum) ToPointer() *ClassroomCoursesCourseWorkStudentSubmissionsListStatesEnum {
+	return &e
+}
+
 func (e *ClassroomCoursesCourseWorkStudentSubmissionsListStatesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBMISSION_STATE_UNSPECIFIED":
 		fallthrough
 	case "NEW":
@@ -103,10 +111,10 @@ func (e *ClassroomCoursesCourseWorkStudentSubmissionsListStatesEnum) UnmarshalJS
 	case "RETURNED":
 		fallthrough
 	case "RECLAIMED_BY_STUDENT":
-		*e = ClassroomCoursesCourseWorkStudentSubmissionsListStatesEnum(s)
+		*e = ClassroomCoursesCourseWorkStudentSubmissionsListStatesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassroomCoursesCourseWorkStudentSubmissionsListStatesEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassroomCoursesCourseWorkStudentSubmissionsListStatesEnum: %v", v)
 	}
 }
 

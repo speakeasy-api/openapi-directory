@@ -16,17 +16,21 @@ const (
 	AssociateNodeXAmzTargetEnumOpsWorksCmV20161101AssociateNode AssociateNodeXAmzTargetEnum = "OpsWorksCM_V2016_11_01.AssociateNode"
 )
 
+func (e AssociateNodeXAmzTargetEnum) ToPointer() *AssociateNodeXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateNodeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorksCM_V2016_11_01.AssociateNode":
-		*e = AssociateNodeXAmzTargetEnum(s)
+		*e = AssociateNodeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateNodeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateNodeXAmzTargetEnum: %v", v)
 	}
 }
 

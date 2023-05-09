@@ -13,33 +13,34 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/websecurit
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ScanConfig: &shared.ScanConfig{
             Authentication: &shared.Authentication{
                 CustomAccount: &shared.CustomAccount{
-                    LoginURL: "provident",
-                    Password: "distinctio",
-                    Username: "Rosalinda_Mitchell84",
+                    LoginURL: sdk.String("provident"),
+                    Password: sdk.String("distinctio"),
+                    Username: sdk.String("Rosalinda_Mitchell84"),
                 },
                 GoogleAccount: &shared.GoogleAccount{
-                    Password: "vel",
-                    Username: "Linda.Oberbrunner",
+                    Password: sdk.String("vel"),
+                    Username: sdk.String("Linda.Oberbrunner"),
                 },
                 IapCredential: &shared.IapCredential{
                     IapTestServiceAccountInfo: &shared.IapTestServiceAccountInfo{
-                        TargetAudienceClientID: "magnam",
+                        TargetAudienceClientID: sdk.String("magnam"),
                     },
                 },
             },
@@ -49,70 +50,75 @@ func main() {
                 "tempora",
                 "suscipit",
             },
-            DisplayName: "molestiae",
-            ExportToSecurityCommandCenter: "DISABLED",
-            IgnoreHTTPStatusErrors: false,
+            DisplayName: sdk.String("molestiae"),
+            ExportToSecurityCommandCenter: shared.ScanConfigExportToSecurityCommandCenterEnumDisabled.ToPointer(),
+            IgnoreHTTPStatusErrors: sdk.Bool(false),
             LatestRun: &shared.ScanRun{
-                EndTime: "placeat",
+                EndTime: sdk.String("placeat"),
                 ErrorTrace: &shared.ScanRunErrorTrace{
-                    Code: "TIMED_OUT_WHILE_SCANNING",
-                    MostCommonHTTPErrorCode: 479977,
+                    Code: shared.ScanRunErrorTraceCodeEnumTimedOutWhileScanning.ToPointer(),
+                    MostCommonHTTPErrorCode: sdk.Int(479977),
                     ScanConfigError: &shared.ScanConfigError{
-                        Code: "MALFORMED_RESOURCE_NAME",
-                        FieldName: "nisi",
+                        Code: shared.ScanConfigErrorCodeEnumMalformedResourceName.ToPointer(),
+                        FieldName: sdk.String("nisi"),
                     },
                 },
-                ExecutionState: "FINISHED",
-                HasVulnerabilities: false,
-                Name: "temporibus",
-                ProgressPercent: 71036,
-                ResultState: "SUCCESS",
-                StartTime: "veritatis",
-                UrlsCrawledCount: "deserunt",
-                UrlsTestedCount: "perferendis",
+                ExecutionState: shared.ScanRunExecutionStateEnumFinished.ToPointer(),
+                HasVulnerabilities: sdk.Bool(false),
+                Name: sdk.String("Miss Raymond Hauck III"),
+                ProgressPercent: sdk.Int(832620),
+                ResultState: shared.ScanRunResultStateEnumKilled.ToPointer(),
+                StartTime: sdk.String("quo"),
+                UrlsCrawledCount: sdk.String("odit"),
+                UrlsTestedCount: sdk.String("at"),
                 WarningTraces: []shared.ScanRunWarningTrace{
                     shared.ScanRunWarningTrace{
-                        Code: "BLOCKED_BY_IAP",
+                        Code: shared.ScanRunWarningTraceCodeEnumNoStartingURLFoundForManagedScan.ToPointer(),
                     },
                     shared.ScanRunWarningTrace{
-                        Code: "NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN",
+                        Code: shared.ScanRunWarningTraceCodeEnumTooManyCrawlResults.ToPointer(),
+                    },
+                    shared.ScanRunWarningTrace{
+                        Code: shared.ScanRunWarningTraceCodeEnumBlockedByIap.ToPointer(),
+                    },
+                    shared.ScanRunWarningTrace{
+                        Code: shared.ScanRunWarningTraceCodeEnumBlockedByIap.ToPointer(),
                     },
                 },
             },
-            ManagedScan: false,
-            MaxQPS: 778157,
-            Name: "odit",
-            RiskLevel: "LOW",
+            ManagedScan: sdk.Bool(false),
+            MaxQPS: sdk.Int(461479),
+            Name: sdk.String("Miss Lowell Parisian"),
+            RiskLevel: shared.ScanConfigRiskLevelEnumNormal.ToPointer(),
             Schedule: &shared.Schedule{
-                IntervalDurationDays: 870088,
-                ScheduleTime: "maiores",
+                IntervalDurationDays: sdk.Int(143353),
+                ScheduleTime: sdk.String("deleniti"),
             },
             StartingUrls: []string{
-                "quod",
-                "quod",
+                "optio",
+                "totam",
+                "beatae",
+                "commodi",
             },
-            StaticIPScan: false,
+            StaticIPScan: sdk.Bool(false),
             TargetPlatforms: []shared.ScanConfigTargetPlatformsEnum{
-                "COMPUTE",
-                "CLOUD_RUN",
+                shared.ScanConfigTargetPlatformsEnumAppEngine,
+                shared.ScanConfigTargetPlatformsEnumTargetPlatformUnspecified,
             },
-            UserAgent: "CHROME_ANDROID",
+            UserAgent: shared.ScanConfigUserAgentEnumSafariIphone.ToPointer(),
         },
-        AccessToken: "dicta",
-        Alt: "proto",
-        Callback: "officia",
-        Fields: "occaecati",
-        Key: "fugit",
-        OauthToken: "deleniti",
-        Parent: "hic",
-        PrettyPrint: false,
-        QuotaUser: "optio",
-        UploadType: "totam",
-        UploadProtocol: "beatae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, req, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
+        AccessToken: sdk.String("cum"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("ipsum"),
+        Fields: sdk.String("excepturi"),
+        Key: sdk.String("aspernatur"),
+        OauthToken: sdk.String("perferendis"),
+        Parent: "ad",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("natus"),
+        UploadType: sdk.String("sed"),
+        UploadProtocol: sdk.String("iste"),
+    }, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -131,19 +137,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `WebsecurityscannerProjectsScanConfigsCreate` - Creates a new ScanConfig.
-* `WebsecurityscannerProjectsScanConfigsDelete` - Deletes an existing ScanConfig and its child resources.
-* `WebsecurityscannerProjectsScanConfigsList` - Lists ScanConfigs under a given project.
-* `WebsecurityscannerProjectsScanConfigsPatch` - Updates a ScanConfig. This method support partial update of a ScanConfig.
-* `WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList` - List CrawledUrls under a given ScanRun.
-* `WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList` - List all FindingTypeStats under a given ScanRun.
-* `WebsecurityscannerProjectsScanConfigsScanRunsFindingsGet` - Gets a Finding.
-* `WebsecurityscannerProjectsScanConfigsScanRunsFindingsList` - List Findings under a given ScanRun.
-* `WebsecurityscannerProjectsScanConfigsScanRunsList` - Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
-* `WebsecurityscannerProjectsScanConfigsScanRunsStop` - Stops a ScanRun. The stopped ScanRun is returned.
-* `WebsecurityscannerProjectsScanConfigsStart` - Start a ScanRun according to the given ScanConfig.
+* [WebsecurityscannerProjectsScanConfigsCreate](docs/projects/README.md#websecurityscannerprojectsscanconfigscreate) - Creates a new ScanConfig.
+* [WebsecurityscannerProjectsScanConfigsDelete](docs/projects/README.md#websecurityscannerprojectsscanconfigsdelete) - Deletes an existing ScanConfig and its child resources.
+* [WebsecurityscannerProjectsScanConfigsList](docs/projects/README.md#websecurityscannerprojectsscanconfigslist) - Lists ScanConfigs under a given project.
+* [WebsecurityscannerProjectsScanConfigsPatch](docs/projects/README.md#websecurityscannerprojectsscanconfigspatch) - Updates a ScanConfig. This method support partial update of a ScanConfig.
+* [WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunscrawledurlslist) - List CrawledUrls under a given ScanRun.
+* [WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunsfindingtypestatslist) - List all FindingTypeStats under a given ScanRun.
+* [WebsecurityscannerProjectsScanConfigsScanRunsFindingsGet](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunsfindingsget) - Gets a Finding.
+* [WebsecurityscannerProjectsScanConfigsScanRunsFindingsList](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunsfindingslist) - List Findings under a given ScanRun.
+* [WebsecurityscannerProjectsScanConfigsScanRunsList](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunslist) - Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
+* [WebsecurityscannerProjectsScanConfigsScanRunsStop](docs/projects/README.md#websecurityscannerprojectsscanconfigsscanrunsstop) - Stops a ScanRun. The stopped ScanRun is returned.
+* [WebsecurityscannerProjectsScanConfigsStart](docs/projects/README.md#websecurityscannerprojectsscanconfigsstart) - Start a ScanRun according to the given ScanConfig.
 <!-- End SDK Available Operations -->
 
 ### Maturity

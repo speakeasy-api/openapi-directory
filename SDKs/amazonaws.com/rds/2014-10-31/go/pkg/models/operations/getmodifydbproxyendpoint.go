@@ -15,17 +15,21 @@ const (
 	GETModifyDBProxyEndpointActionEnumModifyDbProxyEndpoint GETModifyDBProxyEndpointActionEnum = "ModifyDBProxyEndpoint"
 )
 
+func (e GETModifyDBProxyEndpointActionEnum) ToPointer() *GETModifyDBProxyEndpointActionEnum {
+	return &e
+}
+
 func (e *GETModifyDBProxyEndpointActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyDBProxyEndpoint":
-		*e = GETModifyDBProxyEndpointActionEnum(s)
+		*e = GETModifyDBProxyEndpointActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyDBProxyEndpointActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyDBProxyEndpointActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyDBProxyEndpointVersionEnumTwoThousandAndFourteen1031 GETModifyDBProxyEndpointVersionEnum = "2014-10-31"
 )
 
+func (e GETModifyDBProxyEndpointVersionEnum) ToPointer() *GETModifyDBProxyEndpointVersionEnum {
+	return &e
+}
+
 func (e *GETModifyDBProxyEndpointVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETModifyDBProxyEndpointVersionEnum(s)
+		*e = GETModifyDBProxyEndpointVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyDBProxyEndpointVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyDBProxyEndpointVersionEnum: %v", v)
 	}
 }
 

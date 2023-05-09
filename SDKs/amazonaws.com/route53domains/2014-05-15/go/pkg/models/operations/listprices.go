@@ -16,17 +16,21 @@ const (
 	ListPricesXAmzTargetEnumRoute53DomainsV20140515ListPrices ListPricesXAmzTargetEnum = "Route53Domains_v20140515.ListPrices"
 )
 
+func (e ListPricesXAmzTargetEnum) ToPointer() *ListPricesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListPricesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.ListPrices":
-		*e = ListPricesXAmzTargetEnum(s)
+		*e = ListPricesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPricesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPricesXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newListing(defaultClient, securityClient HTTPClient, serverURL, language, s
 // List listings
 func (s *listing) ListingsAll(ctx context.Context, request operations.ListingsAllRequest) (*operations.ListingsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/listings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/listings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *listing) ListingsAll(ctx context.Context, request operations.ListingsAl
 // Get listing
 func (s *listing) ListingsOne(ctx context.Context, request operations.ListingsOneRequest) (*operations.ListingsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/listings/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/listings/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

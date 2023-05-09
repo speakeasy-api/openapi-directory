@@ -17,12 +17,16 @@ const (
 	InstanceRequirementsWithMetadataRequestArchitectureTypesEnumArm64Mac InstanceRequirementsWithMetadataRequestArchitectureTypesEnum = "arm64_mac"
 )
 
+func (e InstanceRequirementsWithMetadataRequestArchitectureTypesEnum) ToPointer() *InstanceRequirementsWithMetadataRequestArchitectureTypesEnum {
+	return &e
+}
+
 func (e *InstanceRequirementsWithMetadataRequestArchitectureTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "i386":
 		fallthrough
 	case "x86_64":
@@ -32,10 +36,10 @@ func (e *InstanceRequirementsWithMetadataRequestArchitectureTypesEnum) Unmarshal
 	case "x86_64_mac":
 		fallthrough
 	case "arm64_mac":
-		*e = InstanceRequirementsWithMetadataRequestArchitectureTypesEnum(s)
+		*e = InstanceRequirementsWithMetadataRequestArchitectureTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceRequirementsWithMetadataRequestArchitectureTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceRequirementsWithMetadataRequestArchitectureTypesEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	InstanceRequirementsWithMetadataRequestVirtualizationTypesEnumParavirtual InstanceRequirementsWithMetadataRequestVirtualizationTypesEnum = "paravirtual"
 )
 
+func (e InstanceRequirementsWithMetadataRequestVirtualizationTypesEnum) ToPointer() *InstanceRequirementsWithMetadataRequestVirtualizationTypesEnum {
+	return &e
+}
+
 func (e *InstanceRequirementsWithMetadataRequestVirtualizationTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hvm":
 		fallthrough
 	case "paravirtual":
-		*e = InstanceRequirementsWithMetadataRequestVirtualizationTypesEnum(s)
+		*e = InstanceRequirementsWithMetadataRequestVirtualizationTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceRequirementsWithMetadataRequestVirtualizationTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceRequirementsWithMetadataRequestVirtualizationTypesEnum: %v", v)
 	}
 }
 

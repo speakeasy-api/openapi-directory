@@ -48,17 +48,21 @@ const (
 	StagedEmployeeCustomBooleanFieldsCategoryEnumPayrollAndHr StagedEmployeeCustomBooleanFieldsCategoryEnum = "PayrollAndHR"
 )
 
+func (e StagedEmployeeCustomBooleanFieldsCategoryEnum) ToPointer() *StagedEmployeeCustomBooleanFieldsCategoryEnum {
+	return &e
+}
+
 func (e *StagedEmployeeCustomBooleanFieldsCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PayrollAndHR":
-		*e = StagedEmployeeCustomBooleanFieldsCategoryEnum(s)
+		*e = StagedEmployeeCustomBooleanFieldsCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StagedEmployeeCustomBooleanFieldsCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for StagedEmployeeCustomBooleanFieldsCategoryEnum: %v", v)
 	}
 }
 
@@ -78,17 +82,21 @@ const (
 	StagedEmployeeCustomDateFieldsCategoryEnumPayrollAndHr StagedEmployeeCustomDateFieldsCategoryEnum = "PayrollAndHR"
 )
 
+func (e StagedEmployeeCustomDateFieldsCategoryEnum) ToPointer() *StagedEmployeeCustomDateFieldsCategoryEnum {
+	return &e
+}
+
 func (e *StagedEmployeeCustomDateFieldsCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PayrollAndHR":
-		*e = StagedEmployeeCustomDateFieldsCategoryEnum(s)
+		*e = StagedEmployeeCustomDateFieldsCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StagedEmployeeCustomDateFieldsCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for StagedEmployeeCustomDateFieldsCategoryEnum: %v", v)
 	}
 }
 
@@ -108,17 +116,21 @@ const (
 	StagedEmployeeCustomDropDownFieldsCategoryEnumPayrollAndHr StagedEmployeeCustomDropDownFieldsCategoryEnum = "PayrollAndHR"
 )
 
+func (e StagedEmployeeCustomDropDownFieldsCategoryEnum) ToPointer() *StagedEmployeeCustomDropDownFieldsCategoryEnum {
+	return &e
+}
+
 func (e *StagedEmployeeCustomDropDownFieldsCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PayrollAndHR":
-		*e = StagedEmployeeCustomDropDownFieldsCategoryEnum(s)
+		*e = StagedEmployeeCustomDropDownFieldsCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StagedEmployeeCustomDropDownFieldsCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for StagedEmployeeCustomDropDownFieldsCategoryEnum: %v", v)
 	}
 }
 
@@ -138,17 +150,21 @@ const (
 	StagedEmployeeCustomNumberFieldsCategoryEnumPayrollAndHr StagedEmployeeCustomNumberFieldsCategoryEnum = "PayrollAndHR"
 )
 
+func (e StagedEmployeeCustomNumberFieldsCategoryEnum) ToPointer() *StagedEmployeeCustomNumberFieldsCategoryEnum {
+	return &e
+}
+
 func (e *StagedEmployeeCustomNumberFieldsCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PayrollAndHR":
-		*e = StagedEmployeeCustomNumberFieldsCategoryEnum(s)
+		*e = StagedEmployeeCustomNumberFieldsCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StagedEmployeeCustomNumberFieldsCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for StagedEmployeeCustomNumberFieldsCategoryEnum: %v", v)
 	}
 }
 
@@ -168,17 +184,21 @@ const (
 	StagedEmployeeCustomTextFieldsCategoryEnumPayrollAndHr StagedEmployeeCustomTextFieldsCategoryEnum = "PayrollAndHR"
 )
 
+func (e StagedEmployeeCustomTextFieldsCategoryEnum) ToPointer() *StagedEmployeeCustomTextFieldsCategoryEnum {
+	return &e
+}
+
 func (e *StagedEmployeeCustomTextFieldsCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PayrollAndHR":
-		*e = StagedEmployeeCustomTextFieldsCategoryEnum(s)
+		*e = StagedEmployeeCustomTextFieldsCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StagedEmployeeCustomTextFieldsCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for StagedEmployeeCustomTextFieldsCategoryEnum: %v", v)
 	}
 }
 

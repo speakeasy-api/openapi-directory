@@ -28,17 +28,21 @@ const (
 	RacerRequestBodyFormatEnumPdf RacerRequestBodyFormatEnum = "pdf"
 )
 
+func (e RacerRequestBodyFormatEnum) ToPointer() *RacerRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *RacerRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = RacerRequestBodyFormatEnum(s)
+		*e = RacerRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RacerRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RacerRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -58,17 +62,21 @@ const (
 	Racer504ApplicationJSONErrorEnumGatewayTimeout Racer504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Racer504ApplicationJSONErrorEnum) ToPointer() *Racer504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Racer504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Racer504ApplicationJSONErrorEnum(s)
+		*e = Racer504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -78,17 +86,21 @@ const (
 	Racer504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Racer504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Racer504ApplicationJSONErrorDescriptionEnum) ToPointer() *Racer504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Racer504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Racer504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Racer504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -104,17 +116,21 @@ const (
 	Racer503ApplicationJSONErrorEnumServiceUnavailable Racer503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Racer503ApplicationJSONErrorEnum) ToPointer() *Racer503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Racer503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Racer503ApplicationJSONErrorEnum(s)
+		*e = Racer503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -124,17 +140,21 @@ const (
 	Racer503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Racer503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Racer503ApplicationJSONErrorDescriptionEnum) ToPointer() *Racer503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Racer503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Racer503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Racer503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -150,17 +170,21 @@ const (
 	Racer502ApplicationJSONErrorEnumBadGatewy Racer502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Racer502ApplicationJSONErrorEnum) ToPointer() *Racer502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Racer502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Racer502ApplicationJSONErrorEnum(s)
+		*e = Racer502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -170,17 +194,21 @@ const (
 	Racer502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Racer502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Racer502ApplicationJSONErrorDescriptionEnum) ToPointer() *Racer502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Racer502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Racer502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Racer502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -196,17 +224,21 @@ const (
 	Racer500ApplicationJSONErrorEnumInternalServerError Racer500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Racer500ApplicationJSONErrorEnum) ToPointer() *Racer500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Racer500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Racer500ApplicationJSONErrorEnum(s)
+		*e = Racer500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -216,17 +248,21 @@ const (
 	Racer500ApplicationJSONErrorDescriptionEnumInternalServerError Racer500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Racer500ApplicationJSONErrorDescriptionEnum) ToPointer() *Racer500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Racer500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Racer500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Racer500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -243,19 +279,23 @@ const (
 	Racer404ApplicationJSONErrorEnumURLNotFound    Racer404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Racer404ApplicationJSONErrorEnum) ToPointer() *Racer404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Racer404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Racer404ApplicationJSONErrorEnum(s)
+		*e = Racer404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -266,19 +306,23 @@ const (
 	Racer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Racer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Racer404ApplicationJSONErrorDescriptionEnum) ToPointer() *Racer404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Racer404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Racer404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Racer404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -295,19 +339,23 @@ const (
 	Racer401ApplicationJSONErrorEnumInvalidAuthorization  Racer401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Racer401ApplicationJSONErrorEnum) ToPointer() *Racer401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Racer401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Racer401ApplicationJSONErrorEnum(s)
+		*e = Racer401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -318,19 +366,23 @@ const (
 	Racer401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Racer401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Racer401ApplicationJSONErrorDescriptionEnum) ToPointer() *Racer401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Racer401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Racer401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Racer401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -350,12 +402,16 @@ const (
 	Racer400ApplicationJSONErrorEnumInvalidConsentid Racer400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Racer400ApplicationJSONErrorEnum) ToPointer() *Racer400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Racer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -365,10 +421,10 @@ func (e *Racer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Racer400ApplicationJSONErrorEnum(s)
+		*e = Racer400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -382,12 +438,16 @@ const (
 	Racer400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Racer400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Racer400ApplicationJSONErrorDescriptionEnum) ToPointer() *Racer400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Racer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -397,10 +457,10 @@ func (e *Racer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Racer400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Racer400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Racer400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Racer400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

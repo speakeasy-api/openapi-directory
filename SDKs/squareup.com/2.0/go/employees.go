@@ -83,7 +83,10 @@ func (s *employees) GetV2Employees(ctx context.Context, request operations.GetV2
 // GetV2EmployeesID - RetrieveEmployee
 func (s *employees) GetV2EmployeesID(ctx context.Context, request operations.GetV2EmployeesIDRequest, security operations.GetV2EmployeesIDSecurity) (*operations.GetV2EmployeesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/employees/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/employees/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

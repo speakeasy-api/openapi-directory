@@ -9,35 +9,39 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type GetPresidentialContributionsBySizeSizeEnum string
+type GetPresidentialContributionsBySizeSizeEnum int
 
 const (
-	GetPresidentialContributionsBySizeSizeEnumZero        GetPresidentialContributionsBySizeSizeEnum = "0"
-	GetPresidentialContributionsBySizeSizeEnumTwoHundred  GetPresidentialContributionsBySizeSizeEnum = "200"
-	GetPresidentialContributionsBySizeSizeEnumFiveHundred GetPresidentialContributionsBySizeSizeEnum = "500"
-	GetPresidentialContributionsBySizeSizeEnumOneThousand GetPresidentialContributionsBySizeSizeEnum = "1000"
-	GetPresidentialContributionsBySizeSizeEnumTwoThousand GetPresidentialContributionsBySizeSizeEnum = "2000"
+	GetPresidentialContributionsBySizeSizeEnumZero        GetPresidentialContributionsBySizeSizeEnum = 0
+	GetPresidentialContributionsBySizeSizeEnumTwoHundred  GetPresidentialContributionsBySizeSizeEnum = 200
+	GetPresidentialContributionsBySizeSizeEnumFiveHundred GetPresidentialContributionsBySizeSizeEnum = 500
+	GetPresidentialContributionsBySizeSizeEnumOneThousand GetPresidentialContributionsBySizeSizeEnum = 1000
+	GetPresidentialContributionsBySizeSizeEnumTwoThousand GetPresidentialContributionsBySizeSizeEnum = 2000
 )
 
+func (e GetPresidentialContributionsBySizeSizeEnum) ToPointer() *GetPresidentialContributionsBySizeSizeEnum {
+	return &e
+}
+
 func (e *GetPresidentialContributionsBySizeSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "200":
+	case 200:
 		fallthrough
-	case "500":
+	case 500:
 		fallthrough
-	case "1000":
+	case 1000:
 		fallthrough
-	case "2000":
-		*e = GetPresidentialContributionsBySizeSizeEnum(s)
+	case 2000:
+		*e = GetPresidentialContributionsBySizeSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPresidentialContributionsBySizeSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPresidentialContributionsBySizeSizeEnum: %v", v)
 	}
 }
 
@@ -47,6 +51,12 @@ type GetPresidentialContributionsBySizeRequest struct {
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// A unique identifier assigned to each candidate registered with the FEC.
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
+	// First character indicates office - [P]residential, [H]ouse, [S]enate].
+	// Second character is the last digit of the two-year period the ID was created.
+	// Third and fourth is the candidate state. Presidential IDs don't have state.
+	// Fifth and sixth is the district when the candidate first ran. This does not change if the
+	// candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+	// The rest is sequence.
 	//   -P00000001    All candidates
 	//   -P00000002    Democrasts
 	//   -P00000003    Republicans

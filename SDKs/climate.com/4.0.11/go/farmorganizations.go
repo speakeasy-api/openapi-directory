@@ -36,7 +36,10 @@ func newFarmOrganizations(defaultClient, securityClient HTTPClient, serverURL, l
 // Retrieve a given **farm organization** by organization type and ID.
 func (s *farmOrganizations) FetchFarmOrganizationByTypeAndID(ctx context.Context, request operations.FetchFarmOrganizationByTypeAndIDRequest, security operations.FetchFarmOrganizationByTypeAndIDSecurity) (*operations.FetchFarmOrganizationByTypeAndIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/farmOrganizations/{farmOrganizationType}/{farmOrganizationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/farmOrganizations/{farmOrganizationType}/{farmOrganizationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

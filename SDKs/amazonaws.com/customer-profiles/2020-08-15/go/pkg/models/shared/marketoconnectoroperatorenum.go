@@ -28,12 +28,16 @@ const (
 	MarketoConnectorOperatorEnumNoOp                MarketoConnectorOperatorEnum = "NO_OP"
 )
 
+func (e MarketoConnectorOperatorEnum) ToPointer() *MarketoConnectorOperatorEnum {
+	return &e
+}
+
 func (e *MarketoConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION":
 		fallthrough
 	case "LESS_THAN":
@@ -65,9 +69,9 @@ func (e *MarketoConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATE_NUMERIC":
 		fallthrough
 	case "NO_OP":
-		*e = MarketoConnectorOperatorEnum(s)
+		*e = MarketoConnectorOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MarketoConnectorOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for MarketoConnectorOperatorEnum: %v", v)
 	}
 }

@@ -16,12 +16,16 @@ const (
 	DeviceAvailabilityEnumHighlyAvailable       DeviceAvailabilityEnum = "HIGHLY_AVAILABLE"
 )
 
+func (e DeviceAvailabilityEnum) ToPointer() *DeviceAvailabilityEnum {
+	return &e
+}
+
 func (e *DeviceAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEMPORARY_NOT_AVAILABLE":
 		fallthrough
 	case "BUSY":
@@ -29,9 +33,9 @@ func (e *DeviceAvailabilityEnum) UnmarshalJSON(data []byte) error {
 	case "AVAILABLE":
 		fallthrough
 	case "HIGHLY_AVAILABLE":
-		*e = DeviceAvailabilityEnum(s)
+		*e = DeviceAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceAvailabilityEnum: %v", v)
 	}
 }

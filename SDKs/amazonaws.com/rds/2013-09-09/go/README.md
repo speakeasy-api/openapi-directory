@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/rds/2013-09
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,22 +27,20 @@ func main() {
         }),
     )
 
-    req := operations.GETAddSourceIdentifierToSubscriptionRequest{
-        Action: "AddSourceIdentifierToSubscription",
+    ctx := context.Background()
+    res, err := s.GETAddSourceIdentifierToSubscription(ctx, operations.GETAddSourceIdentifierToSubscriptionRequest{
+        Action: operations.GETAddSourceIdentifierToSubscriptionActionEnumAddSourceIdentifierToSubscription,
         SourceIdentifier: "corrupti",
         SubscriptionName: "provident",
-        Version: "2013-09-09",
-        XAmzAlgorithm: "distinctio",
-        XAmzContentSha256: "quibusdam",
-        XAmzCredential: "unde",
-        XAmzDate: "nulla",
-        XAmzSecurityToken: "corrupti",
-        XAmzSignature: "illum",
-        XAmzSignedHeaders: "vel",
-    }
-
-    ctx := context.Background()
-    res, err := s.GETAddSourceIdentifierToSubscription(ctx, req)
+        Version: operations.GETAddSourceIdentifierToSubscriptionVersionEnumTwoThousandAndThirteen0909,
+        XAmzAlgorithm: sdk.String("distinctio"),
+        XAmzContentSha256: sdk.String("quibusdam"),
+        XAmzCredential: sdk.String("unde"),
+        XAmzDate: sdk.String("nulla"),
+        XAmzSecurityToken: sdk.String("corrupti"),
+        XAmzSignature: sdk.String("illum"),
+        XAmzSignedHeaders: sdk.String("vel"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -58,78 +55,78 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GETAddSourceIdentifierToSubscription`
-* `GETAuthorizeDBSecurityGroupIngress`
-* `GETDeleteDBInstance`
-* `GETDeleteDBParameterGroup`
-* `GETDeleteDBSecurityGroup`
-* `GETDeleteDBSnapshot`
-* `GETDeleteDBSubnetGroup`
-* `GETDeleteEventSubscription`
-* `GETDeleteOptionGroup`
-* `GETDownloadDBLogFilePortion`
-* `GETModifyDBInstance`
-* `GETModifyDBSubnetGroup`
-* `GETModifyEventSubscription`
-* `GETPromoteReadReplica`
-* `GETRebootDBInstance`
-* `GETRemoveSourceIdentifierFromSubscription`
-* `GETRemoveTagsFromResource`
-* `GETRevokeDBSecurityGroupIngress`
-* `POSTAddSourceIdentifierToSubscription`
-* `POSTAddTagsToResource`
-* `POSTAuthorizeDBSecurityGroupIngress`
-* `POSTCopyDBSnapshot`
-* `POSTCreateDBInstance`
-* `POSTCreateDBInstanceReadReplica`
-* `POSTCreateDBParameterGroup`
-* `POSTCreateDBSecurityGroup`
-* `POSTCreateDBSnapshot`
-* `POSTCreateDBSubnetGroup`
-* `POSTCreateEventSubscription`
-* `POSTCreateOptionGroup`
-* `POSTDeleteDBInstance`
-* `POSTDeleteDBParameterGroup`
-* `POSTDeleteDBSecurityGroup`
-* `POSTDeleteDBSnapshot`
-* `POSTDeleteDBSubnetGroup`
-* `POSTDeleteEventSubscription`
-* `POSTDeleteOptionGroup`
-* `POSTDescribeDBEngineVersions`
-* `POSTDescribeDBInstances`
-* `POSTDescribeDBLogFiles`
-* `POSTDescribeDBParameterGroups`
-* `POSTDescribeDBParameters`
-* `POSTDescribeDBSecurityGroups`
-* `POSTDescribeDBSnapshots`
-* `POSTDescribeDBSubnetGroups`
-* `POSTDescribeEngineDefaultParameters`
-* `POSTDescribeEventCategories`
-* `POSTDescribeEventSubscriptions`
-* `POSTDescribeEvents`
-* `POSTDescribeOptionGroupOptions`
-* `POSTDescribeOptionGroups`
-* `POSTDescribeOrderableDBInstanceOptions`
-* `POSTDescribeReservedDBInstances`
-* `POSTDescribeReservedDBInstancesOfferings`
-* `POSTDownloadDBLogFilePortion`
-* `POSTListTagsForResource`
-* `POSTModifyDBInstance`
-* `POSTModifyDBParameterGroup`
-* `POSTModifyDBSubnetGroup`
-* `POSTModifyEventSubscription`
-* `POSTModifyOptionGroup`
-* `POSTPromoteReadReplica`
-* `POSTPurchaseReservedDBInstancesOffering`
-* `POSTRebootDBInstance`
-* `POSTRemoveSourceIdentifierFromSubscription`
-* `POSTRemoveTagsFromResource`
-* `POSTResetDBParameterGroup`
-* `POSTRestoreDBInstanceFromDBSnapshot`
-* `POSTRestoreDBInstanceToPointInTime`
-* `POSTRevokeDBSecurityGroupIngress`
+* [GETAddSourceIdentifierToSubscription](docs/sdk/README.md#getaddsourceidentifiertosubscription)
+* [GETAuthorizeDBSecurityGroupIngress](docs/sdk/README.md#getauthorizedbsecuritygroupingress)
+* [GETDeleteDBInstance](docs/sdk/README.md#getdeletedbinstance)
+* [GETDeleteDBParameterGroup](docs/sdk/README.md#getdeletedbparametergroup)
+* [GETDeleteDBSecurityGroup](docs/sdk/README.md#getdeletedbsecuritygroup)
+* [GETDeleteDBSnapshot](docs/sdk/README.md#getdeletedbsnapshot)
+* [GETDeleteDBSubnetGroup](docs/sdk/README.md#getdeletedbsubnetgroup)
+* [GETDeleteEventSubscription](docs/sdk/README.md#getdeleteeventsubscription)
+* [GETDeleteOptionGroup](docs/sdk/README.md#getdeleteoptiongroup)
+* [GETDownloadDBLogFilePortion](docs/sdk/README.md#getdownloaddblogfileportion)
+* [GETModifyDBInstance](docs/sdk/README.md#getmodifydbinstance)
+* [GETModifyDBSubnetGroup](docs/sdk/README.md#getmodifydbsubnetgroup)
+* [GETModifyEventSubscription](docs/sdk/README.md#getmodifyeventsubscription)
+* [GETPromoteReadReplica](docs/sdk/README.md#getpromotereadreplica)
+* [GETRebootDBInstance](docs/sdk/README.md#getrebootdbinstance)
+* [GETRemoveSourceIdentifierFromSubscription](docs/sdk/README.md#getremovesourceidentifierfromsubscription)
+* [GETRemoveTagsFromResource](docs/sdk/README.md#getremovetagsfromresource)
+* [GETRevokeDBSecurityGroupIngress](docs/sdk/README.md#getrevokedbsecuritygroupingress)
+* [POSTAddSourceIdentifierToSubscription](docs/sdk/README.md#postaddsourceidentifiertosubscription)
+* [POSTAddTagsToResource](docs/sdk/README.md#postaddtagstoresource)
+* [POSTAuthorizeDBSecurityGroupIngress](docs/sdk/README.md#postauthorizedbsecuritygroupingress)
+* [POSTCopyDBSnapshot](docs/sdk/README.md#postcopydbsnapshot)
+* [POSTCreateDBInstance](docs/sdk/README.md#postcreatedbinstance)
+* [POSTCreateDBInstanceReadReplica](docs/sdk/README.md#postcreatedbinstancereadreplica)
+* [POSTCreateDBParameterGroup](docs/sdk/README.md#postcreatedbparametergroup)
+* [POSTCreateDBSecurityGroup](docs/sdk/README.md#postcreatedbsecuritygroup)
+* [POSTCreateDBSnapshot](docs/sdk/README.md#postcreatedbsnapshot)
+* [POSTCreateDBSubnetGroup](docs/sdk/README.md#postcreatedbsubnetgroup)
+* [POSTCreateEventSubscription](docs/sdk/README.md#postcreateeventsubscription)
+* [POSTCreateOptionGroup](docs/sdk/README.md#postcreateoptiongroup)
+* [POSTDeleteDBInstance](docs/sdk/README.md#postdeletedbinstance)
+* [POSTDeleteDBParameterGroup](docs/sdk/README.md#postdeletedbparametergroup)
+* [POSTDeleteDBSecurityGroup](docs/sdk/README.md#postdeletedbsecuritygroup)
+* [POSTDeleteDBSnapshot](docs/sdk/README.md#postdeletedbsnapshot)
+* [POSTDeleteDBSubnetGroup](docs/sdk/README.md#postdeletedbsubnetgroup)
+* [POSTDeleteEventSubscription](docs/sdk/README.md#postdeleteeventsubscription)
+* [POSTDeleteOptionGroup](docs/sdk/README.md#postdeleteoptiongroup)
+* [POSTDescribeDBEngineVersions](docs/sdk/README.md#postdescribedbengineversions)
+* [POSTDescribeDBInstances](docs/sdk/README.md#postdescribedbinstances)
+* [POSTDescribeDBLogFiles](docs/sdk/README.md#postdescribedblogfiles)
+* [POSTDescribeDBParameterGroups](docs/sdk/README.md#postdescribedbparametergroups)
+* [POSTDescribeDBParameters](docs/sdk/README.md#postdescribedbparameters)
+* [POSTDescribeDBSecurityGroups](docs/sdk/README.md#postdescribedbsecuritygroups)
+* [POSTDescribeDBSnapshots](docs/sdk/README.md#postdescribedbsnapshots)
+* [POSTDescribeDBSubnetGroups](docs/sdk/README.md#postdescribedbsubnetgroups)
+* [POSTDescribeEngineDefaultParameters](docs/sdk/README.md#postdescribeenginedefaultparameters)
+* [POSTDescribeEventCategories](docs/sdk/README.md#postdescribeeventcategories)
+* [POSTDescribeEventSubscriptions](docs/sdk/README.md#postdescribeeventsubscriptions)
+* [POSTDescribeEvents](docs/sdk/README.md#postdescribeevents)
+* [POSTDescribeOptionGroupOptions](docs/sdk/README.md#postdescribeoptiongroupoptions)
+* [POSTDescribeOptionGroups](docs/sdk/README.md#postdescribeoptiongroups)
+* [POSTDescribeOrderableDBInstanceOptions](docs/sdk/README.md#postdescribeorderabledbinstanceoptions)
+* [POSTDescribeReservedDBInstances](docs/sdk/README.md#postdescribereserveddbinstances)
+* [POSTDescribeReservedDBInstancesOfferings](docs/sdk/README.md#postdescribereserveddbinstancesofferings)
+* [POSTDownloadDBLogFilePortion](docs/sdk/README.md#postdownloaddblogfileportion)
+* [POSTListTagsForResource](docs/sdk/README.md#postlisttagsforresource)
+* [POSTModifyDBInstance](docs/sdk/README.md#postmodifydbinstance)
+* [POSTModifyDBParameterGroup](docs/sdk/README.md#postmodifydbparametergroup)
+* [POSTModifyDBSubnetGroup](docs/sdk/README.md#postmodifydbsubnetgroup)
+* [POSTModifyEventSubscription](docs/sdk/README.md#postmodifyeventsubscription)
+* [POSTModifyOptionGroup](docs/sdk/README.md#postmodifyoptiongroup)
+* [POSTPromoteReadReplica](docs/sdk/README.md#postpromotereadreplica)
+* [POSTPurchaseReservedDBInstancesOffering](docs/sdk/README.md#postpurchasereserveddbinstancesoffering)
+* [POSTRebootDBInstance](docs/sdk/README.md#postrebootdbinstance)
+* [POSTRemoveSourceIdentifierFromSubscription](docs/sdk/README.md#postremovesourceidentifierfromsubscription)
+* [POSTRemoveTagsFromResource](docs/sdk/README.md#postremovetagsfromresource)
+* [POSTResetDBParameterGroup](docs/sdk/README.md#postresetdbparametergroup)
+* [POSTRestoreDBInstanceFromDBSnapshot](docs/sdk/README.md#postrestoredbinstancefromdbsnapshot)
+* [POSTRestoreDBInstanceToPointInTime](docs/sdk/README.md#postrestoredbinstancetopointintime)
+* [POSTRevokeDBSecurityGroupIngress](docs/sdk/README.md#postrevokedbsecuritygroupingress)
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,20 +15,24 @@ const (
 	AuthMechanismValueEnumScramSha1 AuthMechanismValueEnum = "scram_sha_1"
 )
 
+func (e AuthMechanismValueEnum) ToPointer() *AuthMechanismValueEnum {
+	return &e
+}
+
 func (e *AuthMechanismValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "mongodb_cr":
 		fallthrough
 	case "scram_sha_1":
-		*e = AuthMechanismValueEnum(s)
+		*e = AuthMechanismValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthMechanismValueEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthMechanismValueEnum: %v", v)
 	}
 }

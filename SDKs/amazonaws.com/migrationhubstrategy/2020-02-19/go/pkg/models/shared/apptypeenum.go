@@ -34,12 +34,16 @@ const (
 	AppTypeEnumDotnet           AppTypeEnum = "Dotnet"
 )
 
+func (e AppTypeEnum) ToPointer() *AppTypeEnum {
+	return &e
+}
+
 func (e *AppTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DotNetFramework":
 		fallthrough
 	case "Java":
@@ -83,9 +87,9 @@ func (e *AppTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DotnetCore":
 		fallthrough
 	case "Dotnet":
-		*e = AppTypeEnum(s)
+		*e = AppTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppTypeEnum: %v", v)
 	}
 }

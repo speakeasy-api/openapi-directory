@@ -34,7 +34,10 @@ func newErrors(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // ErrorsAppBuildsList - List of app builds
 func (s *errors) ErrorsAppBuildsList(ctx context.Context, request operations.ErrorsAppBuildsListRequest, security operations.ErrorsAppBuildsListSecurity) (*operations.ErrorsAppBuildsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/availableAppBuilds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/availableAppBuilds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -92,7 +95,10 @@ func (s *errors) ErrorsAppBuildsList(ctx context.Context, request operations.Err
 // ErrorsAvailableVersions - Get all available versions in the time range.
 func (s *errors) ErrorsAvailableVersions(ctx context.Context, request operations.ErrorsAvailableVersionsRequest, security operations.ErrorsAvailableVersionsSecurity) (*operations.ErrorsAvailableVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/available_versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/available_versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -150,7 +156,10 @@ func (s *errors) ErrorsAvailableVersions(ctx context.Context, request operations
 // ErrorsCountsPerDay - Count of crashes or errors by day in the time range based the selected versions. If SingleErrorTypeParameter is not provided, defaults to handlederror.
 func (s *errors) ErrorsCountsPerDay(ctx context.Context, request operations.ErrorsCountsPerDayRequest, security operations.ErrorsCountsPerDaySecurity) (*operations.ErrorsCountsPerDayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorCountsPerDay", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorCountsPerDay", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -208,7 +217,10 @@ func (s *errors) ErrorsCountsPerDay(ctx context.Context, request operations.Erro
 // ErrorsDeleteError - Delete a specific error and related attachments and blobs for an app. Searchable data will not be deleted immediately and may take up to 30 days.
 func (s *errors) ErrorsDeleteError(ctx context.Context, request operations.ErrorsDeleteErrorRequest, security operations.ErrorsDeleteErrorSecurity) (*operations.ErrorsDeleteErrorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -262,7 +274,10 @@ func (s *errors) ErrorsDeleteError(ctx context.Context, request operations.Error
 // ErrorsErrorAttachmentLocation - Error attachment location.
 func (s *errors) ErrorsErrorAttachmentLocation(ctx context.Context, request operations.ErrorsErrorAttachmentLocationRequest, security operations.ErrorsErrorAttachmentLocationSecurity) (*operations.ErrorsErrorAttachmentLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/location", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/location", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -316,7 +331,10 @@ func (s *errors) ErrorsErrorAttachmentLocation(ctx context.Context, request oper
 // ErrorsErrorAttachmentText - Error attachment text.
 func (s *errors) ErrorsErrorAttachmentText(ctx context.Context, request operations.ErrorsErrorAttachmentTextRequest, security operations.ErrorsErrorAttachmentTextSecurity) (*operations.ErrorsErrorAttachmentTextResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/text", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/text", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -370,7 +388,10 @@ func (s *errors) ErrorsErrorAttachmentText(ctx context.Context, request operatio
 // ErrorsErrorAttachments - List error attachments.
 func (s *errors) ErrorsErrorAttachments(ctx context.Context, request operations.ErrorsErrorAttachmentsRequest, security operations.ErrorsErrorAttachmentsSecurity) (*operations.ErrorsErrorAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -424,7 +445,10 @@ func (s *errors) ErrorsErrorAttachments(ctx context.Context, request operations.
 // ErrorsErrorDownload - Download details for a specific error.
 func (s *errors) ErrorsErrorDownload(ctx context.Context, request operations.ErrorsErrorDownloadRequest, security operations.ErrorsErrorDownloadSecurity) (*operations.ErrorsErrorDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -479,10 +503,74 @@ func (s *errors) ErrorsErrorDownload(ctx context.Context, request operations.Err
 	return res, nil
 }
 
+// ErrorsErrorFreeDevicePercentages - Percentage of error-free devices by day in the time range based on the selected versions. If SingleErrorTypeParameter is not provided, defaults to handlederror. API will return -1 if crash devices is greater than active devices
+func (s *errors) ErrorsErrorFreeDevicePercentages(ctx context.Context, request operations.ErrorsErrorFreeDevicePercentagesRequest, security operations.ErrorsErrorFreeDevicePercentagesSecurity) (*operations.ErrorsErrorFreeDevicePercentagesResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorfreeDevicePercentages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ErrorsErrorFreeDevicePercentagesResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.ErrorsErrorFreeDevicePercentages200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ErrorsErrorFreeDevicePercentages200ApplicationJSONObject = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.ErrorsErrorFreeDevicePercentagesDefaultApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ErrorsErrorFreeDevicePercentagesDefaultApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // ErrorsErrorGroupsSearch - Error groups list based on search parameters
 func (s *errors) ErrorsErrorGroupsSearch(ctx context.Context, request operations.ErrorsErrorGroupsSearchRequest, security operations.ErrorsErrorGroupsSearchSecurity) (*operations.ErrorsErrorGroupsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -540,7 +628,10 @@ func (s *errors) ErrorsErrorGroupsSearch(ctx context.Context, request operations
 // ErrorsErrorLocation - Error location.
 func (s *errors) ErrorsErrorLocation(ctx context.Context, request operations.ErrorsErrorLocationRequest, security operations.ErrorsErrorLocationSecurity) (*operations.ErrorsErrorLocationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/location", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/location", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -594,7 +685,10 @@ func (s *errors) ErrorsErrorLocation(ctx context.Context, request operations.Err
 // ErrorsErrorSearch - Errors list based on search parameters
 func (s *errors) ErrorsErrorSearch(ctx context.Context, request operations.ErrorsErrorSearchRequest, security operations.ErrorsErrorSearchSecurity) (*operations.ErrorsErrorSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -652,7 +746,10 @@ func (s *errors) ErrorsErrorSearch(ctx context.Context, request operations.Error
 // ErrorsErrorStackTrace - Error Stacktrace details.
 func (s *errors) ErrorsErrorStackTrace(ctx context.Context, request operations.ErrorsErrorStackTraceRequest, security operations.ErrorsErrorStackTraceSecurity) (*operations.ErrorsErrorStackTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/stacktrace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/stacktrace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -706,7 +803,10 @@ func (s *errors) ErrorsErrorStackTrace(ctx context.Context, request operations.E
 // ErrorsGetErrorDetails - Error details.
 func (s *errors) ErrorsGetErrorDetails(ctx context.Context, request operations.ErrorsGetErrorDetailsRequest, security operations.ErrorsGetErrorDetailsSecurity) (*operations.ErrorsGetErrorDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -760,7 +860,10 @@ func (s *errors) ErrorsGetErrorDetails(ctx context.Context, request operations.E
 // ErrorsGroupCountsPerDay - Count of errors by day in the time range of the selected error group with selected version
 func (s *errors) ErrorsGroupCountsPerDay(ctx context.Context, request operations.ErrorsGroupCountsPerDayRequest, security operations.ErrorsGroupCountsPerDaySecurity) (*operations.ErrorsGroupCountsPerDayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorCountsPerDay", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorCountsPerDay", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -818,7 +921,10 @@ func (s *errors) ErrorsGroupCountsPerDay(ctx context.Context, request operations
 // ErrorsGroupDetails - Error group details
 func (s *errors) ErrorsGroupDetails(ctx context.Context, request operations.ErrorsGroupDetailsRequest, security operations.ErrorsGroupDetailsSecurity) (*operations.ErrorsGroupDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -872,7 +978,10 @@ func (s *errors) ErrorsGroupDetails(ctx context.Context, request operations.Erro
 // ErrorsGroupErrorFreeDevicePercentages - Percentage of error-free devices by day in the time range. Api will return -1 if crash devices is greater than active devices
 func (s *errors) ErrorsGroupErrorFreeDevicePercentages(ctx context.Context, request operations.ErrorsGroupErrorFreeDevicePercentagesRequest, security operations.ErrorsGroupErrorFreeDevicePercentagesSecurity) (*operations.ErrorsGroupErrorFreeDevicePercentagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorfreeDevicePercentages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorfreeDevicePercentages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -930,7 +1039,10 @@ func (s *errors) ErrorsGroupErrorFreeDevicePercentages(ctx context.Context, requ
 // ErrorsGroupErrorStackTrace - Gets the stack trace for the error group.
 func (s *errors) ErrorsGroupErrorStackTrace(ctx context.Context, request operations.ErrorsGroupErrorStackTraceRequest, security operations.ErrorsGroupErrorStackTraceSecurity) (*operations.ErrorsGroupErrorStackTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/stacktrace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/stacktrace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -984,7 +1096,10 @@ func (s *errors) ErrorsGroupErrorStackTrace(ctx context.Context, request operati
 // ErrorsGroupList - List of error groups
 func (s *errors) ErrorsGroupList(ctx context.Context, request operations.ErrorsGroupListRequest, security operations.ErrorsGroupListSecurity) (*operations.ErrorsGroupListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1042,7 +1157,10 @@ func (s *errors) ErrorsGroupList(ctx context.Context, request operations.ErrorsG
 // ErrorsGroupModelCounts - Top models of the selected error group.
 func (s *errors) ErrorsGroupModelCounts(ctx context.Context, request operations.ErrorsGroupModelCountsRequest, security operations.ErrorsGroupModelCountsSecurity) (*operations.ErrorsGroupModelCountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1100,7 +1218,10 @@ func (s *errors) ErrorsGroupModelCounts(ctx context.Context, request operations.
 // ErrorsGroupOperatingSystemCounts - Top OSes of the selected error group.
 func (s *errors) ErrorsGroupOperatingSystemCounts(ctx context.Context, request operations.ErrorsGroupOperatingSystemCountsRequest, security operations.ErrorsGroupOperatingSystemCountsSecurity) (*operations.ErrorsGroupOperatingSystemCountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/operatingSystems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/operatingSystems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1158,7 +1279,10 @@ func (s *errors) ErrorsGroupOperatingSystemCounts(ctx context.Context, request o
 // ErrorsLatestErrorDetails - Latest error details.
 func (s *errors) ErrorsLatestErrorDetails(ctx context.Context, request operations.ErrorsLatestErrorDetailsRequest, security operations.ErrorsLatestErrorDetailsSecurity) (*operations.ErrorsLatestErrorDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/latest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/latest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1212,7 +1336,10 @@ func (s *errors) ErrorsLatestErrorDetails(ctx context.Context, request operation
 // ErrorsListForGroup - Get all errors for group
 func (s *errors) ErrorsListForGroup(ctx context.Context, request operations.ErrorsListForGroupRequest, security operations.ErrorsListForGroupSecurity) (*operations.ErrorsListForGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1270,7 +1397,10 @@ func (s *errors) ErrorsListForGroup(ctx context.Context, request operations.Erro
 // ErrorsListSessionLogs - Get session logs by error ID
 func (s *errors) ErrorsListSessionLogs(ctx context.Context, request operations.ErrorsListSessionLogsRequest, security operations.ErrorsListSessionLogsSecurity) (*operations.ErrorsListSessionLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/sessionLogs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/sessionLogs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1328,7 +1458,10 @@ func (s *errors) ErrorsListSessionLogs(ctx context.Context, request operations.E
 // ErrorsUpdateState - Update error group state
 func (s *errors) ErrorsUpdateState(ctx context.Context, request operations.ErrorsUpdateStateRequest, security operations.ErrorsUpdateStateSecurity) (*operations.ErrorsUpdateStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1393,7 +1526,10 @@ func (s *errors) ErrorsUpdateState(ctx context.Context, request operations.Error
 // gets the retention settings in days
 func (s *errors) ErrorsGetRetentionSettings(ctx context.Context, request operations.ErrorsGetRetentionSettingsRequest, security operations.ErrorsGetRetentionSettingsSecurity) (*operations.ErrorsGetRetentionSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/retention_settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/errors/retention_settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

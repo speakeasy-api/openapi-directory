@@ -24,12 +24,16 @@ const (
 	CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnumServiceDefined CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnum = "service-defined"
 )
 
+func (e CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnum) ToPointer() *CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnum {
+	return &e
+}
+
 func (e *CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "dualstack":
@@ -37,10 +41,10 @@ func (e *CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnum) Unmars
 	case "ipv6":
 		fallthrough
 	case "service-defined":
-		*e = CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnum(s)
+		*e = CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnum: %v", v)
 	}
 }
 
@@ -65,21 +69,25 @@ const (
 	CreateVpcEndpointResultVpcEndpointIPAddressTypeEnumIpv6      CreateVpcEndpointResultVpcEndpointIPAddressTypeEnum = "ipv6"
 )
 
+func (e CreateVpcEndpointResultVpcEndpointIPAddressTypeEnum) ToPointer() *CreateVpcEndpointResultVpcEndpointIPAddressTypeEnum {
+	return &e
+}
+
 func (e *CreateVpcEndpointResultVpcEndpointIPAddressTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "dualstack":
 		fallthrough
 	case "ipv6":
-		*e = CreateVpcEndpointResultVpcEndpointIPAddressTypeEnum(s)
+		*e = CreateVpcEndpointResultVpcEndpointIPAddressTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcEndpointResultVpcEndpointIPAddressTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcEndpointResultVpcEndpointIPAddressTypeEnum: %v", v)
 	}
 }
 
@@ -103,12 +111,16 @@ const (
 	CreateVpcEndpointResultVpcEndpointStateEnumExpired           CreateVpcEndpointResultVpcEndpointStateEnum = "Expired"
 )
 
+func (e CreateVpcEndpointResultVpcEndpointStateEnum) ToPointer() *CreateVpcEndpointResultVpcEndpointStateEnum {
+	return &e
+}
+
 func (e *CreateVpcEndpointResultVpcEndpointStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PendingAcceptance":
 		fallthrough
 	case "Pending":
@@ -124,10 +136,10 @@ func (e *CreateVpcEndpointResultVpcEndpointStateEnum) UnmarshalJSON(data []byte)
 	case "Failed":
 		fallthrough
 	case "Expired":
-		*e = CreateVpcEndpointResultVpcEndpointStateEnum(s)
+		*e = CreateVpcEndpointResultVpcEndpointStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcEndpointResultVpcEndpointStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcEndpointResultVpcEndpointStateEnum: %v", v)
 	}
 }
 
@@ -146,21 +158,25 @@ const (
 	CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnumGatewayLoadBalancer CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnum = "GatewayLoadBalancer"
 )
 
+func (e CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnum) ToPointer() *CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnum {
+	return &e
+}
+
 func (e *CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Interface":
 		fallthrough
 	case "Gateway":
 		fallthrough
 	case "GatewayLoadBalancer":
-		*e = CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnum(s)
+		*e = CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcEndpointResultVpcEndpointVpcEndpointTypeEnum: %v", v)
 	}
 }
 

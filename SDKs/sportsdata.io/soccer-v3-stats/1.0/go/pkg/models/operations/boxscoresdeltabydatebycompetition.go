@@ -17,19 +17,23 @@ const (
 	BoxScoresDeltaByDateByCompetitionFormatEnumJSON BoxScoresDeltaByDateByCompetitionFormatEnum = "json"
 )
 
+func (e BoxScoresDeltaByDateByCompetitionFormatEnum) ToPointer() *BoxScoresDeltaByDateByCompetitionFormatEnum {
+	return &e
+}
+
 func (e *BoxScoresDeltaByDateByCompetitionFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xml":
 		fallthrough
 	case "json":
-		*e = BoxScoresDeltaByDateByCompetitionFormatEnum(s)
+		*e = BoxScoresDeltaByDateByCompetitionFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BoxScoresDeltaByDateByCompetitionFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for BoxScoresDeltaByDateByCompetitionFormatEnum: %v", v)
 	}
 }
 

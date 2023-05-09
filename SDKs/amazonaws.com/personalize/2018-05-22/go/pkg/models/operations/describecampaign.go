@@ -16,17 +16,21 @@ const (
 	DescribeCampaignXAmzTargetEnumAmazonPersonalizeDescribeCampaign DescribeCampaignXAmzTargetEnum = "AmazonPersonalize.DescribeCampaign"
 )
 
+func (e DescribeCampaignXAmzTargetEnum) ToPointer() *DescribeCampaignXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeCampaignXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.DescribeCampaign":
-		*e = DescribeCampaignXAmzTargetEnum(s)
+		*e = DescribeCampaignXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeCampaignXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeCampaignXAmzTargetEnum: %v", v)
 	}
 }
 

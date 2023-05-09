@@ -19,12 +19,16 @@ const (
 	UnmappedIdentityResolutionStatusCodeEnumInternalError               UnmappedIdentityResolutionStatusCodeEnum = "INTERNAL_ERROR"
 )
 
+func (e UnmappedIdentityResolutionStatusCodeEnum) ToPointer() *UnmappedIdentityResolutionStatusCodeEnum {
+	return &e
+}
+
 func (e *UnmappedIdentityResolutionStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODE_UNSPECIFIED":
 		fallthrough
 	case "NOT_FOUND":
@@ -36,10 +40,10 @@ func (e *UnmappedIdentityResolutionStatusCodeEnum) UnmarshalJSON(data []byte) er
 	case "TOO_MANY_MAPPINGS_FOUND":
 		fallthrough
 	case "INTERNAL_ERROR":
-		*e = UnmappedIdentityResolutionStatusCodeEnum(s)
+		*e = UnmappedIdentityResolutionStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UnmappedIdentityResolutionStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for UnmappedIdentityResolutionStatusCodeEnum: %v", v)
 	}
 }
 

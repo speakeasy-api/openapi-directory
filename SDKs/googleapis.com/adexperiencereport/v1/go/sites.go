@@ -34,7 +34,10 @@ func newSites(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // AdexperiencereportSitesGet - Gets a site's Ad Experience Report summary.
 func (s *sites) AdexperiencereportSitesGet(ctx context.Context, request operations.AdexperiencereportSitesGetRequest) (*operations.AdexperiencereportSitesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

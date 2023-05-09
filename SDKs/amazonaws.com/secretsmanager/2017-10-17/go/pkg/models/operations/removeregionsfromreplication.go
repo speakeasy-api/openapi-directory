@@ -16,17 +16,21 @@ const (
 	RemoveRegionsFromReplicationXAmzTargetEnumSecretsmanagerRemoveRegionsFromReplication RemoveRegionsFromReplicationXAmzTargetEnum = "secretsmanager.RemoveRegionsFromReplication"
 )
 
+func (e RemoveRegionsFromReplicationXAmzTargetEnum) ToPointer() *RemoveRegionsFromReplicationXAmzTargetEnum {
+	return &e
+}
+
 func (e *RemoveRegionsFromReplicationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "secretsmanager.RemoveRegionsFromReplication":
-		*e = RemoveRegionsFromReplicationXAmzTargetEnum(s)
+		*e = RemoveRegionsFromReplicationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveRegionsFromReplicationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveRegionsFromReplicationXAmzTargetEnum: %v", v)
 	}
 }
 

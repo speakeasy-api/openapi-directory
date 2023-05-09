@@ -16,12 +16,16 @@ const (
 	CustomMetricTypeEnumNumber        CustomMetricTypeEnum = "number"
 )
 
+func (e CustomMetricTypeEnum) ToPointer() *CustomMetricTypeEnum {
+	return &e
+}
+
 func (e *CustomMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "string-list":
 		fallthrough
 	case "ip-address-list":
@@ -29,9 +33,9 @@ func (e *CustomMetricTypeEnum) UnmarshalJSON(data []byte) error {
 	case "number-list":
 		fallthrough
 	case "number":
-		*e = CustomMetricTypeEnum(s)
+		*e = CustomMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomMetricTypeEnum: %v", v)
 	}
 }

@@ -23,12 +23,16 @@ const (
 	ItemDetailTypeEnumCustomAsset ItemDetailTypeEnum = "customAsset"
 )
 
+func (e ItemDetailTypeEnum) ToPointer() *ItemDetailTypeEnum {
+	return &e
+}
+
 func (e *ItemDetailTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "movie":
 		fallthrough
 	case "show":
@@ -46,10 +50,10 @@ func (e *ItemDetailTypeEnum) UnmarshalJSON(data []byte) error {
 	case "channel":
 		fallthrough
 	case "customAsset":
-		*e = ItemDetailTypeEnum(s)
+		*e = ItemDetailTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItemDetailTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ItemDetailTypeEnum: %v", v)
 	}
 }
 

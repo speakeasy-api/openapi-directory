@@ -16,21 +16,25 @@ const (
 	LinuxNodeConfigCgroupModeEnumCgroupModeV2          LinuxNodeConfigCgroupModeEnum = "CGROUP_MODE_V2"
 )
 
+func (e LinuxNodeConfigCgroupModeEnum) ToPointer() *LinuxNodeConfigCgroupModeEnum {
+	return &e
+}
+
 func (e *LinuxNodeConfigCgroupModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CGROUP_MODE_UNSPECIFIED":
 		fallthrough
 	case "CGROUP_MODE_V1":
 		fallthrough
 	case "CGROUP_MODE_V2":
-		*e = LinuxNodeConfigCgroupModeEnum(s)
+		*e = LinuxNodeConfigCgroupModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LinuxNodeConfigCgroupModeEnum: %s", s)
+		return fmt.Errorf("invalid value for LinuxNodeConfigCgroupModeEnum: %v", v)
 	}
 }
 

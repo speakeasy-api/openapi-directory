@@ -37,21 +37,25 @@ const (
 	PostServersIDActionsResetPassword201ApplicationJSONActionStatusEnumError   PostServersIDActionsResetPassword201ApplicationJSONActionStatusEnum = "error"
 )
 
+func (e PostServersIDActionsResetPassword201ApplicationJSONActionStatusEnum) ToPointer() *PostServersIDActionsResetPassword201ApplicationJSONActionStatusEnum {
+	return &e
+}
+
 func (e *PostServersIDActionsResetPassword201ApplicationJSONActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostServersIDActionsResetPassword201ApplicationJSONActionStatusEnum(s)
+		*e = PostServersIDActionsResetPassword201ApplicationJSONActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersIDActionsResetPassword201ApplicationJSONActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersIDActionsResetPassword201ApplicationJSONActionStatusEnum: %v", v)
 	}
 }
 

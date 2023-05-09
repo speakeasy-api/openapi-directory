@@ -113,7 +113,10 @@ func (s *boundaries) FetchBoundaries(ctx context.Context, request shared.Boundar
 // Retrieve a **Boundary** by ID.
 func (s *boundaries) FetchBoundaryByID(ctx context.Context, request operations.FetchBoundaryByIDRequest, security operations.FetchBoundaryByIDSecurity) (*operations.FetchBoundaryByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/boundaries/{boundaryId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/boundaries/{boundaryId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

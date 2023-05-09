@@ -13,23 +13,27 @@ type CompleteASandboxAccountTransferRequest struct {
 	AccountTransferID string `pathParam:"style=simple,explode=false,name=account_transfer_id"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum = "429"
+	CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON13TypeEnumRateLimitedError CompleteASandboxAccountTransferDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON13TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON13TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type CompleteASandboxAccountTransferDefaultApplicationJSON13 struct {
 	Type       CompleteASandboxAccountTransferDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnum = "403"
+	CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON12TypeEnumPrivateFeatureError CompleteASandboxAccountTransferDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON12TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON12TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type CompleteASandboxAccountTransferDefaultApplicationJSON12 struct {
 	Type   CompleteASandboxAccountTransferDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnum = "404"
+	CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON11TypeEnumObjectNotFoundError CompleteASandboxAccountTransferDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON11TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON11TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type CompleteASandboxAccountTransferDefaultApplicationJSON11 struct {
 	Type   CompleteASandboxAccountTransferDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnumFourHundred CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnum = "400"
+	CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnumFourHundred CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON10TypeEnumMalformedRequestError CompleteASandboxAccountTransferDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON10TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON10TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type CompleteASandboxAccountTransferDefaultApplicationJSON10 struct {
 	Type   CompleteASandboxAccountTransferDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnumFourHundred CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnum = "400"
+	CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnumFourHundred CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON9TypeEnumInvalidParametersError CompleteASandboxAccountTransferDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON9TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON9TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type CompleteASandboxAccountTransferDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                         `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                         `json:"errors"`
 	Status CompleteASandboxAccountTransferDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                           `json:"title"`
 	Type   CompleteASandboxAccountTransferDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnum = "409"
+	CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON8TypeEnumInvalidOperationError CompleteASandboxAccountTransferDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON8TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON8TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type CompleteASandboxAccountTransferDefaultApplicationJSON8 struct {
 	Type   CompleteASandboxAccountTransferDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnum = "401"
+	CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON7TypeEnumInvalidAPIKeyError CompleteASandboxAccountTransferDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON7TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON7TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type CompleteASandboxAccountTransferDefaultApplicationJSON7 struct {
 	Type   CompleteASandboxAccountTransferDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnumFiveHundred CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnum = "500"
+	CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnumFiveHundred CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON6TypeEnumInternalServerError CompleteASandboxAccountTransferDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON6TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON6TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type CompleteASandboxAccountTransferDefaultApplicationJSON6 struct {
 	Type   CompleteASandboxAccountTransferDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnum = "403"
+	CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON5TypeEnumInsufficientPermissionsError CompleteASandboxAccountTransferDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON5TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON5TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type CompleteASandboxAccountTransferDefaultApplicationJSON5 struct {
 	Type   CompleteASandboxAccountTransferDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnum = "422"
+	CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError CompleteASandboxAccountTransferDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON4TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON4TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type CompleteASandboxAccountTransferDefaultApplicationJSON4 struct {
 	Type   CompleteASandboxAccountTransferDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnum = "409"
+	CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON3TypeEnumIdempotencyConflictError CompleteASandboxAccountTransferDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON3TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON3TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type CompleteASandboxAccountTransferDefaultApplicationJSON3 struct {
 	Type   CompleteASandboxAccountTransferDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnum = "403"
+	CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON2TypeEnumEnvironmentMismatchError CompleteASandboxAccountTransferDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON2TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON2TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type CompleteASandboxAccountTransferDefaultApplicationJSON2 struct {
 	Type   CompleteASandboxAccountTransferDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnum string
+type CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnum int64
 
 const (
-	CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnum = "404"
+	CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	CompleteASandboxAccountTransferDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError CompleteASandboxAccountTransferDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e CompleteASandboxAccountTransferDefaultApplicationJSON1TypeEnum) ToPointer() *CompleteASandboxAccountTransferDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *CompleteASandboxAccountTransferDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = CompleteASandboxAccountTransferDefaultApplicationJSON1TypeEnum(s)
+		*e = CompleteASandboxAccountTransferDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompleteASandboxAccountTransferDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

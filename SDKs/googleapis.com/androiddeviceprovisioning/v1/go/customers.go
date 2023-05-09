@@ -35,7 +35,10 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 // AndroiddeviceprovisioningCustomersConfigurationsCreate - Creates a new configuration. Once created, a customer can apply the configuration to devices.
 func (s *customers) AndroiddeviceprovisioningCustomersConfigurationsCreate(ctx context.Context, request operations.AndroiddeviceprovisioningCustomersConfigurationsCreateRequest) (*operations.AndroiddeviceprovisioningCustomersConfigurationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/configurations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/configurations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfigurationInput", "json")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *customers) AndroiddeviceprovisioningCustomersConfigurationsCreate(ctx c
 // AndroiddeviceprovisioningCustomersConfigurationsDelete - Deletes an unused configuration. The API call fails if the customer has devices with the configuration applied.
 func (s *customers) AndroiddeviceprovisioningCustomersConfigurationsDelete(ctx context.Context, request operations.AndroiddeviceprovisioningCustomersConfigurationsDeleteRequest) (*operations.AndroiddeviceprovisioningCustomersConfigurationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -138,7 +144,10 @@ func (s *customers) AndroiddeviceprovisioningCustomersConfigurationsDelete(ctx c
 // AndroiddeviceprovisioningCustomersConfigurationsList - Lists a customer's configurations.
 func (s *customers) AndroiddeviceprovisioningCustomersConfigurationsList(ctx context.Context, request operations.AndroiddeviceprovisioningCustomersConfigurationsListRequest) (*operations.AndroiddeviceprovisioningCustomersConfigurationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/configurations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/configurations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -186,7 +195,10 @@ func (s *customers) AndroiddeviceprovisioningCustomersConfigurationsList(ctx con
 // AndroiddeviceprovisioningCustomersConfigurationsPatch - Updates a configuration's field values.
 func (s *customers) AndroiddeviceprovisioningCustomersConfigurationsPatch(ctx context.Context, request operations.AndroiddeviceprovisioningCustomersConfigurationsPatchRequest) (*operations.AndroiddeviceprovisioningCustomersConfigurationsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConfigurationInput", "json")
 	if err != nil {
@@ -241,7 +253,10 @@ func (s *customers) AndroiddeviceprovisioningCustomersConfigurationsPatch(ctx co
 // AndroiddeviceprovisioningCustomersDevicesApplyConfiguration - Applies a Configuration to the device to register the device for zero-touch enrollment. After applying a configuration to a device, the device automatically provisions itself on first boot, or next factory reset.
 func (s *customers) AndroiddeviceprovisioningCustomersDevicesApplyConfiguration(ctx context.Context, request operations.AndroiddeviceprovisioningCustomersDevicesApplyConfigurationRequest) (*operations.AndroiddeviceprovisioningCustomersDevicesApplyConfigurationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices:applyConfiguration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices:applyConfiguration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerApplyConfigurationRequest", "json")
 	if err != nil {
@@ -296,7 +311,10 @@ func (s *customers) AndroiddeviceprovisioningCustomersDevicesApplyConfiguration(
 // AndroiddeviceprovisioningCustomersDevicesList - Lists a customer's devices.
 func (s *customers) AndroiddeviceprovisioningCustomersDevicesList(ctx context.Context, request operations.AndroiddeviceprovisioningCustomersDevicesListRequest) (*operations.AndroiddeviceprovisioningCustomersDevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -344,7 +362,10 @@ func (s *customers) AndroiddeviceprovisioningCustomersDevicesList(ctx context.Co
 // AndroiddeviceprovisioningCustomersDevicesRemoveConfiguration - Removes a configuration from device.
 func (s *customers) AndroiddeviceprovisioningCustomersDevicesRemoveConfiguration(ctx context.Context, request operations.AndroiddeviceprovisioningCustomersDevicesRemoveConfigurationRequest) (*operations.AndroiddeviceprovisioningCustomersDevicesRemoveConfigurationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices:removeConfiguration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices:removeConfiguration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerRemoveConfigurationRequest", "json")
 	if err != nil {
@@ -399,7 +420,10 @@ func (s *customers) AndroiddeviceprovisioningCustomersDevicesRemoveConfiguration
 // AndroiddeviceprovisioningCustomersDevicesUnclaim - Unclaims a device from a customer and removes it from zero-touch enrollment. After removing a device, a customer must contact their reseller to register the device into zero-touch enrollment again.
 func (s *customers) AndroiddeviceprovisioningCustomersDevicesUnclaim(ctx context.Context, request operations.AndroiddeviceprovisioningCustomersDevicesUnclaimRequest) (*operations.AndroiddeviceprovisioningCustomersDevicesUnclaimResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices:unclaim", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/devices:unclaim", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerUnclaimDeviceRequest", "json")
 	if err != nil {
@@ -454,7 +478,10 @@ func (s *customers) AndroiddeviceprovisioningCustomersDevicesUnclaim(ctx context
 // AndroiddeviceprovisioningCustomersDpcsList - Lists the DPCs (device policy controllers) that support zero-touch enrollment.
 func (s *customers) AndroiddeviceprovisioningCustomersDpcsList(ctx context.Context, request operations.AndroiddeviceprovisioningCustomersDpcsListRequest) (*operations.AndroiddeviceprovisioningCustomersDpcsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dpcs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dpcs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

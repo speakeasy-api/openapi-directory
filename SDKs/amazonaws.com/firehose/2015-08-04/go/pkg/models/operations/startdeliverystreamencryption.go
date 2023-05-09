@@ -16,17 +16,21 @@ const (
 	StartDeliveryStreamEncryptionXAmzTargetEnumFirehose20150804StartDeliveryStreamEncryption StartDeliveryStreamEncryptionXAmzTargetEnum = "Firehose_20150804.StartDeliveryStreamEncryption"
 )
 
+func (e StartDeliveryStreamEncryptionXAmzTargetEnum) ToPointer() *StartDeliveryStreamEncryptionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartDeliveryStreamEncryptionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Firehose_20150804.StartDeliveryStreamEncryption":
-		*e = StartDeliveryStreamEncryptionXAmzTargetEnum(s)
+		*e = StartDeliveryStreamEncryptionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartDeliveryStreamEncryptionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartDeliveryStreamEncryptionXAmzTargetEnum: %v", v)
 	}
 }
 

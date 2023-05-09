@@ -19,12 +19,16 @@ const (
 	VerificationMethodEnumAuto                          VerificationMethodEnum = "AUTO"
 )
 
+func (e VerificationMethodEnum) ToPointer() *VerificationMethodEnum {
+	return &e
+}
+
 func (e *VerificationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERIFICATION_METHOD_UNSPECIFIED":
 		fallthrough
 	case "ADDRESS":
@@ -36,10 +40,10 @@ func (e *VerificationMethodEnum) UnmarshalJSON(data []byte) error {
 	case "SMS":
 		fallthrough
 	case "AUTO":
-		*e = VerificationMethodEnum(s)
+		*e = VerificationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerificationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for VerificationMethodEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	VerificationStateEnumFailed                       VerificationStateEnum = "FAILED"
 )
 
+func (e VerificationStateEnum) ToPointer() *VerificationStateEnum {
+	return &e
+}
+
 func (e *VerificationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERIFICATION_STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -66,10 +74,10 @@ func (e *VerificationStateEnum) UnmarshalJSON(data []byte) error {
 	case "COMPLETED":
 		fallthrough
 	case "FAILED":
-		*e = VerificationStateEnum(s)
+		*e = VerificationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerificationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for VerificationStateEnum: %v", v)
 	}
 }
 

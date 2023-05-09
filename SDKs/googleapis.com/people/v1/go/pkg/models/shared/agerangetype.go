@@ -17,12 +17,16 @@ const (
 	AgeRangeTypeAgeRangeEnumTwentyOneOrOlder    AgeRangeTypeAgeRangeEnum = "TWENTY_ONE_OR_OLDER"
 )
 
+func (e AgeRangeTypeAgeRangeEnum) ToPointer() *AgeRangeTypeAgeRangeEnum {
+	return &e
+}
+
 func (e *AgeRangeTypeAgeRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGE_RANGE_UNSPECIFIED":
 		fallthrough
 	case "LESS_THAN_EIGHTEEN":
@@ -30,10 +34,10 @@ func (e *AgeRangeTypeAgeRangeEnum) UnmarshalJSON(data []byte) error {
 	case "EIGHTEEN_TO_TWENTY":
 		fallthrough
 	case "TWENTY_ONE_OR_OLDER":
-		*e = AgeRangeTypeAgeRangeEnum(s)
+		*e = AgeRangeTypeAgeRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AgeRangeTypeAgeRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for AgeRangeTypeAgeRangeEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	NicknameTypeEnumShortName     NicknameTypeEnum = "SHORT_NAME"
 )
 
+func (e NicknameTypeEnum) ToPointer() *NicknameTypeEnum {
+	return &e
+}
+
 func (e *NicknameTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "MAIDEN_NAME":
@@ -39,10 +43,10 @@ func (e *NicknameTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ALTERNATE_NAME":
 		fallthrough
 	case "SHORT_NAME":
-		*e = NicknameTypeEnum(s)
+		*e = NicknameTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NicknameTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NicknameTypeEnum: %v", v)
 	}
 }
 

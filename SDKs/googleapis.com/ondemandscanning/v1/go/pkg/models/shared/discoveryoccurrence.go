@@ -20,12 +20,16 @@ const (
 	DiscoveryOccurrenceAnalysisStatusEnumFinishedUnsupported       DiscoveryOccurrenceAnalysisStatusEnum = "FINISHED_UNSUPPORTED"
 )
 
+func (e DiscoveryOccurrenceAnalysisStatusEnum) ToPointer() *DiscoveryOccurrenceAnalysisStatusEnum {
+	return &e
+}
+
 func (e *DiscoveryOccurrenceAnalysisStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANALYSIS_STATUS_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -39,10 +43,10 @@ func (e *DiscoveryOccurrenceAnalysisStatusEnum) UnmarshalJSON(data []byte) error
 	case "FINISHED_FAILED":
 		fallthrough
 	case "FINISHED_UNSUPPORTED":
-		*e = DiscoveryOccurrenceAnalysisStatusEnum(s)
+		*e = DiscoveryOccurrenceAnalysisStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiscoveryOccurrenceAnalysisStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DiscoveryOccurrenceAnalysisStatusEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	DiscoveryOccurrenceContinuousAnalysisEnumInactive                      DiscoveryOccurrenceContinuousAnalysisEnum = "INACTIVE"
 )
 
+func (e DiscoveryOccurrenceContinuousAnalysisEnum) ToPointer() *DiscoveryOccurrenceContinuousAnalysisEnum {
+	return &e
+}
+
 func (e *DiscoveryOccurrenceContinuousAnalysisEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTINUOUS_ANALYSIS_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
-		*e = DiscoveryOccurrenceContinuousAnalysisEnum(s)
+		*e = DiscoveryOccurrenceContinuousAnalysisEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiscoveryOccurrenceContinuousAnalysisEnum: %s", s)
+		return fmt.Errorf("invalid value for DiscoveryOccurrenceContinuousAnalysisEnum: %v", v)
 	}
 }
 

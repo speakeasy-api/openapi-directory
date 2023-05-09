@@ -21,19 +21,23 @@ const (
 	UpdateProductModuleRequestBodyLicenseTemplateEnumFeature    UpdateProductModuleRequestBodyLicenseTemplateEnum = "FEATURE"
 )
 
+func (e UpdateProductModuleRequestBodyLicenseTemplateEnum) ToPointer() *UpdateProductModuleRequestBodyLicenseTemplateEnum {
+	return &e
+}
+
 func (e *UpdateProductModuleRequestBodyLicenseTemplateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIMEVOLUME":
 		fallthrough
 	case "FEATURE":
-		*e = UpdateProductModuleRequestBodyLicenseTemplateEnum(s)
+		*e = UpdateProductModuleRequestBodyLicenseTemplateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateProductModuleRequestBodyLicenseTemplateEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateProductModuleRequestBodyLicenseTemplateEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	UpdateProductModuleRequestBodyNodeSecretModeEnumClient     UpdateProductModuleRequestBodyNodeSecretModeEnum = "CLIENT"
 )
 
+func (e UpdateProductModuleRequestBodyNodeSecretModeEnum) ToPointer() *UpdateProductModuleRequestBodyNodeSecretModeEnum {
+	return &e
+}
+
 func (e *UpdateProductModuleRequestBodyNodeSecretModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PREDEFINED":
 		fallthrough
 	case "CLIENT":
-		*e = UpdateProductModuleRequestBodyNodeSecretModeEnum(s)
+		*e = UpdateProductModuleRequestBodyNodeSecretModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateProductModuleRequestBodyNodeSecretModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateProductModuleRequestBodyNodeSecretModeEnum: %v", v)
 	}
 }
 

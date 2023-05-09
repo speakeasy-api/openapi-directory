@@ -16,21 +16,25 @@ const (
 	AchievementRevealResponseCurrentStateEnumUnlocked                          AchievementRevealResponseCurrentStateEnum = "UNLOCKED"
 )
 
+func (e AchievementRevealResponseCurrentStateEnum) ToPointer() *AchievementRevealResponseCurrentStateEnum {
+	return &e
+}
+
 func (e *AchievementRevealResponseCurrentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVEAL_ACHIEVEMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "REVEALED":
 		fallthrough
 	case "UNLOCKED":
-		*e = AchievementRevealResponseCurrentStateEnum(s)
+		*e = AchievementRevealResponseCurrentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchievementRevealResponseCurrentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AchievementRevealResponseCurrentStateEnum: %v", v)
 	}
 }
 

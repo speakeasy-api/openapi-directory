@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,158 +17,156 @@ func main() {
         }),
     )
 
-    req := operations.CreateBatchLoadTaskRequest{
+    ctx := context.Background()
+    res, err := s.CreateBatchLoadTask(ctx, operations.CreateBatchLoadTaskRequest{
         CreateBatchLoadTaskRequest: shared.CreateBatchLoadTaskRequest{
-            ClientToken: "corrupti",
+            ClientToken: sdk.String("corrupti"),
             DataModelConfiguration: &shared.DataModelConfiguration{
                 DataModel: &shared.DataModel{
                     DimensionMappings: []shared.DimensionMapping{
                         shared.DimensionMapping{
-                            DestinationColumn: "distinctio",
-                            SourceColumn: "quibusdam",
+                            DestinationColumn: sdk.String("distinctio"),
+                            SourceColumn: sdk.String("quibusdam"),
                         },
                         shared.DimensionMapping{
-                            DestinationColumn: "unde",
-                            SourceColumn: "nulla",
+                            DestinationColumn: sdk.String("unde"),
+                            SourceColumn: sdk.String("nulla"),
                         },
                         shared.DimensionMapping{
-                            DestinationColumn: "corrupti",
-                            SourceColumn: "illum",
+                            DestinationColumn: sdk.String("corrupti"),
+                            SourceColumn: sdk.String("illum"),
                         },
                     },
-                    MeasureNameColumn: "vel",
+                    MeasureNameColumn: sdk.String("vel"),
                     MixedMeasureMappings: []shared.MixedMeasureMapping{
                         shared.MixedMeasureMapping{
-                            MeasureName: "deserunt",
-                            MeasureValueType: "VARCHAR",
+                            MeasureName: sdk.String("deserunt"),
+                            MeasureValueType: shared.MeasureValueTypeEnumVarchar,
                             MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "BIGINT",
+                                    MeasureValueType: shared.ScalarMeasureValueTypeEnumBigint.ToPointer(),
                                     SourceColumn: "debitis",
-                                    TargetMultiMeasureAttributeName: "ipsa",
+                                    TargetMultiMeasureAttributeName: sdk.String("ipsa"),
                                 },
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "TIMESTAMP",
+                                    MeasureValueType: shared.ScalarMeasureValueTypeEnumTimestamp.ToPointer(),
                                     SourceColumn: "tempora",
-                                    TargetMultiMeasureAttributeName: "suscipit",
+                                    TargetMultiMeasureAttributeName: sdk.String("suscipit"),
                                 },
                             },
-                            SourceColumn: "molestiae",
-                            TargetMeasureName: "minus",
+                            SourceColumn: sdk.String("molestiae"),
+                            TargetMeasureName: sdk.String("minus"),
                         },
                         shared.MixedMeasureMapping{
-                            MeasureName: "placeat",
-                            MeasureValueType: "BOOLEAN",
+                            MeasureName: sdk.String("placeat"),
+                            MeasureValueType: shared.MeasureValueTypeEnumBoolean,
                             MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "BOOLEAN",
+                                    MeasureValueType: shared.ScalarMeasureValueTypeEnumBoolean.ToPointer(),
                                     SourceColumn: "nisi",
-                                    TargetMultiMeasureAttributeName: "recusandae",
+                                    TargetMultiMeasureAttributeName: sdk.String("recusandae"),
                                 },
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "TIMESTAMP",
+                                    MeasureValueType: shared.ScalarMeasureValueTypeEnumTimestamp.ToPointer(),
                                     SourceColumn: "ab",
-                                    TargetMultiMeasureAttributeName: "quis",
+                                    TargetMultiMeasureAttributeName: sdk.String("quis"),
                                 },
                             },
-                            SourceColumn: "veritatis",
-                            TargetMeasureName: "deserunt",
+                            SourceColumn: sdk.String("veritatis"),
+                            TargetMeasureName: sdk.String("deserunt"),
                         },
                         shared.MixedMeasureMapping{
-                            MeasureName: "perferendis",
-                            MeasureValueType: "VARCHAR",
+                            MeasureName: sdk.String("perferendis"),
+                            MeasureValueType: shared.MeasureValueTypeEnumVarchar,
                             MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "TIMESTAMP",
+                                    MeasureValueType: shared.ScalarMeasureValueTypeEnumTimestamp.ToPointer(),
                                     SourceColumn: "quo",
-                                    TargetMultiMeasureAttributeName: "odit",
+                                    TargetMultiMeasureAttributeName: sdk.String("odit"),
                                 },
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "TIMESTAMP",
+                                    MeasureValueType: shared.ScalarMeasureValueTypeEnumTimestamp.ToPointer(),
                                     SourceColumn: "at",
-                                    TargetMultiMeasureAttributeName: "maiores",
+                                    TargetMultiMeasureAttributeName: sdk.String("maiores"),
                                 },
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "BOOLEAN",
+                                    MeasureValueType: shared.ScalarMeasureValueTypeEnumBoolean.ToPointer(),
                                     SourceColumn: "quod",
-                                    TargetMultiMeasureAttributeName: "quod",
+                                    TargetMultiMeasureAttributeName: sdk.String("quod"),
                                 },
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "BOOLEAN",
+                                    MeasureValueType: shared.ScalarMeasureValueTypeEnumBoolean.ToPointer(),
                                     SourceColumn: "totam",
-                                    TargetMultiMeasureAttributeName: "porro",
+                                    TargetMultiMeasureAttributeName: sdk.String("porro"),
                                 },
                             },
-                            SourceColumn: "dolorum",
-                            TargetMeasureName: "dicta",
+                            SourceColumn: sdk.String("dolorum"),
+                            TargetMeasureName: sdk.String("dicta"),
                         },
                     },
                     MultiMeasureMappings: &shared.MultiMeasureMappings{
                         MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
                             shared.MultiMeasureAttributeMapping{
-                                MeasureValueType: "VARCHAR",
+                                MeasureValueType: shared.ScalarMeasureValueTypeEnumVarchar.ToPointer(),
                                 SourceColumn: "occaecati",
-                                TargetMultiMeasureAttributeName: "fugit",
+                                TargetMultiMeasureAttributeName: sdk.String("fugit"),
                             },
                             shared.MultiMeasureAttributeMapping{
-                                MeasureValueType: "BOOLEAN",
+                                MeasureValueType: shared.ScalarMeasureValueTypeEnumBoolean.ToPointer(),
                                 SourceColumn: "hic",
-                                TargetMultiMeasureAttributeName: "optio",
+                                TargetMultiMeasureAttributeName: sdk.String("optio"),
                             },
                             shared.MultiMeasureAttributeMapping{
-                                MeasureValueType: "BOOLEAN",
+                                MeasureValueType: shared.ScalarMeasureValueTypeEnumBoolean.ToPointer(),
                                 SourceColumn: "beatae",
-                                TargetMultiMeasureAttributeName: "commodi",
+                                TargetMultiMeasureAttributeName: sdk.String("commodi"),
                             },
                         },
-                        TargetMultiMeasureName: "molestiae",
+                        TargetMultiMeasureName: sdk.String("molestiae"),
                     },
-                    TimeColumn: "modi",
-                    TimeUnit: "MILLISECONDS",
+                    TimeColumn: sdk.String("modi"),
+                    TimeUnit: shared.TimeUnitEnumMilliseconds.ToPointer(),
                 },
                 DataModelS3Configuration: &shared.DataModelS3Configuration{
-                    BucketName: "impedit",
-                    ObjectKey: "cum",
+                    BucketName: sdk.String("impedit"),
+                    ObjectKey: sdk.String("cum"),
                 },
             },
             DataSourceConfiguration: shared.DataSourceConfiguration{
                 CsvConfiguration: &shared.CsvConfiguration{
-                    ColumnSeparator: "esse",
-                    EscapeChar: "ipsum",
-                    NullValue: "excepturi",
-                    QuoteChar: "aspernatur",
-                    TrimWhiteSpace: false,
+                    ColumnSeparator: sdk.String("esse"),
+                    EscapeChar: sdk.String("ipsum"),
+                    NullValue: sdk.String("excepturi"),
+                    QuoteChar: sdk.String("aspernatur"),
+                    TrimWhiteSpace: sdk.Bool(false),
                 },
-                DataFormat: "CSV",
+                DataFormat: shared.BatchLoadDataFormatEnumCsv,
                 DataSourceS3Configuration: shared.DataSourceS3Configuration{
                     BucketName: "perferendis",
-                    ObjectKeyPrefix: "ad",
+                    ObjectKeyPrefix: sdk.String("ad"),
                 },
             },
-            RecordVersion: 617636,
+            RecordVersion: sdk.Int64(617636),
             ReportConfiguration: shared.ReportConfiguration{
                 ReportS3Configuration: &shared.ReportS3Configuration{
                     BucketName: "sed",
-                    EncryptionOption: "SSE_KMS",
-                    KmsKeyID: "dolor",
-                    ObjectKeyPrefix: "natus",
+                    EncryptionOption: shared.S3EncryptionOptionEnumSseKms.ToPointer(),
+                    KmsKeyID: sdk.String("dolor"),
+                    ObjectKeyPrefix: sdk.String("natus"),
                 },
             },
             TargetDatabaseName: "laboriosam",
             TargetTableName: "hic",
         },
-        XAmzAlgorithm: "saepe",
-        XAmzContentSha256: "fuga",
-        XAmzCredential: "in",
-        XAmzDate: "corporis",
-        XAmzSecurityToken: "iste",
-        XAmzSignature: "iure",
-        XAmzSignedHeaders: "saepe",
-        XAmzTarget: "Timestream_20181101.CreateBatchLoadTask",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateBatchLoadTask(ctx, req)
+        XAmzAlgorithm: sdk.String("saepe"),
+        XAmzContentSha256: sdk.String("fuga"),
+        XAmzCredential: sdk.String("in"),
+        XAmzDate: sdk.String("corporis"),
+        XAmzSecurityToken: sdk.String("iste"),
+        XAmzSignature: sdk.String("iure"),
+        XAmzSignedHeaders: sdk.String("saepe"),
+        XAmzTarget: operations.CreateBatchLoadTaskXAmzTargetEnumTimestream20181101CreateBatchLoadTask,
+    })
     if err != nil {
         log.Fatal(err)
     }

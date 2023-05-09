@@ -17,12 +17,16 @@ const (
 	LineItemFlightFlightDateTypeEnumLineItemFlightDateTypeTrigger     LineItemFlightFlightDateTypeEnum = "LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER"
 )
 
+func (e LineItemFlightFlightDateTypeEnum) ToPointer() *LineItemFlightFlightDateTypeEnum {
+	return &e
+}
+
 func (e *LineItemFlightFlightDateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_ITEM_FLIGHT_DATE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINE_ITEM_FLIGHT_DATE_TYPE_INHERITED":
@@ -30,10 +34,10 @@ func (e *LineItemFlightFlightDateTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM":
 		fallthrough
 	case "LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER":
-		*e = LineItemFlightFlightDateTypeEnum(s)
+		*e = LineItemFlightFlightDateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemFlightFlightDateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemFlightFlightDateTypeEnum: %v", v)
 	}
 }
 
@@ -43,6 +47,6 @@ type LineItemFlight struct {
 	DateRange *DateRange `json:"dateRange,omitempty"`
 	// Required. The type of the line item's flight dates.
 	FlightDateType *LineItemFlightFlightDateTypeEnum `json:"flightDateType,omitempty"`
-	// The ID of the manual trigger associated with the line item. * Required when flight_date_type is `LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER`. Must not be set otherwise. * When set, the line item's flight dates are inherited from its parent insertion order. * Active line items will spend when the selected trigger is activated within the parent insertion order's flight dates.
+	// The ID of the manual trigger associated with the line item. * Required when flight_date_type is `LINE_ITEM_FLIGHT_DATE_TYPE_TRIGGER`. Must not be set otherwise. * When set, the line item's flight dates are inherited from its parent insertion order. * Active line items will spend when the selected trigger is activated within the parent insertion order's flight dates. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
 	TriggerID *string `json:"triggerId,omitempty"`
 }

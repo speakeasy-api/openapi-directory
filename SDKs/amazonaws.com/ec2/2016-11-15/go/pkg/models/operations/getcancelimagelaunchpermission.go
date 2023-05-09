@@ -15,17 +15,21 @@ const (
 	GETCancelImageLaunchPermissionActionEnumCancelImageLaunchPermission GETCancelImageLaunchPermissionActionEnum = "CancelImageLaunchPermission"
 )
 
+func (e GETCancelImageLaunchPermissionActionEnum) ToPointer() *GETCancelImageLaunchPermissionActionEnum {
+	return &e
+}
+
 func (e *GETCancelImageLaunchPermissionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CancelImageLaunchPermission":
-		*e = GETCancelImageLaunchPermissionActionEnum(s)
+		*e = GETCancelImageLaunchPermissionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelImageLaunchPermissionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelImageLaunchPermissionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCancelImageLaunchPermissionVersionEnumTwoThousandAndSixteen1115 GETCancelImageLaunchPermissionVersionEnum = "2016-11-15"
 )
 
+func (e GETCancelImageLaunchPermissionVersionEnum) ToPointer() *GETCancelImageLaunchPermissionVersionEnum {
+	return &e
+}
+
 func (e *GETCancelImageLaunchPermissionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCancelImageLaunchPermissionVersionEnum(s)
+		*e = GETCancelImageLaunchPermissionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelImageLaunchPermissionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelImageLaunchPermissionVersionEnum: %v", v)
 	}
 }
 

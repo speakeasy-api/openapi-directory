@@ -90,7 +90,10 @@ func (s *queries) DoubleclickbidmanagerQueriesCreatequery(ctx context.Context, r
 // DoubleclickbidmanagerQueriesDeletequery - Deletes a stored query as well as the associated stored reports.
 func (s *queries) DoubleclickbidmanagerQueriesDeletequery(ctx context.Context, request operations.DoubleclickbidmanagerQueriesDeletequeryRequest, security operations.DoubleclickbidmanagerQueriesDeletequerySecurity) (*operations.DoubleclickbidmanagerQueriesDeletequeryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/query/{queryId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/query/{queryId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +132,10 @@ func (s *queries) DoubleclickbidmanagerQueriesDeletequery(ctx context.Context, r
 // DoubleclickbidmanagerQueriesGetquery - Retrieves a stored query.
 func (s *queries) DoubleclickbidmanagerQueriesGetquery(ctx context.Context, request operations.DoubleclickbidmanagerQueriesGetqueryRequest, security operations.DoubleclickbidmanagerQueriesGetquerySecurity) (*operations.DoubleclickbidmanagerQueriesGetqueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/query/{queryId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/query/{queryId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *queries) DoubleclickbidmanagerQueriesListqueries(ctx context.Context, r
 // DoubleclickbidmanagerQueriesRunquery - Runs a stored query to generate a report.
 func (s *queries) DoubleclickbidmanagerQueriesRunquery(ctx context.Context, request operations.DoubleclickbidmanagerQueriesRunqueryRequest, security operations.DoubleclickbidmanagerQueriesRunquerySecurity) (*operations.DoubleclickbidmanagerQueriesRunqueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/query/{queryId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/query/{queryId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunQueryRequest", "json")
 	if err != nil {

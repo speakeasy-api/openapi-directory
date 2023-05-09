@@ -16,17 +16,21 @@ const (
 	ListOrganizationalUnitsForParentXAmzTargetEnumAwsOrganizationsV20161128ListOrganizationalUnitsForParent ListOrganizationalUnitsForParentXAmzTargetEnum = "AWSOrganizationsV20161128.ListOrganizationalUnitsForParent"
 )
 
+func (e ListOrganizationalUnitsForParentXAmzTargetEnum) ToPointer() *ListOrganizationalUnitsForParentXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListOrganizationalUnitsForParentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.ListOrganizationalUnitsForParent":
-		*e = ListOrganizationalUnitsForParentXAmzTargetEnum(s)
+		*e = ListOrganizationalUnitsForParentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOrganizationalUnitsForParentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOrganizationalUnitsForParentXAmzTargetEnum: %v", v)
 	}
 }
 

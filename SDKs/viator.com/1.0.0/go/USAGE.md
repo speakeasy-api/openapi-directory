@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,32 +16,30 @@ func main() {
         }),
     )
 
-    req := operations.BookingAvailabilityRequest{
+    ctx := context.Background()
+    res, err := s.BookingServices.BookingAvailability(ctx, operations.BookingAvailabilityRequest{
         AcceptLanguage: "en-US",
         RequestBody: &operations.BookingAvailabilityRequestBody{
             AgeBands: []BookingAvailabilityRequestBodyAgeBands{
                 operations.BookingAvailabilityRequestBodyAgeBands{
-                    BandID: 592845,
-                    Count: 715190,
+                    BandID: sdk.Int64(592845),
+                    Count: sdk.Int64(715190),
                 },
                 operations.BookingAvailabilityRequestBodyAgeBands{
-                    BandID: 844266,
-                    Count: 602763,
+                    BandID: sdk.Int64(844266),
+                    Count: sdk.Int64(602763),
                 },
                 operations.BookingAvailabilityRequestBodyAgeBands{
-                    BandID: 857946,
-                    Count: 544883,
+                    BandID: sdk.Int64(857946),
+                    Count: sdk.Int64(544883),
                 },
             },
-            CurrencyCode: "illum",
-            Month: "vel",
-            ProductCode: "error",
-            Year: "deserunt",
+            CurrencyCode: sdk.String("illum"),
+            Month: sdk.String("vel"),
+            ProductCode: sdk.String("error"),
+            Year: sdk.String("deserunt"),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.BookingServices.BookingAvailability(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

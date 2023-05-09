@@ -17,19 +17,23 @@ const (
 	UpdateAPICacheRequestBodyAPICachingBehaviorEnumPerResolverCaching UpdateAPICacheRequestBodyAPICachingBehaviorEnum = "PER_RESOLVER_CACHING"
 )
 
+func (e UpdateAPICacheRequestBodyAPICachingBehaviorEnum) ToPointer() *UpdateAPICacheRequestBodyAPICachingBehaviorEnum {
+	return &e
+}
+
 func (e *UpdateAPICacheRequestBodyAPICachingBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FULL_REQUEST_CACHING":
 		fallthrough
 	case "PER_RESOLVER_CACHING":
-		*e = UpdateAPICacheRequestBodyAPICachingBehaviorEnum(s)
+		*e = UpdateAPICacheRequestBodyAPICachingBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAPICacheRequestBodyAPICachingBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAPICacheRequestBodyAPICachingBehaviorEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	UpdateAPICacheRequestBodyTypeEnumLarge12X  UpdateAPICacheRequestBodyTypeEnum = "LARGE_12X"
 )
 
+func (e UpdateAPICacheRequestBodyTypeEnum) ToPointer() *UpdateAPICacheRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *UpdateAPICacheRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "T2_SMALL":
 		fallthrough
 	case "T2_MEDIUM":
@@ -89,10 +97,10 @@ func (e *UpdateAPICacheRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LARGE_8X":
 		fallthrough
 	case "LARGE_12X":
-		*e = UpdateAPICacheRequestBodyTypeEnum(s)
+		*e = UpdateAPICacheRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAPICacheRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAPICacheRequestBodyTypeEnum: %v", v)
 	}
 }
 

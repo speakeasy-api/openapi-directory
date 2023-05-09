@@ -15,23 +15,27 @@ const (
 	GoogleChromeManagementV1CPUInfoArchitectureEnumX64                     GoogleChromeManagementV1CPUInfoArchitectureEnum = "X64"
 )
 
+func (e GoogleChromeManagementV1CPUInfoArchitectureEnum) ToPointer() *GoogleChromeManagementV1CPUInfoArchitectureEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1CPUInfoArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARCHITECTURE_UNSPECIFIED":
 		fallthrough
 	case "X64":
-		*e = GoogleChromeManagementV1CPUInfoArchitectureEnum(s)
+		*e = GoogleChromeManagementV1CPUInfoArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1CPUInfoArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1CPUInfoArchitectureEnum: %v", v)
 	}
 }
 
-// GoogleChromeManagementV1CPUInfo - CPU specifications for the device * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
+// GoogleChromeManagementV1CPUInfo - CPU specifications for the device * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_CPU_INFO
 type GoogleChromeManagementV1CPUInfo struct {
 	// Output only. Architecture type for the CPU. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
 	Architecture *GoogleChromeManagementV1CPUInfoArchitectureEnum `json:"architecture,omitempty"`

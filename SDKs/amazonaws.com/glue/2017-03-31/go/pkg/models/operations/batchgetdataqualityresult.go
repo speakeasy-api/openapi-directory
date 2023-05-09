@@ -16,17 +16,21 @@ const (
 	BatchGetDataQualityResultXAmzTargetEnumAwsGlueBatchGetDataQualityResult BatchGetDataQualityResultXAmzTargetEnum = "AWSGlue.BatchGetDataQualityResult"
 )
 
+func (e BatchGetDataQualityResultXAmzTargetEnum) ToPointer() *BatchGetDataQualityResultXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchGetDataQualityResultXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.BatchGetDataQualityResult":
-		*e = BatchGetDataQualityResultXAmzTargetEnum(s)
+		*e = BatchGetDataQualityResultXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetDataQualityResultXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetDataQualityResultXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -11,28 +11,32 @@ import (
 type CodeScanningAlertDismissedReasonEnum string
 
 const (
-	CodeScanningAlertDismissedReasonEnumNull          CodeScanningAlertDismissedReasonEnum = "null"
-	CodeScanningAlertDismissedReasonEnumFalsePositive CodeScanningAlertDismissedReasonEnum = "false positive"
-	CodeScanningAlertDismissedReasonEnumWonTFix       CodeScanningAlertDismissedReasonEnum = "won't fix"
-	CodeScanningAlertDismissedReasonEnumUsedInTests   CodeScanningAlertDismissedReasonEnum = "used in tests"
+	CodeScanningAlertDismissedReasonEnumLessThanNilGreaterThan CodeScanningAlertDismissedReasonEnum = "<nil>"
+	CodeScanningAlertDismissedReasonEnumFalsePositive          CodeScanningAlertDismissedReasonEnum = "false positive"
+	CodeScanningAlertDismissedReasonEnumWonTFix                CodeScanningAlertDismissedReasonEnum = "won't fix"
+	CodeScanningAlertDismissedReasonEnumUsedInTests            CodeScanningAlertDismissedReasonEnum = "used in tests"
 )
 
+func (e CodeScanningAlertDismissedReasonEnum) ToPointer() *CodeScanningAlertDismissedReasonEnum {
+	return &e
+}
+
 func (e *CodeScanningAlertDismissedReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "null":
+	switch v {
+	case "<nil>":
 		fallthrough
 	case "false positive":
 		fallthrough
 	case "won't fix":
 		fallthrough
 	case "used in tests":
-		*e = CodeScanningAlertDismissedReasonEnum(s)
+		*e = CodeScanningAlertDismissedReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodeScanningAlertDismissedReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for CodeScanningAlertDismissedReasonEnum: %v", v)
 	}
 }

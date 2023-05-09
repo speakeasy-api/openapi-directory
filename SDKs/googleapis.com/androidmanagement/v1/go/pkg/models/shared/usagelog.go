@@ -15,21 +15,25 @@ const (
 	UsageLogEnabledLogTypesEnumNetworkActivityLogs UsageLogEnabledLogTypesEnum = "NETWORK_ACTIVITY_LOGS"
 )
 
+func (e UsageLogEnabledLogTypesEnum) ToPointer() *UsageLogEnabledLogTypesEnum {
+	return &e
+}
+
 func (e *UsageLogEnabledLogTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SECURITY_LOGS":
 		fallthrough
 	case "NETWORK_ACTIVITY_LOGS":
-		*e = UsageLogEnabledLogTypesEnum(s)
+		*e = UsageLogEnabledLogTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageLogEnabledLogTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageLogEnabledLogTypesEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	UsageLogUploadOnCellularAllowedEnumNetworkActivityLogs UsageLogUploadOnCellularAllowedEnum = "NETWORK_ACTIVITY_LOGS"
 )
 
+func (e UsageLogUploadOnCellularAllowedEnum) ToPointer() *UsageLogUploadOnCellularAllowedEnum {
+	return &e
+}
+
 func (e *UsageLogUploadOnCellularAllowedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SECURITY_LOGS":
 		fallthrough
 	case "NETWORK_ACTIVITY_LOGS":
-		*e = UsageLogUploadOnCellularAllowedEnum(s)
+		*e = UsageLogUploadOnCellularAllowedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageLogUploadOnCellularAllowedEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageLogUploadOnCellularAllowedEnum: %v", v)
 	}
 }
 

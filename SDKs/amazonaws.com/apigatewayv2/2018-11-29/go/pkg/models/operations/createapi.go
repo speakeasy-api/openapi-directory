@@ -27,19 +27,23 @@ const (
 	CreateAPIRequestBodyProtocolTypeEnumHTTP      CreateAPIRequestBodyProtocolTypeEnum = "HTTP"
 )
 
+func (e CreateAPIRequestBodyProtocolTypeEnum) ToPointer() *CreateAPIRequestBodyProtocolTypeEnum {
+	return &e
+}
+
 func (e *CreateAPIRequestBodyProtocolTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEBSOCKET":
 		fallthrough
 	case "HTTP":
-		*e = CreateAPIRequestBodyProtocolTypeEnum(s)
+		*e = CreateAPIRequestBodyProtocolTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAPIRequestBodyProtocolTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAPIRequestBodyProtocolTypeEnum: %v", v)
 	}
 }
 

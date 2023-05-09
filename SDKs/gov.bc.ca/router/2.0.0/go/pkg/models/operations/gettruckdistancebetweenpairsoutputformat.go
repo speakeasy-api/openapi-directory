@@ -17,19 +17,23 @@ const (
 	GetTruckDistanceBetweenPairsOutputFormatCriteriaEnumFastest  GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum = "fastest"
 )
 
+func (e GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum) ToPointer() *GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum {
+	return &e
+}
+
 func (e *GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shortest":
 		fallthrough
 	case "fastest":
-		*e = GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum(s)
+		*e = GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnumMi GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum = "mi"
 )
 
+func (e GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum) ToPointer() *GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum {
+	return &e
+}
+
 func (e *GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "km":
 		fallthrough
 	case "mi":
-		*e = GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum(s)
+		*e = GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum: %v", v)
 	}
 }
 
@@ -65,61 +73,69 @@ const (
 	GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnumHTML GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum = "html"
 )
 
+func (e GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum) ToPointer() *GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "html":
-		*e = GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum(s)
+		*e = GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 
 // GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
-type GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum string
+type GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum int64
 
 const (
-	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = "4326"
-	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = "4269"
-	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumThreeThousandAndFive                  GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = "3005"
-	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = "26907"
-	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = "26908"
-	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = "26909"
-	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = "26910"
-	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = "26911"
+	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = 4326
+	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = 4269
+	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumThreeThousandAndFive                  GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = 3005
+	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = 26907
+	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = 26908
+	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = 26909
+	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = 26910
+	GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum = 26911
 )
 
+func (e GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum) ToPointer() *GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum {
+	return &e
+}
+
 func (e *GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum(s)
+	case 26911:
+		*e = GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum: %v", v)
 	}
 }
 

@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/randomlovecraft.com/1.0/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -41,15 +39,15 @@ func main() {
 ## Available Resources and Operations
 
 
-### Books
+### [Books](docs/books/README.md)
 
-* `GetBooks` - List all books
+* [GetBooks](docs/books/README.md#getbooks) - List all books
 
-### Sentences
+### [Sentences](docs/sentences/README.md)
 
-* `GetSentences` - A random sentence
-* `GetSentencesFromBook` - Random sentences from a specific book
-* `GetSpecificSentence` - A specific sentence
+* [GetSentences](docs/sentences/README.md#getsentences) - A random sentence
+* [GetSentencesFromBook](docs/sentences/README.md#getsentencesfrombook) - Random sentences from a specific book
+* [GetSpecificSentence](docs/sentences/README.md#getspecificsentence) - A specific sentence
 <!-- End SDK Available Operations -->
 
 ### Maturity

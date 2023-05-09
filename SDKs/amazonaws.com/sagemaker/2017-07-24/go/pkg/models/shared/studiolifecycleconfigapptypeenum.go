@@ -14,18 +14,22 @@ const (
 	StudioLifecycleConfigAppTypeEnumKernelGateway StudioLifecycleConfigAppTypeEnum = "KernelGateway"
 )
 
+func (e StudioLifecycleConfigAppTypeEnum) ToPointer() *StudioLifecycleConfigAppTypeEnum {
+	return &e
+}
+
 func (e *StudioLifecycleConfigAppTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JupyterServer":
 		fallthrough
 	case "KernelGateway":
-		*e = StudioLifecycleConfigAppTypeEnum(s)
+		*e = StudioLifecycleConfigAppTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StudioLifecycleConfigAppTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StudioLifecycleConfigAppTypeEnum: %v", v)
 	}
 }

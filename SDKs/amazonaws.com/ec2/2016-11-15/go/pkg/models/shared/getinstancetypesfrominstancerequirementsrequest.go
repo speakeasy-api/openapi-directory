@@ -17,12 +17,16 @@ const (
 	GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnumArm64Mac GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnum = "arm64_mac"
 )
 
+func (e GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnum) ToPointer() *GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnum {
+	return &e
+}
+
 func (e *GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "i386":
 		fallthrough
 	case "x86_64":
@@ -32,10 +36,10 @@ func (e *GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnum) U
 	case "x86_64_mac":
 		fallthrough
 	case "arm64_mac":
-		*e = GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnum(s)
+		*e = GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInstanceTypesFromInstanceRequirementsRequestArchitectureTypesEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	GetInstanceTypesFromInstanceRequirementsRequestVirtualizationTypesEnumParavirtual GetInstanceTypesFromInstanceRequirementsRequestVirtualizationTypesEnum = "paravirtual"
 )
 
+func (e GetInstanceTypesFromInstanceRequirementsRequestVirtualizationTypesEnum) ToPointer() *GetInstanceTypesFromInstanceRequirementsRequestVirtualizationTypesEnum {
+	return &e
+}
+
 func (e *GetInstanceTypesFromInstanceRequirementsRequestVirtualizationTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hvm":
 		fallthrough
 	case "paravirtual":
-		*e = GetInstanceTypesFromInstanceRequirementsRequestVirtualizationTypesEnum(s)
+		*e = GetInstanceTypesFromInstanceRequirementsRequestVirtualizationTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInstanceTypesFromInstanceRequirementsRequestVirtualizationTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInstanceTypesFromInstanceRequirementsRequestVirtualizationTypesEnum: %v", v)
 	}
 }
 

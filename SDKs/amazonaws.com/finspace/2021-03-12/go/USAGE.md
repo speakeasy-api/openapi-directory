@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,51 +16,49 @@ func main() {
         }),
     )
 
-    req := operations.CreateEnvironmentRequest{
+    ctx := context.Background()
+    res, err := s.CreateEnvironment(ctx, operations.CreateEnvironmentRequest{
         RequestBody: operations.CreateEnvironmentRequestBody{
             DataBundles: []string{
                 "provident",
                 "distinctio",
                 "quibusdam",
             },
-            Description: "unde",
-            FederationMode: "LOCAL",
+            Description: sdk.String("unde"),
+            FederationMode: operations.CreateEnvironmentRequestBodyFederationModeEnumLocal.ToPointer(),
             FederationParameters: &operations.CreateEnvironmentRequestBodyFederationParameters{
-                ApplicationCallBackURL: "corrupti",
+                ApplicationCallBackURL: sdk.String("corrupti"),
                 AttributeMap: map[string]string{
                     "vel": "error",
                     "deserunt": "suscipit",
                     "iure": "magnam",
                     "debitis": "ipsa",
                 },
-                FederationProviderName: "delectus",
-                FederationURN: "tempora",
-                SamlMetadataDocument: "suscipit",
-                SamlMetadataURL: "molestiae",
+                FederationProviderName: sdk.String("delectus"),
+                FederationURN: sdk.String("tempora"),
+                SamlMetadataDocument: sdk.String("suscipit"),
+                SamlMetadataURL: sdk.String("molestiae"),
             },
-            KmsKeyID: "minus",
-            Name: "placeat",
+            KmsKeyID: sdk.String("minus"),
+            Name: "Ken Kshlerin",
             SuperuserParameters: &operations.CreateEnvironmentRequestBodySuperuserParameters{
-                EmailAddress: "voluptatum",
-                FirstName: "Jaycee",
-                LastName: "Mante",
+                EmailAddress: sdk.String("recusandae"),
+                FirstName: sdk.String("Rocky"),
+                LastName: sdk.String("Bernier"),
             },
             Tags: map[string]string{
-                "recusandae": "temporibus",
-                "ab": "quis",
+                "veritatis": "deserunt",
+                "perferendis": "ipsam",
             },
         },
-        XAmzAlgorithm: "veritatis",
-        XAmzContentSha256: "deserunt",
-        XAmzCredential: "perferendis",
-        XAmzDate: "ipsam",
-        XAmzSecurityToken: "repellendus",
-        XAmzSignature: "sapiente",
-        XAmzSignedHeaders: "quo",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateEnvironment(ctx, req)
+        XAmzAlgorithm: sdk.String("repellendus"),
+        XAmzContentSha256: sdk.String("sapiente"),
+        XAmzCredential: sdk.String("quo"),
+        XAmzDate: sdk.String("odit"),
+        XAmzSecurityToken: sdk.String("at"),
+        XAmzSignature: sdk.String("at"),
+        XAmzSignedHeaders: sdk.String("maiores"),
+    })
     if err != nil {
         log.Fatal(err)
     }

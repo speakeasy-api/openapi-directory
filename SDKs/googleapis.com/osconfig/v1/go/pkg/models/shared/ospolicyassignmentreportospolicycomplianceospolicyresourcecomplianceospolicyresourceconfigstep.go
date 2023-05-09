@@ -18,12 +18,16 @@ const (
 	OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStepTypeEnumDesiredStateCheckPostEnforcement OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStepTypeEnum = "DESIRED_STATE_CHECK_POST_ENFORCEMENT"
 )
 
+func (e OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStepTypeEnum) ToPointer() *OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStepTypeEnum {
+	return &e
+}
+
 func (e *OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStepTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "VALIDATION":
@@ -33,10 +37,10 @@ func (e *OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSP
 	case "DESIRED_STATE_ENFORCEMENT":
 		fallthrough
 	case "DESIRED_STATE_CHECK_POST_ENFORCEMENT":
-		*e = OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStepTypeEnum(s)
+		*e = OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStepTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStepTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStepTypeEnum: %v", v)
 	}
 }
 

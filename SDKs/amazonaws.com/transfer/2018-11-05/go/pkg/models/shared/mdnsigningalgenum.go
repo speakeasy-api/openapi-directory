@@ -18,12 +18,16 @@ const (
 	MdnSigningAlgEnumDefault MdnSigningAlgEnum = "DEFAULT"
 )
 
+func (e MdnSigningAlgEnum) ToPointer() *MdnSigningAlgEnum {
+	return &e
+}
+
 func (e *MdnSigningAlgEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHA256":
 		fallthrough
 	case "SHA384":
@@ -35,9 +39,9 @@ func (e *MdnSigningAlgEnum) UnmarshalJSON(data []byte) error {
 	case "NONE":
 		fallthrough
 	case "DEFAULT":
-		*e = MdnSigningAlgEnum(s)
+		*e = MdnSigningAlgEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MdnSigningAlgEnum: %s", s)
+		return fmt.Errorf("invalid value for MdnSigningAlgEnum: %v", v)
 	}
 }

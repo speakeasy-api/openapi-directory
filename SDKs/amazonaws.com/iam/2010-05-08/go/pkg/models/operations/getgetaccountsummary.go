@@ -15,17 +15,21 @@ const (
 	GETGETAccountSummaryActionEnumGetAccountSummary GETGETAccountSummaryActionEnum = "GetAccountSummary"
 )
 
+func (e GETGETAccountSummaryActionEnum) ToPointer() *GETGETAccountSummaryActionEnum {
+	return &e
+}
+
 func (e *GETGETAccountSummaryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAccountSummary":
-		*e = GETGETAccountSummaryActionEnum(s)
+		*e = GETGETAccountSummaryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAccountSummaryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAccountSummaryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETAccountSummaryVersionEnumTwoThousandAndTen0508 GETGETAccountSummaryVersionEnum = "2010-05-08"
 )
 
+func (e GETGETAccountSummaryVersionEnum) ToPointer() *GETGETAccountSummaryVersionEnum {
+	return &e
+}
+
 func (e *GETGETAccountSummaryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETGETAccountSummaryVersionEnum(s)
+		*e = GETGETAccountSummaryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAccountSummaryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAccountSummaryVersionEnum: %v", v)
 	}
 }
 

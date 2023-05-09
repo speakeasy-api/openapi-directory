@@ -14,18 +14,22 @@ const (
 	VectorEnrichmentJobErrorTypeEnumServerError VectorEnrichmentJobErrorTypeEnum = "SERVER_ERROR"
 )
 
+func (e VectorEnrichmentJobErrorTypeEnum) ToPointer() *VectorEnrichmentJobErrorTypeEnum {
+	return &e
+}
+
 func (e *VectorEnrichmentJobErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLIENT_ERROR":
 		fallthrough
 	case "SERVER_ERROR":
-		*e = VectorEnrichmentJobErrorTypeEnum(s)
+		*e = VectorEnrichmentJobErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VectorEnrichmentJobErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VectorEnrichmentJobErrorTypeEnum: %v", v)
 	}
 }

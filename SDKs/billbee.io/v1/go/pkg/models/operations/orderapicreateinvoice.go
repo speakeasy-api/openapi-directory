@@ -4,6 +4,7 @@ package operations
 
 import (
 	"net/http"
+	"openapi/pkg/models/shared"
 )
 
 type OrderAPICreateInvoiceRequest struct {
@@ -18,11 +19,10 @@ type OrderAPICreateInvoiceRequest struct {
 }
 
 type OrderAPICreateInvoiceResponse struct {
+	Body        []byte
 	ContentType string
 	// OK
-	OrderAPICreateInvoice200ApplicationJSONObject map[string]interface{}
-	// OK
-	OrderAPICreateInvoice200TextJSONObject map[string]interface{}
-	StatusCode                             int
-	RawResponse                            *http.Response
+	RechnungsdruckWebAppControllersAPIAPIResultRechnungsdruckWebAppControllersAPIInvoice *shared.RechnungsdruckWebAppControllersAPIAPIResultRechnungsdruckWebAppControllersAPIInvoice
+	StatusCode                                                                           int
+	RawResponse                                                                          *http.Response
 }

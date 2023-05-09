@@ -14,18 +14,22 @@ const (
 	ReplicationTypeEnumSnapshotShipping ReplicationTypeEnum = "SNAPSHOT_SHIPPING"
 )
 
+func (e ReplicationTypeEnum) ToPointer() *ReplicationTypeEnum {
+	return &e
+}
+
 func (e *ReplicationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGENT_BASED":
 		fallthrough
 	case "SNAPSHOT_SHIPPING":
-		*e = ReplicationTypeEnum(s)
+		*e = ReplicationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicationTypeEnum: %v", v)
 	}
 }

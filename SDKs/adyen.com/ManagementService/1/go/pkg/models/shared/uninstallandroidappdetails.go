@@ -14,17 +14,21 @@ const (
 	UninstallAndroidAppDetailsTypeEnumUninstallAndroidApp UninstallAndroidAppDetailsTypeEnum = "UninstallAndroidApp"
 )
 
+func (e UninstallAndroidAppDetailsTypeEnum) ToPointer() *UninstallAndroidAppDetailsTypeEnum {
+	return &e
+}
+
 func (e *UninstallAndroidAppDetailsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UninstallAndroidApp":
-		*e = UninstallAndroidAppDetailsTypeEnum(s)
+		*e = UninstallAndroidAppDetailsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UninstallAndroidAppDetailsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UninstallAndroidAppDetailsTypeEnum: %v", v)
 	}
 }
 

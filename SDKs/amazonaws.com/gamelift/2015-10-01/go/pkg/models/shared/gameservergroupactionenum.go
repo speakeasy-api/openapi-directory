@@ -13,16 +13,20 @@ const (
 	GameServerGroupActionEnumReplaceInstanceTypes GameServerGroupActionEnum = "REPLACE_INSTANCE_TYPES"
 )
 
+func (e GameServerGroupActionEnum) ToPointer() *GameServerGroupActionEnum {
+	return &e
+}
+
 func (e *GameServerGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPLACE_INSTANCE_TYPES":
-		*e = GameServerGroupActionEnum(s)
+		*e = GameServerGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GameServerGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GameServerGroupActionEnum: %v", v)
 	}
 }

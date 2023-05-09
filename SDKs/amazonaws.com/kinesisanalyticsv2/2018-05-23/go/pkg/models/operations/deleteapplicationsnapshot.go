@@ -16,17 +16,21 @@ const (
 	DeleteApplicationSnapshotXAmzTargetEnumKinesisAnalytics20180523DeleteApplicationSnapshot DeleteApplicationSnapshotXAmzTargetEnum = "KinesisAnalytics_20180523.DeleteApplicationSnapshot"
 )
 
+func (e DeleteApplicationSnapshotXAmzTargetEnum) ToPointer() *DeleteApplicationSnapshotXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteApplicationSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20180523.DeleteApplicationSnapshot":
-		*e = DeleteApplicationSnapshotXAmzTargetEnum(s)
+		*e = DeleteApplicationSnapshotXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteApplicationSnapshotXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteApplicationSnapshotXAmzTargetEnum: %v", v)
 	}
 }
 

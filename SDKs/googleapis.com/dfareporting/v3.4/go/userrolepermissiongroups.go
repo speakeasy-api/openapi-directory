@@ -34,7 +34,10 @@ func newUserRolePermissionGroups(defaultClient, securityClient HTTPClient, serve
 // DfareportingUserRolePermissionGroupsGet - Gets one user role permission group by ID.
 func (s *userRolePermissionGroups) DfareportingUserRolePermissionGroupsGet(ctx context.Context, request operations.DfareportingUserRolePermissionGroupsGetRequest, security operations.DfareportingUserRolePermissionGroupsGetSecurity) (*operations.DfareportingUserRolePermissionGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRolePermissionGroups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRolePermissionGroups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *userRolePermissionGroups) DfareportingUserRolePermissionGroupsGet(ctx c
 // DfareportingUserRolePermissionGroupsList - Gets a list of all supported user role permission groups.
 func (s *userRolePermissionGroups) DfareportingUserRolePermissionGroupsList(ctx context.Context, request operations.DfareportingUserRolePermissionGroupsListRequest, security operations.DfareportingUserRolePermissionGroupsListSecurity) (*operations.DfareportingUserRolePermissionGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRolePermissionGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/userRolePermissionGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

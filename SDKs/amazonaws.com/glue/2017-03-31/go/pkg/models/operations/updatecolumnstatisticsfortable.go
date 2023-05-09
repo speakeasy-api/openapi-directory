@@ -16,17 +16,21 @@ const (
 	UpdateColumnStatisticsForTableXAmzTargetEnumAwsGlueUpdateColumnStatisticsForTable UpdateColumnStatisticsForTableXAmzTargetEnum = "AWSGlue.UpdateColumnStatisticsForTable"
 )
 
+func (e UpdateColumnStatisticsForTableXAmzTargetEnum) ToPointer() *UpdateColumnStatisticsForTableXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateColumnStatisticsForTableXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.UpdateColumnStatisticsForTable":
-		*e = UpdateColumnStatisticsForTableXAmzTargetEnum(s)
+		*e = UpdateColumnStatisticsForTableXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateColumnStatisticsForTableXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateColumnStatisticsForTableXAmzTargetEnum: %v", v)
 	}
 }
 

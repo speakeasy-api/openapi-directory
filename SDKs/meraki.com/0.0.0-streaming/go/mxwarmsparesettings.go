@@ -34,7 +34,10 @@ func newMXWarmSpareSettings(defaultClient, securityClient HTTPClient, serverURL,
 // Return MX warm spare settings
 func (s *mxWarmSpareSettings) GetNetworkWarmSpareSettings(ctx context.Context, request operations.GetNetworkWarmSpareSettingsRequest) (*operations.GetNetworkWarmSpareSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/warmSpareSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/warmSpareSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *mxWarmSpareSettings) GetNetworkWarmSpareSettings(ctx context.Context, r
 // Swap MX primary and warm spare appliances
 func (s *mxWarmSpareSettings) SwapNetworkWarmSpare(ctx context.Context, request operations.SwapNetworkWarmSpareRequest) (*operations.SwapNetworkWarmSpareResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/swapWarmSpare", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/swapWarmSpare", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -124,7 +130,10 @@ func (s *mxWarmSpareSettings) SwapNetworkWarmSpare(ctx context.Context, request 
 // Update MX warm spare settings
 func (s *mxWarmSpareSettings) UpdateNetworkWarmSpareSettings(ctx context.Context, request operations.UpdateNetworkWarmSpareSettingsRequest) (*operations.UpdateNetworkWarmSpareSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/warmSpareSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/warmSpareSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

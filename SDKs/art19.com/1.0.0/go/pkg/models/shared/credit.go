@@ -37,12 +37,16 @@ const (
 	CreditAttributesTypeEnumWriterCredit            CreditAttributesTypeEnum = "WriterCredit"
 )
 
+func (e CreditAttributesTypeEnum) ToPointer() *CreditAttributesTypeEnum {
+	return &e
+}
+
 func (e *CreditAttributesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnchorCredit":
 		fallthrough
 	case "AssociateProducerCredit":
@@ -88,10 +92,10 @@ func (e *CreditAttributesTypeEnum) UnmarshalJSON(data []byte) error {
 	case "VideoProducerCredit":
 		fallthrough
 	case "WriterCredit":
-		*e = CreditAttributesTypeEnum(s)
+		*e = CreditAttributesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreditAttributesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreditAttributesTypeEnum: %v", v)
 	}
 }
 

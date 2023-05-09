@@ -11,11 +11,13 @@ import (
 type GoogleCloudChannelV1EntitlementInput struct {
 	// Association links that an entitlement has to other entitlements.
 	AssociationInfo *GoogleCloudChannelV1AssociationInfo `json:"associationInfo,omitempty"`
+	// Optional. The billing account resource name that is used to pay for this entitlement.
+	BillingAccount *string `json:"billingAccount,omitempty"`
 	// Commitment settings for commitment-based offers.
 	CommitmentSettings *GoogleCloudChannelV1CommitmentSettingsInput `json:"commitmentSettings,omitempty"`
 	// Required. The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.
 	Offer *string `json:"offer,omitempty"`
-	// Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. For Google Workspace, the following Parameters may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR - num_units: The total commitment for commitment-based offers The response may additionally include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. For GCP billing subaccounts, the following Parameter may be accepted as input: - display_name: The display name of the billing subaccount.
+	// Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. For Google Workspace, the following Parameters may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR - num_units: The total commitment for commitment-based offers The response may additionally include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. For Google Cloud billing subaccounts, the following Parameter may be accepted as input: - display_name: The display name of the billing subaccount.
 	Parameters []GoogleCloudChannelV1ParameterInput `json:"parameters,omitempty"`
 	// Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters. This is only supported for Google Workspace entitlements.
 	PurchaseOrderID *string `json:"purchaseOrderId,omitempty"`
@@ -32,21 +34,25 @@ const (
 	GoogleCloudChannelV1EntitlementProvisioningStateEnumSuspended                    GoogleCloudChannelV1EntitlementProvisioningStateEnum = "SUSPENDED"
 )
 
+func (e GoogleCloudChannelV1EntitlementProvisioningStateEnum) ToPointer() *GoogleCloudChannelV1EntitlementProvisioningStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1EntitlementProvisioningStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROVISIONING_STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "SUSPENDED":
-		*e = GoogleCloudChannelV1EntitlementProvisioningStateEnum(s)
+		*e = GoogleCloudChannelV1EntitlementProvisioningStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementProvisioningStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementProvisioningStateEnum: %v", v)
 	}
 }
 
@@ -61,12 +67,16 @@ const (
 	GoogleCloudChannelV1EntitlementSuspensionReasonsEnumOther                       GoogleCloudChannelV1EntitlementSuspensionReasonsEnum = "OTHER"
 )
 
+func (e GoogleCloudChannelV1EntitlementSuspensionReasonsEnum) ToPointer() *GoogleCloudChannelV1EntitlementSuspensionReasonsEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1EntitlementSuspensionReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUSPENSION_REASON_UNSPECIFIED":
 		fallthrough
 	case "RESELLER_INITIATED":
@@ -78,10 +88,10 @@ func (e *GoogleCloudChannelV1EntitlementSuspensionReasonsEnum) UnmarshalJSON(dat
 	case "PENDING_TOS_ACCEPTANCE":
 		fallthrough
 	case "OTHER":
-		*e = GoogleCloudChannelV1EntitlementSuspensionReasonsEnum(s)
+		*e = GoogleCloudChannelV1EntitlementSuspensionReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementSuspensionReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1EntitlementSuspensionReasonsEnum: %v", v)
 	}
 }
 
@@ -89,6 +99,8 @@ func (e *GoogleCloudChannelV1EntitlementSuspensionReasonsEnum) UnmarshalJSON(dat
 type GoogleCloudChannelV1Entitlement struct {
 	// Association links that an entitlement has to other entitlements.
 	AssociationInfo *GoogleCloudChannelV1AssociationInfo `json:"associationInfo,omitempty"`
+	// Optional. The billing account resource name that is used to pay for this entitlement.
+	BillingAccount *string `json:"billingAccount,omitempty"`
 	// Commitment settings for commitment-based offers.
 	CommitmentSettings *GoogleCloudChannelV1CommitmentSettings `json:"commitmentSettings,omitempty"`
 	// Output only. The time at which the entitlement is created.
@@ -97,7 +109,7 @@ type GoogleCloudChannelV1Entitlement struct {
 	Name *string `json:"name,omitempty"`
 	// Required. The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.
 	Offer *string `json:"offer,omitempty"`
-	// Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. For Google Workspace, the following Parameters may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR - num_units: The total commitment for commitment-based offers The response may additionally include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. For GCP billing subaccounts, the following Parameter may be accepted as input: - display_name: The display name of the billing subaccount.
+	// Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. For Google Workspace, the following Parameters may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR - num_units: The total commitment for commitment-based offers The response may additionally include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. For Google Cloud billing subaccounts, the following Parameter may be accepted as input: - display_name: The display name of the billing subaccount.
 	Parameters []GoogleCloudChannelV1Parameter `json:"parameters,omitempty"`
 	// Service provisioned for an entitlement.
 	ProvisionedService *GoogleCloudChannelV1ProvisionedService `json:"provisionedService,omitempty"`

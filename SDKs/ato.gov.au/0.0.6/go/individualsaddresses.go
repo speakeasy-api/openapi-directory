@@ -40,7 +40,10 @@ func newIndividualsAddresses(defaultClient, securityClient HTTPClient, serverURL
 // Delete an address
 func (s *individualsAddresses) DeleteIndividualsPartyIDAddressesAddressID(ctx context.Context, request operations.DeleteIndividualsPartyIDAddressesAddressIDRequest) (*operations.DeleteIndividualsPartyIDAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/addresses/{addressId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/addresses/{addressId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -97,7 +100,10 @@ func (s *individualsAddresses) DeleteIndividualsPartyIDAddressesAddressID(ctx co
 // GetIndividualsPartyIDAddresses - Retrieve a list of addresses
 func (s *individualsAddresses) GetIndividualsPartyIDAddresses(ctx context.Context, request operations.GetIndividualsPartyIDAddressesRequest) (*operations.GetIndividualsPartyIDAddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/addresses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/addresses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -166,7 +172,10 @@ func (s *individualsAddresses) GetIndividualsPartyIDAddresses(ctx context.Contex
 // Retrieve an address
 func (s *individualsAddresses) GetIndividualsPartyIDAddressesAddressID(ctx context.Context, request operations.GetIndividualsPartyIDAddressesAddressIDRequest) (*operations.GetIndividualsPartyIDAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/addresses/{addressId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/addresses/{addressId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +242,10 @@ func (s *individualsAddresses) GetIndividualsPartyIDAddressesAddressID(ctx conte
 // Create an address
 func (s *individualsAddresses) PostIndividualsPartyIDAddresses(ctx context.Context, request operations.PostIndividualsPartyIDAddressesRequest) (*operations.PostIndividualsPartyIDAddressesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/addresses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/addresses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddressInput", "json")
 	if err != nil {
@@ -312,7 +324,10 @@ func (s *individualsAddresses) PostIndividualsPartyIDAddresses(ctx context.Conte
 // Update an address
 func (s *individualsAddresses) PutIndividualsPartyIDAddressesAddressID(ctx context.Context, request operations.PutIndividualsPartyIDAddressesAddressIDRequest) (*operations.PutIndividualsPartyIDAddressesAddressIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/addresses/{addressId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/addresses/{addressId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddressInput", "json")
 	if err != nil {

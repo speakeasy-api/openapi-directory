@@ -19,12 +19,16 @@ const (
 	ReplicaStatusEnumInaccessibleEncryptionCredentials ReplicaStatusEnum = "INACCESSIBLE_ENCRYPTION_CREDENTIALS"
 )
 
+func (e ReplicaStatusEnum) ToPointer() *ReplicaStatusEnum {
+	return &e
+}
+
 func (e *ReplicaStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATION_FAILED":
@@ -38,9 +42,9 @@ func (e *ReplicaStatusEnum) UnmarshalJSON(data []byte) error {
 	case "REGION_DISABLED":
 		fallthrough
 	case "INACCESSIBLE_ENCRYPTION_CREDENTIALS":
-		*e = ReplicaStatusEnum(s)
+		*e = ReplicaStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicaStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicaStatusEnum: %v", v)
 	}
 }

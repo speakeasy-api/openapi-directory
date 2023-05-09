@@ -56,21 +56,25 @@ const (
 	GetNetworks200ApplicationJSONNetworksSubnetsTypeEnumVswitch GetNetworks200ApplicationJSONNetworksSubnetsTypeEnum = "vswitch"
 )
 
+func (e GetNetworks200ApplicationJSONNetworksSubnetsTypeEnum) ToPointer() *GetNetworks200ApplicationJSONNetworksSubnetsTypeEnum {
+	return &e
+}
+
 func (e *GetNetworks200ApplicationJSONNetworksSubnetsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cloud":
 		fallthrough
 	case "server":
 		fallthrough
 	case "vswitch":
-		*e = GetNetworks200ApplicationJSONNetworksSubnetsTypeEnum(s)
+		*e = GetNetworks200ApplicationJSONNetworksSubnetsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNetworks200ApplicationJSONNetworksSubnetsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNetworks200ApplicationJSONNetworksSubnetsTypeEnum: %v", v)
 	}
 }
 

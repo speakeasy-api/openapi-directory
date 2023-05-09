@@ -14,18 +14,22 @@ const (
 	ImageRepositoryTypeEnumEcrPublic ImageRepositoryTypeEnum = "ECR_PUBLIC"
 )
 
+func (e ImageRepositoryTypeEnum) ToPointer() *ImageRepositoryTypeEnum {
+	return &e
+}
+
 func (e *ImageRepositoryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ECR":
 		fallthrough
 	case "ECR_PUBLIC":
-		*e = ImageRepositoryTypeEnum(s)
+		*e = ImageRepositoryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageRepositoryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageRepositoryTypeEnum: %v", v)
 	}
 }

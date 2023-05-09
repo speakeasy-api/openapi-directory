@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -74,4 +75,7 @@ pkg/models/shared/updatedevicemetadatainbatchrequest.go
 pkg/models/shared/updatemetadataarguments.go
 pkg/models/shared/listvendorcustomersresponse.go
 pkg/models/shared/listvendorsresponse.go
+docs/sdk/README.md
+docs/customers/README.md
+docs/partners/README.md
 USAGE.md

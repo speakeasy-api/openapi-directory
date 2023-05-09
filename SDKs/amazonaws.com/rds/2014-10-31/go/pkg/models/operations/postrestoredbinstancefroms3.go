@@ -15,17 +15,21 @@ const (
 	POSTRestoreDBInstanceFromS3ActionEnumRestoreDbInstanceFromS3 POSTRestoreDBInstanceFromS3ActionEnum = "RestoreDBInstanceFromS3"
 )
 
+func (e POSTRestoreDBInstanceFromS3ActionEnum) ToPointer() *POSTRestoreDBInstanceFromS3ActionEnum {
+	return &e
+}
+
 func (e *POSTRestoreDBInstanceFromS3ActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RestoreDBInstanceFromS3":
-		*e = POSTRestoreDBInstanceFromS3ActionEnum(s)
+		*e = POSTRestoreDBInstanceFromS3ActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRestoreDBInstanceFromS3ActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRestoreDBInstanceFromS3ActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRestoreDBInstanceFromS3VersionEnumTwoThousandAndFourteen1031 POSTRestoreDBInstanceFromS3VersionEnum = "2014-10-31"
 )
 
+func (e POSTRestoreDBInstanceFromS3VersionEnum) ToPointer() *POSTRestoreDBInstanceFromS3VersionEnum {
+	return &e
+}
+
 func (e *POSTRestoreDBInstanceFromS3VersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTRestoreDBInstanceFromS3VersionEnum(s)
+		*e = POSTRestoreDBInstanceFromS3VersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRestoreDBInstanceFromS3VersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRestoreDBInstanceFromS3VersionEnum: %v", v)
 	}
 }
 

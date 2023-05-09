@@ -20,12 +20,16 @@ const (
 	DigitalContentLabelTargetingOptionDetailsContentRatingTierEnumContentRatingTierFamilies         DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum = "CONTENT_RATING_TIER_FAMILIES"
 )
 
+func (e DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum) ToPointer() *DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum {
+	return &e
+}
+
 func (e *DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_RATING_TIER_UNSPECIFIED":
 		fallthrough
 	case "CONTENT_RATING_TIER_UNRATED":
@@ -39,10 +43,10 @@ func (e *DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum) Unmarsh
 	case "CONTENT_RATING_TIER_MATURE":
 		fallthrough
 	case "CONTENT_RATING_TIER_FAMILIES":
-		*e = DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum(s)
+		*e = DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum: %s", s)
+		return fmt.Errorf("invalid value for DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum: %v", v)
 	}
 }
 

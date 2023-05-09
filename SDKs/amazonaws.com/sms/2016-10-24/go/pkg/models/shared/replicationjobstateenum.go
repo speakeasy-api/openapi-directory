@@ -20,12 +20,16 @@ const (
 	ReplicationJobStateEnumFailing         ReplicationJobStateEnum = "FAILING"
 )
 
+func (e ReplicationJobStateEnum) ToPointer() *ReplicationJobStateEnum {
+	return &e
+}
+
 func (e *ReplicationJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "ACTIVE":
@@ -41,9 +45,9 @@ func (e *ReplicationJobStateEnum) UnmarshalJSON(data []byte) error {
 	case "PAUSED_ON_FAILURE":
 		fallthrough
 	case "FAILING":
-		*e = ReplicationJobStateEnum(s)
+		*e = ReplicationJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicationJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicationJobStateEnum: %v", v)
 	}
 }

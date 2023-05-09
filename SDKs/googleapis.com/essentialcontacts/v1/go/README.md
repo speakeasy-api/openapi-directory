@@ -13,41 +13,39 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/essentialc
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.EssentialcontactsProjectsContactsComputeRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        NotificationCategories: []EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum{
-            "PRODUCT_UPDATES",
-            "SECURITY",
-            "BILLING",
-        },
-        OauthToken: "deserunt",
-        PageSize: 384382,
-        PageToken: "iure",
-        Parent: "magnam",
-        PrettyPrint: false,
-        QuotaUser: "debitis",
-        UploadType: "ipsa",
-        UploadProtocol: "delectus",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.EssentialcontactsProjectsContactsCompute(ctx, req, operations.EssentialcontactsProjectsContactsComputeSecurity{
+    res, err := s.Projects.EssentialcontactsProjectsContactsCompute(ctx, operations.EssentialcontactsProjectsContactsComputeRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        NotificationCategories: []EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum{
+            operations.EssentialcontactsProjectsContactsComputeNotificationCategoriesEnumProductUpdates,
+            operations.EssentialcontactsProjectsContactsComputeNotificationCategoriesEnumSecurity,
+            operations.EssentialcontactsProjectsContactsComputeNotificationCategoriesEnumBilling,
+        },
+        OauthToken: sdk.String("deserunt"),
+        PageSize: sdk.Int64(384382),
+        PageToken: sdk.String("iure"),
+        Parent: "magnam",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("debitis"),
+        UploadType: sdk.String("ipsa"),
+        UploadProtocol: sdk.String("delectus"),
+    }, operations.EssentialcontactsProjectsContactsComputeSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -66,15 +64,15 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `EssentialcontactsProjectsContactsCompute` - Lists all contacts for the resource that are subscribed to the specified notification categories, including contacts inherited from any parent resources.
-* `EssentialcontactsProjectsContactsCreate` - Adds a new contact for a resource.
-* `EssentialcontactsProjectsContactsDelete` - Deletes a contact.
-* `EssentialcontactsProjectsContactsGet` - Gets a single contact.
-* `EssentialcontactsProjectsContactsList` - Lists the contacts that have been set on a resource.
-* `EssentialcontactsProjectsContactsPatch` - Updates a contact. Note: A contact's email address cannot be changed.
-* `EssentialcontactsProjectsContactsSendTestMessage` - Allows a contact admin to send a test message to contact to verify that it has been configured correctly.
+* [EssentialcontactsProjectsContactsCompute](docs/projects/README.md#essentialcontactsprojectscontactscompute) - Lists all contacts for the resource that are subscribed to the specified notification categories, including contacts inherited from any parent resources.
+* [EssentialcontactsProjectsContactsCreate](docs/projects/README.md#essentialcontactsprojectscontactscreate) - Adds a new contact for a resource.
+* [EssentialcontactsProjectsContactsDelete](docs/projects/README.md#essentialcontactsprojectscontactsdelete) - Deletes a contact.
+* [EssentialcontactsProjectsContactsGet](docs/projects/README.md#essentialcontactsprojectscontactsget) - Gets a single contact.
+* [EssentialcontactsProjectsContactsList](docs/projects/README.md#essentialcontactsprojectscontactslist) - Lists the contacts that have been set on a resource.
+* [EssentialcontactsProjectsContactsPatch](docs/projects/README.md#essentialcontactsprojectscontactspatch) - Updates a contact. Note: A contact's email address cannot be changed.
+* [EssentialcontactsProjectsContactsSendTestMessage](docs/projects/README.md#essentialcontactsprojectscontactssendtestmessage) - Allows a contact admin to send a test message to contact to verify that it has been configured correctly.
 <!-- End SDK Available Operations -->
 
 ### Maturity

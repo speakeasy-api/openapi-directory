@@ -21,12 +21,16 @@ const (
 	ReportGoogleLocationRequestReportReasonBadLocationEnumDuplicate                    ReportGoogleLocationRequestReportReasonBadLocationEnum = "DUPLICATE"
 )
 
+func (e ReportGoogleLocationRequestReportReasonBadLocationEnum) ToPointer() *ReportGoogleLocationRequestReportReasonBadLocationEnum {
+	return &e
+}
+
 func (e *ReportGoogleLocationRequestReportReasonBadLocationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BAD_LOCATION_REASON_UNSPECIFIED":
 		fallthrough
 	case "NOT_A_LOCATION":
@@ -42,10 +46,10 @@ func (e *ReportGoogleLocationRequestReportReasonBadLocationEnum) UnmarshalJSON(d
 	case "MOVED":
 		fallthrough
 	case "DUPLICATE":
-		*e = ReportGoogleLocationRequestReportReasonBadLocationEnum(s)
+		*e = ReportGoogleLocationRequestReportReasonBadLocationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportGoogleLocationRequestReportReasonBadLocationEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportGoogleLocationRequestReportReasonBadLocationEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	ReportGoogleLocationRequestReportReasonBadRecommendationEnumIrrelevant                         ReportGoogleLocationRequestReportReasonBadRecommendationEnum = "IRRELEVANT"
 )
 
+func (e ReportGoogleLocationRequestReportReasonBadRecommendationEnum) ToPointer() *ReportGoogleLocationRequestReportReasonBadRecommendationEnum {
+	return &e
+}
+
 func (e *ReportGoogleLocationRequestReportReasonBadRecommendationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BAD_RECOMMENDATION_REASON_UNSPECIFIED":
 		fallthrough
 	case "NOT_A_STORE_FRONT":
@@ -72,10 +80,10 @@ func (e *ReportGoogleLocationRequestReportReasonBadRecommendationEnum) Unmarshal
 	case "NOT_PART_OF_SUGGESTED_CHAIN":
 		fallthrough
 	case "IRRELEVANT":
-		*e = ReportGoogleLocationRequestReportReasonBadRecommendationEnum(s)
+		*e = ReportGoogleLocationRequestReportReasonBadRecommendationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportGoogleLocationRequestReportReasonBadRecommendationEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportGoogleLocationRequestReportReasonBadRecommendationEnum: %v", v)
 	}
 }
 

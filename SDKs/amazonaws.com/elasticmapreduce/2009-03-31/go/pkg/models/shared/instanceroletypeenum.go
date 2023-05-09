@@ -15,20 +15,24 @@ const (
 	InstanceRoleTypeEnumTask   InstanceRoleTypeEnum = "TASK"
 )
 
+func (e InstanceRoleTypeEnum) ToPointer() *InstanceRoleTypeEnum {
+	return &e
+}
+
 func (e *InstanceRoleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MASTER":
 		fallthrough
 	case "CORE":
 		fallthrough
 	case "TASK":
-		*e = InstanceRoleTypeEnum(s)
+		*e = InstanceRoleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceRoleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceRoleTypeEnum: %v", v)
 	}
 }

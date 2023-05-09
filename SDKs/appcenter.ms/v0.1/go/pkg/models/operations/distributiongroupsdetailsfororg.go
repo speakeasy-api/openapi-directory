@@ -31,12 +31,16 @@ const (
 	DistributionGroupsDetailsForOrgDefaultApplicationJSONErrorCodeEnumTooManyRequests     DistributionGroupsDetailsForOrgDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DistributionGroupsDetailsForOrgDefaultApplicationJSONErrorCodeEnum) ToPointer() *DistributionGroupsDetailsForOrgDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DistributionGroupsDetailsForOrgDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *DistributionGroupsDetailsForOrgDefaultApplicationJSONErrorCodeEnum) Unm
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DistributionGroupsDetailsForOrgDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DistributionGroupsDetailsForOrgDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrgDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrgDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -91,12 +95,16 @@ const (
 	DistributionGroupsDetailsForOrg200ApplicationJSONAppsMemberPermissionsEnumTester    DistributionGroupsDetailsForOrg200ApplicationJSONAppsMemberPermissionsEnum = "tester"
 )
 
+func (e DistributionGroupsDetailsForOrg200ApplicationJSONAppsMemberPermissionsEnum) ToPointer() *DistributionGroupsDetailsForOrg200ApplicationJSONAppsMemberPermissionsEnum {
+	return &e
+}
+
 func (e *DistributionGroupsDetailsForOrg200ApplicationJSONAppsMemberPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
@@ -104,10 +112,10 @@ func (e *DistributionGroupsDetailsForOrg200ApplicationJSONAppsMemberPermissionsE
 	case "viewer":
 		fallthrough
 	case "tester":
-		*e = DistributionGroupsDetailsForOrg200ApplicationJSONAppsMemberPermissionsEnum(s)
+		*e = DistributionGroupsDetailsForOrg200ApplicationJSONAppsMemberPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrg200ApplicationJSONAppsMemberPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrg200ApplicationJSONAppsMemberPermissionsEnum: %v", v)
 	}
 }
 
@@ -120,21 +128,25 @@ const (
 	DistributionGroupsDetailsForOrg200ApplicationJSONAppsOriginEnumCodepush  DistributionGroupsDetailsForOrg200ApplicationJSONAppsOriginEnum = "codepush"
 )
 
+func (e DistributionGroupsDetailsForOrg200ApplicationJSONAppsOriginEnum) ToPointer() *DistributionGroupsDetailsForOrg200ApplicationJSONAppsOriginEnum {
+	return &e
+}
+
 func (e *DistributionGroupsDetailsForOrg200ApplicationJSONAppsOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
 		fallthrough
 	case "codepush":
-		*e = DistributionGroupsDetailsForOrg200ApplicationJSONAppsOriginEnum(s)
+		*e = DistributionGroupsDetailsForOrg200ApplicationJSONAppsOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrg200ApplicationJSONAppsOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrg200ApplicationJSONAppsOriginEnum: %v", v)
 	}
 }
 
@@ -152,12 +164,16 @@ const (
 	DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnumCustom  DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnum = "Custom"
 )
 
+func (e DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnum) ToPointer() *DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnum {
+	return &e
+}
+
 func (e *DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Android":
 		fallthrough
 	case "iOS":
@@ -173,10 +189,10 @@ func (e *DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnum) UnmarshalJ
 	case "Linux":
 		fallthrough
 	case "Custom":
-		*e = DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnum(s)
+		*e = DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrg200ApplicationJSONAppsOsEnum: %v", v)
 	}
 }
 
@@ -188,19 +204,23 @@ const (
 	DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwnerTypeEnumUser DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwnerTypeEnum = "user"
 )
 
+func (e DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwnerTypeEnum) ToPointer() *DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwnerTypeEnum {
+	return &e
+}
+
 func (e *DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwnerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "org":
 		fallthrough
 	case "user":
-		*e = DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwnerTypeEnum(s)
+		*e = DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwnerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwnerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrg200ApplicationJSONAppsOwnerTypeEnum: %v", v)
 	}
 }
 
@@ -238,12 +258,16 @@ const (
 	DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnumCustom          DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnum = "Custom"
 )
 
+func (e DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnum) ToPointer() *DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnum {
+	return &e
+}
+
 func (e *DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Java":
 		fallthrough
 	case "Objective-C-Swift":
@@ -267,10 +291,10 @@ func (e *DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnum) Unma
 	case "Unknown":
 		fallthrough
 	case "Custom":
-		*e = DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnum(s)
+		*e = DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrg200ApplicationJSONAppsPlatformEnum: %v", v)
 	}
 }
 
@@ -316,19 +340,23 @@ const (
 	DistributionGroupsDetailsForOrg200ApplicationJSONOriginEnumHockeyapp DistributionGroupsDetailsForOrg200ApplicationJSONOriginEnum = "hockeyapp"
 )
 
+func (e DistributionGroupsDetailsForOrg200ApplicationJSONOriginEnum) ToPointer() *DistributionGroupsDetailsForOrg200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *DistributionGroupsDetailsForOrg200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = DistributionGroupsDetailsForOrg200ApplicationJSONOriginEnum(s)
+		*e = DistributionGroupsDetailsForOrg200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrg200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsDetailsForOrg200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

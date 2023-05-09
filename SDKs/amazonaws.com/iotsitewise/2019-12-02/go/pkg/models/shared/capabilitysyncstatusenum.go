@@ -16,12 +16,16 @@ const (
 	CapabilitySyncStatusEnumUnknown    CapabilitySyncStatusEnum = "UNKNOWN"
 )
 
+func (e CapabilitySyncStatusEnum) ToPointer() *CapabilitySyncStatusEnum {
+	return &e
+}
+
 func (e *CapabilitySyncStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_SYNC":
 		fallthrough
 	case "OUT_OF_SYNC":
@@ -29,9 +33,9 @@ func (e *CapabilitySyncStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SYNC_FAILED":
 		fallthrough
 	case "UNKNOWN":
-		*e = CapabilitySyncStatusEnum(s)
+		*e = CapabilitySyncStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapabilitySyncStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CapabilitySyncStatusEnum: %v", v)
 	}
 }

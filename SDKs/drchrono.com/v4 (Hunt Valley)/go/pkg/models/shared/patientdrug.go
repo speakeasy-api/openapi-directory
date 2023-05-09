@@ -24,12 +24,16 @@ const (
 	PatientDrugOrderStatusEnumOverTheCounter          PatientDrugOrderStatusEnum = "Over the Counter"
 )
 
+func (e PatientDrugOrderStatusEnum) ToPointer() *PatientDrugOrderStatusEnum {
+	return &e
+}
+
 func (e *PatientDrugOrderStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Ordered":
@@ -51,10 +55,10 @@ func (e *PatientDrugOrderStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Prescribed by other Dr":
 		fallthrough
 	case "Over the Counter":
-		*e = PatientDrugOrderStatusEnum(s)
+		*e = PatientDrugOrderStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientDrugOrderStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientDrugOrderStatusEnum: %v", v)
 	}
 }
 
@@ -66,19 +70,23 @@ const (
 	PatientDrugStatusEnumInactive PatientDrugStatusEnum = "inactive"
 )
 
+func (e PatientDrugStatusEnum) ToPointer() *PatientDrugStatusEnum {
+	return &e
+}
+
 func (e *PatientDrugStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = PatientDrugStatusEnum(s)
+		*e = PatientDrugStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientDrugStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientDrugStatusEnum: %v", v)
 	}
 }
 

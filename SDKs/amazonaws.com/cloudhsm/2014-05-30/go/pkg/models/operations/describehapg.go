@@ -16,17 +16,21 @@ const (
 	DescribeHapgXAmzTargetEnumCloudHsmFrontendServiceDescribeHapg DescribeHapgXAmzTargetEnum = "CloudHsmFrontendService.DescribeHapg"
 )
 
+func (e DescribeHapgXAmzTargetEnum) ToPointer() *DescribeHapgXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeHapgXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CloudHsmFrontendService.DescribeHapg":
-		*e = DescribeHapgXAmzTargetEnum(s)
+		*e = DescribeHapgXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHapgXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHapgXAmzTargetEnum: %v", v)
 	}
 }
 

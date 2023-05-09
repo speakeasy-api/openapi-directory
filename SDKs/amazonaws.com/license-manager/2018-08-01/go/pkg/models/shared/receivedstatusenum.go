@@ -20,12 +20,16 @@ const (
 	ReceivedStatusEnumWorkflowCompleted ReceivedStatusEnum = "WORKFLOW_COMPLETED"
 )
 
+func (e ReceivedStatusEnum) ToPointer() *ReceivedStatusEnum {
+	return &e
+}
+
 func (e *ReceivedStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_WORKFLOW":
 		fallthrough
 	case "PENDING_ACCEPT":
@@ -41,9 +45,9 @@ func (e *ReceivedStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DISABLED":
 		fallthrough
 	case "WORKFLOW_COMPLETED":
-		*e = ReceivedStatusEnum(s)
+		*e = ReceivedStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReceivedStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReceivedStatusEnum: %v", v)
 	}
 }

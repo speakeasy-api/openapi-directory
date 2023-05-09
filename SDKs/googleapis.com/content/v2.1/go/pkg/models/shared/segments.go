@@ -18,12 +18,16 @@ const (
 	SegmentsProgramEnumBuyOnGoogleListing      SegmentsProgramEnum = "BUY_ON_GOOGLE_LISTING"
 )
 
+func (e SegmentsProgramEnum) ToPointer() *SegmentsProgramEnum {
+	return &e
+}
+
 func (e *SegmentsProgramEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROGRAM_UNSPECIFIED":
 		fallthrough
 	case "SHOPPING_ADS":
@@ -33,10 +37,10 @@ func (e *SegmentsProgramEnum) UnmarshalJSON(data []byte) error {
 	case "FREE_LOCAL_PRODUCT_LISTING":
 		fallthrough
 	case "BUY_ON_GOOGLE_LISTING":
-		*e = SegmentsProgramEnum(s)
+		*e = SegmentsProgramEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SegmentsProgramEnum: %s", s)
+		return fmt.Errorf("invalid value for SegmentsProgramEnum: %v", v)
 	}
 }
 

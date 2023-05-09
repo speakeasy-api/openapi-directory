@@ -18,12 +18,16 @@ const (
 	ReportingErrorCodeEnumMalformedKmsKey          ReportingErrorCodeEnum = "MALFORMED_KMS_KEY"
 )
 
+func (e ReportingErrorCodeEnum) ToPointer() *ReportingErrorCodeEnum {
+	return &e
+}
+
 func (e *ReportingErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_ERROR":
 		fallthrough
 	case "INVALID_PERMISSIONS":
@@ -35,9 +39,9 @@ func (e *ReportingErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "INCOMPATIBLE_BUCKET_REGION":
 		fallthrough
 	case "MALFORMED_KMS_KEY":
-		*e = ReportingErrorCodeEnum(s)
+		*e = ReportingErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportingErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportingErrorCodeEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	BatchDeleteConnectionXAmzTargetEnumAwsGlueBatchDeleteConnection BatchDeleteConnectionXAmzTargetEnum = "AWSGlue.BatchDeleteConnection"
 )
 
+func (e BatchDeleteConnectionXAmzTargetEnum) ToPointer() *BatchDeleteConnectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchDeleteConnectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.BatchDeleteConnection":
-		*e = BatchDeleteConnectionXAmzTargetEnum(s)
+		*e = BatchDeleteConnectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchDeleteConnectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchDeleteConnectionXAmzTargetEnum: %v", v)
 	}
 }
 

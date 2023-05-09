@@ -34,7 +34,10 @@ func newBuyongoogleprograms(defaultClient, securityClient HTTPClient, serverURL,
 // ContentBuyongoogleprogramsActivate - Reactivates the BoG program in your Merchant Center account. Moves the program to the active state when allowed, for example, when paused. This method is only available to selected merchants.
 func (s *buyongoogleprograms) ContentBuyongoogleprogramsActivate(ctx context.Context, request operations.ContentBuyongoogleprogramsActivateRequest, security operations.ContentBuyongoogleprogramsActivateSecurity) (*operations.ContentBuyongoogleprogramsActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/activate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/activate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -80,7 +83,10 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsActivate(ctx context.Con
 // ContentBuyongoogleprogramsGet - Retrieves a status of the BoG program for your Merchant Center account.
 func (s *buyongoogleprograms) ContentBuyongoogleprogramsGet(ctx context.Context, request operations.ContentBuyongoogleprogramsGetRequest, security operations.ContentBuyongoogleprogramsGetSecurity) (*operations.ContentBuyongoogleprogramsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsGet(ctx context.Context,
 // ContentBuyongoogleprogramsOnboard - Onboards the BoG program in your Merchant Center account. By using this method, you agree to the [Terms of Service](https://merchants.google.com/mc/termsofservice/transactions/US/latest). Calling this method is only possible if the authenticated account is the same as the merchant id in the request. Calling this method multiple times will only accept Terms of Service if the latest version is not currently signed.
 func (s *buyongoogleprograms) ContentBuyongoogleprogramsOnboard(ctx context.Context, request operations.ContentBuyongoogleprogramsOnboardRequest, security operations.ContentBuyongoogleprogramsOnboardSecurity) (*operations.ContentBuyongoogleprogramsOnboardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/onboard", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/onboard", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OnboardBuyOnGoogleProgramRequest", "json")
 	if err != nil {
@@ -174,7 +183,10 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsOnboard(ctx context.Cont
 // ContentBuyongoogleprogramsPatch - Updates the status of the BoG program for your Merchant Center account.
 func (s *buyongoogleprograms) ContentBuyongoogleprogramsPatch(ctx context.Context, request operations.ContentBuyongoogleprogramsPatchRequest, security operations.ContentBuyongoogleprogramsPatchSecurity) (*operations.ContentBuyongoogleprogramsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BuyOnGoogleProgramStatusInput", "json")
 	if err != nil {
@@ -229,7 +241,10 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsPatch(ctx context.Contex
 // ContentBuyongoogleprogramsPause - Pauses the BoG program in your Merchant Center account. This method is only available to selected merchants.
 func (s *buyongoogleprograms) ContentBuyongoogleprogramsPause(ctx context.Context, request operations.ContentBuyongoogleprogramsPauseRequest, security operations.ContentBuyongoogleprogramsPauseSecurity) (*operations.ContentBuyongoogleprogramsPauseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/pause", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/pause", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -275,7 +290,10 @@ func (s *buyongoogleprograms) ContentBuyongoogleprogramsPause(ctx context.Contex
 // ContentBuyongoogleprogramsRequestreview - Requests review and then activates the BoG program in your Merchant Center account for the first time. Moves the program to the REVIEW_PENDING state. This method is only available to selected merchants.
 func (s *buyongoogleprograms) ContentBuyongoogleprogramsRequestreview(ctx context.Context, request operations.ContentBuyongoogleprogramsRequestreviewRequest, security operations.ContentBuyongoogleprogramsRequestreviewSecurity) (*operations.ContentBuyongoogleprogramsRequestreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/requestreview", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/buyongoogleprograms/{regionCode}/requestreview", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

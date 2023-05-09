@@ -34,7 +34,10 @@ func newNotifications(defaultClient, securityClient HTTPClient, serverURL, langu
 
 func (s *notifications) GetNotificationsContributionsIDPreview(ctx context.Context, request operations.GetNotificationsContributionsIDPreviewRequest) (*operations.GetNotificationsContributionsIDPreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/notifications/contributions/{id}/preview", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/notifications/contributions/{id}/preview", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

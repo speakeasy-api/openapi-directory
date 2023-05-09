@@ -15,20 +15,24 @@ const (
 	BeezUPCommonAPISettingsStatusEnumFailed  BeezUPCommonAPISettingsStatusEnum = "failed"
 )
 
+func (e BeezUPCommonAPISettingsStatusEnum) ToPointer() *BeezUPCommonAPISettingsStatusEnum {
+	return &e
+}
+
 func (e *BeezUPCommonAPISettingsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "warning":
 		fallthrough
 	case "success":
 		fallthrough
 	case "failed":
-		*e = BeezUPCommonAPISettingsStatusEnum(s)
+		*e = BeezUPCommonAPISettingsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BeezUPCommonAPISettingsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BeezUPCommonAPISettingsStatusEnum: %v", v)
 	}
 }

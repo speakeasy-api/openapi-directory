@@ -16,17 +16,21 @@ const (
 	DescribeVpcPeeringConnectionsXAmzTargetEnumGameLiftDescribeVpcPeeringConnections DescribeVpcPeeringConnectionsXAmzTargetEnum = "GameLift.DescribeVpcPeeringConnections"
 )
 
+func (e DescribeVpcPeeringConnectionsXAmzTargetEnum) ToPointer() *DescribeVpcPeeringConnectionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeVpcPeeringConnectionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DescribeVpcPeeringConnections":
-		*e = DescribeVpcPeeringConnectionsXAmzTargetEnum(s)
+		*e = DescribeVpcPeeringConnectionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcPeeringConnectionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcPeeringConnectionsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -21,12 +21,16 @@ const (
 	ReactionsCreateForReleaseRequestBodyContentEnumEyes   ReactionsCreateForReleaseRequestBodyContentEnum = "eyes"
 )
 
+func (e ReactionsCreateForReleaseRequestBodyContentEnum) ToPointer() *ReactionsCreateForReleaseRequestBodyContentEnum {
+	return &e
+}
+
 func (e *ReactionsCreateForReleaseRequestBodyContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "+1":
 		fallthrough
 	case "laugh":
@@ -38,10 +42,10 @@ func (e *ReactionsCreateForReleaseRequestBodyContentEnum) UnmarshalJSON(data []b
 	case "rocket":
 		fallthrough
 	case "eyes":
-		*e = ReactionsCreateForReleaseRequestBodyContentEnum(s)
+		*e = ReactionsCreateForReleaseRequestBodyContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReactionsCreateForReleaseRequestBodyContentEnum: %s", s)
+		return fmt.Errorf("invalid value for ReactionsCreateForReleaseRequestBodyContentEnum: %v", v)
 	}
 }
 

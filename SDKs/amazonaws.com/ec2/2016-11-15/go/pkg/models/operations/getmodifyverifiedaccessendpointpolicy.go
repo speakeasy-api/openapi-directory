@@ -15,17 +15,21 @@ const (
 	GETModifyVerifiedAccessEndpointPolicyActionEnumModifyVerifiedAccessEndpointPolicy GETModifyVerifiedAccessEndpointPolicyActionEnum = "ModifyVerifiedAccessEndpointPolicy"
 )
 
+func (e GETModifyVerifiedAccessEndpointPolicyActionEnum) ToPointer() *GETModifyVerifiedAccessEndpointPolicyActionEnum {
+	return &e
+}
+
 func (e *GETModifyVerifiedAccessEndpointPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVerifiedAccessEndpointPolicy":
-		*e = GETModifyVerifiedAccessEndpointPolicyActionEnum(s)
+		*e = GETModifyVerifiedAccessEndpointPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVerifiedAccessEndpointPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVerifiedAccessEndpointPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyVerifiedAccessEndpointPolicyVersionEnumTwoThousandAndSixteen1115 GETModifyVerifiedAccessEndpointPolicyVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVerifiedAccessEndpointPolicyVersionEnum) ToPointer() *GETModifyVerifiedAccessEndpointPolicyVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVerifiedAccessEndpointPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVerifiedAccessEndpointPolicyVersionEnum(s)
+		*e = GETModifyVerifiedAccessEndpointPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVerifiedAccessEndpointPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVerifiedAccessEndpointPolicyVersionEnum: %v", v)
 	}
 }
 
@@ -56,11 +64,11 @@ type GETModifyVerifiedAccessEndpointPolicyRequest struct {
 	ClientToken *string `queryParam:"style=form,explode=true,name=ClientToken"`
 	// Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is <code>DryRunOperation</code>. Otherwise, it is <code>UnauthorizedOperation</code>.
 	DryRun *bool `queryParam:"style=form,explode=true,name=DryRun"`
-	// The Amazon Web Services Verified Access policy document.
+	// The Verified Access policy document.
 	PolicyDocument *string `queryParam:"style=form,explode=true,name=PolicyDocument"`
 	// The status of the Verified Access policy.
 	PolicyEnabled bool `queryParam:"style=form,explode=true,name=PolicyEnabled"`
-	// The ID of the Amazon Web Services Verified Access endpoint.
+	// The ID of the Verified Access endpoint.
 	VerifiedAccessEndpointID string                                           `queryParam:"style=form,explode=true,name=VerifiedAccessEndpointId"`
 	Version                  GETModifyVerifiedAccessEndpointPolicyVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	XAmzAlgorithm            *string                                          `header:"style=simple,explode=false,name=X-Amz-Algorithm"`

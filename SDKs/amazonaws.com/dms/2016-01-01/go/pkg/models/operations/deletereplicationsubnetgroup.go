@@ -16,17 +16,21 @@ const (
 	DeleteReplicationSubnetGroupXAmzTargetEnumAmazonDmSv20160101DeleteReplicationSubnetGroup DeleteReplicationSubnetGroupXAmzTargetEnum = "AmazonDMSv20160101.DeleteReplicationSubnetGroup"
 )
 
+func (e DeleteReplicationSubnetGroupXAmzTargetEnum) ToPointer() *DeleteReplicationSubnetGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteReplicationSubnetGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.DeleteReplicationSubnetGroup":
-		*e = DeleteReplicationSubnetGroupXAmzTargetEnum(s)
+		*e = DeleteReplicationSubnetGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteReplicationSubnetGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteReplicationSubnetGroupXAmzTargetEnum: %v", v)
 	}
 }
 

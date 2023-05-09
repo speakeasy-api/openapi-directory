@@ -14,18 +14,22 @@ const (
 	CPUVendorArchitectureEnumCurrent  CPUVendorArchitectureEnum = "CURRENT"
 )
 
+func (e CPUVendorArchitectureEnum) ToPointer() *CPUVendorArchitectureEnum {
+	return &e
+}
+
 func (e *CPUVendorArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_ARM64":
 		fallthrough
 	case "CURRENT":
-		*e = CPUVendorArchitectureEnum(s)
+		*e = CPUVendorArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CPUVendorArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for CPUVendorArchitectureEnum: %v", v)
 	}
 }

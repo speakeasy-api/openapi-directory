@@ -22,12 +22,16 @@ const (
 	LiveBroadcastStatusLifeCycleStatusEnumLiveStarting               LiveBroadcastStatusLifeCycleStatusEnum = "liveStarting"
 )
 
+func (e LiveBroadcastStatusLifeCycleStatusEnum) ToPointer() *LiveBroadcastStatusLifeCycleStatusEnum {
+	return &e
+}
+
 func (e *LiveBroadcastStatusLifeCycleStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lifeCycleStatusUnspecified":
 		fallthrough
 	case "created":
@@ -45,10 +49,10 @@ func (e *LiveBroadcastStatusLifeCycleStatusEnum) UnmarshalJSON(data []byte) erro
 	case "testStarting":
 		fallthrough
 	case "liveStarting":
-		*e = LiveBroadcastStatusLifeCycleStatusEnum(s)
+		*e = LiveBroadcastStatusLifeCycleStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveBroadcastStatusLifeCycleStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveBroadcastStatusLifeCycleStatusEnum: %v", v)
 	}
 }
 
@@ -62,12 +66,16 @@ const (
 	LiveBroadcastStatusLiveBroadcastPriorityEnumHigh                             LiveBroadcastStatusLiveBroadcastPriorityEnum = "high"
 )
 
+func (e LiveBroadcastStatusLiveBroadcastPriorityEnum) ToPointer() *LiveBroadcastStatusLiveBroadcastPriorityEnum {
+	return &e
+}
+
 func (e *LiveBroadcastStatusLiveBroadcastPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "liveBroadcastPriorityUnspecified":
 		fallthrough
 	case "low":
@@ -75,10 +83,10 @@ func (e *LiveBroadcastStatusLiveBroadcastPriorityEnum) UnmarshalJSON(data []byte
 	case "normal":
 		fallthrough
 	case "high":
-		*e = LiveBroadcastStatusLiveBroadcastPriorityEnum(s)
+		*e = LiveBroadcastStatusLiveBroadcastPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveBroadcastStatusLiveBroadcastPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveBroadcastStatusLiveBroadcastPriorityEnum: %v", v)
 	}
 }
 
@@ -91,21 +99,25 @@ const (
 	LiveBroadcastStatusPrivacyStatusEnumPrivate  LiveBroadcastStatusPrivacyStatusEnum = "private"
 )
 
+func (e LiveBroadcastStatusPrivacyStatusEnum) ToPointer() *LiveBroadcastStatusPrivacyStatusEnum {
+	return &e
+}
+
 func (e *LiveBroadcastStatusPrivacyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "unlisted":
 		fallthrough
 	case "private":
-		*e = LiveBroadcastStatusPrivacyStatusEnum(s)
+		*e = LiveBroadcastStatusPrivacyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveBroadcastStatusPrivacyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveBroadcastStatusPrivacyStatusEnum: %v", v)
 	}
 }
 
@@ -119,12 +131,16 @@ const (
 	LiveBroadcastStatusRecordingStatusEnumRecorded                                LiveBroadcastStatusRecordingStatusEnum = "recorded"
 )
 
+func (e LiveBroadcastStatusRecordingStatusEnum) ToPointer() *LiveBroadcastStatusRecordingStatusEnum {
+	return &e
+}
+
 func (e *LiveBroadcastStatusRecordingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "liveBroadcastRecordingStatusUnspecified":
 		fallthrough
 	case "notRecording":
@@ -132,10 +148,10 @@ func (e *LiveBroadcastStatusRecordingStatusEnum) UnmarshalJSON(data []byte) erro
 	case "recording":
 		fallthrough
 	case "recorded":
-		*e = LiveBroadcastStatusRecordingStatusEnum(s)
+		*e = LiveBroadcastStatusRecordingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveBroadcastStatusRecordingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveBroadcastStatusRecordingStatusEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	NotebookInstanceSortOrderEnumDescending NotebookInstanceSortOrderEnum = "Descending"
 )
 
+func (e NotebookInstanceSortOrderEnum) ToPointer() *NotebookInstanceSortOrderEnum {
+	return &e
+}
+
 func (e *NotebookInstanceSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ascending":
 		fallthrough
 	case "Descending":
-		*e = NotebookInstanceSortOrderEnum(s)
+		*e = NotebookInstanceSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotebookInstanceSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for NotebookInstanceSortOrderEnum: %v", v)
 	}
 }

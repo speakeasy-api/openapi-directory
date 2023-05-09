@@ -19,12 +19,16 @@ const (
 	GoogleCloudAssetV1p7beta1ExportAssetsRequestContentTypeEnumRelationship           GoogleCloudAssetV1p7beta1ExportAssetsRequestContentTypeEnum = "RELATIONSHIP"
 )
 
+func (e GoogleCloudAssetV1p7beta1ExportAssetsRequestContentTypeEnum) ToPointer() *GoogleCloudAssetV1p7beta1ExportAssetsRequestContentTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssetV1p7beta1ExportAssetsRequestContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RESOURCE":
@@ -36,10 +40,10 @@ func (e *GoogleCloudAssetV1p7beta1ExportAssetsRequestContentTypeEnum) UnmarshalJ
 	case "ACCESS_POLICY":
 		fallthrough
 	case "RELATIONSHIP":
-		*e = GoogleCloudAssetV1p7beta1ExportAssetsRequestContentTypeEnum(s)
+		*e = GoogleCloudAssetV1p7beta1ExportAssetsRequestContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssetV1p7beta1ExportAssetsRequestContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssetV1p7beta1ExportAssetsRequestContentTypeEnum: %v", v)
 	}
 }
 

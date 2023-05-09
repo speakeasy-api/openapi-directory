@@ -71,12 +71,16 @@ const (
 	PatientAutoAccidentInsuranceAutoAccidentClaimRepStateEnumWy PatientAutoAccidentInsuranceAutoAccidentClaimRepStateEnum = "WY"
 )
 
+func (e PatientAutoAccidentInsuranceAutoAccidentClaimRepStateEnum) ToPointer() *PatientAutoAccidentInsuranceAutoAccidentClaimRepStateEnum {
+	return &e
+}
+
 func (e *PatientAutoAccidentInsuranceAutoAccidentClaimRepStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL":
 		fallthrough
 	case "AK":
@@ -194,10 +198,10 @@ func (e *PatientAutoAccidentInsuranceAutoAccidentClaimRepStateEnum) UnmarshalJSO
 	case "WI":
 		fallthrough
 	case "WY":
-		*e = PatientAutoAccidentInsuranceAutoAccidentClaimRepStateEnum(s)
+		*e = PatientAutoAccidentInsuranceAutoAccidentClaimRepStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientAutoAccidentInsuranceAutoAccidentClaimRepStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientAutoAccidentInsuranceAutoAccidentClaimRepStateEnum: %v", v)
 	}
 }
 
@@ -231,12 +235,16 @@ const (
 	PatientAutoAccidentInsuranceAutoAccidentPatientRelationshipToSubscriberEnumG8          PatientAutoAccidentInsuranceAutoAccidentPatientRelationshipToSubscriberEnum = "G8"
 )
 
+func (e PatientAutoAccidentInsuranceAutoAccidentPatientRelationshipToSubscriberEnum) ToPointer() *PatientAutoAccidentInsuranceAutoAccidentPatientRelationshipToSubscriberEnum {
+	return &e
+}
+
 func (e *PatientAutoAccidentInsuranceAutoAccidentPatientRelationshipToSubscriberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "01":
@@ -286,10 +294,10 @@ func (e *PatientAutoAccidentInsuranceAutoAccidentPatientRelationshipToSubscriber
 	case "76":
 		fallthrough
 	case "G8":
-		*e = PatientAutoAccidentInsuranceAutoAccidentPatientRelationshipToSubscriberEnum(s)
+		*e = PatientAutoAccidentInsuranceAutoAccidentPatientRelationshipToSubscriberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientAutoAccidentInsuranceAutoAccidentPatientRelationshipToSubscriberEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientAutoAccidentInsuranceAutoAccidentPatientRelationshipToSubscriberEnum: %v", v)
 	}
 }
 
@@ -357,12 +365,16 @@ const (
 	PatientAutoAccidentInsuranceAutoAccidentPayerStateEnumWy PatientAutoAccidentInsuranceAutoAccidentPayerStateEnum = "WY"
 )
 
+func (e PatientAutoAccidentInsuranceAutoAccidentPayerStateEnum) ToPointer() *PatientAutoAccidentInsuranceAutoAccidentPayerStateEnum {
+	return &e
+}
+
 func (e *PatientAutoAccidentInsuranceAutoAccidentPayerStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL":
 		fallthrough
 	case "AK":
@@ -480,10 +492,10 @@ func (e *PatientAutoAccidentInsuranceAutoAccidentPayerStateEnum) UnmarshalJSON(d
 	case "WI":
 		fallthrough
 	case "WY":
-		*e = PatientAutoAccidentInsuranceAutoAccidentPayerStateEnum(s)
+		*e = PatientAutoAccidentInsuranceAutoAccidentPayerStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientAutoAccidentInsuranceAutoAccidentPayerStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientAutoAccidentInsuranceAutoAccidentPayerStateEnum: %v", v)
 	}
 }
 
@@ -495,21 +507,25 @@ const (
 	PatientAutoAccidentInsuranceAutoAccidentSignificantInjuryEnumNa  PatientAutoAccidentInsuranceAutoAccidentSignificantInjuryEnum = "N\\A"
 )
 
+func (e PatientAutoAccidentInsuranceAutoAccidentSignificantInjuryEnum) ToPointer() *PatientAutoAccidentInsuranceAutoAccidentSignificantInjuryEnum {
+	return &e
+}
+
 func (e *PatientAutoAccidentInsuranceAutoAccidentSignificantInjuryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "YES":
 		fallthrough
 	case "NO":
 		fallthrough
 	case "N\\A":
-		*e = PatientAutoAccidentInsuranceAutoAccidentSignificantInjuryEnum(s)
+		*e = PatientAutoAccidentInsuranceAutoAccidentSignificantInjuryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientAutoAccidentInsuranceAutoAccidentSignificantInjuryEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientAutoAccidentInsuranceAutoAccidentSignificantInjuryEnum: %v", v)
 	}
 }
 
@@ -577,12 +593,16 @@ const (
 	PatientAutoAccidentInsuranceAutoAccidentStateOfOccurrenceEnumWy PatientAutoAccidentInsuranceAutoAccidentStateOfOccurrenceEnum = "WY"
 )
 
+func (e PatientAutoAccidentInsuranceAutoAccidentStateOfOccurrenceEnum) ToPointer() *PatientAutoAccidentInsuranceAutoAccidentStateOfOccurrenceEnum {
+	return &e
+}
+
 func (e *PatientAutoAccidentInsuranceAutoAccidentStateOfOccurrenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL":
 		fallthrough
 	case "AK":
@@ -700,10 +720,10 @@ func (e *PatientAutoAccidentInsuranceAutoAccidentStateOfOccurrenceEnum) Unmarsha
 	case "WI":
 		fallthrough
 	case "WY":
-		*e = PatientAutoAccidentInsuranceAutoAccidentStateOfOccurrenceEnum(s)
+		*e = PatientAutoAccidentInsuranceAutoAccidentStateOfOccurrenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientAutoAccidentInsuranceAutoAccidentStateOfOccurrenceEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientAutoAccidentInsuranceAutoAccidentStateOfOccurrenceEnum: %v", v)
 	}
 }
 
@@ -771,12 +791,16 @@ const (
 	PatientAutoAccidentInsuranceAutoAccidentSubscriberStateEnumWy PatientAutoAccidentInsuranceAutoAccidentSubscriberStateEnum = "WY"
 )
 
+func (e PatientAutoAccidentInsuranceAutoAccidentSubscriberStateEnum) ToPointer() *PatientAutoAccidentInsuranceAutoAccidentSubscriberStateEnum {
+	return &e
+}
+
 func (e *PatientAutoAccidentInsuranceAutoAccidentSubscriberStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL":
 		fallthrough
 	case "AK":
@@ -894,10 +918,10 @@ func (e *PatientAutoAccidentInsuranceAutoAccidentSubscriberStateEnum) UnmarshalJ
 	case "WI":
 		fallthrough
 	case "WY":
-		*e = PatientAutoAccidentInsuranceAutoAccidentSubscriberStateEnum(s)
+		*e = PatientAutoAccidentInsuranceAutoAccidentSubscriberStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientAutoAccidentInsuranceAutoAccidentSubscriberStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientAutoAccidentInsuranceAutoAccidentSubscriberStateEnum: %v", v)
 	}
 }
 
@@ -974,12 +998,16 @@ const (
 	PatientEthnicityEnumDeclined    PatientEthnicityEnum = "declined"
 )
 
+func (e PatientEthnicityEnum) ToPointer() *PatientEthnicityEnum {
+	return &e
+}
+
 func (e *PatientEthnicityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "blank":
 		fallthrough
 	case "hispanic":
@@ -987,10 +1015,10 @@ func (e *PatientEthnicityEnum) UnmarshalJSON(data []byte) error {
 	case "not_hispanic":
 		fallthrough
 	case "declined":
-		*e = PatientEthnicityEnum(s)
+		*e = PatientEthnicityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientEthnicityEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientEthnicityEnum: %v", v)
 	}
 }
 
@@ -1006,12 +1034,16 @@ const (
 	PatientGenderEnumAsku    PatientGenderEnum = "ASKU"
 )
 
+func (e PatientGenderEnum) ToPointer() *PatientGenderEnum {
+	return &e
+}
+
 func (e *PatientGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Male":
@@ -1023,10 +1055,10 @@ func (e *PatientGenderEnum) UnmarshalJSON(data []byte) error {
 	case "UNK":
 		fallthrough
 	case "ASKU":
-		*e = PatientGenderEnum(s)
+		*e = PatientGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientGenderEnum: %v", v)
 	}
 }
 
@@ -1067,12 +1099,16 @@ const (
 	PatientPatientPaymentProfileEnumWorkerSComp           PatientPatientPaymentProfileEnum = "Worker's Comp"
 )
 
+func (e PatientPatientPaymentProfileEnum) ToPointer() *PatientPatientPaymentProfileEnum {
+	return &e
+}
+
 func (e *PatientPatientPaymentProfileEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Cash":
@@ -1084,10 +1120,10 @@ func (e *PatientPatientPaymentProfileEnum) UnmarshalJSON(data []byte) error {
 	case "Auto Accident":
 		fallthrough
 	case "Worker's Comp":
-		*e = PatientPatientPaymentProfileEnum(s)
+		*e = PatientPatientPaymentProfileEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientPatientPaymentProfileEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientPatientPaymentProfileEnum: %v", v)
 	}
 }
 
@@ -1100,21 +1136,25 @@ const (
 	PatientPatientStatusEnumD PatientPatientStatusEnum = "D"
 )
 
+func (e PatientPatientStatusEnum) ToPointer() *PatientPatientStatusEnum {
+	return &e
+}
+
 func (e *PatientPatientStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "A":
 		fallthrough
 	case "I":
 		fallthrough
 	case "D":
-		*e = PatientPatientStatusEnum(s)
+		*e = PatientPatientStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientPatientStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientPatientStatusEnum: %v", v)
 	}
 }
 
@@ -1136,12 +1176,16 @@ const (
 	PatientPreferredLanguageEnumDeclined PatientPreferredLanguageEnum = "declined"
 )
 
+func (e PatientPreferredLanguageEnum) ToPointer() *PatientPreferredLanguageEnum {
+	return &e
+}
+
 func (e *PatientPreferredLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "blank":
 		fallthrough
 	case "eng":
@@ -1165,10 +1209,10 @@ func (e *PatientPreferredLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "unknown":
 		fallthrough
 	case "declined":
-		*e = PatientPreferredLanguageEnum(s)
+		*e = PatientPreferredLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientPreferredLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientPreferredLanguageEnum: %v", v)
 	}
 }
 
@@ -1201,12 +1245,16 @@ const (
 	PatientPrimaryInsuranceInsurancePlanTypeEnumWc        PatientPrimaryInsuranceInsurancePlanTypeEnum = "WC"
 )
 
+func (e PatientPrimaryInsuranceInsurancePlanTypeEnum) ToPointer() *PatientPrimaryInsuranceInsurancePlanTypeEnum {
+	return &e
+}
+
 func (e *PatientPrimaryInsuranceInsurancePlanTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "AM":
@@ -1254,10 +1302,10 @@ func (e *PatientPrimaryInsuranceInsurancePlanTypeEnum) UnmarshalJSON(data []byte
 	case "VA":
 		fallthrough
 	case "WC":
-		*e = PatientPrimaryInsuranceInsurancePlanTypeEnum(s)
+		*e = PatientPrimaryInsuranceInsurancePlanTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientPrimaryInsuranceInsurancePlanTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientPrimaryInsuranceInsurancePlanTypeEnum: %v", v)
 	}
 }
 
@@ -1292,12 +1340,16 @@ const (
 	PatientPrimaryInsurancePatientRelationshipToSubscriberEnumG8          PatientPrimaryInsurancePatientRelationshipToSubscriberEnum = "G8"
 )
 
+func (e PatientPrimaryInsurancePatientRelationshipToSubscriberEnum) ToPointer() *PatientPrimaryInsurancePatientRelationshipToSubscriberEnum {
+	return &e
+}
+
 func (e *PatientPrimaryInsurancePatientRelationshipToSubscriberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "01":
@@ -1347,10 +1399,10 @@ func (e *PatientPrimaryInsurancePatientRelationshipToSubscriberEnum) UnmarshalJS
 	case "76":
 		fallthrough
 	case "G8":
-		*e = PatientPrimaryInsurancePatientRelationshipToSubscriberEnum(s)
+		*e = PatientPrimaryInsurancePatientRelationshipToSubscriberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientPrimaryInsurancePatientRelationshipToSubscriberEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientPrimaryInsurancePatientRelationshipToSubscriberEnum: %v", v)
 	}
 }
 
@@ -1612,12 +1664,16 @@ const (
 	PatientPrimaryInsuranceSubscriberCountryEnumZw      PatientPrimaryInsuranceSubscriberCountryEnum = "ZW"
 )
 
+func (e PatientPrimaryInsuranceSubscriberCountryEnum) ToPointer() *PatientPrimaryInsuranceSubscriberCountryEnum {
+	return &e
+}
+
 func (e *PatientPrimaryInsuranceSubscriberCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "AF":
@@ -2121,10 +2177,10 @@ func (e *PatientPrimaryInsuranceSubscriberCountryEnum) UnmarshalJSON(data []byte
 	case "ZM":
 		fallthrough
 	case "ZW":
-		*e = PatientPrimaryInsuranceSubscriberCountryEnum(s)
+		*e = PatientPrimaryInsuranceSubscriberCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientPrimaryInsuranceSubscriberCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientPrimaryInsuranceSubscriberCountryEnum: %v", v)
 	}
 }
 
@@ -2140,12 +2196,16 @@ const (
 	PatientPrimaryInsuranceSubscriberGenderEnumAsku    PatientPrimaryInsuranceSubscriberGenderEnum = "ASKU"
 )
 
+func (e PatientPrimaryInsuranceSubscriberGenderEnum) ToPointer() *PatientPrimaryInsuranceSubscriberGenderEnum {
+	return &e
+}
+
 func (e *PatientPrimaryInsuranceSubscriberGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Male":
@@ -2157,10 +2217,10 @@ func (e *PatientPrimaryInsuranceSubscriberGenderEnum) UnmarshalJSON(data []byte)
 	case "UNK":
 		fallthrough
 	case "ASKU":
-		*e = PatientPrimaryInsuranceSubscriberGenderEnum(s)
+		*e = PatientPrimaryInsuranceSubscriberGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientPrimaryInsuranceSubscriberGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientPrimaryInsuranceSubscriberGenderEnum: %v", v)
 	}
 }
 
@@ -2229,12 +2289,16 @@ const (
 	PatientPrimaryInsuranceSubscriberStateEnumWy PatientPrimaryInsuranceSubscriberStateEnum = "WY"
 )
 
+func (e PatientPrimaryInsuranceSubscriberStateEnum) ToPointer() *PatientPrimaryInsuranceSubscriberStateEnum {
+	return &e
+}
+
 func (e *PatientPrimaryInsuranceSubscriberStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL":
 		fallthrough
 	case "AK":
@@ -2352,10 +2416,10 @@ func (e *PatientPrimaryInsuranceSubscriberStateEnum) UnmarshalJSON(data []byte) 
 	case "WI":
 		fallthrough
 	case "WY":
-		*e = PatientPrimaryInsuranceSubscriberStateEnum(s)
+		*e = PatientPrimaryInsuranceSubscriberStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientPrimaryInsuranceSubscriberStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientPrimaryInsuranceSubscriberStateEnum: %v", v)
 	}
 }
 
@@ -2411,12 +2475,16 @@ const (
 	PatientRaceEnumDeclined PatientRaceEnum = "declined"
 )
 
+func (e PatientRaceEnum) ToPointer() *PatientRaceEnum {
+	return &e
+}
+
 func (e *PatientRaceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "blank":
 		fallthrough
 	case "indian":
@@ -2432,10 +2500,10 @@ func (e *PatientRaceEnum) UnmarshalJSON(data []byte) error {
 	case "other":
 		fallthrough
 	case "declined":
-		*e = PatientRaceEnum(s)
+		*e = PatientRaceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientRaceEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientRaceEnum: %v", v)
 	}
 }
 
@@ -2449,12 +2517,16 @@ const (
 	PatientPatientProviderQualifierEnumG2      PatientPatientProviderQualifierEnum = "G2"
 )
 
+func (e PatientPatientProviderQualifierEnum) ToPointer() *PatientPatientProviderQualifierEnum {
+	return &e
+}
+
 func (e *PatientPatientProviderQualifierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "0B":
@@ -2462,10 +2534,10 @@ func (e *PatientPatientProviderQualifierEnum) UnmarshalJSON(data []byte) error {
 	case "1G":
 		fallthrough
 	case "G2":
-		*e = PatientPatientProviderQualifierEnum(s)
+		*e = PatientPatientProviderQualifierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientPatientProviderQualifierEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientPatientProviderQualifierEnum: %v", v)
 	}
 }
 
@@ -2584,12 +2656,16 @@ const (
 	PatientPatientSpecialtyEnumVascularSurgeon                                     PatientPatientSpecialtyEnum = "Vascular Surgeon"
 )
 
+func (e PatientPatientSpecialtyEnum) ToPointer() *PatientPatientSpecialtyEnum {
+	return &e
+}
+
 func (e *PatientPatientSpecialtyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Acupuncture":
@@ -2807,10 +2883,10 @@ func (e *PatientPatientSpecialtyEnum) UnmarshalJSON(data []byte) error {
 	case "Urgent Care":
 		fallthrough
 	case "Vascular Surgeon":
-		*e = PatientPatientSpecialtyEnum(s)
+		*e = PatientPatientSpecialtyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientPatientSpecialtyEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientPatientSpecialtyEnum: %v", v)
 	}
 }
 
@@ -2862,12 +2938,16 @@ const (
 	PatientSecondaryInsuranceInsurancePlanTypeEnumWc        PatientSecondaryInsuranceInsurancePlanTypeEnum = "WC"
 )
 
+func (e PatientSecondaryInsuranceInsurancePlanTypeEnum) ToPointer() *PatientSecondaryInsuranceInsurancePlanTypeEnum {
+	return &e
+}
+
 func (e *PatientSecondaryInsuranceInsurancePlanTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "AM":
@@ -2915,10 +2995,10 @@ func (e *PatientSecondaryInsuranceInsurancePlanTypeEnum) UnmarshalJSON(data []by
 	case "VA":
 		fallthrough
 	case "WC":
-		*e = PatientSecondaryInsuranceInsurancePlanTypeEnum(s)
+		*e = PatientSecondaryInsuranceInsurancePlanTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientSecondaryInsuranceInsurancePlanTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientSecondaryInsuranceInsurancePlanTypeEnum: %v", v)
 	}
 }
 
@@ -2953,12 +3033,16 @@ const (
 	PatientSecondaryInsurancePatientRelationshipToSubscriberEnumG8          PatientSecondaryInsurancePatientRelationshipToSubscriberEnum = "G8"
 )
 
+func (e PatientSecondaryInsurancePatientRelationshipToSubscriberEnum) ToPointer() *PatientSecondaryInsurancePatientRelationshipToSubscriberEnum {
+	return &e
+}
+
 func (e *PatientSecondaryInsurancePatientRelationshipToSubscriberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "01":
@@ -3008,10 +3092,10 @@ func (e *PatientSecondaryInsurancePatientRelationshipToSubscriberEnum) Unmarshal
 	case "76":
 		fallthrough
 	case "G8":
-		*e = PatientSecondaryInsurancePatientRelationshipToSubscriberEnum(s)
+		*e = PatientSecondaryInsurancePatientRelationshipToSubscriberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientSecondaryInsurancePatientRelationshipToSubscriberEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientSecondaryInsurancePatientRelationshipToSubscriberEnum: %v", v)
 	}
 }
 
@@ -3273,12 +3357,16 @@ const (
 	PatientSecondaryInsuranceSubscriberCountryEnumZw      PatientSecondaryInsuranceSubscriberCountryEnum = "ZW"
 )
 
+func (e PatientSecondaryInsuranceSubscriberCountryEnum) ToPointer() *PatientSecondaryInsuranceSubscriberCountryEnum {
+	return &e
+}
+
 func (e *PatientSecondaryInsuranceSubscriberCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "AF":
@@ -3782,10 +3870,10 @@ func (e *PatientSecondaryInsuranceSubscriberCountryEnum) UnmarshalJSON(data []by
 	case "ZM":
 		fallthrough
 	case "ZW":
-		*e = PatientSecondaryInsuranceSubscriberCountryEnum(s)
+		*e = PatientSecondaryInsuranceSubscriberCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientSecondaryInsuranceSubscriberCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientSecondaryInsuranceSubscriberCountryEnum: %v", v)
 	}
 }
 
@@ -3801,12 +3889,16 @@ const (
 	PatientSecondaryInsuranceSubscriberGenderEnumAsku    PatientSecondaryInsuranceSubscriberGenderEnum = "ASKU"
 )
 
+func (e PatientSecondaryInsuranceSubscriberGenderEnum) ToPointer() *PatientSecondaryInsuranceSubscriberGenderEnum {
+	return &e
+}
+
 func (e *PatientSecondaryInsuranceSubscriberGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Male":
@@ -3818,10 +3910,10 @@ func (e *PatientSecondaryInsuranceSubscriberGenderEnum) UnmarshalJSON(data []byt
 	case "UNK":
 		fallthrough
 	case "ASKU":
-		*e = PatientSecondaryInsuranceSubscriberGenderEnum(s)
+		*e = PatientSecondaryInsuranceSubscriberGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientSecondaryInsuranceSubscriberGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientSecondaryInsuranceSubscriberGenderEnum: %v", v)
 	}
 }
 
@@ -3890,12 +3982,16 @@ const (
 	PatientSecondaryInsuranceSubscriberStateEnumWy PatientSecondaryInsuranceSubscriberStateEnum = "WY"
 )
 
+func (e PatientSecondaryInsuranceSubscriberStateEnum) ToPointer() *PatientSecondaryInsuranceSubscriberStateEnum {
+	return &e
+}
+
 func (e *PatientSecondaryInsuranceSubscriberStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL":
 		fallthrough
 	case "AK":
@@ -4013,10 +4109,10 @@ func (e *PatientSecondaryInsuranceSubscriberStateEnum) UnmarshalJSON(data []byte
 	case "WI":
 		fallthrough
 	case "WY":
-		*e = PatientSecondaryInsuranceSubscriberStateEnum(s)
+		*e = PatientSecondaryInsuranceSubscriberStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientSecondaryInsuranceSubscriberStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientSecondaryInsuranceSubscriberStateEnum: %v", v)
 	}
 }
 
@@ -4087,12 +4183,16 @@ const (
 	PatientTertiaryInsuranceInsurancePlanTypeEnumWc        PatientTertiaryInsuranceInsurancePlanTypeEnum = "WC"
 )
 
+func (e PatientTertiaryInsuranceInsurancePlanTypeEnum) ToPointer() *PatientTertiaryInsuranceInsurancePlanTypeEnum {
+	return &e
+}
+
 func (e *PatientTertiaryInsuranceInsurancePlanTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "AM":
@@ -4140,10 +4240,10 @@ func (e *PatientTertiaryInsuranceInsurancePlanTypeEnum) UnmarshalJSON(data []byt
 	case "VA":
 		fallthrough
 	case "WC":
-		*e = PatientTertiaryInsuranceInsurancePlanTypeEnum(s)
+		*e = PatientTertiaryInsuranceInsurancePlanTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientTertiaryInsuranceInsurancePlanTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientTertiaryInsuranceInsurancePlanTypeEnum: %v", v)
 	}
 }
 
@@ -4178,12 +4278,16 @@ const (
 	PatientTertiaryInsurancePatientRelationshipToSubscriberEnumG8          PatientTertiaryInsurancePatientRelationshipToSubscriberEnum = "G8"
 )
 
+func (e PatientTertiaryInsurancePatientRelationshipToSubscriberEnum) ToPointer() *PatientTertiaryInsurancePatientRelationshipToSubscriberEnum {
+	return &e
+}
+
 func (e *PatientTertiaryInsurancePatientRelationshipToSubscriberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "01":
@@ -4233,10 +4337,10 @@ func (e *PatientTertiaryInsurancePatientRelationshipToSubscriberEnum) UnmarshalJ
 	case "76":
 		fallthrough
 	case "G8":
-		*e = PatientTertiaryInsurancePatientRelationshipToSubscriberEnum(s)
+		*e = PatientTertiaryInsurancePatientRelationshipToSubscriberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientTertiaryInsurancePatientRelationshipToSubscriberEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientTertiaryInsurancePatientRelationshipToSubscriberEnum: %v", v)
 	}
 }
 
@@ -4498,12 +4602,16 @@ const (
 	PatientTertiaryInsuranceSubscriberCountryEnumZw      PatientTertiaryInsuranceSubscriberCountryEnum = "ZW"
 )
 
+func (e PatientTertiaryInsuranceSubscriberCountryEnum) ToPointer() *PatientTertiaryInsuranceSubscriberCountryEnum {
+	return &e
+}
+
 func (e *PatientTertiaryInsuranceSubscriberCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "AF":
@@ -5007,10 +5115,10 @@ func (e *PatientTertiaryInsuranceSubscriberCountryEnum) UnmarshalJSON(data []byt
 	case "ZM":
 		fallthrough
 	case "ZW":
-		*e = PatientTertiaryInsuranceSubscriberCountryEnum(s)
+		*e = PatientTertiaryInsuranceSubscriberCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientTertiaryInsuranceSubscriberCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientTertiaryInsuranceSubscriberCountryEnum: %v", v)
 	}
 }
 
@@ -5026,12 +5134,16 @@ const (
 	PatientTertiaryInsuranceSubscriberGenderEnumAsku    PatientTertiaryInsuranceSubscriberGenderEnum = "ASKU"
 )
 
+func (e PatientTertiaryInsuranceSubscriberGenderEnum) ToPointer() *PatientTertiaryInsuranceSubscriberGenderEnum {
+	return &e
+}
+
 func (e *PatientTertiaryInsuranceSubscriberGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Male":
@@ -5043,10 +5155,10 @@ func (e *PatientTertiaryInsuranceSubscriberGenderEnum) UnmarshalJSON(data []byte
 	case "UNK":
 		fallthrough
 	case "ASKU":
-		*e = PatientTertiaryInsuranceSubscriberGenderEnum(s)
+		*e = PatientTertiaryInsuranceSubscriberGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientTertiaryInsuranceSubscriberGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientTertiaryInsuranceSubscriberGenderEnum: %v", v)
 	}
 }
 
@@ -5115,12 +5227,16 @@ const (
 	PatientTertiaryInsuranceSubscriberStateEnumWy PatientTertiaryInsuranceSubscriberStateEnum = "WY"
 )
 
+func (e PatientTertiaryInsuranceSubscriberStateEnum) ToPointer() *PatientTertiaryInsuranceSubscriberStateEnum {
+	return &e
+}
+
 func (e *PatientTertiaryInsuranceSubscriberStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL":
 		fallthrough
 	case "AK":
@@ -5238,10 +5354,10 @@ func (e *PatientTertiaryInsuranceSubscriberStateEnum) UnmarshalJSON(data []byte)
 	case "WI":
 		fallthrough
 	case "WY":
-		*e = PatientTertiaryInsuranceSubscriberStateEnum(s)
+		*e = PatientTertiaryInsuranceSubscriberStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientTertiaryInsuranceSubscriberStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientTertiaryInsuranceSubscriberStateEnum: %v", v)
 	}
 }
 
@@ -5347,12 +5463,16 @@ const (
 	PatientWorkerCompInsuranceWorkersCompPayerStateEnumWy PatientWorkerCompInsuranceWorkersCompPayerStateEnum = "WY"
 )
 
+func (e PatientWorkerCompInsuranceWorkersCompPayerStateEnum) ToPointer() *PatientWorkerCompInsuranceWorkersCompPayerStateEnum {
+	return &e
+}
+
 func (e *PatientWorkerCompInsuranceWorkersCompPayerStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL":
 		fallthrough
 	case "AK":
@@ -5470,10 +5590,10 @@ func (e *PatientWorkerCompInsuranceWorkersCompPayerStateEnum) UnmarshalJSON(data
 	case "WI":
 		fallthrough
 	case "WY":
-		*e = PatientWorkerCompInsuranceWorkersCompPayerStateEnum(s)
+		*e = PatientWorkerCompInsuranceWorkersCompPayerStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientWorkerCompInsuranceWorkersCompPayerStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientWorkerCompInsuranceWorkersCompPayerStateEnum: %v", v)
 	}
 }
 
@@ -5541,12 +5661,16 @@ const (
 	PatientWorkerCompInsuranceWorkersCompStateOfOccurrenceEnumWy PatientWorkerCompInsuranceWorkersCompStateOfOccurrenceEnum = "WY"
 )
 
+func (e PatientWorkerCompInsuranceWorkersCompStateOfOccurrenceEnum) ToPointer() *PatientWorkerCompInsuranceWorkersCompStateOfOccurrenceEnum {
+	return &e
+}
+
 func (e *PatientWorkerCompInsuranceWorkersCompStateOfOccurrenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL":
 		fallthrough
 	case "AK":
@@ -5664,10 +5788,10 @@ func (e *PatientWorkerCompInsuranceWorkersCompStateOfOccurrenceEnum) UnmarshalJS
 	case "WI":
 		fallthrough
 	case "WY":
-		*e = PatientWorkerCompInsuranceWorkersCompStateOfOccurrenceEnum(s)
+		*e = PatientWorkerCompInsuranceWorkersCompStateOfOccurrenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientWorkerCompInsuranceWorkersCompStateOfOccurrenceEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientWorkerCompInsuranceWorkersCompStateOfOccurrenceEnum: %v", v)
 	}
 }
 

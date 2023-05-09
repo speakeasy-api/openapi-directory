@@ -15,20 +15,24 @@ const (
 	IncludeEnumNone IncludeEnum = "NONE"
 )
 
+func (e IncludeEnum) ToPointer() *IncludeEnum {
+	return &e
+}
+
 func (e *IncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "ANY":
 		fallthrough
 	case "NONE":
-		*e = IncludeEnum(s)
+		*e = IncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for IncludeEnum: %v", v)
 	}
 }

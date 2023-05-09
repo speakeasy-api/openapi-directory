@@ -18,12 +18,16 @@ const (
 	CustomEventErrorCodeEnumNotFound         CustomEventErrorCodeEnum = "NOT_FOUND"
 )
 
+func (e CustomEventErrorCodeEnum) ToPointer() *CustomEventErrorCodeEnum {
+	return &e
+}
+
 func (e *CustomEventErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "INVALID_ARGUMENT":
@@ -33,10 +37,10 @@ func (e *CustomEventErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "PERMISSION_DENIED":
 		fallthrough
 	case "NOT_FOUND":
-		*e = CustomEventErrorCodeEnum(s)
+		*e = CustomEventErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomEventErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomEventErrorCodeEnum: %v", v)
 	}
 }
 

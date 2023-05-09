@@ -16,17 +16,21 @@ const (
 	StartFleetXAmzTargetEnumPhotonAdminProxyServiceStartFleet StartFleetXAmzTargetEnum = "PhotonAdminProxyService.StartFleet"
 )
 
+func (e StartFleetXAmzTargetEnum) ToPointer() *StartFleetXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartFleetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.StartFleet":
-		*e = StartFleetXAmzTargetEnum(s)
+		*e = StartFleetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartFleetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartFleetXAmzTargetEnum: %v", v)
 	}
 }
 

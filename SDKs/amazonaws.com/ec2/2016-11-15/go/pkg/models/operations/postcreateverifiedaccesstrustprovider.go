@@ -15,17 +15,21 @@ const (
 	POSTCreateVerifiedAccessTrustProviderActionEnumCreateVerifiedAccessTrustProvider POSTCreateVerifiedAccessTrustProviderActionEnum = "CreateVerifiedAccessTrustProvider"
 )
 
+func (e POSTCreateVerifiedAccessTrustProviderActionEnum) ToPointer() *POSTCreateVerifiedAccessTrustProviderActionEnum {
+	return &e
+}
+
 func (e *POSTCreateVerifiedAccessTrustProviderActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateVerifiedAccessTrustProvider":
-		*e = POSTCreateVerifiedAccessTrustProviderActionEnum(s)
+		*e = POSTCreateVerifiedAccessTrustProviderActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateVerifiedAccessTrustProviderActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateVerifiedAccessTrustProviderActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateVerifiedAccessTrustProviderVersionEnumTwoThousandAndSixteen1115 POSTCreateVerifiedAccessTrustProviderVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateVerifiedAccessTrustProviderVersionEnum) ToPointer() *POSTCreateVerifiedAccessTrustProviderVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateVerifiedAccessTrustProviderVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateVerifiedAccessTrustProviderVersionEnum(s)
+		*e = POSTCreateVerifiedAccessTrustProviderVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateVerifiedAccessTrustProviderVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateVerifiedAccessTrustProviderVersionEnum: %v", v)
 	}
 }
 

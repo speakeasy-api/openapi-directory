@@ -15,17 +15,21 @@ const (
 	POSTDisableVpcClassicLinkDNSSupportActionEnumDisableVpcClassicLinkDNSSupport POSTDisableVpcClassicLinkDNSSupportActionEnum = "DisableVpcClassicLinkDnsSupport"
 )
 
+func (e POSTDisableVpcClassicLinkDNSSupportActionEnum) ToPointer() *POSTDisableVpcClassicLinkDNSSupportActionEnum {
+	return &e
+}
+
 func (e *POSTDisableVpcClassicLinkDNSSupportActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableVpcClassicLinkDnsSupport":
-		*e = POSTDisableVpcClassicLinkDNSSupportActionEnum(s)
+		*e = POSTDisableVpcClassicLinkDNSSupportActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableVpcClassicLinkDNSSupportActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableVpcClassicLinkDNSSupportActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisableVpcClassicLinkDNSSupportVersionEnumTwoThousandAndSixteen1115 POSTDisableVpcClassicLinkDNSSupportVersionEnum = "2016-11-15"
 )
 
+func (e POSTDisableVpcClassicLinkDNSSupportVersionEnum) ToPointer() *POSTDisableVpcClassicLinkDNSSupportVersionEnum {
+	return &e
+}
+
 func (e *POSTDisableVpcClassicLinkDNSSupportVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDisableVpcClassicLinkDNSSupportVersionEnum(s)
+		*e = POSTDisableVpcClassicLinkDNSSupportVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableVpcClassicLinkDNSSupportVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableVpcClassicLinkDNSSupportVersionEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newSubscriptions(defaultClient, securityClient HTTPClient, serverURL, langu
 // MirrorSubscriptionsDelete - Deletes a subscription.
 func (s *subscriptions) MirrorSubscriptionsDelete(ctx context.Context, request operations.MirrorSubscriptionsDeleteRequest, security operations.MirrorSubscriptionsDeleteSecurity) (*operations.MirrorSubscriptionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscriptions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -177,7 +180,10 @@ func (s *subscriptions) MirrorSubscriptionsList(ctx context.Context, request ope
 // MirrorSubscriptionsUpdate - Updates an existing subscription in place.
 func (s *subscriptions) MirrorSubscriptionsUpdate(ctx context.Context, request operations.MirrorSubscriptionsUpdateRequest, security operations.MirrorSubscriptionsUpdateSecurity) (*operations.MirrorSubscriptionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscriptions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscriptions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Subscription", "json")
 	if err != nil {

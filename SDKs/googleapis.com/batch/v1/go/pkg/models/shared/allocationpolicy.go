@@ -11,6 +11,8 @@ type AllocationPolicy struct {
 	Location *LocationPolicy   `json:"location,omitempty"`
 	// NetworkPolicy describes VM instance network configurations.
 	Network *NetworkPolicy `json:"network,omitempty"`
+	// PlacementPolicy describes a group placement policy for the VMs controlled by this AllocationPolicy.
+	Placement *PlacementPolicy `json:"placement,omitempty"`
 	// Carries information about a Google Cloud service account.
 	ServiceAccount *ServiceAccount `json:"serviceAccount,omitempty"`
 }

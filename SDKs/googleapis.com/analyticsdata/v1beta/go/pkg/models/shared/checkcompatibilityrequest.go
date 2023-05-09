@@ -16,21 +16,25 @@ const (
 	CheckCompatibilityRequestCompatibilityFilterEnumIncompatible             CheckCompatibilityRequestCompatibilityFilterEnum = "INCOMPATIBLE"
 )
 
+func (e CheckCompatibilityRequestCompatibilityFilterEnum) ToPointer() *CheckCompatibilityRequestCompatibilityFilterEnum {
+	return &e
+}
+
 func (e *CheckCompatibilityRequestCompatibilityFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPATIBILITY_UNSPECIFIED":
 		fallthrough
 	case "COMPATIBLE":
 		fallthrough
 	case "INCOMPATIBLE":
-		*e = CheckCompatibilityRequestCompatibilityFilterEnum(s)
+		*e = CheckCompatibilityRequestCompatibilityFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckCompatibilityRequestCompatibilityFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckCompatibilityRequestCompatibilityFilterEnum: %v", v)
 	}
 }
 

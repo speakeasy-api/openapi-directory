@@ -15,17 +15,21 @@ const (
 	GETUpdateApplicationVersionActionEnumUpdateApplicationVersion GETUpdateApplicationVersionActionEnum = "UpdateApplicationVersion"
 )
 
+func (e GETUpdateApplicationVersionActionEnum) ToPointer() *GETUpdateApplicationVersionActionEnum {
+	return &e
+}
+
 func (e *GETUpdateApplicationVersionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateApplicationVersion":
-		*e = GETUpdateApplicationVersionActionEnum(s)
+		*e = GETUpdateApplicationVersionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateApplicationVersionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateApplicationVersionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUpdateApplicationVersionVersionEnumTwoThousandAndTen1201 GETUpdateApplicationVersionVersionEnum = "2010-12-01"
 )
 
+func (e GETUpdateApplicationVersionVersionEnum) ToPointer() *GETUpdateApplicationVersionVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateApplicationVersionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETUpdateApplicationVersionVersionEnum(s)
+		*e = GETUpdateApplicationVersionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateApplicationVersionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateApplicationVersionVersionEnum: %v", v)
 	}
 }
 

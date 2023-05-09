@@ -91,12 +91,16 @@ const (
 	PropertyValueSourceEnumWorkflowContactDeleteAction PropertyValueSourceEnum = "WORKFLOW_CONTACT_DELETE_ACTION"
 )
 
+func (e PropertyValueSourceEnum) ToPointer() *PropertyValueSourceEnum {
+	return &e
+}
+
 func (e *PropertyValueSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORT":
 		fallthrough
 	case "API":
@@ -254,10 +258,10 @@ func (e *PropertyValueSourceEnum) UnmarshalJSON(data []byte) error {
 	case "CRM_UI_BULK_ACTION":
 		fallthrough
 	case "WORKFLOW_CONTACT_DELETE_ACTION":
-		*e = PropertyValueSourceEnum(s)
+		*e = PropertyValueSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyValueSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyValueSourceEnum: %v", v)
 	}
 }
 

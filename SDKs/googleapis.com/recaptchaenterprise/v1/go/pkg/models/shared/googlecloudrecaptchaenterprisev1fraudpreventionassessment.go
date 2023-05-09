@@ -4,6 +4,8 @@ package shared
 
 // GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment - Assessment for Fraud Prevention.
 type GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment struct {
+	// Information about behavioral trust of the transaction.
+	BehavioralTrustVerdict *GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentBehavioralTrustVerdict `json:"behavioralTrustVerdict,omitempty"`
 	// Information about card testing fraud, where an adversary is testing fraudulently obtained cards or brute forcing their details.
 	CardTestingVerdict *GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict `json:"cardTestingVerdict,omitempty"`
 	// Information about stolen instrument fraud, where the user is not the legitimate owner of the instrument being used for the purchase.

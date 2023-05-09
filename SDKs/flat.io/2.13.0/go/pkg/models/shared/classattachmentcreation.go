@@ -17,12 +17,16 @@ const (
 	ClassAttachmentCreationTypeEnumWorksheet   ClassAttachmentCreationTypeEnum = "worksheet"
 )
 
+func (e ClassAttachmentCreationTypeEnum) ToPointer() *ClassAttachmentCreationTypeEnum {
+	return &e
+}
+
 func (e *ClassAttachmentCreationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "flat":
 		fallthrough
 	case "link":
@@ -30,10 +34,10 @@ func (e *ClassAttachmentCreationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "googleDrive":
 		fallthrough
 	case "worksheet":
-		*e = ClassAttachmentCreationTypeEnum(s)
+		*e = ClassAttachmentCreationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassAttachmentCreationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassAttachmentCreationTypeEnum: %v", v)
 	}
 }
 

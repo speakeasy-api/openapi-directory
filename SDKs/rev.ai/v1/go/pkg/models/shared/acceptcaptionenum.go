@@ -15,18 +15,22 @@ const (
 	AcceptCaptionEnumTextVtt            AcceptCaptionEnum = "text/vtt"
 )
 
+func (e AcceptCaptionEnum) ToPointer() *AcceptCaptionEnum {
+	return &e
+}
+
 func (e *AcceptCaptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "application/x-subrip":
 		fallthrough
 	case "text/vtt":
-		*e = AcceptCaptionEnum(s)
+		*e = AcceptCaptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AcceptCaptionEnum: %s", s)
+		return fmt.Errorf("invalid value for AcceptCaptionEnum: %v", v)
 	}
 }

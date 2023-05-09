@@ -16,17 +16,21 @@ const (
 	SetTimeBasedAutoScalingXAmzTargetEnumOpsWorks20130218SetTimeBasedAutoScaling SetTimeBasedAutoScalingXAmzTargetEnum = "OpsWorks_20130218.SetTimeBasedAutoScaling"
 )
 
+func (e SetTimeBasedAutoScalingXAmzTargetEnum) ToPointer() *SetTimeBasedAutoScalingXAmzTargetEnum {
+	return &e
+}
+
 func (e *SetTimeBasedAutoScalingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.SetTimeBasedAutoScaling":
-		*e = SetTimeBasedAutoScalingXAmzTargetEnum(s)
+		*e = SetTimeBasedAutoScalingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetTimeBasedAutoScalingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SetTimeBasedAutoScalingXAmzTargetEnum: %v", v)
 	}
 }
 

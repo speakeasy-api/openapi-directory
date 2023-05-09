@@ -15,17 +15,21 @@ const (
 	GETRecordHandlerProgressActionEnumRecordHandlerProgress GETRecordHandlerProgressActionEnum = "RecordHandlerProgress"
 )
 
+func (e GETRecordHandlerProgressActionEnum) ToPointer() *GETRecordHandlerProgressActionEnum {
+	return &e
+}
+
 func (e *GETRecordHandlerProgressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RecordHandlerProgress":
-		*e = GETRecordHandlerProgressActionEnum(s)
+		*e = GETRecordHandlerProgressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRecordHandlerProgressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRecordHandlerProgressActionEnum: %v", v)
 	}
 }
 
@@ -39,12 +43,16 @@ const (
 	GETRecordHandlerProgressCurrentOperationStatusEnumFailed     GETRecordHandlerProgressCurrentOperationStatusEnum = "FAILED"
 )
 
+func (e GETRecordHandlerProgressCurrentOperationStatusEnum) ToPointer() *GETRecordHandlerProgressCurrentOperationStatusEnum {
+	return &e
+}
+
 func (e *GETRecordHandlerProgressCurrentOperationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "IN_PROGRESS":
@@ -52,10 +60,10 @@ func (e *GETRecordHandlerProgressCurrentOperationStatusEnum) UnmarshalJSON(data 
 	case "SUCCESS":
 		fallthrough
 	case "FAILED":
-		*e = GETRecordHandlerProgressCurrentOperationStatusEnum(s)
+		*e = GETRecordHandlerProgressCurrentOperationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRecordHandlerProgressCurrentOperationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRecordHandlerProgressCurrentOperationStatusEnum: %v", v)
 	}
 }
 
@@ -84,12 +92,16 @@ const (
 	GETRecordHandlerProgressErrorCodeEnumUnsupportedTarget        GETRecordHandlerProgressErrorCodeEnum = "UnsupportedTarget"
 )
 
+func (e GETRecordHandlerProgressErrorCodeEnum) ToPointer() *GETRecordHandlerProgressErrorCodeEnum {
+	return &e
+}
+
 func (e *GETRecordHandlerProgressErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NotUpdatable":
 		fallthrough
 	case "InvalidRequest":
@@ -127,10 +139,10 @@ func (e *GETRecordHandlerProgressErrorCodeEnum) UnmarshalJSON(data []byte) error
 	case "Unknown":
 		fallthrough
 	case "UnsupportedTarget":
-		*e = GETRecordHandlerProgressErrorCodeEnum(s)
+		*e = GETRecordHandlerProgressErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRecordHandlerProgressErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRecordHandlerProgressErrorCodeEnum: %v", v)
 	}
 }
 
@@ -144,12 +156,16 @@ const (
 	GETRecordHandlerProgressOperationStatusEnumFailed     GETRecordHandlerProgressOperationStatusEnum = "FAILED"
 )
 
+func (e GETRecordHandlerProgressOperationStatusEnum) ToPointer() *GETRecordHandlerProgressOperationStatusEnum {
+	return &e
+}
+
 func (e *GETRecordHandlerProgressOperationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "IN_PROGRESS":
@@ -157,10 +173,10 @@ func (e *GETRecordHandlerProgressOperationStatusEnum) UnmarshalJSON(data []byte)
 	case "SUCCESS":
 		fallthrough
 	case "FAILED":
-		*e = GETRecordHandlerProgressOperationStatusEnum(s)
+		*e = GETRecordHandlerProgressOperationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRecordHandlerProgressOperationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRecordHandlerProgressOperationStatusEnum: %v", v)
 	}
 }
 
@@ -171,17 +187,21 @@ const (
 	GETRecordHandlerProgressVersionEnumTwoThousandAndTen0515 GETRecordHandlerProgressVersionEnum = "2010-05-15"
 )
 
+func (e GETRecordHandlerProgressVersionEnum) ToPointer() *GETRecordHandlerProgressVersionEnum {
+	return &e
+}
+
 func (e *GETRecordHandlerProgressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETRecordHandlerProgressVersionEnum(s)
+		*e = GETRecordHandlerProgressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRecordHandlerProgressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRecordHandlerProgressVersionEnum: %v", v)
 	}
 }
 

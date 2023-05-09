@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,32 +18,30 @@ func main() {
         }),
     )
 
-    req := operations.GenerateDataSetRequest{
+    ctx := context.Background()
+    res, err := s.GenerateDataSet(ctx, operations.GenerateDataSetRequest{
         GenerateDataSetRequest: shared.GenerateDataSetRequest{
             CustomerDefinedValues: map[string]string{
                 "provident": "distinctio",
                 "quibusdam": "unde",
                 "nulla": "corrupti",
             },
-            DataSetPublicationDate: "2021-09-24T02:21:06.409Z",
-            DataSetType: "disbursed_amount_by_customer_geo",
+            DataSetPublicationDate: types.MustTimeFromString("2021-09-24T02:21:06.409Z"),
+            DataSetType: shared.DataSetTypeEnumDisbursedAmountByCustomerGeo,
             DestinationS3BucketName: "deserunt",
-            DestinationS3Prefix: "suscipit",
+            DestinationS3Prefix: sdk.String("suscipit"),
             RoleNameArn: "iure",
             SnsTopicArn: "magnam",
         },
-        XAmzAlgorithm: "debitis",
-        XAmzContentSha256: "ipsa",
-        XAmzCredential: "delectus",
-        XAmzDate: "tempora",
-        XAmzSecurityToken: "suscipit",
-        XAmzSignature: "molestiae",
-        XAmzSignedHeaders: "minus",
-        XAmzTarget: "MarketplaceCommerceAnalytics20150701.GenerateDataSet",
-    }
-
-    ctx := context.Background()
-    res, err := s.GenerateDataSet(ctx, req)
+        XAmzAlgorithm: sdk.String("debitis"),
+        XAmzContentSha256: sdk.String("ipsa"),
+        XAmzCredential: sdk.String("delectus"),
+        XAmzDate: sdk.String("tempora"),
+        XAmzSecurityToken: sdk.String("suscipit"),
+        XAmzSignature: sdk.String("molestiae"),
+        XAmzSignedHeaders: sdk.String("minus"),
+        XAmzTarget: operations.GenerateDataSetXAmzTargetEnumMarketplaceCommerceAnalytics20150701GenerateDataSet,
+    })
     if err != nil {
         log.Fatal(err)
     }

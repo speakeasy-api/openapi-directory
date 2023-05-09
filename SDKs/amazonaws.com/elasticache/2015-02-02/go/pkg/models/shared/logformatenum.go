@@ -14,18 +14,22 @@ const (
 	LogFormatEnumJSON LogFormatEnum = "json"
 )
 
+func (e LogFormatEnum) ToPointer() *LogFormatEnum {
+	return &e
+}
+
 func (e *LogFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "json":
-		*e = LogFormatEnum(s)
+		*e = LogFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LogFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LogFormatEnum: %v", v)
 	}
 }

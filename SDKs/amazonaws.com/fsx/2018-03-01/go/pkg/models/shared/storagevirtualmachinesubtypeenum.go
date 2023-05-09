@@ -16,12 +16,16 @@ const (
 	StorageVirtualMachineSubtypeEnumSyncSource      StorageVirtualMachineSubtypeEnum = "SYNC_SOURCE"
 )
 
+func (e StorageVirtualMachineSubtypeEnum) ToPointer() *StorageVirtualMachineSubtypeEnum {
+	return &e
+}
+
 func (e *StorageVirtualMachineSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "DP_DESTINATION":
@@ -29,9 +33,9 @@ func (e *StorageVirtualMachineSubtypeEnum) UnmarshalJSON(data []byte) error {
 	case "SYNC_DESTINATION":
 		fallthrough
 	case "SYNC_SOURCE":
-		*e = StorageVirtualMachineSubtypeEnum(s)
+		*e = StorageVirtualMachineSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageVirtualMachineSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageVirtualMachineSubtypeEnum: %v", v)
 	}
 }

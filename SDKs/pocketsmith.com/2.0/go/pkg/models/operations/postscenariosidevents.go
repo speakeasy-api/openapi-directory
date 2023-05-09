@@ -22,12 +22,16 @@ const (
 	PostScenariosIDEventsRequestBodyRepeatTypeEnumEachWeekday PostScenariosIDEventsRequestBodyRepeatTypeEnum = "each weekday"
 )
 
+func (e PostScenariosIDEventsRequestBodyRepeatTypeEnum) ToPointer() *PostScenariosIDEventsRequestBodyRepeatTypeEnum {
+	return &e
+}
+
 func (e *PostScenariosIDEventsRequestBodyRepeatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "once":
 		fallthrough
 	case "daily":
@@ -41,10 +45,10 @@ func (e *PostScenariosIDEventsRequestBodyRepeatTypeEnum) UnmarshalJSON(data []by
 	case "yearly":
 		fallthrough
 	case "each weekday":
-		*e = PostScenariosIDEventsRequestBodyRepeatTypeEnum(s)
+		*e = PostScenariosIDEventsRequestBodyRepeatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostScenariosIDEventsRequestBodyRepeatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostScenariosIDEventsRequestBodyRepeatTypeEnum: %v", v)
 	}
 }
 

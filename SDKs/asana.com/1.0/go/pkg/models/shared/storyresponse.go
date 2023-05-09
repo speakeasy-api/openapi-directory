@@ -40,12 +40,16 @@ const (
 	StoryResponseSourceEnumUnknown StoryResponseSourceEnum = "unknown"
 )
 
+func (e StoryResponseSourceEnum) ToPointer() *StoryResponseSourceEnum {
+	return &e
+}
+
 func (e *StoryResponseSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "web":
 		fallthrough
 	case "email":
@@ -55,10 +59,10 @@ func (e *StoryResponseSourceEnum) UnmarshalJSON(data []byte) error {
 	case "api":
 		fallthrough
 	case "unknown":
-		*e = StoryResponseSourceEnum(s)
+		*e = StoryResponseSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoryResponseSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for StoryResponseSourceEnum: %v", v)
 	}
 }
 
@@ -80,12 +84,16 @@ const (
 	StoryResponseStickerNameEnumPhoenixSpreadingLove StoryResponseStickerNameEnum = "phoenix_spreading_love"
 )
 
+func (e StoryResponseStickerNameEnum) ToPointer() *StoryResponseStickerNameEnum {
+	return &e
+}
+
 func (e *StoryResponseStickerNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "green_checkmark":
 		fallthrough
 	case "people_dancing":
@@ -109,10 +117,10 @@ func (e *StoryResponseStickerNameEnum) UnmarshalJSON(data []byte) error {
 	case "determined_climbers":
 		fallthrough
 	case "phoenix_spreading_love":
-		*e = StoryResponseStickerNameEnum(s)
+		*e = StoryResponseStickerNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoryResponseStickerNameEnum: %s", s)
+		return fmt.Errorf("invalid value for StoryResponseStickerNameEnum: %v", v)
 	}
 }
 
@@ -127,12 +135,16 @@ const (
 	StoryResponseTargetResourceSubtypeEnumApproval    StoryResponseTargetResourceSubtypeEnum = "approval"
 )
 
+func (e StoryResponseTargetResourceSubtypeEnum) ToPointer() *StoryResponseTargetResourceSubtypeEnum {
+	return &e
+}
+
 func (e *StoryResponseTargetResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default_task":
 		fallthrough
 	case "milestone":
@@ -140,10 +152,10 @@ func (e *StoryResponseTargetResourceSubtypeEnum) UnmarshalJSON(data []byte) erro
 	case "section":
 		fallthrough
 	case "approval":
-		*e = StoryResponseTargetResourceSubtypeEnum(s)
+		*e = StoryResponseTargetResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoryResponseTargetResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoryResponseTargetResourceSubtypeEnum: %v", v)
 	}
 }
 
@@ -167,19 +179,23 @@ const (
 	StoryResponseTypeEnumSystem  StoryResponseTypeEnum = "system"
 )
 
+func (e StoryResponseTypeEnum) ToPointer() *StoryResponseTypeEnum {
+	return &e
+}
+
 func (e *StoryResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "comment":
 		fallthrough
 	case "system":
-		*e = StoryResponseTypeEnum(s)
+		*e = StoryResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoryResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoryResponseTypeEnum: %v", v)
 	}
 }
 

@@ -2,31 +2,29 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.DeviceFeatures{
-        FtpBanner: "corrupti",
-        Hostname: "opulent-rabbit.org",
-        HTTPResponse: "unde",
-        HTTPSResponse: "nulla",
-        NicMac: "corrupti",
-        SnmpSysdescr: "illum",
-        SnmpSysoid: "vel",
-        TelnetBanner: "error",
-        UpnpResponse: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.Device.DetectDevice(ctx, req, operations.DetectDeviceSecurity{
+    res, err := s.Device.DetectDevice(ctx, shared.DeviceFeatures{
+        FtpBanner: sdk.String("corrupti"),
+        Hostname: sdk.String("opulent-rabbit.org"),
+        HTTPResponse: sdk.String("unde"),
+        HTTPSResponse: sdk.String("nulla"),
+        NicMac: sdk.String("corrupti"),
+        SnmpSysdescr: sdk.String("illum"),
+        SnmpSysoid: sdk.String("vel"),
+        TelnetBanner: sdk.String("error"),
+        UpnpResponse: sdk.String("deserunt"),
+    }, operations.DetectDeviceSecurity{
         APIKeyHeader: "YOUR_API_KEY_HERE",
     })
     if err != nil {

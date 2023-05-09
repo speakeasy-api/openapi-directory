@@ -15,20 +15,24 @@ const (
 	RecoveryOptionNameTypeEnumAdminOnly           RecoveryOptionNameTypeEnum = "admin_only"
 )
 
+func (e RecoveryOptionNameTypeEnum) ToPointer() *RecoveryOptionNameTypeEnum {
+	return &e
+}
+
 func (e *RecoveryOptionNameTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "verified_email":
 		fallthrough
 	case "verified_phone_number":
 		fallthrough
 	case "admin_only":
-		*e = RecoveryOptionNameTypeEnum(s)
+		*e = RecoveryOptionNameTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecoveryOptionNameTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RecoveryOptionNameTypeEnum: %v", v)
 	}
 }

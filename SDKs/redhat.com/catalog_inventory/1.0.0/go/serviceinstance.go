@@ -85,7 +85,10 @@ func (s *serviceInstance) ListServiceInstances(ctx context.Context, request oper
 // Returns a ServiceInstance object
 func (s *serviceInstance) ShowServiceInstance(ctx context.Context, request operations.ShowServiceInstanceRequest) (*operations.ShowServiceInstanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_instances/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_instances/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

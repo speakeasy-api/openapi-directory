@@ -15,17 +15,21 @@ const (
 	GETGETSerialConsoleAccessStatusActionEnumGetSerialConsoleAccessStatus GETGETSerialConsoleAccessStatusActionEnum = "GetSerialConsoleAccessStatus"
 )
 
+func (e GETGETSerialConsoleAccessStatusActionEnum) ToPointer() *GETGETSerialConsoleAccessStatusActionEnum {
+	return &e
+}
+
 func (e *GETGETSerialConsoleAccessStatusActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetSerialConsoleAccessStatus":
-		*e = GETGETSerialConsoleAccessStatusActionEnum(s)
+		*e = GETGETSerialConsoleAccessStatusActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETSerialConsoleAccessStatusActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETSerialConsoleAccessStatusActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETSerialConsoleAccessStatusVersionEnumTwoThousandAndSixteen1115 GETGETSerialConsoleAccessStatusVersionEnum = "2016-11-15"
 )
 
+func (e GETGETSerialConsoleAccessStatusVersionEnum) ToPointer() *GETGETSerialConsoleAccessStatusVersionEnum {
+	return &e
+}
+
 func (e *GETGETSerialConsoleAccessStatusVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETSerialConsoleAccessStatusVersionEnum(s)
+		*e = GETGETSerialConsoleAccessStatusVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETSerialConsoleAccessStatusVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETSerialConsoleAccessStatusVersionEnum: %v", v)
 	}
 }
 

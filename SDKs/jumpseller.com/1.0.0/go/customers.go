@@ -36,7 +36,10 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 // DeleteCustomersIDJSON - Delete an existing Customer.
 func (s *customers) DeleteCustomersIDJSON(ctx context.Context, request operations.DeleteCustomersIDJSONRequest) (*operations.DeleteCustomersIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -191,7 +194,10 @@ func (s *customers) GetCustomersCountJSON(ctx context.Context, request operation
 // GetCustomersEmailEmailJSON - Retrieve a single Customer by email.
 func (s *customers) GetCustomersEmailEmailJSON(ctx context.Context, request operations.GetCustomersEmailEmailJSONRequest) (*operations.GetCustomersEmailEmailJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/email/{email}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/email/{email}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -249,7 +255,10 @@ func (s *customers) GetCustomersEmailEmailJSON(ctx context.Context, request oper
 // GetCustomersIDJSON - Retrieve a single Customer by id.
 func (s *customers) GetCustomersIDJSON(ctx context.Context, request operations.GetCustomersIDJSONRequest) (*operations.GetCustomersIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -375,7 +384,10 @@ func (s *customers) PostCustomersJSON(ctx context.Context, request operations.Po
 // PutCustomersIDJSON - Update a new Customer.
 func (s *customers) PutCustomersIDJSON(ctx context.Context, request operations.PutCustomersIDJSONRequest) (*operations.PutCustomersIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerWithPasswordNoID", "json")
 	if err != nil {

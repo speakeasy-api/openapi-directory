@@ -4,7 +4,7 @@ package shared
 
 // File - File information about the related binary/library used by an executable, or the script used by a script interpreter
 type File struct {
-	// Prefix of the file contents as a JSON encoded string. (Currently only populated for Malicious Script Executed findings.)
+	// Prefix of the file contents as a JSON-encoded string.
 	Contents *string `json:"contents,omitempty"`
 	// The length in bytes of the file prefix that was hashed. If hashed_size == size, any hashes reported represent the entire file.
 	HashedSize *string `json:"hashedSize,omitempty"`

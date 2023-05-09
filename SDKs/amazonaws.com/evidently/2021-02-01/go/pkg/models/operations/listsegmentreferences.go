@@ -17,19 +17,23 @@ const (
 	ListSegmentReferencesTypeEnumLaunch     ListSegmentReferencesTypeEnum = "LAUNCH"
 )
 
+func (e ListSegmentReferencesTypeEnum) ToPointer() *ListSegmentReferencesTypeEnum {
+	return &e
+}
+
 func (e *ListSegmentReferencesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXPERIMENT":
 		fallthrough
 	case "LAUNCH":
-		*e = ListSegmentReferencesTypeEnum(s)
+		*e = ListSegmentReferencesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSegmentReferencesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSegmentReferencesTypeEnum: %v", v)
 	}
 }
 

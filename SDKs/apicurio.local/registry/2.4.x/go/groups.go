@@ -114,7 +114,10 @@ func (s *groups) CreateGroup(ctx context.Context, request shared.CreateGroupMeta
 // * The group does not exist (HTTP error `404`)
 func (s *groups) DeleteGroupByID(ctx context.Context, request operations.DeleteGroupByIDRequest) (*operations.DeleteGroupByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -167,7 +170,10 @@ func (s *groups) DeleteGroupByID(ctx context.Context, request operations.DeleteG
 // * A server error occurred (HTTP error `500`)
 func (s *groups) GetGroupByID(ctx context.Context, request operations.GetGroupByIDRequest) (*operations.GetGroupByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

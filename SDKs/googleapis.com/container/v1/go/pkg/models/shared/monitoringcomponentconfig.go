@@ -17,12 +17,16 @@ const (
 	MonitoringComponentConfigEnableComponentsEnumControllerManager    MonitoringComponentConfigEnableComponentsEnum = "CONTROLLER_MANAGER"
 )
 
+func (e MonitoringComponentConfigEnableComponentsEnum) ToPointer() *MonitoringComponentConfigEnableComponentsEnum {
+	return &e
+}
+
 func (e *MonitoringComponentConfigEnableComponentsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPONENT_UNSPECIFIED":
 		fallthrough
 	case "SYSTEM_COMPONENTS":
@@ -32,10 +36,10 @@ func (e *MonitoringComponentConfigEnableComponentsEnum) UnmarshalJSON(data []byt
 	case "SCHEDULER":
 		fallthrough
 	case "CONTROLLER_MANAGER":
-		*e = MonitoringComponentConfigEnableComponentsEnum(s)
+		*e = MonitoringComponentConfigEnableComponentsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringComponentConfigEnableComponentsEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringComponentConfigEnableComponentsEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTModifyAuthenticationProfileActionEnumModifyAuthenticationProfile POSTModifyAuthenticationProfileActionEnum = "ModifyAuthenticationProfile"
 )
 
+func (e POSTModifyAuthenticationProfileActionEnum) ToPointer() *POSTModifyAuthenticationProfileActionEnum {
+	return &e
+}
+
 func (e *POSTModifyAuthenticationProfileActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyAuthenticationProfile":
-		*e = POSTModifyAuthenticationProfileActionEnum(s)
+		*e = POSTModifyAuthenticationProfileActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyAuthenticationProfileActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyAuthenticationProfileActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyAuthenticationProfileVersionEnumTwoThousandAndTwelve1201 POSTModifyAuthenticationProfileVersionEnum = "2012-12-01"
 )
 
+func (e POSTModifyAuthenticationProfileVersionEnum) ToPointer() *POSTModifyAuthenticationProfileVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyAuthenticationProfileVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTModifyAuthenticationProfileVersionEnum(s)
+		*e = POSTModifyAuthenticationProfileVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyAuthenticationProfileVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyAuthenticationProfileVersionEnum: %v", v)
 	}
 }
 

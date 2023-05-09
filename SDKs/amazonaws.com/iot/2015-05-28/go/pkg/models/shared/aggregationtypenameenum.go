@@ -15,20 +15,24 @@ const (
 	AggregationTypeNameEnumCardinality AggregationTypeNameEnum = "Cardinality"
 )
 
+func (e AggregationTypeNameEnum) ToPointer() *AggregationTypeNameEnum {
+	return &e
+}
+
 func (e *AggregationTypeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Statistics":
 		fallthrough
 	case "Percentiles":
 		fallthrough
 	case "Cardinality":
-		*e = AggregationTypeNameEnum(s)
+		*e = AggregationTypeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregationTypeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregationTypeNameEnum: %v", v)
 	}
 }

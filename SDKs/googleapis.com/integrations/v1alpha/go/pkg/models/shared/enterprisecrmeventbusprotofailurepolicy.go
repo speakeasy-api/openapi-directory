@@ -21,12 +21,16 @@ const (
 	EnterpriseCrmEventbusProtoFailurePolicyRetryStrategyEnumRestartWorkflowWithBackoff EnterpriseCrmEventbusProtoFailurePolicyRetryStrategyEnum = "RESTART_WORKFLOW_WITH_BACKOFF"
 )
 
+func (e EnterpriseCrmEventbusProtoFailurePolicyRetryStrategyEnum) ToPointer() *EnterpriseCrmEventbusProtoFailurePolicyRetryStrategyEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoFailurePolicyRetryStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "IGNORE":
@@ -42,10 +46,10 @@ func (e *EnterpriseCrmEventbusProtoFailurePolicyRetryStrategyEnum) UnmarshalJSON
 	case "EXPONENTIAL_BACKOFF":
 		fallthrough
 	case "RESTART_WORKFLOW_WITH_BACKOFF":
-		*e = EnterpriseCrmEventbusProtoFailurePolicyRetryStrategyEnum(s)
+		*e = EnterpriseCrmEventbusProtoFailurePolicyRetryStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoFailurePolicyRetryStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoFailurePolicyRetryStrategyEnum: %v", v)
 	}
 }
 

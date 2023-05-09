@@ -16,17 +16,21 @@ const (
 	StopQueryExecutionXAmzTargetEnumAmazonAthenaStopQueryExecution StopQueryExecutionXAmzTargetEnum = "AmazonAthena.StopQueryExecution"
 )
 
+func (e StopQueryExecutionXAmzTargetEnum) ToPointer() *StopQueryExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopQueryExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.StopQueryExecution":
-		*e = StopQueryExecutionXAmzTargetEnum(s)
+		*e = StopQueryExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopQueryExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopQueryExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

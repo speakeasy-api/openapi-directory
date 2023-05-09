@@ -16,17 +16,21 @@ const (
 	CancelServicePipelineDeploymentXAmzTargetEnumAwsProton20200720CancelServicePipelineDeployment CancelServicePipelineDeploymentXAmzTargetEnum = "AwsProton20200720.CancelServicePipelineDeployment"
 )
 
+func (e CancelServicePipelineDeploymentXAmzTargetEnum) ToPointer() *CancelServicePipelineDeploymentXAmzTargetEnum {
+	return &e
+}
+
 func (e *CancelServicePipelineDeploymentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.CancelServicePipelineDeployment":
-		*e = CancelServicePipelineDeploymentXAmzTargetEnum(s)
+		*e = CancelServicePipelineDeploymentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelServicePipelineDeploymentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelServicePipelineDeploymentXAmzTargetEnum: %v", v)
 	}
 }
 

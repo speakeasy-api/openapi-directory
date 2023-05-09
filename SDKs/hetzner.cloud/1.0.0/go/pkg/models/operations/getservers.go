@@ -23,12 +23,16 @@ const (
 	GetServersSortEnumCreatedDesc GetServersSortEnum = "created:desc"
 )
 
+func (e GetServersSortEnum) ToPointer() *GetServersSortEnum {
+	return &e
+}
+
 func (e *GetServersSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -46,10 +50,10 @@ func (e *GetServersSortEnum) UnmarshalJSON(data []byte) error {
 	case "created:asc":
 		fallthrough
 	case "created:desc":
-		*e = GetServersSortEnum(s)
+		*e = GetServersSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServersSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServersSortEnum: %v", v)
 	}
 }
 
@@ -68,12 +72,16 @@ const (
 	GetServersStatusEnumUnknown      GetServersStatusEnum = "unknown"
 )
 
+func (e GetServersStatusEnum) ToPointer() *GetServersStatusEnum {
+	return &e
+}
+
 func (e *GetServersStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "initializing":
 		fallthrough
 	case "starting":
@@ -91,10 +99,10 @@ func (e *GetServersStatusEnum) UnmarshalJSON(data []byte) error {
 	case "migrating":
 		fallthrough
 	case "unknown":
-		*e = GetServersStatusEnum(s)
+		*e = GetServersStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServersStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServersStatusEnum: %v", v)
 	}
 }
 
@@ -189,12 +197,16 @@ const (
 	GetServers200ApplicationJSONServersImageOsFlavorEnumUnknown GetServers200ApplicationJSONServersImageOsFlavorEnum = "unknown"
 )
 
+func (e GetServers200ApplicationJSONServersImageOsFlavorEnum) ToPointer() *GetServers200ApplicationJSONServersImageOsFlavorEnum {
+	return &e
+}
+
 func (e *GetServers200ApplicationJSONServersImageOsFlavorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ubuntu":
 		fallthrough
 	case "centos":
@@ -204,10 +216,10 @@ func (e *GetServers200ApplicationJSONServersImageOsFlavorEnum) UnmarshalJSON(dat
 	case "fedora":
 		fallthrough
 	case "unknown":
-		*e = GetServers200ApplicationJSONServersImageOsFlavorEnum(s)
+		*e = GetServers200ApplicationJSONServersImageOsFlavorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersImageOsFlavorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersImageOsFlavorEnum: %v", v)
 	}
 }
 
@@ -226,21 +238,25 @@ const (
 	GetServers200ApplicationJSONServersImageStatusEnumUnavailable GetServers200ApplicationJSONServersImageStatusEnum = "unavailable"
 )
 
+func (e GetServers200ApplicationJSONServersImageStatusEnum) ToPointer() *GetServers200ApplicationJSONServersImageStatusEnum {
+	return &e
+}
+
 func (e *GetServers200ApplicationJSONServersImageStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "creating":
 		fallthrough
 	case "unavailable":
-		*e = GetServers200ApplicationJSONServersImageStatusEnum(s)
+		*e = GetServers200ApplicationJSONServersImageStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersImageStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersImageStatusEnum: %v", v)
 	}
 }
 
@@ -255,12 +271,16 @@ const (
 	GetServers200ApplicationJSONServersImageTypeEnumTemporary GetServers200ApplicationJSONServersImageTypeEnum = "temporary"
 )
 
+func (e GetServers200ApplicationJSONServersImageTypeEnum) ToPointer() *GetServers200ApplicationJSONServersImageTypeEnum {
+	return &e
+}
+
 func (e *GetServers200ApplicationJSONServersImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "system":
 		fallthrough
 	case "app":
@@ -270,10 +290,10 @@ func (e *GetServers200ApplicationJSONServersImageTypeEnum) UnmarshalJSON(data []
 	case "backup":
 		fallthrough
 	case "temporary":
-		*e = GetServers200ApplicationJSONServersImageTypeEnum(s)
+		*e = GetServers200ApplicationJSONServersImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersImageTypeEnum: %v", v)
 	}
 }
 
@@ -314,6 +334,34 @@ type GetServers200ApplicationJSONServersImage struct {
 	Type GetServers200ApplicationJSONServersImageTypeEnum `json:"type"`
 }
 
+// GetServers200ApplicationJSONServersIsoArchitectureEnum - Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+type GetServers200ApplicationJSONServersIsoArchitectureEnum string
+
+const (
+	GetServers200ApplicationJSONServersIsoArchitectureEnumX86 GetServers200ApplicationJSONServersIsoArchitectureEnum = "x86"
+	GetServers200ApplicationJSONServersIsoArchitectureEnumArm GetServers200ApplicationJSONServersIsoArchitectureEnum = "arm"
+)
+
+func (e GetServers200ApplicationJSONServersIsoArchitectureEnum) ToPointer() *GetServers200ApplicationJSONServersIsoArchitectureEnum {
+	return &e
+}
+
+func (e *GetServers200ApplicationJSONServersIsoArchitectureEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "x86":
+		fallthrough
+	case "arm":
+		*e = GetServers200ApplicationJSONServersIsoArchitectureEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersIsoArchitectureEnum: %v", v)
+	}
+}
+
 // GetServers200ApplicationJSONServersIsoTypeEnum - Type of the ISO
 type GetServers200ApplicationJSONServersIsoTypeEnum string
 
@@ -322,24 +370,30 @@ const (
 	GetServers200ApplicationJSONServersIsoTypeEnumPrivate GetServers200ApplicationJSONServersIsoTypeEnum = "private"
 )
 
+func (e GetServers200ApplicationJSONServersIsoTypeEnum) ToPointer() *GetServers200ApplicationJSONServersIsoTypeEnum {
+	return &e
+}
+
 func (e *GetServers200ApplicationJSONServersIsoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = GetServers200ApplicationJSONServersIsoTypeEnum(s)
+		*e = GetServers200ApplicationJSONServersIsoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersIsoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersIsoTypeEnum: %v", v)
 	}
 }
 
 // GetServers200ApplicationJSONServersIso - ISO Image that is attached to this Server. Null if no ISO is attached.
 type GetServers200ApplicationJSONServersIso struct {
+	// Type of cpu architecture this iso is compatible with. Null indicates no restriction on the architecture (wildcard).
+	Architecture GetServers200ApplicationJSONServersIsoArchitectureEnum `json:"architecture"`
 	// ISO 8601 timestamp of deprecation, null if ISO is still available. After the deprecation time it will no longer be possible to attach the ISO to Servers.
 	Deprecated string `json:"deprecated"`
 	// Description of the ISO
@@ -359,17 +413,21 @@ const (
 	GetServers200ApplicationJSONServersPlacementGroupNullableTypeEnumSpread GetServers200ApplicationJSONServersPlacementGroupNullableTypeEnum = "spread"
 )
 
+func (e GetServers200ApplicationJSONServersPlacementGroupNullableTypeEnum) ToPointer() *GetServers200ApplicationJSONServersPlacementGroupNullableTypeEnum {
+	return &e
+}
+
 func (e *GetServers200ApplicationJSONServersPlacementGroupNullableTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spread":
-		*e = GetServers200ApplicationJSONServersPlacementGroupNullableTypeEnum(s)
+		*e = GetServers200ApplicationJSONServersPlacementGroupNullableTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersPlacementGroupNullableTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersPlacementGroupNullableTypeEnum: %v", v)
 	}
 }
 
@@ -411,19 +469,23 @@ const (
 	GetServers200ApplicationJSONServersPublicNetServerPublicNetFirewallStatusEnumPending GetServers200ApplicationJSONServersPublicNetServerPublicNetFirewallStatusEnum = "pending"
 )
 
+func (e GetServers200ApplicationJSONServersPublicNetServerPublicNetFirewallStatusEnum) ToPointer() *GetServers200ApplicationJSONServersPublicNetServerPublicNetFirewallStatusEnum {
+	return &e
+}
+
 func (e *GetServers200ApplicationJSONServersPublicNetServerPublicNetFirewallStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "applied":
 		fallthrough
 	case "pending":
-		*e = GetServers200ApplicationJSONServersPublicNetServerPublicNetFirewallStatusEnum(s)
+		*e = GetServers200ApplicationJSONServersPublicNetServerPublicNetFirewallStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersPublicNetServerPublicNetFirewallStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersPublicNetServerPublicNetFirewallStatusEnum: %v", v)
 	}
 }
 
@@ -485,19 +547,23 @@ const (
 	GetServers200ApplicationJSONServersServerTypeCPUTypeEnumDedicated GetServers200ApplicationJSONServersServerTypeCPUTypeEnum = "dedicated"
 )
 
+func (e GetServers200ApplicationJSONServersServerTypeCPUTypeEnum) ToPointer() *GetServers200ApplicationJSONServersServerTypeCPUTypeEnum {
+	return &e
+}
+
 func (e *GetServers200ApplicationJSONServersServerTypeCPUTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shared":
 		fallthrough
 	case "dedicated":
-		*e = GetServers200ApplicationJSONServersServerTypeCPUTypeEnum(s)
+		*e = GetServers200ApplicationJSONServersServerTypeCPUTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersServerTypeCPUTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersServerTypeCPUTypeEnum: %v", v)
 	}
 }
 
@@ -534,19 +600,23 @@ const (
 	GetServers200ApplicationJSONServersServerTypeStorageTypeEnumNetwork GetServers200ApplicationJSONServersServerTypeStorageTypeEnum = "network"
 )
 
+func (e GetServers200ApplicationJSONServersServerTypeStorageTypeEnum) ToPointer() *GetServers200ApplicationJSONServersServerTypeStorageTypeEnum {
+	return &e
+}
+
 func (e *GetServers200ApplicationJSONServersServerTypeStorageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "local":
 		fallthrough
 	case "network":
-		*e = GetServers200ApplicationJSONServersServerTypeStorageTypeEnum(s)
+		*e = GetServers200ApplicationJSONServersServerTypeStorageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersServerTypeStorageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersServerTypeStorageTypeEnum: %v", v)
 	}
 }
 
@@ -589,12 +659,16 @@ const (
 	GetServers200ApplicationJSONServersStatusEnumUnknown      GetServers200ApplicationJSONServersStatusEnum = "unknown"
 )
 
+func (e GetServers200ApplicationJSONServersStatusEnum) ToPointer() *GetServers200ApplicationJSONServersStatusEnum {
+	return &e
+}
+
 func (e *GetServers200ApplicationJSONServersStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "initializing":
@@ -612,10 +686,10 @@ func (e *GetServers200ApplicationJSONServersStatusEnum) UnmarshalJSON(data []byt
 	case "rebuilding":
 		fallthrough
 	case "unknown":
-		*e = GetServers200ApplicationJSONServersStatusEnum(s)
+		*e = GetServers200ApplicationJSONServersStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServers200ApplicationJSONServersStatusEnum: %v", v)
 	}
 }
 

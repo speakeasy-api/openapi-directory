@@ -16,21 +16,25 @@ const (
 	BiographyContentTypeEnumTextHTML               BiographyContentTypeEnum = "TEXT_HTML"
 )
 
+func (e BiographyContentTypeEnum) ToPointer() *BiographyContentTypeEnum {
+	return &e
+}
+
 func (e *BiographyContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TEXT_PLAIN":
 		fallthrough
 	case "TEXT_HTML":
-		*e = BiographyContentTypeEnum(s)
+		*e = BiographyContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BiographyContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BiographyContentTypeEnum: %v", v)
 	}
 }
 

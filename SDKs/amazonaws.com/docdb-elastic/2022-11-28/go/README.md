@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/docdb-elast
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,15 +27,16 @@ func main() {
         }),
     )
 
-    req := operations.CreateClusterRequest{
+    ctx := context.Background()
+    res, err := s.CreateCluster(ctx, operations.CreateClusterRequest{
         RequestBody: operations.CreateClusterRequestBody{
             AdminUserName: "corrupti",
             AdminUserPassword: "provident",
-            AuthType: "SECRET_ARN",
-            ClientToken: "quibusdam",
+            AuthType: operations.CreateClusterRequestBodyAuthTypeEnumSecretArn,
+            ClientToken: sdk.String("quibusdam"),
             ClusterName: "unde",
-            KmsKeyID: "nulla",
-            PreferredMaintenanceWindow: "corrupti",
+            KmsKeyID: sdk.String("nulla"),
+            PreferredMaintenanceWindow: sdk.String("corrupti"),
             ShardCapacity: 847252,
             ShardCount: 423655,
             SubnetIds: []string{
@@ -53,17 +53,14 @@ func main() {
                 "minus",
             },
         },
-        XAmzAlgorithm: "placeat",
-        XAmzContentSha256: "voluptatum",
-        XAmzCredential: "iusto",
-        XAmzDate: "excepturi",
-        XAmzSecurityToken: "nisi",
-        XAmzSignature: "recusandae",
-        XAmzSignedHeaders: "temporibus",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateCluster(ctx, req)
+        XAmzAlgorithm: sdk.String("placeat"),
+        XAmzContentSha256: sdk.String("voluptatum"),
+        XAmzCredential: sdk.String("iusto"),
+        XAmzDate: sdk.String("excepturi"),
+        XAmzSecurityToken: sdk.String("nisi"),
+        XAmzSignature: sdk.String("recusandae"),
+        XAmzSignedHeaders: sdk.String("temporibus"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -78,21 +75,21 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateCluster` - Creates a new Elastic DocumentDB cluster and returns its Cluster structure.
-* `CreateClusterSnapshot` - Creates a snapshot of a cluster.
-* `DeleteCluster` - Delete a Elastic DocumentDB cluster.
-* `DeleteClusterSnapshot` - Delete a Elastic DocumentDB snapshot.
-* `GetCluster` - Returns information about a specific Elastic DocumentDB cluster.
-* `GetClusterSnapshot` - Returns information about a specific Elastic DocumentDB snapshot
-* `ListClusterSnapshots` - Returns information about Elastic DocumentDB snapshots for a specified cluster.
-* `ListClusters` - Returns information about provisioned Elastic DocumentDB clusters.
-* `ListTagsForResource` - Lists all tags on a Elastic DocumentDB resource
-* `RestoreClusterFromSnapshot` - Restores a Elastic DocumentDB cluster from a snapshot.
-* `TagResource` - Adds metadata tags to a Elastic DocumentDB resource
-* `UntagResource` - Removes metadata tags to a Elastic DocumentDB resource
-* `UpdateCluster` - Modifies a Elastic DocumentDB cluster. This includes updating admin-username/password, upgrading API version setting up a backup window and maintenance window
+* [CreateCluster](docs/sdk/README.md#createcluster) - Creates a new Elastic DocumentDB cluster and returns its Cluster structure.
+* [CreateClusterSnapshot](docs/sdk/README.md#createclustersnapshot) - Creates a snapshot of a cluster.
+* [DeleteCluster](docs/sdk/README.md#deletecluster) - Delete a Elastic DocumentDB cluster.
+* [DeleteClusterSnapshot](docs/sdk/README.md#deleteclustersnapshot) - Delete a Elastic DocumentDB snapshot.
+* [GetCluster](docs/sdk/README.md#getcluster) - Returns information about a specific Elastic DocumentDB cluster.
+* [GetClusterSnapshot](docs/sdk/README.md#getclustersnapshot) - Returns information about a specific Elastic DocumentDB snapshot
+* [ListClusterSnapshots](docs/sdk/README.md#listclustersnapshots) - Returns information about Elastic DocumentDB snapshots for a specified cluster.
+* [ListClusters](docs/sdk/README.md#listclusters) - Returns information about provisioned Elastic DocumentDB clusters.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists all tags on a Elastic DocumentDB resource
+* [RestoreClusterFromSnapshot](docs/sdk/README.md#restoreclusterfromsnapshot) - Restores a Elastic DocumentDB cluster from a snapshot.
+* [TagResource](docs/sdk/README.md#tagresource) - Adds metadata tags to a Elastic DocumentDB resource
+* [UntagResource](docs/sdk/README.md#untagresource) - Removes metadata tags to a Elastic DocumentDB resource
+* [UpdateCluster](docs/sdk/README.md#updatecluster) - Modifies a Elastic DocumentDB cluster. This includes updating admin-username/password, upgrading API version setting up a backup window and maintenance window
 <!-- End SDK Available Operations -->
 
 ### Maturity

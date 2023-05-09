@@ -14,18 +14,22 @@ const (
 	MdnResponseEnumNone MdnResponseEnum = "NONE"
 )
 
+func (e MdnResponseEnum) ToPointer() *MdnResponseEnum {
+	return &e
+}
+
 func (e *MdnResponseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYNC":
 		fallthrough
 	case "NONE":
-		*e = MdnResponseEnum(s)
+		*e = MdnResponseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MdnResponseEnum: %s", s)
+		return fmt.Errorf("invalid value for MdnResponseEnum: %v", v)
 	}
 }

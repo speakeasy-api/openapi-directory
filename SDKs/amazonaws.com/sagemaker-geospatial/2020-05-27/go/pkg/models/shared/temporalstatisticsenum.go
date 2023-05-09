@@ -15,20 +15,24 @@ const (
 	TemporalStatisticsEnumStandardDeviation TemporalStatisticsEnum = "STANDARD_DEVIATION"
 )
 
+func (e TemporalStatisticsEnum) ToPointer() *TemporalStatisticsEnum {
+	return &e
+}
+
 func (e *TemporalStatisticsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEAN":
 		fallthrough
 	case "MEDIAN":
 		fallthrough
 	case "STANDARD_DEVIATION":
-		*e = TemporalStatisticsEnum(s)
+		*e = TemporalStatisticsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemporalStatisticsEnum: %s", s)
+		return fmt.Errorf("invalid value for TemporalStatisticsEnum: %v", v)
 	}
 }

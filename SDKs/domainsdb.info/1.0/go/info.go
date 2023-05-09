@@ -80,7 +80,10 @@ func (s *info) GetInfoTld(ctx context.Context) (*operations.GetInfoTldResponse, 
 // GetInfoTldZone - Returns statistics for specific zone
 func (s *info) GetInfoTldZone(ctx context.Context, request operations.GetInfoTldZoneRequest) (*operations.GetInfoTldZoneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/info/tld/{zone}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/info/tld/{zone}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -125,6 +128,7 @@ func (s *info) GetInfoTldZone(ctx context.Context, request operations.GetInfoTld
 
 	return res, nil
 }
+
 func (s *info) GetAPIInfoItem(ctx context.Context, request operations.GetAPIInfoItemRequest) (*operations.GetAPIInfoItemResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/info/api"
@@ -223,7 +227,10 @@ func (s *info) GetStatisticsCollection(ctx context.Context, request operations.G
 // GetStatisticsItem - Returns statistics for specific zone
 func (s *info) GetStatisticsItem(ctx context.Context, request operations.GetStatisticsItemRequest) (*operations.GetStatisticsItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/info/stat/{zone}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/info/stat/{zone}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

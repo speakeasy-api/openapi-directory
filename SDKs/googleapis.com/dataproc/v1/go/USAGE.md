@@ -2,40 +2,41 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DataprocProjectsLocationsBatchesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.DataprocProjectsLocationsBatchesCreate(ctx, operations.DataprocProjectsLocationsBatchesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         BatchInput: &shared.BatchInput{
             EnvironmentConfig: &shared.EnvironmentConfig{
                 ExecutionConfig: &shared.ExecutionConfig{
-                    IdleTTL: "provident",
-                    KmsKey: "distinctio",
+                    IdleTTL: sdk.String("provident"),
+                    KmsKey: sdk.String("distinctio"),
                     NetworkTags: []string{
                         "unde",
                         "nulla",
                         "corrupti",
                         "illum",
                     },
-                    NetworkURI: "vel",
-                    ServiceAccount: "error",
-                    StagingBucket: "deserunt",
-                    SubnetworkURI: "suscipit",
-                    TTL: "iure",
+                    NetworkURI: sdk.String("vel"),
+                    ServiceAccount: sdk.String("error"),
+                    StagingBucket: sdk.String("deserunt"),
+                    SubnetworkURI: sdk.String("suscipit"),
+                    TTL: sdk.String("iure"),
                 },
                 PeripheralsConfig: &shared.PeripheralsConfig{
-                    MetastoreService: "magnam",
+                    MetastoreService: sdk.String("magnam"),
                     SparkHistoryServerConfig: &shared.SparkHistoryServerConfig{
-                        DataprocCluster: "debitis",
+                        DataprocCluster: sdk.String("debitis"),
                     },
                 },
             },
@@ -64,7 +65,7 @@ func main() {
                     "ipsam",
                     "repellendus",
                 },
-                MainPythonFileURI: "sapiente",
+                MainPythonFileURI: sdk.String("sapiente"),
                 PythonFileUris: []string{
                     "odit",
                     "at",
@@ -73,24 +74,24 @@ func main() {
                 },
             },
             RuntimeConfig: &shared.RuntimeConfig{
-                ContainerImage: "molestiae",
+                ContainerImage: sdk.String("molestiae"),
                 Properties: map[string]string{
                     "quod": "esse",
                     "totam": "porro",
                     "dolorum": "dicta",
                     "nam": "officia",
                 },
-                Version: "occaecati",
+                Version: sdk.String("occaecati"),
             },
             RuntimeInfo: &shared.RuntimeInfoInput{
                 ApproximateUsage: &shared.UsageMetrics{
-                    MilliDcuSeconds: "fugit",
-                    ShuffleStorageGbSeconds: "deleniti",
+                    MilliDcuSeconds: sdk.String("fugit"),
+                    ShuffleStorageGbSeconds: sdk.String("deleniti"),
                 },
                 CurrentUsage: &shared.UsageSnapshot{
-                    MilliDcu: "hic",
-                    ShuffleStorageGb: "optio",
-                    SnapshotTime: "totam",
+                    MilliDcu: sdk.String("hic"),
+                    ShuffleStorageGb: sdk.String("optio"),
+                    SnapshotTime: sdk.String("totam"),
                 },
             },
             SparkBatch: &shared.SparkBatch{
@@ -110,8 +111,8 @@ func main() {
                 JarFileUris: []string{
                     "perferendis",
                 },
-                MainClass: "ad",
-                MainJarFileURI: "natus",
+                MainClass: sdk.String("ad"),
+                MainJarFileURI: sdk.String("natus"),
             },
             SparkRBatch: &shared.SparkRBatch{
                 ArchiveUris: []string{
@@ -124,14 +125,14 @@ func main() {
                     "hic",
                     "saepe",
                 },
-                MainRFileURI: "fuga",
+                MainRFileURI: sdk.String("fuga"),
             },
             SparkSQLBatch: &shared.SparkSQLBatch{
                 JarFileUris: []string{
                     "corporis",
                     "iste",
                 },
-                QueryFileURI: "iure",
+                QueryFileURI: sdk.String("iure"),
                 QueryVariables: map[string]string{
                     "quidem": "architecto",
                     "ipsa": "reiciendis",
@@ -140,23 +141,20 @@ func main() {
                 },
             },
         },
-        AccessToken: "dolorem",
-        Alt: "media",
-        BatchID: "explicabo",
-        Callback: "nobis",
-        Fields: "enim",
-        Key: "omnis",
-        OauthToken: "nemo",
+        AccessToken: sdk.String("dolorem"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        BatchID: sdk.String("explicabo"),
+        Callback: sdk.String("nobis"),
+        Fields: sdk.String("enim"),
+        Key: sdk.String("omnis"),
+        OauthToken: sdk.String("nemo"),
         Parent: "minima",
-        PrettyPrint: false,
-        QuotaUser: "excepturi",
-        RequestID: "accusantium",
-        UploadType: "iure",
-        UploadProtocol: "culpa",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.DataprocProjectsLocationsBatchesCreate(ctx, req, operations.DataprocProjectsLocationsBatchesCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("excepturi"),
+        RequestID: sdk.String("accusantium"),
+        UploadType: sdk.String("iure"),
+        UploadProtocol: sdk.String("culpa"),
+    }, operations.DataprocProjectsLocationsBatchesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

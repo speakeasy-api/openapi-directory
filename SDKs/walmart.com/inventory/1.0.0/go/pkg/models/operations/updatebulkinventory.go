@@ -26,19 +26,23 @@ const (
 	UpdateBulkInventoryFeedTypeEnumMpInventory UpdateBulkInventoryFeedTypeEnum = "MP_INVENTORY"
 )
 
+func (e UpdateBulkInventoryFeedTypeEnum) ToPointer() *UpdateBulkInventoryFeedTypeEnum {
+	return &e
+}
+
 func (e *UpdateBulkInventoryFeedTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inventory":
 		fallthrough
 	case "MP_INVENTORY":
-		*e = UpdateBulkInventoryFeedTypeEnum(s)
+		*e = UpdateBulkInventoryFeedTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateBulkInventoryFeedTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateBulkInventoryFeedTypeEnum: %v", v)
 	}
 }
 

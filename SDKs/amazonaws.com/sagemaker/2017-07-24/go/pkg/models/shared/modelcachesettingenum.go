@@ -14,18 +14,22 @@ const (
 	ModelCacheSettingEnumDisabled ModelCacheSettingEnum = "Disabled"
 )
 
+func (e ModelCacheSettingEnum) ToPointer() *ModelCacheSettingEnum {
+	return &e
+}
+
 func (e *ModelCacheSettingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
-		*e = ModelCacheSettingEnum(s)
+		*e = ModelCacheSettingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelCacheSettingEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelCacheSettingEnum: %v", v)
 	}
 }

@@ -32,7 +32,10 @@ func newRecords(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 func (s *records) GetRecord(ctx context.Context, request operations.GetRecordRequest) (*operations.GetRecordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections/{collection_id}/records/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections/{collection_id}/records/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -105,9 +108,13 @@ func (s *records) GetRecord(ctx context.Context, request operations.GetRecordReq
 
 	return res, nil
 }
+
 func (s *records) GetRecords(ctx context.Context, request operations.GetRecordsRequest) (*operations.GetRecordsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections/{collection_id}/records", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections/{collection_id}/records", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

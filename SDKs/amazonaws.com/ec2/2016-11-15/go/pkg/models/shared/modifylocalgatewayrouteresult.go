@@ -18,12 +18,16 @@ const (
 	ModifyLocalGatewayRouteResultRouteStateEnumDeleted   ModifyLocalGatewayRouteResultRouteStateEnum = "deleted"
 )
 
+func (e ModifyLocalGatewayRouteResultRouteStateEnum) ToPointer() *ModifyLocalGatewayRouteResultRouteStateEnum {
+	return &e
+}
+
 func (e *ModifyLocalGatewayRouteResultRouteStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "active":
@@ -33,10 +37,10 @@ func (e *ModifyLocalGatewayRouteResultRouteStateEnum) UnmarshalJSON(data []byte)
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = ModifyLocalGatewayRouteResultRouteStateEnum(s)
+		*e = ModifyLocalGatewayRouteResultRouteStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyLocalGatewayRouteResultRouteStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyLocalGatewayRouteResultRouteStateEnum: %v", v)
 	}
 }
 
@@ -48,19 +52,23 @@ const (
 	ModifyLocalGatewayRouteResultRouteTypeEnumPropagated ModifyLocalGatewayRouteResultRouteTypeEnum = "propagated"
 )
 
+func (e ModifyLocalGatewayRouteResultRouteTypeEnum) ToPointer() *ModifyLocalGatewayRouteResultRouteTypeEnum {
+	return &e
+}
+
 func (e *ModifyLocalGatewayRouteResultRouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "static":
 		fallthrough
 	case "propagated":
-		*e = ModifyLocalGatewayRouteResultRouteTypeEnum(s)
+		*e = ModifyLocalGatewayRouteResultRouteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyLocalGatewayRouteResultRouteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyLocalGatewayRouteResultRouteTypeEnum: %v", v)
 	}
 }
 

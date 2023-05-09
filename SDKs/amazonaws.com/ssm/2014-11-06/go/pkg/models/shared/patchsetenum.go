@@ -14,18 +14,22 @@ const (
 	PatchSetEnumApplication PatchSetEnum = "APPLICATION"
 )
 
+func (e PatchSetEnum) ToPointer() *PatchSetEnum {
+	return &e
+}
+
 func (e *PatchSetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OS":
 		fallthrough
 	case "APPLICATION":
-		*e = PatchSetEnum(s)
+		*e = PatchSetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSetEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSetEnum: %v", v)
 	}
 }

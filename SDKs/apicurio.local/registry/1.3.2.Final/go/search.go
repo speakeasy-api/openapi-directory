@@ -97,7 +97,10 @@ func (s *search) SearchArtifacts(ctx context.Context, request operations.SearchA
 // of all versions of an artifact (for example, in a user interface).
 func (s *search) SearchVersions(ctx context.Context, request operations.SearchVersionsRequest) (*operations.SearchVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/artifacts/{artifactId}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/search/artifacts/{artifactId}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

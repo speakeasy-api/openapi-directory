@@ -17,12 +17,16 @@ const (
 	TargetRenderFailureCauseEnumCloudBuildRequestFailed TargetRenderFailureCauseEnum = "CLOUD_BUILD_REQUEST_FAILED"
 )
 
+func (e TargetRenderFailureCauseEnum) ToPointer() *TargetRenderFailureCauseEnum {
+	return &e
+}
+
 func (e *TargetRenderFailureCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILURE_CAUSE_UNSPECIFIED":
 		fallthrough
 	case "CLOUD_BUILD_UNAVAILABLE":
@@ -30,10 +34,10 @@ func (e *TargetRenderFailureCauseEnum) UnmarshalJSON(data []byte) error {
 	case "EXECUTION_FAILED":
 		fallthrough
 	case "CLOUD_BUILD_REQUEST_FAILED":
-		*e = TargetRenderFailureCauseEnum(s)
+		*e = TargetRenderFailureCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetRenderFailureCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetRenderFailureCauseEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	TargetRenderRenderingStateEnumInProgress                   TargetRenderRenderingStateEnum = "IN_PROGRESS"
 )
 
+func (e TargetRenderRenderingStateEnum) ToPointer() *TargetRenderRenderingStateEnum {
+	return &e
+}
+
 func (e *TargetRenderRenderingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_RENDER_STATE_UNSPECIFIED":
 		fallthrough
 	case "SUCCEEDED":
@@ -60,10 +68,10 @@ func (e *TargetRenderRenderingStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "IN_PROGRESS":
-		*e = TargetRenderRenderingStateEnum(s)
+		*e = TargetRenderRenderingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetRenderRenderingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetRenderRenderingStateEnum: %v", v)
 	}
 }
 

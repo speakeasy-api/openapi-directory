@@ -98,7 +98,10 @@ func (s *plan) FetchPatientPlanSummaries(ctx context.Context, request operations
 // Get the plan summary for a patient.
 func (s *plan) FetchPatientPlanSummary(ctx context.Context, request operations.FetchPatientPlanSummaryRequest) (*operations.FetchPatientPlanSummaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient_plan_summary/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/patient_plan_summary/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -159,7 +162,10 @@ func (s *plan) FetchPatientPlanSummary(ctx context.Context, request operations.F
 // Update a plan summary record for a patient.
 func (s *plan) UpdatePatientPlanSummary(ctx context.Context, request operations.UpdatePatientPlanSummaryRequest) (*operations.UpdatePatientPlanSummaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient_plan_summary/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/patient_plan_summary/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePatientPlanSummaryRequestInput", "json")
 	if err != nil {

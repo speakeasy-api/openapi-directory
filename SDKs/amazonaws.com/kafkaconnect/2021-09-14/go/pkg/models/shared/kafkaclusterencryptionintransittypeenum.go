@@ -14,18 +14,22 @@ const (
 	KafkaClusterEncryptionInTransitTypeEnumTLS       KafkaClusterEncryptionInTransitTypeEnum = "TLS"
 )
 
+func (e KafkaClusterEncryptionInTransitTypeEnum) ToPointer() *KafkaClusterEncryptionInTransitTypeEnum {
+	return &e
+}
+
 func (e *KafkaClusterEncryptionInTransitTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLAINTEXT":
 		fallthrough
 	case "TLS":
-		*e = KafkaClusterEncryptionInTransitTypeEnum(s)
+		*e = KafkaClusterEncryptionInTransitTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KafkaClusterEncryptionInTransitTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for KafkaClusterEncryptionInTransitTypeEnum: %v", v)
 	}
 }

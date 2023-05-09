@@ -14,18 +14,22 @@ const (
 	OutdatedInstancesStrategyEnumIgnore OutdatedInstancesStrategyEnum = "IGNORE"
 )
 
+func (e OutdatedInstancesStrategyEnum) ToPointer() *OutdatedInstancesStrategyEnum {
+	return &e
+}
+
 func (e *OutdatedInstancesStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPDATE":
 		fallthrough
 	case "IGNORE":
-		*e = OutdatedInstancesStrategyEnum(s)
+		*e = OutdatedInstancesStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutdatedInstancesStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for OutdatedInstancesStrategyEnum: %v", v)
 	}
 }

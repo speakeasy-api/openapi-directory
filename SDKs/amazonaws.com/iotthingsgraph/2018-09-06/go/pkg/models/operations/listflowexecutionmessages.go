@@ -16,17 +16,21 @@ const (
 	ListFlowExecutionMessagesXAmzTargetEnumIotThingsGraphFrontEndServiceListFlowExecutionMessages ListFlowExecutionMessagesXAmzTargetEnum = "IotThingsGraphFrontEndService.ListFlowExecutionMessages"
 )
 
+func (e ListFlowExecutionMessagesXAmzTargetEnum) ToPointer() *ListFlowExecutionMessagesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListFlowExecutionMessagesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.ListFlowExecutionMessages":
-		*e = ListFlowExecutionMessagesXAmzTargetEnum(s)
+		*e = ListFlowExecutionMessagesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFlowExecutionMessagesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFlowExecutionMessagesXAmzTargetEnum: %v", v)
 	}
 }
 

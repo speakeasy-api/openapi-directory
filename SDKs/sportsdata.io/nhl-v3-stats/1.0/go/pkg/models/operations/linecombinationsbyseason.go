@@ -17,19 +17,23 @@ const (
 	LineCombinationsBySeasonFormatEnumJSON LineCombinationsBySeasonFormatEnum = "JSON"
 )
 
+func (e LineCombinationsBySeasonFormatEnum) ToPointer() *LineCombinationsBySeasonFormatEnum {
+	return &e
+}
+
 func (e *LineCombinationsBySeasonFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = LineCombinationsBySeasonFormatEnum(s)
+		*e = LineCombinationsBySeasonFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineCombinationsBySeasonFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LineCombinationsBySeasonFormatEnum: %v", v)
 	}
 }
 

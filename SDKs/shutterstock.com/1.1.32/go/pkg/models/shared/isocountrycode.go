@@ -260,12 +260,16 @@ const (
 	ISOCountryCode2EnumZw ISOCountryCode2Enum = "ZW"
 )
 
+func (e ISOCountryCode2Enum) ToPointer() *ISOCountryCode2Enum {
+	return &e
+}
+
 func (e *ISOCountryCode2Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AF":
 		fallthrough
 	case "AX":
@@ -755,10 +759,10 @@ func (e *ISOCountryCode2Enum) UnmarshalJSON(data []byte) error {
 	case "ZM":
 		fallthrough
 	case "ZW":
-		*e = ISOCountryCode2Enum(s)
+		*e = ISOCountryCode2Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ISOCountryCode2Enum: %s", s)
+		return fmt.Errorf("invalid value for ISOCountryCode2Enum: %v", v)
 	}
 }
 
@@ -1017,12 +1021,16 @@ const (
 	ISOCountryCode1EnumZwe ISOCountryCode1Enum = "ZWE"
 )
 
+func (e ISOCountryCode1Enum) ToPointer() *ISOCountryCode1Enum {
+	return &e
+}
+
 func (e *ISOCountryCode1Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ABW":
 		fallthrough
 	case "AFG":
@@ -1520,10 +1528,10 @@ func (e *ISOCountryCode1Enum) UnmarshalJSON(data []byte) error {
 	case "ZMB":
 		fallthrough
 	case "ZWE":
-		*e = ISOCountryCode1Enum(s)
+		*e = ISOCountryCode1Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ISOCountryCode1Enum: %s", s)
+		return fmt.Errorf("invalid value for ISOCountryCode1Enum: %v", v)
 	}
 }
 

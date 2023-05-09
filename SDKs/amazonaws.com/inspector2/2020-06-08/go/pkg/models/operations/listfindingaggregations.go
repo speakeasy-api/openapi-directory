@@ -41,12 +41,16 @@ const (
 	ListFindingAggregationsRequestBodyAggregationTypeEnumLambdaLayer       ListFindingAggregationsRequestBodyAggregationTypeEnum = "LAMBDA_LAYER"
 )
 
+func (e ListFindingAggregationsRequestBodyAggregationTypeEnum) ToPointer() *ListFindingAggregationsRequestBodyAggregationTypeEnum {
+	return &e
+}
+
 func (e *ListFindingAggregationsRequestBodyAggregationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FINDING_TYPE":
 		fallthrough
 	case "PACKAGE":
@@ -68,10 +72,10 @@ func (e *ListFindingAggregationsRequestBodyAggregationTypeEnum) UnmarshalJSON(da
 	case "AWS_LAMBDA_FUNCTION":
 		fallthrough
 	case "LAMBDA_LAYER":
-		*e = ListFindingAggregationsRequestBodyAggregationTypeEnum(s)
+		*e = ListFindingAggregationsRequestBodyAggregationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFindingAggregationsRequestBodyAggregationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFindingAggregationsRequestBodyAggregationTypeEnum: %v", v)
 	}
 }
 

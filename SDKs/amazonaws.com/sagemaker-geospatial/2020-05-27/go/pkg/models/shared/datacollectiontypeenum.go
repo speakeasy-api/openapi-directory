@@ -15,20 +15,24 @@ const (
 	DataCollectionTypeEnumUser    DataCollectionTypeEnum = "USER"
 )
 
+func (e DataCollectionTypeEnum) ToPointer() *DataCollectionTypeEnum {
+	return &e
+}
+
 func (e *DataCollectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLIC":
 		fallthrough
 	case "PREMIUM":
 		fallthrough
 	case "USER":
-		*e = DataCollectionTypeEnum(s)
+		*e = DataCollectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataCollectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataCollectionTypeEnum: %v", v)
 	}
 }

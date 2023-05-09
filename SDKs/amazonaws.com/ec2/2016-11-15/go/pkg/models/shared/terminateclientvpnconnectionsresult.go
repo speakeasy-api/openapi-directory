@@ -17,12 +17,16 @@ const (
 	TerminateClientVpnConnectionsResultConnectionStatusesCurrentStatusCodeEnumTerminated        TerminateClientVpnConnectionsResultConnectionStatusesCurrentStatusCodeEnum = "terminated"
 )
 
+func (e TerminateClientVpnConnectionsResultConnectionStatusesCurrentStatusCodeEnum) ToPointer() *TerminateClientVpnConnectionsResultConnectionStatusesCurrentStatusCodeEnum {
+	return &e
+}
+
 func (e *TerminateClientVpnConnectionsResultConnectionStatusesCurrentStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "failed-to-terminate":
@@ -30,10 +34,10 @@ func (e *TerminateClientVpnConnectionsResultConnectionStatusesCurrentStatusCodeE
 	case "terminating":
 		fallthrough
 	case "terminated":
-		*e = TerminateClientVpnConnectionsResultConnectionStatusesCurrentStatusCodeEnum(s)
+		*e = TerminateClientVpnConnectionsResultConnectionStatusesCurrentStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TerminateClientVpnConnectionsResultConnectionStatusesCurrentStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for TerminateClientVpnConnectionsResultConnectionStatusesCurrentStatusCodeEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	TerminateClientVpnConnectionsResultConnectionStatusesPreviousStatusCodeEnumTerminated        TerminateClientVpnConnectionsResultConnectionStatusesPreviousStatusCodeEnum = "terminated"
 )
 
+func (e TerminateClientVpnConnectionsResultConnectionStatusesPreviousStatusCodeEnum) ToPointer() *TerminateClientVpnConnectionsResultConnectionStatusesPreviousStatusCodeEnum {
+	return &e
+}
+
 func (e *TerminateClientVpnConnectionsResultConnectionStatusesPreviousStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "failed-to-terminate":
@@ -66,10 +74,10 @@ func (e *TerminateClientVpnConnectionsResultConnectionStatusesPreviousStatusCode
 	case "terminating":
 		fallthrough
 	case "terminated":
-		*e = TerminateClientVpnConnectionsResultConnectionStatusesPreviousStatusCodeEnum(s)
+		*e = TerminateClientVpnConnectionsResultConnectionStatusesPreviousStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TerminateClientVpnConnectionsResultConnectionStatusesPreviousStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for TerminateClientVpnConnectionsResultConnectionStatusesPreviousStatusCodeEnum: %v", v)
 	}
 }
 

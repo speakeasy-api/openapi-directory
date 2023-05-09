@@ -17,19 +17,23 @@ const (
 	ListCallsDirectionEnumOutbound ListCallsDirectionEnum = "OUTBOUND"
 )
 
+func (e ListCallsDirectionEnum) ToPointer() *ListCallsDirectionEnum {
+	return &e
+}
+
 func (e *ListCallsDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INBOUND":
 		fallthrough
 	case "OUTBOUND":
-		*e = ListCallsDirectionEnum(s)
+		*e = ListCallsDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCallsDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCallsDirectionEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	ListCallsOrderEnumAsc  ListCallsOrderEnum = "ASC"
 )
 
+func (e ListCallsOrderEnum) ToPointer() *ListCallsOrderEnum {
+	return &e
+}
+
 func (e *ListCallsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DESC":
 		fallthrough
 	case "ASC":
-		*e = ListCallsOrderEnum(s)
+		*e = ListCallsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCallsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCallsOrderEnum: %v", v)
 	}
 }
 
@@ -68,12 +76,16 @@ const (
 	ListCallsStatesEnumRemoteHeld   ListCallsStatesEnum = "REMOTE_HELD"
 )
 
+func (e ListCallsStatesEnum) ToPointer() *ListCallsStatesEnum {
+	return &e
+}
+
 func (e *ListCallsStatesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIALIZING":
 		fallthrough
 	case "RINGING":
@@ -83,10 +95,10 @@ func (e *ListCallsStatesEnum) UnmarshalJSON(data []byte) error {
 	case "HELD":
 		fallthrough
 	case "REMOTE_HELD":
-		*e = ListCallsStatesEnum(s)
+		*e = ListCallsStatesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCallsStatesEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCallsStatesEnum: %v", v)
 	}
 }
 

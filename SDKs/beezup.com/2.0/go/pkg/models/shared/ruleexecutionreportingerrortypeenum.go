@@ -15,18 +15,22 @@ const (
 	RuleExecutionReportingErrorTypeEnumStoreIsInSystemBlockState RuleExecutionReportingErrorTypeEnum = "StoreIsInSystemBlockState"
 )
 
+func (e RuleExecutionReportingErrorTypeEnum) ToPointer() *RuleExecutionReportingErrorTypeEnum {
+	return &e
+}
+
 func (e *RuleExecutionReportingErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ChannelNotPresent":
 		fallthrough
 	case "StoreIsInSystemBlockState":
-		*e = RuleExecutionReportingErrorTypeEnum(s)
+		*e = RuleExecutionReportingErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuleExecutionReportingErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RuleExecutionReportingErrorTypeEnum: %v", v)
 	}
 }

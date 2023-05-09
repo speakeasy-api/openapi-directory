@@ -16,12 +16,16 @@ const (
 	ScheduleLambdaFunctionFailedCauseEnumLambdaServiceNotAvailableInRegion  ScheduleLambdaFunctionFailedCauseEnum = "LAMBDA_SERVICE_NOT_AVAILABLE_IN_REGION"
 )
 
+func (e ScheduleLambdaFunctionFailedCauseEnum) ToPointer() *ScheduleLambdaFunctionFailedCauseEnum {
+	return &e
+}
+
 func (e *ScheduleLambdaFunctionFailedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID_ALREADY_IN_USE":
 		fallthrough
 	case "OPEN_LAMBDA_FUNCTIONS_LIMIT_EXCEEDED":
@@ -29,9 +33,9 @@ func (e *ScheduleLambdaFunctionFailedCauseEnum) UnmarshalJSON(data []byte) error
 	case "LAMBDA_FUNCTION_CREATION_RATE_EXCEEDED":
 		fallthrough
 	case "LAMBDA_SERVICE_NOT_AVAILABLE_IN_REGION":
-		*e = ScheduleLambdaFunctionFailedCauseEnum(s)
+		*e = ScheduleLambdaFunctionFailedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScheduleLambdaFunctionFailedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for ScheduleLambdaFunctionFailedCauseEnum: %v", v)
 	}
 }

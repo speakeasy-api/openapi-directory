@@ -19,12 +19,16 @@ const (
 	UpdateTopicRuleDestinationRequestBodyStatusEnumDeleting   UpdateTopicRuleDestinationRequestBodyStatusEnum = "DELETING"
 )
 
+func (e UpdateTopicRuleDestinationRequestBodyStatusEnum) ToPointer() *UpdateTopicRuleDestinationRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *UpdateTopicRuleDestinationRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -34,10 +38,10 @@ func (e *UpdateTopicRuleDestinationRequestBodyStatusEnum) UnmarshalJSON(data []b
 	case "ERROR":
 		fallthrough
 	case "DELETING":
-		*e = UpdateTopicRuleDestinationRequestBodyStatusEnum(s)
+		*e = UpdateTopicRuleDestinationRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateTopicRuleDestinationRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateTopicRuleDestinationRequestBodyStatusEnum: %v", v)
 	}
 }
 

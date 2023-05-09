@@ -16,17 +16,21 @@ const (
 	BatchDetectDominantLanguageXAmzTargetEnumComprehend20171127BatchDetectDominantLanguage BatchDetectDominantLanguageXAmzTargetEnum = "Comprehend_20171127.BatchDetectDominantLanguage"
 )
 
+func (e BatchDetectDominantLanguageXAmzTargetEnum) ToPointer() *BatchDetectDominantLanguageXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchDetectDominantLanguageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.BatchDetectDominantLanguage":
-		*e = BatchDetectDominantLanguageXAmzTargetEnum(s)
+		*e = BatchDetectDominantLanguageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchDetectDominantLanguageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchDetectDominantLanguageXAmzTargetEnum: %v", v)
 	}
 }
 

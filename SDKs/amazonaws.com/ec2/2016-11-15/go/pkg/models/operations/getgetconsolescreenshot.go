@@ -15,17 +15,21 @@ const (
 	GETGETConsoleScreenshotActionEnumGetConsoleScreenshot GETGETConsoleScreenshotActionEnum = "GetConsoleScreenshot"
 )
 
+func (e GETGETConsoleScreenshotActionEnum) ToPointer() *GETGETConsoleScreenshotActionEnum {
+	return &e
+}
+
 func (e *GETGETConsoleScreenshotActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetConsoleScreenshot":
-		*e = GETGETConsoleScreenshotActionEnum(s)
+		*e = GETGETConsoleScreenshotActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETConsoleScreenshotActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETConsoleScreenshotActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETConsoleScreenshotVersionEnumTwoThousandAndSixteen1115 GETGETConsoleScreenshotVersionEnum = "2016-11-15"
 )
 
+func (e GETGETConsoleScreenshotVersionEnum) ToPointer() *GETGETConsoleScreenshotVersionEnum {
+	return &e
+}
+
 func (e *GETGETConsoleScreenshotVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETConsoleScreenshotVersionEnum(s)
+		*e = GETGETConsoleScreenshotVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETConsoleScreenshotVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETConsoleScreenshotVersionEnum: %v", v)
 	}
 }
 

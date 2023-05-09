@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/qldb-sessio
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,7 +28,8 @@ func main() {
         }),
     )
 
-    req := operations.SendCommandRequest{
+    ctx := context.Background()
+    res, err := s.SendCommand(ctx, operations.SendCommandRequest{
         SendCommandRequest: shared.SendCommandRequest{
             AbortTransaction: map[string]interface{}{
                 "provident": "distinctio",
@@ -47,20 +48,20 @@ func main() {
             ExecuteStatement: &shared.ExecuteStatementRequest{
                 Parameters: []shared.ValueHolder{
                     shared.ValueHolder{
-                        IonBinary: "tempora",
-                        IonText: "suscipit",
+                        IonBinary: sdk.String("tempora"),
+                        IonText: sdk.String("suscipit"),
                     },
                     shared.ValueHolder{
-                        IonBinary: "molestiae",
-                        IonText: "minus",
+                        IonBinary: sdk.String("molestiae"),
+                        IonText: sdk.String("minus"),
                     },
                     shared.ValueHolder{
-                        IonBinary: "placeat",
-                        IonText: "voluptatum",
+                        IonBinary: sdk.String("placeat"),
+                        IonText: sdk.String("voluptatum"),
                     },
                     shared.ValueHolder{
-                        IonBinary: "iusto",
-                        IonText: "excepturi",
+                        IonBinary: sdk.String("iusto"),
+                        IonText: sdk.String("excepturi"),
                     },
                 },
                 Statement: "nisi",
@@ -70,7 +71,7 @@ func main() {
                 NextPageToken: "temporibus",
                 TransactionID: "ab",
             },
-            SessionToken: "quis",
+            SessionToken: sdk.String("quis"),
             StartSession: &shared.StartSessionRequest{
                 LedgerName: "veritatis",
             },
@@ -80,18 +81,15 @@ func main() {
                 "quo": "odit",
             },
         },
-        XAmzAlgorithm: "at",
-        XAmzContentSha256: "at",
-        XAmzCredential: "maiores",
-        XAmzDate: "molestiae",
-        XAmzSecurityToken: "quod",
-        XAmzSignature: "quod",
-        XAmzSignedHeaders: "esse",
-        XAmzTarget: "QLDBSession.SendCommand",
-    }
-
-    ctx := context.Background()
-    res, err := s.SendCommand(ctx, req)
+        XAmzAlgorithm: sdk.String("at"),
+        XAmzContentSha256: sdk.String("at"),
+        XAmzCredential: sdk.String("maiores"),
+        XAmzDate: sdk.String("molestiae"),
+        XAmzSecurityToken: sdk.String("quod"),
+        XAmzSignature: sdk.String("quod"),
+        XAmzSignedHeaders: sdk.String("esse"),
+        XAmzTarget: operations.SendCommandXAmzTargetEnumQldbSessionSendCommand,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -106,9 +104,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `SendCommand` - <p>Sends a command to an Amazon QLDB ledger.</p> <note> <p>Instead of interacting directly with this API, we recommend using the QLDB driver or the QLDB shell to execute data transactions on a ledger.</p> <ul> <li> <p>If you are working with an AWS SDK, use the QLDB driver. The driver provides a high-level abstraction layer above this <i>QLDB Session</i> data plane and manages <code>SendCommand</code> API calls for you. For information and a list of supported programming languages, see <a href="https://docs.aws.amazon.com/qldb/latest/developerguide/getting-started-driver.html">Getting started with the driver</a> in the <i>Amazon QLDB Developer Guide</i>.</p> </li> <li> <p>If you are working with the AWS Command Line Interface (AWS CLI), use the QLDB shell. The shell is a command line interface that uses the QLDB driver to interact with a ledger. For information, see <a href="https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html">Accessing Amazon QLDB using the QLDB shell</a>.</p> </li> </ul> </note>
+* [SendCommand](docs/sdk/README.md#sendcommand) - <p>Sends a command to an Amazon QLDB ledger.</p> <note> <p>Instead of interacting directly with this API, we recommend using the QLDB driver or the QLDB shell to execute data transactions on a ledger.</p> <ul> <li> <p>If you are working with an AWS SDK, use the QLDB driver. The driver provides a high-level abstraction layer above this <i>QLDB Session</i> data plane and manages <code>SendCommand</code> API calls for you. For information and a list of supported programming languages, see <a href="https://docs.aws.amazon.com/qldb/latest/developerguide/getting-started-driver.html">Getting started with the driver</a> in the <i>Amazon QLDB Developer Guide</i>.</p> </li> <li> <p>If you are working with the AWS Command Line Interface (AWS CLI), use the QLDB shell. The shell is a command line interface that uses the QLDB driver to interact with a ledger. For information, see <a href="https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html">Accessing Amazon QLDB using the QLDB shell</a>.</p> </li> </ul> </note>
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,17 +16,21 @@ const (
 	UpdateScalingPlanXAmzTargetEnumAnyScaleScalingPlannerFrontendServiceUpdateScalingPlan UpdateScalingPlanXAmzTargetEnum = "AnyScaleScalingPlannerFrontendService.UpdateScalingPlan"
 )
 
+func (e UpdateScalingPlanXAmzTargetEnum) ToPointer() *UpdateScalingPlanXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateScalingPlanXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyScaleScalingPlannerFrontendService.UpdateScalingPlan":
-		*e = UpdateScalingPlanXAmzTargetEnum(s)
+		*e = UpdateScalingPlanXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateScalingPlanXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateScalingPlanXAmzTargetEnum: %v", v)
 	}
 }
 

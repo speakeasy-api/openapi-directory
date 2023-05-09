@@ -20,12 +20,16 @@ const (
 	CampaignSoundStatusEnumScrubbed     CampaignSoundStatusEnum = "SCRUBBED"
 )
 
+func (e CampaignSoundStatusEnum) ToPointer() *CampaignSoundStatusEnum {
+	return &e
+}
+
 func (e *CampaignSoundStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPLOAD":
 		fallthrough
 	case "RECORDING":
@@ -39,10 +43,10 @@ func (e *CampaignSoundStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ARCHIVED":
 		fallthrough
 	case "SCRUBBED":
-		*e = CampaignSoundStatusEnum(s)
+		*e = CampaignSoundStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CampaignSoundStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CampaignSoundStatusEnum: %v", v)
 	}
 }
 

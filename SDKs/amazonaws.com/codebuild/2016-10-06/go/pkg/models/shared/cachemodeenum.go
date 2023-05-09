@@ -15,20 +15,24 @@ const (
 	CacheModeEnumLocalCustomCache      CacheModeEnum = "LOCAL_CUSTOM_CACHE"
 )
 
+func (e CacheModeEnum) ToPointer() *CacheModeEnum {
+	return &e
+}
+
 func (e *CacheModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCAL_DOCKER_LAYER_CACHE":
 		fallthrough
 	case "LOCAL_SOURCE_CACHE":
 		fallthrough
 	case "LOCAL_CUSTOM_CACHE":
-		*e = CacheModeEnum(s)
+		*e = CacheModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CacheModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CacheModeEnum: %v", v)
 	}
 }

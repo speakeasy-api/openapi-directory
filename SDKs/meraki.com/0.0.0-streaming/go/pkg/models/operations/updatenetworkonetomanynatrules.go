@@ -16,19 +16,23 @@ const (
 	UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnumUDP UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnum = "udp"
 )
 
+func (e UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnum) ToPointer() *UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnum {
+	return &e
+}
+
 func (e *UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "udp":
-		*e = UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnum(s)
+		*e = UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkOneToManyNatRulesRequestBodyRulesPortRulesProtocolEnum: %v", v)
 	}
 }
 
@@ -55,19 +59,23 @@ const (
 	UpdateNetworkOneToManyNatRulesRequestBodyRulesUplinkEnumInternet2 UpdateNetworkOneToManyNatRulesRequestBodyRulesUplinkEnum = "internet2"
 )
 
+func (e UpdateNetworkOneToManyNatRulesRequestBodyRulesUplinkEnum) ToPointer() *UpdateNetworkOneToManyNatRulesRequestBodyRulesUplinkEnum {
+	return &e
+}
+
 func (e *UpdateNetworkOneToManyNatRulesRequestBodyRulesUplinkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internet1":
 		fallthrough
 	case "internet2":
-		*e = UpdateNetworkOneToManyNatRulesRequestBodyRulesUplinkEnum(s)
+		*e = UpdateNetworkOneToManyNatRulesRequestBodyRulesUplinkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkOneToManyNatRulesRequestBodyRulesUplinkEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkOneToManyNatRulesRequestBodyRulesUplinkEnum: %v", v)
 	}
 }
 

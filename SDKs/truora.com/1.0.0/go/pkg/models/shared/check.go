@@ -23,12 +23,16 @@ const (
 	CheckCountryEnumAr  CheckCountryEnum = "AR"
 )
 
+func (e CheckCountryEnum) ToPointer() *CheckCountryEnum {
+	return &e
+}
+
 func (e *CheckCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "BR":
@@ -46,10 +50,10 @@ func (e *CheckCountryEnum) UnmarshalJSON(data []byte) error {
 	case "PE":
 		fallthrough
 	case "AR":
-		*e = CheckCountryEnum(s)
+		*e = CheckCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckCountryEnum: %v", v)
 	}
 }
 
@@ -304,12 +308,16 @@ const (
 	CheckNativeCountryEnumZw CheckNativeCountryEnum = "zw"
 )
 
+func (e CheckNativeCountryEnum) ToPointer() *CheckNativeCountryEnum {
+	return &e
+}
+
 func (e *CheckNativeCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ad":
 		fallthrough
 	case "ae":
@@ -799,10 +807,10 @@ func (e *CheckNativeCountryEnum) UnmarshalJSON(data []byte) error {
 	case "zm":
 		fallthrough
 	case "zw":
-		*e = CheckNativeCountryEnum(s)
+		*e = CheckNativeCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckNativeCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckNativeCountryEnum: %v", v)
 	}
 }
 
@@ -839,12 +847,16 @@ const (
 	CheckRegionEnumTo CheckRegionEnum = "TO"
 )
 
+func (e CheckRegionEnum) ToPointer() *CheckRegionEnum {
+	return &e
+}
+
 func (e *CheckRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DF":
 		fallthrough
 	case "AC":
@@ -898,10 +910,10 @@ func (e *CheckRegionEnum) UnmarshalJSON(data []byte) error {
 	case "SE":
 		fallthrough
 	case "TO":
-		*e = CheckRegionEnum(s)
+		*e = CheckRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckRegionEnum: %v", v)
 	}
 }
 
@@ -916,12 +928,16 @@ const (
 	CheckStatusEnumDelayed    CheckStatusEnum = "delayed"
 )
 
+func (e CheckStatusEnum) ToPointer() *CheckStatusEnum {
+	return &e
+}
+
 func (e *CheckStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "not_started":
 		fallthrough
 	case "in_progress":
@@ -931,10 +947,10 @@ func (e *CheckStatusEnum) UnmarshalJSON(data []byte) error {
 	case "error":
 		fallthrough
 	case "delayed":
-		*e = CheckStatusEnum(s)
+		*e = CheckStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckStatusEnum: %v", v)
 	}
 }
 
@@ -947,21 +963,25 @@ const (
 	CheckTypeEnumVehicle CheckTypeEnum = "vehicle"
 )
 
+func (e CheckTypeEnum) ToPointer() *CheckTypeEnum {
+	return &e
+}
+
 func (e *CheckTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "company":
 		fallthrough
 	case "person":
 		fallthrough
 	case "vehicle":
-		*e = CheckTypeEnum(s)
+		*e = CheckTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckTypeEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	QuoteCharEnumDisabled    QuoteCharEnum = "disabled"
 )
 
+func (e QuoteCharEnum) ToPointer() *QuoteCharEnum {
+	return &e
+}
+
 func (e *QuoteCharEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "quote":
 		fallthrough
 	case "quillemet":
@@ -29,9 +33,9 @@ func (e *QuoteCharEnum) UnmarshalJSON(data []byte) error {
 	case "single_quote":
 		fallthrough
 	case "disabled":
-		*e = QuoteCharEnum(s)
+		*e = QuoteCharEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QuoteCharEnum: %s", s)
+		return fmt.Errorf("invalid value for QuoteCharEnum: %v", v)
 	}
 }

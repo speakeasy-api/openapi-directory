@@ -4,6 +4,8 @@ package shared
 
 // Scope - Scope represents a Scope in a Fleet.
 type Scope struct {
+	// If true, all Memberships in the Fleet bind to this Scope.
+	AllMemberships *bool `json:"allMemberships,omitempty"`
 	// Output only. When the scope was created.
 	CreateTime *string `json:"createTime,omitempty"`
 	// Output only. When the scope was deleted.
@@ -20,6 +22,8 @@ type Scope struct {
 
 // ScopeInput - Scope represents a Scope in a Fleet.
 type ScopeInput struct {
+	// If true, all Memberships in the Fleet bind to this Scope.
+	AllMemberships *bool `json:"allMemberships,omitempty"`
 	// The resource name for the scope `projects/{project}/locations/{location}/scopes/{scope}`
 	Name *string `json:"name,omitempty"`
 }

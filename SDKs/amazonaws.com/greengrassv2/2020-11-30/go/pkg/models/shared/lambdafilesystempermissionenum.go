@@ -14,18 +14,22 @@ const (
 	LambdaFilesystemPermissionEnumRw LambdaFilesystemPermissionEnum = "rw"
 )
 
+func (e LambdaFilesystemPermissionEnum) ToPointer() *LambdaFilesystemPermissionEnum {
+	return &e
+}
+
 func (e *LambdaFilesystemPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ro":
 		fallthrough
 	case "rw":
-		*e = LambdaFilesystemPermissionEnum(s)
+		*e = LambdaFilesystemPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LambdaFilesystemPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for LambdaFilesystemPermissionEnum: %v", v)
 	}
 }

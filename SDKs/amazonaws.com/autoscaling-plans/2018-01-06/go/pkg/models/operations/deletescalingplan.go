@@ -16,17 +16,21 @@ const (
 	DeleteScalingPlanXAmzTargetEnumAnyScaleScalingPlannerFrontendServiceDeleteScalingPlan DeleteScalingPlanXAmzTargetEnum = "AnyScaleScalingPlannerFrontendService.DeleteScalingPlan"
 )
 
+func (e DeleteScalingPlanXAmzTargetEnum) ToPointer() *DeleteScalingPlanXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteScalingPlanXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyScaleScalingPlannerFrontendService.DeleteScalingPlan":
-		*e = DeleteScalingPlanXAmzTargetEnum(s)
+		*e = DeleteScalingPlanXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteScalingPlanXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteScalingPlanXAmzTargetEnum: %v", v)
 	}
 }
 

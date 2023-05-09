@@ -21,12 +21,16 @@ const (
 	PackagesListPackagesForOrganizationPackageTypeEnumContainer PackagesListPackagesForOrganizationPackageTypeEnum = "container"
 )
 
+func (e PackagesListPackagesForOrganizationPackageTypeEnum) ToPointer() *PackagesListPackagesForOrganizationPackageTypeEnum {
+	return &e
+}
+
 func (e *PackagesListPackagesForOrganizationPackageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "npm":
 		fallthrough
 	case "maven":
@@ -38,10 +42,10 @@ func (e *PackagesListPackagesForOrganizationPackageTypeEnum) UnmarshalJSON(data 
 	case "nuget":
 		fallthrough
 	case "container":
-		*e = PackagesListPackagesForOrganizationPackageTypeEnum(s)
+		*e = PackagesListPackagesForOrganizationPackageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PackagesListPackagesForOrganizationPackageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PackagesListPackagesForOrganizationPackageTypeEnum: %v", v)
 	}
 }
 

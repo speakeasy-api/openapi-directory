@@ -17,19 +17,23 @@ const (
 	ListAssociatedAssetsTraversalDirectionEnumChild  ListAssociatedAssetsTraversalDirectionEnum = "CHILD"
 )
 
+func (e ListAssociatedAssetsTraversalDirectionEnum) ToPointer() *ListAssociatedAssetsTraversalDirectionEnum {
+	return &e
+}
+
 func (e *ListAssociatedAssetsTraversalDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARENT":
 		fallthrough
 	case "CHILD":
-		*e = ListAssociatedAssetsTraversalDirectionEnum(s)
+		*e = ListAssociatedAssetsTraversalDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAssociatedAssetsTraversalDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAssociatedAssetsTraversalDirectionEnum: %v", v)
 	}
 }
 

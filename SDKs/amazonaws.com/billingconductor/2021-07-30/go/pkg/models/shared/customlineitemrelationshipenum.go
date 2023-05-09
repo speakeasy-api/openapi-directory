@@ -14,18 +14,22 @@ const (
 	CustomLineItemRelationshipEnumChild  CustomLineItemRelationshipEnum = "CHILD"
 )
 
+func (e CustomLineItemRelationshipEnum) ToPointer() *CustomLineItemRelationshipEnum {
+	return &e
+}
+
 func (e *CustomLineItemRelationshipEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARENT":
 		fallthrough
 	case "CHILD":
-		*e = CustomLineItemRelationshipEnum(s)
+		*e = CustomLineItemRelationshipEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomLineItemRelationshipEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomLineItemRelationshipEnum: %v", v)
 	}
 }

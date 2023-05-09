@@ -36,7 +36,10 @@ func newHolidays(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Returns one Canadian statutory holiday by integer id. Returns a 404 response for invalid ids.
 func (s *holidays) Holiday(ctx context.Context, request operations.HolidayRequest) (*operations.HolidayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/holidays/{holidayId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/holidays/{holidayId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

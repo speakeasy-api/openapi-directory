@@ -19,12 +19,16 @@ const (
 	AndroidNotificationNotificationPriorityEnumPriorityMax         AndroidNotificationNotificationPriorityEnum = "PRIORITY_MAX"
 )
 
+func (e AndroidNotificationNotificationPriorityEnum) ToPointer() *AndroidNotificationNotificationPriorityEnum {
+	return &e
+}
+
 func (e *AndroidNotificationNotificationPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIORITY_UNSPECIFIED":
 		fallthrough
 	case "PRIORITY_MIN":
@@ -36,10 +40,10 @@ func (e *AndroidNotificationNotificationPriorityEnum) UnmarshalJSON(data []byte)
 	case "PRIORITY_HIGH":
 		fallthrough
 	case "PRIORITY_MAX":
-		*e = AndroidNotificationNotificationPriorityEnum(s)
+		*e = AndroidNotificationNotificationPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidNotificationNotificationPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidNotificationNotificationPriorityEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	AndroidNotificationVisibilityEnumSecret                AndroidNotificationVisibilityEnum = "SECRET"
 )
 
+func (e AndroidNotificationVisibilityEnum) ToPointer() *AndroidNotificationVisibilityEnum {
+	return &e
+}
+
 func (e *AndroidNotificationVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VISIBILITY_UNSPECIFIED":
 		fallthrough
 	case "PRIVATE":
@@ -66,10 +74,10 @@ func (e *AndroidNotificationVisibilityEnum) UnmarshalJSON(data []byte) error {
 	case "PUBLIC":
 		fallthrough
 	case "SECRET":
-		*e = AndroidNotificationVisibilityEnum(s)
+		*e = AndroidNotificationVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidNotificationVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidNotificationVisibilityEnum: %v", v)
 	}
 }
 

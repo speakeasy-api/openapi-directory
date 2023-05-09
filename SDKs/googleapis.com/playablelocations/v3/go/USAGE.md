@@ -2,63 +2,61 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PlayablelocationsLogImpressionsRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.V3.PlayablelocationsLogImpressions(ctx, operations.PlayablelocationsLogImpressionsRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleMapsPlayablelocationsV3LogImpressionsRequest: &shared.GoogleMapsPlayablelocationsV3LogImpressionsRequest{
             ClientInfo: &shared.GoogleMapsUnityClientInfo{
-                APIClient: "provident",
-                ApplicationID: "distinctio",
-                ApplicationVersion: "quibusdam",
-                DeviceModel: "unde",
-                LanguageCode: "nulla",
-                OperatingSystem: "corrupti",
-                OperatingSystemBuild: "illum",
-                Platform: "WINDOWS",
+                APIClient: sdk.String("provident"),
+                ApplicationID: sdk.String("distinctio"),
+                ApplicationVersion: sdk.String("quibusdam"),
+                DeviceModel: sdk.String("unde"),
+                LanguageCode: sdk.String("nulla"),
+                OperatingSystem: sdk.String("corrupti"),
+                OperatingSystemBuild: sdk.String("illum"),
+                Platform: shared.GoogleMapsUnityClientInfoPlatformEnumWindows.ToPointer(),
             },
             Impressions: []shared.GoogleMapsPlayablelocationsV3Impression{
                 shared.GoogleMapsPlayablelocationsV3Impression{
-                    GameObjectType: 645894,
-                    ImpressionType: "PRESENTED",
-                    LocationName: "iure",
+                    GameObjectType: sdk.Int(645894),
+                    ImpressionType: shared.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnumPresented.ToPointer(),
+                    LocationName: sdk.String("iure"),
                 },
                 shared.GoogleMapsPlayablelocationsV3Impression{
-                    GameObjectType: 297534,
-                    ImpressionType: "INTERACTED",
-                    LocationName: "ipsa",
+                    GameObjectType: sdk.Int(297534),
+                    ImpressionType: shared.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnumInteracted.ToPointer(),
+                    LocationName: sdk.String("ipsa"),
                 },
                 shared.GoogleMapsPlayablelocationsV3Impression{
-                    GameObjectType: 963663,
-                    ImpressionType: "IMPRESSION_TYPE_UNSPECIFIED",
-                    LocationName: "suscipit",
+                    GameObjectType: sdk.Int(963663),
+                    ImpressionType: shared.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnumImpressionTypeUnspecified.ToPointer(),
+                    LocationName: sdk.String("suscipit"),
                 },
             },
-            RequestID: "molestiae",
+            RequestID: sdk.String("molestiae"),
         },
-        AccessToken: "minus",
-        Alt: "proto",
-        Callback: "voluptatum",
-        Fields: "iusto",
-        Key: "excepturi",
-        OauthToken: "nisi",
-        PrettyPrint: false,
-        QuotaUser: "recusandae",
-        UploadType: "temporibus",
-        UploadProtocol: "ab",
-    }
-
-    ctx := context.Background()
-    res, err := s.V3.PlayablelocationsLogImpressions(ctx, req)
+        AccessToken: sdk.String("minus"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("voluptatum"),
+        Fields: sdk.String("iusto"),
+        Key: sdk.String("excepturi"),
+        OauthToken: sdk.String("nisi"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("recusandae"),
+        UploadType: sdk.String("temporibus"),
+        UploadProtocol: sdk.String("ab"),
+    })
     if err != nil {
         log.Fatal(err)
     }

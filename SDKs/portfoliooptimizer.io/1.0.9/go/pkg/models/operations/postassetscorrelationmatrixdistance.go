@@ -17,21 +17,25 @@ const (
 	PostAssetsCorrelationMatrixDistanceRequestBodyDistanceMetricEnumBures             PostAssetsCorrelationMatrixDistanceRequestBodyDistanceMetricEnum = "bures"
 )
 
+func (e PostAssetsCorrelationMatrixDistanceRequestBodyDistanceMetricEnum) ToPointer() *PostAssetsCorrelationMatrixDistanceRequestBodyDistanceMetricEnum {
+	return &e
+}
+
 func (e *PostAssetsCorrelationMatrixDistanceRequestBodyDistanceMetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "euclidean":
 		fallthrough
 	case "correlationMatrix":
 		fallthrough
 	case "bures":
-		*e = PostAssetsCorrelationMatrixDistanceRequestBodyDistanceMetricEnum(s)
+		*e = PostAssetsCorrelationMatrixDistanceRequestBodyDistanceMetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAssetsCorrelationMatrixDistanceRequestBodyDistanceMetricEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAssetsCorrelationMatrixDistanceRequestBodyDistanceMetricEnum: %v", v)
 	}
 }
 

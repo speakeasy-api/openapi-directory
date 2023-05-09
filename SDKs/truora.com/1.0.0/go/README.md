@@ -13,32 +13,31 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/truora.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.CreateBehaviorInput{
-        BirthDate: "2021-10-25T05:21:43.948Z",
-        Country: "cr",
+    ctx := context.Background()
+    res, err := s.Behavior.ReportBehavior(ctx, shared.CreateBehaviorInput{
+        BirthDate: types.MustTimeFromString("2021-10-25T05:21:43.948Z"),
+        Country: shared.CreateBehaviorInputCountryEnumCr,
         DocumentID: "quibusdam",
-        DocumentType: "name",
+        DocumentType: shared.CreateBehaviorInputDocumentTypeEnumName,
         Email: "Karley_Stamm@hotmail.com",
-        FeedbackDate: "2022-03-26T09:37:56.283Z",
+        FeedbackDate: types.MustTimeFromString("2022-03-26T09:37:56.283Z"),
         FirstName: "Hunter",
         LastName: "Gulgowski",
-        PhoneNumber: "debitis",
-        Reason: "rape",
-    }
-
-    ctx := context.Background()
-    res, err := s.Behavior.ReportBehavior(ctx, req, operations.ReportBehaviorSecurity{
+        PhoneNumber: sdk.String("debitis"),
+        Reason: shared.CreateBehaviorInputReasonEnumRape,
+    }, operations.ReportBehaviorSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -56,52 +55,52 @@ func main() {
 ## Available Resources and Operations
 
 
-### Behavior
+### [Behavior](docs/behavior/README.md)
 
-* `ReportBehavior` - Report Behavior
+* [ReportBehavior](docs/behavior/README.md#reportbehavior) - Report Behavior
 
-### Checks
+### [Checks](docs/checks/README.md)
 
-* `GetHealthDashboard` - Get Health Dashboard
-* `CreateCheck` - Create a background check
-* `GetCheck` - Get Background Check
-* `ListCheckDetails` - List Check Details
-* `ListChecks` - List Checks
+* [GetHealthDashboard](docs/checks/README.md#gethealthdashboard) - Get Health Dashboard
+* [CreateCheck](docs/checks/README.md#createcheck) - Create a background check
+* [GetCheck](docs/checks/README.md#getcheck) - Get Background Check
+* [ListCheckDetails](docs/checks/README.md#listcheckdetails) - List Check Details
+* [ListChecks](docs/checks/README.md#listchecks) - List Checks
 
-### Continuous
+### [Continuous](docs/continuous/README.md)
 
-* `GetContinuousCheck` - Lists history associated with a Check. It can be paginated
-* `ListContinuousChecks` - Lists all continuous checks
-* `UpdateContinuousCheck` - Updates a continuous check
-* `CreateContinuousCheck` - Creates a continuous check that will run background checks recurrently according to the frequency provided.
-* `GetV1ContinuousChecksContinuousCheckIDHistory` - Lists background check logs. It can be paginated
+* [GetContinuousCheck](docs/continuous/README.md#getcontinuouscheck) - Lists history associated with a Check. It can be paginated
+* [ListContinuousChecks](docs/continuous/README.md#listcontinuouschecks) - Lists all continuous checks
+* [UpdateContinuousCheck](docs/continuous/README.md#updatecontinuouscheck) - Updates a continuous check
+* [CreateContinuousCheck](docs/continuous/README.md#createcontinuouscheck) - Creates a continuous check that will run background checks recurrently according to the frequency provided.
+* [GetV1ContinuousChecksContinuousCheckIDHistory](docs/continuous/README.md#getv1continuouscheckscontinuouscheckidhistory) - Lists background check logs. It can be paginated
 
 
-### CustomType
+### [CustomType](docs/customtype/README.md)
 
-* `DeleteCustomType` - Delete Custom Type
-* `UpdateCustomType` - Update Custom Type
-* `CreateScoreConfig` - Create Score Configurations
-* `ListScoreConfigs` - List Score Configurations
+* [DeleteCustomType](docs/customtype/README.md#deletecustomtype) - Delete Custom Type
+* [UpdateCustomType](docs/customtype/README.md#updatecustomtype) - Update Custom Type
+* [CreateScoreConfig](docs/customtype/README.md#createscoreconfig) - Create Score Configurations
+* [ListScoreConfigs](docs/customtype/README.md#listscoreconfigs) - List Score Configurations
 
-### Hooks
+### [Hooks](docs/hooks/README.md)
 
-* `CreateHook` - Creates a hook subscription
-* `DeletHook` - Deletes hook
-* `ListHook` - Lists all hooks
-* `UpdateHook` - Updates hook
+* [CreateHook](docs/hooks/README.md#createhook) - Creates a hook subscription
+* [DeletHook](docs/hooks/README.md#delethook) - Deletes hook
+* [ListHook](docs/hooks/README.md#listhook) - Lists all hooks
+* [UpdateHook](docs/hooks/README.md#updatehook) - Updates hook
 
-### Pdf
+### [Pdf](docs/pdf/README.md)
 
-* `CreatePDF` - Create PDF
-* `GetPDF` - Get PDF
+* [CreatePDF](docs/pdf/README.md#createpdf) - Create PDF
+* [GetPDF](docs/pdf/README.md#getpdf) - Get PDF
 
-### Reports
+### [Reports](docs/reports/README.md)
 
-* `BatchUpload` - Batch Upload
-* `CreateReport` - Create Report
-* `GetReport` - Get Report
-* `ListReports` - List Reports
+* [BatchUpload](docs/reports/README.md#batchupload) - Batch Upload
+* [CreateReport](docs/reports/README.md#createreport) - Create Report
+* [GetReport](docs/reports/README.md#getreport) - Get Report
+* [ListReports](docs/reports/README.md#listreports) - List Reports
 <!-- End SDK Available Operations -->
 
 ### Maturity

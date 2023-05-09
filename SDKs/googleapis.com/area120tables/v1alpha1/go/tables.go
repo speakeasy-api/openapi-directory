@@ -83,7 +83,10 @@ func (s *tables) Area120tablesTablesList(ctx context.Context, request operations
 // Area120tablesTablesRowsBatchCreate - Creates multiple rows.
 func (s *tables) Area120tablesTablesRowsBatchCreate(ctx context.Context, request operations.Area120tablesTablesRowsBatchCreateRequest, security operations.Area120tablesTablesRowsBatchCreateSecurity) (*operations.Area120tablesTablesRowsBatchCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows:batchCreate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows:batchCreate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchCreateRowsRequest", "json")
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *tables) Area120tablesTablesRowsBatchCreate(ctx context.Context, request
 // Area120tablesTablesRowsBatchDelete - Deletes multiple rows.
 func (s *tables) Area120tablesTablesRowsBatchDelete(ctx context.Context, request operations.Area120tablesTablesRowsBatchDeleteRequest, security operations.Area120tablesTablesRowsBatchDeleteSecurity) (*operations.Area120tablesTablesRowsBatchDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows:batchDelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows:batchDelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchDeleteRowsRequest", "json")
 	if err != nil {
@@ -193,7 +199,10 @@ func (s *tables) Area120tablesTablesRowsBatchDelete(ctx context.Context, request
 // Area120tablesTablesRowsBatchUpdate - Updates multiple rows.
 func (s *tables) Area120tablesTablesRowsBatchUpdate(ctx context.Context, request operations.Area120tablesTablesRowsBatchUpdateRequest, security operations.Area120tablesTablesRowsBatchUpdateSecurity) (*operations.Area120tablesTablesRowsBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows:batchUpdate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows:batchUpdate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdateRowsRequest", "json")
 	if err != nil {
@@ -248,7 +257,10 @@ func (s *tables) Area120tablesTablesRowsBatchUpdate(ctx context.Context, request
 // Area120tablesTablesRowsCreate - Creates a row.
 func (s *tables) Area120tablesTablesRowsCreate(ctx context.Context, request operations.Area120tablesTablesRowsCreateRequest, security operations.Area120tablesTablesRowsCreateSecurity) (*operations.Area120tablesTablesRowsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Row", "json")
 	if err != nil {
@@ -303,7 +315,10 @@ func (s *tables) Area120tablesTablesRowsCreate(ctx context.Context, request oper
 // Area120tablesTablesRowsDelete - Deletes a row.
 func (s *tables) Area120tablesTablesRowsDelete(ctx context.Context, request operations.Area120tablesTablesRowsDeleteRequest, security operations.Area120tablesTablesRowsDeleteSecurity) (*operations.Area120tablesTablesRowsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -351,7 +366,10 @@ func (s *tables) Area120tablesTablesRowsDelete(ctx context.Context, request oper
 // Area120tablesTablesRowsList - Lists rows in a table. Returns NOT_FOUND if the table does not exist.
 func (s *tables) Area120tablesTablesRowsList(ctx context.Context, request operations.Area120tablesTablesRowsListRequest, security operations.Area120tablesTablesRowsListSecurity) (*operations.Area120tablesTablesRowsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/rows", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -399,7 +417,10 @@ func (s *tables) Area120tablesTablesRowsList(ctx context.Context, request operat
 // Area120tablesTablesRowsPatch - Updates a row.
 func (s *tables) Area120tablesTablesRowsPatch(ctx context.Context, request operations.Area120tablesTablesRowsPatchRequest, security operations.Area120tablesTablesRowsPatchSecurity) (*operations.Area120tablesTablesRowsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Row", "json")
 	if err != nil {

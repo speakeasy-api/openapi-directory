@@ -9,6 +9,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// UpdateMonitorRequestBodyInternetMeasurementsLogDelivery - Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
+type UpdateMonitorRequestBodyInternetMeasurementsLogDelivery struct {
+	S3Config *shared.S3Config `json:"S3Config,omitempty"`
+}
+
 // UpdateMonitorRequestBodyStatusEnum - The status for a monitor. The accepted values for <code>Status</code> with the <code>UpdateMonitor</code> API call are the following: <code>ACTIVE</code> and <code>INACTIVE</code>. The following values are <i>not</i> accepted: <code>PENDING</code>, and <code>ERROR</code>.
 type UpdateMonitorRequestBodyStatusEnum string
 
@@ -19,12 +24,16 @@ const (
 	UpdateMonitorRequestBodyStatusEnumError    UpdateMonitorRequestBodyStatusEnum = "ERROR"
 )
 
+func (e UpdateMonitorRequestBodyStatusEnum) ToPointer() *UpdateMonitorRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *UpdateMonitorRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "ACTIVE":
@@ -32,17 +41,19 @@ func (e *UpdateMonitorRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
 	case "INACTIVE":
 		fallthrough
 	case "ERROR":
-		*e = UpdateMonitorRequestBodyStatusEnum(s)
+		*e = UpdateMonitorRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMonitorRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMonitorRequestBodyStatusEnum: %v", v)
 	}
 }
 
 type UpdateMonitorRequestBody struct {
 	// A unique, case-sensitive string of up to 64 ASCII characters that you specify to make an idempotent API request. You should not reuse the same client token for other API requests.
 	ClientToken *string `json:"ClientToken,omitempty"`
-	// The maximum number of city-network combinations (that is, combinations of a city location and network, such as an ISP) to be monitored for your resources.
+	// Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
+	InternetMeasurementsLogDelivery *UpdateMonitorRequestBodyInternetMeasurementsLogDelivery `json:"InternetMeasurementsLogDelivery,omitempty"`
+	// The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where clients access your application resources from and the network or ASN, such as an internet service provider, that clients access the resources through.
 	MaxCityNetworksToMonitor *int64 `json:"MaxCityNetworksToMonitor,omitempty"`
 	// <p>The resources to include in a monitor, which you provide as a set of Amazon Resource Names (ARNs).</p> <p>You can add a combination of Amazon Virtual Private Clouds (VPCs) and Amazon CloudFront distributions, or you can add Amazon WorkSpaces directories. You can't add all three types of resources.</p> <note> <p>If you add only VPC resources, at least one VPC must have an Internet Gateway attached to it, to make sure that it has internet connectivity.</p> </note>
 	ResourcesToAdd []string `json:"ResourcesToAdd,omitempty"`
@@ -50,6 +61,8 @@ type UpdateMonitorRequestBody struct {
 	ResourcesToRemove []string `json:"ResourcesToRemove,omitempty"`
 	// The status for a monitor. The accepted values for <code>Status</code> with the <code>UpdateMonitor</code> API call are the following: <code>ACTIVE</code> and <code>INACTIVE</code>. The following values are <i>not</i> accepted: <code>PENDING</code>, and <code>ERROR</code>.
 	Status *UpdateMonitorRequestBodyStatusEnum `json:"Status,omitempty"`
+	// The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+	TrafficPercentageToMonitor *int64 `json:"TrafficPercentageToMonitor,omitempty"`
 }
 
 type UpdateMonitorRequest struct {

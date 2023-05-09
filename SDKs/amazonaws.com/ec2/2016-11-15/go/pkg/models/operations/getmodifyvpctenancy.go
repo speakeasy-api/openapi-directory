@@ -15,17 +15,21 @@ const (
 	GETModifyVpcTenancyActionEnumModifyVpcTenancy GETModifyVpcTenancyActionEnum = "ModifyVpcTenancy"
 )
 
+func (e GETModifyVpcTenancyActionEnum) ToPointer() *GETModifyVpcTenancyActionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcTenancyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVpcTenancy":
-		*e = GETModifyVpcTenancyActionEnum(s)
+		*e = GETModifyVpcTenancyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcTenancyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcTenancyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyVpcTenancyInstanceTenancyEnumDefault GETModifyVpcTenancyInstanceTenancyEnum = "default"
 )
 
+func (e GETModifyVpcTenancyInstanceTenancyEnum) ToPointer() *GETModifyVpcTenancyInstanceTenancyEnum {
+	return &e
+}
+
 func (e *GETModifyVpcTenancyInstanceTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
-		*e = GETModifyVpcTenancyInstanceTenancyEnum(s)
+		*e = GETModifyVpcTenancyInstanceTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcTenancyInstanceTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcTenancyInstanceTenancyEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	GETModifyVpcTenancyVersionEnumTwoThousandAndSixteen1115 GETModifyVpcTenancyVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVpcTenancyVersionEnum) ToPointer() *GETModifyVpcTenancyVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVpcTenancyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVpcTenancyVersionEnum(s)
+		*e = GETModifyVpcTenancyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVpcTenancyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVpcTenancyVersionEnum: %v", v)
 	}
 }
 

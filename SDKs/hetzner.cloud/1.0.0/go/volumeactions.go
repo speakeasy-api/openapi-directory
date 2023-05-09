@@ -34,7 +34,10 @@ func newVolumeActions(defaultClient, securityClient HTTPClient, serverURL, langu
 // Returns all Action objects for a Volume. You can `sort` the results by using the sort URI parameter, and filter them with the `status` parameter.
 func (s *volumeActions) GetVolumesIDActions(ctx context.Context, request operations.GetVolumesIDActionsRequest) (*operations.GetVolumesIDActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/{id}/actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/volumes/{id}/actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *volumeActions) GetVolumesIDActions(ctx context.Context, request operati
 // Returns a specific Action for a Volume.
 func (s *volumeActions) GetVolumesIDActionsActionID(ctx context.Context, request operations.GetVolumesIDActionsActionIDRequest) (*operations.GetVolumesIDActionsActionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/{id}/actions/{action_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/volumes/{id}/actions/{action_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *volumeActions) GetVolumesIDActionsActionID(ctx context.Context, request
 // Attaches a Volume to a Server. Works only if the Server is in the same Location as the Volume.
 func (s *volumeActions) PostVolumesIDActionsAttach(ctx context.Context, request operations.PostVolumesIDActionsAttachRequest) (*operations.PostVolumesIDActionsAttachResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/{id}/actions/attach", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/volumes/{id}/actions/attach", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -180,7 +189,10 @@ func (s *volumeActions) PostVolumesIDActionsAttach(ctx context.Context, request 
 // Changes the protection configuration of a Volume.
 func (s *volumeActions) PostVolumesIDActionsChangeProtection(ctx context.Context, request operations.PostVolumesIDActionsChangeProtectionRequest) (*operations.PostVolumesIDActionsChangeProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/{id}/actions/change_protection", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/volumes/{id}/actions/change_protection", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -232,7 +244,10 @@ func (s *volumeActions) PostVolumesIDActionsChangeProtection(ctx context.Context
 // Detaches a Volume from the Server it’s attached to. You may attach it to a Server again at a later time.
 func (s *volumeActions) PostVolumesIDActionsDetach(ctx context.Context, request operations.PostVolumesIDActionsDetachRequest) (*operations.PostVolumesIDActionsDetachResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/{id}/actions/detach", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/volumes/{id}/actions/detach", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -277,7 +292,10 @@ func (s *volumeActions) PostVolumesIDActionsDetach(ctx context.Context, request 
 // Changes the size of a Volume. Note that downsizing a Volume is not possible.
 func (s *volumeActions) PostVolumesIDActionsResize(ctx context.Context, request operations.PostVolumesIDActionsResizeRequest) (*operations.PostVolumesIDActionsResizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/volumes/{id}/actions/resize", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/volumes/{id}/actions/resize", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

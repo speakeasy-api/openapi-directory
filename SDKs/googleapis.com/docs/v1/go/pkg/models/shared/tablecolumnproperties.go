@@ -16,21 +16,25 @@ const (
 	TableColumnPropertiesWidthTypeEnumFixedWidth           TableColumnPropertiesWidthTypeEnum = "FIXED_WIDTH"
 )
 
+func (e TableColumnPropertiesWidthTypeEnum) ToPointer() *TableColumnPropertiesWidthTypeEnum {
+	return &e
+}
+
 func (e *TableColumnPropertiesWidthTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WIDTH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EVENLY_DISTRIBUTED":
 		fallthrough
 	case "FIXED_WIDTH":
-		*e = TableColumnPropertiesWidthTypeEnum(s)
+		*e = TableColumnPropertiesWidthTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TableColumnPropertiesWidthTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TableColumnPropertiesWidthTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	RebootReplicationInstanceXAmzTargetEnumAmazonDmSv20160101RebootReplicationInstance RebootReplicationInstanceXAmzTargetEnum = "AmazonDMSv20160101.RebootReplicationInstance"
 )
 
+func (e RebootReplicationInstanceXAmzTargetEnum) ToPointer() *RebootReplicationInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *RebootReplicationInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.RebootReplicationInstance":
-		*e = RebootReplicationInstanceXAmzTargetEnum(s)
+		*e = RebootReplicationInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RebootReplicationInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RebootReplicationInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

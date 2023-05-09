@@ -24,19 +24,23 @@ const (
 	GetTraceSummariesRequestBodyTimeRangeTypeEnumEvent   GetTraceSummariesRequestBodyTimeRangeTypeEnum = "Event"
 )
 
+func (e GetTraceSummariesRequestBodyTimeRangeTypeEnum) ToPointer() *GetTraceSummariesRequestBodyTimeRangeTypeEnum {
+	return &e
+}
+
 func (e *GetTraceSummariesRequestBodyTimeRangeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TraceId":
 		fallthrough
 	case "Event":
-		*e = GetTraceSummariesRequestBodyTimeRangeTypeEnum(s)
+		*e = GetTraceSummariesRequestBodyTimeRangeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTraceSummariesRequestBodyTimeRangeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTraceSummariesRequestBodyTimeRangeTypeEnum: %v", v)
 	}
 }
 

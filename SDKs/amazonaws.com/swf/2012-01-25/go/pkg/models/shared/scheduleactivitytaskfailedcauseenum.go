@@ -23,12 +23,16 @@ const (
 	ScheduleActivityTaskFailedCauseEnumOperationNotPermitted                  ScheduleActivityTaskFailedCauseEnum = "OPERATION_NOT_PERMITTED"
 )
 
+func (e ScheduleActivityTaskFailedCauseEnum) ToPointer() *ScheduleActivityTaskFailedCauseEnum {
+	return &e
+}
+
 func (e *ScheduleActivityTaskFailedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVITY_TYPE_DEPRECATED":
 		fallthrough
 	case "ACTIVITY_TYPE_DOES_NOT_EXIST":
@@ -50,9 +54,9 @@ func (e *ScheduleActivityTaskFailedCauseEnum) UnmarshalJSON(data []byte) error {
 	case "DEFAULT_HEARTBEAT_TIMEOUT_UNDEFINED":
 		fallthrough
 	case "OPERATION_NOT_PERMITTED":
-		*e = ScheduleActivityTaskFailedCauseEnum(s)
+		*e = ScheduleActivityTaskFailedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScheduleActivityTaskFailedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for ScheduleActivityTaskFailedCauseEnum: %v", v)
 	}
 }

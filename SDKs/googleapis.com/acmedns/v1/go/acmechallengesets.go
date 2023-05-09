@@ -34,7 +34,10 @@ func newAcmeChallengeSets(defaultClient, securityClient HTTPClient, serverURL, l
 // AcmednsAcmeChallengeSetsGet - Gets the ACME challenge set for a given domain name. Domain names must be provided in Punycode.
 func (s *acmeChallengeSets) AcmednsAcmeChallengeSetsGet(ctx context.Context, request operations.AcmednsAcmeChallengeSetsGetRequest) (*operations.AcmednsAcmeChallengeSetsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/acmeChallengeSets/{rootDomain}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/acmeChallengeSets/{rootDomain}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *acmeChallengeSets) AcmednsAcmeChallengeSetsGet(ctx context.Context, req
 // AcmednsAcmeChallengeSetsRotateChallenges - Rotate the ACME challenges for a given domain name. By default, removes any challenges that are older than 30 days. Domain names must be provided in Punycode.
 func (s *acmeChallengeSets) AcmednsAcmeChallengeSetsRotateChallenges(ctx context.Context, request operations.AcmednsAcmeChallengeSetsRotateChallengesRequest) (*operations.AcmednsAcmeChallengeSetsRotateChallengesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/acmeChallengeSets/{rootDomain}:rotateChallenges", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/acmeChallengeSets/{rootDomain}:rotateChallenges", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RotateChallengesRequestInput", "json")
 	if err != nil {

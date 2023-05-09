@@ -16,21 +16,25 @@ const (
 	SubaccountRequestSubAccountEditEnumSetRestriction SubaccountRequestSubAccountEditEnum = "setRestriction"
 )
 
+func (e SubaccountRequestSubAccountEditEnum) ToPointer() *SubaccountRequestSubAccountEditEnum {
+	return &e
+}
+
 func (e *SubaccountRequestSubAccountEditEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "setPrice":
 		fallthrough
 	case "addCredit":
 		fallthrough
 	case "setRestriction":
-		*e = SubaccountRequestSubAccountEditEnum(s)
+		*e = SubaccountRequestSubAccountEditEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubaccountRequestSubAccountEditEnum: %s", s)
+		return fmt.Errorf("invalid value for SubaccountRequestSubAccountEditEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	SubaccountRequestSubAccountRestrictionStopEnumOne  SubaccountRequestSubAccountRestrictionStopEnum = "1"
 )
 
+func (e SubaccountRequestSubAccountRestrictionStopEnum) ToPointer() *SubaccountRequestSubAccountRestrictionStopEnum {
+	return &e
+}
+
 func (e *SubaccountRequestSubAccountRestrictionStopEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "0":
 		fallthrough
 	case "1":
-		*e = SubaccountRequestSubAccountRestrictionStopEnum(s)
+		*e = SubaccountRequestSubAccountRestrictionStopEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubaccountRequestSubAccountRestrictionStopEnum: %s", s)
+		return fmt.Errorf("invalid value for SubaccountRequestSubAccountRestrictionStopEnum: %v", v)
 	}
 }
 
@@ -64,19 +72,23 @@ const (
 	SubaccountRequestSubAccountRestrictionTimeEnumOne  SubaccountRequestSubAccountRestrictionTimeEnum = "1"
 )
 
+func (e SubaccountRequestSubAccountRestrictionTimeEnum) ToPointer() *SubaccountRequestSubAccountRestrictionTimeEnum {
+	return &e
+}
+
 func (e *SubaccountRequestSubAccountRestrictionTimeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "0":
 		fallthrough
 	case "1":
-		*e = SubaccountRequestSubAccountRestrictionTimeEnum(s)
+		*e = SubaccountRequestSubAccountRestrictionTimeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubaccountRequestSubAccountRestrictionTimeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubaccountRequestSubAccountRestrictionTimeEnum: %v", v)
 	}
 }
 

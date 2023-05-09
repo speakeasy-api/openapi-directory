@@ -21,12 +21,16 @@ const (
 	MonitoredResourceDescriptorLaunchStageEnumDeprecated             MonitoredResourceDescriptorLaunchStageEnum = "DEPRECATED"
 )
 
+func (e MonitoredResourceDescriptorLaunchStageEnum) ToPointer() *MonitoredResourceDescriptorLaunchStageEnum {
+	return &e
+}
+
 func (e *MonitoredResourceDescriptorLaunchStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_STAGE_UNSPECIFIED":
 		fallthrough
 	case "UNIMPLEMENTED":
@@ -42,10 +46,10 @@ func (e *MonitoredResourceDescriptorLaunchStageEnum) UnmarshalJSON(data []byte) 
 	case "GA":
 		fallthrough
 	case "DEPRECATED":
-		*e = MonitoredResourceDescriptorLaunchStageEnum(s)
+		*e = MonitoredResourceDescriptorLaunchStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoredResourceDescriptorLaunchStageEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoredResourceDescriptorLaunchStageEnum: %v", v)
 	}
 }
 

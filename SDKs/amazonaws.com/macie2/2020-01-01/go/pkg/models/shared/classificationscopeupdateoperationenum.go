@@ -16,20 +16,24 @@ const (
 	ClassificationScopeUpdateOperationEnumRemove  ClassificationScopeUpdateOperationEnum = "REMOVE"
 )
 
+func (e ClassificationScopeUpdateOperationEnum) ToPointer() *ClassificationScopeUpdateOperationEnum {
+	return &e
+}
+
 func (e *ClassificationScopeUpdateOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADD":
 		fallthrough
 	case "REPLACE":
 		fallthrough
 	case "REMOVE":
-		*e = ClassificationScopeUpdateOperationEnum(s)
+		*e = ClassificationScopeUpdateOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassificationScopeUpdateOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassificationScopeUpdateOperationEnum: %v", v)
 	}
 }

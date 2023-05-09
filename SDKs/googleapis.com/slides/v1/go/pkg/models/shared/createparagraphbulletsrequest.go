@@ -28,12 +28,16 @@ const (
 	CreateParagraphBulletsRequestBulletPresetEnumNumberedZerodigitAlphaRoman       CreateParagraphBulletsRequestBulletPresetEnum = "NUMBERED_ZERODIGIT_ALPHA_ROMAN"
 )
 
+func (e CreateParagraphBulletsRequestBulletPresetEnum) ToPointer() *CreateParagraphBulletsRequestBulletPresetEnum {
+	return &e
+}
+
 func (e *CreateParagraphBulletsRequestBulletPresetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BULLET_DISC_CIRCLE_SQUARE":
 		fallthrough
 	case "BULLET_DIAMONDX_ARROW3D_SQUARE":
@@ -63,10 +67,10 @@ func (e *CreateParagraphBulletsRequestBulletPresetEnum) UnmarshalJSON(data []byt
 	case "NUMBERED_UPPERROMAN_UPPERALPHA_DIGIT":
 		fallthrough
 	case "NUMBERED_ZERODIGIT_ALPHA_ROMAN":
-		*e = CreateParagraphBulletsRequestBulletPresetEnum(s)
+		*e = CreateParagraphBulletsRequestBulletPresetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateParagraphBulletsRequestBulletPresetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateParagraphBulletsRequestBulletPresetEnum: %v", v)
 	}
 }
 

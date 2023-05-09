@@ -17,12 +17,16 @@ const (
 	GoogleCloudDatacatalogV1BigQueryTableSpecTableSourceTypeEnumBigqueryMaterializedView   GoogleCloudDatacatalogV1BigQueryTableSpecTableSourceTypeEnum = "BIGQUERY_MATERIALIZED_VIEW"
 )
 
+func (e GoogleCloudDatacatalogV1BigQueryTableSpecTableSourceTypeEnum) ToPointer() *GoogleCloudDatacatalogV1BigQueryTableSpecTableSourceTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1BigQueryTableSpecTableSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TABLE_SOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BIGQUERY_VIEW":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDatacatalogV1BigQueryTableSpecTableSourceTypeEnum) Unmarshal
 	case "BIGQUERY_TABLE":
 		fallthrough
 	case "BIGQUERY_MATERIALIZED_VIEW":
-		*e = GoogleCloudDatacatalogV1BigQueryTableSpecTableSourceTypeEnum(s)
+		*e = GoogleCloudDatacatalogV1BigQueryTableSpecTableSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1BigQueryTableSpecTableSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1BigQueryTableSpecTableSourceTypeEnum: %v", v)
 	}
 }
 

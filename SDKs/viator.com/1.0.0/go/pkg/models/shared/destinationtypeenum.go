@@ -19,20 +19,24 @@ const (
 	DestinationTypeEnumRegion  DestinationTypeEnum = "REGION"
 )
 
+func (e DestinationTypeEnum) ToPointer() *DestinationTypeEnum {
+	return &e
+}
+
 func (e *DestinationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CITY":
 		fallthrough
 	case "COUNTRY":
 		fallthrough
 	case "REGION":
-		*e = DestinationTypeEnum(s)
+		*e = DestinationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinationTypeEnum: %v", v)
 	}
 }
